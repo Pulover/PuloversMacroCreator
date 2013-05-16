@@ -1429,7 +1429,7 @@ IfExist %CurrentFileName%
     FileDelete %CurrentFileName%
     If ErrorLevel
     {
-        MsgBox %d_Lang006% "%CurrentFileName%".
+        MsgBox, 16, %d_Lang007%, %d_Lang006% "%CurrentFileName%".
         return
     }
 }
@@ -1459,7 +1459,7 @@ IfExist %ThisListFile%
     FileDelete %ThisListFile%
     If ErrorLevel
     {
-        MsgBox %d_Lang006% "%ThisListFile%".
+        MsgBox, 16, %d_Lang007%, %d_Lang006% "%ThisListFile%".
         return
     }
 }
@@ -3919,7 +3919,7 @@ IfExist %TextFile%
     FileDelete %TextFile%
     If ErrorLevel
     {
-        MsgBox %d_Lang006% "%TextFile%".
+        MsgBox, 16, %d_Lang007%, %d_Lang006% "%TextFile%".
         return
     }
 }
