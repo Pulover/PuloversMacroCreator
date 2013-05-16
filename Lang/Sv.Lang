@@ -15,16 +15,16 @@
 		
 ; File Submenu		
 	f_Lang001 =	&Nytt
-	f_Lang002 =	&Öppet
+	f_Lang002 =	&Öppna
 	f_Lang003 =	&Spara
 	f_Lang004 =	S&para som
 	f_Lang005 =	&Importera Makro
-	f_Lang006 =	Sp&ara aktuell makro
-	f_Lang007 =	N&ya Filer
+	f_Lang006 =	Sp&ara aktuell Makro
+	f_Lang007 =	S&enaste använda Macro
 	f_Lang008 =	&Exportera till AHK
-	f_Lang009 =	&Förhandsgranska Script
+	f_Lang009 =	&Förhandsgranska kod
 	f_Lang010 =	&Listvariabler
-	f_Lang011 =	&Utgång
+	f_Lang011 =	&Avsluta
 	f_Lang012 =	In&ga filer
 		
 ; Insert Sub Menu		
@@ -85,7 +85,7 @@
 	o_Lang003 =	A&nge som standard fil
 	o_Lang004 =	&Ta bort standardfilen
 	o_Lang005 =	&Återställ kolumner Storlek
-	o_Lang006 =	&Default Snabbtangenter
+	o_Lang006 =	&Standard Snabbtangenter
 	o_Lang007 =	&Standardinställningar
 		
 ; Make a Donation Sub Menu		
@@ -94,7 +94,7 @@
 ; Help Sub Menu		
 	h_Lang001 =	&Makro Skapare Home
 	h_Lang002 =	&AHK Online Dokumentation
-	h_Lang003 =	&Söka efter uppdateringar...
+	h_Lang003 =	&Sök efter uppdateringar...
 	h_Lang004 =	&Kontrollera vid uppstart
 	h_Lang005 =	&Om
 		
@@ -149,7 +149,7 @@
 	c_Lang022 =	Stäng
 	c_Lang023 =	Kopiera
 	c_Lang024 =	Ta bort
-	c_Lang025 =	(Använd `% för variabler, t.ex.: `%Clipboard`%)
+	c_Lang025 =	(Använd `% för variabler, t.e.x.: `%Clipboard`%)
 	c_Lang026 =	Åtgärd
 	c_Lang027 =	Klicka
 	c_Lang028 =	Flytta
@@ -249,10 +249,10 @@
 	c_Lang122 =	Scancode
 	c_Lang123 =	Lägg
 	c_Lang124 =	Nyckel historia
-	c_Lang125 =	Ange ett scancode...
+	c_Lang125 =	Ange en scankod...
 	c_Lang126 =	Kod läggs till virtuella knapparna listan!
 	c_Lang127 =	Ange ett namn för utdatavariabel
-	c_Lang128 =	Använd funktionen från extern fil
+	c_Lang128 =	Använd funktionen från en extern fil
 	c_Lang130 =	Bryt slinga om de befinns
 	c_Lang131 =	Ansök
 	c_Lang132 =	Loop
@@ -364,7 +364,7 @@
 	t_Lang082 =	Uttalanden
 	t_Lang083 =	Visa Indrag för loopar och uttalanden
 	t_Lang084 =	(Dubbelklicka på Action kolumnrubriken aktivera / avaktivera)
-	t_Lang085 =	Visa Progress Bar
+	t_Lang085 =	Visa Progress Indikator
 	t_Lang086 =	Söka efter funktioner. Var god vänta...
 	t_Lang087 =	Inkludera externa filer
 	t_Lang088 =	Skapa EXE-fil
