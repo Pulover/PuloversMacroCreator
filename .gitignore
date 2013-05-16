@@ -1,8 +1,9 @@
+/Compiled/
 /Site/
-/Documentation/MacroCreator_Help-doc/*.exe
-/Documentation/MacroCreator_Help-doc/*.chm
 /Documentation/MacroCreator_Help-doc/*.html
 /Documentation/MacroCreator_Help-doc/Commands/*.html
+*.exe
+*.chm
 *.ini
 *.dll
 *.iss
