@@ -6,7 +6,7 @@
 ; rodolfoub@gmail.com
 ; Home: http://www.autohotkey.net/~Pulover
 ; Forum: http://www.autohotkey.com/board/topic/79763-macro-creator
-; Version: 3.7.0
+; Version: 3.7.1a
 ; Release Date: May, 2013
 ; AutoHotkey Version: 1.1.09.04
 ; GNU General Public License 3.0 or higher
@@ -70,7 +70,7 @@ DefaultIcon := (A_IsCompiled) ? A_ScriptFullPath
 			:  (FileExist("Images\PMC3_48.ico") ? "Images\PMC3_48.ico" : A_AhkPath)
 Menu, Tray, Icon, %DefaultIcon%, 1, 1
 
-CurrentVersion := "3.7.0"
+CurrentVersion := "3.7.1a"
 ReleaseDate := "May, 2013"
 
 ;##### Ini File Read #####
@@ -3901,6 +3901,7 @@ If !TextFile
 	return
 FileRead, InText, %TextFile%
 GuiControl, 8:, TextEdit, %InText%
+GoSub, TextEdit
 return
 
 SaveT:
@@ -3950,7 +3951,7 @@ MsgBox:
 Pause:
 Gui, 3:+owner1 -MaximizeBox -MinimizeBox +E0x00000400 +HwndCmdWin
 Gui, 1:+Disabled
-Gui, 3:Add, Tab2, W305 H260 vTabControl AltSubmit, %c_Lang003%|%c_Lang015%|%c_Lang066%
+Gui, 3:Add, Tab2, W305 H275 vTabControl AltSubmit, %c_Lang003%|%c_Lang015%|%c_Lang066%
 Gui, 3:Font, s7
 ; Sleep
 Gui, 3:Add, GroupBox, Section W280 H100
@@ -3962,7 +3963,7 @@ Gui, 3:Add, Radio, -Wrap W170 vSec R1, %c_Lang019%
 Gui, 3:Add, Radio, -Wrap W170 vMin R1, %c_Lang154%
 ; MsgBox
 Gui, 3:Tab, 2
-Gui, 3:Add, GroupBox, Section ys xs W280 H220
+Gui, 3:Add, GroupBox, Section ys xs W280 H235
 Gui, 3:Add, Text, -Wrap Section ys+15 xs+10 W260 R1, %c_Lang051%:
 Gui, 3:Add, Edit, vMsgPt W260 r6
 Gui, 3:Add, Text, W260, %c_Lang025%
@@ -5188,9 +5189,15 @@ If ((FileCmdL = "PixelGetColor") || (FileCmdL = "Tooltip"))
 Else
 	GuiControl, 10:Disable, MouseGet
 If FileCmdL not in %FileCmdML%
+{
 	GuiControl, 10:Disable, RunOK
+	GuiControl, 10:Disable, RunApply
+}
 Else
+{
 	GuiControl, 10:Enable, RunOK
+	GuiControl, 10:Enable, RunApply
+}
 return
 
 EditVar:
