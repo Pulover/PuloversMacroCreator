@@ -1,0 +1,748 @@
+﻿LoadLang_Ca:
+		
+		; Catalan
+		
+; Main Menu		
+	m_Lang001 =	&Expedient
+	m_Lang002 =	&Insereix
+	m_Lang003 =	Se&leccionar
+	m_Lang004 =	E&dita
+	m_Lang005 =	M&acro
+	m_Lang006 =	&Opcions
+	m_Lang007 =	Idioma
+	m_Lang008 =	&Fer una donació
+	m_Lang009 =	A&judar
+		
+; File Submenu		
+	f_Lang001 =	&Nou
+	f_Lang002 =	&Obert
+	f_Lang003 =	&Desa
+	f_Lang004 =	D&esa
+	f_Lang005 =	&Importació Macro
+	f_Lang006 =	&Guardar Macro actual
+	f_Lang007 =	&Arxius recents
+	f_Lang008 =	E&xporta a AHK
+	f_Lang009 =	&Vista prèvia de script
+	f_Lang010 =	&Llista de les variables
+	f_Lang011 =	&Sortida
+	f_Lang012 =	No &hi ha arxius
+		
+; Insert Sub Menu		
+	i_Lang001 =	&Ratolí
+	i_Lang002 =	&Text
+	i_Lang003 =	&Controlar
+	i_Lang004 =	&Pausa / Missatge / Espera Clau
+	i_Lang005 =	&Finestra
+	i_Lang006 =	&Imatge / píxel Cerca
+	i_Lang007 =	&Executar / Arxiu / cadena / Misc.
+	i_Lang008 =	&Loop / Anar a / Label
+	i_Lang009 =	&Si els estats / Variables / Funcions
+	i_Lang010 =	I&nterfície d'Internet Explorer / COM
+	i_Lang011 =	&Missatges de Windows
+	i_Lang012 =	Tecles especi&als
+		
+; Select Sub Menu		
+	s_Lang001 =	&Selecciona tot
+	s_Lang002 =	S&eleccioneu Cap
+	s_Lang003 =	&Inverteix la selecció
+	s_Lang004 =	&Comprovi seleccionat
+	s_Lang005 =	&Desactiveu l'opció seleccionada
+	s_Lang006 =	I&nvertir xecs
+	s_Lang007 =	&Tipus Seleccionat
+	s_Lang008 =	&Ordres
+		
+; Edit Sub Menu		
+	e_Lang001 =	&Duplicar
+	e_Lang002 =	&Redactar comentari
+	e_Lang003 =	&Cercar / Reemplaçar
+	e_Lang004 =	C&opiar a...
+	e_Lang005 =	D&esfer
+	e_Lang006 =	Re&fer
+	e_Lang007 =	&Tallar
+	e_Lang008 =	Co&pieu
+	e_Lang009 =	E&nganxar
+	e_Lang010 =	E&sborrar
+	e_Lang011 =	P&ujar
+	e_Lang012 =	&Baixar
+	e_Lang013 =	&Inseriu de Caixa
+		
+; Macro Sub Menu		
+	r_lang001 =	&Gravar macro
+	r_lang002 =	&Activar Macros
+	r_lang003 =	&Jugar Macro actual
+	r_lang004 =	&Timer
+	r_lang005 =	A&fegir Macro
+	r_lang006 =	Ta&ncar Macro
+	r_lang007 =	T&ecles d'accés directe sensibles al context
+	r_lang008 =	&Barra de control
+	r_lang009 =	J&uga de fila seleccionada
+	r_lang010 =	Juga f&ins que la Columna seleccionat
+	r_lang011 =	Juga fi&les seleccionades
+		
+; Options Sub Menu		
+	o_Lang001 =	&Configuració
+	o_Lang002 =	&Establir com a tecles d'accés ràpid predeterminades
+	o_Lang003 =	&Selecciona per defecte del fitxer
+	o_Lang004 =	E&liminar fitxer per defecte
+	o_Lang005 =	&Restablir mida de les columnes
+	o_Lang006 =	&Tecles d'accés ràpid predeterminades
+	o_Lang007 =	C&onfiguració per defecte
+		
+; Make a Donation Sub Menu		
+	p_Lang001 =	&PayPal Donació
+		
+; Help Sub Menu		
+	h_Lang001 =	&Macro Creator Home
+	h_Lang002 =	&AHK Documentació en línia
+	h_Lang003 =	A &buscar actualitzacions...
+	h_Lang004 =	&Comprovar en l'arrencada
+	h_Lang005 =	&Sobre
+		
+; Tray Menu		
+	y_Lang001 =	Hide Window
+	y_Lang002 =	Mostrar finestra
+		
+; Main Window		
+	w_Lang001 =	Exportar
+	w_Lang002 =	Avanç
+	w_Lang003 =	Opcions
+	w_Lang004 =	Registre
+	w_Lang005 =	Jugar
+	w_Lang006 =	Acte.
+	w_Lang007 =	Man
+	w_Lang008 =	Aturi
+	w_Lang009 =	&Win
+	w_Lang010 =	&Pausa
+	w_Lang011 =	&Bucle
+	w_Lang012 =	&Captura Keys
+	w_Lang013 =	&Mostrar informació
+	w_Lang014 =	&Sempre actiu
+	w_Lang015 =	Repetir:
+	w_Lang016 =	Retard (ms):
+	w_Lang017 =	Aplicar
+	w_Lang018 =	Insereix
+	w_Lang019 =	Edita
+	w_Lang020 =	Barra de control
+		
+; Command Windows		
+	c_Lang001 =	Ratolí
+	c_Lang002 =	Text
+	c_Lang003 =	Pausa
+	c_Lang004 =	Controlar
+	c_Lang005 =	Finestra
+	c_Lang006 =	Cerca d'imatges
+	c_Lang007 =	Cerca per píxels
+	c_Lang008 =	Executar / Arxiu / cadena / Misc.
+	c_Lang009 =	Si els estats
+	c_Lang010 =	Variables
+	c_Lang011 =	Funcions
+	c_Lang012 =	Internet Explorer
+	c_Lang013 =	COM Interface
+	c_Lang014 =	Seleccionar aplicació (Avançat)
+	c_Lang015 =	Missatge
+	c_Lang016 =	Controlar
+	c_Lang017 =	Retardar
+	c_Lang018 =	Milisegons
+	c_Lang019 =	Segons
+	c_Lang020 =	Bé
+	c_Lang021 =	Cancel
+	c_Lang022 =	Tancar
+	c_Lang023 =	Copieu
+	c_Lang024 =	Esborrar
+	c_Lang025 =	(Utilitza `% per a variables, per exemple: `%Clipboard`%)
+	c_Lang026 =	Acció
+	c_Lang027 =	Clic
+	c_Lang028 =	Moure
+	c_Lang029 =	&& Move clic
+	c_Lang030 =	Roda Up
+	c_Lang031 =	Roda de Down
+	c_Lang032 =	Arrossegueu && gota
+	c_Lang033 =	Coordina
+	c_Lang034 =	Clic
+	c_Lang035 =	Enviar
+	c_Lang036 =	Relatiu
+	c_Lang037 =	Botó
+	c_Lang038 =	Esquerra
+	c_Lang039 =	Dret
+	c_Lang040 =	Centre
+	c_Lang041 =	X1
+	c_Lang042 =	X2
+	c_Lang043 =	Manteniment / sortida
+	c_Lang044 =	Feu clic en Compte
+	c_Lang045 =	Text sense format (RAW)
+	c_Lang046 =	Text ordres
+	c_Lang047 =	Enganxa des del porta-retalls
+	c_Lang048 =	Enganxeu al Control
+	c_Lang049 =	Definir text
+	c_Lang050 =	Afegeix una pausa
+	c_Lang051 =	Bústia de missatges
+	c_Lang052 =	Esperar que la tecla
+	c_Lang053 =	Temps d'espera
+	c_Lang054 =	(Milisegons) 0 = infinit
+	c_Lang055 =	Comando
+	c_Lang056 =	Valor
+	c_Lang057 =	Variable de sortida
+	c_Lang058 =	Posició
+	c_Lang059 =	Mida
+	c_Lang060 =	4 variables es creen amb aquest prefix i acabant amb X, Y, W, H.
+	c_Lang061 =	Inicia
+	c_Lang062 =	Final
+	c_Lang063 =	Imatge
+	c_Lang064 =	Pixel
+	c_Lang065 =	Fer Screenshot
+	c_Lang066 =	Espera Clau
+	c_Lang067 =	Si es troba
+	c_Lang068 =	Si no el troba / Error
+	c_Lang069 =	* Coordenades emmagatzemat per `%FoundX`% / `%FoundY`%.
+	c_Lang070 =	Coord
+	c_Lang071 =	Variacions
+	c_Lang072 =	Avanç
+	c_Lang073 =	Bucle
+	c_Lang074 =	* No funciona en la manera Reproducció Manual.
+	c_Lang075 =	Trencar
+	c_Lang076 =	Continuar
+	c_Lang077 =	Goto
+	c_Lang078 =	Aneu a l'etiqueta
+	c_Lang079 =	Etiqueta
+	c_Lang080 =	Afegir etiqueta
+	c_Lang081 =	String Valor
+	c_Lang082 =	Var [operador] Valor
+	c_Lang083 =	Afegir Altres
+	c_Lang084 =	Assignació Variable
+	c_Lang085 =	Contingut
+	c_Lang086 =	Operador
+	c_Lang087 =	Utilitzeu Aval () per a resoldre expressions
+	c_Lang088 =	Reajustar
+	c_Lang089 =	Nom de la funció
+	c_Lang090 =	Paràmetres separats per comes (sense parèntesis).
+	c_Lang091 =	(Utilitza `% per a variables. Han escapar comes literals [```,])
+	c_Lang092 =	Element de pàgina / Índex
+	c_Lang093 =	Establir
+	c_Lang094 =	Aconseguir
+	c_Lang095 =	Mètode
+	c_Lang096 =	Propietat
+	c_Lang097 =	Espereu que la pàgina es carregui.
+	c_Lang098 =	CLSID
+	c_Lang099 =	Connectar
+	c_Lang100 =	Manejar
+	c_Lang101 =	COM Guió
+	c_Lang102 =	Nombre de missatge
+	c_Lang103 =	Tecles especials
+	c_Lang104 =	Browser Back
+	c_Lang105 =	Browser Forward
+	c_Lang106 =	Browser Refresh
+	c_Lang107 =	Aturar Browser
+	c_Lang108 =	Browser Search
+	c_Lang109 =	Preferits del navegador
+	c_Lang110 =	Browser Inici
+	c_Lang111 =	Mitjans de comunicació
+	c_Lang112 =	Silenci
+	c_Lang113 =	Pujar volum
+	c_Lang114 =	Baixar volum
+	c_Lang115 =	Reproduir / Pausa
+	c_Lang116 =	Pista següent
+	c_Lang117 =	Pista anterior
+	c_Lang118 =	Aturi
+	c_Lang119 =	Correu electrònic
+	c_Lang120 =	App 1
+	c_Lang121 =	App 2
+	c_Lang122 =	Scancode
+	c_Lang123 =	Afegir
+	c_Lang124 =	Història Dades
+	c_Lang125 =	Escriu el codi de rastreig...
+	c_Lang126 =	Codi afegida a la llista de tecles virtuals!
+	c_Lang127 =	Introduïu un nom per a la variable de sortida
+	c_Lang128 =	Utilitzeu la funció d'arxiu extern
+	c_Lang130 =	Trencament de llaç si es troba
+	c_Lang131 =	Aplicar
+	c_Lang132 =	Bucle
+	c_Lang133 =	Expedient
+	c_Lang134 =	Analitzar
+	c_Lang135 =	Llegir
+	c_Lang136 =	Registre
+	c_Lang137 =	Patró D'arxiu:
+	c_Lang138 =	Carpetes?
+	c_Lang139 =	Recurse?
+	c_Lang140 =	Variable D'entrada:
+	c_Lang141 =	Delimitadors:
+	c_Lang142 =	Ometre Caràcters:
+	c_Lang143 =	Fitxer D'entrada:
+	c_Lang144 =	Clau:
+	c_Lang145 =	Clau De L'arrel:
+	c_Lang146 =	Subclaus?
+	c_Lang147 =	Icona
+	c_Lang148 =	Cap icona
+	c_Lang149 =	Error
+	c_Lang150 =	Pregunta
+	c_Lang151 =	Exclamació
+	c_Lang152 =	Informació
+	c_Lang153 =	Sempre visible
+	c_Lang154 =	Minuts
+		
+; Other Windows		
+	t_Lang001 =	Exporta a AHK
+	t_Lang002 =	Macros
+	t_Lang003 =	Loops
+	t_Lang004 =	0 = infinit
+	t_Lang005 =	Utilitza cadena d'accés ràpid
+	t_Lang006 =	Bloquejar Ratolí
+	t_Lang007 =	Tot
+	t_Lang008 =	Cap
+	t_Lang009 =	Tecles d'accés directe sensibles al context
+	t_Lang010 =	Exportació a
+	t_Lang011 =	Sangria
+	t_Lang012 =	Incloeu el codi de PMC
+	t_Lang013 =	No concatenar comandes Enviar
+	t_Lang014 =	Refrescar
+	t_Lang015 =	Actualització automàtica
+	t_Lang016 =	Sempre visible
+	t_Lang017 =	Configuració
+	t_Lang018 =	General
+	t_Lang019 =	Start / Stop Record
+	t_Lang020 =	Gravar nova macro
+	t_Lang021 =	Pulsacions
+	t_Lang022 =	Enregistrament
+	t_Lang023 =	Captura estat clau (dalt / baix)
+	t_Lang024 =	Clics del ratolí
+	t_Lang025 =	Roda del ratolí
+	t_Lang026 =	Mou el ratolí
+	t_Lang027 =	Intervals de temps
+	t_Lang028 =	Retard mínim
+	t_Lang029 =	Classes de finestra
+	t_Lang030 =	Títols finestra
+	t_Lang031 =	Record ControlSend
+	t_Lang032 =	Record ControlClick
+	t_Lang033 =	Clau de registre relativa
+	t_Lang034 =	Palanca
+	t_Lang035 =	Reproducció
+	t_Lang036 =	Accelerar
+	t_Lang037 =	Alentir
+	t_Lang038 =	Tornar ratolí després de la reproducció
+	t_Lang039 =	Coordenades del ratolí
+	t_Lang040 =	Finestra
+	t_Lang041 =	Pantalla
+	t_Lang042 =	Defecte del ratolí Delay
+	t_Lang043 =	Delay finestres predeterminat
+	t_Lang044 =	Max història per Macro
+	t_Lang045 =	Esborrar historial
+	t_Lang046 =	Imatges
+	t_Lang047 =	Botó Dibuixar
+	t_Lang048 =	Ample de línia (Px)
+	t_Lang049 =	Captura d'alliberament
+	t_Lang050 =	Premeu Retorn per capturar
+	t_Lang051 =	Imatges Directori
+	t_Lang052 =	Misc.
+	t_Lang053 =	Tecles d'accés ràpid
+	t_Lang054 =	Establir com a tecles d'accés ràpid predeterminades
+	t_Lang055 =	Desactivar la finestra Mètodes abreujats
+	t_Lang056 =	Restablir mida de les columnes
+	t_Lang057 =	Arxiu Macro defecte
+	t_Lang058 =	Arxiu Biblioteca estàndard
+	t_Lang059 =	Utilitzeu Aval () per defecte per a variables Assignació
+	t_Lang060 =	Mostra colors && Ajuda marques de bucles i sentències
+	t_Lang061 =	(Feu clic a la capçalera de la columna Índex per activar / desactivar)
+	t_Lang062 =	Tecles virtuals
+	t_Lang063 =	Defecte
+	t_Lang064 =	Redactar comentari
+	t_Lang065 =	Comentari
+	t_Lang066 =	Cercar columna
+	t_Lang067 =	Cercar / Reemplaçar
+	t_Lang068 =	Trobar
+	t_Lang069 =	Coincidir majúscules i minúscules
+	t_Lang070 =	Reemplaçar
+	t_Lang071 =	Fundar
+	t_Lang072 =	Substituït
+	t_Lang073 =	Les files seleccionades
+	t_Lang074 =	Totes les files
+	t_Lang075 =	Tots Macros
+	t_Lang076 =	Sobre
+	t_Lang077 =	Expressió Regular
+	t_Lang078 =	Reproduir un cop
+	t_Lang079 =	Juga cada X (mili) segon
+	t_Lang080 =	Timer
+	t_Lang081 =	Pausa
+	t_Lang082 =	Declaracions
+	t_Lang083 =	Mostra sagnia de bucles i sentències
+	t_Lang084 =	(Feu doble clic a la capçalera de la columna Acció d'activar / desactivar)
+	t_Lang085 =	Mostra la barra de progrés
+	t_Lang086 =	Cerca de Funcions. Si us plau, esperi...
+	t_Lang087 =	Incloure arxius externs
+	t_Lang088 =	Crea un fitxer EXE
+	t_Lang089 =	Permetre múltiples instàncies
+	t_Lang090 =	Valors predefinits
+	t_Lang091 =	Permetre arrossegar files
+	t_Lang092 =	Tot el contingut de la cel · la
+		
+; Messages & Dialogs		
+	d_Lang001 =	Obert
+	d_Lang002 =	¿Vols guardar la macro actual?
+	d_Lang003 =	Configuració per defecte
+	d_Lang004 =	Arxius Creador Macro
+	d_Lang005 =	Guardar Macro
+	d_Lang006 =	Error en desar / sobreescriure l'arxiu
+	d_Lang007 =	Error
+	d_Lang008 =	Error: No macro seleccionada `nComproveu almenys una macro a la llista ..
+	d_Lang009 =	Error: No Seleccionat tecla d'accés directe.
+	d_Lang010 =	Error:. Direcció invàlida `nLa adreça seleccionada o el nom del fitxer no és vàlid.
+	d_Lang011 =	Advertència
+	d_Lang012 =	No hi ha control seleccionat. `N Voleu continuar?
+	d_Lang013 =	Guió Exportació
+	d_Lang014 =	Guió Exportats
+	d_Lang015 =	L'arxiu s'ha exportat amb èxit!
+	d_Lang016 =	Feu clic a "Get 'per marcar la posició.
+	d_Lang017 =	
+	(LTrim	
+		- Seleccioneu la finestra.
+		- Apunt a la posició desitjada.
+		- Premeu el botó de la dreta.
+	)	
+	d_Lang018 =	Color del píxel
+	d_Lang019 =	Esborrar llista
+	d_Lang020 =	Assegureu-vos d'eliminar tots els elements?
+	d_Lang021 =	Pròxim
+	d_Lang022 =	Anterior
+	d_Lang023 =	Missatge
+	d_Lang024 =	Carregar configuració per defecte?
+	d_Lang025 =	Macro (s) activa. `Nuse les tecles d'accés ràpid per jugar.
+	d_Lang026 =	per a iniciar / aturar la gravació
+	d_Lang027 =	L'enregistrament s'atura
+	d_Lang028 =	Enregistrament...
+	d_Lang029 =	per aturar
+	d_Lang030 =	iniciar un nou rècord
+	d_Lang031 =	no és un nom de funció vàlid.
+	d_Lang032 =	Error: Tecles duplicades.
+	d_Lang033 =	Activar Macros
+	d_Lang034 =	
+	(LTrim	
+		- Feu clic i arrossegueu amb %DrawButton% per seleccionar l'àrea.
+		- Feu clic i deixeu anar sense arrossegar per seleccionar l'àrea de control.
+		- Feu clic a una àrea sense un control per seleccionar l'àrea de la finestra.
+	)	
+	d_Lang035 =	Continuar?
+	d_Lang036 =	Imatge / píxel Trobat a
+	d_Lang037 =	Imatge / píxel no trobada.
+	d_Lang038 =	Premeu D'acord per continuar.
+	d_Lang039 =	Temps d'espera!
+	d_Lang040 =	
+	(LTrim	
+		Aquesta funció requereix la biblioteca GDI +.
+		Premeu D'acord per anar a la pàgina de descàrrega.
+		
+		Nota: 'Gdip.ahk' El fitxer ha d'estar al mateix directori d'aquest script.
+	)	
+	d_Lang041 =	El nom de la variable conté un caràcter il · legal.
+	d_Lang042 =	
+	(LTrim	
+		Operador no vàlid.
+		Els següents operadors s'accepten:
+		=, ==, <>,! =,>, <,> =, <=
+		
+		Exemples:
+		MyVar > 1
+		MyVar = `%A_DDDD`%
+		Clipboard == `%MyVar`%
+	)	
+	d_Lang043 =	O utilitzeu la barra d'eines de controls
+	d_Lang044 =	
+	(LTrim	
+		Aquesta funció requereix la funció eval ().
+		Premeu D'acord per anar a la pàgina de descàrrega.
+		
+		Nota: 'Eval.ahk' El fitxer ha d'estar al mateix directori d'aquest script.
+	)	
+	d_Lang045 =	Si us plau seleccioni una finestra d'Internet Explorer!
+	d_Lang046 =	Connexió correcta!
+	d_Lang047 =	Error al connectar!
+	d_Lang048 =	Inseriu un identificador i un CLSID.
+	d_Lang049 =	Nom no vàlid Label.
+	d_Lang050 =	Duplicar Label.
+	d_Lang051 =	Per reproduir una macro, premeu la tecla de drecera (Auto / Man).
+	d_Lang052 =	Per iniciar l'enregistrament, premeu una tecla d'accés directe Record.
+	d_Lang053 =	No tornar a mostrar aquest missatge de nou.
+	d_Lang054 =	Si us plau seleccioni una finestra d'Excel!
+	d_Lang055 =	Si us plau, seleccioneu un fitxer d'script de AutoHotkey (. AHK) i escriviu el nom de funció.
+	d_Lang056 =	
+	(LTrim	
+		Aquesta funció requereix AutoHotkey instal · lat.
+		Premeu D'acord per anar a la pàgina de descàrrega.
+	)	
+	d_Lang057 =	
+	(LTrim	
+		- Premeu Ctrl + Tecles de cursor per moure l'àrea seleccionada.
+		- Premeu les tecles Maj + tecles de fletxa per canviar la mida d'àrea seleccionada.
+		- Premeu D'acord per finalitzar.
+	)	
+	d_Lang058 =	
+	(LTrim	
+		Algunes característiques requereixen privilegis que admnistrator per poder funcionar.
+		Es recomana reiniciar l'aplicació com a administrador.
+	)	
+	d_Lang059 =	
+	(LTrim	
+		Aquesta comanda no admet expressions o funcions.
+		Assigneu una variable i utilitzar-lo en el paràmetre.
+	)	
+	d_Lang060 =	Nova versió disponible
+	d_Lang061 =	
+	(LTrim	
+		Voleu descarregar-ho ara?
+		
+		Per desactivar les comprovacions automàtiques seleccioneu Ajuda > Comprovar en l'arrencada.
+	)	
+	d_Lang062 =	Vostè ja té la versió més recent.
+	d_Lang063 =	S'ha produït un error durant la comprovació.
+		
+		
+; Tooltips		
+	NewB_TT =	Nou (Ctrl+N)
+	OpenB_TT =	Obrir (Ctrl+O)
+	SaveB_TT =	Desa (Ctrl+S)
+	ExportB_TT =	Exporta a AHK (Ctrl+I)
+	PreviewB_TT =	Vista prèvia de script (Ctrl+P)
+	OptionsB_TT =	Settings (Ctrl+G)
+	RecordB_TT =	Gravar macro (Ctrl+R)
+	StartB_TT =	Activar Macros (Ctrl+Enter)
+	TestRun_TT =	Jugar Macro actual (Ctrl+Shift+Enter)
+	RunTimer_TT =	Timer (Ctrl+Shift+T)
+	MouseB_TT =	Mouse (F2)
+	TextB_TT =	Text (F3)
+	SpecialB_TT =	Tecles especials
+	ControlB_TT =	Control de (F4)
+	PauseB_TT =	Pausa (F5) / Missatge (Shift+F5) / Espera Clau (Control+F5) 
+	WindowB_TT =	Finestra (F6)
+	ImageB_TT =	Imatge / píxel motor (F7)
+	RunB_TT =	Executar / Arxiu / cadena / Misc. (F8)
+	ComLoopB_TT =	Loop (F9) / Ir (Shift+F9) / Label (Ctrl+F9)
+	IfStB_TT =	Si Declaracions (F10) / variables (Shift+F10) / Funcions (Ctrl+F10)
+	IEComB_TT =	Internet Explorer (F11) / COM Interface (Shift+F11)
+	SendMsgB_TT =	Missatges de Windows (F12)
+	AutoKey_TT =	Retrocés per esborrar
+	ManKey_TT =	Retrocés per esborrar
+	AbortKey_TT =	Retrocés per esborrar
+	PauseKey_TT =	Fa una pausa en l'execució en comptes d'aturar
+	Win1_TT =	Afegir la tecla Windows com a modificador
+	ReptC_TT =	0 = infinit
+	TabPlus_TT =	Afegir Macro (Ctrl+T)
+	TabClose_TT =	Tancar Macro (Ctrl+W)
+	DuplicateL_TT =	Duplicar macro (Ctrl+Shift+D)
+	SaveC_TT =	Guardar macro actual (Ctrl+Alt+S)
+	ImportB_TT =	Importació Macro (Ctrl+I)
+	IfDirB_TT =	Feu Hotkeys funcionen depenent del `nType de la finestra que està activa o no existeix (Ctrl+H)
+	KeepHKOn_TT =	Mantingui Hotkeys Sempre Activat
+	A_List_TT =	Seleccioneu Macro (Ctrl+1~0)
+	Duplicate_TT =	Duplicar files seleccionades (Ctrl+D)
+	Order_TT =	Mou les files seleccionades (Ctrl+RePàg / Ctrl+AvPàg)
+	Cut_TT =	Tallar files seleccionades (Ctrl+X)
+	Copy_TT =	Copia files seleccionades (Ctrl+C)
+	Paste_TT =	Files Enganxa copiar (Ctrl+V)
+	Remove_TT =	Eliminar files seleccionades (Del)
+	Undo_TT =	Desfer (Ctrl+Z)
+	Redo_TT =	Refer (Ctrl+I)
+	CopyTo_TT =	Copiar a...
+	Capt_TT =	Captura pulsacions de tecles en aquesta finestra
+	OnScCtrl_TT =	Mostrar Els Controls De La Barra D'eines
+	ShowStep_TT =	Mostrar informació
+	ApplyT_TT =	Aplicar
+	ApplyI_TT =	Aplicar
+	ApplyL_TT =	Inseriu de Caixa (Insert)
+	EditButton_TT =	Edita
+	PrevRefresh_TT =	Actualitzar (F5)
+	PrevCopy_TT =	Copieu
+	OpenT_TT =	Obrir (Ctrl+O)
+	SaveT_TT =	Desa (Ctrl+S)
+	CutT_TT =	Tallar
+	CopyT_TT =	Copieu
+	PasteT_TT =	Enganxar
+	SelAllT_TT =	Selecciona tot
+	DefaultMacro_TT =	Selecciona arxiu a carregar en el programa de posada en marxa
+	VarCopyA_TT =	Copia contingut actual de variables
+	VarCopyB_TT =	Copia contingut actual de variables
+	FindReplace_TT =	Cercar / Reemplaçar (Ctrl+F)
+	EditComm_TT =	Redactar comentari
+	Reset_TT =	Esborrar el contingut de variables
+	PicPrev_TT =	Feu doble clic per ampliar imatge
+	LoopLVColor_TT =	Feu clic per seleccionar un color
+	IfLVColor_TT =	Feu clic per seleccionar un color
+	RefreshIEW_TT =	Actualitzar llista
+	ActiveObj_TT =	Intenta connectar-se a un objecte COM actiu
+	OSPlay_TT =	Reproduir / Pausa
+	OSStop_TT =	Aturi
+	OSRec_TT =	Start / Stop Record
+	OSRecNew_TT =	Gravar nova macro
+	OSClear_TT =	Esborrar llista
+	OSProgB_TT =	Mostra la barra de progrés
+	OSFast_TT =	Accelerar
+	OSSlow_TT =	Alentir
+	OSTrans_TT =	opacitat
+	MRel_TT =	
+	(LTrim	
+		Moviments relatius a la posició actual.
+		O si s'utilitza amb control: Posició amb relació al control.
+	)	
+	Raw_TT =	
+	(LTrim	
+		La comanda SendRaw interpreta tots els personatges literalment
+		en lloc de traduir {Intro} a una pulsació de tecla ENTER,
+		^ C del control-C, etc
+	)	
+	ComText_TT =	
+	(LTrim	
+		Quan no està en mode sense processar, els següents caràcters
+		es tracten com a modificadors (aquests modificadors afecten
+		solament la següent clau):, +, ^, #
+	)	
+	Clip_TT =	
+	(LTrim	
+		Temporalment utilitza portapapers per enviar el text.
+		Quan es completa l'operació, la seqüència de comandaments
+		restaura el contingut del porta-retalls originals.
+		(Deixeu de text buit per enganxar el contingut actual)
+	)	
+	EditPaste_TT =	
+	(LTrim	
+		Pastes cadena en la posició de cursor / insert
+		en un control d'edició (això no afecta
+		el contingut del porta-retalls).
+	)	
+	SetText_TT =	Canvia el text d'un control.
+	RelKey_TT =	Registres moviments relatius i Clicks mentre pressiona.
+	Relative_TT =	Les coordenades són relatives a la finestra activa.
+	Screen_TT =	Les coordenades són relatives a l'escriptori (pantalla completa).
+	IncFolders_TT =	
+	(LTrim	
+		0 - Només els arxius / claus
+		1 - Carpetes / subclaus i els arxius / claus
+		2 - Només les carpetes / subclaus
+	)	
+	Recurse_TT =	
+	(LTrim	
+		0 - ¿no recurse en carpetes / subclaus
+		1 - Recurse en carpetes / subclaus
+	)	
+		
+; Tooltips from AHK Docs		
+	ExpList_TT =	Feu doble clic per editar
+	Ex_IfDir_TT =	
+	(LTrim	
+		Crea dreceres de teclat i hotstrings depenent contextuals
+		en el tipus de finestra que és actiu o no existeix.
+	)	
+	Ex_IfDirType_TT =	
+	(LTrim	
+		Crea dreceres de teclat i hotstrings depenent contextuals
+		en el tipus de finestra que és actiu o no existeix.
+	)	
+	Ex_SM_TT =	
+	(LTrim	
+		Fa Enviar sinònim SendInput o SendPlay en lloc de
+		el valor per defecte (SendEvent). També fa clic i mousemove / clic / Arrossegueu
+		utilitzar el mètode especificat.
+	)	
+	SM_TT =	
+	(LTrim	
+		Esdeveniment: Aquest és el valor predeterminat de partida utilitzat per tots els scripts.
+		S'utilitza el mètode SendEvent per enviar, SendRaw, Click, i mousemove / clic / arrossegar.
+		Entrada: Canvia al mètode SendInput per enviar, SendRaw, clic, i mousemove / clic / Arrossegament.
+		InputThenPlay: Igual que l'anterior, excepte que en lloc de caure de nou a la manera Esdeveniment
+		quan SendInput no està disponible, es torna a la manera (baix) Reproduir. Això també provoca
+		la comanda SendInput si per tornar al mode Reproducció quan SendInput no està disponible.
+		Reproduir: Canvia al mètode SendPlay per enviar, SendRaw, clic, i mousemove / clic / Arrossegament.
+	)	
+	Ex_SI_TT =	
+	(LTrim	
+		Determina si un script es pot executar de nou quan ja s'està executant.
+	)	
+	SI_TT =	
+	(LTrim	
+		La paraula FORCE salta el quadre de diàleg i substitueix l'antiga instància de forma automàtica,
+		que és un efecte similar al de la comanda reload.
+		La paraula IGNORE salta el quadre de diàleg i surt de l'antiga instància en execució.
+		En altres paraules, s'ignoren els intents d'establir un guió ja de marxa.
+		El missatge OFF permet múltiples instàncies de la seqüència de comandaments perquè s'executin al mateix temps.
+	)	
+	Ex_ST_TT =	
+	(LTrim	
+		Estableix el comportament d'igualar el paràmetre WinTitle a ordres com WinWait.
+	)	
+	ST_TT =	
+	(LTrim	
+		1: el títol d'una finestra de començar amb la WinTitle especificada a ser un partit.
+		2: el títol d'una finestra pot contenir WinTitle qualsevol lloc dins que fos una coincidència.
+		3: el títol d'una finestra ha de coincidir exactament amb WinTitle un partit.
+		Regex: Canvis WinTitle, WinText, ExcludeTitle i ExcludeText com expressions regulars.
+	)	
+	Ex_DH_TT =	
+	(LTrim	
+		Determina si les finestres invisibles són "vistos" per el guió.
+	)	
+	Ex_AF_TT =	
+	(LTrim	
+		Omet el mètode suau d'activar una finestra
+		i va directament al mètode contundent.
+	)	
+	Ex_HK_TT =	
+	(LTrim	
+		Força l'ús del ganxo per executar la totalitat o algunes tecles d'accés ràpid del teclat.
+	)	
+	Ex_SK_TT =	
+	(LTrim	
+		Estableix la demora que es produirà després de cada
+		pulsació enviat per enviament o ControlSend.
+	)	
+	Ex_MD_TT =	
+	(LTrim	
+		Estableix la demora que es produirà després
+		cada moviment del ratolí o feu clic.
+	)	
+	Ex_SC_TT =	
+	(LTrim	
+		Estableix la demora que es produirà després
+		comandament de cada control de modificació.
+	)	
+	Ex_SW_TT =	
+	(LTrim	
+		Estableix la demora que es produirà després
+		cada comanda finestres, com el WinActivate.
+	)	
+	Ex_SB_TT =	
+	(LTrim	
+		Determina la rapidesa amb què executar un script (que afecta la utilització de CPU).
+	)	
+	Ex_NT_TT =	
+	(LTrim	
+		Desactiva la projecció d'una icona de la safata.
+	)	
+		
+	Ex_IN_TT =	
+	(LTrim	
+		Fa que el guió es comporti com si l'especificada
+		contingut de l'arxiu es presenti en aquesta posició exacta.
+	)	
+		
+; IE Commands Tips		
+	Tip_Navigate =	Es desplaça a una adreça URL o la ruta.
+	Tip_Value =	Obté o estableix el valor de l'objecte.
+	Tip_Focus =	Estableix el focus a l'objecte.
+	Tip_Click =	Simula un clic sobre l'objecte.
+	Tip_Submit =	Envia el formulari.
+	Tip_GoHome =	Es desplaça a la casa actual o la pàgina d'inici.
+	Tip_GoBack =	Retrocedeix un element a la llista d'historial.
+	Tip_GoForward =	Avança un element a la llista d'historial.
+	Tip_GoSearch =	Es desplaça a la pàgina de cerca.
+	Tip_Refresh =	Torna a carregar la pàgina actual.
+	Tip_Stop =	Cancel una navegació o descàrrega pendents.
+	Tip_Quit =	Tanca la pàgina.
+	Tip_LocationName =	Obté el títol de la pàgina actual ruta o.
+	Tip_LocationURL =	Obté l'adreça URL de la pàgina actual.
+	Tip_InnerText =	Estableix o obté el text de l'objecte.
+	Tip_InnerHTML =	Estableix o el codi HTML de l'objecte.
+	Tip_Href =	Estableix o un URL de destinació o un punt d'ancoratge.
+	Tip_Src =	Estableix o un URL a carregar l'objecte.
+	Tip_SelectedIndex =	Estableix o l'índex de l'opció seleccionada en un objecte de selecció.
+	Tip_Checked =	Estableix o indica l'estat de la casella de verificació o botó de ràdio.
+	Tip_Type =	Estableix o el tipus de contingut de l'objecte.
+	Tip_Width =	Estableix o recupera l'amplada de l'objecte.
+	Tip_Height =	Estableix o recupera l'alçada de l'objecte.
+	Tip_Length =	Estableix o recupera el nombre d'objectes en una col · lecció.
+		
+return		

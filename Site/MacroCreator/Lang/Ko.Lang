@@ -1,0 +1,748 @@
+﻿LoadLang_Ko:
+		
+		; Korean
+		
+; Main Menu		
+	m_Lang001 =	파일
+	m_Lang002 =	삽입하다
+	m_Lang003 =	선택
+	m_Lang004 =	수정
+	m_Lang005 =	매크로
+	m_Lang006 =	옵션
+	m_Lang007 =	언어
+	m_Lang008 =	기부하기
+	m_Lang009 =	도움
+		
+; File Submenu		
+	f_Lang001 =	새로운
+	f_Lang002 =	열기
+	f_Lang003 =	저장
+	f_Lang004 =	다른 이름으로 저장
+	f_Lang005 =	가져 오기 매크로
+	f_Lang006 =	현재 매크로를 저장
+	f_Lang007 =	없음
+	f_Lang008 =	AHK로 내보내기
+	f_Lang009 =	미리보기 스크립트
+	f_Lang010 =	변수 목록
+	f_Lang011 =	출구
+	f_Lang012 =	없음
+		
+; Insert Sub Menu		
+	i_Lang001 =	마우스
+	i_Lang002 =	본문
+	i_Lang003 =	제어
+	i_Lang004 =	중지 / 메시지 / 키 대기
+	i_Lang005 =	창
+	i_Lang006 =	이미지 / 픽셀 검색
+	i_Lang007 =	/ 파일 / 문자열 / 기타를 실행합니다.
+	i_Lang008 =	루프 / 고토 / 라벨
+	i_Lang009 =	만약 명세서 / 변수 / 함수
+	i_Lang010 =	인터넷 익스플로러 / COM 인터페이스
+	i_Lang011 =	윈도우 메시지
+	i_Lang012 =	특수 키
+		
+; Select Sub Menu		
+	s_Lang001 =	모두 선택
+	s_Lang002 =	없음을 선택
+	s_Lang003 =	선택 반전
+	s_Lang004 =	선택 확인
+	s_Lang005 =	선택을 취소 선택
+	s_Lang006 =	수표로 바꾸
+	s_Lang007 =	선택한 유형
+	s_Lang008 =	명령
+		
+; Edit Sub Menu		
+	e_Lang001 =	복제
+	e_Lang002 =	댓글 수정
+	e_Lang003 =	찾기 / 바꾸기
+	e_Lang004 =	에 복사...
+	e_Lang005 =	끄르다
+	e_Lang006 =	다시하다
+	e_Lang007 =	절단
+	e_Lang008 =	복사
+	e_Lang009 =	붙여 넣기
+	e_Lang010 =	삭제
+	e_Lang011 =	끌어 올리다
+	e_Lang012 =	아래로 이동
+	e_Lang013 =	상자 삽입
+		
+; Macro Sub Menu		
+	r_lang001 =	기록 매크로
+	r_lang002 =	매크로 활성화
+	r_lang003 =	현재 매크로를 재생
+	r_lang004 =	타이머
+	r_lang005 =	매크로를 추가합니다
+	r_lang006 =	닫기 매크로
+	r_lang007 =	문맥을 인식 단축키
+	r_lang008 =	컨트롤 표시
+	r_lang009 =	선택한 행에서 재생
+	r_lang010 =	선택한 행까지 재생
+	r_lang011 =	선택한 행을 재생
+		
+; Options Sub Menu		
+	o_Lang001 =	설정
+	o_Lang002 =	기본 단축키로 설정
+	o_Lang003 =	기본 파일로 설정
+	o_Lang004 =	기본 파일을 제거
+	o_Lang005 =	열 크기를 재설정
+	o_Lang006 =	기본 단축키
+	o_Lang007 =	기본 설정
+		
+; Make a Donation Sub Menu		
+	p_Lang001 =	페이팔 기부
+		
+; Help Sub Menu		
+	h_Lang001 =	매크로 작성기 홈
+	h_Lang002 =	AHK 온라인 설명서
+	h_Lang003 =	업데이트 확인...
+	h_Lang004 =	시작을 확인
+	h_Lang005 =	약
+		
+; Tray Menu		
+	y_Lang001 =	창 숨기기
+	y_Lang002 =	창 표시
+		
+; Main Window		
+	w_Lang001 =	수출
+	w_Lang002 =	시사
+	w_Lang003 =	옵션
+	w_Lang004 =	기록
+	w_Lang005 =	놀이
+	w_Lang006 =	자동.
+	w_Lang007 =	남자.
+	w_Lang008 =	정지
+	w_Lang009 =	Win
+	w_Lang010 =	중지
+	w_Lang011 =	고리
+	w_Lang012 =	키를 캡처
+	w_Lang013 =	정보 표시
+	w_Lang014 =	항상 활성
+	w_Lang015 =	반복:
+	w_Lang016 =	지연 (밀리 초):
+	w_Lang017 =	신청
+	w_Lang018 =	삽입하다
+	w_Lang019 =	수정
+	w_Lang020 =	컨트롤 표시
+		
+; Command Windows		
+	c_Lang001 =	마우스
+	c_Lang002 =	본문
+	c_Lang003 =	중지
+	c_Lang004 =	제어
+	c_Lang005 =	창
+	c_Lang006 =	이미지 검색
+	c_Lang007 =	픽셀 검색
+	c_Lang008 =	/ 파일 / 문자열 / 기타를 실행합니다.
+	c_Lang009 =	만약 제표
+	c_Lang010 =	변수
+	c_Lang011 =	기능
+	c_Lang012 =	인터넷 익스플로러
+	c_Lang013 =	COM 인터페이스
+	c_Lang014 =	선택 신청서 (고급)
+	c_Lang015 =	메시지
+	c_Lang016 =	제어
+	c_Lang017 =	지연
+	c_Lang018 =	Miliseconds
+	c_Lang019 =	초
+	c_Lang020 =	OK
+	c_Lang021 =	취소
+	c_Lang022 =	가까운
+	c_Lang023 =	복사
+	c_Lang024 =	삭제
+	c_Lang025 =	(예를 들어, 변수 `% 를 사용: `%Clipboard`%)
+	c_Lang026 =	행동
+	c_Lang027 =	를 클릭하십시오
+	c_Lang028 =	움직임
+	c_Lang029 =	이동을 클릭합니다
+	c_Lang030 =	휠 최대
+	c_Lang031 =	휠 아래로
+	c_Lang032 =	드래그 앤 드롭
+	c_Lang033 =	위도와 경도
+	c_Lang034 =	를 클릭하십시오
+	c_Lang035 =	보내다
+	c_Lang036 =	친척
+	c_Lang037 =	단추
+	c_Lang038 =	왼쪽
+	c_Lang039 =	권리
+	c_Lang040 =	중간
+	c_Lang041 =	X1
+	c_Lang042 =	X2
+	c_Lang043 =	해제 / 기다려
+	c_Lang044 =	계산을 클릭합니다
+	c_Lang045 =	일반 텍스트 (원료)
+	c_Lang046 =	명령이있는 텍스트
+	c_Lang047 =	클립 보드에서 붙여 넣기
+	c_Lang048 =	제어에 붙여 넣기
+	c_Lang049 =	텍스트를 설정
+	c_Lang050 =	일시 중지 추가
+	c_Lang051 =	메시지 박스
+	c_Lang052 =	키를 기다립니다
+	c_Lang053 =	시간 초과 기다립니다
+	c_Lang054 =	(miliseconds) 0 = 무한대
+	c_Lang055 =	명령
+	c_Lang056 =	가치
+	c_Lang057 =	출력 변수
+	c_Lang058 =	위치
+	c_Lang059 =	크기
+	c_Lang060 =	네 변수는이 접두사로 만든 X, Y, W, H.로 끝나는 될 것입니다
+	c_Lang061 =	출발
+	c_Lang062 =	끝
+	c_Lang063 =	영상
+	c_Lang064 =	픽셀
+	c_Lang065 =	스크린 샷 만들기
+	c_Lang066 =	키 대기
+	c_Lang067 =	발견하는 경우
+	c_Lang068 =	/ 오류를 발견하지 않은 경우
+	c_Lang069 =	* Coords는 `%FoundX`% / `%FoundY`%로 저장됩니다.
+	c_Lang070 =	Coord
+	c_Lang071 =	유사
+	c_Lang072 =	시사
+	c_Lang073 =	고리
+	c_Lang074 =	* 수동 재생에서 작동하지 않습니다.
+	c_Lang075 =	깨 뜨리다
+	c_Lang076 =	계속
+	c_Lang077 =	고토
+	c_Lang078 =	라벨로 이동
+	c_Lang079 =	상표
+	c_Lang080 =	라벨 추가
+	c_Lang081 =	문자열(InputVar) 값
+	c_Lang082 =	VAR [연산자] 값
+	c_Lang083 =	아니면 추가
+	c_Lang084 =	변수를 할당
+	c_Lang085 =	내용
+	c_Lang086 =	연산자
+	c_Lang087 =	표현을 해결하기 위해) (건강 검진 보고서를 사용
+	c_Lang088 =	재설정
+	c_Lang089 =	기능 이름
+	c_Lang090 =	쉼표 (괄호없이) 매개 변수를 구분합니다.
+	c_Lang091 =	(변수에 `%를 사용합니다. 리터럴 쉼표는 이스케이프해야합니다 [```,]).
+	c_Lang092 =	페이지 요소 / 지표
+	c_Lang093 =	세트
+	c_Lang094 =	가져 오기
+	c_Lang095 =	방법
+	c_Lang096 =	재산
+	c_Lang097 =	페이지가로드 때까지 기다립니다.
+	c_Lang098 =	CLSID
+	c_Lang099 =	연결
+	c_Lang100 =	핸들
+	c_Lang101 =	COM 스크립트
+	c_Lang102 =	메시지 번호
+	c_Lang103 =	특수 키
+	c_Lang104 =	브라우저 돌아 가기
+	c_Lang105 =	앞으로 브라우저
+	c_Lang106 =	브라우저 새로 고침
+	c_Lang107 =	브라우저 중지
+	c_Lang108 =	브라우저 검색
+	c_Lang109 =	브라우저 즐겨 찾기
+	c_Lang110 =	브라우저 홈
+	c_Lang111 =	미디어
+	c_Lang112 =	음소거
+	c_Lang113 =	볼륨 업
+	c_Lang114 =	볼륨 다운
+	c_Lang115 =	재생 / 일시 중지
+	c_Lang116 =	다음 트랙
+	c_Lang117 =	이전 트랙
+	c_Lang118 =	정지
+	c_Lang119 =	E-메일
+	c_Lang120 =	응용 프로그램 1
+	c_Lang121 =	응용 프로그램 2
+	c_Lang122 =	ScanCode
+	c_Lang123 =	추가
+	c_Lang124 =	주요 연혁
+	c_Lang125 =	ScanCode를 입력...
+	c_Lang126 =	코드 가상 키 목록에 추가!
+	c_Lang127 =	출력 변수의 이름을 입력합니다
+	c_Lang128 =	외부 파일에서 함수를 사용하여
+	c_Lang130 =	발견하면 루프를 중단
+	c_Lang131 =	신청
+	c_Lang132 =	고리
+	c_Lang133 =	파일
+	c_Lang134 =	구문 분석
+	c_Lang135 =	읽기
+	c_Lang136 =	레지스트리
+	c_Lang137 =	파일 패턴:
+	c_Lang138 =	폴더?
+	c_Lang139 =	재귀?
+	c_Lang140 =	입력 변수:
+	c_Lang141 =	구분:
+	c_Lang142 =	문자를 생략:
+	c_Lang143 =	입력 파일:
+	c_Lang144 =	키:
+	c_Lang145 =	루트 키:
+	c_Lang146 =	하위?
+	c_Lang147 =	아이콘
+	c_Lang148 =	아무 아이콘 없음
+	c_Lang149 =	오류
+	c_Lang150 =	문제
+	c_Lang151 =	감탄
+	c_Lang152 =	정보
+	c_Lang153 =	항상 상단에
+	c_Lang154 =	분
+		
+; Other Windows		
+	t_Lang001 =	AHK로 내보내기
+	t_Lang002 =	매크로
+	t_Lang003 =	루프
+	t_Lang004 =	0 = 무한
+	t_Lang005 =	Hotstring를 사용하여
+	t_Lang006 =	블록 마우스
+	t_Lang007 =	모든
+	t_Lang008 =	 없음
+	t_Lang009 =	문맥을 인식 단축키
+	t_Lang010 =	로 내보내기
+	t_Lang011 =	톱니 모양
+	t_Lang012 =	PMC 코드를 포함
+	t_Lang013 =	보내기 명령을 연결하여하지 마십시오
+	t_Lang014 =	새롭게하다
+	t_Lang015 =	자동 새로 고침
+	t_Lang016 =	항상 상단에
+	t_Lang017 =	설정
+	t_Lang018 =	일반
+	t_Lang019 =	기록 시작 / 중지
+	t_Lang020 =	새 매크로 기록
+	t_Lang021 =	키 입력
+	t_Lang022 =	녹음
+	t_Lang023 =	키 상태를 캡처 (아래 / 위로)
+	t_Lang024 =	마우스 클릭
+	t_Lang025 =	마우스 휠
+	t_Lang026 =	마우스 이동
+	t_Lang027 =	특정 시간 간격
+	t_Lang028 =	최소 지연
+	t_Lang029 =	창 클래스
+	t_Lang030 =	창 제목
+	t_Lang031 =	기록 ControlSend
+	t_Lang032 =	기록 ControlClick
+	t_Lang033 =	상대 기록 키
+	t_Lang034 =	비녀장
+	t_Lang035 =	재생
+	t_Lang036 =	속도를 더하다
+	t_Lang037 =	천천히,
+	t_Lang038 =	재생 후 마우스로 돌아 가기
+	t_Lang039 =	마우스 좌표
+	t_Lang040 =	창
+	t_Lang041 =	화면
+	t_Lang042 =	기본 마우스 지연
+	t_Lang043 =	기본 창 지연
+	t_Lang044 =	매크로 당 최대 역사
+	t_Lang045 =	지우기
+	t_Lang046 =	스크린 샷
+	t_Lang047 =	버튼을 그립니다
+	t_Lang048 =	선 너비 (픽셀)
+	t_Lang049 =	출시 캡처
+	t_Lang050 =	캡처 Enter 키를 누르세요
+	t_Lang051 =	스크린 샷 디렉토리
+	t_Lang052 =	기타.
+	t_Lang053 =	단축키
+	t_Lang054 =	기본 단축키로 설정
+	t_Lang055 =	창 바로 가기를 해제
+	t_Lang056 =	열 크기를 재설정
+	t_Lang057 =	기본 매크로 파일
+	t_Lang058 =	표준 라이브러리 파일
+	t_Lang059 =	변수 할당에 대해 기본적으로 () 건강 검진 보고서를 사용하여
+	t_Lang060 =	루프와 성명에 대한 색상 및 도움말 마크 표시
+	t_Lang061 =	(활성화 / 비활성화 할 인덱스 열 머리글을 클릭)
+	t_Lang062 =	가상 키
+	t_Lang063 =	기본
+	t_Lang064 =	댓글 수정
+	t_Lang065 =	논평
+	t_Lang066 =	검색 칼럼
+	t_Lang067 =	찾기 / 바꾸기
+	t_Lang068 =	발견
+	t_Lang069 =	대소 문자 일치
+	t_Lang070 =	교체
+	t_Lang071 =	발견
+	t_Lang072 =	대체
+	t_Lang073 =	선택된 행
+	t_Lang074 =	모든 행
+	t_Lang075 =	모든 매크로
+	t_Lang076 =	약
+	t_Lang077 =	정규 표현식
+	t_Lang078 =	한번 재생
+	t_Lang079 =	모든 X (mili) 초 재생
+	t_Lang080 =	타이머
+	t_Lang081 =	중지
+	t_Lang082 =	명세서
+	t_Lang083 =	루프와 문장에 들여 쓰기 표시
+	t_Lang084 =	(두 번 클릭 동작 열 머리글을 활성화 / 비활성화)
+	t_Lang085 =	진행률 표시 줄을 표시합니다
+	t_Lang086 =	함수 검색. 잠시 기다려주세요...
+	t_Lang087 =	외부 파일을 포함
+	t_Lang088 =	EXE 파일을 만들기
+	t_Lang089 =	여러 인스턴스를 허용
+	t_Lang090 =	기본값
+	t_Lang091 =	행을 드래그 할 수
+	t_Lang092 =	전체 셀 내용
+		
+; Messages & Dialogs		
+	d_Lang001 =	열기
+	d_Lang002 =	당신은 현재 매크로를 저장 하시겠습니까?
+	d_Lang003 =	기본 설정
+	d_Lang004 =	Macro Creator 파일
+	d_Lang005 =	매크로 저장
+	d_Lang006 =	파일을 저장 / 덮어 쓰기하지 못했습니다
+	d_Lang007 =	오류
+	d_Lang008 =	오류: 매크로를 선택하지 않았습니다.`n목록에서 하나 이상의 매크로를 확인하시기 바랍니다.
+	d_Lang009 =	오류: 단축키 선정 아냐.
+	d_Lang010 =	오류: 주소가 잘못되었습니다.`n선택한 주소 또는 파일 이름이 올바르지 않습니다.
+	d_Lang011 =	경고
+	d_Lang012 =	제어를 선택하지 않았습니다.`n하시겠습니까?
+	d_Lang013 =	스크립트 내보내기
+	d_Lang014 =	스크립트 수출
+	d_Lang015 =	파일이 성공적으로 수출되었습니다!
+	d_Lang016 =	위치를 표시하려면 '찾기'를 클릭.
+	d_Lang017 =	
+	(LTrim	
+		- 창을 선택합니다.
+		- 원하는 위치로 가리 킵니다.
+		- 마우스 오른쪽 버튼을 누릅니다.
+	)	
+	d_Lang018 =	픽셀 색상
+	d_Lang019 =	지우기 목록
+	d_Lang020 =	모든 항목을 삭제하십시오?
+	d_Lang021 =	다음
+	d_Lang022 =	이전
+	d_Lang023 =	메시지
+	d_Lang024 =	기본 설정을로드?
+	d_Lang025 =	매크로 (들) 활성화.`n재생 단축키를 사용하십시오.
+	d_Lang026 =	녹음을 시작 / 중지하려면
+	d_Lang027 =	녹음이 중지
+	d_Lang028 =	녹음 중...
+	d_Lang029 =	중지 할
+	d_Lang030 =	새 레코드를 시작
+	d_Lang031 =	유효한 함수 이름이 아닙니다.
+	d_Lang032 =	오류: 중복 키.
+	d_Lang033 =	매크로 활성화
+	d_Lang034 =	
+	(LTrim	
+		- 클릭하고 영역을 선택  %DrawButton%로 드래그합니다.
+		- 클릭하고 컨트롤 영역을 선택 드래그하지 않고 놓습니다.
+		- 창의 영역을 선택 할 수있는 통제하지 않고 영역을 클릭합니다.
+	)	
+	d_Lang035 =	계속 하시겠습니까?
+	d_Lang036 =	이미지 / 픽셀에서 발견
+	d_Lang037 =	이미지 / 픽셀 찾을 수 없습니다.
+	d_Lang038 =	계속하려면 확인을 누르십시오.
+	d_Lang039 =	시간 초과!
+	d_Lang040 =	
+	(LTrim	
+		이 기능은 GDI+라이브러리가 필요합니다.
+		다운로드 페이지를 이동하려면 '확인'을 클릭하세요.
+		
+		참고: 파일 'Gdip.ahk'는이 스크립트의 같은 디렉토리에 있어야합니다.
+	)	
+	d_Lang041 =	변수 이름은 문자가 포함되어 있습니다.
+	d_Lang042 =	
+	(LTrim	
+		잘못된 연산자를 사용하십시오.
+		다음 연산자는 허용됩니다
+		=, ==, <>,! =,>, <,> =, <=
+		
+		예:
+		MyVar > 1
+		MyVar = `%A_DDDD`%
+		Clipboard == `%MyVar`%
+	)	
+	d_Lang043 =	또는 컨트롤 도구 모음을 사용
+	d_Lang044 =	
+	(LTrim	
+		이 기능은 () 건강 검진 보고서 기능이 필요합니다.
+		다운로드 페이지를 이동하려면 '확인'을 클릭하세요.
+		
+		참고: 파일 'Eval.ahk'는이 스크립트의 같은 디렉토리에 있어야합니다.
+	)	
+	d_Lang045 =	Internet Explorer 창을 선택하십시오!
+	d_Lang046 =	연결 성공!
+	d_Lang047 =	연결하지 못했습니다!
+	d_Lang048 =	처리하고 CLSID를 삽입합니다.
+	d_Lang049 =	잘못된 라벨 이름입니다.
+	d_Lang050 =	라벨이 중복되었습니다.
+	d_Lang051 =	매크로를 재생하려면 해당 단축키 (자동 / 남자)를 누르십시오.
+	d_Lang052 =	녹음 기록 단축키를 눌러 시작합니다.
+	d_Lang053 =	이 메시지를 다시 표시하지 않습니다.
+	d_Lang054 =	엑셀 창을 선택하십시오!
+	d_Lang055 =	AutoHotkey 스크립트 파일 (. ahk)과는 함수 이름을 입력을 선택하십시오.
+	d_Lang056 =	
+	(LTrim	
+		이 기능은 AutoHotkey 설치되어 있어야합니다.
+		다운로드 페이지를 이동하려면 '확인'을 클릭하세요.
+	)	
+	d_Lang057 =	
+	(LTrim	
+		- 선택한 영역을 이동하려면 Ctrl 키를 + 화살표 키.
+		- 보도 Shift + 화살표 키 선택 영역의 크기를 조정합니다.
+		- 완료하려면 Enter 키를 누릅니다.
+	)	
+	d_Lang058 =	
+	(LTrim	
+		일부 기능이 제대로 작동하기 위해 admnistrator의 privilages이 필요합니다.
+		그것은 관리자로 응용 프로그램을 다시 시작하는 것이 좋습니다거야.
+	)	
+	d_Lang059 =	
+	(LTrim	
+		이 명령은 식이나 기능을 지원하지 않습니다.
+		변수를 지정하고 매개 변수를 사용하십시오.
+	)	
+	d_Lang060 =	사용 가능한 새 버전
+	d_Lang061 =	
+	(LTrim	
+		당신은 지금 다운로드 하시겠습니까?
+		
+		자동 검사를 해제하려면 도움말을 선택 > 시작을 확인.
+	)	
+	d_Lang062 =	당신은 이미 가장 최신 버전이 있습니다.
+	d_Lang063 =	확인하는 동안 오류가 발생했습니다.
+		
+		
+; Tooltips		
+	NewB_TT =	새 (Ctrl 키+N)
+	OpenB_TT =	열기 (Ctrl 키+O)
+	SaveB_TT =	저장하기 (Ctrl+S)
+	ExportB_TT =	AHK (Ctrl 키+E)로 내보내기
+	PreviewB_TT =	미리보기 스크립트 (Ctrl 키+P)
+	OptionsB_TT =	설정 (Ctrl 키를+G)
+	RecordB_TT =	기록 매크로 (Ctrl 키+R)
+	StartB_TT =	활성화 매크로 (Ctrl 키를+입력)
+	TestRun_TT =	현재 매크로를 재생 (Ctrl+Shift+입력)
+	RunTimer_TT =	타이머 (Ctrl+Shift+T)
+	MouseB_TT =	마우스 (F2​​)
+	TextB_TT =	텍스트 (F3)
+	SpecialB_TT =	특수 키
+	ControlB_TT =	컨트롤 (F4)
+	PauseB_TT =	중지 / 메시지 / 키 대기
+	WindowB_TT =	창 (F6)
+	ImageB_TT =	이미지 / 픽셀 검색 (F7)
+	RunB_TT =	/ 파일 / 문자열 / 기타를 실행합니다. (F8)
+	ComLoopB_TT =	루프 (F9) / 고토 (+ F9를 Shift) / 라벨 (Ctrl 키를+F9)
+	IfStB_TT =	만약 명세서 (F10) / 변수 / 함수 (Ctrl 키를+F10) (+ F10를 Shift)
+	IEComB_TT =	인터넷 익스플로러 (F11) / COM 인터페이스 (+ F11를 Shift)
+	SendMsgB_TT =	윈도우 메시지 (F12)
+	AutoKey_TT =	삭제하는 백 스페이스
+	ManKey_TT =	삭제하는 백 스페이스
+	AbortKey_TT =	삭제하는 백 스페이스
+	PauseKey_TT =	실행 대신 정지를 일시 중지
+	Win1_TT =	수정으로 Windows 키를 추가합니다
+	ReptC_TT =	0 = 무한
+	TabPlus_TT =	매크로를 추가합니다 (Ctrl+T)
+	TabClose_TT =	닫기 매크로 (Ctrl 키를+W)
+	DuplicateL_TT =	매크로를 복사 (Ctrl+Shift+D)
+	SaveC_TT =	현재 매크로를 저장 (Ctrl+Alt+S)
+	ImportB_TT =	가져 오기 매크로 (Ctrl 키를+I)
+	IfDirB_TT =	키가 활성 상태 또는 존재 창`n타입 (Ctrl 키를+H)에 따라 작동합니다
+	KeepHKOn_TT =	항상 활성화 키 보관
+	A_List_TT =	매크로를 선택 (Ctrl+1~0)
+	Duplicate_TT =	선택한 행을 복제 (Ctrl 키+D)
+	Order_TT =	선택한 행을 이동 (Ctrl 키를+PageUp / PageDown Ctrl 키를 +)
+	Cut_TT =	선택한 행합니다 (Ctrl+X)를 잘라
+	Copy_TT =	선택한 행합니다 (Ctrl+C)를 복사합니다
+	Paste_TT =	붙여 넣기 복사 행 (Ctrl 키를+V)
+	Remove_TT =	선택된 행 (델)을 삭제
+	Undo_TT =	실행 취소 (Ctrl 키+Z)
+	Redo_TT =	다시 실행 (Ctrl 키를+Y)
+	CopyTo_TT =	에 복사...
+	Capt_TT =	이 창에서 키 누름을 캡처
+	OnScCtrl_TT =	도구 모음 컨트롤을 표시
+	ShowStep_TT =	정보 표시
+	ApplyT_TT =	신청
+	ApplyI_TT =	신청
+	ApplyL_TT =	상자 삽입 (Insert)
+	EditButton_TT =	수정
+	PrevRefresh_TT =	새롭게하다 (F5)
+	PrevCopy_TT =	복사
+	OpenT_TT =	열기 (Ctrl 키+O)
+	SaveT_TT =	저장하기 (Ctrl+S)
+	CutT_TT =	절단
+	CopyT_TT =	복사
+	PasteT_TT =	붙여 넣기
+	SelAllT_TT =	모두 선택
+	DefaultMacro_TT =	프로그램에로드 시작하는 파일을 선택합니다
+	VarCopyA_TT =	현재 변수 내용을 복사
+	VarCopyB_TT =	현재 변수 내용을 복사
+	FindReplace_TT =	찾기 / 바꾸기 (Ctrl 키+F)
+	EditComm_TT =	댓글 수정
+	Reset_TT =	지우기 변수 내용
+	PicPrev_TT =	이미지를 열려면 두 번 클릭하십시오
+	LoopLVColor_TT =	색상을 선택하려면 클릭하십시오
+	IfLVColor_TT =	색상을 선택하려면 클릭하십시오
+	RefreshIEW_TT =	새로 고침 목록
+	ActiveObj_TT =	활성 COM 객체에 연결하려고
+	OSPlay_TT =	재생 / 일시 중지
+	OSStop_TT =	정지
+	OSRec_TT =	기록 시작 / 중지
+	OSRecNew_TT =	새 매크로 기록
+	OSClear_TT =	지우기 목록
+	OSProgB_TT =	진행률 표시 줄을 표시합니다
+	OSFast_TT =	속도를 더하다
+	OSSlow_TT =	천천히,
+	OSTrans_TT =	불투명
+	MRel_TT =	
+	(LTrim	
+		현재 위치를 기준으로 움직임.
+		또는 제어와 함께 사용하는 경우: 컨트롤에 상대적인 위치.
+	)	
+	Raw_TT =	
+	(LTrim	
+		SendRaw 명령은 문자 그대로 모든 문자를 해석
+		오히려 번역보다, ENTER 키를 {입력}
+		^ C로 제어-C 등
+	)	
+	ComText_TT =	
+	(LTrim	
+		하지 않을 경우 원시 모드 (Raw Mode)에서, 다음 문자
+		수식 (이 수식 영향으로 처리됩니다
+		만 매우 다음 키):!, +, ^, #
+	)	
+	Clip_TT =	
+	(LTrim	
+		일시적으로 텍스트를 보낼 클립 보드를 사용합니다.
+		작업이 완료되면 스크립트
+		원본 클립 보드 내용을 복원합니다.
+		(현재 내용을 붙여 빈 텍스트를 떠나)
+	)	
+	EditPaste_TT =	
+	(LTrim	
+		캐럿 / 삽입 위치에 붙여 넣 문자열
+		편집 컨트롤에 (이 영향을 미치지 않습니다
+		클립 보드의 내용).
+	)	
+	SetText_TT =	컨트롤의 텍스트를 변경합니다.
+	RelKey_TT =	기록은 상대적 움직임과 클릭을 누른 상태에서.
+	Relative_TT =	좌표가 활성화 된 창을 기준으로합니다.
+	Screen_TT =	좌표가 바탕 화면 (전체 화면)을 기준으로합니다.
+	IncFolders_TT =	
+	(LTrim	
+		0 - 전용 파일 / 키
+		1 - 폴더 / 하위 및 파일 / 키
+		2 - 전용 폴더 / 하위
+	)	
+	Recurse_TT =	
+	(LTrim	
+		0 - 재귀 폴더 / 하위로하지 않습니다
+		1 - 폴더 / 하위에 재귀
+	)	
+		
+; Tooltips from AHK Docs		
+	ExpList_TT =	편집하려면 더블 클릭
+	Ex_IfDir_TT =	
+	(LTrim	
+		상황에 맞는 키와 따라 hotstrings을 만듭니다
+		활성화 또는 존재 창 유형에.
+	)	
+	Ex_IfDirType_TT =	
+	(LTrim	
+		상황에 맞는 키와 따라 hotstrings을 만듭니다
+		활성화 또는 존재 창 유형에.
+	)	
+	Ex_SM_TT =	
+	(LTrim	
+		SendInput 또는 SendPlay와 동의어로 보내기보다는 만듭니다
+		기본 (SendEvent). 또한하게는 클릭하고 MouseMove /을 클릭 / 드래그
+		지정된 메서드를 사용합니다.
+	)	
+	SM_TT =	
+	(LTrim	
+		이벤트:이 모든 스크립트에서 사용하는 시작 기본값입니다.
+		그것은 보내기 SendRaw, 클릭하고 MouseMove / 드래그 / 클릭 SendEvent 방법을 사용합니다.
+		입력: SendRaw 보내기위한 SendInput 방법에 대한 스위치, 클릭하고 MouseMove /를 클릭 / 드래그합니다.
+		것을 제외하고 위와 동일 아닌 이벤트 모드로 넘어: InputThenPlay
+		SendInput를 사용할 수 없을 때, 그것은 모드 (아래)를 재생하기 위해 되돌아갑니다. 이 또한 원인
+		SendInput 명령 자체는 SendInput를 사용할 수 없을 때 재생 모드로 되돌릴 수 있습니다.
+		재생: SendRaw 보내기위한 SendPlay 방법에 대한 스위치, 클릭하고 MouseMove /를 클릭 / 드래그합니다.
+	)	
+	Ex_SI_TT =	
+	(LTrim	
+		스크립트가 이미 실행중인 경우 다시 실행 할 수 있는지 여부를 결정합니다.
+	)	
+	SI_TT =	
+	(LTrim	
+		단어 힘은 대화 상자를 생략하고 자동으로 기존의 인스턴스를 대체
+		어떤 효과가에있는 새로 고침 명령과 유사합니다.
+		단어는 건너 뛰 대화 상자를 무시하고 이전 인스턴스가 실행 출발합니다.
+		즉, 이미 실행중인 스크립트를 실행하려는 시도는 무시됩니다.
+		단어 OFF가 스크립트의 여러 인스턴스가 동시에 실행할 수 있습니다.
+	)	
+	Ex_ST_TT =	
+	(LTrim	
+		같은 WinWait 같은 명령에 WinTitle 매개 변수의 일치 동작을 설정합니다.
+	)	
+	ST_TT =	
+	(LTrim	
+		1: 창의 제목이 일치하는 지정된 WinTitle로 시작해야합니다.
+		2: 그것이 일치하는 내부 창의 제목이 어느 WinTitle 포함 할 수 있습니다.
+		3: 창의 제목은 정확히 일치하는 WinTitle 일치해야합니다.
+		정규식: 변경은 WinText, ExcludeTitle, 그리고 정규 표현식이 될 수 ExcludeText을 WinTitle.
+	)	
+	Ex_DH_TT =	
+	(LTrim	
+		눈에 보이지 않는 창은 스크립트에 의해 '볼'여부를 결정합니다.
+	)	
+	Ex_AF_TT =	
+	(LTrim	
+		창을 활성화의 완만 한 방법을 건너 뜁니다
+		그리고 강제 방법 바로갑니다.
+	)	
+	Ex_HK_TT =	
+	(LTrim	
+		전부 또는 일부 키보드 단축키를 구현하는 후크의 사용을 강요합니다.
+	)	
+	Ex_SK_TT =	
+	(LTrim	
+		각 후 발생하는 지연을 설정합니다
+		키 입력을 보내거나 ControlSend으로 보냈습니다.
+	)	
+	Ex_MD_TT =	
+	(LTrim	
+		후 발생하는 지연을 설정합니다
+		각 마우스 움직임이나 클릭합니다.
+	)	
+	Ex_SC_TT =	
+	(LTrim	
+		후 발생하는 지연을 설정합니다
+		각 명령을 제어 수정.
+	)	
+	Ex_SW_TT =	
+	(LTrim	
+		후 발생하는 지연을 설정합니다
+		같은 WinActivate 각 윈도우 명령.
+	)	
+	Ex_SB_TT =	
+	(LTrim	
+		스크립트가 (CPU 사용률에 영향을 미치는)를 실행하는 방법을 빨리 결정합니다.
+	)	
+	Ex_NT_TT =	
+	(LTrim	
+		트레이 아이콘의 상영을 사용할 수 없습니다.
+	)	
+		
+	Ex_IN_TT =	
+	(LTrim	
+		지정된 것처럼 스크립트가 동작하게됩니다
+		파일의 내용이 정확한 위치에 존재한다.
+	)	
+		
+; IE Commands Tips		
+	Tip_Navigate =	URL 또는 경로를 탐색합니다.
+	Tip_Value =	옵니다 또는 개체의 값을 설정합니다.
+	Tip_Focus =	객체에 포커스를 설정합니다.
+	Tip_Click =	개체를 클릭을 시뮬레이트합니다.
+	Tip_Submit =	양식을 제출합니다.
+	Tip_GoHome =	현재 집이나 시작 페이지로 탐색합니다.
+	Tip_GoBack =	역사 목록에서 한 항목 뒤로 탐색합니다.
+	Tip_GoForward =	역사 목록에 한 항목 앞으로 탐색합니다.
+	Tip_GoSearch =	현재 검색 페이지로 이동.
+	Tip_Refresh =	다시로드 현재 표시된 페이지입니다.
+	Tip_Stop =	대기중인 탐색 또는 다운로드를 취소합니다.
+	Tip_Quit =	페이지를 닫습니다.
+	Tip_LocationName =	경로 나 제목 현재 페이지를 가져옵니다.
+	Tip_LocationURL =	현재 페이지의 URL을 가져옵니다.
+	Tip_InnerText =	설정하거나 객체의 텍스트를 얻을 수 있습니다.
+	Tip_InnerHTML =	설정하거나 객체의 HTML을 검색합니다.
+	Tip_Href =	설정하거나 대상 URL 또는 앵커 지점을 검색합니다.
+	Tip_Src =	설정하거나 객체에 의해로드 할 URL을 검색합니다.
+	Tip_SelectedIndex =	설정 또는 선택 개체의 선택 옵션의 인덱스를 검색합니다.
+	Tip_Checked =	설정 또는 체크 박스 나 라디오 버튼의 상태를 검색합니다.
+	Tip_Type =	설정하거나 객체의 내용 유형을 검색합니다.
+	Tip_Width =	설정하거나 객체의 폭을 검색합니다.
+	Tip_Height =	설정하거나 객체의 높이를 검색합니다.
+	Tip_Length =	설정하거나 컬렉션에 개체의 수를 검색합니다.
+		
+return		

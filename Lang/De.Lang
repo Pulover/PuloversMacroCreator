@@ -1,0 +1,748 @@
+﻿LoadLang_De:
+		
+		; German
+		
+; Main Menu		
+	m_Lang001 =	&Datei
+	m_Lang002 =	Ei&nfügen
+	m_Lang003 =	W&ählen
+	m_Lang004 =	&Bearbeiten
+	m_Lang005 =	M&akro
+	m_Lang006 =	&Optionen
+	m_Lang007 =	Sp&rache
+	m_Lang008 =	Ma&chen Sie eine Spende
+	m_Lang009 =	&Hilfe
+		
+; File Submenu		
+	f_Lang001 =	&Neu
+	f_Lang002 =	&Öffnen
+	f_Lang003 =	&Sparen
+	f_Lang004 =	S&peichern unter
+	f_Lang005 =	&Import Makro
+	f_Lang006 =	Sp&eichern der aktuellen Makro
+	f_Lang007 =	Ne&ueste Dateien
+	f_Lang008 =	E&xport nach AHK
+	f_Lang009 =	&Vorschau Script
+	f_Lang010 =	&Liste Variablen
+	f_Lang011 =	Ve&rlassen
+	f_Lang012 =	&Keine Dateien
+		
+; Insert Sub Menu		
+	i_Lang001 =	&Maus
+	i_Lang002 =	&Text
+	i_Lang003 =	&Steuern
+	i_Lang004 =	&Pause / Nachricht / Schlüssel Warten
+	i_Lang005 =	&Fenster
+	i_Lang006 =	&Bild / Pixel Suche
+	i_Lang007 =	&Run / File / String / Misc.
+	i_Lang008 =	&Loop / Goto / Label
+	i_Lang009 =	&Wenn Statements / Variablen / Funktionen
+	i_Lang010 =	&Internet Explorer / COM-Schnittstelle
+	i_Lang011 =	Wi&ndows-Messages
+	i_Lang012 =	Sp&ezielle Tasten
+		
+; Select Sub Menu		
+	s_Lang001 =	&Alles auswählen
+	s_Lang002 =	&Wählen Sie Keine
+	s_Lang003 =	A&uswahl umkehren
+	s_Lang004 =	&Check selected
+	s_Lang005 =	&Deaktivieren gewählte
+	s_Lang006 =	&Invert Checks
+	s_Lang007 =	Au&sgewählte Typ
+	s_Lang008 =	&Befehle
+		
+; Edit Sub Menu		
+	e_Lang001 =	&Duplikat
+	e_Lang002 =	&Kommentar bearbeiten
+	e_Lang003 =	&Suchen / Ersetzen
+	e_Lang004 =	K&opieren...
+	e_Lang005 =	&Rückgängig machen
+	e_Lang006 =	R&edo
+	e_Lang007 =	S&chneiden
+	e_Lang008 =	Ko&pieren
+	e_Lang009 =	P&aste
+	e_Lang010 =	&Löschen
+	e_Lang011 =	&Nach oben
+	e_Lang012 =	Nac&h unten
+	e_Lang013 =	E&infügen aus Box
+		
+; Macro Sub Menu		
+	r_lang001 =	&Makro aufzeichnen
+	r_lang002 =	&Aktivieren Sie Makros
+	r_lang003 =	&Spielen Aktuelle Macro
+	r_lang004 =	&Timer
+	r_lang005 =	Ma&kro hinzufügen
+	r_lang006 =	S&chließen Macro
+	r_lang007 =	K&ontextsensitive Hotkeys
+	r_lang008 =	St&euerelemente anzeigen
+	r_lang009 =	&Wiedergabe von ausgewählten Zeile
+	r_lang010 =	W&iedergabe bis zum ausgewählten Zeile
+	r_lang011 =	S&pielen Ausgewählte Zeilen
+		
+; Options Sub Menu		
+	o_Lang001 =	&Einstellungen
+	o_Lang002 =	&Als Standard festlegen Hotkeys
+	o_Lang003 =	A&ls Standard festlegen Datei
+	o_Lang004 =	E&ntfernen Default File
+	o_Lang005 =	&Zurücksetzen Columns Größe
+	o_Lang006 =	&Standard-Hotkeys
+	o_Lang007 =	S&tandardeinstellungen
+		
+; Make a Donation Sub Menu		
+	p_Lang001 =	&PayPal Donation
+		
+; Help Sub Menu		
+	h_Lang001 =	&Macro Creator Home
+	h_Lang002 =	&AHK Online Documentation
+	h_Lang003 =	&Nach updates suchen...
+	h_Lang004 =	&Check beim start
+	h_Lang005 =	&Über
+		
+; Tray Menu		
+	y_Lang001 =	Fenster schließen
+	y_Lang002 =	Zeige Fenster
+		
+; Main Window		
+	w_Lang001 =	Exportieren
+	w_Lang002 =	Vorschau
+	w_Lang003 =	Optionen
+	w_Lang004 =	Rekord
+	w_Lang005 =	Spielen
+	w_Lang006 =	Auto.
+	w_Lang007 =	Man.
+	w_Lang008 =	Stoppen
+	w_Lang009 =	&Win
+	w_Lang010 =	&Pause
+	w_Lang011 =	&Schleife
+	w_Lang012 =	&Erfassen Keys
+	w_Lang013 =	&Info anzeigen
+	w_Lang014 =	I&mmer aktiv
+	w_Lang015 =	Wiederholen:
+	w_Lang016 =	Delay (ms):
+	w_Lang017 =	Anwenden
+	w_Lang018 =	Einfügen
+	w_Lang019 =	Bearbeiten
+	w_Lang020 =	Steuerelemente anzeigen
+		
+; Command Windows		
+	c_Lang001 =	Maus
+	c_Lang002 =	Text
+	c_Lang003 =	Pause
+	c_Lang004 =	Steuern
+	c_Lang005 =	Fenster
+	c_Lang006 =	Bild Suche
+	c_Lang007 =	Pixel Suche
+	c_Lang008 =	Run / File / String / Misc.
+	c_Lang009 =	Wenn Statements
+	c_Lang010 =	Variablen
+	c_Lang011 =	Funktionen
+	c_Lang012 =	Internet Explorer
+	c_Lang013 =	COM-Schnittstelle
+	c_Lang014 =	Select Application (Advanced)
+	c_Lang015 =	Nachricht
+	c_Lang016 =	Steuern
+	c_Lang017 =	Verzögern
+	c_Lang018 =	Millisekunden
+	c_Lang019 =	Sekunden
+	c_Lang020 =	OK
+	c_Lang021 =	Kündigen
+	c_Lang022 =	Schließen
+	c_Lang023 =	Kopieren
+	c_Lang024 =	Löschen
+	c_Lang025 =	(Verwenden Sie `% für Variablen, z. B.: `%Clipboard`%)
+	c_Lang026 =	Aktion
+	c_Lang027 =	Klicken
+	c_Lang028 =	Bewegen
+	c_Lang029 =	Verschieben und Klicken
+	c_Lang030 =	Rad Up
+	c_Lang031 =	Mausrad nach unten
+	c_Lang032 =	Drag and Drop
+	c_Lang033 =	Koordinaten
+	c_Lang034 =	Klicken
+	c_Lang035 =	Senden
+	c_Lang036 =	Relativ
+	c_Lang037 =	Taste
+	c_Lang038 =	Links
+	c_Lang039 =	Rechts
+	c_Lang040 =	Mitte
+	c_Lang041 =	X1
+	c_Lang042 =	X2
+	c_Lang043 =	Halten / Release
+	c_Lang044 =	Klicken Graf
+	c_Lang045 =	Plain Text (Raw)
+	c_Lang046 =	Text mit den Befehlen
+	c_Lang047 =	Einfügen aus der Zwischenablage
+	c_Lang048 =	Fügen Sie zur Kontrolle
+	c_Lang049 =	Set Text
+	c_Lang050 =	Pause hinzufügen
+	c_Lang051 =	Message Box
+	c_Lang052 =	Warten taste
+	c_Lang053 =	Wartezeitsperre
+	c_Lang054 =	(Millisekunden) 0 = unendlich
+	c_Lang055 =	Befehl
+	c_Lang056 =	Wert
+	c_Lang057 =	Output Variable
+	c_Lang058 =	Position
+	c_Lang059 =	Größe
+	c_Lang060 =	4 Variablen wird mit diesem Präfix erzeugt werden und endend mit X, Y, W, H.
+	c_Lang061 =	Starten
+	c_Lang062 =	Ende
+	c_Lang063 =	Bild
+	c_Lang064 =	Pixel
+	c_Lang065 =	Machen Screenshot
+	c_Lang066 =	Schlüssel Warten
+	c_Lang067 =	Wenn gefunden
+	c_Lang068 =	Wenn nicht / Fehler gefunden
+	c_Lang069 =	* Coords auf `%FoundX`% / `%FoundY`% gespeichert.
+	c_Lang070 =	Coord
+	c_Lang071 =	Variationen
+	c_Lang072 =	Vorschau
+	c_Lang073 =	Schleife
+	c_Lang074 =	* Gilt nicht im manuellen Playback arbeiten.
+	c_Lang075 =	Brechen
+	c_Lang076 =	Fortsetzen
+	c_Lang077 =	Goto
+	c_Lang078 =	Zum Etikett
+	c_Lang079 =	Etikett
+	c_Lang080 =	Hinzufügen von Label
+	c_Lang081 =	String (InputVar), Value
+	c_Lang082 =	Var [Operator] Wert
+	c_Lang083 =	Fügen Else
+	c_Lang084 =	Weisen Variable
+	c_Lang085 =	Inhalt
+	c_Lang086 =	Operator
+	c_Lang087 =	Verwenden Eval(), um Ausdrücke zu lösen
+	c_Lang088 =	Rücksetzen
+	c_Lang089 =	Funktion Name
+	c_Lang090 =	Komma getrennt Parameter (ohne Klammern).
+	c_Lang091 =	(Verwenden Sie `% für Variablen. Literal Kommas müssen maskiert werden [```,])
+	c_Lang092 =	Seite Element / Index
+	c_Lang093 =	Setzen
+	c_Lang094 =	Bekommen
+	c_Lang095 =	Verfahren
+	c_Lang096 =	Eigentum
+	c_Lang097 =	Warten, bis die Seite geladen werden.
+	c_Lang098 =	CLSID
+	c_Lang099 =	Verbinden
+	c_Lang100 =	Griff
+	c_Lang101 =	COM Script
+	c_Lang102 =	Message Number
+	c_Lang103 =	Spezielle Tasten
+	c_Lang104 =	Browser Zurück
+	c_Lang105 =	Browser Vorwärts
+	c_Lang106 =	Browser Refresh
+	c_Lang107 =	Browser Stopp
+	c_Lang108 =	Browser Suche
+	c_Lang109 =	Browser-Favoriten
+	c_Lang110 =	Browser Startseite
+	c_Lang111 =	Medien
+	c_Lang112 =	Stumm
+	c_Lang113 =	Volume Up
+	c_Lang114 =	Volume Down
+	c_Lang115 =	Wiedergabe / Pause
+	c_Lang116 =	Nächster Titel
+	c_Lang117 =	Vorheriger Titel
+	c_Lang118 =	Stoppen
+	c_Lang119 =	E-Mail-
+	c_Lang120 =	App 1
+	c_Lang121 =	App 2
+	c_Lang122 =	Scancode
+	c_Lang123 =	Hinzufügen
+	c_Lang124 =	Key History
+	c_Lang125 =	Geben Sie einen Scancode...
+	c_Lang126 =	Code hinzugefügt, um Virtuelle Keys List!
+	c_Lang127 =	Geben Sie einen Namen für die Ausgangsgröße
+	c_Lang128 =	Verwenden Sie die Funktion aus einer externen Datei
+	c_Lang130 =	Brechen Schleife, wenn gefunden
+	c_Lang131 =	Anwenden
+	c_Lang132 =	Schleife
+	c_Lang133 =	Datei
+	c_Lang134 =	Analysieren
+	c_Lang135 =	Lesen
+	c_Lang136 =	Registrierung
+	c_Lang137 =	Datei Muster:
+	c_Lang138 =	Ordner?
+	c_Lang139 =	Recurse?
+	c_Lang140 =	Eingangsgröße:
+	c_Lang141 =	Trennzeichen:
+	c_Lang142 =	Weglassen Zeichen:
+	c_Lang143 =	Eingabedatei:
+	c_Lang144 =	Schlüssel:
+	c_Lang145 =	Grundton:
+	c_Lang146 =	Unterschlüssel?
+	c_Lang147 =	Icon
+	c_Lang148 =	Kein icon
+	c_Lang149 =	Fehler
+	c_Lang150 =	Frage
+	c_Lang151 =	Ausrufezeichen
+	c_Lang152 =	Informationen
+	c_Lang153 =	Always on top
+	c_Lang154 =	Minuten
+		
+; Other Windows		
+	t_Lang001 =	Export nach AHK
+	t_Lang002 =	Macros
+	t_Lang003 =	Loops
+	t_Lang004 =	0 = unendlich
+	t_Lang005 =	Verwenden Hotstring
+	t_Lang006 =	Block Maus
+	t_Lang007 =	Alle
+	t_Lang008 =	Keiner
+	t_Lang009 =	Kontextsensitive Hotkeys
+	t_Lang010 =	Export nach
+	t_Lang011 =	Einzug
+	t_Lang012 =	Gehören PMC-Code
+	t_Lang013 =	Verketten Sie keine Befehle senden
+	t_Lang014 =	Erfrischen
+	t_Lang015 =	Auto-Refresh
+	t_Lang016 =	Always On Top
+	t_Lang017 =	Einstellungen
+	t_Lang018 =	General
+	t_Lang019 =	Start / Stop-Rekord
+	t_Lang020 =	Neues Makro aufzeichnen
+	t_Lang021 =	Tastenanschläge
+	t_Lang022 =	Aufnahme
+	t_Lang023 =	Serienbildfunktion Zustand (down / up)
+	t_Lang024 =	Mausklicks
+	t_Lang025 =	Mouse Wheel
+	t_Lang026 =	Maus bewegt
+	t_Lang027 =	Zeitintervallen
+	t_Lang028 =	Minimale Verzögerung
+	t_Lang029 =	Fenster Klassen
+	t_Lang030 =	Fenster Titel
+	t_Lang031 =	Rekord ControlSend
+	t_Lang032 =	Rekord ControlClick
+	t_Lang033 =	Relative Record-Taste
+	t_Lang034 =	Wechseln
+	t_Lang035 =	Wiedergabe
+	t_Lang036 =	Beschleunigen
+	t_Lang037 =	Verlangsamen
+	t_Lang038 =	Zurück Maus nach der Wiedergabe
+	t_Lang039 =	Mauskoordinaten
+	t_Lang040 =	Fenster
+	t_Lang041 =	Bildschirm
+	t_Lang042 =	Standard Maus Verzögerung
+	t_Lang043 =	Default Window Verzögerung
+	t_Lang044 =	Max History pro Makro
+	t_Lang045 =	Verlauf löschen
+	t_Lang046 =	Screenshots
+	t_Lang047 =	Zeichnen Knopf
+	t_Lang048 =	Linienbreite (Px)
+	t_Lang049 =	Capture auf Version
+	t_Lang050 =	Drücken Sie die Eingabetaste, um zu erfassen
+	t_Lang051 =	Screenshots Verzeichnis
+	t_Lang052 =	Misc.
+	t_Lang053 =	Hotkeys
+	t_Lang054 =	Als Standard festlegen Hotkeys
+	t_Lang055 =	Deaktivieren Fenster Shortcuts
+	t_Lang056 =	Zurücksetzen Columns Größe
+	t_Lang057 =	Standard Macro File
+	t_Lang058 =	Standard Library Datei
+	t_Lang059 =	Verwenden Eval() standardmäßig für Variablen Assignment
+	t_Lang060 =	Zeigen Sie Farben und Hilfe Marks für Loops und Statements
+	t_Lang061 =	(Klicken Sie auf die Spalte Index Header aktivieren / deaktivieren)
+	t_Lang062 =	Virtuelle Keys
+	t_Lang063 =	Default
+	t_Lang064 =	Kommentar bearbeiten
+	t_Lang065 =	Kommentar
+	t_Lang066 =	Suche Column
+	t_Lang067 =	Suchen / Ersetzen
+	t_Lang068 =	Finden
+	t_Lang069 =	Groß-/Kleinschreibung
+	t_Lang070 =	Ersetzen
+	t_Lang071 =	Gefunden
+	t_Lang072 =	Ersetzte
+	t_Lang073 =	Ausgewählte Zeilen
+	t_Lang074 =	Alle Zeilen
+	t_Lang075 =	Alle Makros
+	t_Lang076 =	Über
+	t_Lang077 =	Regular Expression
+	t_Lang078 =	Spielen, wenn
+	t_Lang079 =	Spielen Sie alle X (mili) Sekunden
+	t_Lang080 =	Timer
+	t_Lang081 =	Pause
+	t_Lang082 =	Statements
+	t_Lang083 =	Zeige Einrückung für Loops und Statements
+	t_Lang084 =	(Doppelklicken Sie auf die Spalte Aktion Header aktivieren / deaktivieren)
+	t_Lang085 =	Anzeige Progress Bar
+	t_Lang086 =	Auf der Suche nach Funktionen. Bitte warten...
+	t_Lang087 =	Fügen Sie externe Dateien
+	t_Lang088 =	Erstellen EXE-Datei
+	t_Lang089 =	Mehrere Instanzen zulassen
+	t_Lang090 =	Defaults
+	t_Lang091 =	Erlauben Ziehen Reihen
+	t_Lang092 =	Gesamte Zellinhalt
+		
+; Messages & Dialogs		
+	d_Lang001 =	Öffnen
+	d_Lang002 =	Wollen Sie den aktuellen Makro zu retten?
+	d_Lang003 =	Default Settings
+	d_Lang004 =	Macro Creator-Dateien
+	d_Lang005 =	Speichern Macro
+	d_Lang006 =	Fehler beim Speichern / Datei überschreiben
+	d_Lang007 =	Fehler
+	d_Lang008 =	Fehler: Keine Macro ausgewählt.`nBitte wählen Sie mindestens ein Makro in der Liste.
+	d_Lang009 =	Fehler: Keine Hotkey ausgewählt.
+	d_Lang010 =	Error: Invalid Address.`nDie gewählte Adresse oder Dateiname ist ungültig.
+	d_Lang011 =	Warnung
+	d_Lang012 =	Keine Kontrolle ausgewählt.`nWeiter?
+	d_Lang013 =	Export Script
+	d_Lang014 =	Script Exportierte
+	d_Lang015 =	Die Datei wurde erfolgreich exportiert!
+	d_Lang016 =	Klicken Sie auf "Get", um Position zu markieren.
+	d_Lang017 =	
+	(LTrim	
+		- Wählen Sie das Fenster.
+		- Richten Sie die gewünschte Position.
+		- Drücken Sie die Rechts-Taste.
+	)	
+	d_Lang018 =	Pixel Farbe
+	d_Lang019 =	Clear List
+	d_Lang020 =	Sicher, dass alle Einträge löschen?
+	d_Lang021 =	Nächste
+	d_Lang022 =	Früher
+	d_Lang023 =	Nachricht
+	d_Lang024 =	Legen Sie Standardeinstellungen?
+	d_Lang025 =	Macro (s) aktiviert.`nMit den Hotkeys zu spielen.
+	d_Lang026 =	Zum Starten / Stoppen der Aufnahme
+	d_Lang027 =	Aufnahme gestoppt
+	d_Lang028 =	Aufnahme...
+	d_Lang029 =	zu stoppen
+	d_Lang030 =	auf ein neues Rekordniveau zu starten
+	d_Lang031 =	ist kein gültiger Name der Funktion.
+	d_Lang032 =	Fehler: Duplicate Hotkeys.
+	d_Lang033 =	Aktivieren Sie Makros
+	d_Lang034 =	
+	(LTrim	
+		- Klicken und Ziehen mit %DrawButton% auf auszuwählen.
+		- Klicken Sie auf und lassen ohne Ziehen, um die Kontrolle zu wählen.
+		- In einem Gebiet, klicken ohne Steuerung des Fensters wählen.
+	)	
+	d_Lang035 =	Weiter?
+	d_Lang036 =	Bild / Pixel bei Gefunden
+	d_Lang037 =	Bild / Pixel nicht gefunden.
+	d_Lang038 =	Drücken Sie auf OK, um fortzufahren.
+	d_Lang039 =	Timeout!
+	d_Lang040 =	
+	(LTrim	
+		Diese Funktion erfordert die GDI+ Bibliothek.
+		Klicken Sie auf OK, um zur Seite herunterladen.
+		
+		Hinweis: Die Datei 'Gdip.ahk' muss im gleichen Verzeichnis dieses Skript sein.
+	)	
+	d_Lang041 =	Der Name der Variablen enthält ein ungültiges Zeichen.
+	d_Lang042 =	
+	(LTrim	
+		Ungültiger Operator.
+		Die folgenden Operatoren werden akzeptiert:
+		=, ==, <>,! =,>, <,> =, <=
+		
+		Beispiele:
+		MyVar > 1
+		MyVar = `%A_DDDD`%
+		Clipboard == `%MyVar`%
+	)	
+	d_Lang043 =	Oder nutzen sie die steuerelemente symbolleiste
+	d_Lang044 =	
+	(LTrim	
+		Diese Funktion erfordert die Eval()-Funktion.
+		Klicken Sie auf OK, um zur Seite herunterladen.
+		
+		Hinweis: Die Datei 'Eval.ahk' muss im gleichen Verzeichnis dieses Skript sein.
+	)	
+	d_Lang045 =	Bitte wählen Sie ein Internet Explorer-Fenster!
+	d_Lang046 =	Verbindung erfolgreich!
+	d_Lang047 =	Verbindung fehlgeschlagen!
+	d_Lang048 =	Legen Sie einen Griff und eine CLSID.
+	d_Lang049 =	Ungültige Label Name.
+	d_Lang050 =	Duplizieren Label.
+	d_Lang051 =	Um ein Makro zu spielen drücken Sie die entsprechende Hotkey (Auto / Man).
+	d_Lang052 =	Zum Starten der Aufnahme drücken Sie eine Aufnahme Hotkey.
+	d_Lang053 =	Nicht mehr anzeigen Diese Meldung.
+	d_Lang054 =	Bitte wählen Sie eine Excel-Fenster!
+	d_Lang055 =	Bitte wählen Sie einen AutoHotkey Skript-Datei (. Ahk) und ein Geben Sie eine Funktion Name.
+	d_Lang056 =	
+	(LTrim	
+		Diese Funktion benötigt AutoHotkey installiert.
+		Klicken Sie auf OK, um zur Seite herunterladen.
+	)	
+	d_Lang057 =	
+	(LTrim	
+		- Drücken Sie Strg + Pfeil-Tasten zu ausgewählten Bereich zu bewegen.
+		- Drücken Sie die Umschalttaste + Pfeil-Tasten, um die Größe ausgewählten Bereich.
+		- Drücken Sie die Eingabetaste, um zu beenden.
+	)	
+	d_Lang058 =	
+	(LTrim	
+		Einige Funktionen erfordern admnistrator Privilegien, um richtig zu funktionieren.
+		Es wird empfohlen, die Anwendung als Administrator starten.
+	)	
+	d_Lang059 =	
+	(LTrim	
+		Dieser Befehl unterstützt keine Ausdrücke oder Funktionen.
+		Bitte eine Variable zuweisen und verwenden Sie es in den Parameter.
+	)	
+	d_Lang060 =	Neue Version verfügbar
+	d_Lang061 =	
+	(LTrim	
+		Möchten Sie sie jetzt herunterladen?
+		
+		Um die automatische Prüfungen zu deaktivieren wählen Sie Hilfe > Check beim start.
+	)	
+	d_Lang062 =	Sie haben bereits die neueste Version.
+	d_Lang063 =	Ein Fehler ist aufgetreten während der Überprüfung.
+		
+		
+; Tooltips		
+	NewB_TT =	Neu (Strg+N)
+	OpenB_TT =	Öffnen (Strg+O)
+	SaveB_TT =	Save (Ctrl+S)
+	ExportB_TT =	Export nach AHK (Strg+E)
+	PreviewB_TT =	Vorschau Script (Strg+P)
+	OptionsB_TT =	Einstellungen (Strg+G)
+	RecordB_TT =	Makro aufzeichnen (Strg+R)
+	StartB_TT =	Makros aktivieren (Strg+Enter)
+	TestRun_TT =	Play Aktuelle Macro (Ctrl+Shift+Enter)
+	RunTimer_TT =	Timer (Strg+Umschalt+T)
+	MouseB_TT =	Maus (F2)
+	TextB_TT =	Text (F3)
+	SpecialB_TT =	Spezielle Tasten
+	ControlB_TT =	Control (F4)
+	PauseB_TT =	Pause (F5) / Nachricht (Shift+F5) / Schlüssel Warten (Control+F5) 
+	WindowB_TT =	Fenster (F6)
+	ImageB_TT =	Bild / Pixel Search (F7)
+	RunB_TT =	Run / File / String / Misc. (F8)
+	ComLoopB_TT =	Loop (F9) / Goto (Shift+F9) / Label (Strg+F9)
+	IfStB_TT =	Wenn Statements (F10) / Variablen (Shift+F10) / Funktionen (Strg+F10)
+	IEComB_TT =	Internet Explorer (F11) / COM-Schnittstelle (Shift+F11)
+	SendMsgB_TT =	Windows-Messages (F12)
+	AutoKey_TT =	Backspace zum Löschen
+	ManKey_TT =	Backspace zum Löschen
+	AbortKey_TT =	Backspace zum Löschen
+	PauseKey_TT =	Unterbricht die Ausführung anstatt anzuhalten
+	Win1_TT =	Fügen Sie die Windows-Taste als Modifizierer
+	ReptC_TT =	0 = unendlich
+	TabPlus_TT =	Makro hinzufügen (Strg+T)
+	TabClose_TT =	Schließen Macro (Strg+W)
+	DuplicateL_TT =	Duplizieren Macro (Strg+Umschalt+D)
+	SaveC_TT =	Save Current Macro (Strg+Alt+S)
+	ImportB_TT =	Import Macro (Ctrl+I)
+	IfDirB_TT =	Machen Hotkeys arbeiten je nach`nArt der Fenster, das aktiv ist oder existiert (Strg+H)
+	KeepHKOn_TT =	Halten Sie Hotkeys immer aktiviert
+	A_List_TT =	Wählen Sie Makro (Ctrl+1~0)
+	Duplicate_TT =	Duplizieren Ausgewählte Zeilen (Strg+D)
+	Order_TT =	Bewegen Sie Ausgewählte Zeilen (Strg+Bild auf / Ctrl+PageDown)
+	Cut_TT =	Cut Ausgewählte Zeilen (Strg+X)
+	Copy_TT =	Kopieren Ausgewählte Zeilen (Strg+C)
+	Paste_TT =	Paste kopierten Zeilen (Strg+V)
+	Remove_TT =	Ausgewählte Zeilen löschen (Del)
+	Undo_TT =	Rückgängig (Strg+Z)
+	Redo_TT =	Redo (Strg+Y)
+	CopyTo_TT =	Kopieren...
+	Capt_TT =	Erfassen Tastendrücke in diesem Fenster
+	OnScCtrl_TT =	Display-Steuerelemente Symbolleiste
+	ShowStep_TT =	Info anzeigen
+	ApplyT_TT =	Anwenden
+	ApplyI_TT =	Anwenden
+	ApplyL_TT =	Einfügen aus Box (Insert)
+	EditButton_TT =	Bearbeiten
+	PrevRefresh_TT =	Erfrischen (F5)
+	PrevCopy_TT =	Kopieren
+	OpenT_TT =	Öffnen (Strg+O)
+	SaveT_TT =	Save (Ctrl+S)
+	CutT_TT =	Schneiden
+	CopyT_TT =	Kopieren
+	PasteT_TT =	Paste
+	SelAllT_TT =	Alles auswählen
+	DefaultMacro_TT =	Wählen Sie Datei auf Programm laden starten
+	VarCopyA_TT =	Kopieren aktuellen variablen Inhalten
+	VarCopyB_TT =	Kopieren aktuellen variablen Inhalten
+	FindReplace_TT =	Suchen / Ersetzen (Strg+F)
+	EditComm_TT =	Kommentar bearbeiten
+	Reset_TT =	Klare variablen Inhalten
+	PicPrev_TT =	Doppelklicken Sie auf das Bild zu öffnen
+	LoopLVColor_TT =	Klicken Sie auf eine Farbe auswählen
+	IfLVColor_TT =	Klicken Sie auf eine Farbe auswählen
+	RefreshIEW_TT =	Liste aktualisieren
+	ActiveObj_TT =	Versucht, auf einer Active COM-Objekt verbinden
+	OSPlay_TT =	Wiedergabe / Pause
+	OSStop_TT =	Stoppen
+	OSRec_TT =	Start / Stop-Rekord
+	OSRecNew_TT =	Neues Makro aufzeichnen
+	OSClear_TT =	Clear List
+	OSProgB_TT =	Anzeige Progress Bar
+	OSFast_TT =	Beschleunigen
+	OSSlow_TT =	Verlangsamen
+	OSTrans_TT =	Deckkraft
+	MRel_TT =	
+	(LTrim	
+		Bewegungen relativ zur aktuellen Position.
+		Oder wenn mit Control verwendet: Position relativ zu kontrollieren.
+	)	
+	Raw_TT =	
+	(LTrim	
+		Die SendRaw Befehl interpretiert alle Zeichen buchstäblich
+		anstatt {Enter} zu einem ENTER Tastendruck
+		^ C Control-C, etc.
+	)	
+	ComText_TT =	
+	(LTrim	
+		Wenn er nicht im RAW-Modus, die folgenden Zeichen
+		als Modifikatoren (diese Modifikatoren beeinflussen behandelt
+		nur das nächste Schlüssel):, +, ^, #
+	)	
+	Clip_TT =	
+	(LTrim	
+		Vorübergehend mithilfe von Clipboard, um den Text zu senden.
+		Wenn der Vorgang abgeschlossen ist, wird das Skript
+		werden die ursprünglichen Inhalte der Zwischenablage.
+		(Lassen Sie Text leer aktuellen Inhalt einzufügen)
+	)	
+	EditPaste_TT =	
+	(LTrim	
+		Pasten String an der Einfügemarke / Insert-Position
+		in einem Edit-Steuerelement (dies hat keinen Einfluss auf
+		der Inhalt der Zwischenablage).
+	)	
+	SetText_TT =	Ändert den Text eines Steuerelements.
+	RelKey_TT =	Rekorde relativen Bewegungen und Klicks, während gedrückt.
+	Relative_TT =	Die Koordinaten sind relativ zum aktiven Fenster.
+	Screen_TT =	Die Koordinaten sind relativ zum Desktop (gesamter Bildschirm).
+	IncFolders_TT =	
+	(LTrim	
+		0 - Nur dateien / keys
+		1 - Ordner / dateien unterschlüssel und / keys
+		2 - Nur ordner / subkeys
+	)	
+	Recurse_TT =	
+	(LTrim	
+		0 - Nicht rekursiv in ordnern / subkeys
+		1 - Recurse in ordnern / subkeys
+	)	
+		
+; Tooltips from AHK Docs		
+	ExpList_TT =	Doppelklicken Sie auf die zu bearbeitende
+	Ex_IfDir_TT =	
+	(LTrim	
+		Erstellt kontextsensitive Hotkeys und Hotstrings je
+		von der Art des Fensters, der aktiv ist oder vorliegt.
+	)	
+	Ex_IfDirType_TT =	
+	(LTrim	
+		Erstellt kontextsensitive Hotkeys und Hotstrings je
+		von der Art des Fensters, der aktiv ist oder vorliegt.
+	)	
+	Ex_SM_TT =	
+	(LTrim	
+		Macht Senden mit SendInput oder SendPlay Synonym statt
+		der Standard (SendEvent). Auch macht Klicken und MouseMove / Klicken / Ziehen
+		verwenden Sie die angegebene Methode.
+	)	
+	SM_TT =	
+	(LTrim	
+		Event: Dies ist der Ausgangspunkt standardmäßig von allen Script verwendet.
+		Es nutzt die SendEvent Methode für Senden, SendRaw, Click und MouseMove / Klicken / Ziehen.
+		Input: Schaltet auf den SendInput Methode für Senden, SendRaw, Click und MouseMove / Klicken / Ziehen.
+		InputThenPlay: Wie oben, außer dass anstatt sich zurück zu Event-Modus
+		wenn SendInput nicht verfügbar ist, kehrt es in den Modus (siehe unten) spielen. Dies verursacht auch
+		die SendInput Befehl sich wieder den Play-Modus, wenn SendInput ist nicht verfügbar.
+		Wiedergabe: Wechselt zum SendPlay Methode für Senden, SendRaw, Click und MouseMove / Klicken / Ziehen.
+	)	
+	Ex_SI_TT =	
+	(LTrim	
+		Bestimmt, ob ein Skript erlaubt ist, wieder zu laufen, wenn es bereits ausgeführt wird.
+	)	
+	SI_TT =	
+	(LTrim	
+		Das Wort FORCE überspringt das Dialogfeld und ersetzt die alte Instanz automatisch,
+		die ähnlich in der Wirkung dem Reload-Befehl.
+		Das Wort IGNORE überspringt das Dialogfeld und lässt die alte Instanz läuft.
+		In anderen Worten, wird versucht, eine bereits laufende Skript starten ignoriert.
+		Das Wort OFF ermöglicht es, mehrere Instanzen des Skripts gleichzeitig ausgeführt werden.
+	)	
+	Ex_ST_TT =	
+	(LTrim	
+		Stellt die passende Verhalten des WinTitle Parameter in Befehlen wie WinWait.
+	)	
+	ST_TT =	
+	(LTrim	
+		1: Ein Fenster der Titel muss mit dem angegebenen WinTitle beginnen ein Spiel sein.
+		2: Ein Fenster der Titel kann WinTitle überall drin ein Spiel zu sein.
+		3: Ein Fenster-Titel muss exakt WinTitle um ein Spiel zu sein.
+		RegEx: Änderungen WinTitle, WinText, ExcludeTitle und ExcludeText reguläre Ausdrücke sein.
+	)	
+	Ex_DH_TT =	
+	(LTrim	
+		Legt fest, ob unsichtbare Fenster "gesehen" durch das Skript.
+	)	
+	Ex_AF_TT =	
+	(LTrim	
+		Überspringt die sanfte Methode der Aktivierung eines Fensters
+		und geht direkt auf die gewaltsame Methode.
+	)	
+	Ex_HK_TT =	
+	(LTrim	
+		Erzwingt die Verwendung des Hakens auf alle oder einige Tastatur-Hotkeys zu implementieren.
+	)	
+	Ex_SK_TT =	
+	(LTrim	
+		Legt die Verzögerung, die nach jedem auftreten
+		Tastendruck durch Senden oder ControlSend gesendet.
+	)	
+	Ex_MD_TT =	
+	(LTrim	
+		Legt die Verzögerung, die nach auftreten
+		jeder Mausbewegung oder Mausklick.
+	)	
+	Ex_SC_TT =	
+	(LTrim	
+		Legt die Verzögerung, die nach auftreten
+		jedes Steuerelement-modifizierende Befehl.
+	)	
+	Ex_SW_TT =	
+	(LTrim	
+		Legt die Verzögerung, die nach auftreten
+		jedes Fenstersystem Befehl, wie WinActivate.
+	)	
+	Ex_SB_TT =	
+	(LTrim	
+		Bestimmt, wie schnell ein Skript ausgeführt werden soll (betrifft die CPU-Auslastung).
+	)	
+	Ex_NT_TT =	
+	(LTrim	
+		Deaktiviert die Vorführung eines Tray-Icon.
+	)	
+		
+	Ex_IN_TT =	
+	(LTrim	
+		Verursacht das Skript zu verhalten, als ob die angegebene
+		Dateiinhalt sind in diesem genaue Position vorhanden.
+	)	
+		
+; IE Commands Tips		
+	Tip_Navigate =	Navigiert zu einer URL oder Pfad.
+	Tip_Value =	Ruft den Wert des Objekts.
+	Tip_Focus =	Wird der Fokus auf dem Objekt.
+	Tip_Click =	Simuliert einen Klick auf das Objekt.
+	Tip_Submit =	Das Formular abschickt.
+	Tip_GoHome =	Navigiert zum aktuellen Hause oder Startseite.
+	Tip_GoBack =	Springt rückwärts ein Element in der History-Liste.
+	Tip_GoForward =	Navigiert ein Element in der History-Liste.
+	Tip_GoSearch =	Navigiert zum aktuellen Suchseite.
+	Tip_Refresh =	Lädt die aktuell angezeigte Seite.
+	Tip_Stop =	Bricht eine anstehende Navigation oder Download.
+	Tip_Quit =	Schließt die Seite.
+	Tip_LocationName =	Ruft den Pfad oder den Titel der aktuellen Seite.
+	Tip_LocationURL =	Ruft die URL der aktuellen Seite.
+	Tip_InnerText =	Setzt oder bekommt den Text des Objekts.
+	Tip_InnerHTML =	Setzt oder holt die HTML des Objekts.
+	Tip_Href =	Setzt oder ruft eine Ziel-URL oder einen Ankerpunkt.
+	Tip_Src =	Setzt oder ruft eine URL vom Objekt geladen werden.
+	Tip_SelectedIndex =	Setzt oder holt den Index der ausgewählten Option in einer Objekt auswählen.
+	Tip_Checked =	Setzt oder holt den Zustand der Kontrollkästchen oder Optionsfeld.
+	Tip_Type =	Setzt oder ruft den Inhalt des Objekts.
+	Tip_Width =	Setzt oder holt die Breite des Objekts.
+	Tip_Height =	Setzt oder holt die Höhe des Objekts.
+	Tip_Length =	Setzt oder ruft die Anzahl der Objekte in einer Auflistung.
+		
+return		

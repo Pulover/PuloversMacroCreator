@@ -1,0 +1,9 @@
+﻿[PMC Code]|F3|F6|1|Window
+1|Run|notepad.exe|1|0|Run||||
+2|WinWait||1|333|WinWait||ahk_class Notepad||
+3|[Control]|Test Text Sample`n|1|0|ControlSetText|Edit1|ahk_class Notepad||
+4|Control + End|{Control Down}{End}{Control Up}|1|0|Send||||
+5|F5|{F5}|1|20|ControlSend|Edit1|ahk_class Notepad||
+6|[Control]|noteVar|1|0|ControlGetText|Edit1|ahk_class Notepad||
+7|[Pause]|%noteVar%|1|0|MsgBox|1|||
+

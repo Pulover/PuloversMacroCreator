@@ -1,0 +1,70 @@
+﻿# Playback
+
+## Table of Contents
+
+* [Introduction](#Introduction)
+* [Hotkeys](#Hotkeys)
+* [On-Screen Controls](#On-Screen-Controls)
+* [Context Sensitive Hotkeys](#Context-Sensitive-Hotkeys)
+* [Playback Options](#Playback-Options)
+
+## Introduction
+
+To activate the Playback Hotkeys you have to press the Play Button (unless the *Always Active* option is on, which will activate all hotkeys when the program window is not active). **Playback will not start immediately after pressing the Play Button, it will start when you press one of the Active Hotkeys**. This behavior is intended to allow the user to select the desired starting window/control/mouse position before start playing.  
+You can also activate Playback Hotkeys by double-clicking the TrayIcon or right-clicking on it and selecting *Play*.  
+Unchecked rows will be ignored during playback.
+The *Play Current Macro* button will run the active Macro immediately without activating Hotkeys.
+
+## Hotkeys
+
+The Playback Hotkeys are selected in the boxes at the top-right of the main window.
+
+**Auto.** (Auto Hotkey): Selects the Hotkey to reproduce the currently selected Macro the amount of times set in the Repeat box at the bottom. The Win option add Win key as a modifier. During playback the tray icon will change to playing state. The executing Macro must be finished or stopped before you can execute a new one.
+
+**Man.** (Manual Hotkey): Selects the Hotkey to reproduce the currently selected Macro step-by-step. This is usually used to debug the Macro. If Show Info option is on a tooltip show the last and next steps will be shown next to the mouse pointer.
+
+**Stop**: Selects the Hotkey to stop execution and return it to start. You can also stop Playback by double-clicking the TrayIcon or right-clicking on it and selecting *Stop*.  
+The Pause option changes the behavior to pause/unpause execution instead. You can also pause/unpause Playback by Middle-Clicking the TrayIcon (even if Pause option is not enabled).  
+This key is global for all Macros.  
+
+*Note*: Mouse Actions are affected by [Mouse Coordinates Settings](p7-Settings.html#Defaults).  
+
+## On-Screen Controls
+
+This small window allows you to control Playback and Recording using an interface in addition to the Hotkeys. It will be displayed when the *Playback* or *Record* button is pressed and the *Show Controls* option is checked or you can open it manually from the Macro Menu and TrayMenu.
+
+### Multiple Macros
+
+Macro Creator supports multiple Macros / Hotkeys. Each Macro will have its own Auto and Manual Hotkey that are shown when you add/select a Macro tab.
+
+When you press the Play Button (or when the main window is not active if "Always Active" option is on) all valid Hotkeys will be activated for all non-empty Macros. A traytip will be displayed (if *Show Info* is on) showing how many Auto. Hotkeys were activated. If any duplicate is found NO Hotkey will be activated.
+
+### Debugging Macros
+
+In addition to the Manual Hotkey you can select one of these options from the Macro menu:
+
+**Play From Selected Row**: If checked Playback will run each Macro from the first selected row in its list. Valid for all Playback commands.
+
+**Play Until Selected Row**: If checked Playback will stop each Macro when the first selected row in its list is reached. Valid for all Playback commands.
+
+You can also view the list of variables and contents from the File menu and Tray Icon menu.
+
+## Context Sensitive Hotkeys
+
+Makes all Hotkeys context-sensitive. Such hotkeys perform a different action (or none at all) depending on the type of window that is active or exists.
+
+This option affects ALL Hotkeys and will be saved to the programs settings when it's closed. There's a text tip at the bottom-right of the main window to show if it's active. To deactivate this option select *None* in the list.
+
+For more information see [AutoHotkey Help](http://l.autohotkey.net/docs/commands/_IfWinActive.htm).
+
+## Playback Options
+
+To change options click the Options button on the main window or select Options Menu > Settings.
+
+**Speed Up**: Selects the Hotkey toggle Playback Speed Up/Normal. When this option is on (a traytip is displayed) it will divide the Delays between commands by the selected X number.
+
+**Slow Down**: Selects the Hotkey toggle Playback Speed Down/Normal. When this option is on (a traytip is displayed) it will multiply the Delays between commands by the selected X number.
+
+**Return Mouse after playback**: If checked will return the mouse to the initial position after each Macro Playback that uses mouse movement. This will not work for Manual Playback.
+
+**Display Progress Bar**: If checked will display a bar on the screen showing the execution progress of the Macro playing. You can edit the options to change color, size and position. For information on the options of the Progress Bar refer to the [AutoHotkey Help](http://l.autohotkey.net/docs/commands/Progress.htm).

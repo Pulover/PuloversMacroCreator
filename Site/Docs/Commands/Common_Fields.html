@@ -1,0 +1,41 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Common Fields</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="..\default.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h1>Common Fields</h1>
+<p>The following fields appear on some of the Command Windows below and will behave the same for all, therefore will be omitted from their parameters.</p>
+<h3>Parameters</h3>
+<table class="info">
+<tr>
+  <td width="15%">Repeat</td>
+  <td width="85%">How many times to execute action.<br/>
+This field accepts <a href="p8-Variables.html">Variables &amp; Functions</a>.</td>
+</tr>
+<tr>
+  <td width="15%">Delay</td>
+  <td width="85%">Time to wait before the next command line.<br/>
+This field accepts <a href="p8-Variables.html">Variables &amp; Functions</a>.</td>
+</tr>
+<tr>
+  <td width="15%">Control</td>
+  <td width="85%">Selects the target control to send the command. Use the Get button to easily find a control's name: Point the mouse to its location and Right-Click on it. To operate upon a control's HWND (window handle), leave the Control parameter blank and specify ahk_id %ControlHwnd% for the WinTitle parameter.<br/>
+This field accepts <a href="p8-Variables.html">Variables &amp; Functions</a>.</td>
+</tr>
+<tr>
+  <td width="15%">Window</td>
+  <td width="85%"><p>Title/Class/Process/ID/ProcessID of target window for control command. The DropdowndList defines which information will be taken from a windown when using the <em>Get</em> button.<br/>
+<strong>Extra Parameters</strong>: The first parameter is WinTitle, you can add one or more extra parameters separating them by commas:</p>
+<pre class="NoIndent">WinTitle, WinText, ExcludeTitle, ExcludeText.</pre>
+<p>You can omit any of those parameters, including WinTitle.<br/>
+This field accepts <a href="p8-Variables.html">Variables &amp; Functions</a>.</p></td>
+</tr>
+</table>
+
+</body>
+</html>

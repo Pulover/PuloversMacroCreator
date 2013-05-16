@@ -1,0 +1,748 @@
+﻿LoadLang_Nl:
+		
+		; Dutch
+		
+; Main Menu		
+	m_Lang001 =	&Bestand
+	m_Lang002 =	&Invoegen
+	m_Lang003 =	&Kiezen
+	m_Lang004 =	&Redigeren
+	m_Lang005 =	&Macro
+	m_Lang006 =	&Opties
+	m_Lang007 =	Taal
+	m_Lang008 =	Maak &een donatie
+	m_Lang009 =	&Help
+		
+; File Submenu		
+	f_Lang001 =	&Nieuw
+	f_Lang002 =	&Open
+	f_Lang003 =	&Besparen
+	f_Lang004 =	O&pslaan als
+	f_Lang005 =	&Import Macro
+	f_Lang006 =	&Save huidige Macro
+	f_Lang007 =	&Recente Bestanden
+	f_Lang008 =	&Exporteren naar AHK
+	f_Lang009 =	&Voorbeeld Script
+	f_Lang010 =	&Lijstvariabelen
+	f_Lang011 =	&Uitgang
+	f_Lang012 =	&Geen files
+		
+; Insert Sub Menu		
+	i_Lang001 =	&Muis
+	i_Lang002 =	&Tekst
+	i_Lang003 =	&Controle
+	i_Lang004 =	&Pauzeren / Bericht / Key Wachten
+	i_Lang005 =	&Venster
+	i_Lang006 =	&Afbeelding / Pixel zoeken
+	i_Lang007 =	&Run / Bestand / String / Misc.
+	i_Lang008 =	&Loop / Ga naar / Label
+	i_Lang009 =	Al&s Verklaringen / Variabelen / Functies
+	i_Lang010 =	&Internet Explorer / COM-interface
+	i_Lang011 =	&Windows Messages
+	i_Lang012 =	Sp&eciale toetsen
+		
+; Select Sub Menu		
+	s_Lang001 =	&Alles selecteren
+	s_Lang002 =	&Selecteer Geen
+	s_Lang003 =	S&electie omkeren
+	s_Lang004 =	&Controleer Geselecteerde
+	s_Lang005 =	&Haal het vinkje weg Geselecteerde
+	s_Lang006 =	&Omkeren Controles
+	s_Lang007 =	&Geselecteerde Type
+	s_Lang008 =	Co&mmando's
+		
+; Edit Sub Menu		
+	e_Lang001 =	&Duplicaat
+	e_Lang002 =	&Opmerking bewerken
+	e_Lang003 =	&Zoeken / vervangen
+	e_Lang004 =	&Kopiëren naar...
+	e_Lang005 =	O&ngedaan maken
+	e_Lang006 =	O&pnieuw
+	e_Lang007 =	&Snijden
+	e_Lang008 =	Kop&ieer
+	e_Lang009 =	P&lakken
+	e_Lang010 =	&Verwijder
+	e_Lang011 =	O&mhoog
+	e_Lang012 =	Oml&aag
+	e_Lang013 =	Invo&egen van Box
+		
+; Macro Sub Menu		
+	r_lang001 =	&Macro opnemen
+	r_lang002 =	&Activeer Macro's
+	r_lang003 =	&Speel huidige macro
+	r_lang004 =	&Timer
+	r_lang005 =	&Voeg Macro
+	r_lang006 =	S&luiten Macro
+	r_lang007 =	&Context gevoelige sneltoetsen
+	r_lang008 =	T&oon een checklist
+	r_lang009 =	A&fspelen vanaf geselecteerde rij
+	r_lang010 =	S&peel tot geselecteerde rij
+	r_lang011 =	Sp&elen Geselecteerde Rijen
+		
+; Options Sub Menu		
+	o_Lang001 =	&Instellingen
+	o_Lang002 =	&Als standaard instellen Sneltoetsen
+	o_Lang003 =	A&ls standaard instellen File
+	o_Lang004 =	&Verwijder Standaard File
+	o_Lang005 =	&Reset Kolommen Grootte
+	o_Lang006 =	&Standaard Sneltoetsen
+	o_Lang007 =	S&tandaardinstellingen
+		
+; Make a Donation Sub Menu		
+	p_Lang001 =	&PayPal Donatie
+		
+; Help Sub Menu		
+	h_Lang001 =	&Macro Schepper Startpagina
+	h_Lang002 =	&AHK Online Documentatie
+	h_Lang003 =	&Controleren op updates...
+	h_Lang004 =	C&heck bij het opstarten
+	h_Lang005 =	&Over
+		
+; Tray Menu		
+	y_Lang001 =	Venster te verbergen
+	y_Lang002 =	Toon venster
+		
+; Main Window		
+	w_Lang001 =	Exporteren
+	w_Lang002 =	Voorbeeld
+	w_Lang003 =	Opties
+	w_Lang004 =	Record
+	w_Lang005 =	Spelen
+	w_Lang006 =	Auto.
+	w_Lang007 =	Man.
+	w_Lang008 =	Stoppen
+	w_Lang009 =	&Win
+	w_Lang010 =	&Pauze
+	w_Lang011 =	&Lus
+	w_Lang012 =	&Capture Keys
+	w_Lang013 =	&Toon info
+	w_Lang014 =	&Altijd Actief
+	w_Lang015 =	Herhalen:
+	w_Lang016 =	Delay (ms):
+	w_Lang017 =	Van toepassing zijn
+	w_Lang018 =	Invoegen
+	w_Lang019 =	Redigeren
+	w_Lang020 =	Toon een checklist
+		
+; Command Windows		
+	c_Lang001 =	Muis
+	c_Lang002 =	Tekst
+	c_Lang003 =	Pauzeren
+	c_Lang004 =	Controle
+	c_Lang005 =	Venster
+	c_Lang006 =	Zoeken naar afbeeldingen
+	c_Lang007 =	Pixel Zoeken
+	c_Lang008 =	Run / Bestand / String / Misc.
+	c_Lang009 =	Als Verklaringen
+	c_Lang010 =	Variabelen
+	c_Lang011 =	Functies
+	c_Lang012 =	Internet Explorer
+	c_Lang013 =	COM-interface
+	c_Lang014 =	Select Application (Geavanceerd)
+	c_Lang015 =	Bericht
+	c_Lang016 =	Controle
+	c_Lang017 =	Vertraging
+	c_Lang018 =	Milliseconden
+	c_Lang019 =	Seconden
+	c_Lang020 =	OK
+	c_Lang021 =	Annuleren
+	c_Lang022 =	Sluiten
+	c_Lang023 =	Kopieer
+	c_Lang024 =	Verwijder
+	c_Lang025 =	(Gebruik `% voor variabelen, bijvoorbeeld: `%Clipboard`%)
+	c_Lang026 =	Actie
+	c_Lang027 =	Klikken
+	c_Lang028 =	Bewegen
+	c_Lang029 =	Verplaatsen en klik
+	c_Lang030 =	Wiel omhoog
+	c_Lang031 =	Wiel Omlaag
+	c_Lang032 =	Slepen en neerzetten
+	c_Lang033 =	Coördinaten
+	c_Lang034 =	Klikken
+	c_Lang035 =	Sturen
+	c_Lang036 =	Relatief
+	c_Lang037 =	Knop
+	c_Lang038 =	Links
+	c_Lang039 =	Rechts
+	c_Lang040 =	Midden
+	c_Lang041 =	X1
+	c_Lang042 =	X2
+	c_Lang043 =	Hold / Laat
+	c_Lang044 =	Klik Count
+	c_Lang045 =	Tekst zonder opmaak (Raw)
+	c_Lang046 =	Tekst commando's
+	c_Lang047 =	Plakken van Klembord
+	c_Lang048 =	Plakken op Control
+	c_Lang049 =	Set Text
+	c_Lang050 =	Pauze toevoegen
+	c_Lang051 =	Message Box
+	c_Lang052 =	Wachten op belangrijke
+	c_Lang053 =	Timeout wachten
+	c_Lang054 =	(Milliseconden) 0 = oneindig
+	c_Lang055 =	Commando
+	c_Lang056 =	Waarde
+	c_Lang057 =	Output Variable
+	c_Lang058 =	Positie
+	c_Lang059 =	Omvang
+	c_Lang060 =	4 variabelen worden gemaakt met dit voorvoegsel en eindigend met X, Y, W, H.
+	c_Lang061 =	Beginnen
+	c_Lang062 =	Einde
+	c_Lang063 =	Beeld
+	c_Lang064 =	Pixel
+	c_Lang065 =	Maak Screenshot
+	c_Lang066 =	Key Wachten
+	c_Lang067 =	Indien gevonden
+	c_Lang068 =	Indien niet gevonden / fout
+	c_Lang069 =	* Coords opgeslagen om `%FoundX`% / `%FoundY`%.
+	c_Lang070 =	Coord
+	c_Lang071 =	Variaties
+	c_Lang072 =	Voorbeeld
+	c_Lang073 =	Lus
+	c_Lang074 =	* Werkt niet in de handmatige afspelen.
+	c_Lang075 =	Breken
+	c_Lang076 =	Voortzetten
+	c_Lang077 =	Ga naar
+	c_Lang078 =	Ga naar Label
+	c_Lang079 =	Label
+	c_Lang080 =	Label toevoegen
+	c_Lang081 =	String (InputVar), Value
+	c_Lang082 =	Var [operator] Waarde
+	c_Lang083 =	Voeg Else
+	c_Lang084 =	Wijs Variabele
+	c_Lang085 =	Inhoud
+	c_Lang086 =	Operator
+	c_Lang087 =	Gebruik Eval() om uitdrukkingen op te lossen
+	c_Lang088 =	Reset
+	c_Lang089 =	Functie Naam
+	c_Lang090 =	Komma gescheiden parameters (zonder haakjes).
+	c_Lang091 =	(Gebruik `% voor Variabelen. Letterlijke Komma's moet worden ontsnapt [```,])
+	c_Lang092 =	Pagina-element / Index
+	c_Lang093 =	Ingesteld
+	c_Lang094 =	Krijgen
+	c_Lang095 =	Methode
+	c_Lang096 =	Eigendom
+	c_Lang097 =	Wacht tot pagina is geladen.
+	c_Lang098 =	CLSID
+	c_Lang099 =	Aansluiten
+	c_Lang100 =	Behandelen
+	c_Lang101 =	COM Script
+	c_Lang102 =	Bericht Nummer
+	c_Lang103 =	Speciale toetsen
+	c_Lang104 =	Browser Terug
+	c_Lang105 =	Browser Forward
+	c_Lang106 =	Browser Vernieuwen
+	c_Lang107 =	Browser Stop
+	c_Lang108 =	Browser Zoeken
+	c_Lang109 =	Browser Favorieten
+	c_Lang110 =	Browser Startpagina
+	c_Lang111 =	Media
+	c_Lang112 =	Mute
+	c_Lang113 =	Volume omhoog
+	c_Lang114 =	Volume omlaag
+	c_Lang115 =	Play / Pause
+	c_Lang116 =	Volgende track
+	c_Lang117 =	Vorige track
+	c_Lang118 =	Stop
+	c_Lang119 =	E-mail
+	c_Lang120 =	App 1
+	c_Lang121 =	App 2
+	c_Lang122 =	Scancode
+	c_Lang123 =	Toevoegen
+	c_Lang124 =	Key Geschiedenis
+	c_Lang125 =	Typ een scancode...
+	c_Lang126 =	Code toegevoegd aan Virtual Keys List!
+	c_Lang127 =	Typ een naam voor de output variabele
+	c_Lang128 =	Gebruik Functie van extern bestand
+	c_Lang130 =	Breken lus indien gevonden
+	c_Lang131 =	Van toepassing zijn
+	c_Lang132 =	Lus
+	c_Lang133 =	Bestand
+	c_Lang134 =	Ontleden
+	c_Lang135 =	Lezen
+	c_Lang136 =	Register
+	c_Lang137 =	Bestandspatroon:
+	c_Lang138 =	Mappen?
+	c_Lang139 =	Recurse?
+	c_Lang140 =	Inputvariabele:
+	c_Lang141 =	Scheidingstekens:
+	c_Lang142 =	Weglaten Tekens:
+	c_Lang143 =	Invoerbestand:
+	c_Lang144 =	Sleutel:
+	c_Lang145 =	Grondtoontoets:
+	c_Lang146 =	Subsleutels?
+	c_Lang147 =	Icon
+	c_Lang148 =	Geen pictogram
+	c_Lang149 =	Fout
+	c_Lang150 =	Vraag
+	c_Lang151 =	Uitroep
+	c_Lang152 =	Informatie
+	c_Lang153 =	Altijd op voorgrond
+	c_Lang154 =	Minuten
+		
+; Other Windows		
+	t_Lang001 =	Exporteren naar AHK
+	t_Lang002 =	Macro's
+	t_Lang003 =	Loops
+	t_Lang004 =	0 = oneindig
+	t_Lang005 =	Gebruik Hotstring
+	t_Lang006 =	Blokkeren Mouse
+	t_Lang007 =	Alle
+	t_Lang008 =	Geen
+	t_Lang009 =	Context gevoelige sneltoetsen
+	t_Lang010 =	Exporteren naar
+	t_Lang011 =	Inspringing
+	t_Lang012 =	Inclusief PMC Code
+	t_Lang013 =	Niet aaneenschakelen Send commando's
+	t_Lang014 =	Verversen
+	t_Lang015 =	Auto-Refresh
+	t_Lang016 =	Altijd op voorgrond
+	t_Lang017 =	Instellingen
+	t_Lang018 =	Algemeen
+	t_Lang019 =	Start / Stop Record
+	t_Lang020 =	Nieuwe macro opnemen
+	t_Lang021 =	Toetsaanslagen
+	t_Lang022 =	Opname
+	t_Lang023 =	Opnametoets staat (omlaag / omhoog)
+	t_Lang024 =	Muisklikken
+	t_Lang025 =	Muiswiel
+	t_Lang026 =	Muis beweegt
+	t_Lang027 =	Getimede intervallen
+	t_Lang028 =	Een minimum aan vertraging
+	t_Lang029 =	Window klassen
+	t_Lang030 =	Window titels
+	t_Lang031 =	Record ControlSend
+	t_Lang032 =	Record ControlClick
+	t_Lang033 =	Relatieve Opnametoets
+	t_Lang034 =	Toggle
+	t_Lang035 =	Afspelen
+	t_Lang036 =	Versnellen
+	t_Lang037 =	Langzamer gaan
+	t_Lang038 =	Terug Mouse nadat de weergave
+	t_Lang039 =	Muiscoördinaten
+	t_Lang040 =	Venster
+	t_Lang041 =	Scherm
+	t_Lang042 =	Standaard Muis Delay
+	t_Lang043 =	Standaard Window Delay
+	t_Lang044 =	Max Geschiedenis per Macro
+	t_Lang045 =	Geschiedenis wissen
+	t_Lang046 =	Screenshots
+	t_Lang047 =	Teken Button
+	t_Lang048 =	Lijndikte (Px)
+	t_Lang049 =	Capture op de release
+	t_Lang050 =	Druk op Enter om vast te leggen
+	t_Lang051 =	Screenshots Directory
+	t_Lang052 =	Misc.
+	t_Lang053 =	Sneltoetsen
+	t_Lang054 =	Als standaard instellen Sneltoetsen
+	t_Lang055 =	Schakel Venster Snelkoppelingen
+	t_Lang056 =	Reset Kolommen Grootte
+	t_Lang057 =	Standaard Macro File
+	t_Lang058 =	Standard Library File
+	t_Lang059 =	Gebruik Eval() standaard voor variabelen Opdracht
+	t_Lang060 =	Toon Kleuren en Help Marks voor Loops en Verklaringen
+	t_Lang061 =	(Klik op de Index kolomkop te activeren / deactiveren)
+	t_Lang062 =	Virtual Keys
+	t_Lang063 =	Verzuim
+	t_Lang064 =	Opmerking bewerken
+	t_Lang065 =	Commentaar
+	t_Lang066 =	Zoeken Column
+	t_Lang067 =	Zoeken / vervangen
+	t_Lang068 =	Vinden
+	t_Lang069 =	Match Case
+	t_Lang070 =	Vervang
+	t_Lang071 =	Gevonden
+	t_Lang072 =	Vervangen
+	t_Lang073 =	Geselecteerde Rijen
+	t_Lang074 =	Alle Rijen
+	t_Lang075 =	Alle macro's
+	t_Lang076 =	Over
+	t_Lang077 =	Regular Expression
+	t_Lang078 =	Een keer afspelen
+	t_Lang079 =	Speel elke X (mili) seconden
+	t_Lang080 =	Timer
+	t_Lang081 =	Pauze
+	t_Lang082 =	Verklaringen
+	t_Lang083 =	Toon Inspringen voor Loops en Verklaringen
+	t_Lang084 =	(Dubbelklik op de actie kolomkop inschakelen / uitschakelen)
+	t_Lang085 =	Weergave Progress Bar
+	t_Lang086 =	Zoeken naar functies. Even geduld aub...
+	t_Lang087 =	Inclusief externe bestanden
+	t_Lang088 =	Maak EXE File
+	t_Lang089 =	Kunnen meerdere exemplaren
+	t_Lang090 =	Standaardwaarden
+	t_Lang091 =	Laat slepen rijen
+	t_Lang092 =	Celinhoud
+		
+; Messages & Dialogs		
+	d_Lang001 =	Open
+	d_Lang002 =	Wilt u de huidige macro op te slaan?
+	d_Lang003 =	Standaardinstellingen
+	d_Lang004 =	Macro Creator-bestanden
+	d_Lang005 =	Save Macro
+	d_Lang006 =	Mislukt opslaan / overschrijven bestand
+	d_Lang007 =	Fout
+	d_Lang008 =	Fout: Geen Macro geselecteerd.`nControleer ten minste een macro in de lijst.
+	d_Lang009 =	Fout: Geen Sneltoets Geselecteerd.
+	d_Lang010 =	Fout: ongeldig adres.`nHet geselecteerde adres of de bestandsnaam is ongeldig.
+	d_Lang011 =	Waarschuwing
+	d_Lang012 =	Geen controle geselecteerd.`nVerder?
+	d_Lang013 =	Export Script
+	d_Lang014 =	Script Geëxporteerde
+	d_Lang015 =	Het bestand is succesvol geëxporteerd!
+	d_Lang016 =	Klik op 'Get' om positie te markeren.
+	d_Lang017 =	
+	(LTrim	
+		- Selecteer in het venster.
+		- Wijs de gewenste positie.
+		- Druk op de knop Rechts.
+	)	
+	d_Lang018 =	Pixel Kleur
+	d_Lang019 =	Lijst wissen
+	d_Lang020 =	Zorg dat u alle items wilt verwijderen?
+	d_Lang021 =	Volgende
+	d_Lang022 =	Vorig
+	d_Lang023 =	Bericht
+	d_Lang024 =	Laad de standaardinstellingen?
+	d_Lang025 =	Macro (s) geactiveerd.`nGebruik de sneltoetsen om te spelen.
+	d_Lang026 =	te starten / stoppen met opnemen
+	d_Lang027 =	Opname gestopt
+	d_Lang028 =	Opname...
+	d_Lang029 =	stoppen
+	d_Lang030 =	naar nieuw record te beginnen
+	d_Lang031 =	is geen geldige functienaam.
+	d_Lang032 =	Fout: Dubbele Hotkeys.
+	d_Lang033 =	Activeer Macro's
+	d_Lang034 =	
+	(LTrim	
+		- Klik en sleep met %DrawButton% naar gebied te selecteren.
+		- Klik en laat los zonder te slepen om de controle te selecteren.
+		- Klik in een gebied zonder controle aan de oppervlakte van het venster te selecteren.
+	)	
+	d_Lang035 =	Doorgaan?
+	d_Lang036 =	Afbeelding / Pixel Gevonden op
+	d_Lang037 =	Afbeelding / Pixel niet gevonden.
+	d_Lang038 =	Druk op OK om verder te gaan.
+	d_Lang039 =	Time-out!
+	d_Lang040 =	
+	(LTrim	
+		Voor deze functie moet de GDI+ bibliotheek.
+		Klik op OK om naar de pagina te downloaden.
+		
+		Opmerking: Het bestand 'Gdip.ahk' moet in dezelfde directory van dit script.
+	)	
+	d_Lang041 =	De naam van de variabele bevat een ongeldig teken.
+	d_Lang042 =	
+	(LTrim	
+		Ongeldige operator.
+		De volgende operatoren worden geaccepteerd:
+		=, ==, <>,! =,>, <,> =, <=
+		
+		Voorbeelden:
+		MyVar > 1
+		MyVar = `%A_DDDD`%
+		Clipboard == `%MyVar`%
+	)	
+	d_Lang043 =	Of gebruik de werkbalk besturingselementen
+	d_Lang044 =	
+	(LTrim	
+		Voor deze functie is de functie Eval().
+		Klik op OK om naar de pagina te downloaden.
+		
+		Opmerking: Het bestand 'Eval.ahk' moet in dezelfde directory van dit script.
+	)	
+	d_Lang045 =	Selecteer een Internet Explorer-venster!
+	d_Lang046 =	Verbinding tot stand!
+	d_Lang047 =	Verbinden mislukt!
+	d_Lang048 =	Plaats een handvat en een CLSID.
+	d_Lang049 =	Ongeldige Label Name.
+	d_Lang050 =	Dubbel label.
+	d_Lang051 =	Om een ​​macro af te spelen drukt u op de bijbehorende sneltoets (Auto / Man).
+	d_Lang052 =	Om te beginnen de opname drukt u op een Record Hotkey.
+	d_Lang053 =	Stel Toon dit bericht niet opnieuw.
+	d_Lang054 =	Selecteer een Microsoft Excel-venster!
+	d_Lang055 =	Selecteer een AutoHotkey script-bestand (. AHK) en een voer een functienaam.
+	d_Lang056 =	
+	(LTrim	
+		Voor deze functie is AutoHotkey geïnstalleerd.
+		Klik op OK om naar de pagina te downloaden.
+	)	
+	d_Lang057 =	
+	(LTrim	
+		- Druk op Ctrl + Pijl-toetsen om het geselecteerde gebied te verplaatsen.
+		- Druk op Shift + pijltjestoetsen om geselecteerde gebied wijzigen.
+		- Druk op Enter om te voltooien.
+	)	
+	d_Lang058 =	
+	(LTrim	
+		Voor sommige functies is admnistrator privileges om goed te functioneren.
+		Het is aan te raden om de toepassing als Administrator opnieuw te starten.
+	)	
+	d_Lang059 =	
+	(LTrim	
+		Dit commando ondersteunt geen uitdrukkingen of functies.
+		Gelieve toekennen van een variabele en gebruik het in de parameter.
+	)	
+	d_Lang060 =	Nieuwe versie beschikbaar
+	d_Lang061 =	
+	(LTrim	
+		Wilt u deze nu downloaden?
+		
+		Om automatische controles uit te schakelen selecteert u Help > Check bij het opstarten.
+	)	
+	d_Lang062 =	Je hebt al de meest recente versie.
+	d_Lang063 =	Er is een fout opgetreden tijdens het controleren.
+		
+		
+; Tooltips		
+	NewB_TT =	Nieuw (Ctrl+N)
+	OpenB_TT =	Openen (Ctrl+O)
+	SaveB_TT =	Opslaan (Ctrl+S)
+	ExportB_TT =	Exporteren naar AHK (Ctrl+E)
+	PreviewB_TT =	Voorbeeld Script (Ctrl+P)
+	OptionsB_TT =	Instellingen (Ctrl+G)
+	RecordB_TT =	Macro opnemen (Ctrl+R)
+	StartB_TT =	Macro's activeren (Ctrl+Enter)
+	TestRun_TT =	Speel huidige macro (Ctrl+Shift+Enter)
+	RunTimer_TT =	Timer (Ctrl+Shift+T)
+	MouseB_TT =	Muis (F2)
+	TextB_TT =	Tekst (F3)
+	SpecialB_TT =	Speciale toetsen
+	ControlB_TT =	Control (F4)
+	PauseB_TT =	Pauzeren (F5) / Bericht (Shift+F5) / Key Wachten (Control+F5) 
+	WindowB_TT =	Window (F6)
+	ImageB_TT =	Afbeelding / Pixel Zoeken (F7)
+	RunB_TT =	Run / Bestand / String / Misc. (F8)
+	ComLoopB_TT =	Loop (F9) / Ga naar (Shift+F9) / Label (Ctrl+F9)
+	IfStB_TT =	Als Verklaringen (F10) / Variabelen (Shift+F10) / Functies (Ctrl+F10)
+	IEComB_TT =	Internet Explorer (F11) / COM-interface (Shift+F11)
+	SendMsgB_TT =	Windows Messages (F12)
+	AutoKey_TT =	Backspace om te wissen
+	ManKey_TT =	Backspace om te wissen
+	AbortKey_TT =	Backspace om te wissen
+	PauseKey_TT =	Hiermee onderbreekt de uitvoering in plaats van te stoppen
+	Win1_TT =	Voeg de Windows-toets als modifier
+	ReptC_TT =	0 = oneindig
+	TabPlus_TT =	Voeg Macro (Ctrl+T)
+	TabClose_TT =	Sluiten Macro (Ctrl+W)
+	DuplicateL_TT =	Dubbele Macro (Ctrl+Shift+D)
+	SaveC_TT =	Save Current Macro (Ctrl+Alt+S)
+	ImportB_TT =	Import Macro (Ctrl+I)
+	IfDirB_TT =	Maak Sneltoetsen werken, afhankelijk van het`ntype venster dat actief is of bestaat (Ctrl+H)
+	KeepHKOn_TT =	Houd Sneltoetsen altijd geactiveerd
+	A_List_TT =	Selecteert Macro (Ctrl+1~0)
+	Duplicate_TT =	Geselecteerde rijen dupliceren (Ctrl+D)
+	Order_TT =	Verplaats geselecteerde rijen (Ctrl+PageUp / Ctrl+PageDown)
+	Cut_TT =	Snijd Geselecteerde rijen (Ctrl+X)
+	Copy_TT =	Kopieer geselecteerde rijen (Ctrl+C)
+	Paste_TT =	Plakken Gekopieerde rijen (Ctrl+V)
+	Remove_TT =	Geselecteerde rijen verwijderen (Del)
+	Undo_TT =	Ongedaan maken (Ctrl+Z)
+	Redo_TT =	Opnieuw (Ctrl+Y)
+	CopyTo_TT =	Kopiëren naar...
+	Capt_TT =	Capture-toets drukt in dit venster
+	OnScCtrl_TT =	Weer Controles Werkbalk
+	ShowStep_TT =	Toon info
+	ApplyT_TT =	Van toepassing zijn
+	ApplyI_TT =	Van toepassing zijn
+	ApplyL_TT =	Invoegen van Box (Insert)
+	EditButton_TT =	Redigeren
+	PrevRefresh_TT =	Verversen (F5)
+	PrevCopy_TT =	Kopieer
+	OpenT_TT =	Openen (Ctrl+O)
+	SaveT_TT =	Opslaan (Ctrl+S)
+	CutT_TT =	Snijden
+	CopyT_TT =	Kopieer
+	PasteT_TT =	Plakken
+	SelAllT_TT =	Alles selecteren
+	DefaultMacro_TT =	Selecteer bestand te laden op het programma opstarten
+	VarCopyA_TT =	Kopieer huidige variabele inhoud
+	VarCopyB_TT =	Kopieer huidige variabele inhoud
+	FindReplace_TT =	Zoeken / Vervangen (Ctrl+F)
+	EditComm_TT =	Opmerking bewerken
+	Reset_TT =	Clear variabele inhoud
+	PicPrev_TT =	Dubbelklik Click to open image
+	LoopLVColor_TT =	Klik hier om een ​​kleur te kiezen
+	IfLVColor_TT =	Klik hier om een ​​kleur te kiezen
+	RefreshIEW_TT =	Lijst vernieuwen
+	ActiveObj_TT =	Verbinding probeert te maken met een Active COM-object
+	OSPlay_TT =	Play / Pause
+	OSStop_TT =	Stoppen
+	OSRec_TT =	Start / Stop Record
+	OSRecNew_TT =	Nieuwe macro opnemen
+	OSClear_TT =	Lijst wissen
+	OSProgB_TT =	Weergave Progress Bar
+	OSFast_TT =	Versnellen
+	OSSlow_TT =	Langzamer gaan
+	OSTrans_TT =	ondoorzichtigheid
+	MRel_TT =	
+	(LTrim	
+		Bewegingen ten opzichte van de huidige positie.
+		Of samen met Control: Positie tov de controlegroep.
+	)	
+	Raw_TT =	
+	(LTrim	
+		De SendRaw opdracht interpreteert alle tekens letterlijk
+		in plaats van het vertalen van {Enter} om een ​​ENTER toetsaanslag,
+		^ C om Control-C, enz.
+	)	
+	ComText_TT =	
+	(LTrim	
+		Wanneer niet in raw modus, de volgende tekens
+		worden behandeld als modifiers (deze bepalingen van invloed zijn
+		alleen de volgende toets):, +, ^, #
+	)	
+	Clip_TT =	
+	(LTrim	
+		Tijdelijk gebruik van het klembord te sturen van de tekst.
+		Als de handeling is afgerond, het script
+		herstelt de oorspronkelijke inhoud van het klembord.
+		(Laat tekst leeg om de huidige inhoud plakken)
+	)	
+	EditPaste_TT =	
+	(LTrim	
+		Pasta's String op het dakje / invoegpositie
+		in een Edit-besturingselement (dit heeft geen invloed
+		de inhoud van het klembord).
+	)	
+	SetText_TT =	Hiermee wijzigt u de tekst van een controle.
+	RelKey_TT =	Records relatieve bewegingen en Clicks tijdens het drukken.
+	Relative_TT =	Coördinaten zijn ten opzichte van het actieve venster.
+	Screen_TT =	Coördinaten zijn ten opzichte van het bureaublad (hele scherm).
+	IncFolders_TT =	
+	(LTrim	
+		0 - Alleen bestanden / toetsen
+		1 - Mappen / subsleutels en bestanden / toetsen
+		2 - Alleen mappen / subsleutels
+	)	
+	Recurse_TT =	
+	(LTrim	
+		0 - Niet recurse in mappen / subsleutels
+		1 - Recurse in mappen / subsleutels
+	)	
+		
+; Tooltips from AHK Docs		
+	ExpList_TT =	Dubbelklik op om te bewerken
+	Ex_IfDir_TT =	
+	(LTrim	
+		Maakt contextgevoelige sneltoetsen en hotstrings afhankelijk
+		van het type venster dat actief is of bestaat.
+	)	
+	Ex_IfDirType_TT =	
+	(LTrim	
+		Maakt contextgevoelige sneltoetsen en hotstrings afhankelijk
+		van het type venster dat actief is of bestaat.
+	)	
+	Ex_SM_TT =	
+	(LTrim	
+		Maakt Stuur synoniem met SendInput of SendPlay in plaats van
+		de standaard (sendEvent). Maakt ook Klik en mouseMove / Klik / Sleep
+		gebruik maken van de voorgeschreven methode.
+	)	
+	SM_TT =	
+	(LTrim	
+		Evenement: Dit is het startpunt standaard gebruikt door alle scripts.
+		Het maakt gebruik van de sendEvent methode voor het verzenden, SendRaw, Klik, en mouseMove / Klik / slepen.
+		Input: Schakelt naar de SendInput methode voor het verzenden, SendRaw, Klik, en mouseMove / Klik / slepen.
+		InputThenPlay: Hetzelfde als hierboven, behalve dat in plaats van terug te vallen tot Event modus
+		wanneer SendInput niet beschikbaar is, keert het terug naar Play mode (zie hieronder). Dit veroorzaakt ook
+		de SendInput opdracht zelf om terug te keren naar de afspeelmodus wanneer SendInput niet beschikbaar is.
+		Speel: Schakelt naar de SendPlay methode voor het verzenden, SendRaw, Klik, en mouseMove / Klik / slepen.
+	)	
+	Ex_SI_TT =	
+	(LTrim	
+		Bepaalt of een script mag opnieuw uit te voeren wanneer deze al wordt uitgevoerd.
+	)	
+	SI_TT =	
+	(LTrim	
+		Het woord FORCE slaat het dialoogvenster en vervangt de oude instantie automatisch,
+		die vergelijkbaar in effect op de Reload commando.
+		Het woord IGNORE slaat het dialoogvenster en laat de oude instance die wordt uitgevoerd.
+		Met andere woorden, zijn pogingen om een ​​reeds lopend script te starten genegeerd.
+		Het woord OFF kunnen meerdere exemplaren van het script gelijktijdig te gebruiken.
+	)	
+	Ex_ST_TT =	
+	(LTrim	
+		Hiermee stelt u de bijpassende gedrag van de WinTitle parameter in commando's zoals WinWait.
+	)	
+	ST_TT =	
+	(LTrim	
+		1: Er wordt een venster de titel moet beginnen met de opgegeven WinTitle om een ​​wedstrijd te zijn.
+		2: een venster van de titel kan bevatten WinTitle ergens in dat het een match.
+		3: een venster van de titel moet exact overeenkomen WinTitle om een ​​wedstrijd te zijn.
+		RegEx: Veranderingen WinTitle, WinText, ExcludeTitle, en ExcludeText te zijn reguliere expressies.
+	)	
+	Ex_DH_TT =	
+	(LTrim	
+		Bepaalt of onzichtbare ramen zijn 'gezien' door het script.
+	)	
+	Ex_AF_TT =	
+	(LTrim	
+		Slaat de zachte methode voor het activeren van een venster
+		en gaat rechtstreeks naar de krachtige methode.
+	)	
+	Ex_HK_TT =	
+	(LTrim	
+		Dwingt het gebruik van de haak om alle of een deel toetsenbord sneltoetsen te implementeren.
+	)	
+	Ex_SK_TT =	
+	(LTrim	
+		Hiermee stelt u de vertraging die zal plaatsvinden na elke
+		toetsaanslag per verzenden of ControlSend.
+	)	
+	Ex_MD_TT =	
+	(LTrim	
+		Hiermee stelt u de vertraging die zal plaatsvinden na
+		elke muisbeweging of klik op.
+	)	
+	Ex_SC_TT =	
+	(LTrim	
+		Hiermee stelt u de vertraging die zal plaatsvinden na
+		elke controle-modificerende commando.
+	)	
+	Ex_SW_TT =	
+	(LTrim	
+		Hiermee stelt u de vertraging die zal plaatsvinden na
+		elke windowing commando, zoals WinActivate.
+	)	
+	Ex_SB_TT =	
+	(LTrim	
+		Bepaalt hoe snel een script wordt uitgevoerd (bij gebruik van de CPU).
+	)	
+	Ex_NT_TT =	
+	(LTrim	
+		Schakelt de weergave van een pictogram in het systeemvak.
+	)	
+		
+	Ex_IN_TT =	
+	(LTrim	
+		Veroorzaakt het script te gedragen alsof de opgegeven
+		bestand de inhoud van zijn aanwezig op deze exacte positie.
+	)	
+		
+; IE Commands Tips		
+	Tip_Navigate =	Hiermee navigeert u naar een URL of pad.
+	Tip_Value =	Hiermee wordt de waarde van het object.
+	Tip_Focus =	Stelt focus op het object.
+	Tip_Click =	Simuleert een klik op het object.
+	Tip_Submit =	Het formulier indient.
+	Tip_GoHome =	Hiermee navigeert u naar de huidige woning of startpagina.
+	Tip_GoBack =	Hiermee kunt u een item in de geschiedenis lijst.
+	Tip_GoForward =	Navigeert vooruit een item in de geschiedenis lijst.
+	Tip_GoSearch =	Hiermee navigeert u naar de huidige zoekpagina.
+	Tip_Refresh =	Laadt de momenteel weergegeven pagina.
+	Tip_Stop =	Annuleert een lopende navigatie-of download.
+	Tip_Quit =	Sluit de pagina.
+	Tip_LocationName =	Krijgt het pad of de titel huidige pagina.
+	Tip_LocationURL =	Haalt de URL van de huidige pagina.
+	Tip_InnerText =	Stelt of krijgt de tekst van het object.
+	Tip_InnerHTML =	Stelt of haalt de HTML van het object.
+	Tip_Href =	Stelt of haalt een bestemmings-URL of een ankerpunt.
+	Tip_Src =	Stelt of haalt een URL die moet worden geladen door het object.
+	Tip_SelectedIndex =	Stelt of haalt de index van de geselecteerde optie in een select object.
+	Tip_Checked =	Stelt of haalt de status van het selectievakje of keuzerondje.
+	Tip_Type =	Stelt of haalt het inhoudstype van het object.
+	Tip_Width =	Bepaalt of haalt de breedte van het object.
+	Tip_Height =	Bepaalt of haalt de hoogte van het object.
+	Tip_Length =	Stelt of haalt het aantal objecten in een verzameling.
+		
+return		

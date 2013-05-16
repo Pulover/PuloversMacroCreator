@@ -1,0 +1,56 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Pixel Search</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="..\default.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h1>Pixel Search</h1>
+<p>Searches a region of the screen for a pixel color.</p>
+<h3>Parameters</h3>
+<table class="info">
+<tr>
+  <td width="15%">Start X/Y / End X/Y</td>
+  <td width="85%">Defines the Search area of the screen/window.</td>
+</tr>
+<tr>
+  <td width="15%">Search</td>
+  <td width="85%">Opens the Color Pick Tool. Point the mouse to the desired location and Right-Click to get the pixel code (in RGB format).</td>
+</tr>
+<tr>
+  <td width="15%">If found</td>
+  <td width="85%">Selects an action to execute when an image/pixel is found.<br/>
+To execute a different action Select 'Continue' (or 'Break' to exit the command's loop) and use the 'If Image/Pixel Found' option in the If Statements window.</td>
+</tr>
+<tr>
+  <td width="15%">If not found / Error</td>
+  <td width="85%">Selects an action to execute when an image/pixel is not found or if the command finds an error.<br/>
+To execute a different action Select 'Continue' (or 'Break' to exit the command's loop) and use the 'If Image/Pixel Not Found' option in the If Statements window.</td>
+</tr>
+<tr>
+  <td width="15%">Preview</td>
+  <td width="85%">Previews the selected pixel to search.</td>
+</tr>
+<tr>
+  <td width="15%">Coord</td>
+  <td width="85%">Sets coordinate mode for the search to be relative to either the active window or the screen.</td>
+</tr>
+<tr>
+  <td width="15%">Variations</td>
+  <td width="85%">Specify for n a number between 0 and 255 (inclusive) to indicate the allowed number of shades of variation in either direction for the intensity of the red, green, and blue components of each pixel's color.</td>
+</tr>
+<tr>
+  <td width="15%">Break loop if found</td>
+  <td width="85%">When setting more then 1 loop in the <em>Repeat</em> field, this option will break the loop if the image is found right after executing the selected action.</td>
+</tr>
+</table>
+<h3>Remarks</h3>
+<p>You may use the variables %FoundX% and %FoundY% on other commands like Mouse Move &amp; Click when the image/pixel is found. To save the values to a different variable and to edit them use the <a href="Commands\Assign_Variable.html">Assign Variable</a> tab of 'If Statements' window.</p>
+<h3 id="related">Related</h3>
+<p><a href="http://l.autohotkey.net/docs/commands/PixelSearch.htm">PixelSearch</a></p>
+
+</body>
+</html>

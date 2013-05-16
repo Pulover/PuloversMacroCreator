@@ -1,0 +1,748 @@
+﻿LoadLang_No:
+		
+		; Norwegian
+		
+; Main Menu		
+	m_Lang001 =	&Fil
+	m_Lang002 =	&Sett
+	m_Lang003 =	V&elg
+	m_Lang004 =	&Redigere
+	m_Lang005 =	&Makro
+	m_Lang006 =	Al&ternativer
+	m_Lang007 =	Spr&åk
+	m_Lang008 =	F&oreta en donasjon
+	m_Lang009 =	&Hjelp
+		
+; File Submenu		
+	f_Lang001 =	&Ny
+	f_Lang002 =	&Åpent
+	f_Lang003 =	&Lagre
+	f_Lang004 =	L&agre som
+	f_Lang005 =	&Import Macro
+	f_Lang006 =	La&gre gjeldende Macro
+	f_Lang007 =	&Siste Filer
+	f_Lang008 =	&Eksportere til AHK
+	f_Lang009 =	&Forhåndsvisning Script
+	f_Lang010 =	Lis&tevariablene
+	f_Lang011 =	&Utgang
+	f_Lang012 =	Ingen file&r
+		
+; Insert Sub Menu		
+	i_Lang001 =	&Mus
+	i_Lang002 =	&Tekst
+	i_Lang003 =	&Kontroll
+	i_Lang004 =	&Pause / Melding / Nøkkelen Vente
+	i_Lang005 =	&Vindu
+	i_Lang006 =	&Image / Pixel Søk
+	i_Lang007 =	K&jør / File / String / Misc.
+	i_Lang008 =	&Loop / Goto / Label
+	i_Lang009 =	&Hvis Uttalelser / variabler / funksjoner
+	i_Lang010 =	I&nternet Explorer / COM-grensesnitt
+	i_Lang011 =	&Windows-meldinger
+	i_Lang012 =	&Spesielle Keys
+		
+; Select Sub Menu		
+	s_Lang001 =	&Velg Alle
+	s_Lang002 =	V&elg Ingen
+	s_Lang003 =	&Inverter
+	s_Lang004 =	&Sjekk Valgt
+	s_Lang005 =	&Fjern merkingen Valgt
+	s_Lang006 =	I&nverter Sjekker
+	s_Lang007 =	V&algt type
+	s_Lang008 =	&Kommandoer
+		
+; Edit Sub Menu		
+	e_Lang001 =	&Duplisere
+	e_Lang002 =	&Rediger Kommentar
+	e_Lang003 =	&Finn / Erstatt
+	e_Lang004 =	&Kopier til...
+	e_Lang005 =	&Angre
+	e_Lang006 =	&Gjør om
+	e_Lang007 =	K&utt
+	e_Lang008 =	K&opier
+	e_Lang009 =	&Lim
+	e_Lang010 =	&Slett
+	e_Lang011 =	Fl&ytt opp
+	e_Lang012 =	Fly&tt ned
+	e_Lang013 =	S&ett fra boksen
+		
+; Macro Sub Menu		
+	r_lang001 =	&Registrer makro
+	r_lang002 =	&Aktivere makroer
+	r_lang003 =	&Spille Gjeldende Macro
+	r_lang004 =	&Timer
+	r_lang005 =	&Legg Makro
+	r_lang006 =	L&ukk Makro
+	r_lang007 =	&Kontekstsensitiv Hurtigtaster
+	r_lang008 =	&Vis kontroller
+	r_lang009 =	S&pille fra utvalgte rad
+	r_lang010 =	Sp&ille til valgt rad
+	r_lang011 =	Spill&e valgte rader
+		
+; Options Sub Menu		
+	o_Lang001 =	&Innstillinger
+	o_Lang002 =	&Angi som standard hurtigtaster
+	o_Lang003 =	&Sett som standard fil
+	o_Lang004 =	&Fjern Standard File
+	o_Lang005 =	&Tilbakestille kolonner størrelse
+	o_Lang006 =	Sta&ndard Hurtigtaster
+	o_Lang007 =	Stan&dardinnstillinger
+		
+; Make a Donation Sub Menu		
+	p_Lang001 =	&PayPal donasjon
+		
+; Help Sub Menu		
+	h_Lang001 =	&Makro Creator Hjem
+	h_Lang002 =	&AHK-dokumentasjon
+	h_Lang003 =	&Se etter oppdateringer...
+	h_Lang004 =	S&jekk ved oppstart
+	h_Lang005 =	&Om
+		
+; Tray Menu		
+	y_Lang001 =	Skjul vindu
+	y_Lang002 =	Vis Window
+		
+; Main Window		
+	w_Lang001 =	Eksportere
+	w_Lang002 =	Forhåndsvisning
+	w_Lang003 =	Alternativer
+	w_Lang004 =	Rekord
+	w_Lang005 =	Spill
+	w_Lang006 =	Auto.
+	w_Lang007 =	Man.
+	w_Lang008 =	Stopp
+	w_Lang009 =	&Win
+	w_Lang010 =	&Pause
+	w_Lang011 =	&Loop
+	w_Lang012 =	&Capture Keys
+	w_Lang013 =	&Vis informasjon
+	w_Lang014 =	&Alltid aktiv
+	w_Lang015 =	Gjentar:
+	w_Lang016 =	Delay (ms):
+	w_Lang017 =	Påfør
+	w_Lang018 =	Sett
+	w_Lang019 =	Redigere
+	w_Lang020 =	Vis kontroller
+		
+; Command Windows		
+	c_Lang001 =	Mus
+	c_Lang002 =	Tekst
+	c_Lang003 =	Pause
+	c_Lang004 =	Kontroll
+	c_Lang005 =	Vindu
+	c_Lang006 =	Bildesøk
+	c_Lang007 =	Pixel Søk
+	c_Lang008 =	Kjør / File / String / Misc.
+	c_Lang009 =	Hvis Uttalelser
+	c_Lang010 =	Variabler
+	c_Lang011 =	Funksjoner
+	c_Lang012 =	Internet Explorer
+	c_Lang013 =	COM-grensesnitt
+	c_Lang014 =	Velg program (Avansert)
+	c_Lang015 =	Melding
+	c_Lang016 =	Kontroll
+	c_Lang017 =	Forsinkelse
+	c_Lang018 =	Miliseconds
+	c_Lang019 =	Sekunder
+	c_Lang020 =	OK
+	c_Lang021 =	Avbryt
+	c_Lang022 =	Lukk
+	c_Lang023 =	Kopier
+	c_Lang024 =	Slett
+	c_Lang025 =	(Bruk `% for variabler, f.eks: `%Clipboard`%)
+	c_Lang026 =	Handling
+	c_Lang027 =	Klikk
+	c_Lang028 =	Flytt
+	c_Lang029 =	Flytt og klikk
+	c_Lang030 =	Wheel Up
+	c_Lang031 =	Wheel Down
+	c_Lang032 =	Dra og slipp
+	c_Lang033 =	Koordinerer
+	c_Lang034 =	Klikk
+	c_Lang035 =	Send
+	c_Lang036 =	Relativ
+	c_Lang037 =	Button
+	c_Lang038 =	Venstre
+	c_Lang039 =	Høyre
+	c_Lang040 =	Midt
+	c_Lang041 =	X1
+	c_Lang042 =	X2
+	c_Lang043 =	Hold / Slipp
+	c_Lang044 =	Klikk Tell
+	c_Lang045 =	Ren tekst (Raw)
+	c_Lang046 =	Tekst med kommandoer
+	c_Lang047 =	Lim inn fra utklippstavlen
+	c_Lang048 =	Lim på kontroll
+	c_Lang049 =	Still tekst
+	c_Lang050 =	Legg til pause
+	c_Lang051 =	Melding Box
+	c_Lang052 =	Vente på nøkkelen
+	c_Lang053 =	Tidsavbrudd venting
+	c_Lang054 =	(Miliseconds) 0 = uendelig
+	c_Lang055 =	Command
+	c_Lang056 =	Verdi
+	c_Lang057 =	Utgang Variabel
+	c_Lang058 =	Stilling
+	c_Lang059 =	Størrelse
+	c_Lang060 =	4 variabler vil bli opprettet med dette prefikset og slutter med X, Y, W, H.
+	c_Lang061 =	Starter
+	c_Lang062 =	Slutt
+	c_Lang063 =	Bilde
+	c_Lang064 =	Pixel
+	c_Lang065 =	Gjør Skjermbilde
+	c_Lang066 =	Nøkkelen Vente
+	c_Lang067 =	Hvis det blir funnet
+	c_Lang068 =	Hvis ikke funnet / Feil
+	c_Lang069 =	* Coords lagret til `%FoundX`% / `%FoundY`%.
+	c_Lang070 =	Koord
+	c_Lang071 =	Variasjoner
+	c_Lang072 =	Forhåndsvisning
+	c_Lang073 =	Loop
+	c_Lang074 =	* Fungerer ikke i manuell avspilling.
+	c_Lang075 =	Break
+	c_Lang076 =	Fortsett
+	c_Lang077 =	Goto
+	c_Lang078 =	Gå til etikett
+	c_Lang079 =	Etiketten
+	c_Lang080 =	Legg Produsent
+	c_Lang081 =	String (InputVar), Verdi
+	c_Lang082 =	Var [operatør] Verdi
+	c_Lang083 =	Legg Else
+	c_Lang084 =	Tildele variabel
+	c_Lang085 =	Innhold
+	c_Lang086 =	Operatør
+	c_Lang087 =	Bruk Eval() for å løse uttrykk
+	c_Lang088 =	Tilbakestille
+	c_Lang089 =	Funksjon Navn
+	c_Lang090 =	Kommaseparert parametre (uten parentes).
+	c_Lang091 =	(Bruk `% for variabler. Bokstavelige Komma må rømt [```,])
+	c_Lang092 =	Sideelement / Index
+	c_Lang093 =	Satt
+	c_Lang094 =	Få
+	c_Lang095 =	Metode
+	c_Lang096 =	Eiendom
+	c_Lang097 =	Vent til siden for å laste.
+	c_Lang098 =	CLSID
+	c_Lang099 =	Koble
+	c_Lang100 =	Håndtak
+	c_Lang101 =	COM Script
+	c_Lang102 =	Melding nummer
+	c_Lang103 =	Spesielle Keys
+	c_Lang104 =	Nettleseren Tilbake
+	c_Lang105 =	Nettleseren Forward
+	c_Lang106 =	Nettleseren Refresh
+	c_Lang107 =	Nettleseren Stop
+	c_Lang108 =	Nettleseren Søk
+	c_Lang109 =	Browser favoritter
+	c_Lang110 =	Nettleseren Hjem
+	c_Lang111 =	Media
+	c_Lang112 =	Demp
+	c_Lang113 =	Volum opp
+	c_Lang114 =	Volum ned
+	c_Lang115 =	Spill av / Pause
+	c_Lang116 =	Neste spor
+	c_Lang117 =	Forrige spor
+	c_Lang118 =	Stopp
+	c_Lang119 =	E-post
+	c_Lang120 =	App en
+	c_Lang121 =	App 2
+	c_Lang122 =	Scancode
+	c_Lang123 =	Legg
+	c_Lang124 =	Key History
+	c_Lang125 =	Skriv inn en Scancode...
+	c_Lang126 =	Kode lagt til Virtual Keys List!
+	c_Lang127 =	Skriv inn et navn for Output Variable
+	c_Lang128 =	Bruk funksjon fra ekstern fil
+	c_Lang130 =	Bryt sløyfe hvis det blir funnet
+	c_Lang131 =	Påfør
+	c_Lang132 =	Loop
+	c_Lang133 =	Fil
+	c_Lang134 =	Analysere
+	c_Lang135 =	Lese
+	c_Lang136 =	Register
+	c_Lang137 =	Filmønsteret:
+	c_Lang138 =	Mapper?
+	c_Lang139 =	Recurse?
+	c_Lang140 =	Inngangsstorrelsen:
+	c_Lang141 =	Skilletegn:
+	c_Lang142 =	Utelate Tegn:
+	c_Lang143 =	Innfil:
+	c_Lang144 =	Nøkkel:
+	c_Lang145 =	Root Nøkkelen:
+	c_Lang146 =	Undernøkler?
+	c_Lang147 =	Icon
+	c_Lang148 =	Ingen ikon
+	c_Lang149 =	Feil
+	c_Lang150 =	Spørsmål
+	c_Lang151 =	Utropstegn
+	c_Lang152 =	Informasjon
+	c_Lang153 =	Alltid på topp
+	c_Lang154 =	Minutter
+		
+; Other Windows		
+	t_Lang001 =	Eksportere til AHK
+	t_Lang002 =	Makroer
+	t_Lang003 =	Loops
+	t_Lang004 =	0 = uendelig
+	t_Lang005 =	Bruk Hotstring
+	t_Lang006 =	Block Mouse
+	t_Lang007 =	Alle
+	t_Lang008 =	Ingen
+	t_Lang009 =	Kontekstsensitiv Hurtigtaster
+	t_Lang010 =	Eksportere til
+	t_Lang011 =	Innrykk
+	t_Lang012 =	Inkluder PMC kode
+	t_Lang013 =	Ikke sette sammen sende kommandoer
+	t_Lang014 =	Refresh
+	t_Lang015 =	Auto-Refresh
+	t_Lang016 =	Alltid på topp
+	t_Lang017 =	Innstillinger
+	t_Lang018 =	Generelt
+	t_Lang019 =	Start / Stopp Record
+	t_Lang020 =	Registrer ny makro
+	t_Lang021 =	Tastetrykk
+	t_Lang022 =	Innspilling
+	t_Lang023 =	Utløsertasten tilstand (ned / opp)
+	t_Lang024 =	Museklikk
+	t_Lang025 =	Musehjul
+	t_Lang026 =	Mus Moves
+	t_Lang027 =	Tidsbestemte intervaller
+	t_Lang028 =	Minimum forsinkelse
+	t_Lang029 =	Vindu Classes
+	t_Lang030 =	Vindu Titler
+	t_Lang031 =	Record ControlSend
+	t_Lang032 =	Record ControlClick
+	t_Lang033 =	Relativ opptak-tasten
+	t_Lang034 =	Veksle
+	t_Lang035 =	Avspilling
+	t_Lang036 =	Fremskynde
+	t_Lang037 =	Tregere
+	t_Lang038 =	Returnere Mouse etter avspilling
+	t_Lang039 =	Mus Koordinater
+	t_Lang040 =	Vindu
+	t_Lang041 =	Skjermen
+	t_Lang042 =	Standard Mouse Delay
+	t_Lang043 =	Standard Window Delay
+	t_Lang044 =	Max History per Makro
+	t_Lang045 =	Slett logg
+	t_Lang046 =	Skjermbilder
+	t_Lang047 =	Tegn Button
+	t_Lang048 =	Linjebredde (Px)
+	t_Lang049 =	Capture på utgivelsen
+	t_Lang050 =	Trykk Enter for å fange
+	t_Lang051 =	Skjermbilder Directory
+	t_Lang052 =	Div.
+	t_Lang053 =	Hurtigtaster
+	t_Lang054 =	Angi som standard hurtigtaster
+	t_Lang055 =	Deaktiver Window Snarveier
+	t_Lang056 =	Tilbakestille kolonner størrelse
+	t_Lang057 =	Standard Macro File
+	t_Lang058 =	Standard Library File
+	t_Lang059 =	Bruk Eval() som standard for variabler Assignment
+	t_Lang060 =	Vis Farger og Hjelp Marks for Loops og uttalelser
+	t_Lang061 =	(Klikk Index kolonneoverskrift for å aktivere / deaktivere)
+	t_Lang062 =	Virtuelle tastene
+	t_Lang063 =	Standard
+	t_Lang064 =	Rediger Kommentar
+	t_Lang065 =	Kommentar
+	t_Lang066 =	Søk Column
+	t_Lang067 =	Finn / Erstatt
+	t_Lang068 =	Finn
+	t_Lang069 =	Match sak
+	t_Lang070 =	Erstatt
+	t_Lang071 =	Funnet
+	t_Lang072 =	Erstattet
+	t_Lang073 =	Valgte rader
+	t_Lang074 =	Alle Rader
+	t_Lang075 =	Alle Makroer
+	t_Lang076 =	Om
+	t_Lang077 =	Regular Expression
+	t_Lang078 =	Spille en gang
+	t_Lang079 =	Spille hvert X (mili) sekunder
+	t_Lang080 =	Timer
+	t_Lang081 =	Pause
+	t_Lang082 =	Uttalelser
+	t_Lang083 =	Vis Innrykk for Loops og uttalelser
+	t_Lang084 =	(Dobbeltklikk på kolonnen Handling header aktivere / deaktivere)
+	t_Lang085 =	Vise Progress Bar
+	t_Lang086 =	Søke etter funksjoner. Vennligst vent...
+	t_Lang087 =	Inkluder eksterne filer
+	t_Lang088 =	Lag EXE-fil
+	t_Lang089 =	Tillat flere forekomster
+	t_Lang090 =	Mislighold
+	t_Lang091 =	Tillate å dra rader
+	t_Lang092 =	Hele innholdet i cellen
+		
+; Messages & Dialogs		
+	d_Lang001 =	Åpent
+	d_Lang002 =	Ønsker du å lagre gjeldende makro?
+	d_Lang003 =	Standardinnstillinger
+	d_Lang004 =	Macro Creator-filer
+	d_Lang005 =	Lagre Makro
+	d_Lang006 =	Kunne ikke lagre / overskrive filen
+	d_Lang007 =	Feil
+	d_Lang008 =	Feil: Ingen Macro valgt.`nVennligst sjekk minst en makro i listen.
+	d_Lang009 =	Feil: Ingen Hurtigtast valgt.
+	d_Lang010 =	Feil: Ugyldig adresse.`nDen valgte adressen eller filnavnet er ugyldig.
+	d_Lang011 =	Advarsel
+	d_Lang012 =	Ingen kontroll valgt.`nVil du fortsette?
+	d_Lang013 =	Eksportere Script
+	d_Lang014 =	Script Eksportert
+	d_Lang015 =	Filen ble vellykket eksportert!
+	d_Lang016 =	Klikk "Get 'for å markere posisjonen.
+	d_Lang017 =	
+	(LTrim	
+		- Velg vinduet.
+		- Pek på ønsket posisjon.
+		- Trykk på høyre knapp.
+	)	
+	d_Lang018 =	Pixel Color
+	d_Lang019 =	Slett liste
+	d_Lang020 =	Husk å slette alle elementer?
+	d_Lang021 =	Neste
+	d_Lang022 =	Forrige
+	d_Lang023 =	Melding
+	d_Lang024 =	Laste standardinnstillinger?
+	d_Lang025 =	Makro (er) aktivert.`nBruk hurtigtaster for å spille.
+	d_Lang026 =	å starte / stoppe opptak
+	d_Lang027 =	Opptaket er stoppet
+	d_Lang028 =	Innspillingen...
+	d_Lang029 =	å stoppe
+	d_Lang030 =	for å starte ny rekord
+	d_Lang031 =	er ikke et gyldig funksjonsnavn.
+	d_Lang032 =	Feil: Dupliserte Hurtigtaster.
+	d_Lang033 =	Aktivere makroer
+	d_Lang034 =	
+	(LTrim	
+		- Klikk og dra med %DrawButton% for å velge område.
+		- Klikk og slipp uten å dra for å velge kontroll området.
+		- Klikk i et område uten et kontroll å velge område av vinduet.
+	)	
+	d_Lang035 =	Fortsette?
+	d_Lang036 =	Image / Pixel funnet ved
+	d_Lang037 =	Image / Pixel Not Found.
+	d_Lang038 =	Trykk OK for å fortsette.
+	d_Lang039 =	Timeout!
+	d_Lang040 =	
+	(LTrim	
+		Denne funksjonen krever GDI+ bibliotek.
+		Klikk OK for å gå til nedlastingssiden.
+		
+		Merk: Filen 'Gdip.ahk' må være i samme katalog av dette skriptet.
+	)	
+	d_Lang041 =	Variabelnavnet inneholder et ugyldig tegn.
+	d_Lang042 =	
+	(LTrim	
+		Ugyldig operatør.
+		Følgende operatører er tillatt:
+		=, ==, <>,! =,>, <,> =, <=
+		
+		Eksempler:
+		MyVar > 1
+		MyVar = `%A_DDDD`%
+		Clipboard == `%MyVar`%
+	)	
+	d_Lang043 =	Eller bruk kontrollene verktøylinjen
+	d_Lang044 =	
+	(LTrim	
+		Denne funksjonen krever Eval()-funksjonen.
+		Klikk OK for å gå til nedlastingssiden.
+		
+		Merk: Filen 'Eval.ahk' må være i samme katalog av dette skriptet.
+	)	
+	d_Lang045 =	Vennligst velg en Internet Explorer-vinduet!
+	d_Lang046 =	Tilkobling vellykket!
+	d_Lang047 =	Klarte ikke å koble!
+	d_Lang048 =	Sett et håndtak og en CLSID.
+	d_Lang049 =	Ugyldig Etikettnavn.
+	d_Lang050 =	Duplisere Label.
+	d_Lang051 =	Å spille en makro trykker på tilsvarende hurtigtast (Auto / Man).
+	d_Lang052 =	For å starte innspillingen trykker på en Record hurtigtast.
+	d_Lang053 =	Ikke vis denne meldingen igjen.
+	d_Lang054 =	Vennligst velg en Excel-vinduet!
+	d_Lang055 =	Vennligst velg en AutoHotkey script-fil (. AHK) og en inn en funksjon navn.
+	d_Lang056 =	
+	(LTrim	
+		Denne funksjonen krever AutoHotkey installert.
+		Klikk OK for å gå til nedlastingssiden.
+	)	
+	d_Lang057 =	
+	(LTrim	
+		- Trykk Ctrl + piltastene for å flytte valgte området.
+		- Trykk Shift + piltastene til å endre størrelsen på valgte området.
+		- Trykk Enter for å fullføre.
+	)	
+	d_Lang058 =	
+	(LTrim	
+		Noen funksjoner krever admnistrator privilages for å fungere skikkelig.
+		Det er anbefalt å starte programmet som administrator.
+	)	
+	d_Lang059 =	
+	(LTrim	
+		Denne kommandoen støtter ikke uttrykk eller funksjoner.
+		Vennligst tilordne en variabel og bruke den i parameter.
+	)	
+	d_Lang060 =	Ny versjon tilgjengelig
+	d_Lang061 =	
+	(LTrim	
+		Vil du laste den ned nå?
+		
+		Hvis du vil deaktivere automatiske kontroller velge Hjelp > Sjekk ved oppstart.
+	)	
+	d_Lang062 =	Du allerede har den nyeste versjonen.
+	d_Lang063 =	Det oppstod en feil mens du sjekker.
+		
+		
+; Tooltips		
+	NewB_TT =	New (Ctrl+N)
+	OpenB_TT =	Open (Ctrl+O)
+	SaveB_TT =	Lagre (Ctrl+S)
+	ExportB_TT =	Eksporter til AHK (Ctrl+E)
+	PreviewB_TT =	Forhåndsvisning Script (Ctrl+P)
+	OptionsB_TT =	Innstillinger (Ctrl+G)
+	RecordB_TT =	Registrer makro (Ctrl+R)
+	StartB_TT =	Aktiver makroer (Ctrl+Enter)
+	TestRun_TT =	Spille Nåværende Makro (Ctrl+Shift+Enter)
+	RunTimer_TT =	Timer (Ctrl+Shift+T)
+	MouseB_TT =	Mus (F2)
+	TextB_TT =	Tekst (F3)
+	SpecialB_TT =	Spesielle Keys
+	ControlB_TT =	Kontroll (F4)
+	PauseB_TT =	Pause (F5) / Melding (Shift+F5) / Nøkkelen Vente (Control+F5) 
+	WindowB_TT =	Window (F6)
+	ImageB_TT =	Image / Pixel Søk (F7)
+	RunB_TT =	Kjør / File / String / Misc. (F8)
+	ComLoopB_TT =	Loop (F9) / Goto (Shift+F9) / Label (Ctrl+F9)
+	IfStB_TT =	Hvis uttalelsene (F10) / variabler (Shift+F10) / Funksjoner (Ctrl+F10)
+	IEComB_TT =	Internet Explorer (F11) / COM-grensesnitt (Shift+F11)
+	SendMsgB_TT =	Windows-meldinger (F12)
+	AutoKey_TT =	Tilbaketasten for å fjerne
+	ManKey_TT =	Tilbaketasten for å fjerne
+	AbortKey_TT =	Tilbaketasten for å fjerne
+	PauseKey_TT =	Pauser gjennomføring stedet for å stoppe
+	Win1_TT =	Legge til Windows-tasten som modifikator
+	ReptC_TT =	0 = uendelig
+	TabPlus_TT =	Legg Makro (Ctrl+T)
+	TabClose_TT =	Lukk Makro (Ctrl+W)
+	DuplicateL_TT =	Duplisere Makro (Ctrl+Shift+D)
+	SaveC_TT =	Lagre gjeldende Makro (Ctrl+Alt+S)
+	ImportB_TT =	Import Makro (Ctrl+I)
+	IfDirB_TT =	Gjør Hurtigtaster virker, avhengig av`ntype vindu som er aktivt eller eksisterer (Ctrl+H)
+	KeepHKOn_TT =	Hold Hurtigtaster alltid aktivert
+	A_List_TT =	Velg Makro (Ctrl+1~0)
+	Duplicate_TT =	Dupliser valgte rader (Ctrl+D)
+	Order_TT =	Flytt valgte rader (Ctrl+PageUp / Ctrl+PageDown)
+	Cut_TT =	Skjær valgte rader (Ctrl+X)
+	Copy_TT =	Kopiere valgte rader (Ctrl+C)
+	Paste_TT =	Lim Kopierte rader (Ctrl+V)
+	Remove_TT =	Slett valgte rader (Del)
+	Undo_TT =	Angre (Ctrl+Z)
+	Redo_TT =	Gjør om (Ctrl+Y)
+	CopyTo_TT =	Kopier til...
+	Capt_TT =	Fange tastetrykk i dette vinduet
+	OnScCtrl_TT =	Vise Kontrollene Verktøylinjen
+	ShowStep_TT =	Vis informasjon
+	ApplyT_TT =	Påfør
+	ApplyI_TT =	Påfør
+	ApplyL_TT =	Sett fra boksen (Insert)
+	EditButton_TT =	Redigere
+	PrevRefresh_TT =	Refresh (F5)
+	PrevCopy_TT =	Kopier
+	OpenT_TT =	Open (Ctrl+O)
+	SaveT_TT =	Lagre (Ctrl+S)
+	CutT_TT =	Kutt
+	CopyT_TT =	Kopier
+	PasteT_TT =	Lim
+	SelAllT_TT =	Velg Alle
+	DefaultMacro_TT =	Velg fil å laste på programmet starte opp
+	VarCopyA_TT =	Kopier gjeldende variabelinnhold
+	VarCopyB_TT =	Kopier gjeldende variabelinnhold
+	FindReplace_TT =	Finn / Erstatt (Ctrl+F)
+	EditComm_TT =	Rediger Kommentar
+	Reset_TT =	Klare variabelinnhold
+	PicPrev_TT =	Dobbeltklikk for å åpne bilde
+	LoopLVColor_TT =	Klikk for å velge en farge
+	IfLVColor_TT =	Klikk for å velge en farge
+	RefreshIEW_TT =	Oppdater liste
+	ActiveObj_TT =	Forsøker å koble til en aktiv COM objekt
+	OSPlay_TT =	Spill av / Pause
+	OSStop_TT =	Stopp
+	OSRec_TT =	Start / Stopp Record
+	OSRecNew_TT =	Registrer ny makro
+	OSClear_TT =	Slett liste
+	OSProgB_TT =	Vise Progress Bar
+	OSFast_TT =	Fremskynde
+	OSSlow_TT =	Tregere
+	OSTrans_TT =	opasitet
+	MRel_TT =	
+	(LTrim	
+		Bevegelser i forhold til nåværende posisjon.
+		Eller hvis brukt med kontroll: Posisjon i forhold til kontroll.
+	)	
+	Raw_TT =	
+	(LTrim	
+		Den SendRaw kommandoen tolker alle tegnene bokstavelig
+		snarere enn å oversette {Enter} til en ENTER tastetrykk,
+		^ C til Kontroll-C osv.
+	)	
+	ComText_TT =	
+	(LTrim	
+		Når du ikke er i RAW-modus, følgende tegn
+		behandles som modifikatorer (disse modifikatorer påvirke
+		bare svært neste nøkkel):, +, ^, #
+	)	
+	Clip_TT =	
+	(LTrim	
+		Midlertidig bruker utklippstavlen å sende teksten.
+		Når operasjonen er avsluttet, skriptet
+		gjenopprettes de opprinnelige innholdet på utklippstavlen.
+		(La tekst tomt for å lime nåværende innhold)
+	)	
+	EditPaste_TT =	
+	(LTrim	
+		Pastaer String på caret / insert stilling
+		i en Rediger-kontroll (dette påvirker ikke
+		innholdet påutklippstavla).
+	)	
+	SetText_TT =	Endrer teksten i en kontroll.
+	RelKey_TT =	Records relative bevegelser og klikk, mens trykket.
+	Relative_TT =	Koordinatene er relative til det aktive vinduet.
+	Screen_TT =	Koordinatene er relative til skrivebordet (hele skjermen).
+	IncFolders_TT =	
+	(LTrim	
+		0 - Bare filer / nøkler
+		1 - Mapper / undernøklene og filer / nøkler
+		2 - Bare mapper / undernøkler
+	)	
+	Recurse_TT =	
+	(LTrim	
+		0 - Ikke recurse i mapper / undernøkler
+		1 - Recurse i mapper / undernøkler
+	)	
+		
+; Tooltips from AHK Docs		
+	ExpList_TT =	Dobbeltklikk for å redigere
+	Ex_IfDir_TT =	
+	(LTrim	
+		Oppretter kontekstavhengige hurtigtaster og hotstrings avhengig
+		av type vindu som er aktiv eller eksisterer.
+	)	
+	Ex_IfDirType_TT =	
+	(LTrim	
+		Oppretter kontekstavhengige hurtigtaster og hotstrings avhengig
+		av type vindu som er aktiv eller eksisterer.
+	)	
+	Ex_SM_TT =	
+	(LTrim	
+		Gjør Send synonymt med SendInput eller SendPlay stedet
+		standard (SendEvent). Også gjør Klikk og MouseMove / Klikk / Dra
+		bruke den angitte metoden.
+	)	
+	SM_TT =	
+	(LTrim	
+		Hendelse: Dette er startskuddet standard som brukes av alle skript.
+		Den bruker den SendEvent metode for sending, SendRaw, Klikk, og MouseMove / Klikk / dra.
+		Inngang: Bytter til SendInput metode for sending, SendRaw, Klikk, og MouseMove / Klikk / dra.
+		InputThenPlay: Samme som ovenfor, bortsett fra at i stedet for å falle tilbake til Event-modusen
+		når SendInput er utilgjengelig, går den tilbake til avspillingsmodus (nedenfor). Dette fører også til
+		den SendInput kommandoen selv å gå tilbake til avspillingsmodus når SendInput er utilgjengelig.
+		Spill: Bytter til SendPlay metode for sending, SendRaw, Klikk, og MouseMove / Klikk / dra.
+	)	
+	Ex_SI_TT =	
+	(LTrim	
+		Avgjør om et skript har lov til å kjøre igjen når det allerede er i gang.
+	)	
+	SI_TT =	
+	(LTrim	
+		Ordet FORCE hopper dialogboksen og erstatter den gamle eksempel automatisk,
+		som er lik i effekt til Reload kommandoen.
+		Ordet IGNORE hopper dialogboksen og lar den gamle forekomsten som kjører.
+		Med andre ord, er forsøk på å lansere et allerede kjører skriptet ignorert.
+		Ordet OFF gjør at flere forekomster av skriptet skal kjøres samtidig.
+	)	
+	Ex_ST_TT =	
+	(LTrim	
+		Stiller matchende oppførselen til WinTitle parameter i kommandoer som WinWait.
+	)	
+	ST_TT =	
+	(LTrim	
+		1: Et vindu tittel må starte med den angitte WinTitle å være en kamp.
+		2: Et vindu tittel kan inneholde WinTitle hvor som helst innenfor det å være en kamp.
+		3: Et vindu tittel må samsvare nøyaktig WinTitle å være en kamp.
+		RegEx: Endringer WinTitle, WinText, ExcludeTitle, og ExcludeText å være faste uttrykk.
+	)	
+	Ex_DH_TT =	
+	(LTrim	
+		Avgjør om usynlige vinduer er "sett" av skriptet.
+	)	
+	Ex_AF_TT =	
+	(LTrim	
+		Hopper skånsom metode for å aktivere et vindu
+		og går rett til den kraftfulle metoden.
+	)	
+	Ex_HK_TT =	
+	(LTrim	
+		Tvinger bruk av kroken til å gjennomføre alle eller noen tastatur hurtigtaster.
+	)	
+	Ex_SK_TT =	
+	(LTrim	
+		Stiller forsinkelse som vil oppstå etter hvert
+		tastetrykk sendes ved å sende eller ControlSend.
+	)	
+	Ex_MD_TT =	
+	(LTrim	
+		Stiller forsinkelse som vil skje etter
+		hver mus bevegelse eller klikk.
+	)	
+	Ex_SC_TT =	
+	(LTrim	
+		Stiller forsinkelse som vil skje etter
+		hver kontroll-endring kommandoen.
+	)	
+	Ex_SW_TT =	
+	(LTrim	
+		Stiller forsinkelse som vil skje etter
+		hver windowing kommando, for eksempel WinActivate.
+	)	
+	Ex_SB_TT =	
+	(LTrim	
+		Bestemmer hvor raskt et skript vil kjøre (påvirker CPU).
+	)	
+	Ex_NT_TT =	
+	(LTrim	
+		Deaktiverer visning av en ikonet.
+	)	
+		
+	Ex_IN_TT =	
+	(LTrim	
+		Årsaker skriptet til å oppføre seg som om den angitte
+		filens innhold er tilstede på denne eksakte posisjonen.
+	)	
+		
+; IE Commands Tips		
+	Tip_Navigate =	Navigerer til en URL eller bane.
+	Tip_Value =	Får eller setter verdien av objektet.
+	Tip_Focus =	Fokuserer på objektet.
+	Tip_Click =	Simulerer et klikk på objektet.
+	Tip_Submit =	Sender inn skjemaet.
+	Tip_GoHome =	Navigerer til nåværende hjem eller start side.
+	Tip_GoBack =	Navigerer bakover ett element i historien listen.
+	Tip_GoForward =	Navigerer fremover ett element i historien listen.
+	Tip_GoSearch =	Navigerer til gjeldende søkesiden.
+	Tip_Refresh =	Laster siden som vises.
+	Tip_Stop =	Avbryter en ventende navigasjon eller nedlasting.
+	Tip_Quit =	Lukker siden.
+	Tip_LocationName =	Får banen eller tittel gjeldende side.
+	Tip_LocationURL =	Får nettadressen til den aktuelle siden.
+	Tip_InnerText =	Stiller eller får teksten i objektet.
+	Tip_InnerHTML =	Stiller eller henter HTML av objektet.
+	Tip_Href =	Stiller eller henter en destinasjonsadresse eller et ankerpunkt.
+	Tip_Src =	Stiller eller henter en nettadresse som skal lastes av objektet.
+	Tip_SelectedIndex =	Stiller eller henter indeksen til den valgte alternativet i en utvalgt objekt.
+	Tip_Checked =	Stiller eller henter statusen for avmerkingsboks eller knapp.
+	Tip_Type =	Stiller eller henter innholdstypen av objektet.
+	Tip_Width =	Stiller eller henter bredden på objektet.
+	Tip_Height =	Stiller eller henter høyden av objektet.
+	Tip_Length =	Stiller eller henter antallet objekter i en samling.
+		
+return		

@@ -1,0 +1,22 @@
+﻿[PMC Code]|F3|F6|1|Window
+1|Compare Variables|A_Hour > 11|1|0|If Statement||||
+2|[Pause]|Good Afternoon`, %A_UserName%!|1|0|MsgBox||||
+3|[Else]|Else|1|0|If Statement||||
+4|[Pause]|Good Morning`, %A_UserName%!|1|0|MsgBox||||
+5|[End If]|EndIf|1|0|If Statement||||
+6|Compare Variables|A_WDay <> 1|1|0|If Statement||||
+7|Compare Variables|A_WDay < 7|1|0|If Statement||||
+8|[Pause]|Shouldn't you be working today?|1|0|MsgBox||||
+9|[Else]|Else|1|0|If Statement||||
+10|[Pause]|Enjoying the Weendend`, huh?`nHave a nice day!|1|0|MsgBox||||
+11|[End If]|EndIf|1|0|If Statement||||
+12|[Else]|Else|1|0|If Statement||||
+13|[Pause]|Enjoy the Sunday! You got work tomorrow`, don't you?|1|0|MsgBox||||
+14|[End If]|EndIf|1|0|If Statement||||
+15|If Window Exist|ahk_class Notepad|1|0|If Statement||||
+16|WinGet|NpID`, ID|1|0|WinGet||ahk_class Notepad||
+17|[Pause]|Notepad is opened and the window ID is %NpID%.|1|0|MsgBox||||
+18|[Else]|Else|1|0|If Statement||||
+19|[Pause]|Notepad is not opened.|1|0|MsgBox||||
+20|[End If]|EndIf|1|0|If Statement||||
+

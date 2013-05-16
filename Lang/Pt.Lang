@@ -1,0 +1,748 @@
+﻿LoadLang_Pt:
+		
+		; Portuguese
+		
+; Main Menu		
+	m_Lang001 =	&Arquivo
+	m_Lang002 =	&Inserir
+	m_Lang003 =	&Selecionar
+	m_Lang004 =	&Editar
+	m_Lang005 =	&Macro
+	m_Lang006 =	&Opções
+	m_Lang007 =	I&dioma
+	m_Lang008 =	&Fazer uma Doação
+	m_Lang009 =	Aj&uda
+		
+; File Submenu		
+	f_Lang001 =	&Novo
+	f_Lang002 =	&Abrir
+	f_Lang003 =	&Salvar
+	f_Lang004 =	Salvar &Como
+	f_Lang005 =	&Importar Macro
+	f_Lang006 =	Salvar &Macro Atual
+	f_Lang007 =	Ar&quivos Recentes
+	f_Lang008 =	&Exportar para AHK
+	f_Lang009 =	&Visuali&zar Script
+	f_Lang010 =	&Listar Variáveis
+	f_Lang011 =	Sai&r
+	f_Lang012 =	Nenhum arquivo
+		
+; Insert Sub Menu		
+	i_Lang001 =	&Mouse
+	i_Lang002 =	&Texto
+	i_Lang003 =	&Controle
+	i_Lang004 =	&Pausa / Mensagem / Esperar Tecla
+	i_Lang005 =	&Janela
+	i_Lang006 =	Procurar &Imagem / Pixel
+	i_Lang007 =	&Executar / Arquivos / Texto / Misc.
+	i_Lang008 =	&Loop / Pular / Rótulo
+	i_Lang009 =	Declaração &Se / Variáveis / Funções
+	i_Lang010 =	Internet E&xplorer / Interface COM
+	i_Lang011 =	Mensages do &Windows
+	i_Lang012 =	Tecl&as Especiais
+		
+; Select Sub Menu		
+	s_Lang001 =	Selecionar &Tudo
+	s_Lang002 =	Selecionar &Nenhum
+	s_Lang003 =	&Inverter Seleção
+	s_Lang004 =	&Marcar Selecionados
+	s_Lang005 =	&Desmarcar Selecionados
+	s_Lang006 =	In&verter Marcados
+	s_Lang007 =	Ti&po Selecionado
+	s_Lang008 =	&Comandos
+		
+; Edit Sub Menu		
+	e_Lang001 =	D&uplicar
+	e_Lang002 =	Editar Come&ntário
+	e_Lang003 =	&Localizar / Substituir
+	e_Lang004 =	Co&piar para...
+	e_Lang005 =	&Desfazer
+	e_Lang006 =	&Refazer
+	e_Lang007 =	Recor&tar
+	e_Lang008 =	&Copiar
+	e_Lang009 =	C&olar
+	e_Lang010 =	E&xcluir
+	e_Lang011 =	Mover para Ci&ma
+	e_Lang012 =	Mover para &Baixo
+	e_Lang013 =	&Inserir da Caixa
+		
+; Macro Sub Menu		
+	r_lang001 =	&Gravar Macro
+	r_lang002 =	&Ativar Macros
+	r_lang003 =	&Reproduzir Macro Atual
+	r_lang004 =	&Temporizador
+	r_lang005 =	A&dicionar Macro
+	r_lang006 =	&Fechar Macro
+	r_lang007 =	Atalhos &Condicionais
+	r_lang008 =	Mostrar Co&ntrol.
+	r_lang009 =	Reproduzir a &Partir da Linha Selecionada
+	r_lang010 =	Reproduzir Até a &Linha Selecionada
+	r_lang011 =	Reproduzir Linhas &Selecionadas
+		
+; Options Sub Menu		
+	o_Lang001 =	&Configurações
+	o_Lang002 =	&Definir como Atalhos Padrão
+	o_Lang003 =	Definir como &Arquivo Padrão
+	o_Lang004 =	&Remover Arquivo Padrão
+	o_Lang005 =	Restaurar Co&lunas
+	o_Lang006 =	A&talhos Padrão
+	o_Lang007 =	Configuração &Padrão
+		
+; Make a Donation Sub Menu		
+	p_Lang001 =	&Doação via PayPal
+		
+; Help Sub Menu		
+	h_Lang001 =	Site do &Macro Creator
+	h_Lang002 =	Documentação &AHK Online
+	h_Lang003 =	&Verificar atualizações...
+	h_Lang004 =	Verificar ao &iniciar
+	h_Lang005 =	&Sobre
+		
+; Tray Menu		
+	y_Lang001 =	Ocultar Janela
+	y_Lang002 =	Mostrar Janela
+		
+; Main Window		
+	w_Lang001 =	Exportar
+	w_Lang002 =	Script
+	w_Lang003 =	Opções
+	w_Lang004 =	Gravar
+	w_Lang005 =	Iniciar
+	w_Lang006 =	Auto.
+	w_Lang007 =	Man.
+	w_Lang008 =	Parar
+	w_Lang009 =	&Win
+	w_Lang010 =	&Pausa
+	w_Lang011 =	&Loop
+	w_Lang012 =	&Capturar Teclas
+	w_Lang013 =	Mostrar I&nfo.
+	w_Lang014 =	Sempre A&tivo
+	w_Lang015 =	Repetir:
+	w_Lang016 =	Interv. (ms):
+	w_Lang017 =	Aplicar
+	w_Lang018 =	Inserir
+	w_Lang019 =	Editar
+	w_Lang020 =	Mostrar Control.
+		
+; Command Windows		
+	c_Lang001 =	Mouse
+	c_Lang002 =	Texto
+	c_Lang003 =	Pausa
+	c_Lang004 =	Controle
+	c_Lang005 =	Janela
+	c_Lang006 =	Procurar Imagem
+	c_Lang007 =	Procurar Pixel
+	c_Lang008 =	Executar / Arquivos / Texto / Misc.
+	c_Lang009 =	Declaração Se
+	c_Lang010 =	Variáveis
+	c_Lang011 =	Funções
+	c_Lang012 =	Internet Explorer
+	c_Lang013 =	Interface COM
+	c_Lang014 =	Selecionar Aplicativo (Avançado)
+	c_Lang015 =	Mensagem
+	c_Lang016 =	Em Controle
+	c_Lang017 =	Intervalo
+	c_Lang018 =	Milisegundos
+	c_Lang019 =	Segundos
+	c_Lang020 =	OK
+	c_Lang021 =	Cancelar
+	c_Lang022 =	Fechar
+	c_Lang023 =	Copiar
+	c_Lang024 =	Excluir
+	c_Lang025 =	(Use `% para variáveis, ex.: `%Clipboard`%)
+	c_Lang026 =	Ação
+	c_Lang027 =	Clicar
+	c_Lang028 =	Mover
+	c_Lang029 =	Mover e Clicar
+	c_Lang030 =	Rolar para Cima
+	c_Lang031 =	Rolar para Baixo
+	c_Lang032 =	Arrastar e Soltar
+	c_Lang033 =	Coordenadas
+	c_Lang034 =	Click
+	c_Lang035 =	Send
+	c_Lang036 =	Relativo
+	c_Lang037 =	Botão
+	c_Lang038 =	Esquerdo
+	c_Lang039 =	Direito
+	c_Lang040 =	Meio
+	c_Lang041 =	X1
+	c_Lang042 =	X2
+	c_Lang043 =	Segurar/Soltar
+	c_Lang044 =	Cliques
+	c_Lang045 =	Texto Simples (Raw)
+	c_Lang046 =	Texto com Comandos
+	c_Lang047 =	Colar da Área de Transferência
+	c_Lang048 =	Colar em controle
+	c_Lang049 =	Definir Texto
+	c_Lang050 =	Adicionar Pausa
+	c_Lang051 =	Caixa de Mensagem
+	c_Lang052 =	Esperar pela tecla
+	c_Lang053 =	Tempo Limite
+	c_Lang054 =	(milisegundos) 0 = infinito
+	c_Lang055 =	Comando
+	c_Lang056 =	Valor
+	c_Lang057 =	Nome da Variável
+	c_Lang058 =	Posição
+	c_Lang059 =	Tamanho
+	c_Lang060 =	Serão criadas 4 variáveis com este prefixo e terminadas em X, Y, W, H.
+	c_Lang061 =	Início
+	c_Lang062 =	Fim
+	c_Lang063 =	Imagem
+	c_Lang064 =	Pixel
+	c_Lang065 =	Capturar Imagem
+	c_Lang066 =	Esperar Tecla
+	c_Lang067 =	Se encontrada
+	c_Lang068 =	Se não encontrada / Erro
+	c_Lang069 =	Coords gravadas em `%FoundX`% / `%FoundY`%.
+	c_Lang070 =	Coord
+	c_Lang071 =	Variações
+	c_Lang072 =	Pré-Visualização
+	c_Lang073 =	Loop
+	c_Lang074 =	* Não funciona na Reprodução Manual.
+	c_Lang075 =	Parar
+	c_Lang076 =	Continuar
+	c_Lang077 =	Pular
+	c_Lang078 =	Pular para Rótulo
+	c_Lang079 =	Rótulo
+	c_Lang080 =	Adicionar Rótulo
+	c_Lang081 =	Texto (InputVar), Valor
+	c_Lang082 =	Var [operador] Valor
+	c_Lang083 =	Se Não
+	c_Lang084 =	Associar Variável
+	c_Lang085 =	Conteúdo
+	c_Lang086 =	Operador
+	c_Lang087 =	Usar Eval() para resolver expressões
+	c_Lang088 =	Apagar
+	c_Lang089 =	Nome da Função
+	c_Lang090 =	Parametros separados por vírgula (sem parenteses).
+	c_Lang091 =	(Use `% para variáveis. Vírgulas literais devem ser escapadas [ ```, ])
+	c_Lang092 =	Elemento da Página / Índice
+	c_Lang093 =	Definir
+	c_Lang094 =	Copiar
+	c_Lang095 =	Método
+	c_Lang096 =	Propried.
+	c_Lang097 =	Aguardar a página carregar.
+	c_Lang098 =	CLSID
+	c_Lang099 =	Conectar
+	c_Lang100 =	Handle
+	c_Lang101 =	COM Script
+	c_Lang102 =	Número da Mensagem
+	c_Lang103 =	Teclas Especiais
+	c_Lang104 =	Voltar
+	c_Lang105 =	Avançar
+	c_Lang106 =	Atualizar
+	c_Lang107 =	Parar
+	c_Lang108 =	Pesquisar
+	c_Lang109 =	Favoritos
+	c_Lang110 =	Pág. Inicial
+	c_Lang111 =	Mídia
+	c_Lang112 =	Mudo
+	c_Lang113 =	Volume +
+	c_Lang114 =	Volume -
+	c_Lang115 =	Reproduzir / Pausar
+	c_Lang116 =	Voltar Faixa
+	c_Lang117 =	Avançar Faixa
+	c_Lang118 =	Parar Reprodução
+	c_Lang119 =	E-mail
+	c_Lang120 =	Aplicativo 1
+	c_Lang121 =	Aplicativo 2
+	c_Lang122 =	ScanCode
+	c_Lang123 =	Adicionar
+	c_Lang124 =	Histórico
+	c_Lang125 =	Insira um ScanCode...
+	c_Lang126 =	Código adicionado à lista de Teclas Virtuais!
+	c_Lang127 =	Digite um nome para a Variável
+	c_Lang128 =	Usar Função de Arquivo Externo
+	c_Lang130 =	Quebrar loop se encontrado
+	c_Lang131 =	Aplicar
+	c_Lang132 =	Loop
+	c_Lang133 =	Arquivo
+	c_Lang134 =	Analisar
+	c_Lang135 =	Ler
+	c_Lang136 =	Registro
+	c_Lang137 =	Padrão De Arquivo:
+	c_Lang138 =	Pastas?
+	c_Lang139 =	Recursivo?
+	c_Lang140 =	Variável De Entrada:
+	c_Lang141 =	Delimitadores:
+	c_Lang142 =	Omitir Caractéres:
+	c_Lang143 =	Arquivo De Entrada:
+	c_Lang144 =	Chave:
+	c_Lang145 =	Chave Raiz:
+	c_Lang146 =	Subchaves?
+	c_Lang147 =	Ícone
+	c_Lang148 =	Sem ícone
+	c_Lang149 =	Erro
+	c_Lang150 =	Pergunta
+	c_Lang151 =	Exclamação
+	c_Lang152 =	Informação
+	c_Lang153 =	Sempre visível
+	c_Lang154 =	Minutos
+		
+; Other Windows		
+	t_Lang001 =	Exportar para AHK
+	t_Lang002 =	Macros
+	t_Lang003 =	Repetir
+	t_Lang004 =	0 = infinito
+	t_Lang005 =	Usar Hotstring
+	t_Lang006 =	Bloquear Mouse
+	t_Lang007 =	Todos
+	t_Lang008 =	Nenhum
+	t_Lang009 =	Atalhos Condicionais
+	t_Lang010 =	Exportar para
+	t_Lang011 =	Margem
+	t_Lang012 =	Incluir Código PMC
+	t_Lang013 =	Não concatenar comandos Send
+	t_Lang014 =	Atualizar
+	t_Lang015 =	Auto-Atualizar
+	t_Lang016 =	Sempre Visível
+	t_Lang017 =	Configurações
+	t_Lang018 =	Geral
+	t_Lang019 =	Iniciar / Parar Gravação
+	t_Lang020 =	Gravar Nova Macro
+	t_Lang021 =	Teclado
+	t_Lang022 =	Gravação
+	t_Lang023 =	Capturar estado da tecla (press. / solta)
+	t_Lang024 =	Cliques do Mouse
+	t_Lang025 =	Roda do Mouse
+	t_Lang026 =	Movimentos do Mouse
+	t_Lang027 =	Intervalos de Tempo
+	t_Lang028 =	Intervalo mínimo
+	t_Lang029 =	Classes das Janelas
+	t_Lang030 =	Títulos das Janelas
+	t_Lang031 =	Gravar ControlSend
+	t_Lang032 =	Gravar ControlClick
+	t_Lang033 =	Tecla de Gravação Relativa
+	t_Lang034 =	Alternar
+	t_Lang035 =	Reproduzir
+	t_Lang036 =	Acelerar
+	t_Lang037 =	Reduzir
+	t_Lang038 =	Retornar Mouse após a reprodução
+	t_Lang039 =	Coordenadas do Mouse
+	t_Lang040 =	Janela
+	t_Lang041 =	Tela
+	t_Lang042 =	Intervalo Padrão do Mouse
+	t_Lang043 =	Intervalo Padrão das Janelas
+	t_Lang044 =	Histório Máximo por Macro
+	t_Lang045 =	Apagar Hist.
+	t_Lang046 =	Capturar Imagem
+	t_Lang047 =	Desenhar com
+	t_Lang048 =	Linha (Px)
+	t_Lang049 =	Capturar ao soltar
+	t_Lang050 =	Press. Enter para Capturar
+	t_Lang051 =	Imagens capturadas
+	t_Lang052 =	Misc.
+	t_Lang053 =	Atalhos
+	t_Lang054 =	Definir Como Atalhos Padrão
+	t_Lang055 =	Desativar Atalhos da Janela
+	t_Lang056 =	Restaurar Colunas
+	t_Lang057 =	Arquivo de Macro Padrão
+	t_Lang058 =	Arquivo de Biblioteca Padrão
+	t_Lang059 =	Usar Eval() por padrão para Associar Variáveis
+	t_Lang060 =	Mostrar Cores && Marcas para Loops e Declarações
+	t_Lang061 =	(Clique no cabeçalho da coluna Index para ativar/desativar)
+	t_Lang062 =	Teclas Virtuais
+	t_Lang063 =	Padrão
+	t_Lang064 =	Editar Comentário
+	t_Lang065 =	Comentário
+	t_Lang066 =	Pesquisar Coluna
+	t_Lang067 =	Localizar / Substituir
+	t_Lang068 =	Localizar
+	t_Lang069 =	Diferenciar Maiúsc./Minúsc.
+	t_Lang070 =	Substituir
+	t_Lang071 =	Encontrados
+	t_Lang072 =	Substituidos
+	t_Lang073 =	Linhas Selecionadas
+	t_Lang074 =	Todas as Linhas
+	t_Lang075 =	Todas as Macros Macros
+	t_Lang076 =	Sobre
+	t_Lang077 =	Expressão Regular
+	t_Lang078 =	Reproduzir uma vez
+	t_Lang079 =	A cada X (mili)segundos
+	t_Lang080 =	Temporizador
+	t_Lang081 =	Pausa
+	t_Lang082 =	Declarações
+	t_Lang083 =	Mostrar Margens para Loops e Declarações
+	t_Lang084 =	(Duplo-Clique no Cabeçalho da Coluna Action para ativar/desativar)
+	t_Lang085 =	Mostrar Barra de Progresso
+	t_Lang086 =	Procurando Funções. Por favor aguarde...
+	t_Lang087 =	Incluir Arquivos Externos
+	t_Lang088 =	Criar Arquivo EXE
+	t_Lang089 =	Permitir Multiplas Instâncias
+	t_Lang090 =	Padrões
+	t_Lang091 =	Permitir Arrastar Linhas
+	t_Lang092 =	Conteúdo da célula inteira
+		
+; Messages & Dialogs		
+	d_Lang001 =	Abrir
+	d_Lang002 =	Gostaria de salvar a Macro atual?
+	d_Lang003 =	Configuração Padrão
+	d_Lang004 =	Arquivos Macro Creator
+	d_Lang005 =	Salvar Macro
+	d_Lang006 =	Não foi possível salvar/substituir o arquivo
+	d_Lang007 =	Erro
+	d_Lang008 =	Erro: Nenhuma Macro Selecionada.`nPor favor marque ao menos uma Macro na lista.
+	d_Lang009 =	Erro: Nenhum Atalho Selecionado.
+	d_Lang010 =	Erro: Endereço Inválido.`nO endereço ou nome do arquivo selecionado é inválido.
+	d_Lang011 =	Aviso
+	d_Lang012 =	Nenhum controle selecionado.`nContinuar?
+	d_Lang013 =	Exportar Script
+	d_Lang014 =	Script Exportado
+	d_Lang015 =	Arquivo exportado com sucesso!
+	d_Lang016 =	Clique em 'Buscar' para marcar a posição.
+	d_Lang017 =	
+	(LTrim	
+		- Selecione a janela.
+		- Aponte para o local desejado.
+		- Clique com o Botão Direito.
+	)	
+	d_Lang018 =	Cor do Pixel
+	d_Lang019 =	Limpar Lista
+	d_Lang020 =	Apagar todos os itens?
+	d_Lang021 =	Próximo
+	d_Lang022 =	Anterior
+	d_Lang023 =	Mensagem
+	d_Lang024 =	Carregar configuração padrão?
+	d_Lang025 =	Macro(s) ativada(s).`nUse os Atalhos para Iniciar.
+	d_Lang026 =	para iniciar / parar a gravação
+	d_Lang027 =	Fim da gravação
+	d_Lang028 =	Gravando...
+	d_Lang029 =	para parar
+	d_Lang030 =	para iniciar nova gravação
+	d_Lang031 =	não é um nome de função válido.
+	d_Lang032 =	Erro: Atalhos duplicados.
+	d_Lang033 =	Ativar Macros
+	d_Lang034 =	
+	(LTrim	
+		- Clique arraste com %DrawButton% para selecionar a área.
+		- Clique e solte sem arrastar para selecionar área do control.
+		- Cliquem em uma área sem controle para selecionar a área da janela.
+	)	
+	d_Lang035 =	Continuar?
+	d_Lang036 =	Imagem / Pixel Encontrada em
+	d_Lang037 =	Imagem / Pixel Não Encontrada.
+	d_Lang038 =	Pressione OK para continuar.
+	d_Lang039 =	Tempo esgotado!
+	d_Lang040 =	
+	(LTrim	
+		Este recurso requer a Biblioteca GDI+.
+		Pressione OK para ir para a página de download.
+		
+		Obs.: O arquivo 'Gdip.ahk' DEVE ESTAR na mesma pasta deste script.
+	)	
+	d_Lang041 =	O nome da variável contém um caractere ilegal.
+	d_Lang042 =	
+	(LTrim	
+		Operador inválido.
+		Os seguintes operadores são aceitos:
+		=,==,<>,!=,>,<,>=,<=
+		
+		Exemplos:
+		MyVar > 1
+		MyVar = `%A_DDDD`%
+		Clipboard == `%MyVar`%
+	)	
+	d_Lang043 =	Ou utilize a Barra de Controles.
+	d_Lang044 =	
+	(LTrim	
+		Este recurso requer a Função Eval().
+		Pressione OK para ir para a página de download.
+		
+		Obs.: O arquivo 'Eval.ahk' DEVE ESTAR na mesma pasta deste script.
+	)	
+	d_Lang045 =	Por favor selecione uma janela do Internet Explorer!
+	d_Lang046 =	Conexão Bem-Sucedida!
+	d_Lang047 =	Falha ao Conectar!
+	d_Lang048 =	Insira um Handle e um CLSID.
+	d_Lang049 =	Nome de Rótulo Inválido.
+	d_Lang050 =	Rótulo Duplicado.
+	d_Lang051 =	Para reproduzir uma Macro pressione o Atalho correspondente (Auto/Man).
+	d_Lang052 =	Para iniciar a gravação pressione uma Tecla de Gravação.
+	d_Lang053 =	Não exibir esta mensagem novamente.
+	d_Lang054 =	Por favor selecione uma janela do Excel!
+	d_Lang055 =	Por favor, selecione um arquivo de script AutoHotkey e digite um nome de Função.
+	d_Lang056 =	
+	(LTrim	
+		Este recurso requer o AutoHotkey instalado.
+		Pressione OK para ir para a página de download.
+	)	
+	d_Lang057 =	
+	(LTrim	
+		- Pressione Ctrl + Setas para mover a área selecionada.
+		- Pressione Shift + Setas para redimensionar a área selecionada.
+		- Pressione Enter para finalizar.
+	)	
+	d_Lang058 =	
+	(LTrim	
+		Alguns recursos requerem privilégios administrativos para funcionarem corretamente.
+		É recomendado reiniciar o aplicativo como Administrador.
+	)	
+	d_Lang059 =	
+	(LTrim	
+		Este comando não suporta expressões ou funções.
+		Por favor associe uma variável e use-a no parâmetro.
+	)	
+	d_Lang060 =	Nova versão disponível
+	d_Lang061 =	
+	(LTrim	
+		Gostaria de fazer o download agora?
+		
+		Para desabilitar a verificação automática selecine Ajuda > Verificar ao iniciar.
+	)	
+	d_Lang062 =	Você já possui a versão mais recente.
+	d_Lang063 =	Ocorreu um erro durante a verificação.
+		
+		
+; Tooltips		
+	NewB_TT =	Novo (Ctrl+N)
+	OpenB_TT =	Abrir (Ctrl+O)
+	SaveB_TT =	Salvar (Ctrl+S)
+	ExportB_TT =	Exportar para AHK (Ctrl+E)
+	PreviewB_TT =	Visualizar Script (Ctrl+P)
+	OptionsB_TT =	Configurações (Ctrl+G)
+	RecordB_TT =	Gravar Macro (Ctrl+R)
+	StartB_TT =	Ativar Macros (Ctrl+Enter)
+	TestRun_TT =	Reproduzir Macro Atual (Ctrl+Shift+Enter)
+	RunTimer_TT =	Temporizador (Ctrl+Shift+T)
+	MouseB_TT =	Mouse (F2)
+	TextB_TT =	Texto (F3)
+	SpecialB_TT =	Teclas Especiais
+	ControlB_TT =	Controle (F4)
+	PauseB_TT =	Pausa (F5) / Mensagem (Shift+F5) / Esperar Tecla (Control+F5) 
+	WindowB_TT =	Janela (F6)
+	ImageB_TT =	Procurar Imagem / Pixel (F7)
+	RunB_TT =	Executar / Arquivos / Texto / Misc. (F8)
+	ComLoopB_TT =	Loop (F9) / Pular (Shift+F9) / Rótulo (Ctrl+F9)
+	IfStB_TT =	Declaração Se (F10) / Variáveis (Shift+F10) / Funções (Ctrl+F10)
+	IEComB_TT =	Internet Explorer (F11) / Interface COM (Shift+F11)
+	SendMsgB_TT =	Mensages do Windows (F12)
+	AutoKey_TT =	Backspace para apagar
+	ManKey_TT =	Backspace para apagar
+	AbortKey_TT =	Backspace para apagar
+	PauseKey_TT =	Pausa execução ao invés de parar
+	Win1_TT =	Adicionar a tecla Windows como modificador
+	ReptC_TT =	0 = infinito
+	TabPlus_TT =	Adicionar Macro (Ctrl+T)
+	TabClose_TT =	Fechar Macro (Ctrl+W)
+	DuplicateL_TT =	Duplicar Macro (Ctrl+Shift+D)
+	SaveC_TT =	Salvar Macro Atual (Ctrl+Alt+S)
+	ImportB_TT =	Importar Macro (Ctrl+I)
+	IfDirB_TT =	Faz os Atalhos funcionarem dependendo`ndo tipo de janela ativa ou existente.
+	KeepHKOn_TT =	Manter Atalhos Sempre Ativos
+	A_List_TT =	Selecionar Macro (Ctrl+1~0)
+	Duplicate_TT =	Duplicar Linhas Selecionadas (Ctrl+D)
+	Order_TT =	Mover Linhas Selecionadas (Ctrl+PageUp / Ctrl+PageDown)
+	Cut_TT =	Recortar Linhas Selecionadas (Ctrl+X)
+	Copy_TT =	Copiar Linhas Selecionadas (Ctrl+C)
+	Paste_TT =	Colar Linhas Copiadas (Ctrl+V)
+	Remove_TT =	Excluir Linhas Selecionadas (Del)
+	Undo_TT =	Desfazer (Ctrl+Z)
+	Redo_TT =	Refazer (Ctrl+Y)
+	CopyTo_TT =	Copiar para...
+	Capt_TT =	Capturar teclas pressionadas nesta janela
+	OnScCtrl_TT =	Exibir a Barra de Controles
+	ShowStep_TT =	Mostrar Informações
+	ApplyT_TT =	Aplicar
+	ApplyI_TT =	Aplicar
+	ApplyL_TT =	Inserir da Caixa (Insert)
+	EditButton_TT =	Editar
+	PrevRefresh_TT =	Atualizar (F5)
+	PrevCopy_TT =	Copiar
+	OpenT_TT =	Abrir (Ctrl+O)
+	SaveT_TT =	Salvar (Ctrl+S)
+	CutT_TT =	Recortar
+	CopyT_TT =	Copiar
+	PasteT_TT =	Colar
+	SelAllT_TT =	Selecionar Tudo
+	DefaultMacro_TT =	Selecione um arquivo para abrir ao iniciar
+	VarCopyA_TT =	Copy current variable contents
+	VarCopyB_TT =	Copy current variable contents
+	FindReplace_TT =	Localizar / Substituir (Ctrl+F)
+	EditComm_TT =	Editar Comentário
+	Reset_TT =	Apagar conteúdo da variável
+	PicPrev_TT =	Duplo-Clique para abrir a imagem
+	LoopLVColor_TT =	Clique para selecionar uma cor
+	IfLVColor_TT =	Clique para selecionar uma cor
+	RefreshIEW_TT =	Atualizar Lista
+	ActiveObj_TT =	Tenta conectar-se a um Objeto COM Ativo
+	OSPlay_TT =	Reproduzir / Pausar
+	OSStop_TT =	Parar
+	OSRec_TT =	Iniciar / Parar Gravação
+	OSRecNew_TT =	Gravar Nova Macro
+	OSClear_TT =	Limpar Lista
+	OSProgB_TT =	Mostrar Barra de Progresso
+	OSFast_TT =	Acelerar
+	OSSlow_TT =	Reduzir
+	OSTrans_TT =	Opacidade
+	MRel_TT =	
+	(LTrim	
+		Movimentos relativos à posição atual.
+		Ou se usado em Controle: Posição relativa ao Controle.
+	)	
+	Raw_TT =	
+	(LTrim	
+		O comando SendRaw interpreta todos os caracteres literalmente
+		ao invés de traduzir {Enter} para a tecla ENTER,
+		^c para Control+C, etc.
+	)	
+	ComText_TT =	
+	(LTrim	
+		Quando não está em modo raw, os seguintes caracteres
+		são tradados como modificadores (estes modificadores afetam
+		somente o texto próximo à tecla): !, +, ^, #
+	)	
+	Clip_TT =	
+	(LTrim	
+		Utiliza temporiariamente a Área de Transferência para enviar o texto.
+		Quando a operação for completada, o script
+		restaura o conteúdo original do Área de Transferência.
+		(deixe o Texto em branco para colar o conteúdo atual)
+	)	
+	EditPaste_TT =	
+	(LTrim	
+		Cola o Texto no ponto de inserção
+		em um controle Editar (isto não afeta
+		o conteúdo da Área de Transferência).
+	)	
+	SetText_TT =	Muda o texto de um controle.
+	RelKey_TT =	Grava Clicks e Movivimentos relativos enquanto pressionada.
+	Relative_TT =	Coordenadas relativas à janela ativa.
+	Screen_TT =	Coordenadas relativas à área de trabalho (tela inteira).
+	IncFolders_TT =	
+	(LTrim	
+		0 - Apenas os arquivos / chaves
+		1 - Pastas / subchaves e arquivos / chaves
+		2 - Apenas as pastas / subchaves
+	)	
+	Recurse_TT =	
+	(LTrim	
+		0 - Não redirecionar pastas / subchaves
+		1 - Redirecionar pastas / subchaves
+	)	
+		
+; Tooltips from AHK Docs		
+	ExpList_TT =	Duplo-Clique para editar
+	Ex_IfDir_TT =	
+	(LTrim	
+		Faz os Atalhos funcionarem dependendo
+		do tipo de janela ativa ou existente.
+	)	
+	Ex_IfDirType_TT =	
+	(LTrim	
+		Faz os Atalhos funcionarem dependendo
+		do tipo de janela ativa ou existente.
+	)	
+	Ex_SM_TT =	
+	(LTrim	
+		Torna Send sinônimo de SendInput ou SendPlay ao invés do
+		padrão (SendEvent). Também faz Click e MouseMove/Click/Drag
+		usarem o método especificado.
+	)	
+	SM_TT =	
+	(LTrim	
+		Event: Este é o padrão inicial usado para todos os scripts.
+		Utiliza o método SendEvent para Send, SendRaw, Click e MouseMove/Click/Drag.
+		Input: Utiliza o método SendInput para Send, SendRaw, Click e MouseMove/Click/Drag.
+		InputThenPlay: Mesmo que acima exceto que ao invés de mudar para modo Event
+		quando SendInput não está disponível ele reverte para modo Play (abaixo). Isto também faz
+		o comando SendInput reverter para mod Play quando SendInput não está disponível.
+		Play: Utiliza o método SendPlay para Send, SendRaw, Click e MouseMove/Click/Drag.
+	)	
+	Ex_SI_TT =	
+	(LTrim	
+		Determina se o script poderá ser executado novamente quando já está em execução.
+	)	
+	SI_TT =	
+	(LTrim	
+		A palavra FORCE pula a mensagem e substitui a instância antiga automaticamente,
+		que é similar em efeito ao comando Reload.
+		A palavra IGNORE pula a mensagem e deixa instância antiga em execução.
+		Em outras palavras, tentativas de lançar um script já em execução são ignoradas.
+		A palavra OFF permite que multiplas instâncias do script sejam executadas ao mesmo tempo.
+	)	
+	Ex_ST_TT =	
+	(LTrim	
+		Ajusta o modo de busca do parâmetro WinTitle em comandos como WinWait.
+	)	
+	ST_TT =	
+	(LTrim	
+		1: Uma janela precisa começar com o título especificado.
+		2: Uma janela precisa conter o título especificado em qualquer lugar.
+		3: Uma janela precisa ter exatamente o título especificado.
+		RegEx: Muda WinTitle, WinText, ExcludeTitle, e ExcludeText para expressões regulares.
+	)	
+	Ex_DH_TT =	
+	(LTrim	
+		Determina se janelas invisíveis são 'vistas' pelo script.
+	)	
+	Ex_AF_TT =	
+	(LTrim	
+		Pula o método gentil de ativação da janela
+		e vai direto para o método bruto.
+	)	
+	Ex_HK_TT =	
+	(LTrim	
+		Força o uso do gancho (hook) para todas os atalhos de teclado.
+	)	
+	Ex_SK_TT =	
+	(LTrim	
+		Ajusta o tempo de espera que irá ocorrer após cada
+		tecla enviada por Send ou ControlSend.
+	)	
+	Ex_MD_TT =	
+	(LTrim	
+		Ajusta o tempo de espera que irá ocorrer após
+		cada movimento do mouse ou clique.
+	)	
+	Ex_SC_TT =	
+	(LTrim	
+		Ajusta o tempo de espera que irá ocorrer após
+		cada comando de modificação de controle.
+	)	
+	Ex_SW_TT =	
+	(LTrim	
+		Ajusta o tempo de espera que irá ocorrer após
+		cada comando de janela, como WinActivate.
+	)	
+	Ex_SB_TT =	
+	(LTrim	
+		Determina a velocidade de execução do script (afeta utilização da CPU).
+	)	
+	Ex_NT_TT =	
+	(LTrim	
+		Disabilita o ícone de bandeja do sistema.
+	)	
+		
+	Ex_IN_TT =	
+	(LTrim	
+		Faz com que o script comporte-se como se o conteúdo do
+		arquivo especificado estivesse presente nesta exata posição
+	)	
+		
+; IE Commands Tips		
+	Tip_Navigate =	Navega para uma URL ou caminho.
+	Tip_Value =	Copia ou define o valor de um objeto.
+	Tip_Focus =	Define o foco para um objeto.
+	Tip_Click =	Simula um clique em um objeto.
+	Tip_Submit =	Envia o formulário.
+	Tip_GoHome =	Navega para a página inicial atual.
+	Tip_GoBack =	Volta um item no histórico.
+	Tip_GoForward =	Avança um item no histórico.
+	Tip_GoSearch =	Navega para a página de pesquisa atual.
+	Tip_Refresh =	Atualiza a página atual.
+	Tip_Stop =	Cancela uma navegação ou download pendente.
+	Tip_Quit =	Fecha a página.
+	Tip_LocationName =	Copia o caminho ou título da página atual.
+	Tip_LocationURL =	Copia a URL da página atual.
+	Tip_InnerText =	Define ou copia o texto do objeto.
+	Tip_InnerHTML =	Define ou copia a HTML do objeto.
+	Tip_Href =	Define ou copia uma URL destino ou ponto de âncora.
+	Tip_Src =	Define ou copia uma URL para ser carregada pelo objeto.
+	Tip_SelectedIndex =	Define ou copia o índice da seleção em um objeto selecionável.
+	Tip_Checked =	Define ou copia o estado de uma check box ou botão de rádio.
+	Tip_Type =	Define ou copia o tipo de conteúdo do objeto.
+	Tip_Width =	Define ou copia o comprimento de conteúdo do objeto.
+	Tip_Height =	Define ou copia a altura de conteúdo do objeto.
+	Tip_Length =	Define ou copia o número de objetos em uma coleção.
+		
+return		

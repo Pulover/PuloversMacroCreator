@@ -1,0 +1,43 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Loop FilePattern</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="..\default.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h1>Loop FilePattern</h1>
+<p>Retrieves the specified files or folders, one at a time.</p>
+<h3>Parameters</h3>
+<table class="info">
+<tr>
+  <td width="15%">File Pattern</td>
+  <td width="85%">The name of a single file or folder, or a wildcard pattern such as C:\Temp*.tmp.</td>
+</tr>
+<tr>
+  <td width="15%">Folders?</td>
+  <td width="85%"><em>Unchecked</em>: Folders are not retrieved (only files).<br/>
+<em>First Check</em>: All files and folders that match the wildcard pattern are retrieved.<br/>
+<em>Second Check</em>: Only folders are retrieved (no files).</td>
+</tr>
+<tr>
+  <td width="15%">Recurse?</td>
+  <td width="85%"><em>Unchecked</em>: Subfolders are not recursed into.<br/>
+<em>Checked</em>: Subfolders are recursed into so that files and folders contained therein are retrieved if they match FilePattern. All subfolders will be recursed into, not just those whose names match FilePattern. </td>
+</tr>
+</table>
+<h3>Remarks</h3>
+<p>The following variables exist within any file-loop. If an inner file-loop is enclosed by an outer file-loop, the innermost loop's file will take precedence:</p>
+<ul>
+<li>A_LoopFileName, A_LoopFileExt, A_LoopFileFullPath, A_LoopFileLongPath, A_LoopFileShortPath, A_LoopFileShortName, A_LoopFileDir, A_LoopFileTimeModified, A_LoopFileTimeCreated, A_LoopFileTimeAccessed, A_LoopFileAttrib, A_LoopFileSize, A_LoopFileSizeKB, A_LoopFileSizeMB</li>
+</ul>
+<p>For a description of each variable follow the link in the <strong>Related</strong> section below.</p>
+<h3 id="download-example">Download Example</h3>
+<p><a href="Examples\LoopTypes.pmc">Loop through folders, parse and read file's contents</a>.</p>
+<h3 id="related">Related</h3>
+<p><a href="http://l.autohotkey.net/docs/commands/LoopFile.htm">Loop FilePattern</a></p>
+
+</body>
+</html>

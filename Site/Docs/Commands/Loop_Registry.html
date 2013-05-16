@@ -1,0 +1,46 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Loop Registry</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="..\default.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h1>Loop Registry</h1>
+<p>Retrieves the contents of the specified registry subkey, one item at a time.</p>
+<h3>Parameters</h3>
+<table class="info">
+<tr>
+  <td width="15%">Key</td>
+  <td width="85%">The name of the key (e.g. Software\SomeApplication). If blank or omitted, the contents of RootKey will be retrieved.</td>
+</tr>
+<tr>
+  <td width="15%">Root Key</td>
+  <td width="85%">Must be either HKEY_LOCAL_MACHINE (or HKLM), HKEY_USERS (or HKU), HKEY_CURRENT_USER (or HKCU), HKEY_CLASSES_ROOT (or HKCR), or HKEY_CURRENT_CONFIG (or HKCC).<br/>
+To access a remote registry, prepend the computer name and a colon, as in this example: \workstation01:HKEY_LOCAL_MACHINE</td>
+</tr>
+<tr>
+  <td width="15%">Subkeys?</td>
+  <td width="85%"><em>Unchecked</em>: Subkeys contained within Key are not retrieved (only the values).<br/>
+<em>First Check</em>: All values and subkeys are retrieved.<br/>
+<em>Second Check</em>: Only the subkeys are retrieved (not the values).</td>
+</tr>
+<tr>
+  <td width="15%">Recurse</td>
+  <td width="85%"><em>Unchecked</em>: Subkeys are not recursed into.<br/>
+<em>Checked</em>: Subkeys are recursed into, so that all values and subkeys contained therein are retrieved.</td>
+</tr>
+</table>
+<h3>Remarks</h3>
+<p>The following variables exist within any registry-loop. If an inner registry-loop is enclosed by an outer registry-loop, the innermost loop's registry item will take precedence:</p>
+<ul>
+<li>A_LoopRegName, A_LoopRegType, A_LoopRegKey, A_LoopRegSubKey, A_LoopRegTimeModified</li>
+</ul>
+<p>For a description of each variable follow the link in the <strong>Related</strong> section below.</p>
+<h3 id="related">Related</h3>
+<p><a href="http://l.autohotkey.net/docs/commands/LoopReg.htm">Loop Registry</a></p>
+
+</body>
+</html>

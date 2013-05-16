@@ -1,0 +1,148 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>FAQ - Frequently Asked Questions</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="default.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<h1 id="faq---&quot;frequently-asked&quot;,-&quot;not-so-frequently-asked&quot;-and-&quot;just-in-case-youre-wondering...&quot;-questions.">FAQ - &quot;Frequently asked&quot;, &quot;Not so frequently asked&quot; and &quot;Just in case you're wondering...&quot; questions.</h1>
+<p><strong>Note</strong>: Right-click on a Button in the Main Window or anywhere on a Command Window to display links to AHK online help.</p>
+<ul>
+<li><a href="#Syntax-differences-from-AutoHotkey">Syntax differences from AutoHotkey</a></li>
+<li><a href="#How-do-I-start-Recording-/-Playback">How do I start Recording / Playback?</a></li>
+<li><a href="#Can-I-make-playback-go-faster/slower">Can I make playback go faster/slower?</a></li>
+<li><a href="#Can-I-execute-a-custom-action-based-on-Pixel/Image-search-result">Can I execute a custom action based on Pixel/Image search result?</a></li>
+<li><a href="#Can-I-run-a-Macro-in-a-timed-interval">Can I run a Macro in a timed interval?</a></li>
+<li><a href="#Can-I-schedule-a-Macro-to-run-when-I-want">Can I schedule a Macro to run when I want?</a></li>
+<li><a href="#Which-command-line-parameters-are-supported">Which command line parameters are supported?</a></li>
+<li><a href="#Can-I-execute-an-action-every-time-a-certain-event-occurs">Can I execute an action every time a certain event occurs?</a></li>
+<li><a href="#Can-I-play-other-Macros-while-Timer-is-running">Can I play other Macros while Timer is running?</a></li>
+<li><a href="#Can-I-save-my-Macros-as-EXE-to-run-on-any-computer">Can I save my Macros as EXE to run on any computer?</a></li>
+<li><a href="#How-can-I-use-an-active-Internet-Explorer-window-without-editing-the-command-every-time-I-start-PMC">How can I use an active Internet Explorer window without editing the command every time I start PMC?</a></li>
+<li><a href="#What-is-COM-and-how-do-I-use-it">What is COM and how do I use it?</a></li>
+<li><a href="#Can-I-take-Screenshots-during-playback">Can I take Screenshots during playback?</a></li>
+<li><a href="#When-I-take-a-screenshot-of-a-window-area-it-cuts-part-of-the-boarders.">When I take a screenshot of a window area it cuts part of the boarders.</a></li>
+<li><a href="#Can-I-record-keys-when-pressed-down-and-released-separately">Can I record keys when pressed down and released separately?</a></li>
+<li><a href="#Why-wont-the-mouse-stay-where-I-recorded-it-when-I-play-a-Macro">Why won't the mouse stay where I recorded it when I play a Macro?</a></li>
+<li><a href="#Can-I-keep-all-Hotkeys-always-active">Can I keep all Hotkeys always active?</a></li>
+<li><a href="#Can-I-open-an-.ahk-file-in-PMC-to-edit-it">Can I open an .ahk file in PMC to edit it?</a></li>
+<li><a href="#Can-I-use-another-AHK-script-to-record-/-play-Macros-in-PMC">Can I use another AHK script to record / play Macros in PMC?</a></li>
+<li><a href="#Can-I-use-Functions-from-my-own-AutoHotkey-Scripts">Can I use Functions from my own AutoHotkey Scripts?</a></li>
+<li><a href="#Can-I-make-the-Playback-Hotkeys-work-on-a-certain-windown-only">Can I make the Playback Hotkeys work on a certain windown only?</a></li>
+<li><a href="#Why-am-I-getting-wrong-mouse-coordinates">Why am I getting wrong mouse coordinates?</a></li>
+<li><a href="#I-can-run-the-program-but-Macros-wont-work-/-cannot-take-screenshots.">I can run the program but Macros won't work / cannot take screenshots.</a></li>
+<li><a href="#Im-getting-&quot;Error:-Invalid-hotkey.&quot;-when-I-try-to-launch-the-program.">I'm getting &quot;Error: Invalid hotkey.&quot; when I try to launch the program.</a></li>
+</ul>
+<h3 id="syntax-differences-from-autohotkey">Syntax differences from AutoHotkey</h3>
+<ul>
+<li>Since Playback uses a function to dereference variables they should always be enclosed in percent signs even for functions or assignments, execpt when the command parameter is OuputVar or InputVar. The syntax will be corrected for the exported script.  </li>
+<li>It's not necessary to use &quot;quotes&quot; for string parameters in functions or COM commands except for blank parameters.  </li>
+</ul>
+<h3 id="how-do-i-start-recording-/-playback">How do I start Recording / Playback?</h3>
+<ul>
+<li>To start recording you need to press the Record button and then press the recording hotkey (default is F9). For more details see <a href="p2-Record.html">Record</a>.  </li>
+<li>To play a Macro you have to press the Play Button to activate the Hotkeys and use them to play each Macro. For more details see <a href="p3-Playback.html">Playback</a>.  </li>
+</ul>
+<h3 id="can-i-make-playback-go-faster/slower">Can I make playback go faster/slower?</h3>
+<p>You can use the Speed Up and Slow Down keys (defaults are Insert and Pause at 2x). To change the keys and speed multiplier see <a href="p3-Playback.html#playback-options">Playback Options</a>.<br/></p>
+<h3 id="can-i-execute-a-custom-action-based-on-pixel/image-search-result">Can I execute a custom action based on Pixel/Image search result?</h3>
+<p>Follow these steps to execute an action for Pixel/Image search based on a condition:<br/></p>
+<ol>
+<li>Add the Pixel or Image Search. Use the Make Screenshot button or Search for the file and set the area to search.</li>
+<li>Leave the &quot;If found&quot; option set to &quot;Continue&quot;.</li>
+<li>Add the If Statement right below the ImageSearch.</li>
+<li>In the If Statements window select &quot;If Image/Pixel Found&quot; and click OK. It will add an 'If' and 'End If'.</li>
+<li>Click on the 'End If' line to select it so that the actions will be added right above it.</li>
+<li>Any actions you add between the 'If' and 'End If' lines will only be executed if the image/pixel was found.</li>
+</ol>
+<h3 id="can-i-run-a-macro-in-a-timed-interval">Can I run a Macro in a timed interval?</h3>
+<p>Yes, use the <a href="p1-Main.html#buttons-&amp;-menus">Timer</a>.<br/></p>
+<h3 id="can-i-schedule-a-macro-to-run-when-i-want">Can I schedule a Macro to run when I want?</h3>
+<p>You can use Window's Task Scheduler to run Macro Creator from a command line using the <em>AutoPlay</em> parameter:</p>
+<pre class="NoIndent">MacroCreator.exe SavedFile.pmc -a</pre>
+<p>You can also export the Macro to an AutoHotkey script and run it using Window's Task Scheduler (you must have AutoHotkey installed).<br/></p>
+<h3 id="which-command-line-parameters-are-supported">Which command line parameters are supported?</h3>
+<p>-p -- <em>Play</em>: Activate Playback Hotkeys on program start up.</p>
+<pre class="NoIndent">MacroCreator.exe SavedFile.pmc -p</pre>
+<p>-a or -a<em>N</em> -- <em>AutoPlay</em>: Runs a Macro on program start up. <em>N</em> is the number of the Macro to run. The example below would execute the second Macro in the project file.</p>
+<pre class="NoIndent">MacroCreator.exe SavedFile.pmc -a2</pre>
+<p>-t or -t<em>N</em> -- <em>Timer</em>: Runs a Macro automatically and repeatedly at the specified time interval. <em>N</em> is the interval in miliseconds, if not present defaults to 250ms. This paramter may be combined with the -a<em>N</em> to select which Macro to run.</p>
+<pre class="NoIndent">MacroCreator.exe SavedFile.pmc -t -a4</pre>
+<p>-c -- <em>Close</em>: Exits the program after the first Macro is executed (normally used with the -a option).</p>
+<pre class="NoIndent">MacroCreator.exe SavedFile.pmc -a -c</pre>
+<p>-h -- <em>Hide</em>: Hide Main Window on program start up (right-click the tray icon to show it).</p>
+<pre class="NoIndent">MacroCreator.exe SavedFile.pmc -h</pre>
+<p>-s or -s<em>N</em> -- <em>Silent</em>: Combines -a, -h and -c parameters.</p>
+<pre class="NoIndent">MacroCreator.exe SavedFile.pmc -s3</pre>
+<p>You can load multiple files with multiple parameters.</p>
+<pre class="NoIndent">MacroCreator.exe File1.pmc File2.pmc File3.pmc -h -p -a3</pre>
+<h3 id="can-i-execute-an-action-every-time-a-certain-event-occurs">Can I execute an action every time a certain event occurs?</h3>
+<p>It's possible using the <a href="p1-Main.html#buttons-&amp;-menus">Timer</a> and some If Statements.<br/></p>
+<h3 id="can-i-play-other-macros-while-timer-is-running">Can I play other Macros while Timer is running?</h3>
+<p>Although the Timer is limited to run one Macro at a time, you can still activate the other Hotkeys by checking the <em>Always Active</em> option or right-clicking the TrayMenu icon and selecting <strong>Play</strong>.</p>
+<h3 id="can-i-save-my-macros-as-exe-to-run-on-any-computer">Can I save my Macros as EXE to run on any computer?</h3>
+<p>Macro Creator has an option to convert exported scripts to EXE using Ahk2Exe that is installed with AutoHotkey:<br/>
+1. Download and install <a href="http://www.autohotkey.com">AutoHotkey</a>.<br/>
+2. Go to <a href="p5-Export.html#destination-file">Export</a> in PMC and check <em>Create EXE File</em> option.<br/>
+3. Click the <em>Export</em> button.<br/></p>
+<p>The EXE file will be saved to the same directory as the script file.</p>
+<h3 id="how-can-i-use-an-active-internet-explorer-window-without-editing-the-command-every-time-i-start-pmc">How can I use an active Internet Explorer window without editing the command every time I start PMC?</h3>
+<p>There are two methods:</p>
+<ul>
+<li>Open the <em>Export</em> window and change the option <em>COM Objects</em> to ComObjActive. This is used for convenience and works in Playback only. ComObjActive doesn't really work with Internet Explorer but you can use external functions to connect to existing IE windows such as IEGet and WBGet found in the links below.  </li>
+<li>Open the <em>Functions</em> window and type <em>o_ie</em> in the <em>Output Variable</em> field and IEGet in the <em>Function Name</em> field. IEGet is used internally by PMC and <em>o_ie</em> is the internal handle for IE commands.</li>
+</ul>
+<h3 id="what-is-com-and-how-do-i-use-it">What is COM and how do I use it?</h3>
+<p>COM stands for <a href="http://en.wikipedia.org/wiki/Component_Object_Model">Component Object Model</a> and it's a method to allow interaction of a script with other programs. The Internet Explorer command window offers a basic simplified interface to add COM commands to IE. If you want to use the advanced features you'll need to know about the COM methods and properties for the program you want to interact with. You can find some useful tutorials in the AutoHotkey Forum.</p>
+<ul>
+<li><a href="http://www.autohotkey.com/board/topic/47052-basic-webpage-controls-with-javascript-com-tutorial/">Basic Webpage Controls with JavaScript / COM</a></li>
+<li><a href="http://www.autohotkey.com/board/topic/69033-basic-ahk-l-com-tutorial-for-excel/">Basic Ahk_L COM Tutorial for Excel</a></li>
+<li><a href="http://www.autohotkey.com/board/topic/71335-mickers-outlook-com-msdn-for-ahk-l/">Mickers Outlook COM MSDN for Ahk_L</a></li>
+</ul>
+<h3 id="can-i-take-screenshots-during-playback">Can I take Screenshots during playback?</h3>
+<p>Macro Creator has the <a href="http://www.autohotkey.com/board/topic/29449-gdi-standard-library">GDI+ Library</a> integrated so you can make use of its functions.</p>
+<p>The example file below allows you to save a png from the clipboard in your Documents folder. The first macro sends PrintScreen, the second sends Alt+PrintScreen, the third are the functions to save the file (you can change the destination folder in the 3rd line).</p>
+<p>Download Example: <a href="Examples\SaveScreenshot.pmc">Save PNG screenshots</a>.<br/></p>
+<p>There is also an an internal function that uses GDI+ functions to make a screenshot of part of the screen.<br/></p>
+<ul>
+<li>Go to Functions and type any name for the OutputVar and type <strong>Screenshot</strong> in the <em>Function Name</em>.</li>
+<li>The first parameter is the name of the file which can be an absolute or relative path and a file with a png extension. You can use variables to have them dynamically named, e.g.: Screen_%A_Now%.png</li>
+<li>The second parameter is the pipe separated coordinates in the screen, e.g. 100|200|50|100 (where the 1st is the X position, 2nd is Y position, 3rd is width and 4th is the height, all in pixels).</li>
+</ul>
+<p>Example of PMC file:</p>
+<pre class="NoIndent"> 1|Screenshot|sc := %A_MyDocuments%\Screen_%A_Now%.png, 100¢200¢50¢100|1|0|Variable||||</pre>
+<p>The ¢ symbol replaces the | in .pmc files and is converted when loaded.<br/></p>
+<h3 id="when-i-take-a-screenshot-of-a-window-area-it-cuts-part-of-the-boarders.">When I take a screenshot of a window area it cuts part of the boarders.</h3>
+<p>The visible area of a window can be affected by your current Theme, but you can adjust the selection to fit the correct area:</p>
+<ul>
+<li>Go to <em>Settings</em> &gt; <em>Screenshots</em> (you can use the <em>Options</em> button in the <em>Image/Pixel Search</em> command window).</li>
+<li>Check the option <em>Press Enter to capture</em>. Now when you draw a rectangle it will remain visible in the screen until you press Enter.</li>
+<li>Use the hotkeys <strong>Ctrl + Arrow keys</strong> to move the selection area and <strong>Shift + Arrow keys</strong> to resize it.</li>
+</ul>
+<h3 id="can-i-record-keys-when-pressed-down-and-released-separately">Can I record keys when pressed down and released separately?</h3>
+<p>Yes. To activate recording Key down/up for all keys go to Options &gt; Recording.<br/></p>
+<h3 id="why-wont-the-mouse-stay-where-i-recorded-it-when-i-play-a-macro">Why won't the mouse stay where I recorded it when I play a Macro?</h3>
+<p>Go to Settings &gt; Playback and make sure that the option <em>Return Mouse to initial position after playback</em> is unchecked.</p>
+<h3 id="can-i-keep-all-hotkeys-always-active">Can I keep all Hotkeys always active?</h3>
+<p>Yes, just check the <em>Always Active</em> option in the main window.<br/></p>
+<h3 id="can-i-open-an-.ahk-file-in-pmc-to-edit-it">Can I open an .ahk file in PMC to edit it?</h3>
+<p>Parsing an .ahk script is not possible but you have the option to <em>Include PMC Code</em> for exported scripts so you can read it back from the .ahk file using PMC.<br/></p>
+<h3 id="can-i-use-another-ahk-script-to-record-/-play-macros-in-pmc">Can I use another AHK script to record / play Macros in PMC?</h3>
+<p>Your script must use the Send command with a higher level to execute the Hotkeys in PMC. Put these two lines on top of it.<br/></p>
+<pre class="NoIndent">#InputLevel, 1
+SendLevel, 1</pre>
+<p>#InputLevel makes it possible to use Send command from a hotkey in another script and SendLevel allows to use Send command from a subroutine such as a gLabel.<br/></p>
+<h3 id="can-i-use-functions-from-my-own-autohotkey-scripts">Can I use Functions from my own AutoHotkey Scripts?</h3>
+<p>Yes. You can load an external .ahk file in the <em>Functions</em> command window to run functions from it and save the results to the Output Variable. You can set a Standard Library File containing your functions in Settings &gt; Misc., this file will be automatically selected when you enter the Function command window. <br/></p>
+<h3 id="can-i-make-the-playback-hotkeys-work-on-a-certain-windown-only">Can I make the Playback Hotkeys work on a certain windown only?</h3>
+<p>Yes, use the <em>Context Sensitive Hotkeys</em> button in the main window.<br/></p>
+<h3 id="why-am-i-getting-wrong-mouse-coordinates">Why am I getting wrong mouse coordinates?</h3>
+<p>The default settings for mouse coords are relative to the active window to make clicks point correctly even when the window is in a different position of when Macro was created. When working with multiple windows it may be best to adjust or maximize all windows and change CoordMode to screen (Settings &gt; <a href="p7-Settings.html#Defaults">Defaults</a>).<br/></p>
+<h3 id="i-can-run-the-program-but-macros-wont-work-/-cannot-take-screenshots.">I can run the program but Macros won't work / cannot take screenshots.</h3>
+<p>Macro Creator requires administrator privileges in order to work properly. Enter the program or shortcut's Properties, select the Compatibility tab (click the Advanced button, if it's a shortcut) and check the &quot;Run as administrator&quot; option. </p>
+<h3 id="im-getting-&quot;error:-invalid-hotkey.&quot;-when-i-try-to-launch-the-program.">I'm getting &quot;Error: Invalid hotkey.&quot; when I try to launch the program.</h3>
+<p>This is a keyboard language issue. Change the default keyboard layout of your system (global settings) to English and open MacroCreator.<br/></p>
+</body>
+</html>

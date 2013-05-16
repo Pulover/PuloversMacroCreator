@@ -1,0 +1,58 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Mouse</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="..\default.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h1>Mouse</h1>
+<p>Clicks a mouse button at the specified coordinates. It can also hold down a mouse button, turn the mouse wheel, or move the mouse.</p>
+<h3>Parameters</h3>
+<table class="info">
+<tr>
+  <td width="15%">Actions</td>
+  <td width="85%">Selects the Mouse action to execute.</td>
+</tr>
+<tr>
+  <td width="15%">Coordinates</td>
+  <td width="85%">Defines the coordinates of the window or screen where the action will be executed.
+This field accepts <a href="p8-Variables.html">Variables</a>, functions may also work but are not recommended due to incompatibility with exported scripts.<br/>
+<strong>Note</strong>: Mouse Actions are affected by <a href="p7-Settings.html#Defaults">Mouse Coordinates Settings</a>.<br/></td>
+</tr>
+<tr>
+  <td width="15%">Click</td>
+  <td width="85%">Uses the <em>Click</em>. This usually works for most cases.</td>
+</tr>
+<tr>
+  <td width="15%">Send</td>
+  <td width="85%">Uses <em>SendEvent</em>. Use this in case the Click Command doesn't work.</td>
+</tr>
+<tr>
+  <td width="15%">Relative</td>
+  <td width="85%"><strong>If not used with Control</strong>: Coordinates will be treated as an offset from mouse current position.<br/>
+<strong>If used with Control</strong>: <em>Unchecked</em>: Click coordinates relative to the target window. <em>Checked</em>: Click coordinates relative to Control's position.</td>
+</tr>
+<tr>
+  <td width="15%">Button</td>
+  <td width="85%">Selects the Mouse Button to send.</td>
+</tr>
+<tr>
+  <td width="15%">Hold/Release</td>
+  <td width="85%"><em>Unchecked</em>: Send a normal click.<br/>
+<em>First check</em>: Click and hold.<br/>
+<em>Second check</em>: Release button.</td>
+</tr>
+<tr>
+  <td width="15%">Click Count</td>
+  <td width="85%">The number of times to click the mouse.<br/>
+This is not affected by Delay.</td>
+</tr>
+</table>
+<h3 id="related">Related</h3>
+<p><a href="http://l.autohotkey.net/docs/commands/Click.htm">Click</a>, <a href="http://l.autohotkey.net/docs/commands/ControlClick.htm">ControlClick</a>, <a href="http://l.autohotkey.net/docs/commands/MouseClickDrag.htm">MouseClickDrag</a></p>
+
+</body>
+</html>

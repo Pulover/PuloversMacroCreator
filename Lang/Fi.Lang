@@ -1,0 +1,748 @@
+﻿LoadLang_Fi:
+		
+		; Finnish
+		
+; Main Menu		
+	m_Lang001 =	T&iedosto
+	m_Lang002 =	&Lisätä
+	m_Lang003 =	&Valita
+	m_Lang004 =	&Muokata
+	m_Lang005 =	Ma&kro
+	m_Lang006 =	Valinnat
+	m_Lang007 =	Ki&eli
+	m_Lang008 =	Tee la&hjoitus
+	m_Lang009 =	A&pua
+		
+; File Submenu		
+	f_Lang001 =	&Uusi
+	f_Lang002 =	&Avata
+	f_Lang003 =	&Tallentaa
+	f_Lang004 =	Ta&llenna Koska
+	f_Lang005 =	Tu&o Macro
+	f_Lang006 =	Tall&enna Nykyinen Macro
+	f_Lang007 =	&Viimeisimmät Tiedostot
+	f_Lang008 =	V&ie AHK
+	f_Lang009 =	E&sikatselu Script
+	f_Lang010 =	Lista&muuttujien
+	f_Lang011 =	&Poistua
+	f_Lang012 =	Ei tie&dostoja
+		
+; Insert Sub Menu		
+	i_Lang001 =	&Hiiri
+	i_Lang002 =	&Teksti
+	i_Lang003 =	&Ohjaa
+	i_Lang004 =	T&auko / Viesti / Näppäintä Odotus
+	i_Lang005 =	&Ikkuna
+	i_Lang006 =	&Kuva / Pixel Search
+	i_Lang007 =	&Run / File / String / Misc.
+	i_Lang008 =	&Loop / Goto / Levy
+	i_Lang009 =	&Jos Lausumat / Muuttujat / toiminnot
+	i_Lang010 =	I&nternet Explorer / COM-liitäntä
+	i_Lang011 =	&Windows viestit
+	i_Lang012 =	&Special Keys
+		
+; Select Sub Menu		
+	s_Lang001 =	&Valitse kaikki
+	s_Lang002 =	V&alitse Ei
+	s_Lang003 =	&Käänteinen valinta
+	s_Lang004 =	&Tarkista Valittu
+	s_Lang005 =	&Poista valinnat Valittu
+	s_Lang006 =	K&äänteinen Tarkastukset
+	s_Lang007 =	Va&littu tyyppi
+	s_Lang008 =	K&omennot
+		
+; Edit Sub Menu		
+	e_Lang001 =	&Monistaa
+	e_Lang002 =	&Edit Kommentti
+	e_Lang003 =	E&tsi / korvaa
+	e_Lang004 =	&Kopioida...
+	e_Lang005 =	&Purkaa
+	e_Lang006 =	Te&hdä uudelleen
+	e_Lang007 =	&Leikata
+	e_Lang008 =	K&opioi
+	e_Lang009 =	T&ahna
+	e_Lang010 =	Po&istaa
+	e_Lang011 =	&Siirrä ylös
+	e_Lang012 =	Sii&rtyä alemmalle luokalle
+	e_Lang013 =	I&nsertin laatikko
+		
+; Macro Sub Menu		
+	r_lang001 =	&Nauhoita makro
+	r_lang002 =	&Aktivoi Makrot
+	r_lang003 =	&Pelaa Nyt Macro
+	r_lang004 =	A&jastin
+	r_lang005 =	&Lisää Makro
+	r_lang006 =	&Sulje Makro
+	r_lang007 =	&Tilannekohtaisia ​​pikanäppäimet
+	r_lang008 =	N&äytä valvonta
+	r_lang009 =	T&oista valitun rivin
+	r_lang010 =	P&elaa kunnes valittu rivi
+	r_lang011 =	Pelaa &valitut rivit
+		
+; Options Sub Menu		
+	o_Lang001 =	&Asetukset
+	o_Lang002 =	A&seta oletukseksi pikanäppäimet
+	o_Lang003 =	As&eta oletukseksi File
+	o_Lang004 =	&Poista Tiedostojärjestelmät
+	o_Lang005 =	Pa&lauta sarakkeet Koko
+	o_Lang006 =	&Oletus Pikanäppäimet
+	o_Lang007 =	Ole&tusasetukset
+		
+; Make a Donation Sub Menu		
+	p_Lang001 =	&PayPal lahjoituksen
+		
+; Help Sub Menu		
+	h_Lang001 =	&Makro Luoja Home
+	h_Lang002 =	&AHK Online Documentation
+	h_Lang003 =	&Tarkista päivitykset...
+	h_Lang004 =	Ta&rkista käynnistettäessä
+	h_Lang005 =	&Noin
+		
+; Tray Menu		
+	y_Lang001 =	Piilota ikkuna
+	y_Lang002 =	Näytä ikkuna
+		
+; Main Window		
+	w_Lang001 =	Vienti
+	w_Lang002 =	Preview
+	w_Lang003 =	Valinnat
+	w_Lang004 =	Ennätys
+	w_Lang005 =	Pelata
+	w_Lang006 =	Auto.
+	w_Lang007 =	Mies.
+	w_Lang008 =	Lopettaa
+	w_Lang009 =	&Win
+	w_Lang010 =	&Tauko
+	w_Lang011 =	&Silmukka
+	w_Lang012 =	&Capture Keys
+	w_Lang013 =	&Näytä tiedot
+	w_Lang014 =	&Aina aktiivinen
+	w_Lang015 =	Toista:
+	w_Lang016 =	Delay (ms):
+	w_Lang017 =	Käyttää
+	w_Lang018 =	Lisätä
+	w_Lang019 =	Muokata
+	w_Lang020 =	Näytä valvonta
+		
+; Command Windows		
+	c_Lang001 =	Hiiri
+	c_Lang002 =	Teksti
+	c_Lang003 =	Tauko
+	c_Lang004 =	Ohjaa
+	c_Lang005 =	Ikkuna
+	c_Lang006 =	Image Search
+	c_Lang007 =	Pixel Haku
+	c_Lang008 =	Run / File / String / Misc.
+	c_Lang009 =	Jos lausunnot
+	c_Lang010 =	Muuttujat
+	c_Lang011 =	Tehtävät
+	c_Lang012 =	Internet Explorer
+	c_Lang013 =	COM-rajapinta
+	c_Lang014 =	Valitse Application (Advanced)
+	c_Lang015 =	Viesti
+	c_Lang016 =	Ohjaa
+	c_Lang017 =	Viivyttää
+	c_Lang018 =	Miliseconds
+	c_Lang019 =	Sekuntia
+	c_Lang020 =	Kunnossa
+	c_Lang021 =	Peruuttaa
+	c_Lang022 =	Lähellä
+	c_Lang023 =	Kopioi
+	c_Lang024 =	Poistaa
+	c_Lang025 =	(Käytä `% muuttujia, esimerkiksi: `%Clipboard`%)
+	c_Lang026 =	Toiminta
+	c_Lang027 =	Napsauttaa
+	c_Lang028 =	Liikkua
+	c_Lang029 =	Siirrä ja valitsemalla
+	c_Lang030 =	Pyörän Up
+	c_Lang031 =	Pyörää
+	c_Lang032 =	Vedä ja pudota
+	c_Lang033 =	Koordinaatit
+	c_Lang034 =	Napsauttaa
+	c_Lang035 =	Lähettää
+	c_Lang036 =	Suhteellinen
+	c_Lang037 =	Nappi
+	c_Lang038 =	Vasen
+	c_Lang039 =	Oikea
+	c_Lang040 =	Keskimmäinen
+	c_Lang041 =	X1
+	c_Lang042 =	X2
+	c_Lang043 =	Pito / vapautus
+	c_Lang044 =	Klikkaa Count
+	c_Lang045 =	Plain Text (Raw)
+	c_Lang046 =	Teksti komennoilla
+	c_Lang047 =	Liitä leikepöydältä
+	c_Lang048 =	Liitä ohjaus
+	c_Lang049 =	Tenttikirja
+	c_Lang050 =	Lisää Tauko
+	c_Lang051 =	Message Box
+	c_Lang052 =	Odota avain
+	c_Lang053 =	Odotuksen aikakatkaisu
+	c_Lang054 =	(Miliseconds) 0 = ääretön
+	c_Lang055 =	Komento
+	c_Lang056 =	Arvo
+	c_Lang057 =	Output Variable
+	c_Lang058 =	Asema
+	c_Lang059 =	Koko
+	c_Lang060 =	4 muuttujat luodaan tämän etuliitteen ja päättyen X, Y, W, H.
+	c_Lang061 =	Aloittaa
+	c_Lang062 =	Pää
+	c_Lang063 =	Kuva
+	c_Lang064 =	Pixel
+	c_Lang065 =	Tee Screenshot
+	c_Lang066 =	Näppäintä Odotus
+	c_Lang067 =	Jos löytyy
+	c_Lang068 =	Jos ei löydy / Error
+	c_Lang069 =	* & Koordinaatit tallennetaan `%FoundX`% / `%FoundY`%.
+	c_Lang070 =	Coord
+	c_Lang071 =	Muunnelmia
+	c_Lang072 =	Preview
+	c_Lang073 =	Silmukka
+	c_Lang074 =	* Ei toimi Manual Toisto.
+	c_Lang075 =	Tauko
+	c_Lang076 =	Jatkaa
+	c_Lang077 =	Siirry
+	c_Lang078 =	Siirry Label
+	c_Lang079 =	Etiketti
+	c_Lang080 =	Lisää Label
+	c_Lang081 =	String-arvo
+	c_Lang082 =	Var [operaattori] Arvo
+	c_Lang083 =	Lisää Else
+	c_Lang084 =	Määritä Variable
+	c_Lang085 =	Pitoisuus
+	c_Lang086 =	Operaattori
+	c_Lang087 =	Käytä Eval() ratkaista ilmaisuja
+	c_Lang088 =	Nollaa
+	c_Lang089 =	Toiminto Nimi
+	c_Lang090 =	Pilkulla erotettu parametreja (ilman suluissa).
+	c_Lang091 =	(Käytä `% muuttujia. Kirjaimellinen Pilkut on karannut [```,])
+	c_Lang092 =	Sivuelementti / Indeksi
+	c_Lang093 =	Asettaa
+	c_Lang094 =	Saada
+	c_Lang095 =	Menetelmä
+	c_Lang096 =	Omaisuus
+	c_Lang097 =	Odota sivun lataaminen.
+	c_Lang098 =	CLSID
+	c_Lang099 =	Kytkeä
+	c_Lang100 =	Kahva
+	c_Lang101 =	KOM Script
+	c_Lang102 =	Viestin numero
+	c_Lang103 =	Special Keys
+	c_Lang104 =	Selaimen Back
+	c_Lang105 =	Selaimen eteenpäin
+	c_Lang106 =	Selaimen Päivitä
+	c_Lang107 =	Selain seis
+	c_Lang108 =	Selain Search
+	c_Lang109 =	Selaimen suosikit
+	c_Lang110 =	Selain Koti
+	c_Lang111 =	Tiedotusvälineet
+	c_Lang112 =	Mykistä
+	c_Lang113 =	Volume Up
+	c_Lang114 =	Volume Down
+	c_Lang115 =	Play / Pause
+	c_Lang116 =	Seuraava kappale
+	c_Lang117 =	Edellinen kappale
+	c_Lang118 =	Stop
+	c_Lang119 =	E-mail
+	c_Lang120 =	APP 1
+	c_Lang121 =	APP 2
+	c_Lang122 =	Scancode
+	c_Lang123 =	Lisätä
+	c_Lang124 =	Key History
+	c_Lang125 =	Kirjoita scancode...
+	c_Lang126 =	Koodi lisätään virtuaalisia näppäimiä List!
+	c_Lang127 =	Kirjoita nimi Output Variable
+	c_Lang128 =	Käytä Function ulkoinen tiedosto
+	c_Lang130 =	Rikkoa silmukka jos löytyy
+	c_Lang131 =	Käyttää
+	c_Lang132 =	Silmukka
+	c_Lang133 =	Tiedosto
+	c_Lang134 =	Jäsentää
+	c_Lang135 =	Lukea
+	c_Lang136 =	Arkisto
+	c_Lang137 =	Tiedosto Kuvio:
+	c_Lang138 =	Kansiot?
+	c_Lang139 =	Recurse?
+	c_Lang140 =	Tulosuure:
+	c_Lang141 =	Delimiters:
+	c_Lang142 =	Jättää Merkkejä:
+	c_Lang143 =	Syötetiedostosta:
+	c_Lang144 =	Avain:
+	c_Lang145 =	Juuriavain:
+	c_Lang146 =	Aliavaimet?
+	c_Lang147 =	Ikoni
+	c_Lang148 =	Ei kuvaketta
+	c_Lang149 =	Virhe
+	c_Lang150 =	Kysymys
+	c_Lang151 =	Huudahdus
+	c_Lang152 =	Tiedot
+	c_Lang153 =	Aina päällimmäisenä
+	c_Lang154 =	Minuuttia
+		
+; Other Windows		
+	t_Lang001 =	Vie AHK
+	t_Lang002 =	Makrot
+	t_Lang003 =	Silmukat
+	t_Lang004 =	0 = ääretön
+	t_Lang005 =	Käytä Hotstring
+	t_Lang006 =	Block Hiiri
+	t_Lang007 =	Kaikki
+	t_Lang008 =	Ei mitään
+	t_Lang009 =	Tilannekohtaisia ​​pikanäppäimet
+	t_Lang010 =	Vie
+	t_Lang011 =	Sisennys
+	t_Lang012 =	Sisällytä PMC koodi
+	t_Lang013 =	Älä liität lähettää komentoja
+	t_Lang014 =	Virkistää
+	t_Lang015 =	Auto-refresh
+	t_Lang016 =	Aina päällimmäisenä
+	t_Lang017 =	Asetukset
+	t_Lang018 =	Yleinen
+	t_Lang019 =	Start / Stop Record
+	t_Lang020 =	Nauhoita uusi makro
+	t_Lang021 =	Painalluksia
+	t_Lang022 =	Nauhoitus
+	t_Lang023 =	Kuvausnäppäin tila (alas / ylös)
+	t_Lang024 =	Hiiren napsautuksella
+	t_Lang025 =	Mouse Wheel
+	t_Lang026 =	Hiiri liikkuu
+	t_Lang027 =	Aikavälein
+	t_Lang028 =	Pienin viive
+	t_Lang029 =	Ikkuna luokat
+	t_Lang030 =	Ikkuna osastot
+	t_Lang031 =	Record ControlSend
+	t_Lang032 =	Record ControlClick
+	t_Lang033 =	Suhteellinen ennätys avain
+	t_Lang034 =	Vaihda
+	t_Lang035 =	Toisto
+	t_Lang036 =	Nopeuttaa
+	t_Lang037 =	Hidastaa
+	t_Lang038 =	Return Hiiri toiston jälkeen
+	t_Lang039 =	Hiiren koordinaatit
+	t_Lang040 =	Ikkuna
+	t_Lang041 =	Kuvaruutu
+	t_Lang042 =	Oletus Hiiri Delay
+	t_Lang043 =	Oletusikkuna Delay
+	t_Lang044 =	Max Historia kohti Macro
+	t_Lang045 =	Tyhjennä historia
+	t_Lang046 =	Kuvakaappaukset
+	t_Lang047 =	Piirrä painike
+	t_Lang048 =	Viivan leveys (Px)
+	t_Lang049 =	Capture release
+	t_Lang050 =	Paina Enter kaapata
+	t_Lang051 =	Kuvakaappaukset Directory
+	t_Lang052 =	Muut.
+	t_Lang053 =	Pikanäppäimet
+	t_Lang054 =	Aseta oletukseksi pikanäppäimet
+	t_Lang055 =	Poista ikkunoiden oikotiet
+	t_Lang056 =	Palauta sarakkeet Koko
+	t_Lang057 =	Oletusmakro File
+	t_Lang058 =	Standard Library File
+	t_Lang059 =	Käytä Eval() oletuksena muuttujille Tehtävä
+	t_Lang060 =	Näytä värit ja ohje Marks silmukoita ja tilinpäätös
+	t_Lang061 =	(Klikkaa indeksi sarakeotsikkoa päälle / pois)
+	t_Lang062 =	Virtuaalinäppäimet
+	t_Lang063 =	Oletusarvo
+	t_Lang064 =	Edit Kommentti
+	t_Lang065 =	Kommentti
+	t_Lang066 =	Etsi sarake
+	t_Lang067 =	Etsi / korvaa
+	t_Lang068 =	Löytää
+	t_Lang069 =	Match Case
+	t_Lang070 =	Korvata
+	t_Lang071 =	Löydetty
+	t_Lang072 =	Korvaaminen
+	t_Lang073 =	Valitut rivit
+	t_Lang074 =	Kaikki rivit
+	t_Lang075 =	Kaikki Makrot
+	t_Lang076 =	Noin
+	t_Lang077 =	Säännöllinen lauseke
+	t_Lang078 =	Toista kerran
+	t_Lang079 =	Toista jokainen X (soti) sekuntia
+	t_Lang080 =	Ajastin
+	t_Lang081 =	Tauko
+	t_Lang082 =	Lausunnot
+	t_Lang083 =	Näytä Sisennys silmukoita ja tilinpäätös
+	t_Lang084 =	(Tuplaklikkaa Action sarakeotsikkoa päälle / pois)
+	t_Lang085 =	Näyttö Progress Bar
+	t_Lang086 =	Haetaan toiminnot. Odota...
+	t_Lang087 =	Sisällytä Ulkoiset tiedostot
+	t_Lang088 =	Luo EXE tiedosto
+	t_Lang089 =	Salli useita esiintymiä
+	t_Lang090 =	Oletukset
+	t_Lang091 =	Salli vetämällä rivejä
+	t_Lang092 =	Koko solun sisältö
+		
+; Messages & Dialogs		
+	d_Lang001 =	Avata
+	d_Lang002 =	Haluatko tallentaa nykyisen Makro?
+	d_Lang003 =	Oletusasetukset
+	d_Lang004 =	Macro Creator tiedostot
+	d_Lang005 =	Tallenna makro
+	d_Lang006 =	Tallennus epäonnistui / korvata tiedosto
+	d_Lang007 =	Virhe
+	d_Lang008 =	Virhe: Ei Macro Valittu.`nTarkista ainakin yksi makro luettelosta.
+	d_Lang009 =	Virhe: Ei Hotkey Valittu.
+	d_Lang010 =	Virhe: Virheellinen osoite.`nValitun osoitteen tai tiedoston nimi ei kelpaa.
+	d_Lang011 =	Varoitus
+	d_Lang012 =	Ei ohjaus valittu.`nJatka?
+	d_Lang013 =	Vie Script
+	d_Lang014 =	Script Viety
+	d_Lang015 =	Tiedosto onnistuneesti viety!
+	d_Lang016 =	Napsauta Get "merkitä asentoon.
+	d_Lang017 =	
+	(LTrim	
+		- Valitse ikkunassa.
+		- Osoita haluttuun asentoon.
+		- Paina oikeaa painiketta.
+	)	
+	d_Lang018 =	Pixel Color
+	d_Lang019 =	Tyhjennä luettelo
+	d_Lang020 =	Muista poistaa kaikki kohteet?
+	d_Lang021 =	Seuraava
+	d_Lang022 =	Edellinen
+	d_Lang023 =	Viesti
+	d_Lang024 =	Ladata oletusasetukset?
+	d_Lang025 =	Makro (s) aktivoituu.`nKäytä pikanäppäimet pelata.
+	d_Lang026 =	Aloita / lopeta nauhoitus
+	d_Lang027 =	Tallennus pysäytetty
+	d_Lang028 =	Tallennus...
+	d_Lang029 =	lopettaa
+	d_Lang030 =	Aloita uusi ennätys
+	d_Lang031 =	ei kelpaa funktion nimi.
+	d_Lang032 =	Virhe: Duplicate pikanäppäimet.
+	d_Lang033 =	Aktivoi Makrot
+	d_Lang034 =	
+	(LTrim	
+		- Napsauta ja vedä %DrawButton% valitaksesi alueen.
+		- Klikkaa ja vapauta ilman vetämällä valita valvonta-alueeksi.
+		- Napsauta alueella ilman valvontaa ja valitse alue ikkunan.
+	)	
+	d_Lang035 =	Jatka?
+	d_Lang036 =	Kuva / Pixel Found at
+	d_Lang037 =	Kuva / Pixel ei löytynyt.
+	d_Lang038 =	Jatka painamalla OK.
+	d_Lang039 =	Timeout!
+	d_Lang040 =	
+	(LTrim	
+		Tämä ominaisuus vaatii GDI+ kirjasto.
+		Klikkaa OK mennäksesi ladata sivulle.
+		
+		Huom: file 'Gdip.ahk "tulee olla samassa hakemistossa tämän käsikirjoituksen.
+	)	
+	d_Lang041 =	Muuttujan nimi sisältää epäkelvon merkin.
+	d_Lang042 =	
+	(LTrim	
+		Operaattori ei kelpaa.
+		Seuraavat toimijat hyväksytään:
+		=, ==, <>,! =,>, <,> =, <=
+		
+		Esimerkkejä:
+		MyVar > 1
+		MyVar = `%A_DDDD`%
+		Clipboard == `%MyVar`%
+	)	
+	d_Lang043 =	Tai käytä valvontaa työkalurivi
+	d_Lang044 =	
+	(LTrim	
+		Tämä ominaisuus vaatii Eval()-funktiota.
+		Klikkaa OK mennäksesi ladata sivulle.
+		
+		Huom: file 'Eval.ahk "tulee olla samassa hakemistossa tämän käsikirjoituksen.
+	)	
+	d_Lang045 =	Valitse Internet Explorer-ikkuna!
+	d_Lang046 =	Liitäntä onnistunut!
+	d_Lang047 =	Yhdistäminen epäonnistui!
+	d_Lang048 =	Aseta Kahva ja CLSID.
+	d_Lang049 =	Virheellinen Label Name.
+	d_Lang050 =	Monista Label.
+	d_Lang051 =	Voit pelata Macro paina vastaavaa Hotkey (Auto / Man).
+	d_Lang052 =	Voit aloittaa tallennuksen painamalla Record Hotkey.
+	d_Lang053 =	Älä näytä tätä viestiä uudelleen.
+	d_Lang054 =	Valitse Excel-ikkunan!
+	d_Lang055 =	Valitse AutoHotkey komentosarjatiedosto (. AHK) ja kirjoita funktion nimi.
+	d_Lang056 =	
+	(LTrim	
+		Tämä ominaisuus vaatii AutoHotkey asennettu.
+		Klikkaa OK mennäksesi ladata sivulle.
+	)	
+	d_Lang057 =	
+	(LTrim	
+		- Paina Ctrl + nuolinäppäimillä liikkua valittuun alueeseen.
+		- Paina VAIHTO + nuolinäppäimet kokoa valitulla alueella.
+		- Paina Enter loppuun.
+	)	
+	d_Lang058 =	
+	(LTrim	
+		Jotkin ominaisuudet vaativat admnistrator privilages toimiakseen kunnolla.
+		On suositeltavaa käynnistää sovelluksen järjestelmänvalvojana.
+	)	
+	d_Lang059 =	
+	(LTrim	
+		Tämä komento ei tue ilmaisuja tai toimintoja.
+		Ole hyvä määrittää muuttujaa ja käyttää sitä parametrin.
+	)	
+	d_Lang060 =	Uusi versio saatavilla
+	d_Lang061 =	
+	(LTrim	
+		Haluatko ladata sen nyt?
+		
+		Voit poistaa automaattisen valvonnan valitse Ohje > Tarkista käynnistettäessä.
+	)	
+	d_Lang062 =	Sinulla on jo uusin versio.
+	d_Lang063 =	Virhe tarkkailun.
+		
+		
+; Tooltips		
+	NewB_TT =	Uusi (Ctrl+N)
+	OpenB_TT =	Open (Ctrl+O)
+	SaveB_TT =	Tallenna (Ctrl+S)
+	ExportB_TT =	Vie AHK (Ctrl+E)
+	PreviewB_TT =	Esikatselu Script (Ctrl+P)
+	OptionsB_TT =	Asetukset (Ctrl+G)
+	RecordB_TT =	Nauhoita makro (Ctrl+R)
+	StartB_TT =	Aktivoi Makrot (Ctrl+Enter)
+	TestRun_TT =	Pelaa Nykyinen Makro (Ctrl+Shift+Enter)
+	RunTimer_TT =	Ajastin (Ctrl+Shift+T)
+	MouseB_TT =	Hiiri (F2)
+	TextB_TT =	Teksti (F3)
+	SpecialB_TT =	Special Keys
+	ControlB_TT =	Control (F4)
+	PauseB_TT =	Tauko (F5) / Viesti (Shift+F5) / Näppäintä Odotus (Control+F5) 
+	WindowB_TT =	Window (F6)
+	ImageB_TT =	Kuva / Pixel Search (F7)
+	RunB_TT =	Run / File / String / Misc. (F8)
+	ComLoopB_TT =	Loop (F9) / Goto (Shift+F9) / Label (Ctrl+F9)
+	IfStB_TT =	Jos lausunnot (F10) / Muuttujat (Shift+F10) / Funktiot (Ctrl+F10)
+	IEComB_TT =	Internet Explorer (F11) / COM liitäntä (Shift+F11)
+	SendMsgB_TT =	Windows viestit (F12)
+	AutoKey_TT =	Backspace poistaa
+	ManKey_TT =	Backspace poistaa
+	AbortKey_TT =	Backspace poistaa
+	PauseKey_TT =	Keskeyttää suorittamisen sijasta pysähtymättä
+	Win1_TT =	Lisää Windows-näppäin muuntoaineena
+	ReptC_TT =	0 = ääretön
+	TabPlus_TT =	Lisää Makro (Ctrl+T)
+	TabClose_TT =	Sulje Makro (Ctrl+W)
+	DuplicateL_TT =	Monista Makro (Ctrl+Shift+D)
+	SaveC_TT =	Tallenna Nykyinen Makro (Ctrl+Alt+S)
+	ImportB_TT =	Tuo Makro (Ctrl+I)
+	IfDirB_TT =	Tee Pikanäppäimet toimivat riippuen`ntyyppinen ikkuna, joka on aktiivinen tai olemassa (Ctrl+H)
+	KeepHKOn_TT =	Pidä pikanäppäimet aina päällä
+	A_List_TT =	Valitse Makro (Ctrl+1~0)
+	Duplicate_TT =	Monista valitut rivit (Ctrl+D)
+	Order_TT =	Siirrä valitut rivit (Ctrl+PageUp / Ctrl+Page Down)
+	Cut_TT =	Leikkaa valitut rivit (Ctrl+X)
+	Copy_TT =	Kopioi valitut rivit (Ctrl+C)
+	Paste_TT =	Liitä kopioidut rivit (Ctrl+V)
+	Remove_TT =	Poista valitut rivit (Del)
+	Undo_TT =	Kumoa (Ctrl+Z)
+	Redo_TT =	Redo (Ctrl+Y)
+	CopyTo_TT =	Kopioida...
+	Capt_TT =	Capture näppäinpainallukset tässä ikkunassa
+	OnScCtrl_TT =	Näyttösäädöt Työkalurivi
+	ShowStep_TT =	Näytä tiedot
+	ApplyT_TT =	Käyttää
+	ApplyI_TT =	Käyttää
+	ApplyL_TT =	Insertin laatikko (Insert)
+	EditButton_TT =	Muokata
+	PrevRefresh_TT =	Virkistää (F5)
+	PrevCopy_TT =	Kopioi
+	OpenT_TT =	Open (Ctrl+O)
+	SaveT_TT =	Tallenna (Ctrl+S)
+	CutT_TT =	Leikata
+	CopyT_TT =	Kopioi
+	PasteT_TT =	Tahna
+	SelAllT_TT =	Valitse kaikki
+	DefaultMacro_TT =	Valitse ladattava tiedosto ohjelman käynnistyksen
+	VarCopyA_TT =	Kopioi nykyinen muuttujan sisältö
+	VarCopyB_TT =	Kopioi nykyinen muuttujan sisältö
+	FindReplace_TT =	Etsi / Korvaa (Ctrl+F)
+	EditComm_TT =	Edit Kommentti
+	Reset_TT =	Tyhjennä muuttujan sisältö
+	PicPrev_TT =	Kaksoisnapsauta Avaa Image
+	LoopLVColor_TT =	Klikkaa valita värin
+	IfLVColor_TT =	Klikkaa valita värin
+	RefreshIEW_TT =	Päivitä lista
+	ActiveObj_TT =	Yrittää muodostaa yhteyden Active COM Object
+	OSPlay_TT =	Play / Pause
+	OSStop_TT =	Lopettaa
+	OSRec_TT =	Start / Stop Record
+	OSRecNew_TT =	Nauhoita uusi makro
+	OSClear_TT =	Tyhjennä luettelo
+	OSProgB_TT =	Näyttö Progress Bar
+	OSFast_TT =	Nopeuttaa
+	OSSlow_TT =	Hidastaa
+	OSTrans_TT =	sameus
+	MRel_TT =	
+	(LTrim	
+		Liikkeet suhteessa nykyiseen asentoon.
+		Tai jos käytetään ohjaus: Asema suhteessa kontrolliin.
+	)	
+	Raw_TT =	
+	(LTrim	
+		SendRaw komento tulkitsee kaikki merkit kirjaimellisesti
+		mieluummin kuin kääntää {Enter} ja ENTER painalluksella,
+		^ C Control-C jne.
+	)	
+	ComText_TT =	
+	(LTrim	
+		Kun se ei ole raaka-tilassa, seuraavat merkit
+		käsitellään määritteet (nämä määritteet vaikuttavat
+		vain hyvin seuraava näppäin):!, +, ^, #
+	)	
+	Clip_TT =	
+	(LTrim	
+		Tilapäisesti käyttää Leikepöytä lähettää tekstiä.
+		Kun toimenpide on valmis, käsikirjoitus
+		palauttaa alkuperäisen leikepöydän sisällön.
+		(Jätä Teksti tyhjä liittää nykyinen sisältö)
+	)	
+	EditPaste_TT =	
+	(LTrim	
+		Tahnat String at sirkumfleksi / insertti asentoon
+		vuonna Muokkaa kontrolli (tämä ei vaikuta
+		leikepöydän sisällön).
+	)	
+	SetText_TT =	Muuttaa tekstin ohjaus.
+	RelKey_TT =	Records suhteellinen liikkeet ja napsautuksia, kun painetaan.
+	Relative_TT =	Koordinaatit ovat suhteessa aktiivisen ikkunan.
+	Screen_TT =	Koordinaatit ovat suhteessa työpöydälle (koko näyttö).
+	IncFolders_TT =	
+	(LTrim	
+		0 - Vain tiedostot / avaimet
+		1 - Kansiot / aliavainten ja tiedostoja / avaimet
+		2 - Vain kansiot / aliavaimista
+	)	
+	Recurse_TT =	
+	(LTrim	
+		0 - Eivät recurse kansioihin / aliavaimista
+		1 - Recurse kansioihin / aliavaimista
+	)	
+		
+; Tooltips from AHK Docs		
+	ExpList_TT =	Kaksoisnapsauta muokata
+	Ex_IfDir_TT =	
+	(LTrim	
+		Luo tilannekohtaisia ​​pikanäppäimiä ja hotstrings riippuen
+		tyypistä ikkuna, joka on aktiivinen tai on olemassa.
+	)	
+	Ex_IfDirType_TT =	
+	(LTrim	
+		Luo tilannekohtaisia ​​pikanäppäimiä ja hotstrings riippuen
+		tyypistä ikkuna, joka on aktiivinen tai on olemassa.
+	)	
+	Ex_SM_TT =	
+	(LTrim	
+		Tekee Lähetä synonyymi SendInput tai SendPlay sijaan
+		default (SendEvent). Tekee myös napsauttamalla ja mouseMove / Click / vedä
+		käyttää määritettyä menetelmää.
+	)	
+	SM_TT =	
+	(LTrim	
+		Tapahtuma: Tämä on lähtö-oletus käyttää kaikki skriptit.
+		Se käyttää SendEvent menetelmän Lähetä, SendRaw, Click, ja mouseMove / Valitse / Vedä.
+		Input: Vaihtaa SendInput menetelmää Lähetä, SendRaw, Click, ja mouseMove / Valitse / Vedä.
+		InputThenPlay: Sama kuin edellä, paitsi että sen sijaan laskee takaisin Tapahtuma tilaan
+		kun SendInput ei ole käytettävissä, se palaa toistotila (alla). Tämä aiheuttaa myös
+		SendInput käskyn palata toistotilaan kun SendInput ei ole käytettävissä.
+		Play: Vaihtaa SendPlay menetelmää Lähetä, SendRaw, Click, ja mouseMove / Valitse / Vedä.
+	)	
+	Ex_SI_TT =	
+	(LTrim	
+		Määrittää, käsikirjoitus saa ajaa uudelleen, kun se on jo käynnissä.
+	)	
+	SI_TT =	
+	(LTrim	
+		Sana FORCE ohittaa valintaikkunassa ja korvaa vanhat tapauksessa automaattisesti,
+		joka on samanlainen vaikutus kuin Reload komennon.
+		Sana IGNORE ohittaa valintaikkunan ja jättää vanhan oikeusasteessa käynnissä.
+		Toisin sanoen, yritykset käynnistää jo-toiminnan script jätetään huomiotta.
+		Sana OFF mahdollistaa useita esiintymiä skripti suorittaa samanaikaisesti.
+	)	
+	Ex_ST_TT =	
+	(LTrim	
+		Asettaa vastaavat käyttäytymistä WinTitle parametrin komentoja kuten WinWait.
+	)	
+	ST_TT =	
+	(LTrim	
+		1: ikkunan otsikko on aloitettava määriteltyjen WinTitle olla ottelu.
+		2: ikkunan otsikko voi sisältää WinTitle missä sen sisällä olevan ottelun.
+		3: ikkunan otsikko on täsmälleen sama WinTitle olla ottelu.
+		RegEx: Muutokset WinTitle, WinText, ExcludeTitle ja ExcludeText olla säännöllisiä lausekkeita.
+	)	
+	Ex_DH_TT =	
+	(LTrim	
+		Määrittelee näkymättömät ikkunat "nähnyt", jonka käsikirjoitus.
+	)	
+	Ex_AF_TT =	
+	(LTrim	
+		Ohittaa lempeä menetelmä aktivoimiseksi ikkunan
+		ja menee suoraan voimakkaan menetelmällä.
+	)	
+	Ex_HK_TT =	
+	(LTrim	
+		Pakottaa käyttö koukun toteuttaa kokonaan tai osittain näppäimistön pikanäppäimiä.
+	)	
+	Ex_SK_TT =	
+	(LTrim	
+		Asettaa viive että tapahtuu jokaisen
+		näppäinpainalluksen lähettämä Lähetä tai ControlSend.
+	)	
+	Ex_MD_TT =	
+	(LTrim	
+		Asettaa viive että tapahtuu jälkeen
+		Kunkin hiiren liikettä tai napsautuksella.
+	)	
+	Ex_SC_TT =	
+	(LTrim	
+		Asettaa viive että tapahtuu jälkeen
+		jokainen ohjaus-muuttamalla komennon.
+	)	
+	Ex_SW_TT =	
+	(LTrim	
+		Asettaa viive että tapahtuu jälkeen
+		Kunkin ikkunointi komennon, kuten WinActivate.
+	)	
+	Ex_SB_TT =	
+	(LTrim	
+		Määrittää, kuinka nopeasti skripti ajaa (vaikuttaa suorittimen käyttö).
+	)	
+	Ex_NT_TT =	
+	(LTrim	
+		Poistaa esittämisen kuvaketta.
+	)	
+		
+	Ex_IN_TT =	
+	(LTrim	
+		Aiheuttaa script käyttäytymään ikään määritelty
+		tiedoston sisältöä on läsnä juuri tämän kannan.
+	)	
+		
+; IE Commands Tips		
+	Tip_Navigate =	Siirtyy URL tai polku.
+	Tip_Value =	Saa tai asettaa kohteen arvo.
+	Tip_Focus =	Asettaa tarkennuksen kohteeseen.
+	Tip_Click =	Simuloi klikkaa objekti.
+	Tip_Submit =	Lähettää lomakkeen.
+	Tip_GoHome =	Siirtyy nykyisen kotiin tai aloitussivu.
+	Tip_GoBack =	Siirtyy taaksepäin yhden kohteen historiassa luettelossa.
+	Tip_GoForward =	Siirtyy eteenpäin yhden kohteen historian luettelossa.
+	Tip_GoSearch =	Siirtyy nykyisen hakusivulle.
+	Tip_Refresh =	Lataa näkyvissä sivun.
+	Tip_Stop =	Peruuttaa vireillä navigointi tai ladata.
+	Tip_Quit =	Sulkee sivun.
+	Tip_LocationName =	Gets polku tai otsikko nykyisen sivun.
+	Tip_LocationURL =	Gets URL nykyisen sivun.
+	Tip_InnerText =	Asettaa tai saa tekstin objektin.
+	Tip_InnerHTML =	Asettaa tai noutaa HTML kohteen.
+	Tip_Href =	Asettaa tai noutaa kohde-URL tai ankkuri pisteen.
+	Tip_Src =	Asettaa tai noutaa URL voidaan ladata objektin.
+	Tip_SelectedIndex =	Asettaa tai hakee indeksi valitun vaihtoehdon valitsemalla objektin.
+	Tip_Checked =	Asettaa tai noutaa tila-valintaruutu tai valintanappi.
+	Tip_Type =	Asettaa tai noutaa sisällön tyypin objektin.
+	Tip_Width =	Asettaa tai noutaa leveys objektin.
+	Tip_Height =	Asettaa tai noutaa korkeus esineen.
+	Tip_Length =	Asettaa tai noutaa objektien määrää kokoelma.
+		
+return		

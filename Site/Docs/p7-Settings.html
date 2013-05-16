@@ -1,0 +1,65 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Settings</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="default.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<h1 id="settings">Settings</h1>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#Recording">Recording</a></li>
+<li><a href="#Playback">Playback</a></li>
+<li><a href="#Defaults">Defaults</a></li>
+<li><a href="#Screenshots">Screenshots</a></li>
+<li><a href="#Misc.">Misc.</a></li>
+</ul>
+<h2 id="recording">Recording</h2>
+<p>See <a href="p2-Record.html#recording-options">Record Page</a>.</p>
+<h2 id="playback">Playback</h2>
+<p>See <a href="p3-Playback.html#playback-options">Playback Page</a>.</p>
+<h2 id="defaults">Defaults</h2>
+<p><strong>Mouse Coordinates</strong>: Sets coordinate mode for Mouse commands and records to be relative to either the active window or the screen. This option is global and will affect both Recording and Playback so it should be set before adding any commands for the project.<br/>
+<em>Note</em>: This setting will be saved to the PMC file.</p>
+<p><strong>Default Mouse Delay</strong>: Sets the default delay for each Mouse Command. This affects new commands added from the Mouse Command window and will only affect recording if 'Timed Intervals' is disabled.</p>
+<p><strong>Default Window Delay</strong>: Sets the default delay for each Window (Set) Command. This affects new commands added from the Window Command window and Recording.</p>
+<p><strong>Max History per Macro</strong>: Sets the maximum History steps to keep for each macro. Changing this might have little impact in performance. It's recommended to restart Macro Creator after changing this setting.</p>
+<p><strong>Clear History</strong>: Clears and resets History for all Macros.</p>
+<h2 id="screenshots">Screenshots</h2>
+<p><strong>Draw Button</strong>: Selects the Draw Button to be used for Screenshots tool and Get Area in Image Search.</p>
+<p><strong>Line Width (Px)</strong>: Defines the pixel width of the rectangle when using the Screenshots tool.</p>
+<p><strong>Capture on release</strong>: Captures Screenshots when the Draw button is released.</p>
+<p><strong>Press Enter to capture</strong>: Waits for the user to press Enter to confirm the rectangle area of the Screenshot. Enabling this option allows you to adjust the search/capture area using hotkeys (<strong>Ctrl + Arrow keys</strong> to move the selection area and <strong>Shift + Arrow keys</strong> to resize it).</p>
+<p><strong>Screenshots Directory</strong>: Selects the default folder for Screenshots taken.</p>
+<h2 id="misc.">Misc.</h2>
+<p><strong>Set As Default Hotkeys</strong>: If checked the current Hotkeys will be loaded on each run of the program and when 'Default Settings' are loaded.</p>
+<p><strong>Disable Window Shortcuts</strong>: Disable Shortcuts for commands in the main window.</p>
+<p><strong>Allow Multiple Instances</strong>: Determines whether Macro Creator is allowed to run concurrent instances.</p>
+<p><strong>Reset Columns Size</strong>: Resets the sizes of the columns for the currently selected Macro.</p>
+<p><strong>Use Eval() by default for Variables Assignment</strong>: Determines whether the <em>Use Eval() to solve expressions</em> option will be enabled by default for new Variable Assignments.</p>
+<p><strong>Allow Dragging Rows</strong>: Enables / Disables row dragging with mouse in the Macro lists.</p>
+<p><strong>Show Colors &amp; Help Marks for Loops and Statements</strong>: When activated rows inside Loops and text of rows inside Statements will be shown in colors, also braces and wildcards will be placed in front of command's index as representation to help visualize which rows are nested. Braces represent Loops and Wildcards represent If Statements, so for example <em>N</em> *{*{ is equivalent to:<br/></p>
+<pre class="NoIndent">If
+{
+    Loop
+    {
+        If
+        {
+            Loop
+            {
+                N
+            }
+        }
+    }
+}</pre>
+<p>You can also click on the <em>Index</em> Column Header to turn this option On/Off.<br/>
+You can change the default colors clicking on the color shown here and picking one from anywhere on the screen.<br/></p>
+<p><strong>Show Indentation for Loops and Statements</strong>: When activated Actions inside Loops or Statements will be shown with indentation.<br/>
+You can also double-click on the <em>Action</em> Column Header to turn this option On/Off.<br/></p>
+<p><strong>Default Macro File</strong>: If a valid file with a PMC code is set it will be loaded on program start up.</p>
+<p><strong>Set As Default File</strong>: Sets the current Macro Project to be loaded on program start up.</p>
+<p><strong>Virtual Keys</strong>: System keys and Modifiers that will be recognized during Recording and when Capture keys is enabled.</p>
+</body>
+</html>

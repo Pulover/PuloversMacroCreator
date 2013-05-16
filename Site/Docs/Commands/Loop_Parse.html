@@ -1,0 +1,41 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Loop Parse</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="..\default.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h1>Loop Parse</h1>
+<p>Retrieves substrings (fields) from a string, one at a time.</p>
+<h3>Parameters</h3>
+<table class="info">
+<tr>
+  <td width="15%">Input Variable</td>
+  <td width="85%">The name of the variable whose contents will be analyzed. Do not enclose the name in percent signs.</td>
+</tr>
+<tr>
+  <td width="15%">Delimiters</td>
+  <td width="85%">If this parameter is blank or omitted, each character of InputVar will be treated as a separate substring.<br/>
+If this parameter is CSV, InputVar will be parsed in standard comma separated value format.<br/>
+Otherwise, Delimiters contains one or more characters (case sensitive), each of which is used to determine where the boundaries between substrings occur in InputVar.</td>
+</tr>
+<tr>
+  <td width="15%">Omit Characters</td>
+  <td width="85%">An optional list of characters (case sensitive) to exclude from the beginning and end of each substring.<br/>
+For example, if OmitChars is %A_Space%%A_Tab%, spaces and tabs will be removed from the beginning and end (but not the middle) of every retrieved substring.</td>
+</tr>
+</table>
+<h3>Remarks</h3>
+<p>The built-in variable <strong>A_LoopField</strong> exists within any parsing loop. It contains the contents of the current substring (field) from InputVar. If an inner parsing loop is enclosed by an outer parsing loop, the innermost loop's field will take precedence.</p>
+<p>A Loop command in Playback may perform different then an exported script duo to the method used internally by Macro Creator.<br/></p>
+<p>In Playback all iterations will be performed prior to any commands in the Loop section.</p>
+<h3 id="download-example">Download Example</h3>
+<p><a href="Examples\LoopTypes.pmc">Loop through folders, parse and read file's contents</a>.</p>
+<h3 id="related">Related</h3>
+<p><a href="http://l.autohotkey.net/docs/commands/LoopParse.htm">Loop Parse</a></p>
+
+</body>
+</html>

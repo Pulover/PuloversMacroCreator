@@ -1,0 +1,6 @@
+﻿[PMC Code]|F3|F6|1|Window
+1|[Assign Variable]|StringVar := One`, Two`, Three`, Go!|1|0|Variable||||
+2|[Pause]|% InStr(%StringVar%`, Go)|1|0|MsgBox|1||Function using Variable|
+3|[Pause]|% InStr(Let's Go``, Ok?`, Ok)|1|0|MsgBox|1||Function using String and Literal Comma.|
+4|MsgBox|% StrLen(AHK), % SubStr(%A_Now%`, 5`, 4), % RegExReplace(This is a string``, not a variable`, not`, $u0)|1|0|MsgBox||||
+
