@@ -4,7 +4,6 @@ XL := ComObjCreate("Excel.Application")
 XL.Workbooks.Open(A_ScriptDir "\Languages.xls")
 XL.Sheets("Lang_Files").Activate
 Xl.Range(Xl.Range("A1"), Xl.Range("A1").SpecialCells(xlLastCell)).Copy
-XL.Workbooks(1).Close(0)
 
 ClipWait
 If !InStr(Clipboard, "LoadLang_")=1
@@ -28,8 +27,10 @@ Loop, Parse, Clipboard, `n, `r
 	}
 }
 
-FileDelete, %A_ScriptDir%\MacroCreator\Lang\*.Lang
+FileDelete, %A_ScriptDir%\Lang\*.Lang
 For each, Lan in PMC.Lang
-	FileAppend, % Lan, % A_ScriptDir "\MacroCreator\Lang\" nLang[A_Index] ".Lang", UTF-8
+	FileAppend, % Lan, % A_ScriptDir "\Lang\" nLang[A_Index] ".Lang", UTF-8
 
+XL.Application.CutCopyMode := False
+XL.Workbooks(1).Close(0)
 MsgBox OK
