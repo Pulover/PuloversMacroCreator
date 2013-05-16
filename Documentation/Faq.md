@@ -197,3 +197,4 @@ Macro Creator requires administrator privileges in order to work properly. Enter
 ### I'm getting "Error: Invalid hotkey." when I try to launch the program.
 
 This is a keyboard language issue. Change the default keyboard layout of your system (global settings) to English and open MacroCreator.  
+
