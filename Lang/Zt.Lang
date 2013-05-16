@@ -1,6 +1,6 @@
 ﻿LoadLang_Zt:
 		
-		; Chinese (Traditional)
+		; Chinese （Traditional）
 		
 ; Main Menu		
 	m_Lang001 =	文件
@@ -508,7 +508,7 @@
 	TextB_TT =	文本（F3）
 	SpecialB_TT =	特殊鍵
 	ControlB_TT =	控制（F4）
-	PauseB_TT =	暫停 (F5) / 信息 (Shift+F5) / 關鍵的等待 (Control+F5)
+	PauseB_TT =	暫停 （F5） / 信息 （Shift+F5） / 關鍵的等待 （Control+F5）
 	WindowB_TT =	窗口（F6）
 	ImageB_TT =	圖片/像素搜索（F7）
 	RunB_TT =	運行/文件/串/ MISC。 （F8）。

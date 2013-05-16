@@ -1,6 +1,6 @@
 ﻿LoadLang_Zh:
 		
-		; Chinese (Simplified)
+		; Chinese （Simplified）
 		
 ; Main Menu		
 	m_Lang001 =	文件
@@ -31,7 +31,7 @@
 	i_Lang001 =	鼠标
 	i_Lang002 =	文本
 	i_Lang003 =	控制
-	i_Lang004 =	Пауза / Повідомлення / Ключові Очікування
+	i_Lang004 =	暂停/消息/键等待
 	i_Lang005 =	窗口
 	i_Lang006 =	图片/像素搜索
 	i_Lang007 =	运行/文件/字符串/其他。
@@ -508,7 +508,7 @@
 	TextB_TT =	文本（F3）
 	SpecialB_TT =	特殊的键
 	ControlB_TT =	控制（F4）
-	PauseB_TT =	Пауза (F5) / Повідомлення (Shift+F5) / Ключові Очікування (Control+F5) 
+	PauseB_TT =	暂停（F5）/消息（Shift+F5）/键等待（Control+F5）
 	WindowB_TT =	窗口（F6）
 	ImageB_TT =	图片/像素搜索（F7）
 	RunB_TT =	运行/文件/字符串/其他。 （F8）

@@ -508,7 +508,7 @@
 	TextB_TT =	テキスト（F3）
 	SpecialB_TT =	特殊キー
 	ControlB_TT =	コントロール（F4）
-	PauseB_TT =	一時停止 (F5) / メッセージ (Shift+F5) / キー待ち (Control+F5)
+	PauseB_TT =	一時停止 （F5） / メッセージ （Shift+F5） / キー待ち （Control+F5）
 	WindowB_TT =	ウィンドウ（F6）
 	ImageB_TT =	イメージ/ピクセル検索（F7）
 	RunB_TT =	ファイル/文字列/その他/実行します。 （F8）
