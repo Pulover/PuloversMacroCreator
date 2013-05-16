@@ -6692,7 +6692,7 @@ ShowProgBar := OSProgB
 If !ShowProgBar
 	Progress, Off
 Else If StopIt = 0
-	Progress, %ProgBarOptions% FM6,, %AppName%
+	Progress, %ProgBarOptions% R0-%CurrentRange% FM6,, %AppName%
 return
 
 Trans:
@@ -8106,9 +8106,12 @@ f_AbortKey:
 Gui, 1:Default
 StopIt := 1
 Pause, Off
-GoSub, RecStop
+If Record
+{
+	GoSub, RecStop
+	GoSub, b_Start
+}
 GoSub, RowCheck
-GoSub, b_Start
 return
 
 PauseKey:
