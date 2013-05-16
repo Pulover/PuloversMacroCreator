@@ -1,6 +1,8 @@
 ﻿SetWorkingDir %A_ScriptDir%
 SplitPath, A_AhkPath,, AhkDir
 
+FileCreateDir, Documentation\MacroCreator_Help-doc\Commands
+
 IfWinExist, ahk_exe MacroCreator.exe
 {
 	WinClose
