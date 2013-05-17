@@ -531,9 +531,9 @@ Gui, Add, Button, -Wrap W25 H25 hwndRunTimer vRunTimer gRunTimer
 Gui, Add, GroupBox, Section W350 H65 ys-9 xm+530
 Gui, Add, Text, -Wrap W25 H22 ym+5 xs+10 vAutoT, %w_Lang006%:
 Gui, Add, Text, -Wrap W25 H22 y+3 vManT, %w_Lang007%:
-Gui, Add, Hotkey, vAutoKey gSaveData W150 ym+2 xp+30, % o_AutoKey[1]
+Gui, Add, Hotkey, vAutoKey gSaveData W150 ym+2 xp+30, % LTrim(o_AutoKey[1], "#")
 Gui, Add, Hotkey, vManKey gWaitKeys W55 y+5 Limit190, % o_ManKey[1]
-Gui, Add, Checkbox, -Wrap ym+5 xp+155 vWin1 R1, %w_Lang009%
+Gui, Add, Checkbox, -Wrap ym+5 xp+155 vWin1 gSaveData R1, %w_Lang009%
 Gui, Add, Text, -Wrap W25 H22 y+13 xs+105 vAbortT, %w_Lang008%:
 Gui, Add, Hotkey,  yp-3 xp+30 vAbortKey W55, %AbortKey%
 Gui, Add, Checkbox, -Wrap Checked%PauseKey% yp+5 xp+60 vPauseKey gPauseKey R1, %w_Lang010%
@@ -1312,7 +1312,7 @@ Gui, 1:Default
 Gui, +OwnDialogs
 Gui, Submit, NoHide
 GoSub, SaveData
-If ((ListCount > 0) && (SavePrompt = 1))
+If ((ListCount > 0) && (SavePrompt))
 {
 	MsgBox, 35, %d_Lang005%, %d_Lang002%`n`"%CurrentFileName%`"
 	IfMsgBox, Yes
@@ -1838,8 +1838,8 @@ Gui, 2:Font
 Gui, 2:Font, s7
 Gui, 2:Add, StatusBar
 Gui, 2:Default
-SB_SetParts(60, 180)
-SB_SetText("Macro" A_List, 1)
+SB_SetParts(150, 150)
+SB_SetText("Macro" A_List ": " o_AutoKey[A_List], 1)
 SB_SetText("Record Keys: " RecKey "/" RecNewKey, 2)
 SB_SetText("CoordMode: " CoordMouse, 3)
 Gui, 1:Default
@@ -1865,7 +1865,7 @@ Preview := LV_Export(A_List)
 GuiControl, 2:, LVPrev, %Preview%
 PostMessage, %WM_VSCROLL%, 7, , Edit1, ahk_id %PrevID%
 Gui, 2:Default
-SB_SetText("Macro" A_List, 1)
+SB_SetText("Macro" A_List ": " o_AutoKey[A_List], 1)
 SB_SetText("Record Keys: " RecKey "/" RecNewKey, 2)
 SB_SetText("CoordMode: " CoordMouse, 3)
 Gui, 1:Default
@@ -6981,6 +6981,8 @@ GuiControlGet, Win1,, Win1
 o_AutoKey[A_List] := (Win1 = 1) ? "#" AutoKey : AutoKey
 o_ManKey[A_List] := ManKey
 o_TimesG[A_List] := TimesO
+If WinExist("ahk_id " PrevID)
+	GoSub, PrevRefresh
 return
 
 LoadData:
@@ -8892,7 +8894,7 @@ Gui, 1:Default
 Gui, +OwnDialogs
 Gui, Submit, NoHide
 GoSub, SaveData
-If ((ListCount > 0) && (SavePrompt = 1))
+If ((ListCount > 0) && (SavePrompt))
 {
 	MsgBox, 35, %d_Lang005%, %d_Lang002%`n`"%CurrentFileName%`"
 	IfMsgBox, Yes
