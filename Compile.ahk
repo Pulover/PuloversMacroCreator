@@ -13,10 +13,10 @@ FileDelete, Documentation\MacroCreator_Help-doc\*.html
 FileDelete, Documentation\MacroCreator_Help-doc\Commands\*.html
 FileCopy, Documentation\License.html, Documentation\MacroCreator_Help-doc, 1
 
-RunWait, Documentation\GenDocs-mod.ahk
+RunWait, Documentation\GenDocs-mod.ahk,, UseErrorLevel
 If ErrorLevel
 	ExitApp
-RunWait, BuildFiles.ahk
+RunWait, BuildFiles.ahk,, UseErrorLevel
 If ErrorLevel
 	ExitApp
 RunWait, Documentation\MacroCreator_Help-doc\CompileCHM.ahk,, UseErrorLevel
