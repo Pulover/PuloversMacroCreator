@@ -169,11 +169,11 @@ IniRead, SC, %IniFilePath%, ExportOptions, SC, 1
 IniRead, Ex_SW, %IniFilePath%, ExportOptions, Ex_SW, 1
 IniRead, SW, %IniFilePath%, ExportOptions, SW, 0
 IniRead, Ex_SK, %IniFilePath%, ExportOptions, Ex_SK, 1
-IniRead, SK, %IniFilePath%, ExportOptions, SK, 1
+IniRead, SK, %IniFilePath%, ExportOptions, SK, -1
 IniRead, Ex_MD, %IniFilePath%, ExportOptions, Ex_MD, 1
-IniRead, MD, %IniFilePath%, ExportOptions, MD, 1
+IniRead, MD, %IniFilePath%, ExportOptions, MD, -1
 IniRead, Ex_SB, %IniFilePath%, ExportOptions, Ex_SB, 1
-IniRead, SB, %IniFilePath%, ExportOptions, SB, 1
+IniRead, SB, %IniFilePath%, ExportOptions, SB, -1
 IniRead, ComCr, %IniFilePath%, ExportOptions, ComCr, 1
 IniRead, ComAc, %IniFilePath%, ExportOptions, ComAc, 0
 IniRead, Send_Loop, %IniFilePath%, ExportOptions, Send_Loop, 0
@@ -627,9 +627,9 @@ GoSub, b_Start
 OnMessage(WM_MOUSEMOVE, "ShowTooltip")
 OnMessage(WM_RBUTTONDOWN, "ShowContextHelp")
 OnMessage(WM_ACTIVATE, "WinCheck")
-OnMessage(0x404, "AHK_NOTIFYICON")
 OnMessage(WM_COPYDATA, "Receive_Params")
-OnMessage(0x0053, "CmdHelp")
+OnMessage(WM_HELP, "CmdHelp")
+OnMessage(0x404, "AHK_NOTIFYICON")
 ; OnMessage(WM_NOTIFY, "LV_ColorsMessage")
 ; LV_Colors.OnMessage(ShowLoopIfMark)
 If KeepHkOn
@@ -5196,7 +5196,8 @@ If FileCmdL not in %FileCmdML%
 Else
 {
 	GuiControl, 10:Enable, RunOK
-	GuiControl, 10:Enable, RunApply
+	If (s_Caller = "Edit")
+		GuiControl, 10:Enable, RunApply
 }
 return
 
@@ -8988,7 +8989,7 @@ SM := "Input"
 Ex_SI := 1
 SI := "Force"
 Ex_ST := 1
-ST := "2"
+ST := 2
 Ex_DH := 1
 Ex_AF := 1
 Ex_HK := 0
