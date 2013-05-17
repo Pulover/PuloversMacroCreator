@@ -65,7 +65,7 @@ If A_OSVersion in WIN_8
 	RemoveIcon := [shell32, 131]
 	DuplicateIcon := [shell32, 54]
 	CopyIcon := [shell32, 134]
-	CopyIcon := [shell32, 259]
+	CutIcon := [shell32, 259]
 	PasteIcon := [shell32, 260]
 	UndoIcon := [msctf, 14]
 	RedoIcon := [comres, 4]
