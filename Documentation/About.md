@@ -33,8 +33,8 @@ T800 for [Html Help utils](http://www.autohotkey.com/board/topic/17984-html-help
 
 ## Version 3.7.1
 
-* Fixed error on start up in Windows XP.
-* Fixed missing/wrong icons in Windows 8.
+* Fixed error on start up on Windows XP.
+* Fixed missing/wrong icons on Windows 8.
 * Fixed Save Macro dialog showing for unchanged.
 * Fixed Progress Bar showing wrong Range after Hide/Show.
 * Fixed translation errors.

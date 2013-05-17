@@ -82,7 +82,7 @@
 ; Options Sub Menu		
 	o_Lang001 =	&Nastavení
 	o_Lang002 =	N&astavit jako výchozí klávesové zkratky
-	o_Lang003 =	Na&stavit jako výchozí soubor
+	o_Lang003 =	Na&Stavit Jako Výchozí Soubor
 	o_Lang004 =	&Odebrat výchozí soubor
 	o_Lang005 =	O&bnovit sloupce Velikost
 	o_Lang006 =	&Výchozí Klávesové zkratky
@@ -237,8 +237,8 @@
 	c_Lang110 =	Browser Home
 	c_Lang111 =	Media
 	c_Lang112 =	Vypnutí
-	c_Lang113 =	Volume Up
-	c_Lang114 =	Snížit hlasitost
+	c_Lang113 =	Zvýšení Hlasitosti
+	c_Lang114 =	Snížení Hlasitosti
 	c_Lang115 =	Play / Pause
 	c_Lang116 =	Další stopa
 	c_Lang117 =	Předchozí stopa
@@ -324,7 +324,7 @@
 	t_Lang042 =	Výchozí Mouse Delay
 	t_Lang043 =	Výchozí okno Delay
 	t_Lang044 =	Max Historie na Makro
-	t_Lang045 =	Clear History
+	t_Lang045 =	Vymazat Historii
 	t_Lang046 =	Snímky obrazovky
 	t_Lang047 =	Kreslení tlačítko
 	t_Lang048 =	Šířka čáry (Px)

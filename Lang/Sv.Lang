@@ -237,8 +237,8 @@
 	c_Lang110 =	Webbläsare Hem
 	c_Lang111 =	Media
 	c_Lang112 =	Mute
-	c_Lang113 =	Volym upp
-	c_Lang114 =	Volym ned
+	c_Lang113 =	Volym Upp
+	c_Lang114 =	Volym Ned
 	c_Lang115 =	Spela upp / pausa
 	c_Lang116 =	Nästa spår
 	c_Lang117 =	Föregående spår
@@ -324,7 +324,7 @@
 	t_Lang042 =	Default Mus Delay
 	t_Lang043 =	Default Fönster Delay
 	t_Lang044 =	Max Historia per Macro
-	t_Lang045 =	Rensa historik
+	t_Lang045 =	Rensa Historik
 	t_Lang046 =	Skärmdumpar
 	t_Lang047 =	Rita
 	t_Lang048 =	Linjebredd (Px)

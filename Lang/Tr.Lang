@@ -82,7 +82,7 @@
 ; Options Sub Menu		
 	o_Lang001 =	&Ayarlar
 	o_Lang002 =	&Varsayılan Hotkeys Olarak Ayarla
-	o_Lang003 =	Va&rsayılan Dosya Olarak Ayarla
+	o_Lang003 =	Va&Rsayılan Dosya Olarak Ayarla
 	o_Lang004 =	Var&sayılan Dosya kaldır
 	o_Lang005 =	S&ütunlar Boyutu Sıfırla
 	o_Lang006 =	Varsa&yılan Hotkeys
@@ -237,8 +237,8 @@
 	c_Lang110 =	Tarayıcı Ev
 	c_Lang111 =	Medya
 	c_Lang112 =	Mute
-	c_Lang113 =	Volume Up
-	c_Lang114 =	Cilt Aşağı
+	c_Lang113 =	Ses Açma
+	c_Lang114 =	Hacim Aşağı
 	c_Lang115 =	Play / Pause
 	c_Lang116 =	Sonraki Parça
 	c_Lang117 =	Önceki Parça

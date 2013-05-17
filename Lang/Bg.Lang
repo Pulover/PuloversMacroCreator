@@ -82,11 +82,11 @@
 ; Options Sub Menu		
 	o_Lang001 =	&Настройки
 	o_Lang002 =	&Задайте По подразбиране Hotkeys
-	o_Lang003 =	&Set As Default File
+	o_Lang003 =	З&ададена По Подразбиране Файл
 	o_Lang004 =	&Свалете файла по подразбиране
 	o_Lang005 =	&Променете Колони Размер
 	o_Lang006 =	П&одразбиране Hotkeys
-	o_Lang007 =	Н&астройките по подразбиране
+	o_Lang007 =	На&стройките по подразбиране
 		
 ; Make a Donation Sub Menu		
 	p_Lang001 =	&PayPal Дарение
@@ -237,8 +237,8 @@
 	c_Lang110 =	Browser Начало
 	c_Lang111 =	Средства
 	c_Lang112 =	Изключване
-	c_Lang113 =	Volume Up
-	c_Lang114 =	Volume Down
+	c_Lang113 =	Увеличаване На Звука
+	c_Lang114 =	Намаляване На Звука
 	c_Lang115 =	Play / Pause
 	c_Lang116 =	Следваща песен
 	c_Lang117 =	Предишна песен
@@ -324,7 +324,7 @@
 	t_Lang042 =	Забавяне подразбиране мишка
 	t_Lang043 =	Забавяне подразбиране прозореца
 	t_Lang044 =	Макс История на макроси
-	t_Lang045 =	Clear History
+	t_Lang045 =	Изчистване На Историята
 	t_Lang046 =	Снимки
 	t_Lang047 =	Равен бутон
 	t_Lang048 =	Ширината на линията (Px)
