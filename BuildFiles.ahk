@@ -5,7 +5,7 @@ IniRead, PMCVer, MacroCreator.ini, Application, Version
 If PMCVer = Error
 {
 	MsgBox, 0, Error!, INI file is missing!
-	return
+	ExitApp, 2
 }
 
 Script =
