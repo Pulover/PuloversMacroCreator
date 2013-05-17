@@ -297,6 +297,7 @@ If A_OSVersion in WIN_2003,WIN_XP,WIN_2000
 			, 	31: [regedit, 1]}	; Reg
 }
 
+_s := " "
 ListCount1 := 0
 TabCount := 1
 FastKeyOn := 0
