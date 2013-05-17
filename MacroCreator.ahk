@@ -6,7 +6,7 @@
 ; rodolfoub@gmail.com
 ; Home: http://www.autohotkey.net/~Pulover
 ; Forum: http://www.autohotkey.com/board/topic/79763-macro-creator
-; Version: 3.7.1a
+; Version: 3.7.1
 ; Release Date: May, 2013
 ; AutoHotkey Version: 1.1.09.04
 ; GNU General Public License 3.0 or higher
@@ -70,7 +70,7 @@ DefaultIcon := (A_IsCompiled) ? A_ScriptFullPath
 			:  (FileExist("Images\PMC3_48.ico") ? "Images\PMC3_48.ico" : A_AhkPath)
 Menu, Tray, Icon, %DefaultIcon%, 1, 1
 
-CurrentVersion := "3.7.1a"
+CurrentVersion := "3.7.1"
 ReleaseDate := "May, 2013"
 
 ;##### Ini File Read #####
@@ -3967,7 +3967,7 @@ Gui, 3:Add, GroupBox, Section ys xs W280 H235
 Gui, 3:Add, Text, -Wrap Section ys+15 xs+10 W260 R1, %c_Lang051%:
 Gui, 3:Add, Edit, vMsgPt W260 r6
 Gui, 3:Add, Text, W260, %c_Lang025%
-Gui, 3:Add, Text, y+5 W210, %c_Lang147%:
+Gui, 3:Add, Text, yp+30 W210, %c_Lang147%:
 Gui, 3:Add, Radio, -Wrap Checked W80 vNoI R1, %c_Lang148%
 Gui, 3:Add, Radio, -Wrap x+5 W80 vErr R1, %c_Lang149%
 Gui, 3:Add, Radio, -Wrap  x+5 W80 vQue R1, %c_Lang150%
@@ -6654,7 +6654,7 @@ return
 OSPlay:
 Gui, 28:Submit, NoHide
 Gui, 1:Default
-GoSub, b_Start
+GoSub, b_Enable
 If (ListCount%OSHK% = 0)
 	return
 If !(PlayOSOn)
@@ -6691,7 +6691,7 @@ Gui, 28:Submit, NoHide
 ShowProgBar := OSProgB
 If !ShowProgBar
 	Progress, Off
-Else If StopIt = 0
+Else If (CurrentRange)
 	Progress, %ProgBarOptions% R0-%CurrentRange% FM6,, %AppName%
 return
 

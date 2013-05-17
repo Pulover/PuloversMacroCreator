@@ -8,9 +8,9 @@ Author: Pulover \[Rodolfo U. Batista\]
 [rodolfoub@gmail.com](mailto:rodolfoub@gmail.com)  
 Copyright © 2012-2013 Rodolfo U. Batista  
 
-Version: 3.7.0 
+Version: 3.7.1 
 Release Date: May, 2013  
-AutoHotkey Version: 1.1.10.00  
+AutoHotkey Version: 1.1.10.01  
 
 Software License: [GNU General Public License](License.html)  
 
@@ -31,6 +31,14 @@ T800 for [Html Help utils](http://www.autohotkey.com/board/topic/17984-html-help
 
 # Change Log
 
+## Version 3.7.1
+
+* Fixed error on start up on Windows XP.
+* Fixed missing/wrong icons in Windows 8.
+* Fixed Save Macro dialog showing for unchanged.
+* Fixed Progress Bar showing wrong Range after Hide/Show.
+* Fixed translation errors.
+
 ## Version 3.7.0
 
 * Added new Loop commands: *FilePattern*, *Parse*, *Read* and *Registry*.
@@ -43,7 +51,7 @@ T800 for [Html Help utils](http://www.autohotkey.com/board/topic/17984-html-help
 * Added *Apply* button to command windows.
 * Added *Icon*, *Always On Top* and *Cancel* options to *Message* command.
 * Added *Check for updates* feature.
-* Added Help and button and F1 Help to Command windows.
+* Added Help button and F1 Help to Command windows.
 * Added *Quick Select* to *Action* column (double-click for indentation).
 * Added option to choose between 64-bit and 32-bit versions during setup.
 * Added more icons and shortcuts.

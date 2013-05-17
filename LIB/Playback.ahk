@@ -397,6 +397,7 @@
 		CoordMode, Mouse, %CoordMouse%
 	}
 	Progress, Off
+	CurrentRange := ""
 	Menu, Tray, Icon , %DefaultIcon%, 1
 	Menu, Tray, Default, %w_Lang005%
 	If (CloseAfterPlay)
