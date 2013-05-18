@@ -16,6 +16,7 @@
 	Pause, Off
 	Menu, Tray, Icon, % t_PlayIcon[1], % t_PlayIcon[2]
 	Menu, Tray, Default, %w_Lang008%
+	CurrentRange := m_ListCount
 	If (ShowProgBar = 1)
 		Progress, %ProgBarOptions% R0-%m_ListCount% FM6,, % AppName ": Macro" Macro_On " [Loop: 0 / " o_TimesG[Macro_On] " | Line: 0 / " m_ListCount "]"
 	Loop
@@ -396,6 +397,7 @@
 		CoordMode, Mouse, %CoordMouse%
 	}
 	Progress, Off
+	CurrentRange := ""
 	Menu, Tray, Icon , %DefaultIcon%, 1
 	Menu, Tray, Default, %w_Lang005%
 	If (CloseAfterPlay)
@@ -404,7 +406,6 @@
 
 LoopSection(Start, End, X, L, PointO, mainL, mainC)
 {
-	global
 	local lCount, lIdx, L_Index, mLoopIndex, IfError := 0
 
 	f_Loop:

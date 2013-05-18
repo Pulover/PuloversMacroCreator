@@ -20,7 +20,7 @@ RunWait, hhc.exe MacroCreator_Help.chm,, UseErrorLevel
 If ErrorLevel = ERROR
 {
 	MsgBox, 0x40000, Error, File: %A_ScriptFullPath%`nError code: %A_LastError%
-	return
+	ExitApp, %A_LastError%
 }
 return
 

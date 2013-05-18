@@ -237,8 +237,8 @@
 	c_Lang110 =	Browser Home
 	c_Lang111 =	Media
 	c_Lang112 =	Mute
-	c_Lang113 =	Volume su
-	c_Lang114 =	Volume giù
+	c_Lang113 =	Volume Su
+	c_Lang114 =	Volume Giù
 	c_Lang115 =	Play / Pause
 	c_Lang116 =	Traccia successiva
 	c_Lang117 =	Traccia precedente
@@ -324,7 +324,7 @@
 	t_Lang042 =	Predefinito del mouse Ritardo
 	t_Lang043 =	Predefinito Finestra Ritardo
 	t_Lang044 =	Storia max per Macro
-	t_Lang045 =	Cancella cronologia
+	t_Lang045 =	Cancella Cronologia
 	t_Lang046 =	Screenshots
 	t_Lang047 =	Disegna Button
 	t_Lang048 =	Linea Larghezza (Px)

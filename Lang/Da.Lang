@@ -237,8 +237,8 @@
 	c_Lang110 =	Browser Hjem
 	c_Lang111 =	Medier
 	c_Lang112 =	Mute
-	c_Lang113 =	Lydstyrke op
-	c_Lang114 =	Skru ned
+	c_Lang113 =	Lydstyrke Op
+	c_Lang114 =	Skru Ned
 	c_Lang115 =	Afspil / Pause
 	c_Lang116 =	Næste spor
 	c_Lang117 =	Forrige spor
@@ -324,7 +324,7 @@
 	t_Lang042 =	Standard Mouse Delay
 	t_Lang043 =	Standardvindue Delay
 	t_Lang044 =	Max History pr Macro
-	t_Lang045 =	Ryd historik
+	t_Lang045 =	Ryd Historik
 	t_Lang046 =	Screenshots
 	t_Lang047 =	Tegn Knap
 	t_Lang048 =	Linje Bredde (Px)

@@ -536,7 +536,7 @@ Receive_Params(wParam, lParam)
 	Gui, +OwnDialogs
 	Gui, Submit, NoHide
 	GoSub, SaveData
-	If ((ListCount > 0) && (SavePrompt = 1))
+	If ((ListCount > 0) && (SavePrompt))
 	{
 		MsgBox, 35, %d_Lang005%, %d_Lang002%`n`"%CurrentFileName%`"
 		IfMsgBox, Yes

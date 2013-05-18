@@ -82,10 +82,10 @@
 ; Options Sub Menu		
 	o_Lang001 =	&Beállítások
 	o_Lang002 =	&Set As Default gyorsbillentyűk
-	o_Lang003 =	S&et As Default fájl
-	o_Lang004 =	E&ltávolítása Alapértelmezett fájl
+	o_Lang003 =	&Az Alapértelmezett Beállítás Fájl
+	o_Lang004 =	&Eltávolítása Alapértelmezett fájl
 	o_Lang005 =	&Visszaállítás oszlopok méret
-	o_Lang006 =	&Alapértelmezett gyorsbillentyűk
+	o_Lang006 =	A&lapértelmezett gyorsbillentyűk
 	o_Lang007 =	Ala&pértelmezett beállítások
 		
 ; Make a Donation Sub Menu		
@@ -237,8 +237,8 @@
 	c_Lang110 =	Böngésző Főoldal
 	c_Lang111 =	Média
 	c_Lang112 =	Mikrofon
-	c_Lang113 =	Hangerő fel
-	c_Lang114 =	Hangerő le
+	c_Lang113 =	Hangerő Fel
+	c_Lang114 =	Hangerő Le
 	c_Lang115 =	Lejátszás / Szünet
 	c_Lang116 =	Következő műsorszám
 	c_Lang117 =	Előző szám
@@ -324,7 +324,7 @@
 	t_Lang042 =	Default Mouse késleltetés
 	t_Lang043 =	Alapértelmezett ablak késleltetés
 	t_Lang044 =	Max History per Macro
-	t_Lang045 =	Előzmények törlése
+	t_Lang045 =	Előzmények Törlése
 	t_Lang046 =	Képernyőképek
 	t_Lang047 =	Döntetlen gomb
 	t_Lang048 =	Vonal Szélesség (Px)

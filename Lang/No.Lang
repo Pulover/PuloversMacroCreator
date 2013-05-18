@@ -237,8 +237,8 @@
 	c_Lang110 =	Nettleseren Hjem
 	c_Lang111 =	Media
 	c_Lang112 =	Demp
-	c_Lang113 =	Volum opp
-	c_Lang114 =	Volum ned
+	c_Lang113 =	Volum Opp
+	c_Lang114 =	Volum Ned
 	c_Lang115 =	Spill av / Pause
 	c_Lang116 =	Neste spor
 	c_Lang117 =	Forrige spor
@@ -324,7 +324,7 @@
 	t_Lang042 =	Standard Mouse Delay
 	t_Lang043 =	Standard Window Delay
 	t_Lang044 =	Max History per Makro
-	t_Lang045 =	Slett logg
+	t_Lang045 =	Slett Logg
 	t_Lang046 =	Skjermbilder
 	t_Lang047 =	Tegn Button
 	t_Lang048 =	Linjebredde (Px)

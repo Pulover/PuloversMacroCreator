@@ -237,8 +237,8 @@
 	c_Lang110 =	Browser Startseite
 	c_Lang111 =	Medien
 	c_Lang112 =	Stumm
-	c_Lang113 =	Volume Up
-	c_Lang114 =	Volume Down
+	c_Lang113 =	Lauter
+	c_Lang114 =	Leiser
 	c_Lang115 =	Wiedergabe / Pause
 	c_Lang116 =	Nächster Titel
 	c_Lang117 =	Vorheriger Titel
@@ -324,7 +324,7 @@
 	t_Lang042 =	Standard Maus Verzögerung
 	t_Lang043 =	Default Window Verzögerung
 	t_Lang044 =	Max History pro Makro
-	t_Lang045 =	Verlauf löschen
+	t_Lang045 =	Verlauf Löschen
 	t_Lang046 =	Screenshots
 	t_Lang047 =	Zeichnen Knopf
 	t_Lang048 =	Linienbreite (Px)

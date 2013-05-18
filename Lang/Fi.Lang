@@ -237,8 +237,8 @@
 	c_Lang110 =	Selain Koti
 	c_Lang111 =	Tiedotusvälineet
 	c_Lang112 =	Mykistä
-	c_Lang113 =	Volume Up
-	c_Lang114 =	Volume Down
+	c_Lang113 =	Äänenvoimakkuuden
+	c_Lang114 =	Äänenvoimakkuutta
 	c_Lang115 =	Play / Pause
 	c_Lang116 =	Seuraava kappale
 	c_Lang117 =	Edellinen kappale
@@ -324,7 +324,7 @@
 	t_Lang042 =	Oletus Hiiri Delay
 	t_Lang043 =	Oletusikkuna Delay
 	t_Lang044 =	Max Historia kohti Macro
-	t_Lang045 =	Tyhjennä historia
+	t_Lang045 =	Tyhjennä Historia
 	t_Lang046 =	Kuvakaappaukset
 	t_Lang047 =	Piirrä painike
 	t_Lang048 =	Viivan leveys (Px)
