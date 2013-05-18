@@ -10,15 +10,23 @@ comres := SysRoot "\System32\comres.dll"
 DDORes := SysRoot "\System32\DDORes.dll"
 imageres := SysRoot "\System32\imageres.dll"
 miguiresource := SysRoot "\System32\miguiresource.dll"
-Mmsys := SysRoot "\System32\Mmsys.cpl"
-inetcpl := SysRoot "\System32\inetcpl.cpl"
 msctf := SysRoot "\System32\msctf.dll"
 pifmgr := SysRoot "\System32\pifmgr.dll"
 psr := SysRoot "\System32\psr.exe"
-regedit := SysRoot "\System32\regedit.exe"
+regedit := SysRoot "\regedit.exe"
 setupapi := SysRoot "\System32\setupapi.dll"
 shell32 := SysRoot "\System32\shell32.dll"
 urlmon := SysRoot "\System32\urlmon.dll"
+mmcndmgr := SysRoot "\System32\mmcndmgr.dll"
+servdeps := SysRoot "\System32\servdeps.dll"
+shimgvw := SysRoot "\System32\shimgvw.dll"
+browseui := SysRoot "\System32\browseui.dll"
+gcdef := SysRoot "\System32\gcdef.dll"
+netcfgx := SysRoot "\System32\netcfgx.dll"
+cscdll := SysRoot "\System32\cscdll.dll"
+Mmsys := SysRoot "\System32\Mmsys.cpl"
+inetcpl := SysRoot "\System32\inetcpl.cpl"
+Timedate := SysRoot "\System32\Timedate.cpl"
 xpsp2res := SysRoot "\System32\xpsp2res.dll"
 
 If A_OSVersion in WIN_8
@@ -223,22 +231,22 @@ If A_OSVersion in WIN_2003,WIN_XP,WIN_2000
 	TextIcon := [setupapi, 2]
 	SpecIcon := [Mmsys, 0]
 	ControlIcon := [shell32, 192]
-	PauseIcon := [shell32, 20]
-	PauseIconB := [shell32, 20]
+	PauseIcon := [mmcndmgr, 14]
+	PauseIconB := [mmcndmgr, 34]
 	t_PauseIcon := [shell32, 21]
 	WindowIcon := [shell32, 2]
-	ImageIcon := [shell32, 127]
+	ImageIcon := [shimgvw, 1]
 	RunIcon := [shell32, 24]
 	LoopIcon := [xpsp2res, 53]
 	IfStIcon := [setupapi, 22]
 	IEIcon := [shell32, 220]
-	RecordIcon := [Mmsys, 24]
-	t_RecordIcon := [Mmsys, 25]
+	RecordIcon := [gcdef, 1]
+	t_RecordIcon := [gcdef, 1]
 	PlayIcon := [shell32, 137]
 	t_PlayIcon := [shell32, 138]
-	TestRunIcon := [shell32, 71]
+	TestRunIcon := [browseui, 1]
 	RecStopIcon := [shell32, 109]
-	RunTimerIcon := [shell32, 20]
+	RunTimerIcon := [Timedate, 0]
 	PlusIcon := [inetcpl, 21]
 	CloseIcon := [inetcpl, 22]
 	DuplicateLIcon := [shell32, 54]
@@ -250,12 +258,12 @@ If A_OSVersion in WIN_2003,WIN_XP,WIN_2000
 	RemoveIcon := [shell32, 131]
 	DuplicateIcon := [shell32, 54]
 	CopyIcon := [shell32, 134]
-	CutIcon := [shell32, 133]
+	CutIcon := [cscdll, 10]
 	PasteIcon := [shell32, 110]
-	UndoIcon := [xpsp2res, 7]
-	RedoIcon := [shell32, 176]
-	; MoveUpIcon := [shell32, 246]
-	; MoveDnIcon := [shell32, 247]
+	UndoIcon := [mmcndmgr, 31]
+	RedoIcon := [mmcndmgr, 3]
+	MoveUpIcon := [netcfgx, 0]
+	MoveDnIcon := [netcfgx, 1]
 	EditIcon := [pifmgr, 17]
 	CommentIcon := [shell32, 133]
 	FindIcon := [shell32, 55]
@@ -282,7 +290,7 @@ If A_OSVersion in WIN_2003,WIN_XP,WIN_2000
 			, 	16: [shell32, 127]	; File
 			, 	17: [shell32, 134]	; String
 			, 	18: [shell32, 56]	; Info
-			, 	19: [shell32, 21]	; Wait
+			, 	19: [servdeps, 3]	; Wait
 			, 	20: [shell32, 99]	; Group
 			, 	21: [shell32, 222]	; Dialog
 			, 	22: [shell32, 70]	; Ini
