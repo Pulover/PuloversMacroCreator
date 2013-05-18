@@ -12,8 +12,6 @@ imageres := SysRoot "\System32\imageres.dll"
 miguiresource := SysRoot "\System32\miguiresource.dll"
 msctf := SysRoot "\System32\msctf.dll"
 pifmgr := SysRoot "\System32\pifmgr.dll"
-psr := SysRoot "\System32\psr.exe"
-regedit := SysRoot "\regedit.exe"
 setupapi := SysRoot "\System32\setupapi.dll"
 shell32 := SysRoot "\System32\shell32.dll"
 urlmon := SysRoot "\System32\urlmon.dll"
@@ -23,6 +21,8 @@ browseui := SysRoot "\System32\browseui.dll"
 gcdef := SysRoot "\System32\gcdef.dll"
 netcfgx := SysRoot "\System32\netcfgx.dll"
 cscdll := SysRoot "\System32\cscdll.dll"
+psr := SysRoot "\System32\psr.exe"
+regedit := SysRoot "\regedit.exe"
 Mmsys := SysRoot "\System32\Mmsys.cpl"
 inetcpl := SysRoot "\System32\inetcpl.cpl"
 Timedate := SysRoot "\System32\Timedate.cpl"
@@ -304,7 +304,7 @@ If A_OSVersion in WIN_2003,WIN_XP,WIN_2000
 			, 	31: [regedit, 1]}	; Reg
 }
 
-_s := Chr(8239)
+_s := Chr(4445)
 ListCount1 := 0
 TabCount := 1
 FastKeyOn := 0
