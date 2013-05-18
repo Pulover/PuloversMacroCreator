@@ -17,7 +17,6 @@ regedit := SysRoot "\regedit.exe"
 setupapi := SysRoot "\System32\setupapi.dll"
 shell32 := SysRoot "\System32\shell32.dll"
 urlmon := SysRoot "\System32\urlmon.dll"
-mmcndmgr := SysRoot "\System32\mmcndmgr.dll"
 servdeps := SysRoot "\System32\servdeps.dll"
 shimgvw := SysRoot "\System32\shimgvw.dll"
 browseui := SysRoot "\System32\browseui.dll"
@@ -231,11 +230,11 @@ If A_OSVersion in WIN_2003,WIN_XP,WIN_2000
 	TextIcon := [setupapi, 2]
 	SpecIcon := [Mmsys, 0]
 	ControlIcon := [shell32, 192]
-	PauseIcon := [mmcndmgr, 14]
-	PauseIconB := [mmcndmgr, 34]
+	PauseIcon := [shell32, 20]
+	PauseIconB := [shell32, 20]
 	t_PauseIcon := [shell32, 21]
 	WindowIcon := [shell32, 2]
-	ImageIcon := [shimgvw, 1]
+	ImageIcon := [shimgvw, 0]
 	RunIcon := [shell32, 24]
 	LoopIcon := [xpsp2res, 53]
 	IfStIcon := [setupapi, 22]
@@ -260,8 +259,8 @@ If A_OSVersion in WIN_2003,WIN_XP,WIN_2000
 	CopyIcon := [shell32, 134]
 	CutIcon := [cscdll, 10]
 	PasteIcon := [shell32, 110]
-	UndoIcon := [mmcndmgr, 31]
-	RedoIcon := [mmcndmgr, 3]
+	UndoIcon := [xpsp2res, 7]
+	RedoIcon := [shell32, 176]
 	MoveUpIcon := [netcfgx, 0]
 	MoveDnIcon := [netcfgx, 1]
 	EditIcon := [pifmgr, 17]
@@ -290,7 +289,7 @@ If A_OSVersion in WIN_2003,WIN_XP,WIN_2000
 			, 	16: [shell32, 127]	; File
 			, 	17: [shell32, 134]	; String
 			, 	18: [shell32, 56]	; Info
-			, 	19: [servdeps, 3]	; Wait
+			, 	19: [servdeps, 4]	; Wait
 			, 	20: [shell32, 99]	; Group
 			, 	21: [shell32, 222]	; Dialog
 			, 	22: [shell32, 70]	; Ini
