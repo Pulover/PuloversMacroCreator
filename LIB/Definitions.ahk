@@ -30,6 +30,7 @@ xpsp2res := SysRoot "\System32\xpsp2res.dll"
 
 If A_OSVersion in WIN_8
 {
+	_s := Chr(8239)
 	IconFile := shell32
 	HelpIconQ := 24
 	HelpIconI := 222
@@ -92,8 +93,8 @@ If A_OSVersion in WIN_8
 			, 	3 : [shell32, 266]	; Pause
 			, 	4 : [shell32, 239]	; Loop
 			, 	5 : [shell32, 25]	; Run
-			, 	6 : [shell32, 167]	; IfStatement
-			, 	7 : [shell32, 318]	; Image
+			, 	6 : [shell32, 166]	; IfStatement
+			, 	7 : [shell32, 319]	; Image
 			, 	8 : [shell32, 3]	; Window
 			, 	9 : [DDORes, 29]	; Control
 			, 	10: [shell32, 243]	; IE
@@ -122,6 +123,7 @@ If A_OSVersion in WIN_8
 
 If A_OSVersion in WIN_7,WIN_VISTA
 {
+	_s := Chr(8239)
 	IconFile := shell32
 	HelpIconQ := 24
 	HelpIconI := 222
@@ -214,6 +216,7 @@ If A_OSVersion in WIN_7,WIN_VISTA
 
 If A_OSVersion in WIN_2003,WIN_XP,WIN_2000
 {
+	_s := Chr(4445)
 	IconFile := shell32
 	HelpIconQ := 24
 	HelpIconI := 222
@@ -304,7 +307,6 @@ If A_OSVersion in WIN_2003,WIN_XP,WIN_2000
 			, 	31: [regedit, 1]}	; Reg
 }
 
-_s := Chr(4445)
 ListCount1 := 0
 TabCount := 1
 FastKeyOn := 0
