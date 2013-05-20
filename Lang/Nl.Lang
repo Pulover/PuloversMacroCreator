@@ -237,8 +237,8 @@
 	c_Lang110 =	Browser Startpagina
 	c_Lang111 =	Media
 	c_Lang112 =	Mute
-	c_Lang113 =	Volume omhoog
-	c_Lang114 =	Volume omlaag
+	c_Lang113 =	Volume Omhoog
+	c_Lang114 =	Volume Omlaag
 	c_Lang115 =	Play / Pause
 	c_Lang116 =	Volgende track
 	c_Lang117 =	Vorige track
@@ -324,7 +324,7 @@
 	t_Lang042 =	Standaard Muis Delay
 	t_Lang043 =	Standaard Window Delay
 	t_Lang044 =	Max Geschiedenis per Macro
-	t_Lang045 =	Geschiedenis wissen
+	t_Lang045 =	Geschiedenis Wissen
 	t_Lang046 =	Screenshots
 	t_Lang047 =	Teken Button
 	t_Lang048 =	Lijndikte (Px)

@@ -164,7 +164,7 @@ Generate_Common(item, prefix="")
 	Parse_Common(item, prefix, type, syntax, name, isConstr, HasParamTableAndRetVal, isGet, isSet)
 	
 	prettyname := type = "Function" ? RegExReplace(name, "_", " ") : name
-	css := type = "Function" ? """..\default.css""" : """default.css"""
+	css := type = "Function" ? """../default.css""" : """default.css"""
 
 	filetext =
 	(LTrim
@@ -215,7 +215,7 @@ Generate_Common(item, prefix="")
 	
 	filetext .= "`n`n</body>`n</html>"
 	
-	name := (type = "Function") ? "Commands\" name : name
+	name := (type = "Function") ? "Commands/" name : name
 	IfExist, %name%.html
 		FileDelete, %name%.html
 	FileAppend, % filetext, %name%.html

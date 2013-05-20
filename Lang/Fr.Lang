@@ -237,8 +237,8 @@
 	c_Lang110 =	D'accueil du navigateur
 	c_Lang111 =	Médias
 	c_Lang112 =	Mute
-	c_Lang113 =	Augmenter le volume
-	c_Lang114 =	Baisser le volume
+	c_Lang113 =	Augmenter Le Volume
+	c_Lang114 =	Baisser Le Volume
 	c_Lang115 =	Lecture / Pause
 	c_Lang116 =	Piste suivante
 	c_Lang117 =	Piste précédente
@@ -324,7 +324,7 @@
 	t_Lang042 =	Retard de la souris par défaut
 	t_Lang043 =	Retard fenêtre par défaut
 	t_Lang044 =	Histoire max par Macro
-	t_Lang045 =	Effacer l'historique
+	t_Lang045 =	Effacer L'historique
 	t_Lang046 =	Captures d'écran
 	t_Lang047 =	Bouton Dessin
 	t_Lang048 =	Largeur de ligne (Px)

@@ -82,7 +82,7 @@
 ; Options Sub Menu		
 	o_Lang001 =	&Postavke
 	o_Lang002 =	P&ostavi kao zadani Hotkeys
-	o_Lang003 =	Po&stavite File Default
+	o_Lang003 =	Po&stavljen Kao Zadani Datoteku
 	o_Lang004 =	&Uklonite propust varalica
 	o_Lang005 =	&Veličina Reset Kolumne
 	o_Lang006 =	&Zadane Hotkeys
@@ -237,8 +237,8 @@
 	c_Lang110 =	Preglednik Home
 	c_Lang111 =	Medij
 	c_Lang112 =	Isključivanje
-	c_Lang113 =	Pojačaj
-	c_Lang114 =	Volume Down
+	c_Lang113 =	Glasnoće
+	c_Lang114 =	Glasnoća Prema Dolje
 	c_Lang115 =	Reprodukcija / pauza
 	c_Lang116 =	Sljedeća pjesma
 	c_Lang117 =	Prethodna pjesma
@@ -324,7 +324,7 @@
 	t_Lang042 =	Default Miš Kašnjenje
 	t_Lang043 =	Default Kašnjenje prozor
 	t_Lang044 =	Max Povijest po Macro
-	t_Lang045 =	Očisti povijest
+	t_Lang045 =	Očisti Povijest
 	t_Lang046 =	Slike
 	t_Lang047 =	Crtanje Button
 	t_Lang048 =	Line Širina (piksela)

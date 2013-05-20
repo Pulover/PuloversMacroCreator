@@ -1,10 +1,10 @@
-﻿# Pulover's Macro Creator v3.7.0 #
+﻿# Pulover's Macro Creator #
 
 Pulover's Macro Creator is a Free Automation and Script Writting Tool with a graphic interface, based on AutoHotkey language. It features a large range of automation commands, has a built-in recorder and can capture inputs in its interface. The macros can be executed from the program itself or you can export them to AutoHotkey Script format.
 
 http://www.autohotkey.net/~Pulover
 
-**Current Version**: 3.7.0
+**Current Version**: 3.7.1
 
 ## For developers ##
 
