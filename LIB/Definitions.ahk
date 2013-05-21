@@ -28,7 +28,7 @@ inetcpl := SysRoot "\System32\inetcpl.cpl"
 Timedate := SysRoot "\System32\Timedate.cpl"
 xpsp2res := SysRoot "\System32\xpsp2res.dll"
 
-If A_OSVersion in WIN_8
+If A_OSVersion in WIN_8,WIN_7,WIN_VISTA
 {
 	_s := Chr(8239)
 	IconFile := shell32
@@ -51,7 +51,7 @@ If A_OSVersion in WIN_8
 	PauseIconB := [psr, 2]
 	t_PauseIcon := [psr, 3]
 	WindowIcon := [shell32, 2]
-	ImageIcon := [shell32, 318]
+	ImageIcon := [imageres, 67]
 	RunIcon := [shell32, 24]
 	LoopIcon := [shell32, 238]
 	IfStIcon := [shell32, 165]
@@ -94,100 +94,7 @@ If A_OSVersion in WIN_8
 			, 	4 : [shell32, 239]	; Loop
 			, 	5 : [shell32, 25]	; Run
 			, 	6 : [shell32, 166]	; IfStatement
-			, 	7 : [shell32, 319]	; Image
-			, 	8 : [shell32, 3]	; Window
-			, 	9 : [DDORes, 29]	; Control
-			, 	10: [shell32, 243]	; IE
-			, 	11: [DDORes, 1]		; Label
-			, 	12: [DDORes, 35]	; Goto
-			, 	13: [shell32, 157]	; SendMsg
-			, 	14: [shell32, 76]	; Variables
-			, 	15: [shell32, 167]	; Functions
-			, 	16: [shell32, 127]	; File
-			, 	17: [shell32, 134]	; String
-			, 	18: [shell32, 278]	; Info
-			, 	19: [comres, 6]		; Wait
-			, 	20: [imageres, 1]	; Group
-			, 	21: [shell32, 222]	; Dialog
-			, 	22: [shell32, 70]	; Ini
-			, 	23: [shell32, 73]	; Misc
-			, 	24: [shell32, 162]	; Pixel
-			, 	25: [comres, 4]		; COM
-			, 	26: [comres, 16]	; Break
-			, 	27: [shell32, 177]	; Continue
-			, 	28: [shell32, 28]	; Shutdown
-			, 	29: [imageres, 145]	; Process
-			, 	30: [DDORes, 2]		; Sound
-			, 	31: [regedit, 1]}	; Reg
-}
-
-If A_OSVersion in WIN_7,WIN_VISTA
-{
-	_s := Chr(8239)
-	IconFile := shell32
-	HelpIconQ := 24
-	HelpIconI := 222
-	WarnIcon := 78
-	HelpIconB := [shell32, 23]
-	NewIcon := [imageres, 2]
-	OpenIcon := [shell32, 45]
-	SaveIcon := [shell32, 258]
-	ExportIcon := [shell32, 68]
-	PreviewIcon := [shell32, 22]
-	OptionsIcon := [imageres, 109]
-	DonateIcon := [shell32, 28]
-	MouseIcon := [DDORes, 27]
-	TextIcon := [DDORes, 26]
-	SpecIcon := [DDORes, 1]
-	ControlIcon := [DDORes, 28]
-	PauseIcon := [shell32, 265]
-	PauseIconB := [psr, 2]
-	t_PauseIcon := [psr, 3]
-	WindowIcon := [shell32, 2]
-	ImageIcon := [shell32, 302]
-	RunIcon := [shell32, 24]
-	LoopIcon := [shell32, 238]
-	IfStIcon := [shell32, 165]
-	IEIcon := [shell32, 242]
-	RecordIcon := [psr, 1]
-	t_RecordIcon := [psr, 2]
-	PlayIcon := [shell32, 137]
-	t_PlayIcon := [shell32, 138]
-	TestRunIcon := [psr, 3]
-	RecStopIcon := [psr, 5]
-	RunTimerIcon := [miguiresource, 1]
-	PlusIcon := [shell32, 279]
-	CloseIcon := [shell32, 234]
-	DuplicateLIcon := [shell32, 278]
-	ImportIcon := [imageres, 176]
-	SaveLIcon := [shell32, 280]
-	ContextIcon := [shell32, 261]
-	RemoveIcon := [shell32, 131]
-	DuplicateIcon := [shell32, 54]
-	InsertIcon := [shell32, 146]
-	ApplyIcon := [urlmon, 0]
-	CopyIcon := [shell32, 134]
-	CutIcon := [shell32, 259]
-	PasteIcon := [shell32, 260]
-	UndoIcon := [msctf, 14]
-	RedoIcon := [comres, 4]
-	MoveUpIcon := [shell32, 246]
-	MoveDnIcon := [shell32, 247]
-	EditIcon := [comres, 6]
-	CommentIcon := [shell32, 133]
-	FindIcon := [shell32, 55]
-	ListVarsIcon := [shell32, 269]
-	ExitIcon := [imageres, 218]
-	RecentIcon := [shell32, 20]
-	ProgBIcon := [shell32, 249]
-	RecentFolder := A_AppData "\Microsoft\Windows\Recent"
-	LVIcons := {1 : [DDORes, 27]	; Text
-			, 	2 : [DDORes, 28]	; Mouse
-			, 	3 : [shell32, 266]	; Pause
-			, 	4 : [shell32, 239]	; Loop
-			, 	5 : [shell32, 25]	; Run
-			, 	6 : [shell32, 166]	; IfStatement
-			, 	7 : [shell32, 303]	; Image
+			, 	7 : [imageres, 68]	; Image
 			, 	8 : [shell32, 3]	; Window
 			, 	9 : [DDORes, 29]	; Control
 			, 	10: [shell32, 243]	; IE

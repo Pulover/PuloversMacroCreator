@@ -528,7 +528,7 @@ Gui, Add, Button, -Wrap ys xm+500 W25 H25 hwndTestRun vTestRun gTestRun
 	ILButton(TestRun, TestRunIcon[1] ":" TestRunIcon[2], 16, 16)
 Gui, Add, Button, -Wrap W25 H25 hwndRunTimer vRunTimer gRunTimer
 	ILButton(RunTimer, RunTimerIcon[1] ":" RunTimerIcon[2], 16, 16)
-Gui, Add, GroupBox, Section W350 H65 ys-9 xm+530
+Gui, Add, GroupBox, Section W355 H65 ys-9 xm+530
 Gui, Add, Text, -Wrap W25 H22 ym+5 xs+10 vAutoT, %w_Lang006%:
 Gui, Add, Text, -Wrap W25 H22 y+3 vManT, %w_Lang007%:
 Gui, Add, Hotkey, vAutoKey gSaveData W150 ym+2 xp+30, % LTrim(o_AutoKey[1], "#")
@@ -538,8 +538,8 @@ Gui, Add, Text, -Wrap W25 H22 y+13 xs+105 vAbortT, %w_Lang008%:
 Gui, Add, Hotkey,  yp-3 xp+30 vAbortKey W55, %AbortKey%
 Gui, Add, Checkbox, -Wrap Checked%PauseKey% yp+5 xp+60 vPauseKey gPauseKey R1, %w_Lang010%
 Gui, Add, Text, W2 H55 yp-33 x+5 0x11
-Gui, Add, Text, -Wrap yp+5 x+5 W85 H22 vRepeatT, %w_Lang011% (%t_Lang004%):
-Gui, Add, Edit, y+1 W80 R1 Number vReptC
+Gui, Add, Text, -Wrap yp+5 x+5 W90 H22 vRepeatT, %w_Lang011% (%t_Lang004%):
+Gui, Add, Edit, y+1 W90 R1 Number vReptC
 Gui, Add, UpDown, vTimesG 0x80 Range0-999999999, 1
 Gui, Add, Button, -Wrap hwndTabPlus vTabPlus gTabPlus ys+70 xm+500 W25 H25
 	ILButton(TabPlus, PlusIcon[1] ":" PlusIcon[2], 16, 16)
@@ -9682,62 +9682,62 @@ If AutoUpdate
 	Menu, HelpMenu, Check, %h_Lang004%
 
 ; Icons
-Menu, FileMenu, Icon, %f_Lang001%`t%_s%Ctrl+N, % NewIcon[1], % NewIcon[2]+1
-Menu, FileMenu, Icon, %f_Lang002%`t%_s%Ctrl+O, % OpenIcon[1], % OpenIcon[2]+1
-Menu, FileMenu, Icon, %f_Lang003%`t%_s%Ctrl+S, % SaveIcon[1], % SaveIcon[2]+1
-Menu, FileMenu, Icon, %f_Lang004%`t%_s%Ctrl+Shift+S, % SaveIcon[1], % SaveIcon[2]+1
-Menu, FileMenu, Icon, %f_Lang005%`t%_s%Ctrl+I, % ImportIcon[1], % ImportIcon[2]+1
-Menu, FileMenu, Icon, %f_Lang006%`t%_s%Ctrl+Alt+S, % SaveLIcon[1], % SaveLIcon[2]+1
-Menu, FileMenu, Icon, %f_Lang007%, % RecentIcon[1], % RecentIcon[2]+1
-Menu, FileMenu, Icon, %f_Lang008%`t%_s%Ctrl+E, % ExportIcon[1], % ExportIcon[2]+1
-Menu, FileMenu, Icon, %f_Lang009%`t%_s%Ctrl+P, % PreviewIcon[1], % PreviewIcon[2]+1
-Menu, FileMenu, Icon, %f_Lang010%`t%_s%Alt+F3, % ListVarsIcon[1], % ListVarsIcon[2]+1
-Menu, FileMenu, Icon, %f_Lang011%`t%_s%Alt+F4, % ExitIcon[1], % ExitIcon[2]+1
-Menu, InsertMenu, Icon, %i_Lang001%`t%_s%F2, % LVIcons[2][1], % LVIcons[2][2] ; Mouse
-Menu, InsertMenu, Icon, %i_Lang002%`t%_s%F3, % LVIcons[1][1], % LVIcons[1][2] ; Text
-Menu, InsertMenu, Icon, %i_Lang003%`t%_s%F4, % LVIcons[9][1], % LVIcons[9][2] ; ControlCmd
-Menu, InsertMenu, Icon, %i_Lang004%`t%_s%F5, % LVIcons[3][1], % LVIcons[3][2] ; Pause
-Menu, InsertMenu, Icon, %i_Lang005%`t%_s%F6, % LVIcons[8][1], % LVIcons[8][2] ; Window
-Menu, InsertMenu, Icon, %i_Lang006%`t%_s%F7, % LVIcons[7][1], % LVIcons[7][2] ; Image
-Menu, InsertMenu, Icon, %i_Lang007%`t%_s%F8, % LVIcons[5][1], % LVIcons[5][2] ; Run
-Menu, InsertMenu, Icon, %i_Lang008%`t%_s%F9, % LVIcons[4][1], % LVIcons[4][2] ; ComLoop
-Menu, InsertMenu, Icon, %i_Lang009%`t%_s%F10, % LVIcons[6][1], % LVIcons[6][2] ; IfSt
-Menu, InsertMenu, Icon, %i_Lang010%`t%_s%F11, % LVIcons[10][1], % LVIcons[10][2] ; IECom
-Menu, InsertMenu, Icon, %i_Lang011%`t%_s%F12, % LVIcons[13][1], % LVIcons[13][2] ; SendMsg
-Menu, InsertMenu, Icon, %i_Lang012%`t%_s%Shift+F3, % LVIcons[30][1], % LVIcons[30][2] ; Special
-Menu, EditMenu, Icon, %m_Lang004%`t%_s%Enter, % EditIcon[1], % EditIcon[2]+1
-Menu, EditMenu, Icon, %e_Lang001%`t%_s%Ctrl+D, % DuplicateIcon[1], % DuplicateIcon[2]+1
-Menu, EditMenu, Icon, %e_Lang003%`t%_s%Ctrl+F, % FindIcon[1], % FindIcon[2]+1
-Menu, EditMenu, Icon, %e_Lang002%`t%_s%Ctrl+L, % CommentIcon[1], % CommentIcon[2]+1
-Menu, EditMenu, Icon, %e_Lang005%`t%_s%Ctrl+Z, % UndoIcon[1], % UndoIcon[2]+1
-Menu, EditMenu, Icon, %e_Lang006%`t%_s%Ctrl+Y, % RedoIcon[1], % RedoIcon[2]+1
-Menu, EditMenu, Icon, %e_Lang007%`t%_s%Ctrl+X, % CutIcon[1], % CutIcon[2]+1
-Menu, EditMenu, Icon, %e_Lang008%`t%_s%Ctrl+C, % CopyIcon[1], % CopyIcon[2]+1
-Menu, EditMenu, Icon, %e_Lang009%`t%_s%Ctrl+V, % PasteIcon[1], % PasteIcon[2]+1
-Menu, EditMenu, Icon, %e_Lang010%`t%_s%Delete, % RemoveIcon[1], % RemoveIcon[2]+1
-Menu, EditMenu, Icon, %e_Lang013%`t%_s%Insert, % InsertIcon[1], % InsertIcon[2]+1
-Menu, EditMenu, Icon, %e_Lang011%`t%_s%Ctrl+PgUp, % MoveUpIcon[1], % MoveUpIcon[2]+1
-Menu, EditMenu, Icon, %e_Lang012%`t%_s%Ctrl+PgDn, % MoveDnIcon[1], % MoveDnIcon[2]+1
-Menu, MacroMenu, Icon, %r_Lang001%`t%_s%Ctrl+R, % RecordIcon[1], % RecordIcon[2]+1
-Menu, MacroMenu, Icon, %r_Lang002%`t%_s%Ctrl+Enter, % PlayIcon[1], % PlayIcon[2]+1
-Menu, MacroMenu, Icon, %r_Lang003%`t%_s%Ctrl+Shift+Enter, % TestRunIcon[1], % TestRunIcon[2]+1
-Menu, MacroMenu, Icon, %r_Lang004%`t%_s%Ctrl+Shift+T, % RunTimerIcon[1], % RunTimerIcon[2]+1
-Menu, MacroMenu, Icon, %r_Lang005%`t%_s%Ctrl+T, % PlusIcon[1], % PlusIcon[2]+1
-Menu, MacroMenu, Icon, %r_Lang006%`t%_s%Ctrl+W, % CloseIcon[1], % CloseIcon[2]+1
-Menu, MacroMenu, Icon, %r_Lang007%`t%_s%Ctrl+H, % ContextIcon[1], % ContextIcon[2]+1
-Menu, OptionsMenu, Icon, %o_Lang001%`t%_s%Ctrl+G, % OptionsIcon[1], % OptionsIcon[2]+1
-Menu, HelpMenu, Icon, %m_Lang009%`t%_s%F1, % HelpIconB[1], % HelpIconB[2]+1
-Menu, DonationMenu, Icon, %p_Lang001%, % DonateIcon[1], % DonateIcon[2]+1
-Menu, Tray, Icon, %w_Lang005%, % PlayIcon[1], % PlayIcon[2]+1
-Menu, Tray, Icon, %w_Lang008%, % RecStopIcon[1], % RecStopIcon[2]+1
-Menu, Tray, Icon, %w_Lang004%, % RecordIcon[1], % RecordIcon[2]+1
-Menu, Tray, Icon, %w_Lang002%, % PreviewIcon[1], % PreviewIcon[2]+1
-Menu, Tray, Icon, %f_Lang010%, % ListVarsIcon[1], % ListVarsIcon[2]+1
-Menu, Tray, Icon, %f_Lang001%, % NewIcon[1], % NewIcon[2]+1
-Menu, Tray, Icon, %f_Lang002%, % OpenIcon[1], % OpenIcon[2]+1
-Menu, Tray, Icon, %f_Lang003%, % SaveIcon[1], % SaveIcon[2]+1
-Menu, Tray, Icon, %w_Lang003%, % OptionsIcon[1], % OptionsIcon[2]+1
-Menu, Tray, Icon, %f_Lang011%, % ExitIcon[1], % ExitIcon[2]+1
+Try Menu, FileMenu, Icon, %f_Lang001%`t%_s%Ctrl+N, % NewIcon[1], % NewIcon[2]+1
+Try Menu, FileMenu, Icon, %f_Lang002%`t%_s%Ctrl+O, % OpenIcon[1], % OpenIcon[2]+1
+Try Menu, FileMenu, Icon, %f_Lang003%`t%_s%Ctrl+S, % SaveIcon[1], % SaveIcon[2]+1
+Try Menu, FileMenu, Icon, %f_Lang004%`t%_s%Ctrl+Shift+S, % SaveIcon[1], % SaveIcon[2]+1
+Try Menu, FileMenu, Icon, %f_Lang005%`t%_s%Ctrl+I, % ImportIcon[1], % ImportIcon[2]+1
+Try Menu, FileMenu, Icon, %f_Lang006%`t%_s%Ctrl+Alt+S, % SaveLIcon[1], % SaveLIcon[2]+1
+Try Menu, FileMenu, Icon, %f_Lang007%, % RecentIcon[1], % RecentIcon[2]+1
+Try Menu, FileMenu, Icon, %f_Lang008%`t%_s%Ctrl+E, % ExportIcon[1], % ExportIcon[2]+1
+Try Menu, FileMenu, Icon, %f_Lang009%`t%_s%Ctrl+P, % PreviewIcon[1], % PreviewIcon[2]+1
+Try Menu, FileMenu, Icon, %f_Lang010%`t%_s%Alt+F3, % ListVarsIcon[1], % ListVarsIcon[2]+1
+Try Menu, FileMenu, Icon, %f_Lang011%`t%_s%Alt+F4, % ExitIcon[1], % ExitIcon[2]+1
+Try Menu, InsertMenu, Icon, %i_Lang001%`t%_s%F2, % LVIcons[2][1], % LVIcons[2][2] ; Mouse
+Try Menu, InsertMenu, Icon, %i_Lang002%`t%_s%F3, % LVIcons[1][1], % LVIcons[1][2] ; Text
+Try Menu, InsertMenu, Icon, %i_Lang003%`t%_s%F4, % LVIcons[9][1], % LVIcons[9][2] ; ControlCmd
+Try Menu, InsertMenu, Icon, %i_Lang004%`t%_s%F5, % LVIcons[3][1], % LVIcons[3][2] ; Pause
+Try Menu, InsertMenu, Icon, %i_Lang005%`t%_s%F6, % LVIcons[8][1], % LVIcons[8][2] ; Window
+Try Menu, InsertMenu, Icon, %i_Lang006%`t%_s%F7, % LVIcons[7][1], % LVIcons[7][2] ; Image
+Try Menu, InsertMenu, Icon, %i_Lang007%`t%_s%F8, % LVIcons[5][1], % LVIcons[5][2] ; Run
+Try Menu, InsertMenu, Icon, %i_Lang008%`t%_s%F9, % LVIcons[4][1], % LVIcons[4][2] ; ComLoop
+Try Menu, InsertMenu, Icon, %i_Lang009%`t%_s%F10, % LVIcons[6][1], % LVIcons[6][2] ; IfSt
+Try Menu, InsertMenu, Icon, %i_Lang010%`t%_s%F11, % LVIcons[10][1], % LVIcons[10][2] ; IECom
+Try Menu, InsertMenu, Icon, %i_Lang011%`t%_s%F12, % LVIcons[13][1], % LVIcons[13][2] ; SendMsg
+Try Menu, InsertMenu, Icon, %i_Lang012%`t%_s%Shift+F3, % LVIcons[30][1], % LVIcons[30][2] ; Special
+Try Menu, EditMenu, Icon, %m_Lang004%`t%_s%Enter, % EditIcon[1], % EditIcon[2]+1
+Try Menu, EditMenu, Icon, %e_Lang001%`t%_s%Ctrl+D, % DuplicateIcon[1], % DuplicateIcon[2]+1
+Try Menu, EditMenu, Icon, %e_Lang003%`t%_s%Ctrl+F, % FindIcon[1], % FindIcon[2]+1
+Try Menu, EditMenu, Icon, %e_Lang002%`t%_s%Ctrl+L, % CommentIcon[1], % CommentIcon[2]+1
+Try Menu, EditMenu, Icon, %e_Lang005%`t%_s%Ctrl+Z, % UndoIcon[1], % UndoIcon[2]+1
+Try Menu, EditMenu, Icon, %e_Lang006%`t%_s%Ctrl+Y, % RedoIcon[1], % RedoIcon[2]+1
+Try Menu, EditMenu, Icon, %e_Lang007%`t%_s%Ctrl+X, % CutIcon[1], % CutIcon[2]+1
+Try Menu, EditMenu, Icon, %e_Lang008%`t%_s%Ctrl+C, % CopyIcon[1], % CopyIcon[2]+1
+Try Menu, EditMenu, Icon, %e_Lang009%`t%_s%Ctrl+V, % PasteIcon[1], % PasteIcon[2]+1
+Try Menu, EditMenu, Icon, %e_Lang010%`t%_s%Delete, % RemoveIcon[1], % RemoveIcon[2]+1
+Try Menu, EditMenu, Icon, %e_Lang013%`t%_s%Insert, % InsertIcon[1], % InsertIcon[2]+1
+Try Menu, EditMenu, Icon, %e_Lang011%`t%_s%Ctrl+PgUp, % MoveUpIcon[1], % MoveUpIcon[2]+1
+Try Menu, EditMenu, Icon, %e_Lang012%`t%_s%Ctrl+PgDn, % MoveDnIcon[1], % MoveDnIcon[2]+1
+Try Menu, MacroMenu, Icon, %r_Lang001%`t%_s%Ctrl+R, % RecordIcon[1], % RecordIcon[2]+1
+Try Menu, MacroMenu, Icon, %r_Lang002%`t%_s%Ctrl+Enter, % PlayIcon[1], % PlayIcon[2]+1
+Try Menu, MacroMenu, Icon, %r_Lang003%`t%_s%Ctrl+Shift+Enter, % TestRunIcon[1], % TestRunIcon[2]+1
+Try Menu, MacroMenu, Icon, %r_Lang004%`t%_s%Ctrl+Shift+T, % RunTimerIcon[1], % RunTimerIcon[2]+1
+Try Menu, MacroMenu, Icon, %r_Lang005%`t%_s%Ctrl+T, % PlusIcon[1], % PlusIcon[2]+1
+Try Menu, MacroMenu, Icon, %r_Lang006%`t%_s%Ctrl+W, % CloseIcon[1], % CloseIcon[2]+1
+Try Menu, MacroMenu, Icon, %r_Lang007%`t%_s%Ctrl+H, % ContextIcon[1], % ContextIcon[2]+1
+Try Menu, OptionsMenu, Icon, %o_Lang001%`t%_s%Ctrl+G, % OptionsIcon[1], % OptionsIcon[2]+1
+Try Menu, HelpMenu, Icon, %m_Lang009%`t%_s%F1, % HelpIconB[1], % HelpIconB[2]+1
+Try Menu, DonationMenu, Icon, %p_Lang001%, % DonateIcon[1], % DonateIcon[2]+1
+Try Menu, Tray, Icon, %w_Lang005%, % PlayIcon[1], % PlayIcon[2]+1
+Try Menu, Tray, Icon, %w_Lang008%, % RecStopIcon[1], % RecStopIcon[2]+1
+Try Menu, Tray, Icon, %w_Lang004%, % RecordIcon[1], % RecordIcon[2]+1
+Try Menu, Tray, Icon, %w_Lang002%, % PreviewIcon[1], % PreviewIcon[2]+1
+Try Menu, Tray, Icon, %f_Lang010%, % ListVarsIcon[1], % ListVarsIcon[2]+1
+Try Menu, Tray, Icon, %f_Lang001%, % NewIcon[1], % NewIcon[2]+1
+Try Menu, Tray, Icon, %f_Lang002%, % OpenIcon[1], % OpenIcon[2]+1
+Try Menu, Tray, Icon, %f_Lang003%, % SaveIcon[1], % SaveIcon[2]+1
+Try Menu, Tray, Icon, %w_Lang003%, % OptionsIcon[1], % OptionsIcon[2]+1
+Try Menu, Tray, Icon, %f_Lang011%, % ExitIcon[1], % ExitIcon[2]+1
 return
 
 ;##### Languages: #####

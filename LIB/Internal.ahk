@@ -489,7 +489,7 @@ ToggleIcon()
 	static IconFile, IconNumber
 	If !A_IsPaused
 		IconFile := A_IconFile, IconNumber := A_IconNumber
-	Menu, Tray, Icon, % (A_IsPaused = 0) ? t_PauseIcon[1] : IconFile, % (A_IsPaused = 0) ? t_PauseIcon[2] : IconNumber
+	Try Menu, Tray, Icon, % (A_IsPaused = 0) ? t_PauseIcon[1] : IconFile, % (A_IsPaused = 0) ? t_PauseIcon[2] : IconNumber
 	return A_IsPaused
 }
 

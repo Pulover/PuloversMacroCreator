@@ -14,7 +14,7 @@
 		GoSub, RowCheck
 	}
 	Pause, Off
-	Menu, Tray, Icon, % t_PlayIcon[1], % t_PlayIcon[2]
+	Try Menu, Tray, Icon, % t_PlayIcon[1], % t_PlayIcon[2]
 	Menu, Tray, Default, %w_Lang008%
 	CurrentRange := m_ListCount
 	If (ShowProgBar = 1)
@@ -26,7 +26,7 @@
 		{
 			If StopIt
 			{
-				Menu, Tray, Icon , %DefaultIcon%, 1
+				Try Menu, Tray, Icon , %DefaultIcon%, 1
 				Menu, Tray, Default, %w_Lang005%
 				break
 			}
@@ -368,7 +368,7 @@
 				{
 					If StopIt
 					{
-						Menu, Tray, Icon , %DefaultIcon%, 1
+						Try Menu, Tray, Icon , %DefaultIcon%, 1
 						Menu, Tray, Default, %w_Lang005%
 						break 3
 					}
@@ -398,7 +398,7 @@
 	}
 	Progress, Off
 	CurrentRange := ""
-	Menu, Tray, Icon , %DefaultIcon%, 1
+	Try Menu, Tray, Icon , %DefaultIcon%, 1
 	Menu, Tray, Default, %w_Lang005%
 	If (CloseAfterPlay)
 		GoSub, Exit
