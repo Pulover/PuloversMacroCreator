@@ -6,7 +6,7 @@
 ; rodolfoub@gmail.com
 ; Home: http://www.autohotkey.net/~Pulover
 ; Forum: http://www.autohotkey.com/board/topic/79763-macro-creator
-; Version: 3.7.1
+; Version: 3.7.2
 ; Release Date: May, 2013
 ; AutoHotkey Version: 1.1.09.04
 ; GNU General Public License 3.0 or higher
@@ -70,7 +70,7 @@ DefaultIcon := (A_IsCompiled) ? A_ScriptFullPath
 			:  (FileExist("Images\PMC3_48.ico") ? "Images\PMC3_48.ico" : A_AhkPath)
 Menu, Tray, Icon, %DefaultIcon%, 1, 1
 
-CurrentVersion := "3.7.1"
+CurrentVersion := "3.7.2"
 ReleaseDate := "May, 2013"
 
 ;##### Ini File Read #####
@@ -802,7 +802,7 @@ If !DontShowRec
 	Gui, 26:Show,, %AppName%
 }
 If (ShowStep = 1)
-	Traytip, %AppName%, %RecKey% %d_Lang026%.`n%RecNewKey% %d_Lang030%.
+	Traytip, %AppName%, %RecKey% %d_Lang026%.`n%RecNewKey% %d_Lang030%.,,1
 If (OnScCtrl)
 	GoSub, OnScControls
 return
@@ -847,7 +847,7 @@ If (Record := !Record)
 		SetTimer, KeyboardRecord, -100
 	Tooltip
 	If (ShowStep = 1)
-		Traytip, %AppName%, Macro%A_List%: %d_Lang028% %RecKey% %d_Lang029%.
+		Traytip, %AppName%, Macro%A_List%: %d_Lang028% %RecKey% %d_Lang029%.,,1
 	Menu, Tray, Icon, % t_RecordIcon[1], % t_RecordIcon[2]
 	Menu, Tray, Default, %w_Lang008%
 	ToggleButtonIcon(OSRec, RecStopIcon)
@@ -862,7 +862,7 @@ Else
 	ActivateHotKeys(1)
 	If ShowStep = 1
 		Traytip, %AppName%, % d_Lang027
-		. ".`nMacro" A_List ": " o_AutoKey[A_List]
+		. ".`nMacro" A_List ": " o_AutoKey[A_List],,1
 	ToggleButtonIcon(OSRec, RecordIcon)
 	return
 }
@@ -6588,7 +6588,7 @@ If (ActiveKeys = "Error")
 }
 If !ActiveKeys
 {
-	TrayTip, %AppName%, %d_Lang009%
+	TrayTip, %AppName%, %d_Lang009%,,3
 	return
 }
 If !DontShowPb
@@ -8183,12 +8183,12 @@ If CheckDuplicates(AbortKey, o_ManKey, o_AutoKey*)
 {
 	ActiveKeys := "Error"
 	If ShowStep = 1
-		Traytip, %AppName%, %d_Lang032%
+		Traytip, %AppName%, %d_Lang032%,,3
 	return
 }
 ActiveKeys := ActivateHotkeys(0, 1, 1, 1)
 If ((ActiveKeys > 0) && (ShowStep = 1))
-	Traytip, %AppName%, % ActiveKeys " " d_Lang025 ((IfDirectContext <> "None") ? "`n[" RegExReplace(t_Lang009, ".*", "$u0") "]" : "")
+	Traytip, %AppName%, % ActiveKeys " " d_Lang025 ((IfDirectContext <> "None") ? "`n[" RegExReplace(t_Lang009, ".*", "$u0") "]" : ""),,1
 Menu, Tray, Tip, %AppName%`n%ActiveKeys% %d_Lang025%
 return
 
@@ -9570,8 +9570,12 @@ Menu, InsertMenu, Add, %i_Lang011%`t%_s%F12, SendMsg
 Menu, InsertMenu, Add, %i_Lang012%`t%_s%Shift+F3, Special
 
 TypesMenu := "Win`nFile`nString"
-Loop, 40
+Loop
+{
+	If !(cType%A_Index%)
+		break
 	TypesMenu .= "`n" cType%A_Index%
+}
 Sort, TypesMenu
 Loop, Parse, TypesMenu, `n
 	Menu, SelCmdMenu, Add, %A_LoopField%, SelectCmd
