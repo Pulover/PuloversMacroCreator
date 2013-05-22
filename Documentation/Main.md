@@ -35,7 +35,7 @@
 **Play**: Activates [Playback](p3-Playback.html) Hotkeys.  
 
 **Play Current Macro**: Runs currently selected Macro immediately without Hotkeys.  
-*Note*: An *AutoPlay* feature is available via command line with the -a parameter: add -a or -a*N* (where *N* is the number of the Macro to run) as a parameter to run a Macro on program start up. The example below would execute the second Macro in the project file.
+*Note*: An *AutoPlay* feature is available via command line with the -a parameter: add -a or -a*N* (where *N* is the number of the Macro to run) as a parameter to run a Macro on program start-up. The example below would execute the second Macro in the project file.
 
 > MacroCreator.exe SavedFile.pmc -a2
 
@@ -172,11 +172,11 @@ Macro Creator supports command line parameters. The format is:
 
 **Parameters**:  
 
--p -- *Play*: Activate Playback Hotkeys on program start up.
+-p -- *Play*: Activate Playback Hotkeys on program start-up.
 
 > MacroCreator.exe SavedFile.pmc -p
 
--a or -a*N* -- *AutoPlay*: Runs a Macro on program start up. *N* is the number of the Macro to run. The example below would execute the second Macro in the project file.
+-a or -a*N* -- *AutoPlay*: Runs a Macro on program start-up. *N* is the number of the Macro to run. The example below would execute the second Macro in the project file.
 
 > MacroCreator.exe SavedFile.pmc -a2
 
@@ -188,13 +188,17 @@ Macro Creator supports command line parameters. The format is:
 
 > MacroCreator.exe SavedFile.pmc -a -c
 
--h -- *Hide*: Hide Main Window on program start up (right-click the tray icon to show it).
+-h -- *Hide*: Hide Main Window on program start-up (right-click the tray icon to show it).
 
 > MacroCreator.exe SavedFile.pmc -h
 
 -s or -s*N* -- *Silent*: Combines -a, -h and -c parameters.
 
 > MacroCreator.exe SavedFile.pmc -s3
+
+-b -- *Toolbar*: Shows Controls Toolbar on start-up.
+
+> MacroCreator.exe -b
 
 You can load multiple files with multiple parameters.
 

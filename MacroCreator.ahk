@@ -563,17 +563,8 @@ ImageListID := IL_Create(LVIcons.MaxIndex())
 LV_SetImageList(ImageListID)
 Loop, % LVIcons.MaxIndex()
 	IL_Add(ImageListID, LVIcons[A_Index][1], LVIcons[A_Index][2])
-Critical
-LV_ModifyCol(1, Col_1)	; Index
-LV_ModifyCol(2, Col_2)	; Action
-LV_ModifyCol(3, Col_3)	; Details
-LV_ModifyCol(4, Col_4)	; Repeat
-LV_ModifyCol(5, Col_5)	; Delay
-LV_ModifyCol(6, Col_6)	; Type
-LV_ModifyCol(7, Col_7)	; Control
-LV_ModifyCol(8, Col_8)	; Window
-LV_ModifyCol(9, Col_9)	; Comment
-Critical, Off
+Loop, 9
+	LV_ModifyCol(A_Index, Col_%A_Index%)
 Gui, Tab
 Gui, Add, UpDown, ys+23 x+4 gOrder vOrder -16 Range0-1, 0
 Gui, Add, Button, -Wrap W22 H25 hwndCut vCut gCutRows
@@ -630,8 +621,6 @@ OnMessage(WM_ACTIVATE, "WinCheck")
 OnMessage(WM_COPYDATA, "Receive_Params")
 OnMessage(WM_HELP, "CmdHelp")
 OnMessage(0x404, "AHK_NOTIFYICON")
-; OnMessage(WM_NOTIFY, "LV_ColorsMessage")
-; LV_Colors.OnMessage(ShowLoopIfMark)
 If KeepHkOn
 	Menu, Tray, Check, %w_Lang014%
 
@@ -657,6 +646,8 @@ If %0%
 			TimerPlay := 1, DelayX := (t_Timer1) ? t_Timer1 : 250
 		If (%A_Index% = "-c")
 			CloseAfterPlay := 1
+		If (%A_Index% = "-b")
+			ShowCtrlBar := 1
 	}
 	Param := RTrim(Param, "`n")
 	If !MultInst && (TargetID := WinExist("ahk_exe " A_ScriptFullPath))
@@ -694,6 +685,8 @@ If (HideWin)
 	Menu, Tray, Rename, %y_Lang001%, %y_Lang002%
 	WinActivate, %LastFoundWin%
 }
+If (ShowCtrlBar)
+	GoSub, OnScControls
 If (PlayHK)
 	GoSub, PlayStart
 If ((AutoPlay) || (TimerPlay))
@@ -1011,8 +1004,8 @@ If (Moves = 1) && (MouseMove := MoveCheck())
 }
 If !GetKeyState(RelKey, Toggle)
 {
-	RelHold = 0
-	Relative = 
+	RelHold := 0
+	Relative := ""
 }
 If MScroll = 1
 {
@@ -1025,7 +1018,7 @@ If MScroll = 1
 		Action := Action5
 		Type := cType3
 		GoSub, MouseInput
-		Up = 0
+		Up := 0
 	}
 	If (Dn > 0 && A_TimeIdle > 50)
 	{
@@ -1036,7 +1029,7 @@ If MScroll = 1
 		Action := Action6
 		Type := cType3
 		GoSub, MouseInput
-		Dn = 0
+		Dn := 0
 	}
 }
 return
@@ -6421,7 +6414,7 @@ Else
 return
 
 TabControl:
-Gui, Submit, NoHide
+Gui, 24:Submit, NoHide
 If (TabControl = 2)
 {
 	If (ComCLSID = "InternetExplorer.Application")
@@ -9037,15 +9030,8 @@ ColSizes := "65,135,200,50,40,85,100,100,60"
 Loop, Parse, ColSizes, `,
 	Col_%A_Index% := A_LoopField
 Gui, 1:Default
-LV_ModifyCol(1, Col_1)	; Index
-LV_ModifyCol(2, Col_2)	; Action
-LV_ModifyCol(3, Col_3)	; Details
-LV_ModifyCol(4, Col_4)	; Repeat
-LV_ModifyCol(5, Col_5)	; Delay
-LV_ModifyCol(6, Col_6)	; Type
-LV_ModifyCol(7, Col_7)	; Control
-LV_ModifyCol(8, Col_8)	; Window
-LV_ModifyCol(9, Col_9)	; Comment
+Loop, 9
+	LV_ModifyCol(A_Index, Col_%A_Index%)
 return
 
 DefaultMod:
@@ -9816,15 +9802,15 @@ Else
 }
 return
 
-#Include LIB\Hotkeys.ahk
-#Include LIB\Internal.ahk
-#Include LIB\Recording.ahk
-#Include LIB\Playback.ahk
-#Include LIB\Export.ahk
-#Include LIB\Class_PMC.ahk
-#Include *i LIB\Gdip.ahk
-#Include *i LIB\Eval.ahk
-#Include *i LIB\Class_LV_Colors.ahk
+#Include <Hotkeys>
+#Include <Internal>
+#Include <Recording>
+#Include <Playback>
+#Include <Export>
+#Include <Class_PMC>
+#Include *i <Gdip>
+#Include *i <Eval>
+#Include *i <Class_LV_Colors>
 #SingleInstance Off
 
 #Include Lang\En.lang

@@ -31,10 +31,16 @@ T800 for [Html Help utils](http://www.autohotkey.com/board/topic/17984-html-help
 
 # Change Log
 
+## Version 3.7.2
+
+* Added *Toolbar* command line parameter: -b (Shows Controls Toolbar on start-up).
+* Improved *COM Interface* to support self-references in parameters.
+* Fixed error on start-up on Windows Vista.
+
 ## Version 3.7.1
 
 * Added selected Macro hotkey to *Preview Window* status bar.
-* Fixed error on start up on Windows XP.
+* Fixed error on start-up on Windows XP.
 * Fixed missing/wrong icons on Windows 8.
 * Fixed wrong default values set to Export Options on first run.
 * Fixed *Save Macro* dialog being displayed for unchanged projects.
@@ -138,9 +144,9 @@ T800 for [Html Help utils](http://www.autohotkey.com/board/topic/17984-html-help
 
 ## Version 3.5.2
 
-* Added *Play* command line parameter: -p (Activate Hotkeys on start up).
-* Added *AutoPlay* command line parameter: -a*N* (*N* = Number of the Macro to run on start up).
-* Added *Hide* command line parameter: -h (Hide Main Window on start up).
+* Added *Play* command line parameter: -p (Activate Hotkeys on start-up).
+* Added *AutoPlay* command line parameter: -a*N* (*N* = Number of the Macro to run on start-up).
+* Added *Hide* command line parameter: -h (Hide Main Window on start-up).
 * Fixed an issue when resizing columns.
 * Fixed a syntax error in recorded Click commands.
 
