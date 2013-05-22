@@ -37,7 +37,7 @@ COMInterface(String, Ptr="", ByRef OutputVar="", CLSID="InternetExplorer.Applica
 	
 	While, RegExMatch(String, "U)\[(.*)\]", _Block%A_Index%)
 		String := RegExReplace(String, "U)\[(.*)\]", "&_Block" A_Index, "", 1)
-
+	
 	ComSet := Ptr
 	
 	Loop, Parse, String, .&
@@ -62,6 +62,16 @@ COMInterface(String, Ptr="", ByRef OutputVar="", CLSID="InternetExplorer.Applica
 						Array[A_Index-1] := (!Var) ? 0 : Var
 					}
 					Params.Insert(Array)
+				}
+				Else If RegExMatch(A_LoopField, "^\w+\.(.*)", NestedString)
+				{
+					Try
+						Params.Insert(COMInterface(NestedString1, Ptr, "", CLSID))
+					Catch
+					{
+						Var := A_LoopField
+						Params.Insert((!Var) ? 0 : Var)
+					}
 				}
 				Else
 				{
@@ -90,39 +100,32 @@ COMInterface(String, Ptr="", ByRef OutputVar="", CLSID="InternetExplorer.Applica
 		{
 			If (Value <> "")
 				ComSet[Obj] := (Value = """""") ? "" : Value
-			Else If IsByRef(OutputVar)
+			Else
 			{
 				If ((Par <> "") && (Index <> ""))
 				{
-					OutputVar := ComSet[Obj](Params*)[%Index%1]
+					If IsByRef(OutputVar)
+						OutputVar := ComSet[Obj](Params*)[%Index%1]
 					return ComSet[Obj](Params*)[%Index%1]
 				}
 				Else If (Par <> "")
 				{
-					OutputVar := ComSet[Obj](Params*)
+					If IsByRef(OutputVar)
+						OutputVar := ComSet[Obj](Params*)
 					return ComSet[Obj](Params*)
 				}
 				Else If (Index <> "")
 				{
-					OutputVar := ComSet[Obj][%Index%1]
+					If IsByRef(OutputVar)
+						OutputVar := ComSet[Obj][%Index%1]
 					return ComSet[Obj][%Index%1]
 				}
 				Else
 				{
-					OutputVar := ComSet[Obj]
+					If IsByRef(OutputVar)
+						OutputVar := ComSet[Obj]
 					return ComSet[Obj]
 				}
-			}
-			Else
-			{
-				If ((Par <> "") && (Index <> ""))
-					ComSet[Obj](Params*)[%Index%1]
-				Else If (Par <> "")
-					ComSet[Obj](Params*)
-				Else If (Index <> "")
-					ComSet[Obj][%Index%1]
-				Else
-					ComSet[Obj]
 			}
 		}
 	}

@@ -90,6 +90,10 @@ You can also export the Macro to an AutoHotkey script and run it using Window's 
 
 > MacroCreator.exe SavedFile.pmc -s3
 
+-b -- *Toolbar*: Shows Controls Toolbar on start-up.
+
+> MacroCreator.exe -b
+
 You can load multiple files with multiple parameters.
 
 > MacroCreator.exe File1.pmc File2.pmc File3.pmc -h -p -a3

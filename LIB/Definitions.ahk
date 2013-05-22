@@ -390,9 +390,9 @@ ContHTitle := {	2: ["p6-Preview"]
 			,	23: ["Commands/Control"]
 			,	24: ["Commands/Internet_Explorer", "Commands/COM_Interface"] }
 
-KeyNameRep :=
+KeyNameRep := "
 (Join,
-"LControl|Left Control
+LControl|Left Control
 RControl|Right Control
 LAlt|Left Alt
 RAlt|Right Alt
@@ -415,22 +415,22 @@ Num Sub|Num -
 Num Ins|Num Insert
 Num PgDn|Num Page Down
 Num PgUp|Num Page Up
-Num Del|Num Delete"
-)
-CtrlCmdList :=
+Num Del|Num Delete
+)"
+CtrlCmdList := "
 (Join|
-"Control|
+Control|
 ControlFocus
 ControlMove
 ControlSetText
 ControlGet
 ControlGetText
 ControlGetFocus
-ControlGetPos"
-)
-CtrlCmd :=
+ControlGetPos
+)"
+CtrlCmd := "
 (Join|
-"Check|
+Check|
 Uncheck
 Enable
 Disable
@@ -446,11 +446,11 @@ Add
 Delete
 Choose
 ChooseString
-EditPaste"
-)
-CtrlGetCmd :=
+EditPaste
+)"
+CtrlGetCmd := "
 (Join|
-"List|
+List|
 Checked
 Enabled
 Visible
@@ -464,11 +464,11 @@ Line
 Selected
 Style
 ExStyle
-Hwnd"
-)
-WinList :=
+Hwnd
+)"
+WinList := "
 (
-"WinSet = WinTitle, WinText, ExcludeTitle, ExcludeText
+WinSet = WinTitle, WinText, ExcludeTitle, ExcludeText
 WinActivate = WinTitle, WinText, ExcludeTitle, ExcludeText
 WinActivateBottom = WinTitle, WinText, ExcludeTitle, ExcludeText
 WinWait = WinTitle, WinText, ExcludeTitle, ExcludeText
@@ -490,8 +490,8 @@ WinGet = WinTitle, WinText, ExcludeTitle, ExcludeText
 WinGetTitle = WinTitle, WinText, ExcludeTitle, ExcludeText
 WinGetClass = WinTitle, WinText, ExcludeTitle, ExcludeText
 WinGetText = WinTitle, WinText, ExcludeTitle, ExcludeText
-WinGetPos = WinTitle, WinText, ExcludeTitle, ExcludeText"
-)
+WinGetPos = WinTitle, WinText, ExcludeTitle, ExcludeText
+)"
 
 Loop, Parse, WinList, `n
 {
@@ -507,9 +507,9 @@ Loop, Parse, WinList, `n
 }
 wcmd_All := "Title, Text, ExclTitle, ExclText"
 
-WinCmd :=
+WinCmd := "
 (Join|
-"AlwaysOnTop|
+AlwaysOnTop|
 Bottom
 Top
 Disable
@@ -519,11 +519,11 @@ Style
 ExStyle
 Region
 Transparent
-TransColor"
-)
-WinGetCmd :=
+TransColor
+)"
+WinGetCmd := "
 (Join|
-"ID|
+ID|
 IDLast
 PID
 ProcessName
@@ -536,11 +536,11 @@ ControlListHwnd
 Transparent
 TransColor
 Style
-ExStyle"
-)
-IfCmd :=
+ExStyle
+)"
+IfCmd := "
 (
-"If Window Active|IfWinActive,
+If Window Active|IfWinActive,
 If Window Not Active|IfWinNotActive, 
 If Window Exist|IfWinExist, 
 If Window Not Exist|IfWinNotExist, 
@@ -554,8 +554,8 @@ If String Contains|IfInString,
 If String Not Contains|IfNotInString, 
 If Message Box|IfMsgBox, 
 Compare Variables|If
-Evaluate Expression|Expression"
-)
+Evaluate Expression|Expression
+)"
 Loop, Parse, IfCmd, `n
 {
 	Count := A_index
@@ -573,9 +573,9 @@ Loop, Parse, IfCmd, `n
 		IfList .= "$"
 }
 
-IECmdList := 
+IECmdList := "
 (Join|
-"Navigate|
+Navigate|
 Value
 Focus
 Click
@@ -598,8 +598,8 @@ Checked
 Type
 Width
 Height
-Length"
-)
+Length
+)"
 
 SetOnlyList := "GoHome,GoBack,GoForward,GoSearch,Refresh,Stop,Quit
 				,Navigate,Navigate2,Focus,Click,Submit"
@@ -609,9 +609,9 @@ NoValueList := "GoHome,GoBack,GoForward,GoSearch,Refresh,Stop,Quit
 NoElemList := "Navigate,Navigate2,GoHome,GoBack,GoForward,GoSearch,Refresh,Stop,Quit
 				,LocationName,LocationURL"
 
-MethodList :=
+MethodList := "
 (Join,
-"ClientToWindow
+ClientToWindow
 ExecWB
 Focus
 Click
@@ -629,11 +629,11 @@ Quit
 Refresh
 Refresh2
 ShowBrowserBar
-Stop"
-)
-ProperList :=
+Stop
+)"
+ProperList := "
 (Join,
-"AddressBar
+AddressBar
 FullScreen
 Application
 Busy
@@ -671,11 +671,11 @@ Value
 InnerText
 InnerHTML
 SelectedIndex
-Checked"
-)
-CLSList := 
+Checked
+)"
+CLSList := " 
 (Join|
-"InternetExplorer.Application|
+InternetExplorer.Application|
 Excel.Application
 Word.Application
 Outlook.Application
@@ -683,12 +683,12 @@ PowerPoint.Application
 SAPI.SpVoice
 Schedule.Service
 ScriptControl
-XStandard.Zip"
-)
+XStandard.Zip
+)"
 
-FileCmd :=
+FileCmd := "
 (
-"Run, Target, WorkingDir, Max|Min|Hide|UseErrorLevel, OutputVarPID
+Run, Target, WorkingDir, Max|Min|Hide|UseErrorLevel, OutputVarPID
 RunWait, Target, WorkingDir, Max|Min|Hide|UseErrorLevel, OutputVarPID
 RunAs, User, Password, Domain
 Process, Cmd, PID-or-Name, Param3
@@ -781,8 +781,8 @@ UrlDownloadToFile, URL, Filename
 SendLevel, Level
 Pause
 Return
-ExitApp"
-)
+ExitApp
+)"
 Loop, Parse, FileCmd, `n
 {
 	Loop, Parse, A_LoopField, `,,%A_Space%
@@ -802,7 +802,7 @@ Loop, Parse, FileCmd, `n
 
 ;##### Functions: #####
 
-BuiltinFuncList =
+BuiltinFuncList := "
 (Join$
 Abs
 ACos
@@ -865,10 +865,10 @@ Trim
 VarSetCapacity
 WinActive
 WinExist
-)
+)"
 ;##### Messages: #####
 
-MsgList =
+MsgList := "
 (
 WM_NULL = 0x00
 WM_CREATE = 0x01
@@ -1077,7 +1077,7 @@ WM_DDE_EXECUTE = 0x3E8
 WM_DDE_LAST = 0x3E8
 WM_USER = 0x400
 WM_APP = 0x8000
-)
+)"
 
 Loop, Parse, MsgList, `n
 {

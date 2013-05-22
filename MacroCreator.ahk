@@ -6414,7 +6414,7 @@ Else
 return
 
 TabControl:
-Gui, Submit, NoHide
+Gui, 24:Submit, NoHide
 If (TabControl = 2)
 {
 	If (ComCLSID = "InternetExplorer.Application")
