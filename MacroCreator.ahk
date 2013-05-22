@@ -646,6 +646,8 @@ If %0%
 			TimerPlay := 1, DelayX := (t_Timer1) ? t_Timer1 : 250
 		If (%A_Index% = "-c")
 			CloseAfterPlay := 1
+		If (%A_Index% = "-b")
+			ShowCtrlBar := 1
 	}
 	Param := RTrim(Param, "`n")
 	If !MultInst && (TargetID := WinExist("ahk_exe " A_ScriptFullPath))
@@ -683,6 +685,8 @@ If (HideWin)
 	Menu, Tray, Rename, %y_Lang001%, %y_Lang002%
 	WinActivate, %LastFoundWin%
 }
+If (ShowCtrlBar)
+	GoSub, OnScControls
 If (PlayHK)
 	GoSub, PlayStart
 If ((AutoPlay) || (TimerPlay))
