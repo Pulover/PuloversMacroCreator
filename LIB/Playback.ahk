@@ -803,28 +803,34 @@ IfStatement(ThisError, Point)
 {
 	global
 	
-	Tooltip
-	
-	EscCom("Step|TimesX|DelayX|Target|Window", 1)
 	If Step = EndIf
 	{
 		If ThisError > 0
 			ThisError--
 		Else
 			ThisError := 0
+		return ThisError
 	}
 	If ((BreakIt > 0) || (SkipIt > 0))
 		return ThisError
-	Else If Step = Else
+	If Step = Else
 	{
 		If ThisError > 0
 			ThisError--
 		Else
 			ThisError++
+		return ThisError
+	}
+	If ThisError > 0
+	{
+		ThisError++
+		return ThisError
 	}
 	Else
 	{
+		Tooltip
 		CheckVars("Step|Target|Window", PointMarker)
+		EscCom("Step|TimesX|DelayX|Target|Window", 1)
 		If ThisError > 0
 		{
 			ThisError++
@@ -942,6 +948,7 @@ IfStatement(ThisError, Point)
 		{
 			AssignReplace(Step)
 			CheckVars("VarValue", PointMarker)
+			EscCom("VarValue|VarName", 1)
 			If (VarName = "A_Index")
 				VarName := "LoopIndex"
 			If IfEval(VarName, Oper, VarValue)
