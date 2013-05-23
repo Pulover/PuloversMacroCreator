@@ -28,21 +28,21 @@ COMInterface(String, Ptr="", ByRef OutputVar="", CLSID="InternetExplorer.Applica
 	{
 		If RegExMatch(String, "U)\((.*[\(]+.*\).*)\)")
 		{
-			RegExMatch(String, "U)\((.*[\(]+.*\).*)\)", _Parent%A_Index%)
-			String := RegExReplace(String, "U)\((.*[\(]+.*\).*)\)", "&_Parent" A_Index, "", 1)
+			RegExMatch(String, "U)\((.*[\(]+.*[\)]+.*)\)", _Parent%A_Index%)
+			String := RegExReplace(String, "U)\((.*[\(]+.*[\)]+.*)\)", "&_Parent" A_Index, "", 1)
 		}
 		Else
 			String := RegExReplace(String, "U)\((.*)\)", "&_Parent" A_Index, "", 1)
 	}
 	While, RegExMatch(String, "U)\[(.*)\]", _Block%A_Index%)
 		String := RegExReplace(String, "U)\[(.*)\]", "&_Block" A_Index, "", 1)
-	While, RegExMatch(String, "&_Parent(\d+)\)", _N)
-	{
-		msgbox % _Parent%_N1%
-		_Parent%_N1% .= ")"
-		msgbox % _Parent%_N1%
-		String := RegExReplace(String, "(&_Parent\d+)\)", "$1")
-	}
+	; While, RegExMatch(String, "&_Parent(\d+)\)", _N)
+	; {
+		; msgbox % _Parent%_N1%
+		; _Parent%_N1% .= ")"
+		; msgbox % _Parent%_N1%
+		; String := RegExReplace(String, "(&_Parent\d+)\)", "$1")
+	; }
 
 	ComSet := Ptr
 	
@@ -151,3 +151,20 @@ COMInterface(String, Ptr="", ByRef OutputVar="", CLSID="InternetExplorer.Applica
 	return Ptr
 }
 
+
+str := "test(x.(v).y().z(va).off).new(go(1).on())"
+
+Loop, Parse, Str
+{
+	If (A_LoopField = "(")
+		o++
+	Else If (A_LoopField = ")")
+		o--
+	If (o)
+		p .= A_LoopField
+	Else
+		t .= A_LoopField
+}
+
+msgbox %p%
+msgbox %t%
