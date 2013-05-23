@@ -43,4 +43,6 @@ If ErrorLevel = ERROR
 	MsgBox, 0x40000, Error, Error code: %A_LastError%
 	ExitApp
 }
+
+MsgBox Finished.
 return

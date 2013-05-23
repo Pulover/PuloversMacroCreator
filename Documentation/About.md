@@ -8,7 +8,7 @@ Author: Pulover \[Rodolfo U. Batista\]
 [rodolfoub@gmail.com](mailto:rodolfoub@gmail.com)  
 Copyright © 2012-2013 Rodolfo U. Batista  
 
-Version: 3.7.1 
+Version: 3.7.2  
 Release Date: May, 2013  
 AutoHotkey Version: 1.1.10.01  
 
@@ -33,9 +33,11 @@ T800 for [Html Help utils](http://www.autohotkey.com/board/topic/17984-html-help
 
 ## Version 3.7.2
 
+* Added support to set an infinite loop in *Loop Command*.
+* Added support for self-references inside parameters in *COM Interface*.
 * Added *Toolbar* command line parameter: -b (Shows *Controls Toolbar* on start-up).
-* Improved *COM Interface* to support self-references inside parameters.
 * Fixed error on start-up on Windows Vista.
+* Fixed erros with *If Statements*.
 
 ## Version 3.7.1
 
@@ -53,7 +55,7 @@ T800 for [Html Help utils](http://www.autohotkey.com/board/topic/17984-html-help
 * Added new Loop commands: *FilePattern*, *Parse*, *Read* and *Registry*.
 * Added *Break* to Image/Pixel Search options.
 * Added *Break loop if image is found* option to Image/Pixel Search.
-* Added support to set an Infinite Loop for Macros.
+* Added support to set an infinite Loop for Macros.
 * Added *Controls Toolbar*.
 * Added *Clear List* option for *Record New Macro* to restart the current Macro.
 * Added *Play Selected Rows* option.

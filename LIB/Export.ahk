@@ -113,7 +113,7 @@
 			If (Action = "[LoopStart]")
 			{
 				If (Type = cType7)
-					RowData := "`n" Type ", " TimesX
+					RowData := "`n" Type ((TimesX = 0) ? "" : ", " TimesX)
 				Else
 				{
 					StringReplace, Type, Type, FilePattern

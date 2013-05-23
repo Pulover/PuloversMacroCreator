@@ -300,7 +300,7 @@
 		Loops a section of the Macro enclosed within *LoopStart* and *LoopEnd*. Nested Loops are accepted.
 
 	Parameters:
-		Repeat - How many times to execute the loop section.  
+		Repeat - How many times to execute the loop section. If set to 0, the loop continues indefinitely until a break or return is encountered, or the Stop Key is pressed.
 			This field accepts [Variables & Functions](p8-Variables.html).
 
 	Remarks:

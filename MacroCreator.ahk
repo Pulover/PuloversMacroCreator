@@ -590,9 +590,9 @@ Gui, Add, Button, -Wrap W22 H25 hwndEditComm vEditComm gEditComm
 	ILButton(EditComm, CommentIcon[1] ":" CommentIcon[2], 16, 16)
 Gui, Add, Button, -Wrap W22 H25 hwndFindReplace vFindReplace gFindReplace
 	ILButton(FindReplace, FindIcon[1] ":" FindIcon[2], 16, 16)
-Gui, Add, Text, -Wrap y+129 xm W70 H22 Section vRepeat, %w_Lang015%
+Gui, Add, Text, -Wrap y+129 xm W70 H22 Section vRepeat, %w_Lang015%:
 Gui, Add, Edit, ys-3 x+5 W90 R1 vRept Number
-Gui, Add, UpDown, vTimesM 0x80 Range1-999999999, 1
+Gui, Add, UpDown, vTimesM 0x80 Range0-999999999, 1
 Gui, Add, Button, -Wrap ys-4 x+5 W60 H23 hwndApplyT vApplyT gApplyT, %w_Lang017%
 	ILButton(ApplyT, ApplyIcon[1] ":" ApplyIcon[2], 16, 16, 0)
 Gui, Add, Text, W2 H25 ys-3 x+5 0x11 vSeparator1
@@ -2368,7 +2368,7 @@ Gui, 5:Add, Text, -Wrap yp+5 x+5 W140 H20 vWinParsTip Disabled, %wcmd_All%
 Gui, 5:Add, Edit, xs W200 vTitle Disabled, A
 Gui, 5:Add, Button, -Wrap yp-1 x+0 W30 H23 vGetWin gGetWin Disabled, ...
 Gui, 5:Add, GroupBox, Section xm W250 H110
-Gui, 5:Add, Text, Section ys+15 xs+10, %w_Lang015%
+Gui, 5:Add, Text, Section ys+15 xs+10, %w_Lang015%:
 Gui, 5:Add, Text,, %c_Lang017%:
 Gui, 5:Add, Edit, ys xs+110 W120 R1 vEdRept
 Gui, 5:Add, UpDown, vTimesX 0x80 Range1-999999999, 1
@@ -3666,7 +3666,7 @@ Gui, 8:Add, Button, -Wrap W25 H25 ys x+0 hwndPasteT vPasteT gPasteT
 Gui, 8:Add, Button, -Wrap W25 H25 ys x+0 hwndSelAllT vSelAllT gSelAllT
 	ILButton(SelAllT, CommentIcon[1] ":" CommentIcon[2], 16, 16)
 Gui, 8:Add, Edit, Section xm vTextEdit gTextEdit WantTab W720 R30
-Gui, 8:Add, Text, Section, %w_Lang015%
+Gui, 8:Add, Text, Section, %w_Lang015%:
 Gui, 8:Add, Text,, %c_Lang017%:
 Gui, 8:Add, Edit, ys-2 xp+75 W100 R1 vEdRept
 Gui, 8:Add, UpDown, vTimesX 0x80 Range1-999999999, 1
@@ -4136,9 +4136,9 @@ Gui, 12:Add, Radio, -Wrap x+5 W55 vLFilePattern gLoopType R1, %c_Lang133%
 Gui, 12:Add, Radio, -Wrap x+5 W55 vLParse gLoopType R1, %c_Lang134%
 Gui, 12:Add, Radio, -Wrap x+5 W55 vLRead gLoopType R1, %c_Lang135%
 Gui, 12:Add, Radio, -Wrap x+5 W55 R1 vLRegistry gLoopType R1, %c_Lang136%
-Gui, 12:Add, Text, y+5 xs+15, %w_Lang015%
+Gui, 12:Add, Text, y+5 xs+15, %w_Lang015% (%t_Lang004%):
 Gui, 12:Add, Edit, W300 R1 vEdRept
-Gui, 12:Add, UpDown, vTimesX 0x80 Range1-999999999, 2
+Gui, 12:Add, UpDown, vTimesX 0x80 Range0-999999999, 2
 Gui, 12:Add, Text, W125 vField1, %c_Lang137%
 Gui, 12:Add, CheckBox, -Wrap Check3 yp xp+130 W85 vIncFolders Disabled R1, %c_Lang138%
 Gui, 12:Add, CheckBox, -Wrap yp xp+85 W85 vRecurse Disabled R1, %c_Lang139%
@@ -4758,7 +4758,7 @@ Gui, 19:Add, Text, yp+3 xs+140 W85, %c_Lang071%:
 Gui, 19:Add, Edit, yp-3 xp+75 vVariatT Limit Number W45
 Gui, 19:Add, UpDown, vVariat 0x80 Range0-255, 0
 Gui, 19:Add, GroupBox, Section xm W265 H110
-Gui, 19:Add, Text, Section ys+15 xs+10, %w_Lang015%
+Gui, 19:Add, Text, Section ys+15 xs+10, %w_Lang015%:
 Gui, 19:Add, Text,, %c_Lang017%:
 Gui, 19:Add, Edit, ys xs+120 W120 R1 vEdRept
 Gui, 19:Add, UpDown, vTimesX 0x80 Range1-999999999, 1
@@ -7317,7 +7317,7 @@ If Type in %cType35%,%cType36%,%cType37%
 Else
 {
 	Gui, 15:Add, GroupBox, Section xm W280 H110
-	Gui, 15:Add, Text, Section ys+15 xs+10, %w_Lang015%
+	Gui, 15:Add, Text, Section ys+15 xs+10, %w_Lang015%:
 	Gui, 15:Add, Text,, %c_Lang017%:
 	Gui, 15:Add, Edit, ys xs+90 W170 R1 ys vEdRept
 	Gui, 15:Add, UpDown, vTimesX 0x80 Range1-999999999, %TimesX%
@@ -7596,7 +7596,7 @@ Gui, 6:Add, Text, -Wrap yp+5 x+5 W190 H20 vWinParsTip Disabled, %wcmd_All%
 Gui, 6:Add, Edit, xs+2 W230 vTitle Disabled, A
 Gui, 6:Add, Button, -Wrap yp-1 x+0 W30 H23 vGetWin gGetWin Disabled, ...
 Gui, 6:Add, GroupBox, Section xm W280 H110
-Gui, 6:Add, Checkbox, -Wrap Section ys+15 xs+10 vMEditRept gMEditRept R1, %w_Lang015%
+Gui, 6:Add, Checkbox, -Wrap Section ys+15 xs+10 vMEditRept gMEditRept R1, %w_Lang015%:
 Gui, 6:Add, Checkbox, -Wrap y+15 vMEditDelay gMEditDelay R1, %c_Lang017%:
 Gui, 6:Add, Edit, Disabled W170 R1 ys xs+90 vEdRept
 Gui, 6:Add, UpDown, vTimesX 0x80 Range1-999999999, 1
@@ -9796,7 +9796,7 @@ GuiControl,, Capt, %w_Lang012%
 GuiControl,, OnScCtrl, %w_Lang020%
 GuiControl,, ShowStep, %w_Lang013%
 GuiControl,, KeepHkOn, %w_Lang014%
-GuiControl,, Repeat, %w_Lang015%
+GuiControl,, Repeat, %w_Lang015%:
 GuiControl,, DelayT, %w_Lang016%
 GuiControl,, ApplyL, %w_Lang018%
 GuiControl,, EditButton, %w_Lang019%
