@@ -34,10 +34,16 @@ COMInterface(String, Ptr="", ByRef OutputVar="", CLSID="InternetExplorer.Applica
 		Else
 			String := RegExReplace(String, "U)\((.*)\)", "&_Parent" A_Index, "", 1)
 	}
-	
 	While, RegExMatch(String, "U)\[(.*)\]", _Block%A_Index%)
 		String := RegExReplace(String, "U)\[(.*)\]", "&_Block" A_Index, "", 1)
-	
+	While, RegExMatch(String, "&_Parent(\d+)\)", _N)
+	{
+		msgbox % _Parent%_N1%
+		_Parent%_N1% .= ")"
+		msgbox % _Parent%_N1%
+		String := RegExReplace(String, "(&_Parent\d+)\)", "$1")
+	}
+
 	ComSet := Ptr
 	
 	Loop, Parse, String, .&
@@ -49,12 +55,25 @@ COMInterface(String, Ptr="", ByRef OutputVar="", CLSID="InternetExplorer.Applica
 			Par := A_LoopField, Parent := %A_LoopField%1
 			While, RegExMatch(Parent, "U)\[(.*)\]", _Arr%A_Index%)
 				Parent := RegExReplace(Parent, "U)\[(.*)\]", "_Arr" A_Index, "", 1)
+			While, RegExMatch(Parent, "U)\((.*)\)", _iParent%A_Index%)
+			{
+				msgbox a %parent%
+				Parent := RegExReplace(Parent, "U)\((.*)\)", "&_iParent" A_Index, "", 1)
+				msgbox d %parent%
+			}
 			Params := Object()
 			Loop, Parse, Parent, `,, %A_Space%
 			{
-				If RegExMatch(A_LoopField, "^_Arr\d+")
+				LoopField := A_LoopField
+				If RegExMatch(LoopField, "&_iParent(\d+)", inPar)
 				{
-					StringSplit, Arr, %A_LoopField%1, `,, %A_Space%
+					; msgbox 1 %LoopField%
+					LoopField := RegExReplace(LoopField, "&_iParent\d+", _iParent%inPar1%)
+					; msgbox 2 %LoopField%
+				}
+				If RegExMatch(LoopField, "^_Arr\d+")
+				{
+					StringSplit, Arr, %LoopField%1, `,, %A_Space%
 					Array := ComObjArray(0xC, Arr0)
 					Loop, %Arr0%
 					{
@@ -63,19 +82,19 @@ COMInterface(String, Ptr="", ByRef OutputVar="", CLSID="InternetExplorer.Applica
 					}
 					Params.Insert(Array)
 				}
-				Else If RegExMatch(A_LoopField, "^\w+\.(.*)", NestedString)
+				Else If RegExMatch(LoopField, "^\w+\.(.*)", NestedString)
 				{
 					Try
 						Params.Insert(COMInterface(NestedString1, Ptr, "", CLSID))
 					Catch
 					{
-						Var := A_LoopField
+						Var := LoopField
 						Params.Insert((!Var) ? 0 : Var)
 					}
 				}
 				Else
 				{
-					Var := A_LoopField
+					Var := LoopField
 					Params.Insert((!Var) ? 0 : Var)
 				}
 			}
