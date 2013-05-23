@@ -804,6 +804,8 @@ IfStatement(ThisError, Point)
 	global
 	
 	Tooltip
+	
+	EscCom("Step|TimesX|DelayX|Target|Window", 1)
 	If Step = EndIf
 	{
 		If ThisError > 0
