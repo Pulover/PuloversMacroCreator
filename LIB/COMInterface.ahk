@@ -11,6 +11,7 @@
 
 COMInterface(String, Ptr="", ByRef OutputVar="", CLSID="InternetExplorer.Application")
 {
+	; If the Pointer is not an object, create one.
 	If !IsObject(Ptr)
 	{
 		If !CLSID
@@ -18,31 +19,20 @@ COMInterface(String, Ptr="", ByRef OutputVar="", CLSID="InternetExplorer.Applica
 		Ptr := ComObjCreate(CLSID)
 	}
 	
+	; Look for Assignments (:=) and separate Command from Value.
 	If RegExMatch(String, "[\s]?:=(.*)", Assign)
 	{
 		String := Trim(RegExReplace(String, "[\s]?:=(.*)"))
 		Value := Trim(Assign1)
 	}
 	
-	While, RegExMatch(String, "U)\((.*)\)", _Parent%A_Index%)
-	{
-		If RegExMatch(String, "U)\((.*[\(]+.*\).*)\)")
-		{
-			RegExMatch(String, "U)\((.*[\(]+.*[\)]+.*)\)", _Parent%A_Index%)
-			String := RegExReplace(String, "U)\((.*[\(]+.*[\)]+.*)\)", "&_Parent" A_Index, "", 1)
-		}
-		Else
-			String := RegExReplace(String, "U)\((.*)\)", "&_Parent" A_Index, "", 1)
-	}
+	; Look for Parameters and replace with a pattern.
+	While, RegExMatch(String, "\(([^()]++|(?R))*\)", _Parent%A_Index%)
+		String := RegExReplace(String, "\(([^()]++|(?R))*\)", "&_Parent" A_Index, "", 1)
+	
+	; Look foor Blocks that will be used to create SafeArrays and replace with a pattern.
 	While, RegExMatch(String, "U)\[(.*)\]", _Block%A_Index%)
 		String := RegExReplace(String, "U)\[(.*)\]", "&_Block" A_Index, "", 1)
-	; While, RegExMatch(String, "&_Parent(\d+)\)", _N)
-	; {
-		; msgbox % _Parent%_N1%
-		; _Parent%_N1% .= ")"
-		; msgbox % _Parent%_N1%
-		; String := RegExReplace(String, "(&_Parent\d+)\)", "$1")
-	; }
 
 	ComSet := Ptr
 	
@@ -52,24 +42,23 @@ COMInterface(String, Ptr="", ByRef OutputVar="", CLSID="InternetExplorer.Applica
 		Delimiter := SubStr(String, Pos, 1)
 		If RegExMatch(A_LoopField, "^_Parent\d+")
 		{
-			Par := A_LoopField, Parent := %A_LoopField%1
+			Par := A_LoopField, Parent := SubStr(%A_LoopField%, 2, -1)
+			
+			; Look for Blocks and divide arguments.
 			While, RegExMatch(Parent, "U)\[(.*)\]", _Arr%A_Index%)
 				Parent := RegExReplace(Parent, "U)\[(.*)\]", "_Arr" A_Index, "", 1)
-			While, RegExMatch(Parent, "U)\((.*)\)", _iParent%A_Index%)
-			{
-				msgbox a %parent%
-				Parent := RegExReplace(Parent, "U)\((.*)\)", "&_iParent" A_Index, "", 1)
-				msgbox d %parent%
-			}
+			
+			; Look for Parameters inside Parameters.
+			While, RegExMatch(Parent, "\(([^()]++|(?R))*\)", _iParent%A_Index%)
+				Parent := RegExReplace(Parent, "\(([^()]++|(?R))*\)", "&_iParent" A_Index, "", 1)
 			Params := Object()
 			Loop, Parse, Parent, `,, %A_Space%
 			{
 				LoopField := A_LoopField
-				If RegExMatch(LoopField, "&_iParent(\d+)", inPar)
+				While, RegExMatch(LoopField, "&_iParent(\d+)", inPar)
 				{
-					; msgbox 1 %LoopField%
-					LoopField := RegExReplace(LoopField, "&_iParent\d+", _iParent%inPar1%)
-					; msgbox 2 %LoopField%
+					iPar := RegExReplace(_iParent%inPar1%, "\$", "$$$$")
+					LoopField := RegExReplace(LoopField, "&_iParent\d+", iPar, "", 1)
 				}
 				If RegExMatch(LoopField, "^_Arr\d+")
 				{
@@ -82,10 +71,10 @@ COMInterface(String, Ptr="", ByRef OutputVar="", CLSID="InternetExplorer.Applica
 					}
 					Params.Insert(Array)
 				}
-				Else If RegExMatch(LoopField, "^\w+\.(.*)", NestedString)
+				Else If RegExMatch(LoopField, "^\w+\.(.*)", NestStr)
 				{
 					Try
-						Params.Insert(COMInterface(NestedString1, Ptr, "", CLSID))
+						Params.Insert(COMInterface(NestStr1, Ptr, "", CLSID))
 					Catch
 					{
 						Var := LoopField
@@ -150,21 +139,3 @@ COMInterface(String, Ptr="", ByRef OutputVar="", CLSID="InternetExplorer.Applica
 	}
 	return Ptr
 }
-
-
-str := "test(x.(v).y().z(va).off).new(go(1).on())"
-
-Loop, Parse, Str
-{
-	If (A_LoopField = "(")
-		o++
-	Else If (A_LoopField = ")")
-		o--
-	If (o)
-		p .= A_LoopField
-	Else
-		t .= A_LoopField
-}
-
-msgbox %p%
-msgbox %t%

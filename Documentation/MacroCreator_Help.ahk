@@ -591,14 +591,22 @@
 		Connect - Tries to connect to the Last Active COM Object registered to the selected CLSID to be used for the current session.
 		Handle - Name of a Handle that will point to the object.
 		Output Variable (*Optional*) - Name of the variable in which to store the result of COM Script.
-		COM Script - Command line in AutoHotkey's dotted syntax to execute using the object. Do not start the command with the Handle.  
-			To assign a value to the command use the *:=* operator. For example:
-			> Visible := True
-			To create a SafeArray enclose the values in blocks [].
-			> Selection.Subtotal(2, -4157, [4, 5], 1, 0, 1)
-			You can enter multiple commands one by line but can't assign variables this way.
+		COM Script - Command line in AutoHotkey's dotted syntax to execute using the object. **Ommit the Handle from the beginning of the string**.  
 
 	Remarks:
+		To assign a value to the command use the *:=* operator. For example:
+		> Visible := True
+		
+		Self-references inside parameters are supported. In such cases **you must not ommit the Handle** from the parameter.
+		> Range(Xl.Selection, Xl.Selection.Offset(5, 5)).Select
+		
+		To create a SafeArray enclose the values in blocks [].
+		> Selection.Subtotal(2, -4157, [4, 5], 1, 0, 1)
+		
+		To use ComObjMissing() inside a parameter, first assign a variable to it in the [Functions](Functions.html) window.
+		> Columns(1).TextToColumns(Xl.Range(A1), 1, 1, 0, 0, 0, 0, 0, 0, %m%, [1, 5], %m%, %m%, 1) ; %m% must be assigned to the ComObjMissing() function.
+		
+		You can enter multiple commands one by line (you can't assign variables this way).
 		The syntax for COM commands is the same as in AutoHotkey scripts except for:  
 			* Variables MUST be enclosed in percent signs.
 			* Strings must NOT be enclosed in quotes.

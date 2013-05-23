@@ -575,34 +575,43 @@ CheckComExp(String, OutVar="", ByRef ArrString="")
 		If Value in True,False
 			Value := "%" Value "%"
 	}
-	While, RegExMatch(String, "U)\((.*)\)", _Parent%A_Index%)
-		String := RegExReplace(String, "U)\((.*)\)", "&_Parent" A_Index, "", 1)
-
+	While, RegExMatch(String, "\(([^()]++|(?R))*\)", _Parent%A_Index%)
+		String := RegExReplace(String, "\(([^()]++|(?R))*\)", "&_Parent" A_Index, "", 1)
 	While, RegExMatch(String, "U)\[(.*)\]", _Block%A_Index%)
 		String := RegExReplace(String, "U)\[(.*)\]", "&_Block" A_Index, "", 1)
-	
+
 	Loop, Parse, String, .&
 	{
 		If RegExMatch(A_LoopField, "^_Parent\d+")
 		{
-			Parent := %A_LoopField%1
+			Params := ""
+			Parent := SubStr(%A_LoopField%, 2, -1)
 			While, RegExMatch(Parent, "U)\[(.*)\]", _Arr%A_Index%)
 				Parent := RegExReplace(Parent, "U)\[(.*)\]", "_Arr" A_Index, "", 1)
+			While, RegExMatch(Parent, "\(([^()]++|(?R))*\)", _iParent%A_Index%)
+				Parent := RegExReplace(Parent, "\(([^()]++|(?R))*\)", "&_iParent" A_Index, "", 1)
 			If InStr(Parent, "`,")
 			{
 				Loop, Parse, Parent, `,, %A_Space%
 				{
-					If RegExMatch(A_LoopField, "^_Arr\d+")
+					LoopField := A_LoopField
+					While, RegExMatch(LoopField, "&_iParent(\d+)", inPar)
+						LoopField := RegExReplace(LoopField, "&_iParent\d+", _iParent%inPar1%, "", 1)
+					If RegExMatch(LoopField, "^_Arr\d+")
 					{
-						StringSplit, Arr, %A_LoopField%1, `,, %A_Space%
+						StringSplit, Arr, %LoopField%1, `,, %A_Space%
 						ArrString := "SafeArray := ComObjArray(0xC, " Arr0 ")"
 						Loop, %Arr0%
 							ArrString .= "`nSafeArray[" A_Index-1 "] := " CheckExp(Arr%A_Index%)
 						ArrString .= "`n"
 						Params .= "SafeArray, "
 					}
+					Else If RegExMatch(LoopField, "^\w+\..*", NestStr)
+					{
+						Params .= (CheckComExp(NestStr, OutVar)) ", "
+					}
 					Else
-						Params .= CheckExp(A_LoopField) ", "
+						Params .= CheckExp(LoopField) ", "
 				}
 			}
 			Else
