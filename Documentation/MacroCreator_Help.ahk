@@ -602,7 +602,7 @@
 		
 		To set a blank value use a pair of quotes: ""
 		
-		When you close the application, all references to Active Objects will be lost, to continue working using saved project files edit one of the lines containing each handle and use the *Connect* button to re-create all references.
+		When you close the application, all references to Active Objects will be lost. To continue working using saved project files you must reconnect to the application by either editing one of the lines containing each handle and use the *Connect* button to re-create all references, or assigning the Handle to a ComObj function, usually ComObjActive(), though it will not work on all applications.
 		
 		To assign a value to the command use the *:=* operator. For example:
 		> ActiveCell.Value := 100

@@ -8238,11 +8238,16 @@ return
 pb_MsgBox:
 	StringReplace, Step, Step, ``n, `n, All
 	StringReplace, Step, Step, ```,, `,, All
+	Try Menu, Tray, Icon, % t_WaitIcon[1], % t_WaitIcon[2]
 	If (Action = "MsgBox")
+	{
 		MsgBox, % Par1, %Par2%, %Par3%, %Par4%
+		Try Menu, Tray, Icon, % t_PlayIcon[1], % t_PlayIcon[2]
+	}
 	Else
 	{
 		MsgBox, % Target, %d_Lang023%, %Step%
+		Try Menu, Tray, Icon, % t_PlayIcon[1], % t_PlayIcon[2]
 		IfMsgBox, OK
 			return
 		IfMsgBox, Cancel
@@ -8270,10 +8275,12 @@ pb_Run:
 		Run, %Par1%, %Par2%, %Par3%
 return
 pb_RunWait:
+	Try Menu, Tray, Icon, % t_WaitIcon[1], % t_WaitIcon[2]
 	If (Par4 <> "")
 		RunWait, %Par1%, %Par2%, %Par3%, %Par4%
 	Else
 		RunWait, %Par1%, %Par2%, %Par3%
+	Try Menu, Tray, Icon, % t_PlayIcon[1], % t_PlayIcon[2]
 return
 pb_RunAs:
 	RunAs, %Par1%, %Par2%, %Par3%
@@ -8504,7 +8511,9 @@ pb_SoundSetWaveVolume:
 	SoundSetWaveVolume, %Par1%, %Par2%
 return
 pb_ClipWait:
+	Try Menu, Tray, Icon, % t_WaitIcon[1], % t_WaitIcon[2]
 	ClipWait, %Par1%, %Par2%
+	Try Menu, Tray, Icon, % t_PlayIcon[1], % t_PlayIcon[2]
 return
 pb_BlockInput:
 	BlockInput, %Step%
@@ -8526,7 +8535,9 @@ pb_StatusBarGetText:
 	StatusBarGetText, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%, %Par6%
 return
 pb_StatusBarWait:
+	Try Menu, Tray, Icon, % t_WaitIcon[1], % t_WaitIcon[2]
 	StatusBarWait, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%, %Par6%
+	Try Menu, Tray, Icon, % t_PlayIcon[1], % t_PlayIcon[2]
 return
 pb_Clipboard:
 	SavedClip := ClipboardAll
@@ -8584,10 +8595,12 @@ pb_PostMessage:
 	PostMessage, %Par1%, %Par2%, %Par3%, %Target%, % Win[1], % Win[2], % Win[3], % Win[4]
 return
 pb_KeyWait:
+	Try Menu, Tray, Icon, % t_WaitIcon[1], % t_WaitIcon[2]
 	If (Action = "KeyWait")
 		KeyWait, %Par1%, %Par2%
 	Else
 		WaitFor.Key(Step, DelayX / 1000)
+	Try Menu, Tray, Icon, % t_PlayIcon[1], % t_PlayIcon[2]
 return
 pb_Input:
 	Input, %Par1%, %Par2%, %Par3%, %Par4%
@@ -8667,16 +8680,24 @@ pb_WinSetTitle:
 	WinSetTitle, % Win[1], % Win[2], % Win[3], % Win[4], % Win[5]
 return
 pb_WinWait:
+	Try Menu, Tray, Icon, % t_WaitIcon[1], % t_WaitIcon[2]
 	WaitFor.WinExist(SplitWin(Window), Step)
+	Try Menu, Tray, Icon, % t_PlayIcon[1], % t_PlayIcon[2]
 return
 pb_WinWaitActive:
+	Try Menu, Tray, Icon, % t_WaitIcon[1], % t_WaitIcon[2]
 	WaitFor.WinActive(SplitWin(Window), Step)
+	Try Menu, Tray, Icon, % t_PlayIcon[1], % t_PlayIcon[2]
 return
 pb_WinWaitNotActive:
+	Try Menu, Tray, Icon, % t_WaitIcon[1], % t_WaitIcon[2]
 	WaitFor.WinNotActive(SplitWin(Window), Step)
+	Try Menu, Tray, Icon, % t_PlayIcon[1], % t_PlayIcon[2]
 return
 pb_WinWaitClose:
+	Try Menu, Tray, Icon, % t_WaitIcon[1], % t_WaitIcon[2]
 	WaitFor.WinClose(SplitWin(Window), Step)
+	Try Menu, Tray, Icon, % t_PlayIcon[1], % t_PlayIcon[2]
 return
 pb_WinGet:
 	Win := SplitWin(Window)
