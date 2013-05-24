@@ -8,7 +8,7 @@
 ; Forum: http://www.autohotkey.com/board/topic/79763-macro-creator
 ; Version: 3.7.2
 ; Release Date: May, 2013
-; AutoHotkey Version: 1.1.09.04
+; AutoHotkey Version: 1.1.10.01
 ; GNU General Public License 3.0 or higher
 ; <http://www.gnu.org/licenses/gpl-3.0.txt>
 
@@ -5719,7 +5719,7 @@ If (A_ThisLabel <> "SendMsgApply")
 Gui, 1:Default
 RowSelection := LV_GetCount("Selected")
 If (s_Caller = "Edit")
-	LV_Modify(RowNumber, "Col2", "[Windows Message]", Details, TimesX, DelayG, MsgType, DefCt, Title)
+	LV_Modify(RowNumber, "Col2", "[Windows Message]", Details, TimesX, DelayX, MsgType, DefCt, Title)
 Else If RowSelection = 0
 {
 	LV_Add("Check", ListCount%A_List%+1, "[Windows Message]", Details, TimesX, DelayG, MsgType, DefCt, Title)
@@ -5891,7 +5891,7 @@ If (A_ThisLabel <> "ControlApply")
 Gui, 1:Default
 RowSelection := LV_GetCount("Selected")
 If (s_Caller = "Edit")
-	LV_Modify(RowNumber, "Col2", "[Control]", Details, TimesX, DelayG, ControlCmd, DefCt, Title)
+	LV_Modify(RowNumber, "Col2", "[Control]", Details, TimesX, DelayX, ControlCmd, DefCt, Title)
 Else If RowSelection = 0
 {
 	LV_Add("Check", ListCount%A_List%+1, "[Control]", Details, TimesX, DelayG, ControlCmd, DefCt, Title)
@@ -8108,6 +8108,8 @@ If Record
 	GoSub, b_Start
 }
 GoSub, RowCheck
+Try Menu, Tray, Icon, %DefaultIcon%, 1
+ToggleButtonIcon(OSPlay, TestRunIcon)
 return
 
 PauseKey:
@@ -8115,7 +8117,9 @@ Gui, Submit, NoHide
 return
 
 f_PauseKey:
-If ToggleIcon()
+If !(CurrentRange) && !(Record)
+	return
+If ToggleIcon() && !(Record)
 	ToggleButtonIcon(OSPlay, PauseIconB)
 Else
 	ToggleButtonIcon(OSPlay, TestRunIcon)

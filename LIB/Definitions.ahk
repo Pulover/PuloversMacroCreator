@@ -147,8 +147,8 @@ If A_OSVersion = WIN_VISTA
 	DonateIcon := [shell32, 28]
 	MouseIcon := [setupapi, 1]
 	TextIcon := [setupapi, 2]
-	SpecIcon := [DDORes, 1]
-	ControlIcon := [DDORes, 28]
+	SpecIcon := [mmsys, 0]
+	ControlIcon := [shell32, 21]
 	PauseIcon := [shell32, 265]
 	PauseIconB := [mmcbase, 8]
 	WindowIcon := [shell32, 2]
@@ -183,7 +183,7 @@ If A_OSVersion = WIN_VISTA
 	CommentIcon := [shell32, 133]
 	FindIcon := [shell32, 55]
 	ListVarsIcon := [shell32, 269]
-	ExitIcon := [imageres, 218]
+	ExitIcon := [imageres, 92]
 	RecentIcon := [shell32, 20]
 	ProgBIcon := [shell32, 249]
 	RecentFolder := A_AppData "\Microsoft\Windows\Recent"
@@ -195,10 +195,10 @@ If A_OSVersion = WIN_VISTA
 			, 	6 : [shell32, 166]	; IfStatement
 			, 	7 : [imageres, 68]	; Image
 			, 	8 : [shell32, 3]	; Window
-			, 	9 : [DDORes, 29]	; Control
+			, 	9 : [shell32, 22]	; Control
 			, 	10: [shell32, 243]	; IE
-			, 	11: [DDORes, 1]		; Label
-			, 	12: [DDORes, 35]	; Goto
+			, 	11: [setupapi, 11]	; Label
+			, 	12: [setupapi, 25]	; Goto
 			, 	13: [shell32, 157]	; SendMsg
 			, 	14: [shell32, 76]	; Variables
 			, 	15: [shell32, 167]	; Functions
@@ -215,8 +215,8 @@ If A_OSVersion = WIN_VISTA
 			, 	26: [comres, 16]	; Break
 			, 	27: [shell32, 177]	; Continue
 			, 	28: [shell32, 28]	; Shutdown
-			, 	29: [imageres, 145]	; Process
-			, 	30: [DDORes, 2]		; Sound
+			, 	29: [imageres, 144]	; Process
+			, 	30: [mmsys, 1]		; Sound
 			, 	31: [regedit, 1]}	; Reg
 }
 

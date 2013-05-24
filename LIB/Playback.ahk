@@ -26,7 +26,7 @@
 		{
 			If StopIt
 			{
-				Try Menu, Tray, Icon , %DefaultIcon%, 1
+				Try Menu, Tray, Icon, %DefaultIcon%, 1
 				Menu, Tray, Default, %w_Lang005%
 				break
 			}
@@ -373,7 +373,7 @@
 				{
 					If StopIt
 					{
-						Try Menu, Tray, Icon , %DefaultIcon%, 1
+						Try Menu, Tray, Icon, %DefaultIcon%, 1
 						Menu, Tray, Default, %w_Lang005%
 						break 3
 					}
@@ -403,7 +403,7 @@
 	}
 	Progress, Off
 	CurrentRange := ""
-	Try Menu, Tray, Icon , %DefaultIcon%, 1
+	Try Menu, Tray, Icon, %DefaultIcon%, 1
 	Menu, Tray, Default, %w_Lang005%
 	If (CloseAfterPlay)
 		GoSub, Exit

@@ -37,7 +37,7 @@ T800 for [Html Help utils](http://www.autohotkey.com/board/topic/17984-html-help
 * Added support for self-references inside parameters in *COM Interface*.
 * Added *Toolbar* command line parameter: -b (Shows *Controls Toolbar* on start-up).
 * Fixed error on start-up on Windows Vista.
-* Fixed erros with *If Statements*.
+* Fixed issues with *If Statements*.
 
 ## Version 3.7.1
 
