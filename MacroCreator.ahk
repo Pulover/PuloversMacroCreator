@@ -152,6 +152,7 @@ IniRead, VirtualKeys, %IniFilePath%, Options, VirtualKeys,
 {Media_Stop}{Media_Play_Pause}{Launch_Mail}{Launch_Media}{Launch_App1}{Launch_App2}
 )
 IniRead, AutoUpdate, %IniFilePath%, Options, AutoUpdate, 1
+; IniRead, User_gVars, %IniFilePath%, Options, User_gVars, %A_Space%
 IniRead, Ex_AbortKey, %IniFilePath%, ExportOptions, Ex_AbortKey, 0
 IniRead, Ex_SM, %IniFilePath%, ExportOptions, Ex_SM, 1
 IniRead, SM, %IniFilePath%, ExportOptions, SM, Input
@@ -1888,7 +1889,7 @@ GoSub, GetHotkeys
 GoSub, ResetHotkeys
 CurrLoopColor := LoopLVColor, CurrIfColor := IfLVColor
 Gui, 4:Font, s7
-Gui, 4:Add, Tab2, W420 H570, %t_Lang018%|%t_Lang052%
+Gui, 4:Add, Tab2, W420 H570, %t_Lang018%|%t_Lang052%|Global Variables
 ; Recording
 Gui, 4:Add, GroupBox, W400 H200, %t_Lang022%:
 Gui, 4:Add, Text, ys+40 xs+245, %t_Lang019%:
@@ -1987,6 +1988,12 @@ Gui, 4:Add, Text, y+5 xs, %t_Lang062%:
 Gui, 4:Add, Edit, W390 H110 vEditMod, %VirtualKeys%
 Gui, 4:Add, Button, -Wrap W100 H23 gConfigRestore, %t_Lang063%
 Gui, 4:Add, Button, -Wrap yp x+10 W100 H23 gKeyHistory, %c_Lang124%
+; User Variables
+Gui, 4:Tab, 3
+Gui, 4:Add, Text,, Format:
+Gui, 4:Add, Text, yp x+5 cRed, VarName = VarValue
+Gui, 4:Add, Text, yp x+5, (Enter 1 variable per line)
+Gui, 4:Add, Edit, y+5 xm+10 W400 H510 vUser_gVars, %User_gVars%
 Gui, 4:Tab
 Gui, 4:Add, Button, -Wrap Default Section xm W60 H23 gConfigOK, %c_Lang020%
 Gui, 4:Add, Button, -Wrap ys W60 H23 gConfigCancel, %c_Lang021%
@@ -6196,7 +6203,7 @@ ComOK:
 Gui, +OwnDialogs
 Gui, Submit, NoHide
 StringReplace, ComSc, ComSc, `n, ``n, All
-If ((ComCLSID = "") || (ComHwnd = "") || (ComSc = ""))
+If ((ComHwnd = "") || (ComSc = ""))
 	return
 If (s_Caller <> "Edit")
 	TimesX := 1
@@ -8744,9 +8751,7 @@ pb_IECOM_Set:
 	IeIntStr := IEComExp(Act2, Step, El1, El2, "", Act3, Act1)
 	IeIntStr := SubStr(IeIntStr, 4)
 
-	Try
-		o_ie.readyState
-	Catch
+	If !(o_ie.readyState)
 	{
 		If (ComAc)
 			o_ie := IEGet()
@@ -8823,9 +8828,9 @@ pb_COMInterface:
 	Loop, Parse, Step, `n, %A_Space%%A_Tab%
 	{
 		If !IsObject(%Act1%)
-			%Act1% := COMInterface(A_LoopField, %Act1%, %Act2%, Target)
+			%Act1% := COMInterface(LoopField, %Act1%, %Act2%, Target)
 		Else
-			COMInterface(A_LoopField, %Act1%, %Act2%, Target)
+			COMInterface(LoopField, %Act1%, %Act2%, Target)
 	}
 
 	If (Window = "LoadWait")
@@ -9170,6 +9175,7 @@ IniWrite, %LoopLVColor%, %IniFilePath%, Options, LoopLVColor
 IniWrite, %IfLVColor%, %IniFilePath%, Options, IfLVColor
 IniWrite, %VirtualKeys%, %IniFilePath%, Options, VirtualKeys
 IniWrite, %AutoUpdate%, %IniFilePath%, Options, AutoUpdate
+; IniWrite, %User_gVars%, %IniFilePath%, Options, User_gVars
 IniWrite, %Ex_AbortKey%, %IniFilePath%, ExportOptions, Ex_AbortKey
 IniWrite, %Ex_SM%, %IniFilePath%, ExportOptions, Ex_SM
 IniWrite, %SM%, %IniFilePath%, ExportOptions, SM

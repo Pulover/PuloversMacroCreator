@@ -242,7 +242,7 @@
 				{
 					StringReplace, VarValue, VarValue, `,, ```,, All
 					If ((VarValue := CheckExp(VarValue)) = """""")
-						VarValue := ""
+						VarValue := """"""
 				}
 			}
 			If (Action = "[Assign Variable]")
@@ -381,7 +381,7 @@
 				}
 			}
 			GoSub, Add_CD
-			If !InStr(LVData, Act1 " := " ComType "(")
+			If ((Target <> "") && (!InStr(LVData, Act1 " := " ComType "(")))
 				RowData := "`nIf !IsObject(" Act1 ")`n`t" Act1 " := " ComType "(""" Target """)" RowData
 			If (Window = "LoadWait")
 				RowData .=
@@ -542,6 +542,7 @@ CheckExp(String)
 		return """"""
 	If RegExMatch(String, "^%\s[\w|%]*$")
 		return SubStr(String, 3)
+	StringReplace, String, String, ```%, ¤, All
 	StringReplace, String, String, `````, , ¢, All
 	Loop, Parse, String, `,, %A_Space%``
 	{
@@ -558,6 +559,7 @@ CheckExp(String)
 			NewStr .= """" A_LoopField """, "
 	}
 	StringReplace, NewStr, NewStr, ¢, `,, All
+	StringReplace, NewStr, NewStr, ¤, `%, All
 	NewStr := Trim(RegExReplace(NewStr, " """" "), ", ")
 	NewStr := RegExReplace(NewStr, """{4}", """""")
 	NewStr := RegExReplace(NewStr, "U)""(-?\d+)""", "$1")

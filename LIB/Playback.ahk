@@ -1136,6 +1136,7 @@ DerefVars(String)
 {
 	global
 	
+	StringReplace, String, String, ```%, ¤, All
 	While, RegExMatch(String, "%(\w+)%", rMatch)
 	{
 		FoundVar := RegExReplace(%rMatch1%, "%", "¤")
