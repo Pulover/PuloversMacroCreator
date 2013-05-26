@@ -1024,9 +1024,12 @@ class WaitFor
 	{
 		global StopIt
 		
+		Seconds *= 1000
+		ini_Time := A_TickCount
 		Loop
 			Sleep, 10
-		Until ((WinExist(Window*)) || (StopIt))
+		Until (((WinExist(Window*)) || (StopIt))
+			|| ((Seconds > 0) && (pass_Time > Seconds)))
 	}
 	
 	WinActive(Window, Seconds)
