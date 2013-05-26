@@ -31,7 +31,7 @@
 		}
 		return ID
 	}
-	;##################################################
+
 	Import(SelectedFile, DL="`n", New="1")
 	{
 		local FoundC
@@ -78,7 +78,7 @@
 		GuiControl,, CoordTip, CoordMode: %CoordMouse%
 		Gui, -Disabled
 	}
-	;##################################################
+
 	LVLoad(List, Code)
 	{
 		Critical
@@ -96,7 +96,7 @@
 		GuiControl, +Redraw, %List%
 		Critical, Off
 	}
-	;##################################################
+
 	LVGet(List, DL="|")
 	{
 		Gui, 1:Default

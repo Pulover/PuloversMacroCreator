@@ -617,7 +617,11 @@ CheckComExp(String, OutVar="", ByRef ArrString="")
 				}
 			}
 			Else
+			{
+				While, RegExMatch(Parent, "&_iParent(\d+)", inPar)
+					Parent := RegExReplace(Parent, "&_iParent\d+", _iParent%inPar1%, "", 1)
 				Params := Parent
+			}
 			Params := RTrim(Params, ", ")
 			If !InStr(Params, "`,")
 				Params := CheckExp(Params)

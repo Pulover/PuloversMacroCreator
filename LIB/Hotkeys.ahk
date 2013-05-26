@@ -126,6 +126,10 @@ RButton::
 RButton Up::
 return
 
+Esc::
+StopIt := 1
+return
+
 #If Draw
 
 ^Up::

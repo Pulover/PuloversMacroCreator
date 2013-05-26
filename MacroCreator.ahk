@@ -186,6 +186,9 @@ IniRead, ColSizes, %IniFilePath%, WindowOptions, ColSizes, 65,135,200,50,40,85,1
 IniRead, OSCPos, %IniFilePath%, WindowOptions, OSCPos, X5 Y25
 IniRead, OSTrans, %IniFilePath%, WindowOptions, OSTrans, 255
 
+UserVars := new Ini(IniFilePath, "UserVars")
+UserVars.Read()
+
 If Lang = Error
 {
 	If A_Language in 0416,0816
@@ -1888,8 +1891,9 @@ GoSub, SaveData
 GoSub, GetHotkeys
 GoSub, ResetHotkeys
 CurrLoopColor := LoopLVColor, CurrIfColor := IfLVColor
+UserVarsList := UserVars.Get()
 Gui, 4:Font, s7
-Gui, 4:Add, Tab2, W420 H570, %t_Lang018%|%t_Lang052%|Global Variables
+Gui, 4:Add, Tab2, W420 H570, %t_Lang018%|%t_Lang052%|User Variables
 ; Recording
 Gui, 4:Add, GroupBox, W400 H200, %t_Lang022%:
 Gui, 4:Add, Text, ys+40 xs+245, %t_Lang019%:
@@ -1993,7 +1997,7 @@ Gui, 4:Tab, 3
 Gui, 4:Add, Text,, Format:
 Gui, 4:Add, Text, yp x+5 cRed, VarName = VarValue
 Gui, 4:Add, Text, yp x+5, (Enter 1 variable per line)
-Gui, 4:Add, Edit, y+5 xm+10 W400 H510 vUser_gVars, %User_gVars%
+Gui, 4:Add, Edit, y+5 xm+10 W400 H510 vUserVarsList, %UserVarsList%
 Gui, 4:Tab
 Gui, 4:Add, Button, -Wrap Default Section xm W60 H23 gConfigOK, %c_Lang020%
 Gui, 4:Add, Button, -Wrap ys W60 H23 gConfigCancel, %c_Lang021%
@@ -2029,6 +2033,8 @@ If OnRelease = 1
 Else If OnEnter = 1
 	SSMode = OnEnter
 VirtualKeys := EditMod
+UserVars.Set(UserVarsList)
+; UserVars.Read()
 Gui, 1:-Disabled
 Gui, 4:Destroy
 Gui, 1:Default
@@ -3076,13 +3082,15 @@ Gui, Submit, NoHide
 NoKey := 1
 WinMinimize, ahk_id %PMCWinID%
 SetTimer, WatchCursor, 100
-KeyWait, RButton, D
-KeyWait, RButton
+StopIt := 0
+WaitFor.Key("RButton")
 SetTimer, WatchCursor, off
 ToolTip
 Sleep, 200
 NoKey := 0
 WinActivate, ahk_id %PMCWinID%
+If (StopIt)
+	Exit
 GuiControlGet, CtrlState, Enabled, DefCt
 If (A_GuiControl = "MouseGet")
 {
@@ -3100,6 +3108,7 @@ Else
 	GuiControl,, IniX, %xPos%
 	GuiControl,, IniY, %yPos%
 }
+StopIt := 1
 return
 
 MouseGetE:
@@ -3107,15 +3116,18 @@ CoordMode, Mouse, %CoordMouse%
 NoKey := 1
 WinMinimize, ahk_id %PMCWinID%
 SetTimer, WatchCursor, 100
-KeyWait, RButton, D
-KeyWait, RButton
+StopIt := 0
+WaitFor.Key("RButton")
 SetTimer, WatchCursor, off
 ToolTip
 Sleep, 200
 NoKey := 0
 WinActivate, ahk_id %PMCWinID%
+If (StopIt)
+	Exit
 GuiControl,, EndX, %xPos%
 GuiControl,, EndY, %yPos%
+StopIt := 1
 return
 
 GetEl:
@@ -3156,13 +3168,18 @@ If !IsObject(o_ie)
 	COMInterface("Navigate(about:blank)", o_ie)
 }
 SetTimer, WatchCursorIE, 100
-KeyWait, RButton, D
-KeyWait, RButton
+StopIt := 0
+WaitFor.Key("RButton")
 SetTimer, WatchCursorIE, off
 ToolTip
 Sleep, 200
 NoKey := 0
 WinActivate, ahk_id %PMCWinID%
+If (StopIt)
+{
+	ComObjError(true)
+	Exit
+}
 If (oel_%Ident% <> "")
 {
 	ElIndex := GetElIndex(Element, Ident)
@@ -3205,6 +3222,7 @@ If (TabControl = 2)
 	GuiControl,, ComSc, %ComExpSc%
 }
 ComObjError(true)
+StopIt := 1
 return
 
 GetCtrl:
@@ -3212,17 +3230,20 @@ CoordMode, Mouse, %CoordMouse%
 NoKey := 1
 WinMinimize, ahk_id %PMCWinID%
 SetTimer, WatchCursor, 100
-KeyWait, RButton, D
-KeyWait, RButton
+StopIt := 0
+WaitFor.Key("RButton")
 SetTimer, WatchCursor, off
 ToolTip
 Sleep, 200
 NoKey := 0
 WinActivate, ahk_id %PMCWinID%
+If (StopIt)
+	Exit
 GuiControl,, DefCt, %control%
 GuiControl,, Title, ahk_class %class%
 FoundTitle := "ahk_class " class
 Window := "ahk_class " class
+StopIt := 1
 return
 
 GetWin:
@@ -3231,13 +3252,15 @@ Gui, Submit, NoHide
 NoKey := 1
 WinMinimize, ahk_id %PMCWinID%
 SetTimer, WatchCursor, 100
-KeyWait, RButton, D
-KeyWait, RButton
+StopIt := 0
+WaitFor.Key("RButton")
 SetTimer, WatchCursor, off
 ToolTip
 Sleep, 200
 NoKey := 0
 WinActivate, ahk_id %PMCWinID%
+If (StopIt)
+	Exit
 If Ident = Title
 {
 	If Label = IfGet
@@ -3267,6 +3290,7 @@ Else If Ident = PID
 	GuiControl,, Title, ahk_pid %pid%
 	FoundTitle := "ahk_pid " pid
 }
+StopIt := 1
 return
 
 WinGetP:
@@ -3275,18 +3299,21 @@ Gui, Submit, NoHide
 NoKey := 1
 WinMinimize, ahk_id %PMCWinID%
 SetTimer, WatchCursor, 100
-KeyWait, RButton, D
-KeyWait, RButton
+StopIt := 0
+WaitFor.Key("RButton")
 WinGetPos, X, Y, W, H, ahk_id %id%
 SetTimer, WatchCursor, off
 ToolTip
 Sleep, 200
 NoKey := 0
 WinActivate, ahk_id %PMCWinID%
+If (StopIt)
+	Exit
 GuiControl,, PosX, %X%
 GuiControl,, PosY, %Y%
 GuiControl,, SizeX, %W%
 GuiControl,, SizeY, %H%
+StopIt := 1
 return
 
 CtrlGetP:
@@ -3295,18 +3322,21 @@ Gui, Submit, NoHide
 NoKey := 1
 WinMinimize, ahk_id %PMCWinID%
 SetTimer, WatchCursor, 100
-KeyWait, RButton, D
-KeyWait, RButton
+StopIt := 0
+WaitFor.Key("RButton")
 ControlGetPos, X, Y, W, H, %control%, ahk_id %id%
 SetTimer, WatchCursor, off
 ToolTip
 Sleep, 200
 NoKey := 0
 WinActivate, ahk_id %PMCWinID%
+If (StopIt)
+	Exit
 GuiControl,, PosX, %X%
 GuiControl,, PosY, %Y%
 GuiControl,, SizeX, %W%
 GuiControl,, SizeY, %H%
+StopIt := 1
 return
 
 Screenshot:
@@ -3391,13 +3421,15 @@ CoordMode, Mouse, %CoordPixel%
 NoKey := 1
 WinMinimize, ahk_id %PMCWinID%
 SetTimer, WatchCursor, 10
-KeyWait, RButton, D
-KeyWait, RButton
+StopIt := 0
+WaitFor.Key("RButton")
 SetTimer, WatchCursor, off
 ToolTip
 Sleep, 200
 NoKey := 0
 WinActivate, ahk_id %PMCWinID%
+If (StopIt)
+	Exit
 If InStr(A_GuiControl, "Color")
 {
 	%A_GuiControl% := color
@@ -3409,6 +3441,7 @@ Else
 	GuiControl,, ImgFile, %color%
 	GuiControl, +Background%color%, ColorPrev
 }
+StopIt := 1
 return
 
 WatchCursor:
@@ -6047,7 +6080,9 @@ If (s_Caller = "Edit")
 		ComCLSID := Target, TabControl := 2
 		StringSplit, Act, Action, :
 		GuiControl, 24:Choose, TabControl, 2
-		If InStr(CLSList, Target)
+		If (Target = "")
+			GuiControl, 24:Choose, ComCLSID, 0
+		Else If InStr(CLSList, Target)
 			GuiControl, 24:ChooseString, ComCLSID, %ComCLSID%
 		Else
 			GuiControl, 24:, ComCLSID, %ComCLSID%||
@@ -6095,7 +6130,7 @@ If (A_ThisLabel = "ComInt")
 	GuiControl, 24:, LoadWait, 0
 }
 GuiControl, 24:Choose, IEWindows, %SelIEWin%
-GoSub, TabControl
+; GoSub, TabControl
 Gui, 24:Show, , %c_Lang012% / %c_Lang013%
 Tooltip
 return
@@ -6367,13 +6402,15 @@ If (ComCLSID = "InternetExplorer.Application")
 	NoKey := 1, L_Label := ComCLSID
 	WinMinimize, ahk_id %PMCWinID%
 	SetTimer, WatchCursorIE, 100
-	KeyWait, RButton, D
-	KeyWait, RButton
+	StopIt := 0
+	WaitFor.Key("RButton")
 	SetTimer, WatchCursorIE, off
 	ToolTip
 	Sleep, 200
 	NoKey := 0, L_Label := ""
 	WinActivate, ahk_id %PMCWinID%
+	If (StopIt)
+		Exit
 	Try
 		%ComHwnd% := IEGet()
 	If IsObject(%ComHwnd%)
@@ -6383,6 +6420,7 @@ If (ComCLSID = "InternetExplorer.Application")
 	}
 	Else
 		MsgBox, 16, %c_Lang099%, %d_Lang047%
+	StopIt := 1
 }
 Else If (ComCLSID = "Excel.Application")
 {
@@ -6390,13 +6428,15 @@ Else If (ComCLSID = "Excel.Application")
 	NoKey := 1
 	WinMinimize, ahk_id %PMCWinID%
 	SetTimer, WatchCursorXL, 100
-	KeyWait, RButton, D
-	KeyWait, RButton
+	StopIt := 0
+	WaitFor.Key("RButton")
 	SetTimer, WatchCursorXL, off
 	ToolTip
 	Sleep, 200
 	NoKey := 0
 	WinActivate, ahk_id %PMCWinID%
+	If (StopIt)
+		Exit
 	Try
 	{
 		%ComHwnd% := ComObjActive(ComCLSID)
@@ -6408,6 +6448,7 @@ Else If (ComCLSID = "Excel.Application")
 	}
 	Else
 		MsgBox, 16, %c_Lang099%, %d_Lang047%
+	StopIt := 1
 }
 Else
 {
@@ -9839,6 +9880,7 @@ return
 #Include <Playback>
 #Include <Export>
 #Include <Class_PMC>
+#Include <Class_Ini>
 #Include *i <Gdip>
 #Include *i <Eval>
 #Include *i <Class_LV_Colors>

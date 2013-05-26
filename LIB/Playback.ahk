@@ -998,7 +998,7 @@ IfStatement(ThisError, Point)
 
 class WaitFor
 {
-	Key(Key, Delay)
+	Key(Key, Delay=0)
 	{
 		global StopIt, d_Lang039
 		
