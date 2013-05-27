@@ -78,8 +78,8 @@ ReleaseDate := "May, 2013"
 If ((A_IsCompiled) && !InStr(FileExist(A_AppData "\MacroCreator"), "D"))
 	FileCreateDir, %A_AppData%\MacroCreator
 
-IniFilePath := ((A_IsCompiled) ? A_AppData "\MacroCreator" : A_ScriptDir ) "\MacroCreator.ini"
-UserVarsPath := ((A_IsCompiled) ? A_AppData "\MacroCreator" : A_ScriptDir ) "\UserGlobalVars.ini"
+IniFilePath := (A_IsCompiled) ? A_AppData "\MacroCreator" : A_ScriptDir "\MacroCreator.ini"
+UserVarsPath := (A_IsCompiled) ? A_AppData "\MacroCreator" : A_ScriptDir "\UserGlobalVars.ini"
 
 IniRead, Lang, %IniFilePath%, Language, Lang
 IniRead, AutoKey, %IniFilePath%, HotKeys, AutoKey, F3|F4|F5|F6|F7
