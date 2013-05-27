@@ -14,8 +14,11 @@
 			If ((Section <> "") && (Section <> ReadSection))
 				continue
 			RegExMatch(A_LoopReadLine, "U)^(.*)=(.*)$", Key)
-			%Key1% := {Section: ReadSection, Key: Key1, Value: Key2}
-			%ReadSection%.Insert(Key1, %Key1%)
+			Try
+			{
+				%Key1% := {Section: ReadSection, Key: Key1, Value: Key2}
+				%ReadSection%.Insert(Key1, %Key1%)
+			}
 		}
 		this.Insert(ReadSection, %ReadSection%)
 	}
@@ -28,8 +31,12 @@
 		{
 			For each, Key in Section
 			{
-				VarName := Key.Key
-				%VarName% := Key.Value
+				Try
+				{
+					VarName := Key.Key
+					%VarName% := Key.Value
+					msgbox % varname ": " %varname%
+				}
 			}
 		}
 	}

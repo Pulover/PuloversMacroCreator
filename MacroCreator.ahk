@@ -79,6 +79,7 @@ If ((A_IsCompiled) && !InStr(FileExist(A_AppData "\MacroCreator"), "D"))
 	FileCreateDir, %A_AppData%\MacroCreator
 
 IniFilePath := ((A_IsCompiled) ? A_AppData "\MacroCreator" : A_ScriptDir ) "\MacroCreator.ini"
+UserVarsPath := ((A_IsCompiled) ? A_AppData "\MacroCreator" : A_ScriptDir ) "\UserGlobalVars.ini"
 
 IniRead, Lang, %IniFilePath%, Language, Lang
 IniRead, AutoKey, %IniFilePath%, HotKeys, AutoKey, F3|F4|F5|F6|F7
@@ -175,6 +176,7 @@ IniRead, Ex_MD, %IniFilePath%, ExportOptions, Ex_MD, 1
 IniRead, MD, %IniFilePath%, ExportOptions, MD, -1
 IniRead, Ex_SB, %IniFilePath%, ExportOptions, Ex_SB, 1
 IniRead, SB, %IniFilePath%, ExportOptions, SB, -1
+IniRead, Ex_UV, %IniFilePath%, ExportOptions, Ex_UV, 1
 IniRead, ComCr, %IniFilePath%, ExportOptions, ComCr, 1
 IniRead, ComAc, %IniFilePath%, ExportOptions, ComAc, 0
 IniRead, Send_Loop, %IniFilePath%, ExportOptions, Send_Loop, 0
@@ -186,7 +188,7 @@ IniRead, ColSizes, %IniFilePath%, WindowOptions, ColSizes, 65,135,200,50,40,85,1
 IniRead, OSCPos, %IniFilePath%, WindowOptions, OSCPos, X5 Y25
 IniRead, OSTrans, %IniFilePath%, WindowOptions, OSTrans, 255
 
-UserVars := new Ini(IniFilePath, "UserVars")
+UserVars := new Ini(UserVarsPath)
 UserVars.Read()
 
 If Lang = Error
@@ -1543,22 +1545,23 @@ Gui, 14:Add, Checkbox, -Wrap Checked%Ex_SI% y+5 xs+10 W110 vEx_SI R1, #SingleIns
 Gui, 14:Add, DDL, yp-3 xp+115 vSI w75, Force|Ignore||Off|
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_ST% y+5 xs+10 W110 vEx_ST R1, SetTitleMatchMode
 Gui, 14:Add, DDL, yp-3 xp+115 vST w75, 1|2||3|RegEx|
-Gui, 14:Add, Checkbox, -Wrap Checked%Ex_DH% y+5 xs+10 W180 vEx_DH R1, DetectHiddenWindows
-Gui, 14:Add, Checkbox, -Wrap Checked%Ex_AF% y+8 W180 vEx_AF R1, #WinActivateForce
-Gui, 14:Add, Checkbox, -Wrap Checked%Ex_HK% y+8 W180 vEx_HK R1, #UseHook
-Gui, 14:Add, Checkbox, -Wrap Checked%Ex_SK% ys+15 x+20 W95 vEx_SK R1, SetKeyDelay
-Gui, 14:Add, Edit, yp-3 xp+100 W30 vSK, %SK%
-Gui, 14:Add, Checkbox, -Wrap Checked%Ex_MD% y+5 xs+210 W95 vEx_MD R1, SetMouseDelay
-Gui, 14:Add, Edit, yp-3 xp+100 W30 vMD, %MD%
-Gui, 14:Add, Checkbox, -Wrap Checked%Ex_SC% y+5 xs+210 W95 vEx_SC R1, SetControlDelay
-Gui, 14:Add, Edit, yp-3 xp+100 W30 vSC, %SC%
-Gui, 14:Add, Checkbox, -Wrap Checked%Ex_SW% y+5 xs+210 W95 vEx_SW R1, SetWinDelay
-Gui, 14:Add, Edit, yp-3 xp+100 W30 vSW, %SW%
-Gui, 14:Add, Checkbox, -Wrap Checked%Ex_SB% y+5 xs+210 W95 vEx_SB R1, SetBatchLines
-Gui, 14:Add, Edit, yp-3 xp+100 W30 vSB, %SB%
-Gui, 14:Add, Checkbox, -Wrap Checked%Ex_NT% y+5 xs+210 W95 vEx_NT R1, #NoTrayIcon
-Gui, 14:Add, Checkbox, -Wrap Checked%Ex_IN% y+8 xs+10 vEx_IN R1, `#`Include (%t_Lang087%)
-Gui, 14:Add, Text, y+10 W95, COM Objects:
+Gui, 14:Add, Checkbox, -Wrap Checked%Ex_DH% y+5 xs+10 W195 vEx_DH R1, DetectHiddenWindows
+Gui, 14:Add, Checkbox, -Wrap Checked%Ex_AF% y+8 W195 vEx_AF R1, #WinActivateForce
+Gui, 14:Add, Checkbox, -Wrap Checked%Ex_HK% y+8 W195 vEx_HK R1, #UseHook
+Gui, 14:Add, Checkbox, -Wrap Checked%Ex_SK% ys+15 x+5 W110 vEx_SK R1, SetKeyDelay
+Gui, 14:Add, Edit, yp-3 xp+110 W30 vSK, %SK%
+Gui, 14:Add, Checkbox, -Wrap Checked%Ex_MD% y+5 xs+210 W110 vEx_MD R1, SetMouseDelay
+Gui, 14:Add, Edit, yp-3 xp+110 W30 vMD, %MD%
+Gui, 14:Add, Checkbox, -Wrap Checked%Ex_SC% y+5 xs+210 W110 vEx_SC R1, SetControlDelay
+Gui, 14:Add, Edit, yp-3 xp+110 W30 vSC, %SC%
+Gui, 14:Add, Checkbox, -Wrap Checked%Ex_SW% y+5 xs+210 W110 vEx_SW R1, SetWinDelay
+Gui, 14:Add, Edit, yp-3 xp+110 W30 vSW, %SW%
+Gui, 14:Add, Checkbox, -Wrap Checked%Ex_SB% y+5 xs+210 W110 vEx_SB R1, SetBatchLines
+Gui, 14:Add, Edit, yp-3 xp+110 W30 vSB, %SB%
+Gui, 14:Add, Checkbox, -Wrap Checked%Ex_NT% y+5 xs+210 W140 vEx_NT R1, #NoTrayIcon
+Gui, 14:Add, Checkbox, -Wrap Checked%Ex_IN% y+15 xs+10 W195 vEx_IN R1, `#`Include (%t_Lang087%)
+Gui, 14:Add, Checkbox, -Wrap Checked%Ex_UV% yp x+5 W140 vEx_UV R1, Global Variables
+Gui, 14:Add, Text, y+5 xs+10 W95, COM Objects:
 Gui, 14:Add, Radio, -Wrap Checked%ComCr% yp xp+100 W95 vComCr R1, ComObjCreate
 Gui, 14:Add, Radio, -Wrap Checked%ComAc% yp xp+100 W95 vComAc R1, ComObjActive
 ; Export
@@ -1698,11 +1701,11 @@ return
 ExpButton:
 Gui, +OwnDialogs
 Gui, Submit, NoHide
-If ExpFile = 
+If (ExpFile = "")
 	return
-If Ex_AbortKey = 1
+If (Ex_AbortKey = 1)
 {
-	If AbortKey = 
+	If (AbortKey = "")
 	{
 		MsgBox, 16, %d_Lang007%, %d_Lang008%
 		return
@@ -1722,6 +1725,11 @@ return
 
 ExportFile:
 Header := Script_Header()
+If (Ex_UV = 1)
+{
+	FileRead, UserVarsList, %UserVarsPath%
+	Header .= "`n" UserVarsList
+}
 RowNumber := 0, AutoKey := ""
 IncList := "", ProgRatio := 100 / LV_GetCount()
 Loop, % LV_GetCount()
@@ -1762,9 +1770,9 @@ If CheckDuplicates(AbortKey, "", AutoKey)
 	return
 }
 Body := AllScripts, AllScripts := ""
-If Ex_IfDir = 1
+If (Ex_IfDir = 1)
 	Body := Ex_IfDirType ", " Title "`n`n" Body Ex_IfDirType "`n"
-If Ex_AbortKey = 1
+If (Ex_AbortKey = 1)
 	Body .= (PauseKey = 0) ? "`n" AbortKey "::ExitApp`n" : "`n" AbortKey "::Pause`n"
 Script := Header . Body . IncList
 ChoosenFileName := SelectedFileName
@@ -1891,9 +1899,9 @@ GoSub, SaveData
 GoSub, GetHotkeys
 GoSub, ResetHotkeys
 CurrLoopColor := LoopLVColor, CurrIfColor := IfLVColor
-UserVarsList := UserVars.Get()
+FileRead, UserVarsList, %UserVarsPath%
 Gui, 4:Font, s7
-Gui, 4:Add, Tab2, W420 H570, %t_Lang018%|%t_Lang052%|User Variables
+Gui, 4:Add, Tab2, W420 H570 vTabControl, %t_Lang018%|%t_Lang052%|User Defined Variables
 ; Recording
 Gui, 4:Add, GroupBox, W400 H200, %t_Lang022%:
 Gui, 4:Add, Text, ys+40 xs+245, %t_Lang019%:
@@ -1995,7 +2003,7 @@ Gui, 4:Add, Button, -Wrap yp x+10 W100 H23 gKeyHistory, %c_Lang124%
 ; User Variables
 Gui, 4:Tab, 3
 Gui, 4:Add, Text,, Format:
-Gui, 4:Add, Text, yp x+5 cRed, VarName = VarValue
+Gui, 4:Add, Text, yp x+5 cRed, VarName=VarValue
 Gui, 4:Add, Text, yp x+5, (Enter 1 variable per line)
 Gui, 4:Add, Edit, y+5 xm+10 W400 H510 vUserVarsList, %UserVarsList%
 Gui, 4:Tab
@@ -2024,6 +2032,7 @@ return
 
 ConfigOK:
 Gui, Submit, NoHide
+Gui, +OwnDialogs
 If Relative = 1
 	CoordMouse = Window
 Else If Screen = 1
@@ -2033,8 +2042,18 @@ If OnRelease = 1
 Else If OnEnter = 1
 	SSMode = OnEnter
 VirtualKeys := EditMod
-UserVars.Set(UserVarsList)
-; UserVars.Read()
+UserVarsList := RegExReplace(UserVarsList, "U)\s+=\s+", "=")
+FileDelete, %UserVarsPath%
+If (UserVarsList <> "")
+	FileAppend, %UserVarsList%, %UserVarsPath%
+UserVars := new Ini(UserVarsPath)
+If (UserVars = "ERROR")
+{
+	GuiControl, 4:Choose, TabControl, 3
+	MsgBox, 16, %d_Lang007%, %d_Lang041%
+	return
+}
+UserVars.Read()
 Gui, 1:-Disabled
 Gui, 4:Destroy
 Gui, 1:Default
@@ -9069,6 +9088,7 @@ Ex_MD := 1
 MD := -1
 Ex_SB := 1
 SB := -1
+Ex_UV := 1
 ComCr := 1
 ComAc := 0
 Send_Loop := 0
@@ -9239,6 +9259,7 @@ IniWrite, %Ex_MD%, %IniFilePath%, ExportOptions, Ex_MD
 IniWrite, %MD%, %IniFilePath%, ExportOptions, MD
 IniWrite, %Ex_SB%, %IniFilePath%, ExportOptions, Ex_SB
 IniWrite, %SB%, %IniFilePath%, ExportOptions, SB
+IniWrite, %Ex_UV%, %IniFilePath%, ExportOptions, Ex_UV
 IniWrite, %ComCr%, %IniFilePath%, ExportOptions, ComCr
 IniWrite, %ComAc%, %IniFilePath%, ExportOptions, ComAc
 IniWrite, %Send_Loop%, %IniFilePath%, ExportOptions, Send_Loop
