@@ -3418,7 +3418,7 @@ If SS = 1
 		FileCreateDir, %ScreenDir%
 	file := ScreenDir "\Screen_" A_Now ".png"
 	screen := wX "|" wY "|" wW "|" wH
-	Screenshot(file,screen)
+	Screenshot(file, screen)
 	GuiControl, 19:, ImgFile, %file%
 	GoSub, MakePrev
 	SS := 0
@@ -5310,9 +5310,9 @@ Gui, 21:Add, Button, -Wrap ys W60 H23 vVarCopyB gVarCopy, %c_Lang023%
 Gui, 21:Add, Button, -Wrap ys W60 H23 gReset, %c_Lang088%
 If (s_Caller = "Edit")
 {
-	StringReplace, Details, Details, ``n, `n, All
 	If (A_ThisLabel = "EditSt")
 	{
+		StringReplace, Details, Details, ``n, `n, All
 		EscCom("Details|TimesX|DelayX|Target|Window", 1)
 		GuiControl, 21:ChooseString, Statement, %Action%
 		GuiControl, 21:, TestVar, %Details%
@@ -5326,6 +5326,7 @@ If (s_Caller = "Edit")
 		AssignReplace(Details)
 		If (Action = "[Assign Variable]")
 		{
+			StringReplace, Details, Details, ``n, `n, All
 			EscCom("VarValue", 1)
 			GuiControl, 21:Choose, TabControl, 2
 			GuiControl, 21:, VarName, %VarName%
@@ -8827,8 +8828,14 @@ pb_IECOM_Set:
 		o_ie.Visible := true
 	}
 	
-	
-	COMInterface(IeIntStr, o_ie)
+	Try
+		COMInterface(IeIntStr, o_ie)
+	Catch e
+	{
+		MsgBox, 20, %d_Lang007%, % "COM object error: " e.Message "`nSpecifically: " e.Extra "`n`nContinue execution?"
+		IfMsgBox, No
+			StopIt := 1
+	}
 	
 	If (Window = "LoadWait")
 		Try
@@ -8867,7 +8874,14 @@ pb_IECOM_Get:
 		o_ie.Visible := true
 	}
 	
-	COMInterface(IeIntStr, o_ie, %Step%)
+	Try
+		COMInterface(IeIntStr, o_ie, %Step%)
+	Catch e
+	{
+		MsgBox, 20, %d_Lang007%, % "COM object error: " e.Message "`nSpecifically: " e.Extra "`n`nContinue execution?"
+		IfMsgBox, No
+			StopIt := 1
+	}
 	
 	If (Window = "LoadWait")
 		Try
@@ -8887,10 +8901,14 @@ pb_COMInterface:
 	
 	Loop, Parse, Step, `n, %A_Space%%A_Tab%
 	{
-		If !IsObject(%Act1%)
-			%Act1% := COMInterface(LoopField, %Act1%, %Act2%, Target)
-		Else
-			COMInterface(LoopField, %Act1%, %Act2%, Target)
+		Try
+			%Act1% := COMInterface(A_LoopField, %Act1%, %Act2%, Target)
+		Catch e
+		{
+			MsgBox, 20, %d_Lang007%, % "COM object error: " e.Message "`nSpecifically: " e.Extra "`n`nContinue execution?"
+			IfMsgBox, No
+				StopIt := 1
+		}
 	}
 
 	If (Window = "LoadWait")

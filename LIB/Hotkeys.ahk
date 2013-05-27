@@ -6,11 +6,13 @@ NumpadDel::GoSub, h_Numdel
 MButton & WheelUp::
 ^WheelUp::
 ^PgUp::
+^+Up::
 GoSub, MoveUp
 return
 MButton & WheelDown::
 ^WheelDown::
 ^PgDn::
+^+Down::
 GoSub, MoveDn
 return
 

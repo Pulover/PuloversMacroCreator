@@ -260,9 +260,9 @@ You can load multiple files with multiple parameters.
 
 **Ctrl+F**: Find / Replace
 
-**Ctrl+PageUp** or **Ctrl+WheelUp**: Move Selected Row(s) Up
+**Ctrl+PageUp** or **Ctrl+Shift+Up** or **Ctrl+WheelUp**: Move Selected Row(s) Up
 
-**Ctrl+PageDown** or **Ctrl+WheelDown**: Move Selected Row(s) Down
+**Ctrl+PageDown** or **Ctrl+Shift+Down** or **Ctrl+WheelDown**: Move Selected Row(s) Down
 
 **Ctrl+Z**: Undo one step in History of current Macro
 
