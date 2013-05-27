@@ -35,6 +35,7 @@
 				mLoopIndex := A_Index, LoopIndex := A_Index
 			Loop, %m_ListCount%
 			{
+				mMacroOn := Macro_On, mListRow := A_Index
 				If StopIt
 					break 2
 				If (ShowProgBar = 1)
@@ -353,18 +354,27 @@
 						break 2
 					If (PointMarker = 0)
 					{
-						BreakIt++
+						If Step is number
+							BreakIt += Step
+						Else
+							BreakIt++
 						break 2
 					}
 					Else
 					{
-						BreakIt++
+						If Step is number
+							BreakIt += Step
+						Else
+							BreakIt++
 						continue
 					}
 				}
 				If (Type = cType30)
 				{
-					SkipIt++
+					If Step is number
+						SkipIt += Step
+					Else
+						SkipIt++
 					continue
 				}
 				This_Point := PointMarker
@@ -423,6 +433,7 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC)
 		mLoopIndex := A_Index + 1, LoopIndex := A_Index + 1
 		Loop, %x_Loop%
 		{
+			mListRow := A_Index + 1
 			If StopIt
 				break
 			SkipIt := 0
@@ -701,13 +712,19 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC)
 						break 2
 					Else
 					{
-						BreakIt++
+						If Step is number
+							BreakIt += Step
+						Else
+							BreakIt++
 						continue
 					}
 				}
 				If (Type = cType30)
 				{
-					SkipIt++
+					If Step is number
+						SkipIt += Step
+					Else
+						SkipIt++
 					continue
 				}
 				This_Point := PointMarker

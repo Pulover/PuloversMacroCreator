@@ -73,6 +73,8 @@ COMInterface(String, Ptr="", ByRef OutputVar="", CLSID="InternetExplorer.Applica
 				}
 				Else If RegExMatch(LoopField, "^\w+\.(.*)", NestStr)
 				{
+					If (Loopfield = "")
+						LoopField := ComObjMissing()
 					Try
 						Params.Insert(COMInterface(NestStr1, Ptr, "", CLSID))
 					Catch
@@ -83,6 +85,8 @@ COMInterface(String, Ptr="", ByRef OutputVar="", CLSID="InternetExplorer.Applica
 				}
 				Else
 				{
+					If (Loopfield = "")
+						LoopField := ComObjMissing()
 					Var := LoopField
 					Params.Insert((!Var) ? 0 : Var)
 				}

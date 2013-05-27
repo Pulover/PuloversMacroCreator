@@ -248,7 +248,7 @@
 			If (Action = "[Assign Variable]")
 				Step := VarName " " Oper " " VarValue
 			Else
-				Step := VarName " " Oper " " Action "(" VarValue ")"
+				Step := VarName " " Oper " " Action "(" ((VarValue = """""") ? "" : VarValue) ")"
 			RowData := "`n" Step
 			If (Comment <> "")
 				RowData .= "  " "; " Comment
@@ -302,7 +302,7 @@
 		}
 		Else If ((Type = cType29) || (Type = cType30))
 		{
-			RowData := "`n" Type
+			RowData := "`n" Type (RegExMatch(Step, "^\d+$") ? ", " Step : "")
 			GoSub, Add_CD
 			If ((TimesX > 1) || InStr(TimesX, "%"))
 				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
@@ -370,13 +370,13 @@
 			StringSplit, Act, Action, :
 			RowData := ""
 			If (Act2 <> "")
-				RowData .= "`n" Act2 " := " Act1 "." CheckComExp(Step)
+				RowData .= "`n" Act2 " := " Act1 "." CheckComExp(Step, "", "", Act1)
 			Else
 			{
 				StringReplace, Step, Step, ``n, `n, All
 				Loop, Parse, Step, `n, %A_Space%%A_Tab%
 				{
-					ComExp := CheckComExp(A_LoopField, "", sArray := "")
+					ComExp := CheckComExp(A_LoopField, "", sArray := "", Act1)
 					RowData .= "`n" sArray . Act1 "." ComExp
 				}
 			}
@@ -567,7 +567,7 @@ CheckExp(String)
 	return NewStr
 }
 
-CheckComExp(String, OutVar="", ByRef ArrString="")
+CheckComExp(String, OutVar="", ByRef ArrString="", Ptr="ie")
 {
 	If (OutVar <> "")
 		String := Trim(RegExReplace(String, "(.*):=[\s]?"))
@@ -586,19 +586,22 @@ CheckComExp(String, OutVar="", ByRef ArrString="")
 	{
 		If RegExMatch(A_LoopField, "^_Parent\d+")
 		{
-			Params := ""
 			Parent := SubStr(%A_LoopField%, 2, -1)
 			While, RegExMatch(Parent, "U)\[(.*)\]", _Arr%A_Index%)
 				Parent := RegExReplace(Parent, "U)\[(.*)\]", "_Arr" A_Index, "", 1)
 			While, RegExMatch(Parent, "\(([^()]++|(?R))*\)", _iParent%A_Index%)
 				Parent := RegExReplace(Parent, "\(([^()]++|(?R))*\)", "&_iParent" A_Index, "", 1)
+			Params := ""
 			If InStr(Parent, "`,")
 			{
 				Loop, Parse, Parent, `,, %A_Space%
 				{
 					LoopField := A_LoopField
 					While, RegExMatch(LoopField, "&_iParent(\d+)", inPar)
-						LoopField := RegExReplace(LoopField, "&_iParent\d+", _iParent%inPar1%, "", 1)
+					{
+						iPar := RegExReplace(_iParent%inPar1%, "\$", "$$$$")
+						LoopField := RegExReplace(LoopField, "&_iParent\d+", iPar, "", 1)
+					}
 					If RegExMatch(LoopField, "^_Arr\d+")
 					{
 						StringSplit, Arr, %LoopField%1, `,, %A_Space%
@@ -608,12 +611,15 @@ CheckComExp(String, OutVar="", ByRef ArrString="")
 						ArrString .= "`n"
 						Params .= "SafeArray, "
 					}
-					Else If RegExMatch(LoopField, "^\w+\..*", NestStr)
-					{
-						Params .= (CheckComExp(NestStr, OutVar)) ", "
-					}
 					Else
-						Params .= CheckExp(LoopField) ", "
+					{
+						If (Loopfield = "")
+							LoopField := "%ComObjMissing()%"
+						If RegExMatch(LoopField, "i)^" Ptr "\..*", NestStr)
+							Params .= (CheckComExp(NestStr, OutVar, "", Ptr)) ", "
+						Else
+							Params .= ((CheckExp(LoopField) = """""") ? "" : CheckExp(LoopField)) ", "
+					}
 				}
 			}
 			Else
@@ -624,7 +630,12 @@ CheckComExp(String, OutVar="", ByRef ArrString="")
 			}
 			Params := RTrim(Params, ", ")
 			If !InStr(Params, "`,")
-				Params := CheckExp(Params)
+			{
+				If RegExMatch(Params, "i)^" Ptr "\..*", NestStr)
+					Params := (CheckComExp(NestStr, OutVar, "", Ptr))
+				Else
+					Params := (CheckExp(Params) = """""") ? "" : CheckExp(Params)
+			}
 			String := RegExReplace(String, "&" A_LoopField, "(" Params ")")
 		}
 		If RegExMatch(A_LoopField, "^_Block\d+")

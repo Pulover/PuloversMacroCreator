@@ -613,8 +613,10 @@
 		To create a SafeArray enclose the values in blocks [].
 		> Selection.Subtotal(2, -4157, [4, 5], 1, 0, 1)
 		
-		To use *ComObjMissing()* inside a parameter, first assign a variable to it in the [Functions](Functions.html) window.
-		> Columns(1).TextToColumns(Xl.Range(A1), 1, 1, 0, 0, 0, 0, 0, 0, %m%, [1, 5], %m%, %m%, 1) ; %m% must be assigned to the ComObjMissing() function.
+		To use *ComObjMissing()* leave the parameter blank:
+		> Function(1, 2, , 3, , 5)
+		An exported script from the above example would be like:
+		> Function(1, 2, ComObjMissing(), 3, ComObjMissing(), 5)
 	
 	Extra:
 		### Related

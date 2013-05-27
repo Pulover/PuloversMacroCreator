@@ -787,6 +787,8 @@ BlockInput, Mode
 UrlDownloadToFile, URL, Filename
 SendLevel, Level
 Pause
+Break, LoopLabel
+Continue, LoopLabel
 Return
 ExitApp
 )"

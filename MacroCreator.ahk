@@ -4453,11 +4453,11 @@ Type := LTrim(A_ThisLabel, "Add")
 RowSelection := LV_GetCount("Selected")
 If RowSelection = 0
 {
-	LV_Add("Check", ListCount%A_List%+1, "[" Type "]", Type, 1, 0, Type)
+	LV_Add("Check", ListCount%A_List%+1, "[" Type "]", "", 1, 0, Type)
 	LV_Modify(ListCount%A_List%+1, "Vis")
 }
 Else
-	LV_Insert(LV_GetNext(), "Check", "", "[" Type "]", Type, 1, 0, Type)
+	LV_Insert(LV_GetNext(), "Check", "", "[" Type "]", "", 1, 0, Type)
 GoSub, b_Start
 GoSub, RowCheck
 GuiControl, Focus, InputList%A_List%
@@ -7311,11 +7311,11 @@ If (Type = cType17)
 	Goto, EditSt
 If Type in %cType18%,%cType19%
 	Goto, EditMsg
-If Type in %cType29%,%cType30%
-	return
 If ((Type = cType11) || (Type = cType14)
 || InStr(FileCmdList, Type "|")) && (Action <> "[Pause]")
 	Goto, EditRun
+If Type in %cType29%,%cType30%
+	return
 If Type in %cType32%,%cType33%,%cType34%
 	Goto, EditIECom
 If InStr(Type, "Win")
@@ -8832,9 +8832,12 @@ pb_IECOM_Set:
 		COMInterface(IeIntStr, o_ie)
 	Catch e
 	{
-		MsgBox, 20, %d_Lang007%, % "COM object error: " e.Message "`nSpecifically: " e.Extra "`n`nContinue execution?"
+		MsgBox, 20, %d_Lang007%, % "COM object error in Macro" mMacroOn ", Row " mListRow "`nError: " e.Message "`nSpecifically: " e.Extra "`n`nContinue?"
 		IfMsgBox, No
+		{
 			StopIt := 1
+			return
+		}
 	}
 	
 	If (Window = "LoadWait")
@@ -8848,6 +8851,7 @@ pb_IECOM_Get:
 	Catch
 	{
 		MsgBox, 16, %d_Lang007%, %d_Lang041%
+		StopIt := 1
 		return
 	}
 	
@@ -8878,9 +8882,12 @@ pb_IECOM_Get:
 		COMInterface(IeIntStr, o_ie, %Step%)
 	Catch e
 	{
-		MsgBox, 20, %d_Lang007%, % "COM object error: " e.Message "`nSpecifically: " e.Extra "`n`nContinue execution?"
+		MsgBox, 20, %d_Lang007%, % "COM object error in Macro" mMacroOn ", Row " mListRow "`nError: " e.Message "`nSpecifically: " e.Extra "`n`nContinue?"
 		IfMsgBox, No
+		{
 			StopIt := 1
+			return
+		}
 	}
 	
 	If (Window = "LoadWait")
@@ -8896,18 +8903,27 @@ pb_COMInterface:
 	Catch
 	{
 		MsgBox, 16, %d_Lang007%, %d_Lang041%
+		StopIt := 1
 		return
 	}
 	
 	Loop, Parse, Step, `n, %A_Space%%A_Tab%
 	{
 		Try
-			%Act1% := COMInterface(A_LoopField, %Act1%, %Act2%, Target)
+		{
+			If !IsObject(%Act1%)
+				%Act1% := COMInterface(A_LoopField, %Act1%, %Act2%, Target)
+			Else
+				COMInterface(A_LoopField, %Act1%, %Act2%, Target)
+		}
 		Catch e
 		{
-			MsgBox, 20, %d_Lang007%, % "COM object error: " e.Message "`nSpecifically: " e.Extra "`n`nContinue execution?"
+			MsgBox, 20, %d_Lang007%, % "COM object error in Macro" mMacroOn ", Row " mListRow "`nError: " e.Message "`nSpecifically: " e.Extra "`n`nContinue?"
 			IfMsgBox, No
+			{
 				StopIt := 1
+				return
+			}
 		}
 	}
 
