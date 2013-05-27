@@ -76,7 +76,7 @@ COMInterface(String, Ptr="", ByRef OutputVar="", CLSID="InternetExplorer.Applica
 					If (Loopfield = "")
 						LoopField := ComObjMissing()
 					Try
-						Params.Insert(COMInterface(NestStr1, Ptr, "", CLSID))
+						Params.Insert(COMInterface(NestStr1, ComSet, "", CLSID))
 					Catch
 					{
 						Var := LoopField

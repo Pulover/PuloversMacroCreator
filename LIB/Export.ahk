@@ -241,7 +241,7 @@
 				Else
 				{
 					StringReplace, VarValue, VarValue, `,, ```,, All
-					If ((VarValue := CheckExp(VarValue)) = """""")
+					If ((VarValue := CheckExp(VarValue)) = """""""""")
 						VarValue := """"""
 				}
 			}
@@ -546,9 +546,10 @@ CheckExp(String)
 	StringReplace, String, String, `````, , ¢, All
 	Loop, Parse, String, `,, %A_Space%``
 	{
-		If InStr(A_LoopField, "%")
+		LoopField := RegExReplace(A_LoopField, """", """""")
+		If InStr(LoopField, "%")
 		{
-			Loop, Parse, A_LoopField, `%
+			Loop, Parse, LoopField, `%
 			{
 				If (A_LoopField <> "")
 					NewStr .=  Mod(A_Index, 2) ? " """ RegExReplace(A_LoopField, "%") """ " : RegExReplace(A_LoopField, "%")
@@ -556,14 +557,13 @@ CheckExp(String)
 			NewStr := RTrim(NewStr) ", "
 		}
 		Else
-			NewStr .= """" A_LoopField """, "
+			NewStr .= """" LoopField """, "
 	}
 	StringReplace, NewStr, NewStr, ¢, `,, All
 	StringReplace, NewStr, NewStr, ¤, `%, All
 	NewStr := Trim(RegExReplace(NewStr, " """" "), ", ")
 	NewStr := RegExReplace(NewStr, """{4}", """""")
 	NewStr := RegExReplace(NewStr, "U)""(-?\d+)""", "$1")
-	; NewStr := RegExReplace(NewStr, ",(\s?),", ",$1"""",")
 	return NewStr
 }
 
