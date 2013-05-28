@@ -2040,8 +2040,8 @@ Gui, 4:Add, Button, -Wrap W100 H23 gConfigRestore, %t_Lang063%
 Gui, 4:Add, Button, -Wrap yp x+10 W100 H23 gKeyHistory, %c_Lang124%
 ; User Variables
 Gui, 4:Tab, 3
-Gui, 4:Add, Text, -Wrap W120 R1, %t_Lang093%:
-Gui, 4:Add, Text, -Wrap W280 R1 yp x+5 cRed, %t_Lang094%
+Gui, 4:Add, Text, -Wrap W150 R1, %t_Lang093%:
+Gui, 4:Add, Text, -Wrap W250 R1 yp xp+155 cRed, %t_Lang094%
 Gui, 4:Add, Text, -Wrap W400 R1 y+5 xm+10, %t_Lang095%
 Gui, 4:Add, Edit, W400 H490 vUserVarsList, %UserVarsList%
 Gui, 4:Tab
