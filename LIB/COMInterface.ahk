@@ -75,12 +75,15 @@ COMInterface(String, Ptr="", ByRef OutputVar="", CLSID="InternetExplorer.Applica
 				{
 					If (Loopfield = "")
 						LoopField := ComObjMissing()
+					Var := LoopField
 					Try
 						Params.Insert(COMInterface(NestStr1, ComSet, "", CLSID))
 					Catch
 					{
-						Var := LoopField
-						Params.Insert((!Var) ? 0 : Var)
+						Try
+							Params.Insert(COMInterface(NestStr1, Ptr, "", CLSID))
+						Catch
+							Params.Insert((!Var) ? (IsObject(Var) ? Var : 0) : Var)
 					}
 				}
 				Else
@@ -88,7 +91,7 @@ COMInterface(String, Ptr="", ByRef OutputVar="", CLSID="InternetExplorer.Applica
 					If (Loopfield = "")
 						LoopField := ComObjMissing()
 					Var := LoopField
-					Params.Insert((!Var) ? 0 : Var)
+					Params.Insert((!Var) ? (IsObject(Var) ? Var : 0) : Var)
 				}
 			}
 		}
