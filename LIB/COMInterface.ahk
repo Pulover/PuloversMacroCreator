@@ -114,7 +114,7 @@ COMInterface(String, Ptr="", ByRef OutputVar="", CLSID="InternetExplorer.Applica
 		Else If (Delimiter = "")
 		{
 			If (Value <> "")
-				ComSet[Obj] := (Value = """""") ? "" : Value
+				ComSet[Obj] := (Value = """""") ? "" : ((Value = "True") ? True : ((Value = "False") ? False : Value))
 			Else
 			{
 				If ((Par <> "") && (Index <> ""))
