@@ -278,9 +278,6 @@
 	c_Lang152 =	Informacije
 	c_Lang153 =	Uvijek na vrhu
 	c_Lang154 =	Minuta
-	c_Lang155 =	Standardni format INI
-	c_Lang156 =	Ime = Vrijednost
-	c_Lang157 =	Unesite jedna varijabla po liniji. Vi svibanj također dodati [sekcije].
 		
 ; Other Windows		
 	t_Lang001 =	Izvoz u AHK
@@ -375,6 +372,10 @@
 	t_Lang090 =	Zadane
 	t_Lang091 =	Dopustite Povlačenje retke
 	t_Lang092 =	Cijele sadržaj ćelije
+	t_Lang093 =	Standardni format INI
+	t_Lang094 =	Ime = Vrijednost
+	t_Lang095 =	Unesite jedna varijabla po liniji. Vi svibanj također dodati [sekcije].
+	t_Lang096 =	Korisnik Globalne Varijable
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Otvoreno
@@ -724,6 +725,8 @@
 		Uzroci skriptu ponaša kao da je navedeno
 		File je sadržaji su prisutni na ovom točan položaj.
 	)	
+	Ex_UV_TT =	Izvoz globalne varijable.
+	Ex_EdVars_TT =	Odaberite globalne varijable se izvozi.
 		
 ; IE Commands Tips		
 	Tip_Navigate =	Kreće na URL ili put.

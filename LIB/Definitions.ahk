@@ -383,22 +383,22 @@ Help21 := "IfStB"
 Help22 := "SendMsgB"
 Help23 := "ControlB"
 Help24 := "IEComB"
-ContHTitle := {	2: ["p6-Preview"]
-			,	3: ["Commands/Pause", "Commands/Message", "Commands/KeyWait"]
-			,	4: ["p7-Settings"]
-			,	5: ["Commands/Mouse"]
-			,	7: ["Commands/Special_Keys"]
-			,	8: ["Commands/Text"]
-			,	10: ["Commands/Run"]
-			,	11: ["Commands/Window"]
-			,	12: ["Commands/Loop", "Commands/Goto_and_Gosub", "Commands/Label"
-				, "Commands/Loop_FilePattern",	"Commands/Loop_Parse", "Commands/Loop_Read", "Commands/Loop_Registry"]
-			,	14: ["p5-Export"]
-			,	19: ["Commands/Image_Search", "Commands/Pixel_Search"]
-			,	21: ["Commands/If_Statements", "Commands/Assign_Variable", "Commands/Functions"]
-			,	22: ["Commands/PostMessage_and_SendMessage"]
-			,	23: ["Commands/Control"]
-			,	24: ["Commands/Internet_Explorer", "Commands/COM_Interface"] }
+ContHTitle := {	2: ["p6-Preview.html"]
+			,	3: ["Commands/Pause.html", "Commands/Message.html", "Commands/KeyWait.html"]
+			,	4: ["p7-Settings.html", "p7-Settings.html#misc.", "p7-Settings.html#user-global-variables"]
+			,	5: ["Commands/Mouse.html"]
+			,	7: ["Commands/Special_Keys.html"]
+			,	8: ["Commands/Text.html"]
+			,	10: ["Commands/Run.html"]
+			,	11: ["Commands/Window.html"]
+			,	12: ["Commands/Loop.html", "Commands/Goto_and_Gosub.html", "Commands/Label.html"
+				, "Commands/Loop_FilePattern.html",	"Commands/Loop_Parse.html", "Commands/Loop_Read.html", "Commands/Loop_Registry.html"]
+			,	14: ["p5-Export.html"]
+			,	19: ["Commands/Image_Search.html", "Commands/Pixel_Search.html"]
+			,	21: ["Commands/If_Statements.html", "Commands/Assign_Variable.html", "Commands/Functions.html"]
+			,	22: ["Commands/PostMessage_and_SendMessage.html"]
+			,	23: ["Commands/Control.html"]
+			,	24: ["Commands/Internet_Explorer.html", "Commands/COM_Interface.html"] }
 
 RecOptChecks := ["ClearNewList", "Strokes", "CaptKDn", "Mouse", "MScroll"
 			, "Moves", "TimedI", "WClass", "WTitle", "RecMouseCtrl", "RecKeybdCtrl"]
@@ -792,8 +792,8 @@ BlockInput, Mode
 UrlDownloadToFile, URL, Filename
 SendLevel, Level
 Pause
-Break, LoopLabel
-Continue, LoopLabel
+Break, LoopNumber
+Continue, LoopNumber
 Return
 ExitApp
 )"

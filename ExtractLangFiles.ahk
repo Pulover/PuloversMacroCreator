@@ -33,4 +33,6 @@ For each, Lan in PMC.Lang
 
 XL.Application.CutCopyMode := False
 XL.Workbooks(1).Close(0)
-MsgBox OK
+TrayTip,, Finished extracting Lang files.
+Sleep, 2000
+return

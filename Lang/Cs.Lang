@@ -278,9 +278,6 @@
 	c_Lang152 =	Informace
 	c_Lang153 =	Vždy navrchu
 	c_Lang154 =	Minut
-	c_Lang155 =	Standardní INI formát
-	c_Lang156 =	Název = hodnota
-	c_Lang157 =	Zadejte 1 proměnnou na řádek. Můžete také přidat [sekce].
 		
 ; Other Windows		
 	t_Lang001 =	Export do AHK
@@ -375,6 +372,10 @@
 	t_Lang090 =	Výchozí
 	t_Lang091 =	Povolit přetahování řádky
 	t_Lang092 =	Celý obsah buňky
+	t_Lang093 =	Standardní INI formát
+	t_Lang094 =	Název = hodnota
+	t_Lang095 =	Zadejte 1 proměnnou na řádek. Můžete také přidat [sekce].
+	t_Lang096 =	Uživatel Globální Proměnné
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Otevřít
@@ -724,6 +725,8 @@
 		Způsobí, že skript se chovat, jako by uvedené
 		obsah souboru jsou přítomny právě v tomto místě.
 	)	
+	Ex_UV_TT =	Export globální proměnné.
+	Ex_EdVars_TT =	Vyberte globální proměnné, které chcete exportovat.
 		
 ; IE Commands Tips		
 	Tip_Navigate =	Přejde na adresu URL nebo cesty.

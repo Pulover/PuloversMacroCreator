@@ -278,9 +278,6 @@
 	c_Lang152 =	Informació
 	c_Lang153 =	Sempre visible
 	c_Lang154 =	Minuts
-	c_Lang155 =	Format INI estàndard
-	c_Lang156 =	Nom = Valor
-	c_Lang157 =	Introduïu gener variable per línia. Vostè també pot afegir [Seccions].
 		
 ; Other Windows		
 	t_Lang001 =	Exporta a AHK
@@ -375,6 +372,10 @@
 	t_Lang090 =	Valors predefinits
 	t_Lang091 =	Permetre arrossegar files
 	t_Lang092 =	Tot el contingut de la cel · la
+	t_Lang093 =	Format INI estàndard
+	t_Lang094 =	Nom = Valor
+	t_Lang095 =	Introduïu gener variable per línia. Vostè també pot afegir [Seccions].
+	t_Lang096 =	Variables Globals De L'usuari
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Obert
@@ -724,6 +725,8 @@
 		Fa que el guió es comporti com si l'especificada
 		contingut de l'arxiu es presenti en aquesta posició exacta.
 	)	
+	Ex_UV_TT =	Exportar variables globals.
+	Ex_EdVars_TT =	Seleccionar variables globals destinats a l'exportació.
 		
 ; IE Commands Tips		
 	Tip_Navigate =	Es desplaça a una adreça URL o la ruta.

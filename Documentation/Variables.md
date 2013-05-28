@@ -54,6 +54,8 @@ In order to assign variables values to other variables (e.g. *MyVar := Clipboard
 
 The exported script (as well as the preview window) will auto correct *MyVar := %Clipboard%* to *MyVar := Clipboard* and *MyVar := Clipboard* to *MyVar := "Clipboard"*. It should also correct the combination of both Vars and Strings like *MyVar := Today is %A_DDD%* to *MyVar := "Today is " A_DDD* EXCEPT when using the *Eval()* option in which case only math expressions and variables should be used.
 
+You can assign *User Global Variables* with contents defined by user that will be always available in Playback and for exporting in [Settings](p7-Settings.html#user-global-variables).  
+
 ### Boolean Assignment
 
 To switch a variable's value True <> False use an exclamation in from of the value. Variable must be enclosed in percent signs.

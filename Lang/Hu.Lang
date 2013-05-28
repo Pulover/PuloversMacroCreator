@@ -278,9 +278,6 @@
 	c_Lang152 =	Információ
 	c_Lang153 =	Mindig a tetején
 	c_Lang154 =	Perc
-	c_Lang155 =	Szabványos INI formátum
-	c_Lang156 =	Név = érték
-	c_Lang157 =	Írja 1 változó soronként. Ön is hozzá [§].
 		
 ; Other Windows		
 	t_Lang001 =	Exportálás AHK
@@ -375,6 +372,10 @@
 	t_Lang090 =	Alapértékek
 	t_Lang091 =	Engedélyezése húzással sorok
 	t_Lang092 =	Teljes cella tartalmát
+	t_Lang093 =	Szabványos INI formátum
+	t_Lang094 =	Név = érték
+	t_Lang095 =	Írja 1 változó soronként. Ön is hozzá [§].
+	t_Lang096 =	Felhasználó Globális Változók
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Nyitva
@@ -724,6 +725,8 @@
 		Eszmék a szkript úgy viselkedni, mintha a megadott
 		fájl tartalmát jelen vannak ebben a pontos pozícióját.
 	)	
+	Ex_UV_TT =	Export globális változók.
+	Ex_EdVars_TT =	Válassza globális változók exportálni.
 		
 ; IE Commands Tips		
 	Tip_Navigate =	Navigál egy URL-t vagy elérési utat.

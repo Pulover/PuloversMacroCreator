@@ -44,5 +44,6 @@ If ErrorLevel = ERROR
 	ExitApp
 }
 
-MsgBox Finished.
+TrayTip,, Finished compiling files.
+Sleep, 2000
 return

@@ -278,9 +278,6 @@
 	c_Lang152 =	Tiedot
 	c_Lang153 =	Aina päällimmäisenä
 	c_Lang154 =	Minuuttia
-	c_Lang155 =	Standard INI muodossa
-	c_Lang156 =	Nimi = arvo
-	c_Lang157 =	Anna 1 muuttujan riville. Voit myös lisätä [§].
 		
 ; Other Windows		
 	t_Lang001 =	Vie AHK
@@ -375,6 +372,10 @@
 	t_Lang090 =	Oletukset
 	t_Lang091 =	Salli vetämällä rivejä
 	t_Lang092 =	Koko solun sisältö
+	t_Lang093 =	Standard INI muodossa
+	t_Lang094 =	Nimi = arvo
+	t_Lang095 =	Anna 1 muuttujan riville. Voit myös lisätä [§].
+	t_Lang096 =	Käyttäjä Yleismuuttujat
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Avata
@@ -724,6 +725,8 @@
 		Aiheuttaa script käyttäytymään ikään määritelty
 		tiedoston sisältöä on läsnä juuri tämän kannan.
 	)	
+	Ex_UV_TT =	Viedä globaalien muuttujien.
+	Ex_EdVars_TT =	Valitse globaalien muuttujien viedään.
 		
 ; IE Commands Tips		
 	Tip_Navigate =	Siirtyy URL tai polku.

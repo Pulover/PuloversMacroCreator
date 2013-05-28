@@ -278,9 +278,6 @@
 	c_Lang152 =	Info
 	c_Lang153 =	Always on top
 	c_Lang154 =	Minutes
-	c_Lang155 =	Standard INI format
-	c_Lang156 =	Name = Value
-	c_Lang157 =	Enter 1 variable per line. You may also add [Sections].
 		
 ; Other Windows		
 	t_Lang001 =	Export to AHK
@@ -375,6 +372,10 @@
 	t_Lang090 =	Defaults
 	t_Lang091 =	Allow Dragging Rows
 	t_Lang092 =	Entire cell contents
+	t_Lang093 =	Standard INI format
+	t_Lang094 =	Name = Value
+	t_Lang095 =	Enter 1 variable per line. You may also add [Sections].
+	t_Lang096 =	User Global Variables
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Open
@@ -724,6 +725,8 @@
 		Causes the script to behave as though the specified
 		file's contents are present at this exact position.
 	)	
+	Ex_UV_TT =	Export global variables.
+	Ex_EdVars_TT =	Select global variables to be exported.
 		
 ; IE Commands Tips		
 	Tip_Navigate =	Navigates to a URL or path.

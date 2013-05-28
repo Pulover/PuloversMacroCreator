@@ -278,9 +278,6 @@
 	c_Lang152 =	Informacja
 	c_Lang153 =	Zawsze na wierzchu
 	c_Lang154 =	Minut
-	c_Lang155 =	Standardowy format INI
-	c_Lang156 =	Name = Value
-	c_Lang157 =	Wpisz 1 zmiennej na linię. Możesz także dodać [rozdziały].
 		
 ; Other Windows		
 	t_Lang001 =	Eksport do AHK
@@ -375,6 +372,10 @@
 	t_Lang090 =	Defaults
 	t_Lang091 =	Pozwól przeciągając wiersze
 	t_Lang092 =	Cała zawartość komórek
+	t_Lang093 =	Standardowy format INI
+	t_Lang094 =	Name = Value
+	t_Lang095 =	Wpisz 1 zmiennej na linię. Możesz także dodać [rozdziały].
+	t_Lang096 =	Użytkowników Zmienne Globalne
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Otwarte
@@ -724,6 +725,8 @@
 		Powoduje skrypt zachowywać tak, jakby podano
 		zawartości pliku są obecne na taką pozycję.
 	)	
+	Ex_UV_TT =	Wyeksportować zmienne globalne.
+	Ex_EdVars_TT =	Wybierz zmienne globalne być wyeksportowane.
 		
 ; IE Commands Tips		
 	Tip_Navigate =	Nawigacja do adresu URL lub ścieżki.

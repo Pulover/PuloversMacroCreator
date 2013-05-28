@@ -33,10 +33,16 @@ T800 for [Html Help utils](http://www.autohotkey.com/board/topic/17984-html-help
 
 ## Version 3.7.2
 
+* Added option to define *User Global Variables* in Settings.
 * Added support to set an infinite loop in *Loop Command*.
+* Added support for Loop Number parameter in *Break* and *Continue*.
+* Added handler for *COM* errors in Playback.
 * Added support for self-references inside parameters in *COM Interface*.
 * Added *Toolbar* command line parameter: -b (Shows *Controls Toolbar* on start-up).
+* Added support for escaping percent signs (`%).
 * Fixed error on start-up on Windows Vista.
+* Fixed Screenshots not working in 64-bit version.
+* Fixed *WinWait* Timeout parameter not working in Playback.
 * Fixed issues with *If Statements*.
 
 ## Version 3.7.1

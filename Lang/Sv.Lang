@@ -278,9 +278,6 @@
 	c_Lang152 =	Uppgifter
 	c_Lang153 =	Alltid överst
 	c_Lang154 =	Minuter
-	c_Lang155 =	Standard INI format
-	c_Lang156 =	Namn = Värde
-	c_Lang157 =	Skriv en variabel per linje. Du kan också lägga till [avsnitt].
 		
 ; Other Windows		
 	t_Lang001 =	Exportera till AHK
@@ -375,6 +372,10 @@
 	t_Lang090 =	Standardvärden
 	t_Lang091 =	Tillåt dra rader
 	t_Lang092 =	Hela cellinnehållet
+	t_Lang093 =	Standard INI format
+	t_Lang094 =	Namn = Värde
+	t_Lang095 =	Skriv en variabel per linje. Du kan också lägga till [avsnitt].
+	t_Lang096 =	Användaren Globala Variabler
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Öppet
@@ -724,6 +725,8 @@
 		Orsakar skriptet att agera som om den angivna
 		filens innehåll är närvarande vid denna exakta positionen.
 	)	
+	Ex_UV_TT =	Exportera globala variabler.
+	Ex_EdVars_TT =	Välj globala variabler som skall exporteras.
 		
 ; IE Commands Tips		
 	Tip_Navigate =	Navigerar till en webbadress eller sökväg.

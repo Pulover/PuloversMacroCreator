@@ -278,9 +278,6 @@
 	c_Lang152 =	Bilgi
 	c_Lang153 =	Her zaman üstte
 	c_Lang154 =	Dakika
-	c_Lang155 =	Standart INI biçimi
-	c_Lang156 =	Adı = Değer
-	c_Lang157 =	Satır başına 1 değişken girin. Ayrıca [Bölüm] ekleyebilirsiniz.
 		
 ; Other Windows		
 	t_Lang001 =	AHK Aktar
@@ -375,6 +372,10 @@
 	t_Lang090 =	Varsayılanları
 	t_Lang091 =	Satırları sürükleyerek izin ver
 	t_Lang092 =	Tüm hücre içeriğini
+	t_Lang093 =	Standart INI biçimi
+	t_Lang094 =	Adı = Değer
+	t_Lang095 =	Satır başına 1 değişken girin. Ayrıca [Bölüm] ekleyebilirsiniz.
+	t_Lang096 =	Kullanıcı Global Değişkenler
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Açık
@@ -724,6 +725,8 @@
 		Belirtilen sanki komut davranmasına neden olur
 		Dosyanın içeriğini tam bu konumda bulunmaktadır.
 	)	
+	Ex_UV_TT =	Global değişkenler ihracat.
+	Ex_EdVars_TT =	Ihraç edilecek genel değişkenleri seçin.
 		
 ; IE Commands Tips		
 	Tip_Navigate =	Bir URL veya yol gider.

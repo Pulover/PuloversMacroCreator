@@ -278,9 +278,6 @@
 	c_Lang152 =	Informação
 	c_Lang153 =	Sempre visível
 	c_Lang154 =	Minutos
-	c_Lang155 =	Formato INI padrão
-	c_Lang156 =	Nome = Valor
-	c_Lang157 =	Insira 1 variável por linha. Você também pode adicionar [Seções].
 		
 ; Other Windows		
 	t_Lang001 =	Exportar para AHK
@@ -375,6 +372,10 @@
 	t_Lang090 =	Padrões
 	t_Lang091 =	Permitir Arrastar Linhas
 	t_Lang092 =	Conteúdo da célula inteira
+	t_Lang093 =	Formato INI padrão
+	t_Lang094 =	Nome = Valor
+	t_Lang095 =	Insira 1 variável por linha. Você também pode adicionar [Seções].
+	t_Lang096 =	Variáveis Globais do Usuário
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Abrir
@@ -724,6 +725,8 @@
 		Faz com que o script comporte-se como se o conteúdo do
 		arquivo especificado estivesse presente nesta exata posição
 	)	
+	Ex_UV_TT =	Exportar variáveis globais.
+	Ex_EdVars_TT =	Selecionar variáveis globais a serem exportadas.
 		
 ; IE Commands Tips		
 	Tip_Navigate =	Navega para uma URL ou caminho.

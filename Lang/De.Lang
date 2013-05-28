@@ -278,9 +278,6 @@
 	c_Lang152 =	Informationen
 	c_Lang153 =	Always on top
 	c_Lang154 =	Minuten
-	c_Lang155 =	Standard-INI-Format
-	c_Lang156 =	Name = Wert
-	c_Lang157 =	Geben Sie 1 Variable pro Zeile. Sie können auch hinzufügen [Abschnitte].
 		
 ; Other Windows		
 	t_Lang001 =	Export nach AHK
@@ -375,6 +372,10 @@
 	t_Lang090 =	Defaults
 	t_Lang091 =	Erlauben Ziehen Reihen
 	t_Lang092 =	Gesamte Zellinhalt
+	t_Lang093 =	Standard-INI-Format
+	t_Lang094 =	Name = Wert
+	t_Lang095 =	Geben Sie 1 Variable pro Zeile. Sie können auch hinzufügen [Abschnitte].
+	t_Lang096 =	Benutzer Globale Variablen
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Öffnen
@@ -724,6 +725,8 @@
 		Verursacht das Skript zu verhalten, als ob die angegebene
 		Dateiinhalt sind in diesem genaue Position vorhanden.
 	)	
+	Ex_UV_TT =	Exportieren globalen variablen.
+	Ex_EdVars_TT =	Wählen sie globale variablen, die exportiert werden.
 		
 ; IE Commands Tips		
 	Tip_Navigate =	Navigiert zu einer URL oder Pfad.

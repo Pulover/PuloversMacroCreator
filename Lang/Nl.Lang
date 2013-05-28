@@ -278,9 +278,6 @@
 	c_Lang152 =	Informatie
 	c_Lang153 =	Altijd op voorgrond
 	c_Lang154 =	Minuten
-	c_Lang155 =	Standaard INI formaat
-	c_Lang156 =	Naam = waarde
-	c_Lang157 =	Voer 1 variabele per regel. U kunt ook [secties] toe te voegen.
 		
 ; Other Windows		
 	t_Lang001 =	Exporteren naar AHK
@@ -375,6 +372,10 @@
 	t_Lang090 =	Standaardwaarden
 	t_Lang091 =	Laat slepen rijen
 	t_Lang092 =	Celinhoud
+	t_Lang093 =	Standaard INI formaat
+	t_Lang094 =	Naam = waarde
+	t_Lang095 =	Voer 1 variabele per regel. U kunt ook [secties] toe te voegen.
+	t_Lang096 =	Gebruiker Globale Variabelen
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Open
@@ -724,6 +725,8 @@
 		Veroorzaakt het script te gedragen alsof de opgegeven
 		bestand de inhoud van zijn aanwezig op deze exacte positie.
 	)	
+	Ex_UV_TT =	Exporteren globale variabelen.
+	Ex_EdVars_TT =	Selecteer globale variabelen te exporteren.
 		
 ; IE Commands Tips		
 	Tip_Navigate =	Hiermee navigeert u naar een URL of pad.

@@ -425,6 +425,10 @@
 	Function: Break()
 		Exits (terminates) a loop.
 
+	Parameters:
+		LoopNumber - If specified, identifies which loop this statement should apply to by numeric nesting level. If omitted or 1, this statement applies to the innermost loop in which it is enclosed.  
+			This parameter is available when editing the command or adding it from the *Run* command window. Labels are not yet supported.  
+
 	Extra:
 		### Related
 			[Break](http://l.autohotkey.net/docs/commands/Break.htm)
@@ -433,6 +437,10 @@
 /*!
 	Function: Continue()
 		Skips the rest of the current loop iteration and begins a new one.
+
+	Parameters:
+		LoopNumber - If specified, identifies which loop this statement should apply to by numeric nesting level. If omitted or 1, this statement applies to the innermost loop in which it is enclosed.  
+			This parameter is available when editing the command or adding it from the *Run* command window. Labels are not yet supported.  
 
 	Extra:
 		### Related

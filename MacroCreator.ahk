@@ -78,8 +78,8 @@ ReleaseDate := "May, 2013"
 If ((A_IsCompiled) && !InStr(FileExist(A_AppData "\MacroCreator"), "D"))
 	FileCreateDir, %A_AppData%\MacroCreator
 
-IniFilePath := (A_IsCompiled) ? A_AppData "\MacroCreator" : A_ScriptDir "\MacroCreator.ini"
-UserVarsPath := (A_IsCompiled) ? A_AppData "\MacroCreator" : A_ScriptDir "\UserGlobalVars.ini"
+IniFilePath := ((A_IsCompiled) ? A_AppData "\MacroCreator" : A_ScriptDir) "\MacroCreator.ini"
+UserVarsPath := ((A_IsCompiled) ? A_AppData "\MacroCreator" : A_ScriptDir) "\UserGlobalVars.ini"
 
 IniRead, Lang, %IniFilePath%, Language, Lang
 IniRead, AutoKey, %IniFilePath%, HotKeys, AutoKey, F3|F4|F5|F6|F7
@@ -153,7 +153,6 @@ IniRead, VirtualKeys, %IniFilePath%, Options, VirtualKeys,
 {Media_Stop}{Media_Play_Pause}{Launch_Mail}{Launch_Media}{Launch_App1}{Launch_App2}
 )
 IniRead, AutoUpdate, %IniFilePath%, Options, AutoUpdate, 1
-; IniRead, User_gVars, %IniFilePath%, Options, User_gVars, %A_Space%
 IniRead, Ex_AbortKey, %IniFilePath%, ExportOptions, Ex_AbortKey, 0
 IniRead, Ex_SM, %IniFilePath%, ExportOptions, Ex_SM, 1
 IniRead, SM, %IniFilePath%, ExportOptions, SM, Input
@@ -188,7 +187,7 @@ IniRead, ColSizes, %IniFilePath%, WindowOptions, ColSizes, 65,135,200,50,40,85,1
 IniRead, OSCPos, %IniFilePath%, WindowOptions, OSCPos, X5 Y25
 IniRead, OSTrans, %IniFilePath%, WindowOptions, OSTrans, 255
 
-User_Vars := new Ini(UserVarsPath)
+User_Vars := new ObjIni(UserVarsPath)
 User_Vars.Read()
 
 If Lang = Error
@@ -1642,8 +1641,11 @@ return
 VarsTree:
 Gui, 29:+owner14 +ToolWindow
 Gui, 14:+Disabled
+Gui, 29:Add, TreeView, Checked H500 W300 vIniTV
 User_Vars.Tree(29)
-Gui, 29:Show,, User Global Variables
+Gui, 29:Add, Button, -Wrap Section xs W70 H23 gCheckAll, %t_Lang007%
+Gui, 29:Add, Button, -Wrap yp x+5 W70 H23 gUnCheckAll, %t_Lang008%
+Gui, 29:Show,, %t_Lang096%
 return
 
 29GuiClose:
@@ -1665,11 +1667,27 @@ Gui, 14:Default
 return
 
 CheckAll:
+ItemID := 0
 LV_Modify(0, "Check")
+Loop
+{
+	ItemID := TV_GetNext(ItemID, "Full")
+	If !(ItemID)
+		break
+	TV_Modify(ItemID, "Check")
+}
 return
 
 UnCheckAll:
 LV_Modify(0, "-Check")
+ItemID := 0
+Loop
+{
+	ItemID := TV_GetNext(ItemID, "Checked")
+	If !(ItemID)
+		break
+	TV_Modify(ItemID, "-Check")
+}
 return
 
 Ex_Checks:
@@ -1921,7 +1939,7 @@ GoSub, ResetHotkeys
 CurrLoopColor := LoopLVColor, CurrIfColor := IfLVColor
 FileRead, UserVarsList, %UserVarsPath%
 Gui, 4:Font, s7
-Gui, 4:Add, Tab2, W420 H570 vTabControl, %t_Lang018%|%t_Lang052%|User Global Variables
+Gui, 4:Add, Tab2, W420 H570 vTabControl AltSubmit, %t_Lang018%|%t_Lang052%|%t_Lang096%
 ; Recording
 Gui, 4:Add, GroupBox, W400 H200, %t_Lang022%:
 Gui, 4:Add, Text, ys+40 xs+245, %t_Lang019%:
@@ -2022,9 +2040,9 @@ Gui, 4:Add, Button, -Wrap W100 H23 gConfigRestore, %t_Lang063%
 Gui, 4:Add, Button, -Wrap yp x+10 W100 H23 gKeyHistory, %c_Lang124%
 ; User Variables
 Gui, 4:Tab, 3
-Gui, 4:Add, Text, -Wrap W120 R1, %c_Lang155%:
-Gui, 4:Add, Text, -Wrap W280 R1 yp x+5 cRed, %c_Lang156%
-Gui, 4:Add, Text, -Wrap W400 R1 y+5 xm+10, %c_Lang157%
+Gui, 4:Add, Text, -Wrap W120 R1, %t_Lang093%:
+Gui, 4:Add, Text, -Wrap W280 R1 yp x+5 cRed, %t_Lang094%
+Gui, 4:Add, Text, -Wrap W400 R1 y+5 xm+10, %t_Lang095%
 Gui, 4:Add, Edit, W400 H490 vUserVarsList, %UserVarsList%
 Gui, 4:Tab
 Gui, 4:Add, Button, -Wrap Default Section xm W60 H23 gConfigOK, %c_Lang020%
@@ -9290,7 +9308,6 @@ IniWrite, %LoopLVColor%, %IniFilePath%, Options, LoopLVColor
 IniWrite, %IfLVColor%, %IniFilePath%, Options, IfLVColor
 IniWrite, %VirtualKeys%, %IniFilePath%, Options, VirtualKeys
 IniWrite, %AutoUpdate%, %IniFilePath%, Options, AutoUpdate
-; IniWrite, %User_gVars%, %IniFilePath%, Options, User_gVars
 IniWrite, %Ex_AbortKey%, %IniFilePath%, ExportOptions, Ex_AbortKey
 IniWrite, %Ex_SM%, %IniFilePath%, ExportOptions, Ex_SM
 IniWrite, %SM%, %IniFilePath%, ExportOptions, SM
@@ -10003,7 +10020,7 @@ return
 #Include <Playback>
 #Include <Export>
 #Include <Class_PMC>
-#Include <Class_Ini>
+#Include <Class_ObjIni>
 #Include *i <Gdip>
 #Include *i <Eval>
 #Include *i <Class_LV_Colors>

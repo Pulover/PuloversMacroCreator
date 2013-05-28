@@ -278,9 +278,6 @@
 	c_Lang152 =	信息
 	c_Lang153 =	总在最前
 	c_Lang154 =	分钟
-	c_Lang155 =	标准的INI格式
-	c_Lang156 =	名称=值
-	c_Lang157 =	输入每行1个变量。您还可以添加[第]。
 		
 ; Other Windows		
 	t_Lang001 =	导出到华民航空
@@ -375,6 +372,10 @@
 	t_Lang090 =	默认值
 	t_Lang091 =	允许拖行
 	t_Lang092 =	整个单元格内容
+	t_Lang093 =	标准的INI格式
+	t_Lang094 =	名称=值
+	t_Lang095 =	输入每行1个变量。您还可以添加[第]。
+	t_Lang096 =	用户全局变量
 		
 ; Messages & Dialogs		
 	d_Lang001 =	打开
@@ -724,6 +725,8 @@
 		导致脚本的行为，虽然规定
 		文件的内容是在此的确切位置。
 	)	
+	Ex_UV_TT =	导出全局变量。
+	Ex_EdVars_TT =	选择要导出的全局变量。
 		
 ; IE Commands Tips		
 	Tip_Navigate =	导航到一个URL或路径。

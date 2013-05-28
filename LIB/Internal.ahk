@@ -106,11 +106,11 @@ CmdHelp()
 		GuiControlGet, Pag,, TabControl
 	Title := ContHTitle[Gui][Pag ? Pag : 1]
 	If !Title
-		Title := "index"
+		Title := "index.html"
 	IfExist, MacroCreator_Help.chm
-		Run, hh.exe mk:@MSITStore:MacroCreator_Help.chm::/%Title%.html
+		Run, hh.exe mk:@MSITStore:MacroCreator_Help.chm::/%Title%
 	Else
-		Run, http://www.autohotkey.net/~Pulover/Docs/%Title%.html
+		Run, http://www.autohotkey.net/~Pulover/Docs/%Title%
 	return 0
 }
 

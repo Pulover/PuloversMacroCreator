@@ -1,4 +1,15 @@
-﻿Class Ini
+﻿;========================================================================
+;
+; 				ObjIni [Object INI]
+;
+; Author:		Pulover [Rodolfo U. Batista]
+;				rodolfoub@gmail.com
+;
+; Object-oriented INI class.
+;
+;========================================================================
+
+Class ObjIni
 {
 	__New(File, Section="")
 	{
@@ -93,12 +104,9 @@
 		this.Insert(ReadSection, %ReadSection%)
 	}
 	
-	Tree(Gui, h=500, w=300)
+	Tree(Gui)
 	{
-		global IniTV
-		
 		Gui, %Gui%:Default
-		Gui, %Gui%:Add, TreeView, Checked H%h% W%w% vIniTV
 		For each, Section in this
 		{
 			For each, Key in Section

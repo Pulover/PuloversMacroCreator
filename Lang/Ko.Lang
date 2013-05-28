@@ -278,9 +278,6 @@
 	c_Lang152 =	정보
 	c_Lang153 =	항상 상단에
 	c_Lang154 =	분
-	c_Lang155 =	표준 INI 포맷
-	c_Lang156 =	이름 = 값
-	c_Lang157 =	라인 당 1 변수를 입력합니다. 또한 [섹션]을 추가 할 수 있습니다.
 		
 ; Other Windows		
 	t_Lang001 =	AHK로 내보내기
@@ -375,6 +372,10 @@
 	t_Lang090 =	기본값
 	t_Lang091 =	행을 드래그 할 수
 	t_Lang092 =	전체 셀 내용
+	t_Lang093 =	표준 INI 포맷
+	t_Lang094 =	이름 = 값
+	t_Lang095 =	라인 당 1 변수를 입력합니다. 또한 [섹션]을 추가 할 수 있습니다.
+	t_Lang096 =	사용자가 전역 변수
 		
 ; Messages & Dialogs		
 	d_Lang001 =	열기
@@ -724,6 +725,8 @@
 		지정된 것처럼 스크립트가 동작하게됩니다
 		파일의 내용이 정확한 위치에 존재한다.
 	)	
+	Ex_UV_TT =	전역 변수를 내 보냅니다.
+	Ex_EdVars_TT =	내보낼 전역 변수를 선택합니다.
 		
 ; IE Commands Tips		
 	Tip_Navigate =	URL 또는 경로를 탐색합니다.
