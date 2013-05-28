@@ -1538,7 +1538,7 @@ Gui, 14:Add, DDL, yp x+170 W65 vIdent Disabled, Title||Class|Process|ID|PID
 Gui, 14:Add, Edit, xs+10 W310 vTitle Disabled
 Gui, 14:Add, Button, -Wrap yp-1 x+0 W30 H23 vGetWin gGetWin Disabled, ...
 ; Options
-Gui, 14:Add, GroupBox, Section xm W360 H195, %w_Lang003%:
+Gui, 14:Add, GroupBox, Section xm W360 H210, %w_Lang003%:
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_SM% ys+20 xs+10 W110 vEx_SM R1, SendMode
 Gui, 14:Add, DDL, yp-3 xp+115 vSM w75, Input||Play|Event|InputThenPlay|
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_SI% y+5 xs+10 W110 vEx_SI R1, #SingleInstance
@@ -1559,9 +1559,10 @@ Gui, 14:Add, Edit, yp-3 xp+110 W30 vSW, %SW%
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_SB% y+5 xs+210 W110 vEx_SB R1, SetBatchLines
 Gui, 14:Add, Edit, yp-3 xp+110 W30 vSB, %SB%
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_NT% y+5 xs+210 W140 vEx_NT R1, #NoTrayIcon
-Gui, 14:Add, Checkbox, -Wrap Checked%Ex_IN% y+15 xs+10 W195 vEx_IN R1, `#`Include (%t_Lang087%)
+Gui, 14:Add, Text, y+10 xs+10 W340 H2 0x10
+Gui, 14:Add, Checkbox, -Wrap Checked%Ex_IN% y+10 xs+10 W195 vEx_IN R1, `#`Include (%t_Lang087%)
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_UV% yp x+5 W110 vEx_UV gEx_Checks R1, Global Variables
-Gui, 14:Add, Button, yp-10 xp+115 H25 W25 hwndEx_EdVars vEx_EdVars gVarsTree Disabled
+Gui, 14:Add, Button, yp-5 xp+115 H25 W25 hwndEx_EdVars vEx_EdVars gVarsTree Disabled
 	ILButton(Ex_EdVars, IniTVIcon[1] ":" IniTVIcon[2], 16, 16)
 Gui, 14:Add, Text, y+5 xs+10 W95, COM Objects:
 Gui, 14:Add, Radio, -Wrap Checked%ComCr% yp xp+100 W95 vComCr R1, ComObjCreate
