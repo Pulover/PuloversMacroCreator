@@ -278,6 +278,9 @@
 	c_Lang152 =	Informazioni
 	c_Lang153 =	Sempre in primo piano
 	c_Lang154 =	Minuti
+	c_Lang155 =	Formato INI standard
+	c_Lang156 =	Nome = Valore
+	c_Lang157 =	Inserisci 1 variabile per riga. Si può anche aggiungere [sezioni].
 		
 ; Other Windows		
 	t_Lang001 =	Esporta in AHK
@@ -491,7 +494,9 @@
 	)	
 	d_Lang062 =	Hai già la versione più recente.
 	d_Lang063 =	Si è verificato un errore durante la verifica.
-		
+	d_Lang064 =	Errore di oggetto COM in
+	d_Lang065 =	Riga
+	d_Lang066 =	Specificamente
 		
 ; Tooltips		
 	NewB_TT =	Nuovo (Ctrl+N)
@@ -569,6 +574,7 @@
 	OSStop_TT =	Arresto
 	OSRec_TT =	Start / Stop Record
 	OSRecNew_TT =	Registra nuova macro
+	OSRecOpt_TT =	Opzioni Di Registrazione
 	OSClear_TT =	Cancella elenco
 	OSProgB_TT =	Mostra barra di avanzamento
 	OSFast_TT =	Accelerare

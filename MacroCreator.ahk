@@ -2022,9 +2022,9 @@ Gui, 4:Add, Button, -Wrap W100 H23 gConfigRestore, %t_Lang063%
 Gui, 4:Add, Button, -Wrap yp x+10 W100 H23 gKeyHistory, %c_Lang124%
 ; User Variables
 Gui, 4:Tab, 3
-Gui, 4:Add, Text,, Standard INI Format:
-Gui, 4:Add, Text, yp x+5 cRed, VarName = VarValue
-Gui, 4:Add, Text, y+5 xm+10, Enter 1 variable per line. You may also add [Sections].
+Gui, 4:Add, Text, -Wrap W120 R1, %c_Lang155%:
+Gui, 4:Add, Text, -Wrap W280 R1 yp x+5 cRed, %c_Lang156%
+Gui, 4:Add, Text, -Wrap W400 R1 y+5 xm+10, %c_Lang157%
 Gui, 4:Add, Edit, W400 H490 vUserVarsList, %UserVarsList%
 Gui, 4:Tab
 Gui, 4:Add, Button, -Wrap Default Section xm W60 H23 gConfigOK, %c_Lang020%
@@ -2194,6 +2194,7 @@ return
 HandCursor:
 DllCall("SetCursor", "UInt", hCurs)
 return
+
 
 ;##### Context Help: #####
 
@@ -6705,6 +6706,8 @@ Gui, 28:Add, Button, ys-1 x+4 W25 H25 hwndOSRec vOSRec gRecStart
 	ILButton(OSRec, RecordIcon[1] ":" RecordIcon[2], 16, 16)
 Gui, 28:Add, Button, ys-1 x+0 W35 H25 hwndOSRecNew vOSRecNew gRecStartNew, +
 	ILButton(OSRecNew, RecordIcon[1] ":" RecordIcon[2], 16, 16, 0)
+Gui, 28:Add, Button, ys-1 x+0 W25 H25 hwndOSRecOpt vOSRecOpt gShowRecMenu
+	ILButton(OSRecOpt, OptionsIcon[1] ":" OptionsIcon[2], 16, 16, 0)
 Gui, 28:Add, Text, W2 H22 ys+3 x+5 0x11
 Gui, 28:Add, Button, ys-1 x+4 W25 H25 hwndOSClear vOSClear gOSClear
 	ILButton(OSClear, RemoveIcon[1] ":" RemoveIcon[2], 16, 16)
@@ -8846,7 +8849,8 @@ pb_IECOM_Set:
 		COMInterface(IeIntStr, o_ie)
 	Catch e
 	{
-		MsgBox, 20, %d_Lang007%, % "COM object error in Macro" mMacroOn ", Row " mListRow "`nError: " e.Message "`nSpecifically: " e.Extra "`n`nContinue?"
+		MsgBox, 20, %d_Lang007%, % d_Lang064 mMacroOn ", " d_Lang065 " Macro" mListRow
+			.	"`n" d_Lang007 ": " e.Message "`n" d_Lang066 ": " e.Extra "`n`n" d_Lang035
 		IfMsgBox, No
 		{
 			StopIt := 1
@@ -8896,7 +8900,8 @@ pb_IECOM_Get:
 		COMInterface(IeIntStr, o_ie, %Step%)
 	Catch e
 	{
-		MsgBox, 20, %d_Lang007%, % "COM object error in Macro" mMacroOn ", Row " mListRow "`nError: " e.Message "`nSpecifically: " e.Extra "`n`nContinue?"
+		MsgBox, 20, %d_Lang007%, % d_Lang064 mMacroOn ", " d_Lang065 " " mListRow
+			.	"`n" d_Lang007 ": " e.Message "`n" d_Lang066 ": " e.Extra "`n`n" d_Lang035
 		IfMsgBox, No
 		{
 			StopIt := 1
@@ -8932,7 +8937,8 @@ pb_COMInterface:
 		}
 		Catch e
 		{
-			MsgBox, 20, %d_Lang007%, % "COM object error in Macro" mMacroOn ", Row " mListRow "`nError: " e.Message "`nSpecifically: " e.Extra "`n`nContinue?"
+			MsgBox, 20, %d_Lang007%, % d_Lang064 mMacroOn ", " d_Lang065 " " mListRow
+				.	"`n" d_Lang007 ": " e.Message "`n" d_Lang066 ": " e.Extra "`n`n" d_Lang035
 			IfMsgBox, No
 			{
 				StopIt := 1
@@ -9869,6 +9875,54 @@ Try Menu, Tray, Icon, %f_Lang002%, % OpenIcon[1], % OpenIcon[2]+1
 Try Menu, Tray, Icon, %f_Lang003%, % SaveIcon[1], % SaveIcon[2]+1
 Try Menu, Tray, Icon, %w_Lang003%, % OptionsIcon[1], % OptionsIcon[2]+1
 Try Menu, Tray, Icon, %f_Lang011%, % ExitIcon[1], % ExitIcon[2]+1
+
+return
+
+; Recording options menu:
+
+ShowRecMenu:
+Menu, RecOptMenu, Add, %d_Lang019%, RecOptions
+Menu, RecOptMenu, Add, %t_Lang021%, RecOptions
+Menu, RecOptMenu, Add, %t_Lang023%, RecOptions
+Menu, RecOptMenu, Add, %t_Lang024%, RecOptions
+Menu, RecOptMenu, Add, %t_Lang025%, RecOptions
+Menu, RecOptMenu, Add, %t_Lang026%, RecOptions
+Menu, RecOptMenu, Add, %t_Lang027%, RecOptions
+Menu, RecOptMenu, Add, %t_Lang029%, RecOptions
+Menu, RecOptMenu, Add, %t_Lang030%, RecOptions
+Menu, RecOptMenu, Add, %t_Lang032%, RecOptions
+Menu, RecOptMenu, Add, %t_Lang031%, RecOptions
+
+If (ClearNewList)
+	Menu, RecOptMenu, Check, %d_Lang019%
+If (Strokes)
+	Menu, RecOptMenu, Check, %t_Lang021%
+If (CaptKDn)
+	Menu, RecOptMenu, Check, %t_Lang023%
+If (Mouse)
+	Menu, RecOptMenu, Check, %t_Lang024%
+If (MScroll)
+	Menu, RecOptMenu, Check, %t_Lang025%
+If (Moves)
+	Menu, RecOptMenu, Check, %t_Lang026%
+If (TimedI)
+	Menu, RecOptMenu, Check, %t_Lang027%
+If (WClass)
+	Menu, RecOptMenu, Check, %t_Lang029%
+If (WTitle)
+	Menu, RecOptMenu, Check, %t_Lang030%
+If (RecMouseCtrl)
+	Menu, RecOptMenu, Check, %t_Lang032%
+If (RecKeybdCtrl)
+	Menu, RecOptMenu, Check, %t_Lang031%
+
+Menu, RecOptMenu, Show
+return
+
+RecOptions:
+ItemVar := RecOptChecks[A_ThisMenuItemPos]
+%ItemVar% := !%ItemVar%
+Menu, RecOptMenu, DeleteAll
 return
 
 ;##### Languages: #####

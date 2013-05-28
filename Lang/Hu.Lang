@@ -278,6 +278,9 @@
 	c_Lang152 =	Információ
 	c_Lang153 =	Mindig a tetején
 	c_Lang154 =	Perc
+	c_Lang155 =	Szabványos INI formátum
+	c_Lang156 =	Név = érték
+	c_Lang157 =	Írja 1 változó soronként. Ön is hozzá [§].
 		
 ; Other Windows		
 	t_Lang001 =	Exportálás AHK
@@ -491,7 +494,9 @@
 	)	
 	d_Lang062 =	Már így is a legújabb verzióra.
 	d_Lang063 =	Hiba történt ellenőrzés.
-		
+	d_Lang064 =	COM objektum hiba
+	d_Lang065 =	Sor
+	d_Lang066 =	Konkrétan
 		
 ; Tooltips		
 	NewB_TT =	Új (Ctrl+N)
@@ -569,6 +574,7 @@
 	OSStop_TT =	Megáll
 	OSRec_TT =	Start / Stop Record
 	OSRecNew_TT =	Új makró rögzítése
+	OSRecOpt_TT =	Felvételi Mód
 	OSClear_TT =	Kódolatlan List
 	OSProgB_TT =	Kijelző Progress Bar
 	OSFast_TT =	Felgyorsul

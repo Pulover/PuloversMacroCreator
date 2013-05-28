@@ -278,6 +278,9 @@
 	c_Lang152 =	Информация
 	c_Lang153 =	Винаги отгоре
 	c_Lang154 =	Минути
+	c_Lang155 =	Standard INI формат
+	c_Lang156 =	Име = Стойност
+	c_Lang157 =	Въведете една променлива на ред. Можете също така да добавите [разделите].
 		
 ; Other Windows		
 	t_Lang001 =	Износ за AHK
@@ -491,7 +494,9 @@
 	)	
 	d_Lang062 =	Вече имате най-новата версия.
 	d_Lang063 =	Възникна грешка при проверка.
-		
+	d_Lang064 =	Грешка COM обект в
+	d_Lang065 =	Ред
+	d_Lang066 =	Конкретно
 		
 ; Tooltips		
 	NewB_TT =	New (Ctrl+N)
@@ -569,6 +574,7 @@
 	OSStop_TT =	Спиране
 	OSRec_TT =	Start / Stop Запис
 	OSRecNew_TT =	Записвате нови макроси
+	OSRecOpt_TT =	Запис Опции
 	OSClear_TT =	Изчисти списъка
 	OSProgB_TT =	Покажи прогрес бар
 	OSFast_TT =	Ускоряване

@@ -278,6 +278,9 @@
 	c_Lang152 =	Uppgifter
 	c_Lang153 =	Alltid överst
 	c_Lang154 =	Minuter
+	c_Lang155 =	Standard INI format
+	c_Lang156 =	Namn = Värde
+	c_Lang157 =	Skriv en variabel per linje. Du kan också lägga till [avsnitt].
 		
 ; Other Windows		
 	t_Lang001 =	Exportera till AHK
@@ -491,7 +494,9 @@
 	)	
 	d_Lang062 =	Du har redan den senaste versionen.
 	d_Lang063 =	Ett fel inträffade vid kontroll.
-		
+	d_Lang064 =	COM-objekt fel i
+	d_Lang065 =	Rad
+	d_Lang066 =	Specifikt
 		
 ; Tooltips		
 	NewB_TT =	Ny (Ctrl+N)
@@ -569,6 +574,7 @@
 	OSStop_TT =	Stopp
 	OSRec_TT =	Start / stopp Spela
 	OSRecNew_TT =	Spela in nytt makro
+	OSRecOpt_TT =	Inspelningsalternativen
 	OSClear_TT =	Rensa lista
 	OSProgB_TT =	Visa Progress Bar
 	OSFast_TT =	Fart upp

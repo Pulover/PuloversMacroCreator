@@ -278,6 +278,9 @@
 	c_Lang152 =	Tiedot
 	c_Lang153 =	Aina päällimmäisenä
 	c_Lang154 =	Minuuttia
+	c_Lang155 =	Standard INI muodossa
+	c_Lang156 =	Nimi = arvo
+	c_Lang157 =	Anna 1 muuttujan riville. Voit myös lisätä [§].
 		
 ; Other Windows		
 	t_Lang001 =	Vie AHK
@@ -491,7 +494,9 @@
 	)	
 	d_Lang062 =	Sinulla on jo uusin versio.
 	d_Lang063 =	Virhe tarkkailun.
-		
+	d_Lang064 =	COM-objekti virhe
+	d_Lang065 =	Rivi
+	d_Lang066 =	Erityisesti
 		
 ; Tooltips		
 	NewB_TT =	Uusi (Ctrl+N)
@@ -569,6 +574,7 @@
 	OSStop_TT =	Lopettaa
 	OSRec_TT =	Start / Stop Record
 	OSRecNew_TT =	Nauhoita uusi makro
+	OSRecOpt_TT =	Tallennusmahdollisuudet
 	OSClear_TT =	Tyhjennä luettelo
 	OSProgB_TT =	Näyttö Progress Bar
 	OSFast_TT =	Nopeuttaa

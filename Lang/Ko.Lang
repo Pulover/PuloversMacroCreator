@@ -278,6 +278,9 @@
 	c_Lang152 =	정보
 	c_Lang153 =	항상 상단에
 	c_Lang154 =	분
+	c_Lang155 =	표준 INI 포맷
+	c_Lang156 =	이름 = 값
+	c_Lang157 =	라인 당 1 변수를 입력합니다. 또한 [섹션]을 추가 할 수 있습니다.
 		
 ; Other Windows		
 	t_Lang001 =	AHK로 내보내기
@@ -491,7 +494,9 @@
 	)	
 	d_Lang062 =	당신은 이미 가장 최신 버전이 있습니다.
 	d_Lang063 =	확인하는 동안 오류가 발생했습니다.
-		
+	d_Lang064 =	에서 COM 개체 오류
+	d_Lang065 =	열
+	d_Lang066 =	특히
 		
 ; Tooltips		
 	NewB_TT =	새 (Ctrl 키+N)
@@ -569,6 +574,7 @@
 	OSStop_TT =	정지
 	OSRec_TT =	기록 시작 / 중지
 	OSRecNew_TT =	새 매크로 기록
+	OSRecOpt_TT =	레코딩 옵션
 	OSClear_TT =	지우기 목록
 	OSProgB_TT =	진행률 표시 줄을 표시합니다
 	OSFast_TT =	속도를 더하다

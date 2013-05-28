@@ -278,6 +278,9 @@
 	c_Lang152 =	Informatie
 	c_Lang153 =	Altijd op voorgrond
 	c_Lang154 =	Minuten
+	c_Lang155 =	Standaard INI formaat
+	c_Lang156 =	Naam = waarde
+	c_Lang157 =	Voer 1 variabele per regel. U kunt ook [secties] toe te voegen.
 		
 ; Other Windows		
 	t_Lang001 =	Exporteren naar AHK
@@ -491,7 +494,9 @@
 	)	
 	d_Lang062 =	Je hebt al de meest recente versie.
 	d_Lang063 =	Er is een fout opgetreden tijdens het controleren.
-		
+	d_Lang064 =	COM-object fout in
+	d_Lang065 =	Rij
+	d_Lang066 =	Specifiek
 		
 ; Tooltips		
 	NewB_TT =	Nieuw (Ctrl+N)
@@ -565,10 +570,11 @@
 	IfLVColor_TT =	Klik hier om een ​​kleur te kiezen
 	RefreshIEW_TT =	Lijst vernieuwen
 	ActiveObj_TT =	Verbinding probeert te maken met een Active COM-object
-	OSPlay_TT =	Play / Pause
+	OSPlay_TT =	play / pause
 	OSStop_TT =	Stoppen
 	OSRec_TT =	Start / Stop Record
 	OSRecNew_TT =	Nieuwe macro opnemen
+	OSRecOpt_TT =	Opnamemogelijkheden
 	OSClear_TT =	Lijst wissen
 	OSProgB_TT =	Weergave Progress Bar
 	OSFast_TT =	Versnellen

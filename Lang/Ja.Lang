@@ -278,6 +278,9 @@
 	c_Lang152 =	情報
 	c_Lang153 =	常に手前に表示
 	c_Lang154 =	分
+	c_Lang155 =	標準INI形式
+	c_Lang156 =	名前=値
+	c_Lang157 =	行につき1変数を入力します。また、[セクション]を追加することがあります。
 		
 ; Other Windows		
 	t_Lang001 =	AHKにエクスポート
@@ -491,7 +494,9 @@
 	)	
 	d_Lang062 =	すでに最新のバージョンを持っている。
 	d_Lang063 =	チェック中にエラーが発生しました。
-		
+	d_Lang064 =	でCOMオブジェクトエラー
+	d_Lang065 =	行
+	d_Lang066 =	特に
 		
 ; Tooltips		
 	NewB_TT =	新規作成（Ctrl+Nキー）
@@ -569,6 +574,7 @@
 	OSStop_TT =	停止
 	OSRec_TT =	録音の開始/停止
 	OSRecNew_TT =	新しいマクロの記録
+	OSRecOpt_TT =	録画オプション
 	OSClear_TT =	一覧をクリアする
 	OSProgB_TT =	プログレスバーを表示
 	OSFast_TT =	スピードアップ

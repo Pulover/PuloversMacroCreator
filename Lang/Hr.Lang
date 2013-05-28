@@ -278,6 +278,9 @@
 	c_Lang152 =	Informacije
 	c_Lang153 =	Uvijek na vrhu
 	c_Lang154 =	Minuta
+	c_Lang155 =	Standardni format INI
+	c_Lang156 =	Ime = Vrijednost
+	c_Lang157 =	Unesite jedna varijabla po liniji. Vi svibanj također dodati [sekcije].
 		
 ; Other Windows		
 	t_Lang001 =	Izvoz u AHK
@@ -491,7 +494,9 @@
 	)	
 	d_Lang062 =	Vi već imate najnoviju verziju.
 	d_Lang063 =	Došlo je do pogreške tijekom provjere.
-		
+	d_Lang064 =	COM objekt pogreška u
+	d_Lang065 =	Red
+	d_Lang066 =	Posebno
 		
 ; Tooltips		
 	NewB_TT =	New (Ctrl+N)
@@ -569,6 +574,7 @@
 	OSStop_TT =	Stop
 	OSRec_TT =	Start / Stop Record
 	OSRecNew_TT =	Zapis New Macro
+	OSRecOpt_TT =	Opcije Snimanja
 	OSClear_TT =	Jasno Popis
 	OSProgB_TT =	Prikaz Progress Bar
 	OSFast_TT =	Ubrzati

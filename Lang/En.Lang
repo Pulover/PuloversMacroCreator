@@ -278,6 +278,9 @@
 	c_Lang152 =	Info
 	c_Lang153 =	Always on top
 	c_Lang154 =	Minutes
+	c_Lang155 =	Standard INI format
+	c_Lang156 =	Name = Value
+	c_Lang157 =	Enter 1 variable per line. You may also add [Sections].
 		
 ; Other Windows		
 	t_Lang001 =	Export to AHK
@@ -491,7 +494,9 @@
 	)	
 	d_Lang062 =	You already have the most recent version.
 	d_Lang063 =	An error occured while checking.
-		
+	d_Lang064 =	COM object error in
+	d_Lang065 =	Row
+	d_Lang066 =	Specifically
 		
 ; Tooltips		
 	NewB_TT =	New (Ctrl+N)
@@ -569,6 +574,7 @@
 	OSStop_TT =	Stop
 	OSRec_TT =	Start / Stop Record
 	OSRecNew_TT =	Record New Macro
+	OSRecOpt_TT =	Recording Options
 	OSClear_TT =	Clear List
 	OSProgB_TT =	Display Progress Bar
 	OSFast_TT =	Speed Up

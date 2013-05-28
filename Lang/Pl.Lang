@@ -278,6 +278,9 @@
 	c_Lang152 =	Informacja
 	c_Lang153 =	Zawsze na wierzchu
 	c_Lang154 =	Minut
+	c_Lang155 =	Standardowy format INI
+	c_Lang156 =	Name = Value
+	c_Lang157 =	Wpisz 1 zmiennej na linię. Możesz także dodać [rozdziały].
 		
 ; Other Windows		
 	t_Lang001 =	Eksport do AHK
@@ -491,7 +494,9 @@
 	)	
 	d_Lang062 =	Masz już najnowszą wersję.
 	d_Lang063 =	Wystąpił błąd podczas sprawdzania.
-		
+	d_Lang064 =	Obiekt COM w błąd
+	d_Lang065 =	Rząd
+	d_Lang066 =	Swoiście
 		
 ; Tooltips		
 	NewB_TT =	Nowy (Ctrl+N)
@@ -565,10 +570,11 @@
 	IfLVColor_TT =	Kliknij, aby wybrać kolor
 	RefreshIEW_TT =	Odśwież Listę
 	ActiveObj_TT =	Próbuje połączyć się z aktywnego obiektu COM
-	OSPlay_TT =	Play / Pause
+	OSPlay_TT =	odtwarzanie / pauza
 	OSStop_TT =	Zatrzymać
 	OSRec_TT =	Start / Stop Record
 	OSRecNew_TT =	Zarejestruj nowe makro
+	OSRecOpt_TT =	Opcje Nagrywania
 	OSClear_TT =	Wyczyść listę
 	OSProgB_TT =	Wyświetlić pasek postępu
 	OSFast_TT =	Przyśpieszyć

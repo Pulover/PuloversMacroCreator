@@ -278,6 +278,9 @@
 	c_Lang152 =	Informasjon
 	c_Lang153 =	Alltid på topp
 	c_Lang154 =	Minutter
+	c_Lang155 =	Standard INI-format
+	c_Lang156 =	Navn = verdi
+	c_Lang157 =	Skriv inn en variabel per linje. Du kan også legge til [Seksjoner].
 		
 ; Other Windows		
 	t_Lang001 =	Eksportere til AHK
@@ -491,7 +494,9 @@
 	)	
 	d_Lang062 =	Du allerede har den nyeste versjonen.
 	d_Lang063 =	Det oppstod en feil mens du sjekker.
-		
+	d_Lang064 =	COM objekt feil i
+	d_Lang065 =	Rad
+	d_Lang066 =	Spesielt
 		
 ; Tooltips		
 	NewB_TT =	New (Ctrl+N)
@@ -569,6 +574,7 @@
 	OSStop_TT =	Stopp
 	OSRec_TT =	Start / Stopp Record
 	OSRecNew_TT =	Registrer ny makro
+	OSRecOpt_TT =	Innspillingsalternativer
 	OSClear_TT =	Slett liste
 	OSProgB_TT =	Vise Progress Bar
 	OSFast_TT =	Fremskynde

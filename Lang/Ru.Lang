@@ -278,6 +278,9 @@
 	c_Lang152 =	Информация
 	c_Lang153 =	Всегда сверху
 	c_Lang154 =	Минут
+	c_Lang155 =	Стандартный формат INI
+	c_Lang156 =	Имя = значение
+	c_Lang157 =	Введите 1 переменной в строке. Вы также можете добавить [Разделы].
 		
 ; Other Windows		
 	t_Lang001 =	Экспорт в AHK
@@ -491,7 +494,9 @@
 	)	
 	d_Lang062 =	У вас уже есть самая последняя версия.
 	d_Lang063 =	Произошла ошибка при проверке.
-		
+	d_Lang064 =	COM объект ошибка в
+	d_Lang065 =	Строка
+	d_Lang066 =	Конкретно
 		
 ; Tooltips		
 	NewB_TT =	Новый (Ctrl+N)
@@ -565,10 +570,11 @@
 	IfLVColor_TT =	Нажмите, чтобы выбрать цвет
 	RefreshIEW_TT =	Обновить список
 	ActiveObj_TT =	Пытается подключиться к активным объектом COM
-	OSPlay_TT =	Play / Pause
+	OSPlay_TT =	воспроизведение / пауза
 	OSStop_TT =	Стоп
-	OSRec_TT =	Start / Stop Record
-	OSRecNew_TT =	Record New Macro
+	OSRec_TT =	запуск / остановка записи
+	OSRecNew_TT =	запись нового макроса
+	OSRecOpt_TT =	Параметры Записи
 	OSClear_TT =	Очистить список
 	OSProgB_TT =	Показать Progress Bar
 	OSFast_TT =	Ускорять

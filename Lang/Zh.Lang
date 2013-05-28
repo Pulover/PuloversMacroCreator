@@ -278,6 +278,9 @@
 	c_Lang152 =	信息
 	c_Lang153 =	总在最前
 	c_Lang154 =	分钟
+	c_Lang155 =	标准的INI格式
+	c_Lang156 =	名称=值
+	c_Lang157 =	输入每行1个变量。您还可以添加[第]。
 		
 ; Other Windows		
 	t_Lang001 =	导出到华民航空
@@ -491,7 +494,9 @@
 	)	
 	d_Lang062 =	您已经有最新的版本。
 	d_Lang063 =	检查时发生错误。
-		
+	d_Lang064 =	COM对象错误
+	d_Lang065 =	排
+	d_Lang066 =	特别是
 		
 ; Tooltips		
 	NewB_TT =	新建（Ctrl+N）
@@ -569,6 +574,7 @@
 	OSStop_TT =	停止
 	OSRec_TT =	开始/停止录制
 	OSRecNew_TT =	录制新宏
+	OSRecOpt_TT =	录制选项
 	OSClear_TT =	清除列表
 	OSProgB_TT =	显示进度条
 	OSFast_TT =	加快

@@ -278,6 +278,9 @@
 	c_Lang152 =	Πληροφορίες
 	c_Lang153 =	Πάντα στην κορυφή
 	c_Lang154 =	Λεπτά
+	c_Lang155 =	Τυπική μορφή INI
+	c_Lang156 =	Όνομα = τιμή
+	c_Lang157 =	Πληκτρολογήστε 1 μεταβλητή ανά γραμμή. Μπορείτε επίσης να προσθέσετε [Ενότητες].
 		
 ; Other Windows		
 	t_Lang001 =	Εξαγωγή σε AHK
@@ -491,7 +494,9 @@
 	)	
 	d_Lang062 =	Έχετε ήδη την πιο πρόσφατη έκδοση.
 	d_Lang063 =	Παρουσιάστηκε σφάλμα κατά τον έλεγχο.
-		
+	d_Lang064 =	COM σφάλματος αντικείμενο
+	d_Lang065 =	Σειρά
+	d_Lang066 =	Ειδικά
 		
 ; Tooltips		
 	NewB_TT =	Νέο (Ctrl+N)
@@ -569,6 +574,7 @@
 	OSStop_TT =	Stop
 	OSRec_TT =	Start / Stop Record
 	OSRecNew_TT =	Record New Macro
+	OSRecOpt_TT =	Επιλογές Εγγραφής
 	OSClear_TT =	Clear List
 	OSProgB_TT =	Προβολή γραμμή προόδου
 	OSFast_TT =	Επιταχύνετε

@@ -278,6 +278,9 @@
 	c_Lang152 =	信息
 	c_Lang153 =	總在最前
 	c_Lang154 =	分鐘
+	c_Lang155 =	標準的INI格式
+	c_Lang156 =	名稱=值
+	c_Lang157 =	輸入每行1個變量。您還可以添加[第]。
 		
 ; Other Windows		
 	t_Lang001 =	導出到華民航空
@@ -491,7 +494,9 @@
 	)	
 	d_Lang062 =	您已經有最新的版本。
 	d_Lang063 =	檢查時發生錯誤。
-		
+	d_Lang064 =	COM對象錯誤
+	d_Lang065 =	排
+	d_Lang066 =	特別是
 		
 ; Tooltips		
 	NewB_TT =	新（按Ctrl+N）
@@ -569,6 +574,7 @@
 	OSStop_TT =	停止
 	OSRec_TT =	啟動/停止錄影
 	OSRecNew_TT =	錄製新宏
+	OSRecOpt_TT =	錄製選項
 	OSClear_TT =	清除列表
 	OSProgB_TT =	顯示進度條
 	OSFast_TT =	加快

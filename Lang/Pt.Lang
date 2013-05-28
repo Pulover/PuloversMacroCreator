@@ -278,6 +278,9 @@
 	c_Lang152 =	Informação
 	c_Lang153 =	Sempre visível
 	c_Lang154 =	Minutos
+	c_Lang155 =	Formato INI padrão
+	c_Lang156 =	Nome = Valor
+	c_Lang157 =	Insira 1 variável por linha. Você também pode adicionar [Seções].
 		
 ; Other Windows		
 	t_Lang001 =	Exportar para AHK
@@ -491,7 +494,9 @@
 	)	
 	d_Lang062 =	Você já possui a versão mais recente.
 	d_Lang063 =	Ocorreu um erro durante a verificação.
-		
+	d_Lang064 =	Erro do objeto COM em
+	d_Lang065 =	Linha
+	d_Lang066 =	Especificamente
 		
 ; Tooltips		
 	NewB_TT =	Novo (Ctrl+N)
@@ -569,6 +574,7 @@
 	OSStop_TT =	Parar
 	OSRec_TT =	Iniciar / Parar Gravação
 	OSRecNew_TT =	Gravar Nova Macro
+	OSRecOpt_TT =	Opções de Gravação
 	OSClear_TT =	Limpar Lista
 	OSProgB_TT =	Mostrar Barra de Progresso
 	OSFast_TT =	Acelerar

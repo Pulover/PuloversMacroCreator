@@ -400,6 +400,8 @@ ContHTitle := {	2: ["p6-Preview"]
 			,	23: ["Commands/Control"]
 			,	24: ["Commands/Internet_Explorer", "Commands/COM_Interface"] }
 
+RecOptChecks := ["ClearNewList", "Strokes", "CaptKDn", "Mouse", "MScroll"
+			, "Moves", "TimedI", "WClass", "WTitle", "RecMouseCtrl", "RecKeybdCtrl"]
 KeyNameRep := "
 (Join,
 LControl|Left Control

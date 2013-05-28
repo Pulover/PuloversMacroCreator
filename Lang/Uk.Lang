@@ -278,6 +278,9 @@
 	c_Lang152 =	Інформація
 	c_Lang153 =	Завжди зверху
 	c_Lang154 =	Хвилин
+	c_Lang155 =	Стандартний формат INI
+	c_Lang156 =	Ім'я = значення
+	c_Lang157 =	Введіть 1 змінної в рядку. Ви також можете додати [Розділи].
 		
 ; Other Windows		
 	t_Lang001 =	Експорт до АХК
@@ -491,7 +494,9 @@
 	)	
 	d_Lang062 =	У вас вже є остання версія.
 	d_Lang063 =	Сталася помилка при перевірці.
-		
+	d_Lang064 =	COM об'єкт помилка в
+	d_Lang065 =	Рядок
+	d_Lang066 =	Конкретно
 		
 ; Tooltips		
 	NewB_TT =	Новий (Ctrl+N)
@@ -569,6 +574,7 @@
 	OSStop_TT =	Стоп
 	OSRec_TT =	Start / Stop Record
 	OSRecNew_TT =	Record New Macro
+	OSRecOpt_TT =	Параметри Запису
 	OSClear_TT =	Очистити список
 	OSProgB_TT =	Показати Progress Bar
 	OSFast_TT =	Прискорити
