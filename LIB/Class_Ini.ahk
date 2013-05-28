@@ -23,6 +23,13 @@
 		this.Insert(ReadSection, %ReadSection%)
 	}
 	
+	__Delete()
+	{
+		this.Remove("", Chr(255))
+		this.SetCapacity(0)
+		this.base := ""
+	}
+
 	Read()
 	{
 		local each, Section, Key
@@ -35,7 +42,6 @@
 				{
 					VarName := Key.Key
 					%VarName% := Key.Value
-					msgbox % varname ": " %varname%
 				}
 			}
 		}
@@ -60,6 +66,7 @@
 	
 	Set(List)
 	{
+		this.Remove()
 		ReadSection := "UserVars"
 		Loop, Parse, List, `n
 		{
@@ -75,8 +82,22 @@
 			RegExMatch(A_LoopField, "U)^(.*)\s?=\s?(.*)$", Key)
 			%Key1% := {Section: ReadSection, Key: Key1, Value: Key2}
 			%ReadSection%.Insert(Key1, %Key1%)
-			msgbox % this[ReadSection][Key1].Value
 		}
 		this.Insert(ReadSection, %ReadSection%)
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1899,7 +1899,7 @@ GoSub, SaveData
 GoSub, GetHotkeys
 GoSub, ResetHotkeys
 CurrLoopColor := LoopLVColor, CurrIfColor := IfLVColor
-FileRead, UserVarsList, %UserVarsPath%
+UserVarsList := UserVars.Get()
 Gui, 4:Font, s7
 Gui, 4:Add, Tab2, W420 H570 vTabControl, %t_Lang018%|%t_Lang052%|User Defined Variables
 ; Recording
@@ -2043,17 +2043,17 @@ Else If OnEnter = 1
 	SSMode = OnEnter
 VirtualKeys := EditMod
 UserVarsList := RegExReplace(UserVarsList, "U)\s+=\s+", "=")
+UserVars.Set(UserVarsList)
 FileDelete, %UserVarsPath%
-If (UserVarsList <> "")
-	FileAppend, %UserVarsList%, %UserVarsPath%
-UserVars := new Ini(UserVarsPath)
-If (UserVars = "ERROR")
-{
-	GuiControl, 4:Choose, TabControl, 3
-	MsgBox, 16, %d_Lang007%, %d_Lang041%
-	return
-}
-UserVars.Read()
+UserVars.Write("[UserVars]`n" UserVarsPath)
+; UserVars := new Ini(UserVarsPath)
+; If (UserVars = "ERROR")
+; {
+	; GuiControl, 4:Choose, TabControl, 3
+	; MsgBox, 16, %d_Lang007%, %d_Lang041%
+	; return
+; }
+; UserVars.Read()
 Gui, 1:-Disabled
 Gui, 4:Destroy
 Gui, 1:Default

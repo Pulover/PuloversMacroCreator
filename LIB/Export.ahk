@@ -241,8 +241,7 @@
 				Else
 				{
 					StringReplace, VarValue, VarValue, `,, ```,, All
-					If ((VarValue := CheckExp(VarValue)) = """""""""")
-						VarValue := """"""
+					VarValue := CheckExp(VarValue)
 				}
 			}
 			If (Action = "[Assign Variable]")
@@ -546,7 +545,7 @@ CheckExp(String)
 	StringReplace, String, String, `````, , ¢, All
 	Loop, Parse, String, `,, %A_Space%``
 	{
-		LoopField := RegExReplace(A_LoopField, """", """""")
+		LoopField := (A_LoopField <> """""") ? RegExReplace(A_LoopField, """", """""") : A_LoopField
 		If InStr(LoopField, "%")
 		{
 			Loop, Parse, LoopField, `%
