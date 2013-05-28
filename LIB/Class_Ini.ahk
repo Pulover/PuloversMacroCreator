@@ -4,18 +4,22 @@
 	{
 		Loop, Read, %File%
 		{
+			If (A_LoopReadLine = "")
+				continue
 			If RegExMatch(A_LoopReadLine, "^\[(.*)\]$", Sect)
 			{
 				If (ReadSection <> "")
+				{
 					this.Insert(ReadSection, %ReadSection%)
+				}
 				ReadSection := Sect1, %Sect1% := []
 				continue
 			}
 			If ((Section <> "") && (Section <> ReadSection))
 				continue
-			RegExMatch(A_LoopReadLine, "U)^(.*)=(.*)$", Key)
-			Try
+			If (RegExMatch(A_LoopReadLine, "U)^(.*)=(.*)$", Key))
 			{
+				Key1 := RegExReplace(Key1, "[^\w\d#_@$]")
 				%Key1% := {Section: ReadSection, Key: Key1, Value: Key2}
 				%ReadSection%.Insert(Key1, %Key1%)
 			}
@@ -50,10 +54,8 @@
 	Write(File)
 	{
 		For each, Section in this
-		{
 			For each, Key in Section
 				IniWrite, % Key.Value, %File%, % Key.Section, % Key.Key
-		}
 	}
 	
 	Get()
@@ -64,11 +66,13 @@
 		return List
 	}
 	
-	Set(List)
+	Set(NewList)
 	{
-		this.Remove()
-		ReadSection := "UserVars"
-		Loop, Parse, List, `n
+		this.Remove("", Chr(255))
+		this.SetCapacity(0)
+		ReadSection := "UserGlobalVars"
+		%ReadSection% := []
+		Loop, Parse, NewList, `n
 		{
 			If (A_LoopField = "")
 				continue
@@ -79,23 +83,33 @@
 				ReadSection := Sect1, %Sect1% := []
 				continue
 			}
-			RegExMatch(A_LoopField, "U)^(.*)\s?=\s?(.*)$", Key)
-			%Key1% := {Section: ReadSection, Key: Key1, Value: Key2}
-			%ReadSection%.Insert(Key1, %Key1%)
+			If (RegExMatch(A_LoopField, "U)^(.*)\s?=\s?(.*)$", Key))
+			{
+				Key1 := RegExReplace(Key1, "[^\w\d#_@$]")
+				%Key1% := {Section: ReadSection, Key: Key1, Value: Key2}
+				%ReadSection%.Insert(Key1, %Key1%)
+			}
 		}
 		this.Insert(ReadSection, %ReadSection%)
 	}
+	
+	Tree(Gui, h=500, w=300)
+	{
+		global IniTV
+		
+		Gui, %Gui%:Default
+		Gui, %Gui%:Add, TreeView, Checked H%h% W%w% vIniTV
+		For each, Section in this
+		{
+			For each, Key in Section
+			{
+				If (A_Index = 1)
+					Level := TV_Add(Key.Section, "", "Bold Check Expand")
+				TV_Add(Key.Key " = " Key.Value, Level, "Check")
+			}
+		}
+	}
 }
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -2,11 +2,11 @@
 
 ## Table of Contents
 
-* [Recording](#Recording)
-* [Playback](#Playback)
-* [Defaults](#Defaults)
-* [Screenshots](#Screenshots)
-* [Misc.](#Misc.)
+* [Recording](#recording)
+* [Playback](#playback)
+* [Defaults](#defaults)
+* [Screenshots](#screenshots)
+* [Misc.](#misc.)
 
 ## Recording
 

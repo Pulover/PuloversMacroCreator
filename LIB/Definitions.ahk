@@ -92,6 +92,7 @@ If A_OSVersion in WIN_8,WIN_7
 	ExitIcon := [imageres, 218]
 	RecentIcon := [shell32, 20]
 	ProgBIcon := [shell32, 249]
+	IniTVIcon := [shell32, 84]
 	RecentFolder := A_AppData "\Microsoft\Windows\Recent"
 	LVIcons := {1 : [DDORes, 27]	; Text
 			, 	2 : [DDORes, 28]	; Mouse
@@ -186,6 +187,7 @@ If A_OSVersion = WIN_VISTA
 	ExitIcon := [imageres, 92]
 	RecentIcon := [shell32, 20]
 	ProgBIcon := [shell32, 249]
+	IniTVIcon := [shell32, 84]
 	RecentFolder := A_AppData "\Microsoft\Windows\Recent"
 	LVIcons := {1 : [setupapi, 2]	; Text
 			, 	2 : [setupapi, 3]	; Mouse
@@ -280,6 +282,7 @@ If A_OSVersion in WIN_2003,WIN_XP,WIN_2000
 	ExitIcon := [xpsp2res, 0]
 	RecentIcon := [xpsp2res, 7]
 	ProgBIcon := [shell32, 176]
+	IniTVIcon := [shell32, 84]
 	RecentFolder := A_AppData "\..\Recent"
 	LVIcons := {1 : [setupapi, 3]	; Text
 			, 	2 : [setupapi, 2]	; Mouse

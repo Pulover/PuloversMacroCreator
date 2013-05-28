@@ -2,11 +2,11 @@
 
 ## Table of Contents
 
-* [Introduction](#Introduction)
-* [Hotkeys](#Hotkeys)
-* [On-Screen Controls](#On-Screen-Controls)
-* [Context Sensitive Hotkeys](#Context-Sensitive-Hotkeys)
-* [Playback Options](#Playback-Options)
+* [Introduction](#introduction)
+* [Hotkeys](#hotkeys)
+* [On-Screen Controls](#on-screen-controls)
+* [Context Sensitive Hotkeys](#context-sensitive-hotkeys)
+* [Playback Options](#playback-options)
 
 ## Introduction
 
@@ -27,7 +27,7 @@ The Playback Hotkeys are selected in the boxes at the top-right of the main wind
 The Pause option changes the behavior to pause/unpause execution instead. You can also pause/unpause Playback by Middle-Clicking the TrayIcon (even if Pause option is not enabled).  
 This key is global for all Macros.  
 
-*Note*: Mouse Actions are affected by [Mouse Coordinates Settings](p7-Settings.html#Defaults).  
+*Note*: Mouse Actions are affected by [Mouse Coordinates Settings](p7-Settings.html#defaults).  
 
 ## On-Screen Controls
 

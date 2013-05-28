@@ -2,30 +2,30 @@
 
 **Note**: Right-click on a Button in the Main Window or anywhere on a Command Window to display links to AHK online help.
 
-* [Syntax differences from AutoHotkey](#Syntax-differences-from-AutoHotkey)
-* [How do I start Recording / Playback?](#How-do-I-start-Recording-/-Playback)
-* [Can I make playback go faster/slower?](#Can-I-make-playback-go-faster/slower)
-* [Can I execute a custom action based on Pixel/Image search result?](#Can-I-execute-a-custom-action-based-on-Pixel/Image-search-result)
-* [Can I run a Macro in a timed interval?](#Can-I-run-a-Macro-in-a-timed-interval)
-* [Can I schedule a Macro to run when I want?](#Can-I-schedule-a-Macro-to-run-when-I-want)
-* [Which command line parameters are supported?](#Which-command-line-parameters-are-supported)
-* [Can I execute an action every time a certain event occurs?](#Can-I-execute-an-action-every-time-a-certain-event-occurs)
-* [Can I play other Macros while Timer is running?](#Can-I-play-other-Macros-while-Timer-is-running)
-* [Can I save my Macros as EXE to run on any computer?](#Can-I-save-my-Macros-as-EXE-to-run-on-any-computer)
-* [How can I use an active Internet Explorer window without editing the command every time I start PMC?](#How-can-I-use-an-active-Internet-Explorer-window-without-editing-the-command-every-time-I-start-PMC)
-* [What is COM and how do I use it?](#What-is-COM-and-how-do-I-use-it)
-* [Can I take Screenshots during playback?](#Can-I-take-Screenshots-during-playback)
-* [When I take a screenshot of a window area it cuts part of the boarders.](#When-I-take-a-screenshot-of-a-window-area-it-cuts-part-of-the-boarders.)
-* [Can I record keys when pressed down and released separately?](#Can-I-record-keys-when-pressed-down-and-released-separately)
-* [Why won't the mouse stay where I recorded it when I play a Macro?](#Why-wont-the-mouse-stay-where-I-recorded-it-when-I-play-a-Macro)
-* [Can I keep all Hotkeys always active?](#Can-I-keep-all-Hotkeys-always-active)
-* [Can I open an .ahk file in PMC to edit it?](#Can-I-open-an-.ahk-file-in-PMC-to-edit-it)
-* [Can I use another AHK script to record / play Macros in PMC?](#Can-I-use-another-AHK-script-to-record-/-play-Macros-in-PMC)
-* [Can I use Functions from my own AutoHotkey Scripts?](#Can-I-use-Functions-from-my-own-AutoHotkey-Scripts)
-* [Can I make the Playback Hotkeys work on a certain windown only?](#Can-I-make-the-Playback-Hotkeys-work-on-a-certain-windown-only)
-* [Why am I getting wrong mouse coordinates?](#Why-am-I-getting-wrong-mouse-coordinates)
-* [I can run the program but Macros won't work / cannot take screenshots.](#I-can-run-the-program-but-Macros-wont-work-/-cannot-take-screenshots.)
-* [I'm getting "Error: Invalid hotkey." when I try to launch the program.](#Im-getting-"Error:-Invalid-hotkey."-when-I-try-to-launch-the-program.)
+* [Syntax differences from AutoHotkey](#syntax-differences-from-autohotkey)
+* [How do I start Recording / Playback?](#how-do-i-start-recording-/-playback)
+* [Can I make playback go faster/slower?](#can-i-make-playback-go-faster/slower)
+* [Can I execute a custom action based on Pixel/Image search result?](#can-i-execute-a-custom-action-based-on-pixel/image-search-result)
+* [Can I run a Macro in a timed interval?](#can-i-run-a-macro-in-a-timed-interval)
+* [Can I schedule a Macro to run when I want?](#can-i-schedule-a-macro-to-run-when-i-want)
+* [Which command line parameters are supported?](#which-command-line-parameters-are-supported)
+* [Can I execute an action every time a certain event occurs?](#can-i-execute-an-action-every-time-a-certain-event-occurs)
+* [Can I play other Macros while Timer is running?](#can-i-play-other-macros-while-timer-is-running)
+* [Can I save my Macros as EXE to run on any computer?](#can-i-save-my-macros-as-exe-to-run-on-any-computer)
+* [How can I use an active Internet Explorer window without editing the command every time I start PMC?](#how-can-i-use-an-active-internet-explorer-window-without-editing-the-command-every-time-i-start-pmc)
+* [What is COM and how do I use it?](#what-is-com-and-how-do-i-use-it)
+* [Can I take Screenshots during playback?](#can-i-take-screenshots-during-playback)
+* [When I take a screenshot of a window area it cuts part of the boarders.](#when-i-take-a-screenshot-of-a-window-area-it-cuts-part-of-the-boarders.)
+* [Can I record keys when pressed down and released separately?](#can-i-record-keys-when-pressed-down-and-released-separately)
+* [Why won't the mouse stay where I recorded it when I play a Macro?](#why-wont-the-mouse-stay-where-i-recorded-it-when-i-play-a-macro)
+* [Can I keep all Hotkeys always active?](#can-i-keep-all-hotkeys-always-active)
+* [Can I open an .ahk file in PMC to edit it?](#can-i-open-an-.ahk-file-in-pmc-to-edit-it)
+* [Can I use another AHK script to record / play Macros in PMC?](#can-i-use-another-ahk-script-to-record-/-play-macros-in-pmc)
+* [Can I use Functions from my own AutoHotkey Scripts?](#can-i-use-functions-from-my-own-autohotkey-scripts)
+* [Can I make the Playback Hotkeys work on a certain windown only?](#can-i-make-the-playback-hotkeys-work-on-a-certain-windown-only)
+* [Why am I getting wrong mouse coordinates?](#why-am-i-getting-wrong-mouse-coordinates)
+* [I can run the program but Macros won't work / cannot take screenshots.](#i-can-run-the-program-but-macros-wont-work-/-cannot-take-screenshots.)
+* [I'm getting "Error: Invalid hotkey." when I try to launch the program.](#im-getting-"error:-invalid-hotkey."-when-i-try-to-launch-the-program.)
 
 ### Syntax differences from AutoHotkey
 
@@ -145,9 +145,9 @@ There is also an an internal function that uses GDI+ functions to make a screens
 
 Example of PMC file:
 
->  1|Screenshot|sc := %A_MyDocuments%\Screen_%A_Now%.png, 100¢200¢50¢100|1|0|Variable||||
+>  1|Screenshot|sc := %A_MyDocuments%\Screen_%A_Now%.png, 100,200,50,100|1|0|Variable||||
 
-The ¢ symbol replaces the | in .pmc files and is converted when loaded.  
+The , symbol replaces the | in .pmc files and is converted when loaded.  
 
 ### When I take a screenshot of a window area it cuts part of the boarders.
 
@@ -192,7 +192,7 @@ Yes, use the *Context Sensitive Hotkeys* button in the main window.
 
 ### Why am I getting wrong mouse coordinates?
 
-The default settings for mouse coords are relative to the active window to make clicks point correctly even when the window is in a different position of when Macro was created. When working with multiple windows it may be best to adjust or maximize all windows and change CoordMode to screen (Settings > [Defaults](p7-Settings.html#Defaults)).  
+The default settings for mouse coords are relative to the active window to make clicks point correctly even when the window is in a different position of when Macro was created. When working with multiple windows it may be best to adjust or maximize all windows and change CoordMode to screen (Settings > [Defaults](p7-Settings.html#defaults)).  
 
 ### I can run the program but Macros won't work / cannot take screenshots.
 

@@ -2,8 +2,8 @@
 
 ## Table of Contents
 
-* [Introduction](#Introduction)
-* [Buttons & Options](#Buttons-&-Options)
+* [Introduction](#introduction)
+* [Buttons & Options](#buttons-&-options)
 
 ## Introduction
 

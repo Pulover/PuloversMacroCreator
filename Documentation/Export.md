@@ -2,11 +2,11 @@
 
 ## Table of Contents
 
-* [Introduction](#Introduction)
-* [Macros](#Macros)
-* [Context Sensitive Hotkeys](#Context-Sensitive-Hotkeys)
-* [Options](#Options)
-* [Destination File](#Destination-File)
+* [Introduction](#introduction)
+* [Macros](#macros)
+* [Context Sensitive Hotkeys](#context-sensitive-hotkeys)
+* [Options](#options)
+* [Destination File](#destination-file)
 
 ## Introduction
 
@@ -56,4 +56,4 @@ Once a script is compiled, it becomes a standalone executable; that is, it can b
 
 ### Related
 
-[Hotkeys](http://l.autohotkey.net/docs/Hotkeys.htm), [Hotstrings](http://l.autohotkey.net/docs/Hotstrings.htm), [List of Keys](http://l.autohotkey.net/docs/KeyList.htm), [ComObjCreate](http://l.autohotkey.net/docs/commands/ComObjCreate.htm), [ComObjActive](http://l.autohotkey.net/docs/commands/ComObjActive.htm), [Auto-execute Section](http://l.autohotkey.net/docs/Scripts.htm#auto), [#IfWinActive / #IfWinExist](http://l.autohotkey.net/docs/commands/_IfWinActive.htm)
+[Hotkeys](http://l.autohotkey.net/docs/Hotkeys.htm), [Hotstrings](http://l.autohotkey.net/docs/Hotstrings.htm), [List of Keys](http://l.autohotkey.net/docs/KeyList.htm), [ComObjCreate](http://l.autohotkey.net/docs/commands/ComObjCreate.htm), [ComObjActive](http://l.autohotkey.net/docs/commands/ComObjActive.htm), [Auto-execute Section](http://l.autohotkey.net/docs/Scripts.htm#auto), [#ifwinactive / #ifwinexist](http://l.autohotkey.net/docs/commands/_ifwinactive.htm)

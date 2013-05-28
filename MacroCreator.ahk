@@ -188,8 +188,8 @@ IniRead, ColSizes, %IniFilePath%, WindowOptions, ColSizes, 65,135,200,50,40,85,1
 IniRead, OSCPos, %IniFilePath%, WindowOptions, OSCPos, X5 Y25
 IniRead, OSTrans, %IniFilePath%, WindowOptions, OSTrans, 255
 
-UserVars := new Ini(UserVarsPath)
-UserVars.Read()
+User_Vars := new Ini(UserVarsPath)
+User_Vars.Read()
 
 If Lang = Error
 {
@@ -1518,6 +1518,7 @@ GoSub, SaveData
 SplitPath, CurrentFileName, name, dir, ext, name_no_ext, drive
 If !A_AhkPath
 	Exe_Exp := 0
+UserVarsList := User_Vars.Get()
 Gui, 14:+owner1 -MaximizeBox -MinimizeBox +E0x00000400 +HwndCmdWin
 Gui, 14:Default
 Gui, 1:+Disabled
@@ -1527,12 +1528,12 @@ Gui, 14:Add, GroupBox, W360 H150, %t_Lang002%:
 Gui, 14:Add, ListView, Section ys+20 xs+10 AltSubmit Checked W340 r4 vExpList gExpEdit -Multi NoSort -ReadOnly, Hotkey|Loop|Hotstring?|BlockMouse?
 Gui, 14:Add, Button, -Wrap Section xs W70 H23 gCheckAll, %t_Lang007%
 Gui, 14:Add, Button, -Wrap yp x+5 W70 H23 gUnCheckAll, %t_Lang008%
-Gui, 14:Add, Checkbox, -Wrap Checked%Ex_AbortKey% yp+5 x+10 W70 vEx_AbortKey gEx_AbortKey R1, %w_Lang008%:
+Gui, 14:Add, Checkbox, -Wrap Checked%Ex_AbortKey% yp+5 x+10 W70 vEx_AbortKey gEx_Checks R1, %w_Lang008%:
 Gui, 14:Add, Edit, yp-5 x+5 W50 vAbortKey, %AbortKey%
 Gui, 14:Add, Checkbox, -Wrap Checked%PauseKey% yp+5 x+5 vPauseKey Disabled R1, %t_Lang081%
 ; Context
 Gui, 14:Add, GroupBox, Section xm W360 H80
-Gui, 14:Add, Checkbox, -Wrap Section ys xs vEx_IfDir gEx_IfDir R1, %t_Lang009%:
+Gui, 14:Add, Checkbox, -Wrap Section ys xs vEx_IfDir gEx_Checks R1, %t_Lang009%:
 Gui, 14:Add, DDL, xs+10 W105 vEx_IfDirType, #IfWinActive||#IfWinNotActive|#IfWinExist|#IfNotWinExist
 Gui, 14:Add, DDL, yp x+170 W65 vIdent Disabled, Title||Class|Process|ID|PID
 Gui, 14:Add, Edit, xs+10 W310 vTitle Disabled
@@ -1560,7 +1561,9 @@ Gui, 14:Add, Checkbox, -Wrap Checked%Ex_SB% y+5 xs+210 W110 vEx_SB R1, SetBatchL
 Gui, 14:Add, Edit, yp-3 xp+110 W30 vSB, %SB%
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_NT% y+5 xs+210 W140 vEx_NT R1, #NoTrayIcon
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_IN% y+15 xs+10 W195 vEx_IN R1, `#`Include (%t_Lang087%)
-Gui, 14:Add, Checkbox, -Wrap Checked%Ex_UV% yp x+5 W140 vEx_UV R1, Global Variables
+Gui, 14:Add, Checkbox, -Wrap Checked%Ex_UV% yp x+5 W110 vEx_UV gEx_Checks R1, Global Variables
+Gui, 14:Add, Button, yp-10 xp+115 H25 W25 hwndEx_EdVars vEx_EdVars gVarsTree Disabled
+	ILButton(Ex_EdVars, IniTVIcon[1] ":" IniTVIcon[2], 16, 16)
 Gui, 14:Add, Text, y+5 xs+10 W95, COM Objects:
 Gui, 14:Add, Radio, -Wrap Checked%ComCr% yp xp+100 W95 vComCr R1, ComObjCreate
 Gui, 14:Add, Radio, -Wrap Checked%ComAc% yp xp+100 W95 vComAc R1, ComObjActive
@@ -1580,13 +1583,13 @@ GuiControl, 14:ChooseString, SM, %SM%
 GuiControl, 14:ChooseString, SI, %SI%
 GuiControl, 14:ChooseString, ST, %ST%
 GuiControl, 14:ChooseString, IN, %IN%
-GoSub, Ex_AbortKey
+GoSub, Ex_Checks
 If (IfDirectContext <> "None")
 {
 	GuiControl, 14:, Ex_IfDir, 1
 	GuiControl, 14:ChooseString, Ex_IfDirType, #IfWin%IfDirectContext%
 	GuiControl, 14:, Title, %IfDirectWindow%
-	GoSub, Ex_IfDir
+	GoSub, Ex_Checks
 }
 LV_Delete()
 Loop, %TabCount%
@@ -1628,12 +1631,37 @@ return
 
 13GuiClose:
 13GuiEscape:
-Gui, Submit, NoHide
+Gui, 13:Submit, NoHide
 Gui, 14:-Disabled
 Gui, 13:Destroy
 Gui, 14:Default
 Ex_Hotstring := InStr(Ex_AutoKey, "::")=1 ? 1 : 0
 LV_Modify(RowNumber, "", Ex_AutoKey, Ex_TimesX, Ex_Hotstring, Ex_BM)
+return
+
+VarsTree:
+Gui, 29:+owner14 +ToolWindow
+Gui, 14:+Disabled
+User_Vars.Tree(29)
+Gui, 29:Show,, User Global Variables
+return
+
+29GuiClose:
+29GuiEscape:
+Gui, 29:Submit, NoHide
+UserVarsList := "", ItemID := 0
+Loop
+{
+	ItemID := TV_GetNext(ItemID, "Checked")
+	If !(ItemID)
+		break
+	TV_GetText(ItemText, ItemID)
+	If (TV_Get(TV_GetParent(ItemID), "Checked"))
+		UserVarsList .= ItemText "`n"
+}
+Gui, 14:-Disabled
+Gui, 29:Destroy
+Gui, 14:Default
 return
 
 CheckAll:
@@ -1644,16 +1672,13 @@ UnCheckAll:
 LV_Modify(0, "-Check")
 return
 
-Ex_AbortKey:
+Ex_Checks:
 Gui, Submit, NoHide
 GuiControl, 14:Enable%Ex_AbortKey%, PauseKey
-return
-
-Ex_IfDir:
-Gui, Submit, NoHide
 GuiControl, 14:Enable%Ex_IfDir%, Ident
 GuiControl, 14:Enable%Ex_IfDir%, Title
 GuiControl, 14:Enable%Ex_IfDir%, GetWin
+GuiControl, 14:Enable%Ex_UV%, Ex_EdVars
 return
 
 Ex_Hotstring:
@@ -1726,10 +1751,7 @@ return
 ExportFile:
 Header := Script_Header()
 If (Ex_UV = 1)
-{
-	FileRead, UserVarsList, %UserVarsPath%
-	Header .= "`n" UserVarsList
-}
+	Header .= UserVarsList "`n"
 RowNumber := 0, AutoKey := ""
 IncList := "", ProgRatio := 100 / LV_GetCount()
 Loop, % LV_GetCount()
@@ -1884,8 +1906,6 @@ Gui, 2:Destroy
 AutoRefresh = 0
 return
 
-;##### ExportAHK: #####
-
 Options:
 Gui 4:+LastFoundExist
 IfWinExist
@@ -1899,9 +1919,9 @@ GoSub, SaveData
 GoSub, GetHotkeys
 GoSub, ResetHotkeys
 CurrLoopColor := LoopLVColor, CurrIfColor := IfLVColor
-UserVarsList := UserVars.Get()
+FileRead, UserVarsList, %UserVarsPath%
 Gui, 4:Font, s7
-Gui, 4:Add, Tab2, W420 H570 vTabControl, %t_Lang018%|%t_Lang052%|User Defined Variables
+Gui, 4:Add, Tab2, W420 H570 vTabControl, %t_Lang018%|%t_Lang052%|User Global Variables
 ; Recording
 Gui, 4:Add, GroupBox, W400 H200, %t_Lang022%:
 Gui, 4:Add, Text, ys+40 xs+245, %t_Lang019%:
@@ -2002,10 +2022,10 @@ Gui, 4:Add, Button, -Wrap W100 H23 gConfigRestore, %t_Lang063%
 Gui, 4:Add, Button, -Wrap yp x+10 W100 H23 gKeyHistory, %c_Lang124%
 ; User Variables
 Gui, 4:Tab, 3
-Gui, 4:Add, Text,, Format:
-Gui, 4:Add, Text, yp x+5 cRed, VarName=VarValue
-Gui, 4:Add, Text, yp x+5, (Enter 1 variable per line)
-Gui, 4:Add, Edit, y+5 xm+10 W400 H510 vUserVarsList, %UserVarsList%
+Gui, 4:Add, Text,, Standard INI Format:
+Gui, 4:Add, Text, yp x+5 cRed, VarName = VarValue
+Gui, 4:Add, Text, y+5 xm+10, Enter 1 variable per line. You may also add [Sections].
+Gui, 4:Add, Edit, W400 H490 vUserVarsList, %UserVarsList%
 Gui, 4:Tab
 Gui, 4:Add, Button, -Wrap Default Section xm W60 H23 gConfigOK, %c_Lang020%
 Gui, 4:Add, Button, -Wrap ys W60 H23 gConfigCancel, %c_Lang021%
@@ -2043,17 +2063,10 @@ Else If OnEnter = 1
 	SSMode = OnEnter
 VirtualKeys := EditMod
 UserVarsList := RegExReplace(UserVarsList, "U)\s+=\s+", "=")
-UserVars.Set(UserVarsList)
+User_Vars.Set(UserVarsList)
+User_Vars.Read()
 FileDelete, %UserVarsPath%
-UserVars.Write("[UserVars]`n" UserVarsPath)
-; UserVars := new Ini(UserVarsPath)
-; If (UserVars = "ERROR")
-; {
-	; GuiControl, 4:Choose, TabControl, 3
-	; MsgBox, 16, %d_Lang007%, %d_Lang041%
-	; return
-; }
-; UserVars.Read()
+User_Vars.Write(UserVarsPath)
 Gui, 1:-Disabled
 Gui, 4:Destroy
 Gui, 1:Default
@@ -6699,8 +6712,9 @@ Gui, 28:Add, Text, W2 H22 ys+3 x+5 0x11
 Gui, 28:Add, Checkbox, Checked%ShowProgBar% ys-1 x+4 W25 H25 hwndOSProgB vOSProgB gProgBarToggle 0x1000
 	ILButton(OSProgB, ProgBIcon[1] ":" ProgBIcon[2], 16, 16)
 Gui, 28:Add, Text, W2 H22 ys+3 x+5 0x11
-Gui, 28:Add, Checkbox, Checked%SlowKeyOn% ys-1 x+4 W35 H20 vOSSlow gSlowKeyToggle 0x1000, ||>
-Gui, 28:Add, Checkbox, Checked%FastKeyOn% ys-1 x+4 W35 H20 vOSFast gFastKeyToggle 0x1000, >>
+Gui, 28:Font, s10
+Gui, 28:Add, Checkbox, Checked%SlowKeyOn% ys-1 x+4 W35 H20 vOSSlow gSlowKeyToggle 0x1000, ║►
+Gui, 28:Add, Checkbox, Checked%FastKeyOn% ys-1 x+4 W35 H20 vOSFast gFastKeyToggle 0x1000, ►►
 Gui, 28:Add, Slider, ys+20 xp-40 W80 H10 vOSTrans gTrans NoTicks Thick20 Range25-255, %OSTrans%
 Gui, 28:Show, %OSCPos% H35 NoActivate, %AppName%
 WinSet, Transparent, %OSTrans%, ahk_id %PMCOSC%

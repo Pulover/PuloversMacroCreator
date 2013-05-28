@@ -102,7 +102,7 @@
 		Actions - Selects the Mouse action to execute.
 		Coordinates - Defines the coordinates of the window or screen where the action will be executed.
 			This field accepts [Variables](p8-Variables.html), functions may also work but are not recommended due to incompatibility with exported scripts.  
-			**Note**: Mouse Actions are affected by [Mouse Coordinates Settings](p7-Settings.html#Defaults).  
+			**Note**: Mouse Actions are affected by [Mouse Coordinates Settings](p7-Settings.html#defaults).  
 		Click - Uses the *Click*. This usually works for most cases.
 		Send - Uses *SendEvent*. Use this in case the Click Command doesn't work.
 		Relative - **If not used with Control**: Coordinates will be treated as an offset from mouse current position.  
@@ -216,7 +216,7 @@
 
 	Parameters:
 		Start X/Y / End X/Y - Defines the Search area of the screen/window.
-		Make Screenshot - Use this tool to take a screenshot of an area of the screen (see [Instructions](#Make-Screenshot-Tool-Instructions) for details on usage).
+		Make Screenshot - Use this tool to take a screenshot of an area of the screen (see [Instructions](#make-screenshot-tool-instructions) for details on usage).
 		Search - Search the computer for an Image File.
 		If found - Selects an action to execute when an image/pixel is found.  
 			To execute a different action Select 'Continue' (or 'Break' to exit the command's loop) and use the 'If Image/Pixel Found' option in the If Statements window.
@@ -547,7 +547,7 @@
 			
 			When this feature is used in Playback it will create a temporary .ahk file in the same directory where Macro Creator is installed and run it using AutoHotkey. The result will be copied to the Output Variable and the script will be closed.  
 			
-			If the ahk file containing the function have #Include directives they must contain the absolute path for the included files (e.g.: #Include C:\Lib\MyFunction.ahk).  
+			If the ahk file containing the function have #include directives they must contain the absolute path for the included files (e.g.: #include c:\lib\myfunction.ahk).  
 			
 			Since those functions are not loaded with Macro Creator they may take longer to execute.
 		

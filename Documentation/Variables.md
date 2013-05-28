@@ -2,16 +2,16 @@
 
 ## Table of Contents
 
-* [Built-in Variables](#Built-in-Variables)
-* [Using Variables In Playback](#Using-Variables-In-Playback)
-* [Assigning And Comparing Variables](#Assigning-And-Comparing-Variables)
-* [Dynamic Variable References](#Dynamic-Variable-References)
-* [Using Functions In Playback](#Using-Functions-In-Playback)
-* [Eval()](#Eval)
+* [Built-in Variables](#built-in-variables)
+* [Using Variables In Playback](#using-variables-in-playback)
+* [Assigning And Comparing Variables](#assigning-and-comparing-variables)
+* [Dynamic Variable References](#dynamic-variable-references)
+* [Using Functions In Playback](#using-functions-in-playback)
+* [Eval()](#eval)
 
 ## Built-in Variables
 
-Built-in Variables can be used inside the program to reference dynamic information. A list of these Variables with their description can be found in the [AutoHotkey documentation](http://l.autohotkey.net/docs/Variables.htm#BuiltIn).
+Built-in Variables can be used inside the program to reference dynamic information. A list of these Variables with their description can be found in the [AutoHotkey documentation](http://l.autohotkey.net/docs/Variables.htm#builtin).
 
 ## Using Variables In Playback
 
@@ -97,7 +97,7 @@ Because **Macro Creator** uses a function that recognizes patterns using RegExMa
 
 If you put this into a Message Box command for Playback it will show "AHK", but the generated AHK script for this (in Preview or Export) would throw an error when you run it from an .ahk file since it has two leading percent signs and the K should be enclosed in quotes to be recognized as a string and not a variable.
 
-## Eval()
+## eval()
 
 **Eval()** is a function written by **Laszlo** to solve Math Expressions in Strings. It can be found at AHK Forum [Monster: evaluate math expressions in strings](http://www.autohotkey.com/board/topic/15675-monster).
 
