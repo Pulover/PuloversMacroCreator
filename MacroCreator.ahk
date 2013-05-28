@@ -8867,7 +8867,7 @@ pb_IECOM_Set:
 		COMInterface(IeIntStr, o_ie)
 	Catch e
 	{
-		MsgBox, 20, %d_Lang007%, % d_Lang064 mMacroOn ", " d_Lang065 " Macro" mListRow
+		MsgBox, 20, %d_Lang007%, % d_Lang064 " Macro" mMacroOn ", " d_Lang065 " " mListRow
 			.	"`n" d_Lang007 ": " e.Message "`n" d_Lang066 ": " e.Extra "`n`n" d_Lang035
 		IfMsgBox, No
 		{
@@ -8918,7 +8918,7 @@ pb_IECOM_Get:
 		COMInterface(IeIntStr, o_ie, %Step%)
 	Catch e
 	{
-		MsgBox, 20, %d_Lang007%, % d_Lang064 mMacroOn ", " d_Lang065 " " mListRow
+		MsgBox, 20, %d_Lang007%, % d_Lang064 " Macro" mMacroOn ", " d_Lang065 " " mListRow
 			.	"`n" d_Lang007 ": " e.Message "`n" d_Lang066 ": " e.Extra "`n`n" d_Lang035
 		IfMsgBox, No
 		{
@@ -8955,7 +8955,7 @@ pb_COMInterface:
 		}
 		Catch e
 		{
-			MsgBox, 20, %d_Lang007%, % d_Lang064 mMacroOn ", " d_Lang065 " " mListRow
+			MsgBox, 20, %d_Lang007%, % d_Lang064 " Macro" mMacroOn ", " d_Lang065 " " mListRow
 				.	"`n" d_Lang007 ": " e.Message "`n" d_Lang066 ": " e.Extra "`n`n" d_Lang035
 			IfMsgBox, No
 			{
