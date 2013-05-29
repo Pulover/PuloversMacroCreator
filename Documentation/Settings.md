@@ -90,9 +90,9 @@ User defined variables are saved to an INI file in the AppData\MacroCreator fold
 
 Format is the same used for non-expression assignments in AutoHotkey or the one found in standard INI files.  
 
-They can also be included exported scripts by checking *Global Variables* option in the [Export Window](p5-Export.html).  
+They can also be included in exported scripts by checking *Global Variables* option in the [Export Window](p5-Export.html).  
 
-You can separate your variables in groups using INI format Sections and use the button in the Export Window to select which Variables or Sections will be exported.  
+You can separate your variables in groups using INI format Sections with title enclosed in brocks. Use the button in the Export Window to select which Variables or Sections will be exported.  
 
 Example of *User Global Variables* list:
 
