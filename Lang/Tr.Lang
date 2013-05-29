@@ -571,6 +571,7 @@
 	IfLVColor_TT =	Bir renk seçmek için tıklayınız
 	RefreshIEW_TT =	Yenile Listesi
 	ActiveObj_TT =	Active COM Nesne bağlanmaya çalışır
+	ExpView_TT =	Gelişmiş Editörü
 	OSPlay_TT =	Play / Pause
 	OSStop_TT =	Dur
 	OSRec_TT =	Kayıt Başlat / Durdur

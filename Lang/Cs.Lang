@@ -571,6 +571,7 @@
 	IfLVColor_TT =	Klepněte na tlačítko vybrat barvu
 	RefreshIEW_TT =	Obnovit seznam
 	ActiveObj_TT =	Pokusí připojit k Active objektu COM
+	ExpView_TT =	Pokročilý Editor
 	OSPlay_TT =	Play / Pause
 	OSStop_TT =	Zastavit
 	OSRec_TT =	Start / Stop Záznam

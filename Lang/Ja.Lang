@@ -571,6 +571,7 @@
 	IfLVColor_TT =	色を選択するためにクリック
 	RefreshIEW_TT =	リストのリフレッシュ
 	ActiveObj_TT =	アクティブなCOMオブジェクトへの接続を試行します
+	ExpView_TT =	高度なエディタ
 	OSPlay_TT =	再生/一時停止
 	OSStop_TT =	停止
 	OSRec_TT =	録音の開始/停止

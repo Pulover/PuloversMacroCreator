@@ -62,6 +62,7 @@ If A_OSVersion in WIN_8,WIN_7
 	LoopIcon := [shell32, 238]
 	IfStIcon := [shell32, 165]
 	IEIcon := [shell32, 242]
+	ExpViewIcon := [shell32, 159]
 	RecordIcon := [psr, 1]
 	PlayIcon := [shell32, 137]
 	TestRunIcon := [psr, 3]
@@ -157,6 +158,7 @@ If A_OSVersion = WIN_VISTA
 	LoopIcon := [shell32, 238]
 	IfStIcon := [shell32, 165]
 	IEIcon := [shell32, 242]
+	ExpViewIcon := [shell32, 159]
 	RecordIcon := [gcdef, 1]
 	PlayIcon := [shell32, 137]
 	TestRunIcon := [mmsys, 3]
@@ -252,6 +254,7 @@ If A_OSVersion in WIN_2003,WIN_XP,WIN_2000
 	LoopIcon := [xpsp2res, 53]
 	IfStIcon := [setupapi, 22]
 	IEIcon := [shell32, 220]
+	ExpViewIcon := [shell32, 34]
 	RecordIcon := [gcdef, 1]
 	PlayIcon := [shell32, 137]
 	TestRunIcon := [browseui, 1]
@@ -397,7 +400,8 @@ ContHTitle := {	2: ["p6-Preview.html"]
 			,	21: ["Commands/If_Statements.html", "Commands/Assign_Variable.html", "Commands/Functions.html"]
 			,	22: ["Commands/PostMessage_and_SendMessage.html"]
 			,	23: ["Commands/Control.html"]
-			,	24: ["Commands/Internet_Explorer.html", "Commands/COM_Interface.html"] }
+			,	24: ["Commands/Internet_Explorer.html", "Commands/COM_Interface.html"]
+			,	30: ["Commands/COM_Interface.html"] }
 
 RecOptChecks := ["ClearNewList", "Strokes", "CaptKDn", "Mouse", "MScroll"
 			, "Moves", "TimedI", "WClass", "WTitle", "RecMouseCtrl", "RecKeybdCtrl"]

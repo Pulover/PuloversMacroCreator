@@ -375,6 +375,8 @@
 				StringReplace, Step, Step, ``n, `n, All
 				Loop, Parse, Step, `n, %A_Space%%A_Tab%
 				{
+					If (A_LoopField = "")
+						continue
 					ComExp := CheckComExp(A_LoopField, "", sArray := "", Act1)
 					RowData .= "`n" sArray . Act1 "." ComExp
 				}

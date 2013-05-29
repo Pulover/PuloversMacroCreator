@@ -571,6 +571,7 @@
 	IfLVColor_TT =	點擊挑顏色
 	RefreshIEW_TT =	刷新列表
 	ActiveObj_TT =	嘗試連接到一個活躍的COM對象
+	ExpView_TT =	高級編輯
 	OSPlay_TT =	播放/暫停
 	OSStop_TT =	停止
 	OSRec_TT =	啟動/停止錄影

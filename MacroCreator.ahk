@@ -3791,7 +3791,6 @@ SB_SetParts(480, 80)
 SB_SetText(c_Lang025, 1)
 SB_SetText("length: " 0, 2)
 SB_SetText("lines: " 0, 3)
-Gui, 1:Default
 If (s_Caller = "Edit")
 {
 	EscCom("Details|TimesX|DelayX|Target|Window", 1)
@@ -3981,19 +3980,19 @@ SB_SetText("lines: " cL0, 3)
 return
 
 OpenT:
-Gui, 8:+OwnDialogs
+Gui, +OwnDialogs
 FileSelectFile, TextFile, 3
 FreeMemory()
 If !TextFile
 	return
 FileRead, InText, %TextFile%
-GuiControl, 8:, TextEdit, %InText%
+GuiControl,, TextEdit, %InText%
 GoSub, TextEdit
 return
 
 SaveT:
 Gui, Submit, NoHide
-Gui 8:+OwnDialogs
+Gui +OwnDialogs
 FileSelectFile, TextFile, S16
 FreeMemory()
 If TextFile = 
@@ -4014,22 +4013,22 @@ FileAppend, %TextEdit%, %TextFile%
 return
 
 CutT:
-GuiControl, 8:Focus, TextEdit
+GuiControl, Focus, TextEdit
 ControlSend, Edit1, ^x, ahk_id %CmdWin%
 return
 
 CopyT:
-GuiControl, 8:Focus, TextEdit
+GuiControl, Focus, TextEdit
 ControlSend, Edit1, ^c, ahk_id %CmdWin%
 return
 
 PasteT:
-GuiControl, 8:Focus, TextEdit
+GuiControl, Focus, TextEdit
 ControlSend, Edit1, ^v, ahk_id %CmdWin%
 return
 
 SelAllT:
-GuiControl, 8:Focus, TextEdit
+GuiControl, Focus, TextEdit
 ControlSend, Edit1, ^a, ahk_id %CmdWin%
 return
 
@@ -6117,7 +6116,9 @@ Gui, 24:Add, Text, xs W80, %c_Lang100%:
 Gui, 24:Add, Edit, xp+50 W115 vComHwnd, %ComHwnd%
 Gui, 24:Add, Text, x+5 W100, %c_Lang057%:
 Gui, 24:Add, Edit, xp+105 W115 vVarName
-Gui, 24:Add, Text, Section ys+55 xs W200, %c_Lang101%:
+Gui, 24:Add, Button, -Wrap ys+49 xs+365 W25 H25 hwndExpView vExpView gExpView
+	ILButton(ExpView, ExpViewIcon[1] ":" ExpViewIcon[2], 16, 16)
+Gui, 24:Add, Text, Section yp+6 xs W200, %c_Lang101%:
 Gui, 24:Add, Edit, yp+20 xs W390 R4 vComSc gComSc
 Gui, 24:Add, Button, -Wrap Section Default ym+246 xm W60 H23 gComOK, %c_Lang020%
 Gui, 24:Add, Button, -Wrap ys xs+135 W60 H23 vComApply gComApply Disabled, %c_Lang131%
@@ -6551,6 +6552,56 @@ return
 RefreshIEW:
 IEWindows := ListIEWindows()
 GuiControl, 24:, IEWindows, |%IEWindows%
+return
+
+ExpView:
+Gui, Submit, NoHide
+Gui, 30:+owner1 -MaximizeBox -MinimizeBox +E0x00000400 +hwndCmdWin
+Gui, 24:+Disabled
+Gui, 30:Font, s7
+Gui, 30:Add, Button, -Wrap W25 H25 hwndOpenT vOpenT gOpenT
+	ILButton(OpenT, OpenIcon[1] ":" OpenIcon[2], 16, 16)
+Gui, 30:Add, Button, -Wrap W25 H25 ys x+0 hwndSaveT vSaveT gSaveT
+	ILButton(SaveT, SaveIcon[1] ":" SaveIcon[2], 16, 16)
+Gui, 30:Add, Text, W2 H25 ys+2 x+5 0x11
+Gui, 30:Add, Button, -Wrap W25 H25 ys x+4 hwndCutT vCutT gCutT
+	ILButton(CutT, CutIcon[1] ":" CutIcon[2], 16, 16)
+Gui, 30:Add, Button, -Wrap W25 H25 ys x+0 hwndCopyT vCopyT gCopyT
+	ILButton(CopyT, CopyIcon[1] ":" CopyIcon[2], 16, 16)
+Gui, 30:Add, Button, -Wrap W25 H25 ys x+0 hwndPasteT vPasteT gPasteT
+	ILButton(PasteT, PasteIcon[1] ":" PasteIcon[2], 16, 16)
+Gui, 30:Add, Button, -Wrap W25 H25 ys x+0 hwndSelAllT vSelAllT gSelAllT
+	ILButton(SelAllT, CommentIcon[1] ":" CommentIcon[2], 16, 16)
+Gui, 30:Font, s9, Courier New
+Gui, 30:Add, Edit, Section xm vTextEdit gTextEdit WantTab W720 R30, %ComSc%
+Gui, 30:Font
+Gui, 30:Font, s7
+Gui, 30:Add, Button, -Wrap Section Default xm y+15 W60 H23 gExpViewOK, %c_Lang020%
+Gui, 30:Add, Button, -Wrap ys W60 H23 gExpViewCancel, %c_Lang021%
+Gui, 30:Add, StatusBar
+Gui, 30:Default
+SB_SetParts(480, 80)
+SB_SetText(c_Lang025, 1)
+SB_SetText("length: " 0, 2)
+SB_SetText("lines: " 0, 3)
+GoSub, TextEdit
+Gui, 30:Show,, %c_Lang013%
+GuiControl, 30:Focus, TextEdit
+return
+
+ExpViewOK:
+Gui, Submit, NoHide
+Gui, 24:-Disabled
+Gui, 30:Destroy
+Gui, 24:Default
+GuiControl,, ComSc, %TextEdit%
+return
+
+ExpViewCancel:
+30GuiClose:
+30GuiEscape:
+Gui, 24:-Disabled
+Gui, 30:Destroy
 return
 
 DonatePayPal:

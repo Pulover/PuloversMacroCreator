@@ -571,6 +571,7 @@
 	IfLVColor_TT =	Feu clic per seleccionar un color
 	RefreshIEW_TT =	Actualitzar llista
 	ActiveObj_TT =	Intenta connectar-se a un objecte COM actiu
+	ExpView_TT =	Editor Avançat
 	OSPlay_TT =	Reproduir / Pausa
 	OSStop_TT =	Aturi
 	OSRec_TT =	Start / Stop Record

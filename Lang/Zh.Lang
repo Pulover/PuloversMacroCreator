@@ -571,6 +571,7 @@
 	IfLVColor_TT =	单击以选择一种颜色
 	RefreshIEW_TT =	刷新列表
 	ActiveObj_TT =	尝试连接到Active COM对象
+	ExpView_TT =	高级编辑
 	OSPlay_TT =	播放/暂停
 	OSStop_TT =	停止
 	OSRec_TT =	开始/停止录制
