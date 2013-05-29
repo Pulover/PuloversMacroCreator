@@ -5375,7 +5375,8 @@ If (s_Caller = "Edit")
 			FuncName := Action
 			GoSub, FuncName
 			GuiControl, 21:Choose, TabControl, 3
-			GuiControl, 21:, VarNameF, %VarName%
+			If (VarName <> "_null")
+				GuiControl, 21:, VarNameF, %VarName%
 			If (IsBuiltIn)
 				GuiControl, 21:ChooseString, FuncName, %FuncName%
 			Else
@@ -5524,6 +5525,8 @@ If TabControl = 3
 	Else
 		Target := ""
 	VarName := VarNameF
+	If (VarName = "")
+		VarName := "_null"
 }
 If (VarName = "")
 {
@@ -5543,7 +5546,7 @@ If (s_Caller <> "Edit")
 If TabControl = 3
 {
 	Action := FuncName
-	Details := VarNameF " := " VarValueF
+	Details := VarName " := " VarValueF
 }
 Else
 {

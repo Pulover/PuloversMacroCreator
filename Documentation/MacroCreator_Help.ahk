@@ -529,7 +529,7 @@
 		Executes a Function and assigns the result to a Variable.  
 
 	Parameters:
-		Output Variable - Name of the Variable in which to store the contents.
+		Output Variable (Optional) - Name of the Variable in which to store the contents.
 		Use Function from External File - Check this option to select an AutoHotkey Script File (.ahk) containing one or more functions to be used. This feature requires [AutoHotkey](http://www.autohotkey.com/) installed.  
 			See Remarks below for more information.  
 		Function Name - A valid AHK Built-in Function name or the name of a Function in the selected external .ahk file.

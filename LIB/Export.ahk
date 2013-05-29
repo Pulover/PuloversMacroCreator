@@ -247,7 +247,7 @@
 			If (Action = "[Assign Variable]")
 				Step := VarName " " Oper " " VarValue
 			Else
-				Step := VarName " " Oper " " Action "(" ((VarValue = """""") ? "" : VarValue) ")"
+				Step := ((VarName = "_null") ? "" : VarName " " Oper " ") Action "(" ((VarValue = """""") ? "" : VarValue) ")"
 			RowData := "`n" Step
 			If (Comment <> "")
 				RowData .= "  " "; " Comment
