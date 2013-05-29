@@ -576,7 +576,8 @@
 	OSStop_TT =	Aturi
 	OSRec_TT =	Start / Stop Record
 	OSRecNew_TT =	Gravar nova macro
-	OSRecOpt_TT =	Opcions De Gravació
+	OSRecOpt_TT =	Opcions de Gravació
+	OSPlayOpt_TT =	Opcions de reproducció
 	OSClear_TT =	Esborrar llista
 	OSProgB_TT =	Mostra la barra de progrés
 	OSFast_TT =	Accelerar
@@ -690,7 +691,8 @@
 	)	
 	Ex_HK_TT =	
 	(LTrim	
-		Força l'ús del ganxo per executar la totalitat o algunes tecles d'accés ràpid del teclat.
+		Força l'ús del ganxo per posar en pràctica totes les
+		o algunes tecles d'accés ràpid del teclat.
 	)	
 	Ex_SK_TT =	
 	(LTrim	
@@ -725,6 +727,16 @@
 	(LTrim	
 		Fa que el guió es comporti com si l'especificada
 		contingut de l'arxiu es presenti en aquesta posició exacta.
+	)	
+	Ex_PT_TT =	
+	(LTrim	
+		Manté un script que s'executa permanentment
+		(És a dir, fins que l'usuari tanca o es troba ExitApp).
+	)	
+	Ex_MT_TT =	
+	(LTrim	
+		Estableix el nombre màxim de connexions simultànies
+		fils per tecla d'accés directe o cadena d'accés ràpid.
 	)	
 	Ex_UV_TT =	Exportar variables globals.
 	Ex_EdVars_TT =	Seleccionar variables globals destinats a l'exportació.

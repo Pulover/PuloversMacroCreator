@@ -577,6 +577,7 @@
 	OSRec_TT =	Start / Stop Record
 	OSRecNew_TT =	Új makró rögzítése
 	OSRecOpt_TT =	Felvételi Mód
+	OSPlayOpt_TT =	Lejátszási opciók
 	OSClear_TT =	Kódolatlan List
 	OSProgB_TT =	Kijelző Progress Bar
 	OSFast_TT =	Felgyorsul
@@ -690,7 +691,8 @@
 	)	
 	Ex_HK_TT =	
 	(LTrim	
-		Kényszerű használata a horog végrehajtására részben vagy egészben billentyűzet gyorsbillentyűk.
+		Kényszerű használata a horog, hogy hajtsák végre
+		vagy egy billentyűzet gyorsbillentyűk.
 	)	
 	Ex_SK_TT =	
 	(LTrim	
@@ -725,6 +727,16 @@
 	(LTrim	
 		Eszmék a szkript úgy viselkedni, mintha a megadott
 		fájl tartalmát jelen vannak ebben a pontos pozícióját.
+	)	
+	Ex_PT_TT =	
+	(LTrim	
+		Megtartja a szkript fut állandóan
+		(azaz, amíg a felhasználó bezárja, vagy ExitApp találkozik).
+	)	
+	Ex_MT_TT =	
+	(LTrim	
+		Beállítja a maximális számú egyidejű
+		szálak egy gyorsbillentyűvel vagy hotstring.
 	)	
 	Ex_UV_TT =	Export globális változók.
 	Ex_EdVars_TT =	Válassza globális változók exportálni.

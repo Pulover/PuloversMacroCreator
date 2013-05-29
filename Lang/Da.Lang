@@ -577,6 +577,7 @@
 	OSRec_TT =	Start / Stop Record
 	OSRecNew_TT =	Indspil ny makro
 	OSRecOpt_TT =	Optagemuligheder
+	OSPlayOpt_TT =	indstillinger til afspilning
 	OSClear_TT =	Ryd liste
 	OSProgB_TT =	Display Progress Bar
 	OSFast_TT =	Fremskynde
@@ -690,7 +691,8 @@
 	)	
 	Ex_HK_TT =	
 	(LTrim	
-		Tvinger brugen af ​​krogen til at gennemføre hele eller nogle keyboard hotkeys.
+		Tvinger brugen af krogen at gennemføre alle
+		eller nogle keyboard genvejstaster.
 	)	
 	Ex_SK_TT =	
 	(LTrim	
@@ -725,6 +727,16 @@
 	(LTrim	
 		Får script til at opføre sig, som om den angivne
 		filens indhold er til stede ved denne nøjagtige position.
+	)	
+	Ex_PT_TT =	
+	(LTrim	
+		Holder et script permanent kørende
+		(det vil sige, indtil brugeren lukker det eller ExitApp er stødt).
+	)	
+	Ex_MT_TT =	
+	(LTrim	
+		Indstiller det maksimale antal samtidige
+		tråde per genvejstast eller hotstring.
 	)	
 	Ex_UV_TT =	Eksportere globale variabler.
 	Ex_EdVars_TT =	Vælg globale variabler, der skal eksporteres.

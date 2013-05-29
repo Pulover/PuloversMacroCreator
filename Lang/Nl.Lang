@@ -577,6 +577,7 @@
 	OSRec_TT =	Start / Stop Record
 	OSRecNew_TT =	Nieuwe macro opnemen
 	OSRecOpt_TT =	Opnamemogelijkheden
+	OSPlayOpt_TT =	afspelen Opties
 	OSClear_TT =	Lijst wissen
 	OSProgB_TT =	Weergave Progress Bar
 	OSFast_TT =	Versnellen
@@ -690,7 +691,8 @@
 	)	
 	Ex_HK_TT =	
 	(LTrim	
-		Dwingt het gebruik van de haak om alle of een deel toetsenbord sneltoetsen te implementeren.
+		Legt het gebruik van de haak genoeg implementeren
+		of een toetsenbord sneltoetsen.
 	)	
 	Ex_SK_TT =	
 	(LTrim	
@@ -725,6 +727,16 @@
 	(LTrim	
 		Veroorzaakt het script te gedragen alsof de opgegeven
 		bestand de inhoud van zijn aanwezig op deze exacte positie.
+	)	
+	Ex_PT_TT =	
+	(LTrim	
+		Houdt een script dat zich permanent langs
+		(dat is, totdat de gebruiker sluit het of ExitApp wordt aangetroffen).
+	)	
+	Ex_MT_TT =	
+	(LTrim	
+		Stelt het maximum aantal gelijktijdige
+		draden per sneltoets of hotstring.
 	)	
 	Ex_UV_TT =	Exporteren globale variabelen.
 	Ex_EdVars_TT =	Selecteer globale variabelen te exporteren.

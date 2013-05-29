@@ -576,7 +576,8 @@
 	OSStop_TT =	Arresto
 	OSRec_TT =	Start / Stop Record
 	OSRecNew_TT =	Registra nuova macro
-	OSRecOpt_TT =	Opzioni Di Registrazione
+	OSRecOpt_TT =	Opzioni di Registrazione
+	OSPlayOpt_TT =	Opzioni di riproduzione
 	OSClear_TT =	Cancella elenco
 	OSProgB_TT =	Mostra barra di avanzamento
 	OSFast_TT =	Accelerare
@@ -690,7 +691,8 @@
 	)	
 	Ex_HK_TT =	
 	(LTrim	
-		Forza l'utilizzo del gancio di attuare tutte o alcuni tasti di scelta rapida da tastiera.
+		Forza l'uso del gancio di attuare tutte
+		o alcuni tasti di scelta rapida da tastiera.
 	)	
 	Ex_SK_TT =	
 	(LTrim	
@@ -725,6 +727,16 @@
 	(LTrim	
 		Provoca lo script a comportarsi come se specificato
 		il contenuto dei file sono presenti a questa posizione esatta.
+	)	
+	Ex_PT_TT =	
+	(LTrim	
+		Mantiene uno script in esecuzione in modo permanente
+		(cioè fino a quando l'utente chiude o riscontrato ExitApp).
+	)	
+	Ex_MT_TT =	
+	(LTrim	
+		Imposta il numero massimo di simultanea
+		filetti per hotkey o hotstring.
 	)	
 	Ex_UV_TT =	Esportare le variabili globali.
 	Ex_EdVars_TT =	Selezionare le variabili globali da esportare.

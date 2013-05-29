@@ -577,6 +577,7 @@
 	OSRec_TT =	Start / Stop Record
 	OSRecNew_TT =	Nauhoita uusi makro
 	OSRecOpt_TT =	Tallennusmahdollisuudet
+	OSPlayOpt_TT =	Toistoasetukset
 	OSClear_TT =	Tyhjennä luettelo
 	OSProgB_TT =	Näyttö Progress Bar
 	OSFast_TT =	Nopeuttaa
@@ -690,7 +691,8 @@
 	)	
 	Ex_HK_TT =	
 	(LTrim	
-		Pakottaa käyttö koukun toteuttaa kokonaan tai osittain näppäimistön pikanäppäimiä.
+		Pakottaa käyttö koukku toteuttaa kaikki
+		tai joitakin näppäimistön pikanäppäimiä.
 	)	
 	Ex_SK_TT =	
 	(LTrim	
@@ -725,6 +727,16 @@
 	(LTrim	
 		Aiheuttaa script käyttäytymään ikään määritelty
 		tiedoston sisältöä on läsnä juuri tämän kannan.
+	)	
+	Ex_PT_TT =	
+	(LTrim	
+		Pitää script pysyvästi kulje
+		(eli siihen asti, kunnes käyttäjä sulkee sen tai ExitApp kohdataan).
+	)	
+	Ex_MT_TT =	
+	(LTrim	
+		Asettaa maksimimäärän samanaikaisia
+		lankaa pikanäppäin tai hotstring.
 	)	
 	Ex_UV_TT =	Viedä globaalien muuttujien.
 	Ex_EdVars_TT =	Valitse globaalien muuttujien viedään.

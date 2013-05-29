@@ -577,6 +577,7 @@
 	OSRec_TT =	기록 시작 / 중지
 	OSRecNew_TT =	새 매크로 기록
 	OSRecOpt_TT =	레코딩 옵션
+	OSPlayOpt_TT =	재생 옵션
 	OSClear_TT =	지우기 목록
 	OSProgB_TT =	진행률 표시 줄을 표시합니다
 	OSFast_TT =	속도를 더하다
@@ -690,7 +691,8 @@
 	)	
 	Ex_HK_TT =	
 	(LTrim	
-		전부 또는 일부 키보드 단축키를 구현하는 후크의 사용을 강요합니다.
+		모두를 구현하는 후크를 강제로 사용합니다
+		또는 일부 키보드 단축키.
 	)	
 	Ex_SK_TT =	
 	(LTrim	
@@ -725,6 +727,16 @@
 	(LTrim	
 		지정된 것처럼 스크립트가 동작하게됩니다
 		파일의 내용이 정확한 위치에 존재한다.
+	)	
+	Ex_PT_TT =	
+	(LTrim	
+		스크립트가 영구적으로 실행 유지
+		(사용자가 그것을 닫거나 ExitApp가 발생 될 때까지 즉,)입니다.
+	)	
+	Ex_MT_TT =	
+	(LTrim	
+		동시의 최대 수를 설정합니다
+		단축키 또는 hotstring 당 스레드.
 	)	
 	Ex_UV_TT =	전역 변수를 내 보냅니다.
 	Ex_EdVars_TT =	내보낼 전역 변수를 선택합니다.

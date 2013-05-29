@@ -577,6 +577,7 @@
 	OSRec_TT =	开始/停止录制
 	OSRecNew_TT =	录制新宏
 	OSRecOpt_TT =	录制选项
+	OSPlayOpt_TT =	播放选项
 	OSClear_TT =	清除列表
 	OSProgB_TT =	显示进度条
 	OSFast_TT =	加快
@@ -690,7 +691,8 @@
 	)	
 	Ex_HK_TT =	
 	(LTrim	
-		强制使用的勾全部或部分键盘热键实施。
+		强制利用钩子实现所有
+		或一些键盘热键。
 	)	
 	Ex_SK_TT =	
 	(LTrim	
@@ -725,6 +727,16 @@
 	(LTrim	
 		导致脚本的行为，虽然规定
 		文件的内容是在此的确切位置。
+	)	
+	Ex_PT_TT =	
+	(LTrim	
+		永久保持一个脚本运行
+		（即，直到用户关闭或ExitApp命令遇到）。
+	)	
+	Ex_MT_TT =	
+	(LTrim	
+		设置最大数量的同时
+		线程，每个热键或热字串。
 	)	
 	Ex_UV_TT =	导出全局变量。
 	Ex_EdVars_TT =	选择要导出的全局变量。

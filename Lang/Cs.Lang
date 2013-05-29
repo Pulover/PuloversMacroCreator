@@ -576,7 +576,8 @@
 	OSStop_TT =	Zastavit
 	OSRec_TT =	Start / Stop Záznam
 	OSRecNew_TT =	Záznam nového makra
-	OSRecOpt_TT =	Volby Pro Záznam
+	OSRecOpt_TT =	Volby pro Záznam
+	OSPlayOpt_TT =	Možnosti přehrávání
 	OSClear_TT =	Vymazat seznam
 	OSProgB_TT =	Zobrazit Progress Bar
 	OSFast_TT =	Urychlit
@@ -690,7 +691,8 @@
 	)	
 	Ex_HK_TT =	
 	(LTrim	
-		Vynutí použití háku provádět všechny nebo některé klávesové klávesové zkratky.
+		Vynutí použití háku pro provádění všech
+		nebo některé klávesové klávesové zkratky.
 	)	
 	Ex_SK_TT =	
 	(LTrim	
@@ -725,6 +727,16 @@
 	(LTrim	
 		Způsobí, že skript se chovat, jako by uvedené
 		obsah souboru jsou přítomny právě v tomto místě.
+	)	
+	Ex_PT_TT =	
+	(LTrim	
+		Udržuje skript běží trvale
+		(to je, dokud uživatel zavře nebo ExitApp je zjištěna).
+	)	
+	Ex_MT_TT =	
+	(LTrim	
+		Nastaví maximální počet současně
+		závitů na klávesy nebo hotstring.
 	)	
 	Ex_UV_TT =	Export globální proměnné.
 	Ex_EdVars_TT =	Vyberte globální proměnné, které chcete exportovat.

@@ -577,6 +577,7 @@
 	OSRec_TT =	Iniciar / Parar Gravação
 	OSRecNew_TT =	Gravar Nova Macro
 	OSRecOpt_TT =	Opções de Gravação
+	OSPlayOpt_TT =	Opções de Reprodução
 	OSClear_TT =	Limpar Lista
 	OSProgB_TT =	Mostrar Barra de Progresso
 	OSFast_TT =	Acelerar
@@ -690,7 +691,8 @@
 	)	
 	Ex_HK_TT =	
 	(LTrim	
-		Força o uso do gancho (hook) para todas os atalhos de teclado.
+		Força o uso do gancho (hook) para todos
+		ou alguns atalhos de teclado.
 	)	
 	Ex_SK_TT =	
 	(LTrim	
@@ -725,6 +727,16 @@
 	(LTrim	
 		Faz com que o script comporte-se como se o conteúdo do
 		arquivo especificado estivesse presente nesta exata posição
+	)	
+	Ex_PT_TT =	
+	(LTrim	
+		Mantem um script executando permanentemente
+		(isto é, até que o usuário feche-o ou ExitApp seja encontrado).
+	)	
+	Ex_MT_TT =	
+	(LTrim	
+		Ajusta o número máximo de execuções
+		simultâneas por hotkey ou hotstring.
 	)	
 	Ex_UV_TT =	Exportar variáveis globais.
 	Ex_EdVars_TT =	Selecionar variáveis globais a serem exportadas.

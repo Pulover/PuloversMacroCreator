@@ -577,6 +577,7 @@
 	OSRec_TT =	Start / Stop Record
 	OSRecNew_TT =	Zapis New Macro
 	OSRecOpt_TT =	Opcije Snimanja
+	OSPlayOpt_TT =	Playback Options
 	OSClear_TT =	Jasno Popis
 	OSProgB_TT =	Prikaz Progress Bar
 	OSFast_TT =	Ubrzati
@@ -690,7 +691,8 @@
 	)	
 	Ex_HK_TT =	
 	(LTrim	
-		Prisiljava korištenje kuka u mjesto za sve ili samo neke tipkovnica hotkeys.
+		Prisiljava korištenje kuka za provedbu svih
+		ili neki tipkovnica hotkeys.
 	)	
 	Ex_SK_TT =	
 	(LTrim	
@@ -725,6 +727,16 @@
 	(LTrim	
 		Uzroci skriptu ponaša kao da je navedeno
 		File je sadržaji su prisutni na ovom točan položaj.
+	)	
+	Ex_PT_TT =	
+	(LTrim	
+		Održava skriptu trajno prikazivati
+		(koji je, dok ga korisnik ne zatvori ili ExitApp je naišao).
+	)	
+	Ex_MT_TT =	
+	(LTrim	
+		Postavlja maksimalan broj istovremenih
+		teme po hotkey ili hotstring.
 	)	
 	Ex_UV_TT =	Izvoz globalne varijable.
 	Ex_EdVars_TT =	Odaberite globalne varijable se izvozi.

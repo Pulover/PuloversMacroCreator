@@ -533,6 +533,10 @@ Script_Header()
 		Header .= "`nSetBatchLines " SB
 	If Ex_HK = 1
 		Header .= "`n#UseHook"
+	If Ex_PT = 1
+		Header .= "`n#Persistent"
+	If Ex_MT = 1
+		Header .= "`n#MaxThreadsPerHotkey " MT
 	Header .= "`n`n"
 	return Header
 }

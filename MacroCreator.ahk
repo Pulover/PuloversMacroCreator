@@ -164,7 +164,7 @@ IniRead, ST, %IniFilePath%, ExportOptions, ST, 2
 IniRead, Ex_DH, %IniFilePath%, ExportOptions, Ex_DH, 1
 IniRead, Ex_AF, %IniFilePath%, ExportOptions, Ex_AF, 1
 IniRead, Ex_HK, %IniFilePath%, ExportOptions, Ex_HK, 0
-IniRead, Ex_IN, %IniFilePath%, ExportOptions, Ex_IN, 1
+IniRead, Ex_PT, %IniFilePath%, ExportOptions, Ex_PT, 0
 IniRead, Ex_NT, %IniFilePath%, ExportOptions, Ex_NT, 0
 IniRead, Ex_SC, %IniFilePath%, ExportOptions, Ex_SC, 1
 IniRead, SC, %IniFilePath%, ExportOptions, SC, 1
@@ -176,6 +176,9 @@ IniRead, Ex_MD, %IniFilePath%, ExportOptions, Ex_MD, 1
 IniRead, MD, %IniFilePath%, ExportOptions, MD, -1
 IniRead, Ex_SB, %IniFilePath%, ExportOptions, Ex_SB, 1
 IniRead, SB, %IniFilePath%, ExportOptions, SB, -1
+IniRead, Ex_MT, %IniFilePath%, ExportOptions, Ex_MT, 0
+IniRead, MT, %IniFilePath%, ExportOptions, SB, 1
+IniRead, Ex_IN, %IniFilePath%, ExportOptions, Ex_IN, 1
 IniRead, Ex_UV, %IniFilePath%, ExportOptions, Ex_UV, 1
 IniRead, ComCr, %IniFilePath%, ExportOptions, ComCr, 1
 IniRead, ComAc, %IniFilePath%, ExportOptions, ComAc, 0
@@ -1525,22 +1528,22 @@ Gui, 14:Default
 Gui, 1:+Disabled
 Gui, 14:Font, s7
 ; Macros
-Gui, 14:Add, GroupBox, W360 H150, %t_Lang002%:
-Gui, 14:Add, ListView, Section ys+20 xs+10 AltSubmit Checked W340 r4 vExpList gExpEdit -Multi NoSort -ReadOnly, Hotkey|Loop|Hotstring?|BlockMouse?
+Gui, 14:Add, GroupBox, W415 H150, %t_Lang002%:
+Gui, 14:Add, ListView, Section ys+20 xs+10 AltSubmit Checked W395 r4 vExpList gExpEdit -Multi NoSort -ReadOnly, Hotkey|Loop|Hotstring?|BlockMouse?
 Gui, 14:Add, Button, -Wrap Section xs W70 H23 gCheckAll, %t_Lang007%
 Gui, 14:Add, Button, -Wrap yp x+5 W70 H23 gUnCheckAll, %t_Lang008%
-Gui, 14:Add, Checkbox, -Wrap Checked%Ex_AbortKey% yp+5 x+10 W70 vEx_AbortKey gEx_Checks R1, %w_Lang008%:
+Gui, 14:Add, Checkbox, -Wrap Checked%Ex_AbortKey% yp+5 x+10 W90 vEx_AbortKey gEx_Checks R1, %w_Lang008%:
 Gui, 14:Add, Edit, yp-5 x+5 W50 vAbortKey, %AbortKey%
-Gui, 14:Add, Checkbox, -Wrap Checked%PauseKey% yp+5 x+5 vPauseKey Disabled R1, %t_Lang081%
+Gui, 14:Add, Checkbox, -Wrap Checked%PauseKey% yp+5 x+5 W90 vPauseKey Disabled R1, %t_Lang081%
 ; Context
-Gui, 14:Add, GroupBox, Section xm W360 H80
+Gui, 14:Add, GroupBox, Section xm W415 H80
 Gui, 14:Add, Checkbox, -Wrap Section ys xs vEx_IfDir gEx_Checks R1, %t_Lang009%:
 Gui, 14:Add, DDL, xs+10 W105 vEx_IfDirType, #IfWinActive||#IfWinNotActive|#IfWinExist|#IfNotWinExist
-Gui, 14:Add, DDL, yp x+170 W65 vIdent Disabled, Title||Class|Process|ID|PID
-Gui, 14:Add, Edit, xs+10 W310 vTitle Disabled
+Gui, 14:Add, DDL, yp x+225 W65 vIdent Disabled, Title||Class|Process|ID|PID
+Gui, 14:Add, Edit, xs+10 W365 vTitle Disabled
 Gui, 14:Add, Button, -Wrap yp-1 x+0 W30 H23 vGetWin gGetWin Disabled, ...
 ; Options
-Gui, 14:Add, GroupBox, Section xm W360 H210, %w_Lang003%:
+Gui, 14:Add, GroupBox, Section xm W415 H235, %w_Lang003%:
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_SM% ys+20 xs+10 W110 vEx_SM R1, SendMode
 Gui, 14:Add, DDL, yp-3 xp+115 vSM w75, Input||Play|Event|InputThenPlay|
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_SI% y+5 xs+10 W110 vEx_SI R1, #SingleInstance
@@ -1550,29 +1553,32 @@ Gui, 14:Add, DDL, yp-3 xp+115 vST w75, 1|2||3|RegEx|
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_DH% y+5 xs+10 W195 vEx_DH R1, DetectHiddenWindows
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_AF% y+8 W195 vEx_AF R1, #WinActivateForce
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_HK% y+8 W195 vEx_HK R1, #UseHook
-Gui, 14:Add, Checkbox, -Wrap Checked%Ex_SK% ys+15 x+5 W110 vEx_SK R1, SetKeyDelay
-Gui, 14:Add, Edit, yp-3 xp+110 W30 vSK, %SK%
-Gui, 14:Add, Checkbox, -Wrap Checked%Ex_MD% y+5 xs+210 W110 vEx_MD R1, SetMouseDelay
-Gui, 14:Add, Edit, yp-3 xp+110 W30 vMD, %MD%
-Gui, 14:Add, Checkbox, -Wrap Checked%Ex_SC% y+5 xs+210 W110 vEx_SC R1, SetControlDelay
-Gui, 14:Add, Edit, yp-3 xp+110 W30 vSC, %SC%
-Gui, 14:Add, Checkbox, -Wrap Checked%Ex_SW% y+5 xs+210 W110 vEx_SW R1, SetWinDelay
-Gui, 14:Add, Edit, yp-3 xp+110 W30 vSW, %SW%
-Gui, 14:Add, Checkbox, -Wrap Checked%Ex_SB% y+5 xs+210 W110 vEx_SB R1, SetBatchLines
-Gui, 14:Add, Edit, yp-3 xp+110 W30 vSB, %SB%
-Gui, 14:Add, Checkbox, -Wrap Checked%Ex_NT% y+5 xs+210 W140 vEx_NT R1, #NoTrayIcon
-Gui, 14:Add, Text, y+10 xs+10 W340 H2 0x10
+Gui, 14:Add, Checkbox, -Wrap Checked%Ex_PT% y+8 W195 vEx_PT R1, #Persistent
+Gui, 14:Add, Checkbox, -Wrap Checked%Ex_SK% ys+15 x+5 W165 vEx_SK R1, SetKeyDelay
+Gui, 14:Add, Edit, yp-3 xp+165 W30 vSK, %SK%
+Gui, 14:Add, Checkbox, -Wrap Checked%Ex_MD% y+5 xs+210 W165 vEx_MD R1, SetMouseDelay
+Gui, 14:Add, Edit, yp-3 xp+165 W30 vMD, %MD%
+Gui, 14:Add, Checkbox, -Wrap Checked%Ex_SC% y+5 xs+210 W165 vEx_SC R1, SetControlDelay
+Gui, 14:Add, Edit, yp-3 xp+165 W30 vSC, %SC%
+Gui, 14:Add, Checkbox, -Wrap Checked%Ex_SW% y+5 xs+210 W165 vEx_SW R1, SetWinDelay
+Gui, 14:Add, Edit, yp-3 xp+165 W30 vSW, %SW%
+Gui, 14:Add, Checkbox, -Wrap Checked%Ex_SB% y+5 xs+210 W165 vEx_SB R1, SetBatchLines
+Gui, 14:Add, Edit, yp-3 xp+165 W30 vSB, %SB%
+Gui, 14:Add, Checkbox, -Wrap Checked%Ex_MT% y+5 xs+210 W165 vEx_MT R1, #MaxThreadsPerHotkey
+Gui, 14:Add, Edit, yp-3 xp+165 W30 vMT, %MT%
+Gui, 14:Add, Checkbox, -Wrap Checked%Ex_NT% y+5 xs+210 W165 vEx_NT R1, #NoTrayIcon
+Gui, 14:Add, Text, y+10 xs+10 W395 H2 0x10
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_IN% y+10 xs+10 W195 vEx_IN R1, `#`Include (%t_Lang087%)
-Gui, 14:Add, Checkbox, -Wrap Checked%Ex_UV% yp x+5 W110 vEx_UV gEx_Checks R1, Global Variables
-Gui, 14:Add, Button, yp-5 xp+115 H25 W25 hwndEx_EdVars vEx_EdVars gVarsTree Disabled
+Gui, 14:Add, Checkbox, -Wrap Checked%Ex_UV% yp x+5 W165 vEx_UV gEx_Checks R1, Global Variables
+Gui, 14:Add, Button, yp-5 xp+170 H25 W25 hwndEx_EdVars vEx_EdVars gVarsTree Disabled
 	ILButton(Ex_EdVars, IniTVIcon[1] ":" IniTVIcon[2], 16, 16)
 Gui, 14:Add, Text, y+5 xs+10 W95, COM Objects:
 Gui, 14:Add, Radio, -Wrap Checked%ComCr% yp xp+100 W95 vComCr R1, ComObjCreate
 Gui, 14:Add, Radio, -Wrap Checked%ComAc% yp xp+100 W95 vComAc R1, ComObjActive
 ; Export
-Gui, 14:Add, GroupBox, Section xm W360 H100
+Gui, 14:Add, GroupBox, Section xm W415 H100
 Gui, 14:Add, Text, Section ys+15 xs+10, %t_Lang010%:
-Gui, 14:Add, Edit, vExpFile xs W310 R1 -Multi, %dir%\%name_no_ext%.ahk
+Gui, 14:Add, Edit, vExpFile xs W365 R1 -Multi, %dir%\%name_no_ext%.ahk
 Gui, 14:Add, Button, -Wrap W30 H23 yp-1 x+0 gExpSearch, ...
 Gui, 14:Add, Checkbox, -Wrap Checked%TabIndent% xs W200 vTabIndent R1, %t_Lang011%
 Gui, 14:Add, Checkbox, -Wrap Checked%IncPmc% yp xp+200 W145 vIncPmc R1, %t_Lang012%
@@ -1596,8 +1602,9 @@ If (IfDirectContext <> "None")
 LV_Delete()
 Loop, %TabCount%
 	LV_Add("Check", o_AutoKey[A_Index], o_TimesG[A_Index], 0, 0)
-LV_ModifyCol(1, 130)	; Index
-LV_ModifyCol(2, 45)		; Loop
+LV_ModifyCol(1, 130)	; Hotkeys
+LV_ModifyCol(2, 80)		; Loop
+LV_ModifyCol(3, 80)		; Hotstrings
 LV_ModifyCol(4, 80)		; Block
 LV_Modify(0, "Check")
 If CurrentFileName = 
@@ -1644,7 +1651,7 @@ return
 VarsTree:
 Gui, 29:+owner14 +ToolWindow
 Gui, 14:+Disabled
-Gui, 29:Add, TreeView, Checked H500 W300 vIniTV
+Gui, 29:Add, TreeView, Checked H500 W300 vIniTV -ReadOnly
 User_Vars.Tree(29)
 Gui, 29:Add, Button, -Wrap Section xs W70 H23 gCheckAll, %t_Lang007%
 Gui, 29:Add, Button, -Wrap yp x+5 W70 H23 gUnCheckAll, %t_Lang008%
@@ -4091,6 +4098,7 @@ GuiControl, Enable%MP%, Que
 GuiControl, Enable%MP%, Exc
 GuiControl, Enable%MP%, Inf
 GuiControl, Enable%MP%, Aot
+GuiControl, Enable%MP%, CancelB
 GuiControl, Disable%MP%, DelayC
 ; GuiControl, Disable%MP%, EdRept
 GuiControl, Disable%MP%, DelayX
@@ -6777,13 +6785,15 @@ Gui, 28:Add, Button, ys-1 x+4 W25 H25 hwndOSPlay vOSPlay gOSPlay
 	ILButton(OSPlay, TestRunIcon[1] ":" TestRunIcon[2], 16, 16)
 Gui, 28:Add, Button, ys-1 x+0 W25 H25 hwndOSStop vOSStop gf_AbortKey
 	ILButton(OSStop, RecStopIcon[1] ":" RecStopIcon[2], 16, 16)
+Gui, 28:Add, Button, ys-1 x+0 W25 H25 hwndOSPlayOpt vOSPlayOpt gShowPlayMenu
+	ILButton(OSPlayOpt, PlayOptIcon[1] ":" PlayOptIcon[2], 16, 16, 0)
 Gui, 28:Add, Text, W2 H22 ys+3 x+5 0x11
 Gui, 28:Add, Button, ys-1 x+4 W25 H25 hwndOSRec vOSRec gRecStart
 	ILButton(OSRec, RecordIcon[1] ":" RecordIcon[2], 16, 16)
 Gui, 28:Add, Button, ys-1 x+0 W35 H25 hwndOSRecNew vOSRecNew gRecStartNew, +
 	ILButton(OSRecNew, RecordIcon[1] ":" RecordIcon[2], 16, 16, 0)
 Gui, 28:Add, Button, ys-1 x+0 W25 H25 hwndOSRecOpt vOSRecOpt gShowRecMenu
-	ILButton(OSRecOpt, OptionsIcon[1] ":" OptionsIcon[2], 16, 16, 0)
+	ILButton(OSRecOpt, RecOptIcon[1] ":" RecOptIcon[2], 16, 16, 0)
 Gui, 28:Add, Text, W2 H22 ys+3 x+5 0x11
 Gui, 28:Add, Button, ys-1 x+4 W25 H25 hwndOSClear vOSClear gOSClear
 	ILButton(OSClear, RemoveIcon[1] ":" RemoveIcon[2], 16, 16)
@@ -8906,7 +8916,9 @@ pb_IECOM_Set:
 	IeIntStr := IEComExp(Act2, Step, El1, El2, "", Act3, Act1)
 	IeIntStr := SubStr(IeIntStr, 4)
 
-	If !(o_ie.readyState)
+	Try
+		o_ie.readyState
+	Catch
 	{
 		If (ComAc)
 			o_ie := IEGet()
@@ -9207,7 +9219,7 @@ ST := 2
 Ex_DH := 1
 Ex_AF := 1
 Ex_HK := 0
-Ex_IN := 1
+Ex_PT := 0
 Ex_NT := 0
 Ex_SC := 1
 SC := 1
@@ -9219,6 +9231,9 @@ Ex_MD := 1
 MD := -1
 Ex_SB := 1
 SB := -1
+Ex_MT := 0
+MT := 1
+Ex_IN := 1
 Ex_UV := 1
 ComCr := 1
 ComAc := 0
@@ -9377,7 +9392,7 @@ IniWrite, %ST%, %IniFilePath%, ExportOptions, ST
 IniWrite, %Ex_DH%, %IniFilePath%, ExportOptions, Ex_DH
 IniWrite, %Ex_AF%, %IniFilePath%, ExportOptions, Ex_AF
 IniWrite, %Ex_HK%, %IniFilePath%, ExportOptions, Ex_HK
-IniWrite, %Ex_IN%, %IniFilePath%, ExportOptions, Ex_IN
+IniWrite, %Ex_PT%, %IniFilePath%, ExportOptions, Ex_PT
 IniWrite, %Ex_NT%, %IniFilePath%, ExportOptions, Ex_NT
 IniWrite, %Ex_SC%, %IniFilePath%, ExportOptions, Ex_SC
 IniWrite, %SC%, %IniFilePath%, ExportOptions, SC
@@ -9389,6 +9404,9 @@ IniWrite, %Ex_MD%, %IniFilePath%, ExportOptions, Ex_MD
 IniWrite, %MD%, %IniFilePath%, ExportOptions, MD
 IniWrite, %Ex_SB%, %IniFilePath%, ExportOptions, Ex_SB
 IniWrite, %SB%, %IniFilePath%, ExportOptions, SB
+IniWrite, %Ex_MT%, %IniFilePath%, ExportOptions, Ex_MT
+IniWrite, %MT%, %IniFilePath%, ExportOptions, MT
+IniWrite, %Ex_IN%, %IniFilePath%, ExportOptions, Ex_IN
 IniWrite, %Ex_UV%, %IniFilePath%, ExportOptions, Ex_UV
 IniWrite, %ComCr%, %IniFilePath%, ExportOptions, ComCr
 IniWrite, %ComAc%, %IniFilePath%, ExportOptions, ComAc
@@ -9954,7 +9972,7 @@ Try Menu, Tray, Icon, %f_Lang011%, % ExitIcon[1], % ExitIcon[2]+1
 
 return
 
-; Recording options menu:
+; Playback / Recording options menu:
 
 ShowRecMenu:
 Menu, RecOptMenu, Add, %d_Lang019%, RecOptions
@@ -9993,12 +10011,56 @@ If (RecKeybdCtrl)
 	Menu, RecOptMenu, Check, %t_Lang031%
 
 Menu, RecOptMenu, Show
+Menu, RecOptMenu, DeleteAll
 return
 
 RecOptions:
 ItemVar := RecOptChecks[A_ThisMenuItemPos]
 %ItemVar% := !%ItemVar%
-Menu, RecOptMenu, DeleteAll
+return
+
+ShowPlayMenu:
+Menu, SpeedUpMenu, Add, 2x, SpeedOptions
+Menu, SpeedUpMenu, Add, 4x, SpeedOptions
+Menu, SpeedUpMenu, Add, 8x, SpeedOptions
+Menu, SpeedUpMenu, Add, 16x, SpeedOptions
+Menu, SpeedUpMenu, Add, 32x, SpeedOptions
+Menu, SpeedDnMenu, Add, 2x, SpeedOptions
+Menu, SpeedDnMenu, Add, 4x, SpeedOptions
+Menu, SpeedDnMenu, Add, 8x, SpeedOptions
+Menu, SpeedDnMenu, Add, 16x, SpeedOptions
+Menu, SpeedDnMenu, Add, 32x, SpeedOptions
+Menu, PlayOptMenu, Add, %r_Lang009%, PlayFrom
+Menu, PlayOptMenu, Add, %r_Lang010%, PlayTo
+Menu, PlayOptMenu, Add, %r_Lang011%, PlaySel
+Menu, PlayOptMenu, Add, %t_Lang038%, PlayOptions
+Menu, PlayOptMenu, Add, %t_Lang036%, :SpeedUpMenu
+Menu, PlayOptMenu, Add, %t_Lang037%, :SpeedDnMenu
+
+If (pb_From)
+	Menu, PlayOptMenu, Check, %r_Lang009%
+If (pb_To)
+	Menu, PlayOptMenu, Check, %r_Lang010%
+If (pb_Sel)
+	Menu, PlayOptMenu, Check, %r_Lang011%
+If (MouseReturn)
+	Menu, PlayOptMenu, Check, %t_Lang038%
+Menu, SpeedUpMenu, Check, %SpeedUp%x
+Menu, SpeedDnMenu, Check, %SpeedDn%x
+
+Menu, PlayOptMenu, Show
+Menu, PlayOptMenu, DeleteAll
+Menu, SpeedUpMenu, DeleteAll
+Menu, SpeedDnMenu, DeleteAll
+return
+
+PlayOptions:
+MouseReturn := !MouseReturn
+return
+
+SpeedOptions:
+ItemVar := SubStr(A_ThisMenu, 1, 7)
+%ItemVar% := RegExReplace(A_ThisMenuItem, "\D")
 return
 
 ;##### Languages: #####

@@ -577,6 +577,7 @@
 	OSRec_TT =	Start / Stop-Rekord
 	OSRecNew_TT =	Neues Makro aufzeichnen
 	OSRecOpt_TT =	Aufnahme-Optionen
+	OSPlayOpt_TT =	Playback Optionen
 	OSClear_TT =	Clear List
 	OSProgB_TT =	Anzeige Progress Bar
 	OSFast_TT =	Beschleunigen
@@ -690,7 +691,8 @@
 	)	
 	Ex_HK_TT =	
 	(LTrim	
-		Erzwingt die Verwendung des Hakens auf alle oder einige Tastatur-Hotkeys zu implementieren.
+		Erzwingt die Verwendung des Hakens zu implementieren alle
+		oder einige Tastatur-Hotkeys.
 	)	
 	Ex_SK_TT =	
 	(LTrim	
@@ -725,6 +727,16 @@
 	(LTrim	
 		Verursacht das Skript zu verhalten, als ob die angegebene
 		Dateiinhalt sind in diesem genaue Position vorhanden.
+	)	
+	Ex_PT_TT =	
+	(LTrim	
+		Hält ein Skript permanent laufenden
+		(das heißt, bis der Benutzer es schließt oder ExitApp angetroffen wird).
+	)	
+	Ex_MT_TT =	
+	(LTrim	
+		Legt die maximale Anzahl der gleichzeitigen
+		Threads pro Hotkey oder Hotstring.
 	)	
 	Ex_UV_TT =	Exportieren globalen variablen.
 	Ex_EdVars_TT =	Wählen sie globale variablen, die exportiert werden.
