@@ -77,11 +77,11 @@ Class ObjIni
 		return List
 	}
 	
-	Set(NewList)
+	Set(NewList, DefaultSection="UserGlobalVars")
 	{
 		this.Remove("", Chr(255))
 		this.SetCapacity(0)
-		ReadSection := "UserGlobalVars"
+		ReadSection := DefaultSection
 		%ReadSection% := []
 		Loop, Parse, NewList, `n
 		{

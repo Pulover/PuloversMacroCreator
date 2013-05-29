@@ -9,6 +9,7 @@
 ; Version: 3.7.2
 ; Release Date: May, 2013
 ; AutoHotkey Version: 1.1.10.01
+; Copyright © 2012-2013 Rodolfo U. Batista
 ; GNU General Public License 3.0 or higher
 ; <http://www.gnu.org/licenses/gpl-3.0.txt>
 
@@ -418,7 +419,8 @@ Loop, Parse, FileCmdList, |
 		Menu, m_Vars, Add, %A_LoopField%, HelpB
 	Else If InStr(A_LoopField, "Get")
 		Menu, m_Get, Add, %A_LoopField%, HelpB
-	Else If A_LoopField contains LockState,Time,Transform,Random,ClipWait,Block,Url,Status,SendLevel,Pause,Return,ExitApp
+	Else If A_LoopField contains LockState,Time,Transform,Random,ClipWait
+			,Block,Url,Status,SendLevel,Pause,Break,Continue,Return,ExitApp
 		Menu, m_Misc, Add, %A_LoopField%, HelpB
 }
 Menu, RunB, Add, Run / RunWait, HelpB
@@ -6910,7 +6912,7 @@ return
 
 CopyList:
 s_List := A_List
-d_List := SubStr(A_ThisMenuItem, 6)
+d_List := A_ThisMenuItemPos
 RowSelection := LV_GetCount("Selected")
 GoSub, CopySelection
 return
