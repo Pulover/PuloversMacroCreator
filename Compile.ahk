@@ -43,4 +43,7 @@ If ErrorLevel = ERROR
 	MsgBox, 0x40000, Error, Error code: %A_LastError%
 	ExitApp
 }
+
+TrayTip,, Finished compiling files.
+Sleep, 2000
 return

@@ -106,11 +106,11 @@ CmdHelp()
 		GuiControlGet, Pag,, TabControl
 	Title := ContHTitle[Gui][Pag ? Pag : 1]
 	If !Title
-		Title := "index"
+		Title := "index.html"
 	IfExist, MacroCreator_Help.chm
-		Run, hh.exe mk:@MSITStore:MacroCreator_Help.chm::/%Title%.html
+		Run, hh.exe mk:@MSITStore:MacroCreator_Help.chm::/%Title%
 	Else
-		Run, http://www.autohotkey.net/~Pulover/Docs/%Title%.html
+		Run, http://www.autohotkey.net/~Pulover/Docs/%Title%
 	return 0
 }
 
@@ -489,7 +489,7 @@ ToggleIcon()
 	static IconFile, IconNumber
 	If !A_IsPaused
 		IconFile := A_IconFile, IconNumber := A_IconNumber
-	Menu, Tray, Icon, % (A_IsPaused = 0) ? t_PauseIcon[1] : IconFile, % (A_IsPaused = 0) ? t_PauseIcon[2] : IconNumber
+	Try Menu, Tray, Icon, % (A_IsPaused = 0) ? t_PauseIcon[1] : IconFile, % (A_IsPaused = 0) ? t_PauseIcon[2] : IconNumber
 	return A_IsPaused
 }
 

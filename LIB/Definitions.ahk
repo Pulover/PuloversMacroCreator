@@ -15,6 +15,9 @@ pifmgr := SysRoot "\System32\pifmgr.dll"
 setupapi := SysRoot "\System32\setupapi.dll"
 shell32 := SysRoot "\System32\shell32.dll"
 urlmon := SysRoot "\System32\urlmon.dll"
+SyncCenter := SysRoot "\System32\SyncCenter.dll"
+wlanpref := SysRoot "\System32\wlanpref.dll"
+FXSRESM := SysRoot "\System32\FXSRESM.dll"
 servdeps := SysRoot "\System32\servdeps.dll"
 shimgvw := SysRoot "\System32\shimgvw.dll"
 browseui := SysRoot "\System32\browseui.dll"
@@ -28,7 +31,7 @@ inetcpl := SysRoot "\System32\inetcpl.cpl"
 Timedate := SysRoot "\System32\Timedate.cpl"
 xpsp2res := SysRoot "\System32\xpsp2res.dll"
 
-If A_OSVersion in WIN_8
+If A_OSVersion in WIN_8,WIN_7
 {
 	_s := Chr(8239)
 	IconFile := shell32
@@ -36,6 +39,10 @@ If A_OSVersion in WIN_8
 	HelpIconI := 222
 	WarnIcon := 78
 	HelpIconB := [shell32, 23]
+	t_RecordIcon := [psr, 2]
+	t_PlayIcon := [shell32, 138]
+	t_PauseIcon := [psr, 3]
+	t_WaitIcon := [comres, 6]
 	NewIcon := [imageres, 2]
 	OpenIcon := [shell32, 45]
 	SaveIcon := [shell32, 258]
@@ -49,19 +56,19 @@ If A_OSVersion in WIN_8
 	ControlIcon := [DDORes, 28]
 	PauseIcon := [shell32, 265]
 	PauseIconB := [psr, 2]
-	t_PauseIcon := [psr, 3]
 	WindowIcon := [shell32, 2]
-	ImageIcon := [shell32, 318]
+	ImageIcon := [imageres, 67]
 	RunIcon := [shell32, 24]
 	LoopIcon := [shell32, 238]
 	IfStIcon := [shell32, 165]
 	IEIcon := [shell32, 242]
+	ExpViewIcon := [shell32, 159]
 	RecordIcon := [psr, 1]
-	t_RecordIcon := [psr, 2]
 	PlayIcon := [shell32, 137]
-	t_PlayIcon := [shell32, 138]
 	TestRunIcon := [psr, 3]
 	RecStopIcon := [psr, 5]
+	PlayOptIcon := [shell32, 261]
+	RecOptIcon := [psr, 0]
 	RunTimerIcon := [miguiresource, 1]
 	PlusIcon := [shell32, 279]
 	CloseIcon := [shell32, 234]
@@ -87,6 +94,7 @@ If A_OSVersion in WIN_8
 	ExitIcon := [imageres, 218]
 	RecentIcon := [shell32, 20]
 	ProgBIcon := [shell32, 249]
+	IniTVIcon := [shell32, 84]
 	RecentFolder := A_AppData "\Microsoft\Windows\Recent"
 	LVIcons := {1 : [DDORes, 27]	; Text
 			, 	2 : [DDORes, 28]	; Mouse
@@ -94,7 +102,7 @@ If A_OSVersion in WIN_8
 			, 	4 : [shell32, 239]	; Loop
 			, 	5 : [shell32, 25]	; Run
 			, 	6 : [shell32, 166]	; IfStatement
-			, 	7 : [shell32, 319]	; Image
+			, 	7 : [imageres, 68]	; Image
 			, 	8 : [shell32, 3]	; Window
 			, 	9 : [DDORes, 29]	; Control
 			, 	10: [shell32, 243]	; IE
@@ -121,7 +129,7 @@ If A_OSVersion in WIN_8
 			, 	31: [regedit, 1]}	; Reg
 }
 
-If A_OSVersion in WIN_7,WIN_VISTA
+If A_OSVersion = WIN_VISTA
 {
 	_s := Chr(8239)
 	IconFile := shell32
@@ -129,43 +137,47 @@ If A_OSVersion in WIN_7,WIN_VISTA
 	HelpIconI := 222
 	WarnIcon := 78
 	HelpIconB := [shell32, 23]
-	NewIcon := [imageres, 2]
+	t_RecordIcon := [gcdef, 2]
+	t_PlayIcon := [shell32, 138]
+	t_PauseIcon := [shell32, 266]
+	t_WaitIcon := [comres, 6]
+	NewIcon := [imageres, 1]
 	OpenIcon := [shell32, 45]
 	SaveIcon := [shell32, 258]
 	ExportIcon := [shell32, 68]
 	PreviewIcon := [shell32, 22]
-	OptionsIcon := [imageres, 109]
+	OptionsIcon := [imageres, 108]
 	DonateIcon := [shell32, 28]
-	MouseIcon := [DDORes, 27]
-	TextIcon := [DDORes, 26]
-	SpecIcon := [DDORes, 1]
-	ControlIcon := [DDORes, 28]
+	MouseIcon := [setupapi, 1]
+	TextIcon := [setupapi, 2]
+	SpecIcon := [mmsys, 0]
+	ControlIcon := [shell32, 21]
 	PauseIcon := [shell32, 265]
-	PauseIconB := [psr, 2]
-	t_PauseIcon := [psr, 3]
+	PauseIconB := [shell32, 265]
 	WindowIcon := [shell32, 2]
-	ImageIcon := [shell32, 302]
+	ImageIcon := [imageres, 66]
 	RunIcon := [shell32, 24]
 	LoopIcon := [shell32, 238]
 	IfStIcon := [shell32, 165]
 	IEIcon := [shell32, 242]
-	RecordIcon := [psr, 1]
-	t_RecordIcon := [psr, 2]
+	ExpViewIcon := [shell32, 159]
+	RecordIcon := [gcdef, 1]
 	PlayIcon := [shell32, 137]
-	t_PlayIcon := [shell32, 138]
-	TestRunIcon := [psr, 3]
-	RecStopIcon := [psr, 5]
+	TestRunIcon := [mmsys, 3]
+	RecStopIcon := [SyncCenter, 5]
+	PlayOptIcon := [shell32, 261]
+	RecOptIcon := [inetcpl, 49]
 	RunTimerIcon := [miguiresource, 1]
-	PlusIcon := [shell32, 279]
-	CloseIcon := [shell32, 234]
-	DuplicateLIcon := [shell32, 278]
-	ImportIcon := [imageres, 176]
-	SaveLIcon := [shell32, 280]
+	PlusIcon := [wlanpref, 7]
+	CloseIcon := [wlanpref, 8]
+	DuplicateLIcon := [FXSRESM, 11]
+	InsertIcon := [shell32, 146]
+	ApplyIcon := [urlmon, 0]
+	ImportIcon := [FXSRESM, 6]
+	SaveLIcon := [FXSRESM, 8]
 	ContextIcon := [shell32, 261]
 	RemoveIcon := [shell32, 131]
 	DuplicateIcon := [shell32, 54]
-	InsertIcon := [shell32, 146]
-	ApplyIcon := [urlmon, 0]
 	CopyIcon := [shell32, 134]
 	CutIcon := [shell32, 259]
 	PasteIcon := [shell32, 260]
@@ -177,22 +189,23 @@ If A_OSVersion in WIN_7,WIN_VISTA
 	CommentIcon := [shell32, 133]
 	FindIcon := [shell32, 55]
 	ListVarsIcon := [shell32, 269]
-	ExitIcon := [imageres, 218]
+	ExitIcon := [imageres, 92]
 	RecentIcon := [shell32, 20]
 	ProgBIcon := [shell32, 249]
+	IniTVIcon := [shell32, 84]
 	RecentFolder := A_AppData "\Microsoft\Windows\Recent"
-	LVIcons := {1 : [DDORes, 27]	; Text
-			, 	2 : [DDORes, 28]	; Mouse
+	LVIcons := {1 : [setupapi, 2]	; Text
+			, 	2 : [setupapi, 3]	; Mouse
 			, 	3 : [shell32, 266]	; Pause
 			, 	4 : [shell32, 239]	; Loop
 			, 	5 : [shell32, 25]	; Run
 			, 	6 : [shell32, 166]	; IfStatement
-			, 	7 : [shell32, 303]	; Image
+			, 	7 : [imageres, 68]	; Image
 			, 	8 : [shell32, 3]	; Window
-			, 	9 : [DDORes, 29]	; Control
+			, 	9 : [shell32, 22]	; Control
 			, 	10: [shell32, 243]	; IE
-			, 	11: [DDORes, 1]		; Label
-			, 	12: [DDORes, 35]	; Goto
+			, 	11: [setupapi, 11]	; Label
+			, 	12: [setupapi, 25]	; Goto
 			, 	13: [shell32, 157]	; SendMsg
 			, 	14: [shell32, 76]	; Variables
 			, 	15: [shell32, 167]	; Functions
@@ -209,8 +222,8 @@ If A_OSVersion in WIN_7,WIN_VISTA
 			, 	26: [comres, 16]	; Break
 			, 	27: [shell32, 177]	; Continue
 			, 	28: [shell32, 28]	; Shutdown
-			, 	29: [imageres, 145]	; Process
-			, 	30: [DDORes, 2]		; Sound
+			, 	29: [imageres, 144]	; Process
+			, 	30: [mmsys, 1]		; Sound
 			, 	31: [regedit, 1]}	; Reg
 }
 
@@ -222,6 +235,10 @@ If A_OSVersion in WIN_2003,WIN_XP,WIN_2000
 	HelpIconI := 222
 	WarnIcon := 78
 	HelpIconB := [shell32, 23]
+	t_RecordIcon := [gcdef, 1]
+	t_PlayIcon := [shell32, 138]
+	t_PauseIcon := [shell32, 21]
+	t_WaitIcon := [servdeps, 4]
 	NewIcon := [shell32, 100]
 	OpenIcon := [shell32, 4]
 	SaveIcon := [shell32, 78]
@@ -235,19 +252,19 @@ If A_OSVersion in WIN_2003,WIN_XP,WIN_2000
 	ControlIcon := [shell32, 192]
 	PauseIcon := [shell32, 20]
 	PauseIconB := [shell32, 20]
-	t_PauseIcon := [shell32, 21]
 	WindowIcon := [shell32, 2]
 	ImageIcon := [shimgvw, 0]
 	RunIcon := [shell32, 24]
 	LoopIcon := [xpsp2res, 53]
 	IfStIcon := [setupapi, 22]
 	IEIcon := [shell32, 220]
+	ExpViewIcon := [shell32, 34]
 	RecordIcon := [gcdef, 1]
-	t_RecordIcon := [gcdef, 1]
 	PlayIcon := [shell32, 137]
-	t_PlayIcon := [shell32, 138]
 	TestRunIcon := [browseui, 1]
 	RecStopIcon := [shell32, 109]
+	PlayOptIcon := [xpsp2res, 12]
+	RecOptIcon := [xpsp2res, 13]
 	RunTimerIcon := [Timedate, 0]
 	PlusIcon := [inetcpl, 21]
 	CloseIcon := [inetcpl, 22]
@@ -271,8 +288,9 @@ If A_OSVersion in WIN_2003,WIN_XP,WIN_2000
 	FindIcon := [shell32, 55]
 	ListVarsIcon := [shell32, 75]
 	ExitIcon := [xpsp2res, 0]
-	RecentIcon := [xpsp2res, 7]
+	RecentIcon := [shell32, 20]
 	ProgBIcon := [shell32, 176]
+	IniTVIcon := [shell32, 84]
 	RecentFolder := A_AppData "\..\Recent"
 	LVIcons := {1 : [setupapi, 3]	; Text
 			, 	2 : [setupapi, 2]	; Mouse
@@ -373,26 +391,29 @@ Help21 := "IfStB"
 Help22 := "SendMsgB"
 Help23 := "ControlB"
 Help24 := "IEComB"
-ContHTitle := {	2: ["p6-Preview"]
-			,	3: ["Commands/Pause", "Commands/Message", "Commands/KeyWait"]
-			,	4: ["p7-Settings"]
-			,	5: ["Commands/Mouse"]
-			,	7: ["Commands/Special_Keys"]
-			,	8: ["Commands/Text"]
-			,	10: ["Commands/Run"]
-			,	11: ["Commands/Window"]
-			,	12: ["Commands/Loop", "Commands/Goto_and_Gosub", "Commands/Label"
-				, "Commands/Loop_FilePattern",	"Commands/Loop_Parse", "Commands/Loop_Read", "Commands/Loop_Registry"]
-			,	14: ["p5-Export"]
-			,	19: ["Commands/Image_Search", "Commands/Pixel_Search"]
-			,	21: ["Commands/If_Statements", "Commands/Assign_Variable", "Commands/Functions"]
-			,	22: ["Commands/PostMessage_and_SendMessage"]
-			,	23: ["Commands/Control"]
-			,	24: ["Commands/Internet_Explorer", "Commands/COM_Interface"] }
+ContHTitle := {	2: ["p6-Preview.html"]
+			,	3: ["Commands/Pause.html", "Commands/Message.html", "Commands/KeyWait.html"]
+			,	4: ["p7-Settings.html", "p7-Settings.html#misc.", "p7-Settings.html#user-global-variables"]
+			,	5: ["Commands/Mouse.html"]
+			,	7: ["Commands/Special_Keys.html"]
+			,	8: ["Commands/Text.html"]
+			,	10: ["Commands/Run.html"]
+			,	11: ["Commands/Window.html"]
+			,	12: ["Commands/Loop.html", "Commands/Goto_and_Gosub.html", "Commands/Label.html"
+				, "Commands/Loop_FilePattern.html",	"Commands/Loop_Parse.html", "Commands/Loop_Read.html", "Commands/Loop_Registry.html"]
+			,	14: ["p5-Export.html"]
+			,	19: ["Commands/Image_Search.html", "Commands/Pixel_Search.html"]
+			,	21: ["Commands/If_Statements.html", "Commands/Assign_Variable.html", "Commands/Functions.html"]
+			,	22: ["Commands/PostMessage_and_SendMessage.html"]
+			,	23: ["Commands/Control.html"]
+			,	24: ["Commands/Internet_Explorer.html", "Commands/COM_Interface.html"]
+			,	30: ["Commands/COM_Interface.html"] }
 
-KeyNameRep :=
+RecOptChecks := ["ClearNewList", "Strokes", "CaptKDn", "Mouse", "MScroll"
+			, "Moves", "TimedI", "WClass", "WTitle", "RecMouseCtrl", "RecKeybdCtrl"]
+KeyNameRep := "
 (Join,
-"LControl|Left Control
+LControl|Left Control
 RControl|Right Control
 LAlt|Left Alt
 RAlt|Right Alt
@@ -415,22 +436,22 @@ Num Sub|Num -
 Num Ins|Num Insert
 Num PgDn|Num Page Down
 Num PgUp|Num Page Up
-Num Del|Num Delete"
-)
-CtrlCmdList :=
+Num Del|Num Delete
+)"
+CtrlCmdList := "
 (Join|
-"Control|
+Control|
 ControlFocus
 ControlMove
 ControlSetText
 ControlGet
 ControlGetText
 ControlGetFocus
-ControlGetPos"
-)
-CtrlCmd :=
+ControlGetPos
+)"
+CtrlCmd := "
 (Join|
-"Check|
+Check|
 Uncheck
 Enable
 Disable
@@ -446,11 +467,11 @@ Add
 Delete
 Choose
 ChooseString
-EditPaste"
-)
-CtrlGetCmd :=
+EditPaste
+)"
+CtrlGetCmd := "
 (Join|
-"List|
+List|
 Checked
 Enabled
 Visible
@@ -464,11 +485,11 @@ Line
 Selected
 Style
 ExStyle
-Hwnd"
-)
-WinList :=
+Hwnd
+)"
+WinList := "
 (
-"WinSet = WinTitle, WinText, ExcludeTitle, ExcludeText
+WinSet = WinTitle, WinText, ExcludeTitle, ExcludeText
 WinActivate = WinTitle, WinText, ExcludeTitle, ExcludeText
 WinActivateBottom = WinTitle, WinText, ExcludeTitle, ExcludeText
 WinWait = WinTitle, WinText, ExcludeTitle, ExcludeText
@@ -490,8 +511,8 @@ WinGet = WinTitle, WinText, ExcludeTitle, ExcludeText
 WinGetTitle = WinTitle, WinText, ExcludeTitle, ExcludeText
 WinGetClass = WinTitle, WinText, ExcludeTitle, ExcludeText
 WinGetText = WinTitle, WinText, ExcludeTitle, ExcludeText
-WinGetPos = WinTitle, WinText, ExcludeTitle, ExcludeText"
-)
+WinGetPos = WinTitle, WinText, ExcludeTitle, ExcludeText
+)"
 
 Loop, Parse, WinList, `n
 {
@@ -507,9 +528,9 @@ Loop, Parse, WinList, `n
 }
 wcmd_All := "Title, Text, ExclTitle, ExclText"
 
-WinCmd :=
+WinCmd := "
 (Join|
-"AlwaysOnTop|
+AlwaysOnTop|
 Bottom
 Top
 Disable
@@ -519,11 +540,11 @@ Style
 ExStyle
 Region
 Transparent
-TransColor"
-)
-WinGetCmd :=
+TransColor
+)"
+WinGetCmd := "
 (Join|
-"ID|
+ID|
 IDLast
 PID
 ProcessName
@@ -536,11 +557,11 @@ ControlListHwnd
 Transparent
 TransColor
 Style
-ExStyle"
-)
-IfCmd :=
+ExStyle
+)"
+IfCmd := "
 (
-"If Window Active|IfWinActive,
+If Window Active|IfWinActive,
 If Window Not Active|IfWinNotActive, 
 If Window Exist|IfWinExist, 
 If Window Not Exist|IfWinNotExist, 
@@ -554,8 +575,8 @@ If String Contains|IfInString,
 If String Not Contains|IfNotInString, 
 If Message Box|IfMsgBox, 
 Compare Variables|If
-Evaluate Expression|Expression"
-)
+Evaluate Expression|Expression
+)"
 Loop, Parse, IfCmd, `n
 {
 	Count := A_index
@@ -573,9 +594,9 @@ Loop, Parse, IfCmd, `n
 		IfList .= "$"
 }
 
-IECmdList := 
+IECmdList := "
 (Join|
-"Navigate|
+Navigate|
 Value
 Focus
 Click
@@ -598,8 +619,8 @@ Checked
 Type
 Width
 Height
-Length"
-)
+Length
+)"
 
 SetOnlyList := "GoHome,GoBack,GoForward,GoSearch,Refresh,Stop,Quit
 				,Navigate,Navigate2,Focus,Click,Submit"
@@ -609,9 +630,9 @@ NoValueList := "GoHome,GoBack,GoForward,GoSearch,Refresh,Stop,Quit
 NoElemList := "Navigate,Navigate2,GoHome,GoBack,GoForward,GoSearch,Refresh,Stop,Quit
 				,LocationName,LocationURL"
 
-MethodList :=
+MethodList := "
 (Join,
-"ClientToWindow
+ClientToWindow
 ExecWB
 Focus
 Click
@@ -629,11 +650,11 @@ Quit
 Refresh
 Refresh2
 ShowBrowserBar
-Stop"
-)
-ProperList :=
+Stop
+)"
+ProperList := "
 (Join,
-"AddressBar
+AddressBar
 FullScreen
 Application
 Busy
@@ -671,11 +692,11 @@ Value
 InnerText
 InnerHTML
 SelectedIndex
-Checked"
-)
-CLSList := 
+Checked
+)"
+CLSList := " 
 (Join|
-"InternetExplorer.Application|
+InternetExplorer.Application|
 Excel.Application
 Word.Application
 Outlook.Application
@@ -683,12 +704,12 @@ PowerPoint.Application
 SAPI.SpVoice
 Schedule.Service
 ScriptControl
-XStandard.Zip"
-)
+XStandard.Zip
+)"
 
-FileCmd :=
+FileCmd := "
 (
-"Run, Target, WorkingDir, Max|Min|Hide|UseErrorLevel, OutputVarPID
+Run, Target, WorkingDir, Max|Min|Hide|UseErrorLevel, OutputVarPID
 RunWait, Target, WorkingDir, Max|Min|Hide|UseErrorLevel, OutputVarPID
 RunAs, User, Password, Domain
 Process, Cmd, PID-or-Name, Param3
@@ -780,9 +801,11 @@ BlockInput, Mode
 UrlDownloadToFile, URL, Filename
 SendLevel, Level
 Pause
+Break, LoopNumber
+Continue, LoopNumber
 Return
-ExitApp"
-)
+ExitApp
+)"
 Loop, Parse, FileCmd, `n
 {
 	Loop, Parse, A_LoopField, `,,%A_Space%
@@ -802,7 +825,7 @@ Loop, Parse, FileCmd, `n
 
 ;##### Functions: #####
 
-BuiltinFuncList =
+BuiltinFuncList := "
 (Join$
 Abs
 ACos
@@ -865,10 +888,10 @@ Trim
 VarSetCapacity
 WinActive
 WinExist
-)
+)"
 ;##### Messages: #####
 
-MsgList =
+MsgList := "
 (
 WM_NULL = 0x00
 WM_CREATE = 0x01
@@ -1077,7 +1100,7 @@ WM_DDE_EXECUTE = 0x3E8
 WM_DDE_LAST = 0x3E8
 WM_USER = 0x400
 WM_APP = 0x8000
-)
+)"
 
 Loop, Parse, MsgList, `n
 {

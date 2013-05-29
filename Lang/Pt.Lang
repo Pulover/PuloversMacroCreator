@@ -117,7 +117,7 @@
 	w_Lang012 =	&Capturar Teclas
 	w_Lang013 =	Mostrar I&nfo.
 	w_Lang014 =	Sempre A&tivo
-	w_Lang015 =	Repetir:
+	w_Lang015 =	Repetir
 	w_Lang016 =	Interv. (ms):
 	w_Lang017 =	Aplicar
 	w_Lang018 =	Inserir
@@ -372,6 +372,10 @@
 	t_Lang090 =	Padrões
 	t_Lang091 =	Permitir Arrastar Linhas
 	t_Lang092 =	Conteúdo da célula inteira
+	t_Lang093 =	Formato INI padrão
+	t_Lang094 =	Nome = Valor
+	t_Lang095 =	Insira 1 variável por linha. Você também pode adicionar [Seções].
+	t_Lang096 =	Variáveis Globais do Usuário
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Abrir
@@ -491,7 +495,9 @@
 	)	
 	d_Lang062 =	Você já possui a versão mais recente.
 	d_Lang063 =	Ocorreu um erro durante a verificação.
-		
+	d_Lang064 =	Erro do objeto COM em
+	d_Lang065 =	Linha
+	d_Lang066 =	Especificamente
 		
 ; Tooltips		
 	NewB_TT =	Novo (Ctrl+N)
@@ -565,10 +571,13 @@
 	IfLVColor_TT =	Clique para selecionar uma cor
 	RefreshIEW_TT =	Atualizar Lista
 	ActiveObj_TT =	Tenta conectar-se a um Objeto COM Ativo
+	ExpView_TT =	Editor Avançado
 	OSPlay_TT =	Reproduzir / Pausar
 	OSStop_TT =	Parar
 	OSRec_TT =	Iniciar / Parar Gravação
 	OSRecNew_TT =	Gravar Nova Macro
+	OSRecOpt_TT =	Opções de Gravação
+	OSPlayOpt_TT =	Opções de Reprodução
 	OSClear_TT =	Limpar Lista
 	OSProgB_TT =	Mostrar Barra de Progresso
 	OSFast_TT =	Acelerar
@@ -682,7 +691,8 @@
 	)	
 	Ex_HK_TT =	
 	(LTrim	
-		Força o uso do gancho (hook) para todas os atalhos de teclado.
+		Força o uso do gancho (hook) para todos
+		ou alguns atalhos de teclado.
 	)	
 	Ex_SK_TT =	
 	(LTrim	
@@ -718,6 +728,18 @@
 		Faz com que o script comporte-se como se o conteúdo do
 		arquivo especificado estivesse presente nesta exata posição
 	)	
+	Ex_PT_TT =	
+	(LTrim	
+		Mantem um script executando permanentemente
+		(isto é, até que o usuário feche-o ou ExitApp seja encontrado).
+	)	
+	Ex_MT_TT =	
+	(LTrim	
+		Ajusta o número máximo de execuções
+		simultâneas por hotkey ou hotstring.
+	)	
+	Ex_UV_TT =	Exportar variáveis globais.
+	Ex_EdVars_TT =	Selecionar variáveis globais a serem exportadas.
 		
 ; IE Commands Tips		
 	Tip_Navigate =	Navega para uma URL ou caminho.

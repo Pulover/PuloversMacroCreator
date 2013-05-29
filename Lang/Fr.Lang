@@ -117,7 +117,7 @@
 	w_Lang012 =	&Capturez clés
 	w_Lang013 =	&Afficher les infos
 	w_Lang014 =	&Toujours actif
-	w_Lang015 =	Répétez:
+	w_Lang015 =	Répétez
 	w_Lang016 =	Délai (ms):
 	w_Lang017 =	Appliquer
 	w_Lang018 =	Insérer
@@ -372,6 +372,10 @@
 	t_Lang090 =	Par défaut
 	t_Lang091 =	Laisser glisser les lignes
 	t_Lang092 =	Le contenu des cellules entières
+	t_Lang093 =	Format INI standard
+	t_Lang094 =	Nom = Valeur
+	t_Lang095 =	Entrez 1 variable par ligne. Vous pouvez également ajouter [Articles].
+	t_Lang096 =	Des Variables Globales Des Utilisateurs
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Ouvert
@@ -491,7 +495,9 @@
 	)	
 	d_Lang062 =	Vous avez déjà la version la plus récente.
 	d_Lang063 =	Une erreur s'est produite lors de la vérification.
-		
+	d_Lang064 =	Erreur d'objet COM dans
+	d_Lang065 =	Row
+	d_Lang066 =	Spécifiquement
 		
 ; Tooltips		
 	NewB_TT =	Nouveau (Ctrl+N)
@@ -565,10 +571,13 @@
 	IfLVColor_TT =	Cliquez pour choisir une couleur
 	RefreshIEW_TT =	Rafraîchir la liste
 	ActiveObj_TT =	Tente de se connecter à un objet COM active
+	ExpView_TT =	Éditeur Avancé
 	OSPlay_TT =	Lecture / Pause
 	OSStop_TT =	Arrêter
 	OSRec_TT =	Démarrer / Arrêter l'enregistrement
 	OSRecNew_TT =	Nouvelle macro
+	OSRecOpt_TT =	Options d'enregistrement
+	OSPlayOpt_TT =	Options de lecture
 	OSClear_TT =	Supprimer la liste
 	OSProgB_TT =	Afficher la barre de progression
 	OSFast_TT =	Accélérer
@@ -682,7 +691,8 @@
 	)	
 	Ex_HK_TT =	
 	(LTrim	
-		Force l'utilisation du crochet de mettre en œuvre tout ou partie des raccourcis clavier.
+		Force l'utilisation du crochet pour mettre en œuvre tous
+		ou des raccourcis clavier.
 	)	
 	Ex_SK_TT =	
 	(LTrim	
@@ -718,6 +728,18 @@
 		Fait que le script se comporter comme si l'précisée
 		le contenu des fichiers sont présents à cette position exacte.
 	)	
+	Ex_PT_TT =	
+	(LTrim	
+		Conserve un script qui s'exécute en permanence
+		(c'est-à-dire, jusqu'à ce que l'utilisateur ferme le ou ExitApp est rencontrée).
+	)	
+	Ex_MT_TT =	
+	(LTrim	
+		Définit le nombre maximum d'simultané
+		threads par raccourci clavier ou hotstring.
+	)	
+	Ex_UV_TT =	Exporter des variables globales.
+	Ex_EdVars_TT =	Sélectionner des variables globales pour être exportés.
 		
 ; IE Commands Tips		
 	Tip_Navigate =	Navigue vers une URL ou un chemin.

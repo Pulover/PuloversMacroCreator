@@ -117,7 +117,7 @@
 	w_Lang012 =	&Capture Keys
 	w_Lang013 =	&Vis Info
 	w_Lang014 =	&Altid aktiv
-	w_Lang015 =	Gentag:
+	w_Lang015 =	Gentag
 	w_Lang016 =	Forsinkelse (ms):
 	w_Lang017 =	Anvend
 	w_Lang018 =	Indsæt
@@ -372,6 +372,10 @@
 	t_Lang090 =	Defaults
 	t_Lang091 =	Tillad at trække rækker
 	t_Lang092 =	Hele celleindhold
+	t_Lang093 =	Standard INI format
+	t_Lang094 =	Name = Value
+	t_Lang095 =	Indtast 1 variabel per linje. Du kan også tilføje [afsnit].
+	t_Lang096 =	Bruger Globale Variabler
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Åbent
@@ -491,7 +495,9 @@
 	)	
 	d_Lang062 =	Du har allerede den nyeste version.
 	d_Lang063 =	Der opstod en fejl under kontrol.
-		
+	d_Lang064 =	COM objekt fejl i
+	d_Lang065 =	Row
+	d_Lang066 =	Konkret
 		
 ; Tooltips		
 	NewB_TT =	Ny (Ctrl+N)
@@ -565,10 +571,13 @@
 	IfLVColor_TT =	Klik for at vælge en farve
 	RefreshIEW_TT =	Refresh List
 	ActiveObj_TT =	Forsøger at oprette forbindelse til en Active COM objekt
+	ExpView_TT =	Avanceret Editor
 	OSPlay_TT =	Afspil / Pause
 	OSStop_TT =	Stands
 	OSRec_TT =	Start / Stop Record
 	OSRecNew_TT =	Indspil ny makro
+	OSRecOpt_TT =	Optagemuligheder
+	OSPlayOpt_TT =	indstillinger til afspilning
 	OSClear_TT =	Ryd liste
 	OSProgB_TT =	Display Progress Bar
 	OSFast_TT =	Fremskynde
@@ -682,7 +691,8 @@
 	)	
 	Ex_HK_TT =	
 	(LTrim	
-		Tvinger brugen af ​​krogen til at gennemføre hele eller nogle keyboard hotkeys.
+		Tvinger brugen af krogen at gennemføre alle
+		eller nogle keyboard genvejstaster.
 	)	
 	Ex_SK_TT =	
 	(LTrim	
@@ -718,6 +728,18 @@
 		Får script til at opføre sig, som om den angivne
 		filens indhold er til stede ved denne nøjagtige position.
 	)	
+	Ex_PT_TT =	
+	(LTrim	
+		Holder et script permanent kørende
+		(det vil sige, indtil brugeren lukker det eller ExitApp er stødt).
+	)	
+	Ex_MT_TT =	
+	(LTrim	
+		Indstiller det maksimale antal samtidige
+		tråde per genvejstast eller hotstring.
+	)	
+	Ex_UV_TT =	Eksportere globale variabler.
+	Ex_EdVars_TT =	Vælg globale variabler, der skal eksporteres.
 		
 ; IE Commands Tips		
 	Tip_Navigate =	Navigerer til en webadresse eller sti.

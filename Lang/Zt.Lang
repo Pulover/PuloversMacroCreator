@@ -117,7 +117,7 @@
 	w_Lang012 =	擷取鍵
 	w_Lang013 =	顯示信息
 	w_Lang014 =	始終活躍
-	w_Lang015 =	重複：
+	w_Lang015 =	重複
 	w_Lang016 =	延時（ms）：
 	w_Lang017 =	申請
 	w_Lang018 =	插入
@@ -372,6 +372,10 @@
 	t_Lang090 =	默認
 	t_Lang091 =	允許拖動行
 	t_Lang092 =	整個單元格內容
+	t_Lang093 =	標準的INI格式
+	t_Lang094 =	名稱=值
+	t_Lang095 =	輸入每行1個變量。您還可以添加[第]。
+	t_Lang096 =	用戶全局變量
 		
 ; Messages & Dialogs		
 	d_Lang001 =	打開
@@ -491,7 +495,9 @@
 	)	
 	d_Lang062 =	您已經有最新的版本。
 	d_Lang063 =	檢查時發生錯誤。
-		
+	d_Lang064 =	COM對象錯誤
+	d_Lang065 =	排
+	d_Lang066 =	特別是
 		
 ; Tooltips		
 	NewB_TT =	新（按Ctrl+N）
@@ -565,10 +571,13 @@
 	IfLVColor_TT =	點擊挑顏色
 	RefreshIEW_TT =	刷新列表
 	ActiveObj_TT =	嘗試連接到一個活躍的COM對象
+	ExpView_TT =	高級編輯
 	OSPlay_TT =	播放/暫停
 	OSStop_TT =	停止
 	OSRec_TT =	啟動/停止錄影
 	OSRecNew_TT =	錄製新宏
+	OSRecOpt_TT =	錄製選項
+	OSPlayOpt_TT =	播放選項
 	OSClear_TT =	清除列表
 	OSProgB_TT =	顯示進度條
 	OSFast_TT =	加快
@@ -682,7 +691,8 @@
 	)	
 	Ex_HK_TT =	
 	(LTrim	
-		強制利用鉤子實現全部或部分鍵盤熱鍵。
+		強制利用鉤子實現所有
+		或一些鍵盤熱鍵。
 	)	
 	Ex_SK_TT =	
 	(LTrim	
@@ -718,6 +728,18 @@
 		導致腳本彷彿指定的行為
 		文件的內容是目前在這個確切位置。
 	)	
+	Ex_PT_TT =	
+	(LTrim	
+		永久保持一個腳本運行
+		（即，直到用戶關閉或ExitApp命令遇到）。
+	)	
+	Ex_MT_TT =	
+	(LTrim	
+		設置最大數量的同時
+		線程，每個熱鍵或熱字串。
+	)	
+	Ex_UV_TT =	導出全局變量。
+	Ex_EdVars_TT =	選擇要導出的全局變量。
 		
 ; IE Commands Tips		
 	Tip_Navigate =	導航到URL或路徑。

@@ -117,7 +117,7 @@
 	w_Lang012 =	&Hvatanje Keys
 	w_Lang013 =	P&okaži Info
 	w_Lang014 =	&Uvijek je aktivna
-	w_Lang015 =	Ponovite:
+	w_Lang015 =	Ponovite
 	w_Lang016 =	Kašnjenje (ms):
 	w_Lang017 =	Primijeniti
 	w_Lang018 =	Umetnuti
@@ -372,6 +372,10 @@
 	t_Lang090 =	Zadane
 	t_Lang091 =	Dopustite Povlačenje retke
 	t_Lang092 =	Cijele sadržaj ćelije
+	t_Lang093 =	Standardni format INI
+	t_Lang094 =	Ime = Vrijednost
+	t_Lang095 =	Unesite jedna varijabla po liniji. Vi svibanj također dodati [sekcije].
+	t_Lang096 =	Korisnik Globalne Varijable
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Otvoreno
@@ -491,7 +495,9 @@
 	)	
 	d_Lang062 =	Vi već imate najnoviju verziju.
 	d_Lang063 =	Došlo je do pogreške tijekom provjere.
-		
+	d_Lang064 =	COM objekt pogreška u
+	d_Lang065 =	Red
+	d_Lang066 =	Posebno
 		
 ; Tooltips		
 	NewB_TT =	New (Ctrl+N)
@@ -565,10 +571,13 @@
 	IfLVColor_TT =	Kliknite da odaberete boju
 	RefreshIEW_TT =	Osvježi popis
 	ActiveObj_TT =	Pokušava se povezati s Active COM objekt
+	ExpView_TT =	Napredni Uređivač
 	OSPlay_TT =	Reprodukcija / pauza
 	OSStop_TT =	Stop
 	OSRec_TT =	Start / Stop Record
 	OSRecNew_TT =	Zapis New Macro
+	OSRecOpt_TT =	Opcije Snimanja
+	OSPlayOpt_TT =	Playback Options
 	OSClear_TT =	Jasno Popis
 	OSProgB_TT =	Prikaz Progress Bar
 	OSFast_TT =	Ubrzati
@@ -682,7 +691,8 @@
 	)	
 	Ex_HK_TT =	
 	(LTrim	
-		Prisiljava korištenje kuka u mjesto za sve ili samo neke tipkovnica hotkeys.
+		Prisiljava korištenje kuka za provedbu svih
+		ili neki tipkovnica hotkeys.
 	)	
 	Ex_SK_TT =	
 	(LTrim	
@@ -718,6 +728,18 @@
 		Uzroci skriptu ponaša kao da je navedeno
 		File je sadržaji su prisutni na ovom točan položaj.
 	)	
+	Ex_PT_TT =	
+	(LTrim	
+		Održava skriptu trajno prikazivati
+		(koji je, dok ga korisnik ne zatvori ili ExitApp je naišao).
+	)	
+	Ex_MT_TT =	
+	(LTrim	
+		Postavlja maksimalan broj istovremenih
+		teme po hotkey ili hotstring.
+	)	
+	Ex_UV_TT =	Izvoz globalne varijable.
+	Ex_EdVars_TT =	Odaberite globalne varijable se izvozi.
 		
 ; IE Commands Tips		
 	Tip_Navigate =	Kreće na URL ili put.

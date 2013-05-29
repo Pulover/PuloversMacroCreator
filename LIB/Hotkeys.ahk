@@ -6,11 +6,13 @@ NumpadDel::GoSub, h_Numdel
 MButton & WheelUp::
 ^WheelUp::
 ^PgUp::
+^+Up::
 GoSub, MoveUp
 return
 MButton & WheelDown::
 ^WheelDown::
 ^PgDn::
+^+Down::
 GoSub, MoveDn
 return
 
@@ -124,6 +126,10 @@ Enter::GoSub, Restore
 #If NoKey
 RButton::
 RButton Up::
+return
+
+Esc::
+StopIt := 1
 return
 
 #If Draw

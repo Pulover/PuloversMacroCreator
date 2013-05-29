@@ -117,7 +117,7 @@
 	w_Lang012 =	&Capture Keys
 	w_Lang013 =	&Näytä tiedot
 	w_Lang014 =	&Aina aktiivinen
-	w_Lang015 =	Toista:
+	w_Lang015 =	Toista
 	w_Lang016 =	Delay (ms):
 	w_Lang017 =	Käyttää
 	w_Lang018 =	Lisätä
@@ -372,6 +372,10 @@
 	t_Lang090 =	Oletukset
 	t_Lang091 =	Salli vetämällä rivejä
 	t_Lang092 =	Koko solun sisältö
+	t_Lang093 =	Standard INI muodossa
+	t_Lang094 =	Nimi = arvo
+	t_Lang095 =	Anna 1 muuttujan riville. Voit myös lisätä [§].
+	t_Lang096 =	Käyttäjä Yleismuuttujat
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Avata
@@ -491,7 +495,9 @@
 	)	
 	d_Lang062 =	Sinulla on jo uusin versio.
 	d_Lang063 =	Virhe tarkkailun.
-		
+	d_Lang064 =	COM-objekti virhe
+	d_Lang065 =	Rivi
+	d_Lang066 =	Erityisesti
 		
 ; Tooltips		
 	NewB_TT =	Uusi (Ctrl+N)
@@ -565,10 +571,13 @@
 	IfLVColor_TT =	Klikkaa valita värin
 	RefreshIEW_TT =	Päivitä lista
 	ActiveObj_TT =	Yrittää muodostaa yhteyden Active COM Object
+	ExpView_TT =	Kehittynyt Editori
 	OSPlay_TT =	Play / Pause
 	OSStop_TT =	Lopettaa
 	OSRec_TT =	Start / Stop Record
 	OSRecNew_TT =	Nauhoita uusi makro
+	OSRecOpt_TT =	Tallennusmahdollisuudet
+	OSPlayOpt_TT =	Toistoasetukset
 	OSClear_TT =	Tyhjennä luettelo
 	OSProgB_TT =	Näyttö Progress Bar
 	OSFast_TT =	Nopeuttaa
@@ -682,7 +691,8 @@
 	)	
 	Ex_HK_TT =	
 	(LTrim	
-		Pakottaa käyttö koukun toteuttaa kokonaan tai osittain näppäimistön pikanäppäimiä.
+		Pakottaa käyttö koukku toteuttaa kaikki
+		tai joitakin näppäimistön pikanäppäimiä.
 	)	
 	Ex_SK_TT =	
 	(LTrim	
@@ -718,6 +728,18 @@
 		Aiheuttaa script käyttäytymään ikään määritelty
 		tiedoston sisältöä on läsnä juuri tämän kannan.
 	)	
+	Ex_PT_TT =	
+	(LTrim	
+		Pitää script pysyvästi kulje
+		(eli siihen asti, kunnes käyttäjä sulkee sen tai ExitApp kohdataan).
+	)	
+	Ex_MT_TT =	
+	(LTrim	
+		Asettaa maksimimäärän samanaikaisia
+		lankaa pikanäppäin tai hotstring.
+	)	
+	Ex_UV_TT =	Viedä globaalien muuttujien.
+	Ex_EdVars_TT =	Valitse globaalien muuttujien viedään.
 		
 ; IE Commands Tips		
 	Tip_Navigate =	Siirtyy URL tai polku.

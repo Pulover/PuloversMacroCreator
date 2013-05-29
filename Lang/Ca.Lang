@@ -117,7 +117,7 @@
 	w_Lang012 =	&Captura Keys
 	w_Lang013 =	&Mostrar informació
 	w_Lang014 =	&Sempre actiu
-	w_Lang015 =	Repetir:
+	w_Lang015 =	Repetir
 	w_Lang016 =	Retard (ms):
 	w_Lang017 =	Aplicar
 	w_Lang018 =	Insereix
@@ -372,6 +372,10 @@
 	t_Lang090 =	Valors predefinits
 	t_Lang091 =	Permetre arrossegar files
 	t_Lang092 =	Tot el contingut de la cel · la
+	t_Lang093 =	Format INI estàndard
+	t_Lang094 =	Nom = Valor
+	t_Lang095 =	Introduïu gener variable per línia. Vostè també pot afegir [Seccions].
+	t_Lang096 =	Variables Globals De L'usuari
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Obert
@@ -491,7 +495,9 @@
 	)	
 	d_Lang062 =	Vostè ja té la versió més recent.
 	d_Lang063 =	S'ha produït un error durant la comprovació.
-		
+	d_Lang064 =	Error d'objecte COM en
+	d_Lang065 =	Fila
+	d_Lang066 =	Específicament
 		
 ; Tooltips		
 	NewB_TT =	Nou (Ctrl+N)
@@ -565,10 +571,13 @@
 	IfLVColor_TT =	Feu clic per seleccionar un color
 	RefreshIEW_TT =	Actualitzar llista
 	ActiveObj_TT =	Intenta connectar-se a un objecte COM actiu
+	ExpView_TT =	Editor Avançat
 	OSPlay_TT =	Reproduir / Pausa
 	OSStop_TT =	Aturi
 	OSRec_TT =	Start / Stop Record
 	OSRecNew_TT =	Gravar nova macro
+	OSRecOpt_TT =	Opcions de Gravació
+	OSPlayOpt_TT =	Opcions de reproducció
 	OSClear_TT =	Esborrar llista
 	OSProgB_TT =	Mostra la barra de progrés
 	OSFast_TT =	Accelerar
@@ -682,7 +691,8 @@
 	)	
 	Ex_HK_TT =	
 	(LTrim	
-		Força l'ús del ganxo per executar la totalitat o algunes tecles d'accés ràpid del teclat.
+		Força l'ús del ganxo per posar en pràctica totes les
+		o algunes tecles d'accés ràpid del teclat.
 	)	
 	Ex_SK_TT =	
 	(LTrim	
@@ -718,6 +728,18 @@
 		Fa que el guió es comporti com si l'especificada
 		contingut de l'arxiu es presenti en aquesta posició exacta.
 	)	
+	Ex_PT_TT =	
+	(LTrim	
+		Manté un script que s'executa permanentment
+		(És a dir, fins que l'usuari tanca o es troba ExitApp).
+	)	
+	Ex_MT_TT =	
+	(LTrim	
+		Estableix el nombre màxim de connexions simultànies
+		fils per tecla d'accés directe o cadena d'accés ràpid.
+	)	
+	Ex_UV_TT =	Exportar variables globals.
+	Ex_EdVars_TT =	Seleccionar variables globals destinats a l'exportació.
 		
 ; IE Commands Tips		
 	Tip_Navigate =	Es desplaça a una adreça URL o la ruta.

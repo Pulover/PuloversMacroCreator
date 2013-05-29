@@ -117,7 +117,7 @@
 	w_Lang012 =	&Fånga Keys
 	w_Lang013 =	&Visa info
 	w_Lang014 =	&Alltid aktiv
-	w_Lang015 =	Upprepa:
+	w_Lang015 =	Upprepa
 	w_Lang016 =	Fördröjning (ms):
 	w_Lang017 =	Ansök
 	w_Lang018 =	Infoga
@@ -372,6 +372,10 @@
 	t_Lang090 =	Standardvärden
 	t_Lang091 =	Tillåt dra rader
 	t_Lang092 =	Hela cellinnehållet
+	t_Lang093 =	Standard INI format
+	t_Lang094 =	Namn = Värde
+	t_Lang095 =	Skriv en variabel per linje. Du kan också lägga till [avsnitt].
+	t_Lang096 =	Användaren Globala Variabler
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Öppet
@@ -491,7 +495,9 @@
 	)	
 	d_Lang062 =	Du har redan den senaste versionen.
 	d_Lang063 =	Ett fel inträffade vid kontroll.
-		
+	d_Lang064 =	COM-objekt fel i
+	d_Lang065 =	Rad
+	d_Lang066 =	Specifikt
 		
 ; Tooltips		
 	NewB_TT =	Ny (Ctrl+N)
@@ -565,10 +571,13 @@
 	IfLVColor_TT =	Klicka här för att välja en färg
 	RefreshIEW_TT =	Uppdatera lista
 	ActiveObj_TT =	Försöker ansluta till en Active COM objekt
+	ExpView_TT =	Avancerad Redigerare
 	OSPlay_TT =	Spela upp / pausa
 	OSStop_TT =	Stopp
 	OSRec_TT =	Start / stopp Spela
 	OSRecNew_TT =	Spela in nytt makro
+	OSRecOpt_TT =	Inspelningsalternativen
+	OSPlayOpt_TT =	Visningsalternativ
 	OSClear_TT =	Rensa lista
 	OSProgB_TT =	Visa Progress Bar
 	OSFast_TT =	Fart upp
@@ -682,7 +691,8 @@
 	)	
 	Ex_HK_TT =	
 	(LTrim	
-		Tvingar användning av kroken att genomföra hela eller en del snabbtangenter tangentbord.
+		Tvingar använda kroken för att genomföra alla
+		eller vissa tangentbordets snabbknappar.
 	)	
 	Ex_SK_TT =	
 	(LTrim	
@@ -718,6 +728,18 @@
 		Orsakar skriptet att agera som om den angivna
 		filens innehåll är närvarande vid denna exakta positionen.
 	)	
+	Ex_PT_TT =	
+	(LTrim	
+		Håller ett skript permanent går
+		(det vill säga, tills användaren stänger det eller ExitApp påträffas).
+	)	
+	Ex_MT_TT =	
+	(LTrim	
+		Anger det maximala antalet samtidiga
+		trådar per hotkey eller hotstring.
+	)	
+	Ex_UV_TT =	Exportera globala variabler.
+	Ex_EdVars_TT =	Välj globala variabler som skall exporteras.
 		
 ; IE Commands Tips		
 	Tip_Navigate =	Navigerar till en webbadress eller sökväg.

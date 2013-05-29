@@ -117,7 +117,7 @@
 	w_Lang012 =	&Tuşlar Capture
 	w_Lang013 =	&Bilgisini Göster
 	w_Lang014 =	&Her zaman Aktif
-	w_Lang015 =	Tekrarlayın:
+	w_Lang015 =	Tekrarlayın
 	w_Lang016 =	Gecikme (ms):
 	w_Lang017 =	Uygulamak
 	w_Lang018 =	Eklemek
@@ -372,6 +372,10 @@
 	t_Lang090 =	Varsayılanları
 	t_Lang091 =	Satırları sürükleyerek izin ver
 	t_Lang092 =	Tüm hücre içeriğini
+	t_Lang093 =	Standart INI biçimi
+	t_Lang094 =	Adı = Değer
+	t_Lang095 =	Satır başına 1 değişken girin. Ayrıca [Bölüm] ekleyebilirsiniz.
+	t_Lang096 =	Kullanıcı Global Değişkenler
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Açık
@@ -491,7 +495,9 @@
 	)	
 	d_Lang062 =	Zaten en son sürümü var.
 	d_Lang063 =	Kontrol sırasında bir hata oluştu.
-		
+	d_Lang064 =	COM nesne hata
+	d_Lang065 =	Sıra
+	d_Lang066 =	Özellikle
 		
 ; Tooltips		
 	NewB_TT =	Yeni (Ctrl+N)
@@ -565,10 +571,13 @@
 	IfLVColor_TT =	Bir renk seçmek için tıklayınız
 	RefreshIEW_TT =	Yenile Listesi
 	ActiveObj_TT =	Active COM Nesne bağlanmaya çalışır
+	ExpView_TT =	Gelişmiş Editörü
 	OSPlay_TT =	Play / Pause
 	OSStop_TT =	Dur
 	OSRec_TT =	Kayıt Başlat / Durdur
 	OSRecNew_TT =	Yeni Makro Kaydet
+	OSRecOpt_TT =	Kayıt Seçenekleri
+	OSPlayOpt_TT =	Yürütme Seçenekleri
 	OSClear_TT =	Listeyi Temizle
 	OSProgB_TT =	İlerleme Çubuğu Ekran
 	OSFast_TT =	Hızlandırma
@@ -682,7 +691,8 @@
 	)	
 	Ex_HK_TT =	
 	(LTrim	
-		Bütün ya da bazı klavye hotkeys uygulamak için kanca kullanımı zorlar.
+		Tüm uygulamak için kanca kullanılmasını zorlar
+		ya da klavye kısayol tuşları.
 	)	
 	Ex_SK_TT =	
 	(LTrim	
@@ -718,6 +728,18 @@
 		Belirtilen sanki komut davranmasına neden olur
 		Dosyanın içeriğini tam bu konumda bulunmaktadır.
 	)	
+	Ex_PT_TT =	
+	(LTrim	
+		Bir komut dosyası sürekli çalışmasını sağlar
+		(kullanıcı kapatır veya ExitApp karşılaşıldığında kadar olmasıdır).
+	)	
+	Ex_MT_TT =	
+	(LTrim	
+		Aynı anda en fazla sayısını belirler
+		kısayol tuşu veya hotstring başına konuları.
+	)	
+	Ex_UV_TT =	Global değişkenler ihracat.
+	Ex_EdVars_TT =	Ihraç edilecek genel değişkenleri seçin.
 		
 ; IE Commands Tips		
 	Tip_Navigate =	Bir URL veya yol gider.

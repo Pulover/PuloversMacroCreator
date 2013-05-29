@@ -117,7 +117,7 @@
 	w_Lang012 =	&Erfassen Keys
 	w_Lang013 =	&Info anzeigen
 	w_Lang014 =	I&mmer aktiv
-	w_Lang015 =	Wiederholen:
+	w_Lang015 =	Wiederholen
 	w_Lang016 =	Delay (ms):
 	w_Lang017 =	Anwenden
 	w_Lang018 =	Einfügen
@@ -372,6 +372,10 @@
 	t_Lang090 =	Defaults
 	t_Lang091 =	Erlauben Ziehen Reihen
 	t_Lang092 =	Gesamte Zellinhalt
+	t_Lang093 =	Standard-INI-Format
+	t_Lang094 =	Name = Wert
+	t_Lang095 =	Geben Sie 1 Variable pro Zeile. Sie können auch hinzufügen [Abschnitte].
+	t_Lang096 =	Benutzer Globale Variablen
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Öffnen
@@ -491,7 +495,9 @@
 	)	
 	d_Lang062 =	Sie haben bereits die neueste Version.
 	d_Lang063 =	Ein Fehler ist aufgetreten während der Überprüfung.
-		
+	d_Lang064 =	COM-Objekt Fehler in
+	d_Lang065 =	Row
+	d_Lang066 =	Speziell
 		
 ; Tooltips		
 	NewB_TT =	Neu (Strg+N)
@@ -565,10 +571,13 @@
 	IfLVColor_TT =	Klicken Sie auf eine Farbe auswählen
 	RefreshIEW_TT =	Liste aktualisieren
 	ActiveObj_TT =	Versucht, auf einer Active COM-Objekt verbinden
+	ExpView_TT =	Erweiterten Editor
 	OSPlay_TT =	Wiedergabe / Pause
 	OSStop_TT =	Stoppen
 	OSRec_TT =	Start / Stop-Rekord
 	OSRecNew_TT =	Neues Makro aufzeichnen
+	OSRecOpt_TT =	Aufnahme-Optionen
+	OSPlayOpt_TT =	Playback Optionen
 	OSClear_TT =	Clear List
 	OSProgB_TT =	Anzeige Progress Bar
 	OSFast_TT =	Beschleunigen
@@ -682,7 +691,8 @@
 	)	
 	Ex_HK_TT =	
 	(LTrim	
-		Erzwingt die Verwendung des Hakens auf alle oder einige Tastatur-Hotkeys zu implementieren.
+		Erzwingt die Verwendung des Hakens zu implementieren alle
+		oder einige Tastatur-Hotkeys.
 	)	
 	Ex_SK_TT =	
 	(LTrim	
@@ -718,6 +728,18 @@
 		Verursacht das Skript zu verhalten, als ob die angegebene
 		Dateiinhalt sind in diesem genaue Position vorhanden.
 	)	
+	Ex_PT_TT =	
+	(LTrim	
+		Hält ein Skript permanent laufenden
+		(das heißt, bis der Benutzer es schließt oder ExitApp angetroffen wird).
+	)	
+	Ex_MT_TT =	
+	(LTrim	
+		Legt die maximale Anzahl der gleichzeitigen
+		Threads pro Hotkey oder Hotstring.
+	)	
+	Ex_UV_TT =	Exportieren globalen variablen.
+	Ex_EdVars_TT =	Wählen sie globale variablen, die exportiert werden.
 		
 ; IE Commands Tips		
 	Tip_Navigate =	Navigiert zu einer URL oder Pfad.

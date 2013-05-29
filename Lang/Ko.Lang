@@ -117,7 +117,7 @@
 	w_Lang012 =	키를 캡처
 	w_Lang013 =	정보 표시
 	w_Lang014 =	항상 활성
-	w_Lang015 =	반복:
+	w_Lang015 =	반복
 	w_Lang016 =	지연 (밀리 초):
 	w_Lang017 =	신청
 	w_Lang018 =	삽입하다
@@ -372,6 +372,10 @@
 	t_Lang090 =	기본값
 	t_Lang091 =	행을 드래그 할 수
 	t_Lang092 =	전체 셀 내용
+	t_Lang093 =	표준 INI 포맷
+	t_Lang094 =	이름 = 값
+	t_Lang095 =	라인 당 1 변수를 입력합니다. 또한 [섹션]을 추가 할 수 있습니다.
+	t_Lang096 =	사용자가 전역 변수
 		
 ; Messages & Dialogs		
 	d_Lang001 =	열기
@@ -491,7 +495,9 @@
 	)	
 	d_Lang062 =	당신은 이미 가장 최신 버전이 있습니다.
 	d_Lang063 =	확인하는 동안 오류가 발생했습니다.
-		
+	d_Lang064 =	에서 COM 개체 오류
+	d_Lang065 =	열
+	d_Lang066 =	특히
 		
 ; Tooltips		
 	NewB_TT =	새 (Ctrl 키+N)
@@ -565,10 +571,13 @@
 	IfLVColor_TT =	색상을 선택하려면 클릭하십시오
 	RefreshIEW_TT =	새로 고침 목록
 	ActiveObj_TT =	활성 COM 객체에 연결하려고
+	ExpView_TT =	고급 편집기
 	OSPlay_TT =	재생 / 일시 중지
 	OSStop_TT =	정지
 	OSRec_TT =	기록 시작 / 중지
 	OSRecNew_TT =	새 매크로 기록
+	OSRecOpt_TT =	레코딩 옵션
+	OSPlayOpt_TT =	재생 옵션
 	OSClear_TT =	지우기 목록
 	OSProgB_TT =	진행률 표시 줄을 표시합니다
 	OSFast_TT =	속도를 더하다
@@ -682,7 +691,8 @@
 	)	
 	Ex_HK_TT =	
 	(LTrim	
-		전부 또는 일부 키보드 단축키를 구현하는 후크의 사용을 강요합니다.
+		모두를 구현하는 후크를 강제로 사용합니다
+		또는 일부 키보드 단축키.
 	)	
 	Ex_SK_TT =	
 	(LTrim	
@@ -718,6 +728,18 @@
 		지정된 것처럼 스크립트가 동작하게됩니다
 		파일의 내용이 정확한 위치에 존재한다.
 	)	
+	Ex_PT_TT =	
+	(LTrim	
+		스크립트가 영구적으로 실행 유지
+		(사용자가 그것을 닫거나 ExitApp가 발생 될 때까지 즉,)입니다.
+	)	
+	Ex_MT_TT =	
+	(LTrim	
+		동시의 최대 수를 설정합니다
+		단축키 또는 hotstring 당 스레드.
+	)	
+	Ex_UV_TT =	전역 변수를 내 보냅니다.
+	Ex_EdVars_TT =	내보낼 전역 변수를 선택합니다.
 		
 ; IE Commands Tips		
 	Tip_Navigate =	URL 또는 경로를 탐색합니다.

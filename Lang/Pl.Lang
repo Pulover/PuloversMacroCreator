@@ -117,7 +117,7 @@
 	w_Lang012 =	P&rzechwytywanie klawiszy
 	w_Lang013 =	P&okaż informacje
 	w_Lang014 =	&Zawsze aktywny
-	w_Lang015 =	Powtarzam:
+	w_Lang015 =	Powtarzam
 	w_Lang016 =	Opóźnienie (ms):
 	w_Lang017 =	Zastosować
 	w_Lang018 =	Wstawić
@@ -372,6 +372,10 @@
 	t_Lang090 =	Defaults
 	t_Lang091 =	Pozwól przeciągając wiersze
 	t_Lang092 =	Cała zawartość komórek
+	t_Lang093 =	Standardowy format INI
+	t_Lang094 =	Name = Value
+	t_Lang095 =	Wpisz 1 zmiennej na linię. Możesz także dodać [rozdziały].
+	t_Lang096 =	Użytkowników Zmienne Globalne
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Otwarte
@@ -491,7 +495,9 @@
 	)	
 	d_Lang062 =	Masz już najnowszą wersję.
 	d_Lang063 =	Wystąpił błąd podczas sprawdzania.
-		
+	d_Lang064 =	Obiekt COM w błąd
+	d_Lang065 =	Rząd
+	d_Lang066 =	Swoiście
 		
 ; Tooltips		
 	NewB_TT =	Nowy (Ctrl+N)
@@ -565,10 +571,13 @@
 	IfLVColor_TT =	Kliknij, aby wybrać kolor
 	RefreshIEW_TT =	Odśwież Listę
 	ActiveObj_TT =	Próbuje połączyć się z aktywnego obiektu COM
-	OSPlay_TT =	Play / Pause
+	ExpView_TT =	Zaawansowany Edytor
+	OSPlay_TT =	odtwarzanie / pauza
 	OSStop_TT =	Zatrzymać
 	OSRec_TT =	Start / Stop Record
 	OSRecNew_TT =	Zarejestruj nowe makro
+	OSRecOpt_TT =	Opcje Nagrywania
+	OSPlayOpt_TT =	Opcje odtwarzania
 	OSClear_TT =	Wyczyść listę
 	OSProgB_TT =	Wyświetlić pasek postępu
 	OSFast_TT =	Przyśpieszyć
@@ -682,7 +691,8 @@
 	)	
 	Ex_HK_TT =	
 	(LTrim	
-		Wymusza używanie haka do realizacji wszystkich lub niektórych skrótów klawiaturowych.
+		Wymusza używanie haka do realizacji wszystkich
+		lub kilka skrótów klawiaturowych.
 	)	
 	Ex_SK_TT =	
 	(LTrim	
@@ -718,6 +728,18 @@
 		Powoduje skrypt zachowywać tak, jakby podano
 		zawartości pliku są obecne na taką pozycję.
 	)	
+	Ex_PT_TT =	
+	(LTrim	
+		Utrzymuje stałe działa skrypt
+		(to znaczy, gdy użytkownik zamyka go lub ExitApp napotkania).
+	)	
+	Ex_MT_TT =	
+	(LTrim	
+		Ustawia maksymalną liczbę jednoczesnych
+		wątków na skrótu lub hotstring.
+	)	
+	Ex_UV_TT =	Wyeksportować zmienne globalne.
+	Ex_EdVars_TT =	Wybierz zmienne globalne być wyeksportowane.
 		
 ; IE Commands Tips		
 	Tip_Navigate =	Nawigacja do adresu URL lub ścieżki.

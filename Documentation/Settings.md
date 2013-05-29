@@ -2,11 +2,12 @@
 
 ## Table of Contents
 
-* [Recording](#Recording)
-* [Playback](#Playback)
-* [Defaults](#Defaults)
-* [Screenshots](#Screenshots)
-* [Misc.](#Misc.)
+* [Recording](#recording)
+* [Playback](#playback)
+* [Defaults](#defaults)
+* [Screenshots](#screenshots)
+* [Misc.](#misc.)
+* [User Global Variables](#user-global-variables)
 
 ## Recording
 
@@ -80,3 +81,27 @@ You can also double-click on the *Action* Column Header to turn this option On/O
 **Set As Default File**: Sets the current Macro Project to be loaded on program start up.
 
 **Virtual Keys**: System keys and Modifiers that will be recognized during Recording and when Capture keys is enabled.
+
+## User Global Variables
+
+Here you can define global variables that will be available during Playback. They may be used as constants so you can always call them from inside a command.  
+
+User defined variables are saved to an INI file in the AppData\MacroCreator folder (it can also be edited in external text editors).
+
+Format is the same used for non-expression assignments in AutoHotkey or the one found in standard INI files.  
+
+They can also be included in exported scripts by checking *Global Variables* option in the [Export Window](p5-Export.html).  
+
+You can separate your variables in groups using INI format Sections with title enclosed in brocks. Use the button in the Export Window to select which Variables or Sections will be exported.  
+
+Example of *User Global Variables* list:
+
+> [Section1]
+> aVar1 = Value1
+> aVar2 = Value3
+> aVar3 = Value2
+> [Section2]
+> bVar1 = Value1
+> bVar2 = Value3
+> bVar3 = Value2
+

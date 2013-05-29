@@ -11,6 +11,7 @@
 
 COMInterface(String, Ptr="", ByRef OutputVar="", CLSID="InternetExplorer.Application")
 {
+	; If the Pointer is not an object, create one.
 	If !IsObject(Ptr)
 	{
 		If !CLSID
@@ -18,23 +19,18 @@ COMInterface(String, Ptr="", ByRef OutputVar="", CLSID="InternetExplorer.Applica
 		Ptr := ComObjCreate(CLSID)
 	}
 	
+	; Look for Assignments (:=) and separate Command from Value.
 	If RegExMatch(String, "[\s]?:=(.*)", Assign)
 	{
 		String := Trim(RegExReplace(String, "[\s]?:=(.*)"))
 		Value := Trim(Assign1)
 	}
 	
-	While, RegExMatch(String, "U)\((.*)\)", _Parent%A_Index%)
-	{
-		If RegExMatch(String, "U)\((.*[\(]+.*\).*)\)")
-		{
-			RegExMatch(String, "U)\((.*[\(]+.*\).*)\)", _Parent%A_Index%)
-			String := RegExReplace(String, "U)\((.*[\(]+.*\).*)\)", "&_Parent" A_Index, "", 1)
-		}
-		Else
-			String := RegExReplace(String, "U)\((.*)\)", "&_Parent" A_Index, "", 1)
-	}
+	; Look for Parameters and replace with a pattern.
+	While, RegExMatch(String, "\(([^()]++|(?R))*\)", _Parent%A_Index%)
+		String := RegExReplace(String, "\(([^()]++|(?R))*\)", "&_Parent" A_Index, "", 1)
 	
+	; Look foor Blocks that will be used to create SafeArrays and replace with a pattern.
 	While, RegExMatch(String, "U)\[(.*)\]", _Block%A_Index%)
 		String := RegExReplace(String, "U)\[(.*)\]", "&_Block" A_Index, "", 1)
 
@@ -46,15 +42,27 @@ COMInterface(String, Ptr="", ByRef OutputVar="", CLSID="InternetExplorer.Applica
 		Delimiter := SubStr(String, Pos, 1)
 		If RegExMatch(A_LoopField, "^_Parent\d+")
 		{
-			Par := A_LoopField, Parent := %A_LoopField%1
+			Par := A_LoopField, Parent := SubStr(%A_LoopField%, 2, -1)
+			
+			; Look for Blocks and divide arguments.
 			While, RegExMatch(Parent, "U)\[(.*)\]", _Arr%A_Index%)
 				Parent := RegExReplace(Parent, "U)\[(.*)\]", "_Arr" A_Index, "", 1)
+			
+			; Look for Parameters inside Parameters.
+			While, RegExMatch(Parent, "\(([^()]++|(?R))*\)", _iParent%A_Index%)
+				Parent := RegExReplace(Parent, "\(([^()]++|(?R))*\)", "&_iParent" A_Index, "", 1)
 			Params := Object()
 			Loop, Parse, Parent, `,, %A_Space%
 			{
-				If RegExMatch(A_LoopField, "^_Arr\d+")
+				LoopField := A_LoopField
+				While, RegExMatch(LoopField, "&_iParent(\d+)", inPar)
 				{
-					StringSplit, Arr, %A_LoopField%1, `,, %A_Space%
+					iPar := RegExReplace(_iParent%inPar1%, "\$", "$$$$")
+					LoopField := RegExReplace(LoopField, "&_iParent\d+", iPar, "", 1)
+				}
+				If RegExMatch(LoopField, "^_Arr\d+")
+				{
+					StringSplit, Arr, %LoopField%1, `,, %A_Space%
 					Array := ComObjArray(0xC, Arr0)
 					Loop, %Arr0%
 					{
@@ -63,10 +71,27 @@ COMInterface(String, Ptr="", ByRef OutputVar="", CLSID="InternetExplorer.Applica
 					}
 					Params.Insert(Array)
 				}
+				Else If RegExMatch(LoopField, "^\w+\.(.*)", NestStr)
+				{
+					If (Loopfield = "")
+						LoopField := ComObjMissing()
+					Var := LoopField
+					Try
+						Params.Insert(COMInterface(NestStr1, ComSet, "", CLSID))
+					Catch
+					{
+						Try
+							Params.Insert(COMInterface(NestStr1, Ptr, "", CLSID))
+						Catch
+							Params.Insert((!Var) ? (IsObject(Var) ? Var : 0) : Var)
+					}
+				}
 				Else
 				{
-					Var := A_LoopField
-					Params.Insert((!Var) ? 0 : Var)
+					If (Loopfield = "")
+						LoopField := ComObjMissing()
+					Var := LoopField
+					Params.Insert((!Var) ? (IsObject(Var) ? Var : 0) : Var)
 				}
 			}
 		}
@@ -89,43 +114,35 @@ COMInterface(String, Ptr="", ByRef OutputVar="", CLSID="InternetExplorer.Applica
 		Else If (Delimiter = "")
 		{
 			If (Value <> "")
-				ComSet[Obj] := (Value = """""") ? "" : Value
-			Else If IsByRef(OutputVar)
+				ComSet[Obj] := (Value = """""") ? "" : ((Value = "True") ? True : ((Value = "False") ? False : Value))
+			Else
 			{
 				If ((Par <> "") && (Index <> ""))
 				{
-					OutputVar := ComSet[Obj](Params*)[%Index%1]
+					If IsByRef(OutputVar)
+						OutputVar := ComSet[Obj](Params*)[%Index%1]
 					return ComSet[Obj](Params*)[%Index%1]
 				}
 				Else If (Par <> "")
 				{
-					OutputVar := ComSet[Obj](Params*)
+					If IsByRef(OutputVar)
+						OutputVar := ComSet[Obj](Params*)
 					return ComSet[Obj](Params*)
 				}
 				Else If (Index <> "")
 				{
-					OutputVar := ComSet[Obj][%Index%1]
+					If IsByRef(OutputVar)
+						OutputVar := ComSet[Obj][%Index%1]
 					return ComSet[Obj][%Index%1]
 				}
 				Else
 				{
-					OutputVar := ComSet[Obj]
+					If IsByRef(OutputVar)
+						OutputVar := ComSet[Obj]
 					return ComSet[Obj]
 				}
-			}
-			Else
-			{
-				If ((Par <> "") && (Index <> ""))
-					ComSet[Obj](Params*)[%Index%1]
-				Else If (Par <> "")
-					ComSet[Obj](Params*)
-				Else If (Index <> "")
-					ComSet[Obj][%Index%1]
-				Else
-					ComSet[Obj]
 			}
 		}
 	}
 	return Ptr
 }
-

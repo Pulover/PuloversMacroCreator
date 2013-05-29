@@ -2,10 +2,10 @@
 
 ## Table of Contents
 
-* [Introduction](#Introduction)
-* [Hotkeys](#Hotkeys)
-* [On-Screen Controls](#On-Screen-Controls)
-* [Recording Options](#Recording-Options)
+* [Introduction](#introduction)
+* [Hotkeys](#hotkeys)
+* [On-Screen Controls](#on-screen-controls)
+* [Recording Options](#recording-options)
 
 ## Introduction
 
@@ -43,7 +43,7 @@ To change options click the Options button on the main window or select Options 
 **Mouse Wheel**: Records Mouse Wheel Up/Down.  
 
 **Mouse Moves**: Records Mouse movements. The Minimum delay sets the amount of idle time (ms) of the mouse to wait before recording the last move (this option should not me changed in most cases).  
-*Note*: Recorded Mouse Actions are affected by [Mouse Coordinates Settings](p7-Settings.html#Defaults).  
+*Note*: Recorded Mouse Actions are affected by [Mouse Coordinates Settings](p7-Settings.html#defaults).  
 
 **Timed Intervals**: Records idle time between user actions. This is useful to recreate precise mouse movements and keystrokes. The Minimum delay sets the minimum time (ms) to wait before recording the sleep (this option should not me changed in most cases).  
 *Note*: If this option is unchecked the default delay between recorded actions will be set by Delay (ms) box in the main window for Keystrokes and by the Default Settings in Options for Mouse and Windows.  

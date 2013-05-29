@@ -117,7 +117,7 @@
 	w_Lang012 =	&Capture Keys
 	w_Lang013 =	&Megjelenítés Info
 	w_Lang014 =	M&indig aktív
-	w_Lang015 =	Ismétlés:
+	w_Lang015 =	Ismétlés
 	w_Lang016 =	Delay (ms):
 	w_Lang017 =	Alkalmaz
 	w_Lang018 =	Beszúrása
@@ -372,6 +372,10 @@
 	t_Lang090 =	Alapértékek
 	t_Lang091 =	Engedélyezése húzással sorok
 	t_Lang092 =	Teljes cella tartalmát
+	t_Lang093 =	Szabványos INI formátum
+	t_Lang094 =	Név = érték
+	t_Lang095 =	Írja 1 változó soronként. Ön is hozzá [§].
+	t_Lang096 =	Felhasználó Globális Változók
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Nyitva
@@ -491,7 +495,9 @@
 	)	
 	d_Lang062 =	Már így is a legújabb verzióra.
 	d_Lang063 =	Hiba történt ellenőrzés.
-		
+	d_Lang064 =	COM objektum hiba
+	d_Lang065 =	Sor
+	d_Lang066 =	Konkrétan
 		
 ; Tooltips		
 	NewB_TT =	Új (Ctrl+N)
@@ -565,10 +571,13 @@
 	IfLVColor_TT =	Kattintson válasszon egy színt
 	RefreshIEW_TT =	Lista frissítése
 	ActiveObj_TT =	Próbál csatlakozni egy Active COM objektum
+	ExpView_TT =	Fejlett Szerkesztő
 	OSPlay_TT =	Lejátszás / Szünet
 	OSStop_TT =	Megáll
 	OSRec_TT =	Start / Stop Record
 	OSRecNew_TT =	Új makró rögzítése
+	OSRecOpt_TT =	Felvételi Mód
+	OSPlayOpt_TT =	Lejátszási opciók
 	OSClear_TT =	Kódolatlan List
 	OSProgB_TT =	Kijelző Progress Bar
 	OSFast_TT =	Felgyorsul
@@ -682,7 +691,8 @@
 	)	
 	Ex_HK_TT =	
 	(LTrim	
-		Kényszerű használata a horog végrehajtására részben vagy egészben billentyűzet gyorsbillentyűk.
+		Kényszerű használata a horog, hogy hajtsák végre
+		vagy egy billentyűzet gyorsbillentyűk.
 	)	
 	Ex_SK_TT =	
 	(LTrim	
@@ -718,6 +728,18 @@
 		Eszmék a szkript úgy viselkedni, mintha a megadott
 		fájl tartalmát jelen vannak ebben a pontos pozícióját.
 	)	
+	Ex_PT_TT =	
+	(LTrim	
+		Megtartja a szkript fut állandóan
+		(azaz, amíg a felhasználó bezárja, vagy ExitApp találkozik).
+	)	
+	Ex_MT_TT =	
+	(LTrim	
+		Beállítja a maximális számú egyidejű
+		szálak egy gyorsbillentyűvel vagy hotstring.
+	)	
+	Ex_UV_TT =	Export globális változók.
+	Ex_EdVars_TT =	Válassza globális változók exportálni.
 		
 ; IE Commands Tips		
 	Tip_Navigate =	Navigál egy URL-t vagy elérési utat.

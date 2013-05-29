@@ -2,7 +2,7 @@
 	Library: Pulover's Macro Creator
 		*An Interface-Based Automation Tool & Script Writer.*
 		
-		Version: 3.7.1  
+		Version: 3.7.2  
 		
 		[www.autohotkey.net/~Pulover](http://www.autohotkey.net/~Pulover)  
 		[Forum Thread](http://www.autohotkey.com/board/topic/79763-macro-creator)  
@@ -102,7 +102,7 @@
 		Actions - Selects the Mouse action to execute.
 		Coordinates - Defines the coordinates of the window or screen where the action will be executed.
 			This field accepts [Variables](p8-Variables.html), functions may also work but are not recommended due to incompatibility with exported scripts.  
-			**Note**: Mouse Actions are affected by [Mouse Coordinates Settings](p7-Settings.html#Defaults).  
+			**Note**: Mouse Actions are affected by [Mouse Coordinates Settings](p7-Settings.html#defaults).  
 		Click - Uses the *Click*. This usually works for most cases.
 		Send - Uses *SendEvent*. Use this in case the Click Command doesn't work.
 		Relative - **If not used with Control**: Coordinates will be treated as an offset from mouse current position.  
@@ -216,7 +216,7 @@
 
 	Parameters:
 		Start X/Y / End X/Y - Defines the Search area of the screen/window.
-		Make Screenshot - Use this tool to take a screenshot of an area of the screen (see [Instructions](#Make-Screenshot-Tool-Instructions) for details on usage).
+		Make Screenshot - Use this tool to take a screenshot of an area of the screen (see [Instructions](#make-screenshot-tool-instructions) for details on usage).
 		Search - Search the computer for an Image File.
 		If found - Selects an action to execute when an image/pixel is found.  
 			To execute a different action Select 'Continue' (or 'Break' to exit the command's loop) and use the 'If Image/Pixel Found' option in the If Statements window.
@@ -300,7 +300,7 @@
 		Loops a section of the Macro enclosed within *LoopStart* and *LoopEnd*. Nested Loops are accepted.
 
 	Parameters:
-		Repeat - How many times to execute the loop section.  
+		Repeat - How many times to execute the loop section. If set to 0, the loop continues indefinitely until a break or return is encountered, or the Stop Key is pressed.
 			This field accepts [Variables & Functions](p8-Variables.html).
 
 	Remarks:
@@ -425,6 +425,10 @@
 	Function: Break()
 		Exits (terminates) a loop.
 
+	Parameters:
+		LoopNumber - If specified, identifies which loop this statement should apply to by numeric nesting level. If omitted or 1, this statement applies to the innermost loop in which it is enclosed.  
+			This parameter is available when editing the command or adding it from the *Run* command window. Labels are not yet supported.  
+
 	Extra:
 		### Related
 			[Break](http://l.autohotkey.net/docs/commands/Break.htm)
@@ -433,6 +437,10 @@
 /*!
 	Function: Continue()
 		Skips the rest of the current loop iteration and begins a new one.
+
+	Parameters:
+		LoopNumber - If specified, identifies which loop this statement should apply to by numeric nesting level. If omitted or 1, this statement applies to the innermost loop in which it is enclosed.  
+			This parameter is available when editing the command or adding it from the *Run* command window. Labels are not yet supported.  
 
 	Extra:
 		### Related
@@ -521,7 +529,7 @@
 		Executes a Function and assigns the result to a Variable.  
 
 	Parameters:
-		Output Variable - Name of the Variable in which to store the contents.
+		Output Variable (Optional) - Name of the Variable in which to store the contents.
 		Use Function from External File - Check this option to select an AutoHotkey Script File (.ahk) containing one or more functions to be used. This feature requires [AutoHotkey](http://www.autohotkey.com/) installed.  
 			See Remarks below for more information.  
 		Function Name - A valid AHK Built-in Function name or the name of a Function in the selected external .ahk file.
@@ -547,7 +555,7 @@
 			
 			When this feature is used in Playback it will create a temporary .ahk file in the same directory where Macro Creator is installed and run it using AutoHotkey. The result will be copied to the Output Variable and the script will be closed.  
 			
-			If the ahk file containing the function have #Include directives they must contain the absolute path for the included files (e.g.: #Include C:\Lib\MyFunction.ahk).  
+			If the ahk file containing the function have #include directives they must contain the absolute path for the included files (e.g.: #include c:\lib\myfunction.ahk).  
 			
 			Since those functions are not loaded with Macro Creator they may take longer to execute.
 		
@@ -590,23 +598,34 @@
 		CLSID - CLSID or human-readable Prog ID of the COM object to create.
 		Connect - Tries to connect to the Last Active COM Object registered to the selected CLSID to be used for the current session.
 		Handle - Name of a Handle that will point to the object.
-		Output Variable (*Optional*) - Name of the variable in which to store the result of COM Script.
-		COM Script - Command line in AutoHotkey's dotted syntax to execute using the object. Do not start the command with the Handle.  
-			To assign a value to the command use the *:=* operator. For example:
-			> Visible := True
-			To create a SafeArray enclose the values in blocks [].
-			> Selection.Subtotal(2, -4157, [4, 5], 1, 0, 1)
-			You can enter multiple commands one by line but can't assign variables this way.
+		Output Variable (Optional) - Name of the variable in which to store the result of COM Script.
+		COM Script - Command line in AutoHotkey's dotted syntax to execute using the object. **Ommit the Handle from the beginning of the string**.  
 
 	Remarks:
+		You can enter multiple commands one by line (you can't assign variables this way).  
+		
 		The syntax for COM commands is the same as in AutoHotkey scripts except for:  
 			* Variables MUST be enclosed in percent signs.
 			* Strings must NOT be enclosed in quotes.
 		
 		To set a blank value use a pair of quotes: ""
 		
-		When you close the application, all references to Active Objects will be lost, to continue working using saved project files edit one of the lines containing each handle and use the *Connect* button to re-create all references.
-
+		When you close the application, all references to Active Objects will be lost. To continue working using saved project files you must reconnect to the application by either editing one of the lines containing each handle and use the *Connect* button to re-create all references, or assigning the Handle to a ComObj function, usually ComObjActive(), though it will not work on all applications.
+		
+		To assign a value to the command use the *:=* operator. For example:
+		> ActiveCell.Value := 100
+		
+		Self-references inside parameters are supported. In such cases **you must NOT ommit the Handle** from the parameter.
+		> Range(Xl.Selection, Xl.Selection.Offset(5, 5)).Select
+		
+		To create a SafeArray enclose the values in blocks [].
+		> Selection.Subtotal(2, -4157, [4, 5], 1, 0, 1)
+		
+		To use *ComObjMissing()* leave the parameter blank:
+		> Function(1, 2, , 3, , 5)
+		An exported script from the above example would be like:
+		> Function(1, 2, ComObjMissing(), 3, ComObjMissing(), 5)
+	
 	Extra:
 		### Related
 			[COM](http://l.autohotkey.net/docs/commands/ComObjCreate.htm), [Basic Webpage COM Tutorial](http://www.autohotkey.com/board/topic/47052-basic-webpage-controls), [IWebBrowser2 Interface (MSDN)](http://msdn.microsoft.com/en-us/library/aa752127)

@@ -113,7 +113,7 @@
 			If (Action = "[LoopStart]")
 			{
 				If (Type = cType7)
-					RowData := "`n" Type ", " TimesX
+					RowData := "`n" Type ((TimesX = 0) ? "" : ", " TimesX)
 				Else
 				{
 					StringReplace, Type, Type, FilePattern
@@ -241,14 +241,13 @@
 				Else
 				{
 					StringReplace, VarValue, VarValue, `,, ```,, All
-					If ((VarValue := CheckExp(VarValue)) = """""")
-						VarValue := ""
+					VarValue := CheckExp(VarValue)
 				}
 			}
 			If (Action = "[Assign Variable]")
 				Step := VarName " " Oper " " VarValue
 			Else
-				Step := VarName " " Oper " " Action "(" VarValue ")"
+				Step := ((VarName = "_null") ? "" : VarName " " Oper " ") Action "(" ((VarValue = """""") ? "" : VarValue) ")"
 			RowData := "`n" Step
 			If (Comment <> "")
 				RowData .= "  " "; " Comment
@@ -302,7 +301,7 @@
 		}
 		Else If ((Type = cType29) || (Type = cType30))
 		{
-			RowData := "`n" Type
+			RowData := "`n" Type (RegExMatch(Step, "^\d+$") ? ", " Step : "")
 			GoSub, Add_CD
 			If ((TimesX > 1) || InStr(TimesX, "%"))
 				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
@@ -370,18 +369,20 @@
 			StringSplit, Act, Action, :
 			RowData := ""
 			If (Act2 <> "")
-				RowData .= "`n" Act2 " := " Act1 "." CheckComExp(Step)
+				RowData .= "`n" Act2 " := " Act1 "." CheckComExp(Step, "", "", Act1)
 			Else
 			{
 				StringReplace, Step, Step, ``n, `n, All
 				Loop, Parse, Step, `n, %A_Space%%A_Tab%
 				{
-					ComExp := CheckComExp(A_LoopField, "", sArray := "")
+					If (A_LoopField = "")
+						continue
+					ComExp := CheckComExp(A_LoopField, "", sArray := "", Act1)
 					RowData .= "`n" sArray . Act1 "." ComExp
 				}
 			}
 			GoSub, Add_CD
-			If !InStr(LVData, Act1 " := " ComType "(")
+			If ((Target <> "") && (!InStr(LVData, Act1 " := " ComType "(")))
 				RowData := "`nIf !IsObject(" Act1 ")`n`t" Act1 " := " ComType "(""" Target """)" RowData
 			If (Window = "LoadWait")
 				RowData .=
@@ -532,6 +533,10 @@ Script_Header()
 		Header .= "`nSetBatchLines " SB
 	If Ex_HK = 1
 		Header .= "`n#UseHook"
+	If Ex_PT = 1
+		Header .= "`n#Persistent"
+	If Ex_MT = 1
+		Header .= "`n#MaxThreadsPerHotkey " MT
 	Header .= "`n`n"
 	return Header
 }
@@ -542,12 +547,14 @@ CheckExp(String)
 		return """"""
 	If RegExMatch(String, "^%\s[\w|%]*$")
 		return SubStr(String, 3)
+	StringReplace, String, String, ```%, ¤, All
 	StringReplace, String, String, `````, , ¢, All
 	Loop, Parse, String, `,, %A_Space%``
 	{
-		If InStr(A_LoopField, "%")
+		LoopField := (A_LoopField <> """""") ? RegExReplace(A_LoopField, """", """""") : A_LoopField
+		If InStr(LoopField, "%")
 		{
-			Loop, Parse, A_LoopField, `%
+			Loop, Parse, LoopField, `%
 			{
 				If (A_LoopField <> "")
 					NewStr .=  Mod(A_Index, 2) ? " """ RegExReplace(A_LoopField, "%") """ " : RegExReplace(A_LoopField, "%")
@@ -555,17 +562,17 @@ CheckExp(String)
 			NewStr := RTrim(NewStr) ", "
 		}
 		Else
-			NewStr .= """" A_LoopField """, "
+			NewStr .= """" LoopField """, "
 	}
 	StringReplace, NewStr, NewStr, ¢, `,, All
+	StringReplace, NewStr, NewStr, ¤, `%, All
 	NewStr := Trim(RegExReplace(NewStr, " """" "), ", ")
 	NewStr := RegExReplace(NewStr, """{4}", """""")
 	NewStr := RegExReplace(NewStr, "U)""(-?\d+)""", "$1")
-	; NewStr := RegExReplace(NewStr, ",(\s?),", ",$1"""",")
 	return NewStr
 }
 
-CheckComExp(String, OutVar="", ByRef ArrString="")
+CheckComExp(String, OutVar="", ByRef ArrString="", Ptr="ie")
 {
 	If (OutVar <> "")
 		String := Trim(RegExReplace(String, "(.*):=[\s]?"))
@@ -575,26 +582,34 @@ CheckComExp(String, OutVar="", ByRef ArrString="")
 		If Value in True,False
 			Value := "%" Value "%"
 	}
-	While, RegExMatch(String, "U)\((.*)\)", _Parent%A_Index%)
-		String := RegExReplace(String, "U)\((.*)\)", "&_Parent" A_Index, "", 1)
-
+	While, RegExMatch(String, "\(([^()]++|(?R))*\)", _Parent%A_Index%)
+		String := RegExReplace(String, "\(([^()]++|(?R))*\)", "&_Parent" A_Index, "", 1)
 	While, RegExMatch(String, "U)\[(.*)\]", _Block%A_Index%)
 		String := RegExReplace(String, "U)\[(.*)\]", "&_Block" A_Index, "", 1)
-	
+
 	Loop, Parse, String, .&
 	{
 		If RegExMatch(A_LoopField, "^_Parent\d+")
 		{
-			Parent := %A_LoopField%1
+			Parent := SubStr(%A_LoopField%, 2, -1)
 			While, RegExMatch(Parent, "U)\[(.*)\]", _Arr%A_Index%)
 				Parent := RegExReplace(Parent, "U)\[(.*)\]", "_Arr" A_Index, "", 1)
+			While, RegExMatch(Parent, "\(([^()]++|(?R))*\)", _iParent%A_Index%)
+				Parent := RegExReplace(Parent, "\(([^()]++|(?R))*\)", "&_iParent" A_Index, "", 1)
+			Params := ""
 			If InStr(Parent, "`,")
 			{
 				Loop, Parse, Parent, `,, %A_Space%
 				{
-					If RegExMatch(A_LoopField, "^_Arr\d+")
+					LoopField := A_LoopField
+					While, RegExMatch(LoopField, "&_iParent(\d+)", inPar)
 					{
-						StringSplit, Arr, %A_LoopField%1, `,, %A_Space%
+						iPar := RegExReplace(_iParent%inPar1%, "\$", "$$$$")
+						LoopField := RegExReplace(LoopField, "&_iParent\d+", iPar, "", 1)
+					}
+					If RegExMatch(LoopField, "^_Arr\d+")
+					{
+						StringSplit, Arr, %LoopField%1, `,, %A_Space%
 						ArrString := "SafeArray := ComObjArray(0xC, " Arr0 ")"
 						Loop, %Arr0%
 							ArrString .= "`nSafeArray[" A_Index-1 "] := " CheckExp(Arr%A_Index%)
@@ -602,14 +617,30 @@ CheckComExp(String, OutVar="", ByRef ArrString="")
 						Params .= "SafeArray, "
 					}
 					Else
-						Params .= CheckExp(A_LoopField) ", "
+					{
+						If (Loopfield = "")
+							LoopField := "%ComObjMissing()%"
+						If RegExMatch(LoopField, "i)^" Ptr "\..*", NestStr)
+							Params .= (CheckComExp(NestStr, OutVar, "", Ptr)) ", "
+						Else
+							Params .= ((CheckExp(LoopField) = """""") ? "" : CheckExp(LoopField)) ", "
+					}
 				}
 			}
 			Else
+			{
+				While, RegExMatch(Parent, "&_iParent(\d+)", inPar)
+					Parent := RegExReplace(Parent, "&_iParent\d+", _iParent%inPar1%, "", 1)
 				Params := Parent
+			}
 			Params := RTrim(Params, ", ")
 			If !InStr(Params, "`,")
-				Params := CheckExp(Params)
+			{
+				If RegExMatch(Params, "i)^" Ptr "\..*", NestStr)
+					Params := (CheckComExp(NestStr, OutVar, "", Ptr))
+				Else
+					Params := (CheckExp(Params) = """""") ? "" : CheckExp(Params)
+			}
 			String := RegExReplace(String, "&" A_LoopField, "(" Params ")")
 		}
 		If RegExMatch(A_LoopField, "^_Block\d+")

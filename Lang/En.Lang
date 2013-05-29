@@ -117,7 +117,7 @@
 	w_Lang012 =	&Capture Keys
 	w_Lang013 =	Show I&nfo
 	w_Lang014 =	&Always Active
-	w_Lang015 =	Repeat:
+	w_Lang015 =	Repeat
 	w_Lang016 =	Delay (ms):
 	w_Lang017 =	Apply
 	w_Lang018 =	Insert
@@ -372,6 +372,10 @@
 	t_Lang090 =	Defaults
 	t_Lang091 =	Allow Dragging Rows
 	t_Lang092 =	Entire cell contents
+	t_Lang093 =	Standard INI format
+	t_Lang094 =	Name = Value
+	t_Lang095 =	Enter 1 variable per line. You may also add [Sections].
+	t_Lang096 =	User Global Variables
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Open
@@ -491,7 +495,9 @@
 	)	
 	d_Lang062 =	You already have the most recent version.
 	d_Lang063 =	An error occured while checking.
-		
+	d_Lang064 =	COM object error in
+	d_Lang065 =	Row
+	d_Lang066 =	Specifically
 		
 ; Tooltips		
 	NewB_TT =	New (Ctrl+N)
@@ -565,10 +571,13 @@
 	IfLVColor_TT =	Click to pick a color
 	RefreshIEW_TT =	Refresh List
 	ActiveObj_TT =	Tries to connect to an Active COM Object
+	ExpView_TT =	Advanced Editor
 	OSPlay_TT =	Play / Pause
 	OSStop_TT =	Stop
 	OSRec_TT =	Start / Stop Record
 	OSRecNew_TT =	Record New Macro
+	OSRecOpt_TT =	Recording Options
+	OSPlayOpt_TT =	Playback Options
 	OSClear_TT =	Clear List
 	OSProgB_TT =	Display Progress Bar
 	OSFast_TT =	Speed Up
@@ -682,7 +691,8 @@
 	)	
 	Ex_HK_TT =	
 	(LTrim	
-		Forces the use of the hook to implement all or some keyboard hotkeys.
+		Forces the use of the hook to implement all
+		or some keyboard hotkeys.
 	)	
 	Ex_SK_TT =	
 	(LTrim	
@@ -718,6 +728,18 @@
 		Causes the script to behave as though the specified
 		file's contents are present at this exact position.
 	)	
+	Ex_PT_TT =	
+	(LTrim	
+		Keeps a script permanently running
+		(that is, until the user closes it or ExitApp is encountered).
+	)	
+	Ex_MT_TT =	
+	(LTrim	
+		Sets the maximum number of simultaneous
+		threads per hotkey or hotstring.
+	)	
+	Ex_UV_TT =	Export global variables.
+	Ex_EdVars_TT =	Select global variables to be exported.
 		
 ; IE Commands Tips		
 	Tip_Navigate =	Navigates to a URL or path.

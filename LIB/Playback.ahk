@@ -14,7 +14,7 @@
 		GoSub, RowCheck
 	}
 	Pause, Off
-	Menu, Tray, Icon, % t_PlayIcon[1], % t_PlayIcon[2]
+	Try Menu, Tray, Icon, % t_PlayIcon[1], % t_PlayIcon[2]
 	Menu, Tray, Default, %w_Lang008%
 	CurrentRange := m_ListCount
 	If (ShowProgBar = 1)
@@ -26,7 +26,7 @@
 		{
 			If StopIt
 			{
-				Menu, Tray, Icon , %DefaultIcon%, 1
+				Try Menu, Tray, Icon, %DefaultIcon%, 1
 				Menu, Tray, Default, %w_Lang005%
 				break
 			}
@@ -35,6 +35,7 @@
 				mLoopIndex := A_Index, LoopIndex := A_Index
 			Loop, %m_ListCount%
 			{
+				mMacroOn := Macro_On, mListRow := A_Index
 				If StopIt
 					break 2
 				If (ShowProgBar = 1)
@@ -240,6 +241,11 @@
 						}
 						Else
 							LoopCount%PointMarker% := TimesX
+						If (LoopCount%PointMarker% = "")
+						{
+							LoopIndex := mLoopIndex
+							BreakIt++
+						}
 						continue
 					}
 					If (Action = "[LoopEnd]")
@@ -348,18 +354,27 @@
 						break 2
 					If (PointMarker = 0)
 					{
-						BreakIt++
+						If Step is number
+							BreakIt += Step
+						Else
+							BreakIt++
 						break 2
 					}
 					Else
 					{
-						BreakIt++
+						If Step is number
+							BreakIt += Step
+						Else
+							BreakIt++
 						continue
 					}
 				}
 				If (Type = cType30)
 				{
-					SkipIt++
+					If Step is number
+						SkipIt += Step
+					Else
+						SkipIt++
 					continue
 				}
 				This_Point := PointMarker
@@ -368,7 +383,7 @@
 				{
 					If StopIt
 					{
-						Menu, Tray, Icon , %DefaultIcon%, 1
+						Try Menu, Tray, Icon, %DefaultIcon%, 1
 						Menu, Tray, Default, %w_Lang005%
 						break 3
 					}
@@ -398,13 +413,13 @@
 	}
 	Progress, Off
 	CurrentRange := ""
-	Menu, Tray, Icon , %DefaultIcon%, 1
+	Try Menu, Tray, Icon, %DefaultIcon%, 1
 	Menu, Tray, Default, %w_Lang005%
 	If (CloseAfterPlay)
 		GoSub, Exit
 }
 
-LoopSection(Start, End, X, L, PointO, mainL, mainC)
+LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC)
 {
 	local lCount, lIdx, L_Index, mLoopIndex, IfError := 0
 
@@ -412,306 +427,326 @@ LoopSection(Start, End, X, L, PointO, mainL, mainC)
 	CoordMode, Mouse, %CoordMouse%
 	lCount := End - Start - 1
 	PointMarker := PointO
-	Loop, % X - 1
+	x_Loop := (lcX = 0) ? 1 : lcX - 1
+	Loop
 	{
-		If StopIt
-			break
 		mLoopIndex := A_Index + 1, LoopIndex := A_Index + 1
-		SkipIt := 0
-		Loop, %lCount%
+		Loop, %x_Loop%
 		{
+			mListRow := A_Index + 1
 			If StopIt
 				break
-			If (ShowProgBar = 1)
-				Progress, %A_Index%,, % AppName ": Macro" Macro_On " [Loop: " mainL "/" mainC " | Line: " A_Index "/" lCount " (In: " mLoopIndex "/" X ")]"
-			If (Skip_Line > 0)
-			{
-				Skip_Line--
-				continue
-			}
-			Gui, ListView, InputList%L%
-			lIdx := Start + A_Index
-			LV_GetTexts(lIdx, Action, Step, TimesX, DelayX, Type, Target, Window)
-			IsChecked := LV_GetNext(lIdx-1, "Checked")
-			If (IsChecked <> lIdx)
-				continue
-			If (pb_Sel)
-			{
-				IsSelected := LV_GetNext(lIdx-1)
-				If (IsSelected <> lIdx)
-					continue
-			}
-			If (Type = cType17)
-			{
-				IfError := IfStatement(IfError, PointMarker)
-				continue
-			}
-			If IfError > 0
-				continue
-			If ((Type = cType36) || (Type = cType37))
-			{
-				If ((BreakIt > 0) || (SkipIt > 0))
-					continue
-				CheckVars("Step", PointMarker)
-				If RegExMatch(Step, "^Macro(\d+)$", t_Macro)
-				{
-					If (Type = cType37)
-					{
-						L_Index := LoopIndex
-						Playback(t_Macro1)
-						LoopIndex := L_Index
-						Gui, ListView, InputList%L%
-						continue
-					}
-					Else
-						return t_Macro1
-				}
-				Loop, %TabCount%
-				{
-					TabIdx := A_Index
-					Gui, ListView, InputList%TabIdx%
-					Loop, % ListCount%A_Index%
-					{
-						LV_GetText(TargetLabel, A_Index, 3)
-						LV_GetText(Row_Type, A_Index, 6)
-						If ((Row_Type = cType36) || (Row_Type = cType37))
-							continue
-						If ((Row_Type = cType35) && (TargetLabel = Step))
-						{
-							If (Type = cType37)
-								Playback(TabIdx, A_Index)
-							Else
-								return t_Macro1
-						}
-					}
-				}
-				Gui, ListView, InputList%Macro_On%
-				continue
-			}
-			If (Type = cType35)
-				continue
-			If ((Type = cType7) || (Type = cType38) || (Type = cType39)
-			|| (Type = cType40) || (Type = cType41))
-			{
-				If (Action = "[LoopStart]")
-				{
-					If (BreakIt > 0)
-					{
-						BreakIt++
-						continue
-					}
-					If (SkipIt > 0)
-					{
-						SkipIt++
-						continue
-					}
-					PointMarker++
-					Start%PointMarker% := Start + A_Index
-					CheckVars("TimesX", PointMarker)
-					This_Point := PointMarker - 1
-					GoSub, SplitStep
-					LoopIndex := 1
-					If (Type = cType38)
-					{
-						o_Loop%PointMarker% := []
-						Loop, Read, %Par1%, %Par2%, %Par3%, %Par4%
-						{
-							If StopIt
-							{
-								o_Loop%PointMarker% := ""
-								break 2
-							}
-							o_Loop%PointMarker%[A_Index, "LoopReadLine"] := A_LoopReadLine
-						}
-						LoopCount%PointMarker% := o_Loop%PointMarker%.MaxIndex()
-					}
-					Else If (Type = cType39)
-					{
-						o_Loop%PointMarker% := []
-						Loop, Parse, Par1, %Par2%, %Par3%, %Par4%
-						{
-							If StopIt
-							{
-								o_Loop%PointMarker% := ""
-								break 2
-							}
-							o_Loop%PointMarker%[A_Index, "LoopField"] := A_LoopField
-						}
-						LoopCount%PointMarker% := o_Loop%PointMarker%.MaxIndex()
-					}
-					Else If (Type = cType40)
-					{
-						o_Loop%PointMarker% := []
-						Loop, %Par1%, %Par2%, %Par3%
-						{
-							If StopIt
-							{
-								o_Loop%PointMarker% := ""
-								break 2
-							}
-							o_Loop%PointMarker%[A_Index, "LoopFileName"] := A_LoopFileName
-							o_Loop%PointMarker%[A_Index, "LoopFileExt"] := A_LoopFileExt
-							o_Loop%PointMarker%[A_Index, "LoopFileFullPath"] := A_LoopFileFullPath
-							o_Loop%PointMarker%[A_Index, "LoopFileLongPath"] := A_LoopFileLongPath
-							o_Loop%PointMarker%[A_Index, "LoopFileShortPath"] := A_LoopFileShortPath
-							o_Loop%PointMarker%[A_Index, "LoopFileShortName"] := A_LoopFileShortName
-							o_Loop%PointMarker%[A_Index, "LoopFileDir"] := A_LoopFileDir
-							o_Loop%PointMarker%[A_Index, "LoopFileTimeModified"] := A_LoopFileTimeModified
-							o_Loop%PointMarker%[A_Index, "LoopFileTimeCreated"] := A_LoopFileTimeCreated
-							o_Loop%PointMarker%[A_Index, "LoopFileTimeAccessed"] := A_LoopFileTimeAccessed
-							o_Loop%PointMarker%[A_Index, "LoopFileAttrib"] := A_LoopFileAttrib
-							o_Loop%PointMarker%[A_Index, "LoopFileSize"] := A_LoopFileSize
-							o_Loop%PointMarker%[A_Index, "LoopFileSizeKB"] := A_LoopFileSizeKB
-							o_Loop%PointMarker%[A_Index, "LoopFileSizeMB"] := A_LoopFileSizeMB
-						}
-						LoopCount%PointMarker% := o_Loop%PointMarker%.MaxIndex()
-					}
-					Else If (Type = cType41)
-					{
-						o_Loop%PointMarker% := []
-						Loop, %Par1%, %Par2%, %Par3%, %Par4%
-						{
-							If StopIt
-							{
-								o_Loop%PointMarker% := ""
-								break 2
-							}
-							o_Loop%PointMarker%[A_Index, "LoopRegName"] := A_LoopRegName
-							o_Loop%PointMarker%[A_Index, "LoopRegType"] := A_LoopRegType
-							o_Loop%PointMarker%[A_Index, "LoopRegKey"] := A_LoopRegKey
-							o_Loop%PointMarker%[A_Index, "LoopRegSubKey"] := A_LoopRegSubKey
-							o_Loop%PointMarker%[A_Index, "LoopRegTimeModified"] := A_LoopRegTimeModified
-						}
-						LoopCount%PointMarker% := o_Loop%PointMarker%.MaxIndex()
-					}
-					Else
-						LoopCount%PointMarker% := TimesX
-					continue
-				}
-				If (Action = "[LoopEnd]")
-				{
-					If (BreakIt > 0)
-					{
-						BreakIt--
-						PointMarker--
-						continue
-					}
-					If SkipIt > 1
-					{
-						SkipIt--
-						continue
-					}
-					If (SkipIt > 0)
-						SkipIt--
-					End%PointMarker% := Start + A_Index
-					GoToLab := LoopSection(Start%PointMarker%, End%PointMarker%, LoopCount%PointMarker%, L
-					, PointMarker, mainL, mainC)
-					o_Loop%PointMarker% := ""
-					If (GoToLab)
-						return GoToLab
-					PointMarker--
-					LoopIndex := mLoopIndex
-					continue
-				}
-			}
-			If ((BreakIt > 0) || (SkipIt > 0))
-				continue
-			If (Type = cType21)
-			{
-				StringReplace, Step, Step, ``n, `n, All
-				StringReplace, Step, Step, ``t, `t, All
-				AssignReplace(Step)
-				CheckVars("Step|Target|Window", PointMarker)
-				If (Action = "[Assign Variable]")
-				{
-					If RegExMatch(VarValue, "U)%\s([\w%]+)\((.*)\)")  ; Functions
-						StringReplace, VarValue, VarValue, `,, ```,, All
-					CheckVars("VarValue", PointMarker)
-					If (Target = "Expression")
-					{
-						If IsFunc("Eval")
-						{
-							Monster := "Eval"
-							VarValue := %Monster%(VarValue)
-						}
-					}
-					AssignVar(VarName, Oper, VarValue)
-				}
-				Else If IsFunc(Action)
-				{
-					Params := Object()
-					StringReplace, VarValue, VarValue, ```,, ¢, All
-					Loop, Parse, VarValue, `,, %A_Space%""
-					{
-						LoopField := DerefVars(A_LoopField)
-						StringReplace, LoopField, LoopField, ¢, `,, All
-						Params.Insert(LoopField)
-					}
-					%VarName% := %Action%(Params*)
-				}
-				Else If (Target <> "")
-				{
-					Params := Object()
-					StringReplace, VarValue, VarValue, ```,, ¢, All
-					Loop, Parse, VarValue, `,, %A_Space%""
-					{
-						LoopField := DerefVars(A_LoopField)
-						StringReplace, LoopField, LoopField, `r`n, ``n, All
-						StringReplace, LoopField, LoopField, `n, ``n, All
-						StringReplace, LoopField, LoopField, ¢, `,, All
-						Params.Insert(LoopField)
-					}
-					If (A_AhkPath)
-						%VarName% := RunExtFunc(Target, Action, Params*)
-				}
-				continue
-			}
-			If ((Type = cType15) || (Type = cType16))
-			{
-				Loop, Parse, Action, `,,%A_Space%
-					Act%A_Index% := A_LoopField
-			}
-			If InStr(Step, "``n")
-				StringReplace, Step, Step, ``n, `n, All
-			If InStr(Step, "``t")
-				StringReplace, Step, Step, ``t, `t, All
-			If (Type = "Return")
-			{
-				StopIt := 1
-				continue
-			}
-			If (Type = cType29)
-			{
-				If (PointMarker = 0)
-					break 2
-				Else
-				{
-					BreakIt++
-					continue
-				}
-			}
-			If (Type = cType30)
-			{
-				SkipIt++
-				continue
-			}
-			This_Point := PointMarker
-			GoSub, SplitStep
-			Loop, %TimesX%
+			SkipIt := 0
+			If (lcX > 0)
+				mLoopIndex := A_Index + 1, LoopIndex := A_Index + 1
+			Loop, %lCount%
 			{
 				If StopIt
-					break 3
-				GoSub, pb_%Type%
-				If Type in Sleep,KeyWait
-					continue
-				If ((TakeAction = "Break") || ((Target = "Exit") && (SearchResult = 0)))
-				{
-					TakeAction := 0
 					break
+				If (ShowProgBar = 1)
+					Progress, %A_Index%,, % AppName ": Macro" Macro_On " [Loop: " mainL "/" mainC " | Line: " A_Index "/" lCount " (In: " mLoopIndex "/" lcX ")]"
+				If (Skip_Line > 0)
+				{
+					Skip_Line--
+					continue
 				}
-				GoSub, pb_Sleep
+				Gui, ListView, InputList%lcL%
+				lIdx := Start + A_Index
+				LV_GetTexts(lIdx, Action, Step, TimesX, DelayX, Type, Target, Window)
+				IsChecked := LV_GetNext(lIdx-1, "Checked")
+				If (IsChecked <> lIdx)
+					continue
+				If (pb_Sel)
+				{
+					IsSelected := LV_GetNext(lIdx-1)
+					If (IsSelected <> lIdx)
+						continue
+				}
+				If (Type = cType17)
+				{
+					IfError := IfStatement(IfError, PointMarker)
+					continue
+				}
+				If IfError > 0
+					continue
+				If ((Type = cType36) || (Type = cType37))
+				{
+					If ((BreakIt > 0) || (SkipIt > 0))
+						continue
+					CheckVars("Step", PointMarker)
+					If RegExMatch(Step, "^Macro(\d+)$", t_Macro)
+					{
+						If (Type = cType37)
+						{
+							L_Index := LoopIndex
+							Playback(t_Macro1)
+							LoopIndex := L_Index
+							Gui, ListView, InputList%lcL%
+							continue
+						}
+						Else
+							return t_Macro1
+					}
+					Loop, %TabCount%
+					{
+						TabIdx := A_Index
+						Gui, ListView, InputList%TabIdx%
+						Loop, % ListCount%A_Index%
+						{
+							LV_GetText(TargetLabel, A_Index, 3)
+							LV_GetText(Row_Type, A_Index, 6)
+							If ((Row_Type = cType36) || (Row_Type = cType37))
+								continue
+							If ((Row_Type = cType35) && (TargetLabel = Step))
+							{
+								If (Type = cType37)
+									Playback(TabIdx, A_Index)
+								Else
+									return t_Macro1
+							}
+						}
+					}
+					Gui, ListView, InputList%Macro_On%
+					continue
+				}
+				If (Type = cType35)
+					continue
+				If ((Type = cType7) || (Type = cType38) || (Type = cType39)
+				|| (Type = cType40) || (Type = cType41))
+				{
+					If (Action = "[LoopStart]")
+					{
+						If (BreakIt > 0)
+						{
+							BreakIt++
+							continue
+						}
+						If (SkipIt > 0)
+						{
+							SkipIt++
+							continue
+						}
+						PointMarker++
+						Start%PointMarker% := Start + A_Index
+						CheckVars("TimesX", PointMarker)
+						This_Point := PointMarker - 1
+						GoSub, SplitStep
+						LoopIndex := 1
+						If (Type = cType38)
+						{
+							o_Loop%PointMarker% := []
+							Loop, Read, %Par1%, %Par2%, %Par3%, %Par4%
+							{
+								If StopIt
+								{
+									o_Loop%PointMarker% := ""
+									break 2
+								}
+								o_Loop%PointMarker%[A_Index, "LoopReadLine"] := A_LoopReadLine
+							}
+							LoopCount%PointMarker% := o_Loop%PointMarker%.MaxIndex()
+						}
+						Else If (Type = cType39)
+						{
+							o_Loop%PointMarker% := []
+							Loop, Parse, Par1, %Par2%, %Par3%, %Par4%
+							{
+								If StopIt
+								{
+									o_Loop%PointMarker% := ""
+									break 2
+								}
+								o_Loop%PointMarker%[A_Index, "LoopField"] := A_LoopField
+							}
+							LoopCount%PointMarker% := o_Loop%PointMarker%.MaxIndex()
+						}
+						Else If (Type = cType40)
+						{
+							o_Loop%PointMarker% := []
+							Loop, %Par1%, %Par2%, %Par3%
+							{
+								If StopIt
+								{
+									o_Loop%PointMarker% := ""
+									break 2
+								}
+								o_Loop%PointMarker%[A_Index, "LoopFileName"] := A_LoopFileName
+								o_Loop%PointMarker%[A_Index, "LoopFileExt"] := A_LoopFileExt
+								o_Loop%PointMarker%[A_Index, "LoopFileFullPath"] := A_LoopFileFullPath
+								o_Loop%PointMarker%[A_Index, "LoopFileLongPath"] := A_LoopFileLongPath
+								o_Loop%PointMarker%[A_Index, "LoopFileShortPath"] := A_LoopFileShortPath
+								o_Loop%PointMarker%[A_Index, "LoopFileShortName"] := A_LoopFileShortName
+								o_Loop%PointMarker%[A_Index, "LoopFileDir"] := A_LoopFileDir
+								o_Loop%PointMarker%[A_Index, "LoopFileTimeModified"] := A_LoopFileTimeModified
+								o_Loop%PointMarker%[A_Index, "LoopFileTimeCreated"] := A_LoopFileTimeCreated
+								o_Loop%PointMarker%[A_Index, "LoopFileTimeAccessed"] := A_LoopFileTimeAccessed
+								o_Loop%PointMarker%[A_Index, "LoopFileAttrib"] := A_LoopFileAttrib
+								o_Loop%PointMarker%[A_Index, "LoopFileSize"] := A_LoopFileSize
+								o_Loop%PointMarker%[A_Index, "LoopFileSizeKB"] := A_LoopFileSizeKB
+								o_Loop%PointMarker%[A_Index, "LoopFileSizeMB"] := A_LoopFileSizeMB
+							}
+							LoopCount%PointMarker% := o_Loop%PointMarker%.MaxIndex()
+						}
+						Else If (Type = cType41)
+						{
+							o_Loop%PointMarker% := []
+							Loop, %Par1%, %Par2%, %Par3%, %Par4%
+							{
+								If StopIt
+								{
+									o_Loop%PointMarker% := ""
+									break 2
+								}
+								o_Loop%PointMarker%[A_Index, "LoopRegName"] := A_LoopRegName
+								o_Loop%PointMarker%[A_Index, "LoopRegType"] := A_LoopRegType
+								o_Loop%PointMarker%[A_Index, "LoopRegKey"] := A_LoopRegKey
+								o_Loop%PointMarker%[A_Index, "LoopRegSubKey"] := A_LoopRegSubKey
+								o_Loop%PointMarker%[A_Index, "LoopRegTimeModified"] := A_LoopRegTimeModified
+							}
+							LoopCount%PointMarker% := o_Loop%PointMarker%.MaxIndex()
+						}
+						Else
+							LoopCount%PointMarker% := TimesX
+						If (LoopCount%PointMarker% = "")
+						{
+							LoopIndex := mLoopIndex
+							BreakIt++
+						}
+						continue
+					}
+					If (Action = "[LoopEnd]")
+					{
+						If (BreakIt > 0)
+						{
+							BreakIt--
+							PointMarker--
+							continue
+						}
+						If SkipIt > 1
+						{
+							SkipIt--
+							continue
+						}
+						If (SkipIt > 0)
+							SkipIt--
+						End%PointMarker% := Start + A_Index
+						GoToLab := LoopSection(Start%PointMarker%, End%PointMarker%, LoopCount%PointMarker%, lcL
+						, PointMarker, mainL, mainC)
+						o_Loop%PointMarker% := ""
+						If (GoToLab)
+							return GoToLab
+						PointMarker--
+						LoopIndex := mLoopIndex
+						continue
+					}
+				}
+				If ((BreakIt > 0) || (SkipIt > 0))
+					continue
+				If (Type = cType21)
+				{
+					StringReplace, Step, Step, ``n, `n, All
+					StringReplace, Step, Step, ``t, `t, All
+					AssignReplace(Step)
+					CheckVars("Step|Target|Window", PointMarker)
+					If (Action = "[Assign Variable]")
+					{
+						If RegExMatch(VarValue, "U)%\s([\w%]+)\((.*)\)")  ; Functions
+							StringReplace, VarValue, VarValue, `,, ```,, All
+						CheckVars("VarValue", PointMarker)
+						If (Target = "Expression")
+						{
+							If IsFunc("Eval")
+							{
+								Monster := "Eval"
+								VarValue := %Monster%(VarValue)
+							}
+						}
+						AssignVar(VarName, Oper, VarValue)
+					}
+					Else If IsFunc(Action)
+					{
+						Params := Object()
+						StringReplace, VarValue, VarValue, ```,, ¢, All
+						Loop, Parse, VarValue, `,, %A_Space%""
+						{
+							LoopField := DerefVars(A_LoopField)
+							StringReplace, LoopField, LoopField, ¢, `,, All
+							Params.Insert(LoopField)
+						}
+						%VarName% := %Action%(Params*)
+					}
+					Else If (Target <> "")
+					{
+						Params := Object()
+						StringReplace, VarValue, VarValue, ```,, ¢, All
+						Loop, Parse, VarValue, `,, %A_Space%""
+						{
+							LoopField := DerefVars(A_LoopField)
+							StringReplace, LoopField, LoopField, `r`n, ``n, All
+							StringReplace, LoopField, LoopField, `n, ``n, All
+							StringReplace, LoopField, LoopField, ¢, `,, All
+							Params.Insert(LoopField)
+						}
+						If (A_AhkPath)
+							%VarName% := RunExtFunc(Target, Action, Params*)
+					}
+					continue
+				}
+				If ((Type = cType15) || (Type = cType16))
+				{
+					Loop, Parse, Action, `,,%A_Space%
+						Act%A_Index% := A_LoopField
+				}
+				If InStr(Step, "``n")
+					StringReplace, Step, Step, ``n, `n, All
+				If InStr(Step, "``t")
+					StringReplace, Step, Step, ``t, `t, All
+				If (Type = "Return")
+				{
+					StopIt := 1
+					continue
+				}
+				If (Type = cType29)
+				{
+					If (PointMarker = 0)
+						break 2
+					Else
+					{
+						If Step is number
+							BreakIt += Step
+						Else
+							BreakIt++
+						continue
+					}
+				}
+				If (Type = cType30)
+				{
+					If Step is number
+						SkipIt += Step
+					Else
+						SkipIt++
+					continue
+				}
+				This_Point := PointMarker
+				GoSub, SplitStep
+				Loop, %TimesX%
+				{
+					If StopIt
+						break 3
+					GoSub, pb_%Type%
+					If Type in Sleep,KeyWait
+						continue
+					If ((TakeAction = "Break") || ((Target = "Exit") && (SearchResult = 0)))
+					{
+						TakeAction := 0
+						break
+					}
+					GoSub, pb_Sleep
+				}
 			}
 		}
+		If (StopIt || BreakIt || (lcX > 0))
+			break
 	}
 	If (BreakIt > 0)
 		BreakIt--
@@ -803,26 +838,34 @@ IfStatement(ThisError, Point)
 {
 	global
 	
-	Tooltip
 	If Step = EndIf
 	{
 		If ThisError > 0
 			ThisError--
 		Else
 			ThisError := 0
+		return ThisError
 	}
 	If ((BreakIt > 0) || (SkipIt > 0))
 		return ThisError
-	Else If Step = Else
+	If Step = Else
 	{
 		If ThisError > 0
 			ThisError--
 		Else
 			ThisError++
+		return ThisError
+	}
+	If ThisError > 0
+	{
+		ThisError++
+		return ThisError
 	}
 	Else
 	{
+		Tooltip
 		CheckVars("Step|Target|Window", PointMarker)
+		EscCom("Step|TimesX|DelayX|Target|Window", 1)
 		If ThisError > 0
 		{
 			ThisError++
@@ -940,6 +983,7 @@ IfStatement(ThisError, Point)
 		{
 			AssignReplace(Step)
 			CheckVars("VarValue", PointMarker)
+			EscCom("VarValue|VarName", 1)
 			If (VarName = "A_Index")
 				VarName := "LoopIndex"
 			If IfEval(VarName, Oper, VarValue)
@@ -971,7 +1015,7 @@ IfStatement(ThisError, Point)
 
 class WaitFor
 {
-	Key(Key, Delay)
+	Key(Key, Delay=0)
 	{
 		global StopIt, d_Lang039
 		
@@ -997,9 +1041,12 @@ class WaitFor
 	{
 		global StopIt
 		
+		Seconds *= 1000
+		ini_Time := A_TickCount
 		Loop
 			Sleep, 10
-		Until ((WinExist(Window*)) || (StopIt))
+		Until (((WinExist(Window*)) || (StopIt))
+			|| ((Seconds > 0) && (pass_Time > Seconds)))
 	}
 	
 	WinActive(Window, Seconds)
@@ -1109,6 +1156,7 @@ DerefVars(String)
 {
 	global
 	
+	StringReplace, String, String, ```%, ¤, All
 	While, RegExMatch(String, "%(\w+)%", rMatch)
 	{
 		FoundVar := RegExReplace(%rMatch1%, "%", "¤")

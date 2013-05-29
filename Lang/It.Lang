@@ -117,7 +117,7 @@
 	w_Lang012 =	&Cattura Keys
 	w_Lang013 =	&Mostra informazioni
 	w_Lang014 =	&Sempre attivo
-	w_Lang015 =	Ripeti:
+	w_Lang015 =	Ripeti
 	w_Lang016 =	Ritardo (ms):
 	w_Lang017 =	Applicare
 	w_Lang018 =	Inserire
@@ -372,6 +372,10 @@
 	t_Lang090 =	Impostazioni predefinite
 	t_Lang091 =	Consenti trascinamento righe
 	t_Lang092 =	Il contenuto delle celle intere
+	t_Lang093 =	Formato INI standard
+	t_Lang094 =	Nome = Valore
+	t_Lang095 =	Inserisci 1 variabile per riga. Si può anche aggiungere [sezioni].
+	t_Lang096 =	Variabili Globali Dell'utente
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Aperto
@@ -491,7 +495,9 @@
 	)	
 	d_Lang062 =	Hai già la versione più recente.
 	d_Lang063 =	Si è verificato un errore durante la verifica.
-		
+	d_Lang064 =	Errore di oggetto COM in
+	d_Lang065 =	Riga
+	d_Lang066 =	Specificamente
 		
 ; Tooltips		
 	NewB_TT =	Nuovo (Ctrl+N)
@@ -565,10 +571,13 @@
 	IfLVColor_TT =	Fare clic per selezionare un colore
 	RefreshIEW_TT =	Aggiorna elenco
 	ActiveObj_TT =	Tenta di connettersi a un oggetto COM attiva
+	ExpView_TT =	Editor Avanzato
 	OSPlay_TT =	Play / Pause
 	OSStop_TT =	Arresto
 	OSRec_TT =	Start / Stop Record
 	OSRecNew_TT =	Registra nuova macro
+	OSRecOpt_TT =	Opzioni di Registrazione
+	OSPlayOpt_TT =	Opzioni di riproduzione
 	OSClear_TT =	Cancella elenco
 	OSProgB_TT =	Mostra barra di avanzamento
 	OSFast_TT =	Accelerare
@@ -682,7 +691,8 @@
 	)	
 	Ex_HK_TT =	
 	(LTrim	
-		Forza l'utilizzo del gancio di attuare tutte o alcuni tasti di scelta rapida da tastiera.
+		Forza l'uso del gancio di attuare tutte
+		o alcuni tasti di scelta rapida da tastiera.
 	)	
 	Ex_SK_TT =	
 	(LTrim	
@@ -718,6 +728,18 @@
 		Provoca lo script a comportarsi come se specificato
 		il contenuto dei file sono presenti a questa posizione esatta.
 	)	
+	Ex_PT_TT =	
+	(LTrim	
+		Mantiene uno script in esecuzione in modo permanente
+		(cioè fino a quando l'utente chiude o riscontrato ExitApp).
+	)	
+	Ex_MT_TT =	
+	(LTrim	
+		Imposta il numero massimo di simultanea
+		filetti per hotkey o hotstring.
+	)	
+	Ex_UV_TT =	Esportare le variabili globali.
+	Ex_EdVars_TT =	Selezionare le variabili globali da esportare.
 		
 ; IE Commands Tips		
 	Tip_Navigate =	Accede a un URL o un percorso.

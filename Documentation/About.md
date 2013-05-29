@@ -8,7 +8,7 @@ Author: Pulover \[Rodolfo U. Batista\]
 [rodolfoub@gmail.com](mailto:rodolfoub@gmail.com)  
 Copyright © 2012-2013 Rodolfo U. Batista  
 
-Version: 3.7.1 
+Version: 3.7.2  
 Release Date: May, 2013  
 AutoHotkey Version: 1.1.10.01  
 
@@ -31,10 +31,24 @@ T800 for [Html Help utils](http://www.autohotkey.com/board/topic/17984-html-help
 
 # Change Log
 
+## Version 3.7.2
+
+* Added option to define *User Global Variables* in Settings.
+* Added support to set an infinite loop in *Loop Command*.
+* Added support for Loop Number parameter in *Break* and *Continue*.
+* Added handler for *COM* errors in Playback.
+* Added support for self-references inside parameters in *COM Interface*.
+* Added *Toolbar* command line parameter: -b (Shows *Controls Toolbar* on start-up).
+* Added support for escaping percent signs (`%).
+* Fixed error on start-up on Windows Vista.
+* Fixed Screenshots not working in 64-bit version.
+* Fixed *WinWait* Timeout parameter not working in Playback.
+* Fixed issues with *If Statements*.
+
 ## Version 3.7.1
 
 * Added selected Macro hotkey to *Preview Window* status bar.
-* Fixed error on start up on Windows XP.
+* Fixed error on start-up on Windows XP.
 * Fixed missing/wrong icons on Windows 8.
 * Fixed wrong default values set to Export Options on first run.
 * Fixed *Save Macro* dialog being displayed for unchanged projects.
@@ -47,7 +61,7 @@ T800 for [Html Help utils](http://www.autohotkey.com/board/topic/17984-html-help
 * Added new Loop commands: *FilePattern*, *Parse*, *Read* and *Registry*.
 * Added *Break* to Image/Pixel Search options.
 * Added *Break loop if image is found* option to Image/Pixel Search.
-* Added support to set an Infinite Loop for Macros.
+* Added support to set an infinite Loop for Macros.
 * Added *Controls Toolbar*.
 * Added *Clear List* option for *Record New Macro* to restart the current Macro.
 * Added *Play Selected Rows* option.
@@ -138,9 +152,9 @@ T800 for [Html Help utils](http://www.autohotkey.com/board/topic/17984-html-help
 
 ## Version 3.5.2
 
-* Added *Play* command line parameter: -p (Activate Hotkeys on start up).
-* Added *AutoPlay* command line parameter: -a*N* (*N* = Number of the Macro to run on start up).
-* Added *Hide* command line parameter: -h (Hide Main Window on start up).
+* Added *Play* command line parameter: -p (Activate Hotkeys on start-up).
+* Added *AutoPlay* command line parameter: -a*N* (*N* = Number of the Macro to run on start-up).
+* Added *Hide* command line parameter: -h (Hide Main Window on start-up).
 * Fixed an issue when resizing columns.
 * Fixed a syntax error in recorded Click commands.
 

@@ -117,7 +117,7 @@
 	w_Lang012 =	&Capture Keys
 	w_Lang013 =	&Vis informasjon
 	w_Lang014 =	&Alltid aktiv
-	w_Lang015 =	Gjentar:
+	w_Lang015 =	Gjentar
 	w_Lang016 =	Delay (ms):
 	w_Lang017 =	Påfør
 	w_Lang018 =	Sett
@@ -372,6 +372,10 @@
 	t_Lang090 =	Mislighold
 	t_Lang091 =	Tillate å dra rader
 	t_Lang092 =	Hele innholdet i cellen
+	t_Lang093 =	Standard INI-format
+	t_Lang094 =	Navn = verdi
+	t_Lang095 =	Skriv inn en variabel per linje. Du kan også legge til [Seksjoner].
+	t_Lang096 =	Bruker Globale Variabler
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Åpent
@@ -491,7 +495,9 @@
 	)	
 	d_Lang062 =	Du allerede har den nyeste versjonen.
 	d_Lang063 =	Det oppstod en feil mens du sjekker.
-		
+	d_Lang064 =	COM objekt feil i
+	d_Lang065 =	Rad
+	d_Lang066 =	Spesielt
 		
 ; Tooltips		
 	NewB_TT =	New (Ctrl+N)
@@ -565,10 +571,13 @@
 	IfLVColor_TT =	Klikk for å velge en farge
 	RefreshIEW_TT =	Oppdater liste
 	ActiveObj_TT =	Forsøker å koble til en aktiv COM objekt
+	ExpView_TT =	Avansert Redigeringsprogram
 	OSPlay_TT =	Spill av / Pause
 	OSStop_TT =	Stopp
 	OSRec_TT =	Start / Stopp Record
 	OSRecNew_TT =	Registrer ny makro
+	OSRecOpt_TT =	Innspillingsalternativer
+	OSPlayOpt_TT =	Videoavspillingsalternativer
 	OSClear_TT =	Slett liste
 	OSProgB_TT =	Vise Progress Bar
 	OSFast_TT =	Fremskynde
@@ -682,7 +691,8 @@
 	)	
 	Ex_HK_TT =	
 	(LTrim	
-		Tvinger bruk av kroken til å gjennomføre alle eller noen tastatur hurtigtaster.
+		Tvinger bruk av kroken for å implementere alle
+		eller noen tastatur hurtigtaster.
 	)	
 	Ex_SK_TT =	
 	(LTrim	
@@ -718,6 +728,18 @@
 		Årsaker skriptet til å oppføre seg som om den angitte
 		filens innhold er tilstede på denne eksakte posisjonen.
 	)	
+	Ex_PT_TT =	
+	(LTrim	
+		Holder et skript permanent drift
+		(det vil si, inntil brukeren lukker den eller ExitApp er oppstått).
+	)	
+	Ex_MT_TT =	
+	(LTrim	
+		Angir maksimalt antall samtidige
+		tråder per hurtigtast eller hotstring.
+	)	
+	Ex_UV_TT =	Eksportere globale variabler.
+	Ex_EdVars_TT =	Velg globale variabler som skal eksporteres.
 		
 ; IE Commands Tips		
 	Tip_Navigate =	Navigerer til en URL eller bane.
