@@ -6595,6 +6595,7 @@ Gui, 24:-Disabled
 Gui, 30:Destroy
 Gui, 24:Default
 GuiControl,, ComSc, %TextEdit%
+GoSub, ComSc
 return
 
 ExpViewCancel:
