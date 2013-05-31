@@ -145,11 +145,11 @@
 		Position/Size - Coordinates and sizes to move a control with ControlMove.
 
 	Extra:
-		### Download Example
-			[Using Control Commands to Read and Set Text](Examples\ControlCmd.pmc).
-		
 		### Related
 			[Control](http://l.autohotkey.net/docs/commands/Control.htm), [ControlFocus](http://l.autohotkey.net/docs/commands/ControlFocus.htm), [ControlGet](http://l.autohotkey.net/docs/commands/ControlGet.htm), [ControlGetFocus](http://l.autohotkey.net/docs/commands/ControlGetFocus.htm), [ControlGetPos](http://l.autohotkey.net/docs/commands/ControlGetPos.htm), [ControlGetText](http://l.autohotkey.net/docs/commands/ControlGetText.htm), [ControlMove](http://l.autohotkey.net/docs/commands/ControlMove.htm), [ControlSetText](http://l.autohotkey.net/docs/commands/ControlSetText.htm)
+		
+		### Download Example
+			[Using Control Commands to Read and Set Text](Examples\ControlCmd.pmc).
 */
 
 /*!
@@ -336,11 +336,11 @@
 		In Playback all iterations will be performed prior to any commands in the Loop section.
 
 	Extra:
-		### Download Example
-			[Loop through folders, parse and read file's contents](Examples\LoopTypes.pmc).
-		
 		### Related
 			[Loop FilePattern](http://l.autohotkey.net/docs/commands/LoopFile.htm)
+		
+		### Download Example
+			[Loop through folders, parse and read file's contents](Examples\LoopTypes.pmc).
 */
 
 /*!
@@ -363,11 +363,11 @@
 		In Playback all iterations will be performed prior to any commands in the Loop section.
 
 	Extra:
-		### Download Example
-			[Loop through folders, parse and read file's contents](Examples\LoopTypes.pmc).
-		
 		### Related
 			[Loop Parse](http://l.autohotkey.net/docs/commands/LoopParse.htm)
+		
+		### Download Example
+			[Loop through folders, parse and read file's contents](Examples\LoopTypes.pmc).
 */
 
 /*!
@@ -385,11 +385,11 @@
 		In Playback all iterations will be performed prior to any commands in the Loop section.
 
 	Extra:
-		### Download Example
-			[Loop through folders, parse and read file's contents](Examples\LoopTypes.pmc).
-		
 		### Related
 			[Loop Read File](http://l.autohotkey.net/docs/commands/LoopReadFile.htm)
+		
+		### Download Example
+			[Loop through folders, parse and read file's contents](Examples\LoopTypes.pmc).
 */
 
 /*!

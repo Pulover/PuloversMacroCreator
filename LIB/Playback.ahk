@@ -436,7 +436,8 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC)
 			mListRow := A_Index + 1
 			If StopIt
 				break
-			SkipIt := 0
+			If (SkipIt > 0)
+				SkipIt--
 			If (lcX > 0)
 				mLoopIndex := A_Index + 1, LoopIndex := A_Index + 1
 			Loop, %lCount%

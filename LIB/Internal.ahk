@@ -495,7 +495,7 @@ ToggleIcon()
 
 ToggleButtonIcon(Button, Icon)
 {
-	ILButton(Button, Icon[1] ":" Icon[2], 16, 16, 4)
+	ILButton(Button, Icon[1] ":" Icon[2], 0)
 	return
 }
 

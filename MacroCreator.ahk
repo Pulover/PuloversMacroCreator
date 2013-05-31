@@ -487,57 +487,57 @@ Menu, LangMenu, Check, % Lang_%Lang%
 Gui, Font, s7
 Gui, +Resize +MinSize310x140 +HwndPMCWinID
 Gui, Add, Button, -Wrap W25 H25 hwndNewB vNewB gNew
-	ILButton(NewB, NewIcon[1] ":" NewIcon[2], 16, 16)
+	ILButton(NewB, NewIcon[1] ":" NewIcon[2])
 Gui, Add, Button, -Wrap W25 H25 ys x+0 hwndOpenB vOpenB gOpen
-	ILButton(OpenB, OpenIcon[1] ":" OpenIcon[2], 16, 16)
+	ILButton(OpenB, OpenIcon[1] ":" OpenIcon[2])
 Gui, Add, Button, -Wrap W25 H25 ys x+0 hwndSaveB vSaveB gSave
-	ILButton(SaveB, SaveIcon[1] ":" SaveIcon[2], 16, 16)
+	ILButton(SaveB, SaveIcon[1] ":" SaveIcon[2])
 Gui, Add, Text, W2 H25 ys+2 x+5 0x11
 Gui, Add, Button, -Wrap W69 H25 ys x+4 hwndExportB vExportB gExport, %w_Lang001%
-	ILButton(ExportB, ExportIcon[1] ":" ExportIcon[2], 16, 16, 0)
+	ILButton(ExportB, ExportIcon[1] ":" ExportIcon[2], 0, "Left")
 Gui, Add, Button, -Wrap W69 H25 yp x+2 hwndPreviewB vPreviewB gPreview, %w_Lang002%
-	ILButton(PreviewB, PreviewIcon[1] ":" PreviewIcon[2], 16, 16, 0)
+	ILButton(PreviewB, PreviewIcon[1] ":" PreviewIcon[2], 0, "Left")
 Gui, Add, Button, -Wrap W69 H25 yp x+2 hwndOptionsB vOptionsB gOptions, %w_Lang003%
-	ILButton(OptionsB, OptionsIcon[1] ":" OptionsIcon[2], 16, 16, 0)
+	ILButton(OptionsB, OptionsIcon[1] ":" OptionsIcon[2], 0, "Left")
 Gui, Add, Button, -Wrap W25 H25 yp+30 xm hwndMouseB vMouseB gMouse
-	ILButton(MouseB, MouseIcon[1] ":" MouseIcon[2], 16, 16)
+	ILButton(MouseB, MouseIcon[1] ":" MouseIcon[2])
 Gui, Add, Button, -Wrap W25 H25 yp x+0 hwndTextB vTextB gText
-	ILButton(TextB, TextIcon[1] ":" TextIcon[2], 16, 16)
+	ILButton(TextB, TextIcon[1] ":" TextIcon[2])
 Gui, Add, Button, -Wrap W25 H25 yp x+0 hwndControlB vControlB gControlCmd
-	ILButton(ControlB, ControlIcon[1] ":" ControlIcon[2], 16, 16)
+	ILButton(ControlB, ControlIcon[1] ":" ControlIcon[2])
 Gui, Add, Text, W2 H25 yp+2 x+5 0x11
 Gui, Add, Button, -Wrap W25 H25 yp-2 x+4 hwndPauseB vPauseB gPause
-	ILButton(PauseB, PauseIcon[1] ":" PauseIcon[2], 16, 16)
+	ILButton(PauseB, PauseIcon[1] ":" PauseIcon[2])
 Gui, Add, Button, -Wrap W25 H25 yp x+0 hwndWindowB vWindowB gWindow
-	ILButton(WindowB, WindowIcon[1] ":" WindowIcon[2], 16, 16)
+	ILButton(WindowB, WindowIcon[1] ":" WindowIcon[2])
 Gui, Add, Button, -Wrap W25 H25 yp x+0 hwndImageB vImageB gImage
-	ILButton(ImageB, ImageIcon[1] ":" ImageIcon[2], 16, 16)
+	ILButton(ImageB, ImageIcon[1] ":" ImageIcon[2])
 Gui, Add, Button, -Wrap W25 H25 yp x+0 hwndRunB vRunB gRun
-	ILButton(RunB, RunIcon[1] ":" RunIcon[2], 16, 16)
+	ILButton(RunB, RunIcon[1] ":" RunIcon[2])
 Gui, Add, Text, W2 H25 yp+2 x+5 0x11
 Gui, Add, Button, -Wrap W25 H25 yp-2 x+4 hwndComLoopB vComLoopB gComLoop
-	ILButton(ComLoopB, LoopIcon[1] ":" LoopIcon[2], 16, 16)
+	ILButton(ComLoopB, LoopIcon[1] ":" LoopIcon[2])
 Gui, Add, Button, -Wrap W25 H25 yp x+0 hwndIfStB vIfStB gIfSt
-	ILButton(IfStB, IfStIcon[1] ":" IfStIcon[2], 16, 16)
+	ILButton(IfStB, IfStIcon[1] ":" IfStIcon[2])
 Gui, Add, Button, -Wrap W25 H25 yp x+0 hwndIEComB vIEComB gIECom
-	ILButton(IEComB, IEIcon[1] ":" IEIcon[2], 16, 16)
+	ILButton(IEComB, IEIcon[1] ":" IEIcon[2])
 Gui, Font, s10, Courier New
 Gui, Add, Button, -Wrap W25 H25 yp x+0 hwndSendMsgB vSendMsgB gSendMsg, WM
 Gui, Font
 Gui, Add, Text, W2 H55 yp-28 x+5 0x11
 Gui, Font, Bold
 Gui, Add, Button, -Wrap W90 H40 ys xm+310 hwndRecordB vRecordB gRecord, %w_Lang004%
-	ILButton(RecordB, RecordIcon[1] ":" RecordIcon[2], 32, 32, 0)
+	ILButton(RecordB, RecordIcon[1] ":" RecordIcon[2], 1, "Left")
 Gui, Add, Button, -Wrap W90 H40 ys xm+405 hwndStartB vStartB gPlayStart, %w_Lang005%
-	ILButton(StartB, PlayIcon[1] ":" PlayIcon[2], 32, 32, 0)
+	ILButton(StartB, PlayIcon[1] ":" PlayIcon[2], 1, "Left")
 Gui, Font
 Gui, Font, s7
 Gui, Add, Checkbox, -Wrap Checked%ShowStep% yp+45 xp-95 W90 vShowStep R1, %w_Lang013%
 Gui, Add, Checkbox, -Wrap Checked%OnScCtrl% yp xp+95 W90 vOnScCtrl R1, %w_Lang020%
 Gui, Add, Button, -Wrap ys xm+500 W25 H25 hwndTestRun vTestRun gTestRun
-	ILButton(TestRun, TestRunIcon[1] ":" TestRunIcon[2], 16, 16)
+	ILButton(TestRun, TestRunIcon[1] ":" TestRunIcon[2])
 Gui, Add, Button, -Wrap W25 H25 hwndRunTimer vRunTimer gRunTimer
-	ILButton(RunTimer, RunTimerIcon[1] ":" RunTimerIcon[2], 16, 16)
+	ILButton(RunTimer, RunTimerIcon[1] ":" RunTimerIcon[2])
 Gui, Add, GroupBox, Section W355 H65 ys-9 xm+530
 Gui, Add, Text, -Wrap W25 H22 ym+5 xs+10 vAutoT, %w_Lang006%:
 Gui, Add, Text, -Wrap W25 H22 y+3 vManT, %w_Lang007%:
@@ -552,19 +552,19 @@ Gui, Add, Text, -Wrap yp+5 x+5 W90 H22 vRepeatT, %w_Lang011% (%t_Lang004%):
 Gui, Add, Edit, y+1 W90 R1 Number vReptC
 Gui, Add, UpDown, vTimesG 0x80 Range0-999999999, 1
 Gui, Add, Button, -Wrap hwndTabPlus vTabPlus gTabPlus ys+70 xm+500 W25 H25
-	ILButton(TabPlus, PlusIcon[1] ":" PlusIcon[2], 16, 16)
+	ILButton(TabPlus, PlusIcon[1] ":" PlusIcon[2])
 Gui, Add, Button, -Wrap hwndTabClose vTabClose gTabClose x+0 ys+70 W25 H25
-	ILButton(TabClose, CloseIcon[1] ":" CloseIcon[2], 16, 16)
+	ILButton(TabClose, CloseIcon[1] ":" CloseIcon[2])
 Gui, Add, Button, -Wrap hwndDuplicateL vDuplicateL gDuplicateList x+0 ys+70 W25 H25
-	ILButton(DuplicateL, DuplicateLIcon[1] ":" DuplicateLIcon[2], 16, 16)
+	ILButton(DuplicateL, DuplicateLIcon[1] ":" DuplicateLIcon[2])
 Gui, Add, Text, W2 H25 ys+72 x+5 0x11
 Gui, Add, Button, -Wrap hwndImportB vImportB gImport x+4 ys+70 W25 H25
-	ILButton(ImportB, ImportIcon[1] ":" ImportIcon[2], 16, 16)
+	ILButton(ImportB, ImportIcon[1] ":" ImportIcon[2])
 Gui, Add, Button, -Wrap hwndSaveC vSaveC gSaveCurrentList x+0 ys+70 W25 H25
-	ILButton(SaveC, SaveLIcon[1] ":" SaveLIcon[2], 16, 16)
+	ILButton(SaveC, SaveLIcon[1] ":" SaveLIcon[2])
 Gui, Add, Text, W2 H25 ys+72 x+5 0x11
 Gui, Add, Button, -Wrap x+4 ys+70 W25 H25 hwndIfDirB vIfDirB gSetWin
-	ILButton(IfDirB, ContextIcon[1] ":" ContextIcon[2], 16, 16)
+	ILButton(IfDirB, ContextIcon[1] ":" ContextIcon[2])
 Gui, Add, Checkbox, -Wrap ys+75 xp+30 W100 gCapt vCapt R1, %w_Lang012%
 Gui, Add, Checkbox, -Wrap Checked%KeepHkOn% W100 -Wrap yp x+5 vKeepHkOn gCheckHkOn R1, %w_Lang014%
 Gui, Add, Tab2, Section Buttons -Wrap AltSubmit xm ys+72 H22 W500 hwndTabSel vA_List gTabSel, Macro1
@@ -578,46 +578,46 @@ Loop, 9
 Gui, Tab
 Gui, Add, UpDown, ys+23 x+4 gOrder vOrder -16 Range0-1, 0
 Gui, Add, Button, -Wrap W22 H25 hwndCut vCut gCutRows
-	ILButton(Cut, CutIcon[1] ":" CutIcon[2], 16, 16)
+	ILButton(Cut, CutIcon[1] ":" CutIcon[2])
 Gui, Add, Button, -Wrap W22 H25 hwndCopy vCopy gCopyRows
-	ILButton(Copy, CopyIcon[1] ":" CopyIcon[2], 16, 16)
+	ILButton(Copy, CopyIcon[1] ":" CopyIcon[2])
 Gui, Add, Button, -Wrap W22 H25 hwndPaste vPaste gPasteRows
-	ILButton(Paste, PasteIcon[1] ":" PasteIcon[2], 16, 16)
+	ILButton(Paste, PasteIcon[1] ":" PasteIcon[2])
 Gui, Add, Button, -Wrap W22 H25 hwndRemove vRemove gRemove
-	ILButton(Remove, RemoveIcon[1] ":" RemoveIcon[2], 16, 16)
+	ILButton(Remove, RemoveIcon[1] ":" RemoveIcon[2])
 Gui, Add, Text, vSeparator5 W25 H2 0x10
 Gui, Add, Button, -Wrap W22 H25 hwndUndo vUndo gUndo
-	ILButton(Undo, UndoIcon[1] ":" UndoIcon[2], 16, 16)
+	ILButton(Undo, UndoIcon[1] ":" UndoIcon[2])
 Gui, Add, Button, -Wrap W22 H25 hwndRedo vRedo gRedo
-	ILButton(Redo, RedoIcon[1] ":" RedoIcon[2], 16, 16)
+	ILButton(Redo, RedoIcon[1] ":" RedoIcon[2])
 Gui, Add, Text, vSeparator6 W25 H2 0x10
 Gui, Add, Button, -Wrap W22 H25 hwndDuplicate vDuplicate gDuplicate
-	ILButton(Duplicate, DuplicateIcon[1] ":" DuplicateIcon[2], 16, 16)
+	ILButton(Duplicate, DuplicateIcon[1] ":" DuplicateIcon[2])
 Gui, Add, Button, -Wrap W22 H25 hwndCopyTo vCopyTo gCopyTo
-	ILButton(CopyTo, CopyIcon[1] ":" CopyIcon[2], 16, 16)
+	ILButton(CopyTo, CopyIcon[1] ":" CopyIcon[2])
 Gui, Add, Text, vSeparator7 W25 H2 0x10
 Gui, Add, Button, -Wrap W22 H25 hwndEditComm vEditComm gEditComm
-	ILButton(EditComm, CommentIcon[1] ":" CommentIcon[2], 16, 16)
+	ILButton(EditComm, CommentIcon[1] ":" CommentIcon[2])
 Gui, Add, Button, -Wrap W22 H25 hwndFindReplace vFindReplace gFindReplace
-	ILButton(FindReplace, FindIcon[1] ":" FindIcon[2], 16, 16)
+	ILButton(FindReplace, FindIcon[1] ":" FindIcon[2])
 Gui, Add, Text, -Wrap y+129 xm W70 H22 Section vRepeat, %w_Lang015%:
 Gui, Add, Edit, ys-3 x+5 W90 R1 vRept Number
 Gui, Add, UpDown, vTimesM 0x80 Range0-999999999, 1
 Gui, Add, Button, -Wrap ys-4 x+5 W60 H23 hwndApplyT vApplyT gApplyT, %w_Lang017%
-	ILButton(ApplyT, ApplyIcon[1] ":" ApplyIcon[2], 16, 16, 0)
+	ILButton(ApplyT, ApplyIcon[1] ":" ApplyIcon[2], 0, "Left")
 Gui, Add, Text, W2 H25 ys-3 x+5 0x11 vSeparator1
 Gui, Add, Text, -Wrap x+5 ys W70 H22 vDelayT, %w_Lang016%
 Gui, Add, Edit, ys-3 x+5 W90 R1 vDelay
 Gui, Add, UpDown, vDelayG 0x80 Range0-999999999, %DelayG%
 Gui, Add, Button, -Wrap ys-4 x+5 W60 H23 hwndApplyI vApplyI gApplyI, %w_Lang017%
-	ILButton(ApplyI, ApplyIcon[1] ":" ApplyIcon[2], 16, 16, 0)
+	ILButton(ApplyI, ApplyIcon[1] ":" ApplyIcon[2], 0, "Left")
 Gui, Add, Text, W2 H25 ys-3 x+5 0x11 vSeparator2
 Gui, Add, Hotkey, ys-3 x+5 W150 vsInput
 Gui, Add, Button, -Wrap ys-4 x+0 W60 H23 hwndApplyL vApplyL gApplyL, %w_Lang018%
-	ILButton(ApplyL, InsertIcon[1] ":" InsertIcon[2], 16, 16, 0)
+	ILButton(ApplyL, InsertIcon[1] ":" InsertIcon[2], 0, "Left")
 Gui, Add, Text, W2 H25 ys-3 x+5 0x11 vSeparator3
 Gui, Add, Button, -Wrap Default ys-4 x+5 W60 H23 hwndEditButton vEditButton gEditButton, %w_Lang019%
-	ILButton(EditButton, EditIcon[1] ":" EditIcon[2], 16, 16, 0)
+	ILButton(EditButton, EditIcon[1] ":" EditIcon[2], 0, "Left")
 Gui, Add, Text, W2 H25 ys-3 x+5 0x11 vSeparator4
 Gui, Add, Text, ys-6 x+5 W100 vContextTip gSetWin cBlue, #IfWin: %IfDirectContext%
 Gui, Add, Text, yp+16 W100 vCoordTip gOptions, CoordMode: %CoordMouse%
@@ -1359,8 +1359,8 @@ Files := RTrim(Files, "`n")
 PMC.Import(Files)
 CurrentFileName := LoadedFileName
 Files := ""
-GoSub, FileRead
 GoSub, b_Start
+GoSub, FileRead
 GoSub, RecentFiles
 return
 
@@ -1573,7 +1573,7 @@ Gui, 14:Add, Text, y+10 xs+10 W395 H2 0x10
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_IN% y+10 xs+10 W195 vEx_IN R1, `#`Include (%t_Lang087%)
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_UV% yp x+5 W165 vEx_UV gEx_Checks R1, Global Variables
 Gui, 14:Add, Button, yp-5 xp+170 H25 W25 hwndEx_EdVars vEx_EdVars gVarsTree Disabled
-	ILButton(Ex_EdVars, IniTVIcon[1] ":" IniTVIcon[2], 16, 16)
+	ILButton(Ex_EdVars, IniTVIcon[1] ":" IniTVIcon[2])
 Gui, 14:Add, Text, y+5 xs+10 W95, COM Objects:
 Gui, 14:Add, Radio, -Wrap Checked%ComCr% yp xp+100 W95 vComCr R1, ComObjCreate
 Gui, 14:Add, Radio, -Wrap Checked%ComAc% yp xp+100 W95 vComAc R1, ComObjActive
@@ -1883,9 +1883,9 @@ Gui, 2:Font, s7
 Gui, 2:+Resize +hwndPrevID
 Gui, 2:Add, Button, -Wrap Section W60 H25 gPrevClose, %c_Lang022%
 Gui, 2:Add, Button, -Wrap ys W25 H25 hwndPrevCopy vPrevCopy gPrevCopy
-	ILButton(PrevCopy, CopyIcon[1] ":" CopyIcon[2], 16, 16)
+	ILButton(PrevCopy, CopyIcon[1] ":" CopyIcon[2])
 Gui, 2:Add, Button, -Wrap ys W25 H25 hwndPrevRefresh vPrevRefresh gPrevRefresh
-	ILButton(PrevRefresh, LoopIcon[1] ":" LoopIcon[2], 16, 16)
+	ILButton(PrevRefresh, LoopIcon[1] ":" LoopIcon[2])
 Gui, 2:Add, Checkbox, -Wrap ys+5 W95 vAutoRefresh R1, %t_Lang015%
 Gui, 2:Add, Checkbox, -Wrap ys+5 xp+100 W105 vOnTop gOnTop R1, %t_Lang016%
 Gui, 2:Add, Checkbox, -Wrap Checked%TabIndent% ys+5 xp+110 W85 vTabIndent gPrevRefresh R1, %t_Lang011%
@@ -3756,18 +3756,18 @@ Gui, 8:+owner1 -MaximizeBox -MinimizeBox +E0x00000400 +HwndCmdWin
 Gui, 1:+Disabled
 Gui, 8:Font, s7
 Gui, 8:Add, Button, -Wrap W25 H25 hwndOpenT vOpenT gOpenT
-	ILButton(OpenT, OpenIcon[1] ":" OpenIcon[2], 16, 16)
+	ILButton(OpenT, OpenIcon[1] ":" OpenIcon[2])
 Gui, 8:Add, Button, -Wrap W25 H25 ys x+0 hwndSaveT vSaveT gSaveT
-	ILButton(SaveT, SaveIcon[1] ":" SaveIcon[2], 16, 16)
+	ILButton(SaveT, SaveIcon[1] ":" SaveIcon[2])
 Gui, 8:Add, Text, W2 H25 ys+2 x+5 0x11
 Gui, 8:Add, Button, -Wrap W25 H25 ys x+4 hwndCutT vCutT gCutT
-	ILButton(CutT, CutIcon[1] ":" CutIcon[2], 16, 16)
+	ILButton(CutT, CutIcon[1] ":" CutIcon[2])
 Gui, 8:Add, Button, -Wrap W25 H25 ys x+0 hwndCopyT vCopyT gCopyT
-	ILButton(CopyT, CopyIcon[1] ":" CopyIcon[2], 16, 16)
+	ILButton(CopyT, CopyIcon[1] ":" CopyIcon[2])
 Gui, 8:Add, Button, -Wrap W25 H25 ys x+0 hwndPasteT vPasteT gPasteT
-	ILButton(PasteT, PasteIcon[1] ":" PasteIcon[2], 16, 16)
+	ILButton(PasteT, PasteIcon[1] ":" PasteIcon[2])
 Gui, 8:Add, Button, -Wrap W25 H25 ys x+0 hwndSelAllT vSelAllT gSelAllT
-	ILButton(SelAllT, CommentIcon[1] ":" CommentIcon[2], 16, 16)
+	ILButton(SelAllT, CommentIcon[1] ":" CommentIcon[2])
 Gui, 8:Add, Edit, Section xm vTextEdit gTextEdit WantTab W720 R30
 Gui, 8:Add, Text, Section, %w_Lang015%:
 Gui, 8:Add, Text,, %c_Lang017%:
@@ -3779,7 +3779,7 @@ Gui, 8:Add, Button, -Wrap Section Default xm y+15 W60 H23 gTextOK, %c_Lang020%
 Gui, 8:Add, Button, -Wrap ys W60 H23 gTextCancel, %c_Lang021%
 Gui, 8:Add, Button, -Wrap ys W60 H23 vTextApply gTextApply Disabled, %c_Lang131%
 Gui, 8:Add, Button, -Wrap ys W25 H23 hwndSpecialB vSpecialB gSpecKeys
-	ILButton(SpecialB, SpecIcon[1] ":" SpecIcon[2], 16, 16)
+	ILButton(SpecialB, SpecIcon[1] ":" SpecIcon[2])
 Gui, 8:Add, Radio, -Wrap Section ys-45 xs+190 Checked W100 vMsc R1, %c_Lang018%
 Gui, 8:Add, Radio, -Wrap W100 vSec R1, %c_Lang019%
 Gui, 8:Add, Radio, -Wrap Section Group Checked ys-15 xs+100 W200 vRaw gRaw R1, %c_Lang045%
@@ -5343,7 +5343,7 @@ Gui, 21:Add, Button, -Wrap yp-1 x+0 W30 H23 vSearchFEX gSearchAHK Disabled, ...
 Gui, 21:Add, Text, yp+30 xs+10 W130, %c_Lang089%:
 Gui, 21:Add, Combobox, W285 -Multi vFuncName gFuncName, %BuiltinFuncList%
 Gui, 21:Add, Button, -Wrap W22 yp-1 x+5 hwndFuncHelp vFuncHelp gFuncHelp Disabled
-	ILButton(FuncHelp, HelpIconB[1] ":" HelpIconB[2], 16, 16)
+	ILButton(FuncHelp, HelpIconB[1] ":" HelpIconB[2])
 Gui, 21:Add, Text, W310 yp+25 xs+10, %c_Lang090%:
 Gui, 21:Add, Edit, W310 R1 -Multi vVarValueF
 Gui, 21:Add, Text, y+7 W310, %c_Lang091%
@@ -6112,7 +6112,7 @@ Gui, 24:Add, Edit, yp+20 xs W385 -Multi vValue
 Gui, 24:Add, Text, y+10 W55, %c_Lang005%:
 Gui, 24:Add, DDL, yp-2 xp+60 W295 vIEWindows AltSubmit, %IEWindows%
 Gui, 24:Add, Button, -Wrap yp-1 x+5 W25 H25 hwndRefreshIEW vRefreshIEW gRefreshIEW
-	ILButton(RefreshIEW, LoopIcon[1] ":" LoopIcon[2], 16, 16)
+	ILButton(RefreshIEW, LoopIcon[1] ":" LoopIcon[2])
 Gui, 24:Add, Text, Section ym+30 xm+180 W215 R4 vComTip
 Gui, 24:Add, Button, -Wrap Section Default ym+246 xm W60 H23 gIEComOK, %c_Lang020%
 Gui, 24:Add, Button, -Wrap ys xs+135 W60 H23 vIEComApply gIEComApply Disabled, %c_Lang131%
@@ -6127,7 +6127,7 @@ Gui, 24:Add, Edit, xp+50 W115 vComHwnd, %ComHwnd%
 Gui, 24:Add, Text, x+5 W100, %c_Lang057%:
 Gui, 24:Add, Edit, xp+105 W115 vVarName
 Gui, 24:Add, Button, -Wrap ys+49 xs+365 W25 H25 hwndExpView vExpView gExpView
-	ILButton(ExpView, ExpViewIcon[1] ":" ExpViewIcon[2], 16, 16)
+	ILButton(ExpView, ExpViewIcon[1] ":" ExpViewIcon[2])
 Gui, 24:Add, Text, Section yp+6 xs W200, %c_Lang101%:
 Gui, 24:Add, Edit, yp+20 xs W390 R4 vComSc gComSc
 Gui, 24:Add, Button, -Wrap Section Default ym+246 xm W60 H23 gComOK, %c_Lang020%
@@ -6570,18 +6570,18 @@ Gui, 30:+owner1 -MaximizeBox -MinimizeBox +E0x00000400 +hwndCmdWin
 Gui, 24:+Disabled
 Gui, 30:Font, s7
 Gui, 30:Add, Button, -Wrap W25 H25 hwndOpenT vOpenT gOpenT
-	ILButton(OpenT, OpenIcon[1] ":" OpenIcon[2], 16, 16)
+	ILButton(OpenT, OpenIcon[1] ":" OpenIcon[2])
 Gui, 30:Add, Button, -Wrap W25 H25 ys x+0 hwndSaveT vSaveT gSaveT
-	ILButton(SaveT, SaveIcon[1] ":" SaveIcon[2], 16, 16)
+	ILButton(SaveT, SaveIcon[1] ":" SaveIcon[2])
 Gui, 30:Add, Text, W2 H25 ys+2 x+5 0x11
 Gui, 30:Add, Button, -Wrap W25 H25 ys x+4 hwndCutT vCutT gCutT
-	ILButton(CutT, CutIcon[1] ":" CutIcon[2], 16, 16)
+	ILButton(CutT, CutIcon[1] ":" CutIcon[2])
 Gui, 30:Add, Button, -Wrap W25 H25 ys x+0 hwndCopyT vCopyT gCopyT
-	ILButton(CopyT, CopyIcon[1] ":" CopyIcon[2], 16, 16)
+	ILButton(CopyT, CopyIcon[1] ":" CopyIcon[2])
 Gui, 30:Add, Button, -Wrap W25 H25 ys x+0 hwndPasteT vPasteT gPasteT
-	ILButton(PasteT, PasteIcon[1] ":" PasteIcon[2], 16, 16)
+	ILButton(PasteT, PasteIcon[1] ":" PasteIcon[2])
 Gui, 30:Add, Button, -Wrap W25 H25 ys x+0 hwndSelAllT vSelAllT gSelAllT
-	ILButton(SelAllT, CommentIcon[1] ":" CommentIcon[2], 16, 16)
+	ILButton(SelAllT, CommentIcon[1] ":" CommentIcon[2])
 Gui, 30:Font, s9, Courier New
 Gui, 30:Add, Edit, Section xm vTextEdit gTextEdit WantTab W720 R30, %ComSc%
 Gui, 30:Font
@@ -6784,24 +6784,24 @@ Gui, 28:Add, Edit, W40 H23 Number
 Gui, 28:Add, UpDown, vOSHK gOSHK 0x80 Horz 16 Range1-%TabCount%, %A_List%
 Gui, 28:Font, Bold s7
 Gui, 28:Add, Button, ys-1 x+4 W25 H25 hwndOSPlay vOSPlay gOSPlay
-	ILButton(OSPlay, TestRunIcon[1] ":" TestRunIcon[2], 16, 16)
+	ILButton(OSPlay, TestRunIcon[1] ":" TestRunIcon[2])
 Gui, 28:Add, Button, ys-1 x+0 W25 H25 hwndOSStop vOSStop gf_AbortKey
-	ILButton(OSStop, RecStopIcon[1] ":" RecStopIcon[2], 16, 16)
+	ILButton(OSStop, RecStopIcon[1] ":" RecStopIcon[2])
 Gui, 28:Add, Button, ys-1 x+0 W25 H25 hwndOSPlayOpt vOSPlayOpt gShowPlayMenu
-	ILButton(OSPlayOpt, PlayOptIcon[1] ":" PlayOptIcon[2], 16, 16, 0)
+	ILButton(OSPlayOpt, PlayOptIcon[1] ":" PlayOptIcon[2], 0, "Left")
 Gui, 28:Add, Text, W2 H22 ys+3 x+5 0x11
 Gui, 28:Add, Button, ys-1 x+4 W25 H25 hwndOSRec vOSRec gRecStart
-	ILButton(OSRec, RecordIcon[1] ":" RecordIcon[2], 16, 16)
+	ILButton(OSRec, RecordIcon[1] ":" RecordIcon[2])
 Gui, 28:Add, Button, ys-1 x+0 W35 H25 hwndOSRecNew vOSRecNew gRecStartNew, +
-	ILButton(OSRecNew, RecordIcon[1] ":" RecordIcon[2], 16, 16, 0)
+	ILButton(OSRecNew, RecordIcon[1] ":" RecordIcon[2], 0, "Left")
 Gui, 28:Add, Button, ys-1 x+0 W25 H25 hwndOSRecOpt vOSRecOpt gShowRecMenu
-	ILButton(OSRecOpt, RecOptIcon[1] ":" RecOptIcon[2], 16, 16, 0)
+	ILButton(OSRecOpt, RecOptIcon[1] ":" RecOptIcon[2], 0, "Left")
 Gui, 28:Add, Text, W2 H22 ys+3 x+5 0x11
 Gui, 28:Add, Button, ys-1 x+4 W25 H25 hwndOSClear vOSClear gOSClear
-	ILButton(OSClear, RemoveIcon[1] ":" RemoveIcon[2], 16, 16)
+	ILButton(OSClear, RemoveIcon[1] ":" RemoveIcon[2])
 Gui, 28:Add, Text, W2 H22 ys+3 x+5 0x11
 Gui, 28:Add, Checkbox, Checked%ShowProgBar% ys-1 x+4 W25 H25 hwndOSProgB vOSProgB gProgBarToggle 0x1000
-	ILButton(OSProgB, ProgBIcon[1] ":" ProgBIcon[2], 16, 16)
+	ILButton(OSProgB, ProgBIcon[1] ":" ProgBIcon[2])
 Gui, 28:Add, Text, W2 H22 ys+3 x+5 0x11
 Gui, 28:Font
 Gui, 28:Font, s10, Webdings
@@ -8090,7 +8090,7 @@ RowSelection := LV_GetCount("Selected")
 GuiControl, 18:, Found, %t_Lang071%: %RowSelection%
 If (RowSelection)
 	LV_Modify(LV_GetNext(), "Vis")
-GuiControl, Focus, InputList%A_List%
+; GuiControl, Focus, InputList%A_List%
 return
 
 ReplaceOK:
@@ -8239,7 +8239,7 @@ Else
 		HistCheck(A_List)
 }
 GuiControl, 18:, Replaced, %t_Lang072%: %Replaces%
-GuiControl, Focus, InputList%A_List%
+; GuiControl, Focus, InputList%A_List%
 return
 
 RegExSearch:
@@ -9914,18 +9914,18 @@ If KeepDefKeys
 If AutoUpdate
 	Menu, HelpMenu, Check, %h_Lang004%
 
-; Icons
-Try Menu, FileMenu, Icon, %f_Lang001%`t%_s%Ctrl+N, % NewIcon[1], % NewIcon[2]+1
-Try Menu, FileMenu, Icon, %f_Lang002%`t%_s%Ctrl+O, % OpenIcon[1], % OpenIcon[2]+1
-Try Menu, FileMenu, Icon, %f_Lang003%`t%_s%Ctrl+S, % SaveIcon[1], % SaveIcon[2]+1
-Try Menu, FileMenu, Icon, %f_Lang004%`t%_s%Ctrl+Shift+S, % SaveIcon[1], % SaveIcon[2]+1
-Try Menu, FileMenu, Icon, %f_Lang005%`t%_s%Ctrl+I, % ImportIcon[1], % ImportIcon[2]+1
-Try Menu, FileMenu, Icon, %f_Lang006%`t%_s%Ctrl+Alt+S, % SaveLIcon[1], % SaveLIcon[2]+1
-Try Menu, FileMenu, Icon, %f_Lang007%, % RecentIcon[1], % RecentIcon[2]+1
-Try Menu, FileMenu, Icon, %f_Lang008%`t%_s%Ctrl+E, % ExportIcon[1], % ExportIcon[2]+1
-Try Menu, FileMenu, Icon, %f_Lang009%`t%_s%Ctrl+P, % PreviewIcon[1], % PreviewIcon[2]+1
-Try Menu, FileMenu, Icon, %f_Lang010%`t%_s%Alt+F3, % ListVarsIcon[1], % ListVarsIcon[2]+1
-Try Menu, FileMenu, Icon, %f_Lang011%`t%_s%Alt+F4, % ExitIcon[1], % ExitIcon[2]+1
+; Menu Icons
+Try Menu, FileMenu, Icon, %f_Lang001%`t%_s%Ctrl+N, % NewIcon[1], % NewIcon[2]
+Try Menu, FileMenu, Icon, %f_Lang002%`t%_s%Ctrl+O, % OpenIcon[1], % OpenIcon[2]
+Try Menu, FileMenu, Icon, %f_Lang003%`t%_s%Ctrl+S, % SaveIcon[1], % SaveIcon[2]
+Try Menu, FileMenu, Icon, %f_Lang004%`t%_s%Ctrl+Shift+S, % SaveIcon[1], % SaveIcon[2]
+Try Menu, FileMenu, Icon, %f_Lang005%`t%_s%Ctrl+I, % ImportIcon[1], % ImportIcon[2]
+Try Menu, FileMenu, Icon, %f_Lang006%`t%_s%Ctrl+Alt+S, % SaveLIcon[1], % SaveLIcon[2]
+Try Menu, FileMenu, Icon, %f_Lang007%, % RecentIcon[1], % RecentIcon[2]
+Try Menu, FileMenu, Icon, %f_Lang008%`t%_s%Ctrl+E, % ExportIcon[1], % ExportIcon[2]
+Try Menu, FileMenu, Icon, %f_Lang009%`t%_s%Ctrl+P, % PreviewIcon[1], % PreviewIcon[2]
+Try Menu, FileMenu, Icon, %f_Lang010%`t%_s%Alt+F3, % ListVarsIcon[1], % ListVarsIcon[2]
+Try Menu, FileMenu, Icon, %f_Lang011%`t%_s%Alt+F4, % ExitIcon[1], % ExitIcon[2]
 Try Menu, InsertMenu, Icon, %i_Lang001%`t%_s%F2, % LVIcons[2][1], % LVIcons[2][2] ; Mouse
 Try Menu, InsertMenu, Icon, %i_Lang002%`t%_s%F3, % LVIcons[1][1], % LVIcons[1][2] ; Text
 Try Menu, InsertMenu, Icon, %i_Lang003%`t%_s%F4, % LVIcons[9][1], % LVIcons[9][2] ; ControlCmd
@@ -9938,39 +9938,39 @@ Try Menu, InsertMenu, Icon, %i_Lang009%`t%_s%F10, % LVIcons[6][1], % LVIcons[6][
 Try Menu, InsertMenu, Icon, %i_Lang010%`t%_s%F11, % LVIcons[10][1], % LVIcons[10][2] ; IECom
 Try Menu, InsertMenu, Icon, %i_Lang011%`t%_s%F12, % LVIcons[13][1], % LVIcons[13][2] ; SendMsg
 Try Menu, InsertMenu, Icon, %i_Lang012%`t%_s%Shift+F3, % LVIcons[30][1], % LVIcons[30][2] ; Special
-Try Menu, EditMenu, Icon, %m_Lang004%`t%_s%Enter, % EditIcon[1], % EditIcon[2]+1
-Try Menu, EditMenu, Icon, %e_Lang001%`t%_s%Ctrl+D, % DuplicateIcon[1], % DuplicateIcon[2]+1
-Try Menu, EditMenu, Icon, %e_Lang003%`t%_s%Ctrl+F, % FindIcon[1], % FindIcon[2]+1
-Try Menu, EditMenu, Icon, %e_Lang002%`t%_s%Ctrl+L, % CommentIcon[1], % CommentIcon[2]+1
-Try Menu, EditMenu, Icon, %e_Lang005%`t%_s%Ctrl+Z, % UndoIcon[1], % UndoIcon[2]+1
-Try Menu, EditMenu, Icon, %e_Lang006%`t%_s%Ctrl+Y, % RedoIcon[1], % RedoIcon[2]+1
-Try Menu, EditMenu, Icon, %e_Lang007%`t%_s%Ctrl+X, % CutIcon[1], % CutIcon[2]+1
-Try Menu, EditMenu, Icon, %e_Lang008%`t%_s%Ctrl+C, % CopyIcon[1], % CopyIcon[2]+1
-Try Menu, EditMenu, Icon, %e_Lang009%`t%_s%Ctrl+V, % PasteIcon[1], % PasteIcon[2]+1
-Try Menu, EditMenu, Icon, %e_Lang010%`t%_s%Delete, % RemoveIcon[1], % RemoveIcon[2]+1
-Try Menu, EditMenu, Icon, %e_Lang013%`t%_s%Insert, % InsertIcon[1], % InsertIcon[2]+1
-Try Menu, EditMenu, Icon, %e_Lang011%`t%_s%Ctrl+PgUp, % MoveUpIcon[1], % MoveUpIcon[2]+1
-Try Menu, EditMenu, Icon, %e_Lang012%`t%_s%Ctrl+PgDn, % MoveDnIcon[1], % MoveDnIcon[2]+1
-Try Menu, MacroMenu, Icon, %r_Lang001%`t%_s%Ctrl+R, % RecordIcon[1], % RecordIcon[2]+1
-Try Menu, MacroMenu, Icon, %r_Lang002%`t%_s%Ctrl+Enter, % PlayIcon[1], % PlayIcon[2]+1
-Try Menu, MacroMenu, Icon, %r_Lang003%`t%_s%Ctrl+Shift+Enter, % TestRunIcon[1], % TestRunIcon[2]+1
-Try Menu, MacroMenu, Icon, %r_Lang004%`t%_s%Ctrl+Shift+T, % RunTimerIcon[1], % RunTimerIcon[2]+1
-Try Menu, MacroMenu, Icon, %r_Lang005%`t%_s%Ctrl+T, % PlusIcon[1], % PlusIcon[2]+1
-Try Menu, MacroMenu, Icon, %r_Lang006%`t%_s%Ctrl+W, % CloseIcon[1], % CloseIcon[2]+1
-Try Menu, MacroMenu, Icon, %r_Lang007%`t%_s%Ctrl+H, % ContextIcon[1], % ContextIcon[2]+1
-Try Menu, OptionsMenu, Icon, %o_Lang001%`t%_s%Ctrl+G, % OptionsIcon[1], % OptionsIcon[2]+1
-Try Menu, HelpMenu, Icon, %m_Lang009%`t%_s%F1, % HelpIconB[1], % HelpIconB[2]+1
-Try Menu, DonationMenu, Icon, %p_Lang001%, % DonateIcon[1], % DonateIcon[2]+1
-Try Menu, Tray, Icon, %w_Lang005%, % PlayIcon[1], % PlayIcon[2]+1
-Try Menu, Tray, Icon, %w_Lang008%, % RecStopIcon[1], % RecStopIcon[2]+1
-Try Menu, Tray, Icon, %w_Lang004%, % RecordIcon[1], % RecordIcon[2]+1
-Try Menu, Tray, Icon, %w_Lang002%, % PreviewIcon[1], % PreviewIcon[2]+1
-Try Menu, Tray, Icon, %f_Lang010%, % ListVarsIcon[1], % ListVarsIcon[2]+1
-Try Menu, Tray, Icon, %f_Lang001%, % NewIcon[1], % NewIcon[2]+1
-Try Menu, Tray, Icon, %f_Lang002%, % OpenIcon[1], % OpenIcon[2]+1
-Try Menu, Tray, Icon, %f_Lang003%, % SaveIcon[1], % SaveIcon[2]+1
-Try Menu, Tray, Icon, %w_Lang003%, % OptionsIcon[1], % OptionsIcon[2]+1
-Try Menu, Tray, Icon, %f_Lang011%, % ExitIcon[1], % ExitIcon[2]+1
+Try Menu, EditMenu, Icon, %m_Lang004%`t%_s%Enter, % EditIcon[1], % EditIcon[2]
+Try Menu, EditMenu, Icon, %e_Lang001%`t%_s%Ctrl+D, % DuplicateIcon[1], % DuplicateIcon[2]
+Try Menu, EditMenu, Icon, %e_Lang003%`t%_s%Ctrl+F, % FindIcon[1], % FindIcon[2]
+Try Menu, EditMenu, Icon, %e_Lang002%`t%_s%Ctrl+L, % CommentIcon[1], % CommentIcon[2]
+Try Menu, EditMenu, Icon, %e_Lang005%`t%_s%Ctrl+Z, % UndoIcon[1], % UndoIcon[2]
+Try Menu, EditMenu, Icon, %e_Lang006%`t%_s%Ctrl+Y, % RedoIcon[1], % RedoIcon[2]
+Try Menu, EditMenu, Icon, %e_Lang007%`t%_s%Ctrl+X, % CutIcon[1], % CutIcon[2]
+Try Menu, EditMenu, Icon, %e_Lang008%`t%_s%Ctrl+C, % CopyIcon[1], % CopyIcon[2]
+Try Menu, EditMenu, Icon, %e_Lang009%`t%_s%Ctrl+V, % PasteIcon[1], % PasteIcon[2]
+Try Menu, EditMenu, Icon, %e_Lang010%`t%_s%Delete, % RemoveIcon[1], % RemoveIcon[2]
+Try Menu, EditMenu, Icon, %e_Lang013%`t%_s%Insert, % InsertIcon[1], % InsertIcon[2]
+Try Menu, EditMenu, Icon, %e_Lang011%`t%_s%Ctrl+PgUp, % MoveUpIcon[1], % MoveUpIcon[2]
+Try Menu, EditMenu, Icon, %e_Lang012%`t%_s%Ctrl+PgDn, % MoveDnIcon[1], % MoveDnIcon[2]
+Try Menu, MacroMenu, Icon, %r_Lang001%`t%_s%Ctrl+R, % RecordIcon[1], % RecordIcon[2]
+Try Menu, MacroMenu, Icon, %r_Lang002%`t%_s%Ctrl+Enter, % PlayIcon[1], % PlayIcon[2]
+Try Menu, MacroMenu, Icon, %r_Lang003%`t%_s%Ctrl+Shift+Enter, % TestRunIcon[1], % TestRunIcon[2]
+Try Menu, MacroMenu, Icon, %r_Lang004%`t%_s%Ctrl+Shift+T, % RunTimerIcon[1], % RunTimerIcon[2]
+Try Menu, MacroMenu, Icon, %r_Lang005%`t%_s%Ctrl+T, % PlusIcon[1], % PlusIcon[2]
+Try Menu, MacroMenu, Icon, %r_Lang006%`t%_s%Ctrl+W, % CloseIcon[1], % CloseIcon[2]
+Try Menu, MacroMenu, Icon, %r_Lang007%`t%_s%Ctrl+H, % ContextIcon[1], % ContextIcon[2]
+Try Menu, OptionsMenu, Icon, %o_Lang001%`t%_s%Ctrl+G, % OptionsIcon[1], % OptionsIcon[2]
+Try Menu, HelpMenu, Icon, %m_Lang009%`t%_s%F1, % HelpIconB[1], % HelpIconB[2]
+Try Menu, DonationMenu, Icon, %p_Lang001%, % DonateIcon[1], % DonateIcon[2]
+Try Menu, Tray, Icon, %w_Lang005%, % PlayIcon[1], % PlayIcon[2]
+Try Menu, Tray, Icon, %w_Lang008%, % RecStopIcon[1], % RecStopIcon[2]
+Try Menu, Tray, Icon, %w_Lang004%, % RecordIcon[1], % RecordIcon[2]
+Try Menu, Tray, Icon, %w_Lang002%, % PreviewIcon[1], % PreviewIcon[2]
+Try Menu, Tray, Icon, %f_Lang010%, % ListVarsIcon[1], % ListVarsIcon[2]
+Try Menu, Tray, Icon, %f_Lang001%, % NewIcon[1], % NewIcon[2]
+Try Menu, Tray, Icon, %f_Lang002%, % OpenIcon[1], % OpenIcon[2]
+Try Menu, Tray, Icon, %f_Lang003%, % SaveIcon[1], % SaveIcon[2]
+Try Menu, Tray, Icon, %w_Lang003%, % OptionsIcon[1], % OptionsIcon[2]
+Try Menu, Tray, Icon, %f_Lang011%, % ExitIcon[1], % ExitIcon[2]
 
 return
 

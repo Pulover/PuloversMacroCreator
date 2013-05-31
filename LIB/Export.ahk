@@ -96,9 +96,9 @@
 			If InStr(Step, "``n")
 			{
 				StringReplace, Step, Step, ``n, `n, All
-				StringReplace, Step, Step, ```,, `,, All
 				Step := "`n(LTrim`n" Step "`n)"
 			}
+			StringReplace, Step, Step, ```,, `````,, All
 			RowData := "`n" Type ", " Target ",, " Step
 			If (Comment <> "")
 				RowData .= "  " "; " Comment
@@ -415,6 +415,7 @@
 				StringReplace, Step, Step, ``n, `n, All
 				Step := "`n(LTrim`n" Step "`n)"
 			}
+			StringReplace, Step, Step, ```,, `````,, All
 			RowData := "`n" Type ", " Step
 			RowData := RTrim(RowData, ", ")
 			GoSub, Add_CD
