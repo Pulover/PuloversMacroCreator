@@ -128,6 +128,8 @@ RButton::
 RButton Up::
 return
 
+#If NoKey
+
 Esc::
 StopIt := 1
 return
@@ -189,6 +191,13 @@ MoveRectangle("w", 1, LineW)
 iX := "", iY := ""
 GoSub, ShowAreaTip
 return
+
+Esc::
+Gui, 20:Cancel
+SetTimer, WatchCursor, Off
+Draw := 0
+WinActivate, ahk_id %CmdWin%
+Exit
 
 #If
 

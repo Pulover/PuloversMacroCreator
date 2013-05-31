@@ -6,7 +6,7 @@
 ; rodolfoub@gmail.com
 ; Home: http://www.autohotkey.net/~Pulover
 ; Forum: http://www.autohotkey.com/board/topic/79763-macro-creator
-; Version: 3.7.2
+; Version: 3.7.3
 ; Release Date: May, 2013
 ; AutoHotkey Version: 1.1.10.01
 ; Copyright © 2012-2013 Rodolfo U. Batista
@@ -71,7 +71,7 @@ DefaultIcon := (A_IsCompiled) ? A_ScriptFullPath
 			:  (FileExist("Images\PMC3_48.ico") ? "Images\PMC3_48.ico" : A_AhkPath)
 Menu, Tray, Icon, %DefaultIcon%, 1, 1
 
-CurrentVersion := "3.7.2"
+CurrentVersion := "3.7.3"
 ReleaseDate := "May, 2013"
 
 ;##### Ini File Read #####
@@ -1329,8 +1329,8 @@ If ((ListCount > 0) && (SavePrompt))
 }
 PMC.Import(A_GuiEvent)
 CurrentFileName := LoadedFileName
-GoSub, RecentFiles
 GoSub, FileRead
+GoSub, RecentFiles
 return
 
 Open:
@@ -1359,8 +1359,9 @@ Files := RTrim(Files, "`n")
 PMC.Import(Files)
 CurrentFileName := LoadedFileName
 Files := ""
-GoSub, RecentFiles
 GoSub, FileRead
+GoSub, b_Start
+GoSub, RecentFiles
 return
 
 FileRead:
@@ -1400,6 +1401,7 @@ GoSub, RowCheck
 GuiControl, Focus, InputList%A_List%
 If WinExist("ahk_id " PrevID)
 	GoSub, PrevRefresh
+GoSub, b_Start
 GoSub, RecentFiles
 return
 
@@ -3141,7 +3143,7 @@ MouseGetI:
 CoordMode, Mouse, %CoordMouse%
 Gui, Submit, NoHide
 NoKey := 1
-WinMinimize, ahk_id %PMCWinID%
+WinMinimize, ahk_id %CmdWin%
 SetTimer, WatchCursor, 100
 StopIt := 0
 WaitFor.Key("RButton")
@@ -3149,7 +3151,7 @@ SetTimer, WatchCursor, off
 ToolTip
 Sleep, 200
 NoKey := 0
-WinActivate, ahk_id %PMCWinID%
+WinActivate, ahk_id %CmdWin%
 If (StopIt)
 	Exit
 GuiControlGet, CtrlState, Enabled, DefCt
@@ -3175,7 +3177,7 @@ return
 MouseGetE:
 CoordMode, Mouse, %CoordMouse%
 NoKey := 1
-WinMinimize, ahk_id %PMCWinID%
+WinMinimize, ahk_id %CmdWin%
 SetTimer, WatchCursor, 100
 StopIt := 0
 WaitFor.Key("RButton")
@@ -3183,7 +3185,7 @@ SetTimer, WatchCursor, off
 ToolTip
 Sleep, 200
 NoKey := 0
-WinActivate, ahk_id %PMCWinID%
+WinActivate, ahk_id %CmdWin%
 If (StopIt)
 	Exit
 GuiControl,, EndX, %xPos%
@@ -3206,7 +3208,7 @@ Else
 	ControlGet, SelIEWinName, Choice,, ComboBox2, ahk_id %CmdWin%
 CoordMode, Mouse, Window
 NoKey := 1
-WinMinimize, ahk_id %PMCWinID%
+WinMinimize, ahk_id %CmdWin%
 ComObjError(false)
 If (TabControl = 2)
 	o_ie := %ComHwnd%
@@ -3235,7 +3237,7 @@ SetTimer, WatchCursorIE, off
 ToolTip
 Sleep, 200
 NoKey := 0
-WinActivate, ahk_id %PMCWinID%
+WinActivate, ahk_id %CmdWin%
 If (StopIt)
 {
 	ComObjError(true)
@@ -3289,7 +3291,7 @@ return
 GetCtrl:
 CoordMode, Mouse, %CoordMouse%
 NoKey := 1
-WinMinimize, ahk_id %PMCWinID%
+WinMinimize, ahk_id %CmdWin%
 SetTimer, WatchCursor, 100
 StopIt := 0
 WaitFor.Key("RButton")
@@ -3297,7 +3299,7 @@ SetTimer, WatchCursor, off
 ToolTip
 Sleep, 200
 NoKey := 0
-WinActivate, ahk_id %PMCWinID%
+WinActivate, ahk_id %CmdWin%
 If (StopIt)
 	Exit
 GuiControl,, DefCt, %control%
@@ -3311,7 +3313,7 @@ GetWin:
 CoordMode, Mouse, %CoordMouse%
 Gui, Submit, NoHide
 NoKey := 1
-WinMinimize, ahk_id %PMCWinID%
+WinMinimize, ahk_id %CmdWin%
 SetTimer, WatchCursor, 100
 StopIt := 0
 WaitFor.Key("RButton")
@@ -3319,7 +3321,7 @@ SetTimer, WatchCursor, off
 ToolTip
 Sleep, 200
 NoKey := 0
-WinActivate, ahk_id %PMCWinID%
+WinActivate, ahk_id %CmdWin%
 If (StopIt)
 	Exit
 If Ident = Title
@@ -3358,7 +3360,7 @@ WinGetP:
 CoordMode, Mouse, %CoordMouse%
 Gui, Submit, NoHide
 NoKey := 1
-WinMinimize, ahk_id %PMCWinID%
+WinMinimize, ahk_id %CmdWin%
 SetTimer, WatchCursor, 100
 StopIt := 0
 WaitFor.Key("RButton")
@@ -3367,7 +3369,7 @@ SetTimer, WatchCursor, off
 ToolTip
 Sleep, 200
 NoKey := 0
-WinActivate, ahk_id %PMCWinID%
+WinActivate, ahk_id %CmdWin%
 If (StopIt)
 	Exit
 GuiControl,, PosX, %X%
@@ -3381,7 +3383,7 @@ CtrlGetP:
 CoordMode, Mouse, %CoordMouse%
 Gui, Submit, NoHide
 NoKey := 1
-WinMinimize, ahk_id %PMCWinID%
+WinMinimize, ahk_id %CmdWin%
 SetTimer, WatchCursor, 100
 StopIt := 0
 WaitFor.Key("RButton")
@@ -3390,7 +3392,7 @@ SetTimer, WatchCursor, off
 ToolTip
 Sleep, 200
 NoKey := 0
-WinActivate, ahk_id %PMCWinID%
+WinActivate, ahk_id %CmdWin%
 If (StopIt)
 	Exit
 GuiControl,, PosX, %X%
@@ -3413,7 +3415,7 @@ SS := 1
 GetArea:
 Gui, Submit, NoHide
 Draw := 1
-WinMinimize, ahk_id %PMCWinID%
+WinMinimize, ahk_id %CmdWin%
 FirstCall := True
 CoordMode, Mouse, Screen
 Gui, 20:-Caption +ToolWindow +LastFound +AlwaysOnTop
@@ -3464,13 +3466,13 @@ If SS = 1
 	GuiControl, 19:, ImgFile, %file%
 	GoSub, MakePrev
 	SS := 0
-	WinActivate, ahk_id %PMCWinID%
+	WinActivate, ahk_id %CmdWin%
 	return
 }
 If ((iX = eX) || (iY = eY)) && (control <> "")
 	GuiControl, 19:ChooseString, CoordPixel, Window
 iX := wX, iY := wY, eX := wX + wW, eY := wY + wH
-WinActivate, ahk_id %PMCWinID%
+WinActivate, ahk_id %CmdWin%
 GuiControl, 19:, iPosX, %iX%
 GuiControl, 19:, iPosY, %iY%
 GuiControl, 19:, ePosX, %eX%
@@ -3480,7 +3482,7 @@ return
 GetPixel:
 CoordMode, Mouse, %CoordPixel%
 NoKey := 1
-WinMinimize, ahk_id %PMCWinID%
+WinMinimize, ahk_id %CmdWin%
 SetTimer, WatchCursor, 10
 StopIt := 0
 WaitFor.Key("RButton")
@@ -3488,7 +3490,7 @@ SetTimer, WatchCursor, off
 ToolTip
 Sleep, 200
 NoKey := 0
-WinActivate, ahk_id %PMCWinID%
+WinActivate, ahk_id %CmdWin%
 If (StopIt)
 	Exit
 If InStr(A_GuiControl, "Color")
@@ -4495,11 +4497,11 @@ Type := LTrim(A_ThisLabel, "Add")
 RowSelection := LV_GetCount("Selected")
 If RowSelection = 0
 {
-	LV_Add("Check", ListCount%A_List%+1, "[" Type "]", "", 1, 0, Type)
+	LV_Add("Check", ListCount%A_List%+1, Type, "", 1, 0, Type)
 	LV_Modify(ListCount%A_List%+1, "Vis")
 }
 Else
-	LV_Insert(LV_GetNext(), "Check", "", "[" Type "]", "", 1, 0, Type)
+	LV_Insert(LV_GetNext(), "Check", "", Type, "", 1, 0, Type)
 GoSub, b_Start
 GoSub, RowCheck
 GuiControl, Focus, InputList%A_List%
@@ -6467,7 +6469,7 @@ If (ComCLSID = "InternetExplorer.Application")
 {
 	CoordMode, Mouse, Window
 	NoKey := 1, L_Label := ComCLSID
-	WinMinimize, ahk_id %PMCWinID%
+	WinMinimize, ahk_id %CmdWin%
 	SetTimer, WatchCursorIE, 100
 	StopIt := 0
 	WaitFor.Key("RButton")
@@ -6475,7 +6477,7 @@ If (ComCLSID = "InternetExplorer.Application")
 	ToolTip
 	Sleep, 200
 	NoKey := 0, L_Label := ""
-	WinActivate, ahk_id %PMCWinID%
+	WinActivate, ahk_id %CmdWin%
 	If (StopIt)
 		Exit
 	Try
@@ -6493,7 +6495,7 @@ Else If (ComCLSID = "Excel.Application")
 {
 	CoordMode, Mouse, Window
 	NoKey := 1
-	WinMinimize, ahk_id %PMCWinID%
+	WinMinimize, ahk_id %CmdWin%
 	SetTimer, WatchCursorXL, 100
 	StopIt := 0
 	WaitFor.Key("RButton")
@@ -6501,7 +6503,7 @@ Else If (ComCLSID = "Excel.Application")
 	ToolTip
 	Sleep, 200
 	NoKey := 0
-	WinActivate, ahk_id %PMCWinID%
+	WinActivate, ahk_id %CmdWin%
 	If (StopIt)
 		Exit
 	Try

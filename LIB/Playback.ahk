@@ -744,6 +744,8 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC)
 					GoSub, pb_Sleep
 				}
 			}
+			If (StopIt || BreakIt)
+				break
 		}
 		If (StopIt || BreakIt || (lcX > 0))
 			break
