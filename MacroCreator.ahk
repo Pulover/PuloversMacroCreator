@@ -8382,14 +8382,18 @@ return
 
 FastKeyToggle:
 SlowKeyOn := 0
-TrayTip, %AppName%, % (FastKeyOn := !FastKeyOn) ? t_Lang036 " " SpeedUp "x" : t_Lang035 " 1x"
+FastKeyOn := !FastKeyOn
+If ShowStep = 1
+	TrayTip, %AppName%, % (FastKeyOn) ? t_Lang036 " " SpeedUp "x" : t_Lang035 " 1x"
 GuiControl, 28:, OSSlow, 0
 GuiControl, 28:, OSFast, %FastKeyOn%
 return
 
 SlowKeyToggle:
 FastKeyOn := 0
-TrayTip, %AppName%, % (SlowKeyOn := !SlowKeyOn) ? t_Lang037 " " SpeedDn "x" : t_Lang035 " 1x"
+SlowKeyOn := !SlowKeyOn
+If ShowStep = 1
+	TrayTip, %AppName%, % (SlowKeyOn) ? t_Lang037 " " SpeedDn "x" : t_Lang035 " 1x"
 GuiControl, 28:, OSFast, 0
 GuiControl, 28:, OSSlow, %SlowKeyOn%
 return
