@@ -6705,34 +6705,43 @@ Gui, 1:+Disabled
 Gui, 27:Font, s7
 Gui, 27:Add, Groupbox, W180 H100
 Gui, 27:Add, Edit, ys+15 xs+15 Limit Number W150
-Gui, 27:Add, UpDown, vDelayX 0x80 Range0-9999999, 250
-Gui, 27:Add, Radio, -Wrap Section yp+25 Checked W150 vMsc R1, %c_Lang018%
-Gui, 27:Add, Radio, -Wrap W150 vSec R1, %c_Lang019%
-Gui, 27:Add, Radio, -Wrap W150 vMin R1, %c_Lang154%
-Gui, 27:Add, Radio, -Wrap Section Group Checked xm W180 vRunOnce R1, %t_Lang078%
-Gui, 27:Add, Radio, -Wrap W180 vTimedRun R1, %t_Lang079%
+Gui, 27:Add, UpDown, vTimerDelayX 0x80 Range0-9999999, %TimerDelayX%
+Gui, 27:Add, Radio, -Wrap Section Checked%TimerMsc% yp+25 W150 vTimerMsc R1, %c_Lang018%
+Gui, 27:Add, Radio, -Wrap Checked%TimerSec% W150 vTimerSec R1, %c_Lang019%
+Gui, 27:Add, Radio, -Wrap Checked%TimerMin% W150 vTimerMin R1, %c_Lang154%
+Gui, 27:Add, Radio, -Wrap Section Group Checked%RunOnce% xm W180 vRunOnce R1, %t_Lang078%
+Gui, 27:Add, Radio, -Wrap Checked%TimedRun% W180 vTimedRun R1, %t_Lang079%
 Gui, 27:Add, Button, -Wrap Section Default xm W60 H23 gTimerOK, %c_Lang020%
 Gui, 27:Add, Button, -Wrap ys W60 H23 gTimerCancel, %c_Lang021%
+If !(Timer_ran)
+{
+	GuiControl, 27:, TimerDelayX, 250
+	GuiControl, 27:, TimerMsc, 1
+	GuiControl, 27:, RunOnce, 1
+}
 Gui, 27:Show,, %t_Lang080%
 return
 
 TimerOK:
-Gui, Submit, NoHide
+Gui, 27:Submit, NoHide
 Gui, 1:-Disabled
 Gui, 27:Destroy
 Gui, 1:Default
+Timer_ran := True
 If ListCount%A_List% = 0
 	return
 GoSub, SaveData
 StopIt := 0
 Tooltip
 WinMinimize, ahk_id %PMCWinID%
-If Sec = 1
-	DelayX *= 1000
-Else If Min = 1
-	DelayX *= 60000
+If TimerSec = 1
+	DelayX := TimerDelayX * 1000
+Else If TimerMin = 1
+	DelayX := TimerDelayX * 60000
+Else
+	DelayX := TimerDelayX
 If RunOnce = 1
-	DelayX *= -1
+	DelayX := DelayX * -1
 ActivateHotkeys(0, 1, 1, 1)
 aHK_Timer := A_List
 SetTimer, RunTimerOn, %DelayX%
@@ -6742,6 +6751,7 @@ RunTimerOn:
 If StopIt
 {
 	SetTimer, RunTimerOn, Off
+	aHK_Timer := 0
 	return
 }
 Playback(aHK_Timer)
@@ -9973,6 +9983,7 @@ Gui, Menu, MenuBar
 Menu, Tray, Add, %w_Lang005%, PlayStart
 Menu, Tray, Add, %w_Lang008%, f_AbortKey
 Menu, Tray, Add, %w_Lang004%, Record
+Menu, Tray, Add, %r_Lang004%, RunTimer
 Menu, Tray, Add
 Menu, Tray, Add, %w_Lang002%, Preview
 Menu, Tray, Add, %f_Lang010%, ListVars
@@ -10043,6 +10054,7 @@ Try Menu, DonationMenu, Icon, %p_Lang001%, % DonateIcon[1], % DonateIcon[2]
 Try Menu, Tray, Icon, %w_Lang005%, % PlayIcon[1], % PlayIcon[2]
 Try Menu, Tray, Icon, %w_Lang008%, % RecStopIcon[1], % RecStopIcon[2]
 Try Menu, Tray, Icon, %w_Lang004%, % RecordIcon[1], % RecordIcon[2]
+Try Menu, Tray, Icon, %r_Lang004%, % RunTimerIcon[1], % RunTimerIcon[2]
 Try Menu, Tray, Icon, %w_Lang002%, % PreviewIcon[1], % PreviewIcon[2]
 Try Menu, Tray, Icon, %f_Lang010%, % ListVarsIcon[1], % ListVarsIcon[2]
 Try Menu, Tray, Icon, %f_Lang001%, % NewIcon[1], % NewIcon[2]

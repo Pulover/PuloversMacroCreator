@@ -415,8 +415,11 @@
 	SplashTextOff
 	SplashImage, Off
 	CurrentRange := ""
-	Try Menu, Tray, Icon, %DefaultIcon%, 1
-	Menu, Tray, Default, %w_Lang005%
+	If !(aHK_Timer)
+	{
+		Try Menu, Tray, Icon, %DefaultIcon%, 1
+		Menu, Tray, Default, %w_Lang005%
+	}
 	If (CloseAfterPlay)
 		GoSub, Exit
 }
