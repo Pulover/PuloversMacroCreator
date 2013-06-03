@@ -99,6 +99,8 @@ IniRead, ShowStep, %IniFilePath%, Options, ShowStep, 1
 IniRead, DontShowPb, %IniFilePath%, Options, DontShowPb, 0
 IniRead, DontShowRec, %IniFilePath%, Options, DontShowRec, 0
 IniRead, DontShowAdm, %IniFilePath%, Options, DontShowAdm, 0
+IniRead, ShowTips, %IniFilePath%, Options, ShowTips, 1
+IniRead, NextTip, %IniFilePath%, Options, NextTip, 1
 IniRead, IfDirectContext, %IniFilePath%, Options, IfDirectContext, None
 IniRead, IfDirectWindow, %IniFilePath%, Options, IfDirectWindow, %A_Space%
 IniRead, KeepHkOn, %IniFilePath%, Options, KeepHkOn, 0
@@ -344,12 +346,12 @@ GoSub, CreateMenuBar
 Menu, MouseB, Add, Click, HelpB
 Menu, MouseB, Add, ControlClick, HelpB
 Menu, MouseB, Add, MouseClickDrag, HelpB
-Menu, MouseB, Icon, Click, %IconFile%, %HelpIconQ%
+Menu, MouseB, Icon, Click, %shell32%, %HelpIconQ%
 Menu, TextB, Add, Send / SendRaw, HelpB
 Menu, TextB, Add, ControlSend, HelpB
 Menu, TextB, Add, ControlSetText, HelpB
 Menu, TextB, Add, Clipboard, HelpB
-Menu, TextB, Icon, Send / SendRaw, %IconFile%, %HelpIconQ%
+Menu, TextB, Icon, Send / SendRaw, %shell32%, %HelpIconQ%
 Menu, ControlB, Add, Control, HelpB
 Menu, ControlB, Add, ControlFocus, HelpB
 Menu, ControlB, Add, ControlGet, HelpB
@@ -358,13 +360,13 @@ Menu, ControlB, Add, ControlGetPos, HelpB
 Menu, ControlB, Add, ControlGetText, HelpB
 Menu, ControlB, Add, ControlMove, HelpB
 Menu, ControlB, Add, ControlSetText, HelpB
-Menu, ControlB, Icon, Control, %IconFile%, %HelpIconQ%
+Menu, ControlB, Icon, Control, %shell32%, %HelpIconQ%
 Menu, SpecialB, Add, List of Keys, SpecialB
-Menu, SpecialB, Icon, List of Keys, %IconFile%, %HelpIconQ%
+Menu, SpecialB, Icon, List of Keys, %shell32%, %HelpIconQ%
 Menu, PauseB, Add, Sleep, HelpB
 Menu, PauseB, Add, MsgBox, HelpB
 Menu, PauseB, Add, KeyWait, HelpB
-Menu, PauseB, Icon, Sleep, %IconFile%, %HelpIconQ%
+Menu, PauseB, Icon, Sleep, %shell32%, %HelpIconQ%
 Menu, WindowB, Add, WinActivate, HelpB
 Menu, WindowB, Add, WinActivateBottom, HelpB
 Menu, WindowB, Add, WinClose, HelpB
@@ -385,10 +387,10 @@ Menu, WindowB, Add, WinShow, HelpB
 Menu, WindowB, Add, WinWait, HelpB
 Menu, WindowB, Add, WinWaitActive / WinWaitNotActive, HelpB
 Menu, WindowB, Add, WinWaitClose, HelpB
-Menu, WindowB, Icon, WinActivate, %IconFile%, %HelpIconQ%
+Menu, WindowB, Icon, WinActivate, %shell32%, %HelpIconQ%
 Menu, ImageB, Add, ImageSearch, HelpB
 Menu, ImageB, Add, PixelSearch, HelpB
-Menu, ImageB, Icon, ImageSearch, %IconFile%, %HelpIconQ%
+Menu, ImageB, Icon, ImageSearch, %shell32%, %HelpIconQ%
 Loop, Parse, FileCmdList, |
 {
 	If (InStr(A_LoopField, "File")=1 || InStr(A_LoopField, "Drive")=1)
@@ -440,7 +442,7 @@ Menu, RunB, Add, Reg && Ini, :m_Registry
 Menu, RunB, Add, Sound, :m_Sound
 Menu, RunB, Add, Variables, :m_Vars
 Menu, RunB, Add, Misc., :m_Misc
-Menu, RunB, Icon, Run / RunWait, %IconFile%, %HelpIconQ%
+Menu, RunB, Icon, Run / RunWait, %shell32%, %HelpIconQ%
 Menu, ComLoopB, Add, Loop, LoopB
 Menu, ComLoopB, Add, Loop`, FilePattern, LoopB
 Menu, ComLoopB, Add, Loop`, Parse, LoopB
@@ -451,7 +453,7 @@ Menu, ComLoopB, Add, Continue, HelpB
 Menu, ComLoopB, Add, Goto, HelpB
 Menu, ComLoopB, Add, Gosub, HelpB
 Menu, ComLoopB, Add, Labels, HelpB
-Menu, ComLoopB, Icon, Loop, %IconFile%, %HelpIconQ%
+Menu, ComLoopB, Icon, Loop, %shell32%, %HelpIconQ%
 Menu, IfStB, Add, IfWinActive / IfWinNotActive, HelpB
 Menu, IfStB, Add, IfWinExist / IfWinNotExist, HelpB
 Menu, IfStB, Add, IfExist / IfNotExist, HelpB
@@ -460,17 +462,17 @@ Menu, IfStB, Add, IfMsgBox, HelpB
 Menu, IfStB, Add, If Statements, HelpB
 Menu, IfStB, Add, Variables, HelpB
 Menu, IfStB, Add, Functions, HelpB
-Menu, IfStB, Icon, IfWinActive / IfWinNotActive, %IconFile%, %HelpIconQ%
+Menu, IfStB, Icon, IfWinActive / IfWinNotActive, %shell32%, %HelpIconQ%
 Menu, IEComB, Add, COM, IEComB
 Menu, IEComB, Add, Basic Webpage COM Tutorial, IEComB
 Menu, IEComB, Add, IWebBrowser2 Interface (MSDN), IEComB
-Menu, IEComB, Icon, COM, %IconFile%, %HelpIconQ%
+Menu, IEComB, Icon, COM, %shell32%, %HelpIconQ%
 Menu, SendMsgB, Add, PostMessage / SendMessage, HelpB
 Menu, SendMsgB, Add, Message List, SendMsgB
 Menu, SendMsgB, Add, Microsoft MSDN, SendMsgB
-Menu, SendMsgB, Icon, PostMessage / SendMessage, %IconFile%, %HelpIconQ%
+Menu, SendMsgB, Icon, PostMessage / SendMessage, %shell32%, %HelpIconQ%
 Menu, IfDirB, Add, #IfWinActive / #IfWinExist, HelpB
-Menu, IfDirB, Icon, #IfWinActive / #IfWinExist, %IconFile%, %HelpIconQ%
+Menu, IfDirB, Icon, #IfWinActive / #IfWinExist, %shell32%, %HelpIconQ%
 Menu, ExportG, Add, Hotkeys, ExportG
 Menu, ExportG, Add, Hotstrings, ExportG
 Menu, ExportG, Add, List of Keys, ExportG
@@ -478,7 +480,7 @@ Menu, ExportG, Add, ComObjCreate, ExportG
 Menu, ExportG, Add, ComObjActive, ExportG
 Menu, ExportG, Add, Auto-execute Section, ExportG
 Menu, ExportG, Add, #IfWinActive / #IfWinExist, HelpB
-Menu, ExportG, Icon, Hotkeys, %IconFile%, %HelpIconQ%
+Menu, ExportG, Icon, Hotkeys, %shell32%, %HelpIconQ%
 
 Menu, LangMenu, Check, % Lang_%Lang%
 
@@ -718,12 +720,14 @@ Else
 		Gui, 26:-SysMenu +HwndTipScrID +owner1
 		Gui, 26:Color, FFFFFF
 		Gui, 26:Font, s7
-		Gui, 26:Add, Pic, y+20 Icon%WarnIcon%, %IconFile%
+		Gui, 26:Add, Pic, y+20 Icon%WarnIcon%, %shell32%
 		Gui, 26:Add, Text, yp x+10, %d_Lang058%`n
 		Gui, 26:Add, Checkbox, -Wrap W300 vDontShowAdm R1, %d_Lang053%
-		Gui, 26:Add, Button, -Wrap Default y+10 W90 H25 gTipClose, %c_Lang020%
+		Gui, 26:Add, Button, -Wrap Default y+10 W90 H25 gTipClose2, %c_Lang020%
 		Gui, 26:Show,, %AppName%
 	}
+	Else If (ShowTips)
+		GoSub, ShowTips
 	If (AutoUpdate)
 		GoSub, CheckUpdates
 }
@@ -798,7 +802,7 @@ If !DontShowRec
 	Gui, 26:-SysMenu +HwndTipScrID
 	Gui, 26:Color, FFFFFF
 	Gui, 26:Font, s7
-	Gui, 26:Add, Pic, y+20 Icon%HelpIconI%, %IconFile%
+	Gui, 26:Add, Pic, y+20 Icon%HelpIconI%, %shell32%
 	Gui, 26:Add, Text, yp x+10, %d_Lang052%`n`n- %RecKey% %d_Lang026%`n- %RecNewKey% %d_Lang030%`n`n%d_Lang043%`n
 	Gui, 26:Add, Checkbox, -Wrap W300 vDontShowRec R1, %d_Lang053%
 	Gui, 26:Add, Button, -Wrap Default y+10 W90 H25 gTipClose, %c_Lang020%
@@ -1052,7 +1056,7 @@ return
 	CoordMode, Mouse, %CoordMouse%
 	MouseGetPos,,, id, control
 	WinGetClass, m_Class, ahk_id %id%
-	If ((m_Class <> "#32768") && (m_Class <> "Button")
+	If ((InStr(m_Class, "#32") <> 1) && (m_Class <> "Button")
 	&& (id <> PMCWinID) && (id <> PrevID) && (id <> PMCOSC))
 		WinActivate, ahk_id %id%
 	MouseGetPos, xPd, yPd
@@ -1083,7 +1087,7 @@ return
 	CoordMode, Mouse, %CoordMouse%
 	MouseGetPos,,, id, control
 	WinGetClass, m_Class, ahk_id %id%
-	If ((m_Class <> "#32768") && (m_Class <> "Button")
+	If ((InStr(m_Class, "#32") <> 1) && (m_Class <> "Button")
 	&& (id <> PMCWinID) && (id <> PrevID) && (id <> PMCOSC))
 		WinActivate, ahk_id %id%
 	MouseGetPos, xPd, yPd
@@ -1114,7 +1118,7 @@ return
 	CoordMode, Mouse, %CoordMouse%
 	MouseGetPos,,, id, control
 	WinGetClass, m_Class, ahk_id %id%
-	If ((m_Class <> "#32768") && (m_Class <> "Button")
+	If ((InStr(m_Class, "#32") <> 1) && (m_Class <> "Button")
 	&& (id <> PMCWinID) && (id <> PrevID) && (id <> PMCOSC))
 		WinActivate, ahk_id %id%
 	MouseGetPos, xPd, yPd
@@ -1145,7 +1149,7 @@ return
 	CoordMode, Mouse, %CoordMouse%
 	MouseGetPos,,, id, control
 	WinGetClass, m_Class, ahk_id %id%
-	If ((m_Class <> "#32768") && (m_Class <> "Button")
+	If ((InStr(m_Class, "#32") <> 1) && (m_Class <> "Button")
 	&& (id <> PMCWinID) && (id <> PrevID) && (id <> PMCOSC))
 		WinActivate, ahk_id %id%
 	MouseGetPos, xPd, yPd
@@ -1176,7 +1180,7 @@ return
 	CoordMode, Mouse, %CoordMouse%
 	MouseGetPos,,, id, control
 	WinGetClass, m_Class, ahk_id %id%
-	If ((m_Class <> "#32768") && (m_Class <> "Button")
+	If ((InStr(m_Class, "#32") <> 1) && (m_Class <> "Button")
 	&& (id <> PMCWinID) && (id <> PrevID) && (id <> PMCOSC))
 		WinActivate, ahk_id %id%
 	MouseGetPos, xPd, yPd
@@ -1214,7 +1218,7 @@ MouseInput:
 If (id = PMCOSC)
 	return
 Target := "", Window := ""
-If ((RecMouseCtrl = 1) && (m_Class <> "#32768"))
+If ((RecMouseCtrl = 1) && (InStr(m_Class, "#32") <> 1))
 {
 	If ((InStr(Details, "rel")) || (InStr(Details, "click")))
 		Goto, MouseAdd
@@ -1540,7 +1544,7 @@ Gui, 14:Add, Checkbox, -Wrap Checked%PauseKey% yp+5 x+5 W90 vPauseKey Disabled R
 ; Context
 Gui, 14:Add, GroupBox, Section xm W415 H80
 Gui, 14:Add, Checkbox, -Wrap Section ys xs vEx_IfDir gEx_Checks R1, %t_Lang009%:
-Gui, 14:Add, DDL, xs+10 W105 vEx_IfDirType, #IfWinActive||#IfWinNotActive|#IfWinExist|#IfNotWinExist
+Gui, 14:Add, DDL, xs+10 W105 vEx_IfDirType Disabled, #IfWinActive||#IfWinNotActive|#IfWinExist|#IfNotWinExist
 Gui, 14:Add, DDL, yp x+225 W65 vIdent Disabled, Title||Class|Process|ID|PID
 Gui, 14:Add, Edit, xs+10 W365 vTitle Disabled
 Gui, 14:Add, Button, -Wrap yp-1 x+0 W30 H23 vGetWin gGetWin Disabled, ...
@@ -1554,8 +1558,8 @@ Gui, 14:Add, Checkbox, -Wrap Checked%Ex_ST% y+5 xs+10 W110 vEx_ST R1, SetTitleMa
 Gui, 14:Add, DDL, yp-3 xp+115 vST w75, 1|2||3|RegEx|
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_DH% y+5 xs+10 W195 vEx_DH R1, DetectHiddenWindows
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_AF% y+8 W195 vEx_AF R1, #WinActivateForce
-Gui, 14:Add, Checkbox, -Wrap Checked%Ex_HK% y+8 W195 vEx_HK R1, #UseHook
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_PT% y+8 W195 vEx_PT R1, #Persistent
+Gui, 14:Add, Checkbox, -Wrap Checked%Ex_HK% y+8 W195 vEx_HK R1, #UseHook
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_SK% ys+15 x+5 W165 vEx_SK R1, SetKeyDelay
 Gui, 14:Add, Edit, yp-3 xp+165 W30 vSK, %SK%
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_MD% y+5 xs+210 W165 vEx_MD R1, SetMouseDelay
@@ -1705,6 +1709,7 @@ return
 Ex_Checks:
 Gui, Submit, NoHide
 GuiControl, 14:Enable%Ex_AbortKey%, PauseKey
+GuiControl, 14:Enable%Ex_IfDir%, Ex_IfDirType
 GuiControl, 14:Enable%Ex_IfDir%, Ident
 GuiControl, 14:Enable%Ex_IfDir%, Title
 GuiControl, 14:Enable%Ex_IfDir%, GetWin
@@ -2341,7 +2346,7 @@ OsBit := (A_PtrSize = 8) ? "x64" : "x86"
 Gui, 26:-SysMenu +HwndTipScrID +owner1
 Gui, 26:Color, FFFFFF
 Gui, 26:Font, s7
-Gui, 26:Add, Pic, % "w48 y+20 Icon" ((A_IsCompiled) ? 1 : HelpIconI), % (A_IsCompiled) ? A_ScriptFullPath : IconFile
+Gui, 26:Add, Pic, % "w48 y+20 Icon" ((A_IsCompiled) ? 1 : HelpIconI), % (A_IsCompiled) ? A_ScriptFullPath : shell32
 Gui, 26:Font, Bold s12, Tahoma
 Gui, 26:Add, Text, yp x+10, PULOVER'S MACRO CREATOR
 Gui, 26:Font
@@ -5367,10 +5372,10 @@ If (s_Caller = "Edit")
 	}
 	Else If (A_ThisLabel = "EditVar")
 	{
-		AssignReplace(Details)
 		If (Action = "[Assign Variable]")
 		{
 			StringReplace, Details, Details, ``n, `n, All
+			AssignReplace(Details)
 			EscCom("VarValue", 1)
 			GuiControl, 21:Choose, TabControl, 2
 			GuiControl, 21:, VarName, %VarName%
@@ -5381,6 +5386,7 @@ If (s_Caller = "Edit")
 		}
 		Else
 		{
+			AssignReplace(Details)
 			FuncName := Action
 			GoSub, FuncName
 			GuiControl, 21:Choose, TabControl, 3
@@ -5583,7 +5589,7 @@ Else If RowSelection = 0
 	LV_Modify(ListCount%A_List%+1, "Vis")
 }
 Else
-	LV_Insert(LV_GetNext(), "Check", "", Action, Details, 1, 0, Type, "", "")
+	LV_Insert(LV_GetNext(), "Check", "", Action, Details, 1, 0, Type, Target, "")
 GoSub, b_Start
 GoSub, RowCheck
 If (A_ThisLabel = "VarApply")
@@ -6629,6 +6635,70 @@ Gui, 26:Destroy
 WinActivate,,, ahk_id %PMCWinID%
 return
 
+TipClose2:
+Gui, 26:Submit
+Gui, 26:Destroy
+return
+
+TipClose3:
+NextTip++
+Gui, 26:Submit
+Gui, 26:Destroy
+return
+
+ShowTips:
+Gui 26:+LastFoundExist
+IfWinExist
+	GoSub, TipClose
+If (NextTip > MaxTips)
+	NextTip := 1
+Gui, 26:-SysMenu +HwndStartTipID +owner1
+Gui, 26:Color, FFFFFF
+Gui, 26:Font, s7
+Gui, 26:Add, Pic, y+20 W48 H48 Icon%TipIcon%, %TipFile%
+Gui, 26:Add, Text, Section yp x+10, %d_Lang068%%A_Space%
+Gui, 26:Add, Text, yp x+0 vCurrTip, %NextTip%%A_Space%%A_Space%%A_Space%
+Gui, 26:Add, Text, yp x+0, / %MaxTips%
+Gui, 26:Add, Edit, xs W450 r5 vTipDisplay ReadOnly -0x200000 -E0x200, % StartTip_%NextTip%
+Gui, 26:Add, Button, -Wrap y+10 W90 H25 vPTip gPrevTip, %d_Lang022%
+Gui, 26:Add, Button, -Wrap yp x+5 W90 H25 vNTip gNextTip, %d_Lang021%
+Gui, 26:Add, Button, -Wrap yp x+15 W90 H25 vTipClose gTipClose3, %c_Lang022%
+Gui, 26:Add, Checkbox, -Wrap Checked%ShowTips% xm+60 W300 vShowTips R1, %d_Lang067%
+Gui, 26:Add, Link, xm, %d_Lang069%
+If (NextTip = 1)
+	GuiControl, 26:Disable, PTip
+GuiControl, 26:Focus, TipClose
+Gui, 26:Show,, %AppName%
+return
+
+PrevTip:
+If (NextTip = 1)
+	return
+NextTip--
+GuiControl, 26:, CurrTip, %NextTip%
+GuiControl, 26:, TipDisplay, % StartTip_%NextTip%
+GuiControl, 26:Enable, NTip
+If (NextTip = 1)
+{
+	GuiControl, 26:Disable, PTip
+	GuiControl, 26:Focus, NTip
+}
+return
+
+NextTip:
+If (NextTip = MaxTips)
+	return
+NextTip++
+GuiControl, 26:, CurrTip, %NextTip%
+GuiControl, 26:, TipDisplay, % StartTip_%NextTip%
+GuiControl, 26:Enable, PTip
+If (NextTip = MaxTips)
+{
+	GuiControl, 26:Disable, NTip
+	GuiControl, 26:Focus, PTip
+}
+return
+
 RunTimer:
 Gui, 27:+owner1 +ToolWindow
 Gui, 1:+Disabled
@@ -6760,7 +6830,7 @@ If !DontShowPb
 	Gui, 26:-SysMenu +HwndTipScrID
 	Gui, 26:Color, FFFFFF
 	Gui, 26:Font, s7
-	Gui, 26:Add, Pic, y+20 Icon%HelpIconI%, %IconFile%
+	Gui, 26:Add, Pic, y+20 Icon%HelpIconI%, %shell32%
 	Gui, 26:Add, Text, yp x+10, %d_Lang051%`n`n%d_Lang043%`n
 	Gui, 26:Add, Checkbox, -Wrap W300 vDontShowPb R1, %d_Lang053%
 	Gui, 26:Add, Button, -Wrap Default y+10 W90 H25 gTipClose, %c_Lang020%
@@ -7430,18 +7500,18 @@ If Action contains %Action1%,%Action2%,%Action3%,%Action4%,%Action5%,%Action6%
 	Goto, EditMouse
 If InStr(Action, "[Text]")
 	Goto, EditText
-Gui, 15:+owner1 +ToolWindow
+Gui, 15:+owner1 +ToolWindow +HwndCmdWin
 Gui, 1:+Disabled
 Gui, 15:Font, s7
 Gui, 15:Add, GroupBox, vSGroup Section xm W280 H130 Disabled
-Gui, 15:Add, Checkbox, -Wrap Section ys+15 xs+10 W200 vCSend gCSend Hidden R1, %c_Lang016%:
+Gui, 15:Add, Checkbox, -Wrap Section ys+15 xs+10 W260 vCSend gCSend Hidden R1, %c_Lang016%:
 Gui, 15:Add, Edit, vDefCt W230 Disabled Hidden
 Gui, 15:Add, Button, -Wrap yp-1 x+0 W30 H23 vGetCtrl gGetCtrl Disabled Hidden, ...
 Gui, 15:Add, DDL, Section xs W65 vIdent Disabled Hidden, Title||Class|Process|ID|PID
 Gui, 15:Add, Text, -Wrap yp+5 x+5 W190 H20 vWinParsTip Disabled Hidden, %wcmd_All%
 Gui, 15:Add, Edit, xs+2 W230 vTitle Disabled Hidden, A
 Gui, 15:Add, Button, -Wrap yp-1 x+0 W30 H23 vGetWin gGetWin Disabled Hidden, ...
-Gui, 15:Add, Checkbox, -Wrap Section ym+15 xs W250 vMP gMP Hidden R1, %c_Lang051%:
+Gui, 15:Add, Checkbox, -Wrap Section ym+15 xs W260 vMP gMP Hidden R1, %c_Lang051%:
 Gui, 15:Add, Edit, vMsgPt W260 r4 Multi Disabled Hidden
 Gui, 15:Add, Text, vMsgTxt W260 y+5 xs r2 Hidden, %c_Lang025%
 If Type in %cType5%,%cType6%
@@ -7932,7 +8002,7 @@ Gui, 6:Destroy
 return
 
 SetWin:
-Gui, 16:+owner1 +ToolWindow
+Gui, 16:+owner1 +ToolWindow +HwndCmdWin
 Gui, 1:Default
 Gui, 1:+Disabled
 Gui, 16:Font, s7
@@ -9341,6 +9411,8 @@ IniWrite, %ShowStep%, %IniFilePath%, Options, ShowStep
 IniWrite, %DontShowPb%, %IniFilePath%, Options, DontShowPb
 IniWrite, %DontShowRec%, %IniFilePath%, Options, DontShowRec
 IniWrite, %DontShowAdm%, %IniFilePath%, Options, DontShowAdm
+IniWrite, %ShowTips%, %IniFilePath%, Options, ShowTips
+IniWrite, %NextTip%, %IniFilePath%, Options, NextTip
 IniWrite, %IfDirectContext%, %IniFilePath%, Options, IfDirectContext
 IniWrite, %IfDirectWindow%, %IniFilePath%, Options, IfDirectWindow
 IniWrite, %KeepHkOn%, %IniFilePath%, Options, KeepHkOn
@@ -9478,13 +9550,13 @@ Loop, %TabCount%
 GuiControl, Enable%ListCount%, StartB
 return
 
-CheckHK:
+WinCheck:
 WinGet, W_ID, ID, A
-If ((WinActive("ahk_id " PrevID)) || (W_ID = "0x10480")
-|| (W_ID = TipScrID) || (W_ID = PMCOSC))
+If ((WinActive("ahk_id " PrevID)) || (W_ID = TipScrID)
+|| (W_ID = StartTipID) || (W_ID = PMCOSC))
 	return
 WinGetClass, W_CLS, ahk_id %W_ID%
-If (W_CLS = "#32770")
+If (InStr(W_CLS, "#32") = 1)
 	return
 Pause, Off
 If ((WPHKC = 1) || (WPHKC = 2))
@@ -9508,7 +9580,7 @@ Gui, 1:ListView, InputList%A_List%
 return
 
 WaitMenuClose:
-IfWinNotExist, AHK_class #32768
+IfWinNotExist, ahk_class #32768
 {
 	SetTimer, WaitMenuClose, Off
 	SetTimer, ResumeCheck, -333
@@ -9868,6 +9940,7 @@ Loop, Parse, Lang_All, |
 }
 
 Menu, HelpMenu, Add, %m_Lang009%`t%_s%F1, Help
+Menu, HelpMenu, Add, %h_Lang006%, ShowTips
 Menu, HelpMenu, Add
 Menu, HelpMenu, Add, %h_Lang001%, Homepage
 Menu, HelpMenu, Add, %h_Lang002%, HelpAHK
@@ -9876,6 +9949,12 @@ Menu, HelpMenu, Add, %h_Lang003%, CheckNow
 Menu, HelpMenu, Add, %h_Lang004%, AutoUpdate
 Menu, HelpMenu, Add
 Menu, HelpMenu, Add, %h_Lang005%`t%_s%Shift+F1, HelpAbout
+
+Loop, Parse, StartTips, `n
+{
+	StartTip_%A_Index% := A_LoopField
+	MaxTips := A_Index
+}
 
 Menu, DonationMenu, Add, %p_Lang001%, DonatePayPal
 
@@ -10122,9 +10201,6 @@ IfWinExist
 Gui 18:+LastFoundExist
 IfWinExist
     GoSub, FindReplace
-Gui 26:+LastFoundExist
-IfWinExist
-    GoSub, HelpAbout
 return
 
 LoadLang:

@@ -97,6 +97,7 @@
 	h_Lang003 =	&Check for updates...
 	h_Lang004 =	Check on &start-up
 	h_Lang005 =	Abo&ut
+	h_Lang006 =	&Tips
 		
 ; Tray Menu		
 	y_Lang001 =	Hide Window
@@ -431,8 +432,6 @@
 	(LTrim	
 		This feature requires the GDI+ Library.
 		Click OK to go to download page.
-		
-		Note: The file 'Gdip.ahk' MUST BE in the same directory of this script.
 	)	
 	d_Lang041 =	The variable name contains an illegal character.
 	d_Lang042 =	
@@ -451,8 +450,6 @@
 	(LTrim	
 		This feature requires the Eval() Function.
 		Click OK to go to download page.
-		
-		Note: The file 'Eval.ahk' MUST BE in the same directory of this script.
 	)	
 	d_Lang045 =	Please select an Internet Explorer window!
 	d_Lang046 =	Connection Successful!
@@ -498,7 +495,42 @@
 	d_Lang064 =	COM object error in
 	d_Lang065 =	Row
 	d_Lang066 =	Specifically
+	d_Lang067 =	Show tips on start-up.
+	d_Lang068 =	Tips:
+	d_Lang069 =	
+	(LTrim	
+		Need help, found a bug or have a suggestion? Send an email to the author: <a href="mailto:rodolfoub@gmail.com">rodolfoub@gmail.com</a>
+		This is a free software. If you found it useful consider <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=rodolfoub`%40gmail`%2ecom&lc=US&item_name=Pulover`%27s`%20Macro`%20Creator&item_number=App`%2ePMC&currency_code=USD&bn=PP`%2dDonationsBF`%3abtn_donateCC_LG`%2egif`%3aNonHosted">making a donation</a> and support development. Thank you.
+	)	
 		
+; Start-up Tips		
+	StartTips =	
+	(LTrim	
+		You can create Macros using the Command Buttons in the main window or using the Recorder to copy your actions. Go to Options > Settings > Recording to select what inputs will be recorded.
+		To use the recorder for quick tasks go to Options > Settings > Recording and check the "Clear List" option. Then click the Record button in the main window and use F10 to clear the current Macro and start a new one with the same hotkey.
+		To get help for an specific command right-click on a command button in the main window or anywhere in a command window to show links to AutoHotkey online Help.
+		Check the "Capture Keys" option to enter keys and combinations to your Macro directly from the main window.
+		Type keys and combinations in the Hotkey box at the bottom and press the Insert button to add them to the select rows.
+		If no rows are selected the edit buttons apply to all rows in the list.
+		You can assign your own variables in the Variables windows (Insert > If Statements / Variables / Functions). To use them inside commands enclose the variable name in percent signs, e.g.: `%MyVar`%.
+		The "Loop" counter at the top sets the total number of loops for the selected Macro.
+		You can edit a row by double-clicking it or by selecting it and clicking the Edit buttons at the bottom.
+		You can edit multiple selected rows using the options in the edit bar at the bottom.
+		Select one or more rows to add new commands on top of them.
+		You can move rows with click-and-drag.
+		You can export your Macros to working AutoHotkey scripts or stand-alone executables from the Export window.
+		You can open, copy, move or delete files and folders using one of the commands in Insert > Run / File / String / Misc.
+		You can use hotkeys to speed up or slow down Playback. Go to Options > Settings > Playback to set keys and speed.
+		To record Down and Up state of every key go to Options > Settings > Recording and check "Capture key state (Down / Up)" option.
+		To adjust capture area using the "Make Screenshot" tool go to Options > Settings > Screenshots and select "Press Enter to Capture". After drawing the rectangle use Control + arrow keys to move the selection and Shift + arrow keys to resize it.
+		Quick Select: Select any row and click on a column header to select similar rows based on cell's text from that column.
+		The Run / File / String / Misc. window have many other useful commands such as Shutdown and UrlDownloadToFile.
+		To make your Macros work only on a certain window go to Macro > Context Sensitive Hotkeys.
+		Click on the Index Column Header to turn On/Off Help Marks and Colors for Loops and Statements. Double-Click on the Action Column Header to turn On/Off Indentation for Loops and Statements.
+		You can debug your Macros using the Manual Hotkey and the Play options in the Macro menu. You can also disable actions by unchecking them in the Macro list.
+		You can set your own Global Variables to be loaded on start up and to be exported. Go to Options > Settings > User Global Variables to add them.
+		You can run advanced functions such as SubStr and RegExReplace from the Functions window (Insert > If Statements / Variables / Functions). Or run your own functions from external AutoHotkey scripts.
+	)	
 ; Tooltips		
 	NewB_TT =	New (Ctrl+N)
 	OpenB_TT =	Open (Ctrl+O)

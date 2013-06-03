@@ -33,6 +33,7 @@ T800 for [Html Help utils](http://www.autohotkey.com/board/topic/17984-html-help
 
 ## Version 3.7.3
 
+* Added *Tips on Start-up*.
 * Fixed bug with *Break* command.
 * Fixed bug with *Continue, LoopNumber* command.
 * Fixed commas not being escaped in exported *MsgBox* command.

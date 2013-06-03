@@ -95,8 +95,9 @@
 	h_Lang001 =	&Makro Creator Hjem
 	h_Lang002 =	&AHK Online Dokumentation
 	h_Lang003 =	&Kontrollere for opdateringer...
-	h_Lang004 =	K&ontrollere, om opstart
-	h_Lang005 =	Om
+	h_Lang004 =	Ko&ntrollere, om opstart
+	h_Lang005 =	&Om
+	h_Lang006 =	&Tips
 		
 ; Tray Menu		
 	y_Lang001 =	Skjul vindue
@@ -431,8 +432,6 @@
 	(LTrim	
 		Denne funktion kræver GDI+ Bibliotek.
 		Klik på OK for at gå til download siden.
-		
-		Bemærk: Filen 'Gdip.ahk' skal være i samme mappe af dette script.
 	)	
 	d_Lang041 =	Den variable navn indeholder et ulovligt tegn.
 	d_Lang042 =	
@@ -451,8 +450,6 @@
 	(LTrim	
 		Denne funktion kræver Eval() funktion.
 		Klik på OK for at gå til download siden.
-		
-		Bemærk: Filen 'Eval.ahk' skal være i samme mappe af dette script.
 	)	
 	d_Lang045 =	Vælg et Internet Explorer-vindue!
 	d_Lang046 =	Tilslutning Successful!
@@ -498,7 +495,42 @@
 	d_Lang064 =	COM objekt fejl i
 	d_Lang065 =	Row
 	d_Lang066 =	Konkret
+	d_Lang067 =	Vis tips om opstart.
+	d_Lang068 =	Tips:
+	d_Lang069 =	
+	(LTrim	
+		Brug for hjælp, fundet en fejl eller har et forslag? Send en e-mail til forfatteren: <a href="mailto:rodolfoub@gmail.com">rodolfoub@gmail.com</a>
+		Dette er en gratis software. Hvis du har fundet det nyttigt at overveje <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=rodolfoub`%40gmail`%2ecom&lc=US&item_name=Pulover`%27s`%20Macro`%20Creator&item_number=App`%2ePMC&currency_code=USD&bn=PP`%2dDonationsBF`%3abtn_donateCC_LG`%2egif`%3aNonHosted">gør en donation</a> og støtte udvikling. Tak.
+	)	
 		
+; Start-up Tips		
+	StartTips =	
+	(LTrim	
+		Du kan oprette makroer ved hjælp af kommandoen knapper i hovedvinduet eller ved hjælp af optageren til at kopiere dine handlinger. Gå til Valg> Indstillinger> Optagelse at vælge, hvad input vil blive registreret.
+		Hvis du vil bruge optageren i hurtige opgaver gå til Valg> Indstillinger> Optagelse og tjek "Clear List" valgmulighed. Klik derefter på knappen Optag i hovedvinduet og bruge F10 til at rydde den aktuelle Makro og starte en ny med samme genvejstast.
+		For at få hjælp til en specifik kommando højreklikke på en kommandoknap i hovedvinduet eller hvor som helst i et kommandovindue til at vise links til AutoHotkey online Hjælp.
+		Check "Capture taster" mulighed for at indtaste nøgler og koder til din makro direkte fra hovedvinduet.
+		Type nøgler og koder i Genvejstast boksen nederst og tryk på knappen Indsæt for at føje dem til de udvalgte rækker.
+		Hvis der ikke rækker udvalgt de edit knapper gælder for alle rækker i listen.
+		Du kan tildele dine egne variabler i variablerne windows (Indsæt> Hvis Statements / variable / funktioner). For at bruge dem inde kommandoer vedlægge variabelnavnet i procenttegn, fx: `%MyVar`%.
+		Den "Loop" counter øverst indstiller samlede antal loops for den valgte makro.
+		Du kan redigere en række, ved at dobbeltklikke på den eller ved at vælge det og klikke Rediger knapperne nederst.
+		Du kan redigere flere markerede rækker ved hjælp af indstillingerne i redigeringsfeltet nederst.
+		Vælg en eller flere rækker at tilføje nye kommandoer på toppen af dem.
+		Du kan flytte rækker med klik-og-træk.
+		Du kan eksportere dine makroer arbejdsvilkår AutoHotkey scripts eller enkeltstående eksekverbare fra Export vinduet.
+		Du kan åbne, kopiere, flytte eller slette filer og mapper ved hjælp af en af kommandoerne i Indsæt> Run / File / String / Misc.
+		Du kan bruge genvejstaster til at fremskynde eller sinke gengivelse. Gå til Valg> Indstillinger> Afspilning for at sætte nøgler og hastighed.
+		Hvis du vil optage ned og op tilstand alle centrale Gå til Valg> Indstillinger> Optagelse og marker "Udløsertast tilstand (op / ned)" valgmulighed.
+		For at justere capture område ved hjælp af "Make Screenshot" værktøj gå til Indstillinger> Indstillinger> screenshots og vælg "Tryk Enter for at Capture". Efter tegning af rektangel bruge Kontrol piletasterne til at flytte markeringen og Shift piletasterne til at ændre størrelsen.
+		Quick Vælg: Vælg en række, og klik på en kolonneoverskrift for at vælge tilsvarende rækker baseret på cellens tekst fra den pågældende kolonne.
+		The Run / File / String / Misc. Vinduet har mange andre nyttige kommandoer såsom Shutdown og UrlDownloadToFile.
+		For at gøre dine makroer virker kun på et bestemt vindue gå til Makro> kontekstafhængige genvejstaster.
+		Klik på Index kolonneoverskrift for at tænde / slukke Hjælp Marks og Farver til Loops og erklæringer. Dobbelt-klik på aktion kolonneoverskrift for at tænde / slukke Indrykning for Loops og udsagn.
+		Du kan debug dine makroer ved hjælp af Manual Hotkey og Play muligheder i Macro-menuen. Du kan også deaktivere handlinger ved at fjerne markeringen dem i Makro listen.
+		Du kan indstille dine egne globale variable, der skal lastes på opstart og skal eksporteres. Gå til Valg> Indstillinger> Brugerindstillinger globale variabler til at tilføje dem.
+		Du kan køre avancerede funktioner såsom SUBSTR og RegExReplace fra Funktioner vindue (Indsæt> Hvis Statements / variable / funktioner). Eller køre dine egne funktioner fra eksterne AutoHotkey scripts.
+	)	
 ; Tooltips		
 	NewB_TT =	Ny (Ctrl+N)
 	OpenB_TT =	Åbn (Ctrl+O)

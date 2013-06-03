@@ -97,6 +97,7 @@
 	h_Lang003 =	&Buscar si hay actualizaciones...
 	h_Lang004 =	B&uscar en el arranque
 	h_Lang005 =	A&cerca
+	h_Lang006 =	C&onsejos
 		
 ; Tray Menu		
 	y_Lang001 =	Ocultar ventana
@@ -431,8 +432,6 @@
 	(LTrim	
 		Esta función requiere la biblioteca GDI+.
 		Haga clic en Aceptar para ir a la página de descargas.
-		
-		Nota: 'Gdip.ahk' El archivo debe estar en el mismo directorio de este script.
 	)	
 	d_Lang041 =	El nombre de la variable contiene un carácter ilegal.
 	d_Lang042 =	
@@ -451,8 +450,6 @@
 	(LTrim	
 		Esta función requiere la función Eval().
 		Haga clic en Aceptar para ir a la página de descargas.
-		
-		Nota: 'Eval.ahk' El archivo debe estar en el mismo directorio de este script.
 	)	
 	d_Lang045 =	Por favor, seleccione una ventana de Internet Explorer!
 	d_Lang046 =	Conexión correcta!
@@ -498,7 +495,42 @@
 	d_Lang064 =	Error de objeto COM en
 	d_Lang065 =	Fila
 	d_Lang066 =	Específicamente
+	d_Lang067 =	Mostrar consejos sobre la puesta en marcha.
+	d_Lang068 =	Consejos:
+	d_Lang069 =	
+	(LTrim	
+		¿Necesitas ayuda, que se encuentra un error o tiene alguna sugerencia? Envíe un correo electrónico al autor: <a href="mailto:rodolfoub@gmail.com">rodolfoub@gmail.com</a>
+		Este es un software libre. Si has encontrado útil considerar <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=rodolfoub`%40gmail`%2ecom&lc=US&item_name=Pulover`%27s`%20Macro`%20Creator&item_number=App`%2ePMC&currency_code=USD&bn=PP`%2dDonationsBF`%3abtn_donateCC_LG`%2egif`%3aNonHosted">una donación</a> y apoyar el desarrollo. Gracias.
+	)	
 		
+; Start-up Tips		
+	StartTips =	
+	(LTrim	
+		Puede crear macros utilizando los botones de comando en la ventana principal o el uso de la grabadora para copiar sus acciones. Vaya a Opciones> Configuración> Grabación para seleccionar lo que se registran las entradas.
+		Para utilizar la grabadora para tareas rápidas vaya a Opciones> Configuración> Grabación y marque la opción "Borrar lista". A continuación, haga clic en el botón de grabación en la ventana principal y utilizar F10 para borrar la macro actual e iniciar uno nuevo con la misma combinación de teclas.
+		Para obtener ayuda para un comando específico haga clic en un botón de comando en la ventana principal o en cualquier lugar de una ventana de comandos para mostrar enlaces a AutoHotkey ayuda en línea.
+		Marque la opción "Claves Capture" para entrar teclas y combinaciones a la macro directamente desde la ventana principal.
+		El tipo llaves y combinaciones en el cuadro de tecla de acceso directo en la parte inferior y pulse el botón Insertar para añadir a las filas seleccionadas.
+		Si no se selecciona ninguna fila de los botones de edición se aplican a todas las filas de la lista.
+		Puedes asignar tus propias variables en las variables de ventanas (Insertar> Si Declaraciones / variables / funciones). Para utilizar los comandos en el interior encierran el nombre de la variable entre signos de porcentaje, por ejemplo: `%MyVar`%.
+		El contador de "Loop" en la parte superior establece el número total de bucles de la macro seleccionada.
+		Puede editar una fila haciendo doble clic en él o seleccionándolo y haciendo clic en los botones de edición en la parte inferior.
+		Puede editar varias filas seleccionadas usando las opciones de la barra de edición en la parte inferior.
+		Seleccionar una o más filas para agregar nuevos comandos en la parte superior de ellos.
+		Puede mover filas con hacer clic y arrastrar.
+		Usted puede exportar sus macros a los scripts AutoHotkey trabajo o ejecutables independientes de la ventana Exportar.
+		Usted puede abrir, copiar, mover o borrar archivos y carpetas usando uno de los comandos de Insertar> Run / Archivo / cadena / Misc.
+		Puede usar teclas de acceso rápido para acelerar o reducir la velocidad de reproducción. Vaya a Opciones> Configuración> Reproducir para establecer las claves y la velocidad.
+		Para grabar Down y Up estado de todos los go clave a Opciones> Configuración> Grabación y seleccione "Capturar estado clave (abajo / arriba)" opción.
+		Para ajustar el área de captura con "Hacer Screenshot" vaya a Opciones> Configuración> Imágenes y seleccione "Presione Enter para capturar". Después de dibujar el uso teclas de control para mover el rectángulo de selección y Shift teclas de flecha para cambiar su tamaño.
+		Seleccione rápida: Seleccione cualquier fila y haga clic en un encabezado de columna para seleccionar filas similares basadas en texto de la celda de esa columna.
+		The Run / Archivo / cadena / Misc. ventana tiene muchos otros comandos útiles tales como apagado y URLDownloadToFile.
+		Para hacer sus macros sólo funcionan en una determinada ventana ir a Macro> Teclas de acceso directo sensibles al contexto.
+		Haga clic en el encabezado de columna Índice para encender / apagar Ayuda marcas y colores de bucles y sentencias. Haga doble clic en el encabezado de columna Acción para encender / apagar sangría de bucles y sentencias.
+		Puede depurar sus macros utilizando el Hotkey manual y las opciones de juego en el menú Macro. También puede desactivar desmarcando las acciones en la lista de macros.
+		Puede definir sus propias variables globales para ser cargado en el arranque y para la exportación. Vaya a Opciones> Configuración> Usuario Variables globales para agregarlos.
+		Puede ejecutar funciones avanzadas tales como SUBSTR y RegExReplace de la ventana Funciones (Insertar> Si Declaraciones / variables / funciones). O ejecutar sus propias funciones de secuencias de comandos AutoHotkey externos.
+	)	
 ; Tooltips		
 	NewB_TT =	Nuevo (Ctrl+N)
 	OpenB_TT =	Abrir (Ctrl+O)

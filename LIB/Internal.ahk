@@ -479,7 +479,7 @@ WinCheck(wParam, lParam, Msg)
 	global
 	If (HaltCheck = 1)
 		return
-	SetTimer, CheckHK, -333
+	SetTimer, WinCheck, -333
 	WPHKC := wParam
 }
 

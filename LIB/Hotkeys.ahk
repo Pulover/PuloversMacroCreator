@@ -199,5 +199,11 @@ Draw := 0
 WinActivate, ahk_id %CmdWin%
 Exit
 
+#If WinActive("ahk_id " StartTipID)
+
+Left::GoSub, PrevTip
+Right::GoSub, NextTip
+Esc::GoSub, TipClose3
+
 #If
 

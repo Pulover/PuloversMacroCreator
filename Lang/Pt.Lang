@@ -97,6 +97,7 @@
 	h_Lang003 =	&Verificar atualizações...
 	h_Lang004 =	Verificar ao &iniciar
 	h_Lang005 =	&Sobre
+	h_Lang006 =	&Dicas
 		
 ; Tray Menu		
 	y_Lang001 =	Ocultar Janela
@@ -431,8 +432,6 @@
 	(LTrim	
 		Este recurso requer a Biblioteca GDI+.
 		Pressione OK para ir para a página de download.
-		
-		Obs.: O arquivo 'Gdip.ahk' DEVE ESTAR na mesma pasta deste script.
 	)	
 	d_Lang041 =	O nome da variável contém um caractere ilegal.
 	d_Lang042 =	
@@ -451,8 +450,6 @@
 	(LTrim	
 		Este recurso requer a Função Eval().
 		Pressione OK para ir para a página de download.
-		
-		Obs.: O arquivo 'Eval.ahk' DEVE ESTAR na mesma pasta deste script.
 	)	
 	d_Lang045 =	Por favor selecione uma janela do Internet Explorer!
 	d_Lang046 =	Conexão Bem-Sucedida!
@@ -498,7 +495,42 @@
 	d_Lang064 =	Erro do objeto COM em
 	d_Lang065 =	Linha
 	d_Lang066 =	Especificamente
+	d_Lang067 =	Mostrar dicas ao iniciar.
+	d_Lang068 =	Dicas:
+	d_Lang069 =	
+	(LTrim	
+		Precisa de ajuda, encontrou um problema ou tem uma sugestão? Envie um email para o autor: <a href="mailto:rodolfoub@gmail.com">rodolfoub@gmail.com</a>
+		Este é um software gratuito. Se você achou útil considere <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=rodolfoub`%40gmail`%2ecom&lc=BR&item_name=Pulover`%27s`%20Macro`%20Creator&item_number=App`%2ePMC`%2eBr&currency_code=BRL&bn=PP`%2dDonationsBF`%3abtn_donateCC_LG`%2egif`%3aNonHosted">fazer uma doação</a> e apoiar o desenvolvimento. Obrigado.
+	)	
 		
+; Start-up Tips		
+	StartTips =	
+	(LTrim	
+		Você pode criar Macros utilizando os botões de comando na janela principal ou usar o gravador para copiar suas ações. Vá até Opções > Configurações > Gravar para selecionar quais entradas serão gravadas.
+		Para utilizar o gravador para tarefas rápidas vá em Opções > Configurações > Gravação e marque a opção "Limpar Lista". Em seguida, clique no botão Gravar na janela principal e use F10 para limpar o Macro atual e iniciar um novo com a mesma hotkey.
+		Para obter ajuda para um comando específico botão direito do mouse sobre um botão de comando na janela principal ou em qualquer lugar em uma janela de comando para mostrar links para a Ajuda online AutoHotkey.
+		Marque a opção "Capturar Teclas" para inserir as chaves e combinações para seu Macro diretamente a partir da janela principal.
+		E combinações de teclas do tipo na caixa Tecla de atalho na parte inferior e pressione o botão Inserir para adicioná-los às linhas de seleção.
+		Se nenhuma linha são selecionados os botões de edição aplica a todas as linhas da lista.
+		Você pode atribuir suas próprias variáveis nas variáveis windows (Inserir > Se Demonstrações / Variáveis / Funções). Para usá-los dentro de comandos de colocar o nome da variável em sinais de porcentagem, por exemplo: `%MyVar`%.
+		O contador de "Loop" no topo define o número total de repetições para a Macro selecionada.
+		Você pode editar uma linha clicando duas vezes nela ou selecionando-a e clicando nos botões de edição na parte inferior.
+		Você pode editar várias linhas selecionadas usando as opções na barra de edição na parte inferior.
+		Selecione uma ou mais linhas para adicionar novos comandos em cima delas.
+		Você pode mover as linhas com clique-e-arraste.
+		Você pode exportar suas Macros para os scripts AutoHotkey trabalho ou executáveis stand-alone da janela de exportação.
+		Você pode abrir, copiar, mover ou apagar arquivos e pastas usando um dos comandos em Inserir > Executar / Arquivo / Texto / Misc.
+		Você pode usar teclas de atalho para acelerar ou desacelerar Reprodução. Vá até Opções > Configurações > Reprodução para definir as chaves e velocidade.
+		Para gravar Down e Up estado de cada chave vá para Opções > Configurações > Gravação e marque "Capturar estado da tecla (press. / solta)" opção.
+		Para ajustar a área de captura utilizando a ferramenta "Capturar Imagem" vá em Opções > Configurações > Imagens e selecione "Press. Enter para capturar". Depois de desenhar o controle do uso do retângulo + setas para mover as teclas de seta de seleção e Shift + para redimensioná-la.
+		Seleção rápida: Selecione uma linha e clique no cabeçalho da coluna para selecionar linhas semelhantes baseadas no texto da célula de coluna.
+		The Executar / Arquivo / Texto / Misc. janela tem muitos outros comandos úteis, como desligamento e URLDownloadToFile.
+		Para fazer seus Macros trabalhar apenas em uma determinada janela ir para Macro > Contexto Teclas de atalho sensíveis.
+		Clique no cabeçalho da coluna Índice de ligar / desligar Ajuda marcas e cores para Loops e declarações. Duplo-Clique no cabeçalho da coluna Ação para ligar / desligar recuo para Loops e declarações.
+		Você pode depurar suas macros utilizando o manual de Hotkey e as opções de jogo no menu Macro. Você também pode desativar ações, desmarcando-os na lista Macro.
+		Você pode definir suas próprias variáveis globais para ser carregado no arranque e para ser exportado. Vá para Opções > Configurações > Usuário variáveis globais para adicioná-los.
+		Você pode executar funções avançadas como SubStr e RegExReplace da janela Funções (Inserir > Declaração Se / Variáveis / Funções). Ou executar suas próprias funções a partir de scripts AutoHotkey externos.
+	)	
 ; Tooltips		
 	NewB_TT =	Novo (Ctrl+N)
 	OpenB_TT =	Abrir (Ctrl+O)

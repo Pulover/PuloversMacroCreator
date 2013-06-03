@@ -97,6 +97,7 @@
 	h_Lang003 =	&Controleren op updates...
 	h_Lang004 =	C&heck bij het opstarten
 	h_Lang005 =	&Over
+	h_Lang006 =	&tips
 		
 ; Tray Menu		
 	y_Lang001 =	Venster te verbergen
@@ -431,8 +432,6 @@
 	(LTrim	
 		Voor deze functie moet de GDI+ bibliotheek.
 		Klik op OK om naar de pagina te downloaden.
-		
-		Opmerking: Het bestand 'Gdip.ahk' moet in dezelfde directory van dit script.
 	)	
 	d_Lang041 =	De naam van de variabele bevat een ongeldig teken.
 	d_Lang042 =	
@@ -451,8 +450,6 @@
 	(LTrim	
 		Voor deze functie is de functie Eval().
 		Klik op OK om naar de pagina te downloaden.
-		
-		Opmerking: Het bestand 'Eval.ahk' moet in dezelfde directory van dit script.
 	)	
 	d_Lang045 =	Selecteer een Internet Explorer-venster!
 	d_Lang046 =	Verbinding tot stand!
@@ -498,7 +495,42 @@
 	d_Lang064 =	COM-object fout in
 	d_Lang065 =	Rij
 	d_Lang066 =	Specifiek
+	d_Lang067 =	Toon tips bij het opstarten.
+	d_Lang068 =	tips:
+	d_Lang069 =	
+	(LTrim	
+		Heb je hulp nodig, vond een bug of een suggestie? Stuur een email naar de auteur: <a href="mailto:rodolfoub@gmail.com">rodolfoub@gmail.com</a>
+		Dit is een gratis software. Als je vond het nuttig achten <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=rodolfoub`%40gmail`%2ecom&lc=US&item_name=Pulover`%27s`%20Macro`%20Creator&item_number=App`%2ePMC&currency_code=USD&bn=PP`%2dDonationsBF`%3abtn_donateCC_LG`%2egif`%3aNonHosted">het maken van een donatie</a> en ondersteuning ontwikkeling. Dank u.
+	)	
 		
+; Start-up Tips		
+	StartTips =	
+	(LTrim	
+		U kunt macro's met behulp van de Command Knoppen in het hoofdvenster of het gebruik van de recorder om uw acties te kopiëren creëren. Ga naar Opties> Instellingen> Opname te selecteren wat input wordt opgenomen.
+		Om de recorder te gebruiken voor snelle taken ga naar Opties> Instellingen> Opname en controleer de "Lijst wissen" optie. Klik vervolgens op de knop Opnemen in het hoofdvenster en gebruik F10 om de huidige macro wissen en een nieuwe te beginnen met dezelfde sneltoets.
+		Om u te helpen voor een specifieke opdracht met de rechtermuisknop op een commando knop in het hoofdvenster of ergens in een command-venster om links naar AutoHotkey online Help zien krijgen.
+		Controleer de "Capture Sleutels" optie om sleutels en combinaties direct in te voeren om uw Macro vanuit het hoofdvenster.
+		Type toetsen en combinaties in het Sneltoets vakje onderaan en druk op de knop Invoegen om ze toe te voegen aan het selecte rijen.
+		Als er geen rijen zijn geselecteerd de bewerking knoppen gelden voor alle rijen in de lijst.
+		U kunt uw eigen variabelen in de Variabelen toewijzen ramen (Invoegen> Als Verklaringen / variabelen / functies). Om ze te gebruiken in opdrachten omsluiten de variabele naam in procent tekens, bijvoorbeeld: `%MyVar`%.
+		De "Loop" teller boven wordt het aantal lussen van de geselecteerde macro.
+		U kunt een rij bewerken door erop te dubbelklikken of door het te selecteren en op de knop Bewerken knoppen aan de onderkant.
+		U kunt meerdere geselecteerde rijen met behulp van de opties in het bewerken balk onderaan bewerken.
+		Selecteer een of meer rijen om nieuwe commando's toe te voegen op de top van hen.
+		U kunt rijen bewegen met click-and-drag.
+		U kunt uw macro's exporteren naar werken AutoHotkey scripts of stand-alone executables uit het venster Export.
+		U kunt openen, kopiëren, verplaatsen of verwijderen van bestanden en mappen met behulp van een van de commando's in Invoegen> Run / File / String / Misc.
+		U kunt sneltoetsen gebruiken om te versnellen of te vertragen afspelen. Ga naar Opties> Instellingen> Weergave om sleutels en snelheid in te stellen.
+		Om op te nemen omlaag en omhoog staat van iedere toets ga naar Opties> Instellingen> Opname en check "Capture-toets staat (omlaag / omhoog)" optie.
+		Om capture gebied aan te passen met behulp van de functie "Make Screenshot" ga naar Opties> Instellingen> Screenshots en selecteer "Druk op Enter om Capture". Na het tekenen van de rechthoek gebruik Controle pijltjestoetsen om de selectie te verplaatsen en Shift pijltoetsen om het formaat te wijzigen.
+		Snel Selecteer: Selecteer een rij en klik op een kolomkop om soortgelijke rijen op basis van de tekst van die kolom cel te selecteren.
+		De Run / File / String / Misc. raam hebben vele andere nuttige commando's zoals Shutdown en UrlDownloadToFile.
+		Om uw macro's werken alleen op een bepaald venster ga naar Macro> Context Sensitive Sneltoetsen.
+		Klik op de Index Kolomkoptekst aan / uit Help tekeningen en kleuren voor Loops en uitspraken over te schakelen. Dubbel-klik op de actie Kolomkoptekst Inspringen voor Loops en Verklaringen aan / uit te schakelen.
+		U kunt debuggen van uw macro's met behulp van de handmatige sneltoets en de Play-opties in het menu Macro. U kunt ook acties uitschakelen door ze in de lijst Macro.
+		U kunt uw eigen globale variabelen ingesteld bij het opstarten en uit te voeren om te worden geladen. Ga naar Opties> Instellingen> Gebruiker globale variabelen om ze toe te voegen.
+		U kunt geavanceerde functies zoals substr en RegExReplace uit het raam Functions (Invoegen> Als Verklaringen / variabelen / functies) draaien. Of draai je eigen functies van externe AutoHotkey scripts.
+	)	
 ; Tooltips		
 	NewB_TT =	Nieuw (Ctrl+N)
 	OpenB_TT =	Openen (Ctrl+O)

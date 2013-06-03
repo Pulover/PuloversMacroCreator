@@ -26,6 +26,7 @@ netcfgx := SysRoot "\System32\netcfgx.dll"
 cscdll := SysRoot "\System32\cscdll.dll"
 psr := SysRoot "\System32\psr.exe"
 regedit := SysRoot "\regedit.exe"
+accessibilitycpl := SysRoot "\System32\accessibilitycpl.dll"
 Mmsys := SysRoot "\System32\Mmsys.cpl"
 inetcpl := SysRoot "\System32\inetcpl.cpl"
 Timedate := SysRoot "\System32\Timedate.cpl"
@@ -34,10 +35,11 @@ xpsp2res := SysRoot "\System32\xpsp2res.dll"
 If A_OSVersion in WIN_8,WIN_7
 {
 	_s := Chr(8239)
-	IconFile := shell32
 	HelpIconQ := 24
 	HelpIconI := 222
 	WarnIcon := 78
+	TipFile := accessibilitycpl
+	TipIcon := 15
 	HelpIconB := [shell32, 24]
 	t_RecordIcon := [psr, 2]
 	t_PlayIcon := [shell32, 138]
@@ -132,10 +134,11 @@ If A_OSVersion in WIN_8,WIN_7
 If A_OSVersion = WIN_VISTA
 {
 	_s := Chr(8239)
-	IconFile := shell32
 	HelpIconQ := 24
 	HelpIconI := 222
 	WarnIcon := 78
+	TipFile := accessibilitycpl
+	TipIcon := 15
 	HelpIconB := [shell32, 24]
 	t_RecordIcon := [gcdef, 2]
 	t_PlayIcon := [shell32, 138]
@@ -230,10 +233,11 @@ If A_OSVersion = WIN_VISTA
 If A_OSVersion in WIN_2003,WIN_XP,WIN_2000
 {
 	_s := Chr(4445)
-	IconFile := shell32
 	HelpIconQ := 24
 	HelpIconI := 222
 	WarnIcon := 78
+	TipFile := accessibilitycpl
+	TipIcon := 15
 	HelpIconB := [shell32, 24]
 	t_RecordIcon := [gcdef, 1]
 	t_PlayIcon := [shell32, 138]
