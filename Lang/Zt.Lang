@@ -377,6 +377,9 @@
 	t_Lang094 =	名稱=值
 	t_Lang095 =	輸入每行1個變量。您還可以添加[第]。
 	t_Lang096 =	用戶全局變量
+	t_Lang097 =	按下操縱桿上的按鈕
+	t_Lang098 =	搖桿
+	t_Lang099 =	鈕
 		
 ; Messages & Dialogs		
 	d_Lang001 =	打開
@@ -562,6 +565,7 @@
 	AbortKey_TT =	Backspace鍵來清除
 	PauseKey_TT =	暫停執行，而不是停止
 	Win1_TT =	作為改性劑添加Windows鍵
+	JoyHK_TT =	操縱桿（CTRL+J）
 	ReptC_TT =	0 =無限
 	TabPlus_TT =	添加宏（按Ctrl+T）
 	TabClose_TT =	關閉宏（按Ctrl+W）

@@ -377,6 +377,9 @@
 	t_Lang094 =	Name = Wert
 	t_Lang095 =	Geben Sie 1 Variable pro Zeile. Sie können auch hinzufügen [Abschnitte].
 	t_Lang096 =	Benutzer Globale Variablen
+	t_Lang097 =	Drücken Sie eine Taste auf dem Joystick
+	t_Lang098 =	Joystick
+	t_Lang099 =	Taste
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Öffnen
@@ -562,6 +565,7 @@
 	AbortKey_TT =	Backspace zum Löschen
 	PauseKey_TT =	Unterbricht die Ausführung anstatt anzuhalten
 	Win1_TT =	Fügen Sie die Windows-Taste als Modifizierer
+	JoyHK_TT =	Joystick (Strg+J)
 	ReptC_TT =	0 = unendlich
 	TabPlus_TT =	Makro hinzufügen (Strg+T)
 	TabClose_TT =	Schließen Macro (Strg+W)

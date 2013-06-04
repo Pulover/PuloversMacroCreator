@@ -377,6 +377,9 @@
 	t_Lang094 =	Nombre = Valor
 	t_Lang095 =	Introduzca 1 variable por línea. Usted también puede agregar [Secciones].
 	t_Lang096 =	Variables Globales Del Usuario
+	t_Lang097 =	Presione un botón en la palanca de mando
+	t_Lang098 =	Palanca de mando
+	t_Lang099 =	Botón
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Abierto
@@ -562,6 +565,7 @@
 	AbortKey_TT =	Retroceso para borrar
 	PauseKey_TT =	Detiene la ejecución en lugar de detenerse
 	Win1_TT =	Agregue la clave de Windows como modificador
+	JoyHK_TT =	Palanca De Mando (Ctrl+J)
 	ReptC_TT =	0 = infinito
 	TabPlus_TT =	Añadir Macro (Ctrl+T)
 	TabClose_TT =	Cerrar Macro (Ctrl+W)

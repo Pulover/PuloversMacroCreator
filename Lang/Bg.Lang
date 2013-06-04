@@ -377,6 +377,9 @@
 	t_Lang094 =	Име = Стойност
 	t_Lang095 =	Въведете една променлива на ред. Можете също така да добавите [разделите].
 	t_Lang096 =	Потребителски Глобални Променливи
+	t_Lang097 =	Натиснете бутон на джойстика
+	t_Lang098 =	Joystick
+	t_Lang099 =	Бутон
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Отворен
@@ -562,6 +565,7 @@
 	AbortKey_TT =	Backspace, за да изчистите
 	PauseKey_TT =	Паузите изпълнение вместо да спре
 	Win1_TT =	Добавяне на клавиша Windows, както модификатор
+	JoyHK_TT =	Джойстик (Ctrl+J)
 	ReptC_TT =	0 = безкрайно
 	TabPlus_TT =	Добави Macro (Ctrl+T)
 	TabClose_TT =	Затвори Macro (Ctrl+W)

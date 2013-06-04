@@ -377,6 +377,9 @@
 	t_Lang094 =	Név = érték
 	t_Lang095 =	Írja 1 változó soronként. Ön is hozzá [§].
 	t_Lang096 =	Felhasználó Globális Változók
+	t_Lang097 =	Nyomja meg a gombot a joystick
+	t_Lang098 =	Joystick
+	t_Lang099 =	Gomb
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Nyitva
@@ -562,6 +565,7 @@
 	AbortKey_TT =	Backspace törölni
 	PauseKey_TT =	Szünetelteti végrehajtása helyett megállás
 	Win1_TT =	Adja hozzá a Windows billentyű a módosító
+	JoyHK_TT =	Joystick (Ctrl+J)
 	ReptC_TT =	0 = végtelen
 	TabPlus_TT =	Kedvencek Macro (Ctrl+T)
 	TabClose_TT =	Bezárás Macro (Ctrl+W)

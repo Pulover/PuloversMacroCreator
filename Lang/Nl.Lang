@@ -377,6 +377,9 @@
 	t_Lang094 =	Naam = waarde
 	t_Lang095 =	Voer 1 variabele per regel. U kunt ook [secties] toe te voegen.
 	t_Lang096 =	Gebruiker Globale Variabelen
+	t_Lang097 =	Druk op een knop op de joystick
+	t_Lang098 =	Bedieningshendel
+	t_Lang099 =	Knop
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Open
@@ -562,6 +565,7 @@
 	AbortKey_TT =	Backspace om te wissen
 	PauseKey_TT =	Hiermee onderbreekt de uitvoering in plaats van te stoppen
 	Win1_TT =	Voeg de Windows-toets als modifier
+	JoyHK_TT =	Joystick (Ctrl+J)
 	ReptC_TT =	0 = oneindig
 	TabPlus_TT =	Voeg Macro (Ctrl+T)
 	TabClose_TT =	Sluiten Macro (Ctrl+W)

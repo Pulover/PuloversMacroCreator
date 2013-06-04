@@ -377,6 +377,9 @@
 	t_Lang094 =	Adı = Değer
 	t_Lang095 =	Satır başına 1 değişken girin. Ayrıca [Bölüm] ekleyebilirsiniz.
 	t_Lang096 =	Kullanıcı Global Değişkenler
+	t_Lang097 =	Joystick üzerindeki bir düğmeye basın
+	t_Lang098 =	Joystick
+	t_Lang099 =	Düğme
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Açık
@@ -562,6 +565,7 @@
 	AbortKey_TT =	Temizlemek için Backspace
 	PauseKey_TT =	Yürütme yerine durdurma Duraklamadan
 	Win1_TT =	Değiştirici olarak Windows tuşu ekle
+	JoyHK_TT =	Joystick (Ctrl+J)
 	ReptC_TT =	0 = sonsuz
 	TabPlus_TT =	Makro Ekle (Ctrl+T)
 	TabClose_TT =	Kapat Makro (Ctrl+W)

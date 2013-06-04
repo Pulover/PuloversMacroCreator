@@ -377,6 +377,9 @@
 	t_Lang094 =	이름 = 값
 	t_Lang095 =	라인 당 1 변수를 입력합니다. 또한 [섹션]을 추가 할 수 있습니다.
 	t_Lang096 =	사용자가 전역 변수
+	t_Lang097 =	조이스틱 버튼을 눌러
+	t_Lang098 =	조종간
+	t_Lang099 =	단추
 		
 ; Messages & Dialogs		
 	d_Lang001 =	열기
@@ -562,6 +565,7 @@
 	AbortKey_TT =	삭제하는 백 스페이스
 	PauseKey_TT =	실행 대신 정지를 일시 중지
 	Win1_TT =	수정으로 Windows 키를 추가합니다
+	JoyHK_TT =	조이스틱합니다 (Ctrl+J)
 	ReptC_TT =	0 = 무한
 	TabPlus_TT =	매크로를 추가합니다 (Ctrl+T)
 	TabClose_TT =	닫기 매크로 (Ctrl 키를+W)

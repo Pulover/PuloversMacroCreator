@@ -45,6 +45,7 @@ Insert::GoSub, ApplyL
 ^g::GoSub, Options
 ^r::GoSub, Record
 ^+t::GoSub, RunTimer
+^j::GoSub, SetJoyButton
 ^t::GoSub, TabPlus
 ^w::GoSub, TabClose
 ^h::GoSub, SetWin

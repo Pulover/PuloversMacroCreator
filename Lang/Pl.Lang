@@ -377,6 +377,9 @@
 	t_Lang094 =	Name = Value
 	t_Lang095 =	Wpisz 1 zmiennej na linię. Możesz także dodać [rozdziały].
 	t_Lang096 =	Użytkowników Zmienne Globalne
+	t_Lang097 =	Naciśnij przycisk na joysticku
+	t_Lang098 =	Drążek sterowy
+	t_Lang099 =	Przycisk
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Otwarte
@@ -562,6 +565,7 @@
 	AbortKey_TT =	Backspace, aby usunąć
 	PauseKey_TT =	Wstrzymuje wykonywanie zamiast zatrzymać
 	Win1_TT =	Dodaj klucz Windows jako modyfikator
+	JoyHK_TT =	Joystick (Ctrl+J)
 	ReptC_TT =	0 = nieskończony
 	TabPlus_TT =	Dodaj Macro (Ctrl+T)
 	TabClose_TT =	Zamknij makro (Ctrl+W)

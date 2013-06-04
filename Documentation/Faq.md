@@ -141,7 +141,7 @@ There is also an an internal function that uses GDI+ functions to make a screens
 
 * Go to Functions and type any name for the OutputVar and type **Screenshot** in the *Function Name*.
 * The first parameter is the name of the file which can be an absolute or relative path and a file with a png extension. You can use variables to have them dynamically named, e.g.: Screen_%A_Now%.png
-* The second parameter is the pipe separated coordinates in the screen, e.g. 100|200|50|100 (where the 1st is the X position, 2nd is Y position, 3rd is width and 4th is the height, all in pixels).
+* The second parameter are the pipe-separated coordinates in the screen, e.g. 100|200|50|100 (where the 1st is the X position, 2nd is Y position, 3rd is width and 4th is the height, all in pixels).
 
 Example of PMC file:
 

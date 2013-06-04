@@ -344,7 +344,7 @@ class IfWin
 	}
 }
 
-ActivateHotkeys(Rec="", Play="", Speed="", Stop="")
+ActivateHotkeys(Rec="", Play="", Speed="", Stop="", Joy="")
 {
 	local ActiveKeys
 	
@@ -388,6 +388,22 @@ ActivateHotkeys(Rec="", Play="", Speed="", Stop="")
 		Hotkey, *%AbortKey%, f_AbortKey, Off
 		If ((AbortKey <> "") && (Stop = 1))
 			Hotkey, *%AbortKey%, % (PauseKey) ? "f_PauseKey" : "f_AbortKey", On
+	}
+	
+	If (Joy <> "")
+	{
+		Loop, 16
+		{
+			j := A_Index
+			Loop, 32
+			{
+				#If WinActive("ahk_id" CmdWin)
+				Hotkey, If, WinActive("ahk_id" CmdWin)
+				Hotkey, %j%Joy%A_Index%, CaptureJoyB, % (Joy) ? "On" : "Off"
+				Hotkey, If
+				#If
+			}
+		}
 	}
 	
 	return ActiveKeys

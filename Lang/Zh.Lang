@@ -377,6 +377,9 @@
 	t_Lang094 =	名称=值
 	t_Lang095 =	输入每行1个变量。您还可以添加[第]。
 	t_Lang096 =	用户全局变量
+	t_Lang097 =	按下操纵杆上的按钮
+	t_Lang098 =	摇杆
+	t_Lang099 =	钮
 		
 ; Messages & Dialogs		
 	d_Lang001 =	打开
@@ -562,6 +565,7 @@
 	AbortKey_TT =	退格键清除
 	PauseKey_TT =	暂停执行，而不是停止
 	Win1_TT =	作为改性剂添加Windows键
+	JoyHK_TT =	操纵杆（CTRL+J）
 	ReptC_TT =	0 =无限
 	TabPlus_TT =	添加宏（Ctrl+T）
 	TabClose_TT =	关闭宏（Ctrl+W）

@@ -377,6 +377,9 @@
 	t_Lang094 =	Nimi = arvo
 	t_Lang095 =	Anna 1 muuttujan riville. Voit myös lisätä [§].
 	t_Lang096 =	Käyttäjä Yleismuuttujat
+	t_Lang097 =	Paina painiketta joystick
+	t_Lang098 =	Peliohjain
+	t_Lang099 =	Nappi
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Avata
@@ -562,6 +565,7 @@
 	AbortKey_TT =	Backspace poistaa
 	PauseKey_TT =	Keskeyttää suorittamisen sijasta pysähtymättä
 	Win1_TT =	Lisää Windows-näppäin muuntoaineena
+	JoyHK_TT =	Ohjainta (Ctrl+J)
 	ReptC_TT =	0 = ääretön
 	TabPlus_TT =	Lisää Makro (Ctrl+T)
 	TabClose_TT =	Sulje Makro (Ctrl+W)

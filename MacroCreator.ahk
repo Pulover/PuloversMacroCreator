@@ -179,7 +179,7 @@ IniRead, MD, %IniFilePath%, ExportOptions, MD, -1
 IniRead, Ex_SB, %IniFilePath%, ExportOptions, Ex_SB, 1
 IniRead, SB, %IniFilePath%, ExportOptions, SB, -1
 IniRead, Ex_MT, %IniFilePath%, ExportOptions, Ex_MT, 0
-IniRead, MT, %IniFilePath%, ExportOptions, SB, 1
+IniRead, MT, %IniFilePath%, ExportOptions, MT, 2
 IniRead, Ex_IN, %IniFilePath%, ExportOptions, Ex_IN, 1
 IniRead, Ex_UV, %IniFilePath%, ExportOptions, Ex_UV, 1
 IniRead, ComCr, %IniFilePath%, ExportOptions, ComCr, 1
@@ -541,15 +541,20 @@ Gui, Add, Button, -Wrap ys xm+500 W25 H25 hwndTestRun vTestRun gTestRun
 Gui, Add, Button, -Wrap W25 H25 hwndRunTimer vRunTimer gRunTimer
 	ILButton(RunTimer, RunTimerIcon[1] ":" RunTimerIcon[2])
 Gui, Add, GroupBox, Section W355 H65 ys-9 xm+530
-Gui, Add, Text, -Wrap W25 H22 ym+5 xs+10 vAutoT, %w_Lang006%:
+Gui, Add, Text, -Wrap W25 H22 ys+15 xs+10 vAutoT, %w_Lang006%:
 Gui, Add, Text, -Wrap W25 H22 y+3 vManT, %w_Lang007%:
-Gui, Add, Hotkey, vAutoKey gSaveData W150 ym+2 xp+30, % LTrim(o_AutoKey[1], "#")
+Gui, Add, Hotkey, vAutoKey gSaveData W150 ys+13 xp+30
 Gui, Add, Hotkey, vManKey gWaitKeys W55 y+5 Limit190, % o_ManKey[1]
-Gui, Add, Checkbox, -Wrap ym+5 xp+155 vWin1 gSaveData R1, %w_Lang009%
-Gui, Add, Text, -Wrap W25 H22 y+13 xs+105 vAbortT, %w_Lang008%:
+Gui, Add, Text, -Wrap W25 H22 yp+3 xp+65 vAbortT, %w_Lang008%:
 Gui, Add, Hotkey,  yp-3 xp+30 vAbortKey W55, %AbortKey%
-Gui, Add, Checkbox, -Wrap Checked%PauseKey% yp+5 xp+60 vPauseKey gPauseKey R1, %w_Lang010%
-Gui, Add, Text, W2 H55 yp-33 x+5 0x11
+Gui, Font, s10, Wingdings
+Gui, Add, Checkbox, -Wrap ys+11 xs+193 W25 H25 vWin1 gSaveData 0x1000, ÿ
+Gui, Font
+Gui, Font, s7
+Gui, Add, Checkbox, -Wrap yp x+2 W25 H25 hwndJoyHK vJoyHK gSetJoyButton 0x1000
+	ILButton(JoyHK, JoyIcon[1] ":" JoyIcon[2])
+Gui, Add, Checkbox, -Wrap Checked%PauseKey% y+8 xs+195 vPauseKey gPauseKey R1, %w_Lang010%
+Gui, Add, Text, W2 H55 ys+10 xs+250 0x11
 Gui, Add, Text, -Wrap yp+5 x+5 W90 H22 vRepeatT, %w_Lang011% (%t_Lang004%):
 Gui, Add, Edit, y+1 W90 R1 Number vReptC
 Gui, Add, UpDown, vTimesG 0x80 Range0-999999999, 1
@@ -626,6 +631,7 @@ Gui, Add, Text, yp+16 W100 vCoordTip gOptions, CoordMode: %CoordMouse%
 GuiControl,, Win1, % (InStr(o_AutoKey[1], "#")) ? 1 : 0
 GuiControl, Focus, InputList%A_List%
 Gui, Submit
+GoSub, LoadData
 GoSub, b_Start
 OnMessage(WM_MOUSEMOVE, "ShowTooltip")
 OnMessage(WM_RBUTTONDOWN, "ShowContextHelp")
@@ -1593,7 +1599,7 @@ Gui, 14:Add, Checkbox, -Wrap Checked%Send_Loop% y+5 xs W200 vSend_Loop R1, %t_La
 Gui, 14:Add, Checkbox, -Wrap Checked%Exe_Exp% yp xp+200 W145 vExe_Exp gExe_Exp R1,%t_Lang088% 
 Gui, 14:Add, Button, -Wrap Section Default xm W60 H23 gExpButton, %w_Lang001%
 Gui, 14:Add, Button, -Wrap ys W60 H23 gExpClose, %c_Lang022%
-Gui, 14:Add, Progress, ys W220 H20 vExpProgress
+Gui, 14:Add, Progress, ys W280 H20 vExpProgress
 GuiControl, 14:ChooseString, SM, %SM%
 GuiControl, 14:ChooseString, SI, %SI%
 GuiControl, 14:ChooseString, ST, %ST%
@@ -7233,11 +7239,17 @@ If WinExist("ahk_id " PrevID)
 return
 
 SaveData:
-GuiControlGet, AutoKey,, AutoKey
+GuiControlGet, JHKOn,, JoyHK
+If (JHKOn = 1)
+	HK_AutoKey := o_AutoKey[A_List]
+Else
+	GuiControlGet, HK_AutoKey,, AutoKey
 GuiControlGet, ManKey,, ManKey
 GuiControlGet, TimesO,, TimesG
 GuiControlGet, Win1,, Win1
-o_AutoKey[A_List] := (Win1 = 1) ? "#" AutoKey : AutoKey
+o_AutoKey[A_List] := (Win1 = 1) ? "#" HK_AutoKey : HK_AutoKey
+If (o_AutoKey[A_List] = "#")
+	o_AutoKey[A_List] := "LWin"
 o_ManKey[A_List] := ManKey
 o_TimesG[A_List] := TimesO
 If WinExist("ahk_id " PrevID)
@@ -7245,10 +7257,25 @@ If WinExist("ahk_id " PrevID)
 return
 
 LoadData:
-GuiControl,, AutoKey, % LTrim(o_AutoKey[A_List], "#")
+If InStr(o_AutoKey[A_List], "Joy")
+	GoSub, SetJoyHK
+Else
+{
+	GoSub, SetNoJoy
+	GuiControl,, AutoKey, % LTrim(o_AutoKey[A_List], "#")
+}
 GuiControl,, Win1, % (InStr(o_AutoKey[A_List], "#")) ? 1 : 0
 GuiControl,, ManKey, % o_ManKey[A_List]
 GuiControl,, TimesG, % (o_TimesG[A_List] = "") ? 1 : o_TimesG[A_List]
+return
+
+GetHotkeys:
+AutoKey := "", ManKey := ""
+For Index, Key in o_AutoKey
+	AutoKey .= Key "|"
+For Index, Key in o_ManKey
+	ManKey .= Key "|"
+AutoKey := RTrim(AutoKey, "|"), ManKey := RTrim(ManKey, "|")
 return
 
 DragRows:
@@ -8022,6 +8049,62 @@ Gui, 1:-Disabled
 Gui, 6:Destroy
 return
 
+SetJoyButton:
+GuiControl,, JoyHK, 0
+ActivateHotkeys("", "", "", "", 1)
+Jp := ""
+Gui, 31:+owner1 +ToolWindow +HwndCmdWin
+Gui, 1:Default
+Gui, 1:+Disabled
+Gui, 31:Font, s7
+Gui, 31:Add, Groupbox, Section W240 H60 Center, %t_Lang097%
+Gui, 31:Add, Text, ys+20 xs+10 vPJoy W220 r2 Center
+Gui, 31:Add, Button, -Wrap Section Default xm W60 H23 gJoyOK, %c_Lang020%
+Gui, 31:Add, Button, -Wrap ys W60 H23 gJoyCancel, %c_Lang021%
+Gui, 31:Show,, %t_Lang098%
+return
+
+JoyOK:
+If (Jp = "")
+	return
+Gui, 1:-Disabled
+Gui, 31:Destroy
+Gui, 1:Default
+GoSub, SetJoyHK
+o_AutoKey[A_List] := Jp
+GoSub, SaveData
+ActivateHotkeys("", "", "", "", 0)
+return
+
+JoyCancel:
+31GuiClose:
+31GuiEscape:
+Gui, 1:-Disabled
+Gui, 31:Destroy
+Gui, 1:Default
+GuiControl, Enable, AutoKey
+GuiControl, Enable, Win1
+ActivateHotkeys("", "", "", "", 0)
+return
+
+CaptureJoyB:
+RegExMatch(A_ThisHotkey, "(\d+)Joy(\d+)", Jp)
+GuiControl,, PJoy, %t_Lang098%: %Jp1%`n%t_Lang099%: %Jp2%
+return
+
+SetJoyHK:
+GuiControl,, JoyHK, 1
+GuiControl,, Win1, 0
+GuiControl, Disable, AutoKey
+GuiControl, Disable, Win1
+return
+
+SetNoJoy:
+GuiControl,, JoyHK, 0
+GuiControl, Enable, AutoKey
+GuiControl, Enable, Win1
+return
+
 SetWin:
 Gui, 16:+owner1 +ToolWindow +HwndCmdWin
 Gui, 1:Default
@@ -8044,6 +8127,7 @@ Gui, Submit, NoHide
 IfDirectWindow := Title
 Gui, 1:-Disabled
 Gui, 16:Destroy
+Gui, 1:Default
 GuiControl, 1:, ContextTip, #IfWin: %IfDirectContext%
 return
 
@@ -9187,15 +9271,6 @@ ListVars:
 ListVars
 return
 
-GetHotkeys:
-AutoKey := "", ManKey := ""
-For Index, Key in o_AutoKey
-	AutoKey .= Key "|"
-For Index, Key in o_ManKey
-	ManKey .= Key "|"
-AutoKey := RTrim(AutoKey, "|"), ManKey := RTrim(ManKey, "|")
-return
-
 ;##### Hide / Close: #####
 
 ShowHide:
@@ -9329,7 +9404,7 @@ MD := -1
 Ex_SB := 1
 SB := -1
 Ex_MT := 0
-MT := 1
+MT := 2
 Ex_IN := 1
 Ex_UV := 1
 ComCr := 1
@@ -9401,6 +9476,7 @@ Else
 o_AutoKey := Object()
 o_ManKey := Object()
 GoSub, ObjParse
+GoSub, SetNoJoy
 GoSub, LoadData
 GoSub, b_Start
 return

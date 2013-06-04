@@ -377,6 +377,9 @@
 	t_Lang094 =	Navn = verdi
 	t_Lang095 =	Skriv inn en variabel per linje. Du kan også legge til [Seksjoner].
 	t_Lang096 =	Bruker Globale Variabler
+	t_Lang097 =	Trykk på en knapp på joysticken
+	t_Lang098 =	Joystick
+	t_Lang099 =	Button
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Åpent
@@ -562,6 +565,7 @@
 	AbortKey_TT =	Tilbaketasten for å fjerne
 	PauseKey_TT =	Pauser gjennomføring stedet for å stoppe
 	Win1_TT =	Legge til Windows-tasten som modifikator
+	JoyHK_TT =	Joystick (Ctrl+J)
 	ReptC_TT =	0 = uendelig
 	TabPlus_TT =	Legg Makro (Ctrl+T)
 	TabClose_TT =	Lukk Makro (Ctrl+W)

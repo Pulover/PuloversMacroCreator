@@ -377,6 +377,9 @@
 	t_Lang094 =	Ime = Vrijednost
 	t_Lang095 =	Unesite jedna varijabla po liniji. Vi svibanj također dodati [sekcije].
 	t_Lang096 =	Korisnik Globalne Varijable
+	t_Lang097 =	Pritisnite tipku na palici
+	t_Lang098 =	Džojstik
+	t_Lang099 =	Dugme
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Otvoreno
@@ -562,6 +565,7 @@
 	AbortKey_TT =	Povratna izbiti
 	PauseKey_TT =	Pauziranje izvršenje umjesto zaustavljanja
 	Win1_TT =	Dodaj Windows tipku za izmjenu
+	JoyHK_TT =	Joystick (Ctrl+J)
 	ReptC_TT =	0 = beskonačno
 	TabPlus_TT =	Dodaj Macro (Ctrl+T)
 	TabClose_TT =	Makro Close (Ctrl+W)

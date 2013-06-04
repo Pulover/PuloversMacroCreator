@@ -377,6 +377,9 @@
 	t_Lang094 =	Nom = Valor
 	t_Lang095 =	Introduïu gener variable per línia. Vostè també pot afegir [Seccions].
 	t_Lang096 =	Variables Globals De L'usuari
+	t_Lang097 =	Premeu un botó a la palanca de comandament
+	t_Lang098 =	Palanca de comandament
+	t_Lang099 =	Botó
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Obert
@@ -562,6 +565,7 @@
 	AbortKey_TT =	Retrocés per esborrar
 	PauseKey_TT =	Fa una pausa en l'execució en comptes d'aturar
 	Win1_TT =	Afegir la tecla Windows com a modificador
+	JoyHK_TT =	Palanca De Comandament (Ctrl+J)
 	ReptC_TT =	0 = infinit
 	TabPlus_TT =	Afegir Macro (Ctrl+T)
 	TabClose_TT =	Tancar Macro (Ctrl+W)

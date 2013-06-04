@@ -30,6 +30,7 @@ regedit := SysRoot "\regedit.exe"
 accessibilitycpl := SysRoot "\System32\accessibilitycpl.dll"
 Mmsys := SysRoot "\System32\Mmsys.cpl"
 inetcpl := SysRoot "\System32\inetcpl.cpl"
+Joy := SysRoot "\System32\Joy.cpl"
 Timedate := SysRoot "\System32\Timedate.cpl"
 xpsp2res := SysRoot "\System32\xpsp2res.dll"
 
@@ -73,6 +74,7 @@ If A_OSVersion in WIN_8,WIN_7
 	PlayOptIcon := [shell32, 262]
 	RecOptIcon := [psr, 1]
 	RunTimerIcon := [miguiresource, 2]
+	JoyIcon := [Joy, 1]
 	PlusIcon := [shell32, 280]
 	CloseIcon := [shell32, 235]
 	DuplicateLIcon := [shell32, 279]
@@ -173,6 +175,7 @@ If A_OSVersion = WIN_VISTA
 	PlayOptIcon := [shell32, 262]
 	RecOptIcon := [inetcpl, 50]
 	RunTimerIcon := [miguiresource, 2]
+	JoyIcon := [gcdef, 1]
 	PlusIcon := [wlanpref, 8]
 	CloseIcon := [wlanpref, 9]
 	DuplicateLIcon := [FXSRESM, 12]
@@ -273,6 +276,7 @@ If A_OSVersion in WIN_2003,WIN_XP,WIN_2000
 	PlayOptIcon := [xpsp2res, 13]
 	RecOptIcon := [xpsp2res, 14]
 	RunTimerIcon := [Timedate, 1]
+	JoyIcon := [gcdef, 1]
 	PlusIcon := [inetcpl, 22]
 	CloseIcon := [inetcpl, 23]
 	DuplicateLIcon := [shell32, 55]

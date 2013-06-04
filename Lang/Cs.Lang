@@ -377,6 +377,9 @@
 	t_Lang094 =	Název = hodnota
 	t_Lang095 =	Zadejte 1 proměnnou na řádek. Můžete také přidat [sekce].
 	t_Lang096 =	Uživatel Globální Proměnné
+	t_Lang097 =	Stiskněte tlačítko na joysticku
+	t_Lang098 =	Joystick
+	t_Lang099 =	Tlačítko
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Otevřít
@@ -562,6 +565,7 @@
 	AbortKey_TT =	Backspace zrušte
 	PauseKey_TT =	Pozastaví výkon místo zastavení
 	Win1_TT =	Přidejte klávesu Windows jako modifikátor
+	JoyHK_TT =	Joystick (Ctrl+J)
 	ReptC_TT =	0 = nekonečno
 	TabPlus_TT =	Přidat makro (Ctrl+T)
 	TabClose_TT =	Zavřít Makro (Ctrl+W)

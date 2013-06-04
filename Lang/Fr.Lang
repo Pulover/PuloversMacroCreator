@@ -377,6 +377,9 @@
 	t_Lang094 =	Nom = Valeur
 	t_Lang095 =	Entrez 1 variable par ligne. Vous pouvez également ajouter [Articles].
 	t_Lang096 =	Des Variables Globales Des Utilisateurs
+	t_Lang097 =	Appuyez sur un bouton sur la manette
+	t_Lang098 =	Joystick
+	t_Lang099 =	Bouton
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Ouvert
@@ -562,6 +565,7 @@
 	AbortKey_TT =	Retour arrière pour effacer
 	PauseKey_TT =	Interrompt l'exécution au lieu de s'arrêter
 	Win1_TT =	Ajouter la touche Windows en tant que modificateur
+	JoyHK_TT =	Joystick (Ctrl+J)
 	ReptC_TT =	0 = infini
 	TabPlus_TT =	Ajouter une macro (Ctrl+T)
 	TabClose_TT =	Fermer Macro (Ctrl+W)
