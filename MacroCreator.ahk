@@ -68,7 +68,7 @@ Process, Priority,, High
 
 Menu, Tray, Tip, Pulovers's Macro Creator
 DefaultIcon := (A_IsCompiled) ? A_ScriptFullPath
-			:  (FileExist("Images\PMC3_48.ico") ? "Images\PMC3_48.ico" : A_AhkPath)
+			:  (FileExist("Resources\PMC3_Mult.ico") ? "Resources\PMC3_Mult.ico" : A_AhkPath)
 Menu, Tray, Icon, %DefaultIcon%, 1, 1
 
 CurrentVersion := "3.7.3"
