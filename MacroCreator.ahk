@@ -725,8 +725,9 @@ Else
 		Gui, 26:Add, Checkbox, -Wrap W300 vDontShowAdm R1, %d_Lang053%
 		Gui, 26:Add, Button, -Wrap Default y+10 W90 H25 gTipClose2, %c_Lang020%
 		Gui, 26:Show,, %AppName%
+		WinWaitClose, ahk_id %TipScrID%
 	}
-	Else If (ShowTips)
+	If (ShowTips)
 		GoSub, ShowTips
 	If (AutoUpdate)
 		GoSub, CheckUpdates
