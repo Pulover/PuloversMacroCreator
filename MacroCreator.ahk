@@ -6885,7 +6885,8 @@ Gui, 28:Add, Checkbox, Checked%ShowProgBar% ys-1 x+4 W25 H25 hwndOSProgB vOSProg
 Gui, 28:Add, Text, W2 H22 ys+3 x+5 0x11
 Gui, 28:Font
 Gui, 28:Font, s10, Webdings
-Gui, 28:Add, Checkbox, Checked%SlowKeyOn% ys-1 x+4 W35 H20 vOSSlow gSlowKeyToggle 0x1000 0xC00, `;4
+Gui, 28:Add, Checkbox, Checked%SlowKeyOn% ys-1 x+4 W35 H20 hwndOSSlow vOSSlow gSlowKeyToggle 0x1000
+	ILButton(OSSlow, SlowDownIcon[1] ":" SlowDownIcon[2])
 Gui, 28:Add, Checkbox, Checked%FastKeyOn% ys-1 x+4 W35 H20 vOSFast gFastKeyToggle 0x1000 0xC00, 8
 Gui, 28:Add, Slider, ys+20 xp-40 W80 H10 vOSTrans gTrans NoTicks Thick20 Range25-255, %OSTrans%
 Gui, 28:Show, %OSCPos% H35 NoActivate, %AppName%
