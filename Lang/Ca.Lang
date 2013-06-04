@@ -506,30 +506,33 @@
 ; Start-up Tips		
 	StartTips =	
 	(LTrim	
-		Du kan skapa makron med hjälp av kommandoknapparna i huvudfönstret eller använda inspelaren för att kopiera dina handlingar. Gå till Alternativ> Inställningar> Inspelning för att välja vilka ingångar kommer att registreras.
-		Om du vill använda brännaren för snabbuppgifter gå till Alternativ> Inställningar> Inspelning och kontrollera "Rensa lista" alternativet. Klicka sedan på knappen Spela in i huvudfönstret och använd F10 för att rensa den aktuella Macro och starta en ny med samma kortkommando.
+		Du kan skapa makron med hjälp av kommandoknapparna i huvudfönstret eller använda inspelaren för att kopiera dina handlingar. Gå till Alternativ > Inställningar > Inspelning för att välja vilka ingångar kommer att registreras.
+		Om du vill använda brännaren för snabbuppgifter gå till Alternativ > Inställningar > Inspelning och kontrollera "Rensa lista" alternativet. Klicka sedan på knappen Spela in i huvudfönstret och använd F10 för att rensa den aktuella Macro och starta en ny med samma kortkommando. També podeu consultar l'opció "Sempre actiu" en la finestra principal a tenir enregistrament i reproducció hotkeys actiu.
 		För att få hjälp för ett specifikt kommando högerklicka på en kommandoknapp i huvudfönstret eller någonstans i ett kommando fönster för att visa länkar till AutoHotkey onlinehjälpen.
 		Kontrollera "Capture Keys" alternativ för att ange nycklar och kombinationer till ditt makro direkt från huvudfönstret.
-		Typ nycklar och kombinationer i Hotkey rutan längst ner och tryck på knappen Infoga för att lägga dem till de utvalda raderna.
+		Introduïu tecles i combinacions de tecles d'accés ràpid a la caixa a la part inferior i premi el botó Insereix per afegir a les files seleccionades.
 		Om inga rader valt redigera knapparna gälla för alla rader i listan.
-		Du kan tilldela dina egna variabler i variablerna windows (Infoga> Om Uttalanden / variabler / funktioner). För att använda dem inne kommandon bifoga variabelnamnet i procent tecken, t.ex.: `%MyVar`%.
+		Du kan tilldela dina egna variabler i variablerna windows (Infoga > Om Uttalanden / variabler / funktioner). För att använda dem inne kommandon bifoga variabelnamnet i procent tecken, t.ex.: `%MyVar`%.
 		Den "Loop" räknare upptill anger det totala antalet slingor för den valda makro.
 		Du kan redigera en rad genom att dubbelklicka på det eller genom att markera den och klicka på Redigera knapparna längst ner.
 		Du kan redigera flera markerade rader med hjälp av alternativen i redigeringsrutan längst ner.
 		Välj en eller flera rader för att lägga till nya kommandon ovanpå dem.
 		Du kan flytta rader med klick-och-dra.
+		Feu doble clic a la icona de la safata per activar tecles d'accés ràpid o aturar la reproducció / enregistrament. Feu clic amb el botó central durant la reproducció o l'enregistrament en pausa.
 		Du kan exportera dina makron till arbets AutoHotkey skript eller fristående körbara från fönstret Exportera.
-		Du kan öppna, kopiera, flytta eller radera filer och mappar med ett kommando i Infoga> Run / Arkiv / String / Misc.
-		Du kan använda snabbtangenter för att påskynda eller fördröja Uppspelning. Gå till Alternativ> Inställningar> Uppspelning ställa nycklar och hastighet.
-		Om du vill spela Down och Up tillstånd varje nyckel gå till Alternativ> Inställningar> Inspelning och kolla "Fånga viktiga statliga (Down / Up)" alternativet.
-		För att justera fånga område med "gör skärmdump" verktyg gå till Alternativ> Inställningar> Skärmbilder och välj "Tryck Enter för att fånga". Efter dra rektangeln Använd knapparna Kontroll pil för att flytta markeringen och Skift piltangenterna för att ändra storlek på den.
+		Per gravar i reproduir ratolí utilitzant coordenades absolutes anar a Opcions > Configuració > Valors predeterminats i establir coordenades del ratolí a la pantalla.
+		Du kan öppna, kopiera, flytta eller radera filer och mappar med ett kommando i Infoga > Run / Arkiv / String / Misc.
+		Om du vill spela Down och Up tillstånd varje nyckel gå till Alternativ > Inställningar > Inspelning och kolla "Fånga viktiga statliga (Down / Up)" alternativet.
+		Du kan använda snabbtangenter för att påskynda eller fördröja Uppspelning. Gå till Alternativ > Inställningar > Uppspelning ställa nycklar och hastighet.
+		För att justera fånga område med "gör skärmdump" verktyg gå till Alternativ > Inställningar > Skärmbilder och välj "Tryck Enter för att fånga". Efter dra rektangeln Använd knapparna Kontroll pil för att flytta markeringen och Skift piltangenterna för att ändra storlek på den.
 		Snabbval: Välj en rad och klicka på en kolumnrubrik för att välja liknande rader baserat på cellens text från den kolumnen.
 		The Run / Arkiv / String / Misc. fönster har många andra användbara kommandon såsom avstängning och UrlDownloadToFile.
-		För att göra dina makron fungerar bara på ett visst fönster gå till Macro> sammanhangsberoende snabbtangenter.
+		Utilitzeu la funció "Captura" a la finestra de funcions (Inserir > Si Declaracions / Variables / Funcions) per fer una captura de pantalla d'una part de la pantalla. El primer paràmetre és la ruta del fitxer de destinació i el nom amb una extensió png. El segon paràmetre són les coordenades canonada separats a la pantalla, per exemple, 100|200|50|100 (X|Y|Ample|Alt).
 		Klicka på Index kolumnrubriken för att slå på / stänga Hjälp, mönster och färger för loopar och uttalanden. Dubbel-klicka på Åtgärd kolumnrubriken för att slå på / av Indrag för Loops och uttalanden.
 		Du kan felsöka dina makron med hjälp av handboken Hotkey och alternativen Play i Makromenyknappen. Du kan också inaktivera åtgärder genom att avmarkera dem i Macro listan.
-		Du kan ställa dina egna globala variabler som skall laddas vid start och som ska exporteras. Gå till Alternativ> Inställningar> Användarinställningar globala variabler för att lägga till dem.
-		Du kan köra avancerade funktioner såsom SUBSTR och RegExReplace från funktionsfönstret (Infoga> Om Uttalanden / variabler / funktioner). Eller köra egna funktioner från externa AutoHotkey skript....
+		För att göra dina makron fungerar bara på ett visst fönster gå till Macro > sammanhangsberoende snabbtangenter.
+		Du kan ställa dina egna globala variabler som skall laddas vid start och som ska exporteras. Gå till Alternativ > Inställningar > Användarinställningar globala variabler för att lägga till dem.
+		Du kan köra avancerade funktioner såsom SUBSTR och RegExReplace från funktionsfönstret (Infoga > Om Uttalanden / variabler / funktioner). Eller köra egna funktioner från externa AutoHotkey skript....
 	)	
 ; Tooltips		
 	NewB_TT =	Nou (Ctrl+N)

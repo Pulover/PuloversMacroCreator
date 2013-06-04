@@ -506,30 +506,33 @@
 ; Start-up Tips		
 	StartTips =	
 	(LTrim	
-		Voit luoda makroja käyttäen Command painikkeet pääikkunassa tai käyttämällä Recorder kopioida toimia. Valitse Valinnat> Asetukset> Tallennus valita mitä panoksia tallennetaan.
-		Voit käyttää tallenninta nopeasti tehtäviä mene Valinnat> Asetukset> Tallennus ja tarkista "Clear List" vaihtoehto. Napsauta sitten Tallenna-painiketta pääikkunassa ja käyttää F10 tyhjentää nykyisen Macro ja aloittaa uuden samalla pikanäppäin.
+		Voit luoda makroja käyttäen Command painikkeet pääikkunassa tai käyttämällä Recorder kopioida toimia. Valitse Valinnat > Asetukset > Tallennus valita mitä panoksia tallennetaan.
+		Voit käyttää tallenninta nopeasti tehtäviä mene Valinnat > Asetukset > Tallennus ja tarkista "Clear List" vaihtoehto. Napsauta sitten Tallenna-painiketta pääikkunassa ja käyttää F10 tyhjentää nykyisen Macro ja aloittaa uuden samalla pikanäppäin. Voit myös tarkistaa "Aina aktiivinen" vaihtoehto pääikkunassa pitää Tallennus ja toisto pikanäppäimiä aktiivinen.
 		Saadaksesi apua tietyn komennon hiiren kakkospainikkeella komentopainikkeella pääikkunassa tai missä tahansa komento ikkunassa näyttää linkkejä AutoHotkey ohjeessa.
 		Tarkista "Capture Keys" mahdollisuus tulla Avainten ja yhdistelmien teidän Macro suoraan pääikkunassa.
-		Tyyppi avaimet ja yhdistelmät pikanäppäin alalaidassa ja paina Lisää-painiketta ja lisää ne valita rivejä.
+		Anna avaimet ja yhdistelmät pikanäppäin alalaidassa ja paina Lisää-painiketta ja lisää ne valita rivejä.
 		Jos rivejä on valittu edit painikkeet koskevat kaikkia rivejä luettelon.
-		Voit määrittää oman muuttujia muuttujat ikkunat (Insert> Jos Lausunnot / muuttujat / toiminnot). Käyttää niitä sisällä komentoja liittää muuttujan nimeä prosenttia merkkejä, esim.: `%MyVar`%.
+		Voit määrittää oman muuttujia muuttujat ikkunat (Insert > Jos Lausunnot / muuttujat / toiminnot). Käyttää niitä sisällä komentoja liittää muuttujan nimeä prosenttia merkkejä, esim.: `%MyVar`%.
 		Loop counter yläosassa asettaa kokonaismäärä silmukoita valitun Macro.
 		Voit muokata rivi kaksoisnapsauttamalla sitä tai valitsemalla sen ja napsauttamalla Muokkaa painikkeita.
 		Voit muokata useita valitut rivit käyttämällä vaihtoehtoja muokata alareunassa.
 		Valitse yksi tai useampi rivi lisää uusia komentoja niiden päälle.
 		Voit siirtyä krs click-ja-vedä.
+		Kaksoisnapsauta kuvake aktivoi pikanäppäimet tai toiston / tallennuksen lopetus. Klikkaa sitä keskellä olevaa painiketta toiston tai tallennuksen tauko.
 		Voit viedä Makrot työ AutoHotkey skriptejä tai stand-alone ajettavat alkaen Vie-ikkuna.
-		Voit avata, kopioida, siirtää tai poistaa tiedostoja ja kansioita yksi komennot Lisää> Run / File / String / Misc.
-		Voit käyttää pikanäppäimiä nopeuttaa tai hidastaa toisto. Valitse Valinnat> Asetukset> Toisto asettaa avaimet ja nopeus.
-		Tallentaa alas ja ylös tilan jokainen näppäin Valitse Valinnat> Asetukset> Tallennus ja katso "Capture-näppäimen tila (Down / Up)" vaihtoehto.
-		Voit säätää korjuualueella käyttäen "Make Screenshot" työkalu mene Valinnat> Asetukset> Kuvakaappaukset ja valitse "Paina Enter Capture". Kun olet piirtänyt suorakulmion käytön valvonta nuolinäppäimillä valinta ja Shift nuolinäppäimillä muuttaa sen kokoa.
+		Tallentaa ja toistaa hiiri käyttäen absoluuttista koordinaatit mene Valinnat > Asetukset > Ensisijaiset ja asettaa Hiiri Koordinaatit Screen.
+		Voit avata, kopioida, siirtää tai poistaa tiedostoja ja kansioita yksi komennot Lisää > Run / File / String / Misc.
+		Tallentaa alas ja ylös tilan jokainen näppäin Valitse Valinnat > Asetukset > Tallennus ja katso "Capture-näppäimen tila (Down / Up)" vaihtoehto.
+		Voit käyttää pikanäppäimiä nopeuttaa tai hidastaa toisto. Valitse Valinnat > Asetukset > Toisto asettaa avaimet ja nopeus.
+		Voit säätää korjuualueella käyttäen "Make Screenshot" työkalu mene Valinnat > Asetukset > Kuvakaappaukset ja valitse "Paina Enter Capture". Kun olet piirtänyt suorakulmion käytön valvonta nuolinäppäimillä valinta ja Shift nuolinäppäimillä muuttaa sen kokoa.
 		Nopea Valitse: Valitse jokin rivi ja napsauta sarakkeen otsikkoa ja valitse samanlaisia rivejä perustuu solun tekstin sarakkeen.
 		Run / File / String / Misc. ikkuna on monia muita hyödyllisiä komentoja, kuten sammutus ja UrlDownloadToFile.
-		Voit tehdä makrot toimivat vain tietyn ikkunan mennä Macro> Context Sensitive pikanäppäimet.
+		Käytä "Screenshot"-toiminto toimii ikkunan (Lisää > Jos Lausunnot / muuttujat / toiminnot) tehdä kuvakaappaus osan näytön. Ensimmäinen parametri on kohde tiedoston polku ja nimi kanssa png laajennus. Toinen parametri on putki erotetut koordinaatit näyttö, esim. 100|200|50|100 (X|Y|Leveys|Korkeus).
 		Klikkaa Index Sarakeotsikko päälle / pois Ohje Marks ja värit silmukat ja liitetiedot. Kaksoisnapsauta Action Sarakeotsikko päälle / pois painaumakestävyys silmukat ja liitetiedot.
 		Voit debug Makrot käyttämällä Manual pikanäppäin ja Play vaihtoehtoja makrovalikon. Voit myös poistaa toimia poistamalla ne Macro luetteloon.
-		Voit asettaa oman Global muuttujat ladataan käynnistettäessä ja viedä. Valitse Valinnat> Asetukset> Käyttäjän yleismuuttujat lisätä ne.
-		Voit käyttää kehittyneitä toimintoja, kuten substr ja RegExReplace päässä toiminnot ikkunan (Lisää> Jos Lausunnot / muuttujat / toiminnot). Tai ajaa omia toimintoja ulkopuolisilta AutoHotkey skriptejä.
+		Voit tehdä makrot toimivat vain tietyn ikkunan mennä Macro > Context Sensitive pikanäppäimet.
+		Voit asettaa oman Global muuttujat ladataan käynnistettäessä ja viedä. Valitse Valinnat > Asetukset > Käyttäjän yleismuuttujat lisätä ne.
+		Voit käyttää kehittyneitä toimintoja, kuten substr ja RegExReplace päässä toiminnot ikkunan (Lisää > Jos Lausunnot / muuttujat / toiminnot). Tai ajaa omia toimintoja ulkopuolisilta AutoHotkey skriptejä.
 	)	
 ; Tooltips		
 	NewB_TT =	Uusi (Ctrl+N)

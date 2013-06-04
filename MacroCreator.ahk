@@ -1049,10 +1049,10 @@ If MScroll = 1
 return
 
 #If ((Record = 1) && (Mouse = 1) && !(A_IsPaused))
-*LButton::
+*~LButton::
 {
 	Critical
-	Send, {Blind}{LButton Down}
+	; Send, {Blind}{LButton Down}
 	CoordMode, Mouse, %CoordMouse%
 	MouseGetPos,,, id, control
 	WinGetClass, m_Class, ahk_id %id%
@@ -1067,10 +1067,10 @@ return
 	GoSub, MouseInput
 }
 return
-*LButton Up::
+*~LButton Up::
 {
 	Critical
-	Send, {Blind}{LButton Up}
+	; Send, {Blind}{LButton Up}
 	CoordMode, Mouse, %CoordMouse%
 	MouseGetPos, xPd, yPd
 	Button = Left
@@ -1080,10 +1080,10 @@ return
 	GoSub, MouseInput
 }
 return
-*RButton::
+*~RButton::
 {
 	Critical
-	Send, {Blind}{RButton Down}
+	; Send, {Blind}{RButton Down}
 	CoordMode, Mouse, %CoordMouse%
 	MouseGetPos,,, id, control
 	WinGetClass, m_Class, ahk_id %id%
@@ -1098,10 +1098,10 @@ return
 	GoSub, MouseInput
 }
 return
-*RButton Up::
+*~RButton Up::
 {
 	Critical
-	Send, {Blind}{RButton Up}
+	; Send, {Blind}{RButton Up}
 	CoordMode, Mouse, %CoordMouse%
 	MouseGetPos, xPd, yPd
 	Button = Right
@@ -1111,10 +1111,10 @@ return
 	GoSub, MouseInput
 }
 return
-*MButton::
+*~MButton::
 {
 	Critical
-	Send, {Blind}{MButton Down}
+	; Send, {Blind}{MButton Down}
 	CoordMode, Mouse, %CoordMouse%
 	MouseGetPos,,, id, control
 	WinGetClass, m_Class, ahk_id %id%
@@ -1129,10 +1129,10 @@ return
 	GoSub, MouseInput
 }
 return
-*MButton Up::
+*~MButton Up::
 {
 	Critical
-	Send, {Blind}{MButton Up}
+	; Send, {Blind}{MButton Up}
 	CoordMode, Mouse, %CoordMouse%
 	MouseGetPos, xPd, yPd
 	Button = Middle
@@ -1142,10 +1142,10 @@ return
 	GoSub, MouseInput
 }
 return
-*XButton1::
+*~XButton1::
 {
 	Critical
-	Send, {Blind}{XButton1 Down}
+	; Send, {Blind}{XButton1 Down}
 	CoordMode, Mouse, %CoordMouse%
 	MouseGetPos,,, id, control
 	WinGetClass, m_Class, ahk_id %id%
@@ -1160,10 +1160,10 @@ return
 	GoSub, MouseInput
 }
 return
-*XButton1 Up::
+*~XButton1 Up::
 {
 	Critical
-	Send, {Blind}{XButton1 Up}
+	; Send, {Blind}{XButton1 Up}
 	CoordMode, Mouse, %CoordMouse%
 	MouseGetPos, xPd, yPd
 	Button = X1
@@ -1173,10 +1173,10 @@ return
 	GoSub, MouseInput
 }
 return
-*XButton2::
+*~XButton2::
 {
 	Critical
-	Send, {Blind}{XButton2 Down}
+	; Send, {Blind}{XButton2 Down}
 	CoordMode, Mouse, %CoordMouse%
 	MouseGetPos,,, id, control
 	WinGetClass, m_Class, ahk_id %id%
@@ -1191,10 +1191,10 @@ return
 	GoSub, MouseInput
 }
 return
-*XButton2 Up::
+*~XButton2 Up::
 {
 	Critical
-	Send, {Blind}{XButton2 Up}
+	; Send, {Blind}{XButton2 Up}
 	CoordMode, Mouse, %CoordMouse%
 	MouseGetPos, xPd, yPd
 	Button = X2
@@ -3435,6 +3435,8 @@ MouseGetPos, iX, iY
 CoordMode, Mouse, Screen
 MouseGetPos, OriginX, OriginY
 SetTimer, DrawRectangle, 0
+KeyWait, %DrawButton%
+GoSub, DrawEnd
 Return
 
 DrawEnd:
@@ -6865,7 +6867,7 @@ Gui, 28:Add, UpDown, vOSHK gOSHK 0x80 Horz 16 Range1-%TabCount%, %A_List%
 Gui, 28:Font, Bold s7
 Gui, 28:Add, Button, ys-1 x+4 W25 H25 hwndOSPlay vOSPlay gOSPlay
 	ILButton(OSPlay, TestRunIcon[1] ":" TestRunIcon[2])
-Gui, 28:Add, Button, ys-1 x+0 W25 H25 hwndOSStop vOSStop gf_AbortKey
+Gui, 28:Add, Button, ys-1 x+0 W25 H25 hwndOSStop vOSStop gOSStop
 	ILButton(OSStop, RecStopIcon[1] ":" RecStopIcon[2])
 Gui, 28:Add, Button, ys-1 x+0 W25 H25 hwndOSPlayOpt vOSPlayOpt gShowPlayMenu
 	ILButton(OSPlayOpt, PlayOptIcon[1] ":" PlayOptIcon[2], 0, "Left")
@@ -6915,6 +6917,13 @@ If !(PlayOSOn)
 }
 Else
 	GoSub, f_PauseKey
+return
+
+OSStop:
+If (Record)
+	GoSub, RecStart
+Else
+	GoSub, f_AbortKey
 return
 
 OSPlayOn:
@@ -9571,7 +9580,7 @@ If ((WinActive("ahk_id " PrevID)) || (W_ID = TipScrID)
 || (W_ID = StartTipID) || (W_ID = PMCOSC))
 	return
 WinGetClass, W_CLS, ahk_id %W_ID%
-If (InStr(W_CLS, "#32") = 1)
+If (W_CLS = "#32770")
 	return
 Pause, Off
 If ((WPHKC = 1) || (WPHKC = 2))

@@ -506,30 +506,33 @@
 ; Start-up Tips		
 	StartTips =	
 	(LTrim	
-		Bu ana pencerede komut düğmeleri kullanarak ya da eylemleri kopyalamak için Kayıt kullanarak Makrolar oluşturabilirsiniz. Seçenekler> Ayarlar> giriş kaydedilecektir ne seçmek için kayıt.
-		Hızlı görevleri Seçenek> Ayarlar> Kayıt gidin ve "Listeyi Temizle" seçeneğini işaretleyin için kayıt kullanmak için. Daha sonra ana pencerede Record düğmesine tıklayın ve mevcut makro temizlemek için F10 kullanın ve aynı kısayol tuşu ile yeni bir başlangıç.
+		Bu ana pencerede komut düğmeleri kullanarak ya da eylemleri kopyalamak için Kayıt kullanarak Makrolar oluşturabilirsiniz. Seçenekler > Ayarlar > giriş kaydedilecektir ne seçmek için kayıt.
+		Hızlı görevleri Seçenek > Ayarlar > Kayıt gidin ve "Listeyi Temizle" seçeneğini işaretleyin için kayıt kullanmak için. Daha sonra ana pencerede Record düğmesine tıklayın ve mevcut makro temizlemek için F10 kullanın ve aynı kısayol tuşu ile yeni bir başlangıç. Ayrıca Kayıt ve Oynatma kısayol tuşları aktif tutmak için ana pencerede "Her zaman Aktif" seçeneğini kontrol edebilirsiniz.
 		Veya herhangi bir yerde AutoHotkey çevrimiçi Yardım bağlantıları göstermek için bir komut penceresinde ana penceresinde bir komut düğmesi üzerinde özel bir komut sağ tıklama için yardım almak için.
 		Ana pencerede doğrudan makro tuşları ve kombinasyonları girmek için "Yakalama Keys" seçeneğini işaretleyin.
-		Ve Tip tuşları ve altındaki Kısayol tuşu kutusuna kombinasyonları seçin satır eklemek için Ekle düğmesine basın.
+		Altındaki Kısayol tuşu kutusuna tuşları ve kombinasyonları girin ve seçin satır eklemek için Ekle düğmesine basın.
 		Hiçbir satır seçilirse Edit Listedeki tüm satırlar için geçerlidir.
-		Bu Değişkenler kendi değişkenleri atayabilirsiniz pencere (Ekle> Eğer Tablolar / Değişkenler / Fonksiyonlar). Komutları yüzde işaretleri değişken adı içine içinde bunları kullanmak için, örneğin: `%MyVar`%.
+		Bu Değişkenler kendi değişkenleri atayabilirsiniz pencere (Ekle > Eğer Tablolar / Değişkenler / Fonksiyonlar). Komutları yüzde işaretleri değişken adı içine içinde bunları kullanmak için, örneğin: `%MyVar`%.
 		Üstündeki "Döngü" karşı seçilen Makro için döngüler toplam sayısını belirler.
 		Bunu çift tıklayarak veya seçip altındaki Düzen düğmeleri tıklayarak bir satır düzenleyebilirsiniz.
 		Sen altındaki düzenleme çubuğunda seçenekleri kullanarak birden çok seçili satır düzenleyebilirsiniz.
 		Bunların üzerine yeni komutlar eklemek için bir veya daha fazla satır seçin.
 		Tıklama-ve-sürükle ile satır taşıyabilirsiniz.
+		Faydalı tuşları etkinleştirmek veya oynatma / kayıt durdurmak için Tepsi simgesine çift tıklayın. Duraklatmak için çalma veya kayıt sırasında orta tuşu ile tıklayın.
 		Sen Ver penceresi çalışan AutoHotkey komut veya tek başına yürütülebilir için Makrolar verebilirsiniz.
-		Sen, açmak için kopyalayıp, Ekle en komutlardan birini kullanarak dosyaları ve klasörleri taşımak veya silmek> Çalıştır / Dosya / dize / Karışık. Olabilir
-		Sen hızlandırmak veya Oynatma yavaşlatmak için kısayol tuşları kullanabilirsiniz. Tuşları ve hızını ayarlamak için Seçenekler> Ayarlar> Çalma gidin.
-		Aşağı kayıt ve Yukarı Seçenekler> Ayarlar> Kayıt için her anahtar gitmek devlet ve kontrol etmek için seçenek "(Aşağı / Yukarı) önemli devlet Yakalama".
-		Seçenekler> Ayarlar> Ekran gidin ve "Yakalama için Enter'a basın" seçin "Ekran olun" seçeneğini kullanarak çekim alanı ayarlamak için. Seçimi taşımak ve yeniden boyutlandırmak için ok tuşlarını Shift dikdörtgen kullanımı Kontrol ok tuşlarını çizdikten sonra.
+		Mutlak koordinatları kullanarak Fare kaydetmek ve oynatmak için > Ayarlar > Varsayılanları ve set Fare Ekran Koordinat Seçenekler gidin.
+		Sen, açmak için kopyalayıp, Ekle en komutlardan birini kullanarak dosyaları ve klasörleri taşımak veya silmek > Çalıştır / Dosya / dize / Karışık. Olabilir
+		Aşağı kayıt ve Yukarı Seçenekler > Ayarlar > Kayıt için her anahtar gitmek devlet ve kontrol etmek için seçenek "(Aşağı / Yukarı) önemli devlet Yakalama".
+		Sen hızlandırmak veya Oynatma yavaşlatmak için kısayol tuşları kullanabilirsiniz. Tuşları ve hızını ayarlamak için Seçenekler > Ayarlar > Çalma gidin.
+		Seçenekler > Ayarlar > Ekran gidin ve "Yakalama için Enter'a basın" seçin "Ekran olun" seçeneğini kullanarak çekim alanı ayarlamak için. Seçimi taşımak ve yeniden boyutlandırmak için ok tuşlarını Shift dikdörtgen kullanımı Kontrol ok tuşlarını çizdikten sonra.
 		Hızlı seçin: Herhangi bir satır seçin ve bu sütundan hücrenin metne göre benzer satırları seçmek için bir sütun başlığını tıklayın.
 		Run / Dosya / dize / Karışık. pencere gibi Kapatma ve URLDownloadToFile gibi diğer birçok yararlı komutlar var.
-		Sizin Makrolar sadece belli bir pencerede çalışması için Makro> Bağlam Duyarlı Hotkeys gidin.
+		Fonksiyonları penceresinde "Ekran Görüntüsü" işlevini kullanın (Ekle > Tablolar / Değişkenler / Fonksiyonlar ise) ekranın bir bölümünü bir ekran yapmak için. İlk parametre bir png uzantılı hedef dosyanın yolu ve adıdır. İkinci parametre örneğin, ekranda boru ayrılmış koordinatlar 100|200|50|100 (X|Y|Genişlik|Yükseklik).
 		Açık / Kapalı Yardım Marks ve Döngüler ve Tablolar için Renkleri açmak için Ana Sütun Başlığı tıklayın. Döngüler ve Tablolar için Girinti Açık / Kapalı açmak için Eylem Sütun Başlığı çift tıklayın.
 		Sen Manuel Kısayol ve Makro menüsünde Çalma seçenekleri kullanarak Makrolar hata ayıklama. Ayrıca, Makro listede da işaretlerini kaldırarak eylemleri devre dışı bırakabilirsiniz.
-		Bu başlangıç ve ihraç edilecek yüklenecek kendi Global değişkenler ayarlayabilirsiniz. Eklemek için Seçenek> Ayarlar> Kullanıcı Global Değişkenler git.
-		Sen Fonksiyonlar pencere (Eğer Tablolar / Değişkenler / İşlevleri> Ekle) bu tür substr ve RegExReplace gibi gelişmiş fonksiyonları çalıştırabilirsiniz. Veya harici AutoHotkey komut, kendi fonksiyonları çalıştırmak.
+		Sizin Makrolar sadece belli bir pencerede çalışması için Makro > Bağlam Duyarlı Hotkeys gidin.
+		Bu başlangıç ve ihraç edilecek yüklenecek kendi Global değişkenler ayarlayabilirsiniz. Eklemek için Seçenek > Ayarlar > Kullanıcı Global Değişkenler git.
+		Sen Fonksiyonlar pencere (Eğer Tablolar / Değişkenler / İşlevleri > Ekle) bu tür substr ve RegExReplace gibi gelişmiş fonksiyonları çalıştırabilirsiniz. Veya harici AutoHotkey komut, kendi fonksiyonları çalıştırmak.
 	)	
 ; Tooltips		
 	NewB_TT =	Yeni (Ctrl+N)

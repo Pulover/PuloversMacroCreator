@@ -110,22 +110,22 @@ F5::GoSub, PrevRefresh
 
 #If Draw && DrawButton = "RButton"
 RButton::GoSub, DrawStart
-RButton Up::GoSub, DrawEnd
+; RButton Up::GoSub, DrawEnd
 
 #If Draw && DrawButton = "LButton"
 LButton::GoSub, DrawStart
-LButton Up::GoSub, DrawEnd
+; LButton Up::GoSub, DrawEnd
 
 #If Draw && DrawButton = "MButton"
 MButton::GoSub, DrawStart
-MButton Up::GoSub, DrawEnd
+; MButton Up::GoSub, DrawEnd
 
 #If Draw && OnEnter
 Enter::GoSub, Restore
 
 #If NoKey
 RButton::
-RButton Up::
+; RButton Up::
 return
 
 #If NoKey

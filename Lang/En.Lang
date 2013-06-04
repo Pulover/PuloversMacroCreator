@@ -507,10 +507,10 @@
 	StartTips =	
 	(LTrim	
 		You can create Macros using the Command Buttons in the main window or using the Recorder to copy your actions. Go to Options > Settings > Recording to select what inputs will be recorded.
-		To use the recorder for quick tasks go to Options > Settings > Recording and check the "Clear List" option. Then click the Record button in the main window and use F10 to clear the current Macro and start a new one with the same hotkey.
+		To use the recorder for quick tasks go to Options > Settings > Recording and check the "Clear List" option. Then click the Record button in the main window and use F10 to clear the current Macro and start a new one with the same hotkey. You can also check the "Always Active" option in the main window to keep Recording and Playback hotkeys active.
 		To get help for an specific command right-click on a command button in the main window or anywhere in a command window to show links to AutoHotkey online Help.
 		Check the "Capture Keys" option to enter keys and combinations to your Macro directly from the main window.
-		Type keys and combinations in the Hotkey box at the bottom and press the Insert button to add them to the select rows.
+		Enter keys and combinations in the Hotkey box at the bottom and press the Insert button to add them to the select rows.
 		If no rows are selected the edit buttons apply to all rows in the list.
 		You can assign your own variables in the Variables windows (Insert > If Statements / Variables / Functions). To use them inside commands enclose the variable name in percent signs, e.g.: `%MyVar`%.
 		The "Loop" counter at the top sets the total number of loops for the selected Macro.
@@ -518,16 +518,19 @@
 		You can edit multiple selected rows using the options in the edit bar at the bottom.
 		Select one or more rows to add new commands on top of them.
 		You can move rows with click-and-drag.
+		Double-click on the Tray Icon to activate hotkeys or stop playback / recording. Click on it with the middle button during playback or recording to pause.
 		You can export your Macros to working AutoHotkey scripts or stand-alone executables from the Export window.
+		To record and play Mouse using absolute coordinates go to Options > Settings > Defaults and set Mouse Coordinates to Screen.
 		You can open, copy, move or delete files and folders using one of the commands in Insert > Run / File / String / Misc.
-		You can use hotkeys to speed up or slow down Playback. Go to Options > Settings > Playback to set keys and speed.
 		To record Down and Up state of every key go to Options > Settings > Recording and check "Capture key state (Down / Up)" option.
+		You can use hotkeys to speed up or slow down Playback. Go to Options > Settings > Playback to set keys and speed.
 		To adjust capture area using the "Make Screenshot" tool go to Options > Settings > Screenshots and select "Press Enter to Capture". After drawing the rectangle use Control + arrow keys to move the selection and Shift + arrow keys to resize it.
 		Quick Select: Select any row and click on a column header to select similar rows based on cell's text from that column.
 		The Run / File / String / Misc. window have many other useful commands such as Shutdown and UrlDownloadToFile.
-		To make your Macros work only on a certain window go to Macro > Context Sensitive Hotkeys.
+		Use the "Screenshot" function in the functions window (Insert > If Statements / Variables / Functions) to make a screenshot of part of the screen. First parameter is the destination file's path and name with a png extension. Second parameter are the pipe-separated coordinates in the screen, e.g. 100|200|50|100 (X|Y|Width|Height).
 		Click on the Index Column Header to turn On/Off Help Marks and Colors for Loops and Statements. Double-Click on the Action Column Header to turn On/Off Indentation for Loops and Statements.
 		You can debug your Macros using the Manual Hotkey and the Play options in the Macro menu. You can also disable actions by unchecking them in the Macro list.
+		To make your Macros work only on a certain window go to Macro > Context Sensitive Hotkeys.
 		You can set your own Global Variables to be loaded on start up and to be exported. Go to Options > Settings > User Global Variables to add them.
 		You can run advanced functions such as SubStr and RegExReplace from the Functions window (Insert > If Statements / Variables / Functions). Or run your own functions from external AutoHotkey scripts.
 	)	

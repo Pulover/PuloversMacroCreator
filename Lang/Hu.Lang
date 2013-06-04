@@ -506,30 +506,33 @@
 ; Start-up Tips		
 	StartTips =	
 	(LTrim	
-		Hozhat létre makrók a Command gombok a fő ablakban, vagy a felvevő másolni a tevékenységét. Válassza az Opciók> Beállítások> Felvétel kiválasztható, hogy milyen bemeneteket kerülnek rögzítésre.
-		Ahhoz, hogy a felvevő gyors feladatok válasszuk az Opciók> Beállítások> Felvétel és ellenőrizze a "Lista törlése" opciót. Majd kattintson a Felvétel gombra a fő ablakot, majd F10 gombbal törölheti az aktuális makro-és újat azonos gyorsbillentyűket.
+		Hozhat létre makrók a Command gombok a fő ablakban, vagy a felvevő másolni a tevékenységét. Válassza az Opciók > Beállítások > Felvétel kiválasztható, hogy milyen bemeneteket kerülnek rögzítésre.
+		Ahhoz, hogy a felvevő gyors feladatok válasszuk az Opciók > Beállítások > Felvétel és ellenőrizze a "Lista törlése" opciót. Majd kattintson a Felvétel gombra a fő ablakot, majd F10 gombbal törölheti az aktuális makro-és újat azonos gyorsbillentyűket. Ön is ellenőrizheti a "Mindig aktív" opciót a fő ablakban, hogy felvétel és lejátszás gyorsbillentyűk aktív.
 		Ahhoz, hogy segítséget egy adott parancs Kattintson a jobb gombbal a parancs gombra a fő ablakban, vagy bárhol a parancssori ablakot, hogy bemutathatja a AutoHotkey súgójában.
 		Ellenőrizze, hogy a "Capture Keys" opciót be kulcsok és kombinációk a Macro közvetlenül a fő ablakban.
-		Írja kulcsok és kombinációk a gyorsbillentyűket doboz alján, és nyomja meg az Insert gombot, hogy vegye fel őket a kiválasztott sorokat.
+		Adja meg a kulcsok és kombinációk a gyorsbillentyűket doboz alján, és nyomja meg az Insert gombot, hogy vegye fel őket a kiválasztott sorokat.
 		Ha nincs sor van kijelölve a szerkesztés funkció alkalmazni az összes sort a listában.
-		Hozzá lehet rendelni saját változókat a Változók windows (Beszúrás> IF / változók / függvények). Használatához be őket parancsokat csatolnia kell a változó neve százalékban jelek, pl: `%MyVar`%.
+		Hozzá lehet rendelni saját változókat a Változók windows (Beszúrás > IF / változók / függvények). Használatához be őket parancsokat csatolnia kell a változó neve százalékban jelek, pl: `%MyVar`%.
 		A "hurok" pult tetején beállítja az összes hurkot a kiválasztott Macro.
 		Bármikor módosíthatja a sorban duplán kattintva, vagy válassza ki azt, és kattintson a Szerkesztés gomb alján.
 		Tudod szerkeszteni több kijelölt sorokat a beállításokat a szerkesztő alján.
 		Válasszon ki egy vagy több sort, hogy új parancsokat a tetejükön.
 		Tudod mozgatni sorok click-and-drag.
+		Kattintson duplán a tálcán az ikonra, hogy aktiválja gyorsbillentyűket vagy állítsa le a lejátszást / felvételt. Kattints rá a középső gombot a lejátszás vagy felvétel szüneteltetése.
 		A kivitel a makrók munka AutoHotkey szkriptek vagy önálló végrehajtható az Export ablakban.
-		Meg tudja nyitni, másolni, áthelyezni vagy törölni fájlokat és mappákat az egyik parancs a Beszúrás> Run / Fájl / String / Misc.
-		Használhatja gyorsbillentyűk, hogy gyorsítsák fel, vagy lassítani lejátszás. Válassza az Opciók> Beállítások> Playback beállításához kulcsokat és a sebesség.
-		Rögzítése lefelé és felfelé állapota minden kulcsfontosságú válasszuk az Opciók> Beállítások> Felvétel és ellenőriz "Rögzítés gomb állapotát (fel / le)" opciót.
-		A beállításhoz rögzítési terület a "Make Pillanatkép" eszközt válasszuk az Opciók> Beállítások> Képek és válassza ki a "Nyomja meg az Enter Capture". Megrajzolása után a téglalap használatát vezérlő nyilakkal mozgatni a kiválasztás és a Shift nyilakkal a méretét.
+		Rögzíteni és lejátszani egér segítségével abszolút koordináták válasszuk az Opciók > Beállítások > Alapbeállítások és állítsa egér koordinátáit a képernyőn.
+		Meg tudja nyitni, másolni, áthelyezni vagy törölni fájlokat és mappákat az egyik parancs a Beszúrás > Run / Fájl / String / Misc.
+		Rögzítése lefelé és felfelé állapota minden kulcsfontosságú válasszuk az Opciók > Beállítások > Felvétel és ellenőriz "Rögzítés gomb állapotát (fel / le)" opciót.
+		Használhatja gyorsbillentyűk, hogy gyorsítsák fel, vagy lassítani lejátszás. Válassza az Opciók > Beállítások > Playback beállításához kulcsokat és a sebesség.
+		A beállításhoz rögzítési terület a "Make Pillanatkép" eszközt válasszuk az Opciók > Beállítások > Képek és válassza ki a "Nyomja meg az Enter Capture". Megrajzolása után a téglalap használatát vezérlő nyilakkal mozgatni a kiválasztás és a Shift nyilakkal a méretét.
 		Gyors Kiválasztás: Válassza ki sort, majd kattintson az oszlop fejlécére, hogy válassza ki a hasonló sorokat alapján sejt szöveget az oszlop.
 		A Run / Fájl / String / Misc. ablak sok más hasznos parancsokat, mint a leállítás és UrlDownloadToFile.
-		Ahhoz, hogy a makrók csak egy bizonyos ablakban a Macro> Context Sensitive gyorsbillentyűk.
+		Használja a "Pillanatkép" funkciót funkciók ablakban (Beszúrás > IF / Változók / funkciók), hogy egy screenshot része a képernyőn. Az első paraméter a cél fájl elérési útját és nevét a png kiterjesztés. A második paraméter a cső elválasztott koordinátákat a képernyőn, például 100|200|50|100 (X|Y|Szélesség|Magasság).
 		Kattintson az Index fejlécére be / ki Súgó Marks és színek hurkok és nyilatkozatok. Kattintson duplán a cselekvési fejlécére be / ki a behúzás hurkok és nyilatkozatok.
 		Lehet hibakeresés makrók a Kézi Hotkey és a játék lehetőségek a Makró menüben. Azt is letilthatja intézkedéseit akadálytalan őket a Macro listában.
-		Beállíthatjuk, hogy a saját globális változók kell betölteni az induló, és az exportot. Válassza az Opciók> Beállítások> Felhasználó globális változók, hogy adjunk nekik.
-		Futtathat speciális funkciókat, mint a substr és RegExReplace a funkciók ablakban (Beszúrás> IF / változók / függvények). Vagy futtatni a saját funkciók külső AutoHotkey szkripteket.
+		Ahhoz, hogy a makrók csak egy bizonyos ablakban a Macro > Context Sensitive gyorsbillentyűk.
+		Beállíthatjuk, hogy a saját globális változók kell betölteni az induló, és az exportot. Válassza az Opciók > Beállítások > Felhasználó globális változók, hogy adjunk nekik.
+		Futtathat speciális funkciókat, mint a substr és RegExReplace a funkciók ablakban (Beszúrás > IF / változók / függvények). Vagy futtatni a saját funkciók külső AutoHotkey szkripteket.
 	)	
 ; Tooltips		
 	NewB_TT =	Új (Ctrl+N)

@@ -506,30 +506,33 @@
 ; Start-up Tips		
 	StartTips =	
 	(LTrim	
-		Vous pouvez créer des macros à l'aide des boutons de commande dans la fenêtre principale ou en utilisant l'enregistreur de copier vos actions. Allez dans Options> Paramètres> Enregistrer pour sélectionner les entrées seront enregistrées.
-		Pour utiliser l'enregistreur pour des tâches rapides allez dans Options> Paramètres> Enregistrement et cochez l'option "Effacer la liste". Puis cliquez sur le bouton Enregistrer dans la fenêtre principale et utiliser F10 pour effacer la macro en cours et en commencer une nouvelle avec le même raccourci clavier.
+		Vous pouvez créer des macros à l'aide des boutons de commande dans la fenêtre principale ou en utilisant l'enregistreur de copier vos actions. Allez dans Options > Paramètres > Enregistrer pour sélectionner les entrées seront enregistrées.
+		Pour utiliser l'enregistreur pour des tâches rapides allez dans Options > Paramètres > Enregistrement et cochez l'option "Effacer la liste". Puis cliquez sur le bouton Enregistrer dans la fenêtre principale et utiliser F10 pour effacer la macro en cours et en commencer une nouvelle avec le même raccourci clavier. Vous pouvez également cocher l'option "Toujours actif" dans la fenêtre principale de maintenir enregistrement et de lecture raccourcis clavier active.
 		Pour obtenir de l'aide pour un clic-droit commande spécifique sur un bouton de commande dans la fenêtre principale ou n'importe où dans une fenêtre de commande pour afficher des liens vers AutoHotkey aide en ligne.
 		Cochez l'option "Capture Keys" pour saisir les clés et les combinaisons de votre macro directement à partir de la fenêtre principale.
-		le type clefs et des combinaisons dans la zone Touche de raccourci en bas et appuyez sur le bouton Insérer pour les ajouter aux lignes de sélection.
+		Entrez touches et combinaisons dans la zone Touche de raccourci vers le bas et appuyez sur le bouton Insérer pour les ajouter aux lignes de sélection.
 		Si aucune ligne n'est sélectionnée les boutons d'édition s'appliquent à toutes les lignes de la liste.
-		Vous pouvez assigner vos propres variables dans les fenêtres de variables (Insertion> Si Déclarations / variables / fonctions). Pour utiliser les commandes à l'intérieur entourent le nom de la variable signes de pourcentage, par exemple: `%MyVar`%.
+		Vous pouvez assigner vos propres variables dans les fenêtres de variables (Insertion > Si Déclarations / variables / fonctions). Pour utiliser les commandes à l'intérieur entourent le nom de la variable signes de pourcentage, par exemple: `%MyVar`%.
 		Le compteur «Loop» en haut définit le nombre total de boucles pour la macro sélectionnée.
 		Vous pouvez modifier une ligne en double-cliquant dessus ou en le sélectionnant et en cliquant sur les boutons Modifier au bas.
 		Vous pouvez modifier plusieurs lignes sélectionnées en utilisant les options de la barre d'édition en bas.
 		Sélectionnez une ou plusieurs lignes à ajouter de nouvelles commandes sur le dessus d'eux.
 		Vous pouvez déplacer les lignes avec cliquer-glisser.
+		Double-cliquez sur l'icône pour activer les touches ou arrêter la lecture / enregistrement. Cliquez dessus avec le bouton du milieu pendant la lecture ou l'enregistrement en pause.
 		Vous pouvez exporter vos macros pour les scripts AutoHotkey de travail ou des exécutables autonomes de la fenêtre d'exportation.
-		Vous pouvez ouvrir, copier, déplacer ou supprimer des fichiers et dossiers en utilisant l'un des commandes Insertion> Run / File / cordes / Misc.
-		Vous pouvez utiliser des raccourcis clavier pour accélérer ou ralentir la lecture. Allez dans Options> Paramètres> Lecture pour définir les clés et la vitesse.
-		Pour enregistrer Down et Up état de tous les go clé dans Options> Paramètres> Enregistrement et cochez la case "Capturer l'état touche (Down / Up)" option.
-		Pour ajuster la zone de capture à l'aide de la fonction "Faire une capture d'écran" allez dans Options> Paramètres> Captures d'écran et sélectionnez "Appuyez sur Entrée pour capturer". Après avoir attiré l'utilisation des touches fléchées de contrôle du rectangle pour déplacer la sélection et Shift touches fléchées pour redimensionner.
+		Pour enregistrer et lire des souris en utilisant des coordonnées absolues, allez dans Options > Paramètres > Paramètres par défaut et set coordonnées de la souris à l'écran.
+		Vous pouvez ouvrir, copier, déplacer ou supprimer des fichiers et dossiers en utilisant l'un des commandes Insertion > Run / File / cordes / Misc.
+		Pour enregistrer Down et Up état de tous les go clé dans Options > Paramètres > Enregistrement et cochez la case "Capturer l'état touche (Down / Up)" option.
+		Vous pouvez utiliser des raccourcis clavier pour accélérer ou ralentir la lecture. Allez dans Options > Paramètres > Lecture pour définir les clés et la vitesse.
+		Pour ajuster la zone de capture à l'aide de la fonction "Faire une capture d'écran" allez dans Options > Paramètres > Captures d'écran et sélectionnez "Appuyez sur Entrée pour capturer". Après avoir attiré l'utilisation des touches fléchées de contrôle du rectangle pour déplacer la sélection et Shift touches fléchées pour redimensionner.
 		Sélectionnez rapide: Sélectionnez une ligne et cliquez sur un en-tête de colonne pour sélectionner des lignes similaires basés sur le texte de la cellule de cette colonne.
 		The Run / File / cordes / Misc. fenêtre beaucoup d'autres commandes utiles telles que l'arrêt et URLDownloadToFile.
-		Pour rendre vos macros ne fonctionnent que sur une certaine fenêtre aller à Macro> Contexte des touches rapides sensibles.
+		Utilisez la fonction "capture d'écran" dans la fenêtre des fonctions (Insertion > Si Déclarations / variables / fonctions) pour faire une capture d'écran d'une partie de l'écran. Le premier paramètre est le chemin du fichier de destination et le nom avec une extension png. Deuxième paramètre sont les coordonnées tuyau séparés sur l'écran, par exemple 100|200|50|100 (X|Y|Largeur|Hauteur).
 		Cliquez sur l'entête de colonne Index pour activer / désactiver les marques d'aide et de couleurs pour des boucles et des mentions. Double-cliquez sur la tête de colonne d'action pour activer / désactiver l'indentation pour Boucles et instructions.
 		Vous pouvez déboguer vos macros en utilisant le raccourci clavier manuel et les options de lecture dans le menu Macro. Vous pouvez également désactiver actions par les décochant dans la liste des macros.
-		Vous pouvez définir vos propres variables globales à charger au démarrage et à l'exportation. Allez dans Options> Paramètres> User variables globales pour les ajouter.
-		Vous pouvez exécuter des fonctions avancées telles que SUBSTR et RegExReplace de la fenêtre des fonctions (Insertion> Si Déclarations / variables / fonctions). Ou d'exécuter vos propres fonctions de scripts AutoHotkey externes.
+		Pour rendre vos macros ne fonctionnent que sur une certaine fenêtre aller à Macro > Contexte des touches rapides sensibles.
+		Vous pouvez définir vos propres variables globales à charger au démarrage et à l'exportation. Allez dans Options > Paramètres > User variables globales pour les ajouter.
+		Vous pouvez exécuter des fonctions avancées telles que SUBSTR et RegExReplace de la fenêtre des fonctions (Insertion > Si Déclarations / variables / fonctions). Ou d'exécuter vos propres fonctions de scripts AutoHotkey externes.
 	)	
 ; Tooltips		
 	NewB_TT =	Nouveau (Ctrl+N)

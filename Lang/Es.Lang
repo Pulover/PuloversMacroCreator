@@ -506,30 +506,33 @@
 ; Start-up Tips		
 	StartTips =	
 	(LTrim	
-		Puede crear macros utilizando los botones de comando en la ventana principal o el uso de la grabadora para copiar sus acciones. Vaya a Opciones> Configuración> Grabación para seleccionar lo que se registran las entradas.
-		Para utilizar la grabadora para tareas rápidas vaya a Opciones> Configuración> Grabación y marque la opción "Borrar lista". A continuación, haga clic en el botón de grabación en la ventana principal y utilizar F10 para borrar la macro actual e iniciar uno nuevo con la misma combinación de teclas.
+		Puede crear macros utilizando los botones de comando en la ventana principal o el uso de la grabadora para copiar sus acciones. Vaya a Opciones > Configuración > Grabación para seleccionar lo que se registran las entradas.
+		Para utilizar la grabadora para tareas rápidas vaya a Opciones > Configuración > Grabación y marque la opción "Borrar lista". A continuación, haga clic en el botón de grabación en la ventana principal y utilizar F10 para borrar la macro actual e iniciar uno nuevo con la misma combinación de teclas. También puede consultar la opción "Siempre activo" en la ventana principal a tener grabación y reproducción hotkeys activo.
 		Para obtener ayuda para un comando específico haga clic en un botón de comando en la ventana principal o en cualquier lugar de una ventana de comandos para mostrar enlaces a AutoHotkey ayuda en línea.
 		Marque la opción "Claves Capture" para entrar teclas y combinaciones a la macro directamente desde la ventana principal.
-		El tipo llaves y combinaciones en el cuadro de tecla de acceso directo en la parte inferior y pulse el botón Insertar para añadir a las filas seleccionadas.
+		Introduzca teclas y combinaciones de teclas de acceso rápido en la caja en la parte inferior y pulse el botón Insertar para añadir a las filas seleccionadas.
 		Si no se selecciona ninguna fila de los botones de edición se aplican a todas las filas de la lista.
-		Puedes asignar tus propias variables en las variables de ventanas (Insertar> Si Declaraciones / variables / funciones). Para utilizar los comandos en el interior encierran el nombre de la variable entre signos de porcentaje, por ejemplo: `%MyVar`%.
+		Puedes asignar tus propias variables en las variables de ventanas (Insertar > Si Declaraciones / variables / funciones). Para utilizar los comandos en el interior encierran el nombre de la variable entre signos de porcentaje, por ejemplo: `%MyVar`%.
 		El contador de "Loop" en la parte superior establece el número total de bucles de la macro seleccionada.
 		Puede editar una fila haciendo doble clic en él o seleccionándolo y haciendo clic en los botones de edición en la parte inferior.
 		Puede editar varias filas seleccionadas usando las opciones de la barra de edición en la parte inferior.
 		Seleccionar una o más filas para agregar nuevos comandos en la parte superior de ellos.
 		Puede mover filas con hacer clic y arrastrar.
+		Haga doble clic en el icono de la bandeja para activar teclas de acceso rápido o detener la reproducción / grabación. Haga clic en él con el botón central durante la reproducción o la grabación en pausa.
 		Usted puede exportar sus macros a los scripts AutoHotkey trabajo o ejecutables independientes de la ventana Exportar.
-		Usted puede abrir, copiar, mover o borrar archivos y carpetas usando uno de los comandos de Insertar> Run / Archivo / cadena / Misc.
-		Puede usar teclas de acceso rápido para acelerar o reducir la velocidad de reproducción. Vaya a Opciones> Configuración> Reproducir para establecer las claves y la velocidad.
-		Para grabar Down y Up estado de todos los go clave a Opciones> Configuración> Grabación y seleccione "Capturar estado clave (abajo / arriba)" opción.
-		Para ajustar el área de captura con "Hacer Screenshot" vaya a Opciones> Configuración> Imágenes y seleccione "Presione Enter para capturar". Después de dibujar el uso teclas de control para mover el rectángulo de selección y Shift teclas de flecha para cambiar su tamaño.
+		Para grabar y reproducir ratón utilizando coordenadas absolutas ir a Opciones > Configuración > Valores predeterminados y establecer coordenadas del ratón a la pantalla.
+		Usted puede abrir, copiar, mover o borrar archivos y carpetas usando uno de los comandos de Insertar > Run / Archivo / cadena / Misc.
+		Para grabar Down y Up estado de todos los go clave a Opciones > Configuración > Grabación y seleccione "Capturar estado clave (abajo / arriba)" opción.
+		Puede usar teclas de acceso rápido para acelerar o reducir la velocidad de reproducción. Vaya a Opciones > Configuración > Reproducir para establecer las claves y la velocidad.
+		Para ajustar el área de captura con "Hacer Screenshot" vaya a Opciones > Configuración > Imágenes y seleccione "Presione Enter para capturar". Después de dibujar el uso teclas de control para mover el rectángulo de selección y Shift teclas de flecha para cambiar su tamaño.
 		Seleccione rápida: Seleccione cualquier fila y haga clic en un encabezado de columna para seleccionar filas similares basadas en texto de la celda de esa columna.
 		The Run / Archivo / cadena / Misc. ventana tiene muchos otros comandos útiles tales como apagado y URLDownloadToFile.
-		Para hacer sus macros sólo funcionan en una determinada ventana ir a Macro> Teclas de acceso directo sensibles al contexto.
+		Utilice la función "Captura de pantalla" en la ventana de funciones (Insertar > Si Declaraciones / Variables / Funciones) para hacer una captura de pantalla de una parte de la pantalla. El primer parámetro es la ruta del archivo de destino y el nombre con una extensión png. El segundo parámetro son las coordenadas tubería separados en la pantalla, por ejemplo, 100|200|50|100 (X|Y|Ancho|Alto).
 		Haga clic en el encabezado de columna Índice para encender / apagar Ayuda marcas y colores de bucles y sentencias. Haga doble clic en el encabezado de columna Acción para encender / apagar sangría de bucles y sentencias.
 		Puede depurar sus macros utilizando el Hotkey manual y las opciones de juego en el menú Macro. También puede desactivar desmarcando las acciones en la lista de macros.
-		Puede definir sus propias variables globales para ser cargado en el arranque y para la exportación. Vaya a Opciones> Configuración> Usuario Variables globales para agregarlos.
-		Puede ejecutar funciones avanzadas tales como SUBSTR y RegExReplace de la ventana Funciones (Insertar> Si Declaraciones / variables / funciones). O ejecutar sus propias funciones de secuencias de comandos AutoHotkey externos.
+		Para hacer sus macros sólo funcionan en una determinada ventana ir a Macro > Teclas de acceso directo sensibles al contexto.
+		Puede definir sus propias variables globales para ser cargado en el arranque y para la exportación. Vaya a Opciones > Configuración > Usuario Variables globales para agregarlos.
+		Puede ejecutar funciones avanzadas tales como SUBSTR y RegExReplace de la ventana Funciones (Insertar > Si Declaraciones / variables / funciones). O ejecutar sus propias funciones de secuencias de comandos AutoHotkey externos.
 	)	
 ; Tooltips		
 	NewB_TT =	Nuevo (Ctrl+N)

@@ -239,8 +239,8 @@ If A_OSVersion in WIN_2003,WIN_XP,WIN_2000
 	HelpIconQ := 24
 	HelpIconI := 222
 	WarnIcon := 78
-	TipFile := accessibilitycpl
-	TipIcon := 15
+	TipFile := pifmgr
+	TipIcon := 9
 	HelpIconB := [shell32, 24]
 	t_RecordIcon := [gcdef, 1]
 	t_PlayIcon := [shell32, 138]
@@ -249,7 +249,7 @@ If A_OSVersion in WIN_2003,WIN_XP,WIN_2000
 	NewIcon := [shell32, 101]
 	OpenIcon := [shell32, 5]
 	SaveIcon := [shell32, 79]
-	ExportIcon := [shell32, 67]
+	ExportIcon := [shell32, 156]
 	PreviewIcon := [shell32, 23]
 	OptionsIcon := [shell32, 166]
 	DonateIcon := [shell32, 29]
@@ -279,7 +279,7 @@ If A_OSVersion in WIN_2003,WIN_XP,WIN_2000
 	SlowDownIcon := [mmcndmgr, 102]
 	InsertIcon := [shell32, 147]
 	ApplyIcon := [shell32, 145]
-	ImportIcon := [shell32, 148]
+	ImportIcon := [shell32, 133]
 	SaveLIcon := [shell32, 79]
 	ContextIcon := [xpsp2res, 13]
 	RemoveIcon := [shell32, 132]
@@ -287,8 +287,8 @@ If A_OSVersion in WIN_2003,WIN_XP,WIN_2000
 	CopyIcon := [shell32, 135]
 	CutIcon := [cscdll, 11]
 	PasteIcon := [shell32, 111]
-	UndoIcon := [xpsp2res, 8]
-	RedoIcon := [shell32, 177]
+	UndoIcon := [mmcndmgr, 32]
+	RedoIcon := [mmcndmgr, 4]
 	MoveUpIcon := [netcfgx, 1]
 	MoveDnIcon := [netcfgx, 2]
 	EditIcon := [pifmgr, 18]
@@ -885,6 +885,7 @@ RegExReplace
 RegisterCallback
 Round
 RTrim
+Screenshot
 Sin
 Sqrt
 StrGet

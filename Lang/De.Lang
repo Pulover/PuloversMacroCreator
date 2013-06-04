@@ -506,30 +506,33 @@
 ; Start-up Tips		
 	StartTips =	
 	(LTrim	
-		Sie können Makros mit den Command Buttons im Hauptfenster oder über den Recorder auf Ihre Aktionen kopieren. Gehen Sie auf Optionen> Einstellungen> Aufnahme auswählen, welche Eingänge aufgezeichnet werden.
-		Informationen zur Verwendung der für schnelle Aufgaben Optionen> Einstellungen> Aufnahme gehen und überprüfen Sie die "Liste löschen"-Option. Dann klicken Sie auf den Record-Button im Hauptfenster und verwenden Sie F10, um die aktuelle Makro zu löschen und eine neue mit der gleichen Tastenkombination.
+		Sie können Makros mit den Command Buttons im Hauptfenster oder über den Recorder auf Ihre Aktionen kopieren. Gehen Sie auf Optionen > Einstellungen > Aufnahme auswählen, welche Eingänge aufgezeichnet werden.
+		Informationen zur Verwendung der für schnelle Aufgaben Optionen > Einstellungen > Aufnahme gehen und überprüfen Sie die "Liste löschen"-Option. Dann klicken Sie auf den Record-Button im Hauptfenster und verwenden Sie F10, um die aktuelle Makro zu löschen und eine neue mit der gleichen Tastenkombination. Sie können auch das Kontrollkästchen "Immer aktiv" im Hauptfenster zu halten Aufnahme und Wiedergabe Hotkeys aktiv.
 		Um Hilfe zu einem bestimmten Befehl mit der rechten Maustaste auf eine Schaltfläche im Hauptfenster oder irgendwo in der Eingabeaufforderung, um Links zu AutoHotkey Online-Hilfe zu zeigen.
 		Überprüfen Sie die "Capture-Keys", um Schlüssel und Kombinationen, um Ihre Makro direkt eingeben aus dem Hauptfenster.
-		Typ Schlüssel und Kombinationen in der Hotkey-Feld unten ein und klicken Sie auf die Schaltfläche Einfügen, um sie zu den ausgewählten Zeilen hinzuzufügen.
+		Geben Sie Schlüssel und Kombinationen in der Hotkey-Feld unten ein und klicken Sie auf die Schaltfläche Einfügen, um sie zu den ausgewählten Zeilen hinzuzufügen.
 		Wenn keine Zeilen ausgewählt sind die Editierbuttons auf alle Zeilen in der Liste beantragen.
-		Sie können Ihre eigenen Variablen in den Variablen zuweisen Fenster (Einfügen> Wenn Statements / Variablen / Funktionen). Um sie zu verwenden innerhalb Befehle schließen Sie den Variablennamen in Prozentzeichen, z. B.: `%MyVar`%.
+		Sie können Ihre eigenen Variablen in den Variablen zuweisen Fenster (Einfügen > Wenn Statements / Variablen / Funktionen). Um sie zu verwenden innerhalb Befehle schließen Sie den Variablennamen in Prozentzeichen, z. B.: `%MyVar`%.
 		Die "Loop"-Zähler an der Spitze wird die Gesamtzahl der Schleifen für das ausgewählte Makro.
 		Sie können eine Reihe von Doppelklick oder durch Markieren und Anklicken der Bearbeiten Schaltflächen am unteren Rand bearbeiten.
 		Sie können mehrere ausgewählte Zeilen bearbeiten mit den Optionen in der Bearbeitungsleiste an der Unterseite.
 		Wählen Sie eine oder mehrere Zeilen, um neue Befehle auf sie hinzuzufügen.
 		Sie können Zeilen mit Click-and-Drag bewegen.
+		Auf das Tray-Icon doppelklicken, um Hotkeys aktivieren oder stoppen Sie die Wiedergabe / Aufnahme. Klicken Sie mit der mittleren Taste während der Wiedergabe oder Aufnahme zu pausieren.
 		Sie können Ihre Makros zu arbeiten AutoHotkey Script oder eigenständige Programme aus dem Fenster Export exportieren.
-		Sie können öffnen, kopieren, verschieben oder löschen von Dateien und Ordnern mit einem der Befehle im Einfügen> Run / File / String / Misc.
-		Sie können Hotkeys zu beschleunigen oder zu verlangsamen Playback. Gehen Sie auf Optionen> Einstellungen> Wiedergabe, um Schlüssel und Geschwindigkeit eingestellt.
-		Zum Aufnehmen Down und Up Zustand jeder Taste wählen Sie Optionen> Einstellungen> Aufnahme und überprüfen "Capture Taste Zustand (Down / Up)"-Option.
-		Um Capture-Bereich einstellen mit dem "Make Screenshot"-Werkzeug wählen Sie Optionen> Einstellungen> Screenshots und wählen Sie "Enter Erfassen". Nach dem Zeichnen des Rechtecks Verwendung Steuerung Pfeiltasten, um die Auswahl zu bewegen und verschieben Pfeiltasten, um es zu ändern.
+		Zur Aufnahme und Wiedergabe Maus mit absoluten Koordinaten wählen Sie Optionen > Einstellungen > Defaults und Set Maus-Koordinaten auf Bildschirm.
+		Sie können öffnen, kopieren, verschieben oder löschen von Dateien und Ordnern mit einem der Befehle im Einfügen > Run / File / String / Misc.
+		Zum Aufnehmen Down und Up Zustand jeder Taste wählen Sie Optionen > Einstellungen > Aufnahme und überprüfen "Capture Taste Zustand (Down / Up)"-Option.
+		Sie können Hotkeys zu beschleunigen oder zu verlangsamen Playback. Gehen Sie auf Optionen > Einstellungen > Wiedergabe, um Schlüssel und Geschwindigkeit eingestellt.
+		Um Capture-Bereich einstellen mit dem "Make Screenshot"-Werkzeug wählen Sie Optionen > Einstellungen > Screenshots und wählen Sie "Enter Erfassen". Nach dem Zeichnen des Rechtecks Verwendung Steuerung Pfeiltasten, um die Auswahl zu bewegen und verschieben Pfeiltasten, um es zu ändern.
 		Schnellauswahl: Wählen Sie eine beliebige Zeile, und klicken Sie auf eine Spaltenüberschrift, um ähnliche Reihen auf Zelle Text aus dieser Spalte zu wählen.
 		Der Run / File / String / Misc. Fenster haben viele andere nützliche Befehle wie Herunterfahren und UrlDownloadToFile.
-		Um Ihren Makros funktionieren nur auf ein bestimmtes Fenster auf Makro> Context Sensitive Hotkeys gehen.
+		Benutzen Sie den "Screenshot"-Funktion in der Funktions-Fenster (Einfügen > Wenn Statements / Variablen / Funktionen), um einen Screenshot des Bildschirms machen. Erste Parameter ist der Ziel-Datei den Pfad und den Namen mit einem png-Erweiterung. Zweiter Parameter sind die Rohr-separated-Koordinaten auf dem Bildschirm, z. B. 100|200|50|100 (X|Y|Breite|Höhe).
 		Klicken Sie auf den Index Spaltenüberschrift zu drehen On / Off Hilfe, Muster und Farben für Loops und Statements. Aktion auf Spaltenüberschrift zu drehen On / Off Einzug für Loops und Statements Doppelklick.
 		Sie können debuggen Makros mit der manuellen Hotkey und die Wiedergabe-Optionen im Makro-Menü. Sie können auch deaktivieren Aktionen durch Deaktivieren sie in der Makro-Liste.
-		Sie können Ihren eigenen globalen Variablen beim Start und exportiert werden geladen. Gehen Sie auf Optionen> Einstellungen> Benutzer globale Variablen, um sie hinzuzufügen.
-		Sie können laufen erweiterte Funktionen wie SubStr und RegExReplace aus dem Fenster Funktionen (Einfügen> Wenn Statements / Variablen / Funktionen). Oder führen Sie Ihre eigene Funktionen aus externen AutoHotkey Script.
+		Um Ihren Makros funktionieren nur auf ein bestimmtes Fenster auf Makro > Context Sensitive Hotkeys gehen.
+		Sie können Ihren eigenen globalen Variablen beim Start und exportiert werden geladen. Gehen Sie auf Optionen > Einstellungen > Benutzer globale Variablen, um sie hinzuzufügen.
+		Sie können laufen erweiterte Funktionen wie SubStr und RegExReplace aus dem Fenster Funktionen (Einfügen > Wenn Statements / Variablen / Funktionen). Oder führen Sie Ihre eigene Funktionen aus externen AutoHotkey Script.
 	)	
 ; Tooltips		
 	NewB_TT =	Neu (Strg+N)

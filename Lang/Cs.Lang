@@ -506,30 +506,33 @@
 ; Start-up Tips		
 	StartTips =	
 	(LTrim	
-		Můžete vytvářet makra pomocí příkazových tlačítek v hlavním okně, nebo pomocí rekordéru kopírovat své akce. Přejít na Možnosti> Nastavení> Nahrávání na vstupy vybrat, co budou zaznamenány.
-		Chcete-li použít rekordér pro rychlé úkoly, jít do Volby> Nastavení> Nahrávání a zaškrtněte "Vymazat seznam" možnost volby. Poté klikněte na tlačítko Record v hlavním okně a pomocí F10 pro vymazání aktuálního makra a začít novou se stejnou klávesovou zkratku.
+		Můžete vytvářet makra pomocí příkazových tlačítek v hlavním okně, nebo pomocí rekordéru kopírovat své akce. Přejít na Možnosti > Nastavení > Nahrávání na vstupy vybrat, co budou zaznamenány.
+		Chcete-li použít rekordér pro rychlé úkoly, jít do Volby > Nastavení > Nahrávání a zaškrtněte "Vymazat seznam" možnost volby. Poté klikněte na tlačítko Record v hlavním okně a pomocí F10 pro vymazání aktuálního makra a začít novou se stejnou klávesovou zkratku. Můžete také zaškrtnout volbu "vždy aktivní" v hlavním okně udržet nahrávání a přehrávání klávesy aktivní.
 		Chcete-li získat pomoc pro určitý příkaz pravým tlačítkem myši na příkazové tlačítko v hlavním okně, nebo kdekoli v okně příkazového řádku pro zobrazení odkazů na AutoHotkey nápovědě.
 		Podívejte se na "Capture" Keys možnost zadat klíče a kombinace do makra přímo z hlavního okna.
-		Typ klíče a kombinace v poli Hotkey dole a stiskněte tlačítko Vložit a přidat je do vybraných řádků.
+		Enter a jejich kombinace v poli Hotkey dole a stiskněte tlačítko Vložit a přidat je do vybraných řádků.
 		Pokud žádné položky jsou označeny editační tlačítka platí pro všechny řádky v seznamu.
-		Můžete přiřadit své vlastní proměnné v proměnné windows (Vložit> if / proměnné / funkce). Chcete-li používat je uvnitř příkazy název proměnné uzavřete v procentech znaky, např.: `%MyVar`%.
+		Můžete přiřadit své vlastní proměnné v proměnné windows (Vložit > if / proměnné / funkce). Chcete-li používat je uvnitř příkazy název proměnné uzavřete v procentech znaky, např.: `%MyVar`%.
 		Loop počítadlo v horní části stanovuje celkový počet smyček pro vybrané makro.
 		Můžete upravit řádek poklepáním, nebo jeho výběrem a klepnutím na tlačítko Upravit tlačítka v dolní části.
 		Zde můžete editovat více vybraných řádků pomocí volby v editačním řádku v dolní části.
 		Vyberte jeden nebo více řádků, které chcete přidat nové příkazy nad nimi.
 		Můžete přesunout řádky s click-and-drag.
+		Poklepejte na ikonu v oznamovací oblasti na Klávesovou zkratku aktivujete nebo zastavit přehrávání / nahrávání. Klikněte na něj prostředním tlačítkem během přehrávání nebo nahrávání pozastavíte.
 		Můžete exportovat makra pracovních AutoHotKey skripty nebo samostatné spustitelné z exportu okna.
-		Můžete otevřít, kopírovat, přesouvat či mazat soubory a složky pomocí jednoho z příkazů Vložit> Run / Soubor / String / Misc.
-		Můžete použít klávesové zkratky pro urychlení nebo zpomalení přehrávání. Přejít na Možnosti> Nastavení> Přehrát na nastavení klíče a rychlost.
-		Chcete-li nahrávat nahoru a dolů stav po každém stisknutí Jdi na Volby> Nastavení> Nahrávání a zkontrolujte "Capture Key State (dolů / nahoru)" možnost volby.
-		Chcete-li nastavit snímání prostoru pomocí "Vytvořit snímek" nástroj jděte na Možnosti> Nastavení> Screenshoty a zvolte "Stiskněte Enter pro snímání". Po nakreslení obdélníku pomocí tlačítek ovládacího šipkami přesuňte výběr a Shift kláves se šipkami změňte velikost.
+		Chcete-li nahrávat a přehrávat myši pomocí absolutních souřadnic přejděte na Možnosti > Nastavení > Výchozí nastavení a myš polohu na obrazovce.
+		Můžete otevřít, kopírovat, přesouvat či mazat soubory a složky pomocí jednoho z příkazů Vložit > Run / Soubor / String / Misc.
+		Chcete-li nahrávat nahoru a dolů stav po každém stisknutí Jdi na Volby > Nastavení > Nahrávání a zkontrolujte "Capture Key State (dolů / nahoru)" možnost volby.
+		Můžete použít klávesové zkratky pro urychlení nebo zpomalení přehrávání. Přejít na Možnosti > Nastavení > Přehrát na nastavení klíče a rychlost.
+		Chcete-li nastavit snímání prostoru pomocí "Vytvořit snímek" nástroj jděte na Možnosti > Nastavení > Screenshoty a zvolte "Stiskněte Enter pro snímání". Po nakreslení obdélníku pomocí tlačítek ovládacího šipkami přesuňte výběr a Shift kláves se šipkami změňte velikost.
 		Rychlý výběr: Vyberte libovolný řádek a klikněte na záhlaví sloupce vyberte podobné řádky na základě textu z buňky tohoto sloupce.
 		Run / Soubor / String / Misc. Okno má mnoho dalších užitečných příkazů, jako je vypnutí a UrlDownloadToFile.
-		Chcete-li, aby vaše makra fungují pouze na určitém okně přejděte na příkaz Makro> kontextovou klávesovým zkratkám.
+		Použijte "Screenshot" funkce ve funkčním okně (Vložit > if / proměnné / funkce), aby se snímek části obrazovky. První parametr je cílový soubor je cesta a název s příponou PNG. Druhý parametr jsou potrubí oddělené polohu na obrazovce, např. 100|200|50|100 (X|Y|Šířka|Výška).
 		Kliknutím na záhlaví sloupce index pro zapnutí / vypnutí nápovědy známky a barvy pro smyčky a příkazy. Double-klikněte na záhlaví sloupce Akce pro zapnutí / vypnutí odsazení pro smyčky a příkazy.
 		Můžete ladit makra pomocí klávesové zkratky Ruční a možností přehrávání v nabídce makro. Můžete také vypnout odškrtnutím akce je v seznamu Makro.
-		Můžete si nastavit vlastní Globální proměnné má být naloženo na spuštění a které má být vyvezeno. Přejít na Možnosti> Nastavení> Uživatelská globální proměnné přidat.
-		Můžete spustit pokročilé funkce jako substr a RegExReplace z funkcí okna (Vložit> if / proměnné / funkce). Nebo spustit vlastní funkce z externích AutoHotKey skriptů.
+		Chcete-li, aby vaše makra fungují pouze na určitém okně přejděte na příkaz Makro > kontextovou klávesovým zkratkám.
+		Můžete si nastavit vlastní Globální proměnné má být naloženo na spuštění a které má být vyvezeno. Přejít na Možnosti > Nastavení > Uživatelská globální proměnné přidat.
+		Můžete spustit pokročilé funkce jako substr a RegExReplace z funkcí okna (Vložit > if / proměnné / funkce). Nebo spustit vlastní funkce z externích AutoHotKey skriptů.
 	)	
 ; Tooltips		
 	NewB_TT =	New (Ctrl+N)

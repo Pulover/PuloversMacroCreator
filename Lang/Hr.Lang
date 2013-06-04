@@ -506,30 +506,33 @@
 ; Start-up Tips		
 	StartTips =	
 	(LTrim	
-		Možete stvoriti makronaredbe pomoću naredbenog gumba u glavnom prozoru ili pomoću snimača kopirati svoje radnje. Idi na Opcije> Postavke> Snimanje odabrati ono što ulazi će biti zabilježen.
-		Za korištenje rekorder brze zadatke ići na Opcije> Postavke> Snimanje i provjeriti "Clear List" opciju. Zatim pritisnite gumb rekord u glavnom prozoru i F10 izbiti trenutni makro i započeti novu s istim hotkey.
+		Možete stvoriti makronaredbe pomoću naredbenog gumba u glavnom prozoru ili pomoću snimača kopirati svoje radnje. Idi na Opcije > Postavke > Snimanje odabrati ono što ulazi će biti zabilježen.
+		Za korištenje rekorder brze zadatke ići na Opcije > Postavke > Snimanje i provjeriti "Clear List" opciju. Zatim pritisnite gumb rekord u glavnom prozoru i F10 izbiti trenutni makro i započeti novu s istim hotkey. Također možete provjeriti "Uvijek aktivan" opciju u glavnom prozoru da bi se snimanje i reprodukcija hotkeys aktivna.
 		Za pomoć za određene naredbe desnim klikom na naredbeni gumb u glavnom prozoru ili bilo gdje u naredbeni prozor pokazati linkove na AutoHotKey online pomoći.
 		Provjerite "Hvatanje Keys" opciju za ulazak i kombinacije tipki na Macro izravno iz glavnog prozora.
-		Tip tipke i kombinacije u hotkey okvir na dnu i pritisnite tipku Insert da ih dodate na odabranim redovima.
+		Unesite tipki i kombinacije u hotkey kutiji na dnu i pritisnite tipku Insert bi ih dodali na odabranim redovima.
 		Ako nema reda odabrao edit tipke primjenjuje na sve retke na popisu.
-		Možete dodijeliti svoje varijable u varijablama prozori (Insert> Ako Izjave varijable / / funkcija). Kako ih koristiti unutar naredbe priložiti ime varijable u posto znakove, npr.: `%MyVar`%.
+		Možete dodijeliti svoje varijable u varijablama prozori (Insert > Ako Izjave varijable / / funkcija). Kako ih koristiti unutar naredbe priložiti ime varijable u posto znakove, npr.: `%MyVar`%.
 		Loop brojač na vrhu postavlja ukupan broj petlji za odabrane Macro.
 		Možete urediti red tako da ga dvostrukim klikom ili ga i pritiskom tipke za uređivanje na dnu.
 		Možete uređivati više odabranih redaka pomoću mogućnosti u uređivanju traci na dnu.
 		Odabrati jedan ili više redaka za dodavanje novih naredbi na njih.
 		Možete premjestiti redaka s klik-i-povuci.
+		Dvaput kliknite na ikona prečaca za aktiviranje ili zaustavljanje reprodukcije / snimanja. Kliknite na njega s srednji gumb tijekom reprodukcije ili snimanja na pauzu.
 		Vostè pot exportar els seus macros als scripts AutoHotkey treball o executables independents de la finestra Exporta.
-		Vostè pot obrir, copiar, moure o esborrar arxius i carpetes utilitzant un dels comandaments de Inserir> Run / Arxiu / cadena / Misc.
-		Podeu utilitzar tecles d'accés ràpid per accelerar o reduir la velocitat de reproducció. Aneu a Opcions> Configuració> Reprodueix per establir les claus i la velocitat.
-		Per gravar Down i Up estat de tots els go clau a Opcions> Configuració> Gravació i seleccioneu "Capturar estat clau (baix / dalt)" opció.
-		Per ajustar l'àrea de captura amb "Fer Screenshot" aneu a Opcions> Configuració> Imatges i seleccioneu "Premeu Enter per capturar". Després de dibuixar l'ús tecles de control per moure el rectangle de selecció i Shift tecles de fletxa per canviar la seva mida.
+		Za snimanje i reprodukciju miša preko apsolutnih koordinata idite na Opcije > Postavke > Zadani skup i Miš koordinate na zaslonu.
+		Vostè pot obrir, copiar, moure o esborrar arxius i carpetes utilitzant un dels comandaments de Inserir > Run / Arxiu / cadena / Misc.
+		Per gravar Down i Up estat de tots els go clau a Opcions > Configuració > Gravació i seleccioneu "Capturar estat clau (baix / dalt)" opció.
+		Podeu utilitzar tecles d'accés ràpid per accelerar o reduir la velocitat de reproducció. Aneu a Opcions > Configuració > Reprodueix per establir les claus i la velocitat.
+		Per ajustar l'àrea de captura amb "Fer Screenshot" aneu a Opcions > Configuració > Imatges i seleccioneu "Premeu Enter per capturar". Després de dibuixar l'ús tecles de control per moure el rectangle de selecció i Shift tecles de fletxa per canviar la seva mida.
 		Seleccioneu ràpida: Seleccioneu qualsevol fila i feu clic a una capçalera de columna per seleccionar files similars basades en text de la cel d'aquesta columna.
 		The Run / Arxiu / cadena / Misc. finestra té molts altres ordres útils com ara apagat i URLDownloadToFile.
-		Per fer les seves macros només funcionen en una determinada finestra anar a Macro> Tecles d'accés directe sensibles al context.
+		Koristite "screenshot" funkciju u funkcija prozora (Umetnite > Ako Izjave / / varijable funkcionira) napraviti screenshot dijelu ekrana. Prvi parametar je odredišnoj datoteci je put i naziv s PNG produžetak. Drugi parametar su cijevi odvojene koordinate na zaslonu, npr. 100|200|50|100 (X|Y|Širina|Visina).
 		Feu clic a la capçalera de columna Índex per encendre / apagar Ajuda marques i colors de bucles i sentències. Feu doble clic a la capçalera de columna Acció per encendre / apagar sagnia de bucles i sentències.
 		Pot depurar les seves macros utilitzant el Hotkey manual i les opcions de joc al menú Macro. També pot desactivar desmarcant les accions en la llista de macros.
-		Podeu definir les seves pròpies variables globals per ser carregat en l'arrencada i per a l'exportació. Aneu a Opcions> Configuració> Usuari Variables globals per afegir.
-		Podeu executar funcions avançades com ara substr i RegExReplace de la finestra Funcions (Inserir> Si Declaracions / variables / funcions). O executar les seves pròpies funcions de seqüència AutoHotkey externs.
+		Per fer les seves macros només funcionen en una determinada finestra anar a Macro > Tecles d'accés directe sensibles al context.
+		Podeu definir les seves pròpies variables globals per ser carregat en l'arrencada i per a l'exportació. Aneu a Opcions > Configuració > Usuari Variables globals per afegir.
+		Podeu executar funcions avançades com ara substr i RegExReplace de la finestra Funcions (Inserir > Si Declaracions / variables / funcions). O executar les seves pròpies funcions de seqüència AutoHotkey externs.
 	)	
 ; Tooltips		
 	NewB_TT =	New (Ctrl+N)
