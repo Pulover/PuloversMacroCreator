@@ -505,6 +505,7 @@
 		Besoin d'aide, trouvé un bug ou une suggestion? Envoyer un mail à l'auteur: <a href="mailto:rodolfoub@gmail.com">rodolfoub@gmail.com</a>
 		Il s'agit d'un logiciel libre. Si vous l'avez trouvé jugerez utiles <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=rodolfoub`%40gmail`%2ecom&lc=US&item_name=Pulover`%27s`%20Macro`%20Creator&item_number=App`%2ePMC&currency_code=USD&bn=PP`%2dDonationsBF`%3abtn_donateCC_LG`%2egif`%3aNonHosted">faire un don</a> et de soutien au développement. Je vous remercie.
 	)	
+	d_Lang070 =	Erreur: Invalid Hotkey sélectionnée.
 		
 ; Start-up Tips		
 	StartTips =	

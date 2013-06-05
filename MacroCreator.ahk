@@ -157,6 +157,7 @@ IniRead, VirtualKeys, %IniFilePath%, Options, VirtualKeys,
 )
 IniRead, AutoUpdate, %IniFilePath%, Options, AutoUpdate, 1
 IniRead, Ex_AbortKey, %IniFilePath%, ExportOptions, Ex_AbortKey, 0
+IniRead, Ex_PauseKey, %IniFilePath%, ExportOptions, Ex_PauseKey, 0
 IniRead, Ex_SM, %IniFilePath%, ExportOptions, Ex_SM, 1
 IniRead, SM, %IniFilePath%, ExportOptions, SM, Input
 IniRead, Ex_SI, %IniFilePath%, ExportOptions, Ex_SI, 1
@@ -1546,9 +1547,10 @@ Gui, 14:Add, GroupBox, W415 H150, %t_Lang002%:
 Gui, 14:Add, ListView, Section ys+20 xs+10 AltSubmit Checked W395 r4 vExpList gExpEdit -Multi NoSort -ReadOnly, Hotkey|Loop|Hotstring?|BlockMouse?
 Gui, 14:Add, Button, -Wrap Section xs W70 H23 gCheckAll, %t_Lang007%
 Gui, 14:Add, Button, -Wrap yp x+5 W70 H23 gUnCheckAll, %t_Lang008%
-Gui, 14:Add, Checkbox, -Wrap Checked%Ex_AbortKey% yp+5 x+10 W90 vEx_AbortKey gEx_Checks R1, %w_Lang008%:
-Gui, 14:Add, Edit, yp-5 x+5 W50 vAbortKey, %AbortKey%
-Gui, 14:Add, Checkbox, -Wrap Checked%PauseKey% yp+5 x+5 W90 vPauseKey Disabled R1, %t_Lang081%
+Gui, 14:Add, Checkbox, -Wrap Checked%Ex_AbortKey% yp+5 x+10 W70 vEx_AbortKey gEx_Checks R1, %w_Lang008%:
+Gui, 14:Add, Edit, yp-5 x+0 W45 vAbortKey, % PauseKey ? "Esc" : AbortKey
+Gui, 14:Add, Checkbox, -Wrap Checked%Ex_PauseKey% yp+5 x+10 W70 vEx_PauseKey R1, %t_Lang081%:
+Gui, 14:Add, Edit, yp-5 x+0 W45 vPauseKey, % PauseKey ? AbortKey : "Pause"
 ; Context
 Gui, 14:Add, GroupBox, Section xm W415 H80
 Gui, 14:Add, Checkbox, -Wrap Section ys xs vEx_IfDir gEx_Checks R1, %t_Lang009%:
@@ -1615,7 +1617,7 @@ If (IfDirectContext <> "None")
 }
 LV_Delete()
 Loop, %TabCount%
-	LV_Add("Check", o_AutoKey[A_Index], o_TimesG[A_Index], 0, 0)
+	LV_Add("Check", o_AutoKey[A_Index], o_TimesG[A_Index], 0, (BckIt%A_Index% ? 1 : 0))
 LV_ModifyCol(1, 130)	; Hotkeys
 LV_ModifyCol(2, 80)		; Loop
 LV_ModifyCol(3, 80)		; Hotstrings
@@ -1716,7 +1718,7 @@ return
 
 Ex_Checks:
 Gui, Submit, NoHide
-GuiControl, 14:Enable%Ex_AbortKey%, PauseKey
+; GuiControl, 14:Enable%Ex_AbortKey%, PauseKey
 GuiControl, 14:Enable%Ex_IfDir%, Ex_IfDirType
 GuiControl, 14:Enable%Ex_IfDir%, Ident
 GuiControl, 14:Enable%Ex_IfDir%, Title
@@ -1736,8 +1738,11 @@ ExpClose:
 14GuiClose:
 14GuiEscape:
 Gui, Submit, NoHide
+Loop, %TabCount%
+	LV_GetText(BckIt%A_Index%, A_Index, 4)
 Gui, 1:-Disabled
 Gui, 14:Destroy
+Gui, 1:Default
 return
 
 Exe_Exp:
@@ -1773,9 +1778,17 @@ If (ExpFile = "")
 	return
 If (Ex_AbortKey = 1)
 {
-	If (AbortKey = "")
+	If !RegExMatch(AbortKey, "^\w+$")
 	{
-		MsgBox, 16, %d_Lang007%, %d_Lang008%
+		MsgBox, 16, %d_Lang007%, %d_Lang070%
+		return
+	}
+}
+If (Ex_PauseKey = 1)
+{
+	If !RegExMatch(PauseKey, "^\w+$")
+	{
+		MsgBox, 16, %d_Lang007%, %d_Lang070%
 		return
 	}
 }
@@ -1827,8 +1840,10 @@ Loop, % LV_GetCount()
 	If (Ex_IN)
 		IncList .= IncludeFiles(RowNumber, ListCount%RowNumber%)
 }
-AutoKey := RTrim(AutoKey, "`n"), AbortKey := (Ex_AbortKey = 1) ? AbortKey : ""
-If CheckDuplicates(AbortKey, "", AutoKey)
+AutoKey := RTrim(AutoKey, "`n")
+AbortKey := (Ex_AbortKey = 1) ? AbortKey : ""
+PauseKey := (Ex_PauseKey = 1) ? PauseKey : ""
+If CheckDuplicates(AbortKey, PauseKey, AutoKey)
 {
 	Body := "", AllScripts := "", PmcCode := ""
 	MsgBox, 16, %d_Lang007%, %d_Lang032%
@@ -1838,7 +1853,9 @@ Body := AllScripts, AllScripts := ""
 If (Ex_IfDir = 1)
 	Body := Ex_IfDirType ", " Title "`n`n" Body Ex_IfDirType "`n"
 If (Ex_AbortKey = 1)
-	Body .= (PauseKey = 0) ? "`n" AbortKey "::ExitApp`n" : "`n" AbortKey "::Pause`n"
+	Body .= "`n" AbortKey "::ExitApp`n"
+If (Ex_PauseKey = 1)
+	Body .= "`n" PauseKey "::Pause`n"
 Script := Header . Body . IncList
 ChoosenFileName := SelectedFileName
 GoSub, SaveAHK
@@ -8870,6 +8887,9 @@ return
 pb_UrlDownloadToFile:
 	UrlDownloadToFile, %Par1%, %Par2%
 return
+pb_CoordMode:
+	CoordMode, %Par1%, %Par2%
+return
 pb_SendLevel:
 	SendLevel, %Step%
 return
@@ -9388,6 +9408,7 @@ ScreenDir := A_AppData "\MacroCreator\Screenshots"
 DefaultMacro := ""
 StdLibFile := ""
 Ex_AbortKey := 0
+Ex_PauseKey := 0
 Ex_SM := 1
 SM := "Input"
 Ex_SI := 1
@@ -9564,6 +9585,7 @@ IniWrite, %IfLVColor%, %IniFilePath%, Options, IfLVColor
 IniWrite, %VirtualKeys%, %IniFilePath%, Options, VirtualKeys
 IniWrite, %AutoUpdate%, %IniFilePath%, Options, AutoUpdate
 IniWrite, %Ex_AbortKey%, %IniFilePath%, ExportOptions, Ex_AbortKey
+IniWrite, %Ex_PauseKey%, %IniFilePath%, ExportOptions, Ex_PauseKey
 IniWrite, %Ex_SM%, %IniFilePath%, ExportOptions, Ex_SM
 IniWrite, %SM%, %IniFilePath%, ExportOptions, SM
 IniWrite, %Ex_SI%, %IniFilePath%, ExportOptions, Ex_SI
@@ -9811,7 +9833,13 @@ Loop, % LV_GetCount()
 		LV_Modify(A_Index, "Icon" 14)
 	Else If Type contains Get
 		LV_Modify(A_Index, "Icon" 18)
-	Else If Type contains LockState,Time,Transform,Random,ClipWait,Block,Url,Status,SendLevel,Pause,Return,ExitApp
+	Else If (Type = "Pause")
+		LV_Modify(A_Index, "Icon" 32)
+	Else If (Type = "Return")
+		LV_Modify(A_Index, "Icon" 33)
+	Else If (Type = "ExitApp")
+		LV_Modify(A_Index, "Icon" 34)
+	Else If Type contains LockState,Time,Transform,Random,ClipWait,Block,Url,Status,SendLevel,CoordMode
 		LV_Modify(A_Index, "Icon" 23)
 	Else
 		LV_Modify(A_Index, "Icon" 1)

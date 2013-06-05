@@ -103,37 +103,40 @@ If A_OSVersion in WIN_8,WIN_7
 	ProgBIcon := [shell32, 250]
 	IniTVIcon := [shell32, 85]
 	RecentFolder := A_AppData "\Microsoft\Windows\Recent"
-	LVIcons := {1 : [DDORes, 27]	; Text
-			, 	2 : [DDORes, 28]	; Mouse
-			, 	3 : [shell32, 266]	; Pause
-			, 	4 : [shell32, 239]	; Loop
-			, 	5 : [shell32, 25]	; Run
-			, 	6 : [shell32, 166]	; IfStatement
-			, 	7 : [imageres, 68]	; Image
-			, 	8 : [shell32, 3]	; Window
-			, 	9 : [DDORes, 29]	; Control
-			, 	10: [shell32, 243]	; IE
-			, 	11: [DDORes, 1]		; Label
-			, 	12: [DDORes, 35]	; Goto
-			, 	13: [shell32, 157]	; SendMsg
-			, 	14: [shell32, 76]	; Variables
-			, 	15: [shell32, 167]	; Functions
-			, 	16: [shell32, 127]	; File
-			, 	17: [shell32, 134]	; String
-			, 	18: [shell32, 278]	; Info
-			, 	19: [comres, 6]		; Wait
-			, 	20: [imageres, 1]	; Group
-			, 	21: [shell32, 222]	; Dialog
-			, 	22: [shell32, 70]	; Ini
-			, 	23: [shell32, 73]	; Misc
-			, 	24: [shell32, 162]	; Pixel
-			, 	25: [comres, 4]		; COM
-			, 	26: [comres, 16]	; Break
-			, 	27: [shell32, 177]	; Continue
-			, 	28: [shell32, 28]	; Shutdown
-			, 	29: [imageres, 145]	; Process
-			, 	30: [DDORes, 2]		; Sound
-			, 	31: [regedit, 1]}	; Reg
+	LVIcons := {1 : [DDORes, 27]		; Text
+			, 	2 : [DDORes, 28]		; Mouse
+			, 	3 : [shell32, 266]		; Pause
+			, 	4 : [shell32, 239]		; Loop
+			, 	5 : [shell32, 25]		; Run
+			, 	6 : [shell32, 166]		; IfStatement
+			, 	7 : [imageres, 68]		; Image
+			, 	8 : [shell32, 3]		; Window
+			, 	9 : [DDORes, 29]		; Control
+			, 	10: [shell32, 243]		; IE
+			, 	11: [DDORes, 1]			; Label
+			, 	12: [DDORes, 35]		; Goto
+			, 	13: [shell32, 157]		; SendMsg
+			, 	14: [shell32, 76]		; Variables
+			, 	15: [shell32, 167]		; Functions
+			, 	16: [shell32, 127]		; File
+			, 	17: [shell32, 134]		; String
+			, 	18: [shell32, 278]		; Info
+			, 	19: [comres, 6]			; Wait
+			, 	20: [imageres, 1]		; Group
+			, 	21: [shell32, 222]		; Dialog
+			, 	22: [shell32, 70]		; Ini
+			, 	23: [shell32, 73]		; Misc
+			, 	24: [shell32, 162]		; Pixel
+			, 	25: [comres, 4]			; COM
+			, 	26: [comres, 16]		; Break
+			, 	27: [shell32, 177]		; Continue
+			, 	28: [shell32, 28]		; Shutdown
+			, 	29: [imageres, 145]		; Process
+			, 	30: [DDORes, 2]			; Sound
+			, 	31: [regedit, 1]		; Reg
+			, 	32: [psr, 3]			; Pause
+			, 	33: [psr, 6]			; Return
+			, 	34: [imageres, 219]}	; ExitApp
 }
 
 If A_OSVersion = WIN_VISTA
@@ -234,7 +237,10 @@ If A_OSVersion = WIN_VISTA
 			, 	28: [shell32, 28]	; Shutdown
 			, 	29: [imageres, 144]	; Process
 			, 	30: [mmsys, 1]		; Sound
-			, 	31: [regedit, 1]}	; Reg
+			, 	31: [regedit, 1]	; Reg
+			, 	32: [shell32, 266]	; Pause
+			, 	33: [SyncCenter, 6]	; Return
+			, 	34: [imageres, 93]}	; ExitApp
 }
 
 If A_OSVersion in WIN_2003,WIN_XP,WIN_2000
@@ -335,7 +341,10 @@ If A_OSVersion in WIN_2003,WIN_XP,WIN_2000
 			, 	28: [shell32, 28]	; Shutdown
 			, 	29: [shell32, 72]	; Process
 			, 	30: [Mmsys, 1]		; Sound
-			, 	31: [regedit, 1]}	; Reg
+			, 	31: [regedit, 1]	; Reg
+			, 	32: [shell32, 21]	; Pause
+			, 	33: [shell32, 110]	; Return
+			, 	34: [xpsp2res, 1]}	; ExitApp
 }
 
 ListCount1 := 0
@@ -812,10 +821,11 @@ Transform, OutputVar, Cmd, Value1, Value2
 Random, OutputVar, Min, Max
 BlockInput, Mode
 UrlDownloadToFile, URL, Filename
+CoordMode, ToolTip|Pixel|Mouse|Caret|Menu, Screen|Window|Client
 SendLevel, Level
-Pause
 Break, LoopNumber
 Continue, LoopNumber
+Pause
 Return
 ExitApp
 )"
