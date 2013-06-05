@@ -4571,17 +4571,17 @@ Gui, 11:Add, DDL, Section xm W65 vIdent, Title||Class|Process|ID|PID
 Gui, 11:Add, Text, -Wrap yp+5 x+5 W240 H20 vWinParsTip Disabled, %wcmd_WinSet%
 Gui, 11:Add, Edit, xm W350 vTitle, A
 Gui, 11:Add, Button, -Wrap yp-1 x+0 W30 H23 vGetWin gGetWin, ...
-Gui, 11:Add, Text, Section ym+5 xm+185, %c_Lang058%
+Gui, 11:Add, Text, Section ym+5 xm+145, %c_Lang058%
 Gui, 11:Add, Text, yp xp+50, X:
-Gui, 11:Add, Edit, yp-3 xp+15 vPosX Limit W35 Disabled
+Gui, 11:Add, Edit, yp-3 xp+15 vPosX W55 Disabled
 Gui, 11:Add, Text, yp+3 x+10, Y:
-Gui, 11:Add, Edit, yp-3 xp+15 vPosY Limit W35 Disabled
+Gui, 11:Add, Edit, yp-3 xp+15 vPosY W55 Disabled
 Gui, 11:Add, Button, -Wrap yp-2 x+5 W30 H23 vWinGetP gWinGetP Disabled, ...
 Gui, 11:Add, Text, xs, %c_Lang059%
 Gui, 11:Add, Text, yp xp+50, W:
-Gui, 11:Add, Edit, yp-3 xp+15 vSizeX Limit W35 Disabled
+Gui, 11:Add, Edit, yp-3 xp+15 vSizeX W55 Disabled
 Gui, 11:Add, Text, yp+3 x+10, H:
-Gui, 11:Add, Edit, yp-3 xp+15 vSizeY Limit W35 Disabled
+Gui, 11:Add, Edit, yp-3 xp+15 vSizeY W55 Disabled
 Gui, 11:Add, Button, -Wrap Section Default xm W60 H23 gWinOK, %c_Lang020%
 Gui, 11:Add, Button, -Wrap ys W60 H23 gWinCancel, %c_Lang021%
 Gui, 11:Add, Button, -Wrap ys W60 H23 vWinApply gWinApply Disabled, %c_Lang131%
@@ -5901,17 +5901,17 @@ Gui, 23:Add, DDL, Section xm W65 vIdent, Title||Class|Process|ID|PID
 Gui, 23:Add, Text, -Wrap yp+5 x+5 W240 H20 vWinParsTip Disabled, %wcmd_WinSet%
 Gui, 23:Add, Edit, xs+2 W350 vTitle, A
 Gui, 23:Add, Button, -Wrap yp-1 x+0 W30 H23 vGetWin gGetWin, ...
-Gui, 23:Add, Text, Section ym+5 xm+185, %c_Lang058%
+Gui, 23:Add, Text, Section ym+5 xm+145, %c_Lang058%
 Gui, 23:Add, Text, yp xp+50, X:
-Gui, 23:Add, Edit, yp-3 xp+15 vPosX Limit W35 Disabled
+Gui, 23:Add, Edit, yp-3 xp+15 vPosX W55 Disabled
 Gui, 23:Add, Text, yp+3 x+10, Y:
-Gui, 23:Add, Edit, yp-3 xp+15 vPosY Limit W35 Disabled
+Gui, 23:Add, Edit, yp-3 xp+15 vPosY W55 Disabled
 Gui, 23:Add, Button, -Wrap yp-2 x+5 W30 H23 vGetCtrlP gCtrlGetP Disabled, ...
 Gui, 23:Add, Text, xs, %c_Lang059%
 Gui, 23:Add, Text, yp xp+50, W:
-Gui, 23:Add, Edit, yp-3 xp+15 vSizeX Limit W35 Disabled
+Gui, 23:Add, Edit, yp-3 xp+15 vSizeX W55 Disabled
 Gui, 23:Add, Text, yp+3 x+10, H:
-Gui, 23:Add, Edit, yp-3 xp+15 vSizeY Limit W35 Disabled
+Gui, 23:Add, Edit, yp-3 xp+15 vSizeY W55 Disabled
 Gui, 23:Add, Button, -Wrap Section Default xm W60 H23 gControlOK, %c_Lang020%
 Gui, 23:Add, Button, -Wrap ys W60 H23 gControlCancel, %c_Lang021%
 Gui, 23:Add, Button, -Wrap ys W60 H23 vControlApply gControlApply Disabled, %c_Lang131%
@@ -8089,7 +8089,7 @@ return
 
 CaptureJoyB:
 RegExMatch(A_ThisHotkey, "(\d+)Joy(\d+)", Jp)
-GuiControl,, PJoy, %t_Lang098%: %Jp1%`n%t_Lang099%: %Jp2%
+GuiControl, 31:, PJoy, %t_Lang098%: %Jp1%`n%t_Lang099%: %Jp2%
 return
 
 SetJoyHK:
