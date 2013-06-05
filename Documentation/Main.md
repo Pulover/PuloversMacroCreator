@@ -53,6 +53,8 @@ To have other Macros active during Timer check the *Always Active* option or rig
 
 **Auto.**: Selects the Automatic Hotkey to execute the currently selected Macro (The Win option adds the Windows Key as modifier).
 
+**Joystick**: Sets a joystick button to run the Macro. When activated the Auto. Hotkey box will switch to accept only joystick buttons. Only buttons are detected (axis, pov and others are not). The number before "Joy" is the joystick number and the number after it is the button number, so 2Joy1 is the second joystick's first button.
+
 **Man.**: Selects the Manual Hotkey to execute the currently selected Macro step-by-step.
 
 **Stop**: Selects the Hotkey to stop execution (the Pause option changes the behavior to pause execution).
@@ -143,7 +145,7 @@ Uncheck the checkboxes in the first column to disable specific actions during pl
 * *Window*: Name of the window which will be affected by the command.
 * *Comment*: Optional comment line to display in front of the command when the script is exported to AHK.
 
-**Quick Select**: This feature allows you to select similar rows based on any column from *Details* to *Comment*. Select any row (if more then one row is selected the first one will be used) and click on a column header to select similar rows based on that column.
+**Quick Select**: This feature allows you to select similar rows based on any column from *Details* to *Comment*. Select any row (if more then one row is selected the first one will be used) and click on a column header to select similar rows based on the cell's text from that column.
 
 **Show Colors && Help Marks for Loops and Statements**: Click on the *Index* Column Header to turn this option On/Off. When activated rows inside Loops and text of rows inside Statements will be shown in colors, also braces and wildcards will be placed in front of command's index as representation to help visualize which rows are nested. Braces represent Loops and Wildcards represent If Statements, so for example *N* \*{\*{ is equivalent to:  
 > If

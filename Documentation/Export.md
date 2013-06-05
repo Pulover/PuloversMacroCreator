@@ -30,7 +30,7 @@ Double-Click on an item in the list to display the options for each Macro.
 
 **Stop**: Adds a Hotkey with the *ExitApp* command.
 
-**Pause**: Makes the Stop Hotkey with the *Pause* command instead.
+**Pause**: Adds a Hotkey with the *Pause* command.
 
 ## Context Sensitive Hotkeys
 

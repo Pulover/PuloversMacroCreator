@@ -97,6 +97,7 @@
 	h_Lang003 =	&Controllare gli aggiornamenti...
 	h_Lang004 =	&Verificare in fase di start up
 	h_Lang005 =	C&irca
+	h_Lang006 =	&Suggerimenti
 		
 ; Tray Menu		
 	y_Lang001 =	Nascondi la finestra
@@ -376,6 +377,9 @@
 	t_Lang094 =	Nome = Valore
 	t_Lang095 =	Inserisci 1 variabile per riga. Si può anche aggiungere [sezioni].
 	t_Lang096 =	Variabili Globali Dell'utente
+	t_Lang097 =	Premere un pulsante sul joystick
+	t_Lang098 =	Joystick
+	t_Lang099 =	Pulsante
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Aperto
@@ -431,8 +435,6 @@
 	(LTrim	
 		Questa funzione richiede la libreria GDI+.
 		Fare clic su OK per andare alla pagina di download.
-		
-		Nota: 'Gdip.ahk' il file deve essere nella stessa directory di questo script.
 	)	
 	d_Lang041 =	Il nome della variabile contiene un carattere non valido.
 	d_Lang042 =	
@@ -451,8 +453,6 @@
 	(LTrim	
 		Questa funzione richiede la funzione Eval().
 		Fare clic su OK per andare alla pagina di download.
-		
-		Nota: 'Eval.ahk' il file deve essere nella stessa directory di questo script.
 	)	
 	d_Lang045 =	Si prega di selezionare una finestra di Internet Explorer!
 	d_Lang046 =	Collegamento di successo!
@@ -498,7 +498,46 @@
 	d_Lang064 =	Errore di oggetto COM in
 	d_Lang065 =	Riga
 	d_Lang066 =	Specificamente
+	d_Lang067 =	Mostra suggerimenti all'avvio.
+	d_Lang068 =	Suggerimenti:
+	d_Lang069 =	
+	(LTrim	
+		Hai bisogno di aiuto, ha trovato un bug o un suggerimento? Invia una e-mail all'autore: <a href="mailto:rodolfoub@gmail.com">rodolfoub@gmail.com</a>
+		Questo è un software gratuito. Se hai trovato utile considerare <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=rodolfoub`%40gmail`%2ecom&lc=US&item_name=Pulover`%27s`%20Macro`%20Creator&item_number=App`%2ePMC&currency_code=USD&bn=PP`%2dDonationsBF`%3abtn_donateCC_LG`%2egif`%3aNonHosted">una donazione</a> e di sostegno allo sviluppo. Grazie.
+	)	
+	d_Lang070 =	Error: Invalid Hotkey selezionato.
 		
+; Start-up Tips		
+	StartTips =	
+	(LTrim	
+		È possibile creare macro utilizzando i pulsanti di comando nella finestra principale o utilizzando il registratore per copiare le vostre azioni. Andare su Opzioni > Impostazioni > Registrazione per selezionare ciò che verrà registrato ingressi.
+		Per utilizzare il registratore per operazioni rapide andare su Opzioni > Impostazioni > Registrazione e selezionare l'opzione "Cancella elenco". Quindi fare clic sul pulsante Record nella finestra principale e usare F10 per cancellare la macro corrente e iniziarne uno nuovo con la stessa combinazione di tasti. È anche possibile selezionare l'opzione "Sempre attivo" nella finestra principale di tenere registrazione e riproduzione hotkeys attivo.
+		Per ottenere aiuto per un comando specifico pulsante destro del mouse su un pulsante di comando nella finestra principale o in qualsiasi punto di una finestra di comando per visualizzare collegamenti ad AutoHotkey Guida in linea.
+		Selezionare l'opzione "Capture Keys" per immettere le chiavi e le combinazioni per la macro direttamente dalla finestra principale.
+		Inserisci le chiavi e le combinazioni nella casella Tasti di scelta rapida in basso e premere il pulsante Inserisci per aggiungerli ai selezionare righe.
+		Se non è selezionato alcun file dei tasti di modifica si applicano a tutte le righe della lista.
+		È possibile assegnare le proprie variabili nelle variabili di Windows (Inserisci > Se Dichiarazioni / Variabili / Funzioni). Per utilizzarli all'interno comandi racchiudere il nome della variabile tra segni di percentuale, ad esempio: `%MyVar`%.
+		Il contatore "loop" in alto imposta il numero totale di loop per Macro selezionata.
+		È possibile modificare una riga facendo doppio clic su di esso o selezionandolo e cliccando il pulsante Edit in fondo.
+		È possibile modificare più righe selezionate utilizzando le opzioni nella barra di modifica nella parte inferiore.
+		Selezionare una o più righe per aggiungere nuovi comandi su di essi.
+		È possibile spostare le righe con click e trascinare.
+		Fare doppio clic sull'icona della barra tasti di scelta rapida per attivare o interrompere la riproduzione / registrazione. Fare clic su di essa con il pulsante centrale durante la riproduzione o la registrazione per mettere in pausa.
+		È possibile esportare le macro di script AutoHotkey di lavoro o eseguibili stand-alone della finestra Esporta.
+		Per registrare e riprodurre mouse utilizzando le coordinate assolute andare su Opzioni > Impostazioni > Impostazioni predefinite e mouse coordinate dello schermo.
+		È possibile aprire, copiare, spostare o eliminare file e cartelle utilizzando uno dei comandi in Inserisci > Run / File / String / Varie.
+		Per registrare Down e Up stato di ogni go chiave per Opzioni > Impostazioni > Registrazione e controllare "Capture stato chiave (giù / su)" Opzione.
+		È possibile utilizzare tasti di scelta rapida per accelerare o rallentare la riproduzione. Andare su Opzioni > Impostazioni > Riproduzione per impostare le chiavi e la velocità.
+		Per regolare la zona di cattura utilizzando il "Fai la Schermata" strumento andare su Opzioni > Impostazioni > Screenshots e selezionare "Premere Invio per Capture". Dopo aver tracciato i utilizzare i tasti freccia di controllo per spostare il rettangolo di selezione e Maiusc tasti freccia per ridimensionarla.
+		Seleziona rapida: Selezionare una riga e fare clic sull'intestazione di una colonna per selezionare le righe simili in base al testo della cella da quella colonna.
+		The Run / File / String / Varie. finestra ha molti altri comandi utili come Shutdown e URLDownloadToFile.
+		Utilizzare la funzione "Screenshot" nella finestra delle funzioni (Inserisci > Se Dichiarazioni / Variabili / funzioni) per fare uno screenshot della parte dello schermo. Il primo parametro è il percorso del file di destinazione e il nome con estensione png. Secondo parametro sono le coordinate del tubo-separati nella schermata, ad esempio, 100|200|50|100 (X|Y|Larghezza|Altezza).
+		Clicca sul Indice di colonna per attivare / disattivare la Guida Segni e colori per cicli e istruzioni. Fare doppio clic sull'azione di colonna per attivare / disattivare l'indentazione per cicli e istruzioni.
+		È possibile eseguire il debug delle macro utilizzando le opzioni del gioco nel menu di scelta rapida e il manuale Macro. È anche possibile disattivare le azioni da loro deselezionando nella lista Macro.
+		Per rendere le vostre macro funzionano solo su una determinata finestra andare Macro > Tasti di scelta rapida Context Sensitive.
+		È possibile impostare le proprie variabili globali per essere caricato all'avvio e da esportare. Vai a Opzioni > Impostazioni > User variabili globali per aggiungerli.
+		È possibile eseguire funzioni avanzate come SubStr e RegExReplace dalla finestra Funzioni (Inserisci > Se Dichiarazioni / Variabili / Funzioni). O eseguire le proprie funzioni da script AutoHotkey esterni.
+	)	
 ; Tooltips		
 	NewB_TT =	Nuovo (Ctrl+N)
 	OpenB_TT =	Apri (Ctrl+O)
@@ -525,8 +564,10 @@
 	AutoKey_TT =	Backspace per cancellare
 	ManKey_TT =	Backspace per cancellare
 	AbortKey_TT =	Backspace per cancellare
+	JoyKey_TT =	Premere un pulsante sul joystick
 	PauseKey_TT =	Mette in pausa l'esecuzione invece di fermarsi
 	Win1_TT =	Aggiungere la chiave di Windows come modificatore
+	JoyHK_TT =	Joystick
 	ReptC_TT =	0 = infinito
 	TabPlus_TT =	Aggiungi Macro (Ctrl+T)
 	TabClose_TT =	Chiudere Macro (Ctrl+W)

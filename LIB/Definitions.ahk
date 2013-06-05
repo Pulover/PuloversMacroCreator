@@ -12,6 +12,7 @@ imageres := SysRoot "\System32\imageres.dll"
 miguiresource := SysRoot "\System32\miguiresource.dll"
 msctf := SysRoot "\System32\msctf.dll"
 pifmgr := SysRoot "\System32\pifmgr.dll"
+compstui := SysRoot "\System32\compstui.dll"
 setupapi := SysRoot "\System32\setupapi.dll"
 shell32 := SysRoot "\System32\shell32.dll"
 urlmon := SysRoot "\System32\urlmon.dll"
@@ -24,175 +25,187 @@ browseui := SysRoot "\System32\browseui.dll"
 gcdef := SysRoot "\System32\gcdef.dll"
 netcfgx := SysRoot "\System32\netcfgx.dll"
 cscdll := SysRoot "\System32\cscdll.dll"
+mmcndmgr := SysRoot "\System32\mmcndmgr.dll"
 psr := SysRoot "\System32\psr.exe"
 regedit := SysRoot "\regedit.exe"
+accessibilitycpl := SysRoot "\System32\accessibilitycpl.dll"
 Mmsys := SysRoot "\System32\Mmsys.cpl"
 inetcpl := SysRoot "\System32\inetcpl.cpl"
+Joy := SysRoot "\System32\Joy.cpl"
 Timedate := SysRoot "\System32\Timedate.cpl"
 xpsp2res := SysRoot "\System32\xpsp2res.dll"
 
 If A_OSVersion in WIN_8,WIN_7
 {
 	_s := Chr(8239)
-	IconFile := shell32
 	HelpIconQ := 24
 	HelpIconI := 222
 	WarnIcon := 78
-	HelpIconB := [shell32, 23]
+	TipFile := accessibilitycpl
+	TipIcon := 15
+	HelpIconB := [shell32, 24]
 	t_RecordIcon := [psr, 2]
 	t_PlayIcon := [shell32, 138]
 	t_PauseIcon := [psr, 3]
 	t_WaitIcon := [comres, 6]
-	NewIcon := [imageres, 2]
-	OpenIcon := [shell32, 45]
-	SaveIcon := [shell32, 258]
-	ExportIcon := [shell32, 68]
-	PreviewIcon := [shell32, 22]
-	OptionsIcon := [imageres, 109]
-	DonateIcon := [shell32, 28]
-	MouseIcon := [DDORes, 27]
-	TextIcon := [DDORes, 26]
-	SpecIcon := [DDORes, 1]
-	ControlIcon := [DDORes, 28]
-	PauseIcon := [shell32, 265]
-	PauseIconB := [psr, 2]
-	WindowIcon := [shell32, 2]
-	ImageIcon := [imageres, 67]
-	RunIcon := [shell32, 24]
-	LoopIcon := [shell32, 238]
-	IfStIcon := [shell32, 165]
-	IEIcon := [shell32, 242]
-	ExpViewIcon := [shell32, 159]
-	RecordIcon := [psr, 1]
-	PlayIcon := [shell32, 137]
-	TestRunIcon := [psr, 3]
-	RecStopIcon := [psr, 5]
-	PlayOptIcon := [shell32, 261]
-	RecOptIcon := [psr, 0]
-	RunTimerIcon := [miguiresource, 1]
-	PlusIcon := [shell32, 279]
-	CloseIcon := [shell32, 234]
-	DuplicateLIcon := [shell32, 278]
-	InsertIcon := [shell32, 146]
-	ApplyIcon := [urlmon, 0]
-	ImportIcon := [imageres, 176]
-	SaveLIcon := [shell32, 280]
-	ContextIcon := [shell32, 261]
-	RemoveIcon := [shell32, 131]
-	DuplicateIcon := [shell32, 54]
-	CopyIcon := [shell32, 134]
-	CutIcon := [shell32, 259]
-	PasteIcon := [shell32, 260]
-	UndoIcon := [msctf, 14]
-	RedoIcon := [comres, 4]
-	MoveUpIcon := [shell32, 246]
-	MoveDnIcon := [shell32, 247]
-	EditIcon := [comres, 6]
-	CommentIcon := [shell32, 133]
-	FindIcon := [shell32, 55]
-	ListVarsIcon := [shell32, 269]
-	ExitIcon := [imageres, 218]
-	RecentIcon := [shell32, 20]
-	ProgBIcon := [shell32, 249]
-	IniTVIcon := [shell32, 84]
+	NewIcon := [imageres, 3]
+	OpenIcon := [shell32, 46]
+	SaveIcon := [shell32, 259]
+	ExportIcon := [shell32, 69]
+	PreviewIcon := [shell32, 23]
+	OptionsIcon := [imageres, 110]
+	DonateIcon := [shell32, 29]
+	MouseIcon := [DDORes, 28]
+	TextIcon := [DDORes, 27]
+	SpecIcon := [DDORes, 2]
+	ControlIcon := [DDORes, 29]
+	PauseIcon := [shell32, 266]
+	PauseIconB := [psr, 3]
+	WindowIcon := [shell32, 3]
+	ImageIcon := [imageres, 68]
+	RunIcon := [shell32, 25]
+	LoopIcon := [shell32, 239]
+	IfStIcon := [shell32, 166]
+	IEIcon := [shell32, 243]
+	ExpViewIcon := [shell32, 160]
+	RecordIcon := [psr, 2]
+	PlayIcon := [shell32, 138]
+	TestRunIcon := [psr, 4]
+	RecStopIcon := [psr, 6]
+	PlayOptIcon := [shell32, 262]
+	RecOptIcon := [psr, 1]
+	RunTimerIcon := [miguiresource, 2]
+	JoyIcon := [Joy, 1]
+	PlusIcon := [shell32, 280]
+	CloseIcon := [shell32, 235]
+	DuplicateLIcon := [shell32, 279]
+	SlowDownIcon := [mmcndmgr, 102]
+	InsertIcon := [shell32, 147]
+	ApplyIcon := [urlmon, 1]
+	ImportIcon := [imageres, 177]
+	SaveLIcon := [shell32, 281]
+	ContextIcon := [shell32, 262]
+	RemoveIcon := [shell32, 132]
+	DuplicateIcon := [shell32, 55]
+	CopyIcon := [shell32, 135]
+	CutIcon := [shell32, 260]
+	PasteIcon := [shell32, 261]
+	UndoIcon := [msctf, 15]
+	RedoIcon := [comres, 5]
+	MoveUpIcon := [shell32, 247]
+	MoveDnIcon := [shell32, 248]
+	EditIcon := [comres, 7]
+	CommentIcon := [shell32, 134]
+	FindIcon := [shell32, 56]
+	ListVarsIcon := [shell32, 270]
+	ExitIcon := [imageres, 219]
+	RecentIcon := [shell32, 21]
+	ProgBIcon := [shell32, 250]
+	IniTVIcon := [shell32, 85]
 	RecentFolder := A_AppData "\Microsoft\Windows\Recent"
-	LVIcons := {1 : [DDORes, 27]	; Text
-			, 	2 : [DDORes, 28]	; Mouse
-			, 	3 : [shell32, 266]	; Pause
-			, 	4 : [shell32, 239]	; Loop
-			, 	5 : [shell32, 25]	; Run
-			, 	6 : [shell32, 166]	; IfStatement
-			, 	7 : [imageres, 68]	; Image
-			, 	8 : [shell32, 3]	; Window
-			, 	9 : [DDORes, 29]	; Control
-			, 	10: [shell32, 243]	; IE
-			, 	11: [DDORes, 1]		; Label
-			, 	12: [DDORes, 35]	; Goto
-			, 	13: [shell32, 157]	; SendMsg
-			, 	14: [shell32, 76]	; Variables
-			, 	15: [shell32, 167]	; Functions
-			, 	16: [shell32, 127]	; File
-			, 	17: [shell32, 134]	; String
-			, 	18: [shell32, 278]	; Info
-			, 	19: [comres, 6]		; Wait
-			, 	20: [imageres, 1]	; Group
-			, 	21: [shell32, 222]	; Dialog
-			, 	22: [shell32, 70]	; Ini
-			, 	23: [shell32, 73]	; Misc
-			, 	24: [shell32, 162]	; Pixel
-			, 	25: [comres, 4]		; COM
-			, 	26: [comres, 16]	; Break
-			, 	27: [shell32, 177]	; Continue
-			, 	28: [shell32, 28]	; Shutdown
-			, 	29: [imageres, 145]	; Process
-			, 	30: [DDORes, 2]		; Sound
-			, 	31: [regedit, 1]}	; Reg
+	LVIcons := {1 : [DDORes, 27]		; Text
+			, 	2 : [DDORes, 28]		; Mouse
+			, 	3 : [shell32, 266]		; Pause
+			, 	4 : [shell32, 239]		; Loop
+			, 	5 : [shell32, 25]		; Run
+			, 	6 : [shell32, 166]		; IfStatement
+			, 	7 : [imageres, 68]		; Image
+			, 	8 : [shell32, 3]		; Window
+			, 	9 : [DDORes, 29]		; Control
+			, 	10: [shell32, 243]		; IE
+			, 	11: [DDORes, 1]			; Label
+			, 	12: [DDORes, 35]		; Goto
+			, 	13: [shell32, 157]		; SendMsg
+			, 	14: [shell32, 76]		; Variables
+			, 	15: [shell32, 167]		; Functions
+			, 	16: [shell32, 127]		; File
+			, 	17: [shell32, 134]		; String
+			, 	18: [shell32, 278]		; Info
+			, 	19: [comres, 6]			; Wait
+			, 	20: [imageres, 1]		; Group
+			, 	21: [shell32, 222]		; Dialog
+			, 	22: [shell32, 70]		; Ini
+			, 	23: [shell32, 73]		; Misc
+			, 	24: [shell32, 162]		; Pixel
+			, 	25: [comres, 4]			; COM
+			, 	26: [comres, 16]		; Break
+			, 	27: [shell32, 177]		; Continue
+			, 	28: [shell32, 28]		; Shutdown
+			, 	29: [imageres, 145]		; Process
+			, 	30: [DDORes, 2]			; Sound
+			, 	31: [regedit, 1]		; Reg
+			, 	32: [psr, 3]			; Pause
+			, 	33: [psr, 6]			; Return
+			, 	34: [imageres, 219]}	; ExitApp
 }
 
 If A_OSVersion = WIN_VISTA
 {
 	_s := Chr(8239)
-	IconFile := shell32
 	HelpIconQ := 24
 	HelpIconI := 222
 	WarnIcon := 78
-	HelpIconB := [shell32, 23]
+	TipFile := accessibilitycpl
+	TipIcon := 15
+	HelpIconB := [shell32, 24]
 	t_RecordIcon := [gcdef, 2]
 	t_PlayIcon := [shell32, 138]
 	t_PauseIcon := [shell32, 266]
 	t_WaitIcon := [comres, 6]
-	NewIcon := [imageres, 1]
-	OpenIcon := [shell32, 45]
-	SaveIcon := [shell32, 258]
-	ExportIcon := [shell32, 68]
-	PreviewIcon := [shell32, 22]
-	OptionsIcon := [imageres, 108]
-	DonateIcon := [shell32, 28]
-	MouseIcon := [setupapi, 1]
-	TextIcon := [setupapi, 2]
-	SpecIcon := [mmsys, 0]
-	ControlIcon := [shell32, 21]
-	PauseIcon := [shell32, 265]
-	PauseIconB := [shell32, 265]
-	WindowIcon := [shell32, 2]
-	ImageIcon := [imageres, 66]
-	RunIcon := [shell32, 24]
-	LoopIcon := [shell32, 238]
-	IfStIcon := [shell32, 165]
-	IEIcon := [shell32, 242]
-	ExpViewIcon := [shell32, 159]
-	RecordIcon := [gcdef, 1]
-	PlayIcon := [shell32, 137]
-	TestRunIcon := [mmsys, 3]
-	RecStopIcon := [SyncCenter, 5]
-	PlayOptIcon := [shell32, 261]
-	RecOptIcon := [inetcpl, 49]
-	RunTimerIcon := [miguiresource, 1]
-	PlusIcon := [wlanpref, 7]
-	CloseIcon := [wlanpref, 8]
-	DuplicateLIcon := [FXSRESM, 11]
-	InsertIcon := [shell32, 146]
-	ApplyIcon := [urlmon, 0]
-	ImportIcon := [FXSRESM, 6]
-	SaveLIcon := [FXSRESM, 8]
-	ContextIcon := [shell32, 261]
-	RemoveIcon := [shell32, 131]
-	DuplicateIcon := [shell32, 54]
-	CopyIcon := [shell32, 134]
-	CutIcon := [shell32, 259]
-	PasteIcon := [shell32, 260]
-	UndoIcon := [msctf, 14]
-	RedoIcon := [comres, 4]
-	MoveUpIcon := [shell32, 246]
-	MoveDnIcon := [shell32, 247]
-	EditIcon := [comres, 6]
-	CommentIcon := [shell32, 133]
-	FindIcon := [shell32, 55]
-	ListVarsIcon := [shell32, 269]
-	ExitIcon := [imageres, 92]
-	RecentIcon := [shell32, 20]
-	ProgBIcon := [shell32, 249]
-	IniTVIcon := [shell32, 84]
+	NewIcon := [imageres, 2]
+	OpenIcon := [shell32, 46]
+	SaveIcon := [shell32, 259]
+	ExportIcon := [shell32, 69]
+	PreviewIcon := [shell32, 23]
+	OptionsIcon := [imageres, 109]
+	DonateIcon := [shell32, 29]
+	MouseIcon := [setupapi, 2]
+	TextIcon := [setupapi, 3]
+	SpecIcon := [mmsys, 1]
+	ControlIcon := [shell32, 22]
+	PauseIcon := [shell32, 266]
+	PauseIconB := [shell32, 266]
+	WindowIcon := [shell32, 3]
+	ImageIcon := [imageres, 67]
+	RunIcon := [shell32, 25]
+	LoopIcon := [shell32, 239]
+	IfStIcon := [shell32, 166]
+	IEIcon := [shell32, 243]
+	ExpViewIcon := [shell32, 160]
+	RecordIcon := [gcdef, 2]
+	PlayIcon := [shell32, 138]
+	TestRunIcon := [mmsys, 4]
+	RecStopIcon := [SyncCenter, 6]
+	PlayOptIcon := [shell32, 262]
+	RecOptIcon := [inetcpl, 50]
+	RunTimerIcon := [miguiresource, 2]
+	JoyIcon := [Joy, 1]
+	PlusIcon := [wlanpref, 8]
+	CloseIcon := [wlanpref, 9]
+	DuplicateLIcon := [FXSRESM, 12]
+	SlowDownIcon := [mmcndmgr, 102]
+	InsertIcon := [shell32, 147]
+	ApplyIcon := [urlmon, 1]
+	ImportIcon := [FXSRESM, 7]
+	SaveLIcon := [FXSRESM, 9]
+	ContextIcon := [shell32, 262]
+	RemoveIcon := [shell32, 132]
+	DuplicateIcon := [shell32, 55]
+	CopyIcon := [shell32, 135]
+	CutIcon := [shell32, 260]
+	PasteIcon := [shell32, 261]
+	UndoIcon := [msctf, 15]
+	RedoIcon := [comres, 5]
+	MoveUpIcon := [shell32, 247]
+	MoveDnIcon := [shell32, 248]
+	EditIcon := [comres, 7]
+	CommentIcon := [shell32, 134]
+	FindIcon := [shell32, 56]
+	ListVarsIcon := [shell32, 270]
+	ExitIcon := [imageres, 93]
+	RecentIcon := [shell32, 21]
+	ProgBIcon := [shell32, 250]
+	IniTVIcon := [shell32, 85]
 	RecentFolder := A_AppData "\Microsoft\Windows\Recent"
 	LVIcons := {1 : [setupapi, 2]	; Text
 			, 	2 : [setupapi, 3]	; Mouse
@@ -224,73 +237,79 @@ If A_OSVersion = WIN_VISTA
 			, 	28: [shell32, 28]	; Shutdown
 			, 	29: [imageres, 144]	; Process
 			, 	30: [mmsys, 1]		; Sound
-			, 	31: [regedit, 1]}	; Reg
+			, 	31: [regedit, 1]	; Reg
+			, 	32: [shell32, 266]	; Pause
+			, 	33: [SyncCenter, 6]	; Return
+			, 	34: [imageres, 93]}	; ExitApp
 }
 
 If A_OSVersion in WIN_2003,WIN_XP,WIN_2000
 {
 	_s := Chr(4445)
-	IconFile := shell32
 	HelpIconQ := 24
 	HelpIconI := 222
 	WarnIcon := 78
-	HelpIconB := [shell32, 23]
+	TipFile := compstui
+	TipIcon := 9
+	HelpIconB := [shell32, 24]
 	t_RecordIcon := [gcdef, 1]
 	t_PlayIcon := [shell32, 138]
 	t_PauseIcon := [shell32, 21]
 	t_WaitIcon := [servdeps, 4]
-	NewIcon := [shell32, 100]
-	OpenIcon := [shell32, 4]
-	SaveIcon := [shell32, 78]
-	ExportIcon := [shell32, 66]
-	PreviewIcon := [shell32, 22]
-	OptionsIcon := [shell32, 165]
-	DonateIcon := [shell32, 28]
-	MouseIcon := [setupapi, 1]
-	TextIcon := [setupapi, 2]
-	SpecIcon := [Mmsys, 0]
-	ControlIcon := [shell32, 192]
-	PauseIcon := [shell32, 20]
-	PauseIconB := [shell32, 20]
-	WindowIcon := [shell32, 2]
-	ImageIcon := [shimgvw, 0]
-	RunIcon := [shell32, 24]
-	LoopIcon := [xpsp2res, 53]
-	IfStIcon := [setupapi, 22]
-	IEIcon := [shell32, 220]
-	ExpViewIcon := [shell32, 34]
-	RecordIcon := [gcdef, 1]
-	PlayIcon := [shell32, 137]
-	TestRunIcon := [browseui, 1]
-	RecStopIcon := [shell32, 109]
-	PlayOptIcon := [xpsp2res, 12]
-	RecOptIcon := [xpsp2res, 13]
-	RunTimerIcon := [Timedate, 0]
-	PlusIcon := [inetcpl, 21]
-	CloseIcon := [inetcpl, 22]
-	DuplicateLIcon := [shell32, 54]
-	InsertIcon := [shell32, 146]
-	ApplyIcon := [shell32, 144]
-	ImportIcon := [shell32, 147]
-	SaveLIcon := [shell32, 78]
-	ContextIcon := [xpsp2res, 12]
-	RemoveIcon := [shell32, 131]
-	DuplicateIcon := [shell32, 54]
-	CopyIcon := [shell32, 134]
-	CutIcon := [cscdll, 10]
-	PasteIcon := [shell32, 110]
-	UndoIcon := [xpsp2res, 7]
-	RedoIcon := [shell32, 176]
-	MoveUpIcon := [netcfgx, 0]
-	MoveDnIcon := [netcfgx, 1]
-	EditIcon := [pifmgr, 17]
-	CommentIcon := [shell32, 133]
-	FindIcon := [shell32, 55]
-	ListVarsIcon := [shell32, 75]
-	ExitIcon := [xpsp2res, 0]
-	RecentIcon := [shell32, 20]
-	ProgBIcon := [shell32, 176]
-	IniTVIcon := [shell32, 84]
+	NewIcon := [shell32, 101]
+	OpenIcon := [shell32, 5]
+	SaveIcon := [shell32, 79]
+	ExportIcon := [shell32, 156]
+	PreviewIcon := [shell32, 23]
+	OptionsIcon := [shell32, 166]
+	DonateIcon := [shell32, 29]
+	MouseIcon := [setupapi, 2]
+	TextIcon := [setupapi, 3]
+	SpecIcon := [Mmsys, 1]
+	ControlIcon := [shell32, 193]
+	PauseIcon := [shell32, 21]
+	PauseIconB := [shell32, 21]
+	WindowIcon := [shell32, 3]
+	ImageIcon := [shimgvw, 1]
+	RunIcon := [shell32, 25]
+	LoopIcon := [xpsp2res, 54]
+	IfStIcon := [setupapi, 23]
+	IEIcon := [shell32, 221]
+	ExpViewIcon := [shell32, 35]
+	RecordIcon := [gcdef, 2]
+	PlayIcon := [shell32, 138]
+	TestRunIcon := [browseui, 2]
+	RecStopIcon := [shell32, 110]
+	PlayOptIcon := [xpsp2res, 13]
+	RecOptIcon := [xpsp2res, 14]
+	RunTimerIcon := [Timedate, 1]
+	JoyIcon := [Joy, 1]
+	PlusIcon := [inetcpl, 22]
+	CloseIcon := [inetcpl, 23]
+	DuplicateLIcon := [shell32, 55]
+	SlowDownIcon := [mmcndmgr, 102]
+	InsertIcon := [shell32, 147]
+	ApplyIcon := [shell32, 145]
+	ImportIcon := [shell32, 133]
+	SaveLIcon := [shell32, 79]
+	ContextIcon := [xpsp2res, 13]
+	RemoveIcon := [shell32, 132]
+	DuplicateIcon := [shell32, 55]
+	CopyIcon := [shell32, 135]
+	CutIcon := [cscdll, 11]
+	PasteIcon := [shell32, 111]
+	UndoIcon := [mmcndmgr, 32]
+	RedoIcon := [mmcndmgr, 4]
+	MoveUpIcon := [netcfgx, 1]
+	MoveDnIcon := [netcfgx, 2]
+	EditIcon := [pifmgr, 18]
+	CommentIcon := [shell32, 134]
+	FindIcon := [shell32, 56]
+	ListVarsIcon := [shell32, 76]
+	ExitIcon := [xpsp2res, 1]
+	RecentIcon := [shell32, 21]
+	ProgBIcon := [shell32, 177]
+	IniTVIcon := [shell32, 85]
 	RecentFolder := A_AppData "\..\Recent"
 	LVIcons := {1 : [setupapi, 3]	; Text
 			, 	2 : [setupapi, 2]	; Mouse
@@ -322,7 +341,10 @@ If A_OSVersion in WIN_2003,WIN_XP,WIN_2000
 			, 	28: [shell32, 28]	; Shutdown
 			, 	29: [shell32, 72]	; Process
 			, 	30: [Mmsys, 1]		; Sound
-			, 	31: [regedit, 1]}	; Reg
+			, 	31: [regedit, 1]	; Reg
+			, 	32: [shell32, 21]	; Pause
+			, 	33: [shell32, 110]	; Return
+			, 	34: [xpsp2res, 1]}	; ExitApp
 }
 
 ListCount1 := 0
@@ -799,10 +821,11 @@ Transform, OutputVar, Cmd, Value1, Value2
 Random, OutputVar, Min, Max
 BlockInput, Mode
 UrlDownloadToFile, URL, Filename
+CoordMode, ToolTip|Pixel|Mouse|Caret|Menu, Screen|Window|Client
 SendLevel, Level
-Pause
 Break, LoopNumber
 Continue, LoopNumber
+Pause
 Return
 ExitApp
 )"
@@ -877,6 +900,7 @@ RegExReplace
 RegisterCallback
 Round
 RTrim
+Screenshot
 Sin
 Sqrt
 StrGet

@@ -11,27 +11,6 @@
 		LV_GetText(Com, Index, 9)
 }
 
-IncludeFiles(L, N)
-{
-	global cType21
-	
-	Gui, 1:Default
-	Gui, ListView, InputList%L%
-	Loop, %N%
-	{
-		If (LV_GetNext(A_Index-1, "Checked") <> A_Index)
-			continue
-		LV_GetText(Row_Type, A_Index, 6)
-		If (Row_Type <> cType21)
-			continue
-		LV_GetText(IncFile, A_Index, 7)
-		If (IncFile <> "")
-			IncList .= "`#`Include " IncFile "`n"
-	}
-	Sort, IncList, U
-	return IncList
-}
-
 ShowTooltip()
 {
 	static CurrControl, PrevControl, _TT, TT_A
@@ -133,6 +112,27 @@ HotkeyCtrlHasFocus()
 	{
 		GuiControlGet, ctrl, %GuiA%:FocusV
 		Return, ctrl
+	}
+}
+
+EditCtrlHasFocus()
+{
+	global GuiA := ActiveGui(WinActive("A"))
+	GuiControlGet, ctrl, %GuiA%:FocusV
+	return ctrl
+}
+
+WM_CTLCOLOR(wParam, lParam)
+{
+	global GuiA := ActiveGui(WinActive("A"))
+	Static hBrush
+	BG_COLOR   := 0xFFFFFF
+	IfEqual, hBrush,, SetEnv, hBrush, % DllCall("CreateSolidBrush", UInt, BG_COLOR)
+	GuiControlGet, ctrl, Name, %lParam%
+	If (ctrl = "JoyKey")
+	{
+		DllCall("SetBkColor", UInt,wParam, UInt, BG_COLOR)
+		Return hBrush
 	}
 }
 
@@ -344,7 +344,7 @@ class IfWin
 	}
 }
 
-ActivateHotkeys(Rec="", Play="", Speed="", Stop="")
+ActivateHotkeys(Rec="", Play="", Speed="", Stop="", Joy="")
 {
 	local ActiveKeys
 	
@@ -388,6 +388,22 @@ ActivateHotkeys(Rec="", Play="", Speed="", Stop="")
 		Hotkey, *%AbortKey%, f_AbortKey, Off
 		If ((AbortKey <> "") && (Stop = 1))
 			Hotkey, *%AbortKey%, % (PauseKey) ? "f_PauseKey" : "f_AbortKey", On
+	}
+	
+	If (Joy <> "")
+	{
+		Loop, 16
+		{
+			j := A_Index
+			Loop, 32
+			{
+				#If EditCtrlHasFocus() = "JoyKey"
+				Hotkey, If, EditCtrlHasFocus() = "JoyKey"
+				Hotkey, %j%Joy%A_Index%, CaptureJoyB, % (Joy) ? "On" : "Off"
+				Hotkey, If
+				#If
+			}
+		}
 	}
 	
 	return ActiveKeys
@@ -479,7 +495,7 @@ WinCheck(wParam, lParam, Msg)
 	global
 	If (HaltCheck = 1)
 		return
-	SetTimer, CheckHK, -333
+	SetTimer, WinCheck, -333
 	WPHKC := wParam
 }
 
@@ -495,7 +511,7 @@ ToggleIcon()
 
 ToggleButtonIcon(Button, Icon)
 {
-	ILButton(Button, Icon[1] ":" Icon[2], 16, 16, 4)
+	ILButton(Button, Icon[1] ":" Icon[2], 0)
 	return
 }
 

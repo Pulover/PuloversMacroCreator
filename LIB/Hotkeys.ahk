@@ -110,23 +110,25 @@ F5::GoSub, PrevRefresh
 
 #If Draw && DrawButton = "RButton"
 RButton::GoSub, DrawStart
-RButton Up::GoSub, DrawEnd
+; RButton Up::GoSub, DrawEnd
 
 #If Draw && DrawButton = "LButton"
 LButton::GoSub, DrawStart
-LButton Up::GoSub, DrawEnd
+; LButton Up::GoSub, DrawEnd
 
 #If Draw && DrawButton = "MButton"
 MButton::GoSub, DrawStart
-MButton Up::GoSub, DrawEnd
+; MButton Up::GoSub, DrawEnd
 
 #If Draw && OnEnter
 Enter::GoSub, Restore
 
 #If NoKey
 RButton::
-RButton Up::
+; RButton Up::
 return
+
+#If NoKey
 
 Esc::
 StopIt := 1
@@ -189,6 +191,19 @@ MoveRectangle("w", 1, LineW)
 iX := "", iY := ""
 GoSub, ShowAreaTip
 return
+
+Esc::
+Gui, 20:Cancel
+SetTimer, WatchCursor, Off
+Draw := 0
+WinActivate, ahk_id %CmdWin%
+Exit
+
+#If WinActive("ahk_id " StartTipID)
+
+Left::GoSub, PrevTip
+Right::GoSub, NextTip
+Esc::GoSub, TipClose3
 
 #If
 

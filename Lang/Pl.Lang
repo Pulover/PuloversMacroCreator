@@ -97,6 +97,7 @@
 	h_Lang003 =	&Sprawdzić dostępność aktualizacji...
 	h_Lang004 =	S&prawdź na rozruch
 	h_Lang005 =	&O
+	h_Lang006 =	Po&rady
 		
 ; Tray Menu		
 	y_Lang001 =	Ukryj okno
@@ -376,6 +377,9 @@
 	t_Lang094 =	Name = Value
 	t_Lang095 =	Wpisz 1 zmiennej na linię. Możesz także dodać [rozdziały].
 	t_Lang096 =	Użytkowników Zmienne Globalne
+	t_Lang097 =	Naciśnij przycisk na joysticku
+	t_Lang098 =	Drążek sterowy
+	t_Lang099 =	Przycisk
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Otwarte
@@ -431,8 +435,6 @@
 	(LTrim	
 		Ta funkcja wymaga biblioteki GDI+.
 		Kliknij przycisk OK, aby przejść do strony pobierania.
-		
-		UWAGA: Plik 'Gdip.ahk "musi być w tym samym katalogu z tego skryptu.
 	)	
 	d_Lang041 =	Nazwa zmiennej zawiera niedozwolony znak.
 	d_Lang042 =	
@@ -451,8 +453,6 @@
 	(LTrim	
 		Ta funkcja wymaga funkcja Eval().
 		Kliknij przycisk OK, aby przejść do strony pobierania.
-		
-		UWAGA: Plik 'Eval.ahk "musi być w tym samym katalogu z tego skryptu.
 	)	
 	d_Lang045 =	Proszę wybrać okno programu Internet Explorer!
 	d_Lang046 =	Połączenie powodzeniem!
@@ -498,7 +498,46 @@
 	d_Lang064 =	Obiekt COM w błąd
 	d_Lang065 =	Rząd
 	d_Lang066 =	Swoiście
+	d_Lang067 =	Pokaż porady na start-up.
+	d_Lang068 =	Porady:
+	d_Lang069 =	
+	(LTrim	
+		Potrzebujesz pomocy, znalazłeś błąd lub jakieś sugestie? Wyślij e-mail do autora: <a href="mailto:rodolfoub@gmail.com">rodolfoub@gmail.com</a>
+		To jest wolne oprogramowanie. Jeśli znalazłeś się przydatne uważają <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=rodolfoub`%40gmail`%2ecom&lc=US&item_name=Pulover`%27s`%20Macro`%20Creator&item_number=App`%2ePMC&currency_code=USD&bn=PP`%2dDonationsBF`%3abtn_donateCC_LG`%2egif`%3aNonHosted">w postaci darowizny</a> oraz rozwój wsparcia. Dziękuję.
+	)	
+	d_Lang070 =	Error: Invalid Hotkey Wybrany.
 		
+; Start-up Tips		
+	StartTips =	
+	(LTrim	
+		Makra można tworzyć za pomocą przycisków poleceń w oknie głównym lub za pomocą dyktafonu skopiować swoje działania. Przejdź do Opcje > Ustawienia > Nagrywanie, aby wybrać to, co wejścia zostaną zapisane.
+		Aby korzystać z rejestratora do szybkiego zadania przejdź do Opcje > Ustawienia > Nagrywanie i zaznacz opcję "Wyczyść listę" opcji. Następnie kliknij przycisk Record w głównym oknie i użyć F10, aby usunąć bieżące makro i rozpocząć nową z tym samym skrótu. Możesz także zaznaczyć opcję "Zawsze Aktywny" opcji w oknie głównym, aby zachować zapis i odtwarzanie skrótów aktywne.
+		Aby uzyskać pomoc dla konkretnego polecenia prawym przyciskiem myszy na przycisku polecenia w oknie głównym lub w dowolnym miejscu w oknie polecenia, aby wyświetlić linki do AutoHotkey Pomocy online.
+		Sprawdź "Capture Keys" opcję, aby wprowadzić klucze i kombinacje do makra bezpośrednio z głównego okna.
+		Wprowadź klucze i kombinacje w polu Hotkey na dole i wciśnij przycisk Insert, aby dodać je do wybranych wierszy.
+		Jeśli wiersze nie są wybrane przyciski EDIT zastosowanie do wszystkich wierszy w liście.
+		Można przypisać własne zmienne w zmiennych okna (Wstaw > if / zmienne / funkcje). Aby ich użyć wewnątrz polecenia dołączyć nazwę zmiennej w znakami procentu, np.: `%MyVar`%.
+		Loop licznik na górze przedstawia całkowitą liczbę pętli dla wybranego Makro.
+		Można edytować wiersz przez dwukrotne kliknięcie lub wybierając go i klikając przycisk Edycja na dole.
+		Możesz edytować wiele wybranych wierszy przy użyciu opcji w edycji barze na dole.
+		Wybierz jeden lub więcej wierszy, aby dodać nowe polecenia na nich.
+		Można przenieść wiersze z Kliknij i przeciągnij.
+		Kliknij dwukrotnie ikonę na pasku, aby uaktywnić klawisze skrótu lub zatrzymanie odtwarzania / nagrywania. Kliknij na nim środkowego przycisku podczas odtwarzania lub nagrywania, aby wstrzymać.
+		Można eksportować makr do pracy skryptów AutoHotkey lub samodzielnych plików wykonywalnych z okna eksportu.
+		Aby nagrywać i odtwarzać przy użyciu myszy współrzędne bezwzględne przejdź do Opcje > Ustawienia > Ustawienia domyślne i mysz zestaw współrzędnych ekranu.
+		Można otworzyć, kopiowanie, przenoszenie i usuwanie plików i folderów za pomocą jednego z poleceń w Wstaw > Run / File / String / Inne.
+		Aby nagrywać w dół i w górę stan wszystkich kluczowych przejdź do Opcje > Ustawienia > Nagrywanie i sprawdź "Capture kluczową stan (Down / Up)" opcję.
+		Możesz użyć klawiszy skrótu, aby przyspieszyć lub spowolnić odtwarzanie. Przejdź do Opcje > Ustawienia > Odtwarzanie ustawienia klawiszy i prędkość.
+		Aby dostosować obszar przechwytywania za pomocą "zrzutu ekranu" narzędzie przejdź do Opcje > Ustawienia > Zrzuty ekranu i wybierz "Naciśnij Enter Capture". Po narysowaniu klawiszy sterowania prostokąt zastosowania strzałek, aby przenieść wybór i Shift klawiszy strzałek, aby zmienić jego rozmiar.
+		Szybki wybór: Wybierz dowolny wiersz i kliknij nagłówek kolumny, aby wybrać podobne wiersze na podstawie tekstu z komórki tej kolumny.
+		Run / File / String / Inne. Okno posiada wiele innych przydatnych poleceń, takich jak wyłączanie i UrlDownloadToFile.
+		Użyj funkcji "screenshot" w oknie funkcji (Wstaw > if / zmienne / funkcje), aby zrobić zrzut ekranu z części ekranu. Pierwszy parametr to plik docelowy na ścieżkę i nazwę z rozszerzeniem png. Drugi parametr to współrzędne oddzielone rury na ekranie, np. 100|200|50|100 (X|Y|Szerokość|Wysokość).
+		Kliknij na nagłówek kolumny indeksu, aby włączyć / Off znaki Pomoc i kolory dla pętli i oświadczenia. Dwukrotnie kliknij na nagłówek kolumny działania, aby włączyć / Off Wcięcia dla pętli i oświadczenia.
+		Możesz debugowania makra za pomocą klawiszy skrótu i ręczne opcje odegrania w menu Makro. Można także wyłączyć działania odznaczając je w Makro listy.
+		Aby dokonać Makra działają tylko w określonym oknie przejdź do Makro > context Hotkeys wrażliwej.
+		Możesz ustawić własne zmiennych globalnych, które mają być załadowane na początku i na wywóz. Przejdź do Opcje > Ustawienia > użytkownika zmiennych globalnych, aby je dodać.
+		Możesz uruchomić zaawansowane funkcje, takie jak substr i RegExReplace w oknie funkcji (Wstaw > if / zmienne / funkcje). Albo uruchomić własnych funkcji z zewnętrznych skryptów AutoHotkey.
+	)	
 ; Tooltips		
 	NewB_TT =	Nowy (Ctrl+N)
 	OpenB_TT =	Otwórz (Ctrl+O)
@@ -525,8 +564,10 @@
 	AutoKey_TT =	Backspace, aby usunąć
 	ManKey_TT =	Backspace, aby usunąć
 	AbortKey_TT =	Backspace, aby usunąć
+	JoyKey_TT =	Naciśnij przycisk na joysticku
 	PauseKey_TT =	Wstrzymuje wykonywanie zamiast zatrzymać
 	Win1_TT =	Dodaj klucz Windows jako modyfikator
+	JoyHK_TT =	Drążek sterowy
 	ReptC_TT =	0 = nieskończony
 	TabPlus_TT =	Dodaj Macro (Ctrl+T)
 	TabClose_TT =	Zamknij makro (Ctrl+W)

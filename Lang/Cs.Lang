@@ -97,6 +97,7 @@
 	h_Lang003 =	&Zkontrolovat aktualizace...
 	h_Lang004 =	&Kontrola při rozběhu
 	h_Lang005 =	&O
+	h_Lang006 =	&Tipy
 		
 ; Tray Menu		
 	y_Lang001 =	Skrýt okno
@@ -376,6 +377,9 @@
 	t_Lang094 =	Název = hodnota
 	t_Lang095 =	Zadejte 1 proměnnou na řádek. Můžete také přidat [sekce].
 	t_Lang096 =	Uživatel Globální Proměnné
+	t_Lang097 =	Stiskněte tlačítko na joysticku
+	t_Lang098 =	Joystick
+	t_Lang099 =	Tlačítko
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Otevřít
@@ -431,8 +435,6 @@
 	(LTrim	
 		Tato funkce vyžaduje rozhraní GDI+ knihovny.
 		Klepnutím na tlačítko OK přejděte na stránku pro stažení.
-		
-		Poznámka: Soubor 'Gdip.ahk "musí být ve stejném adresáři tohoto skriptu.
 	)	
 	d_Lang041 =	Název proměnné obsahuje neplatný znak.
 	d_Lang042 =	
@@ -451,8 +453,6 @@
 	(LTrim	
 		Tato funkce vyžaduje funkce Eval().
 		Klepnutím na tlačítko OK přejděte na stránku pro stažení.
-		
-		Poznámka: Soubor 'Eval.ahk "musí být ve stejném adresáři tohoto skriptu.
 	)	
 	d_Lang045 =	Prosím vyberte okno prohlížeče Internet Explorer!
 	d_Lang046 =	Připojení úspěšné!
@@ -498,7 +498,46 @@
 	d_Lang064 =	COM objekt chyba
 	d_Lang065 =	Řádek
 	d_Lang066 =	Konkrétně
+	d_Lang067 =	Zobrazit tipy při spuštění.
+	d_Lang068 =	Tipy:
+	d_Lang069 =	
+	(LTrim	
+		Potřebujete pomoc, našli chybu nebo máte nějaký návrh? Pošlete e-mail na autora: <a href="mailto:rodolfoub@gmail.com">rodolfoub@gmail.com</a>
+		Jedná se o svobodný software. Pokud jste zjistil, že je užitečné uvažovat <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=rodolfoub`%40gmail`%2ecom&lc=US&item_name=Pulover`%27s`%20Macro`%20Creator&item_number=App`%2ePMC&currency_code=USD&bn=PP`%2dDonationsBF`%3abtn_donateCC_LG`%2egif`%3aNonHosted">poskytnutí daru</a> a podpora rozvoje. Děkuju.
+	)	
+	d_Lang070 =	Chyba: Neplatný Hotkey vybrané.
 		
+; Start-up Tips		
+	StartTips =	
+	(LTrim	
+		Můžete vytvářet makra pomocí příkazových tlačítek v hlavním okně, nebo pomocí rekordéru kopírovat své akce. Přejít na Možnosti > Nastavení > Nahrávání na vstupy vybrat, co budou zaznamenány.
+		Chcete-li použít rekordér pro rychlé úkoly, jít do Volby > Nastavení > Nahrávání a zaškrtněte "Vymazat seznam" možnost volby. Poté klikněte na tlačítko Record v hlavním okně a pomocí F10 pro vymazání aktuálního makra a začít novou se stejnou klávesovou zkratku. Můžete také zaškrtnout volbu "vždy aktivní" v hlavním okně udržet nahrávání a přehrávání klávesy aktivní.
+		Chcete-li získat pomoc pro určitý příkaz pravým tlačítkem myši na příkazové tlačítko v hlavním okně, nebo kdekoli v okně příkazového řádku pro zobrazení odkazů na AutoHotkey nápovědě.
+		Podívejte se na "Capture" Keys možnost zadat klíče a kombinace do makra přímo z hlavního okna.
+		Enter a jejich kombinace v poli Hotkey dole a stiskněte tlačítko Vložit a přidat je do vybraných řádků.
+		Pokud žádné položky jsou označeny editační tlačítka platí pro všechny řádky v seznamu.
+		Můžete přiřadit své vlastní proměnné v proměnné windows (Vložit > if / proměnné / funkce). Chcete-li používat je uvnitř příkazy název proměnné uzavřete v procentech znaky, např.: `%MyVar`%.
+		Loop počítadlo v horní části stanovuje celkový počet smyček pro vybrané makro.
+		Můžete upravit řádek poklepáním, nebo jeho výběrem a klepnutím na tlačítko Upravit tlačítka v dolní části.
+		Zde můžete editovat více vybraných řádků pomocí volby v editačním řádku v dolní části.
+		Vyberte jeden nebo více řádků, které chcete přidat nové příkazy nad nimi.
+		Můžete přesunout řádky s click-and-drag.
+		Poklepejte na ikonu v oznamovací oblasti na Klávesovou zkratku aktivujete nebo zastavit přehrávání / nahrávání. Klikněte na něj prostředním tlačítkem během přehrávání nebo nahrávání pozastavíte.
+		Můžete exportovat makra pracovních AutoHotKey skripty nebo samostatné spustitelné z exportu okna.
+		Chcete-li nahrávat a přehrávat myši pomocí absolutních souřadnic přejděte na Možnosti > Nastavení > Výchozí nastavení a myš polohu na obrazovce.
+		Můžete otevřít, kopírovat, přesouvat či mazat soubory a složky pomocí jednoho z příkazů Vložit > Run / Soubor / String / Misc.
+		Chcete-li nahrávat nahoru a dolů stav po každém stisknutí Jdi na Volby > Nastavení > Nahrávání a zkontrolujte "Capture Key State (dolů / nahoru)" možnost volby.
+		Můžete použít klávesové zkratky pro urychlení nebo zpomalení přehrávání. Přejít na Možnosti > Nastavení > Přehrát na nastavení klíče a rychlost.
+		Chcete-li nastavit snímání prostoru pomocí "Vytvořit snímek" nástroj jděte na Možnosti > Nastavení > Screenshoty a zvolte "Stiskněte Enter pro snímání". Po nakreslení obdélníku pomocí tlačítek ovládacího šipkami přesuňte výběr a Shift kláves se šipkami změňte velikost.
+		Rychlý výběr: Vyberte libovolný řádek a klikněte na záhlaví sloupce vyberte podobné řádky na základě textu z buňky tohoto sloupce.
+		Run / Soubor / String / Misc. Okno má mnoho dalších užitečných příkazů, jako je vypnutí a UrlDownloadToFile.
+		Použijte "Screenshot" funkce ve funkčním okně (Vložit > if / proměnné / funkce), aby se snímek části obrazovky. První parametr je cílový soubor je cesta a název s příponou PNG. Druhý parametr jsou potrubí oddělené polohu na obrazovce, např. 100|200|50|100 (X|Y|Šířka|Výška).
+		Kliknutím na záhlaví sloupce index pro zapnutí / vypnutí nápovědy známky a barvy pro smyčky a příkazy. Double-klikněte na záhlaví sloupce Akce pro zapnutí / vypnutí odsazení pro smyčky a příkazy.
+		Můžete ladit makra pomocí klávesové zkratky Ruční a možností přehrávání v nabídce makro. Můžete také vypnout odškrtnutím akce je v seznamu Makro.
+		Chcete-li, aby vaše makra fungují pouze na určitém okně přejděte na příkaz Makro > kontextovou klávesovým zkratkám.
+		Můžete si nastavit vlastní Globální proměnné má být naloženo na spuštění a které má být vyvezeno. Přejít na Možnosti > Nastavení > Uživatelská globální proměnné přidat.
+		Můžete spustit pokročilé funkce jako substr a RegExReplace z funkcí okna (Vložit > if / proměnné / funkce). Nebo spustit vlastní funkce z externích AutoHotKey skriptů.
+	)	
 ; Tooltips		
 	NewB_TT =	New (Ctrl+N)
 	OpenB_TT =	Open (Ctrl+O)
@@ -525,8 +564,10 @@
 	AutoKey_TT =	Backspace zrušte
 	ManKey_TT =	Backspace zrušte
 	AbortKey_TT =	Backspace zrušte
+	JoyKey_TT =	Stiskněte tlačítko na joysticku
 	PauseKey_TT =	Pozastaví výkon místo zastavení
 	Win1_TT =	Přidejte klávesu Windows jako modifikátor
+	JoyHK_TT =	Joystick
 	ReptC_TT =	0 = nekonečno
 	TabPlus_TT =	Přidat makro (Ctrl+T)
 	TabClose_TT =	Zavřít Makro (Ctrl+W)

@@ -97,6 +97,7 @@
 	h_Lang003 =	&Sök efter uppdateringar...
 	h_Lang004 =	&Kontrollera vid uppstart
 	h_Lang005 =	&Om
+	h_Lang006 =	&Tips
 		
 ; Tray Menu		
 	y_Lang001 =	Dölj fönster
@@ -376,6 +377,9 @@
 	t_Lang094 =	Namn = Värde
 	t_Lang095 =	Skriv en variabel per linje. Du kan också lägga till [avsnitt].
 	t_Lang096 =	Användaren Globala Variabler
+	t_Lang097 =	Tryck på en knapp på joysticken
+	t_Lang098 =	Joystick
+	t_Lang099 =	Knapp
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Öppet
@@ -431,8 +435,6 @@
 	(LTrim	
 		Den här funktionen kräver GDI+ bibliotek.
 		Klicka på OK för att gå att ladda ner sidan.
-		
-		Obs: Filen "Gdip.ahk" måste vara i samma katalog för detta skriptet.
 	)	
 	d_Lang041 =	Variabelnamnet innehåller ett ogiltigt tecken.
 	d_Lang042 =	
@@ -451,8 +453,6 @@
 	(LTrim	
 		Den här funktionen kräver att funktionen Eval().
 		Klicka på OK för att gå att ladda ner sidan.
-		
-		Obs: Filen "Eval.ahk" måste vara i samma katalog för detta skriptet.
 	)	
 	d_Lang045 =	Välj ett fönster i Internet Explorer!
 	d_Lang046 =	Anslutning lyckades!
@@ -498,7 +498,46 @@
 	d_Lang064 =	COM-objekt fel i
 	d_Lang065 =	Rad
 	d_Lang066 =	Specifikt
+	d_Lang067 =	Visa tips om start-up.
+	d_Lang068 =	Tips:
+	d_Lang069 =	
+	(LTrim	
+		Behöver hjälp, hittade en bugg eller har ett förslag? Skicka ett mail till författaren: <a href="mailto:rodolfoub@gmail.com">rodolfoub@gmail.com</a>
+		Detta är en gratis programvara. Om du fann det användbart överväga <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=rodolfoub`%40gmail`%2ecom&lc=US&item_name=Pulover`%27s`%20Macro`%20Creator&item_number=App`%2ePMC&currency_code=USD&bn=PP`%2dDonationsBF`%3abtn_donateCC_LG`%2egif`%3aNonHosted">gör en donation</a> och stödja utvecklingen. Tack.
+	)	
+	d_Lang070 =	Fel: Ogiltig Hotkey Selected.
 		
+; Start-up Tips		
+	StartTips =	
+	(LTrim	
+		Voit luoda makroja käyttäen Command painikkeet pääikkunassa tai käyttämällä Recorder kopioida toimia. Valitse Valinnat > Asetukset > Tallennus valita mitä panoksia tallennetaan.
+		Voit käyttää tallenninta nopeasti tehtäviä mene Valinnat > Asetukset > Tallennus ja tarkista "Clear List" vaihtoehto. Napsauta sitten Tallenna-painiketta pääikkunassa ja käyttää F10 tyhjentää nykyisen Macro ja aloittaa uuden samalla pikanäppäin. Du kan också kolla "alltid aktiv" i huvudfönstret för att hålla Inspelning och uppspelning snabbtangenter aktiv.
+		Saadaksesi apua tietyn komennon hiiren kakkospainikkeella komentopainikkeella pääikkunassa tai missä tahansa komento ikkunassa näyttää linkkejä AutoHotkey ohjeessa.
+		Tarkista "Capture Keys" mahdollisuus tulla Avainten ja yhdistelmien teidän Macro suoraan pääikkunassa.
+		Ange nycklar och kombinationer i Hotkey rutan längst ner och tryck på knappen Infoga för att lägga dem till de utvalda raderna.
+		Jos rivejä on valittu edit painikkeet koskevat kaikkia rivejä luettelon.
+		Voit määrittää oman muuttujia muuttujat ikkunat (Insert > Jos Lausunnot / muuttujat / toiminnot). Käyttää niitä sisällä komentoja liittää muuttujan nimeä prosenttia merkkejä, esim.: `%MyVar`%.
+		Loop counter yläosassa asettaa kokonaismäärä silmukoita valitun Macro.
+		Voit muokata rivi kaksoisnapsauttamalla sitä tai valitsemalla sen ja napsauttamalla Muokkaa painikkeita.
+		Voit muokata useita valitut rivit käyttämällä vaihtoehtoja muokata alareunassa.
+		Valitse yksi tai useampi rivi lisää uusia komentoja niiden päälle.
+		Voit siirtyä krs click-ja-vedä....
+		Dubbelklicka på ikonen för att aktivera snabbtangenter eller stoppa uppspelning / inspelning. Klicka på den med den mellersta knappen under uppspelning eller inspelning för att pausa.
+		Du kan exportera dina makron till arbets AutoHotkey skript eller fristående körbara från fönstret Exportera.
+		För att spela in och spela upp musen med absoluta koordinater gå till Alternativ > Inställningar > Grundinställningar och set musens koordinater till skärmen.
+		Du kan öppna, kopiera, flytta eller radera filer och mappar med ett kommando i Infoga > Run / Arkiv / String / Misc.
+		Om du vill spela Down och Up tillstånd varje nyckel gå till Alternativ > Inställningar > Inspelning och kolla "Fånga viktiga statliga (Down / Up)" alternativet.
+		Du kan använda snabbtangenter för att påskynda eller fördröja Uppspelning. Gå till Alternativ > Inställningar > Uppspelning ställa nycklar och hastighet.
+		För att justera fånga område med "gör skärmdump" verktyg gå till Alternativ > Inställningar > Skärmbilder och välj "Tryck Enter för att fånga". Efter dra rektangeln Använd knapparna Kontroll pil för att flytta markeringen och Skift piltangenterna för att ändra storlek på den.
+		Snabbval: Välj en rad och klicka på en kolumnrubrik för att välja liknande rader baserat på cellens text från den kolumnen.
+		The Run / Arkiv / String / Misc. fönster har många andra användbara kommandon såsom avstängning och UrlDownloadToFile.
+		Använd "Skärmdump"-funktionen i funktionerna fönstret (Infoga > Om Uttalanden / variabler / funktioner) för att göra en skärmdump av en del av skärmen. Första parametern är den destination filens sökväg och namn med en png förlängning. Andra parametern är pipe-separerade koordinater på skärmen, t.ex. 100|200|50|100 (X|Y|Bredd|Höjd).
+		Klicka på Index kolumnrubriken för att slå på / stänga Hjälp, mönster och färger för loopar och uttalanden. Dubbel-klicka på Åtgärd kolumnrubriken för att slå på / av Indrag för Loops och uttalanden.
+		Du kan felsöka dina makron med hjälp av handboken Hotkey och alternativen Play i Makromenyknappen. Du kan också inaktivera åtgärder genom att avmarkera dem i Macro listan.
+		För att göra dina makron fungerar bara på ett visst fönster gå till Macro > sammanhangsberoende snabbtangenter.
+		Du kan ställa dina egna globala variabler som skall laddas vid start och som ska exporteras. Gå till Alternativ > Inställningar > Användarinställningar globala variabler för att lägga till dem.
+		Du kan köra avancerade funktioner såsom SUBSTR och RegExReplace från funktionsfönstret (Infoga > Om Uttalanden / variabler / funktioner). Eller köra egna funktioner från externa AutoHotkey skript.
+	)	
 ; Tooltips		
 	NewB_TT =	Ny (Ctrl+N)
 	OpenB_TT =	Öppna (Ctrl+O)
@@ -525,8 +564,10 @@
 	AutoKey_TT =	Backsteg för att radera
 	ManKey_TT =	Backsteg för att radera
 	AbortKey_TT =	Backsteg för att radera
+	JoyKey_TT =	Tryck på en knapp på joysticken
 	PauseKey_TT =	Pausar exekvering stället för att stoppa
 	Win1_TT =	Lägg till Windows-tangenten som modifierare
+	JoyHK_TT =	Joystick
 	ReptC_TT =	0 = oändlig
 	TabPlus_TT =	Lägg Makro (Ctrl+T)
 	TabClose_TT =	Stäng Makro (Ctrl+W)

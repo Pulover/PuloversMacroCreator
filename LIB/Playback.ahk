@@ -390,7 +390,7 @@
 					GoSub, pb_%Type%
 					If Type in Sleep,KeyWait,MsgBox
 						continue
-					If ((TakeAction = "Break") || ((Target = "Exit") && (SearchResult = 0)))
+					If ((TakeAction = "Break") || ((Target = "Break") && (SearchResult = 0)))
 					{
 						TakeAction := 0
 						break
@@ -409,12 +409,17 @@
 	{
 		CoordMode, Mouse, Screen
 		Click, %CursorX%, %CursorY%, 0
-		CoordMode, Mouse, %CoordMouse%
 	}
+	CoordMode, Mouse, %CoordMouse%
 	Progress, Off
+	SplashTextOff
+	SplashImage, Off
 	CurrentRange := ""
-	Try Menu, Tray, Icon, %DefaultIcon%, 1
-	Menu, Tray, Default, %w_Lang005%
+	If !(aHK_Timer)
+	{
+		Try Menu, Tray, Icon, %DefaultIcon%, 1
+		Menu, Tray, Default, %w_Lang005%
+	}
 	If (CloseAfterPlay)
 		GoSub, Exit
 }
@@ -436,7 +441,8 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC)
 			mListRow := A_Index + 1
 			If StopIt
 				break
-			SkipIt := 0
+			If (SkipIt > 0)
+				SkipIt--
 			If (lcX > 0)
 				mLoopIndex := A_Index + 1, LoopIndex := A_Index + 1
 			Loop, %lCount%
@@ -736,7 +742,7 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC)
 					GoSub, pb_%Type%
 					If Type in Sleep,KeyWait
 						continue
-					If ((TakeAction = "Break") || ((Target = "Exit") && (SearchResult = 0)))
+					If ((TakeAction = "Break") || ((Target = "Break") && (SearchResult = 0)))
 					{
 						TakeAction := 0
 						break
@@ -744,6 +750,8 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC)
 					GoSub, pb_Sleep
 				}
 			}
+			If (StopIt || BreakIt)
+				break
 		}
 		If (StopIt || BreakIt || (lcX > 0))
 			break

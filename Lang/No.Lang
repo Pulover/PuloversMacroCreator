@@ -97,6 +97,7 @@
 	h_Lang003 =	&Se etter oppdateringer...
 	h_Lang004 =	S&jekk ved oppstart
 	h_Lang005 =	&Om
+	h_Lang006 =	&tips
 		
 ; Tray Menu		
 	y_Lang001 =	Skjul vindu
@@ -376,6 +377,9 @@
 	t_Lang094 =	Navn = verdi
 	t_Lang095 =	Skriv inn en variabel per linje. Du kan også legge til [Seksjoner].
 	t_Lang096 =	Bruker Globale Variabler
+	t_Lang097 =	Trykk på en knapp på joysticken
+	t_Lang098 =	Joystick
+	t_Lang099 =	Button
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Åpent
@@ -431,8 +435,6 @@
 	(LTrim	
 		Denne funksjonen krever GDI+ bibliotek.
 		Klikk OK for å gå til nedlastingssiden.
-		
-		Merk: Filen 'Gdip.ahk' må være i samme katalog av dette skriptet.
 	)	
 	d_Lang041 =	Variabelnavnet inneholder et ugyldig tegn.
 	d_Lang042 =	
@@ -451,8 +453,6 @@
 	(LTrim	
 		Denne funksjonen krever Eval()-funksjonen.
 		Klikk OK for å gå til nedlastingssiden.
-		
-		Merk: Filen 'Eval.ahk' må være i samme katalog av dette skriptet.
 	)	
 	d_Lang045 =	Vennligst velg en Internet Explorer-vinduet!
 	d_Lang046 =	Tilkobling vellykket!
@@ -498,7 +498,46 @@
 	d_Lang064 =	COM objekt feil i
 	d_Lang065 =	Rad
 	d_Lang066 =	Spesielt
+	d_Lang067 =	Vis tips om oppstart.
+	d_Lang068 =	tips:
+	d_Lang069 =	
+	(LTrim	
+		Trenger du hjelp, fant en bug eller har du et forslag? Send en e-post til forfatteren: <a href="mailto:rodolfoub@gmail.com">rodolfoub@gmail.com</a>
+		Dette er en gratis programvare. Hvis du fant det nyttig vurdere <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=rodolfoub`%40gmail`%2ecom&lc=US&item_name=Pulover`%27s`%20Macro`%20Creator&item_number=App`%2ePMC&currency_code=USD&bn=PP`%2dDonationsBF`%3abtn_donateCC_LG`%2egif`%3aNonHosted">gjør en donasjon</a> og støtte utvikling. Takk.
+	)	
+	d_Lang070 =	Feil: Ugyldig hurtigtast Selected.
 		
+; Start-up Tips		
+	StartTips =	
+	(LTrim	
+		Du kan lage makroer ved hjelp av kommandoen Knapper i hovedvinduet eller bruke opptaker til å kopiere dine handlinger. Gå til Valg > Innstillinger > Opptak til å velge hvilke innganger vil bli registrert.
+		For å bruke opptakeren for raske oppgaver gå til Valg > Innstillinger > Recording og sjekke "Clear List" alternativet. Deretter klikker du på Record-knappen i hovedvinduet og bruke F10 for å slette gjeldende Makro og starte en ny en med samme hurtigtast. Du kan også sjekke "Alltid aktiv" i hovedvinduet for å holde Opptak og avspilling hurtigtaster aktiv.
+		For å få hjelp til en bestemt kommando høyre-klikk på et kommando-knappen i hovedvinduet eller hvor som helst i et kommandovindu for å vise lenker til AutoHotkey elektroniske hjelpen.
+		Sjekk "Capture Keys" for å gå inn nøkler og kombinasjoner for å Macro din direkte fra hovedvinduet.
+		Skriv inn nøkler og kombinasjoner i Hurtigtast-boksen nederst og trykk på Insert-knappen for å legge dem til utvalgte rader.
+		Hvis ingen punkter valgt edit knapper gjelder for alle radene i listen.
+		Du kan tilordne dine egne variabler i Variabler vinduer (Insert > Hvis Uttalelser / variabler / funksjoner). Å bruke dem inne kommandoer vedlegge variabelnavnet i prosent skilt, f.eks: `%MyVar`%.
+		Den "loop"-telleren øverst angir det totale antall løkker for den valgte makro.
+		Du kan redigere en rad ved å dobbeltklikke på det eller ved å velge den og klikke på Rediger-knappene nederst.
+		Du kan redigere flere valgte radene med alternativene i redigeringsboksen nederst.
+		Velg én eller flere rader å legge til nye kommandoer på toppen av dem.
+		Du kan flytte rader med klikk-og-dra.
+		Dobbeltklikk på ikonet for å aktivere hurtigtaster eller stoppe avspilling / opptak. Klikk på den med den midterste knappen under avspilling eller opptak til pause.
+		Du kan eksportere makroer arbeider autohotkey skript eller frittstående kjørbare fra Export-vinduet.
+		Å spille inn og spille av mus ved hjelp av absolutte koordinater gå til Valg > Innstillinger > Standarder og sett Mouse Koordinater til skjerm.
+		Du kan åpne, kopiere, flytte og slette filer og mapper ved hjelp av en av kommandoene i Insert > Run / File / String / diverse.
+		For å ta opp ned og opp status for hver tast gå til Valg > Innstillinger > Recording og sjekke "Capture sentrale stat (ned / opp)" alternativet.
+		Du kan bruke hurtigtaster for å fremskynde eller forsinke avspilling. Gå til Valg > Innstillinger > Avspilling å sette nøkler og hastighet.
+		Slik justerer fange området ved hjelp av "Make Skjermbilde" verktøy gå til Valg > Innstillinger > skjermbilder og velg "Trykk Enter for å Capture". Når du har tegnet rektangelet bruke kontroll piltastene til å flytte og Shift piltastene for å endre størrelsen.
+		Quick Select: Velg en rad og klikk på en kolonneoverskrift for å velge tilsvarende rader basert på cellens tekst fra den kolonnen.
+		The Run / File / String / diverse. vindu har mange andre nyttige kommandoer som Shutdown og UrlDownloadToFile.
+		Bruk "Skjermbilde"-funksjonen i funksjoner vinduet (Sett inn > Hvis Uttalelser / variabler / funksjoner) for å lage en skjermdump av en del av skjermen. Første parameter er målet filens bane og navn med en png forlengelse. Andre parameter er de rør-separerte koordinater i skjermen, f.eks 100|200|50|100 (X|Y|Width|Høyde).
+		Klikk på Index Kolonneoverskrift for å slå av / på Hjelp Marks og Farger for Loops og uttalelser. Dobbeltklikk på Handling Kolonneoverskrift for å slå av / på innrykk for Loops og uttalelser.
+		Du kan feilsøke makroer ved hjelp av manuell hurtigtast og stykket alternativer i Makro-menyen. Du kan også deaktivere handlinger ved å fjerne dem i Makro-listen.
+		For å gjøre dine makroer fungerer bare på en bestemt vindu går til Makro > kontekstavhengig hurtigtaster.
+		Du kan sette dine egne globale variabler som skal lastes på oppstart og som skal eksporteres. Gå til Valg > Innstillinger > Bruker globale variabler å legge dem.
+		Du kan kjøre avanserte funksjoner som substr og RegExReplace fra Funksjoner vinduet (Sett inn > Hvis Uttalelser / variabler / funksjoner). Eller kjøre dine egne funksjoner fra eksterne autohotkey skript.
+	)	
 ; Tooltips		
 	NewB_TT =	New (Ctrl+N)
 	OpenB_TT =	Open (Ctrl+O)
@@ -525,8 +564,10 @@
 	AutoKey_TT =	Tilbaketasten for å fjerne
 	ManKey_TT =	Tilbaketasten for å fjerne
 	AbortKey_TT =	Tilbaketasten for å fjerne
+	JoyKey_TT =	Trykk på en knapp på joysticken
 	PauseKey_TT =	Pauser gjennomføring stedet for å stoppe
 	Win1_TT =	Legge til Windows-tasten som modifikator
+	JoyHK_TT =	Joystick
 	ReptC_TT =	0 = uendelig
 	TabPlus_TT =	Legg Makro (Ctrl+T)
 	TabClose_TT =	Lukk Makro (Ctrl+W)

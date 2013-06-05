@@ -2,7 +2,7 @@
 
 **Note**: Right-click on a Button in the Main Window or anywhere on a Command Window to display links to AHK online help.
 
-* [Syntax differences from AutoHotkey](#syntax-differences-from-autohotkey)
+* [Syntax differences from AutoHotkey.](#syntax-differences-from-autohotkey.)
 * [How do I start Recording / Playback?](#how-do-i-start-recording-/-playback)
 * [Can I make playback go faster/slower?](#can-i-make-playback-go-faster/slower)
 * [Can I execute a custom action based on Pixel/Image search result?](#can-i-execute-a-custom-action-based-on-pixel/image-search-result)
@@ -27,7 +27,7 @@
 * [I can run the program but Macros won't work / cannot take screenshots.](#i-can-run-the-program-but-macros-wont-work-/-cannot-take-screenshots.)
 * [I'm getting "Error: Invalid hotkey." when I try to launch the program.](#im-getting-"error:-invalid-hotkey."-when-i-try-to-launch-the-program.)
 
-### Syntax differences from AutoHotkey
+### Syntax differences from AutoHotkey.
 
 * Since Playback uses a function to dereference variables they should always be enclosed in percent signs even for functions or assignments, execpt when the command parameter is OuputVar or InputVar. The syntax will be corrected for the exported script.  
 * It's not necessary to use "quotes" for string parameters in functions or COM commands except for blank parameters.  
@@ -141,13 +141,13 @@ There is also an an internal function that uses GDI+ functions to make a screens
 
 * Go to Functions and type any name for the OutputVar and type **Screenshot** in the *Function Name*.
 * The first parameter is the name of the file which can be an absolute or relative path and a file with a png extension. You can use variables to have them dynamically named, e.g.: Screen_%A_Now%.png
-* The second parameter is the pipe separated coordinates in the screen, e.g. 100|200|50|100 (where the 1st is the X position, 2nd is Y position, 3rd is width and 4th is the height, all in pixels).
+* The second parameter are the pipe-separated coordinates in the screen, e.g. 100|200|50|100 (where the 1st is the X position, 2nd is Y position, 3rd is width and 4th is the height, all in pixels).
 
 Example of PMC file:
 
->  1|Screenshot|sc := %A_MyDocuments%\Screen_%A_Now%.png, 100,200,50,100|1|0|Variable||||
+>  1|Screenshot|_null := %A_MyDocuments%\Screen_%A_Now%.png, 100¢200¢50¢100|1|0|Variable||||
 
-The , symbol replaces the | in .pmc files and is converted when loaded.  
+The ¢ symbol replaces the | in .pmc files and is converted when loaded.  
 
 ### When I take a screenshot of a window area it cuts part of the boarders.
 

@@ -8,7 +8,7 @@ Author: Pulover \[Rodolfo U. Batista\]
 [rodolfoub@gmail.com](mailto:rodolfoub@gmail.com)  
 Copyright © 2012-2013 Rodolfo U. Batista  
 
-Version: 3.7.2  
+Version: 3.7.3  
 Release Date: May, 2013  
 AutoHotkey Version: 1.1.10.01  
 
@@ -30,6 +30,15 @@ T800 for [Html Help utils](http://www.autohotkey.com/board/topic/17984-html-help
 
 
 # Change Log
+
+## Version 3.7.3
+
+* Added support for Joystick Hotkeys in Playback.
+* Added *Tips on Start-up*.
+* Fixed bug with *Break* command.
+* Fixed bug with *Continue, LoopNumber* command.
+* Fixed bug with *String* commands with *A_Loop* variables as InputVar.
+* Fixed commas not being escaped in exported *MsgBox* command.
 
 ## Version 3.7.2
 
