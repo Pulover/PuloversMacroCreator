@@ -544,6 +544,7 @@ Gui, Add, GroupBox, Section W355 H65 ys-9 xm+530
 Gui, Add, Text, -Wrap W25 H22 ys+15 xs+10 vAutoT, %w_Lang006%:
 Gui, Add, Text, -Wrap W25 H22 y+3 vManT, %w_Lang007%:
 Gui, Add, Hotkey, vAutoKey gSaveData W150 ys+13 xp+30
+Gui, Add, Edit, vJoyKeyOn yp xp WP HP Disabled Hidden
 Gui, Add, Hotkey, vManKey gWaitKeys W55 y+5 Limit190, % o_ManKey[1]
 Gui, Add, Text, -Wrap W25 H22 yp+3 xp+65 vAbortT, %w_Lang008%:
 Gui, Add, Hotkey,  yp-3 xp+30 vAbortKey W55, %AbortKey%
@@ -8052,7 +8053,7 @@ return
 SetJoyButton:
 GuiControl,, JoyHK, 0
 ActivateHotkeys("", "", "", "", 1)
-Jp := ""
+Jp := "1Joy" A_List
 Gui, 31:+owner1 +ToolWindow +HwndCmdWin
 Gui, 1:Default
 Gui, 1:+Disabled
@@ -8070,8 +8071,8 @@ If (Jp = "")
 Gui, 1:-Disabled
 Gui, 31:Destroy
 Gui, 1:Default
-GoSub, SetJoyHK
 o_AutoKey[A_List] := Jp
+GoSub, SetJoyHK
 GoSub, SaveData
 ActivateHotkeys("", "", "", "", 0)
 return
@@ -8082,8 +8083,7 @@ JoyCancel:
 Gui, 1:-Disabled
 Gui, 31:Destroy
 Gui, 1:Default
-GuiControl, Enable, AutoKey
-GuiControl, Enable, Win1
+GoSub, SetNoJoy
 ActivateHotkeys("", "", "", "", 0)
 return
 
@@ -8096,12 +8096,15 @@ SetJoyHK:
 GuiControl,, JoyHK, 1
 GuiControl,, Win1, 0
 GuiControl, Disable, AutoKey
+GuiControl, Show, JoyKeyOn
+GuiControl,, JoyKeyOn, % o_AutoKey[A_List]
 GuiControl, Disable, Win1
 return
 
 SetNoJoy:
 GuiControl,, JoyHK, 0
 GuiControl, Enable, AutoKey
+GuiControl, Hide, JoyKeyOn
 GuiControl, Enable, Win1
 return
 
