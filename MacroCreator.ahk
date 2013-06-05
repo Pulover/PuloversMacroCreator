@@ -7887,7 +7887,7 @@ Gui, 15:Destroy
 return
 
 MultiEdit:
-Gui, 6:+owner1 +ToolWindow
+Gui, 6:+owner1 +ToolWindow +hwndCmdWin
 Gui, 1:+Disabled
 Gui, 6:Font, s7
 Gui, 6:Add, GroupBox, vSGroup Section xm W280 H120
