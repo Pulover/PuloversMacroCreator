@@ -65,8 +65,8 @@
 				Gui, ListView, InputList%TabCount%
 				ListCount%TabCount% := LV_GetCount()
 				Opt := PmcCode[A_Index].Opt
-				o_AutoKey[TabCount] := (Opt[2] <> "") ? Opt[2] : o_AutoKey[TabCount]
-				o_ManKey[TabCount] := (Opt[3] <> "") ? Opt[3] : o_ManKey[TabCount]
+				o_AutoKey[TabCount] := (Opt[2] <> "") ? Opt[2] : ""
+				o_ManKey[TabCount] := (Opt[3] <> "") ? Opt[3] : ""
 				o_TimesG[TabCount] := (Opt[4] <> "") ? Opt[4] : 1
 				CoordMouse := (Opt[5] <> "") ? Opt[5] : CoordMouse
 				HistoryMacro%TabCount% := new RowsData()

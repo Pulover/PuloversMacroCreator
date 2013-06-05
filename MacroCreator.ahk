@@ -9240,13 +9240,27 @@ StringReplace, Step, Step, `%A_Space`%, ⱥ, All
 CheckVars("Step|TimesX|DelayX|Target|Window", This_Point)
 StringReplace, Step, Step, ```,, ¢, All
 StringReplace, Step, Step, ``n, `n, All
+StringReplace, Step, Step, ``r, `r, All
 StringReplace, Step, Step, ``t, `t, All
 Loop, Parse, Step, `,, %A_Space%
 {
 	LoopField := A_LoopField
-	CheckVars("LoopField")
-	Par%A_Index% := LoopField
+	CheckVars("LoopField", This_Point)
+	If ((InStr(Type, "String") = 1) || (Type = SplitPath))
+	{
+		If RegExMatch(LoopField, "i)^A_Loop\w+$", lMatch)
+		{
+			I := DerefVars(LoopIndex), L := SubStr(lMatch, 3)
+			This_Par := o_Loop%This_Point%[I][L]
+			Par%A_Index% := "This_Par"
+		}
+		Else
+			Par%A_Index% := LoopField
+	}
+	Else
+		Par%A_Index% := LoopField
 	StringReplace, Par%A_Index%, Par%A_Index%, ``n, `n, All
+	StringReplace, Par%A_Index%, Par%A_Index%, ``r, `r, All
 	StringReplace, Par%A_Index%,  Par%A_Index%, ¢, `,, All
 	StringReplace, Par%A_Index%,  Par%A_Index%, ⱥ, %A_Space%, All
 }

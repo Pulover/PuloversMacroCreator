@@ -542,6 +542,27 @@ Script_Header()
 	return Header
 }
 
+IncludeFiles(L, N)
+{
+	global cType21
+	
+	Gui, 1:Default
+	Gui, ListView, InputList%L%
+	Loop, %N%
+	{
+		If (LV_GetNext(A_Index-1, "Checked") <> A_Index)
+			continue
+		LV_GetText(Row_Type, A_Index, 6)
+		If (Row_Type <> cType21)
+			continue
+		LV_GetText(IncFile, A_Index, 7)
+		If ((IncFile <> "") && (IncFile <> "Expression"))
+			IncList .= "`#`Include " IncFile "`n"
+	}
+	Sort, IncList, U
+	return IncList
+}
+
 CheckExp(String)
 {
 	If (String = "")
@@ -648,7 +669,10 @@ CheckComExp(String, OutVar="", ByRef ArrString="", Ptr="ie")
 			String := RegExReplace(String, "&" A_LoopField, "[" CheckExp(%A_LoopField%1) "]")
 	}
 	If (Value <> "")
+	{
+		StringReplace, Value, Value, `,, `````,, All
 		String .= (Value = """""") ? " := """"" : " := " CheckExp(Value)
+	}
 	Else If (OutVar <> "")
 		String := "`n" OutVar " := " String
 	
