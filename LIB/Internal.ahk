@@ -136,6 +136,27 @@ HotkeyCtrlHasFocus()
 	}
 }
 
+EditCtrlHasFocus()
+{
+	global GuiA := ActiveGui(WinActive("A"))
+	GuiControlGet, ctrl, %GuiA%:FocusV
+	return ctrl
+}
+
+WM_CTLCOLOR(wParam, lParam)
+{
+	global GuiA := ActiveGui(WinActive("A"))
+	Static hBrush
+	BG_COLOR   := 0xFFFFFF
+	IfEqual, hBrush,, SetEnv, hBrush, % DllCall("CreateSolidBrush", UInt, BG_COLOR)
+	GuiControlGet, ctrl, Name, %lParam%
+	If (ctrl = "JoyKey")
+	{
+		DllCall("SetBkColor", UInt,wParam, UInt, BG_COLOR)
+		Return hBrush
+	}
+}
+
 MarkArea(LineW)
 {
 	global c_Lang004, c_Lang059, d_Lang057
@@ -397,8 +418,8 @@ ActivateHotkeys(Rec="", Play="", Speed="", Stop="", Joy="")
 			j := A_Index
 			Loop, 32
 			{
-				#If WinActive("ahk_id" CmdWin)
-				Hotkey, If, WinActive("ahk_id" CmdWin)
+				#If EditCtrlHasFocus() = "JoyKey"
+				Hotkey, If, EditCtrlHasFocus() = "JoyKey"
 				Hotkey, %j%Joy%A_Index%, CaptureJoyB, % (Joy) ? "On" : "Off"
 				Hotkey, If
 				#If

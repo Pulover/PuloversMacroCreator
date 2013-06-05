@@ -377,7 +377,7 @@
 	t_Lang094 =	Name = Value
 	t_Lang095 =	Enter 1 variable per line. You may also add [Sections].
 	t_Lang096 =	User Global Variables
-	t_Lang097 =	Press a joystick button
+	t_Lang097 =	Press a button on the joystick
 	t_Lang098 =	Joystick
 	t_Lang099 =	Button
 		
@@ -563,9 +563,10 @@
 	AutoKey_TT =	Backspace to clear
 	ManKey_TT =	Backspace to clear
 	AbortKey_TT =	Backspace to clear
+	JoyKey_TT =	Press a button on the joystick
 	PauseKey_TT =	Pauses execution instead of stopping
 	Win1_TT =	Add the Windows key as modifier
-	JoyHK_TT =	Joystick (Ctrl+J)
+	JoyHK_TT =	Joystick
 	ReptC_TT =	0 = infinite
 	TabPlus_TT =	Add Macro (Ctrl+T)
 	TabClose_TT =	Close Macro (Ctrl+W)

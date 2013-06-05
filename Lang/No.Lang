@@ -563,9 +563,10 @@
 	AutoKey_TT =	Tilbaketasten for å fjerne
 	ManKey_TT =	Tilbaketasten for å fjerne
 	AbortKey_TT =	Tilbaketasten for å fjerne
+	JoyKey_TT =	Trykk på en knapp på joysticken
 	PauseKey_TT =	Pauser gjennomføring stedet for å stoppe
 	Win1_TT =	Legge til Windows-tasten som modifikator
-	JoyHK_TT =	Joystick (Ctrl+J)
+	JoyHK_TT =	Joystick
 	ReptC_TT =	0 = uendelig
 	TabPlus_TT =	Legg Makro (Ctrl+T)
 	TabClose_TT =	Lukk Makro (Ctrl+W)

@@ -563,9 +563,10 @@
 	AutoKey_TT =	Retour arrière pour effacer
 	ManKey_TT =	Retour arrière pour effacer
 	AbortKey_TT =	Retour arrière pour effacer
+	JoyKey_TT =	Appuyez sur un bouton sur la manette
 	PauseKey_TT =	Interrompt l'exécution au lieu de s'arrêter
 	Win1_TT =	Ajouter la touche Windows en tant que modificateur
-	JoyHK_TT =	Joystick (Ctrl+J)
+	JoyHK_TT =	Joystick
 	ReptC_TT =	0 = infini
 	TabPlus_TT =	Ajouter une macro (Ctrl+T)
 	TabClose_TT =	Fermer Macro (Ctrl+W)

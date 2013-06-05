@@ -563,9 +563,10 @@
 	AutoKey_TT =	Backspace, щоб очистити
 	ManKey_TT =	Backspace, щоб очистити
 	AbortKey_TT =	Backspace, щоб очистити
+	JoyKey_TT =	Натиснути кнопку на джойстику
 	PauseKey_TT =	Призупиняє виконання замість зупинки
 	Win1_TT =	Додавання ключа Windows, в якості модифікатора
-	JoyHK_TT =	Джойстик (Ctrl+J)
+	JoyHK_TT =	Джойстик
 	ReptC_TT =	0 = нескінченне
 	TabPlus_TT =	Додати Макро (Ctrl+T)
 	TabClose_TT =	Закрити Макро (Ctrl+W)

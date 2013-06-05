@@ -563,9 +563,10 @@
 	AutoKey_TT =	Povratna izbiti
 	ManKey_TT =	Povratna izbiti
 	AbortKey_TT =	Povratna izbiti
+	JoyKey_TT =	Pritisnite tipku na palici
 	PauseKey_TT =	Pauziranje izvršenje umjesto zaustavljanja
 	Win1_TT =	Dodaj Windows tipku za izmjenu
-	JoyHK_TT =	Joystick (Ctrl+J)
+	JoyHK_TT =	Džojstik
 	ReptC_TT =	0 = beskonačno
 	TabPlus_TT =	Dodaj Macro (Ctrl+T)
 	TabClose_TT =	Makro Close (Ctrl+W)

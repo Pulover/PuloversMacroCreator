@@ -544,7 +544,7 @@ Gui, Add, GroupBox, Section W355 H65 ys-9 xm+530
 Gui, Add, Text, -Wrap W25 H22 ys+15 xs+10 vAutoT, %w_Lang006%:
 Gui, Add, Text, -Wrap W25 H22 y+3 vManT, %w_Lang007%:
 Gui, Add, Hotkey, vAutoKey gSaveData W150 ys+13 xp+30
-Gui, Add, Edit, vJoyKeyOn yp xp WP HP Disabled Hidden
+Gui, Add, Edit, yp xp WP HP vJoyKey Hidden
 Gui, Add, Hotkey, vManKey gWaitKeys W55 y+5 Limit190, % o_ManKey[1]
 Gui, Add, Text, -Wrap W25 H22 yp+3 xp+65 vAbortT, %w_Lang008%:
 Gui, Add, Hotkey,  yp-3 xp+30 vAbortKey W55, %AbortKey%
@@ -639,6 +639,7 @@ OnMessage(WM_RBUTTONDOWN, "ShowContextHelp")
 OnMessage(WM_ACTIVATE, "WinCheck")
 OnMessage(WM_COPYDATA, "Receive_Params")
 OnMessage(WM_HELP, "CmdHelp")
+OnMessage(WM_CTLCOLORSTATIC, "WM_CTLCOLOR" )
 OnMessage(0x404, "AHK_NOTIFYICON")
 If KeepHkOn
 	Menu, Tray, Check, %w_Lang014%
@@ -677,7 +678,6 @@ If %0%
 	PMC.Import(Param)
 	CurrentFileName := LoadedFileName
 	GoSub, FileRead
-	Sleep, 1
 }
 Else If !MultInst && (TargetID := WinExist("ahk_exe " A_ScriptFullPath))
 {
@@ -689,7 +689,6 @@ Else IfExist, %DefaultMacro%
 	PMC.Import(DefaultMacro)
 	CurrentFileName := LoadedFileName
 	GoSub, FileRead
-	Sleep, 1
 }
 Else
 {
@@ -698,6 +697,7 @@ Else
 }
 Menu, Tray, Icon
 Gui, Show, % ((WinState) ? "Maximize" : "W900 H630") ((HideWin) ? "Hide" : ""), %AppName% v%CurrentVersion% %CurrentFileName%
+GuiControl, +ReadOnly, JoyKey
 GoSub, RowCheck
 If (HideWin)
 {
@@ -7242,7 +7242,11 @@ return
 SaveData:
 GuiControlGet, JHKOn,, JoyHK
 If (JHKOn = 1)
-	HK_AutoKey := o_AutoKey[A_List]
+{
+	GuiControlGet, HK_AutoKey,, JoyKey
+	If !RegExMatch(HK_AutoKey, "i)Joy\d+$")
+		HK_AutoKey := ""
+}
 Else
 	GuiControlGet, HK_AutoKey,, AutoKey
 GuiControlGet, ManKey,, ManKey
@@ -7259,11 +7263,17 @@ return
 
 LoadData:
 If InStr(o_AutoKey[A_List], "Joy")
+{
+	GuiControl,, JoyHK, 1
+	GuiControl,, AutoKey
 	GoSub, SetJoyHK
+}
 Else
 {
-	GoSub, SetNoJoy
+	GuiControl,, JoyHK, 0
+	GuiControl,, JoyKey
 	GuiControl,, AutoKey, % LTrim(o_AutoKey[A_List], "#")
+	GoSub, SetNoJoy
 }
 GuiControl,, Win1, % (InStr(o_AutoKey[A_List], "#")) ? 1 : 0
 GuiControl,, ManKey, % o_ManKey[A_List]
@@ -8051,61 +8061,40 @@ Gui, 6:Destroy
 return
 
 SetJoyButton:
-GuiControl,, JoyHK, 0
-ActivateHotkeys("", "", "", "", 1)
-Jp := "1Joy" A_List
-Gui, 31:+owner1 +ToolWindow +HwndCmdWin
-Gui, 1:Default
-Gui, 1:+Disabled
-Gui, 31:Font, s7
-Gui, 31:Add, Groupbox, Section W240 H60 Center, %t_Lang097%
-Gui, 31:Add, Text, ys+20 xs+10 vPJoy W220 r2 Center
-Gui, 31:Add, Button, -Wrap Section Default xm W60 H23 gJoyOK, %c_Lang020%
-Gui, 31:Add, Button, -Wrap ys W60 H23 gJoyCancel, %c_Lang021%
-Gui, 31:Show,, %t_Lang098%
-return
-
-JoyOK:
-If (Jp = "")
-	return
-Gui, 1:-Disabled
-Gui, 31:Destroy
-Gui, 1:Default
-o_AutoKey[A_List] := Jp
-GoSub, SetJoyHK
-GoSub, SaveData
-ActivateHotkeys("", "", "", "", 0)
-return
-
-JoyCancel:
-31GuiClose:
-31GuiEscape:
-Gui, 1:-Disabled
-Gui, 31:Destroy
-Gui, 1:Default
-GoSub, SetNoJoy
-ActivateHotkeys("", "", "", "", 0)
+Gui, Submit, NoHide
+If (JoyHK = 1)
+{
+	GoSub, SetJoyHK
+	If (JoyKey = "")
+		GuiControl,, JoyKey, %t_Lang097%
+	GuiControl, Focus, JoyKey
+}
+Else
+	GoSub, SetNoJoy
 return
 
 CaptureJoyB:
-RegExMatch(A_ThisHotkey, "(\d+)Joy(\d+)", Jp)
-GuiControl, 31:, PJoy, %t_Lang098%: %Jp1%`n%t_Lang099%: %Jp2%
+GuiControl,, JoyKey, %A_ThisHotkey%
+GoSub, SaveData
 return
 
 SetJoyHK:
-GuiControl,, JoyHK, 1
-GuiControl,, Win1, 0
+GuiControl, Hide, AutoKey
 GuiControl, Disable, AutoKey
-GuiControl, Show, JoyKeyOn
-GuiControl,, JoyKeyOn, % o_AutoKey[A_List]
+GuiControl,, Win1, 0
 GuiControl, Disable, Win1
+If RegExMatch(o_AutoKey[A_List], "i)Joy\d+$")
+	GuiControl,, JoyKey, % o_AutoKey[A_List]
+GuiControl, Show, JoyKey
+ActivateHotkeys("", "", "", "", 1)
 return
 
 SetNoJoy:
-GuiControl,, JoyHK, 0
 GuiControl, Enable, AutoKey
-GuiControl, Hide, JoyKeyOn
+GuiControl, Show, AutoKey
+GuiControl, Hide, JoyKey
 GuiControl, Enable, Win1
+ActivateHotkeys("", "", "", "", 0)
 return
 
 SetWin:

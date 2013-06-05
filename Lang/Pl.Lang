@@ -563,9 +563,10 @@
 	AutoKey_TT =	Backspace, aby usunąć
 	ManKey_TT =	Backspace, aby usunąć
 	AbortKey_TT =	Backspace, aby usunąć
+	JoyKey_TT =	Naciśnij przycisk na joysticku
 	PauseKey_TT =	Wstrzymuje wykonywanie zamiast zatrzymać
 	Win1_TT =	Dodaj klucz Windows jako modyfikator
-	JoyHK_TT =	Joystick (Ctrl+J)
+	JoyHK_TT =	Drążek sterowy
 	ReptC_TT =	0 = nieskończony
 	TabPlus_TT =	Dodaj Macro (Ctrl+T)
 	TabClose_TT =	Zamknij makro (Ctrl+W)

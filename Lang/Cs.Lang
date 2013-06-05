@@ -563,9 +563,10 @@
 	AutoKey_TT =	Backspace zrušte
 	ManKey_TT =	Backspace zrušte
 	AbortKey_TT =	Backspace zrušte
+	JoyKey_TT =	Stiskněte tlačítko na joysticku
 	PauseKey_TT =	Pozastaví výkon místo zastavení
 	Win1_TT =	Přidejte klávesu Windows jako modifikátor
-	JoyHK_TT =	Joystick (Ctrl+J)
+	JoyHK_TT =	Joystick
 	ReptC_TT =	0 = nekonečno
 	TabPlus_TT =	Přidat makro (Ctrl+T)
 	TabClose_TT =	Zavřít Makro (Ctrl+W)

@@ -563,9 +563,10 @@
 	AutoKey_TT =	Backsteg för att radera
 	ManKey_TT =	Backsteg för att radera
 	AbortKey_TT =	Backsteg för att radera
+	JoyKey_TT =	Tryck på en knapp på joysticken
 	PauseKey_TT =	Pausar exekvering stället för att stoppa
 	Win1_TT =	Lägg till Windows-tangenten som modifierare
-	JoyHK_TT =	Joystick (Ctrl+J)
+	JoyHK_TT =	Joystick
 	ReptC_TT =	0 = oändlig
 	TabPlus_TT =	Lägg Makro (Ctrl+T)
 	TabClose_TT =	Stäng Makro (Ctrl+W)

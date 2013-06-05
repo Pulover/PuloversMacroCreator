@@ -563,9 +563,10 @@
 	AutoKey_TT =	Backspace per cancellare
 	ManKey_TT =	Backspace per cancellare
 	AbortKey_TT =	Backspace per cancellare
+	JoyKey_TT =	Premere un pulsante sul joystick
 	PauseKey_TT =	Mette in pausa l'esecuzione invece di fermarsi
 	Win1_TT =	Aggiungere la chiave di Windows come modificatore
-	JoyHK_TT =	Joystick (Ctrl+J)
+	JoyHK_TT =	Joystick
 	ReptC_TT =	0 = infinito
 	TabPlus_TT =	Aggiungi Macro (Ctrl+T)
 	TabClose_TT =	Chiudere Macro (Ctrl+W)

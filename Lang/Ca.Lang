@@ -563,9 +563,10 @@
 	AutoKey_TT =	Retrocés per esborrar
 	ManKey_TT =	Retrocés per esborrar
 	AbortKey_TT =	Retrocés per esborrar
+	JoyKey_TT =	Premeu un botó a la palanca de comandament
 	PauseKey_TT =	Fa una pausa en l'execució en comptes d'aturar
 	Win1_TT =	Afegir la tecla Windows com a modificador
-	JoyHK_TT =	Palanca De Comandament (Ctrl+J)
+	JoyHK_TT =	Palanca de comandament
 	ReptC_TT =	0 = infinit
 	TabPlus_TT =	Afegir Macro (Ctrl+T)
 	TabClose_TT =	Tancar Macro (Ctrl+W)

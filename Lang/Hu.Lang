@@ -563,9 +563,10 @@
 	AutoKey_TT =	Backspace törölni
 	ManKey_TT =	Backspace törölni
 	AbortKey_TT =	Backspace törölni
+	JoyKey_TT =	Nyomja meg a gombot a joystick
 	PauseKey_TT =	Szünetelteti végrehajtása helyett megállás
 	Win1_TT =	Adja hozzá a Windows billentyű a módosító
-	JoyHK_TT =	Joystick (Ctrl+J)
+	JoyHK_TT =	Joystick
 	ReptC_TT =	0 = végtelen
 	TabPlus_TT =	Kedvencek Macro (Ctrl+T)
 	TabClose_TT =	Bezárás Macro (Ctrl+W)

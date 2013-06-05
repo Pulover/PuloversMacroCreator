@@ -563,9 +563,10 @@
 	AutoKey_TT =	Backspace鍵來清除
 	ManKey_TT =	Backspace鍵來清除
 	AbortKey_TT =	Backspace鍵來清除
+	JoyKey_TT =	按下操縱桿上的按鈕
 	PauseKey_TT =	暫停執行，而不是停止
 	Win1_TT =	作為改性劑添加Windows鍵
-	JoyHK_TT =	操縱桿（CTRL+J）
+	JoyHK_TT =	搖桿
 	ReptC_TT =	0 =無限
 	TabPlus_TT =	添加宏（按Ctrl+T）
 	TabClose_TT =	關閉宏（按Ctrl+W）

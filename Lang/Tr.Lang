@@ -563,9 +563,10 @@
 	AutoKey_TT =	Temizlemek için Backspace
 	ManKey_TT =	Temizlemek için Backspace
 	AbortKey_TT =	Temizlemek için Backspace
+	JoyKey_TT =	Joystick üzerindeki bir düğmeye basın
 	PauseKey_TT =	Yürütme yerine durdurma Duraklamadan
 	Win1_TT =	Değiştirici olarak Windows tuşu ekle
-	JoyHK_TT =	Joystick (Ctrl+J)
+	JoyHK_TT =	Joystick
 	ReptC_TT =	0 = sonsuz
 	TabPlus_TT =	Makro Ekle (Ctrl+T)
 	TabClose_TT =	Kapat Makro (Ctrl+W)

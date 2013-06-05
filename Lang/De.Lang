@@ -563,9 +563,10 @@
 	AutoKey_TT =	Backspace zum Löschen
 	ManKey_TT =	Backspace zum Löschen
 	AbortKey_TT =	Backspace zum Löschen
+	JoyKey_TT =	Drücken Sie eine Taste auf dem Joystick
 	PauseKey_TT =	Unterbricht die Ausführung anstatt anzuhalten
 	Win1_TT =	Fügen Sie die Windows-Taste als Modifizierer
-	JoyHK_TT =	Joystick (Strg+J)
+	JoyHK_TT =	Joystick
 	ReptC_TT =	0 = unendlich
 	TabPlus_TT =	Makro hinzufügen (Strg+T)
 	TabClose_TT =	Schließen Macro (Strg+W)

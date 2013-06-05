@@ -563,9 +563,10 @@
 	AutoKey_TT =	Backspace poistaa
 	ManKey_TT =	Backspace poistaa
 	AbortKey_TT =	Backspace poistaa
+	JoyKey_TT =	Paina painiketta joystick
 	PauseKey_TT =	Keskeyttää suorittamisen sijasta pysähtymättä
 	Win1_TT =	Lisää Windows-näppäin muuntoaineena
-	JoyHK_TT =	Ohjainta (Ctrl+J)
+	JoyHK_TT =	Peliohjain
 	ReptC_TT =	0 = ääretön
 	TabPlus_TT =	Lisää Makro (Ctrl+T)
 	TabClose_TT =	Sulje Makro (Ctrl+W)

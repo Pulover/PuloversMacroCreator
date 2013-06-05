@@ -563,9 +563,10 @@
 	AutoKey_TT =	Backspace om te wissen
 	ManKey_TT =	Backspace om te wissen
 	AbortKey_TT =	Backspace om te wissen
+	JoyKey_TT =	Druk op een knop op de joystick
 	PauseKey_TT =	Hiermee onderbreekt de uitvoering in plaats van te stoppen
 	Win1_TT =	Voeg de Windows-toets als modifier
-	JoyHK_TT =	Joystick (Ctrl+J)
+	JoyHK_TT =	Bedieningshendel
 	ReptC_TT =	0 = oneindig
 	TabPlus_TT =	Voeg Macro (Ctrl+T)
 	TabClose_TT =	Sluiten Macro (Ctrl+W)

@@ -563,9 +563,10 @@
 	AutoKey_TT =	삭제하는 백 스페이스
 	ManKey_TT =	삭제하는 백 스페이스
 	AbortKey_TT =	삭제하는 백 스페이스
+	JoyKey_TT =	조이스틱 버튼을 눌러
 	PauseKey_TT =	실행 대신 정지를 일시 중지
 	Win1_TT =	수정으로 Windows 키를 추가합니다
-	JoyHK_TT =	조이스틱합니다 (Ctrl+J)
+	JoyHK_TT =	조종간
 	ReptC_TT =	0 = 무한
 	TabPlus_TT =	매크로를 추가합니다 (Ctrl+T)
 	TabClose_TT =	닫기 매크로 (Ctrl 키를+W)

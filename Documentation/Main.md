@@ -53,7 +53,7 @@ To have other Macros active during Timer check the *Always Active* option or rig
 
 **Auto.**: Selects the Automatic Hotkey to execute the currently selected Macro (The Win option adds the Windows Key as modifier).
 
-**Joystick**: Sets a joystick button to run the Macro. Press any button while the window is active to detect it. Only buttons are detected (axis, pov and others are not). To disable a joystick hotkey click the Joystick button to open the detect window and click the Cancel button.
+**Joystick**: Sets a joystick button to run the Macro. When activated the Auto. Hotkey box will switch to accept only joystick buttons. Only buttons are detected (axis, pov and others are not). The number before "Joy" is the joystick number and the number after it is the button number, so 2Joy1 is the second joystick's first button.
 
 **Man.**: Selects the Manual Hotkey to execute the currently selected Macro step-by-step.
 
@@ -279,8 +279,6 @@ You can load multiple files with multiple parameters.
 **Delete**: Delete Row(s)
 
 **Ctrl+G**: Options
-
-**Ctrl+J**: Joystick Hotkeys
 
 **Ctrl+H**: Context Sensitive Hotkeys
 

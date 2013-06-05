@@ -563,9 +563,10 @@
 	AutoKey_TT =	クリアするには、Backspaceキー
 	ManKey_TT =	クリアするには、Backspaceキー
 	AbortKey_TT =	クリアするには、Backspaceキー
+	JoyKey_TT =	ジョイスティックのボタンを押し
 	PauseKey_TT =	実行の代わりに停止を一時停止します
 	Win1_TT =	モディファイアとして、Windowsキーを追加
-	JoyHK_TT =	ジョイスティックの（Ctrl+ J）
+	JoyHK_TT =	ジョイスティック
 	ReptC_TT =	0 =無限大
 	TabPlus_TT =	マクロを追加します（Ctrl+T）
 	TabClose_TT =	閉じるマクロ（Ctrl+Wを）

@@ -563,9 +563,10 @@
 	AutoKey_TT =	Retroceso para borrar
 	ManKey_TT =	Retroceso para borrar
 	AbortKey_TT =	Retroceso para borrar
+	JoyKey_TT =	Presione un botón en la palanca de mando
 	PauseKey_TT =	Detiene la ejecución en lugar de detenerse
 	Win1_TT =	Agregue la clave de Windows como modificador
-	JoyHK_TT =	Palanca De Mando (Ctrl+J)
+	JoyHK_TT =	Palanca de mando
 	ReptC_TT =	0 = infinito
 	TabPlus_TT =	Añadir Macro (Ctrl+T)
 	TabClose_TT =	Cerrar Macro (Ctrl+W)

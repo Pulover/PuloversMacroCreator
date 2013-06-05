@@ -563,9 +563,10 @@
 	AutoKey_TT =	Backspace για εκκαθάριση
 	ManKey_TT =	Backspace για εκκαθάριση
 	AbortKey_TT =	Backspace για εκκαθάριση
+	JoyKey_TT =	Πατήστε ένα κουμπί στο χειριστήριο
 	PauseKey_TT =	Διακόπτει προσωρινά την εκτέλεση αντί να σταματήσει
 	Win1_TT =	Προσθέστε το πλήκτρο των Windows ως τροποποιητής
-	JoyHK_TT =	Joystick (Ctrl+J)
+	JoyHK_TT =	Χειριστήριο
 	ReptC_TT =	0 = άπειρο
 	TabPlus_TT =	Προσθήκη Macro (Ctrl+T)
 	TabClose_TT =	Κλείσιμο Macro (Ctrl+W)
