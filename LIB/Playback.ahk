@@ -390,7 +390,7 @@
 					GoSub, pb_%Type%
 					If Type in Sleep,KeyWait,MsgBox
 						continue
-					If ((TakeAction = "Break") || ((Target = "Exit") && (SearchResult = 0)))
+					If ((TakeAction = "Break") || ((Target = "Break") && (SearchResult = 0)))
 					{
 						TakeAction := 0
 						break
@@ -409,8 +409,8 @@
 	{
 		CoordMode, Mouse, Screen
 		Click, %CursorX%, %CursorY%, 0
-		CoordMode, Mouse, %CoordMouse%
 	}
+	CoordMode, Mouse, %CoordMouse%
 	Progress, Off
 	SplashTextOff
 	SplashImage, Off
@@ -742,7 +742,7 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC)
 					GoSub, pb_%Type%
 					If Type in Sleep,KeyWait
 						continue
-					If ((TakeAction = "Break") || ((Target = "Exit") && (SearchResult = 0)))
+					If ((TakeAction = "Break") || ((Target = "Break") && (SearchResult = 0)))
 					{
 						TakeAction := 0
 						break

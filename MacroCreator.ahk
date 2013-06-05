@@ -9261,8 +9261,8 @@ Loop, Parse, Step, `,, %A_Space%
 		Par%A_Index% := LoopField
 	StringReplace, Par%A_Index%, Par%A_Index%, ``n, `n, All
 	StringReplace, Par%A_Index%, Par%A_Index%, ``r, `r, All
-	StringReplace, Par%A_Index%,  Par%A_Index%, ¢, `,, All
-	StringReplace, Par%A_Index%,  Par%A_Index%, ⱥ, %A_Space%, All
+	StringReplace, Par%A_Index%, Par%A_Index%, ¢, `,, All
+	StringReplace, Par%A_Index%, Par%A_Index%, ⱥ, %A_Space%, All
 }
 StringReplace, Step, Step, ¢, `,, All
 StringReplace, Step, Step, ⱥ, %A_Space%, All
