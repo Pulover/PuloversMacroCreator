@@ -8,8 +8,8 @@ Author: Pulover \[Rodolfo U. Batista\]
 [rodolfoub@gmail.com](mailto:rodolfoub@gmail.com)  
 Copyright © 2012-2013 Rodolfo U. Batista  
 
-Version: 3.7.3  
-Release Date: May, 2013  
+Version: 3.7.4  
+Release Date: June, 2013  
 AutoHotkey Version: 1.1.10.01  
 
 Software License: [GNU General Public License](License.html)  

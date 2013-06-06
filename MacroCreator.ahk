@@ -6,7 +6,7 @@
 ; rodolfoub@gmail.com
 ; Home: http://www.autohotkey.net/~Pulover
 ; Forum: http://www.autohotkey.com/board/topic/79763-macro-creator
-; Version: 3.7.3
+; Version: 3.7.4
 ; Release Date: May, 2013
 ; AutoHotkey Version: 1.1.10.01
 ; Copyright © 2012-2013 Rodolfo U. Batista
@@ -71,8 +71,8 @@ DefaultIcon := (A_IsCompiled) ? A_ScriptFullPath
 			:  (FileExist("Resources\PMC3_Mult.ico") ? "Resources\PMC3_Mult.ico" : A_AhkPath)
 Menu, Tray, Icon, %DefaultIcon%, 1, 1
 
-CurrentVersion := "3.7.3"
-ReleaseDate := "May, 2013"
+CurrentVersion := "3.7.4"
+ReleaseDate := "June, 2013"
 
 ;##### Ini File Read #####
 
@@ -394,6 +394,8 @@ Menu, ImageB, Add, PixelSearch, HelpB
 Menu, ImageB, Icon, ImageSearch, %shell32%, %HelpIconQ%
 Loop, Parse, FileCmdList, |
 {
+	If (A_LoopField = "")
+		continue
 	If (InStr(A_LoopField, "File")=1 || InStr(A_LoopField, "Drive")=1)
 		Menu, m_File, Add, %A_LoopField%, HelpB
 	Else If (InStr(A_LoopField, "Sort")=1 || InStr(A_LoopField, "String")=1
@@ -425,8 +427,7 @@ Loop, Parse, FileCmdList, |
 		Menu, m_Vars, Add, %A_LoopField%, HelpB
 	Else If InStr(A_LoopField, "Get")
 		Menu, m_Get, Add, %A_LoopField%, HelpB
-	Else If A_LoopField contains LockState,Time,Transform,Random,ClipWait
-			,Block,Url,Status,SendLevel,Pause,Break,Continue,Return,ExitApp
+	Else If A_LoopField not contains Run,Process,Shutdown
 		Menu, m_Misc, Add, %A_LoopField%, HelpB
 }
 Menu, RunB, Add, Run / RunWait, HelpB
@@ -5145,6 +5146,7 @@ Gui, 10:Add, Button, -Wrap yp-1 x+0 W30 H23 vSearchPar1 gSearch, ...
 Gui, 10:Add, Text, xm W200 vFCmd2
 Gui, 10:Add, Edit, vPar2File W270 R1 -Multi
 Gui, 10:Add, Button, -Wrap yp-1 x+0 W30 H23 vSearchPar2 gSearch, ...
+Gui, 10:Add, Button, -Wrap yp xp W30 H23 vMouseGet gMouseGetI Hidden, ...
 Gui, 10:Add, Text, xm W200 vFCmd3
 Gui, 10:Add, Edit, vPar3File W270 R1 -Multi
 Gui, 10:Add, Button, -Wrap yp-1 x+0 W30 H23 vSearchPar3 gSearch, ...
@@ -5157,7 +5159,6 @@ Gui, 10:Add, Edit, vPar6File W270 R1 -Multi
 Gui, 10:Add, Button, -Wrap Section Default y+20 xm W60 H23 vRunOK gRunOK, %c_Lang020%
 Gui, 10:Add, Button, -Wrap ys W60 H23 gRunCancel, %c_Lang021%
 Gui, 10:Add, Button, -Wrap ys W60 H23 vRunApply gRunApply Disabled, %c_Lang131%
-Gui, 10:Add, Button, -Wrap ys W30 H23 vMouseGet gMouseGetI, ...
 If (s_Caller = "Edit")
 {
 	GuiControl, 10:ChooseString, FileCmdL, %Type%
@@ -5313,9 +5314,15 @@ Loop, 6
 		GuiControl, 10:Disable, SearchPar%A_Index%
 }
 If ((FileCmdL = "PixelGetColor") || (FileCmdL = "Tooltip"))
-	GuiControl, 10:Enable, MouseGet
+{
+	GuiControl, 10:Hide, SearchPar2
+	GuiControl, 10:Show, MouseGet
+}
 Else
-	GuiControl, 10:Disable, MouseGet
+{
+	GuiControl, 10:Hide, MouseGet
+	GuiControl, 10:Show, SearchPar2
+}
 If FileCmdL not in %FileCmdML%
 {
 	GuiControl, 10:Disable, RunOK
@@ -5340,8 +5347,9 @@ Gui, 1:+Disabled
 Gui, 21:Font, s7
 Gui, 21:Add, Tab2, W330 H240 vTabControl AltSubmit, %c_Lang009%$%c_Lang084%$%c_Lang011%
 ; Statements
-Gui, 21:Add, DDL, y+10 W220 vStatement gStatement, %IfList%
-Gui, 21:Add, DDL, yp x+5 W85 vIdent, Title$$Class$Process$ID
+Gui, 21:Add, DDL, y+10 W200 vStatement gStatement, %IfList%
+Gui, 21:Add, Button, -Wrap yp-1 x+5 W30 H23 vIfGet gIfGet, ...
+Gui, 21:Add, DDL, yp+1 x+0 W75 vIdent, Title$$Class$Process$ID
 Gui, 21:Add, Text, Section ym+60 xm+10 W200 vFormatTip
 Gui, 21:Add, Edit, W310 H136 -vScroll vTestVar
 Gui, 21:Add, Text,, %c_Lang025%
@@ -5349,7 +5357,6 @@ Gui, 21:Add, Button, -Wrap Section Default xm W60 H23 gIfOK, %c_Lang020%
 Gui, 21:Add, Button, -Wrap ys W60 H23 gIfCancel, %c_Lang021%
 Gui, 21:Add, Button, -Wrap ys W60 H23 vIfApply gIfApply Disabled, %c_Lang131%
 Gui, 21:Add, Button, -Wrap ys W60 H23 vAddElse gAddElse, %c_Lang083%
-Gui, 21:Add, Button, -Wrap ys W30 H23 vIfGet gIfGet, ...
 ; Variables
 Gui, 21:Tab, 2
 Gui, 21:Add, Text,, %c_Lang057%:

@@ -414,6 +414,8 @@
 	Progress, Off
 	SplashTextOff
 	SplashImage, Off
+	BlockInput, MouseMoveOff
+	BlockInput, Off
 	CurrentRange := ""
 	If !(aHK_Timer)
 	{
