@@ -513,10 +513,10 @@
 		Você pode criar Macros utilizando os botões de comando na janela principal ou usar o gravador para copiar suas ações. Vá até Opções > Configurações > Gravar para selecionar quais entradas serão gravadas.
 		Para utilizar o gravador para tarefas rápidas vá em Opções > Configurações > Gravação e marque a opção "Limpar Lista". Em seguida, clique no botão Gravar na janela principal e use F10 para limpar a Macro atual e iniciar uma nova com a mesma hotkey. Você também pode marcar a opção "Sempre Ativo" na janela principal para manter as teclas de gravação e reprodução ativas.
 		Para obter ajuda para um comando específico botão direito do mouse sobre um botão de comando na janela principal ou em qualquer lugar em uma janela de comando para mostrar links para a Ajuda online AutoHotkey.
-		Marque a opção "Capturar Teclas" para inserir as chaves e combinações para seu Macro diretamente a partir da janela principal.
-		Digite teclas e combinações na caixa Tecla de atalho na parte inferior e pressione o botão Inserir para adicioná-los às linhas selecionadas.
-		Se nenhuma linha são selecionados os botões de edição aplica a todas as linhas da lista.
-		Você pode atribuir suas próprias variáveis nas variáveis windows (Inserir > Se Demonstrações / Variáveis / Funções). Para usá-los dentro de comandos de colocar o nome da variável em sinais de porcentagem, por exemplo: `%MyVar`%.
+		Marque a opção "Capturar Teclas" para inserir teclas e combinações à sua Macro diretamente na da janela principal.
+		Digite teclas e combinações na Caixa de Atalhos na parte inferior e pressione o botão Inserir para adicioná-las às linhas selecionadas.
+		Se nenhuma linha estiver selecionada os botões de edição se aplicam a todas as linhas da lista.
+		Você pode atribuir suas próprias variáveis na janela Variáveis (Inserir > Declarações SE / Variáveis / Funções). Para usá-las dentro de comandos coloque o nome da variável entre sinais de porcentagem, por exemplo: `%MyVar`%.
 		O contador de "Loop" no topo define o número total de repetições para a Macro selecionada.
 		Você pode editar uma linha clicando duas vezes nela ou selecionando-a e clicando nos botões de edição na parte inferior.
 		Você pode editar várias linhas selecionadas usando as opções na barra de edição na parte inferior.
@@ -535,7 +535,7 @@
 		Clique no cabeçalho da coluna Índice de ligar / desligar Ajuda marcas e cores para Loops e declarações. Duplo-Clique no cabeçalho da coluna Ação para ligar / desligar recuo para Loops e declarações.
 		Você pode depurar suas macros utilizando a tecla de excução manual e as opções de reprodução no menu Macro. Você também pode desativar ações, desmarcando-as na lista da Macro.
 		Para fazer suas Macros funcionarem apenas em uma determinada janela vá em Macro > Atalho Condicionais.
-		Você pode definir suas próprias variáveis globais para ser carregado no arranque e para ser exportado. Vá para Opções > Configurações > Usuário variáveis globais para adicioná-los.
+		Você pode definir suas próprias variáveis globais para serem carregadas ao iniciar e para serem exportadas. Vá em Opções > Configurações > Variáveis Globais do Usuário para adicioná-las.
 		Você pode executar funções avançadas como SubStr e RegExReplace da janela Funções (Inserir > Declaração Se / Variáveis / Funções). Ou executar suas próprias funções a partir de scripts AutoHotkey externos.
 	)	
 ; Tooltips		
