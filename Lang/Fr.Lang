@@ -11,7 +11,7 @@
 	m_Lang006 =	&Options de
 	m_Lang007 =	&Langue
 	m_Lang008 =	&Faire un don
-	m_Lang009 =	Aid&er
+	m_Lang009 =	&Aider
 		
 ; File Submenu		
 	f_Lang001 =	&Nouveau
@@ -102,6 +102,7 @@
 ; Tray Menu		
 	y_Lang001 =	Masquer la fenêtre
 	y_Lang002 =	Afficher la fenêtre
+	y_Lang003 =	Afficher / Masquer les commandes
 		
 ; Main Window		
 	w_Lang001 =	Exporter
@@ -116,7 +117,7 @@
 	w_Lang010 =	&Pause
 	w_Lang011 =	&Boucle
 	w_Lang012 =	&Capturez clés
-	w_Lang013 =	&Afficher les infos
+	w_Lang013 =	Mas&quer la fenêtre
 	w_Lang014 =	&Toujours actif
 	w_Lang015 =	Répétez
 	w_Lang016 =	Délai (ms):
@@ -374,7 +375,7 @@
 	t_Lang082 =	Déclarations
 	t_Lang083 =	Voir Indentation pour les boucles et les états
 	t_Lang084 =	(Double-cliquez sur l'en-tête de colonne Action activer / désactiver)
-	t_Lang085 =	Afficher la barre de progression
+	t_Lang085 =	Commandes de l'affichage bar au démarrage
 	t_Lang086 =	Recherche de fonctions. S'il vous plaît patienter...
 	t_Lang087 =	Inclure les fichiers externes
 	t_Lang088 =	Créer un fichier EXE
@@ -389,6 +390,7 @@
 	t_Lang097 =	Appuyez sur un bouton sur la manette
 	t_Lang098 =	Joystick
 	t_Lang099 =	Bouton
+	t_Lang100 =	Afficher les infos
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Ouvert
@@ -600,7 +602,7 @@
 	CopyTo_TT =	Copier sur...
 	Capt_TT =	Capturez touches dans cette fenêtre
 	OnScCtrl_TT =	Contrôles Afficher La Barre D'outils
-	ShowStep_TT =	Afficher les infos
+	ShowStep_TT =	Afficher les infobulles
 	ApplyT_TT =	Appliquer
 	ApplyI_TT =	Appliquer
 	ApplyL_TT =	Insérez de la case (Insert)
@@ -637,6 +639,7 @@
 	OSSlow_TT =	Ralentir
 	OSTrans_TT =	opacité
 	ToggleTB_TT =	Afficher / Masquer la barre de titre
+	ToggleMW_TT =	Afficher / Masquer la fenêtre principale
 	MRel_TT =	
 	(LTrim	
 		Mouvements relatifs à la position actuelle.

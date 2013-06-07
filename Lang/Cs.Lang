@@ -3,14 +3,14 @@
 		; Czech
 		
 ; Main Menu		
-	m_Lang001 =	So&ubor
-	m_Lang002 =	V&ložit
+	m_Lang001 =	&Soubor
+	m_Lang002 =	&Vložit
 	m_Lang003 =	V&ybrat
-	m_Lang004 =	Up&ravit
+	m_Lang004 =	&Upravit
 	m_Lang005 =	&Makro
-	m_Lang006 =	Mo&žnosti
+	m_Lang006 =	M&ožnosti
 	m_Lang007 =	&Jazyk
-	m_Lang008 =	P&řispějte
+	m_Lang008 =	&Přispějte
 	m_Lang009 =	Pomo&c
 		
 ; File Submenu		
@@ -102,6 +102,7 @@
 ; Tray Menu		
 	y_Lang001 =	Skrýt okno
 	y_Lang002 =	Zobrazit okno
+	y_Lang003 =	Zobrazit / Skrýt ovládací
 		
 ; Main Window		
 	w_Lang001 =	Export
@@ -113,11 +114,11 @@
 	w_Lang007 =	Man.
 	w_Lang008 =	Zastavit
 	w_Lang009 =	&Win
-	w_Lang010 =	&Pauza
-	w_Lang011 =	&Smyčka
+	w_Lang010 =	P&auza
+	w_Lang011 =	Smy&čka
 	w_Lang012 =	&Zachyťte klíče
-	w_Lang013 =	Z&obrazit informace
-	w_Lang014 =	&Vždy Aktivní
+	w_Lang013 =	S&krýt okno
+	w_Lang014 =	V&ždy Aktivní
 	w_Lang015 =	Opakovat
 	w_Lang016 =	Delay (ms):
 	w_Lang017 =	Platit
@@ -374,7 +375,7 @@
 	t_Lang082 =	Prohlášení
 	t_Lang083 =	Zobrazit odsazení pro Loops a výkazy
 	t_Lang084 =	(Poklepejte na záhlaví sloupce akce povolit / zakázat)
-	t_Lang085 =	Zobrazit Progress Bar
+	t_Lang085 =	Zobrazení panelu s ovládacími prvky na start-up
 	t_Lang086 =	Vyhledávání funkcí. Prosím čekejte...
 	t_Lang087 =	Zahrnout externí soubory
 	t_Lang088 =	Vytvořit EXE soubor
@@ -389,6 +390,7 @@
 	t_Lang097 =	Stiskněte tlačítko na joysticku
 	t_Lang098 =	Joystick
 	t_Lang099 =	Tlačítko
+	t_Lang100 =	Zobrazit informace
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Otevřít
@@ -600,7 +602,7 @@
 	CopyTo_TT =	Kopírovat do...
 	Capt_TT =	Zachytit stisky kláves v tomto okně
 	OnScCtrl_TT =	Zobrazit Ovládací Panel
-	ShowStep_TT =	Zobrazit informace
+	ShowStep_TT =	Zobrazit bublinové tipy
 	ApplyT_TT =	Platit
 	ApplyI_TT =	Platit
 	ApplyL_TT =	Vložit z krabice (Insert)
@@ -637,6 +639,7 @@
 	OSSlow_TT =	Zpomalit
 	OSTrans_TT =	neprůhlednost
 	ToggleTB_TT =	Zobrazit / skrýt Title Bar
+	ToggleMW_TT =	Zobrazit / skrýt hlavní okno
 	MRel_TT =	
 	(LTrim	
 		Pohyby v poměru k aktuální pozici.

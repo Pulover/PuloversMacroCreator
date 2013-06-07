@@ -102,6 +102,7 @@
 ; Tray Menu		
 	y_Lang001 =	Ocultar Janela
 	y_Lang002 =	Mostrar Janela
+	y_Lang003 =	Mostrar / Ocultar Controles
 		
 ; Main Window		
 	w_Lang001 =	Exportar
@@ -116,7 +117,7 @@
 	w_Lang010 =	&Pausa
 	w_Lang011 =	&Loop
 	w_Lang012 =	&Capturar Teclas
-	w_Lang013 =	Mostrar I&nfo.
+	w_Lang013 =	Ocultar &Janela
 	w_Lang014 =	Sempre A&tivo
 	w_Lang015 =	Repetir
 	w_Lang016 =	Interv. (ms):
@@ -374,7 +375,7 @@
 	t_Lang082 =	Declarações
 	t_Lang083 =	Mostrar Margens para Loops e Declarações
 	t_Lang084 =	(Duplo-Clique no Cabeçalho da Coluna Action para ativar/desativar)
-	t_Lang085 =	Mostrar Barra de Progresso
+	t_Lang085 =	Mostrar Barra de Controles ao iniciar.
 	t_Lang086 =	Procurando Funções. Por favor aguarde...
 	t_Lang087 =	Incluir Arquivos Externos
 	t_Lang088 =	Criar Arquivo EXE
@@ -389,6 +390,7 @@
 	t_Lang097 =	Pressione um botão no joystick
 	t_Lang098 =	Joystick
 	t_Lang099 =	Botão
+	t_Lang100 =	Mostrar Info.
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Abrir
@@ -600,7 +602,7 @@
 	CopyTo_TT =	Copiar para...
 	Capt_TT =	Capturar teclas pressionadas nesta janela
 	OnScCtrl_TT =	Exibir a Barra de Controles
-	ShowStep_TT =	Mostrar Informações
+	ShowStep_TT =	Mostrar dicas em balões
 	ApplyT_TT =	Aplicar
 	ApplyI_TT =	Aplicar
 	ApplyL_TT =	Inserir da Caixa (Insert)
@@ -637,6 +639,7 @@
 	OSSlow_TT =	Reduzir
 	OSTrans_TT =	Opacidade
 	ToggleTB_TT =	Mostrar / Ocultar Barra de Título
+	ToggleMW_TT =	Mostrar / Ocultar Janela Principal
 	MRel_TT =	
 	(LTrim	
 		Movimentos relativos à posição atual.

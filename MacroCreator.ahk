@@ -96,6 +96,7 @@ IniRead, ClearNewList, %IniFilePath%, Options, ClearNewList, 0
 IniRead, DelayG, %IniFilePath%, Options, DelayG, 0
 IniRead, OnScCtrl, %IniFilePath%, Options, OnScCtrl, 1
 IniRead, ShowStep, %IniFilePath%, Options, ShowStep, 1
+IniRead, HideMainWin, %IniFilePath%, Options, HideMainWin, 1
 IniRead, DontShowPb, %IniFilePath%, Options, DontShowPb, 0
 IniRead, DontShowRec, %IniFilePath%, Options, DontShowRec, 0
 IniRead, DontShowAdm, %IniFilePath%, Options, DontShowAdm, 0
@@ -125,7 +126,7 @@ IniRead, SpeedUp, %IniFilePath%, Options, SpeedUp, 2
 IniRead, SpeedDn, %IniFilePath%, Options, SpeedDn, 2
 IniRead, MouseReturn, %IniFilePath%, Options, MouseReturn, 0
 IniRead, ShowProgBar, %IniFilePath%, Options, ShowProgBar, 1
-IniRead, ProgBarOptions, %IniFilePath%, Options, ProgBarOptions, B w300 h20 x0 y0 zx0 zy0 cb20D000
+IniRead, ShowBarOnStart, %IniFilePath%, Options, ShowBarOnStart, 0
 IniRead, DrawButton, %IniFilePath%, Options, DrawButton, RButton
 IniRead, OnRelease, %IniFilePath%, Options, OnRelease, 1
 IniRead, OnEnter, %IniFilePath%, Options, OnEnter, 0
@@ -191,9 +192,9 @@ IniRead, IncPmc, %IniFilePath%, ExportOptions, IncPmc, 0
 IniRead, Exe_Exp, %IniFilePath%, ExportOptions, Exe_Exp, 0
 IniRead, WinState, %IniFilePath%, WindowOptions, WinState, 0
 IniRead, ColSizes, %IniFilePath%, WindowOptions, ColSizes, 65,135,200,50,40,85,100,100,60
-IniRead, OSCPos, %IniFilePath%, WindowOptions, OSCPos, X5 Y25
+IniRead, OSCPos, %IniFilePath%, WindowOptions, OSCPos, X0 Y0
 IniRead, OSTrans, %IniFilePath%, WindowOptions, OSTrans, 255
-IniRead, OSCaption, %IniFilePath%, WindowOptions, OSCaption, 1
+IniRead, OSCaption, %IniFilePath%, WindowOptions, OSCaption, 0
 
 User_Vars := new ObjIni(UserVarsPath)
 User_Vars.Read()
@@ -537,7 +538,7 @@ Gui, Add, Button, -Wrap W90 H40 ys xm+405 hwndStartB vStartB gPlayStart, %w_Lang
 	ILButton(StartB, PlayIcon[1] ":" PlayIcon[2], 1, "Left")
 Gui, Font
 Gui, Font, s7
-Gui, Add, Checkbox, -Wrap Checked%ShowStep% yp+45 xp-95 W90 vShowStep R1, %w_Lang013%
+Gui, Add, Checkbox, -Wrap Checked%HideMainWin% yp+45 xp-95 W90 vHideMainWin R1, %w_Lang013%
 Gui, Add, Checkbox, -Wrap Checked%OnScCtrl% yp xp+95 W90 vOnScCtrl R1, %w_Lang020%
 Gui, Add, Button, -Wrap ys xm+500 W25 H25 hwndTestRun vTestRun gTestRun
 	ILButton(TestRun, TestRunIcon[1] ":" TestRunIcon[2])
@@ -740,6 +741,8 @@ Else
 		Gui, 26:Show,, %AppName%
 		WinWaitClose, ahk_id %TipScrID%
 	}
+	If (ShowBarOnStart)
+		GoSub, ShowControls
 	If (ShowTips)
 		GoSub, ShowTips
 	If (AutoUpdate)
@@ -807,7 +810,10 @@ Tooltip
 Gui, +OwnDialogs
 Gui, Submit, NoHide
 ActivateHotKeys(1, 0, 0, ((PauseKey) ? 1 : 0))
-WinMinimize, ahk_id %PMCWinID%
+If (HideMainWin)
+	GoSub, ShowHide
+Else
+	WinMinimize, ahk_id %PMCWinID%
 If !DontShowRec
 {
 	Gui 26:+LastFoundExist
@@ -879,7 +885,7 @@ Else
 	GoSub, RecStop
 	GoSub, b_Start
 	GoSub, RowCheck
-	GoSub, PlayStart
+	GoSub, PlayActive
 	ActivateHotKeys(1)
 	If ShowStep = 1
 		Traytip, %AppName%, % d_Lang027
@@ -2014,7 +2020,7 @@ Gui, 4:Add, Text, yp+22 xs+22, %t_Lang033%:
 Gui, 4:Add, DDL, vRelKey W80 yp-5 xp+135, CapsLock||ScrollLock|NumLock
 Gui, 4:Add, Checkbox, -Wrap Checked%ToggleC% yp+5 xs+245 vToggleC gToggleC W160 R1, %t_Lang034%
 ; Playback
-Gui, 4:Add, GroupBox, Section ys+230 xs+12 W400 H85, %t_Lang035%:
+Gui, 4:Add, GroupBox, Section ys+230 xs+12 W400 H80, %t_Lang035%:
 Gui, 4:Add, Text, yp+20 xp+10, %t_Lang036%:
 Gui, 4:Add, DDL, yp-2 xp+70 W75 vFastKey, None|Insert||F1|F2|F3|F4|F5|F6|F7|F8|F9|F10|F11|F12|CapsLock|NumLock|ScrollLock|
 Gui, 4:Add, DDL, yp xp+83 W37 vSpeedUp, 2||4|8|16|32
@@ -2023,16 +2029,15 @@ Gui, 4:Add, Text, yp+25 xs+10, %t_Lang037%:
 Gui, 4:Add, DDL, yp-2 xp+70 W75 vSlowKey, None|Pause||F1|F2|F3|F4|F5|F6|F7|F8|F9|F10|F11|F12|CapsLock|NumLock|ScrollLock|
 Gui, 4:Add, DDL, yp xp+83 W37 vSpeedDn, 2||4|8|16|32
 Gui, 4:Add, Text, yp+5 xp+40, X
-Gui, 4:Add, Checkbox, Checked%MouseReturn% yp-40 xp+15 W175 R2 vMouseReturn, %t_Lang038%
-Gui, 4:Add, Checkbox, Checked%ShowProgBar% W175 vShowProgBar, %t_Lang085%
-Gui, 4:Add, Text, W55 H20, %w_Lang003%:
-Gui, 4:Add, Edit, yp-2 x+1 W120 vProgBarOptions R1, %ProgBarOptions%
+Gui, 4:Add, Checkbox, Checked%MouseReturn% ys+15 xp+15 W175 R2 vMouseReturn, %t_Lang038%
+Gui, 4:Add, Checkbox, Checked%ShowBarOnStart% W175 y+10 xp vShowBarOnStart, %t_Lang085%
 ; Defaults
 Gui, 4:Add, GroupBox, Section xs ys+90 W400 H110, %t_Lang090%:
 Gui, 4:Add, Text, yp+20 xs+10, %t_Lang039%:
-Gui, 4:Add, Radio, -Wrap yp xp+150 W120 R1 vRelative R1, %c_Lang005%
-Gui, 4:Add, Radio, -Wrap yp xp+125 W100 R1 vScreen R1, %t_Lang041%
-Gui, 4:Add, Text, yp+20 xs+10, %t_Lang042%:
+Gui, 4:Add, Radio, -Wrap yp xp+150 W100 R1 vRelative R1, %c_Lang005%
+Gui, 4:Add, Radio, -Wrap yp x+5 W100 R1 vScreen R1, %t_Lang041%
+Gui, 4:Add, Checkbox, -Wrap Checked%ShowStep% ys+60 xp W130 vShowStep R1, %t_Lang100%
+Gui, 4:Add, Text, ys+40 xs+10, %t_Lang042%:
 Gui, 4:Add, Edit, Limit Number yp-2 xp+180 W60 R1
 Gui, 4:Add, UpDown, yp xp+60 vDelayM 0x80 Range0-999999999, %DelayM%
 Gui, 4:Add, Text, yp+25 xp-180, %t_Lang043%:
@@ -6853,23 +6858,9 @@ ToggleButtonIcon(OSPlay, TestRunIcon)
 return
 
 PlayStart:
-Pause, Off
-If (ListCount = 0)
-	return
 Gui, +OwnDialogs
 Gui, Submit, NoHide
-GoSub, SaveData
-GoSub, ActivateHotkeys
-If (ActiveKeys = "Error")
-{
-	MsgBox, 16, %d_Lang007%, %d_Lang032%
-	return
-}
-If !ActiveKeys
-{
-	TrayTip, %AppName%, %d_Lang009%,,3
-	return
-}
+GoSub, PlayActive
 If !DontShowPb
 {
 	Gui 26:+LastFoundExist
@@ -6884,11 +6875,32 @@ If !DontShowPb
 	Gui, 26:Add, Button, -Wrap Default y+10 W90 H25 gTipClose, %c_Lang020%
 	Gui, 26:Show,, %AppName%
 }
-StopIt := 0
-Tooltip
-WinMinimize, ahk_id %PMCWinID%
+If (HideMainWin)
+	GoSub, ShowHide
+Else
+	WinMinimize, ahk_id %PMCWinID%
 If (OnScCtrl)
 	GoSub, ShowControls
+return
+
+PlayActive:
+Pause, Off
+If (ListCount = 0)
+	return
+GoSub, SaveData
+GoSub, ActivateHotkeys
+If (ActiveKeys = "Error")
+{
+	MsgBox, 16, %d_Lang007%, %d_Lang032%
+	return
+}
+If !ActiveKeys
+{
+	TrayTip, %AppName%, %d_Lang009%,,3
+	return
+}
+StopIt := 0
+Tooltip
 return
 
 OnScControls:
@@ -6932,13 +6944,17 @@ Gui, 28:Add, Checkbox, Checked%ShowProgBar% ys-1 x+4 W25 H25 hwndOSProgB vOSProg
 Gui, 28:Add, Text, W2 H22 ys+3 x+5 0x11
 Gui, 28:Font
 Gui, 28:Font, s10, Webdings
-Gui, 28:Add, Checkbox, Checked%SlowKeyOn% ys-1 x+4 W30 H20 hwndOSSlow vOSSlow gSlowKeyToggle 0x1000
+Gui, 28:Add, Checkbox, Checked%SlowKeyOn% ys-1 x+4 W30 H16 hwndOSSlow vOSSlow gSlowKeyToggle 0x1000
 	ILButton(OSSlow, SlowDownIcon[1] ":" SlowDownIcon[2])
-Gui, 28:Add, Checkbox, Checked%FastKeyOn% ys-1 x+4 W30 H20 vOSFast gFastKeyToggle 0x1000 0xC00, 8
-Gui, 28:Add, Slider, ym+20 xp-40 W100 H10 vOSTrans gTrans NoTicks Thick20 Range25-255, %OSTrans%
-Gui, 28:Add, Button, ym-1 xp+75 W16 H16 vToggleTB gToggleTB, 1
-Gui, 28:Add, Progress, ym+25 xm W290 H5 vOSCProg c20D000
-Gui, 28:Show, %OSCPos% H35 W400 NoActivate, %AppName%
+Gui, 28:Add, Checkbox, Checked%FastKeyOn% ys-1 x+0 W30 H16 vOSFast gFastKeyToggle 0x1000 0xC00, 8
+Gui, 28:Add, Slider, ym+16 xp-40 W115 H10 vOSTrans gTrans NoTicks Thick20 ToolTip Range25-255, %OSTrans%
+Gui, 28:Add, Button, ym-1 xp+75 W20 H16 vToggleTB gToggleTB, 1
+Gui, 28:Add, Button, yp x+0 W20 H16 vToggleMW gShowHide, 2
+Gui, 28:Add, Progress, ym+25 xm W125 H10 vOSCProg c20D000
+Gui, 28:Font
+Gui, 28:Font, s6 Bold
+Gui, 28:Add, Text, yp x+0 W170 r1 vOSCProgTip
+Gui, 28:Show, % OSCPos (ShowProgBar ? "H40" : "H30") " W415 NoActivate", %AppName%
 WinSet, Transparent, %OSTrans%, ahk_id %PMCOSC%
 return
 
@@ -6957,6 +6973,7 @@ If (ListCount%OSHK% = 0)
 	return
 If !(PlayOSOn)
 {
+	ActivateHotkeys(0, 0, 1, 1)
 	StopIt := 0
 	Tooltip
 	ToggleButtonIcon(OSPlay, PauseIconB)
@@ -6994,10 +7011,9 @@ return
 ProgBarToggle:
 Gui, 28:Submit, NoHide
 ShowProgBar := OSProgB
-If !ShowProgBar
-	Progress, Off
-Else If (CurrentRange)
-	Progress, %ProgBarOptions% R0-%CurrentRange% FM6,, %AppName%
+GuiControl,, OSCProg
+GuiControl,, OSCProgTip
+GoSub, 28GuiSize
 return
 
 Trans:
@@ -9337,7 +9353,7 @@ If WinExist("ahk_id" PMCWinID)
 Else
 {
 	Menu, Tray, Rename, %y_Lang002%, %y_Lang001%
-	Gui, 1:Show, NA, %AppName% v%CurrentVersion% %CurrentFileName%
+	Gui, 1:Show,, %AppName% v%CurrentVersion% %CurrentFileName%
 	GoSub, GuiSize
 }
 return
@@ -9417,6 +9433,7 @@ RelKey := "CapsLock"
 DelayG := 0
 OnScCtrl := 1
 ShowStep := 1
+HideMainWin := 1
 DontShowPb := 0
 DontShowRec := 0
 DontShowAdm := 0
@@ -9447,7 +9464,7 @@ SpeedUp := 2
 SpeedDn := 2
 MouseReturn := 0
 ShowProgBar := 1
-ProgBarOptions := "B w300 h20 x0 y0 zx0 zy0 cb20D000"
+ShowBarOnStart := 0
 DrawButton := "RButton"
 OnRelease := 1
 OnEnter := 0
@@ -9497,15 +9514,17 @@ ShowLoopIfMark := 1
 ShowActIdent := 1
 LoopLVColor := 0xFFFF00
 IfLVColor := 0x0000FF
-OSCPos := "X5 Y25"
+OSCPos := "X0 Y0"
 OSTrans := 255
-OSCaption := 1
+OSCaption := 0
 Gui 28:+LastFoundExist
 IfWinExist
 {
     WinSet, Transparent, %OSTrans%, ahk_id %PMCOSC%
 	GuiControl, 28:, OSTrans, 255
-	Gui, 28:+Caption
+	GuiControl, 28:, OSProgB, 1
+	Gui, 28:-Caption
+	Gui, 28:Show, % OSCPos (ShowProgBar ? "H40" : "H30") " W415 NoActivate", %AppName%
 }
 GuiControl, 1:, CoordTip, CoordMode: %CoordMouse%
 GuiControl, 1:, ContextTip, #IfWin: %IfDirectContext%
@@ -9592,6 +9611,7 @@ IniWrite, %ClearNewList%, %IniFilePath%, Options, ClearNewList
 IniWrite, %DelayG%, %IniFilePath%, Options, DelayG
 IniWrite, %OnScCtrl%, %IniFilePath%, Options, OnScCtrl
 IniWrite, %ShowStep%, %IniFilePath%, Options, ShowStep
+IniWrite, %HideMainWin%, %IniFilePath%, Options, HideMainWin
 IniWrite, %DontShowPb%, %IniFilePath%, Options, DontShowPb
 IniWrite, %DontShowRec%, %IniFilePath%, Options, DontShowRec
 IniWrite, %DontShowAdm%, %IniFilePath%, Options, DontShowAdm
@@ -9621,7 +9641,7 @@ IniWrite, %SpeedUp%, %IniFilePath%, Options, SpeedUp
 IniWrite, %SpeedDn%, %IniFilePath%, Options, SpeedDn
 IniWrite, %MouseReturn%, %IniFilePath%, Options, MouseReturn
 IniWrite, %ShowProgBar%, %IniFilePath%, Options, ShowProgBar
-IniWrite, %ProgBarOptions%, %IniFilePath%, Options, ProgBarOptions
+IniWrite, %ShowBarOnStart%, %IniFilePath%, Options, ShowBarOnStart
 IniWrite, %DrawButton%, %IniFilePath%, Options, DrawButton
 IniWrite, %OnRelease%, %IniFilePath%, Options, OnRelease
 IniWrite, %OnEnter%, %IniFilePath%, Options, OnEnter
@@ -9944,7 +9964,7 @@ GuiControl, Move, LVPrev, % "W" pGuiWidth "H" pGuiHeight-60
 return
 
 28GuiSize:
-Gui, 28:Show, H35 W400 NoActivate, %AppName%
+Gui, 28:Show, % (ShowProgBar ? "H40" : "H30") " W415 NoActivate", %AppName%
 return
 
 GuiSize:
@@ -9952,41 +9972,42 @@ If A_EventInfo = 1
 	return
 
 ; GuiWidth := A_GuiWidth, GuiHeight := A_GuiHeight
-WinGetPos,,, GuiWidth, GuiHeight, ahk_id %PMCWinID%
+; WinGetPos,,, GuiWidth, GuiHeight, ahk_id %PMCWinID%
+GuiGetSize(GuiWidth, GuiHeight)
 
 Gui, 1:Default
-GuiControl, Move, InputList%A_List%, % "W" GuiWidth-56 "H" GuiHeight-184
-GuiControl, Move, Order, % "x" GuiWidth-42
-GuiControl, Move, Cut, % "x" GuiWidth-42
-GuiControl, Move, Copy, % "x" GuiWidth-42
-GuiControl, Move, Paste, % "x" GuiWidth-42
-GuiControl, Move, Remove, % "x" GuiWidth-42
-GuiControl, Move, Separator5, % "x" GuiWidth-42
-GuiControl, Move, Undo, % "x" GuiWidth-42
-GuiControl, Move, Redo, % "x" GuiWidth-42
-GuiControl, Move, Separator6, % "x" GuiWidth-42
-GuiControl, Move, Duplicate, % "x" GuiWidth-42
-GuiControl, Move, CopyTo, % "x" GuiWidth-42
-GuiControl, Move, Separator7, % "x" GuiWidth-42
-GuiControl, Move, FindReplace, % "x" GuiWidth-42
-GuiControl, Move, EditComm, % "x" GuiWidth-42
-GuiControl, Move, Repeat, % "y" GuiHeight-82
-GuiControl, Move, Rept, % "y" GuiHeight-85
-GuiControl, Move, TimesM, % "y" GuiHeight-85
-GuiControl, Move, DelayT, % "y" GuiHeight-82
-GuiControl, Move, Delay, % "y" GuiHeight-85
-GuiControl, Move, DelayG, % "y" GuiHeight-85
-GuiControl, Move, ApplyT, % "y" GuiHeight-86
-GuiControl, Move, ApplyI, % "y" GuiHeight-86
-GuiControl, Move, sInput, % "y" GuiHeight-85
-GuiControl, Move, ApplyL, % "y" GuiHeight-86
-GuiControl, Move, EditButton, % "y" GuiHeight-86
-GuiControl, Move, Separator1, % "y" GuiHeight-85
-GuiControl, Move, Separator2, % "y" GuiHeight-85
-GuiControl, Move, Separator3, % "y" GuiHeight-85
-GuiControl, Move, Separator4, % "y" GuiHeight-85
-GuiControl, Move, CoordTip, % "y" GuiHeight-72
-GuiControl, Move, ContextTip, % "y" GuiHeight-88
+GuiControl, Move, InputList%A_List%, % "W" GuiWidth-40 "H" GuiHeight-126
+GuiControl, Move, Order, % "x" GuiWidth-26
+GuiControl, Move, Cut, % "x" GuiWidth-26
+GuiControl, Move, Copy, % "x" GuiWidth-26
+GuiControl, Move, Paste, % "x" GuiWidth-26
+GuiControl, Move, Remove, % "x" GuiWidth-26
+GuiControl, Move, Separator5, % "x" GuiWidth-26
+GuiControl, Move, Undo, % "x" GuiWidth-26
+GuiControl, Move, Redo, % "x" GuiWidth-26
+GuiControl, Move, Separator6, % "x" GuiWidth-26
+GuiControl, Move, Duplicate, % "x" GuiWidth-26
+GuiControl, Move, CopyTo, % "x" GuiWidth-26
+GuiControl, Move, Separator7, % "x" GuiWidth-26
+GuiControl, Move, FindReplace, % "x" GuiWidth-26
+GuiControl, Move, EditComm, % "x" GuiWidth-26
+GuiControl, Move, Repeat, % "y" GuiHeight-23
+GuiControl, Move, Rept, % "y" GuiHeight-27
+GuiControl, Move, TimesM, % "y" GuiHeight-27
+GuiControl, Move, DelayT, % "y" GuiHeight-23
+GuiControl, Move, Delay, % "y" GuiHeight-27
+GuiControl, Move, DelayG, % "y" GuiHeight-27
+GuiControl, Move, ApplyT, % "y" GuiHeight-28
+GuiControl, Move, ApplyI, % "y" GuiHeight-28
+GuiControl, Move, sInput, % "y" GuiHeight-27
+GuiControl, Move, ApplyL, % "y" GuiHeight-28
+GuiControl, Move, EditButton, % "y" GuiHeight-28
+GuiControl, Move, Separator1, % "y" GuiHeight-27
+GuiControl, Move, Separator2, % "y" GuiHeight-27
+GuiControl, Move, Separator3, % "y" GuiHeight-27
+GuiControl, Move, Separator4, % "y" GuiHeight-27
+GuiControl, Move, CoordTip, % "y" GuiHeight-14
+GuiControl, Move, ContextTip, % "y" GuiHeight-30
 return
 
 ;##### Subroutines: Substitution #####
@@ -10173,7 +10194,7 @@ Menu, Tray, Add, %r_Lang004%, RunTimer
 Menu, Tray, Add
 Menu, Tray, Add, %w_Lang002%, Preview
 Menu, Tray, Add, %f_Lang010%, ListVars
-Menu, Tray, Add, %w_Lang020%, OnScControls
+Menu, Tray, Add, %y_Lang003%, OnScControls
 Menu, Tray, Add, %w_Lang014%, CheckHkOn
 Menu, Tray, Add
 Menu, Tray, Add, %f_Lang001%, New
@@ -10412,7 +10433,7 @@ GuiControl,, StartB, %w_Lang005%
 GuiControl,, RepeatT, %w_Lang011% (%t_Lang004%):
 GuiControl,, Capt, %w_Lang012%
 GuiControl,, OnScCtrl, %w_Lang020%
-GuiControl,, ShowStep, %w_Lang013%
+GuiControl,, HideMainWin, %w_Lang013%
 GuiControl,, KeepHkOn, %w_Lang014%
 GuiControl,, Repeat, %w_Lang015%:
 GuiControl,, DelayT, %w_Lang016%

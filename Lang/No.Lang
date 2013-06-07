@@ -5,11 +5,11 @@
 ; Main Menu		
 	m_Lang001 =	&Fil
 	m_Lang002 =	&Sett
-	m_Lang003 =	V&elg
+	m_Lang003 =	&Velg
 	m_Lang004 =	&Redigere
 	m_Lang005 =	&Makro
-	m_Lang006 =	Al&ternativer
-	m_Lang007 =	Spr&åk
+	m_Lang006 =	&Alternativer
+	m_Lang007 =	S&pråk
 	m_Lang008 =	F&oreta en donasjon
 	m_Lang009 =	&Hjelp
 		
@@ -102,6 +102,7 @@
 ; Tray Menu		
 	y_Lang001 =	Skjul vindu
 	y_Lang002 =	Vis Window
+	y_Lang003 =	Vis / skjul Controls
 		
 ; Main Window		
 	w_Lang001 =	Eksportere
@@ -113,11 +114,11 @@
 	w_Lang007 =	Man.
 	w_Lang008 =	Stopp
 	w_Lang009 =	&Win
-	w_Lang010 =	&Pause
+	w_Lang010 =	Pa&use
 	w_Lang011 =	&Loop
 	w_Lang012 =	&Capture Keys
-	w_Lang013 =	&Vis informasjon
-	w_Lang014 =	&Alltid aktiv
+	w_Lang013 =	S&kjul vindu
+	w_Lang014 =	All&tid aktiv
 	w_Lang015 =	Gjentar
 	w_Lang016 =	Delay (ms):
 	w_Lang017 =	Påfør
@@ -374,7 +375,7 @@
 	t_Lang082 =	Uttalelser
 	t_Lang083 =	Vis Innrykk for Loops og uttalelser
 	t_Lang084 =	(Dobbeltklikk på kolonnen Handling header aktivere / deaktivere)
-	t_Lang085 =	Vise Progress Bar
+	t_Lang085 =	Displayet Controls bar ved oppstart
 	t_Lang086 =	Søke etter funksjoner. Vennligst vent...
 	t_Lang087 =	Inkluder eksterne filer
 	t_Lang088 =	Lag EXE-fil
@@ -389,6 +390,7 @@
 	t_Lang097 =	Trykk på en knapp på joysticken
 	t_Lang098 =	Joystick
 	t_Lang099 =	Button
+	t_Lang100 =	Vis informasjon
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Åpent
@@ -600,7 +602,7 @@
 	CopyTo_TT =	Kopier til...
 	Capt_TT =	Fange tastetrykk i dette vinduet
 	OnScCtrl_TT =	Vise Kontrollene Verktøylinjen
-	ShowStep_TT =	Vis informasjon
+	ShowStep_TT =	Vise boblehjelp
 	ApplyT_TT =	Påfør
 	ApplyI_TT =	Påfør
 	ApplyL_TT =	Sett fra boksen (Insert)
@@ -637,6 +639,7 @@
 	OSSlow_TT =	Tregere
 	OSTrans_TT =	opasitet
 	ToggleTB_TT =	Vis / skjul Title Bar
+	ToggleMW_TT =	Vis / skjul hovedvinduet
 	MRel_TT =	
 	(LTrim	
 		Bevegelser i forhold til nåværende posisjon.

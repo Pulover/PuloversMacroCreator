@@ -3,14 +3,14 @@
 		; Finnish
 		
 ; Main Menu		
-	m_Lang001 =	T&iedosto
+	m_Lang001 =	&Tiedosto
 	m_Lang002 =	&Lisätä
 	m_Lang003 =	&Valita
 	m_Lang004 =	&Muokata
-	m_Lang005 =	Ma&kro
-	m_Lang006 =	Valinnat
-	m_Lang007 =	Ki&eli
-	m_Lang008 =	Tee la&hjoitus
+	m_Lang005 =	M&akro
+	m_Lang006 =	Val&innat
+	m_Lang007 =	&Kieli
+	m_Lang008 =	T&ee lahjoitus
 	m_Lang009 =	A&pua
 		
 ; File Submenu		
@@ -102,6 +102,7 @@
 ; Tray Menu		
 	y_Lang001 =	Piilota ikkuna
 	y_Lang002 =	Näytä ikkuna
+	y_Lang003 =	Näytä / piilota säätimet
 		
 ; Main Window		
 	w_Lang001 =	Vienti
@@ -113,11 +114,11 @@
 	w_Lang007 =	Mies.
 	w_Lang008 =	Lopettaa
 	w_Lang009 =	&Win
-	w_Lang010 =	&Tauko
+	w_Lang010 =	Ta&uko
 	w_Lang011 =	&Silmukka
 	w_Lang012 =	&Capture Keys
-	w_Lang013 =	&Näytä tiedot
-	w_Lang014 =	&Aina aktiivinen
+	w_Lang013 =	Piil&ota ikkuna
+	w_Lang014 =	Ai&na aktiivinen
 	w_Lang015 =	Toista
 	w_Lang016 =	Delay (ms):
 	w_Lang017 =	Käyttää
@@ -374,7 +375,7 @@
 	t_Lang082 =	Lausunnot
 	t_Lang083 =	Näytä Sisennys silmukoita ja tilinpäätös
 	t_Lang084 =	(Tuplaklikkaa Action sarakeotsikkoa päälle / pois)
-	t_Lang085 =	Näyttö Progress Bar
+	t_Lang085 =	Näytön säädöt bar käynnistettäessä
 	t_Lang086 =	Haetaan toiminnot. Odota...
 	t_Lang087 =	Sisällytä Ulkoiset tiedostot
 	t_Lang088 =	Luo EXE tiedosto
@@ -389,6 +390,7 @@
 	t_Lang097 =	Paina painiketta joystick
 	t_Lang098 =	Peliohjain
 	t_Lang099 =	Nappi
+	t_Lang100 =	Näytä tiedot
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Avata
@@ -600,7 +602,7 @@
 	CopyTo_TT =	Kopioida...
 	Capt_TT =	Capture näppäinpainallukset tässä ikkunassa
 	OnScCtrl_TT =	Näyttösäädöt Työkalurivi
-	ShowStep_TT =	Näytä tiedot
+	ShowStep_TT =	Näyttö selitevihjeet
 	ApplyT_TT =	Käyttää
 	ApplyI_TT =	Käyttää
 	ApplyL_TT =	Insertin laatikko (Insert)
@@ -637,6 +639,7 @@
 	OSSlow_TT =	Hidastaa
 	OSTrans_TT =	sameus
 	ToggleTB_TT =	Näytä / Piilota Otsikko Bar
+	ToggleMW_TT =	Näytä / Piilota pääikkuna
 	MRel_TT =	
 	(LTrim	
 		Liikkeet suhteessa nykyiseen asentoon.

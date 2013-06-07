@@ -4,13 +4,13 @@
 		
 ; Main Menu		
 	m_Lang001 =	&Datei
-	m_Lang002 =	Ei&nfügen
-	m_Lang003 =	W&ählen
+	m_Lang002 =	&Einfügen
+	m_Lang003 =	&Wählen
 	m_Lang004 =	&Bearbeiten
-	m_Lang005 =	M&akro
+	m_Lang005 =	&Makro
 	m_Lang006 =	&Optionen
-	m_Lang007 =	Sp&rache
-	m_Lang008 =	Ma&chen Sie eine Spende
+	m_Lang007 =	&Sprache
+	m_Lang008 =	M&achen Sie eine Spende
 	m_Lang009 =	&Hilfe
 		
 ; File Submenu		
@@ -102,6 +102,7 @@
 ; Tray Menu		
 	y_Lang001 =	Fenster schließen
 	y_Lang002 =	Zeige Fenster
+	y_Lang003 =	Show / Hide Bedienelemente
 		
 ; Main Window		
 	w_Lang001 =	Exportieren
@@ -114,10 +115,10 @@
 	w_Lang008 =	Stoppen
 	w_Lang009 =	&Win
 	w_Lang010 =	&Pause
-	w_Lang011 =	&Schleife
-	w_Lang012 =	&Erfassen Keys
-	w_Lang013 =	&Info anzeigen
-	w_Lang014 =	I&mmer aktiv
+	w_Lang011 =	S&chleife
+	w_Lang012 =	E&rfassen Keys
+	w_Lang013 =	&Fenster schließen
+	w_Lang014 =	&Immer aktiv
 	w_Lang015 =	Wiederholen
 	w_Lang016 =	Delay (ms):
 	w_Lang017 =	Anwenden
@@ -374,7 +375,7 @@
 	t_Lang082 =	Statements
 	t_Lang083 =	Zeige Einrückung für Loops und Statements
 	t_Lang084 =	(Doppelklicken Sie auf die Spalte Aktion Header aktivieren / deaktivieren)
-	t_Lang085 =	Anzeige Progress Bar
+	t_Lang085 =	Display-Steuerelemente bar auf Start-up
 	t_Lang086 =	Auf der Suche nach Funktionen. Bitte warten...
 	t_Lang087 =	Fügen Sie externe Dateien
 	t_Lang088 =	Erstellen EXE-Datei
@@ -389,6 +390,7 @@
 	t_Lang097 =	Drücken Sie eine Taste auf dem Joystick
 	t_Lang098 =	Joystick
 	t_Lang099 =	Taste
+	t_Lang100 =	Info anzeigen
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Öffnen
@@ -600,7 +602,7 @@
 	CopyTo_TT =	Kopieren...
 	Capt_TT =	Erfassen Tastendrücke in diesem Fenster
 	OnScCtrl_TT =	Display-Steuerelemente Symbolleiste
-	ShowStep_TT =	Info anzeigen
+	ShowStep_TT =	Anzeige Ballon-Tipps
 	ApplyT_TT =	Anwenden
 	ApplyI_TT =	Anwenden
 	ApplyL_TT =	Einfügen aus Box (Insert)
@@ -637,6 +639,7 @@
 	OSSlow_TT =	Verlangsamen
 	OSTrans_TT =	Deckkraft
 	ToggleTB_TT =	Show / Hide Title Bar
+	ToggleMW_TT =	Show / Hide Hauptfenster
 	MRel_TT =	
 	(LTrim	
 		Bewegungen relativ zur aktuellen Position.

@@ -6,8 +6,8 @@
 	m_Lang001 =	&Fájl
 	m_Lang002 =	&Beszúrása
 	m_Lang003 =	&Választ
-	m_Lang004 =	S&zerkeszt
-	m_Lang005 =	M&acro
+	m_Lang004 =	&Szerkeszt
+	m_Lang005 =	&Macro
 	m_Lang006 =	&Opciók
 	m_Lang007 =	&Nyelv
 	m_Lang008 =	&Készíts egy adomány
@@ -102,6 +102,7 @@
 ; Tray Menu		
 	y_Lang001 =	Ablak elrejtése
 	y_Lang002 =	Ablak megjelenítése
+	y_Lang003 =	Megjelenítése / elrejtése Controls
 		
 ; Main Window		
 	w_Lang001 =	Export
@@ -113,10 +114,10 @@
 	w_Lang007 =	Man.
 	w_Lang008 =	Megáll
 	w_Lang009 =	&Win
-	w_Lang010 =	&Szünet
+	w_Lang010 =	S&zünet
 	w_Lang011 =	&Hurok
 	w_Lang012 =	&Capture Keys
-	w_Lang013 =	&Megjelenítés Info
+	w_Lang013 =	&Ablak elrejtése
 	w_Lang014 =	M&indig aktív
 	w_Lang015 =	Ismétlés
 	w_Lang016 =	Delay (ms):
@@ -374,7 +375,7 @@
 	t_Lang082 =	Nyilatkozatok
 	t_Lang083 =	Megjelenítés Behúzás a hurkok és nyilatkozatok
 	t_Lang084 =	(Kattintson duplán a Művelet oszlop fejlécében engedélyezés / letiltás)
-	t_Lang085 =	Kijelző Progress Bar
+	t_Lang085 =	Kijelző Controls bár induló
 	t_Lang086 =	Keresése funkciók. Kérem várjon...
 	t_Lang087 =	Beleértve a külső fájlok
 	t_Lang088 =	EXE fájl létrehozása
@@ -389,6 +390,7 @@
 	t_Lang097 =	Nyomja meg a gombot a joystick
 	t_Lang098 =	Joystick
 	t_Lang099 =	Gomb
+	t_Lang100 =	Megjelenítés Info
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Nyitva
@@ -600,7 +602,7 @@
 	CopyTo_TT =	Másolás...
 	Capt_TT =	Capture gombot megnyomja ebben az ablakban
 	OnScCtrl_TT =	Megjelenítheti A Vezérlő Eszköztár
-	ShowStep_TT =	Megjelenítés Info
+	ShowStep_TT =	Kijelző buborékértesítések
 	ApplyT_TT =	Alkalmaz
 	ApplyI_TT =	Alkalmaz
 	ApplyL_TT =	Beszúrás box (Insert)
@@ -637,6 +639,7 @@
 	OSSlow_TT =	Lelassít
 	OSTrans_TT =	átlátszatlanság
 	ToggleTB_TT =	Megjelenítése / elrejtése címsor
+	ToggleMW_TT =	Megjelenítése / elrejtése főablak
 	MRel_TT =	
 	(LTrim	
 		Mozgásokat képest aktuális pozícióját.

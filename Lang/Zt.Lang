@@ -102,6 +102,7 @@
 ; Tray Menu		
 	y_Lang001 =	隱藏窗口
 	y_Lang002 =	櫥窗
+	y_Lang003 =	顯示/隱藏控制
 		
 ; Main Window		
 	w_Lang001 =	出口
@@ -116,7 +117,7 @@
 	w_Lang010 =	暫停
 	w_Lang011 =	循環
 	w_Lang012 =	擷取鍵
-	w_Lang013 =	顯示信息
+	w_Lang013 =	隱藏窗口
 	w_Lang014 =	始終活躍
 	w_Lang015 =	重複
 	w_Lang016 =	延時（ms）：
@@ -374,7 +375,7 @@
 	t_Lang082 =	報表
 	t_Lang083 =	循環和報表顯示縮進
 	t_Lang084 =	（雙擊操作“列頭啟用/禁用）
-	t_Lang085 =	顯示進度條
+	t_Lang085 =	顯示控制欄上啟動
 	t_Lang086 =	搜索功能。請稍候...
 	t_Lang087 =	包括外部文件
 	t_Lang088 =	創建EXE文件
@@ -389,6 +390,7 @@
 	t_Lang097 =	按下操縱桿上的按鈕
 	t_Lang098 =	搖桿
 	t_Lang099 =	鈕
+	t_Lang100 =	顯示信息
 		
 ; Messages & Dialogs		
 	d_Lang001 =	打開
@@ -600,7 +602,7 @@
 	CopyTo_TT =	複製到...
 	Capt_TT =	在此窗口中捕捉按鍵
 	OnScCtrl_TT =	顯示控件工具欄
-	ShowStep_TT =	顯示信息
+	ShowStep_TT =	顯示氣球提示
 	ApplyT_TT =	申請
 	ApplyI_TT =	申請
 	ApplyL_TT =	插入盒（插入）
@@ -637,6 +639,7 @@
 	OSSlow_TT =	減緩
 	OSTrans_TT =	透明度
 	ToggleTB_TT =	顯示/隱藏標題欄
+	ToggleMW_TT =	顯示/隱藏主窗口
 	MRel_TT =	
 	(LTrim	
 		相對於當前位置的變動。

@@ -102,6 +102,7 @@
 ; Tray Menu		
 	y_Lang001 =	창 숨기기
 	y_Lang002 =	창 표시
+	y_Lang003 =	컨트롤 표시 / 숨기기
 		
 ; Main Window		
 	w_Lang001 =	수출
@@ -116,7 +117,7 @@
 	w_Lang010 =	중지
 	w_Lang011 =	고리
 	w_Lang012 =	키를 캡처
-	w_Lang013 =	정보 표시
+	w_Lang013 =	창 숨기기
 	w_Lang014 =	항상 활성
 	w_Lang015 =	반복
 	w_Lang016 =	지연 (밀리 초):
@@ -374,7 +375,7 @@
 	t_Lang082 =	명세서
 	t_Lang083 =	루프와 문장에 들여 쓰기 표시
 	t_Lang084 =	(두 번 클릭 동작 열 머리글을 활성화 / 비활성화)
-	t_Lang085 =	진행률 표시 줄을 표시합니다
+	t_Lang085 =	디스플레이 스타트 업에 줄을 제어
 	t_Lang086 =	함수 검색. 잠시 기다려주세요...
 	t_Lang087 =	외부 파일을 포함
 	t_Lang088 =	EXE 파일을 만들기
@@ -389,6 +390,7 @@
 	t_Lang097 =	조이스틱 버튼을 눌러
 	t_Lang098 =	조종간
 	t_Lang099 =	단추
+	t_Lang100 =	정보 표시
 		
 ; Messages & Dialogs		
 	d_Lang001 =	열기
@@ -600,7 +602,7 @@
 	CopyTo_TT =	에 복사...
 	Capt_TT =	이 창에서 키 누름을 캡처
 	OnScCtrl_TT =	도구 모음 컨트롤을 표시
-	ShowStep_TT =	정보 표시
+	ShowStep_TT =	풍선 팁을 표시
 	ApplyT_TT =	신청
 	ApplyI_TT =	신청
 	ApplyL_TT =	상자 삽입 (Insert)
@@ -637,6 +639,7 @@
 	OSSlow_TT =	천천히,
 	OSTrans_TT =	불투명
 	ToggleTB_TT =	표시 / 숨기기 제목 표시 줄
+	ToggleMW_TT =	메인 창 표시 / 숨기기
 	MRel_TT =	
 	(LTrim	
 		현재 위치를 기준으로 움직임.

@@ -102,6 +102,7 @@
 ; Tray Menu		
 	y_Lang001 =	隐藏窗口
 	y_Lang002 =	橱窗
+	y_Lang003 =	显示/隐藏控制
 		
 ; Main Window		
 	w_Lang001 =	出口
@@ -116,7 +117,7 @@
 	w_Lang010 =	暂停
 	w_Lang011 =	循环
 	w_Lang012 =	捕获键
-	w_Lang013 =	显示信息
+	w_Lang013 =	隐藏窗口
 	w_Lang014 =	始终处于活动状态
 	w_Lang015 =	重复
 	w_Lang016 =	延时（ms）：
@@ -374,7 +375,7 @@
 	t_Lang082 =	报表
 	t_Lang083 =	显示缩进循环和报表
 	t_Lang084 =	（双击操作“列头启用/禁用）
-	t_Lang085 =	显示进度条
+	t_Lang085 =	显示控制栏上启动
 	t_Lang086 =	搜索功能。请稍候...
 	t_Lang087 =	包括外部文件
 	t_Lang088 =	创建EXE文件
@@ -389,6 +390,7 @@
 	t_Lang097 =	按下操纵杆上的按钮
 	t_Lang098 =	摇杆
 	t_Lang099 =	钮
+	t_Lang100 =	显示信息
 		
 ; Messages & Dialogs		
 	d_Lang001 =	打开
@@ -600,7 +602,7 @@
 	CopyTo_TT =	复制到...
 	Capt_TT =	在此窗口中捕捉按键
 	OnScCtrl_TT =	显示控件工具栏
-	ShowStep_TT =	显示信息
+	ShowStep_TT =	显示气球提示
 	ApplyT_TT =	申请
 	ApplyI_TT =	申请
 	ApplyL_TT =	从框中插入（Insert）
@@ -637,6 +639,7 @@
 	OSSlow_TT =	减缓
 	OSTrans_TT =	不透明
 	ToggleTB_TT =	显示/隐藏标题栏
+	ToggleMW_TT =	显示/隐藏主窗口
 	MRel_TT =	
 	(LTrim	
 		相对于当前位置的变动。

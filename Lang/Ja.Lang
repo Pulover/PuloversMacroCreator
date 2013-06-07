@@ -102,6 +102,7 @@
 ; Tray Menu		
 	y_Lang001 =	ウィンドウを非表示
 	y_Lang002 =	ウィンドウを表示する
+	y_Lang003 =	コントロールの表示/非表示
 		
 ; Main Window		
 	w_Lang001 =	エクスポート
@@ -116,7 +117,7 @@
 	w_Lang010 =	休止
 	w_Lang011 =	ループ
 	w_Lang012 =	キーをキャプチャ
-	w_Lang013 =	情報を表示する
+	w_Lang013 =	ウィンドウを非表示
 	w_Lang014 =	常にアクティブ
 	w_Lang015 =	繰り返し
 	w_Lang016 =	遅延（ms）：
@@ -374,7 +375,7 @@
 	t_Lang082 =	文
 	t_Lang083 =	ループおよびステートメントのインデントを表示
 	t_Lang084 =	（ダブルクリックして、[アクション]列ヘッダーが有効/無効）
-	t_Lang085 =	プログレスバーを表示
+	t_Lang085 =	ディスプレイには、起動のバーを制御
 	t_Lang086 =	関数の検索。しばらくお待ちください...
 	t_Lang087 =	外部ファイルをインクルード
 	t_Lang088 =	EXEファイルを作成します。
@@ -389,6 +390,7 @@
 	t_Lang097 =	ジョイスティックのボタンを押し
 	t_Lang098 =	ジョイスティック
 	t_Lang099 =	ボタン
+	t_Lang100 =	情報を表示する
 		
 ; Messages & Dialogs		
 	d_Lang001 =	開く
@@ -600,7 +602,7 @@
 	CopyTo_TT =	にコピーして...
 	Capt_TT =	このウィンドウでのキー押下を捕捉する
 	OnScCtrl_TT =	ツールバーコントロールを表示
-	ShowStep_TT =	情報を表示する
+	ShowStep_TT =	バルーンヒントを表示します
 	ApplyT_TT =	適用する
 	ApplyI_TT =	適用する
 	ApplyL_TT =	ボックスから挿入（Insert）
@@ -637,6 +639,7 @@
 	OSSlow_TT =	速度を落とす
 	OSTrans_TT =	不透明
 	ToggleTB_TT =	表示/非表示のタイトルバー
+	ToggleMW_TT =	メインウィンドウの表示/非表示
 	MRel_TT =	
 	(LTrim	
 		現在位置からの相対的な動き。

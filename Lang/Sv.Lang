@@ -3,12 +3,12 @@
 		; Swedish
 		
 ; Main Menu		
-	m_Lang001 =	A&rkiv
+	m_Lang001 =	&Arkiv
 	m_Lang002 =	&Infoga
-	m_Lang003 =	V&älj
-	m_Lang004 =	R&edigera
+	m_Lang003 =	&Välj
+	m_Lang004 =	&Redigera
 	m_Lang005 =	&Makro
-	m_Lang006 =	Al&ternativ
+	m_Lang006 =	A&lternativ
 	m_Lang007 =	&Språk
 	m_Lang008 =	&Gör en donation
 	m_Lang009 =	&Hjälp
@@ -102,6 +102,7 @@
 ; Tray Menu		
 	y_Lang001 =	Dölj fönster
 	y_Lang002 =	Visa fönster
+	y_Lang003 =	Visa / dölj Kontroller
 		
 ; Main Window		
 	w_Lang001 =	Exportera
@@ -114,10 +115,10 @@
 	w_Lang008 =	Stopp
 	w_Lang009 =	&Win
 	w_Lang010 =	&Paus
-	w_Lang011 =	&Loop
+	w_Lang011 =	L&oop
 	w_Lang012 =	&Fånga Keys
-	w_Lang013 =	&Visa info
-	w_Lang014 =	&Alltid aktiv
+	w_Lang013 =	&Dölj fönster
+	w_Lang014 =	All&tid aktiv
 	w_Lang015 =	Upprepa
 	w_Lang016 =	Fördröjning (ms):
 	w_Lang017 =	Ansök
@@ -374,7 +375,7 @@
 	t_Lang082 =	Uttalanden
 	t_Lang083 =	Visa Indrag för loopar och uttalanden
 	t_Lang084 =	(Dubbelklicka på Action kolumnrubriken aktivera / avaktivera)
-	t_Lang085 =	Visa Progress Indikator
+	t_Lang085 =	Display Kontroller bar vid uppstart
 	t_Lang086 =	Söka efter funktioner. Var god vänta...
 	t_Lang087 =	Inkludera externa filer
 	t_Lang088 =	Skapa EXE-fil
@@ -389,6 +390,7 @@
 	t_Lang097 =	Tryck på en knapp på joysticken
 	t_Lang098 =	Joystick
 	t_Lang099 =	Knapp
+	t_Lang100 =	Visa info
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Öppet
@@ -600,7 +602,7 @@
 	CopyTo_TT =	Kopiera till...
 	Capt_TT =	Fånga tangenttryckningar i detta fönster
 	OnScCtrl_TT =	Näyttösäädöt Työkalurivi
-	ShowStep_TT =	Visa info
+	ShowStep_TT =	Visa tipsbubblor
 	ApplyT_TT =	Ansök
 	ApplyI_TT =	Ansök
 	ApplyL_TT =	Infoga från rutan (Insert)
@@ -637,6 +639,7 @@
 	OSSlow_TT =	Sakta Ner
 	OSTrans_TT =	opacitet
 	ToggleTB_TT =	Visa / dölj Titel Bar
+	ToggleMW_TT =	Visa / dölj huvudfönstret
 	MRel_TT =	
 	(LTrim	
 		Rörelser i förhållande till nuvarande position.

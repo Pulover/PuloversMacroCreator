@@ -9,8 +9,8 @@
 	m_Lang004 =	&Redigeren
 	m_Lang005 =	&Macro
 	m_Lang006 =	&Opties
-	m_Lang007 =	Taal
-	m_Lang008 =	Maak &een donatie
+	m_Lang007 =	&Taal
+	m_Lang008 =	M&aak een donatie
 	m_Lang009 =	&Help
 		
 ; File Submenu		
@@ -102,6 +102,7 @@
 ; Tray Menu		
 	y_Lang001 =	Venster te verbergen
 	y_Lang002 =	Toon venster
+	y_Lang003 =	Show / Hide Controls
 		
 ; Main Window		
 	w_Lang001 =	Exporteren
@@ -116,8 +117,8 @@
 	w_Lang010 =	&Pauze
 	w_Lang011 =	&Lus
 	w_Lang012 =	&Capture Keys
-	w_Lang013 =	&Toon info
-	w_Lang014 =	&Altijd Actief
+	w_Lang013 =	&Venster te verbergen
+	w_Lang014 =	Alti&jd Actief
 	w_Lang015 =	Herhalen
 	w_Lang016 =	Delay (ms):
 	w_Lang017 =	Van toepassing zijn
@@ -374,7 +375,7 @@
 	t_Lang082 =	Verklaringen
 	t_Lang083 =	Toon Inspringen voor Loops en Verklaringen
 	t_Lang084 =	(Dubbelklik op de actie kolomkop inschakelen / uitschakelen)
-	t_Lang085 =	Weergave Progress Bar
+	t_Lang085 =	Beeldscherm Controls bar op start-up
 	t_Lang086 =	Zoeken naar functies. Even geduld aub...
 	t_Lang087 =	Inclusief externe bestanden
 	t_Lang088 =	Maak EXE File
@@ -389,6 +390,7 @@
 	t_Lang097 =	Druk op een knop op de joystick
 	t_Lang098 =	Bedieningshendel
 	t_Lang099 =	Knop
+	t_Lang100 =	Toon info
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Open
@@ -600,7 +602,7 @@
 	CopyTo_TT =	Kopiëren naar...
 	Capt_TT =	Capture-toets drukt in dit venster
 	OnScCtrl_TT =	Weer Controles Werkbalk
-	ShowStep_TT =	Toon info
+	ShowStep_TT =	Weer ballontips
 	ApplyT_TT =	Van toepassing zijn
 	ApplyI_TT =	Van toepassing zijn
 	ApplyL_TT =	Invoegen van Box (Insert)
@@ -637,6 +639,7 @@
 	OSSlow_TT =	Langzamer gaan
 	OSTrans_TT =	ondoorzichtigheid
 	ToggleTB_TT =	Show / Hide Title Bar
+	ToggleMW_TT =	Show / Hide hoofdvenster
 	MRel_TT =	
 	(LTrim	
 		Bewegingen ten opzichte van de huidige positie.

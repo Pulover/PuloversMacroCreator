@@ -5,7 +5,7 @@
 ; Main Menu		
 	m_Lang001 =	&File
 	m_Lang002 =	&Indsæt
-	m_Lang003 =	V&ælg
+	m_Lang003 =	&Vælg
 	m_Lang004 =	&Rediger
 	m_Lang005 =	&Makro
 	m_Lang006 =	I&ndstillinger
@@ -102,6 +102,7 @@
 ; Tray Menu		
 	y_Lang001 =	Skjul vindue
 	y_Lang002 =	Vis vindue
+	y_Lang003 =	Vis / skjul Controls
 		
 ; Main Window		
 	w_Lang001 =	Eksport
@@ -116,7 +117,7 @@
 	w_Lang010 =	&Pause
 	w_Lang011 =	&Loop
 	w_Lang012 =	&Capture Keys
-	w_Lang013 =	&Vis Info
+	w_Lang013 =	S&kjul vindue
 	w_Lang014 =	&Altid aktiv
 	w_Lang015 =	Gentag
 	w_Lang016 =	Forsinkelse (ms):
@@ -374,7 +375,7 @@
 	t_Lang082 =	Erklæringer
 	t_Lang083 =	Vis Indrykning for-løkker og Udtalelser
 	t_Lang084 =	(Dobbeltklik på aktion kolonneoverskriften aktivere / deaktivere)
-	t_Lang085 =	Display Progress Bar
+	t_Lang085 =	Display Controls bar på opstart
 	t_Lang086 =	Søgning efter funktioner. Vent venligst...
 	t_Lang087 =	Medtag eksterne filer
 	t_Lang088 =	Opret EXE fil
@@ -389,6 +390,7 @@
 	t_Lang097 =	Tryk på en knap på joysticket
 	t_Lang098 =	Joystick
 	t_Lang099 =	Knap
+	t_Lang100 =	Vis Info
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Åbent
@@ -600,7 +602,7 @@
 	CopyTo_TT =	Kopier til...
 	Capt_TT =	Capture tastetryk i dette vindue
 	OnScCtrl_TT =	Vise Kontroller Værktøjslinje
-	ShowStep_TT =	Vis Info
+	ShowStep_TT =	Vis ballontip
 	ApplyT_TT =	Anvend
 	ApplyI_TT =	Anvend
 	ApplyL_TT =	Indsæt fra kassen (Insert)
@@ -637,6 +639,7 @@
 	OSSlow_TT =	Sæt farten ned
 	OSTrans_TT =	opacitet
 	ToggleTB_TT =	Vis / skjul Titel Bar
+	ToggleMW_TT =	Vis / skjul hovedvinduet
 	MRel_TT =	
 	(LTrim	
 		Bevægelser i forhold til den aktuelle position.

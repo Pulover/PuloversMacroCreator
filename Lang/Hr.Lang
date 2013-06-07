@@ -4,14 +4,14 @@
 		
 ; Main Menu		
 	m_Lang001 =	&File
-	m_Lang002 =	U&metnuti
-	m_Lang003 =	O&dabrati
+	m_Lang002 =	&Umetnuti
+	m_Lang003 =	&Odabrati
 	m_Lang004 =	U&redi
-	m_Lang005 =	M&akro
+	m_Lang005 =	&Makro
 	m_Lang006 =	Mo&gućnosti
 	m_Lang007 =	&Jezik
 	m_Lang008 =	&Napravite donacije
-	m_Lang009 =	Pomo&ći
+	m_Lang009 =	&Pomoći
 		
 ; File Submenu		
 	f_Lang001 =	&Novi
@@ -102,6 +102,7 @@
 ; Tray Menu		
 	y_Lang001 =	Sakrij Prozor
 	y_Lang002 =	Pokaži prozor
+	y_Lang003 =	Show / Hide Kontrole
 		
 ; Main Window		
 	w_Lang001 =	Izvoz
@@ -113,11 +114,11 @@
 	w_Lang007 =	Čovjek
 	w_Lang008 =	Stop
 	w_Lang009 =	&Win
-	w_Lang010 =	&Pauza
+	w_Lang010 =	P&auza
 	w_Lang011 =	P&etlja
 	w_Lang012 =	&Hvatanje Keys
-	w_Lang013 =	P&okaži Info
-	w_Lang014 =	&Uvijek je aktivna
+	w_Lang013 =	&Sakrij Prozor
+	w_Lang014 =	U&vijek je aktivna
 	w_Lang015 =	Ponovite
 	w_Lang016 =	Kašnjenje (ms):
 	w_Lang017 =	Primijeniti
@@ -374,7 +375,7 @@
 	t_Lang082 =	Izjave
 	t_Lang083 =	Pokaži Utiskivanje je Loops i izvješća
 	t_Lang084 =	(Dvaput kliknite zaglavlje stupca Akcija uključiti / isključiti)
-	t_Lang085 =	Prikaz Progress Bar
+	t_Lang085 =	Display Kontrole bar na start-up
 	t_Lang086 =	U potrazi za funkcije. Molimo pričekajte...
 	t_Lang087 =	Uključiti vanjske datoteke
 	t_Lang088 =	Stvaranje EXE datoteke
@@ -389,6 +390,7 @@
 	t_Lang097 =	Pritisnite tipku na palici
 	t_Lang098 =	Džojstik
 	t_Lang099 =	Dugme
+	t_Lang100 =	Pokaži Info
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Otvoreno
@@ -600,7 +602,7 @@
 	CopyTo_TT =	Kopirajte se...
 	Capt_TT =	Hvatanje pritiskanje tipki u ovom prozoru
 	OnScCtrl_TT =	Prikazali Kontrole Traci
-	ShowStep_TT =	Pokaži Info
+	ShowStep_TT =	Prikaz balon savjete
 	ApplyT_TT =	Primijeniti
 	ApplyI_TT =	Primijeniti
 	ApplyL_TT =	Stavite na kutiji (Insert)
@@ -637,6 +639,7 @@
 	OSSlow_TT =	Usporiti
 	OSTrans_TT =	neprozirnost
 	ToggleTB_TT =	Show / Hide Naslov Bar
+	ToggleMW_TT =	Show / Hide glavni prozor
 	MRel_TT =	
 	(LTrim	
 		Promjene u odnosu na trenutnu poziciju.
