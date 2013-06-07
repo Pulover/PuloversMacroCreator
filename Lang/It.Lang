@@ -74,7 +74,7 @@
 	r_lang005 =	Agg&iungi Macro
 	r_lang006 =	&Chiudere Macro
 	r_lang007 =	Ta&sti di scelta rapida sensibili al contesto
-	r_lang008 =	&Mostra controlli
+	r_lang008 =	&Mostra / Nascondi controlli
 	r_lang009 =	Gi&oca da riga selezionata
 	r_lang010 =	Gioca &fino a riga selezionata
 	r_lang011 =	Gioca rig&he selezionate
@@ -124,6 +124,15 @@
 	w_Lang018 =	Inserire
 	w_Lang019 =	Modifica
 	w_Lang020 =	Mostra controlli
+	w_Lang021 =	Non fare nulla
+	w_Lang022 =	Chiudi applicazione
+	w_Lang023 =	Chiudere
+	w_Lang024 =	Spegnere (forza)
+	w_Lang025 =	Riavviare
+	w_Lang026 =	Log off
+	w_Lang027 =	Hibernate
+	w_Lang028 =	Sospendere
+	w_Lang029 =	Blocco del computer
 		
 ; Command Windows		
 	c_Lang001 =	Mouse
@@ -566,6 +575,7 @@
 	AbortKey_TT =	Backspace per cancellare
 	JoyKey_TT =	Premere un pulsante sul joystick
 	PauseKey_TT =	Mette in pausa l'esecuzione invece di fermarsi
+	OnFinish_TT =	Quando termina la riproduzione...
 	Win1_TT =	Aggiungere la chiave di Windows come modificatore
 	JoyHK_TT =	Joystick
 	ReptC_TT =	0 = infinito
@@ -577,6 +587,8 @@
 	IfDirB_TT =	Tasti di scelta rapida Fare funzionare a seconda del tipo`ndi finestra che è attiva o esiste (Ctrl+H)
 	KeepHKOn_TT =	Tasti di scelta rapida Tenere sempre attivo
 	A_List_TT =	Selezionare Macro (Ctrl+1~0)
+	OSHK_TT =	Selezionare Macro
+	OSHKEd_TT =	Selezionare Macro
 	Duplicate_TT =	Duplica le righe selezionate (Ctrl+D)
 	Order_TT =	Spostare le righe selezionate (Ctrl+PageUp / Ctrl+PageDown)
 	Cut_TT =	Tagliare righe selezionate (Ctrl+X)
@@ -624,6 +636,7 @@
 	OSFast_TT =	Accelerare
 	OSSlow_TT =	Rallentare
 	OSTrans_TT =	opacità
+	ToggleTB_TT =	Mostra / Nascondi barra del titolo
 	MRel_TT =	
 	(LTrim	
 		Movimenti relativi alla posizione corrente.
@@ -655,7 +668,12 @@
 		il contenuto degli appunti).
 	)	
 	SetText_TT =	Cambia il testo di un controllo.
-	RelKey_TT =	Documenti di movimenti relativi e Clic la pressione del tasto.
+	RelKey_TT =	
+	(LTrim	
+		Registra i movimenti del mouse e clic come offset
+		dalla posizione precedente quando si terrà.
+	)	
+	ToggleC_TT =	Attivare la registrazione relativo quando la chiave è stato acceso.
 	Relative_TT =	Le coordinate sono relative alla finestra attiva.
 	Screen_TT =	Le coordinate sono relative al desktop (schermo intero).
 	IncFolders_TT =	

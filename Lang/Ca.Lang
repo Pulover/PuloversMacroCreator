@@ -74,7 +74,7 @@
 	r_lang005 =	A&fegir Macro
 	r_lang006 =	Ta&ncar Macro
 	r_lang007 =	T&ecles d'accés directe sensibles al context
-	r_lang008 =	&Barra de control
+	r_lang008 =	&Mostra / Amaga controls
 	r_lang009 =	J&uga de fila seleccionada
 	r_lang010 =	Juga f&ins que la Columna seleccionat
 	r_lang011 =	Juga fi&les seleccionades
@@ -124,6 +124,15 @@
 	w_Lang018 =	Insereix
 	w_Lang019 =	Edita
 	w_Lang020 =	Barra de control
+	w_Lang021 =	No fer res
+	w_Lang022 =	Tancar l'aplicació
+	w_Lang023 =	Tancar
+	w_Lang024 =	Apagueu (força)
+	w_Lang025 =	Reiniciar
+	w_Lang026 =	Sortir del sistema
+	w_Lang027 =	Hiberna
+	w_Lang028 =	Suspendre
+	w_Lang029 =	Bloca equip
 		
 ; Command Windows		
 	c_Lang001 =	Ratolí
@@ -566,6 +575,7 @@
 	AbortKey_TT =	Retrocés per esborrar
 	JoyKey_TT =	Premeu un botó a la palanca de comandament
 	PauseKey_TT =	Fa una pausa en l'execució en comptes d'aturar
+	OnFinish_TT =	Quan finalitzi la reproducció...
 	Win1_TT =	Afegir la tecla Windows com a modificador
 	JoyHK_TT =	Palanca de comandament
 	ReptC_TT =	0 = infinit
@@ -577,6 +587,8 @@
 	IfDirB_TT =	Feu Hotkeys funcionen depenent del `nType de la finestra que està activa o no existeix (Ctrl+H)
 	KeepHKOn_TT =	Mantingui Hotkeys Sempre Activat
 	A_List_TT =	Seleccioneu Macro (Ctrl+1~0)
+	OSHK_TT =	Seleccioneu Macro
+	OSHKEd_TT =	Seleccioneu Macro
 	Duplicate_TT =	Duplicar files seleccionades (Ctrl+D)
 	Order_TT =	Mou les files seleccionades (Ctrl+RePàg / Ctrl+AvPàg)
 	Cut_TT =	Tallar files seleccionades (Ctrl+X)
@@ -624,6 +636,7 @@
 	OSFast_TT =	Accelerar
 	OSSlow_TT =	Alentir
 	OSTrans_TT =	opacitat
+	ToggleTB_TT =	Mostra / Oculta la barra de títol
 	MRel_TT =	
 	(LTrim	
 		Moviments relatius a la posició actual.
@@ -655,7 +668,12 @@
 		el contingut del porta-retalls).
 	)	
 	SetText_TT =	Canvia el text d'un control.
-	RelKey_TT =	Registres moviments relatius i Clicks mentre pressiona.
+	RelKey_TT =	
+	(LTrim	
+		Registres Els moviments del ratolí i els clics com
+		compensacions de posició anterior quan es manté.
+	)	
+	ToggleC_TT =	Activa gravació relativa a l'estat de la tecla.
 	Relative_TT =	Les coordenades són relatives a la finestra activa.
 	Screen_TT =	Les coordenades són relatives a l'escriptori (pantalla completa).
 	IncFolders_TT =	

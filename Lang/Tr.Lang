@@ -74,7 +74,7 @@
 	r_lang005 =	Mak&ro Ekle
 	r_lang006 =	Ka&pat Makro
 	r_lang007 =	&Bağlam Duyarlı Hotkeys
-	r_lang008 =	K&ontrolleri göster
+	r_lang008 =	K&ontroller gizle / göster
 	r_lang009 =	&Seçilen satırdaki oyna
 	r_lang010 =	S&eçili satır kadar oyna
 	r_lang011 =	Se&çilen Satırlar oyna
@@ -124,6 +124,15 @@
 	w_Lang018 =	Eklemek
 	w_Lang019 =	Düzenle
 	w_Lang020 =	Kontrolleri göster
+	w_Lang021 =	Hiçbir şey yapma
+	w_Lang022 =	Yakın başvuru
+	w_Lang023 =	Kapatmak
+	w_Lang024 =	Kapatın (kuvvet)
+	w_Lang025 =	Yeniden başlatın
+	w_Lang026 =	Oturumu kapatın
+	w_Lang027 =	Kış uykusuna yatmak
+	w_Lang028 =	Askıya almak
+	w_Lang029 =	Bilgisayar kilit
 		
 ; Command Windows		
 	c_Lang001 =	Fare
@@ -566,6 +575,7 @@
 	AbortKey_TT =	Temizlemek için Backspace
 	JoyKey_TT =	Joystick üzerindeki bir düğmeye basın
 	PauseKey_TT =	Yürütme yerine durdurma Duraklamadan
+	OnFinish_TT =	Ne zaman çalma bitirir...
 	Win1_TT =	Değiştirici olarak Windows tuşu ekle
 	JoyHK_TT =	Joystick
 	ReptC_TT =	0 = sonsuz
@@ -577,6 +587,8 @@
 	IfDirB_TT =	Hotkeys aktif veya bulunduğu pencerenin`ntip (Ctrl+H) bağlı olarak çalışmasını sağlayın
 	KeepHKOn_TT =	Daima Aktif Hotkeys tutun
 	A_List_TT =	Makro Seçin (Ctrl+1~0)
+	OSHK_TT =	Makro Seçin
+	OSHKEd_TT =	Makro Seçin
 	Duplicate_TT =	Seçili Satırlar çoğaltın (Ctrl+D)
 	Order_TT =	Seçili Satırlar Taşı (Ctrl+PageUp / Ctrl+PageUp)
 	Cut_TT =	Seçili Satırlar (Ctrl+X) Cut
@@ -624,6 +636,7 @@
 	OSFast_TT =	Hızlandırma
 	OSSlow_TT =	Yavaşlatmak
 	OSTrans_TT =	donukluk
+	ToggleTB_TT =	Göster / Gizle Başlık Çubuğu
 	MRel_TT =	
 	(LTrim	
 		Geçerli konuma göre Hareketleri.
@@ -655,7 +668,12 @@
 		Pano içeriği).
 	)	
 	SetText_TT =	Bir denetimin metni değiştirir.
-	RelKey_TT =	Kayıt göreli Hareketleri ve Tıklanma basılı iken.
+	RelKey_TT =	
+	(LTrim	
+		Düzenlenen önceki pozisyondan uzaklıklar
+		gibi kayıtları Fare hareketleri ve tıklamaları.
+	)	
+	ToggleC_TT =	Önemli devlet açıkken Bağıl Kayıt etkinleştirin.
 	Relative_TT =	Koordinatlar etkin pencere göredir.
 	Screen_TT =	Koordinatlar masaüstü (tüm ekranı) göredir.
 	IncFolders_TT =	

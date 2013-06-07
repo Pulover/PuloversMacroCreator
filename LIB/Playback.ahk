@@ -19,6 +19,8 @@
 	CurrentRange := m_ListCount
 	If (ShowProgBar = 1)
 		Progress, %ProgBarOptions% R0-%m_ListCount% FM6,, % AppName ": Macro" Macro_On " [Loop: 0 / " o_TimesG[Macro_On] " | Line: 0 / " m_ListCount "]"
+	GuiControl, 28:+Range0-%m_ListCount%, OSCProg
+	GuiControl, 28:, OSCProg, 0
 	Loop
 	{
 		mLoopIndex := A_Index, LoopIndex := A_Index
@@ -40,6 +42,7 @@
 					break 2
 				If (ShowProgBar = 1)
 					Progress, %A_Index%,, % AppName ": Macro" Macro_On " [Loop: " mLoopIndex "/" o_TimesG[Macro_On] " | Line: " A_Index "/" m_ListCount "]"
+				GuiControl, 28:, OSCProg, %A_Index%
 				If (Skip_Line > 0)
 				{
 					Skip_Line--
@@ -135,6 +138,7 @@
 						SkipIt--
 					If (ShowProgBar = 1)
 						Progress, %ProgBarOptions% R0-%m_ListCount% FM6,, % AppName ": Macro" Macro_On " [Loop: 0 / " o_TimesG[Macro_On] " | Line: 0 / " m_ListCount "]"
+					GuiControl, 28:+Range0-%m_ListCount%, OSCProg
 					Gui, ListView, InputList%Macro_On%
 					continue
 				}
@@ -279,6 +283,7 @@
 						Macro_On := aHK_Or, m_ListCount := ListCount%Macro_On%
 						If (ShowProgBar = 1)
 							Progress, %ProgBarOptions% R0-%m_ListCount% FM6,, % AppName ": Macro" Macro_On " [Loop: 0 / " o_TimesG[Macro_On] " | Line: 0 / " m_ListCount "]"
+						GuiControl, 28:+Range0-%m_ListCount%, OSCProg
 						continue
 					}
 				}
@@ -423,7 +428,9 @@
 		Menu, Tray, Default, %w_Lang005%
 	}
 	If (CloseAfterPlay)
-		GoSub, Exit
+		ExitApp
+	If (OnFinishCode > 1)
+		GoSub, OnFinishAction
 }
 
 LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC)
@@ -453,6 +460,7 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC)
 					break
 				If (ShowProgBar = 1)
 					Progress, %A_Index%,, % AppName ": Macro" Macro_On " [Loop: " mainL "/" mainC " | Line: " A_Index "/" lCount " (In: " mLoopIndex "/" lcX ")]"
+				GuiControl, 28:, OSCProg, %A_Index%
 				If (Skip_Line > 0)
 				{
 					Skip_Line--

@@ -74,7 +74,7 @@
 	r_lang005 =	&Dodaj Macro
 	r_lang006 =	Zam&knij makro
 	r_lang007 =	K&ontekstowa Hotkeys
-	r_lang008 =	&Pokaż panel kontroli
+	r_lang008 =	&Pokaż / Ukryj formantów
 	r_lang009 =	Za&graj z wybranego wiersza
 	r_lang010 =	Gra&ć do wybranego wiersza
 	r_lang011 =	Od&twórz wybrane wiersze
@@ -124,6 +124,15 @@
 	w_Lang018 =	Wstawić
 	w_Lang019 =	Edytuj
 	w_Lang020 =	Pokaż panel kontroli
+	w_Lang021 =	Nic nie robić
+	w_Lang022 =	Close aplikacji
+	w_Lang023 =	Zamknąć
+	w_Lang024 =	Wyłącz (siła)
+	w_Lang025 =	Reboot
+	w_Lang026 =	Wyloguj się
+	w_Lang027 =	Zimować
+	w_Lang028 =	Zawiesić
+	w_Lang029 =	Blokowanie komputera
 		
 ; Command Windows		
 	c_Lang001 =	Mysz
@@ -566,6 +575,7 @@
 	AbortKey_TT =	Backspace, aby usunąć
 	JoyKey_TT =	Naciśnij przycisk na joysticku
 	PauseKey_TT =	Wstrzymuje wykonywanie zamiast zatrzymać
+	OnFinish_TT =	Po zakończeniu odtwarzania...
 	Win1_TT =	Dodaj klucz Windows jako modyfikator
 	JoyHK_TT =	Drążek sterowy
 	ReptC_TT =	0 = nieskończony
@@ -577,6 +587,8 @@
 	IfDirB_TT =	Producent Hotkeys pracy w zależności od rodzaju`nokna, które jest aktywne lub istnieje (Ctrl+H)
 	KeepHKOn_TT =	Zachowaj Hotkeys zawsze aktywna
 	A_List_TT =	Wybierz Makro (Ctrl+1~0)
+	OSHK_TT =	Wybierz Makro
+	OSHKEd_TT =	Wybierz Makro
 	Duplicate_TT =	Duplikat wybranych wierszy (Ctrl+D)
 	Order_TT =	Przenoszenie wybranych wierszy (Ctrl+PageUp / Ctrl+PageDown)
 	Cut_TT =	Wytnij wybranych wierszy (Ctrl+X)
@@ -624,6 +636,7 @@
 	OSFast_TT =	Przyśpieszyć
 	OSSlow_TT =	Zwolnij
 	OSTrans_TT =	nieprzezroczystość
+	ToggleTB_TT =	Pokaż / Ukryj pasek tytułu
 	MRel_TT =	
 	(LTrim	
 		Zmiany w stosunku do aktualnej pozycji.
@@ -655,7 +668,12 @@
 		zawartość schowka).
 	)	
 	SetText_TT =	Zmienia tekst kontrolę.
-	RelKey_TT =	Records względne ruchy i kliknięcia, a naciśnięty.
+	RelKey_TT =	
+	(LTrim	
+		Rekordy ruchy myszy i kliknięcia jak odsunięcia
+		
+	)	
+	ToggleC_TT =	Aktywuj krewny klawisz nagrywania, gdy stan jest włączony.
 	Relative_TT =	Współrzędne są w stosunku do aktywnego okna.
 	Screen_TT =	Współrzędne są w stosunku do pulpitu (ekranu cały).
 	IncFolders_TT =	

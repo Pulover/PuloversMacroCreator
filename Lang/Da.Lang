@@ -74,7 +74,7 @@
 	r_lang005 =	Ti&lføj Makro
 	r_lang006 =	L&uk Makro
 	r_lang007 =	&Kontekstafhængig genvejstaster
-	r_lang008 =	&Vis kontrolelementer
+	r_lang008 =	&Vis / skjul Controls
 	r_lang009 =	Af&spil fra valgte række
 	r_lang010 =	S&pille, indtil valgte række
 	r_lang011 =	Spil val&gte rækker
@@ -124,6 +124,15 @@
 	w_Lang018 =	Indsæt
 	w_Lang019 =	Rediger
 	w_Lang020 =	Vis kontrolelementer
+	w_Lang021 =	Gør intet
+	w_Lang022 =	Luk ansøgning
+	w_Lang023 =	Luk ned
+	w_Lang024 =	Luk ned (force)
+	w_Lang025 =	Genstart
+	w_Lang026 =	Log af
+	w_Lang027 =	Dvale
+	w_Lang028 =	Suspender
+	w_Lang029 =	Lås computer
 		
 ; Command Windows		
 	c_Lang001 =	Mus
@@ -566,6 +575,7 @@
 	AbortKey_TT =	Backspace for at slette
 	JoyKey_TT =	Tryk på en knap på joysticket
 	PauseKey_TT =	Pauser udførelse stedet for at stoppe
+	OnFinish_TT =	Når afspilningen er færdig...
 	Win1_TT =	Tilføj på Windows-tasten som modifier
 	JoyHK_TT =	Joystick
 	ReptC_TT =	0 = uendelig
@@ -577,6 +587,8 @@
 	IfDirB_TT =	Gør genvejstaster arbejde afhængigt`ntype vindue, der er aktiv eller eksisterer (Ctrl+H)
 	KeepHKOn_TT =	Hold Hotkeys altid aktiveret
 	A_List_TT =	Vælge Macro (Ctrl+1~0)
+	OSHK_TT =	Vælge Macro
+	OSHKEd_TT =	Vælge Macro
 	Duplicate_TT =	Kopier de valgte rækker (Ctrl+D)
 	Order_TT =	Flyt valgte rækker (Ctrl+PageUp / Ctrl+PageDown)
 	Cut_TT =	Klip markerede rækker (Ctrl+X)
@@ -624,6 +636,7 @@
 	OSFast_TT =	Fremskynde
 	OSSlow_TT =	Sæt farten ned
 	OSTrans_TT =	opacitet
+	ToggleTB_TT =	Vis / skjul Titel Bar
 	MRel_TT =	
 	(LTrim	
 		Bevægelser i forhold til den aktuelle position.
@@ -655,7 +668,12 @@
 		indholdet af klippebordet).
 	)	
 	SetText_TT =	Ændrer teksten til en kontrol.
-	RelKey_TT =	Records relative bevægelser og klik, mens trykket.
+	RelKey_TT =	
+	(LTrim	
+		Records musebevægelser og klik, som forskydninger
+		fra tidligere stilling, når det holdes.
+	)	
+	ToggleC_TT =	Aktiver Relativ optagelse, når nøglen tilstand er tændt.
 	Relative_TT =	Koordinater er relative til det aktive vindue.
 	Screen_TT =	Koordinater er relative til skrivebordet (hele skærmen).
 	IncFolders_TT =	

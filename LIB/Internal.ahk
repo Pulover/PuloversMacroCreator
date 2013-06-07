@@ -104,6 +104,18 @@ ActiveGui(Hwnd)
 	return 0
 }
 
+GuiGetSize(ByRef W, ByRef H, GuiID=1)
+{
+	Gui %GuiID%:+LastFoundExist
+	IfWinExist
+	{
+		VarSetCapacity( rect, 16, 0 )
+		DllCall("GetClientRect", uint, MyGuiHWND := WinExist(), uint, &rect )
+		W := NumGet( rect, 8, "int" )
+		H := NumGet( rect, 12, "int" )
+	}
+}
+
 HotkeyCtrlHasFocus()
 {
 	global GuiA := ActiveGui(WinActive("A"))

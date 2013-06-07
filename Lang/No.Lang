@@ -74,7 +74,7 @@
 	r_lang005 =	&Legg Makro
 	r_lang006 =	L&ukk Makro
 	r_lang007 =	&Kontekstsensitiv Hurtigtaster
-	r_lang008 =	&Vis kontroller
+	r_lang008 =	&Vis / skjul Controls
 	r_lang009 =	S&pille fra utvalgte rad
 	r_lang010 =	Sp&ille til valgt rad
 	r_lang011 =	Spill&e valgte rader
@@ -124,6 +124,15 @@
 	w_Lang018 =	Sett
 	w_Lang019 =	Redigere
 	w_Lang020 =	Vis kontroller
+	w_Lang021 =	Gjør ingenting
+	w_Lang022 =	Lukk programmet
+	w_Lang023 =	Slå
+	w_Lang024 =	Avslutt (kraft)
+	w_Lang025 =	Reboot
+	w_Lang026 =	Logg av
+	w_Lang027 =	Hibernate
+	w_Lang028 =	Suspendere
+	w_Lang029 =	Låse datamaskinen
 		
 ; Command Windows		
 	c_Lang001 =	Mus
@@ -566,6 +575,7 @@
 	AbortKey_TT =	Tilbaketasten for å fjerne
 	JoyKey_TT =	Trykk på en knapp på joysticken
 	PauseKey_TT =	Pauser gjennomføring stedet for å stoppe
+	OnFinish_TT =	Når avspillingen fullføres...
 	Win1_TT =	Legge til Windows-tasten som modifikator
 	JoyHK_TT =	Joystick
 	ReptC_TT =	0 = uendelig
@@ -577,6 +587,8 @@
 	IfDirB_TT =	Gjør Hurtigtaster virker, avhengig av`ntype vindu som er aktivt eller eksisterer (Ctrl+H)
 	KeepHKOn_TT =	Hold Hurtigtaster alltid aktivert
 	A_List_TT =	Velg Makro (Ctrl+1~0)
+	OSHK_TT =	Velg Makro
+	OSHKEd_TT =	Velg Makro
 	Duplicate_TT =	Dupliser valgte rader (Ctrl+D)
 	Order_TT =	Flytt valgte rader (Ctrl+PageUp / Ctrl+PageDown)
 	Cut_TT =	Skjær valgte rader (Ctrl+X)
@@ -624,6 +636,7 @@
 	OSFast_TT =	Fremskynde
 	OSSlow_TT =	Tregere
 	OSTrans_TT =	opasitet
+	ToggleTB_TT =	Vis / skjul Title Bar
 	MRel_TT =	
 	(LTrim	
 		Bevegelser i forhold til nåværende posisjon.
@@ -655,7 +668,12 @@
 		innholdet påutklippstavla).
 	)	
 	SetText_TT =	Endrer teksten i en kontroll.
-	RelKey_TT =	Records relative bevegelser og klikk, mens trykket.
+	RelKey_TT =	
+	(LTrim	
+		Records musebevegelser og klikk som forskyvninger
+		fra forrige posisjon når den holdes.
+	)	
+	ToggleC_TT =	Aktiver Relativ opptak når nøkkelen staten er på.
 	Relative_TT =	Koordinatene er relative til det aktive vinduet.
 	Screen_TT =	Koordinatene er relative til skrivebordet (hele skjermen).
 	IncFolders_TT =	

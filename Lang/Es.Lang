@@ -74,7 +74,7 @@
 	r_lang005 =	A&ñadir Macro
 	r_lang006 =	&Cerrar Macro
 	r_lang007 =	T&eclas de acceso directo sensibles al contexto
-	r_lang008 =	&Mostrar Controles
+	r_lang008 =	&Mostrar / Ocultar controles
 	r_lang009 =	Re&producir desde la fila seleccionada
 	r_lang010 =	Repr&oducir hasta la fila seleccionada
 	r_lang011 =	Repro&ducir las filas seleccionadas
@@ -124,6 +124,15 @@
 	w_Lang018 =	Insertar
 	w_Lang019 =	Editar
 	w_Lang020 =	Mostrar Controles
+	w_Lang021 =	No hacer nada
+	w_Lang022 =	Cerrar la aplicación
+	w_Lang023 =	Cerrar
+	w_Lang024 =	Apague (fuerza)
+	w_Lang025 =	Reiniciar
+	w_Lang026 =	Salir del sistema
+	w_Lang027 =	Hibernar
+	w_Lang028 =	Suspender
+	w_Lang029 =	Bloquear equipo
 		
 ; Command Windows		
 	c_Lang001 =	Ratón
@@ -566,6 +575,7 @@
 	AbortKey_TT =	Retroceso para borrar
 	JoyKey_TT =	Presione un botón en la palanca de mando
 	PauseKey_TT =	Detiene la ejecución en lugar de detenerse
+	OnFinish_TT =	Cuando finalice la reproducción...
 	Win1_TT =	Agregue la clave de Windows como modificador
 	JoyHK_TT =	Palanca de mando
 	ReptC_TT =	0 = infinito
@@ -577,6 +587,8 @@
 	IfDirB_TT =	Hacer Hotkeys funcionar dependiendo del tipo`nde ventana activa o existe (Ctrl+H)
 	KeepHKOn_TT =	Mantenga siempre se activa Teclas de acceso directo
 	A_List_TT =	Seleccione Macro (Ctrl+1~0)
+	OSHK_TT =	Seleccione Macro
+	OSHKEd_TT =	Seleccione Macro
 	Duplicate_TT =	Duplicar filas seleccionadas (Ctrl+D)
 	Order_TT =	Mover filas seleccionadas (Ctrl+RePág / Ctrl+AvPág)
 	Cut_TT =	Cortar filas seleccionadas (Ctrl+X)
@@ -624,6 +636,7 @@
 	OSFast_TT =	Acelerar
 	OSSlow_TT =	Reducir la velocidad de
 	OSTrans_TT =	opacidad
+	ToggleTB_TT =	Mostrar / Ocultar barra de título
 	MRel_TT =	
 	(LTrim	
 		Movimientos relativos a la posición actual.
@@ -655,7 +668,12 @@
 		el contenido del portapapeles).
 	)	
 	SetText_TT =	Cambia el texto de un control.
-	RelKey_TT =	Registra los movimientos relativos y Clicks mientras se presiona.
+	RelKey_TT =	
+	(LTrim	
+		Registros Los movimientos del ratón y los clics como compensaciones
+		de posición anterior cuando se mantiene.
+	)	
+	ToggleC_TT =	Activar grabación relativa al estado de la tecla.
 	Relative_TT =	Las coordenadas son relativas a la ventana activa.
 	Screen_TT =	Las coordenadas son relativas al escritorio (pantalla completa).
 	IncFolders_TT =	

@@ -193,6 +193,7 @@ IniRead, WinState, %IniFilePath%, WindowOptions, WinState, 0
 IniRead, ColSizes, %IniFilePath%, WindowOptions, ColSizes, 65,135,200,50,40,85,100,100,60
 IniRead, OSCPos, %IniFilePath%, WindowOptions, OSCPos, X5 Y25
 IniRead, OSTrans, %IniFilePath%, WindowOptions, OSTrans, 255
+IniRead, OSCaption, %IniFilePath%, WindowOptions, OSCaption, 1
 
 User_Vars := new ObjIni(UserVarsPath)
 User_Vars.Read()
@@ -556,7 +557,10 @@ Gui, Font
 Gui, Font, s7
 Gui, Add, Checkbox, -Wrap yp x+2 W25 H25 hwndJoyHK vJoyHK gSetJoyButton 0x1000
 	ILButton(JoyHK, JoyIcon[1] ":" JoyIcon[2])
-Gui, Add, Checkbox, -Wrap Checked%PauseKey% y+8 xs+195 vPauseKey gPauseKey R1, %w_Lang010%
+Gui, Add, Checkbox, -Wrap Checked%PauseKey% y+1 xs+193 W25 H25 hwndPauseKey vPauseKey gPauseKey 0x1000 ;, %w_Lang010%
+	ILButton(PauseKey, PauseIconB[1] ":" PauseIconB[2])
+Gui, Add, Checkbox, -Wrap yp x+2 W25 H25 hwndOnFinish vOnFinish gOnFinish 0x1000 ;, %w_Lang010%
+	ILButton(OnFinish, FinishIcon[1] ":" FinishIcon[2])
 Gui, Add, Text, W2 H55 ys+10 xs+250 0x11
 Gui, Add, Text, -Wrap yp+5 x+5 W90 H22 vRepeatT, %w_Lang011% (%t_Lang004%):
 Gui, Add, Edit, y+1 W90 R1 Number vReptC
@@ -821,7 +825,7 @@ If !DontShowRec
 If (ShowStep = 1)
 	Traytip, %AppName%, %RecKey% %d_Lang026%.`n%RecNewKey% %d_Lang030%.,,1
 If (OnScCtrl)
-	GoSub, OnScControls
+	GoSub, ShowControls
 return
 
 RemoveToolTip:
@@ -6884,34 +6888,43 @@ StopIt := 0
 Tooltip
 WinMinimize, ahk_id %PMCWinID%
 If (OnScCtrl)
-	GoSub, OnScControls
+	GoSub, ShowControls
 return
 
 OnScControls:
 Gui 28:+LastFoundExist
 IfWinExist
+{
+	GoSub, 28GuiClose
+	return
+}
+ShowControls:
+Gui 28:+LastFoundExist
+IfWinExist
 	return
 Gui, 28: +Toolwindow +AlwaysOntop +HwndPMCOSC +E0x08000000
+If !(OSCaption)
+	Gui, 28:-Caption
 Gui, 1:Default
 Gui, 28:Font, s7
-Gui, 28:Add, Edit, W40 H23 Number
+Gui, 28:Add, Edit, W40 H23 vOSHKEd Number
 Gui, 28:Add, UpDown, vOSHK gOSHK 0x80 Horz 16 Range1-%TabCount%, %A_List%
 Gui, 28:Font, Bold s7
-Gui, 28:Add, Button, ys-1 x+4 W25 H25 hwndOSPlay vOSPlay gOSPlay
+Gui, 28:Add, Button, ym-1 x+4 W25 H25 hwndOSPlay vOSPlay gOSPlay
 	ILButton(OSPlay, TestRunIcon[1] ":" TestRunIcon[2])
-Gui, 28:Add, Button, ys-1 x+0 W25 H25 hwndOSStop vOSStop gOSStop
+Gui, 28:Add, Button, ym-1 x+0 W25 H25 hwndOSStop vOSStop gOSStop
 	ILButton(OSStop, RecStopIcon[1] ":" RecStopIcon[2])
-Gui, 28:Add, Button, ys-1 x+0 W25 H25 hwndOSPlayOpt vOSPlayOpt gShowPlayMenu
+Gui, 28:Add, Button, ym-1 x+0 W25 H25 hwndOSPlayOpt vOSPlayOpt gShowPlayMenu
 	ILButton(OSPlayOpt, PlayOptIcon[1] ":" PlayOptIcon[2], 0, "Left")
 Gui, 28:Add, Text, W2 H22 ys+3 x+5 0x11
-Gui, 28:Add, Button, ys-1 x+4 W25 H25 hwndOSRec vOSRec gRecStart
+Gui, 28:Add, Button, ym-1 x+4 W25 H25 hwndOSRec vOSRec gRecStart
 	ILButton(OSRec, RecordIcon[1] ":" RecordIcon[2])
-Gui, 28:Add, Button, ys-1 x+0 W35 H25 hwndOSRecNew vOSRecNew gRecStartNew, +
+Gui, 28:Add, Button, ym-1 x+0 W35 H25 hwndOSRecNew vOSRecNew gRecStartNew, +
 	ILButton(OSRecNew, RecordIcon[1] ":" RecordIcon[2], 0, "Left")
-Gui, 28:Add, Button, ys-1 x+0 W25 H25 hwndOSRecOpt vOSRecOpt gShowRecMenu
+Gui, 28:Add, Button, ym-1 x+0 W25 H25 hwndOSRecOpt vOSRecOpt gShowRecMenu
 	ILButton(OSRecOpt, RecOptIcon[1] ":" RecOptIcon[2], 0, "Left")
 Gui, 28:Add, Text, W2 H22 ys+3 x+5 0x11
-Gui, 28:Add, Button, ys-1 x+4 W25 H25 hwndOSClear vOSClear gOSClear
+Gui, 28:Add, Button, ym-1 x+4 W25 H25 hwndOSClear vOSClear gOSClear
 	ILButton(OSClear, RemoveIcon[1] ":" RemoveIcon[2])
 Gui, 28:Add, Text, W2 H22 ys+3 x+5 0x11
 Gui, 28:Add, Checkbox, Checked%ShowProgBar% ys-1 x+4 W25 H25 hwndOSProgB vOSProgB gProgBarToggle 0x1000
@@ -6919,11 +6932,13 @@ Gui, 28:Add, Checkbox, Checked%ShowProgBar% ys-1 x+4 W25 H25 hwndOSProgB vOSProg
 Gui, 28:Add, Text, W2 H22 ys+3 x+5 0x11
 Gui, 28:Font
 Gui, 28:Font, s10, Webdings
-Gui, 28:Add, Checkbox, Checked%SlowKeyOn% ys-1 x+4 W35 H20 hwndOSSlow vOSSlow gSlowKeyToggle 0x1000
+Gui, 28:Add, Checkbox, Checked%SlowKeyOn% ys-1 x+4 W30 H20 hwndOSSlow vOSSlow gSlowKeyToggle 0x1000
 	ILButton(OSSlow, SlowDownIcon[1] ":" SlowDownIcon[2])
-Gui, 28:Add, Checkbox, Checked%FastKeyOn% ys-1 x+4 W35 H20 vOSFast gFastKeyToggle 0x1000 0xC00, 8
-Gui, 28:Add, Slider, ys+20 xp-40 W80 H10 vOSTrans gTrans NoTicks Thick20 Range25-255, %OSTrans%
-Gui, 28:Show, %OSCPos% H35 NoActivate, %AppName%
+Gui, 28:Add, Checkbox, Checked%FastKeyOn% ys-1 x+4 W30 H20 vOSFast gFastKeyToggle 0x1000 0xC00, 8
+Gui, 28:Add, Slider, ym+20 xp-40 W100 H10 vOSTrans gTrans NoTicks Thick20 Range25-255, %OSTrans%
+Gui, 28:Add, Button, ym-1 xp+75 W16 H16 vToggleTB gToggleTB, 1
+Gui, 28:Add, Progress, ym+25 xm W290 H5 vOSCProg c20D000
+Gui, 28:Show, %OSCPos% H35 W400 NoActivate, %AppName%
 WinSet, Transparent, %OSTrans%, ahk_id %PMCOSC%
 return
 
@@ -6995,6 +7010,13 @@ Gui, 28: +LastFound
 WinGetPos, OSX, OSY
 OSCPos := "X" OSX " Y" OSY
 Gui, 28:Destroy
+return
+
+ToggleTB:
+If (OSCaption := !OSCaption)
+	Gui, 28:+Caption
+Else
+	Gui, 28:-Caption
 return
 
 Capt:
@@ -9320,6 +9342,25 @@ Else
 }
 return
 
+OnFinishAction:
+If OnFinishCode =  2
+	ExitApp
+If OnFinishCode =  3
+	Shutdown, 1
+If OnFinishCode =  4
+	Shutdown, 5
+If OnFinishCode =  5
+	Shutdown, 2
+If OnFinishCode =  6
+	Shutdown, 0
+If OnFinishCode =  7
+	DllCall("PowrProf\SetSuspendState", "int", 1, "int", 0, "int", 0)
+If OnFinishCode =  8
+	DllCall("PowrProf\SetSuspendState", "int", 0, "int", 0, "int", 0)
+If OnFinishCode =  9
+	DllCall("LockWorkStation")
+return
+
 Exit:
 GuiClose:
 Gui, 1:Default
@@ -9458,6 +9499,14 @@ LoopLVColor := 0xFFFF00
 IfLVColor := 0x0000FF
 OSCPos := "X5 Y25"
 OSTrans := 255
+OSCaption := 1
+Gui 28:+LastFoundExist
+IfWinExist
+{
+    WinSet, Transparent, %OSTrans%, ahk_id %PMCOSC%
+	GuiControl, 28:, OSTrans, 255
+	Gui, 28:+Caption
+}
 GuiControl, 1:, CoordTip, CoordMode: %CoordMouse%
 GuiControl, 1:, ContextTip, #IfWin: %IfDirectContext%
 GuiControl, 1:, AbortKey, %AbortKey%
@@ -9628,6 +9677,7 @@ IniWrite, %WinState%, %IniFilePath%, WindowOptions, WinState
 IniWrite, %ColSizes%, %IniFilePath%, WindowOptions, ColSizes
 IniWrite, %OSCPos%, %IniFilePath%, WindowOptions, OSCPos
 IniWrite, %OSTrans%, %IniFilePath%, WindowOptions, OSTrans
+IniWrite, %OSCaption%, %IniFilePath%, WindowOptions, OSCaption
 return
 
 ;###########################################################
@@ -9891,6 +9941,10 @@ pGuiWidth := A_GuiWidth
 pGuiHeight := A_GuiHeight
 
 GuiControl, Move, LVPrev, % "W" pGuiWidth "H" pGuiHeight-60
+return
+
+28GuiSize:
+Gui, 28:Show, H35 W400 NoActivate, %AppName%
 return
 
 GuiSize:
@@ -10200,17 +10254,17 @@ return
 ; Playback / Recording options menu:
 
 ShowRecMenu:
-Menu, RecOptMenu, Add, %d_Lang019%, RecOptions
-Menu, RecOptMenu, Add, %t_Lang021%, RecOptions
-Menu, RecOptMenu, Add, %t_Lang023%, RecOptions
-Menu, RecOptMenu, Add, %t_Lang024%, RecOptions
-Menu, RecOptMenu, Add, %t_Lang025%, RecOptions
-Menu, RecOptMenu, Add, %t_Lang026%, RecOptions
-Menu, RecOptMenu, Add, %t_Lang027%, RecOptions
-Menu, RecOptMenu, Add, %t_Lang029%, RecOptions
-Menu, RecOptMenu, Add, %t_Lang030%, RecOptions
-Menu, RecOptMenu, Add, %t_Lang032%, RecOptions
-Menu, RecOptMenu, Add, %t_Lang031%, RecOptions
+Menu, RecOptMenu, Add, %d_Lang019%, RecOpt
+Menu, RecOptMenu, Add, %t_Lang021%, RecOpt
+Menu, RecOptMenu, Add, %t_Lang023%, RecOpt
+Menu, RecOptMenu, Add, %t_Lang024%, RecOpt
+Menu, RecOptMenu, Add, %t_Lang025%, RecOpt
+Menu, RecOptMenu, Add, %t_Lang026%, RecOpt
+Menu, RecOptMenu, Add, %t_Lang027%, RecOpt
+Menu, RecOptMenu, Add, %t_Lang029%, RecOpt
+Menu, RecOptMenu, Add, %t_Lang030%, RecOpt
+Menu, RecOptMenu, Add, %t_Lang032%, RecOpt
+Menu, RecOptMenu, Add, %t_Lang031%, RecOpt
 
 If (ClearNewList)
 	Menu, RecOptMenu, Check, %d_Lang019%
@@ -10239,26 +10293,26 @@ Menu, RecOptMenu, Show
 Menu, RecOptMenu, DeleteAll
 return
 
-RecOptions:
+RecOpt:
 ItemVar := RecOptChecks[A_ThisMenuItemPos]
 %ItemVar% := !%ItemVar%
 return
 
 ShowPlayMenu:
-Menu, SpeedUpMenu, Add, 2x, SpeedOptions
-Menu, SpeedUpMenu, Add, 4x, SpeedOptions
-Menu, SpeedUpMenu, Add, 8x, SpeedOptions
-Menu, SpeedUpMenu, Add, 16x, SpeedOptions
-Menu, SpeedUpMenu, Add, 32x, SpeedOptions
-Menu, SpeedDnMenu, Add, 2x, SpeedOptions
-Menu, SpeedDnMenu, Add, 4x, SpeedOptions
-Menu, SpeedDnMenu, Add, 8x, SpeedOptions
-Menu, SpeedDnMenu, Add, 16x, SpeedOptions
-Menu, SpeedDnMenu, Add, 32x, SpeedOptions
+Menu, SpeedUpMenu, Add, 2x, SpeedOpt
+Menu, SpeedUpMenu, Add, 4x, SpeedOpt
+Menu, SpeedUpMenu, Add, 8x, SpeedOpt
+Menu, SpeedUpMenu, Add, 16x, SpeedOpt
+Menu, SpeedUpMenu, Add, 32x, SpeedOpt
+Menu, SpeedDnMenu, Add, 2x, SpeedOpt
+Menu, SpeedDnMenu, Add, 4x, SpeedOpt
+Menu, SpeedDnMenu, Add, 8x, SpeedOpt
+Menu, SpeedDnMenu, Add, 16x, SpeedOpt
+Menu, SpeedDnMenu, Add, 32x, SpeedOpt
 Menu, PlayOptMenu, Add, %r_Lang009%, PlayFrom
 Menu, PlayOptMenu, Add, %r_Lang010%, PlayTo
 Menu, PlayOptMenu, Add, %r_Lang011%, PlaySel
-Menu, PlayOptMenu, Add, %t_Lang038%, PlayOptions
+Menu, PlayOptMenu, Add, %t_Lang038%, PlayOpt
 Menu, PlayOptMenu, Add, %t_Lang036%, :SpeedUpMenu
 Menu, PlayOptMenu, Add, %t_Lang037%, :SpeedDnMenu
 
@@ -10279,13 +10333,40 @@ Menu, SpeedUpMenu, DeleteAll
 Menu, SpeedDnMenu, DeleteAll
 return
 
-PlayOptions:
+PlayOpt:
 MouseReturn := !MouseReturn
 return
 
-SpeedOptions:
+SpeedOpt:
 ItemVar := SubStr(A_ThisMenu, 1, 7)
 %ItemVar% := RegExReplace(A_ThisMenuItem, "\D")
+return
+
+OnFinish:
+GuiControl,, OnFinish, %OnFinish%
+Menu, FinishOptMenu, Add, %w_Lang021%, FinishOpt
+Menu, FinishOptMenu, Add, %w_Lang022%, FinishOpt
+Menu, FinishOptMenu, Add, %w_Lang023%, FinishOpt
+Menu, FinishOptMenu, Add, %w_Lang024%, FinishOpt
+Menu, FinishOptMenu, Add, %w_Lang025%, FinishOpt
+Menu, FinishOptMenu, Add, %w_Lang026%, FinishOpt
+Menu, FinishOptMenu, Add, %w_Lang027%, FinishOpt
+Menu, FinishOptMenu, Add, %w_Lang028%, FinishOpt
+Menu, FinishOptMenu, Add, %w_Lang029%, FinishOpt
+
+Menu, FinishOptMenu, Check, % w_Lang02%OnFinishCode%
+
+Menu, FinishOptMenu, Show
+Menu, FinishOptMenu, DeleteAll
+return
+
+FinishOpt:
+If (A_ThisMenuItemPos = 1)
+	GuiControl,, OnFinish, 0
+Else
+	GuiControl,, OnFinish, 1
+OnFinishCode := A_ThisMenuItemPos
+Gui, Submit, NoHide
 return
 
 ;##### Languages: #####
@@ -10325,7 +10406,7 @@ GuiControl,, OptionsB, %w_Lang003%
 GuiControl,, AutoT, %w_Lang006%:
 GuiControl,, ManT, %w_Lang007%:
 GuiControl,, AbortT, %w_Lang008%:
-GuiControl,, PauseKey, %w_Lang010%
+; GuiControl,, PauseKey, %w_Lang010%
 GuiControl,, RecordB, %w_Lang004%
 GuiControl,, StartB, %w_Lang005%
 GuiControl,, RepeatT, %w_Lang011% (%t_Lang004%):

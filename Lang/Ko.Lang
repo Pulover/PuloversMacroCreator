@@ -74,7 +74,7 @@
 	r_lang005 =	매크로를 추가합니다
 	r_lang006 =	닫기 매크로
 	r_lang007 =	문맥을 인식 단축키
-	r_lang008 =	컨트롤 표시
+	r_lang008 =	컨트롤 표시 / 숨기기
 	r_lang009 =	선택한 행에서 재생
 	r_lang010 =	선택한 행까지 재생
 	r_lang011 =	선택한 행을 재생
@@ -124,6 +124,15 @@
 	w_Lang018 =	삽입하다
 	w_Lang019 =	수정
 	w_Lang020 =	컨트롤 표시
+	w_Lang021 =	아무것도하지
+	w_Lang022 =	응용 프로그램 닫기
+	w_Lang023 =	종료
+	w_Lang024 =	종료 (강제)
+	w_Lang025 =	재부팅
+	w_Lang026 =	로그 오프
+	w_Lang027 =	최대 절전 모드
+	w_Lang028 =	일시 중지
+	w_Lang029 =	컴퓨터를 잠글
 		
 ; Command Windows		
 	c_Lang001 =	마우스
@@ -566,6 +575,7 @@
 	AbortKey_TT =	삭제하는 백 스페이스
 	JoyKey_TT =	조이스틱 버튼을 눌러
 	PauseKey_TT =	실행 대신 정지를 일시 중지
+	OnFinish_TT =	재생시 마감...
 	Win1_TT =	수정으로 Windows 키를 추가합니다
 	JoyHK_TT =	조종간
 	ReptC_TT =	0 = 무한
@@ -577,6 +587,8 @@
 	IfDirB_TT =	키가 활성 상태 또는 존재 창`n타입 (Ctrl 키를+H)에 따라 작동합니다
 	KeepHKOn_TT =	항상 활성화 키 보관
 	A_List_TT =	매크로를 선택 (Ctrl+1~0)
+	OSHK_TT =	매크로를 선택
+	OSHKEd_TT =	매크로를 선택
 	Duplicate_TT =	선택한 행을 복제 (Ctrl 키+D)
 	Order_TT =	선택한 행을 이동 (Ctrl 키를+PageUp / PageDown Ctrl 키를 +)
 	Cut_TT =	선택한 행합니다 (Ctrl+X)를 잘라
@@ -624,6 +636,7 @@
 	OSFast_TT =	속도를 더하다
 	OSSlow_TT =	천천히,
 	OSTrans_TT =	불투명
+	ToggleTB_TT =	표시 / 숨기기 제목 표시 줄
 	MRel_TT =	
 	(LTrim	
 		현재 위치를 기준으로 움직임.
@@ -655,7 +668,12 @@
 		클립 보드의 내용).
 	)	
 	SetText_TT =	컨트롤의 텍스트를 변경합니다.
-	RelKey_TT =	기록은 상대적 움직임과 클릭을 누른 상태에서.
+	RelKey_TT =	
+	(LTrim	
+		개최 이전 위치의 오프셋으로 기록
+		마우스 움직임과 클릭합니다.
+	)	
+	ToggleC_TT =	키 상태에있을 때 상대 기록을 활성화합니다.
 	Relative_TT =	좌표가 활성화 된 창을 기준으로합니다.
 	Screen_TT =	좌표가 바탕 화면 (전체 화면)을 기준으로합니다.
 	IncFolders_TT =	

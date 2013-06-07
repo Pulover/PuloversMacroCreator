@@ -74,7 +74,7 @@
 	r_lang005 =	&Lägg Makro
 	r_lang006 =	St&äng Makro
 	r_lang007 =	Sa&mmanhangsberoende Snabbtangenter
-	r_lang008 =	&Visa kontroller
+	r_lang008 =	&Visa / dölj Kontroller
 	r_lang009 =	Sp&ela upp från vald rad
 	r_lang010 =	Spela t&ills utvalda raden
 	r_lang011 =	Spela ma&rkerade rader
@@ -124,6 +124,15 @@
 	w_Lang018 =	Infoga
 	w_Lang019 =	Redigera
 	w_Lang020 =	Visa kontroller
+	w_Lang021 =	Gör ingenting
+	w_Lang022 =	Stäng program
+	w_Lang023 =	Stäng
+	w_Lang024 =	Stäng (kraft)
+	w_Lang025 =	Starta
+	w_Lang026 =	Logga ut
+	w_Lang027 =	Viloläge
+	w_Lang028 =	Suspend
+	w_Lang029 =	Lås datorn
 		
 ; Command Windows		
 	c_Lang001 =	Mus
@@ -566,6 +575,7 @@
 	AbortKey_TT =	Backsteg för att radera
 	JoyKey_TT =	Tryck på en knapp på joysticken
 	PauseKey_TT =	Pausar exekvering stället för att stoppa
+	OnFinish_TT =	När uppspelningen slutar...
 	Win1_TT =	Lägg till Windows-tangenten som modifierare
 	JoyHK_TT =	Joystick
 	ReptC_TT =	0 = oändlig
@@ -577,6 +587,8 @@
 	IfDirB_TT =	Gör Snabbtangenter fungerar beroende på`ntyp av fönster som är aktivt eller existerar (Ctrl+H)
 	KeepHKOn_TT =	Håll snabbtangenter alltid aktiverat
 	A_List_TT =	Välj Makro (Ctrl+1~0)
+	OSHK_TT =	Välj Makro
+	OSHKEd_TT =	Välj Makro
 	Duplicate_TT =	Duplicera markerade rader (Ctrl+D)
 	Order_TT =	Flytta markerade rader (Ctrl+PageUp / Ctrl+Page Down)
 	Cut_TT =	Klippa ut markerad rader (Ctrl+X)
@@ -624,6 +636,7 @@
 	OSFast_TT =	Fart upp
 	OSSlow_TT =	Sakta Ner
 	OSTrans_TT =	opacitet
+	ToggleTB_TT =	Visa / dölj Titel Bar
 	MRel_TT =	
 	(LTrim	
 		Rörelser i förhållande till nuvarande position.
@@ -655,7 +668,12 @@
 		innehållet i Urklipp).
 	)	
 	SetText_TT =	Ändrar texten till en kontroll.
-	RelKey_TT =	Register relativa rörelser och klick då den trycks ned.
+	RelKey_TT =	
+	(LTrim	
+		Records musrörelser och klick som offset
+		från tidigare ståndpunkt när den hålls.
+	)	
+	ToggleC_TT =	Aktivera Relativ inspelning när nyckeln staten är på.
 	Relative_TT =	Koordinater är i förhållande till den aktiva fönstret.
 	Screen_TT =	Koordinater i förhållande till skrivbordet (hela skärmen).
 	IncFolders_TT =	

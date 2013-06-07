@@ -74,7 +74,7 @@
 	r_lang005 =	Ma&kro hinzufügen
 	r_lang006 =	S&chließen Macro
 	r_lang007 =	K&ontextsensitive Hotkeys
-	r_lang008 =	St&euerelemente anzeigen
+	r_lang008 =	S&how / Hide Bedienelemente
 	r_lang009 =	&Wiedergabe von ausgewählten Zeile
 	r_lang010 =	W&iedergabe bis zum ausgewählten Zeile
 	r_lang011 =	S&pielen Ausgewählte Zeilen
@@ -124,6 +124,15 @@
 	w_Lang018 =	Einfügen
 	w_Lang019 =	Bearbeiten
 	w_Lang020 =	Steuerelemente anzeigen
+	w_Lang021 =	Nichts tun
+	w_Lang022 =	Anwendung schließen
+	w_Lang023 =	Schließen
+	w_Lang024 =	Herunterfahren (Kraft)
+	w_Lang025 =	Starten
+	w_Lang026 =	Abmelden
+	w_Lang027 =	Hibernate
+	w_Lang028 =	Suspend
+	w_Lang029 =	Computer sperren
 		
 ; Command Windows		
 	c_Lang001 =	Maus
@@ -566,6 +575,7 @@
 	AbortKey_TT =	Backspace zum Löschen
 	JoyKey_TT =	Drücken Sie eine Taste auf dem Joystick
 	PauseKey_TT =	Unterbricht die Ausführung anstatt anzuhalten
+	OnFinish_TT =	Wenn die Wiedergabe beendet...
 	Win1_TT =	Fügen Sie die Windows-Taste als Modifizierer
 	JoyHK_TT =	Joystick
 	ReptC_TT =	0 = unendlich
@@ -577,6 +587,8 @@
 	IfDirB_TT =	Machen Hotkeys arbeiten je nach`nArt der Fenster, das aktiv ist oder existiert (Strg+H)
 	KeepHKOn_TT =	Halten Sie Hotkeys immer aktiviert
 	A_List_TT =	Wählen Sie Makro (Ctrl+1~0)
+	OSHK_TT =	Wählen Sie Makro
+	OSHKEd_TT =	Wählen Sie Makro
 	Duplicate_TT =	Duplizieren Ausgewählte Zeilen (Strg+D)
 	Order_TT =	Bewegen Sie Ausgewählte Zeilen (Strg+Bild auf / Ctrl+PageDown)
 	Cut_TT =	Cut Ausgewählte Zeilen (Strg+X)
@@ -624,6 +636,7 @@
 	OSFast_TT =	Beschleunigen
 	OSSlow_TT =	Verlangsamen
 	OSTrans_TT =	Deckkraft
+	ToggleTB_TT =	Show / Hide Title Bar
 	MRel_TT =	
 	(LTrim	
 		Bewegungen relativ zur aktuellen Position.
@@ -655,7 +668,12 @@
 		der Inhalt der Zwischenablage).
 	)	
 	SetText_TT =	Ändert den Text eines Steuerelements.
-	RelKey_TT =	Rekorde relativen Bewegungen und Klicks, während gedrückt.
+	RelKey_TT =	
+	(LTrim	
+		Rekorde Mausbewegungen und Klicks als Offsets
+		von früheren Position, wenn statt.
+	)	
+	ToggleC_TT =	Aktivieren Relative Aufnahme, wenn der Schlüssel Zustand ist.
 	Relative_TT =	Die Koordinaten sind relativ zum aktiven Fenster.
 	Screen_TT =	Die Koordinaten sind relativ zum Desktop (gesamter Bildschirm).
 	IncFolders_TT =	

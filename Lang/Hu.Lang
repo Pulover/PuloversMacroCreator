@@ -74,10 +74,10 @@
 	r_lang005 =	&Kedvencek Macro
 	r_lang006 =	&Bezárás Macro
 	r_lang007 =	&Context Sensitive gyorsbillentyűk
-	r_lang008 =	M&utasd ellenőrzés
+	r_lang008 =	M&egjelenítése / elrejtése Controls
 	r_lang009 =	&Lejátszás kiválasztott sor
 	r_lang010 =	J&átssz, amíg a kijelölt sor
-	r_lang011 =	L&ejátszás kijelölt sorok
+	r_lang011 =	Lejá&tszás kijelölt sorok
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Beállítások
@@ -124,6 +124,15 @@
 	w_Lang018 =	Beszúrása
 	w_Lang019 =	Szerkeszt
 	w_Lang020 =	Mutasd ellenőrzés
+	w_Lang021 =	Ne tegyen semmit
+	w_Lang022 =	Bezár alkalmazás
+	w_Lang023 =	Állítsa le
+	w_Lang024 =	Állítsa le (erő)
+	w_Lang025 =	Reboot
+	w_Lang026 =	Kijelentkezés
+	w_Lang027 =	Téli álmot alszik
+	w_Lang028 =	Felfüggeszt
+	w_Lang029 =	Lock számítógép
 		
 ; Command Windows		
 	c_Lang001 =	Egér
@@ -566,6 +575,7 @@
 	AbortKey_TT =	Backspace törölni
 	JoyKey_TT =	Nyomja meg a gombot a joystick
 	PauseKey_TT =	Szünetelteti végrehajtása helyett megállás
+	OnFinish_TT =	Ha a lejátszás befejeződik...
 	Win1_TT =	Adja hozzá a Windows billentyű a módosító
 	JoyHK_TT =	Joystick
 	ReptC_TT =	0 = végtelen
@@ -577,6 +587,8 @@
 	IfDirB_TT =	Győződjön Gyorsbillentyűk munka függően`ntípusú ablak aktív, illetve létezik (Ctrl+H)
 	KeepHKOn_TT =	Tartsa gyorsbillentyűk aktiválva Mindig
 	A_List_TT =	Makró Kiválasztása (Ctrl+1~0)
+	OSHK_TT =	Makró Kiválasztása
+	OSHKEd_TT =	Makró Kiválasztása
 	Duplicate_TT =	Kijelölt sorok másolása (Ctrl+D)
 	Order_TT =	A kijelölt sorok (Ctrl+PageUp / Ctrl+PageDown)
 	Cut_TT =	Vágott Kiválasztott sorok (Ctrl+X)
@@ -624,6 +636,7 @@
 	OSFast_TT =	Felgyorsul
 	OSSlow_TT =	Lelassít
 	OSTrans_TT =	átlátszatlanság
+	ToggleTB_TT =	Megjelenítése / elrejtése címsor
 	MRel_TT =	
 	(LTrim	
 		Mozgásokat képest aktuális pozícióját.
@@ -655,7 +668,12 @@
 		az a vágólap tartalmát.)
 	)	
 	SetText_TT =	Megváltoztatja a szöveg egy ellenőrzés.
-	RelKey_TT =	Records relatív mozgalmak és kattintások közben lenyomva.
+	RelKey_TT =	
+	(LTrim	
+		Records egér mozgását és kattintással
+		való eltérést a korábbi pozícióba.
+	)	
+	ToggleC_TT =	Aktiválja Relatív felvételt, ha kulcsfontosságú állami be van kapcsolva.
 	Relative_TT =	Koordináták relatív az aktív ablak.
 	Screen_TT =	Koordináták relatív az asztalra (teljes képernyő).
 	IncFolders_TT =	

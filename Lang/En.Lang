@@ -74,7 +74,7 @@
 	r_lang005 =	A&dd Macro
 	r_lang006 =	&Close Macro
 	r_lang007 =	Context Sensitive &Hotkeys
-	r_lang008 =	Show Co&ntrols
+	r_lang008 =	Show / Hide C&ontrols
 	r_lang009 =	Play &from Selected Row
 	r_lang010 =	Play &until Selected Row
 	r_lang011 =	Play &Selected Rows
@@ -124,6 +124,15 @@
 	w_Lang018 =	Insert
 	w_Lang019 =	Edit
 	w_Lang020 =	Show Controls
+	w_Lang021 =	Do nothing
+	w_Lang022 =	Close application
+	w_Lang023 =	Shut down
+	w_Lang024 =	Shut down (force)
+	w_Lang025 =	Reboot
+	w_Lang026 =	Log off
+	w_Lang027 =	Hibernate
+	w_Lang028 =	Suspend
+	w_Lang029 =	Lock computer
 		
 ; Command Windows		
 	c_Lang001 =	Mouse
@@ -566,6 +575,7 @@
 	AbortKey_TT =	Backspace to clear
 	JoyKey_TT =	Press a button on the joystick
 	PauseKey_TT =	Pauses execution instead of stopping
+	OnFinish_TT =	When playback finishes...
 	Win1_TT =	Add the Windows key as modifier
 	JoyHK_TT =	Joystick
 	ReptC_TT =	0 = infinite
@@ -577,6 +587,8 @@
 	IfDirB_TT =	Make Hotkeys work depending on the`ntype of window that is active or exists (Ctrl+H)
 	KeepHKOn_TT =	Keep Hotkeys Always Activated
 	A_List_TT =	Select Macro (Ctrl+1~0)
+	OSHK_TT =	Select Macro
+	OSHKEd_TT =	Select Macro
 	Duplicate_TT =	Duplicate Selected Rows (Ctrl+D)
 	Order_TT =	Move Selected Rows (Ctrl+PageUp / Ctrl+PageDown)
 	Cut_TT =	Cut Selected Rows (Ctrl+X)
@@ -624,6 +636,7 @@
 	OSFast_TT =	Speed Up
 	OSSlow_TT =	Slow Down
 	OSTrans_TT =	Opacity
+	ToggleTB_TT =	Show / Hide Title Bar
 	MRel_TT =	
 	(LTrim	
 		Movements relative to current position.
@@ -655,7 +668,12 @@
 		the contents of the clipboard).
 	)	
 	SetText_TT =	Changes the text of a control.
-	RelKey_TT =	Records relative Movements and Clicks while pressed.
+	RelKey_TT =	
+	(LTrim	
+		Records Mouse movements and clicks as offsets
+		from previous position when held.
+	)	
+	ToggleC_TT =	Activate Relative Recording when key state is on.
 	Relative_TT =	Coordinates are relative to the active window.
 	Screen_TT =	Coordinates are relative to the desktop (entire screen).
 	IncFolders_TT =	

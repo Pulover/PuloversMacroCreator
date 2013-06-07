@@ -74,7 +74,7 @@
 	r_lang005 =	Aj&outer une macro
 	r_lang006 =	&Fermer Macro
 	r_lang007 =	&Touches sensibles au contexte
-	r_lang008 =	Aff&icher les contrôles
+	r_lang008 =	Aff&icher / Masquer les commandes
 	r_lang009 =	Jo&uez à partir de la ligne sélectionnée
 	r_lang010 =	Joue&z jusqu'à ce que la ligne sélectionnée
 	r_lang011 =	Jouez &Lignes sélectionnées
@@ -124,6 +124,15 @@
 	w_Lang018 =	Insérer
 	w_Lang019 =	Éditer
 	w_Lang020 =	Afficher les contrôles
+	w_Lang021 =	Ne rien faire
+	w_Lang022 =	Fermer l'application
+	w_Lang023 =	Arrêter
+	w_Lang024 =	Arrêtez (force)
+	w_Lang025 =	Redémarrez
+	w_Lang026 =	Déconnectez-vous
+	w_Lang027 =	Hibernate
+	w_Lang028 =	Suspendre
+	w_Lang029 =	Verrouiller l'ordinateur
 		
 ; Command Windows		
 	c_Lang001 =	Souris
@@ -566,6 +575,7 @@
 	AbortKey_TT =	Retour arrière pour effacer
 	JoyKey_TT =	Appuyez sur un bouton sur la manette
 	PauseKey_TT =	Interrompt l'exécution au lieu de s'arrêter
+	OnFinish_TT =	Quand se termine la lecture...
 	Win1_TT =	Ajouter la touche Windows en tant que modificateur
 	JoyHK_TT =	Joystick
 	ReptC_TT =	0 = infini
@@ -577,6 +587,8 @@
 	IfDirB_TT =	Assurez-Hotkeys travailler en fonction du type`nde fenêtre qui est active ou existe (Ctrl+H)
 	KeepHKOn_TT =	Gardez toujours activé Hotkeys
 	A_List_TT =	Sélectionner Macro (Ctrl+1~0)
+	OSHK_TT =	Sélectionner Macro
+	OSHKEd_TT =	Sélectionner Macro
 	Duplicate_TT =	Dupliquer Lignes sélectionnées (Ctrl+D)
 	Order_TT =	Déplacez Lignes sélectionnées (Ctrl+PageUp / Ctrl+PageDown)
 	Cut_TT =	Couper les lignes sélectionnées (Ctrl+X)
@@ -624,6 +636,7 @@
 	OSFast_TT =	Accélérer
 	OSSlow_TT =	Ralentir
 	OSTrans_TT =	opacité
+	ToggleTB_TT =	Afficher / Masquer la barre de titre
 	MRel_TT =	
 	(LTrim	
 		Mouvements relatifs à la position actuelle.
@@ -655,7 +668,12 @@
 		le contenu du presse-papiers).
 	)	
 	SetText_TT =	Modifie le texte d'un contrôle.
-	RelKey_TT =	Dossiers relatifs mouvements et les clics quand il est enfoncé.
+	RelKey_TT =	
+	(LTrim	
+		Enregistre les mouvements de souris et de clics que les
+		compensations de la position précédente tenu.
+	)	
+	ToggleC_TT =	Activez l'enregistrement relative lorsque l'état touche est activée.
 	Relative_TT =	Les coordonnées sont relatives à la fenêtre active.
 	Screen_TT =	Les coordonnées sont relatives au poste de travail (écran).
 	IncFolders_TT =	

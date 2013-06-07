@@ -74,7 +74,7 @@
 	r_lang005 =	A&dicionar Macro
 	r_lang006 =	&Fechar Macro
 	r_lang007 =	Atalhos &Condicionais
-	r_lang008 =	Mostrar Co&ntrol.
+	r_lang008 =	&Mostrar / Ocultar Controles
 	r_lang009 =	Reproduzir a &Partir da Linha Selecionada
 	r_lang010 =	Reproduzir Até a &Linha Selecionada
 	r_lang011 =	Reproduzir Linhas &Selecionadas
@@ -124,6 +124,15 @@
 	w_Lang018 =	Inserir
 	w_Lang019 =	Editar
 	w_Lang020 =	Mostrar Control.
+	w_Lang021 =	Não fazer nada
+	w_Lang022 =	Fechar aplicativo
+	w_Lang023 =	Desligar
+	w_Lang024 =	Desligar (forçar)
+	w_Lang025 =	Reiniciar
+	w_Lang026 =	Fazer logoff
+	w_Lang027 =	Hibernar
+	w_Lang028 =	Suspender
+	w_Lang029 =	Bloquear computador
 		
 ; Command Windows		
 	c_Lang001 =	Mouse
@@ -566,6 +575,7 @@
 	AbortKey_TT =	Backspace para apagar
 	JoyKey_TT =	Pressione um botão no joystick
 	PauseKey_TT =	Pausa execução ao invés de parar
+	OnFinish_TT =	Quando a reprodução terminar...
 	Win1_TT =	Adicionar a tecla Windows como modificador
 	JoyHK_TT =	Joystick
 	ReptC_TT =	0 = infinito
@@ -577,6 +587,8 @@
 	IfDirB_TT =	Faz os Atalhos funcionarem dependendo`ndo tipo de janela ativa ou existente.
 	KeepHKOn_TT =	Manter Atalhos Sempre Ativos
 	A_List_TT =	Selecionar Macro (Ctrl+1~0)
+	OSHK_TT =	Selecionar Macro
+	OSHKEd_TT =	Selecionar Macro
 	Duplicate_TT =	Duplicar Linhas Selecionadas (Ctrl+D)
 	Order_TT =	Mover Linhas Selecionadas (Ctrl+PageUp / Ctrl+PageDown)
 	Cut_TT =	Recortar Linhas Selecionadas (Ctrl+X)
@@ -624,6 +636,7 @@
 	OSFast_TT =	Acelerar
 	OSSlow_TT =	Reduzir
 	OSTrans_TT =	Opacidade
+	ToggleTB_TT =	Mostrar / Ocultar Barra de Título
 	MRel_TT =	
 	(LTrim	
 		Movimentos relativos à posição atual.
@@ -655,7 +668,12 @@
 		o conteúdo da Área de Transferência).
 	)	
 	SetText_TT =	Muda o texto de um controle.
-	RelKey_TT =	Grava Clicks e Movivimentos relativos enquanto pressionada.
+	RelKey_TT =	
+	(LTrim	
+		Grava movimentos e cliques do mouse relativos
+		à ultima posição quando pressinada.
+	)	
+	ToggleC_TT =	Ativa Gravação Relativa quando a tecla estiver acionada.
 	Relative_TT =	Coordenadas relativas à janela ativa.
 	Screen_TT =	Coordenadas relativas à área de trabalho (tela inteira).
 	IncFolders_TT =	

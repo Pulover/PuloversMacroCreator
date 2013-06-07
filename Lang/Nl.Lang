@@ -74,7 +74,7 @@
 	r_lang005 =	&Voeg Macro
 	r_lang006 =	S&luiten Macro
 	r_lang007 =	&Context gevoelige sneltoetsen
-	r_lang008 =	T&oon een checklist
+	r_lang008 =	S&how / Hide Controls
 	r_lang009 =	A&fspelen vanaf geselecteerde rij
 	r_lang010 =	S&peel tot geselecteerde rij
 	r_lang011 =	Sp&elen Geselecteerde Rijen
@@ -124,6 +124,15 @@
 	w_Lang018 =	Invoegen
 	w_Lang019 =	Redigeren
 	w_Lang020 =	Toon een checklist
+	w_Lang021 =	Niets doen
+	w_Lang022 =	Sluit de toepassing
+	w_Lang023 =	Stilgelegd
+	w_Lang024 =	Afsluiten (kracht)
+	w_Lang025 =	Reboot
+	w_Lang026 =	Uitloggen
+	w_Lang027 =	Overwinteren
+	w_Lang028 =	Opschorten
+	w_Lang029 =	Lock computer
 		
 ; Command Windows		
 	c_Lang001 =	Muis
@@ -566,6 +575,7 @@
 	AbortKey_TT =	Backspace om te wissen
 	JoyKey_TT =	Druk op een knop op de joystick
 	PauseKey_TT =	Hiermee onderbreekt de uitvoering in plaats van te stoppen
+	OnFinish_TT =	Wanneer het afspelen is voltooid...
 	Win1_TT =	Voeg de Windows-toets als modifier
 	JoyHK_TT =	Bedieningshendel
 	ReptC_TT =	0 = oneindig
@@ -577,6 +587,8 @@
 	IfDirB_TT =	Maak Sneltoetsen werken, afhankelijk van het`ntype venster dat actief is of bestaat (Ctrl+H)
 	KeepHKOn_TT =	Houd Sneltoetsen altijd geactiveerd
 	A_List_TT =	Selecteert Macro (Ctrl+1~0)
+	OSHK_TT =	Selecteert Macro
+	OSHKEd_TT =	Selecteert Macro
 	Duplicate_TT =	Geselecteerde rijen dupliceren (Ctrl+D)
 	Order_TT =	Verplaats geselecteerde rijen (Ctrl+PageUp / Ctrl+PageDown)
 	Cut_TT =	Snijd Geselecteerde rijen (Ctrl+X)
@@ -624,6 +636,7 @@
 	OSFast_TT =	Versnellen
 	OSSlow_TT =	Langzamer gaan
 	OSTrans_TT =	ondoorzichtigheid
+	ToggleTB_TT =	Show / Hide Title Bar
 	MRel_TT =	
 	(LTrim	
 		Bewegingen ten opzichte van de huidige positie.
@@ -655,7 +668,12 @@
 		de inhoud van het klembord).
 	)	
 	SetText_TT =	Hiermee wijzigt u de tekst van een controle.
-	RelKey_TT =	Records relatieve bewegingen en Clicks tijdens het drukken.
+	RelKey_TT =	
+	(LTrim	
+		Records muis bewegingen en klikken als offsets
+		van de vorige positie bij gehouden.
+	)	
+	ToggleC_TT =	Activeer Relatieve opnemen wanneer belangrijke staat is op.
 	Relative_TT =	Coördinaten zijn ten opzichte van het actieve venster.
 	Screen_TT =	Coördinaten zijn ten opzichte van het bureaublad (hele scherm).
 	IncFolders_TT =	
