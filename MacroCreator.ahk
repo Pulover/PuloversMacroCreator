@@ -6849,12 +6849,8 @@ ActivateHotkeys(0, 0, 1, 1)
 StopIt := 0
 Tooltip
 WinMinimize, ahk_id %PMCWinID%
-aHK_TRun := A_List
-PlayOSOn := 1
-ToggleButtonIcon(OSPlay, PauseIconB)
-Playback(aHK_TRun)
-PlayOSOn := 0
-ToggleButtonIcon(OSPlay, TestRunIcon)
+aHK_On := [A_List]
+Gosub, f_RunMacro
 return
 
 PlayStart:
@@ -6976,7 +6972,6 @@ If !(PlayOSOn)
 	ActivateHotkeys(0, 0, 1, 1)
 	StopIt := 0
 	Tooltip
-	ToggleButtonIcon(OSPlay, PauseIconB)
 	SetTimer, OSPlayOn, -1
 }
 Else
@@ -6991,10 +6986,8 @@ Else
 return
 
 OSPlayOn:
-PlayOSOn := 1
-Playback(OSHK)
-PlayOSOn := 0
-ToggleButtonIcon(OSPlay, TestRunIcon)
+aHK_On := [OSHK]
+Gosub, f_RunMacro
 return
 
 OSClear:
@@ -8488,9 +8481,11 @@ return
 f_AutoKey:
 Loop, %TabCount%  
 	If (o_AutoKey[A_Index] = A_ThisHotkey)
-		aHK_On := A_Index
+		aHK_On := [A_Index]
 StopIt := 0
-Playback(aHK_On)
+f_RunMacro:
+If (aHK_On := Playback(aHK_On*))
+	Goto, f_RunMacro
 return
 
 f_ManKey:

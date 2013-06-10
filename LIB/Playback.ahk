@@ -1,7 +1,7 @@
 ﻿Playback(Macro_On, Skip_Line=0, Manual="")
 {
 	local IfError := 0, PointMarker := 0, LoopCount := 0
-	, m_ListCount := ListCount%Macro_On%, mLoopIndex
+	, m_ListCount := ListCount%Macro_On%, mLoopIndex, _Label
 
 	CoordMode, Mouse, Screen
 	MouseGetPos, CursorX, CursorY
@@ -16,6 +16,8 @@
 	Pause, Off
 	Try Menu, Tray, Icon, % t_PlayIcon[1], % t_PlayIcon[2]
 	Menu, Tray, Default, %w_Lang008%
+	PlayOSOn := 1
+	ToggleButtonIcon(OSPlay, PauseIconB)
 	CurrentRange := m_ListCount
 	If (ShowProgBar = 1)
 	{
@@ -94,9 +96,7 @@
 					continue
 				}
 				If IfError > 0
-				{
 					continue
-				}
 				If ((Type = cType36) || (Type = cType37))
 				{
 					If ((BreakIt > 0) || (SkipIt > 0))
@@ -106,8 +106,8 @@
 					{
 						If (Type = cType36)
 						{
-							Playback(t_Macro1, 0, Manual)
-							return
+							_Label := [t_Macro1, 0, Manual]
+							return _Label
 						}
 						Else
 							Playback(t_Macro1, 0, Manual)
@@ -128,8 +128,8 @@
 								{
 									If (Type = cType36)
 									{
-										Playback(TabIdx, A_Index, Manual)
-										return
+										_Label := [TabIdx, A_Index, Manual]
+										return _Label
 									}
 									Else
 										Playback(TabIdx, A_Index, Manual)
@@ -437,6 +437,8 @@
 	{
 		Try Menu, Tray, Icon, %DefaultIcon%, 1
 		Menu, Tray, Default, %w_Lang005%
+		PlayOSOn := 0
+		ToggleButtonIcon(OSPlay, TestRunIcon)
 	}
 	If (CloseAfterPlay)
 		ExitApp
