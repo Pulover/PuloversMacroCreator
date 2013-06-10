@@ -1,6 +1,6 @@
 ﻿;========================================================================
 ;
-; 				ObjIni [Object INI]
+; 				Class ObjIni
 ;
 ; Author:		Pulover [Rodolfo U. Batista]
 ;				rodolfoub@gmail.com

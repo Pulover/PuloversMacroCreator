@@ -7089,7 +7089,7 @@ If A_GuiEvent = D
 {
 	If (AllowRowDrag)
 	{
-		LV_Rows.Drag(A_GuiEvent)
+		LV_Rows.Drag()
 		GoSub, b_Start
 		GoSub, RowCheck
 	}
@@ -7209,24 +7209,16 @@ If CopyRows.Paste()
 return
 
 Undo:
-If (HistoryMacro%A_List%.ActiveSlot = 1)
-	return
 GuiControl, -Redraw, InputList%A_List%
-LV_Delete()
-HistoryMacro%A_List%.ActiveSlot -= 1
-HistoryMacro%A_List%.Load(HistoryMacro%A_List%.ActiveSlot)
+HistoryMacro%A_List%.Undo()
 GoSub, RowCheck
 GoSub, b_Enable
 GuiControl, +Redraw, InputList%A_List%
 return
 
 Redo:
-If (HistoryMacro%A_List%.ActiveSlot = HistoryMacro%A_List%.Slot.MaxIndex())
-	return
 GuiControl, -Redraw, InputList%A_List%
-LV_Delete()
-HistoryMacro%A_List%.ActiveSlot += 1
-HistoryMacro%A_List%.Load(HistoryMacro%A_List%.ActiveSlot)
+HistoryMacro%A_List%.Redo()
 GoSub, RowCheck
 GoSub, b_Enable
 GuiControl, +Redraw, InputList%A_List%
@@ -7349,43 +7341,22 @@ For Index, Key in o_ManKey
 AutoKey := RTrim(AutoKey, "|"), ManKey := RTrim(ManKey, "|")
 return
 
-DragRows:
-If !(GetKeyState("LButton", "P"))
-{
-	HistCheck(A_List)
-	SetTimer, DragRows, Off
-	return
-}
-CoordMode, Mouse, Window
-MouseGetPos,, Dragging
-If (Dragging <= (DragPos-RowHeight))
-{
-	LV_MoveRow(1)
-	If ((DragPos - Dragging) > (RowHeight*1.3))
-		LV_MoveRow(1)
-	MouseGetPos,, DragPos
-	GoSub, RowCheck
-}
-Else If (Dragging >= (DragPos+RowHeight))
-{
-	LV_MoveRow(0)
-	If ((Dragging - DragPos) > (RowHeight*1.3))
-		LV_MoveRow(0)
-	MouseGetPos,, DragPos
-	GoSub, RowCheck
-}
-return
-
 MoveUp:
-LV_MoveRow(1)
+GuiControl, -Redraw, InputList%A_List%
+; LV_MoveRow(1)
+LV_Rows.Move(1)
 GoSub, RowCheck
 HistCheck(A_List)
+GuiControl, +Redraw, InputList%A_List%
 return
 
 MoveDn:
-LV_MoveRow(0)
+; GuiControl, -Redraw, InputList%A_List%
+; LV_MoveRow(0)
+LV_Rows.Move()
 GoSub, RowCheck
 HistCheck(A_List)
+; GuiControl, +Redraw, InputList%A_List%
 return
 
 DelLists:
@@ -7485,7 +7456,7 @@ Remove:
 Gui, +OwnDialogs
 Gui, Submit, NoHide
 RowSelection := LV_GetCount("Selected")
-If RowSelection := 0
+If RowSelection = 0
 {
 	MsgBox, 1, %d_Lang019%, %d_Lang020%
 	IfMsgBox, OK

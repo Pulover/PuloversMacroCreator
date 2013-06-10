@@ -1,4 +1,24 @@
-﻿Class LV_Rows
+﻿;========================================================================
+;
+; 				Class LV_Rows
+;
+; Author:		Pulover [Rodolfo U. Batista]
+;				rodolfoub@gmail.com
+;
+; Additional functions for ListView controls.
+;========================================================================
+;
+; This class provides an easy way to add more functionality to ListViews.
+; Features:
+; 		Copy:		Copy selected rows to memory.
+; 		Cut:		Copy selected rows to memory and delete them.
+; 		Paste:		Paste copied rows at selected position.
+; 		Move:		Move selected rows up and down.
+; 		Drag:		Drag-and-Drop selected rows.
+;
+;========================================================================
+
+Class LV_Rows
 {
 	__New()
 	{
@@ -21,34 +41,49 @@
 	Add()
 	{
 		Row := []
-		Gui, 1:Default
+		If (this.ActiveSlot < this.Slot.MaxIndex())
+			this.Slot.Remove(this.ActiveSlot+1, this.Slot.MaxIndex())
 		Loop, % LV_GetCount()
 		{
 			RowData := LV_Rows.RowText(A_Index)
-			ckd := (LV_GetNext(A_Index-1, "Checked")=A_Index) ? 1 : 0
-			Row[A_Index] := ["Check" ckd, RowData*]
+			Row[A_Index] := [RowData*]
 		}
 		this.Slot.Insert(Row)
+		this.ActiveSlot := this.Slot.MaxIndex()
+		return this.Slot.MaxIndex()
 	}
 
-	Load(N)
+	Undo()
 	{
-		For each, Row in this.Slot[N]
-			LV_Add(Row*)
+		If (this.ActiveSlot = 1)
+			return False
+		this.ActiveSlot -= 1
+		this.Load(this.ActiveSlot)
+
+		return this.ActiveSlot
+	}
+
+	Redo()
+	{
+		If (this.ActiveSlot = (this.Slot.MaxIndex()))
+			return False
+		this.ActiveSlot += 1
+		this.Load(this.ActiveSlot)
+
+		return this.ActiveSlot
 	}
 
 	Copy(Cut=0)
 	{
 		this.CopyData := {}
-		RowNumber := 0
+		LV_Row := 0
 		Loop
 		{
-			RowNumber := LV_GetNext(RowNumber)
-			If !RowNumber
+			LV_Row := LV_GetNext(LV_Row)
+			If !LV_Row
 				break
-			RowData := LV_Rows.RowText(RowNumber)
-			ckd := (LV_GetNext(RowNumber-1, "Checked")=RowNumber) ? 1 : 0
-			Row := ["Check" ckd, RowData*]
+			RowData := LV_Rows.RowText(LV_Row)
+			Row := [RowData*]
 			this.CopyData.Insert(Row)
 			CopiedLines++
 		}
@@ -60,13 +95,15 @@
 
 	Delete()
 	{
-		RowNumber := 0
+		If (LV_GetCount("Selected") = 0)
+			return False
+		LV_Row := 0
 		Loop
 		{
-			RowNumber := LV_GetNext(RowNumber - 1)
-			If !RowNumber
+			LV_Row := LV_GetNext(LV_Row - 1)
+			If !LV_Row
 				break
-			LV_Delete(RowNumber)
+			LV_Delete(LV_Row)
 			DeletedLines++
 		}
 		
@@ -85,14 +122,55 @@
 		}
 		Else
 		{
-			RowNumber := TargetRow - 1
+			LV_Row := TargetRow - 1
 			For each, Row in this.CopyData
-				LV_Insert(RowNumber+A_Index, Row*)
+				LV_Insert(LV_Row+A_Index, Row*)
 		}
 		return True
 	}
 
-	Drag(AutoScroll=1, ScrollDelay=100, DragButton="D", LineThick=2, Color="Black")
+	Move(Up=False)
+	{
+		LV_Row := 0
+		If Up
+		{
+			Loop
+			{
+				LV_Row := LV_GetNext(LV_Row)
+				If !LV_Row
+					break
+				If (LV_Row = 1)
+					return
+				RowData := LV_Rows.RowText(LV_Row)
+				LV_Insert(LV_Row-1, RowData*)
+				LV_Delete(LV_Row+1)
+				LV_Modify(LV_Row-1, "Select Focus")
+			}
+		}
+		Else
+		{
+			Loop
+			{
+				LV_Row := LV_GetNext(LV_Row)
+				If (LV_GetNext(LV_Row+1)<>LV_Row)
+					MsgBox % A_Index
+				If !LV_Row
+					break
+				; RowData := LV_Rows.RowText(LV_Row)
+				; LV_Insert(LV_Row+2, RowData*)
+				; LV_Delete(LV_Row)
+				; LV_Modify(LV_Row, "-Select")
+				; msgbox
+				; LV_Modify(LV_Row+1, RowData%A_Index%*)
+				; RowData := LV_Rows.RowText(LV_Row)
+				; nRowData := LV_Rows.RowText(LV_Row+1)
+				; msgbox
+				; msgbox % LV_Row+1 " > " LV_Row
+			}
+		}
+	}
+	
+	Drag(DragButton="D", AutoScroll=1, ScrollDelay=100, LineThick=2, Color="Black")
 	{
 		LVIR_LABEL := 0x0002
 		LVM_GETITEMCOUNT := 0x1004
@@ -188,14 +266,34 @@
 			DragRows.Paste(LV_currRow)
 			LV_Rows.Delete()
 			DragRows := ""
+			Loop, %Lines%
+			{
+				i := A_Index-1
+				LV_Modify(LV_currRow+i, "Select")
+			}
 		}
 
 		return LV_currRow
 	}
 
+	; Internal Functions
+	Load(Number)
+	{
+		If !IsObject(this.Slot[Number])
+			return False
+
+		LV_Delete()
+		For each, Row in this.Slot[Number]
+			LV_Add(Row*)
+
+		return True
+	}
+
 	RowText(Index)
 	{
 		Data := []
+		ckd := (LV_GetNext(Index-1, "Checked")=Index) ? 1 : 0
+		Data.Insert("Check" ckd)
 		Loop, % LV_GetCount("Col")
 		{
 			LV_GetText(Cell, Index, A_Index)
