@@ -699,7 +699,7 @@ Else IfExist, %DefaultMacro%
 }
 Else
 {
-	HistoryMacro1 := new RowsData()
+	HistoryMacro1 := new LV_Rows()
 	HistoryMacro1.Add()
 }
 Menu, Tray, Icon
@@ -1313,7 +1313,7 @@ GoSub, DelLists
 GuiControl,, A_List, |Macro1
 Loop, %TabCount%
 	HistoryMacro%A_Index% := ""
-HistoryMacro1 := new RowsData()
+HistoryMacro1 := new LV_Rows()
 TabCount := 1
 Gui, Submit, NoHide
 If (KeepDefKeys = 1)
@@ -1390,7 +1390,7 @@ return
 
 FileRead:
 GoSub, b_Start
-HistoryMacro1 := new RowsData()
+HistoryMacro1 := new LV_Rows()
 HistoryMacro1.Add()
 GuiControl,, Capt, 0
 Gui, Show, % ((WinExist("ahk_id" PMCWinID)) ? "" : "Hide"), %AppName% v%CurrentVersion% %CurrentFileName%
@@ -2255,7 +2255,7 @@ ClearHistory:
 Loop, %TabCount%
 {
 	Gui, 1:ListView, InputList%A_Index%
-	HistoryMacro%A_Index% := new RowsData()
+	HistoryMacro%A_Index% := new LV_Rows()
 	HistoryMacro%A_Index%.Add()
 }
 Gui, 1:ListView, InputList%A_List%
@@ -6940,10 +6940,10 @@ Gui, 28:Add, Checkbox, Checked%ShowProgBar% ys-1 x+4 W25 H25 hwndOSProgB vOSProg
 Gui, 28:Add, Text, W2 H22 ys+3 x+5 0x11
 Gui, 28:Font
 Gui, 28:Font, s10, Webdings
-Gui, 28:Add, Checkbox, Checked%SlowKeyOn% ys-1 x+4 W30 H16 hwndOSSlow vOSSlow gSlowKeyToggle 0x1000
+Gui, 28:Add, Checkbox, Checked%SlowKeyOn% ys-1 x+4 W30 H16 hwndOSSlow vOSSlow gSlowKeyToggle 0x1000 0xC00
 	ILButton(OSSlow, SlowDownIcon[1] ":" SlowDownIcon[2])
 Gui, 28:Add, Checkbox, Checked%FastKeyOn% ys-1 x+0 W30 H16 vOSFast gFastKeyToggle 0x1000 0xC00, 8
-Gui, 28:Add, Slider, ym+16 xp-40 W115 H10 vOSTrans gTrans NoTicks Thick20 ToolTip Range25-255, %OSTrans%
+Gui, 28:Add, Slider, ym+14 xp-40 W115 H10 vOSTrans gTrans NoTicks Thick20 ToolTip Range25-255, %OSTrans%
 Gui, 28:Add, Button, ym-1 xp+75 W20 H16 vToggleTB gToggleTB, 1
 Gui, 28:Add, Button, yp x+0 W20 H16 vToggleMW gShowHide, 2
 Gui, 28:Add, Progress, ym+25 xm W125 H10 vOSCProg c20D000
@@ -6969,7 +6969,7 @@ If (ListCount%OSHK% = 0)
 	return
 If !(PlayOSOn)
 {
-	ActivateHotkeys(0, 0, 1, 1)
+	ActivateHotkeys("", "", 1, 1)
 	StopIt := 0
 	Tooltip
 	SetTimer, OSPlayOn, -1
@@ -7089,9 +7089,9 @@ If A_GuiEvent = D
 {
 	If (AllowRowDrag)
 	{
-		CoordMode, Mouse, Window
-		MouseGetPos,, DragPos
-		SetTimer, DragRows, 10
+		LV_Rows.Drag(A_GuiEvent)
+		GoSub, b_Start
+		GoSub, RowCheck
 	}
 }
 If A_GuiEvent = RightClick
@@ -7126,7 +7126,7 @@ GoSub, TabPlus
 d_List := TabCount
 RowSelection := 0
 GoSub, CopySelection
-HistoryMacro%A_List% := new RowsData()
+HistoryMacro%A_List% := new LV_Rows()
 GoSub, b_Start
 return
 
@@ -7172,7 +7172,7 @@ GuiControl, Focus, InputList%A_List%
 return
 
 Duplicate:
-TempData := new RowsData()
+TempData := new LV_Rows()
 TempData.Copy()
 If TempData.Paste()
 {
@@ -7186,15 +7186,18 @@ return
 CopyRows:
 If (LV_GetCount("Selected") = 0)
 	return
-CopyRows := new RowsData()
+CopyRows := new LV_Rows()
 CopyRows.Copy()
 return
 
 CutRows:
 If (LV_GetCount("Selected") = 0)
 	return
-CopyRows := new RowsData()
+CopyRows := new LV_Rows()
 CopyRows.Copy(1)
+GoSub, b_Start
+GoSub, RowCheck
+GuiControl, Focus, InputList%A_List%
 return
 
 PasteRows:
@@ -7212,6 +7215,7 @@ GuiControl, -Redraw, InputList%A_List%
 LV_Delete()
 HistoryMacro%A_List%.ActiveSlot -= 1
 HistoryMacro%A_List%.Load(HistoryMacro%A_List%.ActiveSlot)
+GoSub, RowCheck
 GoSub, b_Enable
 GuiControl, +Redraw, InputList%A_List%
 return
@@ -7223,6 +7227,7 @@ GuiControl, -Redraw, InputList%A_List%
 LV_Delete()
 HistoryMacro%A_List%.ActiveSlot += 1
 HistoryMacro%A_List%.Load(HistoryMacro%A_List%.ActiveSlot)
+GoSub, RowCheck
 GoSub, b_Enable
 GuiControl, +Redraw, InputList%A_List%
 return
@@ -7232,7 +7237,7 @@ Gui, Submit, NoHide
 TabCount++
 GuiCtrlAddTab(TabSel, "Macro" TabCount)
 Gui, ListView, InputList%TabCount%
-HistoryMacro%TabCount% := new RowsData()
+HistoryMacro%TabCount% := new LV_Rows()
 HistoryMacro%TabCount%.Slot[1] := ""
 Gui, ListView, InputList%A_List%
 GuiAddLV(TabCount)
@@ -7480,7 +7485,7 @@ Remove:
 Gui, +OwnDialogs
 Gui, Submit, NoHide
 RowSelection := LV_GetCount("Selected")
-If RowSelection = 0
+If RowSelection := 0
 {
 	MsgBox, 1, %d_Lang019%, %d_Lang020%
 	IfMsgBox, OK
@@ -7490,7 +7495,7 @@ If RowSelection = 0
 }
 Else
 {
-	RowNumber = 0
+	RowNumber := 0
 	Loop
 	{
 		RowNumber := LV_GetNext(RowNumber - 1)
@@ -10460,6 +10465,7 @@ return
 #Include <Playback>
 #Include <Export>
 #Include <Class_PMC>
+#Include <Class_LV_Rows>
 #Include <Class_ObjIni>
 #Include *i <Gdip>
 #Include *i <Eval>

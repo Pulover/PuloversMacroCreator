@@ -1,14 +1,14 @@
 ﻿LV_GetTexts(Index, ByRef Act="", ByRef Det="", ByRef Tim="", ByRef Del="", ByRef Typ="", ByRef Tar="", ByRef Win="", ByRef Com="")
 {
-		LV_GetText(Act, Index, 2)
-		Act := LTrim(Act)
-		LV_GetText(Det, Index, 3)
-		LV_GetText(Tim, Index, 4)
-		LV_GetText(Del, Index, 5)
-		LV_GetText(Typ, Index, 6)
-		LV_GetText(Tar, Index, 7)
-		LV_GetText(Win, Index, 8)
-		LV_GetText(Com, Index, 9)
+	LV_GetText(Act, Index, 2)
+	Act := LTrim(Act)
+	LV_GetText(Det, Index, 3)
+	LV_GetText(Tim, Index, 4)
+	LV_GetText(Del, Index, 5)
+	LV_GetText(Typ, Index, 6)
+	LV_GetText(Tar, Index, 7)
+	LV_GetText(Win, Index, 8)
+	LV_GetText(Com, Index, 9)
 }
 
 ShowTooltip()
@@ -603,81 +603,3 @@ LV_ColorsMessage(W, L)
 			Return 0
 	}
 }
-
-class RowsData
-{
-	__New()
-	{
-		this.Slot := []
-		this.ActiveSlot := 1
-	}
-	
-	__Call()
-	{
-		global SavePrompt := True
-	}
-	
-	__Delete()
-	{
-		this.Remove("", Chr(255))
-		this.SetCapacity(0)
-		this.base := ""
-	}
-	
-	Add()
-	{
-		Row := []
-		Gui, 1:Default
-		Loop, % LV_GetCount()
-		{
-			LV_GetTexts(A_Index, Action, Details, TimesX, DelayX, Type, Target, Window, Comment)
-			ckd := (LV_GetNext(A_Index-1, "Checked")=A_Index) ? 1 : 0
-			Row[A_Index] := ["Check" ckd, "", Action, Details, TimesX, DelayX, Type, Target, Window, Comment]
-		}
-		this.Slot.Insert(Row)
-	}
-
-	Load(N)
-	{
-		For each, Row in this.Slot[N]
-			LV_Add(Row*)
-		GoSub, RowCheck
-	}
-
-	Copy(Cut=0)
-	{
-		this.CopyData := {}
-		RowNumber := 0
-		Loop
-		{
-			RowNumber := LV_GetNext(RowNumber)
-			If !RowNumber
-				break
-			LV_GetTexts(RowNumber, Action, Details, TimesX, DelayX, Type, Target, Window, Comment)
-			ckd := (LV_GetNext(RowNumber-1, "Checked")=RowNumber) ? 1 : 0
-			Row := ["Check" ckd, "", Action, Details, TimesX, DelayX, Type, Target, Window, Comment]
-			this.CopyData.Insert(Row)
-		}
-		If (Cut)
-			GoSub, Remove
-	}
-
-	Paste()
-	{
-		If !this.CopyData.MaxIndex()
-			return False
-		If (LV_GetCount("Selected") = 0)
-		{
-			For each, Row in this.CopyData
-				LV_Add(Row*)
-		}
-		Else
-		{
-			RowNumber := LV_GetNext() - 1
-			For each, Row in this.CopyData
-				LV_Insert(RowNumber+A_Index, Row*)
-		}
-		return True
-	}
-}
-
