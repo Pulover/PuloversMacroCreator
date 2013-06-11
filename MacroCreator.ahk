@@ -5281,7 +5281,9 @@ Loop, 6
 		Details .= Par%A_Index%File ", "
 	}
 }
+StringReplace, Details, Details, ```,, ¢, All
 Details := RTrim(Details, ", ")
+StringReplace, Details, Details, ¢, ```,, All
 If (A_ThisLabel <> "RunApply")
 {
 	Gui, 1:-Disabled
@@ -9324,9 +9326,11 @@ Loop, Parse, Step, `,, %A_Space%
 	StringReplace, Par%A_Index%, Par%A_Index%, ``r, `r, All
 	StringReplace, Par%A_Index%, Par%A_Index%, ¢, `,, All
 	StringReplace, Par%A_Index%, Par%A_Index%, ⱥ, %A_Space%, All
+	StringReplace, Par%A_Index%, Par%A_Index%, ``,, All
 }
 StringReplace, Step, Step, ¢, `,, All
 StringReplace, Step, Step, ⱥ, %A_Space%, All
+StringReplace, Step, Step, ``,, All
 return
 
 ClearPars:
