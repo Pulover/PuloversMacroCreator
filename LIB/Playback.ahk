@@ -21,7 +21,6 @@
 	CurrentRange := m_ListCount
 	If (ShowProgBar = 1)
 	{
-		; Progress, %ProgBarOptions% R0-%m_ListCount% FM6,, % AppName ": Macro" Macro_On " [Loop: 0 / " o_TimesG[Macro_On] " | Row: 0 / " m_ListCount "]"
 		GuiControl, 28:+Range0-%m_ListCount%, OSCProg
 		GuiControl, 28:, OSCProgTip, % "M" Macro_On " [Loop: 0 / " o_TimesG[Macro_On] " | Row: 0 / " m_ListCount "]"
 	}
@@ -46,7 +45,6 @@
 					break 2
 				If (ShowProgBar = 1)
 				{
-					; Progress, %A_Index%,, % AppName ": Macro" Macro_On " [Loop: " mLoopIndex "/" o_TimesG[Macro_On] " | Row: " A_Index "/" m_ListCount "]"
 					GuiControl, 28:, OSCProg, %A_Index%
 					GuiControl, 28:, OSCProgTip, % "M" Macro_On " [Loop: " mLoopIndex "/" o_TimesG[Macro_On] " | Row: " A_Index "/" m_ListCount "]"
 				}
@@ -143,7 +141,6 @@
 						SkipIt--
 					If (ShowProgBar = 1)
 					{
-						; Progress, %ProgBarOptions% R0-%m_ListCount% FM6,, % AppName ": Macro" Macro_On " [Loop: 0 / " o_TimesG[Macro_On] " | Row: 0 / " m_ListCount "]"
 						GuiControl, 28:+Range0-%m_ListCount%, OSCProg
 						GuiControl, 28:, OSCProgTip, % "M" Macro_On " [Loop: 0 / " o_TimesG[Macro_On] " | Row: 0 / " m_ListCount "]"
 					}
@@ -291,7 +288,6 @@
 						Macro_On := aHK_Or, m_ListCount := ListCount%Macro_On%
 						If (ShowProgBar = 1)
 						{
-							; Progress, %ProgBarOptions% R0-%m_ListCount% FM6,, % AppName ": Macro" Macro_On " [Loop: 0 / " o_TimesG[Macro_On] " | Row: 0 / " m_ListCount "]"
 							GuiControl, 28:+Range0-%m_ListCount%, OSCProg
 							GuiControl, 28:, OSCProgTip, % "M" Macro_On " [Loop: 0 / " o_TimesG[Macro_On] " | Row: 0 / " m_ListCount "]"
 						}
@@ -473,7 +469,6 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC)
 					break
 				If (ShowProgBar = 1)
 				{
-					Progress, %A_Index%,, % AppName ": Macro" lcL " [Loop: " mainL "/" mainC " | Row: " A_Index "/" lCount " (In: " mLoopIndex "/" lcX ")]"
 					GuiControl, 28:, OSCProg, %A_Index%
 					GuiControl, 28:, OSCProgTip, % "M" lcL " [Loop: " mainL "/" mainC " | Row: " A_Index "/" lCount " (In: " mLoopIndex "/" lcX ")]"
 				}
