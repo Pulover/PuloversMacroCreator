@@ -144,33 +144,35 @@ Class LV_Rows
 				RowData := LV_Rows.RowText(LV_Row)
 				LV_Insert(LV_Row-1, RowData*)
 				LV_Delete(LV_Row+1)
-				LV_Modify(LV_Row-1, "Select Focus")
+				LV_Modify(LV_Row-1, "Select")
+				If (A_Index = 1)
+					LV_Modify(LV_Row-1, "Focus")
 			}
 		}
 		Else
 		{
+			Selections := []
 			Loop
 			{
 				LV_Row := LV_GetNext(LV_Row)
-				If (LV_GetNext(LV_Row+1)<>LV_Row)
-					MsgBox % A_Index
 				If !LV_Row
 					break
-				; RowData := LV_Rows.RowText(LV_Row)
-				; LV_Insert(LV_Row+2, RowData*)
-				; LV_Delete(LV_Row)
-				; LV_Modify(LV_Row, "-Select")
-				; msgbox
-				; LV_Modify(LV_Row+1, RowData%A_Index%*)
-				; RowData := LV_Rows.RowText(LV_Row)
-				; nRowData := LV_Rows.RowText(LV_Row+1)
-				; msgbox
-				; msgbox % LV_Row+1 " > " LV_Row
+				If (LV_Row = LV_GetCount())
+					return
+				Selections.Insert(1, LV_Row)
+			}
+			For each, Row in Selections
+			{
+				RowData := LV_Rows.RowText(Row+1)
+				LV_Insert(Row, RowData*)
+				LV_Delete(Row+2)
+				If (A_Index = 1)
+					LV_Modify(Row+1, "Focus")
 			}
 		}
 	}
 	
-	Drag(DragButton="D", AutoScroll=1, ScrollDelay=100, LineThick=2, Color="Black")
+	Drag(DragButton="D", AutoScroll=True, ScrollDelay=100, LineThick=2, Color="Black")
 	{
 		LVIR_LABEL := 0x0002
 		LVM_GETITEMCOUNT := 0x1004
@@ -190,7 +192,6 @@ Class LV_Rows
 		MouseGetPos,,, LV_Win, LV_LView, 2
 		WinGetPos, Win_X, Win_Y, Win_W, Win_H, ahk_id %LV_Win%
 		ControlGetPos, LV_lx, LV_ly, LV_lw, LV_lh, , ahk_id %LV_LView%
-		Line_W := LV_lw - SM_CXVSCROLL
 		VarSetCapacity(LV_XYstruct, 16, 0)
 
 		While, GetKeyState(DragButton, "P")
@@ -225,6 +226,7 @@ Class LV_Rows
 			LV_NumOfRows := ErrorLevel
 			SendMessage, LVM_GETTOPINDEX, 0, 0, , ahk_id %LV_LView%
 			LV_topIndex := ErrorLevel
+			Line_W := (LV_TotalNumOfRows > LV_NumOfRows) ? LV_lw - SM_CXVSCROLL : LV_lw
 
 			Loop,% LV_NumOfRows + 1
 			{	
@@ -264,13 +266,18 @@ Class LV_Rows
 			DragRows := new LV_Rows()
 			Lines := DragRows.Copy()
 			DragRows.Paste(LV_currRow)
+			If (LV_GetNext() < LV_currRow)
+				o := Lines+1, FocusedRow := LV_currRow-1
+			Else
+				o := 1, FocusedRow := LV_currRow
 			LV_Rows.Delete()
 			DragRows := ""
 			Loop, %Lines%
 			{
-				i := A_Index-1
+				i := A_Index-o
 				LV_Modify(LV_currRow+i, "Select")
 			}
+			LV_Modify(FocusedRow, "Focus")
 		}
 
 		return LV_currRow

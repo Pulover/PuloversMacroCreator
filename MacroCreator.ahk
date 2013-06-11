@@ -7343,7 +7343,6 @@ return
 
 MoveUp:
 GuiControl, -Redraw, InputList%A_List%
-; LV_MoveRow(1)
 LV_Rows.Move(1)
 GoSub, RowCheck
 HistCheck(A_List)
@@ -7351,12 +7350,11 @@ GuiControl, +Redraw, InputList%A_List%
 return
 
 MoveDn:
-; GuiControl, -Redraw, InputList%A_List%
-; LV_MoveRow(0)
+GuiControl, -Redraw, InputList%A_List%
 LV_Rows.Move()
 GoSub, RowCheck
 HistCheck(A_List)
-; GuiControl, +Redraw, InputList%A_List%
+GuiControl, +Redraw, InputList%A_List%
 return
 
 DelLists:
@@ -7371,10 +7369,7 @@ Menu, CopyMenu, Add, Macro1, CopyList
 return
 
 Order:
-If Order = 1
-	LV_MoveRow()
-If Order = 0
-	LV_MoveRow(false)
+LV_Rows.Move(Order)
 HistCheck(A_List)
 GoSub, RowCheck
 return
