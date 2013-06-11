@@ -30,6 +30,8 @@ See [Playback Page](p3-Playback.html#playback-options).
 
 **Clear History**: Clears and resets History for all Macros.
 
+**Show Info**: Enables displaying of tooltips and traytips during Recording/Playback.
+
 ## Screenshots
 
 **Draw Button**: Selects the Draw Button to be used for Screenshots tool and Get Area in Image Search.

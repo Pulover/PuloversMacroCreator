@@ -745,7 +745,7 @@ Else
 	If (ShowTips)
 		GoSub, ShowTips
 	If (AutoUpdate)
-		GoSub, CheckUpdates
+		SetTimer, CheckUpdates, -1
 }
 HideWin := "", PlayHK := "", AutoPlay := "", TimerPlay := ""
 return

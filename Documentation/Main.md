@@ -4,11 +4,11 @@
 
 ## Table of Contents
 
-* [Buttons & Menus](#Buttons-&-Menus)
-* [Edit Commands](#Edit-Commands)
-* [Macros](#Macros)
-* [Command Line Parameters](#Command-Line-Parameters)
-* [Keyboard Shortcuts](#Keyboard-Shortcuts)
+* [Buttons & Menus](#buttons-&-menus)
+* [Edit Commands](#edit-commands)
+* [Macros](#macros)
+* [Command Line Parameters](#command-line-parameters)
+* [Keyboard Shortcuts](#keyboard-shortcuts)
 
 ## Buttons & Menus
 
@@ -49,21 +49,27 @@
 The Abort Hotkey can be used to turn the Timer off.  
 To have other Macros active during Timer check the *Always Active* option or right-click the TrayMenu icon and select **Play**.  
 
-**Command Buttons**: See [Command Windows](p4-Commands.html).
+**Auto.**: Selects the Automatic Hotkey to execute the currently selected Macro
 
-**Auto.**: Selects the Automatic Hotkey to execute the currently selected Macro (The Win option adds the Windows Key as modifier).
+**Windows**: If checked adds the Windows Key as modifier.
 
 **Joystick**: Sets a joystick button to run the Macro. When activated the Auto. Hotkey box will switch to accept only joystick buttons. Only buttons are detected (axis, pov and others are not). The number before "Joy" is the joystick number and the number after it is the button number, so 2Joy1 is the second joystick's first button.
 
 **Man.**: Selects the Manual Hotkey to execute the currently selected Macro step-by-step.
 
-**Stop**: Selects the Hotkey to stop execution (the Pause option changes the behavior to pause execution).
+**Stop**: Selects the Hotkey to stop execution
+
+**Pause**: Changes the behavior of *Stop Key* to pause execution.
+
+**When playback finishes...**: Selects an optional action to execute when all macros and loop iterations are finished.
 
 **Loop**: Number of loops to execute the currently selected Macro. If set to 0, the loop continues indefinitely until a break or return is encountered, or the Stop Key is pressed.
 
-**Show Info**: Enables displaying of tooltips and traytips during Recording/Playback.
+**Hide Window**: If checked will hide the main window when *Record* or *Play* button is pressed. You can show the window again from the Tray Menu or the button in the Controls Bar.
 
-**Show Controls**: If checked will display [On-Screen Controls](p3-Playback.html#On-Screen-Controls) window when *Record* or *Play* button is pressed. It's a smaller window with Playback and Record buttons allow these commands using the mouse. You can also open it from the Macro Menu and TrayIcon.
+**Show Controls**: If checked will display the [Controls Toolbar](p3-Playback.html#controls-toolbar) window when *Record* or *Play* button is pressed. It's a smaller window with Playback and Record buttons allow these commands using the mouse. You can also open it from the Macro Menu and TrayIcon.
+
+**Command Buttons**: See [Command Windows](p4-Commands.html).
 
 **Add Macro**: Adds a new Macro tab.
 
@@ -79,7 +85,7 @@ To have other Macros active during Timer check the *Always Active* option or rig
 
 **Repeat**: This field is used as a quick-edit to set the Repeat number to selected rows using the Apply buttons on the right.
 
-**Delay (ms)**: Default delay between commands. The number set in this box will be automatically applied to a new added command (except for Mouse and Window commands which have individual default values that can be set in the [Settings Window](p7-Settings.html#Defaults)). This field is also used as a quick-edit to set the Delay to selected rows using the Apply buttons on the right.
+**Delay (ms)**: Default delay between commands. The number set in this box will be automatically applied to a new added command (except for Mouse and Window commands which have individual default values that can be set in the [Settings Window](p7-Settings.html#defaults)). This field is also used as a quick-edit to set the Delay to selected rows using the Apply buttons on the right.
 
 **Insert Box**: This box can be used to add commands to the list. Click in the box and press the buttons to add on the keyboard then press the Insert button to add them to the list (you can also use the Insert key as a shortcut when the focus is on the ListView).
 
@@ -216,7 +222,7 @@ You can load multiple files with multiple parameters.
 
 **Ctrl+R**: Record
 
-**Ctrl+B**: Display Controls Toolbar
+**Ctrl+B**: Display / Hides Controls Toolbar
 
 **Ctrl+N**: New
 

@@ -31,6 +31,14 @@ T800 for [Html Help utils](http://www.autohotkey.com/board/topic/17984-html-help
 
 # Change Log
 
+## Version 3.7.4
+
+* Added Speed Control for Exported Scripts.
+* Improved Drag-and-Drop function.
+* Fixed crash by stack overflow in Goto-based loops.
+* Fixed escaped commas not showing in command parameters of the *Run* window.
+* Fixed Controls Toolbar Play button not switching when using Hotkeys.
+
 ## Version 3.7.3
 
 * Added support for Joystick Hotkeys in Playback.
