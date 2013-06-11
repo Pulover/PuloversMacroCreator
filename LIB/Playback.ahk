@@ -1,7 +1,7 @@
 ﻿Playback(Macro_On, Skip_Line=0, Manual="")
 {
 	local IfError := 0, PointMarker := 0, LoopCount := 0
-	, m_ListCount := ListCount%Macro_On%, mLoopIndex
+	, m_ListCount := ListCount%Macro_On%, mLoopIndex, _Label
 
 	CoordMode, Mouse, Screen
 	MouseGetPos, CursorX, CursorY
@@ -16,9 +16,14 @@
 	Pause, Off
 	Try Menu, Tray, Icon, % t_PlayIcon[1], % t_PlayIcon[2]
 	Menu, Tray, Default, %w_Lang008%
+	PlayOSOn := 1
+	ToggleButtonIcon(OSPlay, PauseIconB)
 	CurrentRange := m_ListCount
 	If (ShowProgBar = 1)
-		Progress, %ProgBarOptions% R0-%m_ListCount% FM6,, % AppName ": Macro" Macro_On " [Loop: 0 / " o_TimesG[Macro_On] " | Line: 0 / " m_ListCount "]"
+	{
+		GuiControl, 28:+Range0-%m_ListCount%, OSCProg
+		GuiControl, 28:, OSCProgTip, % "M" Macro_On " [Loop: 0 / " o_TimesG[Macro_On] " | Row: 0 / " m_ListCount "]"
+	}
 	Loop
 	{
 		mLoopIndex := A_Index, LoopIndex := A_Index
@@ -39,7 +44,10 @@
 				If StopIt
 					break 2
 				If (ShowProgBar = 1)
-					Progress, %A_Index%,, % AppName ": Macro" Macro_On " [Loop: " mLoopIndex "/" o_TimesG[Macro_On] " | Line: " A_Index "/" m_ListCount "]"
+				{
+					GuiControl, 28:, OSCProg, %A_Index%
+					GuiControl, 28:, OSCProgTip, % "M" Macro_On " [Loop: " mLoopIndex "/" o_TimesG[Macro_On] " | Row: " A_Index "/" m_ListCount "]"
+				}
 				If (Skip_Line > 0)
 				{
 					Skip_Line--
@@ -86,9 +94,7 @@
 					continue
 				}
 				If IfError > 0
-				{
 					continue
-				}
 				If ((Type = cType36) || (Type = cType37))
 				{
 					If ((BreakIt > 0) || (SkipIt > 0))
@@ -98,8 +104,8 @@
 					{
 						If (Type = cType36)
 						{
-							Playback(t_Macro1, 0, Manual)
-							return
+							_Label := [t_Macro1, 0, Manual]
+							return _Label
 						}
 						Else
 							Playback(t_Macro1, 0, Manual)
@@ -120,8 +126,8 @@
 								{
 									If (Type = cType36)
 									{
-										Playback(TabIdx, A_Index, Manual)
-										return
+										_Label := [TabIdx, A_Index, Manual]
+										return _Label
 									}
 									Else
 										Playback(TabIdx, A_Index, Manual)
@@ -134,7 +140,10 @@
 					If (SkipIt > 0)
 						SkipIt--
 					If (ShowProgBar = 1)
-						Progress, %ProgBarOptions% R0-%m_ListCount% FM6,, % AppName ": Macro" Macro_On " [Loop: 0 / " o_TimesG[Macro_On] " | Line: 0 / " m_ListCount "]"
+					{
+						GuiControl, 28:+Range0-%m_ListCount%, OSCProg
+						GuiControl, 28:, OSCProgTip, % "M" Macro_On " [Loop: 0 / " o_TimesG[Macro_On] " | Row: 0 / " m_ListCount "]"
+					}
 					Gui, ListView, InputList%Macro_On%
 					continue
 				}
@@ -278,7 +287,10 @@
 						LoopIndex := mLoopIndex
 						Macro_On := aHK_Or, m_ListCount := ListCount%Macro_On%
 						If (ShowProgBar = 1)
-							Progress, %ProgBarOptions% R0-%m_ListCount% FM6,, % AppName ": Macro" Macro_On " [Loop: 0 / " o_TimesG[Macro_On] " | Line: 0 / " m_ListCount "]"
+						{
+							GuiControl, 28:+Range0-%m_ListCount%, OSCProg
+							GuiControl, 28:, OSCProgTip, % "M" Macro_On " [Loop: 0 / " o_TimesG[Macro_On] " | Row: 0 / " m_ListCount "]"
+						}
 						continue
 					}
 				}
@@ -414,14 +426,20 @@
 	Progress, Off
 	SplashTextOff
 	SplashImage, Off
+	BlockInput, MouseMoveOff
+	BlockInput, Off
 	CurrentRange := ""
 	If !(aHK_Timer)
 	{
 		Try Menu, Tray, Icon, %DefaultIcon%, 1
 		Menu, Tray, Default, %w_Lang005%
+		PlayOSOn := 0
+		ToggleButtonIcon(OSPlay, TestRunIcon)
 	}
 	If (CloseAfterPlay)
-		GoSub, Exit
+		ExitApp
+	If (OnFinishCode > 1)
+		GoSub, OnFinishAction
 }
 
 LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC)
@@ -450,7 +468,10 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC)
 				If StopIt
 					break
 				If (ShowProgBar = 1)
-					Progress, %A_Index%,, % AppName ": Macro" Macro_On " [Loop: " mainL "/" mainC " | Line: " A_Index "/" lCount " (In: " mLoopIndex "/" lcX ")]"
+				{
+					GuiControl, 28:, OSCProg, %A_Index%
+					GuiControl, 28:, OSCProgTip, % "M" lcL " [Loop: " mainL "/" mainC " | Row: " A_Index "/" lCount " (In: " mLoopIndex "/" lcX ")]"
+				}
 				If (Skip_Line > 0)
 				{
 					Skip_Line--

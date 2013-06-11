@@ -3,15 +3,15 @@
 		; Polish
 		
 ; Main Menu		
-	m_Lang001 =	P&lik
-	m_Lang002 =	W&stawić
+	m_Lang001 =	&Plik
+	m_Lang002 =	&Wstawić
 	m_Lang003 =	W&ybierać
 	m_Lang004 =	&Edytuj
 	m_Lang005 =	&Macro
-	m_Lang006 =	Op&cje
+	m_Lang006 =	&Opcje
 	m_Lang007 =	&Język
 	m_Lang008 =	O&fiarować
-	m_Lang009 =	Pomocy
+	m_Lang009 =	Pomo&cy
 		
 ; File Submenu		
 	f_Lang001 =	&Nowy
@@ -74,7 +74,7 @@
 	r_lang005 =	&Dodaj Macro
 	r_lang006 =	Zam&knij makro
 	r_lang007 =	K&ontekstowa Hotkeys
-	r_lang008 =	&Pokaż panel kontroli
+	r_lang008 =	&Pokaż / Ukryj formantów
 	r_lang009 =	Za&graj z wybranego wiersza
 	r_lang010 =	Gra&ć do wybranego wiersza
 	r_lang011 =	Od&twórz wybrane wiersze
@@ -102,6 +102,7 @@
 ; Tray Menu		
 	y_Lang001 =	Ukryj okno
 	y_Lang002 =	Pokaż okno
+	y_Lang003 =	Pokaż / Ukryj formantów
 		
 ; Main Window		
 	w_Lang001 =	Eksportować
@@ -113,10 +114,10 @@
 	w_Lang007 =	Man.
 	w_Lang008 =	Zatrzymać
 	w_Lang009 =	&Win
-	w_Lang010 =	&Pauza
+	w_Lang010 =	P&auza
 	w_Lang011 =	P&ętla
 	w_Lang012 =	P&rzechwytywanie klawiszy
-	w_Lang013 =	P&okaż informacje
+	w_Lang013 =	&Ukryj okno
 	w_Lang014 =	&Zawsze aktywny
 	w_Lang015 =	Powtarzam
 	w_Lang016 =	Opóźnienie (ms):
@@ -124,6 +125,15 @@
 	w_Lang018 =	Wstawić
 	w_Lang019 =	Edytuj
 	w_Lang020 =	Pokaż panel kontroli
+	w_Lang021 =	Nic nie robić
+	w_Lang022 =	Close aplikacji
+	w_Lang023 =	Zamknąć
+	w_Lang024 =	Wyłącz (siła)
+	w_Lang025 =	Reboot
+	w_Lang026 =	Wyloguj się
+	w_Lang027 =	Zimować
+	w_Lang028 =	Zawiesić
+	w_Lang029 =	Blokowanie komputera
 		
 ; Command Windows		
 	c_Lang001 =	Mysz
@@ -365,7 +375,7 @@
 	t_Lang082 =	Oświadczenia
 	t_Lang083 =	Pokaż Wcięcia dla pętli i oświadczenia
 	t_Lang084 =	(Kliknij dwukrotnie nagłówek kolumny Action włącz / wyłącz)
-	t_Lang085 =	Wyświetlić pasek postępu
+	t_Lang085 =	Kontrola wyświetlania paska na start-up
 	t_Lang086 =	Wyszukiwanie funkcji. Proszę czekać...
 	t_Lang087 =	Dołącz plików zewnętrznych
 	t_Lang088 =	Utwórz plik EXE
@@ -380,6 +390,10 @@
 	t_Lang097 =	Naciśnij przycisk na joysticku
 	t_Lang098 =	Drążek sterowy
 	t_Lang099 =	Przycisk
+	t_Lang100 =	Pokaż informacje
+	t_Lang101 =	Prędkość
+	t_Lang102 =	Zwolnij
+	t_Lang103 =	Szybko
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Otwarte
@@ -566,6 +580,11 @@
 	AbortKey_TT =	Backspace, aby usunąć
 	JoyKey_TT =	Naciśnij przycisk na joysticku
 	PauseKey_TT =	Wstrzymuje wykonywanie zamiast zatrzymać
+	OnFinish_TT =	
+	(LTrim	
+		opcje wyłączania
+		Po zakończeniu odtwarzania...
+	)	
 	Win1_TT =	Dodaj klucz Windows jako modyfikator
 	JoyHK_TT =	Drążek sterowy
 	ReptC_TT =	0 = nieskończony
@@ -577,6 +596,8 @@
 	IfDirB_TT =	Producent Hotkeys pracy w zależności od rodzaju`nokna, które jest aktywne lub istnieje (Ctrl+H)
 	KeepHKOn_TT =	Zachowaj Hotkeys zawsze aktywna
 	A_List_TT =	Wybierz Makro (Ctrl+1~0)
+	OSHK_TT =	Wybierz Makro
+	OSHKEd_TT =	Wybierz Makro
 	Duplicate_TT =	Duplikat wybranych wierszy (Ctrl+D)
 	Order_TT =	Przenoszenie wybranych wierszy (Ctrl+PageUp / Ctrl+PageDown)
 	Cut_TT =	Wytnij wybranych wierszy (Ctrl+X)
@@ -588,7 +609,7 @@
 	CopyTo_TT =	Skopiuj do...
 	Capt_TT =	Przechwytywanie naciśnięć klawiszy w tym oknie
 	OnScCtrl_TT =	Wyświetlić Przyciski Paska Narzędzi
-	ShowStep_TT =	Pokaż informacje
+	ShowStep_TT =	Pokaż porady w dymkach
 	ApplyT_TT =	Zastosować
 	ApplyI_TT =	Zastosować
 	ApplyL_TT =	Wstaw z pudełkiem (Insert)
@@ -624,6 +645,8 @@
 	OSFast_TT =	Przyśpieszyć
 	OSSlow_TT =	Zwolnij
 	OSTrans_TT =	nieprzezroczystość
+	ToggleTB_TT =	Pokaż / Ukryj pasek tytułu
+	ToggleMW_TT =	Pokaż / Ukryj okno główne
 	MRel_TT =	
 	(LTrim	
 		Zmiany w stosunku do aktualnej pozycji.
@@ -655,7 +678,12 @@
 		zawartość schowka).
 	)	
 	SetText_TT =	Zmienia tekst kontrolę.
-	RelKey_TT =	Records względne ruchy i kliknięcia, a naciśnięty.
+	RelKey_TT =	
+	(LTrim	
+		Rekordy ruchy myszy i kliknięcia jak odsunięcia
+		
+	)	
+	ToggleC_TT =	Aktywuj krewny klawisz nagrywania, gdy stan jest włączony.
 	Relative_TT =	Współrzędne są w stosunku do aktywnego okna.
 	Screen_TT =	Współrzędne są w stosunku do pulpitu (ekranu cały).
 	IncFolders_TT =	

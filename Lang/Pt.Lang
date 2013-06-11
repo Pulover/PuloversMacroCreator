@@ -74,7 +74,7 @@
 	r_lang005 =	A&dicionar Macro
 	r_lang006 =	&Fechar Macro
 	r_lang007 =	Atalhos &Condicionais
-	r_lang008 =	Mostrar Co&ntrol.
+	r_lang008 =	&Mostrar / Ocultar Controles
 	r_lang009 =	Reproduzir a &Partir da Linha Selecionada
 	r_lang010 =	Reproduzir Até a &Linha Selecionada
 	r_lang011 =	Reproduzir Linhas &Selecionadas
@@ -102,6 +102,7 @@
 ; Tray Menu		
 	y_Lang001 =	Ocultar Janela
 	y_Lang002 =	Mostrar Janela
+	y_Lang003 =	Mostrar / Ocultar Controles
 		
 ; Main Window		
 	w_Lang001 =	Exportar
@@ -116,7 +117,7 @@
 	w_Lang010 =	&Pausa
 	w_Lang011 =	&Loop
 	w_Lang012 =	&Capturar Teclas
-	w_Lang013 =	Mostrar I&nfo.
+	w_Lang013 =	Ocultar &Janela
 	w_Lang014 =	Sempre A&tivo
 	w_Lang015 =	Repetir
 	w_Lang016 =	Interv. (ms):
@@ -124,6 +125,15 @@
 	w_Lang018 =	Inserir
 	w_Lang019 =	Editar
 	w_Lang020 =	Mostrar Control.
+	w_Lang021 =	Não fazer nada
+	w_Lang022 =	Fechar aplicativo
+	w_Lang023 =	Desligar
+	w_Lang024 =	Desligar (forçar)
+	w_Lang025 =	Reiniciar
+	w_Lang026 =	Fazer logoff
+	w_Lang027 =	Hibernar
+	w_Lang028 =	Suspender
+	w_Lang029 =	Bloquear computador
 		
 ; Command Windows		
 	c_Lang001 =	Mouse
@@ -365,7 +375,7 @@
 	t_Lang082 =	Declarações
 	t_Lang083 =	Mostrar Margens para Loops e Declarações
 	t_Lang084 =	(Duplo-Clique no Cabeçalho da Coluna Action para ativar/desativar)
-	t_Lang085 =	Mostrar Barra de Progresso
+	t_Lang085 =	Mostrar Barra de Controles ao iniciar.
 	t_Lang086 =	Procurando Funções. Por favor aguarde...
 	t_Lang087 =	Incluir Arquivos Externos
 	t_Lang088 =	Criar Arquivo EXE
@@ -380,6 +390,10 @@
 	t_Lang097 =	Pressione um botão no joystick
 	t_Lang098 =	Joystick
 	t_Lang099 =	Botão
+	t_Lang100 =	Mostrar Info.
+	t_Lang101 =	Velocidade
+	t_Lang102 =	Devagar
+	t_Lang103 =	Rápido
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Abrir
@@ -513,10 +527,10 @@
 		Você pode criar Macros utilizando os botões de comando na janela principal ou usar o gravador para copiar suas ações. Vá até Opções > Configurações > Gravar para selecionar quais entradas serão gravadas.
 		Para utilizar o gravador para tarefas rápidas vá em Opções > Configurações > Gravação e marque a opção "Limpar Lista". Em seguida, clique no botão Gravar na janela principal e use F10 para limpar a Macro atual e iniciar uma nova com a mesma hotkey. Você também pode marcar a opção "Sempre Ativo" na janela principal para manter as teclas de gravação e reprodução ativas.
 		Para obter ajuda para um comando específico botão direito do mouse sobre um botão de comando na janela principal ou em qualquer lugar em uma janela de comando para mostrar links para a Ajuda online AutoHotkey.
-		Marque a opção "Capturar Teclas" para inserir as chaves e combinações para seu Macro diretamente a partir da janela principal.
-		Digite teclas e combinações na caixa Tecla de atalho na parte inferior e pressione o botão Inserir para adicioná-los às linhas selecionadas.
-		Se nenhuma linha são selecionados os botões de edição aplica a todas as linhas da lista.
-		Você pode atribuir suas próprias variáveis nas variáveis windows (Inserir > Se Demonstrações / Variáveis / Funções). Para usá-los dentro de comandos de colocar o nome da variável em sinais de porcentagem, por exemplo: `%MyVar`%.
+		Marque a opção "Capturar Teclas" para inserir teclas e combinações à sua Macro diretamente na da janela principal.
+		Digite teclas e combinações na Caixa de Atalhos na parte inferior e pressione o botão Inserir para adicioná-las às linhas selecionadas.
+		Se nenhuma linha estiver selecionada os botões de edição se aplicam a todas as linhas da lista.
+		Você pode atribuir suas próprias variáveis na janela Variáveis (Inserir > Declarações SE / Variáveis / Funções). Para usá-las dentro de comandos coloque o nome da variável entre sinais de porcentagem, por exemplo: `%MyVar`%.
 		O contador de "Loop" no topo define o número total de repetições para a Macro selecionada.
 		Você pode editar uma linha clicando duas vezes nela ou selecionando-a e clicando nos botões de edição na parte inferior.
 		Você pode editar várias linhas selecionadas usando as opções na barra de edição na parte inferior.
@@ -535,7 +549,7 @@
 		Clique no cabeçalho da coluna Índice de ligar / desligar Ajuda marcas e cores para Loops e declarações. Duplo-Clique no cabeçalho da coluna Ação para ligar / desligar recuo para Loops e declarações.
 		Você pode depurar suas macros utilizando a tecla de excução manual e as opções de reprodução no menu Macro. Você também pode desativar ações, desmarcando-as na lista da Macro.
 		Para fazer suas Macros funcionarem apenas em uma determinada janela vá em Macro > Atalho Condicionais.
-		Você pode definir suas próprias variáveis globais para ser carregado no arranque e para ser exportado. Vá para Opções > Configurações > Usuário variáveis globais para adicioná-los.
+		Você pode definir suas próprias variáveis globais para serem carregadas ao iniciar e para serem exportadas. Vá em Opções > Configurações > Variáveis Globais do Usuário para adicioná-las.
 		Você pode executar funções avançadas como SubStr e RegExReplace da janela Funções (Inserir > Declaração Se / Variáveis / Funções). Ou executar suas próprias funções a partir de scripts AutoHotkey externos.
 	)	
 ; Tooltips		
@@ -566,6 +580,11 @@
 	AbortKey_TT =	Backspace para apagar
 	JoyKey_TT =	Pressione um botão no joystick
 	PauseKey_TT =	Pausa execução ao invés de parar
+	OnFinish_TT =	
+	(LTrim	
+		Opções de desligamento
+		Quando a reprodução terminar...
+	)	
 	Win1_TT =	Adicionar a tecla Windows como modificador
 	JoyHK_TT =	Joystick
 	ReptC_TT =	0 = infinito
@@ -577,6 +596,8 @@
 	IfDirB_TT =	Faz os Atalhos funcionarem dependendo`ndo tipo de janela ativa ou existente.
 	KeepHKOn_TT =	Manter Atalhos Sempre Ativos
 	A_List_TT =	Selecionar Macro (Ctrl+1~0)
+	OSHK_TT =	Selecionar Macro
+	OSHKEd_TT =	Selecionar Macro
 	Duplicate_TT =	Duplicar Linhas Selecionadas (Ctrl+D)
 	Order_TT =	Mover Linhas Selecionadas (Ctrl+PageUp / Ctrl+PageDown)
 	Cut_TT =	Recortar Linhas Selecionadas (Ctrl+X)
@@ -588,7 +609,7 @@
 	CopyTo_TT =	Copiar para...
 	Capt_TT =	Capturar teclas pressionadas nesta janela
 	OnScCtrl_TT =	Exibir a Barra de Controles
-	ShowStep_TT =	Mostrar Informações
+	ShowStep_TT =	Mostrar dicas em balões
 	ApplyT_TT =	Aplicar
 	ApplyI_TT =	Aplicar
 	ApplyL_TT =	Inserir da Caixa (Insert)
@@ -624,6 +645,8 @@
 	OSFast_TT =	Acelerar
 	OSSlow_TT =	Reduzir
 	OSTrans_TT =	Opacidade
+	ToggleTB_TT =	Mostrar / Ocultar Barra de Título
+	ToggleMW_TT =	Mostrar / Ocultar Janela Principal
 	MRel_TT =	
 	(LTrim	
 		Movimentos relativos à posição atual.
@@ -655,7 +678,12 @@
 		o conteúdo da Área de Transferência).
 	)	
 	SetText_TT =	Muda o texto de um controle.
-	RelKey_TT =	Grava Clicks e Movivimentos relativos enquanto pressionada.
+	RelKey_TT =	
+	(LTrim	
+		Grava movimentos e cliques do mouse relativos
+		à ultima posição quando pressinada.
+	)	
+	ToggleC_TT =	Ativa Gravação Relativa quando a tecla estiver acionada.
 	Relative_TT =	Coordenadas relativas à janela ativa.
 	Screen_TT =	Coordenadas relativas à área de trabalho (tela inteira).
 	IncFolders_TT =	

@@ -4,14 +4,14 @@
 		
 ; Main Menu		
 	m_Lang001 =	&File
-	m_Lang002 =	U&metnuti
-	m_Lang003 =	O&dabrati
+	m_Lang002 =	&Umetnuti
+	m_Lang003 =	&Odabrati
 	m_Lang004 =	U&redi
-	m_Lang005 =	M&akro
+	m_Lang005 =	&Makro
 	m_Lang006 =	Mo&gućnosti
 	m_Lang007 =	&Jezik
 	m_Lang008 =	&Napravite donacije
-	m_Lang009 =	Pomo&ći
+	m_Lang009 =	&Pomoći
 		
 ; File Submenu		
 	f_Lang001 =	&Novi
@@ -74,7 +74,7 @@
 	r_lang005 =	&Dodaj Macro
 	r_lang006 =	&Makro Zatvori
 	r_lang007 =	&Kontekstna Hotkeys
-	r_lang008 =	&Pokaži kontrole
+	r_lang008 =	S&how / Hide Kontrole
 	r_lang009 =	I&grati na odabrani redak
 	r_lang010 =	Ig&raj dok odabrani redak
 	r_lang011 =	Igra&jte odabrane retke
@@ -102,6 +102,7 @@
 ; Tray Menu		
 	y_Lang001 =	Sakrij Prozor
 	y_Lang002 =	Pokaži prozor
+	y_Lang003 =	Show / Hide Kontrole
 		
 ; Main Window		
 	w_Lang001 =	Izvoz
@@ -113,17 +114,26 @@
 	w_Lang007 =	Čovjek
 	w_Lang008 =	Stop
 	w_Lang009 =	&Win
-	w_Lang010 =	&Pauza
+	w_Lang010 =	P&auza
 	w_Lang011 =	P&etlja
 	w_Lang012 =	&Hvatanje Keys
-	w_Lang013 =	P&okaži Info
-	w_Lang014 =	&Uvijek je aktivna
+	w_Lang013 =	&Sakrij Prozor
+	w_Lang014 =	U&vijek je aktivna
 	w_Lang015 =	Ponovite
 	w_Lang016 =	Kašnjenje (ms):
 	w_Lang017 =	Primijeniti
 	w_Lang018 =	Umetnuti
 	w_Lang019 =	Uredi
 	w_Lang020 =	Pokaži kontrole
+	w_Lang021 =	Ne učiniti ništa
+	w_Lang022 =	Zatvori prijava
+	w_Lang023 =	Zatvoriti
+	w_Lang024 =	Isključite (sila)
+	w_Lang025 =	Ponovno
+	w_Lang026 =	Odjava
+	w_Lang027 =	Hibernirati
+	w_Lang028 =	Obustaviti
+	w_Lang029 =	Zaključajte računalo
 		
 ; Command Windows		
 	c_Lang001 =	Miš
@@ -365,7 +375,7 @@
 	t_Lang082 =	Izjave
 	t_Lang083 =	Pokaži Utiskivanje je Loops i izvješća
 	t_Lang084 =	(Dvaput kliknite zaglavlje stupca Akcija uključiti / isključiti)
-	t_Lang085 =	Prikaz Progress Bar
+	t_Lang085 =	Display Kontrole bar na start-up
 	t_Lang086 =	U potrazi za funkcije. Molimo pričekajte...
 	t_Lang087 =	Uključiti vanjske datoteke
 	t_Lang088 =	Stvaranje EXE datoteke
@@ -380,6 +390,10 @@
 	t_Lang097 =	Pritisnite tipku na palici
 	t_Lang098 =	Džojstik
 	t_Lang099 =	Dugme
+	t_Lang100 =	Pokaži Info
+	t_Lang101 =	Ubrzati
+	t_Lang102 =	Usporite
+	t_Lang103 =	Brz
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Otvoreno
@@ -566,6 +580,11 @@
 	AbortKey_TT =	Povratna izbiti
 	JoyKey_TT =	Pritisnite tipku na palici
 	PauseKey_TT =	Pauziranje izvršenje umjesto zaustavljanja
+	OnFinish_TT =	
+	(LTrim	
+		shutdown opcije
+		Kad reprodukcija završi...
+	)	
 	Win1_TT =	Dodaj Windows tipku za izmjenu
 	JoyHK_TT =	Džojstik
 	ReptC_TT =	0 = beskonačno
@@ -577,6 +596,8 @@
 	IfDirB_TT =	Provjerite Hotkeys raditi ovisno o `nType od prozora koji je aktivan ili ne postoji (Ctrl+H)
 	KeepHKOn_TT =	Hotkeys Uvijek držite Aktiviran
 	A_List_TT =	Odabir Makro (Ctrl+1~0)
+	OSHK_TT =	Odabir Makro
+	OSHKEd_TT =	Odabir Makro
 	Duplicate_TT =	Dvostruki odabrane retke (Ctrl+D)
 	Order_TT =	Premještanje odabrane retke (Ctrl+PageUp / Ctrl+PageDown)
 	Cut_TT =	Odabrani Redovi Cut (Ctrl+X)
@@ -588,7 +609,7 @@
 	CopyTo_TT =	Kopirajte se...
 	Capt_TT =	Hvatanje pritiskanje tipki u ovom prozoru
 	OnScCtrl_TT =	Prikazali Kontrole Traci
-	ShowStep_TT =	Pokaži Info
+	ShowStep_TT =	Prikaz balon savjete
 	ApplyT_TT =	Primijeniti
 	ApplyI_TT =	Primijeniti
 	ApplyL_TT =	Stavite na kutiji (Insert)
@@ -624,6 +645,8 @@
 	OSFast_TT =	Ubrzati
 	OSSlow_TT =	Usporiti
 	OSTrans_TT =	neprozirnost
+	ToggleTB_TT =	Show / Hide Naslov Bar
+	ToggleMW_TT =	Show / Hide glavni prozor
 	MRel_TT =	
 	(LTrim	
 		Promjene u odnosu na trenutnu poziciju.
@@ -655,7 +678,12 @@
 		sadržaj na prijenosnik).
 	)	
 	SetText_TT =	Mijenja tekst kontrole.
-	RelKey_TT =	Podaci relativne Pokreti i klikova, a pritisnuta.
+	RelKey_TT =	
+	(LTrim	
+		Podaci miš pokreti i klikovi kao offseta
+		iz prethodne pozicije kada je održana.
+	)	
+	ToggleC_TT =	Aktivirajte Relativna snimanja kad Ključni državni uključen.
 	Relative_TT =	Koordinate u odnosu na aktivni prozor.
 	Screen_TT =	Koordinate se u odnosu na desktop (cijeli ekran).
 	IncFolders_TT =	

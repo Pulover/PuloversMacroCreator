@@ -74,7 +74,7 @@
 	r_lang005 =	添加宏
 	r_lang006 =	關閉宏
 	r_lang007 =	上下文敏感的熱鍵
-	r_lang008 =	顯示控制
+	r_lang008 =	顯示/隱藏控制
 	r_lang009 =	播放選中的行
 	r_lang010 =	玩直到選中的行
 	r_lang011 =	播放選定的行
@@ -102,6 +102,7 @@
 ; Tray Menu		
 	y_Lang001 =	隱藏窗口
 	y_Lang002 =	櫥窗
+	y_Lang003 =	顯示/隱藏控制
 		
 ; Main Window		
 	w_Lang001 =	出口
@@ -116,7 +117,7 @@
 	w_Lang010 =	暫停
 	w_Lang011 =	循環
 	w_Lang012 =	擷取鍵
-	w_Lang013 =	顯示信息
+	w_Lang013 =	隱藏窗口
 	w_Lang014 =	始終活躍
 	w_Lang015 =	重複
 	w_Lang016 =	延時（ms）：
@@ -124,6 +125,15 @@
 	w_Lang018 =	插入
 	w_Lang019 =	編輯
 	w_Lang020 =	顯示控制
+	w_Lang021 =	什麼都不做
+	w_Lang022 =	關閉應用程序
+	w_Lang023 =	關閉
+	w_Lang024 =	關機（力）
+	w_Lang025 =	重新啟動
+	w_Lang026 =	註銷
+	w_Lang027 =	過冬
+	w_Lang028 =	暫停
+	w_Lang029 =	鎖定計算機
 		
 ; Command Windows		
 	c_Lang001 =	鼠標
@@ -365,7 +375,7 @@
 	t_Lang082 =	報表
 	t_Lang083 =	循環和報表顯示縮進
 	t_Lang084 =	（雙擊操作“列頭啟用/禁用）
-	t_Lang085 =	顯示進度條
+	t_Lang085 =	顯示控制欄上啟動
 	t_Lang086 =	搜索功能。請稍候...
 	t_Lang087 =	包括外部文件
 	t_Lang088 =	創建EXE文件
@@ -380,6 +390,10 @@
 	t_Lang097 =	按下操縱桿上的按鈕
 	t_Lang098 =	搖桿
 	t_Lang099 =	鈕
+	t_Lang100 =	顯示信息
+	t_Lang101 =	速度
+	t_Lang102 =	慢
+	t_Lang103 =	快
 		
 ; Messages & Dialogs		
 	d_Lang001 =	打開
@@ -566,6 +580,11 @@
 	AbortKey_TT =	Backspace鍵來清除
 	JoyKey_TT =	按下操縱桿上的按鈕
 	PauseKey_TT =	暫停執行，而不是停止
+	OnFinish_TT =	
+	(LTrim	
+		關機選項
+		當播放結束...
+	)	
 	Win1_TT =	作為改性劑添加Windows鍵
 	JoyHK_TT =	搖桿
 	ReptC_TT =	0 =無限
@@ -577,6 +596,8 @@
 	IfDirB_TT =	進行熱鍵取決於`N型的窗口，是主動或存在（按Ctrl+H）
 	KeepHKOn_TT =	保持始終處於激活熱鍵
 	A_List_TT =	選擇“宏”（Ctrl+1~0）
+	OSHK_TT =	選擇“宏”
+	OSHKEd_TT =	選擇“宏”
 	Duplicate_TT =	複製選中的行（CTRL+D）
 	Order_TT =	將選定行（按Ctrl +上一頁/ CTRL +下一頁）
 	Cut_TT =	剪切選定行（Ctrl+X鍵）
@@ -588,7 +609,7 @@
 	CopyTo_TT =	複製到...
 	Capt_TT =	在此窗口中捕捉按鍵
 	OnScCtrl_TT =	顯示控件工具欄
-	ShowStep_TT =	顯示信息
+	ShowStep_TT =	顯示氣球提示
 	ApplyT_TT =	申請
 	ApplyI_TT =	申請
 	ApplyL_TT =	插入盒（插入）
@@ -624,6 +645,8 @@
 	OSFast_TT =	加快
 	OSSlow_TT =	減緩
 	OSTrans_TT =	透明度
+	ToggleTB_TT =	顯示/隱藏標題欄
+	ToggleMW_TT =	顯示/隱藏主窗口
 	MRel_TT =	
 	(LTrim	
 		相對於當前位置的變動。
@@ -655,7 +678,12 @@
 		剪貼板中的內容）。
 	)	
 	SetText_TT =	更改文本的控制。
-	RelKey_TT =	記錄的相對運動和點擊次數，而按下。
+	RelKey_TT =	
+	(LTrim	
+		記錄鼠標移動和點擊，
+		從以前的位置偏移時舉行。
+	)	
+	ToggleC_TT =	國家重點時，激活相對錄製。
 	Relative_TT =	坐標是相對的活動窗口。
 	Screen_TT =	坐標是相對於桌面（整個畫面）。
 	IncFolders_TT =	

@@ -5,11 +5,11 @@
 ; Main Menu		
 	m_Lang001 =	&Fil
 	m_Lang002 =	&Sett
-	m_Lang003 =	V&elg
+	m_Lang003 =	&Velg
 	m_Lang004 =	&Redigere
 	m_Lang005 =	&Makro
-	m_Lang006 =	Al&ternativer
-	m_Lang007 =	Spr&åk
+	m_Lang006 =	&Alternativer
+	m_Lang007 =	S&pråk
 	m_Lang008 =	F&oreta en donasjon
 	m_Lang009 =	&Hjelp
 		
@@ -74,7 +74,7 @@
 	r_lang005 =	&Legg Makro
 	r_lang006 =	L&ukk Makro
 	r_lang007 =	&Kontekstsensitiv Hurtigtaster
-	r_lang008 =	&Vis kontroller
+	r_lang008 =	&Vis / skjul Controls
 	r_lang009 =	S&pille fra utvalgte rad
 	r_lang010 =	Sp&ille til valgt rad
 	r_lang011 =	Spill&e valgte rader
@@ -102,6 +102,7 @@
 ; Tray Menu		
 	y_Lang001 =	Skjul vindu
 	y_Lang002 =	Vis Window
+	y_Lang003 =	Vis / skjul Controls
 		
 ; Main Window		
 	w_Lang001 =	Eksportere
@@ -113,17 +114,26 @@
 	w_Lang007 =	Man.
 	w_Lang008 =	Stopp
 	w_Lang009 =	&Win
-	w_Lang010 =	&Pause
+	w_Lang010 =	Pa&use
 	w_Lang011 =	&Loop
 	w_Lang012 =	&Capture Keys
-	w_Lang013 =	&Vis informasjon
-	w_Lang014 =	&Alltid aktiv
+	w_Lang013 =	S&kjul vindu
+	w_Lang014 =	All&tid aktiv
 	w_Lang015 =	Gjentar
 	w_Lang016 =	Delay (ms):
 	w_Lang017 =	Påfør
 	w_Lang018 =	Sett
 	w_Lang019 =	Redigere
 	w_Lang020 =	Vis kontroller
+	w_Lang021 =	Gjør ingenting
+	w_Lang022 =	Lukk programmet
+	w_Lang023 =	Slå
+	w_Lang024 =	Avslutt (kraft)
+	w_Lang025 =	Reboot
+	w_Lang026 =	Logg av
+	w_Lang027 =	Hibernate
+	w_Lang028 =	Suspendere
+	w_Lang029 =	Låse datamaskinen
 		
 ; Command Windows		
 	c_Lang001 =	Mus
@@ -365,7 +375,7 @@
 	t_Lang082 =	Uttalelser
 	t_Lang083 =	Vis Innrykk for Loops og uttalelser
 	t_Lang084 =	(Dobbeltklikk på kolonnen Handling header aktivere / deaktivere)
-	t_Lang085 =	Vise Progress Bar
+	t_Lang085 =	Displayet Controls bar ved oppstart
 	t_Lang086 =	Søke etter funksjoner. Vennligst vent...
 	t_Lang087 =	Inkluder eksterne filer
 	t_Lang088 =	Lag EXE-fil
@@ -380,6 +390,10 @@
 	t_Lang097 =	Trykk på en knapp på joysticken
 	t_Lang098 =	Joystick
 	t_Lang099 =	Button
+	t_Lang100 =	Vis informasjon
+	t_Lang101 =	Fart
+	t_Lang102 =	Sakte
+	t_Lang103 =	Fast
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Åpent
@@ -566,6 +580,11 @@
 	AbortKey_TT =	Tilbaketasten for å fjerne
 	JoyKey_TT =	Trykk på en knapp på joysticken
 	PauseKey_TT =	Pauser gjennomføring stedet for å stoppe
+	OnFinish_TT =	
+	(LTrim	
+		nedleggelse alternativer
+		Når avspillingen fullføres...
+	)	
 	Win1_TT =	Legge til Windows-tasten som modifikator
 	JoyHK_TT =	Joystick
 	ReptC_TT =	0 = uendelig
@@ -577,6 +596,8 @@
 	IfDirB_TT =	Gjør Hurtigtaster virker, avhengig av`ntype vindu som er aktivt eller eksisterer (Ctrl+H)
 	KeepHKOn_TT =	Hold Hurtigtaster alltid aktivert
 	A_List_TT =	Velg Makro (Ctrl+1~0)
+	OSHK_TT =	Velg Makro
+	OSHKEd_TT =	Velg Makro
 	Duplicate_TT =	Dupliser valgte rader (Ctrl+D)
 	Order_TT =	Flytt valgte rader (Ctrl+PageUp / Ctrl+PageDown)
 	Cut_TT =	Skjær valgte rader (Ctrl+X)
@@ -588,7 +609,7 @@
 	CopyTo_TT =	Kopier til...
 	Capt_TT =	Fange tastetrykk i dette vinduet
 	OnScCtrl_TT =	Vise Kontrollene Verktøylinjen
-	ShowStep_TT =	Vis informasjon
+	ShowStep_TT =	Vise boblehjelp
 	ApplyT_TT =	Påfør
 	ApplyI_TT =	Påfør
 	ApplyL_TT =	Sett fra boksen (Insert)
@@ -624,6 +645,8 @@
 	OSFast_TT =	Fremskynde
 	OSSlow_TT =	Tregere
 	OSTrans_TT =	opasitet
+	ToggleTB_TT =	Vis / skjul Title Bar
+	ToggleMW_TT =	Vis / skjul hovedvinduet
 	MRel_TT =	
 	(LTrim	
 		Bevegelser i forhold til nåværende posisjon.
@@ -655,7 +678,12 @@
 		innholdet påutklippstavla).
 	)	
 	SetText_TT =	Endrer teksten i en kontroll.
-	RelKey_TT =	Records relative bevegelser og klikk, mens trykket.
+	RelKey_TT =	
+	(LTrim	
+		Records musebevegelser og klikk som forskyvninger
+		fra forrige posisjon når den holdes.
+	)	
+	ToggleC_TT =	Aktiver Relativ opptak når nøkkelen staten er på.
 	Relative_TT =	Koordinatene er relative til det aktive vinduet.
 	Screen_TT =	Koordinatene er relative til skrivebordet (hele skjermen).
 	IncFolders_TT =	

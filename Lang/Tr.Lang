@@ -3,14 +3,14 @@
 		; Turkish
 		
 ; Main Menu		
-	m_Lang001 =	D&osya
+	m_Lang001 =	&Dosya
 	m_Lang002 =	&Eklemek
 	m_Lang003 =	&Seçmek
 	m_Lang004 =	D&üzenle
 	m_Lang005 =	&Makro
 	m_Lang006 =	Se&çenekler
 	m_Lang007 =	D&il
-	m_Lang008 =	B&ağış Yap
+	m_Lang008 =	&Bağış Yap
 	m_Lang009 =	&Yardım
 		
 ; File Submenu		
@@ -74,7 +74,7 @@
 	r_lang005 =	Mak&ro Ekle
 	r_lang006 =	Ka&pat Makro
 	r_lang007 =	&Bağlam Duyarlı Hotkeys
-	r_lang008 =	K&ontrolleri göster
+	r_lang008 =	K&ontroller gizle / göster
 	r_lang009 =	&Seçilen satırdaki oyna
 	r_lang010 =	S&eçili satır kadar oyna
 	r_lang011 =	Se&çilen Satırlar oyna
@@ -102,6 +102,7 @@
 ; Tray Menu		
 	y_Lang001 =	Pencere gizle
 	y_Lang002 =	Pencere göster
+	y_Lang003 =	Kontroller gizle / göster
 		
 ; Main Window		
 	w_Lang001 =	Ihracat
@@ -113,10 +114,10 @@
 	w_Lang007 =	Man.
 	w_Lang008 =	Dur
 	w_Lang009 =	&Win
-	w_Lang010 =	&Durma
+	w_Lang010 =	D&urma
 	w_Lang011 =	D&öngü
 	w_Lang012 =	&Tuşlar Capture
-	w_Lang013 =	&Bilgisini Göster
+	w_Lang013 =	&Pencere gizle
 	w_Lang014 =	&Her zaman Aktif
 	w_Lang015 =	Tekrarlayın
 	w_Lang016 =	Gecikme (ms):
@@ -124,6 +125,15 @@
 	w_Lang018 =	Eklemek
 	w_Lang019 =	Düzenle
 	w_Lang020 =	Kontrolleri göster
+	w_Lang021 =	Hiçbir şey yapma
+	w_Lang022 =	Yakın başvuru
+	w_Lang023 =	Kapatmak
+	w_Lang024 =	Kapatın (kuvvet)
+	w_Lang025 =	Yeniden başlatın
+	w_Lang026 =	Oturumu kapatın
+	w_Lang027 =	Kış uykusuna yatmak
+	w_Lang028 =	Askıya almak
+	w_Lang029 =	Bilgisayar kilit
 		
 ; Command Windows		
 	c_Lang001 =	Fare
@@ -365,7 +375,7 @@
 	t_Lang082 =	Tablolar
 	t_Lang083 =	Döngüler ve Tablolar için Girinti göster
 	t_Lang084 =	(Çift tıklayın Eylem sütun başlığını aktif / pasif)
-	t_Lang085 =	İlerleme Çubuğu Ekran
+	t_Lang085 =	Ekran start-up bar kontrol
 	t_Lang086 =	Fonksiyonlar aranıyor. Lütfen bekleyin...
 	t_Lang087 =	Harici Dosyaları İçer
 	t_Lang088 =	EXE dosyası oluştur
@@ -380,6 +390,10 @@
 	t_Lang097 =	Joystick üzerindeki bir düğmeye basın
 	t_Lang098 =	Joystick
 	t_Lang099 =	Düğme
+	t_Lang100 =	Bilgisini Göster
+	t_Lang101 =	Hız
+	t_Lang102 =	Yavaş
+	t_Lang103 =	Hızlı
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Açık
@@ -566,6 +580,11 @@
 	AbortKey_TT =	Temizlemek için Backspace
 	JoyKey_TT =	Joystick üzerindeki bir düğmeye basın
 	PauseKey_TT =	Yürütme yerine durdurma Duraklamadan
+	OnFinish_TT =	
+	(LTrim	
+		kapatma seçenekleri
+		Ne zaman çalma bitirir...
+	)	
 	Win1_TT =	Değiştirici olarak Windows tuşu ekle
 	JoyHK_TT =	Joystick
 	ReptC_TT =	0 = sonsuz
@@ -577,6 +596,8 @@
 	IfDirB_TT =	Hotkeys aktif veya bulunduğu pencerenin`ntip (Ctrl+H) bağlı olarak çalışmasını sağlayın
 	KeepHKOn_TT =	Daima Aktif Hotkeys tutun
 	A_List_TT =	Makro Seçin (Ctrl+1~0)
+	OSHK_TT =	Makro Seçin
+	OSHKEd_TT =	Makro Seçin
 	Duplicate_TT =	Seçili Satırlar çoğaltın (Ctrl+D)
 	Order_TT =	Seçili Satırlar Taşı (Ctrl+PageUp / Ctrl+PageUp)
 	Cut_TT =	Seçili Satırlar (Ctrl+X) Cut
@@ -588,7 +609,7 @@
 	CopyTo_TT =	Kopyala...
 	Capt_TT =	Bu pencerede basılmasını Capture
 	OnScCtrl_TT =	Araç Çubuğu Kontrolleri Görüntülemek
-	ShowStep_TT =	Bilgisini Göster
+	ShowStep_TT =	Balon ipuçlarını görüntülemek
 	ApplyT_TT =	Uygulamak
 	ApplyI_TT =	Uygulamak
 	ApplyL_TT =	Kutusundan Ekle (Insert)
@@ -624,6 +645,8 @@
 	OSFast_TT =	Hızlandırma
 	OSSlow_TT =	Yavaşlatmak
 	OSTrans_TT =	donukluk
+	ToggleTB_TT =	Göster / Gizle Başlık Çubuğu
+	ToggleMW_TT =	Ana pencerede göster / gizle
 	MRel_TT =	
 	(LTrim	
 		Geçerli konuma göre Hareketleri.
@@ -655,7 +678,12 @@
 		Pano içeriği).
 	)	
 	SetText_TT =	Bir denetimin metni değiştirir.
-	RelKey_TT =	Kayıt göreli Hareketleri ve Tıklanma basılı iken.
+	RelKey_TT =	
+	(LTrim	
+		Düzenlenen önceki pozisyondan uzaklıklar
+		gibi kayıtları Fare hareketleri ve tıklamaları.
+	)	
+	ToggleC_TT =	Önemli devlet açıkken Bağıl Kayıt etkinleştirin.
 	Relative_TT =	Koordinatlar etkin pencere göredir.
 	Screen_TT =	Koordinatlar masaüstü (tüm ekranı) göredir.
 	IncFolders_TT =	

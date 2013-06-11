@@ -9,8 +9,8 @@
 	m_Lang004 =	&Redigeren
 	m_Lang005 =	&Macro
 	m_Lang006 =	&Opties
-	m_Lang007 =	Taal
-	m_Lang008 =	Maak &een donatie
+	m_Lang007 =	&Taal
+	m_Lang008 =	M&aak een donatie
 	m_Lang009 =	&Help
 		
 ; File Submenu		
@@ -74,7 +74,7 @@
 	r_lang005 =	&Voeg Macro
 	r_lang006 =	S&luiten Macro
 	r_lang007 =	&Context gevoelige sneltoetsen
-	r_lang008 =	T&oon een checklist
+	r_lang008 =	S&how / Hide Controls
 	r_lang009 =	A&fspelen vanaf geselecteerde rij
 	r_lang010 =	S&peel tot geselecteerde rij
 	r_lang011 =	Sp&elen Geselecteerde Rijen
@@ -102,6 +102,7 @@
 ; Tray Menu		
 	y_Lang001 =	Venster te verbergen
 	y_Lang002 =	Toon venster
+	y_Lang003 =	Show / Hide Controls
 		
 ; Main Window		
 	w_Lang001 =	Exporteren
@@ -116,14 +117,23 @@
 	w_Lang010 =	&Pauze
 	w_Lang011 =	&Lus
 	w_Lang012 =	&Capture Keys
-	w_Lang013 =	&Toon info
-	w_Lang014 =	&Altijd Actief
+	w_Lang013 =	&Venster te verbergen
+	w_Lang014 =	Alti&jd Actief
 	w_Lang015 =	Herhalen
 	w_Lang016 =	Delay (ms):
 	w_Lang017 =	Van toepassing zijn
 	w_Lang018 =	Invoegen
 	w_Lang019 =	Redigeren
 	w_Lang020 =	Toon een checklist
+	w_Lang021 =	Niets doen
+	w_Lang022 =	Sluit de toepassing
+	w_Lang023 =	Stilgelegd
+	w_Lang024 =	Afsluiten (kracht)
+	w_Lang025 =	Reboot
+	w_Lang026 =	Uitloggen
+	w_Lang027 =	Overwinteren
+	w_Lang028 =	Opschorten
+	w_Lang029 =	Lock computer
 		
 ; Command Windows		
 	c_Lang001 =	Muis
@@ -365,7 +375,7 @@
 	t_Lang082 =	Verklaringen
 	t_Lang083 =	Toon Inspringen voor Loops en Verklaringen
 	t_Lang084 =	(Dubbelklik op de actie kolomkop inschakelen / uitschakelen)
-	t_Lang085 =	Weergave Progress Bar
+	t_Lang085 =	Beeldscherm Controls bar op start-up
 	t_Lang086 =	Zoeken naar functies. Even geduld aub...
 	t_Lang087 =	Inclusief externe bestanden
 	t_Lang088 =	Maak EXE File
@@ -380,6 +390,10 @@
 	t_Lang097 =	Druk op een knop op de joystick
 	t_Lang098 =	Bedieningshendel
 	t_Lang099 =	Knop
+	t_Lang100 =	Toon info
+	t_Lang101 =	Snelheid
+	t_Lang102 =	Vertragen
+	t_Lang103 =	Snel
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Open
@@ -566,6 +580,11 @@
 	AbortKey_TT =	Backspace om te wissen
 	JoyKey_TT =	Druk op een knop op de joystick
 	PauseKey_TT =	Hiermee onderbreekt de uitvoering in plaats van te stoppen
+	OnFinish_TT =	
+	(LTrim	
+		shutdown opties
+		Wanneer het afspelen is voltooid...
+	)	
 	Win1_TT =	Voeg de Windows-toets als modifier
 	JoyHK_TT =	Bedieningshendel
 	ReptC_TT =	0 = oneindig
@@ -577,6 +596,8 @@
 	IfDirB_TT =	Maak Sneltoetsen werken, afhankelijk van het`ntype venster dat actief is of bestaat (Ctrl+H)
 	KeepHKOn_TT =	Houd Sneltoetsen altijd geactiveerd
 	A_List_TT =	Selecteert Macro (Ctrl+1~0)
+	OSHK_TT =	Selecteert Macro
+	OSHKEd_TT =	Selecteert Macro
 	Duplicate_TT =	Geselecteerde rijen dupliceren (Ctrl+D)
 	Order_TT =	Verplaats geselecteerde rijen (Ctrl+PageUp / Ctrl+PageDown)
 	Cut_TT =	Snijd Geselecteerde rijen (Ctrl+X)
@@ -588,7 +609,7 @@
 	CopyTo_TT =	Kopiëren naar...
 	Capt_TT =	Capture-toets drukt in dit venster
 	OnScCtrl_TT =	Weer Controles Werkbalk
-	ShowStep_TT =	Toon info
+	ShowStep_TT =	Weer ballontips
 	ApplyT_TT =	Van toepassing zijn
 	ApplyI_TT =	Van toepassing zijn
 	ApplyL_TT =	Invoegen van Box (Insert)
@@ -624,6 +645,8 @@
 	OSFast_TT =	Versnellen
 	OSSlow_TT =	Langzamer gaan
 	OSTrans_TT =	ondoorzichtigheid
+	ToggleTB_TT =	Show / Hide Title Bar
+	ToggleMW_TT =	Show / Hide hoofdvenster
 	MRel_TT =	
 	(LTrim	
 		Bewegingen ten opzichte van de huidige positie.
@@ -655,7 +678,12 @@
 		de inhoud van het klembord).
 	)	
 	SetText_TT =	Hiermee wijzigt u de tekst van een controle.
-	RelKey_TT =	Records relatieve bewegingen en Clicks tijdens het drukken.
+	RelKey_TT =	
+	(LTrim	
+		Records muis bewegingen en klikken als offsets
+		van de vorige positie bij gehouden.
+	)	
+	ToggleC_TT =	Activeer Relatieve opnemen wanneer belangrijke staat is op.
 	Relative_TT =	Coördinaten zijn ten opzichte van het actieve venster.
 	Screen_TT =	Coördinaten zijn ten opzichte van het bureaublad (hele scherm).
 	IncFolders_TT =	

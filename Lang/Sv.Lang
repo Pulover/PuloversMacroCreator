@@ -3,12 +3,12 @@
 		; Swedish
 		
 ; Main Menu		
-	m_Lang001 =	A&rkiv
+	m_Lang001 =	&Arkiv
 	m_Lang002 =	&Infoga
-	m_Lang003 =	V&älj
-	m_Lang004 =	R&edigera
+	m_Lang003 =	&Välj
+	m_Lang004 =	&Redigera
 	m_Lang005 =	&Makro
-	m_Lang006 =	Al&ternativ
+	m_Lang006 =	A&lternativ
 	m_Lang007 =	&Språk
 	m_Lang008 =	&Gör en donation
 	m_Lang009 =	&Hjälp
@@ -74,7 +74,7 @@
 	r_lang005 =	&Lägg Makro
 	r_lang006 =	St&äng Makro
 	r_lang007 =	Sa&mmanhangsberoende Snabbtangenter
-	r_lang008 =	&Visa kontroller
+	r_lang008 =	&Visa / dölj Kontroller
 	r_lang009 =	Sp&ela upp från vald rad
 	r_lang010 =	Spela t&ills utvalda raden
 	r_lang011 =	Spela ma&rkerade rader
@@ -102,6 +102,7 @@
 ; Tray Menu		
 	y_Lang001 =	Dölj fönster
 	y_Lang002 =	Visa fönster
+	y_Lang003 =	Visa / dölj Kontroller
 		
 ; Main Window		
 	w_Lang001 =	Exportera
@@ -114,16 +115,25 @@
 	w_Lang008 =	Stopp
 	w_Lang009 =	&Win
 	w_Lang010 =	&Paus
-	w_Lang011 =	&Loop
+	w_Lang011 =	L&oop
 	w_Lang012 =	&Fånga Keys
-	w_Lang013 =	&Visa info
-	w_Lang014 =	&Alltid aktiv
+	w_Lang013 =	&Dölj fönster
+	w_Lang014 =	All&tid aktiv
 	w_Lang015 =	Upprepa
 	w_Lang016 =	Fördröjning (ms):
 	w_Lang017 =	Ansök
 	w_Lang018 =	Infoga
 	w_Lang019 =	Redigera
 	w_Lang020 =	Visa kontroller
+	w_Lang021 =	Gör ingenting
+	w_Lang022 =	Stäng program
+	w_Lang023 =	Stäng
+	w_Lang024 =	Stäng (kraft)
+	w_Lang025 =	Starta
+	w_Lang026 =	Logga ut
+	w_Lang027 =	Viloläge
+	w_Lang028 =	Suspend
+	w_Lang029 =	Lås datorn
 		
 ; Command Windows		
 	c_Lang001 =	Mus
@@ -365,7 +375,7 @@
 	t_Lang082 =	Uttalanden
 	t_Lang083 =	Visa Indrag för loopar och uttalanden
 	t_Lang084 =	(Dubbelklicka på Action kolumnrubriken aktivera / avaktivera)
-	t_Lang085 =	Visa Progress Indikator
+	t_Lang085 =	Display Kontroller bar vid uppstart
 	t_Lang086 =	Söka efter funktioner. Var god vänta...
 	t_Lang087 =	Inkludera externa filer
 	t_Lang088 =	Skapa EXE-fil
@@ -380,6 +390,10 @@
 	t_Lang097 =	Tryck på en knapp på joysticken
 	t_Lang098 =	Joystick
 	t_Lang099 =	Knapp
+	t_Lang100 =	Visa info
+	t_Lang101 =	Hastighet
+	t_Lang102 =	Sakta
+	t_Lang103 =	Snabb
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Öppet
@@ -566,6 +580,11 @@
 	AbortKey_TT =	Backsteg för att radera
 	JoyKey_TT =	Tryck på en knapp på joysticken
 	PauseKey_TT =	Pausar exekvering stället för att stoppa
+	OnFinish_TT =	
+	(LTrim	
+		avstängningsalternativen
+		När uppspelningen slutar...
+	)	
 	Win1_TT =	Lägg till Windows-tangenten som modifierare
 	JoyHK_TT =	Joystick
 	ReptC_TT =	0 = oändlig
@@ -577,6 +596,8 @@
 	IfDirB_TT =	Gör Snabbtangenter fungerar beroende på`ntyp av fönster som är aktivt eller existerar (Ctrl+H)
 	KeepHKOn_TT =	Håll snabbtangenter alltid aktiverat
 	A_List_TT =	Välj Makro (Ctrl+1~0)
+	OSHK_TT =	Välj Makro
+	OSHKEd_TT =	Välj Makro
 	Duplicate_TT =	Duplicera markerade rader (Ctrl+D)
 	Order_TT =	Flytta markerade rader (Ctrl+PageUp / Ctrl+Page Down)
 	Cut_TT =	Klippa ut markerad rader (Ctrl+X)
@@ -588,7 +609,7 @@
 	CopyTo_TT =	Kopiera till...
 	Capt_TT =	Fånga tangenttryckningar i detta fönster
 	OnScCtrl_TT =	Näyttösäädöt Työkalurivi
-	ShowStep_TT =	Visa info
+	ShowStep_TT =	Visa tipsbubblor
 	ApplyT_TT =	Ansök
 	ApplyI_TT =	Ansök
 	ApplyL_TT =	Infoga från rutan (Insert)
@@ -624,6 +645,8 @@
 	OSFast_TT =	Fart upp
 	OSSlow_TT =	Sakta Ner
 	OSTrans_TT =	opacitet
+	ToggleTB_TT =	Visa / dölj Titel Bar
+	ToggleMW_TT =	Visa / dölj huvudfönstret
 	MRel_TT =	
 	(LTrim	
 		Rörelser i förhållande till nuvarande position.
@@ -655,7 +678,12 @@
 		innehållet i Urklipp).
 	)	
 	SetText_TT =	Ändrar texten till en kontroll.
-	RelKey_TT =	Register relativa rörelser och klick då den trycks ned.
+	RelKey_TT =	
+	(LTrim	
+		Records musrörelser och klick som offset
+		från tidigare ståndpunkt när den hålls.
+	)	
+	ToggleC_TT =	Aktivera Relativ inspelning när nyckeln staten är på.
 	Relative_TT =	Koordinater är i förhållande till den aktiva fönstret.
 	Screen_TT =	Koordinater i förhållande till skrivbordet (hela skärmen).
 	IncFolders_TT =	

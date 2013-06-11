@@ -3,14 +3,14 @@
 		; Czech
 		
 ; Main Menu		
-	m_Lang001 =	So&ubor
-	m_Lang002 =	V&ložit
+	m_Lang001 =	&Soubor
+	m_Lang002 =	&Vložit
 	m_Lang003 =	V&ybrat
-	m_Lang004 =	Up&ravit
+	m_Lang004 =	&Upravit
 	m_Lang005 =	&Makro
-	m_Lang006 =	Mo&žnosti
+	m_Lang006 =	M&ožnosti
 	m_Lang007 =	&Jazyk
-	m_Lang008 =	P&řispějte
+	m_Lang008 =	&Přispějte
 	m_Lang009 =	Pomo&c
 		
 ; File Submenu		
@@ -74,7 +74,7 @@
 	r_lang005 =	&Přidat makro
 	r_lang006 =	Za&vřít Makro
 	r_lang007 =	&Kontextová Klávesové zkratky
-	r_lang008 =	&Ukázat šekový
+	r_lang008 =	Z&obrazit / Skrýt ovládací
 	r_lang009 =	P&řehrávání z vybraný řádek
 	r_lang010 =	H&rát, dokud vybraný řádek
 	r_lang011 =	Př&ehrát vybrané řádky
@@ -102,6 +102,7 @@
 ; Tray Menu		
 	y_Lang001 =	Skrýt okno
 	y_Lang002 =	Zobrazit okno
+	y_Lang003 =	Zobrazit / Skrýt ovládací
 		
 ; Main Window		
 	w_Lang001 =	Export
@@ -113,17 +114,26 @@
 	w_Lang007 =	Man.
 	w_Lang008 =	Zastavit
 	w_Lang009 =	&Win
-	w_Lang010 =	&Pauza
-	w_Lang011 =	&Smyčka
+	w_Lang010 =	P&auza
+	w_Lang011 =	Smy&čka
 	w_Lang012 =	&Zachyťte klíče
-	w_Lang013 =	Z&obrazit informace
-	w_Lang014 =	&Vždy Aktivní
+	w_Lang013 =	S&krýt okno
+	w_Lang014 =	V&ždy Aktivní
 	w_Lang015 =	Opakovat
 	w_Lang016 =	Delay (ms):
 	w_Lang017 =	Platit
 	w_Lang018 =	Vložit
 	w_Lang019 =	Upravit
 	w_Lang020 =	Ukázat šekový
+	w_Lang021 =	Nedělat nic
+	w_Lang022 =	Zavřít aplikace
+	w_Lang023 =	Zavřít
+	w_Lang024 =	Vypnout (síla)
+	w_Lang025 =	Restartujte
+	w_Lang026 =	Odhlásit
+	w_Lang027 =	Přezimovat
+	w_Lang028 =	Pozastavit
+	w_Lang029 =	Uzamčení počítače
 		
 ; Command Windows		
 	c_Lang001 =	Myš
@@ -365,7 +375,7 @@
 	t_Lang082 =	Prohlášení
 	t_Lang083 =	Zobrazit odsazení pro Loops a výkazy
 	t_Lang084 =	(Poklepejte na záhlaví sloupce akce povolit / zakázat)
-	t_Lang085 =	Zobrazit Progress Bar
+	t_Lang085 =	Zobrazení panelu s ovládacími prvky na start-up
 	t_Lang086 =	Vyhledávání funkcí. Prosím čekejte...
 	t_Lang087 =	Zahrnout externí soubory
 	t_Lang088 =	Vytvořit EXE soubor
@@ -380,6 +390,10 @@
 	t_Lang097 =	Stiskněte tlačítko na joysticku
 	t_Lang098 =	Joystick
 	t_Lang099 =	Tlačítko
+	t_Lang100 =	Zobrazit informace
+	t_Lang101 =	Rychlost
+	t_Lang102 =	Pomalu
+	t_Lang103 =	Rychle
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Otevřít
@@ -566,6 +580,11 @@
 	AbortKey_TT =	Backspace zrušte
 	JoyKey_TT =	Stiskněte tlačítko na joysticku
 	PauseKey_TT =	Pozastaví výkon místo zastavení
+	OnFinish_TT =	
+	(LTrim	
+		vypnutí možnosti
+		Pokud přehrávání skončí...
+	)	
 	Win1_TT =	Přidejte klávesu Windows jako modifikátor
 	JoyHK_TT =	Joystick
 	ReptC_TT =	0 = nekonečno
@@ -577,6 +596,8 @@
 	IfDirB_TT =	Značka Hotkeys pracovat v závislosti na typu`nokna, který je aktivní, nebo existuje (Ctrl+H)
 	KeepHKOn_TT =	Mějte klávesových zkratek vždy aktivní
 	A_List_TT =	Vyberte Makro (Ctrl+1~0)
+	OSHK_TT =	Vyberte Makro
+	OSHKEd_TT =	Vyberte Makro
 	Duplicate_TT =	Duplikovat vybrané řádky (Ctrl+D)
 	Order_TT =	Přesuňte vybrané řádky (Ctrl+PageUp / Ctrl+PageDown)
 	Cut_TT =	Vyjmout vybrané řádky (Ctrl+X)
@@ -588,7 +609,7 @@
 	CopyTo_TT =	Kopírovat do...
 	Capt_TT =	Zachytit stisky kláves v tomto okně
 	OnScCtrl_TT =	Zobrazit Ovládací Panel
-	ShowStep_TT =	Zobrazit informace
+	ShowStep_TT =	Zobrazit bublinové tipy
 	ApplyT_TT =	Platit
 	ApplyI_TT =	Platit
 	ApplyL_TT =	Vložit z krabice (Insert)
@@ -624,6 +645,8 @@
 	OSFast_TT =	Urychlit
 	OSSlow_TT =	Zpomalit
 	OSTrans_TT =	neprůhlednost
+	ToggleTB_TT =	Zobrazit / skrýt Title Bar
+	ToggleMW_TT =	Zobrazit / skrýt hlavní okno
 	MRel_TT =	
 	(LTrim	
 		Pohyby v poměru k aktuální pozici.
@@ -655,7 +678,12 @@
 		obsah schránky).
 	)	
 	SetText_TT =	Změní text ovládacího prvku.
-	RelKey_TT =	Záznam relativní pohyby a kliknutí během stisknutí.
+	RelKey_TT =	
+	(LTrim	
+		Records pohyby myši a kliknutí jsou offsety
+		od předchozí pozice, kdy se konalo.
+	)	
+	ToggleC_TT =	Aktivace Relativní nahrávání při stisku stav je dál.
 	Relative_TT =	Polohu jsou vztaženy k aktivním okně.
 	Screen_TT =	Souřadnice jsou relativní k ploše (celá obrazovka).
 	IncFolders_TT =	

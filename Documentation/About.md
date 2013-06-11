@@ -8,8 +8,8 @@ Author: Pulover \[Rodolfo U. Batista\]
 [rodolfoub@gmail.com](mailto:rodolfoub@gmail.com)  
 Copyright © 2012-2013 Rodolfo U. Batista  
 
-Version: 3.7.3  
-Release Date: May, 2013  
+Version: 3.7.4  
+Release Date: June, 2013  
 AutoHotkey Version: 1.1.10.01  
 
 Software License: [GNU General Public License](License.html)  
@@ -21,6 +21,7 @@ tic (Tariq Porter) for his [GDI+ Library](http://www.autohotkey.com/board/topic/
 tkoi & majkinetor for the [ILButton function](http://www.autohotkey.com/board/topic/37147-ilbutton-image-buttons).  
 just me for [LV_Colors Class](http://www.autohotkey.com/board/topic/88699-class-lv-colors), GuiCtrlAddTab and for updating ILButton to 64bit.  
 diebagger and Obi-Wahn for the [function to move rows](http://www.autohotkey.com/board/topic/56396-techdemo-move-rows-in-a-listview).  
+Micahs for the [base code](http://www.autohotkey.com/board/topic/30486-listview-tooltip-on-mouse-hover/?p=280843) of the Drag-Rows function.
 Kdoske & trueski for the [CSV functions](http://www.autohotkey.com/board/topic/51681-csv-library-lib).  
 jaco0646 for the [function](http://www.autohotkey.com/board/topic/47439-user-defined-dynamic-hotkeys) to make hotkey controls detect other keys.  
 Laszlo for the [Monster function](http://www.autohotkey.com/board/topic/15675-monster) to solve expressions.  
@@ -30,6 +31,15 @@ T800 for [Html Help utils](http://www.autohotkey.com/board/topic/17984-html-help
 
 
 # Change Log
+
+## Version 3.7.4
+
+* Added *Shutdown options* in Main Window.
+* Added *Speed Control* for exported scripts.
+* Improved *Drag-Rows* function.
+* Fixed crash by stack overflow in Goto-based loops.
+* Fixed escaped commas not showing in command parameters of the *Run* window.
+* Fixed Controls Toolbar Play button not switching when using Hotkeys.
 
 ## Version 3.7.3
 

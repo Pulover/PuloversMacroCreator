@@ -5,10 +5,10 @@
 ; Main Menu		
 	m_Lang001 =	&File
 	m_Lang002 =	&Inserire
-	m_Lang003 =	S&elezionare
-	m_Lang004 =	M&odifica
-	m_Lang005 =	Mac&ro
-	m_Lang006 =	Op&zioni
+	m_Lang003 =	&Selezionare
+	m_Lang004 =	&Modifica
+	m_Lang005 =	M&acro
+	m_Lang006 =	&Opzioni
 	m_Lang007 =	&Lingua
 	m_Lang008 =	Fai &una donazione
 	m_Lang009 =	Aiu&to
@@ -74,7 +74,7 @@
 	r_lang005 =	Agg&iungi Macro
 	r_lang006 =	&Chiudere Macro
 	r_lang007 =	Ta&sti di scelta rapida sensibili al contesto
-	r_lang008 =	&Mostra controlli
+	r_lang008 =	&Mostra / Nascondi controlli
 	r_lang009 =	Gi&oca da riga selezionata
 	r_lang010 =	Gioca &fino a riga selezionata
 	r_lang011 =	Gioca rig&he selezionate
@@ -102,6 +102,7 @@
 ; Tray Menu		
 	y_Lang001 =	Nascondi la finestra
 	y_Lang002 =	Mostra Finestra
+	y_Lang003 =	Mostra / Nascondi controlli
 		
 ; Main Window		
 	w_Lang001 =	Esportazione
@@ -114,16 +115,25 @@
 	w_Lang008 =	Arresto
 	w_Lang009 =	&Win
 	w_Lang010 =	&Pausa
-	w_Lang011 =	&Anello
+	w_Lang011 =	A&nello
 	w_Lang012 =	&Cattura Keys
-	w_Lang013 =	&Mostra informazioni
-	w_Lang014 =	&Sempre attivo
+	w_Lang013 =	Nascon&di la finestra
+	w_Lang014 =	S&empre attivo
 	w_Lang015 =	Ripeti
 	w_Lang016 =	Ritardo (ms):
 	w_Lang017 =	Applicare
 	w_Lang018 =	Inserire
 	w_Lang019 =	Modifica
 	w_Lang020 =	Mostra controlli
+	w_Lang021 =	Non fare nulla
+	w_Lang022 =	Chiudi applicazione
+	w_Lang023 =	Chiudere
+	w_Lang024 =	Spegnere (forza)
+	w_Lang025 =	Riavviare
+	w_Lang026 =	Log off
+	w_Lang027 =	Hibernate
+	w_Lang028 =	Sospendere
+	w_Lang029 =	Blocco del computer
 		
 ; Command Windows		
 	c_Lang001 =	Mouse
@@ -365,7 +375,7 @@
 	t_Lang082 =	Dichiarazioni
 	t_Lang083 =	Mostra Rientro per Loops e dichiarazioni
 	t_Lang084 =	(Fare doppio clic sull'intestazione della colonna Azione attiva / disattiva)
-	t_Lang085 =	Mostra barra di avanzamento
+	t_Lang085 =	Mostra barra Controlli in fase di start-up
 	t_Lang086 =	Ricerca di funzioni. Si prega di attendere...
 	t_Lang087 =	Includere file esterni
 	t_Lang088 =	Créer un fichier EXE
@@ -380,6 +390,10 @@
 	t_Lang097 =	Premere un pulsante sul joystick
 	t_Lang098 =	Joystick
 	t_Lang099 =	Pulsante
+	t_Lang100 =	Mostra informazioni
+	t_Lang101 =	Velocità
+	t_Lang102 =	Rallentare
+	t_Lang103 =	Veloce
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Aperto
@@ -566,6 +580,11 @@
 	AbortKey_TT =	Backspace per cancellare
 	JoyKey_TT =	Premere un pulsante sul joystick
 	PauseKey_TT =	Mette in pausa l'esecuzione invece di fermarsi
+	OnFinish_TT =	
+	(LTrim	
+		opzioni di spegnimento
+		Quando termina la riproduzione...
+	)	
 	Win1_TT =	Aggiungere la chiave di Windows come modificatore
 	JoyHK_TT =	Joystick
 	ReptC_TT =	0 = infinito
@@ -577,6 +596,8 @@
 	IfDirB_TT =	Tasti di scelta rapida Fare funzionare a seconda del tipo`ndi finestra che è attiva o esiste (Ctrl+H)
 	KeepHKOn_TT =	Tasti di scelta rapida Tenere sempre attivo
 	A_List_TT =	Selezionare Macro (Ctrl+1~0)
+	OSHK_TT =	Selezionare Macro
+	OSHKEd_TT =	Selezionare Macro
 	Duplicate_TT =	Duplica le righe selezionate (Ctrl+D)
 	Order_TT =	Spostare le righe selezionate (Ctrl+PageUp / Ctrl+PageDown)
 	Cut_TT =	Tagliare righe selezionate (Ctrl+X)
@@ -588,7 +609,7 @@
 	CopyTo_TT =	Copia...
 	Capt_TT =	Catturare pressioni di tasti in questa finestra
 	OnScCtrl_TT =	Visualizzare I Controlli Barra Degli Strumenti
-	ShowStep_TT =	Mostra informazioni
+	ShowStep_TT =	Visualizzare i fumetti
 	ApplyT_TT =	Applicare
 	ApplyI_TT =	Applicare
 	ApplyL_TT =	Inserisci da scatola (Insert)
@@ -624,6 +645,8 @@
 	OSFast_TT =	Accelerare
 	OSSlow_TT =	Rallentare
 	OSTrans_TT =	opacità
+	ToggleTB_TT =	Mostra / Nascondi barra del titolo
+	ToggleMW_TT =	Mostra / Nascondi finestra principale
 	MRel_TT =	
 	(LTrim	
 		Movimenti relativi alla posizione corrente.
@@ -655,7 +678,12 @@
 		il contenuto degli appunti).
 	)	
 	SetText_TT =	Cambia il testo di un controllo.
-	RelKey_TT =	Documenti di movimenti relativi e Clic la pressione del tasto.
+	RelKey_TT =	
+	(LTrim	
+		Registra i movimenti del mouse e clic come offset
+		dalla posizione precedente quando si terrà.
+	)	
+	ToggleC_TT =	Attivare la registrazione relativo quando la chiave è stato acceso.
 	Relative_TT =	Le coordinate sono relative alla finestra attiva.
 	Screen_TT =	Le coordinate sono relative al desktop (schermo intero).
 	IncFolders_TT =	

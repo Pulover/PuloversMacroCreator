@@ -18,6 +18,7 @@ shell32 := SysRoot "\System32\shell32.dll"
 urlmon := SysRoot "\System32\urlmon.dll"
 SyncCenter := SysRoot "\System32\SyncCenter.dll"
 wlanpref := SysRoot "\System32\wlanpref.dll"
+dfshim := SysRoot "\System32\dfshim.dll"
 FXSRESM := SysRoot "\System32\FXSRESM.dll"
 servdeps := SysRoot "\System32\servdeps.dll"
 shimgvw := SysRoot "\System32\shimgvw.dll"
@@ -76,6 +77,7 @@ If A_OSVersion in WIN_8,WIN_7
 	RecOptIcon := [psr, 1]
 	RunTimerIcon := [miguiresource, 2]
 	JoyIcon := [Joy, 1]
+	FinishIcon := [dfshim, 2]
 	PlusIcon := [shell32, 280]
 	CloseIcon := [shell32, 235]
 	DuplicateLIcon := [shell32, 279]
@@ -180,6 +182,7 @@ If A_OSVersion = WIN_VISTA
 	RecOptIcon := [inetcpl, 50]
 	RunTimerIcon := [miguiresource, 2]
 	JoyIcon := [Joy, 1]
+	FinishIcon := [dfshim, 2]
 	PlusIcon := [wlanpref, 8]
 	CloseIcon := [wlanpref, 9]
 	DuplicateLIcon := [FXSRESM, 12]
@@ -284,6 +287,7 @@ If A_OSVersion in WIN_2003,WIN_XP,WIN_2000
 	RecOptIcon := [xpsp2res, 14]
 	RunTimerIcon := [Timedate, 1]
 	JoyIcon := [Joy, 1]
+	FinishIcon := [dfshim, 2]
 	PlusIcon := [inetcpl, 22]
 	CloseIcon := [inetcpl, 23]
 	DuplicateLIcon := [shell32, 55]
@@ -433,6 +437,8 @@ ContHTitle := {	2: ["p6-Preview.html"]
 
 RecOptChecks := ["ClearNewList", "Strokes", "CaptKDn", "Mouse", "MScroll"
 			, "Moves", "TimedI", "WClass", "WTitle", "RecMouseCtrl", "RecKeybdCtrl"]
+OnFinishCode := 1
+Exp_Mult := {1:2, 2:4, 3:8, 4:16, 5:32}
 KeyNameRep := "
 (Join,
 LControl|Left Control

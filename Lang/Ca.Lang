@@ -5,11 +5,11 @@
 ; Main Menu		
 	m_Lang001 =	&Expedient
 	m_Lang002 =	&Insereix
-	m_Lang003 =	Se&leccionar
+	m_Lang003 =	&Seleccionar
 	m_Lang004 =	E&dita
-	m_Lang005 =	M&acro
+	m_Lang005 =	&Macro
 	m_Lang006 =	&Opcions
-	m_Lang007 =	Idioma
+	m_Lang007 =	Idiom&a
 	m_Lang008 =	&Fer una donació
 	m_Lang009 =	A&judar
 		
@@ -74,7 +74,7 @@
 	r_lang005 =	A&fegir Macro
 	r_lang006 =	Ta&ncar Macro
 	r_lang007 =	T&ecles d'accés directe sensibles al context
-	r_lang008 =	&Barra de control
+	r_lang008 =	&Mostra / Amaga controls
 	r_lang009 =	J&uga de fila seleccionada
 	r_lang010 =	Juga f&ins que la Columna seleccionat
 	r_lang011 =	Juga fi&les seleccionades
@@ -102,6 +102,7 @@
 ; Tray Menu		
 	y_Lang001 =	Hide Window
 	y_Lang002 =	Mostrar finestra
+	y_Lang003 =	Mostra / Amaga controls
 		
 ; Main Window		
 	w_Lang001 =	Exportar
@@ -116,14 +117,23 @@
 	w_Lang010 =	&Pausa
 	w_Lang011 =	&Bucle
 	w_Lang012 =	&Captura Keys
-	w_Lang013 =	&Mostrar informació
-	w_Lang014 =	&Sempre actiu
+	w_Lang013 =	&Hide Window
+	w_Lang014 =	Semp&re actiu
 	w_Lang015 =	Repetir
 	w_Lang016 =	Retard (ms):
 	w_Lang017 =	Aplicar
 	w_Lang018 =	Insereix
 	w_Lang019 =	Edita
 	w_Lang020 =	Barra de control
+	w_Lang021 =	No fer res
+	w_Lang022 =	Tancar l'aplicació
+	w_Lang023 =	Tancar
+	w_Lang024 =	Apagueu (força)
+	w_Lang025 =	Reiniciar
+	w_Lang026 =	Sortir del sistema
+	w_Lang027 =	Hiberna
+	w_Lang028 =	Suspendre
+	w_Lang029 =	Bloca equip
 		
 ; Command Windows		
 	c_Lang001 =	Ratolí
@@ -365,7 +375,7 @@
 	t_Lang082 =	Declaracions
 	t_Lang083 =	Mostra sagnia de bucles i sentències
 	t_Lang084 =	(Feu doble clic a la capçalera de la columna Acció d'activar / desactivar)
-	t_Lang085 =	Mostra la barra de progrés
+	t_Lang085 =	Mostra la barra de controls en l'arrencada
 	t_Lang086 =	Cerca de Funcions. Si us plau, esperi...
 	t_Lang087 =	Incloure arxius externs
 	t_Lang088 =	Crea un fitxer EXE
@@ -380,6 +390,10 @@
 	t_Lang097 =	Premeu un botó a la palanca de comandament
 	t_Lang098 =	Palanca de comandament
 	t_Lang099 =	Botó
+	t_Lang100 =	Mostrar informació
+	t_Lang101 =	Accelerar
+	t_Lang102 =	Poc a poc
+	t_Lang103 =	Ràpid
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Obert
@@ -566,6 +580,11 @@
 	AbortKey_TT =	Retrocés per esborrar
 	JoyKey_TT =	Premeu un botó a la palanca de comandament
 	PauseKey_TT =	Fa una pausa en l'execució en comptes d'aturar
+	OnFinish_TT =	
+	(LTrim	
+		Opcions d'apagada
+		Quan finalitzi la reproducció...
+	)	
 	Win1_TT =	Afegir la tecla Windows com a modificador
 	JoyHK_TT =	Palanca de comandament
 	ReptC_TT =	0 = infinit
@@ -577,6 +596,8 @@
 	IfDirB_TT =	Feu Hotkeys funcionen depenent del `nType de la finestra que està activa o no existeix (Ctrl+H)
 	KeepHKOn_TT =	Mantingui Hotkeys Sempre Activat
 	A_List_TT =	Seleccioneu Macro (Ctrl+1~0)
+	OSHK_TT =	Seleccioneu Macro
+	OSHKEd_TT =	Seleccioneu Macro
 	Duplicate_TT =	Duplicar files seleccionades (Ctrl+D)
 	Order_TT =	Mou les files seleccionades (Ctrl+RePàg / Ctrl+AvPàg)
 	Cut_TT =	Tallar files seleccionades (Ctrl+X)
@@ -588,7 +609,7 @@
 	CopyTo_TT =	Copiar a...
 	Capt_TT =	Captura pulsacions de tecles en aquesta finestra
 	OnScCtrl_TT =	Mostrar Els Controls De La Barra D'eines
-	ShowStep_TT =	Mostrar informació
+	ShowStep_TT =	Mostra globus de suggeriments
 	ApplyT_TT =	Aplicar
 	ApplyI_TT =	Aplicar
 	ApplyL_TT =	Inseriu de Caixa (Insert)
@@ -624,6 +645,8 @@
 	OSFast_TT =	Accelerar
 	OSSlow_TT =	Alentir
 	OSTrans_TT =	opacitat
+	ToggleTB_TT =	Mostra / Oculta la barra de títol
+	ToggleMW_TT =	Mostra / oculta la finestra principal
 	MRel_TT =	
 	(LTrim	
 		Moviments relatius a la posició actual.
@@ -655,7 +678,12 @@
 		el contingut del porta-retalls).
 	)	
 	SetText_TT =	Canvia el text d'un control.
-	RelKey_TT =	Registres moviments relatius i Clicks mentre pressiona.
+	RelKey_TT =	
+	(LTrim	
+		Registres Els moviments del ratolí i els clics com
+		compensacions de posició anterior quan es manté.
+	)	
+	ToggleC_TT =	Activa gravació relativa a l'estat de la tecla.
 	Relative_TT =	Les coordenades són relatives a la finestra activa.
 	Screen_TT =	Les coordenades són relatives a l'escriptori (pantalla completa).
 	IncFolders_TT =	

@@ -4,7 +4,7 @@
 
 * [Introduction](#introduction)
 * [Hotkeys](#hotkeys)
-* [On-Screen Controls](#on-screen-controls)
+* [Controls Toolbar](#controls-toolbar)
 * [Context Sensitive Hotkeys](#context-sensitive-hotkeys)
 * [Playback Options](#playback-options)
 
@@ -29,9 +29,9 @@ This key is global for all Macros.
 
 *Note*: Mouse Actions are affected by [Mouse Coordinates Settings](p7-Settings.html#defaults).  
 
-## On-Screen Controls
+## Controls Toolbar
 
-This small window allows you to control Playback and Recording using an interface in addition to the Hotkeys. It will be displayed when the *Playback* or *Record* button is pressed and the *Show Controls* option is checked or you can open it manually from the Macro Menu and TrayMenu.
+This small window allows you to control Playback and Recording using an interface in addition to the Hotkeys. It will be displayed when the *Playback* or *Record* button is pressed and the *Show Controls* option is checked or you can open it manually from the Macro Menu, Tray Menu and pressing Ctrl+B on the main window.
 
 ### Multiple Macros
 
@@ -67,4 +67,4 @@ To change options click the Options button on the main window or select Options 
 
 **Return Mouse after playback**: If checked will return the mouse to the initial position after each Macro Playback that uses mouse movement. This will not work for Manual Playback.
 
-**Display Progress Bar**: If checked will display a bar on the screen showing the execution progress of the Macro playing. You can edit the options to change color, size and position. For information on the options of the Progress Bar refer to the [AutoHotkey Help](http://l.autohotkey.net/docs/commands/Progress.htm).
+**Display Controls Bar on startu-up**: If checked will display the Controls bar upon every start.

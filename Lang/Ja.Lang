@@ -74,7 +74,7 @@
 	r_lang005 =	マクロを追加します
 	r_lang006 =	閉じるマクロ
 	r_lang007 =	コンテキスト·センシティブホットキー
-	r_lang008 =	コントロールを表示
+	r_lang008 =	コントロールの表示/非表示
 	r_lang009 =	選択した行から再生
 	r_lang010 =	選択した行まで再生
 	r_lang011 =	選択された行を再生する
@@ -102,6 +102,7 @@
 ; Tray Menu		
 	y_Lang001 =	ウィンドウを非表示
 	y_Lang002 =	ウィンドウを表示する
+	y_Lang003 =	コントロールの表示/非表示
 		
 ; Main Window		
 	w_Lang001 =	エクスポート
@@ -116,7 +117,7 @@
 	w_Lang010 =	休止
 	w_Lang011 =	ループ
 	w_Lang012 =	キーをキャプチャ
-	w_Lang013 =	情報を表示する
+	w_Lang013 =	ウィンドウを非表示
 	w_Lang014 =	常にアクティブ
 	w_Lang015 =	繰り返し
 	w_Lang016 =	遅延（ms）：
@@ -124,6 +125,15 @@
 	w_Lang018 =	挿入
 	w_Lang019 =	編集
 	w_Lang020 =	コントロールを表示
+	w_Lang021 =	何もしない
+	w_Lang022 =	閉じるアプリケーション
+	w_Lang023 =	シャットダウン
+	w_Lang024 =	シャットダウン（強制）
+	w_Lang025 =	リブート
+	w_Lang026 =	ログオフ
+	w_Lang027 =	冬眠する
+	w_Lang028 =	一時停止
+	w_Lang029 =	コンピュータをロック
 		
 ; Command Windows		
 	c_Lang001 =	マウス
@@ -365,7 +375,7 @@
 	t_Lang082 =	文
 	t_Lang083 =	ループおよびステートメントのインデントを表示
 	t_Lang084 =	（ダブルクリックして、[アクション]列ヘッダーが有効/無効）
-	t_Lang085 =	プログレスバーを表示
+	t_Lang085 =	ディスプレイには、起動のバーを制御
 	t_Lang086 =	関数の検索。しばらくお待ちください...
 	t_Lang087 =	外部ファイルをインクルード
 	t_Lang088 =	EXEファイルを作成します。
@@ -380,6 +390,10 @@
 	t_Lang097 =	ジョイスティックのボタンを押し
 	t_Lang098 =	ジョイスティック
 	t_Lang099 =	ボタン
+	t_Lang100 =	情報を表示する
+	t_Lang101 =	スピード
+	t_Lang102 =	遅く
+	t_Lang103 =	速い
 		
 ; Messages & Dialogs		
 	d_Lang001 =	開く
@@ -566,6 +580,11 @@
 	AbortKey_TT =	クリアするには、Backspaceキー
 	JoyKey_TT =	ジョイスティックのボタンを押し
 	PauseKey_TT =	実行の代わりに停止を一時停止します
+	OnFinish_TT =	
+	(LTrim	
+		シャットダウンオプション
+		再生が終了すると...
+	)	
 	Win1_TT =	モディファイアとして、Windowsキーを追加
 	JoyHK_TT =	ジョイスティック
 	ReptC_TT =	0 =無限大
@@ -577,6 +596,8 @@
 	IfDirB_TT =	ホットキーがアクティブであるか、または存在します（Ctrl+H）ウィンドウの_のタイプに応じて動作させる
 	KeepHKOn_TT =	ホットキーは常​​に有効に保つ
 	A_List_TT =	マクロを選択（Ctrl+1~0）
+	OSHK_TT =	マクロを選択
+	OSHKEd_TT =	マクロを選択
 	Duplicate_TT =	選択した行を複製（Ctrl+Dキー）
 	Order_TT =	選択した行を移動します（Ctrl+PageUpキー/ Ctrlキーを押しながらPageDownキー）
 	Cut_TT =	[選択した行の（Ctrl+X）をカット
@@ -588,7 +609,7 @@
 	CopyTo_TT =	にコピーして...
 	Capt_TT =	このウィンドウでのキー押下を捕捉する
 	OnScCtrl_TT =	ツールバーコントロールを表示
-	ShowStep_TT =	情報を表示する
+	ShowStep_TT =	バルーンヒントを表示します
 	ApplyT_TT =	適用する
 	ApplyI_TT =	適用する
 	ApplyL_TT =	ボックスから挿入（Insert）
@@ -624,6 +645,8 @@
 	OSFast_TT =	スピードアップ
 	OSSlow_TT =	速度を落とす
 	OSTrans_TT =	不透明
+	ToggleTB_TT =	表示/非表示のタイトルバー
+	ToggleMW_TT =	メインウィンドウの表示/非表示
 	MRel_TT =	
 	(LTrim	
 		現在位置からの相対的な動き。
@@ -655,7 +678,12 @@
 		クリップボードの内容）。
 	)	
 	SetText_TT =	コントロールのテキストを変更します。
-	RelKey_TT =	押している間の相対的な動作やクリックを記録します。
+	RelKey_TT =	
+	(LTrim	
+		開催前の位置からのオフセットとして記録し、
+		マウスの動きやクリック。
+	)	
+	ToggleC_TT =	キーの状態がオンのときに相対録音を有効にします。
 	Relative_TT =	座標はアクティブウィンドウを基準にしています。
 	Screen_TT =	座標はデスクトップ（画面全体）からの相対パスです。
 	IncFolders_TT =	

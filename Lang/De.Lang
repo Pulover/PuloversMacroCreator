@@ -4,13 +4,13 @@
 		
 ; Main Menu		
 	m_Lang001 =	&Datei
-	m_Lang002 =	Ei&nfügen
-	m_Lang003 =	W&ählen
+	m_Lang002 =	&Einfügen
+	m_Lang003 =	&Wählen
 	m_Lang004 =	&Bearbeiten
-	m_Lang005 =	M&akro
+	m_Lang005 =	&Makro
 	m_Lang006 =	&Optionen
-	m_Lang007 =	Sp&rache
-	m_Lang008 =	Ma&chen Sie eine Spende
+	m_Lang007 =	&Sprache
+	m_Lang008 =	M&achen Sie eine Spende
 	m_Lang009 =	&Hilfe
 		
 ; File Submenu		
@@ -74,7 +74,7 @@
 	r_lang005 =	Ma&kro hinzufügen
 	r_lang006 =	S&chließen Macro
 	r_lang007 =	K&ontextsensitive Hotkeys
-	r_lang008 =	St&euerelemente anzeigen
+	r_lang008 =	S&how / Hide Bedienelemente
 	r_lang009 =	&Wiedergabe von ausgewählten Zeile
 	r_lang010 =	W&iedergabe bis zum ausgewählten Zeile
 	r_lang011 =	S&pielen Ausgewählte Zeilen
@@ -102,6 +102,7 @@
 ; Tray Menu		
 	y_Lang001 =	Fenster schließen
 	y_Lang002 =	Zeige Fenster
+	y_Lang003 =	Show / Hide Bedienelemente
 		
 ; Main Window		
 	w_Lang001 =	Exportieren
@@ -114,16 +115,25 @@
 	w_Lang008 =	Stoppen
 	w_Lang009 =	&Win
 	w_Lang010 =	&Pause
-	w_Lang011 =	&Schleife
-	w_Lang012 =	&Erfassen Keys
-	w_Lang013 =	&Info anzeigen
-	w_Lang014 =	I&mmer aktiv
+	w_Lang011 =	S&chleife
+	w_Lang012 =	E&rfassen Keys
+	w_Lang013 =	&Fenster schließen
+	w_Lang014 =	&Immer aktiv
 	w_Lang015 =	Wiederholen
 	w_Lang016 =	Delay (ms):
 	w_Lang017 =	Anwenden
 	w_Lang018 =	Einfügen
 	w_Lang019 =	Bearbeiten
 	w_Lang020 =	Steuerelemente anzeigen
+	w_Lang021 =	Nichts tun
+	w_Lang022 =	Anwendung schließen
+	w_Lang023 =	Schließen
+	w_Lang024 =	Herunterfahren (Kraft)
+	w_Lang025 =	Starten
+	w_Lang026 =	Abmelden
+	w_Lang027 =	Hibernate
+	w_Lang028 =	Suspend
+	w_Lang029 =	Computer sperren
 		
 ; Command Windows		
 	c_Lang001 =	Maus
@@ -365,7 +375,7 @@
 	t_Lang082 =	Statements
 	t_Lang083 =	Zeige Einrückung für Loops und Statements
 	t_Lang084 =	(Doppelklicken Sie auf die Spalte Aktion Header aktivieren / deaktivieren)
-	t_Lang085 =	Anzeige Progress Bar
+	t_Lang085 =	Display-Steuerelemente bar auf Start-up
 	t_Lang086 =	Auf der Suche nach Funktionen. Bitte warten...
 	t_Lang087 =	Fügen Sie externe Dateien
 	t_Lang088 =	Erstellen EXE-Datei
@@ -380,6 +390,10 @@
 	t_Lang097 =	Drücken Sie eine Taste auf dem Joystick
 	t_Lang098 =	Joystick
 	t_Lang099 =	Taste
+	t_Lang100 =	Info anzeigen
+	t_Lang101 =	Beschleunigen
+	t_Lang102 =	Verlangsamen
+	t_Lang103 =	Schnelle
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Öffnen
@@ -566,6 +580,11 @@
 	AbortKey_TT =	Backspace zum Löschen
 	JoyKey_TT =	Drücken Sie eine Taste auf dem Joystick
 	PauseKey_TT =	Unterbricht die Ausführung anstatt anzuhalten
+	OnFinish_TT =	
+	(LTrim	
+		Optionen für das Herunterfahren
+		Wenn die Wiedergabe beendet...
+	)	
 	Win1_TT =	Fügen Sie die Windows-Taste als Modifizierer
 	JoyHK_TT =	Joystick
 	ReptC_TT =	0 = unendlich
@@ -577,6 +596,8 @@
 	IfDirB_TT =	Machen Hotkeys arbeiten je nach`nArt der Fenster, das aktiv ist oder existiert (Strg+H)
 	KeepHKOn_TT =	Halten Sie Hotkeys immer aktiviert
 	A_List_TT =	Wählen Sie Makro (Ctrl+1~0)
+	OSHK_TT =	Wählen Sie Makro
+	OSHKEd_TT =	Wählen Sie Makro
 	Duplicate_TT =	Duplizieren Ausgewählte Zeilen (Strg+D)
 	Order_TT =	Bewegen Sie Ausgewählte Zeilen (Strg+Bild auf / Ctrl+PageDown)
 	Cut_TT =	Cut Ausgewählte Zeilen (Strg+X)
@@ -588,7 +609,7 @@
 	CopyTo_TT =	Kopieren...
 	Capt_TT =	Erfassen Tastendrücke in diesem Fenster
 	OnScCtrl_TT =	Display-Steuerelemente Symbolleiste
-	ShowStep_TT =	Info anzeigen
+	ShowStep_TT =	Anzeige Ballon-Tipps
 	ApplyT_TT =	Anwenden
 	ApplyI_TT =	Anwenden
 	ApplyL_TT =	Einfügen aus Box (Insert)
@@ -624,6 +645,8 @@
 	OSFast_TT =	Beschleunigen
 	OSSlow_TT =	Verlangsamen
 	OSTrans_TT =	Deckkraft
+	ToggleTB_TT =	Show / Hide Title Bar
+	ToggleMW_TT =	Show / Hide Hauptfenster
 	MRel_TT =	
 	(LTrim	
 		Bewegungen relativ zur aktuellen Position.
@@ -655,7 +678,12 @@
 		der Inhalt der Zwischenablage).
 	)	
 	SetText_TT =	Ändert den Text eines Steuerelements.
-	RelKey_TT =	Rekorde relativen Bewegungen und Klicks, während gedrückt.
+	RelKey_TT =	
+	(LTrim	
+		Rekorde Mausbewegungen und Klicks als Offsets
+		von früheren Position, wenn statt.
+	)	
+	ToggleC_TT =	Aktivieren Relative Aufnahme, wenn der Schlüssel Zustand ist.
 	Relative_TT =	Die Koordinaten sind relativ zum aktiven Fenster.
 	Screen_TT =	Die Koordinaten sind relativ zum Desktop (gesamter Bildschirm).
 	IncFolders_TT =	

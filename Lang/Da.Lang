@@ -5,7 +5,7 @@
 ; Main Menu		
 	m_Lang001 =	&File
 	m_Lang002 =	&Indsæt
-	m_Lang003 =	V&ælg
+	m_Lang003 =	&Vælg
 	m_Lang004 =	&Rediger
 	m_Lang005 =	&Makro
 	m_Lang006 =	I&ndstillinger
@@ -74,7 +74,7 @@
 	r_lang005 =	Ti&lføj Makro
 	r_lang006 =	L&uk Makro
 	r_lang007 =	&Kontekstafhængig genvejstaster
-	r_lang008 =	&Vis kontrolelementer
+	r_lang008 =	&Vis / skjul Controls
 	r_lang009 =	Af&spil fra valgte række
 	r_lang010 =	S&pille, indtil valgte række
 	r_lang011 =	Spil val&gte rækker
@@ -102,6 +102,7 @@
 ; Tray Menu		
 	y_Lang001 =	Skjul vindue
 	y_Lang002 =	Vis vindue
+	y_Lang003 =	Vis / skjul Controls
 		
 ; Main Window		
 	w_Lang001 =	Eksport
@@ -116,7 +117,7 @@
 	w_Lang010 =	&Pause
 	w_Lang011 =	&Loop
 	w_Lang012 =	&Capture Keys
-	w_Lang013 =	&Vis Info
+	w_Lang013 =	S&kjul vindue
 	w_Lang014 =	&Altid aktiv
 	w_Lang015 =	Gentag
 	w_Lang016 =	Forsinkelse (ms):
@@ -124,6 +125,15 @@
 	w_Lang018 =	Indsæt
 	w_Lang019 =	Rediger
 	w_Lang020 =	Vis kontrolelementer
+	w_Lang021 =	Gør intet
+	w_Lang022 =	Luk ansøgning
+	w_Lang023 =	Luk ned
+	w_Lang024 =	Luk ned (force)
+	w_Lang025 =	Genstart
+	w_Lang026 =	Log af
+	w_Lang027 =	Dvale
+	w_Lang028 =	Suspender
+	w_Lang029 =	Lås computer
 		
 ; Command Windows		
 	c_Lang001 =	Mus
@@ -365,7 +375,7 @@
 	t_Lang082 =	Erklæringer
 	t_Lang083 =	Vis Indrykning for-løkker og Udtalelser
 	t_Lang084 =	(Dobbeltklik på aktion kolonneoverskriften aktivere / deaktivere)
-	t_Lang085 =	Display Progress Bar
+	t_Lang085 =	Display Controls bar på opstart
 	t_Lang086 =	Søgning efter funktioner. Vent venligst...
 	t_Lang087 =	Medtag eksterne filer
 	t_Lang088 =	Opret EXE fil
@@ -380,6 +390,10 @@
 	t_Lang097 =	Tryk på en knap på joysticket
 	t_Lang098 =	Joystick
 	t_Lang099 =	Knap
+	t_Lang100 =	Vis Info
+	t_Lang101 =	Hastighed
+	t_Lang102 =	Langsom
+	t_Lang103 =	Fast
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Åbent
@@ -566,6 +580,11 @@
 	AbortKey_TT =	Backspace for at slette
 	JoyKey_TT =	Tryk på en knap på joysticket
 	PauseKey_TT =	Pauser udførelse stedet for at stoppe
+	OnFinish_TT =	
+	(LTrim	
+		nedlukningsvalgmulighederne
+		Når afspilningen er færdig...
+	)	
 	Win1_TT =	Tilføj på Windows-tasten som modifier
 	JoyHK_TT =	Joystick
 	ReptC_TT =	0 = uendelig
@@ -577,6 +596,8 @@
 	IfDirB_TT =	Gør genvejstaster arbejde afhængigt`ntype vindue, der er aktiv eller eksisterer (Ctrl+H)
 	KeepHKOn_TT =	Hold Hotkeys altid aktiveret
 	A_List_TT =	Vælge Macro (Ctrl+1~0)
+	OSHK_TT =	Vælge Macro
+	OSHKEd_TT =	Vælge Macro
 	Duplicate_TT =	Kopier de valgte rækker (Ctrl+D)
 	Order_TT =	Flyt valgte rækker (Ctrl+PageUp / Ctrl+PageDown)
 	Cut_TT =	Klip markerede rækker (Ctrl+X)
@@ -588,7 +609,7 @@
 	CopyTo_TT =	Kopier til...
 	Capt_TT =	Capture tastetryk i dette vindue
 	OnScCtrl_TT =	Vise Kontroller Værktøjslinje
-	ShowStep_TT =	Vis Info
+	ShowStep_TT =	Vis ballontip
 	ApplyT_TT =	Anvend
 	ApplyI_TT =	Anvend
 	ApplyL_TT =	Indsæt fra kassen (Insert)
@@ -624,6 +645,8 @@
 	OSFast_TT =	Fremskynde
 	OSSlow_TT =	Sæt farten ned
 	OSTrans_TT =	opacitet
+	ToggleTB_TT =	Vis / skjul Titel Bar
+	ToggleMW_TT =	Vis / skjul hovedvinduet
 	MRel_TT =	
 	(LTrim	
 		Bevægelser i forhold til den aktuelle position.
@@ -655,7 +678,12 @@
 		indholdet af klippebordet).
 	)	
 	SetText_TT =	Ændrer teksten til en kontrol.
-	RelKey_TT =	Records relative bevægelser og klik, mens trykket.
+	RelKey_TT =	
+	(LTrim	
+		Records musebevægelser og klik, som forskydninger
+		fra tidligere stilling, når det holdes.
+	)	
+	ToggleC_TT =	Aktiver Relativ optagelse, når nøglen tilstand er tændt.
 	Relative_TT =	Koordinater er relative til det aktive vindue.
 	Screen_TT =	Koordinater er relative til skrivebordet (hele skærmen).
 	IncFolders_TT =	

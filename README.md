@@ -4,7 +4,7 @@ Pulover's Macro Creator is a Free Automation and Script Writting Tool with a gra
 
 http://www.autohotkey.net/~Pulover
 
-**Current Version**: 3.7.3
+**Current Version**: 3.7.4
 
 ## For developers ##
 

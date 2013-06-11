@@ -74,7 +74,7 @@
 	r_lang005 =	添加宏
 	r_lang006 =	关闭宏
 	r_lang007 =	上下文相关的热键
-	r_lang008 =	显示控制
+	r_lang008 =	显示/隐藏控制
 	r_lang009 =	播放选定的行
 	r_lang010 =	玩到选定的行
 	r_lang011 =	播放选定的行
@@ -102,6 +102,7 @@
 ; Tray Menu		
 	y_Lang001 =	隐藏窗口
 	y_Lang002 =	橱窗
+	y_Lang003 =	显示/隐藏控制
 		
 ; Main Window		
 	w_Lang001 =	出口
@@ -116,7 +117,7 @@
 	w_Lang010 =	暂停
 	w_Lang011 =	循环
 	w_Lang012 =	捕获键
-	w_Lang013 =	显示信息
+	w_Lang013 =	隐藏窗口
 	w_Lang014 =	始终处于活动状态
 	w_Lang015 =	重复
 	w_Lang016 =	延时（ms）：
@@ -124,6 +125,15 @@
 	w_Lang018 =	插入
 	w_Lang019 =	编辑
 	w_Lang020 =	显示控制
+	w_Lang021 =	什么都不做
+	w_Lang022 =	关闭应用程序
+	w_Lang023 =	关闭
+	w_Lang024 =	关机（力）
+	w_Lang025 =	重新启动
+	w_Lang026 =	注销
+	w_Lang027 =	过冬
+	w_Lang028 =	暂停
+	w_Lang029 =	锁定计算机
 		
 ; Command Windows		
 	c_Lang001 =	鼠标
@@ -365,7 +375,7 @@
 	t_Lang082 =	报表
 	t_Lang083 =	显示缩进循环和报表
 	t_Lang084 =	（双击操作“列头启用/禁用）
-	t_Lang085 =	显示进度条
+	t_Lang085 =	显示控制栏上启动
 	t_Lang086 =	搜索功能。请稍候...
 	t_Lang087 =	包括外部文件
 	t_Lang088 =	创建EXE文件
@@ -380,6 +390,10 @@
 	t_Lang097 =	按下操纵杆上的按钮
 	t_Lang098 =	摇杆
 	t_Lang099 =	钮
+	t_Lang100 =	显示信息
+	t_Lang101 =	速度
+	t_Lang102 =	慢
+	t_Lang103 =	快
 		
 ; Messages & Dialogs		
 	d_Lang001 =	打开
@@ -566,6 +580,11 @@
 	AbortKey_TT =	退格键清除
 	JoyKey_TT =	按下操纵杆上的按钮
 	PauseKey_TT =	暂停执行，而不是停止
+	OnFinish_TT =	
+	(LTrim	
+		关机选项
+		当播放结束...
+	)	
 	Win1_TT =	作为改性剂添加Windows键
 	JoyHK_TT =	摇杆
 	ReptC_TT =	0 =无限
@@ -577,6 +596,8 @@
 	IfDirB_TT =	热键工作依赖于_类型的窗口，是积极的，或存在（按Ctrl+H）
 	KeepHKOn_TT =	保持热键始终处于激活状态
 	A_List_TT =	选择“宏”（Ctrl+1~0）
+	OSHK_TT =	选择“宏”
+	OSHKEd_TT =	选择“宏”
 	Duplicate_TT =	复制选中的行（按Ctrl+D）
 	Order_TT =	将选定的行（CTRL+PAGEUP / CTRL+PAGEDOWN）
 	Cut_TT =	剪切选定的行（Ctrl+X）
@@ -588,7 +609,7 @@
 	CopyTo_TT =	复制到...
 	Capt_TT =	在此窗口中捕捉按键
 	OnScCtrl_TT =	显示控件工具栏
-	ShowStep_TT =	显示信息
+	ShowStep_TT =	显示气球提示
 	ApplyT_TT =	申请
 	ApplyI_TT =	申请
 	ApplyL_TT =	从框中插入（Insert）
@@ -624,6 +645,8 @@
 	OSFast_TT =	加快
 	OSSlow_TT =	减缓
 	OSTrans_TT =	不透明
+	ToggleTB_TT =	显示/隐藏标题栏
+	ToggleMW_TT =	显示/隐藏主窗口
 	MRel_TT =	
 	(LTrim	
 		相对于当前位置的变动。
@@ -655,7 +678,12 @@
 		剪贴板中的内容）。
 	)	
 	SetText_TT =	更改文本的控制。
-	RelKey_TT =	记录相对移动和点击，而按下。
+	RelKey_TT =	
+	(LTrim	
+		记录鼠标移动和点击，
+		从以前的位置偏移时举行。
+	)	
+	ToggleC_TT =	国家重点时，激活相对录制。
 	Relative_TT =	坐标是相对于活动窗口。
 	Screen_TT =	坐标是相对于桌面（整个屏幕）。
 	IncFolders_TT =	
