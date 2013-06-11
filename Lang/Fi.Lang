@@ -580,7 +580,11 @@
 	AbortKey_TT =	Backspace poistaa
 	JoyKey_TT =	Paina painiketta joystick
 	PauseKey_TT =	Keskeyttää suorittamisen sijasta pysähtymättä
-	OnFinish_TT =	Kun toisto päättyy...
+	OnFinish_TT =	
+	(LTrim	
+		shutdown vaihtoehtoja
+		Kun toisto päättyy...
+	)	
 	Win1_TT =	Lisää Windows-näppäin muuntoaineena
 	JoyHK_TT =	Peliohjain
 	ReptC_TT =	0 = ääretön

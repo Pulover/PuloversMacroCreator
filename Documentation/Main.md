@@ -61,7 +61,7 @@ To have other Macros active during Timer check the *Always Active* option or rig
 
 **Pause**: Changes the behavior of *Stop Key* to pause execution.
 
-**When playback finishes...**: Selects an optional action to execute when all macros and loop iterations are finished.
+**Shutdown options**: Selects an optional action to execute when Playback finishes.
 
 **Loop**: Number of loops to execute the currently selected Macro. If set to 0, the loop continues indefinitely until a break or return is encountered, or the Stop Key is pressed.
 

@@ -580,7 +580,11 @@
 	AbortKey_TT =	Backspace zrušte
 	JoyKey_TT =	Stiskněte tlačítko na joysticku
 	PauseKey_TT =	Pozastaví výkon místo zastavení
-	OnFinish_TT =	Pokud přehrávání skončí...
+	OnFinish_TT =	
+	(LTrim	
+		vypnutí možnosti
+		Pokud přehrávání skončí...
+	)	
 	Win1_TT =	Přidejte klávesu Windows jako modifikátor
 	JoyHK_TT =	Joystick
 	ReptC_TT =	0 = nekonečno

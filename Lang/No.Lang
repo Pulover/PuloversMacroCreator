@@ -580,7 +580,11 @@
 	AbortKey_TT =	Tilbaketasten for å fjerne
 	JoyKey_TT =	Trykk på en knapp på joysticken
 	PauseKey_TT =	Pauser gjennomføring stedet for å stoppe
-	OnFinish_TT =	Når avspillingen fullføres...
+	OnFinish_TT =	
+	(LTrim	
+		nedleggelse alternativer
+		Når avspillingen fullføres...
+	)	
 	Win1_TT =	Legge til Windows-tasten som modifikator
 	JoyHK_TT =	Joystick
 	ReptC_TT =	0 = uendelig

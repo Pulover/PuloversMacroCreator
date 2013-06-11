@@ -34,6 +34,7 @@ T800 for [Html Help utils](http://www.autohotkey.com/board/topic/17984-html-help
 
 ## Version 3.7.4
 
+* Added *Shutdown options* in Main Window.
 * Added *Speed Control* for exported scripts.
 * Improved *Drag-Rows* function.
 * Fixed crash by stack overflow in Goto-based loops.

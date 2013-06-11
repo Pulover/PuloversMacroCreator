@@ -580,7 +580,11 @@
 	AbortKey_TT =	Backspace to clear
 	JoyKey_TT =	Press a button on the joystick
 	PauseKey_TT =	Pauses execution instead of stopping
-	OnFinish_TT =	When playback finishes...
+	OnFinish_TT =	
+	(LTrim	
+		Shutdown options
+		When playback finishes...
+	)	
 	Win1_TT =	Add the Windows key as modifier
 	JoyHK_TT =	Joystick
 	ReptC_TT =	0 = infinite

@@ -580,7 +580,11 @@
 	AbortKey_TT =	クリアするには、Backspaceキー
 	JoyKey_TT =	ジョイスティックのボタンを押し
 	PauseKey_TT =	実行の代わりに停止を一時停止します
-	OnFinish_TT =	再生が終了すると...
+	OnFinish_TT =	
+	(LTrim	
+		シャットダウンオプション
+		再生が終了すると...
+	)	
 	Win1_TT =	モディファイアとして、Windowsキーを追加
 	JoyHK_TT =	ジョイスティック
 	ReptC_TT =	0 =無限大

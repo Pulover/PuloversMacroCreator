@@ -580,7 +580,11 @@
 	AbortKey_TT =	Backspace鍵來清除
 	JoyKey_TT =	按下操縱桿上的按鈕
 	PauseKey_TT =	暫停執行，而不是停止
-	OnFinish_TT =	當播放結束...
+	OnFinish_TT =	
+	(LTrim	
+		關機選項
+		當播放結束...
+	)	
 	Win1_TT =	作為改性劑添加Windows鍵
 	JoyHK_TT =	搖桿
 	ReptC_TT =	0 =無限

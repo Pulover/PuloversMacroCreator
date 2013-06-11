@@ -580,7 +580,11 @@
 	AbortKey_TT =	Backspace törölni
 	JoyKey_TT =	Nyomja meg a gombot a joystick
 	PauseKey_TT =	Szünetelteti végrehajtása helyett megállás
-	OnFinish_TT =	Ha a lejátszás befejeződik...
+	OnFinish_TT =	
+	(LTrim	
+		shutdown lehetőségek
+		Ha a lejátszás befejeződik...
+	)	
 	Win1_TT =	Adja hozzá a Windows billentyű a módosító
 	JoyHK_TT =	Joystick
 	ReptC_TT =	0 = végtelen

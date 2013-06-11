@@ -580,7 +580,11 @@
 	AbortKey_TT =	Backspace om te wissen
 	JoyKey_TT =	Druk op een knop op de joystick
 	PauseKey_TT =	Hiermee onderbreekt de uitvoering in plaats van te stoppen
-	OnFinish_TT =	Wanneer het afspelen is voltooid...
+	OnFinish_TT =	
+	(LTrim	
+		shutdown opties
+		Wanneer het afspelen is voltooid...
+	)	
 	Win1_TT =	Voeg de Windows-toets als modifier
 	JoyHK_TT =	Bedieningshendel
 	ReptC_TT =	0 = oneindig

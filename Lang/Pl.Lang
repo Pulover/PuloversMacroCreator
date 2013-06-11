@@ -580,7 +580,11 @@
 	AbortKey_TT =	Backspace, aby usunąć
 	JoyKey_TT =	Naciśnij przycisk na joysticku
 	PauseKey_TT =	Wstrzymuje wykonywanie zamiast zatrzymać
-	OnFinish_TT =	Po zakończeniu odtwarzania...
+	OnFinish_TT =	
+	(LTrim	
+		opcje wyłączania
+		Po zakończeniu odtwarzania...
+	)	
 	Win1_TT =	Dodaj klucz Windows jako modyfikator
 	JoyHK_TT =	Drążek sterowy
 	ReptC_TT =	0 = nieskończony

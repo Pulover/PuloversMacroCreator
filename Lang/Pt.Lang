@@ -580,7 +580,11 @@
 	AbortKey_TT =	Backspace para apagar
 	JoyKey_TT =	Pressione um botão no joystick
 	PauseKey_TT =	Pausa execução ao invés de parar
-	OnFinish_TT =	Quando a reprodução terminar...
+	OnFinish_TT =	
+	(LTrim	
+		Opções de desligamento
+		Quando a reprodução terminar...
+	)	
 	Win1_TT =	Adicionar a tecla Windows como modificador
 	JoyHK_TT =	Joystick
 	ReptC_TT =	0 = infinito

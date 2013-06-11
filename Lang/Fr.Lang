@@ -580,7 +580,11 @@
 	AbortKey_TT =	Retour arrière pour effacer
 	JoyKey_TT =	Appuyez sur un bouton sur la manette
 	PauseKey_TT =	Interrompt l'exécution au lieu de s'arrêter
-	OnFinish_TT =	Quand se termine la lecture...
+	OnFinish_TT =	
+	(LTrim	
+		Options d'arrêt
+		Quand se termine la lecture...
+	)	
 	Win1_TT =	Ajouter la touche Windows en tant que modificateur
 	JoyHK_TT =	Joystick
 	ReptC_TT =	0 = infini

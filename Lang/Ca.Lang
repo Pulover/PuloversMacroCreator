@@ -580,7 +580,11 @@
 	AbortKey_TT =	Retrocés per esborrar
 	JoyKey_TT =	Premeu un botó a la palanca de comandament
 	PauseKey_TT =	Fa una pausa en l'execució en comptes d'aturar
-	OnFinish_TT =	Quan finalitzi la reproducció...
+	OnFinish_TT =	
+	(LTrim	
+		Opcions d'apagada
+		Quan finalitzi la reproducció...
+	)	
 	Win1_TT =	Afegir la tecla Windows com a modificador
 	JoyHK_TT =	Palanca de comandament
 	ReptC_TT =	0 = infinit

@@ -580,7 +580,11 @@
 	AbortKey_TT =	Povratna izbiti
 	JoyKey_TT =	Pritisnite tipku na palici
 	PauseKey_TT =	Pauziranje izvršenje umjesto zaustavljanja
-	OnFinish_TT =	Kad reprodukcija završi...
+	OnFinish_TT =	
+	(LTrim	
+		shutdown opcije
+		Kad reprodukcija završi...
+	)	
 	Win1_TT =	Dodaj Windows tipku za izmjenu
 	JoyHK_TT =	Džojstik
 	ReptC_TT =	0 = beskonačno

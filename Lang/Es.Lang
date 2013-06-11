@@ -580,7 +580,11 @@
 	AbortKey_TT =	Retroceso para borrar
 	JoyKey_TT =	Presione un botón en la palanca de mando
 	PauseKey_TT =	Detiene la ejecución en lugar de detenerse
-	OnFinish_TT =	Cuando finalice la reproducción...
+	OnFinish_TT =	
+	(LTrim	
+		opciones de apagado
+		Cuando finalice la reproducción...
+	)	
 	Win1_TT =	Agregue la clave de Windows como modificador
 	JoyHK_TT =	Palanca de mando
 	ReptC_TT =	0 = infinito

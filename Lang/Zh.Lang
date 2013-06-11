@@ -580,7 +580,11 @@
 	AbortKey_TT =	退格键清除
 	JoyKey_TT =	按下操纵杆上的按钮
 	PauseKey_TT =	暂停执行，而不是停止
-	OnFinish_TT =	当播放结束...
+	OnFinish_TT =	
+	(LTrim	
+		关机选项
+		当播放结束...
+	)	
 	Win1_TT =	作为改性剂添加Windows键
 	JoyHK_TT =	摇杆
 	ReptC_TT =	0 =无限

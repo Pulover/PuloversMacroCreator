@@ -580,7 +580,11 @@
 	AbortKey_TT =	Backspace zum Löschen
 	JoyKey_TT =	Drücken Sie eine Taste auf dem Joystick
 	PauseKey_TT =	Unterbricht die Ausführung anstatt anzuhalten
-	OnFinish_TT =	Wenn die Wiedergabe beendet...
+	OnFinish_TT =	
+	(LTrim	
+		Optionen für das Herunterfahren
+		Wenn die Wiedergabe beendet...
+	)	
 	Win1_TT =	Fügen Sie die Windows-Taste als Modifizierer
 	JoyHK_TT =	Joystick
 	ReptC_TT =	0 = unendlich

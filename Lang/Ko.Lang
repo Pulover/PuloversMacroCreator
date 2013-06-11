@@ -580,7 +580,11 @@
 	AbortKey_TT =	삭제하는 백 스페이스
 	JoyKey_TT =	조이스틱 버튼을 눌러
 	PauseKey_TT =	실행 대신 정지를 일시 중지
-	OnFinish_TT =	재생시 마감...
+	OnFinish_TT =	
+	(LTrim	
+		종료 옵션
+		재생시 마감...
+	)	
 	Win1_TT =	수정으로 Windows 키를 추가합니다
 	JoyHK_TT =	조종간
 	ReptC_TT =	0 = 무한
