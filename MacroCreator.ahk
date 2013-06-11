@@ -7,7 +7,7 @@
 ; Home: http://www.autohotkey.net/~Pulover
 ; Forum: http://www.autohotkey.com/board/topic/79763-macro-creator
 ; Version: 3.7.4
-; Release Date: May, 2013
+; Release Date: June, 2013
 ; AutoHotkey Version: 1.1.10.01
 ; Copyright © 2012-2013 Rodolfo U. Batista
 ; GNU General Public License 3.0 or higher
@@ -27,6 +27,9 @@ http://www.autohotkey.com/board/topic/88699-class-lv-colors
 
 diebagger and Obi-Wahn for the function to move rows.
 http://www.autohotkey.com/board/topic/56396-techdemo-move-rows-in-a-listview
+
+Micahs for the base code of the Drag-Rows function.
+http://www.autohotkey.com/board/topic/30486-listview-tooltip-on-mouse-hover/?p=280843
 
 Kdoske & trueski for the CSV functions.
 http://www.autohotkey.com/board/topic/51681-csv-library-lib
@@ -2439,7 +2442,8 @@ Gui, 26:Add, Link, y+0, Chris and Lexikos for <a href="http://www.autohotkey.com
 Gui, 26:Add, Link, y+0, tic (Tariq Porter) for his <a href="http://www.autohotkey.com/board/topic/29449-gdi-standard-library">GDI+ Library</a>.
 Gui, 26:Add, Link, y+0, tkoi && majkinetor for the <a href="http://www.autohotkey.com/board/topic/37147-ilbutton-image-buttons">ILButton function</a>.
 Gui, 26:Add, Link, y+0, just me for <a href="http://www.autohotkey.com/board/topic/88699-class-lv-colors">LV_Colors Class</a>, GuiCtrlAddTab and for updating ILButton to 64bit.
-Gui, 26:Add, Link, y+0, diabagger and Obi-Wahn for the <a href="http://www.autohotkey.com/board/topic/56396-techdemo-move-rows-in-a-listview">function to move rows</a>.
+Gui, 26:Add, Link, y+0, diebagger and Obi-Wahn for the <a href="http://www.autohotkey.com/board/topic/56396-techdemo-move-rows-in-a-listview">function to move rows</a>.
+Gui, 26:Add, Link, y+0, Micahs for the <a href="http://www.autohotkey.com/board/topic/30486-listview-tooltip-on-mouse-hover/?p=280843">base code</a> of the Drag-Rows function.
 Gui, 26:Add, Link, y+0, Kdoske && trueski for the <a href="http://www.autohotkey.com/board/topic/51681-csv-library-lib">CSV functions</a>.
 Gui, 26:Add, Link, y+0, jaco0646 for the <a href="http://www.autohotkey.com/board/topic/47439-user-defined-dynamic-hotkeys">function</a> to make hotkey controls detect other keys.
 Gui, 26:Add, Link, y+0, Laszlo for the <a href="http://www.autohotkey.com/board/topic/15675-monster">Monster function</a> to solve expressions.
