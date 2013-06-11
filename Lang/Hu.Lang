@@ -391,6 +391,9 @@
 	t_Lang098 =	Joystick
 	t_Lang099 =	Gomb
 	t_Lang100 =	Megjelenítés Info
+	t_Lang101 =	Sebesség
+	t_Lang102 =	Lassú
+	t_Lang103 =	Gyors
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Nyitva

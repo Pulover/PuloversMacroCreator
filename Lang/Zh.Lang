@@ -391,6 +391,9 @@
 	t_Lang098 =	摇杆
 	t_Lang099 =	钮
 	t_Lang100 =	显示信息
+	t_Lang101 =	速度
+	t_Lang102 =	慢
+	t_Lang103 =	快
 		
 ; Messages & Dialogs		
 	d_Lang001 =	打开

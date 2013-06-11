@@ -391,6 +391,9 @@
 	t_Lang098 =	Bedieningshendel
 	t_Lang099 =	Knop
 	t_Lang100 =	Toon info
+	t_Lang101 =	Snelheid
+	t_Lang102 =	Vertragen
+	t_Lang103 =	Snel
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Open

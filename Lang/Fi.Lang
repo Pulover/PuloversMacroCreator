@@ -391,6 +391,9 @@
 	t_Lang098 =	Peliohjain
 	t_Lang099 =	Nappi
 	t_Lang100 =	Näytä tiedot
+	t_Lang101 =	Nopeus
+	t_Lang102 =	Hidas
+	t_Lang103 =	Nopeasti
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Avata

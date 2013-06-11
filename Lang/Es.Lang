@@ -391,6 +391,9 @@
 	t_Lang098 =	Palanca de mando
 	t_Lang099 =	Botón
 	t_Lang100 =	Mostrar información
+	t_Lang101 =	Acelerar
+	t_Lang102 =	Despacio
+	t_Lang103 =	Rápido
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Abierto

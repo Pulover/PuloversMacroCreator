@@ -391,6 +391,9 @@
 	t_Lang098 =	Joystick
 	t_Lang099 =	Pulsante
 	t_Lang100 =	Mostra informazioni
+	t_Lang101 =	Velocità
+	t_Lang102 =	Rallentare
+	t_Lang103 =	Veloce
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Aperto

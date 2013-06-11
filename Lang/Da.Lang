@@ -391,6 +391,9 @@
 	t_Lang098 =	Joystick
 	t_Lang099 =	Knap
 	t_Lang100 =	Vis Info
+	t_Lang101 =	Hastighed
+	t_Lang102 =	Langsom
+	t_Lang103 =	Fast
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Åbent

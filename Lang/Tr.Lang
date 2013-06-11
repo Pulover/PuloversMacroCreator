@@ -391,6 +391,9 @@
 	t_Lang098 =	Joystick
 	t_Lang099 =	Düğme
 	t_Lang100 =	Bilgisini Göster
+	t_Lang101 =	Hız
+	t_Lang102 =	Yavaş
+	t_Lang103 =	Hızlı
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Açık

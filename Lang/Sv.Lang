@@ -391,6 +391,9 @@
 	t_Lang098 =	Joystick
 	t_Lang099 =	Knapp
 	t_Lang100 =	Visa info
+	t_Lang101 =	Hastighet
+	t_Lang102 =	Sakta
+	t_Lang103 =	Snabb
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Öppet

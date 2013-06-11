@@ -1,4 +1,4 @@
-﻿;========================================================================
+﻿;=======================================================================================
 ;
 ; 				Class LV_Rows
 ;
@@ -6,20 +6,68 @@
 ;				rodolfoub@gmail.com
 ;
 ; Additional functions for ListView controls.
-;========================================================================
+;=======================================================================================
 ;
 ; This class provides an easy way to add more functionality to ListViews.
-; Features:
-; 		Copy:		Copy selected rows to memory.
-; 		Cut:		Copy selected rows to memory and delete them.
-; 		Paste:		Paste copied rows at selected position.
-; 		Move:		Move selected rows up and down.
-; 		Drag:		Drag-and-Drop selected rows.
 ;
-;========================================================================
+; Usage:
+;
+;	Like AutoHotkey built-in functions, these functions operate on the default gui,
+;	and active ListView control.
+;
+;	Initializing is only required for History functions: Add(), Undo() and Redo().
+; 		MyListHandler := New LV_Rows()
+;	You may keep an individual history of each ListView using different handlers.
+;		
+; Functions:
+;=======================================================================================
+;	LV_Rows.Copy()		-	Copy selected rows to memory.
+;							Returns: Number of copied rows.
+;=======================================================================================
+; 	LV_Rows.Cut()		-	Copy selected rows to memory and delete them.
+;							Returns: Number of copied rows.
+;=======================================================================================
+;	LV_Rows.Paste()		-	Paste copied rows at selected position.
+;							Returns: True if memory contains data or False if not.
+;=======================================================================================
+;	LV_Rows.Delete()	-	Delete selected rows.
+;							Returns: Number of removed rows.
+;=======================================================================================
+;	LV_Rows.Move()		-	Move selected rows down or up.
+;							Returns: Number of rows moved.
+;		Parameters:
+;			Up			-	If False or omitted moves rows down. If True moves rows up.
+;=======================================================================================
+; 	LV_Rows.Drag()		-	Drag-and-Drop selected rows showing a destination bar.
+;							Must be called in the ListView G-Label subroutine when
+;							A_GuiEvent returns "D" or "d".
+;							Returns: The destination row number.
+;		Parameters:
+;			DragButton	-	If it is a lower case "d" it will be recognized as a
+;							Right-Click drag, otherwise will be recognized as a
+;							Left-Click drag. You may pass A_GuiEvent as the parameter.
+;			AutoScroll	-	If True or omitted the ListView will automatically scroll
+;							up or down when the cursor is above or below the control.
+;			ScrollDelay	-	Delay in miliseconds for AutoScroll. Default is 100ms.
+;			LineThick	-	Thickness of the destination bar in pixels. Default is 2px.
+;			Color		-	Color of destination bar. Defalt is "Black".
+;=======================================================================================
+;	MyHandler.Add()		-	Adds an entry on History. This function requires
+;							initializing: MyListHandler := New LV_Rows()
+;							Returns: The total number of entries in history.
+;=======================================================================================
+;	MyHandler.Undo()	-	Replaces ListView contents to previous entry state, if any.
+;							Returns: Current entry position.
+;=======================================================================================
+;	MyHandler.Redo()	-	Replaces ListView contents to next entry state, if any.
+;							Returns: Current entry position.
+;=======================================================================================
 
 Class LV_Rows
 {
+;=======================================================================================
+;	Meta-Functions
+;=======================================================================================
 	__New()
 	{
 		this.Slot := []
@@ -37,43 +85,11 @@ Class LV_Rows
 		this.SetCapacity(0)
 		this.base := ""
 	}
-
-	Add()
-	{
-		Row := []
-		If (this.ActiveSlot < this.Slot.MaxIndex())
-			this.Slot.Remove(this.ActiveSlot+1, this.Slot.MaxIndex())
-		Loop, % LV_GetCount()
-		{
-			RowData := LV_Rows.RowText(A_Index)
-			Row[A_Index] := [RowData*]
-		}
-		this.Slot.Insert(Row)
-		this.ActiveSlot := this.Slot.MaxIndex()
-		return this.Slot.MaxIndex()
-	}
-
-	Undo()
-	{
-		If (this.ActiveSlot = 1)
-			return False
-		this.ActiveSlot -= 1
-		this.Load(this.ActiveSlot)
-
-		return this.ActiveSlot
-	}
-
-	Redo()
-	{
-		If (this.ActiveSlot = (this.Slot.MaxIndex()))
-			return False
-		this.ActiveSlot += 1
-		this.Load(this.ActiveSlot)
-
-		return this.ActiveSlot
-	}
-
-	Copy(Cut=0)
+;=======================================================================================
+;	LV_Rows.Copy()		-	Copy selected rows to memory.
+;							Returns: Number of copied rows.
+;=======================================================================================
+	Copy()
 	{
 		this.CopyData := {}
 		LV_Row := 0
@@ -87,29 +103,34 @@ Class LV_Rows
 			this.CopyData.Insert(Row)
 			CopiedLines++
 		}
-		If (Cut)
-			LV_Rows.Delete()
-		
 		return CopiedLines
 	}
-
-	Delete()
+;=======================================================================================
+; 	LV_Rows.Cut()		-	Copy selected rows to memory and delete them.
+;							Returns: Number of copied rows.
+;=======================================================================================
+	Cut()
 	{
-		If (LV_GetCount("Selected") = 0)
-			return False
+		this.CopyData := {}
 		LV_Row := 0
 		Loop
 		{
-			LV_Row := LV_GetNext(LV_Row - 1)
+			LV_Row := LV_GetNext(LV_Row)
 			If !LV_Row
 				break
-			LV_Delete(LV_Row)
-			DeletedLines++
+			RowData := LV_Rows.RowText(LV_Row)
+			Row := [RowData*]
+			this.CopyData.Insert(Row)
+			CopiedLines++
 		}
+		LV_Rows.Delete()
 		
-		return DeletedLines
+		return CopiedLines
 	}
-
+;=======================================================================================
+;	LV_Rows.Paste()		-	Paste copied rows at selected position.
+;							Returns: True if memory contains data or False if not.
+;=======================================================================================
 	Paste(Row=0)
 	{
 		If !this.CopyData.MaxIndex()
@@ -128,12 +149,39 @@ Class LV_Rows
 		}
 		return True
 	}
-
+;=======================================================================================
+;	LV_Rows.Delete()	-	Delete selected rows.
+;							Returns: Number of removed rows.
+;=======================================================================================
+	Delete()
+	{
+		If (LV_GetCount("Selected") = 0)
+			return False
+		LV_Row := 0
+		Loop
+		{
+			LV_Row := LV_GetNext(LV_Row - 1)
+			If !LV_Row
+				break
+			LV_Delete(LV_Row)
+			DeletedLines++
+		}
+		
+		return DeletedLines
+	}
+;=======================================================================================
+;	LV_Rows.Move()		-	Move selected rows down or up.
+;							Returns: Number of rows moved.
+;		Parameters:
+;			Up			-	If False or omitted moves rows down. If True moves rows up.
+;=======================================================================================
 	Move(Up=False)
 	{
 		LV_Row := 0
+		Critical
 		If Up
 		{
+			Selections := []
 			Loop
 			{
 				LV_Row := LV_GetNext(LV_Row)
@@ -141,13 +189,18 @@ Class LV_Rows
 					break
 				If (LV_Row = 1)
 					return
-				RowData := LV_Rows.RowText(LV_Row)
-				LV_Insert(LV_Row-1, RowData*)
-				LV_Delete(LV_Row+1)
-				LV_Modify(LV_Row-1, "Select")
-				If (A_Index = 1)
-					LV_Modify(LV_Row-1, "Focus")
+				Selections.Insert(LV_Row)
 			}
+			For each, Row in Selections
+			{
+				RowData := LV_Rows.RowText(Row)
+				LV_Insert(Row-1, RowData*)
+				LV_Delete(Row+1)
+				LV_Modify(Row-1, "Select")
+				If (A_Index = 1)
+					LV_Modify(Row-1, "Focus Vis")
+			}
+			return Selections.MaxIndex()
 		}
 		Else
 		{
@@ -167,11 +220,26 @@ Class LV_Rows
 				LV_Insert(Row, RowData*)
 				LV_Delete(Row+2)
 				If (A_Index = 1)
-					LV_Modify(Row+1, "Focus")
+					LV_Modify(Row+1, "Focus Vis")
 			}
+			return Selections.MaxIndex()
 		}
 	}
-	
+;=======================================================================================
+; 	LV_Rows.Drag()		-	Drag-and-Drop selected rows showing a destination bar.
+;							Must be called in the ListView G-Label subroutine when
+;							A_GuiEvent returns "D" or "d".
+;							Returns: The destination row number.
+;		Parameters:
+;			DragButton	-	If it is a lower case "d" it will be recognized as a
+;							Right-Click drag, otherwise will be recognized as a
+;							Left-Click drag. You may pass A_GuiEvent as the parameter.
+;			AutoScroll	-	If True or omitted the ListView will automatically scroll
+;							up or down when the cursor is above or below the control.
+;			ScrollDelay	-	Delay in miliseconds for AutoScroll. Default is 100ms.
+;			LineThick	-	Thickness of the destination bar in pixels. Default is 2px.
+;			Color		-	Color of destination bar. Defalt is "Black".
+;=======================================================================================
 	Drag(DragButton="D", AutoScroll=True, ScrollDelay=100, LineThick=2, Color="Black")
 	{
 		LVIR_LABEL := 0x0002
@@ -282,8 +350,58 @@ Class LV_Rows
 
 		return LV_currRow
 	}
+;=======================================================================================
+;	MyHandler.Add()		-	Adds an entry on History. This function requires
+;							initializing: MyListHandler := New LV_Rows()
+;							Returns: The total number of entries in history.
+;=======================================================================================
+	Add()
+	{
+		Row := []
+		If (this.ActiveSlot < this.Slot.MaxIndex())
+			this.Slot.Remove(this.ActiveSlot+1, this.Slot.MaxIndex())
+		Loop, % LV_GetCount()
+		{
+			RowData := LV_Rows.RowText(A_Index)
+			Row[A_Index] := [RowData*]
+		}
+		this.Slot.Insert(Row)
+		this.ActiveSlot := this.Slot.MaxIndex()
+		return this.Slot.MaxIndex()
+	}
+;=======================================================================================
+;	MyHandler.Undo()	-	Replaces ListView contents to previous entry state, if any.
+;							Returns: Current entry position.
+;=======================================================================================
+	Undo()
+	{
+		If (this.ActiveSlot = 1)
+			return this.ActiveSlot
+		this.ActiveSlot -= 1
+		this.Load(this.ActiveSlot)
 
-	; Internal Functions
+		return this.ActiveSlot
+	}
+;=======================================================================================
+;	MyHandler.Redo()	-	Replaces ListView contents to next entry state, if any.
+;							Returns: Current entry position.
+;=======================================================================================
+	Redo()
+	{
+		If (this.ActiveSlot = (this.Slot.MaxIndex()))
+			return this.ActiveSlot
+		this.ActiveSlot += 1
+		this.Load(this.ActiveSlot)
+
+		return this.ActiveSlot
+	}
+;=======================================================================================
+;	Internal Functions	-	These functions are meant for internal use but can also
+;							be called.
+;							Load() loads a specified entry in History.
+;							RowText() return an object containg the values of each cell
+;							in a specified row.
+;=======================================================================================
 	Load(Number)
 	{
 		If !IsObject(this.Slot[Number])

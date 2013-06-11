@@ -391,6 +391,9 @@
 	t_Lang098 =	搖桿
 	t_Lang099 =	鈕
 	t_Lang100 =	顯示信息
+	t_Lang101 =	速度
+	t_Lang102 =	慢
+	t_Lang103 =	快
 		
 ; Messages & Dialogs		
 	d_Lang001 =	打開

@@ -391,6 +391,9 @@
 	t_Lang098 =	ジョイスティック
 	t_Lang099 =	ボタン
 	t_Lang100 =	情報を表示する
+	t_Lang101 =	スピード
+	t_Lang102 =	遅く
+	t_Lang103 =	速い
 		
 ; Messages & Dialogs		
 	d_Lang001 =	開く

@@ -391,6 +391,9 @@
 	t_Lang098 =	Joystick
 	t_Lang099 =	Button
 	t_Lang100 =	Show Info
+	t_Lang101 =	Speed
+	t_Lang102 =	Slow
+	t_Lang103 =	Fast
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Open

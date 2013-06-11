@@ -391,6 +391,9 @@
 	t_Lang098 =	Drążek sterowy
 	t_Lang099 =	Przycisk
 	t_Lang100 =	Pokaż informacje
+	t_Lang101 =	Prędkość
+	t_Lang102 =	Zwolnij
+	t_Lang103 =	Szybko
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Otwarte

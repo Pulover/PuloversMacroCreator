@@ -391,6 +391,9 @@
 	t_Lang098 =	Joystick
 	t_Lang099 =	Taste
 	t_Lang100 =	Info anzeigen
+	t_Lang101 =	Beschleunigen
+	t_Lang102 =	Verlangsamen
+	t_Lang103 =	Schnelle
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Öffnen

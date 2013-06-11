@@ -391,6 +391,9 @@
 	t_Lang098 =	조종간
 	t_Lang099 =	단추
 	t_Lang100 =	정보 표시
+	t_Lang101 =	속도
+	t_Lang102 =	천천히
+	t_Lang103 =	빠른
 		
 ; Messages & Dialogs		
 	d_Lang001 =	열기

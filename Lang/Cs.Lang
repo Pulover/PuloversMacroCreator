@@ -391,6 +391,9 @@
 	t_Lang098 =	Joystick
 	t_Lang099 =	Tlačítko
 	t_Lang100 =	Zobrazit informace
+	t_Lang101 =	Rychlost
+	t_Lang102 =	Pomalu
+	t_Lang103 =	Rychle
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Otevřít

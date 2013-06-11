@@ -184,6 +184,7 @@ IniRead, Ex_MT, %IniFilePath%, ExportOptions, Ex_MT, 0
 IniRead, MT, %IniFilePath%, ExportOptions, MT, 2
 IniRead, Ex_IN, %IniFilePath%, ExportOptions, Ex_IN, 1
 IniRead, Ex_UV, %IniFilePath%, ExportOptions, Ex_UV, 1
+IniRead, Ex_Speed, %IniFilePath%, ExportOptions, Ex_Speed, 0
 IniRead, ComCr, %IniFilePath%, ExportOptions, ComCr, 1
 IniRead, ComAc, %IniFilePath%, ExportOptions, ComAc, 0
 IniRead, Send_Loop, %IniFilePath%, ExportOptions, Send_Loop, 0
@@ -338,8 +339,6 @@ Loop, Parse, ColSizes, `,
 
 RegRead, DClickSpd, HKEY_CURRENT_USER, Control Panel\Mouse, DoubleClickSpeed
 DClickSpd := Round(DClickSpd * 0.001, 1)
-RegRead, DPI, HKEY_CURRENT_USER, Control Panel\Desktop\WindowMetrics, AppliedDPI
-RowHeight := Floor(DPI/5.6)
 
 ;##### Menus: #####
 
@@ -1570,7 +1569,7 @@ Gui, 14:Add, DDL, yp x+225 W65 vIdent Disabled, Title||Class|Process|ID|PID
 Gui, 14:Add, Edit, xs+10 W365 vTitle Disabled
 Gui, 14:Add, Button, -Wrap yp-1 x+0 W30 H23 vGetWin gGetWin Disabled, ...
 ; Options
-Gui, 14:Add, GroupBox, Section xm W415 H235, %w_Lang003%:
+Gui, 14:Add, GroupBox, Section xm W415 H260, %w_Lang003%:
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_SM% ys+20 xs+10 W110 vEx_SM R1, SendMode
 Gui, 14:Add, DDL, yp-3 xp+115 vSM w75, Input||Play|Event|InputThenPlay|
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_SI% y+5 xs+10 W110 vEx_SI R1, #SingleInstance
@@ -1599,7 +1598,11 @@ Gui, 14:Add, Checkbox, -Wrap Checked%Ex_IN% y+10 xs+10 W195 vEx_IN R1, `#`Includ
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_UV% yp x+5 W165 vEx_UV gEx_Checks R1, Global Variables
 Gui, 14:Add, Button, yp-5 xp+170 H25 W25 hwndEx_EdVars vEx_EdVars gVarsTree Disabled
 	ILButton(Ex_EdVars, IniTVIcon[1] ":" IniTVIcon[2])
-Gui, 14:Add, Text, y+5 xs+10 W95, COM Objects:
+Gui, 14:Add, Text, y+5 xs+10 W80, %t_Lang101%:
+Gui, 14:Add, Text, yp xs+90 W50, %t_Lang102%
+Gui, 14:Add, Slider, yp-10 xs+140 H35 W150 Center TickInterval Range-5-5 vEx_Speed, %Ex_Speed%
+Gui, 14:Add, Text, yp+10 xs+320 W50, %t_Lang103%
+Gui, 14:Add, Text, y+15 xs+10 W95, COM Objects:
 Gui, 14:Add, Radio, -Wrap Checked%ComCr% yp xp+100 W95 vComCr R1, ComObjCreate
 Gui, 14:Add, Radio, -Wrap Checked%ComAc% yp xp+100 W95 vComAc R1, ComObjActive
 ; Export
@@ -1860,7 +1863,34 @@ If CheckDuplicates(AbortKey, PauseKey, AutoKey)
 	MsgBox, 16, %d_Lang007%, %d_Lang032%
 	return
 }
-Body := AllScripts, AllScripts := ""
+If (Ex_Speed <> 0)
+{
+	Body := ""
+	If (Ex_Speed < 0)
+	{
+		Ex_Speed *= -1
+		Loop, Parse, AllScripts, `n
+		{
+			If RegExMatch(A_LoopField, "^Sleep, (\d+)$", Value)
+				Body .= "Sleep, " . Value1 * Exp_Mult[Ex_Speed] . "`n"
+			Else
+				Body .= A_LoopField "`n"
+		}
+	}
+	Else
+	{
+		Loop, Parse, AllScripts, `n
+		{
+			If RegExMatch(A_LoopField, "^Sleep, (\d+)$", Value)
+				Body .= "Sleep, " . Floor(Value1 / Exp_Mult[Ex_Speed]) . "`n"
+			Else
+				Body .= A_LoopField "`n"
+		}
+	}
+}
+Else
+	Body := AllScripts
+AllScripts := ""
 If (Ex_IfDir = 1)
 	Body := Ex_IfDirType ", " Title "`n`n" Body Ex_IfDirType "`n"
 If (Ex_AbortKey = 1)
@@ -7194,7 +7224,7 @@ CutRows:
 If (LV_GetCount("Selected") = 0)
 	return
 CopyRows := new LV_Rows()
-CopyRows.Copy(1)
+CopyRows.Cut()
 GoSub, b_Start
 GoSub, RowCheck
 GuiControl, Focus, InputList%A_List%
@@ -9465,6 +9495,7 @@ Ex_MT := 0
 MT := 2
 Ex_IN := 1
 Ex_UV := 1
+Ex_Speed := 0
 ComCr := 1
 ComAc := 0
 Send_Loop := 0
@@ -9653,6 +9684,7 @@ IniWrite, %Ex_MT%, %IniFilePath%, ExportOptions, Ex_MT
 IniWrite, %MT%, %IniFilePath%, ExportOptions, MT
 IniWrite, %Ex_IN%, %IniFilePath%, ExportOptions, Ex_IN
 IniWrite, %Ex_UV%, %IniFilePath%, ExportOptions, Ex_UV
+IniWrite, %Ex_Speed%, %IniFilePath%, ExportOptions, Ex_Speed
 IniWrite, %ComCr%, %IniFilePath%, ExportOptions, ComCr
 IniWrite, %ComAc%, %IniFilePath%, ExportOptions, ComAc
 IniWrite, %Send_Loop%, %IniFilePath%, ExportOptions, Send_Loop

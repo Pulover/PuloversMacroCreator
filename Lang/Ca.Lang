@@ -391,6 +391,9 @@
 	t_Lang098 =	Palanca de comandament
 	t_Lang099 =	Botó
 	t_Lang100 =	Mostrar informació
+	t_Lang101 =	Accelerar
+	t_Lang102 =	Poc a poc
+	t_Lang103 =	Ràpid
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Obert

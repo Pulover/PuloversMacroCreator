@@ -438,6 +438,7 @@ ContHTitle := {	2: ["p6-Preview.html"]
 RecOptChecks := ["ClearNewList", "Strokes", "CaptKDn", "Mouse", "MScroll"
 			, "Moves", "TimedI", "WClass", "WTitle", "RecMouseCtrl", "RecKeybdCtrl"]
 OnFinishCode := 1
+Exp_Mult := {1:2, 2:4, 3:8, 4:16, 5:32}
 KeyNameRep := "
 (Join,
 LControl|Left Control
