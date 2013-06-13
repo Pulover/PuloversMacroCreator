@@ -394,6 +394,8 @@
 	t_Lang101 =	Ubrzati
 	t_Lang102 =	Usporite
 	t_Lang103 =	Brz
+	t_Lang104 =	Show / Hide Naslov Bar
+	t_Lang105 =	Show / Hide glavni prozor
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Otvoreno

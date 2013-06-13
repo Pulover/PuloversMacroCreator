@@ -394,6 +394,8 @@
 	t_Lang101 =	Beschleunigen
 	t_Lang102 =	Verlangsamen
 	t_Lang103 =	Schnelle
+	t_Lang104 =	Show / Hide Title Bar
+	t_Lang105 =	Show / Hide Hauptfenster
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Öffnen

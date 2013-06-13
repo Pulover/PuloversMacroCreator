@@ -394,6 +394,8 @@
 	t_Lang101 =	Velocità
 	t_Lang102 =	Rallentare
 	t_Lang103 =	Veloce
+	t_Lang104 =	Mostra / Nascondi barra del titolo
+	t_Lang105 =	Mostra / Nascondi finestra principale
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Aperto

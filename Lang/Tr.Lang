@@ -394,6 +394,8 @@
 	t_Lang101 =	Hız
 	t_Lang102 =	Yavaş
 	t_Lang103 =	Hızlı
+	t_Lang104 =	Göster / Gizle Başlık Çubuğu
+	t_Lang105 =	Ana pencerede göster / gizle
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Açık

@@ -488,24 +488,6 @@
 	
 }
 
-CheckForExp(Field)
-{
-	global cType21
-	
-	RegExReplace(Field, "U)%\s([\w%]+)\((.*)\)", "", iCount)
-	Match := 0
-	Loop, %iCount%
-	{
-		Match := RegExMatch(Field, "U)%\s([\w%]+)\((.*)\)", Funct, Match+1)
-		If (Type = cType21)
-			StringReplace, Funct2, Funct2, `,, ```,
-		If ((ExpValue := CheckExp(Funct2)) = """""")
-			ExpValue := ""
-		StringReplace, Field, Field, %Funct%, % "% " Funct1 "(" ExpValue ")"
-	}
-	return Field
-}
-
 Script_Header()
 {
 	global
@@ -563,12 +545,28 @@ IncludeFiles(L, N)
 	return IncList
 }
 
+CheckForExp(Field)
+{
+	global cType21
+	
+	RegExReplace(Field, "U)%\s+([\w%]+)\((.*)\)", "", iCount)
+	Match := 0
+	Loop, %iCount%
+	{
+		Match := RegExMatch(Field, "U)%\s+([\w%]+)\((.*)\)", Funct, Match+1)
+		If (Type = cType21)
+			StringReplace, Funct2, Funct2, `,, ```,
+		If ((ExpValue := CheckExp(Funct2)) = """""")
+			ExpValue := ""
+		StringReplace, Field, Field, %Funct%, % "% " Funct1 "(" ExpValue ")"
+	}
+	return Field
+}
+
 CheckExp(String)
 {
 	If (String = "")
 		return """"""
-	If RegExMatch(String, "^%\s[\w|%]*$")
-		return SubStr(String, 3)
 	StringReplace, String, String, ```%, ¤, All
 	StringReplace, String, String, `````, , ¢, All
 	Loop, Parse, String, `,, %A_Space%``

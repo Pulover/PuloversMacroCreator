@@ -394,6 +394,8 @@
 	t_Lang101 =	Accélérer
 	t_Lang102 =	Lent
 	t_Lang103 =	Rapide
+	t_Lang104 =	Afficher / Masquer la barre de titre
+	t_Lang105 =	Afficher / Masquer la fenêtre principale
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Ouvert

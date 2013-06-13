@@ -1173,7 +1173,7 @@ CheckVars(MatchList, Point="")
 			}
 		}
 		%A_LoopField% := DerefVars(%A_LoopField%)
-		If RegExMatch(%A_LoopField%, "U)%\s[\w%]*")  ; DynamicVars
+		If RegExMatch(%A_LoopField%, "U)^%\s+\w+$")  ; DynamicVars
 		{
 			While, RegExMatch(%A_LoopField%, "mU)%\s([\w%]*)(``,|$)", Found)
 				%A_LoopField% := RegExReplace(%A_LoopField%, Found, %Found1%)

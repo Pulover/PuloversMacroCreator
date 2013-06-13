@@ -394,6 +394,8 @@
 	t_Lang101 =	Fart
 	t_Lang102 =	Sakte
 	t_Lang103 =	Fast
+	t_Lang104 =	Vis / skjul Title Bar
+	t_Lang105 =	Vis / skjul hovedvinduet
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Åpent

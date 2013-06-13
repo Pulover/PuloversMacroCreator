@@ -37,6 +37,14 @@ ShowTooltip()
 	return
 }
 
+DragToolBar()
+{
+	global PMCOSC
+	
+	If (A_Gui = 28)
+		PostMessage, 0xA1, 2,,, ahk_id %PMCOSC%
+}
+
 ShowContextHelp()
 {
 	MouseGetPos,,,, Control
@@ -45,6 +53,11 @@ ShowContextHelp()
 	If A_Gui in 3,5,7,8,10,11,12,14,16,19,21,22,23,24
 	{
 		Menu, % Help%A_Gui%, Show
+		return
+	}
+	Else If A_Gui = 28
+	{
+		Menu, ToolbarMenu, Show
 		return
 	}
 	Else If A_GuiControl not in MouseB,TextB,ControlB

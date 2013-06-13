@@ -394,6 +394,8 @@
 	t_Lang101 =	速度
 	t_Lang102 =	慢
 	t_Lang103 =	快
+	t_Lang104 =	顯示/隱藏標題欄
+	t_Lang105 =	顯示/隱藏主窗口
 		
 ; Messages & Dialogs		
 	d_Lang001 =	打開

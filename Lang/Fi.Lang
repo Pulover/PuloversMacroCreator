@@ -394,6 +394,8 @@
 	t_Lang101 =	Nopeus
 	t_Lang102 =	Hidas
 	t_Lang103 =	Nopeasti
+	t_Lang104 =	Näytä / Piilota Otsikko Bar
+	t_Lang105 =	Näytä / Piilota pääikkuna
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Avata

@@ -394,6 +394,8 @@
 	t_Lang101 =	Hastighed
 	t_Lang102 =	Langsom
 	t_Lang103 =	Fast
+	t_Lang104 =	Vis / skjul Titel Bar
+	t_Lang105 =	Vis / skjul hovedvinduet
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Åbent

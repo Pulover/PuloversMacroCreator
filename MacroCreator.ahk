@@ -645,6 +645,7 @@ GoSub, LoadData
 GoSub, b_Start
 OnMessage(WM_MOUSEMOVE, "ShowTooltip")
 OnMessage(WM_RBUTTONDOWN, "ShowContextHelp")
+OnMessage(WM_LBUTTONDOWN, "DragToolbar")
 OnMessage(WM_ACTIVATE, "WinCheck")
 OnMessage(WM_COPYDATA, "Receive_Params")
 OnMessage(WM_HELP, "CmdHelp")
@@ -1557,7 +1558,7 @@ Gui, 1:+Disabled
 Gui, 14:Font, s7
 ; Macros
 Gui, 14:Add, GroupBox, W415 H150, %t_Lang002%:
-Gui, 14:Add, ListView, Section ys+20 xs+10 AltSubmit Checked W395 r4 vExpList gExpEdit -Multi NoSort -ReadOnly, Hotkey|Loop|Hotstring?|BlockMouse?
+Gui, 14:Add, ListView, Section ys+20 xs+10 AltSubmit Checked W395 r4 vExpList gExpEdit -Multi NoSort -ReadOnly, Macro|Hotkey|Loop|Hotstring?|BlockMouse?
 Gui, 14:Add, Button, -Wrap Section xs W70 H23 gCheckAll, %t_Lang007%
 Gui, 14:Add, Button, -Wrap yp x+5 W70 H23 gUnCheckAll, %t_Lang008%
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_AbortKey% yp+5 x+10 W70 vEx_AbortKey gEx_Checks R1, %w_Lang008%:
@@ -1634,11 +1635,12 @@ If (IfDirectContext <> "None")
 }
 LV_Delete()
 Loop, %TabCount%
-	LV_Add("Check", o_AutoKey[A_Index], o_TimesG[A_Index], 0, (BckIt%A_Index% ? 1 : 0))
-LV_ModifyCol(1, 130)	; Hotkeys
-LV_ModifyCol(2, 80)		; Loop
-LV_ModifyCol(3, 80)		; Hotstrings
-LV_ModifyCol(4, 80)		; Block
+	LV_Add("Check", A_Index, o_AutoKey[A_Index], o_TimesG[A_Index], 0, (BckIt%A_Index% ? 1 : 0))
+LV_ModifyCol(1, 50)		; Macros
+LV_ModifyCol(2, 120)	; Hotkeys
+LV_ModifyCol(3, 60)		; Loop
+LV_ModifyCol(4, 60)		; Hotstrings
+LV_ModifyCol(5, 80)		; Block
 LV_Modify(0, "Check")
 If CurrentFileName = 
 	GuiControl, 14:, ExpFile, %A_MyDocuments%\MyScript.ahk
@@ -1647,15 +1649,17 @@ Tooltip
 return
 
 ExpEdit:
+If A_GuiEvent = D
+	LV_Rows.Drag()
 If A_GuiEvent <> DoubleClick
 	return
 If (LV_GetCount("Selected") = 0)
 	return
 RowNumber := LV_GetNext()
-LV_GetText(Ex_AutoKey, RowNumber, 1)
-LV_GetText(Ex_TimesX, RowNumber, 2)
-LV_GetText(Ex_Hotstring, RowNumber, 3)
-LV_GetText(Ex_BM, RowNumber, 4)
+LV_GetText(Ex_AutoKey, RowNumber, 2)
+LV_GetText(Ex_TimesX, RowNumber, 3)
+LV_GetText(Ex_Hotstring, RowNumber, 4)
+LV_GetText(Ex_BM, RowNumber, 5)
 Gui, 13:+owner14 +ToolWindow
 Gui, 14:Default
 Gui, 14:+Disabled
@@ -1678,7 +1682,7 @@ Gui, 14:-Disabled
 Gui, 13:Destroy
 Gui, 14:Default
 Ex_Hotstring := InStr(Ex_AutoKey, "::")=1 ? 1 : 0
-LV_Modify(RowNumber, "", Ex_AutoKey, Ex_TimesX, Ex_Hotstring, Ex_BM)
+LV_Modify(RowNumber, "Col2", Ex_AutoKey, Ex_TimesX, Ex_Hotstring, Ex_BM)
 return
 
 VarsTree:
@@ -1756,7 +1760,7 @@ ExpClose:
 14GuiEscape:
 Gui, Submit, NoHide
 Loop, %TabCount%
-	LV_GetText(BckIt%A_Index%, A_Index, 4)
+	LV_GetText(BckIt%A_Index%, A_Index, 5)
 Gui, 1:-Disabled
 Gui, 14:Destroy
 Gui, 1:Default
@@ -1841,21 +1845,22 @@ Loop, % LV_GetCount()
 	}
 	If RowNumber = 0
 		break
-	LV_GetText(Ex_AutoKey, RowNumber, 1)
-	LV_GetText(Ex_TimesX, RowNumber, 2)
-	LV_GetText(Ex_Hotstring, RowNumber, 3)
-	LV_GetText(Ex_BM, RowNumber, 4)
-	If (ListCount%RowNumber% = 0)
+	LV_GetText(Ex_Macro, RowNumber, 1)
+	LV_GetText(Ex_AutoKey, RowNumber, 2)
+	LV_GetText(Ex_TimesX, RowNumber, 3)
+	LV_GetText(Ex_Hotstring, RowNumber, 4)
+	LV_GetText(Ex_BM, RowNumber, 5)
+	If (ListCount%Ex_Macro% = 0)
 		continue
-	Body := LV_Export(RowNumber), AutoKey .= Ex_AutoKey "`n"
+	Body := LV_Export(Ex_Macro), AutoKey .= Ex_AutoKey "`n"
 	GoSub, ExportOpt
 	AllScripts .= Body "`n"
 	PMCSet := "[PMC Code]|" Ex_AutoKey
-	. "|" o_ManKey[RowNumber] "|" Ex_TimesX
+	. "|" o_ManKey[Ex_Macro] "|" Ex_TimesX
 	. "|" CoordMouse "`n"
-	PmcCode .= PMCSet . PMC.LVGet("InputList" RowNumber).Text . "`n"
+	PmcCode .= PMCSet . PMC.LVGet("InputList" Ex_Macro).Text . "`n"
 	If (Ex_IN)
-		IncList .= IncludeFiles(RowNumber, ListCount%RowNumber%)
+		IncList .= IncludeFiles(Ex_Macro, ListCount%Ex_Macro%)
 }
 AutoKey := RTrim(AutoKey, "`n")
 AbortKey := (Ex_AbortKey = 1) ? AbortKey : ""
@@ -1942,7 +1947,7 @@ Else If Ex_TimesX > 1
 	Body := "Loop, " Ex_TimesX "`n{`n" Body "}`n"
 If Ex_BM = 1
 	Body := "BlockInput, MouseMove`n" Body "BlockInput, MouseMoveOff`n"
-Body := "Macro" RowNumber ":`n" Body "Return`n"
+Body := "Macro" Ex_Macro ":`n" Body "Return`n"
 If (Ex_AutoKey <> "")
 	Body := Ex_AutoKey "::`n" Body
 return
@@ -7051,6 +7056,7 @@ WinSet, Transparent, %OSTrans%, ahk_id %PMCOSC%
 return
 
 28GuiClose:
+OSCClose:
 Gui, 28: +LastFound
 WinGetPos, OSX, OSY
 OSCPos := "X" OSX " Y" OSY
@@ -10211,6 +10217,10 @@ Menu, Tray, Add
 Menu, Tray, Add, %y_Lang001%, ShowHide
 Menu, Tray, Add, %f_Lang011%, Exit
 Menu, Tray, Default, %w_Lang005%
+
+Menu, ToolbarMenu, Add, %c_Lang022%, OSCClose
+Menu, ToolbarMenu, Add, %t_Lang104%, ToggleTB
+Menu, ToolbarMenu, Add, %t_Lang105%, ShowHide
 
 If KeepDefKeys
 	Menu, OptionsMenu, Check, %o_Lang002%

@@ -33,16 +33,18 @@
 ;    You can call the function by preceding them with LV_Rows. For example:
 ;        LV_Rows.Copy()                   <-- Calls function on active ListView.
 ;
-;    Or with a Handle initialized via New meta-function. For example:
-;        MyListHandle := New LV_Rows()    <-    Creates a new Handle.
+;    Or with a handle initialized via New meta-function. For example:
+;        MyListHandle := New LV_Rows()    <-    Creates a new handle.
 ;        MyListHandle.Add()               <-    Calls function for that Handle.
 ;
 ;    Like AutoHotkey built-in functions, these functions operate on the default gui,
 ;        and active ListView control.
 ;
-;    Initializing is only required for History functions: Add(), Undo() and Redo().
+;    Initializing is only required for History functions, but you can also use the
+;        same handle for the Edit functions or use different handles for extra
+;        copy and paste actions keeping independent data in memory.
 ;
-;    You may keep an individual history of each ListView using different Handles.
+;    You may keep an individual history of each ListView using different handles.
 ;
 ;=======================================================================================
 
@@ -179,11 +181,10 @@ Class LV_Rows
 ;=======================================================================================
     Move(Up=False)
     {
-        LV_Row := 0
+        Selections := [], LV_Row := 0
         Critical
         If Up
         {
-            Selections := []
             Loop
             {
                 LV_Row := LV_GetNext(LV_Row)
@@ -206,7 +207,6 @@ Class LV_Rows
         }
         Else
         {
-            Selections := []
             Loop
             {
                 LV_Row := LV_GetNext(LV_Row)
@@ -299,14 +299,14 @@ Class LV_Rows
             LV_topIndex := ErrorLevel
             Line_W := (LV_TotalNumOfRows > LV_NumOfRows) ? LV_lw - SM_CXVSCROLL : LV_lw
 
-            Loop,% LV_NumOfRows + 1
+            Loop, % LV_NumOfRows + 1
             {    
                 LV_which := LV_topIndex + A_Index - 1
-                NumPut(LVIR_LABEL, LV_XYstruct, 0,"UInt")
-                NumPut(A_Index - 1, LV_XYstruct, 4,"UInt")
+                NumPut(LVIR_LABEL, LV_XYstruct, 0, "UInt")
+                NumPut(A_Index - 1, LV_XYstruct, 4, "UInt")
                 SendMessage, LVM_GETSUBITEMRECT, %LV_which%, &LV_XYstruct, , ahk_id %LV_LView%
-                LV_RowY := NumGet(LV_XYstruct,4,"UInt")
-                LV_RowY2 := NumGet(LV_XYstruct,12,"UInt")
+                LV_RowY := NumGet(LV_XYstruct, 4, "UInt")
+                LV_RowY2 := NumGet(LV_XYstruct, 12, "UInt")
                 LV_currColHeight := LV_RowY2 - LV_RowY
                 If(LV_my <= LV_RowY + LV_currColHeight)
                 {    
@@ -341,7 +341,7 @@ Class LV_Rows
                 o := Lines+1, FocusedRow := LV_currRow-1
             Else
                 o := 1, FocusedRow := LV_currRow
-            LV_Rows.Delete()
+            DragRows.Delete()
             DragRows := ""
             Loop, %Lines%
             {
@@ -353,7 +353,7 @@ Class LV_Rows
         return LV_currRow
     }
 ;=======================================================================================
-;    History Functions:  Keep a history of ListView changes and allows Undo and Redo.
+;    History Functions:  Keep a history of ListView changes and allow Undo and Redo.
 ;=======================================================================================
 ;    Function:           Handle.Add()
 ;    Description:        Adds an entry on History. This function requires
@@ -376,7 +376,7 @@ Class LV_Rows
     }
 ;=======================================================================================
 ;    Function:           Handle.Undo()
-;    Description:        Replaces ListView contents to previous entry state, if any.
+;    Description:        Replaces ListView contents with previous entry state, if any.
 ;    Return:             Current entry position.
 ;=======================================================================================
     Undo()
@@ -389,7 +389,7 @@ Class LV_Rows
     }
 ;=======================================================================================
 ;    Function:           Handle.Redo()
-;    Description:        Replaces ListView contents to next entry state, if any.
+;    Description:        Replaces ListView contents with next entry state, if any.
 ;    Return:             Current entry position.
 ;=======================================================================================
     Redo()
@@ -407,7 +407,7 @@ Class LV_Rows
 ;    Function:           Handle.Load()
 ;    Description:        Loads a specified entry in History into ListView.
 ;    Parameters:
-;        Number:         Number of entry to be loaded.
+;        Number:         Number of entry position to be loaded.
 ;    Return:             True if entry exists, False otherwise.
 ;=======================================================================================
     Load(Number)
@@ -422,10 +422,10 @@ Class LV_Rows
     }
 ;=======================================================================================
 ;    Function:           LV_Rows.RowText()
-;    Description:        Returns an Array of the values of each cell in a specified row.
+;    Description:        Creates an Array of values from each cell in a specified row.
 ;    Parameters:
 ;        Index:          Index of the row to get contents from.
-;    Return:             An Array with text from the cells.
+;    Return:             An Array with text from the cells and the row checked status.
 ;=======================================================================================
     RowText(Index)
     {
@@ -440,4 +440,3 @@ Class LV_Rows
         return Data
     }
 }
-

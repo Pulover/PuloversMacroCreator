@@ -394,6 +394,8 @@
 	t_Lang101 =	Sebesség
 	t_Lang102 =	Lassú
 	t_Lang103 =	Gyors
+	t_Lang104 =	Megjelenítése / elrejtése címsor
+	t_Lang105 =	Megjelenítése / elrejtése főablak
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Nyitva

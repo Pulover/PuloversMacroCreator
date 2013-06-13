@@ -394,6 +394,8 @@
 	t_Lang101 =	Accelerar
 	t_Lang102 =	Poc a poc
 	t_Lang103 =	Ràpid
+	t_Lang104 =	Mostra / Oculta la barra de títol
+	t_Lang105 =	Mostra / oculta la finestra principal
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Obert

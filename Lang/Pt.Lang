@@ -394,6 +394,8 @@
 	t_Lang101 =	Velocidade
 	t_Lang102 =	Devagar
 	t_Lang103 =	Rápido
+	t_Lang104 =	Mostrar / Ocultar Barra de Título
+	t_Lang105 =	Mostrar / Ocultar Janela Principal
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Abrir

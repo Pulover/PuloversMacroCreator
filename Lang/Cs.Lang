@@ -394,6 +394,8 @@
 	t_Lang101 =	Rychlost
 	t_Lang102 =	Pomalu
 	t_Lang103 =	Rychle
+	t_Lang104 =	Zobrazit / skrýt Title Bar
+	t_Lang105 =	Zobrazit / skrýt hlavní okno
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Otevřít

@@ -394,6 +394,8 @@
 	t_Lang101 =	Snelheid
 	t_Lang102 =	Vertragen
 	t_Lang103 =	Snel
+	t_Lang104 =	Show / Hide Title Bar
+	t_Lang105 =	Show / Hide hoofdvenster
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Open
