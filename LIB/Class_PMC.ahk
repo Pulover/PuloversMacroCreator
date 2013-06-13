@@ -25,9 +25,7 @@
 		{
 			If (PmcCode[0] = "")
 				return 0
-			PmcCode[1] := PmcCode[0]
-			PmcCode[0] := ""
-			ID := 1
+			PmcCode[1] := PmcCode[0], PmcCode[0] := "", ID := 1
 		}
 		return ID
 	}
@@ -64,12 +62,12 @@
 				Sleep, 1
 				Gui, ListView, InputList%TabCount%
 				ListCount%TabCount% := LV_GetCount()
-				Opt := PmcCode[A_Index].Opt
-				o_AutoKey[TabCount] := (Opt[2] <> "") ? Opt[2] : ""
-				o_ManKey[TabCount] := (Opt[3] <> "") ? Opt[3] : ""
-				o_TimesG[TabCount] := (Opt[4] <> "") ? Opt[4] : 1
-				CoordMouse := (Opt[5] <> "") ? Opt[5] : CoordMouse
-				HistoryMacro%TabCount% := new RowsData()
+			,	Opt := PmcCode[A_Index].Opt
+			,	o_AutoKey[TabCount] := (Opt[2] <> "") ? Opt[2] : ""
+			,	o_ManKey[TabCount] := (Opt[3] <> "") ? Opt[3] : ""
+			,	o_TimesG[TabCount] := (Opt[4] <> "") ? Opt[4] : 1
+			,	CoordMouse := (Opt[5] <> "") ? Opt[5] : CoordMouse
+			,	HistoryMacro%TabCount% := new RowsData()
 				HistoryMacro%TabCount%.Add()
 			}
 		}
@@ -106,7 +104,7 @@
 		{
 			LV_GetTexts(A_Index, Action, Details, TimesX, DelayX, Type, Target, Window, Comment)
 			ckd := (LV_GetNext(A_Index-1, "Checked")=A_Index) ? "" : 0
-			Row[A_Index] := [ckd A_Index, Action, Details, TimesX, DelayX, Type, Target, Window, Comment]
+		,	Row[A_Index] := [ckd A_Index, Action, Details, TimesX, DelayX, Type, Target, Window, Comment]
 			For each, Col in Row[A_Index]
 			{
 				Col := RegExReplace(Col, "\|", "¢")

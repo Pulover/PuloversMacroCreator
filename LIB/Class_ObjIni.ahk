@@ -31,7 +31,7 @@ Class ObjIni
 			If (RegExMatch(A_LoopReadLine, "U)^(.*)=(.*)$", Key))
 			{
 				Key1 := RegExReplace(Key1, "[^\w\d#_@$]")
-				%Key1% := {Section: ReadSection, Key: Key1, Value: Key2}
+			,	%Key1% := {Section: ReadSection, Key: Key1, Value: Key2}
 				%ReadSection%.Insert(Key1, %Key1%)
 			}
 		}
@@ -56,7 +56,7 @@ Class ObjIni
 				Try
 				{
 					VarName := Key.Key
-					%VarName% := Key.Value
+				,	%VarName% := Key.Value
 				}
 			}
 		}
@@ -81,8 +81,7 @@ Class ObjIni
 	{
 		this.Remove("", Chr(255))
 		this.SetCapacity(0)
-		ReadSection := DefaultSection
-		%ReadSection% := []
+		ReadSection := DefaultSection, %ReadSection% := []
 		Loop, Parse, NewList, `n
 		{
 			If (A_LoopField = "")
@@ -97,7 +96,7 @@ Class ObjIni
 			If (RegExMatch(A_LoopField, "U)^(.*)\s?=\s?(.*)$", Key))
 			{
 				Key1 := RegExReplace(Key1, "[^\w\d#_@$]")
-				%Key1% := {Section: ReadSection, Key: Key1, Value: Key2}
+			,	%Key1% := {Section: ReadSection, Key: Key1, Value: Key2}
 				%ReadSection%.Insert(Key1, %Key1%)
 			}
 		}

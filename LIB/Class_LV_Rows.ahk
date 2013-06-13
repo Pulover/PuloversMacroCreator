@@ -64,8 +64,7 @@ Class LV_Rows
 ;=======================================================================================
     __New()
     {
-        this.Slot := []
-        this.ActiveSlot := 1
+        this.Slot := [], this.ActiveSlot := 1
     }
 
     __Call(Func)
@@ -91,15 +90,14 @@ Class LV_Rows
 ;=======================================================================================
     Copy()
     {
-        this.CopyData := {}
-        LV_Row := 0
+        this.CopyData := {}, LV_Row := 0
         Loop
         {
             LV_Row := LV_GetNext(LV_Row)
             If !LV_Row
                 break
             RowData := LV_Rows.RowText(LV_Row)
-            Row := [RowData*]
+        ,   Row := [RowData*]
             this.CopyData.Insert(Row)
             CopiedLines++
         }
@@ -112,15 +110,14 @@ Class LV_Rows
 ;=======================================================================================
     Cut()
     {
-        this.CopyData := {}
-        LV_Row := 0
+        this.CopyData := {}, LV_Row := 0
         Loop
         {
             LV_Row := LV_GetNext(LV_Row)
             If !LV_Row
                 break
             RowData := LV_Rows.RowText(LV_Row)
-            Row := [RowData*]
+        ,   Row := [RowData*]
             this.CopyData.Insert(Row)
             CopiedLines++
         }
@@ -246,12 +243,12 @@ Class LV_Rows
     Drag(DragButton="D", AutoScroll=True, ScrollDelay=100, LineThick=2, Color="Black")
     {
         LVIR_LABEL := 0x0002
-        LVM_GETITEMCOUNT := 0x1004
-        LVM_SCROLL := 0x1014
-        LVM_GETTOPINDEX := 0x1027
-        LVM_GETCOUNTPERPAGE := 0x1028
-        LVM_GETSUBITEMRECT := 0x1038
-        LV_currColHeight := 0
+    ,   LVM_GETITEMCOUNT := 0x1004
+    ,   LVM_SCROLL := 0x1014
+    ,   LVM_GETTOPINDEX := 0x1027
+    ,   LVM_GETCOUNTPERPAGE := 0x1028
+    ,   LVM_GETSUBITEMRECT := 0x1038
+    ,   LV_currColHeight := 0
         SysGet, SM_CXVSCROLL, 2
 
         If InStr(DragButton, "d", True)
@@ -296,7 +293,7 @@ Class LV_Rows
             SendMessage, LVM_GETCOUNTPERPAGE, 0, 0, , ahk_id %LV_LView%
             LV_NumOfRows := ErrorLevel
             SendMessage, LVM_GETTOPINDEX, 0, 0, , ahk_id %LV_LView%
-            LV_topIndex := ErrorLevel
+        ,   LV_topIndex := ErrorLevel
             Line_W := (LV_TotalNumOfRows > LV_NumOfRows) ? LV_lw - SM_CXVSCROLL : LV_lw
 
             Loop, % LV_NumOfRows + 1
@@ -306,14 +303,14 @@ Class LV_Rows
                 NumPut(A_Index - 1, LV_XYstruct, 4, "UInt")
                 SendMessage, LVM_GETSUBITEMRECT, %LV_which%, &LV_XYstruct, , ahk_id %LV_LView%
                 LV_RowY := NumGet(LV_XYstruct, 4, "UInt")
-                LV_RowY2 := NumGet(LV_XYstruct, 12, "UInt")
-                LV_currColHeight := LV_RowY2 - LV_RowY
+            ,   LV_RowY2 := NumGet(LV_XYstruct, 12, "UInt")
+            ,   LV_currColHeight := LV_RowY2 - LV_RowY
                 If(LV_my <= LV_RowY + LV_currColHeight)
                 {    
                     LV_currRow  := LV_which + 1
-                    LV_currRow0 := LV_which
-                    Line_Y := Win_Y + LV_ly + LV_RowY
-                    Line_X := Win_X + LV_lx
+            ,       LV_currRow0 := LV_which
+            ,       Line_Y := Win_Y + LV_ly + LV_RowY
+            ,       Line_X := Win_X + LV_lx
                     If (LV_currRow > (LV_TotalNumOfRows+1))
                     {
                         Gui, MarkLine:Cancel
@@ -335,7 +332,7 @@ Class LV_Rows
         If LV_currRow
         {
             DragRows := new LV_Rows()
-            Lines := DragRows.Copy()
+        ,   Lines := DragRows.Copy()
             DragRows.Paste(LV_currRow)
             If (LV_GetNext() < LV_currRow)
                 o := Lines+1, FocusedRow := LV_currRow-1
@@ -368,7 +365,7 @@ Class LV_Rows
         Loop, % LV_GetCount()
         {
             RowData := LV_Rows.RowText(A_Index)
-            Row[A_Index] := [RowData*]
+        ,   Row[A_Index] := [RowData*]
         }
         this.Slot.Insert(Row)
         this.ActiveSlot := this.Slot.MaxIndex()
@@ -430,7 +427,7 @@ Class LV_Rows
     RowText(Index)
     {
         Data := []
-        ckd := (LV_GetNext(Index-1, "Checked")=Index) ? 1 : 0
+    ,   ckd := (LV_GetNext(Index-1, "Checked")=Index) ? 1 : 0
         Data.Insert("Check" ckd)
         Loop, % LV_GetCount("Col")
         {

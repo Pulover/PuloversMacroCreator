@@ -23,7 +23,7 @@ COMInterface(String, Ptr="", ByRef OutputVar="", CLSID="InternetExplorer.Applica
 	If RegExMatch(String, "[\s]?:=(.*)", Assign)
 	{
 		String := Trim(RegExReplace(String, "[\s]?:=(.*)"))
-		Value := Trim(Assign1)
+	,	Value := Trim(Assign1)
 	}
 	
 	; Look for Parameters and replace with a pattern.
@@ -58,7 +58,7 @@ COMInterface(String, Ptr="", ByRef OutputVar="", CLSID="InternetExplorer.Applica
 				While, RegExMatch(LoopField, "&_iParent(\d+)", inPar)
 				{
 					iPar := RegExReplace(_iParent%inPar1%, "\$", "$$$$")
-					LoopField := RegExReplace(LoopField, "&_iParent\d+", iPar, "", 1)
+				,	LoopField := RegExReplace(LoopField, "&_iParent\d+", iPar, "", 1)
 				}
 				If RegExMatch(LoopField, "^_Arr\d+")
 				{
@@ -67,7 +67,7 @@ COMInterface(String, Ptr="", ByRef OutputVar="", CLSID="InternetExplorer.Applica
 					Loop, %Arr0%
 					{
 						Var := Arr%A_Index%
-						Array[A_Index-1] := (!Var) ? 0 : Var
+					,	Array[A_Index-1] := (!Var) ? 0 : Var
 					}
 					Params.Insert(Array)
 				}
