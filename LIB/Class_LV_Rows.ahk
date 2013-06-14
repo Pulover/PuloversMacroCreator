@@ -78,8 +78,8 @@ Class LV_Rows
     __Delete()
     {
         this.Remove("", Chr(255))
-        this.SetCapacity(0)
-        this.base := ""
+    ,   this.SetCapacity(0)
+    ,   this.base := ""
     }
 ;=======================================================================================
 ;    Edit Functions:     Edit ListView rows.
@@ -98,8 +98,8 @@ Class LV_Rows
                 break
             RowData := LV_Rows.RowText(LV_Row)
         ,   Row := [RowData*]
-            this.CopyData.Insert(Row)
-            CopiedLines++
+        ,   this.CopyData.Insert(Row)
+        ,   CopiedLines := A_Index
         }
         return CopiedLines
     }
@@ -118,8 +118,8 @@ Class LV_Rows
                 break
             RowData := LV_Rows.RowText(LV_Row)
         ,   Row := [RowData*]
-            this.CopyData.Insert(Row)
-            CopiedLines++
+        ,   this.CopyData.Insert(Row)
+        ,   CopiedLines := A_Index
         }
         LV_Rows.Delete()
         return CopiedLines
@@ -165,7 +165,7 @@ Class LV_Rows
             If !LV_Row
                 break
             LV_Delete(LV_Row)
-            DeletedLines++
+        ,   DeletedLines := A_Index
         }
         return DeletedLines
     }
@@ -194,9 +194,9 @@ Class LV_Rows
             For each, Row in Selections
             {
                 RowData := LV_Rows.RowText(Row)
-                LV_Insert(Row-1, RowData*)
-                LV_Delete(Row+1)
-                LV_Modify(Row-1, "Select")
+            ,   LV_Insert(Row-1, RowData*)
+            ,   LV_Delete(Row+1)
+            ,   LV_Modify(Row-1, "Select")
                 If (A_Index = 1)
                     LV_Modify(Row-1, "Focus Vis")
             }
@@ -216,8 +216,8 @@ Class LV_Rows
             For each, Row in Selections
             {
                 RowData := LV_Rows.RowText(Row+1)
-                LV_Insert(Row, RowData*)
-                LV_Delete(Row+2)
+            ,   LV_Insert(Row, RowData*)
+            ,   LV_Delete(Row+2)
                 If (A_Index = 1)
                     LV_Modify(Row+1, "Focus Vis")
             }
@@ -242,14 +242,15 @@ Class LV_Rows
 ;=======================================================================================
     Drag(DragButton="D", AutoScroll=True, ScrollDelay=100, LineThick=2, Color="Black")
     {
-        LVIR_LABEL := 0x0002
-    ,   LVM_GETITEMCOUNT := 0x1004
-    ,   LVM_SCROLL := 0x1014
-    ,   LVM_GETTOPINDEX := 0x1027
-    ,   LVM_GETCOUNTPERPAGE := 0x1028
-    ,   LVM_GETSUBITEMRECT := 0x1038
-    ,   LV_currColHeight := 0
-        SysGet, SM_CXVSCROLL, 2
+        Static LVIR_LABEL := 0x0002
+        Static LVM_GETITEMCOUNT := 0x1004
+        Static LVM_SCROLL := 0x1014
+        Static LVM_GETTOPINDEX := 0x1027
+        Static LVM_GETCOUNTPERPAGE := 0x1028
+        Static LVM_GETSUBITEMRECT := 0x1038
+        Static LV_currColHeight := 0
+
+		SysGet, SM_CXVSCROLL, 2
 
         If InStr(DragButton, "d", True)
             DragButton := "RButton"
@@ -293,14 +294,14 @@ Class LV_Rows
             SendMessage, LVM_GETCOUNTPERPAGE, 0, 0, , ahk_id %LV_LView%
             LV_NumOfRows := ErrorLevel
             SendMessage, LVM_GETTOPINDEX, 0, 0, , ahk_id %LV_LView%
-        ,   LV_topIndex := ErrorLevel
-            Line_W := (LV_TotalNumOfRows > LV_NumOfRows) ? LV_lw - SM_CXVSCROLL : LV_lw
+            LV_topIndex := ErrorLevel
+        ,   Line_W := (LV_TotalNumOfRows > LV_NumOfRows) ? LV_lw - SM_CXVSCROLL : LV_lw
 
             Loop, % LV_NumOfRows + 1
             {    
                 LV_which := LV_topIndex + A_Index - 1
                 NumPut(LVIR_LABEL, LV_XYstruct, 0, "UInt")
-                NumPut(A_Index - 1, LV_XYstruct, 4, "UInt")
+            ,   NumPut(A_Index - 1, LV_XYstruct, 4, "UInt")
                 SendMessage, LVM_GETSUBITEMRECT, %LV_which%, &LV_XYstruct, , ahk_id %LV_LView%
                 LV_RowY := NumGet(LV_XYstruct, 4, "UInt")
             ,   LV_RowY2 := NumGet(LV_XYstruct, 12, "UInt")
@@ -308,9 +309,9 @@ Class LV_Rows
                 If(LV_my <= LV_RowY + LV_currColHeight)
                 {    
                     LV_currRow  := LV_which + 1
-            ,       LV_currRow0 := LV_which
-            ,       Line_Y := Win_Y + LV_ly + LV_RowY
-            ,       Line_X := Win_X + LV_lx
+                ,   LV_currRow0 := LV_which
+                ,   Line_Y := Win_Y + LV_ly + LV_RowY
+                ,   Line_X := Win_X + LV_lx
                     If (LV_currRow > (LV_TotalNumOfRows+1))
                     {
                         Gui, MarkLine:Cancel
@@ -339,7 +340,7 @@ Class LV_Rows
             Else
                 o := 1, FocusedRow := LV_currRow
             DragRows.Delete()
-            DragRows := ""
+        ,   DragRows := ""
             Loop, %Lines%
             {
                 i := A_Index-o
@@ -368,7 +369,7 @@ Class LV_Rows
         ,   Row[A_Index] := [RowData*]
         }
         this.Slot.Insert(Row)
-        this.ActiveSlot := this.Slot.MaxIndex()
+    ,   this.ActiveSlot := this.Slot.MaxIndex()
         return this.Slot.MaxIndex()
     }
 ;=======================================================================================
@@ -381,7 +382,7 @@ Class LV_Rows
         If (this.ActiveSlot = 1)
             return this.ActiveSlot
         this.ActiveSlot -= 1
-        this.Load(this.ActiveSlot)
+    ,   this.Load(this.ActiveSlot)
         return this.ActiveSlot
     }
 ;=======================================================================================
@@ -394,7 +395,7 @@ Class LV_Rows
         If (this.ActiveSlot = (this.Slot.MaxIndex()))
             return this.ActiveSlot
         this.ActiveSlot += 1
-        this.Load(this.ActiveSlot)
+    ,   this.Load(this.ActiveSlot)
         return this.ActiveSlot
     }
 ;=======================================================================================
@@ -428,11 +429,11 @@ Class LV_Rows
     {
         Data := []
     ,   ckd := (LV_GetNext(Index-1, "Checked")=Index) ? 1 : 0
-        Data.Insert("Check" ckd)
+    ,   Data.Insert("Check" ckd)
         Loop, % LV_GetCount("Col")
         {
             LV_GetText(Cell, Index, A_Index)
-            Data.Insert(Cell)
+        ,   Data.Insert(Cell)
         }
         return Data
     }
