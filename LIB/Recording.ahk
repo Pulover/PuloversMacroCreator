@@ -30,8 +30,7 @@
 	}
 	Else
 		LV_Add("Check", ListCount%ListID%+1, "WinActivate", "", 1, WinDelay, "WinActivate", "", Window)
-	p_Class := c_Class
-	p_Title := c_Title
+	p_Class := c_Class, p_Title := c_Title
 }
 
 ClickOn(xPos, yPos, Button, Click="")
@@ -90,7 +89,7 @@ TimeRecord()
 	global LastTime
 	static TimeCount
 	TimeCount := A_TickCount - LastTime
-	LastTime := A_TickCount
+,	LastTime := A_TickCount
 	return TimeCount
 }
 

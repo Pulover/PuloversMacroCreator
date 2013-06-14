@@ -125,7 +125,7 @@ GuiGetSize(ByRef W, ByRef H, GuiID=1)
 		VarSetCapacity( rect, 16, 0 )
 		DllCall("GetClientRect", uint, MyGuiHWND := WinExist(), uint, &rect )
 		W := NumGet( rect, 8, "int" )
-		H := NumGet( rect, 12, "int" )
+	,	H := NumGet( rect, 12, "int" )
 	}
 }
 
@@ -171,9 +171,9 @@ MarkArea(LineW)
 	If (control <> "")
 	{
 		cX += wX, cY += wY
-		X1 := cX, Y1 := cY
-		W1 := cW, H1 := cH
-		W2 := W1 - LineW, H2 := H1 - LineW
+	,	X1 := cX, Y1 := cY
+	,	W1 := cW, H1 := cH
+	,	W2 := W1 - LineW, H2 := H1 - LineW
 		Tooltip,
 		(LTrim
 		%c_Lang059%: %W1% x %H1%
@@ -190,8 +190,8 @@ MarkArea(LineW)
 			wX := MWALeft, wY := MWATop, wW := MWARight, wH := MWABottom
 		}
 		X1 := wX, Y1 := wY
-		W1 := wW, H1 := wH
-		W2 := W1 - LineW, H2 := H1 - LineW
+	,	W1 := wW, H1 := wH
+	,	W2 := W1 - LineW, H2 := H1 - LineW
 		Tooltip,
 		(LTrim
 		%c_Lang059%: %W1% x %H1%
@@ -210,9 +210,9 @@ MoveRectangle(o, p, LineW)
 	Gui, 20:+LastFound
 	WinGetPos, wX, wY, wW, wH
 	w%o% := (p) ? w%o%+1 : w%o%-1
-	X1 := wX, Y1 := wY
-	W1 := wW, H1 := wH
-	W2 := W1 - LineW, H2 := H1 - LineW
+,	X1 := wX, Y1 := wY
+,	W1 := wW, H1 := wH
+,	W2 := W1 - LineW, H2 := H1 - LineW
 	WinSet, Region, 0-0 %W1%-0 %W1%-%H1% 0-%H1% 0-0  %LineW%-%LineW% %W2%-%LineW% %W2%-%H2% %LineW%-%H2% %LineW%-%LineW%
 	WinMove,,, %wX%, %wY%, %wW%, %wH%
 }
@@ -220,10 +220,10 @@ MoveRectangle(o, p, LineW)
 Screenshot(outfile, screen)
 {
 	Gdip_1 := "Gdip_Startup"
-	Gdip_2 := "Gdip_BitmapFromScreen"
-	Gdip_3 := "Gdip_SaveBitmapToFile"
-	Gdip_4 := "Gdip_DisposeImage"
-	Gdip_5 := "Gdip_Shutdown"
+,	Gdip_2 := "Gdip_BitmapFromScreen"
+,	Gdip_3 := "Gdip_SaveBitmapToFile"
+,	Gdip_4 := "Gdip_DisposeImage"
+,	Gdip_5 := "Gdip_Shutdown"
 
 	pToken := %Gdip_1%()
 
@@ -237,10 +237,10 @@ Screenshot(outfile, screen)
 AdjustCoords(ByRef x1, ByRef y1, ByRef x2, ByRef y2)
 {
 	Xa := x2 < x1 ? x2 : x1
-	Xb := x1 > x2 ? x1 : x2
-	Ya := y2 < y1 ? y2 : y1
-	Yb := y1 > y2 ? y1 : y2
-	x1 := Xa, x2 := Xb, y1 := Ya, y2 := Yb
+,	Xb := x1 > x2 ? x1 : x2
+,	Ya := y2 < y1 ? y2 : y1
+,	Yb := y1 > y2 ? y1 : y2
+,	x1 := Xa, x2 := Xb, y1 := Ya, y2 := Yb
 }
 
 ReadFunctions(LibFile, Msg="")
@@ -462,7 +462,7 @@ GetElIndex(elwb, GetBy)
 	If (GetBy = "Links")
 	{
 		ElId := elwb.InnerText
-		Links := elwb.Document.Links
+	,	Links := elwb.Document.Links
 		Loop, % Links.Length
 			If (Links[A_Index-1].InnerText = ElId)
 				return A_Index-1
@@ -470,7 +470,7 @@ GetElIndex(elwb, GetBy)
 	Else
 	{
 		El3 := elwb[GetBy]
-		ElId := elwb.SourceIndex
+	,	ElId := elwb.SourceIndex
 		Loop, % elwb["document"]["getElementsBy" GetBy](El3).Length
 		{
 			If (elwb["document"]["getElementsBy" GetBy](El3)[A_Index-1].SourceIndex = ElId)
@@ -572,7 +572,7 @@ Receive_Params(wParam, lParam)
 	global
 	
 	StringAddress := NumGet(lParam + 2*A_PtrSize)
-	CopyOfData := StrGet(StringAddress)
+,	CopyOfData := StrGet(StringAddress)
 	Gui, 1:Default
 	Gui, +OwnDialogs
 	Gui, Submit, NoHide

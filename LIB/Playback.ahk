@@ -214,19 +214,19 @@
 									break 3
 								}
 								o_Loop%PointMarker%[A_Index, "LoopFileName"] := A_LoopFileName
-								o_Loop%PointMarker%[A_Index, "LoopFileExt"] := A_LoopFileExt
-								o_Loop%PointMarker%[A_Index, "LoopFileFullPath"] := A_LoopFileFullPath
-								o_Loop%PointMarker%[A_Index, "LoopFileLongPath"] := A_LoopFileLongPath
-								o_Loop%PointMarker%[A_Index, "LoopFileShortPath"] := A_LoopFileShortPath
-								o_Loop%PointMarker%[A_Index, "LoopFileShortName"] := A_LoopFileShortName
-								o_Loop%PointMarker%[A_Index, "LoopFileDir"] := A_LoopFileDir
-								o_Loop%PointMarker%[A_Index, "LoopFileTimeModified"] := A_LoopFileTimeModified
-								o_Loop%PointMarker%[A_Index, "LoopFileTimeCreated"] := A_LoopFileTimeCreated
-								o_Loop%PointMarker%[A_Index, "LoopFileTimeAccessed"] := A_LoopFileTimeAccessed
-								o_Loop%PointMarker%[A_Index, "LoopFileAttrib"] := A_LoopFileAttrib
-								o_Loop%PointMarker%[A_Index, "LoopFileSize"] := A_LoopFileSize
-								o_Loop%PointMarker%[A_Index, "LoopFileSizeKB"] := A_LoopFileSizeKB
-								o_Loop%PointMarker%[A_Index, "LoopFileSizeMB"] := A_LoopFileSizeMB
+							,	o_Loop%PointMarker%[A_Index, "LoopFileExt"] := A_LoopFileExt
+							,	o_Loop%PointMarker%[A_Index, "LoopFileFullPath"] := A_LoopFileFullPath
+							,	o_Loop%PointMarker%[A_Index, "LoopFileLongPath"] := A_LoopFileLongPath
+							,	o_Loop%PointMarker%[A_Index, "LoopFileShortPath"] := A_LoopFileShortPath
+							,	o_Loop%PointMarker%[A_Index, "LoopFileShortName"] := A_LoopFileShortName
+							,	o_Loop%PointMarker%[A_Index, "LoopFileDir"] := A_LoopFileDir
+							,	o_Loop%PointMarker%[A_Index, "LoopFileTimeModified"] := A_LoopFileTimeModified
+							,	o_Loop%PointMarker%[A_Index, "LoopFileTimeCreated"] := A_LoopFileTimeCreated
+							,	o_Loop%PointMarker%[A_Index, "LoopFileTimeAccessed"] := A_LoopFileTimeAccessed
+							,	o_Loop%PointMarker%[A_Index, "LoopFileAttrib"] := A_LoopFileAttrib
+							,	o_Loop%PointMarker%[A_Index, "LoopFileSize"] := A_LoopFileSize
+							,	o_Loop%PointMarker%[A_Index, "LoopFileSizeKB"] := A_LoopFileSizeKB
+							,	o_Loop%PointMarker%[A_Index, "LoopFileSizeMB"] := A_LoopFileSizeMB
 							}
 							LoopCount%PointMarker% := o_Loop%PointMarker%.MaxIndex()
 						}
@@ -241,10 +241,10 @@
 									break 3
 								}
 								o_Loop%PointMarker%[A_Index, "LoopRegName"] := A_LoopRegName
-								o_Loop%PointMarker%[A_Index, "LoopRegType"] := A_LoopRegType
-								o_Loop%PointMarker%[A_Index, "LoopRegKey"] := A_LoopRegKey
-								o_Loop%PointMarker%[A_Index, "LoopRegSubKey"] := A_LoopRegSubKey
-								o_Loop%PointMarker%[A_Index, "LoopRegTimeModified"] := A_LoopRegTimeModified
+							,	o_Loop%PointMarker%[A_Index, "LoopRegType"] := A_LoopRegType
+							,	o_Loop%PointMarker%[A_Index, "LoopRegKey"] := A_LoopRegKey
+							,	o_Loop%PointMarker%[A_Index, "LoopRegSubKey"] := A_LoopRegSubKey
+							,	o_Loop%PointMarker%[A_Index, "LoopRegTimeModified"] := A_LoopRegTimeModified
 							}
 							LoopCount%PointMarker% := o_Loop%PointMarker%.MaxIndex()
 						}
@@ -272,8 +272,7 @@
 						}
 						If (SkipIt > 0)
 							SkipIt--
-						End%PointMarker% := A_Index
-						aHK_Or := Macro_On
+						End%PointMarker% := A_Index, aHK_Or := Macro_On
 						GoToLab := LoopSection(Start%PointMarker%, End%PointMarker%, LoopCount%PointMarker%, Macro_On
 						, PointMarker, mLoopIndex, o_TimesG[Macro_On])
 						o_Loop%PointMarker% := ""
@@ -284,8 +283,7 @@
 							return
 						}
 						PointMarker--
-						LoopIndex := mLoopIndex
-						Macro_On := aHK_Or, m_ListCount := ListCount%Macro_On%
+						LoopIndex := mLoopIndex, Macro_On := aHK_Or, m_ListCount := ListCount%Macro_On%
 						If (ShowProgBar = 1)
 						{
 							GuiControl, 28:+Range0-%m_ListCount%, OSCProg
@@ -312,7 +310,7 @@
 							If IsFunc("Eval")
 							{
 								Monster := "Eval"
-								VarValue := %Monster%(VarValue)
+							,	VarValue := %Monster%(VarValue)
 							}
 						}
 						AssignVar(VarName, Oper, VarValue)
@@ -448,9 +446,7 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC)
 
 	f_Loop:
 	CoordMode, Mouse, %CoordMouse%
-	lCount := End - Start - 1
-	PointMarker := PointO
-	x_Loop := (lcX = 0) ? 1 : lcX - 1
+	lCount := End - Start - 1, PointMarker := PointO, x_Loop := (lcX = 0) ? 1 : lcX - 1
 	Loop
 	{
 		mLoopIndex := A_Index + 1, LoopIndex := A_Index + 1
@@ -598,19 +594,19 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC)
 									break 2
 								}
 								o_Loop%PointMarker%[A_Index, "LoopFileName"] := A_LoopFileName
-								o_Loop%PointMarker%[A_Index, "LoopFileExt"] := A_LoopFileExt
-								o_Loop%PointMarker%[A_Index, "LoopFileFullPath"] := A_LoopFileFullPath
-								o_Loop%PointMarker%[A_Index, "LoopFileLongPath"] := A_LoopFileLongPath
-								o_Loop%PointMarker%[A_Index, "LoopFileShortPath"] := A_LoopFileShortPath
-								o_Loop%PointMarker%[A_Index, "LoopFileShortName"] := A_LoopFileShortName
-								o_Loop%PointMarker%[A_Index, "LoopFileDir"] := A_LoopFileDir
-								o_Loop%PointMarker%[A_Index, "LoopFileTimeModified"] := A_LoopFileTimeModified
-								o_Loop%PointMarker%[A_Index, "LoopFileTimeCreated"] := A_LoopFileTimeCreated
-								o_Loop%PointMarker%[A_Index, "LoopFileTimeAccessed"] := A_LoopFileTimeAccessed
-								o_Loop%PointMarker%[A_Index, "LoopFileAttrib"] := A_LoopFileAttrib
-								o_Loop%PointMarker%[A_Index, "LoopFileSize"] := A_LoopFileSize
-								o_Loop%PointMarker%[A_Index, "LoopFileSizeKB"] := A_LoopFileSizeKB
-								o_Loop%PointMarker%[A_Index, "LoopFileSizeMB"] := A_LoopFileSizeMB
+							,	o_Loop%PointMarker%[A_Index, "LoopFileExt"] := A_LoopFileExt
+							,	o_Loop%PointMarker%[A_Index, "LoopFileFullPath"] := A_LoopFileFullPath
+							,	o_Loop%PointMarker%[A_Index, "LoopFileLongPath"] := A_LoopFileLongPath
+							,	o_Loop%PointMarker%[A_Index, "LoopFileShortPath"] := A_LoopFileShortPath
+							,	o_Loop%PointMarker%[A_Index, "LoopFileShortName"] := A_LoopFileShortName
+							,	o_Loop%PointMarker%[A_Index, "LoopFileDir"] := A_LoopFileDir
+							,	o_Loop%PointMarker%[A_Index, "LoopFileTimeModified"] := A_LoopFileTimeModified
+							,	o_Loop%PointMarker%[A_Index, "LoopFileTimeCreated"] := A_LoopFileTimeCreated
+							,	o_Loop%PointMarker%[A_Index, "LoopFileTimeAccessed"] := A_LoopFileTimeAccessed
+							,	o_Loop%PointMarker%[A_Index, "LoopFileAttrib"] := A_LoopFileAttrib
+							,	o_Loop%PointMarker%[A_Index, "LoopFileSize"] := A_LoopFileSize
+							,	o_Loop%PointMarker%[A_Index, "LoopFileSizeKB"] := A_LoopFileSizeKB
+							,	o_Loop%PointMarker%[A_Index, "LoopFileSizeMB"] := A_LoopFileSizeMB
 							}
 							LoopCount%PointMarker% := o_Loop%PointMarker%.MaxIndex()
 						}
@@ -625,10 +621,10 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC)
 									break 2
 								}
 								o_Loop%PointMarker%[A_Index, "LoopRegName"] := A_LoopRegName
-								o_Loop%PointMarker%[A_Index, "LoopRegType"] := A_LoopRegType
-								o_Loop%PointMarker%[A_Index, "LoopRegKey"] := A_LoopRegKey
-								o_Loop%PointMarker%[A_Index, "LoopRegSubKey"] := A_LoopRegSubKey
-								o_Loop%PointMarker%[A_Index, "LoopRegTimeModified"] := A_LoopRegTimeModified
+							,	o_Loop%PointMarker%[A_Index, "LoopRegType"] := A_LoopRegType
+							,	o_Loop%PointMarker%[A_Index, "LoopRegKey"] := A_LoopRegKey
+							,	o_Loop%PointMarker%[A_Index, "LoopRegSubKey"] := A_LoopRegSubKey
+							,	o_Loop%PointMarker%[A_Index, "LoopRegTimeModified"] := A_LoopRegTimeModified
 							}
 							LoopCount%PointMarker% := o_Loop%PointMarker%.MaxIndex()
 						}
@@ -657,9 +653,9 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC)
 						If (SkipIt > 0)
 							SkipIt--
 						End%PointMarker% := Start + A_Index
-						GoToLab := LoopSection(Start%PointMarker%, End%PointMarker%, LoopCount%PointMarker%, lcL
+					,	GoToLab := LoopSection(Start%PointMarker%, End%PointMarker%, LoopCount%PointMarker%, lcL
 						, PointMarker, mainL, mainC)
-						o_Loop%PointMarker% := ""
+					,	o_Loop%PointMarker% := ""
 						If (GoToLab)
 							return GoToLab
 						PointMarker--
@@ -685,7 +681,7 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC)
 							If IsFunc("Eval")
 							{
 								Monster := "Eval"
-								VarValue := %Monster%(VarValue)
+							,	VarValue := %Monster%(VarValue)
 							}
 						}
 						AssignVar(VarName, Oper, VarValue)
@@ -978,8 +974,8 @@ IfStatement(ThisError, Point)
 			If RegExMatch(Par1, "A_Loop\w+")
 			{
 				I := DerefVars(LoopIndex), L := SubStr(Par1, 3)
-				This_Par := o_Loop%Point%[I][L]
-				Par1 := "This_Par"
+			,	This_Par := o_Loop%Point%[I][L]
+			,	Par1 := "This_Par"
 			}
 			IfInString, %Par1%, %Par2%
 				ThisError := 0
@@ -993,8 +989,8 @@ IfStatement(ThisError, Point)
 			If RegExMatch(Par1, "A_Loop\w+")
 			{
 				I := DerefVars(LoopIndex), L := SubStr(Par1, 3)
-				This_Par := o_Loop%Point%[I][L]
-				Par1 := "This_Par"
+			,	This_Par := o_Loop%Point%[I][L]
+			,	Par1 := "This_Par"
 			}
 			IfNotInString, %Par1%, %Par2%
 				ThisError := 0
@@ -1147,7 +1143,7 @@ CheckVars(MatchList, Point="")
 		While, RegExMatch(%A_LoopField%, "i)%(A_Loop\w+)%", lMatch)
 		{
 			I := DerefVars(LoopIndex), L := SubStr(lMatch1, 3)
-			%A_LoopField% := RegExReplace(%A_LoopField%, "U)" lMatch, o_Loop%Point%[I][L])
+		,	%A_LoopField% := RegExReplace(%A_LoopField%, "U)" lMatch, o_Loop%Point%[I][L])
 		}
 		If RegExMatch(%A_LoopField%, "sU)%\s([\w%]+)\((.*)\)")  ; Functions
 		{
@@ -1189,8 +1185,8 @@ DerefVars(String)
 	While, RegExMatch(String, "%(\w+)%", rMatch)
 	{
 		FoundVar := RegExReplace(%rMatch1%, "%", "¤")
-		FoundVar := RegExReplace(FoundVar, "\$", "$$$$")
-		String := RegExReplace(String, rMatch, FoundVar)
+	,	FoundVar := RegExReplace(FoundVar, "\$", "$$$$")
+	,	String := RegExReplace(String, rMatch, FoundVar)
 	}
 	return RegExReplace(String, "¤", "%")
 }

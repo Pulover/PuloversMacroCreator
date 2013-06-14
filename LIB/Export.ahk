@@ -11,11 +11,11 @@
 	{
 		LV_GetTexts(A_Index, Action, Step, TimesX, DelayX, Type, Target, Window, Comment)
 		IsChecked := LV_GetNext(A_Index-1, "Checked")
-		Step := CheckForExp(Step)
-		TimesX := CheckForExp(TimesX)
-		DelayX := CheckForExp(DelayX)
-		Target := CheckForExp(Target)
-		Window := CheckForExp(Window)
+	,	Step := CheckForExp(Step)
+	,	TimesX := CheckForExp(TimesX)
+	,	DelayX := CheckForExp(DelayX)
+	,	Target := CheckForExp(Target)
+	,	Window := CheckForExp(Window)
 		If (Type = cType1)
 		{
 			If InStr(Step, "``n")
@@ -201,7 +201,7 @@
 			{
 				GoSub, IfStReplace
 				RowData := "`n" Action " " Step
-				RowData := RTrim(RowData)
+			,	RowData := RTrim(RowData)
 				If (Comment <> "")
 					RowData .= "  " "; " Comment
 				RowData .= "`n{"
@@ -319,7 +319,7 @@
 			StringSplit, Act, Action, :
 			StringSplit, El, Target, :
 			RowData := "`n" IEComExp(Act2, Step, El1, El2, "", Act3, Act1)
-			RowData := CheckComExp(RowData)
+		,	RowData := CheckComExp(RowData)
 			GoSub, Add_CD
 			If !init_ie
 				RowData := "`nIf !IsObject(ie)"
@@ -344,7 +344,7 @@
 			StringSplit, Act, Action, :
 			StringSplit, El, Target, :
 			RowData := "`n" IEComExp(Act2, "", El1, El2, Step, Act3, Act1)
-			RowData := CheckComExp(RowData, Step)
+		,	RowData := CheckComExp(RowData, Step)
 			GoSub, Add_CD
 			If !init_ie
 				RowData := "`nIf !IsObject(ie)"
@@ -417,7 +417,7 @@
 			}
 			StringReplace, Step, Step, ```,, `````,, All
 			RowData := "`n" Type ", " Step
-			RowData := RTrim(RowData, ", ")
+		,	RowData := RTrim(RowData, ", ")
 			GoSub, Add_CD
 			If ((TimesX > 1) || InStr(TimesX, "%"))
 				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
@@ -434,7 +434,7 @@
 			Else If Type contains Close,Kill,Wait
 			{
 				Win := SplitWin(Window)
-				RowData := "`n" Type ", " Win[1] ", " Win[2] ", " Step ", " Win[3] ", " Win[4]
+			,	RowData := "`n" Type ", " Win[1] ", " Win[2] ", " Step ", " Win[3] ", " Win[4]
 			}
 			Else
 				RowData := "`n" Type ", " Window
@@ -587,8 +587,8 @@ CheckExp(String)
 	StringReplace, NewStr, NewStr, ¢, `,, All
 	StringReplace, NewStr, NewStr, ¤, `%, All
 	NewStr := Trim(RegExReplace(NewStr, " """" "), ", ")
-	NewStr := RegExReplace(NewStr, """{4}", """""")
-	NewStr := RegExReplace(NewStr, "U)""(-?\d+)""", "$1")
+,	NewStr := RegExReplace(NewStr, """{4}", """""")
+,	NewStr := RegExReplace(NewStr, "U)""(-?\d+)""", "$1")
 	return NewStr
 }
 
@@ -625,7 +625,7 @@ CheckComExp(String, OutVar="", ByRef ArrString="", Ptr="ie")
 					While, RegExMatch(LoopField, "&_iParent(\d+)", inPar)
 					{
 						iPar := RegExReplace(_iParent%inPar1%, "\$", "$$$$")
-						LoopField := RegExReplace(LoopField, "&_iParent\d+", iPar, "", 1)
+					,	LoopField := RegExReplace(LoopField, "&_iParent\d+", iPar, "", 1)
 					}
 					If RegExMatch(LoopField, "^_Arr\d+")
 					{

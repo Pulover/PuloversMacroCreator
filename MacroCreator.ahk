@@ -74,8 +74,7 @@ DefaultIcon := (A_IsCompiled) ? A_ScriptFullPath
 			:  (FileExist("Resources\PMC3_Mult.ico") ? "Resources\PMC3_Mult.ico" : A_AhkPath)
 Menu, Tray, Icon, %DefaultIcon%, 1, 1
 
-CurrentVersion := "3.7.4"
-ReleaseDate := "June, 2013"
+CurrentVersion := "3.7.4", ReleaseDate := "June, 2013"
 
 ;##### Ini File Read #####
 
@@ -83,7 +82,7 @@ If ((A_IsCompiled) && !InStr(FileExist(A_AppData "\MacroCreator"), "D"))
 	FileCreateDir, %A_AppData%\MacroCreator
 
 IniFilePath := ((A_IsCompiled) ? A_AppData "\MacroCreator" : A_ScriptDir) "\MacroCreator.ini"
-UserVarsPath := ((A_IsCompiled) ? A_AppData "\MacroCreator" : A_ScriptDir) "\UserGlobalVars.ini"
+,	UserVarsPath := ((A_IsCompiled) ? A_AppData "\MacroCreator" : A_ScriptDir) "\UserGlobalVars.ini"
 
 IniRead, Lang, %IniFilePath%, Language, Lang
 IniRead, AutoKey, %IniFilePath%, HotKeys, AutoKey, F3|F4|F5|F6|F7
@@ -266,32 +265,32 @@ CurrentLang := Lang
 #Include LIB\Definitions.ahk
 
 Lang_Ca := "Català`t(Catalan)"
-Lang_Da := "Dansk`t(Danish﻿)"
-Lang_De := "Deutsch`t(German)"
-Lang_En := "English"
-Lang_Es := "Español`t(Spanish)"
-Lang_Fr := "Français`t(French)"
-Lang_Hr := "Hrvatski`t(Croatian)"
-Lang_It := "Italiano`t(Italian)"
-Lang_Hu := "Magyar`t(Hungarian)"
-Lang_Nl := "Nederlands`t(Dutch)"
-Lang_No := "Norsk`t(Norwegian)"
-Lang_Pl := "Polski`t(Polish)"
-Lang_Pt := "Português`t(Portuguese)"
-Lang_Fi := "Suomi`t(Finnish)"
-Lang_Sv := "Svenska`t(Swedish)"
-Lang_Tr := "Türkçe`t(Turkish)"
-Lang_Cs := "Čeština`t(Czech)"
-Lang_El := "ελληνικά`t(Greek)"
-Lang_Bg := "Български`t(Bulgarian)"
-Lang_Ru := "Русский`t(Russian)"
-Lang_Sr := "Српски`t(Serbian)"
-Lang_Uk := "Україньска`t(Ukrainian)"
-Lang_Zh := "中文(简体)`t(Chinese Simplified)"
-Lang_Zt := "中文(繁體)`t(Chinese Traditional)"
-Lang_Ja := "日本語`t(Japanese)"
-Lang_Ko := "한국어`t(Korean)"
-Lang_All :=
+,	Lang_Da := "Dansk`t(Danish﻿)"
+,	Lang_De := "Deutsch`t(German)"
+,	Lang_En := "English"
+,	Lang_Es := "Español`t(Spanish)"
+,	Lang_Fr := "Français`t(French)"
+,	Lang_Hr := "Hrvatski`t(Croatian)"
+,	Lang_It := "Italiano`t(Italian)"
+,	Lang_Hu := "Magyar`t(Hungarian)"
+,	Lang_Nl := "Nederlands`t(Dutch)"
+,	Lang_No := "Norsk`t(Norwegian)"
+,	Lang_Pl := "Polski`t(Polish)"
+,	Lang_Pt := "Português`t(Portuguese)"
+,	Lang_Fi := "Suomi`t(Finnish)"
+,	Lang_Sv := "Svenska`t(Swedish)"
+,	Lang_Tr := "Türkçe`t(Turkish)"
+,	Lang_Cs := "Čeština`t(Czech)"
+,	Lang_El := "ελληνικά`t(Greek)"
+,	Lang_Bg := "Български`t(Bulgarian)"
+,	Lang_Ru := "Русский`t(Russian)"
+,	Lang_Sr := "Српски`t(Serbian)"
+,	Lang_Uk := "Україньска`t(Ukrainian)"
+,	Lang_Zh := "中文(简体)`t(Chinese Simplified)"
+,	Lang_Zt := "中文(繁體)`t(Chinese Traditional)"
+,	Lang_Ja := "日本語`t(Japanese)"
+,	Lang_Ko := "한국어`t(Korean)"
+,	Lang_All :=
 (Join|
 "Català`t(Catalan)=Ca
 Dansk`t(Danish﻿)=Da
@@ -322,16 +321,13 @@ Türkçe`t(Turkish)=Tr
 )
 
 AppName := "Pulover's Macro Creator"
-HeadLine := "; This script was created using Pulover's Macro Creator"
-PmcHead := "/*"
+,	HeadLine := "; This script was created using Pulover's Macro Creator"
+,	PmcHead := "/*"
 . "`nPMC File Version " CurrentVersion
 . "`n---[Do not edit anything in this section]---`n`n"
 
 If (KeepDefKeys = 1)
-{
-	DefAutoKey := AutoKey
-	DefManKey := ManKey
-}
+	DefAutoKey := AutoKey, DefManKey := ManKey
 
 GoSub, ObjCreate
 
@@ -663,7 +659,7 @@ If %0%
 		If !(t_Macro) && (RegExMatch(%A_Index%, "i)^-s(\d+)*$", t_Macro))
 		{
 			AutoPlay := "Macro" t_Macro1
-			HideWin := 1, CloseAfterPlay := 1
+		,	HideWin := 1, CloseAfterPlay := 1
 			break
 		}
 		If !(t_Macro) && (RegExMatch(%A_Index%, "i)^-a(\d+)*$", t_Macro))
@@ -794,8 +790,7 @@ Loop
 			Hold%ScK% := 1
 			sKey .= " Down"
 		}
-		tKey := sKey
-		sKey := "{" sKey "}"
+		tKey := sKey, sKey := "{" sKey "}"
 		Gui, Submit, NoHide
 		If Capt = 0
 			break
@@ -869,7 +864,7 @@ If (Record := !Record)
 	CoordMode, Mouse, %CoordMouse%
 	MouseGetPos, xPos, yPos
 	LastPos := xPos "/" yPos
-	LastTime := A_TickCount
+,	LastTime := A_TickCount
 	SetTimer, MouseRecord, 0
 	If ((WClass = 1) || (WTitle = 1))
 		WindowRecord(A_List, DelayW)
@@ -950,8 +945,7 @@ Loop
 		Hold%ScK% := 1
 		sKey .= " Down"
 	}
-	tKey := sKey
-	sKey := "{" sKey "}"
+	tKey := sKey, sKey := "{" sKey "}"
 	If Record = 0
 		break
 	GoSub, InsertRow
@@ -961,8 +955,7 @@ return
 InsertRow:
 IfWinActive, ahk_id %PMCOSC%
 	return
-Type := cType1
-Target := "", Window := ""
+Type := cType1, Target := "", Window := ""
 If Record = 1
 {
 	If RecKeybdCtrl = 1
@@ -973,8 +966,7 @@ If Record = 1
 		ControlGetFocus, ActiveCtrl, A
 		If (ActiveCtrl <> "")
 		{
-			Type := cType2
-			Target := ActiveCtrl
+			Type := cType2, Target := ActiveCtrl
 			WinGetTitle, c_Title, A
 			WinGetClass, c_Class, A
 			If WTitle = 1
@@ -1033,17 +1025,12 @@ return
 MouseRecord:
 If (Moves = 1) && (MouseMove := MoveCheck())
 {
-	Action := Action2
-	Details := MouseMove ", 0"
-	Type := cType3
-	Target := "", Window := ""
+	Action := Action2, Details := MouseMove ", 0"
+,	Type := cType3, Target := "", Window := ""
 	GoSub, MouseAdd
 }
 If !GetKeyState(RelKey, Toggle)
-{
-	RelHold := 0
-	Relative := ""
-}
+	RelHold := 0, Relative := ""
 If MScroll = 1
 {
 	If (Up > 0 && A_TimeIdle > 50)
@@ -1052,8 +1039,7 @@ If MScroll = 1
 			Details := ClickOn(xPos, yPos, "WheelUp", Up)
 		Else
 			Details := "WheelUp, " Up
-		Action := Action5
-		Type := cType3
+		Action := Action5, Type := cType3
 		GoSub, MouseInput
 		Up := 0
 	}
@@ -1063,8 +1049,7 @@ If MScroll = 1
 			Details := ClickOn(xPos, yPos, "WheelDown", Dn)
 		Else
 			Details := "WheelDown, " Dn
-		Action := Action6
-		Type := cType3
+		Action := Action6, Type := cType3
 		GoSub, MouseInput
 		Dn := 0
 	}
@@ -1085,8 +1070,7 @@ return
 	MouseGetPos, xPd, yPd
 	Button = Left
 	Details := ClickOn(xPd, yPd, Button) ((RecMouseCtrl = 1) ? ", Down" : "Down")
-	Action := Button " " Action3
-	Type := cType3
+,	Action := Button " " Action3, Type := cType3
 	GoSub, MouseInput
 }
 return
@@ -1098,8 +1082,7 @@ return
 	MouseGetPos, xPd, yPd
 	Button = Left
 	Details := ClickOn(xPd, yPd, Button) ((RecMouseCtrl = 1) ? ", Up" : "Up")
-	Action := Button " " Action3
-	Type := cType3
+,	Action := Button " " Action3, Type := cType3
 	GoSub, MouseInput
 }
 return
@@ -1116,8 +1099,7 @@ return
 	MouseGetPos, xPd, yPd
 	Button = Right
 	Details := ClickOn(xPd, yPd, Button) ((RecMouseCtrl = 1) ? ", Down" : "Down")
-	Action := Button " " Action3
-	Type := cType3
+,	Action := Button " " Action3, Type := cType3
 	GoSub, MouseInput
 }
 return
@@ -1129,8 +1111,7 @@ return
 	MouseGetPos, xPd, yPd
 	Button = Right
 	Details := ClickOn(xPd, yPd, Button) ((RecMouseCtrl = 1) ? ", Up" : "Up")
-	Action := Button " " Action3
-	Type := cType3
+,	Action := Button " " Action3, Type := cType3
 	GoSub, MouseInput
 }
 return
@@ -1147,8 +1128,7 @@ return
 	MouseGetPos, xPd, yPd
 	Button = Middle
 	Details := ClickOn(xPd, yPd, Button) ((RecMouseCtrl = 1) ? ", Down" : "Down")
-	Action := Button " " Action3
-	Type := cType3
+,	Action := Button " " Action3, Type := cType3
 	GoSub, MouseInput
 }
 return
@@ -1160,8 +1140,7 @@ return
 	MouseGetPos, xPd, yPd
 	Button = Middle
 	Details := ClickOn(xPd, yPd, Button) ((RecMouseCtrl = 1) ? ", Up" : "Up")
-	Action := Button " " Action3
-	Type := cType3
+,	Action := Button " " Action3, Type := cType3
 	GoSub, MouseInput
 }
 return
@@ -1178,8 +1157,7 @@ return
 	MouseGetPos, xPd, yPd
 	Button = X1
 	Details := ClickOn(xPd, yPd, Button) ((RecMouseCtrl = 1) ? ", Down" : "Down")
-	Action := Button " " Action3
-	Type := cType3
+,	Action := Button " " Action3, Type := cType3
 	GoSub, MouseInput
 }
 return
@@ -1191,8 +1169,7 @@ return
 	MouseGetPos, xPd, yPd
 	Button = X1
 	Details := ClickOn(xPd, yPd, Button) ((RecMouseCtrl = 1) ? ", Up" : "Up")
-	Action := Button " " Action3
-	Type := cType3
+,	Action := Button " " Action3, Type := cType3
 	GoSub, MouseInput
 }
 return
@@ -1209,8 +1186,7 @@ return
 	MouseGetPos, xPd, yPd
 	Button = X2
 	Details := ClickOn(xPd, yPd, Button) ((RecMouseCtrl = 1) ? ", Down" : "Down")
-	Action := Button " " Action3
-	Type := cType3
+,	Action := Button " " Action3, Type := cType3
 	GoSub, MouseInput
 }
 return
@@ -1222,8 +1198,7 @@ return
 	MouseGetPos, xPd, yPd
 	Button = X2
 	Details := ClickOn(xPd, yPd, Button) ((RecMouseCtrl = 1) ? ", Up" : "Up")
-	Action := Button " " Action3
-	Type := cType3
+,	Action := Button " " Action3, Type := cType3
 	GoSub, MouseInput
 }
 return
@@ -1250,7 +1225,7 @@ If ((RecMouseCtrl = 1) && (InStr(m_Class, "#32") <> 1))
 	{
 		ControlGetPos, x, y,,, %control%, A
 		xcpos := Controlpos(xPd, x), ycpos := Controlpos(yPd, y)
-		Details := RegExReplace(Details, "\d+, \d+ ")
+	,	Details := RegExReplace(Details, "\d+, \d+ ")
 		If (xcpos <> "")
 			Details .= " x" xcpos " y" ycpos " NA"
 		Else
@@ -1260,11 +1235,10 @@ If ((RecMouseCtrl = 1) && (InStr(m_Class, "#32") <> 1))
 	Else
 	{
 		Details := RegExReplace(Details, "\d+, \d+ ")
-		Details .= " NA"
-		Target := "x" xPd " y" yPd
+	,	Details .= " NA"
+	,	Target := "x" xPd " y" yPd
 	}
-	Action := Button " " Action1
-	Type := cType4
+	Action := Button " " Action1, Type := cType4
 	WinGetTitle, c_Title, A
 	WinGetClass, c_Class, A
 	If WTitle = 1
@@ -1321,8 +1295,7 @@ TabCount := 1
 Gui, Submit, NoHide
 If (KeepDefKeys = 1)
 {
-	AutoKey := DefAutoKey
-	ManKey := DefManKey
+	AutoKey := DefAutoKey, ManKey := DefManKey
 	GoSub, ObjCreate
 }
 GoSub, LoadData
@@ -1384,8 +1357,7 @@ Loop, Parse, SelectedFileName, `n
 }
 Files := RTrim(Files, "`n")
 PMC.Import(Files)
-CurrentFileName := LoadedFileName
-Files := ""
+CurrentFileName := LoadedFileName, Files := ""
 GoSub, b_Start
 GoSub, FileRead
 GoSub, RecentFiles
@@ -1539,8 +1511,7 @@ If ((ListCount > 0) && (SavePrompt))
 }
 Input
 PMC.Import(RegExReplace(A_ThisMenuItem, "^\d+:\s"))
-CurrentFileName := LoadedFileName
-Files := ""
+CurrentFileName := LoadedFileName, Files := ""
 GoSub, FileRead
 return
 
@@ -1829,8 +1800,7 @@ ExportFile:
 Header := Script_Header()
 If (Ex_UV = 1)
 	Header .= UserVarsList "`n"
-RowNumber := 0, AutoKey := ""
-IncList := "", ProgRatio := 100 / LV_GetCount()
+RowNumber := 0, AutoKey := "", IncList := "", ProgRatio := 100 / LV_GetCount()
 Loop, % LV_GetCount()
 {
 	GuiControl, 14:, ExpProgress, +%ProgRatio%
@@ -1863,8 +1833,8 @@ Loop, % LV_GetCount()
 		IncList .= IncludeFiles(Ex_Macro, ListCount%Ex_Macro%)
 }
 AutoKey := RTrim(AutoKey, "`n")
-AbortKey := (Ex_AbortKey = 1) ? AbortKey : ""
-PauseKey := (Ex_PauseKey = 1) ? PauseKey : ""
+,	AbortKey := (Ex_AbortKey = 1) ? AbortKey : ""
+,	PauseKey := (Ex_PauseKey = 1) ? PauseKey : ""
 If CheckDuplicates(AbortKey, PauseKey, AutoKey)
 {
 	Body := "", AllScripts := "", PmcCode := ""
@@ -1905,8 +1875,7 @@ If (Ex_AbortKey = 1)
 	Body .= "`n" AbortKey "::ExitApp`n"
 If (Ex_PauseKey = 1)
 	Body .= "`n" PauseKey "::Pause`n"
-Script := Header . Body . IncList
-ChoosenFileName := SelectedFileName
+Script := Header . Body . IncList, ChoosenFileName := SelectedFileName
 GoSub, SaveAHK
 return
 
@@ -2169,8 +2138,7 @@ If OnRelease = 1
 	SSMode = OnRelease
 Else If OnEnter = 1
 	SSMode = OnEnter
-VirtualKeys := EditMod
-UserVarsList := RegExReplace(UserVarsList, "U)\s+=\s+", "=")
+VirtualKeys := EditMod, UserVarsList := RegExReplace(UserVarsList, "U)\s+=\s+", "=")
 User_Vars.Set(UserVarsList)
 User_Vars.Read()
 FileDelete, %UserVarsPath%
@@ -2264,8 +2232,7 @@ If KeepDefKeys
 	GoSub, GetHotKeys
 	IniWrite, %AutoKey%, %IniFilePath%, HotKeys, AutoKey
 	IniWrite, %ManKey%, %IniFilePath%, HotKeys, ManKey
-	DefAutoKey := AutoKey
-	DefManKey := ManKey
+	DefAutoKey := AutoKey, DefManKey := ManKey
 }
 GoSub, KeepMenuCheck
 return
@@ -2806,8 +2773,7 @@ If CtrlState = 1
 		}
 		If ((IniX = "") || (IniY = ""))
 			Details .= " NA"
-		Target := DefCt
-		Type := cType4
+		Target := DefCt, Type := cType4
 	}
 	Else
 		Target := "", Window := ""
@@ -2822,11 +2788,7 @@ Else
 			return
 		}
 		Else
-		{
-			Details .= " NA"
-			Target := "x" IniX " y" IniY
-			Type := cType4
-		}
+			Details .= " NA", Target := "x" IniX " y" IniY, Type := cType4
 	}
 	Else
 		Target := "", Window := ""
@@ -2883,51 +2845,36 @@ s_Caller =
 return
 
 f_Click:
-Action := Button " " Action1
-Details := Button
+Action := Button " " Action1, Details := Button
 If MHold = 0
-{
 	Details .= ", " CCount ", "
-}
 If MHold = 1
-{
 	Details .= ", , Down"
-}
 If MHold = -1
-{
 	Details .= ", , Up"
-}
 If MRel = 1
 {
 	If ((IniX <> "") && (IniY <> ""))
 		Details .= " x" IniX " y" IniY " NA"
 }
 If SE = 1
-{
-	Details := "{Click, " Details "}"
-	Type := cType13
-}
+	Details := "{Click, " Details "}", Type := cType13
 Else
 	Type := cType3
 return
 
 f_Point:
-Action := Action2
-Details := IniX ", " IniY ", 0"
+Action := Action2, Details := IniX ", " IniY ", 0"
 If MRel = 1
 	Details := "Rel " Details
 If SE = 1
-{
-	Details := "{Click, " Details "}"
-	Type := cType13
-}
+	Details := "{Click, " Details "}", Type := cType13
 Else
 	Type := cType3
 return
 
 f_PClick:
-Action := Button " " Action3
-Details := IniX ", " IniY " " Button
+Action := Button " " Action3, Details := IniX ", " IniY " " Button
 If MHold = 1
 	Details .= ", Down"
 If MHold = -1
@@ -2937,49 +2884,35 @@ If MRel = 1
 If MHold = 0
 	Details .= ", " CCount
 If SE = 1
-{
-	Details := "{Click, " Details "}"
-	Type := cType13
-}
+	Details := "{Click, " Details "}", Type := cType13
 Else
 	Type := cType3
 return
 
 f_Drag:
-Action := Button " " Action4
-DetailsI := IniX ", " IniY ", " Button " Down"
-DetailsE := EndX ", " EndY ", " Button " Up"
+Action := Button " " Action4, DetailsI := IniX ", " IniY ", " Button " Down"
+,	DetailsE := EndX ", " EndY ", " Button " Up"
 If MRel = 1
-{
-	DetailsI := " Rel " DetailsI
-	DetailsE := " Rel " DetailsE
-}
-Details := "{Click, " DetailsI "}{Click, " DetailsE "}"
-Type := cType13
+	DetailsI := " Rel " DetailsI, DetailsE := " Rel " DetailsE
+Details := "{Click, " DetailsI "}{Click, " DetailsE "}", Type := cType13
 return
 
 f_WUp:
 Action := Action5
-Details = WheelUp
-Details .= ", " CCount
+,	Details := "WheelUp"
+,	Details .= ", " CCount
 If SE = 1
-{
-	Details := "{Click, " Details "}"
-	Type := cType13
-}
+	Details := "{Click, " Details "}", Type := cType13
 Else
 	Type := cType3
 return
 
 f_WDn:
 Action := Action6
-Details = WheelDown
-Details .= ", " CCount
+,	Details := "WheelDown"
+,	Details .= ", " CCount
 If SE = 1
-{
-	Details := "{Click, " Details "}"
-	Type := cType13
-}
+	Details := "{Click, " Details "}", Type := cType13
 Else
 	Type := cType3
 return
@@ -3360,7 +3293,7 @@ If (TabControl = 2)
 {
 	Gui, Submit, NoHide
 	ComExpSc := IEComExp("", "", oel_%Ident%, ElIndex, "", Ident)
-	ComExpSc := SubStr(ComExpSc, 4, StrLen(ComExpSc)-6)
+,	ComExpSc := SubStr(ComExpSc, 4, StrLen(ComExpSc)-6)
 	GuiControl,, ComSc, %ComExpSc%
 }
 ComObjError(true)
@@ -3383,9 +3316,7 @@ If (StopIt)
 	Exit
 GuiControl,, DefCt, %control%
 GuiControl,, Title, ahk_class %class%
-FoundTitle := "ahk_class " class
-Window := "ahk_class " class
-StopIt := 1
+FoundTitle := "ahk_class " class, Window := "ahk_class " class, StopIt := 1
 return
 
 GetWin:
@@ -3541,8 +3472,7 @@ If SS = 1
 		ScreenDir := A_AppData "\MacroCreator\Screenshots"
 	IfNotExist, %ScreenDir%
 		FileCreateDir, %ScreenDir%
-	file := ScreenDir "\Screen_" A_Now ".png"
-	screen := wX "|" wY "|" wW "|" wH
+	file := ScreenDir "\Screen_" A_Now ".png", screen := wX "|" wY "|" wW "|" wH
 	Screenshot(file, screen)
 	GuiControl, 19:, ImgFile, %file%
 	GoSub, MakePrev
@@ -3641,13 +3571,13 @@ Else
 {
 	ControlGetPos, IEFrameX, IEFrameY, IEFrameW, IEFrameH, Internet Explorer_Server1, ahk_class IEFrame
 	Element := o_ie.document.elementFromPoint(xPos-IEFrameX, yPos-IEFrameY)
-	oel_Name := Element.Name, oel_ID := Element.ID
-	oel_TagName := Element.TagName, oel_Value := Element.Value
-	oel_InnerText := (StrLen(Element.InnerText) > 50) ? SubStr(Element.InnerText, 1, 50) "..." : Element.InnerText
-	oel_Type := Element.Type
-	oel_Checked := Element.Checked, oel_SelectedIndex := Element.SelectedIndex
-	oel_SourceIndex := Element.sourceindex, oel_Links := "Links"
-	oel_OffsetLeft := Element.OffsetLeft, oel_OffsetTop := Element.OffsetTop
+,	oel_Name := Element.Name, oel_ID := Element.ID
+,	oel_TagName := Element.TagName, oel_Value := Element.Value
+,	oel_InnerText := (StrLen(Element.InnerText) > 50) ? SubStr(Element.InnerText, 1, 50) "..." : Element.InnerText
+,	oel_Type := Element.Type
+,	oel_Checked := Element.Checked, oel_SelectedIndex := Element.SelectedIndex
+,	oel_SourceIndex := Element.sourceindex, oel_Links := "Links"
+,	oel_OffsetLeft := Element.OffsetLeft, oel_OffsetTop := Element.OffsetTop
 
 	Tooltip  % "Name: " oel_Name
 		. "`nID: " oel_ID
@@ -3693,8 +3623,7 @@ If (Y2 < OriginY)
 Else
   Y1 := OriginY
 ; Draw the rectangle
-W1 := X2 - X1, H1 := Y2 - Y1
-W2 := W1 - LineW, H2 := H1 - LineW
+W1 := X2 - X1, H1 := Y2 - Y1, W2 := W1 - LineW, H2 := H1 - LineW
 WinSet, Region, 0-0 %W1%-0 %W1%-%H1% 0-%H1% 0-0  %LineW%-%LineW% %W2%-%LineW% %W2%-%H2% %LineW%-%H2% %LineW%-%LineW%
 If (FirstCall) {
   Gui, 20:Show, NA x%X1% y%Y1% w%W1% h%H1%
@@ -3935,8 +3864,7 @@ TextOK:
 Gui, +OwnDialogs
 Gui, Submit, NoHide
 StringReplace, TextEdit, TextEdit, `n, ``n, All
-DelayX := InStr(DelayC, "%") ? DelayC : DelayX
-TimesX := InStr(EdRept, "%") ? EdRept : TimesX
+DelayX := InStr(DelayC, "%") ? DelayC : DelayX, TimesX := InStr(EdRept, "%") ? EdRept : TimesX
 If Raw = 1
 	Type := cType8
 Else If ComText = 1
@@ -4226,9 +4154,7 @@ If TabControl = 2
 {
 	StringReplace, MsgPT, MsgPT, `n, ``n, All
 	StringReplace, MsgPT, MsgPT, `,, ```,, All
-	Type := cType6
-	Details := MsgPT
-	DelayX := 0
+	Type := cType6, Details := MsgPT, DelayX := 0
 	If NoI = 1
 		Target := 0
 	If Err = 1
@@ -4248,16 +4174,12 @@ Else If TabControl = 3
 {
 	If (WaitKeys = "")
 		return
-	Type := cType20
-	tKey := WaitKeys
-	Details := tKey, Target := ""
-	DelayX := InStr(TimeoutC, "%") ? TimeoutC : Timeout
+	Type := cType20, tKey := WaitKeys
+,	Details := tKey, Target := ""
+,	DelayX := InStr(TimeoutC, "%") ? TimeoutC : Timeout
 }
 Else If TabControl = 1
-{
-	Type := cType5
-	Details := "", Target := ""
-}
+	Type := cType5, Details := "", Target := ""
 Gui, 1:-Disabled
 Gui, 3:Destroy
 Gui, 1:Default
@@ -4412,7 +4334,7 @@ If (LRead = 1)
 	If (LParamsFile = "")
 		return
 	Details := RTrim(LParamsFile, ", ")
-	TimesX := 1, Type := cType38
+,	TimesX := 1, Type := cType38
 }
 Else If (LParse = 1)
 {
@@ -4426,26 +4348,26 @@ Else If (LParse = 1)
 		return
 	}
 	Details := LParamsFile ", " Delim ", " Omit
-	TimesX := 1, Type := cType39
+,	TimesX := 1, Type := cType39
 }
 Else If (LFilePattern = 1)
 {
 	If (LParamsFile = "")
 		return
 	Details := LParamsFile ", " ((IncFolders = -1) ? 2 : IncFolders) ", " Recurse
-	TimesX := 1, Type := cType40
+,	TimesX := 1, Type := cType40
 }
 Else If (LRegistry = 1)
 {
 	If (Delim = "")
 		return
 	Details := Delim ", " LParamsFile ", " ((IncFolders = -1) ? 2 : IncFolders) ", " Recurse
-	TimesX := 1, Type := cType41
+,	TimesX := 1, Type := cType41
 }
 Else
 {
 	Details := "LoopStart", Type := cType7
-	TimesX := InStr(EdRept, "%") ? EdRept : TimesX
+,	TimesX := InStr(EdRept, "%") ? EdRept : TimesX
 }
 EscCom("Details")
 If (A_ThisLabel <> "LoopApply")
@@ -4502,8 +4424,7 @@ If RegExMatch(GoLabel, "[\s,``]")
 Gui, 1:-Disabled
 Gui, 12:Destroy
 Gui, 1:Default
-RowSelection := LV_GetCount("Selected")
-Type := (Goto = 1) ? "Goto" : "Gosub"
+RowSelection := LV_GetCount("Selected"), Type := (Goto = 1) ? "Goto" : "Gosub"
 If RowSelection = 0
 {
 	LV_Add("Check", ListCount%A_List%+1, "[Goto]", GoLabel, 1, 0, Type)
@@ -4574,8 +4495,7 @@ Gui, Submit, NoHide
 Gui, 1:-Disabled
 Gui, 12:Destroy
 Gui, 1:Default
-Type := LTrim(A_ThisLabel, "Add")
-RowSelection := LV_GetCount("Selected")
+Type := LTrim(A_ThisLabel, "Add"), RowSelection := LV_GetCount("Selected")
 If RowSelection = 0
 {
 	LV_Add("Check", ListCount%A_List%+1, Type, "", 1, 0, Type)
@@ -4662,7 +4582,7 @@ If (s_Caller = "Edit")
 	If (Type = "WinSet")
 	{
 		WCmd := RegExReplace(Details, "(^\w*).*", "$1")
-		Values := RegExReplace(Details, "^\w*, ?(.*)", "$1")
+	,	Values := RegExReplace(Details, "^\w*, ?(.*)", "$1")
 		GuiControl, 11:ChooseString, WCmd, %WCmd%
 		SetTitleMatchMode, 3
 		If (WCmd = "AlwaysOnTop")
@@ -4969,8 +4889,7 @@ If (s_Caller = "Edit")
 		GuiControl, 19:, ImageS, 1
 		Variat := RegExReplace(Det5, "\*(\d+)\s.*", "$1")
 		GuiControl, 19:, Variat, %Variat%
-		Det5 := RegExReplace(Det5, "\*(\d+)\s")
-		File := Det5
+		Det5 := RegExReplace(Det5, "\*(\d+)\s"), File := Det5
 		GoSub, MakePrev
 	}
 	If (Type = cType15)
@@ -5015,16 +4934,10 @@ If TimesX = 0
 	TimesX := 1
 Action := IfFound "`, " IfNotFound
 If ImageS = 1
-{
-	Type := cType16
-	ImgFile := "*" Variat " " ImgFile
-}
+	Type := cType16, ImgFile := "*" Variat " " ImgFile
 Details := iPosX "`, " iPosY "`, " ePosX "`, " ePosY "`, " ImgFile
 If PixelS = 1
-{
-	Type := cType15
-	Details .= ", " Variat ", Fast RGB"
-}
+	Type := cType15, Details .= ", " Variat ", Fast RGB"
 Target := BreakLoop ? "Break" : ""
 EscCom("Details|TimesX|DelayX|CoordPixel")
 If (A_ThisLabel <> "ImageApply")
@@ -5095,8 +5008,7 @@ GuiControlGet, LoadedPic, 9:Pos
 Gui, 9:Destroy
 Width = 260
 Height = 200
-PropH := Floor(LoadedPicH * Width / LoadedPicW)
-PropW := Floor(LoadedPicW * Height / LoadedPicH)
+PropH := Floor(LoadedPicH * Width / LoadedPicW), PropW := Floor(LoadedPicW * Height / LoadedPicH)
 If ((LoadedPicW <= Width) && (LoadedPicH <= Height))
 	GuiControl, 19:, PicPrev, *W0 *H0 %file%
 Else If (PropH > Height)
@@ -5643,14 +5555,10 @@ StringReplace, VarValue, VarValue, `n, ``n, All
 If (s_Caller <> "Edit")
 	TimesX := 1
 If TabControl = 3
-{
-	Action := FuncName
-	Details := VarName " := " VarValueF
-}
+	Action := FuncName, Details := VarName " := " VarValueF
 Else
 {
-	Action := "[Assign Variable]"
-	Details := VarName " " Oper " " VarValue
+	Action := "[Assign Variable]", Details := VarName " " Oper " " VarValue
 	If (UseEval = 1)
 		Target := "Expression"
 	Else
@@ -6255,8 +6163,8 @@ If (s_Caller = "Edit")
 	Else
 	{
 		Meth := RegExReplace(Action, ":.*"), IECmd := RegExReplace(Action, "^.*:(.*):.*", "$1")
-		Ident := RegExReplace(Action, "^.*:"), Act := RegExReplace(Type, ".*_")
-		DefEl := RegExReplace(Target, ":.*"), DefElInd := RegExReplace(Target, "^.*:")
+	,	Ident := RegExReplace(Action, "^.*:"), Act := RegExReplace(Type, ".*_")
+	,	DefEl := RegExReplace(Target, ":.*"), DefElInd := RegExReplace(Target, "^.*:")
 		GuiControl, 24:, %Act%, 1
 		GuiControl, 24:, %Meth%, 1
 		If InStr(IECmdList, IECmd)
@@ -6313,10 +6221,7 @@ If (VState = 0)
 	Value := ""
 GuiControlGet, VState, 24:Enabled, DefEl
 If ((VState = 0) || (DefEl = ""))
-{
-	DefEl := ""
-	Ident := ""
-}
+	DefEl := "", Ident := ""
 If Get
 {
 	If (Value = "")
@@ -6345,8 +6250,7 @@ If (Method = 1)
 	Action := "Method:"
 Else If (Property = 1)
 	Action := "Property:"
-Action .= IECmd ":" Ident
-Target := DefEl ":" DefElInd
+Action .= IECmd ":" Ident, Target := DefEl ":" DefElInd
 If LoadWait
 	Load := "LoadWait"
 Else
@@ -6599,7 +6503,7 @@ Else If (ComCLSID = "Excel.Application")
 	Try
 	{
 		%ComHwnd% := ComObjActive(ComCLSID)
-		Title := %ComHwnd%["ActiveWorkbook"]["Name"]
+	,	Title := %ComHwnd%["ActiveWorkbook"]["Name"]
 	}
 	If IsObject(%ComHwnd%)
 	{
@@ -7139,8 +7043,8 @@ If A_GuiEvent = D
 If A_GuiEvent = RightClick
 {
 	RowNumber = 0
-	RowSelection := LV_GetCount("Selected")
-	RowNumber := LV_GetNext(RowNumber - 1)
+,	RowSelection := LV_GetCount("Selected")
+,	RowNumber := LV_GetNext(RowNumber - 1)
 }
 If A_GuiEvent <> DoubleClick
 	return
@@ -7165,17 +7069,14 @@ return
 DuplicateList:
 s_List := A_List
 GoSub, TabPlus
-d_List := TabCount
-RowSelection := 0
+d_List := TabCount, RowSelection := 0
 GoSub, CopySelection
 HistoryMacro%A_List% := new LV_Rows()
 GoSub, b_Start
 return
 
 CopyList:
-s_List := A_List
-d_List := A_ThisMenuItemPos
-RowSelection := LV_GetCount("Selected")
+s_List := A_List, d_List := A_ThisMenuItemPos, RowSelection := LV_GetCount("Selected")
 GoSub, CopySelection
 return
 
@@ -7271,8 +7172,7 @@ Gui, Submit, NoHide
 TabCount++
 GuiCtrlAddTab(TabSel, "Macro" TabCount)
 Gui, ListView, InputList%TabCount%
-HistoryMacro%TabCount% := new LV_Rows()
-HistoryMacro%TabCount%.Slot[1] := ""
+HistoryMacro%TabCount% := new LV_Rows(), HistoryMacro%TabCount%.Slot[1] := ""
 Gui, ListView, InputList%A_List%
 GuiAddLV(TabCount)
 GuiControl, Choose, A_List, %TabCount%
@@ -7303,8 +7203,8 @@ s_Tab := A_List
 Loop, % TabCount - A_List
 {
 	n_Tab := s_Tab+1
-	LV_Data := PMC.LVGet("InputList" n_Tab)
-	HistoryMacro%s_Tab% := HistoryMacro%n_Tab%
+,	LV_Data := PMC.LVGet("InputList" n_Tab)
+,	HistoryMacro%s_Tab% := HistoryMacro%n_Tab%
 	Gui, ListView, InputList%s_Tab%
 	LV_Delete()
 	PMC.LVLoad("InputList" s_Tab, LV_Data)
@@ -7349,8 +7249,7 @@ GuiControlGet, Win1,, Win1
 o_AutoKey[A_List] := (Win1 = 1) ? "#" HK_AutoKey : HK_AutoKey
 If (o_AutoKey[A_List] = "#")
 	o_AutoKey[A_List] := "LWin"
-o_ManKey[A_List] := ManKey
-o_TimesG[A_List] := TimesO
+o_ManKey[A_List] := ManKey, o_TimesG[A_List] := TimesO
 If WinExist("ahk_id " PrevID)
 	GoSub, PrevRefresh
 return
@@ -7560,11 +7459,9 @@ StringReplace, sInput, sInput, SC145, NumLock
 StringReplace, sInput, sInput, SC154, PrintScreen
 If sInput = 
 	return
-sKey := RegExReplace(sInput, "(.$)", "$l1")
-tKey := sKey
+sKey := RegExReplace(sInput, "(.$)", "$l1"), tKey := sKey
 GoSub, Replace
-sKey := "{" sKey "}"
-RowSelection := LV_GetCount("Selected")
+sKey := "{" sKey "}", RowSelection := LV_GetCount("Selected")
 If RowSelection = 0
 {
 	LV_Add("Check", ListCount%A_List%+1, tKey, sKey, 1, DelayG, cType1)
@@ -7587,8 +7484,7 @@ return
 
 EditButton:
 Gui, Submit, NoHide
-RowSelection := LV_GetCount("Selected")
-RowNumber := LV_GetNext()
+RowSelection := LV_GetCount("Selected"), RowNumber := LV_GetNext()
 If (RowSelection = 1)
 	GoSub, Edit
 Else
@@ -7893,9 +7789,7 @@ If ((Type = cType5) || (Type = cType6))
 	{
 		StringReplace, MsgPT, MsgPT, `n, ``n, All
 		StringReplace, MsgPT, MsgPT, `,, ```,, All
-		Type := cType6
-		Details := MsgPT
-		DelayX := 0
+		Type := cType6, Details := MsgPT, DelayX := 0
 		If NoI = 1
 			Target := 0
 		If Err = 1
@@ -7912,18 +7806,13 @@ If ((Type = cType5) || (Type = cType6))
 			Target += 1
 	}
 	Else
-	{
-		Type := cType5
-		Details := ""
-	}
+		Type := cType5, Details := ""
 }
 If (Type = cType20)
 {
 	If (WaitKeys = "")
 		return
-	tKey := WaitKeys
-	Details := tKey
-	DelayX := InStr(TimeoutC, "%") ? TimeoutC : Timeout
+	tKey := WaitKeys, Details := tKey, DelayX := InStr(TimeoutC, "%") ? TimeoutC : Timeout
 }
 Else If ((Type = cType36) || (Type = cType37))
 	Details := GoLabel, Type := (Goto = 1) ? "Goto" : "Gosub"
@@ -7988,12 +7877,10 @@ MultiApply:
 MultiOK:
 Gui, +OwnDialogs
 Gui, Submit, NoHide
-DelayX := InStr(DelayC, "%") ? DelayC : DelayX
-TimesX := InStr(EdRept, "%") ? EdRept : TimesX
+DelayX := InStr(DelayC, "%") ? DelayC : DelayX, TimesX := InStr(EdRept, "%") ? EdRept : TimesX
 If MEditRept = 1
 {
-	TimesTemp := TimesM
-	TimesM := TimesX
+	TimesTemp := TimesM, TimesM := TimesX
 	Gui, 1:Default
 	GoSub, ApplyTEd
 	TimesM := TimesTemp
@@ -8004,8 +7891,7 @@ If MEditRept = 1
 }
 Else If MEditDelay = 1
 {
-	DelayTemp := DelayG
-	DelayG := DelayX
+	DelayTemp := DelayG, DelayG := DelayX
 	Gui, 1:Default
 	GoSub, ApplyIEd
 	DelayG := DelayTemp
@@ -8022,8 +7908,7 @@ If CSend = 1
 		IfMsgBox, No
 			return
 	}
-	Target := DefCt
-	Window := Title
+	Target := DefCt, Window := Title
 }
 If CSend = 0
 	Target := "", Window := ""
@@ -8334,9 +8219,8 @@ If Find =
 	return
 Gui, 1:Default
 StringReplace, Find, Find, `n, ``n, All
-Details := 3, Repeat := 4, Delay := 5, Control := 7, Window := 8, Comment := 9
+Details := 3, Repeat := 4, Delay := 5, Control := 7, Window := 8, Comment := 9, Replaces := 0
 t_Col := % %SearchCol%
-Replaces := 0
 If RepAllRows = 1
 {
 	Loop, % ListCount%A_List%
@@ -8538,8 +8422,7 @@ Pause,, 1
 return
 
 FastKeyToggle:
-SlowKeyOn := 0
-FastKeyOn := !FastKeyOn
+SlowKeyOn := 0, FastKeyOn := !FastKeyOn
 If ShowStep = 1
 	TrayTip, %AppName%, % (FastKeyOn) ? t_Lang036 " " SpeedUp "x" : t_Lang035 " 1x"
 GuiControl, 28:, OSSlow, 0
@@ -8547,8 +8430,7 @@ GuiControl, 28:, OSFast, %FastKeyOn%
 return
 
 SlowKeyToggle:
-FastKeyOn := 0
-SlowKeyOn := !SlowKeyOn
+FastKeyOn := 0, SlowKeyOn := !SlowKeyOn
 If ShowStep = 1
 	TrayTip, %AppName%, % (SlowKeyOn) ? t_Lang037 " " SpeedDn "x" : t_Lang035 " 1x"
 GuiControl, 28:, OSFast, 0
@@ -9160,7 +9042,7 @@ pb_IECOM_Set:
 	StringSplit, Act, Action, :
 	StringSplit, El, Target, :
 	IeIntStr := IEComExp(Act2, Step, El1, El2, "", Act3, Act1)
-	IeIntStr := SubStr(IeIntStr, 4)
+,	IeIntStr := SubStr(IeIntStr, 4)
 
 	Try
 		o_ie.readyState
@@ -9171,13 +9053,13 @@ pb_IECOM_Set:
 		Else
 		{
 			o_ie := ComObjCreate("InternetExplorer.Application")
-			o_ie.Visible := true
+		,	o_ie.Visible := true
 		}
 	}
 	If !IsObject(o_ie)
 	{
 		o_ie := ComObjCreate("InternetExplorer.Application")
-		o_ie.Visible := true
+	,	o_ie.Visible := true
 	}
 	
 	Try
@@ -9211,7 +9093,7 @@ pb_IECOM_Get:
 	StringSplit, Act, Action, :
 	StringSplit, El, Target, :
 	IeIntStr := IEComExp(Act2, "", El1, El2, Step, Act3, Act1)
-	IeIntStr := SubStr(IeIntStr, InStr(IeIntStr, "ie.") + 3)
+,	IeIntStr := SubStr(IeIntStr, InStr(IeIntStr, "ie.") + 3)
 	
 	Try
 		o_ie.readyState
@@ -9222,13 +9104,13 @@ pb_IECOM_Get:
 		Else
 		{
 			o_ie := ComObjCreate("InternetExplorer.Application")
-			o_ie.Visible := true
+		,	o_ie.Visible := true
 		}
 	}
 	If !IsObject(o_ie)
 	{
 		o_ie := ComObjCreate("InternetExplorer.Application")
-		o_ie.Visible := true
+	,	o_ie.Visible := true
 	}
 	
 	Try
@@ -9324,8 +9206,8 @@ Loop, Parse, Step, `,, %A_Space%
 		If RegExMatch(LoopField, "i)^A_Loop\w+$", lMatch)
 		{
 			I := DerefVars(LoopIndex), L := SubStr(lMatch, 3)
-			This_Par := o_Loop%This_Point%[I][L]
-			Par%A_Index% := "This_Par"
+		,	This_Par := o_Loop%This_Point%[I][L]
+		,	Par%A_Index% := "This_Par"
 		}
 		Else
 			Par%A_Index% := LoopField
@@ -9417,10 +9299,7 @@ Loop % LV_GetCount("Column")
 }
 GoSub, GetHotkeys
 If (KeepDefKeys = 1)
-{
-	AutoKey := DefAutoKey
-	ManKey := DefManKey
-}
+	AutoKey := DefAutoKey, ManKey := DefManKey
 IfWinExist, ahk_id %PMCOSC%
 	GoSub, 28GuiClose
 GoSub, WriteSettings
@@ -9431,103 +9310,100 @@ return
 
 LoadSettings:
 If !KeepDefKeys
-{
-	AutoKey := "F3|F4|F5|F6|F7"
-	ManKey := ""
-}
+	AutoKey := "F3|F4|F5|F6|F7", ManKey := ""
 AbortKey := "F8"
-PauseKey := 0
-RecKey := "F9"
-RecNewKey := "F10"
-RelKey := "CapsLock"
-DelayG := 0
-OnScCtrl := 1
-ShowStep := 1
-HideMainWin := 1
-DontShowPb := 0
-DontShowRec := 0
-DontShowAdm := 0
-IfDirectContext := "None"
-IfDirectWindow := ""
-KeepHkOn := 0
-Mouse := 1
-Moves := 1
-TimedI := 1
-Strokes := 1
-CaptKDn := 0
-MScroll := 1
-WClass := 1
-WTitle := 1
-MDelay := 0
-DelayM := 10
-DelayW := 333
-MaxHistory := 100
-TDelay := 10
-ToggleC := 0
-RecKeybdCtrl := 0
-RecMouseCtrl := 0
-CoordMouse := "Window"
-FastKey := "Insert"
-SlowKey := "Pause"
-ClearNewList := 0
-SpeedUp := 2
-SpeedDn := 2
-MouseReturn := 0
-ShowProgBar := 1
-ShowBarOnStart := 0
-DrawButton := "RButton"
-OnRelease := 1
-OnEnter := 0
-LineW := 2
-ScreenDir := A_AppData "\MacroCreator\Screenshots"
-DefaultMacro := ""
-StdLibFile := ""
-Ex_AbortKey := 0
-Ex_PauseKey := 0
-Ex_SM := 1
-SM := "Input"
-Ex_SI := 1
-SI := "Force"
-Ex_ST := 1
-ST := 2
-Ex_DH := 1
-Ex_AF := 1
-Ex_HK := 0
-Ex_PT := 0
-Ex_NT := 0
-Ex_SC := 1
-SC := 1
-Ex_SW := 1
-SW := 0
-Ex_SK := 1
-SK := -1
-Ex_MD := 1
-MD := -1
-Ex_SB := 1
-SB := -1
-Ex_MT := 0
-MT := 2
-Ex_IN := 1
-Ex_UV := 1
-Ex_Speed := 0
-ComCr := 1
-ComAc := 0
-Send_Loop := 0
-TabIndent := 1
-IncPmc := 0
-Exe_Exp := 0
-WinState := 0
-HKOff := 0
-MultInst := 0
-EvalDefault := 0
-AllowRowDrag := 1
-ShowLoopIfMark := 1
-ShowActIdent := 1
-LoopLVColor := 0xFFFF00
-IfLVColor := 0x0000FF
-OSCPos := "X0 Y0"
-OSTrans := 255
-OSCaption := 0
+,	PauseKey := 0
+,	RecKey := "F9"
+,	RecNewKey := "F10"
+,	RelKey := "CapsLock"
+,	DelayG := 0
+,	OnScCtrl := 1
+,	ShowStep := 1
+,	HideMainWin := 1
+,	DontShowPb := 0
+,	DontShowRec := 0
+,	DontShowAdm := 0
+,	IfDirectContext := "None"
+,	IfDirectWindow := ""
+,	KeepHkOn := 0
+,	Mouse := 1
+,	Moves := 1
+,	TimedI := 1
+,	Strokes := 1
+,	CaptKDn := 0
+,	MScroll := 1
+,	WClass := 1
+,	WTitle := 1
+,	MDelay := 0
+,	DelayM := 10
+,	DelayW := 333
+,	MaxHistory := 100
+,	TDelay := 10
+,	ToggleC := 0
+,	RecKeybdCtrl := 0
+,	RecMouseCtrl := 0
+,	CoordMouse := "Window"
+,	FastKey := "Insert"
+,	SlowKey := "Pause"
+,	ClearNewList := 0
+,	SpeedUp := 2
+,	SpeedDn := 2
+,	MouseReturn := 0
+,	ShowProgBar := 1
+,	ShowBarOnStart := 0
+,	DrawButton := "RButton"
+,	OnRelease := 1
+,	OnEnter := 0
+,	LineW := 2
+,	ScreenDir := A_AppData "\MacroCreator\Screenshots"
+,	DefaultMacro := ""
+,	StdLibFile := ""
+,	Ex_AbortKey := 0
+,	Ex_PauseKey := 0
+,	Ex_SM := 1
+,	SM := "Input"
+,	Ex_SI := 1
+,	SI := "Force"
+,	Ex_ST := 1
+,	ST := 2
+,	Ex_DH := 1
+,	Ex_AF := 1
+,	Ex_HK := 0
+,	Ex_PT := 0
+,	Ex_NT := 0
+,	Ex_SC := 1
+,	SC := 1
+,	Ex_SW := 1
+,	SW := 0
+,	Ex_SK := 1
+,	SK := -1
+,	Ex_MD := 1
+,	MD := -1
+,	Ex_SB := 1
+,	SB := -1
+,	Ex_MT := 0
+,	MT := 2
+,	Ex_IN := 1
+,	Ex_UV := 1
+,	Ex_Speed := 0
+,	ComCr := 1
+,	ComAc := 0
+,	Send_Loop := 0
+,	TabIndent := 1
+,	IncPmc := 0
+,	Exe_Exp := 0
+,	WinState := 0
+,	HKOff := 0
+,	MultInst := 0
+,	EvalDefault := 0
+,	AllowRowDrag := 1
+,	ShowLoopIfMark := 1
+,	ShowActIdent := 1
+,	LoopLVColor := 0xFFFF00
+,	IfLVColor := 0x0000FF
+,	OSCPos := "X0 Y0"
+,	OSTrans := 255
+,	OSCaption := 0
 Gui 28:+LastFoundExist
 IfWinExist
 {
@@ -9577,17 +9453,10 @@ return
 
 DefaultHotkeys:
 If (KeepDefKeys = 1)
-{
-	AutoKey := DefAutoKey
-	ManKey := DefManKey
-}
+	AutoKey := DefAutoKey, ManKey := DefManKey
 Else
-{
-	AutoKey := "F3|F4|F5|F6|F7"
-	ManKey := ""
-}
-o_AutoKey := Object()
-o_ManKey := Object()
+	AutoKey := "F3|F4|F5|F6|F7", ManKey := ""
+o_AutoKey := Object(), o_ManKey := Object()
 GoSub, ObjParse
 GoSub, SetNoJoy
 GoSub, LoadData
@@ -9596,8 +9465,8 @@ return
 
 ObjCreate:
 o_AutoKey := Object()
-o_ManKey := Object()
-o_TimesG := Object()
+,	o_ManKey := Object()
+,	o_TimesG := Object()
 
 ObjParse:
 Loop, Parse, AutoKey, |
@@ -9761,8 +9630,7 @@ GuiControl, 28:, OSHK, %A_List%
 return
 
 b_Enable:
-ListCount%A_List% := LV_GetCount()
-ListCount := 0
+ListCount%A_List% := LV_GetCount(), ListCount := 0
 Loop, %TabCount%
 	ListCount += ListCount%A_Index%
 GuiControl, Enable%ListCount%, StartB
@@ -9813,7 +9681,7 @@ RowCheck:
 Gui, ListView, InputList%A_List%
 GuiControl, -Redraw, InputList%A_List%
 ListCount%A_List% := LV_GetCount()
-IdxLv := "", ActLv := "", IsInIf := 0, IsInLoop := 0, RowColorLoop := 0, RowColorIf := 0
+,	IdxLv := "", ActLv := "", IsInIf := 0, IsInLoop := 0, RowColorLoop := 0, RowColorIf := 0
 Loop, % LV_GetCount()
 {
 	LV_GetText(Action, A_Index, 2)
@@ -9955,9 +9823,7 @@ If (sKey = "VKC1SC730 Up")
 Else If (sKey = "VKC2SC7E0 Up")
 	sKey := ". Up"
 ScK := GetKeySC(RegExReplace(sKey, " Up$"))
-Hold%ScK% := 0
-tKey := sKey
-sKey := "{" sKey "}"
+Hold%ScK% := 0, tKey := sKey, sKey := "{" sKey "}"
 If (Record || ListFocus)
 	GoSub, InsertRow
 HotKey, %A_ThisHotKey%, RecKeyUp, Off
@@ -9969,8 +9835,7 @@ return
 If A_EventInfo = 1
 	return
 
-pGuiWidth := A_GuiWidth
-pGuiHeight := A_GuiHeight
+pGuiWidth := A_GuiWidth, pGuiHeight := A_GuiHeight
 
 GuiControl, Move, LVPrev, % "W" pGuiWidth "H" pGuiHeight-60
 return
@@ -10331,8 +10196,7 @@ Menu, RecOptMenu, DeleteAll
 return
 
 RecOpt:
-ItemVar := RecOptChecks[A_ThisMenuItemPos]
-%ItemVar% := !%ItemVar%
+ItemVar := RecOptChecks[A_ThisMenuItemPos], %ItemVar% := !%ItemVar%
 return
 
 ShowPlayMenu:
@@ -10375,8 +10239,7 @@ MouseReturn := !MouseReturn
 return
 
 SpeedOpt:
-ItemVar := SubStr(A_ThisMenu, 1, 7)
-%ItemVar% := RegExReplace(A_ThisMenuItem, "\D")
+ItemVar := SubStr(A_ThisMenu, 1, 7), %ItemVar% := RegExReplace(A_ThisMenuItem, "\D")
 return
 
 OnFinish:
