@@ -9144,15 +9144,16 @@ pb_COMInterface:
 		StopIt := 1
 		return
 	}
-	
+
 	Loop, Parse, Step, `n, %A_Space%%A_Tab%
 	{
+		StringReplace, LoopField, A_LoopField, ``n, `n, All
 		Try
 		{
 			If !IsObject(%Act1%)
-				%Act1% := COMInterface(A_LoopField, %Act1%, %Act2%, Target)
+				%Act1% := COMInterface(LoopField, %Act1%, %Act2%, Target)
 			Else
-				COMInterface(A_LoopField, %Act1%, %Act2%, Target)
+				COMInterface(LoopField, %Act1%, %Act2%, Target)
 		}
 		Catch e
 		{
@@ -9225,6 +9226,8 @@ Loop, Parse, Step, `,, %A_Space%
 StringReplace, Step, Step, ¢, `,, All
 StringReplace, Step, Step, ⱥ, %A_Space%, All
 StringReplace, Step, Step, ``,, All
+If (Type = cType34)
+	StringReplace, Step, Step, `n, ``n, All
 return
 
 ClearPars:

@@ -732,6 +732,9 @@ PowerPoint.Application
 SAPI.SpVoice
 Schedule.Service
 ScriptControl
+WScript.Shell
+WMPlayer.OCX
+HTMLfile
 XStandard.Zip
 )"
 

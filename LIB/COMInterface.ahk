@@ -18,7 +18,7 @@ COMInterface(String, Ptr="", ByRef OutputVar="", CLSID="InternetExplorer.Applica
 			return False
 		Ptr := ComObjCreate(CLSID)
 	}
-	
+
 	; Look for Assignments (:=) and separate Command from Value.
 	If RegExMatch(String, "[\s]?:=(.*)", Assign)
 	{
@@ -35,7 +35,7 @@ COMInterface(String, Ptr="", ByRef OutputVar="", CLSID="InternetExplorer.Applica
 		String := RegExReplace(String, "U)\[(.*)\]", "&_Block" A_Index, "", 1)
 
 	ComSet := Ptr
-	
+
 	Loop, Parse, String, .&
 	{
 		Pos += StrLen(A_LoopField) + 1
@@ -43,55 +43,59 @@ COMInterface(String, Ptr="", ByRef OutputVar="", CLSID="InternetExplorer.Applica
 		If RegExMatch(A_LoopField, "^_Parent\d+")
 		{
 			Par := A_LoopField, Parent := SubStr(%A_LoopField%, 2, -1)
+		,	Params := Object()
 			
 			; Look for Blocks and divide arguments.
 			While, RegExMatch(Parent, "U)\[(.*)\]", _Arr%A_Index%)
 				Parent := RegExReplace(Parent, "U)\[(.*)\]", "_Arr" A_Index, "", 1)
-			
-			; Look for Parameters inside Parameters.
-			While, RegExMatch(Parent, "\(([^()]++|(?R))*\)", _iParent%A_Index%)
-				Parent := RegExReplace(Parent, "\(([^()]++|(?R))*\)", "&_iParent" A_Index, "", 1)
-			Params := Object()
-			Loop, Parse, Parent, `,, %A_Space%
+			If InStr(CLSID, "Script")
+				Params.Insert(Parent)
+			Else
 			{
-				LoopField := A_LoopField
-				While, RegExMatch(LoopField, "&_iParent(\d+)", inPar)
+				; Look for Parameters inside Parameters.
+				While, RegExMatch(Parent, "\(([^()]++|(?R))*\)", _iParent%A_Index%)
+					Parent := RegExReplace(Parent, "\(([^()]++|(?R))*\)", "&_iParent" A_Index, "", 1)
+				Loop, Parse, Parent, `,, %A_Space%
 				{
-					iPar := RegExReplace(_iParent%inPar1%, "\$", "$$$$")
-				,	LoopField := RegExReplace(LoopField, "&_iParent\d+", iPar, "", 1)
-				}
-				If RegExMatch(LoopField, "^_Arr\d+")
-				{
-					StringSplit, Arr, %LoopField%1, `,, %A_Space%
-					Array := ComObjArray(0xC, Arr0)
-					Loop, %Arr0%
+					LoopField := A_LoopField
+					While, RegExMatch(LoopField, "&_iParent(\d+)", inPar)
 					{
-						Var := Arr%A_Index%
-					,	Array[A_Index-1] := (!Var) ? 0 : Var
+						iPar := RegExReplace(_iParent%inPar1%, "\$", "$$$$")
+					,	LoopField := RegExReplace(LoopField, "&_iParent\d+", iPar, "", 1)
 					}
-					Params.Insert(Array)
-				}
-				Else If RegExMatch(LoopField, "^\w+\.(.*)", NestStr)
-				{
-					If (Loopfield = "")
-						LoopField := ComObjMissing()
-					Var := LoopField
-					Try
-						Params.Insert(COMInterface(NestStr1, ComSet, "", CLSID))
-					Catch
+					If RegExMatch(LoopField, "^_Arr\d+")
 					{
+						StringSplit, Arr, %LoopField%1, `,, %A_Space%
+						Array := ComObjArray(0xC, Arr0)
+						Loop, %Arr0%
+						{
+							Var := Arr%A_Index%
+						,	Array[A_Index-1] := (!Var) ? 0 : Var
+						}
+						Params.Insert(Array)
+					}
+					Else If RegExMatch(LoopField, "^\w+\.(.*)", NestStr)
+					{
+						If (Loopfield = "")
+							LoopField := ComObjMissing()
+						Var := LoopField
 						Try
-							Params.Insert(COMInterface(NestStr1, Ptr, "", CLSID))
+							Params.Insert(COMInterface(NestStr1, ComSet, "", CLSID))
 						Catch
-							Params.Insert((!Var) ? (IsObject(Var) ? Var : 0) : Var)
+						{
+							Try
+								Params.Insert(COMInterface(NestStr1, Ptr, "", CLSID))
+							Catch
+								Params.Insert((!Var) ? (IsObject(Var) ? Var : 0) : Var)
+						}
 					}
-				}
-				Else
-				{
-					If (Loopfield = "")
-						LoopField := ComObjMissing()
-					Var := LoopField
-					Params.Insert((!Var) ? (IsObject(Var) ? Var : 0) : Var)
+					Else
+					{
+						If (Loopfield = "")
+							LoopField := ComObjMissing()
+						Var := LoopField
+						Params.Insert((!Var) ? (IsObject(Var) ? Var : 0) : Var)
+					}
 				}
 			}
 		}
