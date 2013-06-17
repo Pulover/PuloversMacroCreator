@@ -289,6 +289,7 @@
 	c_Lang152 =	Informace
 	c_Lang153 =	Vždy navrchu
 	c_Lang154 =	Minut
+	c_Lang155 =	Spustit Skripty
 		
 ; Other Windows		
 	t_Lang001 =	Export do AHK
@@ -575,7 +576,7 @@
 	RunB_TT =	Spustit / Soubor / String / Misc. (F8)
 	ComLoopB_TT =	Loop (F9) / Goto (Shift+F9) / Label (Ctrl+F9)
 	IfStB_TT =	Pokud výkazy (F10) / proměnné (Shift+F10) / Funkce (Ctrl+F10)
-	IEComB_TT =	Internet Explorer (F11) / COM rozhraní (Shift+F11)
+	IEComB_TT =	Internet Explorer (F11) / COM rozhraní (Shift+F11) / Spustit Skripty (Ctrl+F11)
 	SendMsgB_TT =	Windows Zprávy (F12)
 	AutoKey_TT =	Backspace zrušte
 	ManKey_TT =	Backspace zrušte
@@ -636,6 +637,7 @@
 	RefreshIEW_TT =	Obnovit seznam
 	ActiveObj_TT =	Pokusí připojit k Active objektu COM
 	ExpView_TT =	Pokročilý Editor
+	ExpView2_TT =	Pokročilý Editor
 	OSPlay_TT =	Play / Pause
 	OSStop_TT =	Zastavit
 	OSRec_TT =	Start / Stop Záznam

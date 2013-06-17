@@ -289,6 +289,7 @@
 	c_Lang152 =	Informacije
 	c_Lang153 =	Uvijek na vrhu
 	c_Lang154 =	Minuta
+	c_Lang155 =	Trčanje Scriptlet
 		
 ; Other Windows		
 	t_Lang001 =	Izvoz u AHK
@@ -575,7 +576,7 @@
 	RunB_TT =	Trčanje / File / String / Razno. (F8)
 	ComLoopB_TT =	Petlja (F9) / Goto (Shift+F9) / oznaka (Ctrl+F9)
 	IfStB_TT =	Ako izvještaji (F10) / varijable (Shift+F10) / funkcija (Ctrl+F10)
-	IEComB_TT =	Internet Explorer (F11) / COM sučelja (Shift+F11)
+	IEComB_TT =	Internet Explorer (F11) / COM sučelja (Shift+F11) / Trčanje Scriptlet (Ctrl+F11)
 	SendMsgB_TT =	Windows Poruke (F12)
 	AutoKey_TT =	Povratna izbiti
 	ManKey_TT =	Povratna izbiti
@@ -636,6 +637,7 @@
 	RefreshIEW_TT =	Osvježi popis
 	ActiveObj_TT =	Pokušava se povezati s Active COM objekt
 	ExpView_TT =	Napredni Uređivač
+	ExpView2_TT =	Napredni Uređivač
 	OSPlay_TT =	Reprodukcija / pauza
 	OSStop_TT =	Stop
 	OSRec_TT =	Start / Stop Record

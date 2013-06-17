@@ -289,6 +289,7 @@
 	c_Lang152 =	信息
 	c_Lang153 =	总在最前
 	c_Lang154 =	分钟
+	c_Lang155 =	运行的Scriptlet
 		
 ; Other Windows		
 	t_Lang001 =	导出到华民航空
@@ -636,6 +637,7 @@
 	RefreshIEW_TT =	刷新列表
 	ActiveObj_TT =	尝试连接到Active COM对象
 	ExpView_TT =	高级编辑
+	ExpView2_TT =	高级编辑
 	OSPlay_TT =	播放/暂停
 	OSStop_TT =	停止
 	OSRec_TT =	开始/停止录制

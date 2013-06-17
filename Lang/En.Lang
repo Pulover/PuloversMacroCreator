@@ -289,6 +289,7 @@
 	c_Lang152 =	Info
 	c_Lang153 =	Always on top
 	c_Lang154 =	Minutes
+	c_Lang155 =	Run Scriptlet
 		
 ; Other Windows		
 	t_Lang001 =	Export to AHK
@@ -575,7 +576,7 @@
 	RunB_TT =	Run / File / String / Misc. (F8)
 	ComLoopB_TT =	Loop (F9) / Goto (Shift+F9) / Label (Ctrl+F9)
 	IfStB_TT =	If Statements (F10) / Variables (Shift+F10) / Functions (Ctrl+F10)
-	IEComB_TT =	Internet Explorer (F11) / COM Interface (Shift+F11)
+	IEComB_TT =	Internet Explorer (F11) / COM Interface (Shift+F11) / Run Scriptlet (Ctrl+F11)
 	SendMsgB_TT =	Windows Messages (F12)
 	AutoKey_TT =	Backspace to clear
 	ManKey_TT =	Backspace to clear
@@ -636,6 +637,7 @@
 	RefreshIEW_TT =	Refresh List
 	ActiveObj_TT =	Tries to connect to an Active COM Object
 	ExpView_TT =	Advanced Editor
+	ExpView2_TT =	Advanced Editor
 	OSPlay_TT =	Play / Pause
 	OSStop_TT =	Stop
 	OSRec_TT =	Start / Stop Record

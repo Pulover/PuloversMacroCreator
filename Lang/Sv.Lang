@@ -289,6 +289,7 @@
 	c_Lang152 =	Uppgifter
 	c_Lang153 =	Alltid överst
 	c_Lang154 =	Minuter
+	c_Lang155 =	Kör Skriptlet
 		
 ; Other Windows		
 	t_Lang001 =	Exportera till AHK
@@ -575,7 +576,7 @@
 	RunB_TT =	Kör / Arkiv / String / Misc. (F8)
 	ComLoopB_TT =	Loop (F9) / Gå (Shift+F9) / Etikett (Ctrl+F9)
 	IfStB_TT =	Om rapporter (F10) / variabler (Shift+F10) / Funktioner (Ctrl+F10)
-	IEComB_TT =	Internet Explorer (F11) / COM-gränssnitt (Skift+F11)
+	IEComB_TT =	Internet Explorer (F11) / COM-gränssnitt (Skift+F11) / Kör Skriptlet (Ctrl+F11)
 	SendMsgB_TT =	Windows-meddelanden (F12)
 	AutoKey_TT =	Backsteg för att radera
 	ManKey_TT =	Backsteg för att radera
@@ -636,6 +637,7 @@
 	RefreshIEW_TT =	Uppdatera lista
 	ActiveObj_TT =	Försöker ansluta till en Active COM objekt
 	ExpView_TT =	Avancerad Redigerare
+	ExpView2_TT =	Avancerad Redigerare
 	OSPlay_TT =	Spela upp / pausa
 	OSStop_TT =	Stopp
 	OSRec_TT =	Start / stopp Spela

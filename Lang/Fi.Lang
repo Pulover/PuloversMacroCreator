@@ -289,6 +289,7 @@
 	c_Lang152 =	Tiedot
 	c_Lang153 =	Aina päällimmäisenä
 	c_Lang154 =	Minuuttia
+	c_Lang155 =	Suorita Komentosarjasovelman
 		
 ; Other Windows		
 	t_Lang001 =	Vie AHK
@@ -575,7 +576,7 @@
 	RunB_TT =	Run / File / String / Misc. (F8)
 	ComLoopB_TT =	Loop (F9) / Goto (Shift+F9) / Label (Ctrl+F9)
 	IfStB_TT =	Jos lausunnot (F10) / Muuttujat (Shift+F10) / Funktiot (Ctrl+F10)
-	IEComB_TT =	Internet Explorer (F11) / COM liitäntä (Shift+F11)
+	IEComB_TT =	Internet Explorer (F11) / COM liitäntä (Shift+F11) / Suorita Komentosarjasovelman (Ctrl+F11)
 	SendMsgB_TT =	Windows viestit (F12)
 	AutoKey_TT =	Backspace poistaa
 	ManKey_TT =	Backspace poistaa
@@ -636,6 +637,7 @@
 	RefreshIEW_TT =	Päivitä lista
 	ActiveObj_TT =	Yrittää muodostaa yhteyden Active COM Object
 	ExpView_TT =	Kehittynyt Editori
+	ExpView2_TT =	Kehittynyt Editori
 	OSPlay_TT =	Play / Pause
 	OSStop_TT =	Lopettaa
 	OSRec_TT =	Start / Stop Record

@@ -289,6 +289,7 @@
 	c_Lang152 =	정보
 	c_Lang153 =	항상 상단에
 	c_Lang154 =	분
+	c_Lang155 =	스크립틀릿을 실행
 		
 ; Other Windows		
 	t_Lang001 =	AHK로 내보내기
@@ -575,7 +576,7 @@
 	RunB_TT =	/ 파일 / 문자열 / 기타를 실행합니다. (F8)
 	ComLoopB_TT =	루프 (F9) / 고토 (+ F9를 Shift) / 라벨 (Ctrl 키를+F9)
 	IfStB_TT =	만약 명세서 (F10) / 변수 / 함수 (Ctrl 키를+F10) (+ F10를 Shift)
-	IEComB_TT =	인터넷 익스플로러 (F11) / COM 인터페이스 (+ F11를 Shift)
+	IEComB_TT =	인터넷 익스플로러 (F11) / COM 인터페이스 (+ F11를 Shift) / 스크립틀릿을 실행 (Ctrl+F11)
 	SendMsgB_TT =	윈도우 메시지 (F12)
 	AutoKey_TT =	삭제하는 백 스페이스
 	ManKey_TT =	삭제하는 백 스페이스
@@ -636,6 +637,7 @@
 	RefreshIEW_TT =	새로 고침 목록
 	ActiveObj_TT =	활성 COM 객체에 연결하려고
 	ExpView_TT =	고급 편집기
+	ExpView2_TT =	고급 편집기
 	OSPlay_TT =	재생 / 일시 중지
 	OSStop_TT =	정지
 	OSRec_TT =	기록 시작 / 중지

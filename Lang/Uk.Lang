@@ -289,6 +289,7 @@
 	c_Lang152 =	Інформація
 	c_Lang153 =	Завжди зверху
 	c_Lang154 =	Хвилин
+	c_Lang155 =	Виконати Скріптлете
 		
 ; Other Windows		
 	t_Lang001 =	Експорт до АХК
@@ -575,7 +576,7 @@
 	RunB_TT =	Run / Файл / String / Різне. (F8)
 	ComLoopB_TT =	Loop (F9) / Goto (Shift+F9) / Етикетка (Ctrl+F9)
 	IfStB_TT =	Якщо звітності (F10) / Змінні (Shift+F10) / Функції (Ctrl+F10)
-	IEComB_TT =	Internet Explorer (F11) / COM-інтерфейсу (Shift+F11)
+	IEComB_TT =	Internet Explorer (F11) / COM-інтерфейсу (Shift+F11) / Виконати Скріптлете (Ctrl+F11)
 	SendMsgB_TT =	Windows Messages (F12)
 	AutoKey_TT =	Backspace, щоб очистити
 	ManKey_TT =	Backspace, щоб очистити
@@ -636,6 +637,7 @@
 	RefreshIEW_TT =	Оновити список
 	ActiveObj_TT =	Намагається підключитися до активних об'єктом COM
 	ExpView_TT =	Додаткові Функції
+	ExpView2_TT =	Додаткові Функції
 	OSPlay_TT =	Відтворення / Пауза
 	OSStop_TT =	Стоп
 	OSRec_TT =	Start / Stop Record

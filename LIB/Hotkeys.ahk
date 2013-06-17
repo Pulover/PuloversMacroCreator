@@ -97,6 +97,7 @@ F10::GoSub, IfSt
 ^F10::GoSub, AsFunc
 F11::GoSub, IECom
 +F11::GoSub, ComInt
+^F11::GoSub, RunScrLet
 F12::GoSub, SendMsg
 
 #If WinActive("ahk_id " PrevID) && HKOff = 0

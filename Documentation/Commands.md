@@ -27,5 +27,6 @@
 * [Functions](Commands\Functions.html)
 * [Internet Explorer](Commands\Internet_Explorer.html)
 * [COM Interface](Commands\COM_Interface.html)
+* [Run Scriptlet](Commands\Run_Scriptlet.html)
 * [PostMessage / SendMessage](Commands\PostMessage_and_SendMessage.html)
 * [Special Keys](Commands\Special_Keys.html)

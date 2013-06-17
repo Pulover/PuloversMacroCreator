@@ -289,6 +289,7 @@
 	c_Lang152 =	Информация
 	c_Lang153 =	Винаги отгоре
 	c_Lang154 =	Минути
+	c_Lang155 =	Тичане Scriptlet
 		
 ; Other Windows		
 	t_Lang001 =	Износ за AHK
@@ -575,7 +576,7 @@
 	RunB_TT =	Run / File / String / Misc. (F8)
 	ComLoopB_TT =	Loop (F9) / Гото (Shift+F9) / Label (Ctrl+F9)
 	IfStB_TT =	Ако отчети (F10) / променливи (Shift+F10) / Функции (Ctrl+F10)
-	IEComB_TT =	Internet Explorer (F11) / COM Interface (Shift+F11)
+	IEComB_TT =	Internet Explorer (F11) / COM Interface (Shift+F11) / Тичане Scriptlet (Ctrl+F11)
 	SendMsgB_TT =	Windows Съобщения (F12)
 	AutoKey_TT =	Backspace, за да изчистите
 	ManKey_TT =	Backspace, за да изчистите
@@ -636,6 +637,7 @@
 	RefreshIEW_TT =	Обнови списъка
 	ActiveObj_TT =	Се опитва да се свърже с активния обект COM
 	ExpView_TT =	Разширения Редактор
+	ExpView2_TT =	Разширения Редактор
 	OSPlay_TT =	Play / Pause
 	OSStop_TT =	Спиране
 	OSRec_TT =	Start / Stop Запис

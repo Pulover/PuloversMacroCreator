@@ -289,6 +289,7 @@
 	c_Lang152 =	Információ
 	c_Lang153 =	Mindig a tetején
 	c_Lang154 =	Perc
+	c_Lang155 =	Fuss Scriptlet
 		
 ; Other Windows		
 	t_Lang001 =	Exportálás AHK
@@ -575,7 +576,7 @@
 	RunB_TT =	Run / Fájl / String / Misc. (F8)
 	ComLoopB_TT =	Loop (F9) / Goto (Shift+F9) / Label (Ctrl+F9)
 	IfStB_TT =	Ha a nyilatkozatok (F10) / változók (Shift+F10) / Függvények (Ctrl+F10)
-	IEComB_TT =	Internet Explorer (F11) / COM Interface (Shift+F11)
+	IEComB_TT =	Internet Explorer (F11) / COM Interface (Shift+F11) / Fuss Scriptlet (Ctrl+F11)
 	SendMsgB_TT =	A Windows üzenetek (F12)
 	AutoKey_TT =	Backspace törölni
 	ManKey_TT =	Backspace törölni
@@ -636,6 +637,7 @@
 	RefreshIEW_TT =	Lista frissítése
 	ActiveObj_TT =	Próbál csatlakozni egy Active COM objektum
 	ExpView_TT =	Fejlett Szerkesztő
+	ExpView2_TT =	Fejlett Szerkesztő
 	OSPlay_TT =	Lejátszás / Szünet
 	OSStop_TT =	Megáll
 	OSRec_TT =	Start / Stop Record

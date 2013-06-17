@@ -289,6 +289,7 @@
 	c_Lang152 =	Informations
 	c_Lang153 =	Toujours à la pointe
 	c_Lang154 =	Minutes
+	c_Lang155 =	Exécuter Scriplet
 		
 ; Other Windows		
 	t_Lang001 =	Exporter vers AHK
@@ -575,7 +576,7 @@
 	RunB_TT =	Exécuter / fichier / String / Misc. (F8)
 	ComLoopB_TT =	Loop (F9) / Aller à (Maj+F9) / Label (Ctrl+F9)
 	IfStB_TT =	Si états (F10) / Variables (Maj+F10) / Fonctions (Ctrl+F10)
-	IEComB_TT =	Internet Explorer (F11) / Interface COM (Maj+F11)
+	IEComB_TT =	Internet Explorer (F11) / Interface COM (Maj+F11) / Exécuter Scriplet (Ctrl+F11)
 	SendMsgB_TT =	Messages de Windows (F12)
 	AutoKey_TT =	Retour arrière pour effacer
 	ManKey_TT =	Retour arrière pour effacer
@@ -636,6 +637,7 @@
 	RefreshIEW_TT =	Rafraîchir la liste
 	ActiveObj_TT =	Tente de se connecter à un objet COM active
 	ExpView_TT =	Éditeur Avancé
+	ExpView2_TT =	Éditeur Avancé
 	OSPlay_TT =	Lecture / Pause
 	OSStop_TT =	Arrêter
 	OSRec_TT =	Démarrer / Arrêter l'enregistrement

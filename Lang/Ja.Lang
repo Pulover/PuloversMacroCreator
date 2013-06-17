@@ -289,6 +289,7 @@
 	c_Lang152 =	情報
 	c_Lang153 =	常に手前に表示
 	c_Lang154 =	分
+	c_Lang155 =	スクリプトレットを実行
 		
 ; Other Windows		
 	t_Lang001 =	AHKにエクスポート
@@ -575,7 +576,7 @@
 	RunB_TT =	ファイル/文字列/その他/実行します。 （F8）
 	ComLoopB_TT =	ループ（F9）/後藤（+ F9キーをシフト）/ラベル（Ctrlキーを押しながらF9キー）
 	IfStB_TT =	Ifステートメント（F10）/変数/関数の（Ctrl+F10）（+ F10キー、Shiftキーを押しながら）
-	IEComB_TT =	インターネットエクスプローラ（F11）/ COMインタフェース（Shift+F11）を
+	IEComB_TT =	インターネットエクスプローラ（F11）/ COMインタフェース（Shift+F11）を / スクリプトレットを実行 (Ctrl+F11)
 	SendMsgB_TT =	Windowsメッセージ（F12）
 	AutoKey_TT =	クリアするには、Backspaceキー
 	ManKey_TT =	クリアするには、Backspaceキー
@@ -636,6 +637,7 @@
 	RefreshIEW_TT =	リストのリフレッシュ
 	ActiveObj_TT =	アクティブなCOMオブジェクトへの接続を試行します
 	ExpView_TT =	高度なエディタ
+	ExpView2_TT =	高度なエディタ
 	OSPlay_TT =	再生/一時停止
 	OSStop_TT =	停止
 	OSRec_TT =	録音の開始/停止

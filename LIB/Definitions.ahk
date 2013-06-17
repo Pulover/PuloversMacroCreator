@@ -27,6 +27,7 @@ comres := SysRoot "\System32\comres.dll"
 ,	netcfgx := SysRoot "\System32\netcfgx.dll"
 ,	cscdll := SysRoot "\System32\cscdll.dll"
 ,	mmcndmgr := SysRoot "\System32\mmcndmgr.dll"
+,	WScript := SysRoot "\System32\WScript.exe"
 ,	psr := SysRoot "\System32\psr.exe"
 ,	regedit := SysRoot "\regedit.exe"
 ,	accessibilitycpl := SysRoot "\System32\accessibilitycpl.dll"
@@ -138,7 +139,9 @@ _s := Chr(8239)
 			, 	31: [regedit, 1]		; Reg
 			, 	32: [psr, 3]			; Pause
 			, 	33: [psr, 6]			; Return
-			, 	34: [imageres, 219]}	; ExitApp
+			, 	34: [imageres, 219]		; ExitApp
+			, 	35: [WScript, 3]		; VBScript
+			, 	36: [WScript, 4]}		; JScript
 }
 
 If A_OSVersion = WIN_VISTA
@@ -243,7 +246,9 @@ _s := Chr(8239)
 			, 	31: [regedit, 1]	; Reg
 			, 	32: [shell32, 266]	; Pause
 			, 	33: [SyncCenter, 6]	; Return
-			, 	34: [imageres, 93]}	; ExitApp
+			, 	34: [imageres, 93]	; ExitApp
+			, 	35: [WScript, 3]	; VBScript
+			, 	36: [WScript, 4]}	; JScript
 }
 
 If A_OSVersion in WIN_2003,WIN_XP,WIN_2000
@@ -348,7 +353,9 @@ _s := Chr(4445)
 			, 	31: [regedit, 1]	; Reg
 			, 	32: [shell32, 21]	; Pause
 			, 	33: [shell32, 110]	; Return
-			, 	34: [xpsp2res, 1]}	; ExitApp
+			, 	34: [xpsp2res, 1]	; ExitApp
+			, 	35: [WScript, 3]	; VBScript
+			, 	36: [WScript, 4]}	; JScript
 }
 
 ListCount1 := 0
@@ -396,6 +403,8 @@ ListCount1 := 0
 ,	cType39 := "LoopParse"
 ,	cType40 := "LoopFilePattern"
 ,	cType41 := "LoopRegistry"
+,	cType42 := "VBScript"
+,	cType43 := "JScript"
 
 ,	Action1 := "Click"
 ,	Action2 := "Move"

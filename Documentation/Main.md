@@ -342,4 +342,6 @@ You can load multiple files with multiple parameters.
 
 **Shift+F11**: COM Interface (Advanced)
 
+**Ctrl+F11**: Run Scriptlet
+
 **F12**: Windows Messages

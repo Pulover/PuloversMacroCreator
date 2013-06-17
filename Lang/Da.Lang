@@ -289,6 +289,7 @@
 	c_Lang152 =	Information
 	c_Lang153 =	Altid på toppen
 	c_Lang154 =	Minutter
+	c_Lang155 =	Kør Scriptlet
 		
 ; Other Windows		
 	t_Lang001 =	Eksporter til AHK
@@ -575,7 +576,7 @@
 	RunB_TT =	Run / File / String / Misc. (F8)
 	ComLoopB_TT =	Loop (F9) / Goto (Shift+F9) / Label (Ctrl+F9)
 	IfStB_TT =	Hvis Erklæringer (F10) / variabler (Shift+F10) / Funktioner (Ctrl+F10)
-	IEComB_TT =	Internet Explorer (F11) / COM Interface (Shift+F11)
+	IEComB_TT =	Internet Explorer (F11) / COM Interface (Shift+F11) / Kør Scriptlet (Ctrl+F11)
 	SendMsgB_TT =	Windows Messages (F12)
 	AutoKey_TT =	Backspace for at slette
 	ManKey_TT =	Backspace for at slette
@@ -636,6 +637,7 @@
 	RefreshIEW_TT =	Refresh List
 	ActiveObj_TT =	Forsøger at oprette forbindelse til en Active COM objekt
 	ExpView_TT =	Avanceret Editor
+	ExpView2_TT =	Avanceret Editor
 	OSPlay_TT =	Afspil / Pause
 	OSStop_TT =	Stands
 	OSRec_TT =	Start / Stop Record

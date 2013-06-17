@@ -632,6 +632,23 @@
 */
 
 /*!
+	Function: Run_Scriptlet()
+		Executes a VB or JScript scriptlet using COM ScriptControl. Does not work in 64-bit version.
+
+	Parameters:
+		Script - Script string in selected language format.  
+		VBScript - Sets command to be executed using VBScript Language.
+		JScript - Sets command to be executed using JScript Language.
+
+	Remarks:
+		This command uses the ScriptControl COM Object. Some scripts may not work even if correctly written.  
+	
+	Extra:
+		### Related
+			[COM Object Reference](http://www.autohotkey.com/board/topic/56987-com-object-reference-autohotkey-l/)
+*/
+
+/*!
 	Function: PostMessage_and_SendMessage()
 		Sends a message to a window or control (SendMessage additionally waits for acknowledgement).
 

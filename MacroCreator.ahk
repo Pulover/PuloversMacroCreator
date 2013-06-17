@@ -6095,18 +6095,19 @@ return
 
 EditIECom:
 s_Caller = Edit
+RunScrLet:
 ComInt:
 IECom:
 IEWindows := ListIEWindows()
 Gui, 24:+owner1 -MaximizeBox -MinimizeBox +E0x00000400 +hwndCmdWin
 Gui, 1:+Disabled
 Gui, 24:Font, s7
-Gui, 24:Add, Tab2, W410 H240 vTabControl gTabControl AltSubmit, %c_Lang012%|%c_Lang014%
+Gui, 24:Add, Tab2, W410 H240 vTabControl gTabControl AltSubmit, %c_Lang012%|%c_Lang014%|%c_Lang155%
 Gui, 24:Add, Combobox, W160 vIECmd gIECmd, %IECmdList%
 Gui, 24:Add, Radio, -Wrap Checked W90 vSet gIECmd R1, %c_Lang093%
-Gui, 24:Add, Radio, -Wrap xp+90 W90 vGet gIECmd Disabled R1, %c_Lang094%
+Gui, 24:Add, Radio, -Wrap x+0 W90 vGet gIECmd Disabled R1, %c_Lang094%
 Gui, 24:Add, Radio, -Wrap Group Checked ys+75 xs+10 W90 vMethod gIECmd Disabled R1, %c_Lang095%
-Gui, 24:Add, Radio, -Wrap xp+90 W90 vProperty gIECmd Disabled R1, %c_Lang096%
+Gui, 24:Add, Radio, -Wrap x+0 W90 vProperty gIECmd Disabled R1, %c_Lang096%
 Gui, 24:Add, Text, Section ys+95 xs+12 W250 vValueT, %c_Lang056%:
 Gui, 24:Add, Edit, yp+20 xs W385 -Multi vValue
 Gui, 24:Add, Text, y+10 W55, %c_Lang005%:
@@ -6126,14 +6127,23 @@ Gui, 24:Add, Text, xs W80, %c_Lang100%:
 Gui, 24:Add, Edit, xp+50 W115 vComHwnd, %ComHwnd%
 Gui, 24:Add, Text, x+5 W100, %c_Lang057%:
 Gui, 24:Add, Edit, xp+105 W115 vVarName
-Gui, 24:Add, Button, -Wrap ys+49 xs+365 W25 H25 hwndExpView vExpView gExpView
-	ILButton(ExpView, ExpViewIcon[1] ":" ExpViewIcon[2])
-Gui, 24:Add, Text, Section yp+6 xs W200, %c_Lang101%:
+Gui, 24:Add, Text, Section xs W200, %c_Lang101%:
 Gui, 24:Add, Edit, yp+20 xs W390 R4 vComSc gComSc
+Gui, 24:Add, Button, -Wrap y+2 xs+365 W25 H25 hwndExpView vExpView gExpView
+	ILButton(ExpView, ExpViewIcon[1] ":" ExpViewIcon[2])
 Gui, 24:Add, Button, -Wrap Section Default ym+246 xm W60 H23 gComOK, %c_Lang020%
 Gui, 24:Add, Button, -Wrap ys xs+135 W60 H23 vComApply gComApply Disabled, %c_Lang131%
+; Run Scriptlet
+Gui, 24:Tab, 3
+Gui, 24:Add, Edit, W390 R12 vScLet
+Gui, 24:Add, Radio, -Wrap Checked W150 vRunVB R1, VBScript
+Gui, 24:Add, Radio, -Wrap x+5 W150 vRunJS R1, JScript
+Gui, 24:Add, Button, -Wrap yp-2 xs+375 W25 H25 hwndExpView2 vExpView2 gExpView
+	ILButton(ExpView2, ExpViewIcon[1] ":" ExpViewIcon[2])
+Gui, 24:Add, Button, -Wrap Section Default ym+246 xm W60 H23 gScLetOK, %c_Lang020%
+Gui, 24:Add, Button, -Wrap ys xs+135 W60 H23 vScLetApply gScLetApply Disabled, %c_Lang131%
 Gui, 24:Tab
-Gui, 24:Add, Text, Section ym+172 xm+12, %c_Lang092%:
+Gui, 24:Add, Text, Section ym+172 xm+12 vPgTxt, %c_Lang092%:
 Gui, 24:Add, DDL, W70 vIdent Disabled, Name||ID|TagName|Links
 Gui, 24:Add, Edit, yp xp+70 vDefEl W245 Disabled
 Gui, 24:Add, Edit, yp x+0 vDefElInd W43 Disabled
@@ -6162,6 +6172,13 @@ If (s_Caller = "Edit")
 		If InStr(Details, "`n")
 			GuiControl, 24:Disabled, VarName
 	}
+	Else If ((Type = cType42) || (Type = cType43))
+	{
+		GuiControl, 24:Choose, TabControl, 3
+		GuiControl, 24:, ScLet, %Details%
+		GuiControl, 24:, % (Type = cType42) ? "RunVB" : "RunJS", 1
+		GoSub, TabControl
+	}
 	Else
 	{
 		Meth := RegExReplace(Action, ":.*"), IECmd := RegExReplace(Action, "^.*:(.*):.*", "$1")
@@ -6185,6 +6202,7 @@ If (s_Caller = "Edit")
 		GuiControl, 24:, LoadWait, 0
 	GuiControl, 24:Enable, IEComApply
 	GuiControl, 24:Enable, ComApply
+	GuiControl, 24:Enable, ScLetApply
 }
 Else
 {
@@ -6196,10 +6214,14 @@ Else
 If (A_ThisLabel = "ComInt")
 {
 	GuiControl, 24:Choose, TabControl, 2
-	GuiControl, 24:, LoadWait, 0
+	GoSub, TabControl
+}
+Else If (A_ThisLabel = "RunScrLet")
+{
+	GuiControl, 24:Choose, TabControl, 3
+	GoSub, TabControl
 }
 GuiControl, 24:Choose, IEWindows, %SelIEWin%
-; GoSub, TabControl
 Gui, 24:Show, , %c_Lang012% / %c_Lang013%
 Tooltip
 return
@@ -6356,6 +6378,52 @@ Else
 GoSub, RowCheck
 GoSub, b_Start
 If (A_ThisLabel = "ComApply")
+	Gui, 24:Default
+Else
+{
+	s_Caller = 
+	GuiControl, Focus, InputList%A_List%
+}
+return
+
+ScLetApply:
+ScLetOK:
+Gui, +OwnDialogs
+Gui, Submit, NoHide
+StringReplace, ScLet, ScLet, `n, ``n, All
+If (ScLet = "")
+	return
+If (s_Caller <> "Edit")
+	TimesX := 1
+Action := (RunVB = 1) ? "VB:" : "JS:"
+Type := (RunVB = 1) ? cType42 : cType43
+If (A_ThisLabel <> "ScLetApply")
+{
+	Gui, 1:-Disabled
+	Gui, 24:Destroy
+}
+Gui, 1:Default
+RowSelection := LV_GetCount("Selected")
+If (s_Caller = "Edit")
+	LV_Modify(RowNumber, "Col2", Action, ScLet, TimesX, DelayX, Type, "ScriptControl")
+Else If RowSelection = 0
+{
+	LV_Add("Check", ListCount%A_List%+1, Action, ScLet, TimesX, DelayG, Type, "ScriptControl")
+	LV_Modify(ListCount%A_List%+1, "Vis")
+}
+Else
+{
+	RowNumber = 0
+	Loop, %RowSelection%
+	{
+		RowNumber := LV_GetNext(RowNumber)
+		LV_Insert(RowNumber, "Check", RowNumber, Action, ScLet, TimesX, DelayG, Type, "ScriptControl")
+		RowNumber++
+	}
+}
+GoSub, RowCheck
+GoSub, b_Start
+If (A_ThisLabel = "ScLetApply")
 	Gui, 24:Default
 Else
 {
@@ -6553,6 +6621,24 @@ Else
 	GuiControl, 24:Enable, LoadWait
 	GoSub, IECmd
 }
+If (TabControl = 3)
+{
+	GuiControl, 24:Hide, PgTxt
+	GuiControl, 24:Hide, DefEl
+	GuiControl, 24:Hide, DefElInd
+	GuiControl, 24:Hide, GetEl
+	GuiControl, 24:Hide, Ident
+	GuiControl, 24:Hide, LoadWait
+}
+Else
+{
+	GuiControl, 24:Show, PgTxt
+	GuiControl, 24:Show, DefEl
+	GuiControl, 24:Show, DefElInd
+	GuiControl, 24:Show, GetEl
+	GuiControl, 24:Show, Ident
+	GuiControl, 24:Show, LoadWait
+}
 return
 
 RefreshIEW:
@@ -6562,6 +6648,7 @@ return
 
 ExpView:
 Gui, Submit, NoHide
+Script := (TabControl = 2) ? ComSc : ScLet
 Gui, 30:+owner1 -MaximizeBox -MinimizeBox +E0x00000400 +hwndCmdWin
 Gui, 24:+Disabled
 Gui, 30:Font, s7
@@ -6579,7 +6666,7 @@ Gui, 30:Add, Button, -Wrap W25 H25 ys x+0 hwndPasteT vPasteT gPasteT
 Gui, 30:Add, Button, -Wrap W25 H25 ys x+0 hwndSelAllT vSelAllT gSelAllT
 	ILButton(SelAllT, CommentIcon[1] ":" CommentIcon[2])
 Gui, 30:Font, s9, Courier New
-Gui, 30:Add, Edit, Section xm vTextEdit gTextEdit WantTab W720 R30, %ComSc%
+Gui, 30:Add, Edit, Section xm vTextEdit gTextEdit WantTab W720 R30, %Script%
 Gui, 30:Font
 Gui, 30:Font, s7
 Gui, 30:Add, Button, -Wrap Section Default xm y+15 W60 H23 gExpViewOK, %c_Lang020%
@@ -6600,7 +6687,7 @@ Gui, Submit, NoHide
 Gui, 24:-Disabled
 Gui, 30:Destroy
 Gui, 24:Default
-GuiControl,, ComSc, %TextEdit%
+GuiControl,, % (TabControl = 2) ? "ComSc" : "ScLet", %TextEdit%
 GoSub, ComSc
 return
 
@@ -7517,7 +7604,7 @@ If ((Type = cType11) || (Type = cType14)
 	Goto, EditRun
 If Type in %cType29%,%cType30%
 	return
-If Type in %cType32%,%cType33%,%cType34%
+If Type in %cType32%,%cType33%,%cType34%,%cType42%,%cType43%
 	Goto, EditIECom
 If InStr(Type, "Win")
 	Goto, EditWindow
@@ -9133,6 +9220,12 @@ pb_IECOM_Get:
 			IELoad(o_ie)
 return
 
+pb_VBScript:
+pb_JScript:
+VB := "", JS := ""
+StringReplace, Step, Step, `n, ``n, All
+Step := "Language := " Type "`nExecuteStatement(" Step ")"
+
 pb_COMInterface:
 	StringSplit, Act, Action, :
 
@@ -9191,6 +9284,8 @@ return
 
 SplitStep:
 GoSub, ClearPars
+If (Type = cType34)
+	StringReplace, Step, Step, `n, ø, All
 If (Type = cType39)
 	Step := RegExReplace(Step, "\w+", "%$0%", "", 1)
 EscCom("Step|TimesX|DelayX|Target|Window", 1)
@@ -9227,7 +9322,10 @@ StringReplace, Step, Step, ¢, `,, All
 StringReplace, Step, Step, ⱥ, %A_Space%, All
 StringReplace, Step, Step, ``,, All
 If (Type = cType34)
+{
 	StringReplace, Step, Step, `n, ``n, All
+	StringReplace, Step, Step, ø, `n, All
+}
 return
 
 ClearPars:
@@ -9763,6 +9861,10 @@ Loop, % LV_GetCount()
 		LV_Modify(A_Index, "Icon" 10)
 	Else If Type = %cType34%
 		LV_Modify(A_Index, "Icon" 25)
+	Else If Type = %cType42%
+		LV_Modify(A_Index, "Icon" 35)
+	Else If Type = %cType43%
+		LV_Modify(A_Index, "Icon" 36)
 	Else If Type = %cType35%
 		LV_Modify(A_Index, "Icon" 11)
 	Else If Type in %cType36%,%cType37%

@@ -245,7 +245,14 @@
 				}
 			}
 			If (Action = "[Assign Variable]")
+			{
+				If InStr(VarValue, "``n")
+				{
+					StringReplace, VarValue, VarValue, ``n, `n, All
+					VarValue := "`n(LTrim`n" VarValue "`n)"
+				}
 				Step := VarName " " Oper " " VarValue
+			}
 			Else
 				Step := ((VarName = "_null") ? "" : VarName " " Oper " ") Action "(" ((VarValue = """""") ? "" : VarValue) ")"
 			RowData := "`n" Step
@@ -418,6 +425,23 @@
 			StringReplace, Step, Step, ```,, `````,, All
 			RowData := "`n" Type ", " Step
 		,	RowData := RTrim(RowData, ", ")
+			GoSub, Add_CD
+			If ((TimesX > 1) || InStr(TimesX, "%"))
+				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
+		}
+		Else If ((Type = cType42) || (Type = cType43))
+		{
+			Act := SubStr(Action, 1, 2)
+			If InStr(Step, "``n")
+			{
+				StringReplace, Step, Step, ``n, `n, All
+				Step := "`n(LTrim`n" Step "`n)"
+			}
+			RowData := ""
+		,	RowData .= "`n" Act "Code = " Step
+		,	RowData .= "`n" Act " := ComObjCreate(""ScriptControl"")"
+		,	RowData .= "`n" Act ".Language := """ Type """"
+		,	RowData .= "`n" Act ".ExecuteStatement(" Act "Code)"
 			GoSub, Add_CD
 			If ((TimesX > 1) || InStr(TimesX, "%"))
 				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"

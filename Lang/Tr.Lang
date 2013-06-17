@@ -289,6 +289,7 @@
 	c_Lang152 =	Bilgi
 	c_Lang153 =	Her zaman üstte
 	c_Lang154 =	Dakika
+	c_Lang155 =	Komut Dosyası Çalıştırmak
 		
 ; Other Windows		
 	t_Lang001 =	AHK Aktar
@@ -575,7 +576,7 @@
 	RunB_TT =	/ Dosya / Dizi / Misc çalıştırın. (F8)
 	ComLoopB_TT =	Döngü (F9) / Git (Shift+F9) / Etiket (Ctrl+F9)
 	IfStB_TT =	Eğer Tablolar (F10) / Değişkenler / İşlevler (Ctrl+F10) (+ F10 Shift)
-	IEComB_TT =	Internet Explorer (F11) / COM Arabirimi (Shift+F11)
+	IEComB_TT =	Internet Explorer (F11) / COM Arabirimi (Shift+F11) / Komut Dosyası Çalıştırmak (Ctrl+F11)
 	SendMsgB_TT =	Windows iletileri (F12)
 	AutoKey_TT =	Temizlemek için Backspace
 	ManKey_TT =	Temizlemek için Backspace
@@ -636,6 +637,7 @@
 	RefreshIEW_TT =	Yenile Listesi
 	ActiveObj_TT =	Active COM Nesne bağlanmaya çalışır
 	ExpView_TT =	Gelişmiş Editörü
+	ExpView2_TT =	Gelişmiş Editörü
 	OSPlay_TT =	Play / Pause
 	OSStop_TT =	Dur
 	OSRec_TT =	Kayıt Başlat / Durdur

@@ -45,13 +45,13 @@ COMInterface(String, Ptr="", ByRef OutputVar="", CLSID="InternetExplorer.Applica
 			Par := A_LoopField, Parent := SubStr(%A_LoopField%, 2, -1)
 		,	Params := Object()
 			
-			; Look for Blocks and divide arguments.
-			While, RegExMatch(Parent, "U)\[(.*)\]", _Arr%A_Index%)
-				Parent := RegExReplace(Parent, "U)\[(.*)\]", "_Arr" A_Index, "", 1)
 			If InStr(CLSID, "Script")
 				Params.Insert(Parent)
 			Else
 			{
+				; Look for Blocks and divide arguments.
+				While, RegExMatch(Parent, "U)\[(.*)\]", _Arr%A_Index%)
+					Parent := RegExReplace(Parent, "U)\[(.*)\]", "_Arr" A_Index, "", 1)
 				; Look for Parameters inside Parameters.
 				While, RegExMatch(Parent, "\(([^()]++|(?R))*\)", _iParent%A_Index%)
 					Parent := RegExReplace(Parent, "\(([^()]++|(?R))*\)", "&_iParent" A_Index, "", 1)

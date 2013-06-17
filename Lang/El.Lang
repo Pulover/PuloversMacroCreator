@@ -289,6 +289,7 @@
 	c_Lang152 =	Πληροφορίες
 	c_Lang153 =	Πάντα στην κορυφή
 	c_Lang154 =	Λεπτά
+	c_Lang155 =	Εκτέλεση Scriptlet
 		
 ; Other Windows		
 	t_Lang001 =	Εξαγωγή σε AHK
@@ -575,7 +576,7 @@
 	RunB_TT =	Run / Αρχείο / String / Διάφορα. (F8)
 	ComLoopB_TT =	Loop (F9) / Goto (Shift+F9) / Label (Ctrl+F9)
 	IfStB_TT =	Αν Καταστάσεις (F10) / μεταβλητές (Shift+F10) / Λειτουργίες (Ctrl+F10)
-	IEComB_TT =	Internet Explorer (F11) / COM Interface (Shift+F11)
+	IEComB_TT =	Internet Explorer (F11) / COM Interface (Shift+F11) / Εκτέλεση Scriptlet (Ctrl+F11)
 	SendMsgB_TT =	Τα μηνύματα των Windows (F12)
 	AutoKey_TT =	Backspace για εκκαθάριση
 	ManKey_TT =	Backspace για εκκαθάριση
@@ -636,6 +637,7 @@
 	RefreshIEW_TT =	Ανανέωση λίστας
 	ActiveObj_TT =	Προσπαθεί να συνδεθεί με ένα ενεργό αντικείμενο COM
 	ExpView_TT =	Προηγμένο Επεξεργαστή
+	ExpView2_TT =	Προηγμένο Επεξεργαστή
 	OSPlay_TT =	Αναπαραγωγή / Παύση
 	OSStop_TT =	Stop
 	OSRec_TT =	Start / Stop Record

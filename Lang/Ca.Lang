@@ -289,6 +289,7 @@
 	c_Lang152 =	Informació
 	c_Lang153 =	Sempre visible
 	c_Lang154 =	Minuts
+	c_Lang155 =	Executar Scriptlet
 		
 ; Other Windows		
 	t_Lang001 =	Exporta a AHK
@@ -575,7 +576,7 @@
 	RunB_TT =	Executar / Arxiu / cadena / Misc. (F8)
 	ComLoopB_TT =	Loop (F9) / Ir (Shift+F9) / Label (Ctrl+F9)
 	IfStB_TT =	Si Declaracions (F10) / variables (Shift+F10) / Funcions (Ctrl+F10)
-	IEComB_TT =	Internet Explorer (F11) / COM Interface (Shift+F11)
+	IEComB_TT =	Internet Explorer (F11) / COM Interface (Shift+F11) / Executar Scriptlet (Ctrl+F11)
 	SendMsgB_TT =	Missatges de Windows (F12)
 	AutoKey_TT =	Retrocés per esborrar
 	ManKey_TT =	Retrocés per esborrar
@@ -636,6 +637,7 @@
 	RefreshIEW_TT =	Actualitzar llista
 	ActiveObj_TT =	Intenta connectar-se a un objecte COM actiu
 	ExpView_TT =	Editor Avançat
+	ExpView2_TT =	Editor Avançat
 	OSPlay_TT =	Reproduir / Pausa
 	OSStop_TT =	Aturi
 	OSRec_TT =	Start / Stop Record
