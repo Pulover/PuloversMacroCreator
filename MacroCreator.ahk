@@ -1307,6 +1307,8 @@ Gui, Show, % ((WinExist("ahk_id" PMCWinID)) ? "" : "Hide"), %AppName% v%CurrentV
 GuiControl, Focus, InputList%A_List%
 GoSub, b_Start
 FreeMemory()
+OnFinishCode := 1
+GoSub, SetFinishButtom
 GoSub, RecentFiles
 return
 
@@ -1443,7 +1445,7 @@ Loop, %TabCount%
 		continue
 	PMCSet := "[PMC Code]|" o_AutoKey[A_Index]
 	. "|" o_ManKey[A_Index] "|" o_TimesG[A_Index]
-	. "|" CoordMouse "`n"
+	. "|" CoordMouse "|" OnFinishCode "`n"
 	LV_Data := PMCSet . PMC.LVGet("InputList" A_Index).Text . "`n"
 	FileAppend, %LV_Data%, %CurrentFileName%
 }
@@ -10261,11 +10263,12 @@ Menu, FinishOptMenu, DeleteAll
 return
 
 FinishOpt:
-If (A_ThisMenuItemPos = 1)
+OnFinishCode := A_ThisMenuItemPos
+SetFinishButtom:
+If (OnFinishCode = 1)
 	GuiControl,, OnFinish, 0
 Else
 	GuiControl,, OnFinish, 1
-OnFinishCode := A_ThisMenuItemPos
 Gui, Submit, NoHide
 return
 

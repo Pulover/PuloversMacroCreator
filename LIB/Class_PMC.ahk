@@ -67,12 +67,14 @@
 			,	o_ManKey[TabCount] := (Opt[3] <> "") ? Opt[3] : ""
 			,	o_TimesG[TabCount] := (Opt[4] <> "") ? Opt[4] : 1
 			,	CoordMouse := (Opt[5] <> "") ? Opt[5] : CoordMouse
+			,	OnFinishCode := (Opt[6] <> "") ? Opt[6] : 1
 			,	HistoryMacro%TabCount% := new RowsData()
 				HistoryMacro%TabCount%.Add()
 			}
 		}
 		If (TabCount = 0)
 			GoSub, TabPlus
+		GoSub, SetFinishButtom
 		GuiControl,, CoordTip, CoordMode: %CoordMouse%
 		Gui, -Disabled
 	}
