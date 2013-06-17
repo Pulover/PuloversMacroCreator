@@ -31,18 +31,23 @@
 ; Usage:
 ;
 ;    You can call the function by preceding them with LV_Rows. For example:
-;        LV_Rows.Copy()                   <-- Calls function on active ListView.
+;        LV_Rows.Copy()                     <--   Calls function on active ListView.
 ;
 ;    Or with a handle initialized via New meta-function. For example:
-;        MyListHandle := New LV_Rows()    <-    Creates a new handle.
-;        MyListHandle.Add()               <-    Calls function for that Handle.
+;        MyListHandle := New LV_Rows()      <--   Creates a new handle.
+;        MyListHandle.Add()                 <--   Calls function for that Handle.
 ;
 ;    Like AutoHotkey built-in functions, these functions operate on the default gui,
 ;        and active ListView control.
 ;
-;    Initializing is only required for History functions, but you can also use the
-;        same handle for the Edit functions or use different handles for extra
-;        copy and paste actions keeping independent data in memory.
+;    Initializing is required for History functions or in case your ListView has icons.
+;        You can also use the same handle for the Edit functions or use different
+;        handles for extra copy and paste actions keeping independent data in memory.
+;
+;    In order to keep row's icons you need to initialize the class passing the
+;        ListView's Hwnd. For example:
+;        Gui, Add, ListView, hwndhLV, Columns
+;        MyListHandle := New LV_Rows(hLV)
 ;
 ;    You may keep an individual history of each ListView using different handles.
 ;
@@ -51,7 +56,10 @@
 Class LV_Rows
 {
 ;=======================================================================================
-;    Meta-Functions
+;    Meta-Functions     By creating a new instance of the class via
+;                            Handle := New LV_Rows() you can keep different History and
+;                            Copy / Paste data for individual ListViews.
+;                       Pass the Hwnd of the Listiview to keep row's icons.
 ;
 ;    Properties:
 ;        ActiveSlot:    Contains the current entry position in the ListView History.
@@ -62,8 +70,10 @@ Class LV_Rows
 ;                            to True. The user may consult Handle.HasChanged to show
 ;                            a save dialog and set it to False after saving.
 ;=======================================================================================
-    __New()
+    __New(Hwnd="")
     {
+        If (Hwnd)
+            this.LVHwnd := Hwnd
         this.Slot := [], this.ActiveSlot := 1
     }
 
@@ -96,7 +106,7 @@ Class LV_Rows
             LV_Row := LV_GetNext(LV_Row)
             If !LV_Row
                 break
-            RowData := LV_Rows.RowText(LV_Row)
+            RowData := this.RowText(LV_Row)
         ,   Row := [RowData*]
         ,   this.CopyData.Insert(Row)
         ,   CopiedLines := A_Index
@@ -116,12 +126,12 @@ Class LV_Rows
             LV_Row := LV_GetNext(LV_Row)
             If !LV_Row
                 break
-            RowData := LV_Rows.RowText(LV_Row)
+            RowData := this.RowText(LV_Row)
         ,   Row := [RowData*]
         ,   this.CopyData.Insert(Row)
         ,   CopiedLines := A_Index
         }
-        LV_Rows.Delete()
+        this.Delete()
         return CopiedLines
     }
 ;=======================================================================================
@@ -193,7 +203,7 @@ Class LV_Rows
             }
             For each, Row in Selections
             {
-                RowData := LV_Rows.RowText(Row)
+                RowData := this.RowText(Row)
             ,   LV_Insert(Row-1, RowData*)
             ,   LV_Delete(Row+1)
             ,   LV_Modify(Row-1, "Select")
@@ -215,7 +225,7 @@ Class LV_Rows
             }
             For each, Row in Selections
             {
-                RowData := LV_Rows.RowText(Row+1)
+                RowData := this.RowText(Row+1)
             ,   LV_Insert(Row, RowData*)
             ,   LV_Delete(Row+2)
                 If (A_Index = 1)
@@ -242,15 +252,15 @@ Class LV_Rows
 ;=======================================================================================
     Drag(DragButton="D", AutoScroll=True, ScrollDelay=100, LineThick=2, Color="Black")
     {
-        Static LVIR_LABEL := 0x0002
-        Static LVM_GETITEMCOUNT := 0x1004
-        Static LVM_SCROLL := 0x1014
-        Static LVM_GETTOPINDEX := 0x1027
+        Static LVIR_LABEL          := 0x0002
+        Static LVM_GETITEMCOUNT    := 0x1004
+        Static LVM_SCROLL          := 0x1014
+        Static LVM_GETTOPINDEX     := 0x1027
         Static LVM_GETCOUNTPERPAGE := 0x1028
-        Static LVM_GETSUBITEMRECT := 0x1038
-        Static LV_currColHeight := 0
+        Static LVM_GETSUBITEMRECT  := 0x1038
+        Static LV_currColHeight    := 0
 
-		SysGet, SM_CXVSCROLL, 2
+        SysGet, SM_CXVSCROLL, 2
 
         If InStr(DragButton, "d", True)
             DragButton := "RButton"
@@ -332,7 +342,7 @@ Class LV_Rows
 
         If LV_currRow
         {
-            DragRows := new LV_Rows()
+            DragRows := new LV_Rows(this.LVHwnd)
         ,   Lines := DragRows.Copy()
             DragRows.Paste(LV_currRow)
             If (LV_GetNext() < LV_currRow)
@@ -365,7 +375,7 @@ Class LV_Rows
             this.Slot.Remove(this.ActiveSlot+1, this.Slot.MaxIndex())
         Loop, % LV_GetCount()
         {
-            RowData := LV_Rows.RowText(A_Index)
+            RowData := this.RowText(A_Index)
         ,   Row[A_Index] := [RowData*]
         }
         this.Slot.Insert(Row)
@@ -429,12 +439,34 @@ Class LV_Rows
     {
         Data := []
     ,   ckd := (LV_GetNext(Index-1, "Checked")=Index) ? 1 : 0
-    ,   Data.Insert("Check" ckd)
+    ,   iIcon := this.GetIconIndex(this.LVHwnd, Index)
+    ,   Data.Insert("Icon" iIcon " Check" ckd)
         Loop, % LV_GetCount("Col")
         {
             LV_GetText(Cell, Index, A_Index)
         ,   Data.Insert(Cell)
         }
         return Data
+    }
+;=======================================================================================
+;    Function:           LV_Rows.GetIconIndex()
+;    Description:        Retrieves the row's icon index.
+;    Parameters:
+;        Hwnd:           Hwnd of the ListView.
+;        Row:            1-based Row number.
+;    Return:             The 1-based icon index from specified row.
+;=======================================================================================
+    GetIconIndex(Hwnd, Row)
+    {
+        Static LVIF_IMAGE   := 0x00000002
+        Static LVM_GETITEMA := 0x1005
+        Static LVM_GETITEMW := 0x104B
+        Static LVM_GETITEM  := A_IsUnicode ? LVM_GETITEMW : LVM_GETITEMA
+
+        VarSetCapacity(LVITEM, 6 * 4 + (A_PtrSize * 2), 0)
+    ,   NumPut(LVIF_IMAGE, LVITEM, 0, "UInt") ; mask
+    ,   NumPut(Row-1, LVITEM, 4, "Int") ; iItem
+        SendMessage, LVM_GETITEM, 0, &LVITEM,, ahk_id %Hwnd%
+        return NumGet(LVITEM, 5 * 4 + (A_PtrSize * 2), "Int") + 1 ; iImage
     }
 }
