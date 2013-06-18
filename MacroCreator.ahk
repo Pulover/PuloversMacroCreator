@@ -860,7 +860,7 @@ If (Record := !Record)
 	p_Title := "", p_Class := ""
 	Hotkey, ~*WheelUp, MWUp, On
 	Hotkey, ~*WheelDown, MWDn, On
-	Up := 0, Dn := 0
+	mScUp := 0, mScDn := 0
 	CoordMode, Mouse, %CoordMouse%
 	MouseGetPos, xPos, yPos
 	LastPos := xPos "/" yPos
@@ -1033,7 +1033,7 @@ If !GetKeyState(RelKey, Toggle)
 	RelHold := 0, Relative := ""
 If MScroll = 1
 {
-	If (Up > 0 && A_TimeIdle > 50)
+	If (mScUp > 0 && A_TimeIdle > 50)
 	{
 		If RecMouseCtrl = 1
 			Details := ClickOn(xPos, yPos, "WheelUp", Up)
@@ -1041,9 +1041,9 @@ If MScroll = 1
 			Details := "WheelUp, " Up
 		Action := Action5, Type := cType3
 		GoSub, MouseInput
-		Up := 0
+		mScUp := 0
 	}
-	If (Dn > 0 && A_TimeIdle > 50)
+	If (mScDn > 0 && A_TimeIdle > 50)
 	{
 		If RecMouseCtrl = 1
 			Details := ClickOn(xPos, yPos, "WheelDown", Dn)
@@ -1051,15 +1051,14 @@ If MScroll = 1
 			Details := "WheelDown, " Dn
 		Action := Action6, Type := cType3
 		GoSub, MouseInput
-		Dn := 0
+		mScDn := 0
 	}
 }
 return
 
 #If ((Record = 1) && (Mouse = 1) && !(A_IsPaused))
 *~LButton::
-{
-	Critical
+	; Critical
 	; Send, {Blind}{LButton Down}
 	CoordMode, Mouse, %CoordMouse%
 	MouseGetPos,,, id, control
@@ -1068,27 +1067,23 @@ return
 	&& (id <> PMCWinID) && (id <> PrevID) && (id <> PMCOSC))
 		WinActivate, ahk_id %id%
 	MouseGetPos, xPd, yPd
-	Button = Left
-	Details := ClickOn(xPd, yPd, Button) ((RecMouseCtrl = 1) ? ", Down" : "Down")
+	Button := "Left"
+,	Details := ClickOn(xPd, yPd, Button) ((RecMouseCtrl = 1) ? ", Down" : "Down")
 ,	Action := Button " " Action3, Type := cType3
 	GoSub, MouseInput
-}
 return
 *~LButton Up::
-{
-	Critical
+	; Critical
 	; Send, {Blind}{LButton Up}
 	CoordMode, Mouse, %CoordMouse%
 	MouseGetPos, xPd, yPd
-	Button = Left
-	Details := ClickOn(xPd, yPd, Button) ((RecMouseCtrl = 1) ? ", Up" : "Up")
+	Button := "Left"
+,	Details := ClickOn(xPd, yPd, Button) ((RecMouseCtrl = 1) ? ", Up" : "Up")
 ,	Action := Button " " Action3, Type := cType3
 	GoSub, MouseInput
-}
 return
 *~RButton::
-{
-	Critical
+	; Critical
 	; Send, {Blind}{RButton Down}
 	CoordMode, Mouse, %CoordMouse%
 	MouseGetPos,,, id, control
@@ -1097,27 +1092,23 @@ return
 	&& (id <> PMCWinID) && (id <> PrevID) && (id <> PMCOSC))
 		WinActivate, ahk_id %id%
 	MouseGetPos, xPd, yPd
-	Button = Right
-	Details := ClickOn(xPd, yPd, Button) ((RecMouseCtrl = 1) ? ", Down" : "Down")
+	Button := "Right"
+,	Details := ClickOn(xPd, yPd, Button) ((RecMouseCtrl = 1) ? ", Down" : "Down")
 ,	Action := Button " " Action3, Type := cType3
 	GoSub, MouseInput
-}
 return
 *~RButton Up::
-{
-	Critical
+	; Critical
 	; Send, {Blind}{RButton Up}
 	CoordMode, Mouse, %CoordMouse%
 	MouseGetPos, xPd, yPd
-	Button = Right
-	Details := ClickOn(xPd, yPd, Button) ((RecMouseCtrl = 1) ? ", Up" : "Up")
+	Button := "Right"
+,	Details := ClickOn(xPd, yPd, Button) ((RecMouseCtrl = 1) ? ", Up" : "Up")
 ,	Action := Button " " Action3, Type := cType3
 	GoSub, MouseInput
-}
 return
 *~MButton::
-{
-	Critical
+	; Critical
 	; Send, {Blind}{MButton Down}
 	CoordMode, Mouse, %CoordMouse%
 	MouseGetPos,,, id, control
@@ -1126,27 +1117,23 @@ return
 	&& (id <> PMCWinID) && (id <> PrevID) && (id <> PMCOSC))
 		WinActivate, ahk_id %id%
 	MouseGetPos, xPd, yPd
-	Button = Middle
-	Details := ClickOn(xPd, yPd, Button) ((RecMouseCtrl = 1) ? ", Down" : "Down")
+	Button := "Middle"
+,	Details := ClickOn(xPd, yPd, Button) ((RecMouseCtrl = 1) ? ", Down" : "Down")
 ,	Action := Button " " Action3, Type := cType3
 	GoSub, MouseInput
-}
 return
 *~MButton Up::
-{
-	Critical
+	; Critical
 	; Send, {Blind}{MButton Up}
 	CoordMode, Mouse, %CoordMouse%
 	MouseGetPos, xPd, yPd
-	Button = Middle
-	Details := ClickOn(xPd, yPd, Button) ((RecMouseCtrl = 1) ? ", Up" : "Up")
+	Button := "Middle"
+,	Details := ClickOn(xPd, yPd, Button) ((RecMouseCtrl = 1) ? ", Up" : "Up")
 ,	Action := Button " " Action3, Type := cType3
 	GoSub, MouseInput
-}
 return
 *~XButton1::
-{
-	Critical
+	; Critical
 	; Send, {Blind}{XButton1 Down}
 	CoordMode, Mouse, %CoordMouse%
 	MouseGetPos,,, id, control
@@ -1155,27 +1142,23 @@ return
 	&& (id <> PMCWinID) && (id <> PrevID) && (id <> PMCOSC))
 		WinActivate, ahk_id %id%
 	MouseGetPos, xPd, yPd
-	Button = X1
-	Details := ClickOn(xPd, yPd, Button) ((RecMouseCtrl = 1) ? ", Down" : "Down")
+	Button := "X1"
+,	Details := ClickOn(xPd, yPd, Button) ((RecMouseCtrl = 1) ? ", Down" : "Down")
 ,	Action := Button " " Action3, Type := cType3
 	GoSub, MouseInput
-}
 return
 *~XButton1 Up::
-{
-	Critical
+	; Critical
 	; Send, {Blind}{XButton1 Up}
 	CoordMode, Mouse, %CoordMouse%
 	MouseGetPos, xPd, yPd
-	Button = X1
-	Details := ClickOn(xPd, yPd, Button) ((RecMouseCtrl = 1) ? ", Up" : "Up")
+	Button := "X1"
+,	Details := ClickOn(xPd, yPd, Button) ((RecMouseCtrl = 1) ? ", Up" : "Up")
 ,	Action := Button " " Action3, Type := cType3
 	GoSub, MouseInput
-}
 return
 *~XButton2::
-{
-	Critical
+	; Critical
 	; Send, {Blind}{XButton2 Down}
 	CoordMode, Mouse, %CoordMouse%
 	MouseGetPos,,, id, control
@@ -1184,32 +1167,29 @@ return
 	&& (id <> PMCWinID) && (id <> PrevID) && (id <> PMCOSC))
 		WinActivate, ahk_id %id%
 	MouseGetPos, xPd, yPd
-	Button = X2
-	Details := ClickOn(xPd, yPd, Button) ((RecMouseCtrl = 1) ? ", Down" : "Down")
+	Button := "X2"
+,	Details := ClickOn(xPd, yPd, Button) ((RecMouseCtrl = 1) ? ", Down" : "Down")
 ,	Action := Button " " Action3, Type := cType3
 	GoSub, MouseInput
-}
 return
 *~XButton2 Up::
-{
-	Critical
+	; Critical
 	; Send, {Blind}{XButton2 Up}
 	CoordMode, Mouse, %CoordMouse%
 	MouseGetPos, xPd, yPd
-	Button = X2
-	Details := ClickOn(xPd, yPd, Button) ((RecMouseCtrl = 1) ? ", Up" : "Up")
+	Button := "X2"
+,	Details := ClickOn(xPd, yPd, Button) ((RecMouseCtrl = 1) ? ", Up" : "Up")
 ,	Action := Button " " Action3, Type := cType3
 	GoSub, MouseInput
-}
 return
 #If
 
 MWUp:
-Up++
+mScUp++
 return
 
 MWDn:
-Dn++
+mScDn++
 return
 
 MouseInput:
@@ -1246,7 +1226,7 @@ If ((RecMouseCtrl = 1) && (InStr(m_Class, "#32") <> 1))
 	If WClass = 1
 		Window := Window " ahk_class " c_Class
 	If ((WTitle = 0) && (WClass = 0))
-		Window = A
+		Window := "A"
 }
 MouseAdd:
 Gui, 1:Default
@@ -10175,6 +10155,10 @@ Menu, MenuBar, Add, %m_Lang009%, :HelpMenu
 
 Gui, Menu, MenuBar
 
+Menu, ToolbarMenu, Add, %c_Lang022%, OSCClose
+Menu, ToolbarMenu, Add, %t_Lang104%, ToggleTB
+Menu, ToolbarMenu, Add, %t_Lang105%, ShowHide
+
 Menu, Tray, Add, %w_Lang005%, PlayStart
 Menu, Tray, Add, %w_Lang008%, f_AbortKey
 Menu, Tray, Add, %w_Lang004%, Record
@@ -10193,10 +10177,6 @@ Menu, Tray, Add
 Menu, Tray, Add, %y_Lang001%, ShowHide
 Menu, Tray, Add, %f_Lang011%, Exit
 Menu, Tray, Default, %w_Lang005%
-
-Menu, ToolbarMenu, Add, %c_Lang022%, OSCClose
-Menu, ToolbarMenu, Add, %t_Lang104%, ToggleTB
-Menu, ToolbarMenu, Add, %t_Lang105%, ShowHide
 
 If KeepDefKeys
 	Menu, OptionsMenu, Check, %o_Lang002%
@@ -10405,6 +10385,7 @@ Menu, OptionsMenu, DeleteAll
 Menu, DonationMenu, DeleteAll
 Menu, LangMenu, DeleteAll
 Menu, HelpMenu, DeleteAll
+Menu, ToolbarMenu, DeleteAll
 Menu, Tray, DeleteAll
 GoSub, LoadLang
 GoSub, CreateMenuBar

@@ -2,7 +2,7 @@
 	Library: Pulover's Macro Creator
 		*An Interface-Based Automation Tool & Script Writer.*
 		
-		Version: 3.7.4  
+		Version: 3.7.5  
 		
 		[www.autohotkey.net/~Pulover](http://www.autohotkey.net/~Pulover)  
 		[Forum Thread](http://www.autohotkey.com/board/topic/79763-macro-creator)  

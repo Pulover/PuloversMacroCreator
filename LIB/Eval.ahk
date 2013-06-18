@@ -13,63 +13,6 @@
 ; Output FORMAT: $x,$h: Hex; $b{W}: W-bit binary;
 ;    ${k}: k-digit fixpoint,  ${k}e,${k}g: k-digit scientific (Default $6g)
 
-#SingleInstance Force
-#NoEnv
-SetBatchLines -1
-Process Priority,,High
-
-xe := 2.718281828459045, xpi := 3.141592653589793      ; referenced as "e", "pi"
-xinch := 2.54, xfoot := 30.48, xmile := 1.609344       ; [cm], [cm], [Km]
-xounce := 0.02841, xpint := 0.5682, xgallon := 4.54609 ; liters
-xoz := 28.35, xlb := 453.59237                         ; gramms
-
-/* -test cases
-MsgBox % Eval("1e1")                                               ; 10
-MsgBox % Eval("0x1E")                                              ; 30
-MsgBox % Eval("ToBin(35)")                                         ; 100011
-MsgBox % Eval("$b 35")                                             ; 0100011
-MsgBox % Eval("'10010")                                            ; -14
-MsgBox % Eval("2>3 ? 9 : 7")                                       ; 7
-MsgBox % Eval("$2E 1e3 -50.0e+0 + 100.e-1")                        ; 9.60E+002
-MsgBox % Eval("fact(x) := x < 2 ? 1 : x*fact(x-1); fact(5)")       ; 120
-MsgBox % Eval("f(ab):=sqrt(ab)/ab; y:=f(2); ff(y):=y*(y-1)/2/x; x := 2; y+ff(3)/f(16)") ; 6.70711
-MsgBox % Eval("x := qq:1; x := 5*x; y := x+1")                     ; 6 [if y empty, x := 1...]
-MsgBox % Eval("x:=-!0; x<0 ? 2*x : sqrt(x)")                       ; -2
-MsgBox % Eval("tan(atan(atan(tan(1))))-exp(sqrt(1))")              ; -1.71828
-MsgBox % Eval("---2+++9 + ~-2 --1 -2*-3")                          ; 15
-MsgBox % Eval("x1:=1; f1:=sin(x1)/x1; y:=2; f2:=sin(y)/y; f1/f2")  ; 1.85082
-MsgBox % Eval("Round(fac(10)/fac(5)**2) - (10 choose 5) + Fib(8)") ; 21
-MsgBox % Eval("1 min-1 min-2 min 2")                               ; -2
-MsgBox % Eval("(-1>>1<=9 && 3>2)<<2>>1")                           ; 2
-MsgBox % Eval("(1 = 1) + (2<>3 || 2 < 1) + (9>=-1 && 3>2)")        ; 3
-MsgBox % Eval("$b6 -21/3")                                         ; 111001
-MsgBox % Eval("$b ('1001 << 5) | '01000")                          ; 100101000
-MsgBox % Eval("$0 194*lb/1000")                                    ; 88 [Kg]
-MsgBox % Eval("$x ~0xfffffff0 & 7 | 0x100 << 2")                   ; 0x407
-MsgBox % Eval("- 1 * (+pi -((3%5))) +pi+ 1-2 + e-ROUND(abs(sqrt(floor(2)))**2)-e+pi $9") ; 3.141592654
-MsgBox % Eval("(20+4 GCD abs(2**4)) + (9 GCD (6 CHOOSE 2))")       ; 11
-t := A_TickCount
-Loop 1000
-   r := Eval("x:=" A_Index/1000 ";atan(x)-exp(sqrt(x))")           ; simulated plot
-t := A_TickCount - t
-MsgBox Result = %r%`nTime = %t%                                    ; -1.93288: ~400 ms [on Inspiron 9300]
-*/
-
-^#-::                                  ; Replace selection or `expression with result
-^#=::                                  ; Append result to selection or `expression
-   ClipBoard =
-   SendInput ^c                        ; copy selection
-   ClipWait 0.5
-   If (ErrorLevel) {
-      SendInput +{HOME}^c              ; copy, keep selection to overwrite (^x for some apps)
-      ClipWait 1
-      IfEqual ErrorLevel,1, Return
-      If RegExMatch(ClipBoard, "(.*)(``)(.*)", y)
-         SendInput %  "{RAW}" y1 . (A_ThisHotKey="^#=" ? y3 . " = "  : "") . Eval(y3)
-   } Else
-      SendInput % "{RAW}" . (A_ThisHotKey="^#=" ? ClipBoard . " = "  : "") . Eval(ClipBoard)
-Return
-
 Eval(x) {                              ; non-recursive PRE/POST PROCESSING: I/O forms, numbers, ops, ";"
    Local FORM, FormF, FormI, i, W, y, y1, y2, y3, y4
    FormI := A_FormatInteger, FormF := A_FormatFloat
