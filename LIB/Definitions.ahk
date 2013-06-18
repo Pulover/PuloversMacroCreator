@@ -441,7 +441,7 @@ ListCount1 := 0
 			,	21: ["Commands/If_Statements.html", "Commands/Assign_Variable.html", "Commands/Functions.html"]
 			,	22: ["Commands/PostMessage_and_SendMessage.html"]
 			,	23: ["Commands/Control.html"]
-			,	24: ["Commands/Internet_Explorer.html", "Commands/COM_Interface.html"]
+			,	24: ["Commands/Internet_Explorer.html", "Commands/COM_Interface.html", "Commands/Run_Scriptlet.html"]
 			,	30: ["Commands/COM_Interface.html"] }
 
 ,	RecOptChecks := ["ClearNewList", "Strokes", "CaptKDn", "Mouse", "MScroll"

@@ -290,6 +290,9 @@
 	c_Lang153 =	總在最前
 	c_Lang154 =	分鐘
 	c_Lang155 =	運行的Scriptlet
+	c_Lang156 =	腳本
+	c_Lang157 =	腳本語言
+	c_Lang158 =	不兼容64位！
 		
 ; Other Windows		
 	t_Lang001 =	導出到華民航空

@@ -6,7 +6,7 @@
 ; rodolfoub@gmail.com
 ; Home: http://www.autohotkey.net/~Pulover
 ; Forum: http://www.autohotkey.com/board/topic/79763-macro-creator
-; Version: 3.7.4
+; Version: 3.7.5
 ; Release Date: June, 2013
 ; AutoHotkey Version: 1.1.10.01
 ; Copyright © 2012-2013 Rodolfo U. Batista
@@ -74,7 +74,7 @@ DefaultIcon := (A_IsCompiled) ? A_ScriptFullPath
 			:  (FileExist("Resources\PMC3_Mult.ico") ? "Resources\PMC3_Mult.ico" : A_AhkPath)
 Menu, Tray, Icon, %DefaultIcon%, 1, 1
 
-CurrentVersion := "3.7.4", ReleaseDate := "June, 2013"
+CurrentVersion := "3.7.5", ReleaseDate := "June, 2013"
 
 ;##### Ini File Read #####
 
@@ -6135,13 +6135,17 @@ Gui, 24:Add, Button, -Wrap Section Default ym+246 xm W60 H23 gComOK, %c_Lang020%
 Gui, 24:Add, Button, -Wrap ys xs+135 W60 H23 vComApply gComApply Disabled, %c_Lang131%
 ; Run Scriptlet
 Gui, 24:Tab, 3
-Gui, 24:Add, Edit, W390 R12 vScLet
-Gui, 24:Add, Radio, -Wrap Checked W150 vRunVB R1, VBScript
-Gui, 24:Add, Radio, -Wrap x+5 W150 vRunJS R1, JScript
+Gui, 24:Add, Text, W100, %c_Lang156%:
+Gui, 24:Add, Edit, W390 R10 vScLet
+Gui, 24:Add, Text, W100, %c_Lang157%:
+Gui, 24:Add, Radio, -Wrap Checked yp x+5 W100 vRunVB R1, VBScript
+Gui, 24:Add, Radio, -Wrap x+5 W100 vRunJS R1, JScript
 Gui, 24:Add, Button, -Wrap yp-2 xs+375 W25 H25 hwndExpView2 vExpView2 gExpView
 	ILButton(ExpView2, ExpViewIcon[1] ":" ExpViewIcon[2])
 Gui, 24:Add, Button, -Wrap Section Default ym+246 xm W60 H23 gScLetOK, %c_Lang020%
 Gui, 24:Add, Button, -Wrap ys xs+135 W60 H23 vScLetApply gScLetApply Disabled, %c_Lang131%
+If (A_PtrSize = 8)
+	Gui, 24:Add, Text, ys+5 xs+200 W210 cRed, %c_Lang158%
 Gui, 24:Tab
 Gui, 24:Add, Text, Section ym+172 xm+12 vPgTxt, %c_Lang092%:
 Gui, 24:Add, DDL, W70 vIdent Disabled, Name||ID|TagName|Links
@@ -10445,6 +10449,13 @@ Else
 	GoSub, LoadLang_En
 }
 return
+
+; Compiler Settings
+;@Ahk2Exe-SetName Pulover's Macro Creator
+;@Ahk2Exe-SetDescription Pulover's Macro Creator
+;@Ahk2Exe-SetVersion 3.7.5
+;@Ahk2Exe-SetCopyright Copyright © 2012-2013 Rodolfo U. Batista
+;@Ahk2Exe-SetOrigFilename MacroCreator.exe
 
 #Include <Hotkeys>
 #Include <Internal>

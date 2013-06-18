@@ -290,6 +290,9 @@
 	c_Lang153 =	Винаги отгоре
 	c_Lang154 =	Минути
 	c_Lang155 =	Тичане Scriptlet
+	c_Lang156 =	Сценарий
+	c_Lang157 =	Script Language
+	c_Lang158 =	Не е съвместим с 64-битов!
 		
 ; Other Windows		
 	t_Lang001 =	Износ за AHK

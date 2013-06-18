@@ -290,6 +290,9 @@
 	c_Lang153 =	Sempre in primo piano
 	c_Lang154 =	Minuti
 	c_Lang155 =	Esegui Scriptlet
+	c_Lang156 =	Script
+	c_Lang157 =	Linguaggio Di Script
+	c_Lang158 =	Non compatibile con 64 bit!
 		
 ; Other Windows		
 	t_Lang001 =	Esporta in AHK

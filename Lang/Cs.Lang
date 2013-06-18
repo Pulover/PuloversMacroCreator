@@ -290,6 +290,9 @@
 	c_Lang153 =	Vždy navrchu
 	c_Lang154 =	Minut
 	c_Lang155 =	Spustit Skripty
+	c_Lang156 =	Skript
+	c_Lang157 =	Script Language
+	c_Lang158 =	Není kompatibilní s 64-bit!
 		
 ; Other Windows		
 	t_Lang001 =	Export do AHK

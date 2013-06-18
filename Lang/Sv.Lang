@@ -290,6 +290,9 @@
 	c_Lang153 =	Alltid överst
 	c_Lang154 =	Minuter
 	c_Lang155 =	Kör Skriptlet
+	c_Lang156 =	Script
+	c_Lang157 =	Script Language
+	c_Lang158 =	Inte kompatibel med 64-bitars!
 		
 ; Other Windows		
 	t_Lang001 =	Exportera till AHK

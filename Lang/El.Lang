@@ -290,6 +290,9 @@
 	c_Lang153 =	Πάντα στην κορυφή
 	c_Lang154 =	Λεπτά
 	c_Lang155 =	Εκτέλεση Scriptlet
+	c_Lang156 =	Γραφή
+	c_Lang157 =	Γλώσσα Script
+	c_Lang158 =	Δεν είναι συμβατό με 64-bit!
 		
 ; Other Windows		
 	t_Lang001 =	Εξαγωγή σε AHK

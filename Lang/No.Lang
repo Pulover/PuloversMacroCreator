@@ -290,6 +290,9 @@
 	c_Lang153 =	Alltid på topp
 	c_Lang154 =	Minutter
 	c_Lang155 =	Kjør Skriptlet
+	c_Lang156 =	Script
+	c_Lang157 =	Script Språk
+	c_Lang158 =	Ikke kompatibel med 64-bit!
 		
 ; Other Windows		
 	t_Lang001 =	Eksportere til AHK

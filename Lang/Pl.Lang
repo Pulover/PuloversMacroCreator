@@ -290,6 +290,9 @@
 	c_Lang153 =	Zawsze na wierzchu
 	c_Lang154 =	Minut
 	c_Lang155 =	Uruchom Scriptlet
+	c_Lang156 =	Scenariusz
+	c_Lang157 =	Język Script
+	c_Lang158 =	Nie kompatybilny z 64-bitowymi!
 		
 ; Other Windows		
 	t_Lang001 =	Eksport do AHK

@@ -637,11 +637,12 @@
 
 	Parameters:
 		Script - Script string in selected language format.  
-		VBScript - Sets command to be executed using VBScript Language.
-		JScript - Sets command to be executed using JScript Language.
+		Script Language - Sets command to be executed using VBScript or JScript Language.
 
 	Remarks:
 		This command uses the ScriptControl COM Object. Some scripts may not work even if correctly written.  
+		
+		The ScriptControl Object is not compatible with 64-bit.  
 	
 	Extra:
 		### Related

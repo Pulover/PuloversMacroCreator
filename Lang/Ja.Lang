@@ -290,6 +290,9 @@
 	c_Lang153 =	常に手前に表示
 	c_Lang154 =	分
 	c_Lang155 =	スクリプトレットを実行
+	c_Lang156 =	スクリプト
+	c_Lang157 =	スクリプト言語
+	c_Lang158 =	64ビットとの互換性はありません！
 		
 ; Other Windows		
 	t_Lang001 =	AHKにエクスポート

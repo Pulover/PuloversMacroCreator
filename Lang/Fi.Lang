@@ -290,6 +290,9 @@
 	c_Lang153 =	Aina päällimmäisenä
 	c_Lang154 =	Minuuttia
 	c_Lang155 =	Suorita Komentosarjasovelman
+	c_Lang156 =	Käsikirjoitus
+	c_Lang157 =	Skriptikielellä
+	c_Lang158 =	Ei yhteensopiva 64-bittinen!
 		
 ; Other Windows		
 	t_Lang001 =	Vie AHK

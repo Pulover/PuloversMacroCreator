@@ -290,6 +290,9 @@
 	c_Lang153 =	Siempre visible
 	c_Lang154 =	Minutos
 	c_Lang155 =	Executar Scriptlet...
+	c_Lang156 =	Guión
+	c_Lang157 =	Escritura De La Lengua
+	c_Lang158 =	No es compatible con 64 bits!
 		
 ; Other Windows		
 	t_Lang001 =	Exportar a AHK

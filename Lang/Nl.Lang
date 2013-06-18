@@ -290,6 +290,9 @@
 	c_Lang153 =	Altijd op voorgrond
 	c_Lang154 =	Minuten
 	c_Lang155 =	Run Scriptlet
+	c_Lang156 =	Script
+	c_Lang157 =	Script Language
+	c_Lang158 =	Niet compatibel met 64-bit!
 		
 ; Other Windows		
 	t_Lang001 =	Exporteren naar AHK

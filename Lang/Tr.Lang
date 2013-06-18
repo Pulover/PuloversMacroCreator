@@ -290,6 +290,9 @@
 	c_Lang153 =	Her zaman üstte
 	c_Lang154 =	Dakika
 	c_Lang155 =	Komut Dosyası Çalıştırmak
+	c_Lang156 =	Senaryo
+	c_Lang157 =	Script Dili
+	c_Lang158 =	64-bit ile uyumlu değildir!
 		
 ; Other Windows		
 	t_Lang001 =	AHK Aktar

@@ -290,6 +290,9 @@
 	c_Lang153 =	Toujours à la pointe
 	c_Lang154 =	Minutes
 	c_Lang155 =	Exécuter Scriplet
+	c_Lang156 =	Script
+	c_Lang157 =	Langage De Script
+	c_Lang158 =	Non compatible avec 64-bit!
 		
 ; Other Windows		
 	t_Lang001 =	Exporter vers AHK

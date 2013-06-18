@@ -290,6 +290,9 @@
 	c_Lang153 =	Always on top
 	c_Lang154 =	Minuten
 	c_Lang155 =	Führen Scriptlet
+	c_Lang156 =	Script
+	c_Lang157 =	Skriptsprache
+	c_Lang158 =	Nicht kompatibel mit 64-Bit!
 		
 ; Other Windows		
 	t_Lang001 =	Export nach AHK

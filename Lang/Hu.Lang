@@ -290,6 +290,9 @@
 	c_Lang153 =	Mindig a tetején
 	c_Lang154 =	Perc
 	c_Lang155 =	Fuss Scriptlet
+	c_Lang156 =	Forgatókönyv
+	c_Lang157 =	Script Language
+	c_Lang158 =	Nem kompatibilis a 64-bit!
 		
 ; Other Windows		
 	t_Lang001 =	Exportálás AHK
