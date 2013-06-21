@@ -526,7 +526,8 @@ Gui, Add, Button, -Wrap W25 H25 yp x+0 hwndIfStB vIfStB gIfSt
 Gui, Add, Button, -Wrap W25 H25 yp x+0 hwndIEComB vIEComB gIECom
 	ILButton(IEComB, IEIcon[1] ":" IEIcon[2])
 Gui, Font, s10, Courier New
-Gui, Add, Button, -Wrap W25 H25 yp x+0 hwndSendMsgB vSendMsgB gSendMsg, WM
+Gui, Add, Button, -Wrap W25 H25 yp x+0 hwndSendMsgB vSendMsgB gSendMsg
+	ILButton(SendMsgB, MsgIcon[1] ":" MsgIcon[2])
 Gui, Font
 Gui, Add, Text, W2 H55 yp-28 x+5 0x11
 Gui, Font, Bold
@@ -1058,7 +1059,7 @@ return
 
 #If ((Record = 1) && (Mouse = 1) && !(A_IsPaused))
 *~LButton::
-	; Critical
+	Critical
 	; Send, {Blind}{LButton Down}
 	CoordMode, Mouse, %CoordMouse%
 	MouseGetPos,,, id, control
@@ -1073,7 +1074,7 @@ return
 	GoSub, MouseInput
 return
 *~LButton Up::
-	; Critical
+	Critical
 	; Send, {Blind}{LButton Up}
 	CoordMode, Mouse, %CoordMouse%
 	MouseGetPos, xPd, yPd
@@ -1083,7 +1084,7 @@ return
 	GoSub, MouseInput
 return
 *~RButton::
-	; Critical
+	Critical
 	; Send, {Blind}{RButton Down}
 	CoordMode, Mouse, %CoordMouse%
 	MouseGetPos,,, id, control
@@ -1098,7 +1099,7 @@ return
 	GoSub, MouseInput
 return
 *~RButton Up::
-	; Critical
+	Critical
 	; Send, {Blind}{RButton Up}
 	CoordMode, Mouse, %CoordMouse%
 	MouseGetPos, xPd, yPd
@@ -1108,7 +1109,7 @@ return
 	GoSub, MouseInput
 return
 *~MButton::
-	; Critical
+	Critical
 	; Send, {Blind}{MButton Down}
 	CoordMode, Mouse, %CoordMouse%
 	MouseGetPos,,, id, control
@@ -1123,7 +1124,7 @@ return
 	GoSub, MouseInput
 return
 *~MButton Up::
-	; Critical
+	Critical
 	; Send, {Blind}{MButton Up}
 	CoordMode, Mouse, %CoordMouse%
 	MouseGetPos, xPd, yPd
@@ -1133,7 +1134,7 @@ return
 	GoSub, MouseInput
 return
 *~XButton1::
-	; Critical
+	Critical
 	; Send, {Blind}{XButton1 Down}
 	CoordMode, Mouse, %CoordMouse%
 	MouseGetPos,,, id, control
@@ -1148,7 +1149,7 @@ return
 	GoSub, MouseInput
 return
 *~XButton1 Up::
-	; Critical
+	Critical
 	; Send, {Blind}{XButton1 Up}
 	CoordMode, Mouse, %CoordMouse%
 	MouseGetPos, xPd, yPd
@@ -1158,7 +1159,7 @@ return
 	GoSub, MouseInput
 return
 *~XButton2::
-	; Critical
+	Critical
 	; Send, {Blind}{XButton2 Down}
 	CoordMode, Mouse, %CoordMouse%
 	MouseGetPos,,, id, control
@@ -1173,7 +1174,7 @@ return
 	GoSub, MouseInput
 return
 *~XButton2 Up::
-	; Critical
+	Critical
 	; Send, {Blind}{XButton2 Up}
 	CoordMode, Mouse, %CoordMouse%
 	MouseGetPos, xPd, yPd
@@ -4014,22 +4015,22 @@ return
 
 CutT:
 GuiControl, Focus, TextEdit
-ControlSend, Edit1, ^x, ahk_id %CmdWin%
+ControlSend, Edit1, {Control Down}{x}{Control Up}, ahk_id %CmdWin%
 return
 
 CopyT:
 GuiControl, Focus, TextEdit
-ControlSend, Edit1, ^c, ahk_id %CmdWin%
+ControlSend, Edit1, {Control Down}{c}{Control Up}, ahk_id %CmdWin%
 return
 
 PasteT:
 GuiControl, Focus, TextEdit
-ControlSend, Edit1, ^v, ahk_id %CmdWin%
+ControlSend, Edit1, {Control Down}{v}{Control Up}, ahk_id %CmdWin%
 return
 
 SelAllT:
 GuiControl, Focus, TextEdit
-ControlSend, Edit1, ^a, ahk_id %CmdWin%
+ControlSend, Edit1, {Control Down}{a}{Control Up}, ahk_id %CmdWin%
 return
 
 KeyWait:
@@ -8927,10 +8928,10 @@ pb_Clipboard:
 	If (Target <> "")
 	{
 		Win := SplitWin(Window)
-		ControlSend, %Target%, ^v, % Win[1], % Win[2], % Win[3], % Win[4]
+		ControlSend, %Target%, {Control Down}{v}{Control Up}, % Win[1], % Win[2], % Win[3], % Win[4]
 	}
 	Else
-		Send, ^v
+		Send, {Control Down}{v}{Control Up}
 	Clipboard := SavedClip
 	SavedClip =
 return
