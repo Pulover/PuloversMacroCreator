@@ -63,11 +63,11 @@
 				If ((Manual) && (ShowStep = 1))
 				{
 					NextStep := (A_Index = ListCount%A_List%) ? 1 : A_Index+1
-					LV_GetText(NStep, NextStep, 3)
-					LV_GetText(NTimesX, NextStep, 4)
-					LV_GetText(NType, NextStep, 6)
-					LV_GetText(NTarget, NextStep, 7)
-					LV_GetText(NWindow, NextStep, 8)
+				,	LV_GetText(NStep, NextStep, 3)
+				,	LV_GetText(NTimesX, NextStep, 4)
+				,	LV_GetText(NType, NextStep, 6)
+				,	LV_GetText(NTarget, NextStep, 7)
+				,	LV_GetText(NWindow, NextStep, 8)
 					ToolTip, 
 					(LTrim
 					%d_Lang021%: %NextStep%

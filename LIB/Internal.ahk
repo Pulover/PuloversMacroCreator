@@ -1,14 +1,14 @@
 ﻿LV_GetTexts(Index, ByRef Act="", ByRef Det="", ByRef Tim="", ByRef Del="", ByRef Typ="", ByRef Tar="", ByRef Win="", ByRef Com="")
 {
 	LV_GetText(Act, Index, 2)
-	Act := LTrim(Act)
-	LV_GetText(Det, Index, 3)
-	LV_GetText(Tim, Index, 4)
-	LV_GetText(Del, Index, 5)
-	LV_GetText(Typ, Index, 6)
-	LV_GetText(Tar, Index, 7)
-	LV_GetText(Win, Index, 8)
-	LV_GetText(Com, Index, 9)
+,	Act := LTrim(Act)
+,	LV_GetText(Det, Index, 3)
+,	LV_GetText(Tim, Index, 4)
+,	LV_GetText(Del, Index, 5)
+,	LV_GetText(Typ, Index, 6)
+,	LV_GetText(Tar, Index, 7)
+,	LV_GetText(Win, Index, 8)
+,	LV_GetText(Com, Index, 9)
 }
 
 ShowTooltip()
@@ -123,8 +123,8 @@ GuiGetSize(ByRef W, ByRef H, GuiID=1)
 	IfWinExist
 	{
 		VarSetCapacity( rect, 16, 0 )
-		DllCall("GetClientRect", uint, MyGuiHWND := WinExist(), uint, &rect )
-		W := NumGet( rect, 8, "int" )
+	,	DllCall("GetClientRect", uint, MyGuiHWND := WinExist(), uint, &rect )
+	,	W := NumGet( rect, 8, "int" )
 	,	H := NumGet( rect, 12, "int" )
 	}
 }
@@ -225,13 +225,13 @@ Screenshot(outfile, screen)
 ,	Gdip_4 := "Gdip_DisposeImage"
 ,	Gdip_5 := "Gdip_Shutdown"
 
-	pToken := %Gdip_1%()
+,	pToken := %Gdip_1%()
 
-	pBitmap := %Gdip_2%(screen)
+,	pBitmap := %Gdip_2%(screen)
 
-	%Gdip_3%(pBitmap, outfile, 100)
-	%Gdip_4%(pBitmap)
-	%Gdip_5%(pToken)
+,	%Gdip_3%(pBitmap, outfile, 100)
+,	%Gdip_4%(pBitmap)
+,	%Gdip_5%(pToken)
 }
 
 AdjustCoords(ByRef x1, ByRef y1, ByRef x2, ByRef y2)
@@ -310,15 +310,15 @@ GuiAddLV(ident)
 	Try
 		Gui, Add, ListView, x+0 y+0 AltSubmit Checked hwndListID%ident% vInputList%ident% gInputList W760 r26 NoSort LV0x10000, Index|Action|Details|Repeat|Delay|Type|Control|Window|Comment
 	LV_SetImageList(ImageListID)
-	LV_ModifyCol(1, Col_1)	; Index
-	LV_ModifyCol(2, Col_2)	; Action
-	LV_ModifyCol(3, Col_3)	; Details
-	LV_ModifyCol(4, Col_4)	; Repeat
-	LV_ModifyCol(5, Col_5)	; Delay
-	LV_ModifyCol(6, Col_6)	; Type
-	LV_ModifyCol(7, Col_7)	; Control
-	LV_ModifyCol(8, Col_8)	; Window
-	LV_ModifyCol(9, Col_9)	; Comment
+,	LV_ModifyCol(1, Col_1)	; Index
+,	LV_ModifyCol(2, Col_2)	; Action
+,	LV_ModifyCol(3, Col_3)	; Details
+,	LV_ModifyCol(4, Col_4)	; Repeat
+,	LV_ModifyCol(5, Col_5)	; Delay
+,	LV_ModifyCol(6, Col_6)	; Type
+,	LV_ModifyCol(7, Col_7)	; Control
+,	LV_ModifyCol(8, Col_8)	; Window
+,	LV_ModifyCol(9, Col_9)	; Comment
 }
 
 SelectByType(SelType, Col=6)
@@ -509,7 +509,7 @@ HistCheck(L)
 	If (MaxHistory = 0)
 		return
 	HistoryMacro%L%.Slot.Remove(HistoryMacro%L%.ActiveSlot+1, HistoryMacro%L%.Slot.MaxIndex())
-	HistoryMacro%L%.Add()
+,	HistoryMacro%L%.Add()
 	If (HistoryMacro%L%.Slot.MaxIndex() > MaxHistory+1)
 		HistoryMacro%L%.Slot.Remove(1)
 	HistoryMacro%L%.ActiveSlot := HistoryMacro%L%.Slot.MaxIndex()
@@ -559,9 +559,9 @@ AHK_NOTIFYICON(wParam, lParam)
 Send_Params(ByRef String, ByRef Target)
 {
 	VarSetCapacity(CopyDataStruct, 3*A_PtrSize, 0)
-	SizeInBytes := (StrLen(String) + 1) * (A_IsUnicode ? 2 : 1)
-	NumPut(SizeInBytes, CopyDataStruct, A_PtrSize)
-	NumPut(&String, CopyDataStruct, 2*A_PtrSize)
+,	SizeInBytes := (StrLen(String) + 1) * (A_IsUnicode ? 2 : 1)
+,	NumPut(SizeInBytes, CopyDataStruct, A_PtrSize)
+,	NumPut(&String, CopyDataStruct, 2*A_PtrSize)
 	DetectHiddenWindows, On
 	SendMessage, 0x4A, 0, &CopyDataStruct,, ahk_id %Target%
 	return ErrorLevel
