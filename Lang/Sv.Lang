@@ -293,6 +293,10 @@
 	c_Lang156 =	Script
 	c_Lang157 =	Script Language
 	c_Lang158 =	Inte kompatibel med 64-bitars!
+	c_Lang159 =	Sökalternativ
+	c_Lang160 =	Transparent
+	c_Lang161 =	Skala
+		
 		
 ; Other Windows		
 	t_Lang001 =	Exportera till AHK

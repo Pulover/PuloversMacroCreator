@@ -293,6 +293,10 @@
 	c_Lang156 =	Script
 	c_Lang157 =	Linguagem do Script
 	c_Lang158 =	Não compatível com 64-bit!
+	c_Lang159 =	Opções de busca
+	c_Lang160 =	Transparente
+	c_Lang161 =	Escala
+		
 		
 ; Other Windows		
 	t_Lang001 =	Exportar para AHK

@@ -293,6 +293,10 @@
 	c_Lang156 =	Skript
 	c_Lang157 =	Script Language
 	c_Lang158 =	Není kompatibilní s 64-bit!
+	c_Lang159 =	Možnosti vyhledávání
+	c_Lang160 =	Průhledný
+	c_Lang161 =	Stupnice
+		
 		
 ; Other Windows		
 	t_Lang001 =	Export do AHK

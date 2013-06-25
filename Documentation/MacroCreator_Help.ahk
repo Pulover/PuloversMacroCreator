@@ -2,7 +2,7 @@
 	Library: Pulover's Macro Creator
 		*An Interface-Based Automation Tool & Script Writer.*
 		
-		Version: 3.7.5  
+		Version: 3.7.6  
 		
 		[www.autohotkey.net/~Pulover](http://www.autohotkey.net/~Pulover)  
 		[Forum Thread](http://www.autohotkey.com/board/topic/79763-macro-creator)  
@@ -226,6 +226,9 @@
 			Double-Click an image to open the file with the associated application.
 		Coord - Sets coordinate mode for the search to be relative to either the active window or the screen.
 		Variations - Specify for n a number between 0 and 255 (inclusive) to indicate the allowed number of shades of variation in either direction for the intensity of the red, green, and blue components of each pixel's color.
+		Icon - Specify for n a number between 0 and 255 (inclusive) to indicate the allowed number of shades of variation in either direction for the intensity of the red, green, and blue components of each pixel's color.
+		Transparent - Specify one color within the image that will match any color on the screen.
+		Scale - Width and height to which to scale the image (this width and height also determines which icon to load from a multi-icon .ICO file).
 		Break loop if found - When setting more then 1 loop in the *Repeat* field, this option will break the loop if the image is found right after executing the selected action.
 
 	Remarks:

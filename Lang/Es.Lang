@@ -293,6 +293,10 @@
 	c_Lang156 =	Guión
 	c_Lang157 =	Escritura De La Lengua
 	c_Lang158 =	No es compatible con 64 bits!
+	c_Lang159 =	Opciones de búsqueda
+	c_Lang160 =	Transparente
+	c_Lang161 =	Escala
+		
 		
 ; Other Windows		
 	t_Lang001 =	Exportar a AHK

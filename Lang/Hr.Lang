@@ -293,6 +293,10 @@
 	c_Lang156 =	Skripta
 	c_Lang157 =	Skripta Jezik
 	c_Lang158 =	Nije kompatibilan s 64-bitnom!
+	c_Lang159 =	Opcije pretraživanja
+	c_Lang160 =	Transparentan
+	c_Lang161 =	Skala
+		
 		
 ; Other Windows		
 	t_Lang001 =	Izvoz u AHK

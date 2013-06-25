@@ -293,6 +293,10 @@
 	c_Lang156 =	Senaryo
 	c_Lang157 =	Script Dili
 	c_Lang158 =	64-bit ile uyumlu değildir!
+	c_Lang159 =	Arama seçenekleri
+	c_Lang160 =	Şeffaf
+	c_Lang161 =	Ölçek
+		
 		
 ; Other Windows		
 	t_Lang001 =	AHK Aktar

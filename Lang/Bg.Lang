@@ -293,6 +293,10 @@
 	c_Lang156 =	Сценарий
 	c_Lang157 =	Script Language
 	c_Lang158 =	Не е съвместим с 64-битов!
+	c_Lang159 =	Опции за търсене
+	c_Lang160 =	Прозрачен
+	c_Lang161 =	Мащаб
+		
 		
 ; Other Windows		
 	t_Lang001 =	Износ за AHK

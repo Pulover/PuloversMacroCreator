@@ -293,6 +293,10 @@
 	c_Lang156 =	Forgatókönyv
 	c_Lang157 =	Script Language
 	c_Lang158 =	Nem kompatibilis a 64-bit!
+	c_Lang159 =	Keresési beállítások
+	c_Lang160 =	Átlátszó
+	c_Lang161 =	Skála
+		
 		
 ; Other Windows		
 	t_Lang001 =	Exportálás AHK

@@ -293,6 +293,10 @@
 	c_Lang156 =	스크립트
 	c_Lang157 =	스크립트 언어
 	c_Lang158 =	64 비트와 호환되지 않습니다!
+	c_Lang159 =	검색 옵션
+	c_Lang160 =	투명한
+	c_Lang161 =	규모
+		
 		
 ; Other Windows		
 	t_Lang001 =	AHK로 내보내기

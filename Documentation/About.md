@@ -8,7 +8,7 @@ Author: Pulover \[Rodolfo U. Batista\]
 [rodolfoub@gmail.com](mailto:rodolfoub@gmail.com)  
 Copyright © 2012-2013 Rodolfo U. Batista  
 
-Version: 3.7.5  
+Version: 3.7.6  
 Release Date: June, 2013  
 AutoHotkey Version: 1.1.10.01  
 
@@ -31,6 +31,10 @@ T800 for [Html Help utils](http://www.autohotkey.com/board/topic/17984-html-help
 
 
 # Change Log
+
+## Version 3.7.6
+
+* Added more search options to *ImageSearch* command.
 
 ## Version 3.7.5
 

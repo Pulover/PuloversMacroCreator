@@ -6,7 +6,7 @@
 ; rodolfoub@gmail.com
 ; Home: http://www.autohotkey.net/~Pulover
 ; Forum: http://www.autohotkey.com/board/topic/79763-macro-creator
-; Version: 3.7.5
+; Version: 3.7.6
 ; Release Date: June, 2013
 ; AutoHotkey Version: 1.1.10.01
 ; Copyright © 2012-2013 Rodolfo U. Batista
@@ -74,7 +74,7 @@ DefaultIcon := (A_IsCompiled) ? A_ScriptFullPath
 			:  (FileExist("Resources\PMC3_Mult.ico") ? "Resources\PMC3_Mult.ico" : A_AhkPath)
 Menu, Tray, Icon, %DefaultIcon%, 1, 1
 
-CurrentVersion := "3.7.5", ReleaseDate := "June, 2013"
+CurrentVersion := "3.7.6", ReleaseDate := "June, 2013"
 
 ;##### Ini File Read #####
 
@@ -488,7 +488,7 @@ Menu, LangMenu, Check, % Lang_%Lang%
 
 ;##### Main Window: #####
 
-Gui, Font, s7
+; Gui, Font, s7
 Gui, +Resize +MinSize310x140 +HwndPMCWinID
 Gui, Add, Button, -Wrap W25 H25 hwndNewB vNewB gNew
 	ILButton(NewB, NewIcon[1] ":" NewIcon[2])
@@ -536,7 +536,7 @@ Gui, Add, Button, -Wrap W90 H40 ys xm+310 hwndRecordB vRecordB gRecord, %w_Lang0
 Gui, Add, Button, -Wrap W90 H40 ys xm+405 hwndStartB vStartB gPlayStart, %w_Lang005%
 	ILButton(StartB, PlayIcon[1] ":" PlayIcon[2], 1, "Left")
 Gui, Font
-Gui, Font, s7
+; Gui, Font, s7
 Gui, Add, Checkbox, -Wrap Checked%HideMainWin% yp+45 xp-95 W90 vHideMainWin R1, %w_Lang013%
 Gui, Add, Checkbox, -Wrap Checked%OnScCtrl% yp xp+95 W90 vOnScCtrl R1, %w_Lang020%
 Gui, Add, Button, -Wrap ys xm+500 W25 H25 hwndTestRun vTestRun gTestRun
@@ -554,7 +554,7 @@ Gui, Add, Hotkey,  yp-3 xp+30 vAbortKey W55, %AbortKey%
 Gui, Font, s10, Wingdings
 Gui, Add, Checkbox, -Wrap ys+11 xs+193 W25 H25 vWin1 gSaveData 0x1000, ÿ
 Gui, Font
-Gui, Font, s7
+; Gui, Font, s7
 Gui, Add, Checkbox, -Wrap yp x+2 W25 H25 hwndJoyHK vJoyHK gSetJoyButton 0x1000
 	ILButton(JoyHK, JoyIcon[1] ":" JoyIcon[2])
 Gui, Add, Checkbox, -Wrap Checked%PauseKey% y+1 xs+193 W25 H25 hwndPauseKey vPauseKey gPauseKey 0x1000 ;, %w_Lang010%
@@ -733,7 +733,7 @@ Else
 			GoSub, TipClose
 		Gui, 26:-SysMenu +HwndTipScrID +owner1
 		Gui, 26:Color, FFFFFF
-		Gui, 26:Font, s7
+		; Gui, 26:Font, s7
 		Gui, 26:Add, Pic, y+20 Icon%WarnIcon%, %shell32%
 		Gui, 26:Add, Text, yp x+10, %d_Lang058%`n
 		Gui, 26:Add, Checkbox, -Wrap W300 vDontShowAdm R1, %d_Lang053%
@@ -820,7 +820,7 @@ If !DontShowRec
 		GoSub, TipClose
 	Gui, 26:-SysMenu +HwndTipScrID
 	Gui, 26:Color, FFFFFF
-	Gui, 26:Font, s7
+	; Gui, 26:Font, s7
 	Gui, 26:Add, Pic, y+20 Icon%HelpIconI%, %shell32%
 	Gui, 26:Add, Text, yp x+10, %d_Lang052%`n`n- %RecKey% %d_Lang026%`n- %RecNewKey% %d_Lang030%`n`n%d_Lang043%`n
 	Gui, 26:Add, Checkbox, -Wrap W300 vDontShowRec R1, %d_Lang053%
@@ -1509,7 +1509,7 @@ UserVarsList := User_Vars.Get()
 Gui, 14:+owner1 -MaximizeBox -MinimizeBox +E0x00000400 +HwndCmdWin
 Gui, 14:Default
 Gui, 1:+Disabled
-Gui, 14:Font, s7
+; Gui, 14:Font, s7
 ; Macros
 Gui, 14:Add, GroupBox, W415 H150, %t_Lang002%:
 Gui, 14:Add, ListView, Section ys+20 xs+10 AltSubmit Checked W395 r4 vExpList gExpEdit -Multi NoSort -ReadOnly, Macro|Hotkey|Loop|Hotstring?|BlockMouse?
@@ -1617,7 +1617,7 @@ LV_GetText(Ex_BM, RowNumber, 5)
 Gui, 13:+owner14 +ToolWindow
 Gui, 14:Default
 Gui, 14:+Disabled
-Gui, 13:Font, s7
+; Gui, 13:Font, s7
 Gui, 13:Add, GroupBox, Section xm W270 H95
 Gui, 13:Add, Edit, ys+20 xs+10 W140 vEx_AutoKey, %Ex_AutoKey%
 Gui, 13:Add, Checkbox, -Wrap Checked%Ex_Hotstring% ys+25 xp+150 W100 vEx_Hotstring gEx_Hotstring R1, %t_Lang005%
@@ -1910,7 +1910,7 @@ Gui 2:+LastFoundExist
 IfWinExist
     GoSub, PrevClose
 Preview := LV_Export(A_List)
-Gui, 2:Font, s7
+; Gui, 2:Font, s7
 Gui, 2:+Resize +hwndPrevID
 Gui, 2:Add, Button, -Wrap Section W60 H25 gPrevClose, %c_Lang022%
 Gui, 2:Add, Button, -Wrap ys W25 H25 hwndPrevCopy vPrevCopy gPrevCopy
@@ -1923,7 +1923,7 @@ Gui, 2:Add, Checkbox, -Wrap Checked%TabIndent% ys+5 xp+110 W85 vTabIndent gPrevR
 Gui, 2:Font, s8, Courier New
 Gui, 2:Add, Edit, Section xm-8 vLVPrev W420 R35 -Wrap HScroll ReadOnly
 Gui, 2:Font
-Gui, 2:Font, s7
+; Gui, 2:Font, s7
 Gui, 2:Add, StatusBar
 Gui, 2:Default
 SB_SetParts(150, 150)
@@ -1981,7 +1981,7 @@ GoSub, GetHotkeys
 GoSub, ResetHotkeys
 CurrLoopColor := LoopLVColor, CurrIfColor := IfLVColor
 FileRead, UserVarsList, %UserVarsPath%
-Gui, 4:Font, s7
+; Gui, 4:Font, s7
 Gui, 4:Add, Tab2, W420 H570 vTabControl AltSubmit, %t_Lang018%|%t_Lang052%|%t_Lang096%
 ; Recording
 Gui, 4:Add, GroupBox, W400 H200, %t_Lang022%:
@@ -2368,7 +2368,7 @@ IfWinExist
 OsBit := (A_PtrSize = 8) ? "x64" : "x86"
 Gui, 26:-SysMenu +HwndTipScrID +owner1
 Gui, 26:Color, FFFFFF
-Gui, 26:Font, s7
+; Gui, 26:Font, s7
 Gui, 26:Add, Pic, % "w48 y+20 Icon" ((A_IsCompiled) ? 1 : HelpIconI), % (A_IsCompiled) ? A_ScriptFullPath : shell32
 Gui, 26:Font, Bold s12, Tahoma
 Gui, 26:Add, Text, yp x+10, PULOVER'S MACRO CREATOR
@@ -2432,7 +2432,7 @@ s_Caller = Edit
 Mouse:
 Gui, 5:+owner1 -MaximizeBox -MinimizeBox +E0x00000400 +HwndCmdWin
 Gui, 1:+Disabled
-Gui, 5:Font, s7
+; Gui, 5:Font, s7
 Gui, 5:Add, GroupBox, W250 H80, %c_Lang026%:
 Gui, 5:Add, Radio, -Wrap ys+20 xs+10 Checked W115 vClick gClick R1, %c_Lang027%
 Gui, 5:Add, Radio, -Wrap W115 vPoint gPoint R1, %c_Lang028%
@@ -3493,6 +3493,10 @@ If InStr(A_GuiControl, "Color")
 	Gui, 4:Font, c%color%
 	GuiControl, 4:Font, %A_GuiControl%
 }
+Else If (A_GuiControl = "TransCS")
+{
+	GuiControl, 19:, TransC, %color%
+}
 Else
 {
 	GuiControl,, ImgFile, %color%
@@ -3635,7 +3639,7 @@ Special:
 Gui, 7:+owner1 -MaximizeBox -MinimizeBox +E0x00000400 +HwndCmdWin
 Gui, 1:+Disabled
 spKey := ""
-Gui, 7:Font, s7
+; Gui, 7:Font, s7
 Gui, 7:Add, GroupBox, W400 H170 , %c_Lang103%:
 Gui, 7:Add, Radio, -Wrap ys+20 xs+10 Group W120 vBrowser_Back gSpecKey R1, %c_Lang104%
 Gui, 7:Add, Radio, -Wrap ys+20 xp+120 W120 vBrowser_Forward gSpecKey R1, %c_Lang105%
@@ -3747,7 +3751,7 @@ Text:
 Gui, Submit, NoHide
 Gui, 8:+owner1 -MaximizeBox -MinimizeBox +E0x00000400 +HwndCmdWin
 Gui, 1:+Disabled
-Gui, 8:Font, s7
+; Gui, 8:Font, s7
 Gui, 8:Add, Button, -Wrap W25 H25 hwndOpenT vOpenT gOpenT
 	ILButton(OpenT, OpenIcon[1] ":" OpenIcon[2])
 Gui, 8:Add, Button, -Wrap W25 H25 ys x+0 hwndSaveT vSaveT gSaveT
@@ -4039,7 +4043,7 @@ Pause:
 Gui, 3:+owner1 -MaximizeBox -MinimizeBox +E0x00000400 +HwndCmdWin
 Gui, 1:+Disabled
 Gui, 3:Add, Tab2, W305 H275 vTabControl AltSubmit, %c_Lang003%|%c_Lang015%|%c_Lang066%
-Gui, 3:Font, s7
+; Gui, 3:Font, s7
 ; Sleep
 Gui, 3:Add, GroupBox, Section W280 H100
 Gui, 3:Add, Text, ys+15 xs+10, %c_Lang050%:
@@ -4218,7 +4222,7 @@ Loop, %TabCount%
 	Proj_Labels .= "Macro" A_Index "|"
 Gui, 12:+owner1 -MaximizeBox -MinimizeBox +E0x00000400 +HwndCmdWin
 Gui, 1:+Disabled
-Gui, 12:Font, s7
+; Gui, 12:Font, s7
 Gui, 12:Add, Tab2, W330 H220 vTabControl AltSubmit, %c_Lang073%|%c_Lang077%|%c_Lang079%
 Gui, 12:Add, Radio, -Wrap Checked ys+27 xs+15 W55 vLoop gLoopType R1, %c_Lang132%
 Gui, 12:Add, Radio, -Wrap x+5 W55 vLFilePattern gLoopType R1, %c_Lang133%
@@ -4524,7 +4528,7 @@ s_Caller = Edit
 Window:
 Gui, 11:+owner1 -MaximizeBox -MinimizeBox +E0x00000400 +HwndCmdWin
 Gui, 1:+Disabled
-Gui, 11:Font, s7
+; Gui, 11:Font, s7
 Gui, 11:Add, DDL, W120 vWinCom gWinCom, %WinCmdList%
 Gui, 11:Add, Text, xm W120, %c_Lang055%:
 Gui, 11:Add, DDL, xm W120 -Multi vWCmd gWCmd, %WinCmd%
@@ -4811,7 +4815,7 @@ Image:
 Gui, Submit, NoHide
 Gui, 19:+owner1 -MaximizeBox -MinimizeBox +E0x00000400 +HwndCmdWin
 Gui, 1:+Disabled
-Gui, 19:Font, s7
+; Gui, 19:Font, s7
 Gui, 19:Add, Text,, %c_Lang061%
 Gui, 19:Add, Text, yp xs+65, X:
 Gui, 19:Add, Edit, yp x+5 viPosX W60, 0
@@ -4838,14 +4842,27 @@ Gui, 19:Add, Text, yp+15 xs, %c_Lang072%:
 Gui, 19:Font
 Gui, 19:Add, Pic, Section xm+5 W260 H200 0x100 vPicPrev gPicOpen
 Gui, 19:Add, Progress, ys xm W260 H200 Disabled Hidden vColorPrev
-Gui, 19:Add, Text, y+5 xm+2 W150 vImgSize
-Gui, 19:Add, Text, Section y+10 xm+2 W80, %c_Lang070%:
-Gui, 19:Add, DDL, yp-5 xp+45 W65 vCoordPixel, Screen||Window
-Gui, 19:Add, Text, yp+3 xs+140 W85, %c_Lang071%:
-Gui, 19:Add, Edit, yp-3 xp+75 vVariatT Limit Number W45
+Gui, 19:Add, Text, y+0 xm+2 W150 vImgSize
+; Options
+Gui, 19:Add, GroupBox, Section y+5 xm+2 W265 H200, %c_Lang159%:
+Gui, 19:Add, Text, ys+20 xs+10 W80, %c_Lang070%:
+Gui, 19:Add, DDL, ys+18 xs+45 W65 vCoordPixel, Screen||Window
+Gui, 19:Add, Text, yp+3 xs+115 W85, %c_Lang071%:
+Gui, 19:Add, Edit, yp-3 xp+65 vVariatT W45 Number Limit
 Gui, 19:Add, UpDown, vVariat 0x80 Range0-255, 0
-Gui, 19:Add, GroupBox, Section xm W265 H110
-Gui, 19:Add, Text, Section ys+15 xs+10, %w_Lang015%:
+Gui, 19:Add, Text, y+5 xs+10 W55 r1, %c_Lang147%:
+Gui, 19:Add, Edit, yp-3 xp+55 W45 vIconN
+Gui, 19:Add, Text, yp+3 xs+115 W65 r1, %c_Lang160%:
+Gui, 19:Add, Edit, yp-3 xp+65 W45 vTransC
+Gui, 19:Add, Button, -Wrap yp-1 x+0 W30 H23 vTransCS gGetPixel, ...
+Gui, 19:Add, Text, y+5 xs+10 W40 r1, %c_Lang161%:
+Gui, 19:Add, Text, yp xs+50 W20, W:
+Gui, 19:Add, Edit, yp-3 xs+65 W45 vWScale
+Gui, 19:Add, Text, yp+3 xs+168 W20, H:
+Gui, 19:Add, Edit, yp-3 xs+180 W45 vHScale
+; Gui, 19:Add, GroupBox, Section xm W265 H110
+Gui, 19:Add, Text, y+10 xs+10 W245 H2 0x10
+Gui, 19:Add, Text, Section y+10 xs+10, %w_Lang015%:
 Gui, 19:Add, Text,, %c_Lang017%:
 Gui, 19:Add, Edit, ys xs+120 W120 R1 vEdRept
 Gui, 19:Add, UpDown, vTimesX 0x80 Range1-999999999, 1
@@ -4870,9 +4887,22 @@ If (s_Caller = "Edit")
 	If (Type = cType16)
 	{
 		GuiControl, 19:, ImageS, 1
-		Variat := RegExReplace(Det5, "\*(\d+)\s.*", "$1")
+		RegExMatch(Det5, "\*(\d+?)\s+(.*)", ImgOpt)
+	,	Variat := ImgOpt1, Det5 := ImgOpt2 ? ImgOpt2 : Det5
+	,	RegExMatch(Det5, "\*Icon(.+?)\s+(.*)", ImgOpt)
+	,	IconN := ImgOpt1, Det5 := ImgOpt2 ? ImgOpt2 : Det5
+	,	RegExMatch(Det5, "\*Trans(.+?)\s+(.*)", ImgOpt)
+	,	TransC := ImgOpt1, Det5 := ImgOpt2 ? ImgOpt2 : Det5
+	,	RegExMatch(Det5, "\*W(.+?)\s+(.*)", ImgOpt)
+	,	WScale := ImgOpt1, Det5 := ImgOpt2 ? ImgOpt2 : Det5
+	,	RegExMatch(Det5, "\*H(.+?)\s+(.*)", ImgOpt)
+	,	HScale := ImgOpt1, Det5 := ImgOpt2 ? ImgOpt2 : Det5
+	,	File := Det5
 		GuiControl, 19:, Variat, %Variat%
-		Det5 := RegExReplace(Det5, "\*(\d+)\s"), File := Det5
+		GuiControl, 19:, IconN, %IconN%
+		GuiControl, 19:, TransC, %TransC%
+		GuiControl, 19:, WScale, %WScale%
+		GuiControl, 19:, HScale, %HScale%
 		GoSub, MakePrev
 	}
 	If (Type = cType15)
@@ -4884,6 +4914,7 @@ If (s_Caller = "Edit")
 		GuiControl, 19:+Background%color%, ColorPrev
 		GuiControl, 19:, Variat, %Det6%
 		GuiControl, 19:Disable, Screenshot
+		GoSub, PixelS
 	}
 	GuiControl, 19:, iPosX, %Det1%
 	GuiControl, 19:, iPosY, %Det2%
@@ -4917,7 +4948,20 @@ If TimesX = 0
 	TimesX := 1
 Action := IfFound "`, " IfNotFound
 If ImageS = 1
-	Type := cType16, ImgFile := "*" Variat " " ImgFile
+{
+	ImgOptions := ""
+	If (Variat > 0)
+		ImgOptions .= "*" Variat " "
+	If (IconN <> "")
+		ImgOptions .= "*Icon" IconN " "
+	If (TransC <> "")
+		ImgOptions .= "*Trans" TransC " "
+	If (WScale <> "")
+		ImgOptions .= "*W" WScale " "
+	If (HScale <> "")
+		ImgOptions .= "*H" HScale " "
+	Type := cType16, ImgFile := ImgOptions ImgFile
+}
 Details := iPosX "`, " iPosY "`, " ePosX "`, " ePosY "`, " ImgFile
 If PixelS = 1
 	Type := cType15, Details .= ", " Variat ", Fast RGB"
@@ -5010,6 +5054,11 @@ GuiControl, +BackgroundDefault, ColorPrev
 GuiControl, 19:Show, PicPrev
 GuiControl, 19:Hide, ColorPrev
 GuiControl, 19:Enable, Screenshot
+GuiControl, 19:Enable, IconN
+GuiControl, 19:Enable, TransC
+GuiControl, 19:Enable, TransCS
+GuiControl, 19:Enable, WScale
+GuiControl, 19:Enable, HScale
 return
 
 PixelS:
@@ -5021,6 +5070,11 @@ GuiControl, +BackgroundDefault, ColorPrev
 GuiControl, 19:Hide, PicPrev
 GuiControl, 19:Show, ColorPrev
 GuiControl, 19:Disable, Screenshot
+GuiControl, 19:Disable, IconN
+GuiControl, 19:Disable, TransC
+GuiControl, 19:Disable, TransCS
+GuiControl, 19:Disable, WScale
+GuiControl, 19:Disable, HScale
 return
 
 PicOpen:
@@ -5036,7 +5090,7 @@ ImageOpt:
 Gui, 25:+owner19 +ToolWindow
 Gui, 19:Default
 Gui, 19:+Disabled
-Gui, 25:Font, s7
+; Gui, 25:Font, s7
 Gui, 25:Add, GroupBox, Section W400 H120, %t_Lang046%:
 Gui, 25:Add, Text, ys+20 xs+10, %t_Lang047%:
 Gui, 25:Add, DDL, yp-5 xs+100 vDrawButton W75, RButton||LButton|MButton
@@ -5080,7 +5134,7 @@ s_Caller = Edit
 Run:
 Gui, 10:+owner1 -MaximizeBox -MinimizeBox +E0x00000400 +HwndCmdWin
 Gui, 1:+Disabled
-Gui, 10:Font, s7
+; Gui, 10:Font, s7
 Gui, 10:Add, Text, ym+5 W55, %c_Lang055%:
 Gui, 10:Add, ComboBox, yp-2 xs+100 W170 vFileCmdL gFileCmd, %FileCmdList%
 Gui, 10:Add, Text, yp+30 xm W200 vFCmd1
@@ -5289,7 +5343,7 @@ AsVar:
 IfSt:
 Gui, 21:+owner1 -MaximizeBox -MinimizeBox +E0x00000400 +HwndCmdWin +Delimiter$
 Gui, 1:+Disabled
-Gui, 21:Font, s7
+; Gui, 21:Font, s7
 Gui, 21:Add, Tab2, W330 H240 vTabControl AltSubmit, %c_Lang009%$%c_Lang084%$%c_Lang011%
 ; Statements
 Gui, 21:Add, DDL, y+10 W200 vStatement gStatement, %IfList%
@@ -5746,7 +5800,7 @@ s_Caller = Edit
 SendMsg:
 Gui, 22:+owner1 -MaximizeBox -MinimizeBox +E0x00000400 +HwndCmdWin
 Gui, 1:+Disabled
-Gui, 22:Font, s7
+; Gui, 22:Font, s7
 Gui, 22:Add, DDL, W100 vMsgType, PostMessage||SendMessage
 Gui, 22:Add, DDL, yp xp+110 W210 vWinMsg gWinMsg, %WM_Msgs%
 Gui, 22:Add, Text, xm W120, %c_Lang102%:
@@ -5852,7 +5906,7 @@ s_Caller = Edit
 ControlCmd:
 Gui, 23:+owner1 -MaximizeBox -MinimizeBox +E0x00000400 +HwndCmdWin
 Gui, 1:+Disabled
-Gui, 23:Font, s7
+; Gui, 23:Font, s7
 Gui, 23:Add, DDL, W120 vControlCmd gCtlCmd, %CtrlCmdList%
 Gui, 23:Add, Text, xm W120, %c_Lang055%:
 Gui, 23:Add, DDL, xm W120 -Multi vCmd gCmd, %CtrlCmd%
@@ -6082,7 +6136,7 @@ IECom:
 IEWindows := ListIEWindows()
 Gui, 24:+owner1 -MaximizeBox -MinimizeBox +E0x00000400 +hwndCmdWin
 Gui, 1:+Disabled
-Gui, 24:Font, s7
+; Gui, 24:Font, s7
 Gui, 24:Add, Tab2, W410 H240 vTabControl gTabControl AltSubmit, %c_Lang012%|%c_Lang014%|%c_Lang155%
 Gui, 24:Add, Combobox, W160 vIECmd gIECmd, %IECmdList%
 Gui, 24:Add, Radio, -Wrap Checked W90 vSet gIECmd R1, %c_Lang093%
@@ -6636,7 +6690,7 @@ Gui, Submit, NoHide
 Script := (TabControl = 2) ? ComSc : ScLet
 Gui, 30:+owner1 -MaximizeBox -MinimizeBox +E0x00000400 +hwndCmdWin
 Gui, 24:+Disabled
-Gui, 30:Font, s7
+; Gui, 30:Font, s7
 Gui, 30:Add, Button, -Wrap W25 H25 hwndOpenT vOpenT gOpenT
 	ILButton(OpenT, OpenIcon[1] ":" OpenIcon[2])
 Gui, 30:Add, Button, -Wrap W25 H25 ys x+0 hwndSaveT vSaveT gSaveT
@@ -6653,7 +6707,7 @@ Gui, 30:Add, Button, -Wrap W25 H25 ys x+0 hwndSelAllT vSelAllT gSelAllT
 Gui, 30:Font, s9, Courier New
 Gui, 30:Add, Edit, Section xm vTextEdit gTextEdit WantTab W720 R30, %Script%
 Gui, 30:Font
-Gui, 30:Font, s7
+; Gui, 30:Font, s7
 Gui, 30:Add, Button, -Wrap Section Default xm y+15 W60 H23 gExpViewOK, %c_Lang020%
 Gui, 30:Add, Button, -Wrap ys W60 H23 gExpViewCancel, %c_Lang021%
 Gui, 30:Add, StatusBar
@@ -6716,7 +6770,7 @@ If (NextTip > MaxTips)
 	NextTip := 1
 Gui, 26:-SysMenu +HwndStartTipID +owner1
 Gui, 26:Color, FFFFFF
-Gui, 26:Font, s7
+; Gui, 26:Font, s7
 Gui, 26:Add, Pic, y+20 W48 H48 Icon%TipIcon%, %TipFile%
 Gui, 26:Add, Text, Section yp x+10, %d_Lang068%%A_Space%
 Gui, 26:Add, Text, yp x+0 vCurrTip, %NextTip%%A_Space%%A_Space%%A_Space%
@@ -6764,7 +6818,7 @@ return
 RunTimer:
 Gui, 27:+owner1 +ToolWindow
 Gui, 1:+Disabled
-Gui, 27:Font, s7
+; Gui, 27:Font, s7
 Gui, 27:Add, Groupbox, W180 H100
 Gui, 27:Add, Edit, ys+15 xs+15 Limit Number W150
 Gui, 27:Add, UpDown, vTimerDelayX 0x80 Range0-9999999, %TimerDelayX%
@@ -6883,7 +6937,7 @@ If !DontShowPb
 		GoSub, TipClose
 	Gui, 26:-SysMenu +HwndTipScrID
 	Gui, 26:Color, FFFFFF
-	Gui, 26:Font, s7
+	; Gui, 26:Font, s7
 	Gui, 26:Add, Pic, y+20 Icon%HelpIconI%, %shell32%
 	Gui, 26:Add, Text, yp x+10, %d_Lang051%`n`n%d_Lang043%`n
 	Gui, 26:Add, Checkbox, -Wrap W300 vDontShowPb R1, %d_Lang053%
@@ -6933,7 +6987,7 @@ Gui, 28: +Toolwindow +AlwaysOntop +HwndPMCOSC +E0x08000000
 If !(OSCaption)
 	Gui, 28:-Caption
 Gui, 1:Default
-Gui, 28:Font, s7
+; Gui, 28:Font, s7
 Gui, 28:Add, Edit, W40 H23 vOSHKEd Number
 Gui, 28:Add, UpDown, vOSHK gOSHK 0x80 Horz 16 Range1-%TabCount%, %A_List%
 Gui, 28:Font, Bold s7
@@ -7599,7 +7653,7 @@ If InStr(Action, "[Text]")
 	Goto, EditText
 Gui, 15:+owner1 +ToolWindow +HwndCmdWin
 Gui, 1:+Disabled
-Gui, 15:Font, s7
+; Gui, 15:Font, s7
 Gui, 15:Add, GroupBox, vSGroup Section xm W280 H130 Disabled
 Gui, 15:Add, Checkbox, -Wrap Section ys+15 xs+10 W260 vCSend gCSend Hidden R1, %c_Lang016%:
 Gui, 15:Add, Edit, vDefCt W230 Disabled Hidden
@@ -7920,7 +7974,7 @@ return
 MultiEdit:
 Gui, 6:+owner1 +ToolWindow +hwndCmdWin
 Gui, 1:+Disabled
-Gui, 6:Font, s7
+; Gui, 6:Font, s7
 Gui, 6:Add, GroupBox, vSGroup Section xm W280 H120
 Gui, 6:Add, Checkbox, -Wrap Section ys+15 xs+10 W250 vCSend gCSend R1, %c_Lang016%:
 Gui, 6:Add, Edit, vDefCt W230 Disabled
@@ -8128,7 +8182,7 @@ SetWin:
 Gui, 16:+owner1 +ToolWindow +HwndCmdWin
 Gui, 1:Default
 Gui, 1:+Disabled
-Gui, 16:Font, s7
+; Gui, 16:Font, s7
 Gui, 16:Add, Text, ym+5 cBlue, #IfWin
 Gui, 16:Add, DDL, yp-3 xp+35 W80 vIfDirectContext, None||Active|NotActive|Exist|NotExist
 Gui, 16:Add, DDL, yp x+130 W65 vIdent, Title||Class|Process|ID|PID
@@ -8162,7 +8216,7 @@ RowSelection := LV_GetCount("Selected")
 Gui, 17:+owner1 +ToolWindow
 Gui, 1:Default
 Gui, 1:+Disabled
-Gui, 17:Font, s7
+; Gui, 17:Font, s7
 Gui, 17:Add, GroupBox, Section xm W230 H110, %t_Lang064%:
 Gui, 17:Add, Edit, ys+25 xs+10 vComm W210 r5
 Gui, 17:Add, Button, -Wrap Section Default xm W60 H23 gCommOK, %c_Lang020%
@@ -8225,7 +8279,7 @@ IfWinExist
 	GoSub, FindClose
 Gui, 18:+owner1 +ToolWindow
 Gui, 1:Default
-Gui, 18:Font, s7
+; Gui, 18:Font, s7
 Gui, 18:Add, Text, y+15 x+120 W100, %t_Lang066%:
 Gui, 18:Add, DDL, yp-5 xp+90 W70 vSearchCol, Details||Repeat|Delay|Control|Window|Comment
 Gui, 18:Add, GroupBox, Section xm W280 H185, %t_Lang068%:

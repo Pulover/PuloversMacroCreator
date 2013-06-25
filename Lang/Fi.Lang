@@ -293,6 +293,10 @@
 	c_Lang156 =	Käsikirjoitus
 	c_Lang157 =	Skriptikielellä
 	c_Lang158 =	Ei yhteensopiva 64-bittinen!
+	c_Lang159 =	Hakuvaihtoehtoja
+	c_Lang160 =	Läpinäkyvä
+	c_Lang161 =	Asteikko
+		
 		
 ; Other Windows		
 	t_Lang001 =	Vie AHK
