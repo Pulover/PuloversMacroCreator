@@ -639,6 +639,12 @@
 	EditComm_TT =	Edit Comment
 	Reset_TT =	Clear variable contents
 	PicPrev_TT =	Double-Click to open Image
+	CoordPixel_TT =	Coordinate mode
+	VariatT_TT =	Shades of variation
+	IconN_TT =	Icon number in group
+	TransC_TT =	Transparent color
+	WScale_TT =	Width scale
+	HScale_TT =	Height scale
 	LoopLVColor_TT =	Click to pick a color
 	IfLVColor_TT =	Click to pick a color
 	RefreshIEW_TT =	Refresh List

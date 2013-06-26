@@ -639,6 +639,12 @@
 	EditComm_TT =	Yorum düzenle
 	Reset_TT =	Temizle değişken içeriği
 	PicPrev_TT =	Görüntü açmak için çift tıklayın
+	CoordPixel_TT =	Modu Koordinat
+	VariatT_TT =	Varyasyon Shades
+	IconN_TT =	Grubunda Simge sayısı
+	TransC_TT =	Şeffaf renk
+	WScale_TT =	Genişlik ölçekli
+	HScale_TT =	Yükseklik ölçekli
 	LoopLVColor_TT =	Bir renk seçmek için tıklayınız
 	IfLVColor_TT =	Bir renk seçmek için tıklayınız
 	RefreshIEW_TT =	Yenile Listesi

@@ -639,6 +639,12 @@
 	EditComm_TT =	Redactar comentari
 	Reset_TT =	Esborrar el contingut de variables
 	PicPrev_TT =	Feu doble clic per ampliar imatge
+	CoordPixel_TT =	Mode de coordenades
+	VariatT_TT =	Les ombres de variació
+	IconN_TT =	Nombre icona al grup
+	TransC_TT =	Color Transparent
+	WScale_TT =	Escala Ample
+	HScale_TT =	Escala d'altura
 	LoopLVColor_TT =	Feu clic per seleccionar un color
 	IfLVColor_TT =	Feu clic per seleccionar un color
 	RefreshIEW_TT =	Actualitzar llista

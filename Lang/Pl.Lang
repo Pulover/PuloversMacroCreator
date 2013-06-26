@@ -639,6 +639,12 @@
 	EditComm_TT =	Edytuj komentarz
 	Reset_TT =	Wyczyść zawartość zmiennej
 	PicPrev_TT =	Kliknij dwukrotnie, aby otworzyć obraz
+	CoordPixel_TT =	Tryb współrzędnych
+	VariatT_TT =	Odcienie zmienności
+	IconN_TT =	Ikona w grupie numer
+	TransC_TT =	Kolor przezroczysty
+	WScale_TT =	Skala Szerokość
+	HScale_TT =	Skala wzrost
 	LoopLVColor_TT =	Kliknij, aby wybrać kolor
 	IfLVColor_TT =	Kliknij, aby wybrać kolor
 	RefreshIEW_TT =	Odśwież Listę

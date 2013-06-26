@@ -639,6 +639,12 @@
 	EditComm_TT =	Kommentar bearbeiten
 	Reset_TT =	Klare variablen Inhalten
 	PicPrev_TT =	Doppelklicken Sie auf das Bild zu öffnen
+	CoordPixel_TT =	Koordinieren Modus
+	VariatT_TT =	Shades of Variation
+	IconN_TT =	Icon Zahl in der Gruppe
+	TransC_TT =	Transparente Farbe
+	WScale_TT =	Breite Skala
+	HScale_TT =	Höhenskala
 	LoopLVColor_TT =	Klicken Sie auf eine Farbe auswählen
 	IfLVColor_TT =	Klicken Sie auf eine Farbe auswählen
 	RefreshIEW_TT =	Liste aktualisieren

@@ -639,6 +639,12 @@
 	EditComm_TT =	Megjegyzés szerkesztése
 	Reset_TT =	Kódolatlan változó tartalma
 	PicPrev_TT =	Kattintson duplán a megnyitni fényképek
+	CoordPixel_TT =	Koordináta mód
+	VariatT_TT =	Shades variációs
+	IconN_TT =	Ikon szám csoportos
+	TransC_TT =	Átlátszó szín
+	WScale_TT =	Szélesség skála
+	HScale_TT =	Magasság méret
 	LoopLVColor_TT =	Kattintson válasszon egy színt
 	IfLVColor_TT =	Kattintson válasszon egy színt
 	RefreshIEW_TT =	Lista frissítése

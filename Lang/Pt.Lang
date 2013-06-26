@@ -639,6 +639,12 @@
 	EditComm_TT =	Editar Comentário
 	Reset_TT =	Apagar conteúdo da variável
 	PicPrev_TT =	Duplo-Clique para abrir a imagem
+	CoordPixel_TT =	Modo de coordenada
+	VariatT_TT =	Tons de variação
+	IconN_TT =	Número do ícone no grupo
+	TransC_TT =	Cor transparente
+	WScale_TT =	Escala de largura
+	HScale_TT =	Escala de altura
 	LoopLVColor_TT =	Clique para selecionar uma cor
 	IfLVColor_TT =	Clique para selecionar uma cor
 	RefreshIEW_TT =	Atualizar Lista

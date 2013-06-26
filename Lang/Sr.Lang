@@ -639,6 +639,12 @@
 	EditComm_TT =	Едит Цоммент
 	Reset_TT =	Слободан променљивог садржаја
 	PicPrev_TT =	Двапут кликните да отворите слику
+	CoordPixel_TT =	Координатни режим
+	VariatT_TT =	Схадес оф варијације
+	IconN_TT =	Икона број у групи
+	TransC_TT =	Транспарентна боја
+	WScale_TT =	Ширина скала
+	HScale_TT =	Висина скала
 	LoopLVColor_TT =	Кликните да изаберете боју
 	IfLVColor_TT =	Кликните да изаберете боју
 	RefreshIEW_TT =	Освежи листу

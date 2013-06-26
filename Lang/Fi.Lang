@@ -639,6 +639,12 @@
 	EditComm_TT =	Edit Kommentti
 	Reset_TT =	Tyhjennä muuttujan sisältö
 	PicPrev_TT =	Kaksoisnapsauta Avaa Image
+	CoordPixel_TT =	Koordinoida tilassa
+	VariatT_TT =	Shades of vaihtelu
+	IconN_TT =	Icon määrä ryhmässä
+	TransC_TT =	Läpinäkyvä väri
+	WScale_TT =	Leveys mittakaavassa
+	HScale_TT =	Korkeusasteikon
 	LoopLVColor_TT =	Klikkaa valita värin
 	IfLVColor_TT =	Klikkaa valita värin
 	RefreshIEW_TT =	Päivitä lista

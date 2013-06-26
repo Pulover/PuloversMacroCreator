@@ -639,6 +639,12 @@
 	EditComm_TT =	댓글 수정
 	Reset_TT =	지우기 변수 내용
 	PicPrev_TT =	이미지를 열려면 두 번 클릭하십시오
+	CoordPixel_TT =	모드를 조정
+	VariatT_TT =	변화의 그늘
+	IconN_TT =	그룹 아이콘 번호
+	TransC_TT =	투명한 색깔
+	WScale_TT =	폭 규모
+	HScale_TT =	높이 규모
 	LoopLVColor_TT =	색상을 선택하려면 클릭하십시오
 	IfLVColor_TT =	색상을 선택하려면 클릭하십시오
 	RefreshIEW_TT =	새로 고침 목록

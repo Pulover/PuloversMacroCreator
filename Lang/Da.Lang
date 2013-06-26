@@ -639,6 +639,12 @@
 	EditComm_TT =	Rediger kommentar
 	Reset_TT =	Ryd variable indhold
 	PicPrev_TT =	Dobbeltklik for at åbne billedet
+	CoordPixel_TT =	Koordinere tilstand
+	VariatT_TT =	Shades of variation
+	IconN_TT =	Ikon nummer i gruppen
+	TransC_TT =	Gennemsigtig farve
+	WScale_TT =	Bredde skala
+	HScale_TT =	Højde skala
 	LoopLVColor_TT =	Klik for at vælge en farve
 	IfLVColor_TT =	Klik for at vælge en farve
 	RefreshIEW_TT =	Refresh List

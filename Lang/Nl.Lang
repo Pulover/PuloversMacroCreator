@@ -639,6 +639,12 @@
 	EditComm_TT =	Opmerking bewerken
 	Reset_TT =	Clear variabele inhoud
 	PicPrev_TT =	Dubbelklik Click to open image
+	CoordPixel_TT =	Coördineren modus
+	VariatT_TT =	Shades of variatie
+	IconN_TT =	Pictogram nummer in groep
+	TransC_TT =	Transparante kleur
+	WScale_TT =	Schaal breedte
+	HScale_TT =	Hoogte schaal
 	LoopLVColor_TT =	Klik hier om een ​​kleur te kiezen
 	IfLVColor_TT =	Klik hier om een ​​kleur te kiezen
 	RefreshIEW_TT =	Lijst vernieuwen

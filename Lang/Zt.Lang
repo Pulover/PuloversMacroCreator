@@ -639,6 +639,12 @@
 	EditComm_TT =	編輯點評
 	Reset_TT =	清除變量的內容
 	PicPrev_TT =	雙擊打開圖片
+	CoordPixel_TT =	協調模式
+	VariatT_TT =	色調的變化
+	IconN_TT =	圖標組
+	TransC_TT =	透明色
+	WScale_TT =	寬規模
+	HScale_TT =	身高規模
 	LoopLVColor_TT =	點擊挑顏色
 	IfLVColor_TT =	點擊挑顏色
 	RefreshIEW_TT =	刷新列表

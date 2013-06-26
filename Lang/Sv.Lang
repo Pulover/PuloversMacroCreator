@@ -639,6 +639,12 @@
 	EditComm_TT =	Redigera kommentar
 	Reset_TT =	Tydliga varierande innehåll
 	PicPrev_TT =	Dubbelklicka för att öppna bild
+	CoordPixel_TT =	Koordinat-läge
+	VariatT_TT =	Nyanser av variation
+	IconN_TT =	Ikon nummer i gruppen
+	TransC_TT =	Transparent färg
+	WScale_TT =	Bredd skala
+	HScale_TT =	Höjd skala
 	LoopLVColor_TT =	Klicka här för att välja en färg
 	IfLVColor_TT =	Klicka här för att välja en färg
 	RefreshIEW_TT =	Uppdatera lista

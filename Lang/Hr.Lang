@@ -639,6 +639,12 @@
 	EditComm_TT =	Uredi komentar
 	Reset_TT =	Vedro promjenjivi sadržaj
 	PicPrev_TT =	Dvaput kliknite na sliku otvorite
+	CoordPixel_TT =	Koordinacija rada
+	VariatT_TT =	Nijanse varijacije
+	IconN_TT =	Icon broj u grupi
+	TransC_TT =	Prozirna boja
+	WScale_TT =	Širina razmjera
+	HScale_TT =	Visina razmjera
 	LoopLVColor_TT =	Kliknite da odaberete boju
 	IfLVColor_TT =	Kliknite da odaberete boju
 	RefreshIEW_TT =	Osvježi popis
