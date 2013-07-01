@@ -65,6 +65,7 @@
 	e_Lang011 =	Fl&yt op
 	e_Lang012 =	Fly&t ned
 	e_Lang013 =	I&ndsæt fra kassen
+	e_Lang014 =	Edit f&arvemærke
 		
 ; Macro Sub Menu		
 	r_lang001 =	&Indspil makro
@@ -637,6 +638,7 @@
 	VarCopyB_TT =	Kopier nuværende variable indhold
 	FindReplace_TT =	Find / Erstat (Ctrl+F)
 	EditComm_TT =	Rediger kommentar
+	EditColor_TT =	Edit farvemærke
 	Reset_TT =	Ryd variable indhold
 	PicPrev_TT =	Dobbeltklik for at åbne billedet
 	CoordPixel_TT =	Koordinere tilstand

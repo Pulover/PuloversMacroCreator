@@ -33,6 +33,7 @@ Insert::GoSub, ApplyL
 ^y::GoSub, Redo
 ^f::GoSub, FindReplace
 ^l::GoSub, EditComm
+^m::GoSub, EditColor
 ^n::GoSub, New
 ^o::GoSub, Open
 ^s::GoSub, Save

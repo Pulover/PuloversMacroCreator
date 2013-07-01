@@ -65,6 +65,7 @@
 	e_Lang011 =	끌어 올리다
 	e_Lang012 =	아래로 이동
 	e_Lang013 =	상자 삽입
+	e_Lang014 =	편집 색상 표
 		
 ; Macro Sub Menu		
 	r_lang001 =	기록 매크로
@@ -637,6 +638,7 @@
 	VarCopyB_TT =	현재 변수 내용을 복사
 	FindReplace_TT =	찾기 / 바꾸기 (Ctrl 키+F)
 	EditComm_TT =	댓글 수정
+	EditColor_TT =	편집 색상 표
 	Reset_TT =	지우기 변수 내용
 	PicPrev_TT =	이미지를 열려면 두 번 클릭하십시오
 	CoordPixel_TT =	모드를 조정

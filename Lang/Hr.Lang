@@ -65,6 +65,7 @@
 	e_Lang011 =	&Napredovati
 	e_Lang012 =	Po&micanje dolje
 	e_Lang013 =	&Stavite na kutiji
+	e_Lang014 =	Uredi Bo&ja oznaka
 		
 ; Macro Sub Menu		
 	r_lang001 =	&Snimanje makro
@@ -637,6 +638,7 @@
 	VarCopyB_TT =	Kopirajte trenutne varijabilne sadržaj
 	FindReplace_TT =	Pronađi / Zamijeni (Ctrl+F)
 	EditComm_TT =	Uredi komentar
+	EditColor_TT =	Uredi Boja oznaka
 	Reset_TT =	Vedro promjenjivi sadržaj
 	PicPrev_TT =	Dvaput kliknite na sliku otvorite
 	CoordPixel_TT =	Koordinacija rada

@@ -65,6 +65,7 @@
 	e_Lang011 =	繰り上げる
 	e_Lang012 =	下へ移動
 	e_Lang013 =	ボックスから挿入
+	e_Lang014 =	編集色マーク
 		
 ; Macro Sub Menu		
 	r_lang001 =	マクロの記録
@@ -637,6 +638,7 @@
 	VarCopyB_TT =	現在の変数の内容をコピーします
 	FindReplace_TT =	検索/置換（Ctrl+F）を
 	EditComm_TT =	コメントを編集
+	EditColor_TT =	編集色マーク
 	Reset_TT =	クリア変数の内容
 	PicPrev_TT =	画像をダブルクリックして開き
 	CoordPixel_TT =	モードを調整

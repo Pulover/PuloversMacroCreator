@@ -65,6 +65,7 @@
 	e_Lang011 =	P&ujar
 	e_Lang012 =	&Baixar
 	e_Lang013 =	&Inseriu de Caixa
+	e_Lang014 =	Edit&a color
 		
 ; Macro Sub Menu		
 	r_lang001 =	&Gravar macro
@@ -637,6 +638,7 @@
 	VarCopyB_TT =	Copia contingut actual de variables
 	FindReplace_TT =	Cercar / Reemplaçar (Ctrl+F)
 	EditComm_TT =	Redactar comentari
+	EditColor_TT =	Edita color
 	Reset_TT =	Esborrar el contingut de variables
 	PicPrev_TT =	Feu doble clic per ampliar imatge
 	CoordPixel_TT =	Mode de coordenades

@@ -65,6 +65,7 @@
 	e_Lang011 =	Yuka&rı çıkmak
 	e_Lang012 =	A&şağı Taşı
 	e_Lang013 =	Ku&tusundan Ekle
+	e_Lang014 =	&Düzen renk işareti
 		
 ; Macro Sub Menu		
 	r_lang001 =	&Makro Kaydet
@@ -637,6 +638,7 @@
 	VarCopyB_TT =	Akım değişken içeriğini kopyalama
 	FindReplace_TT =	Bul / Değiştir (Ctrl+F)
 	EditComm_TT =	Yorum düzenle
+	EditColor_TT =	Düzen renk işareti
 	Reset_TT =	Temizle değişken içeriği
 	PicPrev_TT =	Görüntü açmak için çift tıklayın
 	CoordPixel_TT =	Modu Koordinat

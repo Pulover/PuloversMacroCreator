@@ -65,6 +65,7 @@
 	e_Lang011 =	&Siirrä ylös
 	e_Lang012 =	Sii&rtyä alemmalle luokalle
 	e_Lang013 =	I&nsertin laatikko
+	e_Lang014 =	E&dit värimerkk
 		
 ; Macro Sub Menu		
 	r_lang001 =	&Nauhoita makro
@@ -637,6 +638,7 @@
 	VarCopyB_TT =	Kopioi nykyinen muuttujan sisältö
 	FindReplace_TT =	Etsi / Korvaa (Ctrl+F)
 	EditComm_TT =	Edit Kommentti
+	EditColor_TT =	Edit värimerkk
 	Reset_TT =	Tyhjennä muuttujan sisältö
 	PicPrev_TT =	Kaksoisnapsauta Avaa Image
 	CoordPixel_TT =	Koordinoida tilassa

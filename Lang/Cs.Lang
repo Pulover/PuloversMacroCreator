@@ -65,6 +65,7 @@
 	e_Lang011 =	Na&horu
 	e_Lang012 =	Do&lů
 	e_Lang013 =	Vlo&žit z krabice
+	e_Lang014 =	&Edit barva označuje
 		
 ; Macro Sub Menu		
 	r_lang001 =	&Záznam makra
@@ -637,6 +638,7 @@
 	VarCopyB_TT =	Zkopírujte aktuální proměnné obsah
 	FindReplace_TT =	Najít / Nahradit (Ctrl+F)
 	EditComm_TT =	Upravit komentář
+	EditColor_TT =	Edit barva označuje
 	Reset_TT =	Vymazat proměnné obsah
 	PicPrev_TT =	Dvakrát klikněte na Otevřít obrázek
 	CoordPixel_TT =	Koordinovat režim

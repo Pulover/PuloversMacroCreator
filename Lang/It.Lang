@@ -65,6 +65,7 @@
 	e_Lang011 =	&Sposta su
 	e_Lang012 =	A&bbassare
 	e_Lang013 =	Inserisci da scato&la
+	e_Lang014 =	Modi&fica marchio di colore
 		
 ; Macro Sub Menu		
 	r_lang001 =	&Registra macro
@@ -637,6 +638,7 @@
 	VarCopyB_TT =	Copiare il contenuto delle variabili correnti
 	FindReplace_TT =	Trova / Sostituisci (Ctrl+F)
 	EditComm_TT =	Modifica commento
+	EditColor_TT =	Modifica marchio di colore
 	Reset_TT =	Cancella il contenuto delle variabili
 	PicPrev_TT =	Fare doppio clic per aprire l'immagine
 	CoordPixel_TT =	Modalità di coordinare

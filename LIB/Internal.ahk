@@ -1,4 +1,4 @@
-﻿LV_GetTexts(Index, ByRef Act="", ByRef Det="", ByRef Tim="", ByRef Del="", ByRef Typ="", ByRef Tar="", ByRef Win="", ByRef Com="")
+﻿LV_GetTexts(Index, ByRef Act="", ByRef Det="", ByRef Tim="", ByRef Del="", ByRef Typ="", ByRef Tar="", ByRef Win="", ByRef Com="", ByRef Col="")
 {
 	LV_GetText(Act, Index, 2)
 ,	Act := LTrim(Act)
@@ -9,6 +9,7 @@
 ,	LV_GetText(Tar, Index, 7)
 ,	LV_GetText(Win, Index, 8)
 ,	LV_GetText(Com, Index, 9)
+,	LV_GetText(Col, Index, 10)
 }
 
 ShowTooltip()
@@ -308,17 +309,10 @@ GuiAddLV(ident)
 	global
 	Gui, Tab, %ident%
 	Try
-		Gui, Add, ListView, x+0 y+0 AltSubmit Checked hwndListID%ident% vInputList%ident% gInputList W760 r26 NoSort LV0x10000, Index|Action|Details|Repeat|Delay|Type|Control|Window|Comment
+		Gui, Add, ListView, x+0 y+0 AltSubmit Checked hwndListID%ident% vInputList%ident% gInputList W760 r26 NoSort LV0x10000, Index|Action|Details|Repeat|Delay|Type|Control|Window|Comment|Color
 	LV_SetImageList(ImageListID)
-,	LV_ModifyCol(1, Col_1)	; Index
-,	LV_ModifyCol(2, Col_2)	; Action
-,	LV_ModifyCol(3, Col_3)	; Details
-,	LV_ModifyCol(4, Col_4)	; Repeat
-,	LV_ModifyCol(5, Col_5)	; Delay
-,	LV_ModifyCol(6, Col_6)	; Type
-,	LV_ModifyCol(7, Col_7)	; Control
-,	LV_ModifyCol(8, Col_8)	; Window
-,	LV_ModifyCol(9, Col_9)	; Comment
+	Loop, 10
+		LV_ModifyCol(A_Index, Col_%A_Index%)
 }
 
 SelectByType(SelType, Col=6)

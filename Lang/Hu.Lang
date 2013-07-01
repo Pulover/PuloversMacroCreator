@@ -65,6 +65,7 @@
 	e_Lang011 =	&Felköltözik
 	e_Lang012 =	&Lefelé
 	e_Lang013 =	&Beszúrás box
+	e_Lang014 =	S&zerkesztés színvédjegy
 		
 ; Macro Sub Menu		
 	r_lang001 =	&Makró rögzítése
@@ -637,6 +638,7 @@
 	VarCopyB_TT =	Másolása a jelenlegi változó tartalmát
 	FindReplace_TT =	Keresés / Csere (Ctrl+F)
 	EditComm_TT =	Megjegyzés szerkesztése
+	EditColor_TT =	Szerkesztés színvédjegy
 	Reset_TT =	Kódolatlan változó tartalma
 	PicPrev_TT =	Kattintson duplán a megnyitni fényképek
 	CoordPixel_TT =	Koordináta mód

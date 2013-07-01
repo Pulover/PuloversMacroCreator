@@ -194,7 +194,8 @@ IniRead, TabIndent, %IniFilePath%, ExportOptions, TabIndent, 1
 IniRead, IncPmc, %IniFilePath%, ExportOptions, IncPmc, 0
 IniRead, Exe_Exp, %IniFilePath%, ExportOptions, Exe_Exp, 0
 IniRead, WinState, %IniFilePath%, WindowOptions, WinState, 0
-IniRead, ColSizes, %IniFilePath%, WindowOptions, ColSizes, 65,135,200,50,40,85,100,100,60
+IniRead, ColSizes, %IniFilePath%, WindowOptions, ColSizes, 65,125,190,50,40,85,95,90,60,40
+IniRead, SavedColors, %IniFilePath%, WindowOptions, SavedColors, %A_Space%
 IniRead, OSCPos, %IniFilePath%, WindowOptions, OSCPos, X0 Y0
 IniRead, OSTrans, %IniFilePath%, WindowOptions, OSTrans, 255
 IniRead, OSCaption, %IniFilePath%, WindowOptions, OSCaption, 0
@@ -582,12 +583,12 @@ Gui, Add, Button, -Wrap x+4 ys+70 W25 H25 hwndIfDirB vIfDirB gSetWin
 Gui, Add, Checkbox, -Wrap ys+75 xp+30 W100 gCapt vCapt R1, %w_Lang012%
 Gui, Add, Checkbox, -Wrap Checked%KeepHkOn% W100 -Wrap yp x+5 vKeepHkOn gCheckHkOn R1, %w_Lang014%
 Gui, Add, Tab2, Section Buttons -Wrap AltSubmit xm ys+72 H22 W500 hwndTabSel vA_List gTabSel, Macro1
-Gui, Add, ListView, x+0 y+0 AltSubmit Checked hwndListID1 vInputList1 gInputList W860 r28 NoSort LV0x10000, Index|Action|Details|Repeat|Delay|Type|Control|Window|Comment
+Gui, Add, ListView, x+0 y+0 AltSubmit Checked hwndListID1 vInputList1 gInputList W860 r28 NoSort LV0x10000, Index|Action|Details|Repeat|Delay|Type|Control|Window|Comment|Color
 ImageListID := IL_Create(LVIcons.MaxIndex())
 LV_SetImageList(ImageListID)
 Loop, % LVIcons.MaxIndex()
 	IL_Add(ImageListID, LVIcons[A_Index][1], LVIcons[A_Index][2])
-Loop, 9
+Loop, 10
 	LV_ModifyCol(A_Index, Col_%A_Index%)
 Gui, Tab
 Gui, Add, UpDown, ys+23 x+4 gOrder vOrder -16 Range0-1, 0
@@ -610,6 +611,8 @@ Gui, Add, Button, -Wrap W22 H25 hwndDuplicate vDuplicate gDuplicate
 Gui, Add, Button, -Wrap W22 H25 hwndCopyTo vCopyTo gCopyTo
 	ILButton(CopyTo, CopyIcon[1] ":" CopyIcon[2])
 Gui, Add, Text, vSeparator7 W25 H2 0x10
+Gui, Add, Button, -Wrap W22 H25 hwndEditColor vEditColor gEditColor
+	ILButton(EditColor, ColorIcon[1] ":" ColorIcon[2])
 Gui, Add, Button, -Wrap W22 H25 hwndEditComm vEditComm gEditComm
 	ILButton(EditComm, CommentIcon[1] ":" CommentIcon[2])
 Gui, Add, Button, -Wrap W22 H25 hwndFindReplace vFindReplace gFindReplace
@@ -8239,7 +8242,6 @@ Comment := Comm
 Gui, 1:-Disabled
 Gui, 17:Destroy
 Gui, 1:Default
-RowSelection := LV_GetCount("Selected")
 If RowSelection = 1
 	LV_Modify(RowNumber, "Col9", Comment)
 If RowSelection = 0
@@ -8272,6 +8274,44 @@ Gui, 1:-Disabled
 Gui, 17:Destroy
 return
 
+EditColor:
+RowSelection := LV_GetCount("Selected")
+rColor := ""
+If RowSelection = 1
+{
+	RowNumber := LV_GetNext()
+	LV_GetText(rColor, RowNumber, 10)
+}
+If Dlg_Color(rColor, PMCWinID, SavedColors)
+{
+	If (rColor = "0xffffff")
+		rColor := ""
+	If RowSelection = 1
+		LV_Modify(RowNumber, "Col10", rColor)
+	If RowSelection = 0
+	{
+		RowNumber = 0
+		Loop
+		{
+			RowNumber := A_Index
+			If (RowNumber > ListCount%A_List%)
+				break
+			LV_Modify(RowNumber, "Col10", rColor)
+		}
+	}
+	Else
+	{
+		RowNumber = 0
+		Loop, %RowSelection%
+		{
+			RowNumber := LV_GetNext(RowNumber)
+			LV_Modify(RowNumber, "Col10", rColor)
+		}
+	}
+}
+GoSub, RowCheck
+return
+
 FindReplace:
 Input
 Gui 18:+LastFoundExist
@@ -8281,7 +8321,7 @@ Gui, 18:+owner1 +ToolWindow
 Gui, 1:Default
 ; Gui, 18:Font, s7
 Gui, 18:Add, Text, y+15 x+120 W100, %t_Lang066%:
-Gui, 18:Add, DDL, yp-5 xp+90 W70 vSearchCol, Details||Repeat|Delay|Control|Window|Comment
+Gui, 18:Add, DDL, yp-5 xp+90 W70 vSearchCol AltSubmit, Details||Repeat|Delay|Control|Window|Comment|Color
 Gui, 18:Add, GroupBox, Section xm W280 H185, %t_Lang068%:
 Gui, 18:Add, Edit, ys+25 xs+10 vFind W260 r5
 Gui, 18:Add, Button, -Wrap Default y+5 xs+210 W60 H23 gFindOK, %t_Lang068%
@@ -8307,9 +8347,8 @@ If Find =
 	return
 Gui, 1:Default
 StringReplace, Find, Find, `n, ``n, All
-Details := 3, Repeat := 4, Delay := 5, Control := 7, Window := 8, Comment := 9
 LV_Modify(0, "-Select")
-t_Col := % %SearchCol%
+t_Col := (SearchCol < 4) ? SearchCol + 2 : SearchCol + 3
 Loop
 {
 	RowNumber := A_Index
@@ -8347,8 +8386,7 @@ If Find =
 	return
 Gui, 1:Default
 StringReplace, Find, Find, `n, ``n, All
-Details := 3, Repeat := 4, Delay := 5, Control := 7, Window := 8, Comment := 9, Replaces := 0
-t_Col := % %SearchCol%
+t_Col := (SearchCol < 4) ? SearchCol + 2 : SearchCol + 3
 If RepAllRows = 1
 {
 	Loop, % ListCount%A_List%
@@ -9546,6 +9584,7 @@ AbortKey := "F8"
 ,	OSCPos := "X0 Y0"
 ,	OSTrans := 255
 ,	OSCaption := 0
+,	OSCaption := 0
 Gui 28:+LastFoundExist
 IfWinExist
 {
@@ -9566,12 +9605,17 @@ GoSub, DefaultMod
 GoSub, ObjCreate
 GoSub, LoadData
 SetColSizes:
-ColSizes := "65,135,200,50,40,85,100,100,60"
+ColSizes := "65,125,190,50,40,85,95,90,60,40"
 Loop, Parse, ColSizes, `,
 	Col_%A_Index% := A_LoopField
 Gui, 1:Default
-Loop, 9
-	LV_ModifyCol(A_Index, Col_%A_Index%)
+Loop, %TabCount%
+{
+	Gui, ListView, InputList%A_Index%
+	Loop, 10
+		LV_ModifyCol(A_Index, Col_%A_Index%)
+}
+Gui, ListView, InputList%A_List%
 return
 
 DefaultMod:
@@ -9718,6 +9762,7 @@ IniWrite, %IncPmc%, %IniFilePath%, ExportOptions, IncPmc
 IniWrite, %Exe_Exp%, %IniFilePath%, ExportOptions, Exe_Exp
 IniWrite, %WinState%, %IniFilePath%, WindowOptions, WinState
 IniWrite, %ColSizes%, %IniFilePath%, WindowOptions, ColSizes
+IniWrite, %SavedColors%, %IniFilePath%, WindowOptions, SavedColors
 IniWrite, %OSCPos%, %IniFilePath%, WindowOptions, OSCPos
 IniWrite, %OSTrans%, %IniFilePath%, WindowOptions, OSTrans
 IniWrite, %OSCaption%, %IniFilePath%, WindowOptions, OSCaption
@@ -9829,6 +9874,7 @@ Loop, % LV_GetCount()
 	LV_GetText(Action, A_Index, 2)
 	Action := LTrim(Action)
 	LV_GetText(Type, A_Index, 6)
+	LV_GetText(Color, A_Index, 10)
 	LV_Modify(A_Index, "Col2", Action)
 	If ShowLoopIfMark = 1
 	{
@@ -9843,8 +9889,9 @@ Loop, % LV_GetCount()
 		Else If ((Type = cType17) && (Action <> "[Else]"))
 			RowColorIf++, IdxLv .= "*"
 		LV_Colors.Row(ListID%A_List%, A_Index
-		, (RowColorLoop > 0) ? LoopLVColor : ((Action = "[LoopEnd]") ? LoopLVColor : 0xFFFFFF)
-		, (RowColorIf > 0 ) ? IfLVColor : ((Action = "[End If]") ? IfLVColor : 0x000000))
+		, (RowColorLoop > 0) ? LoopLVColor : ((Action = "[LoopEnd]") ? LoopLVColor : "")
+		, (RowColorIf > 0 ) ? IfLVColor : ((Action = "[End If]") ? IfLVColor : ""))
+		LV_Colors.Cell(ListID%A_List%, A_Index, 1, Color ? Color : "")
 	}
 	Else
 	{
@@ -10013,6 +10060,7 @@ GuiControl, Move, Duplicate, % "x" GuiWidth-26
 GuiControl, Move, CopyTo, % "x" GuiWidth-26
 GuiControl, Move, Separator7, % "x" GuiWidth-26
 GuiControl, Move, FindReplace, % "x" GuiWidth-26
+GuiControl, Move, EditColor, % "x" GuiWidth-26
 GuiControl, Move, EditComm, % "x" GuiWidth-26
 GuiControl, Move, Repeat, % "y" GuiHeight-23
 GuiControl, Move, Rept, % "y" GuiHeight-27
@@ -10136,6 +10184,7 @@ Menu, EditMenu, Add, %m_Lang004%`t%_s%Enter, EditButton
 Menu, EditMenu, Add, %e_Lang001%`t%_s%Ctrl+D, Duplicate
 Menu, EditMenu, Add, %e_Lang003%`t%_s%Ctrl+F, FindReplace
 Menu, EditMenu, Add, %e_Lang002%`t%_s%Ctrl+L, EditComm
+Menu, EditMenu, Add, %e_Lang014%`t%_s%Ctrl+M, EditColor
 Menu, EditMenu, Default, %m_Lang004%`t%_s%Enter
 Menu, EditMenu, Add
 Menu, EditMenu, Add, %m_Lang002%, :InsertMenu
@@ -10266,6 +10315,7 @@ Try Menu, EditMenu, Icon, %m_Lang004%`t%_s%Enter, % EditIcon[1], % EditIcon[2]
 Try Menu, EditMenu, Icon, %e_Lang001%`t%_s%Ctrl+D, % DuplicateIcon[1], % DuplicateIcon[2]
 Try Menu, EditMenu, Icon, %e_Lang003%`t%_s%Ctrl+F, % FindIcon[1], % FindIcon[2]
 Try Menu, EditMenu, Icon, %e_Lang002%`t%_s%Ctrl+L, % CommentIcon[1], % CommentIcon[2]
+Try Menu, EditMenu, Icon, %e_Lang014%`t%_s%Ctrl+M, % ColorIcon[1], % ColorIcon[2]
 Try Menu, EditMenu, Icon, %e_Lang005%`t%_s%Ctrl+Z, % UndoIcon[1], % UndoIcon[2]
 Try Menu, EditMenu, Icon, %e_Lang006%`t%_s%Ctrl+Y, % RedoIcon[1], % RedoIcon[2]
 Try Menu, EditMenu, Icon, %e_Lang007%`t%_s%Ctrl+X, % CutIcon[1], % CutIcon[2]

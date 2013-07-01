@@ -65,6 +65,7 @@
 	e_Lang011 =	升级
 	e_Lang012 =	下移
 	e_Lang013 =	从框中插入
+	e_Lang014 =	编辑颜色标志
 		
 ; Macro Sub Menu		
 	r_lang001 =	录制宏
@@ -637,6 +638,7 @@
 	VarCopyB_TT =	复制当前变量的内容
 	FindReplace_TT =	查找/替换（Ctrl+F）
 	EditComm_TT =	编辑点评
+	EditColor_TT =	编辑颜色标志
 	Reset_TT =	清除变量的内容
 	PicPrev_TT =	双击打开图片
 	CoordPixel_TT =	协调模式

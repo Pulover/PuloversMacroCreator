@@ -65,6 +65,7 @@
 	e_Lang011 =	O&mhoog
 	e_Lang012 =	Oml&aag
 	e_Lang013 =	Invo&egen van Box
+	e_Lang014 =	&Bewerken kleurmarkering
 		
 ; Macro Sub Menu		
 	r_lang001 =	&Macro opnemen
@@ -637,6 +638,7 @@
 	VarCopyB_TT =	Kopieer huidige variabele inhoud
 	FindReplace_TT =	Zoeken / Vervangen (Ctrl+F)
 	EditComm_TT =	Opmerking bewerken
+	EditColor_TT =	Bewerken kleurmarkering
 	Reset_TT =	Clear variabele inhoud
 	PicPrev_TT =	Dubbelklik Click to open image
 	CoordPixel_TT =	Coördineren modus

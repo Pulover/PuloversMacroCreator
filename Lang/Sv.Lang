@@ -65,6 +65,7 @@
 	e_Lang011 =	&Flytta upp
 	e_Lang012 =	Fl&ytta ned
 	e_Lang013 =	I&nfoga från rutan
+	e_Lang014 =	R&edigera färgmarkering
 		
 ; Macro Sub Menu		
 	r_lang001 =	&Spela in makro
@@ -637,6 +638,7 @@
 	VarCopyB_TT =	Kopiera befintliga variabla innehåll
 	FindReplace_TT =	Sök / Ersätt (Ctrl+F)
 	EditComm_TT =	Redigera kommentar
+	EditColor_TT =	Redigera färgmarkering
 	Reset_TT =	Tydliga varierande innehåll
 	PicPrev_TT =	Dubbelklicka för att öppna bild
 	CoordPixel_TT =	Koordinat-läge

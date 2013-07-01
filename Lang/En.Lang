@@ -65,6 +65,7 @@
 	e_Lang011 =	Mo&ve Up
 	e_Lang012 =	Move Dow&n
 	e_Lang013 =	&Insert from Box
+	e_Lang014 =	Edit Color &Mark
 		
 ; Macro Sub Menu		
 	r_lang001 =	&Record Macro
@@ -637,6 +638,7 @@
 	VarCopyB_TT =	Copy current variable contents
 	FindReplace_TT =	Find / Replace (Ctrl+F)
 	EditComm_TT =	Edit Comment
+	EditColor_TT =	Edit Color Mark
 	Reset_TT =	Clear variable contents
 	PicPrev_TT =	Double-Click to open Image
 	CoordPixel_TT =	Coordinate mode

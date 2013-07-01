@@ -65,6 +65,7 @@
 	e_Lang011 =	&Nach oben
 	e_Lang012 =	Nac&h unten
 	e_Lang013 =	E&infügen aus Box
+	e_Lang014 =	&Bearbeiten Farbmarkierung
 		
 ; Macro Sub Menu		
 	r_lang001 =	&Makro aufzeichnen
@@ -637,6 +638,7 @@
 	VarCopyB_TT =	Kopieren aktuellen variablen Inhalten
 	FindReplace_TT =	Suchen / Ersetzen (Strg+F)
 	EditComm_TT =	Kommentar bearbeiten
+	EditColor_TT =	Bearbeiten Farbmarkierung
 	Reset_TT =	Klare variablen Inhalten
 	PicPrev_TT =	Doppelklicken Sie auf das Bild zu öffnen
 	CoordPixel_TT =	Koordinieren Modus

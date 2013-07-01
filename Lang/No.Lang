@@ -65,6 +65,7 @@
 	e_Lang011 =	Fl&ytt opp
 	e_Lang012 =	Fly&tt ned
 	e_Lang013 =	S&ett fra boksen
+	e_Lang014 =	Ed&it fargemerki
 		
 ; Macro Sub Menu		
 	r_lang001 =	&Registrer makro
@@ -637,6 +638,7 @@
 	VarCopyB_TT =	Kopier gjeldende variabelinnhold
 	FindReplace_TT =	Finn / Erstatt (Ctrl+F)
 	EditComm_TT =	Rediger Kommentar
+	EditColor_TT =	Edit fargemerki
 	Reset_TT =	Klare variabelinnhold
 	PicPrev_TT =	Dobbeltklikk for å åpne bilde
 	CoordPixel_TT =	Koordinere modus

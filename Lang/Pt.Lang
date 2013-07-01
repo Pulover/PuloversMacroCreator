@@ -62,9 +62,10 @@
 	e_Lang008 =	&Copiar
 	e_Lang009 =	C&olar
 	e_Lang010 =	E&xcluir
-	e_Lang011 =	Mover para Ci&ma
+	e_Lang011 =	Mo&ver para Cima
 	e_Lang012 =	Mover para &Baixo
 	e_Lang013 =	&Inserir da Caixa
+	e_Lang014 =	Editar &Marca de Cor
 		
 ; Macro Sub Menu		
 	r_lang001 =	&Gravar Macro
@@ -637,6 +638,7 @@
 	VarCopyB_TT =	Copy current variable contents
 	FindReplace_TT =	Localizar / Substituir (Ctrl+F)
 	EditComm_TT =	Editar Comentário
+	EditColor_TT =	Editar Marca de Cor
 	Reset_TT =	Apagar conteúdo da variável
 	PicPrev_TT =	Duplo-Clique para abrir a imagem
 	CoordPixel_TT =	Modo de coordenada

@@ -65,6 +65,7 @@
 	e_Lang011 =	D&éplacer vers le haut
 	e_Lang012 =	De&scendre
 	e_Lang013 =	&Insérez de la case
+	e_Lang014 =	Modifier mar&que de couleur
 		
 ; Macro Sub Menu		
 	r_lang001 =	&Enregistrer une macro
@@ -637,6 +638,7 @@
 	VarCopyB_TT =	Copiez le contenu des variables actuelles
 	FindReplace_TT =	Rechercher / Remplacer (Ctrl+F)
 	EditComm_TT =	Modifier le commentaire
+	EditColor_TT =	Modifier marque de couleur
 	Reset_TT =	Effacer le contenu des variables
 	PicPrev_TT =	Double-cliquez sur l'image pour ouvrir
 	CoordPixel_TT =	Mode coordonner
