@@ -44,13 +44,13 @@ http://www.autohotkey.com/board/topic/15675-monster
 Jethrow for the IEGet Function.
 http://www.autohotkey.com/board/topic/47052-basic-webpage-controls
 
-majkinetor for the Color Pick Dialog function
+majkinetor for the Color Pick Dialog function.
 http://www.autohotkey.com/board/topic/49214-ahk-ahk-l-forms-framework-08/
 
-fincs for GenDocs
+fincs for GenDocs.
 http://www.autohotkey.com/board/topic/71751-gendocs-v30-alpha002
 
-T800 for Html Help utils
+T800 for Html Help utils.
 http://www.autohotkey.com/board/topic/17984-html-help-utils
 */
 
@@ -2409,7 +2409,7 @@ Gui, 26:Add, Link, y+0, Kdoske && trueski for the <a href="http://www.autohotkey
 Gui, 26:Add, Link, y+0, jaco0646 for the <a href="http://www.autohotkey.com/board/topic/47439-user-defined-dynamic-hotkeys">function</a> to make hotkey controls detect other keys.
 Gui, 26:Add, Link, y+0, Laszlo for the <a href="http://www.autohotkey.com/board/topic/15675-monster">Monster function</a> to solve expressions.
 Gui, 26:Add, Link, y+0, Jethrow for the <a href="http://www.autohotkey.com/board/topic/47052-basic-webpage-controls">IEGet Function</a>.
-Gui, 26:Add, Link, y+0, majkinetor for the <a href="http://www.autohotkey.com/board/topic/49214-ahk-ahk-l-forms-framework-08/">Color Pick Dialog</a> function..
+Gui, 26:Add, Link, y+0, majkinetor for the <a href="http://www.autohotkey.com/board/topic/49214-ahk-ahk-l-forms-framework-08/">Color Pick Dialog</a> function.
 Gui, 26:Add, Link, y+0, fincs for <a href="http://www.autohotkey.com/board/topic/71751-gendocs-v30-alpha002">GenDocs</a>.
 Gui, 26:Add, Link, y+0, T800 for <a href="http://www.autohotkey.com/board/topic/17984-html-help-utils">Html Help utils</a>.
 Gui, 26:Add, Groupbox, W380 H130 Center, GNU General Public License
