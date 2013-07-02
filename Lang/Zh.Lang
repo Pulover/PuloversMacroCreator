@@ -640,6 +640,8 @@
 	EditComm_TT =	编辑点评
 	EditColor_TT =	编辑颜色标志
 	Reset_TT =	清除变量的内容
+	Screenshot_TT =	请截图
+	ColorPick_TT =	拾色器
 	PicPrev_TT =	双击打开图片
 	CoordPixel_TT =	协调模式
 	VariatT_TT =	色调的变化

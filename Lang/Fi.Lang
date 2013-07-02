@@ -640,6 +640,8 @@
 	EditComm_TT =	Edit Kommentti
 	EditColor_TT =	Edit värimerkk
 	Reset_TT =	Tyhjennä muuttujan sisältö
+	Screenshot_TT =	Tee Screenshot
+	ColorPick_TT =	Värivaihtoehtojamme
 	PicPrev_TT =	Kaksoisnapsauta Avaa Image
 	CoordPixel_TT =	Koordinoida tilassa
 	VariatT_TT =	Shades of vaihtelu

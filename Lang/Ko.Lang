@@ -640,6 +640,8 @@
 	EditComm_TT =	댓글 수정
 	EditColor_TT =	편집 색상 표
 	Reset_TT =	지우기 변수 내용
+	Screenshot_TT =	스크린 샷 만들기
+	ColorPick_TT =	색상 선택기
 	PicPrev_TT =	이미지를 열려면 두 번 클릭하십시오
 	CoordPixel_TT =	모드를 조정
 	VariatT_TT =	변화의 그늘

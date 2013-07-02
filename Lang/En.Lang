@@ -640,6 +640,8 @@
 	EditComm_TT =	Edit Comment
 	EditColor_TT =	Edit Color Mark
 	Reset_TT =	Clear variable contents
+	Screenshot_TT =	Make Screenshot
+	ColorPick_TT =	Color Picker
 	PicPrev_TT =	Double-Click to open Image
 	CoordPixel_TT =	Coordinate mode
 	VariatT_TT =	Shades of variation

@@ -640,6 +640,8 @@
 	EditComm_TT =	編輯點評
 	EditColor_TT =	編輯顏色標誌
 	Reset_TT =	清除變量的內容
+	Screenshot_TT =	製作截圖
+	ColorPick_TT =	拾色器
 	PicPrev_TT =	雙擊打開圖片
 	CoordPixel_TT =	協調模式
 	VariatT_TT =	色調的變化

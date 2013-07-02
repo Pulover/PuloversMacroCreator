@@ -640,6 +640,8 @@
 	EditComm_TT =	Megjegyzés szerkesztése
 	EditColor_TT =	Szerkesztés színvédjegy
 	Reset_TT =	Kódolatlan változó tartalma
+	Screenshot_TT =	Gyártó Screenshot
+	ColorPick_TT =	Color Picker
 	PicPrev_TT =	Kattintson duplán a megnyitni fényképek
 	CoordPixel_TT =	Koordináta mód
 	VariatT_TT =	Shades variációs

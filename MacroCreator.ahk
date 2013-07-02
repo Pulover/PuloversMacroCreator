@@ -4828,9 +4828,12 @@ Gui, 19:Add, Text, yp xs+65, X:
 Gui, 19:Add, Edit, yp-3 x+5 vePosX W60, %A_ScreenWidth%
 Gui, 19:Add, Text, yp x+15, Y:
 Gui, 19:Add, Edit, yp x+5 vePosY W60, %A_ScreenHeight%
-Gui, 19:Add, Radio, -Wrap Section Checked yp+25 xs W70 vImageS gImageS R1, %c_Lang063%
-Gui, 19:Add, Radio, -Wrap yp xp+75 W70 vPixelS gPixelS R1, %c_Lang064%
-Gui, 19:Add, Button, -Wrap yp-1 xs+150 W115 H23 vScreenshot gScreenshot, %c_Lang065%
+Gui, 19:Add, Radio, -Wrap Section Checked yp+25 xs W80 vImageS gImageS R1, %c_Lang063%
+Gui, 19:Add, Radio, -Wrap yp xs+125 W80 vPixelS gPixelS R1, %c_Lang064%
+Gui, 19:Add, Button, -Wrap yp-1 xs+80 W25 H25 hwndScreenshot vScreenshot gScreenshot ;, %c_Lang065%
+	ILButton(Screenshot, ScreenshotIcon[1] ":" ScreenshotIcon[2])
+Gui, 19:Add, Button, -Wrap yp xs+205 W25 H25 hwndColorPick vColorPick gEditColor Disabled
+	ILButton(ColorPick, ColorIcon[1] ":" ColorIcon[2])
 Gui, 19:Add, Edit, xs vImgFile W235 R1 -Multi
 Gui, 19:Add, Button, -Wrap yp-1 x+0 W30 H23 gSearchImg, ...
 Gui, 19:Add, Text, yp+30 xs W180 H25, %c_Lang067%:
@@ -5075,6 +5078,7 @@ GuiControl, 19:, ImgSize
 GuiControl, +BackgroundDefault, ColorPrev
 GuiControl, 19:Show, PicPrev
 GuiControl, 19:Hide, ColorPrev
+GuiControl, 19:Disable, ColorPick
 GuiControl, 19:Enable, Screenshot
 GuiControl, 19:Enable, IconN
 GuiControl, 19:Enable, TransC
@@ -5091,6 +5095,7 @@ GuiControl, 19:, ImgSize
 GuiControl, +BackgroundDefault, ColorPrev
 GuiControl, 19:Hide, PicPrev
 GuiControl, 19:Show, ColorPrev
+GuiControl, 19:Enable, ColorPick
 GuiControl, 19:Disable, Screenshot
 GuiControl, 19:Disable, IconN
 GuiControl, 19:Disable, TransC
@@ -8295,8 +8300,11 @@ Gui, 17:Destroy
 return
 
 EditColor:
+Gui, Submit, NoHide
 rColor := ""
-If InStr(A_GuiControl, "Color")
+If (A_GuiControl = "ColorPick")
+	rColor := ImgFile, OwnerID := CmdWin
+Else If InStr(A_GuiControl, "Color")
 	rColor := %A_GuiControl%, OwnerID := CmdWin
 Else
 {
@@ -8309,7 +8317,12 @@ Else
 }
 If Dlg_Color(rColor, OwnerID, CustomColors)
 {
-	If InStr(A_GuiControl, "Color")
+	If (A_GuiControl = "ColorPick")
+	{
+		GuiControl,, ImgFile, %rColor%
+		GuiControl, +Background%rColor%, ColorPrev
+	}
+	Else If InStr(A_GuiControl, "Color")
 	{
 		%A_GuiControl% := rColor
 		Gui, 4:Font, c%rColor%

@@ -640,6 +640,8 @@
 	EditComm_TT =	コメントを編集
 	EditColor_TT =	編集色マーク
 	Reset_TT =	クリア変数の内容
+	Screenshot_TT =	スクリーンを作る
+	ColorPick_TT =	カラーピッカー
 	PicPrev_TT =	画像をダブルクリックして開き
 	CoordPixel_TT =	モードを調整
 	VariatT_TT =	バリエーションの色合い

@@ -640,6 +640,8 @@
 	EditComm_TT =	Змінити коментар
 	EditColor_TT =	Редагувати мітку кольору
 	Reset_TT =	Очистити вміст змінної
+	Screenshot_TT =	Зробити скріншот
+	ColorPick_TT =	Color Picker
 	PicPrev_TT =	Двічі клацніть, щоб відкрити зображення
 	CoordPixel_TT =	Координатний режим
 	VariatT_TT =	Відтінки зміни

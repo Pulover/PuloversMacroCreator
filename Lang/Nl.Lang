@@ -640,6 +640,8 @@
 	EditComm_TT =	Opmerking bewerken
 	EditColor_TT =	Bewerken kleurmarkering
 	Reset_TT =	Clear variabele inhoud
+	Screenshot_TT =	Maak Screenshot
+	ColorPick_TT =	Kleurenkiezer
 	PicPrev_TT =	Dubbelklik Click to open image
 	CoordPixel_TT =	Coördineren modus
 	VariatT_TT =	Shades of variatie
