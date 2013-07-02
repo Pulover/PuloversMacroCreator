@@ -197,7 +197,7 @@ IniRead, TabIndent, %IniFilePath%, ExportOptions, TabIndent, 1
 IniRead, IncPmc, %IniFilePath%, ExportOptions, IncPmc, 0
 IniRead, Exe_Exp, %IniFilePath%, ExportOptions, Exe_Exp, 0
 IniRead, WinState, %IniFilePath%, WindowOptions, WinState, 0
-IniRead, ColSizes, %IniFilePath%, WindowOptions, ColSizes, 65,125,190,50,40,85,95,90,60,40
+IniRead, ColSizes, %IniFilePath%, WindowOptions, ColSizes, 65,125,190,50,40,85,90,90,60,40
 IniRead, CustomColors, %IniFilePath%, WindowOptions, CustomColors, 0
 IniRead, OSCPos, %IniFilePath%, WindowOptions, OSCPos, X0 Y0
 IniRead, OSTrans, %IniFilePath%, WindowOptions, OSTrans, 255
@@ -8304,7 +8304,7 @@ Gui, Submit, NoHide
 rColor := ""
 If (A_GuiControl = "ColorPick")
 	rColor := ImgFile, OwnerID := CmdWin
-Else If InStr(A_GuiControl, "Color")
+Else If InStr(A_GuiControl, "LVColor")
 	rColor := %A_GuiControl%, OwnerID := CmdWin
 Else
 {
@@ -8322,7 +8322,7 @@ If Dlg_Color(rColor, OwnerID, CustomColors)
 		GuiControl,, ImgFile, %rColor%
 		GuiControl, +Background%rColor%, ColorPrev
 	}
-	Else If InStr(A_GuiControl, "Color")
+	Else If InStr(A_GuiControl, "LVColor")
 	{
 		%A_GuiControl% := rColor
 		Gui, 4:Font, c%rColor%
@@ -9653,7 +9653,7 @@ GoSub, DefaultMod
 GoSub, ObjCreate
 GoSub, LoadData
 SetColSizes:
-ColSizes := "65,125,190,50,40,85,95,90,60,40"
+ColSizes := "65,125,190,50,40,85,90,90,60,40"
 Loop, Parse, ColSizes, `,
 	Col_%A_Index% := A_LoopField
 Gui, 1:Default
