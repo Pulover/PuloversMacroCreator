@@ -54,6 +54,13 @@ T800 for Html Help utils.
 http://www.autohotkey.com/board/topic/17984-html-help-utils
 */
 
+; Compiler Settings
+;@Ahk2Exe-SetName Pulover's Macro Creator
+;@Ahk2Exe-SetDescription Pulover's Macro Creator
+;@Ahk2Exe-SetVersion 3.7.6
+;@Ahk2Exe-SetCopyright Copyright © 2012-2013 Rodolfo U. Batista
+;@Ahk2Exe-SetOrigFilename MacroCreator.exe
+
 #NoEnv
 #InstallKeybdHook
 #MaxThreadsBuffer On
@@ -10582,13 +10589,6 @@ Else
 	GoSub, LoadLang_En
 }
 return
-
-; Compiler Settings
-;@Ahk2Exe-SetName Pulover's Macro Creator
-;@Ahk2Exe-SetDescription Pulover's Macro Creator
-;@Ahk2Exe-SetVersion 3.7.5
-;@Ahk2Exe-SetCopyright Copyright © 2012-2013 Rodolfo U. Batista
-;@Ahk2Exe-SetOrigFilename MacroCreator.exe
 
 #Include <Hotkeys>
 #Include <Internal>
