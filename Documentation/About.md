@@ -26,7 +26,8 @@ Kdoske & trueski for the [CSV functions](http://www.autohotkey.com/board/topic/5
 jaco0646 for the [function](http://www.autohotkey.com/board/topic/47439-user-defined-dynamic-hotkeys) to make hotkey controls detect other keys.  
 Laszlo for the [Monster function](http://www.autohotkey.com/board/topic/15675-monster) to solve expressions.  
 Jethrow for the [IEGet Function](http://www.autohotkey.com/board/topic/47052-basic-webpage-controls).  
-majkinetor for the [Color Pick Dialog](http://www.autohotkey.com/board/topic/49214-ahk-ahk-l-forms-framework-08/) function.  
+majkinetor for the [Dlg_Color](http://www.autohotkey.com/board/topic/49214-ahk-ahk-l-forms-framework-08/) function.  
+rbrtryn for the [ChooseColor](http://www.autohotkey.com/board/topic/91229-windows-color-picker-plus/) function.  
 fincs for [GenDocs](http://www.autohotkey.com/board/topic/71751-gendocs-v30-alpha002).  
 T800 for [Html Help utils](http://www.autohotkey.com/board/topic/17984-html-help-utils).  
 

@@ -1,7 +1,7 @@
 ﻿;###########################################################
 ; Original by majkinetor
 ; http://www.autohotkey.com/board/topic/49214-ahk-ahk-l-forms-framework-08/
-; Some adjustments are based on rbrtryn's Windows Color Picker Plus
+; With parts and adjustments based on rbrtryn's ChooseColor function
 ; http://www.autohotkey.com/board/topic/91229-windows-color-picker-plus/
 ;###########################################################
 Dlg_Color(ByRef Color, hGui=0, ByRef Palette="")
