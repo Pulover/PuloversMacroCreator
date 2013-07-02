@@ -44,6 +44,9 @@ http://www.autohotkey.com/board/topic/15675-monster
 Jethrow for the IEGet Function.
 http://www.autohotkey.com/board/topic/47052-basic-webpage-controls
 
+majkinetor for the Color Pick Dialog function
+http://www.autohotkey.com/board/topic/49214-ahk-ahk-l-forms-framework-08/
+
 fincs for GenDocs
 http://www.autohotkey.com/board/topic/71751-gendocs-v30-alpha002
 
@@ -2406,6 +2409,7 @@ Gui, 26:Add, Link, y+0, Kdoske && trueski for the <a href="http://www.autohotkey
 Gui, 26:Add, Link, y+0, jaco0646 for the <a href="http://www.autohotkey.com/board/topic/47439-user-defined-dynamic-hotkeys">function</a> to make hotkey controls detect other keys.
 Gui, 26:Add, Link, y+0, Laszlo for the <a href="http://www.autohotkey.com/board/topic/15675-monster">Monster function</a> to solve expressions.
 Gui, 26:Add, Link, y+0, Jethrow for the <a href="http://www.autohotkey.com/board/topic/47052-basic-webpage-controls">IEGet Function</a>.
+Gui, 26:Add, Link, y+0, majkinetor for the <a href="http://www.autohotkey.com/board/topic/49214-ahk-ahk-l-forms-framework-08/">Color Pick Dialog</a> function..
 Gui, 26:Add, Link, y+0, fincs for <a href="http://www.autohotkey.com/board/topic/71751-gendocs-v30-alpha002">GenDocs</a>.
 Gui, 26:Add, Link, y+0, T800 for <a href="http://www.autohotkey.com/board/topic/17984-html-help-utils">Html Help utils</a>.
 Gui, 26:Add, Groupbox, W380 H130 Center, GNU General Public License
@@ -4836,9 +4840,9 @@ Gui, 19:Add, Button, -Wrap yp-1 xs+150 W115 H23 vScreenshot gScreenshot, %c_Lang
 Gui, 19:Add, Edit, xs vImgFile W235 R1 -Multi
 Gui, 19:Add, Button, -Wrap yp-1 x+0 W30 H23 gSearchImg, ...
 Gui, 19:Add, Text, yp+30 xs W180 H25, %c_Lang067%:
-Gui, 19:Add, DDL, yp-2 xs+185 W80 vIfFound, Continue||Break|Stop|Prompt|Move|Left Click|Right Click|Middle Click
+Gui, 19:Add, DDL, yp-2 xs+185 W80 vIfFound, Add If||Continue|Break|Stop|Prompt|Move|Left Click|Right Click|Middle Click
 Gui, 19:Add, Text, yp+25 xs W180 H25, %c_Lang068%:
-Gui, 19:Add, DDL, yp-2 xs+185 W80 vIfNotFound, Continue||Break|Stop|Prompt
+Gui, 19:Add, DDL, yp-2 xs+185 W80 vIfNotFound, Add If||Continue|Break|Stop|Prompt
 Gui, 19:Add, Text, -Wrap y+10 xs W260 H25 cBlue, %c_Lang069%
 Gui, 19:Font, Bold
 Gui, 19:Add, Text, yp+15 xs, %c_Lang072%:
@@ -6874,6 +6878,7 @@ If StopIt
 	return
 }
 Playback(aHK_Timer)
+FreeMemory()
 return
 
 TimerCancel:
@@ -9831,7 +9836,6 @@ If ((WinActive("ahk_id " PrevID)) || (W_ID = TipScrID)
 WinGetClass, W_CLS, ahk_id %W_ID%
 If (W_CLS = "#32770")
 	return
-Pause, Off
 If ((WPHKC = 1) || (WPHKC = 2))
 {
 	Input

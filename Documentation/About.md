@@ -21,11 +21,12 @@ tic (Tariq Porter) for his [GDI+ Library](http://www.autohotkey.com/board/topic/
 tkoi & majkinetor for the [ILButton function](http://www.autohotkey.com/board/topic/37147-ilbutton-image-buttons).  
 just me for [LV_Colors Class](http://www.autohotkey.com/board/topic/88699-class-lv-colors), GuiCtrlAddTab and for updating ILButton to 64bit.  
 diebagger and Obi-Wahn for the [function to move rows](http://www.autohotkey.com/board/topic/56396-techdemo-move-rows-in-a-listview).  
-Micahs for the [base code](http://www.autohotkey.com/board/topic/30486-listview-tooltip-on-mouse-hover/?p=280843) of the Drag-Rows function.
+Micahs for the [base code](http://www.autohotkey.com/board/topic/30486-listview-tooltip-on-mouse-hover/?p=280843) of the Drag-Rows function.  
 Kdoske & trueski for the [CSV functions](http://www.autohotkey.com/board/topic/51681-csv-library-lib).  
 jaco0646 for the [function](http://www.autohotkey.com/board/topic/47439-user-defined-dynamic-hotkeys) to make hotkey controls detect other keys.  
 Laszlo for the [Monster function](http://www.autohotkey.com/board/topic/15675-monster) to solve expressions.  
 Jethrow for the [IEGet Function](http://www.autohotkey.com/board/topic/47052-basic-webpage-controls).  
+majkinetor for the [Color Pick Dialog](http://www.autohotkey.com/board/topic/49214-ahk-ahk-l-forms-framework-08/) function.  
 fincs for [GenDocs](http://www.autohotkey.com/board/topic/71751-gendocs-v30-alpha002).  
 T800 for [Html Help utils](http://www.autohotkey.com/board/topic/17984-html-help-utils).  
 
@@ -35,6 +36,8 @@ T800 for [Html Help utils](http://www.autohotkey.com/board/topic/17984-html-help
 ## Version 3.7.6
 
 * Added more search options to *ImageSearch* command.
+* Added *Color Mark* feature for rows.
+* Fixed memory leak in Timer.
 
 ## Version 3.7.5
 

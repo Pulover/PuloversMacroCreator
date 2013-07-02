@@ -119,6 +119,8 @@ To have other Macros active during Timer check the *Always Active* option or rig
 
 **Copy to...**: Copies selected rows to a different Macro tab.
 
+**Edit Color Mark**: Opens a Color-Pick dialog to add or change a custom color mark in the first column cell of selected rows.
+
 **Edit Comment**: Adds / Changes the comment to be displayed to the right of the line in Exported AHK Scripts on selected rows.
 
 **Find / Replace**: This window helps finding and replacing parts of the commands in the *Details*, *Repeat*, *Delay*, *Control* and *Window* columns only. To select similar Command Types use the Select Menu.  

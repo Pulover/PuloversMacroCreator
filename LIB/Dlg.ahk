@@ -1,15 +1,17 @@
 ﻿;###########################################################
 ; Original by majkinetor
 ; http://www.autohotkey.com/board/topic/49214-ahk-ahk-l-forms-framework-08/
+; Some adjustments are based on rbrtryn's Windows Color Picker Plus
+; http://www.autohotkey.com/board/topic/91229-windows-color-picker-plus/
 ;###########################################################
 Dlg_Color(ByRef Color, hGui=0, ByRef Palette="")
 { 
 	static StructSize := VarSetCapacity(ChooseColor, 9 * A_PtrSize, 0)
-	static CustomSize := VarSetCapacity(Custom, 16 * A_PtrSize, 0)
+	static CustomSize := VarSetCapacity(Custom, 64, 0)
 
 	clr := ColorBGR(Color)
     Loop, Parse, Palette, `,, %A_Space%
-		NumPut(ColorBGR(A_LoopField), Custom, (A_Index - 1) * A_PtrSize, "UInt")
+		NumPut(ColorBGR(A_LoopField), Custom, (A_Index - 1) * 4, "UInt")
 
 	VarSetCapacity(ChooseColor, StructSize, 0)
 ,	NumPut(StructSize, ChooseColor, 0, "UInt")
@@ -24,7 +26,7 @@ Dlg_Color(ByRef Color, hGui=0, ByRef Palette="")
 
 	Palette := ""
 	Loop, 16
-		Palette .= ColorRGB(NumGet(Custom, (A_Index - 1) * A_PtrSize, "UInt")) ","
+		Palette .= ColorRGB(NumGet(Custom, (A_Index - 1) * 4, "UInt")) ","
 	
 	clr := NumGet(ChooseColor, 3 * A_PtrSize) 
 
