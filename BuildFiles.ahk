@@ -14,7 +14,7 @@ Script =
 #define PmcVersion "%PMCVer%"
 #define PmcCompany "Rodolfo U. Batista"
 #define PmcURL "http://www.autohotkey.net/~Pulover"
-#define PmcCopyright "(C) 2012-2013 Rodolfo U. Batista"
+#define PmcCopyright "Copyright (C) 2012-2013 Rodolfo U. Batista"
 #define PmcExeName "MacroCreator.exe"
 #define PmcExt "pmc"
 #define WorkDir "%A_ScriptDir%"
