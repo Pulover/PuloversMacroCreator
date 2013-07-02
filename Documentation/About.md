@@ -36,6 +36,7 @@ T800 for [Html Help utils](http://www.autohotkey.com/board/topic/17984-html-help
 ## Version 3.7.6
 
 * Added more search options to *ImageSearch* command.
+* Added *Add "If Statement"* option to *ImageSearch* and *PixelSearch* commands.
 * Added *Color Mark* feature for rows.
 * Fixed memory leak in Timer.
 

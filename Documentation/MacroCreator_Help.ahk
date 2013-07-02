@@ -222,6 +222,7 @@
 			To execute a different action Select 'Continue' (or 'Break' to exit the command's loop) and use the 'If Image/Pixel Found' option in the If Statements window.
 		If not found / Error - Selects an action to execute when an image/pixel is not found or if the command finds an error.  
 			To execute a different action Select 'Continue' (or 'Break' to exit the command's loop) and use the 'If Image/Pixel Not Found' option in the If Statements window.
+		Add "If Statement" - Automatically adds an *If Image/Pixel Found* statement below the command. You may select a range of rows to be wrapped by the statement block.  
 		Preview - Previews the selected image.  
 			Double-Click an image to open the file with the associated application.
 		Coord - Sets coordinate mode for the search to be relative to either the active window or the screen.

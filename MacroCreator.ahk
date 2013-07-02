@@ -198,7 +198,7 @@ IniRead, IncPmc, %IniFilePath%, ExportOptions, IncPmc, 0
 IniRead, Exe_Exp, %IniFilePath%, ExportOptions, Exe_Exp, 0
 IniRead, WinState, %IniFilePath%, WindowOptions, WinState, 0
 IniRead, ColSizes, %IniFilePath%, WindowOptions, ColSizes, 65,125,190,50,40,85,95,90,60,40
-IniRead, SavedColors, %IniFilePath%, WindowOptions, SavedColors, %A_Space%
+IniRead, CustomColors, %IniFilePath%, WindowOptions, CustomColors, 0
 IniRead, OSCPos, %IniFilePath%, WindowOptions, OSCPos, X0 Y0
 IniRead, OSTrans, %IniFilePath%, WindowOptions, OSTrans, 255
 IniRead, OSCaption, %IniFilePath%, WindowOptions, OSCaption, 0
@@ -2071,9 +2071,9 @@ Gui, 4:Add, Checkbox, -Wrap Checked%AllowRowDrag% vAllowRowDrag R1, %t_Lang091%
 Gui, 4:Add, Checkbox, -Wrap Checked%ShowLoopIfMark% vShowLoopIfMark W390 R1, %t_Lang060%
 Gui, 4:Add, Text, W390, %t_Lang061%
 Gui, 4:Add, Text, y+10 W85, %t_Lang003% "{"
-Gui, 4:Add, Text, yp x+10 W40 vLoopLVColor gGetPixel c%LoopLVColor%, ██████
+Gui, 4:Add, Text, yp x+10 W40 vLoopLVColor gEditColor c%LoopLVColor%, ██████
 Gui, 4:Add, Text, yp x+20 W85, %t_Lang082% "*"
-Gui, 4:Add, Text, yp x+10 W40 vIfLVColor gGetPixel c%IfLVColor%, ██████
+Gui, 4:Add, Text, yp x+10 W40 vIfLVColor gEditColor c%IfLVColor%, ██████
 Gui, 4:Add, Checkbox, -Wrap Checked%ShowActIdent% yp+25 xs vShowActIdent W390 R1, %t_Lang083%
 Gui, 4:Add, Text, W390, %t_Lang084%
 Gui, 4:Add, Text,, %t_Lang057%:
@@ -2084,7 +2084,7 @@ Gui, 4:Add, Edit, vStdLibFile W360 R1 -Multi, %StdLibFile%
 Gui, 4:Add, Button, -Wrap yp-1 x+0 W30 H23 vStdLib gSearchAHK, ...
 Gui, 4:Add, Text, y+5 xs, %t_Lang062%:
 Gui, 4:Add, Edit, W390 H110 vEditMod, %VirtualKeys%
-Gui, 4:Add, Button, -Wrap W100 H23 gConfigRestore, %t_Lang063%
+Gui, 4:Add, Button, -Wrap y+0 W100 H23 gConfigRestore, %t_Lang063%
 Gui, 4:Add, Button, -Wrap yp x+10 W100 H23 gKeyHistory, %c_Lang124%
 ; User Variables
 Gui, 4:Tab, 3
@@ -3494,13 +3494,7 @@ NoKey := 0
 WinActivate, ahk_id %CmdWin%
 If (StopIt)
 	Exit
-If InStr(A_GuiControl, "Color")
-{
-	%A_GuiControl% := color
-	Gui, 4:Font, c%color%
-	GuiControl, 4:Font, %A_GuiControl%
-}
-Else If (A_GuiControl = "TransCS")
+If (A_GuiControl = "TransCS")
 {
 	GuiControl, 19:, TransC, %color%
 }
@@ -4840,10 +4834,11 @@ Gui, 19:Add, Button, -Wrap yp-1 xs+150 W115 H23 vScreenshot gScreenshot, %c_Lang
 Gui, 19:Add, Edit, xs vImgFile W235 R1 -Multi
 Gui, 19:Add, Button, -Wrap yp-1 x+0 W30 H23 gSearchImg, ...
 Gui, 19:Add, Text, yp+30 xs W180 H25, %c_Lang067%:
-Gui, 19:Add, DDL, yp-2 xs+185 W80 vIfFound, Add If||Continue|Break|Stop|Prompt|Move|Left Click|Right Click|Middle Click
+Gui, 19:Add, DDL, yp-2 xs+185 W80 vIfFound, Continue||Break|Stop|Prompt|Move|Left Click|Right Click|Middle Click
 Gui, 19:Add, Text, yp+25 xs W180 H25, %c_Lang068%:
-Gui, 19:Add, DDL, yp-2 xs+185 W80 vIfNotFound, Add If||Continue|Break|Stop|Prompt
-Gui, 19:Add, Text, -Wrap y+10 xs W260 H25 cBlue, %c_Lang069%
+Gui, 19:Add, DDL, yp-2 xs+185 W80 vIfNotFound, Continue||Break|Stop|Prompt
+Gui, 19:Add, CheckBox, Checked -Wrap yp+15 xs W180 H25 vAddIf, %c_Lang162%
+Gui, 19:Add, Text, -Wrap y+0 xs W260 H25 cBlue, %c_Lang069%
 Gui, 19:Font, Bold
 Gui, 19:Add, Text, yp+15 xs, %c_Lang072%:
 Gui, 19:Font
@@ -4936,6 +4931,8 @@ If (s_Caller = "Edit")
 	If Target = Break
 		GuiControl, 19:, BreakLoop, 1
 	GuiControl, 19:Enable, ImageApply
+	GuiControl, 19:, AddIf, 0
+	GuiControl, 19:Disable, AddIf
 }
 Gui, 19:Show,, %c_Lang006% / %c_Lang007%
 Input
@@ -4989,17 +4986,35 @@ Else If RowSelection = 0
 	LV_Modify(ListCount%A_List%+1, "Vis")
 }
 Else
-{
-	RowNumber = 0
-	Loop, %RowSelection%
-	{
-		RowNumber := LV_GetNext(RowNumber)
-		LV_Insert(RowNumber, "Check", RowNumber, Action, Details, TimesX, DelayX, Type, Target, CoordPixel)
-		RowNumber++
-	}
-}
+	LV_Insert(LV_GetNext(), "Check", LV_GetNext(), Action, Details, TimesX, DelayX, Type, Target, CoordPixel)
 GoSub, b_Start
 GoSub, RowCheck
+If (AddIf = 1)
+{
+	If RowSelection = 0
+	{
+		LV_Add("Check", ListCount%A_List%+1, If9, "", 1, 0, cType17)
+		LV_Add("Check", ListCount%A_List%+2, "[End If]", "EndIf", 1, 0, cType17)
+		LV_Modify(ListCount%A_List%+2, "Vis")
+	}
+	Else
+	{
+		LV_Insert(LV_GetNext(), "Check", "", If9, "", 1, 0, cType17)
+		RowNumber := 0, LastRow := 0
+		Loop
+		{
+			RowNumber := LV_GetNext(RowNumber)
+			If !RowNumber
+			{
+				LV_Insert(LastRow+1, "Check",LastRow+1, "[End If]", "EndIf", 1, 0, cType17)
+				break
+			}
+			LastRow := LV_GetNext(LastRow)
+		}
+	}
+	GoSub, b_Start
+	GoSub, RowCheck
+}
 If (A_ThisLabel = "ImageApply")
 	Gui, 19:Default
 Else
@@ -8280,41 +8295,55 @@ Gui, 17:Destroy
 return
 
 EditColor:
-RowSelection := LV_GetCount("Selected")
 rColor := ""
-If RowSelection = 1
+If InStr(A_GuiControl, "Color")
+	rColor := %A_GuiControl%, OwnerID := CmdWin
+Else
 {
-	RowNumber := LV_GetNext()
-	LV_GetText(rColor, RowNumber, 10)
-}
-If Dlg_Color(rColor, PMCWinID, SavedColors)
-{
-	If (rColor = "0xffffff")
-		rColor := ""
+	RowSelection := LV_GetCount("Selected"), OwnerID := PMCWinID
 	If RowSelection = 1
-		LV_Modify(RowNumber, "Col10", rColor)
-	If RowSelection = 0
 	{
-		RowNumber = 0
-		Loop
-		{
-			RowNumber := A_Index
-			If (RowNumber > ListCount%A_List%)
-				break
-			LV_Modify(RowNumber, "Col10", rColor)
-		}
+		RowNumber := LV_GetNext()
+		LV_GetText(rColor, RowNumber, 10)
+	}
+}
+If Dlg_Color(rColor, OwnerID, CustomColors)
+{
+	If InStr(A_GuiControl, "Color")
+	{
+		%A_GuiControl% := rColor
+		Gui, 4:Font, c%rColor%
+		GuiControl, 4:Font, %A_GuiControl%
 	}
 	Else
 	{
-		RowNumber = 0
-		Loop, %RowSelection%
-		{
-			RowNumber := LV_GetNext(RowNumber)
+		If (rColor = "0xffffff")
+			rColor := ""
+		If RowSelection = 1
 			LV_Modify(RowNumber, "Col10", rColor)
+		If RowSelection = 0
+		{
+			RowNumber = 0
+			Loop
+			{
+				RowNumber := A_Index
+				If (RowNumber > ListCount%A_List%)
+					break
+				LV_Modify(RowNumber, "Col10", rColor)
+			}
 		}
+		Else
+		{
+			RowNumber = 0
+			Loop, %RowSelection%
+			{
+				RowNumber := LV_GetNext(RowNumber)
+				LV_Modify(RowNumber, "Col10", rColor)
+			}
+		}
+		GoSub, RowCheck
 	}
 }
-GoSub, RowCheck
 return
 
 FindReplace:
@@ -9590,6 +9619,7 @@ AbortKey := "F8"
 ,	OSTrans := 255
 ,	OSCaption := 0
 ,	OSCaption := 0
+,	CustomColors := 0
 Gui 28:+LastFoundExist
 IfWinExist
 {
@@ -9767,7 +9797,7 @@ IniWrite, %IncPmc%, %IniFilePath%, ExportOptions, IncPmc
 IniWrite, %Exe_Exp%, %IniFilePath%, ExportOptions, Exe_Exp
 IniWrite, %WinState%, %IniFilePath%, WindowOptions, WinState
 IniWrite, %ColSizes%, %IniFilePath%, WindowOptions, ColSizes
-IniWrite, %SavedColors%, %IniFilePath%, WindowOptions, SavedColors
+IniWrite, %CustomColors%, %IniFilePath%, WindowOptions, CustomColors
 IniWrite, %OSCPos%, %IniFilePath%, WindowOptions, OSCPos
 IniWrite, %OSTrans%, %IniFilePath%, WindowOptions, OSTrans
 IniWrite, %OSCaption%, %IniFilePath%, WindowOptions, OSCaption
