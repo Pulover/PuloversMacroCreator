@@ -7,7 +7,7 @@
 ; Home: http://www.autohotkey.net/~Pulover
 ; Forum: http://www.autohotkey.com/board/topic/79763-macro-creator
 ; Version: 3.7.6
-; Release Date: June, 2013
+; Release Date: July, 2013
 ; AutoHotkey Version: 1.1.11.01
 ; Copyright © 2012-2013 Rodolfo U. Batista
 ; GNU General Public License 3.0 or higher
@@ -84,7 +84,7 @@ DefaultIcon := (A_IsCompiled) ? A_ScriptFullPath
 			:  (FileExist("Resources\PMC3_Mult.ico") ? "Resources\PMC3_Mult.ico" : A_AhkPath)
 Menu, Tray, Icon, %DefaultIcon%, 1, 1
 
-CurrentVersion := "3.7.6", ReleaseDate := "June, 2013"
+CurrentVersion := "3.7.6", ReleaseDate := "July, 2013"
 
 ;##### Ini File Read #####
 
