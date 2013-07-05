@@ -632,13 +632,13 @@ Gui, Add, Button, -Wrap W22 H25 hwndEditComm vEditComm gEditComm
 	ILButton(EditComm, CommentIcon[1] ":" CommentIcon[2])
 Gui, Add, Button, -Wrap W22 H25 hwndFindReplace vFindReplace gFindReplace
 	ILButton(FindReplace, FindIcon[1] ":" FindIcon[2])
-Gui, Add, Text, -Wrap y+129 xm W70 H22 Section vRepeat, %w_Lang015%:
+Gui, Add, Text, -Wrap y+129 xm W65 H22 Section vRepeat, %w_Lang015%:
 Gui, Add, Edit, ys-3 x+5 W90 R1 vRept Number
 Gui, Add, UpDown, vTimesM 0x80 Range0-999999999, 1
 Gui, Add, Button, -Wrap ys-4 x+5 W60 H23 hwndApplyT vApplyT gApplyT, %w_Lang017%
 	ILButton(ApplyT, ApplyIcon[1] ":" ApplyIcon[2], 0, "Left")
 Gui, Add, Text, W2 H25 ys-3 x+5 0x11 vSeparator1
-Gui, Add, Text, -Wrap x+5 ys W70 H22 vDelayT, %w_Lang016%
+Gui, Add, Text, -Wrap x+5 ys W65 H22 vDelayT, %w_Lang016%
 Gui, Add, Edit, ys-3 x+5 W90 R1 vDelay
 Gui, Add, UpDown, vDelayG 0x80 Range0-999999999, %DelayG%
 Gui, Add, Button, -Wrap ys-4 x+5 W60 H23 hwndApplyI vApplyI gApplyI, %w_Lang017%
@@ -651,8 +651,8 @@ Gui, Add, Text, W2 H25 ys-3 x+5 0x11 vSeparator3
 Gui, Add, Button, -Wrap Default ys-4 x+5 W60 H23 hwndEditButton vEditButton gEditButton, %w_Lang019%
 	ILButton(EditButton, EditIcon[1] ":" EditIcon[2], 0, "Left")
 Gui, Add, Text, W2 H25 ys-3 x+5 0x11 vSeparator4
-Gui, Add, Text, ys-6 x+5 W90 vContextTip gSetWin cBlue, #IfWin: %IfDirectContext%
-Gui, Add, Text, yp+16 W90 vCoordTip gOptions, CoordMode: %CoordMouse%
+Gui, Add, Text, -Wrap ys-6 x+5 W100 vContextTip gSetWin cBlue, #IfWin: %IfDirectContext%
+Gui, Add, Text, -Wrap yp+16 W100 vCoordTip gOptions, CoordMode: %CoordMouse%
 GuiControl,, Win1, % (InStr(o_AutoKey[1], "#")) ? 1 : 0
 GuiControl, Focus, InputList%A_List%
 Gui, Submit
