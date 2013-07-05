@@ -10301,7 +10301,7 @@ Menu, HelpMenu, Add, %h_Lang004%, AutoUpdate
 Menu, HelpMenu, Add
 Menu, HelpMenu, Add, %h_Lang005%`t%_s%Shift+F1, HelpAbout
 
-Loop, Parse, StartTips, `n
+Loop, Parse, Start_Tips, `n
 {
 	StartTip_%A_Index% := A_LoopField
 	MaxTips := A_Index

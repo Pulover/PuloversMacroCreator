@@ -533,7 +533,7 @@
 	d_Lang070 =	Error: Invalid Hotkey Wybrany.
 		
 ; Start-up Tips		
-	StartTips =	
+	Start_Tips =	
 	(LTrim	
 		Makra można tworzyć za pomocą przycisków poleceń w oknie głównym lub za pomocą dyktafonu skopiować swoje działania. Przejdź do Opcje > Ustawienia > Nagrywanie, aby wybrać to, co wejścia zostaną zapisane.
 		Aby korzystać z rejestratora do szybkiego zadania przejdź do Opcje > Ustawienia > Nagrywanie i zaznacz opcję "Wyczyść listę" opcji. Następnie kliknij przycisk Record w głównym oknie i użyć F10, aby usunąć bieżące makro i rozpocząć nową z tym samym skrótu. Możesz także zaznaczyć opcję "Zawsze Aktywny" opcji w oknie głównym, aby zachować zapis i odtwarzanie skrótów aktywne.

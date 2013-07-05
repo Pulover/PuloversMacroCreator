@@ -533,7 +533,7 @@
 	d_Lang070 =	Error: Invalid Hotkey seleccionat.
 		
 ; Start-up Tips		
-	StartTips =	
+	Start_Tips =	
 	(LTrim	
 		Du kan skapa makron med hjälp av kommandoknapparna i huvudfönstret eller använda inspelaren för att kopiera dina handlingar. Gå till Alternativ > Inställningar > Inspelning för att välja vilka ingångar kommer att registreras.
 		Om du vill använda brännaren för snabbuppgifter gå till Alternativ > Inställningar > Inspelning och kontrollera "Rensa lista" alternativet. Klicka sedan på knappen Spela in i huvudfönstret och använd F10 för att rensa den aktuella Macro och starta en ny med samma kortkommando. També podeu consultar l'opció "Sempre actiu" en la finestra principal a tenir enregistrament i reproducció hotkeys actiu.

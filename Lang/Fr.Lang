@@ -533,7 +533,7 @@
 	d_Lang070 =	Erreur: Invalid Hotkey sélectionnée.
 		
 ; Start-up Tips		
-	StartTips =	
+	Start_Tips =	
 	(LTrim	
 		Vous pouvez créer des macros à l'aide des boutons de commande dans la fenêtre principale ou en utilisant l'enregistreur de copier vos actions. Allez dans Options > Paramètres > Enregistrer pour sélectionner les entrées seront enregistrées.
 		Pour utiliser l'enregistreur pour des tâches rapides allez dans Options > Paramètres > Enregistrement et cochez l'option "Effacer la liste". Puis cliquez sur le bouton Enregistrer dans la fenêtre principale et utiliser F10 pour effacer la macro en cours et en commencer une nouvelle avec le même raccourci clavier. Vous pouvez également cocher l'option "Toujours actif" dans la fenêtre principale de maintenir enregistrement et de lecture raccourcis clavier active.

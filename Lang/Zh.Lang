@@ -9,22 +9,22 @@
 	m_Lang004 =	编辑
 	m_Lang005 =	宏
 	m_Lang006 =	选项
-	m_Lang007 =	语
-	m_Lang008 =	捐款
+	m_Lang007 =	语言
+	m_Lang008 =	捐赠
 	m_Lang009 =	帮助
 		
 ; File Submenu		
-	f_Lang001 =	新
+	f_Lang001 =	新建
 	f_Lang002 =	打开
 	f_Lang003 =	保存
 	f_Lang004 =	另存为
-	f_Lang005 =	进口宏
-	f_Lang006 =	保存当前的宏观
+	f_Lang005 =	导入宏
+	f_Lang006 =	保存当前的宏
 	f_Lang007 =	最近的文件
-	f_Lang008 =	导出到华民航空
+	f_Lang008 =	导出为ahk
 	f_Lang009 =	预览脚本
 	f_Lang010 =	列出变量
-	f_Lang011 =	出口
+	f_Lang011 =	导出
 	f_Lang012 =	没有文件
 		
 ; Insert Sub Menu		
@@ -43,7 +43,7 @@
 		
 ; Select Sub Menu		
 	s_Lang001 =	全选
-	s_Lang002 =	选择None（无）
+	s_Lang002 =	全不选
 	s_Lang003 =	反选
 	s_Lang004 =	检查所选
 	s_Lang005 =	取消选中所选
@@ -53,19 +53,19 @@
 		
 ; Edit Sub Menu		
 	e_Lang001 =	复制
-	e_Lang002 =	编辑点评
+	e_Lang002 =	编辑注释
 	e_Lang003 =	查找/替换
 	e_Lang004 =	复制到...
-	e_Lang005 =	复原
+	e_Lang005 =	撤销
 	e_Lang006 =	重做
-	e_Lang007 =	切
+	e_Lang007 =	剪切
 	e_Lang008 =	复制
-	e_Lang009 =	贴
+	e_Lang009 =	粘贴
 	e_Lang010 =	删除
-	e_Lang011 =	升级
+	e_Lang011 =	上移
 	e_Lang012 =	下移
 	e_Lang013 =	从框中插入
-	e_Lang014 =	编辑颜色标志
+	e_Lang014 =	编辑颜色标识
 		
 ; Macro Sub Menu		
 	r_lang001 =	录制宏
@@ -77,7 +77,7 @@
 	r_lang007 =	上下文相关的热键
 	r_lang008 =	显示/隐藏控制
 	r_lang009 =	播放选定的行
-	r_lang010 =	玩到选定的行
+	r_lang010 =	播放到选定的行
 	r_lang011 =	播放选定的行
 		
 ; Options Sub Menu		
@@ -106,13 +106,13 @@
 	y_Lang003 =	显示/隐藏控制
 		
 ; Main Window		
-	w_Lang001 =	出口
+	w_Lang001 =	导出
 	w_Lang002 =	预览
 	w_Lang003 =	选项
 	w_Lang004 =	记录
-	w_Lang005 =	玩
-	w_Lang006 =	汽车。
-	w_Lang007 =	人。
+	w_Lang005 =	回放
+	w_Lang006 =	自动
+	w_Lang007 =	手动
 	w_Lang008 =	停止
 	w_Lang009 =	Win
 	w_Lang010 =	暂停
@@ -122,17 +122,17 @@
 	w_Lang014 =	始终处于活动状态
 	w_Lang015 =	重复
 	w_Lang016 =	延时（ms）：
-	w_Lang017 =	申请
+	w_Lang017 =	应用
 	w_Lang018 =	插入
 	w_Lang019 =	编辑
 	w_Lang020 =	显示控制
 	w_Lang021 =	什么都不做
 	w_Lang022 =	关闭应用程序
 	w_Lang023 =	关闭
-	w_Lang024 =	关机（力）
+	w_Lang024 =	关机
 	w_Lang025 =	重新启动
 	w_Lang026 =	注销
-	w_Lang027 =	过冬
+	w_Lang027 =	休眠
 	w_Lang028 =	暂停
 	w_Lang029 =	锁定计算机
 		
@@ -266,7 +266,7 @@
 	c_Lang127 =	输入输出变量的名称
 	c_Lang128 =	从外部文件的使用功能
 	c_Lang130 =	打破循环，如果发现
-	c_Lang131 =	申请
+	c_Lang131 =	应用
 	c_Lang132 =	循环
 	c_Lang133 =	文件
 	c_Lang134 =	解析
@@ -363,7 +363,7 @@
 	t_Lang061 =	（单击索引列标题来启用/禁用）
 	t_Lang062 =	虚拟键
 	t_Lang063 =	默认
-	t_Lang064 =	编辑点评
+	t_Lang064 =	编辑注释
 	t_Lang065 =	评论
 	t_Lang066 =	搜索栏
 	t_Lang067 =	查找/替换
@@ -497,9 +497,9 @@
 	)	
 	d_Lang057 =	
 	(LTrim	
-		 - 按Ctrl+箭头键将选定的区域。
-		 - 按Shift+箭头键来调整所选区域。
-		 - 按Enter键完成。
+		Ctrl+箭头键将选定的区域。
+		Shift+箭头键来调整所选区域。
+		Enter键完成。
 	)	
 	d_Lang058 =	
 	(LTrim	
@@ -533,7 +533,7 @@
 	d_Lang070 =	错误：无效的热键选择。
 		
 ; Start-up Tips		
-	StartTips =	
+	Start_Tips =	
 	(LTrim	
 		您可以创建宏命令按钮在主窗口中，或者使用记录，复制你的行动。转到“选项”>“设置”>“录制到选择什么样的输入将被记录。
 		要使用录音机，快速任务选项 >设置 >录音，并勾选“清除列表”选项。然后在主窗口中单击“录制”按钮，使用F10键来清除当前的宏，并开始一个新的相同的热键。 您也可以勾选“始终活跃在主窗口中保持激活录制和播放热键”选项。
@@ -621,8 +621,8 @@
 	Capt_TT =	在此窗口中捕捉按键
 	OnScCtrl_TT =	显示控件工具栏
 	ShowStep_TT =	显示气球提示
-	ApplyT_TT =	申请
-	ApplyI_TT =	申请
+	ApplyT_TT =	应用
+	ApplyI_TT =	应用
 	ApplyL_TT =	从框中插入（Insert）
 	EditButton_TT =	编辑
 	PrevRefresh_TT =	刷新（F5）
@@ -637,7 +637,7 @@
 	VarCopyA_TT =	复制当前变量的内容
 	VarCopyB_TT =	复制当前变量的内容
 	FindReplace_TT =	查找/替换（Ctrl+F）
-	EditComm_TT =	编辑点评
+	EditComm_TT =	编辑注释
 	EditColor_TT =	编辑颜色标志
 	Reset_TT =	清除变量的内容
 	Screenshot_TT =	请截图
@@ -689,7 +689,7 @@
 	(LTrim	
 		暂时使用剪贴板发送文本。
 		当操作完成时，该脚本
-		恢复原来的剪贴板中的内容。
+		恢撤销来的剪贴板中的内容。
 		（留下空的文本粘贴当前内容）
 	)	
 	EditPaste_TT =	

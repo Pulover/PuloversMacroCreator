@@ -533,7 +533,7 @@
 	d_Lang070 =	Fehler: Ungültige Hotkey ausgewählt.
 		
 ; Start-up Tips		
-	StartTips =	
+	Start_Tips =	
 	(LTrim	
 		Sie können Makros mit den Command Buttons im Hauptfenster oder über den Recorder auf Ihre Aktionen kopieren. Gehen Sie auf Optionen > Einstellungen > Aufnahme auswählen, welche Eingänge aufgezeichnet werden.
 		Informationen zur Verwendung der für schnelle Aufgaben Optionen > Einstellungen > Aufnahme gehen und überprüfen Sie die "Liste löschen"-Option. Dann klicken Sie auf den Record-Button im Hauptfenster und verwenden Sie F10, um die aktuelle Makro zu löschen und eine neue mit der gleichen Tastenkombination. Sie können auch das Kontrollkästchen "Immer aktiv" im Hauptfenster zu halten Aufnahme und Wiedergabe Hotkeys aktiv.

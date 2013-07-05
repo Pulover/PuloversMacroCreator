@@ -533,7 +533,7 @@
 	d_Lang070 =	Hiba: Érvénytelen Hotkey Kiválasztott.
 		
 ; Start-up Tips		
-	StartTips =	
+	Start_Tips =	
 	(LTrim	
 		Hozhat létre makrók a Command gombok a fő ablakban, vagy a felvevő másolni a tevékenységét. Válassza az Opciók > Beállítások > Felvétel kiválasztható, hogy milyen bemeneteket kerülnek rögzítésre.
 		Ahhoz, hogy a felvevő gyors feladatok válasszuk az Opciók > Beállítások > Felvétel és ellenőrizze a "Lista törlése" opciót. Majd kattintson a Felvétel gombra a fő ablakot, majd F10 gombbal törölheti az aktuális makro-és újat azonos gyorsbillentyűket. Ön is ellenőrizheti a "Mindig aktív" opciót a fő ablakban, hogy felvétel és lejátszás gyorsbillentyűk aktív.

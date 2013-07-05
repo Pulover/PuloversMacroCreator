@@ -533,7 +533,7 @@
 	d_Lang070 =	Error: Invalid Hotkey selezionato.
 		
 ; Start-up Tips		
-	StartTips =	
+	Start_Tips =	
 	(LTrim	
 		È possibile creare macro utilizzando i pulsanti di comando nella finestra principale o utilizzando il registratore per copiare le vostre azioni. Andare su Opzioni > Impostazioni > Registrazione per selezionare ciò che verrà registrato ingressi.
 		Per utilizzare il registratore per operazioni rapide andare su Opzioni > Impostazioni > Registrazione e selezionare l'opzione "Cancella elenco". Quindi fare clic sul pulsante Record nella finestra principale e usare F10 per cancellare la macro corrente e iniziarne uno nuovo con la stessa combinazione di tasti. È anche possibile selezionare l'opzione "Sempre attivo" nella finestra principale di tenere registrazione e riproduzione hotkeys attivo.

@@ -533,7 +533,7 @@
 	d_Lang070 =	Feil: Ugyldig hurtigtast Selected.
 		
 ; Start-up Tips		
-	StartTips =	
+	Start_Tips =	
 	(LTrim	
 		Du kan lage makroer ved hjelp av kommandoen Knapper i hovedvinduet eller bruke opptaker til å kopiere dine handlinger. Gå til Valg > Innstillinger > Opptak til å velge hvilke innganger vil bli registrert.
 		For å bruke opptakeren for raske oppgaver gå til Valg > Innstillinger > Recording og sjekke "Clear List" alternativet. Deretter klikker du på Record-knappen i hovedvinduet og bruke F10 for å slette gjeldende Makro og starte en ny en med samme hurtigtast. Du kan også sjekke "Alltid aktiv" i hovedvinduet for å holde Opptak og avspilling hurtigtaster aktiv.

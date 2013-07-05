@@ -533,7 +533,7 @@
 	d_Lang070 =	Fel: Ogiltig Hotkey Selected.
 		
 ; Start-up Tips		
-	StartTips =	
+	Start_Tips =	
 	(LTrim	
 		Voit luoda makroja käyttäen Command painikkeet pääikkunassa tai käyttämällä Recorder kopioida toimia. Valitse Valinnat > Asetukset > Tallennus valita mitä panoksia tallennetaan.
 		Voit käyttää tallenninta nopeasti tehtäviä mene Valinnat > Asetukset > Tallennus ja tarkista "Clear List" vaihtoehto. Napsauta sitten Tallenna-painiketta pääikkunassa ja käyttää F10 tyhjentää nykyisen Macro ja aloittaa uuden samalla pikanäppäin. Du kan också kolla "alltid aktiv" i huvudfönstret för att hålla Inspelning och uppspelning snabbtangenter aktiv.

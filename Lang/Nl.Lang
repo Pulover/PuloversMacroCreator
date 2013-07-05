@@ -533,7 +533,7 @@
 	d_Lang070 =	Fout: Ongeldige Sneltoets Selected.
 		
 ; Start-up Tips		
-	StartTips =	
+	Start_Tips =	
 	(LTrim	
 		U kunt macro's met behulp van de Command Knoppen in het hoofdvenster of het gebruik van de recorder om uw acties te kopiëren creëren. Ga naar Opties > Instellingen > Opname te selecteren wat input wordt opgenomen.
 		Om de recorder te gebruiken voor snelle taken ga naar Opties > Instellingen > Opname en controleer de "Lijst wissen" optie. Klik vervolgens op de knop Opnemen in het hoofdvenster en gebruik F10 om de huidige macro wissen en een nieuwe te beginnen met dezelfde sneltoets. U kunt ook de "Always Active"-optie in het hoofdvenster naar Opnemen en afspelen sneltoetsen actief te houden.

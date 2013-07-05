@@ -533,7 +533,7 @@
 	d_Lang070 =	Fejl: Ugyldig Hotkey Selected.
 		
 ; Start-up Tips		
-	StartTips =	
+	Start_Tips =	
 	(LTrim	
 		Du kan oprette makroer ved hjælp af kommandoen knapper i hovedvinduet eller ved hjælp af optageren til at kopiere dine handlinger. Gå til Valg > Indstillinger > Optagelse at vælge, hvad input vil blive registreret.
 		Hvis du vil bruge optageren i hurtige opgaver gå til Valg > Indstillinger > Optagelse og tjek "Clear List" valgmulighed. Klik derefter på knappen Optag i hovedvinduet og bruge F10 til at rydde den aktuelle Makro og starte en ny med samme genvejstast. Du kan også tjekke "altid aktiv" i hovedvinduet til at holde Optagelse og afspilning genvejstaster aktive.

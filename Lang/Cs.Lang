@@ -533,7 +533,7 @@
 	d_Lang070 =	Chyba: Neplatný Hotkey vybrané.
 		
 ; Start-up Tips		
-	StartTips =	
+	Start_Tips =	
 	(LTrim	
 		Můžete vytvářet makra pomocí příkazových tlačítek v hlavním okně, nebo pomocí rekordéru kopírovat své akce. Přejít na Možnosti > Nastavení > Nahrávání na vstupy vybrat, co budou zaznamenány.
 		Chcete-li použít rekordér pro rychlé úkoly, jít do Volby > Nastavení > Nahrávání a zaškrtněte "Vymazat seznam" možnost volby. Poté klikněte na tlačítko Record v hlavním okně a pomocí F10 pro vymazání aktuálního makra a začít novou se stejnou klávesovou zkratku. Můžete také zaškrtnout volbu "vždy aktivní" v hlavním okně udržet nahrávání a přehrávání klávesy aktivní.

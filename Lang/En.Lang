@@ -533,7 +533,7 @@
 	d_Lang070 =	Error: Invalid Hotkey Selected.
 		
 ; Start-up Tips		
-	StartTips =	
+	Start_Tips =	
 	(LTrim	
 		You can create Macros using the Command Buttons in the main window or using the Recorder to copy your actions. Go to Options > Settings > Recording to select what inputs will be recorded.
 		To use the recorder for quick tasks go to Options > Settings > Recording and check the "Clear List" option. Then click the Record button in the main window and use F10 to clear the current Macro and start a new one with the same hotkey. You can also check the "Always Active" option in the main window to keep Recording and Playback hotkeys active.

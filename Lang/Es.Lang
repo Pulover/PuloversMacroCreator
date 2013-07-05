@@ -533,7 +533,7 @@
 	d_Lang070 =	Error: Hotkey no válida seleccionada.
 		
 ; Start-up Tips		
-	StartTips =	
+	Start_Tips =	
 	(LTrim	
 		Puede crear macros utilizando los botones de comando en la ventana principal o el uso de la grabadora para copiar sus acciones. Vaya a Opciones > Configuración > Grabación para seleccionar lo que se registran las entradas.
 		Para utilizar la grabadora para tareas rápidas vaya a Opciones > Configuración > Grabación y marque la opción "Borrar lista". A continuación, haga clic en el botón de grabación en la ventana principal y utilizar F10 para borrar la macro actual e iniciar uno nuevo con la misma combinación de teclas. También puede consultar la opción "Siempre activo" en la ventana principal a tener grabación y reproducción hotkeys activo.

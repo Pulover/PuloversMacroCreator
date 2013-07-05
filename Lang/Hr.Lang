@@ -533,7 +533,7 @@
 	d_Lang070 =	Pogreška: Invalid Hotkey Odabrani.
 		
 ; Start-up Tips		
-	StartTips =	
+	Start_Tips =	
 	(LTrim	
 		Možete stvoriti makronaredbe pomoću naredbenog gumba u glavnom prozoru ili pomoću snimača kopirati svoje radnje. Idi na Opcije > Postavke > Snimanje odabrati ono što ulazi će biti zabilježen.
 		Za korištenje rekorder brze zadatke ići na Opcije > Postavke > Snimanje i provjeriti "Clear List" opciju. Zatim pritisnite gumb rekord u glavnom prozoru i F10 izbiti trenutni makro i započeti novu s istim hotkey. Također možete provjeriti "Uvijek aktivan" opciju u glavnom prozoru da bi se snimanje i reprodukcija hotkeys aktivna.

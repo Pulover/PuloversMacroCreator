@@ -533,7 +533,7 @@
 	d_Lang070 =	Hata: Geçersiz Kısayol Seçilen.
 		
 ; Start-up Tips		
-	StartTips =	
+	Start_Tips =	
 	(LTrim	
 		Bu ana pencerede komut düğmeleri kullanarak ya da eylemleri kopyalamak için Kayıt kullanarak Makrolar oluşturabilirsiniz. Seçenekler > Ayarlar > giriş kaydedilecektir ne seçmek için kayıt.
 		Hızlı görevleri Seçenek > Ayarlar > Kayıt gidin ve "Listeyi Temizle" seçeneğini işaretleyin için kayıt kullanmak için. Daha sonra ana pencerede Record düğmesine tıklayın ve mevcut makro temizlemek için F10 kullanın ve aynı kısayol tuşu ile yeni bir başlangıç. Ayrıca Kayıt ve Oynatma kısayol tuşları aktif tutmak için ana pencerede "Her zaman Aktif" seçeneğini kontrol edebilirsiniz.

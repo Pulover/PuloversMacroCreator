@@ -533,7 +533,7 @@
 	d_Lang070 =	Erro: Atalho Inválido Selecionado.
 		
 ; Start-up Tips		
-	StartTips =	
+	Start_Tips =	
 	(LTrim	
 		Você pode criar Macros utilizando os botões de comando na janela principal ou usar o gravador para copiar suas ações. Vá até Opções > Configurações > Gravar para selecionar quais entradas serão gravadas.
 		Para utilizar o gravador para tarefas rápidas vá em Opções > Configurações > Gravação e marque a opção "Limpar Lista". Em seguida, clique no botão Gravar na janela principal e use F10 para limpar a Macro atual e iniciar uma nova com a mesma hotkey. Você também pode marcar a opção "Sempre Ativo" na janela principal para manter as teclas de gravação e reprodução ativas.
