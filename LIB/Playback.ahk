@@ -801,28 +801,28 @@ IfEval(Name, Operator, Value)
 	return result
 }
 
-DoAction(x, y, action1, action2, coord, error)
+DoAction(X, Y, Action1, Action2, Coord, Error)
 {
-	CoordMode, Mouse, %coord%
+	CoordMode, Mouse, %Coord%
 	If Error = 0
 	{
-		If action1 = Move
+		If Action1 = Move
 		{
-			Click, %x%, %y%, 0
+			Click, %X%, %Y%, 0
 			return
 		}
-		If InStr(action1, "Click")
+		If InStr(Action1, "Click")
 		{
-			Loop, Parse, action1, %A_Space%
+			Loop, Parse, Action1, %A_Space%
 				Act%A_Index% := A_LoopField
-			Click, %x%, %y% %Act1%, 1
+			Click, %X%, %Y% %Act1%, 1
 			return
 		}
 		Else
-			return action1
+			return Action1
 	}
 	If (Error = 1 || Error = 2)
-		return action2
+		return Action2
 }
 
 RunExtFunc(File, FuncName, Params*)

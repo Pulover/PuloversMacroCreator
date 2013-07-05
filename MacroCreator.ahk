@@ -6,7 +6,7 @@
 ; rodolfoub@gmail.com
 ; Home: http://www.autohotkey.net/~Pulover
 ; Forum: http://www.autohotkey.com/board/topic/79763-macro-creator
-; Version: 3.7.6
+; Version: 3.7.7
 ; Release Date: July, 2013
 ; AutoHotkey Version: 1.1.11.01
 ; Copyright © 2012-2013 Rodolfo U. Batista
@@ -60,7 +60,7 @@ http://www.autohotkey.com/board/topic/17984-html-help-utils
 ; Compiler Settings
 ;@Ahk2Exe-SetName Pulover's Macro Creator
 ;@Ahk2Exe-SetDescription Pulover's Macro Creator
-;@Ahk2Exe-SetVersion 3.7.6
+;@Ahk2Exe-SetVersion 3.7.7
 ;@Ahk2Exe-SetCopyright Copyright © 2012-2013 Rodolfo U. Batista
 ;@Ahk2Exe-SetOrigFilename MacroCreator.exe
 
@@ -87,7 +87,7 @@ DefaultIcon := (A_IsCompiled) ? A_ScriptFullPath
 			:  (FileExist("Resources\PMC3_Mult.ico") ? "Resources\PMC3_Mult.ico" : A_AhkPath)
 Menu, Tray, Icon, %DefaultIcon%, 1, 1
 
-CurrentVersion := "3.7.6", ReleaseDate := "July, 2013"
+CurrentVersion := "3.7.7", ReleaseDate := "July, 2013"
 
 ;##### Ini File Read #####
 
@@ -262,8 +262,10 @@ If Lang = Error
 		Lang = Uk
 	Else If A_Language in 0408
 		Lang = El
-	Else If A_Language in 0404,0804,0c04,1004,1404,0004,7c04
+	Else If A_Language in 0804,0c04,1004,1404,0004,7c04
 		Lang = Zh
+	Else If A_Language in 0404
+		Lang = Zt
 	Else If A_Language in 0411
 		Lang = Ja
 	Else If A_Language in 0412
@@ -649,8 +651,8 @@ Gui, Add, Text, W2 H25 ys-3 x+5 0x11 vSeparator3
 Gui, Add, Button, -Wrap Default ys-4 x+5 W60 H23 hwndEditButton vEditButton gEditButton, %w_Lang019%
 	ILButton(EditButton, EditIcon[1] ":" EditIcon[2], 0, "Left")
 Gui, Add, Text, W2 H25 ys-3 x+5 0x11 vSeparator4
-Gui, Add, Text, ys-6 x+5 W100 vContextTip gSetWin cBlue, #IfWin: %IfDirectContext%
-Gui, Add, Text, yp+16 W100 vCoordTip gOptions, CoordMode: %CoordMouse%
+Gui, Add, Text, ys-6 x+5 W90 vContextTip gSetWin cBlue, #IfWin: %IfDirectContext%
+Gui, Add, Text, yp+16 W90 vCoordTip gOptions, CoordMode: %CoordMouse%
 GuiControl,, Win1, % (InStr(o_AutoKey[1], "#")) ? 1 : 0
 GuiControl, Focus, InputList%A_List%
 Gui, Submit
@@ -720,6 +722,7 @@ Else
 }
 Menu, Tray, Icon
 Gui, Show, % ((WinState) ? "Maximize" : "W900 H630") ((HideWin) ? "Hide" : ""), %AppName% v%CurrentVersion% %CurrentFileName%
+Sleep, 250
 GuiControl, +ReadOnly, JoyKey
 GoSub, RowCheck
 If (HideWin)
@@ -9402,19 +9405,20 @@ return
 
 TakeAction:
 TakeAction := DoAction(FoundX, FoundY, Act1, Act2, Window, SearchResult)
-If TakeAction = Continue
+If (TakeAction = "Continue")
 	TakeAction := 0
-If TakeAction = Stop
+Else If (TakeAction = "Stop")
 	StopIt := 1
-If TakeAction = Prompt
+Else If (TakeAction = "Prompt")
 {
-	If SearchResult = 0
+	If (SearchResult = 0)
 		MsgBox, 49, %d_Lang035%, %d_Lang036% %FoundX%x%FoundY%.`n%d_Lang038%
 	Else
 		MsgBox, 49, %d_Lang035%, %d_Lang037%`n%d_Lang038%
 	IfMsgBox, Cancel
 		StopIt := 1
 }
+CoordMode, Mouse, %CoordMouse%
 return
 
 SplitStep:
@@ -10099,9 +10103,9 @@ GuiSize:
 If A_EventInfo = 1
 	return
 
-; GuiWidth := A_GuiWidth, GuiHeight := A_GuiHeight
+GuiWidth := A_GuiWidth, GuiHeight := A_GuiHeight
 ; WinGetPos,,, GuiWidth, GuiHeight, ahk_id %PMCWinID%
-GuiGetSize(GuiWidth, GuiHeight)
+; GuiGetSize(GuiWidth, GuiHeight)
 
 Gui, 1:Default
 GuiControl, Move, InputList%A_List%, % "W" GuiWidth-40 "H" GuiHeight-126

@@ -124,7 +124,7 @@ GuiGetSize(ByRef W, ByRef H, GuiID=1)
 	IfWinExist
 	{
 		VarSetCapacity( rect, 16, 0 )
-	,	DllCall("GetClientRect", uint, MyGuiHWND := WinExist(), uint, &rect )
+	,	DllCall("GetClientRect", "uint", MyGuiHWND := WinExist(), "uint", &rect )
 	,	W := NumGet( rect, 8, "int" )
 	,	H := NumGet( rect, 12, "int" )
 	}

@@ -8,7 +8,7 @@ Author: Pulover \[Rodolfo U. Batista\]
 [rodolfoub@gmail.com](mailto:rodolfoub@gmail.com)  
 Copyright © 2012-2013 Rodolfo U. Batista  
 
-Version: 3.7.6  
+Version: 3.7.7  
 Release Date: July, 2013  
 AutoHotkey Version: 1.1.11.01  
 
@@ -33,6 +33,11 @@ T800 for [Html Help utils](http://www.autohotkey.com/board/topic/17984-html-help
 
 
 # Change Log
+
+## Version 3.7.7
+
+* Fixed wrong global Mouse Coordinates after Image/Pixel Search.
+* Fixed wrong controls position in monitors with DPI different from 100%.
 
 ## Version 3.7.6
 
