@@ -6,7 +6,7 @@
 ; rodolfoub@gmail.com
 ; Home: http://www.autohotkey.net/~Pulover
 ; Forum: http://www.autohotkey.com/board/topic/79763-macro-creator
-; Version: 3.7.7
+; Version: 3.7.8
 ; Release Date: July, 2013
 ; AutoHotkey Version: 1.1.11.01
 ; Copyright © 2012-2013 Rodolfo U. Batista
@@ -60,7 +60,7 @@ http://www.autohotkey.com/board/topic/17984-html-help-utils
 ; Compiler Settings
 ;@Ahk2Exe-SetName Pulover's Macro Creator
 ;@Ahk2Exe-SetDescription Pulover's Macro Creator
-;@Ahk2Exe-SetVersion 3.7.7
+;@Ahk2Exe-SetVersion 3.7.8
 ;@Ahk2Exe-SetCopyright Copyright © 2012-2013 Rodolfo U. Batista
 ;@Ahk2Exe-SetOrigFilename MacroCreator.exe
 
@@ -87,7 +87,7 @@ DefaultIcon := (A_IsCompiled) ? A_ScriptFullPath
 			:  (FileExist("Resources\PMC3_Mult.ico") ? "Resources\PMC3_Mult.ico" : A_AhkPath)
 Menu, Tray, Icon, %DefaultIcon%, 1, 1
 
-CurrentVersion := "3.7.7", ReleaseDate := "July, 2013"
+CurrentVersion := "3.7.8", ReleaseDate := "July, 2013"
 
 ;##### Ini File Read #####
 
@@ -10103,44 +10103,7 @@ GuiSize:
 If A_EventInfo = 1
 	return
 
-GuiWidth := A_GuiWidth, GuiHeight := A_GuiHeight
-; WinGetPos,,, GuiWidth, GuiHeight, ahk_id %PMCWinID%
-; GuiGetSize(GuiWidth, GuiHeight)
-
-Gui, 1:Default
-GuiControl, Move, InputList%A_List%, % "W" GuiWidth-40 "H" GuiHeight-126
-GuiControl, Move, Order, % "x" GuiWidth-26
-GuiControl, Move, Cut, % "x" GuiWidth-26
-GuiControl, Move, Copy, % "x" GuiWidth-26
-GuiControl, Move, Paste, % "x" GuiWidth-26
-GuiControl, Move, Remove, % "x" GuiWidth-26
-GuiControl, Move, Separator5, % "x" GuiWidth-26
-GuiControl, Move, Undo, % "x" GuiWidth-26
-GuiControl, Move, Redo, % "x" GuiWidth-26
-GuiControl, Move, Separator6, % "x" GuiWidth-26
-GuiControl, Move, Duplicate, % "x" GuiWidth-26
-GuiControl, Move, CopyTo, % "x" GuiWidth-26
-GuiControl, Move, Separator7, % "x" GuiWidth-26
-GuiControl, Move, FindReplace, % "x" GuiWidth-26
-GuiControl, Move, EditColor, % "x" GuiWidth-26
-GuiControl, Move, EditComm, % "x" GuiWidth-26
-GuiControl, Move, Repeat, % "y" GuiHeight-23
-GuiControl, Move, Rept, % "y" GuiHeight-27
-GuiControl, Move, TimesM, % "y" GuiHeight-27
-GuiControl, Move, DelayT, % "y" GuiHeight-23
-GuiControl, Move, Delay, % "y" GuiHeight-27
-GuiControl, Move, DelayG, % "y" GuiHeight-27
-GuiControl, Move, ApplyT, % "y" GuiHeight-28
-GuiControl, Move, ApplyI, % "y" GuiHeight-28
-GuiControl, Move, sInput, % "y" GuiHeight-27
-GuiControl, Move, ApplyL, % "y" GuiHeight-28
-GuiControl, Move, EditButton, % "y" GuiHeight-28
-GuiControl, Move, Separator1, % "y" GuiHeight-27
-GuiControl, Move, Separator2, % "y" GuiHeight-27
-GuiControl, Move, Separator3, % "y" GuiHeight-27
-GuiControl, Move, Separator4, % "y" GuiHeight-27
-GuiControl, Move, CoordTip, % "y" GuiHeight-14
-GuiControl, Move, ContextTip, % "y" GuiHeight-30
+GuiSize(A_GuiWidth, A_GuiHeight)
 return
 
 ;##### Subroutines: Substitution #####

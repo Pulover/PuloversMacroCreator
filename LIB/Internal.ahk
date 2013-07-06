@@ -130,6 +130,51 @@ GuiGetSize(ByRef W, ByRef H, GuiID=1)
 	}
 }
 
+GuiSize(Width, Height)
+{
+	Global
+	Static GuiWidth, GuiHeight
+	
+	If (Width > 0) && (Height > 0)
+		GuiWidth := Width, GuiHeight := Height
+	
+	Gui, 1:Default
+	GuiControl, Move, InputList%A_List%, % "W" GuiWidth-40 "H" GuiHeight-126
+	GuiControl, Move, Order, % "x" GuiWidth-26
+	GuiControl, Move, Cut, % "x" GuiWidth-26
+	GuiControl, Move, Copy, % "x" GuiWidth-26
+	GuiControl, Move, Paste, % "x" GuiWidth-26
+	GuiControl, Move, Remove, % "x" GuiWidth-26
+	GuiControl, Move, Separator5, % "x" GuiWidth-26
+	GuiControl, Move, Undo, % "x" GuiWidth-26
+	GuiControl, Move, Redo, % "x" GuiWidth-26
+	GuiControl, Move, Separator6, % "x" GuiWidth-26
+	GuiControl, Move, Duplicate, % "x" GuiWidth-26
+	GuiControl, Move, CopyTo, % "x" GuiWidth-26
+	GuiControl, Move, Separator7, % "x" GuiWidth-26
+	GuiControl, Move, FindReplace, % "x" GuiWidth-26
+	GuiControl, Move, EditColor, % "x" GuiWidth-26
+	GuiControl, Move, EditComm, % "x" GuiWidth-26
+	GuiControl, Move, Repeat, % "y" GuiHeight-23
+	GuiControl, Move, Rept, % "y" GuiHeight-27
+	GuiControl, Move, TimesM, % "y" GuiHeight-27
+	GuiControl, Move, DelayT, % "y" GuiHeight-23
+	GuiControl, Move, Delay, % "y" GuiHeight-27
+	GuiControl, Move, DelayG, % "y" GuiHeight-27
+	GuiControl, Move, ApplyT, % "y" GuiHeight-28
+	GuiControl, Move, ApplyI, % "y" GuiHeight-28
+	GuiControl, Move, sInput, % "y" GuiHeight-27
+	GuiControl, Move, ApplyL, % "y" GuiHeight-28
+	GuiControl, Move, EditButton, % "y" GuiHeight-28
+	GuiControl, Move, Separator1, % "y" GuiHeight-27
+	GuiControl, Move, Separator2, % "y" GuiHeight-27
+	GuiControl, Move, Separator3, % "y" GuiHeight-27
+	GuiControl, Move, Separator4, % "y" GuiHeight-27
+	GuiControl, MoveDraw, CoordTip, % "y" GuiHeight-14
+	GuiControl, MoveDraw, ContextTip, % "y" GuiHeight-30
+	return
+}
+
 HotkeyCtrlHasFocus()
 {
 	global GuiA := ActiveGui(WinActive("A"))
