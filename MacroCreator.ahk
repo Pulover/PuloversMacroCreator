@@ -6,7 +6,7 @@
 ; rodolfoub@gmail.com
 ; Home: http://www.autohotkey.net/~Pulover
 ; Forum: http://www.autohotkey.com/board/topic/79763-macro-creator
-; Version: 3.7.8
+; Version: 3.7.9
 ; Release Date: July, 2013
 ; AutoHotkey Version: 1.1.11.01
 ; Copyright © 2012-2013 Rodolfo U. Batista
@@ -60,7 +60,7 @@ http://www.autohotkey.com/board/topic/17984-html-help-utils
 ; Compiler Settings
 ;@Ahk2Exe-SetName Pulover's Macro Creator
 ;@Ahk2Exe-SetDescription Pulover's Macro Creator
-;@Ahk2Exe-SetVersion 3.7.8
+;@Ahk2Exe-SetVersion 3.7.9
 ;@Ahk2Exe-SetCopyright Copyright © 2012-2013 Rodolfo U. Batista
 ;@Ahk2Exe-SetOrigFilename MacroCreator.exe
 
@@ -84,10 +84,10 @@ Process, Priority,, High
 
 Menu, Tray, Tip, Pulovers's Macro Creator
 DefaultIcon := (A_IsCompiled) ? A_ScriptFullPath
-			:  (FileExist("Resources\PMC3_Mult.ico") ? "Resources\PMC3_Mult.ico" : A_AhkPath)
+			:  (FileExist(A_ScriptDir "\Resources\PMC3_Mult.ico") ? A_ScriptDir "\Resources\PMC3_Mult.ico" : A_AhkPath)
 Menu, Tray, Icon, %DefaultIcon%, 1, 1
 
-CurrentVersion := "3.7.8", ReleaseDate := "July, 2013"
+CurrentVersion := "3.7.9", ReleaseDate := "July, 2013"
 
 ;##### Ini File Read #####
 
@@ -1308,6 +1308,7 @@ GuiControl, Focus, InputList%A_List%
 GoSub, b_Start
 FreeMemory()
 OnFinishCode := 1
+SetWorkingDir %A_ScriptDir%
 GoSub, SetFinishButtom
 GoSub, RecentFiles
 return
@@ -1371,6 +1372,8 @@ HistoryMacro1 := new LV_Rows()
 HistoryMacro1.Add()
 GuiControl,, Capt, 0
 Gui, Show, % ((WinExist("ahk_id" PMCWinID)) ? "" : "Hide"), %AppName% v%CurrentVersion% %CurrentFileName%
+SplitPath, CurrentFileName,, wDir
+SetWorkingDir %wDir%
 GoSub, RowCheck
 GoSub, LoadData
 GuiControl, Focus, InputList%A_List%
@@ -1418,7 +1421,7 @@ FileSelectFile, SelectedFileName, S16, %CurrentFileName%, %d_Lang005%, %d_Lang00
 FreeMemory()
 If SelectedFileName = 
 	Exit
-SplitPath, SelectedFileName,,, ext
+SplitPath, SelectedFileName,, wDir, ext
 If (ext <> "pmc")
 	SelectedFileName .= ".pmc"
 CurrentFileName := SelectedFileName
@@ -1450,6 +1453,8 @@ Loop, %TabCount%
 	FileAppend, %LV_Data%, %CurrentFileName%
 }
 Gui, Show, % ((WinExist("ahk_id" PMCWinID)) ? "NA" : "Hide"), %AppName% v%CurrentVersion% %CurrentFileName%
+SplitPath, CurrentFileName,, wDir
+SetWorkingDir %wDir%
 SavePrompt := False
 GoSub, RecentFiles
 return
