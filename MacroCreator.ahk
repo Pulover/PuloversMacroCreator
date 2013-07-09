@@ -6908,10 +6908,11 @@ RunTimerOn:
 If StopIt
 {
 	SetTimer, RunTimerOn, Off
-	aHK_Timer := 0
+	aHK_Timer := False
 	return
 }
-Playback(aHK_Timer)
+If (aHK_On := Playback(aHK_Timer))
+	GoSub, f_RunMacro
 FreeMemory()
 return
 

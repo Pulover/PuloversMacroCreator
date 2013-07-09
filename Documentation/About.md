@@ -34,6 +34,10 @@ T800 for [Html Help utils](http://www.autohotkey.com/board/topic/17984-html-help
 
 # Change Log
 
+## Version 3.7.9
+
+* Fixed Goto command not working in Timer.
+
 ## Version 3.7.8
 
 * Fixed bug: Controls not showing when selecting Macros.
