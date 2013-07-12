@@ -343,9 +343,12 @@ AssignVar(Name, Operator, Value)
 ListIEWindows()
 {
 	List := "[blank]||"
-	For Pwb in ComObjCreate( "Shell.Application" ).Windows
-		If InStr(Pwb.FullName, "iexplore.exe")
-			Try List .= Pwb.Document.Title "|"
+	Try
+	{
+		For Pwb in ComObjCreate( "Shell.Application" ).Windows
+			If InStr(Pwb.FullName, "iexplore.exe")
+				Try List .= Pwb.Document.Title "|"
+	}
 	return List
 }
 

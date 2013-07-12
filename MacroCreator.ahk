@@ -1867,7 +1867,7 @@ If (Ex_Speed <> 0)
 		Loop, Parse, AllScripts, `n
 		{
 			If RegExMatch(A_LoopField, "^Sleep, (\d+)$", Value)
-				Body .= "Sleep, " . Floor(Value1 / Exp_Mult[Ex_Speed]) . "`n"
+				Body .= "Sleep, " . Value1 // Exp_Mult[Ex_Speed] . "`n"
 			Else
 				Body .= A_LoopField "`n"
 		}
@@ -5079,7 +5079,7 @@ GuiControlGet, LoadedPic, 9:Pos
 Gui, 9:Destroy
 Width = 260
 Height = 200
-PropH := Floor(LoadedPicH * Width / LoadedPicW), PropW := Floor(LoadedPicW * Height / LoadedPicH)
+PropH := LoadedPicH * Width // LoadedPicW, PropW := LoadedPicW * Height // LoadedPicH
 If ((LoadedPicW <= Width) && (LoadedPicH <= Height))
 	GuiControl, 19:, PicPrev, *W0 *H0 %file%
 Else If (PropH > Height)
