@@ -114,7 +114,7 @@
 	w_Lang006 =	Auto.
 	w_Lang007 =	Man.
 	w_Lang008 =	Parar
-	w_Lang009 =	&Win
+	w_Lang009 =	Mostrar Co&ntrol.
 	w_Lang010 =	&Pausa
 	w_Lang011 =	&Loop
 	w_Lang012 =	&Capturar Teclas
@@ -125,7 +125,7 @@
 	w_Lang017 =	Aplicar
 	w_Lang018 =	Inserir
 	w_Lang019 =	Editar
-	w_Lang020 =	Mostrar Control.
+	w_Lang020 =	(unused)
 	w_Lang021 =	Não fazer nada
 	w_Lang022 =	Fechar aplicativo
 	w_Lang023 =	Desligar

@@ -114,7 +114,7 @@
 	w_Lang006 =	Auto.
 	w_Lang007 =	Man.
 	w_Lang008 =	Arresto
-	w_Lang009 =	&Win
+	w_Lang009 =	Most&ra controlli
 	w_Lang010 =	&Pausa
 	w_Lang011 =	A&nello
 	w_Lang012 =	&Cattura Keys
@@ -125,7 +125,7 @@
 	w_Lang017 =	Applicare
 	w_Lang018 =	Inserire
 	w_Lang019 =	Modifica
-	w_Lang020 =	Mostra controlli
+	w_Lang020 =	(unused)
 	w_Lang021 =	Non fare nulla
 	w_Lang022 =	Chiudi applicazione
 	w_Lang023 =	Chiudere

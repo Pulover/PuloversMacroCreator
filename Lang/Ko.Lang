@@ -114,7 +114,7 @@
 	w_Lang006 =	자동.
 	w_Lang007 =	남자.
 	w_Lang008 =	정지
-	w_Lang009 =	Win
+	w_Lang009 =	컨트롤 표시
 	w_Lang010 =	중지
 	w_Lang011 =	고리
 	w_Lang012 =	키를 캡처
@@ -125,7 +125,7 @@
 	w_Lang017 =	신청
 	w_Lang018 =	삽입하다
 	w_Lang019 =	수정
-	w_Lang020 =	컨트롤 표시
+	w_Lang020 =	(unused)
 	w_Lang021 =	아무것도하지
 	w_Lang022 =	응용 프로그램 닫기
 	w_Lang023 =	종료

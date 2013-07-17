@@ -114,7 +114,7 @@
 	w_Lang006 =	Auto.
 	w_Lang007 =	Man.
 	w_Lang008 =	Stoppen
-	w_Lang009 =	&Win
+	w_Lang009 =	S&teuerelemente anzeigen
 	w_Lang010 =	&Pause
 	w_Lang011 =	S&chleife
 	w_Lang012 =	E&rfassen Keys
@@ -125,7 +125,7 @@
 	w_Lang017 =	Anwenden
 	w_Lang018 =	Einfügen
 	w_Lang019 =	Bearbeiten
-	w_Lang020 =	Steuerelemente anzeigen
+	w_Lang020 =	(unused)
 	w_Lang021 =	Nichts tun
 	w_Lang022 =	Anwendung schließen
 	w_Lang023 =	Schließen

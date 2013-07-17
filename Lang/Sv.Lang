@@ -114,7 +114,7 @@
 	w_Lang006 =	Auto.
 	w_Lang007 =	Man.
 	w_Lang008 =	Stopp
-	w_Lang009 =	&Win
+	w_Lang009 =	Visa &kontroller
 	w_Lang010 =	&Paus
 	w_Lang011 =	L&oop
 	w_Lang012 =	&Fånga Keys
@@ -125,7 +125,7 @@
 	w_Lang017 =	Ansök
 	w_Lang018 =	Infoga
 	w_Lang019 =	Redigera
-	w_Lang020 =	Visa kontroller
+	w_Lang020 =	(unused)
 	w_Lang021 =	Gör ingenting
 	w_Lang022 =	Stäng program
 	w_Lang023 =	Stäng

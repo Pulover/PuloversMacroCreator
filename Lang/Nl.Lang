@@ -114,7 +114,7 @@
 	w_Lang006 =	Auto.
 	w_Lang007 =	Man.
 	w_Lang008 =	Stoppen
-	w_Lang009 =	&Win
+	w_Lang009 =	Too&n een checklist
 	w_Lang010 =	&Pauze
 	w_Lang011 =	&Lus
 	w_Lang012 =	&Capture Keys
@@ -125,7 +125,7 @@
 	w_Lang017 =	Van toepassing zijn
 	w_Lang018 =	Invoegen
 	w_Lang019 =	Redigeren
-	w_Lang020 =	Toon een checklist
+	w_Lang020 =	(unused)
 	w_Lang021 =	Niets doen
 	w_Lang022 =	Sluit de toepassing
 	w_Lang023 =	Stilgelegd

@@ -114,7 +114,7 @@
 	w_Lang006 =	自动
 	w_Lang007 =	手动
 	w_Lang008 =	停止
-	w_Lang009 =	Win
+	w_Lang009 =	显示控制
 	w_Lang010 =	暂停
 	w_Lang011 =	循环
 	w_Lang012 =	捕获键
@@ -125,7 +125,7 @@
 	w_Lang017 =	应用
 	w_Lang018 =	插入
 	w_Lang019 =	编辑
-	w_Lang020 =	显示控制
+	w_Lang020 =	(unused)
 	w_Lang021 =	什么都不做
 	w_Lang022 =	关闭应用程序
 	w_Lang023 =	关闭

@@ -114,9 +114,9 @@
 	w_Lang006 =	Acte.
 	w_Lang007 =	Man
 	w_Lang008 =	Aturi
-	w_Lang009 =	&Win
+	w_Lang009 =	&Barra de control
 	w_Lang010 =	&Pausa
-	w_Lang011 =	&Bucle
+	w_Lang011 =	B&ucle
 	w_Lang012 =	&Captura Keys
 	w_Lang013 =	&Hide Window
 	w_Lang014 =	Semp&re actiu
@@ -125,7 +125,7 @@
 	w_Lang017 =	Aplicar
 	w_Lang018 =	Insereix
 	w_Lang019 =	Edita
-	w_Lang020 =	Barra de control
+	w_Lang020 =	(unused)
 	w_Lang021 =	No fer res
 	w_Lang022 =	Tancar l'aplicació
 	w_Lang023 =	Tancar

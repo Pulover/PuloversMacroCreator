@@ -38,6 +38,7 @@ T800 for [Html Help utils](http://www.autohotkey.com/board/topic/17984-html-help
 
 * Working Directory is now automatically set to the path of currently open file.
 * Fixed Goto command not working in Timer.
+* Fixed wrong controls position when window started maximized.
 
 ## Version 3.7.8
 

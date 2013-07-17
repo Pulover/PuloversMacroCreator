@@ -114,7 +114,7 @@
 	w_Lang006 =	Auto.
 	w_Lang007 =	Man.
 	w_Lang008 =	Zatrzymać
-	w_Lang009 =	&Win
+	w_Lang009 =	Po&każ panel kontroli
 	w_Lang010 =	P&auza
 	w_Lang011 =	P&ętla
 	w_Lang012 =	P&rzechwytywanie klawiszy
@@ -125,7 +125,7 @@
 	w_Lang017 =	Zastosować
 	w_Lang018 =	Wstawić
 	w_Lang019 =	Edytuj
-	w_Lang020 =	Pokaż panel kontroli
+	w_Lang020 =	(unused)
 	w_Lang021 =	Nic nie robić
 	w_Lang022 =	Close aplikacji
 	w_Lang023 =	Zamknąć

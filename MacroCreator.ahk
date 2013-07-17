@@ -554,7 +554,7 @@ Gui, Add, Button, -Wrap W90 H40 ys xm+405 hwndStartB vStartB gPlayStart, %w_Lang
 Gui, Font
 ; Gui, Font, s7
 Gui, Add, Checkbox, -Wrap Checked%HideMainWin% yp+45 xp-95 W90 vHideMainWin R1, %w_Lang013%
-Gui, Add, Checkbox, -Wrap Checked%OnScCtrl% yp xp+95 W90 vOnScCtrl R1, %w_Lang020%
+Gui, Add, Checkbox, -Wrap Checked%OnScCtrl% yp xp+95 W90 vOnScCtrl R1, %w_Lang009%
 Gui, Add, Button, -Wrap ys xm+500 W25 H25 hwndTestRun vTestRun gTestRun
 	ILButton(TestRun, TestRunIcon[1] ":" TestRunIcon[2])
 Gui, Add, Button, -Wrap W25 H25 hwndRunTimer vRunTimer gRunTimer
@@ -599,10 +599,10 @@ Gui, Add, Checkbox, -Wrap ys+75 xp+30 W100 gCapt vCapt R1, %w_Lang012%
 Gui, Add, Checkbox, -Wrap Checked%KeepHkOn% W100 -Wrap yp x+5 vKeepHkOn gCheckHkOn R1, %w_Lang014%
 Gui, Add, Tab2, Section Buttons -Wrap AltSubmit xm ys+72 H22 W500 hwndTabSel vA_List gTabSel, Macro1
 Gui, Add, ListView, x+0 y+0 AltSubmit Checked hwndListID1 vInputList1 gInputList W860 r28 NoSort LV0x10000, Index|Action|Details|Repeat|Delay|Type|Control|Window|Comment|Color
-ImageListID := IL_Create(LVIcons.MaxIndex())
-LV_SetImageList(ImageListID)
+LV_hIL := IL_Create(LVIcons.MaxIndex())
+LV_SetImageList(LV_hIL)
 Loop, % LVIcons.MaxIndex()
-	IL_Add(ImageListID, LVIcons[A_Index][1], LVIcons[A_Index][2])
+	IL_Add(LV_hIL, LVIcons[A_Index][1], LVIcons[A_Index][2])
 Loop, 10
 	LV_ModifyCol(A_Index, Col_%A_Index%)
 Gui, Tab
@@ -722,7 +722,6 @@ Else
 }
 Menu, Tray, Icon
 Gui, Show, % ((WinState) ? "Maximize" : "W900 H630") ((HideWin) ? "Hide" : ""), %AppName% v%CurrentVersion% %CurrentFileName%
-Sleep, 250
 GuiControl, +ReadOnly, JoyKey
 GoSub, RowCheck
 If (HideWin)
@@ -768,6 +767,7 @@ Else
 		SetTimer, CheckUpdates, -1
 }
 HideWin := "", PlayHK := "", AutoPlay := "", TimerPlay := ""
+FreeMemory()
 return
 
 ;##### Capture Keys #####
@@ -9551,6 +9551,7 @@ If (KeepDefKeys = 1)
 IfWinExist, ahk_id %PMCOSC%
 	GoSub, 28GuiClose
 GoSub, WriteSettings
+IL_Destroy(LV_hIL)
 ExitApp
 return
 
@@ -10109,7 +10110,8 @@ GuiSize:
 If A_EventInfo = 1
 	return
 
-GuiSize(A_GuiWidth, A_GuiHeight)
+GuiGetSize(WinW, WinH), GuiSize(WinW, WinH)
+; GuiSize(A_GuiWidth, A_GuiHeight)
 return
 
 ;##### Subroutines: Substitution #####
@@ -10377,7 +10379,6 @@ Try Menu, Tray, Icon, %f_Lang002%, % OpenIcon[1], % OpenIcon[2]
 Try Menu, Tray, Icon, %f_Lang003%, % SaveIcon[1], % SaveIcon[2]
 Try Menu, Tray, Icon, %w_Lang003%, % OptionsIcon[1], % OptionsIcon[2]
 Try Menu, Tray, Icon, %f_Lang011%, % ExitIcon[1], % ExitIcon[2]
-
 return
 
 ; Playback / Recording options menu:
@@ -10540,7 +10541,7 @@ GuiControl,, RecordB, %w_Lang004%
 GuiControl,, StartB, %w_Lang005%
 GuiControl,, RepeatT, %w_Lang011% (%t_Lang004%):
 GuiControl,, Capt, %w_Lang012%
-GuiControl,, OnScCtrl, %w_Lang020%
+GuiControl,, OnScCtrl, %w_Lang009%
 GuiControl,, HideMainWin, %w_Lang013%
 GuiControl,, KeepHkOn, %w_Lang014%
 GuiControl,, Repeat, %w_Lang015%:

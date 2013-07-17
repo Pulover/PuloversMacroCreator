@@ -114,7 +114,7 @@
 	w_Lang006 =	Auto.
 	w_Lang007 =	Man.
 	w_Lang008 =	Megáll
-	w_Lang009 =	&Win
+	w_Lang009 =	M&utasd ellenőrzés
 	w_Lang010 =	S&zünet
 	w_Lang011 =	&Hurok
 	w_Lang012 =	&Capture Keys
@@ -125,7 +125,7 @@
 	w_Lang017 =	Alkalmaz
 	w_Lang018 =	Beszúrása
 	w_Lang019 =	Szerkeszt
-	w_Lang020 =	Mutasd ellenőrzés
+	w_Lang020 =	(unused)
 	w_Lang021 =	Ne tegyen semmit
 	w_Lang022 =	Bezár alkalmazás
 	w_Lang023 =	Állítsa le

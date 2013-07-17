@@ -114,7 +114,7 @@
 	w_Lang006 =	Auto.
 	w_Lang007 =	Man.
 	w_Lang008 =	Stopp
-	w_Lang009 =	&Win
+	w_Lang009 =	V&is kontroller
 	w_Lang010 =	Pa&use
 	w_Lang011 =	&Loop
 	w_Lang012 =	&Capture Keys
@@ -125,7 +125,7 @@
 	w_Lang017 =	Påfør
 	w_Lang018 =	Sett
 	w_Lang019 =	Redigere
-	w_Lang020 =	Vis kontroller
+	w_Lang020 =	(unused)
 	w_Lang021 =	Gjør ingenting
 	w_Lang022 =	Lukk programmet
 	w_Lang023 =	Slå
