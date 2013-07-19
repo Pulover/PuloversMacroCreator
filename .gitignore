@@ -2,10 +2,10 @@
 /Site/
 /Documentation/MacroCreator_Help-doc/*.html
 /Documentation/MacroCreator_Help-doc/Commands/*.html
+/Documentation/MacroCreator_Help-doc/hha.dll
 *.exe
 *.chm
 *.ini
-*.dll
 *.iss
 *.hhc
 *.hhk

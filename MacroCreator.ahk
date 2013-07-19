@@ -1935,7 +1935,7 @@ IfWinExist
     GoSub, PrevClose
 Preview := LV_Export(A_List)
 ; Gui, 2:Font, s7
-Gui, 2:+Resize +hwndPrevID
+Gui, 2:+Resize +hwndPrevID +LastFound
 Gui, 2:Add, Button, -Wrap Section W60 H25 gPrevClose, %c_Lang022%
 Gui, 2:Add, Button, -Wrap ys W25 H25 hwndPrevCopy vPrevCopy gPrevCopy
 	ILButton(PrevCopy, CopyIcon[1] ":" CopyIcon[2])
@@ -1944,10 +1944,11 @@ Gui, 2:Add, Button, -Wrap ys W25 H25 hwndPrevRefresh vPrevRefresh gPrevRefresh
 Gui, 2:Add, Checkbox, -Wrap ys+5 W95 vAutoRefresh R1, %t_Lang015%
 Gui, 2:Add, Checkbox, -Wrap ys+5 xp+100 W105 vOnTop gOnTop R1, %t_Lang016%
 Gui, 2:Add, Checkbox, -Wrap Checked%TabIndent% ys+5 xp+110 W85 vTabIndent gPrevRefresh R1, %t_Lang011%
-Gui, 2:Font, s8, Courier New
-Gui, 2:Add, Edit, Section xm-8 vLVPrev W420 R35 -Wrap HScroll ReadOnly
-Gui, 2:Font
+; Gui, 2:Font, s8, Courier New
+; Gui, 2:Add, Edit, Section xm-8 vLVPrev W420 R35 -Wrap HScroll ReadOnly
+; Gui, 2:Font
 ; Gui, 2:Font, s7
+#Include <SyntaxHighlight>
 Gui, 2:Add, StatusBar
 Gui, 2:Default
 SB_SetParts(150, 150)
@@ -1956,7 +1957,7 @@ SB_SetText("Record Keys: " RecKey "/" RecNewKey, 2)
 SB_SetText("CoordMode: " CoordMouse, 3)
 Gui, 1:Default
 GuiControl, 2:, LVPrev, %Preview%
-Gui, 2:Show,, %c_Lang072% - %AppName%
+Gui, 2:Show, w460 h640, %c_Lang072% - %AppName%
 Tooltip
 return
 
@@ -10576,9 +10577,10 @@ return
 #Include <Class_PMC>
 #Include <Class_LV_Rows>
 #Include <Class_ObjIni>
-#Include *i <Gdip>
-#Include *i <Eval>
-#Include *i <Class_LV_Colors>
+#Include <Gdip>
+#Include <Eval>
+#Include <Class_LV_Colors>
+#Include <SCI>
 #SingleInstance Off
 
 #Include Lang\En.lang

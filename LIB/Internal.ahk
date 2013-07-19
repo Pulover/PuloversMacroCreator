@@ -200,11 +200,19 @@ WM_CTLCOLOR(wParam, lParam)
 	BG_COLOR   := 0xFFFFFF
 	IfEqual, hBrush,, SetEnv, hBrush, % DllCall("CreateSolidBrush", UInt, BG_COLOR)
 	GuiControlGet, ctrl, Name, %lParam%
-	If (ctrl = "JoyKey")
+	If (ctrl = "JoyKey") || (ctrl = "LVPrev")
 	{
 		DllCall("SetBkColor", UInt,wParam, UInt, BG_COLOR)
 		Return hBrush
 	}
+}
+
+SCI_NOTIFY(wParam, lParam, msg, hwnd, sciObj) {
+
+	line := sciObj.LineFromPosition(sciObj.position)
+
+	if (sciObj.scnCode = SCN_MARGINCLICK)
+		sciObj.ToggleFold(line)
 }
 
 MarkArea(LineW)
