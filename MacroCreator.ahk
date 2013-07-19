@@ -6,7 +6,7 @@
 ; rodolfoub@gmail.com
 ; Home: http://www.autohotkey.net/~Pulover
 ; Forum: http://www.autohotkey.com/board/topic/79763-macro-creator
-; Version: 3.7.10
+; Version: 4.0.0
 ; Release Date: July, 2013
 ; AutoHotkey Version: 1.1.11.01
 ; Copyright © 2012-2013 Rodolfo U. Batista
@@ -44,6 +44,9 @@ http://www.autohotkey.com/board/topic/15675-monster
 Jethrow for the IEGet Function.
 http://www.autohotkey.com/board/topic/47052-basic-webpage-controls
 
+RaptorX for the Scintilla Wrapper for AHK
+http://www.autohotkey.com/board/topic/85928-wrapper-scintilla-wrapper
+
 majkinetor for the Dlg_Color function.
 http://www.autohotkey.com/board/topic/49214-ahk-ahk-l-forms-framework-08/
 
@@ -60,7 +63,7 @@ http://www.autohotkey.com/board/topic/17984-html-help-utils
 ; Compiler Settings
 ;@Ahk2Exe-SetName Pulover's Macro Creator
 ;@Ahk2Exe-SetDescription Pulover's Macro Creator
-;@Ahk2Exe-SetVersion 3.7.10
+;@Ahk2Exe-SetVersion 4.0.0
 ;@Ahk2Exe-SetCopyright Copyright © 2012-2013 Rodolfo U. Batista
 ;@Ahk2Exe-SetOrigFilename MacroCreator.exe
 
@@ -87,7 +90,11 @@ DefaultIcon := (A_IsCompiled) ? A_ScriptFullPath
 			:  (FileExist(A_ScriptDir "\Resources\PMC3_Mult.ico") ? A_ScriptDir "\Resources\PMC3_Mult.ico" : A_AhkPath)
 Menu, Tray, Icon, %DefaultIcon%, 1, 1
 
-CurrentVersion := "3.7.10", ReleaseDate := "July, 2013"
+SciDllPath := (A_IsCompiled) ? (A_ScriptDir "\SciLexer.dll")
+			: (A_ScriptDir ((A_PtrSize = 8) ? "\LIB\SciLexer-x64.dll" : "\LIB\SciLexer-x86.dll"))
+DllCall("LoadLibrary", "Str", SciDllPath)
+
+CurrentVersion := "4.0.0", ReleaseDate := "July, 2013"
 
 ;##### Ini File Read #####
 
@@ -278,7 +285,8 @@ GoSub, WriteSettings
 
 CurrentLang := Lang
 
-#Include LIB\Definitions.ahk
+#Include <Definitions>
+#Include <WordList>
 
 Lang_Ca := "Català`t(Catalan)"
 ,	Lang_Da := "Dansk`t(Danish﻿)"
@@ -1948,7 +1956,18 @@ Gui, 2:Add, Checkbox, -Wrap Checked%TabIndent% ys+5 xp+110 W85 vTabIndent gPrevR
 ; Gui, 2:Add, Edit, Section xm-8 vLVPrev W420 R35 -Wrap HScroll ReadOnly
 ; Gui, 2:Font
 ; Gui, 2:Font, s7
-#Include <SyntaxHighlight>
+Gui, 2:Add, Custom, ClassScintilla xm+8 hwndhSciPrev vLVPrev W420 R35
+sciPrev := new scintilla(hSciPrev)
+,	sciPrev.SetMarginWidthN(0, 20)
+,	sciPrev.SetWrapMode(False)
+,	sciPrev.SetLexer(200)
+,	sciPrev.StyleClearAll()
+,	sciPrev.SetKeywords(0, SyHi_Com)
+,	sciPrev.SetKeywords(1, SyHi_Param)
+,	sciPrev.StyleSetFore(11, 0x0071E1)
+,	sciPrev.StyleSetFore(12, 0xC10000)
+,	sciPrev.SetText("", Preview)
+,	sciPrev.SetReadOnly(True)
 Gui, 2:Add, StatusBar
 Gui, 2:Default
 SB_SetParts(150, 150)
@@ -1957,7 +1976,7 @@ SB_SetText("Record Keys: " RecKey "/" RecNewKey, 2)
 SB_SetText("CoordMode: " CoordMouse, 3)
 Gui, 1:Default
 GuiControl, 2:, LVPrev, %Preview%
-Gui, 2:Show, w460 h640, %c_Lang072% - %AppName%
+Gui, 2:Show,, %c_Lang072% - %AppName%
 Tooltip
 return
 
@@ -1975,7 +1994,8 @@ PrevRefresh:
 Gui, Submit, NoHide
 GuiControl, 2:-Redraw, LVPrev
 Preview := LV_Export(A_List)
-GuiControl, 2:, LVPrev, %Preview%
+; GuiControl, 2:, LVPrev, %Preview%
+sciPrev.SetReadOnly(False), sciPrev.SetText("", Preview), sciPrev.SetReadOnly(True)
 PostMessage, %WM_VSCROLL%, 7, , Edit1, ahk_id %PrevID%
 Gui, 2:Default
 SB_SetText("Macro" A_List ": " o_AutoKey[A_List], 1)
@@ -1988,6 +2008,7 @@ return
 PrevClose:
 2GuiClose:
 2GuiEscape:
+sciPrev := ""
 Gui, 2:Destroy
 AutoRefresh = 0
 return
@@ -2428,6 +2449,7 @@ Gui, 26:Add, Link, y+0, Kdoske && trueski for the <a href="http://www.autohotkey
 Gui, 26:Add, Link, y+0, jaco0646 for the <a href="http://www.autohotkey.com/board/topic/47439-user-defined-dynamic-hotkeys">function</a> to make hotkey controls detect other keys.
 Gui, 26:Add, Link, y+0, Laszlo for the <a href="http://www.autohotkey.com/board/topic/15675-monster">Monster function</a> to solve expressions.
 Gui, 26:Add, Link, y+0, Jethrow for the <a href="http://www.autohotkey.com/board/topic/47052-basic-webpage-controls">IEGet Function</a>.
+Gui, 26:Add, Link, y+0, RaptorX for the <a href="http://www.autohotkey.com/board/topic/85928-wrapper-scintilla-wrapper">Scintilla Wrapper for AHK</a>.
 Gui, 26:Add, Link, y+0, majkinetor for the <a href="http://www.autohotkey.com/board/topic/49214-ahk-ahk-l-forms-framework-08/">Dlg_Color</a> function.
 Gui, 26:Add, Link, y+0, rbrtryn for the <a href="http://www.autohotkey.com/board/topic/91229-windows-color-picker-plus/">ChooseColor</a> function.
 Gui, 26:Add, Link, y+0, fincs for <a href="http://www.autohotkey.com/board/topic/71751-gendocs-v30-alpha002">GenDocs</a>.
@@ -10111,8 +10133,9 @@ If A_EventInfo = 1
 	return
 
 pGuiWidth := A_GuiWidth, pGuiHeight := A_GuiHeight
+GuiGetSize(pWinW, WinH, 2)
 
-GuiControl, Move, LVPrev, % "W" pGuiWidth "H" pGuiHeight-60
+GuiControl, Move, LVPrev, % "W" pWinW-20 "H" pGuiHeight-60
 return
 
 28GuiSize:

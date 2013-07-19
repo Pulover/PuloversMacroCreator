@@ -1,6 +1,9 @@
-﻿; Title: Scintilla Wrapper for AHK
+﻿;###########################################################
+; Title: Scintilla Wrapper for AHK
+; Original by RaptorX
+; http://www.autohotkey.com/board/topic/85928-wrapper-scintilla-wrapper
 ; Modified by Pulover to work with Gui Custom Controls.
-
+;###########################################################
 class scintilla {
     hwnd            := 0        ; Component Handle
     notify          := ""       ; Name of the function that will handle the window messages sent by the control
@@ -42,12 +45,12 @@ class scintilla {
             __SCI(this.hwnd := hwnd, this)
         ; else
             ; return this
-		if !init        ;  WM_NOTIFY = 0x4E
-			old:=OnMessage(0x4E,"__sciNotify"),init:=true
+		; if !init        ;  WM_NOTIFY = 0x4E
+			; old:=OnMessage(0x4E,"__sciNotify"),init:=true
 		__sendEditor(this.hwnd)               ; initialize sendEditor function
     }
 
-    __call(msg, ByRef wParam=0, ByRef lParam=0, params*){
+    __call(msg, wParam=0, lParam=0, params*){
 
         if (msg = "Add")
             __SCI(this.hwnd := __Add(wParam, lParam, params*), this)

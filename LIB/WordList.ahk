@@ -1,4 +1,4 @@
-﻿Dir=
+﻿SyHi_Dir =
 (
 #allowsamelinecomments #clipboardtimeout #commentflag #errorstdout #escapechar #hotkeyinterval
 #hotkeymodifiertimeout #hotstring #if #iftimeout #ifwinactive #ifwinexist #include #includeagain
@@ -7,11 +7,11 @@
 #usehook #warn #winactivateforce
 )
 
-Com=
+SyHi_Com =
 (
 autotrim blockinput clipwait control controlclick controlfocus controlget controlgetfocus
 controlgetpos controlgettext controlmove controlsend controlsendraw controlsettext coordmode
-critical detecthiddentext detecthiddenwindows drive driveget drivespacefree edit endrepeat envadd
+detecthiddentext detecthiddenwindows drive driveget drivespacefree edit endrepeat envadd
 envdiv envget envmult envset envsub envupdate fileappend filecopy filecopydir filecreatedir
 filecreateshortcut filedelete filegetattrib filegetshortcut filegetsize filegettime filegetversion
 fileinstall filemove filemovedir fileread filereadline filerecycle filerecycleempty fileremovedir
@@ -35,7 +35,7 @@ winrestore winset winsettitle winshow winwait winwaitactive winwaitclose winwait
 fileencoding
 )
 
-Param=
+SyHi_Param =
 (
 ltrim rtrim join ahk_id ahk_pid ahk_class ahk_group processname minmax controllist statuscd
 filesystem setlabel alwaysontop mainwindow nomainwindow useerrorlevel altsubmit hscroll vscroll
@@ -64,16 +64,16 @@ enabled disabled visible notimers interrupt priority waitclose unicode tocodepag
 yes no ok cancel abort retry ignore force on off all send wanttab monitorcount monitorprimary
 monitorname monitorworkarea pid base useunsetlocal useunsetglobal localsameasglobal str astr wstr
 int64 int short char uint64 uint ushort uchar float double int64p intp shortp charp uint64p uintp
-ushortp ucharp floatp doublep ptr
+ushortp ucharp floatp doublep ptr static global local byref
 )
 
-Flow=
+SyHi_Flow =
 (
-break continue else exit exitapp gosub goto loop onexit pause repeat return settimer sleep
-suspend static global local byref while until for
+break continue critical else exit exitapp gosub goto loop onexit pause repeat return settimer sleep
+suspend while until for
 )
 
-Fun=
+SyHi_Fun =
 (
 abs acos asc asin atan ceil chr cos dllcall exp fileexist floor getkeystate numget numput
 registercallback il_add il_create il_destroy instr islabel isfunc ln log lv_add lv_delete
@@ -88,7 +88,7 @@ comobjget comobjconnect comobjerror comobjactive comobjenwrap comobjunwrap comob
 comobjmissing comobjtype comobjvalue comobjarray
 )
 
-BIVar=
+SyHi_BIVar =
 (
 a_ahkpath a_ahkversion a_appdata a_appdatacommon a_autotrim a_batchlines a_caretx a_carety
 a_computername a_controldelay a_cursor a_dd a_ddd a_dddd a_defaultmousespeed a_desktop
@@ -111,7 +111,7 @@ programfiles a_thisfunc a_thislabel a_ispaused a_iscritical a_isunicode a_ptrsiz
 true false
 )
 
-Keys=
+SyHi_Keys =
 (
 shift lshift rshift alt lalt ralt control lcontrol rcontrol ctrl lctrl rctrl lwin rwin appskey
 altdown altup shiftdown shiftup ctrldown ctrlup lwindown lwinup rwindown rwinup lbutton rbutton

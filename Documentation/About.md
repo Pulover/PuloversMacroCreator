@@ -8,7 +8,7 @@ Author: Pulover \[Rodolfo U. Batista\]
 [rodolfoub@gmail.com](mailto:rodolfoub@gmail.com)  
 Copyright © 2012-2013 Rodolfo U. Batista  
 
-Version: 3.7.10  
+Version: 4.0.0  
 Release Date: July, 2013  
 AutoHotkey Version: 1.1.11.01  
 
@@ -26,6 +26,7 @@ Kdoske & trueski for the [CSV functions](http://www.autohotkey.com/board/topic/5
 jaco0646 for the [function](http://www.autohotkey.com/board/topic/47439-user-defined-dynamic-hotkeys) to make hotkey controls detect other keys.  
 Laszlo for the [Monster function](http://www.autohotkey.com/board/topic/15675-monster) to solve expressions.  
 Jethrow for the [IEGet Function](http://www.autohotkey.com/board/topic/47052-basic-webpage-controls).  
+RaptorX for the [Scintilla Wrapper for AHK](http://www.autohotkey.com/board/topic/85928-wrapper-scintilla-wrapper).
 majkinetor for the [Dlg_Color](http://www.autohotkey.com/board/topic/49214-ahk-ahk-l-forms-framework-08/) function.  
 rbrtryn for the [ChooseColor](http://www.autohotkey.com/board/topic/91229-windows-color-picker-plus/) function.  
 fincs for [GenDocs](http://www.autohotkey.com/board/topic/71751-gendocs-v30-alpha002).  
