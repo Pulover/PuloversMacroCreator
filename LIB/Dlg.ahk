@@ -21,13 +21,15 @@ Dlg_Color(ByRef Color, hGui=0, ByRef Palette="")
 ,	NumPut(0x00000103, ChooseColor, 5 * A_PtrSize, "UInt")
 
 	nRC := DllCall("comdlg32\ChooseColor", "UPtr", &ChooseColor, "UInt")
-	If (errorlevel <> 0) || (nRC = 0) 
-		return false 
-
+	ann := ErrorLevel
+	
 	Palette := ""
 	Loop, 16
 		Palette .= ColorRGB(NumGet(Custom, (A_Index - 1) * 4, "UInt")) ","
 	
+	If (ann <> 0) || (nRC = 0) 
+		return false 
+
 	clr := NumGet(ChooseColor, 3 * A_PtrSize) 
 
 	oldFormat := A_FormatInteger 

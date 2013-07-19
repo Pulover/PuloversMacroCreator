@@ -8,7 +8,7 @@ Author: Pulover \[Rodolfo U. Batista\]
 [rodolfoub@gmail.com](mailto:rodolfoub@gmail.com)  
 Copyright © 2012-2013 Rodolfo U. Batista  
 
-Version: 3.7.9  
+Version: 3.7.10  
 Release Date: July, 2013  
 AutoHotkey Version: 1.1.11.01  
 
@@ -33,6 +33,12 @@ T800 for [Html Help utils](http://www.autohotkey.com/board/topic/17984-html-help
 
 
 # Change Log
+
+## Version 3.7.10
+
+* Added *Run immediately* option in Timer.
+* Fixed some issues with main window controls sizes.
+* Fixed color dialog not saving personalized colors when canceled.
 
 ## Version 3.7.9
 

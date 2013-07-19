@@ -6,7 +6,7 @@
 ; rodolfoub@gmail.com
 ; Home: http://www.autohotkey.net/~Pulover
 ; Forum: http://www.autohotkey.com/board/topic/79763-macro-creator
-; Version: 3.7.9
+; Version: 3.7.10
 ; Release Date: July, 2013
 ; AutoHotkey Version: 1.1.11.01
 ; Copyright © 2012-2013 Rodolfo U. Batista
@@ -60,7 +60,7 @@ http://www.autohotkey.com/board/topic/17984-html-help-utils
 ; Compiler Settings
 ;@Ahk2Exe-SetName Pulover's Macro Creator
 ;@Ahk2Exe-SetDescription Pulover's Macro Creator
-;@Ahk2Exe-SetVersion 3.7.9
+;@Ahk2Exe-SetVersion 3.7.10
 ;@Ahk2Exe-SetCopyright Copyright © 2012-2013 Rodolfo U. Batista
 ;@Ahk2Exe-SetOrigFilename MacroCreator.exe
 
@@ -87,7 +87,7 @@ DefaultIcon := (A_IsCompiled) ? A_ScriptFullPath
 			:  (FileExist(A_ScriptDir "\Resources\PMC3_Mult.ico") ? A_ScriptDir "\Resources\PMC3_Mult.ico" : A_AhkPath)
 Menu, Tray, Icon, %DefaultIcon%, 1, 1
 
-CurrentVersion := "3.7.9", ReleaseDate := "July, 2013"
+CurrentVersion := "3.7.10", ReleaseDate := "July, 2013"
 
 ;##### Ini File Read #####
 
@@ -6872,8 +6872,9 @@ Gui, 27:Add, UpDown, vTimerDelayX 0x80 Range0-9999999, %TimerDelayX%
 Gui, 27:Add, Radio, -Wrap Section Checked%TimerMsc% yp+25 W150 vTimerMsc R1, %c_Lang018%
 Gui, 27:Add, Radio, -Wrap Checked%TimerSec% W150 vTimerSec R1, %c_Lang019%
 Gui, 27:Add, Radio, -Wrap Checked%TimerMin% W150 vTimerMin R1, %c_Lang154%
-Gui, 27:Add, Radio, -Wrap Section Group Checked%RunOnce% xm W180 vRunOnce R1, %t_Lang078%
-Gui, 27:Add, Radio, -Wrap Checked%TimedRun% W180 vTimedRun R1, %t_Lang079%
+Gui, 27:Add, Radio, -Wrap Section Group Checked%RunOnce% xm W180 vRunOnce gTimerSub R1, %t_Lang078%
+Gui, 27:Add, Radio, -Wrap Checked%TimedRun% W180 vTimedRun gTimerSub R1, %t_Lang079%
+Gui, 27:Add, Checkbox, -Wrap Checked%RunFirst% xp+15 y+5 W180 vRunFirst R1 Disabled, %t_Lang106%
 Gui, 27:Add, Button, -Wrap Section Default xm W60 H23 gTimerOK, %c_Lang020%
 Gui, 27:Add, Button, -Wrap ys W60 H23 gTimerCancel, %c_Lang021%
 If !(Timer_ran)
@@ -6881,8 +6882,16 @@ If !(Timer_ran)
 	GuiControl, 27:, TimerDelayX, 250
 	GuiControl, 27:, TimerMsc, 1
 	GuiControl, 27:, RunOnce, 1
+	GuiControl, 27:, RunFirst, 0
 }
+If (TimedRun)
+	GuiControl, 27:Enable, RunFirst
 Gui, 27:Show,, %t_Lang080%
+return
+
+TimerSub:
+Gui, 27:Submit, NoHide
+GuiControl, 27:Enable%TimedRun%, RunFirst
 return
 
 TimerOK:
@@ -6908,6 +6917,8 @@ If RunOnce = 1
 ActivateHotkeys(0, 1, 1, 1)
 aHK_Timer := A_List
 SetTimer, RunTimerOn, %DelayX%
+If (TimedRun) && (RunFirst)
+	GoSub, RunTimerOn
 return
 
 RunTimerOn:
@@ -6972,7 +6983,7 @@ StopIt := 0
 Tooltip
 WinMinimize, ahk_id %PMCWinID%
 aHK_On := [A_List]
-Gosub, f_RunMacro
+GoSub, f_RunMacro
 return
 
 PlayStart:
@@ -7404,6 +7415,7 @@ Gui, ListView, InputList%A_List%
 GuiControl,, A_List, %s_List%
 GuiControl, Choose, A_List, % (A_List < TabCount) ? A_List : TabCount
 Gui, Submit, NoHide
+GoSub, GuiSize
 GoSub, LoadData
 GoSub, RowCheck
 If WinExist("ahk_id " PrevID)
