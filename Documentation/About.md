@@ -37,6 +37,8 @@ T800 for [Html Help utils](http://www.autohotkey.com/board/topic/17984-html-help
 ## Version 3.7.10
 
 * Added *Run immediately* option in Timer.
+* Fixed some issues with main window controls sizes.
+* Fixed color dialog not saving personalized colors when canceled.
 
 ## Version 3.7.9
 
