@@ -405,6 +405,7 @@
 	t_Lang103 =	Fast
 	t_Lang104 =	Vis / skjul Title Bar
 	t_Lang105 =	Vis / skjul hovedvinduet
+	t_Lang106 =	Kjøres umiddelbart
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Åpent

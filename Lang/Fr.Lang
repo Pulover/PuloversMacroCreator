@@ -405,6 +405,7 @@
 	t_Lang103 =	Rapide
 	t_Lang104 =	Afficher / Masquer la barre de titre
 	t_Lang105 =	Afficher / Masquer la fenêtre principale
+	t_Lang106 =	Exécuter immédiatement
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Ouvert

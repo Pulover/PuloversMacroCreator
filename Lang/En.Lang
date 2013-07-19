@@ -405,6 +405,7 @@
 	t_Lang103 =	Fast
 	t_Lang104 =	Show / Hide Title Bar
 	t_Lang105 =	Show / Hide Main Window
+	t_Lang106 =	Run immediately
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Open
