@@ -5,7 +5,7 @@
 ; Author:            Pulover [Rodolfo U. Batista]
 ;                    rodolfoub@gmail.com
 ; AHK version:       1.1.11.00
-; Release date:      16 July 2013
+; Release date:      19 July 2013
 ;
 ;                    Class for AutoHotkey Rebar custom controls
 ;=======================================================================================
@@ -17,7 +17,7 @@
 ;
 ; Rebar Methods:
 ;    DeleteBand(Band)
-;    GetBand(Band, ID, Text, Size, Image, Background, Style)
+;    GetBand(Band [, ID, Text, Size, Image, Background, Style])
 ;    GetBandCount()
 ;    GetBarHeight()
 ;    GetLayout()
@@ -27,12 +27,13 @@
 ;    InsertBand(hCtrl [, Position, Options, ID, Text, Size, Image, Background, MinHeight
 ;               , MinWidth, IdealSize])
 ;    MaximizeBand(Band [, IdealWidth])
-;    MinimizeBand(Band, IdealWidth=False)
+;    MinimizeBand(Band)
 ;    ModifyBand(Band, Property, Value)
-;    MoveBand(Band, TargetIndex)
+;    MoveBand(Band, Target)
 ;    OnNotify(Param [, MenuXPos, MenuYPos, ID)
 ;    SetBandWidth(Band, Width)
 ;    SetImageList(ImageList)
+;    SetMaxRows([Rows])
 ;    SetLayout(Layout)
 ;    ShowBand(Band [, Show])
 ;    ToggleStyle(Style)
@@ -286,8 +287,9 @@ Class Rebar extends Rebar.Private
 ;                            is "Normal" or "N", pass it A_EventInfo as the Param.
 ;                        You can also call it from a function monitoring the WM_NOTIFY
 ;                            message, pass it lParam as the Param.
-;                        Currently this method is only used to retrieve the position for
-;                            a menu when the Chevron button is pushed.
+;                        Currently this method is used to retrieve the position for
+;                            a menu when the Chevron button is pushed and prevent a number
+;                            of rows higher then the one set by SetMaxRows method.
 ;    Parameters:
 ;        Param:          The lParam from WM_NOTIFY message.
 ;        MenuXPos:       OutputVar to store the horizontal position for a menu.
@@ -308,6 +310,18 @@ Class Rebar extends Rebar.Private
         ,   MenuXPos := RBX + NumGet(Param + (A_PtrSize * 4 - 4), 12, "Int")
         ,   MenuYPos := RBY + NumGet(Param + (A_PtrSize * 4 - 4), 24, "Int")
             return NumGet(Param + (A_PtrSize * 3), 0, "Int") + 1
+        }
+        If ((nCode = this.RBN_HEIGHTCHANGE) && (this.MaxRows))
+        {
+            BreakCount := 0
+            Loop, % this.GetBandCount()
+            {
+                this.GetBand(A_Index, ID, "", "", "", "", Style)
+                If (Style & 0x0001)
+                    lBrBand := A_Index
+            }
+            If (this.GetRowCount() > this.MaxRows)
+                this.ModifyBand(lBrBand, "Style", Style-0x0001)
         }
         return ""
     }
@@ -354,6 +368,18 @@ Class Rebar extends Rebar.Private
         ,   this.SetBandWidth(Index, Par2), this.MoveBand(Index, A_Index)
         }
         return Par0 ? True : False
+    }
+;=======================================================================================
+;    Method:             SetMaxRows
+;    Description:        Sets the maximum number of rows allowed in a rebar control.
+;    Parameters:
+;        Rows:           Number of maximum rows allowed. Set it to 0 to disable limit.
+;    Return:             The number of rows previously allowed.
+;=======================================================================================
+    SetMaxRows(Rows=0)
+    {
+        LastValue := this.MaxRows, this.MaxRows := Rows
+        return LastValue
     }
 ;=======================================================================================
 ;    Method:             ShowBand
@@ -490,6 +516,7 @@ Class Rebar extends Rebar.Private
         __New(hRebar)
         {
             this.rbHwnd := hRebar
+        ,    this.MaxRows := 0
         }
 ;=======================================================================================
         __Delete()

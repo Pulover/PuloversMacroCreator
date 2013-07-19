@@ -1,25 +1,20 @@
-﻿SyHi_Dir =
+﻿SyHi_Com =
 (
 #allowsamelinecomments #clipboardtimeout #commentflag #errorstdout #escapechar #hotkeyinterval
 #hotkeymodifiertimeout #hotstring #if #iftimeout #ifwinactive #ifwinexist #include #includeagain
 #installkeybdhook #installmousehook #keyhistory #ltrim #maxhotkeysperinterval #maxmem #maxthreads
 #maxthreadsbuffer #maxthreadsperhotkey #menumaskkey #noenv #notrayicon #persistent #singleinstance
-#usehook #warn #winactivateforce
-)
-
-SyHi_Com =
-(
-autotrim blockinput clipwait control controlclick controlfocus controlget controlgetfocus
-controlgetpos controlgettext controlmove controlsend controlsendraw controlsettext coordmode
-detecthiddentext detecthiddenwindows drive driveget drivespacefree edit endrepeat envadd
-envdiv envget envmult envset envsub envupdate fileappend filecopy filecopydir filecreatedir
-filecreateshortcut filedelete filegetattrib filegetshortcut filegetsize filegettime filegetversion
-fileinstall filemove filemovedir fileread filereadline filerecycle filerecycleempty fileremovedir
-fileselectfile fileselectfolder filesetattrib filesettime formattime getkeystate groupactivate
-groupadd groupclose groupdeactivate gui guicontrol guicontrolget hideautoitwin hotkey if ifequal
-ifexist ifgreater ifgreaterorequal ifinstring ifless iflessorequal ifmsgbox ifnotequal ifnotexist
-ifnotinstring ifwinactive ifwinexist ifwinnotactive ifwinnotexist imagesearch inidelete iniread
-iniwrite input inputbox keyhistory keywait listhotkeys listlines listvars menu mouseclick
+#usehook #warn #winactivateforce autotrim blockinput clipwait control controlclick controlfocus
+controlget controlgetfocus controlgetpos controlgettext controlmove controlsend controlsendraw
+controlsettext coordmode detecthiddentext detecthiddenwindows drive driveget drivespacefree edit
+endrepeat envadd envdiv envget envmult envset envsub envupdate fileappend filecopy filecopydir
+filecreatedir filecreateshortcut filedelete filegetattrib filegetshortcut filegetsize filegettime
+filegetversion fileinstall filemove filemovedir fileread filereadline filerecycle filerecycleempty
+fileremovedir fileselectfile fileselectfolder filesetattrib filesettime formattime getkeystate
+groupactivate groupadd groupclose groupdeactivate gui guicontrol guicontrolget hideautoitwin hotkey
+if ifequal ifexist ifgreater ifgreaterorequal ifinstring ifless iflessorequal ifmsgbox ifnotequal
+ifnotexist ifnotinstring ifwinactive ifwinexist ifwinnotactive ifwinnotexist imagesearch inidelete
+iniread iniwrite input inputbox keyhistory keywait listhotkeys listlines listvars menu mouseclick
 mouseclickdrag mousegetpos mousemove msgbox outputdebug pixelgetcolor pixelsearch postmessage
 process progress random regdelete regread regwrite reload run runas runwait send sendevent
 sendinput sendmessage sendmode sendplay sendraw setbatchlines setcapslockstate setcontroldelay
@@ -32,7 +27,8 @@ stringupper sysget thread tooltip transform traytip urldownloadtofile winactivat
 winclose winget wingetactivestats wingetactivetitle wingetclass wingetpos wingettext wingettitle
 winhide winkill winmaximize winmenuselectitem winminimize winminimizeall winminimizeallundo winmove
 winrestore winset winsettitle winshow winwait winwaitactive winwaitclose winwaitnotactive
-fileencoding
+fileencoding break continue critical else exit exitapp gosub goto loop onexit pause repeat return
+settimer sleep suspend while until for
 )
 
 SyHi_Param =
@@ -65,12 +61,6 @@ yes no ok cancel abort retry ignore force on off all send wanttab monitorcount m
 monitorname monitorworkarea pid base useunsetlocal useunsetglobal localsameasglobal str astr wstr
 int64 int short char uint64 uint ushort uchar float double int64p intp shortp charp uint64p uintp
 ushortp ucharp floatp doublep ptr static global local byref
-)
-
-SyHi_Flow =
-(
-break continue critical else exit exitapp gosub goto loop onexit pause repeat return settimer sleep
-suspend while until for
 )
 
 SyHi_Fun =
