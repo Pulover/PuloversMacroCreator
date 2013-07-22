@@ -12,6 +12,12 @@
 ,	LV_GetText(Col, Index, 10)
 }
 
+TB_Messages(wParam, lParam)
+{
+    Global
+    TbFile.OnMessage(wParam)
+}
+
 ShowTooltip()
 {
 	static CurrControl, PrevControl, _TT, TT_A
@@ -366,7 +372,7 @@ GuiAddLV(ident)
 	Gui, Tab, %ident%
 	Try
 		Gui, Add, ListView, x+0 y+0 AltSubmit Checked hwndListID%ident% vInputList%ident% gInputList W760 r26 NoSort LV0x10000, Index|Action|Details|Repeat|Delay|Type|Control|Window|Comment|Color
-	LV_SetImageList(LV_hIL)
+	LV_SetImageList(hIL_Icons)
 	Loop, 10
 		LV_ModifyCol(A_Index, Col_%A_Index%)
 }

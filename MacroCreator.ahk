@@ -91,8 +91,15 @@ DefaultIcon := (A_IsCompiled) ? A_ScriptFullPath
 Menu, Tray, Icon, %DefaultIcon%, 1, 1
 
 SciDllPath := (A_IsCompiled) ? (A_ScriptDir "\SciLexer.dll")
-			: (A_ScriptDir ((A_PtrSize = 8) ? "\LIB\SciLexer-x64.dll" : "\LIB\SciLexer-x86.dll"))
+			: (A_ScriptDir ((A_PtrSize = 8) ? "\SciLexer-x64.dll" : "\SciLexer-x86.dll"))
 DllCall("LoadLibrary", "Str", SciDllPath)
+
+hIL_Icons := IL_Create(10, 10)
+Loop
+{
+	If (!IL_Add(hIL_Icons, A_ScriptDir "\Resources.dll", A_Index) && (A_Index > 1))
+		break
+}
 
 CurrentVersion := "4.0.0", ReleaseDate := "July, 2013"
 
@@ -514,103 +521,102 @@ Menu, LangMenu, Check, % Lang_%Lang%
 
 ; Gui, Font, s7
 Gui, +Resize +MinSize310x140 +HwndPMCWinID
-Gui, Add, Button, -Wrap W25 H25 hwndNewB vNewB gNew
-	ILButton(NewB, NewIcon[1] ":" NewIcon[2])
-Gui, Add, Button, -Wrap W25 H25 ys x+0 hwndOpenB vOpenB gOpen
-	ILButton(OpenB, OpenIcon[1] ":" OpenIcon[2])
-Gui, Add, Button, -Wrap W25 H25 ys x+0 hwndSaveB vSaveB gSave
-	ILButton(SaveB, SaveIcon[1] ":" SaveIcon[2])
-Gui, Add, Text, W2 H25 ys+2 x+5 0x11
-Gui, Add, Button, -Wrap W69 H25 ys x+4 hwndExportB vExportB gExport, %w_Lang001%
-	ILButton(ExportB, ExportIcon[1] ":" ExportIcon[2], 0, "Left")
-Gui, Add, Button, -Wrap W69 H25 yp x+2 hwndPreviewB vPreviewB gPreview, %w_Lang002%
-	ILButton(PreviewB, PreviewIcon[1] ":" PreviewIcon[2], 0, "Left")
-Gui, Add, Button, -Wrap W69 H25 yp x+2 hwndOptionsB vOptionsB gOptions, %w_Lang003%
-	ILButton(OptionsB, OptionsIcon[1] ":" OptionsIcon[2], 0, "Left")
-Gui, Add, Button, -Wrap W25 H25 yp+30 xm hwndMouseB vMouseB gMouse
-	ILButton(MouseB, MouseIcon[1] ":" MouseIcon[2])
-Gui, Add, Button, -Wrap W25 H25 yp x+0 hwndTextB vTextB gText
-	ILButton(TextB, TextIcon[1] ":" TextIcon[2])
-Gui, Add, Button, -Wrap W25 H25 yp x+0 hwndControlB vControlB gControlCmd
-	ILButton(ControlB, ControlIcon[1] ":" ControlIcon[2])
-Gui, Add, Text, W2 H25 yp+2 x+5 0x11
-Gui, Add, Button, -Wrap W25 H25 yp-2 x+4 hwndPauseB vPauseB gPause
-	ILButton(PauseB, PauseIcon[1] ":" PauseIcon[2])
-Gui, Add, Button, -Wrap W25 H25 yp x+0 hwndWindowB vWindowB gWindow
-	ILButton(WindowB, WindowIcon[1] ":" WindowIcon[2])
-Gui, Add, Button, -Wrap W25 H25 yp x+0 hwndImageB vImageB gImage
-	ILButton(ImageB, ImageIcon[1] ":" ImageIcon[2])
-Gui, Add, Button, -Wrap W25 H25 yp x+0 hwndRunB vRunB gRun
-	ILButton(RunB, RunIcon[1] ":" RunIcon[2])
-Gui, Add, Text, W2 H25 yp+2 x+5 0x11
-Gui, Add, Button, -Wrap W25 H25 yp-2 x+4 hwndComLoopB vComLoopB gComLoop
-	ILButton(ComLoopB, LoopIcon[1] ":" LoopIcon[2])
-Gui, Add, Button, -Wrap W25 H25 yp x+0 hwndIfStB vIfStB gIfSt
-	ILButton(IfStB, IfStIcon[1] ":" IfStIcon[2])
-Gui, Add, Button, -Wrap W25 H25 yp x+0 hwndIEComB vIEComB gIECom
-	ILButton(IEComB, IEIcon[1] ":" IEIcon[2])
-Gui, Font, s10, Courier New
-Gui, Add, Button, -Wrap W25 H25 yp x+0 hwndSendMsgB vSendMsgB gSendMsg
-	ILButton(SendMsgB, MsgIcon[1] ":" MsgIcon[2])
-Gui, Font
-Gui, Add, Text, W2 H55 yp-28 x+5 0x11
-Gui, Font, Bold
-Gui, Add, Button, -Wrap W90 H40 ys xm+310 hwndRecordB vRecordB gRecord, %w_Lang004%
-	ILButton(RecordB, RecordIcon[1] ":" RecordIcon[2], 1, "Left")
-Gui, Add, Button, -Wrap W90 H40 ys xm+405 hwndStartB vStartB gPlayStart, %w_Lang005%
-	ILButton(StartB, PlayIcon[1] ":" PlayIcon[2], 1, "Left")
-Gui, Font
+; Gui, Add, Button, -Wrap W25 H25 hwndNewB vNewB gNew
+	; ILButton(NewB, NewIcon[1] ":" NewIcon[2])
+; Gui, Add, Button, -Wrap W25 H25 ys x+0 hwndOpenB vOpenB gOpen
+	; ILButton(OpenB, OpenIcon[1] ":" OpenIcon[2])
+; Gui, Add, Button, -Wrap W25 H25 ys x+0 hwndSaveB vSaveB gSave
+	; ILButton(SaveB, SaveIcon[1] ":" SaveIcon[2])
+; Gui, Add, Text, W2 H25 ys+2 x+5 0x11
+; Gui, Add, Button, -Wrap W69 H25 ys x+4 hwndExportB vExportB gExport, %w_Lang001%
+	; ILButton(ExportB, ExportIcon[1] ":" ExportIcon[2], 0, "Left")
+; Gui, Add, Button, -Wrap W69 H25 yp x+2 hwndPreviewB vPreviewB gPreview, %w_Lang002%
+	; ILButton(PreviewB, PreviewIcon[1] ":" PreviewIcon[2], 0, "Left")
+; Gui, Add, Button, -Wrap W69 H25 yp x+2 hwndOptionsB vOptionsB gOptions, %w_Lang003%
+	; ILButton(OptionsB, OptionsIcon[1] ":" OptionsIcon[2], 0, "Left")
+; Gui, Add, Button, -Wrap W25 H25 yp+30 xm hwndMouseB vMouseB gMouse
+	; ILButton(MouseB, MouseIcon[1] ":" MouseIcon[2])
+; Gui, Add, Button, -Wrap W25 H25 yp x+0 hwndTextB vTextB gText
+	; ILButton(TextB, TextIcon[1] ":" TextIcon[2])
+; Gui, Add, Button, -Wrap W25 H25 yp x+0 hwndControlB vControlB gControlCmd
+	; ILButton(ControlB, ControlIcon[1] ":" ControlIcon[2])
+; Gui, Add, Text, W2 H25 yp+2 x+5 0x11
+; Gui, Add, Button, -Wrap W25 H25 yp-2 x+4 hwndPauseB vPauseB gPause
+	; ILButton(PauseB, PauseIcon[1] ":" PauseIcon[2])
+; Gui, Add, Button, -Wrap W25 H25 yp x+0 hwndWindowB vWindowB gWindow
+	; ILButton(WindowB, WindowIcon[1] ":" WindowIcon[2])
+; Gui, Add, Button, -Wrap W25 H25 yp x+0 hwndImageB vImageB gImage
+	; ILButton(ImageB, ImageIcon[1] ":" ImageIcon[2])
+; Gui, Add, Button, -Wrap W25 H25 yp x+0 hwndRunB vRunB gRun
+	; ILButton(RunB, RunIcon[1] ":" RunIcon[2])
+; Gui, Add, Text, W2 H25 yp+2 x+5 0x11
+; Gui, Add, Button, -Wrap W25 H25 yp-2 x+4 hwndComLoopB vComLoopB gComLoop
+	; ILButton(ComLoopB, LoopIcon[1] ":" LoopIcon[2])
+; Gui, Add, Button, -Wrap W25 H25 yp x+0 hwndIfStB vIfStB gIfSt
+	; ILButton(IfStB, IfStIcon[1] ":" IfStIcon[2])
+; Gui, Add, Button, -Wrap W25 H25 yp x+0 hwndIEComB vIEComB gIECom
+	; ILButton(IEComB, IEIcon[1] ":" IEIcon[2])
+; Gui, Font, s10, Courier New
+; Gui, Add, Button, -Wrap W25 H25 yp x+0 hwndSendMsgB vSendMsgB gSendMsg
+	; ILButton(SendMsgB, MsgIcon[1] ":" MsgIcon[2])
+; Gui, Font
+; Gui, Add, Text, W2 H55 yp-28 x+5 0x11
+Gui, Add, Custom, ClassToolbarWindow32 hwndhTbFile 0x0800 0x0100 0x0040
+Gui, Add, Custom, ClassReBarWindow32 hwndhRbMain 0x0400 0x0040 0x8000
+; Gui, Font, Bold
+; Gui, Add, Button, -Wrap W90 H40 ys xm+310 hwndRecordB vRecordB gRecord, %w_Lang004%
+	; ILButton(RecordB, RecordIcon[1] ":" RecordIcon[2], 1, "Left")
+; Gui, Add, Button, -Wrap W90 H40 ys xm+405 hwndStartB vStartB gPlayStart, %w_Lang005%
+	; ILButton(StartB, PlayIcon[1] ":" PlayIcon[2], 1, "Left")
+; Gui, Font
 ; Gui, Font, s7
-Gui, Add, Checkbox, -Wrap Checked%HideMainWin% yp+45 xp-95 W90 vHideMainWin R1, %w_Lang013%
-Gui, Add, Checkbox, -Wrap Checked%OnScCtrl% yp xp+95 W90 vOnScCtrl R1, %w_Lang009%
-Gui, Add, Button, -Wrap ys xm+500 W25 H25 hwndTestRun vTestRun gTestRun
-	ILButton(TestRun, TestRunIcon[1] ":" TestRunIcon[2])
-Gui, Add, Button, -Wrap W25 H25 hwndRunTimer vRunTimer gRunTimer
-	ILButton(RunTimer, RunTimerIcon[1] ":" RunTimerIcon[2])
-Gui, Add, GroupBox, Section W355 H65 ys-9 xm+530
-Gui, Add, Text, -Wrap W25 H22 ys+15 xs+10 vAutoT, %w_Lang006%:
-Gui, Add, Text, -Wrap W25 H22 y+3 vManT, %w_Lang007%:
-Gui, Add, Hotkey, vAutoKey gSaveData W150 ys+13 xp+30
-Gui, Add, Edit, yp xp WP HP vJoyKey Hidden
-Gui, Add, Hotkey, vManKey gWaitKeys W55 y+5 Limit190, % o_ManKey[1]
-Gui, Add, Text, -Wrap W25 H22 yp+3 xp+65 vAbortT, %w_Lang008%:
-Gui, Add, Hotkey,  yp-3 xp+30 vAbortKey W55, %AbortKey%
-Gui, Font, s10, Wingdings
-Gui, Add, Checkbox, -Wrap ys+11 xs+193 W25 H25 vWin1 gSaveData 0x1000, ÿ
-Gui, Font
+; Gui, Add, Checkbox, -Wrap Checked%HideMainWin% yp+45 xp-95 W90 vHideMainWin R1, %w_Lang013%
+; Gui, Add, Checkbox, -Wrap Checked%OnScCtrl% yp xp+95 W90 vOnScCtrl R1, %w_Lang009%
+; Gui, Add, Button, -Wrap ys xm+500 W25 H25 hwndTestRun vTestRun gTestRun
+	; ILButton(TestRun, TestRunIcon[1] ":" TestRunIcon[2])
+; Gui, Add, Button, -Wrap W25 H25 hwndRunTimer vRunTimer gRunTimer
+	; ILButton(RunTimer, RunTimerIcon[1] ":" RunTimerIcon[2])
+; Gui, Add, GroupBox, Section W355 H65 ys-9 xm+530
+; Gui, Add, Text, -Wrap W25 H22 ys+15 xs+10 vAutoT, %w_Lang006%:
+; Gui, Add, Text, -Wrap W25 H22 y+3 vManT, %w_Lang007%:
+; Gui, Add, Hotkey, vAutoKey gSaveData W150 ys+13 xp+30
+; Gui, Add, Edit, yp xp WP HP vJoyKey Hidden
+; Gui, Add, Hotkey, vManKey gWaitKeys W55 y+5 Limit190, % o_ManKey[1]
+; Gui, Add, Text, -Wrap W25 H22 yp+3 xp+65 vAbortT, %w_Lang008%:
+; Gui, Add, Hotkey,  yp-3 xp+30 vAbortKey W55, %AbortKey%
+; Gui, Font, s10, Wingdings
+; Gui, Add, Checkbox, -Wrap ys+11 xs+193 W25 H25 vWin1 gSaveData 0x1000, ÿ
+; Gui, Font
 ; Gui, Font, s7
-Gui, Add, Checkbox, -Wrap yp x+2 W25 H25 hwndJoyHK vJoyHK gSetJoyButton 0x1000
-	ILButton(JoyHK, JoyIcon[1] ":" JoyIcon[2])
-Gui, Add, Checkbox, -Wrap Checked%PauseKey% y+1 xs+193 W25 H25 hwndPauseKey vPauseKey gPauseKey 0x1000 ;, %w_Lang010%
-	ILButton(PauseKey, PauseIconB[1] ":" PauseIconB[2])
-Gui, Add, Checkbox, -Wrap yp x+2 W25 H25 hwndOnFinish vOnFinish gOnFinish 0x1000 ;, %w_Lang010%
-	ILButton(OnFinish, FinishIcon[1] ":" FinishIcon[2])
-Gui, Add, Text, W2 H55 ys+10 xs+250 0x11
-Gui, Add, Text, -Wrap yp+5 x+5 W90 H22 vRepeatT, %w_Lang011% (%t_Lang004%):
-Gui, Add, Edit, y+1 W90 R1 Number vReptC
-Gui, Add, UpDown, vTimesG 0x80 Range0-999999999, 1
-Gui, Add, Button, -Wrap hwndTabPlus vTabPlus gTabPlus ys+70 xm+500 W25 H25
-	ILButton(TabPlus, PlusIcon[1] ":" PlusIcon[2])
-Gui, Add, Button, -Wrap hwndTabClose vTabClose gTabClose x+0 ys+70 W25 H25
-	ILButton(TabClose, CloseIcon[1] ":" CloseIcon[2])
-Gui, Add, Button, -Wrap hwndDuplicateL vDuplicateL gDuplicateList x+0 ys+70 W25 H25
-	ILButton(DuplicateL, DuplicateLIcon[1] ":" DuplicateLIcon[2])
-Gui, Add, Text, W2 H25 ys+72 x+5 0x11
-Gui, Add, Button, -Wrap hwndImportB vImportB gImport x+4 ys+70 W25 H25
-	ILButton(ImportB, ImportIcon[1] ":" ImportIcon[2])
-Gui, Add, Button, -Wrap hwndSaveC vSaveC gSaveCurrentList x+0 ys+70 W25 H25
-	ILButton(SaveC, SaveLIcon[1] ":" SaveLIcon[2])
-Gui, Add, Text, W2 H25 ys+72 x+5 0x11
-Gui, Add, Button, -Wrap x+4 ys+70 W25 H25 hwndIfDirB vIfDirB gSetWin
-	ILButton(IfDirB, ContextIcon[1] ":" ContextIcon[2])
-Gui, Add, Checkbox, -Wrap ys+75 xp+30 W100 gCapt vCapt R1, %w_Lang012%
-Gui, Add, Checkbox, -Wrap Checked%KeepHkOn% W100 -Wrap yp x+5 vKeepHkOn gCheckHkOn R1, %w_Lang014%
+; Gui, Add, Checkbox, -Wrap yp x+2 W25 H25 hwndJoyHK vJoyHK gSetJoyButton 0x1000
+	; ILButton(JoyHK, JoyIcon[1] ":" JoyIcon[2])
+; Gui, Add, Checkbox, -Wrap Checked%PauseKey% y+1 xs+193 W25 H25 hwndPauseKey vPauseKey gPauseKey 0x1000 ;, %w_Lang010%
+	; ILButton(PauseKey, PauseIconB[1] ":" PauseIconB[2])
+; Gui, Add, Checkbox, -Wrap yp x+2 W25 H25 hwndOnFinish vOnFinish gOnFinish 0x1000 ;, %w_Lang010%
+	; ILButton(OnFinish, FinishIcon[1] ":" FinishIcon[2])
+; Gui, Add, Text, W2 H55 ys+10 xs+250 0x11
+; Gui, Add, Text, -Wrap yp+5 x+5 W90 H22 vRepeatT, %w_Lang011% (%t_Lang004%):
+; Gui, Add, Edit, y+1 W90 R1 Number vReptC
+; Gui, Add, UpDown, vTimesG 0x80 Range0-999999999, 1
+; Gui, Add, Button, -Wrap hwndTabPlus vTabPlus gTabPlus ys+70 xm+500 W25 H25
+	; ILButton(TabPlus, PlusIcon[1] ":" PlusIcon[2])
+; Gui, Add, Button, -Wrap hwndTabClose vTabClose gTabClose x+0 ys+70 W25 H25
+	; ILButton(TabClose, CloseIcon[1] ":" CloseIcon[2])
+; Gui, Add, Button, -Wrap hwndDuplicateL vDuplicateL gDuplicateList x+0 ys+70 W25 H25
+	; ILButton(DuplicateL, DuplicateLIcon[1] ":" DuplicateLIcon[2])
+; Gui, Add, Text, W2 H25 ys+72 x+5 0x11
+; Gui, Add, Button, -Wrap hwndImportB vImportB gImport x+4 ys+70 W25 H25
+	; ILButton(ImportB, ImportIcon[1] ":" ImportIcon[2])
+; Gui, Add, Button, -Wrap hwndSaveC vSaveC gSaveCurrentList x+0 ys+70 W25 H25
+	; ILButton(SaveC, SaveLIcon[1] ":" SaveLIcon[2])
+; Gui, Add, Text, W2 H25 ys+72 x+5 0x11
+; Gui, Add, Button, -Wrap x+4 ys+70 W25 H25 hwndIfDirB vIfDirB gSetWin
+	; ILButton(IfDirB, ContextIcon[1] ":" ContextIcon[2])
+; Gui, Add, Checkbox, -Wrap ys+75 xp+30 W100 gCapt vCapt R1, %w_Lang012%
+; Gui, Add, Checkbox, -Wrap Checked%KeepHkOn% W100 -Wrap yp x+5 vKeepHkOn gCheckHkOn R1, %w_Lang014%
 Gui, Add, Tab2, Section Buttons -Wrap AltSubmit xm ys+72 H22 W500 hwndTabSel vA_List gTabSel, Macro1
 Gui, Add, ListView, x+0 y+0 AltSubmit Checked hwndListID1 vInputList1 gInputList W860 r28 NoSort LV0x10000, Index|Action|Details|Repeat|Delay|Type|Control|Window|Comment|Color
-LV_hIL := IL_Create(LVIcons.MaxIndex())
-LV_SetImageList(LV_hIL)
-Loop, % LVIcons.MaxIndex()
-	IL_Add(LV_hIL, LVIcons[A_Index][1], LVIcons[A_Index][2])
+LV_SetImageList(hIL_Icons)
 Loop, 10
 	LV_ModifyCol(A_Index, Col_%A_Index%)
 Gui, Tab
@@ -666,6 +672,7 @@ GuiControl, Focus, InputList%A_List%
 Gui, Submit
 GoSub, LoadData
 GoSub, b_Start
+OnMessage(WM_COMMAND, "TB_Messages")
 OnMessage(WM_MOUSEMOVE, "ShowTooltip")
 OnMessage(WM_RBUTTONDOWN, "ShowContextHelp")
 OnMessage(WM_LBUTTONDOWN, "DragToolbar")
@@ -730,6 +737,7 @@ Else
 }
 Menu, Tray, Icon
 Gui, Show, % ((WinState) ? "Maximize" : "W900 H630") ((HideWin) ? "Hide" : ""), %AppName% v%CurrentVersion% %CurrentFileName%
+GoSub, DefineToolbars
 GuiControl, +ReadOnly, JoyKey
 GoSub, RowCheck
 If (HideWin)
@@ -776,6 +784,21 @@ Else
 }
 HideWin := "", PlayHK := "", AutoPlay := "", TimerPlay := ""
 FreeMemory()
+return
+
+;##### Toolbars #####
+
+DefineToolbars:
+TbFile := New Toolbar(hTbFile)
+TbFile.SetImageList(hIL_Icons)
+TbFile.Add("", "New=New:37", "Open=Open:38", "Save=Save:56")
+TbFile.SetMaxTextRows(0)
+TbFile.SetExStyle("DrawDDArrows HideClippedButtons")
+TbFile.Get("", "", "", tbBtnWidth, tbBtnHeight)
+NumButtons := TbFile.GetCount()
+tbWidth := NumButtons * tbBtnWidth
+RbMain := New Rebar(hRbMain)
+RbMain.InsertBand(hTbFile, 0, "", 10, "", 100, 0, "", tbBtnHeight, 25, 100)
 return
 
 ;##### Capture Keys #####
@@ -9587,7 +9610,7 @@ If (KeepDefKeys = 1)
 IfWinExist, ahk_id %PMCOSC%
 	GoSub, 28GuiClose
 GoSub, WriteSettings
-IL_Destroy(LV_hIL)
+IL_Destroy(hIL_Icons)
 ExitApp
 return
 
@@ -10019,85 +10042,83 @@ Loop, % LV_GetCount()
 	}
 	LV_Modify(A_Index, "", A_Index " " IdxLv)
 	If (Action = "[Text]")
-		LV_Modify(A_Index, "Icon" 1)
+		LV_Modify(A_Index, "Icon" 69)
 	Else If Type in %cType1%,%cType2%,%cType8%,%cType9%
-		LV_Modify(A_Index, "Icon" 1)
+		LV_Modify(A_Index, "Icon" 69)
 	Else If Type in %cType3%,%cType4%,%cType13%
-		LV_Modify(A_Index, "Icon" 2)
-	Else If Action = [Pause]
-		LV_Modify(A_Index, "Icon" 3)
-	Else If Type in %cType7%,%cType38%,%cType39%,%cType40%,%cType41%
-		LV_Modify(A_Index, "Icon" 4)
-	Else If Type = %cType29%
-		LV_Modify(A_Index, "Icon" 26)
-	Else If Type = %cType30%
-		LV_Modify(A_Index, "Icon" 27)
-	Else If Type in %cType11%,%cType14%
-		LV_Modify(A_Index, "Icon" 5)
-	Else If Action = [Assign Variable]
-		LV_Modify(A_Index, "Icon" 14)
-	Else If Type = %cType21%
-		LV_Modify(A_Index, "Icon" 15)
-	Else If Type = %cType17%
-		LV_Modify(A_Index, "Icon" 6)
-	Else If Type in %cType18%,%cType19%
-		LV_Modify(A_Index, "Icon" 13)
-	Else If Type = %cType15%
-		LV_Modify(A_Index, "Icon" 24)
-	Else If Type = %cType16%
-		LV_Modify(A_Index, "Icon" 7)
-	Else If Action = [Control]
-		LV_Modify(A_Index, "Icon" 9)
-	Else If Type in %cType32%,%cType33%
-		LV_Modify(A_Index, "Icon" 10)
-	Else If Type = %cType34%
-		LV_Modify(A_Index, "Icon" 25)
-	Else If Type = %cType42%
-		LV_Modify(A_Index, "Icon" 35)
-	Else If Type = %cType43%
-		LV_Modify(A_Index, "Icon" 36)
-	Else If Type = %cType35%
-		LV_Modify(A_Index, "Icon" 11)
-	Else If Type in %cType36%,%cType37%
-		LV_Modify(A_Index, "Icon" 12)
-	Else If InStr(Type, "Win")
-		LV_Modify(A_Index, "Icon" 8)
-	Else If Type in Run,RunWait,RunAs
-		LV_Modify(A_Index, "Icon" 5)
-	Else If Type in Process
-		LV_Modify(A_Index, "Icon" 29)
-	Else If Type in Shutdown
-		LV_Modify(A_Index, "Icon" 28)
-	Else If (InStr(Type, "File")=1 || InStr(Type, "Drive")=1)
-		LV_Modify(A_Index, "Icon" 16)
-	Else If Type contains Sort,String,Split
-		LV_Modify(A_Index, "Icon" 17)
-	Else If Type contains InputBox,Msg,Tip,Progress,Splash
-		LV_Modify(A_Index, "Icon" 21)
-	Else If (InStr(Type, "Wait") || InStr(Type, "Input")=1)
-		LV_Modify(A_Index, "Icon" 19)
-	Else If Type contains Ini
-		LV_Modify(A_Index, "Icon" 22)
-	Else If Type contains Reg
-		LV_Modify(A_Index, "Icon" 31)
-	Else If Type contains Sound
-		LV_Modify(A_Index, "Icon" 30)
-	Else If Type contains Group
-		LV_Modify(A_Index, "Icon" 20)
-	Else If Type contains Env
-		LV_Modify(A_Index, "Icon" 14)
-	Else If Type contains Get
-		LV_Modify(A_Index, "Icon" 18)
-	Else If (Type = "Pause")
-		LV_Modify(A_Index, "Icon" 32)
-	Else If (Type = "Return")
 		LV_Modify(A_Index, "Icon" 33)
-	Else If (Type = "ExitApp")
-		LV_Modify(A_Index, "Icon" 34)
-	Else If Type contains LockState,Time,Transform,Random,ClipWait,Block,Url,Status,SendLevel,CoordMode
+	Else If Action = [Pause]
+		LV_Modify(A_Index, "Icon" 41)
+	Else If Type in %cType7%,%cType38%,%cType39%,%cType40%,%cType41%
+		LV_Modify(A_Index, "Icon" 31)
+	Else If Type = %cType29%
+		LV_Modify(A_Index, "Icon" 2)
+	Else If Type = %cType30%
+		LV_Modify(A_Index, "Icon" 46)
+	Else If Action = [Assign Variable]
+		LV_Modify(A_Index, "Icon" 74)
+	Else If Type = %cType21%
+		LV_Modify(A_Index, "Icon" 14)
+	Else If Type = %cType17%
+		LV_Modify(A_Index, "Icon" 20)
+	Else If Type in %cType18%,%cType19%
+		LV_Modify(A_Index, "Icon" 59)
+	Else If Type = %cType15%
+		LV_Modify(A_Index, "Icon" 13)
+	Else If Type = %cType16%
+		LV_Modify(A_Index, "Icon" 21)
+	Else If Action = [Control]
+		LV_Modify(A_Index, "Icon" 57)
+	Else If Type in %cType32%,%cType33%
+		LV_Modify(A_Index, "Icon" 19)
+	Else If Type = %cType34%
+		LV_Modify(A_Index, "Icon" 24)
+	Else If Type = %cType42%
+		LV_Modify(A_Index, "Icon" 75)
+	Else If Type = %cType43%
+		LV_Modify(A_Index, "Icon" 28)
+	Else If Type = %cType35%
+		LV_Modify(A_Index, "Icon" 29)
+	Else If Type in %cType36%,%cType37%
+		LV_Modify(A_Index, "Icon" 15)
+	Else If InStr(Type, "Win")
+		LV_Modify(A_Index, "Icon" 80)
+	Else If Type in Run,RunWait,RunAs
+		LV_Modify(A_Index, "Icon" 55)
+	Else If Type in Process
+		LV_Modify(A_Index, "Icon" 47)
+	Else If Type in Shutdown
+		LV_Modify(A_Index, "Icon" 60)
+	Else If (InStr(Type, "File")=1 || InStr(Type, "Drive")=1)
+		LV_Modify(A_Index, "Icon" 10)
+	Else If Type contains Sort,String,Split
+		LV_Modify(A_Index, "Icon" 35)
+	Else If Type contains InputBox,Msg,Tip,Progress,Splash
+		LV_Modify(A_Index, "Icon" 3)
+	Else If (InStr(Type, "Wait") || InStr(Type, "Input")=1)
+		LV_Modify(A_Index, "Icon" 76)
+	Else If Type contains Ini
+		LV_Modify(A_Index, "Icon" 25)
+	Else If Type contains Reg
+		LV_Modify(A_Index, "Icon" 54)
+	Else If Type contains Sound
+		LV_Modify(A_Index, "Icon" 62)
+	Else If Type contains Group
+		LV_Modify(A_Index, "Icon" 16)
+	Else If Type contains Env
+		LV_Modify(A_Index, "Icon" 74)
+	Else If Type contains Get
 		LV_Modify(A_Index, "Icon" 23)
+	Else If (Type = "Pause")
+		LV_Modify(A_Index, "Icon" 52)
+	Else If (Type = "Return")
+		LV_Modify(A_Index, "Icon" 63)
+	Else If (Type = "ExitApp")
+		LV_Modify(A_Index, "Icon" 7)
+	Else If Type contains LockState,Time,Transform,Random,ClipWait,Block,Url,Status,SendLevel,CoordMode
+		LV_Modify(A_Index, "Icon" 32)
 	Else
-		LV_Modify(A_Index, "Icon" 1)
+		LV_Modify(A_Index, "Icon" 69)
 }
 GuiControl, +Redraw, InputList%A_List%
 FreeMemory()
@@ -10609,6 +10630,8 @@ return
 #Include <Playback>
 #Include <Export>
 #Include <Class_PMC>
+#Include <Class_Toolbar>
+#Include <Class_Rebar>
 #Include <Class_LV_Rows>
 #Include <Class_ObjIni>
 #Include <Gdip>

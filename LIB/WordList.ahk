@@ -48,10 +48,10 @@ time date not or and topmost top bottom transparent transcolor redraw region id 
 list capacity eject lock unlock label serial type status seconds minutes hours days read parse
 logoff close error single shutdown menu exit reload tray add rename check uncheck togglecheck
 enable disable toggleenable default nodefault standard nostandard color delete deleteall icon
-noicon tip click show edit progress hotkey text picture pic groupbox button checkbox radio
-dropdownlist ddl combobox statusbar treeview listbox listview datetime monthcal updown slider
-tab tab2 iconsmall tile report sortdesc nosort nosorthdr grid hdr autosize range xm ym ys xs xp
-yp font resize owner submit nohide minimize maximize restore noactivate na cancel destroy
+noicon tip click show edit progress hotkey text picture pic groupbox button checkbox radio custom
+dropdownlist ddl combobox statusbar treeview listbox listview datetime monthcal updown activex
+slider tab tab2 iconsmall tile report sortdesc nosort nosorthdr grid hdr autosize range xm ym ys
+xs xp yp font resize owner submit nohide minimize maximize restore noactivate na cancel destroy
 center margin owndialogs guiescape guiclose guisize guicontextmenu guidropfiles tabstop section
 wrap border top bottom buttons expand first lines number uppercase lowercase limit password
 multi group background bold italic strike underline norm theme caption delimiter flash style
