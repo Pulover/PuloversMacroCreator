@@ -1956,7 +1956,7 @@ Gui, 2:Add, Checkbox, -Wrap Checked%TabIndent% ys+5 xp+110 W85 vTabIndent gPrevR
 ; Gui, 2:Add, Edit, Section xm-8 vLVPrev W420 R35 -Wrap HScroll ReadOnly
 ; Gui, 2:Font
 ; Gui, 2:Font, s7
-Gui, 2:Add, Custom, ClassScintilla xm+8 hwndhSciPrev vLVPrev W420 R35
+Gui, 2:Add, Custom, ClassScintilla xm hwndhSciPrev vLVPrev W460 R40
 sciPrev := new scintilla(hSciPrev)
 ,	sciPrev.SetMarginWidthN(0, 20)
 ,	sciPrev.SetWrapMode(False)
@@ -1995,8 +1995,9 @@ Gui, Submit, NoHide
 GuiControl, 2:-Redraw, LVPrev
 Preview := LV_Export(A_List)
 ; GuiControl, 2:, LVPrev, %Preview%
-sciPrev.SetReadOnly(False), sciPrev.SetText("", Preview), sciPrev.SetReadOnly(True)
-PostMessage, %WM_VSCROLL%, 7, , Edit1, ahk_id %PrevID%
+sciPrev.SetReadOnly(False), sciPrev.SetText("", Preview)
+, sciPrev.ScrollToEnd(), sciPrev.SetReadOnly(True)
+; PostMessage, %WM_VSCROLL%, 7, , Edit1, ahk_id %PrevID%
 Gui, 2:Default
 SB_SetText("Macro" A_List ": " o_AutoKey[A_List], 1)
 SB_SetText("Record Keys: " RecKey "/" RecNewKey, 2)
@@ -10133,9 +10134,7 @@ If A_EventInfo = 1
 	return
 
 pGuiWidth := A_GuiWidth, pGuiHeight := A_GuiHeight
-GuiGetSize(pWinW, WinH, 2)
-
-GuiControl, Move, LVPrev, % "W" pWinW-20 "H" pGuiHeight-60
+GuiControl, Move, LVPrev, % "W" pGuiWidth-20 "H" pGuiHeight-60
 return
 
 28GuiSize:

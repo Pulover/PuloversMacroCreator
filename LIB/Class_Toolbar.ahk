@@ -5,7 +5,7 @@
 ; Author:            Pulover [Rodolfo U. Batista]
 ;                    rodolfoub@gmail.com
 ; AHK version:       1.1.11.00
-; Release date:      18 July 2013
+; Release date:      20 July 2013
 ;
 ;                    Class for AutoHotkey Toolbar custom controls
 ;=======================================================================================
@@ -25,14 +25,14 @@
 ;    Delete(Button)
 ;    Export()
 ;    Get([HotItem, TextRows, Rows, BtnWidth, BtnHeight, Style, ExStyle])
-;    GetButton(Button [, ID, Text, State, Style, Icon, Index])
+;    GetButton(Button [, ID, Text, State, Style, Icon, Label, Index])
 ;    GetButtonPos(Button [, OutX, OutY, OutW, OutH])
 ;    GetButtonState(Button, StateQuerry)
 ;    GetCount()
 ;    GetHiddenButtons()
 ;    Insert(Position [, Options, Label1[=Text]:Icon[(Options)], Label2[=Text]:Icon[(Options)]...])
 ;    ModifyButton(Button, State [, Set])
-;    ModifyButtonInfo(Button, Parameter, Value)
+;    ModifyButtonInfo(Button, Property, Value)
 ;    MoveButton(Button, Target)
 ;    OnMessage(CommandID)
 ;    OnNotify(Param [, MenuXPos, MenuYPos, Label, ID, AllowCustom])
@@ -250,15 +250,17 @@ Class Toolbar extends Toolbar.Private
 ;        Style:          OutputVar to store the button's style numeric value.
 ;        Icon:           OutputVar to store the button's icon index.
 ;        Index:          OutputVar to store the button's text string index.
+;        Label:          OutputVar to store the button's associated script label.
 ;    Return:             TRUE if successful, FALSE if there was a problem.
 ;=======================================================================================
-    GetButton(Button, ByRef ID="", ByRef Text="", ByRef State="", ByRef Style="", ByRef Icon="", ByRef Index="")
+    GetButton(Button, ByRef ID="", ByRef Text="", ByRef State="", ByRef Style=""
+    ,   ByRef Icon="", ByRef Label="", ByRef Index="")
     {
         VarSetCapacity(BtnVar, 8 + (A_PtrSize * 3), 0)
         SendMessage, this.TB_GETBUTTON, Button-1, &BtnVar,, % "ahk_id " this.tbHwnd
         ID := NumGet(&BtnVar, 4, "Int"), Icon := NumGet(&BtnVar, 0, "Int")+1
     ,   State := NumGet(&BtnVar, 8, "Char"), Style := NumGet(&BtnVar, 9, "Char")
-    ,   Index := NumGet(&BtnVar, 8 + (A_PtrSize * 2), "Int")
+    ,   Index := NumGet(&BtnVar, 8 + (A_PtrSize * 2), "Int"), Label := this.Labels[ID]
         SendMessage, this.TB_GETBUTTONTEXT, ID, 0,, % "ahk_id " this.tbHwnd
         VarSetCapacity(Buffer, ErrorLevel * (A_IsUnicode ? 2 : 1), 0)
         SendMessage, this.TB_GETBUTTONTEXT, ID, &Buffer,, % "ahk_id " this.tbHwnd
@@ -390,7 +392,7 @@ Class Toolbar extends Toolbar.Private
 ;    Parameters:
 ;        Button:         1-based index of the button.
 ;        Property:       Enter one word from the following list to select the Property
-;                            to be set: Command, Image, Size, State, Style, Text.
+;                            to be set: Command, Image, Size, State, Style, Text, Label.
 ;        Value:          The value to be set in the selected Property.
 ;                            If Property is State or Style you can enter named values as
 ;                            in the Add options.
@@ -398,6 +400,11 @@ Class Toolbar extends Toolbar.Private
 ;=======================================================================================
     ModifyButtonInfo(Button, Property, Value)
     {
+        If (Property = "Label")
+        {
+            this.GetButton(Button, ID), this.Labels[ID] := Value
+            return True
+        }
         If (Property = "State") || (Property = "Style")
         {
             If Value is Integer
@@ -414,6 +421,8 @@ Class Toolbar extends Toolbar.Private
                 Value := tb%Property%
             }
         }
+        If (Property = "Command")
+            this.GetButton(Button, "", "", "", "", "", Label), this.Labels[Value] := Label
         this.DefineBtnInfoStruct(TBBUTTONINFO, Property, Value)
     ,   this.GetButton(Button, BtnID)
         SendMessage, this.TB_SETBUTTONINFO, BtnID, &TBBUTTONINFO,, % "ahk_id " this.tbHwnd
@@ -597,7 +606,7 @@ Class Toolbar extends Toolbar.Private
         this.DefaultBtnInfo := []
         If !Buttons.MaxIndex()
             this.DefaultBtnInfo.Insert({Icon: -1, ID: "", State: ""
-                                        , Style: this.BTNS_SEP, Text: "", Label: ""})
+                                       , Style: this.BTNS_SEP, Text: "", Label: ""})
         If (Options = "")
             Options := "Enabled"
         For each, Button in Buttons
@@ -809,7 +818,7 @@ Class Toolbar extends Toolbar.Private
                         .    ":" Icon+1 (Style ? "(" Style ")" : "")) : "") ", "
                 If (ArrayOut)
                     BtnArray.Insert({Icon: Icon, ID: ID, State: State
-                                    , Style: Style, Text: Text, Label: Label})
+                                   , Style: Style, Text: Text, Label: Label})
             }
             return ArrayOut ? BtnArray : RTrim(BtnString, ", ")
         }
@@ -1147,7 +1156,7 @@ Class Toolbar extends Toolbar.Private
         ,   NumPut(tbStyle, BtnVar, 9, "Char")
         ,   NumPut(StrIdx, BtnVar, 8 + (A_PtrSize * 2), "Ptr")
             return {Icon: iBitmap-1, ID: idCommand, State: tbState
-                    , Style: tbStyle, Text: iString, Label: this.Labels[idCommand]}
+                   , Style: tbStyle, Text: iString, Label: this.Labels[idCommand]}
         }
 ;=======================================================================================
 ;    Method:             DefineBtnInfoStruct
@@ -1204,7 +1213,7 @@ Class Toolbar extends Toolbar.Private
         {
             Loop, Parse, String
                 Number += Asc(A_LoopField) + Number + SubStr(Number, -1)
-            return SubStr(Number, 1, 5)
+            return SubStr(Number, 1, 4)
         }
 ;=======================================================================================
 ;    Method:             MakeLong
