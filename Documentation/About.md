@@ -40,6 +40,9 @@ T800 for [Html Help utils](http://www.autohotkey.com/board/topic/17984-html-help
 * Added *Run immediately* option in Timer.
 * Fixed some issues with main window controls sizes.
 * Fixed color dialog not saving personalized colors when canceled.
+* Fixed comments and colors not copied with Duplicate Macro command.
+* Made InputVar parameters in *Run* window mandatory.
+* Made OutputVar parameters of SplitPath and MouseGetPos in *Run* window optional.
 
 ## Version 3.7.9
 
