@@ -35,8 +35,9 @@ T800 for [Html Help utils](http://www.autohotkey.com/board/topic/17984-html-help
 
 # Change Log
 
-## Version 3.7.10
+## Version 3.8.0
 
+* Added *Insert Keystroke* command.
 * Added *Run immediately* option in Timer.
 * Added *Random delays* option for Playback in *Options* window.
 * Added shortcuts to paint selected rows with custom colors (Shift+1 to 0).

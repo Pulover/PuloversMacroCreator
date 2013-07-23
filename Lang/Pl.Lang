@@ -406,7 +406,11 @@
 	t_Lang104 =	Pokaż / Ukryj pasek tytułu
 	t_Lang105 =	Pokaż / Ukryj okno główne
 	t_Lang106 =	Uruchomić natychmiast
-	t_Lang107 =	losowe opóźnienia
+	t_Lang107 =	Losowe Opóźnienia
+	t_Lang108 =	Normalny
+	t_Lang109 =	W dół
+	t_Lang110 =	W górę
+	t_Lang111 =	Włóż Klawiszy
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Otwarte
@@ -626,7 +630,8 @@
 	ApplyT_TT =	Zastosować
 	ApplyI_TT =	Zastosować
 	ApplyL_TT =	Wstaw z pudełkiem (Insert)
-	EditButton_TT =	Edytuj
+	InsertKey_TT =	Włóż Klawiszy (Ctrl+Insert)
+	EditButton_TT =	Edytuj (Enter)
 	PrevRefresh_TT =	Odświeżać (F5)
 	PrevCopy_TT =	Skopiuj
 	OpenT_TT =	Otwórz (Ctrl+O)

@@ -406,7 +406,11 @@
 	t_Lang104 =	Show / Hide Naslov Bar
 	t_Lang105 =	Show / Hide glavni prozor
 	t_Lang106 =	Pokrenuti odmah
-	t_Lang107 =	slučajni kašnjenja
+	t_Lang107 =	Slučajni Kašnjenja
+	t_Lang108 =	Normalan
+	t_Lang109 =	Dole
+	t_Lang110 =	Gore
+	t_Lang111 =	Umetnite Pritisak Na Tipku
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Otvoreno
@@ -626,7 +630,8 @@
 	ApplyT_TT =	Primijeniti
 	ApplyI_TT =	Primijeniti
 	ApplyL_TT =	Stavite na kutiji (Insert)
-	EditButton_TT =	Uredi
+	InsertKey_TT =	Umetnite Pritisak Na Tipku (Ctrl+Insert)
+	EditButton_TT =	Uredi (Enter)
 	PrevRefresh_TT =	Refresh (F5)
 	PrevCopy_TT =	Kopirajte
 	OpenT_TT =	Open (Ctrl+O)

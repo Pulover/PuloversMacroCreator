@@ -648,24 +648,26 @@ Gui, Add, Button, -Wrap W22 H25 hwndEditComm vEditComm gEditComm
 	ILButton(EditComm, CommentIcon[1] ":" CommentIcon[2])
 Gui, Add, Button, -Wrap W22 H25 hwndFindReplace vFindReplace gFindReplace
 	ILButton(FindReplace, FindIcon[1] ":" FindIcon[2])
-Gui, Add, Text, -Wrap y+129 xm W65 H22 Section vRepeat, %w_Lang015%:
+Gui, Add, Text, -Wrap y+129 xm W100 H22 Section vRepeat, %w_Lang015%:
 Gui, Add, Edit, ys-3 x+5 W90 R1 vRept Number
 Gui, Add, UpDown, vTimesM 0x80 Range0-999999999, 1
-Gui, Add, Button, -Wrap ys-4 x+5 W60 H23 hwndApplyT vApplyT gApplyT, %w_Lang017%
-	ILButton(ApplyT, ApplyIcon[1] ":" ApplyIcon[2], 0, "Left")
+Gui, Add, Button, -Wrap ys-4 x+0 W25 H23 hwndApplyT vApplyT gApplyT
+	ILButton(ApplyT, ApplyIcon[1] ":" ApplyIcon[2])
 Gui, Add, Text, W2 H25 ys-3 x+5 0x11 vSeparator1
-Gui, Add, Text, -Wrap x+5 ys W65 H22 vDelayT, %w_Lang016%
+Gui, Add, Text, -Wrap x+5 ys W100 H22 vDelayT, %w_Lang016%
 Gui, Add, Edit, ys-3 x+5 W90 R1 vDelay
 Gui, Add, UpDown, vDelayG 0x80 Range0-999999999, %DelayG%
-Gui, Add, Button, -Wrap ys-4 x+5 W60 H23 hwndApplyI vApplyI gApplyI, %w_Lang017%
-	ILButton(ApplyI, ApplyIcon[1] ":" ApplyIcon[2], 0, "Left")
+Gui, Add, Button, -Wrap ys-4 x+0 W25 H23 hwndApplyI vApplyI gApplyI
+	ILButton(ApplyI, ApplyIcon[1] ":" ApplyIcon[2])
 Gui, Add, Text, W2 H25 ys-3 x+5 0x11 vSeparator2
 Gui, Add, Hotkey, ys-3 x+5 W150 vsInput
-Gui, Add, Button, -Wrap ys-4 x+0 W60 H23 hwndApplyL vApplyL gApplyL, %w_Lang018%
-	ILButton(ApplyL, InsertIcon[1] ":" InsertIcon[2], 0, "Left")
+Gui, Add, Button, -Wrap ys-4 x+0 W25 H23 hwndApplyL vApplyL gApplyL
+	ILButton(ApplyL, InsertIcon[1] ":" InsertIcon[2])
+Gui, Add, Button, -Wrap ys-4 x+5 W25 H23 hwndInsertKey vInsertKey gInsertKey
+	ILButton(InsertKey, TextIcon[1] ":" TextIcon[2])
 Gui, Add, Text, W2 H25 ys-3 x+5 0x11 vSeparator3
-Gui, Add, Button, -Wrap Default ys-4 x+5 W60 H23 hwndEditButton vEditButton gEditButton, %w_Lang019%
-	ILButton(EditButton, EditIcon[1] ":" EditIcon[2], 0, "Left")
+Gui, Add, Button, -Wrap Default ys-4 x+5 W25 H23 hwndEditButton vEditButton gEditButton
+	ILButton(EditButton, EditIcon[1] ":" EditIcon[2])
 Gui, Add, Text, W2 H25 ys-3 x+5 0x11 vSeparator4
 Gui, Add, Text, -Wrap ys-6 x+5 W100 vContextTip gSetWin cBlue, #IfWin: %IfDirectContext%
 Gui, Add, Text, -Wrap yp+16 W100 vCoordTip gOptions, CoordMode: %CoordMouse%
@@ -2052,7 +2054,7 @@ OldLoopColor := LoopLVColor, OldIfColor := IfLVColor
 , OldMoves := Moves, OldTimed := TimedI, OldRandM := RandomSleeps, OldRandP := RandPercent
 FileRead, UserVarsList, %UserVarsPath%
 ; Gui, 4:Font, s7
-Gui, 4:Add, Tab2, W420 H600 vTabControl AltSubmit, %t_Lang018%|%t_Lang052%|%t_Lang096%
+Gui, 4:Add, Tab2, W420 H590 vTabControl AltSubmit, %t_Lang018%|%t_Lang052%|%t_Lang096%
 ; Recording
 Gui, 4:Add, GroupBox, W400 H200, %t_Lang022%:
 Gui, 4:Add, Text, ys+40 xs+245, %t_Lang019%:
@@ -2080,7 +2082,7 @@ Gui, 4:Add, Text, yp+22 xs+22, %t_Lang033%:
 Gui, 4:Add, DDL, vRelKey W80 yp-5 xp+135, CapsLock||ScrollLock|NumLock
 Gui, 4:Add, Checkbox, -Wrap Checked%ToggleC% yp+5 xs+245 vToggleC gOptionsSub W160 R1, %t_Lang034%
 ; Playback
-Gui, 4:Add, GroupBox, Section ys+230 xs+12 W400 H100, %t_Lang035%:
+Gui, 4:Add, GroupBox, Section yp+25 xs+12 W400 H100, %t_Lang035%:
 Gui, 4:Add, Text, yp+20 xp+10, %t_Lang036%:
 Gui, 4:Add, DDL, yp-2 xp+70 W75 vFastKey, None|Insert||F1|F2|F3|F4|F5|F6|F7|F8|F9|F10|F11|F12|CapsLock|NumLock|ScrollLock|
 Gui, 4:Add, DDL, yp xp+83 W37 vSpeedUp, 2||4|8|16|32
@@ -2096,7 +2098,7 @@ Gui, 4:Add, Edit, Limit Number yp-2 x+20 W50 R1 vRandPer
 Gui, 4:Add, UpDown, vRandPercent 0x80 Range0-1000, %RandPercent%
 Gui, 4:Add, Text, yp+5 x+5, `%
 ; Defaults
-Gui, 4:Add, GroupBox, Section xs ys+105 W400 H115, %t_Lang090%:
+Gui, 4:Add, GroupBox, Section yp+25 xs W400 H115, %t_Lang090%:
 Gui, 4:Add, Text, yp+20 xs+10, %t_Lang039%:
 Gui, 4:Add, Radio, -Wrap yp xp+150 W100 R1 vRelative R1, %c_Lang005%
 Gui, 4:Add, Radio, -Wrap yp x+5 W100 R1 vScreen R1, %t_Lang041%
@@ -2112,7 +2114,7 @@ Gui, 4:Add, Edit, Limit Number yp-2 xp+180 W60 R1
 Gui, 4:Add, UpDown, yp xp+60 vMaxHistory 0x80 Range0-999999999, %MaxHistory%
 Gui, 4:Add, Button, -Wrap yp xp+75 gClearHistory, %t_Lang045%
 ; Screenshots
-Gui, 4:Add, GroupBox, Section xs ys+115 W400 H120, %t_Lang046%:
+Gui, 4:Add, GroupBox, Section yp+35 xs W400 H120, %t_Lang046%:
 Gui, 4:Add, Text, ys+20 xs+10, %t_Lang047%:
 Gui, 4:Add, DDL, yp-5 xs+100 vDrawButton W75, RButton||LButton|MButton
 Gui, 4:Add, Text, yp+3 xs+210, %t_Lang048%:
@@ -2415,7 +2417,7 @@ VerChk := RegExReplace(VerChk, ".*Version: ([\d\.]+).*", "$1", vFound)
 If vFound
 {
 	FileDelete, %A_Temp%\PMCIndex.html
-	If (VerChk > CurrentVersion)
+	If (VerChk <> CurrentVersion)
 	{
 		MsgBox, 68, %d_Lang060%, %d_Lang060%: %VerChk%`n%d_Lang061%
 		IfMsgBox, Yes
@@ -7727,6 +7729,92 @@ Else
 GoSub, RowCheck
 GoSub, b_Start
 return
+
+InsertKey:
+Gui, Submit, NoHide
+Gui, 31:+owner1 +ToolWindow +Delimiter¢ +HwndCmdWin
+Gui, 1:+Disabled
+; Gui, 13:Font, s7
+Gui, 31:Add, Groupbox, Section W220 H100
+Gui, 31:Add, DDL, ys+15 xs+10 W200 vsKey, %KeybdList%
+Gui, 31:Add, Radio, Checked W200 vKeystroke, %t_Lang108%
+Gui, 31:Add, Radio, W200 vKeyDown, %t_Lang109%
+Gui, 31:Add, Radio, W200 vKeyUp, %t_Lang110%
+Gui, 31:Add, Button, -Wrap Section Default xm W60 H23 gInsertKeyOK, %c_Lang020%
+Gui, 31:Add, Button, -Wrap ys W60 H23 gInsertKeyCancel, %c_Lang021%
+Gui, 31:Show,, %t_Lang111%
+return
+
+InsertKeyOK:
+Gui, Submit, NoHide
+If (KeyDown)
+	State := " Down"
+Else If (KeyUp)
+	State := " Up"
+Else
+	State := ""
+tKey := sKey, sKey := "{" sKey State "}"
+Gui, 1:-Disabled
+Gui, 31:Destroy
+Gui, 1:Default
+RowSelection := LV_GetCount("Selected")
+If RowSelection = 0
+{
+	LV_Add("Check", ListCount%A_List%+1, tKey, sKey, 1, DelayG, cType1)
+	GoSub, b_Start
+	LV_Modify(ListCount%A_List%, "Vis")
+}
+Else
+{
+	RowNumber = 0
+	Loop, %RowSelection%
+	{
+		RowNumber := LV_GetNext(RowNumber)
+		LV_Insert(RowNumber, "Check", RowNumber, tKey, sKey, 1, DelayG, cType1)
+		RowNumber++
+	}
+}
+GoSub, RowCheck
+GoSub, b_Start
+return
+
+InsertKeyCancel:
+31GuiClose:
+31GuiEscape:
+Gui, 1:-Disabled
+Gui, 31:Destroy
+return
+
+/*
+Gui, Submit, NoHide
+StringReplace, sInput, sInput, SC15D, AppsKey
+StringReplace, sInput, sInput, SC145, NumLock
+StringReplace, sInput, sInput, SC154, PrintScreen
+If sInput = 
+	return
+sKey := RegExReplace(sInput, "(.$)", "$l1"), tKey := sKey
+GoSub, Replace
+sKey := "{" sKey "}", RowSelection := LV_GetCount("Selected")
+If RowSelection = 0
+{
+	LV_Add("Check", ListCount%A_List%+1, tKey, sKey, 1, DelayG, cType1)
+	GoSub, b_Start
+	LV_Modify(ListCount%A_List%, "Vis")
+}
+Else
+{
+	RowNumber = 0
+	Loop, %RowSelection%
+	{
+		RowNumber := LV_GetNext(RowNumber)
+		LV_Insert(RowNumber, "Check", RowNumber, tKey, sKey, 1, DelayG, cType1)
+		RowNumber++
+	}
+}
+GoSub, RowCheck
+GoSub, b_Start
+return
+*/
 
 EditButton:
 Gui, Submit, NoHide

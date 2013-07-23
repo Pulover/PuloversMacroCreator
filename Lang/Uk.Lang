@@ -406,7 +406,11 @@
 	t_Lang104 =	Показати / Приховати рядок заголовка
 	t_Lang105 =	Показати / приховати головне вікно
 	t_Lang106 =	Виконати негайно
-	t_Lang107 =	випадкові затримки
+	t_Lang107 =	Випадкові Затримки
+	t_Lang108 =	Нормальний
+	t_Lang109 =	Вниз
+	t_Lang110 =	Вгору
+	t_Lang111 =	Вставити Натисканням Клавіші
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Відкрити
@@ -626,7 +630,8 @@
 	ApplyT_TT =	Застосовувати
 	ApplyI_TT =	Застосовувати
 	ApplyL_TT =	Вставити з коробки (Insert)
-	EditButton_TT =	Редагувати
+	InsertKey_TT =	Вставити Натисканням Клавіші (Ctrl+Insert)
+	EditButton_TT =	Редагувати (Enter)
 	PrevRefresh_TT =	Оновити (F5)
 	PrevCopy_TT =	Скопіюйте
 	OpenT_TT =	Відкрити (Ctrl+O)

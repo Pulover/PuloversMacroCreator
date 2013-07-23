@@ -406,7 +406,11 @@
 	t_Lang104 =	Vis / skjul Title Bar
 	t_Lang105 =	Vis / skjul hovedvinduet
 	t_Lang106 =	Kjøres umiddelbart
-	t_Lang107 =	tilfeldige forsinkelser
+	t_Lang107 =	Tilfeldige Forsinkelser
+	t_Lang108 =	Normal
+	t_Lang109 =	Ned
+	t_Lang110 =	Opp
+	t_Lang111 =	Sett Tastetrykk
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Åpent
@@ -626,7 +630,8 @@
 	ApplyT_TT =	Påfør
 	ApplyI_TT =	Påfør
 	ApplyL_TT =	Sett fra boksen (Insert)
-	EditButton_TT =	Redigere
+	InsertKey_TT =	Sett Tastetrykk (Ctrl+Insert)
+	EditButton_TT =	Redigere (Enter)
 	PrevRefresh_TT =	Refresh (F5)
 	PrevCopy_TT =	Kopier
 	OpenT_TT =	Open (Ctrl+O)

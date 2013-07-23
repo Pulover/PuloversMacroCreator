@@ -406,7 +406,11 @@
 	t_Lang104 =	Mostrar / Ocultar Barra de Título
 	t_Lang105 =	Mostrar / Ocultar Janela Principal
 	t_Lang106 =	Executar imediatamente
-	t_Lang107 =	Intervalos aleatórios
+	t_Lang107 =	Intervalos Aleatórios
+	t_Lang108 =	Normal
+	t_Lang109 =	Segurar
+	t_Lang110 =	Soltar
+	t_Lang111 =	Inserir Tecla
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Abrir
@@ -626,7 +630,8 @@
 	ApplyT_TT =	Aplicar
 	ApplyI_TT =	Aplicar
 	ApplyL_TT =	Inserir da Caixa (Insert)
-	EditButton_TT =	Editar
+	InsertKey_TT =	Inserir Tecla (Ctrl+Insert)
+	EditButton_TT =	Editar (Enter)
 	PrevRefresh_TT =	Atualizar (F5)
 	PrevCopy_TT =	Copiar
 	OpenT_TT =	Abrir (Ctrl+O)

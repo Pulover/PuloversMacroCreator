@@ -406,7 +406,11 @@
 	t_Lang104 =	Afficher / Masquer la barre de titre
 	t_Lang105 =	Afficher / Masquer la fenêtre principale
 	t_Lang106 =	Exécuter immédiatement
-	t_Lang107 =	retards aléatoires
+	t_Lang107 =	Retards Aléatoires
+	t_Lang108 =	Normale
+	t_Lang109 =	Vers le bas
+	t_Lang110 =	Up
+	t_Lang111 =	Insérer Frappe
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Ouvert
@@ -626,7 +630,8 @@
 	ApplyT_TT =	Appliquer
 	ApplyI_TT =	Appliquer
 	ApplyL_TT =	Insérez de la case (Insert)
-	EditButton_TT =	Éditer
+	InsertKey_TT =	Insérer Frappe (Ctrl+Insert)
+	EditButton_TT =	Éditer (Enter)
 	PrevRefresh_TT =	Rafraîchir (F5)
 	PrevCopy_TT =	Copier
 	OpenT_TT =	Ouvrir (Ctrl+O)

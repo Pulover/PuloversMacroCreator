@@ -179,6 +179,7 @@ GuiSize(Width, Height)
 	GuiControl, Move, ApplyI, % "y" GuiHeight-28
 	GuiControl, Move, sInput, % "y" GuiHeight-27
 	GuiControl, Move, ApplyL, % "y" GuiHeight-28
+	GuiControl, Move, InsertKey, % "y" GuiHeight-28
 	GuiControl, Move, EditButton, % "y" GuiHeight-28
 	GuiControl, Move, Separator1, % "y" GuiHeight-27
 	GuiControl, Move, Separator2, % "y" GuiHeight-27

@@ -406,7 +406,11 @@
 	t_Lang104 =	Показване / скриване на дял Bar
 	t_Lang105 =	Показване / скриване на главния прозорец
 	t_Lang106 =	Тече веднага
-	t_Lang107 =	случайни закъснения
+	t_Lang107 =	Случайни Закъснения
+	t_Lang108 =	Нормален
+	t_Lang109 =	Надолу
+	t_Lang110 =	Нагоре
+	t_Lang111 =	Вмъкнете Натискане На Клавиш
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Отворен
@@ -626,7 +630,8 @@
 	ApplyT_TT =	Нанесете
 	ApplyI_TT =	Нанесете
 	ApplyL_TT =	Поставете от кутия (Insert)
-	EditButton_TT =	Редактирам
+	InsertKey_TT =	Вмъкнете Натискане На Клавиш (Ctrl+Insert)
+	EditButton_TT =	Редактирам (Enter)
 	PrevRefresh_TT =	Обнови (F5)
 	PrevCopy_TT =	Копирайте
 	OpenT_TT =	Open (Ctrl+O)

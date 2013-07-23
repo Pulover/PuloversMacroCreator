@@ -406,7 +406,11 @@
 	t_Lang104 =	Show / Hide Title Bar
 	t_Lang105 =	Show / Hide Main Window
 	t_Lang106 =	Run immediately
-	t_Lang107 =	Random delays 
+	t_Lang107 =	Random Delays 
+	t_Lang108 =	Normal
+	t_Lang109 =	Down
+	t_Lang110 =	Up
+	t_Lang111 =	Insert Keystroke
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Open
@@ -626,7 +630,8 @@
 	ApplyT_TT =	Apply
 	ApplyI_TT =	Apply
 	ApplyL_TT =	Insert from Box (Insert)
-	EditButton_TT =	Edit
+	InsertKey_TT =	Insert Keystroke (Ctrl+Insert)
+	EditButton_TT =	Edit (Enter)
 	PrevRefresh_TT =	Refresh (F5)
 	PrevCopy_TT =	Copy
 	OpenT_TT =	Open (Ctrl+O)

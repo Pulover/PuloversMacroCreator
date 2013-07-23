@@ -406,7 +406,11 @@
 	t_Lang104 =	Näytä / Piilota Otsikko Bar
 	t_Lang105 =	Näytä / Piilota pääikkuna
 	t_Lang106 =	Ajaa heti
-	t_Lang107 =	satunnainen viivästyksiä
+	t_Lang107 =	Satunnainen Viivästyksiä
+	t_Lang108 =	Normaali
+	t_Lang109 =	Alas
+	t_Lang110 =	Ylös
+	t_Lang111 =	Aseta Näppäilyn
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Avata
@@ -626,7 +630,8 @@
 	ApplyT_TT =	Käyttää
 	ApplyI_TT =	Käyttää
 	ApplyL_TT =	Insertin laatikko (Insert)
-	EditButton_TT =	Muokata
+	InsertKey_TT =	Aseta Näppäilyn (Ctrl+Insert)
+	EditButton_TT =	Muokata (Enter)
 	PrevRefresh_TT =	Virkistää (F5)
 	PrevCopy_TT =	Kopioi
 	OpenT_TT =	Open (Ctrl+O)

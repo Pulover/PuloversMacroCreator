@@ -406,7 +406,11 @@
 	t_Lang104 =	Показать / Скрыть строку заголовка
 	t_Lang105 =	Показать / скрыть главное окно
 	t_Lang106 =	Выполнить немедленно
-	t_Lang107 =	случайные задержки
+	t_Lang107 =	Случайные Задержки
+	t_Lang108 =	Нормальный
+	t_Lang109 =	Вниз
+	t_Lang110 =	Вверх
+	t_Lang111 =	Вставить Нажатием Клавиши
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Открыто
@@ -626,7 +630,8 @@
 	ApplyT_TT =	Применять
 	ApplyI_TT =	Применять
 	ApplyL_TT =	Вставить из коробки (Insert)
-	EditButton_TT =	Редактировать
+	InsertKey_TT =	Вставить Нажатием Клавиши (Ctrl+Insert)
+	EditButton_TT =	Редактировать (Enter)
 	PrevRefresh_TT =	Обновление (F5)
 	PrevCopy_TT =	Скопировать
 	OpenT_TT =	Открыть (Ctrl+O)

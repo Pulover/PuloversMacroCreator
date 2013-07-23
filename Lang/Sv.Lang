@@ -406,7 +406,11 @@
 	t_Lang104 =	Visa / dölj Titel Bar
 	t_Lang105 =	Visa / dölj huvudfönstret
 	t_Lang106 =	Utföras omedelbart
-	t_Lang107 =	slumpmässiga fördröjningar
+	t_Lang107 =	Slumpmässiga Fördröjningar
+	t_Lang108 =	Normal
+	t_Lang109 =	Ned
+	t_Lang110 =	Upp
+	t_Lang111 =	Infoga Tangenttryckning
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Öppet
@@ -626,7 +630,8 @@
 	ApplyT_TT =	Ansök
 	ApplyI_TT =	Ansök
 	ApplyL_TT =	Infoga från rutan (Insert)
-	EditButton_TT =	Redigera
+	InsertKey_TT =	Infoga Tangenttryckning (Ctrl+Insert)
+	EditButton_TT =	Redigera (Enter)
 	PrevRefresh_TT =	Refresh (F5)
 	PrevCopy_TT =	Kopiera
 	OpenT_TT =	Öppna (Ctrl+O)

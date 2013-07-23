@@ -406,7 +406,11 @@
 	t_Lang104 =	Схов / Хиде Титле Бар
 	t_Lang105 =	Схов / Хиде главни прозор
 	t_Lang106 =	Одмах покренете
-	t_Lang107 =	рандом кашњења
+	t_Lang107 =	Рандом Кашњења
+	t_Lang108 =	Нормалан
+	t_Lang109 =	Доле
+	t_Lang110 =	Горе
+	t_Lang111 =	Убаците Пречицу
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Отворено
@@ -626,7 +630,8 @@
 	ApplyT_TT =	Применити
 	ApplyI_TT =	Применити
 	ApplyL_TT =	Инсерт из Бок (Insert)
-	EditButton_TT =	Измени
+	InsertKey_TT =	Убаците Пречицу (Ctrl+Insert)
+	EditButton_TT =	Измени (Enter)
 	PrevRefresh_TT =	Освежи (Ф5)
 	PrevCopy_TT =	Копирајте
 	OpenT_TT =	Отворени (Цтрл+О)

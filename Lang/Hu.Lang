@@ -406,7 +406,11 @@
 	t_Lang104 =	Megjelenítése / elrejtése címsor
 	t_Lang105 =	Megjelenítése / elrejtése főablak
 	t_Lang106 =	Fut azonnal
-	t_Lang107 =	random késések
+	t_Lang107 =	Random Késések
+	t_Lang108 =	Normál
+	t_Lang109 =	Lefelé
+	t_Lang110 =	Fel
+	t_Lang111 =	Be Gombnyomás
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Nyitva
@@ -626,7 +630,8 @@
 	ApplyT_TT =	Alkalmaz
 	ApplyI_TT =	Alkalmaz
 	ApplyL_TT =	Beszúrás box (Insert)
-	EditButton_TT =	Szerkeszt
+	InsertKey_TT =	Be Gombnyomás (Ctrl+Insert)
+	EditButton_TT =	Szerkeszt (Enter)
 	PrevRefresh_TT =	Felfrissít (F5)
 	PrevCopy_TT =	Másolás
 	OpenT_TT =	Open (Ctrl+O)
