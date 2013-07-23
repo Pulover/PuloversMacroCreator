@@ -406,6 +406,7 @@
 	t_Lang104 =	Zobrazit / skrýt Title Bar
 	t_Lang105 =	Zobrazit / skrýt hlavní okno
 	t_Lang106 =	Okamžité spuštění
+	t_Lang107 =	náhodné zpoždění
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Otevřít
@@ -638,8 +639,8 @@
 	VarCopyA_TT =	Zkopírujte aktuální proměnné obsah
 	VarCopyB_TT =	Zkopírujte aktuální proměnné obsah
 	FindReplace_TT =	Najít / Nahradit (Ctrl+F)
-	EditComm_TT =	Upravit komentář
-	EditColor_TT =	Edit barva označuje
+	EditComm_TT =	Upravit komentář (Ctrl+L)
+	EditColor_TT =	Edit barva označuje (Ctrl+M)
 	Reset_TT =	Vymazat proměnné obsah
 	Screenshot_TT =	Značka Screenshot
 	ColorPick_TT =	Color Picker

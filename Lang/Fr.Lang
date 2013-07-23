@@ -406,6 +406,7 @@
 	t_Lang104 =	Afficher / Masquer la barre de titre
 	t_Lang105 =	Afficher / Masquer la fenêtre principale
 	t_Lang106 =	Exécuter immédiatement
+	t_Lang107 =	retards aléatoires
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Ouvert
@@ -638,8 +639,8 @@
 	VarCopyA_TT =	Copiez le contenu des variables actuelles
 	VarCopyB_TT =	Copiez le contenu des variables actuelles
 	FindReplace_TT =	Rechercher / Remplacer (Ctrl+F)
-	EditComm_TT =	Modifier le commentaire
-	EditColor_TT =	Modifier marque de couleur
+	EditComm_TT =	Modifier le commentaire (Ctrl+L)
+	EditColor_TT =	Modifier marque de couleur (Ctrl+M)
 	Reset_TT =	Effacer le contenu des variables
 	Screenshot_TT =	Faire une capture d'écran
 	ColorPick_TT =	Sélecteur de Couleurs

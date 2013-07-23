@@ -406,6 +406,7 @@
 	t_Lang104 =	Mostra / Oculta la barra de títol
 	t_Lang105 =	Mostra / oculta la finestra principal
 	t_Lang106 =	Executar immediatament
+	t_Lang107 =	retards aleatoris
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Obert
@@ -638,8 +639,8 @@
 	VarCopyA_TT =	Copia contingut actual de variables
 	VarCopyB_TT =	Copia contingut actual de variables
 	FindReplace_TT =	Cercar / Reemplaçar (Ctrl+F)
-	EditComm_TT =	Redactar comentari
-	EditColor_TT =	Edita color
+	EditComm_TT =	Redactar comentari (Ctrl+L)
+	EditColor_TT =	Edita color (Ctrl+M)
 	Reset_TT =	Esborrar el contingut de variables
 	Screenshot_TT =	Fer Screenshot
 	ColorPick_TT =	Selector de Color

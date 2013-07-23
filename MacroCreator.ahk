@@ -142,6 +142,8 @@ IniRead, SpeedDn, %IniFilePath%, Options, SpeedDn, 2
 IniRead, MouseReturn, %IniFilePath%, Options, MouseReturn, 0
 IniRead, ShowProgBar, %IniFilePath%, Options, ShowProgBar, 1
 IniRead, ShowBarOnStart, %IniFilePath%, Options, ShowBarOnStart, 0
+IniRead, RandomSleeps, %IniFilePath%, Options, RandomSleeps, 0
+IniRead, RandPercent, %IniFilePath%, Options, RandPercent, 50
 IniRead, DrawButton, %IniFilePath%, Options, DrawButton, RButton
 IniRead, OnRelease, %IniFilePath%, Options, OnRelease, 1
 IniRead, OnEnter, %IniFilePath%, Options, OnEnter, 0
@@ -348,7 +350,7 @@ If (KeepDefKeys = 1)
 GoSub, ObjCreate
 
 GoSub, LoadLang
-GoSub, ToggleC
+ToggleMode := ToggleC ? "T" : "P"
 Loop, Parse, ColSizes, `,
 	Col_%A_Index% := A_LoopField
 
@@ -1049,7 +1051,7 @@ If (Moves = 1) && (MouseMove := MoveCheck())
 ,	Type := cType3, Target := "", Window := ""
 	GoSub, MouseAdd
 }
-If !GetKeyState(RelKey, Toggle)
+If !GetKeyState(RelKey, ToggleMode)
 	RelHold := 0, Relative := ""
 If MScroll = 1
 {
@@ -2003,10 +2005,11 @@ Gui, 1:+Disabled
 GoSub, SaveData
 GoSub, GetHotkeys
 GoSub, ResetHotkeys
-CurrLoopColor := LoopLVColor, CurrIfColor := IfLVColor
+OldLoopColor := LoopLVColor, OldIfColor := IfLVColor
+, OldMoves := Moves, OldTimed := TimedI, OldRandM := RandomSleeps, OldRandP := RandPercent
 FileRead, UserVarsList, %UserVarsPath%
 ; Gui, 4:Font, s7
-Gui, 4:Add, Tab2, W420 H570 vTabControl AltSubmit, %t_Lang018%|%t_Lang052%|%t_Lang096%
+Gui, 4:Add, Tab2, W420 H600 vTabControl AltSubmit, %t_Lang018%|%t_Lang052%|%t_Lang096%
 ; Recording
 Gui, 4:Add, GroupBox, W400 H200, %t_Lang022%:
 Gui, 4:Add, Text, ys+40 xs+245, %t_Lang019%:
@@ -2018,23 +2021,23 @@ Gui, 4:Add, Checkbox, -Wrap Checked%Strokes% ys+50 xs+22 vStrokes W210 R1, %t_La
 Gui, 4:Add, Checkbox, -Wrap Checked%CaptKDn% vCaptKDn W210 R1, %t_Lang023%
 Gui, 4:Add, Checkbox, -Wrap Checked%Mouse% vMouse W210 R1, %t_Lang024%
 Gui, 4:Add, Checkbox, -Wrap Checked%MScroll% vMScroll W210 R1, %t_Lang025%
-Gui, 4:Add, Checkbox, -Wrap Checked%Moves% vMoves gMovesTimed W210 R1, %t_Lang026%
+Gui, 4:Add, Checkbox, -Wrap Checked%Moves% vMoves gOptionsSub W210 R1, %t_Lang026%
 Gui, 4:Add, Text,, %t_Lang028%:
 Gui, 4:Add, Edit, Limit Number yp-2 xp+110 W40 R1 vMDelayT
-Gui, 4:Add, UpDown, yp xp+60 vMDelay 0x80 Range0-999999999, %MDelay%
-Gui, 4:Add, Checkbox, -Wrap Checked%TimedI% yp-18 xs+245 vTimedI gMovesTimed W160 R1, %t_Lang027%
+Gui, 4:Add, UpDown, vMDelay 0x80 Range0-999999999, %MDelay%
+Gui, 4:Add, Checkbox, -Wrap Checked%TimedI% yp-18 xs+245 vTimedI gOptionsSub W160 R1, %t_Lang027%
 Gui, 4:Add, Text, yp+20 xp, %t_Lang028%:
 Gui, 4:Add, Edit, Limit Number yp-2 xp+110 W40 R1 vTDelayT
-Gui, 4:Add, UpDown, yp xp+60 vTDelay 0x80 Range0-999999999, %TDelay%
+Gui, 4:Add, UpDown, vTDelay 0x80 Range0-999999999, %TDelay%
 Gui, 4:Add, Checkbox, -Wrap Checked%WClass% xs+22 yp+22 vWClass W210 R1, %t_Lang029%
 Gui, 4:Add, Checkbox, -Wrap Checked%WTitle% vWTitle W210 R1, %t_Lang030%
 Gui, 4:Add, Checkbox, -Wrap Checked%RecMouseCtrl% yp-19 xs+245 vRecMouseCtrl W160 R1, %t_Lang032%
 Gui, 4:Add, Checkbox, -Wrap Checked%RecKeybdCtrl% vRecKeybdCtrl W160 R1, %t_Lang031%
 Gui, 4:Add, Text, yp+22 xs+22, %t_Lang033%:
 Gui, 4:Add, DDL, vRelKey W80 yp-5 xp+135, CapsLock||ScrollLock|NumLock
-Gui, 4:Add, Checkbox, -Wrap Checked%ToggleC% yp+5 xs+245 vToggleC gToggleC W160 R1, %t_Lang034%
+Gui, 4:Add, Checkbox, -Wrap Checked%ToggleC% yp+5 xs+245 vToggleC gOptionsSub W160 R1, %t_Lang034%
 ; Playback
-Gui, 4:Add, GroupBox, Section ys+230 xs+12 W400 H80, %t_Lang035%:
+Gui, 4:Add, GroupBox, Section ys+230 xs+12 W400 H100, %t_Lang035%:
 Gui, 4:Add, Text, yp+20 xp+10, %t_Lang036%:
 Gui, 4:Add, DDL, yp-2 xp+70 W75 vFastKey, None|Insert||F1|F2|F3|F4|F5|F6|F7|F8|F9|F10|F11|F12|CapsLock|NumLock|ScrollLock|
 Gui, 4:Add, DDL, yp xp+83 W37 vSpeedUp, 2||4|8|16|32
@@ -2045,8 +2048,12 @@ Gui, 4:Add, DDL, yp xp+83 W37 vSpeedDn, 2||4|8|16|32
 Gui, 4:Add, Text, yp+5 xp+40, X
 Gui, 4:Add, Checkbox, Checked%MouseReturn% ys+15 xp+15 W175 R2 vMouseReturn, %t_Lang038%
 Gui, 4:Add, Checkbox, Checked%ShowBarOnStart% W175 y+10 xp vShowBarOnStart, %t_Lang085%
+Gui, 4:Add, Checkbox, Checked%RandomSleeps% yp+25 xs+10 vRandomSleeps gOptionsSub, %t_Lang107%
+Gui, 4:Add, Edit, Limit Number yp-2 x+20 W50 R1 vRandPer
+Gui, 4:Add, UpDown, vRandPercent 0x80 Range0-1000, %RandPercent%
+Gui, 4:Add, Text, yp+5 x+5, `%
 ; Defaults
-Gui, 4:Add, GroupBox, Section xs ys+90 W400 H110, %t_Lang090%:
+Gui, 4:Add, GroupBox, Section xs ys+105 W400 H115, %t_Lang090%:
 Gui, 4:Add, Text, yp+20 xs+10, %t_Lang039%:
 Gui, 4:Add, Radio, -Wrap yp xp+150 W100 R1 vRelative R1, %c_Lang005%
 Gui, 4:Add, Radio, -Wrap yp x+5 W100 R1 vScreen R1, %t_Lang041%
@@ -2127,7 +2134,9 @@ Else If CoordMouse = Screen
 	GuiControl, 4:, Screen, 1
 GuiControl, 4:, OnRelease, %OnRelease%
 GuiControl, 4:, OnEnter, %OnEnter%
-GoSub, MovesTimed
+GuiControl, 4:Enable%RandomSleeps%, RandPercent
+GuiControl, 4:Enable%RandomSleeps%, RandPer
+GoSub, OptionsSub
 Gui, 4:Show,, %t_Lang017%
 OldMods := VirtualKeys
 Input
@@ -2167,7 +2176,8 @@ return
 ConfigCancel:
 4GuiClose:
 4GuiEscape:
-VirtualKeys := OldMods, LoopLVColor := CurrLoopColor, IfLVColor := CurrIfColor
+VirtualKeys := OldMods, LoopLVColor := OldLoopColor, IfLVColor := OldIfColor
+, Moves := OldMoves, TimedI := OldTimed, RandomSleeps := OldRandM, RandPercent := OldRandP
 Gui, 1:-Disabled
 Gui, 4:Destroy
 return
@@ -2181,18 +2191,13 @@ KeyHistory:
 KeyHistory
 return
 
-MovesTimed:
+OptionsSub:
 Gui, Submit, NoHide
 GuiControl, 4:Enable%Moves%, MDelayT
 GuiControl, 4:Enable%TimedI%, TDelayT
-return
-
-ToggleC:
-Gui, Submit, NoHide
-If ToggleC = 1
-	Toggle := "T"
-If ToggleC = 0
-	Toggle := "P"
+GuiControl, 4:Enable%RandomSleeps%, RandPercent
+GuiControl, 4:Enable%RandomSleeps%, RandPer
+ToggleMode := ToggleC ? "T" : "P"
 return
 
 LoadDefaults:
@@ -8310,7 +8315,7 @@ Gui, 17:Destroy
 Gui, 1:Default
 If RowSelection = 1
 	LV_Modify(RowNumber, "Col9", Comment)
-If RowSelection = 0
+Else If RowSelection = 0
 {
 	RowNumber = 0
 	Loop
@@ -8370,34 +8375,36 @@ If Dlg_Color(rColor, OwnerID, CustomColors)
 		GuiControl, 4:Font, %A_GuiControl%
 	}
 	Else
+		GoSub, PaintRows
+}
+return
+
+PaintRows:
+If (rColor = "0xffffff")
+	rColor := ""
+If RowSelection = 1
+	LV_Modify(RowNumber, "Col10", rColor)
+Else If RowSelection = 0
+{
+	RowNumber = 0
+	Loop
 	{
-		If (rColor = "0xffffff")
-			rColor := ""
-		If RowSelection = 1
-			LV_Modify(RowNumber, "Col10", rColor)
-		If RowSelection = 0
-		{
-			RowNumber = 0
-			Loop
-			{
-				RowNumber := A_Index
-				If (RowNumber > ListCount%A_List%)
-					break
-				LV_Modify(RowNumber, "Col10", rColor)
-			}
-		}
-		Else
-		{
-			RowNumber = 0
-			Loop, %RowSelection%
-			{
-				RowNumber := LV_GetNext(RowNumber)
-				LV_Modify(RowNumber, "Col10", rColor)
-			}
-		}
-		GoSub, RowCheck
+		RowNumber := A_Index
+		If (RowNumber > ListCount%A_List%)
+			break
+		LV_Modify(RowNumber, "Col10", rColor)
 	}
 }
+Else
+{
+	RowNumber = 0
+	Loop, %RowSelection%
+	{
+		RowNumber := LV_GetNext(RowNumber)
+		LV_Modify(RowNumber, "Col10", rColor)
+	}
+}
+GoSub, RowCheck
 return
 
 FindReplace:
@@ -8783,9 +8790,11 @@ pb_ControlClick:
 	ControlClick, %Target%, % Win[1], % Win[2], %Par1%, %Par2%, %Par3%, % Win[3], % Win[4]
 return
 pb_Sleep:
-	If SlowKeyOn
+	If (RandomSleeps)
+		SleepRandom(DelayX, RandPercent)
+	Else If (SlowKeyOn)
 		Sleep, (DelayX*SpeedDn)
-	Else If FastKeyOn
+	Else If (FastKeyOn)
 		Sleep, (DelayX/SpeedUp)
 	Else
 		Sleep, %DelayX%
@@ -9633,6 +9642,8 @@ AbortKey := "F8"
 ,	MouseReturn := 0
 ,	ShowProgBar := 1
 ,	ShowBarOnStart := 0
+,	RandomSleeps := 0
+,	RandPercent := 50
 ,	DrawButton := "RButton"
 ,	OnRelease := 1
 ,	OnEnter := 0
@@ -9688,6 +9699,8 @@ AbortKey := "F8"
 ,	OSCaption := 0
 ,	OSCaption := 0
 ,	CustomColors := 0
+,	OnFinishCode := 1
+GoSub, SetFinishButtom
 Gui 28:+LastFoundExist
 IfWinExist
 {
@@ -9704,6 +9717,8 @@ GuiControl, 1:, Win1, 0
 GuiControl, 1:, PauseKey, 0
 GuiControl, 1:, DelayG, 0
 GuiControl, 1:, KeepHkOn, 0
+GuiControl, 1:, HideMainWin, 1
+GuiControl, 1:, OnScCtrl, 1
 GoSub, DefaultMod
 GoSub, ObjCreate
 GoSub, LoadData
@@ -9811,6 +9826,8 @@ IniWrite, %SpeedDn%, %IniFilePath%, Options, SpeedDn
 IniWrite, %MouseReturn%, %IniFilePath%, Options, MouseReturn
 IniWrite, %ShowProgBar%, %IniFilePath%, Options, ShowProgBar
 IniWrite, %ShowBarOnStart%, %IniFilePath%, Options, ShowBarOnStart
+IniWrite, %RandomSleeps%, %IniFilePath%, Options, RandomSleeps
+IniWrite, %RandPercent%, %IniFilePath%, Options, RandPercent
 IniWrite, %DrawButton%, %IniFilePath%, Options, DrawButton
 IniWrite, %OnRelease%, %IniFilePath%, Options, OnRelease
 IniWrite, %OnEnter%, %IniFilePath%, Options, OnEnter
@@ -10475,6 +10492,7 @@ Menu, PlayOptMenu, Add, %r_Lang009%, PlayFrom
 Menu, PlayOptMenu, Add, %r_Lang010%, PlayTo
 Menu, PlayOptMenu, Add, %r_Lang011%, PlaySel
 Menu, PlayOptMenu, Add, %t_Lang038%, PlayOpt
+Menu, PlayOptMenu, Add, %t_Lang107%, RandOpt
 Menu, PlayOptMenu, Add, %t_Lang036%, :SpeedUpMenu
 Menu, PlayOptMenu, Add, %t_Lang037%, :SpeedDnMenu
 
@@ -10486,6 +10504,8 @@ If (pb_Sel)
 	Menu, PlayOptMenu, Check, %r_Lang011%
 If (MouseReturn)
 	Menu, PlayOptMenu, Check, %t_Lang038%
+If (RandomSleeps)
+	Menu, PlayOptMenu, Check, %t_Lang107%
 Menu, SpeedUpMenu, Check, %SpeedUp%x
 Menu, SpeedDnMenu, Check, %SpeedDn%x
 
@@ -10493,6 +10513,10 @@ Menu, PlayOptMenu, Show
 Menu, PlayOptMenu, DeleteAll
 Menu, SpeedUpMenu, DeleteAll
 Menu, SpeedDnMenu, DeleteAll
+return
+
+RandOpt:
+RandomSleeps := !RandomSleeps
 return
 
 PlayOpt:
@@ -10609,9 +10633,9 @@ return
 #Include <Class_PMC>
 #Include <Class_LV_Rows>
 #Include <Class_ObjIni>
-#Include *i <Gdip>
-#Include *i <Eval>
-#Include *i <Class_LV_Colors>
+#Include <Gdip>
+#Include <Eval>
+#Include <Class_LV_Colors>
 #SingleInstance Off
 
 #Include Lang\En.lang

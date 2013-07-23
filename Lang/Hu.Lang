@@ -406,6 +406,7 @@
 	t_Lang104 =	Megjelenítése / elrejtése címsor
 	t_Lang105 =	Megjelenítése / elrejtése főablak
 	t_Lang106 =	Fut azonnal
+	t_Lang107 =	random késések
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Nyitva
@@ -638,8 +639,8 @@
 	VarCopyA_TT =	Másolása a jelenlegi változó tartalmát
 	VarCopyB_TT =	Másolása a jelenlegi változó tartalmát
 	FindReplace_TT =	Keresés / Csere (Ctrl+F)
-	EditComm_TT =	Megjegyzés szerkesztése
-	EditColor_TT =	Szerkesztés színvédjegy
+	EditComm_TT =	Megjegyzés szerkesztése (Ctrl+L)
+	EditColor_TT =	Szerkesztés színvédjegy (Ctrl+M)
 	Reset_TT =	Kódolatlan változó tartalma
 	Screenshot_TT =	Gyártó Screenshot
 	ColorPick_TT =	Color Picker

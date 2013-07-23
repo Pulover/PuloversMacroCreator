@@ -406,6 +406,7 @@
 	t_Lang104 =	Näytä / Piilota Otsikko Bar
 	t_Lang105 =	Näytä / Piilota pääikkuna
 	t_Lang106 =	Ajaa heti
+	t_Lang107 =	satunnainen viivästyksiä
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Avata
@@ -638,8 +639,8 @@
 	VarCopyA_TT =	Kopioi nykyinen muuttujan sisältö
 	VarCopyB_TT =	Kopioi nykyinen muuttujan sisältö
 	FindReplace_TT =	Etsi / Korvaa (Ctrl+F)
-	EditComm_TT =	Edit Kommentti
-	EditColor_TT =	Edit värimerkk
+	EditComm_TT =	Edit Kommentti (Ctrl+L)
+	EditColor_TT =	Edit värimerkk (Ctrl+M)
 	Reset_TT =	Tyhjennä muuttujan sisältö
 	Screenshot_TT =	Tee Screenshot
 	ColorPick_TT =	Värivaihtoehtojamme

@@ -406,6 +406,7 @@
 	t_Lang104 =	Visa / dölj Titel Bar
 	t_Lang105 =	Visa / dölj huvudfönstret
 	t_Lang106 =	Utföras omedelbart
+	t_Lang107 =	slumpmässiga fördröjningar
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Öppet
@@ -638,8 +639,8 @@
 	VarCopyA_TT =	Kopiera befintliga variabla innehåll
 	VarCopyB_TT =	Kopiera befintliga variabla innehåll
 	FindReplace_TT =	Sök / Ersätt (Ctrl+F)
-	EditComm_TT =	Redigera kommentar
-	EditColor_TT =	Redigera färgmarkering
+	EditComm_TT =	Redigera kommentar (Ctrl+L)
+	EditColor_TT =	Redigera färgmarkering (Ctrl+M)
 	Reset_TT =	Tydliga varierande innehåll
 	Screenshot_TT =	Gör Skärmdump
 	ColorPick_TT =	Färgväljaren

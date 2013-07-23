@@ -406,6 +406,7 @@
 	t_Lang104 =	Show / Hide Title Bar
 	t_Lang105 =	Show / Hide hoofdvenster
 	t_Lang106 =	Run onmiddellijk
+	t_Lang107 =	willekeurige vertragingen
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Open
@@ -638,8 +639,8 @@
 	VarCopyA_TT =	Kopieer huidige variabele inhoud
 	VarCopyB_TT =	Kopieer huidige variabele inhoud
 	FindReplace_TT =	Zoeken / Vervangen (Ctrl+F)
-	EditComm_TT =	Opmerking bewerken
-	EditColor_TT =	Bewerken kleurmarkering
+	EditComm_TT =	Opmerking bewerken (Ctrl+L)
+	EditColor_TT =	Bewerken kleurmarkering (Ctrl+M)
 	Reset_TT =	Clear variabele inhoud
 	Screenshot_TT =	Maak Screenshot
 	ColorPick_TT =	Kleurenkiezer

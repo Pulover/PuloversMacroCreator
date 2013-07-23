@@ -59,12 +59,14 @@ For more information see [AutoHotkey Help](http://l.autohotkey.net/docs/commands
 
 ## Playback Options
 
-To change options click the Options button on the main window or select Options Menu > Settings.
+To change options click the Options button on the main window or select Options Menu > Settings. Some of the options can also be accessed from the *Playback Options* button on the [Controls Toolbar](#controls-toolbar).
 
-**Speed Up**: Selects the Hotkey toggle Playback Speed Up/Normal. When this option is on (a traytip is displayed) it will divide the Delays between commands by the selected X number.
+**Speed Up**: Selects the hotkey to toggle playback speed Up/Normal. When this option is on delay values will be cut by value set. Does not work when *Random Sleeps* is activated.
 
-**Slow Down**: Selects the Hotkey toggle Playback Speed Down/Normal. When this option is on (a traytip is displayed) it will multiply the Delays between commands by the selected X number.
+**Slow Down**: Selects the hotkey to toggle playback speed Down/Normal. When this option is on delay values will be multiplied by value set. Does not work when *Random Sleeps* is activated.
 
 **Return Mouse after playback**: If checked will return the mouse to the initial position after each Macro Playback that uses mouse movement. This will not work for Manual Playback.
 
 **Display Controls Bar on startu-up**: If checked will display the Controls bar upon every start.
+
+**Random Sleeps**: If checked all delays during playback will be a random value for more or less of the defined percentage, e.g.: if percentage is set to 50, a command with a delay of 300ms will be set to any value between 150ms and 450ms. Percentage can be set in the counter.

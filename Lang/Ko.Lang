@@ -406,6 +406,7 @@
 	t_Lang104 =	표시 / 숨기기 제목 표시 줄
 	t_Lang105 =	메인 창 표시 / 숨기기
 	t_Lang106 =	즉시 실행
+	t_Lang107 =	임의 지연
 		
 ; Messages & Dialogs		
 	d_Lang001 =	열기
@@ -638,8 +639,8 @@
 	VarCopyA_TT =	현재 변수 내용을 복사
 	VarCopyB_TT =	현재 변수 내용을 복사
 	FindReplace_TT =	찾기 / 바꾸기 (Ctrl 키+F)
-	EditComm_TT =	댓글 수정
-	EditColor_TT =	편집 색상 표
+	EditComm_TT =	댓글 수정 (Ctrl 키+L)
+	EditColor_TT =	편집 색상 표 (Ctrl 키+M)
 	Reset_TT =	지우기 변수 내용
 	Screenshot_TT =	스크린 샷 만들기
 	ColorPick_TT =	색상 선택기

@@ -406,6 +406,7 @@
 	t_Lang104 =	Показати / Приховати рядок заголовка
 	t_Lang105 =	Показати / приховати головне вікно
 	t_Lang106 =	Виконати негайно
+	t_Lang107 =	випадкові затримки
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Відкрити
@@ -638,8 +639,8 @@
 	VarCopyA_TT =	Скопіюйте вміст поточної змінної
 	VarCopyB_TT =	Скопіюйте вміст поточної змінної
 	FindReplace_TT =	Знайти / Змінити (Ctrl+F)
-	EditComm_TT =	Змінити коментар
-	EditColor_TT =	Редагувати мітку кольору
+	EditComm_TT =	Змінити коментар (Ctrl+L)
+	EditColor_TT =	Редагувати мітку кольору (Ctrl+M)
 	Reset_TT =	Очистити вміст змінної
 	Screenshot_TT =	Зробити скріншот
 	ColorPick_TT =	Color Picker

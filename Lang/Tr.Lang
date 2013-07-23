@@ -406,6 +406,7 @@
 	t_Lang104 =	Göster / Gizle Başlık Çubuğu
 	t_Lang105 =	Ana pencerede göster / gizle
 	t_Lang106 =	Hemen çalışır
+	t_Lang107 =	rastgele gecikmeler
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Açık
@@ -638,8 +639,8 @@
 	VarCopyA_TT =	Akım değişken içeriğini kopyalama
 	VarCopyB_TT =	Akım değişken içeriğini kopyalama
 	FindReplace_TT =	Bul / Değiştir (Ctrl+F)
-	EditComm_TT =	Yorum düzenle
-	EditColor_TT =	Düzen renk işareti
+	EditComm_TT =	Yorum düzenle (Ctrl+L)
+	EditColor_TT =	Düzen renk işareti (Ctrl+M)
 	Reset_TT =	Temizle değişken içeriği
 	Screenshot_TT =	Ekran Yap
 	ColorPick_TT =	Renk Seçici

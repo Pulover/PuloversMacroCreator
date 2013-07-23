@@ -186,6 +186,14 @@ HotkeyCtrlHasFocus()
 	}
 }
 
+SleepRandom(Delay, Percent)
+{
+	Min := Floor(Delay - (Delay * Percent / 100))
+	Max := Floor(Delay + (Delay * Percent / 100))
+	Random, RandTime, % (Min < 0) ? 0 : Min, %Max%
+	Sleep, %RandTime%
+}
+
 EditCtrlHasFocus()
 {
 	global GuiA := ActiveGui(WinActive("A"))
