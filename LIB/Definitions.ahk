@@ -813,3 +813,4 @@ Loop, Parse, MsgList, `n
 
 Sort, WM_Msgs, D|
 
+DefaultBar_File := ["New=New:42", "Open=Open:43", "Save=Save:60"]

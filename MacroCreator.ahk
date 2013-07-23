@@ -292,9 +292,6 @@ GoSub, WriteSettings
 
 CurrentLang := Lang
 
-#Include <Definitions>
-#Include <WordList>
-
 Lang_Ca := "Català`t(Catalan)"
 ,	Lang_Da := "Dansk`t(Danish﻿)"
 ,	Lang_De := "Deutsch`t(German)"
@@ -360,9 +357,12 @@ AppName := "Pulover's Macro Creator"
 If (KeepDefKeys = 1)
 	DefAutoKey := AutoKey, DefManKey := ManKey
 
-GoSub, ObjCreate
-
 GoSub, LoadLang
+
+#Include <Definitions>
+#Include <WordList>
+
+GoSub, ObjCreate
 GoSub, ToggleC
 Loop, Parse, ColSizes, `,
 	Col_%A_Index% := A_LoopField
@@ -561,7 +561,7 @@ Gui, +Resize +MinSize310x140 +HwndPMCWinID
 	; ILButton(SendMsgB, MsgIcon[1] ":" MsgIcon[2])
 ; Gui, Font
 ; Gui, Add, Text, W2 H55 yp-28 x+5 0x11
-Gui, Add, Custom, ClassToolbarWindow32 hwndhTbFile 0x0800 0x0100 0x0040
+Gui, Add, Custom, ClassToolbarWindow32 hwndhTbFile 0x0800 0x0100 0x0040 0x0008 0x0004
 Gui, Add, Custom, ClassReBarWindow32 hwndhRbMain 0x0400 0x0040 0x8000
 ; Gui, Font, Bold
 ; Gui, Add, Button, -Wrap W90 H40 ys xm+310 hwndRecordB vRecordB gRecord, %w_Lang004%
@@ -789,10 +789,7 @@ return
 ;##### Toolbars #####
 
 DefineToolbars:
-TbFile := New Toolbar(hTbFile)
-TbFile.SetImageList(hIL_Icons)
-TbFile.Add("", "New=New:37", "Open=Open:38", "Save=Save:56")
-TbFile.SetMaxTextRows(0)
+DefineToolbar(TbFile, hTbFile, hIL_Icons, 0, "", DefaultBar_File)
 TbFile.SetExStyle("DrawDDArrows HideClippedButtons")
 TbFile.Get("", "", "", tbBtnWidth, tbBtnHeight)
 NumButtons := TbFile.GetCount()
@@ -10042,83 +10039,83 @@ Loop, % LV_GetCount()
 	}
 	LV_Modify(A_Index, "", A_Index " " IdxLv)
 	If (Action = "[Text]")
-		LV_Modify(A_Index, "Icon" 69)
+		LV_Modify(A_Index, "Icon" 71)
 	Else If Type in %cType1%,%cType2%,%cType8%,%cType9%
-		LV_Modify(A_Index, "Icon" 69)
+		LV_Modify(A_Index, "Icon" 71)
 	Else If Type in %cType3%,%cType4%,%cType13%
-		LV_Modify(A_Index, "Icon" 33)
+		LV_Modify(A_Index, "Icon" 39)
 	Else If Action = [Pause]
-		LV_Modify(A_Index, "Icon" 41)
+		LV_Modify(A_Index, "Icon" 46)
 	Else If Type in %cType7%,%cType38%,%cType39%,%cType40%,%cType41%
-		LV_Modify(A_Index, "Icon" 31)
+		LV_Modify(A_Index, "Icon" 37)
 	Else If Type = %cType29%
 		LV_Modify(A_Index, "Icon" 2)
 	Else If Type = %cType30%
-		LV_Modify(A_Index, "Icon" 46)
+		LV_Modify(A_Index, "Icon" 6)
 	Else If Action = [Assign Variable]
-		LV_Modify(A_Index, "Icon" 74)
-	Else If Type = %cType21%
-		LV_Modify(A_Index, "Icon" 14)
-	Else If Type = %cType17%
-		LV_Modify(A_Index, "Icon" 20)
-	Else If Type in %cType18%,%cType19%
-		LV_Modify(A_Index, "Icon" 59)
-	Else If Type = %cType15%
-		LV_Modify(A_Index, "Icon" 13)
-	Else If Type = %cType16%
-		LV_Modify(A_Index, "Icon" 21)
-	Else If Action = [Control]
-		LV_Modify(A_Index, "Icon" 57)
-	Else If Type in %cType32%,%cType33%
-		LV_Modify(A_Index, "Icon" 19)
-	Else If Type = %cType34%
-		LV_Modify(A_Index, "Icon" 24)
-	Else If Type = %cType42%
-		LV_Modify(A_Index, "Icon" 75)
-	Else If Type = %cType43%
-		LV_Modify(A_Index, "Icon" 28)
-	Else If Type = %cType35%
-		LV_Modify(A_Index, "Icon" 29)
-	Else If Type in %cType36%,%cType37%
-		LV_Modify(A_Index, "Icon" 15)
-	Else If InStr(Type, "Win")
-		LV_Modify(A_Index, "Icon" 80)
-	Else If Type in Run,RunWait,RunAs
-		LV_Modify(A_Index, "Icon" 55)
-	Else If Type in Process
-		LV_Modify(A_Index, "Icon" 47)
-	Else If Type in Shutdown
-		LV_Modify(A_Index, "Icon" 60)
-	Else If (InStr(Type, "File")=1 || InStr(Type, "Drive")=1)
-		LV_Modify(A_Index, "Icon" 10)
-	Else If Type contains Sort,String,Split
-		LV_Modify(A_Index, "Icon" 35)
-	Else If Type contains InputBox,Msg,Tip,Progress,Splash
-		LV_Modify(A_Index, "Icon" 3)
-	Else If (InStr(Type, "Wait") || InStr(Type, "Input")=1)
 		LV_Modify(A_Index, "Icon" 76)
-	Else If Type contains Ini
-		LV_Modify(A_Index, "Icon" 25)
-	Else If Type contains Reg
-		LV_Modify(A_Index, "Icon" 54)
-	Else If Type contains Sound
+	Else If Type = %cType21%
+		LV_Modify(A_Index, "Icon" 21)
+	Else If Type = %cType17%
+		LV_Modify(A_Index, "Icon" 27)
+	Else If Type in %cType18%,%cType19%
 		LV_Modify(A_Index, "Icon" 62)
-	Else If Type contains Group
-		LV_Modify(A_Index, "Icon" 16)
-	Else If Type contains Env
-		LV_Modify(A_Index, "Icon" 74)
-	Else If Type contains Get
-		LV_Modify(A_Index, "Icon" 23)
-	Else If (Type = "Pause")
-		LV_Modify(A_Index, "Icon" 52)
-	Else If (Type = "Return")
-		LV_Modify(A_Index, "Icon" 63)
-	Else If (Type = "ExitApp")
+	Else If Type = %cType15%
+		LV_Modify(A_Index, "Icon" 3)
+	Else If Type = %cType16%
+		LV_Modify(A_Index, "Icon" 28)
+	Else If Action = [Control]
 		LV_Modify(A_Index, "Icon" 7)
+	Else If Type in %cType32%,%cType33%
+		LV_Modify(A_Index, "Icon" 26)
+	Else If Type = %cType34%
+		LV_Modify(A_Index, "Icon" 4)
+	Else If Type = %cType42%
+		LV_Modify(A_Index, "Icon" 77)
+	Else If Type = %cType43%
+		LV_Modify(A_Index, "Icon" 34)
+	Else If Type = %cType35%
+		LV_Modify(A_Index, "Icon" 35)
+	Else If Type in %cType36%,%cType37%
+		LV_Modify(A_Index, "Icon" 22)
+	Else If InStr(Type, "Win")
+		LV_Modify(A_Index, "Icon" 81)
+	Else If Type in Run,RunWait,RunAs
+		LV_Modify(A_Index, "Icon" 59)
+	Else If Type in Process
+		LV_Modify(A_Index, "Icon" 51)
+	Else If Type in Shutdown
+		LV_Modify(A_Index, "Icon" 63)
+	Else If (InStr(Type, "File")=1 || InStr(Type, "Drive")=1)
+		LV_Modify(A_Index, "Icon" 18)
+	Else If Type contains Sort,String,Split
+		LV_Modify(A_Index, "Icon" 5)
+	Else If Type contains InputBox,Msg,Tip,Progress,Splash
+		LV_Modify(A_Index, "Icon" 11)
+	Else If (InStr(Type, "Wait") || InStr(Type, "Input")=1)
+		LV_Modify(A_Index, "Icon" 78)
+	Else If Type contains Ini
+		LV_Modify(A_Index, "Icon" 31)
+	Else If Type contains Reg
+		LV_Modify(A_Index, "Icon" 58)
+	Else If Type contains Sound
+		LV_Modify(A_Index, "Icon" 65)
+	Else If Type contains Group
+		LV_Modify(A_Index, "Icon" 23)
+	Else If Type contains Env
+		LV_Modify(A_Index, "Icon" 76)
+	Else If Type contains Get
+		LV_Modify(A_Index, "Icon" 30)
+	Else If (Type = "Pause")
+		LV_Modify(A_Index, "Icon" 56)
+	Else If (Type = "Return")
+		LV_Modify(A_Index, "Icon" 66)
+	Else If (Type = "ExitApp")
+		LV_Modify(A_Index, "Icon" 15)
 	Else If Type contains LockState,Time,Transform,Random,ClipWait,Block,Url,Status,SendLevel,CoordMode
-		LV_Modify(A_Index, "Icon" 32)
+		LV_Modify(A_Index, "Icon" 38)
 	Else
-		LV_Modify(A_Index, "Icon" 69)
+		LV_Modify(A_Index, "Icon" 71)
 }
 GuiControl, +Redraw, InputList%A_List%
 FreeMemory()

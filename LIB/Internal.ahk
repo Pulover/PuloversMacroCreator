@@ -1,4 +1,12 @@
-﻿LV_GetTexts(Index, ByRef Act="", ByRef Det="", ByRef Tim="", ByRef Del="", ByRef Typ="", ByRef Tar="", ByRef Win="", ByRef Com="", ByRef Col="")
+﻿DefineToolbar(ByRef Tbhwnd, hCtrl, hIL, Rows, Options, ButtonsArray)
+{
+	Tbhwnd := New Toolbar(hCtrl)
+	Tbhwnd.SetImageList(hIL)
+	Tbhwnd.Add(Options, ButtonsArray*)
+	Tbhwnd.SetMaxTextRows(Rows)
+}
+
+LV_GetTexts(Index, ByRef Act="", ByRef Det="", ByRef Tim="", ByRef Del="", ByRef Typ="", ByRef Tar="", ByRef Win="", ByRef Com="", ByRef Col="")
 {
 	LV_GetText(Act, Index, 2)
 ,	Act := LTrim(Act)
