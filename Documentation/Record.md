@@ -25,7 +25,7 @@ This small window allows you to control Playback and Recording using an interfac
 
 ## Recording Options
 
-To change options click the Options button on the main window or select Options Menu > Settings. 
+To change options click the Options button on the main window or select Options Menu > Settings. Some of the options can also be accessed from the *Record Options* button on the [Controls Toolbar](#controls-toolbar).
 
 **Start/Stop Record**: Selects the Hotkey to Start and Stop Recording.  
 

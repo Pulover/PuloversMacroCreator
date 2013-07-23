@@ -406,6 +406,7 @@
 	t_Lang104 =	Show / Hide Naslov Bar
 	t_Lang105 =	Show / Hide glavni prozor
 	t_Lang106 =	Pokrenuti odmah
+	t_Lang107 =	slučajni kašnjenja
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Otvoreno
@@ -638,8 +639,8 @@
 	VarCopyA_TT =	Kopirajte trenutne varijabilne sadržaj
 	VarCopyB_TT =	Kopirajte trenutne varijabilne sadržaj
 	FindReplace_TT =	Pronađi / Zamijeni (Ctrl+F)
-	EditComm_TT =	Uredi komentar
-	EditColor_TT =	Uredi Boja oznaka
+	EditComm_TT =	Uredi komentar (Ctrl+L)
+	EditColor_TT =	Uredi Boja oznaka (Ctrl+M)
 	Reset_TT =	Vedro promjenjivi sadržaj
 	Screenshot_TT =	Provjerite Screenshot
 	ColorPick_TT =	Boja Berač

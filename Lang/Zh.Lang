@@ -406,6 +406,7 @@
 	t_Lang104 =	显示/隐藏标题栏
 	t_Lang105 =	显示/隐藏主窗口
 	t_Lang106 =	立即运行
+	t_Lang107 =	随机延迟
 		
 ; Messages & Dialogs		
 	d_Lang001 =	打开
@@ -638,8 +639,8 @@
 	VarCopyA_TT =	复制当前变量的内容
 	VarCopyB_TT =	复制当前变量的内容
 	FindReplace_TT =	查找/替换（Ctrl+F）
-	EditComm_TT =	编辑注释
-	EditColor_TT =	编辑颜色标志
+	EditComm_TT =	编辑注释（Ctrl+L）
+	EditColor_TT =	编辑颜色标志（Ctrl+M）
 	Reset_TT =	清除变量的内容
 	Screenshot_TT =	请截图
 	ColorPick_TT =	拾色器

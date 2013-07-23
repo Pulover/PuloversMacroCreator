@@ -406,6 +406,7 @@
 	t_Lang104 =	Vis / skjul Title Bar
 	t_Lang105 =	Vis / skjul hovedvinduet
 	t_Lang106 =	Kjøres umiddelbart
+	t_Lang107 =	tilfeldige forsinkelser
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Åpent
@@ -638,8 +639,8 @@
 	VarCopyA_TT =	Kopier gjeldende variabelinnhold
 	VarCopyB_TT =	Kopier gjeldende variabelinnhold
 	FindReplace_TT =	Finn / Erstatt (Ctrl+F)
-	EditComm_TT =	Rediger Kommentar
-	EditColor_TT =	Edit fargemerki
+	EditComm_TT =	Rediger Kommentar (Ctrl+L)
+	EditColor_TT =	Edit fargemerki (Ctrl+M)
 	Reset_TT =	Klare variabelinnhold
 	Screenshot_TT =	Gjør Skjermbilde
 	ColorPick_TT =	Fargevelger

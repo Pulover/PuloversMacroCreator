@@ -406,6 +406,7 @@
 	t_Lang104 =	Pokaż / Ukryj pasek tytułu
 	t_Lang105 =	Pokaż / Ukryj okno główne
 	t_Lang106 =	Uruchomić natychmiast
+	t_Lang107 =	losowe opóźnienia
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Otwarte
@@ -638,8 +639,8 @@
 	VarCopyA_TT =	Skopiuj aktualnej zmiennej treści
 	VarCopyB_TT =	Skopiuj aktualnej zmiennej treści
 	FindReplace_TT =	Znajdź / Zamień (Ctrl+F)
-	EditComm_TT =	Edytuj komentarz
-	EditColor_TT =	Zmień kolor zapytania
+	EditComm_TT =	Edytuj komentarz (Ctrl+L)
+	EditColor_TT =	Zmień kolor zapytania (Ctrl+M)
 	Reset_TT =	Wyczyść zawartość zmiennej
 	Screenshot_TT =	Dodać Screenshot
 	ColorPick_TT =	Wyboru Koloru

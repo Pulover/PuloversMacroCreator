@@ -119,7 +119,7 @@ To have other Macros active during Timer check the *Always Active* option or rig
 
 **Copy to...**: Copies selected rows to a different Macro tab.
 
-**Edit Color Mark**: Opens a Color-Pick dialog to add or change a custom color mark in the first column cell of selected rows.
+**Edit Color Mark**: Opens a Color-Pick dialog to add or change a custom color mark in the first column cell of selected rows. Customized colors can be saved as a custom palette.
 
 **Edit Comment**: Adds / Changes the comment to be displayed to the right of the line in Exported AHK Scripts on selected rows.
 
@@ -269,6 +269,12 @@ You can load multiple files with multiple parameters.
 **Ctrl+Shift+D**: Duplicate Macro
 
 **Ctrl+F**: Find / Replace
+
+**Ctrl+L**: Edit Comment
+
+**Ctrl+M**: Edit Color Mark
+
+**Shift+1 to 0**: Paint selected rows with one of the first 10 colors from the custom palette.
 
 **Ctrl+PageUp** or **Ctrl+Shift+Up** or **Ctrl+WheelUp**: Move Selected Row(s) Up
 
