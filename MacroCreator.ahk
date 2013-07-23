@@ -6,7 +6,7 @@
 ; rodolfoub@gmail.com
 ; Home: http://www.autohotkey.net/~Pulover
 ; Forum: http://www.autohotkey.com/board/topic/79763-macro-creator
-; Version: 3.7.10
+; Version: 3.8.0
 ; Release Date: July, 2013
 ; AutoHotkey Version: 1.1.11.01
 ; Copyright © 2012-2013 Rodolfo U. Batista
@@ -60,7 +60,7 @@ http://www.autohotkey.com/board/topic/17984-html-help-utils
 ; Compiler Settings
 ;@Ahk2Exe-SetName Pulover's Macro Creator
 ;@Ahk2Exe-SetDescription Pulover's Macro Creator
-;@Ahk2Exe-SetVersion 3.7.10
+;@Ahk2Exe-SetVersion 3.8.0
 ;@Ahk2Exe-SetCopyright Copyright © 2012-2013 Rodolfo U. Batista
 ;@Ahk2Exe-SetOrigFilename MacroCreator.exe
 
@@ -87,7 +87,7 @@ DefaultIcon := (A_IsCompiled) ? A_ScriptFullPath
 			:  (FileExist(A_ScriptDir "\Resources\PMC3_Mult.ico") ? A_ScriptDir "\Resources\PMC3_Mult.ico" : A_AhkPath)
 Menu, Tray, Icon, %DefaultIcon%, 1, 1
 
-CurrentVersion := "3.7.10", ReleaseDate := "July, 2013"
+CurrentVersion := "3.8.0", ReleaseDate := "July, 2013"
 
 ;##### Ini File Read #####
 
@@ -2009,7 +2009,7 @@ OldLoopColor := LoopLVColor, OldIfColor := IfLVColor
 , OldMoves := Moves, OldTimed := TimedI, OldRandM := RandomSleeps, OldRandP := RandPercent
 FileRead, UserVarsList, %UserVarsPath%
 ; Gui, 4:Font, s7
-Gui, 4:Add, Tab2, W420 H600 vTabControl AltSubmit, %t_Lang018%|%t_Lang052%|%t_Lang096%
+Gui, 4:Add, Tab2, W420 H590 vTabControl AltSubmit, %t_Lang018%|%t_Lang052%|%t_Lang096%
 ; Recording
 Gui, 4:Add, GroupBox, W400 H200, %t_Lang022%:
 Gui, 4:Add, Text, ys+40 xs+245, %t_Lang019%:
@@ -2037,7 +2037,7 @@ Gui, 4:Add, Text, yp+22 xs+22, %t_Lang033%:
 Gui, 4:Add, DDL, vRelKey W80 yp-5 xp+135, CapsLock||ScrollLock|NumLock
 Gui, 4:Add, Checkbox, -Wrap Checked%ToggleC% yp+5 xs+245 vToggleC gOptionsSub W160 R1, %t_Lang034%
 ; Playback
-Gui, 4:Add, GroupBox, Section ys+230 xs+12 W400 H100, %t_Lang035%:
+Gui, 4:Add, GroupBox, Section yp+25 xs+12 W400 H100, %t_Lang035%:
 Gui, 4:Add, Text, yp+20 xp+10, %t_Lang036%:
 Gui, 4:Add, DDL, yp-2 xp+70 W75 vFastKey, None|Insert||F1|F2|F3|F4|F5|F6|F7|F8|F9|F10|F11|F12|CapsLock|NumLock|ScrollLock|
 Gui, 4:Add, DDL, yp xp+83 W37 vSpeedUp, 2||4|8|16|32
@@ -2053,7 +2053,7 @@ Gui, 4:Add, Edit, Limit Number yp-2 x+20 W50 R1 vRandPer
 Gui, 4:Add, UpDown, vRandPercent 0x80 Range0-1000, %RandPercent%
 Gui, 4:Add, Text, yp+5 x+5, `%
 ; Defaults
-Gui, 4:Add, GroupBox, Section xs ys+105 W400 H115, %t_Lang090%:
+Gui, 4:Add, GroupBox, Section yp+25 xs W400 H115, %t_Lang090%:
 Gui, 4:Add, Text, yp+20 xs+10, %t_Lang039%:
 Gui, 4:Add, Radio, -Wrap yp xp+150 W100 R1 vRelative R1, %c_Lang005%
 Gui, 4:Add, Radio, -Wrap yp x+5 W100 R1 vScreen R1, %t_Lang041%
@@ -2069,7 +2069,7 @@ Gui, 4:Add, Edit, Limit Number yp-2 xp+180 W60 R1
 Gui, 4:Add, UpDown, yp xp+60 vMaxHistory 0x80 Range0-999999999, %MaxHistory%
 Gui, 4:Add, Button, -Wrap yp xp+75 gClearHistory, %t_Lang045%
 ; Screenshots
-Gui, 4:Add, GroupBox, Section xs ys+115 W400 H120, %t_Lang046%:
+Gui, 4:Add, GroupBox, Section yp+35 xs W400 H120, %t_Lang046%:
 Gui, 4:Add, Text, ys+20 xs+10, %t_Lang047%:
 Gui, 4:Add, DDL, yp-5 xs+100 vDrawButton W75, RButton||LButton|MButton
 Gui, 4:Add, Text, yp+3 xs+210, %t_Lang048%:
@@ -2372,7 +2372,7 @@ VerChk := RegExReplace(VerChk, ".*Version: ([\d\.]+).*", "$1", vFound)
 If vFound
 {
 	FileDelete, %A_Temp%\PMCIndex.html
-	If (VerChk > CurrentVersion)
+	If (VerChk <> CurrentVersion)
 	{
 		MsgBox, 68, %d_Lang060%, %d_Lang060%: %VerChk%`n%d_Lang061%
 		IfMsgBox, Yes

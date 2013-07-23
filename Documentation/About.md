@@ -8,7 +8,7 @@ Author: Pulover \[Rodolfo U. Batista\]
 [rodolfoub@gmail.com](mailto:rodolfoub@gmail.com)  
 Copyright © 2012-2013 Rodolfo U. Batista  
 
-Version: 3.7.10  
+Version: 3.8.0  
 Release Date: July, 2013  
 AutoHotkey Version: 1.1.11.01  
 
@@ -34,7 +34,7 @@ T800 for [Html Help utils](http://www.autohotkey.com/board/topic/17984-html-help
 
 # Change Log
 
-## Version 3.7.10
+## Version 3.8.0
 
 * Added *Run immediately* option in Timer.
 * Added *Random delays* option for Playback in *Options* window.
