@@ -4856,7 +4856,7 @@ Gui, 19:Add, Button, -Wrap yp xs+205 W25 H25 hwndColorPick vColorPick gEditColor
 Gui, 19:Add, Edit, xs vImgFile W235 R1 -Multi
 Gui, 19:Add, Button, -Wrap yp-1 x+0 W30 H23 gSearchImg, ...
 Gui, 19:Add, Text, yp+30 xs W180 H25, %c_Lang067%:
-Gui, 19:Add, DDL, yp-2 xs+185 W80 vIfFound, Continue||Break|Stop|Prompt|Move|Left Click|Right Click|Middle Click
+Gui, 19:Add, DDL, yp-2 xs+185 W80 vIfFound gIfFound, Continue||Break|Stop|Prompt|Move|Left Click|Right Click|Middle Click
 Gui, 19:Add, Text, yp+25 xs W180 H25, %c_Lang068%:
 Gui, 19:Add, DDL, yp-2 xs+185 W80 vIfNotFound, Continue||Break|Stop|Prompt
 Gui, 19:Add, CheckBox, Checked -Wrap yp+15 xs W180 H25 vAddIf, %c_Lang162%
@@ -5131,6 +5131,12 @@ If InStr(FileExist(ImgFile), "A")
 	Run, %ImgFile%
 return
 
+IfFound:
+Gui, Submit, NoHide
+If (IfFound <> "Continue")
+	GuiControl, 19:, AddIf, 0
+return
+
 ImageOpt:
 ; Screenshots
 Gui, 25:+owner19 +ToolWindow
@@ -5261,13 +5267,16 @@ Details := ""
 Loop, 6
 {
 	GuiControlGet, fTxt, 10:, FCmd%A_Index%
-	If InStr(fTxt, "OutputVar")
+	If (InStr(fTxt, "OutputVar") || InStr(fTxt, "InputVar"))
 	{
 		VarName := Par%A_Index%File
-		If ((VarName = "") && (fTxt <> "OutputVarPID"))
+		If (VarName = "")
 		{
-			Tooltip, %c_Lang127%, 15, 80
-			return
+			If fTxt not in OutputVarPID,OutputVarX,OutputVarY,OutputVarWin,OutputVarControl
+			{
+				Tooltip, %c_Lang127%, 15, % (A_Index = 1) ? 80 : 130
+				return
+			}
 		}
 		Try
 			z_Check := VarSetCapacity(%VarName%)
@@ -7275,10 +7284,10 @@ If RowSelection = 0
 	{
 		RowNumber++
 		Gui, ListView, InputList%s_List%
-		LV_GetTexts(RowNumber, Action, Details, TimesX, DelayX, Type, Target, Window, Comment)
+		LV_GetTexts(RowNumber, Action, Details, TimesX, DelayX, Type, Target, Window, Comment, Color)
 		ckd := (LV_GetNext(RowNumber-1, "Checked")=RowNumber) ? 1 : 0
 		Gui, ListView, InputList%d_List%
-		LV_Add("Check" ckd, ListCount%d_List%+1, Action, Details, TimesX, DelayX, Type, Target, Window)
+		LV_Add("Check" ckd, ListCount%d_List%+1, Action, Details, TimesX, DelayX, Type, Target, Window, Comment, Color)
 	}
 }
 Else
@@ -7287,7 +7296,7 @@ Else
 	{
 		Gui, ListView, InputList%s_List%
 		RowNumber := LV_GetNext(RowNumber)
-		LV_GetTexts(RowNumber, Action, Details, TimesX, DelayX, Type, Target, Window, Comment)
+		LV_GetTexts(RowNumber, Action, Details, TimesX, DelayX, Type, Target, Window, Comment, Color)
 		ckd := (LV_GetNext(RowNumber-1, "Checked")=RowNumber) ? 1 : 0
 		Gui, ListView, InputList%d_List%
 		LV_Add("Check" ckd, ListCount%d_List%+1, Action, Details, TimesX, DelayX, Type, Target, Window)
@@ -8841,7 +8850,13 @@ pb_GetKeyState:
 	GetKeyState, %Par1%, %Par2%, %Par3%
 return
 pb_MouseGetPos:
+	Loop, 4
+	{
+		If (Par%A_Index% = "")
+			Par%A_Index% := "Null"
+	}
 	MouseGetPos, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%
+	Null := ""
 return
 pb_PixelGetColor:
 	PixelGetColor, %Par1%, %Par2%, %Par3%, %Par4%
@@ -8994,7 +9009,13 @@ pb_StringTrimRight:
 	StringTrimRight, %Par1%, %Par2%, %Par3%
 return
 pb_SplitPath:
+	Loop, 6
+	{
+		If (Par%A_Index% = "")
+			Par%A_Index% := "Null"
+	}
 	SplitPath, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%, %Par6%
+	Null := ""
 return
 pb_InputBox:
 	InputBox, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%, %Par6%
