@@ -5,7 +5,7 @@
 ; Author:            Pulover [Rodolfo U. Batista]
 ;                    rodolfoub@gmail.com
 ; AHK version:       1.1.11.00
-; Release date:      19 July 2013
+; Release date:      23 July 2013
 ;
 ;                    Class for AutoHotkey Rebar custom controls
 ;=======================================================================================
@@ -24,7 +24,7 @@
 ;    GetRowCount()
 ;    GetRowHeight(Band)
 ;    IDToIndex(ID)
-;    InsertBand(hCtrl [, Position, Options, ID, Text, Size, Image, Background, MinHeight
+;    InsertBand(hChild [, Position, Options, ID, Text, Size, Image, Background, MinHeight
 ;               , MinWidth, IdealSize])
 ;    MaximizeBand(Band [, IdealWidth])
 ;    MinimizeBand(Band)
@@ -43,12 +43,14 @@
 ; Useful Rebar Styles:     Styles can be applied to Gui command options, e.g.:
 ;                              Gui, Add, Custom, ClassReBarWindow32 0x0800 0x0100
 ;
-; RBS_VARHEIGHT    := 0x0200 - Allow bands to have different heights.
-; RBS_BANDBORDERS  := 0x0400 - Add a separator border between bands in different rows.
-; RBS_DBLCLKTOGGLE := 0x8000 - Toggle maximize/minimize with double-click instead of single.
-; RBS_FIXEDORDER   := 0x0800 - Always displays bands in the same order.
-; CCS_NODIVIDER    := 0x0040 - Removes the separator line above the rebar.
-; CCS_VERT         := 0x0080 - Creates a vertical rebar.
+; RBS_BANDBORDERS   := 0x0400 - Add a separator border between bands in different rows.
+; RBS_DBLCLKTOGGLE  := 0x8000 - Toggle maximize/minimize with double-click instead of single.
+; RBS_FIXEDORDER    := 0x0800 - Always displays bands in the same order.
+; RBS_VARHEIGHT     := 0x0200 - Allow bands to have different heights.
+; CCS_NODIVIDER     := 0x0040 - Removes the separator line above the rebar.
+; CCS_NOPARENTALIGN := 0x0008 - Allows positioning and moving rebars.
+; CCS_NORESIZE      := 0x0004 - Allows resizing rebars.
+; CCS_VERT          := 0x0080 - Creates a vertical rebar.
 ;
 ;=======================================================================================
 Class Rebar extends Rebar.Private
@@ -173,7 +175,7 @@ Class Rebar extends Rebar.Private
 ;    Method:             InsertBand
 ;    Description:        Inserts a new band in a rebar control.
 ;    Parameters:
-;        hCtrl:          Handle to the control contained in the band, if any.
+;        hChild:         Handle to the control contained in the band, if any.
 ;        Position:       1-based index of the location where the band will be inserted.
 ;                            If you set this parameter to 0, the control will add the
 ;                            new band at the last location.
@@ -198,12 +200,12 @@ Class Rebar extends Rebar.Private
 ;                            will attempt to make the band this width.
 ;    Return:             TRUE if successful, FALSE if there was a problem.
 ;=======================================================================================
-    InsertBand(hCtrl, Position=0, Options="", ID="", Text="", Size="", Image=0, Background=""
+    InsertBand(hChild, Position=0, Options="", ID="", Text="", Size="", Image=0, Background=""
         , MinHeight=23, MinWidth=25, IdealSize="")
     {
         Options := "ChildEdge GripperAlways UseChevron " Options
     ,   this.DefineBandStruct(rbBand, Options, ID, Text, Size, Image, Background
-            , MinWidth, MinHeight, IdealSize, hCtrl)
+            , MinWidth, MinHeight, IdealSize, hChild)
         SendMessage, this.RB_INSERTBAND, Position-1, &rbBand,, % "ahk_id " this.rbHwnd
         return (ErrorLevel = "FAIL") ? False : True
     }
@@ -238,7 +240,8 @@ Class Rebar extends Rebar.Private
 ;    Parameters:
 ;        Band:           1-based index of a band to be modified.
 ;        Property:       Enter one word from the following list to select the Property
-;                            to be set: Style, ID, Text, Size, Image, Background.
+;                            to be set: Style, ID, Text, Size, Image, Background,
+;                            MinWidth, MinHeight, IdealSize, Child (handle of control).
 ;        Value:          The value to be set in the selected Property.
 ;                            If Property is Style you can enter named values as
 ;                            in the InsertBand options.
@@ -260,9 +263,10 @@ Class Rebar extends Rebar.Private
                 Value := rbStyle
             }
         }
-        If (this[ "RBBIM_" Property ])
+        If ((this[ "RBBIM_" Property ]) || (Property = "MinWidth") || (Property = "MinHeight"))
             %Property% := Value
-        this.DefineBandStruct(rbBand, Style, ID, Text, Size, Image, Background)
+        this.DefineBandStruct(rbBand, Style, ID, Text, Size, Image, Background
+                            , MinWidth, MinHeight, IdealSize, Child)
         SendMessage, this.RB_SETBANDINFO, Band-1, &rbBand,, % "ahk_id " this.rbHwnd
         return (ErrorLevel = "FAIL") ? False : True
     }
@@ -313,15 +317,14 @@ Class Rebar extends Rebar.Private
         }
         If ((nCode = this.RBN_HEIGHTCHANGE) && (this.MaxRows))
         {
-            BreakCount := 0
             Loop, % this.GetBandCount()
             {
-                this.GetBand(A_Index, ID, "", "", "", "", Style)
+                this.GetBand(A_Index, "", "", "", "", "", Style)
                 If (Style & 0x0001)
-                    lBrBand := A_Index
+                    LastBrkBand := A_Index
             }
             If (this.GetRowCount() > this.MaxRows)
-                this.ModifyBand(lBrBand, "Style", Style-0x0001)
+                this.ModifyBand(LastBrkBand, "Style", Style-0x0001)
         }
         return ""
     }
@@ -372,6 +375,7 @@ Class Rebar extends Rebar.Private
 ;=======================================================================================
 ;    Method:             SetMaxRows
 ;    Description:        Sets the maximum number of rows allowed in a rebar control.
+;                        This method requires the OnNotify method to be implemented.
 ;    Parameters:
 ;        Rows:           Number of maximum rows allowed. Set it to 0 to disable limit.
 ;    Return:             The number of rows previously allowed.
@@ -512,6 +516,7 @@ Class Rebar extends Rebar.Private
 ;
 ;    Properties:
 ;        rbHwnd:            Rebar's Hwnd.
+;        MaxRows:           Maximum number of rows allowed. Initially set to "no limit".
 ;=======================================================================================
         __New(hRebar)
         {
