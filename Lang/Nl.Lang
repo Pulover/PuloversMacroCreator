@@ -407,6 +407,10 @@
 	t_Lang105 =	Show / Hide hoofdvenster
 	t_Lang106 =	Run onmiddellijk
 	t_Lang107 =	Willekeurige Vertragingen
+	t_Lang108 =	Normaal
+	t_Lang109 =	Beneden
+	t_Lang110 =	Omhoog
+	t_Lang111 =	Steek Toetsaanslag
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Open
@@ -626,7 +630,8 @@
 	ApplyT_TT =	Van toepassing zijn
 	ApplyI_TT =	Van toepassing zijn
 	ApplyL_TT =	Invoegen van Box (Insert)
-	EditButton_TT =	Redigeren
+	InsertKey_TT =	Steek Toetsaanslag (Ctrl+Insert)
+	EditButton_TT =	Redigeren (Enter)
 	PrevRefresh_TT =	Verversen (F5)
 	PrevCopy_TT =	Kopieer
 	OpenT_TT =	Openen (Ctrl+O)

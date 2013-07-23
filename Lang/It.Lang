@@ -407,6 +407,10 @@
 	t_Lang105 =	Mostra / Nascondi finestra principale
 	t_Lang106 =	Eseguire immediatamente
 	t_Lang107 =	Ritardi Casuali
+	t_Lang108 =	Normale
+	t_Lang109 =	Giù
+	t_Lang110 =	Up
+	t_Lang111 =	Inserire Battitura
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Aperto
@@ -626,7 +630,8 @@
 	ApplyT_TT =	Applicare
 	ApplyI_TT =	Applicare
 	ApplyL_TT =	Inserisci da scatola (Insert)
-	EditButton_TT =	Modifica
+	InsertKey_TT =	Inserire Battitura (Ctrl+Insert)
+	EditButton_TT =	Modifica (Enter)
 	PrevRefresh_TT =	Rinfrescare (F5)
 	PrevCopy_TT =	Copiare
 	OpenT_TT =	Apri (Ctrl+O)

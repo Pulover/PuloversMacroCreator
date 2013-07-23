@@ -179,7 +179,7 @@
 	c_Lang040 =	Orta
 	c_Lang041 =	X1
 	c_Lang042 =	X2
-	c_Lang043 =	/ Bırak tutun
+	c_Lang043 =	Bırak / Tutun
 	c_Lang044 =	Kont tıklayın
 	c_Lang045 =	Düz Metin (Raw)
 	c_Lang046 =	Komutları ile Metin
@@ -407,6 +407,10 @@
 	t_Lang105 =	Ana pencerede göster / gizle
 	t_Lang106 =	Hemen çalışır
 	t_Lang107 =	Rastgele Gecikmeler
+	t_Lang108 =	Normal
+	t_Lang109 =	Aşağı
+	t_Lang110 =	Yukarı
+	t_Lang111 =	Tuş Eklemek
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Açık
@@ -626,7 +630,8 @@
 	ApplyT_TT =	Uygulamak
 	ApplyI_TT =	Uygulamak
 	ApplyL_TT =	Kutusundan Ekle (Insert)
-	EditButton_TT =	Düzenle
+	InsertKey_TT =	Tuş Eklemek (Ctrl+Insert)
+	EditButton_TT =	Düzenle (Enter)
 	PrevRefresh_TT =	Yenile (F5)
 	PrevCopy_TT =	Kopyala
 	OpenT_TT =	Aç (Ctrl+O)

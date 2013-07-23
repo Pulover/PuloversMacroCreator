@@ -407,6 +407,10 @@
 	t_Lang105 =	메인 창 표시 / 숨기기
 	t_Lang106 =	즉시 실행
 	t_Lang107 =	임의 지연
+	t_Lang108 =	표준
+	t_Lang109 =	아래로
+	t_Lang110 =	올라
+	t_Lang111 =	키를 삽입
 		
 ; Messages & Dialogs		
 	d_Lang001 =	열기
@@ -626,7 +630,8 @@
 	ApplyT_TT =	신청
 	ApplyI_TT =	신청
 	ApplyL_TT =	상자 삽입 (Insert)
-	EditButton_TT =	수정
+	InsertKey_TT =	키를 삽입 (Ctrl+Insert)
+	EditButton_TT =	수정 (Enter)
 	PrevRefresh_TT =	새롭게하다 (F5)
 	PrevCopy_TT =	복사
 	OpenT_TT =	열기 (Ctrl 키+O)

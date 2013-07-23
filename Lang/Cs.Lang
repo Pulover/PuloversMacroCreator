@@ -407,6 +407,10 @@
 	t_Lang105 =	Zobrazit / skrýt hlavní okno
 	t_Lang106 =	Okamžité spuštění
 	t_Lang107 =	Náhodné Zpoždění
+	t_Lang108 =	Normální
+	t_Lang109 =	Dolů
+	t_Lang110 =	Nahoru
+	t_Lang111 =	Vložit Klávesy
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Otevřít
@@ -626,7 +630,8 @@
 	ApplyT_TT =	Platit
 	ApplyI_TT =	Platit
 	ApplyL_TT =	Vložit z krabice (Insert)
-	EditButton_TT =	Upravit
+	InsertKey_TT =	Vložit Klávesy (Ctrl+Insert)
+	EditButton_TT =	Upravit (Enter)
 	PrevRefresh_TT =	Občerstvit (F5)
 	PrevCopy_TT =	Kopírovat
 	OpenT_TT =	Open (Ctrl+O)

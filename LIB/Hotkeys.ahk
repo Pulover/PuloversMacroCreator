@@ -23,6 +23,7 @@ return
 ^v::GoSub, PasteRows
 ^d::GoSub, Duplicate
 Insert::GoSub, ApplyL
+^Insert::GoSub, InsertKey
 ^a::GoSub, SelectAll
 ^+a::GoSub, SelectNone
 ^!a::GoSub, InvertSel

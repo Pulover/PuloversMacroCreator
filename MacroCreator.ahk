@@ -634,24 +634,26 @@ Gui, Add, Button, -Wrap W22 H25 hwndEditComm vEditComm gEditComm
 	ILButton(EditComm, CommentIcon[1] ":" CommentIcon[2])
 Gui, Add, Button, -Wrap W22 H25 hwndFindReplace vFindReplace gFindReplace
 	ILButton(FindReplace, FindIcon[1] ":" FindIcon[2])
-Gui, Add, Text, -Wrap y+129 xm W65 H22 Section vRepeat, %w_Lang015%:
+Gui, Add, Text, -Wrap y+129 xm W100 H22 Section vRepeat, %w_Lang015%:
 Gui, Add, Edit, ys-3 x+5 W90 R1 vRept Number
 Gui, Add, UpDown, vTimesM 0x80 Range0-999999999, 1
-Gui, Add, Button, -Wrap ys-4 x+5 W60 H23 hwndApplyT vApplyT gApplyT, %w_Lang017%
-	ILButton(ApplyT, ApplyIcon[1] ":" ApplyIcon[2], 0, "Left")
+Gui, Add, Button, -Wrap ys-4 x+0 W25 H23 hwndApplyT vApplyT gApplyT
+	ILButton(ApplyT, ApplyIcon[1] ":" ApplyIcon[2])
 Gui, Add, Text, W2 H25 ys-3 x+5 0x11 vSeparator1
-Gui, Add, Text, -Wrap x+5 ys W65 H22 vDelayT, %w_Lang016%
+Gui, Add, Text, -Wrap x+5 ys W100 H22 vDelayT, %w_Lang016%
 Gui, Add, Edit, ys-3 x+5 W90 R1 vDelay
 Gui, Add, UpDown, vDelayG 0x80 Range0-999999999, %DelayG%
-Gui, Add, Button, -Wrap ys-4 x+5 W60 H23 hwndApplyI vApplyI gApplyI, %w_Lang017%
-	ILButton(ApplyI, ApplyIcon[1] ":" ApplyIcon[2], 0, "Left")
+Gui, Add, Button, -Wrap ys-4 x+0 W25 H23 hwndApplyI vApplyI gApplyI
+	ILButton(ApplyI, ApplyIcon[1] ":" ApplyIcon[2])
 Gui, Add, Text, W2 H25 ys-3 x+5 0x11 vSeparator2
 Gui, Add, Hotkey, ys-3 x+5 W150 vsInput
-Gui, Add, Button, -Wrap ys-4 x+0 W60 H23 hwndApplyL vApplyL gApplyL, %w_Lang018%
-	ILButton(ApplyL, InsertIcon[1] ":" InsertIcon[2], 0, "Left")
+Gui, Add, Button, -Wrap ys-4 x+0 W25 H23 hwndApplyL vApplyL gApplyL
+	ILButton(ApplyL, InsertIcon[1] ":" InsertIcon[2])
+Gui, Add, Button, -Wrap ys-4 x+5 W25 H23 hwndInsertKey vInsertKey gInsertKey
+	ILButton(InsertKey, TextIcon[1] ":" TextIcon[2])
 Gui, Add, Text, W2 H25 ys-3 x+5 0x11 vSeparator3
-Gui, Add, Button, -Wrap Default ys-4 x+5 W60 H23 hwndEditButton vEditButton gEditButton, %w_Lang019%
-	ILButton(EditButton, EditIcon[1] ":" EditIcon[2], 0, "Left")
+Gui, Add, Button, -Wrap Default ys-4 x+5 W25 H23 hwndEditButton vEditButton gEditButton
+	ILButton(EditButton, EditIcon[1] ":" EditIcon[2])
 Gui, Add, Text, W2 H25 ys-3 x+5 0x11 vSeparator4
 Gui, Add, Text, -Wrap ys-6 x+5 W100 vContextTip gSetWin cBlue, #IfWin: %IfDirectContext%
 Gui, Add, Text, -Wrap yp+16 W100 vCoordTip gOptions, CoordMode: %CoordMouse%
@@ -7683,6 +7685,92 @@ Else
 GoSub, RowCheck
 GoSub, b_Start
 return
+
+InsertKey:
+Gui, Submit, NoHide
+Gui, 31:+owner1 +ToolWindow +Delimiter¢ +HwndCmdWin
+Gui, 1:+Disabled
+; Gui, 13:Font, s7
+Gui, 31:Add, Groupbox, Section W220 H100
+Gui, 31:Add, DDL, ys+15 xs+10 W200 vsKey, %KeybdList%
+Gui, 31:Add, Radio, Checked W200 vKeystroke, %t_Lang108%
+Gui, 31:Add, Radio, W200 vKeyDown, %t_Lang109%
+Gui, 31:Add, Radio, W200 vKeyUp, %t_Lang110%
+Gui, 31:Add, Button, -Wrap Section Default xm W60 H23 gInsertKeyOK, %c_Lang020%
+Gui, 31:Add, Button, -Wrap ys W60 H23 gInsertKeyCancel, %c_Lang021%
+Gui, 31:Show,, %t_Lang111%
+return
+
+InsertKeyOK:
+Gui, Submit, NoHide
+If (KeyDown)
+	State := " Down"
+Else If (KeyUp)
+	State := " Up"
+Else
+	State := ""
+tKey := sKey, sKey := "{" sKey State "}"
+Gui, 1:-Disabled
+Gui, 31:Destroy
+Gui, 1:Default
+RowSelection := LV_GetCount("Selected")
+If RowSelection = 0
+{
+	LV_Add("Check", ListCount%A_List%+1, tKey, sKey, 1, DelayG, cType1)
+	GoSub, b_Start
+	LV_Modify(ListCount%A_List%, "Vis")
+}
+Else
+{
+	RowNumber = 0
+	Loop, %RowSelection%
+	{
+		RowNumber := LV_GetNext(RowNumber)
+		LV_Insert(RowNumber, "Check", RowNumber, tKey, sKey, 1, DelayG, cType1)
+		RowNumber++
+	}
+}
+GoSub, RowCheck
+GoSub, b_Start
+return
+
+InsertKeyCancel:
+31GuiClose:
+31GuiEscape:
+Gui, 1:-Disabled
+Gui, 31:Destroy
+return
+
+/*
+Gui, Submit, NoHide
+StringReplace, sInput, sInput, SC15D, AppsKey
+StringReplace, sInput, sInput, SC145, NumLock
+StringReplace, sInput, sInput, SC154, PrintScreen
+If sInput = 
+	return
+sKey := RegExReplace(sInput, "(.$)", "$l1"), tKey := sKey
+GoSub, Replace
+sKey := "{" sKey "}", RowSelection := LV_GetCount("Selected")
+If RowSelection = 0
+{
+	LV_Add("Check", ListCount%A_List%+1, tKey, sKey, 1, DelayG, cType1)
+	GoSub, b_Start
+	LV_Modify(ListCount%A_List%, "Vis")
+}
+Else
+{
+	RowNumber = 0
+	Loop, %RowSelection%
+	{
+		RowNumber := LV_GetNext(RowNumber)
+		LV_Insert(RowNumber, "Check", RowNumber, tKey, sKey, 1, DelayG, cType1)
+		RowNumber++
+	}
+}
+GoSub, RowCheck
+GoSub, b_Start
+return
+*/
 
 EditButton:
 Gui, Submit, NoHide

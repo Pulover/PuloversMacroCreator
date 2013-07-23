@@ -407,6 +407,10 @@
 	t_Lang105 =	Show / Hide Hauptfenster
 	t_Lang106 =	Laufen sofort
 	t_Lang107 =	Zufälligen Verzögerungen
+	t_Lang108 =	Normalen
+	t_Lang109 =	Nach unten
+	t_Lang110 =	Up
+	t_Lang111 =	Tastendruck Einfügen
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Öffnen
@@ -626,7 +630,8 @@
 	ApplyT_TT =	Anwenden
 	ApplyI_TT =	Anwenden
 	ApplyL_TT =	Einfügen aus Box (Insert)
-	EditButton_TT =	Bearbeiten
+	InsertKey_TT =	Tastendruck Einfügen (Ctrl+Insert)
+	EditButton_TT =	Bearbeiten (Enter)
 	PrevRefresh_TT =	Erfrischen (F5)
 	PrevCopy_TT =	Kopieren
 	OpenT_TT =	Öffnen (Strg+O)

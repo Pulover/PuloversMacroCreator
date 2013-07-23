@@ -407,6 +407,10 @@
 	t_Lang105 =	Mostra / oculta la finestra principal
 	t_Lang106 =	Executar immediatament
 	t_Lang107 =	Retards Aleatoris
+	t_Lang108 =	Normal
+	t_Lang109 =	Baix
+	t_Lang110 =	Fins
+	t_Lang111 =	Inserir Pulsacions
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Obert
@@ -626,7 +630,8 @@
 	ApplyT_TT =	Aplicar
 	ApplyI_TT =	Aplicar
 	ApplyL_TT =	Inseriu de Caixa (Insert)
-	EditButton_TT =	Edita
+	InsertKey_TT =	Inserir Pulsacions (Ctrl+Insert)
+	EditButton_TT =	Edita (Enter)
 	PrevRefresh_TT =	Actualitzar (F5)
 	PrevCopy_TT =	Copieu
 	OpenT_TT =	Obrir (Ctrl+O)

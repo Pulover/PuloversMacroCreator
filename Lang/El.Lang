@@ -407,6 +407,10 @@
 	t_Lang105 =	Εμφάνιση / Απόκρυψη κύριο παράθυρο
 	t_Lang106 =	Τρέχει αμέσως
 	t_Lang107 =	Τυχαίες Καθυστερήσεις
+	t_Lang108 =	Κανονικός
+	t_Lang109 =	Κάτω
+	t_Lang110 =	Επάνω
+	t_Lang111 =	Εισάγετε Πληκτρολόγησης
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Ανοιχτό
@@ -626,7 +630,8 @@
 	ApplyT_TT =	Εφαρμογή
 	ApplyI_TT =	Εφαρμογή
 	ApplyL_TT =	Εισαγωγή από Box (Insert)
-	EditButton_TT =	Επεξεργασία
+	InsertKey_TT =	Εισάγετε Πληκτρολόγησης (Ctrl+Insert)
+	EditButton_TT =	Επεξεργασία (Enter)
 	PrevRefresh_TT =	Refresh (F5)
 	PrevCopy_TT =	Αντιγραφή
 	OpenT_TT =	Άνοιγμα (Ctrl+O)

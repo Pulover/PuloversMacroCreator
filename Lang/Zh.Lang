@@ -407,6 +407,10 @@
 	t_Lang105 =	显示/隐藏主窗口
 	t_Lang106 =	立即运行
 	t_Lang107 =	随机延迟
+	t_Lang108 =	正常
+	t_Lang109 =	下
+	t_Lang110 =	上
+	t_Lang111 =	插入击键
 		
 ; Messages & Dialogs		
 	d_Lang001 =	打开
@@ -626,7 +630,8 @@
 	ApplyT_TT =	应用
 	ApplyI_TT =	应用
 	ApplyL_TT =	从框中插入（Insert）
-	EditButton_TT =	编辑
+	InsertKey_TT =	插入击键 (Ctrl+Insert)
+	EditButton_TT =	编辑（Enter）
 	PrevRefresh_TT =	刷新（F5）
 	PrevCopy_TT =	复制
 	OpenT_TT =	开放（按Ctrl+O）

@@ -1164,3 +1164,24 @@ Loop, Parse, MsgList, `n
 
 Sort, WM_Msgs, D|
 
+Loop, 26
+	KeybdList .= Chr(A_Index+96) "¢" ((A_Index = 1) ? "¢" : "")
+Loop, 26
+	KeybdList .= Chr(A_Index+64) "¢"
+Loop, 10
+	KeybdList .= Chr(A_Index+47) "¢"
+KeybdList .= "
+(Join¢
+Control¢LControl¢RControl¢Alt¢LAlt¢RAlt¢Shift¢LShift¢RShift¢LWin¢RWin
+F1¢F2¢F3¢F4¢F5¢F6¢F7¢F8¢F9¢F10¢F11¢F12¢F13¢F14¢F15¢F16¢F17¢F18¢F19¢F20¢F21¢F22¢F23¢F24
+'¢""¢!¢@¢#¢$¢%¢¨¢&¢*¢(¢)¢-¢_¢=¢+¢´¢``¢[¢]¢{¢}¢<¢>¢~¢^¢.¢,¢;¢:¢?¢/¢\¢|
+Left¢Right¢Up¢Down¢Home¢End¢PgUp¢PgDn¢AppsKey¢PrintScreen¢Pause
+Delete¢Insert¢Backspace¢Escape¢Enter¢Tab¢Space¢CapsLock¢ScrollLock¢NumLock
+Numpad0¢Numpad1¢Numpad2¢Numpad3¢Numpad4¢Numpad5¢Numpad6¢Numpad7¢Numpad8¢Numpad9
+NumpadDot¢NumpadDiv¢NumpadMult¢NumpadAdd¢NumpadSub¢NumpadIns¢NumpadEnd¢NumpadDown
+NumpadPgDn¢NumpadLeft¢NumpadClear¢NumpadRight¢NumpadHome¢NumpadUp¢NumpadPgUp¢NumpadDel
+NumpadEnter¢Browser_Back¢Browser_Forward¢Browser_Refresh¢Browser_Stop¢Browser_Search
+Browser_Favorites¢Browser_Home¢Volume_Mute¢Volume_Down¢Volume_Up¢Media_Next¢Media_Prev
+Media_Stop¢Media_Play_Pause¢Launch_Mail¢Launch_Media¢Launch_App1¢Launch_App2
+LButton¢RButton¢MButton¢XButton1¢XButton2¢WheelDown¢WheelUp¢WheelLeft¢WheelRight
+)"

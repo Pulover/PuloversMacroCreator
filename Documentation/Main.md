@@ -89,6 +89,8 @@ To have other Macros active during Timer check the *Always Active* option or rig
 
 **Insert Box**: This box can be used to add commands to the list. Click in the box and press the buttons to add on the keyboard then press the Insert button to add them to the list (you can also use the Insert key as a shortcut when the focus is on the ListView).
 
+**Insert Keystroke**: Alternative to the *Insert Box*. It opens a window where you choose a keyboard key from a list to insert. You can also choose to hold (Down) or release (Up) the key.
+
 **Edit Button**: When only one row is selected it has tha same behavior as a double-click on a row to enter the command's window for editing. If more then one or no row is selected it will open an edit window where you change the target Control and Window, Repeat Loops or Delay for selected rows (or all rows if none is selected). If the all checkboxes are left unchecked it will remove Control and Window from selected rows. Control and Window will only affect Send, Click and Control commands.
 
 ## Edit Commands
@@ -274,7 +276,7 @@ You can load multiple files with multiple parameters.
 
 **Ctrl+M**: Edit Color Mark
 
-**Shift+1 to 0**: Paint selected rows with one of the first 10 colors from the custom palette.
+**Shift+1 to 0**: Paint selected rows with one of the first 10 colors from the custom palette
 
 **Ctrl+PageUp** or **Ctrl+Shift+Up** or **Ctrl+WheelUp**: Move Selected Row(s) Up
 
@@ -289,6 +291,8 @@ You can load multiple files with multiple parameters.
 **Enter**: Edit selected Row(s)
 
 **Insert**: Insert Key(s) from Insert Box
+
+**Ctrl+Insert**: Insert Keystroke
 
 **Delete**: Delete Row(s)
 

@@ -407,6 +407,10 @@
 	t_Lang105 =	Mostrar / ocultar la ventana principal
 	t_Lang106 =	Ejecutar inmediatamente
 	t_Lang107 =	Retrasos Aleatorios
+	t_Lang108 =	Normal
+	t_Lang109 =	Abajo
+	t_Lang110 =	Hasta
+	t_Lang111 =	Insertar Pulsaciones
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Abierto
@@ -626,7 +630,8 @@
 	ApplyT_TT =	Aplicar
 	ApplyI_TT =	Aplicar
 	ApplyL_TT =	Inserte de Caja (Insert)
-	EditButton_TT =	Editar
+	InsertKey_TT =	Insertar Pulsaciones (Ctrl+Insert)
+	EditButton_TT =	Editar (Enter)
 	PrevRefresh_TT =	Refrescar (F5)
 	PrevCopy_TT =	Copiar
 	OpenT_TT =	Abrir (Ctrl+O)
