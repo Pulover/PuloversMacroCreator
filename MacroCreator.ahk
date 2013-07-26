@@ -55,6 +55,8 @@ http://www.autohotkey.com/board/topic/71751-gendocs-v30-alpha002
 
 T800 for Html Help utils.
 http://www.autohotkey.com/board/topic/17984-html-help-utils
+
+Translation revisions: Snow Flake, huyaowen, Jörg Schmalenberger.
 */
 
 ; Compiler Settings
@@ -2442,6 +2444,7 @@ Gui, 26:Add, Link, y+0, majkinetor for the <a href="http://www.autohotkey.com/bo
 Gui, 26:Add, Link, y+0, rbrtryn for the <a href="http://www.autohotkey.com/board/topic/91229-windows-color-picker-plus/">ChooseColor</a> function.
 Gui, 26:Add, Link, y+0, fincs for <a href="http://www.autohotkey.com/board/topic/71751-gendocs-v30-alpha002">GenDocs</a>.
 Gui, 26:Add, Link, y+0, T800 for <a href="http://www.autohotkey.com/board/topic/17984-html-help-utils">Html Help utils</a>.
+Gui, 26:Add, Text, y+0, Translation revisions: Snow Flake, huyaowen, Jörg Schmalenberger.
 Gui, 26:Add, Groupbox, W380 H130 Center, GNU General Public License
 Gui, 26:Add, Edit, yp+20 xp+10 W360 H100 ReadOnly -E0x200,
 (
