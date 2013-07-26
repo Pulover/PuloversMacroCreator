@@ -5,7 +5,7 @@
 ; Author:            Pulover [Rodolfo U. Batista]
 ;                    rodolfoub@gmail.com
 ; AHK version:       1.1.11.00
-; Release date:      23 July 2013
+; Release date:      24 July 2013
 ;
 ;                    Class for AutoHotkey Rebar custom controls
 ;=======================================================================================
@@ -557,7 +557,7 @@ Class Rebar extends Rebar.Private
             fMask := (Options <> "" ? this.RBBIM_STYLE : 0)
                     | (lpText <> "" ? this.RBBIM_TEXT : 0)
                     | (iImage ? this.RBBIM_IMAGE : 0)
-                    | (hwndChild ? this.RBBIM_CHILD | this.RBBIM_SIZE | this.RBBIM_IDEALSIZE : 0)
+                    | ((hwndChild || cx) ? this.RBBIM_CHILD | this.RBBIM_SIZE | this.RBBIM_IDEALSIZE : 0)
                     | (hbmBack <> "" ? this.RBBIM_BACKGROUND : 0)
                     | (wID ? this.RBBIM_ID : 0)
                     | (cxMinChild || cyMinChild ? this.RBBIM_CHILDSIZE : 0)
