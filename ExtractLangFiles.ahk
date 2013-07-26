@@ -27,9 +27,9 @@ Loop, Parse, Clipboard, `n, `r
 	}
 }
 
-FileDelete, %A_ScriptDir%\Lang\*.Lang
+FileDelete, %A_ScriptDir%\Lang\*.lang
 For each, Lan in PMC.Lang
-	FileAppend, % Lan, % A_ScriptDir "\Lang\" nLang[A_Index] ".Lang", UTF-8
+	FileAppend, % Lan, % A_ScriptDir "\Lang\" nLang[A_Index] ".lang", UTF-8
 
 XL.Application.CutCopyMode := False
 XL.Workbooks(1).Close(0)
