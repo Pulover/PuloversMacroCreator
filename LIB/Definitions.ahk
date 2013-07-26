@@ -16,7 +16,7 @@ If A_OSVersion in WIN_2003,WIN_XP,WIN_2000
 	_s := Chr(4445)
 ,	RecentFolder := A_AppData "\..\Recent"
 
-ListCount1 := 0
+	ListCount1 := 0
 ,	TabCount := 1
 ,	FastKeyOn := 0
 ,	SlowKeyOn := 0
@@ -813,7 +813,9 @@ Loop, Parse, MsgList, `n
 
 Sort, WM_Msgs, D|
 
-DefaultBar_File := ["New=New:42", "Open=Open:43", "Save=Save:60"]
+DefaultBar := {FileOpt: "", File: ["New=New:42", "Open=Open:43", "Save=Save:60"]
+			, ScriptOpt: "ShowText Enabled", Script: ["Export=Export:16", "Preview=Preview:50", "Options=Options:44"]
+			, RecPlayOpt: "ShowText Enabled", RecPlay: ["Record=Record:55", "PlayStart=Play:47"]}
 Loop, 26
 	KeybdList .= Chr(A_Index+96) "¢" ((A_Index = 1) ? "¢" : "")
 Loop, 26

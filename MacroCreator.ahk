@@ -566,7 +566,9 @@ Gui, +Resize +MinSize310x140 +HwndPMCWinID
 ; Gui, Font
 ; Gui, Add, Text, W2 H55 yp-28 x+5 0x11
 Gui, Add, Custom, ClassToolbarWindow32 hwndhTbFile 0x0800 0x0100 0x0040 0x0008 0x0004
-Gui, Add, Custom, ClassReBarWindow32 hwndhRbMain 0x0400 0x0040 0x8000
+Gui, Add, Custom, ClassToolbarWindow32 hwndhTbScript 0x0800 0x0100 0x0040 0x0008 0x0004 0x1000
+Gui, Add, Custom, ClassToolbarWindow32 hwndhTbRecPlay 0x0800 0x0100 0x0040 0x0008 0x0004 0x1000
+Gui, Add, Custom, ClassReBarWindow32 hwndhRbMain gRB_Notify 0x0400 0x0040 0x8000
 ; Gui, Font, Bold
 ; Gui, Add, Button, -Wrap W90 H40 ys xm+310 hwndRecordB vRecordB gRecord, %w_Lang004%
 	; ILButton(RecordB, RecordIcon[1] ":" RecordIcon[2], 1, "Left")
@@ -795,13 +797,19 @@ return
 ;##### Toolbars #####
 
 DefineToolbars:
-DefineToolbar(TbFile, hTbFile, hIL_Icons, 0, "", DefaultBar_File)
-TbFile.SetExStyle("DrawDDArrows HideClippedButtons")
-TbFile.Get("", "", "", tbBtnWidth, tbBtnHeight)
-NumButtons := TbFile.GetCount()
-tbWidth := NumButtons * tbBtnWidth
-RbMain := New Rebar(hRbMain)
-RbMain.InsertBand(hTbFile, 0, "", 10, "", 100, 0, "", tbBtnHeight, 25, 100)
+	DefineToolbar(TbFile, hTbFile, hIL_Icons, DefaultBar.File)
+,	DefineToolbar(TbScript, hTbScript, hIL_Icons, DefaultBar.Script, DefaultBar.ScriptOpt, 1)
+,	DefineToolbar(TbRecPlay, hTbRecPlay, hIL_Icons, DefaultBar.RecPlay, DefaultBar.RecPlayOpt, 1)
+,	RbMain := New Rebar(hRbMain)
+,	TB_Rebar(RbMain, 10, TbFile), TB_Rebar(RbMain, 20, TbScript)
+,	TB_Rebar(RbMain, 30, TbRecPlay)
+,	RbMain.SetMaxRows(2)
+TBHwndAll := [TbFile, TbScript, TbRecPlay]
+return
+
+RB_Notify:
+If (A_GuiEvent = "N")
+	RbMain.OnNotify(A_EventInfo, tbMX, tbMY, BandID)
 return
 
 ;##### Capture Keys #####
