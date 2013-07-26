@@ -706,8 +706,8 @@ If %0%
 			PlayHK := 1
 		If (%A_Index% = "-h")
 			HideWin := 1
-		If !(t_Timer) && (RegExMatch(%A_Index%, "i)^-t(\d*)$", t_Timer))
-			TimerPlay := 1, DelayX := (t_Timer1) ? t_Timer1 : 250
+		If !(t_Timer) && (RegExMatch(%A_Index%, "i)^-t(\d*)(!)?$", _t))
+			TimerPlay := 1, TimerDelayX := (_t1) ? _t1 : 250, TimedRun := RunFirst := (_t2) ? 1 : 0
 		If (%A_Index% = "-c")
 			CloseAfterPlay := 1
 		If (%A_Index% = "-b")
@@ -2400,6 +2400,10 @@ return
 
 Homepage:
 Run, http://www.autohotkey.net/~Pulover
+return
+
+Forum:
+Run, http://www.autohotkey.com/board/topic/79763-macro-creator
 return
 
 HelpAHK:
@@ -8565,6 +8569,7 @@ Gui, 18:Add, Radio, -Wrap W160 vRepAllMacros R1, %t_Lang075%
 Gui, 18:Add, Text, y+10 xs+10 W180 vReplaced
 Gui, 18:Add, Button, -Wrap Section xm W60 H23 gFindClose, %c_Lang022%
 Gui, 18:Show,, %t_Lang067%
+GuiControl, 18:Focus, Find
 Tooltip
 return
 
@@ -10444,6 +10449,7 @@ Menu, HelpMenu, Add, %m_Lang009%`t%_s%F1, Help
 Menu, HelpMenu, Add, %h_Lang006%, ShowTips
 Menu, HelpMenu, Add
 Menu, HelpMenu, Add, %h_Lang001%, Homepage
+Menu, HelpMenu, Add, %h_Lang007%, Forum
 Menu, HelpMenu, Add, %h_Lang002%, HelpAHK
 Menu, HelpMenu, Add
 Menu, HelpMenu, Add, %h_Lang003%, CheckNow
@@ -10722,7 +10728,6 @@ GuiControl,, OptionsB, %w_Lang003%
 GuiControl,, AutoT, %w_Lang006%:
 GuiControl,, ManT, %w_Lang007%:
 GuiControl,, AbortT, %w_Lang008%:
-; GuiControl,, PauseKey, %w_Lang010%
 GuiControl,, RecordB, %w_Lang004%
 GuiControl,, StartB, %w_Lang005%
 GuiControl,, RepeatT, %w_Lang011% (%t_Lang004%):
@@ -10731,11 +10736,6 @@ GuiControl,, OnScCtrl, %w_Lang009%
 GuiControl,, HideMainWin, %w_Lang013%
 GuiControl,, KeepHkOn, %w_Lang014%
 GuiControl,, Repeat, %w_Lang015%:
-GuiControl,, DelayT, %w_Lang016%
-GuiControl,, ApplyL, %w_Lang018%
-GuiControl,, EditButton, %w_Lang019%
-GuiControl,, ApplyT, %w_Lang017%
-GuiControl,, ApplyI, %w_Lang017%
 Gui 2:+LastFoundExist
 IfWinExist
     GoSub, Preview

@@ -35,6 +35,11 @@ T800 for [Html Help utils](http://www.autohotkey.com/board/topic/17984-html-help
 
 # Change Log
 
+## Version 3.8.1
+
+* Added exclamation as parameter to run Timer immediately in command line (e.g.: -t5000!).
+* Fixed an issue with Timer command line parameter.
+
 ## Version 3.8.0
 
 * Added *Insert Keystroke* command.
