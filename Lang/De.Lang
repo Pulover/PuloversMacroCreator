@@ -67,7 +67,7 @@
 	e_Lang013 =	E&infügen aus Box
 	e_Lang014 =	Farbmarkierung &bearbeiten 
 		
-; Makro Sub Menu		
+; Macro Sub Menu		
 	r_lang001 =	&Makro aufzeichnen
 	r_lang002 =	Makros &aktivieren
 	r_lang003 =	Aktuelles Makro ab&spielen 
@@ -104,7 +104,7 @@
 ; Tray Menu		
 	y_Lang001 =	Fenster schließen
 	y_Lang002 =	Fenster anzeigen
-	y_Lang003 =	Steuerungleiste an&zeigen/verbergen
+	y_Lang003 =	Steuerungleiste anzeigen/verbergen
 		
 ; Main Window		
 	w_Lang001 =	Exportieren
@@ -115,7 +115,7 @@
 	w_Lang006 =	Auto.
 	w_Lang007 =	Man.
 	w_Lang008 =	Stopp
-	w_Lang009 =	Steuerungleiste anzeigen
+	w_Lang009 =	Steuerungleiste an&zeigen
 	w_Lang010 =	&Pause
 	w_Lang011 =	L&oop
 	w_Lang012 =	Tasten e&rfassen 
@@ -298,7 +298,7 @@
 	c_Lang159 =	Suchoptionen
 	c_Lang160 =	Transparent
 	c_Lang161 =	Skalierung
-	c_Lang162 =	"If-Anweisung" hinzufügen
+	c_Lang162 =	If-Anweisung hinzufügen
 		
 ; Other Windows		
 	t_Lang001 =	Export nach AHK
