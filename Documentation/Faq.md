@@ -78,6 +78,8 @@ You can also export the Macro to an AutoHotkey script and run it using Window's 
 
 > MacroCreator.exe SavedFile.pmc -t -a4
 
+To run the first iteration immediately append an ! to the interval value, e.g. *-t5000!*.
+
 -c -- *Close*: Exits the program after the first Macro is executed (normally used with the -a option).
 
 > MacroCreator.exe SavedFile.pmc -a -c

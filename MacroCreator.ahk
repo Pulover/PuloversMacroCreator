@@ -6,7 +6,7 @@
 ; rodolfoub@gmail.com
 ; Home: http://www.autohotkey.net/~Pulover
 ; Forum: http://www.autohotkey.com/board/topic/79763-macro-creator
-; Version: 3.8.0
+; Version: 3.8.1
 ; Release Date: July, 2013
 ; AutoHotkey Version: 1.1.11.01
 ; Copyright © 2012-2013 Rodolfo U. Batista
@@ -60,7 +60,7 @@ http://www.autohotkey.com/board/topic/17984-html-help-utils
 ; Compiler Settings
 ;@Ahk2Exe-SetName Pulover's Macro Creator
 ;@Ahk2Exe-SetDescription Pulover's Macro Creator
-;@Ahk2Exe-SetVersion 3.8.0
+;@Ahk2Exe-SetVersion 3.8.1
 ;@Ahk2Exe-SetCopyright Copyright © 2012-2013 Rodolfo U. Batista
 ;@Ahk2Exe-SetOrigFilename MacroCreator.exe
 
@@ -87,7 +87,7 @@ DefaultIcon := (A_IsCompiled) ? A_ScriptFullPath
 			:  (FileExist(A_ScriptDir "\Resources\PMC3_Mult.ico") ? A_ScriptDir "\Resources\PMC3_Mult.ico" : A_AhkPath)
 Menu, Tray, Icon, %DefaultIcon%, 1, 1
 
-CurrentVersion := "3.8.0", ReleaseDate := "July, 2013"
+CurrentVersion := "3.8.1", ReleaseDate := "July, 2013"
 
 ;##### Ini File Read #####
 
@@ -691,8 +691,8 @@ If %0%
 			PlayHK := 1
 		If (%A_Index% = "-h")
 			HideWin := 1
-		If !(t_Timer) && (RegExMatch(%A_Index%, "i)^-t(\d*)$", t_Timer))
-			TimerPlay := 1, DelayX := (t_Timer1) ? t_Timer1 : 250
+		If !(t_Timer) && (RegExMatch(%A_Index%, "i)^-t(\d*)(!)?$", _t))
+			TimerPlay := 1, TimerDelayX := (_t1) ? _t1 : 250, TimedRun := RunFirst := (_t2) ? 1 : 0
 		If (%A_Index% = "-c")
 			CloseAfterPlay := 1
 		If (%A_Index% = "-b")
@@ -2357,6 +2357,10 @@ return
 
 Homepage:
 Run, http://www.autohotkey.net/~Pulover
+return
+
+Forum:
+Run, http://www.autohotkey.com/board/topic/79763-macro-creator
 return
 
 HelpAHK:
@@ -8521,6 +8525,7 @@ Gui, 18:Add, Radio, -Wrap W160 vRepAllMacros R1, %t_Lang075%
 Gui, 18:Add, Text, y+10 xs+10 W180 vReplaced
 Gui, 18:Add, Button, -Wrap Section xm W60 H23 gFindClose, %c_Lang022%
 Gui, 18:Show,, %t_Lang067%
+GuiControl, 18:Focus, Find
 Tooltip
 return
 
@@ -10403,6 +10408,7 @@ Menu, HelpMenu, Add, %m_Lang009%`t%_s%F1, Help
 Menu, HelpMenu, Add, %h_Lang006%, ShowTips
 Menu, HelpMenu, Add
 Menu, HelpMenu, Add, %h_Lang001%, Homepage
+Menu, HelpMenu, Add, %h_Lang007%, Forum
 Menu, HelpMenu, Add, %h_Lang002%, HelpAHK
 Menu, HelpMenu, Add
 Menu, HelpMenu, Add, %h_Lang003%, CheckNow
@@ -10681,7 +10687,6 @@ GuiControl,, OptionsB, %w_Lang003%
 GuiControl,, AutoT, %w_Lang006%:
 GuiControl,, ManT, %w_Lang007%:
 GuiControl,, AbortT, %w_Lang008%:
-; GuiControl,, PauseKey, %w_Lang010%
 GuiControl,, RecordB, %w_Lang004%
 GuiControl,, StartB, %w_Lang005%
 GuiControl,, RepeatT, %w_Lang011% (%t_Lang004%):
@@ -10690,11 +10695,6 @@ GuiControl,, OnScCtrl, %w_Lang009%
 GuiControl,, HideMainWin, %w_Lang013%
 GuiControl,, KeepHkOn, %w_Lang014%
 GuiControl,, Repeat, %w_Lang015%:
-GuiControl,, DelayT, %w_Lang016%
-GuiControl,, ApplyL, %w_Lang018%
-GuiControl,, EditButton, %w_Lang019%
-GuiControl,, ApplyT, %w_Lang017%
-GuiControl,, ApplyI, %w_Lang017%
 Gui 2:+LastFoundExist
 IfWinExist
     GoSub, Preview

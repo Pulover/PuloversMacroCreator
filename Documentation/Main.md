@@ -196,6 +196,8 @@ Macro Creator supports command line parameters. The format is:
 
 > MacroCreator.exe SavedFile.pmc -t -a4
 
+To run the first iteration immediately append an ! to the interval value, e.g. *-t5000!*.
+
 -c -- *Close*: Exits the program after the first Macro is executed (normally used with the -a option).
 
 > MacroCreator.exe SavedFile.pmc -a -c

@@ -96,9 +96,10 @@
 	h_Lang001 =	&Makro Creator Hjem
 	h_Lang002 =	&AHK Online Dokumentation
 	h_Lang003 =	&Kontrollere for opdateringer...
-	h_Lang004 =	Ko&ntrollere, om opstart
-	h_Lang005 =	&Om
+	h_Lang004 =	K&ontrollere, om opstart
+	h_Lang005 =	Om
 	h_Lang006 =	&Tips
+	h_Lang007 =	&Forum
 		
 ; Tray Menu		
 	y_Lang001 =	Skjul vindue
