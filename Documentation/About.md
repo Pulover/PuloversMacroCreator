@@ -31,6 +31,7 @@ majkinetor for the [Dlg_Color](http://www.autohotkey.com/board/topic/49214-ahk-a
 rbrtryn for the [ChooseColor](http://www.autohotkey.com/board/topic/91229-windows-color-picker-plus/) function.  
 fincs for [GenDocs](http://www.autohotkey.com/board/topic/71751-gendocs-v30-alpha002).  
 T800 for [Html Help utils](http://www.autohotkey.com/board/topic/17984-html-help-utils).  
+Translation revisions: Snow Flake, huyaowen, Jörg Schmalenberger.
 
 
 # Change Log
