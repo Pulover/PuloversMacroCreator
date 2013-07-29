@@ -59,7 +59,7 @@ http://www.autohotkey.com/board/topic/71751-gendocs-v30-alpha002
 T800 for Html Help utils.
 http://www.autohotkey.com/board/topic/17984-html-help-utils
 
-Translation revisions: Snow Flake, huyaowen, Jörg Schmalenberger.
+Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jörg Schmalenberger (German).
 */
 
 ; Compiler Settings
@@ -176,7 +176,7 @@ IniRead, ShowLoopIfMark, %IniFilePath%, Options, ShowLoopIfMark, 1
 IniRead, ShowActIdent, %IniFilePath%, Options, ShowActIdent, 1
 IniRead, LoopLVColor, %IniFilePath%, Options, LoopLVColor, 0xFFFF00
 IniRead, IfLVColor, %IniFilePath%, Options, IfLVColor, 0x0000FF
-IniRead, VirtualKeys, %IniFilePath%, Options, VirtualKeys,
+IniRead, VirtualKeys, %IniFilePath%, Options, VirtualKeys, % "
 (Join
 {LControl}{RControl}{LAlt}{RAlt}{LShift}{RShift}{LWin}{RWin}{AppsKey}
 {F1}{F2}{F3}{F4}{F5}{F6}{F7}{F8}{F9}{F10}{F11}{F12}{1}{2}{3}{4}{5}{6}{7}{8}{9}{0}
@@ -188,7 +188,7 @@ IniRead, VirtualKeys, %IniFilePath%, Options, VirtualKeys,
 {NumpadEnter}{Browser_Back}{Browser_Forward}{Browser_Refresh}{Browser_Stop}{Browser_Search}
 {Browser_Favorites}{Browser_Home}{Volume_Mute}{Volume_Down}{Volume_Up}{Media_Next}{Media_Prev}
 {Media_Stop}{Media_Play_Pause}{Launch_Mail}{Launch_Media}{Launch_App1}{Launch_App2}
-)
+)"
 IniRead, AutoUpdate, %IniFilePath%, Options, AutoUpdate, 1
 IniRead, Ex_AbortKey, %IniFilePath%, ExportOptions, Ex_AbortKey, 0
 IniRead, Ex_PauseKey, %IniFilePath%, ExportOptions, Ex_PauseKey, 0
@@ -2496,7 +2496,7 @@ Gui, 26:Add, Link, y+0, majkinetor for the <a href="http://www.autohotkey.com/bo
 Gui, 26:Add, Link, y+0, rbrtryn for the <a href="http://www.autohotkey.com/board/topic/91229-windows-color-picker-plus/">ChooseColor</a> function.
 Gui, 26:Add, Link, y+0, fincs for <a href="http://www.autohotkey.com/board/topic/71751-gendocs-v30-alpha002">GenDocs</a>.
 Gui, 26:Add, Link, y+0, T800 for <a href="http://www.autohotkey.com/board/topic/17984-html-help-utils">Html Help utils</a>.
-Gui, 26:Add, Text, y+0, Translation revisions: Snow Flake, huyaowen, Jörg Schmalenberger.
+Gui, 26:Add, Text, y+0 w380, Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jörg Schmalenberger (German).
 Gui, 26:Add, Groupbox, W380 H130 Center, GNU General Public License
 Gui, 26:Add, Edit, yp+20 xp+10 W360 H100 ReadOnly -E0x200,
 (
@@ -2516,7 +2516,7 @@ Gui, 26:Add, Text, xp yp wp hp Border cWhite Center 0x200 BackgroundTrans vDonat
 Gui, 26:Font
 GuiControl, 26:Focus, %c_Lang020%
 Gui, 26:Show, W460, %t_Lang076%
-hCurs := DllCall("LoadCursor","Int",0,"Int",32649,"UInt")
+hCurs := DllCall("LoadCursor", "Int", 0, "Int", 32649, "UInt")
 return
 
 EditMouse:
@@ -9728,12 +9728,12 @@ If ((ListCount > 0) && (SavePrompt))
 DetectHiddenWindows, On
 WinGet, WinState, MinMax, ahk_id %PMCWinID%
 If WinState = -1
-	WinState = 0
+	WinState := 0
 ColSizes := ""
-Loop % LV_GetCount("Column")
+Loop % LV_GetCount("Col")
 {
     SendMessage, 4125, A_Index - 1, 0, SysListView321, ahk_id %PMCWinID%
-	ColSizes .= ErrorLevel ","
+	ColSizes .= Floor(ErrorLevel / Round(A_ScreenDPI / 96, 2)) ","
 }
 GoSub, GetHotkeys
 If (KeepDefKeys = 1)
@@ -9885,9 +9885,9 @@ Gui, ListView, InputList%A_List%
 return
 
 DefaultMod:
-VirtualKeys := 
+VirtualKeys := "
 (Join
-"{LControl}{RControl}{LAlt}{RAlt}{LShift}{RShift}{LWin}{RWin}
+{LControl}{RControl}{LAlt}{RAlt}{LShift}{RShift}{LWin}{RWin}
 {AppsKey}{F1}{F2}{F3}{F4}{F5}{F6}{F7}{F8}{F9}{F10}{F11}{F12}
 {1}{2}{3}{4}{5}{6}{7}{8}{9}{0}{'}{-}{=}{[}{]}{;}{/}{,}{.}{\}
 {Left}{Right}{Up}{Down}{Home}{End}{PgUp}{PgDn}{Del}{Ins}{BS}{Esc}
@@ -9899,8 +9899,8 @@ VirtualKeys :=
 {Browser_Back}{Browser_Forward}{Browser_Refresh}{Browser_Stop}
 {Browser_Search}{Browser_Favorites}{Browser_Home}{Volume_Mute}{Volume_Down}
 {Volume_Up}{Media_Next}{Media_Prev}{Media_Stop}{Media_Play_Pause}
-{Launch_Mail}{Launch_Media}{Launch_App1}{Launch_App2}"
-)
+{Launch_Mail}{Launch_Media}{Launch_App1}{Launch_App2}
+)"
 return
 
 DefaultHotkeys:
@@ -10305,7 +10305,7 @@ GuiSize:
 If A_EventInfo = 1
 	return
 
-GuiGetSize(WinW, WinH), GuiSize(WinW, WinH)
+GuiGetSize(WinW, WinH) , GuiSize(WinW, WinH)
 ; GuiSize(A_GuiWidth, A_GuiHeight)
 return
 

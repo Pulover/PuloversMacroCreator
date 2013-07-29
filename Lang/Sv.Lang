@@ -93,7 +93,7 @@
 	p_Lang001 =	&PayPal donation
 		
 ; Help Sub Menu		
-	h_Lang001 =	&Makro Skapare Home
+	h_Lang001 =	&Makro Skapare Hem
 	h_Lang002 =	&AHK Online Dokumentation
 	h_Lang003 =	&Sök efter uppdateringar...
 	h_Lang004 =	&Kontrollera vid uppstart
@@ -118,7 +118,7 @@
 	w_Lang009 =	Visa &kontroller
 	w_Lang010 =	&Paus
 	w_Lang011 =	L&oop
-	w_Lang012 =	&Fånga Keys
+	w_Lang012 =	&Fånga Tangenter
 	w_Lang013 =	&Dölj fönster
 	w_Lang014 =	All&tid aktiv
 	w_Lang015 =	Upprepa
@@ -134,7 +134,7 @@
 	w_Lang025 =	Starta
 	w_Lang026 =	Logga ut
 	w_Lang027 =	Viloläge
-	w_Lang028 =	Suspend
+	w_Lang028 =	upphäv
 	w_Lang029 =	Lås datorn
 		
 ; Command Windows		
@@ -204,7 +204,7 @@
 	c_Lang064 =	Pixel
 	c_Lang065 =	Gör Skärmdump
 	c_Lang066 =	Nyckel Vänta
-	c_Lang067 =	Om de befinns
+	c_Lang067 =	Om den finns
 	c_Lang068 =	Om den inte hittas / Fel
 	c_Lang069 =	* Coords lagras `%FoundX`% / `%FoundY`%.
 	c_Lang070 =	Coord
@@ -215,7 +215,7 @@
 	c_Lang075 =	Break
 	c_Lang076 =	Fortsätt
 	c_Lang077 =	Gå
-	c_Lang078 =	Gå till Label
+	c_Lang078 =	Gå till Etikett
 	c_Lang079 =	Etikett
 	c_Lang080 =	Lägg till etikett
 	c_Lang081 =	String (InputVar), värde
@@ -296,7 +296,7 @@
 	c_Lang157 =	Script Language
 	c_Lang158 =	Inte kompatibel med 64-bitars!
 	c_Lang159 =	Sökalternativ
-	c_Lang160 =	Transparent
+	c_Lang160 =	Genomskinlig
 	c_Lang161 =	Skala
 	c_Lang162 =	Lägg Till "If"
 		
@@ -314,8 +314,8 @@
 	t_Lang011 =	Indrag
 	t_Lang012 =	Inkludera PMC koden
 	t_Lang013 =	Gör slå samman inte skicka kommandon
-	t_Lang014 =	Refresh
-	t_Lang015 =	Auto-Refresh
+	t_Lang014 =	Uppdatera
+	t_Lang015 =	Auto-uppdatera
 	t_Lang016 =	Alltid överst
 	t_Lang017 =	Inställningar
 	t_Lang018 =	Allmänt
@@ -459,7 +459,7 @@
 		- Klicka på ett område utan en för att välja område i fönstret.
 	)	
 	d_Lang035 =	Fortsätta?
-	d_Lang036 =	Bild / Pixel Found at
+	d_Lang036 =	Bild / Pixel hittad på
 	d_Lang037 =	Bild / Pixel hittades inte.
 	d_Lang038 =	Tryck på OK för att fortsätta.
 	d_Lang039 =	Tidsgräns!
@@ -499,34 +499,34 @@
 	d_Lang055 =	Välj ett AutoHotkey skript fil (. AHK) och en anger ett funktionsnamn.
 	d_Lang056 =	
 	(LTrim	
-		Den här funktionen kräver AutoHotkey installerad.
+		Den här funktionen kräver att AutoHotkey är installerad.
 		Klicka på OK för att gå att ladda ner sidan.
 	)	
 	d_Lang057 =	
 	(LTrim	
-		- Tryck på Ctrl + piltangenterna för att flytta markerade området.
+		- Tryck på Ctrl + piltangenterna för att flytta på det  markerade området.
 		- Tryck på Skift + piltangenterna för att ändra storlek på markerade området.
 		- Tryck på Enter för att avsluta.
 	)	
 	d_Lang058 =	
 	(LTrim	
-		Vissa funktioner kräver admnistrator privilages för att fungera korrekt.
-		Det rekommenderas att starta programmet som administratör.
+		Vissa funktioner kräver admnistrator privilages för att kuna fungera korrekt.
+		Det rekommenderas att du starta programmet som administratör.
 	)	
 	d_Lang059 =	
 	(LTrim	
 		Detta kommando stöder inte uttryck eller funktioner.
 		Vänligen tilldela en variabel och använda den i parametern.
 	)	
-	d_Lang060 =	Ny version tillgänglig
+	d_Lang060 =	En ny version tillgänglig
 	d_Lang061 =	
 	(LTrim	
 		Vill du ladda ner den nu?
 		
-		Vill avaktivera automatiska kontroller väljer Hjälp > Kontrollera vid uppstart.
+		Vill du avaktivera automatiska kontroller väljer Hjälp > Kontrollera vid uppstart.
 	)	
 	d_Lang062 =	Du har redan den senaste versionen.
-	d_Lang063 =	Ett fel inträffade vid kontroll.
+	d_Lang063 =	Ett fel inträffade vid kontrollen.
 	d_Lang064 =	COM-objekt fel i
 	d_Lang065 =	Rad
 	d_Lang066 =	Specifikt
@@ -534,10 +534,10 @@
 	d_Lang068 =	Tips:
 	d_Lang069 =	
 	(LTrim	
-		Behöver hjälp, hittade en bugg eller har ett förslag? Skicka ett mail till författaren: <a href="mailto:rodolfoub@gmail.com">rodolfoub@gmail.com</a>
+		Behöver du hjälp, hittade du en bugg eller har du ett förslag? Skicka ett mail till författaren: <a href="mailto:rodolfoub@gmail.com">rodolfoub@gmail.com</a>
 		Detta är en gratis programvara. Om du fann det användbart överväga <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=rodolfoub`%40gmail`%2ecom&lc=US&item_name=Pulover`%27s`%20Macro`%20Creator&item_number=App`%2ePMC&currency_code=USD&bn=PP`%2dDonationsBF`%3abtn_donateCC_LG`%2egif`%3aNonHosted">gör en donation</a> och stödja utvecklingen. Tack.
 	)	
-	d_Lang070 =	Fel: Ogiltig Hotkey Selected.
+	d_Lang070 =	Fel: Ogiltig Hotkey Vald.
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -593,7 +593,7 @@
 	IfStB_TT =	Om rapporter (F10) / variabler (Shift+F10) / Funktioner (Ctrl+F10)
 	IEComB_TT =	Internet Explorer (F11) / COM-gränssnitt (Skift+F11) / Kör Skriptlet (Ctrl+F11)
 	SendMsgB_TT =	Windows-meddelanden (F12)
-	AutoKey_TT =	Backsteg för att radera
+	AutoKey_TT =	Backstag för att radera
 	ManKey_TT =	Backsteg för att radera
 	AbortKey_TT =	Backsteg för att radera
 	JoyKey_TT =	Tryck på en knapp på joysticken
@@ -633,7 +633,7 @@
 	ApplyL_TT =	Infoga från rutan (Insert)
 	InsertKey_TT =	Infoga Tangenttryckning (Ctrl+Insert)
 	EditButton_TT =	Redigera (Enter)
-	PrevRefresh_TT =	Refresh (F5)
+	PrevRefresh_TT =	Updatera (F5)
 	PrevCopy_TT =	Kopiera
 	OpenT_TT =	Öppna (Ctrl+O)
 	SaveT_TT =	Spara (Ctrl+S)
@@ -647,7 +647,7 @@
 	FindReplace_TT =	Sök / Ersätt (Ctrl+F)
 	EditComm_TT =	Redigera kommentar (Ctrl+L)
 	EditColor_TT =	Redigera färgmarkering (Ctrl+M)
-	Reset_TT =	Tydliga varierande innehåll
+	Reset_TT =	För tydliga varierande innehåll
 	Screenshot_TT =	Gör Skärmdump
 	ColorPick_TT =	Färgväljaren
 	PicPrev_TT =	Dubbelklicka för att öppna bild
@@ -670,8 +670,8 @@
 	OSRecOpt_TT =	Inspelningsalternativen
 	OSPlayOpt_TT =	Visningsalternativ
 	OSClear_TT =	Rensa lista
-	OSProgB_TT =	Visa Progress Bar
-	OSFast_TT =	Fart upp
+	OSProgB_TT =	Visa framstegs Takt
+	OSFast_TT =	Snabba upp
 	OSSlow_TT =	Sakta Ner
 	OSTrans_TT =	opacitet
 	ToggleTB_TT =	Visa / dölj Titel Bar
