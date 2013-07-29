@@ -30,7 +30,7 @@ majkinetor for the [Dlg_Color](http://www.autohotkey.com/board/topic/49214-ahk-a
 rbrtryn for the [ChooseColor](http://www.autohotkey.com/board/topic/91229-windows-color-picker-plus/) function.  
 fincs for [GenDocs](http://www.autohotkey.com/board/topic/71751-gendocs-v30-alpha002).  
 T800 for [Html Help utils](http://www.autohotkey.com/board/topic/17984-html-help-utils).  
-Translation revisions: Snow Flake, huyaowen, Jörg Schmalenberger.
+Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jörg Schmalenberger (German).
 
 
 # Change Log
@@ -38,6 +38,7 @@ Translation revisions: Snow Flake, huyaowen, Jörg Schmalenberger.
 ## Version 3.8.1
 
 * Added exclamation as parameter to run Timer immediately in command line (e.g.: -t5000!).
+* Fixed issues with higher DPI settings.
 * Fixed an issue with Timer command line parameter.
 
 ## Version 3.8.0

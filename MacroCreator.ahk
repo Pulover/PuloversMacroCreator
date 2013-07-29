@@ -56,7 +56,7 @@ http://www.autohotkey.com/board/topic/71751-gendocs-v30-alpha002
 T800 for Html Help utils.
 http://www.autohotkey.com/board/topic/17984-html-help-utils
 
-Translation revisions: Snow Flake, huyaowen, Jörg Schmalenberger.
+Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jörg Schmalenberger (German).
 */
 
 ; Compiler Settings
@@ -2444,7 +2444,7 @@ Gui, 26:Add, Link, y+0, majkinetor for the <a href="http://www.autohotkey.com/bo
 Gui, 26:Add, Link, y+0, rbrtryn for the <a href="http://www.autohotkey.com/board/topic/91229-windows-color-picker-plus/">ChooseColor</a> function.
 Gui, 26:Add, Link, y+0, fincs for <a href="http://www.autohotkey.com/board/topic/71751-gendocs-v30-alpha002">GenDocs</a>.
 Gui, 26:Add, Link, y+0, T800 for <a href="http://www.autohotkey.com/board/topic/17984-html-help-utils">Html Help utils</a>.
-Gui, 26:Add, Text, y+0, Translation revisions: Snow Flake, huyaowen, Jörg Schmalenberger.
+Gui, 26:Add, Text, y+0 w380, Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jörg Schmalenberger (German).
 Gui, 26:Add, Groupbox, W380 H130 Center, GNU General Public License
 Gui, 26:Add, Edit, yp+20 xp+10 W360 H100 ReadOnly -E0x200,
 (
@@ -2464,7 +2464,7 @@ Gui, 26:Add, Text, xp yp wp hp Border cWhite Center 0x200 BackgroundTrans vDonat
 Gui, 26:Font
 GuiControl, 26:Focus, %c_Lang020%
 Gui, 26:Show, W460, %t_Lang076%
-hCurs := DllCall("LoadCursor","Int",0,"Int",32649,"UInt")
+hCurs := DllCall("LoadCursor", "Int", 0, "Int", 32649, "UInt")
 return
 
 EditMouse:
@@ -9673,16 +9673,18 @@ If ((ListCount > 0) && (SavePrompt))
 	IfMsgBox, Cancel
 		return
 }
+Gui, -DPIScale
 DetectHiddenWindows, On
 WinGet, WinState, MinMax, ahk_id %PMCWinID%
 If WinState = -1
 	WinState = 0
 ColSizes := ""
-Loop % LV_GetCount("Column")
+Loop % LV_GetCount("Col")
 {
     SendMessage, 4125, A_Index - 1, 0, SysListView321, ahk_id %PMCWinID%
-	ColSizes .= ErrorLevel ","
+	ColSizes .= Floor(ErrorLevel / Round(A_ScreenDPI / 100 + 0.04, 2)) ","
 }
+outputdebug, % colsizes
 GoSub, GetHotkeys
 If (KeepDefKeys = 1)
 	AutoKey := DefAutoKey, ManKey := DefManKey
@@ -10256,8 +10258,8 @@ GuiSize:
 If A_EventInfo = 1
 	return
 
-GuiGetSize(WinW, WinH), GuiSize(WinW, WinH)
-; GuiSize(A_GuiWidth, A_GuiHeight)
+; GuiGetSize(WinW, WinH), GuiSize(WinW, WinH)
+GuiSize(A_GuiWidth, A_GuiHeight)
 return
 
 ;##### Subroutines: Substitution #####
