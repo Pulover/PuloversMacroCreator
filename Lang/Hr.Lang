@@ -10,8 +10,14 @@
 	m_Lang005 =	&Makro
 	m_Lang006 =	Mo&gućnosti
 	m_Lang007 =	&Jezik
-	m_Lang008 =	&Napravite donacije
+	m_Lang008 =	&Darovati
 	m_Lang009 =	&Pomoći
+	w_Lang009 =	Po&kaži kontrole
+	w_Lang010 =	P&auza
+	w_Lang011 =	P&etlja
+	w_Lang012 =	&Hvatanje Keys
+	w_Lang013 =	&Sakrij Prozor
+	w_Lang014 =	U&vijek je aktivna
 		
 ; File Submenu		
 	f_Lang001 =	&Novi
@@ -89,7 +95,7 @@
 	o_Lang006 =	&Zadane Hotkeys
 	o_Lang007 =	&Tvorničke postavke
 		
-; Make a Donation Sub Menu		
+; Donate Sub Menu		
 	p_Lang001 =	&PayPal donacija
 		
 ; Help Sub Menu		
@@ -115,12 +121,6 @@
 	w_Lang006 =	Samostalno.
 	w_Lang007 =	Čovjek
 	w_Lang008 =	Stop
-	w_Lang009 =	Po&kaži kontrole
-	w_Lang010 =	P&auza
-	w_Lang011 =	P&etlja
-	w_Lang012 =	&Hvatanje Keys
-	w_Lang013 =	&Sakrij Prozor
-	w_Lang014 =	U&vijek je aktivna
 	w_Lang015 =	Ponovite
 	w_Lang016 =	Kašnjenje (ms):
 	w_Lang017 =	Primijeniti

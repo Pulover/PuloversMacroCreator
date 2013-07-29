@@ -10,8 +10,14 @@
 	m_Lang005 =	&Macro
 	m_Lang006 =	&Opties
 	m_Lang007 =	&Taal
-	m_Lang008 =	M&aak een donatie
+	m_Lang008 =	&Schenken
 	m_Lang009 =	&Help
+	w_Lang009 =	Too&n een checklist
+	w_Lang010 =	&Pauze
+	w_Lang011 =	&Lus
+	w_Lang012 =	&Capture Keys
+	w_Lang013 =	&Venster te verbergen
+	w_Lang014 =	&Altijd Actief
 		
 ; File Submenu		
 	f_Lang001 =	&Nieuw
@@ -89,7 +95,7 @@
 	o_Lang006 =	&Standaard Sneltoetsen
 	o_Lang007 =	S&tandaardinstellingen
 		
-; Make a Donation Sub Menu		
+; Donate Sub Menu		
 	p_Lang001 =	&PayPal Donatie
 		
 ; Help Sub Menu		
@@ -115,12 +121,6 @@
 	w_Lang006 =	Auto.
 	w_Lang007 =	Man.
 	w_Lang008 =	Stoppen
-	w_Lang009 =	Too&n een checklist
-	w_Lang010 =	&Pauze
-	w_Lang011 =	&Lus
-	w_Lang012 =	&Capture Keys
-	w_Lang013 =	&Venster te verbergen
-	w_Lang014 =	Alti&jd Actief
 	w_Lang015 =	Herhalen
 	w_Lang016 =	Delay (ms):
 	w_Lang017 =	Van toepassing zijn

@@ -10,8 +10,14 @@
 	m_Lang005 =	&Makro
 	m_Lang006 =	Se&çenekler
 	m_Lang007 =	D&il
-	m_Lang008 =	&Bağış Yap
+	m_Lang008 =	&Bağışlamak
 	m_Lang009 =	&Yardım
+	w_Lang009 =	&Kontrolleri göster
+	w_Lang010 =	D&urma
+	w_Lang011 =	D&öngü
+	w_Lang012 =	&Tuşlar Capture
+	w_Lang013 =	&Pencere gizle
+	w_Lang014 =	&Her zaman Aktif
 		
 ; File Submenu		
 	f_Lang001 =	&Yeni
@@ -89,7 +95,7 @@
 	o_Lang006 =	Varsa&yılan Hotkeys
 	o_Lang007 =	Varsay&ılan Ayarlar
 		
-; Make a Donation Sub Menu		
+; Donate Sub Menu		
 	p_Lang001 =	&PayPal Bağış
 		
 ; Help Sub Menu		
@@ -115,12 +121,6 @@
 	w_Lang006 =	Oto.
 	w_Lang007 =	Man.
 	w_Lang008 =	Dur
-	w_Lang009 =	&Kontrolleri göster
-	w_Lang010 =	D&urma
-	w_Lang011 =	D&öngü
-	w_Lang012 =	&Tuşlar Capture
-	w_Lang013 =	&Pencere gizle
-	w_Lang014 =	&Her zaman Aktif
 	w_Lang015 =	Tekrarlayın
 	w_Lang016 =	Gecikme (ms):
 	w_Lang017 =	Uygulamak
