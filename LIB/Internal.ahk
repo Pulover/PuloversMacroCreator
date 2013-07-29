@@ -123,10 +123,10 @@ GuiGetSize(ByRef W, ByRef H, GuiID=1)
 	Gui %GuiID%:+LastFoundExist
 	IfWinExist
 	{
-		VarSetCapacity( rect, 16, 0 )
-	,	DllCall("GetClientRect", "uint", MyGuiHWND := WinExist(), "uint", &rect )
-	,	W := NumGet( rect, 8, "int" )
-	,	H := NumGet( rect, 12, "int" )
+		VarSetCapacity(rect, 16, 0)
+	,	DllCall("GetClientRect", "uint", MyGuiHWND := WinExist(), "uint", &rect)
+	,	W := Floor(NumGet(rect, 8, "int") / Round(A_ScreenDPI / 96, 2))
+	,	H := Floor(NumGet(rect, 12, "int") / Round(A_ScreenDPI / 96, 2))
 	}
 }
 

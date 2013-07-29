@@ -162,7 +162,7 @@ IniRead, ShowLoopIfMark, %IniFilePath%, Options, ShowLoopIfMark, 1
 IniRead, ShowActIdent, %IniFilePath%, Options, ShowActIdent, 1
 IniRead, LoopLVColor, %IniFilePath%, Options, LoopLVColor, 0xFFFF00
 IniRead, IfLVColor, %IniFilePath%, Options, IfLVColor, 0x0000FF
-IniRead, VirtualKeys, %IniFilePath%, Options, VirtualKeys,
+IniRead, VirtualKeys, %IniFilePath%, Options, VirtualKeys, % "
 (Join
 {LControl}{RControl}{LAlt}{RAlt}{LShift}{RShift}{LWin}{RWin}{AppsKey}
 {F1}{F2}{F3}{F4}{F5}{F6}{F7}{F8}{F9}{F10}{F11}{F12}{1}{2}{3}{4}{5}{6}{7}{8}{9}{0}
@@ -174,7 +174,7 @@ IniRead, VirtualKeys, %IniFilePath%, Options, VirtualKeys,
 {NumpadEnter}{Browser_Back}{Browser_Forward}{Browser_Refresh}{Browser_Stop}{Browser_Search}
 {Browser_Favorites}{Browser_Home}{Volume_Mute}{Volume_Down}{Volume_Up}{Media_Next}{Media_Prev}
 {Media_Stop}{Media_Play_Pause}{Launch_Mail}{Launch_Media}{Launch_App1}{Launch_App2}
-)
+)"
 IniRead, AutoUpdate, %IniFilePath%, Options, AutoUpdate, 1
 IniRead, Ex_AbortKey, %IniFilePath%, ExportOptions, Ex_AbortKey, 0
 IniRead, Ex_PauseKey, %IniFilePath%, ExportOptions, Ex_PauseKey, 0
@@ -9673,18 +9673,16 @@ If ((ListCount > 0) && (SavePrompt))
 	IfMsgBox, Cancel
 		return
 }
-Gui, -DPIScale
 DetectHiddenWindows, On
 WinGet, WinState, MinMax, ahk_id %PMCWinID%
 If WinState = -1
-	WinState = 0
+	WinState := 0
 ColSizes := ""
 Loop % LV_GetCount("Col")
 {
     SendMessage, 4125, A_Index - 1, 0, SysListView321, ahk_id %PMCWinID%
-	ColSizes .= Floor(ErrorLevel / Round(A_ScreenDPI / 100 + 0.04, 2)) ","
+	ColSizes .= Floor(ErrorLevel / Round(A_ScreenDPI / 96, 2)) ","
 }
-outputdebug, % colsizes
 GoSub, GetHotkeys
 If (KeepDefKeys = 1)
 	AutoKey := DefAutoKey, ManKey := DefManKey
@@ -9835,9 +9833,9 @@ Gui, ListView, InputList%A_List%
 return
 
 DefaultMod:
-VirtualKeys := 
+VirtualKeys := "
 (Join
-"{LControl}{RControl}{LAlt}{RAlt}{LShift}{RShift}{LWin}{RWin}
+{LControl}{RControl}{LAlt}{RAlt}{LShift}{RShift}{LWin}{RWin}
 {AppsKey}{F1}{F2}{F3}{F4}{F5}{F6}{F7}{F8}{F9}{F10}{F11}{F12}
 {1}{2}{3}{4}{5}{6}{7}{8}{9}{0}{'}{-}{=}{[}{]}{;}{/}{,}{.}{\}
 {Left}{Right}{Up}{Down}{Home}{End}{PgUp}{PgDn}{Del}{Ins}{BS}{Esc}
@@ -9849,8 +9847,8 @@ VirtualKeys :=
 {Browser_Back}{Browser_Forward}{Browser_Refresh}{Browser_Stop}
 {Browser_Search}{Browser_Favorites}{Browser_Home}{Volume_Mute}{Volume_Down}
 {Volume_Up}{Media_Next}{Media_Prev}{Media_Stop}{Media_Play_Pause}
-{Launch_Mail}{Launch_Media}{Launch_App1}{Launch_App2}"
-)
+{Launch_Mail}{Launch_Media}{Launch_App1}{Launch_App2}
+)"
 return
 
 DefaultHotkeys:
@@ -10258,8 +10256,8 @@ GuiSize:
 If A_EventInfo = 1
 	return
 
-; GuiGetSize(WinW, WinH), GuiSize(WinW, WinH)
-GuiSize(A_GuiWidth, A_GuiHeight)
+GuiGetSize(WinW, WinH) , GuiSize(WinW, WinH)
+; GuiSize(A_GuiWidth, A_GuiHeight)
 return
 
 ;##### Subroutines: Substitution #####
