@@ -75,7 +75,7 @@ fileopen strget strput object isobject objinsert objremove objminindex objmaxind
 objgetcapacity objgetaddress objnewenum objaddref objrelease objclone _insert _remove _minindex
 _maxindex _setcapacity _getcapacity _getaddress _newenum _addref _release _clone comobjcreate
 comobjget comobjconnect comobjerror comobjactive comobjenwrap comobjunwrap comobjparameter
-comobjmissing comobjtype comobjvalue comobjarray
+comobjmissing comobjtype comobjvalue comobjarray isbyref
 )
 
 SyHi_BIVar =

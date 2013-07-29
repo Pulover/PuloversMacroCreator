@@ -5,7 +5,7 @@
 ; Author:            Pulover [Rodolfo U. Batista]
 ;                    rodolfoub@gmail.com
 ; AHK version:       1.1.11.00
-; Release date:      24 July 2013
+; Release date:      29 July 2013
 ;
 ;                    Class for AutoHotkey Rebar custom controls
 ;=======================================================================================
@@ -17,7 +17,7 @@
 ;
 ; Rebar Methods:
 ;    DeleteBand(Band)
-;    GetBand(Band [, ID, Text, Size, Image, Background, Style])
+;    GetBand(Band [, ID, Text, Size, Image, Background, Style, Child])
 ;    GetBandCount()
 ;    GetBarHeight()
 ;    GetLayout()
@@ -78,14 +78,17 @@ Class Rebar extends Rebar.Private
 ;        Image:          OutputVar to store the band's image index.
 ;        Background:     OutputVar to store a handle to the band's background bitmap.
 ;        Style:          OutputVar to store the band's style numeric value.
+;        Child:          OutputVar to store a handle to the band's child control.
 ;    Return:             TRUE if successful, FALSE if there was a problem.
 ;=======================================================================================
-    GetBand(Band, ByRef ID="", ByRef Text="", ByRef Size="", ByRef Image="", ByRef Background="", ByRef Style="")
+    GetBand(Band, ByRef ID="", ByRef Text="", ByRef Size="", ByRef Image=""
+    ,   ByRef Background="", ByRef Style="", ByRef Child="")
     {
         Static cbSize := 48 + (8 * A_PtrSize)
         fMask := (IsByRef(Style) ? this.RBBIM_STYLE : 0)
                | (IsByRef(Text) ? this.RBBIM_TEXT : 0)
                | (IsByRef(Image) ? this.RBBIM_IMAGE : 0)
+               | (IsByRef(Child) ? this.RBBIM_CHILD : 0)
                | (IsByRef(Size) ? this.RBBIM_SIZE : 0)
                | (IsByRef(Background) <> "" ? this.RBBIM_BACKGROUND : 0)
                | (IsByRef(ID) ? this.RBBIM_ID : 0)
@@ -97,6 +100,7 @@ Class Rebar extends Rebar.Private
         SendMessage, this.RB_GETBANDINFO, Band-1, &rbBand,, % "ahk_id " this.rbHwnd
         Style := NumGet(&rbBand, 8, "UInt"), Text := StrGet(&bText)
     ,   Image := NumGet(&rbBand, 20 + (A_PtrSize * 2), "Int")+1
+	,   Child := NumGet(&rbBand, 24 + (A_PtrSize * 2), "UPtr")
     ,   Size := NumGet(&rbBand, 32 + (A_PtrSize * 3), "UInt")
     ,   Background := NumGet(&rbBand, 32 + (A_PtrSize * 4), "UPtr")
     ,   ID := NumGet(&rbBand, 32 + (A_PtrSize * 5), "UInt")
@@ -287,8 +291,8 @@ Class Rebar extends Rebar.Private
 ;=======================================================================================
 ;    Method:             OnNotify
 ;    Description:        Handles rebar notifications.
-;                        This method should be called from the rebar's G-Label. If A_GuiEvent
-;                            is "Normal" or "N", pass it A_EventInfo as the Param.
+;                        This method should be called from the rebar's G-Label.
+;                            If A_GuiEvent is "N", pass it A_EventInfo as the Param.
 ;                        You can also call it from a function monitoring the WM_NOTIFY
 ;                            message, pass it lParam as the Param.
 ;                        Currently this method is used to retrieve the position for
@@ -521,7 +525,7 @@ Class Rebar extends Rebar.Private
         __New(hRebar)
         {
             this.rbHwnd := hRebar
-        ,    this.MaxRows := 0
+        ,   this.MaxRows := 0
         }
 ;=======================================================================================
         __Delete()

@@ -621,7 +621,8 @@ Gui, Add, Custom, ClassReBarWindow32 hwndhRbMain gRB_Notify 0x0400 0x0040 0x8000
 	; ILButton(IfDirB, ContextIcon[1] ":" ContextIcon[2])
 ; Gui, Add, Checkbox, -Wrap ys+75 xp+30 W100 gCapt vCapt R1, %w_Lang012%
 ; Gui, Add, Checkbox, -Wrap Checked%KeepHkOn% W100 -Wrap yp x+5 vKeepHkOn gCheckHkOn R1, %w_Lang014%
-Gui, Add, Tab2, Section Buttons -Wrap AltSubmit xm ys+72 H22 W500 hwndTabSel vA_List gTabSel, Macro1
+Gui, Add, Tab2, Section Buttons -Wrap AltSubmit xm ym+50 H22 W500 hwndTabSel vA_List gTabSel, Macro1
+Gui, Add, Custom, ClassReBarWindow32 hwndhRbMacro x+0 y+0 W860 h500 -Theme 0x0400 0x0040 0x8000 0x0008 0x0004
 Gui, Add, ListView, x+0 y+0 AltSubmit Checked hwndListID1 vInputList1 gInputList W860 r28 NoSort LV0x10000, Index|Action|Details|Repeat|Delay|Type|Control|Window|Comment|Color
 LV_SetImageList(hIL_Icons)
 Loop, 10
@@ -682,6 +683,7 @@ Gui, Submit
 GoSub, LoadData
 GoSub, b_Start
 OnMessage(WM_COMMAND, "TB_Messages")
+OnMessage(WM_NOTIFY, "Notifications")
 OnMessage(WM_MOUSEMOVE, "ShowTooltip")
 OnMessage(WM_RBUTTONDOWN, "ShowContextHelp")
 OnMessage(WM_LBUTTONDOWN, "DragToolbar")
@@ -747,6 +749,7 @@ Else
 Menu, Tray, Icon
 Gui, Show, % ((WinState) ? "Maximize" : "W900 H630") ((HideWin) ? "Hide" : ""), %AppName% v%CurrentVersion% %CurrentFileName%
 GoSub, DefineToolbars
+GoSub, DefineControls
 GuiControl, +ReadOnly, JoyKey
 GoSub, RowCheck
 If (HideWin)
@@ -804,14 +807,21 @@ DefineToolbars:
 ,	TB_Define(TbCommand, hTbCommand, hIL_Icons, DefaultBar.Command, DefaultBar.CommandOpt)
 ,	RbMain := New Rebar(hRbMain)
 ,	TB_Rebar(RbMain, 10, TbFile), TB_Rebar(RbMain, 20, TbScript)
-,	TB_Rebar(RbMain, 30, TbRecPlay), TB_Rebar(RbMain, 30, TbCommand, "Break")
+,	TB_Rebar(RbMain, 30, TbRecPlay), TB_Rebar(RbMain, 40, TbCommand, "Break")
 ,	RbMain.SetMaxRows(2)
 TBHwndAll := [TbFile, TbScript, TbRecPlay, TbCommand]
 return
 
 RB_Notify:
 If (A_GuiEvent = "N")
-	RbMain.OnNotify(A_EventInfo, tbMX, tbMY, BandID)
+	If (RbMain.OnNotify(A_EventInfo, tbMX, tbMY, BandID))
+		ShowChevronMenu(BandID, tbMX, tbMY)
+return
+
+;##### Other controls #####
+
+DefineControls:
+RbMacro := New Rebar(hRbMacro), RbMacro.InsertBand(ListID1, 0, "", 100, "", 860, 0, "", 500)
 return
 
 ;##### Capture Keys #####
@@ -4288,9 +4298,9 @@ return
 
 EditLoop:
 s_Caller = Edit
-ComLoop:
-ComGoto:
 AddLabel:
+ComGoto:
+ComLoop:
 Proj_Labels := ""
 Loop, %TabCount%
 {
@@ -4392,9 +4402,9 @@ If (s_Caller = "Edit")
 	GoSub, LoopType
 }
 Else If (A_ThisLabel = "AddLabel")
-	GuiControl, 12:Choose, TabControl, 2
-Else If (A_ThisLabel = "ComGoto")
 	GuiControl, 12:Choose, TabControl, 3
+Else If (A_ThisLabel = "ComGoto")
+	GuiControl, 12:Choose, TabControl, 2
 Gui, 12:Show,, %c_Lang073%
 Input
 Tooltip
@@ -10147,7 +10157,6 @@ Loop, % LV_GetCount()
 	LV_Modify(A_Index, "Col2", Action)
 	If ShowLoopIfMark = 1
 	{
-		OnMessage(WM_NOTIFY, "LV_ColorsMessage")
 		LV_Colors.Attach(ListID%A_List%, False, False)
 		If (Action = "[LoopEnd]")
 			RowColorLoop--, IdxLv := SubStr(IdxLv, 1, StrLen(IdxLv)-1)
@@ -10163,10 +10172,7 @@ Loop, % LV_GetCount()
 		LV_Colors.Cell(ListID%A_List%, A_Index, 1, Color ? Color : "")
 	}
 	Else
-	{
-		OnMessage(WM_NOTIFY, "")
 		LV_Colors.Detach(ListID%A_List%)
-	}
 	If ShowActIdent = 1
 	{
 		LV_Modify(A_Index, "Col2", ActLv Action)
@@ -10188,8 +10194,12 @@ Loop, % LV_GetCount()
 		LV_Modify(A_Index, "Icon" 71)
 	Else If Type in %cType3%,%cType4%,%cType13%
 		LV_Modify(A_Index, "Icon" 39)
-	Else If Action = [Pause]
+	Else If (Type = cType5)
 		LV_Modify(A_Index, "Icon" 46)
+	Else If (Type = cType6)
+		LV_Modify(A_Index, "Icon" 11)
+	Else If (Type = cType14)
+		LV_Modify(A_Index, "Icon" 78)
 	Else If Type in %cType7%,%cType38%,%cType39%,%cType40%,%cType41%
 		LV_Modify(A_Index, "Icon" 37)
 	Else If Type = %cType29%
@@ -10234,7 +10244,7 @@ Loop, % LV_GetCount()
 		LV_Modify(A_Index, "Icon" 18)
 	Else If Type contains Sort,String,Split
 		LV_Modify(A_Index, "Icon" 5)
-	Else If Type contains InputBox,Msg,Tip,Progress,Splash
+	Else If Type contains InputBox,Tip,Progress,Splash
 		LV_Modify(A_Index, "Icon" 11)
 	Else If (InStr(Type, "Wait") || InStr(Type, "Input")=1)
 		LV_Modify(A_Index, "Icon" 78)
@@ -10307,8 +10317,10 @@ GuiSize:
 If A_EventInfo = 1
 	return
 
-GuiGetSize(WinW, WinH) , GuiSize(WinW, WinH)
 ; GuiSize(A_GuiWidth, A_GuiHeight)
+	GuiGetSize(WinW, WinH) , GuiSize(WinW, WinH)
+,	RbMain.ShowBand(1), RbMacro.ShowBand(1)
+,	RbMacro.ModifyBand(1, "MinHeight", WinH-120)
 return
 
 ;##### Subroutines: Substitution #####

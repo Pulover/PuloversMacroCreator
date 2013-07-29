@@ -21,8 +21,8 @@ TB_Rebar(RbPtr, BandID, tbChild, Options="", Text="")
 
 TB_Messages(wParam, lParam, msg, hwnd)
 {
-	tbHwnd := TB_GetHwnd(lParam)
-    tbHwnd.OnMessage(wParam)
+	tbPtr := TB_GetHwnd(lParam)
+    tbPtr.OnMessage(wParam)
 }
 
 TB_GetHwnd(Hwnd)
