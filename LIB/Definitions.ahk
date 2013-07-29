@@ -813,9 +813,12 @@ Loop, Parse, MsgList, `n
 
 Sort, WM_Msgs, D|
 
-DefaultBar := {FileOpt: "", File: ["New=New:42", "Open=Open:43", "Save=Save:60"]
-			, ScriptOpt: "ShowText Enabled", Script: ["Export=Export:16", "Preview=Preview:50", "Options=Options:44"]
-			, RecPlayOpt: "ShowText Enabled", RecPlay: ["Record=Record:55", "PlayStart=Play:47"]}
+DefaultBar := {FileOpt: "Enabled AutoSize", File: ["New=New:42", "Open=Open:43(Enabled Dropdown)", "Save=Save:60(Enabled Dropdown)"]
+			, ScriptOpt: "Enabled AutoSize ShowText", Script: ["Export=Export:16", "Preview=Preview:50", "Options=Options:44"]
+			, RecPlayOpt: "Enabled AutoSize ShowText Dropdown", RecPlay: ["Record=Record:55", "PlayStart=Play:47"]
+			, CommandOpt: "Enabled AutoSize", Command: ["Mouse=Mouse:39", "Text=Text:71", "ControlCmd=Control:7"
+														, "Pause=Pause:46", "Window=Window:81", "Image=ImageSearch:28", "Run=Run:59"
+														, "ComLoop=Loop:37", "IfSt=If Statement:27", "IECom=Internet Explorer:28", "SendMsg=Windows Messages:62"]}
 Loop, 26
 	KeybdList .= Chr(A_Index+96) "¢" ((A_Index = 1) ? "¢" : "")
 Loop, 26

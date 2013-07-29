@@ -249,8 +249,8 @@ Class Toolbar extends Toolbar.Private
 ;        State:          OutputVar to store the button's state numeric value.
 ;        Style:          OutputVar to store the button's style numeric value.
 ;        Icon:           OutputVar to store the button's icon index.
-;        Index:          OutputVar to store the button's text string index.
 ;        Label:          OutputVar to store the button's associated script label.
+;        Index:          OutputVar to store the button's text string index.
 ;    Return:             TRUE if successful, FALSE if there was a problem.
 ;=======================================================================================
     GetButton(Button, ByRef ID="", ByRef Text="", ByRef State="", ByRef Style=""

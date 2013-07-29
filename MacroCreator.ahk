@@ -568,6 +568,7 @@ Gui, +Resize +MinSize310x140 +HwndPMCWinID
 Gui, Add, Custom, ClassToolbarWindow32 hwndhTbFile 0x0800 0x0100 0x0040 0x0008 0x0004
 Gui, Add, Custom, ClassToolbarWindow32 hwndhTbScript 0x0800 0x0100 0x0040 0x0008 0x0004 0x1000
 Gui, Add, Custom, ClassToolbarWindow32 hwndhTbRecPlay 0x0800 0x0100 0x0040 0x0008 0x0004 0x1000
+Gui, Add, Custom, ClassToolbarWindow32 hwndhTbCommand 0x0800 0x0100 0x0040 0x0008 0x0004
 Gui, Add, Custom, ClassReBarWindow32 hwndhRbMain gRB_Notify 0x0400 0x0040 0x8000
 ; Gui, Font, Bold
 ; Gui, Add, Button, -Wrap W90 H40 ys xm+310 hwndRecordB vRecordB gRecord, %w_Lang004%
@@ -797,14 +798,15 @@ return
 ;##### Toolbars #####
 
 DefineToolbars:
-	DefineToolbar(TbFile, hTbFile, hIL_Icons, DefaultBar.File)
-,	DefineToolbar(TbScript, hTbScript, hIL_Icons, DefaultBar.Script, DefaultBar.ScriptOpt, 1)
-,	DefineToolbar(TbRecPlay, hTbRecPlay, hIL_Icons, DefaultBar.RecPlay, DefaultBar.RecPlayOpt, 1)
+	TB_Define(TbFile, hTbFile, hIL_Icons, DefaultBar.File)
+,	TB_Define(TbScript, hTbScript, hIL_Icons, DefaultBar.Script, DefaultBar.ScriptOpt, 1)
+,	TB_Define(TbRecPlay, hTbRecPlay, hIL_Icons, DefaultBar.RecPlay, DefaultBar.RecPlayOpt, 1)
+,	TB_Define(TbCommand, hTbCommand, hIL_Icons, DefaultBar.Command, DefaultBar.CommandOpt)
 ,	RbMain := New Rebar(hRbMain)
 ,	TB_Rebar(RbMain, 10, TbFile), TB_Rebar(RbMain, 20, TbScript)
-,	TB_Rebar(RbMain, 30, TbRecPlay)
+,	TB_Rebar(RbMain, 30, TbRecPlay), TB_Rebar(RbMain, 30, TbCommand, "Break")
 ,	RbMain.SetMaxRows(2)
-TBHwndAll := [TbFile, TbScript, TbRecPlay]
+TBHwndAll := [TbFile, TbScript, TbRecPlay, TbCommand]
 return
 
 RB_Notify:

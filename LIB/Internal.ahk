@@ -1,37 +1,4 @@
-﻿DefineToolbar(ByRef TbPtr, hCtrl, hIL, ButtonsArray, Options="", Rows=0)
-{
-	TbPtr := New Toolbar(hCtrl), TbPtr.SetImageList(hIL)
-,	TbPtr.Add(Options, ButtonsArray*), TbPtr.SetMaxTextRows(Rows)
-,	TbPtr.SetExStyle("DrawDDArrows HideClippedButtons")
-}
-
-TB_Rebar(RbPtr, BandID, tbChild, Options="", Text="")
-{
-	tbChild.Get("", "", "", tbBtnWidth, tbBtnHeight)
-,	NumButtons := tbChild.GetCount()
-,	tbWidth := NumButtons * tbBtnWidth
-,	RbPtr.InsertBand(tbChild.tbHwnd, 0, Options, BandID, Text
-	,	tbWidth+16, 0, "", tbBtnHeight, tbBtnWidth, tbWidth)
-}
-
-TB_Messages(wParam, lParam, msg, hwnd)
-{
-	tbHwnd := GetTBHwnd(lParam)
-    tbHwnd.OnMessage(wParam)
-}
-
-GetTBHwnd(Hwnd)
-{
-	Global TBHwndAll
-	For each, Ptr in TBHwndAll
-	{
-		If (Ptr.tbHwnd = Hwnd)
-			return Ptr
-	}
-	return False
-}
-
-LV_GetTexts(Index, ByRef Act="", ByRef Det="", ByRef Tim="", ByRef Del="", ByRef Typ="", ByRef Tar="", ByRef Win="", ByRef Com="", ByRef Col="")
+﻿LV_GetTexts(Index, ByRef Act="", ByRef Det="", ByRef Tim="", ByRef Del="", ByRef Typ="", ByRef Tar="", ByRef Win="", ByRef Com="", ByRef Col="")
 {
 	LV_GetText(Act, Index, 2)
 ,	Act := LTrim(Act)
