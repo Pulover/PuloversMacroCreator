@@ -10,8 +10,14 @@
 	m_Lang005 =	&Makro
 	m_Lang006 =	A&lternativ
 	m_Lang007 =	&Språk
-	m_Lang008 =	&Gör en donation
+	m_Lang008 =	&Donera
 	m_Lang009 =	&Hjälp
+	w_Lang009 =	Visa &kontroller
+	w_Lang010 =	&Paus
+	w_Lang011 =	L&oop
+	w_Lang012 =	&Fånga Tangenter
+	w_Lang013 =	D&ölj fönster
+	w_Lang014 =	All&tid aktiv
 		
 ; File Submenu		
 	f_Lang001 =	&Nytt
@@ -89,7 +95,7 @@
 	o_Lang006 =	&Standard Snabbtangenter
 	o_Lang007 =	&Standardinställningar
 		
-; Make a Donation Sub Menu		
+; Donate Sub Menu		
 	p_Lang001 =	&PayPal donation
 		
 ; Help Sub Menu		
@@ -115,12 +121,6 @@
 	w_Lang006 =	Auto.
 	w_Lang007 =	Man.
 	w_Lang008 =	Stopp
-	w_Lang009 =	Visa &kontroller
-	w_Lang010 =	&Paus
-	w_Lang011 =	L&oop
-	w_Lang012 =	&Fånga Tangenter
-	w_Lang013 =	&Dölj fönster
-	w_Lang014 =	All&tid aktiv
 	w_Lang015 =	Upprepa
 	w_Lang016 =	Fördröjning (ms):
 	w_Lang017 =	Ansök

@@ -10,8 +10,14 @@
 	m_Lang005 =	宏
 	m_Lang006 =	選項
 	m_Lang007 =	語
-	m_Lang008 =	捐款
+	m_Lang008 =	捐贈
 	m_Lang009 =	幫助
+	w_Lang009 =	顯示控制
+	w_Lang010 =	暫停
+	w_Lang011 =	循環
+	w_Lang012 =	擷取鍵
+	w_Lang013 =	隱藏窗口
+	w_Lang014 =	始終活躍
 		
 ; File Submenu		
 	f_Lang001 =	新
@@ -89,7 +95,7 @@
 	o_Lang006 =	默認熱鍵
 	o_Lang007 =	默認設置
 		
-; Make a Donation Sub Menu		
+; Donate Sub Menu		
 	p_Lang001 =	PayPal捐贈
 		
 ; Help Sub Menu		
@@ -115,12 +121,6 @@
 	w_Lang006 =	自動。
 	w_Lang007 =	男人。
 	w_Lang008 =	停止
-	w_Lang009 =	顯示控制
-	w_Lang010 =	暫停
-	w_Lang011 =	循環
-	w_Lang012 =	擷取鍵
-	w_Lang013 =	隱藏窗口
-	w_Lang014 =	始終活躍
 	w_Lang015 =	重複
 	w_Lang016 =	延時（ms）：
 	w_Lang017 =	申請
