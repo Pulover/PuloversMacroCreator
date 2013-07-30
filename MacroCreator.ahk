@@ -565,10 +565,10 @@ Gui, +Resize +MinSize310x140 +HwndPMCWinID
 	; ILButton(SendMsgB, MsgIcon[1] ":" MsgIcon[2])
 ; Gui, Font
 ; Gui, Add, Text, W2 H55 yp-28 x+5 0x11
-Gui, Add, Custom, ClassToolbarWindow32 hwndhTbFile 0x0800 0x0100 0x0040 0x0008 0x0004
-Gui, Add, Custom, ClassToolbarWindow32 hwndhTbScript 0x0800 0x0100 0x0040 0x0008 0x0004 0x1000
-Gui, Add, Custom, ClassToolbarWindow32 hwndhTbRecPlay 0x0800 0x0100 0x0040 0x0008 0x0004 0x1000
-Gui, Add, Custom, ClassToolbarWindow32 hwndhTbCommand 0x0800 0x0100 0x0040 0x0008 0x0004
+Gui, Add, Custom, ClassToolbarWindow32 hwndhTbFile gTB_Notify 0x0800 0x0100 0x0040 0x0008
+Gui, Add, Custom, ClassToolbarWindow32 hwndhTbScript 0x0800 0x0100 0x0040 0x0008 0x1000
+Gui, Add, Custom, ClassToolbarWindow32 hwndhTbRecPlay 0x0800 0x0100 0x0040 0x0008 0x1000
+Gui, Add, Custom, ClassToolbarWindow32 hwndhTbCommand 0x0800 0x0100 0x0040 0x0008
 Gui, Add, Custom, ClassReBarWindow32 hwndhRbMain gRB_Notify 0x0400 0x0040 0x8000
 ; Gui, Font, Bold
 ; Gui, Add, Button, -Wrap W90 H40 ys xm+310 hwndRecordB vRecordB gRecord, %w_Lang004%
@@ -622,38 +622,39 @@ Gui, Add, Custom, ClassReBarWindow32 hwndhRbMain gRB_Notify 0x0400 0x0040 0x8000
 ; Gui, Add, Checkbox, -Wrap ys+75 xp+30 W100 gCapt vCapt R1, %w_Lang012%
 ; Gui, Add, Checkbox, -Wrap Checked%KeepHkOn% W100 -Wrap yp x+5 vKeepHkOn gCheckHkOn R1, %w_Lang014%
 Gui, Add, Tab2, Section Buttons -Wrap AltSubmit xm ym+50 H22 W500 hwndTabSel vA_List gTabSel, Macro1
-Gui, Add, Custom, ClassReBarWindow32 hwndhRbMacro x+0 y+0 W860 h500 -Theme 0x0400 0x0040 0x8000 0x0008 0x0004
-Gui, Add, ListView, x+0 y+0 AltSubmit Checked hwndListID1 vInputList1 gInputList W860 r28 NoSort LV0x10000, Index|Action|Details|Repeat|Delay|Type|Control|Window|Comment|Color
+Gui, Add, Custom, ClassReBarWindow32 hwndhRbMacro vcRbMacro gRB_Notify xm-10 y+0 -Theme 0x0800 0x0400 0x0040 0x8000 0x0008 ; 0x0004
+Gui, Add, ListView, AltSubmit Checked hwndListID1 vInputList1 gInputList NoSort LV0x10000, Index|Action|Details|Repeat|Delay|Type|Control|Window|Comment|Color
 LV_SetImageList(hIL_Icons)
 Loop, 10
 	LV_ModifyCol(A_Index, Col_%A_Index%)
 Gui, Tab
 Gui, Add, UpDown, ys+23 x+4 gOrder vOrder -16 Range0-1, 0
-Gui, Add, Button, -Wrap W22 H25 hwndCut vCut gCutRows
-	ILButton(Cut, CutIcon[1] ":" CutIcon[2])
-Gui, Add, Button, -Wrap W22 H25 hwndCopy vCopy gCopyRows
-	ILButton(Copy, CopyIcon[1] ":" CopyIcon[2])
-Gui, Add, Button, -Wrap W22 H25 hwndPaste vPaste gPasteRows
-	ILButton(Paste, PasteIcon[1] ":" PasteIcon[2])
-Gui, Add, Button, -Wrap W22 H25 hwndRemove vRemove gRemove
-	ILButton(Remove, RemoveIcon[1] ":" RemoveIcon[2])
-Gui, Add, Text, vSeparator5 W25 H2 0x10
-Gui, Add, Button, -Wrap W22 H25 hwndUndo vUndo gUndo
-	ILButton(Undo, UndoIcon[1] ":" UndoIcon[2])
-Gui, Add, Button, -Wrap W22 H25 hwndRedo vRedo gRedo
-	ILButton(Redo, RedoIcon[1] ":" RedoIcon[2])
-Gui, Add, Text, vSeparator6 W25 H2 0x10
-Gui, Add, Button, -Wrap W22 H25 hwndDuplicate vDuplicate gDuplicate
-	ILButton(Duplicate, DuplicateIcon[1] ":" DuplicateIcon[2])
-Gui, Add, Button, -Wrap W22 H25 hwndCopyTo vCopyTo gCopyTo
-	ILButton(CopyTo, CopyIcon[1] ":" CopyIcon[2])
-Gui, Add, Text, vSeparator7 W25 H2 0x10
-Gui, Add, Button, -Wrap W22 H25 hwndEditColor vEditColor gEditColor
-	ILButton(EditColor, ColorIcon[1] ":" ColorIcon[2])
-Gui, Add, Button, -Wrap W22 H25 hwndEditComm vEditComm gEditComm
-	ILButton(EditComm, CommentIcon[1] ":" CommentIcon[2])
-Gui, Add, Button, -Wrap W22 H25 hwndFindReplace vFindReplace gFindReplace
-	ILButton(FindReplace, FindIcon[1] ":" FindIcon[2])
+Gui, Add, Custom, ClassToolbarWindow32 hwndhTbEdit x+653 y+0 W25 H500 0x0080 0x0800 0x0100 0x0040 0x0008 0x0004
+; Gui, Add, Button, -Wrap W22 H25 hwndCut vCut gCutRows
+	; ILButton(Cut, CutIcon[1] ":" CutIcon[2])
+; Gui, Add, Button, -Wrap W22 H25 hwndCopy vCopy gCopyRows
+	; ILButton(Copy, CopyIcon[1] ":" CopyIcon[2])
+; Gui, Add, Button, -Wrap W22 H25 hwndPaste vPaste gPasteRows
+	; ILButton(Paste, PasteIcon[1] ":" PasteIcon[2])
+; Gui, Add, Button, -Wrap W22 H25 hwndRemove vRemove gRemove
+	; ILButton(Remove, RemoveIcon[1] ":" RemoveIcon[2])
+; Gui, Add, Text, vSeparator5 W25 H2 0x10
+; Gui, Add, Button, -Wrap W22 H25 hwndUndo vUndo gUndo
+	; ILButton(Undo, UndoIcon[1] ":" UndoIcon[2])
+; Gui, Add, Button, -Wrap W22 H25 hwndRedo vRedo gRedo
+	; ILButton(Redo, RedoIcon[1] ":" RedoIcon[2])
+; Gui, Add, Text, vSeparator6 W25 H2 0x10
+; Gui, Add, Button, -Wrap W22 H25 hwndDuplicate vDuplicate gDuplicate
+	; ILButton(Duplicate, DuplicateIcon[1] ":" DuplicateIcon[2])
+; Gui, Add, Button, -Wrap W22 H25 hwndCopyTo vCopyTo gCopyTo
+	; ILButton(CopyTo, CopyIcon[1] ":" CopyIcon[2])
+; Gui, Add, Text, vSeparator7 W25 H2 0x10
+; Gui, Add, Button, -Wrap W22 H25 hwndEditColor vEditColor gEditColor
+	; ILButton(EditColor, ColorIcon[1] ":" ColorIcon[2])
+; Gui, Add, Button, -Wrap W22 H25 hwndEditComm vEditComm gEditComm
+	; ILButton(EditComm, CommentIcon[1] ":" CommentIcon[2])
+; Gui, Add, Button, -Wrap W22 H25 hwndFindReplace vFindReplace gFindReplace
+	; ILButton(FindReplace, FindIcon[1] ":" FindIcon[2])
 Gui, Add, Text, -Wrap y+129 xm W100 H22 Section vRepeat, %w_Lang015%:
 Gui, Add, Edit, ys-3 x+5 W90 R1 vRept Number
 Gui, Add, UpDown, vTimesM 0x80 Range0-999999999, 1
@@ -747,7 +748,7 @@ Else
 	HistoryMacro1.Add()
 }
 Menu, Tray, Icon
-Gui, Show, % ((WinState) ? "Maximize" : "W900 H630") ((HideWin) ? "Hide" : ""), %AppName% v%CurrentVersion% %CurrentFileName%
+Gui, Show, % ((WinState) ? "Maximize" : "W940 H630") ((HideWin) ? "Hide" : ""), %AppName% v%CurrentVersion% %CurrentFileName%
 GoSub, DefineToolbars
 GoSub, DefineControls
 GuiControl, +ReadOnly, JoyKey
@@ -805,11 +806,18 @@ DefineToolbars:
 ,	TB_Define(TbScript, hTbScript, hIL_Icons, DefaultBar.Script, DefaultBar.ScriptOpt, 1)
 ,	TB_Define(TbRecPlay, hTbRecPlay, hIL_Icons, DefaultBar.RecPlay, DefaultBar.RecPlayOpt, 1)
 ,	TB_Define(TbCommand, hTbCommand, hIL_Icons, DefaultBar.Command, DefaultBar.CommandOpt)
+,	TB_Define(TbEdit, hTbEdit, hIL_Icons, DefaultBar.Edit, DefaultBar.EditOpt)
 ,	RbMain := New Rebar(hRbMain)
 ,	TB_Rebar(RbMain, 10, TbFile), TB_Rebar(RbMain, 20, TbScript)
 ,	TB_Rebar(RbMain, 30, TbRecPlay), TB_Rebar(RbMain, 40, TbCommand, "Break")
 ,	RbMain.SetMaxRows(2)
-TBHwndAll := [TbFile, TbScript, TbRecPlay, TbCommand]
+TBHwndAll := [TbFile, TbScript, TbRecPlay, TbCommand, TbEdit]
+return
+
+TB_Notify:
+ErrorLevel := TbFile.OnNotify(A_EventInfo, MX, MY, Label, ID)
+If (Label)
+	ShowMenu(Label, MX, MY)
 return
 
 RB_Notify:
@@ -821,7 +829,11 @@ return
 ;##### Other controls #####
 
 DefineControls:
-RbMacro := New Rebar(hRbMacro), RbMacro.InsertBand(ListID1, 0, "", 100, "", 860, 0, "", 500)
+GoSub, BuildPrevWin
+GuiGetSize(gWidth, gHeight), rHeight := gHeight-115
+,	RbMacro := New Rebar(hRbMacro)
+,	RbMacro.InsertBand(PrevID, 0, "", 100, "", 0, 0, "", rHeight, 0)
+,	RbMacro.InsertBand(ListID1, 0, "", 200, "", gWidth, 0, "", rHeight)
 return
 
 ;##### Capture Keys #####
@@ -1988,8 +2000,22 @@ Gui 2:+LastFoundExist
 IfWinExist
     GoSub, PrevClose
 Preview := LV_Export(A_List)
-; Gui, 2:Font, s7
-Gui, 2:+Resize +hwndPrevID +LastFound
+Gui, 2:+Resize
+GoSub, BuildPrevWin
+Gui, 2:Add, StatusBar
+Gui, 2:Default
+SB_SetParts(150, 150)
+SB_SetText("Macro" A_List ": " o_AutoKey[A_List], 1)
+SB_SetText("Record Keys: " RecKey "/" RecNewKey, 2)
+SB_SetText("CoordMode: " CoordMouse, 3)
+Gui, 1:Default
+; GuiControl, 2:, LVPrev, %Preview%
+Gui, 2:Show,, %c_Lang072% - %AppName%
+Tooltip
+return
+
+BuildPrevWin:
+Gui, 2:+hwndPrevID +LastFound -Caption
 Gui, 2:Add, Button, -Wrap Section W60 H25 gPrevClose, %c_Lang022%
 Gui, 2:Add, Button, -Wrap ys W25 H25 hwndPrevCopy vPrevCopy gPrevCopy
 	ILButton(PrevCopy, CopyIcon[1] ":" CopyIcon[2])
@@ -1998,10 +2024,6 @@ Gui, 2:Add, Button, -Wrap ys W25 H25 hwndPrevRefresh vPrevRefresh gPrevRefresh
 Gui, 2:Add, Checkbox, -Wrap ys+5 W95 vAutoRefresh R1, %t_Lang015%
 Gui, 2:Add, Checkbox, -Wrap ys+5 xp+100 W105 vOnTop gOnTop R1, %t_Lang016%
 Gui, 2:Add, Checkbox, -Wrap Checked%TabIndent% ys+5 xp+110 W85 vTabIndent gPrevRefresh R1, %t_Lang011%
-; Gui, 2:Font, s8, Courier New
-; Gui, 2:Add, Edit, Section xm-8 vLVPrev W420 R35 -Wrap HScroll ReadOnly
-; Gui, 2:Font
-; Gui, 2:Font, s7
 Gui, 2:Add, Custom, ClassScintilla xm hwndhSciPrev vLVPrev W460 R40
 sciPrev := new scintilla(hSciPrev)
 ,	sciPrev.SetMarginWidthN(0, 20)
@@ -2014,16 +2036,6 @@ sciPrev := new scintilla(hSciPrev)
 ,	sciPrev.StyleSetFore(12, 0xC10000)
 ,	sciPrev.SetText("", Preview)
 ,	sciPrev.SetReadOnly(True)
-Gui, 2:Add, StatusBar
-Gui, 2:Default
-SB_SetParts(150, 150)
-SB_SetText("Macro" A_List ": " o_AutoKey[A_List], 1)
-SB_SetText("Record Keys: " RecKey "/" RecNewKey, 2)
-SB_SetText("CoordMode: " CoordMouse, 3)
-Gui, 1:Default
-GuiControl, 2:, LVPrev, %Preview%
-Gui, 2:Show,, %c_Lang072% - %AppName%
-Tooltip
 return
 
 OnTop:
@@ -7330,7 +7342,7 @@ Tooltip
 return
 
 GuiContextMenu:
-If A_GuiControl <> InputList%A_List%
+If A_GuiControl <> cRbMacro
 	return
 Menu, EditMenu, Show, %A_GuiX%, %A_GuiY%
 return
@@ -7423,6 +7435,34 @@ If CopyRows.Paste()
 	GoSub, b_Start
 	GoSub, RowCheck
 }
+return
+
+Remove:
+Gui, +OwnDialogs
+Gui, Submit, NoHide
+RowSelection := LV_GetCount("Selected")
+If RowSelection = 0
+{
+	MsgBox, 1, %d_Lang019%, %d_Lang020%
+	IfMsgBox, OK
+		LV_Delete()
+	IfMsgBox, Cancel
+		return
+}
+Else
+{
+	RowNumber := 0
+	Loop
+	{
+		RowNumber := LV_GetNext(RowNumber - 1)
+		If !RowNumber
+			break
+		LV_Delete(RowNumber)
+	}
+}
+GoSub, b_Start
+GoSub, RowCheck
+GuiControl, Focus, InputList%A_List%
 return
 
 Undo:
@@ -7661,34 +7701,6 @@ SelType:
 SelectedRow := LV_GetNext()
 LV_GetText(SelType, SelectedRow, 6)
 SelectByType(SelType)
-return
-
-Remove:
-Gui, +OwnDialogs
-Gui, Submit, NoHide
-RowSelection := LV_GetCount("Selected")
-If RowSelection = 0
-{
-	MsgBox, 1, %d_Lang019%, %d_Lang020%
-	IfMsgBox, OK
-		LV_Delete()
-	IfMsgBox, Cancel
-		return
-}
-Else
-{
-	RowNumber := 0
-	Loop
-	{
-		RowNumber := LV_GetNext(RowNumber - 1)
-		If !RowNumber
-			break
-		LV_Delete(RowNumber)
-	}
-}
-GoSub, b_Start
-GoSub, RowCheck
-GuiControl, Focus, InputList%A_List%
 return
 
 ApplyT:
@@ -10316,11 +10328,32 @@ return
 GuiSize:
 If A_EventInfo = 1
 	return
-
-; GuiSize(A_GuiWidth, A_GuiHeight)
-	GuiGetSize(WinW, WinH) , GuiSize(WinW, WinH)
-,	RbMain.ShowBand(1), RbMacro.ShowBand(1)
-,	RbMacro.ModifyBand(1, "MinHeight", WinH-120)
+GuiGetSize(GuiWidth, GuiHeight)
+,	RbMain.ShowBand(1)
+,	RbMacro.ModifyBand(1, "MinHeight", GuiHeight-115)
+,	RbMacro.ModifyBand(2, "MinHeight", GuiHeight-115)
+Gui, 1:Default
+GuiControl, Move, %hRbMacro%, % "W" GuiWidth-30
+GuiControl, Move, Order, % "x" GuiWidth-26
+GuiControl, Move, %hTbEdit%, % "x" GuiWidth-26
+GuiControl, Move, Repeat, % "y" GuiHeight-23
+GuiControl, Move, Rept, % "y" GuiHeight-27
+GuiControl, Move, TimesM, % "y" GuiHeight-27
+GuiControl, Move, DelayT, % "y" GuiHeight-23
+GuiControl, Move, Delay, % "y" GuiHeight-27
+GuiControl, Move, DelayG, % "y" GuiHeight-27
+GuiControl, Move, ApplyT, % "y" GuiHeight-28
+GuiControl, Move, ApplyI, % "y" GuiHeight-28
+GuiControl, Move, sInput, % "y" GuiHeight-27
+GuiControl, Move, ApplyL, % "y" GuiHeight-28
+GuiControl, Move, InsertKey, % "y" GuiHeight-28
+GuiControl, Move, EditButton, % "y" GuiHeight-28
+GuiControl, Move, Separator1, % "y" GuiHeight-27
+GuiControl, Move, Separator2, % "y" GuiHeight-27
+GuiControl, Move, Separator3, % "y" GuiHeight-27
+GuiControl, Move, Separator4, % "y" GuiHeight-27
+GuiControl, MoveDraw, CoordTip, % "y" GuiHeight-14
+GuiControl, MoveDraw, ContextTip, % "y" GuiHeight-30
 return
 
 ;##### Subroutines: Substitution #####

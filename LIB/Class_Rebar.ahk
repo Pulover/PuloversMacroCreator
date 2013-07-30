@@ -100,7 +100,7 @@ Class Rebar extends Rebar.Private
         SendMessage, this.RB_GETBANDINFO, Band-1, &rbBand,, % "ahk_id " this.rbHwnd
         Style := NumGet(&rbBand, 8, "UInt"), Text := StrGet(&bText)
     ,   Image := NumGet(&rbBand, 20 + (A_PtrSize * 2), "Int")+1
-	,   Child := NumGet(&rbBand, 24 + (A_PtrSize * 2), "UPtr")
+    ,   Child := NumGet(&rbBand, 24 + (A_PtrSize * 2), "UPtr")
     ,   Size := NumGet(&rbBand, 32 + (A_PtrSize * 3), "UInt")
     ,   Background := NumGet(&rbBand, 32 + (A_PtrSize * 4), "UPtr")
     ,   ID := NumGet(&rbBand, 32 + (A_PtrSize * 5), "UInt")
@@ -239,7 +239,7 @@ Class Rebar extends Rebar.Private
         return (ErrorLevel = "FAIL") ? False : True
     }
 ;=======================================================================================
-;    Method:             ModifyButtonInfo
+;    Method:             ModifyBand
 ;    Description:        Sets band parameters such as Text and Size.
 ;    Parameters:
 ;        Band:           1-based index of a band to be modified.

@@ -821,7 +821,11 @@ DefaultBar := {FileOpt: "Enabled AutoSize", File: ["New=New:42", "Open=Open:43(E
 														, "", "Window=Window:81", "Image=ImageSearch:28", "Run=Run:59"
 														, "", "ComLoop=Loop:37", "ComGoto=Goto:22", "AddLabel=Label:35"
 														, "", "IfSt=If Statement:27", "AsVar=Assign Variable:76", "AsFunc=Functions:21"
-														, "", "IECom=Internet Explorer:26", "ComInt=COM Interface:4", "RunScrLet=Run Scriptlet:77", "SendMsg=Windows Messages:62"]}
+														, "", "IECom=Internet Explorer:26", "ComInt=COM Interface:4", "RunScrLet=Run Scriptlet:77", "SendMsg=Windows Messages:62"]
+			, EditOpt: "Enabled AutoSize Wrap", Edit: ["CutRows=Cut:9", "CopyRows=Copy:8", "PasteRows=Paste:45", "Remove=Delete:10"
+														, "", "Undo=Undo:75", "Redo=Redo:57"
+														, "", "Duplicate=Duplicate:13", "CopyTo=Copy to...:8"
+														, "", "EditColor=Edit Color:3", "EditComm=Edit Comment:5", "FindReplace=Find/Replace:19"]}
 Loop, 26
 	KeybdList .= Chr(A_Index+96) "¢" ((A_Index = 1) ? "¢" : "")
 Loop, 26
