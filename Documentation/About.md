@@ -10,7 +10,7 @@ Copyright © 2012-2013 Rodolfo U. Batista
 
 Version: 3.8.1  
 Release Date: July, 2013  
-AutoHotkey Version: 1.1.11.01  
+AutoHotkey Version: 1.1.11.02  
 
 Software License: [GNU General Public License](License.html)  
 
