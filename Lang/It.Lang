@@ -10,8 +10,14 @@
 	m_Lang005 =	M&acro
 	m_Lang006 =	&Opzioni
 	m_Lang007 =	&Lingua
-	m_Lang008 =	Fai &una donazione
-	m_Lang009 =	Aiu&to
+	m_Lang008 =	&Donare
+	m_Lang009 =	Ai&uto
+	w_Lang009 =	Mos&tra controlli
+	w_Lang010 =	&Pausa
+	w_Lang011 =	A&nello
+	w_Lang012 =	&Cattura Keys
+	w_Lang013 =	Nascondi la fin&estra
+	w_Lang014 =	Semp&re attivo
 		
 ; File Submenu		
 	f_Lang001 =	&Nuovo
@@ -89,7 +95,7 @@
 	o_Lang006 =	&Tasti di scelta rapida di default
 	o_Lang007 =	Imp&ostazioni predefinite
 		
-; Make a Donation Sub Menu		
+; Donate Sub Menu		
 	p_Lang001 =	&Donazione PayPal
 		
 ; Help Sub Menu		
@@ -99,6 +105,7 @@
 	h_Lang004 =	&Verificare in fase di start up
 	h_Lang005 =	C&irca
 	h_Lang006 =	&Suggerimenti
+	h_Lang007 =	&Forum
 		
 ; Tray Menu		
 	y_Lang001 =	Nascondi la finestra
@@ -114,12 +121,6 @@
 	w_Lang006 =	Auto.
 	w_Lang007 =	Man.
 	w_Lang008 =	Arresto
-	w_Lang009 =	Most&ra controlli
-	w_Lang010 =	&Pausa
-	w_Lang011 =	A&nello
-	w_Lang012 =	&Cattura Keys
-	w_Lang013 =	Nascon&di la finestra
-	w_Lang014 =	S&empre attivo
 	w_Lang015 =	Ripeti
 	w_Lang016 =	Ritardo (ms):
 	w_Lang017 =	Applicare

@@ -6,7 +6,7 @@
 ; rodolfoub@gmail.com
 ; Home: http://www.autohotkey.net/~Pulover
 ; Forum: http://www.autohotkey.com/board/topic/79763-macro-creator
-; Version: 3.8.0
+; Version: 3.8.1
 ; Release Date: July, 2013
 ; AutoHotkey Version: 1.1.11.01
 ; Copyright © 2012-2013 Rodolfo U. Batista
@@ -55,12 +55,14 @@ http://www.autohotkey.com/board/topic/71751-gendocs-v30-alpha002
 
 T800 for Html Help utils.
 http://www.autohotkey.com/board/topic/17984-html-help-utils
+
+Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jörg Schmalenberger (German).
 */
 
 ; Compiler Settings
 ;@Ahk2Exe-SetName Pulover's Macro Creator
 ;@Ahk2Exe-SetDescription Pulover's Macro Creator
-;@Ahk2Exe-SetVersion 3.8.0
+;@Ahk2Exe-SetVersion 3.8.1
 ;@Ahk2Exe-SetCopyright Copyright © 2012-2013 Rodolfo U. Batista
 ;@Ahk2Exe-SetOrigFilename MacroCreator.exe
 
@@ -87,7 +89,7 @@ DefaultIcon := (A_IsCompiled) ? A_ScriptFullPath
 			:  (FileExist(A_ScriptDir "\Resources\PMC3_Mult.ico") ? A_ScriptDir "\Resources\PMC3_Mult.ico" : A_AhkPath)
 Menu, Tray, Icon, %DefaultIcon%, 1, 1
 
-CurrentVersion := "3.8.0", ReleaseDate := "July, 2013"
+CurrentVersion := "3.8.1", ReleaseDate := "July, 2013"
 
 ;##### Ini File Read #####
 
@@ -160,7 +162,7 @@ IniRead, ShowLoopIfMark, %IniFilePath%, Options, ShowLoopIfMark, 1
 IniRead, ShowActIdent, %IniFilePath%, Options, ShowActIdent, 1
 IniRead, LoopLVColor, %IniFilePath%, Options, LoopLVColor, 0xFFFF00
 IniRead, IfLVColor, %IniFilePath%, Options, IfLVColor, 0x0000FF
-IniRead, VirtualKeys, %IniFilePath%, Options, VirtualKeys,
+IniRead, VirtualKeys, %IniFilePath%, Options, VirtualKeys, % "
 (Join
 {LControl}{RControl}{LAlt}{RAlt}{LShift}{RShift}{LWin}{RWin}{AppsKey}
 {F1}{F2}{F3}{F4}{F5}{F6}{F7}{F8}{F9}{F10}{F11}{F12}{1}{2}{3}{4}{5}{6}{7}{8}{9}{0}
@@ -172,7 +174,7 @@ IniRead, VirtualKeys, %IniFilePath%, Options, VirtualKeys,
 {NumpadEnter}{Browser_Back}{Browser_Forward}{Browser_Refresh}{Browser_Stop}{Browser_Search}
 {Browser_Favorites}{Browser_Home}{Volume_Mute}{Volume_Down}{Volume_Up}{Media_Next}{Media_Prev}
 {Media_Stop}{Media_Play_Pause}{Launch_Mail}{Launch_Media}{Launch_App1}{Launch_App2}
-)
+)"
 IniRead, AutoUpdate, %IniFilePath%, Options, AutoUpdate, 1
 IniRead, Ex_AbortKey, %IniFilePath%, ExportOptions, Ex_AbortKey, 0
 IniRead, Ex_PauseKey, %IniFilePath%, ExportOptions, Ex_PauseKey, 0
@@ -691,8 +693,8 @@ If %0%
 			PlayHK := 1
 		If (%A_Index% = "-h")
 			HideWin := 1
-		If !(t_Timer) && (RegExMatch(%A_Index%, "i)^-t(\d*)$", t_Timer))
-			TimerPlay := 1, DelayX := (t_Timer1) ? t_Timer1 : 250
+		If !(t_Timer) && (RegExMatch(%A_Index%, "i)^-t(\d*)(!)?$", _t))
+			TimerPlay := 1, TimerDelayX := (_t1) ? _t1 : 250, TimedRun := RunFirst := (_t2) ? 1 : 0
 		If (%A_Index% = "-c")
 			CloseAfterPlay := 1
 		If (%A_Index% = "-b")
@@ -897,8 +899,8 @@ If (Record := !Record)
 	Tooltip
 	If (ShowStep = 1)
 		Traytip, %AppName%, Macro%A_List%: %d_Lang028% %RecKey% %d_Lang029%.,,1
-	Menu, Tray, Icon, % t_RecordIcon[1], % t_RecordIcon[2]
-	Menu, Tray, Default, %w_Lang008%
+	Try Menu, Tray, Icon, % t_RecordIcon[1], % t_RecordIcon[2]
+	Try Menu, Tray, Default, %w_Lang008%
 	ToggleButtonIcon(OSRec, RecStopIcon)
 	return
 }
@@ -929,7 +931,7 @@ Hotkey, ~*WheelDown, MWDn, off
 SetTimer, MouseRecord, off
 If (!(WinActive("ahk_id" PMCWinID)) && (KeepHkOn = 1))
 	GoSub, KeepHkOn
-Menu, Tray, Icon, %DefaultIcon%, 1
+Try Menu, Tray, Icon, %DefaultIcon%, 1
 Try Menu, Tray, Default, %w_Lang005%
 ToggleButtonIcon(OSRec, RecordIcon)
 return
@@ -1949,7 +1951,7 @@ Gui, 2:Add, Checkbox, -Wrap ys+5 W95 vAutoRefresh R1, %t_Lang015%
 Gui, 2:Add, Checkbox, -Wrap ys+5 xp+100 W105 vOnTop gOnTop R1, %t_Lang016%
 Gui, 2:Add, Checkbox, -Wrap Checked%TabIndent% ys+5 xp+110 W85 vTabIndent gPrevRefresh R1, %t_Lang011%
 Gui, 2:Font, s8, Courier New
-Gui, 2:Add, Edit, Section xm-8 vLVPrev W420 R35 -Wrap HScroll ReadOnly
+Gui, 2:Add, Edit, Section xm-8 vLVPrev W440 R35 -Wrap HScroll ReadOnly
 Gui, 2:Font
 ; Gui, 2:Font, s7
 Gui, 2:Add, StatusBar
@@ -2359,6 +2361,10 @@ Homepage:
 Run, http://www.autohotkey.net/~Pulover
 return
 
+Forum:
+Run, http://www.autohotkey.com/board/topic/79763-macro-creator
+return
+
 HelpAHK:
 Run, http://l.autohotkey.net/docs
 return
@@ -2438,6 +2444,7 @@ Gui, 26:Add, Link, y+0, majkinetor for the <a href="http://www.autohotkey.com/bo
 Gui, 26:Add, Link, y+0, rbrtryn for the <a href="http://www.autohotkey.com/board/topic/91229-windows-color-picker-plus/">ChooseColor</a> function.
 Gui, 26:Add, Link, y+0, fincs for <a href="http://www.autohotkey.com/board/topic/71751-gendocs-v30-alpha002">GenDocs</a>.
 Gui, 26:Add, Link, y+0, T800 for <a href="http://www.autohotkey.com/board/topic/17984-html-help-utils">Html Help utils</a>.
+Gui, 26:Add, Text, y+0 w380, Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jörg Schmalenberger (German).
 Gui, 26:Add, Groupbox, W380 H130 Center, GNU General Public License
 Gui, 26:Add, Edit, yp+20 xp+10 W360 H100 ReadOnly -E0x200,
 (
@@ -2457,7 +2464,7 @@ Gui, 26:Add, Text, xp yp wp hp Border cWhite Center 0x200 BackgroundTrans vDonat
 Gui, 26:Font
 GuiControl, 26:Focus, %c_Lang020%
 Gui, 26:Show, W460, %t_Lang076%
-hCurs := DllCall("LoadCursor","Int",0,"Int",32649,"UInt")
+hCurs := DllCall("LoadCursor", "Int", 0, "Int", 32649, "UInt")
 return
 
 EditMouse:
@@ -8521,6 +8528,7 @@ Gui, 18:Add, Radio, -Wrap W160 vRepAllMacros R1, %t_Lang075%
 Gui, 18:Add, Text, y+10 xs+10 W180 vReplaced
 Gui, 18:Add, Button, -Wrap Section xm W60 H23 gFindClose, %c_Lang022%
 Gui, 18:Show,, %t_Lang067%
+GuiControl, 18:Focus, Find
 Tooltip
 return
 
@@ -9668,12 +9676,12 @@ If ((ListCount > 0) && (SavePrompt))
 DetectHiddenWindows, On
 WinGet, WinState, MinMax, ahk_id %PMCWinID%
 If WinState = -1
-	WinState = 0
+	WinState := 0
 ColSizes := ""
-Loop % LV_GetCount("Column")
+Loop % LV_GetCount("Col")
 {
     SendMessage, 4125, A_Index - 1, 0, SysListView321, ahk_id %PMCWinID%
-	ColSizes .= ErrorLevel ","
+	ColSizes .= Floor(ErrorLevel / Round(A_ScreenDPI / 96, 2)) ","
 }
 GoSub, GetHotkeys
 If (KeepDefKeys = 1)
@@ -9825,9 +9833,9 @@ Gui, ListView, InputList%A_List%
 return
 
 DefaultMod:
-VirtualKeys := 
+VirtualKeys := "
 (Join
-"{LControl}{RControl}{LAlt}{RAlt}{LShift}{RShift}{LWin}{RWin}
+{LControl}{RControl}{LAlt}{RAlt}{LShift}{RShift}{LWin}{RWin}
 {AppsKey}{F1}{F2}{F3}{F4}{F5}{F6}{F7}{F8}{F9}{F10}{F11}{F12}
 {1}{2}{3}{4}{5}{6}{7}{8}{9}{0}{'}{-}{=}{[}{]}{;}{/}{,}{.}{\}
 {Left}{Right}{Up}{Down}{Home}{End}{PgUp}{PgDn}{Del}{Ins}{BS}{Esc}
@@ -9839,8 +9847,8 @@ VirtualKeys :=
 {Browser_Back}{Browser_Forward}{Browser_Refresh}{Browser_Stop}
 {Browser_Search}{Browser_Favorites}{Browser_Home}{Volume_Mute}{Volume_Down}
 {Volume_Up}{Media_Next}{Media_Prev}{Media_Stop}{Media_Play_Pause}
-{Launch_Mail}{Launch_Media}{Launch_App1}{Launch_App2}"
-)
+{Launch_Mail}{Launch_Media}{Launch_App1}{Launch_App2}
+)"
 return
 
 DefaultHotkeys:
@@ -10248,8 +10256,42 @@ GuiSize:
 If A_EventInfo = 1
 	return
 
-GuiGetSize(WinW, WinH), GuiSize(WinW, WinH)
-; GuiSize(A_GuiWidth, A_GuiHeight)
+GuiGetSize(GuiWidth, GuiHeight)
+Gui, 1:Default
+GuiControl, Move, InputList%A_List%, % "W" GuiWidth-40 "H" GuiHeight-126
+GuiControl, Move, Order, % "x" GuiWidth-26
+GuiControl, Move, Cut, % "x" GuiWidth-26
+GuiControl, Move, Copy, % "x" GuiWidth-26
+GuiControl, Move, Paste, % "x" GuiWidth-26
+GuiControl, Move, Remove, % "x" GuiWidth-26
+GuiControl, Move, Separator5, % "x" GuiWidth-26
+GuiControl, Move, Undo, % "x" GuiWidth-26
+GuiControl, Move, Redo, % "x" GuiWidth-26
+GuiControl, Move, Separator6, % "x" GuiWidth-26
+GuiControl, Move, Duplicate, % "x" GuiWidth-26
+GuiControl, Move, CopyTo, % "x" GuiWidth-26
+GuiControl, Move, Separator7, % "x" GuiWidth-26
+GuiControl, Move, FindReplace, % "x" GuiWidth-26
+GuiControl, Move, EditColor, % "x" GuiWidth-26
+GuiControl, Move, EditComm, % "x" GuiWidth-26
+GuiControl, Move, Repeat, % "y" GuiHeight-23
+GuiControl, Move, Rept, % "y" GuiHeight-27
+GuiControl, Move, TimesM, % "y" GuiHeight-27
+GuiControl, Move, DelayT, % "y" GuiHeight-23
+GuiControl, Move, Delay, % "y" GuiHeight-27
+GuiControl, Move, DelayG, % "y" GuiHeight-27
+GuiControl, Move, ApplyT, % "y" GuiHeight-28
+GuiControl, Move, ApplyI, % "y" GuiHeight-28
+GuiControl, Move, sInput, % "y" GuiHeight-27
+GuiControl, Move, ApplyL, % "y" GuiHeight-28
+GuiControl, Move, InsertKey, % "y" GuiHeight-28
+GuiControl, Move, EditButton, % "y" GuiHeight-28
+GuiControl, Move, Separator1, % "y" GuiHeight-27
+GuiControl, Move, Separator2, % "y" GuiHeight-27
+GuiControl, Move, Separator3, % "y" GuiHeight-27
+GuiControl, Move, Separator4, % "y" GuiHeight-27
+GuiControl, MoveDraw, CoordTip, % "y" GuiHeight-14
+GuiControl, MoveDraw, ContextTip, % "y" GuiHeight-30
 return
 
 ;##### Subroutines: Substitution #####
@@ -10403,6 +10445,7 @@ Menu, HelpMenu, Add, %m_Lang009%`t%_s%F1, Help
 Menu, HelpMenu, Add, %h_Lang006%, ShowTips
 Menu, HelpMenu, Add
 Menu, HelpMenu, Add, %h_Lang001%, Homepage
+Menu, HelpMenu, Add, %h_Lang007%, Forum
 Menu, HelpMenu, Add, %h_Lang002%, HelpAHK
 Menu, HelpMenu, Add
 Menu, HelpMenu, Add, %h_Lang003%, CheckNow
@@ -10681,7 +10724,6 @@ GuiControl,, OptionsB, %w_Lang003%
 GuiControl,, AutoT, %w_Lang006%:
 GuiControl,, ManT, %w_Lang007%:
 GuiControl,, AbortT, %w_Lang008%:
-; GuiControl,, PauseKey, %w_Lang010%
 GuiControl,, RecordB, %w_Lang004%
 GuiControl,, StartB, %w_Lang005%
 GuiControl,, RepeatT, %w_Lang011% (%t_Lang004%):
@@ -10690,11 +10732,6 @@ GuiControl,, OnScCtrl, %w_Lang009%
 GuiControl,, HideMainWin, %w_Lang013%
 GuiControl,, KeepHkOn, %w_Lang014%
 GuiControl,, Repeat, %w_Lang015%:
-GuiControl,, DelayT, %w_Lang016%
-GuiControl,, ApplyL, %w_Lang018%
-GuiControl,, EditButton, %w_Lang019%
-GuiControl,, ApplyT, %w_Lang017%
-GuiControl,, ApplyI, %w_Lang017%
 Gui 2:+LastFoundExist
 IfWinExist
     GoSub, Preview

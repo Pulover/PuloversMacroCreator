@@ -1,6 +1,6 @@
 ﻿LoadLang_Zh:
 		
-		; Chinese （Simplified）
+		; Chinese （Simplified） [Revised by huyaowen]
 		
 ; Main Menu		
 	m_Lang001 =	文件
@@ -12,6 +12,12 @@
 	m_Lang007 =	语言
 	m_Lang008 =	捐赠
 	m_Lang009 =	帮助
+	w_Lang009 =	显示控制
+	w_Lang010 =	暂停
+	w_Lang011 =	循环
+	w_Lang012 =	捕获键
+	w_Lang013 =	隐藏窗口
+	w_Lang014 =	始终处于活动状态
 		
 ; File Submenu		
 	f_Lang001 =	新建
@@ -89,7 +95,7 @@
 	o_Lang006 =	默认热键
 	o_Lang007 =	默认设置
 		
-; Make a Donation Sub Menu		
+; Donate Sub Menu		
 	p_Lang001 =	PayPal捐赠
 		
 ; Help Sub Menu		
@@ -99,6 +105,7 @@
 	h_Lang004 =	检查启动
 	h_Lang005 =	关于
 	h_Lang006 =	温馨提示
+	h_Lang007 =	论坛
 		
 ; Tray Menu		
 	y_Lang001 =	隐藏窗口
@@ -114,12 +121,6 @@
 	w_Lang006 =	自动
 	w_Lang007 =	手动
 	w_Lang008 =	停止
-	w_Lang009 =	显示控制
-	w_Lang010 =	暂停
-	w_Lang011 =	循环
-	w_Lang012 =	捕获键
-	w_Lang013 =	隐藏窗口
-	w_Lang014 =	始终处于活动状态
 	w_Lang015 =	重复
 	w_Lang016 =	延时（ms）：
 	w_Lang017 =	应用

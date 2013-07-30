@@ -10,8 +10,14 @@
 	m_Lang005 =	&Macro
 	m_Lang006 =	&Opcions
 	m_Lang007 =	Idiom&a
-	m_Lang008 =	&Fer una donació
+	m_Lang008 =	Do&nar
 	m_Lang009 =	A&judar
+	w_Lang009 =	&Barra de control
+	w_Lang010 =	&Pausa
+	w_Lang011 =	B&ucle
+	w_Lang012 =	&Captura Keys
+	w_Lang013 =	&Hide Window
+	w_Lang014 =	Semp&re actiu
 		
 ; File Submenu		
 	f_Lang001 =	&Nou
@@ -89,7 +95,7 @@
 	o_Lang006 =	&Tecles d'accés ràpid predeterminades
 	o_Lang007 =	C&onfiguració per defecte
 		
-; Make a Donation Sub Menu		
+; Donate Sub Menu		
 	p_Lang001 =	&PayPal Donació
 		
 ; Help Sub Menu		
@@ -99,6 +105,7 @@
 	h_Lang004 =	&Comprovar en l'arrencada
 	h_Lang005 =	&Sobre
 	h_Lang006 =	C&onsells
+	h_Lang007 =	&Fòrum
 		
 ; Tray Menu		
 	y_Lang001 =	Hide Window
@@ -114,12 +121,6 @@
 	w_Lang006 =	Acte.
 	w_Lang007 =	Man
 	w_Lang008 =	Aturi
-	w_Lang009 =	&Barra de control
-	w_Lang010 =	&Pausa
-	w_Lang011 =	B&ucle
-	w_Lang012 =	&Captura Keys
-	w_Lang013 =	&Hide Window
-	w_Lang014 =	Semp&re actiu
 	w_Lang015 =	Repetir
 	w_Lang016 =	Retard (ms):
 	w_Lang017 =	Aplicar
@@ -541,33 +542,33 @@
 ; Start-up Tips		
 	Start_Tips =	
 	(LTrim	
-		Du kan skapa makron med hjälp av kommandoknapparna i huvudfönstret eller använda inspelaren för att kopiera dina handlingar. Gå till Alternativ > Inställningar > Inspelning för att välja vilka ingångar kommer att registreras.
-		Om du vill använda brännaren för snabbuppgifter gå till Alternativ > Inställningar > Inspelning och kontrollera "Rensa lista" alternativet. Klicka sedan på knappen Spela in i huvudfönstret och använd F10 för att rensa den aktuella Macro och starta en ny med samma kortkommando. També podeu consultar l'opció "Sempre actiu" en la finestra principal a tenir enregistrament i reproducció hotkeys actiu.
-		För att få hjälp för ett specifikt kommando högerklicka på en kommandoknapp i huvudfönstret eller någonstans i ett kommando fönster för att visa länkar till AutoHotkey onlinehjälpen.
-		Kontrollera "Capture Keys" alternativ för att ange nycklar och kombinationer till ditt makro direkt från huvudfönstret.
+		Podeu crear macros utilitzant els botons de comandament a la finestra principal o l'ús de la gravadora per copiar les seves accions. Aneu a Opcions> Configuració> Gravació per seleccionar el que es registren les entrades.
+		Per utilitzar la gravadora per a tasques ràpides aneu a Opcions> Configuració> Gravació i marqui l'opció "Esborrar llista". A continuació, feu clic al botó de gravació a la finestra principal i utilitzar F10 per esborrar la macro actual i iniciar un de nou amb la mateixa combinació de tecles. També podeu consultar l'opció "Sempre actiu" en la finestra principal a tenir enregistrament i reproducció hotkeys actiu.
+		Per obtenir ajuda per a una ordre específic feu clic a un botó de comandament a la finestra principal o en qualsevol lloc d'una finestra de comandaments per mostrar enllaços a AutoHotkey ajuda en línia.
+		Marqueu l'opció "Claus Capture" per entrar tecles i combinacions a la macro directament de la finestra principal.
 		Introduïu tecles i combinacions de tecles d'accés ràpid a la caixa a la part inferior i premi el botó Insereix per afegir a les files seleccionades.
-		Om inga rader valt redigera knapparna gälla för alla rader i listan.
-		Du kan tilldela dina egna variabler i variablerna windows (Infoga > Om Uttalanden / variabler / funktioner). För att använda dem inne kommandon bifoga variabelnamnet i procent tecken, t.ex.: `%MyVar`%.
-		Den "Loop" räknare upptill anger det totala antalet slingor för den valda makro.
-		Du kan redigera en rad genom att dubbelklicka på det eller genom att markera den och klicka på Redigera knapparna längst ner.
-		Du kan redigera flera markerade rader med hjälp av alternativen i redigeringsrutan längst ner.
-		Välj en eller flera rader för att lägga till nya kommandon ovanpå dem.
-		Du kan flytta rader med klick-och-dra.
+		Si no se selecciona cap fila dels botons d'edició s'apliquen a totes les files de la llista.
+		Pots assignar les teves pròpies variables en les variables de finestres (Inserir> Si Declaracions / variables / funcions). Per utilitzar les ordres a l'interior tanquen el nom de la variable entre signes de percentatge, per exemple: `% MiVar`%.
+		El comptador de "Loop" a la part superior estableix el nombre total de bucles de la macro seleccionada.
+		Podeu editar una fila fent doble clic o seleccionant-lo i fent clic en els botons d'edició a la part inferior.
+		Podeu editar diverses files seleccionades usant les opcions de la barra d'edició a la part inferior.
+		Seleccionar una o més files per afegir nous comandaments a la part superior d'ells.
+		Podeu moure files amb fer clic i arrossegar.
 		Feu doble clic a la icona de la safata per activar tecles d'accés ràpid o aturar la reproducció / enregistrament. Feu clic amb el botó central durant la reproducció o l'enregistrament en pausa.
-		Du kan exportera dina makron till arbets AutoHotkey skript eller fristående körbara från fönstret Exportera.
-		Per gravar i reproduir ratolí utilitzant coordenades absolutes anar a Opcions > Configuració > Valors predeterminats i establir coordenades del ratolí a la pantalla.
-		Du kan öppna, kopiera, flytta eller radera filer och mappar med ett kommando i Infoga > Run / Arkiv / String / Misc.
-		Om du vill spela Down och Up tillstånd varje nyckel gå till Alternativ > Inställningar > Inspelning och kolla "Fånga viktiga statliga (Down / Up)" alternativet.
-		Du kan använda snabbtangenter för att påskynda eller fördröja Uppspelning. Gå till Alternativ > Inställningar > Uppspelning ställa nycklar och hastighet.
-		För att justera fånga område med "gör skärmdump" verktyg gå till Alternativ > Inställningar > Skärmbilder och välj "Tryck Enter för att fånga". Efter dra rektangeln Använd knapparna Kontroll pil för att flytta markeringen och Skift piltangenterna för att ändra storlek på den.
-		Snabbval: Välj en rad och klicka på en kolumnrubrik för att välja liknande rader baserat på cellens text från den kolumnen.
-		The Run / Arkiv / String / Misc. fönster har många andra användbara kommandon såsom avstängning och UrlDownloadToFile.
-		Utilitzeu la funció "Captura" a la finestra de funcions (Inserir > Si Declaracions / Variables / Funcions) per fer una captura de pantalla d'una part de la pantalla. El primer paràmetre és la ruta del fitxer de destinació i el nom amb una extensió png. El segon paràmetre són les coordenades canonada separats a la pantalla, per exemple, 100|200|50|100 (X|Y|Ample|Alt).
-		Klicka på Index kolumnrubriken för att slå på / stänga Hjälp, mönster och färger för loopar och uttalanden. Dubbel-klicka på Åtgärd kolumnrubriken för att slå på / av Indrag för Loops och uttalanden.
-		Du kan felsöka dina makron med hjälp av handboken Hotkey och alternativen Play i Makromenyknappen. Du kan också inaktivera åtgärder genom att avmarkera dem i Macro listan.
-		För att göra dina makron fungerar bara på ett visst fönster gå till Macro > sammanhangsberoende snabbtangenter.
-		Du kan ställa dina egna globala variabler som skall laddas vid start och som ska exporteras. Gå till Alternativ > Inställningar > Användarinställningar globala variabler för att lägga till dem.
-		Du kan köra avancerade funktioner såsom SUBSTR och RegExReplace från funktionsfönstret (Infoga > Om Uttalanden / variabler / funktioner). Eller köra egna funktioner från externa AutoHotkey skript....
+		Vostè pot exportar els seus macros als scripts AutoHotkey treball o executables independents de la finestra Exporta.
+		Per gravar i reproduir ratolí utilitzant coordenades absolutes anar a Opcions> Configuració> Valors predeterminats i establir coordenades del ratolí a la pantalla.
+		Vostè pot obrir, copiar, moure o esborrar arxius i carpetes utilitzant un dels comandaments de Inserir> Run / Arxiu / cadena / Misc.
+		Per gravar Down i Up estat de tots els go clau a Opcions> Configuració> Gravació i seleccioneu "Capturar estat clau (baix / dalt)" opció.
+		Podeu utilitzar tecles d'accés ràpid per accelerar o reduir la velocitat de reproducció. Aneu a Opcions> Configuració> Reprodueix per establir les claus i la velocitat.
+		Per ajustar l'àrea de captura amb "Fer Screenshot" aneu a Opcions> Configuració> Imatges i seleccioneu "Premeu Enter per capturar". Després de dibuixar el control d'ús rectangle + tecles de cursor per moure la selecció i Shift + tecles de fletxa per canviar la seva mida.
+		Seleccioneu ràpida: Seleccioneu qualsevol fila i feu clic a una capçalera de columna per seleccionar files similars basades en text de la cel d'aquesta columna.
+		The Run / Arxiu / cadena / Misc. finestra té molts altres ordres útils com ara apagat i URLDownloadToFile.
+		Utilitzeu la funció "Captura" a la finestra de funcions (Inserir> Si Declaracions / Variables / Funcions) per fer una captura de pantalla d'una part de la pantalla. El primer paràmetre és la ruta del fitxer de destinació i el nom amb una extensió png. El segon paràmetre són les coordenades canonada separats a la pantalla, per exemple, 100 | 200 | 50 | 100 (X | Y | Ample | Alt).
+		Feu clic a la capçalera de columna Índex per encendre / apagar Ajuda marques i colors de bucles i sentències. Feu doble clic a la capçalera de columna Acció per encendre / apagar sagnia de bucles i sentències.
+		Pot depurar les seves macros utilitzant el Hotkey manual i les opcions de joc al menú Macro. També pot desactivar desmarcant les accions en la llista de macros.
+		Per fer les seves macros només funcionen en una determinada finestra anar a Macro> Tecles d'accés directe sensibles al context.
+		Podeu definir les seves pròpies variables globals per ser carregat en l'arrencada i per a l'exportació. Aneu a Opcions> Configuració> Usuari Variables globals per afegir.
+		Podeu executar funcions avançades com ara substr i RegExReplace de la finestra Funcions (Inserir> Si Declaracions / variables / funcions). O executar les seves pròpies funcions de seqüència AutoHotkey externs.
 	)	
 ; Tooltips		
 	NewB_TT =	Nou (Ctrl+N)

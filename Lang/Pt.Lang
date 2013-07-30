@@ -10,8 +10,14 @@
 	m_Lang005 =	&Macro
 	m_Lang006 =	&Opções
 	m_Lang007 =	I&dioma
-	m_Lang008 =	&Fazer uma Doação
+	m_Lang008 =	&Doar
 	m_Lang009 =	Aj&uda
+	w_Lang009 =	Mostrar Co&ntrol.
+	w_Lang010 =	&Pausa
+	w_Lang011 =	&Loop
+	w_Lang012 =	&Capturar Teclas
+	w_Lang013 =	Ocultar &Janela
+	w_Lang014 =	Sempre A&tivo
 		
 ; File Submenu		
 	f_Lang001 =	&Novo
@@ -89,7 +95,7 @@
 	o_Lang006 =	A&talhos Padrão
 	o_Lang007 =	Configuração &Padrão
 		
-; Make a Donation Sub Menu		
+; Donate Sub Menu		
 	p_Lang001 =	&Doação via PayPal
 		
 ; Help Sub Menu		
@@ -99,6 +105,7 @@
 	h_Lang004 =	Verificar ao &iniciar
 	h_Lang005 =	&Sobre
 	h_Lang006 =	&Dicas
+	h_Lang007 =	&Forum
 		
 ; Tray Menu		
 	y_Lang001 =	Ocultar Janela
@@ -114,12 +121,6 @@
 	w_Lang006 =	Auto.
 	w_Lang007 =	Man.
 	w_Lang008 =	Parar
-	w_Lang009 =	Mostrar Co&ntrol.
-	w_Lang010 =	&Pausa
-	w_Lang011 =	&Loop
-	w_Lang012 =	&Capturar Teclas
-	w_Lang013 =	Ocultar &Janela
-	w_Lang014 =	Sempre A&tivo
 	w_Lang015 =	Repetir
 	w_Lang016 =	Interv. (ms):
 	w_Lang017 =	Aplicar

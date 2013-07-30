@@ -10,8 +10,14 @@
 	m_Lang005 =	&Macro
 	m_Lang006 =	&Options
 	m_Lang007 =	Lan&guage
-	m_Lang008 =	Make a &Donation
+	m_Lang008 =	&Donate
 	m_Lang009 =	&Help
+	w_Lang009 =	Show Co&ntrols
+	w_Lang010 =	&Pause
+	w_Lang011 =	&Loop
+	w_Lang012 =	&Capture Keys
+	w_Lang013 =	Hide &Window
+	w_Lang014 =	&Always Active
 		
 ; File Submenu		
 	f_Lang001 =	&New
@@ -89,7 +95,7 @@
 	o_Lang006 =	Default &Hotkeys
 	o_Lang007 =	D&efault Settings
 		
-; Make a Donation Sub Menu		
+; Donate Sub Menu		
 	p_Lang001 =	&PayPal Donation
 		
 ; Help Sub Menu		
@@ -99,6 +105,7 @@
 	h_Lang004 =	Check on &start-up
 	h_Lang005 =	Abo&ut
 	h_Lang006 =	&Tips
+	h_Lang007 =	&Forum
 		
 ; Tray Menu		
 	y_Lang001 =	Hide Window
@@ -114,12 +121,6 @@
 	w_Lang006 =	Auto.
 	w_Lang007 =	Man.
 	w_Lang008 =	Stop
-	w_Lang009 =	Show Co&ntrols
-	w_Lang010 =	&Pause
-	w_Lang011 =	&Loop
-	w_Lang012 =	&Capture Keys
-	w_Lang013 =	Hide &Window
-	w_Lang014 =	&Always Active
 	w_Lang015 =	Repeat
 	w_Lang016 =	Delay (ms):
 	w_Lang017 =	Apply

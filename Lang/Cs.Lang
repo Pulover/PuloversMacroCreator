@@ -10,8 +10,14 @@
 	m_Lang005 =	&Makro
 	m_Lang006 =	M&ožnosti
 	m_Lang007 =	&Jazyk
-	m_Lang008 =	&Přispějte
-	m_Lang009 =	Pomo&c
+	m_Lang008 =	&Darovat
+	m_Lang009 =	&Pomoc
+	w_Lang009 =	U&kázat šekový
+	w_Lang010 =	P&auza
+	w_Lang011 =	Smy&čka
+	w_Lang012 =	&Zachyťte klíče
+	w_Lang013 =	Sk&rýt okno
+	w_Lang014 =	V&ždy Aktivní
 		
 ; File Submenu		
 	f_Lang001 =	&Nový
@@ -89,7 +95,7 @@
 	o_Lang006 =	&Výchozí Klávesové zkratky
 	o_Lang007 =	V&ýchozí nastavení
 		
-; Make a Donation Sub Menu		
+; Donate Sub Menu		
 	p_Lang001 =	&PayPal Donation
 		
 ; Help Sub Menu		
@@ -99,6 +105,7 @@
 	h_Lang004 =	&Kontrola při rozběhu
 	h_Lang005 =	&O
 	h_Lang006 =	&Tipy
+	h_Lang007 =	&Forum
 		
 ; Tray Menu		
 	y_Lang001 =	Skrýt okno
@@ -114,12 +121,6 @@
 	w_Lang006 =	Auto.
 	w_Lang007 =	Man.
 	w_Lang008 =	Zastavit
-	w_Lang009 =	U&kázat šekový
-	w_Lang010 =	P&auza
-	w_Lang011 =	Smy&čka
-	w_Lang012 =	&Zachyťte klíče
-	w_Lang013 =	Sk&rýt okno
-	w_Lang014 =	V&ždy Aktivní
 	w_Lang015 =	Opakovat
 	w_Lang016 =	Delay (ms):
 	w_Lang017 =	Platit
