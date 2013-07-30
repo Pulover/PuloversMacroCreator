@@ -899,8 +899,8 @@ If (Record := !Record)
 	Tooltip
 	If (ShowStep = 1)
 		Traytip, %AppName%, Macro%A_List%: %d_Lang028% %RecKey% %d_Lang029%.,,1
-	Menu, Tray, Icon, % t_RecordIcon[1], % t_RecordIcon[2]
-	Menu, Tray, Default, %w_Lang008%
+	Try Menu, Tray, Icon, % t_RecordIcon[1], % t_RecordIcon[2]
+	Try Menu, Tray, Default, %w_Lang008%
 	ToggleButtonIcon(OSRec, RecStopIcon)
 	return
 }
@@ -931,7 +931,7 @@ Hotkey, ~*WheelDown, MWDn, off
 SetTimer, MouseRecord, off
 If (!(WinActive("ahk_id" PMCWinID)) && (KeepHkOn = 1))
 	GoSub, KeepHkOn
-Menu, Tray, Icon, %DefaultIcon%, 1
+Try Menu, Tray, Icon, %DefaultIcon%, 1
 Try Menu, Tray, Default, %w_Lang005%
 ToggleButtonIcon(OSRec, RecordIcon)
 return
@@ -1951,7 +1951,7 @@ Gui, 2:Add, Checkbox, -Wrap ys+5 W95 vAutoRefresh R1, %t_Lang015%
 Gui, 2:Add, Checkbox, -Wrap ys+5 xp+100 W105 vOnTop gOnTop R1, %t_Lang016%
 Gui, 2:Add, Checkbox, -Wrap Checked%TabIndent% ys+5 xp+110 W85 vTabIndent gPrevRefresh R1, %t_Lang011%
 Gui, 2:Font, s8, Courier New
-Gui, 2:Add, Edit, Section xm-8 vLVPrev W420 R35 -Wrap HScroll ReadOnly
+Gui, 2:Add, Edit, Section xm-8 vLVPrev W440 R35 -Wrap HScroll ReadOnly
 Gui, 2:Font
 ; Gui, 2:Font, s7
 Gui, 2:Add, StatusBar
@@ -10256,8 +10256,42 @@ GuiSize:
 If A_EventInfo = 1
 	return
 
-GuiGetSize(WinW, WinH) , GuiSize(WinW, WinH)
-; GuiSize(A_GuiWidth, A_GuiHeight)
+GuiGetSize(GuiWidth, GuiHeight)
+Gui, 1:Default
+GuiControl, Move, InputList%A_List%, % "W" GuiWidth-40 "H" GuiHeight-126
+GuiControl, Move, Order, % "x" GuiWidth-26
+GuiControl, Move, Cut, % "x" GuiWidth-26
+GuiControl, Move, Copy, % "x" GuiWidth-26
+GuiControl, Move, Paste, % "x" GuiWidth-26
+GuiControl, Move, Remove, % "x" GuiWidth-26
+GuiControl, Move, Separator5, % "x" GuiWidth-26
+GuiControl, Move, Undo, % "x" GuiWidth-26
+GuiControl, Move, Redo, % "x" GuiWidth-26
+GuiControl, Move, Separator6, % "x" GuiWidth-26
+GuiControl, Move, Duplicate, % "x" GuiWidth-26
+GuiControl, Move, CopyTo, % "x" GuiWidth-26
+GuiControl, Move, Separator7, % "x" GuiWidth-26
+GuiControl, Move, FindReplace, % "x" GuiWidth-26
+GuiControl, Move, EditColor, % "x" GuiWidth-26
+GuiControl, Move, EditComm, % "x" GuiWidth-26
+GuiControl, Move, Repeat, % "y" GuiHeight-23
+GuiControl, Move, Rept, % "y" GuiHeight-27
+GuiControl, Move, TimesM, % "y" GuiHeight-27
+GuiControl, Move, DelayT, % "y" GuiHeight-23
+GuiControl, Move, Delay, % "y" GuiHeight-27
+GuiControl, Move, DelayG, % "y" GuiHeight-27
+GuiControl, Move, ApplyT, % "y" GuiHeight-28
+GuiControl, Move, ApplyI, % "y" GuiHeight-28
+GuiControl, Move, sInput, % "y" GuiHeight-27
+GuiControl, Move, ApplyL, % "y" GuiHeight-28
+GuiControl, Move, InsertKey, % "y" GuiHeight-28
+GuiControl, Move, EditButton, % "y" GuiHeight-28
+GuiControl, Move, Separator1, % "y" GuiHeight-27
+GuiControl, Move, Separator2, % "y" GuiHeight-27
+GuiControl, Move, Separator3, % "y" GuiHeight-27
+GuiControl, Move, Separator4, % "y" GuiHeight-27
+GuiControl, MoveDraw, CoordTip, % "y" GuiHeight-14
+GuiControl, MoveDraw, ContextTip, % "y" GuiHeight-30
 return
 
 ;##### Subroutines: Substitution #####
