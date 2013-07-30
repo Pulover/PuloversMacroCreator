@@ -3,7 +3,6 @@
 	TbPtr := New Toolbar(hCtrl), TbPtr.SetImageList(hIL)
 ,	TbPtr.Add(Options, ButtonsArray*), TbPtr.SetMaxTextRows(Rows)
 ,	TbPtr.SetExStyle("DrawDDArrows HideClippedButtons")
-,	TbPtr.SetExStyle("DrawDDArrows HideClippedButtons")
 }
 
 TB_Rebar(RbPtr, BandID, tbChild, Options="", Text="")

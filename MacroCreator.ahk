@@ -523,138 +523,19 @@ Menu, LangMenu, Check, % Lang_%Lang%
 
 ;##### Main Window: #####
 
-; Gui, Font, s7
 Gui, +Resize +MinSize310x140 +HwndPMCWinID
-; Gui, Add, Button, -Wrap W25 H25 hwndNewB vNewB gNew
-	; ILButton(NewB, NewIcon[1] ":" NewIcon[2])
-; Gui, Add, Button, -Wrap W25 H25 ys x+0 hwndOpenB vOpenB gOpen
-	; ILButton(OpenB, OpenIcon[1] ":" OpenIcon[2])
-; Gui, Add, Button, -Wrap W25 H25 ys x+0 hwndSaveB vSaveB gSave
-	; ILButton(SaveB, SaveIcon[1] ":" SaveIcon[2])
-; Gui, Add, Text, W2 H25 ys+2 x+5 0x11
-; Gui, Add, Button, -Wrap W69 H25 ys x+4 hwndExportB vExportB gExport, %w_Lang001%
-	; ILButton(ExportB, ExportIcon[1] ":" ExportIcon[2], 0, "Left")
-; Gui, Add, Button, -Wrap W69 H25 yp x+2 hwndPreviewB vPreviewB gPreview, %w_Lang002%
-	; ILButton(PreviewB, PreviewIcon[1] ":" PreviewIcon[2], 0, "Left")
-; Gui, Add, Button, -Wrap W69 H25 yp x+2 hwndOptionsB vOptionsB gOptions, %w_Lang003%
-	; ILButton(OptionsB, OptionsIcon[1] ":" OptionsIcon[2], 0, "Left")
-; Gui, Add, Button, -Wrap W25 H25 yp+30 xm hwndMouseB vMouseB gMouse
-	; ILButton(MouseB, MouseIcon[1] ":" MouseIcon[2])
-; Gui, Add, Button, -Wrap W25 H25 yp x+0 hwndTextB vTextB gText
-	; ILButton(TextB, TextIcon[1] ":" TextIcon[2])
-; Gui, Add, Button, -Wrap W25 H25 yp x+0 hwndControlB vControlB gControlCmd
-	; ILButton(ControlB, ControlIcon[1] ":" ControlIcon[2])
-; Gui, Add, Text, W2 H25 yp+2 x+5 0x11
-; Gui, Add, Button, -Wrap W25 H25 yp-2 x+4 hwndPauseB vPauseB gPause
-	; ILButton(PauseB, PauseIcon[1] ":" PauseIcon[2])
-; Gui, Add, Button, -Wrap W25 H25 yp x+0 hwndWindowB vWindowB gWindow
-	; ILButton(WindowB, WindowIcon[1] ":" WindowIcon[2])
-; Gui, Add, Button, -Wrap W25 H25 yp x+0 hwndImageB vImageB gImage
-	; ILButton(ImageB, ImageIcon[1] ":" ImageIcon[2])
-; Gui, Add, Button, -Wrap W25 H25 yp x+0 hwndRunB vRunB gRun
-	; ILButton(RunB, RunIcon[1] ":" RunIcon[2])
-; Gui, Add, Text, W2 H25 yp+2 x+5 0x11
-; Gui, Add, Button, -Wrap W25 H25 yp-2 x+4 hwndComLoopB vComLoopB gComLoop
-	; ILButton(ComLoopB, LoopIcon[1] ":" LoopIcon[2])
-; Gui, Add, Button, -Wrap W25 H25 yp x+0 hwndIfStB vIfStB gIfSt
-	; ILButton(IfStB, IfStIcon[1] ":" IfStIcon[2])
-; Gui, Add, Button, -Wrap W25 H25 yp x+0 hwndIEComB vIEComB gIECom
-	; ILButton(IEComB, IEIcon[1] ":" IEIcon[2])
-; Gui, Font, s10, Courier New
-; Gui, Add, Button, -Wrap W25 H25 yp x+0 hwndSendMsgB vSendMsgB gSendMsg
-	; ILButton(SendMsgB, MsgIcon[1] ":" MsgIcon[2])
-; Gui, Font
-; Gui, Add, Text, W2 H55 yp-28 x+5 0x11
 Gui, Add, Custom, ClassToolbarWindow32 hwndhTbFile gTB_Notify 0x0800 0x0100 0x0040 0x0008
 Gui, Add, Custom, ClassToolbarWindow32 hwndhTbScript 0x0800 0x0100 0x0040 0x0008 0x1000
 Gui, Add, Custom, ClassToolbarWindow32 hwndhTbRecPlay 0x0800 0x0100 0x0040 0x0008 0x1000
 Gui, Add, Custom, ClassToolbarWindow32 hwndhTbCommand 0x0800 0x0100 0x0040 0x0008
 Gui, Add, Custom, ClassReBarWindow32 hwndhRbMain gRB_Notify 0x0400 0x0040 0x8000
-; Gui, Font, Bold
-; Gui, Add, Button, -Wrap W90 H40 ys xm+310 hwndRecordB vRecordB gRecord, %w_Lang004%
-	; ILButton(RecordB, RecordIcon[1] ":" RecordIcon[2], 1, "Left")
-; Gui, Add, Button, -Wrap W90 H40 ys xm+405 hwndStartB vStartB gPlayStart, %w_Lang005%
-	; ILButton(StartB, PlayIcon[1] ":" PlayIcon[2], 1, "Left")
-; Gui, Font
-; Gui, Font, s7
-; Gui, Add, Checkbox, -Wrap Checked%HideMainWin% yp+45 xp-95 W90 vHideMainWin R1, %w_Lang013%
-; Gui, Add, Checkbox, -Wrap Checked%OnScCtrl% yp xp+95 W90 vOnScCtrl R1, %w_Lang009%
-; Gui, Add, Button, -Wrap ys xm+500 W25 H25 hwndTestRun vTestRun gTestRun
-	; ILButton(TestRun, TestRunIcon[1] ":" TestRunIcon[2])
-; Gui, Add, Button, -Wrap W25 H25 hwndRunTimer vRunTimer gRunTimer
-	; ILButton(RunTimer, RunTimerIcon[1] ":" RunTimerIcon[2])
-; Gui, Add, GroupBox, Section W355 H65 ys-9 xm+530
-; Gui, Add, Text, -Wrap W25 H22 ys+15 xs+10 vAutoT, %w_Lang006%:
-; Gui, Add, Text, -Wrap W25 H22 y+3 vManT, %w_Lang007%:
-; Gui, Add, Hotkey, vAutoKey gSaveData W150 ys+13 xp+30
-; Gui, Add, Edit, yp xp WP HP vJoyKey Hidden
-; Gui, Add, Hotkey, vManKey gWaitKeys W55 y+5 Limit190, % o_ManKey[1]
-; Gui, Add, Text, -Wrap W25 H22 yp+3 xp+65 vAbortT, %w_Lang008%:
-; Gui, Add, Hotkey,  yp-3 xp+30 vAbortKey W55, %AbortKey%
-; Gui, Font, s10, Wingdings
-; Gui, Add, Checkbox, -Wrap ys+11 xs+193 W25 H25 vWin1 gSaveData 0x1000, ÿ
-; Gui, Font
-; Gui, Font, s7
-; Gui, Add, Checkbox, -Wrap yp x+2 W25 H25 hwndJoyHK vJoyHK gSetJoyButton 0x1000
-	; ILButton(JoyHK, JoyIcon[1] ":" JoyIcon[2])
-; Gui, Add, Checkbox, -Wrap Checked%PauseKey% y+1 xs+193 W25 H25 hwndPauseKey vPauseKey gPauseKey 0x1000 ;, %w_Lang010%
-	; ILButton(PauseKey, PauseIconB[1] ":" PauseIconB[2])
-; Gui, Add, Checkbox, -Wrap yp x+2 W25 H25 hwndOnFinish vOnFinish gOnFinish 0x1000 ;, %w_Lang010%
-	; ILButton(OnFinish, FinishIcon[1] ":" FinishIcon[2])
-; Gui, Add, Text, W2 H55 ys+10 xs+250 0x11
-; Gui, Add, Text, -Wrap yp+5 x+5 W90 H22 vRepeatT, %w_Lang011% (%t_Lang004%):
-; Gui, Add, Edit, y+1 W90 R1 Number vReptC
-; Gui, Add, UpDown, vTimesG 0x80 Range0-999999999, 1
-; Gui, Add, Button, -Wrap hwndTabPlus vTabPlus gTabPlus ys+70 xm+500 W25 H25
-	; ILButton(TabPlus, PlusIcon[1] ":" PlusIcon[2])
-; Gui, Add, Button, -Wrap hwndTabClose vTabClose gTabClose x+0 ys+70 W25 H25
-	; ILButton(TabClose, CloseIcon[1] ":" CloseIcon[2])
-; Gui, Add, Button, -Wrap hwndDuplicateL vDuplicateL gDuplicateList x+0 ys+70 W25 H25
-	; ILButton(DuplicateL, DuplicateLIcon[1] ":" DuplicateLIcon[2])
-; Gui, Add, Text, W2 H25 ys+72 x+5 0x11
-; Gui, Add, Button, -Wrap hwndImportB vImportB gImport x+4 ys+70 W25 H25
-	; ILButton(ImportB, ImportIcon[1] ":" ImportIcon[2])
-; Gui, Add, Button, -Wrap hwndSaveC vSaveC gSaveCurrentList x+0 ys+70 W25 H25
-	; ILButton(SaveC, SaveLIcon[1] ":" SaveLIcon[2])
-; Gui, Add, Text, W2 H25 ys+72 x+5 0x11
-; Gui, Add, Button, -Wrap x+4 ys+70 W25 H25 hwndIfDirB vIfDirB gSetWin
-	; ILButton(IfDirB, ContextIcon[1] ":" ContextIcon[2])
-; Gui, Add, Checkbox, -Wrap ys+75 xp+30 W100 gCapt vCapt R1, %w_Lang012%
-; Gui, Add, Checkbox, -Wrap Checked%KeepHkOn% W100 -Wrap yp x+5 vKeepHkOn gCheckHkOn R1, %w_Lang014%
+
 Gui, Add, Tab2, Section Buttons -Wrap AltSubmit xm ym+50 H22 W500 hwndTabSel vA_List gTabSel, Macro1
 Gui, Add, Custom, ClassReBarWindow32 hwndhRbMacro vcRbMacro gRB_Notify xm-10 y+0 -Theme 0x0800 0x0400 0x0040 0x8000 0x0008 ; 0x0004
-Gui, Add, ListView, AltSubmit Checked hwndListID1 vInputList1 gInputList NoSort LV0x10000, Index|Action|Details|Repeat|Delay|Type|Control|Window|Comment|Color
-LV_SetImageList(hIL_Icons)
-Loop, 10
-	LV_ModifyCol(A_Index, Col_%A_Index%)
 Gui, Tab
-Gui, Add, UpDown, ys+23 x+4 gOrder vOrder -16 Range0-1, 0
-Gui, Add, Custom, ClassToolbarWindow32 hwndhTbEdit x+653 y+0 W25 H500 0x0080 0x0800 0x0100 0x0040 0x0008 0x0004
-; Gui, Add, Button, -Wrap W22 H25 hwndCut vCut gCutRows
-	; ILButton(Cut, CutIcon[1] ":" CutIcon[2])
-; Gui, Add, Button, -Wrap W22 H25 hwndCopy vCopy gCopyRows
-	; ILButton(Copy, CopyIcon[1] ":" CopyIcon[2])
-; Gui, Add, Button, -Wrap W22 H25 hwndPaste vPaste gPasteRows
-	; ILButton(Paste, PasteIcon[1] ":" PasteIcon[2])
-; Gui, Add, Button, -Wrap W22 H25 hwndRemove vRemove gRemove
-	; ILButton(Remove, RemoveIcon[1] ":" RemoveIcon[2])
-; Gui, Add, Text, vSeparator5 W25 H2 0x10
-; Gui, Add, Button, -Wrap W22 H25 hwndUndo vUndo gUndo
-	; ILButton(Undo, UndoIcon[1] ":" UndoIcon[2])
-; Gui, Add, Button, -Wrap W22 H25 hwndRedo vRedo gRedo
-	; ILButton(Redo, RedoIcon[1] ":" RedoIcon[2])
-; Gui, Add, Text, vSeparator6 W25 H2 0x10
-; Gui, Add, Button, -Wrap W22 H25 hwndDuplicate vDuplicate gDuplicate
-	; ILButton(Duplicate, DuplicateIcon[1] ":" DuplicateIcon[2])
-; Gui, Add, Button, -Wrap W22 H25 hwndCopyTo vCopyTo gCopyTo
-	; ILButton(CopyTo, CopyIcon[1] ":" CopyIcon[2])
-; Gui, Add, Text, vSeparator7 W25 H2 0x10
-; Gui, Add, Button, -Wrap W22 H25 hwndEditColor vEditColor gEditColor
-	; ILButton(EditColor, ColorIcon[1] ":" ColorIcon[2])
-; Gui, Add, Button, -Wrap W22 H25 hwndEditComm vEditComm gEditComm
-	; ILButton(EditComm, CommentIcon[1] ":" CommentIcon[2])
-; Gui, Add, Button, -Wrap W22 H25 hwndFindReplace vFindReplace gFindReplace
-	; ILButton(FindReplace, FindIcon[1] ":" FindIcon[2])
+; Gui, Add, UpDown, ys+23 x+4 gOrder vOrder -16 Range0-1, 0
+; Gui, Add, Custom, ClassToolbarWindow32 hwndhTbEdit x+653 y+0 W25 H500 0x0080 0x0800 0x0100 0x0040 0x0008 0x0004
+
 Gui, Add, Text, -Wrap y+129 xm W100 H22 Section vRepeat, %w_Lang015%:
 Gui, Add, Edit, ys-3 x+5 W90 R1 vRept Number
 Gui, Add, UpDown, vTimesM 0x80 Range0-999999999, 1
@@ -684,7 +565,7 @@ Gui, Submit
 GoSub, LoadData
 GoSub, b_Start
 OnMessage(WM_COMMAND, "TB_Messages")
-OnMessage(WM_NOTIFY, "Notifications")
+; OnMessage(WM_NOTIFY, "Notifications")
 OnMessage(WM_MOUSEMOVE, "ShowTooltip")
 OnMessage(WM_RBUTTONDOWN, "ShowContextHelp")
 OnMessage(WM_LBUTTONDOWN, "DragToolbar")
@@ -749,8 +630,8 @@ Else
 }
 Menu, Tray, Icon
 Gui, Show, % ((WinState) ? "Maximize" : "W940 H630") ((HideWin) ? "Hide" : ""), %AppName% v%CurrentVersion% %CurrentFileName%
-GoSub, DefineToolbars
 GoSub, DefineControls
+GoSub, DefineToolbars
 GuiControl, +ReadOnly, JoyKey
 GoSub, RowCheck
 If (HideWin)
@@ -829,11 +710,105 @@ return
 ;##### Other controls #####
 
 DefineControls:
+GoSub, BuildMacroWin
 GoSub, BuildPrevWin
 GuiGetSize(gWidth, gHeight), rHeight := gHeight-115
 ,	RbMacro := New Rebar(hRbMacro)
-,	RbMacro.InsertBand(PrevID, 0, "", 100, "", 0, 0, "", rHeight, 0)
-,	RbMacro.InsertBand(ListID1, 0, "", 200, "", gWidth, 0, "", rHeight)
+,	RbMacro.InsertBand(hMacroCh, 0, "NoGripper", 100, "", gWidth, 0, "", rHeight)
+,	RbMacro.InsertBand(PrevID, 0, "", 200, "", 0, 0, "", rHeight, 0)
+; ,	RbMacro.InsertBand(ListID1, 0, "", 200, "", gWidth, 0, "", rHeight)
+return
+
+BuildMacroWin:
+Gui, chMacro:+LastFound
+Gui, chMacro:+hwndhMacroCh -Caption +0x40000000 -0x80000000
+Gui, chMacro:Add, Custom, ClassToolbarWindow32 y0 h20 hwndhTbEdit 0x0800 0x0100 0x0040 0x0008
+Gui, chMacro:Add, ListView, AltSubmit Checked xm y+5 hwndListID1 vInputList1 gInputList NoSort LV0x10000, Index|Action|Details|Repeat|Delay|Type|Control|Window|Comment|Color
+Gui, chMacro:Default
+LV_SetImageList(hIL_Icons)
+Loop, 10
+	LV_ModifyCol(A_Index, Col_%A_Index%)
+	LV_Add("", 1, "Test")
+Gui, 1:Default
+return
+
+Preview:
+Input
+Gui 2:+LastFoundExist
+IfWinExist
+    GoSub, PrevClose
+Preview := LV_Export(A_List)
+Gui, 2:+Resize
+GoSub, BuildPrevWin
+Gui, 2:Add, StatusBar
+Gui, 2:Default
+SB_SetParts(150, 150)
+SB_SetText("Macro" A_List ": " o_AutoKey[A_List], 1)
+SB_SetText("Record Keys: " RecKey "/" RecNewKey, 2)
+SB_SetText("CoordMode: " CoordMouse, 3)
+Gui, 1:Default
+; GuiControl, 2:, LVPrev, %Preview%
+Gui, 2:Show,, %c_Lang072% - %AppName%
+Tooltip
+return
+
+BuildPrevWin:
+Gui, 2:+LastFound
+Gui, 2:+hwndPrevID -Caption +0x40000000 -0x80000000
+Gui, 2:Add, Button, -Wrap Section W60 H25 gPrevClose, %c_Lang022%
+Gui, 2:Add, Button, -Wrap ys W25 H25 hwndPrevCopy vPrevCopy gPrevCopy
+	ILButton(PrevCopy, CopyIcon[1] ":" CopyIcon[2])
+Gui, 2:Add, Button, -Wrap ys W25 H25 hwndPrevRefresh vPrevRefresh gPrevRefresh
+	ILButton(PrevRefresh, LoopIcon[1] ":" LoopIcon[2])
+Gui, 2:Add, Checkbox, -Wrap ys+5 W95 vAutoRefresh R1, %t_Lang015%
+Gui, 2:Add, Checkbox, -Wrap ys+5 xp+100 W105 vOnTop gOnTop R1, %t_Lang016%
+Gui, 2:Add, Checkbox, -Wrap Checked%TabIndent% ys+5 xp+110 W85 vTabIndent gPrevRefresh R1, %t_Lang011%
+Gui, 2:Add, Custom, ClassScintilla xm hwndhSciPrev vLVPrev W460 R40
+sciPrev := new scintilla(hSciPrev)
+,	sciPrev.SetMarginWidthN(0, 20)
+,	sciPrev.SetWrapMode(False)
+,	sciPrev.SetLexer(200)
+,	sciPrev.StyleClearAll()
+,	sciPrev.SetKeywords(0, SyHi_Com)
+,	sciPrev.SetKeywords(1, SyHi_Param)
+,	sciPrev.StyleSetFore(11, 0x0071E1)
+,	sciPrev.StyleSetFore(12, 0xC10000)
+,	sciPrev.SetText("", Preview)
+,	sciPrev.SetReadOnly(True)
+return
+
+OnTop:
+Gui, Submit, NoHide
+Gui, % (OnTop) ? "2:+AlwaysOnTop" : "2:-AlwaysOnTop"
+return
+
+PrevCopy:
+Gui, Submit, NoHide
+Clipboard := LVPrev
+return
+
+PrevRefresh:
+Gui, Submit, NoHide
+GuiControl, 2:-Redraw, LVPrev
+Preview := LV_Export(A_List)
+; GuiControl, 2:, LVPrev, %Preview%
+sciPrev.SetReadOnly(False), sciPrev.SetText("", Preview)
+, sciPrev.ScrollToEnd(), sciPrev.SetReadOnly(True)
+; PostMessage, %WM_VSCROLL%, 7, , Edit1, ahk_id %PrevID%
+Gui, 2:Default
+SB_SetText("Macro" A_List ": " o_AutoKey[A_List], 1)
+SB_SetText("Record Keys: " RecKey "/" RecNewKey, 2)
+SB_SetText("CoordMode: " CoordMouse, 3)
+Gui, 1:Default
+GuiControl, 2:+Redraw, LVPrev
+return
+
+PrevClose:
+2GuiClose:
+2GuiEscape:
+sciPrev := ""
+Gui, 2:Destroy
+AutoRefresh = 0
 return
 
 ;##### Capture Keys #####
@@ -1992,84 +1967,6 @@ If Ex_BM = 1
 Body := "Macro" Ex_Macro ":`n" Body "Return`n"
 If (Ex_AutoKey <> "")
 	Body := Ex_AutoKey "::`n" Body
-return
-
-Preview:
-Input
-Gui 2:+LastFoundExist
-IfWinExist
-    GoSub, PrevClose
-Preview := LV_Export(A_List)
-Gui, 2:+Resize
-GoSub, BuildPrevWin
-Gui, 2:Add, StatusBar
-Gui, 2:Default
-SB_SetParts(150, 150)
-SB_SetText("Macro" A_List ": " o_AutoKey[A_List], 1)
-SB_SetText("Record Keys: " RecKey "/" RecNewKey, 2)
-SB_SetText("CoordMode: " CoordMouse, 3)
-Gui, 1:Default
-; GuiControl, 2:, LVPrev, %Preview%
-Gui, 2:Show,, %c_Lang072% - %AppName%
-Tooltip
-return
-
-BuildPrevWin:
-Gui, 2:+hwndPrevID +LastFound -Caption
-Gui, 2:Add, Button, -Wrap Section W60 H25 gPrevClose, %c_Lang022%
-Gui, 2:Add, Button, -Wrap ys W25 H25 hwndPrevCopy vPrevCopy gPrevCopy
-	ILButton(PrevCopy, CopyIcon[1] ":" CopyIcon[2])
-Gui, 2:Add, Button, -Wrap ys W25 H25 hwndPrevRefresh vPrevRefresh gPrevRefresh
-	ILButton(PrevRefresh, LoopIcon[1] ":" LoopIcon[2])
-Gui, 2:Add, Checkbox, -Wrap ys+5 W95 vAutoRefresh R1, %t_Lang015%
-Gui, 2:Add, Checkbox, -Wrap ys+5 xp+100 W105 vOnTop gOnTop R1, %t_Lang016%
-Gui, 2:Add, Checkbox, -Wrap Checked%TabIndent% ys+5 xp+110 W85 vTabIndent gPrevRefresh R1, %t_Lang011%
-Gui, 2:Add, Custom, ClassScintilla xm hwndhSciPrev vLVPrev W460 R40
-sciPrev := new scintilla(hSciPrev)
-,	sciPrev.SetMarginWidthN(0, 20)
-,	sciPrev.SetWrapMode(False)
-,	sciPrev.SetLexer(200)
-,	sciPrev.StyleClearAll()
-,	sciPrev.SetKeywords(0, SyHi_Com)
-,	sciPrev.SetKeywords(1, SyHi_Param)
-,	sciPrev.StyleSetFore(11, 0x0071E1)
-,	sciPrev.StyleSetFore(12, 0xC10000)
-,	sciPrev.SetText("", Preview)
-,	sciPrev.SetReadOnly(True)
-return
-
-OnTop:
-Gui, Submit, NoHide
-Gui, % (OnTop) ? "2:+AlwaysOnTop" : "2:-AlwaysOnTop"
-return
-
-PrevCopy:
-Gui, Submit, NoHide
-Clipboard := LVPrev
-return
-
-PrevRefresh:
-Gui, Submit, NoHide
-GuiControl, 2:-Redraw, LVPrev
-Preview := LV_Export(A_List)
-; GuiControl, 2:, LVPrev, %Preview%
-sciPrev.SetReadOnly(False), sciPrev.SetText("", Preview)
-, sciPrev.ScrollToEnd(), sciPrev.SetReadOnly(True)
-; PostMessage, %WM_VSCROLL%, 7, , Edit1, ahk_id %PrevID%
-Gui, 2:Default
-SB_SetText("Macro" A_List ": " o_AutoKey[A_List], 1)
-SB_SetText("Record Keys: " RecKey "/" RecNewKey, 2)
-SB_SetText("CoordMode: " CoordMouse, 3)
-Gui, 1:Default
-GuiControl, 2:+Redraw, LVPrev
-return
-
-PrevClose:
-2GuiClose:
-2GuiEscape:
-sciPrev := ""
-Gui, 2:Destroy
-AutoRefresh = 0
 return
 
 Options:
@@ -10169,7 +10066,8 @@ Loop, % LV_GetCount()
 	LV_Modify(A_Index, "Col2", Action)
 	If ShowLoopIfMark = 1
 	{
-		LV_Colors.Attach(ListID%A_List%, False, False)
+		OnMessage(WM_NOTIFY, "LV_ColorsMessage")
+	,	LV_Colors.Attach(ListID%A_List%, False, False)
 		If (Action = "[LoopEnd]")
 			RowColorLoop--, IdxLv := SubStr(IdxLv, 1, StrLen(IdxLv)-1)
 		Else If (Action = "[End If]")
@@ -10184,7 +10082,7 @@ Loop, % LV_GetCount()
 		LV_Colors.Cell(ListID%A_List%, A_Index, 1, Color ? Color : "")
 	}
 	Else
-		LV_Colors.Detach(ListID%A_List%)
+		OnMessage(WM_NOTIFY, ""), LV_Colors.Detach(ListID%A_List%)
 	If ShowActIdent = 1
 	{
 		LV_Modify(A_Index, "Col2", ActLv Action)
@@ -10317,23 +10215,28 @@ return
 If A_EventInfo = 1
 	return
 
-pGuiWidth := A_GuiWidth, pGuiHeight := A_GuiHeight
-GuiControl, Move, LVPrev, % "W" pGuiWidth-20 "H" pGuiHeight-60
+GuiControl, Move, LVPrev, % "W" A_GuiWidth-20 "H" A_GuiHeight-40
 return
 
 28GuiSize:
 Gui, 28:Show, % (ShowProgBar ? "H40" : "H30") " W415 NoActivate", %AppName%
 return
 
+chMacroGuiSize:
+Critical
+GuiControl, Move, InputList%A_List%, % "H" A_GuiHeight-30 "W" A_GuiWidth-15
+return
+
 GuiSize:
 If A_EventInfo = 1
 	return
+Critical 1000
 GuiGetSize(GuiWidth, GuiHeight)
 ,	RbMain.ShowBand(1)
 ,	RbMacro.ModifyBand(1, "MinHeight", GuiHeight-115)
 ,	RbMacro.ModifyBand(2, "MinHeight", GuiHeight-115)
 Gui, 1:Default
-GuiControl, Move, %hRbMacro%, % "W" GuiWidth-30
+GuiControl, Move, %hRbMacro%, % "W" GuiWidth
 GuiControl, Move, Order, % "x" GuiWidth-26
 GuiControl, Move, %hTbEdit%, % "x" GuiWidth-26
 GuiControl, Move, Repeat, % "y" GuiHeight-23

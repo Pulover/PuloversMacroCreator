@@ -614,32 +614,19 @@ FreeMemory()
 	return, DllCall("psapi.dll\EmptyWorkingSet", "UInt", -1)
 }
 
-Notifications(wParam, lParam)
+LV_ColorsMessage(wParam, lParam)
 {
-	Global
-	Local ReturnCode
 	Static NM_CUSTOMDRAW := -12
 	Static LVN_COLUMNCLICK := -108
-	ctHwnd := NumGet(lParam + 0, 0, "UPtr")
-	; If (tbPtr := TB_GetHwnd(ctHwnd))
-	; {
-		; ReturnCode := tbPtr.OnNotify(lParam, MX, MY, Label, ID)
-		; If (Label)
-			; ShowMenu(Label, MX, MY)
-		; return ReturnCode
-	; }
-	If (ctHwnd = ListID%A_List%)
+	If LV_Colors.HasKey(H := NumGet(lParam + 0, 0, "UPtr"))
 	{
-		If LV_Colors.HasKey(H := NumGet(lParam + 0, 0, "UPtr"))
-		{
-			M := NumGet(lParam + (A_PtrSize * 2), 0, "Int")
-			; NM_CUSTOMDRAW --------------------------------------------------------------------------------------------------
-			If (M = NM_CUSTOMDRAW)
-				Return LV_Colors.On_NM_CUSTOMDRAW(H, lParam)
-			; LVN_COLUMNCLICK ------------------------------------------------------------------------------------------------
-			If (LV_Colors[H].NS && (M = LVN_COLUMNCLICK))
-				Return 0
-		}
+		M := NumGet(lParam + (A_PtrSize * 2), 0, "Int")
+		; NM_CUSTOMDRAW --------------------------------------------------------------------------------------------------
+		If (M = NM_CUSTOMDRAW)
+			Return LV_Colors.On_NM_CUSTOMDRAW(H, lParam)
+		; LVN_COLUMNCLICK ------------------------------------------------------------------------------------------------
+		If (LV_Colors[H].NS && (M = LVN_COLUMNCLICK))
+			Return 0
 	}
 }
 
