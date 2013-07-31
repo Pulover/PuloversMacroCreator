@@ -53,8 +53,8 @@
 					Skip_Line--
 					continue
 				}
-				Gui, 1:Default
-				Gui, ListView, InputList%Macro_On%
+				Gui, chMacro:Default
+				Gui, chMacro:ListView, InputList%Macro_On%
 				If ((pb_From) && (A_Index < LV_GetNext(0)))
 					continue
 				Else If ((pb_To) && ((LV_GetNext(0) > 0) && (A_Index > LV_GetNext(0))))
@@ -115,7 +115,7 @@
 						Loop, %TabCount%
 						{
 							TabIdx := A_Index
-							Gui, ListView, InputList%TabIdx%
+							Gui, chMacro:ListView, InputList%TabIdx%
 							Loop, % ListCount%A_Index%
 							{
 								LV_GetText(Row_Type, A_Index, 6)
@@ -144,7 +144,7 @@
 						GuiControl, 28:+Range0-%m_ListCount%, OSCProg
 						GuiControl, 28:, OSCProgTip, % "M" Macro_On " [Loop: 0 / " o_TimesG[Macro_On] " | Row: 0 / " m_ListCount "]"
 					}
-					Gui, ListView, InputList%Macro_On%
+					Gui, chMacro:ListView, InputList%Macro_On%
 					continue
 				}
 				If (Type = cType35)
@@ -473,7 +473,7 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC)
 					Skip_Line--
 					continue
 				}
-				Gui, ListView, InputList%lcL%
+				Gui, chMacro:ListView, InputList%lcL%
 				lIdx := Start + A_Index
 				LV_GetTexts(lIdx, Action, Step, TimesX, DelayX, Type, Target, Window)
 				IsChecked := LV_GetNext(lIdx-1, "Checked")
@@ -504,7 +504,7 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC)
 							L_Index := LoopIndex
 							Playback(t_Macro1)
 							LoopIndex := L_Index
-							Gui, ListView, InputList%lcL%
+							Gui, chMacro:ListView, InputList%lcL%
 							continue
 						}
 						Else
@@ -513,7 +513,7 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC)
 					Loop, %TabCount%
 					{
 						TabIdx := A_Index
-						Gui, ListView, InputList%TabIdx%
+						Gui, chMacro:ListView, InputList%TabIdx%
 						Loop, % ListCount%A_Index%
 						{
 							LV_GetText(TargetLabel, A_Index, 3)
@@ -529,7 +529,7 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC)
 							}
 						}
 					}
-					Gui, ListView, InputList%Macro_On%
+					Gui, chMacro:ListView, InputList%Macro_On%
 					continue
 				}
 				If (Type = cType35)

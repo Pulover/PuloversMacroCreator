@@ -31,6 +31,7 @@
 ;    ModifyBand(Band, Property, Value [, SetStyle])
 ;    MoveBand(Band, Target)
 ;    OnNotify(Param [, MenuXPos, MenuYPos, ID)
+;    SetBandStyle(Band, Value)
 ;    SetBandWidth(Band, Width)
 ;    SetImageList(ImageList)
 ;    SetMaxRows([Rows])
@@ -248,7 +249,7 @@ Class Rebar extends Rebar.Private
 ;                            MinWidth, MinHeight, IdealSize, Child (handle of control).
 ;        Value:          The value to be set in the selected Property.
 ;                            If Property is Style you can enter named values as
-;                            in the InsertBand options.
+;                            in the InsertBand options, or an integer value.
 ;        SetStyle:       Only valid if Property is Style. Determines whether to add or
 ;                            remove the styles.
 ;    Return:             TRUE if successful, FALSE if there was a problem.
@@ -335,9 +336,33 @@ Class Rebar extends Rebar.Private
                     LastBrkBand := A_Index
             }
             If (this.GetRowCount() > this.MaxRows)
-                this.ModifyBand(LastBrkBand, "Style", Style-0x0001)
+                this.ModifyBand(LastBrkBand, "Style", "Break", False)
         }
         return ""
+    }
+;=======================================================================================
+;    Method:             SetBandStyle
+;    Description:        Sets the style of a band.
+;    Parameters:
+;        Band:           1-based index of the band.
+;        Value:          Named values as in the InsertBand options, or an integer value.
+;    Return:             TRUE if successful, FALSE if there was a problem.
+;=======================================================================================
+    SetBandStyle(Band, Value)
+    {
+        If Value is Integer
+            Style := Value
+        Else
+        {
+            Loop, Parse, Value, %A_Space%%A_Tab%
+            {
+                If (this[ "RBBS_" A_LoopField ])
+                    Style += this[ "RBBS_" A_LoopField ]
+            }
+        }
+        this.DefineBandStruct(rbBand, Style)
+        SendMessage, this.RB_SETBANDINFO, Band-1, &rbBand,, % "ahk_id " this.rbHwnd
+        return (ErrorLevel = "FAIL") ? False : True
     }
 ;=======================================================================================
 ;    Method:             SetBandWidth
@@ -378,7 +403,7 @@ Class Rebar extends Rebar.Private
         Loop, Parse, Layout, |, %A_Space%
         {
             StringSplit, Par, A_LoopField, `,, %A_Space%
-            Index := this.IDToIndex(Par1), this.ModifyBand(Index, "Style", Par3)
+            Index := this.IDToIndex(Par1), this.SetBandStyle(Index, Par3)
         ,   this.SetBandWidth(Index, Par2), this.MoveBand(Index, A_Index)
         }
         return Par0 ? True : False

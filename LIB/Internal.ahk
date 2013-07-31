@@ -126,6 +126,7 @@ ActiveGui(Hwnd)
 
 GuiGetSize(ByRef W, ByRef H, GuiID=1)
 {
+	DetectHiddenWindows, On
 	Gui %GuiID%:+LastFoundExist
 	IfWinExist
 	{
@@ -134,6 +135,7 @@ GuiGetSize(ByRef W, ByRef H, GuiID=1)
 	,	W := Floor(NumGet(rect, 8, "int") / Round(A_ScreenDPI / 96, 2))
 	,	H := Floor(NumGet(rect, 12, "int") / Round(A_ScreenDPI / 96, 2))
 	}
+	DetectHiddenWindows, Off
 }
 
 HotkeyCtrlHasFocus()
@@ -332,9 +334,10 @@ ListIEWindows()
 GuiAddLV(ident)
 {
 	global
-	Gui, Tab, %ident%
+	Gui, chMacro:Default
+	Gui, chMacro:Tab, %ident%
 	Try
-		Gui, Add, ListView, x+0 y+0 AltSubmit Checked hwndListID%ident% vInputList%ident% gInputList W760 r26 NoSort LV0x10000, Index|Action|Details|Repeat|Delay|Type|Control|Window|Comment|Color
+		Gui, chMacro:Add, ListView, x+0 y+0 AltSubmit Checked hwndListID%ident% vInputList%ident% gInputList NoSort LV0x10000, Index|Action|Details|Repeat|Delay|Type|Control|Window|Comment|Color
 	LV_SetImageList(hIL_Icons)
 	Loop, 10
 		LV_ModifyCol(A_Index, Col_%A_Index%)
@@ -594,8 +597,8 @@ Receive_Params(wParam, lParam)
 	StringAddress := NumGet(lParam + 2*A_PtrSize)
 ,	CopyOfData := StrGet(StringAddress)
 	Gui, 1:Default
-	Gui, +OwnDialogs
-	Gui, Submit, NoHide
+	Gui, 1:+OwnDialogs
+	Gui, 1:Submit, NoHide
 	GoSub, SaveData
 	If ((ListCount > 0) && (SavePrompt))
 	{

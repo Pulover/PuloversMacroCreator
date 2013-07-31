@@ -821,7 +821,8 @@ DefaultBar := {FileOpt: "Enabled AutoSize", File: ["New=New:42", "Open=Open:43(E
 														, "", "Window=Window:81", "Image=ImageSearch:28", "Run=Run:59"
 														, "", "ComLoop=Loop:37", "ComGoto=Goto:22", "AddLabel=Label:35"
 														, "", "IfSt=If Statement:27", "AsVar=Assign Variable:76", "AsFunc=Functions:21"
-														, "", "IECom=Internet Explorer:26", "ComInt=COM Interface:4", "RunScrLet=Run Scriptlet:77", "SendMsg=Windows Messages:62"]
+														, "", "IECom=Internet Explorer:26", "ComInt=COM Interface:4", "RunScrLet=Run Scriptlet:77"
+														, "", "SendMsg=Windows Messages:62"]
 			, EditOpt: "Enabled AutoSize", Edit: ["TabPlus=Add Macro:67", "TabClose=Close Macro:69", "DuplicateList=Duplicate Macro:70"
 														, "", "Import=Import Macro:29", "SaveCurrentList=Save Current Macro:68"
 														, "" , "MoveUp=Move Up:41", "MoveDn=Move Down:40"

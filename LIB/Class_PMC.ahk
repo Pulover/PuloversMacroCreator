@@ -36,11 +36,12 @@
 		If New
 		{
 			GoSub, DelLists
-			GuiControl, Choose, A_List, 1
-			GuiControl,, A_List, |
+			GuiControl, chMacro:Choose, A_List, 1
+			GuiControl, chMacro:, A_List, |
 			TabCount := 0
 		}
-		Gui, +Disabled
+		Gui, 1:+Disabled
+		Gui, chMacro:Default
 		StringSplit, SelectedFile, SelectedFile, %DL%, `r
 		Loop, %SelectedFile0%
 		{
@@ -54,13 +55,12 @@
 			Loop, %FoundC%
 			{
 				TabCount++
-				Gui, ListView, InputList%TabCount%
+				Gui, chMacro:ListView, InputList%TabCount%
 				GuiCtrlAddTab(TabSel, "Macro" TabCount)
 				GuiAddLV(TabCount)
 				Menu, CopyMenu, Add, Macro%TabCount%, CopyList
 				PMC.LVLoad("InputList" TabCount, PmcCode[A_Index])
-				Sleep, 1
-				Gui, ListView, InputList%TabCount%
+				Gui, chMacro:ListView, InputList%TabCount%
 				ListCount%TabCount% := LV_GetCount()
 			,	Opt := PmcCode[A_Index].Opt
 			,	o_AutoKey[TabCount] := (Opt[2] <> "") ? Opt[2] : ""
@@ -75,16 +75,16 @@
 		If (TabCount = 0)
 			GoSub, TabPlus
 		GoSub, SetFinishButtom
-		GuiControl,, CoordTip, CoordMode: %CoordMouse%
-		Gui, -Disabled
+		GuiControl, 1:, CoordTip, CoordMode: %CoordMouse%
+		Gui, 1:-Disabled
 	}
 
 	LVLoad(List, Code)
 	{
 		Critical
-		Gui, 1:Default
-		Gui, ListView, %List%
-		GuiControl, -Redraw, %List%
+		Gui, chMacro:Default
+		Gui, chMacro:ListView, %List%
+		GuiControl, chMacro:-Redraw, %List%
 		LV_Delete()
 		For each, Col in Code.Row
 		{
@@ -93,14 +93,14 @@
 			chk := SubStr(Col[1], 1, 1)
 			LV_Add("Check" chk, Col*)
 		}
-		GuiControl, +Redraw, %List%
+		GuiControl, chMacro:+Redraw, %List%
 		Critical, Off
 	}
 
 	LVGet(List, DL="|")
 	{
-		Gui, 1:Default
-		Gui, ListView, %List%
+		Gui, chMacro:Default
+		Gui, chMacro:ListView, %List%
 		Row := []
 		Loop, % LV_GetCount()
 		{

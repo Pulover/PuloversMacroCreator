@@ -4,8 +4,8 @@
 	local LVData, Id_LVData, Indent, RowData, Action, Match, ExpValue
 	, Step, TimesX, DelayX, Type, Target, Window, Comment, sArray
 	, PAction, PType, PDelayX, PComment, Act, iCount, init_ie, ComExp
-	Gui, 1:Default
-	Gui, ListView, InputList%ListID%
+	Gui, chMacro:Default
+	Gui, chMacro:ListView, InputList%ListID%
 	ComType := ComCr ? "ComObjCreate" : "ComObjActive"
 	Loop, % LV_GetCount()
 	{
@@ -552,8 +552,8 @@ IncludeFiles(L, N)
 {
 	global cType21
 	
-	Gui, 1:Default
-	Gui, ListView, InputList%L%
+	Gui, chMacro:Default
+	Gui, chMacro:ListView, InputList%L%
 	Loop, %N%
 	{
 		If (LV_GetNext(A_Index-1, "Checked") <> A_Index)
