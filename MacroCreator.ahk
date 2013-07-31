@@ -527,16 +527,19 @@ Menu, LangMenu, Check, % Lang_%Lang%
 ;##### Main Window: #####
 
 Gui, +Resize +MinSize310x140 +HwndPMCWinID
+
 Gui, Add, Custom, ClassToolbarWindow32 hwndhTbFile gTbFile 0x0800 0x0100 0x0040 0x0008
 Gui, Add, Custom, ClassToolbarWindow32 hwndhTbScript 0x0800 0x0100 0x0040 0x0008 0x1000
 Gui, Add, Custom, ClassToolbarWindow32 hwndhTbRecPlay gTbRecPlay 0x0800 0x0100 0x0040 0x0008 0x1000
 Gui, Add, Custom, ClassToolbarWindow32 hwndhTbCommand 0x0800 0x0100 0x0040 0x0008
 Gui, Add, Custom, ClassToolbarWindow32 hwndhTbEdit 0x0800 0x0100 0x0040 0x0008
 Gui, Add, Custom, ClassReBarWindow32 hwndhRbMain vcRbMain gRB_Notify 0x0400 0x0040 0x8000
-
 Gui, Add, Custom, ClassReBarWindow32 hwndhRbMacro vcRbMacro gRB_Notify xm-10 ym+76 -Theme 0x0800 0x0400 0x0040 0x8000 0x0008 ; 0x0004
-Gui, Tab
-; Gui, Add, UpDown, ys+23 x+4 gOrder vOrder -16 Range0-1, 0
+
+Gui, Add, Hotkey, hwndhAutoKey vAutoKey gSaveData, % o_AutoKey[1]
+Gui, Add, Edit, hwndhJoyKey vJoyKey Hidden
+Gui, Add, Hotkey, hwndhManKey vManKey gWaitKeys Limit190, % o_ManKey[1]
+Gui, Add, Hotkey, hwndhAbortKey vAbortKey, %AbortKey%
 
 Gui, Add, Text, -Wrap y+129 xm W100 H22 Section vRepeat, %w_Lang015%:
 Gui, Add, Edit, ys-3 x+5 W90 R1 vRept Number
@@ -692,9 +695,11 @@ DefineToolbars:
 ,	TB_Define(TbCommand, hTbCommand, hIL_Icons, DefaultBar.Command, DefaultBar.CommandOpt)
 ,	TB_Define(TbEdit, hTbEdit, hIL_Icons, DefaultBar.Edit, DefaultBar.EditOpt)
 ,	RbMain := New Rebar(hRbMain)
-,	TB_Rebar(RbMain, 10, TbFile), TB_Rebar(RbMain, 20, TbScript)
-,	TB_Rebar(RbMain, 30, TbRecPlay), TB_Rebar(RbMain, 40, TbCommand, "Break")
-,	TB_Rebar(RbMain, 50, TbEdit, "Break"), RbMain.SetMaxRows(3)
+,	TB_Rebar(RbMain, 10, TbFile), TB_Rebar(RbMain, 11, TbScript)
+,	TB_Rebar(RbMain, 12, TbRecPlay), RbMain.InsertBand(hAutoKey, 0, "", 13, w_Lang006, 100, 0, "", "", 50)
+,	RbMain.InsertBand(hManKey, 0, "", 14, w_Lang007, 50, 0, "", "", 50), RbMain.InsertBand(hAbortKey, 0, "", 15, w_Lang008, 60, 0, "", "", 50)
+,	TB_Rebar(RbMain, 20, TbCommand, "Break")
+,	TB_Rebar(RbMain, 30, TbEdit, "Break"), RbMain.SetMaxRows(3)
 TBHwndAll := [TbFile, TbScript, TbRecPlay, TbCommand, TbEdit]
 return
 
@@ -732,7 +737,6 @@ GoSub, BuildPrevWin
 ,	RbMacro := New Rebar(hRbMacro)
 ,	RbMacro.InsertBand(hMacroCh, 0, "NoGripper", 100, "", gWidth, 0, "", rHeight, 0, Ideal)
 ,	RbMacro.InsertBand(PrevID, 0, "", 200, "", 0, 0, "", rHeight, 0)
-outputdebug, %gHeight%
 return
 
 BuildMacroWin:
@@ -7477,18 +7481,18 @@ return
 
 SaveData:
 Gui, 1:Default
-GuiControlGet, JHKOn,, JoyHK
+GuiControlGet, JHKOn, 1:, JoyHK
 If (JHKOn = 1)
 {
-	GuiControlGet, HK_AutoKey,, JoyKey
+	GuiControlGet, HK_AutoKey, 1:, JoyKey
 	If !RegExMatch(HK_AutoKey, "i)Joy\d+$")
 		HK_AutoKey := ""
 }
 Else
-	GuiControlGet, HK_AutoKey,, AutoKey
-GuiControlGet, ManKey,, ManKey
-GuiControlGet, TimesO,, TimesG
-GuiControlGet, Win1,, Win1
+	GuiControlGet, HK_AutoKey, 1:, AutoKey
+GuiControlGet, ManKey, 1:, ManKey
+GuiControlGet, TimesO, 1:, TimesG
+GuiControlGet, Win1, 1:, Win1
 o_AutoKey[A_List] := (Win1 = 1) ? "#" HK_AutoKey : HK_AutoKey
 If (o_AutoKey[A_List] = "#")
 	o_AutoKey[A_List] := "LWin"
@@ -10290,7 +10294,6 @@ GuiGetSize(GuiWidth, GuiHeight)
 ,	RbMacro.ModifyBand(1, "MinHeight", GuiHeight-MacroOffset)
 ,	RbMacro.ModifyBand(2, "MinHeight", GuiHeight-MacroOffset)
 GuiControl, 1:Move, cRbMacro, % "W" GuiWidth
-GuiControl, 1:Move, Order, % "x" GuiWidth-26
 GuiControl, 1:Move, Repeat, % "y" GuiHeight-23
 GuiControl, 1:Move, Rept, % "y" GuiHeight-27
 GuiControl, 1:Move, TimesM, % "y" GuiHeight-27
