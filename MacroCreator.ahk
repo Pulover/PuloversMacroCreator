@@ -524,17 +524,16 @@ Menu, LangMenu, Check, % Lang_%Lang%
 ;##### Main Window: #####
 
 Gui, +Resize +MinSize310x140 +HwndPMCWinID
-Gui, Add, Custom, ClassToolbarWindow32 hwndhTbFile gTB_Notify 0x0800 0x0100 0x0040 0x0008
+Gui, Add, Custom, ClassToolbarWindow32 hwndhTbFile gTbFile 0x0800 0x0100 0x0040 0x0008
 Gui, Add, Custom, ClassToolbarWindow32 hwndhTbScript 0x0800 0x0100 0x0040 0x0008 0x1000
-Gui, Add, Custom, ClassToolbarWindow32 hwndhTbRecPlay 0x0800 0x0100 0x0040 0x0008 0x1000
+Gui, Add, Custom, ClassToolbarWindow32 hwndhTbRecPlay gTbRecPlay 0x0800 0x0100 0x0040 0x0008 0x1000
 Gui, Add, Custom, ClassToolbarWindow32 hwndhTbCommand 0x0800 0x0100 0x0040 0x0008
-Gui, Add, Custom, ClassReBarWindow32 hwndhRbMain gRB_Notify 0x0400 0x0040 0x8000
+Gui, Add, Custom, ClassReBarWindow32 hwndhRbMain vcRbMain gRB_Notify 0x0400 0x0040 0x8000
 
 Gui, Add, Tab2, Section Buttons -Wrap AltSubmit xm ym+50 H22 W500 hwndTabSel vA_List gTabSel, Macro1
 Gui, Add, Custom, ClassReBarWindow32 hwndhRbMacro vcRbMacro gRB_Notify xm-10 y+0 -Theme 0x0800 0x0400 0x0040 0x8000 0x0008 ; 0x0004
 Gui, Tab
 ; Gui, Add, UpDown, ys+23 x+4 gOrder vOrder -16 Range0-1, 0
-; Gui, Add, Custom, ClassToolbarWindow32 hwndhTbEdit x+653 y+0 W25 H500 0x0080 0x0800 0x0100 0x0040 0x0008 0x0004
 
 Gui, Add, Text, -Wrap y+129 xm W100 H22 Section vRepeat, %w_Lang015%:
 Gui, Add, Edit, ys-3 x+5 W90 R1 vRept Number
@@ -687,7 +686,6 @@ DefineToolbars:
 ,	TB_Define(TbScript, hTbScript, hIL_Icons, DefaultBar.Script, DefaultBar.ScriptOpt, 1)
 ,	TB_Define(TbRecPlay, hTbRecPlay, hIL_Icons, DefaultBar.RecPlay, DefaultBar.RecPlayOpt, 1)
 ,	TB_Define(TbCommand, hTbCommand, hIL_Icons, DefaultBar.Command, DefaultBar.CommandOpt)
-,	TB_Define(TbEdit, hTbEdit, hIL_Icons, DefaultBar.Edit, DefaultBar.EditOpt)
 ,	RbMain := New Rebar(hRbMain)
 ,	TB_Rebar(RbMain, 10, TbFile), TB_Rebar(RbMain, 20, TbScript)
 ,	TB_Rebar(RbMain, 30, TbRecPlay), TB_Rebar(RbMain, 40, TbCommand, "Break")
@@ -695,16 +693,29 @@ DefineToolbars:
 TBHwndAll := [TbFile, TbScript, TbRecPlay, TbCommand, TbEdit]
 return
 
-TB_Notify:
-ErrorLevel := TbFile.OnNotify(A_EventInfo, MX, MY, Label, ID)
+TbFile:
+TbRecPlay:
+TbPtr := %A_ThisLabel%
+,	ErrorLevel := TbPtr.OnNotify(A_EventInfo, MX, MY, Label, ID)
 If (Label)
 	ShowMenu(Label, MX, MY)
 return
 
 RB_Notify:
 If (A_GuiEvent = "N")
+{
 	If (RbMain.OnNotify(A_EventInfo, tbMX, tbMY, BandID))
-		ShowChevronMenu(BandID, tbMX, tbMY)
+		ShowChevronMenu(RbMain, BandID, tbMX, tbMY)
+	Else If (RbMacro.OnNotify(A_EventInfo, tbMX, tbMY, BandID))
+		ShowChevronMenu(RbMacro, BandID, tbMX)
+	If (NumGet(A_EventInfo + (A_PtrSize * 2), 0, "Int") = -831)
+	{
+		GuiControl, Move, A_List, % (RbMain.GetRowCount() = 1) ? "y30" : "y60"
+		GuiControl, Move, cRbMacro, % (RbMain.GetRowCount() = 1) ? "y50" : "y80"
+		MacroOffset := (RbMain.GetRowCount() = 1) ? 85 : 115
+		GoSub, GuiSize
+	}
+}
 return
 
 ;##### Other controls #####
@@ -712,18 +723,18 @@ return
 DefineControls:
 GoSub, BuildMacroWin
 GoSub, BuildPrevWin
-GuiGetSize(gWidth, gHeight), rHeight := gHeight-115
+	TB_Define(TbEdit, hTbEdit, hIL_Icons, DefaultBar.Edit, DefaultBar.EditOpt)
+,	GuiGetSize(gWidth, gHeight), rHeight := gHeight-115, Ideal := TB_GetSize(TbEdit)
 ,	RbMacro := New Rebar(hRbMacro)
-,	RbMacro.InsertBand(hMacroCh, 0, "NoGripper", 100, "", gWidth, 0, "", rHeight)
+,	RbMacro.InsertBand(hMacroCh, 0, "NoGripper", 100, "", gWidth, 0, "", rHeight, 0, Ideal)
 ,	RbMacro.InsertBand(PrevID, 0, "", 200, "", 0, 0, "", rHeight, 0)
-; ,	RbMacro.InsertBand(ListID1, 0, "", 200, "", gWidth, 0, "", rHeight)
 return
 
 BuildMacroWin:
 Gui, chMacro:+LastFound
 Gui, chMacro:+hwndhMacroCh -Caption +0x40000000 -0x80000000
-Gui, chMacro:Add, Custom, ClassToolbarWindow32 y0 h20 hwndhTbEdit 0x0800 0x0100 0x0040 0x0008
-Gui, chMacro:Add, ListView, AltSubmit Checked xm y+5 hwndListID1 vInputList1 gInputList NoSort LV0x10000, Index|Action|Details|Repeat|Delay|Type|Control|Window|Comment|Color
+Gui, chMacro:Add, Custom, ClassToolbarWindow32 y0 h20 w660 hwndhTbEdit 0x0800 0x0100 0x0040 0x0008 
+Gui, chMacro:Add, ListView, AltSubmit Checked xm y+10 hwndListID1 vInputList1 gInputList NoSort LV0x10000, Index|Action|Details|Repeat|Delay|Type|Control|Window|Comment|Color
 Gui, chMacro:Default
 LV_SetImageList(hIL_Icons)
 Loop, 10
@@ -10224,7 +10235,9 @@ return
 
 chMacroGuiSize:
 Critical
-GuiControl, Move, InputList%A_List%, % "H" A_GuiHeight-30 "W" A_GuiWidth-15
+GuiGetSize(GuiWidth, GuiHeight, "chMacro")
+GuiControl, Move, InputList%A_List%, % "W" GuiWidth-15 "H" GuiHeight-30
+GuiControl, Move, %hTbEdit%, % "W" GuiWidth
 return
 
 GuiSize:
@@ -10233,10 +10246,10 @@ If A_EventInfo = 1
 Critical 1000
 GuiGetSize(GuiWidth, GuiHeight)
 ,	RbMain.ShowBand(1)
-,	RbMacro.ModifyBand(1, "MinHeight", GuiHeight-115)
-,	RbMacro.ModifyBand(2, "MinHeight", GuiHeight-115)
+,	RbMacro.ModifyBand(1, "MinHeight", GuiHeight-MacroOffset)
+,	RbMacro.ModifyBand(2, "MinHeight", GuiHeight-MacroOffset)
 Gui, 1:Default
-GuiControl, Move, %hRbMacro%, % "W" GuiWidth
+GuiControl, Move, cRbMacro, % "W" GuiWidth
 GuiControl, Move, Order, % "x" GuiWidth-26
 GuiControl, Move, %hTbEdit%, % "x" GuiWidth-26
 GuiControl, Move, Repeat, % "y" GuiHeight-23

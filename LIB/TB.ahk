@@ -7,16 +7,22 @@
 
 TB_Rebar(RbPtr, BandID, tbChild, Options="", Text="")
 {
-	tbWidth := 0
-	loop, % tbChild.GetCount()
-	{
-		tbChild.GetButtonPos(A_Index, "", "", btnWidth)
-	,	tbWidth += btnWidth
-	}
+	tbWidth := TB_GetSize(tbChild)
 	tbChild.Get("", "", "", tbBtnWidth, tbBtnHeight)
 ,	NumButtons := tbChild.GetCount()
 ,	RbPtr.InsertBand(tbChild.tbHwnd, 0, Options, BandID, Text
 	,	tbWidth+16, 0, "", tbBtnHeight, tbBtnWidth, tbWidth)
+}
+
+TB_GetSize(tbHwnd)
+{
+	tbWidth := 0
+	Loop, % tbHwnd.GetCount()
+	{
+		tbHwnd.GetButtonPos(A_Index, "", "", btnWidth)
+	,	tbWidth += btnWidth
+	}
+	return tbWidth
 }
 
 TB_Messages(wParam, lParam, msg, hwnd)

@@ -618,6 +618,7 @@ LV_ColorsMessage(wParam, lParam)
 {
 	Static NM_CUSTOMDRAW := -12
 	Static LVN_COLUMNCLICK := -108
+	Critical, 1000
 	If LV_Colors.HasKey(H := NumGet(lParam + 0, 0, "UPtr"))
 	{
 		M := NumGet(lParam + (A_PtrSize * 2), 0, "Int")
@@ -637,12 +638,15 @@ ShowMenu(Menu, X, Y)
 	Menu, TestMenu, DeleteAll
 }
 
-ShowChevronMenu(BandID, X, Y)
+ShowChevronMenu(rbPtr, BandID, X="", Y="")
 {
-	Global RbMain
-	Band := RbMain.IDToIndex(BandID)
-	RbMain.GetBand(Band, "", "", "", "", "", "", hChild)
-	If (tbPtr := TB_GetHwnd(hChild))
+	Global TbEdit
+	Band := rbPtr.IDToIndex(BandID)
+,	rbPtr.GetBand(Band, "", "", "", "", "", "", hChild)
+	tbPtr := TB_GetHwnd(hChild)
+	If !IsObject(tbPtr)
+		tbPtr := TbEdit
+	If (tbPtr)
 	{
 		HidBtns := tbPtr.GetHiddenButtons()
 		Loop, % HidBtns.MaxIndex()

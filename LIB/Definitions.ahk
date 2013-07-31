@@ -822,7 +822,10 @@ DefaultBar := {FileOpt: "Enabled AutoSize", File: ["New=New:42", "Open=Open:43(E
 														, "", "ComLoop=Loop:37", "ComGoto=Goto:22", "AddLabel=Label:35"
 														, "", "IfSt=If Statement:27", "AsVar=Assign Variable:76", "AsFunc=Functions:21"
 														, "", "IECom=Internet Explorer:26", "ComInt=COM Interface:4", "RunScrLet=Run Scriptlet:77", "SendMsg=Windows Messages:62"]
-			, EditOpt: "Enabled AutoSize", Edit: ["CutRows=Cut:9", "CopyRows=Copy:8", "PasteRows=Paste:45", "Remove=Delete:10"
+			, EditOpt: "Enabled AutoSize", Edit: ["TabPlus=Add Macro:67", "TabClose=Close Macro:69", "DuplicateList=Duplicate Macro:70"
+														, "", "Import=Import Macro:29", "SaveCurrentList=Save Current Macro:68"
+														, "" , "MoveUp=Move Up:41", "MoveDn=Move Down:40"
+														, "", "CutRows=Cut:9", "CopyRows=Copy:8", "PasteRows=Paste:45", "Remove=Delete:10"
 														, "", "Undo=Undo:75", "Redo=Redo:57"
 														, "", "Duplicate=Duplicate:13", "CopyTo=Copy to...:8(Enabled WholeDropdown)"
 														, "", "EditColor=Edit Color:3", "EditComm=Edit Comment:5", "FindReplace=Find/Replace:19"]}
