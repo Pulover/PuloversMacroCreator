@@ -813,8 +813,8 @@ Loop, Parse, MsgList, `n
 
 Sort, WM_Msgs, D|
 
-DefaultBar := {FileOpt: "Enabled AutoSize", File: ["New=New:42", "Open=Open:43(Enabled Dropdown)", "Save=Save:60(Enabled Dropdown)"]
-			, ScriptOpt: "Enabled AutoSize ShowText", Script: ["Export=Export:16", "Preview=Preview:50", "Options=Options:44"]
+DefaultBar := {FileOpt: "Enabled AutoSize", File: ["New=New:42", "Open=Open:43(Enabled Dropdown)", "Save=Save:60(Enabled Dropdown)"
+													, "", "Export=Export:16", "Preview=Preview:50", "Options=Options:44"]
 			, RecPlayOpt: "Enabled AutoSize ShowText Dropdown", RecPlay: ["Record=Record:55", "PlayStart=Play:47"]
 			, CommandOpt: "Enabled AutoSize", Command: ["Mouse=Mouse:39", "Text=Text:71", "ControlCmd=Control:7"
 														, "", "Pause=Pause:46", "MsgBox=Message:11", "KeyWait=Key Wait:78"

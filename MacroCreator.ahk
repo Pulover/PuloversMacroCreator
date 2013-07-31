@@ -529,7 +529,6 @@ Menu, LangMenu, Check, % Lang_%Lang%
 Gui, +Resize +MinSize310x140 +HwndPMCWinID
 
 Gui, Add, Custom, ClassToolbarWindow32 hwndhTbFile gTbFile 0x0800 0x0100 0x0040 0x0008
-Gui, Add, Custom, ClassToolbarWindow32 hwndhTbScript 0x0800 0x0100 0x0040 0x0008 0x1000
 Gui, Add, Custom, ClassToolbarWindow32 hwndhTbRecPlay gTbRecPlay 0x0800 0x0100 0x0040 0x0008 0x1000
 Gui, Add, Custom, ClassToolbarWindow32 hwndhTbCommand 0x0800 0x0100 0x0040 0x0008
 Gui, Add, Custom, ClassToolbarWindow32 hwndhTbEdit 0x0800 0x0100 0x0040 0x0008
@@ -567,7 +566,6 @@ Gui, Add, Text, -Wrap yp+16 W100 vCoordTip gOptions, CoordMode: %CoordMouse%
 GuiControl,, Win1, % (InStr(o_AutoKey[1], "#")) ? 1 : 0
 GuiControl, Focus, InputList%A_List%
 Gui, Submit
-GoSub, LoadData
 GoSub, b_Start
 OnMessage(WM_COMMAND, "TB_Messages")
 ; OnMessage(WM_NOTIFY, "Notifications")
@@ -637,6 +635,7 @@ Menu, Tray, Icon
 Gui, Show, % ((WinState) ? "Maximize" : "W940 H630") ((HideWin) ? "Hide" : ""), %AppName% v%CurrentVersion% %CurrentFileName%
 GoSub, DefineControls
 GoSub, DefineToolbars
+GoSub, LoadData
 Gui, 1:Default
 GuiControl, +ReadOnly, JoyKey
 GoSub, RowCheck
@@ -690,17 +689,18 @@ return
 
 DefineToolbars:
 	TB_Define(TbFile, hTbFile, hIL_Icons, DefaultBar.File)
-,	TB_Define(TbScript, hTbScript, hIL_Icons, DefaultBar.Script, DefaultBar.ScriptOpt, 1)
 ,	TB_Define(TbRecPlay, hTbRecPlay, hIL_Icons, DefaultBar.RecPlay, DefaultBar.RecPlayOpt, 1)
 ,	TB_Define(TbCommand, hTbCommand, hIL_Icons, DefaultBar.Command, DefaultBar.CommandOpt)
 ,	TB_Define(TbEdit, hTbEdit, hIL_Icons, DefaultBar.Edit, DefaultBar.EditOpt)
 ,	RbMain := New Rebar(hRbMain)
-,	TB_Rebar(RbMain, 10, TbFile), TB_Rebar(RbMain, 11, TbScript)
-,	TB_Rebar(RbMain, 12, TbRecPlay), RbMain.InsertBand(hAutoKey, 0, "", 13, w_Lang006, 100, 0, "", "", 50)
-,	RbMain.InsertBand(hManKey, 0, "", 14, w_Lang007, 50, 0, "", "", 50), RbMain.InsertBand(hAbortKey, 0, "", 15, w_Lang008, 60, 0, "", "", 50)
+,	TB_Rebar(RbMain, 10, TbFile), TB_Rebar(RbMain, 11, TbRecPlay)
+,	RbMain.InsertBand(hAutoKey, 0, "", 12, w_Lang006, 100, 0, "", "", 50)
+,	RbMain.InsertBand(hManKey, 0, "", 13, w_Lang007, 50, 0, "", "", 50)
+,	RbMain.InsertBand(hAbortKey, 0, "", 14, w_Lang008, 60, 0, "", "", 50)
+,	RbMain.InsertBand(hTimesCh, 0, "FixedSize NoGripper", 15, w_Lang011 " (" t_Lang004 ")", 75, 0, "", "", 75)
 ,	TB_Rebar(RbMain, 20, TbCommand, "Break")
 ,	TB_Rebar(RbMain, 30, TbEdit, "Break"), RbMain.SetMaxRows(3)
-TBHwndAll := [TbFile, TbScript, TbRecPlay, TbCommand, TbEdit]
+TBHwndAll := [TbFile, TbRecPlay, TbCommand, TbEdit]
 return
 
 TbFile:
@@ -733,6 +733,7 @@ return
 DefineControls:
 GoSub, BuildMacroWin
 GoSub, BuildPrevWin
+GoSub, BuildMixedControls
 	GuiGetSize(gWidth, gHeight), rHeight := gHeight-90, Ideal := TB_GetSize(TbEdit)
 ,	RbMacro := New Rebar(hRbMacro)
 ,	RbMacro.InsertBand(hMacroCh, 0, "NoGripper", 100, "", gWidth, 0, "", rHeight, 0, Ideal)
@@ -750,6 +751,13 @@ Loop, 10
 	LV_ModifyCol(A_Index, Col_%A_Index%)
 Gui, chMacro:Submit
 Gui, 1:Default
+return
+
+BuildMixedControls:
+Gui, chTimes:+LastFound
+Gui, chTimes:+hwndhTimesCh -Caption +0x40000000 -0x80000000
+Gui, chTimes:Add, Edit, x0 y0 W75 H25 Number vReptC
+Gui, chTimes:Add, UpDown, vTimesG 0x80 Range0-999999999, 1
 return
 
 Preview:
@@ -7480,6 +7488,7 @@ If WinExist("ahk_id " PrevID)
 return
 
 SaveData:
+Gui, chMacro:Submit, NoHide
 Gui, 1:Default
 GuiControlGet, JHKOn, 1:, JoyHK
 If (JHKOn = 1)
@@ -7502,6 +7511,7 @@ If WinExist("ahk_id " PrevID)
 return
 
 LoadData:
+Gui, chMacro:Submit, NoHide
 Gui, 1:Default
 If InStr(o_AutoKey[A_List], "Joy")
 {
@@ -8355,6 +8365,8 @@ GoSub, SaveData
 return
 
 SetJoyHK:
+Gui, chMacro:Submit, NoHide
+Gui, 1:Default
 GuiControl, Hide, AutoKey
 GuiControl, Disable, AutoKey
 GuiControl,, Win1, 0
@@ -8366,6 +8378,8 @@ ActivateHotkeys("", "", "", "", 1)
 return
 
 SetNoJoy:
+Gui, chMacro:Submit, NoHide
+Gui, 1:Default
 GuiControl, Enable, AutoKey
 GuiControl, Show, AutoKey
 GuiControl, Hide, JoyKey
@@ -9822,7 +9836,6 @@ AbortKey := "F8"
 ,	OSCaption := 0
 ,	CustomColors := 0
 ,	OnFinishCode := 1
-GoSub, SetFinishButtom
 Gui 28:+LastFoundExist
 IfWinExist
 {
@@ -9832,6 +9845,7 @@ IfWinExist
 	Gui, 28:-Caption
 	Gui, 28:Show, % OSCPos (ShowProgBar ? "H40" : "H30") " W415 NoActivate", %AppName%
 }
+outputdebug, % ">> " AutoKey
 GuiControl, 1:, CoordTip, CoordMode: %CoordMouse%
 GuiControl, 1:, ContextTip, #IfWin: %IfDirectContext%
 GuiControl, 1:, AbortKey, %AbortKey%
@@ -9856,6 +9870,7 @@ Loop, %TabCount%
 		LV_ModifyCol(A_Index, Col_%A_Index%)
 }
 Gui, chMacro:ListView, InputList%A_List%
+GoSub, SetFinishButtom
 return
 
 DefaultMod:
