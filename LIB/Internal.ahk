@@ -38,7 +38,13 @@ ShowTooltip()
 	return
 }
 
-DragToolBar()
+RebarLock(rbPtr, Lock=True)
+{
+	Loop, % rbPtr.GetBandCount()
+		rbPtr.ModifyBand(A_Index, "Style", "NoGripper", Lock)
+}
+
+DragToolbar()
 {
 	global PMCOSC
 	

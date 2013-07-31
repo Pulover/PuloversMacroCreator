@@ -5,7 +5,7 @@
 ; Author:            Pulover [Rodolfo U. Batista]
 ;                    rodolfoub@gmail.com
 ; AHK version:       1.1.11.00
-; Release date:      29 July 2013
+; Release date:      31 July 2013
 ;
 ;                    Class for AutoHotkey Rebar custom controls
 ;=======================================================================================
@@ -28,7 +28,7 @@
 ;               , MinWidth, IdealSize])
 ;    MaximizeBand(Band [, IdealWidth])
 ;    MinimizeBand(Band)
-;    ModifyBand(Band, Property, Value)
+;    ModifyBand(Band, Property, Value [, SetStyle])
 ;    MoveBand(Band, Target)
 ;    OnNotify(Param [, MenuXPos, MenuYPos, ID)
 ;    SetBandWidth(Band, Width)
@@ -249,9 +249,11 @@ Class Rebar extends Rebar.Private
 ;        Value:          The value to be set in the selected Property.
 ;                            If Property is Style you can enter named values as
 ;                            in the InsertBand options.
+;        SetStyle:       Only valid if Property is Style. Determines whether to add or
+;                            remove the styles.
 ;    Return:             TRUE if successful, FALSE if there was a problem.
 ;=======================================================================================
-    ModifyBand(Band, Property, Value)
+    ModifyBand(Band, Property, Value, SetStyle=True)
     {
         If (Property = "Style")
         {
@@ -266,6 +268,11 @@ Class Rebar extends Rebar.Private
                 }
                 Value := rbStyle
             }
+            this.GetBand(Band, "", "", "", "", "", bdStyle)
+            If (SetStyle)
+                Value |= bdStyle
+            Else
+                Value ^= bdStyle
         }
         If ((this[ "RBBIM_" Property ]) || (Property = "MinWidth") || (Property = "MinHeight"))
             %Property% := Value

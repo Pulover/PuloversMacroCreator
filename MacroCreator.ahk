@@ -739,7 +739,6 @@ Gui, chMacro:Default
 LV_SetImageList(hIL_Icons)
 Loop, 10
 	LV_ModifyCol(A_Index, Col_%A_Index%)
-	LV_Add("", 1, "Test")
 Gui, 1:Default
 return
 

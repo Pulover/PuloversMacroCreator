@@ -14,12 +14,12 @@ TB_Rebar(RbPtr, BandID, tbChild, Options="", Text="")
 	,	tbWidth+16, 0, "", tbBtnHeight, tbBtnWidth, tbWidth)
 }
 
-TB_GetSize(tbHwnd)
+TB_GetSize(tbPtr)
 {
 	tbWidth := 0
-	Loop, % tbHwnd.GetCount()
+	Loop, % tbPtr.GetCount()
 	{
-		tbHwnd.GetButtonPos(A_Index, "", "", btnWidth)
+		tbPtr.GetButtonPos(A_Index, "", "", btnWidth)
 	,	tbWidth += btnWidth
 	}
 	return tbWidth
