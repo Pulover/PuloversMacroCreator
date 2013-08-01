@@ -9610,6 +9610,8 @@ If (TakeAction = "Continue")
 	TakeAction := 0
 Else If (TakeAction = "Stop")
 	StopIt := 1
+Else If (TakeAction = "Break")
+	BreakIt++
 Else If (TakeAction = "Prompt")
 {
 	If (SearchResult = 0)

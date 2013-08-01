@@ -36,6 +36,10 @@ Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jör
 
 # Change Log
 
+## Version 3.8.2
+
+* Fixed bug: Break option of *Image/Pixel Search* command not working for loops.
+
 ## Version 3.8.1
 
 * Added exclamation as parameter to run Timer immediately in command line (e.g.: -t5000!).
