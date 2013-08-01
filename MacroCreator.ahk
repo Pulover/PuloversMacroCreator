@@ -567,7 +567,10 @@ Gui, Add, Text, -Wrap yp+16 W100 vCoordTip gOptions, CoordMode: %CoordMouse%
 GuiControl,, Win1, % (InStr(o_AutoKey[1], "#")) ? 1 : 0
 GuiControl, Focus, InputList%A_List%
 Gui, Submit
+Gui, Show, W940 H630 Hide
 GoSub, b_Start
+GoSub, DefineControls
+GoSub, DefineToolbars
 OnMessage(WM_COMMAND, "TB_Messages")
 ; OnMessage(WM_NOTIFY, "Notifications")
 OnMessage(WM_MOUSEMOVE, "ShowTooltip")
@@ -634,8 +637,6 @@ Else
 }
 Menu, Tray, Icon
 Gui, 1:Show, % ((WinState) ? "Maximize" : "W940 H630") ((HideWin) ? "Hide" : ""), %AppName% v%CurrentVersion% %CurrentFileName%
-GoSub, DefineControls
-GoSub, DefineToolbars
 GoSub, LoadData
 Gui, 1:Default
 GuiControl, +ReadOnly, JoyKey
