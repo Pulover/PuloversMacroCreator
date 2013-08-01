@@ -334,6 +334,7 @@ ListIEWindows()
 GuiAddLV(ident)
 {
 	global
+	Critical
 	Gui, chMacro:Default
 	Gui, chMacro:Tab, %ident%
 	Try

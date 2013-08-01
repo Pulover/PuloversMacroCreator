@@ -22,6 +22,7 @@ TB_GetSize(tbPtr)
 		tbPtr.GetButtonPos(A_Index, "", "", btnWidth)
 	,	tbWidth += btnWidth
 	}
+	outputdebug, % tbPtr.GetCount()
 	return tbWidth
 }
 

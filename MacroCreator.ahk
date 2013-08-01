@@ -531,6 +531,7 @@ Gui, +Resize +MinSize310x140 +HwndPMCWinID
 Gui, Add, Custom, ClassToolbarWindow32 hwndhTbFile gTbFile 0x0800 0x0100 0x0040 0x0008
 Gui, Add, Custom, ClassToolbarWindow32 hwndhTbRecPlay gTbRecPlay 0x0800 0x0100 0x0040 0x0008 0x1000
 Gui, Add, Custom, ClassToolbarWindow32 hwndhTbCommand 0x0800 0x0100 0x0040 0x0008
+Gui, Add, Custom, ClassToolbarWindow32 hwndhTbSet 0x0800 0x0100 0x0040 0x0008
 Gui, Add, Custom, ClassToolbarWindow32 hwndhTbEdit 0x0800 0x0100 0x0040 0x0008
 Gui, Add, Custom, ClassReBarWindow32 hwndhRbMain vcRbMain gRB_Notify 0x0400 0x0040 0x8000
 Gui, Add, Custom, ClassReBarWindow32 hwndhRbMacro vcRbMacro gRB_Notify xm-10 ym+76 -Theme 0x0800 0x0400 0x0040 0x8000 0x0008 ; 0x0004
@@ -632,7 +633,7 @@ Else
 	HistoryMacro1.Add()
 }
 Menu, Tray, Icon
-Gui, Show, % ((WinState) ? "Maximize" : "W940 H630") ((HideWin) ? "Hide" : ""), %AppName% v%CurrentVersion% %CurrentFileName%
+Gui, 1:Show, % ((WinState) ? "Maximize" : "W940 H630") ((HideWin) ? "Hide" : ""), %AppName% v%CurrentVersion% %CurrentFileName%
 GoSub, DefineControls
 GoSub, DefineToolbars
 GoSub, LoadData
@@ -691,6 +692,7 @@ DefineToolbars:
 	TB_Define(TbFile, hTbFile, hIL_Icons, DefaultBar.File)
 ,	TB_Define(TbRecPlay, hTbRecPlay, hIL_Icons, DefaultBar.RecPlay, DefaultBar.RecPlayOpt, 1)
 ,	TB_Define(TbCommand, hTbCommand, hIL_Icons, DefaultBar.Command, DefaultBar.CommandOpt)
+,	TB_Define(TbSet, hTbSet, hIL_Icons, DefaultBar.Settings, DefaultBar.SetOpt)
 ,	TB_Define(TbEdit, hTbEdit, hIL_Icons, DefaultBar.Edit, DefaultBar.EditOpt)
 ,	RbMain := New Rebar(hRbMain)
 ,	TB_Rebar(RbMain, 10, TbFile), TB_Rebar(RbMain, 11, TbRecPlay)
@@ -698,13 +700,14 @@ DefineToolbars:
 ,	RbMain.InsertBand(hManKey, 0, "", 13, w_Lang007, 50, 0, "", "", 50)
 ,	RbMain.InsertBand(hAbortKey, 0, "", 14, w_Lang008, 60, 0, "", "", 50)
 ,	RbMain.InsertBand(hTimesCh, 0, "FixedSize NoGripper", 15, w_Lang011 " (" t_Lang004 ")", 75, 0, "", "", 75)
-,	TB_Rebar(RbMain, 20, TbCommand, "Break")
-,	TB_Rebar(RbMain, 30, TbEdit, "Break"), RbMain.SetMaxRows(3)
-TBHwndAll := [TbFile, TbRecPlay, TbCommand, TbEdit]
+,	TB_Rebar(RbMain, 20, TbCommand, "Break"), TB_Rebar(RbMain, 30, TbSet)
+,	TB_Rebar(RbMain, 40, TbEdit, "Break"), RbMain.SetMaxRows(3)
+TBHwndAll := [TbFile, TbRecPlay, TbCommand, TbSet, TbEdit]
 return
 
 TbFile:
 TbRecPlay:
+TbPrev:
 TbPtr := %A_ThisLabel%
 ,	ErrorLevel := TbPtr.OnNotify(A_EventInfo, MX, MY, Label, ID)
 If (Label)
@@ -736,8 +739,8 @@ GoSub, BuildPrevWin
 GoSub, BuildMixedControls
 	GuiGetSize(gWidth, gHeight), rHeight := gHeight-90, Ideal := TB_GetSize(TbEdit)
 ,	RbMacro := New Rebar(hRbMacro)
-,	RbMacro.InsertBand(hMacroCh, 0, "NoGripper", 100, "", gWidth, 0, "", rHeight, 0, Ideal)
-,	RbMacro.InsertBand(PrevID, 0, "", 200, "", 0, 0, "", rHeight, 0)
+,	RbMacro.InsertBand(hMacroCh, 0, "NoGripper", 20, "", gWidth, 0, "", rHeight, 0, Ideal)
+,	RbMacro.InsertBand(PrevID, 0, "", 21, "", 0, 0, "", rHeight, 0)
 return
 
 BuildMacroWin:
@@ -783,16 +786,22 @@ return
 BuildPrevWin:
 Gui, 2:+LastFound
 Gui, 2:+hwndPrevID -Caption +0x40000000 -0x80000000
-Gui, 2:Add, Button, -Wrap Section W60 H25 gPrevClose, %c_Lang022%
-Gui, 2:Add, Button, -Wrap ys W25 H25 hwndPrevCopy vPrevCopy gPrevCopy
-	ILButton(PrevCopy, CopyIcon[1] ":" CopyIcon[2])
-Gui, 2:Add, Button, -Wrap ys W25 H25 hwndPrevRefresh vPrevRefresh gPrevRefresh
-	ILButton(PrevRefresh, LoopIcon[1] ":" LoopIcon[2])
-Gui, 2:Add, Checkbox, -Wrap ys+5 W95 vAutoRefresh R1, %t_Lang015%
-Gui, 2:Add, Checkbox, -Wrap ys+5 xp+100 W105 vOnTop gOnTop R1, %t_Lang016%
-Gui, 2:Add, Checkbox, -Wrap Checked%TabIndent% ys+5 xp+110 W85 vTabIndent gPrevRefresh R1, %t_Lang011%
-Gui, 2:Add, Custom, ClassScintilla xm hwndhSciPrev vLVPrev W460 R40
-sciPrev := new scintilla(hSciPrev)
+Gui, 2:Add, Button, -Wrap Section W60 H25 hwndhPrevClose gPrevClose, %c_Lang022%
+Gui, 2:Add, Custom, ClassToolbarWindow32 hwndhTbPrev gTbPrev 0x0800 0x0100 0x0040 0x0008
+Gui, 2:Add, Custom, ClassReBarWindow32 hwndhRbPrev gRB_Notify -Theme 0x0800 0x0400 0x0040 0x8000
+; Gui, 2:Add, Button, -Wrap ys W25 H25 hwndPrevCopy vPrevCopy gPrevCopy
+	; ILButton(PrevCopy, CopyIcon[1] ":" CopyIcon[2])
+; Gui, 2:Add, Button, -Wrap ys W25 H25 hwndPrevRefresh vPrevRefresh gPrevRefresh
+	; ILButton(PrevRefresh, LoopIcon[1] ":" LoopIcon[2])
+; Gui, 2:Add, Checkbox, -Wrap ys+5 W95 vAutoRefresh R1, %t_Lang015%
+; Gui, 2:Add, Checkbox, -Wrap ys+5 xp+100 W105 vOnTop gOnTop R1, %t_Lang016%
+; Gui, 2:Add, Checkbox, -Wrap Checked%TabIndent% ys+5 xp+110 W85 vTabIndent gPrevRefresh R1, %t_Lang011%
+Gui, 2:Add, Custom, ClassScintilla x0 y30 hwndhSciPrev vLVPrev
+Gui, 2:Show, Hide
+TB_Define(TbPrev, hTbPrev, hIL_Icons, DefaultBar.Preview, DefaultBar.PrevOpt)
+,	RbPrev := New Rebar(hRbPrev), RbPrev.InsertBand(hPrevClose, 0, "NoGripper", 30, "", 50, 0, "", "", 50)
+,	TB_Rebar(RbPrev, 31, TbPrev, "NoGripper")
+,	sciPrev := new scintilla(hSciPrev)
 ,	sciPrev.SetMarginWidthN(0, 20)
 ,	sciPrev.SetWrapMode(False)
 ,	sciPrev.SetLexer(200)
@@ -1370,11 +1379,11 @@ If (KeepDefKeys = 1)
 }
 GoSub, LoadData
 GoSub, KeepHkOn
-GuiControl,, Capt, 0
-GuiControl,, TimesG, 1
+GuiControl, 1:, Capt, 0
+GuiControl, 1:, TimesG, 1
 CurrentFileName = 
-Gui, Show, % ((WinExist("ahk_id" PMCWinID)) ? "" : "Hide"), %AppName% v%CurrentVersion%
-GuiControl, Focus, InputList%A_List%
+Gui, 1:Show, % ((WinExist("ahk_id" PMCWinID)) ? "" : "Hide"), %AppName% v%CurrentVersion%
+GuiControl, chMacro:Focus, InputList%A_List%
 GoSub, b_Start
 FreeMemory()
 OnFinishCode := 1
@@ -1525,7 +1534,7 @@ Loop, %TabCount%
 	LV_Data := PMCSet . PMC.LVGet("InputList" A_Index).Text . "`n"
 	FileAppend, %LV_Data%, %CurrentFileName%
 }
-Gui, Show, % ((WinExist("ahk_id" PMCWinID)) ? "NA" : "Hide"), %AppName% v%CurrentVersion% %CurrentFileName%
+Gui, 1:Show, % ((WinExist("ahk_id" PMCWinID)) ? "NA" : "Hide"), %AppName% v%CurrentVersion% %CurrentFileName%
 SplitPath, CurrentFileName,, wDir
 SetWorkingDir %wDir%
 SavePrompt := False
@@ -1592,7 +1601,9 @@ If ((ListCount > 0) && (SavePrompt))
 Input
 PMC.Import(RegExReplace(A_ThisMenuItem, "^\d+:\s"))
 CurrentFileName := LoadedFileName, Files := ""
+GoSub, b_Start
 GoSub, FileRead
+GoSub, RowCheck
 return
 
 Export:
@@ -1885,7 +1896,7 @@ Loop, % LV_GetCount()
 {
 	GuiControl, 14:, ExpProgress, +%ProgRatio%
 	Gui, 14:Default
-	Gui, ListView, ExpList
+	Gui, 14:ListView, ExpList
 	RowNumber := LV_GetNext(RowNumber, "Checked")
 	If ((A_Index = 1) && (RowNumber = 0))
 	{
@@ -7399,6 +7410,9 @@ GuiControl, Focus, InputList%A_List%
 return
 
 Undo:
+Gui, 1:Submit, NoHide
+Gui, chMacro:Default
+Gui, chMacro:Listview, InputList%A_List%
 GuiControl, chMacro:-Redraw, InputList%A_List%
 HistoryMacro%A_List%.Undo()
 GoSub, RowCheck
@@ -7407,6 +7421,9 @@ GuiControl, chMacro:+Redraw, InputList%A_List%
 return
 
 Redo:
+Gui, 1:Submit, NoHide
+Gui, chMacro:Default
+Gui, chMacro:Listview, InputList%A_List%
 GuiControl, chMacro:-Redraw, InputList%A_List%
 HistoryMacro%A_List%.Redo()
 GoSub, RowCheck
@@ -9845,7 +9862,6 @@ IfWinExist
 	Gui, 28:-Caption
 	Gui, 28:Show, % OSCPos (ShowProgBar ? "H40" : "H30") " W415 NoActivate", %AppName%
 }
-outputdebug, % ">> " AutoKey
 GuiControl, 1:, CoordTip, CoordMode: %CoordMouse%
 GuiControl, 1:, ContextTip, #IfWin: %IfDirectContext%
 GuiControl, 1:, AbortKey, %AbortKey%
@@ -10065,7 +10081,6 @@ return
 
 b_Start:
 Gui, 1:Submit, NoHide
-Gui, chMacro:Submit, NoHide
 Gui, chMacro:ListView, InputList%A_List%
 GoSub, b_Enable
 If !Record
