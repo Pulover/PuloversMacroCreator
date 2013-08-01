@@ -8,7 +8,7 @@ Author: Pulover \[Rodolfo U. Batista\]
 [rodolfoub@gmail.com](mailto:rodolfoub@gmail.com)  
 Copyright © 2012-2013 Rodolfo U. Batista  
 
-Version: 3.8.1  
+Version: 3.8.2  
 Release Date: July, 2013  
 AutoHotkey Version: 1.1.11.02  
 
@@ -34,6 +34,10 @@ Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jör
 
 
 # Change Log
+
+## Version 3.8.2
+
+* Fixed bug: Break option of *Image/Pixel Search* command not working for loops.
 
 ## Version 3.8.1
 

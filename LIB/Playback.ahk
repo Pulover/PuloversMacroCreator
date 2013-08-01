@@ -759,6 +759,7 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC)
 					GoSub, pb_%Type%
 					If Type in Sleep,KeyWait
 						continue
+					
 					If ((TakeAction = "Break") || ((Target = "Break") && (SearchResult = 0)))
 					{
 						TakeAction := 0
@@ -804,9 +805,9 @@ IfEval(Name, Operator, Value)
 DoAction(X, Y, Action1, Action2, Coord, Error)
 {
 	CoordMode, Mouse, %Coord%
-	If Error = 0
+	If (Error = 0)
 	{
-		If Action1 = Move
+		If (Action1 = "Move")
 		{
 			Click, %X%, %Y%, 0
 			return

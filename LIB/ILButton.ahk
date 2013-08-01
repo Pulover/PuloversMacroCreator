@@ -31,7 +31,5 @@ ILButton(HBtn, Images, Large=0, Align="center", Margin="1 1 1 1") {
 
 	SendMessage, BCM_SETIMAGELIST,,&BIL,, ahk_id %HBtn%
 	ifEqual, ErrorLevel, 0, return 0, DllCall("ImageList_Destroy", "Ptr", hIL)
-
-	sleep 1 ; workaround for a redrawing problem on WinXP
 	return hIL
 }
