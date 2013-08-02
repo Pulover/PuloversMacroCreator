@@ -550,7 +550,9 @@ WinCheck(wParam, lParam, Msg)
 ToggleIcon()
 {
 	global
-	static IconFile, IconNumber
+	static IconFile, IconNumber, BarColor
+	Color := (BarColor := !BarColor) ? "Red" : "20D000"
+	ChangeProgBarColor(Color, "OSCProg", 28)
 	If !A_IsPaused
 		IconFile := A_IconFile, IconNumber := A_IconNumber
 	Try Menu, Tray, Icon, % (A_IsPaused = 0) ? t_PauseIcon[1] : IconFile, % (A_IsPaused = 0) ? t_PauseIcon[2] : IconNumber
@@ -560,7 +562,11 @@ ToggleIcon()
 ToggleButtonIcon(Button, Icon)
 {
 	ILButton(Button, Icon[1] ":" Icon[2], 0)
-	return
+}
+
+ChangeProgBarColor(Color, Control, Gui=1)
+{
+	GuiControl, %Gui%:+c%Color%, %Control%
 }
 
 AHK_NOTIFYICON(wParam, lParam)

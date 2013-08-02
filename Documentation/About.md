@@ -39,6 +39,8 @@ Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jör
 ## Version 3.8.2
 
 * Fixed bug: Break option of *Image/Pixel Search* command not working for loops.
+* Fixed *Duplicate Macro* not updating Loop counter.
+* Fixed wrong repeat value when editing *Loop* commands with variable in delay.
 
 ## Version 3.8.1
 
