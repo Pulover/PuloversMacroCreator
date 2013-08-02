@@ -7526,7 +7526,6 @@ If (o_AutoKey[A_List] = "#")
 o_ManKey[A_List] := ManKey, o_TimesG[A_List] := TimesO
 If WinExist("ahk_id " PrevID)
 	GoSub, PrevRefresh
-OutputDebug, % "T" ManKey
 return
 
 LoadData:
@@ -7875,7 +7874,7 @@ If Action contains %Action1%,%Action2%,%Action3%,%Action4%,%Action5%,%Action6%
 	Goto, EditMouse
 If InStr(Action, "[Text]")
 	Goto, EditText
-Gui, 15:+owner1 +ToolWindow +HwndCmdWin
+Gui, 15:+owner1 -MinimizeBox +HwndCmdWin
 Gui, 1:+Disabled
 ; Gui, 15:Font, s7
 Gui, 15:Add, GroupBox, vSGroup Section xm W280 H130 Disabled
@@ -8196,7 +8195,7 @@ Gui, 15:Destroy
 return
 
 MultiEdit:
-Gui, 6:+owner1 +ToolWindow +hwndCmdWin
+Gui, 6:+owner1 -MinimizeBox +hwndCmdWin
 Gui, 1:+Disabled
 ; Gui, 6:Font, s7
 Gui, 6:Add, GroupBox, vSGroup Section xm W280 H120
@@ -8441,7 +8440,7 @@ return
 
 EditComm:
 RowSelection := LV_GetCount("Selected")
-Gui, 17:+owner1 +ToolWindow
+Gui, 17:+owner1 -MinimizeBox
 Gui, chMacro:Default
 Gui, 1:+Disabled
 ; Gui, 17:Font, s7
@@ -8903,6 +8902,9 @@ Menu, Tray, Tip, %AppName%`n%ActiveKeys% %d_Lang025%
 return
 
 h_Del:
+Gui, chMacro:Default
+Gui, chMacro:ListView, InputList%A_List%
+OutputDebug, % A_List
 RowNumber = 0
 Loop
 {

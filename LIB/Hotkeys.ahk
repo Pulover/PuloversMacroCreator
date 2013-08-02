@@ -1,5 +1,5 @@
 ﻿#If ListFocus && !HotkeyCtrlHasFocus()
-&& HKOff = 0 && WinActive("ahk_id" PMCWinID) && Capt = 0
+&& !HKOff && WinActive("ahk_id" PMCWinID) && !Capt
 
 Del::GoSub, h_Del
 NumpadDel::GoSub, h_Numdel
@@ -16,7 +16,7 @@ MButton & WheelDown::
 GoSub, MoveDn
 return
 
-#If !HotkeyCtrlHasFocus() && WinActive("ahk_id" PMCWinID) && HKOff = 0
+#If !HotkeyCtrlHasFocus() && WinActive("ahk_id" PMCWinID) && !HKOff
 
 ^c::GoSub, CopyRows
 ^x::GoSub, CutRows
@@ -102,7 +102,7 @@ GoSub, PaintRows
 return
 
 #If !HotkeyCtrlHasFocus() && WinActive("ahk_id" PMCWinID)
-&& Capt = 0 && HKOff = 0
+&& !Capt && !HKOff
 
 +F1::GoSub, HelpAbout
 F2::GoSub, Mouse
@@ -126,7 +126,7 @@ F11::GoSub, IECom
 ^F11::GoSub, RunScrLet
 F12::GoSub, SendMsg
 
-#If WinActive("ahk_id " PrevID) && HKOff = 0
+#If WinActive("ahk_id " PrevID) && !HKOff
 
 F5::GoSub, PrevRefresh
 

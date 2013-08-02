@@ -16,6 +16,14 @@ If A_OSVersion in WIN_2003,WIN_XP,WIN_2000
 	_s := Chr(4445)
 ,	RecentFolder := A_AppData "\..\Recent"
 
+LangCodes := {	Pt: [0416,0816]
+			,	Es: [040a,080a,0c0a,100a,140a,180a,1c0a,200a,240a,280a,2c0a,300a,340a,380a,3c0a,400a,440a,480a,4c0a,500a]
+			,	De: [0407,0807,0c07,1007,1407], Fr: [040c,080c,0c0c,100c,140c,180c], It: [0410,0810]
+			,	Ru: [0419], Pl: [0415], Nl: [0413,0813], Da: [0406], No: [0414,0814], Fi: [040b]
+			,	Sv: [041d,081d], Ca: [0403], Hr: [041a], Cs: [0405], Tr: [041f], Hu: [040e], Bg: [0402]
+			,	Sr: [1c1a,0c1a], Uk: [0422], El: [0408], Zh: [0804,0c04,1004,1404,0004,7c04], Zt: [0404]
+			,	Ja: [0411], Ko: [0412]}
+
 	ListCount1 := 0
 ,	TabCount := 1
 ,	FastKeyOn := 0
