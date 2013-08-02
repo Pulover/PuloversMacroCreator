@@ -4305,7 +4305,12 @@ If (s_Caller = "Edit")
 		StringReplace, Par%A_Index%,  Par%A_Index%, ¢, ```,, All
 	}
 	If (Type = cType7)
-		GuiControl, 12:, TimesX, %TimesX%
+	{
+		If InStr(TimesX, "%")
+			GuiControl, 12:, EdRept, %TimesX%
+		Else
+			GuiControl, 12:, TimesX, %TimesX%
+	}
 	If (Type = cType38)
 	{
 		GuiControl, 12:, LParamsFile, %Details%
@@ -7278,10 +7283,12 @@ return
 
 DuplicateList:
 s_List := A_List
+GuiControlGet, c_Time,, TimesG
 GoSub, TabPlus
 d_List := TabCount, RowSelection := 0
 GoSub, CopySelection
 HistoryMacro%A_List% := new LV_Rows()
+GuiControl,, TimesG, %c_Time%
 GoSub, b_Start
 return
 
@@ -8899,15 +8906,18 @@ pb_MsgBox:
 	StringReplace, Step, Step, ``n, `n, All
 	StringReplace, Step, Step, ```,, `,, All
 	Try Menu, Tray, Icon, % t_WaitIcon[1], % t_WaitIcon[2]
+	ChangeProgBarColor("Blue", "OSCProg", 28)
 	If (Action = "MsgBox")
 	{
 		MsgBox, % Par1, %Par2%, %Par3%, %Par4%
 		Try Menu, Tray, Icon, % t_PlayIcon[1], % t_PlayIcon[2]
+		ChangeProgBarColor("20D000", "OSCProg", 28)
 	}
 	Else
 	{
 		MsgBox, % Target, %d_Lang023%, %Step%
 		Try Menu, Tray, Icon, % t_PlayIcon[1], % t_PlayIcon[2]
+		ChangeProgBarColor("20D000", "OSCProg", 28)
 		IfMsgBox, OK
 			return
 		IfMsgBox, Cancel
@@ -8936,11 +8946,13 @@ pb_Run:
 return
 pb_RunWait:
 	Try Menu, Tray, Icon, % t_WaitIcon[1], % t_WaitIcon[2]
+	ChangeProgBarColor("Blue", "OSCProg", 28)
 	If (Par4 <> "")
 		RunWait, %Par1%, %Par2%, %Par3%, %Par4%
 	Else
 		RunWait, %Par1%, %Par2%, %Par3%
 	Try Menu, Tray, Icon, % t_PlayIcon[1], % t_PlayIcon[2]
+	ChangeProgBarColor("20D000", "OSCProg", 28)
 return
 pb_RunAs:
 	RunAs, %Par1%, %Par2%, %Par3%
@@ -9184,8 +9196,10 @@ pb_SoundSetWaveVolume:
 return
 pb_ClipWait:
 	Try Menu, Tray, Icon, % t_WaitIcon[1], % t_WaitIcon[2]
+	ChangeProgBarColor("Blue", "OSCProg", 28)
 	ClipWait, %Par1%, %Par2%
 	Try Menu, Tray, Icon, % t_PlayIcon[1], % t_PlayIcon[2]
+	ChangeProgBarColor("20D000", "OSCProg", 28)
 return
 pb_BlockInput:
 	BlockInput, %Step%
@@ -9211,8 +9225,10 @@ pb_StatusBarGetText:
 return
 pb_StatusBarWait:
 	Try Menu, Tray, Icon, % t_WaitIcon[1], % t_WaitIcon[2]
+	ChangeProgBarColor("Blue", "OSCProg", 28)
 	StatusBarWait, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%, %Par6%
 	Try Menu, Tray, Icon, % t_PlayIcon[1], % t_PlayIcon[2]
+	ChangeProgBarColor("20D000", "OSCProg", 28)
 return
 pb_Clipboard:
 	SavedClip := ClipboardAll
@@ -9271,11 +9287,13 @@ pb_PostMessage:
 return
 pb_KeyWait:
 	Try Menu, Tray, Icon, % t_WaitIcon[1], % t_WaitIcon[2]
+	ChangeProgBarColor("Blue", "OSCProg", 28)
 	If (Action = "KeyWait")
 		KeyWait, %Par1%, %Par2%
 	Else
 		WaitFor.Key(Step, DelayX / 1000)
 	Try Menu, Tray, Icon, % t_PlayIcon[1], % t_PlayIcon[2]
+	ChangeProgBarColor("20D000", "OSCProg", 28)
 return
 pb_Input:
 	Input, %Par1%, %Par2%, %Par3%, %Par4%
@@ -9356,23 +9374,31 @@ pb_WinSetTitle:
 return
 pb_WinWait:
 	Try Menu, Tray, Icon, % t_WaitIcon[1], % t_WaitIcon[2]
-	WaitFor.WinExist(SplitWin(Window), Step)
+	ChangeProgBarColor("Blue", "OSCProg", 28)
+,	WaitFor.WinExist(SplitWin(Window), Step)
 	Try Menu, Tray, Icon, % t_PlayIcon[1], % t_PlayIcon[2]
+	ChangeProgBarColor("20D000", "OSCProg", 28)
 return
 pb_WinWaitActive:
 	Try Menu, Tray, Icon, % t_WaitIcon[1], % t_WaitIcon[2]
-	WaitFor.WinActive(SplitWin(Window), Step)
+	ChangeProgBarColor("Blue", "OSCProg", 28)
+,	WaitFor.WinActive(SplitWin(Window), Step)
 	Try Menu, Tray, Icon, % t_PlayIcon[1], % t_PlayIcon[2]
+	ChangeProgBarColor("20D000", "OSCProg", 28)
 return
 pb_WinWaitNotActive:
 	Try Menu, Tray, Icon, % t_WaitIcon[1], % t_WaitIcon[2]
-	WaitFor.WinNotActive(SplitWin(Window), Step)
+	ChangeProgBarColor("Blue", "OSCProg", 28)
+,	WaitFor.WinNotActive(SplitWin(Window), Step)
 	Try Menu, Tray, Icon, % t_PlayIcon[1], % t_PlayIcon[2]
+	ChangeProgBarColor("20D000", "OSCProg", 28)
 return
 pb_WinWaitClose:
 	Try Menu, Tray, Icon, % t_WaitIcon[1], % t_WaitIcon[2]
-	WaitFor.WinClose(SplitWin(Window), Step)
+	ChangeProgBarColor("Blue", "OSCProg", 28)
+,	WaitFor.WinClose(SplitWin(Window), Step)
 	Try Menu, Tray, Icon, % t_PlayIcon[1], % t_PlayIcon[2]
+	ChangeProgBarColor("20D000", "OSCProg", 28)
 return
 pb_WinGet:
 	Win := SplitWin(Window)
@@ -9627,8 +9653,22 @@ return
 ShowHide:
 If WinExist("ahk_id" PMCWinID)
 {
-	Menu, Tray, Rename, %y_Lang001%, %y_Lang002%
-	Gui, 1:Show, Hide
+	If (A_GuiControl = "ToggleMW")
+	{
+		WinGet, WinState, MinMax, ahk_id %PMCWinID%
+		If WinState = -1
+			WinActivate
+		Else
+		{
+			Menu, Tray, Rename, %y_Lang001%, %y_Lang002%
+			Gui, 1:Show, Hide
+		}
+	}
+	Else
+	{
+		Menu, Tray, Rename, %y_Lang001%, %y_Lang002%
+		Gui, 1:Show, Hide
+	}
 }
 Else
 {
@@ -9798,7 +9838,6 @@ AbortKey := "F8"
 ,	OSCaption := 0
 ,	CustomColors := 0
 ,	OnFinishCode := 1
-GoSub, SetFinishButtom
 Gui 28:+LastFoundExist
 IfWinExist
 {
@@ -9832,6 +9871,7 @@ Loop, %TabCount%
 		LV_ModifyCol(A_Index, Col_%A_Index%)
 }
 Gui, ListView, InputList%A_List%
+GoSub, SetFinishButtom
 return
 
 DefaultMod:
