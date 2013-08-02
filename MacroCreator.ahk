@@ -1615,7 +1615,7 @@ SplitPath, CurrentFileName, name, dir, ext, name_no_ext, drive
 If !A_AhkPath
 	Exe_Exp := 0
 UserVarsList := User_Vars.Get()
-Gui, 14:+owner1 -MaximizeBox -MinimizeBox +E0x00000400 +HwndCmdWin
+Gui, 14:+owner1 -MinimizeBox +E0x00000400 +HwndCmdWin
 Gui, 14:Default
 Gui, 1:+Disabled
 ; Gui, 14:Font, s7
@@ -2020,7 +2020,7 @@ IfWinExist
 	WinActivate
 	return
 }
-Gui, 4:+owner1 -MaximizeBox -MinimizeBox +E0x00000400 +HwndCmdWin
+Gui, 4:+owner1 -MinimizeBox +E0x00000400 +HwndCmdWin
 Gui, 1:+Disabled
 GoSub, SaveData
 GoSub, GetHotkeys
@@ -2486,7 +2486,7 @@ return
 EditMouse:
 s_Caller = Edit
 Mouse:
-Gui, 5:+owner1 -MaximizeBox -MinimizeBox +E0x00000400 +HwndCmdWin
+Gui, 5:+owner1 -MinimizeBox +E0x00000400 +HwndCmdWin
 Gui, 1:+Disabled
 ; Gui, 5:Font, s7
 Gui, 5:Add, GroupBox, W250 H80, %c_Lang026%:
@@ -3686,7 +3686,7 @@ return
 SpecKeys:
 GoSub, TextCancel
 Special:
-Gui, 7:+owner1 -MaximizeBox -MinimizeBox +E0x00000400 +HwndCmdWin
+Gui, 7:+owner1 -MinimizeBox +E0x00000400 +HwndCmdWin
 Gui, 1:+Disabled
 spKey := ""
 ; Gui, 7:Font, s7
@@ -3799,7 +3799,7 @@ EditText:
 s_Caller = Edit
 Text:
 Gui, 1:Submit, NoHide
-Gui, 8:+owner1 -MaximizeBox -MinimizeBox +E0x00000400 +HwndCmdWin
+Gui, 8:+owner1 -MinimizeBox +E0x00000400 +HwndCmdWin
 Gui, 1:+Disabled
 ; Gui, 8:Font, s7
 Gui, 8:Add, Button, -Wrap W25 H25 hwndOpenT vOpenT gOpenT
@@ -4090,7 +4090,7 @@ return
 KeyWait:
 MsgBox:
 Pause:
-Gui, 3:+owner1 -MaximizeBox -MinimizeBox +E0x00000400 +HwndCmdWin
+Gui, 3:+owner1 -MinimizeBox +E0x00000400 +HwndCmdWin
 Gui, 1:+Disabled
 Gui, 3:Add, Tab2, W305 H275 vTabControl AltSubmit, %c_Lang003%|%c_Lang015%|%c_Lang066%
 ; Gui, 3:Font, s7
@@ -4270,7 +4270,7 @@ Loop, %TabCount%
 Gui, chMacro:ListView, InputList%A_List%
 Loop, %TabCount%
 	Proj_Labels .= "Macro" A_Index "|"
-Gui, 12:+owner1 -MaximizeBox -MinimizeBox +E0x00000400 +HwndCmdWin
+Gui, 12:+owner1 -MinimizeBox +E0x00000400 +HwndCmdWin
 Gui, 1:+Disabled
 ; Gui, 12:Font, s7
 Gui, 12:Add, Tab2, W330 H220 vTabControl AltSubmit, %c_Lang073%|%c_Lang077%|%c_Lang079%
@@ -4576,7 +4576,7 @@ return
 EditWindow:
 s_Caller = Edit
 Window:
-Gui, 11:+owner1 -MaximizeBox -MinimizeBox +E0x00000400 +HwndCmdWin
+Gui, 11:+owner1 -MinimizeBox +E0x00000400 +HwndCmdWin
 Gui, 1:+Disabled
 ; Gui, 11:Font, s7
 Gui, 11:Add, DDL, W120 vWinCom gWinCom, %WinCmdList%
@@ -4863,7 +4863,7 @@ EditImage:
 s_Caller = Edit
 Image:
 Gui, 1:Submit, NoHide
-Gui, 19:+owner1 -MaximizeBox -MinimizeBox +E0x00000400 +HwndCmdWin
+Gui, 19:+owner1 -MinimizeBox +E0x00000400 +HwndCmdWin
 Gui, 1:+Disabled
 ; Gui, 19:Font, s7
 Gui, 19:Add, Text,, %c_Lang061%
@@ -5214,7 +5214,7 @@ return
 EditRun:
 s_Caller = Edit
 Run:
-Gui, 10:+owner1 -MaximizeBox -MinimizeBox +E0x00000400 +HwndCmdWin
+Gui, 10:+owner1 -MinimizeBox +E0x00000400 +HwndCmdWin
 Gui, 1:+Disabled
 ; Gui, 10:Font, s7
 Gui, 10:Add, Text, ym+5 W55, %c_Lang055%:
@@ -5426,7 +5426,7 @@ s_Caller = Edit
 AsFunc:
 AsVar:
 IfSt:
-Gui, 21:+owner1 -MaximizeBox -MinimizeBox +E0x00000400 +HwndCmdWin +Delimiter$
+Gui, 21:+owner1 -MinimizeBox +E0x00000400 +HwndCmdWin +Delimiter$
 Gui, 1:+Disabled
 ; Gui, 21:Font, s7
 Gui, 21:Add, Tab2, W330 H240 vTabControl AltSubmit, %c_Lang009%$%c_Lang084%$%c_Lang011%
@@ -5883,7 +5883,7 @@ return
 EditMsg:
 s_Caller = Edit
 SendMsg:
-Gui, 22:+owner1 -MaximizeBox -MinimizeBox +E0x00000400 +HwndCmdWin
+Gui, 22:+owner1 -MinimizeBox +E0x00000400 +HwndCmdWin
 Gui, 1:+Disabled
 ; Gui, 22:Font, s7
 Gui, 22:Add, DDL, W100 vMsgType, PostMessage||SendMessage
@@ -5989,7 +5989,7 @@ return
 EditControl:
 s_Caller = Edit
 ControlCmd:
-Gui, 23:+owner1 -MaximizeBox -MinimizeBox +E0x00000400 +HwndCmdWin
+Gui, 23:+owner1 -MinimizeBox +E0x00000400 +HwndCmdWin
 Gui, 1:+Disabled
 ; Gui, 23:Font, s7
 Gui, 23:Add, DDL, W120 vControlCmd gCtlCmd, %CtrlCmdList%
@@ -6219,7 +6219,7 @@ RunScrLet:
 ComInt:
 IECom:
 IEWindows := ListIEWindows()
-Gui, 24:+owner1 -MaximizeBox -MinimizeBox +E0x00000400 +hwndCmdWin
+Gui, 24:+owner1 -MinimizeBox +E0x00000400 +hwndCmdWin
 Gui, 1:+Disabled
 ; Gui, 24:Font, s7
 Gui, 24:Add, Tab2, W410 H240 vTabControl gTabControl AltSubmit, %c_Lang012%|%c_Lang014%|%c_Lang155%
@@ -6773,7 +6773,7 @@ return
 ExpView:
 Gui, Submit, NoHide
 Script := (TabControl = 2) ? ComSc : ScLet
-Gui, 30:+owner1 -MaximizeBox -MinimizeBox +E0x00000400 +hwndCmdWin
+Gui, 30:+owner1 -MinimizeBox +E0x00000400 +hwndCmdWin
 Gui, 24:+Disabled
 ; Gui, 30:Font, s7
 Gui, 30:Add, Button, -Wrap W25 H25 hwndOpenT vOpenT gOpenT
@@ -6901,7 +6901,7 @@ If (NextTip = MaxTips)
 return
 
 RunTimer:
-Gui, 27:+owner1 +ToolWindow
+Gui, 27:+owner1 -MinimizeBox
 Gui, 1:+Disabled
 ; Gui, 27:Font, s7
 Gui, 27:Add, Groupbox, W180 H100
@@ -7749,7 +7749,7 @@ return
 InsertKey:
 Gui, 1:Submit, NoHide
 Gui, chMacro:Default
-Gui, 31:+owner1 +ToolWindow +Delimiter¢ +HwndCmdWin
+Gui, 31:+owner1 -MinimizeBox +Delimiter¢ +HwndCmdWin
 Gui, 1:+Disabled
 ; Gui, 13:Font, s7
 Gui, 31:Add, Groupbox, Section W220 H100
