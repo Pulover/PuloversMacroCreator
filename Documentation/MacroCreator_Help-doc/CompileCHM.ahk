@@ -3,9 +3,9 @@
 FileEncoding, UTF-8
 
 File := A_ScriptDir "\p9-About.html"
-Data := "T800 for <a href=""http://www.autohotkey.com/board/topic/17984-html-help-utils"">Html Help utils</a><br/><br/></p>"
+Data := "<br/></p>`n<h1 id=""change-log"">Change Log</h1>"
 FileRead, FileData, %File%
-FileMod_Change(FileData, Data, 36)
+FileMod_Change(FileData, Data, 37)
 FileDelete, %File%
 FileAppend, %FileData%, %File%
 

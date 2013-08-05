@@ -14,6 +14,8 @@
 		Software License: [GNU General Public License](License.html)  
 		
 		[AutoHotkey Online Documentation](http://l.autohotkey.net/docs)  
+		
+		**Support Open Source software: [Donate](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=rodolfoub%40gmail%2ecom&lc=US&item_name=Pulover%27s%20Macro%20Creator&item_number=App%2ePMC&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted)**
 */
 
 /*!
