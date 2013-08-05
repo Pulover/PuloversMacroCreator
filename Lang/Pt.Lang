@@ -136,6 +136,16 @@
 	w_Lang027 =	Hibernar
 	w_Lang028 =	Suspender
 	w_Lang029 =	Bloquear computador
+	w_Lang030 =	Índice
+	w_Lang031 =	Ação
+	w_Lang032 =	Detalhes
+	w_Lang033 =	Repetir
+	w_Lang034 =	Intervalo
+	w_Lang035 =	Tipo
+	w_Lang036 =	Controle
+	w_Lang037 =	Janela
+	w_Lang038 =	Comentário
+	w_Lang039 =	Cor
 		
 ; Command Windows		
 	c_Lang001 =	Mouse

@@ -136,6 +136,16 @@
 	w_Lang027 =	Ruhezustand 
 	w_Lang028 =	Standbymodus
 	w_Lang029 =	Computer sperren
+	w_Lang030 =	Index
+	w_Lang031 =	Aktion
+	w_Lang032 =	Einzelheiten
+	w_Lang033 =	Wiederholen
+	w_Lang034 =	Verzögern
+	w_Lang035 =	Typ
+	w_Lang036 =	Steuerelement
+	w_Lang037 =	Fenster
+	w_Lang038 =	Kommentar
+	w_Lang039 =	Farbe
 		
 ; Command Windows		
 	c_Lang001 =	Maus

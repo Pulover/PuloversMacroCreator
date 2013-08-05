@@ -136,6 +136,16 @@
 	w_Lang027 =	Hibernate
 	w_Lang028 =	Suspendere
 	w_Lang029 =	Låse datamaskinen
+	w_Lang030 =	Index
+	w_Lang031 =	Handling
+	w_Lang032 =	Detaljer
+	w_Lang033 =	Gjentar
+	w_Lang034 =	Forsinkelse
+	w_Lang035 =	Typen
+	w_Lang036 =	Kontroll
+	w_Lang037 =	Vindu
+	w_Lang038 =	Kommentar
+	w_Lang039 =	Farge
 		
 ; Command Windows		
 	c_Lang001 =	Mus

@@ -136,6 +136,16 @@
 	w_Lang027 =	Přezimovat
 	w_Lang028 =	Pozastavit
 	w_Lang029 =	Uzamčení počítače
+	w_Lang030 =	Index
+	w_Lang031 =	Akce
+	w_Lang032 =	Detaily
+	w_Lang033 =	Opakovat
+	w_Lang034 =	Zpoždění
+	w_Lang035 =	Typ
+	w_Lang036 =	Ovládání
+	w_Lang037 =	Okno
+	w_Lang038 =	Komentář
+	w_Lang039 =	Barva
 		
 ; Command Windows		
 	c_Lang001 =	Myš

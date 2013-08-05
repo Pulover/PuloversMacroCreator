@@ -136,6 +136,16 @@
 	w_Lang027 =	최대 절전 모드
 	w_Lang028 =	일시 중지
 	w_Lang029 =	컴퓨터를 잠글
+	w_Lang030 =	색인
+	w_Lang031 =	행동
+	w_Lang032 =	세부
+	w_Lang033 =	반복
+	w_Lang034 =	지연
+	w_Lang035 =	유형
+	w_Lang036 =	제어
+	w_Lang037 =	창
+	w_Lang038 =	논평
+	w_Lang039 =	색
 		
 ; Command Windows		
 	c_Lang001 =	마우스

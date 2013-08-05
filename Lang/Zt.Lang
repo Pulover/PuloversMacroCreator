@@ -136,6 +136,16 @@
 	w_Lang027 =	過冬
 	w_Lang028 =	暫停
 	w_Lang029 =	鎖定計算機
+	w_Lang030 =	指數
+	w_Lang031 =	行動
+	w_Lang032 =	詳細信息
+	w_Lang033 =	重複
+	w_Lang034 =	延遲
+	w_Lang035 =	類型
+	w_Lang036 =	控制
+	w_Lang037 =	窗口
+	w_Lang038 =	評論
+	w_Lang039 =	顏色
 		
 ; Command Windows		
 	c_Lang001 =	鼠標

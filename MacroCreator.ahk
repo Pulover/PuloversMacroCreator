@@ -7,7 +7,7 @@
 ; Home: http://www.autohotkey.net/~Pulover
 ; Forum: http://www.autohotkey.com/board/topic/79763-macro-creator
 ; Version: 3.8.2
-; Release Date: July, 2013
+; Release Date: August, 2013
 ; AutoHotkey Version: 1.1.11.02
 ; Copyright © 2012-2013 Rodolfo U. Batista
 ; GNU General Public License 3.0 or higher
@@ -89,7 +89,7 @@ DefaultIcon := (A_IsCompiled) ? A_ScriptFullPath
 			:  (FileExist(A_ScriptDir "\Resources\PMC3_Mult.ico") ? A_ScriptDir "\Resources\PMC3_Mult.ico" : A_AhkPath)
 Menu, Tray, Icon, %DefaultIcon%, 1, 1
 
-CurrentVersion := "3.8.2", ReleaseDate := "July, 2013"
+CurrentVersion := "3.8.2", ReleaseDate := "August, 2013"
 
 If ((A_IsCompiled) && !InStr(FileExist(A_AppData "\MacroCreator"), "D"))
 	FileCreateDir, %A_AppData%\MacroCreator
@@ -561,7 +561,7 @@ Gui, Add, Button, -Wrap x+4 ys+70 W25 H25 hwndIfDirB vIfDirB gSetWin
 Gui, Add, Checkbox, -Wrap ys+75 xp+30 W100 gCapt vCapt R1, %w_Lang012%
 Gui, Add, Checkbox, -Wrap Checked%KeepHkOn% W100 -Wrap yp x+5 vKeepHkOn gCheckHkOn R1, %w_Lang014%
 Gui, Add, Tab2, Section Buttons -Wrap AltSubmit xm ys+72 H22 W500 hwndTabSel vA_List gTabSel, Macro1
-Gui, Add, ListView, x+0 y+0 AltSubmit Checked hwndListID1 vInputList1 gInputList W860 r28 NoSort LV0x10000, Index|Action|Details|Repeat|Delay|Type|Control|Window|Comment|Color
+Gui, Add, ListView, x+0 y+0 AltSubmit Checked hwndListID1 vInputList1 gInputList W860 r28 NoSort LV0x10000, %w_Lang030%|%w_Lang031%|%w_Lang032%|%w_Lang033%|%w_Lang034%|%w_Lang035%|%w_Lang036%|%w_Lang037%|%w_Lang038%|%w_Lang039%
 LV_hIL := IL_Create(LVIcons.MaxIndex())
 LV_SetImageList(LV_hIL)
 Loop, % LVIcons.MaxIndex()
@@ -9538,7 +9538,7 @@ If (TakeAction = "Continue")
 	TakeAction := 0
 Else If (TakeAction = "Stop")
 	StopIt := 1
-Else If (TakeAction = "Break")
+Else If (TimesX = 1) && (TakeAction = "Break")
 	BreakIt++
 Else If (TakeAction = "Prompt")
 {
@@ -10718,6 +10718,14 @@ GoSub, CreateMenuBar
 Menu, LangMenu, Uncheck, % Lang_%CurrentLang%
 Menu, LangMenu, Check, % Lang_%Lang%
 CurrentLang := Lang
+
+Loop, %TabCount%
+{
+	Gui, ListView, InputList%A_Index%
+	Loop, % LV_GetCount("Col")
+		colTx := "w_Lang0" 29 + A_Index, LV_ModifyCol(A_Index, "", %colTx%)
+}
+Gui, ListView, InputList%A_List%
 
 GuiControl,, ExportB, %w_Lang001%
 GuiControl,, PreviewB, %w_Lang002%

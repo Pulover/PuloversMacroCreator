@@ -320,7 +320,7 @@ GuiAddLV(ident)
 	global
 	Gui, Tab, %ident%
 	Try
-		Gui, Add, ListView, x+0 y+0 AltSubmit Checked hwndListID%ident% vInputList%ident% gInputList W760 r26 NoSort LV0x10000, Index|Action|Details|Repeat|Delay|Type|Control|Window|Comment|Color
+		Gui, Add, ListView, x+0 y+0 AltSubmit Checked hwndListID%ident% vInputList%ident% gInputList W760 r26 NoSort LV0x10000, %w_Lang030%|%w_Lang031%|%w_Lang032%|%w_Lang033%|%w_Lang034%|%w_Lang035%|%w_Lang036%|%w_Lang037%|%w_Lang038%|%w_Lang039%
 	LV_SetImageList(LV_hIL)
 	Loop, 10
 		LV_ModifyCol(A_Index, Col_%A_Index%)

@@ -136,6 +136,16 @@
 	w_Lang027 =	Viloläge
 	w_Lang028 =	upphäv
 	w_Lang029 =	Lås datorn
+	w_Lang030 =	Index
+	w_Lang031 =	Åtgärd
+	w_Lang032 =	Detaljer
+	w_Lang033 =	Upprepa
+	w_Lang034 =	Fördröjning
+	w_Lang035 =	Typ
+	w_Lang036 =	Kontroll
+	w_Lang037 =	Fönster
+	w_Lang038 =	Kommentar
+	w_Lang039 =	Färg
 		
 ; Command Windows		
 	c_Lang001 =	Mus

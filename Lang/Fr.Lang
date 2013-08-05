@@ -136,6 +136,16 @@
 	w_Lang027 =	Hibernate
 	w_Lang028 =	Suspendre
 	w_Lang029 =	Verrouiller l'ordinateur
+	w_Lang030 =	Index
+	w_Lang031 =	Action
+	w_Lang032 =	Détails
+	w_Lang033 =	Répétez
+	w_Lang034 =	Retarder
+	w_Lang035 =	Catégorie
+	w_Lang036 =	Contrôler
+	w_Lang037 =	Fenêtre
+	w_Lang038 =	Commenter
+	w_Lang039 =	Couleur
 		
 ; Command Windows		
 	c_Lang001 =	Souris
