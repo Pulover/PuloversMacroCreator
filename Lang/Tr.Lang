@@ -25,7 +25,7 @@
 	f_Lang009 =	&Önizleme Senaryo
 	f_Lang010 =	&Listesi değişkenleri
 	f_Lang011 =	&Çıkış
-	f_Lang012 =	H&içbir içerik
+	f_Lang012 =	Hiçbir içerik
 		
 ; Insert Sub Menu		
 	i_Lang001 =	&Fare
@@ -136,6 +136,16 @@
 	w_Lang027 =	Kış uykusuna yatmak
 	w_Lang028 =	Askıya almak
 	w_Lang029 =	Bilgisayar kilit
+	w_Lang030 =	Indeks
+	w_Lang031 =	Eylem
+	w_Lang032 =	Ayrıntılar
+	w_Lang033 =	Tekrarlayın
+	w_Lang034 =	Geciktirmek
+	w_Lang035 =	Tip
+	w_Lang036 =	Kontrol
+	w_Lang037 =	Pencere
+	w_Lang038 =	Yorumlamak
+	w_Lang039 =	Renk
 		
 ; Command Windows		
 	c_Lang001 =	Fare

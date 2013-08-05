@@ -25,7 +25,7 @@
 	f_Lang009 =	&Voorbeeld Script
 	f_Lang010 =	&Lijstvariabelen
 	f_Lang011 =	&Uitgang
-	f_Lang012 =	&Geen files
+	f_Lang012 =	Geen files
 		
 ; Insert Sub Menu		
 	i_Lang001 =	&Muis
@@ -136,6 +136,16 @@
 	w_Lang027 =	Overwinteren
 	w_Lang028 =	Opschorten
 	w_Lang029 =	Lock computer
+	w_Lang030 =	Index
+	w_Lang031 =	Actie
+	w_Lang032 =	Details
+	w_Lang033 =	Herhalen
+	w_Lang034 =	Vertraging
+	w_Lang035 =	Type
+	w_Lang036 =	Controle
+	w_Lang037 =	Venster
+	w_Lang038 =	Commentaar
+	w_Lang039 =	Kleur
 		
 ; Command Windows		
 	c_Lang001 =	Muis

@@ -25,7 +25,7 @@
 	f_Lang009 =	&Preview Script
 	f_Lang010 =	&Listaváltozókra
 	f_Lang011 =	Kij&árat
-	f_Lang012 =	Nin&cs kép
+	f_Lang012 =	Nincs kép
 		
 ; Insert Sub Menu		
 	i_Lang001 =	&Egér
@@ -136,6 +136,16 @@
 	w_Lang027 =	Téli álmot alszik
 	w_Lang028 =	Felfüggeszt
 	w_Lang029 =	Lock számítógép
+	w_Lang030 =	Index
+	w_Lang031 =	Akció
+	w_Lang032 =	Részletek
+	w_Lang033 =	Ismétlés
+	w_Lang034 =	Késedelem
+	w_Lang035 =	Típus
+	w_Lang036 =	Irányítsd
+	w_Lang037 =	Ablak
+	w_Lang038 =	Megjegyzés
+	w_Lang039 =	Szín
 		
 ; Command Windows		
 	c_Lang001 =	Egér

@@ -9,7 +9,7 @@ Author: Pulover \[Rodolfo U. Batista\]
 Copyright © 2012-2013 Rodolfo U. Batista  
 
 Version: 4.0.0  
-Release Date: July, 2013  
+Release Date: August, 2013  
 AutoHotkey Version: 1.1.11.02  
 
 Software License: [GNU General Public License](License.html)  
@@ -38,7 +38,7 @@ Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jör
 
 ## Version 3.8.2
 
-* Fixed bug: Break option of *Image/Pixel Search* command not working for loops.
+* Fixed *Break* option of *Image/Pixel Search* command not working for loops.
 * Fixed *Duplicate Macro* not updating Loop counter.
 * Fixed wrong repeat value when editing *Loop* commands with variable in delay.
 

@@ -136,6 +136,16 @@
 	w_Lang027 =	休眠
 	w_Lang028 =	暂停
 	w_Lang029 =	锁定计算机
+	w_Lang030 =	指数
+	w_Lang031 =	行动
+	w_Lang032 =	详细信息
+	w_Lang033 =	重复
+	w_Lang034 =	延迟
+	w_Lang035 =	类型
+	w_Lang036 =	控制
+	w_Lang037 =	窗口
+	w_Lang038 =	评论
+	w_Lang039 =	颜色
 		
 ; Command Windows		
 	c_Lang001 =	鼠标

@@ -25,7 +25,7 @@
 	f_Lang009 =	S&cript podgląd
 	f_Lang010 =	&Lista zmiennych
 	f_Lang011 =	&Wyjście
-	f_Lang012 =	&Brak plików
+	f_Lang012 =	Brak plików
 		
 ; Insert Sub Menu		
 	i_Lang001 =	&Mysz
@@ -136,6 +136,16 @@
 	w_Lang027 =	Zimować
 	w_Lang028 =	Zawiesić
 	w_Lang029 =	Blokowanie komputera
+	w_Lang030 =	Wskaźnik
+	w_Lang031 =	Akcja
+	w_Lang032 =	Szczegóły
+	w_Lang033 =	Powtarzam
+	w_Lang034 =	Opóźniać
+	w_Lang035 =	Typ
+	w_Lang036 =	Sterowanie
+	w_Lang037 =	Okno
+	w_Lang038 =	Komentarz
+	w_Lang039 =	Kolor
 		
 ; Command Windows		
 	c_Lang001 =	Mysz

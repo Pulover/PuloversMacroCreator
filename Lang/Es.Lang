@@ -25,7 +25,7 @@
 	f_Lang009 =	&Vista previa de Guión
 	f_Lang010 =	&Lista de las variables
 	f_Lang011 =	&Salida
-	f_Lang012 =	N&o hay archivos
+	f_Lang012 =	No hay archivos
 		
 ; Insert Sub Menu		
 	i_Lang001 =	&Ratón
@@ -136,6 +136,16 @@
 	w_Lang027 =	Hibernar
 	w_Lang028 =	Suspender
 	w_Lang029 =	Bloquear equipo
+	w_Lang030 =	Índice
+	w_Lang031 =	Acción
+	w_Lang032 =	Detalles
+	w_Lang033 =	Repetir
+	w_Lang034 =	Retrasar
+	w_Lang035 =	Tipo
+	w_Lang036 =	Controle
+	w_Lang037 =	Ventana
+	w_Lang038 =	Comentario
+	w_Lang039 =	Color
 		
 ; Command Windows		
 	c_Lang001 =	Ratón

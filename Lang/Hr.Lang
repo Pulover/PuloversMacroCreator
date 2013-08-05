@@ -25,7 +25,7 @@
 	f_Lang009 =	Pri&kaz Script
 	f_Lang010 =	Popis &varijabli
 	f_Lang011 =	I&zlaz
-	f_Lang012 =	U &datotekama
+	f_Lang012 =	U datotekama
 		
 ; Insert Sub Menu		
 	i_Lang001 =	&Miš
@@ -136,6 +136,16 @@
 	w_Lang027 =	Hibernirati
 	w_Lang028 =	Obustaviti
 	w_Lang029 =	Zaključajte računalo
+	w_Lang030 =	Indeks
+	w_Lang031 =	Akcija
+	w_Lang032 =	Detaljnije
+	w_Lang033 =	Ponovite
+	w_Lang034 =	Odgoditi
+	w_Lang035 =	Tip
+	w_Lang036 =	Kontrolirajte
+	w_Lang037 =	Prozor
+	w_Lang038 =	Komentirati
+	w_Lang039 =	Boja
 		
 ; Command Windows		
 	c_Lang001 =	Miš

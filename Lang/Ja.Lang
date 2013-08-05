@@ -136,6 +136,16 @@
 	w_Lang027 =	冬眠する
 	w_Lang028 =	一時停止
 	w_Lang029 =	コンピュータをロック
+	w_Lang030 =	インデックス
+	w_Lang031 =	アクション
+	w_Lang032 =	細部
+	w_Lang033 =	繰り返し
+	w_Lang034 =	遅らせる
+	w_Lang035 =	タイプ
+	w_Lang036 =	コントロール
+	w_Lang037 =	ウィンドウ
+	w_Lang038 =	コメント
+	w_Lang039 =	色
 		
 ; Command Windows		
 	c_Lang001 =	マウス
