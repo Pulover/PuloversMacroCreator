@@ -337,7 +337,7 @@ GuiAddLV(ident)
 	Critical
 	Gui, chMacro:Default
 	Gui, chMacro:Tab, %ident%
-	Try Gui, chMacro:Add, ListView, x+0 y+0 AltSubmit Checked hwndListID%ident% vInputList%ident% gInputList NoSort LV0x10000, Index|Action|Details|Repeat|Delay|Type|Control|Window|Comment|Color
+	Try Gui, chMacro:Add, ListView, x+0 y+0 AltSubmit Checked hwndListID%ident% vInputList%ident% gInputList NoSort LV0x10000, %w_Lang030%|%w_Lang031%|%w_Lang032%|%w_Lang033%|%w_Lang034%|%w_Lang035%|%w_Lang036%|%w_Lang037%|%w_Lang038%|%w_Lang039%
 	LV_SetImageList(hIL_Icons)
 	Loop, 10
 		LV_ModifyCol(A_Index, Col_%A_Index%)

@@ -707,7 +707,7 @@ BuildMacroWin:
 Gui, chMacro:+LastFound
 Gui, chMacro:+hwndhMacroCh -Caption +0x40000000 -0x80000000
 Gui, chMacro:Add, Tab2, Section Buttons -Wrap AltSubmit H22 hwndTabSel vA_List gTabSel, Macro1
-Gui, chMacro:Add, ListView, AltSubmit Checked x+0 y+0 hwndListID1 vInputList1 gInputList NoSort LV0x10000, Index|Action|Details|Repeat|Delay|Type|Control|Window|Comment|Color
+Gui, chMacro:Add, ListView, AltSubmit Checked x+0 y+0 hwndListID1 vInputList1 gInputList NoSort LV0x10000, %w_Lang030%|%w_Lang031%|%w_Lang032%|%w_Lang033%|%w_Lang034%|%w_Lang035%|%w_Lang036%|%w_Lang037%|%w_Lang038%|%w_Lang039%
 Gui, chMacro:Default
 LV_SetImageList(hIL_Icons)
 Loop, 10
@@ -10751,6 +10751,15 @@ GoSub, CreateMenuBar
 Menu, LangMenu, Uncheck, % Lang_%CurrentLang%
 Menu, LangMenu, Check, % Lang_%Lang%
 CurrentLang := Lang
+
+Gui, chMacro:Default
+Loop, %TabCount%
+{
+	Gui, chMacro:ListView, InputList%A_Index%
+	Loop, % LV_GetCount("Col")
+		colTx := "w_Lang0" 29 + A_Index, LV_ModifyCol(A_Index, "", %colTx%)
+}
+Gui, chMacro:ListView, InputList%A_List%
 
 GuiControl,, ExportB, %w_Lang001%
 GuiControl,, PreviewB, %w_Lang002%
