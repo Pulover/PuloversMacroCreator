@@ -12,12 +12,6 @@
 	m_Lang007 =	&Nyelv
 	m_Lang008 =	&Adományoz
 	m_Lang009 =	S&egítség
-	w_Lang009 =	M&utasd ellenőrzés
-	w_Lang010 =	S&zünet
-	w_Lang011 =	&Hurok
-	w_Lang012 =	&Capture Keys
-	w_Lang013 =	Ab&lak elrejtése
-	w_Lang014 =	M&indig aktív
 		
 ; File Submenu		
 	f_Lang001 =	&Új
@@ -121,6 +115,12 @@
 	w_Lang006 =	Auto.
 	w_Lang007 =	Man.
 	w_Lang008 =	Megáll
+	w_Lang009 =	M&utasd ellenőrzés
+	w_Lang010 =	S&zünet
+	w_Lang011 =	&Hurok
+	w_Lang012 =	&Capture Keys
+	w_Lang013 =	Ab&lak elrejtése
+	w_Lang014 =	M&indig aktív
 	w_Lang015 =	Ismétlés
 	w_Lang016 =	Delay (ms):
 	w_Lang017 =	Alkalmaz

@@ -12,12 +12,6 @@
 	m_Lang007 =	S&pråk
 	m_Lang008 =	&Donere
 	m_Lang009 =	&Hjelp
-	w_Lang009 =	V&is kontroller
-	w_Lang010 =	Pa&use
-	w_Lang011 =	&Loop
-	w_Lang012 =	&Capture Keys
-	w_Lang013 =	S&kjul vindu
-	w_Lang014 =	All&tid aktiv
 		
 ; File Submenu		
 	f_Lang001 =	&Ny
@@ -121,6 +115,12 @@
 	w_Lang006 =	Auto.
 	w_Lang007 =	Man.
 	w_Lang008 =	Stopp
+	w_Lang009 =	V&is kontroller
+	w_Lang010 =	Pa&use
+	w_Lang011 =	&Loop
+	w_Lang012 =	&Capture Keys
+	w_Lang013 =	S&kjul vindu
+	w_Lang014 =	All&tid aktiv
 	w_Lang015 =	Gjentar
 	w_Lang016 =	Delay (ms):
 	w_Lang017 =	Påfør

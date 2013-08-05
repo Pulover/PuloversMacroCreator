@@ -12,12 +12,6 @@
 	m_Lang007 =	&Langue
 	m_Lang008 =	&Faire Un Don
 	m_Lang009 =	&Aider
-	w_Lang009 =	Affi&cher les contrôles
-	w_Lang010 =	&Pause
-	w_Lang011 =	&Boucle
-	w_Lang012 =	Cap&turez clés
-	w_Lang013 =	Mas&quer la fenêtre
-	w_Lang014 =	To&ujours actif
 		
 ; File Submenu		
 	f_Lang001 =	&Nouveau
@@ -121,6 +115,12 @@
 	w_Lang006 =	Auto.
 	w_Lang007 =	Man.
 	w_Lang008 =	Arrêter
+	w_Lang009 =	Affi&cher les contrôles
+	w_Lang010 =	&Pause
+	w_Lang011 =	&Boucle
+	w_Lang012 =	Cap&turez clés
+	w_Lang013 =	Mas&quer la fenêtre
+	w_Lang014 =	To&ujours actif
 	w_Lang015 =	Répétez
 	w_Lang016 =	Délai (ms):
 	w_Lang017 =	Appliquer

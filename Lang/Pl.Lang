@@ -12,12 +12,6 @@
 	m_Lang007 =	&Język
 	m_Lang008 =	&Darować
 	m_Lang009 =	Pomo&cy
-	w_Lang009 =	Po&każ panel kontroli
-	w_Lang010 =	P&auza
-	w_Lang011 =	P&ętla
-	w_Lang012 =	P&rzechwytywanie klawiszy
-	w_Lang013 =	&Ukryj okno
-	w_Lang014 =	&Zawsze aktywny
 		
 ; File Submenu		
 	f_Lang001 =	&Nowy
@@ -121,6 +115,12 @@
 	w_Lang006 =	Auto.
 	w_Lang007 =	Man.
 	w_Lang008 =	Zatrzymać
+	w_Lang009 =	Po&każ panel kontroli
+	w_Lang010 =	P&auza
+	w_Lang011 =	P&ętla
+	w_Lang012 =	P&rzechwytywanie klawiszy
+	w_Lang013 =	&Ukryj okno
+	w_Lang014 =	&Zawsze aktywny
 	w_Lang015 =	Powtarzam
 	w_Lang016 =	Opóźnienie (ms):
 	w_Lang017 =	Zastosować

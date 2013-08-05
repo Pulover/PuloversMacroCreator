@@ -5,19 +5,13 @@
 ; Main Menu		
 	m_Lang001 =	&Datei
 	m_Lang002 =	&Einfügen
-	m_Lang003 =	&Auswahl
+	m_Lang003 =	Aus&wahl
 	m_Lang004 =	&Bearbeiten
 	m_Lang005 =	&Makro
 	m_Lang006 =	&Optionen
 	m_Lang007 =	&Sprache
 	m_Lang008 =	S&penden
 	m_Lang009 =	&Hilfe
-	w_Lang009 =	S&teuerungleiste anzeigen
-	w_Lang010 =	Pa&use
-	w_Lang011 =	&Loop
-	w_Lang012 =	Taste&n erfassen 
-	w_Lang013 =	&Fenster schließen
-	w_Lang014 =	&Immer aktiv
 		
 ; File Submenu		
 	f_Lang001 =	&Neu
@@ -36,7 +30,7 @@
 ; Insert Sub Menu		
 	i_Lang001 =	&Maus
 	i_Lang002 =	&Text
-	i_Lang003 =	&Control
+	i_Lang003 =	&Steuerelement
 	i_Lang004 =	&Pause / Nachricht / Tasten erfassen
 	i_Lang005 =	&Fenster
 	i_Lang006 =	&Bild / Pixelsuche
@@ -45,7 +39,7 @@
 	i_Lang009 =	&If Anweisung / Variablen / Funktionen
 	i_Lang010 =	&Internet Explorer / COM-Schnittstelle
 	i_Lang011 =	Wi&ndows-Messages
-	i_Lang012 =	Sp&ezielle Tasten
+	i_Lang012 =	Sond&ertasten
 		
 ; Select Sub Menu		
 	s_Lang001 =	&Alles auswählen
@@ -70,7 +64,7 @@
 	e_Lang010 =	&Löschen
 	e_Lang011 =	&Nach oben
 	e_Lang012 =	Nac&h unten
-	e_Lang013 =	E&infügen aus Box
+	e_Lang013 =	E&infügen aus Fenster
 	e_Lang014 =	Farbmarkierung &bearbeiten 
 		
 ; Macro Sub Menu		
@@ -84,7 +78,7 @@
 	r_lang008 =	Steuerungleiste an&zeigen/verbergen
 	r_lang009 =	&Wiedergabe von ausgewählten Zeile
 	r_lang010 =	W&iedergabe bis zur ausgewählten Zeile
-	r_lang011 =	Ausgewählte Zeilen abs&pielen 
+	r_lang011 =	Ausgewählte Zeilen wiederge&ben
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Einstellungen
@@ -110,17 +104,23 @@
 ; Tray Menu		
 	y_Lang001 =	Fenster schließen
 	y_Lang002 =	Fenster anzeigen
-	y_Lang003 =	Steuerungleiste anzeigen/verbergen
+	y_Lang003 =	Steuerungleiste an&zeigen/verbergen
 		
 ; Main Window		
-	w_Lang001 =	Exportieren
+	w_Lang001 =	Export
 	w_Lang002 =	Vorschau
 	w_Lang003 =	Optionen
-	w_Lang004 =	Aufnahme
-	w_Lang005 =	Wiedergabe
+	w_Lang004 =	Aufn.
+	w_Lang005 =	Wiederg.
 	w_Lang006 =	Auto.
 	w_Lang007 =	Man.
 	w_Lang008 =	Stopp
+	w_Lang009 =	Steuerungleiste anzeigen
+	w_Lang010 =	&Pause
+	w_Lang011 =	L&oop
+	w_Lang012 =	Tasten e&rfassen 
+	w_Lang013 =	&Fenster verbergen
+	w_Lang014 =	&Immer aktiv
 	w_Lang015 =	Wiederholen
 	w_Lang016 =	Verzögerung (ms):
 	w_Lang017 =	Anwenden
@@ -141,7 +141,7 @@
 	c_Lang001 =	Maus
 	c_Lang002 =	Text
 	c_Lang003 =	Pause
-	c_Lang004 =	Control
+	c_Lang004 =	Steuerelement
 	c_Lang005 =	Fenster
 	c_Lang006 =	Bildsuche
 	c_Lang007 =	Pixelsuche
@@ -153,7 +153,7 @@
 	c_Lang013 =	COM-Schnittstelle
 	c_Lang014 =	Anwendung wählen (Erweitert)
 	c_Lang015 =	Nachricht
-	c_Lang016 =	Control
+	c_Lang016 =	Steuerelement
 	c_Lang017 =	Verzögern
 	c_Lang018 =	Millisekunden
 	c_Lang019 =	Sekunden
@@ -166,7 +166,7 @@
 	c_Lang026 =	Aktion
 	c_Lang027 =	Klicken
 	c_Lang028 =	Bewegen
-	c_Lang029 =	Verschieben und Klicken
+	c_Lang029 =	Ziehen und Klicken
 	c_Lang030 =	Mausrad nach oben
 	c_Lang031 =	Mausrad nach unten
 	c_Lang032 =	Drag and Drop
@@ -181,17 +181,17 @@
 	c_Lang041 =	X1
 	c_Lang042 =	X2
 	c_Lang043 =	Halten / Loslassen
-	c_Lang044 =	Klicken Graf
+	c_Lang044 =	Klick-Anzahl
 	c_Lang045 =	Plain Text (Raw)
-	c_Lang046 =	Text mit den Befehlen
-	c_Lang047 =	Einfügen aus der Zwischenablage
-	c_Lang048 =	Auf Control einfügen
+	c_Lang046 =	Text mit Befehlen
+	c_Lang047 =	Aus der Zwischenablage einfügen
+	c_Lang048 =	Auf Steuerelement einfügen
 	c_Lang049 =	Text festlegen
 	c_Lang050 =	Pause hinzufügen
 	c_Lang051 =	Messagebox
 	c_Lang052 =	Taste erfassen
 	c_Lang053 =	Timeout für Wait
-	c_Lang054 =	(Millisek.) 0=unendlich
+	c_Lang054 =	(Millisek.) 0=unendl.
 	c_Lang055 =	Befehl
 	c_Lang056 =	Wert
 	c_Lang057 =	Ausgabevariable
@@ -212,7 +212,7 @@
 	c_Lang072 =	Vorschau
 	c_Lang073 =	Schleife
 	c_Lang074 =	* Funktioniert nicht bei manueller Wiedergabe.
-	c_Lang075 =	Unterbrechen
+	c_Lang075 =	Unterbr.
 	c_Lang076 =	Fortsetzen
 	c_Lang077 =	Goto
 	c_Lang078 =	Zur Sprungmarke
@@ -232,15 +232,15 @@
 	c_Lang092 =	Seite Element/Index
 	c_Lang093 =	Set
 	c_Lang094 =	Get
-	c_Lang095 =	MEthode
+	c_Lang095 =	Methode
 	c_Lang096 =	Eigenschaft
-	c_Lang097 =	Warten, bis die Seite geladen werden.
+	c_Lang097 =	Warten, bis die Seite geladen wurde.
 	c_Lang098 =	CLSID
 	c_Lang099 =	Verbinden
 	c_Lang100 =	Handle
 	c_Lang101 =	COM Script
 	c_Lang102 =	Message-Nummer
-	c_Lang103 =	Spezielle Tasten
+	c_Lang103 =	Sondertasten
 	c_Lang104 =	Browser Zurück
 	c_Lang105 =	Browser Vorwärts
 	c_Lang106 =	Browser Refresh
@@ -283,11 +283,11 @@
 	c_Lang144 =	Taste:
 	c_Lang145 =	Haupttaste:
 	c_Lang146 =	Untertaste?
-	c_Lang147 =	Icon
-	c_Lang148 =	Kein Icon
+	c_Lang147 =	Symbol
+	c_Lang148 =	Kein Symbol
 	c_Lang149 =	Fehler
 	c_Lang150 =	Fragezeichen
-	c_Lang151 =	Ausrufezeichen
+	c_Lang151 =	Ausrufez.
 	c_Lang152 =	Informationen
 	c_Lang153 =	Immer im Vordergrund
 	c_Lang154 =	Minuten
@@ -297,7 +297,7 @@
 	c_Lang158 =	Nicht kompatibel mit 64-Bit!
 	c_Lang159 =	Suchoptionen
 	c_Lang160 =	Transparent
-	c_Lang161 =	Skalierung
+	c_Lang161 =	Skalier.
 	c_Lang162 =	If-Anweisung hinzufügen
 		
 ; Other Windows		
@@ -308,8 +308,8 @@
 	t_Lang005 =	Hotstring verwenden
 	t_Lang006 =	Maus blockieren
 	t_Lang007 =	Alle
-	t_Lang008 =	Keiner
-	t_Lang009 =	Kontextsensitive Hotkeys
+	t_Lang008 =	Keine
+	t_Lang009 =	Kontextabhängige Hotkeys
 	t_Lang010 =	Export nach
 	t_Lang011 =	Einzug
 	t_Lang012 =	PMC-Code einfügen
@@ -323,7 +323,7 @@
 	t_Lang020 =	Neues Makro aufzeichnen
 	t_Lang021 =	Tastenanschläge
 	t_Lang022 =	Aufzeichnen
-	t_Lang023 =	Tasten-Zustand erfassen (gerdrückt/losgelassen)
+	t_Lang023 =	Tastenstatus erfassen (gedr./losgel.)
 	t_Lang024 =	Mausklicks
 	t_Lang025 =	Mausrad
 	t_Lang026 =	Mausbewegung
@@ -337,21 +337,21 @@
 	t_Lang034 =	Umschalten
 	t_Lang035 =	Wiedergabe
 	t_Lang036 =	Beschleunigen
-	t_Lang037 =	Verlangsamen
-	t_Lang038 =	Nach der Wiedergabe Maus zurück
+	t_Lang037 =	Verzögern
+	t_Lang038 =	Nach Wiedergabe Maus zurück
 	t_Lang039 =	Mauskoordinaten
 	t_Lang040 =	Fenster
 	t_Lang041 =	Bildschirm
 	t_Lang042 =	Standard Maus-Verzögerung
-	t_Lang043 =	Standard Window-Verzögerung
+	t_Lang043 =	Standard Fenster-Verzögerung
 	t_Lang044 =	Maximaler Verlauf pro Makro
 	t_Lang045 =	Verlauf löschen
 	t_Lang046 =	Screenshots
 	t_Lang047 =	Schaltfläche zeichnen
 	t_Lang048 =	Linienbreite (Px)
 	t_Lang049 =	Beim Loslassen erfassen
-	t_Lang050 =	Drücken Sie zum Erfassen die Eingabetaste
-	t_Lang051 =	Screenshots-Verzeichnis
+	t_Lang050 =	Eingabetaste zum Erfassen
+	t_Lang051 =	Screenshot-Verzeichnis
 	t_Lang052 =	Versch.
 	t_Lang053 =	Hotkeys
 	t_Lang054 =	Als Standard-Hotkeys festlegen 
@@ -385,7 +385,7 @@
 	t_Lang082 =	Anweisungen
 	t_Lang083 =	Einrückung für Schleifen und Anweisungen
 	t_Lang084 =	(Doppelklick auf die Überschrift der Aktions-Spalte zum Aktivieren/Deaktivieren)
-	t_Lang085 =	Steuerelement-Symbolleiste beim Start anzeigen
+	t_Lang085 =	Steuerungs-Symbolleiste beim Start anzeigen
 	t_Lang086 =	Suche Funktionen. Bitte warten...
 	t_Lang087 =	Externe Dateien einbinden
 	t_Lang088 =	EXE-Datei erstellen 
@@ -406,12 +406,12 @@
 	t_Lang103 =	Schnell
 	t_Lang104 =	Titelleiste anzeigen/verbergen
 	t_Lang105 =	Hauptfenster anzeigen/verbergen
-	t_Lang106 =	Laufen sofort
-	t_Lang107 =	Zufälligen Verzögerungen
-	t_Lang108 =	Normalen
-	t_Lang109 =	Nach unten
-	t_Lang110 =	Up
-	t_Lang111 =	Tastendruck Einfügen
+	t_Lang106 =	Run immediately
+	t_Lang107 =	Zufallsverzögerung 
+	t_Lang108 =	Normal
+	t_Lang109 =	Auf
+	t_Lang110 =	Ab
+	t_Lang111 =	Tastendruck einfügen
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Öffnen
@@ -425,7 +425,7 @@
 	d_Lang009 =	Fehler: Kein Hotkey ausgewählt.
 	d_Lang010 =	Fehler: Ungültige Addresse.`nDie gewählte Adresse oder der Dateiname ist ungültig.
 	d_Lang011 =	Warnung
-	d_Lang012 =	Kein Control ausgewählt.`nFortfahren?
+	d_Lang012 =	Kein Steuerelement ausgewählt.`nFortfahren?
 	d_Lang013 =	Script exportieren
 	d_Lang014 =	Script exportiert
 	d_Lang015 =	Die Datei wurde erfolgreich exportiert.
@@ -439,8 +439,8 @@
 	d_Lang018 =	Pixelfarbe
 	d_Lang019 =	Liste löschen
 	d_Lang020 =	Sollen wirklich alle Einträge gelöscht werden?
-	d_Lang021 =	Weiter
-	d_Lang022 =	Zurück
+	d_Lang021 =	Nächster
+	d_Lang022 =	Vorheriger
 	d_Lang023 =	Nachricht
 	d_Lang024 =	Standardeinstellungen laden?
 	d_Lang025 =	Makro(s) aktiviert.`nMit den Hotkeys wiedergeben.
@@ -454,9 +454,9 @@
 	d_Lang033 =	Makros aktivieren
 	d_Lang034 =	
 	(LTrim	
-		- Mit %DrawButton% klicken und ziehen, um Bereich zu wählen.
-		- Klicken und loslassen ohne ziehen, Control-Bereich zu wählen.
-		- In einem Bereich ohne Control klicken, um Fensterbereich wählen.
+		- Mit %DrawButton% klicken und ziehen, um Bereich auszuwählen.
+		- Klicken und ohne ziehen loslassen, um Steuerelement-Bereich auszuwählen.
+		- In einem Bereich ohne Steuerelement klicken, um Fensterbereich zu wählen.
 	)	
 	d_Lang035 =	Weiter?
 	d_Lang036 =	Bild/Pixel gefunden bei
@@ -480,7 +480,7 @@
 		MyVar = `%A_DDDD`%
 		Clipboard == `%MyVar`%
 	)	
-	d_Lang043 =	Oder nutzen Sie die Steuerelement-Symbolleiste
+	d_Lang043 =	Oder nutzen Sie die Steuerungs-Symbolleiste
 	d_Lang044 =	
 	(LTrim	
 		Diese Funktion erfordert die Eval()-Funktion.
@@ -525,8 +525,8 @@
 		
 		Um die automatische Prüfung zu deaktivieren wählen Sie Hilfe > Beim Start überprüfen.
 	)	
-	d_Lang062 =	Dies ist die neueste Version.
-	d_Lang063 =	Ein Fehler ist während der Überprüfung aufgetreten.
+	d_Lang062 =	Dies ist bereits die neuste Version.
+	d_Lang063 =	Während der Überprüfung ist ein Fehler aufgetreten.
 	d_Lang064 =	COM-Objekt Fehler in
 	d_Lang065 =	Reihe
 	d_Lang066 =	Speziell
@@ -534,7 +534,7 @@
 	d_Lang068 =	Tipps:
 	d_Lang069 =	
 	(LTrim	
-		Sie benötigen Hilfe, haben einen Fehler gefunden oder haben einen Vorschlag? Senden Sie eine E-Mail an den Autor: <a href="mailto:rodolfoub@gmail.com">rodolfoub@gmail.com</a>
+		Sie benötigen Hilfe, haben einen Fehler gefunden oder haben einen Vorschlag? Dann senden Sie eine E-Mail an den Autor: <a href="mailto:rodolfoub@gmail.com">rodolfoub@gmail.com</a>
 		Diese Software ist kostenlos. Wenn Sie sie für hilfreich halten <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=rodolfoub`%40gmail`%2ecom&lc=US&item_name=Pulover`%27s`%20Macro`%20Creator&item_number=App`%2ePMC&currency_code=USD&bn=PP`%2dDonationsBF`%3abtn_donateCC_LG`%2egif`%3aNonHosted">spenden Sie</a> und Unterstützen die Entwicklung. Vielen Dank.
 	)	
 	d_Lang070 =	Fehler: Ungültiger Hotkey ausgewählt.
@@ -542,33 +542,33 @@
 ; Start-up Tips		
 	Start_Tips =	
 	(LTrim	
-		Sie können Makros mit den Befehls-Schaltflächen im Hauptfenster oder über den Rekorder auf Ihre Aktionen zu kopieren. Klicken Sie auf Optionen > Einstellungen > Aufnahme, um auszuwählen welche Eingaben aufgezeichnet werden sollen.
-		Informationen zur Verwendung der für schnelle Aufgaben Optionen > Einstellungen > Aufnahme gehen und überprüfen Sie die "Liste löschen"-Option. Dann klicken Sie auf den Record-Button im Hauptfenster und verwenden Sie F10, um die aktuelle Makro zu löschen und eine neue mit der gleichen Tastenkombination. Sie können auch das Kontrollkästchen "Immer aktiv" im Hauptfenster zu halten Aufnahme und Wiedergabe Hotkeys aktiv.
-		Um Hilfe zu einem bestimmten Befehl mit der rechten Maustaste auf eine Schaltfläche im Hauptfenster oder irgendwo in der Eingabeaufforderung, um Links zu AutoHotkey Online-Hilfe zu zeigen.
-		Überprüfen Sie die "Capture-Keys", um Schlüssel und Kombinationen, um Ihre Makro direkt eingeben aus dem Hauptfenster.
-		Geben Sie Schlüssel und Kombinationen in der Hotkey-Feld unten ein und klicken Sie auf die Schaltfläche Einfügen, um sie zu den ausgewählten Zeilen hinzuzufügen.
-		Wenn keine Zeilen ausgewählt sind die Editierbuttons auf alle Zeilen in der Liste beantragen.
-		Sie können Ihre eigenen Variablen in den Variablen zuweisen Fenster (Einfügen > Wenn Statements / Variablen / Funktionen). Um sie zu verwenden innerhalb Befehle schließen Sie den Variablennamen in Prozentzeichen, z. B.: `%MyVar`%.
-		Die "Loop"-Zähler an der Spitze wird die Gesamtzahl der Schleifen für das ausgewählte Makro.
-		Sie können eine Reihe von Doppelklick oder durch Markieren und Anklicken der Bearbeiten Schaltflächen am unteren Rand bearbeiten.
-		Sie können mehrere ausgewählte Zeilen bearbeiten mit den Optionen in der Bearbeitungsleiste an der Unterseite.
-		Wählen Sie eine oder mehrere Zeilen, um neue Befehle auf sie hinzuzufügen.
-		Sie können Zeilen mit Click-and-Drag bewegen.
-		Auf das Tray-Icon doppelklicken, um Hotkeys aktivieren oder stoppen Sie die Wiedergabe / Aufnahme. Klicken Sie mit der mittleren Taste während der Wiedergabe oder Aufnahme zu pausieren.
-		Sie können Ihre Makros zu arbeiten AutoHotkey Script oder eigenständige Programme aus dem Fenster Export exportieren.
-		Zur Aufnahme und Wiedergabe Maus mit absoluten Koordinaten wählen Sie Optionen > Einstellungen > Defaults und Set Maus-Koordinaten auf Bildschirm.
-		Sie können öffnen, kopieren, verschieben oder löschen von Dateien und Ordnern mit einem der Befehle im Einfügen > Run / File / String / Misc.
-		Zum Aufnehmen Down und Up Zustand jeder Taste wählen Sie Optionen > Einstellungen > Aufnahme und überprüfen "Capture Taste Zustand (Down / Up)"-Option.
-		Sie können Hotkeys zu beschleunigen oder zu verlangsamen Playback. Gehen Sie auf Optionen > Einstellungen > Wiedergabe, um Schlüssel und Geschwindigkeit eingestellt.
-		Um Capture-Bereich einstellen mit dem "Make Screenshot"-Werkzeug wählen Sie Optionen > Einstellungen > Screenshots und wählen Sie "Enter Erfassen". Nach dem Zeichnen des Rechtecks Verwendung Steuerung Pfeiltasten, um die Auswahl zu bewegen und verschieben Pfeiltasten, um es zu ändern.
-		Schnellauswahl: Wählen Sie eine beliebige Zeile, und klicken Sie auf eine Spaltenüberschrift, um ähnliche Reihen auf Zelle Text aus dieser Spalte zu wählen.
-		Der Run / File / String / Misc. Fenster haben viele andere nützliche Befehle wie Herunterfahren und UrlDownloadToFile.
-		Benutzen Sie den "Screenshot"-Funktion in der Funktions-Fenster (Einfügen > Wenn Statements / Variablen / Funktionen), um einen Screenshot des Bildschirms machen. Erste Parameter ist der Ziel-Datei den Pfad und den Namen mit einem png-Erweiterung. Zweiter Parameter sind die Rohr-separated-Koordinaten auf dem Bildschirm, z. B. 100|200|50|100 (X|Y|Breite|Höhe).
-		Klicken Sie auf den Index Spaltenüberschrift zu drehen On / Off Hilfe, Muster und Farben für Loops und Statements. Aktion auf Spaltenüberschrift zu drehen On / Off Einzug für Loops und Statements Doppelklick.
-		Sie können debuggen Makros mit der manuellen Hotkey und die Wiedergabe-Optionen im Makro-Menü. Sie können auch deaktivieren Aktionen durch Deaktivieren sie in der Makro-Liste.
-		Um Ihren Makros funktionieren nur auf ein bestimmtes Fenster auf Makro > Context Sensitive Hotkeys gehen.
-		Sie können Ihren eigenen globalen Variablen beim Start und exportiert werden geladen. Gehen Sie auf Optionen > Einstellungen > Benutzer globale Variablen, um sie hinzuzufügen.
-		Sie können laufen erweiterte Funktionen wie SubStr und RegExReplace aus dem Fenster Funktionen (Einfügen > Wenn Statements / Variablen / Funktionen). Oder führen Sie Ihre eigene Funktionen aus externen AutoHotkey Script.
+		Sie können Makros mit den Befehls-Schaltflächen im Hauptfenster erzeugen oder mittels Rekorder Ihre Aktionen kopieren. Klicken Sie auf Optionen > Einstellungen > Aufnahme, um festzulegen welche Eingaben aufgezeichnet werden sollen.
+		Um den Rekorder für schnelle Aufgaben zu verwenden wählen Sie Optionen > Einstellungen > Aufnahme und aktivieren Sie die Option "Liste löschen". Dann klicken Sie auf die Aufnahme-Schaltfläche im Hauptfenster und wählen Sie F10, um das aktuelle Makro zu löschen und ein neues mit der gleichen Tastenkombination aufzuzeichnen. Sie können auch das Kontrollkästchen "Immer aktiv" im Hauptfenster aktivieren, um die Hotsrings für Aufnahme und Wiedergabe dauerhaft zu aktivieren.
+		Um Hilfe zu einem bestimmten Befehl zu erhalten, klicken Sie mit der rechten Maustaste auf eine Schaltfläche im Hauptfenster oder irgendwo in der Eingabeaufforderung, um zur AutoHotkey Online-Hilfe zu gelangen.
+		Aktivieren Sie "Tasten erfassen", um Tasten und Kombinationen direkt aus dem Hauptfenster in Ihr Makro einzufügen.
+		Geben Sie Tasten und Kombinationen unten im Hotkey-Fenster ein und klicken Sie auf die Schaltfläche Einfügen, um sie zu den ausgewählten Zeilen hinzuzufügen.
+		Wenn keine Zeilen ausgewählt sind werden die Bearbeiten-Schaltflächen auf alle Zeilen in der Liste angewendet.
+		Sie können Ihre eigenen Variablen im Variablen-Fenster zuweisen (Einfügen > If-Anweisungen/Variablen/Funktionen). Um sie innerhalb von Befehlen zu verwenden, schließen Sie den Variablennamen in Prozentzeichen ein, z. B.: `%MyVar`%.
+		Der "Loop"-Zähler oben legt die Gesamtzahl der Schleifen für das ausgewählte Makro fest.
+		Sie können eine Reihe durch Doppelklick oder durch Markieren und Anklicken der Bearbeiten-Schaltflächen am unteren Rand editieren.
+		Sie können mehrere ausgewählte Zeilen mit den Optionen in der Bearbeitungsleiste an der Unterseite bearbeiten.
+		Wählen Sie eine oder mehrere Zeilen, um neue Befehle darüber einzufügen.
+		Sie können Zeilen mittels Klicken-und-Ziehen verschieben.
+		Doppelklicken Sie auf das Infobereich-Symbol, um Hotkeys zu aktivieren oder die Wiedergabe/Aufnahme anzuhalten. Ein Klick mit der mittleren Maustaste auf das Infobereich-Symbol während Wiedergabe bzw. Aufnahme leitet eine Pause ein.
+		Sie können Ihre Makros zu funktionierenden AutoHotkey-Scripts oder eigenständigen Programmen aus dem Exportfenster exportieren.
+		Für Aufnahme und Wiedergabe der Maus mit absoluten Koordinaten wählen Sie Optionen > Einstellungen > Allgemein und setzen die Einstellung `"Mauskoordinaten`" auf `"Bildschirm`".
+		Sie können Dateien und Ordner öffnen, kopieren, verschieben oder löschen durch Einfügen eines der Befehle unter > Run/File/String/Versch.
+		Zum Erfassen des Tasten-Status `"Gedrückt`" und `"Losgelassen`" wählen Sie Optionen > Einstellungen > Allgemein > Aufzeichnen und aktivieren "Tastenstatus erfassen (gedr./losgel.)".
+		Sie können Hotkeys zum beschleunigten oder langsameren Abspielen verwenden. Wählen Sie Optionen > Einstellungen > Wiedergabe, um die Taste und Geschwindigkeit festzulegen.
+		Um den Erfassungsbereich des Werkzeugs "Screenshot erstellen" festzulegen, wählen Sie Optionen > Einstellungen > Screenshots und dann "Eingabetaste zum Erfassen". Verwenden Sie nach Zeichnen des Rechtecks Steuerung + Pfeiltasten, um die Auswahl zu verschieben und Steuerung + Pfeiltasten, um die Größe zu ändern.
+		Schnellauswahl: Wählen Sie eine beliebige Zeile und klicken Sie auf eine Spaltenüberschrift, um ähnliche Reihen auf Basis des Zelltextes aus dieser Spalte zu auszuwählen.
+		Das Fenster Run/File/String/Versch. hat viele weitere nützliche Befehle, wie Herunterfahren und UrlDownloadToFile.
+		Verwenden Sie die Screenshot-Funktion im Funktionsfenster (Einfügen > If-Anweisungen/Variablen/Funktionen), um einen Screenshot von einem Bildschirmteil zu erstellen. Erster Parameter sind Pfad und Name der Zieldatei mit einer PNG-Erweiterung. Zweiter Parameter sind die Pipe-getrennten Koordinaten auf dem Bildschirm, z. B. 100|200|50|100 (X|Y|Breite|Höhe).
+		Klicken Sie auf die Spaltenüberschrift Index, um Hilfsmarkierungen und -Farben für Loops und Anweisungen ein-/ bzw. auszuschalten. Doppelklick auf Spaltenüberschrift Action, um den Einzug für Loops und Anweisungen ein-/ bzw. auszuschalten.
+		Sie können Ihre Makros mit den manuellen Hotkey- und die Wiedergabe-Optionen im Makro-Menü debuggen. Sie können Aktionen auch in der Makro-Liste deaktivieren.
+		Damit Ihren Makros nur bei bestimmten Fenstern laufen, wählen Sie Makro > Kontextabhängige Hotkeys.
+		Sie können einstellen, dass Ihre eigenen globalen Variablen beim Start geladen bzw. exportiert werden. Wählen Sie Optionen > Einstellungen > Globale Benutzer-Variablen, um Variablen hinzuzufügen.
+		Sie können erweiterte Funktionen wie SubStr und RegExReplace aus dem Funktionen-Fenster ausführen (Einfügen > Wenn Statements / Variablen / Funktionen). Oder führen Sie eigene Funktionen aus externen AutoHotkey Script aus.
 	)	
 ; Tooltips		
 	NewB_TT =	Neu (Strg+N)
@@ -584,24 +584,24 @@
 	MouseB_TT =	Maus (F2)
 	TextB_TT =	Text (F3)
 	SpecialB_TT =	Spezielle Tasten
-	ControlB_TT =	Control (F4)
-	PauseB_TT =	Pause (F5) / Nachricht (Umschalt+F5) / Taste erfassen (Control+F5) 
+	ControlB_TT =	Steuerelement (F4)
+	PauseB_TT =	Pause (F5)/Nachricht (Umschalt+F5)/Taste erfassen (Strg+F5) 
 	WindowB_TT =	Fenster (F6)
-	ImageB_TT =	Bild / Pixelsuche (F7)
-	RunB_TT =	Run / File / String / Versch. (F8)
-	ComLoopB_TT =	Loop (F9) / Goto (Umschalt+F9) / Label (Strg+F9)
-	IfStB_TT =	If Anweisungen (F10) / Variablen (Umschalt+F10) / Funktionen (Strg+F10)
-	IEComB_TT =	Internet Explorer (F11) / COM-Schnittstelle (Umschalt+F11) / Scriptlet ausführen (Strg+F11)
+	ImageB_TT =	Bild/Pixelsuche (F7)
+	RunB_TT =	Run/File/String/Versch. (F8)
+	ComLoopB_TT =	Loop (F9)/Goto (Umschalt+F9)/Label (Strg+F9)
+	IfStB_TT =	If Anweisungen (F10)/Variablen (Umschalt+F10)/Funktionen (Strg+F10)
+	IEComB_TT =	Internet Explorer (F11)/COM-Schnittstelle (Umschalt+F11)/Scriptlet ausführen (Strg+F11)
 	SendMsgB_TT =	Windows-Messages (F12)
 	AutoKey_TT =	Rückschritttaste zum Löschen
 	ManKey_TT =	Rückschritttaste zum Löschen
 	AbortKey_TT =	Rückschritttaste zum Löschen
 	JoyKey_TT =	Drücken Sie eine Taste auf dem Joystick
-	PauseKey_TT =	Unterbricht die Ausführung, statt anzuhalten
+	PauseKey_TT =	Ausführung unterbrechen, statt anzuhalten
 	OnFinish_TT =	
 	(LTrim	
 		Optionen für das Herunterfahren
-		Wenn die Wiedergabe beendet...
+		Wenn Wiedergabe beendet, ...
 	)	
 	Win1_TT =	Fügen Sie die Windows-Taste als Modifizierer
 	JoyHK_TT =	Joystick
@@ -611,7 +611,7 @@
 	DuplicateL_TT =	Makro duplizieren (Strg+Umschalt+D)
 	SaveC_TT =	Aktuelles Makro speichern (Strg+Alt+S)
 	ImportB_TT =	Makro importieren (Strg+I)
-	IfDirB_TT =	Hotkeys je nach vom aktivem oder existierenden Fenstertyp aktivieren (Strg+H)
+	IfDirB_TT =	Hotkeys je nach aktivem oder existierenden Fenstertyp aktivieren (Strg+H)
 	KeepHKOn_TT =	Hotkeys immer aktivieren
 	A_List_TT =	Makro wählen (Strg+1~0)
 	OSHK_TT =	Makro wählen
@@ -626,243 +626,243 @@
 	Redo_TT =	Wiederholen (Strg+Y)
 	CopyTo_TT =	Kopieren...
 	Capt_TT =	Tastdruck in diesem Fenster erfassen
-	OnScCtrl_TT =	Steuerelement-Symbolleiste anzeigen
+	OnScCtrl_TT =	Steuerungs-Symbolleiste anzeigen
 	ShowStep_TT =	Ballon-Tipps anzeigen
 	ApplyT_TT =	Anwenden
 	ApplyI_TT =	Anwenden
 	ApplyL_TT =	Einfügen aus Box (Einfg)
-	InsertKey_TT =	Tastendruck Einfügen (Ctrl+Insert)
-	EditButton_TT =	Bearbeiten
-	PrevRefresh_TT =	Aktualisieren (F5)
-	PrevCopy_TT =	Kopieren
-	OpenT_TT =	Öffnen (Strg+O)
-	SaveT_TT =	Speichern (Strg+S)
-	CutT_TT =	Ausschneiden
-	CopyT_TT =	Kopieren
-	PasteT_TT =	Einfügen
-	SelAllT_TT =	Alles auswählen
-	DefaultMacro_TT =	Datei wählen, die beim Programmstart geladen werden soll
+	InsertKey_TT =	Bearbeiten
+	EditButton_TT =	Aktualisieren (F5)
+	PrevRefresh_TT =	Kopieren
+	PrevCopy_TT =	Öffnen (Strg+O)
+	OpenT_TT =	Speichern (Strg+S)
+	SaveT_TT =	Ausschneiden
+	CutT_TT =	Kopieren
+	CopyT_TT =	Einfügen
+	PasteT_TT =	Alles auswählen
+	SelAllT_TT =	Datei wählen, die beim Programmstart geladen werden soll
+	DefaultMacro_TT =	Aktuelle Variablen-Inhalte kopieren
 	VarCopyA_TT =	Aktuelle Variablen-Inhalte kopieren
-	VarCopyB_TT =	Aktuelle Variablen-Inhalte kopieren
-	FindReplace_TT =	Suchen/Ersetzen (Strg+F)
-	EditComm_TT =	Kommentar bearbeiten
-	EditColor_TT =	Farbmarkierung bearbeiten
-	Reset_TT =	Variablen-Inhalte löschen
-	Screenshot_TT =	Screenshot erzeugen
-	ColorPick_TT =	Farbauswahl
-	PicPrev_TT =	Doppelklicken, zum Bild öffnen
-	CoordPixel_TT =	Koordinaten-Modus
-	VariatT_TT =	Shades of Variation
-	IconN_TT =	Nummer der Icon-Gruppe
-	TransC_TT =	Transparente Farbe
-	WScale_TT =	Breite festlegen
-	HScale_TT =	Höhe festlegen
+	VarCopyB_TT =	Suchen/Ersetzen (Strg+F)
+	FindReplace_TT =	Kommentar bearbeiten
+	EditComm_TT =	Farbmarkierung bearbeiten
+	EditColor_TT =	Variablen-Inhalte löschen
+	Reset_TT =	Screenshot erzeugen
+	Screenshot_TT =	Farbauswahl
+	ColorPick_TT =	Doppelklicken, um Bild zu öffnen
+	PicPrev_TT =	Koordinaten-Modus
+	CoordPixel_TT =	Shades of Variation
+	VariatT_TT =	Nummer der Icon-Gruppe
+	IconN_TT =	Transparente Farbe
+	TransC_TT =	Breite festlegen
+	WScale_TT =	Höhe festlegen
+	HScale_TT =	Klicken, um eine Farbe auswählen
 	LoopLVColor_TT =	Klicken, um eine Farbe auswählen
-	IfLVColor_TT =	Klicken, um eine Farbe auswählen
-	RefreshIEW_TT =	Liste aktualisieren
-	ActiveObj_TT =	Versucht, auf einer Active COM-Objekt verbinden
+	IfLVColor_TT =	Liste aktualisieren
+	RefreshIEW_TT =	Versucht, auf einer Active COM-Objekt verbinden
+	ActiveObj_TT =	Erweiterter Editor
 	ExpView_TT =	Erweiterter Editor
-	ExpView2_TT =	Erweiterter Editor
-	OSPlay_TT =	Wiedergabe/Pause
-	OSStop_TT =	Beenden
-	OSRec_TT =	Aufnahme Starten/Beenden
-	OSRecNew_TT =	Neues Makro aufzeichnen
-	OSRecOpt_TT =	Aufnahme-Optionen
-	OSPlayOpt_TT =	Wiedergabe-Optionen
-	OSClear_TT =	Liste löschen
-	OSProgB_TT =	Progress-Bar anzeigen
-	OSFast_TT =	Beschleunigen
-	OSSlow_TT =	Verlangsamen
-	OSTrans_TT =	Deckkraft
-	ToggleTB_TT =	Titelleiste anzeigen/verbergen
-	ToggleMW_TT =	Hauptfenster anzeigen/verbergen
+	ExpView2_TT =	Wiedergabe/Pause
+	OSPlay_TT =	Beenden
+	OSStop_TT =	Aufnahme starten/beenden
+	OSRec_TT =	Neues Makro aufzeichnen
+	OSRecNew_TT =	Aufnahme-Optionen
+	OSRecOpt_TT =	Wiedergabe-Optionen
+	OSPlayOpt_TT =	Liste löschen
+	OSClear_TT =	Fortschrittsanzeige einblenden
+	OSProgB_TT =	Beschleunigen
+	OSFast_TT =	Verzögern
+	OSSlow_TT =	Deckkraft
+	OSTrans_TT =	Titelleiste anzeigen/verbergen
+	ToggleTB_TT =	Hauptfenster anzeigen/verbergen
+	ToggleMW_TT =	
 	MRel_TT =	
-	(LTrim	
-		Bewegungen relativ zur aktuellen Position.
-		Oder wenn mit Control verwendet: Position relativ zu kontrollieren.
+	(LTrim	Bewegungen relativ zur aktuellen Position.
+		Oder wenn mit Steuerelement verwendet: Position relativ zu kontrollieren.
+		
 	)	
 	Raw_TT =	
-	(LTrim	
-		Der SendRaw-Befehl interpretiert alle Zeichen direkt,
-		anstatt z. B. {Enter} als ENTER-Taste, ^c als STRG+C
-		und so weiter zu interpretieren.
+	(LTrim	Der SendRaw-Befehl interpretiert alle Zeichen direkt, anstatt z. B. 
+		{Enter} als ENTER-Taste, ^c als STRG+C und so weiter zu interpretieren.
+		
+		
 	)	
-	ComText_TT =	
-	(LTrim	
-		Ist der Raw-Modus nicht aktiv, werden folgende Zeichen als 
-		Modifikatoren behandelt (diese Modifikatoren beeinflussen 
+	ComText_TT =	Ist der Raw-Modus nicht aktiv, werden folgende Zeichen als 
+	(LTrim	Modifikatoren behandelt (diese Modifikatoren beeinflussen 
 		nur die nachfolgende Taste)::, +, ^, #
+		
+		
 	)	
-	Clip_TT =	
-	(LTrim	
-		Text kurzzeitig mithilfe der Zwischenablage senden.
-		Wenn der Vorgang abgeschlossen ist, wird der ursprüngliche Inhalt 
+	Clip_TT =	Text kurzzeitig mithilfe der Zwischenablage senden.
+	(LTrim	Wenn der Vorgang abgeschlossen ist, wird der ursprüngliche Inhalt 
 		der Zwischenablage wiederhergestellt.
 		(Text leer lassen, um den aktuellen Inhalt einzufügen)
-	)	
-	EditPaste_TT =	
-	(LTrim	
-		String am Cursor einfügen/Einfüge-Position
-		in ein Edit-Steuerelement (dies bestrifft nicht den 
-		der Inhalt der Zwischenablage).
-	)	
-	SetText_TT =	Ändert den Text eines Steuerelements.
-	RelKey_TT =	
-	(LTrim	
-		Mausbewegungen und Klicks als Offset von 
-		vorheriger Position aufzeichnen.
-	)	
-	ToggleC_TT =	Relative Aufzeichnung aktivieren, wenn Taste gedrückt ist.
-	Relative_TT =	Koordinaten sind relativ zum aktiven Fenster.
-	Screen_TT =	Koordinaten sind relativ zum Desktop (gesamter Bildschirm).
-	IncFolders_TT =	
-	(LTrim	
-		0 - Nur Dateien/Tasten
-		1 - Ordner/Unterschlüssel und Dateien/Schlüssel
-		2 - Nur Ordner/Unterschlüssel
-	)	
-	Recurse_TT =	
-	(LTrim	
-		0 - Nicht rekursiv in Ordnern/Unterschlüsseln
-		1 - Rekursiv in Ordnern/Unterschlüsseln
-	)	
 		
+		
+	)	
+	EditPaste_TT =	String am Cursor einfügen/Einfüge-Position
+	(LTrim	in ein Edit-Steuerelement (dies bestrifft nicht den 
+		der Inhalt der Zwischenablage).
+		
+		Ändert den Text eines Steuerelements.
+	)	
+	SetText_TT =	
+	RelKey_TT =	Mausbewegungen und Klicks als Offset von 
+	(LTrim	vorheriger Position aufzeichnen.
+		
+		Relative Aufzeichnung aktivieren, wenn Taste gedrückt ist.
+	)	Koordinaten sind relativ zum aktiven Fenster.
+	ToggleC_TT =	Koordinaten sind relativ zum Desktop (gesamter Bildschirm).
+	Relative_TT =	
+	Screen_TT =	
+	IncFolders_TT =	0 - Nur Dateien/Tasten
+	(LTrim	1 - Ordner/Unterschlüssel und Dateien/Schlüssel
+		2 - Nur Ordner/Unterschlüssel
+		
+		
+	)	
+	Recurse_TT =	0 - Nicht rekursiv in Ordnern/Unterschlüsseln
+	(LTrim	1 - Rekursiv in Ordnern/Unterschlüsseln
+		
+		
+	)	
+		Zum Bearbeiten doppelklicken
 ; Tooltips from AHK Docs		
-	ExpList_TT =	Doppelklicken zum Editiern 
-	Ex_IfDir_TT =	
-	(LTrim	
-		Erstellt kontextabhängig Hotkeys und Hotstrings je
-		nach Fenstertyp, das aktiv ist oder existiert.
+	ExpList_TT =	
+	Ex_IfDir_TT =	Erstellt kontextabhängig Hotkeys und Hotstrings je
+	(LTrim	nach Fenstertyp, das aktiv ist oder existiert.
+		
+		
 	)	
-	Ex_IfDirType_TT =	
-	(LTrim	
-		Erstellt kontextabhängig Hotkeys und Hotstrings je
-		nach Fenstertyp, das aktiv ist oder existiert.
+	Ex_IfDirType_TT =	Erstellt kontextabhängig Hotkeys und Hotstrings je
+	(LTrim	nach Fenstertyp, das aktiv ist oder existiert.
+		
+		
 	)	
-	Ex_SM_TT =	
+	Ex_SM_TT =	Macht Send gleichbedeutend mit SendInput oder SendPlay, anstatt mit SendEvent (Standard). Bewirkt auch, dass die angegebene Methode von MouseMove/Click/Drag verwendet wird.
 	(LTrim	
-		Macht Send gleichbedeutend mit SendInput oder SendPlay,
-		anstatt mit SendEvent (Standard). Bewirkt auch,
-		dass die angegebene Methode von MouseMove/Click/Drag verwendet wird.
+		
+		
+		Event: Standardwert, der zu Beginn für alle Scripts gilt. Bewirkt, dass die SendEvent-Methode für Send, SendRaw, Click und MouseMove/Click/Drag verwendet wird.
 	)	
 	SM_TT =	
 	(LTrim	
-		Event: Standardwert, der zu Beginn für alle Scripts gilt. Bewirkt, dass die SendEvent-Methode für Send, SendRaw,
-		Click und MouseMove/Click/Drag verwendet wird.
-		Input: Wechselt auf die SendInput-Methode für Send, SendRaw, Click und MouseMove/Click/Drag. 
-		InputThenPlay [v1.0.43.02+]: Gleich wie oben, außer dass der Input-Modus auf den Play- anstatt auf den Event-Modus zurückgreift,
-		falls SendInput nicht verfügbar ist. Bewirkt auch, dass der SendInput-Befehl auf den Play-Modus zurückgreift,
-		falls SendInput nicht verfügbar ist.
-		Play: Wechselt auf die SendPlay-Methode für Send, SendRaw, Click und MouseMove/Click/Drag.
-	)	
-	Ex_SI_TT =	
-	(LTrim	
+		
+		
+		
 		Bestimmt, ob ein Skript erneut aufgerufen werden darf, wenn es bereits ausgeführt wird.
-	)	
+		
+		
+		
+	)	Das Wort FORCE überspringt das Dialogfeld und ersetzt die alte Instanz automatisch,
+	Ex_SI_TT =	ähnlich wie der Reload-Befehl.
+	(LTrim	Das Wort IGNORE überspringt das Dialogfeld und erhält die alte Instanz.
+		Versuche, ein bereits laufendes Skript zu starten werden ignoriert.
+	)	Das Wort OFF ermöglicht es, mehrere Instanzen des Skripts gleichzeitig auszuführen.
 	SI_TT =	
 	(LTrim	
-		Das Wort FORCE überspringt das Dialogfeld und ersetzt die alte Instanz automatisch,
-		ähnlich wie der Reload-Befehl.
-		Das Wort IGNORE überspringt das Dialogfeld und erhält die alte Instanz.
-		Versuche, ein bereits laufendes Skript zu starten werden ignoriert.
-		Das Wort OFF ermöglicht es, mehrere Instanzen des Skripts gleichzeitig auszuführen.
-	)	
-	Ex_ST_TT =	
-	(LTrim	
+		
 		Setzt das passende Verhalten des WinTitle Parameter in Befehlen wie WinWait.
+		
+		
+		
+	)	1: Ein Fenster-Titel muss mit dem angegebenen WinTitle beginnen .
+	Ex_ST_TT =	2: Ein Fenster-Titel kann WinTitle überall enthalten.
+	(LTrim	3: Ein Fenster-Titel muss mit WinTitle exakt übereinstimmen.
+		RegEx: Ändert WinTitle, WinText, ExcludeTitle und ExcludeText zu regulären Ausdrücken.
 	)	
 	ST_TT =	
 	(LTrim	
-		1: Ein Fenster-Titel muss mit dem angegebenen WinTitle beginnen .
-		2: Ein Fenster-Titel kann WinTitle überall enthalten.
-		3: Ein Fenster-Titel muss mit WinTitle exakt übereinstimmen.
-		RegEx: Ändert WinTitle, WinText, ExcludeTitle und ExcludeText zu regulären Ausdrücken.
-	)	
-	Ex_DH_TT =	
-	(LTrim	
 		Bestimmt, ob versteckte Fenster vom Script erkannt werden können.
-	)	
-	Ex_AF_TT =	
+		
+		
+		
+	)	Überspringt die sanfte Aktivierungsmethode eines Fensters 
+	Ex_DH_TT =	und erzwingt die gewaltsame Methode.
 	(LTrim	
-		Überspringt die sanfte Aktivierungsmethode eines Fensters 
-		und erzwingt die gewaltsame Methode.
+		
 	)	
-	Ex_HK_TT =	
+	Ex_AF_TT =	Erzwingt die Verwendung des Hooks, um alle oder einige 
+	(LTrim	Tastatur-Hotkeys zu implementieren.
+		
+		
+	)	
+	Ex_HK_TT =	Bestimmt die Verzögerung, die nach jeder Tastatureingabe
+	(LTrim	von Send und ControlSend auftreten wird.
+		
+		
+	)	
+	Ex_SK_TT =	Bestimmt die Verzögerung nach jeder Mausbewegung oder jedem Mausklick
 	(LTrim	
-		Erzwingt die Verwendung des Hooks, um alle oder einige 
-		Tastatur-Hotkeys zu implementieren.
-	)	
-	Ex_SK_TT =	
+		
+		
+	)	Legt die Verzögerung, die nach auftreten
+	Ex_MD_TT =	jedes Steuerelement-modifizierende Befehl.
 	(LTrim	
-		Bestimmt die Verzögerung, die nach jeder Tastatureingabe
-		von Send und ControlSend auftreten wird.
-	)	
-	Ex_MD_TT =	
+		
+		
+	)	Legt die Verzögerung, die nach auftreten
+	Ex_SC_TT =	jedes Fenstersystem Befehl, wie WinActivate.
 	(LTrim	
-		Bestimmt die Verzögerung nach
-		jeder Mausbewegung oder jedem Mausklick
-	)	
-	Ex_SC_TT =	
-	(LTrim	
-		Legt die Verzögerung, die nach auftreten
-		jedes Steuerelement-modifizierende Befehl.
-	)	
+		
+		
+	)	Bestimmt, wie schnell ein Skript ausgeführt werden soll (betrifft die CPU-Auslastung).
 	Ex_SW_TT =	
 	(LTrim	
-		Legt die Verzögerung, die nach auftreten
-		jedes Fenstersystem Befehl, wie WinActivate.
+		
+		Deaktiviert die Darstellung des Infobereich-Symbols.
 	)	
 	Ex_SB_TT =	
 	(LTrim	
-		Bestimmt, wie schnell ein Skript ausgeführt werden soll (betrifft die CPU-Auslastung).
-	)	
-	Ex_NT_TT =	
-	(LTrim	
-		Deaktiviert die Darstellung des Tray-Icons.
-	)	
 		
-	Ex_IN_TT =	
+	)	Bewirkt, dass der Inhalt der angegebenen Datei 
+	Ex_NT_TT =	exakt an dieser Position ausgeführt wird.
 	(LTrim	
-		Bewirkt, dass der Inhalt der angegebenen Datei 
-		exakt an dieser Position ausgeführt wird.
+		
 	)	
-	Ex_PT_TT =	
-	(LTrim	
 		Hält ein Script dauerhaft aufrecht 
-		(bis der Benutzer das Script schließt oder ein ExitApp vorkommt).
+	Ex_IN_TT =	(bis der Benutzer das Script schließt oder ein ExitApp vorkommt).
+	(LTrim	
+		
+		
+	)	Bestimmt die maximale Anzahl an Threads, 
+	Ex_PT_TT =	die pro Hotkey oder Hotstring gleichzeitig vorhanden sein können.
+	(LTrim	
+		Globale Variablen exportieren.
+		Wählen Sie die globalen Variablen zum Export.
 	)	
 	Ex_MT_TT =	
-	(LTrim	
-		Bestimmt die maximale Anzahl an Threads, 
-		die pro Hotkey oder Hotstring gleichzeitig vorhanden sein können.
-	)	
-	Ex_UV_TT =	Globale Variablen exportieren.
-	Ex_EdVars_TT =	Wählen Sie die globalen Variablen zum Export.
-		
-; IE Commands Tips		
-	Tip_Navigate =	Navigiert zu einer URL oder einem Pfad.
-	Tip_Value =	Ruft den Wert des Objekts ab oder legt ihn fest.
-	Tip_Focus =	Setzt den Fokus auf das Objekt.
-	Tip_Click =	Simuliert einen Klick auf das Objekt.
-	Tip_Submit =	Formular abschicken.
-	Tip_GoHome =	Navigiert zur aktuellen Web-/Startseite.
-	Tip_GoBack =	Springt in der History-Liste ein Element zurück.
-	Tip_GoForward =	Navigiert in der History-Liste ein Element vor.
-	Tip_GoSearch =	Navigiert zum aktuellen Suchseite.
-	Tip_Refresh =	Lädt die aktuell angezeigte Seite neu.
-	Tip_Stop =	Bricht eine anstehende Navigation oder Download ab.
-	Tip_Quit =	Schließt die Seite.
-	Tip_LocationName =	Ruft den Pfad oder den Titel der aktuellen Seite ab.
-	Tip_LocationURL =	Ruft die URL der aktuellen Seite ab.
-	Tip_InnerText =	Setzt oder erfasst den Text des Objekts.
-	Tip_InnerHTML =	Setzt oder erfasst das HTML des Objekts.
-	Tip_Href =	Setzt oder erfasst eine Ziel-URL oder einen Ankerpunkt.
-	Tip_Src =	Setzt oder erfasst eine URL, die vom Objekt geladen wird.
-	Tip_SelectedIndex =	Setzt oder holt den Index der ausgewählten Option in einer Objekt auswählen.
-	Tip_Checked =	Setzt oder erfasst den Zustand der Kontrollkästchen oder Optionsfeld.
-	Tip_Type =	Setzt oder erfasst den Inhalt des Objekts.
-	Tip_Width =	Setzt oder erfasst die Breite des Objekts.
-	Tip_Height =	Setzt oder erfasst die Höhe des Objekts.
-	Tip_Length =	Setzt oder erfasst die Anzahl der Objekte in einer Auflistung.
+	(LTrim	Navigiert zu einer URL oder einem Pfad.
+		Ruft den Wert des Objekts ab oder legt ihn fest.
+		Setzt den Fokus auf das Objekt.
+	)	Simuliert einen Klick auf das Objekt.
+	Ex_UV_TT =	Formular abschicken.
+	Ex_EdVars_TT =	Navigiert zur aktuellen Web-/Startseite.
+		Springt im Verlauf ein Element zurück.
+; IE Commands Tips		Navigiert im Verlauf ein Element vor.
+	Tip_Navigate =	Navigiert zum aktuellen Suchseite.
+	Tip_Value =	Lädt die aktuell angezeigte Seite neu.
+	Tip_Focus =	Bricht eine anstehende Navigation oder einen Download ab.
+	Tip_Click =	Schließt die Seite.
+	Tip_Submit =	Ruft den Pfad oder Titel der aktuellen Seite ab.
+	Tip_GoHome =	Ruft die URL der aktuellen Seite ab.
+	Tip_GoBack =	Setzt oder erfasst den Text des Objekts.
+	Tip_GoForward =	Setzt oder erfasst das HTML des Objekts.
+	Tip_GoSearch =	Setzt oder erfasst eine Ziel-URL oder einen Ankerpunkt.
+	Tip_Refresh =	Setzt oder erfasst eine URL, die vom Objekt geladen wird.
+	Tip_Stop =	Setzt oder holt den Index der ausgewählten Option in einer Objekt auswählen.
+	Tip_Quit =	Setzt oder erfasst den Zustand der Kontrollkästchen oder Optionsfeld.
+	Tip_LocationName =	Setzt oder erfasst den Inhalt des Objekts.
+	Tip_LocationURL =	Setzt oder erfasst die Breite des Objekts.
+	Tip_InnerText =	Setzt oder erfasst die Höhe des Objekts.
+	Tip_InnerHTML =	Setzt oder erfasst die Anzahl der Objekte in einer Auflistung.
+	Tip_Href =	
+	Tip_Src =	
+	Tip_SelectedIndex =	
+	Tip_Checked =	
+	Tip_Type =	
+	Tip_Width =	
+	Tip_Height =	
+	Tip_Length =	
 		
 return		
