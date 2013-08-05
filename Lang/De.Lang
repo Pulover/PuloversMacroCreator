@@ -677,192 +677,192 @@
 	ToggleTB_TT =	Hauptfenster anzeigen/verbergen
 	ToggleMW_TT =	
 	MRel_TT =	
-	(LTrim	Bewegungen relativ zur aktuellen Position.
+	(LTrim	
+		Bewegungen relativ zur aktuellen Position.
 		Oder wenn mit Steuerelement verwendet: Position relativ zu kontrollieren.
-		
 	)	
 	Raw_TT =	
-	(LTrim	Der SendRaw-Befehl interpretiert alle Zeichen direkt, anstatt z. B. 
+	(LTrim	
+		Der SendRaw-Befehl interpretiert alle Zeichen direkt, anstatt z. B. 
 		{Enter} als ENTER-Taste, ^c als STRG+C und so weiter zu interpretieren.
 		
-		
 	)	
-	ComText_TT =	Ist der Raw-Modus nicht aktiv, werden folgende Zeichen als 
-	(LTrim	Modifikatoren behandelt (diese Modifikatoren beeinflussen 
+	ComText_TT =	
+	(LTrim	
+		Ist der Raw-Modus nicht aktiv, werden folgende Zeichen als 
+		Modifikatoren behandelt (diese Modifikatoren beeinflussen 
 		nur die nachfolgende Taste)::, +, ^, #
-		
-		
 	)	
-	Clip_TT =	Text kurzzeitig mithilfe der Zwischenablage senden.
-	(LTrim	Wenn der Vorgang abgeschlossen ist, wird der ursprüngliche Inhalt 
+	Clip_TT =	
+	(LTrim	
+		Text kurzzeitig mithilfe der Zwischenablage senden.
+		Wenn der Vorgang abgeschlossen ist, wird der ursprüngliche Inhalt 
 		der Zwischenablage wiederhergestellt.
 		(Text leer lassen, um den aktuellen Inhalt einzufügen)
-		
-		
 	)	
-	EditPaste_TT =	String am Cursor einfügen/Einfüge-Position
-	(LTrim	in ein Edit-Steuerelement (dies bestrifft nicht den 
-		der Inhalt der Zwischenablage).
-		
-		Ändert den Text eines Steuerelements.
-	)	
-	SetText_TT =	
-	RelKey_TT =	Mausbewegungen und Klicks als Offset von 
-	(LTrim	vorheriger Position aufzeichnen.
-		
-		Relative Aufzeichnung aktivieren, wenn Taste gedrückt ist.
-	)	Koordinaten sind relativ zum aktiven Fenster.
-	ToggleC_TT =	Koordinaten sind relativ zum Desktop (gesamter Bildschirm).
-	Relative_TT =	
-	Screen_TT =	
-	IncFolders_TT =	0 - Nur Dateien/Tasten
-	(LTrim	1 - Ordner/Unterschlüssel und Dateien/Schlüssel
-		2 - Nur Ordner/Unterschlüssel
-		
-		
-	)	
-	Recurse_TT =	0 - Nicht rekursiv in Ordnern/Unterschlüsseln
-	(LTrim	1 - Rekursiv in Ordnern/Unterschlüsseln
-		
-		
-	)	
-		Zum Bearbeiten doppelklicken
-; Tooltips from AHK Docs		
-	ExpList_TT =	
-	Ex_IfDir_TT =	Erstellt kontextabhängig Hotkeys und Hotstrings je
-	(LTrim	nach Fenstertyp, das aktiv ist oder existiert.
-		
-		
-	)	
-	Ex_IfDirType_TT =	Erstellt kontextabhängig Hotkeys und Hotstrings je
-	(LTrim	nach Fenstertyp, das aktiv ist oder existiert.
-		
-		
-	)	
-	Ex_SM_TT =	Macht Send gleichbedeutend mit SendInput oder SendPlay, anstatt mit SendEvent (Standard). Bewirkt auch, dass die angegebene Methode von MouseMove/Click/Drag verwendet wird.
+	EditPaste_TT =	
 	(LTrim	
+		String am Cursor einfügen/Einfüge-Position
+		in ein Edit-Steuerelement (dies bestrifft nicht den 
+		der Inhalt der Zwischenablage).
+	)	
+	SetText_TT =	Ändert den Text eines Steuerelements.
+	RelKey_TT =	
+	(LTrim	
+		Mausbewegungen und Klicks als Offset von 
+		vorheriger Position aufzeichnen.
+	)	
+	ToggleC_TT =	Relative Aufzeichnung aktivieren, wenn Taste gedrückt ist.
+	Relative_TT =	Koordinaten sind relativ zum aktiven Fenster.
+	Screen_TT =	Koordinaten sind relativ zum Desktop (gesamter Bildschirm).
+	IncFolders_TT =	
+	(LTrim	
+		0 - Nur Dateien/Tasten
+		1 - Ordner/Unterschlüssel und Dateien/Schlüssel
+		2 - Nur Ordner/Unterschlüssel
+	)	
+	Recurse_TT =	
+	(LTrim	
+		0 - Nicht rekursiv in Ordnern/Unterschlüsseln
+		1 - Rekursiv in Ordnern/Unterschlüsseln
+	)	
 		
-		
-		Event: Standardwert, der zu Beginn für alle Scripts gilt. Bewirkt, dass die SendEvent-Methode für Send, SendRaw, Click und MouseMove/Click/Drag verwendet wird.
+; Tooltips from AHK Docs		
+	ExpList_TT =	Zum Bearbeiten doppelklicken
+	Ex_IfDir_TT =	
+	(LTrim	
+		Erstellt kontextabhängig Hotkeys und Hotstrings je
+		nach Fenstertyp, das aktiv ist oder existiert.
+	)	
+	Ex_IfDirType_TT =	
+	(LTrim	
+		Erstellt kontextabhängig Hotkeys und Hotstrings je
+		nach Fenstertyp, das aktiv ist oder existiert.
+	)	
+	Ex_SM_TT =	
+	(LTrim	
+		Macht Send gleichbedeutend mit SendInput oder SendPlay,
+		anstatt mit SendEvent (Standard). Bewirkt auch, dass die angegebene Methode
+		von MouseMove/Click/Drag verwendet wird.
 	)	
 	SM_TT =	
 	(LTrim	
-		
-		
-		
+		Event: Standardwert, der zu Beginn für alle Scripts gilt. Bewirkt, dass die SendEvent-Methode für Send, SendRaw,
+		Click und MouseMove/Click/Drag verwendet wird.
+		Input: Wechselt auf die SendInput-Methode für Send, SendRaw, Click und MouseMove/Click/Drag. 
+		InputThenPlay [v1.0.43.02+]: Gleich wie oben, außer dass der Input-Modus auf den Play- anstatt auf den Event-Modus zurückgreift,
+		falls SendInput nicht verfügbar ist. Bewirkt auch, dass der SendInput-Befehl auf den Play-Modus zurückgreift,
+		falls SendInput nicht verfügbar ist.
+		Play: Wechselt auf die SendPlay-Methode für Send, SendRaw, Click und MouseMove/Click/Drag.
+	)	
+	Ex_SI_TT =	
+	(LTrim	
 		Bestimmt, ob ein Skript erneut aufgerufen werden darf, wenn es bereits ausgeführt wird.
-		
-		
-		
-	)	Das Wort FORCE überspringt das Dialogfeld und ersetzt die alte Instanz automatisch,
-	Ex_SI_TT =	ähnlich wie der Reload-Befehl.
-	(LTrim	Das Wort IGNORE überspringt das Dialogfeld und erhält die alte Instanz.
-		Versuche, ein bereits laufendes Skript zu starten werden ignoriert.
-	)	Das Wort OFF ermöglicht es, mehrere Instanzen des Skripts gleichzeitig auszuführen.
+	)	
 	SI_TT =	
 	(LTrim	
-		
+		Das Wort FORCE überspringt das Dialogfeld und ersetzt die alte Instanz automatisch,
+		ähnlich wie der Reload-Befehl.
+		Das Wort IGNORE überspringt das Dialogfeld und erhält die alte Instanz.
+		Versuche, ein bereits laufendes Skript zu starten werden ignoriert.
+		Das Wort OFF ermöglicht es, mehrere Instanzen des Skripts gleichzeitig auszuführen.
+	)	
+	Ex_ST_TT =	
+	(LTrim	
 		Setzt das passende Verhalten des WinTitle Parameter in Befehlen wie WinWait.
-		
-		
-		
-	)	1: Ein Fenster-Titel muss mit dem angegebenen WinTitle beginnen .
-	Ex_ST_TT =	2: Ein Fenster-Titel kann WinTitle überall enthalten.
-	(LTrim	3: Ein Fenster-Titel muss mit WinTitle exakt übereinstimmen.
-		RegEx: Ändert WinTitle, WinText, ExcludeTitle und ExcludeText zu regulären Ausdrücken.
 	)	
 	ST_TT =	
 	(LTrim	
+		1: Ein Fenster-Titel muss mit dem angegebenen WinTitle beginnen .
+		2: Ein Fenster-Titel kann WinTitle überall enthalten.
+		3: Ein Fenster-Titel muss mit WinTitle exakt übereinstimmen.
+		RegEx: Ändert WinTitle, WinText, ExcludeTitle und ExcludeText zu regulären Ausdrücken.
+	)	
+	Ex_DH_TT =	
+	(LTrim	
 		Bestimmt, ob versteckte Fenster vom Script erkannt werden können.
-		
-		
-		
-	)	Überspringt die sanfte Aktivierungsmethode eines Fensters 
-	Ex_DH_TT =	und erzwingt die gewaltsame Methode.
-	(LTrim	
-		
 	)	
-	Ex_AF_TT =	Erzwingt die Verwendung des Hooks, um alle oder einige 
-	(LTrim	Tastatur-Hotkeys zu implementieren.
-		
-		
+	Ex_AF_TT =	
+	(LTrim	
+		Überspringt die sanfte Aktivierungsmethode eines Fensters 
+		und erzwingt die gewaltsame Methode.
 	)	
-	Ex_HK_TT =	Bestimmt die Verzögerung, die nach jeder Tastatureingabe
-	(LTrim	von Send und ControlSend auftreten wird.
-		
-		
+	Ex_HK_TT =	
+	(LTrim	
+		Erzwingt die Verwendung des Hooks, um alle oder einige 
+		Tastatur-Hotkeys zu implementieren.
 	)	
-	Ex_SK_TT =	Bestimmt die Verzögerung nach jeder Mausbewegung oder jedem Mausklick
+	Ex_SK_TT =	
 	(LTrim	
-		
-		
-	)	Legt die Verzögerung, die nach auftreten
-	Ex_MD_TT =	jedes Steuerelement-modifizierende Befehl.
+		Bestimmt die Verzögerung, die nach jeder Tastatureingabe
+		von Send und ControlSend auftreten wird.
+	)	
+	Ex_MD_TT =	
 	(LTrim	
-		
-		
-	)	Legt die Verzögerung, die nach auftreten
-	Ex_SC_TT =	jedes Fenstersystem Befehl, wie WinActivate.
+		Bestimmt die Verzögerung nach jeder Mausbewegung
+		oder jedem Mausklick.
+	)	
+	Ex_SC_TT =	
 	(LTrim	
-		
-		
-	)	Bestimmt, wie schnell ein Skript ausgeführt werden soll (betrifft die CPU-Auslastung).
+		Legt die Verzögerung, die nach auftreten
+		jedes Steuerelement-modifizierende Befehl.
+	)	
 	Ex_SW_TT =	
 	(LTrim	
-		
-		Deaktiviert die Darstellung des Infobereich-Symbols.
+		Legt die Verzögerung, die nach auftreten
+		jedes Fenstersystem Befehl, wie WinActivate.
 	)	
 	Ex_SB_TT =	
 	(LTrim	
-		
-	)	Bewirkt, dass der Inhalt der angegebenen Datei 
-	Ex_NT_TT =	exakt an dieser Position ausgeführt wird.
-	(LTrim	
-		
+		Bestimmt, wie schnell ein Skript ausgeführt werden soll (betrifft die CPU-Auslastung).
 	)	
+	Ex_NT_TT =	
+	(LTrim	
+		Deaktiviert die Darstellung des Infobereich-Symbols.
+	)	
+		
+	Ex_IN_TT =	
+	(LTrim	
+		Bewirkt, dass der Inhalt der angegebenen Datei 
+		exakt an dieser Position ausgeführt wird.
+	)	
+	Ex_PT_TT =	
+	(LTrim	
 		Hält ein Script dauerhaft aufrecht 
-	Ex_IN_TT =	(bis der Benutzer das Script schließt oder ein ExitApp vorkommt).
-	(LTrim	
-		
-		
-	)	Bestimmt die maximale Anzahl an Threads, 
-	Ex_PT_TT =	die pro Hotkey oder Hotstring gleichzeitig vorhanden sein können.
-	(LTrim	
-		Globale Variablen exportieren.
-		Wählen Sie die globalen Variablen zum Export.
+		(bis der Benutzer das Script schließt oder ein ExitApp vorkommt).
 	)	
 	Ex_MT_TT =	
-	(LTrim	Navigiert zu einer URL oder einem Pfad.
-		Ruft den Wert des Objekts ab oder legt ihn fest.
-		Setzt den Fokus auf das Objekt.
-	)	Simuliert einen Klick auf das Objekt.
-	Ex_UV_TT =	Formular abschicken.
-	Ex_EdVars_TT =	Navigiert zur aktuellen Web-/Startseite.
-		Springt im Verlauf ein Element zurück.
-; IE Commands Tips		Navigiert im Verlauf ein Element vor.
-	Tip_Navigate =	Navigiert zum aktuellen Suchseite.
-	Tip_Value =	Lädt die aktuell angezeigte Seite neu.
-	Tip_Focus =	Bricht eine anstehende Navigation oder einen Download ab.
-	Tip_Click =	Schließt die Seite.
-	Tip_Submit =	Ruft den Pfad oder Titel der aktuellen Seite ab.
-	Tip_GoHome =	Ruft die URL der aktuellen Seite ab.
-	Tip_GoBack =	Setzt oder erfasst den Text des Objekts.
-	Tip_GoForward =	Setzt oder erfasst das HTML des Objekts.
-	Tip_GoSearch =	Setzt oder erfasst eine Ziel-URL oder einen Ankerpunkt.
-	Tip_Refresh =	Setzt oder erfasst eine URL, die vom Objekt geladen wird.
-	Tip_Stop =	Setzt oder holt den Index der ausgewählten Option in einer Objekt auswählen.
-	Tip_Quit =	Setzt oder erfasst den Zustand der Kontrollkästchen oder Optionsfeld.
-	Tip_LocationName =	Setzt oder erfasst den Inhalt des Objekts.
-	Tip_LocationURL =	Setzt oder erfasst die Breite des Objekts.
-	Tip_InnerText =	Setzt oder erfasst die Höhe des Objekts.
-	Tip_InnerHTML =	Setzt oder erfasst die Anzahl der Objekte in einer Auflistung.
-	Tip_Href =	
-	Tip_Src =	
-	Tip_SelectedIndex =	
-	Tip_Checked =	
-	Tip_Type =	
-	Tip_Width =	
-	Tip_Height =	
-	Tip_Length =	
+	(LTrim	
+		Bestimmt die maximale Anzahl an Threads, 
+		die pro Hotkey oder Hotstring gleichzeitig vorhanden sein können.
+	)	
+	Ex_UV_TT =	Globale Variablen exportieren.
+	Ex_EdVars_TT =	Wählen Sie die globalen Variablen zum Export.
+		
+; IE Commands Tips		
+	Tip_Navigate =	Navigiert zu einer URL oder einem Pfad.
+	Tip_Value =	Ruft den Wert des Objekts ab oder legt ihn fest.
+	Tip_Focus =	Setzt den Fokus auf das Objekt.
+	Tip_Click =	Simuliert einen Klick auf das Objekt.
+	Tip_Submit =	Formular abschicken.
+	Tip_GoHome =	Navigiert zur aktuellen Web-/Startseite.
+	Tip_GoBack =	Springt im Verlauf ein Element zurück.
+	Tip_GoForward =	Navigiert im Verlauf ein Element vor.
+	Tip_GoSearch =	Navigiert zum aktuellen Suchseite.
+	Tip_Refresh =	Lädt die aktuell angezeigte Seite neu.
+	Tip_Stop =	Bricht eine anstehende Navigation oder einen Download ab.
+	Tip_Quit =	Schließt die Seite.
+	Tip_LocationName =	Ruft den Pfad oder Titel der aktuellen Seite ab.
+	Tip_LocationURL =	Ruft die URL der aktuellen Seite ab.
+	Tip_InnerText =	Setzt oder erfasst den Text des Objekts.
+	Tip_InnerHTML =	Setzt oder erfasst das HTML des Objekts.
+	Tip_Href =	Setzt oder erfasst eine Ziel-URL oder einen Ankerpunkt.
+	Tip_Src =	Setzt oder erfasst eine URL, die vom Objekt geladen wird.
+	Tip_SelectedIndex =	Setzt oder holt den Index der ausgewählten Option in einer Objekt auswählen.
+	Tip_Checked =	Setzt oder erfasst den Zustand der Kontrollkästchen oder Optionsfeld.
+	Tip_Type =	Setzt oder erfasst den Inhalt des Objekts.
+	Tip_Width =	Setzt oder erfasst die Breite des Objekts.
+	Tip_Height =	Setzt oder erfasst die Höhe des Objekts.
+	Tip_Length =	Setzt oder erfasst die Anzahl der Objekte in einer Auflistung.
 		
 return		
