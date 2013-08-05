@@ -91,13 +91,15 @@ Menu, Tray, Icon, %DefaultIcon%, 1, 1
 
 CurrentVersion := "3.8.2", ReleaseDate := "July, 2013"
 
-;##### Ini File Read #####
-
 If ((A_IsCompiled) && !InStr(FileExist(A_AppData "\MacroCreator"), "D"))
 	FileCreateDir, %A_AppData%\MacroCreator
 
 IniFilePath := ((A_IsCompiled) ? A_AppData "\MacroCreator" : A_ScriptDir) "\MacroCreator.ini"
 ,	UserVarsPath := ((A_IsCompiled) ? A_AppData "\MacroCreator" : A_ScriptDir) "\UserGlobalVars.ini"
+
+#Include LIB\Definitions.ahk
+
+;##### Ini File Read #####
 
 IniRead, Lang, %IniFilePath%, Language, Lang
 IniRead, AutoKey, %IniFilePath%, HotKeys, AutoKey, F3|F4|F5|F6|F7
@@ -220,69 +222,26 @@ IniRead, OSCaption, %IniFilePath%, WindowOptions, OSCaption, 0
 User_Vars := new ObjIni(UserVarsPath)
 User_Vars.Read()
 
-If Lang = Error
+If (Lang = "ERROR")
 {
-	If A_Language in 0416,0816
-		Lang = Pt
-	Else If A_Language in 040a,080a,0c0a,100a
-	,140a,180a,1c0a,200a,240a,280a,2c0a,300a
-	,340a,380a,3c0a,400a,440a,480a,4c0a,500a
-		Lang = Es
-	Else If A_Language in 0407,0807,0c07,1007,1407
-		Lang = De
-	Else If A_Language in 040c,080c,0c0c,100c,140c,180c
-		Lang = Fr
-	Else If A_Language in 0410,0810
-		Lang = It
-	Else If A_Language in 0419
-		Lang = Ru
-	Else If A_Language in 0415
-		Lang = Pl
-	Else If A_Language in 0413,0813
-		Lang = Nl
-	Else If A_Language in 0406
-		Lang = Da
-	Else If A_Language in 0414,0814
-		Lang = No
-	Else If A_Language in 040b
-		Lang = Fi
-	Else If A_Language in 041d,081d
-		Lang = Sv
-	Else If A_Language in 0403
-		Lang = Ca
-	Else If A_Language in 041a
-		Lang = Hr
-	Else If A_Language in 0405
-		Lang = Cs
-	Else If A_Language in 041f
-		Lang = Tr
-	Else If A_Language in 040e
-		Lang = Hu
-	Else If A_Language in 0402
-		Lang = Bg
-	Else If A_Language in 1c1a,0c1a
-		Lang = Sr
-	Else If A_Language in 0422
-		Lang = Uk
-	Else If A_Language in 0408
-		Lang = El
-	Else If A_Language in 0804,0c04,1004,1404,0004,7c04
-		Lang = Zh
-	Else If A_Language in 0404
-		Lang = Zt
-	Else If A_Language in 0411
-		Lang = Ja
-	Else If A_Language in 0412
-		Lang = Ko
-	Else
-		Lang = En
+	For La, Array in LangCodes
+	{
+		For L, Code in Array
+		{
+			If (A_Language = Code)
+			{
+				Lang := La
+				break
+			}
+		}
+	}
+	If !Lang
+		Lang := "En"
 }
 
 GoSub, WriteSettings
 
 CurrentLang := Lang
-
-#Include LIB\Definitions.ahk
 
 Lang_Ca := "Català`t(Catalan)"
 ,	Lang_Da := "Dansk`t(Danish﻿)"
