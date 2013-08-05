@@ -12,12 +12,6 @@
 	m_Lang007 =	언어
 	m_Lang008 =	기부
 	m_Lang009 =	도움
-	w_Lang009 =	컨트롤 표시
-	w_Lang010 =	중지
-	w_Lang011 =	고리
-	w_Lang012 =	키를 캡처
-	w_Lang013 =	창 숨기기
-	w_Lang014 =	항상 활성
 		
 ; File Submenu		
 	f_Lang001 =	새로운
@@ -121,6 +115,12 @@
 	w_Lang006 =	자동.
 	w_Lang007 =	남자.
 	w_Lang008 =	정지
+	w_Lang009 =	컨트롤 표시
+	w_Lang010 =	중지
+	w_Lang011 =	고리
+	w_Lang012 =	키를 캡처
+	w_Lang013 =	창 숨기기
+	w_Lang014 =	항상 활성
 	w_Lang015 =	반복
 	w_Lang016 =	지연 (밀리 초):
 	w_Lang017 =	신청

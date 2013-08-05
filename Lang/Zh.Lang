@@ -12,12 +12,6 @@
 	m_Lang007 =	语言
 	m_Lang008 =	捐赠
 	m_Lang009 =	帮助
-	w_Lang009 =	显示控制
-	w_Lang010 =	暂停
-	w_Lang011 =	循环
-	w_Lang012 =	捕获键
-	w_Lang013 =	隐藏窗口
-	w_Lang014 =	始终处于活动状态
 		
 ; File Submenu		
 	f_Lang001 =	新建
@@ -121,6 +115,12 @@
 	w_Lang006 =	自动
 	w_Lang007 =	手动
 	w_Lang008 =	停止
+	w_Lang009 =	显示控制
+	w_Lang010 =	暂停
+	w_Lang011 =	循环
+	w_Lang012 =	捕获键
+	w_Lang013 =	隐藏窗口
+	w_Lang014 =	始终处于活动状态
 	w_Lang015 =	重复
 	w_Lang016 =	延时（ms）：
 	w_Lang017 =	应用

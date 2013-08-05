@@ -12,12 +12,6 @@
 	m_Lang007 =	&Kieli
 	m_Lang008 =	La&hjoittaa
 	m_Lang009 =	A&pua
-	w_Lang009 =	&Näytä valvonta
-	w_Lang010 =	Ta&uko
-	w_Lang011 =	&Silmukka
-	w_Lang012 =	&Capture Keys
-	w_Lang013 =	Piil&ota ikkuna
-	w_Lang014 =	Aina aktiivin&en
 		
 ; File Submenu		
 	f_Lang001 =	&Uusi
@@ -121,6 +115,12 @@
 	w_Lang006 =	Auto.
 	w_Lang007 =	Mies.
 	w_Lang008 =	Lopettaa
+	w_Lang009 =	&Näytä valvonta
+	w_Lang010 =	Ta&uko
+	w_Lang011 =	&Silmukka
+	w_Lang012 =	&Capture Keys
+	w_Lang013 =	Piil&ota ikkuna
+	w_Lang014 =	Aina aktiivin&en
 	w_Lang015 =	Toista
 	w_Lang016 =	Delay (ms):
 	w_Lang017 =	Käyttää
