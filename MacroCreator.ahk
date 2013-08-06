@@ -10134,86 +10134,46 @@ Loop, % LV_GetCount()
 			ActLv .= (ShowActIdent) ? "   " : ""
 	}
 	LV_Modify(A_Index, "", A_Index " " IdxLv)
-	If (Action = "[Text]")
-		LV_Modify(A_Index, "Icon" 1)
-	Else If Type in %cType1%,%cType2%,%cType8%,%cType9%
-		LV_Modify(A_Index, "Icon" 1)
-	Else If Type in %cType3%,%cType4%,%cType13%
-		LV_Modify(A_Index, "Icon" 2)
-	Else If Action = [Pause]
-		LV_Modify(A_Index, "Icon" 3)
-	Else If Type in %cType7%,%cType38%,%cType39%,%cType40%,%cType41%
-		LV_Modify(A_Index, "Icon" 4)
-	Else If Type = %cType29%
-		LV_Modify(A_Index, "Icon" 26)
-	Else If Type = %cType30%
-		LV_Modify(A_Index, "Icon" 27)
-	Else If Type in %cType11%,%cType14%
-		LV_Modify(A_Index, "Icon" 5)
-	Else If Action = [Assign Variable]
-		LV_Modify(A_Index, "Icon" 14)
-	Else If Type = %cType21%
-		LV_Modify(A_Index, "Icon" 15)
-	Else If Type = %cType17%
-		LV_Modify(A_Index, "Icon" 6)
-	Else If Type in %cType18%,%cType19%
-		LV_Modify(A_Index, "Icon" 13)
-	Else If Type = %cType15%
-		LV_Modify(A_Index, "Icon" 24)
-	Else If Type = %cType16%
-		LV_Modify(A_Index, "Icon" 7)
-	Else If Action = [Control]
-		LV_Modify(A_Index, "Icon" 9)
-	Else If Type in %cType32%,%cType33%
-		LV_Modify(A_Index, "Icon" 10)
-	Else If Type = %cType34%
-		LV_Modify(A_Index, "Icon" 25)
-	Else If Type = %cType42%
-		LV_Modify(A_Index, "Icon" 35)
-	Else If Type = %cType43%
-		LV_Modify(A_Index, "Icon" 36)
-	Else If Type = %cType35%
-		LV_Modify(A_Index, "Icon" 11)
-	Else If Type in %cType36%,%cType37%
-		LV_Modify(A_Index, "Icon" 12)
-	Else If InStr(Type, "Win")
-		LV_Modify(A_Index, "Icon" 8)
-	Else If Type in Run,RunWait,RunAs
-		LV_Modify(A_Index, "Icon" 5)
-	Else If Type in Process
-		LV_Modify(A_Index, "Icon" 29)
-	Else If Type in Shutdown
-		LV_Modify(A_Index, "Icon" 28)
-	Else If (InStr(Type, "File")=1 || InStr(Type, "Drive")=1)
-		LV_Modify(A_Index, "Icon" 16)
-	Else If Type contains Sort,String,Split
-		LV_Modify(A_Index, "Icon" 17)
-	Else If Type contains InputBox,Msg,Tip,Progress,Splash
-		LV_Modify(A_Index, "Icon" 21)
-	Else If (InStr(Type, "Wait") || InStr(Type, "Input")=1)
-		LV_Modify(A_Index, "Icon" 19)
-	Else If Type contains Ini
-		LV_Modify(A_Index, "Icon" 22)
-	Else If Type contains Reg
-		LV_Modify(A_Index, "Icon" 31)
-	Else If Type contains Sound
-		LV_Modify(A_Index, "Icon" 30)
-	Else If Type contains Group
-		LV_Modify(A_Index, "Icon" 20)
-	Else If Type contains Env
-		LV_Modify(A_Index, "Icon" 14)
-	Else If Type contains Get
-		LV_Modify(A_Index, "Icon" 18)
-	Else If (Type = "Pause")
-		LV_Modify(A_Index, "Icon" 32)
-	Else If (Type = "Return")
-		LV_Modify(A_Index, "Icon" 33)
-	Else If (Type = "ExitApp")
-		LV_Modify(A_Index, "Icon" 34)
-	Else If Type contains LockState,Time,Transform,Random,ClipWait,Block,Url,Status,SendLevel,CoordMode
-		LV_Modify(A_Index, "Icon" 23)
-	Else
-		LV_Modify(A_Index, "Icon" 1)
+,	RegExMatch(Type, cType3 "|" cType4 "|" cType13) ? LV_Modify(A_Index, "Icon" 2)
+:	(Action = "[Pause]") ? LV_Modify(A_Index, "Icon" 3)
+:	RegExMatch(Type, cType7 "|" cType38 "|" cType39 "|" cType40 "|" cType41) ? LV_Modify(A_Index, "Icon" 4)
+:	(Type = cType29) ? LV_Modify(A_Index, "Icon" 26)
+:	(Type = cType30) ? LV_Modify(A_Index, "Icon" 27)
+:	RegExMatch(Type, cType11 "|" cType14 "|Run|RunWait|RunAs") ? LV_Modify(A_Index, "Icon" 5)
+:	(Action = "[Assign Variable]") ? LV_Modify(A_Index, "Icon" 14)
+:	(Type = cType21) ? LV_Modify(A_Index, "Icon" 15)
+:	(Type = cType17) ? LV_Modify(A_Index, "Icon" 6)
+:	RegExMatch(Type, cType18 "|" cType19) ? LV_Modify(A_Index, "Icon" 13)
+:	(Type = cType15) ? LV_Modify(A_Index, "Icon" 24)
+:	(Type = cType16) ? LV_Modify(A_Index, "Icon" 7)
+:	(Action = "[Control]") ? LV_Modify(A_Index, "Icon" 9)
+:	RegExMatch(Type, cType32 "|" cType33) ? LV_Modify(A_Index, "Icon" 10)
+:	(Type = cType34) ? LV_Modify(A_Index, "Icon" 25)
+:	(Type = cType42) ? LV_Modify(A_Index, "Icon" 35)
+:	(Type = cType43) ? LV_Modify(A_Index, "Icon" 36)
+:	(Type = cType35) ? LV_Modify(A_Index, "Icon" 11)
+:	RegExMatch(Type, cType36 "|" cType37) ? LV_Modify(A_Index, "Icon" 12)
+:	InStr(Type, "Win") ? LV_Modify(A_Index, "Icon" 8)
+:	RegExMatch(Type, "Process") ? LV_Modify(A_Index, "Icon" 29)
+:	RegExMatch(Type, "Shutdown") ? LV_Modify(A_Index, "Icon" 28)
+:	(InStr(Type, "File")=1 || InStr(Type, "Drive")=1) ? LV_Modify(A_Index, "Icon" 16)
+:	(InStr(Type, "contains") || InStr(Type, "Sort") || InStr(Type, "String")
+	|| InStr(Type, "Split")) ? LV_Modify(A_Index, "Icon" 17)
+	(InStr(Type, "InputBox") || InStr(Type, "Msg") || InStr(Type, "Tip")
+	|| InStr(Type, "Progress") || InStr(Type, "Splash")) ? LV_Modify(A_Index, "Icon" 21)
+:	(InStr(Type, "Wait") || InStr(Type, "Input")=1) ? LV_Modify(A_Index, "Icon" 19)
+:	InStr(Type, "Ini") ? LV_Modify(A_Index, "Icon" 22)
+:	InStr(Type, "Reg") ? LV_Modify(A_Index, "Icon" 31)
+:	InStr(Type, "Sound") ? LV_Modify(A_Index, "Icon" 30)
+:	InStr(Type, "Group") ? LV_Modify(A_Index, "Icon" 20)
+:	InStr(Type, "Env") ? LV_Modify(A_Index, "Icon" 14)
+:	InStr(Type, "Get") ? LV_Modify(A_Index, "Icon" 18)
+:	(Type = "Pause") ? LV_Modify(A_Index, "Icon" 32)
+:	(Type = "Return") ? LV_Modify(A_Index, "Icon" 33)
+:	(Type = "ExitApp") ? LV_Modify(A_Index, "Icon" 34)
+:	(InStr(Type, "LockState") || InStr(Type, "Time") || InStr(Type, "Transform")
+	|| InStr(Type, "Random") || InStr(Type, "ClipWait") || InStr(Type, "Block")
+	|| InStr(Type, "Url") || InStr(Type, "Status") || InStr(Type, "SendLevel") || InStr(Type, "CoordMode")) ?  LV_Modify(A_Index, "Icon" 23)
 }
 GuiControl, +Redraw, InputList%A_List%
 FreeMemory()
