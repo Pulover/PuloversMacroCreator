@@ -552,33 +552,33 @@
 ; Start-up Tips		
 	Start_Tips =	
 	(LTrim	
-		Voit luoda makroja käyttäen Command painikkeet pääikkunassa tai käyttämällä Recorder kopioida toimia. Valitse Valinnat > Asetukset > Tallennus valita mitä panoksia tallennetaan.
-		Voit käyttää tallenninta nopeasti tehtäviä mene Valinnat > Asetukset > Tallennus ja tarkista "Clear List" vaihtoehto. Napsauta sitten Tallenna-painiketta pääikkunassa ja käyttää F10 tyhjentää nykyisen Macro ja aloittaa uuden samalla pikanäppäin. Du kan också kolla "alltid aktiv" i huvudfönstret för att hålla Inspelning och uppspelning snabbtangenter aktiv.
-		Saadaksesi apua tietyn komennon hiiren kakkospainikkeella komentopainikkeella pääikkunassa tai missä tahansa komento ikkunassa näyttää linkkejä AutoHotkey ohjeessa.
-		Tarkista "Capture Keys" mahdollisuus tulla Avainten ja yhdistelmien teidän Macro suoraan pääikkunassa.
-		Ange nycklar och kombinationer i Hotkey rutan längst ner och tryck på knappen Infoga för att lägga dem till de utvalda raderna.
-		Jos rivejä on valittu edit painikkeet koskevat kaikkia rivejä luettelon.
-		Voit määrittää oman muuttujia muuttujat ikkunat (Insert > Jos Lausunnot / muuttujat / toiminnot). Käyttää niitä sisällä komentoja liittää muuttujan nimeä prosenttia merkkejä, esim.: `%MyVar`%.
-		Loop counter yläosassa asettaa kokonaismäärä silmukoita valitun Macro.
-		Voit muokata rivi kaksoisnapsauttamalla sitä tai valitsemalla sen ja napsauttamalla Muokkaa painikkeita.
-		Voit muokata useita valitut rivit käyttämällä vaihtoehtoja muokata alareunassa.
-		Valitse yksi tai useampi rivi lisää uusia komentoja niiden päälle.
-		Voit siirtyä krs click-ja-vedä....
-		Dubbelklicka på ikonen för att aktivera snabbtangenter eller stoppa uppspelning / inspelning. Klicka på den med den mellersta knappen under uppspelning eller inspelning för att pausa.
+		Du kan skapa makron med hjälp av kommandoknapparna i huvudfönstret eller använda inspelaren för att kopiera dina handlingar. Gå till Alternativ> Inställningar> Inspelning för att välja vilka ingångar kommer att registreras.
+		Om du vill använda brännaren för snabbuppgifter gå till Alternativ> Inställningar> Inspelning och kontrollera "Rensa lista" alternativet. Sedan klickar du på knappen Spela in i huvudfönstret och använd F10 för att rensa den aktuella Makro och starta en ny med samma kortkommando. Du kan också kolla "alltid aktiv" i huvudfönstret för att hålla Inspelning och uppspelning snabbtangenter aktiv.
+		För att få hjälp för ett specifikt kommando högerklicka på en kommandoknapp i huvudfönstret eller någonstans i ett kommando fönster för att visa länkar till AutoHotkey onlinehjälpen.
+		Kontrollera "Capture Keys" alternativ för att ange nycklar och kombinationer till ditt makro direkt från huvudfönstret.
+		Enter och kombinationer på Hotkey rutan längst ner och tryck på knappen Infoga för att lägga dem till de utvalda raderna.
+		Om inga rader valt redigera knapparna gälla för alla rader i listan.
+		Du kan tilldela dina egna variabler i variablerna windows (Infoga> Om Uttalanden / variabler / funktioner). För att använda dem inne kommandon bifoga variabelnamnet i procent tecken, t.ex.: `% MyVar`%.
+		Den "Loop" räknare upptill anger det totala antalet slingor för den valda makro.
+		Du kan redigera en rad genom att dubbelklicka den eller genom att markera den och klicka på Redigera knapparna längst ner.
+		Du kan redigera flera markerade rader med hjälp av alternativen i redigeringsrutan längst ner.
+		Välj en eller flera rader för att lägga till nya kommandon ovanpå dem.
+		Du kan flytta rader med klick-och-dra.
+		Dubbelklicka på på ikonen för att aktivera snabbtangenter eller stoppa uppspelning / inspelning. Klicka på den med den mellersta knappen under uppspelning eller inspelning för att pausa.
 		Du kan exportera dina makron till arbets AutoHotkey skript eller fristående körbara från fönstret Exportera.
-		För att spela in och spela upp musen med absoluta koordinater gå till Alternativ > Inställningar > Grundinställningar och set musens koordinater till skärmen.
-		Du kan öppna, kopiera, flytta eller radera filer och mappar med ett kommando i Infoga > Run / Arkiv / String / Misc.
-		Om du vill spela Down och Up tillstånd varje nyckel gå till Alternativ > Inställningar > Inspelning och kolla "Fånga viktiga statliga (Down / Up)" alternativet.
-		Du kan använda snabbtangenter för att påskynda eller fördröja Uppspelning. Gå till Alternativ > Inställningar > Uppspelning ställa nycklar och hastighet.
-		För att justera fånga område med "gör skärmdump" verktyg gå till Alternativ > Inställningar > Skärmbilder och välj "Tryck Enter för att fånga". Efter dra rektangeln Använd knapparna Kontroll pil för att flytta markeringen och Skift piltangenterna för att ändra storlek på den.
+		För att spela in och spela upp musen med absoluta koordinater gå till Alternativ> Inställningar> Grundinställningar och set musens koordinater till skärmen.
+		Du kan öppna, kopiera, flytta eller radera filer och mappar med ett kommando i Infoga> Run / Arkiv / String / Misc.
+		Om du vill spela Down och Up tillstånd varje nyckel gå till Alternativ> Inställningar> Inspelning och kolla "Fånga viktiga statliga (Down / Up)" alternativet.
+		Du kan använda snabbtangenter för att påskynda eller fördröja Uppspelning. Gå till Alternativ> Inställningar> Uppspelning ställa nycklar och hastighet.
+		För att justera fånga område med "gör skärmdump" verktyget gå till Alternativ> Inställningar> Skärmbilder och välj "Tryck Enter för att fånga". Efter teckning Control rektangeln användning + piltangenterna för att flytta markeringen och Skift + piltangenterna för att ändra storlek på den.
 		Snabbval: Välj en rad och klicka på en kolumnrubrik för att välja liknande rader baserat på cellens text från den kolumnen.
 		The Run / Arkiv / String / Misc. fönster har många andra användbara kommandon såsom avstängning och UrlDownloadToFile.
-		Använd "Skärmdump"-funktionen i funktionerna fönstret (Infoga > Om Uttalanden / variabler / funktioner) för att göra en skärmdump av en del av skärmen. Första parametern är den destination filens sökväg och namn med en png förlängning. Andra parametern är pipe-separerade koordinater på skärmen, t.ex. 100|200|50|100 (X|Y|Bredd|Höjd).
+		Använd "Skärmdump"-funktionen i funktionerna fönstret (Infoga> Om Uttalanden / variabler / funktioner) för att göra en skärmdump av en del av skärmen. Första parametern är den destination filens sökväg och namn med en png förlängning. Andra parametern är pipe-separerade koordinater på skärmen, t.ex. 100 | 200 | 50 | 100 (X | Y | Bredd | Höjd).
 		Klicka på Index kolumnrubriken för att slå på / stänga Hjälp, mönster och färger för loopar och uttalanden. Dubbel-klicka på Åtgärd kolumnrubriken för att slå på / av Indrag för Loops och uttalanden.
 		Du kan felsöka dina makron med hjälp av handboken Hotkey och alternativen Play i Makromenyknappen. Du kan också inaktivera åtgärder genom att avmarkera dem i Macro listan.
-		För att göra dina makron fungerar bara på ett visst fönster gå till Macro > sammanhangsberoende snabbtangenter.
-		Du kan ställa dina egna globala variabler som skall laddas vid start och som ska exporteras. Gå till Alternativ > Inställningar > Användarinställningar globala variabler för att lägga till dem.
-		Du kan köra avancerade funktioner såsom SUBSTR och RegExReplace från funktionsfönstret (Infoga > Om Uttalanden / variabler / funktioner). Eller köra egna funktioner från externa AutoHotkey skript.
+		För att göra dina makron fungerar bara på ett visst fönster gå till Macro> sammanhangsberoende snabbtangenter.
+		Du kan ställa dina egna globala variabler som skall laddas vid start och som ska exporteras. Gå till Alternativ> Inställningar> Användarinställningar globala variabler för att lägga till dem.
+		Du kan köra avancerade funktioner såsom SUBSTR och RegExReplace från funktionsfönstret (Sätt> Om Uttalanden / variabler / funktioner). Eller köra egna funktioner från externa AutoHotkey skript.
 	)	
 ; Tooltips		
 	NewB_TT =	Ny (Ctrl+N)
