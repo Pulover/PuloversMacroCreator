@@ -36,6 +36,11 @@ Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jör
 
 # Change Log
 
+## Version 3.8.3
+
+* Fixed incorrect warning when using variables inside *Mouse* commands.
+* Added translations to Indonesian, Slovak and Slovenian
+
 ## Version 3.8.2
 
 * Fixed *Break* option of *Image/Pixel Search* command not working for loops.
