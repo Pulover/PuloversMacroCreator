@@ -713,7 +713,7 @@ return
 BuildMacroWin:
 Gui, chMacro:+LastFound
 Gui, chMacro:+hwndhMacroCh -Caption +0x40000000 -0x80000000
-Gui, chMacro:Add, Tab2, Section Buttons -Wrap AltSubmit H22 hwndTabSel vA_List gTabSel, Macro1
+Gui, chMacro:Add, Tab2, Section Buttons 0x0008 -Wrap AltSubmit H22 hwndTabSel vA_List gTabSel, Macro1
 Gui, chMacro:Add, ListView, AltSubmit Checked x+0 y+0 hwndListID1 vInputList1 gInputList NoSort LV0x10000, %w_Lang030%|%w_Lang031%|%w_Lang032%|%w_Lang033%|%w_Lang034%|%w_Lang035%|%w_Lang036%|%w_Lang037%|%w_Lang038%|%w_Lang039%
 Gui, chMacro:Default
 LV_SetImageList(hIL_Icons)
@@ -7385,6 +7385,7 @@ Else
 		LV_Delete(RowNumber)
 	}
 }
+LV_Modify(LV_GetNext(0, "Focused"), "Select")
 GoSub, b_Start
 GoSub, RowCheck
 GuiControl, Focus, InputList%A_List%
@@ -7645,7 +7646,6 @@ Loop
 GoSub, b_Start
 return
 
-
 SelectCmd:
 Gui, chMacro:Default
 SelectByType(A_ThisMenuItem)
@@ -7656,35 +7656,6 @@ Gui, chMacro:Default
 SelectedRow := LV_GetNext()
 LV_GetText(SelType, SelectedRow, 6)
 SelectByType(SelType)
-return
-
-Remove:
-Gui, +OwnDialogs
-Gui, Submit, NoHide
-RowSelection := LV_GetCount("Selected")
-If RowSelection = 0
-{
-	MsgBox, 1, %d_Lang019%, %d_Lang020%
-	IfMsgBox, OK
-		LV_Delete()
-	IfMsgBox, Cancel
-		return
-}
-Else
-{
-	RowNumber := 0
-	Loop
-	{
-		RowNumber := LV_GetNext(RowNumber - 1)
-		If !RowNumber
-			break
-		LV_Delete(RowNumber)
-	}
-}
-LV_Modify(LV_GetNext(0, "Focused"), "Select")
-GoSub, b_Start
-GoSub, RowCheck
-GuiControl, Focus, InputList%A_List%
 return
 
 ApplyT:
