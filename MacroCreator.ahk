@@ -227,6 +227,7 @@ IniRead, Send_Loop, %IniFilePath%, ExportOptions, Send_Loop, 0
 IniRead, TabIndent, %IniFilePath%, ExportOptions, TabIndent, 1
 IniRead, IncPmc, %IniFilePath%, ExportOptions, IncPmc, 0
 IniRead, Exe_Exp, %IniFilePath%, ExportOptions, Exe_Exp, 0
+IniRead, ShowPrev, %IniFilePath%, WindowOptions, ShowPrev, 0
 IniRead, WinState, %IniFilePath%, WindowOptions, WinState, 0
 IniRead, ColSizes, %IniFilePath%, WindowOptions, ColSizes, 65,125,190,50,40,85,90,90,60,40
 IniRead, CustomColors, %IniFilePath%, WindowOptions, CustomColors, 0
@@ -677,17 +678,22 @@ return
 RB_Notify:
 If (A_GuiEvent = "N")
 {
+	EventCode := NumGet(A_EventInfo + (A_PtrSize * 2), 0, "Int")
 	If (RbMain.OnNotify(A_EventInfo, tbMX, tbMY, BandID))
 		ShowChevronMenu(RbMain, BandID, tbMX, tbMY)
 	Else If (RbMacro.OnNotify(A_EventInfo, tbMX, tbMY, BandID))
 		ShowChevronMenu(RbMacro, BandID, tbMX)
-	If (NumGet(A_EventInfo + (A_PtrSize * 2), 0, "Int") = -831)
+	If (EventCode = -831) ; RBN_HEIGHTCHANGE
 	{
 		RowsCount := RbMain.GetRowCount()
 		MacroOffset := (RowsCount = 2) ? 85 : ((RowsCount = 1) ? 60 : 115)
 		GuiControl, 1:Move, cRbMacro, % (RowsCount = 2) ? "y55" : (RowsCount = 1 ? "y30" : "y85")
 		GoSub, GuiSize
 	}
+	If (EventCode = -835) ; RBN_BEGINDRAG
+		OnMessage(WM_NOTIFY, ""), LV_Colors.Detach(ListID%A_List%)
+	If (EventCode = -836) ; RBN_ENDDRAG
+		GoSub, RowCheck
 }
 return
 
@@ -701,6 +707,7 @@ GoSub, BuildMixedControls
 ,	RbMacro := New Rebar(hRbMacro)
 ,	RbMacro.InsertBand(hMacroCh, 0, "NoGripper", 20, "", gWidth, 0, "", rHeight, 0, Ideal)
 ,	RbMacro.InsertBand(PrevID, 0, "", 21, "", 0, 0, "", rHeight, 0)
+,	!ShowPrev ? RbMacro.ModifyBand(2, "Style", "Hidden")
 return
 
 BuildMacroWin:
@@ -724,38 +731,52 @@ Gui, chTimes:Add, UpDown, vTimesG 0x80 Range0-999999999, 1
 return
 
 Preview:
+TbFile.ModifyButton(6, "Check", (ShowPrev := !ShowPrev) ? True : False)
+,	RbMacro.ModifyBand(2, "Style", "Hidden", False)
+,	RbMacro.ModifyBand(2, "MinWidth", 0)
+	; RbMacro.ModifyBand(2, "MinWidth", 0)
+return
+
+PrevDock:
 Input
-Gui 2:+LastFoundExist
-IfWinExist
-    GoSub, PrevClose
-Preview := LV_Export(A_List)
-Gui, 2:+Resize
-GoSub, BuildPrevWin
-Gui, 2:Add, StatusBar
-Gui, 2:Default
-SB_SetParts(150, 150)
-SB_SetText("Macro" A_List ": " o_AutoKey[A_List], 1)
-SB_SetText("Record Keys: " RecKey "/" RecNewKey, 2)
-SB_SetText("CoordMode: " CoordMouse, 3)
-Gui, chMacro:Default
-; GuiControl, 2:, LVPrev, %Preview%
-Gui, 2:Show,, %c_Lang072% - %AppName%
+FloatPrev := !FloatPrev
+; Gui 2:+LastFoundExist
+; IfWinExist
+    ; GoSub, PrevClose
+; return
+; Preview := LV_Export(A_List)
+If FloatPrev
+{
+	RbMacro.ModifyBand(2, "Style", "Hidden")
+	Gui, 2:Destroy
+	GoSub, BuildPrevWin
+	Gui, 2:+Resize +Caption -0x40000000 +0x80000000
+	Gui, 2:Add, StatusBar
+	Gui, 2:Default
+	SB_SetParts(150, 150)
+	SB_SetText("Macro" A_List ": " o_AutoKey[A_List], 1)
+	SB_SetText("Record Keys: " RecKey "/" RecNewKey, 2)
+	SB_SetText("CoordMode: " CoordMouse, 3)
+	Gui, chMacro:Default
+	; GuiControl, 2:, LVPrev, %Preview%
+	Gui, 2:Show,, %c_Lang072% - %AppName%
+}
+Else
+{
+	Gui, 2:Destroy
+	GoSub, BuildPrevWin
+	RbMacro.ModifyBand(2, "Child", PrevID)
+,	RbMacro.ModifyBand(2, "Style", "Hidden", False)
+}
 Tooltip
 return
 
 BuildPrevWin:
 Gui, 2:+LastFound
-Gui, 2:+hwndPrevID -Caption +0x40000000 -0x80000000
-Gui, 2:Add, Button, -Wrap Section W60 H25 hwndhPrevClose gPrevClose, %c_Lang022%
+Gui, 2:+hwndPrevID -Resize -Caption +0x40000000 -0x80000000
+Gui, 2:Add, Button, -Wrap Section W60 H25 hwndhPrevClose gPrevDock, %c_Lang022%
 Gui, 2:Add, Custom, ClassToolbarWindow32 hwndhTbPrev gTbPrev 0x0800 0x0100 0x0040 0x0008
 Gui, 2:Add, Custom, ClassReBarWindow32 hwndhRbPrev gRB_Notify -Theme 0x0800 0x0400 0x0040 0x8000
-; Gui, 2:Add, Button, -Wrap ys W25 H25 hwndPrevCopy vPrevCopy gPrevCopy
-	; ILButton(PrevCopy, CopyIcon[1] ":" CopyIcon[2])
-; Gui, 2:Add, Button, -Wrap ys W25 H25 hwndPrevRefresh vPrevRefresh gPrevRefresh
-	; ILButton(PrevRefresh, LoopIcon[1] ":" LoopIcon[2])
-; Gui, 2:Add, Checkbox, -Wrap ys+5 W95 vAutoRefresh R1, %t_Lang015%
-; Gui, 2:Add, Checkbox, -Wrap ys+5 xp+100 W105 vOnTop gOnTop R1, %t_Lang016%
-; Gui, 2:Add, Checkbox, -Wrap Checked%TabIndent% ys+5 xp+110 W85 vTabIndent gPrevRefresh R1, %t_Lang011%
 Gui, 2:Add, Custom, ClassScintilla x0 y30 hwndhSciPrev vLVPrev
 Gui, 2:Show, Hide
 TB_Define(TbPrev, hTbPrev, hIL_Icons, DefaultBar.Preview, DefaultBar.PrevOpt)
