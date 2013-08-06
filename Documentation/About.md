@@ -8,7 +8,7 @@ Author: Pulover \[Rodolfo U. Batista\]
 [rodolfoub@gmail.com](mailto:rodolfoub@gmail.com)  
 Copyright © 2012-2013 Rodolfo U. Batista  
 
-Version: 3.8.2  
+Version: 3.8.3  
 Release Date: August, 2013  
 AutoHotkey Version: 1.1.11.02  
 
@@ -34,6 +34,11 @@ Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jör
 
 
 # Change Log
+
+## Version 3.8.3
+
+* Fixed incorrect warning when using variables inside *Mouse* commands.
+* Added translations to Indonesian, Slovak and Slovenian
 
 ## Version 3.8.2
 

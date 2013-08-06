@@ -2775,11 +2775,11 @@ Else
 	Else
 		Target := "", Window := ""
 }
-If InStr(Details, "% ")
-{
-	MsgBox, 16, %d_Lang007%, %d_Lang059%
-	return
-}
+; If InStr(Details, "% ")
+; {
+	; MsgBox, 16, %d_Lang007%, %d_Lang059%
+	; return
+; }
 EscCom("TimesX|DelayX")
 If (A_ThisLabel <> "MouseApply")
 {
@@ -7329,18 +7329,20 @@ return
 
 Undo:
 GuiControl, -Redraw, InputList%A_List%
-HistoryMacro%A_List%.Undo()
+SelRow := LV_GetNext(0, "Focused"), HistoryMacro%A_List%.Undo()
 GoSub, RowCheck
 GoSub, b_Enable
 GuiControl, +Redraw, InputList%A_List%
+SelRow ? LV_Modify(SelRow, "Select Focus Vis")
 return
 
 Redo:
 GuiControl, -Redraw, InputList%A_List%
-HistoryMacro%A_List%.Redo()
+SelRow := LV_GetNext(0, "Focused"), HistoryMacro%A_List%.Redo()
 GoSub, RowCheck
 GoSub, b_Enable
 GuiControl, +Redraw, InputList%A_List%
+SelRow ? LV_Modify(SelRow, "Select Focus Vis")
 return
 
 TabPlus:
@@ -7588,6 +7590,7 @@ Else
 		LV_Delete(RowNumber)
 	}
 }
+LV_Modify(LV_GetNext(0, "Focused"), "Select")
 GoSub, b_Start
 GoSub, RowCheck
 GuiControl, Focus, InputList%A_List%
@@ -8810,7 +8813,7 @@ Menu, Tray, Tip, %AppName%`n%ActiveKeys% %d_Lang025%
 return
 
 h_Del:
-RowNumber = 0
+RowNumber := 0
 Loop
 {
 	RowNumber := LV_GetNext(RowNumber - 1)
@@ -8818,21 +8821,23 @@ Loop
 		break
 	LV_Delete(RowNumber)
 }
+LV_Modify(LV_GetNext(0, "Focused"), "Select")
 GoSub, RowCheck
 GoSub, b_Start
 return
 
 h_NumDel:
-RowNumber = 0
+RowNumber := 0
 Loop
 {
 	RowNumber := LV_GetNext(RowNumber - 1)
 	If !RowNumber
 		break
 	LV_Delete(RowNumber)
-	GoSub, RowCheck
-	GoSub, b_Start
 }
+LV_Modify(LV_GetNext(0, "Focused"), "Select")
+GoSub, RowCheck
+GoSub, b_Start
 return
 
 ;##### Playback Commands #####
