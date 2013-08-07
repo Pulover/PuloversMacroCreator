@@ -1,0 +1,878 @@
+﻿LoadLang_Sl:
+		
+		; Slovenian
+		
+; Main Menu		
+	m_Lang001 =	&Datoteka
+	m_Lang002 =	&Vstavite
+	m_Lang003 =	&Izberite
+	m_Lang004 =	&Urejanje
+	m_Lang005 =	&Makro
+	m_Lang006 =	M&ožnosti
+	m_Lang007 =	&Jezik
+	m_Lang008 =	D&arujte
+	m_Lang009 =	&Help
+		
+; File Submenu		
+	f_Lang001 =	&New
+	f_Lang002 =	&Odprite
+	f_Lang003 =	&Šparajte
+	f_Lang004 =	&Shrani kot
+	f_Lang005 =	&Uvoz Makro
+	f_Lang006 =	S&hrani trenutni makro
+	f_Lang007 =	&Zadnje Datoteke
+	f_Lang008 =	&Izvoz v AHK
+	f_Lang009 =	&Predogled Script
+	f_Lang010 =	S&eznam spremenljivk
+	f_Lang011 =	E&xit
+	f_Lang012 =	Ni s&lik
+		
+; Insert Sub Menu		
+	i_Lang001 =	&Miška
+	i_Lang002 =	&Besedilo
+	i_Lang003 =	&Nadzor
+	i_Lang004 =	&Premor / Sporočilo / ključne Počakaj
+	i_Lang005 =	&Okno
+	i_Lang006 =	&Image / Pixel Iskanje
+	i_Lang007 =	&Run / datoteke / String / Razno.
+	i_Lang008 =	&Loop / Goto / Label
+	i_Lang009 =	&Če Izjave / spremenljivke / Funkcije
+	i_Lang010 =	In&ternet Explorer / COM vmesnik
+	i_Lang011 =	&Windows Sporočila
+	i_Lang012 =	Po&sebne Keys
+		
+; Select Sub Menu		
+	s_Lang001 =	&Izberi vse
+	s_Lang002 =	I&zberete Brez
+	s_Lang003 =	&Obrni izbor
+	s_Lang004 =	&Preverite Izbrano
+	s_Lang005 =	Po&čistite Izbrano
+	s_Lang006 =	I&nvertnega Pregledi
+	s_Lang007 =	Iz&brana vrsta
+	s_Lang008 =	&Ukazi
+		
+; Edit Sub Menu		
+	e_Lang001 =	&Dvojnik
+	e_Lang002 =	&Urejanje komentarja
+	e_Lang003 =	&Najdi / zamenjaj
+	e_Lang004 =	&Kopiraj v.
+	e_Lang005 =	&Razveljavi
+	e_Lang006 =	R&edo
+	e_Lang007 =	&Cut
+	e_Lang008 =	K&opirajte
+	e_Lang009 =	&Prilepi
+	e_Lang010 =	&Izbriši
+	e_Lang011 =	Pre&makni navzgor
+	e_Lang012 =	Prem&akni dol
+	e_Lang013 =	&Vstavite okencu
+	e_Lang014 =	Edi&t Color Mark
+		
+; Macro Sub Menu		
+	r_lang001 =	&Snemaj makro
+	r_lang002 =	&Vključite Makri
+	r_lang003 =	&Igraj trenutni makro
+	r_lang004 =	&Timer
+	r_lang005 =	&Dodaj makro
+	r_lang006 =	&Zapri Makro
+	r_lang007 =	&Konteksta Bližnjice
+	r_lang008 =	&Prikaži / skrij nadzor
+	r_lang009 =	P&redvajaj izbrano vrstico
+	r_lang010 =	I&grajo dokler izbrano vrstico
+	r_lang011 =	Pr&edvajanje izbrane vrstice
+		
+; Options Sub Menu		
+	o_Lang001 =	&Nastavitve
+	o_Lang002 =	N&astavi kot privzeti Bližnjice
+	o_Lang003 =	Na&stavi kot privzeti datotečni
+	o_Lang004 =	&Odstranite privzeti datotečni
+	o_Lang005 =	&Ponastavi stolpce Velikost
+	o_Lang006 =	P&rivzete Bližnjice
+	o_Lang007 =	Pr&ivzete nastavitve
+		
+; Donate Sub Menu		
+	p_Lang001 =	&PayPal Donacija
+		
+; Help Sub Menu		
+	h_Lang001 =	&Makro Creator Domov
+	h_Lang002 =	&AHK Online Dokumentacija
+	h_Lang003 =	&Preveri za posodobitve.
+	h_Lang004 =	P&reverite na start-up
+	h_Lang005 =	&O
+	h_Lang006 =	&Nasveti
+	h_Lang007 =	&Forum
+		
+; Tray Menu		
+	y_Lang001 =	Skrij okno
+	y_Lang002 =	Pokaži okno
+	y_Lang003 =	Prikaži / skrij nadzor
+		
+; Main Window		
+	w_Lang001 =	Izvozi
+	w_Lang002 =	Predogled
+	w_Lang003 =	Možnosti
+	w_Lang004 =	Zapis
+	w_Lang005 =	Igraj
+	w_Lang006 =	Avto.
+	w_Lang007 =	Človek.
+	w_Lang008 =	Stop
+	w_Lang009 =	&Prikaži nadzor
+	w_Lang010 =	P&remor
+	w_Lang011 =	&Zanka
+	w_Lang012 =	Zaj&emanje Keys
+	w_Lang013 =	&Skrij okno
+	w_Lang014 =	Ved&no aktiven
+	w_Lang015 =	Ponovite
+	w_Lang016 =	Delay (ms):
+	w_Lang017 =	Uporabi
+	w_Lang018 =	Vstavite
+	w_Lang019 =	Urejanje
+	w_Lang020 =	(Unused)
+	w_Lang021 =	Storiti ničesar
+	w_Lang022 =	Zapri aplikacija
+	w_Lang023 =	Shutdown
+	w_Lang024 =	Shutdown (sila)
+	w_Lang025 =	Reboot
+	w_Lang026 =	Odjavite
+	w_Lang027 =	Hibernacija
+	w_Lang028 =	Odloži
+	w_Lang029 =	Zaklenite računalnik
+	w_Lang030 =	Kazalo
+	w_Lang031 =	Akcija
+	w_Lang032 =	Podrobnosti
+	w_Lang033 =	Ponovite
+	w_Lang034 =	Zamuda
+	w_Lang035 =	Vrsta
+	w_Lang036 =	Nadzor
+	w_Lang037 =	Okno
+	w_Lang038 =	Komentar
+	w_Lang039 =	Barva
+		
+; Command Windows		
+	c_Lang001 =	Miška
+	c_Lang002 =	Besedilo
+	c_Lang003 =	Premor
+	c_Lang004 =	Nadzor
+	c_Lang005 =	Okno
+	c_Lang006 =	Iskanje slik
+	c_Lang007 =	Pixel Iskanje
+	c_Lang008 =	Run / datoteke / String / Razno.
+	c_Lang009 =	Če Izjave
+	c_Lang010 =	Spremenljivke
+	c_Lang011 =	Funkcije
+	c_Lang012 =	Internet Explorer
+	c_Lang013 =	COM vmesnik
+	c_Lang014 =	Izberite aplikacijo (Advanced)
+	c_Lang015 =	Sporočilo
+	c_Lang016 =	Nadzor
+	c_Lang017 =	Zamuda
+	c_Lang018 =	Milisekundah
+	c_Lang019 =	Sekund
+	c_Lang020 =	OK
+	c_Lang021 =	Prekliči
+	c_Lang022 =	Zapri
+	c_Lang023 =	Kopirajte
+	c_Lang024 =	Izbriši
+	c_Lang025 =	(Uporabite `% za spremenljivke, npr: `%Clipboard`%)
+	c_Lang026 =	Akcija
+	c_Lang027 =	Kliknite
+	c_Lang028 =	Premikanje
+	c_Lang029 =	Move & Kliknite
+	c_Lang030 =	Wheel Up
+	c_Lang031 =	Kolo dol
+	c_Lang032 =	Povleci in spusti
+	c_Lang033 =	Koordinira
+	c_Lang034 =	Kliknite
+	c_Lang035 =	Pošlji
+	c_Lang036 =	Relativna
+	c_Lang037 =	Button
+	c_Lang038 =	Levo
+	c_Lang039 =	Desno
+	c_Lang040 =	Bližnji
+	c_Lang041 =	X1
+	c_Lang042 =	X2
+	c_Lang043 =	Držite / Spustite
+	c_Lang044 =	Kliknite Count
+	c_Lang045 =	Golo besedilo (Raw)
+	c_Lang046 =	Besedilo z ukazi
+	c_Lang047 =	Prilepite iz odložišča
+	c_Lang048 =	Prilepite na nadzor
+	c_Lang049 =	Set Text
+	c_Lang050 =	Dodaj Premor
+	c_Lang051 =	Polje sporočilo
+	c_Lang052 =	Počakajte na ključ
+	c_Lang053 =	Počakajte Timeout
+	c_Lang054 =	(Milisekundah) 0 = neskončno
+	c_Lang055 =	Ukaz
+	c_Lang056 =	Vrednost
+	c_Lang057 =	Izhodna spremenljivka
+	c_Lang058 =	Položaj
+	c_Lang059 =	Velikost
+	c_Lang060 =	4 spremenljivke bo ustvarjena s to predpono in konča z X, Y, W, H.
+	c_Lang061 =	Začni
+	c_Lang062 =	Konec
+	c_Lang063 =	Slika
+	c_Lang064 =	Pixel
+	c_Lang065 =	Naredite Screenshot
+	c_Lang066 =	Ključ Počakaj
+	c_Lang067 =	Če se ugotovi,
+	c_Lang068 =	Če ni mogoče najti / zmota
+	c_Lang069 =	* Coords shranjeni v `%FoundX`% / `%FoundY`% funtov.
+	c_Lang070 =	Coord
+	c_Lang071 =	Variacije
+	c_Lang072 =	Predogled
+	c_Lang073 =	Zanka
+	c_Lang074 =	* Ne deluje v ročnem predvajanje.
+	c_Lang075 =	Break
+	c_Lang076 =	Nadaljuj
+	c_Lang077 =	Pojdi
+	c_Lang078 =	Pojdi na Label
+	c_Lang079 =	Oznaka
+	c_Lang080 =	Dodaj oznako
+	c_Lang081 =	String (InputVar), vrednost
+	c_Lang082 =	Var [operater] Vrednost
+	c_Lang083 =	Dodaj Else
+	c_Lang084 =	Določite spremenljivko
+	c_Lang085 =	Vsebina
+	c_Lang086 =	Operater
+	c_Lang087 =	Uporabite Eval () za reševanje izrazov
+	c_Lang088 =	Ponastavi
+	c_Lang089 =	Funkcija Ime
+	c_Lang090 =	Ločene z vejico parametre (brez oklepajev).
+	c_Lang091 =	(Uporabite `% za spremenljivke. Je dobesedna Vejice je pobegnil [```,])
+	c_Lang092 =	Element stran / Index
+	c_Lang093 =	Set
+	c_Lang094 =	Get
+	c_Lang095 =	Metoda
+	c_Lang096 =	Nepremičnine
+	c_Lang097 =	Čakati na stran za nalaganje.
+	c_Lang098 =	CLSID
+	c_Lang099 =	Povežite
+	c_Lang100 =	Ročaj
+	c_Lang101 =	COM Script
+	c_Lang102 =	Število sporočilo
+	c_Lang103 =	Posebne Keys
+	c_Lang104 =	Brskalnik Nazaj
+	c_Lang105 =	Brskalnik Naprej
+	c_Lang106 =	Brskalnik Refresh
+	c_Lang107 =	Brskalnik Ustavi
+	c_Lang108 =	Brskalnik Iskanje
+	c_Lang109 =	Brskalnik Priljubljene
+	c_Lang110 =	Brskalnik Domov
+	c_Lang111 =	Mediji
+	c_Lang112 =	Mute
+	c_Lang113 =	Obseg Up
+	c_Lang114 =	Glasnosti
+	c_Lang115 =	Predvajanje / premor
+	c_Lang116 =	Naslednji posnetek
+	c_Lang117 =	Prejšnja Track
+	c_Lang118 =	Stop
+	c_Lang119 =	E-pošta
+	c_Lang120 =	App 1
+	c_Lang121 =	App 2
+	c_Lang122 =	ScanCode
+	c_Lang123 =	Dodaj
+	c_Lang124 =	Ključ Zgodovina
+	c_Lang125 =	Vnesite ScanCode.
+	c_Lang126 =	Koda doda Virtual Seznam Keys!
+	c_Lang127 =	Vnesite ime za spremenljivko
+	c_Lang128 =	Uporabite funkcijo iz zunanje datoteke
+	c_Lang130 =	Prekinil zanko, če je ugotovljeno,
+	c_Lang131 =	Uporabi
+	c_Lang132 =	Zanka
+	c_Lang133 =	Datoteka
+	c_Lang134 =	Razčleniti
+	c_Lang135 =	Preberite
+	c_Lang136 =	Registracija
+	c_Lang137 =	Datoteka Vzorec:
+	c_Lang138 =	Mape?
+	c_Lang139 =	Recurse?
+	c_Lang140 =	Vhodna spremenljivka:
+	c_Lang141 =	Ločila:
+	c_Lang142 =	Izpustiti znakov:
+	c_Lang143 =	Vhodna datoteka:
+	c_Lang144 =	Legenda:
+	c_Lang145 =	Root Key:
+	c_Lang146 =	Podključi?
+	c_Lang147 =	Ikona
+	c_Lang148 =	Ne ikona
+	c_Lang149 =	Napaka
+	c_Lang150 =	Vprašanje
+	c_Lang151 =	Vzklik
+	c_Lang152 =	Info
+	c_Lang153 =	Vedno na vrhu
+	c_Lang154 =	Zapisnik
+	c_Lang155 =	Run skriptov
+	c_Lang156 =	Script
+	c_Lang157 =	Script Language
+	c_Lang158 =	Ni združljiv z 64-bit!
+	c_Lang159 =	Možnosti iskanja
+	c_Lang160 =	Pregledno
+	c_Lang161 =	Lestvica
+	c_Lang162 =	Dodaj "IF"
+		
+; Other Windows		
+	t_Lang001 =	Izvoz v AHK
+	t_Lang002 =	Makri
+	t_Lang003 =	Loops
+	t_Lang004 =	0 = neskončno
+	t_Lang005 =	Uporabite Hotstring
+	t_Lang006 =	Blok miška
+	t_Lang007 =	Vse
+	t_Lang008 =	Noben
+	t_Lang009 =	Konteksta Bližnjice
+	t_Lang010 =	Izvoz v
+	t_Lang011 =	Nazobčanost
+	t_Lang012 =	Vključujejo PMC zakoniku
+	t_Lang013 =	Ne združite pošiljanje ukazov
+	t_Lang014 =	Osveži
+	t_Lang015 =	Auto-Refresh
+	t_Lang016 =	Always On Top
+	t_Lang017 =	Nastavitve
+	t_Lang018 =	Splošno
+	t_Lang019 =	Start / Stop Record
+	t_Lang020 =	Posnemi nov makro
+	t_Lang021 =	Tipkanja
+	t_Lang022 =	Snemanje
+	t_Lang023 =	Zajeti ključne stanje (dol / gor)
+	t_Lang024 =	Mouse klikov
+	t_Lang025 =	Mouse Wheel
+	t_Lang026 =	Miško premakne
+	t_Lang027 =	Časovnih intervalih
+	t_Lang028 =	Minimalno zamudo
+	t_Lang029 =	Okenski razredi
+	t_Lang030 =	Okenski Naslovi
+	t_Lang031 =	Zapis ControlSend
+	t_Lang032 =	Zapis ControlClick
+	t_Lang033 =	Relativna Record Key
+	t_Lang034 =	Toggle
+	t_Lang035 =	Predvajanje
+	t_Lang036 =	Speed Up
+	t_Lang037 =	Slow Down
+	t_Lang038 =	Vrnitev miško po predvajanju
+	t_Lang039 =	Miška Koordinate
+	t_Lang040 =	Okno
+	t_Lang041 =	Zaslon
+	t_Lang042 =	Privzeto Mouse Delay
+	t_Lang043 =	Privzeto okno Delay
+	t_Lang044 =	Max Zgodovina na Makro
+	t_Lang045 =	Jasno Zgodovina
+	t_Lang046 =	Galerija slik:
+	t_Lang047 =	Nariši Button
+	t_Lang048 =	Širina črte (Px)
+	t_Lang049 =	Ujemite o sprostitvi
+	t_Lang050 =	Pritisnite Enter, da zajame
+	t_Lang051 =	Screenshots imenik
+	t_Lang052 =	Razno.
+	t_Lang053 =	Bližnjice
+	t_Lang054 =	Nastavi kot privzeti Bližnjice
+	t_Lang055 =	Onemogoči Window Bližnjice
+	t_Lang056 =	Ponastavi stolpce Velikost
+	t_Lang057 =	Privzeto makro datoteke
+	t_Lang058 =	Standardna knjižnica datoteke
+	t_Lang059 =	Uporabite Eval () privzeto za spremenljivke Naloga
+	t_Lang060 =	Pokaži Barve & Pomoč znamk za Zank in izjav
+	t_Lang061 =	(Kliknite glavo stolpca indeksa za vklop / izklop)
+	t_Lang062 =	Virtualni Keys
+	t_Lang063 =	Privzeto
+	t_Lang064 =	Urejanje komentarja
+	t_Lang065 =	Komentar
+	t_Lang066 =	Iskanje stolpec
+	t_Lang067 =	Najdi / zamenjaj
+	t_Lang068 =	Najdi
+	t_Lang069 =	Match Case
+	t_Lang070 =	Zamenjajte
+	t_Lang071 =	Najdeno
+	t_Lang072 =	Nadomesti
+	t_Lang073 =	Izbrane vrstice
+	t_Lang074 =	Vse vrstic
+	t_Lang075 =	Vse Makri
+	t_Lang076 =	O
+	t_Lang077 =	Regular Expression
+	t_Lang078 =	Predvajaj enkrat
+	t_Lang079 =	Igraj vsakih X (mili) sekund
+	t_Lang080 =	Timer
+	t_Lang081 =	Premor
+	t_Lang082 =	Izjave
+	t_Lang083 =	Prikaži zamikanje za Zank in izjav
+	t_Lang084 =	(Dvakrat kliknite glavo stolpca Akcijski vklop / izklop)
+	t_Lang085 =	Zaslon Kontrole Bar na start-up
+	t_Lang086 =	Iskanje funkcij. Prosimo počakajte.
+	t_Lang087 =	Vključujejo zunanje datoteke
+	t_Lang088 =	Ustvari EXE datoteko
+	t_Lang089 =	Dovoli več primerkov
+	t_Lang090 =	Neplačila
+	t_Lang091 =	Dovoli Vlečenje vrstice
+	t_Lang092 =	Vsebino celotne celice
+	t_Lang093 =	Standardni format INI
+	t_Lang094 =	Ime = vrednost
+	t_Lang095 =	Vnesite 1 spremenljivko na vrstico. Dodate lahko tudi [oddelkov].
+	t_Lang096 =	Uporabniški globalnih spremenljivk
+	t_Lang097 =	Pritisnite gumb na ročici
+	t_Lang098 =	Joystick
+	t_Lang099 =	Button
+	t_Lang100 =	Show Info
+	t_Lang101 =	Speed
+	t_Lang102 =	Počasi
+	t_Lang103 =	Hitro
+	t_Lang104 =	Prikaži / skrij Naslov Bar
+	t_Lang105 =	Prikaži / skrij glavno okno
+	t_Lang106 =	Takoj zagnati
+	t_Lang107 =	Naključne Zamude
+	t_Lang108 =	Normalno
+	t_Lang109 =	Navzdol
+	t_Lang110 =	Up
+	t_Lang111 =	Vstavite Keystroke
+		
+; Messages & Dialogs		
+	d_Lang001 =	Odprite
+	d_Lang002 =	Ali želite shraniti trenutno makro?
+	d_Lang003 =	Privzete nastavitve
+	d_Lang004 =	Makro Creator Datoteke
+	d_Lang005 =	Prihranite makro
+	d_Lang006 =	Ni uspelo rešiti / prepisati datoteko
+	d_Lang007 =	Napaka
+	d_Lang008 =	Napaka: Ne Makro Izbrano`nMolimo preveriti vsaj en makro na seznamu.
+	d_Lang009 =	Napaka: Ne Bližnjica Izbrano.
+	d_Lang010 =	Napaka: Neveljavna Naslov`nSkupina izbrani naslov ali ime datoteke je neveljavno.
+	d_Lang011 =	Opozorilo
+	d_Lang012 =	Izbrali nobenega nadzora.`nNadaljujem?
+	d_Lang013 =	Izvozi scenarij
+	d_Lang014 =	Scenarij Izvozni
+	d_Lang015 =	Datoteka je bila uspešno izvažajo!
+	d_Lang016 =	Kliknite na "Prijava", da označite položaj.
+	d_Lang017 =	
+	(LTrim	
+		- Izberite okno.
+		- Pokažite na želeni položaj.
+		- Pritisnite gumb desno.
+	)	
+	d_Lang018 =	Barva pixel
+	d_Lang019 =	Jasno Seznam
+	d_Lang020 =	Izbrišite vse predmete?
+	d_Lang021 =	Naslednja
+	d_Lang022 =	Prejšnja
+	d_Lang023 =	Sporočilo
+	d_Lang024 =	Naložite privzete nastavitve?
+	d_Lang025 =	Makro (ov) aktivirana.`nCe Bližnjice igrati.
+	d_Lang026 =	za začetek / konec snemanja
+	d_Lang027 =	Snemanje ustavi
+	d_Lang028 =	Snemanje.
+	d_Lang029 =	prepreči
+	d_Lang030 =	začeti nov rekord
+	d_Lang031 =	ni veljavno ime funkcije.
+	d_Lang032 =	Napaka: Podvojeni Bližnjice.
+	d_Lang033 =	Vključite Makri
+	d_Lang034 =	
+	(LTrim	
+		- Kliknite in povlecite z %DrawButton% izberite področje.
+		- Kliknite in sprostiti brez vlečenjem izberite območje nadzora.
+		- Klikni na območju brez nadzora na izbrano površino okna.
+	)	
+	d_Lang035 =	Nadaljevati?
+	d_Lang036 =	Image / Pixel Najdeno na
+	d_Lang037 =	Image / Pixel ni bilo mogoče najti.
+	d_Lang038 =	Za nadaljevanje pritisnite OK.
+	d_Lang039 =	Timeout!
+	d_Lang040 =	
+	(LTrim	
+		Ta funkcija zahteva GDI + knjižnice.
+		Kliknite V redu, da gredo na stran za prenos.
+	)	
+	d_Lang041 =	Ime spremenljivke vsebuje neveljaven znak.
+	d_Lang042 =	
+	(LTrim	
+		Neveljavna operaterja.
+		Naslednji subjekti se sprejmejo:
+		=, ==, <>,! =,>, <,> =, <=
+		
+		Primeri:
+		MyVar > 1
+		MyVar = `%A_DDDD`%
+		Odložišče == `%MyVar`%
+	)	
+	d_Lang043 =	Ali pa uporabite orodno vrstico Kontrolniki.
+	d_Lang044 =	
+	(LTrim	
+		Ta funkcija zahteva Eval () funkcijo.
+		Kliknite V redu, da gredo na stran za prenos.
+	)	
+	d_Lang045 =	Prosimo, izberite okno Internet Explorerja!
+	d_Lang046 =	Povezava uspešno!
+	d_Lang047 =	Povezava ni uspela!
+	d_Lang048 =	Vstavite ročaj in CLSID.
+	d_Lang049 =	Invalid Label ime.
+	d_Lang050 =	Podvojene nalepke.
+	d_Lang051 =	Za predvajanje makro pritisnite ustrezno Hotkey (Auto / Man).
+	d_Lang052 =	Za začetek snemanja pritisnite Record Hotkey.
+	d_Lang053 =	Ne kaži tega sporočila.
+	d_Lang054 =	Izberite okno za Excel!
+	d_Lang055 =	Prosimo, izberite datoteko skripta AutoHotkey (. AHK) in vnesti Ime funkcije.
+	d_Lang056 =	
+	(LTrim	
+		Ta funkcija zahteva AutoHotkey nameščen.
+		Kliknite V redu, da gredo na stran za prenos.
+	)	
+	d_Lang057 =	
+	(LTrim	
+		- Pritisnite Ctrl + smerne tipke za premikanje izbrano območje.
+		- Pritisnite tipko Shift + smerne tipke, da spremenite velikost izbranega območja.
+		- Pritisnite Enter, da končate.
+	)	
+	d_Lang058 =	
+	(LTrim	
+		Nekatere funkcije zahtevajo admnistrator privilages, da bi deloval pravilno.
+		Zato je priporočljivo, da ponovno vlogo kot skrbnik.
+	)	
+	d_Lang059 =	
+	(LTrim	
+		Ta ukaz ne podpira izrazov ali funkcij.
+		Prosimo, določite spremenljivko in jo uporabite v parametru.
+	)	
+	d_Lang060 =	Nova različica je na voljo
+	d_Lang061 =	
+	(LTrim	
+		Želite prenesti sedaj?
+		
+		Če želite onemogočiti samodejne preglede izberite Pomoč> Preveri na start-up.
+	)	
+	d_Lang062 =	Že imate najnovejšo različico.
+	d_Lang063 =	Napaka pri preverjanju do napake.
+	d_Lang064 =	COM objekt napaka
+	d_Lang065 =	Vrstica
+	d_Lang066 =	Posebej
+	d_Lang067 =	Prikaži nasvete o start-up.
+	d_Lang068 =	Nasveti:
+	d_Lang069 =	
+	(LTrim	
+		Rabite pomoč, našel napako ali pa imate predlog? Pošljite e-pošto na avtorja: <a href="mailto:rodolfoub@gmail.com"> rodolfoub@gmail.com </ a>
+		To je brezplačna programska oprema. Če ste našli to koristno razmisliti < Donacija </ a> in razvojni podpori. Hvala.
+	)	
+	d_Lang070 =	Napaka: Neveljavna Bližnjica Izbrano.
+		
+; Start-up Tips		
+	Start_Tips =	
+	(LTrim	
+		Lahko ustvarite makre z uporabo ukaznih gumbov v glavnem oknu ali z uporabo snemalnika kopirati dejanja. Pojdi na Možnosti> Nastavitve> Snemanje izbrati tisto vhodi bo posnet.
+		Za uporabo snemalnika za hitre naloge, pojdite na Možnosti> Nastavitve> Snemanje in preverite "Počisti seznam" možnost. Nato kliknite na gumb Snemaj v glavnem oknu in uporabite F10, da počistite trenutni makro in začeti novega z isto hotkey. Si lahko ogledate tudi "Vedno Active" možnost v glavnem oknu za ohranitev snemanje in predvajanje Bližnjice aktiven.
+		Da bi dobili pomoč za določen ukaz desnim klikom na ukazni gumb v glavnem oknu ali kjerkoli v ukazno okno pokazati povezave do AutoHotkey spletni pomoči.
+		Preverite "Capture Keys" možnost, da vstopijo tipke in kombinacije s svojim Macro neposredno iz glavnega okna.
+		Vpišite tipke in kombinacije v polje aktivne tipke na dnu in pritisnite gumb Insert, da jih dodate na izbranih vrstah.
+		Če ni izbran noben vrstic za urejanje gumbov veljajo za vse vrstice v seznamu.
+		Lahko določite svoje spremenljivke v spremenljivkah okna (Insert> Če Izjave / spremenljivke / funkcije). Če jih želite uporabljati v notranjosti ukazi priložiti ime spremenljivke v odstotkih znakov, na primer: `% MyVar ` \ funtov.
+		Zanka Števec na vrhu določa skupno število zank za izbrano Macro.
+		Lahko uredite vrstico z dvojnim klikom ali ga izberete in kliknete Uredi gumbe na dnu.
+		Lahko urejate več izbrane vrstice z uporabo možnosti v vnosno vrstico na dnu.
+		Izberite eno ali več vrstic za dodajanje novih ukazov na vrhu njih.
+		Lahko premaknete vrstice z klik-in-povleci.
+		Dvakrat kliknite na ikono programa za aktiviranje bližnjic ali zaustavitev predvajanja / snemanja. Kliknite na to s srednjo tipko med predvajanjem ali snemanje na pavzo.
+		Lahko izvozite Makri delovnih skripte AutoHotkey ali samostojnih izvršljiv, iz okna Export.
+		Za snemanje in predvajanje miško uporabljate absolutne koordinate pojdite na Možnosti> Nastavitve> Neplačila in komplet Miška koordinate na zaslonu.
+		Lahko odpirate, kopirate, premikate ali brišete datoteke in mape z uporabo enega od ukazov Insert> Run / datoteke / String / Razno.
+		Za snemanje dol in gor stanje vseh ključnih pojdite na Možnosti> Nastavitve> Snemanje in preverite, "Capture ključno stanje (dol / gor)" možnost.
+		Lahko uporabite hotkeys, da pospešijo ali upočasnijo predvajanja. Pojdi na Možnosti> Nastavitve> Playback nastavite tipke in hitrost.
+		Če želite prilagoditi zajem območja z uporabo "Znamka Screenshot" orodje pojdite na Možnosti> Nastavitve> Screenshots in izberite "Pritisnite Enter za zajem". Po jemanju uporabo nadzorne pravokotnik + smerne tipke za premikanje izbire in Shift + smerne tipke, da spremenite velikost.
+		Hitro Izberite: Izberite katero koli vrstico in kliknite na glavo stolpca, da izberete podobne vrstice, ki temeljijo na besedilu celice iz tega stolpca.
+		Run / datoteke / String / Razno. okna imajo številne druge koristne ukaze, kot Shutdown in UrlDownloadToFile.
+		Uporabite funkcijo »Screenshot« v oknu funkcije (Insert> Če Izjave / spremenljivke / funkcije) narediti screenshot delu zaslona. Prvi parameter je pot ciljna datoteka in ime z razširitvijo png. Drugi parameter so cevi, ločene koordinate na zaslonu, npr 100 | 200 | 50 | 100 (X | Y | Širina | Višina).
+		Kliknite na indeks stolpca Glava za vklop / izklop Pomoč znamke in barve za Zank in izjav. Dvojnim klikom na stolpec Glava akciji za vklop / izklop zamikanjem za Zank in izjav.
+		Lahko razhroščevanje vaše makre z ročnim Hotkey in možnosti igrati v makro meniju. Lahko onemogočite tudi ukrepe, ki so jih počistite na Makro seznamu.
+		Če želite, da vaše Makri deluje le na določenem oknu pojdite na Makro> konteksta bližnjic.
+		Lahko nastavite svoje globalne spremenljivke, ki se naložijo ob zagonu in se izvozijo. Pojdi na Možnosti> Nastavitve> Uporabniške globalnih spremenljivk, da jih dodate.
+		Lahko zaženete napredne funkcije, kot so substr in RegExReplace iz okna Funkcije (Insert> Če Izjave / spremenljivke / funkcije). Ali teči svoje funkcije iz zunanjih AutoHotkey skripte.
+	)	
+; Tooltips		
+	NewB_TT =	New (Ctrl + N)
+	OpenB_TT =	Odprta (Ctrl + O)
+	SaveB_TT =	Prihranite (Ctrl + S)
+	ExportB_TT =	Izvoz v AHK (Ctrl + E)
+	PreviewB_TT =	Predogled Script (Ctrl + P)
+	OptionsB_TT =	Nastavitve (Ctrl + G)
+	RecordB_TT =	Record Macro (Ctrl + R)
+	StartB_TT =	Vključi Makri (Ctrl + Enter)
+	TestRun_TT =	Igraj trenutni makro (Ctrl + Shift + Enter)
+	RunTimer_TT =	Timer (Ctrl + Shift + T)
+	MouseB_TT =	Mouse (F2)
+	TextB_TT =	Besedilo (F3)
+	SpecialB_TT =	Posebne Keys
+	ControlB_TT =	Control (F4)
+	PauseB_TT =	Premor (F5) / Sporočilo (Shift + F5) / ključne Počakaj (Control + F5)
+	WindowB_TT =	Okno (F6)
+	ImageB_TT =	Image / Pixel Search (F7)
+	RunB_TT =	Run / datoteke / String / Razno. (F8)
+	ComLoopB_TT =	Zanka (F9) / Goto (Shift + F9) / Label (Ctrl + F9)
+	IfStB_TT =	Če izjave (F10) / spremenljivke (Shift + F10) / Funkcije (Ctrl + F10)
+	IEComB_TT =	Internet Explorer (F11) / COM vmesnik (Shift + F11) / Run skriptov (Ctrl + F11)
+	SendMsgB_TT =	Windows Sporočila (F12)
+	AutoKey_TT =	Backspace jasno
+	ManKey_TT =	Backspace jasno
+	AbortKey_TT =	Backspace jasno
+	JoyKey_TT =	Pritisnite gumb na ročici
+	PauseKey_TT =	Premori usmrtitev namesto ustavljanja
+	OnFinish_TT =	
+	(LTrim	
+		Možnosti zaustavitev
+		Ko se predvajanje konča.
+	)	
+	Win1_TT =	Dodaj tipko Windows kot spreminjevalcem
+	JoyHK_TT =	Joystick
+	ReptC_TT =	0 = neskončno
+	TabPlus_TT =	Dodaj Macro (Ctrl + T)
+	TabClose_TT =	Zapri Macro (Ctrl + W)
+	DuplicateL_TT =	Dvojnik makro (Ctrl + Shift + D)
+	SaveC_TT =	Shrani trenutni makro (Ctrl + Alt + S)
+	ImportB_TT =	Uvoz Macro (Ctrl + I)
+	IfDirB_TT =	Naredite Bližnjice delovalo, odvisno od`ntype okna, ki se aktivno ali obstaja (Ctrl + D)
+	KeepHKOn_TT =	Imejte Bližnjice vedno aktivira
+	A_List_TT =	Izberite Macro (Ctrl +1 ~ 0)
+	OSHK_TT =	Izberite makro
+	OSHKEd_TT =	Izberite makro
+	Duplicate_TT =	Dvojnik izbrane vrstice (Ctrl + D)
+	Order_TT =	Premakniti izbrane vrstice (Ctrl + PageUp / Ctrl + PageDown)
+	Cut_TT =	Cut izbrane vrstice (Ctrl + X)
+	Copy_TT =	Kopirajte izbrane vrstice (Ctrl + C)
+	Paste_TT =	Prilepi prekopiranih vrsticah (Ctrl + V)
+	Remove_TT =	Izbriši izbrane vrstice (DEL)
+	Undo_TT =	Razveljavi (Ctrl + Z)
+	Redo_TT =	Ponovi (Ctrl + Y)
+	CopyTo_TT =	Kopiraj v.
+	Capt_TT =	Zajemanje pritiske na tipke v tem oknu
+	OnScCtrl_TT =	Display Controls Orodna vrstica
+	ShowStep_TT =	Prikažete oblačke z namigi
+	ApplyT_TT =	Uporabi
+	ApplyI_TT =	Uporabi
+	ApplyL_TT =	Vstavite okencu (Insert)
+	InsertKey_TT =	Vstavite Keystroke (Ctrl + Insert)
+	EditButton_TT =	Uredi (Enter)
+	PrevRefresh_TT =	Refresh (F5)
+	PrevCopy_TT =	Kopirajte
+	OpenT_TT =	Odprta (Ctrl + O)
+	SaveT_TT =	Prihranite (Ctrl + S)
+	CutT_TT =	Cut
+	CopyT_TT =	Kopirajte
+	PasteT_TT =	Prilepi
+	SelAllT_TT =	Izberi vse
+	DefaultMacro_TT =	Izberite datoteko naložiti na programu zagon
+	VarCopyA_TT =	Kopiranje trenutne spremenljive vsebine
+	VarCopyB_TT =	Kopiranje trenutne spremenljive vsebine
+	FindReplace_TT =	Najdi / Zamenjaj (Ctrl + F)
+	EditComm_TT =	Uredi komentar (Ctrl + L)
+	EditColor_TT =	Edit Color Mark (Ctrl + M)
+	Reset_TT =	Počisti spremenljive vsebine
+	Screenshot_TT =	Naredite Screenshot
+	ColorPick_TT =	Color Picker
+	PicPrev_TT =	Dvakrat Kliknite, da odprete sliko
+	CoordPixel_TT =	Način usklajuje
+	VariatT_TT =	Odtenki variacije
+	IconN_TT =	Število skupine ikon
+	TransC_TT =	Pregleden barvni
+	WScale_TT =	Širina lestvico
+	HScale_TT =	Višina lestvico
+	LoopLVColor_TT =	Kliknite, da izberete barvo
+	IfLVColor_TT =	Kliknite, da izberete barvo
+	RefreshIEW_TT =	Osveži seznam
+	ActiveObj_TT =	Poskuša povezati z Active COM Object
+	ExpView_TT =	Napredno Editor
+	ExpView2_TT =	Napredno Editor
+	OSPlay_TT =	Predvajanje / premor
+	OSStop_TT =	Stop
+	OSRec_TT =	Start / Stop Record
+	OSRecNew_TT =	Posnemi nov makro
+	OSRecOpt_TT =	Možnosti snemanja
+	OSPlayOpt_TT =	Možnosti predvajanja
+	OSClear_TT =	Jasno Seznam
+	OSProgB_TT =	Prikaže vrstica napredka
+	OSFast_TT =	Speed Up
+	OSSlow_TT =	Slow Down
+	OSTrans_TT =	Motnost
+	ToggleTB_TT =	Prikaži / skrij Naslov Bar
+	ToggleMW_TT =	Prikaži / skrij glavno okno
+	MRel_TT =	
+	(LTrim	
+		Premikanje glede na trenutni položaj.
+		Ali pa, če se uporablja z regulacijo: lega glede na kontrolo.
+	)	
+	Raw_TT =	
+	(LTrim	
+		Ukaz SendRaw interpretira vse znake dobesedno
+		namesto prevajanje {Enter} na ENTER pritisku,
+		^ C za Control-C, itd
+	)	
+	ComText_TT =	
+	(LTrim	
+		Ko ni v surovem načinu naslednje znake
+		se obravnavajo kot modifikatorji (ti modifikatorji vplivajo
+		samo že naslednji ključ)!, +, ^ #
+	)	
+	Clip_TT =	
+	(LTrim	
+		Začasno uporablja odložišče poslati besedilo.
+		Ko je operacija končana, skript
+		obnovi izvirne vsebine odložišča.
+		(Pustite prazno besedilo prilepiti trenutno vsebino)
+	)	
+	EditPaste_TT =	
+	(LTrim	
+		Paste String na položaju strešica / vstaviti
+		v nadzor Edit (to ne vpliva na
+		Vsebino odložišča).
+	)	
+	SetText_TT =	Spremeni besedilo na kontroli.
+	RelKey_TT =	
+	(LTrim	
+		Evidence premiki miške in kliki kot pobotih
+		od prejšnjega položaja, ko je potekala.
+	)	
+	ToggleC_TT =	Vključite Relativna snemanja, ko je ključ država je na.
+	Relative_TT =	Koordinate glede na aktivnem oknu.
+	Screen_TT =	Koordinate so relativne na namizje (celoten zaslon).
+	IncFolders_TT =	
+	(LTrim	
+		0 - le datoteke / ključe
+		1 - Mape / podključi in datoteke / ključe
+		2 - samo mape / podključi
+	)	
+	Recurse_TT =	
+	(LTrim	
+		0 - Ne recurse v mape / podključe
+		1 - Recurse v mape / podključe
+	)	
+		
+; Tooltips from AHK Docs		
+	ExpList_TT =	Dvakrat kliknite za urejanje
+	Ex_IfDir_TT =	
+	(LTrim	
+		Ustvarja kontekst občutljive bližnjic in hotstrings odvisno
+		na vrsto oknu, ki je aktiven ali obstaja.
+	)	
+	Ex_IfDirType_TT =	
+	(LTrim	
+		Ustvarja kontekst občutljive bližnjic in hotstrings odvisno
+		na vrsto oknu, ki je aktiven ali obstaja.
+	)	
+	Ex_SM_TT =	
+	(LTrim	
+		Naredi Pošlji sinonim SendInput ali SendPlay namesto
+		default (SendEvent). Prav tako Klikni in MouseMove / Kliknite / Drag
+		uporabljajte predpisano metodo.
+	)	
+	SM_TT =	
+	(LTrim	
+		Dogodek: To je začetek privzeta vse skripte uporabljajo.
+		Uporablja SendEvent metodo Pošlji, SendRaw, kliknite in MouseMove / Kliknite / Drag.
+		Vhod: Preklopi na metodi SendInput za lji, SendRaw, kliknite in MouseMove / Kliknite / Drag.
+		InputThenPlay: Enako kot zgoraj, le da namesto padla nazaj na način Event
+		ko SendInput ni na voljo, se preklopi v način (spodaj) Predvajaj. To povzroča tudi
+		Ukaz SendInput sam da se vrne na način igrati, ko SendInput ni na voljo.
+		Igrajo: Preklopi na metodi SendPlay za lji, SendRaw, kliknite in MouseMove / Kliknite / Drag.
+	)	
+	Ex_SI_TT =	
+	(LTrim	
+		Določa, ali je scenarij lahko ponovno teči, ko že teče.
+	)	
+	SI_TT =	
+	(LTrim	
+		Beseda FORCE preskoči pogovorno okno in nadomešča stari primerek samodejno
+		, ki je podoben učinek na ukaz Reload.
+		Beseda IGNORE preskoči pogovorno okno in pusti star primerek prikazovati.
+		Z drugimi besedami, se poskuša sprožiti že tekom scenarij ne upošteva.
+		Beseda OFF omogoča več primerkov scenarij teči hkrati.
+	)	
+	Ex_ST_TT =	
+	(LTrim	
+		Nastavi ujemanje obnašanje WinTitle parameter pri ukazih, kot WinWait.
+	)	
+	ST_TT =	
+	(LTrim	
+		1: Naslov Okno mora začeti z določeno WinTitle za tekmo.
+		2: Naslov Okno lahko vsebuje WinTitle kjerkoli v notranjosti, da je tekma.
+		3: Naslov Okno mora popolnoma ujemati WinTitle za tekmo.
+		Regex: Spremembe WinTitle, WinText, ExcludeTitle in ExcludeText biti regularne izraze.
+	)	
+	Ex_DH_TT =	
+	(LTrim	
+		Ugotovi, ali so nevidni okna "videli", ki ga scenarij.
+	)	
+	Ex_AF_TT =	
+	(LTrim	
+		Preskoči na nežen način aktiviranja okno
+		in gre naravnost do nasilne metode.
+	)	
+	Ex_HK_TT =	
+	(LTrim	
+		Prisili uporabo kavelj za izvajanje vseh
+		ali nekatere tipke bližnjice.
+	)	
+	Ex_SK_TT =	
+	(LTrim	
+		Nastavi zakasnitev, da se bo zgodilo po vsaki
+		pritisk na tipko poslala pošiljati ali ControlSend.
+	)	
+	Ex_MD_TT =	
+	(LTrim	
+		Nastavi zakasnitev, da se bo zgodilo po
+		vsako gibanje miške ali klik.
+	)	
+	Ex_SC_TT =	
+	(LTrim	
+		Nastavi zakasnitev, da se bo zgodilo po
+		vsak nadzorni spreminjanje ukaz.
+	)	
+	Ex_SW_TT =	
+	(LTrim	
+		Nastavi zakasnitev, da se bo zgodilo po
+		Okenski vsak ukaz, kot WinActivate.
+	)	
+	Ex_SB_TT =	
+	(LTrim	
+		Določa, kako hitro se bo pognal (pojavijo CPU).
+	)	
+	Ex_NT_TT =	
+	(LTrim	
+		Onemogoči prikazovanje ikono pladenj.
+	)	
+		
+	Ex_IN_TT =	
+	(LTrim	
+		Povzroča scenarij, da se obnašajo, kot da je določeno
+		Vsebina dokumenta, ki so prisotni na tem točno določenem položaju.
+	)	
+	Ex_PT_TT =	
+	(LTrim	
+		Drži scenarij stalno teče
+		(To je do uporabnik zapre ali ExitApp srečamo).
+	)	
+	Ex_MT_TT =	
+	(LTrim	
+		Določa največje število hkratnih
+		niti na hotkey ali hotstring.
+	)	
+	Ex_UV_TT =	Izvoz globalne spremenljivke.
+	Ex_EdVars_TT =	Izberite globalne spremenljivke, ki se izvaža.
+		
+; IE Commands Tips		
+	Tip_Navigate =	Krmari na URL ali pot.
+	Tip_Value =	Dobi ali določa vrednost predmeta.
+	Tip_Focus =	Nastavi fokus na objektu.
+	Tip_Click =	Simulira klik na objekt.
+	Tip_Submit =	Predloži obrazec.
+	Tip_GoHome =	Krmari na trenutno doma ali začetek strani.
+	Tip_GoBack =	Pomika nazaj en element v seznamu zgodovine.
+	Tip_GoForward =	Pomika naprej za eno točko s seznama zgodovine.
+	Tip_GoSearch =	Krmari na trenutno stran iskanje.
+	Tip_Refresh =	Polnitve trenutno prikazano stran.
+	Tip_Stop =	Prekliče čakajoče plovbo ali snemanja.
+	Tip_Quit =	Zapre stran.
+	Tip_LocationName =	Dobi pot ali naslov trenutne strani.
+	Tip_LocationURL =	Dobi URL trenutne strani.
+	Tip_InnerText =	Nastavi, ali dobi besedilo predmeta.
+	Tip_InnerHTML =	Nastavi ali pridobi HTML predmeta.
+	Tip_Href =	Določa ali pridobi ciljni URL ali sidro točko.
+	Tip_Src =	Določa ali pridobi URL, ki se naloži na cilj.
+	Tip_SelectedIndex =	Nastavi ali pridobi indeks izbrano možnost v izbrani predmet.
+	Tip_Checked =	Nastavi ali pridobi stanje potrditvenega polja ali izbirnega gumba.
+	Tip_Type =	Nastavi ali pridobi vrsto vsebine predmeta.
+	Tip_Width =	Komplet ali pridobi širino predmeta.
+	Tip_Height =	Komplet ali pridobi višino predmeta.
+	Tip_Length =	Nastavi ali pridobi število predmetov v zbirki.
+		
+return		
