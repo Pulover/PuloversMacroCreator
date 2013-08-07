@@ -822,7 +822,7 @@ Sort, WM_Msgs, D|
 
 DefaultBar := {FileOpt: "Enabled AutoSize", File: ["New=New:42", "Open=Open:43(Enabled Dropdown)", "Save=Save:60(Enabled Dropdown)"
 													, "", "Export=Export:16", "Preview=Preview:50", "Options=Options:44"]
-			, RecPlayOpt: "Enabled AutoSize ShowText Dropdown", RecPlay: ["Record=Record:55", "PlayStart=Play:47"]
+			, RecPlayOpt: "Enabled AutoSize", RecPlay: ["Record=Record:55", "PlayStart=Play:47"]
 			, CommandOpt: "Enabled AutoSize", Command: ["Mouse=Mouse:39", "Text=Text:71", "ControlCmd=Control:7"
 														, "", "Pause=Pause:46", "MsgBox=Message:11", "KeyWait=Key Wait:78"
 														, "", "Window=Window:81", "Image=ImageSearch:28", "Run=Run:59"
@@ -833,7 +833,7 @@ DefaultBar := {FileOpt: "Enabled AutoSize", File: ["New=New:42", "Open=Open:43(E
 			, SetOpt: "Enabled AutoSize", Settings: ["HideMainWin=Hide Main Window:15", "OnScCtrl=Display Controls:48"
 														, "", "OnFinish=On Finish:20", "SetWin=Context Sensitive Hotkeys:48"
 														, "", "Capt=Capture Keys:71", "CheckHkOn=Always Active:79"
-														, "", "SaveData=Win:81", "SetJoyButton=Joystick:33", "PauseKey=Pause:56"]
+														, "", "SaveData=Win:81", "SetJoyButton=Joystick:33"]
 			, EditOpt: "Enabled AutoSize", Edit: ["TabPlus=Add Macro:67", "TabClose=Close Macro:69", "DuplicateList=Duplicate Macro:70"
 														, "", "Import=Import Macro:29", "SaveCurrentList=Save Current Macro:68"
 														, "" , "MoveUp=Move Up:41", "MoveDn=Move Down:40"

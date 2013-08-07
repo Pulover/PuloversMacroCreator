@@ -120,7 +120,7 @@ IniRead, Lang, %IniFilePath%, Language, Lang
 IniRead, AutoKey, %IniFilePath%, HotKeys, AutoKey, F3|F4|F5|F6|F7
 IniRead, ManKey, %IniFilePath%, HotKeys, ManKey, |
 IniRead, AbortKey, %IniFilePath%, HotKeys, AbortKey, F8
-IniRead, PauseKey, %IniFilePath%, HotKeys, PauseKey, 0
+IniRead, PauseKey, %IniFilePath%, HotKeys, PauseKey, F12
 IniRead, RecKey, %IniFilePath%, HotKeys, RecKey, F9
 IniRead, RecNewKey, %IniFilePath%, HotKeys, RecNewKey, F10
 IniRead, RelKey, %IniFilePath%, HotKeys, RelKey, CapsLock
@@ -506,6 +506,7 @@ Gui, Add, Hotkey, hwndhAutoKey vAutoKey gSaveData, % o_AutoKey[1]
 Gui, Add, Edit, hwndhJoyKey vJoyKey Hidden
 Gui, Add, Hotkey, hwndhManKey vManKey gWaitKeys Limit190, % o_ManKey[1]
 Gui, Add, Hotkey, hwndhAbortKey vAbortKey, %AbortKey%
+Gui, Add, Hotkey, hwndhPauseKey vPauseKey, %PauseKey%
 
 Gui, Add, Text, -Wrap y+129 xm W100 H22 Section vRepeat, %w_Lang015%:
 Gui, Add, Edit, ys-3 x+5 W90 R1 vRept Number
@@ -656,20 +657,21 @@ return
 ;##### Toolbars #####
 
 DefineToolbars:
-	TB_Define(TbFile, hTbFile, hIL_Icons, DefaultBar.File)
+	TB_Define(TbFile, hTbFile, hIL_Icons, DefaultBar.File, DefaultBar.FileOpt)
 ,	TB_Define(TbRecPlay, hTbRecPlay, hIL_Icons, DefaultBar.RecPlay, DefaultBar.RecPlayOpt, 1)
-,	TB_Define(TbCommand, hTbCommand, hIL_Icons, DefaultBar.Command, DefaultBar.CommandOpt)
 ,	TB_Define(TbSet, hTbSet, hIL_Icons, DefaultBar.Settings, DefaultBar.SetOpt)
+,	TB_Define(TbCommand, hTbCommand, hIL_Icons, DefaultBar.Command, DefaultBar.CommandOpt)
 ,	TB_Define(TbEdit, hTbEdit, hIL_Icons, DefaultBar.Edit, DefaultBar.EditOpt)
 ,	RbMain := New Rebar(hRbMain)
-,	TB_Rebar(RbMain, 10, TbFile), TB_Rebar(RbMain, 11, TbRecPlay)
-,	RbMain.InsertBand(hAutoKey, 0, "", 12, w_Lang006, 100, 0, "", "", 50)
-,	RbMain.InsertBand(hManKey, 0, "", 13, w_Lang007, 50, 0, "", "", 50)
-,	RbMain.InsertBand(hAbortKey, 0, "", 14, w_Lang008, 60, 0, "", "", 50)
-,	RbMain.InsertBand(hTimesCh, 0, "FixedSize NoGripper", 15, w_Lang011 " (" t_Lang004 ")", 75, 0, "", "", 75)
-,	TB_Rebar(RbMain, 20, TbCommand, "Break"), TB_Rebar(RbMain, 30, TbSet)
-,	TB_Rebar(RbMain, 40, TbEdit, "Break"), RbMain.SetMaxRows(3)
-TBHwndAll := [TbFile, TbRecPlay, TbCommand, TbSet, TbEdit]
+,	TB_Rebar(RbMain, 10, TbFile), TB_Rebar(RbMain, 11, TbRecPlay), TB_Rebar(RbMain, 12, TbSet)
+,	RbMain.InsertBand(hAutoKey, 0, "", 13, w_Lang006, 50, 0, "", "", 50)
+,	RbMain.InsertBand(hTimesCh, 0, "FixedSize NoGripper", 14, w_Lang011 " (" t_Lang004 ")", 75, 0, "", "", 75)
+,	TB_Rebar(RbMain, 15, TbCommand, "Break")
+,	RbMain.InsertBand(hManKey, 0, "", 16, w_Lang007, 50, 0, "", "", 50)
+,	RbMain.InsertBand(hAbortKey, 0, "", 17, w_Lang008, 60, 0, "", "", 50)
+,	RbMain.InsertBand(hPauseKey, 0, "", 18, c_Lang003, 60, 0, "", "", 50)
+,	TB_Rebar(RbMain, 19, TbEdit, "Break")
+,	RbMain.SetMaxRows(3), TBHwndAll := [TbFile, TbRecPlay, TbCommand, TbSet, TbEdit]
 return
 
 TbFile:
@@ -718,7 +720,7 @@ return
 
 BuildMacroWin:
 Gui, chMacro:+LastFound
-Gui, chMacro:+hwndhMacroCh -Caption +0x40000000 -0x80000000
+Gui, chMacro:+hwndhMacroCh -Caption +Parent1
 Gui, chMacro:Add, Tab2, Section Buttons 0x0008 -Wrap AltSubmit H22 hwndTabSel vA_List gTabSel, Macro1
 Gui, chMacro:Add, ListView, AltSubmit Checked x+0 y+0 hwndListID1 vInputList1 gInputList NoSort LV0x10000, %w_Lang030%|%w_Lang031%|%w_Lang032%|%w_Lang033%|%w_Lang034%|%w_Lang035%|%w_Lang036%|%w_Lang037%|%w_Lang038%|%w_Lang039%
 Gui, chMacro:Default
@@ -731,7 +733,7 @@ return
 
 BuildMixedControls:
 Gui, chTimes:+LastFound
-Gui, chTimes:+hwndhTimesCh -Caption +0x40000000 -0x80000000
+Gui, chTimes:+hwndhTimesCh -Caption +Parent1
 Gui, chTimes:Add, Edit, x0 y0 W75 H25 Number vReptC
 Gui, chTimes:Add, UpDown, vTimesG 0x80 Range0-999999999, 1
 return
@@ -779,7 +781,7 @@ return
 
 BuildPrevWin:
 Gui, 2:+LastFound
-Gui, 2:+hwndPrevID -Resize -Caption +0x40000000 -0x80000000
+Gui, 2:+hwndPrevID -Resize -Caption +Parent1
 Gui, 2:Add, Button, -Wrap Section W60 H25 hwndhPrevClose gPrevDock, %c_Lang022%
 Gui, 2:Add, Custom, ClassToolbarWindow32 hwndhTbPrev gTbPrev 0x0800 0x0100 0x0040 0x0008
 Gui, 2:Add, Custom, ClassReBarWindow32 hwndhRbPrev gRB_Notify -Theme 0x0800 0x0400 0x0040 0x8000
@@ -7269,9 +7271,9 @@ Tooltip
 return
 
 GuiContextMenu:
-If A_GuiControl <> cRbMacro
-	return
-Menu, EditMenu, Show, %A_GuiX%, %A_GuiY%
+MouseGetPos,,,, cHwnd, 2
+If (cHwnd = ListID%A_List%)
+	Menu, EditMenu, Show, %A_GuiX%, %A_GuiY%
 return
 
 CopyTo:
@@ -9772,7 +9774,7 @@ LoadSettings:
 If !KeepDefKeys
 	AutoKey := "F3|F4|F5|F6|F7", ManKey := ""
 AbortKey := "F8"
-,	PauseKey := 0
+,	PauseKey := "F12"
 ,	RecKey := "F9"
 ,	RecNewKey := "F10"
 ,	RelKey := "CapsLock"
@@ -9882,7 +9884,7 @@ GuiControl, 1:, CoordTip, CoordMode: %CoordMouse%
 GuiControl, 1:, ContextTip, #IfWin: %IfDirectContext%
 GuiControl, 1:, AbortKey, %AbortKey%
 GuiControl, 1:, Win1, 0
-GuiControl, 1:, PauseKey, 0
+; GuiControl, 1:, PauseKey, 0
 GuiControl, 1:, DelayG, 0
 GuiControl, 1:, KeepHkOn, 0
 GuiControl, 1:, HideMainWin, 1
