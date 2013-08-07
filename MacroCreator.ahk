@@ -6,7 +6,7 @@
 ; rodolfoub@gmail.com
 ; Home: http://www.autohotkey.net/~Pulover
 ; Forum: http://www.autohotkey.com/board/topic/79763-macro-creator
-; Version: 3.8.2
+; Version: 3.8.3
 ; Release Date: August, 2013
 ; AutoHotkey Version: 1.1.11.02
 ; Copyright © 2012-2013 Rodolfo U. Batista
@@ -62,7 +62,7 @@ Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jör
 ; Compiler Settings
 ;@Ahk2Exe-SetName Pulover's Macro Creator
 ;@Ahk2Exe-SetDescription Pulover's Macro Creator
-;@Ahk2Exe-SetVersion 3.8.2
+;@Ahk2Exe-SetVersion 3.8.3
 ;@Ahk2Exe-SetCopyright Copyright © 2012-2013 Rodolfo U. Batista
 ;@Ahk2Exe-SetOrigFilename MacroCreator.exe
 
@@ -89,7 +89,7 @@ DefaultIcon := (A_IsCompiled) ? A_ScriptFullPath
 			:  (FileExist(A_ScriptDir "\Resources\PMC3_Mult.ico") ? A_ScriptDir "\Resources\PMC3_Mult.ico" : A_AhkPath)
 Menu, Tray, Icon, %DefaultIcon%, 1, 1
 
-CurrentVersion := "3.8.2", ReleaseDate := "August, 2013"
+CurrentVersion := "3.8.3", ReleaseDate := "August, 2013"
 
 If ((A_IsCompiled) && !InStr(FileExist(A_AppData "\MacroCreator"), "D"))
 	FileCreateDir, %A_AppData%\MacroCreator
@@ -2350,7 +2350,7 @@ If vFound
 	{
 		MsgBox, 68, %d_Lang060%, %d_Lang060%: %VerChk%`n%d_Lang061%
 		IfMsgBox, Yes
-			Run, http://www.autohotkey.net/~Pulover/MacroCreator/MacroCreator-setup.exe
+			Run, http://www.autohotkey.net/~Pulover/
 	}
 	Else If (A_ThisLabel = "CheckNow")
 		MsgBox, 64, %AppName%, %d_Lang062%
