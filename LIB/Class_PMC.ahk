@@ -90,8 +90,8 @@
 		{
 			Loop, % Col.MaxIndex()
 				Col[A_Index] := RegExReplace(Col[A_Index], "¢", "|")
-			chk := SubStr(Col[1], 1, 1)
-			LV_Add("Check" chk, Col*)
+			chk := SubStr(Col[1], 1, 1), Col[6] := RegExReplace(Col[6], "\s", "_")
+		,	LV_Add("Check" chk, Col*)
 		}
 		GuiControl, chMacro:+Redraw, %List%
 		Critical, Off
