@@ -1804,10 +1804,11 @@ Loop, % LV_GetCount()
 	If (Ex_IN)
 		IncList .= IncludeFiles(Ex_Macro, ListCount%Ex_Macro%)
 }
-AutoKey := RTrim(AutoKey, "`n")
-,	AbortKey := (Ex_AbortKey = 1) ? AbortKey : ""
+o_ExAutoKey := [], AbortKey := (Ex_AbortKey = 1) ? AbortKey : ""
 ,	PauseKey := (Ex_PauseKey = 1) ? PauseKey : ""
-If CheckDuplicates(AbortKey, PauseKey, AutoKey)
+Loop, Parse, AutoKey, `n
+	o_ExAutoKey[A_Index] := A_LoopField
+If CheckDuplicates(AbortKey, PauseKey, o_ExAutoKey*)
 {
 	Body := "", AllScripts := "", PmcCode := ""
 	MsgBox, 16, %d_Lang007%, %d_Lang032%
