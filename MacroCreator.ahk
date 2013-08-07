@@ -243,7 +243,8 @@ GoSub, WriteSettings
 
 CurrentLang := Lang
 
-Lang_Ca := "Català`t(Catalan)"
+,	Lang_Id := "Bahasa Indonesia`t(Indonesian)"
+,	Lang_Ca := "Català`t(Catalan)"
 ,	Lang_Da := "Dansk`t(Danish﻿)"
 ,	Lang_De := "Deutsch`t(German)"
 ,	Lang_En := "English"
@@ -256,6 +257,8 @@ Lang_Ca := "Català`t(Catalan)"
 ,	Lang_No := "Norsk`t(Norwegian)"
 ,	Lang_Pl := "Polski`t(Polish)"
 ,	Lang_Pt := "Português`t(Portuguese)"
+,	Lang_Sl := "Slovenski`t(Slovenian)"
+,	Lang_Sk := "Slovenčina`t(Slovak)"
 ,	Lang_Fi := "Suomi`t(Finnish)"
 ,	Lang_Sv := "Svenska`t(Swedish)"
 ,	Lang_Tr := "Türkçe`t(Turkish)"
@@ -271,19 +274,22 @@ Lang_Ca := "Català`t(Catalan)"
 ,	Lang_Ko := "한국어`t(Korean)"
 ,	Lang_All :=
 (Join|
-"Català`t(Catalan)=Ca
+"Bahasa Indonesia`t(Indonesian)=Id
+Català`t(Catalan)=Ca
 Dansk`t(Danish﻿)=Da
 Deutsch`t(German)=De
 English=En
 Español`t(Spanish)=Es
 Français`t(French)=Fr
-Hrvatski`t(Croatian)=Hr
+Hrvatski`t(Croatian)=Id
 Italiano`t(Italian)=It
 Magyar`t(Hungarian)=Hu
 Nederlands`t(Dutch)=Nl
 Norsk`t(Norwegian)=No
 Polski`t(Polish)=Pl
 Português`t(Portuguese)=Pt
+Slovenski`t(Slovenian)=Sl
+Slovenčina`t(Slovak)=Sk
 Suomi`t(Finnish)=Fi
 Svenska`t(Swedish)=Sv
 Türkçe`t(Turkish)=Tr
@@ -10756,6 +10762,9 @@ return
 #Include *i Lang\Tr.lang
 #Include *i Lang\Cs.lang
 #Include *i Lang\El.lang
+#Include *i Lang\Id.lang
+#Include *i Lang\Sk.lang
+#Include *i Lang\Sl.lang
 #Include *i Lang\Ru.lang
 #Include *i Lang\Bg.lang
 #Include *i Lang\Sr.lang

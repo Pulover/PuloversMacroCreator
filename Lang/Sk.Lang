@@ -1,0 +1,878 @@
+﻿LoadLang_Sk:
+		
+		; Slovak
+		
+; Main Menu		
+	m_Lang001 =	&Súbor
+	m_Lang002 =	&Vložiť
+	m_Lang003 =	V&ybrať
+	m_Lang004 =	&Upraviť
+	m_Lang005 =	&Makro
+	m_Lang006 =	V&oľby
+	m_Lang007 =	&Jazyk
+	m_Lang008 =	&Darovať
+	m_Lang009 =	&Pomoc
+		
+; File Submenu		
+	f_Lang001 =	&Nový
+	f_Lang002 =	&Otvorené
+	f_Lang003 =	&Uložiť
+	f_Lang004 =	U&ložiť ako
+	f_Lang005 =	&Dovoz Makro
+	f_Lang006 =	Ulo&žiť aktuálne makro
+	f_Lang007 =	No&vé súbory
+	f_Lang008 =	&Export do AHK
+	f_Lang009 =	N&áhľad Script
+	f_Lang010 =	&Zoznam premenných
+	f_Lang011 =	V&ýstup
+	f_Lang012 =	&Žiadne súbory
+		
+; Insert Sub Menu		
+	i_Lang001 =	&Myš
+	i_Lang002 =	&Text
+	i_Lang003 =	&Ovládanie
+	i_Lang004 =	&Pauza / Správa / Key Wait
+	i_Lang005 =	O&kno
+	i_Lang006 =	O&brázok / Pixel Vyhľadávanie
+	i_Lang007 =	&Spustiť / Súbor / String / Misc.
+	i_Lang008 =	&Loop / Goto / Label
+	i_Lang009 =	Pok&iaľ závierka / ukazovatele / funkcia
+	i_Lang010 =	I&nternet Explorer / COM rozhranie
+	i_Lang011 =	&Windows Správy
+	i_Lang012 =	&Špeciálne klávesy
+		
+; Select Sub Menu		
+	s_Lang001 =	&Vybrať všetko
+	s_Lang002 =	&Zvoľte None
+	s_Lang003 =	&Obrátiť výber
+	s_Lang004 =	&Skontrolujte výber
+	s_Lang005 =	Z&rušte výber
+	s_Lang006 =	&Kontroly Invertovať
+	s_Lang007 =	Zvo&lený typ
+	s_Lang008 =	&Príkazy
+		
+; Edit Sub Menu		
+	e_Lang001 =	&Duplikát
+	e_Lang002 =	&Upraviť komentár
+	e_Lang003 =	&Nájsť / Nahradiť
+	e_Lang004 =	&Kopírovať do...
+	e_Lang005 =	&Zrušiť
+	e_Lang006 =	&Prerobiť
+	e_Lang007 =	Zn&ížiť
+	e_Lang008 =	K&opírovať
+	e_Lang009 =	P&asta
+	e_Lang010 =	&Vymazať
+	e_Lang011 =	P&resunúť nahor
+	e_Lang012 =	Do&le
+	e_Lang013 =	Vlo&žiť z Box
+	e_Lang014 =	&Edit Color Mark
+		
+; Macro Sub Menu		
+	r_lang001 =	&Záznam makra
+	r_lang002 =	&Aktivácia makrá
+	r_lang003 =	&Prehrať aktuálne makro
+	r_lang004 =	&Časový spínač
+	r_lang005 =	P&ridať makro
+	r_lang006 =	Za&vrieť Makro
+	r_lang007 =	&Kontextová Klávesové skratky
+	r_lang008 =	Z&obraziť / Skryť ovládací
+	r_lang009 =	Pr&ehrávanie z vybraného riadku
+	r_lang010 =	&Hrať, kým vybraný riadok
+	r_lang011 =	Prehra&ť vybrané riadky
+		
+; Options Sub Menu		
+	o_Lang001 =	&Nastavenie
+	o_Lang002 =	N&astaviť ako predvolený klávesové skratky
+	o_Lang003 =	Na&staviť ako predvolený súborový
+	o_Lang004 =	&Odstrániť predvolený súbor
+	o_Lang005 =	O&bnoviť stĺpce veľkosť
+	o_Lang006 =	&Predvolené Klávesové skratky
+	o_Lang007 =	P&redvolené nastavenie
+		
+; Donate Sub Menu		
+	p_Lang001 =	&PayPal Dar
+		
+; Help Sub Menu		
+	h_Lang001 =	&Makro Creator Home
+	h_Lang002 =	&AHK online dokumentácia
+	h_Lang003 =	&Skontrolovať aktualizácie...
+	h_Lang004 =	&Pozrite sa na start-up
+	h_Lang005 =	&O
+	h_Lang006 =	&Tipy
+	h_Lang007 =	&Forum
+		
+; Tray Menu		
+	y_Lang001 =	Hide Window
+	y_Lang002 =	Zobraziť okno
+	y_Lang003 =	Zobraziť / Skryť ovládací
+		
+; Main Window		
+	w_Lang001 =	Export
+	w_Lang002 =	Náhľad
+	w_Lang003 =	Voľby
+	w_Lang004 =	Záznam
+	w_Lang005 =	Hrať
+	w_Lang006 =	Auto.
+	w_Lang007 =	Man.
+	w_Lang008 =	Stop
+	w_Lang009 =	&Zobraziť ovládacie prvky
+	w_Lang010 =	P&auza
+	w_Lang011 =	S&lučka
+	w_Lang012 =	Za&chyťte kľúče
+	w_Lang013 =	&Hide Window
+	w_Lang014 =	V&ždy aktívny
+	w_Lang015 =	Opakovať
+	w_Lang016 =	Delay (ms):
+	w_Lang017 =	Platiť
+	w_Lang018 =	Vložiť
+	w_Lang019 =	Upraviť
+	w_Lang020 =	(Nepoužitý)
+	w_Lang021 =	Nerobiť nič
+	w_Lang022 =	Zavrieť aplikácie
+	w_Lang023 =	Shutdown
+	w_Lang024 =	Shutdown (sila)
+	w_Lang025 =	Reštartujte
+	w_Lang026 =	Odhlásiť
+	w_Lang027 =	Prezimovať
+	w_Lang028 =	Pozastaviť
+	w_Lang029 =	Uzamknutie počítača
+	w_Lang030 =	Index
+	w_Lang031 =	Akcie
+	w_Lang032 =	Podrobnosti
+	w_Lang033 =	Opakovať
+	w_Lang034 =	Oneskorenie
+	w_Lang035 =	Typ
+	w_Lang036 =	Ovládanie
+	w_Lang037 =	Okno
+	w_Lang038 =	Komentár
+	w_Lang039 =	Farba
+		
+; Command Windows		
+	c_Lang001 =	Myš
+	c_Lang002 =	Text
+	c_Lang003 =	Pauza
+	c_Lang004 =	Ovládanie
+	c_Lang005 =	Okno
+	c_Lang006 =	Image Search
+	c_Lang007 =	Pixel Vyhľadávanie
+	c_Lang008 =	Spustiť / Súbor / String / Misc.
+	c_Lang009 =	Ak vyhlásenie
+	c_Lang010 =	Premenné
+	c_Lang011 =	Funkcie
+	c_Lang012 =	Internet Explorer
+	c_Lang013 =	COM rozhranie
+	c_Lang014 =	Výber aplikácie (pokročilé)
+	c_Lang015 =	Správa
+	c_Lang016 =	Ovládanie
+	c_Lang017 =	Oneskorenie
+	c_Lang018 =	Milisekúnd
+	c_Lang019 =	Sekundy
+	c_Lang020 =	OK
+	c_Lang021 =	Zrušiť
+	c_Lang022 =	Zavrieť
+	c_Lang023 =	Kopírovať
+	c_Lang024 =	Vymazať
+	c_Lang025 =	(Použite `% pre premenné, napríklad: `%Clipboard`%)
+	c_Lang026 =	Akcie
+	c_Lang027 =	Kliknite na tlačidlo
+	c_Lang028 =	Pohyb
+	c_Lang029 =	Presunúť & Click
+	c_Lang030 =	Kolesá Hore
+	c_Lang031 =	Kolesá dole
+	c_Lang032 =	Drag & Drop
+	c_Lang033 =	Súradnice
+	c_Lang034 =	Kliknite na tlačidlo
+	c_Lang035 =	Odoslať
+	c_Lang036 =	Relatívna
+	c_Lang037 =	Tlačidlo
+	c_Lang038 =	Ľavý
+	c_Lang039 =	Právo
+	c_Lang040 =	Stredná
+	c_Lang041 =	X1
+	c_Lang042 =	X2
+	c_Lang043 =	ZET / uvoľniť
+	c_Lang044 =	Kliknite Count
+	c_Lang045 =	Obyčajný text (Raw)
+	c_Lang046 =	Text s príkazmi
+	c_Lang047 =	Vložiť zo schránky
+	c_Lang048 =	Vložiť na kontrolu
+	c_Lang049 =	Nastaviť text
+	c_Lang050 =	Pridať oneskorenie
+	c_Lang051 =	Message Box
+	c_Lang052 =	Počkajte kľúč
+	c_Lang053 =	Počkajte Timeout
+	c_Lang054 =	(Milisekúnd) 0 = nekonečno
+	c_Lang055 =	Príkaz
+	c_Lang056 =	Hodnota
+	c_Lang057 =	Výstupné premenné
+	c_Lang058 =	Pozícia
+	c_Lang059 =	Veľkosť
+	c_Lang060 =	4 premenné budú vytvorené s touto predponou končiac X, Y, W, H.
+	c_Lang061 =	Začiatok
+	c_Lang062 =	Koniec
+	c_Lang063 =	Obraz
+	c_Lang064 =	Pixel
+	c_Lang065 =	Vytvoriť snímku
+	c_Lang066 =	Počkajte Key
+	c_Lang067 =	Ak nájdených
+	c_Lang068 =	Ak nie je nájdený / Chyba
+	c_Lang069 =	* Súradnice uložené na `%FoundX`% / `%FoundY`%.
+	c_Lang070 =	Coord
+	c_Lang071 =	Variácie
+	c_Lang072 =	Náhľad
+	c_Lang073 =	Slučka
+	c_Lang074 =	* Nefunguje v ručnom režime prehrávania.
+	c_Lang075 =	Prestávka
+	c_Lang076 =	Pokračovať
+	c_Lang077 =	Choď
+	c_Lang078 =	Prejsť na štítku
+	c_Lang079 =	Štítok
+	c_Lang080 =	Pridať štítok
+	c_Lang081 =	String (InputVar), hodnota
+	c_Lang082 =	Var [Prevádzkovateľ] Hodnota
+	c_Lang083 =	Pridať Else
+	c_Lang084 =	Priradenie premennej
+	c_Lang085 =	Obsah
+	c_Lang086 =	Operátor
+	c_Lang087 =	Použiť metódu eval () riešiť výrazy
+	c_Lang088 =	Obnoviť
+	c_Lang089 =	Funkcia Meno
+	c_Lang090 =	Hodnôt oddelených čiarkami (bez zátvoriek).
+	c_Lang091 =	(Použite `% libier za premenné. Doslovné Čiarky musia byť sprevádzané [```,])
+	c_Lang092 =	Page Element / Index
+	c_Lang093 =	Sada
+	c_Lang094 =	Dostať
+	c_Lang095 =	Metóda
+	c_Lang096 =	Vlastníctvo
+	c_Lang097 =	Počkajte Stránka sa načítava.
+	c_Lang098 =	CLSID
+	c_Lang099 =	Pripojiť
+	c_Lang100 =	Rukoväť
+	c_Lang101 =	KOM Script
+	c_Lang102 =	Číslo správy
+	c_Lang103 =	Špeciálne klávesy
+	c_Lang104 =	Prehliadač Späť
+	c_Lang105 =	Prehliadač vpred
+	c_Lang106 =	Prehliadač Obnoviť
+	c_Lang107 =	Prehliadač stop
+	c_Lang108 =	Browser Search
+	c_Lang109 =	Prehliadač Obľúbené
+	c_Lang110 =	Prehliadač Home
+	c_Lang111 =	Media
+	c_Lang112 =	Vypnutie
+	c_Lang113 =	Volume Up
+	c_Lang114 =	Volume Down
+	c_Lang115 =	Play / Pause
+	c_Lang116 =	Ďalšia stopa
+	c_Lang117 =	Predchádzajúca skladba
+	c_Lang118 =	Stop
+	c_Lang119 =	E-mail
+	c_Lang120 =	App 1
+	c_Lang121 =	App 2
+	c_Lang122 =	Scancode
+	c_Lang123 =	Pridať
+	c_Lang124 =	Key História
+	c_Lang125 =	Zadajte scancode...
+	c_Lang126 =	Kód pridaný do virtuálnych tlačidiel List!
+	c_Lang127 =	Zadajte názov premennej
+	c_Lang128 =	Použitie funkcie z externého súboru
+	c_Lang130 =	Prestávka slučku Ak sa nájde
+	c_Lang131 =	Platiť
+	c_Lang132 =	Slučka
+	c_Lang133 =	Súbor
+	c_Lang134 =	Analyzovať
+	c_Lang135 =	Čítať
+	c_Lang136 =	Protokol
+	c_Lang137 =	Súbor Pattern:
+	c_Lang138 =	Zložky?
+	c_Lang139 =	Recurse?
+	c_Lang140 =	Vstupné premenné:
+	c_Lang141 =	Oddeľovače:
+	c_Lang142 =	Vynechajte znaky:
+	c_Lang143 =	Vstupný súbor:
+	c_Lang144 =	Legenda:
+	c_Lang145 =	Root Key:
+	c_Lang146 =	Podkľúča?
+	c_Lang147 =	Ikona
+	c_Lang148 =	Žiadna ikona
+	c_Lang149 =	Chyba
+	c_Lang150 =	Otázka
+	c_Lang151 =	Výkrik
+	c_Lang152 =	Info
+	c_Lang153 =	Vždy navrchu
+	c_Lang154 =	Zápis
+	c_Lang155 =	Spustiť skripty
+	c_Lang156 =	Skript
+	c_Lang157 =	Script Language
+	c_Lang158 =	Nie je kompatibilný s 64-bit!
+	c_Lang159 =	Možnosti vyhľadávania
+	c_Lang160 =	Priehľadný
+	c_Lang161 =	Stupnica
+	c_Lang162 =	Pridať "if"
+		
+; Other Windows		
+	t_Lang001 =	Export do AHK
+	t_Lang002 =	Makrá
+	t_Lang003 =	Slučky
+	t_Lang004 =	0 = nekonečno
+	t_Lang005 =	Použitie Hotstring
+	t_Lang006 =	Block myš
+	t_Lang007 =	Všetko
+	t_Lang008 =	Nikto
+	t_Lang009 =	Kontextová Klávesové skratky
+	t_Lang010 =	Export do
+	t_Lang011 =	Odsadenie
+	t_Lang012 =	Zahrnúť PMC kód
+	t_Lang013 =	Nepoužívajte zřetězit posielať príkazy
+	t_Lang014 =	Osviežiť
+	t_Lang015 =	Auto-Refresh
+	t_Lang016 =	Always On Top
+	t_Lang017 =	Nastavenie
+	t_Lang018 =	Všeobecný
+	t_Lang019 =	Start / Stop záznamu
+	t_Lang020 =	Záznam nového makra
+	t_Lang021 =	Klávesové skratky
+	t_Lang022 =	Záznam
+	t_Lang023 =	Spúšť fotoaparátu stavu (dole / hore)
+	t_Lang024 =	Kliknutí myšou
+	t_Lang025 =	Koliesko myši
+	t_Lang026 =	Pohybom myši
+	t_Lang027 =	Časových intervaloch
+	t_Lang028 =	Minimálne oneskorenie
+	t_Lang029 =	Okenné Triedy
+	t_Lang030 =	Okenné tituly
+	t_Lang031 =	Záznam ControlSend
+	t_Lang032 =	Záznam ControlClick
+	t_Lang033 =	Relatívna Record Key
+	t_Lang034 =	Toggle
+	t_Lang035 =	Prehrávanie
+	t_Lang036 =	Zrýchliť
+	t_Lang037 =	Spomaliť
+	t_Lang038 =	Späť myš po prehrávanie
+	t_Lang039 =	Myš Súradnice
+	t_Lang040 =	Okno
+	t_Lang041 =	Obrazovka
+	t_Lang042 =	Predvolené myš oneskorenie
+	t_Lang043 =	Predvolené okno Delay
+	t_Lang044 =	Max História na makro
+	t_Lang045 =	Vymazať históriu
+	t_Lang046 =	Obrázky
+	t_Lang047 =	Nakreslite tlačidlo
+	t_Lang048 =	Šírka čiary (Px)
+	t_Lang049 =	Zachyťte po prepustení
+	t_Lang050 =	Stlačte Enter pre zachytenie
+	t_Lang051 =	Obrázky Directory
+	t_Lang052 =	Misc.
+	t_Lang053 =	Klávesové skratky
+	t_Lang054 =	Nastaviť ako predvolený klávesové skratky
+	t_Lang055 =	Zakázať okien Klávesové skratky
+	t_Lang056 =	Obnoviť stĺpce veľkosť
+	t_Lang057 =	Predvolený súbor makrá
+	t_Lang058 =	Štandardné súboru knižnice
+	t_Lang059 =	Použiť metódu eval () v predvolenom nastavení pre priradenie premenných
+	t_Lang060 =	Zobraziť Farby & Pomoc známok pre slučky a výkazy
+	t_Lang061 =	(Kliknite na index hlavičku stĺpca pre zapnutie / vypnutie)
+	t_Lang062 =	Virtuálne Keys
+	t_Lang063 =	Štandardné
+	t_Lang064 =	Upraviť komentár
+	t_Lang065 =	Komentár
+	t_Lang066 =	Hľadať stĺpec
+	t_Lang067 =	Nájsť / Nahradiť
+	t_Lang068 =	Nájsť
+	t_Lang069 =	Match Case
+	t_Lang070 =	Nahradiť
+	t_Lang071 =	Našiel
+	t_Lang072 =	Nahradil
+	t_Lang073 =	Vybrané riadky
+	t_Lang074 =	Všetky riadky
+	t_Lang075 =	Všetky Makrá
+	t_Lang076 =	O
+	t_Lang077 =	Regulárny výraz
+	t_Lang078 =	Prehrať jedenkrát
+	t_Lang079 =	Prehrať každých X (mili) sekúnd
+	t_Lang080 =	Časový spínač
+	t_Lang081 =	Pauza
+	t_Lang082 =	Vyhlásenie
+	t_Lang083 =	Zobraziť odsadenie pre slučky a výkazy
+	t_Lang084 =	(Dvakrát kliknite na hlavičku stĺpca akcie povoliť / zakázať)
+	t_Lang085 =	Displej Ovládací panel pri spustení
+	t_Lang086 =	Vyhľadávanie funkcií. Čakajte prosím...
+	t_Lang087 =	Zahrnúť externé súbory
+	t_Lang088 =	Vytvorte súbor EXE
+	t_Lang089 =	Povoliť viac inštancií
+	t_Lang090 =	Predvolené
+	t_Lang091 =	Povoliť preťahovanie riadky
+	t_Lang092 =	Celý obsah bunky
+	t_Lang093 =	Štandardné INI formát
+	t_Lang094 =	Názov = hodnota
+	t_Lang095 =	Zadajte 1 premennú na riadok. Môžete tiež pridať [sekcie].
+	t_Lang096 =	Užívateľ Globálne premenné
+	t_Lang097 =	Stlačte tlačidlo na joysticku
+	t_Lang098 =	Joystick
+	t_Lang099 =	Tlačidlo
+	t_Lang100 =	Zobraziť informácie
+	t_Lang101 =	Rýchlosť
+	t_Lang102 =	Pomaly
+	t_Lang103 =	Rýchlo
+	t_Lang104 =	Zobraziť / skryť Title Bar
+	t_Lang105 =	Zobraziť / skryť hlavné okno
+	t_Lang106 =	Spustite ihneď
+	t_Lang107 =	Náhodné Oneskorenie
+	t_Lang108 =	Normálny
+	t_Lang109 =	Dole
+	t_Lang110 =	Hore
+	t_Lang111 =	Vložte úhoz
+		
+; Messages & Dialogs		
+	d_Lang001 =	Otvorené
+	d_Lang002 =	Prajete si uložiť aktuálne makro?
+	d_Lang003 =	Predvolené nastavenie
+	d_Lang004 =	Makro Creator súbory
+	d_Lang005 =	Uložiť makro
+	d_Lang006 =	Nepodarilo sa uložiť / prepísať súbor
+	d_Lang007 =	Chyba
+	d_Lang008 =	Chyba: Nie Makro`nSkontrolujte aspoň jeden makro v zozname.
+	d_Lang009 =	Chyba: No Hotkey vybrané.
+	d_Lang010 =	Chyba: Neplatná adresa`nČím vybranú adresu alebo názov súboru je neplatný.
+	d_Lang011 =	Upozornenie
+	d_Lang012 =	No zvolená regulácia.`nPokračovať?
+	d_Lang013 =	Export Script
+	d_Lang014 =	Script exportovaný
+	d_Lang015 =	Súbor bol úspešne exportovaný!
+	d_Lang016 =	Kliknite na tlačidlo "" na označenie polohy.
+	d_Lang017 =	
+	(LTrim	
+		- Vyberte okno.
+		- Prejdite na požadovanú pozíciu.
+		- Stlačte pravé tlačidlo.
+	)	
+	d_Lang018 =	Farba obrazového bodu
+	d_Lang019 =	Vymazať zoznam
+	d_Lang020 =	Uistite sa, že odstrániť všetky položky?
+	d_Lang021 =	Ďalšie
+	d_Lang022 =	Predchádzajúci
+	d_Lang023 =	Správa
+	d_Lang024 =	Načítať predvolené nastavenia?
+	d_Lang025 =	Makro (y) aktivovaný.`nPoužite klávesové skratky hrať.
+	d_Lang026 =	štart / stop nahrávania
+	d_Lang027 =	Nahrávanie sa zastaví,
+	d_Lang028 =	Nahrávanie...
+	d_Lang029 =	zastaviť
+	d_Lang030 =	začať nový rekord
+	d_Lang031 =	nie je platný názov funkcie.
+	d_Lang032 =	Chyba: Duplicitné klávesové skratky.
+	d_Lang033 =	Aktivácia makrá
+	d_Lang034 =	
+	(LTrim	
+		- Kliknite a ťahajte %DrawButton% vyberte oblasť.
+		- Kliknite a uvoľnite bez ťahaním vyberte kontrolnú oblasť.
+		- Kliknutím na mieste bez ovládači vyberte oblasť okna.
+	)	
+	d_Lang035 =	Pokračovať?
+	d_Lang036 =	Obrázok / Pixel Nájdené v
+	d_Lang037 =	Obrázok / Pixel nebol nájdený.
+	d_Lang038 =	Stlačte OK pre pokračovanie.
+	d_Lang039 =	Časový limit!
+	d_Lang040 =	
+	(LTrim	
+		Táto funkcia vyžaduje rozhrania GDI + knižnice.
+		Kliknite na tlačidlo OK prejdite na stránku pre stiahnutie.
+	)	
+	d_Lang041 =	Názov premennej obsahuje nepovolený znak.
+	d_Lang042 =	
+	(LTrim	
+		Neplatný operátor.
+		Tieto operátory sú prijímané:
+		=, ==, <>,! =,>, <,> =, <=
+		
+		Príklady:
+		MyVar > 1
+		MyVar = `%A_DDDD`%
+		Schránka == `%MyVar`%
+	)	
+	d_Lang043 =	Alebo použite paneli Ovládacie prvky.
+	d_Lang044 =	
+	(LTrim	
+		Táto funkcia vyžaduje funkcia eval ().
+		Kliknite na tlačidlo OK prejdite na stránku pre stiahnutie.
+	)	
+	d_Lang045 =	Prosím vyberte okno prehliadača Internet Explorer!
+	d_Lang046 =	Pripojenie úspešné!
+	d_Lang047 =	Pripojenie zlyhalo!
+	d_Lang048 =	Vložte rukoväť a CLSID.
+	d_Lang049 =	Neplatný Názov štítku.
+	d_Lang050 =	Duplicitné štítok.
+	d_Lang051 =	Pre prehrávanie makra stlačte zodpovedajúce klávesové skratky (Auto / Man).
+	d_Lang052 =	Ak chcete spustiť nahrávanie stlačte klávesovú skratku Record.
+	d_Lang053 =	Nezobrazovať túto správu znovu.
+	d_Lang054 =	Prosím vyberte okno programu Excel!
+	d_Lang055 =	Prosím vyberte skriptu AutoHotkey súbor (. AHK) a zadať názov funkcie.
+	d_Lang056 =	
+	(LTrim	
+		Táto funkcia vyžaduje AutoHotkey nainštalovaný.
+		Kliknite na tlačidlo OK prejdite na stránku pre stiahnutie.
+	)	
+	d_Lang057 =	
+	(LTrim	
+		- Stlačte Ctrl + klávesov so šípkami pohybovať vybranú oblasť.
+		- Stlačením tlačidla Shift + klávesy so šípkami zmeňte veľkosť vybranej oblasti.
+		- Stlačte Enter pre dokončenie.
+	)	
+	d_Lang058 =	
+	(LTrim	
+		Niektoré funkcie vyžadujú admnistrátorovi privilages, aby správne fungovali.
+		Je odporúčané reštartovať aplikáciu ako správca.
+	)	
+	d_Lang059 =	
+	(LTrim	
+		Tento príkaz nepodporuje výrazy alebo funkcie.
+		Prosím priradiť premennú a použiť ho v parametri.
+	)	
+	d_Lang060 =	Nová verzia je k dispozícii
+	d_Lang061 =	
+	(LTrim	
+		Chcete ju hneď stiahnuť?
+		
+		Ak chcete zakázať automatickú kontrolu vyberte Pomocník> Skontrolovať pri spustení.
+	)	
+	d_Lang062 =	Už máte najnovšiu verziu.
+	d_Lang063 =	Nastala chyba pri kontrole.
+	d_Lang064 =	COM objekt chyba
+	d_Lang065 =	Riadok
+	d_Lang066 =	Konkrétne
+	d_Lang067 =	Zobraziť tipy pri spustení.
+	d_Lang068 =	Tipy:
+	d_Lang069 =	
+	(LTrim	
+		Potrebujete pomoc, našli chybu alebo máte nejaký návrh? Pošlite e-mail na autora: <a href="mailto:rodolfoub@gmail.com"> rodolfoub@gmail.com </ a>
+		Jedná sa o slobodný softvér. Ak ste zistil, že je užitočné zvážiť < dar </ a> a podpora rozvoja. Ďakujem.
+	)	
+	d_Lang070 =	Chyba: Neplatný Hotkey vybrané.
+		
+; Start-up Tips		
+	Start_Tips =	
+	(LTrim	
+		Môžete vytvárať makrá pomocou príkazových tlačidiel v hlavnom okne, alebo pomocou rekordéra kopírovať svoje akcie. Prejsť na Možnosti> Nastavenie> Nahrávanie na vstupy vybrať, čo budú zaznamenané.
+		Ak chcete použiť rekordér pre rýchle úlohy, ísť do Voľby> Nastavenia> Nahrávanie a zaškrtnite "Vymazať zoznam" možnosť voľby. Potom kliknite na tlačidlo Record v hlavnom okne a pomocou F10 pre vymazanie aktuálneho makra a začať novú s rovnakou klávesovú skratku. Môžete tiež zaškrtnúť voľbu "vždy aktívny" v hlavnom okne udržať nahrávanie a prehrávanie klávesy aktívne.
+		Ak chcete získať pomoc pre určitý príkaz pravým tlačidlom myši na príkazové tlačidlo v hlavnom okne, alebo kdekoľvek v okne príkazového riadka pre zobrazenie odkazov na AutoHotkey pomocníkovi.
+		Pozrite sa na "Capture" Keys možnosť zadať kľúče a kombinácie do makra priamo z hlavného okna.
+		Enter a ich kombinácie v poli Hotkey dolu a stlačte tlačidlo Vložiť a pridať ich do vybraných riadkov.
+		Ak žiadne položky sú označené editačné tlačidlá platí pre všetky riadky v zozname.
+		Môžete priradiť svoje vlastné premenné v premennej windows (Vložiť> if / premennej / funkcie). Ak chcete používať je vnútri príkazy názov premennej uzavrite v percentách znaky, napr: `% MyVar `%.
+		Loop počítadlo v hornej časti stanovuje celkový počet slučiek pre vybrané makro.
+		Môžete upraviť riadok poklepaním, alebo jeho výberom a kliknutím na tlačidlo Upraviť tlačidlá v dolnej časti.
+		Tu môžete editovať viac vybraných riadkov pomocou voľby v editačnom riadku v dolnej časti.
+		Vyberte jeden alebo viac riadkov, ktoré chcete pridať nové príkazy nad nimi.
+		Môžete presunúť riadky s click-and-drag.
+		Dvakrát kliknite na ikonu v oznamovacej oblasti na Klávesovú skratku aktivujete alebo zastaviť prehrávanie / nahrávanie. Kliknite na neho stredným tlačidlom počas prehrávania alebo nahrávania pozastavíte.
+		Môžete exportovať makrá pracovných AutoHotkey skripty alebo samostatné spustiteľné z exportu okna.
+		Ak chcete nahrávať a prehrávať myši pomocou absolútnych súradníc prejdite na Možnosti> Nastavenie> Predvolené nastavenie a myš polohu na obrazovke.
+		Môžete otvoriť, kopírovať, presúvať alebo mazať súbory a priečinky pomocou jedného z príkazov Vložiť> Run / Súbor / String / Misc.
+		Ak chcete nahrávať hore a dole stav po každom stlačení Choď na Voľby> Nastavenia> Nahrávanie a skontrolujte "Capture Key State (dole / hore)" možnosť voľby.
+		Môžete použiť klávesové skratky pre urýchlenie alebo spomalenie prehrávania. Prejsť na Možnosti> Nastavenie> Prehrať na nastavenie kľúče a rýchlosť.
+		Ak chcete nastaviť snímanie priestoru pomocou "Vytvoriť snímku" nástroj choďte na Možnosti> Nastavenie> Screenshoty a zvoľte "Stlačte Enter pre snímanie". Po nakreslení obdĺžnika použite Control + šípky pre pohyb výber a Shift + kurzorové tlačidlo zmeniť jeho veľkosť.
+		Rýchly výber: Vyberte ľubovoľný riadok a kliknite na hlavičku stĺpca vyberte podobné riadky na základe textu z bunky tohto stĺpca.
+		Run / Súbor / String / Misc. Okno má mnoho ďalších užitočných príkazov, ako je vypnutie a UrlDownloadToFile.
+		Použite "Screenshot" funkcia vo funkčnom okne (Vložiť> if / premennej / funkcie), aby sa snímka časti obrazovky. Prvý parameter je cieľový súbor je cesta a názov s príponou PNG. Druhý parameter sú potrubia oddelené polohu na obrazovke, napr 100 | 200 | 50 | 100 (X | Y | Šírka | Výška).
+		Kliknutím na záhlavie stĺpca index pre zapnutie / vypnutie pomocníka známky a farby pre slučky a príkazy. Double-kliknite na hlavičku stĺpca Akcia pre zapnutie / vypnutie odsadenie pre slučky a príkazy.
+		Môžete ladiť makrá pomocou klávesovej skratky Ručné a možnosťou prehrávania v ponuke makro. Môžete tiež vypnúť odškrtnutím akcie je v zozname Makro.
+		Ak chcete, aby vaše makrá fungujú iba na určitom okne ukážte na položku Makro> kontextovú klávesovým skratkám.
+		Môžete si nastaviť vlastné Globálne premenné má naložiť na spustenie a ktorý sa má vyviezť. Prejsť na Možnosti> Nastavenie> Užívateľská globálne premenné pridať.
+		Môžete spustiť pokročilé funkcie ako substr a RegExReplace z funkcií okna (Vložiť> if / premennej / funkcie). Alebo spustiť vlastné funkcie z externých AutoHotkey skriptov.
+	)	
+; Tooltips		
+	NewB_TT =	Nový (Ctrl + N)
+	OpenB_TT =	Otvoriť (Ctrl + O)
+	SaveB_TT =	Uložiť (Ctrl + S)
+	ExportB_TT =	Export do AHK (Ctrl + E)
+	PreviewB_TT =	Náhľad Script (Ctrl + P)
+	OptionsB_TT =	Nastavenie (Ctrl + G)
+	RecordB_TT =	Záznam makra (Ctrl + R)
+	StartB_TT =	Aktivácia Makrá (Ctrl + Enter)
+	TestRun_TT =	Prehrať aktuálne makro (Ctrl + Shift + Enter)
+	RunTimer_TT =	Timer (Ctrl + Shift + T)
+	MouseB_TT =	Myš (F2)
+	TextB_TT =	Text (F3)
+	SpecialB_TT =	Špeciálne klávesy
+	ControlB_TT =	Control (F4)
+	PauseB_TT =	Pauza (F5) / Správa (Shift + F5) / Key Wait (Ctrl + F5)
+	WindowB_TT =	Okno (F6)
+	ImageB_TT =	Obrázok / Pixel Search (F7)
+	RunB_TT =	Spustiť / Súbor / String / Misc. (F8)
+	ComLoopB_TT =	Loop (F9) / Goto (Shift + F9) / Label (Ctrl + F9)
+	IfStB_TT =	Pokiaľ závierka (F10) / premenné (Shift + F10) / Funkcia (Ctrl + F10)
+	IEComB_TT =	Internet Explorer (F11) / COM rozhranie (Shift + F11) / Spustiť skripty (Ctrl + F11)
+	SendMsgB_TT =	Windows Správy (F12)
+	AutoKey_TT =	Backspace pre vymazanie
+	ManKey_TT =	Backspace pre vymazanie
+	AbortKey_TT =	Backspace pre vymazanie
+	JoyKey_TT =	Stlačte tlačidlo na joysticku
+	PauseKey_TT =	Pozastavenie výkonu namiesto zastavenia
+	OnFinish_TT =	
+	(LTrim	
+		Vypnutie možnosti
+		Ak prehrávanie skončí...
+	)	
+	Win1_TT =	Pridať klávesy Windows ako modifikátor
+	JoyHK_TT =	Joystick
+	ReptC_TT =	0 = nekonečno
+	TabPlus_TT =	Pridať makro (Ctrl + T)
+	TabClose_TT =	Zavrieť Makro (Ctrl + W)
+	DuplicateL_TT =	Duplicitné makro (Ctrl + Shift + D)
+	SaveC_TT =	Uložiť aktuálny makro (Ctrl + Alt + S)
+	ImportB_TT =	Dovoz Makro (Ctrl + I)
+	IfDirB_TT =	Urobiť Klávesové skratky fungovať v závislosti na`ntype z okna, ktoré je aktívne alebo neexistuje (Ctrl + H)
+	KeepHKOn_TT =	Majte Klávesové skratky aktivovaný vždy
+	A_List_TT =	Zvoľte Makro (Ctrl +1 ~ 0)
+	OSHK_TT =	Vyberte makro
+	OSHKEd_TT =	Vyberte makro
+	Duplicate_TT =	Duplicitné vybrané riadky (Ctrl + D)
+	Order_TT =	Presun vybrané riadky (Ctrl + PageUp / Ctrl + PageDown)
+	Cut_TT =	Vyňať vybrané riadky (Ctrl + X)
+	Copy_TT =	Kopírovať vybrané riadky (Ctrl + C)
+	Paste_TT =	Vložiť kopírované riadky (Ctrl + V)
+	Remove_TT =	Zmazať vybrané riadky (DEL)
+	Undo_TT =	Späť (Ctrl + Z)
+	Redo_TT =	Znovu (Ctrl + Y)
+	CopyTo_TT =	Kopírovať do...
+	Capt_TT =	Zachytiť stlačení klávesov v tomto okne
+	OnScCtrl_TT =	Zobrazenie paneli Ovládacie prvky
+	ShowStep_TT =	Zobraziť bublinové tipy
+	ApplyT_TT =	Platiť
+	ApplyI_TT =	Platiť
+	ApplyL_TT =	Vložiť z Box (Insert)
+	InsertKey_TT =	Vložte stlačenie klávesy (Ctrl + Insert)
+	EditButton_TT =	Upraviť (Enter)
+	PrevRefresh_TT =	Obnoviť (F5)
+	PrevCopy_TT =	Kopírovať
+	OpenT_TT =	Otvoriť (Ctrl + O)
+	SaveT_TT =	Uložiť (Ctrl + S)
+	CutT_TT =	Znížiť
+	CopyT_TT =	Kopírovať
+	PasteT_TT =	Pasta
+	SelAllT_TT =	Vybrať všetko
+	DefaultMacro_TT =	Vyberte súbor, ktorý chcete nahrať na spustenie programu sa
+	VarCopyA_TT =	Skopírujte bežný variabilný obsah
+	VarCopyB_TT =	Skopírujte bežný variabilný obsah
+	FindReplace_TT =	Nájsť / Nahradiť (Ctrl + F)
+	EditComm_TT =	Upraviť komentár (Ctrl + L)
+	EditColor_TT =	Edit Color Mark (Ctrl + M)
+	Reset_TT =	Vymazať obsah premennej
+	Screenshot_TT =	Vytvoriť snímku
+	ColorPick_TT =	Color Picker
+	PicPrev_TT =	Poklepaním otvoríte obrázok
+	CoordPixel_TT =	Koordinovať režim
+	VariatT_TT =	Odtiene variácie
+	IconN_TT =	Číslo skupiny ikon
+	TransC_TT =	Transparentná farba
+	WScale_TT =	Šírka stupnice
+	HScale_TT =	Výška stupnice
+	LoopLVColor_TT =	Kliknutím vyberte farbu
+	IfLVColor_TT =	Kliknutím vyberte farbu
+	RefreshIEW_TT =	Obnoviť zoznam
+	ActiveObj_TT =	Pokúsi pripojiť k Active objektu COM
+	ExpView_TT =	Rozšírené Editor
+	ExpView2_TT =	Rozšírené Editor
+	OSPlay_TT =	Play / Pause
+	OSStop_TT =	Stop
+	OSRec_TT =	Start / Stop záznamu
+	OSRecNew_TT =	Záznam nového makra
+	OSRecOpt_TT =	Možnosti nahrávania
+	OSPlayOpt_TT =	Možnosti prehrávania
+	OSClear_TT =	Vymazať zoznam
+	OSProgB_TT =	Zobraziť Progress Bar
+	OSFast_TT =	Zrýchliť
+	OSSlow_TT =	Spomaliť
+	OSTrans_TT =	Nepriehľadnosť
+	ToggleTB_TT =	Zobraziť / skryť Title Bar
+	ToggleMW_TT =	Zobraziť / skryť hlavné okno
+	MRel_TT =	
+	(LTrim	
+		Pohyby vzhľadom k aktuálnej pozícii.
+		Alebo, ak sú použité s ovládaním: Pozícia v porovnaní s kontrolou.
+	)	
+	Raw_TT =	
+	(LTrim	
+		Príkaz SendRaw interpretuje všetky postavy doslova
+		skôr než prekladanie {Enter} na stlačenie klávesy ENTER,
+		^ C Control-C, atď
+	)	
+	ComText_TT =	
+	(LTrim	
+		Ak nie je v režime RAW, nasledujúce znaky
+		sa zaobchádza ako modifikátory (tieto modifikátory ovplyvňujú
+		len to ďalší kľúč):!, +, ^ #
+	)	
+	Clip_TT =	
+	(LTrim	
+		Dočasne používa schránku odoslať text.
+		Po dokončení operácie sa skript
+		obnoví pôvodný obsah schránky.
+		(Ponechať prázdne text vložiť aktuálne obsah)
+	)	
+	EditPaste_TT =	
+	(LTrim	
+		Pasty String na striešky / vlož pozície
+		v konaní Edit (to neovplyvní
+		obsah schránky).
+	)	
+	SetText_TT =	Zmení text ovládacieho prvku.
+	RelKey_TT =	
+	(LTrim	
+		Records pohyby myši a kliknutí ako kompenzácia
+		z predchádzajúcej pozície, kedy držal v ruke.
+	)	
+	ToggleC_TT =	Aktivácia Relatívna nahrávania pri stlačení stav je ďalej.
+	Relative_TT =	Poloha je vzhľadom k aktívne okná.
+	Screen_TT =	Súradnice sú relatívna k ploche (celá obrazovka).
+	IncFolders_TT =	
+	(LTrim	
+		0 - Iba súbory / kľúče
+		1 - Zložky / podkľúče a súbory / kľúče
+		2 - iba zložky / podkľúča
+	)	
+	Recurse_TT =	
+	(LTrim	
+		0 - Nie recurse do priečinkov / podklíčům
+		1 - rekurzívne do adresárov / podklíčům
+	)	
+		
+; Tooltips from AHK Docs		
+	ExpList_TT =	Poklepaním editovať
+	Ex_IfDir_TT =	
+	(LTrim	
+		Vytvorí kontextovo citlivé klávesy a hotstrings závislosti
+		na type okna, ktoré je aktívne, alebo neexistuje.
+	)	
+	Ex_IfDirType_TT =	
+	(LTrim	
+		Vytvorí kontextovo citlivé klávesy a hotstrings závislosti
+		na type okna, ktoré je aktívne, alebo neexistuje.
+	)	
+	Ex_SM_TT =	
+	(LTrim	
+		Robí Poslať synonymom SendInput alebo SendPlay skôr než
+		Východisková hodnota (SendEvent). Tiež robí Kliknite a MouseMove / Kliknite / Drag
+		použiť špecifikovanú metódu.
+	)	
+	SM_TT =	
+	(LTrim	
+		Udalosť: To je východiskový východiskový používaný všetkými skripty.
+		Používa SendEvent metódu Odoslať SendRaw, kliknite na tlačidlo a MouseMove / Kliknite / Drag.
+		Vstup: Prepína na spôsobe SendInput pre odosielanie, SendRaw, kliknite na tlačidlo a MouseMove / Kliknite / Drag.
+		InputThenPlay: Rovnaké ako vyššie, s výnimkou, že skôr než spadne späť na párty režime
+		keď SendInput nie je k dispozícii, vráti sa do režimu prehrávania (pozri nižšie). To tiež spôsobuje
+		Príkaz SendInput sám vrátiť do režimu prehrávania, keď SendInput nie je k dispozícii.
+		Prehrať: Prepína na SendPlay metódy Odoslať, SendRaw, kliknite na tlačidlo a MouseMove / Kliknite / Drag.
+	)	
+	Ex_SI_TT =	
+	(LTrim	
+		Určuje, či je povolené skript spustiť znovu, keď je už spustená.
+	)	
+	SI_TT =	
+	(LTrim	
+		Slovo FORCE preskočí dialóg a nahrádza pôvodný inštancie automaticky,
+		ktorý je podobný v skutočnosti na Reload príkazu.
+		Slovo ignorovať preskočí dialógové okno a nechá starej inštancie spustená.
+		Inými slovami, sú ignorované pokusy začať už bežiaci skript.
+		Slovo OFF umožňuje viac inštancií skript plynúť súbežne.
+	)	
+	Ex_ST_TT =	
+	(LTrim	
+		Nastaví zodpovedajúce správanie WinTitle parametrov v príkazoch ako WinWait.
+	)	
+	ST_TT =	
+	(LTrim	
+		1: názov okna musí začínať s uvedeným WinTitle byť zhoda.
+		2: názov okna môže obsahovať WinTitle kdekoľvek vo vnútri, že je to zápas.
+		3: názov okna sa musí presne zhodovať WinTitle byť zhoda.
+		Regex: Zmeny WinTitle, WinText, ExcludeTitle a ExcludeText byť regulárne výrazy.
+	)	
+	Ex_DH_TT =	
+	(LTrim	
+		Určuje, či neviditeľné okná sú "vidieť" pomocou skriptu.
+	)	
+	Ex_AF_TT =	
+	(LTrim	
+		Preskočí jemný spôsob aktivovanie okna
+		a ide rovno do násilnej metódy.
+	)	
+	Ex_HK_TT =	
+	(LTrim	
+		Vynúti použitie háku pre vykonávanie všetkých
+		alebo niektoré klávesové klávesové skratky.
+	)	
+	Ex_SK_TT =	
+	(LTrim	
+		Nastavuje oneskorenie, dôjde po každom
+		klávesy poslal Odoslať alebo ControlSend.
+	)	
+	Ex_MD_TT =	
+	(LTrim	
+		Nastavuje oneskorenie, dôjde po
+		Každý pohyb myši alebo tlačidlom.
+	)	
+	Ex_SC_TT =	
+	(LTrim	
+		Nastavuje oneskorenie, dôjde po
+		Každý ovládací prvok modifikujúce príkaz.
+	)	
+	Ex_SW_TT =	
+	(LTrim	
+		Nastavuje oneskorenie, dôjde po
+		každý Windowing príkaz, napríklad WinActivate.
+	)	
+	Ex_SB_TT =	
+	(LTrim	
+		Určuje, ako rýchlo sa skript spustí (ovplyvňuje využitie procesora).
+	)	
+	Ex_NT_TT =	
+	(LTrim	
+		Zakáže predvádzanie tray ikonou.
+	)	
+		
+	Ex_IN_TT =	
+	(LTrim	
+		Spôsobí, že skript sa správať, ako by špecifikované
+		obsah súboru sú prítomné práve v tomto mieste.
+	)	
+	Ex_PT_TT =	
+	(LTrim	
+		Udržuje skript beží trvale
+		(To je, kým používateľ zavrie alebo ExitApp je zistená).
+	)	
+	Ex_MT_TT =	
+	(LTrim	
+		Nastaví maximálny počet súčasne
+		závitov na klávesy alebo hotstring.
+	)	
+	Ex_UV_TT =	Export globálne premenné.
+	Ex_EdVars_TT =	Vyberte globálne premenné, ktoré chcete exportovať.
+		
+; IE Commands Tips		
+	Tip_Navigate =	Prejde na adresu URL alebo cestu.
+	Tip_Value =	Získa alebo nastaví hodnotu objektu.
+	Tip_Focus =	Nastaví fokus na objekt.
+	Tip_Click =	Simuluje kliknite na objekt.
+	Tip_Submit =	Odošle formulár.
+	Tip_GoHome =	Prejde na aktuálnej domácej alebo úvodnej stránky.
+	Tip_GoBack =	Pohyb späť o jednu položku v zozname histórie.
+	Tip_GoForward =	Prejde dopredu o jednu položku v zozname histórie.
+	Tip_GoSearch =	Prejde na aktuálne vyhľadávania.
+	Tip_Refresh =	Obnovenie aktuálne zobrazenej stránky.
+	Tip_Stop =	Zruší čakajúci navigáciu alebo stiahnuť.
+	Tip_Quit =	Zavrie stránku.
+	Tip_LocationName =	Získa cestu alebo názov aktuálnej stránky.
+	Tip_LocationURL =	Načíta adresu URL aktuálnej stránky.
+	Tip_InnerText =	Nastaví alebo získa text objektu.
+	Tip_InnerHTML =	Nastaví alebo získa HTML objektu.
+	Tip_Href =	Nastaví alebo získa cieľovú adresu URL alebo kotviaci bod.
+	Tip_Src =	Nastaví alebo získa URL má byť zavedený pri objekte.
+	Tip_SelectedIndex =	Nastaví alebo získa index vybrané voľby v objekte select.
+	Tip_Checked =	Nastaví alebo získa stav zaškrtávacie políčko alebo prepínač.
+	Tip_Type =	Nastaví alebo získa typ obsahu objektu.
+	Tip_Width =	Nastaví alebo získa šírku objektu.
+	Tip_Height =	Nastaví alebo získa výšku objektu.
+	Tip_Length =	Nastavuje alebo načítava počet objektov v kolekcii.
+		
+return		
