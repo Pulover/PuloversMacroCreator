@@ -820,9 +820,9 @@ Loop, Parse, MsgList, `n
 
 Sort, WM_Msgs, D|
 
-DefaultBar := {FileOpt: "Enabled AutoSize", File: ["New=New:42", "Open=Open:43(Enabled Dropdown)", "Save=Save:60(Enabled Dropdown)"
-													, "", "Export=Export:16", "Preview=Preview:50", "Options=Options:44"]
-			, RecPlayOpt: "Enabled AutoSize", RecPlay: ["Record=Record:55", "PlayStart=Play:47"]
+DefaultBar := {FileOpt: "Enabled AutoSize", File: ["New=" w_Lang040 ":42", "Open=" w_Lang041 ":43(Enabled Dropdown)", "Save=" w_Lang042 ":60(Enabled Dropdown)"
+													, "", "Export=" w_Lang043 ":16", "Preview=" w_Lang044 ":50", "Options=" w_Lang045 ":44"]
+			, RecPlayOpt: "Enabled AutoSize Dropdown", RecPlay: ["Record=" w_Lang004 ":55", "PlayStart=" w_Lang005 ":47"]
 			, CommandOpt: "Enabled AutoSize", Command: ["Mouse=Mouse:39", "Text=Text:71", "ControlCmd=Control:7"
 														, "", "Pause=Pause:46", "MsgBox=Message:11", "KeyWait=Key Wait:78"
 														, "", "Window=Window:81", "Image=ImageSearch:28", "Run=Run:59"
@@ -831,8 +831,8 @@ DefaultBar := {FileOpt: "Enabled AutoSize", File: ["New=New:42", "Open=Open:43(E
 														, "", "IECom=Internet Explorer:26", "ComInt=COM Interface:4", "RunScrLet=Run Scriptlet:77"
 														, "", "SendMsg=Windows Messages:62"]
 			, SetOpt: "Enabled AutoSize", Settings: ["HideMainWin=Hide Main Window:15", "OnScCtrl=Display Controls:48"
-														, "", "OnFinish=On Finish:20", "SetWin=Context Sensitive Hotkeys:48"
 														, "", "Capt=Capture Keys:71", "CheckHkOn=Always Active:79"
+														, "", "OnFinish=On Finish:20", "SetWin=Context Sensitive Hotkeys:48"
 														, "", "SaveData=Win:81", "SetJoyButton=Joystick:33"]
 			, EditOpt: "Enabled AutoSize", Edit: ["TabPlus=Add Macro:67", "TabClose=Close Macro:69", "DuplicateList=Duplicate Macro:70"
 														, "", "Import=Import Macro:29", "SaveCurrentList=Save Current Macro:68"

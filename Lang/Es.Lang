@@ -146,6 +146,26 @@
 	w_Lang037 =	Ventana
 	w_Lang038 =	Comentario
 	w_Lang039 =	Color
+	w_Lang040 =	Nuevo (Ctrl+N)
+	w_Lang041 =	Abrir (Ctrl+O)
+	w_Lang042 =	Guardar (Ctrl+S)
+	w_Lang043 =	Exportar a AHK (Ctrl+E)
+	w_Lang044 =	Previa de Guión (Ctrl+P)
+	w_Lang045 =	Configuración (Ctrl+G)
+	w_Lang046 =	Reproducir macro actual (Ctrl+Shift+Enter)
+	w_Lang047 =	Timer (Ctrl+Shift+T)
+	w_Lang048 =	Mouse (F2)
+	w_Lang049 =	Texto (F3)
+	w_Lang050 =	Teclas especiales
+	w_Lang051 =	Control (F4)
+	w_Lang052 =	Pausa (F5) / Mensaje (Shift+F5) / Espera Clave (Control+F5) 
+	w_Lang053 =	Ventana (F6)
+	w_Lang054 =	Imagen / Tamaño de píxel Search (F7)
+	w_Lang055 =	Ejecutar / Archivo / String / Misc. (F8)
+	w_Lang056 =	Loop (F9) / Ir a (Shift+F9) / Etiqueta (Ctrl+F9)
+	w_Lang057 =	Si Declaraciones (F10) / Variables (Shift+F10) / Funciones (Ctrl+F10)
+	w_Lang058 =	Internet Explorer (F11) / COM Interface (Shift+F11) / Executar Scriptlet (Ctrl+F11)
+	w_Lang059 =	Mensajes de Windows (F12)
 		
 ; Command Windows		
 	c_Lang001 =	Ratón

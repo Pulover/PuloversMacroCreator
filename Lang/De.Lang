@@ -146,6 +146,26 @@
 	w_Lang037 =	Fenster
 	w_Lang038 =	Kommentar
 	w_Lang039 =	Farbe
+	w_Lang040 =	Neu (Strg+N)
+	w_Lang041 =	Öffnen (Strg+O)
+	w_Lang042 =	Speichern (Strg+S)
+	w_Lang043 =	Export nach AHK (Strg+E)
+	w_Lang044 =	Vorschau Script (Strg+P)
+	w_Lang045 =	Einstellungen (Strg+G)
+	w_Lang046 =	Aktuelles Makro wiedergeben (Strg+Umschalt+Enter)
+	w_Lang047 =	Timer (Strg+Umschalt+T)
+	w_Lang048 =	Maus (F2)
+	w_Lang049 =	Text (F3)
+	w_Lang050 =	Spezielle Tasten
+	w_Lang051 =	Steuerelement (F4)
+	w_Lang052 =	Pause (F5)/Nachricht (Umschalt+F5)/Taste erfassen (Strg+F5) 
+	w_Lang053 =	Fenster (F6)
+	w_Lang054 =	Bild/Pixelsuche (F7)
+	w_Lang055 =	Run/File/String/Versch. (F8)
+	w_Lang056 =	Loop (F9)/Goto (Umschalt+F9)/Label (Strg+F9)
+	w_Lang057 =	If Anweisungen (F10)/Variablen (Umschalt+F10)/Funktionen (Strg+F10)
+	w_Lang058 =	Internet Explorer (F11)/COM-Schnittstelle (Umschalt+F11)/Scriptlet ausführen (Strg+F11)
+	w_Lang059 =	Windows-Messages (F12)
 		
 ; Command Windows		
 	c_Lang001 =	Maus

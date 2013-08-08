@@ -146,6 +146,26 @@
 	w_Lang037 =	Okno
 	w_Lang038 =	Komentarz
 	w_Lang039 =	Kolor
+	w_Lang040 =	Nowy (Ctrl+N)
+	w_Lang041 =	Otwórz (Ctrl+O)
+	w_Lang042 =	Zapisz (Ctrl+S)
+	w_Lang043 =	Eksport do AHK (Ctrl+E)
+	w_Lang044 =	Podgląd Script (Ctrl+P)
+	w_Lang045 =	Ustawienia (Ctrl+G)
+	w_Lang046 =	Zagraj w bieżącym makrze (Ctrl+Shift+Enter)
+	w_Lang047 =	Timer (Ctrl+Shift+T)
+	w_Lang048 =	Myszy (F2)
+	w_Lang049 =	Tekst (F3)
+	w_Lang050 =	Klawisze specjalne
+	w_Lang051 =	Control (F4)
+	w_Lang052 =	Pauza (F5) / Wiadomość (Shift+F5) / Key Czekać (Control+F5) 
+	w_Lang053 =	Window (F6)
+	w_Lang054 =	Image / Pixel Szukaj (F7)
+	w_Lang055 =	Uruchom / Plik / String / Misc. (F8)
+	w_Lang056 =	Loop (F9) / Goto (Shift+F9) / Label (Ctrl+F9)
+	w_Lang057 =	If (F10) / zmiennych (Shift+F10) / Funkcje (Ctrl+F10)
+	w_Lang058 =	Internet Explorer (F11) / COM interfejsu (Shift+F11) / Uruchom Scriptlet (Ctrl+F11)
+	w_Lang059 =	Komunikaty Windows (F12)
 		
 ; Command Windows		
 	c_Lang001 =	Mysz

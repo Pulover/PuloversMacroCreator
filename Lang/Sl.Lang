@@ -146,6 +146,26 @@
 	w_Lang037 =	Okno
 	w_Lang038 =	Komentar
 	w_Lang039 =	Barva
+	w_Lang040 =	New (Ctrl + N)
+	w_Lang041 =	Odprta (Ctrl + O)
+	w_Lang042 =	Prihranite (Ctrl + S)
+	w_Lang043 =	Izvoz v AHK (Ctrl + E)
+	w_Lang044 =	Predogled Script (Ctrl + P)
+	w_Lang045 =	Nastavitve (Ctrl + G)
+	w_Lang046 =	Igraj trenutni makro (Ctrl + Shift + Enter)
+	w_Lang047 =	Timer (Ctrl + Shift + T)
+	w_Lang048 =	Mouse (F2)
+	w_Lang049 =	Besedilo (F3)
+	w_Lang050 =	Posebne Keys
+	w_Lang051 =	Control (F4)
+	w_Lang052 =	Premor (F5) / Sporočilo (Shift + F5) / ključne Počakaj (Control + F5)
+	w_Lang053 =	Okno (F6)
+	w_Lang054 =	Image / Pixel Search (F7)
+	w_Lang055 =	Run / datoteke / String / Razno. (F8)
+	w_Lang056 =	Zanka (F9) / Goto (Shift + F9) / Label (Ctrl + F9)
+	w_Lang057 =	Če izjave (F10) / spremenljivke (Shift + F10) / Funkcije (Ctrl + F10)
+	w_Lang058 =	Internet Explorer (F11) / COM vmesnik (Shift + F11) / Run skriptov (Ctrl + F11)
+	w_Lang059 =	Windows Sporočila (F12)
 		
 ; Command Windows		
 	c_Lang001 =	Miška

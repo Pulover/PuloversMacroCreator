@@ -146,6 +146,26 @@
 	w_Lang037 =	Окно
 	w_Lang038 =	Комментировать
 	w_Lang039 =	Цвет
+	w_Lang040 =	Новый (Ctrl+N)
+	w_Lang041 =	Открыть (Ctrl+O)
+	w_Lang042 =	Сохранить (Ctrl+S)
+	w_Lang043 =	Экспорт в AHK (Ctrl+E)
+	w_Lang044 =	Предварительный просмотр Script (Ctrl+P)
+	w_Lang045 =	Настройки (Ctrl+G)
+	w_Lang046 =	Играть текущего макроса (Ctrl+Shift+Enter)
+	w_Lang047 =	Таймер (Ctrl+Shift+T)
+	w_Lang048 =	Мышь (F2)
+	w_Lang049 =	Текст (F3)
+	w_Lang050 =	Специальные клавиши
+	w_Lang051 =	Управления (F4)
+	w_Lang052 =	Пауза (F5) / Сообщение (Shift+F5) / Ключевые Ожидания (Control+F5) 
+	w_Lang053 =	Window (F6)
+	w_Lang054 =	Изображение / Pixel поиска (F7)
+	w_Lang055 =	Выполнить / File / String / Разное. (F8)
+	w_Lang056 =	Loop (F9) / Goto (Shift+F9) / Label (Ctrl+F9)
+	w_Lang057 =	Если отчетность (F10) / Переменные (Shift+F10) / Функции (Ctrl+F10)
+	w_Lang058 =	Internet Explorer (F11) / COM интерфейса (Shift+F11) / Выполнить Скриптлете (Ctrl+F11)
+	w_Lang059 =	Windows Messages (F12)
 		
 ; Command Windows		
 	c_Lang001 =	Мышь

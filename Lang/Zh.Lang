@@ -146,6 +146,26 @@
 	w_Lang037 =	窗口
 	w_Lang038 =	评论
 	w_Lang039 =	颜色
+	w_Lang040 =	新建（Ctrl+N）
+	w_Lang041 =	开放（按Ctrl+O）
+	w_Lang042 =	保存（Ctrl+S）
+	w_Lang043 =	导出AHK（Ctrl+E组合键）
+	w_Lang044 =	预览脚本（Ctrl+P）
+	w_Lang045 =	设置（Ctrl+G）
+	w_Lang046 =	播放当前宏（按Ctrl+Shift+Enter键）
+	w_Lang047 =	定时器（Ctrl+Shift+T）
+	w_Lang048 =	鼠标（F2）
+	w_Lang049 =	文本（F3）
+	w_Lang050 =	特殊的键
+	w_Lang051 =	控制（F4）
+	w_Lang052 =	暂停（F5）/消息（Shift+F5）/键等待（Control+F5）
+	w_Lang053 =	窗口（F6）
+	w_Lang054 =	图片/像素搜索（F7）
+	w_Lang055 =	运行/文件/字符串/其他。 （F8）
+	w_Lang056 =	环路（F9）/后藤（按Shift+F9）/标签（按Ctrl+F9）
+	w_Lang057 =	如果报表附注（F10）/变量（按Shift+F10）/功能（按Ctrl+F10）
+	w_Lang058 =	IE浏览器（F11）/ COM接口（按Shift+F11）
+	w_Lang059 =	Windows消息（F12）
 		
 ; Command Windows		
 	c_Lang001 =	鼠标

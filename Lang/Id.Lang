@@ -146,6 +146,26 @@
 	w_Lang037 =	Jendela
 	w_Lang038 =	Komentar
 	w_Lang039 =	Warna
+	w_Lang040 =	Baru (Ctrl + N)
+	w_Lang041 =	Buka (Ctrl + O)
+	w_Lang042 =	Simpan (Ctrl + S)
+	w_Lang043 =	Ekspor ke AHK (Ctrl + E)
+	w_Lang044 =	Preview Script (Ctrl + P)
+	w_Lang045 =	Pengaturan (Ctrl + G)
+	w_Lang046 =	Bermain Makro sekarang (Ctrl + Shift + Enter)
+	w_Lang047 =	Timer (Ctrl + Shift + T)
+	w_Lang048 =	Mouse (F2)
+	w_Lang049 =	Teks (F3)
+	w_Lang050 =	Tombol Khusus
+	w_Lang051 =	Control (F4)
+	w_Lang052 =	Jeda (F5) / Pesan (Shift + F5) / Tunggu Key (Control + F5)
+	w_Lang053 =	Window (F6)
+	w_Lang054 =	Image / Pixel Cari (F7)
+	w_Lang055 =	Jalankan / file / String / Misc. (F8)
+	w_Lang056 =	Lingkaran (F9) / Goto (Shift + F9) / Label (Ctrl + F9)
+	w_Lang057 =	Jika Laporan (F10) / Variabel (Shift + F10) / Fungsi (Ctrl + F10)
+	w_Lang058 =	Internet Explorer (F11) / COM Interface (Shift + F11) / Run Scriptlet (Ctrl + F11)
+	w_Lang059 =	Jendela Messages (F12)
 		
 ; Command Windows		
 	c_Lang001 =	Mouse
