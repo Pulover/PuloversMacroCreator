@@ -4,7 +4,7 @@
 		
 		Version: 4.0.0  
 		
-		[www.autohotkey.net/~Pulover](http://www.autohotkey.net/~Pulover)  
+		[www.macrocreator.com](http://www.macrocreator.com)  
 		[Forum Thread](http://www.autohotkey.com/board/topic/79763-macro-creator)  
 		
 		Author: Pulover \[Rodolfo U. Batista\]  

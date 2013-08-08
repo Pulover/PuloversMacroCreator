@@ -4,7 +4,7 @@
 ; "An Interface-Based Automation Tool & Script Writer."
 ; Author: Pulover [Rodolfo U. Batista]
 ; rodolfoub@gmail.com
-; Home: http://www.autohotkey.net/~Pulover
+; Home: http://www.macrocreator.com
 ; Forum: http://www.autohotkey.com/board/topic/79763-macro-creator
 ; Version: 4.0.0
 ; Release Date: July, 2013
@@ -2361,11 +2361,11 @@ Help:
 IfExist, MacroCreator_Help.chm
 	Run, MacroCreator_Help.chm
 Else
-	Run, http://www.autohotkey.net/~Pulover/Docs
+	Run, http://www.macrocreator.com/Docs
 return
 
 Homepage:
-Run, http://www.autohotkey.net/~Pulover
+Run, http://www.macrocreator.com
 return
 
 Forum:
@@ -2381,7 +2381,7 @@ CheckUpdates:
 Gui, 1:+OwnDialogs
 IfExist, %A_Temp%\PMCIndex.html
 	FileDelete, %A_Temp%\PMCIndex.html
-UrlDownloadToFile, http://www.autohotkey.net/~Pulover/Docs/, %A_Temp%\PMCIndex.html
+UrlDownloadToFile, http://www.macrocreator.com/Docs/, %A_Temp%\PMCIndex.html
 FileRead, VerChk, %A_Temp%\PMCIndex.html
 VerChk := RegExReplace(VerChk, ".*Version: ([\d\.]+).*", "$1", vFound)
 If vFound
@@ -2391,7 +2391,7 @@ If vFound
 	{
 		MsgBox, 68, %d_Lang060%, %d_Lang060%: %VerChk%`n%d_Lang061%
 		IfMsgBox, Yes
-			Run, http://www.autohotkey.net/~Pulover/
+			Run, http://www.macrocreator.com/download
 	}
 	Else If (A_ThisLabel = "CheckNow")
 		MsgBox, 64, %AppName%, %d_Lang062%
@@ -2420,7 +2420,7 @@ Gui, 26:Font, Italic, Tahoma
 Gui, 26:Add, Text, y+0, An Interface-Based Automation Tool && Script Writer.
 Gui, 26:Font
 Gui, 26:Font,, Tahoma
-Gui, 26:Add, Link,, <a href="www.autohotkey.net/~Pulover">www.autohotkey.net/~Pulover</a>
+Gui, 26:Add, Link,, <a href="http://www.macrocreator.com">www.macrocreator.com</a>
 Gui, 26:Add, Text,, Author: Pulover [Rodolfo U. Batista]
 Gui, 26:Add, Link, y+0, <a href="mailto:rodolfoub@gmail.com">rodolfoub@gmail.com</a>
 Gui, 26:Add, Text, y+0,
