@@ -38,6 +38,7 @@ Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jör
 ## Version 3.8.3
 
 * Added translations to Indonesian, Slovak and Slovenian.
+* Fixed *Text* window toolbar buttons not working.
 * Fixed incorrect "Duplicate Keys" error message when exporting Macros without hotkeys.
 * Fixed incorrect "Expressions" error message when using variables inside *Mouse* commands.
 

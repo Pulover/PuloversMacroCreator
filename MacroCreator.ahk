@@ -3765,6 +3765,8 @@ Gui, 8:Add, Button, -Wrap W25 H25 ys x+0 hwndPasteT vPasteT gPasteT
 	ILButton(PasteT, PasteIcon[1] ":" PasteIcon[2])
 Gui, 8:Add, Button, -Wrap W25 H25 ys x+0 hwndSelAllT vSelAllT gSelAllT
 	ILButton(SelAllT, CommentIcon[1] ":" CommentIcon[2])
+Gui, 8:Add, Button, -Wrap W25 H25 ys x+0 hwndRemoveT vRemoveT gRemoveT
+	ILButton(RemoveT, RemoveIcon[1] ":" RemoveIcon[2])
 Gui, 8:Add, Edit, Section xm vTextEdit gTextEdit WantTab W720 R30
 Gui, 8:Add, Text, Section, %w_Lang015%:
 Gui, 8:Add, Text,, %c_Lang017%:
@@ -4018,23 +4020,28 @@ FileAppend, %TextEdit%, %TextFile%
 return
 
 CutT:
+PostMessage, WM_CUT, 0, 0, Edit1, ahk_id %CmdWin%
 GuiControl, Focus, TextEdit
-ControlSend, Edit1, {Control Down}{x}{Control Up}, ahk_id %CmdWin%
 return
 
 CopyT:
+PostMessage, WM_COPY, 0, 0, Edit1, ahk_id %CmdWin%
 GuiControl, Focus, TextEdit
-ControlSend, Edit1, {Control Down}{c}{Control Up}, ahk_id %CmdWin%
 return
 
 PasteT:
+PostMessage, WM_PASTE, 0, 0, Edit1, ahk_id %CmdWin%
 GuiControl, Focus, TextEdit
-ControlSend, Edit1, {Control Down}{v}{Control Up}, ahk_id %CmdWin%
 return
 
 SelAllT:
+PostMessage, 0x00B1, 0, StrLen(TextEdit) + cL0, Edit1, ahk_id %CmdWin%
 GuiControl, Focus, TextEdit
-ControlSend, Edit1, {Control Down}{a}{Control Up}, ahk_id %CmdWin%
+return
+
+RemoveT:
+PostMessage, WM_CLEAR, 0, 0, Edit1, ahk_id %CmdWin%
+GuiControl, Focus, TextEdit
 return
 
 KeyWait:
@@ -6744,6 +6751,8 @@ Gui, 30:Add, Button, -Wrap W25 H25 ys x+0 hwndPasteT vPasteT gPasteT
 	ILButton(PasteT, PasteIcon[1] ":" PasteIcon[2])
 Gui, 30:Add, Button, -Wrap W25 H25 ys x+0 hwndSelAllT vSelAllT gSelAllT
 	ILButton(SelAllT, CommentIcon[1] ":" CommentIcon[2])
+Gui, 30:Add, Button, -Wrap W25 H25 ys x+0 hwndRemoveT vRemoveT gRemoveT
+	ILButton(RemoveT, RemoveIcon[1] ":" RemoveIcon[2])
 Gui, 30:Font, s9, Courier New
 Gui, 30:Add, Edit, Section xm vTextEdit gTextEdit WantTab W720 R30, %Script%
 Gui, 30:Font
