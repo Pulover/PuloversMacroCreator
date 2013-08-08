@@ -16,9 +16,8 @@
 	Pause, Off
 	Try Menu, Tray, Icon, % t_PlayIcon[1], % t_PlayIcon[2]
 	Menu, Tray, Default, %w_Lang008%
-	PlayOSOn := 1
-	ToggleButtonIcon(OSPlay, PauseIconB)
-	CurrentRange := m_ListCount
+	PlayOSOn := 1, ToggleButtonIcon(OSPlay, PauseIconB)
+,	CurrentRange := m_ListCount, ChangeProgBarColor("20D000", "OSCProg", 28)
 	If (ShowProgBar = 1)
 	{
 		GuiControl, 28:+Range0-%m_ListCount%, OSCProg
