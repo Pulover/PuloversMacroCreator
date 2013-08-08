@@ -676,6 +676,7 @@ return
 TbFile:
 TbRecPlay:
 TbPrev:
+TbText:
 TbPtr := %A_ThisLabel%
 ,	ErrorLevel := TbPtr.OnNotify(A_EventInfo, MX, MY, Label, ID)
 If (Label)
@@ -3788,20 +3789,8 @@ Text:
 Gui, 1:Submit, NoHide
 Gui, 8:+owner1 -MinimizeBox +E0x00000400 +HwndCmdWin
 Gui, 1:+Disabled
-Gui, 8:Add, Button, -Wrap W25 H25 hwndOpenT vOpenT gOpenT
-	ILButton(OpenT, OpenIcon[1] ":" OpenIcon[2])
-Gui, 8:Add, Button, -Wrap W25 H25 ys x+0 hwndSaveT vSaveT gSaveT
-	ILButton(SaveT, SaveIcon[1] ":" SaveIcon[2])
-Gui, 8:Add, Text, W2 H25 ys+2 x+5 0x11
-Gui, 8:Add, Button, -Wrap W25 H25 ys x+4 hwndCutT vCutT gCutT
-	ILButton(CutT, CutIcon[1] ":" CutIcon[2])
-Gui, 8:Add, Button, -Wrap W25 H25 ys x+0 hwndCopyT vCopyT gCopyT
-	ILButton(CopyT, CopyIcon[1] ":" CopyIcon[2])
-Gui, 8:Add, Button, -Wrap W25 H25 ys x+0 hwndPasteT vPasteT gPasteT
-	ILButton(PasteT, PasteIcon[1] ":" PasteIcon[2])
-Gui, 8:Add, Button, -Wrap W25 H25 ys x+0 hwndSelAllT vSelAllT gSelAllT
-	ILButton(SelAllT, CommentIcon[1] ":" CommentIcon[2])
-Gui, 8:Add, Edit, Section xm vTextEdit gTextEdit WantTab W710 R30
+Gui, 8:Add, Custom, ClassToolbarWindow32 hwndhTbText gTbText 0x0800 0x0100 0x0040
+Gui, 8:Add, Edit, Section xm ym+25 vTextEdit gTextEdit WantTab W710 R30
 ; Options
 Gui, 8:Add, GroupBox, Section W220 H125, %c_Lang163%:
 Gui, 8:Add, Radio, -Wrap Group Checked ys+20 xs+10 W200 vRaw gRaw R1, %c_Lang045%
@@ -3884,6 +3873,8 @@ If (s_Caller = "Edit")
 Else
 	Window = A
 Gui, 8:Show,, %c_Lang002%
+TB_Define(TbText, hTbText, hIL_Icons, DefaultBar.Text, DefaultBar.TextOpt)
+,	TBHwndAll[6] := TbText
 GuiControl, 8:Focus, TextEdit
 Input
 Tooltip
@@ -4061,23 +4052,23 @@ FileAppend, %TextEdit%, %TextFile%
 return
 
 CutT:
-GuiControl, Focus, TextEdit
-ControlSend, Edit1, {Control Down}{x}{Control Up}, ahk_id %CmdWin%
+PostMessage, WM_CUT, 0, 0, Edit1, ahk_id %CmdWin%
 return
 
 CopyT:
-GuiControl, Focus, TextEdit
-ControlSend, Edit1, {Control Down}{c}{Control Up}, ahk_id %CmdWin%
+PostMessage, WM_COPY, 0, 0, Edit1, ahk_id %CmdWin%
 return
 
 PasteT:
-GuiControl, Focus, TextEdit
-ControlSend, Edit1, {Control Down}{v}{Control Up}, ahk_id %CmdWin%
+PostMessage, WM_PASTE, 0, 0, Edit1, ahk_id %CmdWin%
 return
 
 SelAllT:
-GuiControl, Focus, TextEdit
-ControlSend, Edit1, {Control Down}{a}{Control Up}, ahk_id %CmdWin%
+PostMessage, 0x00B1, 0, StrLen(TextEdit), Edit1, ahk_id %CmdWin%
+return
+
+RemoveT:
+PostMessage, WM_CLEAR, 0, 0, Edit1, ahk_id %CmdWin%
 return
 
 KeyWait:
@@ -4888,12 +4879,12 @@ Gui, 19:Add, DDL, yp-2 xs+185 W80 vIfNotFound, Continue||Break|Stop|Prompt
 Gui, 19:Add, CheckBox, Checked -Wrap y+5 xs+10 W180 H25 vAddIf, %c_Lang162%
 Gui, 19:Add, Text, -Wrap y+0 xs+10 W250 r1 cBlue, %c_Lang069%
 ; Preview
-Gui, 19:Add, Groupbox, Section ys xs+285 W280 H240, %c_Lang072%:
+Gui, 19:Add, Groupbox, Section ys xs+280 W280 H240, %c_Lang072%:
 Gui, 19:Add, Pic, ys+20 xs+10 W260 H200 0x100 vPicPrev gPicOpen
 Gui, 19:Add, Progress, ys+20 xs+10 W260 H200 Disabled Hidden vColorPrev
 Gui, 19:Add, Text, y+0 xs+10 W150 vImgSize
 ; Options
-Gui, 19:Add, GroupBox, Section y+17 xm W275 H115, %c_Lang159%:
+Gui, 19:Add, GroupBox, Section y+10 xm W275 H115, %c_Lang159%:
 Gui, 19:Add, Text, ys+20 xs+10 W80, %c_Lang070%:
 Gui, 19:Add, DDL, ys+20 xs+45 W65 vCoordPixel, Screen||Window
 Gui, 19:Add, Text, yp+3 xs+115 W85, %c_Lang071%:
@@ -4911,7 +4902,7 @@ Gui, 19:Add, Text, yp+3 xs+168 W20, H:
 Gui, 19:Add, Edit, yp-3 xs+190 W45 vHScale
 Gui, 19:Add, Checkbox, -Wrap y+5 xs+10 W250 vBreakLoop R1, %c_Lang130%
 ; Repeat
-Gui, 19:Add, GroupBox, Section ys xs+285 W275 H115
+Gui, 19:Add, GroupBox, Section ys xs+280 W275 H115
 Gui, 19:Add, Text, ys+15 xs+10, %w_Lang015%:
 Gui, 19:Add, Text,, %c_Lang017%:
 Gui, 19:Add, Edit, ys+15 xs+140 W120 R1 vEdRept
@@ -6783,21 +6774,9 @@ Gui, Submit, NoHide
 Script := (TabControl = 2) ? ComSc : ScLet
 Gui, 30:+owner1 -MinimizeBox +E0x00000400 +hwndCmdWin
 Gui, 24:+Disabled
-Gui, 30:Add, Button, -Wrap W25 H25 hwndOpenT vOpenT gOpenT
-	ILButton(OpenT, OpenIcon[1] ":" OpenIcon[2])
-Gui, 30:Add, Button, -Wrap W25 H25 ys x+0 hwndSaveT vSaveT gSaveT
-	ILButton(SaveT, SaveIcon[1] ":" SaveIcon[2])
-Gui, 30:Add, Text, W2 H25 ys+2 x+5 0x11
-Gui, 30:Add, Button, -Wrap W25 H25 ys x+4 hwndCutT vCutT gCutT
-	ILButton(CutT, CutIcon[1] ":" CutIcon[2])
-Gui, 30:Add, Button, -Wrap W25 H25 ys x+0 hwndCopyT vCopyT gCopyT
-	ILButton(CopyT, CopyIcon[1] ":" CopyIcon[2])
-Gui, 30:Add, Button, -Wrap W25 H25 ys x+0 hwndPasteT vPasteT gPasteT
-	ILButton(PasteT, PasteIcon[1] ":" PasteIcon[2])
-Gui, 30:Add, Button, -Wrap W25 H25 ys x+0 hwndSelAllT vSelAllT gSelAllT
-	ILButton(SelAllT, CommentIcon[1] ":" CommentIcon[2])
+Gui, 30:Add, Custom, ClassToolbarWindow32 hwndhTbText gTbText 0x0800 0x0100 0x0040
 Gui, 30:Font, s9, Courier New
-Gui, 30:Add, Edit, Section xm vTextEdit gTextEdit WantTab W720 R30, %Script%
+Gui, 30:Add, Edit, Section xm ym+25 vTextEdit gTextEdit WantTab W720 R30, %Script%
 Gui, 30:Font
 Gui, 30:Add, Button, -Wrap Section Default xm y+15 W60 H23 gExpViewOK, %c_Lang020%
 Gui, 30:Add, Button, -Wrap ys W60 H23 gExpViewCancel, %c_Lang021%
@@ -6809,6 +6788,8 @@ SB_SetText("length: " 0, 2)
 SB_SetText("lines: " 0, 3)
 GoSub, TextEdit
 Gui, 30:Show,, %c_Lang013%
+TB_Define(TbText, hTbText, hIL_Icons, DefaultBar.Text, DefaultBar.TextOpt)
+,	TBHwndAll[6] := TbText
 GuiControl, 30:Focus, TextEdit
 return
 
@@ -10290,7 +10271,8 @@ return
 If A_EventInfo = 1
 	return
 
-GuiControl, Move, LVPrev, % "W" A_GuiWidth-20 "H" A_GuiHeight-40
+GuiGetSize(GuiWidth, GuiHeight, 2)
+GuiControl, Move, LVPrev, % "W" GuiWidth "H" GuiHeight-40
 return
 
 28GuiSize:

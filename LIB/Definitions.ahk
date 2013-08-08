@@ -842,7 +842,10 @@ DefaultBar := {FileOpt: "Enabled AutoSize", File: ["New=" w_Lang040 ":42", "Open
 														, "", "Duplicate=Duplicate:13", "CopyTo=Copy to...:8(Enabled WholeDropdown)"
 														, "", "EditColor=Edit Color:3", "EditComm=Edit Comment:5", "FindReplace=Find/Replace:19"]
 			, PrevOpt: "Enabled AutoSize", Preview: ["PrevCopy=Copy:8", "PrevRefresh=Refresh:37"
-														, "", "AutoRefresh=AutoRefresh:37", "OnTop=Always On Top:1", "TabIndent=Indentation:5"]}
+														, "", "AutoRefresh=AutoRefresh:37", "OnTop=Always On Top:1", "TabIndent=Indentation:5"]
+			, TextOpt: "Enabled AutoSize", Text: ["OpenT=Open:43", "SaveT=Save:60"
+														, "", "CutT=Cut:9", "CopyT=Copy:8", "PasteT=Paste:45"
+														, "", "SelAllT=Select All:5", "RemoveT=Delete:10"]}
 Loop, 26
 	KeybdList .= Chr(A_Index+96) "¢" ((A_Index = 1) ? "¢" : "")
 Loop, 26
