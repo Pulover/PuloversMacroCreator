@@ -8,7 +8,7 @@
 ; Forum: http://www.autohotkey.com/board/topic/79763-macro-creator
 ; Version: 4.0.0
 ; Release Date: July, 2013
-; AutoHotkey Version: 1.1.11.01
+; AutoHotkey Version: 1.1.11.02
 ; Copyright © 2012-2013 Rodolfo U. Batista
 ; GNU General Public License 3.0 or higher
 ; <http://www.gnu.org/licenses/gpl-3.0.txt>
