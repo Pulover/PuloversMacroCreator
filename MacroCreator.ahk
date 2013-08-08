@@ -3801,10 +3801,10 @@ Gui, 8:Add, Button, -Wrap W25 H25 ys x+0 hwndPasteT vPasteT gPasteT
 	ILButton(PasteT, PasteIcon[1] ":" PasteIcon[2])
 Gui, 8:Add, Button, -Wrap W25 H25 ys x+0 hwndSelAllT vSelAllT gSelAllT
 	ILButton(SelAllT, CommentIcon[1] ":" CommentIcon[2])
-Gui, 8:Add, Edit, Section xm vTextEdit gTextEdit WantTab W720 R30
+Gui, 8:Add, Edit, Section xm vTextEdit gTextEdit WantTab W710 R30
 ; Options
-Gui, 8:Add, GroupBox, Section W220 H125
-Gui, 8:Add, Radio, -Wrap Group Checked ys+15 xs+10 W200 vRaw gRaw R1, %c_Lang045%
+Gui, 8:Add, GroupBox, Section W220 H125, %c_Lang163%:
+Gui, 8:Add, Radio, -Wrap Group Checked ys+20 xs+10 W200 vRaw gRaw R1, %c_Lang045%
 Gui, 8:Add, Radio, -Wrap W200 vComText gComText R1, %c_Lang046%
 Gui, 8:Add, Radio, -Wrap W200 vClip gClip R1, %c_Lang047%
 Gui, 8:Add, Radio, -Wrap W200 vEditPaste gEditPaste R1, %c_Lang048%
@@ -9634,7 +9634,7 @@ If (TakeAction = "Continue")
 	TakeAction := 0
 Else If (TakeAction = "Stop")
 	StopIt := 1
-Else If (TakeAction = "Break")
+Else If (TimesX = 1) && (TakeAction = "Break")
 	BreakIt++
 Else If (TakeAction = "Prompt")
 {

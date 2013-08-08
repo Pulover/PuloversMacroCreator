@@ -329,6 +329,7 @@
 	c_Lang160 =	Transparent
 	c_Lang161 =	Scale
 	c_Lang162 =	Legge Til "Hvis Setningen"
+	c_Lang163 =	Sende-Modus
 		
 ; Other Windows		
 	t_Lang001 =	Eksportere til AHK

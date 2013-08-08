@@ -329,6 +329,7 @@
 	c_Lang160 =	Transparent
 	c_Lang161 =	Échelle
 	c_Lang162 =	Ajouter "If"
+	c_Lang163 =	Mode D'envoi
 		
 ; Other Windows		
 	t_Lang001 =	Exporter vers AHK

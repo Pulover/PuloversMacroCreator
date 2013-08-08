@@ -329,6 +329,7 @@
 	c_Lang160 =	Transparent
 	c_Lang161 =	Skalier.
 	c_Lang162 =	If-Anweisung hinzufügen
+	c_Lang163 =	Sendebetrieb
 		
 ; Other Windows		
 	t_Lang001 =	Export nach AHK
