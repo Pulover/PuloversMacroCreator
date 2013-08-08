@@ -830,9 +830,9 @@ DefaultBar := {FileOpt: "Enabled AutoSize", File: ["New=" w_Lang040 ":42", "Open
 														, "", "IfSt=If Statement:27", "AsVar=Assign Variable:76", "AsFunc=Functions:21"
 														, "", "IECom=Internet Explorer:26", "ComInt=COM Interface:4", "RunScrLet=Run Scriptlet:77"
 														, "", "SendMsg=Windows Messages:62"]
-			, SetOpt: "Enabled AutoSize", Settings: ["HideMainWin=Hide Main Window:15", "OnScCtrl=Display Controls:48"
+			, SetOpt: "Enabled AutoSize", Settings: ["HideMainWin=Hide Main Window:82", "OnScCtrl=Display Controls:48"
 														, "", "Capt=Capture Keys:71", "CheckHkOn=Always Active:79"
-														, "", "OnFinish=On Finish:20", "SetWin=Context Sensitive Hotkeys:48"
+														, "", "OnFinish=On Finish:20(Enabled WholeDropdown)", "SetWin=Context Sensitive Hotkeys:48"
 														, "", "SaveData=Win:81", "SetJoyButton=Joystick:33"]
 			, EditOpt: "Enabled AutoSize", Edit: ["TabPlus=Add Macro:67", "TabClose=Close Macro:69", "DuplicateList=Duplicate Macro:70"
 														, "", "Import=Import Macro:29", "SaveCurrentList=Save Current Macro:68"

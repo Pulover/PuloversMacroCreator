@@ -58,7 +58,7 @@
 				Gui, chMacro:ListView, InputList%TabCount%
 				GuiCtrlAddTab(TabSel, "Macro" TabCount)
 				GuiAddLV(TabCount)
-				Menu, CopyMenu, Add, Macro%TabCount%, CopyList
+				Menu, CopyTo, Add, Macro%TabCount%, CopyList
 				PMC.LVLoad("InputList" TabCount, PmcCode[A_Index])
 				Gui, chMacro:ListView, InputList%TabCount%
 				ListCount%TabCount% := LV_GetCount()

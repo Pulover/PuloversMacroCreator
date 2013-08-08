@@ -495,10 +495,10 @@ Menu, LangMenu, Check, % Lang_%Lang%
 Gui, +Resize +MinSize310x140 +HwndPMCWinID
 
 Gui, Add, Custom, ClassToolbarWindow32 hwndhTbFile gTbFile 0x0800 0x0100 0x0040 0x0008
-Gui, Add, Custom, ClassToolbarWindow32 hwndhTbRecPlay gTbRecPlay 0x0800 0x0100 0x0040 0x0008 0x1000
-Gui, Add, Custom, ClassToolbarWindow32 hwndhTbCommand 0x0800 0x0100 0x0040 0x0008
-Gui, Add, Custom, ClassToolbarWindow32 hwndhTbSet 0x0800 0x0100 0x0040 0x0008
-Gui, Add, Custom, ClassToolbarWindow32 hwndhTbEdit 0x0800 0x0100 0x0040 0x0008
+Gui, Add, Custom, ClassToolbarWindow32 hwndhTbRecPlay gTbRecPlay 0x0800 0x0100 0x0040 0x0008
+Gui, Add, Custom, ClassToolbarWindow32 hwndhTbCommand gTbCommand 0x0800 0x0100 0x0040 0x0008
+Gui, Add, Custom, ClassToolbarWindow32 hwndhTbSet gTbSet 0x0800 0x0100 0x0040 0x0008
+Gui, Add, Custom, ClassToolbarWindow32 hwndhTbEdit gTbEdit 0x0800 0x0100 0x0040 0x0008
 Gui, Add, Custom, ClassReBarWindow32 hwndhRbMain vcRbMain gRB_Notify 0x0400 0x0040 0x8000
 Gui, Add, Custom, ClassReBarWindow32 hwndhRbMacro vcRbMacro gRB_Notify xm-10 ym+76 -Theme 0x0800 0x0400 0x0040 0x8000 0x0008 ; 0x0004
 
@@ -657,7 +657,7 @@ return
 
 DefineToolbars:
 	TB_Define(TbFile, hTbFile, hIL_Icons, DefaultBar.File, DefaultBar.FileOpt)
-,	TB_Define(TbRecPlay, hTbRecPlay, hIL_Icons, DefaultBar.RecPlay, DefaultBar.RecPlayOpt, 1)
+,	TB_Define(TbRecPlay, hTbRecPlay, hIL_Icons, DefaultBar.RecPlay, DefaultBar.RecPlayOpt)
 ,	TB_Define(TbSet, hTbSet, hIL_Icons, DefaultBar.Settings, DefaultBar.SetOpt)
 ,	TB_Define(TbCommand, hTbCommand, hIL_Icons, DefaultBar.Command, DefaultBar.CommandOpt)
 ,	TB_Define(TbEdit, hTbEdit, hIL_Icons, DefaultBar.Edit, DefaultBar.EditOpt)
@@ -675,12 +675,18 @@ return
 
 TbFile:
 TbRecPlay:
+TbCommand:
+TbSet:
+TbEdit:
 TbPrev:
 TbText:
-TbPtr := %A_ThisLabel%
-,	ErrorLevel := TbPtr.OnNotify(A_EventInfo, MX, MY, Label, ID)
-If (Label)
-	ShowMenu(Label, MX, MY)
+If (A_GuiEvent = "N")
+{
+	TbPtr := %A_ThisLabel%
+	,	ErrorLevel := TbPtr.OnNotify(A_EventInfo, MX, MY, bLabel, ID)
+	If (bLabel)
+		ShowMenu(bLabel, MX, MY)
+}
 return
 
 RB_Notify:
@@ -4064,7 +4070,7 @@ PostMessage, WM_PASTE, 0, 0, Edit1, ahk_id %CmdWin%
 return
 
 SelAllT:
-PostMessage, 0x00B1, 0, StrLen(TextEdit), Edit1, ahk_id %CmdWin%
+PostMessage, 0x00B1, 0, StrLen(TextEdit) + cL0, Edit1, ahk_id %CmdWin%
 return
 
 RemoveT:
@@ -7269,14 +7275,31 @@ GuiContextMenu:
 MouseGetPos,,,, cHwnd, 2
 If (cHwnd = ListID%A_List%)
 	Menu, EditMenu, Show, %A_GuiX%, %A_GuiY%
+Else
+{
+	tbPtr := TB_GetHwnd(cHwnd)
+	If IsObject(tbPtr)
+	{
+		Menu, TbMenu, Add, Customize, Customize
+		Menu, TbMenu, Show
+		Menu, TbMenu, DeleteAll
+	}
+}
+return
+
+Customize:
+tbPtr.Customize()
 return
 
 CopyTo:
 Gui, 1:Submit, NoHide
-Menu, CopyMenu, Show
+Gui, chMacro:Default
+Gui, chMacro:ListView, InputList%A_List%
+Menu, CopyTo, Show
 return
 
 DuplicateList:
+Gui, chMacro:Default
 s_List := A_List
 GoSub, TabPlus
 d_List := TabCount, RowSelection := 0
@@ -7286,11 +7309,14 @@ GoSub, b_Start
 return
 
 CopyList:
+Gui, chMacro:Default
+Gui, chMacro:ListView, InputList%A_List%
 s_List := A_List, d_List := A_ThisMenuItemPos, RowSelection := LV_GetCount("Selected")
 GoSub, CopySelection
 return
 
 CopySelection:
+Gui, chMacro:Default
 RowNumber := 0
 If RowSelection = 0
 {
@@ -7431,7 +7457,7 @@ GuiAddLV(TabCount)
 GuiControl, chMacro:Choose, A_List, %TabCount%
 Gui, chMacro:Submit, NoHide
 GoSub, chMacroGuiSize
-Menu, CopyMenu, Add, Macro%TabCount%, CopyList
+Menu, CopyTo, Add, Macro%TabCount%, CopyList
 GuiControl, 28:+Range1-%TabCount%, OSHK
 
 TabSel:
@@ -7455,7 +7481,7 @@ Gui, chMacro:Submit, NoHide
 If (TabCount = 1)
 	return
 HistoryMacro%A_List% := ""
-Menu, CopyMenu, Delete, Macro%A_List%
+Menu, CopyTo, Delete, Macro%A_List%
 s_Tab := A_List
 Loop, % TabCount - A_List
 {
@@ -7465,7 +7491,7 @@ Loop, % TabCount - A_List
 	Gui, chMacro:ListView, InputList%s_Tab%
 	LV_Delete()
 	PMC.LVLoad("InputList" s_Tab, LV_Data)
-	Menu, CopyMenu, Rename, % "Macro" n_Tab, Macro%s_Tab%
+	Menu, CopyTo, Rename, % "Macro" n_Tab, Macro%s_Tab%
 	s_Tab++
 }
 Gui, chMacro:ListView, InputList%s_Tab%
@@ -7570,9 +7596,9 @@ Loop, %TabCount%
 	Gui, chMacro:ListView, InputList%A_Index%
 	LV_Delete()
 	GuiControl, chMacro:+Redraw, InputList%A_Index%
-	Menu, CopyMenu, Delete, Macro%A_Index%
+	Menu, CopyTo, Delete, Macro%A_Index%
 }
-Menu, CopyMenu, Add, Macro1, CopyList
+Menu, CopyTo, Add, Macro1, CopyList
 return
 
 Order:
@@ -10413,7 +10439,7 @@ Menu, SelectMenu, Add, %s_Lang006%`t%_s%Ctrl+Alt+Q, InvertCheck
 Menu, SelectMenu, Add
 Menu, SelectMenu, Add, %s_Lang007%, SelType
 Menu, SelectMenu, Add, %s_Lang008%, :SelCmdMenu
-Menu, CopyMenu, Add, Macro1, CopyList
+Menu, CopyTo, Add, Macro1, CopyList
 Menu, EditMenu, Add, %m_Lang004%`t%_s%Enter, EditButton
 Menu, EditMenu, Add, %e_Lang001%`t%_s%Ctrl+D, Duplicate
 Menu, EditMenu, Add, %e_Lang003%`t%_s%Ctrl+F, FindReplace
@@ -10423,7 +10449,7 @@ Menu, EditMenu, Default, %m_Lang004%`t%_s%Enter
 Menu, EditMenu, Add
 Menu, EditMenu, Add, %m_Lang002%, :InsertMenu
 Menu, EditMenu, Add, %m_Lang003%, :SelectMenu
-Menu, EditMenu, Add, %e_Lang004%, :CopyMenu
+Menu, EditMenu, Add, %e_Lang004%, :CopyTo
 Menu, EditMenu, Add
 Menu, EditMenu, Add, %e_Lang005%`t%_s%Ctrl+Z, Undo
 Menu, EditMenu, Add, %e_Lang006%`t%_s%Ctrl+Y, Redo
@@ -10681,20 +10707,20 @@ return
 
 OnFinish:
 GuiControl,, OnFinish, %OnFinish%
-Menu, FinishOptMenu, Add, %w_Lang021%, FinishOpt
-Menu, FinishOptMenu, Add, %w_Lang022%, FinishOpt
-Menu, FinishOptMenu, Add, %w_Lang023%, FinishOpt
-Menu, FinishOptMenu, Add, %w_Lang024%, FinishOpt
-Menu, FinishOptMenu, Add, %w_Lang025%, FinishOpt
-Menu, FinishOptMenu, Add, %w_Lang026%, FinishOpt
-Menu, FinishOptMenu, Add, %w_Lang027%, FinishOpt
-Menu, FinishOptMenu, Add, %w_Lang028%, FinishOpt
-Menu, FinishOptMenu, Add, %w_Lang029%, FinishOpt
+Menu, OnFinish, Add, %w_Lang021%, FinishOpt
+Menu, OnFinish, Add, %w_Lang022%, FinishOpt
+Menu, OnFinish, Add, %w_Lang023%, FinishOpt
+Menu, OnFinish, Add, %w_Lang024%, FinishOpt
+Menu, OnFinish, Add, %w_Lang025%, FinishOpt
+Menu, OnFinish, Add, %w_Lang026%, FinishOpt
+Menu, OnFinish, Add, %w_Lang027%, FinishOpt
+Menu, OnFinish, Add, %w_Lang028%, FinishOpt
+Menu, OnFinish, Add, %w_Lang029%, FinishOpt
 
-Menu, FinishOptMenu, Check, % w_Lang02%OnFinishCode%
+Menu, OnFinish, Check, % w_Lang02%OnFinishCode%
 
-Menu, FinishOptMenu, Show
-Menu, FinishOptMenu, DeleteAll
+Menu, OnFinish, Show, %mX%, %mY%
+Menu, OnFinish, DeleteAll
 return
 
 FinishOpt:

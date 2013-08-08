@@ -646,11 +646,29 @@ LV_ColorsMessage(wParam, lParam)
 	}
 }
 
-ShowMenu(Menu, X, Y)
+ShowMenu(Menu, mX, mY)
 {
-	Menu, TestMenu, Add, %Menu% As, %Menu%
-	Menu, TestMenu, Show, %X%, %Y%
-	Menu, TestMenu, DeleteAll
+	global
+	
+	If (Menu = "Open")
+		Menu, RecentMenu, Show, %mX%, %mY%
+	Else If (Menu = "Save")
+	{
+		Menu, TbMenu, Add, %f_Lang004%, SaveAs
+		Menu, TbMenu, Show, %mX%, %mY%
+		Menu, TbMenu, DeleteAll
+	}
+	Else If (Menu = "PlayStart")
+	{
+		Menu, TbMenu, Add, %r_Lang003%, TestRun
+		Menu, TbMenu, Add, %r_Lang004%, RunTimer
+		Menu, TbMenu, Show, %mX%, %mY%
+		Menu, TbMenu, DeleteAll
+	}
+	Else If (Menu = "OnFinish")
+		GoSub, OnFinish
+	Else
+		Menu, %Menu%, Show, %mX%, %mY%
 }
 
 ShowChevronMenu(rbPtr, BandID, X="", Y="")

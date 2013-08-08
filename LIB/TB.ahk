@@ -25,7 +25,7 @@ TB_GetSize(tbPtr)
 	return tbWidth
 }
 
-TB_Messages(wParam, lParam, msg, hwnd)
+TB_Messages(wParam, lParam)
 {
 	tbPtr := TB_GetHwnd(lParam)
     tbPtr.OnMessage(wParam)
