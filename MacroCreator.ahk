@@ -2356,8 +2356,8 @@ If A_ThisMenuItem = Microsoft MSDN
 return
 
 Help:
-IfExist, MacroCreator_Help.chm
-	Run, MacroCreator_Help.chm
+IfExist, %A_ScriptDir%\MacroCreator_Help.chm
+	Run, %A_ScriptDir%\MacroCreator_Help.chm
 Else
 	Run, http://www.macrocreator.com/Docs
 return
@@ -2515,7 +2515,7 @@ Gui, 5:Add, UpDown, 0x80 Range0-999999999, 1
 Gui, 5:Add, GroupBox, Section xm W250 H125
 Gui, 5:Add, Text, ys+15 xs+10, %w_Lang015%:
 Gui, 5:Add, Text,, %c_Lang017%:
-Gui, 5:Add, Edit, ys+15 xs+110 W120 R1 vEdRept
+Gui, 5:Add, Edit, ys+15 xs+120 W120 R1 vEdRept
 Gui, 5:Add, UpDown, vTimesX 0x80 Range1-999999999, 1
 Gui, 5:Add, Edit, W120 vDelayC
 Gui, 5:Add, UpDown, vDelayX 0x80 Range0-999999999, %DelayM%
@@ -4084,7 +4084,7 @@ Gui, 3:Add, Tab2, W305 H0 vTabControl AltSubmit, %c_Lang003%|%c_Lang015%|%c_Lang
 ; Sleep
 Gui, 3:Add, GroupBox, Section xm ym W280 H100
 Gui, 3:Add, Text, ys+15 xs+10, %c_Lang050%:
-Gui, 3:Add, Edit, yp-2 xs+90 W170 vDelayC
+Gui, 3:Add, Edit, yp-2 xs+100 W170 vDelayC
 Gui, 3:Add, UpDown, vDelayX 0x80 Range0-9999999, 300
 Gui, 3:Add, Radio, -Wrap Checked W170 vMsc R1, %c_Lang018%
 Gui, 3:Add, Radio, -Wrap W170 vSec R1, %c_Lang019%
@@ -4914,7 +4914,7 @@ Gui, 19:Add, Checkbox, -Wrap y+5 xs+10 W250 vBreakLoop R1, %c_Lang130%
 Gui, 19:Add, GroupBox, Section ys xs+280 W275 H115
 Gui, 19:Add, Text, ys+15 xs+10, %w_Lang015%:
 Gui, 19:Add, Text,, %c_Lang017%:
-Gui, 19:Add, Edit, ys+15 xs+140 W120 R1 vEdRept
+Gui, 19:Add, Edit, ys+15 xs+145 W120 R1 vEdRept
 Gui, 19:Add, UpDown, vTimesX 0x80 Range1-999999999, 1
 Gui, 19:Add, Edit, W120 vDelayC
 Gui, 19:Add, UpDown, vDelayX 0x80 Range0-999999999, %DelayG%

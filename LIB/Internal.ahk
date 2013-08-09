@@ -115,7 +115,7 @@ CmdHelp()
 	IfExist, MacroCreator_Help.chm
 		Run, hh.exe mk:@MSITStore:MacroCreator_Help.chm::/%Title%
 	Else
-		Run, http://www.autohotkey.net/~Pulover/Docs/%Title%
+		Run, http://www.macrocreator.com/Docs/%Title%
 	return 0
 }
 
