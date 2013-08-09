@@ -701,7 +701,7 @@ If (A_GuiEvent = "N")
 	If (EventCode = -831) ; RBN_HEIGHTCHANGE
 	{
 		RowsCount := RbMain.GetRowCount()
-		MacroOffset := (RowsCount = 2) ? 85 : ((RowsCount = 1) ? 60 : 115)
+		MacroOffset := (RowsCount = 2) ? 90 : ((RowsCount = 1) ? 65 : 120)
 		GuiControl, 1:Move, cRbMacro, % (RowsCount = 2) ? "y55" : (RowsCount = 1 ? "y30" : "y85")
 		GoSub, GuiSize
 	}
@@ -718,10 +718,10 @@ DefineControls:
 GoSub, BuildMacroWin
 GoSub, BuildPrevWin
 GoSub, BuildMixedControls
-	GuiGetSize(gWidth, gHeight), rHeight := gHeight-90, Ideal := TB_GetSize(TbEdit)
+	GuiGetSize(gWidth, gHeight), rHeight := gHeight-120, Ideal := TB_GetSize(TbEdit)
 ,	RbMacro := New Rebar(hRbMacro)
-,	RbMacro.InsertBand(hMacroCh, 0, "NoGripper", 20, "", gWidth, 0, "", rHeight, 0, Ideal)
-,	RbMacro.InsertBand(PrevID, 0, "", 21, "", 0, 0, "", rHeight, 0)
+,	RbMacro.InsertBand(hMacroCh, 0, "NoGripper", 20, "", gWidth/2, 0, "", rHeight, 0, Ideal)
+,	RbMacro.InsertBand(PrevID, 0, "", 21, "", gWidth/2, 0, "", rHeight, 0)
 ,	!ShowPrev ? RbMacro.ModifyBand(2, "Style", "Hidden")
 return
 
@@ -851,51 +851,44 @@ return
 ;##### Capture Keys #####
 
 MainLoop:
-Loop
+If !Capt
+	SetTimer, MainLoop, Off
+If !ListFocus
+	SetTimer, MainLoop, Off
+Input, sKey, M L1, %VirtualKeys%
+If ErrorLevel = NewInput
+	return
+sKey := (ErrorLevel <> "Max") ? SubStr(ErrorLevel, 8) : sKey
+If sKey in %A_Space%,`n,`t
+	return
+If (Asc(sKey) < 192) && ((sKey <> "/") && (sKey <> ".") && (!GetKeyState(sKey, "P")))
+	return
+If ((GetKeyState("RAlt", "P")) && !(HoldRAlt))
+	sKey := "RAlt", HoldRAlt := 1
+If (Asc(sKey) < 192) && ((CaptKDn = 1) || InStr(sKey, "Control") || InStr(sKey, "Shift")
+|| InStr(sKey, "Alt") || InStr(sKey, "Win"))
 {
-	WinWaitActive, ahk_id %PMCWinID%
-	Gui, 1:Submit, NoHide
-	If Capt = 0
-		break
-	If ListFocus
-	{
-		Input, sKey, M L1, %VirtualKeys%
-		If ErrorLevel = NewInput
-			continue
-		sKey := (ErrorLevel <> "Max") ? SubStr(ErrorLevel, 8) : sKey
-		If sKey in %A_Space%,`n,`t
-			continue
-		If (Asc(sKey) < 192) && ((sKey <> "/") && (sKey <> ".") && (!GetKeyState(sKey, "P")))
-			continue
-		If ((GetKeyState("RAlt", "P")) && !(HoldRAlt))
-			sKey := "RAlt", HoldRAlt := 1
-		If (Asc(sKey) < 192) && ((CaptKDn = 1) || InStr(sKey, "Control") || InStr(sKey, "Shift")
-		|| InStr(sKey, "Alt") || InStr(sKey, "Win"))
-		{
-			ScK := GetKeySC(sKey)
-			If Hold%ScK%
-				continue
-			Hotkey, If
-			#If
-			If (sKey = "/")
-				HotKey, ~*VKC1SC730 Up, RecKeyUp, On
-			Else
-				HotKey, ~*%sKey% Up, RecKeyUp, On
-			If (sKey = ".")
-				HotKey, ~*VKC2SC7E0 Up, RecKeyUp, On
-			Hotkey, If
-			#If
-			Hold%ScK% := 1
-			sKey .= " Down"
-		}
-		tKey := sKey, sKey := "{" sKey "}"
-		Gui, 1:Submit, NoHide
-		If Capt = 0
-			break
-		If ListFocus
-			GoSub, InsertRow
-	}
+	ScK := GetKeySC(sKey)
+	If Hold%ScK%
+		return
+	Hotkey, If
+	#If
+	If (sKey = "/")
+		HotKey, ~*VKC1SC730 Up, RecKeyUp, On
+	Else
+		HotKey, ~*%sKey% Up, RecKeyUp, On
+	If (sKey = ".")
+		HotKey, ~*VKC2SC7E0 Up, RecKeyUp, On
+	Hotkey, If
+	#If
+	Hold%ScK% := 1
+	sKey .= " Down"
 }
+tKey := sKey, sKey := "{" sKey "}"
+If !Capt
+	SetTimer, MainLoop, Off
+If ListFocus
+	GoSub, InsertRow
 return
 
 ;##### Recording: #####
@@ -7201,9 +7194,8 @@ Else
 return
 
 Capt:
-Gui, 1:Submit, NoHide
-GuiControl, Focus, InputList%A_List%
-Goto, MainLoop
+SetTimer, MainLoop, % (Capt := !Capt) ? 100 : "Off"
+Input
 return
 
 InputList:
@@ -7220,11 +7212,14 @@ If (A_GuiEvent == "F")
 {
 	Input
 	ListFocus := 1
+	If Capt
+		SetTimer, MainLoop, 100
 }
 If (A_GuiEvent == "f")
 {
 	Input
 	ListFocus := 0
+	SetTimer, MainLoop, Off
 }
 If (A_GuiEvent == "ColClick")
 {
@@ -7543,7 +7538,6 @@ o_AutoKey[A_List] := (Win1 = 1) ? "#" HK_AutoKey : HK_AutoKey
 If (o_AutoKey[A_List] = "#")
 	o_AutoKey[A_List] := "LWin"
 o_ManKey[A_List] := ManKey, o_TimesG[A_List] := TimesO
-OutputDebug, %A_List%: %TimesO%
 GoSub, PrevRefresh
 return
 
