@@ -8,7 +8,7 @@
 		[Forum Thread](http://www.autohotkey.com/board/topic/79763-macro-creator)  
 		
 		Author: Pulover \[Rodolfo U. Batista\]  
-		[rodolfoub@gmail.com](mailto:rodolfoub@gmail.com)  
+		[pulover@macrocreator.com](mailto:pulover@macrocreator.com)  
 		Copyright © 2012-2013 Rodolfo U. Batista  
 		
 		Software License: [GNU General Public License](License.html)  

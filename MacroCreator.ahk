@@ -3,7 +3,7 @@
 ; *****************************
 ; "An Interface-Based Automation Tool & Script Writer."
 ; Author: Pulover [Rodolfo U. Batista]
-; rodolfoub@gmail.com
+; pulover@macrocreator.com
 ; Home: http://www.macrocreator.com
 ; Forum: http://www.autohotkey.com/board/topic/79763-macro-creator
 ; Version: 4.0.0
@@ -2422,7 +2422,7 @@ Gui, 26:Font
 Gui, 26:Font,, Tahoma
 Gui, 26:Add, Link,, <a href="http://www.macrocreator.com">www.macrocreator.com</a>
 Gui, 26:Add, Text,, Author: Pulover [Rodolfo U. Batista]
-Gui, 26:Add, Link, y+0, <a href="mailto:rodolfoub@gmail.com">rodolfoub@gmail.com</a>
+Gui, 26:Add, Link, y+0, <a href="mailto:pulover@macrocreator.com">pulover@macrocreator.com</a>
 Gui, 26:Add, Text, y+0,
 (
 Copyright © 2012-2013 Rodolfo U. Batista
