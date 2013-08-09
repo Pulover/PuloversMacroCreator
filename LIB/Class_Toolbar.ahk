@@ -5,7 +5,7 @@
 ; Author:            Pulover [Rodolfo U. Batista]
 ;                    rodolfoub@gmail.com
 ; AHK version:       1.1.11.00
-; Release date:      20 July 2013
+; Release date:      09 August 2013
 ;
 ;                    Class for AutoHotkey Toolbar custom controls
 ;=======================================================================================
@@ -31,6 +31,7 @@
 ;    GetCount()
 ;    GetHiddenButtons()
 ;    Insert(Position [, Options, Label1[=Text]:Icon[(Options)], Label2[=Text]:Icon[(Options)]...])
+;    LabelToIndex(Label)
 ;    ModifyButton(Button, State [, Set])
 ;    ModifyButtonInfo(Button, Property, Value)
 ;    MoveButton(Button, Target)
@@ -366,6 +367,25 @@ Class Toolbar extends Toolbar.Private
                 return False
         }
         return True
+    }
+;=======================================================================================
+;    Method:             LabelToIndex
+;    Description:        Converts a button label to its index in a toolbar.
+;    Parameters:
+;        Label:          Button's associated label.
+;    Return:             The 1-based index for the button or FALSE if Label is invalid.
+;=======================================================================================
+    LabelToIndex(Label)
+    {
+        For ID, L in this.Labels
+        {
+            If (L = Label)
+            {
+                SendMessage, this.TB_COMMANDTOINDEX, ID, 0,, % "ahk_id " this.tbHwnd
+                return ErrorLevel+1
+            }
+        }
+        return False
     }
 ;=======================================================================================
 ;    Method:             ModifyButton
@@ -934,6 +954,7 @@ Class Toolbar extends Toolbar.Private
         Static TB_AUTOSIZE              := 0x0421
         Static TB_BUTTONCOUNT           := 0x0418
         Static TB_CHECKBUTTON           := 0x0402
+        Static TB_COMMANDTOINDEX        := 0x0419
         Static TB_CUSTOMIZE             := 0x041B
         Static TB_DELETEBUTTON          := 0x0416
         Static TB_ENABLEBUTTON          := 0x0401

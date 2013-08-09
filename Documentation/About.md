@@ -1,5 +1,5 @@
 ﻿# Pulover's Macro Creator
-*An Interface-Based Automation Tool & Script Writer.*
+*The Complete Automation Tool*
 
 [www.macrocreator.com](http://www.macrocreator.com)  
 [Forum Thread](http://www.autohotkey.com/board/topic/79763-macro-creator)  

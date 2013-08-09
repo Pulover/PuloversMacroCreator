@@ -1,7 +1,7 @@
 ﻿; *****************************
 ; :: PULOVER'S MACRO CREATOR ::
 ; *****************************
-; "An Interface-Based Automation Tool & Script Writer."
+; "The Complete Automation Tool"
 ; Author: Pulover [Rodolfo U. Batista]
 ; pulover@macrocreator.com
 ; Home: http://www.macrocreator.com
@@ -604,6 +604,7 @@ Else
 Menu, Tray, Icon
 Gui, 1:Show, % ((WinState) ? "Maximize" : "W900 H630") ((HideWin) ? "Hide" : ""), %AppName% v%CurrentVersion% %CurrentFileName%
 GoSub, LoadData
+MasterCheck()
 Gui, 1:Default
 GuiControl, +ReadOnly, JoyKey
 GoSub, RowCheck
@@ -670,7 +671,7 @@ DefineToolbars:
 ,	RbMain.InsertBand(hAbortKey, 0, "", 17, w_Lang008, 60, 0, "", "", 50)
 ,	RbMain.InsertBand(hPauseKey, 0, "", 18, c_Lang003, 60, 0, "", "", 50)
 ,	TB_Rebar(RbMain, 19, TbEdit, "Break")
-,	RbMain.SetMaxRows(3), TBHwndAll := [TbFile, TbRecPlay, TbCommand, TbSet, TbEdit]
+,	RbMain.SetMaxRows(3), TBHwndAll := [TbFile, TbRecPlay, TbCommand, TbSet, TbEdit, TbPrev]
 return
 
 TbFile:
@@ -801,10 +802,16 @@ TB_Define(TbPrev, hTbPrev, hIL_Icons, DefaultBar.Preview, DefaultBar.PrevOpt)
 ,	sciPrev.SetWrapMode(False)
 ,	sciPrev.SetLexer(200)
 ,	sciPrev.StyleClearAll()
+,	sciPrev.StyleSetFore(11, 0x0086B3)
+,	sciPrev.StyleSetFore(12, 0x990000)
+,	sciPrev.StyleSetFore(13, 0x009B4E)
+,	sciPrev.StyleSetFore(16, 0x008080)
+,	sciPrev.StyleSetFore(15, 0xDD1144)
 ,	sciPrev.SetKeywords(0, SyHi_Com)
-,	sciPrev.SetKeywords(1, SyHi_Param)
-,	sciPrev.StyleSetFore(11, 0x0071E1)
-,	sciPrev.StyleSetFore(12, 0xC10000)
+,	sciPrev.SetKeywords(1, SyHi_Fun)
+,	sciPrev.SetKeywords(2, SyHi_Keys)
+,	sciPrev.SetKeywords(5, SyHi_BIVar)
+,	sciPrev.SetKeywords(4, SyHi_Param)
 ,	sciPrev.SetText("", Preview)
 ,	sciPrev.SetReadOnly(True)
 return
@@ -821,7 +828,6 @@ return
 
 PrevRefresh:
 Gui, 2:Submit, NoHide
-GuiControl, 2:-Redraw, LVPrev
 Preview := LV_Export(A_List)
 ; GuiControl, 2:, LVPrev, %Preview%
 sciPrev.SetReadOnly(False), sciPrev.SetText("", Preview)
@@ -832,7 +838,6 @@ SB_SetText("Macro" A_List ": " o_AutoKey[A_List], 1)
 SB_SetText("Record Keys: " RecKey "/" RecNewKey, 2)
 SB_SetText("CoordMode: " CoordMouse, 3)
 Gui, chMacro:Default
-GuiControl, 2:+Redraw, LVPrev
 return
 
 PrevClose:
@@ -1451,6 +1456,7 @@ SplitPath, CurrentFileName,, wDir
 SetWorkingDir %wDir%
 GoSub, RowCheck
 GoSub, LoadData
+GoSub, PrevRefresh
 GuiControl, chMacro:Focus, InputList%A_List%
 SavePrompt := False
 return
@@ -1479,8 +1485,7 @@ Gui, 1:Submit, NoHide
 GoSub, LoadData
 GoSub, RowCheck
 GuiControl, chMacro:Focus, InputList%A_List%
-If WinExist("ahk_id " PrevID)
-	GoSub, PrevRefresh
+GoSub, PrevRefresh
 GoSub, b_Start
 GoSub, RecentFiles
 GoSub, chMacroGuiSize
@@ -1519,6 +1524,7 @@ IfExist %CurrentFileName%
         return
     }
 }
+Gui, chMacro:Default
 Loop, %TabCount%
 {
 	If (ListCount%A_Index% = 0)
@@ -2178,8 +2184,7 @@ GoSub, KeepMenuCheck
 GoSub, LoadLang
 IniWrite, %MultInst%, %IniFilePath%, Options, MultInst
 GuiControl, 1:, CoordTip, CoordMode: %CoordMouse%
-If WinExist("ahk_id " PrevID)
-	GoSub, PrevRefresh
+GoSub, PrevRefresh
 If WinExist("ahk_id " PMCOSC)
 	GuiControl, 28:, OSProgB, %ShowProgBar%
 GoSub, RowCheck
@@ -2417,7 +2422,7 @@ Gui, 26:Font, Bold s12, Tahoma
 Gui, 26:Add, Text, yp x+10, PULOVER'S MACRO CREATOR
 Gui, 26:Font
 Gui, 26:Font, Italic, Tahoma
-Gui, 26:Add, Text, y+0, An Interface-Based Automation Tool && Script Writer.
+Gui, 26:Add, Text, y+0 w300, The Complete Automation Tool
 Gui, 26:Font
 Gui, 26:Font,, Tahoma
 Gui, 26:Add, Link,, <a href="http://www.macrocreator.com">www.macrocreator.com</a>
@@ -3880,7 +3885,7 @@ Else
 	Window = A
 Gui, 8:Show,, %c_Lang002%
 TB_Define(TbText, hTbText, hIL_Icons, DefaultBar.Text, DefaultBar.TextOpt)
-,	TBHwndAll[6] := TbText
+,	TBHwndAll[7] := TbText
 GuiControl, 8:Focus, TextEdit
 Input
 Tooltip
@@ -6795,7 +6800,7 @@ SB_SetText("lines: " 0, 3)
 GoSub, TextEdit
 Gui, 30:Show,, %c_Lang013%
 TB_Define(TbText, hTbText, hIL_Icons, DefaultBar.Text, DefaultBar.TextOpt)
-,	TBHwndAll[6] := TbText
+,	TBHwndAll[7] := TbText
 GuiControl, 30:Focus, TextEdit
 return
 
@@ -7198,33 +7203,32 @@ return
 
 InputList:
 Gui, chMacro:ListView, InputList%A_List%
-StringCaseSense, On
-If ((A_GuiEvent = "I") || (A_GuiEvent = "Normal") || (A_GuiEvent = "A")
-|| (A_GuiEvent = "C") || (A_GuiEvent = "K") || (A_GuiEvent = "F")
-|| (A_GuiEvent = "f"))
+If ((A_GuiEvent == "I") || (A_GuiEvent == "Normal") || (A_GuiEvent == "A")
+|| (A_GuiEvent == "C") || (A_GuiEvent == "K") || (A_GuiEvent == "F")
+|| (A_GuiEvent == "f"))
 {
 	Gui, 2:Submit, NoHide
-	If (WinExist("ahk_id " PrevID) && (AutoRefresh = 1))
+	If (AutoRefresh = 1)
 		GoSub, PrevRefresh
 }
-If A_GuiEvent = F
+If (A_GuiEvent == "F")
 {
 	Input
 	ListFocus := 1
 }
-If A_GuiEvent = f
+If (A_GuiEvent == "f")
 {
 	Input
 	ListFocus := 0
 }
-If A_GuiEvent = ColClick
+If (A_GuiEvent == "ColClick")
 {
-	If A_EventInfo = 1
+	If (A_EventInfo = 1)
 	{
 		ShowLoopIfMark := !ShowLoopIfMark
 		GoSub, RowCheck
 	}
-	Else If A_EventInfo = 2
+	Else If (A_EventInfo = 2)
 	{
 		KeyWait, LButton
 		KeyWait, LButton, D T%DClickSpd%
@@ -7247,7 +7251,7 @@ If A_GuiEvent = ColClick
 		SelectByType(SelType, A_EventInfo)
 	}
 }
-If A_GuiEvent = D
+If (A_GuiEvent == "D")
 {
 	If (AllowRowDrag)
 	{
@@ -7256,13 +7260,13 @@ If A_GuiEvent = D
 		GoSub, RowCheck
 	}
 }
-If A_GuiEvent = RightClick
+If (A_GuiEvent == "RightClick")
 {
 	RowNumber = 0
 ,	RowSelection := LV_GetCount("Selected")
 ,	RowNumber := LV_GetNext(RowNumber - 1)
 }
-If A_GuiEvent <> DoubleClick
+If (A_GuiEvent <> "DoubleClick")
 	return
 RowNumber := LV_GetNext()
 If !RowNumber
@@ -7469,8 +7473,7 @@ GoSub, chMacroGuiSize
 GoSub, LoadData
 GoSub, RowCheck
 GuiControl, 28:, OSHK, %A_List%
-If WinExist("ahk_id " PrevID)
-	GoSub, PrevRefresh
+GoSub, PrevRefresh
 return
 
 TabClose:
@@ -7514,8 +7517,7 @@ Gui, chMacro:Submit, NoHide
 GoSub, GuiSize
 GoSub, LoadData
 GoSub, RowCheck
-If WinExist("ahk_id " PrevID)
-	GoSub, PrevRefresh
+GoSub, PrevRefresh
 return
 
 SaveData:
@@ -7537,8 +7539,7 @@ o_AutoKey[A_List] := (Win1 = 1) ? "#" HK_AutoKey : HK_AutoKey
 If (o_AutoKey[A_List] = "#")
 	o_AutoKey[A_List] := "LWin"
 o_ManKey[A_List] := ManKey, o_TimesG[A_List] := TimesO
-If WinExist("ahk_id " PrevID)
-	GoSub, PrevRefresh
+GoSub, PrevRefresh
 return
 
 LoadData:
@@ -8910,7 +8911,6 @@ return
 h_Del:
 Gui, chMacro:Default
 Gui, chMacro:ListView, InputList%A_List%
-OutputDebug, % A_List
 RowNumber = 0
 Loop
 {

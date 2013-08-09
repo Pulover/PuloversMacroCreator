@@ -1,6 +1,6 @@
 ﻿/*!
 	Library: Pulover's Macro Creator
-		*An Interface-Based Automation Tool & Script Writer.*
+		*The Complete Automation Tool*
 		
 		Version: 4.0.0  
 		
