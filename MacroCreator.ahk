@@ -4320,7 +4320,12 @@ If (s_Caller = "Edit")
 		StringReplace, Par%A_Index%,  Par%A_Index%, ¢, ```,, All
 	}
 	If (Type = cType7)
-		GuiControl, 12:, TimesX, %TimesX%
+	{
+		If InStr(TimesX, "%")
+			GuiControl, 12:, EdRept, %TimesX%
+		Else
+			GuiControl, 12:, TimesX, %TimesX%
+	}
 	If (Type = cType38)
 	{
 		GuiControl, 12:, LParamsFile, %Details%
@@ -7305,10 +7310,12 @@ return
 DuplicateList:
 Gui, chMacro:Default
 s_List := A_List
+GuiControlGet, c_Time, 1:, TimesG
 GoSub, TabPlus
 d_List := TabCount, RowSelection := 0
 GoSub, CopySelection
 HistoryMacro%A_List% := new LV_Rows()
+GuiControl, 1:, TimesG, %c_Time%
 GoSub, b_Start
 return
 
@@ -7451,7 +7458,6 @@ return
 
 TabPlus:
 Gui, 1:Submit, NoHide
-Gui, chMacro:Submit, NoHide
 TabCount++
 GuiCtrlAddTab(TabSel, "Macro" TabCount)
 Gui, chMacro:ListView, InputList%TabCount%
@@ -7459,7 +7465,6 @@ HistoryMacro%TabCount% := new LV_Rows(), HistoryMacro%TabCount%.Slot[1] := ""
 Gui, chMacro:ListView, InputList%A_List%
 GuiAddLV(TabCount)
 GuiControl, chMacro:Choose, A_List, %TabCount%
-Gui, chMacro:Submit, NoHide
 GoSub, chMacroGuiSize
 Menu, CopyTo, Add, Macro%TabCount%, CopyList
 GuiControl, 28:+Range1-%TabCount%, OSHK
@@ -7521,7 +7526,6 @@ GoSub, PrevRefresh
 return
 
 SaveData:
-Gui, chMacro:Submit, NoHide
 Gui, 1:Default
 GuiControlGet, JHKOn, 1:, JoyHK
 If (JHKOn = 1)
@@ -7539,28 +7543,28 @@ o_AutoKey[A_List] := (Win1 = 1) ? "#" HK_AutoKey : HK_AutoKey
 If (o_AutoKey[A_List] = "#")
 	o_AutoKey[A_List] := "LWin"
 o_ManKey[A_List] := ManKey, o_TimesG[A_List] := TimesO
+OutputDebug, %A_List%: %TimesO%
 GoSub, PrevRefresh
 return
 
 LoadData:
-Gui, chMacro:Submit, NoHide
 Gui, 1:Default
 If InStr(o_AutoKey[A_List], "Joy")
 {
-	GuiControl,, JoyHK, 1
-	GuiControl,, AutoKey
+	GuiControl, 1:, JoyHK, 1
+	GuiControl, 1:, AutoKey
 	GoSub, SetJoyHK
 }
 Else
 {
-	GuiControl,, JoyHK, 0
-	GuiControl,, JoyKey
-	GuiControl,, AutoKey, % LTrim(o_AutoKey[A_List], "#")
+	GuiControl, 1:, JoyHK, 0
+	GuiControl, 1:, JoyKey
+	GuiControl, 1:, AutoKey, % LTrim(o_AutoKey[A_List], "#")
 	GoSub, SetNoJoy
 }
-GuiControl,, Win1, % (InStr(o_AutoKey[A_List], "#")) ? 1 : 0
-GuiControl,, ManKey, % o_ManKey[A_List]
-GuiControl,, TimesG, % (o_TimesG[A_List] = "") ? 1 : o_TimesG[A_List]
+GuiControl, 1:, Win1, % (InStr(o_AutoKey[A_List], "#")) ? 1 : 0
+GuiControl, 1:, ManKey, % o_ManKey[A_List]
+GuiControl, chTimes:, TimesG, % (o_TimesG[A_List] = "") ? 1 : o_TimesG[A_List]
 return
 
 GetHotkeys:
