@@ -833,7 +833,7 @@ DefaultBar := {FileOpt: "Enabled AutoSize", File: ["New=" w_Lang040 ":42", "Open
 			, SetOpt: "Enabled AutoSize", Settings: ["HideMainWin=Hide Main Window:82", "OnScCtrl=Display Controls:48"
 														, "", "Capt=Capture Keys:71", "CheckHkOn=Always Active:79"
 														, "", "OnFinish=On Finish:20(Enabled WholeDropdown)", "SetWin=Context Sensitive Hotkeys:48"
-														, "", "SaveData=Win:81", "SetJoyButton=Joystick:33"]
+														, "", "WinKey=Win:81", "SetJoyButton=Joystick:33"]
 			, EditOpt: "Enabled AutoSize", Edit: ["TabPlus=Add Macro:67", "TabClose=Close Macro:69", "DuplicateList=Duplicate Macro:70"
 														, "", "Import=Import Macro:29", "SaveCurrentList=Save Current Macro:68"
 														, "" , "MoveUp=Move Up:41", "MoveDn=Move Down:40"

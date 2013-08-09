@@ -503,7 +503,8 @@ Gui, Add, Custom, ClassReBarWindow32 hwndhRbMain vcRbMain gRB_Notify 0x0400 0x00
 Gui, Add, Custom, ClassReBarWindow32 hwndhRbMacro vcRbMacro gRB_Notify xm-10 ym+76 -Theme 0x0800 0x0400 0x0040 0x8000 0x0008 ; 0x0004
 
 Gui, Add, Hotkey, hwndhAutoKey vAutoKey gSaveData, % o_AutoKey[1]
-Gui, Add, Edit, hwndhJoyKey vJoyKey Hidden
+Gui, Add, ListBox, hwndhJoyKey vJoyKey r1 ReadOnly Hidden
+SendMessage, 0x01A0, 0, 22,, ahk_id %hJoyKey%
 Gui, Add, Hotkey, hwndhManKey vManKey gWaitKeys Limit190, % o_ManKey[1]
 Gui, Add, Hotkey, hwndhAbortKey vAbortKey, %AbortKey%
 Gui, Add, Hotkey, hwndhPauseKey vPauseKey, %PauseKey%
@@ -531,7 +532,7 @@ Gui, Add, Button, -Wrap Default ys-4 x+5 W25 H23 hwndEditButton vEditButton gEdi
 Gui, Add, Text, W2 H25 ys-3 x+5 0x11 vSeparator4
 Gui, Add, Text, -Wrap ys-6 x+5 W100 vContextTip gSetWin cBlue, #IfWin: %IfDirectContext%
 Gui, Add, Text, -Wrap yp+16 W100 vCoordTip gOptions, CoordMode: %CoordMouse%
-GuiControl,, Win1, % (InStr(o_AutoKey[1], "#")) ? 1 : 0
+GuiControl,, WinKey, % (InStr(o_AutoKey[1], "#")) ? 1 : 0
 Gui, Submit
 Gui, Show, W900 H630 Hide
 GoSub, b_Start
@@ -545,7 +546,6 @@ OnMessage(WM_LBUTTONDOWN, "DragToolbar")
 OnMessage(WM_ACTIVATE, "WinCheck")
 OnMessage(WM_COPYDATA, "Receive_Params")
 OnMessage(WM_HELP, "CmdHelp")
-OnMessage(WM_CTLCOLORSTATIC, "WM_CTLCOLOR" )
 OnMessage(0x404, "AHK_NOTIFYICON")
 If KeepHkOn
 	Menu, Tray, Check, %w_Lang014%
@@ -606,7 +606,6 @@ Gui, 1:Show, % ((WinState) ? "Maximize" : "W900 H630") ((HideWin) ? "Hide" : "")
 GoSub, LoadData
 MasterCheck()
 Gui, 1:Default
-GuiControl, +ReadOnly, JoyKey
 GoSub, RowCheck
 If (HideWin)
 {
@@ -7193,9 +7192,16 @@ Else
 	Gui, 28:-Caption
 return
 
+WinKey:
+OnScCtrl:
+HideMainWin:
+TB_Check(tbSet, A_ThisLabel, %A_ThisLabel% := !%A_ThisLabel%)
+return
+
 Capt:
 SetTimer, MainLoop, % (Capt := !Capt) ? 100 : "Off"
 Input
+TB_Check(tbSet, "Capt", Capt)
 return
 
 InputList:
@@ -7522,10 +7528,10 @@ return
 
 SaveData:
 Gui, 1:Default
-GuiControlGet, JHKOn, 1:, JoyHK
-If (JHKOn = 1)
+If (JoyHK = 1)
 {
-	GuiControlGet, HK_AutoKey, 1:, JoyKey
+	GuiControlGet, HK_AutoKey, 1:, %hJoyKey%
+	OutputDebug, % "joy: " HK_AutoKey
 	If !RegExMatch(HK_AutoKey, "i)Joy\d+$")
 		HK_AutoKey := ""
 }
@@ -7533,8 +7539,8 @@ Else
 	GuiControlGet, HK_AutoKey, 1:, AutoKey
 GuiControlGet, ManKey, 1:, ManKey
 GuiControlGet, TimesO, chTimes:, TimesG
-GuiControlGet, Win1, 1:, Win1
-o_AutoKey[A_List] := (Win1 = 1) ? "#" HK_AutoKey : HK_AutoKey
+GuiControlGet, WinKey, 1:, WinKey
+o_AutoKey[A_List] := (WinKey = 1) ? "#" HK_AutoKey : HK_AutoKey
 If (o_AutoKey[A_List] = "#")
 	o_AutoKey[A_List] := "LWin"
 o_ManKey[A_List] := ManKey, o_TimesG[A_List] := TimesO
@@ -7545,18 +7551,18 @@ LoadData:
 Gui, 1:Default
 If InStr(o_AutoKey[A_List], "Joy")
 {
-	GuiControl, 1:, JoyHK, 1
+	TB_Check(tbSet, "SetJoyButton", JoyHK := 1)
 	GuiControl, 1:, AutoKey
 	GoSub, SetJoyHK
 }
 Else
 {
-	GuiControl, 1:, JoyHK, 0
+	TB_Check(tbSet, "SetJoyButton", JoyHK := 0)
 	GuiControl, 1:, JoyKey
 	GuiControl, 1:, AutoKey, % LTrim(o_AutoKey[A_List], "#")
 	GoSub, SetNoJoy
 }
-GuiControl, 1:, Win1, % (InStr(o_AutoKey[A_List], "#")) ? 1 : 0
+GuiControl, 1:, WinKey, % (InStr(o_AutoKey[A_List], "#")) ? 1 : 0
 GuiControl, 1:, ManKey, % o_ManKey[A_List]
 GuiControl, chTimes:, TimesG, % (o_TimesG[A_List] = "") ? 1 : o_TimesG[A_List]
 return
@@ -8373,44 +8379,44 @@ Gui, 6:Destroy
 return
 
 SetJoyButton:
-Gui, 1:Submit, NoHide
+TB_Check(tbSet, "SetJoyButton", JoyHK := !JoyHK)
 If (JoyHK = 1)
 {
 	GoSub, SetJoyHK
 	If (JoyKey = "")
-		GuiControl,, JoyKey, %t_Lang097%
-	GuiControl, Focus, JoyKey
+		GuiControl, 1:, JoyKey, |%t_Lang097%
+	GuiControl, 1:Focus, JoyKey
 }
 Else
 	GoSub, SetNoJoy
 return
 
 CaptureJoyB:
-GuiControl,, JoyKey, %A_ThisHotkey%
+GuiControl, 1:, JoyKey, |%A_ThisHotkey%
 GoSub, SaveData
 return
 
 SetJoyHK:
 Gui, chMacro:Submit, NoHide
-Gui, 1:Default
-GuiControl, Hide, AutoKey
-GuiControl, Disable, AutoKey
-GuiControl,, Win1, 0
-GuiControl, Disable, Win1
+GuiControl, 1:Hide, AutoKey
+GuiControl, 1:Disable, AutoKey
+GuiControl, 1:, WinKey, 0
+GuiControl, 1:Disable, WinKey
 If RegExMatch(o_AutoKey[A_List], "i)Joy\d+$")
-	GuiControl,, JoyKey, % o_AutoKey[A_List]
-GuiControl, Show, JoyKey
-ActivateHotkeys("", "", "", "", 1)
+	GuiControl, 1:, JoyKey, % "|" o_AutoKey[A_List]
+GuiControl, 1:Show, JoyKey
+aBand := RbMain.IDToIndex(13), RbMain.ModifyBand(aBand, "Child", hJoyKey)
+,	ActivateHotkeys("", "", "", "", 1)
 return
 
 SetNoJoy:
 Gui, chMacro:Submit, NoHide
-Gui, 1:Default
-GuiControl, Enable, AutoKey
-GuiControl, Show, AutoKey
-GuiControl, Hide, JoyKey
-GuiControl, Enable, Win1
-ActivateHotkeys("", "", "", "", 0)
+GuiControl, 1:Enable, AutoKey
+GuiControl, 1:Show, AutoKey
+GuiControl, 1:Hide, JoyKey
+GuiControl, 1:Enable, WinKey
+aBand := RbMain.IDToIndex(13), RbMain.ModifyBand(aBand, "Child", hAutoKey)
+,	ActivateHotkeys("", "", "", "", 0)
 return
 
 SetWin:
@@ -8858,12 +8864,7 @@ GuiControl, 28:, OSSlow, %SlowKeyOn%
 return
 
 CheckHkOn:
-Gui, 1:Submit, NoHide
-If !A_GuiControl
-{
-	KeepHkOn := !KeepHkOn
-	GuiControl,, KeepHkOn, %KeepHkOn%
-}
+TB_Check(tbSet, "CheckHkOn", KeepHkOn := !KeepHkOn)
 If (KeepHkOn = 1)
 {
 	GoSub, KeepHkOn
@@ -9896,7 +9897,7 @@ IfWinExist
 GuiControl, 1:, CoordTip, CoordMode: %CoordMouse%
 GuiControl, 1:, ContextTip, #IfWin: %IfDirectContext%
 GuiControl, 1:, AbortKey, %AbortKey%
-GuiControl, 1:, Win1, 0
+GuiControl, 1:, WinKey, 0
 ; GuiControl, 1:, PauseKey, 0
 GuiControl, 1:, DelayG, 0
 GuiControl, 1:, KeepHkOn, 0

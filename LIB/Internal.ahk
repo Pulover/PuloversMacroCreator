@@ -170,20 +170,6 @@ EditCtrlHasFocus()
 	return ctrl
 }
 
-WM_CTLCOLOR(wParam, lParam)
-{
-	global GuiA := ActiveGui(WinActive("A"))
-	Static hBrush
-	BG_COLOR   := 0xFFFFFF
-	IfEqual, hBrush,, SetEnv, hBrush, % DllCall("CreateSolidBrush", UInt, BG_COLOR)
-	GuiControlGet, ctrl, Name, %lParam%
-	If (ctrl = "JoyKey") || (ctrl = "LVPrev")
-	{
-		DllCall("SetBkColor", UInt,wParam, UInt, BG_COLOR)
-		Return hBrush
-	}
-}
-
 SCI_NOTIFY(wParam, lParam, msg, hwnd, sciObj) {
 
 	line := sciObj.LineFromPosition(sciObj.position)
