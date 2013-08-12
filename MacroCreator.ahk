@@ -164,7 +164,7 @@ IniRead, DrawButton, %IniFilePath%, Options, DrawButton, RButton
 IniRead, OnRelease, %IniFilePath%, Options, OnRelease, 1
 IniRead, OnEnter, %IniFilePath%, Options, OnEnter, 0
 IniRead, LineW, %IniFilePath%, Options, LineW, 2
-IniRead, ScreenDir, %IniFilePath%, Options, ScreenDir, %A_AppData%\MacroCreator\Screenshots
+IniRead, ScreenDir, %IniFilePath%, Options, ScreenDir, %SettingsFolder%\Screenshots
 IniRead, DefaultMacro, %IniFilePath%, Options, DefaultMacro, %A_Space%
 IniRead, StdLibFile, %IniFilePath%, Options, StdLibFile, %A_Space%
 IniRead, KeepDefKeys, %IniFilePath%, Options, KeepDefKeys, 0
