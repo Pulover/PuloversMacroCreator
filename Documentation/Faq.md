@@ -8,6 +8,7 @@
 * [Can I execute a custom action based on Pixel/Image search result?](#can-i-execute-a-custom-action-based-on-pixel/image-search-result)
 * [Can I run a Macro in a timed interval?](#can-i-run-a-macro-in-a-timed-interval)
 * [Can I schedule a Macro to run when I want?](#can-i-schedule-a-macro-to-run-when-i-want)
+* [Is Macro Creator Portable?](#is-macro-creator-portable)
 * [Which command line parameters are supported?](#which-command-line-parameters-are-supported)
 * [Can I execute an action every time a certain event occurs?](#can-i-execute-an-action-every-time-a-certain-event-occurs)
 * [Can I play other Macros while Timer is running?](#can-i-play-other-macros-while-timer-is-running)
@@ -63,6 +64,10 @@ You can use Window's Task Scheduler to run Macro Creator from a command line usi
 > MacroCreator.exe SavedFile.pmc -a
 
 You can also export the Macro to an AutoHotkey script and run it using Window's Task Scheduler (you must have AutoHotkey installed).  
+
+### Is Macro Creator Portable?
+
+All settings are saved to *MacroCreator.ini* and User Global Variables are saved to *UserGlobalVars.ini*, both files are located inside *AppData\MacroCreator* by default. To make **Macro Creator** portable you can copy those files to the same directory of *MacroCreator.exe* and it will use its own folder instead of AppData.
 
 ### Which command line parameters are supported?
 

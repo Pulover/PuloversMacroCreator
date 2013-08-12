@@ -9,6 +9,10 @@
 * [Misc.](#misc.)
 * [User Global Variables](#user-global-variables)
 
+## Introduction
+
+All settings are saved to *MacroCreator.ini* and User Global Variables are saved to *UserGlobalVars.ini*, both files are located inside *AppData\MacroCreator* by default. To make **Macro Creator** portable you can copy those files to the same directory of *MacroCreator.exe* and it will use its own folder instead of AppData.
+
 ## Recording
 
 See [Record Page](p2-Record.html#recording-options).

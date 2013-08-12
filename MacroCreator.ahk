@@ -107,11 +107,11 @@ CurrentVersion := "4.0.0", ReleaseDate := "July, 2013"
 
 ;##### Ini File Read #####
 
-If ((A_IsCompiled) && !InStr(FileExist(A_AppData "\MacroCreator"), "D"))
+If ((!FileExist(A_ScriptDir "\MacroCreator.ini") && !InStr(FileExist(A_AppData "\MacroCreator"), "D"))
 	FileCreateDir, %A_AppData%\MacroCreator
 
-IniFilePath := ((A_IsCompiled) ? A_AppData "\MacroCreator" : A_ScriptDir) "\MacroCreator.ini"
-,	UserVarsPath := ((A_IsCompiled) ? A_AppData "\MacroCreator" : A_ScriptDir) "\UserGlobalVars.ini"
+IniFilePath := (FileExist(A_ScriptDir "\MacroCreator.ini") ? A_ScriptDir : A_AppData "\MacroCreator") "\MacroCreator.ini"
+,	UserVarsPath := (FileExist(A_ScriptDir "\MacroCreator.ini") ? A_ScriptDir : A_AppData "\MacroCreator") "\UserGlobalVars.ini"
 
 IniRead, Lang, %IniFilePath%, Language, Lang
 IniRead, AutoKey, %IniFilePath%, HotKeys, AutoKey, F3|F4|F5|F6|F7
