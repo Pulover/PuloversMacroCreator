@@ -91,11 +91,11 @@ Menu, Tray, Icon, %DefaultIcon%, 1, 1
 
 CurrentVersion := "3.8.3", ReleaseDate := "August, 2013"
 
-If ((!FileExist(A_ScriptDir "\MacroCreator.ini") && !InStr(FileExist(A_AppData "\MacroCreator"), "D"))
+If (!FileExist(A_ScriptDir "\MacroCreator.ini") && !InStr(FileExist(A_AppData "\MacroCreator"), "D"))
 	FileCreateDir, %A_AppData%\MacroCreator
 
-IniFilePath := (FileExist(A_ScriptDir "\MacroCreator.ini") ? A_ScriptDir : A_AppData "\MacroCreator") "\MacroCreator.ini"
-,	UserVarsPath := (FileExist(A_ScriptDir "\MacroCreator.ini") ? A_ScriptDir : A_AppData "\MacroCreator") "\UserGlobalVars.ini"
+SettingsFolder := FileExist(A_ScriptDir "\MacroCreator.ini") ? A_ScriptDir : A_AppData "\MacroCreator"
+,	IniFilePath := SettingsFolder "\MacroCreator.ini", UserVarsPath := SettingsFolder "\UserGlobalVars.ini"
 
 #Include LIB\Definitions.ahk
 
@@ -9444,7 +9444,7 @@ pb_IECOM_Set:
 	Catch e
 	{
 		MsgBox, 20, %d_Lang007%, % d_Lang064 " Macro" mMacroOn ", " d_Lang065 " " mListRow
-			.	"`n" d_Lang007 ": " e.Message "`n" d_Lang066 ": " e.Extra "`n`n" d_Lang035
+			.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" e.Extra "`n`n" d_Lang035
 		IfMsgBox, No
 		{
 			StopIt := 1
@@ -9495,7 +9495,7 @@ pb_IECOM_Get:
 	Catch e
 	{
 		MsgBox, 20, %d_Lang007%, % d_Lang064 " Macro" mMacroOn ", " d_Lang065 " " mListRow
-			.	"`n" d_Lang007 ": " e.Message "`n" d_Lang066 ": " e.Extra "`n`n" d_Lang035
+			.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" e.Extra "`n`n" d_Lang035
 		IfMsgBox, No
 		{
 			StopIt := 1
@@ -9539,7 +9539,7 @@ pb_COMInterface:
 		Catch e
 		{
 			MsgBox, 20, %d_Lang007%, % d_Lang064 " Macro" mMacroOn ", " d_Lang065 " " mListRow
-				.	"`n" d_Lang007 ": " e.Message "`n" d_Lang066 ": " e.Extra "`n`n" d_Lang035
+				.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" e.Extra "`n`n" d_Lang035
 			IfMsgBox, No
 			{
 				StopIt := 1
