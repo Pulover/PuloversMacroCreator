@@ -25,10 +25,12 @@ TB_GetSize(tbPtr)
 	return tbWidth
 }
 
-TB_Check(tbPtr, tbButton, Set)
+TB_Edit(tbPtr, tbButton, Check, Enable="")
 {
 	Index := tbPtr.LabelToIndex(tbButton)
-,	tbPtr.ModifyButton(Index, "Check", Set)
+,	tbPtr.ModifyButton(Index, "Check", Check)
+	If (Enable <> "")
+		tbPtr.ModifyButton(Index, "Enable", Enable)
 }
 
 TB_Messages(wParam, lParam)

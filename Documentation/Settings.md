@@ -2,6 +2,7 @@
 
 ## Table of Contents
 
+* [Introduction](#introduction)
 * [Recording](#recording)
 * [Playback](#playback)
 * [Defaults](#defaults)

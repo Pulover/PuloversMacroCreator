@@ -107,7 +107,7 @@ CurrentVersion := "4.0.0", ReleaseDate := "July, 2013"
 
 ;##### Ini File Read #####
 
-If ((!FileExist(A_ScriptDir "\MacroCreator.ini") && !InStr(FileExist(A_AppData "\MacroCreator"), "D"))
+If (!FileExist(A_ScriptDir "\MacroCreator.ini") && !InStr(FileExist(A_AppData "\MacroCreator"), "D"))
 	FileCreateDir, %A_AppData%\MacroCreator
 
 IniFilePath := (FileExist(A_ScriptDir "\MacroCreator.ini") ? A_ScriptDir : A_AppData "\MacroCreator") "\MacroCreator.ini"
@@ -7195,13 +7195,13 @@ return
 WinKey:
 OnScCtrl:
 HideMainWin:
-TB_Check(tbSet, A_ThisLabel, %A_ThisLabel% := !%A_ThisLabel%)
+TB_Edit(tbSet, A_ThisLabel, %A_ThisLabel% := !%A_ThisLabel%)
 return
 
 Capt:
 SetTimer, MainLoop, % (Capt := !Capt) ? 100 : "Off"
 Input
-TB_Check(tbSet, "Capt", Capt)
+TB_Edit(tbSet, "Capt", Capt)
 return
 
 InputList:
@@ -7530,8 +7530,7 @@ SaveData:
 Gui, 1:Default
 If (JoyHK = 1)
 {
-	GuiControlGet, HK_AutoKey, 1:, %hJoyKey%
-	OutputDebug, % "joy: " HK_AutoKey
+	GuiControlGet, HK_AutoKey, 1:, JoyKey
 	If !RegExMatch(HK_AutoKey, "i)Joy\d+$")
 		HK_AutoKey := ""
 }
@@ -7551,13 +7550,13 @@ LoadData:
 Gui, 1:Default
 If InStr(o_AutoKey[A_List], "Joy")
 {
-	TB_Check(tbSet, "SetJoyButton", JoyHK := 1)
+	TB_Edit(tbSet, "SetJoyButton", JoyHK := 1)
 	GuiControl, 1:, AutoKey
 	GoSub, SetJoyHK
 }
 Else
 {
-	TB_Check(tbSet, "SetJoyButton", JoyHK := 0)
+	TB_Edit(tbSet, "SetJoyButton", JoyHK := 0)
 	GuiControl, 1:, JoyKey
 	GuiControl, 1:, AutoKey, % LTrim(o_AutoKey[A_List], "#")
 	GoSub, SetNoJoy
@@ -8379,7 +8378,7 @@ Gui, 6:Destroy
 return
 
 SetJoyButton:
-TB_Check(tbSet, "SetJoyButton", JoyHK := !JoyHK)
+TB_Edit(tbSet, "SetJoyButton", JoyHK := !JoyHK)
 If (JoyHK = 1)
 {
 	GoSub, SetJoyHK
@@ -8392,7 +8391,7 @@ Else
 return
 
 CaptureJoyB:
-GuiControl, 1:, JoyKey, |%A_ThisHotkey%
+GuiControl, 1:, JoyKey, |%A_ThisHotkey%||
 GoSub, SaveData
 return
 
@@ -8400,13 +8399,11 @@ SetJoyHK:
 Gui, chMacro:Submit, NoHide
 GuiControl, 1:Hide, AutoKey
 GuiControl, 1:Disable, AutoKey
-GuiControl, 1:, WinKey, 0
-GuiControl, 1:Disable, WinKey
 If RegExMatch(o_AutoKey[A_List], "i)Joy\d+$")
-	GuiControl, 1:, JoyKey, % "|" o_AutoKey[A_List]
+	GuiControl, 1:, JoyKey, % "|" o_AutoKey[A_List] "||"
 GuiControl, 1:Show, JoyKey
 aBand := RbMain.IDToIndex(13), RbMain.ModifyBand(aBand, "Child", hJoyKey)
-,	ActivateHotkeys("", "", "", "", 1)
+,	ActivateHotkeys("", "", "", "", 1), TB_Edit(tbSet, "WinKey", 0, 0)
 return
 
 SetNoJoy:
@@ -8416,7 +8413,7 @@ GuiControl, 1:Show, AutoKey
 GuiControl, 1:Hide, JoyKey
 GuiControl, 1:Enable, WinKey
 aBand := RbMain.IDToIndex(13), RbMain.ModifyBand(aBand, "Child", hAutoKey)
-,	ActivateHotkeys("", "", "", "", 0)
+,	ActivateHotkeys("", "", "", "", 0), TB_Edit(tbSet, "WinKey", 0, 1)
 return
 
 SetWin:
@@ -8864,7 +8861,7 @@ GuiControl, 28:, OSSlow, %SlowKeyOn%
 return
 
 CheckHkOn:
-TB_Check(tbSet, "CheckHkOn", KeepHkOn := !KeepHkOn)
+TB_Edit(tbSet, "CheckHkOn", KeepHkOn := !KeepHkOn)
 If (KeepHkOn = 1)
 {
 	GoSub, KeepHkOn
