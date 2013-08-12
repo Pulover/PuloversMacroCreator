@@ -6783,6 +6783,8 @@ Script := (TabControl = 2) ? ComSc : ScLet
 Gui, 30:+owner1 -MinimizeBox +E0x00000400 +hwndCmdWin
 Gui, 24:+Disabled
 Gui, 30:Add, Custom, ClassToolbarWindow32 hwndhTbText gTbText 0x0800 0x0100 0x0040
+Gui, 30:Add, Button, -Wrap W25 H25 ys x+0 hwndRemoveT vRemoveT gRemoveT
+	ILButton(RemoveT, RemoveIcon[1] ":" RemoveIcon[2])
 Gui, 30:Font, s9, Courier New
 Gui, 30:Add, Edit, Section xm ym+25 vTextEdit gTextEdit WantTab W720 R30, %Script%
 Gui, 30:Font
@@ -9522,7 +9524,7 @@ pb_IECOM_Set:
 	Catch e
 	{
 		MsgBox, 20, %d_Lang007%, % d_Lang064 " Macro" mMacroOn ", " d_Lang065 " " mListRow
-			.	"`n" d_Lang007 ": " e.Message "`n" d_Lang066 ": " e.Extra "`n`n" d_Lang035
+			.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" e.Extra "`n`n" d_Lang035
 		IfMsgBox, No
 		{
 			StopIt := 1
@@ -9573,7 +9575,7 @@ pb_IECOM_Get:
 	Catch e
 	{
 		MsgBox, 20, %d_Lang007%, % d_Lang064 " Macro" mMacroOn ", " d_Lang065 " " mListRow
-			.	"`n" d_Lang007 ": " e.Message "`n" d_Lang066 ": " e.Extra "`n`n" d_Lang035
+			.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" e.Extra "`n`n" d_Lang035
 		IfMsgBox, No
 		{
 			StopIt := 1
@@ -9617,7 +9619,7 @@ pb_COMInterface:
 		Catch e
 		{
 			MsgBox, 20, %d_Lang007%, % d_Lang064 " Macro" mMacroOn ", " d_Lang065 " " mListRow
-				.	"`n" d_Lang007 ": " e.Message "`n" d_Lang066 ": " e.Extra "`n`n" d_Lang035
+				.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" e.Extra "`n`n" d_Lang035
 			IfMsgBox, No
 			{
 				StopIt := 1

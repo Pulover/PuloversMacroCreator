@@ -40,6 +40,7 @@ Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jör
 
 * Added translations to Indonesian, Slovak and Slovenian.
 * Added portable settings support by copying INI files to installation folder.
+* Fixed *Text* window toolbar buttons not working.
 * Fixed incorrect "Duplicate Keys" error message when exporting Macros without hotkeys.
 * Fixed incorrect "Expressions" error message when using variables inside *Mouse* commands.
 
