@@ -91,11 +91,11 @@ Menu, Tray, Icon, %DefaultIcon%, 1, 1
 
 CurrentVersion := "3.8.3", ReleaseDate := "August, 2013"
 
-If ((A_IsCompiled) && !InStr(FileExist(A_AppData "\MacroCreator"), "D"))
+If ((!FileExist(A_ScriptDir "\MacroCreator.ini") && !InStr(FileExist(A_AppData "\MacroCreator"), "D"))
 	FileCreateDir, %A_AppData%\MacroCreator
 
-IniFilePath := ((A_IsCompiled) ? A_AppData "\MacroCreator" : A_ScriptDir) "\MacroCreator.ini"
-,	UserVarsPath := ((A_IsCompiled) ? A_AppData "\MacroCreator" : A_ScriptDir) "\UserGlobalVars.ini"
+IniFilePath := (FileExist(A_ScriptDir "\MacroCreator.ini") ? A_ScriptDir : A_AppData "\MacroCreator") "\MacroCreator.ini"
+,	UserVarsPath := (FileExist(A_ScriptDir "\MacroCreator.ini") ? A_ScriptDir : A_AppData "\MacroCreator") "\UserGlobalVars.ini"
 
 #Include LIB\Definitions.ahk
 
