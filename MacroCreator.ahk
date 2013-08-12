@@ -2342,7 +2342,7 @@ IfExist, %A_Temp%\PMCIndex.html
 	FileDelete, %A_Temp%\PMCIndex.html
 UrlDownloadToFile, http://www.autohotkey.net/~Pulover/Docs/, %A_Temp%\PMCIndex.html
 FileRead, VerChk, %A_Temp%\PMCIndex.html
-VerChk := RegExReplace(VerChk, ".*Version: ([\d\.]+).*", "$1", vFound)
+VerChk := RegExReplace(VerChk, "s).*Version: ([\d\.]+).*", "$1", vFound)
 If vFound
 {
 	FileDelete, %A_Temp%\PMCIndex.html
