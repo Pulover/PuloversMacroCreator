@@ -146,36 +146,6 @@
 	w_Lang037 =	Prozor
 	w_Lang038 =	Komentirati
 	w_Lang039 =	Boja
-	w_Lang040 =	New (Ctrl+N)
-	w_Lang041 =	Open (Ctrl+O)
-	w_Lang042 =	Spremi (Ctrl+S)
-	w_Lang043 =	Izvoz u AHK (Ctrl+E)
-	w_Lang044 =	Prikaz Skripta (Ctrl+P)
-	w_Lang045 =	Postavke (Ctrl+G)
-	w_Lang046 =	Zapis Makro (Ctrl+R)
-	w_Lang047 =	Aktivirajte Makro (Ctrl+Enter)
-	w_Lang048 =	Igrajte Trenutna Macro (Ctrl+Shift+Enter)
-	w_Lang049 =	Timer (Ctrl+Shift+T)
-	w_Lang050 =	Miš (F2)
-	w_Lang051 =	Tekst (F3)
-	w_Lang052 =	Posebne tipke
-	w_Lang053 =	Kontrola (F4)
-	w_Lang054 =	Pauza (F5)
-	w_Lang055 =	Poruka (Shift+F5)
-	w_Lang056 =	Ključ Čekati (Control+F5)
-	w_Lang057 =	Prozor (F6)
-	w_Lang058 =	Slika / Pixel pretrage (F7)
-	w_Lang059 =	Trčanje / File / String / Razno. (F8)
-	w_Lang060 =	Petlja (F9)
-	w_Lang061 =	Goto (Shift+F9)
-	w_Lang062 =	oznaka (Ctrl+F9)
-	w_Lang063 =	Ako izvještaji (F10)
-	w_Lang064 =	varijable (Shift+F10)
-	w_Lang065 =	funkcija (Ctrl+F10)
-	w_Lang066 =	Internet Explorer (F11)
-	w_Lang067 =	COM sučelja (Shift+F11)
-	w_Lang068 =	Trčanje Scriptlet (Ctrl+F11)
-	w_Lang069 =	Windows Poruke (F12)
 		
 ; Command Windows		
 	c_Lang001 =	Miš
@@ -339,7 +309,6 @@
 	c_Lang160 =	Transparentan
 	c_Lang161 =	Skala
 	c_Lang162 =	Dodaj "If"
-	c_Lang163 =	Pošalji Modu
 		
 ; Other Windows		
 	t_Lang001 =	Izvoz u AHK

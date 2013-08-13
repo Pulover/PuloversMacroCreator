@@ -146,36 +146,6 @@
 	w_Lang037 =	Finestra
 	w_Lang038 =	Comentari
 	w_Lang039 =	Color
-	w_Lang040 =	Nou (Ctrl+N)
-	w_Lang041 =	Obrir (Ctrl+O)
-	w_Lang042 =	Desa (Ctrl+S)
-	w_Lang043 =	Exporta a AHK (Ctrl+I)
-	w_Lang044 =	Vista prèvia de script (Ctrl+P)
-	w_Lang045 =	Settings (Ctrl+G)
-	w_Lang046 =	Gravar macro (Ctrl+R)
-	w_Lang047 =	Activar Macros (Ctrl+Enter)
-	w_Lang048 =	Jugar Macro actual (Ctrl+Shift+Enter)
-	w_Lang049 =	Timer (Ctrl+Shift+T)
-	w_Lang050 =	Mouse (F2)
-	w_Lang051 =	Text (F3)
-	w_Lang052 =	Tecles especials
-	w_Lang053 =	Control de (F4)
-	w_Lang054 =	Pausa (F5)
-	w_Lang055 =	Missatge (Shift+F5)
-	w_Lang056 =	Espera Clau (Control+F5)
-	w_Lang057 =	Finestra (F6)
-	w_Lang058 =	Imatge / píxel motor (F7)
-	w_Lang059 =	Executar / Arxiu / cadena / Misc. (F8)
-	w_Lang060 =	Loop (F9)
-	w_Lang061 =	Ir (Shift+F9)
-	w_Lang062 =	Label (Ctrl+F9)
-	w_Lang063 =	Si Declaracions (F10)
-	w_Lang064 =	variables (Shift+F10)
-	w_Lang065 =	Funcions (Ctrl+F10)
-	w_Lang066 =	Internet Explorer (F11)
-	w_Lang067 =	COM Interface (Shift+F11)
-	w_Lang068 =	Executar Scriptlet (Ctrl+F11)
-	w_Lang069 =	Missatges de Windows (F12)
 		
 ; Command Windows		
 	c_Lang001 =	Ratolí
@@ -339,7 +309,6 @@
 	c_Lang160 =	Transparent
 	c_Lang161 =	Escala
 	c_Lang162 =	Afegir "If"
-	c_Lang163 =	Manera D'enviament
 		
 ; Other Windows		
 	t_Lang001 =	Exporta a AHK

@@ -146,36 +146,6 @@
 	w_Lang037 =	Прозорец
 	w_Lang038 =	Коментар
 	w_Lang039 =	Цвят
-	w_Lang040 =	New (Ctrl+N)
-	w_Lang041 =	Open (Ctrl+O)
-	w_Lang042 =	Save (Ctrl+S)
-	w_Lang043 =	Износ за AHK (Ctrl+E)
-	w_Lang044 =	Преглед Script (Ctrl+P)
-	w_Lang045 =	Настройки (Ctrl+G)
-	w_Lang046 =	Записване на макрос (Ctrl+R)
-	w_Lang047 =	Активиране макроси (Ctrl+Enter)
-	w_Lang048 =	Възпроизвеждане на настоящите макро (Ctrl+Shift+Enter)
-	w_Lang049 =	Таймер (Ctrl+Shift+T)
-	w_Lang050 =	Mouse (F2)
-	w_Lang051 =	Текст (F3)
-	w_Lang052 =	Специални клавиши
-	w_Lang053 =	Control (F4)
-	w_Lang054 =	Пауза (F5)
-	w_Lang055 =	Съобщение (Shift+F5)
-	w_Lang056 =	Ключ Изчакайте (Control+F5)
-	w_Lang057 =	Window (F6)
-	w_Lang058 =	Image / Pixel Търсене (F7)
-	w_Lang059 =	Run / File / String / Misc. (F8)
-	w_Lang060 =	Loop (F9)
-	w_Lang061 =	Гото (Shift+F9)
-	w_Lang062 =	Label (Ctrl+F9)
-	w_Lang063 =	Ако отчети (F10)
-	w_Lang064 =	променливи (Shift+F10)
-	w_Lang065 =	Функции (Ctrl+F10)
-	w_Lang066 =	Internet Explorer (F11)
-	w_Lang067 =	COM Interface (Shift+F11)
-	w_Lang068 =	Тичане Scriptlet (Ctrl+F11)
-	w_Lang069 =	Windows Съобщения (F12)
 		
 ; Command Windows		
 	c_Lang001 =	Мишка
@@ -339,7 +309,6 @@
 	c_Lang160 =	Прозрачен
 	c_Lang161 =	Мащаб
 	c_Lang162 =	Добави "Ако Твърдението"
-	c_Lang163 =	Изпрати Режим
 		
 ; Other Windows		
 	t_Lang001 =	Износ за AHK

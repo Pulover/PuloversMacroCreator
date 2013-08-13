@@ -146,36 +146,6 @@
 	w_Lang037 =	Вікно
 	w_Lang038 =	Коментувати
 	w_Lang039 =	Колір
-	w_Lang040 =	Новий (Ctrl+N)
-	w_Lang041 =	Відкрити (Ctrl+O)
-	w_Lang042 =	Зберегти (Ctrl+S)
-	w_Lang043 =	Експорт до АХК (Ctrl+E)
-	w_Lang044 =	Попередній перегляд Script (Ctrl+P)
-	w_Lang045 =	Налаштування (Ctrl+G)
-	w_Lang046 =	Запис макросу (Ctrl+R)
-	w_Lang047 =	Включити макроси (Ctrl+Enter)
-	w_Lang048 =	Грати поточного макросу (Ctrl+Shift+Enter)
-	w_Lang049 =	Таймер (Ctrl+Shift+T)
-	w_Lang050 =	Миша (F2)
-	w_Lang051 =	Текст (F3)
-	w_Lang052 =	Спеціальні клавіші
-	w_Lang053 =	Управління (F4)
-	w_Lang054 =	Пауза (F5)
-	w_Lang055 =	Повідомлення (Shift+F5)
-	w_Lang056 =	Ключові Очікування (Control+F5)
-	w_Lang057 =	Вікно (F6)
-	w_Lang058 =	Зображення / піксел пошуку (F7)
-	w_Lang059 =	Run / Файл / String / Різне. (F8)
-	w_Lang060 =	Loop (F9)
-	w_Lang061 =	Goto (Shift+F9)
-	w_Lang062 =	Етикетка (Ctrl+F9)
-	w_Lang063 =	Якщо звітності (F10)
-	w_Lang064 =	Змінні (Shift+F10)
-	w_Lang065 =	Функції (Ctrl+F10)
-	w_Lang066 =	Internet Explorer (F11)
-	w_Lang067 =	COM-інтерфейсу (Shift+F11)
-	w_Lang068 =	Виконати Скріптлете (Ctrl+F11)
-	w_Lang069 =	Windows Messages (F12)
 		
 ; Command Windows		
 	c_Lang001 =	Миша
@@ -339,7 +309,6 @@
 	c_Lang160 =	Прозорий
 	c_Lang161 =	Шкала
 	c_Lang162 =	Додати "Якщо Заява"
-	c_Lang163 =	Режим Відправки
 		
 ; Other Windows		
 	t_Lang001 =	Експорт до АХК

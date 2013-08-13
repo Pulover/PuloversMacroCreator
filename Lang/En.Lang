@@ -146,36 +146,6 @@
 	w_Lang037 =	Window
 	w_Lang038 =	Comment
 	w_Lang039 =	Color
-	w_Lang040 =	New (Ctrl+N)
-	w_Lang041 =	Open (Ctrl+O)
-	w_Lang042 =	Save (Ctrl+S)
-	w_Lang043 =	Export to AHK (Ctrl+E)
-	w_Lang044 =	Preview Script (Ctrl+P)
-	w_Lang045 =	Settings (Ctrl+G)
-	w_Lang046 =	Record Macro (Ctrl+R)
-	w_Lang047 =	Activate Macros (Ctrl+Enter)
-	w_Lang048 =	Play Current Macro (Ctrl+Shift+Enter)
-	w_Lang049 =	Timer (Ctrl+Shift+T)
-	w_Lang050 =	Mouse (F2)
-	w_Lang051 =	Text (F3)
-	w_Lang052 =	Special Keys
-	w_Lang053 =	Control (F4)
-	w_Lang054 =	Pause (F5)
-	w_Lang055 =	Message (Shift+F5)
-	w_Lang056 =	Key Wait (Control+F5) 
-	w_Lang057 =	Window (F6)
-	w_Lang058 =	Image / Pixel Search (F7)
-	w_Lang059 =	Run / File / String / Misc. (F8)
-	w_Lang060 =	Loop (F9)
-	w_Lang061 =	Goto (Shift+F9)
-	w_Lang062 =	Label (Ctrl+F9)
-	w_Lang063 =	If Statements (F10)
-	w_Lang064 =	Variables (Shift+F10)
-	w_Lang065 =	Functions (Ctrl+F10)
-	w_Lang066 =	Internet Explorer (F11)
-	w_Lang067 =	COM Interface (Shift+F11)
-	w_Lang068 =	Run Scriptlet (Ctrl+F11)
-	w_Lang069 =	Windows Messages (F12)
 		
 ; Command Windows		
 	c_Lang001 =	Mouse
@@ -339,7 +309,6 @@
 	c_Lang160 =	Transparent
 	c_Lang161 =	Scale
 	c_Lang162 =	Add "If Statement"
-	c_Lang163 =	Send Mode
 		
 ; Other Windows		
 	t_Lang001 =	Export to AHK

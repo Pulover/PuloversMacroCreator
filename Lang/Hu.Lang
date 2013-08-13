@@ -146,36 +146,6 @@
 	w_Lang037 =	Ablak
 	w_Lang038 =	Megjegyzés
 	w_Lang039 =	Szín
-	w_Lang040 =	Új (Ctrl+N)
-	w_Lang041 =	Open (Ctrl+O)
-	w_Lang042 =	Mentés (Ctrl+S)
-	w_Lang043 =	Exportálás AHK (Ctrl+E)
-	w_Lang044 =	Preview Script (Ctrl+P)
-	w_Lang045 =	Settings (Ctrl+G)
-	w_Lang046 =	Makró rögzítése (Ctrl+R)
-	w_Lang047 =	Activate makrók (Ctrl+Enter)
-	w_Lang048 =	Játssz Current Macro (Ctrl+Shift+Enter)
-	w_Lang049 =	Timer (Ctrl+Shift+T)
-	w_Lang050 =	Mouse (F2)
-	w_Lang051 =	Text (F3)
-	w_Lang052 =	Speciális gombok
-	w_Lang053 =	Control (F4)
-	w_Lang054 =	Szünet (F5)
-	w_Lang055 =	Üzenet (Shift+F5)
-	w_Lang056 =	Kulcs Várakozás (Control+F5)
-	w_Lang057 =	Window (F6)
-	w_Lang058 =	Image / Pixel Search (F7)
-	w_Lang059 =	Run / Fájl / String / Misc. (F8)
-	w_Lang060 =	Loop (F9)
-	w_Lang061 =	Goto (Shift+F9)
-	w_Lang062 =	Label (Ctrl+F9)
-	w_Lang063 =	Ha a nyilatkozatok (F10)
-	w_Lang064 =	változók (Shift+F10)
-	w_Lang065 =	Függvények (Ctrl+F10)
-	w_Lang066 =	Internet Explorer (F11)
-	w_Lang067 =	COM Interface (Shift+F11)
-	w_Lang068 =	Fuss Scriptlet (Ctrl+F11)
-	w_Lang069 =	A Windows üzenetek (F12)
 		
 ; Command Windows		
 	c_Lang001 =	Egér
@@ -339,7 +309,6 @@
 	c_Lang160 =	Átlátszó
 	c_Lang161 =	Skála
 	c_Lang162 =	Hozzá "If"
-	c_Lang163 =	Küldje Mód
 		
 ; Other Windows		
 	t_Lang001 =	Exportálás AHK

@@ -146,36 +146,6 @@
 	w_Lang037 =	窗口
 	w_Lang038 =	评论
 	w_Lang039 =	颜色
-	w_Lang040 =	新建（Ctrl+N）
-	w_Lang041 =	开放（按Ctrl+O）
-	w_Lang042 =	保存（Ctrl+S）
-	w_Lang043 =	导出AHK（Ctrl+E组合键）
-	w_Lang044 =	预览脚本（Ctrl+P）
-	w_Lang045 =	设置（Ctrl+G）
-	w_Lang046 =	录制宏（按Ctrl+R）
-	w_Lang047 =	激活宏（Ctrl+Enter键）
-	w_Lang048 =	播放当前宏（按Ctrl+Shift+Enter键）
-	w_Lang049 =	定时器（Ctrl+Shift+T）
-	w_Lang050 =	鼠标（F2）
-	w_Lang051 =	文本（F3）
-	w_Lang052 =	特殊的键
-	w_Lang053 =	控制（F4）
-	w_Lang054 =	暂停（F5）
-	w_Lang055 =	消息（Shift+F5）
-	w_Lang056 =	键等待（Control+F5）
-	w_Lang057 =	窗口（F6）
-	w_Lang058 =	图片/像素搜索（F7）
-	w_Lang059 =	运行/文件/字符串/其他。 （F8）
-	w_Lang060 =	环路（F9）
-	w_Lang061 =	后藤（按Shift+F9）
-	w_Lang062 =	标签（按Ctrl+F9）
-	w_Lang063 =	如果报表附注（F10）
-	w_Lang064 =	变量（按Shift+F10）
-	w_Lang065 =	功能（按Ctrl+F10）
-	w_Lang066 =	IE浏览器（F11）
-	w_Lang067 =	 COM接口（按Shift+F11）
-	w_Lang068 =	
-	w_Lang069 =	Windows消息（F12）
 		
 ; Command Windows		
 	c_Lang001 =	鼠标
@@ -339,7 +309,6 @@
 	c_Lang160 =	透明
 	c_Lang161 =	规模
 	c_Lang162 =	加上“If语句”
-	c_Lang163 =	发送模式
 		
 ; Other Windows		
 	t_Lang001 =	导出到华民航空

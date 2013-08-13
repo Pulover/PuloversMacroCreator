@@ -146,36 +146,6 @@
 	w_Lang037 =	Vindue
 	w_Lang038 =	Kommentar
 	w_Lang039 =	Farve
-	w_Lang040 =	Ny (Ctrl+N)
-	w_Lang041 =	Åbn (Ctrl+O)
-	w_Lang042 =	Gem (Ctrl+S)
-	w_Lang043 =	Eksporter til AHK (Ctrl+E)
-	w_Lang044 =	Eksempel Script (Ctrl+P)
-	w_Lang045 =	Indstillinger (Ctrl+G)
-	w_Lang046 =	Indspil makro (Ctrl+R)
-	w_Lang047 =	Aktivér Makroer (Ctrl+Enter)
-	w_Lang048 =	Afspil aktuelle Makro (Ctrl+Shift+Enter)
-	w_Lang049 =	Timer (Ctrl+Shift+T)
-	w_Lang050 =	Mus (F2)
-	w_Lang051 =	Tekst (F3)
-	w_Lang052 =	Særlige Keys
-	w_Lang053 =	Control (F4)
-	w_Lang054 =	Pause (F5)
-	w_Lang055 =	Besked (Shift+F5)
-	w_Lang056 =	Nøgle Vente (Control+F5)
-	w_Lang057 =	Window (F6)
-	w_Lang058 =	Billede / Pixel Søg (F7)
-	w_Lang059 =	Run / File / String / Misc. (F8)
-	w_Lang060 =	Loop (F9)
-	w_Lang061 =	Goto (Shift+F9)
-	w_Lang062 =	Label (Ctrl+F9)
-	w_Lang063 =	Hvis Erklæringer (F10)
-	w_Lang064 =	variabler (Shift+F10)
-	w_Lang065 =	Funktioner (Ctrl+F10)
-	w_Lang066 =	Internet Explorer (F11)
-	w_Lang067 =	COM Interface (Shift+F11)
-	w_Lang068 =	Kør Scriptlet (Ctrl+F11)
-	w_Lang069 =	Windows Messages (F12)
 		
 ; Command Windows		
 	c_Lang001 =	Mus
@@ -339,7 +309,6 @@
 	c_Lang160 =	Transparent
 	c_Lang161 =	Scale
 	c_Lang162 =	Tilføje ", Hvis Udsagnet"
-	c_Lang163 =	Stuur Modus...
 		
 ; Other Windows		
 	t_Lang001 =	Eksporter til AHK

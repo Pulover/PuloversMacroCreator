@@ -146,36 +146,6 @@
 	w_Lang037 =	ウィンドウ
 	w_Lang038 =	コメント
 	w_Lang039 =	色
-	w_Lang040 =	新規作成（Ctrl+Nキー）
-	w_Lang041 =	開く（Ctrl+Oキー）
-	w_Lang042 =	保存（Ctrl+S）
-	w_Lang043 =	AHKにエクスポート（CTRL+E）
-	w_Lang044 =	プレビュースクリプト（Ctrl+P）を
-	w_Lang045 =	設定（Ctrl+Gキー）
-	w_Lang046 =	マクロの記録（CTRL+R）
-	w_Lang047 =	アクティベートマクロ（Ctrl+Enterキー）
-	w_Lang048 =	現在のマクロを再生します（Ctrl+Shift+Enter）
-	w_Lang049 =	タイマー（Ctrl+Shift+Tを）
-	w_Lang050 =	マウス（F2）
-	w_Lang051 =	テキスト（F3）
-	w_Lang052 =	特殊キー
-	w_Lang053 =	コントロール（F4）
-	w_Lang054 =	一時停止 （F5）
-	w_Lang055 =	メッセージ （Shift+F5）
-	w_Lang056 =	キー待ち （Control+F5）
-	w_Lang057 =	ウィンドウ（F6）
-	w_Lang058 =	イメージ/ピクセル検索（F7）
-	w_Lang059 =	ファイル/文字列/その他/実行します。 （F8）
-	w_Lang060 =	ループ（F9）
-	w_Lang061 =	後藤（+ F9キーをシフト）
-	w_Lang062 =	ラベル（Ctrlキーを押しながらF9キー）
-	w_Lang063 =	Ifステートメント（F10）
-	w_Lang064 =	変数
-	w_Lang065 =	関数の（Ctrl+F10）（+ F10キー、Shiftキーを押しながら）
-	w_Lang066 =	インターネットエクスプローラ（F11）
-	w_Lang067 =	 COMインタフェース（Shift+F11）を
-	w_Lang068 =	スクリプトレットを実行 (Ctrl+F11)
-	w_Lang069 =	Windowsメッセージ（F12）
 		
 ; Command Windows		
 	c_Lang001 =	マウス
@@ -339,7 +309,6 @@
 	c_Lang160 =	透明な
 	c_Lang161 =	スケール
 	c_Lang162 =	If文を追加
-	c_Lang163 =	送信モード
 		
 ; Other Windows		
 	t_Lang001 =	AHKにエクスポート
