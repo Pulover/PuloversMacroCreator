@@ -146,6 +146,36 @@
 	w_Lang037 =	Fenêtre
 	w_Lang038 =	Commenter
 	w_Lang039 =	Couleur
+	w_Lang040 =	Nouveau (Ctrl+N)
+	w_Lang041 =	Ouvrir (Ctrl+O)
+	w_Lang042 =	Enregistrer (Ctrl+S)
+	w_Lang043 =	Exporter vers AHK (Ctrl+E)
+	w_Lang044 =	Aperçu de script (Ctrl+P)
+	w_Lang045 =	Réglages (Ctrl+G)
+	w_Lang046 =	Enregistrer une macro (Ctrl+R)
+	w_Lang047 =	Macros Activer (Ctrl+Entrée)
+	w_Lang048 =	Jouer Macro actuelle (Ctrl+Maj+Entrée)
+	w_Lang049 =	Timer (Ctrl+Maj+T)
+	w_Lang050 =	Souris (F2)
+	w_Lang051 =	Texte (F3)
+	w_Lang052 =	Touches spéciales
+	w_Lang053 =	Commande (F4)
+	w_Lang054 =	Pause (F5)
+	w_Lang055 =	Un message (Shift+F5)
+	w_Lang056 =	Attente Touche (Control+F5)
+	w_Lang057 =	Fenêtre (F6)
+	w_Lang058 =	Image / pas de pixel Recherche (F7)
+	w_Lang059 =	Exécuter / fichier / String / Misc. (F8)
+	w_Lang060 =	Loop (F9)
+	w_Lang061 =	Aller à (Maj+F9)
+	w_Lang062 =	Label (Ctrl+F9)
+	w_Lang063 =	Si états (F10)
+	w_Lang064 =	Variables (Maj+F10)
+	w_Lang065 =	Fonctions (Ctrl+F10)
+	w_Lang066 =	Internet Explorer (F11)
+	w_Lang067 =	Interface COM (Maj+F11)
+	w_Lang068 =	Exécuter Scriplet (Ctrl+F11)
+	w_Lang069 =	Messages de Windows (F12)
 		
 ; Command Windows		
 	c_Lang001 =	Souris
@@ -309,6 +339,7 @@
 	c_Lang160 =	Transparent
 	c_Lang161 =	Échelle
 	c_Lang162 =	Ajouter "If"
+	c_Lang163 =	Mode D'envoi
 		
 ; Other Windows		
 	t_Lang001 =	Exporter vers AHK

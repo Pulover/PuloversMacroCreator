@@ -146,6 +146,36 @@
 	w_Lang037 =	Παράθυρο
 	w_Lang038 =	Σχόλιο
 	w_Lang039 =	Χρώμα
+	w_Lang040 =	Νέο (Ctrl+N)
+	w_Lang041 =	Άνοιγμα (Ctrl+O)
+	w_Lang042 =	Αποθήκευση (Ctrl+S)
+	w_Lang043 =	Εξαγωγή σε AHK (Ctrl+E)
+	w_Lang044 =	Preview Script (Ctrl+P)
+	w_Lang045 =	Ρυθμίσεις (Ctrl+G)
+	w_Lang046 =	Εγγραφή Macro (Ctrl+R)
+	w_Lang047 =	Ενεργοποιήσετε τις μακροεντολές (Ctrl+Enter)
+	w_Lang048 =	Παίξτε τρέχουσα μακροοικονομική (Ctrl+Shift+Enter)
+	w_Lang049 =	Timer (Ctrl+Shift+T)
+	w_Lang050 =	Mouse (F2)
+	w_Lang051 =	Κείμενο (F3)
+	w_Lang052 =	Ειδικά πλήκτρα
+	w_Lang053 =	Ελέγχου (F4)
+	w_Lang054 =	Παύση (F5)
+	w_Lang055 =	Μήνυμα (Shift+F5)
+	w_Lang056 =	Κλειδί Αναμονή (Control+F5)
+	w_Lang057 =	Παράθυρο (F6)
+	w_Lang058 =	Εικόνα / Pixel αναζήτησης (F7)
+	w_Lang059 =	Run / Αρχείο / String / Διάφορα. (F8)
+	w_Lang060 =	Loop (F9)
+	w_Lang061 =	Goto (Shift+F9)
+	w_Lang062 =	Label (Ctrl+F9)
+	w_Lang063 =	Αν Καταστάσεις (F10)
+	w_Lang064 =	μεταβλητές (Shift+F10)
+	w_Lang065 =	Λειτουργίες (Ctrl+F10)
+	w_Lang066 =	Internet Explorer (F11)
+	w_Lang067 =	COM Interface (Shift+F11)
+	w_Lang068 =	Εκτέλεση Scriptlet (Ctrl+F11)
+	w_Lang069 =	Τα μηνύματα των Windows (F12)
 		
 ; Command Windows		
 	c_Lang001 =	Ποντίκι
@@ -309,6 +339,7 @@
 	c_Lang160 =	Διαφανής
 	c_Lang161 =	Κλίμακα
 	c_Lang162 =	Προσθέστε "Δήλωση If"
+	c_Lang163 =	Ο Τρόπος Αποστολής
 		
 ; Other Windows		
 	t_Lang001 =	Εξαγωγή σε AHK

@@ -146,6 +146,36 @@
 	w_Lang037 =	Venster
 	w_Lang038 =	Commentaar
 	w_Lang039 =	Kleur
+	w_Lang040 =	Nieuw (Ctrl+N)
+	w_Lang041 =	Openen (Ctrl+O)
+	w_Lang042 =	Opslaan (Ctrl+S)
+	w_Lang043 =	Exporteren naar AHK (Ctrl+E)
+	w_Lang044 =	Voorbeeld Script (Ctrl+P)
+	w_Lang045 =	Instellingen (Ctrl+G)
+	w_Lang046 =	Macro opnemen (Ctrl+R)
+	w_Lang047 =	Macro's activeren (Ctrl+Enter)
+	w_Lang048 =	Speel huidige macro (Ctrl+Shift+Enter)
+	w_Lang049 =	Timer (Ctrl+Shift+T)
+	w_Lang050 =	Muis (F2)
+	w_Lang051 =	Tekst (F3)
+	w_Lang052 =	Speciale toetsen
+	w_Lang053 =	Control (F4)
+	w_Lang054 =	Pauzeren (F5)
+	w_Lang055 =	Bericht (Shift+F5)
+	w_Lang056 =	Key Wachten (Control+F5)
+	w_Lang057 =	Window (F6)
+	w_Lang058 =	Afbeelding / Pixel Zoeken (F7)
+	w_Lang059 =	Run / Bestand / String / Misc. (F8)
+	w_Lang060 =	Loop (F9)
+	w_Lang061 =	Ga naar (Shift+F9)
+	w_Lang062 =	Label (Ctrl+F9)
+	w_Lang063 =	Als Verklaringen (F10)
+	w_Lang064 =	Variabelen (Shift+F10)
+	w_Lang065 =	Functies (Ctrl+F10)
+	w_Lang066 =	Internet Explorer (F11)
+	w_Lang067 =	COM-interface (Shift+F11)
+	w_Lang068 =	Run Scriptlet (Ctrl+F11)
+	w_Lang069 =	Windows Messages (F12)
 		
 ; Command Windows		
 	c_Lang001 =	Muis
@@ -309,6 +339,7 @@
 	c_Lang160 =	Transparant
 	c_Lang161 =	Schaal
 	c_Lang162 =	Voegen "If"
+	c_Lang163 =	Wysłać Tryb...
 		
 ; Other Windows		
 	t_Lang001 =	Exporteren naar AHK

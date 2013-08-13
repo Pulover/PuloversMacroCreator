@@ -146,6 +146,36 @@
 	w_Lang037 =	Fönster
 	w_Lang038 =	Kommentar
 	w_Lang039 =	Färg
+	w_Lang040 =	Ny (Ctrl+N)
+	w_Lang041 =	Öppna (Ctrl+O)
+	w_Lang042 =	Spara (Ctrl+S)
+	w_Lang043 =	Exportera till AHK (Ctrl+E)
+	w_Lang044 =	Förhandsgranska Script (Ctrl+P)
+	w_Lang045 =	Inställningar (Ctrl+G)
+	w_Lang046 =	Spela in makro (Ctrl+R)
+	w_Lang047 =	Aktivera makron (Ctrl+Enter)
+	w_Lang048 =	Spela Aktuell Makro (Ctrl+Skift+Enter)
+	w_Lang049 =	Timer (Ctrl+Skift+T)
+	w_Lang050 =	Mus (F2)
+	w_Lang051 =	Text (F3)
+	w_Lang052 =	Specialtangenter
+	w_Lang053 =	Kontroll (F4)
+	w_Lang054 =	Paus (F5)
+	w_Lang055 =	Meddelande (Shift+F5)
+	w_Lang056 =	Nyckel Vänta (Control+F5)
+	w_Lang057 =	Fönster (F6)
+	w_Lang058 =	Bild / Pixel Sök (F7)
+	w_Lang059 =	Kör / Arkiv / String / Misc. (F8)
+	w_Lang060 =	Loop (F9)
+	w_Lang061 =	Gå (Shift+F9)
+	w_Lang062 =	Etikett (Ctrl+F9)
+	w_Lang063 =	Om rapporter (F10)
+	w_Lang064 =	variabler (Shift+F10)
+	w_Lang065 =	Funktioner (Ctrl+F10)
+	w_Lang066 =	Internet Explorer (F11)
+	w_Lang067 =	COM-gränssnitt (Skift+F11)
+	w_Lang068 =	Kör Skriptlet (Ctrl+F11)
+	w_Lang069 =	Windows-meddelanden (F12)
 		
 ; Command Windows		
 	c_Lang001 =	Mus
@@ -309,6 +339,7 @@
 	c_Lang160 =	Genomskinlig
 	c_Lang161 =	Skala
 	c_Lang162 =	Lägg Till "If"
+	c_Lang163 =	Skicka Läge
 		
 ; Other Windows		
 	t_Lang001 =	Exportera till AHK

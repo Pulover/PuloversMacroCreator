@@ -146,6 +146,36 @@
 	w_Lang037 =	Okno
 	w_Lang038 =	Komentář
 	w_Lang039 =	Barva
+	w_Lang040 =	New (Ctrl+N)
+	w_Lang041 =	Open (Ctrl+O)
+	w_Lang042 =	Save (Ctrl+S)
+	w_Lang043 =	Export do AHK (Ctrl+E)
+	w_Lang044 =	Náhled Script (Ctrl+P)
+	w_Lang045 =	Nastavení (Ctrl+G)
+	w_Lang046 =	Záznam makra (Ctrl+R)
+	w_Lang047 =	Aktivace Makra (Ctrl+Enter)
+	w_Lang048 =	Zahrajte si aktuální makro (Ctrl+Shift+Enter)
+	w_Lang049 =	Timer (Ctrl+Shift+T)
+	w_Lang050 =	Myš (F2)
+	w_Lang051 =	Text (F3)
+	w_Lang052 =	Speciální klávesy
+	w_Lang053 =	Control (F4)
+	w_Lang054 =	Pauza (F5)
+	w_Lang055 =	Zpráva (Shift+F5)
+	w_Lang056 =	Klíč Čekání (Control+F5)
+	w_Lang057 =	Window (F6)
+	w_Lang058 =	Obrázek / Pixel Search (F7)
+	w_Lang059 =	Spustit / Soubor / String / Misc. (F8)
+	w_Lang060 =	Loop (F9)
+	w_Lang061 =	Goto (Shift+F9)
+	w_Lang062 =	Label (Ctrl+F9)
+	w_Lang063 =	Pokud výkazy (F10)
+	w_Lang064 =	proměnné (Shift+F10)
+	w_Lang065 =	Funkce (Ctrl+F10)
+	w_Lang066 =	Internet Explorer (F11)
+	w_Lang067 =	COM rozhraní (Shift+F11)
+	w_Lang068 =	Spustit Skripty (Ctrl+F11)
+	w_Lang069 =	Windows Zprávy (F12)
 		
 ; Command Windows		
 	c_Lang001 =	Myš
@@ -309,6 +339,7 @@
 	c_Lang160 =	Průhledný
 	c_Lang161 =	Stupnice
 	c_Lang162 =	Přidat "If"
+	c_Lang163 =	Způsob Odeslání
 		
 ; Other Windows		
 	t_Lang001 =	Export do AHK

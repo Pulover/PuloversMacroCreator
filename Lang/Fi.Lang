@@ -146,6 +146,36 @@
 	w_Lang037 =	Ikkuna
 	w_Lang038 =	Kommentti
 	w_Lang039 =	Väri
+	w_Lang040 =	Uusi (Ctrl+N)
+	w_Lang041 =	Open (Ctrl+O)
+	w_Lang042 =	Tallenna (Ctrl+S)
+	w_Lang043 =	Vie AHK (Ctrl+E)
+	w_Lang044 =	Esikatselu Script (Ctrl+P)
+	w_Lang045 =	Asetukset (Ctrl+G)
+	w_Lang046 =	Nauhoita makro (Ctrl+R)
+	w_Lang047 =	Aktivoi Makrot (Ctrl+Enter)
+	w_Lang048 =	Pelaa Nykyinen Makro (Ctrl+Shift+Enter)
+	w_Lang049 =	Ajastin (Ctrl+Shift+T)
+	w_Lang050 =	Hiiri (F2)
+	w_Lang051 =	Teksti (F3)
+	w_Lang052 =	Special Keys
+	w_Lang053 =	Control (F4)
+	w_Lang054 =	Tauko (F5)
+	w_Lang055 =	Viesti (Shift+F5)
+	w_Lang056 =	Näppäintä Odotus (Control+F5)
+	w_Lang057 =	Window (F6)
+	w_Lang058 =	Kuva / Pixel Search (F7)
+	w_Lang059 =	Run / File / String / Misc. (F8)
+	w_Lang060 =	Loop (F9)
+	w_Lang061 =	Goto (Shift+F9)
+	w_Lang062 =	Label (Ctrl+F9)
+	w_Lang063 =	Jos lausunnot (F10)
+	w_Lang064 =	Muuttujat (Shift+F10)
+	w_Lang065 =	Funktiot (Ctrl+F10)
+	w_Lang066 =	Internet Explorer (F11)
+	w_Lang067 =	COM liitäntä (Shift+F11)
+	w_Lang068 =	Suorita Komentosarjasovelman (Ctrl+F11)
+	w_Lang069 =	Windows viestit (F12)
 		
 ; Command Windows		
 	c_Lang001 =	Hiiri
@@ -309,6 +339,7 @@
 	c_Lang160 =	Läpinäkyvä
 	c_Lang161 =	Asteikko
 	c_Lang162 =	Lisätä "Jos Ilmoitus"
+	c_Lang163 =	Lähetä Tilassa
 		
 ; Other Windows		
 	t_Lang001 =	Vie AHK
