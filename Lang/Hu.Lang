@@ -158,7 +158,7 @@
 	w_Lang049 =	Timer (Ctrl+Shift+T)
 	w_Lang050 =	Mouse (F2)
 	w_Lang051 =	Text (F3)
-	w_Lang052 =	Speciális gombok
+	w_Lang052 =	Speciális billentyűk (Shift+F3)
 	w_Lang053 =	Control (F4)
 	w_Lang054 =	Szünet (F5)
 	w_Lang055 =	Üzenet (Shift+F5)
