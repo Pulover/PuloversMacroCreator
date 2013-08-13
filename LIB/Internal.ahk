@@ -1,10 +1,4 @@
-﻿MasterCheck()
-{
-	global
-	return
-}
-
-LV_GetTexts(Index, ByRef Act="", ByRef Det="", ByRef Tim="", ByRef Del="", ByRef Typ="", ByRef Tar="", ByRef Win="", ByRef Com="", ByRef Col="")
+﻿LV_GetTexts(Index, ByRef Act="", ByRef Det="", ByRef Tim="", ByRef Del="", ByRef Typ="", ByRef Tar="", ByRef Win="", ByRef Com="", ByRef Col="")
 {
 	LV_GetText(Act, Index, 2)
 ,	Act := LTrim(Act)

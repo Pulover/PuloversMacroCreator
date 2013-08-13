@@ -822,9 +822,9 @@ Sort, WM_Msgs, D|
 
 DefaultBar := {FileOpt: "Enabled AutoSize", File: ["New=" w_Lang040 ":42", "Open=" w_Lang041 ":43(Enabled Dropdown)", "Save=" w_Lang042 ":60(Enabled Dropdown)"
 													, "", "Export=" w_Lang043 ":16", "Preview=" w_Lang044 ":50", "Options=" w_Lang045 ":44"]
-			, RecPlayOpt: "Enabled AutoSize Dropdown", RecPlay: ["Record=" w_Lang004 ":55", "PlayStart=" w_Lang005 ":47"]
-			, CommandOpt: "Enabled AutoSize", Command: ["Mouse=Mouse:39", "Text=Text:71", "ControlCmd=Control:7"
-														, "", "Pause=Pause:46", "MsgBox=Message:11", "KeyWait=Key Wait:78"
+			, RecPlayOpt: "Enabled AutoSize Dropdown", RecPlay: ["Record=" w_Lang046 ":55", "PlayStart=" w_Lang047 ":47"]
+			, CommandOpt: "Enabled AutoSize", Command: ["Mouse=" w_Lang050 ":39", "Text=" w_Lang051 ":71", "ControlCmd=" w_Lang052 ":7"
+														, "", "Pause=" w_Lang05 ":46", "MsgBox=Message:11", "KeyWait=Key Wait:78"
 														, "", "Window=Window:81", "Image=ImageSearch:28", "Run=Run:59"
 														, "", "ComLoop=Loop:37", "ComGoto=Goto:22", "AddLabel=Label:35"
 														, "", "IfSt=If Statement:27", "AsVar=Assign Variable:76", "AsFunc=Functions:21"
@@ -841,8 +841,9 @@ DefaultBar := {FileOpt: "Enabled AutoSize", File: ["New=" w_Lang040 ":42", "Open
 														, "", "Undo=Undo:75", "Redo=Redo:57"
 														, "", "Duplicate=Duplicate:13", "CopyTo=Copy to...:8(Enabled WholeDropdown)"
 														, "", "EditColor=Edit Color:3", "EditComm=Edit Comment:5", "FindReplace=Find/Replace:19"]
-			, PrevOpt: "Enabled AutoSize", Preview: ["PrevCopy=Copy:8", "PrevRefresh=Refresh:37"
-														, "", "AutoRefresh=AutoRefresh:37", "OnTop=Always On Top:1", "TabIndent=Indentation:5"]
+			, PrevOpt: "Enabled AutoSize", Preview: ["PrevDock=Undock:17"
+														, "", "PrevCopy=Copy:8", "PrevRefresh=Refresh:37"
+														, "", "AutoRefresh=AutoRefresh:37", "OnTop=Always On Top:83", "TabIndent=Indentation:5"]
 			, TextOpt: "Enabled AutoSize", Text: ["OpenT=Open:43", "SaveT=Save:60"
 														, "", "CutT=Cut:9", "CopyT=Copy:8", "PasteT=Paste:45"
 														, "", "SelAllT=Select All:5", "RemoveT=Delete:10"]}
