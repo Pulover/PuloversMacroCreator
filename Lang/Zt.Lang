@@ -115,18 +115,18 @@
 	w_Lang006 =	自動。
 	w_Lang007 =	男人。
 	w_Lang008 =	停止
-	w_Lang009 =	顯示控制
+	w_Lang009 =	顯示控制工具欄
 	w_Lang010 =	暫停
 	w_Lang011 =	循環
 	w_Lang012 =	擷取鍵
-	w_Lang013 =	隱藏窗口
+	w_Lang013 =	最小化到托盤
 	w_Lang014 =	始終活躍
 	w_Lang015 =	重複
 	w_Lang016 =	延時（ms）：
 	w_Lang017 =	申請
 	w_Lang018 =	插入
 	w_Lang019 =	編輯
-	w_Lang020 =	(unused)
+	w_Lang020 =	關機選項 (當播放結束...)
 	w_Lang021 =	什麼都不做
 	w_Lang022 =	關閉應用程序
 	w_Lang023 =	關閉
@@ -176,6 +176,26 @@
 	w_Lang067 =	 COM接口（SHIFT+F11）
 	w_Lang068 =	
 	w_Lang069 =	Windows消息（F12）
+	w_Lang070 =	作為改性劑添加Windows鍵
+	w_Lang071 =	搖桿
+	w_Lang072 =	添加宏（按Ctrl+T）
+	w_Lang073 =	關閉宏（按Ctrl+W）
+	w_Lang074 =	重複宏（按Ctrl+Shift+D）
+	w_Lang075 =	進口宏（按Ctrl+I）
+	w_Lang076 =	保存當前宏（按Ctrl+Alt+S）
+	w_Lang077 =	向上移動（按Ctrl+上一頁）
+	w_Lang078 =	“下移”（按Ctrl+下一頁）
+	w_Lang079 =	複製選中的行（CTRL+D）
+	w_Lang080 =	剪切選定行（Ctrl+X鍵）
+	w_Lang081 =	選定行複製（Ctrl+C組合鍵）
+	w_Lang082 =	粘貼複製的行（Ctrl+V鍵）
+	w_Lang083 =	刪除選定的行（DEL）
+	w_Lang084 =	撤消（CTRL+Z）
+	w_Lang085 =	重做（CTRL+Y）
+	w_Lang086 =	複製到...
+	w_Lang087 =	查找/替換（Ctrl+F鍵）
+	w_Lang088 =	編輯點評（Ctrl+L鍵）
+	w_Lang089 =	編輯顏色標誌（Ctrl+M鍵）
 		
 ; Command Windows		
 	c_Lang001 =	鼠標
@@ -260,7 +280,7 @@
 	c_Lang080 =	添加標籤
 	c_Lang081 =	字符串（InputVar），值
 	c_Lang082 =	VAR [運營商]值
-	c_Lang083 =	添加其他
+	c_Lang083 =	其他
 	c_Lang084 =	指定變量
 	c_Lang085 =	內容
 	c_Lang086 =	操作者
@@ -453,6 +473,18 @@
 	t_Lang109 =	下
 	t_Lang110 =	上
 	t_Lang111 =	插入擊鍵
+	t_Lang112 =	播放/暫停
+	t_Lang113 =	停止
+	t_Lang114 =	播放選項
+	t_Lang115 =	啟動/停止錄影
+	t_Lang116 =	錄製新宏
+	t_Lang117 =	錄製選項
+	t_Lang118 =	清除列表
+	t_Lang119 =	顯示進度條
+	t_Lang120 =	加快
+	t_Lang121 =	減緩
+	t_Lang122 =	顯示/隱藏標題欄
+	t_Lang123 =	顯示/隱藏主窗口
 		
 ; Messages & Dialogs		
 	d_Lang001 =	打開

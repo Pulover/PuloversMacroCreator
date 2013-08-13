@@ -115,18 +115,18 @@
 	w_Lang006 =	Auto.
 	w_Lang007 =	Man.
 	w_Lang008 =	Zastavit
-	w_Lang009 =	U&kázat šekový
-	w_Lang010 =	P&auza
-	w_Lang011 =	Smy&čka
-	w_Lang012 =	&Zachyťte klíče
-	w_Lang013 =	Sk&rýt okno
-	w_Lang014 =	V&ždy Aktivní
+	w_Lang009 =	Ovládací prvky panelu nástrojů
+	w_Lang010 =	Pauza
+	w_Lang011 =	Smyčka
+	w_Lang012 =	Zachyťte klíče
+	w_Lang013 =	Minimalizovat do tray
+	w_Lang014 =	Vždy Aktivní
 	w_Lang015 =	Opakovat
 	w_Lang016 =	Delay (ms):
 	w_Lang017 =	Platit
 	w_Lang018 =	Vložit
 	w_Lang019 =	Upravit
-	w_Lang020 =	(unused)
+	w_Lang020 =	vypnutí možnosti (Pokud přehrávání skončí...)
 	w_Lang021 =	Nedělat nic
 	w_Lang022 =	Zavřít aplikace
 	w_Lang023 =	Zavřít
@@ -176,6 +176,26 @@
 	w_Lang067 =	COM rozhraní (Shift+F11)
 	w_Lang068 =	Spustit Skripty (Ctrl+F11)
 	w_Lang069 =	Windows Zprávy (F12)
+	w_Lang070 =	Přidejte klávesu Windows jako modifikátor
+	w_Lang071 =	Joystick
+	w_Lang072 =	Přidat makro (Ctrl+T)
+	w_Lang073 =	Zavřít Makro (Ctrl+W)
+	w_Lang074 =	Duplicitní makro (Ctrl+Shift+D)
+	w_Lang075 =	Dovoz Makro (Ctrl+I)
+	w_Lang076 =	Uložit aktuální makro (Ctrl+Alt+S)
+	w_Lang077 =	Posunout nahoru (Ctrl+PageUp)
+	w_Lang078 =	Dolů (Ctrl+PageDown)
+	w_Lang079 =	Duplikovat vybrané řádky (Ctrl+D)
+	w_Lang080 =	Vyjmout vybrané řádky (Ctrl+X)
+	w_Lang081 =	Kopírovat vybrané řádky (Ctrl+C)
+	w_Lang082 =	Vložit kopírované řádky (Ctrl+V)
+	w_Lang083 =	Smazat vybrané řádky (Del)
+	w_Lang084 =	Undo (Ctrl+Z)
+	w_Lang085 =	Znovu (Ctrl+Y)
+	w_Lang086 =	Kopírovat do...
+	w_Lang087 =	Najít / Nahradit (Ctrl+F)
+	w_Lang088 =	Upravit komentář (Ctrl+L)
+	w_Lang089 =	Edit barva označuje (Ctrl+M)
 		
 ; Command Windows		
 	c_Lang001 =	Myš
@@ -260,7 +280,7 @@
 	c_Lang080 =	Přidat štítek
 	c_Lang081 =	String (InputVar), hodnota
 	c_Lang082 =	Var [Provozovatel] Hodnota
-	c_Lang083 =	Přidat Else
+	c_Lang083 =	jiný
 	c_Lang084 =	Přiřazení proměnné
 	c_Lang085 =	Obsah
 	c_Lang086 =	Provozovatel
@@ -453,6 +473,18 @@
 	t_Lang109 =	Dolů
 	t_Lang110 =	Nahoru
 	t_Lang111 =	Vložit Klávesy
+	t_Lang112 =	Play / Pause
+	t_Lang113 =	Zastavit
+	t_Lang114 =	Možnosti přehrávání
+	t_Lang115 =	Start / Stop Záznam
+	t_Lang116 =	Záznam nového makra
+	t_Lang117 =	Volby pro Záznam
+	t_Lang118 =	Vymazat seznam
+	t_Lang119 =	Zobrazit Progress Bar
+	t_Lang120 =	Urychlit
+	t_Lang121 =	Zpomalit
+	t_Lang122 =	Zobrazit / skrýt Title Bar
+	t_Lang123 =	Zobrazit / skrýt hlavní okno
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Otevřít
@@ -545,8 +577,8 @@
 	)	
 	d_Lang057 =	
 	(LTrim	
-		- Stiskněte Ctrl + kláves se šipkami pohybovat vybranou oblast.
-		- Stiskněte Shift + šipky pro změnu velikosti vybrané oblasti.
+		- Stiskněte Ctrl+kláves se šipkami pohybovat vybranou oblast.
+		- Stiskněte Shift+šipky pro změnu velikosti vybrané oblasti.
 		- Stiskněte Enter pro dokončení.
 	)	
 	d_Lang058 =	

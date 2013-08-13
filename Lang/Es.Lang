@@ -115,18 +115,18 @@
 	w_Lang006 =	Auto.
 	w_Lang007 =	Man.
 	w_Lang008 =	Detener
-	w_Lang009 =	Mos&trar Controles
-	w_Lang010 =	&Pausa
-	w_Lang011 =	&Loop
-	w_Lang012 =	&Capturar Teclas
-	w_Lang013 =	Oc&ultar ventana
-	w_Lang014 =	Siemp&re activo
+	w_Lang009 =	Mostrar barra de herramientas de controles
+	w_Lang010 =	Pausa
+	w_Lang011 =	Loop
+	w_Lang012 =	Capturar Teclas
+	w_Lang013 =	Minimizar a la bandeja
+	w_Lang014 =	Siempre activo
 	w_Lang015 =	Repetir
 	w_Lang016 =	Delay (ms):
 	w_Lang017 =	Aplicar
 	w_Lang018 =	Insertar
 	w_Lang019 =	Editar
-	w_Lang020 =	(unused)
+	w_Lang020 =	opciones de apagado (Cuando finalice la reproducción...)
 	w_Lang021 =	No hacer nada
 	w_Lang022 =	Cerrar la aplicación
 	w_Lang023 =	Cerrar
@@ -176,6 +176,26 @@
 	w_Lang067 =	COM Interface (Shift+F11)
 	w_Lang068 =	Executar Scriptlet (Ctrl+F11)
 	w_Lang069 =	Mensajes de Windows (F12)
+	w_Lang070 =	Agregue la clave de Windows como modificador
+	w_Lang071 =	Palanca de mando
+	w_Lang072 =	Añadir Macro (Ctrl+T)
+	w_Lang073 =	Cerrar Macro (Ctrl+W)
+	w_Lang074 =	Duplicar macro (Ctrl+Shift+D)
+	w_Lang075 =	Importación Macro (Ctrl+I)
+	w_Lang076 =	Guardar macro actual (Ctrl+Alt+S)
+	w_Lang077 =	Move Up (Ctrl+RePág)
+	w_Lang078 =	Mover abajo (Ctrl+AvPág)
+	w_Lang079 =	Duplicar filas seleccionadas (Ctrl+D)
+	w_Lang080 =	Cortar filas seleccionadas (Ctrl+X)
+	w_Lang081 =	Copia las filas seleccionadas (Ctrl+C)
+	w_Lang082 =	Pegar Filas copiadas (Ctrl+V)
+	w_Lang083 =	Eliminar filas seleccionadas (Del)
+	w_Lang084 =	Deshacer (Ctrl+Z)
+	w_Lang085 =	Rehacer (Ctrl+Y)
+	w_Lang086 =	Copiar a...
+	w_Lang087 =	Buscar / Reemplazar (Ctrl+F)
+	w_Lang088 =	Editar comentario (Ctrl+L)
+	w_Lang089 =	Editar marca de color (Ctrl+M)
 		
 ; Command Windows		
 	c_Lang001 =	Ratón
@@ -260,7 +280,7 @@
 	c_Lang080 =	Agregar etiqueta
 	c_Lang081 =	Cadena (InputVar), valor
 	c_Lang082 =	Var [operador] Valor
-	c_Lang083 =	Agregar Otras ventas
+	c_Lang083 =	
 	c_Lang084 =	Asignar variable
 	c_Lang085 =	Contenido
 	c_Lang086 =	Operador
@@ -453,6 +473,18 @@
 	t_Lang109 =	Abajo
 	t_Lang110 =	Hasta
 	t_Lang111 =	Insertar Pulsaciones
+	t_Lang112 =	Reproducir / Pausa
+	t_Lang113 =	Detener
+	t_Lang114 =	Opciones de reproducción
+	t_Lang115 =	Iniciar / detener grabación
+	t_Lang116 =	Grabar nueva macro
+	t_Lang117 =	Opciones de Grabación
+	t_Lang118 =	Borrar lista
+	t_Lang119 =	Mostrar barra de progreso
+	t_Lang120 =	Acelerar
+	t_Lang121 =	Reducir la velocidad de
+	t_Lang122 =	Mostrar / Ocultar barra de título
+	t_Lang123 =	Mostrar / ocultar la ventana principal
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Abierto
@@ -545,8 +577,8 @@
 	)	
 	d_Lang057 =	
 	(LTrim	
-		- Presione Ctrl + Teclas de flecha para mover el área seleccionada.
-		- Pulse las teclas Mayús + teclas de flecha para cambiar el tamaño de la zona seleccionada.
+		- Presione Ctrl+Teclas de flecha para mover el área seleccionada.
+		- Pulse las teclas Mayús+teclas de flecha para cambiar el tamaño de la zona seleccionada.
 		- Pulse Enter para finalizar.
 	)	
 	d_Lang058 =	

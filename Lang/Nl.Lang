@@ -115,18 +115,18 @@
 	w_Lang006 =	Auto.
 	w_Lang007 =	Man.
 	w_Lang008 =	Stoppen
-	w_Lang009 =	Too&n een checklist
-	w_Lang010 =	&Pauze
-	w_Lang011 =	&Lus
-	w_Lang012 =	&Capture Keys
-	w_Lang013 =	&Venster te verbergen
-	w_Lang014 =	&Altijd Actief
+	w_Lang009 =	Weer controles werkbalk
+	w_Lang010 =	Pauze
+	w_Lang011 =	Lus
+	w_Lang012 =	Capture Keys
+	w_Lang013 =	Minimaliseren naar tray
+	w_Lang014 =	Altijd Actief
 	w_Lang015 =	Herhalen
 	w_Lang016 =	Delay (ms):
 	w_Lang017 =	Van toepassing zijn
 	w_Lang018 =	Invoegen
 	w_Lang019 =	Redigeren
-	w_Lang020 =	(unused)
+	w_Lang020 =	shutdown opties (Wanneer het afspelen is voltooid...)
 	w_Lang021 =	Niets doen
 	w_Lang022 =	Sluit de toepassing
 	w_Lang023 =	Stilgelegd
@@ -176,6 +176,26 @@
 	w_Lang067 =	COM-interface (Shift+F11)
 	w_Lang068 =	Run Scriptlet (Ctrl+F11)
 	w_Lang069 =	Windows Messages (F12)
+	w_Lang070 =	Voeg de Windows-toets als modifier
+	w_Lang071 =	Bedieningshendel
+	w_Lang072 =	Voeg Macro (Ctrl+T)
+	w_Lang073 =	Sluiten Macro (Ctrl+W)
+	w_Lang074 =	Dubbele Macro (Ctrl+Shift+D)
+	w_Lang075 =	Import Macro (Ctrl+I)
+	w_Lang076 =	Save Current Macro (Ctrl+Alt+S)
+	w_Lang077 =	Move Up (Ctrl+PageUp)
+	w_Lang078 =	Omlaag (Ctrl+PageDown)
+	w_Lang079 =	Geselecteerde rijen dupliceren (Ctrl+D)
+	w_Lang080 =	Snijd Geselecteerde rijen (Ctrl+X)
+	w_Lang081 =	Kopieer geselecteerde rijen (Ctrl+C)
+	w_Lang082 =	Plakken Gekopieerde rijen (Ctrl+V)
+	w_Lang083 =	Geselecteerde rijen verwijderen (Del)
+	w_Lang084 =	Ongedaan maken (Ctrl+Z)
+	w_Lang085 =	Opnieuw (Ctrl+Y)
+	w_Lang086 =	Kopiëren naar...
+	w_Lang087 =	Zoeken / Vervangen (Ctrl+F)
+	w_Lang088 =	Opmerking bewerken (Ctrl+L)
+	w_Lang089 =	Bewerken kleurmarkering (Ctrl+M)
 		
 ; Command Windows		
 	c_Lang001 =	Muis
@@ -260,7 +280,7 @@
 	c_Lang080 =	Label toevoegen
 	c_Lang081 =	String (InputVar), Value
 	c_Lang082 =	Var [operator] Waarde
-	c_Lang083 =	Voeg Else
+	c_Lang083 =	anders
 	c_Lang084 =	Wijs Variabele
 	c_Lang085 =	Inhoud
 	c_Lang086 =	Operator
@@ -453,6 +473,18 @@
 	t_Lang109 =	Beneden
 	t_Lang110 =	Omhoog
 	t_Lang111 =	Steek Toetsaanslag
+	t_Lang112 =	play / pause
+	t_Lang113 =	Stoppen
+	t_Lang114 =	afspelen Opties
+	t_Lang115 =	Start / Stop Record
+	t_Lang116 =	Nieuwe macro opnemen
+	t_Lang117 =	Opnamemogelijkheden
+	t_Lang118 =	Lijst wissen
+	t_Lang119 =	Weergave Progress Bar
+	t_Lang120 =	Versnellen
+	t_Lang121 =	Langzamer gaan
+	t_Lang122 =	Show / Hide Title Bar
+	t_Lang123 =	Show / Hide hoofdvenster
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Open
@@ -545,8 +577,8 @@
 	)	
 	d_Lang057 =	
 	(LTrim	
-		- Druk op Ctrl + Pijl-toetsen om het geselecteerde gebied te verplaatsen.
-		- Druk op Shift + pijltjestoetsen om geselecteerde gebied wijzigen.
+		- Druk op Ctrl+Pijl-toetsen om het geselecteerde gebied te verplaatsen.
+		- Druk op Shift+pijltjestoetsen om geselecteerde gebied wijzigen.
 		- Druk op Enter om te voltooien.
 	)	
 	d_Lang058 =	

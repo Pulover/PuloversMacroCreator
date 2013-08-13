@@ -115,18 +115,18 @@
 	w_Lang006 =	Auto.
 	w_Lang007 =	Man.
 	w_Lang008 =	Stopp
-	w_Lang009 =	V&is kontroller
-	w_Lang010 =	Pa&use
-	w_Lang011 =	&Loop
-	w_Lang012 =	&Capture Keys
-	w_Lang013 =	S&kjul vindu
-	w_Lang014 =	All&tid aktiv
+	w_Lang009 =	Vise kontrollene verktøylinjen
+	w_Lang010 =	Pause
+	w_Lang011 =	Loop
+	w_Lang012 =	Capture Keys
+	w_Lang013 =	Minimere å brett
+	w_Lang014 =	Alltid aktiv
 	w_Lang015 =	Gjentar
 	w_Lang016 =	Delay (ms):
 	w_Lang017 =	Påfør
 	w_Lang018 =	Sett
 	w_Lang019 =	Redigere
-	w_Lang020 =	(unused)
+	w_Lang020 =	nedleggelse alternativer (Når avspillingen fullføres...)
 	w_Lang021 =	Gjør ingenting
 	w_Lang022 =	Lukk programmet
 	w_Lang023 =	Slå
@@ -176,6 +176,26 @@
 	w_Lang067 =	COM-grensesnitt (Shift+F11)
 	w_Lang068 =	Kjør Skriptlet (Ctrl+F11)
 	w_Lang069 =	Windows-meldinger (F12)
+	w_Lang070 =	Legge til Windows-tasten som modifikator
+	w_Lang071 =	Joystick
+	w_Lang072 =	Legg Makro (Ctrl+T)
+	w_Lang073 =	Lukk Makro (Ctrl+W)
+	w_Lang074 =	Duplisere Makro (Ctrl+Shift+D)
+	w_Lang075 =	Import Makro (Ctrl+I)
+	w_Lang076 =	Lagre gjeldende Makro (Ctrl+Alt+S)
+	w_Lang077 =	Flytt opp (Ctrl+PageUp)
+	w_Lang078 =	Flytt ned (Ctrl+PageDown)
+	w_Lang079 =	Dupliser valgte rader (Ctrl+D)
+	w_Lang080 =	Skjær valgte rader (Ctrl+X)
+	w_Lang081 =	Kopiere valgte rader (Ctrl+C)
+	w_Lang082 =	Lim Kopierte rader (Ctrl+V)
+	w_Lang083 =	Slett valgte rader (Del)
+	w_Lang084 =	Angre (Ctrl+Z)
+	w_Lang085 =	Gjør om (Ctrl+Y)
+	w_Lang086 =	Kopier til...
+	w_Lang087 =	Finn / Erstatt (Ctrl+F)
+	w_Lang088 =	Rediger Kommentar (Ctrl+L)
+	w_Lang089 =	Edit fargemerki (Ctrl+M)
 		
 ; Command Windows		
 	c_Lang001 =	Mus
@@ -260,7 +280,7 @@
 	c_Lang080 =	Legg Produsent
 	c_Lang081 =	String (InputVar), Verdi
 	c_Lang082 =	Var [operatør] Verdi
-	c_Lang083 =	Legg Else
+	c_Lang083 =	Else
 	c_Lang084 =	Tildele variabel
 	c_Lang085 =	Innhold
 	c_Lang086 =	Operatør
@@ -453,6 +473,18 @@
 	t_Lang109 =	Ned
 	t_Lang110 =	Opp
 	t_Lang111 =	Sett Tastetrykk
+	t_Lang112 =	Spill av / Pause
+	t_Lang113 =	Stopp
+	t_Lang114 =	Videoavspillingsalternativer
+	t_Lang115 =	Start / Stopp Record
+	t_Lang116 =	Registrer ny makro
+	t_Lang117 =	Innspillingsalternativer
+	t_Lang118 =	Slett liste
+	t_Lang119 =	Vise Progress Bar
+	t_Lang120 =	Fremskynde
+	t_Lang121 =	Tregere
+	t_Lang122 =	Vis / skjul Title Bar
+	t_Lang123 =	Vis / skjul hovedvinduet
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Åpent
@@ -545,8 +577,8 @@
 	)	
 	d_Lang057 =	
 	(LTrim	
-		- Trykk Ctrl + piltastene for å flytte valgte området.
-		- Trykk Shift + piltastene til å endre størrelsen på valgte området.
+		- Trykk Ctrl+piltastene for å flytte valgte området.
+		- Trykk Shift+piltastene til å endre størrelsen på valgte området.
 		- Trykk Enter for å fullføre.
 	)	
 	d_Lang058 =	

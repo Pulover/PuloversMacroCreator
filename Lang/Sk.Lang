@@ -115,18 +115,18 @@
 	w_Lang006 =	Auto.
 	w_Lang007 =	Man.
 	w_Lang008 =	Stop
-	w_Lang009 =	&Zobraziť ovládacie prvky
-	w_Lang010 =	P&auza
-	w_Lang011 =	S&lučka
-	w_Lang012 =	Za&chyťte kľúče
-	w_Lang013 =	&Hide Window
-	w_Lang014 =	V&ždy aktívny
+	w_Lang009 =	Ovládacie prvky panela nástrojov
+	w_Lang010 =	Pauza
+	w_Lang011 =	Slučka
+	w_Lang012 =	Zachyťte kľúče
+	w_Lang013 =	Minimalizovať do tray
+	w_Lang014 =	Vždy aktívny
 	w_Lang015 =	Opakovať
 	w_Lang016 =	Delay (ms):
 	w_Lang017 =	Platiť
 	w_Lang018 =	Vložiť
 	w_Lang019 =	Upraviť
-	w_Lang020 =	(Nepoužitý)
+	w_Lang020 =	Vypnutie možnosti (Ak prehrávanie skončí...)
 	w_Lang021 =	Nerobiť nič
 	w_Lang022 =	Zavrieť aplikácie
 	w_Lang023 =	Shutdown
@@ -146,36 +146,56 @@
 	w_Lang037 =	Okno
 	w_Lang038 =	Komentár
 	w_Lang039 =	Farba
-	w_Lang040 =	Nový (Ctrl + N)
-	w_Lang041 =	Otvoriť (Ctrl + O)
-	w_Lang042 =	Uložiť (Ctrl + S)
-	w_Lang043 =	Export do AHK (Ctrl + E)
-	w_Lang044 =	Náhľad Script (Ctrl + P)
-	w_Lang045 =	Nastavenie (Ctrl + G)
-	w_Lang046 =	Záznam makra (Ctrl + R)
-	w_Lang047 =	Aktivácia Makrá (Ctrl + Enter)
-	w_Lang048 =	Prehrať aktuálne makro (Ctrl + Shift + Enter)
-	w_Lang049 =	Timer (Ctrl + Shift + T)
+	w_Lang040 =	Nový (Ctrl+N)
+	w_Lang041 =	Otvoriť (Ctrl+O)
+	w_Lang042 =	Uložiť (Ctrl+S)
+	w_Lang043 =	Export do AHK (Ctrl+E)
+	w_Lang044 =	Náhľad Script (Ctrl+P)
+	w_Lang045 =	Nastavenie (Ctrl+G)
+	w_Lang046 =	Záznam makra (Ctrl+R)
+	w_Lang047 =	Aktivácia Makrá (Ctrl+Enter)
+	w_Lang048 =	Prehrať aktuálne makro (Ctrl+Shift+Enter)
+	w_Lang049 =	Timer (Ctrl+Shift+T)
 	w_Lang050 =	Myš (F2)
 	w_Lang051 =	Text (F3)
 	w_Lang052 =	Špeciálne klávesy
 	w_Lang053 =	Control (F4)
 	w_Lang054 =	Pauza (F5)
-	w_Lang055 =	Správa (Shift + F5)
-	w_Lang056 =	Key Wait (Ctrl + F5)
+	w_Lang055 =	Správa (Shift+F5)
+	w_Lang056 =	Key Wait (Ctrl+F5)
 	w_Lang057 =	Okno (F6)
 	w_Lang058 =	Obrázok / Pixel Search (F7)
 	w_Lang059 =	Spustiť / Súbor / String / Misc. (F8)
 	w_Lang060 =	Loop (F9)
-	w_Lang061 =	Goto (Shift + F9)
-	w_Lang062 =	Label (Ctrl + F9)
+	w_Lang061 =	Goto (Shift+F9)
+	w_Lang062 =	Label (Ctrl+F9)
 	w_Lang063 =	Pokiaľ závierka (F10)
-	w_Lang064 =	premenné (Shift + F10)
-	w_Lang065 =	Funkcia (Ctrl + F10)
+	w_Lang064 =	premenné (Shift+F10)
+	w_Lang065 =	Funkcia (Ctrl+F10)
 	w_Lang066 =	Internet Explorer (F11)
-	w_Lang067 =	COM rozhranie (Shift + F11)
-	w_Lang068 =	Spustiť skripty (Ctrl + F11)
+	w_Lang067 =	COM rozhranie (Shift+F11)
+	w_Lang068 =	Spustiť skripty (Ctrl+F11)
 	w_Lang069 =	Windows Správy (F12)
+	w_Lang070 =	Pridať klávesy Windows ako modifikátor
+	w_Lang071 =	Joystick
+	w_Lang072 =	Pridať makro (Ctrl+T)
+	w_Lang073 =	Zavrieť Makro (Ctrl+W)
+	w_Lang074 =	Duplicitné makro (Ctrl+Shift+D)
+	w_Lang075 =	Dovoz Makro (Ctrl+I)
+	w_Lang076 =	Uložiť aktuálny makro (Ctrl+Alt+S)
+	w_Lang077 =	Posunúť hore (Ctrl+PageUp)
+	w_Lang078 =	Dole (Ctrl+PageDown)
+	w_Lang079 =	Duplicitné vybrané riadky (Ctrl+D)
+	w_Lang080 =	Vyňať vybrané riadky (Ctrl+X)
+	w_Lang081 =	Kopírovať vybrané riadky (Ctrl+C)
+	w_Lang082 =	Vložiť kopírované riadky (Ctrl+V)
+	w_Lang083 =	Zmazať vybrané riadky (DEL)
+	w_Lang084 =	Späť (Ctrl+Z)
+	w_Lang085 =	Znovu (Ctrl+Y)
+	w_Lang086 =	Kopírovať do...
+	w_Lang087 =	Nájsť / Nahradiť (Ctrl+F)
+	w_Lang088 =	Upraviť komentár (Ctrl+L)
+	w_Lang089 =	Edit Color Mark (Ctrl+M)
 		
 ; Command Windows		
 	c_Lang001 =	Myš
@@ -260,7 +280,7 @@
 	c_Lang080 =	Pridať štítok
 	c_Lang081 =	String (InputVar), hodnota
 	c_Lang082 =	Var [Prevádzkovateľ] Hodnota
-	c_Lang083 =	Pridať Else
+	c_Lang083 =	iný
 	c_Lang084 =	Priradenie premennej
 	c_Lang085 =	Obsah
 	c_Lang086 =	Operátor
@@ -453,6 +473,18 @@
 	t_Lang109 =	Dole
 	t_Lang110 =	Hore
 	t_Lang111 =	Vložte úhoz
+	t_Lang112 =	Play / Pause
+	t_Lang113 =	Stop
+	t_Lang114 =	Možnosti prehrávania
+	t_Lang115 =	Start / Stop záznamu
+	t_Lang116 =	Záznam nového makra
+	t_Lang117 =	Možnosti nahrávania
+	t_Lang118 =	Vymazať zoznam
+	t_Lang119 =	Zobraziť Progress Bar
+	t_Lang120 =	Zrýchliť
+	t_Lang121 =	Spomaliť
+	t_Lang122 =	Zobraziť / skryť Title Bar
+	t_Lang123 =	Zobraziť / skryť hlavné okno
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Otvorené
@@ -506,7 +538,7 @@
 	d_Lang039 =	Časový limit!
 	d_Lang040 =	
 	(LTrim	
-		Táto funkcia vyžaduje rozhrania GDI + knižnice.
+		Táto funkcia vyžaduje rozhrania GDI+knižnice.
 		Kliknite na tlačidlo OK prejdite na stránku pre stiahnutie.
 	)	
 	d_Lang041 =	Názov premennej obsahuje nepovolený znak.
@@ -545,8 +577,8 @@
 	)	
 	d_Lang057 =	
 	(LTrim	
-		- Stlačte Ctrl + klávesov so šípkami pohybovať vybranú oblasť.
-		- Stlačením tlačidla Shift + klávesy so šípkami zmeňte veľkosť vybranej oblasti.
+		- Stlačte Ctrl+klávesov so šípkami pohybovať vybranú oblasť.
+		- Stlačením tlačidla Shift+klávesy so šípkami zmeňte veľkosť vybranej oblasti.
 		- Stlačte Enter pre dokončenie.
 	)	
 	d_Lang058 =	
@@ -601,7 +633,7 @@
 		Môžete otvoriť, kopírovať, presúvať alebo mazať súbory a priečinky pomocou jedného z príkazov Vložiť> Run / Súbor / String / Misc.
 		Ak chcete nahrávať hore a dole stav po každom stlačení Choď na Voľby> Nastavenia> Nahrávanie a skontrolujte "Capture Key State (dole / hore)" možnosť voľby.
 		Môžete použiť klávesové skratky pre urýchlenie alebo spomalenie prehrávania. Prejsť na Možnosti> Nastavenie> Prehrať na nastavenie kľúče a rýchlosť.
-		Ak chcete nastaviť snímanie priestoru pomocou "Vytvoriť snímku" nástroj choďte na Možnosti> Nastavenie> Screenshoty a zvoľte "Stlačte Enter pre snímanie". Po nakreslení obdĺžnika použite Control + šípky pre pohyb výber a Shift + kurzorové tlačidlo zmeniť jeho veľkosť.
+		Ak chcete nastaviť snímanie priestoru pomocou "Vytvoriť snímku" nástroj choďte na Možnosti> Nastavenie> Screenshoty a zvoľte "Stlačte Enter pre snímanie". Po nakreslení obdĺžnika použite Control+šípky pre pohyb výber a Shift+kurzorové tlačidlo zmeniť jeho veľkosť.
 		Rýchly výber: Vyberte ľubovoľný riadok a kliknite na hlavičku stĺpca vyberte podobné riadky na základe textu z bunky tohto stĺpca.
 		Run / Súbor / String / Misc. Okno má mnoho ďalších užitočných príkazov, ako je vypnutie a UrlDownloadToFile.
 		Použite "Screenshot" funkcia vo funkčnom okne (Vložiť> if / premennej / funkcie), aby sa snímka časti obrazovky. Prvý parameter je cieľový súbor je cesta a názov s príponou PNG. Druhý parameter sú potrubia oddelené polohu na obrazovke, napr 100 | 200 | 50 | 100 (X | Y | Šírka | Výška).
@@ -612,27 +644,27 @@
 		Môžete spustiť pokročilé funkcie ako substr a RegExReplace z funkcií okna (Vložiť> if / premennej / funkcie). Alebo spustiť vlastné funkcie z externých AutoHotkey skriptov.
 	)	
 ; Tooltips		
-	NewB_TT =	Nový (Ctrl + N)
-	OpenB_TT =	Otvoriť (Ctrl + O)
-	SaveB_TT =	Uložiť (Ctrl + S)
-	ExportB_TT =	Export do AHK (Ctrl + E)
-	PreviewB_TT =	Náhľad Script (Ctrl + P)
-	OptionsB_TT =	Nastavenie (Ctrl + G)
-	RecordB_TT =	Záznam makra (Ctrl + R)
-	StartB_TT =	Aktivácia Makrá (Ctrl + Enter)
-	TestRun_TT =	Prehrať aktuálne makro (Ctrl + Shift + Enter)
-	RunTimer_TT =	Timer (Ctrl + Shift + T)
+	NewB_TT =	Nový (Ctrl+N)
+	OpenB_TT =	Otvoriť (Ctrl+O)
+	SaveB_TT =	Uložiť (Ctrl+S)
+	ExportB_TT =	Export do AHK (Ctrl+E)
+	PreviewB_TT =	Náhľad Script (Ctrl+P)
+	OptionsB_TT =	Nastavenie (Ctrl+G)
+	RecordB_TT =	Záznam makra (Ctrl+R)
+	StartB_TT =	Aktivácia Makrá (Ctrl+Enter)
+	TestRun_TT =	Prehrať aktuálne makro (Ctrl+Shift+Enter)
+	RunTimer_TT =	Timer (Ctrl+Shift+T)
 	MouseB_TT =	Myš (F2)
 	TextB_TT =	Text (F3)
 	SpecialB_TT =	Špeciálne klávesy
 	ControlB_TT =	Control (F4)
-	PauseB_TT =	Pauza (F5) / Správa (Shift + F5) / Key Wait (Ctrl + F5)
+	PauseB_TT =	Pauza (F5) / Správa (Shift+F5) / Key Wait (Ctrl+F5)
 	WindowB_TT =	Okno (F6)
 	ImageB_TT =	Obrázok / Pixel Search (F7)
 	RunB_TT =	Spustiť / Súbor / String / Misc. (F8)
-	ComLoopB_TT =	Loop (F9) / Goto (Shift + F9) / Label (Ctrl + F9)
-	IfStB_TT =	Pokiaľ závierka (F10) / premenné (Shift + F10) / Funkcia (Ctrl + F10)
-	IEComB_TT =	Internet Explorer (F11) / COM rozhranie (Shift + F11) / Spustiť skripty (Ctrl + F11)
+	ComLoopB_TT =	Loop (F9) / Goto (Shift+F9) / Label (Ctrl+F9)
+	IfStB_TT =	Pokiaľ závierka (F10) / premenné (Shift+F10) / Funkcia (Ctrl+F10)
+	IEComB_TT =	Internet Explorer (F11) / COM rozhranie (Shift+F11) / Spustiť skripty (Ctrl+F11)
 	SendMsgB_TT =	Windows Správy (F12)
 	AutoKey_TT =	Backspace pre vymazanie
 	ManKey_TT =	Backspace pre vymazanie
@@ -647,24 +679,24 @@
 	Win1_TT =	Pridať klávesy Windows ako modifikátor
 	JoyHK_TT =	Joystick
 	ReptC_TT =	0 = nekonečno
-	TabPlus_TT =	Pridať makro (Ctrl + T)
-	TabClose_TT =	Zavrieť Makro (Ctrl + W)
-	DuplicateL_TT =	Duplicitné makro (Ctrl + Shift + D)
-	SaveC_TT =	Uložiť aktuálny makro (Ctrl + Alt + S)
-	ImportB_TT =	Dovoz Makro (Ctrl + I)
-	IfDirB_TT =	Urobiť Klávesové skratky fungovať v závislosti na`ntype z okna, ktoré je aktívne alebo neexistuje (Ctrl + H)
+	TabPlus_TT =	Pridať makro (Ctrl+T)
+	TabClose_TT =	Zavrieť Makro (Ctrl+W)
+	DuplicateL_TT =	Duplicitné makro (Ctrl+Shift+D)
+	SaveC_TT =	Uložiť aktuálny makro (Ctrl+Alt+S)
+	ImportB_TT =	Dovoz Makro (Ctrl+I)
+	IfDirB_TT =	Urobiť Klávesové skratky fungovať v závislosti na`ntype z okna, ktoré je aktívne alebo neexistuje (Ctrl+H)
 	KeepHKOn_TT =	Majte Klávesové skratky aktivovaný vždy
 	A_List_TT =	Zvoľte Makro (Ctrl +1 ~ 0)
 	OSHK_TT =	Vyberte makro
 	OSHKEd_TT =	Vyberte makro
-	Duplicate_TT =	Duplicitné vybrané riadky (Ctrl + D)
-	Order_TT =	Presun vybrané riadky (Ctrl + PageUp / Ctrl + PageDown)
-	Cut_TT =	Vyňať vybrané riadky (Ctrl + X)
-	Copy_TT =	Kopírovať vybrané riadky (Ctrl + C)
-	Paste_TT =	Vložiť kopírované riadky (Ctrl + V)
+	Duplicate_TT =	Duplicitné vybrané riadky (Ctrl+D)
+	Order_TT =	Presun vybrané riadky (Ctrl+PageUp / Ctrl+PageDown)
+	Cut_TT =	Vyňať vybrané riadky (Ctrl+X)
+	Copy_TT =	Kopírovať vybrané riadky (Ctrl+C)
+	Paste_TT =	Vložiť kopírované riadky (Ctrl+V)
 	Remove_TT =	Zmazať vybrané riadky (DEL)
-	Undo_TT =	Späť (Ctrl + Z)
-	Redo_TT =	Znovu (Ctrl + Y)
+	Undo_TT =	Späť (Ctrl+Z)
+	Redo_TT =	Znovu (Ctrl+Y)
 	CopyTo_TT =	Kopírovať do...
 	Capt_TT =	Zachytiť stlačení klávesov v tomto okne
 	OnScCtrl_TT =	Zobrazenie paneli Ovládacie prvky
@@ -672,12 +704,12 @@
 	ApplyT_TT =	Platiť
 	ApplyI_TT =	Platiť
 	ApplyL_TT =	Vložiť z Box (Insert)
-	InsertKey_TT =	Vložte stlačenie klávesy (Ctrl + Insert)
+	InsertKey_TT =	Vložte stlačenie klávesy (Ctrl+Insert)
 	EditButton_TT =	Upraviť (Enter)
 	PrevRefresh_TT =	Obnoviť (F5)
 	PrevCopy_TT =	Kopírovať
-	OpenT_TT =	Otvoriť (Ctrl + O)
-	SaveT_TT =	Uložiť (Ctrl + S)
+	OpenT_TT =	Otvoriť (Ctrl+O)
+	SaveT_TT =	Uložiť (Ctrl+S)
 	CutT_TT =	Znížiť
 	CopyT_TT =	Kopírovať
 	PasteT_TT =	Pasta
@@ -685,9 +717,9 @@
 	DefaultMacro_TT =	Vyberte súbor, ktorý chcete nahrať na spustenie programu sa
 	VarCopyA_TT =	Skopírujte bežný variabilný obsah
 	VarCopyB_TT =	Skopírujte bežný variabilný obsah
-	FindReplace_TT =	Nájsť / Nahradiť (Ctrl + F)
-	EditComm_TT =	Upraviť komentár (Ctrl + L)
-	EditColor_TT =	Edit Color Mark (Ctrl + M)
+	FindReplace_TT =	Nájsť / Nahradiť (Ctrl+F)
+	EditComm_TT =	Upraviť komentár (Ctrl+L)
+	EditColor_TT =	Edit Color Mark (Ctrl+M)
 	Reset_TT =	Vymazať obsah premennej
 	Screenshot_TT =	Vytvoriť snímku
 	ColorPick_TT =	Color Picker

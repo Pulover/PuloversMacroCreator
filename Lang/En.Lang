@@ -115,18 +115,18 @@
 	w_Lang006 =	Auto.
 	w_Lang007 =	Man.
 	w_Lang008 =	Stop
-	w_Lang009 =	Show Co&ntrols
-	w_Lang010 =	&Pause
-	w_Lang011 =	&Loop
-	w_Lang012 =	&Capture Keys
-	w_Lang013 =	Hide &Window
-	w_Lang014 =	&Always Active
+	w_Lang009 =	Display controls toolbar
+	w_Lang010 =	Pause
+	w_Lang011 =	Loop
+	w_Lang012 =	Capture Keys
+	w_Lang013 =	Minimize to tray
+	w_Lang014 =	Always Active
 	w_Lang015 =	Repeat
 	w_Lang016 =	Delay (ms):
 	w_Lang017 =	Apply
 	w_Lang018 =	Insert
 	w_Lang019 =	Edit
-	w_Lang020 =	(unused)
+	w_Lang020 =	Shutdown options (When playback finishes...)
 	w_Lang021 =	Do nothing
 	w_Lang022 =	Close application
 	w_Lang023 =	Shutdown
@@ -176,6 +176,26 @@
 	w_Lang067 =	COM Interface (Shift+F11)
 	w_Lang068 =	Run Scriptlet (Ctrl+F11)
 	w_Lang069 =	Windows Messages (F12)
+	w_Lang070 =	Add the Windows key as modifier
+	w_Lang071 =	Joystick
+	w_Lang072 =	Add Macro (Ctrl+T)
+	w_Lang073 =	Close Macro (Ctrl+W)
+	w_Lang074 =	Duplicate Macro (Ctrl+Shift+D)
+	w_Lang075 =	Import Macro (Ctrl+I)
+	w_Lang076 =	Save Current Macro (Ctrl+Alt+S)
+	w_Lang077 =	Move Up (Ctrl+PageUp)
+	w_Lang078 =	Move Down (Ctrl+PageDown)
+	w_Lang079 =	Duplicate Selected Rows (Ctrl+D)
+	w_Lang080 =	Cut Selected Rows (Ctrl+X)
+	w_Lang081 =	Copy Selected Rows (Ctrl+C)
+	w_Lang082 =	Paste Copied Rows (Ctrl+V)
+	w_Lang083 =	Delete Selected Rows (Del)
+	w_Lang084 =	Undo (Ctrl+Z)
+	w_Lang085 =	Redo (Ctrl+Y)
+	w_Lang086 =	Copy to...
+	w_Lang087 =	Find / Replace (Ctrl+F)
+	w_Lang088 =	Edit Comment (Ctrl+L)
+	w_Lang089 =	Edit Color Mark (Ctrl+M)
 		
 ; Command Windows		
 	c_Lang001 =	Mouse
@@ -260,7 +280,7 @@
 	c_Lang080 =	Add Label
 	c_Lang081 =	String (InputVar), Value
 	c_Lang082 =	Var [operator] Value
-	c_Lang083 =	Add Else
+	c_Lang083 =	Else
 	c_Lang084 =	Assign Variable
 	c_Lang085 =	Content
 	c_Lang086 =	Operator
@@ -453,6 +473,18 @@
 	t_Lang109 =	Down
 	t_Lang110 =	Up
 	t_Lang111 =	Insert Keystroke
+	t_Lang112 =	Play / Pause
+	t_Lang113 =	Stop
+	t_Lang114 =	Playback Options
+	t_Lang115 =	Start / Stop Record
+	t_Lang116 =	Record New Macro
+	t_Lang117 =	Recording Options
+	t_Lang118 =	Clear List
+	t_Lang119 =	Display Progress Bar
+	t_Lang120 =	Speed Up
+	t_Lang121 =	Slow Down
+	t_Lang122 =	Show / Hide Title Bar
+	t_Lang123 =	Show / Hide Main Window
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Open
@@ -545,8 +577,8 @@
 	)	
 	d_Lang057 =	
 	(LTrim	
-		- Press Ctrl + Arrow keys to move selected area.
-		- Press Shift + Arrow keys to resize selected area.
+		- Press Ctrl+Arrow keys to move selected area.
+		- Press Shift+Arrow keys to resize selected area.
 		- Press Enter to finish.
 	)	
 	d_Lang058 =	
@@ -601,7 +633,7 @@
 		You can open, copy, move or delete files and folders using one of the commands in Insert > Run / File / String / Misc.
 		To record Down and Up state of every key go to Options > Settings > Recording and check "Capture key state (Down / Up)" option.
 		You can use hotkeys to speed up or slow down Playback. Go to Options > Settings > Playback to set keys and speed.
-		To adjust capture area using the "Make Screenshot" tool go to Options > Settings > Screenshots and select "Press Enter to Capture". After drawing the rectangle use Control + arrow keys to move the selection and Shift + arrow keys to resize it.
+		To adjust capture area using the "Make Screenshot" tool go to Options > Settings > Screenshots and select "Press Enter to Capture". After drawing the rectangle use Control+arrow keys to move the selection and Shift+arrow keys to resize it.
 		Quick Select: Select any row and click on a column header to select similar rows based on cell's text from that column.
 		The Run / File / String / Misc. window have many other useful commands such as Shutdown and UrlDownloadToFile.
 		Use the "Screenshot" function in the functions window (Insert > If Statements / Variables / Functions) to make a screenshot of part of the screen. First parameter is the destination file's path and name with a png extension. Second parameter are the pipe-separated coordinates in the screen, e.g. 100|200|50|100 (X|Y|Width|Height).

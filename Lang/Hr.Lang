@@ -115,18 +115,18 @@
 	w_Lang006 =	Samostalno.
 	w_Lang007 =	Čovjek
 	w_Lang008 =	Stop
-	w_Lang009 =	Po&kaži kontrole
-	w_Lang010 =	P&auza
-	w_Lang011 =	P&etlja
-	w_Lang012 =	&Hvatanje Keys
-	w_Lang013 =	&Sakrij Prozor
-	w_Lang014 =	U&vijek je aktivna
+	w_Lang009 =	Prikaz kontrole traci
+	w_Lang010 =	Pauza
+	w_Lang011 =	Petlja
+	w_Lang012 =	Hvatanje Keys
+	w_Lang013 =	Smanji u ladicu
+	w_Lang014 =	Uvijek je aktivna
 	w_Lang015 =	Ponovite
 	w_Lang016 =	Kašnjenje (ms):
 	w_Lang017 =	Primijeniti
 	w_Lang018 =	Umetnuti
 	w_Lang019 =	Uredi
-	w_Lang020 =	(unused)
+	w_Lang020 =	shutdown opcije (Kad reprodukcija završi...)
 	w_Lang021 =	Ne učiniti ništa
 	w_Lang022 =	Zatvori prijava
 	w_Lang023 =	Zatvoriti
@@ -176,6 +176,26 @@
 	w_Lang067 =	COM sučelja (Shift+F11)
 	w_Lang068 =	Trčanje Scriptlet (Ctrl+F11)
 	w_Lang069 =	Windows Poruke (F12)
+	w_Lang070 =	Dodaj Windows tipku za izmjenu
+	w_Lang071 =	Džojstik
+	w_Lang072 =	Dodaj Macro (Ctrl+T)
+	w_Lang073 =	Makro Close (Ctrl+W)
+	w_Lang074 =	Dvostruki Macro (Ctrl+Shift+D)
+	w_Lang075 =	Uvoz Makro (Ctrl+I)
+	w_Lang076 =	Spremi Trenutni Macro (Ctrl+Alt+S)
+	w_Lang077 =	Move Up (Ctrl+PageUp)
+	w_Lang078 =	Move Down (Ctrl+PageDown)
+	w_Lang079 =	Dvostruki odabrane retke (Ctrl+D)
+	w_Lang080 =	Odabrani Redovi Cut (Ctrl+X)
+	w_Lang081 =	Kopirajte odabrane retke (Ctrl+C)
+	w_Lang082 =	Kopirano Redovi paste (Ctrl+V)
+	w_Lang083 =	Izbriši odabrane retke (Del)
+	w_Lang084 =	Poništi (Ctrl+Z)
+	w_Lang085 =	Ponovi (Ctrl+Y)
+	w_Lang086 =	Kopirajte se...
+	w_Lang087 =	Pronađi / Zamijeni (Ctrl+F)
+	w_Lang088 =	Uredi komentar (Ctrl+L)
+	w_Lang089 =	Uredi Boja oznaka (Ctrl+M)
 		
 ; Command Windows		
 	c_Lang001 =	Miš
@@ -260,7 +280,7 @@
 	c_Lang080 =	Dodaj oznaku
 	c_Lang081 =	String (InputVar), vrijednost
 	c_Lang082 =	Var [operatera] Vrijednost
-	c_Lang083 =	Dodaj Else
+	c_Lang083 =	još
 	c_Lang084 =	Dodjela Variable
 	c_Lang085 =	Sadržaj
 	c_Lang086 =	Operator
@@ -453,6 +473,18 @@
 	t_Lang109 =	Dole
 	t_Lang110 =	Gore
 	t_Lang111 =	Umetnite Pritisak Na Tipku
+	t_Lang112 =	Reprodukcija / pauza
+	t_Lang113 =	Stop
+	t_Lang114 =	Playback Options
+	t_Lang115 =	Start / Stop Record
+	t_Lang116 =	Zapis New Macro
+	t_Lang117 =	Opcije Snimanja
+	t_Lang118 =	Jasno Popis
+	t_Lang119 =	Prikaz Progress Bar
+	t_Lang120 =	Ubrzati
+	t_Lang121 =	Usporiti
+	t_Lang122 =	Show / Hide Naslov Bar
+	t_Lang123 =	Show / Hide glavni prozor
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Otvoreno
@@ -545,8 +577,8 @@
 	)	
 	d_Lang057 =	
 	(LTrim	
-		- Pritisnite CTRL + tipke sa strelicama za pomicanje odabranog područja.
-		- Pritisnite Shift + tipke sa strelicama za promjenu veličine odabranog područja.
+		- Pritisnite CTRL+tipke sa strelicama za pomicanje odabranog područja.
+		- Pritisnite Shift+tipke sa strelicama za promjenu veličine odabranog područja.
 		- Pritisnite Enter završiti.
 	)	
 	d_Lang058 =	

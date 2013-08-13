@@ -115,18 +115,18 @@
 	w_Lang006 =	Avto.
 	w_Lang007 =	Človek.
 	w_Lang008 =	Stop
-	w_Lang009 =	&Prikaži nadzor
-	w_Lang010 =	P&remor
-	w_Lang011 =	&Zanka
-	w_Lang012 =	Zaj&emanje Keys
-	w_Lang013 =	&Skrij okno
-	w_Lang014 =	Ved&no aktiven
+	w_Lang009 =	Prikazati kontrolnike Orodna vrstica
+	w_Lang010 =	Premor
+	w_Lang011 =	Zanka
+	w_Lang012 =	Zajemanje Keys
+	w_Lang013 =	Zmanjšati v pladenj
+	w_Lang014 =	Vedno aktiven
 	w_Lang015 =	Ponovite
 	w_Lang016 =	Delay (ms):
 	w_Lang017 =	Uporabi
 	w_Lang018 =	Vstavite
 	w_Lang019 =	Urejanje
-	w_Lang020 =	(Unused)
+	w_Lang020 =	Možnosti zaustavitev (Ko se predvajanje konča.)
 	w_Lang021 =	Storiti ničesar
 	w_Lang022 =	Zapri aplikacija
 	w_Lang023 =	Shutdown
@@ -146,36 +146,56 @@
 	w_Lang037 =	Okno
 	w_Lang038 =	Komentar
 	w_Lang039 =	Barva
-	w_Lang040 =	New (Ctrl + N)
-	w_Lang041 =	Odprta (Ctrl + O)
-	w_Lang042 =	Prihranite (Ctrl + S)
-	w_Lang043 =	Izvoz v AHK (Ctrl + E)
-	w_Lang044 =	Predogled Script (Ctrl + P)
-	w_Lang045 =	Nastavitve (Ctrl + G)
-	w_Lang046 =	Record Macro (Ctrl + R)
-	w_Lang047 =	Vključi Makri (Ctrl + Enter)
-	w_Lang048 =	Igraj trenutni makro (Ctrl + Shift + Enter)
-	w_Lang049 =	Timer (Ctrl + Shift + T)
+	w_Lang040 =	New (Ctrl+N)
+	w_Lang041 =	Odprta (Ctrl+O)
+	w_Lang042 =	Prihranite (Ctrl+S)
+	w_Lang043 =	Izvoz v AHK (Ctrl+E)
+	w_Lang044 =	Predogled Script (Ctrl+P)
+	w_Lang045 =	Nastavitve (Ctrl+G)
+	w_Lang046 =	Record Macro (Ctrl+R)
+	w_Lang047 =	Vključi Makri (Ctrl+Enter)
+	w_Lang048 =	Igraj trenutni makro (Ctrl+Shift+Enter)
+	w_Lang049 =	Timer (Ctrl+Shift+T)
 	w_Lang050 =	Mouse (F2)
 	w_Lang051 =	Besedilo (F3)
 	w_Lang052 =	Posebne Keys
 	w_Lang053 =	Control (F4)
 	w_Lang054 =	Premor (F5)
-	w_Lang055 =	Sporočilo (Shift + F5)
-	w_Lang056 =	ključne Počakaj (Control + F5)
+	w_Lang055 =	Sporočilo (Shift+F5)
+	w_Lang056 =	ključne Počakaj (Control+F5)
 	w_Lang057 =	Okno (F6)
 	w_Lang058 =	Image / Pixel Search (F7)
 	w_Lang059 =	Run / datoteke / String / Razno. (F8)
 	w_Lang060 =	Zanka (F9)
-	w_Lang061 =	Goto (Shift + F9)
-	w_Lang062 =	Label (Ctrl + F9)
+	w_Lang061 =	Goto (Shift+F9)
+	w_Lang062 =	Label (Ctrl+F9)
 	w_Lang063 =	Če izjave (F10)
-	w_Lang064 =	spremenljivke (Shift + F10)
-	w_Lang065 =	Funkcije (Ctrl + F10)
+	w_Lang064 =	spremenljivke (Shift+F10)
+	w_Lang065 =	Funkcije (Ctrl+F10)
 	w_Lang066 =	Internet Explorer (F11)
-	w_Lang067 =	COM vmesnik (Shift + F11)
-	w_Lang068 =	Run skriptov (Ctrl + F11)
+	w_Lang067 =	COM vmesnik (Shift+F11)
+	w_Lang068 =	Run skriptov (Ctrl+F11)
 	w_Lang069 =	Windows Sporočila (F12)
+	w_Lang070 =	Dodaj tipko Windows kot spreminjevalcem
+	w_Lang071 =	Joystick
+	w_Lang072 =	Dodaj Macro (Ctrl+T)
+	w_Lang073 =	Zapri Macro (Ctrl+W)
+	w_Lang074 =	Dvojnik makro (Ctrl+Shift+D)
+	w_Lang075 =	Uvoz Macro (Ctrl+I)
+	w_Lang076 =	Shrani trenutni makro (Ctrl+Alt+S)
+	w_Lang077 =	Move Up (Ctrl+PageUp)
+	w_Lang078 =	Premakni navzdol (Ctrl+PageDown)
+	w_Lang079 =	Dvojnik izbrane vrstice (Ctrl+D)
+	w_Lang080 =	Cut izbrane vrstice (Ctrl+X)
+	w_Lang081 =	Kopirajte izbrane vrstice (Ctrl+C)
+	w_Lang082 =	Prilepi prekopiranih vrsticah (Ctrl+V)
+	w_Lang083 =	Izbriši izbrane vrstice (DEL)
+	w_Lang084 =	Razveljavi (Ctrl+Z)
+	w_Lang085 =	Ponovi (Ctrl+Y)
+	w_Lang086 =	Kopiraj v.
+	w_Lang087 =	Najdi / Zamenjaj (Ctrl+F)
+	w_Lang088 =	Uredi komentar (Ctrl+L)
+	w_Lang089 =	Edit Color Mark (Ctrl+M)
 		
 ; Command Windows		
 	c_Lang001 =	Miška
@@ -260,7 +280,7 @@
 	c_Lang080 =	Dodaj oznako
 	c_Lang081 =	String (InputVar), vrednost
 	c_Lang082 =	Var [operater] Vrednost
-	c_Lang083 =	Dodaj Else
+	c_Lang083 =	Else
 	c_Lang084 =	Določite spremenljivko
 	c_Lang085 =	Vsebina
 	c_Lang086 =	Operater
@@ -453,6 +473,18 @@
 	t_Lang109 =	Navzdol
 	t_Lang110 =	Up
 	t_Lang111 =	Vstavite Keystroke
+	t_Lang112 =	Predvajanje / premor
+	t_Lang113 =	Stop
+	t_Lang114 =	Možnosti predvajanja
+	t_Lang115 =	Start / Stop Record
+	t_Lang116 =	Posnemi nov makro
+	t_Lang117 =	Možnosti snemanja
+	t_Lang118 =	Jasno Seznam
+	t_Lang119 =	Prikaže vrstica napredka
+	t_Lang120 =	Speed Up
+	t_Lang121 =	Slow Down
+	t_Lang122 =	Prikaži / skrij Naslov Bar
+	t_Lang123 =	Prikaži / skrij glavno okno
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Odprite
@@ -506,7 +538,7 @@
 	d_Lang039 =	Timeout!
 	d_Lang040 =	
 	(LTrim	
-		Ta funkcija zahteva GDI + knjižnice.
+		Ta funkcija zahteva GDI+knjižnice.
 		Kliknite V redu, da gredo na stran za prenos.
 	)	
 	d_Lang041 =	Ime spremenljivke vsebuje neveljaven znak.
@@ -545,8 +577,8 @@
 	)	
 	d_Lang057 =	
 	(LTrim	
-		- Pritisnite Ctrl + smerne tipke za premikanje izbrano območje.
-		- Pritisnite tipko Shift + smerne tipke, da spremenite velikost izbranega območja.
+		- Pritisnite Ctrl+smerne tipke za premikanje izbrano območje.
+		- Pritisnite tipko Shift+smerne tipke, da spremenite velikost izbranega območja.
 		- Pritisnite Enter, da končate.
 	)	
 	d_Lang058 =	
@@ -601,7 +633,7 @@
 		Lahko odpirate, kopirate, premikate ali brišete datoteke in mape z uporabo enega od ukazov Insert> Run / datoteke / String / Razno.
 		Za snemanje dol in gor stanje vseh ključnih pojdite na Možnosti> Nastavitve> Snemanje in preverite, "Capture ključno stanje (dol / gor)" možnost.
 		Lahko uporabite hotkeys, da pospešijo ali upočasnijo predvajanja. Pojdi na Možnosti> Nastavitve> Playback nastavite tipke in hitrost.
-		Če želite prilagoditi zajem območja z uporabo "Znamka Screenshot" orodje pojdite na Možnosti> Nastavitve> Screenshots in izberite "Pritisnite Enter za zajem". Po jemanju uporabo nadzorne pravokotnik + smerne tipke za premikanje izbire in Shift + smerne tipke, da spremenite velikost.
+		Če želite prilagoditi zajem območja z uporabo "Znamka Screenshot" orodje pojdite na Možnosti> Nastavitve> Screenshots in izberite "Pritisnite Enter za zajem". Po jemanju uporabo nadzorne pravokotnik+smerne tipke za premikanje izbire in Shift+smerne tipke, da spremenite velikost.
 		Hitro Izberite: Izberite katero koli vrstico in kliknite na glavo stolpca, da izberete podobne vrstice, ki temeljijo na besedilu celice iz tega stolpca.
 		Run / datoteke / String / Razno. okna imajo številne druge koristne ukaze, kot Shutdown in UrlDownloadToFile.
 		Uporabite funkcijo »Screenshot« v oknu funkcije (Insert> Če Izjave / spremenljivke / funkcije) narediti screenshot delu zaslona. Prvi parameter je pot ciljna datoteka in ime z razširitvijo png. Drugi parameter so cevi, ločene koordinate na zaslonu, npr 100 | 200 | 50 | 100 (X | Y | Širina | Višina).
@@ -612,27 +644,27 @@
 		Lahko zaženete napredne funkcije, kot so substr in RegExReplace iz okna Funkcije (Insert> Če Izjave / spremenljivke / funkcije). Ali teči svoje funkcije iz zunanjih AutoHotkey skripte.
 	)	
 ; Tooltips		
-	NewB_TT =	New (Ctrl + N)
-	OpenB_TT =	Odprta (Ctrl + O)
-	SaveB_TT =	Prihranite (Ctrl + S)
-	ExportB_TT =	Izvoz v AHK (Ctrl + E)
-	PreviewB_TT =	Predogled Script (Ctrl + P)
-	OptionsB_TT =	Nastavitve (Ctrl + G)
-	RecordB_TT =	Record Macro (Ctrl + R)
-	StartB_TT =	Vključi Makri (Ctrl + Enter)
-	TestRun_TT =	Igraj trenutni makro (Ctrl + Shift + Enter)
-	RunTimer_TT =	Timer (Ctrl + Shift + T)
+	NewB_TT =	New (Ctrl+N)
+	OpenB_TT =	Odprta (Ctrl+O)
+	SaveB_TT =	Prihranite (Ctrl+S)
+	ExportB_TT =	Izvoz v AHK (Ctrl+E)
+	PreviewB_TT =	Predogled Script (Ctrl+P)
+	OptionsB_TT =	Nastavitve (Ctrl+G)
+	RecordB_TT =	Record Macro (Ctrl+R)
+	StartB_TT =	Vključi Makri (Ctrl+Enter)
+	TestRun_TT =	Igraj trenutni makro (Ctrl+Shift+Enter)
+	RunTimer_TT =	Timer (Ctrl+Shift+T)
 	MouseB_TT =	Mouse (F2)
 	TextB_TT =	Besedilo (F3)
 	SpecialB_TT =	Posebne Keys
 	ControlB_TT =	Control (F4)
-	PauseB_TT =	Premor (F5) / Sporočilo (Shift + F5) / ključne Počakaj (Control + F5)
+	PauseB_TT =	Premor (F5) / Sporočilo (Shift+F5) / ključne Počakaj (Control+F5)
 	WindowB_TT =	Okno (F6)
 	ImageB_TT =	Image / Pixel Search (F7)
 	RunB_TT =	Run / datoteke / String / Razno. (F8)
-	ComLoopB_TT =	Zanka (F9) / Goto (Shift + F9) / Label (Ctrl + F9)
-	IfStB_TT =	Če izjave (F10) / spremenljivke (Shift + F10) / Funkcije (Ctrl + F10)
-	IEComB_TT =	Internet Explorer (F11) / COM vmesnik (Shift + F11) / Run skriptov (Ctrl + F11)
+	ComLoopB_TT =	Zanka (F9) / Goto (Shift+F9) / Label (Ctrl+F9)
+	IfStB_TT =	Če izjave (F10) / spremenljivke (Shift+F10) / Funkcije (Ctrl+F10)
+	IEComB_TT =	Internet Explorer (F11) / COM vmesnik (Shift+F11) / Run skriptov (Ctrl+F11)
 	SendMsgB_TT =	Windows Sporočila (F12)
 	AutoKey_TT =	Backspace jasno
 	ManKey_TT =	Backspace jasno
@@ -647,24 +679,24 @@
 	Win1_TT =	Dodaj tipko Windows kot spreminjevalcem
 	JoyHK_TT =	Joystick
 	ReptC_TT =	0 = neskončno
-	TabPlus_TT =	Dodaj Macro (Ctrl + T)
-	TabClose_TT =	Zapri Macro (Ctrl + W)
-	DuplicateL_TT =	Dvojnik makro (Ctrl + Shift + D)
-	SaveC_TT =	Shrani trenutni makro (Ctrl + Alt + S)
-	ImportB_TT =	Uvoz Macro (Ctrl + I)
-	IfDirB_TT =	Naredite Bližnjice delovalo, odvisno od`ntype okna, ki se aktivno ali obstaja (Ctrl + D)
+	TabPlus_TT =	Dodaj Macro (Ctrl+T)
+	TabClose_TT =	Zapri Macro (Ctrl+W)
+	DuplicateL_TT =	Dvojnik makro (Ctrl+Shift+D)
+	SaveC_TT =	Shrani trenutni makro (Ctrl+Alt+S)
+	ImportB_TT =	Uvoz Macro (Ctrl+I)
+	IfDirB_TT =	Naredite Bližnjice delovalo, odvisno od`ntype okna, ki se aktivno ali obstaja (Ctrl+D)
 	KeepHKOn_TT =	Imejte Bližnjice vedno aktivira
 	A_List_TT =	Izberite Macro (Ctrl +1 ~ 0)
 	OSHK_TT =	Izberite makro
 	OSHKEd_TT =	Izberite makro
-	Duplicate_TT =	Dvojnik izbrane vrstice (Ctrl + D)
-	Order_TT =	Premakniti izbrane vrstice (Ctrl + PageUp / Ctrl + PageDown)
-	Cut_TT =	Cut izbrane vrstice (Ctrl + X)
-	Copy_TT =	Kopirajte izbrane vrstice (Ctrl + C)
-	Paste_TT =	Prilepi prekopiranih vrsticah (Ctrl + V)
+	Duplicate_TT =	Dvojnik izbrane vrstice (Ctrl+D)
+	Order_TT =	Premakniti izbrane vrstice (Ctrl+PageUp / Ctrl+PageDown)
+	Cut_TT =	Cut izbrane vrstice (Ctrl+X)
+	Copy_TT =	Kopirajte izbrane vrstice (Ctrl+C)
+	Paste_TT =	Prilepi prekopiranih vrsticah (Ctrl+V)
 	Remove_TT =	Izbriši izbrane vrstice (DEL)
-	Undo_TT =	Razveljavi (Ctrl + Z)
-	Redo_TT =	Ponovi (Ctrl + Y)
+	Undo_TT =	Razveljavi (Ctrl+Z)
+	Redo_TT =	Ponovi (Ctrl+Y)
 	CopyTo_TT =	Kopiraj v.
 	Capt_TT =	Zajemanje pritiske na tipke v tem oknu
 	OnScCtrl_TT =	Display Controls Orodna vrstica
@@ -672,12 +704,12 @@
 	ApplyT_TT =	Uporabi
 	ApplyI_TT =	Uporabi
 	ApplyL_TT =	Vstavite okencu (Insert)
-	InsertKey_TT =	Vstavite Keystroke (Ctrl + Insert)
+	InsertKey_TT =	Vstavite Keystroke (Ctrl+Insert)
 	EditButton_TT =	Uredi (Enter)
 	PrevRefresh_TT =	Refresh (F5)
 	PrevCopy_TT =	Kopirajte
-	OpenT_TT =	Odprta (Ctrl + O)
-	SaveT_TT =	Prihranite (Ctrl + S)
+	OpenT_TT =	Odprta (Ctrl+O)
+	SaveT_TT =	Prihranite (Ctrl+S)
 	CutT_TT =	Cut
 	CopyT_TT =	Kopirajte
 	PasteT_TT =	Prilepi
@@ -685,9 +717,9 @@
 	DefaultMacro_TT =	Izberite datoteko naložiti na programu zagon
 	VarCopyA_TT =	Kopiranje trenutne spremenljive vsebine
 	VarCopyB_TT =	Kopiranje trenutne spremenljive vsebine
-	FindReplace_TT =	Najdi / Zamenjaj (Ctrl + F)
-	EditComm_TT =	Uredi komentar (Ctrl + L)
-	EditColor_TT =	Edit Color Mark (Ctrl + M)
+	FindReplace_TT =	Najdi / Zamenjaj (Ctrl+F)
+	EditComm_TT =	Uredi komentar (Ctrl+L)
+	EditColor_TT =	Edit Color Mark (Ctrl+M)
 	Reset_TT =	Počisti spremenljive vsebine
 	Screenshot_TT =	Naredite Screenshot
 	ColorPick_TT =	Color Picker

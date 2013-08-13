@@ -115,18 +115,18 @@
 	w_Lang006 =	Auto.
 	w_Lang007 =	Man.
 	w_Lang008 =	Arresto
-	w_Lang009 =	Mos&tra controlli
-	w_Lang010 =	&Pausa
-	w_Lang011 =	A&nello
-	w_Lang012 =	&Cattura Keys
-	w_Lang013 =	Nascondi la fin&estra
-	w_Lang014 =	Semp&re attivo
+	w_Lang009 =	Visualizzare i controlli barra degli strumenti
+	w_Lang010 =	Pausa
+	w_Lang011 =	Anello
+	w_Lang012 =	Cattura Keys
+	w_Lang013 =	Riduci a icona nella tray
+	w_Lang014 =	Sempre attivo
 	w_Lang015 =	Ripeti
 	w_Lang016 =	Ritardo (ms):
 	w_Lang017 =	Applicare
 	w_Lang018 =	Inserire
 	w_Lang019 =	Modifica
-	w_Lang020 =	(unused)
+	w_Lang020 =	opzioni di spegnimento (Quando termina la riproduzione...)
 	w_Lang021 =	Non fare nulla
 	w_Lang022 =	Chiudi applicazione
 	w_Lang023 =	Chiudere
@@ -176,6 +176,26 @@
 	w_Lang067 =	COM Interface (Shift+F11)
 	w_Lang068 =	Esegui Scriptlet (Ctrl+F11)
 	w_Lang069 =	Messaggi di Windows (F12)
+	w_Lang070 =	Aggiungere la chiave di Windows come modificatore
+	w_Lang071 =	Joystick
+	w_Lang072 =	Aggiungi Macro (Ctrl+T)
+	w_Lang073 =	Chiudere Macro (Ctrl+W)
+	w_Lang074 =	Duplica macro (Ctrl+Shift+D)
+	w_Lang075 =	Importa Macro (Ctrl+I)
+	w_Lang076 =	Salva Macro corrente (Ctrl+Alt+S)
+	w_Lang077 =	Move Up (Ctrl+Pag su)
+	w_Lang078 =	Sposta in basso (Ctrl+Pag giù)
+	w_Lang079 =	Duplica le righe selezionate (Ctrl+D)
+	w_Lang080 =	Tagliare righe selezionate (Ctrl+X)
+	w_Lang081 =	Copia le righe selezionate (Ctrl+C)
+	w_Lang082 =	Righe copiate Incolla (Ctrl+V)
+	w_Lang083 =	Elimina le righe selezionate (Del)
+	w_Lang084 =	Annulla (Ctrl+Z)
+	w_Lang085 =	Ripeti (Ctrl+Y)
+	w_Lang086 =	Copia...
+	w_Lang087 =	Trova / Sostituisci (Ctrl+F)
+	w_Lang088 =	Modifica commento (Ctrl+L)
+	w_Lang089 =	Modifica marchio di colore (Ctrl+M)
 		
 ; Command Windows		
 	c_Lang001 =	Mouse
@@ -260,7 +280,7 @@
 	c_Lang080 =	Aggiungi etichetta
 	c_Lang081 =	Stringa (InputVar), un valore
 	c_Lang082 =	Var [operatore] Valore
-	c_Lang083 =	Aggiungi Else
+	c_Lang083 =	Else
 	c_Lang084 =	Assegnare variabile
 	c_Lang085 =	Contenuto
 	c_Lang086 =	Operatore
@@ -453,6 +473,18 @@
 	t_Lang109 =	Giù
 	t_Lang110 =	Up
 	t_Lang111 =	Inserire Battitura
+	t_Lang112 =	Play / Pause
+	t_Lang113 =	Arresto
+	t_Lang114 =	Opzioni di riproduzione
+	t_Lang115 =	Start / Stop Record
+	t_Lang116 =	Registra nuova macro
+	t_Lang117 =	Opzioni di Registrazione
+	t_Lang118 =	Cancella elenco
+	t_Lang119 =	Mostra barra di avanzamento
+	t_Lang120 =	Accelerare
+	t_Lang121 =	Rallentare
+	t_Lang122 =	Mostra / Nascondi barra del titolo
+	t_Lang123 =	Mostra / Nascondi finestra principale
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Aperto
@@ -545,8 +577,8 @@
 	)	
 	d_Lang057 =	
 	(LTrim	
-		- Premere Ctrl + tasti freccia per spostare l'area selezionata.
-		- Premere Maiusc + tasti di direzione per ridimensionare area selezionata.
+		- Premere Ctrl+tasti freccia per spostare l'area selezionata.
+		- Premere Maiusc+tasti di direzione per ridimensionare area selezionata.
 		- Premere Invio per terminare.
 	)	
 	d_Lang058 =	

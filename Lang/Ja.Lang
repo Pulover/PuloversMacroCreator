@@ -115,18 +115,18 @@
 	w_Lang006 =	オート。
 	w_Lang007 =	男。
 	w_Lang008 =	停止
-	w_Lang009 =	コントロールを表示
+	w_Lang009 =	ツールバーコントロールを表示
 	w_Lang010 =	休止
 	w_Lang011 =	ループ
 	w_Lang012 =	キーをキャプチャ
-	w_Lang013 =	ウィンドウを非表示
+	w_Lang013 =	トレイに最小化
 	w_Lang014 =	常にアクティブ
 	w_Lang015 =	繰り返し
 	w_Lang016 =	遅延（ms）：
 	w_Lang017 =	適用する
 	w_Lang018 =	挿入
 	w_Lang019 =	編集
-	w_Lang020 =	(unused)
+	w_Lang020 =	シャットダウンオプション (再生が終了すると...)
 	w_Lang021 =	何もしない
 	w_Lang022 =	閉じるアプリケーション
 	w_Lang023 =	シャットダウン
@@ -176,6 +176,26 @@
 	w_Lang067 =	 COMインタフェース（Shift+F11）を
 	w_Lang068 =	スクリプトレットを実行 (Ctrl+F11)
 	w_Lang069 =	Windowsメッセージ（F12）
+	w_Lang070 =	モディファイアとして、Windowsキーを追加
+	w_Lang071 =	ジョイスティック
+	w_Lang072 =	マクロを追加します（Ctrl+T）
+	w_Lang073 =	閉じるマクロ（Ctrl+Wを）
+	w_Lang074 =	マクロを複製（Ctrl+Shiftキー+ D）
+	w_Lang075 =	インポートマクロ（Ctrl+Iキー）
+	w_Lang076 =	現在のマクロを保存します（Ctrl+Alt+Sキー）
+	w_Lang077 =	[上に移動（Ctrlキーを押しながらPageUpキー）
+	w_Lang078 =	（Ctrlキーを押しながらPageDownキー）下に移動
+	w_Lang079 =	選択した行を複製（Ctrl+Dキー）
+	w_Lang080 =	[選択した行の（Ctrl+X）をカット
+	w_Lang081 =	[選択した行の（Ctrl+C）をコピーします
+	w_Lang082 =	コピーした行を選択（Ctrl+V）を貼り付け
+	w_Lang083 =	[選択した行（デル）を削除
+	w_Lang084 =	元に戻す（Ctrl+Z）を
+	w_Lang085 =	やり直し（Ctrl+Y）
+	w_Lang086 =	にコピーして...
+	w_Lang087 =	検索/置換（Ctrl+F）を
+	w_Lang088 =	コメントを編集（Ctrl+L）を
+	w_Lang089 =	編集色マーク（Ctrl+M）を
 		
 ; Command Windows		
 	c_Lang001 =	マウス
@@ -260,7 +280,7 @@
 	c_Lang080 =	ラベルを追加
 	c_Lang081 =	文字列（InputVar）、値
 	c_Lang082 =	Varの[演算子]の値
-	c_Lang083 =	エルス追加
+	c_Lang083 =	ほかに
 	c_Lang084 =	変数を割り当てる
 	c_Lang085 =	コンテンツ
 	c_Lang086 =	オペレータ
@@ -453,6 +473,18 @@
 	t_Lang109 =	ダウン
 	t_Lang110 =	アップ
 	t_Lang111 =	キーストロークを挿入
+	t_Lang112 =	再生/一時停止
+	t_Lang113 =	停止
+	t_Lang114 =	再生オプション
+	t_Lang115 =	録音の開始/停止
+	t_Lang116 =	新しいマクロの記録
+	t_Lang117 =	録画オプション
+	t_Lang118 =	一覧をクリアする
+	t_Lang119 =	プログレスバーを表示
+	t_Lang120 =	スピードアップ
+	t_Lang121 =	速度を落とす
+	t_Lang122 =	表示/非表示のタイトルバー
+	t_Lang123 =	メインウィンドウの表示/非表示
 		
 ; Messages & Dialogs		
 	d_Lang001 =	開く
@@ -545,7 +577,7 @@
 	)	
 	d_Lang057 =	
 	(LTrim	
-		 - 選択した領域を移動するCtrl + Aを押して、矢印キー。
+		 - 選択した領域を移動するCtrl+Aを押して、矢印キー。
 		 -  Shiftキーを押しながら矢印キー選択した領域のサイズを変更します。
 		 - 終了するにはEnterキーを押します。
 	)	

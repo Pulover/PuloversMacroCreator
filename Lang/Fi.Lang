@@ -115,18 +115,18 @@
 	w_Lang006 =	Auto.
 	w_Lang007 =	Mies.
 	w_Lang008 =	Lopettaa
-	w_Lang009 =	&Näytä valvonta
-	w_Lang010 =	Ta&uko
-	w_Lang011 =	&Silmukka
-	w_Lang012 =	&Capture Keys
-	w_Lang013 =	Piil&ota ikkuna
-	w_Lang014 =	Aina aktiivin&en
+	w_Lang009 =	Näytön säädöt työkalurivi
+	w_Lang010 =	Tauko
+	w_Lang011 =	Silmukka
+	w_Lang012 =	Capture Keys
+	w_Lang013 =	Pienennä Tray
+	w_Lang014 =	Aina aktiivinen
 	w_Lang015 =	Toista
 	w_Lang016 =	Delay (ms):
 	w_Lang017 =	Käyttää
 	w_Lang018 =	Lisätä
 	w_Lang019 =	Muokata
-	w_Lang020 =	(unused)
+	w_Lang020 =	shutdown vaihtoehtoja (Kun toisto päättyy...)
 	w_Lang021 =	Älä tee mitään
 	w_Lang022 =	Sulje sovellus
 	w_Lang023 =	Sulkea
@@ -176,6 +176,26 @@
 	w_Lang067 =	COM liitäntä (Shift+F11)
 	w_Lang068 =	Suorita Komentosarjasovelman (Ctrl+F11)
 	w_Lang069 =	Windows viestit (F12)
+	w_Lang070 =	Lisää Windows-näppäin muuntoaineena
+	w_Lang071 =	Peliohjain
+	w_Lang072 =	Lisää Makro (Ctrl+T)
+	w_Lang073 =	Sulje Makro (Ctrl+W)
+	w_Lang074 =	Monista Makro (Ctrl+Shift+D)
+	w_Lang075 =	Tuo Makro (Ctrl+I)
+	w_Lang076 =	Tallenna Nykyinen Makro (Ctrl+Alt+S)
+	w_Lang077 =	Siirrä ylös (Ctrl+Page Up)
+	w_Lang078 =	Siirrä alas (Ctrl+Page Down)
+	w_Lang079 =	Monista valitut rivit (Ctrl+D)
+	w_Lang080 =	Leikkaa valitut rivit (Ctrl+X)
+	w_Lang081 =	Kopioi valitut rivit (Ctrl+C)
+	w_Lang082 =	Liitä kopioidut rivit (Ctrl+V)
+	w_Lang083 =	Poista valitut rivit (Del)
+	w_Lang084 =	Kumoa (Ctrl+Z)
+	w_Lang085 =	Redo (Ctrl+Y)
+	w_Lang086 =	Kopioida...
+	w_Lang087 =	Etsi / Korvaa (Ctrl+F)
+	w_Lang088 =	Edit Kommentti (Ctrl+L)
+	w_Lang089 =	Edit värimerkk (Ctrl+M)
 		
 ; Command Windows		
 	c_Lang001 =	Hiiri
@@ -260,7 +280,7 @@
 	c_Lang080 =	Lisää Label
 	c_Lang081 =	String-arvo
 	c_Lang082 =	Var [operaattori] Arvo
-	c_Lang083 =	Lisää Else
+	c_Lang083 =	muu
 	c_Lang084 =	Määritä Variable
 	c_Lang085 =	Pitoisuus
 	c_Lang086 =	Operaattori
@@ -453,6 +473,18 @@
 	t_Lang109 =	Alas
 	t_Lang110 =	Ylös
 	t_Lang111 =	Aseta Näppäilyn
+	t_Lang112 =	Play / Pause
+	t_Lang113 =	Lopettaa
+	t_Lang114 =	Toistoasetukset
+	t_Lang115 =	Start / Stop Record
+	t_Lang116 =	Nauhoita uusi makro
+	t_Lang117 =	Tallennusmahdollisuudet
+	t_Lang118 =	Tyhjennä luettelo
+	t_Lang119 =	Näyttö Progress Bar
+	t_Lang120 =	Nopeuttaa
+	t_Lang121 =	Hidastaa
+	t_Lang122 =	Näytä / Piilota Otsikko Bar
+	t_Lang123 =	Näytä / Piilota pääikkuna
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Avata
@@ -545,8 +577,8 @@
 	)	
 	d_Lang057 =	
 	(LTrim	
-		- Paina Ctrl + nuolinäppäimillä liikkua valittuun alueeseen.
-		- Paina VAIHTO + nuolinäppäimet kokoa valitulla alueella.
+		- Paina Ctrl+nuolinäppäimillä liikkua valittuun alueeseen.
+		- Paina VAIHTO+nuolinäppäimet kokoa valitulla alueella.
 		- Paina Enter loppuun.
 	)	
 	d_Lang058 =	

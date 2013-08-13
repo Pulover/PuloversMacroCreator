@@ -115,18 +115,18 @@
 	w_Lang006 =	Auto.
 	w_Lang007 =	Man.
 	w_Lang008 =	Parar
-	w_Lang009 =	Mostrar Co&ntrol.
-	w_Lang010 =	&Pausa
-	w_Lang011 =	&Loop
-	w_Lang012 =	&Capturar Teclas
-	w_Lang013 =	Ocultar &Janela
-	w_Lang014 =	Sempre A&tivo
+	w_Lang009 =	Exibir a barra de controles
+	w_Lang010 =	Pausa
+	w_Lang011 =	Loop
+	w_Lang012 =	Capturar Teclas
+	w_Lang013 =	Minimizar para  a bandeja
+	w_Lang014 =	Sempre Ativo
 	w_Lang015 =	Repetir
 	w_Lang016 =	Interv. (ms):
 	w_Lang017 =	Aplicar
 	w_Lang018 =	Inserir
 	w_Lang019 =	Editar
-	w_Lang020 =	(unused)
+	w_Lang020 =	Opções de desligamento (Quando a reprodução terminar...)
 	w_Lang021 =	Não fazer nada
 	w_Lang022 =	Fechar aplicativo
 	w_Lang023 =	Desligar
@@ -176,6 +176,26 @@
 	w_Lang067 =	Interface COM (Shift+F11)
 	w_Lang068 =	Executar Scriptlet (Ctrl+F11)
 	w_Lang069 =	Mensages do Windows (F12)
+	w_Lang070 =	Adicionar a tecla Windows como modificador
+	w_Lang071 =	Joystick
+	w_Lang072 =	Adicionar Macro (Ctrl+T)
+	w_Lang073 =	Fechar Macro (Ctrl+W)
+	w_Lang074 =	Duplicar Macro (Ctrl+Shift+D)
+	w_Lang075 =	Importar Macro (Ctrl+I)
+	w_Lang076 =	Salvar Macro Atual (Ctrl+Alt+S)
+	w_Lang077 =	Mover para Cima (Ctrl+PageUp)
+	w_Lang078 =	Mover para Baixo (Ctrl+PageDown)
+	w_Lang079 =	Duplicar Linhas Selecionadas (Ctrl+D)
+	w_Lang080 =	Recortar Linhas Selecionadas (Ctrl+X)
+	w_Lang081 =	Copiar Linhas Selecionadas (Ctrl+C)
+	w_Lang082 =	Colar Linhas Copiadas (Ctrl+V)
+	w_Lang083 =	Excluir Linhas Selecionadas (Del)
+	w_Lang084 =	Desfazer (Ctrl+Z)
+	w_Lang085 =	Refazer (Ctrl+Y)
+	w_Lang086 =	Copiar para...
+	w_Lang087 =	Localizar / Substituir (Ctrl+F)
+	w_Lang088 =	Editar Comentário (Ctrl+L)
+	w_Lang089 =	Editar Marca de Cor (Ctrl+M)
 		
 ; Command Windows		
 	c_Lang001 =	Mouse
@@ -453,6 +473,18 @@
 	t_Lang109 =	Segurar
 	t_Lang110 =	Soltar
 	t_Lang111 =	Inserir Tecla
+	t_Lang112 =	Reproduzir / Pausar
+	t_Lang113 =	Parar
+	t_Lang114 =	Opções de Reprodução
+	t_Lang115 =	Iniciar / Parar Gravação
+	t_Lang116 =	Gravar Nova Macro
+	t_Lang117 =	Opções de Gravação
+	t_Lang118 =	Limpar Lista
+	t_Lang119 =	Mostrar Barra de Progresso
+	t_Lang120 =	Acelerar
+	t_Lang121 =	Reduzir
+	t_Lang122 =	Mostrar / Ocultar Barra de Título
+	t_Lang123 =	Mostrar / Ocultar Janela Principal
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Abrir
@@ -545,8 +577,8 @@
 	)	
 	d_Lang057 =	
 	(LTrim	
-		- Pressione Ctrl + Setas para mover a área selecionada.
-		- Pressione Shift + Setas para redimensionar a área selecionada.
+		- Pressione Ctrl+Setas para mover a área selecionada.
+		- Pressione Shift+Setas para redimensionar a área selecionada.
 		- Pressione Enter para finalizar.
 	)	
 	d_Lang058 =	
@@ -601,7 +633,7 @@
 		Você pode abrir, copiar, mover ou apagar arquivos e pastas usando um dos comandos em Inserir > Executar / Arquivo / Texto / Misc.
 		Para gravar Down e Up estado de cada chave vá para Opções > Configurações > Gravação e marque "Capturar estado da tecla (press. / solta)" opção.
 		Você pode usar teclas de atalho para acelerar ou desacelerar Reprodução. Vá até Opções > Configurações > Reprodução para definir as chaves e velocidade.
-		Para ajustar a área de captura utilizando a ferramenta "Capturar Imagem" vá em Opções > Configurações > Imagens e selecione "Press. Enter para capturar". Depois de desenhar o controle do uso do retângulo + setas para mover as teclas de seta de seleção e Shift + para redimensioná-la.
+		Para ajustar a área de captura utilizando a ferramenta "Capturar Imagem" vá em Opções > Configurações > Imagens e selecione "Press. Enter para capturar". Depois de desenhar o controle do uso do retângulo+setas para mover as teclas de seta de seleção e Shift+para redimensioná-la.
 		Seleção rápida: Selecione uma linha e clique no cabeçalho da coluna para selecionar linhas semelhantes baseadas no texto da célula de coluna.
 		A janela Executar / Arquivo / Texto / Misc. tem muitos outros comandos úteis, como Desligar e URLDownloadToFile.
 		Use a função "Screenshot" na janela de funções (Inserir > Declaração Se / Variáveis / Funções) para fazer uma screenshot de parte da tela. O primeiro parâmetro é o caminho e o nome do arquivo de destino com uma extensão png. O segundo parâmetro são as coordenadas da tela separadas por barra vertical, por exemplo, 100|200|50|100 (X|Y|Largura|Altura).

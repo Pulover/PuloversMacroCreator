@@ -547,7 +547,7 @@ ToggleIcon()
 	ChangeProgBarColor(Color, "OSCProg", 28)
 	If !A_IsPaused
 		IconFile := A_IconFile, IconNumber := A_IconNumber
-	Try Menu, Tray, Icon, % (A_IsPaused = 0) ? t_PauseIcon[1] : IconFile, % (A_IsPaused = 0) ? t_PauseIcon[2] : IconNumber
+	Menu, Tray, Icon, % (A_IsPaused = 0) ? ResDllPath : IconFile, % (A_IsPaused = 0) ? 56 : IconNumber
 	return A_IsPaused
 }
 
@@ -659,6 +659,16 @@ ShowMenu(Menu, mX, mY)
 	}
 	Else If (Menu = "OnFinish")
 		GoSub, OnFinish
+	Else If (Menu = "RecStart")
+	{
+		Menu, TbMenu, Add, %t_Lang020%, RecStartNew
+		Menu, TbMenu, Show, %mX%, %mY%
+		Menu, TbMenu, DeleteAll
+	}
+	Else If InStr(Menu, "Rec")
+		GoSub, ShowRecMenu
+	Else If (Menu = "ShowPlayMenu")
+		GoSub, ShowPlayMenu
 	Else
 		Menu, %Menu%, Show, %mX%, %mY%
 }

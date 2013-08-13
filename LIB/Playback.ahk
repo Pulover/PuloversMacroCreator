@@ -14,7 +14,7 @@
 		GoSub, RowCheck
 	}
 	Pause, Off
-	Try Menu, Tray, Icon, % t_PlayIcon[1], % t_PlayIcon[2]
+	Menu, Tray, Icon, %ResDllPath%, 47
 	Menu, Tray, Default, %w_Lang008%
 	PlayOSOn := 1, ToggleButtonIcon(OSPlay, PauseIconB)
 ,	CurrentRange := m_ListCount, ChangeProgBarColor("20D000", "OSCProg", 28)
@@ -30,7 +30,7 @@
 		{
 			If StopIt
 			{
-				Try Menu, Tray, Icon, %DefaultIcon%, 1
+				Menu, Tray, Icon, %DefaultIcon%, 1
 				Menu, Tray, Default, %w_Lang005%
 				break
 			}
@@ -403,7 +403,7 @@
 				{
 					If StopIt
 					{
-						Try Menu, Tray, Icon, %DefaultIcon%, 1
+						Menu, Tray, Icon, %DefaultIcon%, 1
 						Menu, Tray, Default, %w_Lang005%
 						break 3
 					}
@@ -439,7 +439,7 @@
 	CurrentRange := ""
 	If !(aHK_Timer)
 	{
-		Try Menu, Tray, Icon, %DefaultIcon%, 1
+		Menu, Tray, Icon, %DefaultIcon%, 1
 		Menu, Tray, Default, %w_Lang005%
 		PlayOSOn := 0
 		ToggleButtonIcon(OSPlay, TestRunIcon)

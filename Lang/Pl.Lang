@@ -115,18 +115,18 @@
 	w_Lang006 =	Auto.
 	w_Lang007 =	Man.
 	w_Lang008 =	Zatrzymać
-	w_Lang009 =	Po&każ panel kontroli
-	w_Lang010 =	P&auza
-	w_Lang011 =	P&ętla
-	w_Lang012 =	P&rzechwytywanie klawiszy
-	w_Lang013 =	&Ukryj okno
-	w_Lang014 =	&Zawsze aktywny
+	w_Lang009 =	Pokaż pasek narzędzi kontroli
+	w_Lang010 =	Pauza
+	w_Lang011 =	Pętla
+	w_Lang012 =	Przechwytywanie klawiszy
+	w_Lang013 =	Zminimalizować do zasobnika
+	w_Lang014 =	Zawsze aktywny
 	w_Lang015 =	Powtarzam
 	w_Lang016 =	Opóźnienie (ms):
 	w_Lang017 =	Zastosować
 	w_Lang018 =	Wstawić
 	w_Lang019 =	Edytuj
-	w_Lang020 =	(unused)
+	w_Lang020 =	opcje wyłączania (Po zakończeniu odtwarzania...)
 	w_Lang021 =	Nic nie robić
 	w_Lang022 =	Close aplikacji
 	w_Lang023 =	Zamknąć
@@ -176,6 +176,26 @@
 	w_Lang067 =	COM interfejsu (Shift+F11)
 	w_Lang068 =	Uruchom Scriptlet (Ctrl+F11)
 	w_Lang069 =	Komunikaty Windows (F12)
+	w_Lang070 =	Dodaj klucz Windows jako modyfikator
+	w_Lang071 =	Drążek sterowy
+	w_Lang072 =	Dodaj Macro (Ctrl+T)
+	w_Lang073 =	Zamknij makro (Ctrl+W)
+	w_Lang074 =	Powiel makro (Ctrl+Shift+D)
+	w_Lang075 =	Import Makro (Ctrl+I)
+	w_Lang076 =	Zapisz bieżące makro (Ctrl+Alt+S)
+	w_Lang077 =	Przenieś w górę (Ctrl+PageUp)
+	w_Lang078 =	Przenieś w dół (Ctrl+PageDown)
+	w_Lang079 =	Duplikat wybranych wierszy (Ctrl+D)
+	w_Lang080 =	Wytnij wybranych wierszy (Ctrl+X)
+	w_Lang081 =	Kopiowanie wybranych wierszy (Ctrl+C)
+	w_Lang082 =	Wklej Skopiowane wiersze (Ctrl+V)
+	w_Lang083 =	Usuń zaznaczone wiersze (DEL)
+	w_Lang084 =	Cofnij (Ctrl+Z)
+	w_Lang085 =	Ponów (Ctrl+Y)
+	w_Lang086 =	Skopiuj do...
+	w_Lang087 =	Znajdź / Zamień (Ctrl+F)
+	w_Lang088 =	Edytuj komentarz (Ctrl+L)
+	w_Lang089 =	Zmień kolor zapytania (Ctrl+M)
 		
 ; Command Windows		
 	c_Lang001 =	Mysz
@@ -260,7 +280,7 @@
 	c_Lang080 =	Dodaj etykietę
 	c_Lang081 =	String (InputVar), Wartość
 	c_Lang082 =	Var [operator] Wartość
-	c_Lang083 =	Dodaj Else
+	c_Lang083 =	więcej
 	c_Lang084 =	Przypisanie zmiennej
 	c_Lang085 =	Zawartość
 	c_Lang086 =	Operator
@@ -453,6 +473,18 @@
 	t_Lang109 =	W dół
 	t_Lang110 =	W górę
 	t_Lang111 =	Włóż Klawiszy
+	t_Lang112 =	odtwarzanie / pauza
+	t_Lang113 =	Zatrzymać
+	t_Lang114 =	Opcje odtwarzania
+	t_Lang115 =	Start / Stop Record
+	t_Lang116 =	Zarejestruj nowe makro
+	t_Lang117 =	Opcje Nagrywania
+	t_Lang118 =	Wyczyść listę
+	t_Lang119 =	Wyświetlić pasek postępu
+	t_Lang120 =	Przyśpieszyć
+	t_Lang121 =	Zwolnij
+	t_Lang122 =	Pokaż / Ukryj pasek tytułu
+	t_Lang123 =	Pokaż / Ukryj okno główne
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Otwarte
@@ -545,8 +577,8 @@
 	)	
 	d_Lang057 =	
 	(LTrim	
-		- Naciśnij klawisz CTRL + klawiszy strzałek wybranego obszaru.
-		- NaciÊnij Shift + klawisze strzałek, aby zmienić rozmiar wybranego obszaru.
+		- Naciśnij klawisz CTRL+klawiszy strzałek wybranego obszaru.
+		- NaciÊnij Shift+klawisze strzałek, aby zmienić rozmiar wybranego obszaru.
 		- Naciśnij klawisz Enter, aby zakończyć.
 	)	
 	d_Lang058 =	

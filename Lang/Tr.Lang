@@ -115,18 +115,18 @@
 	w_Lang006 =	Oto.
 	w_Lang007 =	Man.
 	w_Lang008 =	Dur
-	w_Lang009 =	&Kontrolleri göster
-	w_Lang010 =	D&urma
-	w_Lang011 =	D&öngü
-	w_Lang012 =	&Tuşlar Capture
-	w_Lang013 =	&Pencere gizle
-	w_Lang014 =	&Her zaman Aktif
+	w_Lang009 =	Araç çubuğu kontrolleri görüntülemek
+	w_Lang010 =	Durma
+	w_Lang011 =	Döngü
+	w_Lang012 =	Tuşlar Capture
+	w_Lang013 =	Tepsisine küçült
+	w_Lang014 =	Her zaman Aktif
 	w_Lang015 =	Tekrarlayın
 	w_Lang016 =	Gecikme (ms):
 	w_Lang017 =	Uygulamak
 	w_Lang018 =	Eklemek
 	w_Lang019 =	Düzenle
-	w_Lang020 =	(unused)
+	w_Lang020 =	kapatma seçenekleri (Ne zaman çalma bitirir...)
 	w_Lang021 =	Hiçbir şey yapma
 	w_Lang022 =	Yakın başvuru
 	w_Lang023 =	Kapatmak
@@ -176,6 +176,26 @@
 	w_Lang067 =	COM Arabirimi (Shift+F11)
 	w_Lang068 =	Komut Dosyası Çalıştırmak (Ctrl+F11)
 	w_Lang069 =	Windows iletileri (F12)
+	w_Lang070 =	Değiştirici olarak Windows tuşu ekle
+	w_Lang071 =	Joystick
+	w_Lang072 =	Makro Ekle (Ctrl+T)
+	w_Lang073 =	Kapat Makro (Ctrl+W)
+	w_Lang074 =	Makro çoğaltın (Ctrl+Shift+D)
+	w_Lang075 =	İthalat Makro (Ctrl+I)
+	w_Lang076 =	Cari Makro Kaydet (Ctrl+Alt+S)
+	w_Lang077 =	Yukarı Taşı (Ctrl+PageUp)
+	w_Lang078 =	(Ctrl+PageDown) Aşağı Taşı
+	w_Lang079 =	Seçili Satırlar çoğaltın (Ctrl+D)
+	w_Lang080 =	Seçili Satırlar (Ctrl+X) Cut
+	w_Lang081 =	Seçili Satırlar (Ctrl+C) kopyalayın
+	w_Lang082 =	Yapıştır Kopyalanan Satırlar (Ctrl+V)
+	w_Lang083 =	Seçili Satırlar (Del) Sil
+	w_Lang084 =	Geri Al (Ctrl+Z)
+	w_Lang085 =	Yinele (Ctrl+Y)
+	w_Lang086 =	Kopyala...
+	w_Lang087 =	Bul / Değiştir (Ctrl+F)
+	w_Lang088 =	Yorum düzenle (Ctrl+L)
+	w_Lang089 =	Düzen renk işareti (Ctrl+M)
 		
 ; Command Windows		
 	c_Lang001 =	Fare
@@ -260,7 +280,7 @@
 	c_Lang080 =	Etiket Ekle
 	c_Lang081 =	Dize (InputVar), Değer
 	c_Lang082 =	Var [operatör] Değer
-	c_Lang083 =	Else ekle
+	c_Lang083 =	başka
 	c_Lang084 =	Değişken atama
 	c_Lang085 =	Içerik
 	c_Lang086 =	Operatör
@@ -453,6 +473,18 @@
 	t_Lang109 =	Aşağı
 	t_Lang110 =	Yukarı
 	t_Lang111 =	Tuş Eklemek
+	t_Lang112 =	Play / Pause
+	t_Lang113 =	Dur
+	t_Lang114 =	Yürütme Seçenekleri
+	t_Lang115 =	Kayıt Başlat / Durdur
+	t_Lang116 =	Yeni Makro Kaydet
+	t_Lang117 =	Kayıt Seçenekleri
+	t_Lang118 =	Listeyi Temizle
+	t_Lang119 =	İlerleme Çubuğu Ekran
+	t_Lang120 =	Hızlandırma
+	t_Lang121 =	Yavaşlatmak
+	t_Lang122 =	Göster / Gizle Başlık Çubuğu
+	t_Lang123 =	Ana pencerede göster / gizle
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Açık
@@ -545,8 +577,8 @@
 	)	
 	d_Lang057 =	
 	(LTrim	
-		- Seçilen alanı taşımak için Ctrl + Ok tuşları.
-		- Shift + Ok tuşları Seçili alanı yeniden boyutlandırmak için.
+		- Seçilen alanı taşımak için Ctrl+Ok tuşları.
+		- Shift+Ok tuşları Seçili alanı yeniden boyutlandırmak için.
 		- Bitirmek için Enter tuşuna basın.
 	)	
 	d_Lang058 =	

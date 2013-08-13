@@ -115,18 +115,18 @@
 	w_Lang006 =	Acte.
 	w_Lang007 =	Man
 	w_Lang008 =	Aturi
-	w_Lang009 =	&Barra de control
-	w_Lang010 =	&Pausa
-	w_Lang011 =	B&ucle
-	w_Lang012 =	&Captura Keys
-	w_Lang013 =	&Hide Window
-	w_Lang014 =	Semp&re actiu
+	w_Lang009 =	Mostra la barra d'eines de controls
+	w_Lang010 =	Pausa
+	w_Lang011 =	Bucle
+	w_Lang012 =	Captura Keys
+	w_Lang013 =	Minimitza a la safata
+	w_Lang014 =	Sempre actiu
 	w_Lang015 =	Repetir
 	w_Lang016 =	Retard (ms):
 	w_Lang017 =	Aplicar
 	w_Lang018 =	Insereix
 	w_Lang019 =	Edita
-	w_Lang020 =	(unused)
+	w_Lang020 =	Opcions d'apagada (Quan finalitzi la reproducció...)
 	w_Lang021 =	No fer res
 	w_Lang022 =	Tancar l'aplicació
 	w_Lang023 =	Tancar
@@ -176,6 +176,26 @@
 	w_Lang067 =	COM Interface (Shift+F11)
 	w_Lang068 =	Executar Scriptlet (Ctrl+F11)
 	w_Lang069 =	Missatges de Windows (F12)
+	w_Lang070 =	Afegir la tecla Windows com a modificador
+	w_Lang071 =	Palanca de comandament
+	w_Lang072 =	Afegir Macro (Ctrl+T)
+	w_Lang073 =	Tancar Macro (Ctrl+W)
+	w_Lang074 =	Duplicar macro (Ctrl+Shift+D)
+	w_Lang075 =	Importació Macro (Ctrl+I)
+	w_Lang076 =	Guardar macro actual (Ctrl+Alt+S)
+	w_Lang077 =	Move Up (Ctrl+RePàg)
+	w_Lang078 =	Moure baix (Ctrl+AvPàg)
+	w_Lang079 =	Duplicar files seleccionades (Ctrl+D)
+	w_Lang080 =	Tallar files seleccionades (Ctrl+X)
+	w_Lang081 =	Copia files seleccionades (Ctrl+C)
+	w_Lang082 =	Files Enganxa copiar (Ctrl+V)
+	w_Lang083 =	Eliminar files seleccionades (Del)
+	w_Lang084 =	Desfer (Ctrl+Z)
+	w_Lang085 =	Refer (Ctrl+I)
+	w_Lang086 =	Copiar a...
+	w_Lang087 =	Cercar / Reemplaçar (Ctrl+F)
+	w_Lang088 =	Redactar comentari (Ctrl+L)
+	w_Lang089 =	Edita color (Ctrl+M)
 		
 ; Command Windows		
 	c_Lang001 =	Ratolí
@@ -260,7 +280,7 @@
 	c_Lang080 =	Afegir etiqueta
 	c_Lang081 =	String Valor
 	c_Lang082 =	Var [operador] Valor
-	c_Lang083 =	Afegir Altres
+	c_Lang083 =	Més
 	c_Lang084 =	Assignació Variable
 	c_Lang085 =	Contingut
 	c_Lang086 =	Operador
@@ -453,6 +473,18 @@
 	t_Lang109 =	Baix
 	t_Lang110 =	Fins
 	t_Lang111 =	Inserir Pulsacions
+	t_Lang112 =	Reproduir / Pausa
+	t_Lang113 =	Aturi
+	t_Lang114 =	Opcions de reproducció
+	t_Lang115 =	Start / Stop Record
+	t_Lang116 =	Gravar nova macro
+	t_Lang117 =	Opcions de Gravació
+	t_Lang118 =	Esborrar llista
+	t_Lang119 =	Mostra la barra de progrés
+	t_Lang120 =	Accelerar
+	t_Lang121 =	Alentir
+	t_Lang122 =	Mostra / Oculta la barra de títol
+	t_Lang123 =	Mostra / oculta la finestra principal
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Obert
@@ -545,8 +577,8 @@
 	)	
 	d_Lang057 =	
 	(LTrim	
-		- Premeu Ctrl + Tecles de cursor per moure l'àrea seleccionada.
-		- Premeu les tecles Maj + tecles de fletxa per canviar la mida d'àrea seleccionada.
+		- Premeu Ctrl+Tecles de cursor per moure l'àrea seleccionada.
+		- Premeu les tecles Maj+tecles de fletxa per canviar la mida d'àrea seleccionada.
 		- Premeu D'acord per finalitzar.
 	)	
 	d_Lang058 =	
@@ -601,7 +633,7 @@
 		Vostè pot obrir, copiar, moure o esborrar arxius i carpetes utilitzant un dels comandaments de Inserir> Run / Arxiu / cadena / Misc.
 		Per gravar Down i Up estat de tots els go clau a Opcions> Configuració> Gravació i seleccioneu "Capturar estat clau (baix / dalt)" opció.
 		Podeu utilitzar tecles d'accés ràpid per accelerar o reduir la velocitat de reproducció. Aneu a Opcions> Configuració> Reprodueix per establir les claus i la velocitat.
-		Per ajustar l'àrea de captura amb "Fer Screenshot" aneu a Opcions> Configuració> Imatges i seleccioneu "Premeu Enter per capturar". Després de dibuixar el control d'ús rectangle + tecles de cursor per moure la selecció i Shift + tecles de fletxa per canviar la seva mida.
+		Per ajustar l'àrea de captura amb "Fer Screenshot" aneu a Opcions> Configuració> Imatges i seleccioneu "Premeu Enter per capturar". Després de dibuixar el control d'ús rectangle+tecles de cursor per moure la selecció i Shift+tecles de fletxa per canviar la seva mida.
 		Seleccioneu ràpida: Seleccioneu qualsevol fila i feu clic a una capçalera de columna per seleccionar files similars basades en text de la cel d'aquesta columna.
 		The Run / Arxiu / cadena / Misc. finestra té molts altres ordres útils com ara apagat i URLDownloadToFile.
 		Utilitzeu la funció "Captura" a la finestra de funcions (Inserir> Si Declaracions / Variables / Funcions) per fer una captura de pantalla d'una part de la pantalla. El primer paràmetre és la ruta del fitxer de destinació i el nom amb una extensió png. El segon paràmetre són les coordenades canonada separats a la pantalla, per exemple, 100 | 200 | 50 | 100 (X | Y | Ample | Alt).

@@ -115,18 +115,18 @@
 	w_Lang006 =	Auto.
 	w_Lang007 =	Man.
 	w_Lang008 =	Stopp
-	w_Lang009 =	Visa &kontroller
-	w_Lang010 =	&Paus
-	w_Lang011 =	L&oop
-	w_Lang012 =	&Fånga Tangenter
-	w_Lang013 =	D&ölj fönster
-	w_Lang014 =	All&tid aktiv
+	w_Lang009 =	Display kontroller verktygsfältet
+	w_Lang010 =	Paus
+	w_Lang011 =	Loop
+	w_Lang012 =	Fånga Tangenter
+	w_Lang013 =	Minimera till aktivitetsfältet
+	w_Lang014 =	Alltid aktiv
 	w_Lang015 =	Upprepa
 	w_Lang016 =	Fördröjning (ms):
 	w_Lang017 =	Ansök
 	w_Lang018 =	Infoga
 	w_Lang019 =	Redigera
-	w_Lang020 =	(unused)
+	w_Lang020 =	avstängningsalternativen (När uppspelningen slutar...)
 	w_Lang021 =	Gör ingenting
 	w_Lang022 =	Stäng program
 	w_Lang023 =	Stäng
@@ -176,6 +176,26 @@
 	w_Lang067 =	COM-gränssnitt (Skift+F11)
 	w_Lang068 =	Kör Skriptlet (Ctrl+F11)
 	w_Lang069 =	Windows-meddelanden (F12)
+	w_Lang070 =	Lägg till Windows-tangenten som modifierare
+	w_Lang071 =	Joystick
+	w_Lang072 =	Lägg Makro (Ctrl+T)
+	w_Lang073 =	Stäng Makro (Ctrl+W)
+	w_Lang074 =	Duplicera makro (Ctrl+Skift+D)
+	w_Lang075 =	Importera Makro (Ctrl+I)
+	w_Lang076 =	Spara Aktuell Makro (Ctrl+Alt+S)
+	w_Lang077 =	Flytta upp (Ctrl+PageUp)
+	w_Lang078 =	Flytta ner (Ctrl+Page Down)
+	w_Lang079 =	Duplicera markerade rader (Ctrl+D)
+	w_Lang080 =	Klippa ut markerad rader (Ctrl+X)
+	w_Lang081 =	Kopiera valda rader (Ctrl+C)
+	w_Lang082 =	Klistra in kopierad rader (Ctrl+V)
+	w_Lang083 =	Ta bort markerade rader (DEL)
+	w_Lang084 =	Ångra (Ctrl+Z)
+	w_Lang085 =	Gör om (Ctrl+Y)
+	w_Lang086 =	Kopiera till...
+	w_Lang087 =	Sök / Ersätt (Ctrl+F)
+	w_Lang088 =	Redigera kommentar (Ctrl+L)
+	w_Lang089 =	Redigera färgmarkering (Ctrl+M)
 		
 ; Command Windows		
 	c_Lang001 =	Mus
@@ -260,7 +280,7 @@
 	c_Lang080 =	Lägg till etikett
 	c_Lang081 =	String (InputVar), värde
 	c_Lang082 =	Var [operatör] Värde
-	c_Lang083 =	Lägg Else
+	c_Lang083 =	Else
 	c_Lang084 =	Tilldela variabel
 	c_Lang085 =	Innehåll
 	c_Lang086 =	Operatör
@@ -453,6 +473,18 @@
 	t_Lang109 =	Ned
 	t_Lang110 =	Upp
 	t_Lang111 =	Infoga Tangenttryckning
+	t_Lang112 =	Spela upp / pausa
+	t_Lang113 =	Stopp
+	t_Lang114 =	Visningsalternativ
+	t_Lang115 =	Start / stopp Spela
+	t_Lang116 =	Spela in nytt makro
+	t_Lang117 =	Inspelningsalternativen
+	t_Lang118 =	Rensa lista
+	t_Lang119 =	Visa framstegs Takt
+	t_Lang120 =	Snabba upp
+	t_Lang121 =	Sakta Ner
+	t_Lang122 =	Visa / dölj Titel Bar
+	t_Lang123 =	Visa / dölj huvudfönstret
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Öppet
@@ -545,8 +577,8 @@
 	)	
 	d_Lang057 =	
 	(LTrim	
-		- Tryck på Ctrl + piltangenterna för att flytta på det  markerade området.
-		- Tryck på Skift + piltangenterna för att ändra storlek på markerade området.
+		- Tryck på Ctrl+piltangenterna för att flytta på det  markerade området.
+		- Tryck på Skift+piltangenterna för att ändra storlek på markerade området.
 		- Tryck på Enter för att avsluta.
 	)	
 	d_Lang058 =	
@@ -601,7 +633,7 @@
 		Du kan öppna, kopiera, flytta eller radera filer och mappar med ett kommando i Infoga> Run / Arkiv / String / Misc.
 		Om du vill spela Down och Up tillstånd varje nyckel gå till Alternativ> Inställningar> Inspelning och kolla "Fånga viktiga statliga (Down / Up)" alternativet.
 		Du kan använda snabbtangenter för att påskynda eller fördröja Uppspelning. Gå till Alternativ> Inställningar> Uppspelning ställa nycklar och hastighet.
-		För att justera fånga område med "gör skärmdump" verktyget gå till Alternativ> Inställningar> Skärmbilder och välj "Tryck Enter för att fånga". Efter teckning Control rektangeln användning + piltangenterna för att flytta markeringen och Skift + piltangenterna för att ändra storlek på den.
+		För att justera fånga område med "gör skärmdump" verktyget gå till Alternativ> Inställningar> Skärmbilder och välj "Tryck Enter för att fånga". Efter teckning Control rektangeln användning+piltangenterna för att flytta markeringen och Skift+piltangenterna för att ändra storlek på den.
 		Snabbval: Välj en rad och klicka på en kolumnrubrik för att välja liknande rader baserat på cellens text från den kolumnen.
 		The Run / Arkiv / String / Misc. fönster har många andra användbara kommandon såsom avstängning och UrlDownloadToFile.
 		Använd "Skärmdump"-funktionen i funktionerna fönstret (Infoga> Om Uttalanden / variabler / funktioner) för att göra en skärmdump av en del av skärmen. Första parametern är den destination filens sökväg och namn med en png förlängning. Andra parametern är pipe-separerade koordinater på skärmen, t.ex. 100 | 200 | 50 | 100 (X | Y | Bredd | Höjd).

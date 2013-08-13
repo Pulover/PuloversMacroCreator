@@ -115,18 +115,18 @@
 	w_Lang006 =	Auto.
 	w_Lang007 =	Man.
 	w_Lang008 =	Stopp
-	w_Lang009 =	Steuerungleiste anzeigen
-	w_Lang010 =	&Pause
-	w_Lang011 =	L&oop
-	w_Lang012 =	Tasten e&rfassen 
-	w_Lang013 =	&Fenster ausbl.
-	w_Lang014 =	&Immer aktiv
+	w_Lang009 =	Display-Steuerelemente Symbolleiste
+	w_Lang010 =	Pause
+	w_Lang011 =	Loop
+	w_Lang012 =	Tasten erfassen 
+	w_Lang013 =	Minimieren in den Tray
+	w_Lang014 =	Immer aktiv
 	w_Lang015 =	Wiederholen
 	w_Lang016 =	Verzögerung (ms):
 	w_Lang017 =	Anwenden
 	w_Lang018 =	Einfügen
 	w_Lang019 =	Bearbeiten
-	w_Lang020 =	Steuerungleiste anzeigen
+	w_Lang020 =	Optionen für das Herunterfahren (Wenn Wiedergabe beendet, ...)
 	w_Lang021 =	Nichts tun
 	w_Lang022 =	Anwendung schließen
 	w_Lang023 =	Schließen
@@ -176,6 +176,26 @@
 	w_Lang067 =	COM-Schnittstelle (Umschalt+F11)
 	w_Lang068 =	Scriptlet ausführen (Strg+F11)
 	w_Lang069 =	Windows-Messages (F12)
+	w_Lang070 =	Windows-Taste als Modifizierer einfügen
+	w_Lang071 =	Joystick
+	w_Lang072 =	Makro hinzufügen (Strg+T)
+	w_Lang073 =	Makro schließen (Strg+W)
+	w_Lang074 =	Makro duplizieren (Strg+Umschalt+D)
+	w_Lang075 =	Makro importieren (Strg+I)
+	w_Lang076 =	Aktuelles Makro speichern (Strg+Alt+S)
+	w_Lang077 =	Move Up (Strg+Bild auf)
+	w_Lang078 =	Nach unten (Strg+Bild ab)
+	w_Lang079 =	Ausgewählte Zeilen duplizieren (Strg+D)
+	w_Lang080 =	Ausgewählte Zeilen ausschneiden (Strg+X)
+	w_Lang081 =	Ausgewählte Zeilen kopieren (Strg+C)
+	w_Lang082 =	Kopierten Zeilen einfügen (Strg+V)
+	w_Lang083 =	Ausgewählte Zeilen löschen (Entf)
+	w_Lang084 =	Rückgängig (Strg+Z)
+	w_Lang085 =	Wiederholen (Strg+Y)
+	w_Lang086 =	Kopieren...
+	w_Lang087 =	Suchen/Ersetzen (Strg+F)
+	w_Lang088 =	Kommentar bearbeiten
+	w_Lang089 =	Farbmarkierung bearbeiten
 		
 ; Command Windows		
 	c_Lang001 =	Maus
@@ -260,7 +280,7 @@
 	c_Lang080 =	Sprungmarke hinzufügen
 	c_Lang081 =	String (InputVar), Wert
 	c_Lang082 =	Var [Operator] Wert
-	c_Lang083 =	Else hinzufügen
+	c_Lang083 =	Lang Files
 	c_Lang084 =	Variable zuweisen
 	c_Lang085 =	Inhalt
 	c_Lang086 =	Operator
@@ -453,6 +473,18 @@
 	t_Lang109 =	Auf
 	t_Lang110 =	Ab
 	t_Lang111 =	Tastendruck einfügen
+	t_Lang112 =	Wiedergabe/Pause
+	t_Lang113 =	Beenden
+	t_Lang114 =	Wiedergabe-Optionen
+	t_Lang115 =	Aufnahme starten/beenden
+	t_Lang116 =	Neues Makro aufzeichnen
+	t_Lang117 =	Aufnahme-Optionen
+	t_Lang118 =	Liste löschen
+	t_Lang119 =	Fortschrittsanzeige einblenden
+	t_Lang120 =	Beschleunigen
+	t_Lang121 =	Verzögern
+	t_Lang122 =	Titelleiste anzeigen/verbergen
+	t_Lang123 =	Hauptfenster anzeigen/verbergen
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Öffnen
@@ -545,8 +577,8 @@
 	)	
 	d_Lang057 =	
 	(LTrim	
-		- Drücken Sie Strg + Pfeiltasten um den ausgewählten Bereich zu verschieben.
-		- Drücken Sie die Umschalttaste + Pfeiltasten, um die Größe ausgewählten Bereich.
+		- Drücken Sie Strg+Pfeiltasten um den ausgewählten Bereich zu verschieben.
+		- Drücken Sie die Umschalttaste+Pfeiltasten, um die Größe ausgewählten Bereich.
 		- Drücken Sie die Eingabetaste zum Beenden.
 	)	
 	d_Lang058 =	
@@ -601,7 +633,7 @@
 		Sie können Dateien und Ordner öffnen, kopieren, verschieben oder löschen durch Einfügen eines der Befehle unter > Run/File/String/Versch.
 		Zum Erfassen des Tastenstatus `"Gedrückt`" und `"Losgelassen`" wählen Sie Optionen > Einstellungen > Allgemein > Aufzeichnen und aktivieren "Tastenstatus erfassen (gedr./losgel.)".
 		Sie können Hotkeys zum beschleunigten oder langsameren Abspielen verwenden. Wählen Sie Optionen > Einstellungen > Wiedergabe, um  Taste und Geschwindigkeit festzulegen.
-		Um den Erfassungsbereich des Werkzeugs "Screenshot erstellen" festzulegen, wählen Sie Optionen > Einstellungen > Screenshots und dann "Eingabetaste zum Erfassen". Verwenden Sie nach Zeichnen des Rechtecks Steuerung + Pfeiltasten, um die Auswahl zu verschieben und Umschalttaste + Pfeiltasten, um die Größe zu ändern.
+		Um den Erfassungsbereich des Werkzeugs "Screenshot erstellen" festzulegen, wählen Sie Optionen > Einstellungen > Screenshots und dann "Eingabetaste zum Erfassen". Verwenden Sie nach Zeichnen des Rechtecks Steuerung+Pfeiltasten, um die Auswahl zu verschieben und Umschalttaste+Pfeiltasten, um die Größe zu ändern.
 		Schnellauswahl: Wählen Sie eine beliebige Zeile und klicken Sie auf eine Spaltenüberschrift, um ähnliche Reihen auf Basis des Zelltextes aus dieser Spalte zu auszuwählen.
 		Das Fenster Run/File/String/Versch. hat viele weitere nützliche Befehle, wie Herunterfahren und UrlDownloadToFile.
 		Verwenden Sie die Screenshot-Funktion im Funktionsfenster (Einfügen > If-Anweisungen/Variablen/Funktionen), um einen Screenshot von einem Bildschirmteil zu erstellen. Erste Parameter sind Pfad und Name der Zieldatei mit einer PNG-Erweiterung. Zweite Parameter sind die Pipe-getrennten Koordinaten auf dem Bildschirm, z. B. 100|200|50|100 (X|Y|Breite|Höhe).

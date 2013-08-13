@@ -115,18 +115,18 @@
 	w_Lang006 =	自动
 	w_Lang007 =	手动
 	w_Lang008 =	停止
-	w_Lang009 =	显示控制
+	w_Lang009 =	显示控制工具栏
 	w_Lang010 =	暂停
 	w_Lang011 =	循环
 	w_Lang012 =	捕获键
-	w_Lang013 =	隐藏窗口
+	w_Lang013 =	最小化到托盘
 	w_Lang014 =	始终处于活动状态
 	w_Lang015 =	重复
 	w_Lang016 =	延时（ms）：
 	w_Lang017 =	应用
 	w_Lang018 =	插入
 	w_Lang019 =	编辑
-	w_Lang020 =	(unused)
+	w_Lang020 =	关机选项 (当播放结束...)
 	w_Lang021 =	什么都不做
 	w_Lang022 =	关闭应用程序
 	w_Lang023 =	关闭
@@ -176,6 +176,26 @@
 	w_Lang067 =	 COM接口（按Shift+F11）
 	w_Lang068 =	
 	w_Lang069 =	Windows消息（F12）
+	w_Lang070 =	作为改性剂添加Windows键
+	w_Lang071 =	摇杆
+	w_Lang072 =	添加宏（Ctrl+T）
+	w_Lang073 =	关闭宏（Ctrl+W）
+	w_Lang074 =	重复宏（Ctrl+Shift+D）
+	w_Lang075 =	进口宏（按Ctrl+I）
+	w_Lang076 =	保存当前宏（CTRL+ALT+S）
+	w_Lang077 =	向上移动（按Ctrl+上一页）
+	w_Lang078 =	“下移”（按Ctrl+下一页）
+	w_Lang079 =	复制选中的行（按Ctrl+D）
+	w_Lang080 =	剪切选定的行（Ctrl+X）
+	w_Lang081 =	选定行复制（Ctrl+C）
+	w_Lang082 =	粘贴复制的行（Ctrl+V）
+	w_Lang083 =	删除选定的行（DEL）
+	w_Lang084 =	撤消（Ctrl+Z）
+	w_Lang085 =	重做（Ctrl+Y）
+	w_Lang086 =	复制到...
+	w_Lang087 =	查找/替换（Ctrl+F）
+	w_Lang088 =	编辑注释（Ctrl+L）
+	w_Lang089 =	编辑颜色标志（Ctrl+M）
 		
 ; Command Windows		
 	c_Lang001 =	鼠标
@@ -260,7 +280,7 @@
 	c_Lang080 =	添加标签
 	c_Lang081 =	字符串（InputVar），值
 	c_Lang082 =	无功[操作]值
-	c_Lang083 =	添加其他
+	c_Lang083 =	其他
 	c_Lang084 =	变量赋值
 	c_Lang085 =	内容
 	c_Lang086 =	操作者
@@ -453,6 +473,18 @@
 	t_Lang109 =	下
 	t_Lang110 =	上
 	t_Lang111 =	插入击键
+	t_Lang112 =	播放/暂停
+	t_Lang113 =	停止
+	t_Lang114 =	播放选项
+	t_Lang115 =	开始/停止录制
+	t_Lang116 =	录制新宏
+	t_Lang117 =	录制选项
+	t_Lang118 =	清除列表
+	t_Lang119 =	显示进度条
+	t_Lang120 =	加快
+	t_Lang121 =	减缓
+	t_Lang122 =	显示/隐藏标题栏
+	t_Lang123 =	显示/隐藏主窗口
 		
 ; Messages & Dialogs		
 	d_Lang001 =	打开

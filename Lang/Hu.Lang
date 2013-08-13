@@ -115,18 +115,18 @@
 	w_Lang006 =	Auto.
 	w_Lang007 =	Man.
 	w_Lang008 =	Megáll
-	w_Lang009 =	M&utasd ellenőrzés
-	w_Lang010 =	S&zünet
-	w_Lang011 =	&Hurok
-	w_Lang012 =	&Capture Keys
-	w_Lang013 =	Ab&lak elrejtése
-	w_Lang014 =	M&indig aktív
+	w_Lang009 =	Kijelző vezérlők eszköztár
+	w_Lang010 =	Szünet
+	w_Lang011 =	Hurok
+	w_Lang012 =	Capture Keys
+	w_Lang013 =	Tálcára
+	w_Lang014 =	Mindig aktív
 	w_Lang015 =	Ismétlés
 	w_Lang016 =	Delay (ms):
 	w_Lang017 =	Alkalmaz
 	w_Lang018 =	Beszúrása
 	w_Lang019 =	Szerkeszt
-	w_Lang020 =	(unused)
+	w_Lang020 =	shutdown lehetőségek (Ha a lejátszás befejeződik...)
 	w_Lang021 =	Ne tegyen semmit
 	w_Lang022 =	Bezár alkalmazás
 	w_Lang023 =	Állítsa le
@@ -176,6 +176,26 @@
 	w_Lang067 =	COM Interface (Shift+F11)
 	w_Lang068 =	Fuss Scriptlet (Ctrl+F11)
 	w_Lang069 =	A Windows üzenetek (F12)
+	w_Lang070 =	Adja hozzá a Windows billentyű a módosító
+	w_Lang071 =	Joystick
+	w_Lang072 =	Kedvencek Macro (Ctrl+T)
+	w_Lang073 =	Bezárás Macro (Ctrl+W)
+	w_Lang074 =	Ismétlődő Macro (Ctrl+Shift+D)
+	w_Lang075 =	Import Macro (Ctrl+I)
+	w_Lang076 =	Save Current Macro (Ctrl+Alt+S)
+	w_Lang077 =	Move Up (Ctrl+PageUp)
+	w_Lang078 =	Lejjebb (Ctrl+PageDown)
+	w_Lang079 =	Kijelölt sorok másolása (Ctrl+D)
+	w_Lang080 =	Vágott Kiválasztott sorok (Ctrl+X)
+	w_Lang081 =	Kijelölt sorok másolása (Ctrl+C)
+	w_Lang082 =	Paste másolt sorok (Ctrl+V)
+	w_Lang083 =	A kijelölt sorok törlése (Del)
+	w_Lang084 =	Visszavonás (Ctrl+Z)
+	w_Lang085 =	Ismét (Ctrl+Y)
+	w_Lang086 =	Másolás...
+	w_Lang087 =	Keresés / Csere (Ctrl+F)
+	w_Lang088 =	Megjegyzés szerkesztése (Ctrl+L)
+	w_Lang089 =	Szerkesztés színvédjegy (Ctrl+M)
 		
 ; Command Windows		
 	c_Lang001 =	Egér
@@ -260,7 +280,7 @@
 	c_Lang080 =	Add Label
 	c_Lang081 =	String (InputVar), Value
 	c_Lang082 =	Var [üzemeltetője] Érték
-	c_Lang083 =	Add Else
+	c_Lang083 =	más
 	c_Lang084 =	Hozzárendelése Változó
 	c_Lang085 =	Tartalom
 	c_Lang086 =	Operátor
@@ -453,6 +473,18 @@
 	t_Lang109 =	Lefelé
 	t_Lang110 =	Fel
 	t_Lang111 =	Be Gombnyomás
+	t_Lang112 =	Lejátszás / Szünet
+	t_Lang113 =	Megáll
+	t_Lang114 =	Lejátszási opciók
+	t_Lang115 =	Start / Stop Record
+	t_Lang116 =	Új makró rögzítése
+	t_Lang117 =	Felvételi Mód
+	t_Lang118 =	Kódolatlan List
+	t_Lang119 =	Kijelző Progress Bar
+	t_Lang120 =	Felgyorsul
+	t_Lang121 =	Lelassít
+	t_Lang122 =	Megjelenítése / elrejtése címsor
+	t_Lang123 =	Megjelenítése / elrejtése főablak
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Nyitva
@@ -545,8 +577,8 @@
 	)	
 	d_Lang057 =	
 	(LTrim	
-		- Nyomja meg a Ctrl + nyilakkal mozgatni a kijelölt területen.
-		- Nyomja meg a Shift + nyíl billentyűk átméretezésére kijelölt terület.
+		- Nyomja meg a Ctrl+nyilakkal mozgatni a kijelölt területen.
+		- Nyomja meg a Shift+nyíl billentyűk átméretezésére kijelölt terület.
 		- Nyomja meg az Entert, hogy befejezze.
 	)	
 	d_Lang058 =	

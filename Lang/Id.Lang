@@ -115,18 +115,18 @@
 	w_Lang006 =	Auto.
 	w_Lang007 =	Man.
 	w_Lang008 =	Berhenti
-	w_Lang009 =	Tamp&ilkan Kontrol
-	w_Lang010 =	Be&rhenti sebentar
-	w_Lang011 =	P&utaran
-	w_Lang012 =	Tan&gkap Keys
-	w_Lang013 =	&Sembunyikan Jendela
-	w_Lang014 =	Se&lalu Aktif
+	w_Lang009 =	Menampilkan kontrol toolbar
+	w_Lang010 =	Berhenti sebentar
+	w_Lang011 =	Putaran
+	w_Lang012 =	Tangkap Keys
+	w_Lang013 =	Minimalkan ke tray
+	w_Lang014 =	Selalu Aktif
 	w_Lang015 =	Ulangi
 	w_Lang016 =	Delay (ms):
 	w_Lang017 =	Menerapkan
 	w_Lang018 =	Menyisipkan
 	w_Lang019 =	Mengedit
-	w_Lang020 =	(Tidak terpakai)
+	w_Lang020 =	Pilihan Shutdown (Ketika selesai pemutaran...)
 	w_Lang021 =	Melakukan apa-apa
 	w_Lang022 =	Tutup aplikasi
 	w_Lang023 =	Penutupan
@@ -146,36 +146,56 @@
 	w_Lang037 =	Jendela
 	w_Lang038 =	Komentar
 	w_Lang039 =	Warna
-	w_Lang040 =	Baru (Ctrl + N)
-	w_Lang041 =	Buka (Ctrl + O)
-	w_Lang042 =	Simpan (Ctrl + S)
-	w_Lang043 =	Ekspor ke AHK (Ctrl + E)
-	w_Lang044 =	Preview Script (Ctrl + P)
-	w_Lang045 =	Pengaturan (Ctrl + G)
-	w_Lang046 =	Rekam Makro (Ctrl + R)
-	w_Lang047 =	Aktifkan Macro (Ctrl + Enter)
-	w_Lang048 =	Bermain Makro sekarang (Ctrl + Shift + Enter)
-	w_Lang049 =	Timer (Ctrl + Shift + T)
+	w_Lang040 =	Baru (Ctrl+N)
+	w_Lang041 =	Buka (Ctrl+O)
+	w_Lang042 =	Simpan (Ctrl+S)
+	w_Lang043 =	Ekspor ke AHK (Ctrl+E)
+	w_Lang044 =	Preview Script (Ctrl+P)
+	w_Lang045 =	Pengaturan (Ctrl+G)
+	w_Lang046 =	Rekam Makro (Ctrl+R)
+	w_Lang047 =	Aktifkan Macro (Ctrl+Enter)
+	w_Lang048 =	Bermain Makro sekarang (Ctrl+Shift+Enter)
+	w_Lang049 =	Timer (Ctrl+Shift+T)
 	w_Lang050 =	Mouse (F2)
 	w_Lang051 =	Teks (F3)
 	w_Lang052 =	Tombol Khusus
 	w_Lang053 =	Control (F4)
 	w_Lang054 =	Jeda (F5)
-	w_Lang055 =	Pesan (Shift + F5)
-	w_Lang056 =	Tunggu Key (Control + F5)
+	w_Lang055 =	Pesan (Shift+F5)
+	w_Lang056 =	Tunggu Key (Control+F5)
 	w_Lang057 =	Window (F6)
 	w_Lang058 =	Image / Pixel Cari (F7)
 	w_Lang059 =	Jalankan / file / String / Misc. (F8)
 	w_Lang060 =	Lingkaran (F9)
-	w_Lang061 =	Goto (Shift + F9)
-	w_Lang062 =	Label (Ctrl + F9)
+	w_Lang061 =	Goto (Shift+F9)
+	w_Lang062 =	Label (Ctrl+F9)
 	w_Lang063 =	Jika Laporan (F10)
-	w_Lang064 =	Variabel (Shift + F10)
-	w_Lang065 =	Fungsi (Ctrl + F10)
+	w_Lang064 =	Variabel (Shift+F10)
+	w_Lang065 =	Fungsi (Ctrl+F10)
 	w_Lang066 =	Internet Explorer (F11)
-	w_Lang067 =	COM Interface (Shift + F11)
-	w_Lang068 =	Run Scriptlet (Ctrl + F11)
+	w_Lang067 =	COM Interface (Shift+F11)
+	w_Lang068 =	Run Scriptlet (Ctrl+F11)
 	w_Lang069 =	Jendela Messages (F12)
+	w_Lang070 =	Tambahkan tombol Windows sebagai pengubah
+	w_Lang071 =	Joystick
+	w_Lang072 =	Tambahkan Makro (Ctrl+T)
+	w_Lang073 =	Tutup Makro (Ctrl+W)
+	w_Lang074 =	Gandakan Makro (Ctrl+Shift+D)
+	w_Lang075 =	Impor Makro (Ctrl+I)
+	w_Lang076 =	Simpan Makro saat ini (Ctrl+Alt+S)
+	w_Lang077 =	Move Up (Ctrl+PageUp)
+	w_Lang078 =	Kebawah (Ctrl+PageDown)
+	w_Lang079 =	Gandakan Baris Terpilih (Ctrl+D)
+	w_Lang080 =	Potong Baris Dipilih (Ctrl+X)
+	w_Lang081 =	Kopi Baris Dipilih (Ctrl+C)
+	w_Lang082 =	Baris Paste Disalin (Ctrl+V)
+	w_Lang083 =	Hapus Baris Terpilih (Del)
+	w_Lang084 =	Undo (Ctrl+Z)
+	w_Lang085 =	Redo (Ctrl+Y)
+	w_Lang086 =	Salin ke...
+	w_Lang087 =	Cari / Ganti (Ctrl+F)
+	w_Lang088 =	Mengedit Komentar (Ctrl+L)
+	w_Lang089 =	Sunting Color Mark (Ctrl+M)
 		
 ; Command Windows		
 	c_Lang001 =	Mouse
@@ -260,7 +280,7 @@
 	c_Lang080 =	Tambahkan Label
 	c_Lang081 =	String (InputVar), Nilai
 	c_Lang082 =	Var [Operator] Nilai
-	c_Lang083 =	Tambah Lagi
+	c_Lang083 =	lain
 	c_Lang084 =	Menetapkan Variabel
 	c_Lang085 =	Kadar
 	c_Lang086 =	Operator
@@ -453,6 +473,18 @@
 	t_Lang109 =	Turun
 	t_Lang110 =	Naik
 	t_Lang111 =	Masukkan keystroke
+	t_Lang112 =	Play / Pause
+	t_Lang113 =	Berhenti
+	t_Lang114 =	Pilihan pemutaran
+	t_Lang115 =	Start / Stop Rekam
+	t_Lang116 =	Rekam New Macro
+	t_Lang117 =	Pilihan Recording
+	t_Lang118 =	Hapus Daftar
+	t_Lang119 =	Tampilan Progress Bar
+	t_Lang120 =	Speed Up
+	t_Lang121 =	Slow Down
+	t_Lang122 =	Tampilkan / Sembunyikan Title Bar
+	t_Lang123 =	Tampilkan / Sembunyikan Jendela Utama
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Buka
@@ -506,7 +538,7 @@
 	d_Lang039 =	Timeout!
 	d_Lang040 =	
 	(LTrim	
-		Fitur ini memerlukan + Library GDI.
+		Fitur ini memerlukan+Library GDI.
 		Klik OK untuk pergi ke halaman download.
 	)	
 	d_Lang041 =	Nama variabel mengandung karakter ilegal.
@@ -545,8 +577,8 @@
 	)	
 	d_Lang057 =	
 	(LTrim	
-		- Tekan Ctrl + Arrow tombol untuk memindahkan area yang dipilih.
-		- Tekan Shift + tombol panah untuk mengubah ukuran area yang dipilih.
+		- Tekan Ctrl+Arrow tombol untuk memindahkan area yang dipilih.
+		- Tekan Shift+tombol panah untuk mengubah ukuran area yang dipilih.
 		- Tekan Enter untuk menyelesaikan.
 	)	
 	d_Lang058 =	
@@ -601,7 +633,7 @@
 		Anda dapat membuka, menyalin, memindahkan atau menghapus file dan folder menggunakan salah satu perintah dalam Insert> Run / file / String / Misc.
 		Untuk merekam Down dan Up negara setiap pergi kunci Pilihan> Pengaturan> Recording dan periksa "Tangkap negara kunci (Bawah / Up)" pilihan.
 		Anda dapat menggunakan hotkeys untuk mempercepat atau memperlambat Playback. Pergi ke Pilihan> Pengaturan> Playback untuk mengatur tombol dan kecepatan.
-		Untuk mengatur daerah menangkap menggunakan "Membuat Screenshot" alat masuk ke Pilihan> Pengaturan> Layar dan pilih "Tekan Enter untuk Capture". Setelah menggambar persegi panjang menggunakan Control + tombol panah untuk memindahkan seleksi dan Shift + tombol panah untuk mengubah ukurannya.
+		Untuk mengatur daerah menangkap menggunakan "Membuat Screenshot" alat masuk ke Pilihan> Pengaturan> Layar dan pilih "Tekan Enter untuk Capture". Setelah menggambar persegi panjang menggunakan Control+tombol panah untuk memindahkan seleksi dan Shift+tombol panah untuk mengubah ukurannya.
 		Cepat Pilih: Pilih baris apapun dan klik pada header kolom untuk memilih baris yang sama berdasarkan teks sel dari kolom tersebut.
 		Jalankan / file / String / Misc. Jendela memiliki banyak perintah lain yang berguna seperti Shutdown dan UrlDownloadToFile.
 		Gunakan "Screenshot" fungsi di jendela fungsi (Insert> Jika Laporan / Variabel / Fungsi) untuk membuat screenshot dari bagian dari layar. Parameter pertama adalah path file tujuan dan nama dengan ekstensi png. Parameter kedua adalah koordinat pipa-separated di layar, misalnya 100 | 200 | 50 | 100 (X | Y | Lebar | Tinggi).
@@ -612,27 +644,27 @@
 		Anda dapat menjalankan fungsi-fungsi lanjutan seperti substr dan RegExReplace dari jendela Fungsi (Insert> Jika Laporan / Variabel / Fungsi). Atau menjalankan fungsi-fungsi anda sendiri dari script Autohotkey eksternal.
 	)	
 ; Tooltips		
-	NewB_TT =	Baru (Ctrl + N)
-	OpenB_TT =	Buka (Ctrl + O)
-	SaveB_TT =	Simpan (Ctrl + S)
-	ExportB_TT =	Ekspor ke AHK (Ctrl + E)
-	PreviewB_TT =	Preview Script (Ctrl + P)
-	OptionsB_TT =	Pengaturan (Ctrl + G)
-	RecordB_TT =	Rekam Makro (Ctrl + R)
-	StartB_TT =	Aktifkan Macro (Ctrl + Enter)
-	TestRun_TT =	Bermain Makro sekarang (Ctrl + Shift + Enter)
-	RunTimer_TT =	Timer (Ctrl + Shift + T)
+	NewB_TT =	Baru (Ctrl+N)
+	OpenB_TT =	Buka (Ctrl+O)
+	SaveB_TT =	Simpan (Ctrl+S)
+	ExportB_TT =	Ekspor ke AHK (Ctrl+E)
+	PreviewB_TT =	Preview Script (Ctrl+P)
+	OptionsB_TT =	Pengaturan (Ctrl+G)
+	RecordB_TT =	Rekam Makro (Ctrl+R)
+	StartB_TT =	Aktifkan Macro (Ctrl+Enter)
+	TestRun_TT =	Bermain Makro sekarang (Ctrl+Shift+Enter)
+	RunTimer_TT =	Timer (Ctrl+Shift+T)
 	MouseB_TT =	Mouse (F2)
 	TextB_TT =	Teks (F3)
 	SpecialB_TT =	Tombol Khusus
 	ControlB_TT =	Control (F4)
-	PauseB_TT =	Jeda (F5) / Pesan (Shift + F5) / Tunggu Key (Control + F5)
+	PauseB_TT =	Jeda (F5) / Pesan (Shift+F5) / Tunggu Key (Control+F5)
 	WindowB_TT =	Window (F6)
 	ImageB_TT =	Image / Pixel Cari (F7)
 	RunB_TT =	Jalankan / file / String / Misc. (F8)
-	ComLoopB_TT =	Lingkaran (F9) / Goto (Shift + F9) / Label (Ctrl + F9)
-	IfStB_TT =	Jika Laporan (F10) / Variabel (Shift + F10) / Fungsi (Ctrl + F10)
-	IEComB_TT =	Internet Explorer (F11) / COM Interface (Shift + F11) / Run Scriptlet (Ctrl + F11)
+	ComLoopB_TT =	Lingkaran (F9) / Goto (Shift+F9) / Label (Ctrl+F9)
+	IfStB_TT =	Jika Laporan (F10) / Variabel (Shift+F10) / Fungsi (Ctrl+F10)
+	IEComB_TT =	Internet Explorer (F11) / COM Interface (Shift+F11) / Run Scriptlet (Ctrl+F11)
 	SendMsgB_TT =	Jendela Messages (F12)
 	AutoKey_TT =	Backspace untuk menghapus
 	ManKey_TT =	Backspace untuk menghapus
@@ -647,24 +679,24 @@
 	Win1_TT =	Tambahkan tombol Windows sebagai pengubah
 	JoyHK_TT =	Joystick
 	ReptC_TT =	0 = tak terbatas
-	TabPlus_TT =	Tambahkan Makro (Ctrl + T)
-	TabClose_TT =	Tutup Makro (Ctrl + W)
-	DuplicateL_TT =	Gandakan Makro (Ctrl + Shift + D)
-	SaveC_TT =	Simpan Makro saat ini (Ctrl + Alt + S)
-	ImportB_TT =	Impor Makro (Ctrl + I)
-	IfDirB_TT =	Membuat Hotkeys bekerja tergantung pada`ntype jendela yang aktif atau ada (Ctrl + H)
+	TabPlus_TT =	Tambahkan Makro (Ctrl+T)
+	TabClose_TT =	Tutup Makro (Ctrl+W)
+	DuplicateL_TT =	Gandakan Makro (Ctrl+Shift+D)
+	SaveC_TT =	Simpan Makro saat ini (Ctrl+Alt+S)
+	ImportB_TT =	Impor Makro (Ctrl+I)
+	IfDirB_TT =	Membuat Hotkeys bekerja tergantung pada`ntype jendela yang aktif atau ada (Ctrl+H)
 	KeepHKOn_TT =	Jauhkan Hotkeys Selalu Diaktifkan
 	A_List_TT =	Pilih Makro (Ctrl +1 ~ 0)
 	OSHK_TT =	Pilih Makro
 	OSHKEd_TT =	Pilih Makro
-	Duplicate_TT =	Gandakan Baris Terpilih (Ctrl + D)
-	Order_TT =	Pindahkan Baris Terpilih (Ctrl + PageUp / Ctrl + PageDown)
-	Cut_TT =	Potong Baris Dipilih (Ctrl + X)
-	Copy_TT =	Kopi Baris Dipilih (Ctrl + C)
-	Paste_TT =	Baris Paste Disalin (Ctrl + V)
+	Duplicate_TT =	Gandakan Baris Terpilih (Ctrl+D)
+	Order_TT =	Pindahkan Baris Terpilih (Ctrl+PageUp / Ctrl+PageDown)
+	Cut_TT =	Potong Baris Dipilih (Ctrl+X)
+	Copy_TT =	Kopi Baris Dipilih (Ctrl+C)
+	Paste_TT =	Baris Paste Disalin (Ctrl+V)
 	Remove_TT =	Hapus Baris Terpilih (Del)
-	Undo_TT =	Undo (Ctrl + Z)
-	Redo_TT =	Redo (Ctrl + Y)
+	Undo_TT =	Undo (Ctrl+Z)
+	Redo_TT =	Redo (Ctrl+Y)
 	CopyTo_TT =	Salin ke...
 	Capt_TT =	Menangkap penekanan tombol dalam jendela ini
 	OnScCtrl_TT =	Tampilan Toolbar Kontrol
@@ -672,12 +704,12 @@
 	ApplyT_TT =	Menerapkan
 	ApplyI_TT =	Menerapkan
 	ApplyL_TT =	Masukkan dari Box (Insert)
-	InsertKey_TT =	Masukkan keystroke (Ctrl + Insert)
+	InsertKey_TT =	Masukkan keystroke (Ctrl+Insert)
 	EditButton_TT =	Mengedit (Enter)
 	PrevRefresh_TT =	Refresh (F5)
 	PrevCopy_TT =	Kopi
-	OpenT_TT =	Buka (Ctrl + O)
-	SaveT_TT =	Simpan (Ctrl + S)
+	OpenT_TT =	Buka (Ctrl+O)
+	SaveT_TT =	Simpan (Ctrl+S)
 	CutT_TT =	Memotong
 	CopyT_TT =	Kopi
 	PasteT_TT =	Menempelkan
@@ -685,9 +717,9 @@
 	DefaultMacro_TT =	Pilih berkas untuk memuat pada program start up
 	VarCopyA_TT =	Menyalin isi variabel saat ini
 	VarCopyB_TT =	Menyalin isi variabel saat ini
-	FindReplace_TT =	Cari / Ganti (Ctrl + F)
-	EditComm_TT =	Mengedit Komentar (Ctrl + L)
-	EditColor_TT =	Sunting Color Mark (Ctrl + M)
+	FindReplace_TT =	Cari / Ganti (Ctrl+F)
+	EditComm_TT =	Mengedit Komentar (Ctrl+L)
+	EditColor_TT =	Sunting Color Mark (Ctrl+M)
 	Reset_TT =	Hapus isi variabel
 	Screenshot_TT =	Membuat Screenshot
 	ColorPick_TT =	Color Picker

@@ -115,18 +115,18 @@
 	w_Lang006 =	Auto.
 	w_Lang007 =	Man.
 	w_Lang008 =	Arrêter
-	w_Lang009 =	Affi&cher les contrôles
-	w_Lang010 =	&Pause
-	w_Lang011 =	&Boucle
-	w_Lang012 =	Cap&turez clés
-	w_Lang013 =	Mas&quer la fenêtre
-	w_Lang014 =	To&ujours actif
+	w_Lang009 =	Contrôles afficher la barre d'outils
+	w_Lang010 =	Pause
+	w_Lang011 =	Boucle
+	w_Lang012 =	Capturez clés
+	w_Lang013 =	Réduire en icône
+	w_Lang014 =	Toujours actif
 	w_Lang015 =	Répétez
 	w_Lang016 =	Délai (ms):
 	w_Lang017 =	Appliquer
 	w_Lang018 =	Insérer
 	w_Lang019 =	Éditer
-	w_Lang020 =	(unused)
+	w_Lang020 =	Options d'arrêt (Quand se termine la lecture...)
 	w_Lang021 =	Ne rien faire
 	w_Lang022 =	Fermer l'application
 	w_Lang023 =	Arrêter
@@ -176,6 +176,26 @@
 	w_Lang067 =	Interface COM (Maj+F11)
 	w_Lang068 =	Exécuter Scriplet (Ctrl+F11)
 	w_Lang069 =	Messages de Windows (F12)
+	w_Lang070 =	Ajouter la touche Windows en tant que modificateur
+	w_Lang071 =	Joystick
+	w_Lang072 =	Ajouter une macro (Ctrl+T)
+	w_Lang073 =	Fermer Macro (Ctrl+W)
+	w_Lang074 =	Dupliquer Macro (Ctrl+Maj+D)
+	w_Lang075 =	Importer Macro (Ctrl+I)
+	w_Lang076 =	Enregistrer la macro en cours (Ctrl+Alt+S)
+	w_Lang077 =	Déplacer vers le haut (Ctrl+PageUp)
+	w_Lang078 =	Descendre (Ctrl+PageDown)
+	w_Lang079 =	Dupliquer Lignes sélectionnées (Ctrl+D)
+	w_Lang080 =	Couper les lignes sélectionnées (Ctrl+X)
+	w_Lang081 =	Copie les lignes sélectionnées (Ctrl+C)
+	w_Lang082 =	Les lignes copiées Colle (Ctrl+V)
+	w_Lang083 =	Supprimer les lignes sélectionnées (Del)
+	w_Lang084 =	Annuler (Ctrl+Z)
+	w_Lang085 =	Rétablir (Ctrl+Y)
+	w_Lang086 =	Copier sur...
+	w_Lang087 =	Rechercher / Remplacer (Ctrl+F)
+	w_Lang088 =	Modifier le commentaire (Ctrl+L)
+	w_Lang089 =	Modifier marque de couleur (Ctrl+M)
 		
 ; Command Windows		
 	c_Lang001 =	Souris
@@ -260,7 +280,7 @@
 	c_Lang080 =	Ajouter une étiquette
 	c_Lang081 =	String (InputVar), la valeur
 	c_Lang082 =	Var [l'opérateur] Valeur
-	c_Lang083 =	Ajouter Else
+	c_Lang083 =	Else
 	c_Lang084 =	Affecter variable
 	c_Lang085 =	Teneur
 	c_Lang086 =	Opérateur
@@ -453,6 +473,18 @@
 	t_Lang109 =	Vers le bas
 	t_Lang110 =	Up
 	t_Lang111 =	Insérer Frappe
+	t_Lang112 =	Lecture / Pause
+	t_Lang113 =	Arrêter
+	t_Lang114 =	Options de lecture
+	t_Lang115 =	Démarrer / Arrêter l'enregistrement
+	t_Lang116 =	Nouvelle macro
+	t_Lang117 =	Options d'enregistrement
+	t_Lang118 =	Supprimer la liste
+	t_Lang119 =	Afficher la barre de progression
+	t_Lang120 =	Accélérer
+	t_Lang121 =	Ralentir
+	t_Lang122 =	Afficher / Masquer la barre de titre
+	t_Lang123 =	Afficher / Masquer la fenêtre principale
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Ouvert
@@ -545,8 +577,8 @@
 	)	
 	d_Lang057 =	
 	(LTrim	
-		- Appuyez sur Ctrl + touches fléchées pour déplacer la zone sélectionnée.
-		- Appuyez sur Maj + touches fléchées pour redimensionner la zone sélectionnée.
+		- Appuyez sur Ctrl+touches fléchées pour déplacer la zone sélectionnée.
+		- Appuyez sur Maj+touches fléchées pour redimensionner la zone sélectionnée.
 		- Appuyez sur Entrée pour terminer.
 	)	
 	d_Lang058 =	

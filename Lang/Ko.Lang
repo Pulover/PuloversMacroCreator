@@ -115,18 +115,18 @@
 	w_Lang006 =	자동.
 	w_Lang007 =	남자.
 	w_Lang008 =	정지
-	w_Lang009 =	컨트롤 표시
+	w_Lang009 =	도구 모음 컨트롤을 표시
 	w_Lang010 =	중지
 	w_Lang011 =	고리
 	w_Lang012 =	키를 캡처
-	w_Lang013 =	창 숨기기
+	w_Lang013 =	트레이로 최소화
 	w_Lang014 =	항상 활성
 	w_Lang015 =	반복
 	w_Lang016 =	지연 (밀리 초):
 	w_Lang017 =	신청
 	w_Lang018 =	삽입하다
 	w_Lang019 =	수정
-	w_Lang020 =	(unused)
+	w_Lang020 =	종료 옵션 (재생시 마감...)
 	w_Lang021 =	아무것도하지
 	w_Lang022 =	응용 프로그램 닫기
 	w_Lang023 =	종료
@@ -176,6 +176,26 @@
 	w_Lang067 =	COM 인터페이스 (+ F11를 Shift)
 	w_Lang068 =	스크립틀릿을 실행 (Ctrl+F11)
 	w_Lang069 =	윈도우 메시지 (F12)
+	w_Lang070 =	수정으로 Windows 키를 추가합니다
+	w_Lang071 =	조종간
+	w_Lang072 =	매크로를 추가합니다 (Ctrl+T)
+	w_Lang073 =	닫기 매크로 (Ctrl 키를+W)
+	w_Lang074 =	매크로를 복사 (Ctrl+Shift+D)
+	w_Lang075 =	가져 오기 매크로 (Ctrl 키를+I)
+	w_Lang076 =	현재 매크로를 저장 (Ctrl+Alt+S)
+	w_Lang077 =	위로 이동합니다 (Ctrl+페이지 업)
+	w_Lang078 =	(Ctrl 키를+PageDown 키) 아래로 이동
+	w_Lang079 =	선택한 행을 복제 (Ctrl 키+D)
+	w_Lang080 =	선택한 행합니다 (Ctrl+X)를 잘라
+	w_Lang081 =	선택한 행합니다 (Ctrl+C)를 복사합니다
+	w_Lang082 =	붙여 넣기 복사 행 (Ctrl 키를+V)
+	w_Lang083 =	선택된 행 (델)을 삭제
+	w_Lang084 =	실행 취소 (Ctrl 키+Z)
+	w_Lang085 =	다시 실행 (Ctrl 키를+Y)
+	w_Lang086 =	에 복사...
+	w_Lang087 =	찾기 / 바꾸기 (Ctrl 키+F)
+	w_Lang088 =	댓글 수정 (Ctrl 키+L)
+	w_Lang089 =	편집 색상 표 (Ctrl 키+M)
 		
 ; Command Windows		
 	c_Lang001 =	마우스
@@ -260,7 +280,7 @@
 	c_Lang080 =	라벨 추가
 	c_Lang081 =	문자열(InputVar) 값
 	c_Lang082 =	VAR [연산자] 값
-	c_Lang083 =	아니면 추가
+	c_Lang083 =	그렇지 않으면
 	c_Lang084 =	변수를 할당
 	c_Lang085 =	내용
 	c_Lang086 =	연산자
@@ -453,6 +473,18 @@
 	t_Lang109 =	아래로
 	t_Lang110 =	올라
 	t_Lang111 =	키를 삽입
+	t_Lang112 =	재생 / 일시 중지
+	t_Lang113 =	정지
+	t_Lang114 =	재생 옵션
+	t_Lang115 =	기록 시작 / 중지
+	t_Lang116 =	새 매크로 기록
+	t_Lang117 =	레코딩 옵션
+	t_Lang118 =	지우기 목록
+	t_Lang119 =	진행률 표시 줄을 표시합니다
+	t_Lang120 =	속도를 더하다
+	t_Lang121 =	천천히,
+	t_Lang122 =	표시 / 숨기기 제목 표시 줄
+	t_Lang123 =	메인 창 표시 / 숨기기
 		
 ; Messages & Dialogs		
 	d_Lang001 =	열기
@@ -545,8 +577,8 @@
 	)	
 	d_Lang057 =	
 	(LTrim	
-		- 선택한 영역을 이동하려면 Ctrl 키를 + 화살표 키.
-		- 보도 Shift + 화살표 키 선택 영역의 크기를 조정합니다.
+		- 선택한 영역을 이동하려면 Ctrl 키를+화살표 키.
+		- 보도 Shift+화살표 키 선택 영역의 크기를 조정합니다.
 		- 완료하려면 Enter 키를 누릅니다.
 	)	
 	d_Lang058 =	
