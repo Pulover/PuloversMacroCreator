@@ -377,7 +377,7 @@ class IfWin
 	}
 }
 
-ActivateHotkeys(Rec="", Play="", Speed="", Stop="", Joy="")
+ActivateHotkeys(Rec="", Play="", Speed="", Stop="", Pause="", Joy="")
 {
 	local ActiveKeys
 	
@@ -417,10 +417,16 @@ ActivateHotkeys(Rec="", Play="", Speed="", Stop="", Joy="")
 	
 	If (Stop <> "")
 	{
-		Hotkey, *%AbortKey%, f_PauseKey, Off
 		Hotkey, *%AbortKey%, f_AbortKey, Off
 		If ((AbortKey <> "") && (Stop = 1))
-			Hotkey, *%AbortKey%, % (PauseKey) ? "f_PauseKey" : "f_AbortKey", On
+			Hotkey, *%AbortKey%, f_AbortKey, On
+	}
+	
+	If (Pause <> "")
+	{
+		Hotkey, *%PauseKey%, f_PauseKey, Off
+		If ((PauseKey <> "") && (Pause = 1))
+			Hotkey, *%PauseKey%, f_PauseKey, On
 	}
 	
 	If (Joy <> "")

@@ -824,13 +824,13 @@ DefaultBar := {FileOpt: "Enabled AutoSize", File: ["New=" w_Lang040 ":42", "Open
 													, "", "Export=" w_Lang043 ":16", "Preview=" w_Lang044 ":50", "Options=" w_Lang045 ":44"]
 			, RecPlayOpt: "Enabled AutoSize Dropdown", RecPlay: ["Record=" w_Lang046 ":55", "PlayStart=" w_Lang047 ":47"]
 			, CommandOpt: "Enabled AutoSize", Command: ["Mouse=" w_Lang050 ":39", "Text=" w_Lang051 ":71", "ControlCmd=" w_Lang052 ":7"
-														, "", "Pause=" w_Lang05 ":46", "MsgBox=Message:11", "KeyWait=Key Wait:78"
-														, "", "Window=Window:81", "Image=ImageSearch:28", "Run=Run:59"
-														, "", "ComLoop=Loop:37", "ComGoto=Goto:22", "AddLabel=Label:35"
-														, "", "IfSt=If Statement:27", "AsVar=Assign Variable:76", "AsFunc=Functions:21"
-														, "", "IECom=Internet Explorer:26", "ComInt=COM Interface:4", "RunScrLet=Run Scriptlet:77"
-														, "", "SendMsg=Windows Messages:62"]
-			, SetOpt: "Enabled AutoSize", Settings: ["HideMainWin=Hide Main Window:82", "OnScCtrl=Display Controls:48"
+														, "", "Pause=" w_Lang054 ":46", "MsgBox=" w_Lang055 ":11", "KeyWait=" w_Lang056 " Wait:78"
+														, "", "Window=" w_Lang057 ":81", "Image=" w_Lang058 ":28", "Run=" w_Lang059 ":59"
+														, "", "ComLoop=" w_Lang060 ":37", "ComGoto=" w_Lang061 ":22", "AddLabel=" w_Lang062 ":35"
+														, "", "IfSt=" w_Lang063 ":27", "AsVar=" w_Lang064 ":76", "AsFunc=" w_Lang065 ":21"
+														, "", "IECom=" w_Lang066 ":26", "ComInt=" w_Lang067 ":4", "RunScrLet=" w_Lang068 ":77"
+														, "", "SendMsg=" w_Lang069 ":62"]
+			, SetOpt: "Enabled AutoSize", Settings: ["HideMainWin=Hide Main Window:82", "OnScCtrl=" w_Lang009 ":48"
 														, "", "Capt=Capture Keys:71", "CheckHkOn=Always Active:79"
 														, "", "OnFinish=On Finish:20(Enabled WholeDropdown)", "SetWin=Context Sensitive Hotkeys:48"
 														, "", "WinKey=Win:81", "SetJoyButton=Joystick:33"]
