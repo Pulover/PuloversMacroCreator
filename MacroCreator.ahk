@@ -10306,13 +10306,21 @@ Menu, InsertMenu, Add, %i_Lang001%`t%_s%F2, Mouse
 Menu, InsertMenu, Add, %i_Lang002%`t%_s%F3, Text
 Menu, InsertMenu, Add, %i_Lang003%`t%_s%F4, ControlCmd
 Menu, InsertMenu, Add, %i_Lang004%`t%_s%F5, Pause
-Menu, InsertMenu, Add, %i_Lang005%`t%_s%F6, Window
-Menu, InsertMenu, Add, %i_Lang006%`t%_s%F7, Image
-Menu, InsertMenu, Add, %i_Lang007%`t%_s%F8, Run
-Menu, InsertMenu, Add, %i_Lang008%`t%_s%F9, ComLoop
-Menu, InsertMenu, Add, %i_Lang009%`t%_s%F10, IfSt
-Menu, InsertMenu, Add, %i_Lang010%`t%_s%F11, IECom
-Menu, InsertMenu, Add, %i_Lang011%`t%_s%F12, SendMsg
+Menu, InsertMenu, Add, %i_Lang005%`t%_s%Shift+F5, MsgBox
+Menu, InsertMenu, Add, %i_Lang006%`t%_s%Ctrl+F5, KeyWait
+Menu, InsertMenu, Add, %i_Lang007%`t%_s%F6, Window
+Menu, InsertMenu, Add, %i_Lang008%`t%_s%F7, Image
+Menu, InsertMenu, Add, %i_Lang009%`t%_s%F8, Run
+Menu, InsertMenu, Add, %i_Lang010%`t%_s%F9, ComLoop
+Menu, InsertMenu, Add, %i_Lang011%`t%_s%Shift+F9, ComGoto
+Menu, InsertMenu, Add, %i_Lang012%`t%_s%Ctrl+F9, AddLabel
+Menu, InsertMenu, Add, %i_Lang013%`t%_s%F10, IfSt
+Menu, InsertMenu, Add, %i_Lang014%`t%_s%Shift+F10, AsVar
+Menu, InsertMenu, Add, %i_Lang015%`t%_s%Ctrl+F10, AsFunc
+Menu, InsertMenu, Add, %i_Lang016%`t%_s%F11, IECom
+Menu, InsertMenu, Add, %i_Lang017%`t%_s%Shift+F11, ComInt
+Menu, InsertMenu, Add, %i_Lang018%`t%_s%Ctrl+F11, RunScrLet
+Menu, InsertMenu, Add, %i_Lang019%`t%_s%F12, SendMsg
 
 TypesMenu := "Win`nFile`nString"
 Loop
@@ -10460,13 +10468,21 @@ Menu, InsertMenu, Icon, %i_Lang001%`t%_s%F2, %ResDllPath%, 39
 Menu, InsertMenu, Icon, %i_Lang002%`t%_s%F3, %ResDllPath%, 71
 Menu, InsertMenu, Icon, %i_Lang003%`t%_s%F4, %ResDllPath%, 7
 Menu, InsertMenu, Icon, %i_Lang004%`t%_s%F5, %ResDllPath%, 46
-Menu, InsertMenu, Icon, %i_Lang005%`t%_s%F6, %ResDllPath%, 81
-Menu, InsertMenu, Icon, %i_Lang006%`t%_s%F7, %ResDllPath%, 28
-Menu, InsertMenu, Icon, %i_Lang007%`t%_s%F8, %ResDllPath%, 59
-Menu, InsertMenu, Icon, %i_Lang008%`t%_s%F9, %ResDllPath%, 37
-Menu, InsertMenu, Icon, %i_Lang009%`t%_s%F10, %ResDllPath%, 27
-Menu, InsertMenu, Icon, %i_Lang010%`t%_s%F11, %ResDllPath%, 26
-Menu, InsertMenu, Icon, %i_Lang011%`t%_s%F12, %ResDllPath%, 62
+Menu, InsertMenu, Icon, %i_Lang005%`t%_s%Shift+F5, %ResDllPath%, 11
+Menu, InsertMenu, Icon, %i_Lang006%`t%_s%Ctrl+F5, %ResDllPath%, 78
+Menu, InsertMenu, Icon, %i_Lang007%`t%_s%F6, %ResDllPath%, 81
+Menu, InsertMenu, Icon, %i_Lang008%`t%_s%F7, %ResDllPath%, 28
+Menu, InsertMenu, Icon, %i_Lang009%`t%_s%F8, %ResDllPath%, 59
+Menu, InsertMenu, Icon, %i_Lang010%`t%_s%F9, %ResDllPath%, 37
+Menu, InsertMenu, Icon, %i_Lang011%`t%_s%Shift+F9, %ResDllPath%, 22
+Menu, InsertMenu, Icon, %i_Lang012%`t%_s%Ctrl+F9, %ResDllPath%, 35
+Menu, InsertMenu, Icon, %i_Lang013%`t%_s%F10, %ResDllPath%, 27
+Menu, InsertMenu, Icon, %i_Lang014%`t%_s%Shift+F10, %ResDllPath%, 76
+Menu, InsertMenu, Icon, %i_Lang015%`t%_s%Ctrl+F10, %ResDllPath%, 21
+Menu, InsertMenu, Icon, %i_Lang016%`t%_s%F11, %ResDllPath%, 26
+Menu, InsertMenu, Icon, %i_Lang017%`t%_s%Shift+F11, %ResDllPath%, 4
+Menu, InsertMenu, Icon, %i_Lang018%`t%_s%Ctrl+F11, %ResDllPath%, 77
+Menu, InsertMenu, Icon, %i_Lang019%`t%_s%F12, %ResDllPath%, 62
 Menu, EditMenu, Icon, %m_Lang004%`t%_s%Enter, %ResDllPath%, 14
 Menu, EditMenu, Icon, %e_Lang001%`t%_s%Ctrl+D, %ResDllPath%, 13
 Menu, EditMenu, Icon, %e_Lang003%`t%_s%Ctrl+F, %ResDllPath%, 19

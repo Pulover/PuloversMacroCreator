@@ -31,15 +31,22 @@
 	i_Lang001 =	鼠标
 	i_Lang002 =	文本
 	i_Lang003 =	控制
-	i_Lang004 =	暂停/消息/键等待
-	i_Lang005 =	窗口
-	i_Lang006 =	图片/像素搜索
-	i_Lang007 =	运行/文件/字符串/其他。
-	i_Lang008 =	环/页转到/标签
-	i_Lang009 =	如果报表/变量/函数
-	i_Lang010 =	互联网资源管理器/ COM接口
-	i_Lang011 =	Windows消息
-	i_Lang012 =	特殊键
+	i_Lang004 =	暂停
+	i_Lang005 =	消息
+	i_Lang006 =	键等待
+	i_Lang007 =	窗口
+	i_Lang008 =	图片 / 像素搜索
+	i_Lang009 =	运行 / 文件 / 字符串 / 其他。
+	i_Lang010 =	环
+	i_Lang011 =	页转到
+	i_Lang012 =	标签
+	i_Lang013 =	如果报表
+	i_Lang014 =	变量
+	i_Lang015 =	函数
+	i_Lang016 =	互联网资源管理器
+	i_Lang017 =	COM接口
+	i_Lang018 =	运行的Scriptlet
+	i_Lang019 =	Windows消息
 		
 ; Select Sub Menu		
 	s_Lang001 =	全选

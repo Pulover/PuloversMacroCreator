@@ -31,15 +31,22 @@
 	i_Lang001 =	&Mouse
 	i_Lang002 =	&Texto
 	i_Lang003 =	&Controle
-	i_Lang004 =	&Pausa / Mensagem / Esperar Tecla
-	i_Lang005 =	&Janela
-	i_Lang006 =	Procurar &Imagem / Pixel
-	i_Lang007 =	&Executar / Arquivos / Texto / Misc.
-	i_Lang008 =	&Loop / Pular / Rótulo
-	i_Lang009 =	Declaração &Se / Variáveis / Funções
-	i_Lang010 =	Internet E&xplorer / Interface COM
-	i_Lang011 =	Mensages do &Windows
-	i_Lang012 =	Tecl&as Especiais
+	i_Lang004 =	&Pausa
+	i_Lang005 =	M&ensagem
+	i_Lang006 =	E&sperar Tecla
+	i_Lang007 =	&Janela
+	i_Lang008 =	P&rocurar Imagem / Pixel
+	i_Lang009 =	E&xecutar / Arquivos / Texto / Misc.
+	i_Lang010 =	&Loop
+	i_Lang011 =	P&ular
+	i_Lang012 =	R&ótulo
+	i_Lang013 =	&Declaração Se
+	i_Lang014 =	&Variáveis
+	i_Lang015 =	&Funções
+	i_Lang016 =	&Internet Explorer
+	i_Lang017 =	I&nterface COM
+	i_Lang018 =	Execut&ar Scriptlet
+	i_Lang019 =	Mensa&ges Do Windows
 		
 ; Select Sub Menu		
 	s_Lang001 =	Selecionar &Tudo

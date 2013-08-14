@@ -31,15 +31,22 @@
 	i_Lang001 =	마우스
 	i_Lang002 =	본문
 	i_Lang003 =	제어
-	i_Lang004 =	중지 / 메시지 / 키 대기
-	i_Lang005 =	창
-	i_Lang006 =	이미지 / 픽셀 검색
-	i_Lang007 =	/ 파일 / 문자열 / 기타를 실행합니다.
-	i_Lang008 =	루프 / 고토 / 라벨
-	i_Lang009 =	만약 명세서 / 변수 / 함수
-	i_Lang010 =	인터넷 익스플로러 / COM 인터페이스
-	i_Lang011 =	윈도우 메시지
-	i_Lang012 =	특수 키
+	i_Lang004 =	중지
+	i_Lang005 =	메시지
+	i_Lang006 =	키 대기
+	i_Lang007 =	창
+	i_Lang008 =	이미지 / 픽셀 검색
+	i_Lang009 =	 / 파일 / 문자열 / 기타를 실행합니다.
+	i_Lang010 =	루프
+	i_Lang011 =	고토
+	i_Lang012 =	라벨
+	i_Lang013 =	만약 명세서
+	i_Lang014 =	변수
+	i_Lang015 =	함수
+	i_Lang016 =	인터넷 익스플로러
+	i_Lang017 =	COM 인터페이스
+	i_Lang018 =	스크립틀릿을 실행
+	i_Lang019 =	윈도우 메시지
 		
 ; Select Sub Menu		
 	s_Lang001 =	모두 선택

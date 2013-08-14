@@ -31,15 +31,22 @@
 	i_Lang001 =	&Souris
 	i_Lang002 =	&Texte
 	i_Lang003 =	&Contrôler
-	i_Lang004 =	&Pause / Un message / Attente Touche
-	i_Lang005 =	&Fenêtre
-	i_Lang006 =	&Image / pas de pixel Recherche
-	i_Lang007 =	&Exécuter / fichier / String / Misc.
-	i_Lang008 =	&Boucle / Aller à / étiquettes
-	i_Lang009 =	Si &états / variables / fonctions
-	i_Lang010 =	I&nternet Explorer / COM Interface
-	i_Lang011 =	&Messages de Windows
-	i_Lang012 =	T&ouches spéciales
+	i_Lang004 =	&Pause
+	i_Lang005 =	&Un Message
+	i_Lang006 =	&Attente Touche
+	i_Lang007 =	&Fenêtre
+	i_Lang008 =	&Image / Pas De Pixel Recherche
+	i_Lang009 =	&Exécuter / Fichier / String / Misc.
+	i_Lang010 =	&Boucle
+	i_Lang011 =	A&ller À
+	i_Lang012 =	&Étiquettes
+	i_Lang013 =	Si États
+	i_Lang014 =	&Variables
+	i_Lang015 =	F&onctions
+	i_Lang016 =	I&nternet Explorer
+	i_Lang017 =	CO&M Interface
+	i_Lang018 =	E&xécuter Scriplet
+	i_Lang019 =	Messa&ges De Windows
 		
 ; Select Sub Menu		
 	s_Lang001 =	&Sélectionner tout

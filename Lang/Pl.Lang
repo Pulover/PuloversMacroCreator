@@ -31,15 +31,22 @@
 	i_Lang001 =	&Mysz
 	i_Lang002 =	&Tekst
 	i_Lang003 =	&Sterowanie
-	i_Lang004 =	&Pauza / Wiadomość / Key Czekać
-	i_Lang005 =	&Okno
-	i_Lang006 =	&Image / Pixel Szukaj
-	i_Lang007 =	&Uruchom / Plik / String / Misc.
-	i_Lang008 =	P&ętla / Goto / Label
-	i_Lang009 =	I&f / zmienne / funkcje
-	i_Lang010 =	I&nternet Explorer / COM Interfejs
-	i_Lang011 =	&Komunikaty Windows
-	i_Lang012 =	K&lawisze specjalne
+	i_Lang004 =	&Pauza
+	i_Lang005 =	&Wiadomość
+	i_Lang006 =	&Key Czekać
+	i_Lang007 =	&Okno
+	i_Lang008 =	&Image / Pixel Szukaj
+	i_Lang009 =	&Uruchom / Plik / String / Misc.
+	i_Lang010 =	P&ętla
+	i_Lang011 =	&Goto
+	i_Lang012 =	&Label
+	i_Lang013 =	I&f
+	i_Lang014 =	&Zmienne
+	i_Lang015 =	Fu&nkcje
+	i_Lang016 =	Int&ernet Explorer
+	i_Lang017 =	&COM Interfejs
+	i_Lang018 =	U&ruchom Scriptlet
+	i_Lang019 =	Komunik&aty Windows
 		
 ; Select Sub Menu		
 	s_Lang001 =	&Zaznacz wszystko

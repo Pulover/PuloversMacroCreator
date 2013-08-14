@@ -31,15 +31,22 @@
 	i_Lang001 =	&Muis
 	i_Lang002 =	&Tekst
 	i_Lang003 =	&Controle
-	i_Lang004 =	&Pauzeren / Bericht / Key Wachten
-	i_Lang005 =	&Venster
-	i_Lang006 =	&Afbeelding / Pixel zoeken
-	i_Lang007 =	&Run / Bestand / String / Misc.
-	i_Lang008 =	&Loop / Ga naar / Label
-	i_Lang009 =	Al&s Verklaringen / Variabelen / Functies
-	i_Lang010 =	&Internet Explorer / COM-interface
-	i_Lang011 =	&Windows Messages
-	i_Lang012 =	Sp&eciale toetsen
+	i_Lang004 =	&Pauzeren
+	i_Lang005 =	&Bericht
+	i_Lang006 =	&Key Wachten
+	i_Lang007 =	&Venster
+	i_Lang008 =	&Afbeelding / Pixel Zoeken
+	i_Lang009 =	&Run / Bestand / String / Misc.
+	i_Lang010 =	&Loop
+	i_Lang011 =	&Ga Naar
+	i_Lang012 =	Lab&el
+	i_Lang013 =	Al&s Verklaringen
+	i_Lang014 =	Var&iabelen
+	i_Lang015 =	&Functies
+	i_Lang016 =	I&nternet Explorer
+	i_Lang017 =	C&OM-Interface
+	i_Lang018 =	R&un Scriptlet
+	i_Lang019 =	&Windows Messages
 		
 ; Select Sub Menu		
 	s_Lang001 =	&Alles selecteren

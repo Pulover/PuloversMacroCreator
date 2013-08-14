@@ -31,15 +31,22 @@
 	i_Lang001 =	&Maus
 	i_Lang002 =	&Text
 	i_Lang003 =	&Steuerelement
-	i_Lang004 =	&Pause / Nachricht / Tasten erfassen
-	i_Lang005 =	&Fenster
-	i_Lang006 =	&Bild / Pixelsuche
-	i_Lang007 =	&Run / File / String / Versch.
-	i_Lang008 =	&Loop / Goto / Sprungmarke
-	i_Lang009 =	&If Anweisung / Variablen / Funktionen
-	i_Lang010 =	&Internet Explorer / COM-Schnittstelle
-	i_Lang011 =	Wi&ndows-Messages
-	i_Lang012 =	Sond&ertasten
+	i_Lang004 =	&Pause
+	i_Lang005 =	&Nachricht
+	i_Lang006 =	T&asten Erfassen
+	i_Lang007 =	&Fenster
+	i_Lang008 =	&Bild / Pixelsuche
+	i_Lang009 =	&Run / File / String / Versch.
+	i_Lang010 =	&Loop
+	i_Lang011 =	&Goto
+	i_Lang012 =	Spr&ungmarke
+	i_Lang013 =	&If Anweisung
+	i_Lang014 =	&Variablen
+	i_Lang015 =	Fun&ktionen
+	i_Lang016 =	Int&ernet Explorer
+	i_Lang017 =	&COM-Schnittstelle
+	i_Lang018 =	Scriptlet Ausf&ühren
+	i_Lang019 =	&Windows-Messages
 		
 ; Select Sub Menu		
 	s_Lang001 =	&Alles auswählen

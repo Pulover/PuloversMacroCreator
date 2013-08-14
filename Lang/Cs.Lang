@@ -31,15 +31,22 @@
 	i_Lang001 =	&Myš
 	i_Lang002 =	&Text
 	i_Lang003 =	&Ovládání
-	i_Lang004 =	&Pauza / Zpráva / Klíč Čekání
-	i_Lang005 =	O&kno
-	i_Lang006 =	O&brázek / Pixel hledat
-	i_Lang007 =	&Spustit / Soubor / String / Misc.
-	i_Lang008 =	&Loop / Goto / Label
-	i_Lang009 =	Pok&ud závěrka / Proměnné / Funkce
-	i_Lang010 =	&Internet Explorer / COM rozhraní
-	i_Lang011 =	&Windows Zprávy
-	i_Lang012 =	Sp&eciální klávesy
+	i_Lang004 =	&Pauza
+	i_Lang005 =	&Zpráva
+	i_Lang006 =	&Klíč Čekání
+	i_Lang007 =	Ok&no
+	i_Lang008 =	O&brázek / Pixel Hledat
+	i_Lang009 =	&Spustit / Soubor / String / Misc.
+	i_Lang010 =	&Loop
+	i_Lang011 =	&Goto
+	i_Lang012 =	L&abel
+	i_Lang013 =	Pok&ud Závěrka
+	i_Lang014 =	P&roměnné
+	i_Lang015 =	&Funkce
+	i_Lang016 =	&Internet Explorer
+	i_Lang017 =	&COM Rozhraní
+	i_Lang018 =	Spustit Skript&y
+	i_Lang019 =	&Windows Zprávy
 		
 ; Select Sub Menu		
 	s_Lang001 =	&Vybrat vše

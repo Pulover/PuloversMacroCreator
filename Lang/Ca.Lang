@@ -31,15 +31,22 @@
 	i_Lang001 =	&Ratolí
 	i_Lang002 =	&Text
 	i_Lang003 =	&Controlar
-	i_Lang004 =	&Pausa / Missatge / Espera Clau
-	i_Lang005 =	&Finestra
-	i_Lang006 =	&Imatge / píxel Cerca
-	i_Lang007 =	&Executar / Arxiu / cadena / Misc.
-	i_Lang008 =	&Loop / Anar a / Label
-	i_Lang009 =	&Si els estats / Variables / Funcions
-	i_Lang010 =	I&nterfície d'Internet Explorer / COM
-	i_Lang011 =	&Missatges de Windows
-	i_Lang012 =	Tecles especi&als
+	i_Lang004 =	&Pausa
+	i_Lang005 =	&Missatge
+	i_Lang006 =	&Espera Clau
+	i_Lang007 =	&Finestra
+	i_Lang008 =	&Imatge / Píxel Cerca
+	i_Lang009 =	E&xecutar / Arxiu / Cadena / Misc.
+	i_Lang010 =	&Loop
+	i_Lang011 =	&Anar A
+	i_Lang012 =	La&bel
+	i_Lang013 =	&Si Els Estats
+	i_Lang014 =	&Variables
+	i_Lang015 =	F&uncions
+	i_Lang016 =	I&nterfície d'Internet Explorer
+	i_Lang017 =	C&OM
+	i_Lang018 =	Executar Scriptlet
+	i_Lang019 =	Missat&ges De Windows
 		
 ; Select Sub Menu		
 	s_Lang001 =	&Selecciona tot

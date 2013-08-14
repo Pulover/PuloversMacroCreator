@@ -31,15 +31,22 @@
 	i_Lang001 =	&Mouse
 	i_Lang002 =	&Teks
 	i_Lang003 =	&Kontrol
-	i_Lang004 =	&Jeda / Pesan / Tunggu Key
-	i_Lang005 =	J&endela
-	i_Lang006 =	&Image / Pixel Pencarian
-	i_Lang007 =	J&alankan / file / String / Misc.
-	i_Lang008 =	&Loop / Goto / Label
-	i_Lang009 =	Jika La&poran / Variabel / Fungsi
-	i_Lang010 =	I&nternet Explorer / COM Antarmuka
-	i_Lang011 =	Jen&dela Pesan
-	i_Lang012 =	T&ombol Khusus
+	i_Lang004 =	&Jeda
+	i_Lang005 =	&Pesan
+	i_Lang006 =	T&unggu Key
+	i_Lang007 =	J&endela
+	i_Lang008 =	&Image / Pixel Pencarian
+	i_Lang009 =	J&alankan / File / String / Misc.
+	i_Lang010 =	&Loop
+	i_Lang011 =	&Goto
+	i_Lang012 =	La&bel
+	i_Lang013 =	Jika Lap&oran
+	i_Lang014 =	&Variabel
+	i_Lang015 =	&Fungsi
+	i_Lang016 =	I&nternet Explorer
+	i_Lang017 =	&COM Antarmuka
+	i_Lang018 =	Jalankan &Scriptlet
+	i_Lang019 =	Jen&dela Pesan
 		
 ; Select Sub Menu		
 	s_Lang001 =	&Pilih Semua

@@ -31,15 +31,22 @@
 	i_Lang001 =	&Мишка
 	i_Lang002 =	&Текст
 	i_Lang003 =	&Контрол
-	i_Lang004 =	&Пауза / Съобщение / Ключ Изчакайте
-	i_Lang005 =	П&розорец
-	i_Lang006 =	&Image / Pixel Търсене
-	i_Lang007 =	&Run / File / String / Misc.
-	i_Lang008 =	&Loop / Иди / Label
-	i_Lang009 =	&Ако извлечения / променливи / функции
-	i_Lang010 =	I&nternet Explorer / COM Interface
-	i_Lang011 =	&Windows Съобщения
-	i_Lang012 =	&Специални клавиши
+	i_Lang004 =	&Пауза
+	i_Lang005 =	&Съобщение
+	i_Lang006 =	К&люч Изчакайте
+	i_Lang007 =	П&розорец
+	i_Lang008 =	&Image / Pixel Търсене
+	i_Lang009 =	&Run / File / String / Misc.
+	i_Lang010 =	&Loop
+	i_Lang011 =	&Иди
+	i_Lang012 =	L&abel
+	i_Lang013 =	&Ако Извлечения
+	i_Lang014 =	Пр&оменливи
+	i_Lang015 =	&Функции
+	i_Lang016 =	I&nternet Explorer
+	i_Lang017 =	&COM Interface
+	i_Lang018 =	Т&ичане Scriptlet
+	i_Lang019 =	&Windows Съобщения
 		
 ; Select Sub Menu		
 	s_Lang001 =	&Избери всички

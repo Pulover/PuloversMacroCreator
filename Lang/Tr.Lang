@@ -31,15 +31,22 @@
 	i_Lang001 =	&Fare
 	i_Lang002 =	&Metin
 	i_Lang003 =	&Kontrol
-	i_Lang004 =	&Durma / Mesaj / Anahtar Bekleyin
-	i_Lang005 =	&Pencere
-	i_Lang006 =	&Görüntü / Piksel Arama
-	i_Lang007 =	D&osya / Dizi / Misc çalıştırın.
-	i_Lang008 =	D&öngü / Goto / Etiket
-	i_Lang009 =	&Eğer Tablolar / Değişkenler / Fonksiyonlar
-	i_Lang010 =	&Internet Explorer / COM Arabirimi
-	i_Lang011 =	&Windows iletileri
-	i_Lang012 =	&Özel Tuşlar
+	i_Lang004 =	&Durma
+	i_Lang005 =	M&esaj
+	i_Lang006 =	&Anahtar Bekleyin
+	i_Lang007 =	&Pencere
+	i_Lang008 =	&Görüntü / Piksel Arama
+	i_Lang009 =	D&osya / Dizi / Misc Çalıştırın.
+	i_Lang010 =	D&öngü
+	i_Lang011 =	Go&to
+	i_Lang012 =	Et&iket
+	i_Lang013 =	E&ğer Tablolar
+	i_Lang014 =	Deği&şkenler
+	i_Lang015 =	Fo&nksiyonlar
+	i_Lang016 =	Inte&rnet Explorer
+	i_Lang017 =	&COM Arabirimi
+	i_Lang018 =	Kom&ut Dosyası Çalıştırmak
+	i_Lang019 =	&Windows Iletileri
 		
 ; Select Sub Menu		
 	s_Lang001 =	&Tümünü Seç

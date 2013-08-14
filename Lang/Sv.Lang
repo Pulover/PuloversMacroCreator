@@ -31,15 +31,22 @@
 	i_Lang001 =	&Mus
 	i_Lang002 =	&Text
 	i_Lang003 =	&Kontroll
-	i_Lang004 =	&Paus / Meddelande / Nyckel Vänta
-	i_Lang005 =	&Fönster
-	i_Lang006 =	&Bild / Pixel Sök
-	i_Lang007 =	K&ör / Arkiv / String / Misc.
-	i_Lang008 =	&Loop / Gå / Etikett
-	i_Lang009 =	&Om Uttalanden / variabler / funktioner
-	i_Lang010 =	&Internet Explorer / COM-gränssnitt
-	i_Lang011 =	&Windows-meddelanden
-	i_Lang012 =	&Specialtangenter
+	i_Lang004 =	&Paus
+	i_Lang005 =	M&eddelande
+	i_Lang006 =	&Nyckel Vänta
+	i_Lang007 =	&Fönster
+	i_Lang008 =	&Bild / Pixel Sök
+	i_Lang009 =	K&ör / Arkiv / String / Misc.
+	i_Lang010 =	&Loop
+	i_Lang011 =	&Gå
+	i_Lang012 =	Et&ikett
+	i_Lang013 =	&Om Uttalanden
+	i_Lang014 =	&Variabler
+	i_Lang015 =	F&unktioner
+	i_Lang016 =	Inte&rnet Explorer
+	i_Lang017 =	&COM-Gränssnitt
+	i_Lang018 =	Kör &Skriptlet
+	i_Lang019 =	&Windows-Meddelanden
 		
 ; Select Sub Menu		
 	s_Lang001 =	&Markera allt

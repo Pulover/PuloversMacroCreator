@@ -31,15 +31,22 @@
 	i_Lang001 =	&Egér
 	i_Lang002 =	&Szöveg
 	i_Lang003 =	&Irányítsd
-	i_Lang004 =	S&zünet / Üzenet / Kulcs Várakozás
-	i_Lang005 =	&Ablak
-	i_Lang006 =	&Kép / Pixel Search
-	i_Lang007 =	&Run / Fájl / String / Misc.
-	i_Lang008 =	&Hurok / Goto / címke
-	i_Lang009 =	Ha &Nyilatkozatok / Változók / funkciók
-	i_Lang010 =	In&ternet Explorer / COM Interface
-	i_Lang011 =	A &Windows üzenetek
-	i_Lang012 =	S&peciális gombok
+	i_Lang004 =	S&zünet
+	i_Lang005 =	&Üzenet
+	i_Lang006 =	&Kulcs Várakozás
+	i_Lang007 =	&Ablak
+	i_Lang008 =	K&ép / Pixel Search
+	i_Lang009 =	&Run / Fájl / String / Misc.
+	i_Lang010 =	&Hurok
+	i_Lang011 =	&Goto
+	i_Lang012 =	&Címke
+	i_Lang013 =	Ha &Nyilatkozatok
+	i_Lang014 =	&Változók
+	i_Lang015 =	&Funkciók
+	i_Lang016 =	In&ternet Explorer
+	i_Lang017 =	C&OM Interface
+	i_Lang018 =	F&uss Scriptlet
+	i_Lang019 =	A &Windows Üzenetek
 		
 ; Select Sub Menu		
 	s_Lang001 =	&Az összes kijelölése

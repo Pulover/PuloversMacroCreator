@@ -31,15 +31,22 @@
 	i_Lang001 =	&Hiiri
 	i_Lang002 =	&Teksti
 	i_Lang003 =	&Ohjaa
-	i_Lang004 =	T&auko / Viesti / Näppäintä Odotus
-	i_Lang005 =	&Ikkuna
-	i_Lang006 =	&Kuva / Pixel Search
-	i_Lang007 =	&Run / File / String / Misc.
-	i_Lang008 =	&Loop / Goto / Levy
-	i_Lang009 =	&Jos Lausumat / Muuttujat / toiminnot
-	i_Lang010 =	I&nternet Explorer / COM-liitäntä
-	i_Lang011 =	&Windows viestit
-	i_Lang012 =	&Special Keys
+	i_Lang004 =	T&auko
+	i_Lang005 =	&Viesti
+	i_Lang006 =	&Näppäintä Odotus
+	i_Lang007 =	&Ikkuna
+	i_Lang008 =	&Kuva / Pixel Search
+	i_Lang009 =	&Run / File / String / Misc.
+	i_Lang010 =	&Loop
+	i_Lang011 =	&Goto
+	i_Lang012 =	L&evy
+	i_Lang013 =	&Jos Lausumat
+	i_Lang014 =	&Muuttujat
+	i_Lang015 =	Toiminnot
+	i_Lang016 =	Internet E&xplorer
+	i_Lang017 =	&COM-Liitäntä
+	i_Lang018 =	&Suorita Komentosarjasovelman
+	i_Lang019 =	&Windows Viestit
 		
 ; Select Sub Menu		
 	s_Lang001 =	&Valitse kaikki

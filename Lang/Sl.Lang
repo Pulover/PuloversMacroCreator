@@ -31,15 +31,22 @@
 	i_Lang001 =	&Miška
 	i_Lang002 =	&Besedilo
 	i_Lang003 =	&Nadzor
-	i_Lang004 =	&Premor / Sporočilo / ključne Počakaj
-	i_Lang005 =	&Okno
-	i_Lang006 =	&Image / Pixel Iskanje
-	i_Lang007 =	&Run / datoteke / String / Razno.
-	i_Lang008 =	&Loop / Goto / Label
-	i_Lang009 =	&Če Izjave / spremenljivke / Funkcije
-	i_Lang010 =	In&ternet Explorer / COM vmesnik
-	i_Lang011 =	&Windows Sporočila
-	i_Lang012 =	Po&sebne Keys
+	i_Lang004 =	&Premor
+	i_Lang005 =	&Sporočilo
+	i_Lang006 =	&Ključne Počakaj
+	i_Lang007 =	&Okno
+	i_Lang008 =	&Image / Pixel Iskanje
+	i_Lang009 =	&Run / Datoteke / String / Razno.
+	i_Lang010 =	&Loop
+	i_Lang011 =	&Goto
+	i_Lang012 =	L&abel
+	i_Lang013 =	&Če Izjave
+	i_Lang014 =	Spr&emenljivke
+	i_Lang015 =	&Funkcije
+	i_Lang016 =	In&ternet Explorer
+	i_Lang017 =	&COM Vmesnik
+	i_Lang018 =	R&un Skriptov
+	i_Lang019 =	&Windows Sporočila
 		
 ; Select Sub Menu		
 	s_Lang001 =	&Izberi vse

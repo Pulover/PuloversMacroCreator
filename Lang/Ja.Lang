@@ -31,15 +31,22 @@
 	i_Lang001 =	マウス
 	i_Lang002 =	テキスト
 	i_Lang003 =	コントロール
-	i_Lang004 =	一時停止 / メッセージ / キー待ち
-	i_Lang005 =	ウィンドウ
-	i_Lang006 =	イメージ/ピクセル検索
-	i_Lang007 =	ファイル/文字列/その他/実行します。
-	i_Lang008 =	ループ/後藤/ラベル
-	i_Lang009 =	If文/変数/関数
-	i_Lang010 =	インターネットエクスプローラ/ COMインタフェース
-	i_Lang011 =	Windowsメッセージ
-	i_Lang012 =	特殊キー
+	i_Lang004 =	一時停止
+	i_Lang005 =	メッセージ
+	i_Lang006 =	キー待ち
+	i_Lang007 =	ウィンドウ
+	i_Lang008 =	イメージ / ピクセル検索
+	i_Lang009 =	ファイル / 文字列 / その他 / 実行します。
+	i_Lang010 =	ループ
+	i_Lang011 =	後藤
+	i_Lang012 =	ラベル
+	i_Lang013 =	If文
+	i_Lang014 =	変数
+	i_Lang015 =	関数
+	i_Lang016 =	インターネットエクスプローラ
+	i_Lang017 =	COMインタフェース
+	i_Lang018 =	スクリプトレットを実行
+	i_Lang019 =	Windowsメッセージ
 		
 ; Select Sub Menu		
 	s_Lang001 =	[すべて]を選択します

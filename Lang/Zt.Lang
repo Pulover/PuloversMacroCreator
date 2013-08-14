@@ -31,15 +31,22 @@
 	i_Lang001 =	鼠標
 	i_Lang002 =	文本
 	i_Lang003 =	控制
-	i_Lang004 =	暫停 / 信息 / 關鍵的等待
-	i_Lang005 =	窗口
-	i_Lang006 =	圖片/像素搜索
-	i_Lang007 =	運行/文件/串/ MISC。
-	i_Lang008 =	迴路/轉到/標籤
-	i_Lang009 =	如果報表/變量/函數
-	i_Lang010 =	IE瀏覽器/ COM接口
-	i_Lang011 =	Windows消息
-	i_Lang012 =	特殊鍵
+	i_Lang004 =	暫停
+	i_Lang005 =	信息
+	i_Lang006 =	關鍵的等待
+	i_Lang007 =	窗口
+	i_Lang008 =	圖片 / 像素搜索
+	i_Lang009 =	運行 / 文件 / 串 / MISC。
+	i_Lang010 =	迴路
+	i_Lang011 =	轉到
+	i_Lang012 =	標籤
+	i_Lang013 =	如果報表
+	i_Lang014 =	變量
+	i_Lang015 =	函數
+	i_Lang016 =	IE瀏覽器
+	i_Lang017 =	COM接口
+	i_Lang018 =	運行的Scriptlet
+	i_Lang019 =	Windows消息
 		
 ; Select Sub Menu		
 	s_Lang001 =	全選

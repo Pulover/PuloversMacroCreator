@@ -31,15 +31,22 @@
 	i_Lang001 =	&Ποντίκι
 	i_Lang002 =	&Κείμενο
 	i_Lang003 =	&Έλεγχος
-	i_Lang004 =	Π&αύση / Μήνυμα / Κλειδί Αναμονή
-	i_Lang005 =	Πα&ράθυρο
-	i_Lang006 =	&Εικόνα / Pixel Αναζήτηση
-	i_Lang007 =	&Run / Αρχείο / String / Διάφορα.
-	i_Lang008 =	&Loop / Goto / Label
-	i_Lang009 =	&Αν Καταστάσεις / μεταβλητές / Λειτουργίες
-	i_Lang010 =	&Internet Explorer / COM Interface
-	i_Lang011 =	&Τα μηνύματα των Windows
-	i_Lang012 =	Ε&ιδικά πλήκτρα
+	i_Lang004 =	Π&αύση
+	i_Lang005 =	&Μήνυμα
+	i_Lang006 =	Κ&λειδί Αναμονή
+	i_Lang007 =	Πα&ράθυρο
+	i_Lang008 =	&Εικόνα / Pixel Αναζήτηση
+	i_Lang009 =	&Run / Αρχείο / String / Διάφορα.
+	i_Lang010 =	&Loop
+	i_Lang011 =	&Goto
+	i_Lang012 =	L&abel
+	i_Lang013 =	&Αν Καταστάσεις
+	i_Lang014 =	Μ&εταβλητές
+	i_Lang015 =	&Λειτουργίες
+	i_Lang016 =	&Internet Explorer
+	i_Lang017 =	&COM Interface
+	i_Lang018 =	Ε&κτέλεση Scriptlet
+	i_Lang019 =	&Τα Μηνύματα Των Windows
 		
 ; Select Sub Menu		
 	s_Lang001 =	&Επιλογή όλων

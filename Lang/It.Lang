@@ -31,15 +31,22 @@
 	i_Lang001 =	&Mouse
 	i_Lang002 =	&Testo
 	i_Lang003 =	&Controllo
-	i_Lang004 =	&Pausa / Messaggio / Wait Chiave
-	i_Lang005 =	&Finestra
-	i_Lang006 =	&Immagine / Pixel Ricerca
-	i_Lang007 =	&Eseguire / File / String / Misc.
-	i_Lang008 =	&Loop / Goto / Etichetta
-	i_Lang009 =	&Se Dichiarazioni variabili / / Funzioni
-	i_Lang010 =	I&nternet Explorer / interfaccia COM
-	i_Lang011 =	Mess&aggi di Windows
-	i_Lang012 =	Tasti speciali
+	i_Lang004 =	&Pausa
+	i_Lang005 =	M&essaggio
+	i_Lang006 =	&Wait Chiave
+	i_Lang007 =	&Finestra
+	i_Lang008 =	&Immagine / Pixel Ricerca
+	i_Lang009 =	E&seguire / File / String / Misc.
+	i_Lang010 =	&Loop
+	i_Lang011 =	&Goto
+	i_Lang012 =	Etic&hetta
+	i_Lang013 =	Se &Dichiarazioni Variabili
+	i_Lang014 =	&Variabili
+	i_Lang015 =	F&unzioni
+	i_Lang016 =	I&nternet Explorer
+	i_Lang017 =	Inte&rfaccia COM
+	i_Lang018 =	Esegui Scriptlet
+	i_Lang019 =	Mess&aggi Di Windows
 		
 ; Select Sub Menu		
 	s_Lang001 =	&Seleziona tutto

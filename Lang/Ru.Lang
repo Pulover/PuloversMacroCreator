@@ -31,15 +31,22 @@
 	i_Lang001 =	&Мышь
 	i_Lang002 =	&Текст
 	i_Lang003 =	&Управление
-	i_Lang004 =	&Пауза / Сообщение / Ключевые Ожидания
-	i_Lang005 =	&Окно
-	i_Lang006 =	&Изображение / Pixel поиск
-	i_Lang007 =	&Выполнить / File / String / Разное.
-	i_Lang008 =	&Loop / На / Label
-	i_Lang009 =	&Если Заявления / переменные / функции
-	i_Lang010 =	&Internet Explorer / COM-интерфейса
-	i_Lang011 =	&Windows Messages
-	i_Lang012 =	&Специальные клавиши
+	i_Lang004 =	&Пауза
+	i_Lang005 =	&Сообщение
+	i_Lang006 =	&Ключевые Ожидания
+	i_Lang007 =	&Окно
+	i_Lang008 =	&Изображение / Pixel Поиск
+	i_Lang009 =	&Выполнить / File / String / Разное.
+	i_Lang010 =	&Loop
+	i_Lang011 =	&На
+	i_Lang012 =	L&abel
+	i_Lang013 =	&Если Заявления
+	i_Lang014 =	П&еременные
+	i_Lang015 =	&Функции
+	i_Lang016 =	&Internet Explorer
+	i_Lang017 =	&COM-Интерфейса
+	i_Lang018 =	В&ыполнить Скриптлете
+	i_Lang019 =	&Windows Messages
 		
 ; Select Sub Menu		
 	s_Lang001 =	&Выбрать все

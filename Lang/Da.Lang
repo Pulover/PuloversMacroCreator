@@ -31,15 +31,22 @@
 	i_Lang001 =	&Mus
 	i_Lang002 =	&Tekst
 	i_Lang003 =	&Kontrol
-	i_Lang004 =	&Pause / Besked / Nøgle Vente
-	i_Lang005 =	&Vindue
-	i_Lang006 =	&Billede / Pixel Søg
-	i_Lang007 =	&Run / File / String / Misc.
-	i_Lang008 =	&Loop / Goto / Label
-	i_Lang009 =	&Hvis Erklæringer / variabler / funktioner
-	i_Lang010 =	&Internet Explorer / COM interface
-	i_Lang011 =	&Windows Messages
-	i_Lang012 =	&Særlige Keys
+	i_Lang004 =	&Pause
+	i_Lang005 =	&Besked
+	i_Lang006 =	&Nøgle Vente
+	i_Lang007 =	&Vindue
+	i_Lang008 =	B&illede / Pixel Søg
+	i_Lang009 =	&Run / File / String / Misc.
+	i_Lang010 =	&Loop
+	i_Lang011 =	&Goto
+	i_Lang012 =	L&abel
+	i_Lang013 =	&Hvis Erklæringer
+	i_Lang014 =	Variabl&er
+	i_Lang015 =	&Funktioner
+	i_Lang016 =	Internet E&xplorer
+	i_Lang017 =	&COM Interface
+	i_Lang018 =	K&ør Scriptlet
+	i_Lang019 =	&Windows Messages
 		
 ; Select Sub Menu		
 	s_Lang001 =	&Vælg alt
