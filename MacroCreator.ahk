@@ -9819,18 +9819,16 @@ AbortKey := "F8"
 ,	TB_Edit(TbSettings, "OnScCtrl", OnScCtrl)
 ,	TB_Edit(TbSettings, "CheckHkOn", KeepHkOn)
 ,	TB_Edit(TbSettings, "SetWin", 0)
-Gui 28:+LastFoundExist
-IfWinExist
-{
-    WinSet, Transparent, %OSTrans%, ahk_id %PMCOSC%
-	GuiControl, 28:, OSTrans, 255
-	GuiControl, 28:, OSProgB, 1
-	Gui, 28:-Caption
+,	TB_Edit(TbOSC, "ProgBarToggle", ShowProgBar)
+WinSet, Transparent, %OSTrans%, ahk_id %PMCOSC%
+GuiControl, 28:, OSTrans, 255
+Gui, 28:-Caption
+If (WinExist("ahk_id " PMCOSC))
 	Gui, 28:Show, % OSCPos (ShowProgBar ? "H40" : "H30") " W415 NoActivate", %AppName%
-}
 GuiControl, 1:, CoordTip, CoordMode: %CoordMouse%
 GuiControl, 1:, ContextTip, #IfWin: %IfDirectContext%
 GuiControl, 1:, AbortKey, %AbortKey%
+GuiControl, 1:, PauseKey, %PauseKey%
 GuiControl, 1:, WinKey, 0
 ; GuiControl, 1:, PauseKey, 0
 GuiControl, 1:, DelayG, 0
@@ -10547,6 +10545,7 @@ Menu, MacroMenu, Icon, %r_Lang004%`t%_s%Ctrl+Shift+T, %ResDllPath%, 72
 Menu, MacroMenu, Icon, %r_Lang005%`t%_s%Ctrl+T, %ResDllPath%, 67
 Menu, MacroMenu, Icon, %r_Lang006%`t%_s%Ctrl+W, %ResDllPath%, 69
 Menu, MacroMenu, Icon, %r_Lang007%`t%_s%Ctrl+H, %ResDllPath%, 48
+Menu, MacroMenu, Icon, %r_Lang008%`t%_s%Ctrl+B, %ResDllPath%, 89
 Menu, OptionsMenu, Icon, %o_Lang001%`t%_s%Ctrl+G, %ResDllPath%, 44
 Menu, HelpMenu, Icon, %m_Lang009%`t%_s%F1, %ResDllPath%, 24
 Menu, DonationMenu, Icon, %p_Lang001%, %ResDllPath%, 12
