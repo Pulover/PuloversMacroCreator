@@ -829,11 +829,14 @@ Gui, chPrev:Show, W450 H600 Hide
 ,	SB_SetText("Macro" A_List ": " o_AutoKey[A_List], 1)
 ,	SB_SetText("Record Keys: " RecKey "/" RecNewKey, 2)
 ,	SB_SetText("CoordMode: " CoordMouse, 3)
+,	TB_Edit(TbPrev, "TabIndent", TabIndent)
+,	TB_Edit(TbPrevF, "TabIndent", TabIndent)
 	Gui, chMacro:Default
 return
 
 OnTop:
 TB_Edit(TbPrev, "OnTop", OnTop := !OnTop)
+,	TB_Edit(TbPrevF, "OnTop", OnTop)
 Gui, % (OnTop) ? "2:+AlwaysOnTop" : "2:-AlwaysOnTop"
 return
 
@@ -856,6 +859,13 @@ SB_SetText("Macro" A_List ": " o_AutoKey[A_List], 1)
 SB_SetText("Record Keys: " RecKey "/" RecNewKey, 2)
 SB_SetText("CoordMode: " CoordMouse, 3)
 Gui, chMacro:Default
+return
+
+TabIndent:
+AutoRefresh:
+TB_Edit(TbPrev, A_ThisLabel, %A_ThisLabel% := !%A_ThisLabel%)
+,	TB_Edit(TbPrevF, A_ThisLabel, %A_ThisLabel%)
+GoSub, PrevRefresh
 return
 
 PrevClose:
@@ -928,7 +938,7 @@ If !DontShowRec
 	Gui, 26:-SysMenu +HwndTipScrID
 	Gui, 26:Color, FFFFFF
 	; Gui, 26:Font, s7
-	Gui, 26:Add, Pic, y+20 Icon24, %ResDllPath%
+	Gui, 26:Add, Pic, y+20 Icon91, %ResDllPath%
 	Gui, 26:Add, Text, yp x+10, %d_Lang052%`n`n- %RecKey% %d_Lang026%`n- %RecNewKey% %d_Lang030%`n`n%d_Lang043%`n
 	Gui, 26:Add, Checkbox, -Wrap W300 vDontShowRec R1, %d_Lang053%
 	Gui, 26:Add, Button, -Wrap Default y+10 W90 H25 gTipClose, %c_Lang020%
@@ -6945,7 +6955,7 @@ If !DontShowPb
 	Gui, 26:-SysMenu +HwndTipScrID
 	Gui, 26:Color, FFFFFF
 	; Gui, 26:Font, s7
-	Gui, 26:Add, Pic, y+20 Icon25, %ResDllPath%
+	Gui, 26:Add, Pic, y+20 Icon91, %ResDllPath%
 	Gui, 26:Add, Text, yp x+10, %d_Lang051%`n`n%d_Lang043%`n
 	Gui, 26:Add, Checkbox, -Wrap W300 vDontShowPb R1, %d_Lang053%
 	Gui, 26:Add, Button, -Wrap Default y+10 W75 H25 gTipClose, %c_Lang020%
@@ -7098,7 +7108,6 @@ If ((A_GuiEvent == "I") || (A_GuiEvent == "Normal") || (A_GuiEvent == "A")
 || (A_GuiEvent == "C") || (A_GuiEvent == "K") || (A_GuiEvent == "F")
 || (A_GuiEvent == "f"))
 {
-	Gui, 2:Submit, NoHide
 	If (AutoRefresh = 1)
 		GoSub, PrevRefresh
 }
@@ -9597,11 +9606,26 @@ return
 
 ;##### Hide / Close: #####
 
+ShowHideTB:
 ShowHide:
 If WinExist("ahk_id" PMCWinID)
 {
-	Menu, Tray, Rename, %y_Lang001%, %y_Lang002%
-	Gui, 1:Show, Hide
+	If (A_ThisLabel = "ShowHideTB")
+	{
+		WinGet, WinState, MinMax, ahk_id %PMCWinID%
+		If WinState = -1
+			WinActivate
+		Else
+		{
+			Menu, Tray, Rename, %y_Lang001%, %y_Lang002%
+			Gui, 1:Show, Hide
+		}
+	}
+	Else
+	{
+		Menu, Tray, Rename, %y_Lang001%, %y_Lang002%
+		Gui, 1:Show, Hide
+	}
 }
 Else
 {

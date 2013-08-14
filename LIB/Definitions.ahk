@@ -835,15 +835,15 @@ DefaultBar := {FileOpt: "Enabled AutoSize", File: ["New=" w_Lang040 ":42", "Open
 														, "", "OnFinish=" w_Lang020 ":20(Enabled WholeDropdown)", "SetWin=" t_Lang009 ":48"
 														, "", "WinKey=" w_Lang070 ":90", "SetJoyButton=" w_Lang071 ":33"]
 			, EditOpt: "Enabled AutoSize", Edit: ["TabPlus=" w_Lang072 ":67", "TabClose=" w_Lang073 ":69", "DuplicateList=" w_Lang074 ":70"
-														, "", "Import=" w_Lang075 ":29", "SaveCurrentList=" w_Lang076 ":88"
+														, "", "Import=" w_Lang075 ":29", "SaveCurrentList=" w_Lang076 ":68"
 														, "" , "MoveUp=" w_Lang077 ":41", "MoveDn=" w_Lang078 ":40"
 														, "", "CutRows=" w_Lang080 ":9", "CopyRows=" w_Lang081 ":8", "PasteRows=" w_Lang082 ":45", "Remove=Delete:10"
 														, "", "Undo=" w_Lang084 ":75", "Redo=" w_Lang085 ":57"
 														, "", "Duplicate=" w_Lang079 ":13", "CopyTo=" w_Lang086 ":8(Enabled WholeDropdown)"
 														, "", "EditColor=" w_Lang089 ":3", "EditComm=" w_Lang088 ":5", "FindReplace=" w_Lang087 ":19"]}
-FixedBar :=	{PrevOpt: "Enabled AutoSize", Preview: ["PrevDock=Undock:17"
+FixedBar :=	{PrevOpt: "Enabled AutoSize", Preview: ["PrevDock=Undock/Dock:17"
 														, "", "PrevCopy=Copy:8", "PrevRefresh=Refresh:37"
-														, "", "AutoRefresh=AutoRefresh:37", "OnTop=Always On Top:83", "TabIndent=Indentation:87"]
+														, "", "AutoRefresh=AutoRefresh:93", "OnTop=Always On Top:83", "TabIndent=Indentation:87"]
 			, TextOpt: "Enabled AutoSize", Text: ["OpenT=Open:43", "SaveT=Save:60"
 														, "", "CutT=Cut:9", "CopyT=Copy:8", "PasteT=Paste:45"
 														, "", "SelAllT=Select All:5", "RemoveT=Delete:10"]
@@ -852,7 +852,7 @@ FixedBar :=	{PrevOpt: "Enabled AutoSize", Preview: ["PrevDock=Undock:17"
 														, "", "OSClear=" t_Lang118 ":10"
 														, "", "ProgBarToggle=" t_Lang119 ":52"
 														, "", "SlowKeyToggle=" t_Lang120 ":64", "FastKeyToggle=" t_Lang121 ":86"
-														, "", "ToggleTB=" t_Lang122 ":81", "ShowHide=" t_Lang123 ":82"]}
+														, "", "ToggleTB=" t_Lang122 ":81", "ShowHideTB=" t_Lang123 ":82"]}
 Loop, 26
 	KeybdList .= Chr(A_Index+96) "¢" ((A_Index = 1) ? "¢" : "")
 Loop, 26
