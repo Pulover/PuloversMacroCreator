@@ -69,6 +69,12 @@ Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jör
 ;@Ahk2Exe-SetCopyright Copyright © 2012-2013 Rodolfo U. Batista
 ;@Ahk2Exe-SetOrigFilename MacroCreator.exe
 
+If A_OSVersion in WIN_NT4,WIN_95,WIN_98,WIN_ME
+{
+	MsgBox This program requires Windows 2000/XP or later.
+	ExitApp
+}
+
 #NoEnv
 #InstallKeybdHook
 #MaxThreadsBuffer On
@@ -86,12 +92,6 @@ SetBatchLines, -1
 FileEncoding, UTF-8
 Process, Priority,, High
 #NoTrayIcon
-
-If A_OSVersion in WIN_NT4,WIN_95,WIN_98,WIN_ME
-{
-	MsgBox This program requires Windows 2000/XP or later.
-	ExitApp
-}
 
 Menu, Tray, Tip, Pulovers's Macro Creator
 DefaultIcon := (A_IsCompiled) ? A_ScriptFullPath
@@ -128,8 +128,8 @@ CurrentVersion := "4.0.0 Alpha 1", ReleaseDate := "August, 2013"
 If (!FileExist(A_ScriptDir "\MacroCreator.ini") && !InStr(FileExist(A_AppData "\MacroCreator"), "D"))
 	FileCreateDir, %A_AppData%\MacroCreator
 
-IniFilePath := (FileExist(A_ScriptDir "\MacroCreator.ini") ? A_ScriptDir : A_AppData "\MacroCreator") "\MacroCreator.ini"
-,	UserVarsPath := (FileExist(A_ScriptDir "\MacroCreator.ini") ? A_ScriptDir : A_AppData "\MacroCreator") "\UserGlobalVars.ini"
+SettingsFolder := FileExist(A_ScriptDir "\MacroCreator.ini") ? A_ScriptDir : A_AppData "\MacroCreator"
+,	IniFilePath := SettingsFolder "\MacroCreator.ini", UserVarsPath := SettingsFolder "\UserGlobalVars.ini"
 
 IniRead, Lang, %IniFilePath%, Language, Lang
 IniRead, AutoKey, %IniFilePath%, HotKeys, AutoKey, F3|F4|F5|F6|F7
