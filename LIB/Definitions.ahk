@@ -830,12 +830,12 @@ DefaultBar := {FileOpt: "Enabled AutoSize", File: ["New=" w_Lang040 ":42", "Open
 														, "", "IfSt=" w_Lang063 ":27", "AsVar=" w_Lang064 ":76", "AsFunc=" w_Lang065 ":21"
 														, "", "IECom=" w_Lang066 ":26", "ComInt=" w_Lang067 ":4", "RunScrLet=" w_Lang068 ":77"
 														, "", "SendMsg=" w_Lang069 ":62"]
-			, SetOpt: "Enabled AutoSize", Settings: ["HideMainWin=" w_Lang013 ":82", "OnScCtrl=" w_Lang009 ":48"
-														, "", "Capt=" w_Lang012 ":71", "CheckHkOn=" w_Lang014 ":79"
+			, SetOpt: "Enabled AutoSize", Settings: ["HideMainWin=" w_Lang013 ":82", "OnScCtrl=" w_Lang009 ":89"
+														, "", "Capt=" w_Lang012 ":85", "CheckHkOn=" w_Lang014 ":84"
 														, "", "OnFinish=" w_Lang020 ":20(Enabled WholeDropdown)", "SetWin=" t_Lang009 ":48"
-														, "", "WinKey=" w_Lang070 ":81", "SetJoyButton=" w_Lang071 ":33"]
+														, "", "WinKey=" w_Lang070 ":90", "SetJoyButton=" w_Lang071 ":33"]
 			, EditOpt: "Enabled AutoSize", Edit: ["TabPlus=" w_Lang072 ":67", "TabClose=" w_Lang073 ":69", "DuplicateList=" w_Lang074 ":70"
-														, "", "Import=" w_Lang075 ":29", "SaveCurrentList=" w_Lang076 ":68"
+														, "", "Import=" w_Lang075 ":29", "SaveCurrentList=" w_Lang076 ":88"
 														, "" , "MoveUp=" w_Lang077 ":41", "MoveDn=" w_Lang078 ":40"
 														, "", "CutRows=" w_Lang080 ":9", "CopyRows=" w_Lang081 ":8", "PasteRows=" w_Lang082 ":45", "Remove=Delete:10"
 														, "", "Undo=" w_Lang084 ":75", "Redo=" w_Lang085 ":57"
@@ -843,16 +843,16 @@ DefaultBar := {FileOpt: "Enabled AutoSize", File: ["New=" w_Lang040 ":42", "Open
 														, "", "EditColor=" w_Lang089 ":3", "EditComm=" w_Lang088 ":5", "FindReplace=" w_Lang087 ":19"]}
 FixedBar :=	{PrevOpt: "Enabled AutoSize", Preview: ["PrevDock=Undock:17"
 														, "", "PrevCopy=Copy:8", "PrevRefresh=Refresh:37"
-														, "", "AutoRefresh=AutoRefresh:37", "OnTop=Always On Top:83", "TabIndent=Indentation:5"]
+														, "", "AutoRefresh=AutoRefresh:37", "OnTop=Always On Top:83", "TabIndent=Indentation:87"]
 			, TextOpt: "Enabled AutoSize", Text: ["OpenT=Open:43", "SaveT=Save:60"
 														, "", "CutT=Cut:9", "CopyT=Copy:8", "PasteT=Paste:45"
 														, "", "SelAllT=Select All:5", "RemoveT=Delete:10"]
 			, OSCOpt: "Enabled AutoSize", OSC: ["OSPlay=" t_Lang112 ":49", "OSStop=" t_Lang113 ":66", "ShowPlayMenu=" t_Lang114 ":48"
-														, "", "RecStart=" t_Lang115 ":55", "RecStartNew=" t_Lang116 ":55", "ShowRecMenu=" t_Lang117 ":54"
+														, "", "RecStart=" t_Lang115 ":55", "RecStartNew=" t_Lang116 ":92", "ShowRecMenu=" t_Lang117 ":54"
 														, "", "OSClear=" t_Lang118 ":10"
 														, "", "ProgBarToggle=" t_Lang119 ":52"
-														, "", "SlowKeyToggle=" t_Lang120 ":24", "FastKeyToggle=" t_Lang121 ":24"
-														, "", "ToggleTB=" t_Lang122 ":24", "ShowHide=" t_Lang123 ":24"]}
+														, "", "SlowKeyToggle=" t_Lang120 ":64", "FastKeyToggle=" t_Lang121 ":86"
+														, "", "ToggleTB=" t_Lang122 ":81", "ShowHide=" t_Lang123 ":82"]}
 Loop, 26
 	KeybdList .= Chr(A_Index+96) "¢" ((A_Index = 1) ? "¢" : "")
 Loop, 26
