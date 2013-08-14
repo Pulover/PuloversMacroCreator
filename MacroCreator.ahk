@@ -841,15 +841,11 @@ Gui, % (OnTop) ? "2:+AlwaysOnTop" : "2:-AlwaysOnTop"
 return
 
 PrevCopy:
-sciPrev.GetText(sciPrev.getLength()+1, LVPrev)
-LVPrev := StrGet(&LVPrev, "UTF-8")
-,	Clipboard := LVPrev
+Clipboard := sciPrev.GetText(sciPrev.getLength()+1)
 return
 
 PrevRefresh:
 Preview := LV_Export(A_List)
-OutputDebug, % Preview
-; GuiControl, 2:, LVPrev, %Preview%
 sciPrev.SetReadOnly(False), sciPrev.ClearAll(), sciPrev.SetText("", Preview)
 ,	sciPrev.ScrollToEnd(), sciPrev.SetReadOnly(True)
 ,	sciPrevF.SetReadOnly(False), sciPrevF.ClearAll(), sciPrevF.SetText("", Preview)
@@ -5921,17 +5917,17 @@ Gui, 23:Add, DDL, W120 vControlCmd gCtlCmd, %CtrlCmdList%
 Gui, 23:Add, Text, xm W120, %c_Lang055%:
 Gui, 23:Add, DDL, xm W120 -Multi vCmd gCmd, %CtrlCmd%
 Gui, 23:Add, Text, xm W80, %c_Lang056%:
-Gui, 23:Add, Edit, xm W380 -Multi Disabled vValue
+Gui, 23:Add, Edit, xm W430 -Multi Disabled vValue
 Gui, 23:Add, Text, xm W180, %c_Lang057%:
-Gui, 23:Add, Edit, xm W380 -Multi Disabled vVarName
+Gui, 23:Add, Edit, xm W430 -Multi Disabled vVarName
 Gui, 23:Add, Text, Section xm, %c_Lang004%:
-Gui, 23:Add, Edit, vDefCt W350
+Gui, 23:Add, Edit, vDefCt W400
 Gui, 23:Add, Button, -Wrap yp-1 x+0 W30 H23 vGetCtrl gGetCtrl, ...
 Gui, 23:Add, DDL, Section xm W65 vIdent, Title||Class|Process|ID|PID
 Gui, 23:Add, Text, -Wrap yp+5 x+5 W240 H20 vWinParsTip Disabled, %wcmd_WinSet%
-Gui, 23:Add, Edit, xs+2 W350 vTitle, A
+Gui, 23:Add, Edit, xs+2 W400 vTitle, A
 Gui, 23:Add, Button, -Wrap yp-1 x+0 W30 H23 vGetWin gGetWin, ...
-Gui, 23:Add, Text, Section ym+5 xm+145, %c_Lang058%
+Gui, 23:Add, Text, Section ym+5 xm+195, %c_Lang058%
 Gui, 23:Add, Text, yp xp+50, X:
 Gui, 23:Add, Edit, yp-3 xp+15 vPosX W55 Disabled
 Gui, 23:Add, Text, yp+3 x+10, Y:

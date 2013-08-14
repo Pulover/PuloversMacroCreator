@@ -90,7 +90,7 @@ class scintilla {
             ; I must switch lParam to another variable when using GetTextRange because lParam cant be overwriten
             ; It has the pointer to the TextRange Structure
             buf ? (lParam := StrGet((msg = "GetTextRange") ? blParam : &lParam, "CP0"), buf:=false) : null ; convert the text from ANSI
-            return res
+            return (msg = "GetText") ? lParam : res
         }
     }
 }
