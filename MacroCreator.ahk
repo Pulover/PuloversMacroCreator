@@ -2039,7 +2039,7 @@ FileRead, UserVarsList, %UserVarsPath%
 Gui, 4:Add, Listbox, W200 H480 vAltTab gAltTabControl AltSubmit, %t_Lang022%||%t_Lang035%|%t_Lang090%|%t_Lang046%|%t_Lang052%|%t_Lang096%
 Gui, 4:Add, Tab2, yp x+0 W400 H0 vTabControl AltSubmit, Recording|Playback|Defaults|Screenshots|Misc|UserVars
 ; Recording
-Gui, 4:Add, GroupBox, Section ym xm+210 W400 H470, %t_Lang022%:
+Gui, 4:Add, GroupBox, Section ym xm+210 W400 H470, %t_Lang022%
 Gui, 4:Add, Text, ys+20 xs+10, %t_Lang019%:
 Gui, 4:Add, Hotkey, y+1 W150 vRecKey, %RecKey%
 Gui, 4:Add, Text, y+1, %t_Lang020%:
@@ -2062,11 +2062,11 @@ Gui, 4:Add, Checkbox, -Wrap Checked%WTitle% vWTitle W380 R1, %t_Lang030%
 Gui, 4:Add, Checkbox, -Wrap Checked%RecMouseCtrl% vRecMouseCtrl W380 R1, %t_Lang032%
 Gui, 4:Add, Checkbox, -Wrap Checked%RecKeybdCtrl% vRecKeybdCtrl W380 R1, %t_Lang031%
 Gui, 4:Add, Text,, %t_Lang033%:
-Gui, 4:Add, DDL, vRelKey W80 yp-5 xs+150, CapsLock||ScrollLock|NumLock
+Gui, 4:Add, DDL, vRelKey W80, CapsLock||ScrollLock|NumLock
 Gui, 4:Add, Checkbox, -Wrap Checked%ToggleC% yp+5 x+5 vToggleC gOptionsSub W160 R1, %t_Lang034%
 Gui, 4:Tab, 2
 ; Playback
-Gui, 4:Add, GroupBox, Section ym xm+210 W400 H470, %t_Lang035%:
+Gui, 4:Add, GroupBox, Section ym xm+210 W400 H470, %t_Lang035%
 Gui, 4:Add, Text, ys+20 xs+10, %t_Lang036%:
 Gui, 4:Add, DDL, yp-2 xp+70 W75 vFastKey, None|Insert||F1|F2|F3|F4|F5|F6|F7|F8|F9|F10|F11|F12|CapsLock|NumLock|ScrollLock|
 Gui, 4:Add, DDL, yp xp+83 W37 vSpeedUp, 2||4|8|16|32
@@ -2083,7 +2083,7 @@ Gui, 4:Add, UpDown, vRandPercent 0x80 Range0-1000, %RandPercent%
 Gui, 4:Add, Text, yp+5 x+5, `%
 Gui, 4:Tab, 3
 ; Defaults
-Gui, 4:Add, GroupBox, Section ym xm+210 W400 H470, %t_Lang090%:
+Gui, 4:Add, GroupBox, Section ym xm+210 W400 H470, %t_Lang090%
 Gui, 4:Add, Text, ys+20 xs+10, %t_Lang039%:
 Gui, 4:Add, Radio, -Wrap yp xp+150 W100 R1 vRelative R1, %c_Lang005%
 Gui, 4:Add, Radio, -Wrap yp x+5 W100 R1 vScreen R1, %t_Lang041%
@@ -2106,7 +2106,7 @@ Gui, 4:Add, Edit, vStdLibFile W350 R1 -Multi, %StdLibFile%
 Gui, 4:Add, Button, -Wrap yp-1 x+0 W30 H23 vStdLib gSearchAHK, ...
 Gui, 4:Tab, 4
 ; Screenshots
-Gui, 4:Add, GroupBox, Section ym xm+210 W400 H470, %t_Lang046%:
+Gui, 4:Add, GroupBox, Section ym xm+210 W400 H470, %t_Lang046%
 Gui, 4:Add, Text, ys+20 xs+10, %t_Lang047%:
 Gui, 4:Add, DDL, yp-5 xs+100 vDrawButton W75, RButton||LButton|MButton
 Gui, 4:Add, Text, y+10 xs+10, %t_Lang048%:
@@ -2119,7 +2119,7 @@ Gui, 4:Add, Edit, vScreenDir W350 R1 -Multi, %ScreenDir%
 Gui, 4:Add, Button, -Wrap yp-1 x+0 W30 H23 vSearchScreen gSearchDir, ...
 Gui, 4:Tab, 5
 ; Misc
-Gui, 4:Add, GroupBox, Section ym xm+210 W400 H90, %t_Lang053%:
+Gui, 4:Add, GroupBox, Section ym xm+210 W400 H90, %t_Lang053%
 Gui, 4:Add, Text, ys+20 xs+10, %w_Lang006%
 Gui, 4:Add, Edit, yp xp+50 W320 R1 -Multi ReadOnly, %AutoKey%
 Gui, 4:Add, Text, yp+25 xp-50, %w_Lang007%
@@ -2144,7 +2144,7 @@ Gui, 4:Add, Button, -Wrap y+0 W75 H23 gConfigRestore, %t_Lang063%
 Gui, 4:Add, Button, -Wrap yp x+10 W75 H23 gKeyHistory, %c_Lang124%
 Gui, 4:Tab, 6
 ; User Variables
-Gui, 4:Add, GroupBox, Section ym xm+210 W400 H470, %t_Lang053%:
+Gui, 4:Add, GroupBox, Section ym xm+210 W400 H470, %t_Lang096%
 Gui, 4:Add, Text, ys+20 xs+10 -Wrap W150 R1, %t_Lang093%:
 Gui, 4:Add, Text, -Wrap W200 R1 yp xs+155 cRed, %t_Lang094%
 Gui, 4:Add, Text, -Wrap W380 R1 y+5 xs+10, %t_Lang095%
