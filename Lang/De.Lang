@@ -492,6 +492,15 @@
 	t_Lang121 =	Verzögern
 	t_Lang122 =	Titelleiste anzeigen/verbergen
 	t_Lang123 =	Hauptfenster anzeigen/verbergen
+	t_Lang124 =	Dock
+	t_Lang125 =	Abdocken
+	t_Lang126 =	Öffnen
+	t_Lang127 =	Speichern
+	t_Lang128 =	Ausschneiden
+	t_Lang129 =	Kopieren
+	t_Lang130 =	Einfügen
+	t_Lang131 =	Alles auswählen
+	t_Lang132 =	Löschen
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Öffnen

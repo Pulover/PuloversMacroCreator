@@ -492,6 +492,15 @@
 	t_Lang121 =	Langzamer gaan
 	t_Lang122 =	Show / Hide Title Bar
 	t_Lang123 =	Show / Hide hoofdvenster
+	t_Lang124 =	Dok
+	t_Lang125 =	Loskoppelen
+	t_Lang126 =	Openen
+	t_Lang127 =	Opslaan
+	t_Lang128 =	Snijden
+	t_Lang129 =	Kopieer
+	t_Lang130 =	Plakken
+	t_Lang131 =	Alles selecteren
+	t_Lang132 =	Verwijder
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Open

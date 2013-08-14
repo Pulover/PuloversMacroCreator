@@ -492,6 +492,15 @@
 	t_Lang121 =	Slow Down
 	t_Lang122 =	Prikaži / skrij Naslov Bar
 	t_Lang123 =	Prikaži / skrij glavno okno
+	t_Lang124 =	Dock
+	t_Lang125 =	Razdružitev
+	t_Lang126 =	Odprta
+	t_Lang127 =	Prihranite
+	t_Lang128 =	Cut
+	t_Lang129 =	Kopirajte
+	t_Lang130 =	Prilepi
+	t_Lang131 =	Izberi vse
+	t_Lang132 =	Izbriši
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Odprite

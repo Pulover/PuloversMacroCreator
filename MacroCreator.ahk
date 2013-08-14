@@ -8767,16 +8767,14 @@ FastKeyToggle:
 SlowKeyOn := 0, FastKeyOn := !FastKeyOn
 If ShowStep = 1
 	TrayTip, %AppName%, % (FastKeyOn) ? t_Lang036 " " SpeedUp "x" : t_Lang035 " 1x"
-GuiControl, 28:, OSSlow, 0
-GuiControl, 28:, OSFast, %FastKeyOn%
+TB_Edit(TbOSC, "SlowKeyToggle", SlowKeyOn), TB_Edit(TbOSC, "FastKeyToggle", FastKeyOn)
 return
 
 SlowKeyToggle:
 FastKeyOn := 0, SlowKeyOn := !SlowKeyOn
 If ShowStep = 1
 	TrayTip, %AppName%, % (SlowKeyOn) ? t_Lang037 " " SpeedDn "x" : t_Lang035 " 1x"
-GuiControl, 28:, OSFast, 0
-GuiControl, 28:, OSSlow, %SlowKeyOn%
+TB_Edit(TbOSC, "SlowKeyToggle", SlowKeyOn), TB_Edit(TbOSC, "FastKeyToggle", FastKeyOn)
 return
 
 CheckHkOn:
@@ -10740,9 +10738,6 @@ GuiControl,, OnScCtrl, %w_Lang009%
 GuiControl,, HideMainWin, %w_Lang013%
 GuiControl,, KeepHkOn, %w_Lang014%
 GuiControl,, Repeat, %w_Lang015%:
-Gui 2:+LastFoundExist
-IfWinExist
-    GoSub, Preview
 Gui 18:+LastFoundExist
 IfWinExist
     GoSub, FindReplace

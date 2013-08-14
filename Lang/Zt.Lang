@@ -492,6 +492,15 @@
 	t_Lang121 =	減緩
 	t_Lang122 =	顯示/隱藏標題欄
 	t_Lang123 =	顯示/隱藏主窗口
+	t_Lang124 =	碼頭
+	t_Lang125 =	取消停靠
+	t_Lang126 =	開放
+	t_Lang127 =	
+	t_Lang128 =	切
+	t_Lang129 =	複製
+	t_Lang130 =	貼
+	t_Lang131 =	全選
+	t_Lang132 =	刪除
 		
 ; Messages & Dialogs		
 	d_Lang001 =	打開

@@ -492,6 +492,15 @@
 	t_Lang121 =	Slow Down
 	t_Lang122 =	Show / Hide Title Bar
 	t_Lang123 =	Show / Hide Main Window
+	t_Lang124 =	Undock
+	t_Lang125 =	Dock
+	t_Lang126 =	Open
+	t_Lang127 =	Save
+	t_Lang128 =	Cut
+	t_Lang129 =	Copy
+	t_Lang130 =	Paste
+	t_Lang131 =	Select All
+	t_Lang132 =	Delete
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Open

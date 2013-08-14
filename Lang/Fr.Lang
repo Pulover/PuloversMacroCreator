@@ -492,6 +492,15 @@
 	t_Lang121 =	Ralentir
 	t_Lang122 =	Afficher / Masquer la barre de titre
 	t_Lang123 =	Afficher / Masquer la fenêtre principale
+	t_Lang124 =	Dock
+	t_Lang125 =	Undock
+	t_Lang126 =	Ouvrir
+	t_Lang127 =	Enregistrer
+	t_Lang128 =	Couper
+	t_Lang129 =	Copier
+	t_Lang130 =	Coller
+	t_Lang131 =	Sélectionner tout
+	t_Lang132 =	Effacer
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Ouvert

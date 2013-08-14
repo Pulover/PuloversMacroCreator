@@ -492,6 +492,15 @@
 	t_Lang121 =	Lelassít
 	t_Lang122 =	Megjelenítése / elrejtése címsor
 	t_Lang123 =	Megjelenítése / elrejtése főablak
+	t_Lang124 =	Dokk
+	t_Lang125 =	Leválasztása
+	t_Lang126 =	Open
+	t_Lang127 =	Mentés
+	t_Lang128 =	Vágott
+	t_Lang129 =	Másolás
+	t_Lang130 =	Paszta
+	t_Lang131 =	Az összes kijelölése
+	t_Lang132 =	Töröl
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Nyitva

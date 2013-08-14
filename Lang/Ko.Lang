@@ -492,6 +492,15 @@
 	t_Lang121 =	천천히,
 	t_Lang122 =	표시 / 숨기기 제목 표시 줄
 	t_Lang123 =	메인 창 표시 / 숨기기
+	t_Lang124 =	독
+	t_Lang125 =	도킹 해제
+	t_Lang126 =	열기
+	t_Lang127 =	저장하기
+	t_Lang128 =	절단
+	t_Lang129 =	복사
+	t_Lang130 =	붙여 넣기
+	t_Lang131 =	모두 선택
+	t_Lang132 =	삭제
 		
 ; Messages & Dialogs		
 	d_Lang001 =	열기

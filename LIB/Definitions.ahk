@@ -828,12 +828,12 @@ DefaultBar := {FileOpt: "Enabled AutoSize", File: ["New=" w_Lang040 ":42", "Open
 														, "", "Undo=" w_Lang084 ":75", "Redo=" w_Lang085 ":57"
 														, "", "Duplicate=" w_Lang079 ":13", "CopyTo=" w_Lang086 ":8(Enabled WholeDropdown)"
 														, "", "EditColor=" w_Lang089 ":3", "EditComm=" w_Lang088 ":5", "FindReplace=" w_Lang087 ":19"]}
-FixedBar :=	{PrevOpt: "Enabled AutoSize", Preview: ["PrevDock=Undock/Dock:17"
-														, "", "PrevCopy=Copy:8", "PrevRefresh=Refresh:37"
-														, "", "AutoRefresh=AutoRefresh:93", "OnTop=Always On Top:83", "TabIndent=Indentation:87"]
-			, TextOpt: "Enabled AutoSize", Text: ["OpenT=Open:43", "SaveT=Save:60"
-														, "", "CutT=Cut:9", "CopyT=Copy:8", "PasteT=Paste:45"
-														, "", "SelAllT=Select All:5", "RemoveT=Delete:10"]
+FixedBar :=	{PrevOpt: "Enabled AutoSize", Preview: ["PrevDock=" t_Lang124 ":17"
+														, "", "PrevCopy=" c_Lang023 ":8", "PrevRefresh=" t_Lang014 ":37"
+														, "", "AutoRefresh=" t_Lang015 ":93", "OnTop=" t_Lang016 ":83", "TabIndent=" t_Lang011 ":87"]
+			, TextOpt: "Enabled AutoSize", Text: ["OpenT=" t_Lang126 ":43", "SaveT=" t_Lang127 ":60"
+														, "", "CutT=" t_Lang128 ":9", "CopyT=" t_Lang129 ":8", "PasteT=" t_Lang130 ":45"
+														, "", "SelAllT=" t_Lang131 ":5", "RemoveT=" t_Lang132 ":10"]
 			, OSCOpt: "Enabled AutoSize", OSC: ["OSPlay=" t_Lang112 ":49", "OSStop=" t_Lang113 ":66", "ShowPlayMenu=" t_Lang114 ":48"
 														, "", "RecStart=" t_Lang115 ":55", "RecStartNew=" t_Lang116 ":92", "ShowRecMenu=" t_Lang117 ":54"
 														, "", "OSClear=" t_Lang118 ":10"
@@ -861,10 +861,3 @@ Browser_Favorites¢Browser_Home¢Volume_Mute¢Volume_Down¢Volume_Up¢Media_Next
 Media_Stop¢Media_Play_Pause¢Launch_Mail¢Launch_Media¢Launch_App1¢Launch_App2
 LButton¢RButton¢MButton¢XButton1¢XButton2¢WheelDown¢WheelUp¢WheelLeft¢WheelRight
 )"
-
-LangCodes := {	Es: ["040a","080a","0c0a","100a","140a","180a","1c0a","200a","240a","280a","2c0a","300a","340a","380a","3c0a","400a","440a","480a","4c0a","500a"]
-			,	Pt: ["0416","0816"], De: ["0407","0807","0c07","1007","1407"], Fr: ["040c","080c","0c0c","100c","140c","180c"]
-			,	It: ["0410","0810"], Ru: ["0419"], Pl: ["0415"], Nl: ["0413","0813"], Da: ["0406"], No: ["0414","0814"]
-			,	Fi: ["040b"], Sv: ["041d","081d"], Ca: ["0403"], Hr: ["041a"], Cs: ["0405"], Tr: ["041f"], Hu: ["040e"]
-			,	Bg: ["0402"], Sr: ["1c1a","0c1a"], Uk: ["0422"], El: ["0408"], Id: ["0421"], Sk: ["041b"], Sl: ["0424"]
-			,	Zh: ["0804","0c04","1004","1404","0004","7c04"], Zt: ["0404"], Ja: ["0411"], Ko: ["0412"]}

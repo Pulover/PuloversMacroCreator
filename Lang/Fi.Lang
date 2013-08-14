@@ -492,6 +492,15 @@
 	t_Lang121 =	Hidastaa
 	t_Lang122 =	Näytä / Piilota Otsikko Bar
 	t_Lang123 =	Näytä / Piilota pääikkuna
+	t_Lang124 =	Telakka
+	t_Lang125 =	Irrota
+	t_Lang126 =	Open
+	t_Lang127 =	Tallenna
+	t_Lang128 =	Leikata
+	t_Lang129 =	Kopioi
+	t_Lang130 =	Tahna
+	t_Lang131 =	Valitse kaikki
+	t_Lang132 =	Poistaa
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Avata

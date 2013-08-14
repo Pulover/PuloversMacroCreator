@@ -492,6 +492,15 @@
 	t_Lang121 =	速度を落とす
 	t_Lang122 =	表示/非表示のタイトルバー
 	t_Lang123 =	メインウィンドウの表示/非表示
+	t_Lang124 =	ドック
+	t_Lang125 =	切り離す
+	t_Lang126 =	開く
+	t_Lang127 =	保存
+	t_Lang128 =	カット
+	t_Lang129 =	コピー
+	t_Lang130 =	貼り付ける
+	t_Lang131 =	[すべて]を選択します
+	t_Lang132 =	削除
 		
 ; Messages & Dialogs		
 	d_Lang001 =	開く

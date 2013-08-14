@@ -492,6 +492,15 @@
 	t_Lang121 =	Usporiti
 	t_Lang122 =	Show / Hide Naslov Bar
 	t_Lang123 =	Show / Hide glavni prozor
+	t_Lang124 =	Pristanište
+	t_Lang125 =	Odsidri
+	t_Lang126 =	Open
+	t_Lang127 =	Spremi
+	t_Lang128 =	Rezati
+	t_Lang129 =	Kopirajte
+	t_Lang130 =	Zalijepiti
+	t_Lang131 =	Odaberi sve
+	t_Lang132 =	Izbrisati
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Otvoreno

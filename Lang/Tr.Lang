@@ -492,6 +492,15 @@
 	t_Lang121 =	Yavaşlatmak
 	t_Lang122 =	Göster / Gizle Başlık Çubuğu
 	t_Lang123 =	Ana pencerede göster / gizle
+	t_Lang124 =	Dok
+	t_Lang125 =	Çıkar'ı
+	t_Lang126 =	Aç
+	t_Lang127 =	Kaydet
+	t_Lang128 =	Kesmek
+	t_Lang129 =	Kopyala
+	t_Lang130 =	Yapıştırmak
+	t_Lang131 =	Tümünü Seç
+	t_Lang132 =	Silmek
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Açık

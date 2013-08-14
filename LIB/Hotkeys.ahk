@@ -129,11 +129,6 @@ F12::GoSub, SendMsg
 
 F5::GoSub, PrevRefresh
 
-#If ActiveGui(WinExist("A"))=8
-
-^o::GoSub, OpenT
-^s::GoSub, SaveT
-
 #If Draw && DrawButton = "RButton"
 RButton::GoSub, DrawStart
 ; RButton Up::GoSub, DrawEnd

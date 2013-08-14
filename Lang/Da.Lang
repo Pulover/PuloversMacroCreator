@@ -492,6 +492,15 @@
 	t_Lang121 =	Sæt farten ned
 	t_Lang122 =	Vis / skjul Titel Bar
 	t_Lang123 =	Vis / skjul hovedvinduet
+	t_Lang124 =	Dock
+	t_Lang125 =	Fradock
+	t_Lang126 =	Åbn
+	t_Lang127 =	Gem
+	t_Lang128 =	Klip
+	t_Lang129 =	Kopiér
+	t_Lang130 =	Indsæt
+	t_Lang131 =	Vælg alt
+	t_Lang132 =	Slet
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Åbent

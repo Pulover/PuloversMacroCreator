@@ -492,6 +492,15 @@
 	t_Lang121 =	减缓
 	t_Lang122 =	显示/隐藏标题栏
 	t_Lang123 =	显示/隐藏主窗口
+	t_Lang124 =	码头
+	t_Lang125 =	取消停靠
+	t_Lang126 =	开放
+	t_Lang127 =	保存
+	t_Lang128 =	切
+	t_Lang129 =	复制
+	t_Lang130 =	贴
+	t_Lang131 =	全选
+	t_Lang132 =	删除
 		
 ; Messages & Dialogs		
 	d_Lang001 =	打开

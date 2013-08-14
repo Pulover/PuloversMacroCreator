@@ -492,6 +492,15 @@
 	t_Lang121 =	Zpomalit
 	t_Lang122 =	Zobrazit / skrýt Title Bar
 	t_Lang123 =	Zobrazit / skrýt hlavní okno
+	t_Lang124 =	Dok
+	t_Lang125 =	Vyjmout Z Dokovací Stanice
+	t_Lang126 =	Open
+	t_Lang127 =	Save
+	t_Lang128 =	Snížit
+	t_Lang129 =	Kopírovat
+	t_Lang130 =	Pasta
+	t_Lang131 =	Vybrat vše
+	t_Lang132 =	Vymazat
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Otevřít

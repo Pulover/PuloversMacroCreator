@@ -492,6 +492,15 @@
 	t_Lang121 =	Reducir la velocidad de
 	t_Lang122 =	Mostrar / Ocultar barra de título
 	t_Lang123 =	Mostrar / ocultar la ventana principal
+	t_Lang124 =	Dock
+	t_Lang125 =	Undock
+	t_Lang126 =	Abrir
+	t_Lang127 =	Guardar
+	t_Lang128 =	Cortar
+	t_Lang129 =	Copiar
+	t_Lang130 =	Pegar
+	t_Lang131 =	Seleccionar todo
+	t_Lang132 =	Borrar
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Abierto

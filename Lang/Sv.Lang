@@ -492,6 +492,15 @@
 	t_Lang121 =	Sakta Ner
 	t_Lang122 =	Visa / dölj Titel Bar
 	t_Lang123 =	Visa / dölj huvudfönstret
+	t_Lang124 =	Dock
+	t_Lang125 =	Docka
+	t_Lang126 =	Öppna
+	t_Lang127 =	Spara
+	t_Lang128 =	Klipp
+	t_Lang129 =	Kopiera
+	t_Lang130 =	Klistra
+	t_Lang131 =	Markera allt
+	t_Lang132 =	Ta bort
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Öppet

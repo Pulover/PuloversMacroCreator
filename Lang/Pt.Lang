@@ -492,6 +492,15 @@
 	t_Lang121 =	Reduzir
 	t_Lang122 =	Mostrar / Ocultar Barra de Título
 	t_Lang123 =	Mostrar / Ocultar Janela Principal
+	t_Lang124 =	Desencaixar
+	t_Lang125 =	Encaixar
+	t_Lang126 =	Abrir
+	t_Lang127 =	Salvar
+	t_Lang128 =	Recortar
+	t_Lang129 =	Copiar
+	t_Lang130 =	Colar
+	t_Lang131 =	Selecionar Tudo
+	t_Lang132 =	Excluir
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Abrir

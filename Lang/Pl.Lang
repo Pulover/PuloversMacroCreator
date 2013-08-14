@@ -492,6 +492,15 @@
 	t_Lang121 =	Zwolnij
 	t_Lang122 =	Pokaż / Ukryj pasek tytułu
 	t_Lang123 =	Pokaż / Ukryj okno główne
+	t_Lang124 =	Dok
+	t_Lang125 =	Undock
+	t_Lang126 =	Otwórz
+	t_Lang127 =	Zapisz
+	t_Lang128 =	Ciąć
+	t_Lang129 =	Skopiuj
+	t_Lang130 =	Pasta
+	t_Lang131 =	Zaznacz wszystko
+	t_Lang132 =	Usunąć
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Otwarte
