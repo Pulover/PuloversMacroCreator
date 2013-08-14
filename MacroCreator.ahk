@@ -522,7 +522,7 @@ Gui, +Resize +MinSize310x140 +HwndPMCWinID
 Gui, Add, Custom, ClassToolbarWindow32 hwndhTbFile gTbFile 0x0800 0x0100 0x0040 0x0008
 Gui, Add, Custom, ClassToolbarWindow32 hwndhTbRecPlay gTbRecPlay 0x0800 0x0100 0x0040 0x0008
 Gui, Add, Custom, ClassToolbarWindow32 hwndhTbCommand gTbCommand 0x0800 0x0100 0x0040 0x0008
-Gui, Add, Custom, ClassToolbarWindow32 hwndhTbSet gTbSet 0x0800 0x0100 0x0040 0x0008
+Gui, Add, Custom, ClassToolbarWindow32 hwndhTbSettings gTbSettings 0x0800 0x0100 0x0040 0x0008
 Gui, Add, Custom, ClassToolbarWindow32 hwndhTbEdit gTbEdit 0x0800 0x0100 0x0040 0x0008
 Gui, Add, Custom, ClassReBarWindow32 hwndhRbMain vcRbMain gRB_Notify 0x0400 0x0040 0x8000
 Gui, Add, Custom, ClassReBarWindow32 hwndhRbMacro vcRbMacro gRB_Notify xm-10 ym+76 -Theme 0x0800 0x0400 0x0040 0x8000 0x0008 ; 0x0004
@@ -630,8 +630,8 @@ Menu, Tray, Icon
 Gui, 1:Show, % ((WinState) ? "Maximize" : "W900 H630") ((HideWin) ? "Hide" : ""), %AppName% v%CurrentVersion% %CurrentFileName%
 GoSub, LoadData
 TB_Edit(tbFile, "Preview", ShowPrev)
-,	TB_Edit(tbSet, "HideMainWin", HideMainWin), TB_Edit(tbSet, "OnScCtrl", OnScCtrl)
-,	TB_Edit(tbSet, "CheckHkOn", KeepHkOn), TB_Edit(tbSet, "SetWin", (IfDirectContext = "None") ? 0 : 1)
+,	TB_Edit(TbSettings, "HideMainWin", HideMainWin), TB_Edit(TbSettings, "OnScCtrl", OnScCtrl)
+,	TB_Edit(TbSettings, "CheckHkOn", KeepHkOn), TB_Edit(TbSettings, "SetWin", (IfDirectContext = "None") ? 0 : 1)
 Gui, 1:Default
 GoSub, RowCheck
 If (HideWin)
@@ -685,13 +685,13 @@ return
 DefineToolbars:
 	TB_Define(TbFile, hTbFile, hIL_Icons, DefaultBar.File, DefaultBar.FileOpt)
 ,	TB_Define(TbRecPlay, hTbRecPlay, hIL_Icons, DefaultBar.RecPlay, DefaultBar.RecPlayOpt)
-,	TB_Define(TbSet, hTbSet, hIL_Icons, DefaultBar.Settings, DefaultBar.SetOpt)
+,	TB_Define(TbSettings, hTbSettings, hIL_Icons, DefaultBar.Settings, DefaultBar.SetOpt)
 ,	TB_Define(TbCommand, hTbCommand, hIL_Icons, DefaultBar.Command, DefaultBar.CommandOpt)
 ,	TB_Define(TbEdit, hTbEdit, hIL_Icons, DefaultBar.Edit, DefaultBar.EditOpt)
 ,	TB_Define(TbOSC, hTbOSC, hIL_Icons, FixedBar.OSC, FixedBar.OSCOpt)
 ,	TB_Edit(TbOSC, "ProgBarToggle", ShowProgBar)
 ,	RbMain := New Rebar(hRbMain)
-,	TB_Rebar(RbMain, 10, TbFile), TB_Rebar(RbMain, 11, TbRecPlay), TB_Rebar(RbMain, 12, TbSet)
+,	TB_Rebar(RbMain, 10, TbFile), TB_Rebar(RbMain, 11, TbRecPlay), TB_Rebar(RbMain, 12, TbSettings)
 ,	RbMain.InsertBand(hAutoKey, 0, "", 13, w_Lang006, 50, 0, "", "", 50)
 ,	RbMain.InsertBand(hTimesCh, 0, "FixedSize NoGripper", 14, w_Lang011 " (" t_Lang004 ")", 75, 0, "", "", 75)
 ,	TB_Rebar(RbMain, 15, TbCommand, "Break")
@@ -699,13 +699,13 @@ DefineToolbars:
 ,	RbMain.InsertBand(hAbortKey, 0, "", 17, w_Lang008, 60, 0, "", "", 50)
 ,	RbMain.InsertBand(hPauseKey, 0, "", 18, c_Lang003, 60, 0, "", "", 50)
 ,	TB_Rebar(RbMain, 19, TbEdit, "Break"), RbMain.SetMaxRows(3)
-,	TBHwndAll := [TbFile, TbRecPlay, TbCommand, TbSet, TbEdit, TbPrev, TbPrevF, TbOSC]
+,	TBHwndAll := [TbFile, TbRecPlay, TbCommand, TbSettings, TbEdit, TbPrev, TbPrevF, TbOSC]
 return
 
 TbFile:
 TbRecPlay:
 TbCommand:
-TbSet:
+TbSettings:
 TbEdit:
 TbText:
 TbOSC:
@@ -1426,7 +1426,7 @@ CurrentFileName =
 Gui, 1:Show, % ((WinExist("ahk_id" PMCWinID)) ? "" : "Hide"), %AppName% v%CurrentVersion%
 GuiControl, chMacro:Focus, InputList%A_List%
 GoSub, b_Start
-FreeMemory(), OnFinishCode := 1, TB_Edit(tbSet, "OnFinish", 0)
+FreeMemory(), OnFinishCode := 1, TB_Edit(TbSettings, "OnFinish", 0)
 SetWorkingDir %A_ScriptDir%
 GoSub, SetFinishButtom
 GoSub, RecentFiles
@@ -7114,13 +7114,13 @@ return
 WinKey:
 OnScCtrl:
 HideMainWin:
-TB_Edit(tbSet, A_ThisLabel, %A_ThisLabel% := !%A_ThisLabel%)
+TB_Edit(TbSettings, A_ThisLabel, %A_ThisLabel% := !%A_ThisLabel%)
 return
 
 Capt:
 SetTimer, MainLoop, % (Capt := !Capt) ? 100 : "Off"
 Input
-TB_Edit(tbSet, "Capt", Capt)
+TB_Edit(TbSettings, "Capt", Capt)
 return
 
 InputList:
@@ -7468,19 +7468,19 @@ LoadData:
 Gui, 1:Default
 If InStr(o_AutoKey[A_List], "Joy")
 {
-	TB_Edit(tbSet, "SetJoyButton", JoyHK := 1)
+	TB_Edit(TbSettings, "SetJoyButton", JoyHK := 1)
 	GuiControl, 1:, AutoKey
 	GoSub, SetJoyHK
 }
 Else
 {
-	TB_Edit(tbSet, "SetJoyButton", JoyHK := 0)
+	TB_Edit(TbSettings, "SetJoyButton", JoyHK := 0)
 	GuiControl, 1:, JoyKey
 	GuiControl, 1:, AutoKey, % LTrim(o_AutoKey[A_List], "#")
 	GoSub, SetNoJoy
 }
 WinKey := InStr(o_AutoKey[A_List], "#") ? 1 : 0
-,	TB_Edit(tbSet, "WinKey", WinKey)
+,	TB_Edit(TbSettings, "WinKey", WinKey)
 GuiControl, 1:, ManKey, % o_ManKey[A_List]
 GuiControl, chTimes:, TimesG, % (o_TimesG[A_List] = "") ? 1 : o_TimesG[A_List]
 return
@@ -8297,7 +8297,7 @@ Gui, 6:Destroy
 return
 
 SetJoyButton:
-TB_Edit(tbSet, "SetJoyButton", JoyHK := !JoyHK)
+TB_Edit(TbSettings, "SetJoyButton", JoyHK := !JoyHK)
 If (JoyHK = 1)
 {
 	GoSub, SetJoyHK
@@ -8322,7 +8322,7 @@ If RegExMatch(o_AutoKey[A_List], "i)Joy\d+$")
 	GuiControl, 1:, JoyKey, % "|" o_AutoKey[A_List] "||"
 GuiControl, 1:Show, JoyKey
 aBand := RbMain.IDToIndex(13), RbMain.ModifyBand(aBand, "Child", hJoyKey)
-,	ActivateHotkeys("", "", "", "", "", 1), TB_Edit(tbSet, "WinKey", 0, 0)
+,	ActivateHotkeys("", "", "", "", "", 1), TB_Edit(TbSettings, "WinKey", 0, 0)
 return
 
 SetNoJoy:
@@ -8332,7 +8332,7 @@ GuiControl, 1:Show, AutoKey
 GuiControl, 1:Hide, JoyKey
 GuiControl, 1:Enable, WinKey
 aBand := RbMain.IDToIndex(13), RbMain.ModifyBand(aBand, "Child", hAutoKey)
-,	ActivateHotkeys("", "", "", "", "", 0), TB_Edit(tbSet, "WinKey", 0, 1)
+,	ActivateHotkeys("", "", "", "", "", 0), TB_Edit(TbSettings, "WinKey", 0, 1)
 return
 
 SetWin:
@@ -8353,7 +8353,7 @@ return
 
 SWinOK:
 Gui, 16:Submit, NoHide
-IfDirectWindow := Title, TB_Edit(tbSet, "SetWin", (IfDirectContext = "None") ? 0 : 1)
+IfDirectWindow := Title, TB_Edit(TbSettings, "SetWin", (IfDirectContext = "None") ? 0 : 1)
 Gui, 1:-Disabled
 Gui, 16:Destroy
 Gui, chMacro:Default
@@ -8778,7 +8778,7 @@ TB_Edit(TbOSC, "SlowKeyToggle", SlowKeyOn), TB_Edit(TbOSC, "FastKeyToggle", Fast
 return
 
 CheckHkOn:
-TB_Edit(tbSet, "CheckHkOn", KeepHkOn := !KeepHkOn)
+TB_Edit(TbSettings, "CheckHkOn", KeepHkOn := !KeepHkOn)
 If (KeepHkOn = 1)
 {
 	GoSub, KeepHkOn
@@ -9815,10 +9815,10 @@ AbortKey := "F8"
 ,	OSCaption := 0
 ,	CustomColors := 0
 ,	OnFinishCode := 1
-,	TB_Edit(tbSet, "HideMainWin", HideMainWin)
-,	TB_Edit(tbSet, "OnScCtrl", OnScCtrl)
-,	TB_Edit(tbSet, "CheckHkOn", KeepHkOn)
-,	TB_Edit(tbSet, "SetWin", 0)
+,	TB_Edit(TbSettings, "HideMainWin", HideMainWin)
+,	TB_Edit(TbSettings, "OnScCtrl", OnScCtrl)
+,	TB_Edit(TbSettings, "CheckHkOn", KeepHkOn)
+,	TB_Edit(TbSettings, "SetWin", 0)
 Gui 28:+LastFoundExist
 IfWinExist
 {
@@ -10660,7 +10660,7 @@ ItemVar := SubStr(A_ThisMenu, 1, 7), %ItemVar% := RegExReplace(A_ThisMenuItem, "
 return
 
 OnFinish:
-TB_Edit(tbSet, "OnFinish", (OnFinishCode = 1) ? 0 : 1)
+TB_Edit(TbSettings, "OnFinish", (OnFinishCode = 1) ? 0 : 1)
 Menu, OnFinish, Add, %w_Lang021%, FinishOpt
 Menu, OnFinish, Add, %w_Lang022%, FinishOpt
 Menu, OnFinish, Add, %w_Lang023%, FinishOpt
@@ -10680,7 +10680,7 @@ return
 FinishOpt:
 OnFinishCode := A_ThisMenuItemPos
 SetFinishButtom:
-TB_Edit(tbSet, "OnFinish", (OnFinishCode = 1) ? 0 : 1)
+TB_Edit(TbSettings, "OnFinish", (OnFinishCode = 1) ? 0 : 1)
 return
 
 ;##### Languages: #####
@@ -10724,20 +10724,60 @@ Loop, %TabCount%
 }
 Gui, chMacro:ListView, InputList%A_List%
 
-GuiControl,, ExportB, %w_Lang001%
-GuiControl,, PreviewB, %w_Lang002%
-GuiControl,, OptionsB, %w_Lang003%
-GuiControl,, AutoT, %w_Lang006%:
-GuiControl,, ManT, %w_Lang007%:
-GuiControl,, AbortT, %w_Lang008%:
-GuiControl,, RecordB, %w_Lang004%
-GuiControl,, StartB, %w_Lang005%
-GuiControl,, RepeatT, %w_Lang011% (%t_Lang004%):
-GuiControl,, Capt, %w_Lang012%
-GuiControl,, OnScCtrl, %w_Lang009%
-GuiControl,, HideMainWin, %w_Lang013%
-GuiControl,, KeepHkOn, %w_Lang014%
-GuiControl,, Repeat, %w_Lang015%:
+GuiControl, 1:, Repeat, %w_Lang015%:
+GuiControl, 1:, DelayT, %w_Lang016%
+
+RbMain.ModifyBand(RbMain.IDToIndex(13), "Text", w_Lang006)
+, RbMain.ModifyBand(RbMain.IDToIndex(14), "Text", w_Lang011 " (" t_Lang004 ")")
+, RbMain.ModifyBand(RbMain.IDToIndex(16), "Text", w_Lang007)
+, RbMain.ModifyBand(RbMain.IDToIndex(17), "Text", w_Lang008)
+, RbMain.ModifyBand(RbMain.IDToIndex(18), "Text", c_Lang003)
+; File:
+TB_Edit(tbFile, "New", "", "", w_Lang040)
+, TB_Edit(tbFile, "Open", "", "", w_Lang041) , TB_Edit(tbFile, "Save", "", "", w_Lang042) 
+, TB_Edit(tbFile, "Export", "", "", w_Lang043), TB_Edit(tbFile, "Preview", "", "", w_Lang044), TB_Edit(tbFile, "Options", "", "", w_Lang045)
+; RecPlay:
+TB_Edit(tbRecPlay, "Record", "", "", w_Lang046), TB_Edit(tbRecPlay, "PlayStart", "", "", w_Lang047)
+; Command:
+TB_Edit(tbCommand, "Mouse", "", "", w_Lang050), TB_Edit(tbCommand, "Text", "", "", w_Lang051), TB_Edit(tbCommand, "ControlCmd", "", "", w_Lang052)
+, TB_Edit(tbCommand, "Pause", "", "", w_Lang054), TB_Edit(tbCommand, "MsgBox", "", "", w_Lang055), TB_Edit(tbCommand, "KeyWait", "", "", w_Lang056)
+, TB_Edit(tbCommand, "Window", "", "", w_Lang057), TB_Edit(tbCommand, "Image", "", "", w_Lang058), TB_Edit(tbCommand, "Run", "", "", w_Lang059)
+, TB_Edit(tbCommand, "ComLoop", "", "", w_Lang060), TB_Edit(tbCommand, "ComGoto", "", "", w_Lang061), TB_Edit(tbCommand, "AddLabel", "", "", w_Lang062)
+, TB_Edit(tbCommand, "IfSt", "", "", w_Lang063), TB_Edit(tbCommand, "AsVar", "", "", w_Lang064), TB_Edit(tbCommand, "AsFunc", "", "", w_Lang065)
+, TB_Edit(tbCommand, "IECom", "", "", w_Lang066), TB_Edit(tbCommand, "ComInt", "", "", w_Lang067), TB_Edit(tbCommand, "RunScrLet", "", "", w_Lang068)
+, TB_Edit(tbCommand, "SendMsg", "", "", w_Lang069)
+; Settings:
+TB_Edit(tbSettings, "HideMainWin", "", "", w_Lang013), TB_Edit(tbSettings, "OnScCtrl", "", "", w_Lang009)
+, TB_Edit(tbSettings, "Capt", "", "", w_Lang012), TB_Edit(tbSettings, "CheckHkOn", "", "", w_Lang014)
+, TB_Edit(tbSettings, "OnFinish", "", "", w_Lang020) , TB_Edit(tbSettings, "SetWin", "", "", t_Lang009)
+, TB_Edit(tbSettings, "WinKey", "", "", w_Lang070), TB_Edit(tbSettings, "SetJoyButton", "", "", w_Lang071)
+; Edit:
+TB_Edit(tbEdit, "TabPlus", "", "", w_Lang072), TB_Edit(tbEdit, "TabClose", "", "", w_Lang073), TB_Edit(tbEdit, "DuplicateList", "", "", w_Lang074)
+, TB_Edit(tbEdit, "Import", "", "", w_Lang075), TB_Edit(tbEdit, "SaveCurrentList", "", "", w_Lang076)
+, TB_Edit(tbEdit, "MoveUp", "", "", w_Lang077), TB_Edit(tbEdit, "MoveDn", "", "", w_Lang078)
+, TB_Edit(tbEdit, "CutRows", "", "", w_Lang080), TB_Edit(tbEdit, "CopyRows", "", "", w_Lang081), TB_Edit(tbEdit, "PasteRows", "", "", w_Lang082), TB_Edit(tbEdit, "Remove", "", "", w_Lang083)
+, TB_Edit(tbEdit, "Undo", "", "", w_Lang084), TB_Edit(tbEdit, "Redo", "", "", w_Lang085)
+, TB_Edit(tbEdit, "Duplicate", "", "", w_Lang079), TB_Edit(tbEdit, "CopyTo", "", "", w_Lang086) 
+, TB_Edit(tbEdit, "EditColor", "", "", w_Lang089), TB_Edit(tbEdit, "EditComm", "", "", w_Lang088), TB_Edit(tbEdit, "FindReplace", "", "", w_Lang087)
+; Preview:
+TB_Edit(tbPrev, "PrevDock", "", "", t_Lang124)
+, TB_Edit(tbPrev, "PrevCopy", "", "", c_Lang023), TB_Edit(tbPrev, "PrevRefresh", "", "", t_Lang014)
+, TB_Edit(tbPrev, "AutoRefresh", "", "", t_Lang015), TB_Edit(tbPrev, "OnTop", "", "", t_Lang016), TB_Edit(tbPrev, "TabIndent", "", "", t_Lang011)
+, TB_Edit(tbPrevF, "PrevDock", "", "", t_Lang124)
+, TB_Edit(tbPrevF, "PrevCopy", "", "", c_Lang023), TB_Edit(tbPrevF, "PrevRefresh", "", "", t_Lang014)
+, TB_Edit(tbPrevF, "AutoRefresh", "", "", t_Lang015), TB_Edit(tbPrevF, "OnTop", "", "", t_Lang016), TB_Edit(tbPrevF, "TabIndent", "", "", t_Lang011)
+; OSC:
+TB_Edit(tbOSC, "OSPlay", "", "", t_Lang112), TB_Edit(tbOSC, "OSStop", "", "", t_Lang113), TB_Edit(tbOSC, "ShowPlayMenu", "", "", t_Lang114)
+, TB_Edit(tbOSC, "RecStart", "", "", t_Lang115), TB_Edit(tbOSC, "RecStartNew", "", "", t_Lang116), TB_Edit(tbOSC, "ShowRecMenu", "", "", t_Lang117)
+, TB_Edit(tbOSC, "OSClear", "", "", t_Lang118)
+, TB_Edit(tbOSC, "ProgBarToggle", "", "", t_Lang119)
+, TB_Edit(tbOSC, "SlowKeyToggle", "", "", t_Lang120), TB_Edit(tbOSC, "FastKeyToggle", "", "", t_Lang121)
+, TB_Edit(tbOSC, "ToggleTB", "", "", t_Lang122), TB_Edit(tbOSC, "ShowHideTB", "", "", t_Lang123)
+
+FixedBar.Text := ["OpenT=" t_Lang126 ":43", "SaveT=" t_Lang127 ":60"
+				, "", "CutT=" t_Lang128 ":9", "CopyT=" t_Lang129 ":8", "PasteT=" t_Lang130 ":45"
+				, "", "SelAllT=" t_Lang131 ":5", "RemoveT=" t_Lang132 ":10"]
+
 Gui 18:+LastFoundExist
 IfWinExist
     GoSub, FindReplace
