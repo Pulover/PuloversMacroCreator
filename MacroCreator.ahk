@@ -4225,7 +4225,7 @@ Gui, 12:Add, Edit, y+5 xs+10 W145 R1 vDelim Disabled
 Gui, 12:Add, Edit, yp x+10 W145 R1 vOmit Disabled
 Gui, 12:Add, Text, y+5 xs+15 r1, %c_Lang074%
 Gui, 12:Add, Text, y+5 r1, %c_Lang025%
-Gui, 12:Add, Text, -Wrap xs+10 y+15 W70 H23, %c_Lang123%:
+Gui, 12:Add, Text, -Wrap xs+10 y+15 W75 H23, %c_Lang123%:
 Gui, 12:Add, Button, -Wrap yp x+0 W75 H23 gAddBreak, %c_Lang075%
 Gui, 12:Add, Button, -Wrap yp x+10 W75 H23 gAddContinue, %c_Lang076%
 Gui, 12:Add, Button, -Wrap Section Default xm ys+270 W75 H23 gLoopOK, %c_Lang020%
@@ -6204,7 +6204,9 @@ Gui, 24:Tab, 3
 ; Run Scriptlet
 Gui, 24:Add, GroupBox, Section xm ym W410 H260
 Gui, 24:Add, Text, ys+15 xs+10 W100, %c_Lang156%:
-Gui, 24:Add, Edit, W390 R10 vScLet
+If (A_PtrSize = 8)
+	Gui, 24:Add, Text, ys+15 x+30 W210 cRed, %c_Lang158%
+Gui, 24:Add, Edit, ys+35 xs+10 W390 R10 vScLet
 Gui, 24:Add, Text, W100, %c_Lang157%:
 Gui, 24:Add, Radio, -Wrap Checked yp x+5 W100 vRunVB R1, VBScript
 Gui, 24:Add, Radio, -Wrap x+5 W100 vRunJS R1, JScript
@@ -6212,8 +6214,6 @@ Gui, 24:Add, Button, -Wrap yp-2 xs+375 W25 H25 hwndExpView2 vExpView2 gExpView
 	ILButton(ExpView2, ResDllPath ":" 17)
 Gui, 24:Add, Button, -Wrap Section Default ym+265 xm W75 H23 gScLetOK, %c_Lang020%
 Gui, 24:Add, Button, -Wrap ys xs+170 W75 H23 vScLetApply gScLetApply Disabled, %c_Lang131%
-If (A_PtrSize = 8)
-	Gui, 24:Add, Text, ys+5 xs+200 W210 cRed, %c_Lang158%
 Gui, 24:Tab
 Gui, 24:Add, Text, Section ym+172 xm+12 vPgTxt, %c_Lang092%:
 Gui, 24:Add, DDL, W70 vIdent Disabled, Name||ID|TagName|Links
