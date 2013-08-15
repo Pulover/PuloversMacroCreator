@@ -647,6 +647,7 @@ ShowMenu(Menu, mX, mY)
 	Else If (Menu = "Save")
 	{
 		Menu, TbMenu, Add, %f_Lang004%, SaveAs
+		Menu, TbMenu, Icon, %f_Lang004%, %ResDllPath%, 88
 		Menu, TbMenu, Show, %mX%, %mY%
 		Menu, TbMenu, DeleteAll
 	}
@@ -654,6 +655,8 @@ ShowMenu(Menu, mX, mY)
 	{
 		Menu, TbMenu, Add, %r_Lang003%, TestRun
 		Menu, TbMenu, Add, %r_Lang004%, RunTimer
+		Menu, TbMenu, Icon, %r_Lang003%, %ResDllPath%, 49
+		Menu, TbMenu, Icon, %r_Lang004%, %ResDllPath%, 72
 		Menu, TbMenu, Show, %mX%, %mY%
 		Menu, TbMenu, DeleteAll
 	}
@@ -675,7 +678,7 @@ ShowMenu(Menu, mX, mY)
 
 ShowChevronMenu(rbPtr, BandID, X="", Y="")
 {
-	Global TbEdit
+	Global TbEdit, ResDllPath
 	Band := rbPtr.IDToIndex(BandID)
 ,	rbPtr.GetBand(Band, "", "", "", "", "", "", hChild)
 	tbPtr := TB_GetHwnd(hChild)
@@ -685,7 +688,13 @@ ShowChevronMenu(rbPtr, BandID, X="", Y="")
 	{
 		HidBtns := tbPtr.GetHiddenButtons()
 		Loop, % HidBtns.MaxIndex()
-			Menu, ChevMenu, Add, % HidBtns[A_Index].Text, % HidBtns[A_Index].Label
+		{
+			Try
+			{
+				Menu, ChevMenu, Add, % HidBtns[A_Index].Text, % HidBtns[A_Index].Label
+				Menu, ChevMenu, Icon, % HidBtns[A_Index].Text, %ResDllPath%, % HidBtns[A_Index].Icon
+			}
+		}
 		Menu, ChevMenu, Show, %X%, %Y%
 		Menu, ChevMenu, DeleteAll
 	}

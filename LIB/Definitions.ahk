@@ -821,13 +821,13 @@ DefaultBar := {FileOpt: "Enabled AutoSize", File: ["New=" w_Lang040 ":42", "Open
 														, "", "Capt=" w_Lang012 ":85", "CheckHkOn=" w_Lang014 ":84"
 														, "", "OnFinish=" w_Lang020 ":20(Enabled WholeDropdown)", "SetWin=" t_Lang009 ":48"
 														, "", "WinKey=" w_Lang070 ":90", "SetJoyButton=" w_Lang071 ":33"]
-			, EditOpt: "Enabled AutoSize", Edit: ["TabPlus=" w_Lang072 ":67", "TabClose=" w_Lang073 ":69", "DuplicateList=" w_Lang074 ":70"
-														, "", "Import=" w_Lang075 ":29", "SaveCurrentList=" w_Lang076 ":68"
-														, "" , "MoveUp=" w_Lang077 ":41", "MoveDn=" w_Lang078 ":40"
-														, "", "CutRows=" w_Lang080 ":9", "CopyRows=" w_Lang081 ":8", "PasteRows=" w_Lang082 ":45", "Remove=" w_Lang083 ":10"
+			, EditOpt: "Enabled AutoSize", Edit: ["CutRows=" w_Lang080 ":9", "CopyRows=" w_Lang081 ":8", "PasteRows=" w_Lang082 ":45", "Remove=" w_Lang083 ":10"
 														, "", "Undo=" w_Lang084 ":75", "Redo=" w_Lang085 ":57"
+														, "" , "MoveUp=" w_Lang077 ":41", "MoveDn=" w_Lang078 ":40"
 														, "", "Duplicate=" w_Lang079 ":13", "CopyTo=" w_Lang086 ":8(Enabled WholeDropdown)"
-														, "", "EditColor=" w_Lang089 ":3", "EditComm=" w_Lang088 ":5", "FindReplace=" w_Lang087 ":19"]}
+														, "", "EditColor=" w_Lang089 ":3", "EditComm=" w_Lang088 ":5", "FindReplace=" w_Lang087 ":19"
+														, "", "TabPlus=" w_Lang072 ":67", "TabClose=" w_Lang073 ":69", "DuplicateList=" w_Lang074 ":70"
+														, "", "Import=" w_Lang075 ":29", "SaveCurrentList=" w_Lang076 ":68"]}
 FixedBar :=	{PrevOpt: "Enabled AutoSize", Preview: ["PrevDock=" t_Lang124 ":17"
 														, "", "PrevCopy=" c_Lang023 ":8", "PrevRefresh=" t_Lang014 ":37"
 														, "", "AutoRefresh=" t_Lang015 ":93", "OnTop=" t_Lang016 ":83", "TabIndent=" t_Lang011 ":87"]

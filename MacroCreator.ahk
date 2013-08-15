@@ -832,6 +832,7 @@ Gui, chPrev:Show, W450 H600 Hide
 	Gui, 2:Add, Custom, ClassScintilla x0 y30 hwndhSciPrevF vLVPrev
 	Gui, 2:Add, StatusBar
 	TB_Define(TbPrevF, hTbPrevF, hIL_Icons, FixedBar.Preview, FixedBar.PrevOpt)
+,	TB_Edit(tbPrevF, "PrevDock", "", "", t_Lang125)
 ,	sciPrevF := new scintilla(hSciPrevF)
 ,	sciPrevF.SetMarginWidthN(0, 20)
 ,	sciPrevF.SetWrapMode(False)
@@ -1488,6 +1489,8 @@ return
 
 FileRead:
 GoSub, b_Start
+Gui, chMacro:Default
+Gui, chMacro:Listview, InputList%A_List%
 HistoryMacro1 := new LV_Rows()
 HistoryMacro1.Add()
 GuiControl, 1:, Capt, 0
@@ -1497,6 +1500,8 @@ SetWorkingDir %wDir%
 GoSub, RowCheck
 GoSub, LoadData
 GoSub, PrevRefresh
+Gui, chMacro:Default
+Gui, chMacro:Listview, InputList%A_List%
 GuiControl, chMacro:Focus, InputList%A_List%
 SavePrompt := False
 return
@@ -8368,6 +8373,8 @@ Gui, 16:Destroy
 return
 
 EditComm:
+Gui, chMacro:Default
+Gui, chMacro:Listview, InputList%A_List%
 RowSelection := LV_GetCount("Selected")
 Gui, 17:+owner1 -MinimizeBox
 Gui, chMacro:Default
@@ -8435,6 +8442,8 @@ Else If InStr(A_GuiControl, "LVColor")
 	rColor := %A_GuiControl%, OwnerID := CmdWin
 Else
 {
+	Gui, chMacro:Default
+	Gui, chMacro:Listview, InputList%A_List%
 	RowSelection := LV_GetCount("Selected"), OwnerID := PMCWinID
 	If RowSelection = 1
 	{
@@ -10762,7 +10771,7 @@ TB_Edit(tbEdit, "TabPlus", "", "", w_Lang072), TB_Edit(tbEdit, "TabClose", "", "
 TB_Edit(tbPrev, "PrevDock", "", "", t_Lang124)
 , TB_Edit(tbPrev, "PrevCopy", "", "", c_Lang023), TB_Edit(tbPrev, "PrevRefresh", "", "", t_Lang014)
 , TB_Edit(tbPrev, "AutoRefresh", "", "", t_Lang015), TB_Edit(tbPrev, "OnTop", "", "", t_Lang016), TB_Edit(tbPrev, "TabIndent", "", "", t_Lang011)
-, TB_Edit(tbPrevF, "PrevDock", "", "", t_Lang124)
+, TB_Edit(tbPrevF, "PrevDock", "", "", t_Lang125)
 , TB_Edit(tbPrevF, "PrevCopy", "", "", c_Lang023), TB_Edit(tbPrevF, "PrevRefresh", "", "", t_Lang014)
 , TB_Edit(tbPrevF, "AutoRefresh", "", "", t_Lang015), TB_Edit(tbPrevF, "OnTop", "", "", t_Lang016), TB_Edit(tbPrevF, "TabIndent", "", "", t_Lang011)
 ; OSC:

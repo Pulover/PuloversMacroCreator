@@ -5,7 +5,7 @@
 ; Author:            Pulover [Rodolfo U. Batista]
 ;                    rodolfoub@gmail.com
 ; AHK version:       1.1.11.00
-; Release date:      09 August 2013
+; Release date:      15 August 2013
 ;
 ;                    Class for AutoHotkey Toolbar custom controls
 ;=======================================================================================
@@ -325,7 +325,7 @@ Class Toolbar extends Toolbar.Private
 ;                            a Rebar control, in order to show a menu when the chevron is
 ;                            pushed. It does not retrieve buttons hidden by gui size.
 ;    Return:             An array with all buttons hidden by the Rebar band. Each key
-;                            in the array has 3 properties: ID, Text and Label.
+;                            in the array has 4 properties: ID, Text, Label and Icon.
 ;=======================================================================================
     GetHiddenButtons()
     {
@@ -335,8 +335,8 @@ Class Toolbar extends Toolbar.Private
         {
             SendMessage, this.TB_GETITEMRECT, A_Index-1, &RECT,, % "ahk_id " this.tbHwnd
             If (NumGet(&RECT, 8, "Int") > tbWidth)
-                this.GetButton(A_Index, ID, Text)
-            ,   HiddenButtons.Insert({ID: ID, Text: Text, Label: this.Labels[ID]})
+                this.GetButton(A_Index, ID, Text, "", "", Icon)
+            ,   HiddenButtons.Insert({ID: ID, Text: Text, Label: this.Labels[ID], Icon: Icon})
         }
         return HiddenButtons
     }
