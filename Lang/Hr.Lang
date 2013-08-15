@@ -203,6 +203,7 @@
 	w_Lang087 =	Pronađi / Zamijeni (Ctrl+F)
 	w_Lang088 =	Uredi komentar (Ctrl+L)
 	w_Lang089 =	Uredi Boja oznaka (Ctrl+M)
+	w_Lang090 =	Prilagodite
 		
 ; Command Windows		
 	c_Lang001 =	Miš
@@ -291,7 +292,7 @@
 	c_Lang084 =	Dodjela Variable
 	c_Lang085 =	Sadržaj
 	c_Lang086 =	Operator
-	c_Lang087 =	Koristite eval () izraze za rješavanje
+	c_Lang087 =	Priuštite kao math izraz
 	c_Lang088 =	Ponovno
 	c_Lang089 =	Funkcija Ime
 	c_Lang090 =	Odvojenih zarezom parametre (bez zagrada).

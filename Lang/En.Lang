@@ -203,6 +203,7 @@
 	w_Lang087 =	Find / Replace (Ctrl+F)
 	w_Lang088 =	Edit Comment (Ctrl+L)
 	w_Lang089 =	Edit Color Mark (Ctrl+M)
+	w_Lang090 =	Customize
 		
 ; Command Windows		
 	c_Lang001 =	Mouse
@@ -291,7 +292,7 @@
 	c_Lang084 =	Assign Variable
 	c_Lang085 =	Content
 	c_Lang086 =	Operator
-	c_Lang087 =	Use Eval() to solve expressions
+	c_Lang087 =	Treat as math expression
 	c_Lang088 =	Reset
 	c_Lang089 =	Function Name
 	c_Lang090 =	Comma separated parameters (without parenthesis).

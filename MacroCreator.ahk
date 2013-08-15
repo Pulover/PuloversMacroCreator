@@ -7221,7 +7221,7 @@ Else
 	{
 		If ((tbPtr.tbHwnd = hTbPrev) || (tbPtr.tbHwnd = hTbPrevF))
 			return
-		Menu, TbMenu, Add, Customize, Customize
+		Menu, TbMenu, Add, %w_Lang090%, Customize
 		Menu, TbMenu, Show
 		Menu, TbMenu, DeleteAll
 	}

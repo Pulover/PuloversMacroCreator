@@ -203,6 +203,7 @@
 	w_Lang087 =	查找/替換（Ctrl+F鍵）
 	w_Lang088 =	編輯點評（Ctrl+L鍵）
 	w_Lang089 =	編輯顏色標誌（Ctrl+M鍵）
+	w_Lang090 =	定制
 		
 ; Command Windows		
 	c_Lang001 =	鼠標
@@ -291,7 +292,7 @@
 	c_Lang084 =	指定變量
 	c_Lang085 =	內容
 	c_Lang086 =	操作者
-	c_Lang087 =	使用eval（）來解決表達式
+	c_Lang087 =	視為數學表達式
 	c_Lang088 =	復位
 	c_Lang089 =	功能名稱
 	c_Lang090 =	以逗號分隔的參數（不包括括號）。

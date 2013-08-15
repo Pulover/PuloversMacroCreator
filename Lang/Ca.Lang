@@ -203,6 +203,7 @@
 	w_Lang087 =	Cercar / Reemplaçar (Ctrl+F)
 	w_Lang088 =	Redactar comentari (Ctrl+L)
 	w_Lang089 =	Edita color (Ctrl+M)
+	w_Lang090 =	Personalitzar
 		
 ; Command Windows		
 	c_Lang001 =	Ratolí
@@ -291,7 +292,7 @@
 	c_Lang084 =	Assignació Variable
 	c_Lang085 =	Contingut
 	c_Lang086 =	Operador
-	c_Lang087 =	Utilitzeu Aval () per a resoldre expressions
+	c_Lang087 =	Tractar com a expressió matemàtica
 	c_Lang088 =	Reajustar
 	c_Lang089 =	Nom de la funció
 	c_Lang090 =	Paràmetres separats per comes (sense parèntesis).

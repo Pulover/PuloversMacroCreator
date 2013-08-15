@@ -203,6 +203,7 @@
 	w_Lang087 =	Znajdź / Zamień (Ctrl+F)
 	w_Lang088 =	Edytuj komentarz (Ctrl+L)
 	w_Lang089 =	Zmień kolor zapytania (Ctrl+M)
+	w_Lang090 =	Настроить...
 		
 ; Command Windows		
 	c_Lang001 =	Mysz
@@ -291,7 +292,7 @@
 	c_Lang084 =	Przypisanie zmiennej
 	c_Lang085 =	Zawartość
 	c_Lang086 =	Operator
-	c_Lang087 =	Użyj funkcji Eval() do rozwiązania wyrażeń
+	c_Lang087 =	Traktować jako wyrażenie matematyczne
 	c_Lang088 =	Resetuj
 	c_Lang089 =	Nazwa funkcji
 	c_Lang090 =	Oddzielonych przecinkami parametrów (bez nawiasów).

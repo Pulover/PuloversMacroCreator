@@ -203,6 +203,7 @@
 	w_Lang087 =	Keresés / Csere (Ctrl+F)
 	w_Lang088 =	Megjegyzés szerkesztése (Ctrl+L)
 	w_Lang089 =	Szerkesztés színvédjegy (Ctrl+M)
+	w_Lang090 =	Testreszabása
 		
 ; Command Windows		
 	c_Lang001 =	Egér
@@ -291,7 +292,7 @@
 	c_Lang084 =	Hozzárendelése Változó
 	c_Lang085 =	Tartalom
 	c_Lang086 =	Operátor
-	c_Lang087 =	Használja Eval() megoldani kifejezések
+	c_Lang087 =	Kezelni matematikai kifejezést
 	c_Lang088 =	Visszaállítás
 	c_Lang089 =	Funkció neve
 	c_Lang090 =	Vesszővel elválasztott paraméterek (zárójel nélkül).

@@ -203,6 +203,7 @@
 	w_Lang087 =	Zoeken / Vervangen (Ctrl+F)
 	w_Lang088 =	Opmerking bewerken (Ctrl+L)
 	w_Lang089 =	Bewerken kleurmarkering (Ctrl+M)
+	w_Lang090 =	Aanpassen
 		
 ; Command Windows		
 	c_Lang001 =	Muis
@@ -291,7 +292,7 @@
 	c_Lang084 =	Wijs Variabele
 	c_Lang085 =	Inhoud
 	c_Lang086 =	Operator
-	c_Lang087 =	Gebruik Eval() om uitdrukkingen op te lossen
+	c_Lang087 =	Behandelen als wiskundige uitdrukking
 	c_Lang088 =	Reset
 	c_Lang089 =	Functie Naam
 	c_Lang090 =	Komma gescheiden parameters (zonder haakjes).

@@ -203,6 +203,7 @@
 	w_Lang087 =	Rechercher / Remplacer (Ctrl+F)
 	w_Lang088 =	Modifier le commentaire (Ctrl+L)
 	w_Lang089 =	Modifier marque de couleur (Ctrl+M)
+	w_Lang090 =	Personnaliser
 		
 ; Command Windows		
 	c_Lang001 =	Souris
@@ -291,7 +292,7 @@
 	c_Lang084 =	Affecter variable
 	c_Lang085 =	Teneur
 	c_Lang086 =	Opérateur
-	c_Lang087 =	Utilisez Eval() pour résoudre les expressions
+	c_Lang087 =	Traiter comme expression mathématique
 	c_Lang088 =	Remettre
 	c_Lang089 =	Nom de la fonction
 	c_Lang090 =	Paramètres séparés par des virgules (sans parenthèses).

@@ -203,6 +203,7 @@
 	w_Lang087 =	찾기 / 바꾸기 (Ctrl 키+F)
 	w_Lang088 =	댓글 수정 (Ctrl 키+L)
 	w_Lang089 =	편집 색상 표 (Ctrl 키+M)
+	w_Lang090 =	사용자 지정
 		
 ; Command Windows		
 	c_Lang001 =	마우스
@@ -291,7 +292,7 @@
 	c_Lang084 =	변수를 할당
 	c_Lang085 =	내용
 	c_Lang086 =	연산자
-	c_Lang087 =	표현을 해결하기 위해) (건강 검진 보고서를 사용
+	c_Lang087 =	수학 식으로 처리
 	c_Lang088 =	재설정
 	c_Lang089 =	기능 이름
 	c_Lang090 =	쉼표 (괄호없이) 매개 변수를 구분합니다.

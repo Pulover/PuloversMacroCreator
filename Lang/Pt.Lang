@@ -203,6 +203,7 @@
 	w_Lang087 =	Localizar / Substituir (Ctrl+F)
 	w_Lang088 =	Editar Comentário (Ctrl+L)
 	w_Lang089 =	Editar Marca de Cor (Ctrl+M)
+	w_Lang090 =	Personalizar
 		
 ; Command Windows		
 	c_Lang001 =	Mouse
@@ -291,7 +292,7 @@
 	c_Lang084 =	Associar Variável
 	c_Lang085 =	Conteúdo
 	c_Lang086 =	Operador
-	c_Lang087 =	Usar Eval() para resolver expressões
+	c_Lang087 =	Tratar como expressão matemática
 	c_Lang088 =	Apagar
 	c_Lang089 =	Nome da Função
 	c_Lang090 =	Parametros separados por vírgula (sem parenteses).

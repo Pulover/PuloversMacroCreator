@@ -203,6 +203,7 @@
 	w_Lang087 =	Find / Erstat (Ctrl+F)
 	w_Lang088 =	Rediger kommentar (Ctrl+L)
 	w_Lang089 =	Edit farvemærke (Ctrl+M)
+	w_Lang090 =	Tilpas
 		
 ; Command Windows		
 	c_Lang001 =	Mus
@@ -291,7 +292,7 @@
 	c_Lang084 =	Tildel Variabel
 	c_Lang085 =	Indhold
 	c_Lang086 =	Operatør
-	c_Lang087 =	Brug Eval() til at løse udtryk
+	c_Lang087 =	Behandles som matematisk udtryk
 	c_Lang088 =	Reset
 	c_Lang089 =	Funktion Navn
 	c_Lang090 =	Kommasepareret parametre (uden parentes).

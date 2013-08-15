@@ -203,6 +203,7 @@
 	w_Lang087 =	Cari / Ganti (Ctrl+F)
 	w_Lang088 =	Mengedit Komentar (Ctrl+L)
 	w_Lang089 =	Sunting Color Mark (Ctrl+M)
+	w_Lang090 =	Sesuaikan
 		
 ; Command Windows		
 	c_Lang001 =	Mouse
@@ -291,7 +292,7 @@
 	c_Lang084 =	Menetapkan Variabel
 	c_Lang085 =	Kadar
 	c_Lang086 =	Operator
-	c_Lang087 =	Gunakan Eval () untuk memecahkan ekspresi
+	c_Lang087 =	Perlakukan sebagai ekspresi matematika
 	c_Lang088 =	Ulang
 	c_Lang089 =	Fungsi Nama
 	c_Lang090 =	Dipisahkan koma parameter (tanpa kurung).

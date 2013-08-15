@@ -203,6 +203,7 @@
 	w_Lang087 =	検索/置換（Ctrl+F）を
 	w_Lang088 =	コメントを編集（Ctrl+L）を
 	w_Lang089 =	編集色マーク（Ctrl+M）を
+	w_Lang090 =	カスタマイズ
 		
 ; Command Windows		
 	c_Lang001 =	マウス
@@ -291,7 +292,7 @@
 	c_Lang084 =	変数を割り当てる
 	c_Lang085 =	コンテンツ
 	c_Lang086 =	オペレータ
-	c_Lang087 =	式を解くためにeval（）を使う
+	c_Lang087 =	数学の式として扱う
 	c_Lang088 =	リセット
 	c_Lang089 =	機能名
 	c_Lang090 =	コンマ（括弧なし）パラメータを分離した。

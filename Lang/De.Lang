@@ -203,6 +203,7 @@
 	w_Lang087 =	Suchen/Ersetzen (Strg+F)
 	w_Lang088 =	Kommentar bearbeiten
 	w_Lang089 =	Farbmarkierung bearbeiten
+	w_Lang090 =	Anpassen
 		
 ; Command Windows		
 	c_Lang001 =	Maus
@@ -291,7 +292,7 @@
 	c_Lang084 =	Variable zuweisen
 	c_Lang085 =	Inhalt
 	c_Lang086 =	Operator
-	c_Lang087 =	Eval() verwenden, um Ausdrücke aufzulösen
+	c_Lang087 =	Gönnen als mathematischen Ausdruck
 	c_Lang088 =	Zurücksetzen
 	c_Lang089 =	Name der Funktion
 	c_Lang090 =	Kommagetrennte Parameter (ohne Klammern).

@@ -203,6 +203,7 @@
 	w_Lang087 =	Bul / Değiştir (Ctrl+F)
 	w_Lang088 =	Yorum düzenle (Ctrl+L)
 	w_Lang089 =	Düzen renk işareti (Ctrl+M)
+	w_Lang090 =	Özelleştirme
 		
 ; Command Windows		
 	c_Lang001 =	Fare
@@ -291,7 +292,7 @@
 	c_Lang084 =	Değişken atama
 	c_Lang085 =	Içerik
 	c_Lang086 =	Operatör
-	c_Lang087 =	Ifadeler çözmek için) (Eval kullanın
+	c_Lang087 =	Matematik ifadesi olarak tedavi
 	c_Lang088 =	Ayarlamak
 	c_Lang089 =	Fonksiyon Adı
 	c_Lang090 =	Virgül (parantez olmadan) parametreleri ayrılmış.

@@ -203,6 +203,7 @@
 	w_Lang087 =	Najít / Nahradit (Ctrl+F)
 	w_Lang088 =	Upravit komentář (Ctrl+L)
 	w_Lang089 =	Edit barva označuje (Ctrl+M)
+	w_Lang090 =	Vlastní
 		
 ; Command Windows		
 	c_Lang001 =	Myš
@@ -291,7 +292,7 @@
 	c_Lang084 =	Přiřazení proměnné
 	c_Lang085 =	Obsah
 	c_Lang086 =	Provozovatel
-	c_Lang087 =	Použití Eval() řešit výrazy
+	c_Lang087 =	Považovat matematický výraz
 	c_Lang088 =	Obnovit
 	c_Lang089 =	Funkce Jméno
 	c_Lang090 =	Oddělené čárkami parametry (bez závorek).
