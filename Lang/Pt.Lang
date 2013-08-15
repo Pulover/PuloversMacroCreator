@@ -505,6 +505,7 @@
 	t_Lang133 =	Teclado
 	t_Lang134 =	Mouse
 	t_Lang135 =	Outros
+	t_Lang136 =	Destacar Linhas
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Abrir

@@ -6,7 +6,7 @@
 ; pulover@macrocreator.com
 ; Home: http://www.macrocreator.com
 ; Forum: http://www.autohotkey.com/board/topic/79763-macro-creator
-; Version: 4.0.0 Alpha 1
+; Version: 4.0.0 Alpha 2
 ; Release Date: August, 2013
 ; AutoHotkey Version: 1.1.11.02
 ; Copyright © 2012-2013 Rodolfo U. Batista
@@ -121,7 +121,7 @@ Loop
 		break
 }
 
-CurrentVersion := "4.0.0 Alpha 1", ReleaseDate := "August, 2013"
+CurrentVersion := "4.0.0 Alpha 2", ReleaseDate := "August, 2013"
 
 ;##### Ini File Read #####
 
@@ -2072,7 +2072,7 @@ GoSub, ResetHotkeys
 OldLoopColor := LoopLVColor, OldIfColor := IfLVColor
 , OldMoves := Moves, OldTimed := TimedI, OldRandM := RandomSleeps, OldRandP := RandPercent
 FileRead, UserVarsList, %UserVarsPath%
-Gui, 4:Add, Listbox, W200 H400 vAltTab gAltTabControl AltSubmit, %t_Lang022%||%t_Lang035%|%t_Lang090%|%t_Lang046%|%t_Lang052%|%t_Lang096%
+Gui, 4:Add, Listbox, W200 H400 vAltTab gAltTabControl AltSubmit, %t_Lang022%||%t_Lang035%|%t_Lang090%|%t_Lang046%|%t_Lang018%|%t_Lang096%
 Gui, 4:Add, Tab2, yp x+0 W400 H0 vTabControl gAltTabControl AltSubmit, Recording|Playback|Defaults|Screenshots|Misc|UserVars
 ; Recording
 Gui, 4:Add, GroupBox, Section ym xm+210 W400 H85, %t_Lang053%
@@ -2164,13 +2164,14 @@ Gui, 4:Add, Text, y+10 xs+10, %t_Lang051%:
 Gui, 4:Add, Edit, vScreenDir W350 R1 -Multi, %ScreenDir%
 Gui, 4:Add, Button, -Wrap yp-1 x+0 W30 H23 vSearchScreen gSearchDir, ...
 Gui, 4:Tab, 5
-; Misc
-Gui, 4:Add, GroupBox, Section ym xm+210 W400 H325, %w_Lang003%
+; General
+Gui, 4:Add, GroupBox, Section ym xm+210 W400 H100, %t_Lang018%
 Gui, 4:Add, Checkbox, -Wrap Checked%HKOff% ys+20 xs+10 vHKOff W380 R1, %t_Lang055%
 Gui, 4:Add, Checkbox, -Wrap Checked%MultInst% vMultInst W380 R1, %t_Lang089%
 Gui, 4:Add, Checkbox, -Wrap Checked%EvalDefault% vEvalDefault W380 R1, %t_Lang059%
 Gui, 4:Add, Checkbox, -Wrap Checked%AllowRowDrag% vAllowRowDrag W380 R1, %t_Lang091%
-Gui, 4:Add, Checkbox, -Wrap Checked%ShowLoopIfMark% vShowLoopIfMark W380 R1, %t_Lang060%
+Gui, 4:Add, GroupBox, Section y+15 xs W400 H135, %t_Lang136%
+Gui, 4:Add, Checkbox, -Wrap Checked%ShowLoopIfMark% ys+20 xs+10 vShowLoopIfMark W380 R1, %t_Lang060%
 Gui, 4:Add, Text, W380, %t_Lang061%
 Gui, 4:Add, Text, y+15 W85, %t_Lang003% "{"
 Gui, 4:Add, Text, yp x+10 W40 vLoopLVColor gEditColor c%LoopLVColor%, ██████
@@ -2178,8 +2179,8 @@ Gui, 4:Add, Text, yp x+20 W85, %t_Lang082% "*"
 Gui, 4:Add, Text, yp x+10 W40 vIfLVColor gEditColor c%IfLVColor%, ██████
 Gui, 4:Add, Checkbox, -Wrap Checked%ShowActIdent% yp+25 xs+10 vShowActIdent W380 R1, %t_Lang083%
 Gui, 4:Add, Text, W380, %t_Lang084%
-Gui, 4:Add, Text, y+10 xs+10, %t_Lang062%:
-Gui, 4:Add, Edit, W380 r4 vEditMod, %VirtualKeys%
+Gui, 4:Add, GroupBox, Section y+17 xs W400 H150, %t_Lang062%
+Gui, 4:Add, Edit, ys+20 xs+10 W380 r7 vEditMod, %VirtualKeys%
 Gui, 4:Add, Button, -Wrap y+0 W75 H23 gConfigRestore, %t_Lang063%
 Gui, 4:Add, Button, -Wrap yp x+10 W75 H23 gKeyHistory, %c_Lang124%
 Gui, 4:Tab, 6
