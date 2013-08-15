@@ -125,7 +125,7 @@
 	w_Lang009 =	Contrôles afficher la barre d'outils
 	w_Lang010 =	Pause
 	w_Lang011 =	Boucle
-	w_Lang012 =	Capturez clés
+	w_Lang012 =	Capturez touches dans cette fenêtre
 	w_Lang013 =	Réduire en icône
 	w_Lang014 =	Raccourcis Toujours Actifs
 	w_Lang015 =	Répétez
@@ -468,7 +468,7 @@
 	t_Lang097 =	Appuyez sur un bouton sur la manette
 	t_Lang098 =	Joystick
 	t_Lang099 =	Bouton
-	t_Lang100 =	Afficher les infos
+	t_Lang100 =	Afficher les infobulles
 	t_Lang101 =	Accélérer
 	t_Lang102 =	Lent
 	t_Lang103 =	Rapide
@@ -501,6 +501,9 @@
 	t_Lang130 =	Coller
 	t_Lang131 =	Sélectionner tout
 	t_Lang132 =	Effacer
+	t_Lang133 =	Clavier
+	t_Lang134 =	Souris
+	t_Lang135 =	Autres
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Ouvert
@@ -685,8 +688,12 @@
 	AutoKey_TT =	Retour arrière pour effacer
 	ManKey_TT =	Retour arrière pour effacer
 	AbortKey_TT =	Retour arrière pour effacer
+	PauseKey_TT =	Retour arrière pour effacer
+	RecKey_TT =	Retour arrière pour effacer
+	RecNewKey_TT =	Retour arrière pour effacer
+	FastKey_TT =	Retour arrière pour effacer
+	SlowKey_TT =	Retour arrière pour effacer
 	JoyKey_TT =	Appuyez sur un bouton sur la manette
-	PauseKey_TT =	Interrompt l'exécution au lieu de s'arrêter
 	OnFinish_TT =	
 	(LTrim	
 		Options d'arrêt
@@ -716,7 +723,6 @@
 	CopyTo_TT =	Copier sur...
 	Capt_TT =	Capturez touches dans cette fenêtre
 	OnScCtrl_TT =	Contrôles Afficher La Barre D'outils
-	ShowStep_TT =	Afficher les infobulles
 	ApplyT_TT =	Appliquer
 	ApplyI_TT =	Appliquer
 	ApplyL_TT =	Insérez de la case (Insert)

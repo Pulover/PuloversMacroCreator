@@ -125,7 +125,7 @@
 	w_Lang009 =	Kijelző vezérlők eszköztár
 	w_Lang010 =	Szünet
 	w_Lang011 =	Hurok
-	w_Lang012 =	Capture Keys
+	w_Lang012 =	Capture gombot megnyomja ebben az ablakban
 	w_Lang013 =	Tálcára
 	w_Lang014 =	Gyorsbillentyűk Mindig Aktív
 	w_Lang015 =	Ismétlés
@@ -468,7 +468,7 @@
 	t_Lang097 =	Nyomja meg a gombot a joystick
 	t_Lang098 =	Joystick
 	t_Lang099 =	Gomb
-	t_Lang100 =	Megjelenítés Info
+	t_Lang100 =	Kijelző buborékértesítések
 	t_Lang101 =	Sebesség
 	t_Lang102 =	Lassú
 	t_Lang103 =	Gyors
@@ -501,6 +501,9 @@
 	t_Lang130 =	Paszta
 	t_Lang131 =	Az összes kijelölése
 	t_Lang132 =	Töröl
+	t_Lang133 =	Billentyűzet
+	t_Lang134 =	Egér
+	t_Lang135 =	Egyéb
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Nyitva
@@ -685,8 +688,12 @@
 	AutoKey_TT =	Backspace törölni
 	ManKey_TT =	Backspace törölni
 	AbortKey_TT =	Backspace törölni
+	PauseKey_TT =	Backspace törölni
+	RecKey_TT =	Backspace törölni
+	RecNewKey_TT =	Backspace törölni
+	FastKey_TT =	Backspace törölni
+	SlowKey_TT =	Backspace törölni
 	JoyKey_TT =	Nyomja meg a gombot a joystick
-	PauseKey_TT =	Szünetelteti végrehajtása helyett megállás
 	OnFinish_TT =	
 	(LTrim	
 		shutdown lehetőségek
@@ -716,7 +723,6 @@
 	CopyTo_TT =	Másolás...
 	Capt_TT =	Capture gombot megnyomja ebben az ablakban
 	OnScCtrl_TT =	Megjelenítheti A Vezérlő Eszköztár
-	ShowStep_TT =	Kijelző buborékértesítések
 	ApplyT_TT =	Alkalmaz
 	ApplyI_TT =	Alkalmaz
 	ApplyL_TT =	Beszúrás box (Insert)

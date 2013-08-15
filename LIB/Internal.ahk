@@ -381,6 +381,28 @@ ActivateHotkeys(Rec="", Play="", Speed="", Stop="", Pause="", Joy="")
 {
 	local ActiveKeys
 	
+	If (Speed <> "")
+	{
+		If (FastKey <>  "None")
+			Hotkey, *%FastKey%, FastKeyToggle, % (Speed) ? "On" : "Off"
+		If (SlowKey <>  "None")
+			Hotkey, *%SlowKey%, SlowKeyToggle, % (Speed) ? "On" : "Off"
+	}
+	
+	If (Pause <> "")
+	{
+		Hotkey, *%PauseKey%, f_PauseKey, Off
+		If ((PauseKey <> "") && (Pause = 1))
+			Hotkey, *%PauseKey%, f_PauseKey, On
+	}
+	
+	If (Stop <> "")
+	{
+		Hotkey, *%AbortKey%, f_AbortKey, Off
+		If ((AbortKey <> "") && (Stop = 1))
+			Hotkey, *%AbortKey%, f_AbortKey, On
+	}
+	
 	If (Rec <> "")
 	{
 		Hotkey, %RecKey%, RecStart, % (Rec) ? "On" : "Off"
@@ -405,28 +427,6 @@ ActivateHotkeys(Rec="", Play="", Speed="", Stop="", Pause="", Joy="")
 			Hotkey, If
 			#If
 		}
-	}
-	
-	If (Speed <> "")
-	{
-		If (FastKey <>  "None")
-			Hotkey, *%FastKey%, FastKeyToggle, % (Speed) ? "On" : "Off"
-		If (SlowKey <>  "None")
-			Hotkey, *%SlowKey%, SlowKeyToggle, % (Speed) ? "On" : "Off"
-	}
-	
-	If (Stop <> "")
-	{
-		Hotkey, *%AbortKey%, f_AbortKey, Off
-		If ((AbortKey <> "") && (Stop = 1))
-			Hotkey, *%AbortKey%, f_AbortKey, On
-	}
-	
-	If (Pause <> "")
-	{
-		Hotkey, *%PauseKey%, f_PauseKey, Off
-		If ((PauseKey <> "") && (Pause = 1))
-			Hotkey, *%PauseKey%, f_PauseKey, On
 	}
 	
 	If (Joy <> "")

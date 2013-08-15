@@ -125,7 +125,7 @@
 	w_Lang009 =	Prikazati kontrolnike Orodna vrstica
 	w_Lang010 =	Premor
 	w_Lang011 =	Zanka
-	w_Lang012 =	Zajemanje Keys
+	w_Lang012 =	Zajemanje pritiske na tipke v tem oknu
 	w_Lang013 =	Zmanjšati v pladenj
 	w_Lang014 =	Bližnjice Vedno Aktivna
 	w_Lang015 =	Ponovite
@@ -468,7 +468,7 @@
 	t_Lang097 =	Pritisnite gumb na ročici
 	t_Lang098 =	Joystick
 	t_Lang099 =	Button
-	t_Lang100 =	Show Info
+	t_Lang100 =	Prikažete oblačke z namigi
 	t_Lang101 =	Speed
 	t_Lang102 =	Počasi
 	t_Lang103 =	Hitro
@@ -501,6 +501,9 @@
 	t_Lang130 =	Prilepi
 	t_Lang131 =	Izberi vse
 	t_Lang132 =	Izbriši
+	t_Lang133 =	Tipkovnica
+	t_Lang134 =	Miška
+	t_Lang135 =	Drugi
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Odprite
@@ -685,8 +688,12 @@
 	AutoKey_TT =	Backspace jasno
 	ManKey_TT =	Backspace jasno
 	AbortKey_TT =	Backspace jasno
+	PauseKey_TT =	Backspace jasno
+	RecKey_TT =	Backspace jasno
+	RecNewKey_TT =	Backspace jasno
+	FastKey_TT =	Backspace jasno
+	SlowKey_TT =	Backspace jasno
 	JoyKey_TT =	Pritisnite gumb na ročici
-	PauseKey_TT =	Premori usmrtitev namesto ustavljanja
 	OnFinish_TT =	
 	(LTrim	
 		Možnosti zaustavitev
@@ -716,7 +723,6 @@
 	CopyTo_TT =	Kopiraj v.
 	Capt_TT =	Zajemanje pritiske na tipke v tem oknu
 	OnScCtrl_TT =	Display Controls Orodna vrstica
-	ShowStep_TT =	Prikažete oblačke z namigi
 	ApplyT_TT =	Uporabi
 	ApplyI_TT =	Uporabi
 	ApplyL_TT =	Vstavite okencu (Insert)

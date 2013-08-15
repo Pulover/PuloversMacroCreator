@@ -125,7 +125,7 @@
 	w_Lang009 =	Näytön säädöt työkalurivi
 	w_Lang010 =	Tauko
 	w_Lang011 =	Silmukka
-	w_Lang012 =	Capture Keys
+	w_Lang012 =	Capture näppäinpainallukset tässä ikkunassa
 	w_Lang013 =	Pienennä Tray
 	w_Lang014 =	Pikanäppäimet Aina Aktiivinen
 	w_Lang015 =	Toista
@@ -468,7 +468,7 @@
 	t_Lang097 =	Paina painiketta joystick
 	t_Lang098 =	Peliohjain
 	t_Lang099 =	Nappi
-	t_Lang100 =	Näytä tiedot
+	t_Lang100 =	Näyttö selitevihjeet
 	t_Lang101 =	Nopeus
 	t_Lang102 =	Hidas
 	t_Lang103 =	Nopeasti
@@ -501,6 +501,9 @@
 	t_Lang130 =	Tahna
 	t_Lang131 =	Valitse kaikki
 	t_Lang132 =	Poistaa
+	t_Lang133 =	Näppäimistö
+	t_Lang134 =	Hiiri
+	t_Lang135 =	Muut
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Avata
@@ -685,8 +688,12 @@
 	AutoKey_TT =	Backspace poistaa
 	ManKey_TT =	Backspace poistaa
 	AbortKey_TT =	Backspace poistaa
+	PauseKey_TT =	Backspace poistaa
+	RecKey_TT =	Backspace poistaa
+	RecNewKey_TT =	Backspace poistaa
+	FastKey_TT =	Backspace poistaa
+	SlowKey_TT =	Backspace poistaa
 	JoyKey_TT =	Paina painiketta joystick
-	PauseKey_TT =	Keskeyttää suorittamisen sijasta pysähtymättä
 	OnFinish_TT =	
 	(LTrim	
 		shutdown vaihtoehtoja
@@ -716,7 +723,6 @@
 	CopyTo_TT =	Kopioida...
 	Capt_TT =	Capture näppäinpainallukset tässä ikkunassa
 	OnScCtrl_TT =	Näyttösäädöt Työkalurivi
-	ShowStep_TT =	Näyttö selitevihjeet
 	ApplyT_TT =	Käyttää
 	ApplyI_TT =	Käyttää
 	ApplyL_TT =	Insertin laatikko (Insert)

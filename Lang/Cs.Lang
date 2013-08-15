@@ -125,7 +125,7 @@
 	w_Lang009 =	Ovládací prvky panelu nástrojů
 	w_Lang010 =	Pauza
 	w_Lang011 =	Smyčka
-	w_Lang012 =	Zachyťte klíče
+	w_Lang012 =	Zachytit stisky kláves v tomto okně
 	w_Lang013 =	Minimalizovat do tray
 	w_Lang014 =	Klávesové Zkratky Vždy Aktivní
 	w_Lang015 =	Opakovat
@@ -468,7 +468,7 @@
 	t_Lang097 =	Stiskněte tlačítko na joysticku
 	t_Lang098 =	Joystick
 	t_Lang099 =	Tlačítko
-	t_Lang100 =	Zobrazit informace
+	t_Lang100 =	Zobrazit bublinové tipy
 	t_Lang101 =	Rychlost
 	t_Lang102 =	Pomalu
 	t_Lang103 =	Rychle
@@ -501,6 +501,9 @@
 	t_Lang130 =	Pasta
 	t_Lang131 =	Vybrat vše
 	t_Lang132 =	Vymazat
+	t_Lang133 =	Klávesnice
+	t_Lang134 =	Myš
+	t_Lang135 =	Ostatní
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Otevřít
@@ -685,8 +688,12 @@
 	AutoKey_TT =	Backspace zrušte
 	ManKey_TT =	Backspace zrušte
 	AbortKey_TT =	Backspace zrušte
+	PauseKey_TT =	Backspace zrušte
+	RecKey_TT =	Backspace zrušte
+	RecNewKey_TT =	Backspace zrušte
+	FastKey_TT =	Backspace zrušte
+	SlowKey_TT =	Backspace zrušte
 	JoyKey_TT =	Stiskněte tlačítko na joysticku
-	PauseKey_TT =	Pozastaví výkon místo zastavení
 	OnFinish_TT =	
 	(LTrim	
 		vypnutí možnosti
@@ -716,7 +723,6 @@
 	CopyTo_TT =	Kopírovat do...
 	Capt_TT =	Zachytit stisky kláves v tomto okně
 	OnScCtrl_TT =	Zobrazit Ovládací Panel
-	ShowStep_TT =	Zobrazit bublinové tipy
 	ApplyT_TT =	Platit
 	ApplyI_TT =	Platit
 	ApplyL_TT =	Vložit z krabice (Insert)

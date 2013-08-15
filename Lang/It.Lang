@@ -125,7 +125,7 @@
 	w_Lang009 =	Visualizzare i controlli barra degli strumenti
 	w_Lang010 =	Pausa
 	w_Lang011 =	Anello
-	w_Lang012 =	Cattura Keys
+	w_Lang012 =	Catturare pressioni di tasti in questa finestra
 	w_Lang013 =	Riduci a icona nella tray
 	w_Lang014 =	Tasti Di Scelta Rapida Sempre Attivi
 	w_Lang015 =	Ripeti
@@ -468,7 +468,7 @@
 	t_Lang097 =	Premere un pulsante sul joystick
 	t_Lang098 =	Joystick
 	t_Lang099 =	Pulsante
-	t_Lang100 =	Mostra informazioni
+	t_Lang100 =	Visualizzare i fumetti
 	t_Lang101 =	Velocità
 	t_Lang102 =	Rallentare
 	t_Lang103 =	Veloce
@@ -501,6 +501,9 @@
 	t_Lang130 =	Incollare
 	t_Lang131 =	Seleziona tutto
 	t_Lang132 =	Cancellare
+	t_Lang133 =	Tastiera
+	t_Lang134 =	Mouse
+	t_Lang135 =	Altri
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Aperto
@@ -685,8 +688,12 @@
 	AutoKey_TT =	Backspace per cancellare
 	ManKey_TT =	Backspace per cancellare
 	AbortKey_TT =	Backspace per cancellare
+	PauseKey_TT =	Backspace per cancellare
+	RecKey_TT =	Backspace per cancellare
+	RecNewKey_TT =	Backspace per cancellare
+	FastKey_TT =	Backspace per cancellare
+	SlowKey_TT =	Backspace per cancellare
 	JoyKey_TT =	Premere un pulsante sul joystick
-	PauseKey_TT =	Mette in pausa l'esecuzione invece di fermarsi
 	OnFinish_TT =	
 	(LTrim	
 		opzioni di spegnimento
@@ -716,7 +723,6 @@
 	CopyTo_TT =	Copia...
 	Capt_TT =	Catturare pressioni di tasti in questa finestra
 	OnScCtrl_TT =	Visualizzare I Controlli Barra Degli Strumenti
-	ShowStep_TT =	Visualizzare i fumetti
 	ApplyT_TT =	Applicare
 	ApplyI_TT =	Applicare
 	ApplyL_TT =	Inserisci da scatola (Insert)

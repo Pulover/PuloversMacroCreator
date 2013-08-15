@@ -125,7 +125,7 @@
 	w_Lang009 =	Показване на контролите лентата с инструменти
 	w_Lang010 =	Пауза
 	w_Lang011 =	Контур
-	w_Lang012 =	Уловете Keys
+	w_Lang012 =	Улавяне на ключови преси в този прозорец
 	w_Lang013 =	Минимизиране на тавата
 	w_Lang014 =	Hotkeys Винаги Активни
 	w_Lang015 =	Повтарям
@@ -468,7 +468,7 @@
 	t_Lang097 =	Натиснете бутон на джойстика
 	t_Lang098 =	Joystick
 	t_Lang099 =	Бутон
-	t_Lang100 =	Показване на информация за
+	t_Lang100 =	Показване на балон съвети
 	t_Lang101 =	Скорост
 	t_Lang102 =	Бавно
 	t_Lang103 =	Бързо
@@ -501,6 +501,9 @@
 	t_Lang130 =	Паста
 	t_Lang131 =	Избери всички
 	t_Lang132 =	Изтриване
+	t_Lang133 =	Клавиатура
+	t_Lang134 =	Мишка
+	t_Lang135 =	Други
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Отворен
@@ -685,8 +688,12 @@
 	AutoKey_TT =	Backspace, за да изчистите
 	ManKey_TT =	Backspace, за да изчистите
 	AbortKey_TT =	Backspace, за да изчистите
+	PauseKey_TT =	Backspace, за да изчистите
+	RecKey_TT =	Backspace, за да изчистите
+	RecNewKey_TT =	Backspace, за да изчистите
+	FastKey_TT =	Backspace, за да изчистите
+	SlowKey_TT =	Backspace, за да изчистите
 	JoyKey_TT =	Натиснете бутон на джойстика
-	PauseKey_TT =	Паузите изпълнение вместо да спре
 	OnFinish_TT =	
 	(LTrim	
 		изключване опции
@@ -716,7 +723,6 @@
 	CopyTo_TT =	Копирайте...
 	Capt_TT =	Улавяне на ключови преси в този прозорец
 	OnScCtrl_TT =	Покажете Контролите Лентата С Инструменти
-	ShowStep_TT =	Показване на балон съвети
 	ApplyT_TT =	Нанесете
 	ApplyI_TT =	Нанесете
 	ApplyL_TT =	Поставете от кутия (Insert)

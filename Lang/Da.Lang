@@ -125,7 +125,7 @@
 	w_Lang009 =	Display kontrol værktøjslinje
 	w_Lang010 =	Pause
 	w_Lang011 =	Loop
-	w_Lang012 =	Capture Keys
+	w_Lang012 =	Capture tastetryk i dette vindue
 	w_Lang013 =	Minimaliseren naar tray...
 	w_Lang014 =	Hotkeys Altid Aktive
 	w_Lang015 =	Gentag
@@ -468,7 +468,7 @@
 	t_Lang097 =	Tryk på en knap på joysticket
 	t_Lang098 =	Joystick
 	t_Lang099 =	Knap
-	t_Lang100 =	Vis Info
+	t_Lang100 =	Vis ballontip
 	t_Lang101 =	Hastighed
 	t_Lang102 =	Langsom
 	t_Lang103 =	Fast
@@ -501,6 +501,9 @@
 	t_Lang130 =	Indsæt
 	t_Lang131 =	Vælg alt
 	t_Lang132 =	Slet
+	t_Lang133 =	Keyboard
+	t_Lang134 =	Mus
+	t_Lang135 =	Andre
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Åbent
@@ -685,8 +688,12 @@
 	AutoKey_TT =	Backspace for at slette
 	ManKey_TT =	Backspace for at slette
 	AbortKey_TT =	Backspace for at slette
+	PauseKey_TT =	Backspace for at slette
+	RecKey_TT =	Backspace for at slette
+	RecNewKey_TT =	Backspace for at slette
+	FastKey_TT =	Backspace for at slette
+	SlowKey_TT =	Backspace for at slette
 	JoyKey_TT =	Tryk på en knap på joysticket
-	PauseKey_TT =	Pauser udførelse stedet for at stoppe
 	OnFinish_TT =	
 	(LTrim	
 		nedlukningsvalgmulighederne
@@ -716,7 +723,6 @@
 	CopyTo_TT =	Kopier til...
 	Capt_TT =	Capture tastetryk i dette vindue
 	OnScCtrl_TT =	Vise Kontroller Værktøjslinje
-	ShowStep_TT =	Vis ballontip
 	ApplyT_TT =	Anvend
 	ApplyI_TT =	Anvend
 	ApplyL_TT =	Indsæt fra kassen (Insert)

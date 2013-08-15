@@ -125,7 +125,7 @@
 	w_Lang009 =	Vise kontrollene verktøylinjen
 	w_Lang010 =	Pause
 	w_Lang011 =	Loop
-	w_Lang012 =	Capture Keys
+	w_Lang012 =	Fange tastetrykk i dette vinduet
 	w_Lang013 =	Minimere å brett
 	w_Lang014 =	Hurtigtaster Alltid Aktive
 	w_Lang015 =	Gjentar
@@ -468,7 +468,7 @@
 	t_Lang097 =	Trykk på en knapp på joysticken
 	t_Lang098 =	Joystick
 	t_Lang099 =	Button
-	t_Lang100 =	Vis informasjon
+	t_Lang100 =	Vise boblehjelp
 	t_Lang101 =	Fart
 	t_Lang102 =	Sakte
 	t_Lang103 =	Fast
@@ -501,6 +501,9 @@
 	t_Lang130 =	Lim
 	t_Lang131 =	Velg Alle
 	t_Lang132 =	Slett
+	t_Lang133 =	Keyboard
+	t_Lang134 =	Mus
+	t_Lang135 =	Annet
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Åpent
@@ -685,8 +688,12 @@
 	AutoKey_TT =	Tilbaketasten for å fjerne
 	ManKey_TT =	Tilbaketasten for å fjerne
 	AbortKey_TT =	Tilbaketasten for å fjerne
+	PauseKey_TT =	Tilbaketasten for å fjerne
+	RecKey_TT =	Tilbaketasten for å fjerne
+	RecNewKey_TT =	Tilbaketasten for å fjerne
+	FastKey_TT =	Tilbaketasten for å fjerne
+	SlowKey_TT =	Tilbaketasten for å fjerne
 	JoyKey_TT =	Trykk på en knapp på joysticken
-	PauseKey_TT =	Pauser gjennomføring stedet for å stoppe
 	OnFinish_TT =	
 	(LTrim	
 		nedleggelse alternativer
@@ -716,7 +723,6 @@
 	CopyTo_TT =	Kopier til...
 	Capt_TT =	Fange tastetrykk i dette vinduet
 	OnScCtrl_TT =	Vise Kontrollene Verktøylinjen
-	ShowStep_TT =	Vise boblehjelp
 	ApplyT_TT =	Påfør
 	ApplyI_TT =	Påfør
 	ApplyL_TT =	Sett fra boksen (Insert)

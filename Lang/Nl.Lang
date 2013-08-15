@@ -125,7 +125,7 @@
 	w_Lang009 =	Weer controles werkbalk
 	w_Lang010 =	Pauze
 	w_Lang011 =	Lus
-	w_Lang012 =	Capture Keys
+	w_Lang012 =	Capture-toets drukt in dit venster
 	w_Lang013 =	Minimaliseren naar tray
 	w_Lang014 =	Sneltoetsen Altijd Actief
 	w_Lang015 =	Herhalen
@@ -468,7 +468,7 @@
 	t_Lang097 =	Druk op een knop op de joystick
 	t_Lang098 =	Bedieningshendel
 	t_Lang099 =	Knop
-	t_Lang100 =	Toon info
+	t_Lang100 =	Weer ballontips
 	t_Lang101 =	Snelheid
 	t_Lang102 =	Vertragen
 	t_Lang103 =	Snel
@@ -501,6 +501,9 @@
 	t_Lang130 =	Plakken
 	t_Lang131 =	Alles selecteren
 	t_Lang132 =	Verwijder
+	t_Lang133 =	Toetsenbord
+	t_Lang134 =	Muis
+	t_Lang135 =	Anderen
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Open
@@ -685,8 +688,12 @@
 	AutoKey_TT =	Backspace om te wissen
 	ManKey_TT =	Backspace om te wissen
 	AbortKey_TT =	Backspace om te wissen
+	PauseKey_TT =	Backspace om te wissen
+	RecKey_TT =	Backspace om te wissen
+	RecNewKey_TT =	Backspace om te wissen
+	FastKey_TT =	Backspace om te wissen
+	SlowKey_TT =	Backspace om te wissen
 	JoyKey_TT =	Druk op een knop op de joystick
-	PauseKey_TT =	Hiermee onderbreekt de uitvoering in plaats van te stoppen
 	OnFinish_TT =	
 	(LTrim	
 		shutdown opties
@@ -716,7 +723,6 @@
 	CopyTo_TT =	Kopiëren naar...
 	Capt_TT =	Capture-toets drukt in dit venster
 	OnScCtrl_TT =	Weer Controles Werkbalk
-	ShowStep_TT =	Weer ballontips
 	ApplyT_TT =	Van toepassing zijn
 	ApplyI_TT =	Van toepassing zijn
 	ApplyL_TT =	Invoegen van Box (Insert)

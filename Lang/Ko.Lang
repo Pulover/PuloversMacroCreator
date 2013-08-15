@@ -125,7 +125,7 @@
 	w_Lang009 =	도구 모음 컨트롤을 표시
 	w_Lang010 =	중지
 	w_Lang011 =	고리
-	w_Lang012 =	키를 캡처
+	w_Lang012 =	이 창에서 키 누름을 캡처
 	w_Lang013 =	트레이로 최소화
 	w_Lang014 =	항상 활성화 단축키
 	w_Lang015 =	반복
@@ -468,7 +468,7 @@
 	t_Lang097 =	조이스틱 버튼을 눌러
 	t_Lang098 =	조종간
 	t_Lang099 =	단추
-	t_Lang100 =	정보 표시
+	t_Lang100 =	풍선 팁을 표시
 	t_Lang101 =	속도
 	t_Lang102 =	천천히
 	t_Lang103 =	빠른
@@ -501,6 +501,9 @@
 	t_Lang130 =	붙여 넣기
 	t_Lang131 =	모두 선택
 	t_Lang132 =	삭제
+	t_Lang133 =	건반
+	t_Lang134 =	마우스
+	t_Lang135 =	기타
 		
 ; Messages & Dialogs		
 	d_Lang001 =	열기
@@ -685,8 +688,12 @@
 	AutoKey_TT =	삭제하는 백 스페이스
 	ManKey_TT =	삭제하는 백 스페이스
 	AbortKey_TT =	삭제하는 백 스페이스
+	PauseKey_TT =	삭제하는 백 스페이스
+	RecKey_TT =	삭제하는 백 스페이스
+	RecNewKey_TT =	삭제하는 백 스페이스
+	FastKey_TT =	삭제하는 백 스페이스
+	SlowKey_TT =	삭제하는 백 스페이스
 	JoyKey_TT =	조이스틱 버튼을 눌러
-	PauseKey_TT =	실행 대신 정지를 일시 중지
 	OnFinish_TT =	
 	(LTrim	
 		종료 옵션
@@ -716,7 +723,6 @@
 	CopyTo_TT =	에 복사...
 	Capt_TT =	이 창에서 키 누름을 캡처
 	OnScCtrl_TT =	도구 모음 컨트롤을 표시
-	ShowStep_TT =	풍선 팁을 표시
 	ApplyT_TT =	신청
 	ApplyI_TT =	신청
 	ApplyL_TT =	상자 삽입 (Insert)

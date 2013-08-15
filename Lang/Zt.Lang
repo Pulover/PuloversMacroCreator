@@ -125,7 +125,7 @@
 	w_Lang009 =	顯示控制工具欄
 	w_Lang010 =	暫停
 	w_Lang011 =	循環
-	w_Lang012 =	擷取鍵
+	w_Lang012 =	在此窗口中捕捉按鍵
 	w_Lang013 =	最小化到托盤
 	w_Lang014 =	的熱鍵始終活躍
 	w_Lang015 =	重複
@@ -468,7 +468,7 @@
 	t_Lang097 =	按下操縱桿上的按鈕
 	t_Lang098 =	搖桿
 	t_Lang099 =	鈕
-	t_Lang100 =	顯示信息
+	t_Lang100 =	顯示氣球提示
 	t_Lang101 =	速度
 	t_Lang102 =	慢
 	t_Lang103 =	快
@@ -495,12 +495,15 @@
 	t_Lang124 =	碼頭
 	t_Lang125 =	取消停靠
 	t_Lang126 =	開放
-	t_Lang127 =	
+	t_Lang127 =	節省
 	t_Lang128 =	切
 	t_Lang129 =	複製
 	t_Lang130 =	貼
 	t_Lang131 =	全選
 	t_Lang132 =	刪除
+	t_Lang133 =	鍵盤
+	t_Lang134 =	鼠標
+	t_Lang135 =	他人
 		
 ; Messages & Dialogs		
 	d_Lang001 =	打開
@@ -685,8 +688,12 @@
 	AutoKey_TT =	Backspace鍵來清除
 	ManKey_TT =	Backspace鍵來清除
 	AbortKey_TT =	Backspace鍵來清除
+	PauseKey_TT =	Backspace鍵來清除
+	RecKey_TT =	Backspace鍵來清除
+	RecNewKey_TT =	Backspace鍵來清除
+	FastKey_TT =	Backspace鍵來清除
+	SlowKey_TT =	Backspace鍵來清除
 	JoyKey_TT =	按下操縱桿上的按鈕
-	PauseKey_TT =	暫停執行，而不是停止
 	OnFinish_TT =	
 	(LTrim	
 		關機選項
@@ -716,7 +723,6 @@
 	CopyTo_TT =	複製到...
 	Capt_TT =	在此窗口中捕捉按鍵
 	OnScCtrl_TT =	顯示控件工具欄
-	ShowStep_TT =	顯示氣球提示
 	ApplyT_TT =	申請
 	ApplyI_TT =	申請
 	ApplyL_TT =	插入盒（插入）

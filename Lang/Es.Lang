@@ -125,7 +125,7 @@
 	w_Lang009 =	Mostrar barra de herramientas de controles
 	w_Lang010 =	Pausa
 	w_Lang011 =	Loop
-	w_Lang012 =	Capturar Teclas
+	w_Lang012 =	Capturar pulsaciones de teclas en esta ventana
 	w_Lang013 =	Minimizar a la bandeja
 	w_Lang014 =	Hotkeys Always Active
 	w_Lang015 =	Repetir
@@ -468,7 +468,7 @@
 	t_Lang097 =	Presione un botón en la palanca de mando
 	t_Lang098 =	Palanca de mando
 	t_Lang099 =	Botón
-	t_Lang100 =	Mostrar información
+	t_Lang100 =	Mostrar globos de sugerencias
 	t_Lang101 =	Acelerar
 	t_Lang102 =	Despacio
 	t_Lang103 =	Rápido
@@ -501,6 +501,9 @@
 	t_Lang130 =	Pegar
 	t_Lang131 =	Seleccionar todo
 	t_Lang132 =	Borrar
+	t_Lang133 =	Teclado
+	t_Lang134 =	Ratón
+	t_Lang135 =	Otros
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Abierto
@@ -685,8 +688,12 @@
 	AutoKey_TT =	Retroceso para borrar
 	ManKey_TT =	Retroceso para borrar
 	AbortKey_TT =	Retroceso para borrar
+	PauseKey_TT =	Retroceso para borrar
+	RecKey_TT =	Retroceso para borrar
+	RecNewKey_TT =	Retroceso para borrar
+	FastKey_TT =	Retroceso para borrar
+	SlowKey_TT =	Retroceso para borrar
 	JoyKey_TT =	Presione un botón en la palanca de mando
-	PauseKey_TT =	Detiene la ejecución en lugar de detenerse
 	OnFinish_TT =	
 	(LTrim	
 		opciones de apagado
@@ -716,7 +723,6 @@
 	CopyTo_TT =	Copiar a...
 	Capt_TT =	Capturar pulsaciones de teclas en esta ventana
 	OnScCtrl_TT =	Mostrar Los Controles De La Barra De Herramientas
-	ShowStep_TT =	Mostrar globos de sugerencias
 	ApplyT_TT =	Aplicar
 	ApplyI_TT =	Aplicar
 	ApplyL_TT =	Inserte de Caja (Insert)

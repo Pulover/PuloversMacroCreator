@@ -125,7 +125,7 @@
 	w_Lang009 =	Οθόνη ελέγχου της γραμμής εργαλείων
 	w_Lang010 =	Παύση
 	w_Lang011 =	Βρόχος
-	w_Lang012 =	Σύλληψη Keys
+	w_Lang012 =	Σύλληψη πατήματα πλήκτρων σε αυτό το παράθυρο
 	w_Lang013 =	Ελαχιστοποίηση στο δίσκο
 	w_Lang014 =	Hotkeys Πάντα Ενεργή
 	w_Lang015 =	Επανάληψη
@@ -468,7 +468,7 @@
 	t_Lang097 =	Πατήστε ένα κουμπί στο χειριστήριο
 	t_Lang098 =	Χειριστήριο
 	t_Lang099 =	Κουμπί
-	t_Lang100 =	Εμφάνιση Πληροφορίες
+	t_Lang100 =	Εμφάνιση συμβουλές μπαλόνι
 	t_Lang101 =	Ταχύτητα
 	t_Lang102 =	Αργά
 	t_Lang103 =	Γρήγορα
@@ -501,6 +501,9 @@
 	t_Lang130 =	Πάστα
 	t_Lang131 =	Επιλογή όλων
 	t_Lang132 =	Διαγραφή
+	t_Lang133 =	Πληκτρολόγιο
+	t_Lang134 =	Ποντίκι
+	t_Lang135 =	Άλλα
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Ανοιχτό
@@ -685,8 +688,12 @@
 	AutoKey_TT =	Backspace για εκκαθάριση
 	ManKey_TT =	Backspace για εκκαθάριση
 	AbortKey_TT =	Backspace για εκκαθάριση
+	PauseKey_TT =	Backspace για εκκαθάριση
+	RecKey_TT =	Backspace για εκκαθάριση
+	RecNewKey_TT =	Backspace για εκκαθάριση
+	FastKey_TT =	Backspace για εκκαθάριση
+	SlowKey_TT =	Backspace για εκκαθάριση
 	JoyKey_TT =	Πατήστε ένα κουμπί στο χειριστήριο
-	PauseKey_TT =	Διακόπτει προσωρινά την εκτέλεση αντί να σταματήσει
 	OnFinish_TT =	
 	(LTrim	
 		Επιλογές τερματισμού
@@ -716,7 +723,6 @@
 	CopyTo_TT =	Αντιγραφή σε...
 	Capt_TT =	Σύλληψη πατήματα πλήκτρων σε αυτό το παράθυρο
 	OnScCtrl_TT =	Εμφανίσετε Ελέγχου Της Γραμμής Εργαλείων
-	ShowStep_TT =	Εμφάνιση συμβουλές μπαλόνι
 	ApplyT_TT =	Εφαρμογή
 	ApplyI_TT =	Εφαρμογή
 	ApplyL_TT =	Εισαγωγή από Box (Insert)

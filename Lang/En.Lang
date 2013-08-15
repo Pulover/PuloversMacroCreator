@@ -125,7 +125,7 @@
 	w_Lang009 =	Display controls toolbar
 	w_Lang010 =	Pause
 	w_Lang011 =	Loop
-	w_Lang012 =	Capture Keys
+	w_Lang012 =	Capture key presses in this window
 	w_Lang013 =	Minimize to tray
 	w_Lang014 =	Hotkeys Always Active
 	w_Lang015 =	Repeat
@@ -468,7 +468,7 @@
 	t_Lang097 =	Press a button on the joystick
 	t_Lang098 =	Joystick
 	t_Lang099 =	Button
-	t_Lang100 =	Show Info
+	t_Lang100 =	Display balloon tips
 	t_Lang101 =	Speed
 	t_Lang102 =	Slow
 	t_Lang103 =	Fast
@@ -501,6 +501,9 @@
 	t_Lang130 =	Paste
 	t_Lang131 =	Select All
 	t_Lang132 =	Delete
+	t_Lang133 =	Keyboard
+	t_Lang134 =	Mouse
+	t_Lang135 =	Others
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Open
@@ -685,8 +688,12 @@
 	AutoKey_TT =	Backspace to clear
 	ManKey_TT =	Backspace to clear
 	AbortKey_TT =	Backspace to clear
+	PauseKey_TT =	Backspace to clear
+	RecKey_TT =	Backspace to clear
+	RecNewKey_TT =	Backspace to clear
+	FastKey_TT =	Backspace to clear
+	SlowKey_TT =	Backspace to clear
 	JoyKey_TT =	Press a button on the joystick
-	PauseKey_TT =	Pauses execution instead of stopping
 	OnFinish_TT =	
 	(LTrim	
 		Shutdown options
@@ -716,7 +723,6 @@
 	CopyTo_TT =	Copy to...
 	Capt_TT =	Capture key presses in this window
 	OnScCtrl_TT =	Display Controls Toolbar
-	ShowStep_TT =	Display balloon tips
 	ApplyT_TT =	Apply
 	ApplyI_TT =	Apply
 	ApplyL_TT =	Insert from Box (Insert)

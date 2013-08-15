@@ -125,7 +125,7 @@
 	w_Lang009 =	Pokaż pasek narzędzi kontroli
 	w_Lang010 =	Pauza
 	w_Lang011 =	Pętla
-	w_Lang012 =	Przechwytywanie klawiszy
+	w_Lang012 =	Przechwytywanie naciśnięć klawiszy w tym oknie
 	w_Lang013 =	Zminimalizować do zasobnika
 	w_Lang014 =	Hotkeys Zawsze Aktywnych
 	w_Lang015 =	Powtarzam
@@ -468,7 +468,7 @@
 	t_Lang097 =	Naciśnij przycisk na joysticku
 	t_Lang098 =	Drążek sterowy
 	t_Lang099 =	Przycisk
-	t_Lang100 =	Pokaż informacje
+	t_Lang100 =	Pokaż porady w dymkach
 	t_Lang101 =	Prędkość
 	t_Lang102 =	Zwolnij
 	t_Lang103 =	Szybko
@@ -501,6 +501,9 @@
 	t_Lang130 =	Pasta
 	t_Lang131 =	Zaznacz wszystko
 	t_Lang132 =	Usunąć
+	t_Lang133 =	Klawiatura
+	t_Lang134 =	Mysz
+	t_Lang135 =	Inne
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Otwarte
@@ -685,8 +688,12 @@
 	AutoKey_TT =	Backspace, aby usunąć
 	ManKey_TT =	Backspace, aby usunąć
 	AbortKey_TT =	Backspace, aby usunąć
+	PauseKey_TT =	Backspace, aby usunąć
+	RecKey_TT =	Backspace, aby usunąć
+	RecNewKey_TT =	Backspace, aby usunąć
+	FastKey_TT =	Backspace, aby usunąć
+	SlowKey_TT =	Backspace, aby usunąć
 	JoyKey_TT =	Naciśnij przycisk na joysticku
-	PauseKey_TT =	Wstrzymuje wykonywanie zamiast zatrzymać
 	OnFinish_TT =	
 	(LTrim	
 		opcje wyłączania
@@ -716,7 +723,6 @@
 	CopyTo_TT =	Skopiuj do...
 	Capt_TT =	Przechwytywanie naciśnięć klawiszy w tym oknie
 	OnScCtrl_TT =	Wyświetlić Przyciski Paska Narzędzi
-	ShowStep_TT =	Pokaż porady w dymkach
 	ApplyT_TT =	Zastosować
 	ApplyI_TT =	Zastosować
 	ApplyL_TT =	Wstaw z pudełkiem (Insert)

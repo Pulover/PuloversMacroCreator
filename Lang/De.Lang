@@ -125,7 +125,7 @@
 	w_Lang009 =	Display-Steuerelemente Symbolleiste
 	w_Lang010 =	Pause
 	w_Lang011 =	Loop
-	w_Lang012 =	Tasten erfassen 
+	w_Lang012 =	Tastdruck in diesem Fenster erfassen
 	w_Lang013 =	Minimieren in den Tray
 	w_Lang014 =	Hotkeys Immer Aktiv
 	w_Lang015 =	Wiederholen
@@ -468,7 +468,7 @@
 	t_Lang097 =	Drücken Sie eine Taste auf dem Joystick
 	t_Lang098 =	Joystick
 	t_Lang099 =	Taste
-	t_Lang100 =	Info anzeigen
+	t_Lang100 =	Ballon-Tipps anzeigen
 	t_Lang101 =	Geschwindigkeit
 	t_Lang102 =	Langsam
 	t_Lang103 =	Schnell
@@ -501,6 +501,9 @@
 	t_Lang130 =	Einfügen
 	t_Lang131 =	Alles auswählen
 	t_Lang132 =	Löschen
+	t_Lang133 =	Keyboard
+	t_Lang134 =	Maus
+	t_Lang135 =	Sonstiges
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Öffnen
@@ -685,8 +688,12 @@
 	AutoKey_TT =	Rückschritttaste zum Löschen
 	ManKey_TT =	Rückschritttaste zum Löschen
 	AbortKey_TT =	Rückschritttaste zum Löschen
+	PauseKey_TT =	Rückschritttaste zum Löschen
+	RecKey_TT =	Rückschritttaste zum Löschen
+	RecNewKey_TT =	Rückschritttaste zum Löschen
+	FastKey_TT =	Rückschritttaste zum Löschen
+	SlowKey_TT =	Rückschritttaste zum Löschen
 	JoyKey_TT =	Drücken Sie eine Taste auf dem Joystick
-	PauseKey_TT =	Ausführung unterbrechen, statt anzuhalten
 	OnFinish_TT =	
 	(LTrim	
 		Optionen für das Herunterfahren
@@ -716,7 +723,6 @@
 	CopyTo_TT =	Kopieren...
 	Capt_TT =	Tastdruck in diesem Fenster erfassen
 	OnScCtrl_TT =	Steuerungs-Symbolleiste anzeigen
-	ShowStep_TT =	Ballon-Tipps anzeigen
 	ApplyT_TT =	Anwenden
 	ApplyI_TT =	Anwenden
 	ApplyL_TT =	Einfügen aus Box (Einfg)

@@ -125,7 +125,7 @@
 	w_Lang009 =	Exibir a barra de controles
 	w_Lang010 =	Pausa
 	w_Lang011 =	Loop
-	w_Lang012 =	Capturar Teclas
+	w_Lang012 =	Capturar teclas pressionadas nesta janela
 	w_Lang013 =	Minimizar para  a bandeja
 	w_Lang014 =	Atalhos Sempre Ativos
 	w_Lang015 =	Repetir
@@ -389,7 +389,7 @@
 	t_Lang018 =	Geral
 	t_Lang019 =	Iniciar / Parar Gravação
 	t_Lang020 =	Gravar Nova Macro
-	t_Lang021 =	Teclado
+	t_Lang021 =	Teclas
 	t_Lang022 =	Gravação
 	t_Lang023 =	Capturar estado da tecla (press. / solta)
 	t_Lang024 =	Cliques do Mouse
@@ -416,7 +416,7 @@
 	t_Lang045 =	Apagar Histórico
 	t_Lang046 =	Capturar Imagem
 	t_Lang047 =	Desenhar com
-	t_Lang048 =	Linha (Px)
+	t_Lang048 =	Largura da Linha (Px)
 	t_Lang049 =	Capturar ao soltar
 	t_Lang050 =	Press. Enter para Capturar
 	t_Lang051 =	Imagens capturadas
@@ -468,7 +468,7 @@
 	t_Lang097 =	Pressione um botão no joystick
 	t_Lang098 =	Joystick
 	t_Lang099 =	Botão
-	t_Lang100 =	Mostrar Info.
+	t_Lang100 =	Mostrar dicas em balões
 	t_Lang101 =	Velocidade
 	t_Lang102 =	Devagar
 	t_Lang103 =	Rápido
@@ -501,6 +501,9 @@
 	t_Lang130 =	Colar
 	t_Lang131 =	Selecionar Tudo
 	t_Lang132 =	Excluir
+	t_Lang133 =	Teclado
+	t_Lang134 =	Mouse
+	t_Lang135 =	Outros
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Abrir
@@ -685,8 +688,12 @@
 	AutoKey_TT =	Backspace para apagar
 	ManKey_TT =	Backspace para apagar
 	AbortKey_TT =	Backspace para apagar
+	PauseKey_TT =	Backspace para apagar
+	RecKey_TT =	Backspace para apagar
+	RecNewKey_TT =	Backspace para apagar
+	FastKey_TT =	Backspace para apagar
+	SlowKey_TT =	Backspace para apagar
 	JoyKey_TT =	Pressione um botão no joystick
-	PauseKey_TT =	Pausa execução ao invés de parar
 	OnFinish_TT =	
 	(LTrim	
 		Opções de desligamento
@@ -716,7 +723,6 @@
 	CopyTo_TT =	Copiar para...
 	Capt_TT =	Capturar teclas pressionadas nesta janela
 	OnScCtrl_TT =	Exibir a Barra de Controles
-	ShowStep_TT =	Mostrar dicas em balões
 	ApplyT_TT =	Aplicar
 	ApplyI_TT =	Aplicar
 	ApplyL_TT =	Inserir da Caixa (Insert)

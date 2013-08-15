@@ -125,7 +125,7 @@
 	w_Lang009 =	Mostra la barra d'eines de controls
 	w_Lang010 =	Pausa
 	w_Lang011 =	Bucle
-	w_Lang012 =	Captura Keys
+	w_Lang012 =	Captura pulsacions de tecles en aquesta finestra
 	w_Lang013 =	Minimitza a la safata
 	w_Lang014 =	Tecles D'accés Directe Sempre Actives
 	w_Lang015 =	Repetir
@@ -468,7 +468,7 @@
 	t_Lang097 =	Premeu un botó a la palanca de comandament
 	t_Lang098 =	Palanca de comandament
 	t_Lang099 =	Botó
-	t_Lang100 =	Mostrar informació
+	t_Lang100 =	Mostra globus de suggeriments
 	t_Lang101 =	Accelerar
 	t_Lang102 =	Poc a poc
 	t_Lang103 =	Ràpid
@@ -501,6 +501,9 @@
 	t_Lang130 =	Enganxar
 	t_Lang131 =	Selecciona tot
 	t_Lang132 =	Esborrar
+	t_Lang133 =	Teclat
+	t_Lang134 =	Ratolí
+	t_Lang135 =	Altres
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Obert
@@ -685,8 +688,12 @@
 	AutoKey_TT =	Retrocés per esborrar
 	ManKey_TT =	Retrocés per esborrar
 	AbortKey_TT =	Retrocés per esborrar
+	PauseKey_TT =	Retrocés per esborrar
+	RecKey_TT =	Retrocés per esborrar
+	RecNewKey_TT =	Retrocés per esborrar
+	FastKey_TT =	Retrocés per esborrar
+	SlowKey_TT =	Retrocés per esborrar
 	JoyKey_TT =	Premeu un botó a la palanca de comandament
-	PauseKey_TT =	Fa una pausa en l'execució en comptes d'aturar
 	OnFinish_TT =	
 	(LTrim	
 		Opcions d'apagada
@@ -716,7 +723,6 @@
 	CopyTo_TT =	Copiar a...
 	Capt_TT =	Captura pulsacions de tecles en aquesta finestra
 	OnScCtrl_TT =	Mostrar Els Controls De La Barra D'eines
-	ShowStep_TT =	Mostra globus de suggeriments
 	ApplyT_TT =	Aplicar
 	ApplyI_TT =	Aplicar
 	ApplyL_TT =	Inseriu de Caixa (Insert)

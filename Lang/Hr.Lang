@@ -125,7 +125,7 @@
 	w_Lang009 =	Prikaz kontrole traci
 	w_Lang010 =	Pauza
 	w_Lang011 =	Petlja
-	w_Lang012 =	Hvatanje Keys
+	w_Lang012 =	Hvatanje pritiskanje tipki u ovom prozoru
 	w_Lang013 =	Smanji u ladicu
 	w_Lang014 =	Hotkeys Uvijek Aktivni
 	w_Lang015 =	Ponovite
@@ -468,7 +468,7 @@
 	t_Lang097 =	Pritisnite tipku na palici
 	t_Lang098 =	Džojstik
 	t_Lang099 =	Dugme
-	t_Lang100 =	Pokaži Info
+	t_Lang100 =	Prikaz balon savjete
 	t_Lang101 =	Ubrzati
 	t_Lang102 =	Usporite
 	t_Lang103 =	Brz
@@ -501,6 +501,9 @@
 	t_Lang130 =	Zalijepiti
 	t_Lang131 =	Odaberi sve
 	t_Lang132 =	Izbrisati
+	t_Lang133 =	Tastatura
+	t_Lang134 =	Miš
+	t_Lang135 =	Drugi
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Otvoreno
@@ -685,8 +688,12 @@
 	AutoKey_TT =	Povratna izbiti
 	ManKey_TT =	Povratna izbiti
 	AbortKey_TT =	Povratna izbiti
+	PauseKey_TT =	Povratna izbiti
+	RecKey_TT =	Povratna izbiti
+	RecNewKey_TT =	Povratna izbiti
+	FastKey_TT =	Povratna izbiti
+	SlowKey_TT =	Povratna izbiti
 	JoyKey_TT =	Pritisnite tipku na palici
-	PauseKey_TT =	Pauziranje izvršenje umjesto zaustavljanja
 	OnFinish_TT =	
 	(LTrim	
 		shutdown opcije
@@ -716,7 +723,6 @@
 	CopyTo_TT =	Kopirajte se...
 	Capt_TT =	Hvatanje pritiskanje tipki u ovom prozoru
 	OnScCtrl_TT =	Prikazali Kontrole Traci
-	ShowStep_TT =	Prikaz balon savjete
 	ApplyT_TT =	Primijeniti
 	ApplyI_TT =	Primijeniti
 	ApplyL_TT =	Stavite na kutiji (Insert)

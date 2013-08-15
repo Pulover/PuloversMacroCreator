@@ -125,7 +125,7 @@
 	w_Lang009 =	Menampilkan kontrol toolbar
 	w_Lang010 =	Berhenti sebentar
 	w_Lang011 =	Putaran
-	w_Lang012 =	Tangkap Keys
+	w_Lang012 =	Menangkap penekanan tombol dalam jendela ini
 	w_Lang013 =	Minimalkan ke tray
 	w_Lang014 =	Hotkeys Selalu Aktif
 	w_Lang015 =	Ulangi
@@ -468,7 +468,7 @@
 	t_Lang097 =	Tekan tombol pada joystick
 	t_Lang098 =	Joystick
 	t_Lang099 =	Tombol
-	t_Lang100 =	Tampilkan Info
+	t_Lang100 =	Menampilkan tips balon
 	t_Lang101 =	Mempercepat
 	t_Lang102 =	Lambat
 	t_Lang103 =	Cepat
@@ -501,6 +501,9 @@
 	t_Lang130 =	Menempelkan
 	t_Lang131 =	Pilih Semua
 	t_Lang132 =	Hapus
+	t_Lang133 =	Keyboard
+	t_Lang134 =	Mouse
+	t_Lang135 =	Lainnya
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Buka
@@ -685,8 +688,12 @@
 	AutoKey_TT =	Backspace untuk menghapus
 	ManKey_TT =	Backspace untuk menghapus
 	AbortKey_TT =	Backspace untuk menghapus
+	PauseKey_TT =	Backspace untuk menghapus
+	RecKey_TT =	Backspace untuk menghapus
+	RecNewKey_TT =	Backspace untuk menghapus
+	FastKey_TT =	Backspace untuk menghapus
+	SlowKey_TT =	Backspace untuk menghapus
 	JoyKey_TT =	Tekan tombol pada joystick
-	PauseKey_TT =	Jeda eksekusi bukannya berhenti
 	OnFinish_TT =	
 	(LTrim	
 		Pilihan Shutdown
@@ -716,7 +723,6 @@
 	CopyTo_TT =	Salin ke...
 	Capt_TT =	Menangkap penekanan tombol dalam jendela ini
 	OnScCtrl_TT =	Tampilan Toolbar Kontrol
-	ShowStep_TT =	Menampilkan tips balon
 	ApplyT_TT =	Menerapkan
 	ApplyI_TT =	Menerapkan
 	ApplyL_TT =	Masukkan dari Box (Insert)
