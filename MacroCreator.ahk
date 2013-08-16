@@ -6001,6 +6001,7 @@ If (s_Caller = "Edit")
 		GuiControl, 23:, VarName, %Par1%
 		GuiControl, 23:ChooseString, Cmd, %Par2%
 		GuiControl, 23:, Value, %Par3%
+		GoSub, Cmd
 	}
 	Else If (Type = cType26)
 	{
@@ -10187,21 +10188,21 @@ Loop, % LV_GetCount()
 :	(Type = cType43) ? LV_Modify(A_Index, "Icon" 34)
 :	(Type = cType35) ? LV_Modify(A_Index, "Icon" 35)
 :	RegExMatch(Type, cType36 "|" cType37) ? LV_Modify(A_Index, "Icon" 22)
-:	InStr(Type, "Win") ? LV_Modify(A_Index, "Icon" 81)
 :	LV_Modify(A_Index, "Icon" 71)
 	RegExMatch(Type, "Process") ? LV_Modify(A_Index, "Icon" 51)
 :	RegExMatch(Type, "Shutdown") ? LV_Modify(A_Index, "Icon" 63)
-:	(InStr(Type, "File")=1 || InStr(Type, "Drive")=1) ? LV_Modify(A_Index, "Icon" 18)
 :	(InStr(Type, "Sort") || InStr(Type, "String") || InStr(Type, "Split")) ? LV_Modify(A_Index, "Icon" 5)
 :	(InStr(Type, "InputBox") || InStr(Type, "Msg") || InStr(Type, "Tip")
 	|| InStr(Type, "Progress") || InStr(Type, "Splash")) ? LV_Modify(A_Index, "Icon" 11)
+:	InStr(Type, "Win") ? LV_Modify(A_Index, "Icon" 81)
+:	(InStr(Type, "File")=1 || InStr(Type, "Drive")=1) ? LV_Modify(A_Index, "Icon" 18)
 :	(InStr(Type, "Wait") || InStr(Type, "Input")=1) ? LV_Modify(A_Index, "Icon" 78)
 :	InStr(Type, "Ini") ? LV_Modify(A_Index, "Icon" 31)
 :	InStr(Type, "Reg") ? LV_Modify(A_Index, "Icon" 58)
 :	InStr(Type, "Sound") ? LV_Modify(A_Index, "Icon" 65)
 :	InStr(Type, "Group") ? LV_Modify(A_Index, "Icon" 23)
 :	InStr(Type, "Env") ? LV_Modify(A_Index, "Icon" 76)
-:	InStr(Type, "Get") ? LV_Modify(A_Index, "Icon" 30)
+:	(!InStr(Type, "Control") && InStr(Type, "Get")) ? LV_Modify(A_Index, "Icon" 30)
 :	(Type = "Pause") ? LV_Modify(A_Index, "Icon" 56)
 :	(Type = "Return") ? LV_Modify(A_Index, "Icon" 66)
 :	(Type = "ExitApp") ? LV_Modify(A_Index, "Icon" 15)
