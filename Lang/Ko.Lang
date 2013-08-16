@@ -693,8 +693,6 @@
 	PauseKey_TT =	삭제하는 백 스페이스
 	RecKey_TT =	삭제하는 백 스페이스
 	RecNewKey_TT =	삭제하는 백 스페이스
-	FastKey_TT =	삭제하는 백 스페이스
-	SlowKey_TT =	삭제하는 백 스페이스
 	JoyKey_TT =	조이스틱 버튼을 눌러
 	OnFinish_TT =	
 	(LTrim	

@@ -693,8 +693,6 @@
 	PauseKey_TT =	Backspace pre vymazanie
 	RecKey_TT =	Backspace pre vymazanie
 	RecNewKey_TT =	Backspace pre vymazanie
-	FastKey_TT =	Backspace pre vymazanie
-	SlowKey_TT =	Backspace pre vymazanie
 	JoyKey_TT =	Stlačte tlačidlo na joysticku
 	OnFinish_TT =	
 	(LTrim	

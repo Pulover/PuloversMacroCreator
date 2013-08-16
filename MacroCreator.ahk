@@ -249,6 +249,7 @@ IniRead, CustomColors, %IniFilePath%, WindowOptions, CustomColors, 0
 IniRead, OSCPos, %IniFilePath%, WindowOptions, OSCPos, X0 Y0
 IniRead, OSTrans, %IniFilePath%, WindowOptions, OSTrans, 255
 IniRead, OSCaption, %IniFilePath%, WindowOptions, OSCaption, 0
+IniRead, MainLayout, %IniFilePath%, ToolbarOptions, MainLayout
 
 User_Vars := new ObjIni(UserVarsPath)
 User_Vars.Read()
@@ -700,6 +701,11 @@ DefineToolbars:
 ,	RbMain.InsertBand(hPauseKey, 0, "", 18, c_Lang003, 60, 0, "", "", 50)
 ,	TB_Rebar(RbMain, 19, TbEdit, "Break"), RbMain.SetMaxRows(3)
 ,	TBHwndAll := [TbFile, TbRecPlay, TbCommand, TbSettings, TbEdit, TbPrev, TbPrevF, TbOSC]
+,	Default_MainLayout := RbMain.GetLayout()
+If (MainLayout = "ERROR")
+	return
+Loop, 3
+	RbMain.SetLayout(MainLayout)
 return
 
 TbFile:
@@ -8335,7 +8341,8 @@ GuiControl, 1:Disable, AutoKey
 If RegExMatch(o_AutoKey[A_List], "i)Joy\d+$")
 	GuiControl, 1:, JoyKey, % "|" o_AutoKey[A_List] "||"
 GuiControl, 1:Show, JoyKey
-aBand := RbMain.IDToIndex(13), RbMain.ModifyBand(aBand, "Child", hJoyKey)
+aBand := RbMain.IDToIndex(13), RbMain.GetBand(aBand,,, bSize)
+,	RbMain.ModifyBand(aBand, "Child", hJoyKey), RbMain.SetBandWidth(aBand, bSize)
 ,	ActivateHotkeys("", "", "", "", "", 1), TB_Edit(TbSettings, "WinKey", 0, 0)
 return
 
@@ -8345,8 +8352,11 @@ GuiControl, 1:Enable, AutoKey
 GuiControl, 1:Show, AutoKey
 GuiControl, 1:Hide, JoyKey
 GuiControl, 1:Enable, WinKey
-aBand := RbMain.IDToIndex(13), RbMain.ModifyBand(aBand, "Child", hAutoKey)
-,	ActivateHotkeys("", "", "", "", "", 0), TB_Edit(TbSettings, "WinKey", 0, 1)
+ActivateHotkeys(,,,,, 0), TB_Edit(TbSettings, "WinKey", 0, 1)
+,	aBand := RbMain.IDToIndex(13)
+,	RbMain.GetBand(aBand,,, bSize,,,, cChild)
+If (cChild <> hAutoKey)
+	RbMain.ModifyBand(aBand, "Child", hAutoKey), RbMain.SetBandWidth(aBand, bSize)
 return
 
 SetWin:
@@ -9725,6 +9735,7 @@ If (KeepDefKeys = 1)
 	AutoKey := DefAutoKey, ManKey := DefManKey
 IfWinExist, ahk_id %PMCOSC%
 	GoSub, 28GuiClose
+MainLayout := RbMain.GetLayout()
 GoSub, WriteSettings
 IL_Destroy(hIL_Icons)
 ExitApp
@@ -9838,6 +9849,8 @@ AbortKey := "F8"
 ,	TB_Edit(TbSettings, "CheckHkOn", KeepHkOn)
 ,	TB_Edit(TbSettings, "SetWin", 0)
 ,	TB_Edit(TbOSC, "ProgBarToggle", ShowProgBar)
+Loop, 3
+	RbMain.SetLayout(Default_MainLayout)
 WinSet, Transparent, %OSTrans%, ahk_id %PMCOSC%
 GuiControl, 28:, OSTrans, 255
 Gui, 28:-Caption
@@ -10022,6 +10035,7 @@ IniWrite, %CustomColors%, %IniFilePath%, WindowOptions, CustomColors
 IniWrite, %OSCPos%, %IniFilePath%, WindowOptions, OSCPos
 IniWrite, %OSTrans%, %IniFilePath%, WindowOptions, OSTrans
 IniWrite, %OSCaption%, %IniFilePath%, WindowOptions, OSCaption
+IniWrite, %MainLayout%, %IniFilePath%, ToolbarOptions, MainLayout
 return
 
 ;###########################################################

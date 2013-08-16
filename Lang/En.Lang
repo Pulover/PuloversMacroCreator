@@ -693,8 +693,6 @@
 	PauseKey_TT =	Backspace to clear
 	RecKey_TT =	Backspace to clear
 	RecNewKey_TT =	Backspace to clear
-	FastKey_TT =	Backspace to clear
-	SlowKey_TT =	Backspace to clear
 	JoyKey_TT =	Press a button on the joystick
 	OnFinish_TT =	
 	(LTrim	

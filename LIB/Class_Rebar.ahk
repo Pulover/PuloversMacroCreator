@@ -5,7 +5,7 @@
 ; Author:            Pulover [Rodolfo U. Batista]
 ;                    rodolfoub@gmail.com
 ; AHK version:       1.1.11.00
-; Release date:      31 July 2013
+; Release date:      16 August 2013
 ;
 ;                    Class for AutoHotkey Rebar custom controls
 ;=======================================================================================
@@ -350,17 +350,7 @@ Class Rebar extends Rebar.Private
 ;=======================================================================================
     SetBandStyle(Band, Value)
     {
-        If Value is Integer
-            Style := Value
-        Else
-        {
-            Loop, Parse, Value, %A_Space%%A_Tab%
-            {
-                If (this[ "RBBS_" A_LoopField ])
-                    Style += this[ "RBBS_" A_LoopField ]
-            }
-        }
-        this.DefineBandStruct(rbBand, Style)
+        this.DefineBandStruct(rbBand, Value)
         SendMessage, this.RB_SETBANDINFO, Band-1, &rbBand,, % "ahk_id " this.rbHwnd
         return (ErrorLevel = "FAIL") ? False : True
     }
@@ -374,7 +364,8 @@ Class Rebar extends Rebar.Private
 ;=======================================================================================
     SetBandWidth(Band, Width)
     {
-        SendMessage, this.RB_SETBANDWIDTH, Band-1, Width,, % "ahk_id " this.rbHwnd
+        this.DefineBandStruct(rbBand, "", "", "", Width)
+        SendMessage, this.RB_SETBANDINFO, Band-1, &rbBand,, % "ahk_id " this.rbHwnd
         return (ErrorLevel = "FAIL") ? False : True
     }
 ;=======================================================================================
@@ -593,7 +584,8 @@ Class Rebar extends Rebar.Private
             fMask := (Options <> "" ? this.RBBIM_STYLE : 0)
                     | (lpText <> "" ? this.RBBIM_TEXT : 0)
                     | (iImage ? this.RBBIM_IMAGE : 0)
-                    | ((hwndChild || cx) ? this.RBBIM_CHILD | this.RBBIM_SIZE | this.RBBIM_IDEALSIZE : 0)
+                    | (hwndChild ? this.RBBIM_CHILD | this.RBBIM_SIZE | this.RBBIM_IDEALSIZE : 0)
+                    | (cx ? this.RBBIM_SIZE : 0)
                     | (hbmBack <> "" ? this.RBBIM_BACKGROUND : 0)
                     | (wID ? this.RBBIM_ID : 0)
                     | (cxMinChild || cyMinChild ? this.RBBIM_CHILDSIZE : 0)
@@ -613,7 +605,7 @@ Class Rebar extends Rebar.Private
         ,   NumPut(cxIdeal, BandVar, 48 + (A_PtrSize * 5), "UInt")
         }
 ;=======================================================================================
-;    Method:             DefineBandStruct
+;    Method:             DefineBarStruct
 ;    Description:        Creates a REBARINFO structure.
 ;=======================================================================================
         DefineBarStruct(ByRef BandVar, himl)

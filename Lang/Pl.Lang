@@ -693,8 +693,6 @@
 	PauseKey_TT =	Backspace, aby usunąć
 	RecKey_TT =	Backspace, aby usunąć
 	RecNewKey_TT =	Backspace, aby usunąć
-	FastKey_TT =	Backspace, aby usunąć
-	SlowKey_TT =	Backspace, aby usunąć
 	JoyKey_TT =	Naciśnij przycisk na joysticku
 	OnFinish_TT =	
 	(LTrim	

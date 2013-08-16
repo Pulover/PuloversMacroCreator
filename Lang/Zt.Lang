@@ -693,8 +693,6 @@
 	PauseKey_TT =	Backspace鍵來清除
 	RecKey_TT =	Backspace鍵來清除
 	RecNewKey_TT =	Backspace鍵來清除
-	FastKey_TT =	Backspace鍵來清除
-	SlowKey_TT =	Backspace鍵來清除
 	JoyKey_TT =	按下操縱桿上的按鈕
 	OnFinish_TT =	
 	(LTrim	

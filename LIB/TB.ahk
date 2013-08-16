@@ -8,10 +8,10 @@
 TB_Rebar(RbPtr, BandID, tbChild, Options="", Text="")
 {
 	tbWidth := TB_GetSize(tbChild)
-	tbChild.Get("", "", "", tbBtnWidth, tbBtnHeight)
+	tbChild.Get(,,, tbBtnWidth, tbBtnHeight)
 ,	NumButtons := tbChild.GetCount()
 ,	RbPtr.InsertBand(tbChild.tbHwnd, 0, Options, BandID, Text
-	,	tbWidth+16, 0, "", tbBtnHeight, tbBtnWidth, tbWidth)
+	,	tbWidth+16, 0,, tbBtnHeight, tbBtnWidth, tbWidth)
 }
 
 TB_GetSize(tbPtr)

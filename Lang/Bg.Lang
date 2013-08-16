@@ -693,8 +693,6 @@
 	PauseKey_TT =	Backspace, за да изчистите
 	RecKey_TT =	Backspace, за да изчистите
 	RecNewKey_TT =	Backspace, за да изчистите
-	FastKey_TT =	Backspace, за да изчистите
-	SlowKey_TT =	Backspace, за да изчистите
 	JoyKey_TT =	Натиснете бутон на джойстика
 	OnFinish_TT =	
 	(LTrim	

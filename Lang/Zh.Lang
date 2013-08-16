@@ -693,8 +693,6 @@
 	PauseKey_TT =	退格键清除
 	RecKey_TT =	退格键清除
 	RecNewKey_TT =	退格键清除
-	FastKey_TT =	退格键清除
-	SlowKey_TT =	退格键清除
 	JoyKey_TT =	按下操纵杆上的按钮
 	OnFinish_TT =	
 	(LTrim	

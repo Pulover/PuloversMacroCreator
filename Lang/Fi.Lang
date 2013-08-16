@@ -693,8 +693,6 @@
 	PauseKey_TT =	Backspace poistaa
 	RecKey_TT =	Backspace poistaa
 	RecNewKey_TT =	Backspace poistaa
-	FastKey_TT =	Backspace poistaa
-	SlowKey_TT =	Backspace poistaa
 	JoyKey_TT =	Paina painiketta joystick
 	OnFinish_TT =	
 	(LTrim	
