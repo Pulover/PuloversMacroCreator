@@ -8,7 +8,7 @@
 ; Forum: http://www.autohotkey.com/board/topic/79763-macro-creator
 ; Version: 4.0.0 Alpha 2
 ; Release Date: August, 2013
-; AutoHotkey Version: 1.1.11.02
+; AutoHotkey Version: 1.1.12.00
 ; Copyright © 2012-2013 Rodolfo U. Batista
 ; GNU General Public License 3.0 or higher
 ; <http://www.gnu.org/licenses/gpl-3.0.txt>
@@ -783,6 +783,7 @@ Else
 	TB_Edit(TbFile, "Preview", ShowPrev := !ShowPrev)
 ,	RbMacro.ModifyBand(2, "Style", "Hidden", False)
 ,	RbMacro.ModifyBand(2, "MinWidth", 0)
+	GoSub, PrevRefresh
 }
 return
 
@@ -5120,7 +5121,7 @@ ImageOpt:
 Gui, 25:+owner19 +ToolWindow
 Gui, 19:Default
 Gui, 19:+Disabled
-Gui, 25:Add, GroupBox, Section W400 H120, %t_Lang046%:
+Gui, 25:Add, GroupBox, Section W400 H120, %t_Lang046%
 Gui, 25:Add, Text, ys+20 xs+10, %t_Lang047%:
 Gui, 25:Add, DDL, yp-5 xs+100 vDrawButton W75, RButton||LButton|MButton
 Gui, 25:Add, Text, yp+3 xs+210, %t_Lang048%:
@@ -10767,13 +10768,13 @@ RbMain.ModifyBand(RbMain.IDToIndex(13), "Text", w_Lang006)
 , RbMain.ModifyBand(RbMain.IDToIndex(16), "Text", w_Lang007)
 , RbMain.ModifyBand(RbMain.IDToIndex(17), "Text", w_Lang008)
 , RbMain.ModifyBand(RbMain.IDToIndex(18), "Text", c_Lang003)
-; File:
+; File
 TB_Edit(tbFile, "New", "", "", w_Lang040)
 , TB_Edit(tbFile, "Open", "", "", w_Lang041) , TB_Edit(tbFile, "Save", "", "", w_Lang042) 
 , TB_Edit(tbFile, "Export", "", "", w_Lang043), TB_Edit(tbFile, "Preview", "", "", w_Lang044), TB_Edit(tbFile, "Options", "", "", w_Lang045)
-; RecPlay:
+; RecPlay
 TB_Edit(tbRecPlay, "Record", "", "", w_Lang046), TB_Edit(tbRecPlay, "PlayStart", "", "", w_Lang047)
-; Command:
+; Command
 TB_Edit(tbCommand, "Mouse", "", "", w_Lang050), TB_Edit(tbCommand, "Text", "", "", w_Lang051), TB_Edit(tbCommand, "ControlCmd", "", "", w_Lang052)
 , TB_Edit(tbCommand, "Pause", "", "", w_Lang054), TB_Edit(tbCommand, "MsgBox", "", "", w_Lang055), TB_Edit(tbCommand, "KeyWait", "", "", w_Lang056)
 , TB_Edit(tbCommand, "Window", "", "", w_Lang057), TB_Edit(tbCommand, "Image", "", "", w_Lang058), TB_Edit(tbCommand, "Run", "", "", w_Lang059)
@@ -10781,12 +10782,12 @@ TB_Edit(tbCommand, "Mouse", "", "", w_Lang050), TB_Edit(tbCommand, "Text", "", "
 , TB_Edit(tbCommand, "IfSt", "", "", w_Lang063), TB_Edit(tbCommand, "AsVar", "", "", w_Lang064), TB_Edit(tbCommand, "AsFunc", "", "", w_Lang065)
 , TB_Edit(tbCommand, "IECom", "", "", w_Lang066), TB_Edit(tbCommand, "ComInt", "", "", w_Lang067), TB_Edit(tbCommand, "RunScrLet", "", "", w_Lang068)
 , TB_Edit(tbCommand, "SendMsg", "", "", w_Lang069)
-; Settings:
+; Settings
 TB_Edit(tbSettings, "HideMainWin", "", "", w_Lang013), TB_Edit(tbSettings, "OnScCtrl", "", "", w_Lang009)
 , TB_Edit(tbSettings, "Capt", "", "", w_Lang012), TB_Edit(tbSettings, "CheckHkOn", "", "", w_Lang014)
 , TB_Edit(tbSettings, "OnFinish", "", "", w_Lang020) , TB_Edit(tbSettings, "SetWin", "", "", t_Lang009)
 , TB_Edit(tbSettings, "WinKey", "", "", w_Lang070), TB_Edit(tbSettings, "SetJoyButton", "", "", w_Lang071)
-; Edit:
+; Edit
 TB_Edit(tbEdit, "TabPlus", "", "", w_Lang072), TB_Edit(tbEdit, "TabClose", "", "", w_Lang073), TB_Edit(tbEdit, "DuplicateList", "", "", w_Lang074)
 , TB_Edit(tbEdit, "Import", "", "", w_Lang075), TB_Edit(tbEdit, "SaveCurrentList", "", "", w_Lang076)
 , TB_Edit(tbEdit, "MoveUp", "", "", w_Lang077), TB_Edit(tbEdit, "MoveDn", "", "", w_Lang078)
@@ -10794,14 +10795,14 @@ TB_Edit(tbEdit, "TabPlus", "", "", w_Lang072), TB_Edit(tbEdit, "TabClose", "", "
 , TB_Edit(tbEdit, "Undo", "", "", w_Lang084), TB_Edit(tbEdit, "Redo", "", "", w_Lang085)
 , TB_Edit(tbEdit, "Duplicate", "", "", w_Lang079), TB_Edit(tbEdit, "CopyTo", "", "", w_Lang086) 
 , TB_Edit(tbEdit, "EditColor", "", "", w_Lang089), TB_Edit(tbEdit, "EditComm", "", "", w_Lang088), TB_Edit(tbEdit, "FindReplace", "", "", w_Lang087)
-; Preview:
+; Preview
 TB_Edit(tbPrev, "PrevDock", "", "", t_Lang124)
 , TB_Edit(tbPrev, "PrevCopy", "", "", c_Lang023), TB_Edit(tbPrev, "PrevRefresh", "", "", t_Lang014)
 , TB_Edit(tbPrev, "AutoRefresh", "", "", t_Lang015), TB_Edit(tbPrev, "OnTop", "", "", t_Lang016), TB_Edit(tbPrev, "TabIndent", "", "", t_Lang011)
 , TB_Edit(tbPrevF, "PrevDock", "", "", t_Lang125)
 , TB_Edit(tbPrevF, "PrevCopy", "", "", c_Lang023), TB_Edit(tbPrevF, "PrevRefresh", "", "", t_Lang014)
 , TB_Edit(tbPrevF, "AutoRefresh", "", "", t_Lang015), TB_Edit(tbPrevF, "OnTop", "", "", t_Lang016), TB_Edit(tbPrevF, "TabIndent", "", "", t_Lang011)
-; OSC:
+; OSC
 TB_Edit(tbOSC, "OSPlay", "", "", t_Lang112), TB_Edit(tbOSC, "OSStop", "", "", t_Lang113), TB_Edit(tbOSC, "ShowPlayMenu", "", "", t_Lang114)
 , TB_Edit(tbOSC, "RecStart", "", "", t_Lang115), TB_Edit(tbOSC, "RecStartNew", "", "", t_Lang116), TB_Edit(tbOSC, "ShowRecMenu", "", "", t_Lang117)
 , TB_Edit(tbOSC, "OSClear", "", "", t_Lang118)
