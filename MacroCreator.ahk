@@ -6,9 +6,9 @@
 ; rodolfoub@gmail.com
 ; Home: http://www.autohotkey.net/~Pulover
 ; Forum: http://www.autohotkey.com/board/topic/79763-macro-creator
-; Version: 3.8.3
+; Version: 3.8.4
 ; Release Date: August, 2013
-; AutoHotkey Version: 1.1.11.02
+; AutoHotkey Version: 1.1.12.00
 ; Copyright © 2012-2013 Rodolfo U. Batista
 ; GNU General Public License 3.0 or higher
 ; <http://www.gnu.org/licenses/gpl-3.0.txt>
@@ -62,7 +62,7 @@ Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jör
 ; Compiler Settings
 ;@Ahk2Exe-SetName Pulover's Macro Creator
 ;@Ahk2Exe-SetDescription Pulover's Macro Creator
-;@Ahk2Exe-SetVersion 3.8.3
+;@Ahk2Exe-SetVersion 3.8.4
 ;@Ahk2Exe-SetCopyright Copyright © 2012-2013 Rodolfo U. Batista
 ;@Ahk2Exe-SetOrigFilename MacroCreator.exe
 
@@ -89,7 +89,7 @@ DefaultIcon := (A_IsCompiled) ? A_ScriptFullPath
 			:  (FileExist(A_ScriptDir "\Resources\PMC3_Mult.ico") ? A_ScriptDir "\Resources\PMC3_Mult.ico" : A_AhkPath)
 Menu, Tray, Icon, %DefaultIcon%, 1, 1
 
-CurrentVersion := "3.8.3", ReleaseDate := "August, 2013"
+CurrentVersion := "3.8.4", ReleaseDate := "August, 2013"
 
 If (!FileExist(A_ScriptDir "\MacroCreator.ini") && !InStr(FileExist(A_AppData "\MacroCreator"), "D"))
 	FileCreateDir, %A_AppData%\MacroCreator
@@ -10169,21 +10169,21 @@ Loop, % LV_GetCount()
 :	(Type = cType43) ? LV_Modify(A_Index, "Icon" 36)
 :	(Type = cType35) ? LV_Modify(A_Index, "Icon" 11)
 :	RegExMatch(Type, cType36 "|" cType37) ? LV_Modify(A_Index, "Icon" 12)
-:	InStr(Type, "Win") ? LV_Modify(A_Index, "Icon" 8)
 :	RegExMatch(Type, "Process") ? LV_Modify(A_Index, "Icon" 29)
 :	RegExMatch(Type, "Shutdown") ? LV_Modify(A_Index, "Icon" 28)
-:	(InStr(Type, "File")=1 || InStr(Type, "Drive")=1) ? LV_Modify(A_Index, "Icon" 16)
 :	(InStr(Type, "contains") || InStr(Type, "Sort") || InStr(Type, "String")
 	|| InStr(Type, "Split")) ? LV_Modify(A_Index, "Icon" 17)
 	(InStr(Type, "InputBox") || InStr(Type, "Msg") || InStr(Type, "Tip")
 	|| InStr(Type, "Progress") || InStr(Type, "Splash")) ? LV_Modify(A_Index, "Icon" 21)
+:	InStr(Type, "Win") ? LV_Modify(A_Index, "Icon" 8)
+:	(InStr(Type, "File")=1 || InStr(Type, "Drive")=1) ? LV_Modify(A_Index, "Icon" 16)
 :	(InStr(Type, "Wait") || InStr(Type, "Input")=1) ? LV_Modify(A_Index, "Icon" 19)
 :	InStr(Type, "Ini") ? LV_Modify(A_Index, "Icon" 22)
 :	InStr(Type, "Reg") ? LV_Modify(A_Index, "Icon" 31)
 :	InStr(Type, "Sound") ? LV_Modify(A_Index, "Icon" 30)
 :	InStr(Type, "Group") ? LV_Modify(A_Index, "Icon" 20)
 :	InStr(Type, "Env") ? LV_Modify(A_Index, "Icon" 14)
-:	InStr(Type, "Get") ? LV_Modify(A_Index, "Icon" 18)
+:	(!InStr(Type, "Control") && InStr(Type, "Get")) ? LV_Modify(A_Index, "Icon" 18)
 :	(Type = "Pause") ? LV_Modify(A_Index, "Icon" 32)
 :	(Type = "Return") ? LV_Modify(A_Index, "Icon" 33)
 :	(Type = "ExitApp") ? LV_Modify(A_Index, "Icon" 34)
