@@ -10,7 +10,7 @@ Copyright © 2012-2013 Rodolfo U. Batista
 
 Version: 4.0.0  
 Release Date: August, 2013  
-AutoHotkey Version: 1.1.11.02  
+AutoHotkey Version: 1.1.12.00  
 
 Software License: [GNU General Public License](License.html)  
 
@@ -35,6 +35,10 @@ Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jör
 
 
 # Change Log
+
+## Version 3.8.4
+
+* Fixed some minor issues.
 
 ## Version 3.8.3
 
