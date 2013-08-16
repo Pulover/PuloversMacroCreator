@@ -8,12 +8,13 @@
 	m_Lang003 =	&Valita
 	m_Lang004 =	&Muokata
 	m_Lang005 =	M&akro
-	m_Lang006 =	Val&innat
-	m_Lang007 =	&Kieli
-	m_Lang008 =	La&hjoittaa
-	m_Lang009 =	A&pua
+	m_Lang006 =	&Katsella
+	m_Lang007 =	Val&innat
+	m_Lang008 =	Ki&eli
+	m_Lang009 =	La&hjoittaa
+	m_Lang010 =	A&pua
 		
-; File Submenu		
+; File Sub Menu		
 	f_Lang001 =	&Uusi
 	f_Lang002 =	&Avata
 	f_Lang003 =	&Tallentaa
@@ -87,14 +88,37 @@
 	r_lang010 =	P&elaa kunnes valittu rivi
 	r_lang011 =	Pelaa &valitut rivit
 		
+; View Sub Menu		
+	v_lang001 =	Aina päällimmäisenä
+	v_lang002 =	Korosta Rivejä
+	v_lang003 =	Sisennys
+	v_lang004 =	Preview
+	v_lang005 =	Työkalurivit
+	v_lang006 =	Pikanäppäimet
+	v_lang007 =	Ladata Valmiiksi
+	v_lang008 =	Tallentaa Valmiiksi
+	v_lang009 =	Tiedosto
+	v_lang010 =	Tallentaa Ja Toistaa
+	v_lang011 =	Vaihtoehtoja
+	v_lang012 =	Komennot
+	v_lang013 =	Muokata
+	v_lang014 =	Oletusarvo
+	v_lang015 =	Perustiedot
+	v_lang016 =	Asiakassuhde
+	v_lang017 =	Muokkaa
+	v_lang018 =	Palauta sarakkeet Koko
+	v_lang019 =	Automaattinen
+	v_lang020 =	Manuaalinen
+	v_lang021 =	Lopettaa
+	v_lang022 =	Tauko
+		
 ; Options Sub Menu		
 	o_Lang001 =	&Asetukset
 	o_Lang002 =	A&seta oletukseksi pikanäppäimet
 	o_Lang003 =	As&eta oletukseksi File
 	o_Lang004 =	&Poista Tiedostojärjestelmät
-	o_Lang005 =	Pa&lauta sarakkeet Koko
-	o_Lang006 =	&Oletus Pikanäppäimet
-	o_Lang007 =	Ole&tusasetukset
+	o_Lang005 =	&Oletus Pikanäppäimet
+	o_Lang006 =	Ole&tusasetukset
 		
 ; Donate Sub Menu		
 	p_Lang001 =	&PayPal lahjoituksen

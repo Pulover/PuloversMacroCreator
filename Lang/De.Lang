@@ -5,15 +5,16 @@
 ; Main Menu		
 	m_Lang001 =	&Datei
 	m_Lang002 =	&Einfügen
-	m_Lang003 =	Aus&wahl
+	m_Lang003 =	&Auswahl
 	m_Lang004 =	&Bearbeiten
 	m_Lang005 =	&Makro
-	m_Lang006 =	&Optionen
-	m_Lang007 =	&Sprache
-	m_Lang008 =	S&penden
-	m_Lang009 =	&Hilfe
+	m_Lang006 =	A&nzeigen
+	m_Lang007 =	&Optionen
+	m_Lang008 =	&Sprache
+	m_Lang009 =	S&penden
+	m_Lang010 =	&Hilfe
 		
-; File Submenu		
+; File Sub Menu		
 	f_Lang001 =	&Neu
 	f_Lang002 =	&Öffnen
 	f_Lang003 =	&Speichern
@@ -87,14 +88,37 @@
 	r_lang010 =	W&iedergabe bis zur ausgewählten Zeile
 	r_lang011 =	Ausgewählte Zeilen wiederge&ben
 		
+; View Sub Menu		
+	v_lang001 =	Immer im Vordergrund
+	v_lang002 =	Zeilen markieren
+	v_lang003 =	Einzug
+	v_lang004 =	Vorschau
+	v_lang005 =	Symbolleisten
+	v_lang006 =	Hotkeys
+	v_lang007 =	Preset Laden
+	v_lang008 =	Preset Speichern
+	v_lang009 =	Datei
+	v_lang010 =	Aufzeichnen  Play
+	v_lang011 =	Optionen
+	v_lang012 =	Befehle
+	v_lang013 =	Bearbeiten
+	v_lang014 =	Standard
+	v_lang015 =	Grundlegende
+	v_lang016 =	Brauch
+	v_lang017 =	Anpassen
+	v_lang018 =	Spaltengröße zurücksetzen 
+	v_lang019 =	Automatische
+	v_lang020 =	Handbuch
+	v_lang021 =	Stopp
+	v_lang022 =	Pause
+		
 ; Options Sub Menu		
 	o_Lang001 =	&Einstellungen
 	o_Lang002 =	Hotkeys &als Standard festlegen 
 	o_Lang003 =	A&ls Standard-Datei festlegen
 	o_Lang004 =	Standard-Datei e&ntfernen 
-	o_Lang005 =	Spaltengröße &zurücksetzen 
-	o_Lang006 =	&Standard-Hotkeys
-	o_Lang007 =	S&tandardeinstellungen
+	o_Lang005 =	&Standard-Hotkeys
+	o_Lang006 =	S&tandardeinstellungen
 		
 ; Donate Sub Menu		
 	p_Lang001 =	&PayPal Spende

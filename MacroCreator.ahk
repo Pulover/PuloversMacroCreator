@@ -6,7 +6,7 @@
 ; pulover@macrocreator.com
 ; Home: http://www.macrocreator.com
 ; Forum: http://www.autohotkey.com/board/topic/79763-macro-creator
-; Version: 4.0.0 Alpha 2
+; Version: 4.0.0 Alpha 3
 ; Release Date: August, 2013
 ; AutoHotkey Version: 1.1.12.00
 ; Copyright © 2012-2013 Rodolfo U. Batista
@@ -121,7 +121,7 @@ Loop
 		break
 }
 
-CurrentVersion := "4.0.0 Alpha 2", ReleaseDate := "August, 2013"
+CurrentVersion := "4.0.0 Alpha 3", ReleaseDate := "August, 2013"
 
 ;##### Ini File Read #####
 
@@ -250,6 +250,7 @@ IniRead, OSCPos, %IniFilePath%, WindowOptions, OSCPos, X0 Y0
 IniRead, OSTrans, %IniFilePath%, WindowOptions, OSTrans, 255
 IniRead, OSCaption, %IniFilePath%, WindowOptions, OSCaption, 0
 IniRead, MainLayout, %IniFilePath%, ToolbarOptions, MainLayout
+IniRead, MacroLayout, %IniFilePath%, ToolbarOptions, MacroLayout
 
 User_Vars := new ObjIni(UserVarsPath)
 User_Vars.Read()
@@ -757,6 +758,7 @@ GoSub, BuildOSCWin
 ,	RbMacro := New Rebar(hRbMacro)
 ,	RbMacro.InsertBand(hMacroCh, 0, "NoGripper", 30, "", gWidth/2, 0, "", rHeight, 0, Ideal)
 ,	RbMacro.InsertBand(hPrevCh, 0, "", 31, "", gWidth/2, 0, "", rHeight, 0)
+,	(MacroLayout = "ERROR") ? "" : RbMacro.SetLayout(MacroLayout)
 ,	!ShowPrev ? RbMacro.ModifyBand(2, "Style", "Hidden")
 return
 
@@ -2534,10 +2536,10 @@ You should have received a copy of the GNU General Public License along with thi
 Gui, 26:Font
 Gui, 26:Add, Button, -Wrap Default y+20 xp-10 W80 H23 gTipClose, %c_Lang020%
 Gui, 26:Font, Bold, Tahoma
-Gui, 26:Add, Text, yp-3 xp+255 H25 Center Hidden vHolderStatic, %m_Lang008%
+Gui, 26:Add, Text, yp-3 xp+255 H25 Center Hidden vHolderStatic, %m_Lang009%
 GuiControlGet, Hold, 26:Pos, HolderStatic
 Gui, 26:Add, Progress, % "x" 429 - HoldW " yp wp+20 hp BackgroundF68C06 vProgStatic Disabled"
-Gui, 26:Add, Text, xp yp wp hp Border cWhite Center 0x200 BackgroundTrans vDonateStatic gDonatePayPal, %m_Lang008%
+Gui, 26:Add, Text, xp yp wp hp Border cWhite Center 0x200 BackgroundTrans vDonateStatic gDonatePayPal, %m_Lang009%
 Gui, 26:Font
 GuiControl, 26:Focus, %c_Lang020%
 Gui, 26:Show, W460, %t_Lang076%
@@ -9735,7 +9737,7 @@ If (KeepDefKeys = 1)
 	AutoKey := DefAutoKey, ManKey := DefManKey
 IfWinExist, ahk_id %PMCOSC%
 	GoSub, 28GuiClose
-MainLayout := RbMain.GetLayout()
+MainLayout := RbMain.GetLayout(), MacroLayout := RbMacro.GetLayout() 
 GoSub, WriteSettings
 IL_Destroy(hIL_Icons)
 ExitApp
@@ -9860,12 +9862,8 @@ GuiControl, 1:, CoordTip, CoordMode: %CoordMouse%
 GuiControl, 1:, ContextTip, #IfWin: %IfDirectContext%
 GuiControl, 1:, AbortKey, %AbortKey%
 GuiControl, 1:, PauseKey, %PauseKey%
-GuiControl, 1:, WinKey, 0
-; GuiControl, 1:, PauseKey, 0
 GuiControl, 1:, DelayG, 0
 GuiControl, 1:, KeepHkOn, 0
-GuiControl, 1:, HideMainWin, 1
-GuiControl, 1:, OnScCtrl, 1
 GoSub, DefaultMod
 GoSub, ObjCreate
 GoSub, LoadData
@@ -10036,6 +10034,7 @@ IniWrite, %OSCPos%, %IniFilePath%, WindowOptions, OSCPos
 IniWrite, %OSTrans%, %IniFilePath%, WindowOptions, OSTrans
 IniWrite, %OSCaption%, %IniFilePath%, WindowOptions, OSCaption
 IniWrite, %MainLayout%, %IniFilePath%, ToolbarOptions, MainLayout
+IniWrite, %MacroLayout%, %IniFilePath%, ToolbarOptions, MacroLayout
 return
 
 ;###########################################################
@@ -10376,6 +10375,7 @@ Menu, FileMenu, Add
 Menu, FileMenu, Add, %f_Lang010%`t%_s%Alt+F3, ListVars
 Menu, FileMenu, Add
 Menu, FileMenu, Add, %f_Lang011%`t%_s%Alt+F4, Exit
+
 Menu, InsertMenu, Add, %i_Lang001%`t%_s%F2, Mouse
 Menu, InsertMenu, Add, %i_Lang002%`t%_s%F3, Text
 Menu, InsertMenu, Add, %i_Lang003%`t%_s%F4, ControlCmd
@@ -10423,7 +10423,9 @@ Menu, SelectMenu, Add, %s_Lang006%`t%_s%Ctrl+Alt+Q, InvertCheck
 Menu, SelectMenu, Add
 Menu, SelectMenu, Add, %s_Lang007%, SelType
 Menu, SelectMenu, Add, %s_Lang008%, :SelCmdMenu
+
 Menu, CopyTo, Add, Macro1, CopyList
+
 Menu, EditMenu, Add, %m_Lang004%`t%_s%Enter, EditButton
 Menu, EditMenu, Add, %e_Lang001%`t%_s%Ctrl+D, Duplicate
 Menu, EditMenu, Add, %e_Lang003%`t%_s%Ctrl+F, FindReplace
@@ -10446,6 +10448,7 @@ Menu, EditMenu, Add, %e_Lang013%`t%_s%Insert, ApplyL
 Menu, EditMenu, Add
 Menu, EditMenu, Add, %e_Lang011%`t%_s%Ctrl+PgUp, MoveUp
 Menu, EditMenu, Add, %e_Lang012%`t%_s%Ctrl+PgDn, MoveDn
+
 Menu, MacroMenu, Add, %r_Lang001%`t%_s%Ctrl+R, Record
 Menu, MacroMenu, Add
 Menu, MacroMenu, Add, %r_Lang002%`t%_s%Ctrl+Enter, PlayStart
@@ -10461,15 +10464,41 @@ Menu, MacroMenu, Add
 Menu, MacroMenu, Add, %r_Lang009%`t%_s%Alt+1, PlayFrom
 Menu, MacroMenu, Add, %r_Lang010%`t%_s%Alt+2, PlayTo
 Menu, MacroMenu, Add, %r_Lang011%`t%_s%Alt+3, PlaySel
-Menu, OptionsMenu, Add, %o_Lang001%`t%_s%Ctrl+G, Options
-Menu, OptionsMenu, Add
-Menu, OptionsMenu, Add, %o_Lang002%, KeepDefKeys
-Menu, OptionsMenu, Add, %o_Lang003%, DefaultMacro
-Menu, OptionsMenu, Add, %o_Lang004%, RemoveDefault
-Menu, OptionsMenu, Add
-Menu, OptionsMenu, Add, %o_Lang005%`t%_s%Alt+F5, SetColSizes
-Menu, OptionsMenu, Add, %o_Lang006%`t%_s%Alt+F6, DefaultHotkeys
-Menu, OptionsMenu, Add, %o_Lang007%`t%_s%Alt+F7, LoadDefaults
+
+Menu, CustomMenu, Add, %v_lang009%, HelpAbout
+Menu, CustomMenu, Add, %v_lang010%, HelpAbout
+Menu, CustomMenu, Add, %v_lang011%, HelpAbout
+Menu, CustomMenu, Add, %v_lang012%, HelpAbout
+Menu, CustomMenu, Add, %v_lang013%, HelpAbout
+
+Menu, ToolbarsMenu, Add, %v_lang009%, HelpAbout
+Menu, ToolbarsMenu, Add, %v_lang010%, HelpAbout
+Menu, ToolbarsMenu, Add, %v_lang011%, HelpAbout
+Menu, ToolbarsMenu, Add, %v_lang012%, HelpAbout
+Menu, ToolbarsMenu, Add, %v_lang013%, HelpAbout
+Menu, ToolbarsMenu, Add, %v_lang017%, :CustomMenu
+
+Menu, HotkeyMenu, Add, %v_lang019%, HelpAbout
+Menu, HotkeyMenu, Add, %v_lang020%, HelpAbout
+Menu, HotkeyMenu, Add, %v_lang021%, HelpAbout
+Menu, HotkeyMenu, Add, %v_lang022%, HelpAbout
+
+Menu, PreLoadMenu, Add, %v_lang014%, HelpAbout
+Menu, PreLoadMenu, Add, %v_lang015%, HelpAbout
+Menu, PreLoadMenu, Add, %v_lang016%, HelpAbout
+Menu, PreSaveMenu, Add, %v_lang016%, HelpAbout
+
+Menu, ViewMenu, Add, %v_lang001%, HelpAbout
+Menu, ViewMenu, Add, %v_lang002%, HelpAbout
+Menu, ViewMenu, Add, %v_lang003%, HelpAbout
+Menu, ViewMenu, Add
+Menu, ViewMenu, Add, %v_lang004%, HelpAbout
+Menu, ViewMenu, Add, %v_lang005%, :ToolbarsMenu
+Menu, ViewMenu, Add, %v_lang006%, :HotkeyMenu
+Menu, ViewMenu, Add, %v_lang007%, :PreLoadMenu
+Menu, ViewMenu, Add, %v_lang008%, :PreSaveMenu
+Menu, ViewMenu, Add
+Menu, ViewMenu, Add, %v_lang018%`t%_s%Alt+F5, SetColSizes
 
 Loop, Parse, Lang_All, |
 {
@@ -10478,7 +10507,17 @@ Loop, Parse, Lang_All, |
 		Menu, LangMenu, Add, % Lang_%LangTxt%, LangChange
 }
 
-Menu, HelpMenu, Add, %m_Lang009%`t%_s%F1, Help
+Menu, OptionsMenu, Add, %o_Lang001%`t%_s%Ctrl+G, Options
+Menu, OptionsMenu, Add, %m_Lang008%, :LangMenu
+Menu, OptionsMenu, Add
+Menu, OptionsMenu, Add, %o_Lang002%, KeepDefKeys
+Menu, OptionsMenu, Add, %o_Lang003%, DefaultMacro
+Menu, OptionsMenu, Add, %o_Lang004%, RemoveDefault
+Menu, OptionsMenu, Add
+Menu, OptionsMenu, Add, %o_Lang005%`t%_s%Alt+F6, DefaultHotkeys
+Menu, OptionsMenu, Add, %o_Lang006%`t%_s%Alt+F7, LoadDefaults
+
+Menu, HelpMenu, Add, %m_Lang010%`t%_s%F1, Help
 Menu, HelpMenu, Add, %h_Lang006%, ShowTips
 Menu, HelpMenu, Add
 Menu, HelpMenu, Add, %h_Lang001%, Homepage
@@ -10503,10 +10542,10 @@ Menu, MenuBar, Add, %m_Lang002%, :InsertMenu
 Menu, MenuBar, Add, %m_Lang003%, :SelectMenu
 Menu, MenuBar, Add, %m_Lang004%, :EditMenu
 Menu, MenuBar, Add, %m_Lang005%, :MacroMenu
-Menu, MenuBar, Add, %m_Lang006%, :OptionsMenu
-Menu, MenuBar, Add, %m_Lang007%, :LangMenu
-Menu, MenuBar, Add, %m_Lang008%, :DonationMenu
-Menu, MenuBar, Add, %m_Lang009%, :HelpMenu
+Menu, MenuBar, Add, %m_Lang006%, :ViewMenu
+Menu, MenuBar, Add, %m_Lang007%, :OptionsMenu
+Menu, MenuBar, Add, %m_Lang009%, :DonationMenu
+Menu, MenuBar, Add, %m_Lang010%, :HelpMenu
 
 Gui, Menu, MenuBar
 
@@ -10592,7 +10631,7 @@ Menu, MacroMenu, Icon, %r_Lang006%`t%_s%Ctrl+W, %ResDllPath%, 69
 Menu, MacroMenu, Icon, %r_Lang007%`t%_s%Ctrl+H, %ResDllPath%, 48
 Menu, MacroMenu, Icon, %r_Lang008%`t%_s%Ctrl+B, %ResDllPath%, 89
 Menu, OptionsMenu, Icon, %o_Lang001%`t%_s%Ctrl+G, %ResDllPath%, 44
-Menu, HelpMenu, Icon, %m_Lang009%`t%_s%F1, %ResDllPath%, 24
+Menu, HelpMenu, Icon, %m_Lang010%`t%_s%F1, %ResDllPath%, 24
 Menu, DonationMenu, Icon, %p_Lang001%, %ResDllPath%, 12
 Menu, Tray, Icon, %w_Lang005%, %ResDllPath%, 47
 Menu, Tray, Icon, %w_Lang008%, %ResDllPath%, 66

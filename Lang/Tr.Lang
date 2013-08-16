@@ -8,12 +8,13 @@
 	m_Lang003 =	&Seçmek
 	m_Lang004 =	D&üzenle
 	m_Lang005 =	&Makro
-	m_Lang006 =	Se&çenekler
-	m_Lang007 =	D&il
-	m_Lang008 =	&Bağışlamak
-	m_Lang009 =	&Yardım
+	m_Lang006 =	&Görmek
+	m_Lang007 =	Se&çenekler
+	m_Lang008 =	D&il
+	m_Lang009 =	&Bağışlamak
+	m_Lang010 =	&Yardım
 		
-; File Submenu		
+; File Sub Menu		
 	f_Lang001 =	&Yeni
 	f_Lang002 =	&Açık
 	f_Lang003 =	&Kurtarmak
@@ -87,14 +88,37 @@
 	r_lang010 =	S&eçili satır kadar oyna
 	r_lang011 =	Se&çilen Satırlar oyna
 		
+; View Sub Menu		
+	v_lang001 =	Her zaman üstte
+	v_lang002 =	Vurgulamak Satır
+	v_lang003 =	Girinti
+	v_lang004 =	Önizleme
+	v_lang005 =	Araç Çubukları
+	v_lang006 =	Kısayol Tuşları
+	v_lang007 =	Önceden Yük
+	v_lang008 =	Önceden Kaydetmek
+	v_lang009 =	Dosya
+	v_lang010 =	Kayıt Ve Oynat
+	v_lang011 =	Seçenekleri
+	v_lang012 =	Komutları
+	v_lang013 =	Düzenleme
+	v_lang014 =	Varsayılan
+	v_lang015 =	Temel
+	v_lang016 =	Gelenek
+	v_lang017 =	Özelleştirme
+	v_lang018 =	Sütunlar Boyutu Sıfırla
+	v_lang019 =	Otomatik
+	v_lang020 =	Manuel
+	v_lang021 =	Dur
+	v_lang022 =	Durma
+		
 ; Options Sub Menu		
 	o_Lang001 =	&Ayarlar
 	o_Lang002 =	&Varsayılan Hotkeys Olarak Ayarla
 	o_Lang003 =	Va&Rsayılan Dosya Olarak Ayarla
 	o_Lang004 =	Var&sayılan Dosya kaldır
-	o_Lang005 =	S&ütunlar Boyutu Sıfırla
-	o_Lang006 =	Varsa&yılan Hotkeys
-	o_Lang007 =	Varsay&ılan Ayarlar
+	o_Lang005 =	Varsa&yılan Hotkeys
+	o_Lang006 =	Varsay&ılan Ayarlar
 		
 ; Donate Sub Menu		
 	p_Lang001 =	&PayPal Bağış
