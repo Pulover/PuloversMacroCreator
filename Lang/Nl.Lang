@@ -48,6 +48,7 @@
 	i_Lang017 =	C&OM-Interface
 	i_Lang018 =	R&un Scriptlet
 	i_Lang019 =	&Windows Messages
+	i_Lang020 =	&Zoek een commando
 		
 ; Select Sub Menu		
 	s_Lang001 =	&Alles selecteren

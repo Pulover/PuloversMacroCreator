@@ -48,6 +48,7 @@
 	i_Lang017 =	COM接口
 	i_Lang018 =	運行的Scriptlet
 	i_Lang019 =	Windows消息
+	i_Lang020 =	查找命令
 		
 ; Select Sub Menu		
 	s_Lang001 =	全選

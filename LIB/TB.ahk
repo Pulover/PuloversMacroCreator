@@ -36,6 +36,24 @@ TB_Edit(tbPtr, tbButton, Check="", Enable="", Capt="")
 		tbPtr.ModifyButtonInfo(Index, "Text", Capt)
 }
 
+TB_Layout(tbPtr, Layout, Band)
+{
+	Global RbMain
+	BtnsArray := []
+	Loop, Parse, Layout, `,, %A_Space%
+		BtnsArray[A_Index] := A_LoopField
+	tbPtr.Presets.Import(1, "", BtnsArray*)
+,	o_Layout := tbPtr.Presets.Load(1), TB_IdealSize(tbPtr, Band)
+}
+
+TB_IdealSize(tbPtr, Band)
+{
+	Global RbMain
+	tbWidth := TB_GetSize(tbPtr), aBand := RbMain.IDToIndex(Band)
+,	RbMain.ModifyBand(aBand, "IdealSize", tbWidth)
+OutputDebug, %aBand%, %tbWidth%
+}
+
 TB_Messages(wParam, lParam)
 {
 	tbPtr := TB_GetHwnd(lParam)

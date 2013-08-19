@@ -48,6 +48,7 @@
 	i_Lang017 =	COM 인터페이스
 	i_Lang018 =	스크립틀릿을 실행
 	i_Lang019 =	윈도우 메시지
+	i_Lang020 =	명령 찾기
 		
 ; Select Sub Menu		
 	s_Lang001 =	모두 선택

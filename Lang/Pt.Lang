@@ -40,7 +40,7 @@
 	i_Lang009 =	E&xecutar / Arquivos / Texto / Misc.
 	i_Lang010 =	&Loop
 	i_Lang011 =	P&ular
-	i_Lang012 =	R&ótulo
+	i_Lang012 =	Rótul&o
 	i_Lang013 =	&Declaração Se
 	i_Lang014 =	&Variáveis
 	i_Lang015 =	&Funções
@@ -48,6 +48,7 @@
 	i_Lang017 =	I&nterface COM
 	i_Lang018 =	Execut&ar Scriptlet
 	i_Lang019 =	Mensa&ges Do Windows
+	i_Lang020 =	Locali&zar um comando
 		
 ; Select Sub Menu		
 	s_Lang001 =	Selecionar &Tudo

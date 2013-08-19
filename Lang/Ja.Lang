@@ -48,6 +48,7 @@
 	i_Lang017 =	COMインタフェース
 	i_Lang018 =	スクリプトレットを実行
 	i_Lang019 =	Windowsメッセージ
+	i_Lang020 =	コマンドを見つける
 		
 ; Select Sub Menu		
 	s_Lang001 =	[すべて]を選択します

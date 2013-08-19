@@ -5,7 +5,7 @@
 ; Author:            Pulover [Rodolfo U. Batista]
 ;                    rodolfoub@gmail.com
 ; AHK version:       1.1.11.00
-; Release date:      16 August 2013
+; Release date:      19 August 2013
 ;
 ;                    Class for AutoHotkey Rebar custom controls
 ;=======================================================================================
@@ -279,6 +279,7 @@ Class Rebar extends Rebar.Private
             %Property% := Value
         this.DefineBandStruct(rbBand, Style, ID, Text, Size, Image, Background
                             , MinWidth, MinHeight, IdealSize, Child)
+                            OutputDebug, %IdealSize%
         SendMessage, this.RB_SETBANDINFO, Band-1, &rbBand,, % "ahk_id " this.rbHwnd
         return (ErrorLevel = "FAIL") ? False : True
     }
@@ -589,6 +590,7 @@ Class Rebar extends Rebar.Private
                     | (hbmBack <> "" ? this.RBBIM_BACKGROUND : 0)
                     | (wID ? this.RBBIM_ID : 0)
                     | (cxMinChild || cyMinChild ? this.RBBIM_CHILDSIZE : 0)
+                    | (cxIdeal ? this.RBBIM_IDEALSIZE : 0)
             
             VarSetCapacity(BandVar, cbSize, 0)
         ,   NumPut(cbSize, BandVar, 0, "UInt")
