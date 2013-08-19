@@ -107,7 +107,6 @@ return
 +F1::GoSub, HelpAbout
 F2::GoSub, Mouse
 F3::GoSub, Text
-+F3::GoSub, Special
 F4::GoSub, ControlCmd
 F5::GoSub, Pause
 +F5::GoSub, MsgBox

@@ -3633,118 +3633,6 @@ Tooltip,
 )
 return
 
-SpecKeys:
-GoSub, TextCancel
-Special:
-Gui, 7:+owner1 -MinimizeBox +E0x00000400 +HwndCmdWin
-Gui, 1:+Disabled
-spKey := ""
-; Gui, 7:Font, s7
-Gui, 7:Add, GroupBox, W400 H170 , %c_Lang103%:
-Gui, 7:Add, Radio, -Wrap ys+20 xs+10 Group W120 vBrowser_Back gSpecKey R1, %c_Lang104%
-Gui, 7:Add, Radio, -Wrap ys+20 xp+120 W120 vBrowser_Forward gSpecKey R1, %c_Lang105%
-Gui, 7:Add, Radio, -Wrap ys+20 xp+120 W120 vBrowser_Refresh gSpecKey R1, %c_Lang106%
-Gui, 7:Add, Radio, -Wrap ys+40 xs+10 W120 vBrowser_Stop gSpecKey R1, %c_Lang107%
-Gui, 7:Add, Radio, -Wrap ys+40 xp+120 W120 vBrowser_Search gSpecKey R1, %c_Lang108%
-Gui, 7:Add, Radio, -Wrap ys+40 xp+120 W120 vBrowser_Favorites gSpecKey R1, %c_Lang109%
-Gui, 7:Add, Radio, -Wrap ys+60 xs+10 W120 vBrowser_Home gSpecKey R1, %c_Lang110%
-Gui, 7:Add, Radio, -Wrap ys+60 xp+120 W120 vLaunch_Media gSpecKey R1, %c_Lang111%
-Gui, 7:Add, Radio, -Wrap ys+60 xp+120 W120 vVolume_Mute gSpecKey R1, %c_Lang112%
-Gui, 7:Add, Radio, -Wrap ys+80 xs+10 W120 vVolume_Up gSpecKey R1, %c_Lang113%
-Gui, 7:Add, Radio, -Wrap ys+80 xp+120 W120 vVolume_Down gSpecKey R1, %c_Lang114%
-Gui, 7:Add, Radio, -Wrap ys+80 xp+120 W125 vMedia_Play_Pause gSpecKey R1, %c_Lang115%
-Gui, 7:Add, Radio, -Wrap ys+100 xs+10 W120 vMedia_Prev gSpecKey R1, %c_Lang116%
-Gui, 7:Add, Radio, -Wrap ys+100 xp+120 W120 vMedia_Next gSpecKey R1, %c_Lang117%
-Gui, 7:Add, Radio, -Wrap ys+100 xp+120 W120 vMedia_Stop gSpecKey R1, %c_Lang118% 
-Gui, 7:Add, Radio, -Wrap ys+120 xs+10 W120 vLaunch_Mail gSpecKey R1, %c_Lang119%
-Gui, 7:Add, Radio, -Wrap ys+120 xp+120 W120 vLaunch_App1 gSpecKey R1, %c_Lang120%
-Gui, 7:Add, Radio, -Wrap ys+120 xp+120 W120 vLaunch_App2 gSpecKey R1, %c_Lang121%
-Gui, 7:Add, Radio, -Wrap ys+140 xs+10 W90 vScanCode gSpecKey R1, %c_Lang122%:
-Gui, 7:Add, Text, ys+140 xp+90, VK:
-Gui, 7:Add, Edit, ys+138 xp+20 W50 vVKey 0x201
-Gui, 7:Add, Text, ys+140 xp+60, SC:
-Gui, 7:Add, Edit, ys+138 xp+20 W50 vSCode 0x201
-Gui, 7:Add, Button, -Wrap yp-1 x+0 W60 gAddSC, %c_Lang123%
-Gui, 7:Add, Button, -Wrap yp-1 x+10 W70 H23 gKeyHistory, %c_Lang124%
-Gui, 7:Add, Button, -Wrap Section Default xm W60 H23 gSpecOK, %c_Lang020%
-Gui, 7:Add, Button, -Wrap ys W60 H23 gSpecCancel, %c_Lang021%
-Gui, 7:Add, Text, ys+5 xp+80 W250 vStMsg
-Gui, 7:Show,, %c_Lang103%
-Tooltip
-Input
-return
-
-SpecKey:
-spKey := A_GuiControl
-return
-
-SpecOK:
-Gui, Submit, NoHide
-If spKey =
-	return
-If spKey = ScanCode
-{
-	If SCode = 
-	{
-		GuiControl,, StMsg, %c_Lang125%
-			return
-	}
-	Else
-		spKey := (VKey <> "") ? "VK" VKey "SC" SCode : "SC" SCode
-}
-Else
-	StringReplace, tpKey, spKey, _, %A_Space%, All
-spKey := "{" spKey "}"
-Gui, 1:-Disabled
-Gui, 7:Destroy
-Gui, 1:Default
-RowSelection := LV_GetCount("Selected")
-If RowSelection = 0
-{
-	LV_Add("Check", ListCount%A_List%+1, spKey, spKey, 1, DelayG, cType1)
-	LV_Modify(ListCount%A_List%, "Vis")
-}
-Else
-{
-	RowNumber = 0
-	Loop, %RowSelection%
-	{
-		RowNumber := LV_GetNext(RowNumber)
-		LV_Insert(RowNumber, "Check", RowNumber, spKey, spKey, 1, DelayG, cType1)
-		RowNumber++
-	}
-}
-GoSub, b_Start
-GoSub, RowCheck
-GuiControl, Focus, InputList%A_List%
-return
-
-SpecCancel:
-7GuiClose:
-7GuiEscape:
-Gui, 1:-Disabled
-Gui, 7:Destroy
-return
-
-AddSC:
-Gui, +OwnDialogs
-Gui, Submit, NoHide
-{
-	If SCode = 
-	{
-		GuiControl,, StMsg, %c_Lang125%
-		return
-	}
-	Else
-	{
-		VirtualKeys .= (VKey = "") ? "{SC" SCode "}" : "{VK" VKey "SC" SCode "}"
-		GuiControl,, StMsg, %c_Lang126%
-		Sleep, 3000
-		GuiControl,, StMsg
-	}
-}
-return
-
 EditText:
 s_Caller = Edit
 Text:
@@ -3777,8 +3665,6 @@ Gui, 8:Add, UpDown, vDelayX 0x80 Range0-999999999, %DelayG%
 Gui, 8:Add, Button, -Wrap Section Default xm y+15 W60 H23 gTextOK, %c_Lang020%
 Gui, 8:Add, Button, -Wrap ys W60 H23 gTextCancel, %c_Lang021%
 Gui, 8:Add, Button, -Wrap ys W60 H23 vTextApply gTextApply Disabled, %c_Lang131%
-Gui, 8:Add, Button, -Wrap ys W25 H23 hwndSpecialB vSpecialB gSpecKeys
-	ILButton(SpecialB, SpecIcon[1] ":" SpecIcon[2])
 Gui, 8:Add, Radio, -Wrap Section ys-45 xs+190 Checked W100 vMsc R1, %c_Lang018%
 Gui, 8:Add, Radio, -Wrap W100 vSec R1, %c_Lang019%
 Gui, 8:Add, Radio, -Wrap Section Group Checked ys-15 xs+100 W200 vRaw gRaw R1, %c_Lang045%
@@ -4843,10 +4729,10 @@ Gui, 19:Add, Radio, -Wrap Section Checked yp+25 xs W80 vImageS gImageS R1, %c_La
 Gui, 19:Add, Radio, -Wrap yp xs+125 W80 vPixelS gPixelS R1, %c_Lang064%
 Gui, 19:Add, Button, -Wrap yp-1 xs+80 W25 H25 hwndScreenshot vScreenshot gScreenshot ;, %c_Lang065%
 	ILButton(Screenshot, ScreenshotIcon[1] ":" ScreenshotIcon[2])
-Gui, 19:Add, Button, -Wrap yp xs+205 W25 H25 hwndColorPick vColorPick gEditColor Disabled
+Gui, 19:Add, Button, -Wrap yp xs+205 W25 H25 hwndColorPick vColorPick gSearchImg Disabled
 	ILButton(ColorPick, ColorIcon[1] ":" ColorIcon[2])
 Gui, 19:Add, Edit, xs vImgFile W235 R1 -Multi
-Gui, 19:Add, Button, -Wrap yp-1 x+0 W30 H23 gSearchImg, ...
+Gui, 19:Add, Button, -Wrap yp-1 x+0 W30 H23 vSearchImg gSearchImg, ...
 Gui, 19:Add, Text, yp+30 xs W180 H25, %c_Lang067%:
 Gui, 19:Add, DDL, yp-2 xs+185 W80 vIfFound gIfFound, Continue||Break|Stop|Prompt|Move|Left Click|Right Click|Middle Click
 Gui, 19:Add, Text, yp+25 xs W180 H25, %c_Lang068%:
@@ -5050,10 +4936,15 @@ return
 SearchImg:
 Gui, +OwnDialogs
 Gui, Submit, NoHide
-If ImageS = 1
+If (ImageS = 1)
 	GoSub, GetImage
-If PixelS = 1
-	GoSub, GetPixel
+If (PixelS = 1)
+{
+	If (A_GuiControl = "SearchImg")
+		GoSub, EditColor
+	Else
+		GoSub, GetPixel
+}
 return
 
 GetImage:
@@ -8428,7 +8319,7 @@ return
 EditColor:
 Gui, Submit, NoHide
 rColor := ""
-If (A_GuiControl = "ColorPick")
+If (A_GuiControl = "SearchImg")
 	rColor := ImgFile, OwnerID := CmdWin
 Else If InStr(A_GuiControl, "LVColor")
 	rColor := %A_GuiControl%, OwnerID := CmdWin
@@ -8443,7 +8334,7 @@ Else
 }
 If Dlg_Color(rColor, OwnerID, CustomColors)
 {
-	If (A_GuiControl = "ColorPick")
+	If (A_GuiControl = "SearchImg")
 	{
 		GuiControl,, ImgFile, %rColor%
 		GuiControl, +Background%rColor%, ColorPrev
@@ -10351,7 +10242,6 @@ Menu, InsertMenu, Add, %i_Lang008%`t%_s%F9, ComLoop
 Menu, InsertMenu, Add, %i_Lang009%`t%_s%F10, IfSt
 Menu, InsertMenu, Add, %i_Lang010%`t%_s%F11, IECom
 Menu, InsertMenu, Add, %i_Lang011%`t%_s%F12, SendMsg
-Menu, InsertMenu, Add, %i_Lang012%`t%_s%Shift+F3, Special
 
 TypesMenu := "Win`nFile`nString"
 Loop

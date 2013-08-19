@@ -37,6 +37,8 @@ Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jör
 
 ## Version 3.8.4
 
+* Switched functionality of *Color Picker* and *Search* buttons in *PixelSearch* for a more intuitive behavior.
+* Removed *Special Keys* window. Replaced by *Insert Keystroke*.
 * Fixed some minor issues.
 
 ## Version 3.8.3

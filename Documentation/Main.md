@@ -324,8 +324,6 @@ You can load multiple files with multiple parameters.
 
 **F3**: Text
 
-**Shift+F3**: Special Keys
-
 **F4**: Control
 
 **F5**: Pause

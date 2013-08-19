@@ -219,7 +219,7 @@
 	Parameters:
 		Start X/Y / End X/Y - Defines the Search area of the screen/window.
 		Make Screenshot - Use this tool to take a screenshot of an area of the screen (see [Instructions](#make-screenshot-tool-instructions) for details on usage).
-		Search - Search the computer for an Image File.
+		Search - Opens the File Select dialog to select an Image File.
 		If found - Selects an action to execute when an image/pixel is found.  
 			To execute a different action Select 'Continue' (or 'Break' to exit the command's loop) and use the 'If Image/Pixel Found' option in the If Statements window.
 		If not found / Error - Selects an action to execute when an image/pixel is not found or if the command finds an error.  
@@ -267,7 +267,8 @@
 
 	Parameters:
 		Start X/Y / End X/Y - Defines the Search area of the screen/window.
-		Search - Opens the Color Pick Tool. Point the mouse to the desired location and Right-Click to get the pixel code (in RGB format).
+		Color Picker - Opens the Color Pick Tool. Point the mouse to the desired location and Right-Click to get the pixel code (in RGB format).  
+		Search - Opens the Windows Color Pick dialog to select a pixel color.  
 		If found - Selects an action to execute when an image/pixel is found.  
 			To execute a different action Select 'Continue' (or 'Break' to exit the command's loop) and use the 'If Image/Pixel Found' option in the If Statements window.
 		If not found / Error - Selects an action to execute when an image/pixel is not found or if the command finds an error.  
@@ -669,11 +670,3 @@
 			[PostMessage / SendMessage](http://l.autohotkey.net/docs/commands/PostMessage.htm), [Message List](http://l.autohotkey.net/docs/misc/SendMessageList.htm), [Microsoft MSDN](http://msdn.microsoft.com)
 */
 
-/*!
-	Function: Special_Keys()
-		Add Special Keys such as Internet and Media keys.
-
-	Extra:
-		### Related
-			[List of Keys](http://l.autohotkey.net/docs/KeyList.htm)
-/*
