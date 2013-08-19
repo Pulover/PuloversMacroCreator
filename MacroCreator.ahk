@@ -4839,10 +4839,10 @@ Gui, 19:Add, Radio, -Wrap Checked y+10 xs+10 W90 vImageS gImageS R1, %c_Lang063%
 Gui, 19:Add, Radio, -Wrap yp xs+145 W90 vPixelS gPixelS R1, %c_Lang064%
 Gui, 19:Add, Button, -Wrap yp-1 xs+115 W25 H25 hwndScreenshot vScreenshot gScreenshot ;, %c_Lang065%
 	ILButton(Screenshot, ResDllPath ":" 61)
-Gui, 19:Add, Button, -Wrap yp xs+240 W25 H25 hwndColorPick vColorPick gEditColor Disabled
+Gui, 19:Add, Button, -Wrap yp xs+240 W25 H25 hwndColorPick vColorPick gSearchImg Disabled
 	ILButton(ColorPick, ResDllPath ":" 3)
 Gui, 19:Add, Edit, y+10 xs+10 vImgFile W225 R1 -Multi
-Gui, 19:Add, Button, -Wrap yp-1 x+0 W30 H23 gSearchImg, ...
+Gui, 19:Add, Button, -Wrap yp-1 x+0 W30 H23 vSearchImg gSearchImg, ...
 Gui, 19:Add, Text, y+10 xs+10 W180 H25, %c_Lang067%:
 Gui, 19:Add, DDL, yp-2 xs+185 W80 vIfFound gIfFound, Continue||Break|Stop|Prompt|Move|Left Click|Right Click|Middle Click
 Gui, 19:Add, Text, y+10 xs+10 W180 H25, %c_Lang068%:
@@ -5045,10 +5045,15 @@ return
 SearchImg:
 Gui, 19:+OwnDialogs
 Gui, 19:Submit, NoHide
-If ImageS = 1
+If (ImageS = 1)
 	GoSub, GetImage
-If PixelS = 1
-	GoSub, GetPixel
+If (PixelS = 1)
+{
+	If (A_GuiControl = "SearchImg")
+		GoSub, EditColor
+	Else
+		GoSub, GetPixel
+}
 return
 
 GetImage:
@@ -8457,7 +8462,7 @@ return
 EditColor:
 Gui, 1:Submit, NoHide
 rColor := ""
-If (A_GuiControl = "ColorPick")
+If (A_GuiControl = "SearchImg")
 	rColor := ImgFile, OwnerID := CmdWin
 Else If InStr(A_GuiControl, "LVColor")
 	rColor := %A_GuiControl%, OwnerID := CmdWin
@@ -8474,7 +8479,7 @@ Else
 }
 If Dlg_Color(rColor, OwnerID, CustomColors)
 {
-	If (A_GuiControl = "ColorPick")
+	If (A_GuiControl = "SearchImg")
 	{
 		GuiControl,, ImgFile, %rColor%
 		GuiControl, +Background%rColor%, ColorPrev
