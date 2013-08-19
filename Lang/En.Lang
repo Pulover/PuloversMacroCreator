@@ -532,6 +532,8 @@
 	t_Lang134 =	Mouse
 	t_Lang135 =	Others
 	t_Lang136 =	Highlight Rows
+	t_Lang137 =	Default Script Editor
+	t_Lang138 =	Edit Script
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Open

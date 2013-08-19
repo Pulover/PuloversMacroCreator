@@ -532,6 +532,8 @@
 	t_Lang134 =	Souris
 	t_Lang135 =	Autres
 	t_Lang136 =	Les Lignes En Surbrillance
+	t_Lang137 =	Éditeur De Script Par Défaut
+	t_Lang138 =	Modifier Le Script
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Ouvert

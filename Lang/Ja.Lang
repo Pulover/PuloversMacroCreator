@@ -532,6 +532,8 @@
 	t_Lang134 =	マウス
 	t_Lang135 =	他人
 	t_Lang136 =	ハイライトの行
+	t_Lang137 =	デフォルトのスクリプトエディタ
+	t_Lang138 =	スクリプトを編集
 		
 ; Messages & Dialogs		
 	d_Lang001 =	開く

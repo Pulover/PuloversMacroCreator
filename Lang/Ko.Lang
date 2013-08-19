@@ -532,6 +532,8 @@
 	t_Lang134 =	마우스
 	t_Lang135 =	기타
 	t_Lang136 =	하이라이트 행
+	t_Lang137 =	기본 스크립트 편집기
+	t_Lang138 =	스크립트를 편집
 		
 ; Messages & Dialogs		
 	d_Lang001 =	열기

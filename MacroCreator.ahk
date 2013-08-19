@@ -184,6 +184,7 @@ IniRead, OnRelease, %IniFilePath%, Options, OnRelease, 1
 IniRead, OnEnter, %IniFilePath%, Options, OnEnter, 0
 IniRead, LineW, %IniFilePath%, Options, LineW, 2
 IniRead, ScreenDir, %IniFilePath%, Options, ScreenDir, %SettingsFolder%\Screenshots
+IniRead, DefaultEditor, %IniFilePath%, Options, DefaultEditor, notepad.exe
 IniRead, DefaultMacro, %IniFilePath%, Options, DefaultMacro, %A_Space%
 IniRead, StdLibFile, %IniFilePath%, Options, StdLibFile, %A_Space%
 IniRead, KeepDefKeys, %IniFilePath%, Options, KeepDefKeys, 0
@@ -945,6 +946,15 @@ PrevClose:
 TB_Edit(TbFile, "Preview", ShowPrev := 0), FloatPrev := 0
 Menu, ViewMenu, UnCheck, %v_lang002%
 Gui, 2:Hide
+return
+
+EditScript:
+Preview := LV_Export(A_List)
+If (Preview = "")
+	return
+ExFileName := "PMC_" A_Now ".ahk"
+FileAppend, %Preview%, %A_Temp%\%ExFileName%, UTF-8
+Run, %DefaultEditor% %A_Temp%\%ExFileName%, %A_Temp%
 return
 
 ;##### Capture Keys #####
@@ -2188,18 +2198,21 @@ Gui, 4:Add, Text, y+5 xs+10 W200, %t_Lang044%:
 Gui, 4:Add, Edit, Limit Number yp-2 x+0 W60 R1
 Gui, 4:Add, UpDown, yp xp+60 vMaxHistory 0x80 Range0-999999999, %MaxHistory%
 Gui, 4:Add, Button, -Wrap yp x+5 gClearHistory, %t_Lang045%
-Gui, 4:Add, GroupBox, Section y+15 xs W400 H60, %t_Lang057%
+Gui, 4:Add, GroupBox, Section y+15 xs W400 H55, %t_Lang137%
+Gui, 4:Add, Edit, ys+20 xs+10 vDefaultEditor W350 R1 -Multi, %DefaultEditor%
+Gui, 4:Add, Button, -Wrap yp-1 x+0 W30 H23 gSearchEXE, ...
+Gui, 4:Add, GroupBox, Section y+18 xs W400 H55, %t_Lang057%
 Gui, 4:Add, Edit, ys+20 xs+10 vDefaultMacro W350 R1 -Multi, %DefaultMacro%
 Gui, 4:Add, Button, -Wrap yp-1 x+0 W30 H23 gSearchFile, ...
-Gui, 4:Add, GroupBox, Section y+23 xs W400 H60, %t_lang058%
+Gui, 4:Add, GroupBox, Section y+18 xs W400 H55, %t_lang058%
 Gui, 4:Add, Edit, ys+20 xs+10 vStdLibFile W350 R1 -Multi, %StdLibFile%
 Gui, 4:Add, Button, -Wrap yp-1 x+0 W30 H23 vStdLib gSearchAHK, ...
-Gui, 4:Add, GroupBox, Section y+23 xs W400 H95, %t_Lang053%
-Gui, 4:Add, Text, ys+20 xs+10, %w_Lang006%
-Gui, 4:Add, Edit, yp xp+50 W320 R1 -Multi ReadOnly, %AutoKey%
-Gui, 4:Add, Text, yp+25 xp-50, %w_Lang007%
-Gui, 4:Add, Edit, yp xp+50 W320 R1 -Multi ReadOnly, %ManKey%
-Gui, 4:Add, Checkbox, -Wrap Checked%KeepDefKeys% yp+25 xp vKeepDefKeys W320 R1, %t_Lang054%.
+Gui, 4:Add, GroupBox, Section y+18 xs W400 H70, %t_Lang053%
+Gui, 4:Add, Text, ys+20 xs+10 W50, %w_Lang006%
+Gui, 4:Add, Edit, yp x+0 W135 R1 -Multi ReadOnly, %AutoKey%
+Gui, 4:Add, Text, yp x+10 W50, %w_Lang007%
+Gui, 4:Add, Edit, yp x+0 W135 R1 -Multi ReadOnly, %ManKey%
+Gui, 4:Add, Checkbox, -Wrap Checked%KeepDefKeys% y+5 xs+10 vKeepDefKeys W320 R1, %t_Lang054%.
 Gui, 4:Tab, 4
 ; Screenshots
 Gui, 4:Add, GroupBox, Section ym xm+210 W400 H160, %t_Lang046%
@@ -2391,6 +2404,18 @@ FreeMemory()
 If !SelectedFileName
 	return
 GuiControl, 4:, DefaultMacro, %SelectedFileName%
+return
+
+SearchEXE:
+Gui, 4:Submit, NoHide
+Gui, 4:+OwnDialogs
+Gui, 4:+Disabled
+FileSelectFile, SelectedFileName,, %ProgramFiles%,, Executable Files (*.exe)
+Gui, 4:-Disabled
+FreeMemory()
+If !SelectedFileName
+	return
+GuiControl, 4:, DefaultEditor, %SelectedFileName%
 return
 
 ClearHistory:
@@ -9997,6 +10022,8 @@ MainLayout := RbMain.GetLayout(), MacroLayout := RbMacro.GetLayout()
 ,	MainWinSize := "W" mGuiWidth " H" mGuiHeight
 GoSub, WriteSettings
 IL_Destroy(hIL_Icons)
+Loop, %A_Temp%\PMC_*.ahk
+	FileDelete, %A_LoopFileFullPath%
 ExitApp
 return
 
@@ -10052,6 +10079,7 @@ AbortKey := "F8"
 ,	OnEnter := 0
 ,	LineW := 2
 ,	ScreenDir := A_AppData "\MacroCreator\Screenshots"
+,	DefaultEditor := "notepad.exe"
 ,	DefaultMacro := ""
 ,	StdLibFile := ""
 ,	Ex_AbortKey := 0
@@ -10262,6 +10290,7 @@ IniWrite, %OnRelease%, %IniFilePath%, Options, OnRelease
 IniWrite, %OnEnter%, %IniFilePath%, Options, OnEnter
 IniWrite, %LineW%, %IniFilePath%, Options, LineW
 IniWrite, %ScreenDir%, %IniFilePath%, Options, ScreenDir
+IniWrite, %DefaultEditor%, %IniFilePath%, Options, DefaultEditor
 IniWrite, %DefaultMacro%, %IniFilePath%, Options, DefaultMacro
 IniWrite, %StdLibFile%, %IniFilePath%, Options, StdLibFile
 IniWrite, %KeepDefKeys%, %IniFilePath%, Options, KeepDefKeys
@@ -11122,8 +11151,8 @@ Menu, MacroMenu, DeleteAll
 Menu, CustomMenu, DeleteAll
 Menu, ToolbarsMenu, DeleteAll
 Menu, HotkeyMenu, DeleteAll
-Menu, PreLoadMenu, DeleteAll
-Menu, PreSaveMenu, DeleteAll
+; Menu, PreLoadMenu, DeleteAll
+; Menu, PreSaveMenu, DeleteAll
 Menu, ViewMenu, DeleteAll
 Menu, OptionsMenu, DeleteAll
 Menu, DonationMenu, DeleteAll
@@ -11186,9 +11215,11 @@ TB_Edit(tbEdit, "TabPlus", "", "", w_Lang072), TB_Edit(tbEdit, "TabClose", "", "
 TB_Edit(tbPrev, "PrevDock", "", "", t_Lang124)
 , TB_Edit(tbPrev, "PrevCopy", "", "", c_Lang023), TB_Edit(tbPrev, "PrevRefresh", "", "", t_Lang014)
 , TB_Edit(tbPrev, "AutoRefresh", "", "", t_Lang015), TB_Edit(tbPrev, "OnTop", "", "", t_Lang016), TB_Edit(tbPrev, "TabIndent", "", "", t_Lang011)
+, TB_Edit(tbPrev, "EditScript", "", "", t_Lang138)
 , TB_Edit(tbPrevF, "PrevDock", "", "", t_Lang125)
 , TB_Edit(tbPrevF, "PrevCopy", "", "", c_Lang023), TB_Edit(tbPrevF, "PrevRefresh", "", "", t_Lang014)
 , TB_Edit(tbPrevF, "AutoRefresh", "", "", t_Lang015), TB_Edit(tbPrevF, "OnTop", "", "", t_Lang016), TB_Edit(tbPrevF, "TabIndent", "", "", t_Lang011)
+, TB_Edit(tbPrevF, "EditScript", "", "", t_Lang138)
 ; OSC
 TB_Edit(tbOSC, "OSPlay", "", "", t_Lang112), TB_Edit(tbOSC, "OSStop", "", "", t_Lang113), TB_Edit(tbOSC, "ShowPlayMenu", "", "", t_Lang114)
 , TB_Edit(tbOSC, "RecStart", "", "", t_Lang115), TB_Edit(tbOSC, "RecStartNew", "", "", t_Lang116), TB_Edit(tbOSC, "ShowRecMenu", "", "", t_Lang117)
