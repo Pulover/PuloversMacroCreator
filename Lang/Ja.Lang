@@ -189,7 +189,7 @@
 	w_Lang049 =	タイマー（Ctrl+Shift+Tを）
 	w_Lang050 =	マウス（F2）
 	w_Lang051 =	テキスト（F3）
-	w_Lang052 =	特殊キー（+ F3をシフト）
+	w_Lang052 =	(unused)
 	w_Lang053 =	コントロール（F4）
 	w_Lang054 =	一時停止 （F5）
 	w_Lang055 =	メッセージ （Shift+F5）
@@ -228,6 +228,7 @@
 	w_Lang088 =	コメントを編集（Ctrl+L）を
 	w_Lang089 =	編集色マーク（Ctrl+M）を
 	w_Lang090 =	カスタマイズ
+	w_Lang091 =	（Ctrlキー+ Shiftキー+ F）コマンドを見つける
 		
 ; Command Windows		
 	c_Lang001 =	マウス
@@ -652,10 +653,15 @@
 	d_Lang068 =	ヒント：
 	d_Lang069 =	
 	(LTrim	
-		助けを必要とするバグを発見したり、提案がありますか？作者にメールを送信：<a href="mailto:rodolfoub@gmail.com">rodolfoub@gmail.com</a>
-		これはフリーソフトウェアです。あなたはそれが有用である考える見つかった場合<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=rodolfoub`%40gmail`%2ecom&lc=US&item_name=Pulover`%27s`%20Macro`%20Creator&item_number=App`%2ePMC&currency_code=USD&bn=PP`%2dDonationsBF`%3abtn_donateCC_LG`%2egif`%3aNonHosted">寄付をすること</a>と開発をサポート。ありがとう。
+		多くの時間と労力は、Pulover's Macro Creatorの開発に行ってきました。あなたはそれが有用である見つけた場合は、寄付金であなたの感謝を示してご検討ください。
+		
+		寄付かは、その特徴や機能に違いはありません。
 	)	
-	d_Lang070 =	エラー：無効なホットキー選択。
+	d_Lang070 =	寄付...
+	d_Lang071 =	いや、いいよ
+	d_Lang072 =	オープンソースソフトウェアをサポート
+	d_Lang073 =	エラー：無効なホットキー選択。
+	d_Lang074 =	コマンドや関数を見つける
 		
 ; Start-up Tips		
 	Start_Tips =	

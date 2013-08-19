@@ -189,7 +189,7 @@
 	w_Lang049 =	Timer (Ctrl+Shift+T)
 	w_Lang050 =	Myszy (F2)
 	w_Lang051 =	Tekst (F3)
-	w_Lang052 =	Klawisze specjalne (Shift+F3)
+	w_Lang052 =	(unused)
 	w_Lang053 =	Control (F4)
 	w_Lang054 =	Pauza (F5)
 	w_Lang055 =	Wiadomość (Shift+F5)
@@ -228,6 +228,7 @@
 	w_Lang088 =	Edytuj komentarz (Ctrl+L)
 	w_Lang089 =	Zmień kolor zapytania (Ctrl+M)
 	w_Lang090 =	Настроить...
+	w_Lang091 =	Znajdź polecenia (Ctrl+Shift+F)
 		
 ; Command Windows		
 	c_Lang001 =	Mysz
@@ -652,10 +653,15 @@
 	d_Lang068 =	Porady:
 	d_Lang069 =	
 	(LTrim	
-		Potrzebujesz pomocy, znalazłeś błąd lub jakieś sugestie? Wyślij e-mail do autora: <a href="mailto:rodolfoub@gmail.com">rodolfoub@gmail.com</a>
-		To jest wolne oprogramowanie. Jeśli znalazłeś się przydatne uważają <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=rodolfoub`%40gmail`%2ecom&lc=US&item_name=Pulover`%27s`%20Macro`%20Creator&item_number=App`%2ePMC&currency_code=USD&bn=PP`%2dDonationsBF`%3abtn_donateCC_LG`%2egif`%3aNonHosted">w postaci darowizny</a> oraz rozwój wsparcia. Dziękuję.
+		Wiele czasu i wysiłku włożono w rozwój Pulover's Macro Creator. Jeśli okaże się to przydatne, należy rozważyć pokazuje swoje uznanie z dotacji.
+		
+		Oddawanie, czy nie, nie będzie żadnej różnicy w jego cech i funkcjonalności.
 	)	
-	d_Lang070 =	Error: Invalid Hotkey Wybrany.
+	d_Lang070 =	Darowizna...
+	d_Lang071 =	Nie, dziękuję
+	d_Lang072 =	Wsparcie oprogramowania Open Source
+	d_Lang073 =	Error: Invalid Hotkey Wybrany.
+	d_Lang074 =	Znajdź polecenie lub funkcja
 		
 ; Start-up Tips		
 	Start_Tips =	

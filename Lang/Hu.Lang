@@ -189,7 +189,7 @@
 	w_Lang049 =	Timer (Ctrl+Shift+T)
 	w_Lang050 =	Mouse (F2)
 	w_Lang051 =	Text (F3)
-	w_Lang052 =	Speciális billentyűk (Shift+F3)
+	w_Lang052 =	(unused)
 	w_Lang053 =	Control (F4)
 	w_Lang054 =	Szünet (F5)
 	w_Lang055 =	Üzenet (Shift+F5)
@@ -228,6 +228,7 @@
 	w_Lang088 =	Megjegyzés szerkesztése (Ctrl+L)
 	w_Lang089 =	Szerkesztés színvédjegy (Ctrl+M)
 	w_Lang090 =	Testreszabása
+	w_Lang091 =	Keresse meg a parancsot (Ctrl+Shift+F)
 		
 ; Command Windows		
 	c_Lang001 =	Egér
@@ -652,10 +653,15 @@
 	d_Lang068 =	tippek:
 	d_Lang069 =	
 	(LTrim	
-		Segítségre van szüksége, talált egy hibát, vagy van egy javaslatom? E-mail küldése a szerzőnek: <a href="mailto:rodolfoub@gmail.com">rodolfoub@gmail.com</a>
-		Ez egy szabad szoftver. Ha hasznosnak találta fontolóra <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=rodolfoub`%40gmail`%2ecom&lc=US&item_name=Pulover`%27s`%20Macro`%20Creator&item_number=App`%2ePMC&currency_code=USD&bn=PP`%2dDonationsBF`%3abtn_donateCC_LG`%2egif`%3aNonHosted">hogy egy adomány</a> és a támogatás fejlesztés. Köszönöm.
+		Rengeteg időt és energiát ment a fejlesztés Pulover's Macro Creator. Ha úgy találja, hogy hasznos, kérjük, fontolja mutatja meg elismerését egy adomány.
+		
+		Ajándékozó, akár nem, nem lesz különbség a szolgáltatásokat és funkciókat.
 	)	
-	d_Lang070 =	Hiba: Érvénytelen Hotkey Kiválasztott.
+	d_Lang070 =	Adományoz...
+	d_Lang071 =	Nem, kösz
+	d_Lang072 =	Támogatja a nyílt forráskódú szoftverek
+	d_Lang073 =	Hiba: Érvénytelen Hotkey Kiválasztott.
+	d_Lang074 =	Keresse meg a parancs vagy funkció
 		
 ; Start-up Tips		
 	Start_Tips =	

@@ -189,7 +189,7 @@
 	w_Lang049 =	Timer (Ctrl+Shift+T)
 	w_Lang050 =	Muis (F2)
 	w_Lang051 =	Tekst (F3)
-	w_Lang052 =	Speciale toetsen (Shift+F3)
+	w_Lang052 =	(unused)
 	w_Lang053 =	Control (F4)
 	w_Lang054 =	Pauzeren (F5)
 	w_Lang055 =	Bericht (Shift+F5)
@@ -228,6 +228,7 @@
 	w_Lang088 =	Opmerking bewerken (Ctrl+L)
 	w_Lang089 =	Bewerken kleurmarkering (Ctrl+M)
 	w_Lang090 =	Aanpassen
+	w_Lang091 =	Zoek een commando (Ctrl+Shift+F)
 		
 ; Command Windows		
 	c_Lang001 =	Muis
@@ -652,10 +653,15 @@
 	d_Lang068 =	tips:
 	d_Lang069 =	
 	(LTrim	
-		Heb je hulp nodig, vond een bug of een suggestie? Stuur een email naar de auteur: <a href="mailto:rodolfoub@gmail.com">rodolfoub@gmail.com</a>
-		Dit is een gratis software. Als je vond het nuttig achten <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=rodolfoub`%40gmail`%2ecom&lc=US&item_name=Pulover`%27s`%20Macro`%20Creator&item_number=App`%2ePMC&currency_code=USD&bn=PP`%2dDonationsBF`%3abtn_donateCC_LG`%2egif`%3aNonHosted">het maken van een donatie</a> en ondersteuning ontwikkeling. Dank u.
+		Er is veel tijd en moeite gestoken in de ontwikkeling van Pulover's Macro Creator. Als je het nuttig vinden, kunt u overwegen tonen van uw waardering met een donatie.
+		
+		Doneren of niet, zal er geen verschil in de functies en functionaliteit.
 	)	
-	d_Lang070 =	Fout: Ongeldige Sneltoets Selected.
+	d_Lang070 =	Doneren...
+	d_Lang071 =	Nee, bedankt
+	d_Lang072 =	Ondersteuning van Open Source software
+	d_Lang073 =	Fout: Ongeldige Sneltoets Selected.
+	d_Lang074 =	Zoek een opdracht of functie
 		
 ; Start-up Tips		
 	Start_Tips =	

@@ -189,7 +189,7 @@
 	w_Lang049 =	Timer (Ctrl+Skift+T)
 	w_Lang050 =	Mus (F2)
 	w_Lang051 =	Text (F3)
-	w_Lang052 =	Speciella tangenter (Skift+F3)
+	w_Lang052 =	(unused)
 	w_Lang053 =	Kontroll (F4)
 	w_Lang054 =	Paus (F5)
 	w_Lang055 =	Meddelande (Shift+F5)
@@ -228,6 +228,7 @@
 	w_Lang088 =	Redigera kommentar (Ctrl+L)
 	w_Lang089 =	Redigera färgmarkering (Ctrl+M)
 	w_Lang090 =	Anpassa
+	w_Lang091 =	Hitta ett kommando (Ctrl+Skift+F)
 		
 ; Command Windows		
 	c_Lang001 =	Mus
@@ -652,10 +653,15 @@
 	d_Lang068 =	Tips:
 	d_Lang069 =	
 	(LTrim	
-		Behöver du hjälp, hittade du en bugg eller har du ett förslag? Skicka ett mail till författaren: <a href="mailto:rodolfoub@gmail.com">rodolfoub@gmail.com</a>
-		Detta är en gratis programvara. Om du fann det användbart överväga <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=rodolfoub`%40gmail`%2ecom&lc=US&item_name=Pulover`%27s`%20Macro`%20Creator&item_number=App`%2ePMC&currency_code=USD&bn=PP`%2dDonationsBF`%3abtn_donateCC_LG`%2egif`%3aNonHosted">gör en donation</a> och stödja utvecklingen. Tack.
+		Mycket tid och ansträngning har gått till utveckling av Pulover's Macro Creator. Om du tycker det är bra, kan du överväga att visa din uppskattning med en donation.
+		
+		Donera eller inte, kommer det inte vara någon skillnad i sina funktioner och funktionalitet.
 	)	
-	d_Lang070 =	Fel: Ogiltig Hotkey Vald.
+	d_Lang070 =	Donate...
+	d_Lang071 =	NEJ TACK
+	d_Lang072 =	Stöd Open Source
+	d_Lang073 =	Fel: Ogiltig Hotkey Vald.
+	d_Lang074 =	Etsi komento tai toiminto...
 		
 ; Start-up Tips		
 	Start_Tips =	

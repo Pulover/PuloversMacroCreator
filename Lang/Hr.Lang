@@ -189,7 +189,7 @@
 	w_Lang049 =	Timer (Ctrl+Shift+T)
 	w_Lang050 =	Miš (F2)
 	w_Lang051 =	Tekst (F3)
-	w_Lang052 =	Posebne tipke (Shift+F3)
+	w_Lang052 =	(unused)
 	w_Lang053 =	Kontrola (F4)
 	w_Lang054 =	Pauza (F5)
 	w_Lang055 =	Poruka (Shift+F5)
@@ -228,6 +228,7 @@
 	w_Lang088 =	Uredi komentar (Ctrl+L)
 	w_Lang089 =	Uredi Boja oznaka (Ctrl+M)
 	w_Lang090 =	Prilagodite
+	w_Lang091 =	Pronađite naredbu (Ctrl+Shift+C)
 		
 ; Command Windows		
 	c_Lang001 =	Miš
@@ -652,10 +653,15 @@
 	d_Lang068 =	Savjet:
 	d_Lang069 =	
 	(LTrim	
-		Trebate pomoć, našli bug ili imate prijedlog? Pošaljite e-mail autoru: <a href="mailto:rodolfoub@gmail.com">rodolfoub@gmail.com</a>
-		Ovo je besplatan softver. Ako ste pronašli korisne obzir <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=rodolfoub`%40gmail`%2ecom&lc=US&item_name=Pulover`%27s`%20Macro`%20Creator&item_number=App`%2ePMC&currency_code=USD&bn=PP`%2dDonationsBF`%3abtn_donateCC_LG`%2egif`%3aNonHosted">što je donaciju</a> i podržati razvoj. Hvala Vam.
+		Puno vremena i truda je otišao u razvoju Pulover's Macro Creator. Ako vam je koristan, molimo vas da razmislite pokazuje svoju zahvalnost s donacijom.
+		
+		Doniranje ili ne, tu će biti razlike u njegovim značajkama i funkcionalnosti.
 	)	
-	d_Lang070 =	Pogreška: Invalid Hotkey Odabrani.
+	d_Lang070 =	Donirajte...
+	d_Lang071 =	Ne, hvala
+	d_Lang072 =	Podrška open source softvera
+	d_Lang073 =	Pogreška: Invalid Hotkey Odabrani.
+	d_Lang074 =	Pronađite naredbu ili funkciju
 		
 ; Start-up Tips		
 	Start_Tips =	

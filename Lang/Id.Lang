@@ -189,7 +189,7 @@
 	w_Lang049 =	Timer (Ctrl+Shift+T)
 	w_Lang050 =	Mouse (F2)
 	w_Lang051 =	Teks (F3)
-	w_Lang052 =	Tombol khusus (Shift+F3)
+	w_Lang052 =	(unused)
 	w_Lang053 =	Control (F4)
 	w_Lang054 =	Jeda (F5)
 	w_Lang055 =	Pesan (Shift+F5)
@@ -228,6 +228,7 @@
 	w_Lang088 =	Mengedit Komentar (Ctrl+L)
 	w_Lang089 =	Sunting Color Mark (Ctrl+M)
 	w_Lang090 =	Sesuaikan
+	w_Lang091 =	Cari perintah (Ctrl+Shift+F)
 		
 ; Command Windows		
 	c_Lang001 =	Mouse
@@ -652,10 +653,15 @@
 	d_Lang068 =	Tips:
 	d_Lang069 =	
 	(LTrim	
-		Butuh bantuan, menemukan bug atau punya saran? Kirim email ke penulis: <a href="mailto:rodolfoub@gmail.com"> rodolfoub@gmail.com </ a>
-		Ini adalah perangkat lunak bebas. Jika Anda menemukan itu berguna mempertimbangkan <a sumbangan </ a> dan pengembangan dukungan. Terima kasih.
+		Banyak waktu dan usaha telah pergi ke dalam pengembangan Pulover's Macro Creator. Jika Anda merasa berguna, silakan mempertimbangkan menunjukkan penghargaan Anda dengan sumbangan.
+		
+		Menyumbangkan atau tidak, tidak akan ada perbedaan dalam fitur dan fungsionalitas.
 	)	
-	d_Lang070 =	Error: Invalid Hotkey Dipilih.
+	d_Lang070 =	Donasi...
+	d_Lang071 =	Tidak, terima kasih
+	d_Lang072 =	Mendukung perangkat lunak Open Source
+	d_Lang073 =	Error: Invalid Hotkey Dipilih.
+	d_Lang074 =	Cari perintah atau fungsi
 		
 ; Start-up Tips		
 	Start_Tips =	

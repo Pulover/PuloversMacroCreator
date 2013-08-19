@@ -189,7 +189,7 @@
 	w_Lang049 =	Timer (Ctrl+Shift+T)
 	w_Lang050 =	Mus (F2)
 	w_Lang051 =	Tekst (F3)
-	w_Lang052 =	Spesielle Keys (Shift+F3)
+	w_Lang052 =	(unused)
 	w_Lang053 =	Kontroll (F4)
 	w_Lang054 =	Pause (F5)
 	w_Lang055 =	Melding (Shift+F5)
@@ -228,6 +228,7 @@
 	w_Lang088 =	Rediger Kommentar (Ctrl+L)
 	w_Lang089 =	Edit fargemerki (Ctrl+M)
 	w_Lang090 =	Tilpass
+	w_Lang091 =	Finn en kommando (Ctrl+Shift+F)
 		
 ; Command Windows		
 	c_Lang001 =	Mus
@@ -652,10 +653,15 @@
 	d_Lang068 =	tips:
 	d_Lang069 =	
 	(LTrim	
-		Trenger du hjelp, fant en bug eller har du et forslag? Send en e-post til forfatteren: <a href="mailto:rodolfoub@gmail.com">rodolfoub@gmail.com</a>
-		Dette er en gratis programvare. Hvis du fant det nyttig vurdere <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=rodolfoub`%40gmail`%2ecom&lc=US&item_name=Pulover`%27s`%20Macro`%20Creator&item_number=App`%2ePMC&currency_code=USD&bn=PP`%2dDonationsBF`%3abtn_donateCC_LG`%2egif`%3aNonHosted">gjør en donasjon</a> og støtte utvikling. Takk.
+		Mye tid og krefter har gått inn i utviklingen av Pulover's Macro Creator. Hvis du synes det er nyttig, kan du vurdere å vise din takknemlighet med en donasjon.
+		
+		Donere eller ikke, vil det ikke være noen forskjell i sine funksjoner og funksjonalitet.
 	)	
-	d_Lang070 =	Feil: Ugyldig hurtigtast Selected.
+	d_Lang070 =	Donere...
+	d_Lang071 =	Nei, takk
+	d_Lang072 =	Støtte Open Source programvare
+	d_Lang073 =	Feil: Ugyldig hurtigtast Selected.
+	d_Lang074 =	Finn en kommando eller funksjon
 		
 ; Start-up Tips		
 	Start_Tips =	

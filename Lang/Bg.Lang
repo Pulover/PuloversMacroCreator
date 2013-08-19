@@ -189,7 +189,7 @@
 	w_Lang049 =	Таймер (Ctrl+Shift+T)
 	w_Lang050 =	Mouse (F2)
 	w_Lang051 =	Текст (F3)
-	w_Lang052 =	Специални клавиши (Shift+F3)
+	w_Lang052 =	(unused)
 	w_Lang053 =	Control (F4)
 	w_Lang054 =	Пауза (F5)
 	w_Lang055 =	Съобщение (Shift+F5)
@@ -228,6 +228,7 @@
 	w_Lang088 =	Редактиране Коментар (Ctrl+L)
 	w_Lang089 =	Edit цвят марка (Ctrl+M)
 	w_Lang090 =	Персонализиране
+	w_Lang091 =	Намерете командата (Ctrl+Shift+F)
 		
 ; Command Windows		
 	c_Lang001 =	Мишка
@@ -652,10 +653,15 @@
 	d_Lang068 =	Съвети:
 	d_Lang069 =	
 	(LTrim	
-		Нуждаете се от помощ, открили бъг или имате предложение? Изпрати имейл на автора: <a href="mailto:rodolfoub@gmail.com">rodolfoub@gmail.com</a>
-		Това е свободен софтуер. Ако сте намерили, че е полезно, помисли <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=rodolfoub`%40gmail`%2ecom&lc=US&item_name=Pulover`%27s`%20Macro`%20Creator&item_number=App`%2ePMC&currency_code=USD&bn=PP`%2dDonationsBF`%3abtn_donateCC_LG`%2egif`%3aNonHosted">направите дарение</a> и подкрепа за развитие. Благодаря.
+		Много време и усилия е отишло в развитието на Pulover's Macro Creator. Ако откриете, че е полезно, моля, помисли показва вашата оценка с дарение.
+		
+		Дарявайки или не, няма да има разлика в неговите характеристики и функционалност.
 	)	
-	d_Lang070 =	Грешка: Невалиден Hotkey Избрани.
+	d_Lang070 =	Дари...
+	d_Lang071 =	Не, благодаря
+	d_Lang072 =	Подкрепете софтуера с отворен код
+	d_Lang073 =	Грешка: Невалиден Hotkey Избрани.
+	d_Lang074 =	Намерете команда или функция
 		
 ; Start-up Tips		
 	Start_Tips =	

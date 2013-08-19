@@ -189,7 +189,7 @@
 	w_Lang049 =	Timer (Ctrl+Shift+T)
 	w_Lang050 =	Mouse (F2)
 	w_Lang051 =	Text (F3)
-	w_Lang052 =	Tecles especials (Maj+F3)
+	w_Lang052 =	(unused)
 	w_Lang053 =	Control de (F4)
 	w_Lang054 =	Pausa (F5)
 	w_Lang055 =	Missatge (Shift+F5)
@@ -228,6 +228,7 @@
 	w_Lang088 =	Redactar comentari (Ctrl+L)
 	w_Lang089 =	Edita color (Ctrl+M)
 	w_Lang090 =	Personalitzar
+	w_Lang091 =	Trobar una ordre (Ctrl+Shift+F)
 		
 ; Command Windows		
 	c_Lang001 =	Ratolí
@@ -652,10 +653,15 @@
 	d_Lang068 =	Consells:
 	d_Lang069 =	
 	(LTrim	
-		Necessites ajuda, que es troba un error o té algun suggeriment? Envieu un correu electrònic a l'autor: <a href="mailto:rodolfoub@gmail.com">rodolfoub@gmail.com</a>
-		Aquest és un programari lliure. Si has trobat útils <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=rodolfoub`%40gmail`%2ecom&lc=US&item_name=Pulover`%27s`%20Macro`%20Creator&item_number=App`%2ePMC&currency_code=USD&bn=PP`%2dDonationsBF`%3abtn_donateCC_LG`%2egif`%3aNonHosted">una donació</a> i donar suport al desenvolupament. Gràcies.
+		Una gran quantitat de temps i esforços es van centrar en el desenvolupament de Pulover's Macro Creator. Si li resulta útil, si us plau consideri mostrar el seu agraïment amb una donació.
+		
+		Donar o no, no hi haurà diferència en les seves característiques i funcionalitat.
 	)	
-	d_Lang070 =	Error: Invalid Hotkey seleccionat.
+	d_Lang070 =	Donar...
+	d_Lang071 =	No, gràcies
+	d_Lang072 =	Doni suport el programari de codi obert
+	d_Lang073 =	Error: Invalid Hotkey seleccionat.
+	d_Lang074 =	Trobar una comanda o una funció
 		
 ; Start-up Tips		
 	Start_Tips =	

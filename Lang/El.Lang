@@ -189,7 +189,7 @@
 	w_Lang049 =	Timer (Ctrl+Shift+T)
 	w_Lang050 =	Mouse (F2)
 	w_Lang051 =	Κείμενο (F3)
-	w_Lang052 =	Ειδικά πλήκτρα (Shift+F3)
+	w_Lang052 =	(unused)
 	w_Lang053 =	Ελέγχου (F4)
 	w_Lang054 =	Παύση (F5)
 	w_Lang055 =	Μήνυμα (Shift+F5)
@@ -228,6 +228,7 @@
 	w_Lang088 =	Επεξεργασία Σχόλιο (Ctrl+L)
 	w_Lang089 =	Επεξεργασία χρωματικό σήμα (Ctrl+M)
 	w_Lang090 =	Προσαρμογή
+	w_Lang091 =	Βρείτε μια εντολή (Ctrl+Shift+F)
 		
 ; Command Windows		
 	c_Lang001 =	Ποντίκι
@@ -652,10 +653,15 @@
 	d_Lang068 =	Συμβουλές:
 	d_Lang069 =	
 	(LTrim	
-		Χρειάζεστε βοήθεια, βρήκε ένα σφάλμα ή έχετε κάποια πρόταση; Στείλτε ένα email στο συντάκτη: <a href="mailto:rodolfoub@gmail.com">rodolfoub@gmail.com</a>
-		Αυτό είναι ένα δωρεάν λογισμικό. Αν βρεθεί ότι είναι χρήσιμο να εξετάσει <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=rodolfoub`%40gmail`%2ecom&lc=US&item_name=Pulover`%27s`%20Macro`%20Creator&item_number=App`%2ePMC&currency_code=USD&bn=PP`%2dDonationsBF`%3abtn_donateCC_LG`%2egif`%3aNonHosted">κάνοντας μια δωρεά</a> και τη στήριξη της ανάπτυξης. Σας ευχαριστώ.
+		Πολύς χρόνος και προσπάθεια έχει πάει στην ανάπτυξη των Pulover's Macro Creator. Αν βρείτε χρήσιμο, παρακαλούμε να εξετάσει δείχνει την εκτίμησή σας με μια δωρεά.
+		
+		Αιμοδοσία ή όχι, δεν θα υπάρχει διαφορά στα χαρακτηριστικά και τη λειτουργικότητα του.
 	)	
-	d_Lang070 =	Error: Invalid Hotkey Επιλεγμένα.
+	d_Lang070 =	Δωρεά...
+	d_Lang071 =	Όχι, ευχαριστώ
+	d_Lang072 =	Υποστήριξη Λογισμικό Ανοικτού Κώδικα
+	d_Lang073 =	Error: Invalid Hotkey Επιλεγμένα.
+	d_Lang074 =	Βρείτε μια εντολή ή λειτουργία
 		
 ; Start-up Tips		
 	Start_Tips =	

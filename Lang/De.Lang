@@ -157,7 +157,7 @@
 	w_Lang017 =	Anwenden
 	w_Lang018 =	Einfügen
 	w_Lang019 =	Bearbeiten
-	w_Lang020 =	Optionen für das Herunterfahren (Wenn Wiedergabe beendet, ...)
+	w_Lang020 =	Optionen für das Herunterfahren (Wenn Wiedergabe beendet,...)
 	w_Lang021 =	Nichts tun
 	w_Lang022 =	Anwendung schließen
 	w_Lang023 =	Schließen
@@ -189,7 +189,7 @@
 	w_Lang049 =	Timer (Strg+Umschalt+T)
 	w_Lang050 =	Maus (F2)
 	w_Lang051 =	Text (F3)
-	w_Lang052 =	Spezielle Tasten (Shift+F3)
+	w_Lang052 =	(unused)
 	w_Lang053 =	Steuerelement (F4)
 	w_Lang054 =	Pause (F5)
 	w_Lang055 =	Nachricht (Umschalt+F5)
@@ -228,6 +228,7 @@
 	w_Lang088 =	Kommentar bearbeiten
 	w_Lang089 =	Farbmarkierung bearbeiten
 	w_Lang090 =	Anpassen
+	w_Lang091 =	Finden Sie einen Befehl (Strg+Umschalt+F)
 		
 ; Command Windows		
 	c_Lang001 =	Maus
@@ -652,10 +653,15 @@
 	d_Lang068 =	Tipps:
 	d_Lang069 =	
 	(LTrim	
-		Sie benötigen Hilfe, haben einen Fehler gefunden oder haben einen Vorschlag? Dann senden Sie eine E-Mail an den Autor: <a href="mailto:rodolfoub@gmail.com">rodolfoub@gmail.com</a>
-		Diese Software ist kostenlos. Wenn Sie sie für hilfreich halten <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=rodolfoub`%40gmail`%2ecom&lc=US&item_name=Pulover`%27s`%20Macro`%20Creator&item_number=App`%2ePMC&currency_code=USD&bn=PP`%2dDonationsBF`%3abtn_donateCC_LG`%2egif`%3aNonHosted">spenden Sie</a> und Unterstützen die Entwicklung. Vielen Dank.
+		Viel Zeit und Mühe in die Entwicklung von Pulover's Macro Creator gegangen. Wenn Sie es nützlich finden, beachten Sie bitte zeigen Sie Ihre Wertschätzung mit einer Spende.
+		
+		Spenden oder nicht, gibt es keinen Unterschied in den Funktionen und Funktionalität sein.
 	)	
-	d_Lang070 =	Fehler: Ungültiger Hotkey ausgewählt.
+	d_Lang070 =	Spenden...
+	d_Lang071 =	Nein, danke
+	d_Lang072 =	Unterstützen Sie Open Source Software
+	d_Lang073 =	Fehler: Ungültiger Hotkey ausgewählt.
+	d_Lang074 =	Finden Sie einen Befehl oder eine Funktion
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -721,7 +727,7 @@
 	OnFinish_TT =	
 	(LTrim	
 		Optionen für das Herunterfahren
-		Wenn Wiedergabe beendet, ...
+		Wenn Wiedergabe beendet,...
 	)	
 	Win1_TT =	Windows-Taste als Modifizierer einfügen
 	JoyHK_TT =	Joystick

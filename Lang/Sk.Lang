@@ -189,7 +189,7 @@
 	w_Lang049 =	Timer (Ctrl+Shift+T)
 	w_Lang050 =	Myš (F2)
 	w_Lang051 =	Text (F3)
-	w_Lang052 =	Špeciálne klávesy (Shift+F3)
+	w_Lang052 =	(unused)
 	w_Lang053 =	Control (F4)
 	w_Lang054 =	Pauza (F5)
 	w_Lang055 =	Správa (Shift+F5)
@@ -228,6 +228,7 @@
 	w_Lang088 =	Upraviť komentár (Ctrl+L)
 	w_Lang089 =	Edit Color Mark (Ctrl+M)
 	w_Lang090 =	Vlastné
+	w_Lang091 =	Nájsť príkaz (Ctrl+Shift+F)
 		
 ; Command Windows		
 	c_Lang001 =	Myš
@@ -652,10 +653,15 @@
 	d_Lang068 =	Tipy:
 	d_Lang069 =	
 	(LTrim	
-		Potrebujete pomoc, našli chybu alebo máte nejaký návrh? Pošlite e-mail na autora: <a href="mailto:rodolfoub@gmail.com"> rodolfoub@gmail.com </ a>
-		Jedná sa o slobodný softvér. Ak ste zistil, že je užitočné zvážiť < dar </ a> a podpora rozvoja. Ďakujem.
+		Veľa času a úsilia, čo sa týka vývoja Pulover's Macro Creator. Ak zistíte, že je užitočné, zvážte prosím ukazovať svoje uznanie s darovaním.
+		
+		Darovanie, alebo nie, tam bude žiadny rozdiel v jeho vlastnosti a funkcie.
 	)	
-	d_Lang070 =	Chyba: Neplatný Hotkey vybrané.
+	d_Lang070 =	Podporte nás...
+	d_Lang071 =	Nie, vďaka
+	d_Lang072 =	Podporu open source softvér
+	d_Lang073 =	Chyba: Neplatný Hotkey vybrané.
+	d_Lang074 =	Nájsť príkaz alebo funkciu
 		
 ; Start-up Tips		
 	Start_Tips =	

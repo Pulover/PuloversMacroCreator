@@ -189,7 +189,7 @@
 	w_Lang049 =	Timer (Ctrl+Shift+T)
 	w_Lang050 =	Fare (F2)
 	w_Lang051 =	Metin (F3)
-	w_Lang052 =	Özel Tuşlar (Shift+F3)
+	w_Lang052 =	(unused)
 	w_Lang053 =	Kontrol (F4)
 	w_Lang054 =	Durma (F5)
 	w_Lang055 =	Mesaj (Shift+F5)
@@ -228,6 +228,7 @@
 	w_Lang088 =	Yorum düzenle (Ctrl+L)
 	w_Lang089 =	Düzen renk işareti (Ctrl+M)
 	w_Lang090 =	Özelleştirme
+	w_Lang091 =	(Ctrl+Shift+F) bir komut bul
 		
 ; Command Windows		
 	c_Lang001 =	Fare
@@ -652,10 +653,15 @@
 	d_Lang068 =	İpuçları:
 	d_Lang069 =	
 	(LTrim	
-		, Yardıma ihtiyacı bir hata buldum ya da bir öneri var mı? Yazar bir e-posta gönder: <a href="mailto:rodolfoub@gmail.com">rodolfoub@gmail.com</a>
-		Bu ücretsiz bir yazılımdır. Eğer yararlı düşünün bulursa <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=rodolfoub`%40gmail`%2ecom&lc=US&item_name=Pulover`%27s`%20Macro`%20Creator&item_number=App`%2ePMC&currency_code=USD&bn=PP`%2dDonationsBF`%3abtn_donateCC_LG`%2egif`%3aNonHosted">bir bağış yapma</a> ve destek geliştirme. Teşekkür ederim.
+		Zaman ve çaba bir çok Pulover's Macro Creator geliştirilmesine gitti. Eğer yararlı bulursanız, bir bağış ile takdir gösteren düşünün lütfen.
+		
+		Bağış ya da değil, özellikleri ve işlevsellik açısından bir fark olacak.
 	)	
-	d_Lang070 =	Hata: Geçersiz Kısayol Seçilen.
+	d_Lang070 =	Bağış...
+	d_Lang071 =	Hayır, teşekkürler
+	d_Lang072 =	Açık Kaynak yazılım desteği
+	d_Lang073 =	Hata: Geçersiz Kısayol Seçilen.
+	d_Lang074 =	Bir komut veya fonksiyon bul
 		
 ; Start-up Tips		
 	Start_Tips =	

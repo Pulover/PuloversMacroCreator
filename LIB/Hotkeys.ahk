@@ -33,6 +33,7 @@ Insert::GoSub, ApplyL
 ^z::GoSub, Undo
 ^y::GoSub, Redo
 ^f::GoSub, FindReplace
+^+f::GoSub, CmdFind
 ^l::GoSub, EditComm
 ^m::GoSub, EditColor
 ^n::GoSub, New
@@ -222,8 +223,9 @@ Exit
 
 #If WinActive("ahk_id " StartTipID)
 
-Left::GoSub, PrevTip
-Right::GoSub, NextTip
+Up::GoSub, PrevResult
+Down::GoSub, NextResult
+Enter::GoSub, GoResult
 Esc::GoSub, TipClose3
 
 #If

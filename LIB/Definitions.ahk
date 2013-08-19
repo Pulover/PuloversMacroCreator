@@ -583,6 +583,10 @@ VarSetCapacity
 WinActive
 WinExist
 )"
+
+GoSub, SetFindCmd
+KeywordsList := "Type|Text|Mouse|Ctrl|Win|Misc|If|IE|Com|Func"
+
 ;##### Messages: #####
 
 ,	MsgList := "
@@ -810,13 +814,14 @@ Sort, WM_Msgs, D|
 DefaultBar := {FileOpt: "Enabled AutoSize", File: ["New=" w_Lang040 ":42", "Open=" w_Lang041 ":43(Enabled Dropdown)", "Save=" w_Lang042 ":60(Enabled Dropdown)"
 													, "", "Export=" w_Lang043 ":16", "Preview=" w_Lang044 ":50", "Options=" w_Lang045 ":44"]
 			, RecPlayOpt: "Enabled AutoSize Dropdown", RecPlay: ["Record=" w_Lang046 ":55", "PlayStart=" w_Lang047 ":47"]
-			, CommandOpt: "Enabled AutoSize", Command: ["Mouse=" w_Lang050 ":39", "Text=" w_Lang051 ":71", "ControlCmd=" w_Lang052 ":7"
+			, CommandOpt: "Enabled AutoSize", Command: ["Mouse=" w_Lang050 ":39", "Text=" w_Lang051 ":71", "ControlCmd=" w_Lang053 ":7"
 														, "", "Pause=" w_Lang054 ":46", "MsgBox=" w_Lang055 ":11", "KeyWait=" w_Lang056 ":78"
 														, "", "Window=" w_Lang057 ":81", "Image=" w_Lang058 ":28", "Run=" w_Lang059 ":59"
 														, "", "ComLoop=" w_Lang060 ":37", "ComGoto=" w_Lang061 ":22", "AddLabel=" w_Lang062 ":35"
 														, "", "IfSt=" w_Lang063 ":27", "AsVar=" w_Lang064 ":76", "AsFunc=" w_Lang065 ":21"
 														, "", "IECom=" w_Lang066 ":26", "ComInt=" w_Lang067 ":4", "RunScrLet=" w_Lang068 ":77"
-														, "", "SendMsg=" w_Lang069 ":62"]
+														, "", "SendMsg=" w_Lang069 ":62"
+														, "", "CmdFind=" w_Lang091 ":95"]
 			, SetOpt: "Enabled AutoSize", Settings: ["HideMainWin=" w_Lang013 ":82", "OnScCtrl=" w_Lang009 ":89"
 														, "", "Capt=" w_Lang012 ":85", "CheckHkOn=" w_Lang014 ":84"
 														, "", "OnFinish=" w_Lang020 ":20(Enabled WholeDropdown)", "SetWin=" t_Lang009 ":48"

@@ -131,6 +131,7 @@ If (!FileExist(A_ScriptDir "\MacroCreator.ini") && !InStr(FileExist(A_AppData "\
 SettingsFolder := FileExist(A_ScriptDir "\MacroCreator.ini") ? A_ScriptDir : A_AppData "\MacroCreator"
 ,	IniFilePath := SettingsFolder "\MacroCreator.ini", UserVarsPath := SettingsFolder "\UserGlobalVars.ini"
 
+IniRead, Version, %IniFilePath%, Application, Version
 IniRead, Lang, %IniFilePath%, Language, Lang
 IniRead, AutoKey, %IniFilePath%, HotKeys, AutoKey, F3|F4|F5|F6|F7
 IniRead, ManKey, %IniFilePath%, HotKeys, ManKey, |
@@ -251,6 +252,9 @@ IniRead, OSTrans, %IniFilePath%, WindowOptions, OSTrans, 255
 IniRead, OSCaption, %IniFilePath%, WindowOptions, OSCaption, 0
 IniRead, MainLayout, %IniFilePath%, ToolbarOptions, MainLayout
 IniRead, MacroLayout, %IniFilePath%, ToolbarOptions, MacroLayout
+
+If (Version < 4)
+	ShowTips := 1
 
 User_Vars := new ObjIni(UserVarsPath)
 User_Vars.Read()
@@ -1055,7 +1059,7 @@ SetTimer, MouseRecord, off
 If (!(WinActive("ahk_id" PMCWinID)) && (KeepHkOn = 1))
 	GoSub, KeepHkOn
 Menu, Tray, Icon, %DefaultIcon%, 1
-Menu, Tray, Default, %w_Lang005%
+Try Menu, Tray, Default, %w_Lang005%
 ToggleButtonIcon(OSRec, RecordIcon)
 return
 
@@ -1916,7 +1920,7 @@ If (Ex_AbortKey = 1)
 {
 	If !RegExMatch(AbortKey, "^\w+$")
 	{
-		MsgBox, 16, %d_Lang007%, %d_Lang070%
+		MsgBox, 16, %d_Lang007%, %d_Lang073%
 		return
 	}
 }
@@ -1924,7 +1928,7 @@ If (Ex_PauseKey = 1)
 {
 	If !RegExMatch(PauseKey, "^\w+$")
 	{
-		MsgBox, 16, %d_Lang007%, %d_Lang070%
+		MsgBox, 16, %d_Lang007%, %d_Lang073%
 		return
 	}
 }
@@ -2899,11 +2903,6 @@ Else
 	Else
 		Target := "", Window := ""
 }
-; If InStr(Details, "% ")
-; {
-	; MsgBox, 16, %d_Lang007%, %d_Lang059%
-	; return
-; }
 EscCom("TimesX|DelayX")
 If (A_ThisLabel <> "MouseApply")
 {
@@ -4315,7 +4314,17 @@ If (s_Caller = "Edit")
 Else If (A_ThisLabel = "AddLabel")
 	GuiControl, 12:Choose, TabControl, 3
 Else If (A_ThisLabel = "ComGoto")
+{
 	GuiControl, 12:Choose, TabControl, 2
+	If (s_Caller = "Find")
+		GuiControl, 12:, %GotoRes1%, 1
+}
+Else If ((s_Caller = "Find") && (InStr(GotoRes1, "Loop")))
+{
+	StringReplace, GotoRes, GotoRes1, Loop, L
+	GuiControl, 12:, %GotoRes%, 1
+	GoSub, LoopType
+}
 Gui, 12:Show,, % (A_ThisLabel = "ComGoto") ? c_Lang077 : (A_ThisLabel = "AddLabel") ? c_Lang079 : c_Lang073
 Input
 Tooltip
@@ -4612,6 +4621,11 @@ If (s_Caller = "Edit")
 		GuiControl, 11:, Value, %Details%
 	GuiControl, 11:, Title, %Window%
 	GuiControl, 11:Enable, WinApply
+}
+If (s_Caller = "Find")
+{
+	GuiControl, 11:ChooseString, WinCom, %GotoRes1%
+	GoSub, WinCom
 }
 Gui, 11:Show, , %c_Lang005%
 Tooltip
@@ -4943,6 +4957,11 @@ If (s_Caller = "Edit")
 	GuiControl, 19:, AddIf, 0
 	GuiControl, 19:Disable, AddIf
 }
+If ((s_Caller = "Find") && (GotoRes1 = "PixelSearch"))
+{
+	GuiControl, 19:, PixelS, 1
+	GoSub, PixelS
+}
 Gui, 19:Show,, %c_Lang006% / %c_Lang007%
 Input
 Tooltip
@@ -5210,6 +5229,11 @@ If (s_Caller = "Edit")
 	GuiControl, 10:Enable, RunApply
 }
 GoSub, FileCmd
+If (s_Caller = "Find")
+{
+	GuiControl, 10:ChooseString, FileCmdL, %GotoRes1%
+	GoSub, FileCmd
+}
 Gui, 10:Show,, %c_Lang008%
 Tooltip
 Input
@@ -5499,7 +5523,14 @@ Else
 If !IsFunc("Eval")
 	GuiControl, 21:, UseEval, 0
 If (A_ThisLabel = "IfSt")
+{
 	GuiTitle := c_Lang009
+	If (s_Caller = "Find")
+	{
+		GuiControl, 21:ChooseString, Statement, %GotoRes1%
+		GoSub, Statement
+	}
+}
 Else If (A_ThisLabel = "AsVar")
 {
 	GuiControl, 21:Choose, TabControl, 2
@@ -5509,6 +5540,11 @@ Else If (A_ThisLabel = "AsFunc")
 {
 	GuiControl, 21:Choose, TabControl, 3
 	GuiTitle := c_Lang011
+	If (s_Caller = "Find")
+	{
+		GuiControl, 21:ChooseString, FuncName, %GotoRes1%
+		GoSub, FuncName
+	}
 }
 Gui, 21:Show,, %GuiTitle%
 Tooltip
@@ -5758,6 +5794,7 @@ s_Caller =
 return
 
 FuncName:
+Gui, 21:Submit, NoHide
 Try IsBuiltIn := Func(FuncName).IsBuiltIn ? 1 : 0
 GuiControl, 21:Enable%IsBuiltIn%, FuncHelp
 return
@@ -5889,6 +5926,8 @@ If (s_Caller = "Edit")
 	GuiControl, 22:, Title, %Window%
 	GuiControl, 22:Enable, SendMsgApply
 }
+If (s_Caller = "Find")
+	GuiControl, 22:ChooseString, MsgType, %GotoRes1%
 Gui, 22:Show, , % cType19 " / " cType18
 Tooltip
 return
@@ -6031,6 +6070,11 @@ If (s_Caller = "Edit")
 	If (Type = cType25)
 		GoSub, CtlCmd
 	GuiControl, 23:Enable, ControlApply
+}
+If (s_Caller = "Find")
+{
+	GuiControl, 23:ChooseString, ControlCmd, %GotoRes1%
+	GoSub, CtlCmd
 }
 Gui, 23:Show, , %c_Lang004%
 Tooltip
@@ -6309,10 +6353,19 @@ Else
 		GuiControl, 24:, ComTip
 }
 If (A_ThisLabel = "IECom")
+{
 	GuiTitle := c_Lang012
+	If (s_Caller = "Find")
+	{
+		GuiControl, 24:ChooseString, IECmd, %GotoRes1%
+		GoSub, IECmd
+	}
+}
 If (A_ThisLabel = "ComInt")
 {
 	GuiControl, 24:Choose, TabControl, 2
+	If (s_Caller = "Find")
+		GuiControl, 24:ChooseString, ComCLSID, %GotoRes1%
 	GoSub, TabControl
 	GuiTitle := c_Lang013
 }
@@ -6812,27 +6865,44 @@ Gui, 26:Submit
 Gui, 26:Destroy
 return
 
+CmdFind:
 ShowTips:
 Gui 26:+LastFoundExist
 IfWinExist
 	GoSub, TipClose
 If (NextTip > MaxTips)
 	NextTip := 1
-Gui, 26:-SysMenu +HwndStartTipID +owner1
+Gui, 26:-MinimizeBox +HwndStartTipID +owner1
 Gui, 26:Color, FFFFFF
-Gui, 26:Add, Pic, y+20 Icon73, %ResDllPath%
-Gui, 26:Add, Text, Section yp x+10, %d_Lang068%%A_Space%
-Gui, 26:Add, Text, yp x+0 vCurrTip, %NextTip%%A_Space%%A_Space%%A_Space%
-Gui, 26:Add, Text, yp x+0, / %MaxTips%
-Gui, 26:Add, Edit, xs W450 r5 vTipDisplay ReadOnly -0x200000 -E0x200, % StartTip_%NextTip%
-Gui, 26:Add, Button, -Wrap y+10 W90 H25 vPTip gPrevTip, %d_Lang022%
-Gui, 26:Add, Button, -Wrap yp x+5 W90 H25 vNTip gNextTip, %d_Lang021%
-Gui, 26:Add, Button, -Wrap yp x+15 W90 H25 vTipClose gTipClose3, %c_Lang022%
-Gui, 26:Add, Checkbox, -Wrap Checked%ShowTips% xm+60 W300 vShowTips R1, %d_Lang067%
-Gui, 26:Add, Link, xm, %d_Lang069%
-If (NextTip = 1)
-	GuiControl, 26:Disable, PTip
-GuiControl, 26:Focus, TipClose
+If (A_ThisLabel <> "CmdFind")
+{
+	Gui, 26:Font, Bold s10, Tahoma
+	Gui, 26:Add, Text, w220, %d_Lang072%
+	Gui, 26:Font
+	Gui, 26:Font,, Tahoma
+	Gui, 26:Add, Text, w220, %d_Lang069%
+	Gui, 26:Font
+	Gui, 26:Add, Button, Section -Wrap xm+60 W75 H23 gDonatePayPal, %d_Lang070%
+	Gui, 26:Add, Button, -Wrap ys W75 H23 gTipClose3, %d_Lang071%
+	Gui, 26:Add, Checkbox, -Wrap Checked%ShowTips% xm y+20 W220 vShowTips R1, %d_Lang067%
+	Gui, 26:Add, Text, x+10 ym h245 0x11
+	Gui, 26:Add, Pic, x+1 ym Icon73, %ResDllPath%
+	Gui, 26:Add, Text, Section yp x+10, %d_Lang068%%A_Space%
+	Gui, 26:Add, Text, yp x+0 vCurrTip, %NextTip%%A_Space%%A_Space%%A_Space%
+	Gui, 26:Add, Text, yp x+0, / %MaxTips%
+	Gui, 26:Add, Edit, xs W350 r5 vTipDisplay ReadOnly -0x200000 -E0x200, % StartTip_%NextTip%
+	Gui, 26:Add, Button, Section -Wrap y+0 W90 H25 vPTip gPrevTip, %d_Lang022%
+	Gui, 26:Add, Button, -Wrap yp x+5 W90 H25 vNTip gNextTip, %d_Lang021%
+	Gui, 26:Add, Text, xs-30 w380 0x10
+	If (NextTip = 1)
+		GuiControl, 26:Disable, PTip
+}
+Gui, 26:Font, Bold
+Gui, 26:Add, Text, yp+5 -Wrap r1, %d_Lang074%:
+Gui, 26:Font
+Gui, 26:Add, Edit, -Wrap W380 r1 vFindCmd gFindCmd
+Gui, 26:Add, Listbox, % ((A_ThisLabel <> "CmdFind") ? "r5" : "r10") " y+0 W380 hwndhFindRes vFindResult gFindResult Sort"
+GuiControl, 26:Focus, FindCmd
 Gui, 26:Show,, %AppName%
 return
 
@@ -6861,6 +6931,59 @@ If (NextTip = MaxTips)
 {
 	GuiControl, 26:Disable, NTip
 	GuiControl, 26:Focus, PTip
+}
+return
+
+FindCmd:
+Gui, 26:Submit, NoHide
+GuiControl, 26:, FindResult, |
+If (FindCmd = "")
+	return
+Loop, Parse, KeywordsList, |
+{
+	SearchIn := A_LoopField
+	Loop, Parse, %A_LoopField%_Keywords, `,
+	{
+		If InStr(A_LoopField, FindCmd)
+		{
+			If (SearchIn = "Type")
+				SearchIn := "Type" A_Index
+			GuiControl, 26:, FindResult, % A_LoopField "`t`t[" %SearchIn%_Path "]"
+		}
+	}
+}
+return
+
+NextResult:
+ControlSend,, {Down}, ahk_id %hFindRes%
+return
+
+PrevResult:
+ControlSend,, {Up}, ahk_id %hFindRes%
+return
+
+FindResult:
+If (A_GuiEvent <> "DoubleClick")
+	return
+GoResult:
+Gui, 26:Submit, NoHide
+If (FindResult = "")
+	return
+RegExMatch(FindResult, "(.*?)\t+\[(.*)\]", GotoRes)
+Loop, Parse, KeywordsList, |
+{
+	SearchIn := A_LoopField
+	Loop, Parse, %A_LoopField%_Keywords, `,
+	{
+		If ((SearchIn = "Type") && (GotoRes1 = A_LoopField))
+			SearchIn := "Type" A_Index
+		If ((A_LoopField = GotoRes1) && (%SearchIn%_Path = GotoRes2))
+		{
+			s_Caller := "Find"
+			GoSub, TipClose3
+			Goto, % %SearchIn%_Goto
+		}
+	}
 }
 return
 
@@ -10841,6 +10964,7 @@ TB_Edit(tbCommand, "Mouse", "", "", w_Lang050), TB_Edit(tbCommand, "Text", "", "
 , TB_Edit(tbCommand, "IfSt", "", "", w_Lang063), TB_Edit(tbCommand, "AsVar", "", "", w_Lang064), TB_Edit(tbCommand, "AsFunc", "", "", w_Lang065)
 , TB_Edit(tbCommand, "IECom", "", "", w_Lang066), TB_Edit(tbCommand, "ComInt", "", "", w_Lang067), TB_Edit(tbCommand, "RunScrLet", "", "", w_Lang068)
 , TB_Edit(tbCommand, "SendMsg", "", "", w_Lang069)
+, TB_Edit(tbCommand, "CmdFind", "", "", w_Lang091)
 ; Settings
 TB_Edit(tbSettings, "HideMainWin", "", "", w_Lang013), TB_Edit(tbSettings, "OnScCtrl", "", "", w_Lang009)
 , TB_Edit(tbSettings, "Capt", "", "", w_Lang012), TB_Edit(tbSettings, "CheckHkOn", "", "", w_Lang014)
@@ -10876,6 +11000,10 @@ FixedBar.Text := ["OpenT=" t_Lang126 ":43", "SaveT=" t_Lang127 ":60"
 Gui 18:+LastFoundExist
 IfWinExist
     GoSub, FindReplace
+Gui 26:+LastFoundExist
+IfWinExist
+    GoSub, TipClose
+GoSub, SetFindCmd
 return
 
 LoadLang:
@@ -10886,6 +11014,139 @@ Else
 	Lang = En
 	GoSub, LoadLang_En
 }
+return
+
+;##### Command Search: #####
+SetFindCmd:
+Type_Keywords := "
+(Join`,
+" cType4 "
+" cType5 "
+" cType6 "
+" cType7 "
+" cType15 "
+" cType16 "
+" cType18 "
+" cType19 "
+" cType20 "
+" cType21 "
+" cType29 "
+" cType30 "
+" cType35 "
+" cType36 "
+" cType37 "
+" cType38 "
+" cType39 "
+" cType40 "
+" cType41 "
+" cType42 "
+" cType43 "
+InternetExplorer
+COM Interface
+)"
+,	Types_Path := "
+(
+" w_Lang050 "
+" w_Lang054 "
+" w_Lang055 "
+" w_Lang060 "
+" w_Lang058 "
+" w_Lang058 "
+" w_Lang069 "
+" w_Lang069 "
+" w_Lang056 "
+" w_Lang064 "
+" w_Lang060 "
+" w_Lang060 "
+" w_Lang062 "
+" w_Lang061 "
+" w_Lang061 "
+" w_Lang060 "
+" w_Lang060 "
+" w_Lang060 "
+" w_Lang060 "
+" w_Lang068 "
+" w_Lang068 "
+" w_Lang066 "
+" w_Lang067 "
+)"
+,	Types_Goto := "
+(
+Mouse
+Pause
+MsgBox
+ComLoop
+Image
+Image
+SendMsg
+SendMsg
+KeyWait
+AsVar
+ComLoop
+ComLoop
+AddLabel
+ComGoto
+ComGoto
+ComLoop
+ComLoop
+ComLoop
+ComLoop
+RunScrLet
+RunScrLet
+IECom
+ComInt
+)"
+Loop, Parse, Types_Path, `n
+	Type%A_Index%_Path := A_LoopField
+Loop, Parse, Types_Goto, `n
+	Type%A_Index%_Goto := A_LoopField
+
+Text_Keywords := "
+(Join`,
+" cType1 "
+" cType2 "
+" cType8 "
+" cType9 "
+" cType10 "
+" cType12 "
+" cType22 "
+)"
+,	Text_Path := w_Lang051, Text_Goto := "Text"
+
+Mouse_Keywords := "
+(Join`,
+)"
+While, Action%A_Index%
+	Mouse_Keywords .= Action%A_Index% ","
+Mouse_Path := w_Lang050, Mouse_Goto := "Mouse"
+
+Ctrl_Keywords := "
+(Join`,
+)"
+Ctrl_Keywords := RegExReplace(CtrlCmdList, "\|", ",") ","
+,	Ctrl_Keywords .= RegExReplace(CtrlCmd, "\|", ",") ","
+,	Ctrl_Keywords .= RegExReplace(CtrlGetCmd, "\|", ",")
+,	Ctrl_Path := w_Lang053, Ctrl_Goto := "ControlCmd"
+
+Win_Keywords := RegExReplace(WinCmdList, "\|", ",") ","
+,	Win_Keywords .= RegExReplace(WinCmd, "\|", ",") ","
+,	Win_Keywords .= RegExReplace(WinGetCmd, "\|", ",")
+,	Win_Path := w_Lang057, Win_Goto := "Window"
+
+Misc_Keywords := RegExReplace(FileCmdList, "\|", ",")
+,	Misc_Path := w_Lang059, Misc_Goto := "Run"
+
+If_Keywords := RegExReplace(IfList, "\$", ",")
+,	If_Path := w_Lang063, If_Goto := "IfSt"
+
+IE_Keywords := RegExReplace(IECmdList, "\|", ",")
+,	IE_Path := w_Lang066, IE_Goto := "IECom"
+
+Com_Keywords := RegExReplace(CLSList, "\|", ",")
+,	Com_Path := w_Lang067, Com_Goto := "ComInt"
+
+Func_Keywords := RegExReplace(BuiltinFuncList, "\$", ",")
+,	Func_Path := w_Lang065, Func_Goto := "AsFunc"
 return
 
 #Include <Hotkeys>

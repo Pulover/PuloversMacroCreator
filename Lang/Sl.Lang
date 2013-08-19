@@ -189,7 +189,7 @@
 	w_Lang049 =	Timer (Ctrl+Shift+T)
 	w_Lang050 =	Mouse (F2)
 	w_Lang051 =	Besedilo (F3)
-	w_Lang052 =	Posebne tipke (Shift+F3)
+	w_Lang052 =	(unused)
 	w_Lang053 =	Control (F4)
 	w_Lang054 =	Premor (F5)
 	w_Lang055 =	Sporočilo (Shift+F5)
@@ -228,6 +228,7 @@
 	w_Lang088 =	Uredi komentar (Ctrl+L)
 	w_Lang089 =	Edit Color Mark (Ctrl+M)
 	w_Lang090 =	Prilagajanje
+	w_Lang091 =	Najdi ukaz (Ctrl+Shift+F)
 		
 ; Command Windows		
 	c_Lang001 =	Miška
@@ -652,10 +653,15 @@
 	d_Lang068 =	Nasveti:
 	d_Lang069 =	
 	(LTrim	
-		Rabite pomoč, našel napako ali pa imate predlog? Pošljite e-pošto na avtorja: <a href="mailto:rodolfoub@gmail.com"> rodolfoub@gmail.com </ a>
-		To je brezplačna programska oprema. Če ste našli to koristno razmisliti < Donacija </ a> in razvojni podpori. Hvala.
+		Veliko časa in truda je šlo v razvoju Pulover's Macro Creator. Če se vam zdi, da je koristno, vas prosimo, menijo, ki prikazuje vaše zadovoljstvo z darovanjem.
+		
+		Donacijo ali ne, ne bo nobene razlike v svojih funkcij in funkcionalnosti.
 	)	
-	d_Lang070 =	Napaka: Neveljavna Bližnjica Izbrano.
+	d_Lang070 =	Donate...
+	d_Lang071 =	Ne, hvala
+	d_Lang072 =	Podpira odprtokodne programske opreme
+	d_Lang073 =	Napaka: Neveljavna Bližnjica Izbrano.
+	d_Lang074 =	Najdi ukaz ali funkcijo
 		
 ; Start-up Tips		
 	Start_Tips =	

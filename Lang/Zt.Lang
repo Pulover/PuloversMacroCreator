@@ -189,7 +189,7 @@
 	w_Lang049 =	定時器（按Ctrl+Shift+T）
 	w_Lang050 =	鼠標（F2）
 	w_Lang051 =	文本（F3）
-	w_Lang052 =	特殊鍵（Shift+F3）
+	w_Lang052 =	(unused)
 	w_Lang053 =	控制（F4）
 	w_Lang054 =	暫停 （F5）
 	w_Lang055 =	信息 （Shift+F5）
@@ -228,6 +228,7 @@
 	w_Lang088 =	編輯點評（Ctrl+L鍵）
 	w_Lang089 =	編輯顏色標誌（Ctrl+M鍵）
 	w_Lang090 =	定制
+	w_Lang091 =	查找命令（按Ctrl+Shift+ F）
 		
 ; Command Windows		
 	c_Lang001 =	鼠標
@@ -652,10 +653,15 @@
 	d_Lang068 =	溫馨提示：
 	d_Lang069 =	
 	(LTrim	
-		需要幫助，發現了一個bug或者有一個建議嗎？發送電子郵件至作者：<a href="mailto:rodolfoub@gmail.com">rodolfoub@gmail.com</a>
-		這是一個免費的軟件。如果你覺得它有用的考慮<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=rodolfoub`%40gmail`%2ecom&lc=US&item_name=Pulover`%27s`%20Macro`%20Creator&item_number=App`%2ePMC&currency_code=USD&bn=PP`%2dDonationsBF`%3abtn_donateCC_LG`%2egif`%3aNonHosted">捐贈</a>和支持發展。謝謝。
+		Pulover's Macro Creator的發展已經進入了很多的時間和精力。如果你覺得它有用，請考慮捐贈升值。
+		
+		捐贈與否，將不會有差異的特點和功能。
 	)	
-	d_Lang070 =	錯誤：無效的熱鍵選擇。
+	d_Lang070 =	捐贈...
+	d_Lang071 =	不用了，謝謝
+	d_Lang072 =	支持開源軟件
+	d_Lang073 =	錯誤：無效的熱鍵選擇。
+	d_Lang074 =	查找命令或函數
 		
 ; Start-up Tips		
 	Start_Tips =	

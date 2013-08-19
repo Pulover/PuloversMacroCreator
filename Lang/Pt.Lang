@@ -189,7 +189,7 @@
 	w_Lang049 =	Temporizador (Ctrl+Shift+T)
 	w_Lang050 =	Mouse (F2)
 	w_Lang051 =	Texto (F3)
-	w_Lang052 =	Teclas Especiais (Shift+F3)
+	w_Lang052 =	(unused)
 	w_Lang053 =	Controle (F4)
 	w_Lang054 =	Pausa (F5)
 	w_Lang055 =	Mensagem (Shift+F5)
@@ -228,6 +228,7 @@
 	w_Lang088 =	Editar Comentário (Ctrl+L)
 	w_Lang089 =	Editar Marca de Cor (Ctrl+M)
 	w_Lang090 =	Personalizar
+	w_Lang091 =	Localizar um comando (Ctrl+Shift+F)
 		
 ; Command Windows		
 	c_Lang001 =	Mouse
@@ -652,10 +653,15 @@
 	d_Lang068 =	Dicas:
 	d_Lang069 =	
 	(LTrim	
-		Precisa de ajuda, encontrou um problema ou tem uma sugestão? Envie um email para o autor: <a href="mailto:rodolfoub@gmail.com">rodolfoub@gmail.com</a>
-		Este é um software gratuito. Se você achou útil considere <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=rodolfoub`%40gmail`%2ecom&lc=BR&item_name=Pulover`%27s`%20Macro`%20Creator&item_number=App`%2ePMC`%2eBr&currency_code=BRL&bn=PP`%2dDonationsBF`%3abtn_donateCC_LG`%2egif`%3aNonHosted">fazer uma doação</a> e apoiar o desenvolvimento. Obrigado.
+		Muito tempo e esforço foram investidos no desenvolvimento de Pulover's Macro Creator. Se você achou-o útil, por favor considere demonstrar seu apoio com uma doação.
+		
+		Doando ou não, não haverá nenhuma diferença em seus recursos e funcionalidades.
 	)	
-	d_Lang070 =	Erro: Atalho Inválido Selecionado.
+	d_Lang070 =	Doar...
+	d_Lang071 =	Não, obrigado
+	d_Lang072 =	Apoie software Livre / Código Aberto
+	d_Lang073 =	Erro: Atalho Inválido Selecionado.
+	d_Lang074 =	Localizar um comando ou função
 		
 ; Start-up Tips		
 	Start_Tips =	
