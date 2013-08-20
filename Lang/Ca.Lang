@@ -129,7 +129,7 @@
 	h_Lang001 =	&Macro Creator Home
 	h_Lang002 =	&AHK Documentació en línia
 	h_Lang003 =	A &buscar actualitzacions...
-	h_Lang004 =	&Comprovar en l'arrencada
+	h_Lang004 =	&Comproveu en l'arrencada
 	h_Lang005 =	&Sobre
 	h_Lang006 =	C&onsells
 	h_Lang007 =	&Fòrum
@@ -481,7 +481,7 @@
 	t_Lang082 =	Declaracions
 	t_Lang083 =	Mostra sagnia de bucles i sentències
 	t_Lang084 =	(Feu doble clic a la capçalera de la columna Acció d'activar / desactivar)
-	t_Lang085 =	Mostra la barra de controls en l'arrencada
+	t_Lang085 =	Visualització controla bar a l'arrencada
 	t_Lang086 =	Cerca de Funcions. Si us plau, esperi...
 	t_Lang087 =	Incloure arxius externs
 	t_Lang088 =	Crea un fitxer EXE
@@ -535,6 +535,10 @@
 	t_Lang136 =	Files Destaquen
 	t_Lang137 =	Editor De Scripts Per Defecte
 	t_Lang138 =	Edita Guió
+	t_Lang139 =	Seleccionar
+	t_Lang140 =	Per La Columna
+	t_Lang141 =	Totes Les Columnes
+		
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Obert
@@ -646,14 +650,15 @@
 	(LTrim	
 		Voleu descarregar-ho ara?
 		
-		Per desactivar les comprovacions automàtiques seleccioneu Ajuda > Comprovar en l'arrencada.
+		Per desactivar les comprovacions automàtiques seleccioneu Ajuda > Comproveu en l'arrencada
 	)	
+		
 	d_Lang062 =	Vostè ja té la versió més recent.
 	d_Lang063 =	S'ha produït un error durant la comprovació.
 	d_Lang064 =	Error d'objecte COM en
 	d_Lang065 =	Fila
 	d_Lang066 =	Específicament
-	d_Lang067 =	Mostra consells sobre la posada en marxa.
+	d_Lang067 =	Mostra aquesta finestra en iniciar
 	d_Lang068 =	Consells:
 	d_Lang069 =	
 	(LTrim	

@@ -129,7 +129,7 @@
 	h_Lang001 =	&Makró Creator Főoldal
 	h_Lang002 =	&AHK Online dokumentáció
 	h_Lang003 =	&Ellenőrizze a frissítéseket...
-	h_Lang004 =	E&llenőrizze az induló
+	h_Lang004 =	E&llenőrizze indításkor
 	h_Lang005 =	&Ról
 	h_Lang006 =	&tippek
 	h_Lang007 =	&Fórum
@@ -481,7 +481,7 @@
 	t_Lang082 =	Nyilatkozatok
 	t_Lang083 =	Megjelenítés Behúzás a hurkok és nyilatkozatok
 	t_Lang084 =	(Kattintson duplán a Művelet oszlop fejlécében engedélyezés / letiltás)
-	t_Lang085 =	Kijelző Controls bár induló
+	t_Lang085 =	Kijelző vezérli bar indításkor
 	t_Lang086 =	Keresése funkciók. Kérem várjon...
 	t_Lang087 =	Beleértve a külső fájlok
 	t_Lang088 =	EXE fájl létrehozása
@@ -535,6 +535,10 @@
 	t_Lang136 =	Kiemelés Sorok
 	t_Lang137 =	Alapértelmezett Script Editor
 	t_Lang138 =	Szerkeszteni Script
+	t_Lang139 =	Választ
+	t_Lang140 =	Oszlop
+	t_Lang141 =	Minden Oszlop
+		
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Nyitva
@@ -646,14 +650,15 @@
 	(LTrim	
 		Szeretne letölteni most?
 		
-		Ha ki szeretné kapcsolni az automatikus ellenőrzés válassza a Help > Ellenőrizze az induló.
+		Ha ki szeretné kapcsolni az automatikus ellenőrzés válassza a Help > Ellenőrizze indításkor
 	)	
+		
 	d_Lang062 =	Már így is a legújabb verzióra.
 	d_Lang063 =	Hiba történt ellenőrzés.
 	d_Lang064 =	COM objektum hiba
 	d_Lang065 =	Sor
 	d_Lang066 =	Konkrétan
-	d_Lang067 =	Tippek mutatása indításkor.
+	d_Lang067 =	Mutasd az ablakban indításkor
 	d_Lang068 =	tippek:
 	d_Lang069 =	
 	(LTrim	

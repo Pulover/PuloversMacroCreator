@@ -129,7 +129,7 @@
 	h_Lang001 =	&Makro Creator Home
 	h_Lang002 =	&AHK Dokumentacja online
 	h_Lang003 =	&Sprawdzić dostępność aktualizacji...
-	h_Lang004 =	S&prawdź na rozruch
+	h_Lang004 =	S&prawdź na starcie
 	h_Lang005 =	&O
 	h_Lang006 =	Po&rady
 	h_Lang007 =	&Форум...
@@ -481,7 +481,7 @@
 	t_Lang082 =	Oświadczenia
 	t_Lang083 =	Pokaż Wcięcia dla pętli i oświadczenia
 	t_Lang084 =	(Kliknij dwukrotnie nagłówek kolumny Action włącz / wyłącz)
-	t_Lang085 =	Kontrola wyświetlania paska na start-up
+	t_Lang085 =	Wyświetlacz kontroluje bar na starcie
 	t_Lang086 =	Wyszukiwanie funkcji. Proszę czekać...
 	t_Lang087 =	Dołącz plików zewnętrznych
 	t_Lang088 =	Utwórz plik EXE
@@ -535,6 +535,10 @@
 	t_Lang136 =	Wiersze Highlight
 	t_Lang137 =	Domyślny Edytor Skryptów
 	t_Lang138 =	Edycja Skryptu
+	t_Lang139 =	Wybierać
+	t_Lang140 =	By Kolumnie
+	t_Lang141 =	Wszystkie Kolumny
+		
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Otwarte
@@ -646,14 +650,15 @@
 	(LTrim	
 		Chcesz go ściągnąć?
 		
-		Aby wyłączyć automatyczne kontrole wybierz Pomoc > Sprawdź na rozruch.
+		Aby wyłączyć automatyczne kontrole wybierz Pomoc > Sprawdź na starcie
 	)	
+		
 	d_Lang062 =	Masz już najnowszą wersję.
 	d_Lang063 =	Wystąpił błąd podczas sprawdzania.
 	d_Lang064 =	Obiekt COM w błąd
 	d_Lang065 =	Rząd
 	d_Lang066 =	Swoiście
-	d_Lang067 =	Pokaż porady na start-up.
+	d_Lang067 =	Pokaż to okno na starcie
 	d_Lang068 =	Porady:
 	d_Lang069 =	
 	(LTrim	

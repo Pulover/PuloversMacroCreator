@@ -129,7 +129,7 @@
 	h_Lang001 =	&Macro Creator Home
 	h_Lang002 =	&AHK Online Documentation
 	h_Lang003 =	&Check for updates...
-	h_Lang004 =	Check on &start-up
+	h_Lang004 =	Check on &startup
 	h_Lang005 =	Abo&ut
 	h_Lang006 =	&Tips
 	h_Lang007 =	&Forum
@@ -481,7 +481,7 @@
 	t_Lang082 =	Statements
 	t_Lang083 =	Show Indentation for Loops and Statements
 	t_Lang084 =	(Double-Click the Action column header enable / disable)
-	t_Lang085 =	Display Controls Bar on start-up
+	t_Lang085 =	Display Controls Bar on startup
 	t_Lang086 =	Searching for Functions. Please wait...
 	t_Lang087 =	Include External Files
 	t_Lang088 =	Create EXE File
@@ -535,6 +535,10 @@
 	t_Lang136 =	Highlight Rows
 	t_Lang137 =	Default Script Editor
 	t_Lang138 =	Edit Script
+	t_Lang139 =	Select
+	t_Lang140 =	By Column
+	t_Lang141 =	All Columns
+		
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Open
@@ -646,14 +650,15 @@
 	(LTrim	
 		Would you like to download it now?
 		
-		To disable automatic checks select Help > Check on start-up.
+		To disable automatic checks select Help > Check on startup
 	)	
+		
 	d_Lang062 =	You already have the most recent version.
 	d_Lang063 =	An error occured while checking.
 	d_Lang064 =	COM object error in
 	d_Lang065 =	Row
 	d_Lang066 =	Specifically
-	d_Lang067 =	Show tips on start-up.
+	d_Lang067 =	Show this window on startup
 	d_Lang068 =	Tips:
 	d_Lang069 =	
 	(LTrim	

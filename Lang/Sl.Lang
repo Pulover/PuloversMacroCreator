@@ -129,7 +129,7 @@
 	h_Lang001 =	&Makro Creator Domov
 	h_Lang002 =	&AHK Online Dokumentacija
 	h_Lang003 =	&Preveri za posodobitve.
-	h_Lang004 =	P&reverite na start-up
+	h_Lang004 =	P&reveri ob zagonu
 	h_Lang005 =	&O
 	h_Lang006 =	&Nasveti
 	h_Lang007 =	&Forum
@@ -481,7 +481,7 @@
 	t_Lang082 =	Izjave
 	t_Lang083 =	Prikaži zamikanje za Zank in izjav
 	t_Lang084 =	(Dvakrat kliknite glavo stolpca Akcijski vklop / izklop)
-	t_Lang085 =	Zaslon Kontrole Bar na start-up
+	t_Lang085 =	Prikaz nadzoruje bar ob zagonu
 	t_Lang086 =	Iskanje funkcij. Prosimo počakajte.
 	t_Lang087 =	Vključujejo zunanje datoteke
 	t_Lang088 =	Ustvari EXE datoteko
@@ -535,6 +535,10 @@
 	t_Lang136 =	Vrhunec Vrstic
 	t_Lang137 =	Privzeti Urejevalnik Skript
 	t_Lang138 =	Uredi Skript
+	t_Lang139 =	Izberite
+	t_Lang140 =	S Kolone
+	t_Lang141 =	Vsi Stolpci
+		
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Odprite
@@ -646,14 +650,15 @@
 	(LTrim	
 		Želite prenesti sedaj?
 		
-		Če želite onemogočiti samodejne preglede izberite Pomoč> Preveri na start-up.
+		Če želite onemogočiti samodejne preglede izberite Pomoč> Preveri na start-up. > Preveri ob zagonu
 	)	
+		
 	d_Lang062 =	Že imate najnovejšo različico.
 	d_Lang063 =	Napaka pri preverjanju do napake.
 	d_Lang064 =	COM objekt napaka
 	d_Lang065 =	Vrstica
 	d_Lang066 =	Posebej
-	d_Lang067 =	Prikaži nasvete o start-up.
+	d_Lang067 =	Prikaži to okno ob zagonu
 	d_Lang068 =	Nasveti:
 	d_Lang069 =	
 	(LTrim	

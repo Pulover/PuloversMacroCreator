@@ -126,13 +126,13 @@
 	p_Lang001 =	&Donación PayPal
 		
 ; Help Sub Menu		
-	h_Lang001 =	&Macro Home Creator
-	h_Lang002 =	&AHK Documentación Online
-	h_Lang003 =	&Buscar si hay actualizaciones...
-	h_Lang004 =	B&uscar en el arranque
-	h_Lang005 =	A&cerca
-	h_Lang006 =	C&onsejos
-	h_Lang007 =	&Foro
+	h_Lang001 =	Macro Home Creator
+	h_Lang002 =	AHK Documentación Online
+	h_Lang003 =	Buscar si hay actualizaciones...
+	h_Lang004 =	Compruebe en el arranque
+	h_Lang005 =	Acerca
+	h_Lang006 =	Consejos
+	h_Lang007 =	Foro
 		
 ; Tray Menu		
 	y_Lang001 =	Ocultar ventana
@@ -481,7 +481,7 @@
 	t_Lang082 =	Declaraciones
 	t_Lang083 =	Mostrar Sangría para bucles y sentencias
 	t_Lang084 =	(Haga doble clic en el encabezado de la columna Acción de activar / desactivar)
-	t_Lang085 =	Mostrar barra de controles en el arranque
+	t_Lang085 =	Visualización controla bar en el arranque
 	t_Lang086 =	Buscando Funciones. Por favor, espere...
 	t_Lang087 =	Incluir archivos externos
 	t_Lang088 =	Crear archivo EXE
@@ -535,6 +535,10 @@
 	t_Lang136 =	Destacar Filas
 	t_Lang137 =	Editor de Scripts Por Defecto
 	t_Lang138 =	Editar guión
+	t_Lang139 =	Seleccionar
+	t_Lang140 =	Por La Columna
+	t_Lang141 =	Todas Las Columnas
+		
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Abierto
@@ -646,14 +650,15 @@
 	(LTrim	
 		¿Desea descargarlo ahora?
 		
-		Para deshabilitar las comprobaciones automáticas seleccione Ayuda > Buscar en el arranque.
+		Para deshabilitar las comprobaciones automáticas seleccione Ayuda > Compruebe en el arranque
 	)	
+		
 	d_Lang062 =	Usted ya tiene la versión más reciente.
 	d_Lang063 =	Se ha producido un error durante la comprobación.
 	d_Lang064 =	Error de objeto COM en
 	d_Lang065 =	Fila
 	d_Lang066 =	Específicamente
-	d_Lang067 =	Mostrar consejos sobre la puesta en marcha.
+	d_Lang067 =	Mostrar esta ventana al iniciar
 	d_Lang068 =	Consejos:
 	d_Lang069 =	
 	(LTrim	

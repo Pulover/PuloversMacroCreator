@@ -129,7 +129,7 @@
 	h_Lang001 =	&Makro Creator Home
 	h_Lang002 =	&AHK online dokumentácia
 	h_Lang003 =	&Skontrolovať aktualizácie...
-	h_Lang004 =	&Pozrite sa na start-up
+	h_Lang004 =	&Pozrite sa na štarte
 	h_Lang005 =	&O
 	h_Lang006 =	&Tipy
 	h_Lang007 =	&Forum
@@ -481,7 +481,7 @@
 	t_Lang082 =	Vyhlásenie
 	t_Lang083 =	Zobraziť odsadenie pre slučky a výkazy
 	t_Lang084 =	(Dvakrát kliknite na hlavičku stĺpca akcie povoliť / zakázať)
-	t_Lang085 =	Displej Ovládací panel pri spustení
+	t_Lang085 =	Zobrazenie panelu s ovládacími prvkami na spustenie
 	t_Lang086 =	Vyhľadávanie funkcií. Čakajte prosím...
 	t_Lang087 =	Zahrnúť externé súbory
 	t_Lang088 =	Vytvorte súbor EXE
@@ -535,6 +535,10 @@
 	t_Lang136 =	Zvýraznenie Riadkov
 	t_Lang137 =	Predvolený Editor Skriptov
 	t_Lang138 =	Upraviť Skript
+	t_Lang139 =	Vybrať
+	t_Lang140 =	Podľa Stĺpca
+	t_Lang141 =	Všetky Stĺpce
+		
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Otvorené
@@ -646,14 +650,15 @@
 	(LTrim	
 		Chcete ju hneď stiahnuť?
 		
-		Ak chcete zakázať automatickú kontrolu vyberte Pomocník> Skontrolovať pri spustení.
+		Ak chcete zakázať automatickú kontrolu vyberte Pomocník> Skontrolovať pri spustení. > Pozrite sa na štarte
 	)	
+		
 	d_Lang062 =	Už máte najnovšiu verziu.
 	d_Lang063 =	Nastala chyba pri kontrole.
 	d_Lang064 =	COM objekt chyba
 	d_Lang065 =	Riadok
 	d_Lang066 =	Konkrétne
-	d_Lang067 =	Zobraziť tipy pri spustení.
+	d_Lang067 =	Zobraziť toto okno pri spustení
 	d_Lang068 =	Tipy:
 	d_Lang069 =	
 	(LTrim	

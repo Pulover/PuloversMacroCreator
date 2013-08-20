@@ -129,7 +129,7 @@
 	h_Lang001 =	&Macro Home Creator
 	h_Lang002 =	&AHK Documentazione in linea
 	h_Lang003 =	&Controllare gli aggiornamenti...
-	h_Lang004 =	&Verificare in fase di start up
+	h_Lang004 =	C&ontrolla all'avvio
 	h_Lang005 =	C&irca
 	h_Lang006 =	&Suggerimenti
 	h_Lang007 =	&Forum
@@ -481,7 +481,7 @@
 	t_Lang082 =	Dichiarazioni
 	t_Lang083 =	Mostra Rientro per Loops e dichiarazioni
 	t_Lang084 =	(Fare doppio clic sull'intestazione della colonna Azione attiva / disattiva)
-	t_Lang085 =	Mostra barra Controlli in fase di start-up
+	t_Lang085 =	Display controlla barra all'avvio
 	t_Lang086 =	Ricerca di funzioni. Si prega di attendere...
 	t_Lang087 =	Includere file esterni
 	t_Lang088 =	Créer un fichier EXE
@@ -535,6 +535,10 @@
 	t_Lang136 =	Righe Evidenziare
 	t_Lang137 =	Editor Di Script Predefinito
 	t_Lang138 =	Modifica Script
+	t_Lang139 =	Selezionare
+	t_Lang140 =	Con Colonna
+	t_Lang141 =	Tutte Le Colonne
+		
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Aperto
@@ -646,14 +650,15 @@
 	(LTrim	
 		Volete scaricare ora?
 		
-		Per disattivare il controllo automatico selezionare Aiuto > Verificare in fase di start up.
+		Per disattivare il controllo automatico selezionare Aiuto > Controlla all'avvio
 	)	
+		
 	d_Lang062 =	Hai già la versione più recente.
 	d_Lang063 =	Si è verificato un errore durante la verifica.
 	d_Lang064 =	Errore di oggetto COM in
 	d_Lang065 =	Riga
 	d_Lang066 =	Specificamente
-	d_Lang067 =	Mostra suggerimenti all'avvio.
+	d_Lang067 =	Mostra questa finestra all'avvio
 	d_Lang068 =	Suggerimenti:
 	d_Lang069 =	
 	(LTrim	

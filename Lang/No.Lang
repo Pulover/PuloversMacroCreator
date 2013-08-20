@@ -481,7 +481,7 @@
 	t_Lang082 =	Uttalelser
 	t_Lang083 =	Vis Innrykk for Loops og uttalelser
 	t_Lang084 =	(Dobbeltklikk på kolonnen Handling header aktivere / deaktivere)
-	t_Lang085 =	Displayet Controls bar ved oppstart
+	t_Lang085 =	Displayet kontrollerer bar ved oppstart
 	t_Lang086 =	Søke etter funksjoner. Vennligst vent...
 	t_Lang087 =	Inkluder eksterne filer
 	t_Lang088 =	Lag EXE-fil
@@ -535,6 +535,10 @@
 	t_Lang136 =	Markere Rader
 	t_Lang137 =	Standard Script Editor
 	t_Lang138 =	Rediger Skript
+	t_Lang139 =	Velg
+	t_Lang140 =	Av Kolonne
+	t_Lang141 =	Alle Kolonner
+		
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Åpent
@@ -646,14 +650,15 @@
 	(LTrim	
 		Vil du laste den ned nå?
 		
-		Hvis du vil deaktivere automatiske kontroller velge Hjelp > Sjekk ved oppstart.
+		Hvis du vil deaktivere automatiske kontroller velge Hjelp > Sjekk ved oppstart
 	)	
+		
 	d_Lang062 =	Du allerede har den nyeste versjonen.
 	d_Lang063 =	Det oppstod en feil mens du sjekker.
 	d_Lang064 =	COM objekt feil i
 	d_Lang065 =	Rad
 	d_Lang066 =	Spesielt
-	d_Lang067 =	Vis tips om oppstart.
+	d_Lang067 =	Vis dette vinduet ved oppstart
 	d_Lang068 =	tips:
 	d_Lang069 =	
 	(LTrim	

@@ -129,8 +129,8 @@
 	h_Lang001 =	&Macro Schepper Startpagina
 	h_Lang002 =	&AHK Online Documentatie
 	h_Lang003 =	&Controleren op updates...
-	h_Lang004 =	C&heck bij het opstarten
-	h_Lang005 =	&Over
+	h_Lang004 =	C&ontroleer bij opstarten
+	h_Lang005 =	O&ver
 	h_Lang006 =	&tips
 	h_Lang007 =	&Forum
 		
@@ -481,7 +481,7 @@
 	t_Lang082 =	Verklaringen
 	t_Lang083 =	Toon Inspringen voor Loops en Verklaringen
 	t_Lang084 =	(Dubbelklik op de actie kolomkop inschakelen / uitschakelen)
-	t_Lang085 =	Beeldscherm Controls bar op start-up
+	t_Lang085 =	Weergave controleert bar bij het opstarten
 	t_Lang086 =	Zoeken naar functies. Even geduld aub...
 	t_Lang087 =	Inclusief externe bestanden
 	t_Lang088 =	Maak EXE File
@@ -535,6 +535,10 @@
 	t_Lang136 =	Hoogtepunt Rijen
 	t_Lang137 =	Standaard Script Editor
 	t_Lang138 =	Script Bewerken
+	t_Lang139 =	Kiezen
+	t_Lang140 =	Door Column
+	t_Lang141 =	Alle Columns
+		
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Open
@@ -646,14 +650,15 @@
 	(LTrim	
 		Wilt u deze nu downloaden?
 		
-		Om automatische controles uit te schakelen selecteert u Help > Check bij het opstarten.
+		Om automatische controles uit te schakelen selecteert u Help > Controleer bij opstarten
 	)	
+		
 	d_Lang062 =	Je hebt al de meest recente versie.
 	d_Lang063 =	Er is een fout opgetreden tijdens het controleren.
 	d_Lang064 =	COM-object fout in
 	d_Lang065 =	Rij
 	d_Lang066 =	Specifiek
-	d_Lang067 =	Toon tips bij het opstarten.
+	d_Lang067 =	Laat dit venster bij het opstarten
 	d_Lang068 =	tips:
 	d_Lang069 =	
 	(LTrim	

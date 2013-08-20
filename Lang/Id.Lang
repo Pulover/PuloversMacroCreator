@@ -129,7 +129,7 @@
 	h_Lang001 =	&Makro Pencipta Depan
 	h_Lang002 =	&AHK Dokumentasi Online
 	h_Lang003 =	&Periksa pembaruan...
-	h_Lang004 =	P&eriksa pada start-up
+	h_Lang004 =	P&eriksa pada startup
 	h_Lang005 =	&Tentang
 	h_Lang006 =	T&ips
 	h_Lang007 =	&Forum
@@ -481,7 +481,7 @@
 	t_Lang082 =	Laporan
 	t_Lang083 =	Tampilkan Indentasi untuk Loops dan Laporan
 	t_Lang084 =	(Dua-Klik header kolom Aksi mengaktifkan / menonaktifkan)
-	t_Lang085 =	Tampilan Kontrol Bar pada start-up
+	t_Lang085 =	Display kontrol bar pada startup
 	t_Lang086 =	Mencari Fungsi. Harap tunggu...
 	t_Lang087 =	Sertakan File Eksternal
 	t_Lang088 =	Buat EXE file
@@ -535,6 +535,10 @@
 	t_Lang136 =	Baris Sorot
 	t_Lang137 =	Editor Default Skrip
 	t_Lang138 =	Mengedit Skrip
+	t_Lang139 =	Memilih
+	t_Lang140 =	Dengan Kolom
+	t_Lang141 =	Semua Kolom
+		
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Buka
@@ -646,14 +650,15 @@
 	(LTrim	
 		Apakah Anda ingin men-download sekarang?
 		
-		Untuk menonaktifkan pemeriksaan otomatis pilih Bantuan> Periksa pada start-up.
+		Untuk menonaktifkan pemeriksaan otomatis pilih Bantuan> Periksa pada start-up. > Periksa pada startup
 	)	
+		
 	d_Lang062 =	Anda sudah memiliki versi terbaru.
 	d_Lang063 =	Terjadi galat saat memeriksa.
 	d_Lang064 =	COM objek kesalahan dalam
 	d_Lang065 =	Baris
 	d_Lang066 =	Secara khusus
-	d_Lang067 =	Tampilkan tips tentang start-up.
+	d_Lang067 =	Tampilkan jendela ini pada startup
 	d_Lang068 =	Tips:
 	d_Lang069 =	
 	(LTrim	

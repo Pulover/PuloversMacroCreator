@@ -129,7 +129,7 @@
 	h_Lang001 =	&Makro Creator Webseite
 	h_Lang002 =	&AHK Online-Dokumentation
 	h_Lang003 =	&Nach Updates suchen...
-	h_Lang004 =	Beim Start über&prüfen
+	h_Lang004 =	&Beim Start überprüfen
 	h_Lang005 =	&Über
 	h_Lang006 =	&Tipps
 	h_Lang007 =	&Forum
@@ -535,6 +535,10 @@
 	t_Lang136 =	Zeilen markieren
 	t_Lang137 =	Standard-Skript-Editor
 	t_Lang138 =	Skript Bearbeiten
+	t_Lang139 =	Auswahl
+	t_Lang140 =	Nach Spalte
+	t_Lang141 =	Alle Spalten
+		
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Öffnen
@@ -646,14 +650,15 @@
 	(LTrim	
 		Möchten Sie diese jetzt herunterladen?
 		
-		Um die automatische Prüfung zu deaktivieren wählen Sie Hilfe > Beim Start überprüfen.
+		Um die automatische Prüfung zu deaktivieren wählen Sie Hilfe > Beim Start überprüfen
 	)	
+		
 	d_Lang062 =	Dies ist bereits die neuste Version.
 	d_Lang063 =	Während der Überprüfung ist ein Fehler aufgetreten.
 	d_Lang064 =	COM-Objekt Fehler in
 	d_Lang065 =	Reihe
 	d_Lang066 =	Speziell
-	d_Lang067 =	Tipps beim Programmstart anzeigen.
+	d_Lang067 =	Dieses Fenster beim Start
 	d_Lang068 =	Tipps:
 	d_Lang069 =	
 	(LTrim	

@@ -129,9 +129,9 @@
 	h_Lang001 =	&Makro Creator Hjem
 	h_Lang002 =	&AHK Online Dokumentation
 	h_Lang003 =	&Kontrollere for opdateringer...
-	h_Lang004 =	K&ontrollere, om opstart
-	h_Lang005 =	Om
-	h_Lang006 =	&Tips
+	h_Lang004 =	&Tjek på opstart
+	h_Lang005 =	&Om
+	h_Lang006 =	T&ips
 	h_Lang007 =	&Forum
 		
 ; Tray Menu		
@@ -481,7 +481,7 @@
 	t_Lang082 =	Erklæringer
 	t_Lang083 =	Vis Indrykning for-løkker og Udtalelser
 	t_Lang084 =	(Dobbeltklik på aktion kolonneoverskriften aktivere / deaktivere)
-	t_Lang085 =	Display Controls bar på opstart
+	t_Lang085 =	Display styrer bar ved opstart
 	t_Lang086 =	Søgning efter funktioner. Vent venligst...
 	t_Lang087 =	Medtag eksterne filer
 	t_Lang088 =	Opret EXE fil
@@ -535,6 +535,10 @@
 	t_Lang136 =	Fremhæve Rækker
 	t_Lang137 =	Standard Script Editor
 	t_Lang138 =	Rediger Script
+	t_Lang139 =	Vælg
+	t_Lang140 =	Ved Kolonne
+	t_Lang141 =	Alle Kolonner
+		
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Åbent
@@ -646,14 +650,15 @@
 	(LTrim	
 		Kunne du tænke dig at hente den nu?
 		
-		For at deaktivere automatiske kontroller Vælg Hjælp > Kontrollere, om opstart.
+		For at deaktivere automatiske kontroller Vælg Hjælp > Tjek på opstart
 	)	
+		
 	d_Lang062 =	Du har allerede den nyeste version.
 	d_Lang063 =	Der opstod en fejl under kontrol.
 	d_Lang064 =	COM objekt fejl i
 	d_Lang065 =	Row
 	d_Lang066 =	Konkret
-	d_Lang067 =	Vis tips om opstart.
+	d_Lang067 =	Vis dette vindue ved opstart
 	d_Lang068 =	Tips:
 	d_Lang069 =	
 	(LTrim	

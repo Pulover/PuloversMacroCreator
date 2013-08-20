@@ -535,6 +535,10 @@
 	t_Lang136 =	Markera Rader
 	t_Lang137 =	Default Manusförläggare
 	t_Lang138 =	Redigera Skript
+	t_Lang139 =	Välj
+	t_Lang140 =	Genom Kolumn
+	t_Lang141 =	Alla Kolumner
+		
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Öppet
@@ -646,14 +650,15 @@
 	(LTrim	
 		Vill du ladda ner den nu?
 		
-		Vill du avaktivera automatiska kontroller väljer Hjälp > Kontrollera vid uppstart.
+		Vill du avaktivera automatiska kontroller väljer Hjälp > Kontrollera vid uppstart
 	)	
+		
 	d_Lang062 =	Du har redan den senaste versionen.
 	d_Lang063 =	Ett fel inträffade vid kontrollen.
 	d_Lang064 =	COM-objekt fel i
 	d_Lang065 =	Rad
 	d_Lang066 =	Specifikt
-	d_Lang067 =	Visa tips om start-up.
+	d_Lang067 =	Visa det här fönstret vid start
 	d_Lang068 =	Tips:
 	d_Lang069 =	
 	(LTrim	

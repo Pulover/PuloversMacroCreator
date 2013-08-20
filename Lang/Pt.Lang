@@ -481,7 +481,7 @@
 	t_Lang082 =	Declarações
 	t_Lang083 =	Mostrar Margens para Loops e Declarações
 	t_Lang084 =	(Duplo-Clique no Cabeçalho da Coluna Action para ativar/desativar)
-	t_Lang085 =	Mostrar Barra de Controles ao iniciar.
+	t_Lang085 =	Mostrar Barra de Controles ao iniciar
 	t_Lang086 =	Procurando Funções. Por favor aguarde...
 	t_Lang087 =	Incluir Arquivos Externos
 	t_Lang088 =	Criar Arquivo EXE
@@ -535,6 +535,10 @@
 	t_Lang136 =	Destacar Linhas
 	t_Lang137 =	Editor de Script Padrão
 	t_Lang138 =	Editar Script
+	t_Lang139 =	Selecionar
+	t_Lang140 =	Por Coluna
+	t_Lang141 =	Todas as Colunas
+		
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Abrir
@@ -646,14 +650,15 @@
 	(LTrim	
 		Gostaria de fazer o download agora?
 		
-		Para desabilitar a verificação automática selecine Ajuda > Verificar ao iniciar.
+		Para desabilitar a verificação automática selecine Ajuda > Verificar ao iniciar
 	)	
+		
 	d_Lang062 =	Você já possui a versão mais recente.
 	d_Lang063 =	Ocorreu um erro durante a verificação.
 	d_Lang064 =	Erro do objeto COM em
 	d_Lang065 =	Linha
 	d_Lang066 =	Especificamente
-	d_Lang067 =	Mostrar dicas ao iniciar.
+	d_Lang067 =	Mostrar esta janela ao iniciar
 	d_Lang068 =	Dicas:
 	d_Lang069 =	
 	(LTrim	

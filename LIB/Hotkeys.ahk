@@ -39,6 +39,7 @@ Insert::GoSub, ApplyL
 
 ^f::GoSub, FindReplace
 ^+f::GoSub, CmdFind
+^u::GoSub, FilterSelect
 ^n::GoSub, New
 ^o::GoSub, Open
 ^s::GoSub, Save

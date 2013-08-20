@@ -129,7 +129,7 @@
 	h_Lang001 =	&Makro Stvoritelja Home
 	h_Lang002 =	&AHK Online Dokumentacija
 	h_Lang003 =	&Provjeriti ažuriranja...
-	h_Lang004 =	P&rovjeriti na start up
+	h_Lang004 =	P&rovjerite na startup
 	h_Lang005 =	&Oko
 	h_Lang006 =	&Savjet
 	h_Lang007 =	&Forum
@@ -481,7 +481,7 @@
 	t_Lang082 =	Izjave
 	t_Lang083 =	Pokaži Utiskivanje je Loops i izvješća
 	t_Lang084 =	(Dvaput kliknite zaglavlje stupca Akcija uključiti / isključiti)
-	t_Lang085 =	Display Kontrole bar na start-up
+	t_Lang085 =	Zaslon kontrolira bar na startup
 	t_Lang086 =	U potrazi za funkcije. Molimo pričekajte...
 	t_Lang087 =	Uključiti vanjske datoteke
 	t_Lang088 =	Stvaranje EXE datoteke
@@ -535,6 +535,10 @@
 	t_Lang136 =	Istaknuto Redovi
 	t_Lang137 =	Zadana Skripta Urednik
 	t_Lang138 =	Uredi Skriptu
+	t_Lang139 =	Odabrati
+	t_Lang140 =	Do Stupcu
+	t_Lang141 =	Svi Stupovi
+		
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Otvoreno
@@ -646,14 +650,15 @@
 	(LTrim	
 		Želite li ga skinuti sada?
 		
-		Kako onemogućiti automatske provjere odabir Pomoć > Provjeriti na start up.
+		Kako onemogućiti automatske provjere odabir Pomoć > Provjerite na startup
 	)	
+		
 	d_Lang062 =	Vi već imate najnoviju verziju.
 	d_Lang063 =	Došlo je do pogreške tijekom provjere.
 	d_Lang064 =	COM objekt pogreška u
 	d_Lang065 =	Red
 	d_Lang066 =	Posebno
-	d_Lang067 =	Pokaži savjete o start-up.
+	d_Lang067 =	Pokažite ovaj prozor na startup
 	d_Lang068 =	Savjet:
 	d_Lang069 =	
 	(LTrim	

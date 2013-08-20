@@ -481,7 +481,7 @@
 	t_Lang082 =	Déclarations
 	t_Lang083 =	Voir Indentation pour les boucles et les états
 	t_Lang084 =	(Double-cliquez sur l'en-tête de colonne Action activer / désactiver)
-	t_Lang085 =	Commandes de l'affichage bar au démarrage
+	t_Lang085 =	Affichage contrôle bar au démarrage
 	t_Lang086 =	Recherche de fonctions. S'il vous plaît patienter...
 	t_Lang087 =	Inclure les fichiers externes
 	t_Lang088 =	Créer un fichier EXE
@@ -535,6 +535,10 @@
 	t_Lang136 =	Les Lignes En Surbrillance
 	t_Lang137 =	Éditeur De Script Par Défaut
 	t_Lang138 =	Modifier Le Script
+	t_Lang139 =	Sélectionner
+	t_Lang140 =	Par Colonne
+	t_Lang141 =	Tous Les Colonnes
+		
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Ouvert
@@ -646,14 +650,15 @@
 	(LTrim	
 		Voulez-vous la télécharger maintenant?
 		
-		Pour désactiver la vérification automatique Sélectionnez Aide > Vérifier au démarrage.
+		Pour désactiver la vérification automatique Sélectionnez Aide > Vérifier au démarrage
 	)	
+		
 	d_Lang062 =	Vous avez déjà la version la plus récente.
 	d_Lang063 =	Une erreur s'est produite lors de la vérification.
 	d_Lang064 =	Erreur d'objet COM dans
 	d_Lang065 =	Row
 	d_Lang066 =	Spécifiquement
-	d_Lang067 =	Afficher les astuces au démarrage.
+	d_Lang067 =	Afficher cette fenêtre au démarrage
 	d_Lang068 =	Conseils:
 	d_Lang069 =	
 	(LTrim	
