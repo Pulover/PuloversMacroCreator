@@ -7,7 +7,7 @@
 * [Playback](#playback)
 * [Defaults](#defaults)
 * [Screenshots](#screenshots)
-* [Misc.](#misc.)
+* [General](#general)
 * [User Global Variables](#user-global-variables)
 
 ## Introduction
@@ -35,7 +35,13 @@ See [Playback Page](p3-Playback.html#playback-options).
 
 **Clear History**: Clears and resets History for all Macros.
 
-**Show Info**: Enables displaying of tooltips and traytips during Recording/Playback.
+**Default Script Editor**: Sets a default editor to open Script with the *Edit Script* button in the **Preview** window.
+
+**Default Macro File**: If a valid file with a PMC code is set it will be loaded on program start up.
+
+**Standard Library File**: Sets an AutoHotkey script file to be loaded automatically in the *Functions* window.
+
+**Set As Default Hotkeys**: If checked the current Hotkeys will be loaded on each run of the program and when 'Default Settings' are loaded.
 
 ## Screenshots
 
@@ -49,9 +55,7 @@ See [Playback Page](p3-Playback.html#playback-options).
 
 **Screenshots Directory**: Selects the default folder for Screenshots taken.
 
-## Misc.
-
-**Set As Default Hotkeys**: If checked the current Hotkeys will be loaded on each run of the program and when 'Default Settings' are loaded.
+## General
 
 **Disable Window Shortcuts**: Disable Shortcuts for commands in the main window.
 
@@ -59,7 +63,7 @@ See [Playback Page](p3-Playback.html#playback-options).
 
 **Reset Columns Size**: Resets the sizes of the columns for the currently selected Macro.
 
-**Use Eval() by default for Variables Assignment**: Determines whether the *Use Eval() to solve expressions* option will be enabled by default for new Variable Assignments.
+**Use Expression by default for Variables Assignment**: Determines whether the *Expression* option will be enabled by default for new Variable Assignments.
 
 **Allow Dragging Rows**: Enables / Disables row dragging with mouse in the Macro lists.
 
@@ -82,10 +86,6 @@ You can change the default colors clicking on the color shown here and picking o
 
 **Show Indentation for Loops and Statements**: When activated Actions inside Loops or Statements will be shown with indentation.  
 You can also double-click on the *Action* Column Header to turn this option On/Off.  
-
-**Default Macro File**: If a valid file with a PMC code is set it will be loaded on program start up.
-
-**Set As Default File**: Sets the current Macro Project to be loaded on program start up.
 
 **Virtual Keys**: System keys and Modifiers that will be recognized during Recording and when Capture keys is enabled.
 

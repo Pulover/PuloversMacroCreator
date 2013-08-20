@@ -522,6 +522,7 @@ BuiltinFuncList := "
 (Join$
 Abs
 ACos
+Array
 Asc
 ASin
 ATan

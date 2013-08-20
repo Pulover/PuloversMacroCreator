@@ -5552,7 +5552,6 @@ If (s_Caller = "Edit")
 		Else
 		{
 			AssignReplace(Details), FuncName := Action, GuiTitle := c_Lang011
-			GoSub, FuncName
 			GuiControl, 21:Choose, TabControl, 3
 			If (VarName <> "_null")
 				GuiControl, 21:, VarNameF, %VarName%
@@ -5560,6 +5559,7 @@ If (s_Caller = "Edit")
 				GuiControl, 21:ChooseString, FuncName, %FuncName%
 			Else
 				GuiControl, 21:, FuncName, %FuncName%$$
+			GuiControl, 21:, VarValueF, %VarValue%
 			If (Target <> "")
 			{
 				UseExtFunc := 1, FileNameEx := Target
@@ -5569,7 +5569,7 @@ If (s_Caller = "Edit")
 				GoSub, UseExtFunc
 				GuiControl, 21:ChooseString, FuncName, %FuncName%
 			}
-			GuiControl, 21:, VarValueF, %VarValue%
+			GoSub, FuncName
 		}
 	}
 	GuiControl, 21:Enable, IfApply
@@ -5858,6 +5858,7 @@ GuiControl, 21:Enable%IsBuiltIn%, FuncHelp
 return
 
 UseExtFunc:
+Gui, 21:Submit, NoHide
 Gui, 21:+OwnDialogs
 If !A_AhkPath
 {
@@ -5901,6 +5902,8 @@ If FuncName in Abs,ACos,Asc,ASin,ATan,Ceil,Chr,Exp,FileExist,Floor,Func
 ,IsObject,Ln,Log,LTrim,Mod,NumGet,NumPut,Round,RTrim,Sin,Sqrt,StrGet
 ,StrLen,StrPut,SubStr,Tan,Trim,WinActive,WinExist
 	Run, http://l.autohotkey.net/docs/Functions.htm#%FuncName%
+Else If (FuncName = "Array")
+	Run, http://l.autohotkey.net/docs/misc/Arrays.htm
 Else
 	Run, http://l.autohotkey.net/docs/commands/%FuncName%.htm
 return

@@ -97,6 +97,12 @@
 */
 
 /*!
+	Function: Find_a_Command()
+		This window allows you to easily search for a command or function.  
+		Simply type a keyword and the results will be displayed in the box below. Double-Click an item or press Enter to open the target window.
+*/
+
+/*!
 	Function: Mouse()
 		Clicks a mouse button at the specified coordinates. It can also hold down a mouse button, turn the mouse wheel, or move the mouse.
 
@@ -516,7 +522,7 @@
 		Output Variable - Name of the Variable in which to store the contents.
 		Operator - Operator to use in the assignment.
 		Content - Text, Variables or Function to be assigned.  
-		Use Eval() to solve expressions - If enabled will execute the [Eval()](http://www.autohotkey.com/board/topic/15675-monster) function on the contents to solve Math Expressions. This is especially useful to modify variables values without the need to create more Assignments.
+		Expression - If enabled will execute the [Eval()](http://www.autohotkey.com/board/topic/15675-monster) function on the contents to execute functions and solve Math Expressions. This is especially useful to modify variables values without the need to create more Assignments. It also allows you to assign the variable to a function result like the in the *Functions* window.
 			> %FoundX% + 100 ; This would assign the value of FoundX + 100 to the chosen variable name without the need to use the += operator.
 			*Note*: To keep this option enabled by default go to Options Menu > Settings > Misc. and check the option.
 		Copy - Copies the variable's contents to the Clipboard.
