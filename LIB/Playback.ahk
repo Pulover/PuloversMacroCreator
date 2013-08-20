@@ -1198,7 +1198,9 @@ CheckVars(MatchList, Point="")
 			While, RegExMatch(%A_LoopField%, "mU)%\s+(\S+)\[(\S+)\]", Found)
 			{
 				Found := RegExReplace(Found, "[\[|\]]", "\$0")
-			,	%A_LoopField% := RegExReplace(%A_LoopField%, Found, %Found1%[Found2])
+				If Found2 is not Number
+					Found2 := DerefVars("%" Found2 "%")
+				%A_LoopField% := RegExReplace(%A_LoopField%, Found, %Found1%[Found2])
 			}
 		}
 	}

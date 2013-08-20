@@ -584,11 +584,6 @@ CheckForExp(Field)
 			ExpValue := ""
 		StringReplace, Field, Field, %Funct%, % "% " Funct1 "(" ExpValue ")"
 	}
-	While, RegExMatch(Field, "mU)\[(%.*%)\]", Found)
-	{
-		Rep := RegExReplace(Found1, "%")
-		Field := RegExReplace(Field, Found1, Rep)
-	}
 	return Field
 }
 

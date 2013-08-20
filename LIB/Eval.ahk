@@ -29,7 +29,9 @@ Eval(x) {                              ; non-recursive PRE/POST PROCESSING: I/O 
 	If RegExMatch(x, "(\S+)\[(\S+)\]", Found) ; Arrays
 	{
 		Found := RegExReplace(Found, "[\[|\]]", "\$0")
-	,	y := %Found1%[Found2]
+		If Found2 is not Number
+			Found2 := DerefVars("%" Found2 "%")
+		y := %Found1%[Found2]
 		return y
 	}
    SetFormat Integer, D                ; decimal intermediate results!
