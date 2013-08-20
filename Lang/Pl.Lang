@@ -112,6 +112,7 @@
 	v_lang020 =	Ręczny
 	v_lang021 =	Zatrzymać
 	v_lang022 =	Pauza
+	v_lang023 =	Reset
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Ustawienia

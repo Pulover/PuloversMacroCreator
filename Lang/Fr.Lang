@@ -112,6 +112,7 @@
 	v_lang020 =	Manuel
 	v_lang021 =	Arrêter
 	v_lang022 =	Pause
+	v_lang023 =	Réinitialiser Par Défaut
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Réglages

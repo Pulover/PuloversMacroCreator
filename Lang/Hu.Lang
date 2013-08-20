@@ -112,6 +112,7 @@
 	v_lang020 =	Kézi
 	v_lang021 =	Megáll
 	v_lang022 =	Szünet
+	v_lang023 =	Vissza Az Alapértelmezett
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Beállítások

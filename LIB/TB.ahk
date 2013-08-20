@@ -51,7 +51,6 @@ TB_IdealSize(tbPtr, Band)
 	Global RbMain
 	tbWidth := TB_GetSize(tbPtr), aBand := RbMain.IDToIndex(Band)
 ,	RbMain.ModifyBand(aBand, "IdealSize", tbWidth)
-OutputDebug, %aBand%, %tbWidth%
 }
 
 TB_Messages(wParam, lParam)

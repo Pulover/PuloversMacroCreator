@@ -112,6 +112,7 @@
 	v_lang020 =	Manuell
 	v_lang021 =	Stopp
 	v_lang022 =	Pause
+	v_lang023 =	Tilbakestille Standard
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Innstillinger

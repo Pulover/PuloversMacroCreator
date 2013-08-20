@@ -112,6 +112,7 @@
 	v_lang020 =	Manual
 	v_lang021 =	Stands
 	v_lang022 =	Pause
+	v_lang023 =	Nulstille Standard
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Indstillinger

@@ -112,6 +112,7 @@
 	v_lang020 =	Manuaalinen
 	v_lang021 =	Lopettaa
 	v_lang022 =	Tauko
+	v_lang023 =	Nollata Default
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Asetukset

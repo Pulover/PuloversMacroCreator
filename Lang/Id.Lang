@@ -112,6 +112,7 @@
 	v_lang020 =	Pedoman
 	v_lang021 =	Berhenti
 	v_lang022 =	Berhenti sebentar
+	v_lang023 =	Default Reset
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Pengaturan

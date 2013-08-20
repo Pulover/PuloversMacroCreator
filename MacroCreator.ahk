@@ -10004,6 +10004,8 @@ DetectHiddenWindows, On
 WinGet, WinState, MinMax, ahk_id %PMCWinID%
 If WinState = -1
 	WinState := 0
+Else
+	GuiGetSize(mGuiWidth, mGuiHeight), MainWinSize := "W" mGuiWidth " H" mGuiHeight
 ColSizes := ""
 Loop % LV_GetCount("Col")
 {
@@ -10018,8 +10020,7 @@ IfWinExist, ahk_id %PMCOSC%
 MainLayout := RbMain.GetLayout(), MacroLayout := RbMacro.GetLayout()
 ,	FileLayout := TbFile.Export(), RecPlayLayout := TbRecPlay.Export()
 ,	SettingsLayout := TbSettings.Export(), CommandLayout := TbCommand.Export()
-,	EditLayout := TbEdit.Export(), GuiGetSize(mGuiWidth, mGuiHeight)
-,	MainWinSize := "W" mGuiWidth " H" mGuiHeight
+,	EditLayout := TbEdit.Export()
 GoSub, WriteSettings
 IL_Destroy(hIL_Icons)
 Loop, %A_Temp%\PMC_*.ahk
@@ -10131,29 +10132,6 @@ AbortKey := "F8"
 ,	OSCaption := 0
 ,	CustomColors := 0
 ,	OnFinishCode := 1
-	ShowBand10 := 1
-,	ShowBand11 := 1
-,	ShowBand12 := 1
-,	ShowBand13 := 1
-,	ShowBand15 := 1
-,	ShowBand16 := 1
-,	ShowBand17 := 1
-,	ShowBand18 := 1
-,	ShowBand19 := 1
-,	TbFile.Reset(), TB_IdealSize(TbFile, 10)
-,	TbRecPlay.Reset(), TB_IdealSize(TbRecPlay, 11)
-,	TbSettings.Reset(), TB_IdealSize(TbSettings, 12)
-,	TbCommand.Reset(), TB_IdealSize(TbCommand, 15)
-,	TbEdit.Reset(), TB_IdealSize(TbEdit, 19)
-,	TB_Edit(TbFile, "Preview", ShowPrev)
-,	TB_Edit(TbSettings, "HideMainWin", HideMainWin)
-,	TB_Edit(TbSettings, "OnScCtrl", OnScCtrl)
-,	TB_Edit(TbSettings, "CheckHkOn", KeepHkOn)
-,	TB_Edit(TbSettings, "SetWin", 0)
-,	TB_Edit(TbSettings, "SetJoyButton", 0)
-,	TB_Edit(TbOSC, "ProgBarToggle", ShowProgBar)
-Loop, 3
-	RbMain.SetLayout(Default_MainLayout)
 WinSet, Transparent, %OSTrans%, ahk_id %PMCOSC%
 GuiControl, 28:, OSTrans, 255
 Gui, 28:-Caption
@@ -10164,17 +10142,7 @@ GuiControl, 1:, ContextTip, #IfWin: %IfDirectContext%
 GuiControl, 1:, AbortKey, %AbortKey%
 GuiControl, 1:, PauseKey, %PauseKey%
 GuiControl, 1:, DelayG, 0
-Menu, ViewMenu, Check, %v_lang002%
-Menu, ViewMenu, Check, %v_lang003%
-Menu, ToolbarsMenu, Check, %v_lang009%
-Menu, ToolbarsMenu, Check, %v_lang010%
-Menu, ToolbarsMenu, Check, %v_lang011%
-Menu, ToolbarsMenu, Check, %v_lang012%
-Menu, ToolbarsMenu, Check, %v_lang013%
-Menu, HotkeyMenu, Check, %v_lang019%
-Menu, HotkeyMenu, Check, %v_lang020%
-Menu, HotkeyMenu, Check, %v_lang021%
-Menu, HotkeyMenu, Check, %v_lang022%
+GoSub, DefaultLayout
 GoSub, DefaultMod
 GoSub, ObjCreate
 GoSub, LoadData
@@ -10234,6 +10202,43 @@ Loop, Parse, AutoKey, |
 	o_AutoKey.Insert(A_LoopField)
 Loop, Parse, ManKey, |
 	o_ManKey.Insert(A_LoopField)
+return
+
+DefaultLayout:
+	ShowBand10 := 1
+,	ShowBand11 := 1
+,	ShowBand12 := 1
+,	ShowBand13 := 1
+,	ShowBand15 := 1
+,	ShowBand16 := 1
+,	ShowBand17 := 1
+,	ShowBand18 := 1
+,	ShowBand19 := 1
+,	TbFile.Reset(), TB_IdealSize(TbFile, 10)
+,	TbRecPlay.Reset(), TB_IdealSize(TbRecPlay, 11)
+,	TbSettings.Reset(), TB_IdealSize(TbSettings, 12)
+,	TbCommand.Reset(), TB_IdealSize(TbCommand, 15)
+,	TbEdit.Reset(), TB_IdealSize(TbEdit, 19)
+,	TB_Edit(TbFile, "Preview", ShowPrev)
+,	TB_Edit(TbSettings, "HideMainWin", HideMainWin)
+,	TB_Edit(TbSettings, "OnScCtrl", OnScCtrl)
+,	TB_Edit(TbSettings, "CheckHkOn", KeepHkOn)
+,	TB_Edit(TbSettings, "SetWin", 0)
+,	TB_Edit(TbSettings, "SetJoyButton", 0)
+,	TB_Edit(TbOSC, "ProgBarToggle", ShowProgBar)
+Loop, 3
+	RbMain.SetLayout(Default_MainLayout)
+Menu, ViewMenu, Check, %v_lang002%
+Menu, ViewMenu, Check, %v_lang003%
+Menu, ToolbarsMenu, Check, %v_lang009%
+Menu, ToolbarsMenu, Check, %v_lang010%
+Menu, ToolbarsMenu, Check, %v_lang011%
+Menu, ToolbarsMenu, Check, %v_lang012%
+Menu, ToolbarsMenu, Check, %v_lang013%
+Menu, HotkeyMenu, Check, %v_lang019%
+Menu, HotkeyMenu, Check, %v_lang020%
+Menu, HotkeyMenu, Check, %v_lang021%
+Menu, HotkeyMenu, Check, %v_lang022%
 return
 
 WriteSettings:
@@ -10807,6 +10812,8 @@ Menu, ToolbarsMenu, Add, %v_lang012%, ShowHideBand
 Menu, ToolbarsMenu, Add, %v_lang013%, ShowHideBand
 Menu, ToolbarsMenu, Add
 Menu, ToolbarsMenu, Add, %v_lang017%, :CustomMenu
+Menu, ToolbarsMenu, Add
+Menu, ToolbarsMenu, Add, %v_lang023%, DefaultLayout
 
 Menu, HotkeyMenu, Add, %v_lang019%, ShowHideBandHK
 Menu, HotkeyMenu, Add, %v_lang020%, ShowHideBandHK

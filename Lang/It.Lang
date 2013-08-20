@@ -112,6 +112,7 @@
 	v_lang020 =	Manuale
 	v_lang021 =	Arresto
 	v_lang022 =	Pausa
+	v_lang023 =	Ripristino Di Default
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Impostazioni

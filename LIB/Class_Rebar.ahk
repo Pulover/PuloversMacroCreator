@@ -279,7 +279,6 @@ Class Rebar extends Rebar.Private
             %Property% := Value
         this.DefineBandStruct(rbBand, Style, ID, Text, Size, Image, Background
                             , MinWidth, MinHeight, IdealSize, Child)
-                            OutputDebug, %IdealSize%
         SendMessage, this.RB_SETBANDINFO, Band-1, &rbBand,, % "ahk_id " this.rbHwnd
         return (ErrorLevel = "FAIL") ? False : True
     }

@@ -112,6 +112,7 @@
 	v_lang020 =	Handboek
 	v_lang021 =	Stoppen
 	v_lang022 =	Pauze
+	v_lang023 =	Reset Default
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Instellingen
