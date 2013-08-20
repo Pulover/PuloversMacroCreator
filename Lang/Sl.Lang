@@ -320,7 +320,7 @@
 	c_Lang084 =	Določite spremenljivko
 	c_Lang085 =	Vsebina
 	c_Lang086 =	Operater
-	c_Lang087 =	Obravnavajo kot matematični izraz
+	c_Lang087 =	Izraz
 	c_Lang088 =	Ponastavi
 	c_Lang089 =	Funkcija Ime
 	c_Lang090 =	Ločene z vejico parametre (brez oklepajev).
@@ -456,7 +456,7 @@
 	t_Lang056 =	Ponastavi stolpce Velikost
 	t_Lang057 =	Privzeto makro datoteke
 	t_Lang058 =	Standardna knjižnica datoteke
-	t_Lang059 =	Uporabite Eval () privzeto za spremenljivke Naloga
+	t_Lang059 =	Uporaba Expression privzeto za spremenljivke Naloga
 	t_Lang060 =	Pokaži Barve & Pomoč znamk za Zank in izjav
 	t_Lang061 =	(Kliknite glavo stolpca indeksa za vklop / izklop)
 	t_Lang062 =	Virtualni Keys

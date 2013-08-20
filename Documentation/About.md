@@ -41,12 +41,13 @@ Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jör
 * New Interface with customizable toolbars.
 * New *Preview* window with syntax highlighting.
 * Docked *Preview* window beside *Macro* list (can be undocked).
-* Added support for basic Arrays.
+* Added support for basic Arrays using the built-in function *Array*.
+* Added support for functions inside Expressions in *Assign Variable* window.
 * Added new feature: *Find a command*.
 * Added *Edit Script* button to *Preview* window to open script in external editor.
 * Added individual *Pause* hotkey.
 * Added *Multiple Column* search in *Find/Replace* window.
-* Main window's size is now saved.
+* Main window size is remembered.
 
 ## Version 3.8.4
 

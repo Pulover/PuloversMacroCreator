@@ -320,7 +320,7 @@
 	c_Lang084 =	Assegnare variabile
 	c_Lang085 =	Contenuto
 	c_Lang086 =	Operatore
-	c_Lang087 =	Trattare come espressione matematica
+	c_Lang087 =	Espressione
 	c_Lang088 =	Reset
 	c_Lang089 =	Nome Funzione
 	c_Lang090 =	Separati da virgola parametri (senza parentesi).
@@ -456,7 +456,7 @@
 	t_Lang056 =	Ripristina dimensioni Colonne
 	t_Lang057 =	Predefinito Macro File
 	t_Lang058 =	Libreria file standard
-	t_Lang059 =	Usare la funzione Eval() per impostazione predefinita per l'assegnazione delle variabili
+	t_Lang059 =	Utilizzare Expression per impostazione predefinita per le variabili Assegnazione
 	t_Lang060 =	Mostra Colori e Marchi Guida per Loop e dichiarazioni
 	t_Lang061 =	(Fare clic sull'intestazione della colonna Indice per abilitare / disabilitare)
 	t_Lang062 =	Tasti virtuali

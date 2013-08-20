@@ -320,7 +320,7 @@
 	c_Lang084 =	Variable zuweisen
 	c_Lang085 =	Inhalt
 	c_Lang086 =	Operator
-	c_Lang087 =	Gönnen als mathematischen Ausdruck
+	c_Lang087 =	Expression
 	c_Lang088 =	Zurücksetzen
 	c_Lang089 =	Name der Funktion
 	c_Lang090 =	Kommagetrennte Parameter (ohne Klammern).
@@ -456,7 +456,7 @@
 	t_Lang056 =	Spaltenbreite zurücksetzen
 	t_Lang057 =	Standard Makro-Datei
 	t_Lang058 =	Standard Bibliotheks-Datei
-	t_Lang059 =	Standardmäßig Eval() für Variablen-Zuweisung verwenden 
+	t_Lang059 =	Standardmäßig Expression für Variablen-Zuweisung verwenden 
 	t_Lang060 =	Farben- &&und Hilfe-Markierungen für Loops und Anweisungen anzeigen
 	t_Lang061 =	(Klick auf die Überschrift der Index-Spalte zum Aktivieren/Deaktivieren)
 	t_Lang062 =	Virtuelle Tasten

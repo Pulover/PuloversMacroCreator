@@ -320,7 +320,7 @@
 	c_Lang084 =	Tilldela variabel
 	c_Lang085 =	Innehåll
 	c_Lang086 =	Operatör
-	c_Lang087 =	Behandla som matematiskt uttryck
+	c_Lang087 =	Expression
 	c_Lang088 =	Återställ
 	c_Lang089 =	Funktion Namn
 	c_Lang090 =	Kommaseparerad parametrar (utan parentes).
@@ -456,7 +456,7 @@
 	t_Lang056 =	Återställ kolumner Storlek
 	t_Lang057 =	Default makrofil
 	t_Lang058 =	Standard Library File
-	t_Lang059 =	Använda Eval() som standard för variabler Uppdrag
+	t_Lang059 =	Använd Expression som standard för variabler Uppdrag
 	t_Lang060 =	Visa Färger och Marks Hjälp för loopar och uttalanden
 	t_Lang061 =	(Klicka på rubriken Index kolumnen för att aktivera / avaktivera)
 	t_Lang062 =	Virtuella knapparna

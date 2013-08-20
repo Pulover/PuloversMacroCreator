@@ -522,8 +522,12 @@
 		Output Variable - Name of the Variable in which to store the contents.
 		Operator - Operator to use in the assignment.
 		Content - Text, Variables or Function to be assigned.  
-		Expression - If enabled will execute the [Eval()](http://www.autohotkey.com/board/topic/15675-monster) function on the contents to execute functions and solve Math Expressions. This is especially useful to modify variables values without the need to create more Assignments. It also allows you to assign the variable to a function result like the in the *Functions* window.
-			> %FoundX% + 100 ; This would assign the value of FoundX + 100 to the chosen variable name without the need to use the += operator.
+		Expression - If enabled will execute the [Eval()](http://www.autohotkey.com/board/topic/15675-monster) function on the contents to solve functions and math expressions. This is especially useful to modify variables values without the need to create more Assignments. It also allows you to assign the variable to a function result like the in the *Functions* window, or use a function inside an expression.
+			> X := %FoundX% + 100 ; Assigns X to the value of FoundX + 100.
+			> X := InStr(AutoHotkey, y) + 4 ; Assigns X to 14.
+			> X := Array(1, 2, 3) ; Creates an array.
+			> Y := X[1] ; Assigns Y to the first value in the X array.
+			> Y += 1 ; Increments Y by 1.
 			*Note*: To keep this option enabled by default go to Options Menu > Settings > Misc. and check the option.
 		Copy - Copies the variable's contents to the Clipboard.
 		Reset - Erases the variable's contents.

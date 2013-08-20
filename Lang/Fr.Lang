@@ -320,7 +320,7 @@
 	c_Lang084 =	Affecter variable
 	c_Lang085 =	Teneur
 	c_Lang086 =	Opérateur
-	c_Lang087 =	Traiter comme expression mathématique
+	c_Lang087 =	Expression
 	c_Lang088 =	Remettre
 	c_Lang089 =	Nom de la fonction
 	c_Lang090 =	Paramètres séparés par des virgules (sans parenthèses).
@@ -456,7 +456,7 @@
 	t_Lang056 =	Réinitialiser Taille colonnes
 	t_Lang057 =	Fichier de macro par défaut
 	t_Lang058 =	Fichier bibliothèque standard
-	t_Lang059 =	Utiliser Eval() par défaut pour les variables Affectation
+	t_Lang059 =	Utilisez Expression par défaut pour les variables Affectation
 	t_Lang060 =	Afficher les couleurs et les marques d'aide pour les boucles et les états
 	t_Lang061 =	(Cliquez sur l'entête de la colonne Index pour activer / désactiver)
 	t_Lang062 =	Les touches virtuelles

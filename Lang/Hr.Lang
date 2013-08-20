@@ -316,11 +316,11 @@
 	c_Lang080 =	Dodaj oznaku
 	c_Lang081 =	String (InputVar), vrijednost
 	c_Lang082 =	Var [operatera] Vrijednost
-	c_Lang083 =	još
+	c_Lang083 =	Još
 	c_Lang084 =	Dodjela Variable
 	c_Lang085 =	Sadržaj
 	c_Lang086 =	Operator
-	c_Lang087 =	Priuštite kao math izraz
+	c_Lang087 =	Izraz
 	c_Lang088 =	Ponovno
 	c_Lang089 =	Funkcija Ime
 	c_Lang090 =	Odvojenih zarezom parametre (bez zagrada).
@@ -456,7 +456,7 @@
 	t_Lang056 =	Veličina Reset Kolumne
 	t_Lang057 =	Default Makro datoteke
 	t_Lang058 =	Standardni knjižnica datoteke
-	t_Lang059 =	Koristite Eval () po defaultu za varijable ustupanju
+	t_Lang059 =	Koristite izraz po defaultu za varijable ustupanju
 	t_Lang060 =	Pokaži Boje && maraka Pomoć za izvještaje i Loops
 	t_Lang061 =	(Kliknite zaglavlje stupca indeksa za uključivanje / isključivanje)
 	t_Lang062 =	Virtualni Keys

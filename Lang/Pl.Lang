@@ -316,11 +316,11 @@
 	c_Lang080 =	Dodaj etykietę
 	c_Lang081 =	String (InputVar), Wartość
 	c_Lang082 =	Var [operator] Wartość
-	c_Lang083 =	więcej
+	c_Lang083 =	Więcej
 	c_Lang084 =	Przypisanie zmiennej
 	c_Lang085 =	Zawartość
 	c_Lang086 =	Operator
-	c_Lang087 =	Traktować jako wyrażenie matematyczne
+	c_Lang087 =	Wyrażenie
 	c_Lang088 =	Resetuj
 	c_Lang089 =	Nazwa funkcji
 	c_Lang090 =	Oddzielonych przecinkami parametrów (bez nawiasów).
@@ -456,7 +456,7 @@
 	t_Lang056 =	Resetuj rozmiar kolumny
 	t_Lang057 =	Plik Macro Domyślnie
 	t_Lang058 =	Standardowy plik biblioteki
-	t_Lang059 =	Użyj funkcji Eval() domyślnie Assignment Variables
+	t_Lang059 =	Używaj domyślnie dla wyrażenia zmiennych Przyporządkowanie
 	t_Lang060 =	Pokaż Kolory i znaki Pomoc dla pętli i oświadczenia
 	t_Lang061 =	(Kliknij na nagłówek kolumny Indeks włączania / wyłączania)
 	t_Lang062 =	Wirtualne Keys

@@ -320,7 +320,7 @@
 	c_Lang084 =	Assign Variable
 	c_Lang085 =	Content
 	c_Lang086 =	Operator
-	c_Lang087 =	Treat as math expression
+	c_Lang087 =	Expression
 	c_Lang088 =	Reset
 	c_Lang089 =	Function Name
 	c_Lang090 =	Comma separated parameters (without parenthesis).
@@ -456,7 +456,7 @@
 	t_Lang056 =	Reset Columns Size
 	t_Lang057 =	Default Macro File
 	t_Lang058 =	Standard Library File
-	t_Lang059 =	Use Eval() by default for Variables Assignment
+	t_Lang059 =	Use Expression by default for Variables Assignment
 	t_Lang060 =	Show Colors && Help Marks for Loops and Statements
 	t_Lang061 =	(Click the Index column header to enable / disable)
 	t_Lang062 =	Virtual Keys

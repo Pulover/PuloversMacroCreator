@@ -11,4 +11,6 @@
 10|[LoopEnd]|LoopEnd|1|0|Loop|||||
 11|[Pause]|%S%`,%X%`,%Z%|1|0|MsgBox|262208||||
 12|[Pause]|% N[4]|1|0|MsgBox|262208||||
+13|[Assign Variable]|Y := N[4] + N[6]|1|0|Variable|Expression||||
+14|[Pause]|%Y%|1|0|MsgBox|262208||||
 

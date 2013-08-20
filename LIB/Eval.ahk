@@ -7,7 +7,7 @@ Eval(x) {                              ; non-recursive PRE/POST PROCESSING: I/O 
    Local FORM, FormF, FormI, i, W, y, y1, y2, y3, y4
    FormI := A_FormatInteger, FormF := A_FormatFloat
 
-	If RegExMatch(x, "([\w_]+)\((.*)\)", Funct)  ; Functions
+	While RegExMatch(x, "([\w_]+)\((.*?)\)", Funct)  ; Functions
 	{
 		If IsFunc(Funct1)
 		{
@@ -22,17 +22,17 @@ Eval(x) {                              ; non-recursive PRE/POST PROCESSING: I/O 
 			}
 			FuncResult := %Funct1%(Params*)
 			StringReplace, FuncResult, FuncResult, `,, ```, 
-			return FuncResult
+			StringReplace, x, x, %Funct%, %FuncResult%
 		}
 	}
 	
-	If RegExMatch(x, "(\S+)\[(\S+)\]", Found) ; Arrays
+	While RegExMatch(x, "(\S+)\[(\S+?)\]", Found) ; Arrays
 	{
 		Found := RegExReplace(Found, "[\[|\]]", "\$0")
 		If Found2 is not Number
 			Found2 := DerefVars("%" Found2 "%")
 		y := %Found1%[Found2]
-		return y
+		x := RegExReplace(x, Found, y)
 	}
    SetFormat Integer, D                ; decimal intermediate results!
    RegExMatch(x, "\$(b|h|x|)(\d*[eEgG]?)", y)

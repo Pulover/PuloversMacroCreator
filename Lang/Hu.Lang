@@ -316,11 +316,11 @@
 	c_Lang080 =	Add Label
 	c_Lang081 =	String (InputVar), Value
 	c_Lang082 =	Var [üzemeltetője] Érték
-	c_Lang083 =	más
+	c_Lang083 =	Más
 	c_Lang084 =	Hozzárendelése Változó
 	c_Lang085 =	Tartalom
 	c_Lang086 =	Operátor
-	c_Lang087 =	Kezelni matematikai kifejezést
+	c_Lang087 =	Kifejezés
 	c_Lang088 =	Visszaállítás
 	c_Lang089 =	Funkció neve
 	c_Lang090 =	Vesszővel elválasztott paraméterek (zárójel nélkül).
@@ -456,7 +456,7 @@
 	t_Lang056 =	Visszaállítás oszlopok méret
 	t_Lang057 =	Alapértelmezett Makró fájl
 	t_Lang058 =	Normál Library fájl
-	t_Lang059 =	Használja Eval() alapértelmezés szerint változók hozzárendelése
+	t_Lang059 =	Használja Expression alapértelmezés szerint változók kiosztása
 	t_Lang060 =	Megjelenítés Színek és Help Marks a hurkok és nyilatkozatok
 	t_Lang061 =	(Kattintson az Index fejlécére engedélyezés / letiltás)
 	t_Lang062 =	Virtuális Keys

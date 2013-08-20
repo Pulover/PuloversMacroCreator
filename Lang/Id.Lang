@@ -316,11 +316,11 @@
 	c_Lang080 =	Tambahkan Label
 	c_Lang081 =	String (InputVar), Nilai
 	c_Lang082 =	Var [Operator] Nilai
-	c_Lang083 =	lain
+	c_Lang083 =	Lain
 	c_Lang084 =	Menetapkan Variabel
 	c_Lang085 =	Kadar
 	c_Lang086 =	Operator
-	c_Lang087 =	Perlakukan sebagai ekspresi matematika
+	c_Lang087 =	Ekspresi
 	c_Lang088 =	Ulang
 	c_Lang089 =	Fungsi Nama
 	c_Lang090 =	Dipisahkan koma parameter (tanpa kurung).
@@ -456,7 +456,7 @@
 	t_Lang056 =	Ulang Kolom Ukuran
 	t_Lang057 =	Standar Makro Berkas
 	t_Lang058 =	Standar Pustaka Berkas
-	t_Lang059 =	Gunakan Eval () secara default untuk Variabel Tugas
+	t_Lang059 =	Gunakan Ekspresi secara default untuk Variabel Tugas
 	t_Lang060 =	Tampilkan Warna && Bantuan Marks untuk Loops dan Laporan
 	t_Lang061 =	(Klik header kolom Index untuk mengaktifkan / menonaktifkan)
 	t_Lang062 =	Tombol Virtual

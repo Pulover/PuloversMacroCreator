@@ -316,11 +316,11 @@
 	c_Lang080 =	Agregar etiqueta
 	c_Lang081 =	Cadena (InputVar), valor
 	c_Lang082 =	Var [operador] Valor
-	c_Lang083 =	
+	c_Lang083 =	Si no
 	c_Lang084 =	Asignar variable
 	c_Lang085 =	Contenido
 	c_Lang086 =	Operador
-	c_Lang087 =	Tratar como expresión matemática
+	c_Lang087 =	Expresión
 	c_Lang088 =	Borrar
 	c_Lang089 =	Nombre de la función
 	c_Lang090 =	Parámetros separados por comas (sin paréntesis).
@@ -456,7 +456,7 @@
 	t_Lang056 =	Cambiar Tamaño Columnas
 	t_Lang057 =	Macro de archivo predeterminado
 	t_Lang058 =	Archivo de biblioteca estándar
-	t_Lang059 =	Utilice Eval() por defecto para la asignación de las variables
+	t_Lang059 =	Use Expression by default for Variables Assignment
 	t_Lang060 =	Mostrar colores y marcas de Ayuda para bucles y sentencias
 	t_Lang061 =	(Haga clic en el encabezado de la columna Índice para activar / desactivar)
 	t_Lang062 =	Teclas virtuales

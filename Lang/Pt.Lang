@@ -320,7 +320,7 @@
 	c_Lang084 =	Associar Variável
 	c_Lang085 =	Conteúdo
 	c_Lang086 =	Operador
-	c_Lang087 =	Tratar como expressão matemática
+	c_Lang087 =	Expressão
 	c_Lang088 =	Apagar
 	c_Lang089 =	Nome da Função
 	c_Lang090 =	Parametros separados por vírgula (sem parenteses).
@@ -456,7 +456,7 @@
 	t_Lang056 =	Restaurar Colunas
 	t_Lang057 =	Arquivo de Macro Padrão
 	t_Lang058 =	Arquivo de Biblioteca Padrão
-	t_Lang059 =	Usar Eval() por padrão para Associar Variáveis
+	t_Lang059 =	Usar Expressão por padrão para Associar Variáveis
 	t_Lang060 =	Mostrar Cores && Marcas para Loops e Declarações
 	t_Lang061 =	(Clique no cabeçalho da coluna Index para ativar/desativar)
 	t_Lang062 =	Teclas Virtuais

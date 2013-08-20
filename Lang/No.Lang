@@ -320,7 +320,7 @@
 	c_Lang084 =	Tildele variabel
 	c_Lang085 =	Innhold
 	c_Lang086 =	Operatør
-	c_Lang087 =	Behandles som matematisk uttrykk
+	c_Lang087 =	Expression
 	c_Lang088 =	Tilbakestille
 	c_Lang089 =	Funksjon Navn
 	c_Lang090 =	Kommaseparert parametre (uten parentes).
@@ -456,7 +456,7 @@
 	t_Lang056 =	Tilbakestille kolonner størrelse
 	t_Lang057 =	Standard Macro File
 	t_Lang058 =	Standard Library File
-	t_Lang059 =	Bruk Eval() som standard for variabler Assignment
+	t_Lang059 =	Bruk uttrykk som standard for variabler Assignment
 	t_Lang060 =	Vis Farger og Hjelp Marks for Loops og uttalelser
 	t_Lang061 =	(Klikk Index kolonneoverskrift for å aktivere / deaktivere)
 	t_Lang062 =	Virtuelle tastene

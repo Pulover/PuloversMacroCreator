@@ -316,11 +316,11 @@
 	c_Lang080 =	Lisää Label
 	c_Lang081 =	String-arvo
 	c_Lang082 =	Var [operaattori] Arvo
-	c_Lang083 =	muu
+	c_Lang083 =	Muu
 	c_Lang084 =	Määritä Variable
 	c_Lang085 =	Pitoisuus
 	c_Lang086 =	Operaattori
-	c_Lang087 =	Kohtele kuin matemaattinen lauseke
+	c_Lang087 =	Lauseke
 	c_Lang088 =	Nollaa
 	c_Lang089 =	Toiminto Nimi
 	c_Lang090 =	Pilkulla erotettu parametreja (ilman suluissa).
@@ -456,7 +456,7 @@
 	t_Lang056 =	Palauta sarakkeet Koko
 	t_Lang057 =	Oletusmakro File
 	t_Lang058 =	Standard Library File
-	t_Lang059 =	Käytä Eval() oletuksena muuttujille Tehtävä
+	t_Lang059 =	Käytä Expression oletuksena muuttujat Tehtävä
 	t_Lang060 =	Näytä värit ja ohje Marks silmukoita ja tilinpäätös
 	t_Lang061 =	(Klikkaa indeksi sarakeotsikkoa päälle / pois)
 	t_Lang062 =	Virtuaalinäppäimet

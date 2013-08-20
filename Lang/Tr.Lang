@@ -316,11 +316,11 @@
 	c_Lang080 =	Etiket Ekle
 	c_Lang081 =	Dize (InputVar), Değer
 	c_Lang082 =	Var [operatör] Değer
-	c_Lang083 =	başka
+	c_Lang083 =	Başka
 	c_Lang084 =	Değişken atama
 	c_Lang085 =	Içerik
 	c_Lang086 =	Operatör
-	c_Lang087 =	Matematik ifadesi olarak tedavi
+	c_Lang087 =	Ifade
 	c_Lang088 =	Ayarlamak
 	c_Lang089 =	Fonksiyon Adı
 	c_Lang090 =	Virgül (parantez olmadan) parametreleri ayrılmış.
@@ -456,7 +456,7 @@
 	t_Lang056 =	Sütunlar Boyutu Sıfırla
 	t_Lang057 =	Varsayılan Makro Dosyası
 	t_Lang058 =	Standart Kütüphanesi Dosya
-	t_Lang059 =	Değişkenler Atama için varsayılan olarak) (Eval kullanın
+	t_Lang059 =	Değişkenler Atama için varsayılan olarak İfade kullanın
 	t_Lang060 =	Döngüler ve Tablolar için Renkler ve Yardım Marks göster
 	t_Lang061 =	(Etkinleştirmek / devre dışı bırakmak için Dizin sütun başlığını tıklayın)
 	t_Lang062 =	Sanal tuşlar

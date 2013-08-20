@@ -316,11 +316,11 @@
 	c_Lang080 =	Pridať štítok
 	c_Lang081 =	String (InputVar), hodnota
 	c_Lang082 =	Var [Prevádzkovateľ] Hodnota
-	c_Lang083 =	iný
+	c_Lang083 =	Iný
 	c_Lang084 =	Priradenie premennej
 	c_Lang085 =	Obsah
 	c_Lang086 =	Operátor
-	c_Lang087 =	Považovať matematický výraz
+	c_Lang087 =	Výraz
 	c_Lang088 =	Obnoviť
 	c_Lang089 =	Funkcia Meno
 	c_Lang090 =	Hodnôt oddelených čiarkami (bez zátvoriek).
@@ -456,7 +456,7 @@
 	t_Lang056 =	Obnoviť stĺpce veľkosť
 	t_Lang057 =	Predvolený súbor makrá
 	t_Lang058 =	Štandardné súboru knižnice
-	t_Lang059 =	Použiť metódu eval () v predvolenom nastavení pre priradenie premenných
+	t_Lang059 =	Použitie výrazu ako predvolený pre priradenie premenných
 	t_Lang060 =	Zobraziť Farby & Pomoc známok pre slučky a výkazy
 	t_Lang061 =	(Kliknite na index hlavičku stĺpca pre zapnutie / vypnutie)
 	t_Lang062 =	Virtuálne Keys

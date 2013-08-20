@@ -320,7 +320,7 @@
 	c_Lang084 =	Assignació Variable
 	c_Lang085 =	Contingut
 	c_Lang086 =	Operador
-	c_Lang087 =	Tractar com a expressió matemàtica
+	c_Lang087 =	Expressió
 	c_Lang088 =	Reajustar
 	c_Lang089 =	Nom de la funció
 	c_Lang090 =	Paràmetres separats per comes (sense parèntesis).
@@ -456,7 +456,7 @@
 	t_Lang056 =	Restablir mida de les columnes
 	t_Lang057 =	Arxiu Macro defecte
 	t_Lang058 =	Arxiu Biblioteca estàndard
-	t_Lang059 =	Utilitzeu Aval () per defecte per a variables Assignació
+	t_Lang059 =	Utilitzeu expressions per defecte per a variables Assignació
 	t_Lang060 =	Mostra colors && Ajuda marques de bucles i sentències
 	t_Lang061 =	(Feu clic a la capçalera de la columna Índex per activar / desactivar)
 	t_Lang062 =	Tecles virtuals
