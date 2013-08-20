@@ -231,6 +231,7 @@
 	w_Lang089 =	Edita color (Ctrl+M)
 	w_Lang090 =	Personalitzar
 	w_Lang091 =	Trobar una ordre (Ctrl+Shift+F)
+	w_Lang092 =	Edita (Enter)
 		
 ; Command Windows		
 	c_Lang001 =	Ratolí

@@ -231,6 +231,7 @@
 	w_Lang089 =	Modifica marchio di colore (Ctrl+M)
 	w_Lang090 =	Personalizzare
 	w_Lang091 =	Trova un comando (Ctrl+Shift+F)
+	w_Lang092 =	Modifica (Enter)
 		
 ; Command Windows		
 	c_Lang001 =	Mouse

@@ -231,6 +231,7 @@
 	w_Lang089 =	Bewerken kleurmarkering (Ctrl+M)
 	w_Lang090 =	Aanpassen
 	w_Lang091 =	Zoek een commando (Ctrl+Shift+F)
+	w_Lang092 =	Redigeren (Enter)
 		
 ; Command Windows		
 	c_Lang001 =	Muis

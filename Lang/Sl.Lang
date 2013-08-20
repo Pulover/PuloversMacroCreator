@@ -231,6 +231,7 @@
 	w_Lang089 =	Edit Color Mark (Ctrl+M)
 	w_Lang090 =	Prilagajanje
 	w_Lang091 =	Najdi ukaz (Ctrl+Shift+F)
+	w_Lang092 =	Uredi (Enter)
 		
 ; Command Windows		
 	c_Lang001 =	Miška

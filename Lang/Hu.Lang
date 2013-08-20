@@ -231,6 +231,7 @@
 	w_Lang089 =	Szerkesztés színvédjegy (Ctrl+M)
 	w_Lang090 =	Testreszabása
 	w_Lang091 =	Keresse meg a parancsot (Ctrl+Shift+F)
+	w_Lang092 =	Szerkeszt (Enter)
 		
 ; Command Windows		
 	c_Lang001 =	Egér

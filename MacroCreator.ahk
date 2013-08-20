@@ -574,9 +574,6 @@ Gui, Add, Button, -Wrap ys-4 x+0 W25 H23 hwndApplyL vApplyL gApplyL
 Gui, Add, Button, -Wrap ys-4 x+5 W25 H23 hwndInsertKey vInsertKey gInsertKey
 	ILButton(InsertKey, ResDllPath ":" 94)
 Gui, Add, Text, W2 H25 ys-3 x+5 0x11 vSeparator3
-Gui, Add, Button, -Wrap Default ys-4 x+5 W25 H23 hwndEditButton vEditButton gEditButton
-	ILButton(EditButton, ResDllPath ":" 14)
-Gui, Add, Text, W2 H25 ys-3 x+5 0x11 vSeparator4
 Gui, Add, Text, -Wrap ys-6 x+5 W100 vContextTip gSetWin cBlue, #IfWin: %IfDirectContext%
 Gui, Add, Text, -Wrap yp+16 W100 vCoordTip gOptions, CoordMode: %CoordMouse%
 GuiControl,, WinKey, % (InStr(o_AutoKey[1], "#")) ? 1 : 0
@@ -586,7 +583,6 @@ GoSub, b_Start
 GoSub, DefineControls
 GoSub, DefineToolbars
 OnMessage(WM_COMMAND, "TB_Messages")
-; OnMessage(WM_NOTIFY, "Notifications")
 OnMessage(WM_MOUSEMOVE, "ShowTooltip")
 OnMessage(WM_RBUTTONDOWN, "ShowContextHelp")
 OnMessage(WM_LBUTTONDOWN, "DragToolbar")
@@ -856,7 +852,7 @@ BuildPrevWin:
 Gui, chPrev:+LastFound
 Gui, chPrev:+hwndhPrevCh -Resize -Caption +Parent1
 Gui, chPrev:Add, Custom, ClassToolbarWindow32 hwndhTbPrev 0x0800 0x0100 0x0040 0x0008
-Gui, chPrev:Add, Custom, ClassScintilla x0 y30 hwndhSciPrev vLVPrev
+Gui, chPrev:Add, Custom, ClassScintilla x0 y34 hwndhSciPrev vLVPrev
 Gui, chPrev:Show, W450 H600 Hide
 	TB_Define(TbPrev, hTbPrev, hIL_Icons, FixedBar.Preview, FixedBar.PrevOpt)
 ,	sciPrev := new scintilla(hSciPrev)
@@ -879,10 +875,10 @@ Gui, chPrev:Show, W450 H600 Hide
 
 	Gui, 2:+Resize +hwndPrevID
 	Gui, 2:Add, Custom, ClassToolbarWindow32 hwndhTbPrevF 0x0800 0x0100 0x0040 0x0008
-	Gui, 2:Add, Custom, ClassScintilla x0 y30 hwndhSciPrevF vLVPrev
+	Gui, 2:Add, Custom, ClassScintilla x0 y34 hwndhSciPrevF vLVPrev
 	Gui, 2:Add, StatusBar
 	TB_Define(TbPrevF, hTbPrevF, hIL_Icons, FixedBar.Preview, FixedBar.PrevOpt)
-,	TB_Edit(tbPrevF, "PrevDock", "", "", t_Lang125)
+,	tbPrevF.ModifyButtonInfo(1, "Text", t_Lang125),	tbPrevF.ModifyButtonInfo(1, "Image", 96)
 ,	sciPrevF := new scintilla(hSciPrevF)
 ,	sciPrevF.SetMarginWidthN(0, 20)
 ,	sciPrevF.SetWrapMode(False)
@@ -10638,12 +10634,12 @@ If A_EventInfo = 1
 	return
 
 GuiGetSize(GuiWidth, GuiHeight, 2)
-GuiControl, Move, LVPrev, % "W" GuiWidth "H" GuiHeight-55
+GuiControl, Move, LVPrev, % "W" GuiWidth "H" GuiHeight-57
 return
 
 chPrevGuiSize:
 GuiGetSize(GuiWidth, GuiHeight, "chPrev")
-GuiControl, chPrev:Move, LVPrev, % "W" GuiWidth "H" GuiHeight-37
+GuiControl, chPrev:Move, LVPrev, % "W" GuiWidth "H" GuiHeight-40
 return
 
 28GuiSize:
@@ -10678,11 +10674,9 @@ GuiControl, 1:Move, ApplyI, % "y" GuiHeight-28
 GuiControl, 1:Move, sInput, % "y" GuiHeight-27
 GuiControl, 1:Move, ApplyL, % "y" GuiHeight-28
 GuiControl, 1:Move, InsertKey, % "y" GuiHeight-28
-GuiControl, 1:Move, EditButton, % "y" GuiHeight-28
 GuiControl, 1:Move, Separator1, % "y" GuiHeight-27
 GuiControl, 1:Move, Separator2, % "y" GuiHeight-27
 GuiControl, 1:Move, Separator3, % "y" GuiHeight-27
-GuiControl, 1:Move, Separator4, % "y" GuiHeight-27
 GuiControl, 1:MoveDraw, CoordTip, % "y" GuiHeight-14
 GuiControl, 1:MoveDraw, ContextTip, % "y" GuiHeight-30
 return

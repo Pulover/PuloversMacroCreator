@@ -231,6 +231,7 @@
 	w_Lang089 =	编辑颜色标志（Ctrl+M）
 	w_Lang090 =	定制
 	w_Lang091 =	查找命令（按Ctrl+Shift+ F）
+	w_Lang092 =	编辑（Enter）
 		
 ; Command Windows		
 	c_Lang001 =	鼠标

@@ -231,6 +231,7 @@
 	w_Lang089 =	Düzen renk işareti (Ctrl+M)
 	w_Lang090 =	Özelleştirme
 	w_Lang091 =	(Ctrl+Shift+F) bir komut bul
+	w_Lang092 =	Düzenle (Enter)
 		
 ; Command Windows		
 	c_Lang001 =	Fare

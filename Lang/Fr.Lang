@@ -231,6 +231,7 @@
 	w_Lang089 =	Modifier marque de couleur (Ctrl+M)
 	w_Lang090 =	Personnaliser
 	w_Lang091 =	Trouvez une commande (Ctrl+Maj+F)
+	w_Lang092 =	Éditer (Enter)
 		
 ; Command Windows		
 	c_Lang001 =	Souris

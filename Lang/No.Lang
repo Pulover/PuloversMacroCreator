@@ -231,6 +231,7 @@
 	w_Lang089 =	Edit fargemerki (Ctrl+M)
 	w_Lang090 =	Tilpass
 	w_Lang091 =	Finn en kommando (Ctrl+Shift+F)
+	w_Lang092 =	Redigere (Enter)
 		
 ; Command Windows		
 	c_Lang001 =	Mus

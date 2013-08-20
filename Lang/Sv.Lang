@@ -231,6 +231,7 @@
 	w_Lang089 =	Redigera färgmarkering (Ctrl+M)
 	w_Lang090 =	Anpassa
 	w_Lang091 =	Hitta ett kommando (Ctrl+Skift+F)
+	w_Lang092 =	Redigera (Enter)
 		
 ; Command Windows		
 	c_Lang001 =	Mus

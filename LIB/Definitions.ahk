@@ -826,7 +826,8 @@ DefaultBar := {FileOpt: "Enabled AutoSize", File: ["New=" w_Lang040 ":42", "Open
 														, "", "Capt=" w_Lang012 ":85", "CheckHkOn=" w_Lang014 ":84"
 														, "", "OnFinish=" w_Lang020 ":20(Enabled WholeDropdown)", "SetWin=" t_Lang009 ":48"
 														, "", "WinKey=" w_Lang070 ":90", "SetJoyButton=" w_Lang071 ":33"]
-			, EditOpt: "Enabled AutoSize", Edit: ["CutRows=" w_Lang080 ":9", "CopyRows=" w_Lang081 ":8", "PasteRows=" w_Lang082 ":45", "Remove=" w_Lang083 ":10"
+			, EditOpt: "Enabled AutoSize", Edit: ["EditButton=" w_Lang092 ":14"
+														, "", "CutRows=" w_Lang080 ":9", "CopyRows=" w_Lang081 ":8", "PasteRows=" w_Lang082 ":45", "Remove=" w_Lang083 ":10"
 														, "", "Undo=" w_Lang084 ":75", "Redo=" w_Lang085 ":57"
 														, "" , "MoveUp=" w_Lang077 ":41", "MoveDn=" w_Lang078 ":40"
 														, "", "Duplicate=" w_Lang079 ":13", "CopyTo=" w_Lang086 ":8(Enabled WholeDropdown)"

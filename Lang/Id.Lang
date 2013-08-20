@@ -231,6 +231,7 @@
 	w_Lang089 =	Sunting Color Mark (Ctrl+M)
 	w_Lang090 =	Sesuaikan
 	w_Lang091 =	Cari perintah (Ctrl+Shift+F)
+	w_Lang092 =	Mengedit (Enter)
 		
 ; Command Windows		
 	c_Lang001 =	Mouse

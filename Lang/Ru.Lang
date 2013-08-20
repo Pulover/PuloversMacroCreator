@@ -231,6 +231,7 @@
 	w_Lang089 =	Редактировать метку цвета (Ctrl+M)
 	w_Lang090 =	Настроить
 	w_Lang091 =	Найти команду (Ctrl+Shift+F)
+	w_Lang092 =	Редактировать (Enter)
 		
 ; Command Windows		
 	c_Lang001 =	Мышь
