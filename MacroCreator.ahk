@@ -6760,7 +6760,7 @@ SB_SetText(c_Lang025, 1)
 SB_SetText("length: " 0, 2)
 SB_SetText("lines: " 0, 3)
 GoSub, TextEdit
-Gui, 30:Show,, %c_Lang013%
+Gui, 30:Show,, %GuiTitle%
 TB_Define(TbText, hTbText, hIL_Icons, FixedBar.Text, FixedBar.TextOpt)
 ,	TBHwndAll[7] := TbText
 GuiControl, 30:Focus, TextEdit
@@ -8456,6 +8456,7 @@ return
 
 EditColor:
 Gui, 1:Submit, NoHide
+Gui, 19:Submit, NoHide
 rColor := ""
 If (A_GuiControl = "ColorPick")
 	rColor := ImgFile, OwnerID := CmdWin
