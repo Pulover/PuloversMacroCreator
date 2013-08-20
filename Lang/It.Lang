@@ -48,6 +48,7 @@
 	i_Lang017 =	Inte&rfaccia COM
 	i_Lang018 =	Esegui Scriptlet
 	i_Lang019 =	Mess&aggi Di Windows
+	i_Lang020 =	Tr&ova un comando
 		
 ; Select Sub Menu		
 	s_Lang001 =	&Seleziona tutto
@@ -111,6 +112,7 @@
 	v_lang020 =	Manuale
 	v_lang021 =	Arresto
 	v_lang022 =	Pausa
+	v_lang023 =	Ripristino Di Default
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Impostazioni
@@ -127,7 +129,7 @@
 	h_Lang001 =	&Macro Home Creator
 	h_Lang002 =	&AHK Documentazione in linea
 	h_Lang003 =	&Controllare gli aggiornamenti...
-	h_Lang004 =	&Verificare in fase di start up
+	h_Lang004 =	C&ontrolla all'avvio
 	h_Lang005 =	C&irca
 	h_Lang006 =	&Suggerimenti
 	h_Lang007 =	&Forum
@@ -189,7 +191,7 @@
 	w_Lang049 =	Timer (Ctrl+Maiusc+T)
 	w_Lang050 =	Mouse (F2)
 	w_Lang051 =	Testo (F3)
-	w_Lang052 =	Tasti speciali (Maiusc+F3)
+	w_Lang052 =	(unused)
 	w_Lang053 =	Control (F4)
 	w_Lang054 =	Pausa (F5)
 	w_Lang055 =	Messaggio (Shift+F5)
@@ -228,6 +230,8 @@
 	w_Lang088 =	Modifica commento (Ctrl+L)
 	w_Lang089 =	Modifica marchio di colore (Ctrl+M)
 	w_Lang090 =	Personalizzare
+	w_Lang091 =	Trova un comando (Ctrl+Shift+F)
+	w_Lang092 =	Modifica (Enter)
 		
 ; Command Windows		
 	c_Lang001 =	Mouse
@@ -478,7 +482,7 @@
 	t_Lang082 =	Dichiarazioni
 	t_Lang083 =	Mostra Rientro per Loops e dichiarazioni
 	t_Lang084 =	(Fare doppio clic sull'intestazione della colonna Azione attiva / disattiva)
-	t_Lang085 =	Mostra barra Controlli in fase di start-up
+	t_Lang085 =	Display controlla barra all'avvio
 	t_Lang086 =	Ricerca di funzioni. Si prega di attendere...
 	t_Lang087 =	Includere file esterni
 	t_Lang088 =	Créer un fichier EXE
@@ -530,6 +534,12 @@
 	t_Lang134 =	Mouse
 	t_Lang135 =	Altri
 	t_Lang136 =	Righe Evidenziare
+	t_Lang137 =	Editor Di Script Predefinito
+	t_Lang138 =	Modifica Script
+	t_Lang139 =	Selezionare
+	t_Lang140 =	Con Colonna
+	t_Lang141 =	Tutte Le Colonne
+		
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Aperto
@@ -641,21 +651,27 @@
 	(LTrim	
 		Volete scaricare ora?
 		
-		Per disattivare il controllo automatico selezionare Aiuto > Verificare in fase di start up.
+		Per disattivare il controllo automatico selezionare Aiuto > Controlla all'avvio
 	)	
+		
 	d_Lang062 =	Hai già la versione più recente.
 	d_Lang063 =	Si è verificato un errore durante la verifica.
 	d_Lang064 =	Errore di oggetto COM in
 	d_Lang065 =	Riga
 	d_Lang066 =	Specificamente
-	d_Lang067 =	Mostra suggerimenti all'avvio.
+	d_Lang067 =	Mostra questa finestra all'avvio
 	d_Lang068 =	Suggerimenti:
 	d_Lang069 =	
 	(LTrim	
-		Hai bisogno di aiuto, ha trovato un bug o un suggerimento? Invia una e-mail all'autore: <a href="mailto:rodolfoub@gmail.com">rodolfoub@gmail.com</a>
-		Questo è un software gratuito. Se hai trovato utile considerare <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=rodolfoub`%40gmail`%2ecom&lc=US&item_name=Pulover`%27s`%20Macro`%20Creator&item_number=App`%2ePMC&currency_code=USD&bn=PP`%2dDonationsBF`%3abtn_donateCC_LG`%2egif`%3aNonHosted">una donazione</a> e di sostegno allo sviluppo. Grazie.
+		Un sacco di tempo e sforzo è stato fatto per lo sviluppo di Pulover's Macro Creator. Se lo trovate utile, perche non mostrare il vostro apprezzamento con una donazione.
+		
+		Donare o no, non ci sarà alcuna differenza nelle sue caratteristiche e funzionalità.
 	)	
-	d_Lang070 =	Error: Invalid Hotkey selezionato.
+	d_Lang070 =	Donate...
+	d_Lang071 =	No, grazie
+	d_Lang072 =	Supporto software Open Source
+	d_Lang073 =	Error: Invalid Hotkey selezionato.
+	d_Lang074 =	Trova un comando o una funzione
 		
 ; Start-up Tips		
 	Start_Tips =	

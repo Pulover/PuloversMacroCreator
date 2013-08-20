@@ -13,6 +13,8 @@ Unchecked rows will be removed from preview script.
 
 ## Buttons & Options
 
+**Dock/Undock**: Docks/undocks the *Preview* window to/from the Main window.
+
 **Copy**: Copies the entire currently displaying content of Preview Window to Clipboard.
 
 **Refresh**: Updates the content of Preview Window to the active Macro.
@@ -23,4 +25,6 @@ Unchecked rows will be removed from preview script.
 
 **Indentation**: Uses Tab-Indentation for Loops and If Statements.
 
-**Status Bar**: Displays information on Selected Macro and some Settings.
+**Edit Script**: Exports the current preview to the Temp folder and opens it in the default editor.
+
+**Status Bar**: Displays information on Selected Macro and some Settings (only visible when undocked).

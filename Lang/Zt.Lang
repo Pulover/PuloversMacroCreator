@@ -48,6 +48,7 @@
 	i_Lang017 =	COM接口
 	i_Lang018 =	運行的Scriptlet
 	i_Lang019 =	Windows消息
+	i_Lang020 =	查找命令
 		
 ; Select Sub Menu		
 	s_Lang001 =	全選
@@ -111,6 +112,7 @@
 	v_lang020 =	手冊
 	v_lang021 =	停止
 	v_lang022 =	暫停
+	v_lang023 =	復位默認
 		
 ; Options Sub Menu		
 	o_Lang001 =	設置
@@ -189,7 +191,7 @@
 	w_Lang049 =	定時器（按Ctrl+Shift+T）
 	w_Lang050 =	鼠標（F2）
 	w_Lang051 =	文本（F3）
-	w_Lang052 =	特殊鍵（Shift+F3）
+	w_Lang052 =	(unused)
 	w_Lang053 =	控制（F4）
 	w_Lang054 =	暫停 （F5）
 	w_Lang055 =	信息 （Shift+F5）
@@ -228,6 +230,8 @@
 	w_Lang088 =	編輯點評（Ctrl+L鍵）
 	w_Lang089 =	編輯顏色標誌（Ctrl+M鍵）
 	w_Lang090 =	定制
+	w_Lang091 =	查找命令（按Ctrl+Shift+ F）
+	w_Lang092 =	編輯（Enter）
 		
 ; Command Windows		
 	c_Lang001 =	鼠標
@@ -478,7 +482,7 @@
 	t_Lang082 =	報表
 	t_Lang083 =	循環和報表顯示縮進
 	t_Lang084 =	（雙擊操作“列頭啟用/禁用）
-	t_Lang085 =	顯示控制欄上啟動
+	t_Lang085 =	顯示控制欄上的啟動
 	t_Lang086 =	搜索功能。請稍候...
 	t_Lang087 =	包括外部文件
 	t_Lang088 =	創建EXE文件
@@ -530,6 +534,12 @@
 	t_Lang134 =	鼠標
 	t_Lang135 =	他人
 	t_Lang136 =	亮點行
+	t_Lang137 =	默認的腳本編輯器
+	t_Lang138 =	編輯腳本
+	t_Lang139 =	選擇
+	t_Lang140 =	通過列
+	t_Lang141 =	所有列
+		
 		
 ; Messages & Dialogs		
 	d_Lang001 =	打開
@@ -641,21 +651,27 @@
 	(LTrim	
 		你想現在就下載嗎？
 		
-		要禁用自動檢查，選擇“啟動”幫助“>”檢查。
+		要禁用自動檢查，選擇“啟動”幫助“>”檢查。 > 檢查啟動
 	)	
+		
 	d_Lang062 =	您已經有最新的版本。
 	d_Lang063 =	檢查時發生錯誤。
 	d_Lang064 =	COM對象錯誤
 	d_Lang065 =	排
 	d_Lang066 =	特別是
-	d_Lang067 =	在啟動時顯示提示。
+	d_Lang067 =	顯示這個窗口啟動
 	d_Lang068 =	溫馨提示：
 	d_Lang069 =	
 	(LTrim	
-		需要幫助，發現了一個bug或者有一個建議嗎？發送電子郵件至作者：<a href="mailto:rodolfoub@gmail.com">rodolfoub@gmail.com</a>
-		這是一個免費的軟件。如果你覺得它有用的考慮<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=rodolfoub`%40gmail`%2ecom&lc=US&item_name=Pulover`%27s`%20Macro`%20Creator&item_number=App`%2ePMC&currency_code=USD&bn=PP`%2dDonationsBF`%3abtn_donateCC_LG`%2egif`%3aNonHosted">捐贈</a>和支持發展。謝謝。
+		Pulover's Macro Creator的發展已經進入了很多的時間和精力。如果你覺得它有用，請考慮捐贈升值。
+		
+		捐贈與否，將不會有差異的特點和功能。
 	)	
-	d_Lang070 =	錯誤：無效的熱鍵選擇。
+	d_Lang070 =	捐贈...
+	d_Lang071 =	不用了，謝謝
+	d_Lang072 =	支持開源軟件
+	d_Lang073 =	錯誤：無效的熱鍵選擇。
+	d_Lang074 =	查找命令或函數
 		
 ; Start-up Tips		
 	Start_Tips =	

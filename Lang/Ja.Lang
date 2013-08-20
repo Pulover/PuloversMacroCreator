@@ -48,6 +48,7 @@
 	i_Lang017 =	COMインタフェース
 	i_Lang018 =	スクリプトレットを実行
 	i_Lang019 =	Windowsメッセージ
+	i_Lang020 =	コマンドを見つける
 		
 ; Select Sub Menu		
 	s_Lang001 =	[すべて]を選択します
@@ -111,6 +112,7 @@
 	v_lang020 =	マニュアル
 	v_lang021 =	停止
 	v_lang022 =	休止
+	v_lang023 =	デフォルトにリセット
 		
 ; Options Sub Menu		
 	o_Lang001 =	設定
@@ -189,7 +191,7 @@
 	w_Lang049 =	タイマー（Ctrl+Shift+Tを）
 	w_Lang050 =	マウス（F2）
 	w_Lang051 =	テキスト（F3）
-	w_Lang052 =	特殊キー（+ F3をシフト）
+	w_Lang052 =	(unused)
 	w_Lang053 =	コントロール（F4）
 	w_Lang054 =	一時停止 （F5）
 	w_Lang055 =	メッセージ （Shift+F5）
@@ -228,6 +230,8 @@
 	w_Lang088 =	コメントを編集（Ctrl+L）を
 	w_Lang089 =	編集色マーク（Ctrl+M）を
 	w_Lang090 =	カスタマイズ
+	w_Lang091 =	（Ctrlキー+ Shiftキー+ F）コマンドを見つける
+	w_Lang092 =	編集（Enter）
 		
 ; Command Windows		
 	c_Lang001 =	マウス
@@ -478,7 +482,7 @@
 	t_Lang082 =	文
 	t_Lang083 =	ループおよびステートメントのインデントを表示
 	t_Lang084 =	（ダブルクリックして、[アクション]列ヘッダーが有効/無効）
-	t_Lang085 =	ディスプレイには、起動のバーを制御
+	t_Lang085 =	ディスプレイは、起動時にバーを制御
 	t_Lang086 =	関数の検索。しばらくお待ちください...
 	t_Lang087 =	外部ファイルをインクルード
 	t_Lang088 =	EXEファイルを作成します。
@@ -530,6 +534,12 @@
 	t_Lang134 =	マウス
 	t_Lang135 =	他人
 	t_Lang136 =	ハイライトの行
+	t_Lang137 =	デフォルトのスクリプトエディタ
+	t_Lang138 =	スクリプトを編集
+	t_Lang139 =	選択する
+	t_Lang140 =	列で
+	t_Lang141 =	すべての列
+		
 		
 ; Messages & Dialogs		
 	d_Lang001 =	開く
@@ -641,21 +651,27 @@
 	(LTrim	
 		あなたは今、それをダウンロードしますか？
 		
-		自動チェックを無効にするには、[ヘルプ]を選択>起動時にチェック。
+		自動チェックを無効にするには、[ヘルプ]を選択>起動時にチェック。 > 起動時にチェック
 	)	
+		
 	d_Lang062 =	すでに最新のバージョンを持っている。
 	d_Lang063 =	チェック中にエラーが発生しました。
 	d_Lang064 =	でCOMオブジェクトエラー
 	d_Lang065 =	行
 	d_Lang066 =	特に
-	d_Lang067 =	起動時にヒントを表示します。
+	d_Lang067 =	起動時にこのウィンドウを表示する
 	d_Lang068 =	ヒント：
 	d_Lang069 =	
 	(LTrim	
-		助けを必要とするバグを発見したり、提案がありますか？作者にメールを送信：<a href="mailto:rodolfoub@gmail.com">rodolfoub@gmail.com</a>
-		これはフリーソフトウェアです。あなたはそれが有用である考える見つかった場合<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=rodolfoub`%40gmail`%2ecom&lc=US&item_name=Pulover`%27s`%20Macro`%20Creator&item_number=App`%2ePMC&currency_code=USD&bn=PP`%2dDonationsBF`%3abtn_donateCC_LG`%2egif`%3aNonHosted">寄付をすること</a>と開発をサポート。ありがとう。
+		多くの時間と労力は、Pulover's Macro Creatorの開発に行ってきました。あなたはそれが有用である見つけた場合は、寄付金であなたの感謝を示してご検討ください。
+		
+		寄付かは、その特徴や機能に違いはありません。
 	)	
-	d_Lang070 =	エラー：無効なホットキー選択。
+	d_Lang070 =	寄付...
+	d_Lang071 =	いや、いいよ
+	d_Lang072 =	オープンソースソフトウェアをサポート
+	d_Lang073 =	エラー：無効なホットキー選択。
+	d_Lang074 =	コマンドや関数を見つける
 		
 ; Start-up Tips		
 	Start_Tips =	

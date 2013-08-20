@@ -25,7 +25,7 @@ This small window allows you to control Playback and Recording using an interfac
 
 ## Recording Options
 
-To change options click the Options button on the main window or select Options Menu > Settings. Some of the options can also be accessed from the *Record Options* button on the [Controls Toolbar](#controls-toolbar).
+To change options click the Options button on the main window or select Options Menu > Settings. Some of the options can also be accessible from the *Record Options* button on the [Controls Toolbar](#controls-toolbar).
 
 **Start/Stop Record**: Selects the Hotkey to Start and Stop Recording.  
 
@@ -38,6 +38,9 @@ To change options click the Options button on the main window or select Options 
 
 **Capture key state (Down / Up)**: If enabled will capture Key Down and Key Up for every key, instead of only the keystroke, so if you hold the key it will record only one stroke. Control, Shift, Alt and Windows key are recorded as Down/Up regardless of this option.  
 
+**Record ControlSend**: Tries to record ControlSend instead of normal strokes. This should be tested before making large recordings for it cannot always detect when focus has changed, for example when you use Alt key to access a window's menu.   
+*Note*: Recording Control is useful to reproduce actions in the background without moving mouse or losing focus, but it might not work on some windows.  
+
 **Mouse Clicks**: Records Mouse Clicks for Left, Right, Middle, X1 and X2 buttons.  
 
 **Mouse Wheel**: Records Mouse Wheel Up/Down.  
@@ -45,16 +48,13 @@ To change options click the Options button on the main window or select Options 
 **Mouse Moves**: Records Mouse movements. The Minimum delay sets the amount of idle time (ms) of the mouse to wait before recording the last move (this option should not me changed in most cases).  
 *Note*: Recorded Mouse Actions are affected by [Mouse Coordinates Settings](p7-Settings.html#defaults).  
 
+**Record ControlClick**: Tries to record ControlClick instead of normal clicks. If a control is found on the click position of the active window it will record the Control and the position relative to the control. If no control is found it will record ControlClick relative to the window.  
+
+**Relative Record Key**: When the selected key is held (or on if the Toggle option is selected) mouse movements and clicks will be recorded relative to initial position. This is useful to reproduce actions based on mouse current position on a window or screen like moving a file or drawing.  
+
 **Timed Intervals**: Records idle time between user actions. This is useful to recreate precise mouse movements and keystrokes. The Minimum delay sets the minimum time (ms) to wait before recording the sleep (this option should not me changed in most cases).  
 *Note*: If this option is unchecked the default delay between recorded actions will be set by Delay (ms) box in the main window for Keystrokes and by the Default Settings in Options for Mouse and Windows.  
 
 **Window Classes**: Records the Class of the active window.  
 
 **Window Titles**: Records the Title of the active window.  
-
-**Record ControlClick**: Tries to record ControlClick instead of normal clicks. If a control is found on the click position of the active window it will record the Control and the position relative to the control. If no control is found it will record ControlClick relative to the window.  
-
-**Record ControlSend**: Tries to record ControlSend instead of normal strokes. This should be tested before making large recordings for it cannot always detect when focus has changed, for example when you use Alt key to access a window's menu.   
-*Note*: Recording Control is useful to reproduce actions in the background without moving mouse or losing focus, but it might not work on some windows.  
-
-**Relative Record Key**: When the selected key is held (or on if the Toggle option is selected) mouse movements and clicks will be recorded relative to initial position. This is useful to reproduce actions based on mouse current position on a window or screen like moving a file or drawing.  

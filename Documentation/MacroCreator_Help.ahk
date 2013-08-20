@@ -97,6 +97,12 @@
 */
 
 /*!
+	Function: Find_a_Command()
+		This window allows you to easily search for a command or function.  
+		Simply type a keyword and the results will be displayed in the box below. Double-Click an item or press Enter to open the target window.
+*/
+
+/*!
 	Function: Mouse()
 		Clicks a mouse button at the specified coordinates. It can also hold down a mouse button, turn the mouse wheel, or move the mouse.
 
@@ -219,7 +225,7 @@
 	Parameters:
 		Start X/Y / End X/Y - Defines the Search area of the screen/window.
 		Make Screenshot - Use this tool to take a screenshot of an area of the screen (see [Instructions](#make-screenshot-tool-instructions) for details on usage).
-		Search - Search the computer for an Image File.
+		Search - Opens the File Select dialog to select an Image File.
 		If found - Selects an action to execute when an image/pixel is found.  
 			To execute a different action Select 'Continue' (or 'Break' to exit the command's loop) and use the 'If Image/Pixel Found' option in the If Statements window.
 		If not found / Error - Selects an action to execute when an image/pixel is not found or if the command finds an error.  
@@ -267,7 +273,8 @@
 
 	Parameters:
 		Start X/Y / End X/Y - Defines the Search area of the screen/window.
-		Search - Opens the Color Pick Tool. Point the mouse to the desired location and Right-Click to get the pixel code (in RGB format).
+		Color Picker - Opens the Color Pick Tool. Point the mouse to the desired location and Right-Click to get the pixel code (in RGB format).  
+		Search - Opens the Windows Color Pick dialog to select a pixel color.  
 		If found - Selects an action to execute when an image/pixel is found.  
 			To execute a different action Select 'Continue' (or 'Break' to exit the command's loop) and use the 'If Image/Pixel Found' option in the If Statements window.
 		If not found / Error - Selects an action to execute when an image/pixel is not found or if the command finds an error.  
@@ -515,7 +522,7 @@
 		Output Variable - Name of the Variable in which to store the contents.
 		Operator - Operator to use in the assignment.
 		Content - Text, Variables or Function to be assigned.  
-		Use Eval() to solve expressions - If enabled will execute the [Eval()](http://www.autohotkey.com/board/topic/15675-monster) function on the contents to solve Math Expressions. This is especially useful to modify variables values without the need to create more Assignments.
+		Expression - If enabled will execute the [Eval()](http://www.autohotkey.com/board/topic/15675-monster) function on the contents to execute functions and solve Math Expressions. This is especially useful to modify variables values without the need to create more Assignments. It also allows you to assign the variable to a function result like the in the *Functions* window.
 			> %FoundX% + 100 ; This would assign the value of FoundX + 100 to the chosen variable name without the need to use the += operator.
 			*Note*: To keep this option enabled by default go to Options Menu > Settings > Misc. and check the option.
 		Copy - Copies the variable's contents to the Clipboard.
@@ -669,11 +676,3 @@
 			[PostMessage / SendMessage](http://l.autohotkey.net/docs/commands/PostMessage.htm), [Message List](http://l.autohotkey.net/docs/misc/SendMessageList.htm), [Microsoft MSDN](http://msdn.microsoft.com)
 */
 
-/*!
-	Function: Special_Keys()
-		Add Special Keys such as Internet and Media keys.
-
-	Extra:
-		### Related
-			[List of Keys](http://l.autohotkey.net/docs/KeyList.htm)
-/*

@@ -48,6 +48,7 @@
 	i_Lang017 =	&COM-Liitäntä
 	i_Lang018 =	&Suorita Komentosarjasovelman
 	i_Lang019 =	&Windows Viestit
+	i_Lang020 =	Etsi komento
 		
 ; Select Sub Menu		
 	s_Lang001 =	&Valitse kaikki
@@ -111,6 +112,7 @@
 	v_lang020 =	Manuaalinen
 	v_lang021 =	Lopettaa
 	v_lang022 =	Tauko
+	v_lang023 =	Nollata Default
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Asetukset
@@ -189,7 +191,7 @@
 	w_Lang049 =	Ajastin (Ctrl+Shift+T)
 	w_Lang050 =	Hiiri (F2)
 	w_Lang051 =	Teksti (F3)
-	w_Lang052 =	Special Keys (Shift+F3)
+	w_Lang052 =	(unused)
 	w_Lang053 =	Control (F4)
 	w_Lang054 =	Tauko (F5)
 	w_Lang055 =	Viesti (Shift+F5)
@@ -228,6 +230,8 @@
 	w_Lang088 =	Edit Kommentti (Ctrl+L)
 	w_Lang089 =	Edit värimerkk (Ctrl+M)
 	w_Lang090 =	Muokkaa
+	w_Lang091 =	Etsi komento (Ctrl+Shift+F)
+	w_Lang092 =	Muokata (Enter)
 		
 ; Command Windows		
 	c_Lang001 =	Hiiri
@@ -478,7 +482,7 @@
 	t_Lang082 =	Lausunnot
 	t_Lang083 =	Näytä Sisennys silmukoita ja tilinpäätös
 	t_Lang084 =	(Tuplaklikkaa Action sarakeotsikkoa päälle / pois)
-	t_Lang085 =	Näytön säädöt bar käynnistettäessä
+	t_Lang085 =	Näyttö ohjaa bar käynnistettäessä
 	t_Lang086 =	Haetaan toiminnot. Odota...
 	t_Lang087 =	Sisällytä Ulkoiset tiedostot
 	t_Lang088 =	Luo EXE tiedosto
@@ -530,6 +534,12 @@
 	t_Lang134 =	Hiiri
 	t_Lang135 =	Muut
 	t_Lang136 =	Korosta Rivejä
+	t_Lang137 =	Default Script Editor
+	t_Lang138 =	Muokkaa Script
+	t_Lang139 =	Valita
+	t_Lang140 =	Pylväs-
+	t_Lang141 =	Kaikki Sarakkeet
+		
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Avata
@@ -641,21 +651,27 @@
 	(LTrim	
 		Haluatko ladata sen nyt?
 		
-		Voit poistaa automaattisen valvonnan valitse Ohje > Tarkista käynnistettäessä.
+		Voit poistaa automaattisen valvonnan valitse Ohje > Tarkista käynnistettäessä
 	)	
+		
 	d_Lang062 =	Sinulla on jo uusin versio.
 	d_Lang063 =	Virhe tarkkailun.
 	d_Lang064 =	COM-objekti virhe
 	d_Lang065 =	Rivi
 	d_Lang066 =	Erityisesti
-	d_Lang067 =	Näytä vinkkejä käynnistettäessä.
+	d_Lang067 =	Näytä tämä ikkuna käynnistettäessä
 	d_Lang068 =	vinkkejä:
 	d_Lang069 =	
 	(LTrim	
-		Tarvitsetko apua, löytyi bugi tai on ehdotus? Lähetä sähköpostia kirjoittajalle: <a href="mailto:rodolfoub@gmail.com">rodolfoub@gmail.com</a>
-		Tämä on ilmainen ohjelmisto. Jos se on ollut hyödyllinen harkita <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=rodolfoub`%40gmail`%2ecom&lc=US&item_name=Pulover`%27s`%20Macro`%20Creator&item_number=App`%2ePMC&currency_code=USD&bn=PP`%2dDonationsBF`%3abtn_donateCC_LG`%2egif`%3aNonHosted">lahjoituksen</a> ja tukea kehitystä. Kiitos.
+		Paljon aikaa ja vaivaa on mennyt kehitys Pulover's Macro Creator. Jos löydät sen tarpeelliseksi, harkitse näyttämällä arvostusta lahjoituksen.
+		
+		Luovuttavalla tai ei, ei ole mitään eroa sen ominaisuuksia ja toimintoja.
 	)	
-	d_Lang070 =	Virhe: Virheellinen Pikanäppäin Valittu.
+	d_Lang070 =	Lahjoita...
+	d_Lang071 =	Kiitos ei
+	d_Lang072 =	Tuki Open Source ohjelmistoja
+	d_Lang073 =	Virhe: Virheellinen Pikanäppäin Valittu.
+	d_Lang074 =	Etsi komento tai toiminto
 		
 ; Start-up Tips		
 	Start_Tips =	

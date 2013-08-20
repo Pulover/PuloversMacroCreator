@@ -16,7 +16,7 @@ MButton & WheelDown::
 GoSub, MoveDn
 return
 
-#If !HotkeyCtrlHasFocus() && WinActive("ahk_id" PMCWinID) && !HKOff
+#If !HotkeyCtrlHasFocus() && ListFocus && !HKOff
 
 ^c::GoSub, CopyRows
 ^x::GoSub, CutRows
@@ -32,9 +32,14 @@ Insert::GoSub, ApplyL
 ^!q::GoSub, InvertCheck
 ^z::GoSub, Undo
 ^y::GoSub, Redo
-^f::GoSub, FindReplace
 ^l::GoSub, EditComm
 ^m::GoSub, EditColor
+
+#If !HotkeyCtrlHasFocus() && WinActive("ahk_id" PMCWinID) && !HKOff
+
+^f::GoSub, FindReplace
+^+f::GoSub, CmdFind
+^u::GoSub, FilterSelect
 ^n::GoSub, New
 ^o::GoSub, Open
 ^s::GoSub, Save
@@ -222,8 +227,9 @@ Exit
 
 #If WinActive("ahk_id " StartTipID)
 
-Left::GoSub, PrevTip
-Right::GoSub, NextTip
+Up::GoSub, PrevResult
+Down::GoSub, NextResult
+Enter::GoSub, GoResult
 Esc::GoSub, TipClose3
 
 #If

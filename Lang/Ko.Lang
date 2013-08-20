@@ -48,6 +48,7 @@
 	i_Lang017 =	COM 인터페이스
 	i_Lang018 =	스크립틀릿을 실행
 	i_Lang019 =	윈도우 메시지
+	i_Lang020 =	명령 찾기
 		
 ; Select Sub Menu		
 	s_Lang001 =	모두 선택
@@ -111,6 +112,7 @@
 	v_lang020 =	사용 설명서
 	v_lang021 =	정지
 	v_lang022 =	중지
+	v_lang023 =	기본값을 재설정
 		
 ; Options Sub Menu		
 	o_Lang001 =	설정
@@ -189,7 +191,7 @@
 	w_Lang049 =	타이머 (Ctrl+Shift+T)
 	w_Lang050 =	마우스 (F2​​)
 	w_Lang051 =	텍스트 (F3)
-	w_Lang052 =	특수 키 (+ F3 시프트)
+	w_Lang052 =	(unused)
 	w_Lang053 =	컨트롤 (F4)
 	w_Lang054 =	중지
 	w_Lang055 =	메시지
@@ -228,6 +230,8 @@
 	w_Lang088 =	댓글 수정 (Ctrl 키+L)
 	w_Lang089 =	편집 색상 표 (Ctrl 키+M)
 	w_Lang090 =	사용자 지정
+	w_Lang091 =	(Ctrl+Shift+F) 명령 찾기
+	w_Lang092 =	수정 (Enter)
 		
 ; Command Windows		
 	c_Lang001 =	마우스
@@ -478,7 +482,7 @@
 	t_Lang082 =	명세서
 	t_Lang083 =	루프와 문장에 들여 쓰기 표시
 	t_Lang084 =	(두 번 클릭 동작 열 머리글을 활성화 / 비활성화)
-	t_Lang085 =	디스플레이 스타트 업에 줄을 제어
+	t_Lang085 =	화면이 시작시 표시 줄을 제어
 	t_Lang086 =	함수 검색. 잠시 기다려주세요...
 	t_Lang087 =	외부 파일을 포함
 	t_Lang088 =	EXE 파일을 만들기
@@ -530,6 +534,12 @@
 	t_Lang134 =	마우스
 	t_Lang135 =	기타
 	t_Lang136 =	하이라이트 행
+	t_Lang137 =	기본 스크립트 편집기
+	t_Lang138 =	스크립트를 편집
+	t_Lang139 =	선택
+	t_Lang140 =	열을 기준으로
+	t_Lang141 =	모든 열
+		
 		
 ; Messages & Dialogs		
 	d_Lang001 =	열기
@@ -641,21 +651,27 @@
 	(LTrim	
 		당신은 지금 다운로드 하시겠습니까?
 		
-		자동 검사를 해제하려면 도움말을 선택 > 시작을 확인.
+		자동 검사를 해제하려면 도움말을 선택 > 시작을 확인
 	)	
+		
 	d_Lang062 =	당신은 이미 가장 최신 버전이 있습니다.
 	d_Lang063 =	확인하는 동안 오류가 발생했습니다.
 	d_Lang064 =	에서 COM 개체 오류
 	d_Lang065 =	열
 	d_Lang066 =	특히
-	d_Lang067 =	스타트 업에 대한 도움말을 표시합니다.
+	d_Lang067 =	시작할 때이 창 표시
 	d_Lang068 =	팁 :
 	d_Lang069 =	
 	(LTrim	
-		도움을 필요로 버그를 발견하거나 제안이?작성자에게 메일 보내기 <a href="mailto:rodolfoub@gmail.com">rodolfoub@gmail.com</a>
-		이것은 자유 소프트웨어입니다. 당신이 그것을 유용한 고려를 발견하는 경우 <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=rodolfoub`%40gmail`%2ecom&lc=US&item_name=Pulover`%27s`%20Macro`%20Creator&item_number=App`%2ePMC&currency_code=USD&bn=PP`%2dDonationsBF`%3abtn_donateCC_LG`%2egif`%3aNonHosted">기부</a> 및 개발을 지원. 감사합니다.
+		많은 시간과 노력이 Pulover's Macro Creator의 개발에왔다. 당신이 도움이 찾아내는 경우에, 기부와 당신의 감사를 보여주는 고려하시기 바랍니다.
+		
+		기부하거나하지 않는 것은, 그 기능과 기능에 차이가 없을 것입니다.
 	)	
-	d_Lang070 =	오류 : 잘못된 단축키 선택됩니다.
+	d_Lang070 =	기부...
+	d_Lang071 =	아니, 감사합니다
+	d_Lang072 =	오픈 소스 소프트웨어를 지원
+	d_Lang073 =	오류 : 잘못된 단축키 선택됩니다.
+	d_Lang074 =	명령이나 함수 찾기
 		
 ; Start-up Tips		
 	Start_Tips =	

@@ -48,6 +48,7 @@
 	i_Lang017 =	&COM-Grensesnitt
 	i_Lang018 =	Kj&ør Skriptlet
 	i_Lang019 =	&Windows-Meldinger
+	i_Lang020 =	Finn en k&ommando
 		
 ; Select Sub Menu		
 	s_Lang001 =	&Velg Alle
@@ -111,6 +112,7 @@
 	v_lang020 =	Manuell
 	v_lang021 =	Stopp
 	v_lang022 =	Pause
+	v_lang023 =	Tilbakestille Standard
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Innstillinger
@@ -189,7 +191,7 @@
 	w_Lang049 =	Timer (Ctrl+Shift+T)
 	w_Lang050 =	Mus (F2)
 	w_Lang051 =	Tekst (F3)
-	w_Lang052 =	Spesielle Keys (Shift+F3)
+	w_Lang052 =	(unused)
 	w_Lang053 =	Kontroll (F4)
 	w_Lang054 =	Pause (F5)
 	w_Lang055 =	Melding (Shift+F5)
@@ -228,6 +230,8 @@
 	w_Lang088 =	Rediger Kommentar (Ctrl+L)
 	w_Lang089 =	Edit fargemerki (Ctrl+M)
 	w_Lang090 =	Tilpass
+	w_Lang091 =	Finn en kommando (Ctrl+Shift+F)
+	w_Lang092 =	Redigere (Enter)
 		
 ; Command Windows		
 	c_Lang001 =	Mus
@@ -478,7 +482,7 @@
 	t_Lang082 =	Uttalelser
 	t_Lang083 =	Vis Innrykk for Loops og uttalelser
 	t_Lang084 =	(Dobbeltklikk på kolonnen Handling header aktivere / deaktivere)
-	t_Lang085 =	Displayet Controls bar ved oppstart
+	t_Lang085 =	Displayet kontrollerer bar ved oppstart
 	t_Lang086 =	Søke etter funksjoner. Vennligst vent...
 	t_Lang087 =	Inkluder eksterne filer
 	t_Lang088 =	Lag EXE-fil
@@ -530,6 +534,12 @@
 	t_Lang134 =	Mus
 	t_Lang135 =	Annet
 	t_Lang136 =	Markere Rader
+	t_Lang137 =	Standard Script Editor
+	t_Lang138 =	Rediger Skript
+	t_Lang139 =	Velg
+	t_Lang140 =	Av Kolonne
+	t_Lang141 =	Alle Kolonner
+		
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Åpent
@@ -641,21 +651,27 @@
 	(LTrim	
 		Vil du laste den ned nå?
 		
-		Hvis du vil deaktivere automatiske kontroller velge Hjelp > Sjekk ved oppstart.
+		Hvis du vil deaktivere automatiske kontroller velge Hjelp > Sjekk ved oppstart
 	)	
+		
 	d_Lang062 =	Du allerede har den nyeste versjonen.
 	d_Lang063 =	Det oppstod en feil mens du sjekker.
 	d_Lang064 =	COM objekt feil i
 	d_Lang065 =	Rad
 	d_Lang066 =	Spesielt
-	d_Lang067 =	Vis tips om oppstart.
+	d_Lang067 =	Vis dette vinduet ved oppstart
 	d_Lang068 =	tips:
 	d_Lang069 =	
 	(LTrim	
-		Trenger du hjelp, fant en bug eller har du et forslag? Send en e-post til forfatteren: <a href="mailto:rodolfoub@gmail.com">rodolfoub@gmail.com</a>
-		Dette er en gratis programvare. Hvis du fant det nyttig vurdere <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=rodolfoub`%40gmail`%2ecom&lc=US&item_name=Pulover`%27s`%20Macro`%20Creator&item_number=App`%2ePMC&currency_code=USD&bn=PP`%2dDonationsBF`%3abtn_donateCC_LG`%2egif`%3aNonHosted">gjør en donasjon</a> og støtte utvikling. Takk.
+		Mye tid og krefter har gått inn i utviklingen av Pulover's Macro Creator. Hvis du synes det er nyttig, kan du vurdere å vise din takknemlighet med en donasjon.
+		
+		Donere eller ikke, vil det ikke være noen forskjell i sine funksjoner og funksjonalitet.
 	)	
-	d_Lang070 =	Feil: Ugyldig hurtigtast Selected.
+	d_Lang070 =	Donere...
+	d_Lang071 =	Nei, takk
+	d_Lang072 =	Støtte Open Source programvare
+	d_Lang073 =	Feil: Ugyldig hurtigtast Selected.
+	d_Lang074 =	Finn en kommando eller funksjon
 		
 ; Start-up Tips		
 	Start_Tips =	

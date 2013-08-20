@@ -1191,10 +1191,17 @@ CheckVars(MatchList, Point="")
 			}
 		}
 		%A_LoopField% := DerefVars(%A_LoopField%)
-		If RegExMatch(%A_LoopField%, "U)^%\s+\w+$")  ; DynamicVars
+		If RegExMatch(%A_LoopField%, "U)^%\s+[\w\d_\[\]\(\)]+$")  ; DynamicVars
 		{
-			While, RegExMatch(%A_LoopField%, "mU)%\s([\w%]*)(``,|$)", Found)
+			While, RegExMatch(%A_LoopField%, "mU)%\s+([\w%]*)(``,|$)", Found)
 				%A_LoopField% := RegExReplace(%A_LoopField%, Found, %Found1%)
+			While, RegExMatch(%A_LoopField%, "mU)%\s+(\S+)\[(\S+)\]", Found)
+			{
+				Found := RegExReplace(Found, "[\[|\]]", "\$0")
+				If Found2 is not Number
+					Found2 := DerefVars("%" Found2 "%")
+				%A_LoopField% := RegExReplace(%A_LoopField%, Found, %Found1%[Found2])
+			}
 		}
 	}
 }

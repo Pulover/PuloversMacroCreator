@@ -36,8 +36,22 @@ Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jör
 
 # Change Log
 
+## Version 4.0.0
+
+* New Interface with customizable toolbars.
+* New *Preview* window with syntax highlighting.
+* Docked *Preview* window beside *Macro* list (can be undocked).
+* Added support for basic Arrays.
+* Added new feature: *Find a command*.
+* Added *Edit Script* button to *Preview* window to open script in external editor.
+* Added individual *Pause* hotkey.
+* Added *Multiple Column* search in *Find/Replace* window.
+* Main window's size is now saved.
+
 ## Version 3.8.4
 
+* Switched functionality of *Color Picker* and *Search* buttons in *PixelSearch* for a more intuitive behavior.
+* Removed *Special Keys* window. Replaced by *Insert Keystroke*.
 * Fixed some minor issues.
 
 ## Version 3.8.3

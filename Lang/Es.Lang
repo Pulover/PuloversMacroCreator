@@ -48,6 +48,7 @@
 	i_Lang017 =	C&OM Interface
 	i_Lang018 =	E&xecutar Scriptlet...
 	i_Lang019 =	Men&sajes De Windows
+	i_Lang020 =	Encontrar &un comando
 		
 ; Select Sub Menu		
 	s_Lang001 =	&Seleccionar todo
@@ -111,6 +112,7 @@
 	v_lang020 =	Manual
 	v_lang021 =	Detener
 	v_lang022 =	Pausa
+	v_lang023 =	Restablecer Por Defecto
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Configuración
@@ -124,13 +126,13 @@
 	p_Lang001 =	&Donación PayPal
 		
 ; Help Sub Menu		
-	h_Lang001 =	&Macro Home Creator
-	h_Lang002 =	&AHK Documentación Online
-	h_Lang003 =	&Buscar si hay actualizaciones...
-	h_Lang004 =	B&uscar en el arranque
-	h_Lang005 =	A&cerca
-	h_Lang006 =	C&onsejos
-	h_Lang007 =	&Foro
+	h_Lang001 =	Macro Home Creator
+	h_Lang002 =	AHK Documentación Online
+	h_Lang003 =	Buscar si hay actualizaciones...
+	h_Lang004 =	Compruebe en el arranque
+	h_Lang005 =	Acerca
+	h_Lang006 =	Consejos
+	h_Lang007 =	Foro
 		
 ; Tray Menu		
 	y_Lang001 =	Ocultar ventana
@@ -189,7 +191,7 @@
 	w_Lang049 =	Timer (Ctrl+Shift+T)
 	w_Lang050 =	Mouse (F2)
 	w_Lang051 =	Texto (F3)
-	w_Lang052 =	Teclas especiales (Shift+F3)
+	w_Lang052 =	(unused)
 	w_Lang053 =	Control (F4)
 	w_Lang054 =	Pausa (F5)
 	w_Lang055 =	Mensaje (Shift+F5)
@@ -228,6 +230,8 @@
 	w_Lang088 =	Editar comentario (Ctrl+L)
 	w_Lang089 =	Editar marca de color (Ctrl+M)
 	w_Lang090 =	Personalizar
+	w_Lang091 =	Encontrar un comando (Ctrl+Shift+F)
+	w_Lang092 =	Editar (Enter)
 		
 ; Command Windows		
 	c_Lang001 =	Ratón
@@ -478,7 +482,7 @@
 	t_Lang082 =	Declaraciones
 	t_Lang083 =	Mostrar Sangría para bucles y sentencias
 	t_Lang084 =	(Haga doble clic en el encabezado de la columna Acción de activar / desactivar)
-	t_Lang085 =	Mostrar barra de controles en el arranque
+	t_Lang085 =	Visualización controla bar en el arranque
 	t_Lang086 =	Buscando Funciones. Por favor, espere...
 	t_Lang087 =	Incluir archivos externos
 	t_Lang088 =	Crear archivo EXE
@@ -530,6 +534,12 @@
 	t_Lang134 =	Ratón
 	t_Lang135 =	Otros
 	t_Lang136 =	Destacar Filas
+	t_Lang137 =	Editor de Scripts Por Defecto
+	t_Lang138 =	Editar guión
+	t_Lang139 =	Seleccionar
+	t_Lang140 =	Por La Columna
+	t_Lang141 =	Todas Las Columnas
+		
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Abierto
@@ -641,21 +651,27 @@
 	(LTrim	
 		¿Desea descargarlo ahora?
 		
-		Para deshabilitar las comprobaciones automáticas seleccione Ayuda > Buscar en el arranque.
+		Para deshabilitar las comprobaciones automáticas seleccione Ayuda > Compruebe en el arranque
 	)	
+		
 	d_Lang062 =	Usted ya tiene la versión más reciente.
 	d_Lang063 =	Se ha producido un error durante la comprobación.
 	d_Lang064 =	Error de objeto COM en
 	d_Lang065 =	Fila
 	d_Lang066 =	Específicamente
-	d_Lang067 =	Mostrar consejos sobre la puesta en marcha.
+	d_Lang067 =	Mostrar esta ventana al iniciar
 	d_Lang068 =	Consejos:
 	d_Lang069 =	
 	(LTrim	
-		¿Necesitas ayuda, que se encuentra un error o tiene alguna sugerencia? Envíe un correo electrónico al autor: <a href="mailto:rodolfoub@gmail.com">rodolfoub@gmail.com</a>
-		Este es un software libre. Si has encontrado útil considerar <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=rodolfoub`%40gmail`%2ecom&lc=US&item_name=Pulover`%27s`%20Macro`%20Creator&item_number=App`%2ePMC&currency_code=USD&bn=PP`%2dDonationsBF`%3abtn_donateCC_LG`%2egif`%3aNonHosted">una donación</a> y apoyar el desarrollo. Gracias.
+		Una gran cantidad de tiempo y esfuerzos se centraron en el desarrollo de Pulover's Macro Creator. Si le resulta útil, por favor considere mostrar su agradecimiento con una donación.
+		
+		Donar o no, no habrá diferencia en sus características y funcionalidad.
 	)	
-	d_Lang070 =	Error: Hotkey no válida seleccionada.
+	d_Lang070 =	Donar...
+	d_Lang071 =	No, gracias
+	d_Lang072 =	Apoye el software de código abierto
+	d_Lang073 =	Error: Hotkey no válida seleccionada.
+	d_Lang074 =	Encontrar un comando o una función
 		
 ; Start-up Tips		
 	Start_Tips =	

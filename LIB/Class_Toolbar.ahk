@@ -5,7 +5,7 @@
 ; Author:            Pulover [Rodolfo U. Batista]
 ;                    rodolfoub@gmail.com
 ; AHK version:       1.1.11.00
-; Release date:      15 August 2013
+; Release date:      19 August 2013
 ;
 ;                    Class for AutoHotkey Toolbar custom controls
 ;=======================================================================================
@@ -861,6 +861,8 @@ Class Toolbar extends Toolbar.Private
             {
                 If (RegExMatch(Button, "^(\W?)(\w+)[=\s]?(.*)?:(\d+)\(?(.*?)?\)?$", Key))
                 {
+                    If (Key1)
+                        continue
                     idCommand := this.StringToNumber(Key2)
                 ,   iString := Key3, iBitmap := Key4
                 ,   Struct := this.DefineBtnStruct(TBBUTTON, iBitmap, idCommand, iString, Key5 ? Key5 : Options)

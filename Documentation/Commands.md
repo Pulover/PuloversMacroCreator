@@ -5,6 +5,7 @@
 ## Table of Contents
 
 * [Common Fields](Commands/Common_Fields.html)
+* [Find a Command](Commands/Find_a_Command.html)
 * [Mouse](Commands/Mouse.html)
 * [Text](Commands/Text.html)
 * [Control](Commands/Control.html)
@@ -29,4 +30,3 @@
 * [COM Interface](Commands/COM_Interface.html)
 * [Run Scriptlet](Commands/Run_Scriptlet.html)
 * [PostMessage / SendMessage](Commands/PostMessage_and_SendMessage.html)
-* [Special Keys](Commands/Special_Keys.html)

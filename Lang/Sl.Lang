@@ -48,6 +48,7 @@
 	i_Lang017 =	&COM Vmesnik
 	i_Lang018 =	R&un Skriptov
 	i_Lang019 =	&Windows Sporočila
+	i_Lang020 =	Na&jdi ukaz
 		
 ; Select Sub Menu		
 	s_Lang001 =	&Izberi vse
@@ -111,6 +112,7 @@
 	v_lang020 =	Ročni
 	v_lang021 =	Stop
 	v_lang022 =	Premor
+	v_lang023 =	Ponastaviti Privzete
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Nastavitve
@@ -127,7 +129,7 @@
 	h_Lang001 =	&Makro Creator Domov
 	h_Lang002 =	&AHK Online Dokumentacija
 	h_Lang003 =	&Preveri za posodobitve.
-	h_Lang004 =	P&reverite na start-up
+	h_Lang004 =	P&reveri ob zagonu
 	h_Lang005 =	&O
 	h_Lang006 =	&Nasveti
 	h_Lang007 =	&Forum
@@ -189,7 +191,7 @@
 	w_Lang049 =	Timer (Ctrl+Shift+T)
 	w_Lang050 =	Mouse (F2)
 	w_Lang051 =	Besedilo (F3)
-	w_Lang052 =	Posebne tipke (Shift+F3)
+	w_Lang052 =	(unused)
 	w_Lang053 =	Control (F4)
 	w_Lang054 =	Premor (F5)
 	w_Lang055 =	Sporočilo (Shift+F5)
@@ -228,6 +230,8 @@
 	w_Lang088 =	Uredi komentar (Ctrl+L)
 	w_Lang089 =	Edit Color Mark (Ctrl+M)
 	w_Lang090 =	Prilagajanje
+	w_Lang091 =	Najdi ukaz (Ctrl+Shift+F)
+	w_Lang092 =	Uredi (Enter)
 		
 ; Command Windows		
 	c_Lang001 =	Miška
@@ -478,7 +482,7 @@
 	t_Lang082 =	Izjave
 	t_Lang083 =	Prikaži zamikanje za Zank in izjav
 	t_Lang084 =	(Dvakrat kliknite glavo stolpca Akcijski vklop / izklop)
-	t_Lang085 =	Zaslon Kontrole Bar na start-up
+	t_Lang085 =	Prikaz nadzoruje bar ob zagonu
 	t_Lang086 =	Iskanje funkcij. Prosimo počakajte.
 	t_Lang087 =	Vključujejo zunanje datoteke
 	t_Lang088 =	Ustvari EXE datoteko
@@ -530,6 +534,12 @@
 	t_Lang134 =	Miška
 	t_Lang135 =	Drugi
 	t_Lang136 =	Vrhunec Vrstic
+	t_Lang137 =	Privzeti Urejevalnik Skript
+	t_Lang138 =	Uredi Skript
+	t_Lang139 =	Izberite
+	t_Lang140 =	S Kolone
+	t_Lang141 =	Vsi Stolpci
+		
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Odprite
@@ -641,21 +651,27 @@
 	(LTrim	
 		Želite prenesti sedaj?
 		
-		Če želite onemogočiti samodejne preglede izberite Pomoč> Preveri na start-up.
+		Če želite onemogočiti samodejne preglede izberite Pomoč> Preveri na start-up. > Preveri ob zagonu
 	)	
+		
 	d_Lang062 =	Že imate najnovejšo različico.
 	d_Lang063 =	Napaka pri preverjanju do napake.
 	d_Lang064 =	COM objekt napaka
 	d_Lang065 =	Vrstica
 	d_Lang066 =	Posebej
-	d_Lang067 =	Prikaži nasvete o start-up.
+	d_Lang067 =	Prikaži to okno ob zagonu
 	d_Lang068 =	Nasveti:
 	d_Lang069 =	
 	(LTrim	
-		Rabite pomoč, našel napako ali pa imate predlog? Pošljite e-pošto na avtorja: <a href="mailto:rodolfoub@gmail.com"> rodolfoub@gmail.com </ a>
-		To je brezplačna programska oprema. Če ste našli to koristno razmisliti < Donacija </ a> in razvojni podpori. Hvala.
+		Veliko časa in truda je šlo v razvoju Pulover's Macro Creator. Če se vam zdi, da je koristno, vas prosimo, menijo, ki prikazuje vaše zadovoljstvo z darovanjem.
+		
+		Donacijo ali ne, ne bo nobene razlike v svojih funkcij in funkcionalnosti.
 	)	
-	d_Lang070 =	Napaka: Neveljavna Bližnjica Izbrano.
+	d_Lang070 =	Donate...
+	d_Lang071 =	Ne, hvala
+	d_Lang072 =	Podpira odprtokodne programske opreme
+	d_Lang073 =	Napaka: Neveljavna Bližnjica Izbrano.
+	d_Lang074 =	Najdi ukaz ali funkcijo
 		
 ; Start-up Tips		
 	Start_Tips =	

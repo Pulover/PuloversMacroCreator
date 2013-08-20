@@ -48,6 +48,7 @@
 	i_Lang017 =	CO&M Interface
 	i_Lang018 =	E&xécuter Scriplet
 	i_Lang019 =	Messa&ges De Windows
+	i_Lang020 =	T&rouvez une commande
 		
 ; Select Sub Menu		
 	s_Lang001 =	&Sélectionner tout
@@ -111,6 +112,7 @@
 	v_lang020 =	Manuel
 	v_lang021 =	Arrêter
 	v_lang022 =	Pause
+	v_lang023 =	Réinitialiser Par Défaut
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Réglages
@@ -189,7 +191,7 @@
 	w_Lang049 =	Timer (Ctrl+Maj+T)
 	w_Lang050 =	Souris (F2)
 	w_Lang051 =	Texte (F3)
-	w_Lang052 =	Touches spéciales (Maj+F3)
+	w_Lang052 =	(unused)
 	w_Lang053 =	Commande (F4)
 	w_Lang054 =	Pause (F5)
 	w_Lang055 =	Un message (Shift+F5)
@@ -228,6 +230,8 @@
 	w_Lang088 =	Modifier le commentaire (Ctrl+L)
 	w_Lang089 =	Modifier marque de couleur (Ctrl+M)
 	w_Lang090 =	Personnaliser
+	w_Lang091 =	Trouvez une commande (Ctrl+Maj+F)
+	w_Lang092 =	Éditer (Enter)
 		
 ; Command Windows		
 	c_Lang001 =	Souris
@@ -478,7 +482,7 @@
 	t_Lang082 =	Déclarations
 	t_Lang083 =	Voir Indentation pour les boucles et les états
 	t_Lang084 =	(Double-cliquez sur l'en-tête de colonne Action activer / désactiver)
-	t_Lang085 =	Commandes de l'affichage bar au démarrage
+	t_Lang085 =	Affichage contrôle bar au démarrage
 	t_Lang086 =	Recherche de fonctions. S'il vous plaît patienter...
 	t_Lang087 =	Inclure les fichiers externes
 	t_Lang088 =	Créer un fichier EXE
@@ -530,6 +534,12 @@
 	t_Lang134 =	Souris
 	t_Lang135 =	Autres
 	t_Lang136 =	Les Lignes En Surbrillance
+	t_Lang137 =	Éditeur De Script Par Défaut
+	t_Lang138 =	Modifier Le Script
+	t_Lang139 =	Sélectionner
+	t_Lang140 =	Par Colonne
+	t_Lang141 =	Tous Les Colonnes
+		
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Ouvert
@@ -641,21 +651,27 @@
 	(LTrim	
 		Voulez-vous la télécharger maintenant?
 		
-		Pour désactiver la vérification automatique Sélectionnez Aide > Vérifier au démarrage.
+		Pour désactiver la vérification automatique Sélectionnez Aide > Vérifier au démarrage
 	)	
+		
 	d_Lang062 =	Vous avez déjà la version la plus récente.
 	d_Lang063 =	Une erreur s'est produite lors de la vérification.
 	d_Lang064 =	Erreur d'objet COM dans
 	d_Lang065 =	Row
 	d_Lang066 =	Spécifiquement
-	d_Lang067 =	Afficher les astuces au démarrage.
+	d_Lang067 =	Afficher cette fenêtre au démarrage
 	d_Lang068 =	Conseils:
 	d_Lang069 =	
 	(LTrim	
-		Besoin d'aide, trouvé un bug ou une suggestion? Envoyer un mail à l'auteur: <a href="mailto:rodolfoub@gmail.com">rodolfoub@gmail.com</a>
-		Il s'agit d'un logiciel libre. Si vous l'avez trouvé jugerez utiles <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=rodolfoub`%40gmail`%2ecom&lc=US&item_name=Pulover`%27s`%20Macro`%20Creator&item_number=App`%2ePMC&currency_code=USD&bn=PP`%2dDonationsBF`%3abtn_donateCC_LG`%2egif`%3aNonHosted">faire un don</a> et de soutien au développement. Je vous remercie.
+		Beaucoup de temps et d'efforts ont été consacrés à l'élaboration de Pulover's Macro Creator. Si vous le trouvez utile, s'il vous plaît pensez à montrer votre appréciation avec un don.
+		
+		Donner ou non, il n'y aura pas de différence dans ses fonctions et fonctionnalités.
 	)	
-	d_Lang070 =	Erreur: Invalid Hotkey sélectionnée.
+	d_Lang070 =	Faites un don...
+	d_Lang071 =	Non, merci
+	d_Lang072 =	Soutenez le logiciel Open Source
+	d_Lang073 =	Erreur: Invalid Hotkey sélectionnée.
+	d_Lang074 =	Trouvez une commande ou une fonction
 		
 ; Start-up Tips		
 	Start_Tips =	

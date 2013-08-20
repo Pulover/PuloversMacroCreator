@@ -48,6 +48,7 @@
 	i_Lang017 =	C&OM-Interface
 	i_Lang018 =	R&un Scriptlet
 	i_Lang019 =	&Windows Messages
+	i_Lang020 =	&Zoek een commando
 		
 ; Select Sub Menu		
 	s_Lang001 =	&Alles selecteren
@@ -111,6 +112,7 @@
 	v_lang020 =	Handboek
 	v_lang021 =	Stoppen
 	v_lang022 =	Pauze
+	v_lang023 =	Reset Default
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Instellingen
@@ -127,8 +129,8 @@
 	h_Lang001 =	&Macro Schepper Startpagina
 	h_Lang002 =	&AHK Online Documentatie
 	h_Lang003 =	&Controleren op updates...
-	h_Lang004 =	C&heck bij het opstarten
-	h_Lang005 =	&Over
+	h_Lang004 =	C&ontroleer bij opstarten
+	h_Lang005 =	O&ver
 	h_Lang006 =	&tips
 	h_Lang007 =	&Forum
 		
@@ -189,7 +191,7 @@
 	w_Lang049 =	Timer (Ctrl+Shift+T)
 	w_Lang050 =	Muis (F2)
 	w_Lang051 =	Tekst (F3)
-	w_Lang052 =	Speciale toetsen (Shift+F3)
+	w_Lang052 =	(unused)
 	w_Lang053 =	Control (F4)
 	w_Lang054 =	Pauzeren (F5)
 	w_Lang055 =	Bericht (Shift+F5)
@@ -228,6 +230,8 @@
 	w_Lang088 =	Opmerking bewerken (Ctrl+L)
 	w_Lang089 =	Bewerken kleurmarkering (Ctrl+M)
 	w_Lang090 =	Aanpassen
+	w_Lang091 =	Zoek een commando (Ctrl+Shift+F)
+	w_Lang092 =	Redigeren (Enter)
 		
 ; Command Windows		
 	c_Lang001 =	Muis
@@ -478,7 +482,7 @@
 	t_Lang082 =	Verklaringen
 	t_Lang083 =	Toon Inspringen voor Loops en Verklaringen
 	t_Lang084 =	(Dubbelklik op de actie kolomkop inschakelen / uitschakelen)
-	t_Lang085 =	Beeldscherm Controls bar op start-up
+	t_Lang085 =	Weergave controleert bar bij het opstarten
 	t_Lang086 =	Zoeken naar functies. Even geduld aub...
 	t_Lang087 =	Inclusief externe bestanden
 	t_Lang088 =	Maak EXE File
@@ -530,6 +534,12 @@
 	t_Lang134 =	Muis
 	t_Lang135 =	Anderen
 	t_Lang136 =	Hoogtepunt Rijen
+	t_Lang137 =	Standaard Script Editor
+	t_Lang138 =	Script Bewerken
+	t_Lang139 =	Kiezen
+	t_Lang140 =	Door Column
+	t_Lang141 =	Alle Columns
+		
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Open
@@ -641,21 +651,27 @@
 	(LTrim	
 		Wilt u deze nu downloaden?
 		
-		Om automatische controles uit te schakelen selecteert u Help > Check bij het opstarten.
+		Om automatische controles uit te schakelen selecteert u Help > Controleer bij opstarten
 	)	
+		
 	d_Lang062 =	Je hebt al de meest recente versie.
 	d_Lang063 =	Er is een fout opgetreden tijdens het controleren.
 	d_Lang064 =	COM-object fout in
 	d_Lang065 =	Rij
 	d_Lang066 =	Specifiek
-	d_Lang067 =	Toon tips bij het opstarten.
+	d_Lang067 =	Laat dit venster bij het opstarten
 	d_Lang068 =	tips:
 	d_Lang069 =	
 	(LTrim	
-		Heb je hulp nodig, vond een bug of een suggestie? Stuur een email naar de auteur: <a href="mailto:rodolfoub@gmail.com">rodolfoub@gmail.com</a>
-		Dit is een gratis software. Als je vond het nuttig achten <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=rodolfoub`%40gmail`%2ecom&lc=US&item_name=Pulover`%27s`%20Macro`%20Creator&item_number=App`%2ePMC&currency_code=USD&bn=PP`%2dDonationsBF`%3abtn_donateCC_LG`%2egif`%3aNonHosted">het maken van een donatie</a> en ondersteuning ontwikkeling. Dank u.
+		Er is veel tijd en moeite gestoken in de ontwikkeling van Pulover's Macro Creator. Als je het nuttig vinden, kunt u overwegen tonen van uw waardering met een donatie.
+		
+		Doneren of niet, zal er geen verschil in de functies en functionaliteit.
 	)	
-	d_Lang070 =	Fout: Ongeldige Sneltoets Selected.
+	d_Lang070 =	Doneren...
+	d_Lang071 =	Nee, bedankt
+	d_Lang072 =	Ondersteuning van Open Source software
+	d_Lang073 =	Fout: Ongeldige Sneltoets Selected.
+	d_Lang074 =	Zoek een opdracht of functie
 		
 ; Start-up Tips		
 	Start_Tips =	

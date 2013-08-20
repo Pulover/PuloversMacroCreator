@@ -40,7 +40,7 @@
 	i_Lang009 =	E&xecutar / Arquivos / Texto / Misc.
 	i_Lang010 =	&Loop
 	i_Lang011 =	P&ular
-	i_Lang012 =	R&ótulo
+	i_Lang012 =	Rótul&o
 	i_Lang013 =	&Declaração Se
 	i_Lang014 =	&Variáveis
 	i_Lang015 =	&Funções
@@ -48,6 +48,7 @@
 	i_Lang017 =	I&nterface COM
 	i_Lang018 =	Execut&ar Scriptlet
 	i_Lang019 =	Mensa&ges Do Windows
+	i_Lang020 =	Locali&zar um comando
 		
 ; Select Sub Menu		
 	s_Lang001 =	Selecionar &Tudo
@@ -111,6 +112,7 @@
 	v_lang020 =	Manual
 	v_lang021 =	Parar
 	v_lang022 =	Pausa
+	v_lang023 =	Restaurar Padrão
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Configurações
@@ -189,7 +191,7 @@
 	w_Lang049 =	Temporizador (Ctrl+Shift+T)
 	w_Lang050 =	Mouse (F2)
 	w_Lang051 =	Texto (F3)
-	w_Lang052 =	Teclas Especiais (Shift+F3)
+	w_Lang052 =	(unused)
 	w_Lang053 =	Controle (F4)
 	w_Lang054 =	Pausa (F5)
 	w_Lang055 =	Mensagem (Shift+F5)
@@ -228,6 +230,8 @@
 	w_Lang088 =	Editar Comentário (Ctrl+L)
 	w_Lang089 =	Editar Marca de Cor (Ctrl+M)
 	w_Lang090 =	Personalizar
+	w_Lang091 =	Localizar um comando (Ctrl+Shift+F)
+	w_Lang092 =	Editar (Enter)
 		
 ; Command Windows		
 	c_Lang001 =	Mouse
@@ -478,7 +482,7 @@
 	t_Lang082 =	Declarações
 	t_Lang083 =	Mostrar Margens para Loops e Declarações
 	t_Lang084 =	(Duplo-Clique no Cabeçalho da Coluna Action para ativar/desativar)
-	t_Lang085 =	Mostrar Barra de Controles ao iniciar.
+	t_Lang085 =	Mostrar Barra de Controles ao iniciar
 	t_Lang086 =	Procurando Funções. Por favor aguarde...
 	t_Lang087 =	Incluir Arquivos Externos
 	t_Lang088 =	Criar Arquivo EXE
@@ -530,6 +534,12 @@
 	t_Lang134 =	Mouse
 	t_Lang135 =	Outros
 	t_Lang136 =	Destacar Linhas
+	t_Lang137 =	Editor de Script Padrão
+	t_Lang138 =	Editar Script
+	t_Lang139 =	Selecionar
+	t_Lang140 =	Por Coluna
+	t_Lang141 =	Todas as Colunas
+		
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Abrir
@@ -641,21 +651,27 @@
 	(LTrim	
 		Gostaria de fazer o download agora?
 		
-		Para desabilitar a verificação automática selecine Ajuda > Verificar ao iniciar.
+		Para desabilitar a verificação automática selecine Ajuda > Verificar ao iniciar
 	)	
+		
 	d_Lang062 =	Você já possui a versão mais recente.
 	d_Lang063 =	Ocorreu um erro durante a verificação.
 	d_Lang064 =	Erro do objeto COM em
 	d_Lang065 =	Linha
 	d_Lang066 =	Especificamente
-	d_Lang067 =	Mostrar dicas ao iniciar.
+	d_Lang067 =	Mostrar esta janela ao iniciar
 	d_Lang068 =	Dicas:
 	d_Lang069 =	
 	(LTrim	
-		Precisa de ajuda, encontrou um problema ou tem uma sugestão? Envie um email para o autor: <a href="mailto:rodolfoub@gmail.com">rodolfoub@gmail.com</a>
-		Este é um software gratuito. Se você achou útil considere <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=rodolfoub`%40gmail`%2ecom&lc=BR&item_name=Pulover`%27s`%20Macro`%20Creator&item_number=App`%2ePMC`%2eBr&currency_code=BRL&bn=PP`%2dDonationsBF`%3abtn_donateCC_LG`%2egif`%3aNonHosted">fazer uma doação</a> e apoiar o desenvolvimento. Obrigado.
+		Muito tempo e esforço foram investidos no desenvolvimento de Pulover's Macro Creator. Se você achou-o útil, por favor considere demonstrar seu apoio com uma doação.
+		
+		Doando ou não, não haverá nenhuma diferença em seus recursos e funcionalidades.
 	)	
-	d_Lang070 =	Erro: Atalho Inválido Selecionado.
+	d_Lang070 =	Doar...
+	d_Lang071 =	Não, obrigado
+	d_Lang072 =	Apoie software Livre / Código Aberto
+	d_Lang073 =	Erro: Atalho Inválido Selecionado.
+	d_Lang074 =	Localizar um comando ou função
 		
 ; Start-up Tips		
 	Start_Tips =	

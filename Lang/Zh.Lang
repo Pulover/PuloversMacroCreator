@@ -48,6 +48,7 @@
 	i_Lang017 =	COM接口
 	i_Lang018 =	运行的Scriptlet
 	i_Lang019 =	Windows消息
+	i_Lang020 =	查找命令
 		
 ; Select Sub Menu		
 	s_Lang001 =	全选
@@ -111,6 +112,7 @@
 	v_lang020 =	手册
 	v_lang021 =	停止
 	v_lang022 =	暂停
+	v_lang023 =	기본값을 재설정...
 		
 ; Options Sub Menu		
 	o_Lang001 =	设置
@@ -189,7 +191,7 @@
 	w_Lang049 =	定时器（Ctrl+Shift+T）
 	w_Lang050 =	鼠标（F2）
 	w_Lang051 =	文本（F3）
-	w_Lang052 =	特殊键（Shift+F3）
+	w_Lang052 =	(unused)
 	w_Lang053 =	控制（F4）
 	w_Lang054 =	暂停（F5）
 	w_Lang055 =	消息（Shift+F5）
@@ -228,6 +230,8 @@
 	w_Lang088 =	编辑注释（Ctrl+L）
 	w_Lang089 =	编辑颜色标志（Ctrl+M）
 	w_Lang090 =	定制
+	w_Lang091 =	查找命令（按Ctrl+Shift+ F）
+	w_Lang092 =	编辑（Enter）
 		
 ; Command Windows		
 	c_Lang001 =	鼠标
@@ -530,6 +534,12 @@
 	t_Lang134 =	鼠标
 	t_Lang135 =	他人
 	t_Lang136 =	亮点行
+	t_Lang137 =	默认的脚本编辑器
+	t_Lang138 =	编辑脚本
+	t_Lang139 =	选择
+	t_Lang140 =	通过列
+	t_Lang141 =	所有列
+		
 		
 ; Messages & Dialogs		
 	d_Lang001 =	打开
@@ -641,21 +651,27 @@
 	(LTrim	
 		你想现在就下载吗？
 		
-		要禁用自动检查选择帮助>检查启动。
+		要禁用自动检查选择帮助>检查启动。 > 检查启动
 	)	
+		
 	d_Lang062 =	您已经有最新的版本。
 	d_Lang063 =	检查时发生错误。
 	d_Lang064 =	COM对象错误
 	d_Lang065 =	排
 	d_Lang066 =	特别是
-	d_Lang067 =	在启动时显示提示。
+	d_Lang067 =	显示这个窗口启动
 	d_Lang068 =	温馨提示：
 	d_Lang069 =	
 	(LTrim	
-		需要帮助，发现了一个bug或者有一个建议吗？发送电子邮件至作者：<a href="mailto:rodolfoub@gmail.com">rodolfoub@gmail.com</a>
-		这是一个免费的软件。如果你觉得它有用的考虑<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=rodolfoub`%40gmail`%2ecom&lc=US&item_name=Pulover`%27s`%20Macro`%20Creator&item_number=App`%2ePMC&currency_code=USD&bn=PP`%2dDonationsBF`%3abtn_donateCC_LG`%2egif`%3aNonHosted">捐赠</a>和支持发展。谢谢。
+		Pulover's Macro Creator的发展已经进入了很多的时间和精力。如果你觉得它有用，请考虑捐赠升值。
+		
+		捐赠与否，将不会有差异的特点和功能。
 	)	
-	d_Lang070 =	错误：无效的热键选择。
+	d_Lang070 =	捐赠...
+	d_Lang071 =	不用了，谢谢
+	d_Lang072 =	支持开源软件
+	d_Lang073 =	错误：无效的热键选择。
+	d_Lang074 =	查找命令或函数
 		
 ; Start-up Tips		
 	Start_Tips =	

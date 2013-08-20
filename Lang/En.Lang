@@ -48,6 +48,7 @@
 	i_Lang017 =	C&OM Interface
 	i_Lang018 =	Run &Scriptlet
 	i_Lang019 =	Win&dows Messages
+	i_Lang020 =	Fin&d a command
 		
 ; Select Sub Menu		
 	s_Lang001 =	Select &All
@@ -111,6 +112,7 @@
 	v_lang020 =	Manual
 	v_lang021 =	Stop
 	v_lang022 =	Pause
+	v_lang023 =	Reset Default
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Settings
@@ -127,7 +129,7 @@
 	h_Lang001 =	&Macro Creator Home
 	h_Lang002 =	&AHK Online Documentation
 	h_Lang003 =	&Check for updates...
-	h_Lang004 =	Check on &start-up
+	h_Lang004 =	Check on &startup
 	h_Lang005 =	Abo&ut
 	h_Lang006 =	&Tips
 	h_Lang007 =	&Forum
@@ -189,7 +191,7 @@
 	w_Lang049 =	Timer (Ctrl+Shift+T)
 	w_Lang050 =	Mouse (F2)
 	w_Lang051 =	Text (F3)
-	w_Lang052 =	Special Keys (Shift+F3)
+	w_Lang052 =	(unused)
 	w_Lang053 =	Control (F4)
 	w_Lang054 =	Pause (F5)
 	w_Lang055 =	Message (Shift+F5)
@@ -228,6 +230,8 @@
 	w_Lang088 =	Edit Comment (Ctrl+L)
 	w_Lang089 =	Edit Color Mark (Ctrl+M)
 	w_Lang090 =	Customize
+	w_Lang091 =	Find a command (Ctrl+Shift+F)
+	w_Lang092 =	Edit (Enter)
 		
 ; Command Windows		
 	c_Lang001 =	Mouse
@@ -478,7 +482,7 @@
 	t_Lang082 =	Statements
 	t_Lang083 =	Show Indentation for Loops and Statements
 	t_Lang084 =	(Double-Click the Action column header enable / disable)
-	t_Lang085 =	Display Controls Bar on start-up
+	t_Lang085 =	Display Controls Bar on startup
 	t_Lang086 =	Searching for Functions. Please wait...
 	t_Lang087 =	Include External Files
 	t_Lang088 =	Create EXE File
@@ -530,6 +534,12 @@
 	t_Lang134 =	Mouse
 	t_Lang135 =	Others
 	t_Lang136 =	Highlight Rows
+	t_Lang137 =	Default Script Editor
+	t_Lang138 =	Edit Script
+	t_Lang139 =	Select
+	t_Lang140 =	By Column
+	t_Lang141 =	All Columns
+		
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Open
@@ -641,21 +651,27 @@
 	(LTrim	
 		Would you like to download it now?
 		
-		To disable automatic checks select Help > Check on start-up.
+		To disable automatic checks select Help > Check on startup
 	)	
+		
 	d_Lang062 =	You already have the most recent version.
 	d_Lang063 =	An error occured while checking.
 	d_Lang064 =	COM object error in
 	d_Lang065 =	Row
 	d_Lang066 =	Specifically
-	d_Lang067 =	Show tips on start-up.
+	d_Lang067 =	Show this window on startup
 	d_Lang068 =	Tips:
 	d_Lang069 =	
 	(LTrim	
-		Need help, found a bug or have a suggestion? Send an email to the author: <a href="mailto:rodolfoub@gmail.com">rodolfoub@gmail.com</a>
-		This is a free software. If you found it useful consider <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=rodolfoub`%40gmail`%2ecom&lc=US&item_name=Pulover`%27s`%20Macro`%20Creator&item_number=App`%2ePMC&currency_code=USD&bn=PP`%2dDonationsBF`%3abtn_donateCC_LG`%2egif`%3aNonHosted">making a donation</a> and support development. Thank you.
+		A lot of time and effort has gone into the development of Pulover's Macro Creator. If you find it useful, please consider showing your appreciation with a donation.
+		
+		Donating or not, there will be no difference in its features and functionality.
 	)	
-	d_Lang070 =	Error: Invalid Hotkey Selected.
+	d_Lang070 =	Donate...
+	d_Lang071 =	No, thanks
+	d_Lang072 =	Support Open Source software
+	d_Lang073 =	Error: Invalid Hotkey Selected.
+	d_Lang074 =	Find a command or function
 		
 ; Start-up Tips		
 	Start_Tips =	

@@ -48,6 +48,7 @@
 	i_Lang017 =	&COM Rozhraní
 	i_Lang018 =	Spustit Skript&y
 	i_Lang019 =	&Windows Zprávy
+	i_Lang020 =	Na&jít příkaz
 		
 ; Select Sub Menu		
 	s_Lang001 =	&Vybrat vše
@@ -111,6 +112,7 @@
 	v_lang020 =	Manuál
 	v_lang021 =	Zastavit
 	v_lang022 =	Pauza
+	v_lang023 =	Resetovat Výchozí Nastavení
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Nastavení
@@ -127,7 +129,7 @@
 	h_Lang001 =	&Makro Creator Home
 	h_Lang002 =	&AHK Online dokumentace
 	h_Lang003 =	&Zkontrolovat aktualizace...
-	h_Lang004 =	&Kontrola při rozběhu
+	h_Lang004 =	&Podívejte se na startu
 	h_Lang005 =	&O
 	h_Lang006 =	&Tipy
 	h_Lang007 =	&Forum
@@ -189,7 +191,7 @@
 	w_Lang049 =	Timer (Ctrl+Shift+T)
 	w_Lang050 =	Myš (F2)
 	w_Lang051 =	Text (F3)
-	w_Lang052 =	Speciální klávesy (Shift+F3)
+	w_Lang052 =	(unused)
 	w_Lang053 =	Control (F4)
 	w_Lang054 =	Pauza (F5)
 	w_Lang055 =	Zpráva (Shift+F5)
@@ -228,6 +230,8 @@
 	w_Lang088 =	Upravit komentář (Ctrl+L)
 	w_Lang089 =	Edit barva označuje (Ctrl+M)
 	w_Lang090 =	Vlastní
+	w_Lang091 =	Najít příkaz (Ctrl+Shift+F)
+	w_Lang092 =	Upravit (Enter)
 		
 ; Command Windows		
 	c_Lang001 =	Myš
@@ -478,7 +482,7 @@
 	t_Lang082 =	Prohlášení
 	t_Lang083 =	Zobrazit odsazení pro Loops a výkazy
 	t_Lang084 =	(Poklepejte na záhlaví sloupce akce povolit / zakázat)
-	t_Lang085 =	Zobrazení panelu s ovládacími prvky na start-up
+	t_Lang085 =	Zobrazení panelu s ovládacími prvky na spuštění
 	t_Lang086 =	Vyhledávání funkcí. Prosím čekejte...
 	t_Lang087 =	Zahrnout externí soubory
 	t_Lang088 =	Vytvořit EXE soubor
@@ -530,6 +534,12 @@
 	t_Lang134 =	Myš
 	t_Lang135 =	Ostatní
 	t_Lang136 =	Zvýraznění Řádků
+	t_Lang137 =	Výchozí Editor Skriptů
+	t_Lang138 =	Upravit Skript
+	t_Lang139 =	Vybrat
+	t_Lang140 =	Podle Sloupce
+	t_Lang141 =	Všechny Sloupce
+		
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Otevřít
@@ -641,21 +651,27 @@
 	(LTrim	
 		Chcete ji nyní stáhnout?
 		
-		Chcete-li zakázat automatickou kontrolu zvolte Nápověda > Kontrola při rozběhu.
+		Chcete-li zakázat automatickou kontrolu zvolte Nápověda > Podívejte se na startu
 	)	
+		
 	d_Lang062 =	Zaten en son sürümü var.
 	d_Lang063 =	Kontrol sırasında bir hata oluştu.
 	d_Lang064 =	COM objekt chyba
 	d_Lang065 =	Řádek
 	d_Lang066 =	Konkrétně
-	d_Lang067 =	Zobrazit tipy při spuštění.
+	d_Lang067 =	Zobrazit toto okno při spuštění
 	d_Lang068 =	Tipy:
 	d_Lang069 =	
 	(LTrim	
-		Potřebujete pomoc, našli chybu nebo máte nějaký návrh? Pošlete e-mail na autora: <a href="mailto:rodolfoub@gmail.com">rodolfoub@gmail.com</a>
-		Jedná se o svobodný software. Pokud jste zjistil, že je užitečné uvažovat <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=rodolfoub`%40gmail`%2ecom&lc=US&item_name=Pulover`%27s`%20Macro`%20Creator&item_number=App`%2ePMC&currency_code=USD&bn=PP`%2dDonationsBF`%3abtn_donateCC_LG`%2egif`%3aNonHosted">poskytnutí daru</a> a podpora rozvoje. Děkuju.
+		Hodně času a úsilí, co se týče vývoje Pulover's Macro Creator. Pokud zjistíte, že je užitečné, zvažte prosím ukazovat své uznání s darováním.
+		
+		Darování, nebo ne, tam bude žádný rozdíl v jeho vlastnosti a funkce.
 	)	
-	d_Lang070 =	Chyba: Neplatný Hotkey vybrané.
+	d_Lang070 =	Podpořte nás...
+	d_Lang071 =	Ne, díky
+	d_Lang072 =	Podporu open source software
+	d_Lang073 =	Chyba: Neplatný Hotkey vybrané.
+	d_Lang074 =	Pronađite naredbu ili funkciju...
 		
 ; Start-up Tips		
 	Start_Tips =	

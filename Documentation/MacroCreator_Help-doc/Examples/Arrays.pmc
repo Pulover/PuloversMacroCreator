@@ -1,0 +1,14 @@
+﻿[PMC Code]|F3||1|Window|1
+1|[Assign Variable]|Z := 0|1|0|Variable|||||
+2|[Assign Variable]|S := 0|1|0|Variable|||||
+3|[Assign Variable]|X := 0|1|0|Variable|||||
+4|Array|N := 10, 20, 30, 40, 50, 60, 70, 80, 90, 100|1|0|Variable|||||
+5|[LoopStart]|LoopStart|10|0|Loop|||||
+6|[Assign Variable]|X += 1|1|0|Variable|||||
+7|[Assign Variable]|Z := N[X]|1|0|Variable|Expression||||
+8|[Pause]|% N[X]|1|0|MsgBox|262208||||
+9|[Assign Variable]|S := %S%+%Z%|1|0|Variable|Expression||||
+10|[LoopEnd]|LoopEnd|1|0|Loop|||||
+11|[Pause]|%S%`,%X%`,%Z%|1|0|MsgBox|262208||||
+12|[Pause]|% N[4]|1|0|MsgBox|262208||||
+

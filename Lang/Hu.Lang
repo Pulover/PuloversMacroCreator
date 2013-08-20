@@ -48,6 +48,7 @@
 	i_Lang017 =	C&OM Interface
 	i_Lang018 =	F&uss Scriptlet
 	i_Lang019 =	A &Windows Üzenetek
+	i_Lang020 =	Keresse &meg a parancsot
 		
 ; Select Sub Menu		
 	s_Lang001 =	&Az összes kijelölése
@@ -111,6 +112,7 @@
 	v_lang020 =	Kézi
 	v_lang021 =	Megáll
 	v_lang022 =	Szünet
+	v_lang023 =	Vissza Az Alapértelmezett
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Beállítások
@@ -127,7 +129,7 @@
 	h_Lang001 =	&Makró Creator Főoldal
 	h_Lang002 =	&AHK Online dokumentáció
 	h_Lang003 =	&Ellenőrizze a frissítéseket...
-	h_Lang004 =	E&llenőrizze az induló
+	h_Lang004 =	E&llenőrizze indításkor
 	h_Lang005 =	&Ról
 	h_Lang006 =	&tippek
 	h_Lang007 =	&Fórum
@@ -189,7 +191,7 @@
 	w_Lang049 =	Timer (Ctrl+Shift+T)
 	w_Lang050 =	Mouse (F2)
 	w_Lang051 =	Text (F3)
-	w_Lang052 =	Speciális billentyűk (Shift+F3)
+	w_Lang052 =	(unused)
 	w_Lang053 =	Control (F4)
 	w_Lang054 =	Szünet (F5)
 	w_Lang055 =	Üzenet (Shift+F5)
@@ -228,6 +230,8 @@
 	w_Lang088 =	Megjegyzés szerkesztése (Ctrl+L)
 	w_Lang089 =	Szerkesztés színvédjegy (Ctrl+M)
 	w_Lang090 =	Testreszabása
+	w_Lang091 =	Keresse meg a parancsot (Ctrl+Shift+F)
+	w_Lang092 =	Szerkeszt (Enter)
 		
 ; Command Windows		
 	c_Lang001 =	Egér
@@ -478,7 +482,7 @@
 	t_Lang082 =	Nyilatkozatok
 	t_Lang083 =	Megjelenítés Behúzás a hurkok és nyilatkozatok
 	t_Lang084 =	(Kattintson duplán a Művelet oszlop fejlécében engedélyezés / letiltás)
-	t_Lang085 =	Kijelző Controls bár induló
+	t_Lang085 =	Kijelző vezérli bar indításkor
 	t_Lang086 =	Keresése funkciók. Kérem várjon...
 	t_Lang087 =	Beleértve a külső fájlok
 	t_Lang088 =	EXE fájl létrehozása
@@ -530,6 +534,12 @@
 	t_Lang134 =	Egér
 	t_Lang135 =	Egyéb
 	t_Lang136 =	Kiemelés Sorok
+	t_Lang137 =	Alapértelmezett Script Editor
+	t_Lang138 =	Szerkeszteni Script
+	t_Lang139 =	Választ
+	t_Lang140 =	Oszlop
+	t_Lang141 =	Minden Oszlop
+		
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Nyitva
@@ -641,21 +651,27 @@
 	(LTrim	
 		Szeretne letölteni most?
 		
-		Ha ki szeretné kapcsolni az automatikus ellenőrzés válassza a Help > Ellenőrizze az induló.
+		Ha ki szeretné kapcsolni az automatikus ellenőrzés válassza a Help > Ellenőrizze indításkor
 	)	
+		
 	d_Lang062 =	Már így is a legújabb verzióra.
 	d_Lang063 =	Hiba történt ellenőrzés.
 	d_Lang064 =	COM objektum hiba
 	d_Lang065 =	Sor
 	d_Lang066 =	Konkrétan
-	d_Lang067 =	Tippek mutatása indításkor.
+	d_Lang067 =	Mutasd az ablakban indításkor
 	d_Lang068 =	tippek:
 	d_Lang069 =	
 	(LTrim	
-		Segítségre van szüksége, talált egy hibát, vagy van egy javaslatom? E-mail küldése a szerzőnek: <a href="mailto:rodolfoub@gmail.com">rodolfoub@gmail.com</a>
-		Ez egy szabad szoftver. Ha hasznosnak találta fontolóra <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=rodolfoub`%40gmail`%2ecom&lc=US&item_name=Pulover`%27s`%20Macro`%20Creator&item_number=App`%2ePMC&currency_code=USD&bn=PP`%2dDonationsBF`%3abtn_donateCC_LG`%2egif`%3aNonHosted">hogy egy adomány</a> és a támogatás fejlesztés. Köszönöm.
+		Rengeteg időt és energiát ment a fejlesztés Pulover's Macro Creator. Ha úgy találja, hogy hasznos, kérjük, fontolja mutatja meg elismerését egy adomány.
+		
+		Ajándékozó, akár nem, nem lesz különbség a szolgáltatásokat és funkciókat.
 	)	
-	d_Lang070 =	Hiba: Érvénytelen Hotkey Kiválasztott.
+	d_Lang070 =	Adományoz...
+	d_Lang071 =	Nem, kösz
+	d_Lang072 =	Támogatja a nyílt forráskódú szoftverek
+	d_Lang073 =	Hiba: Érvénytelen Hotkey Kiválasztott.
+	d_Lang074 =	Keresse meg a parancs vagy funkció
 		
 ; Start-up Tips		
 	Start_Tips =	

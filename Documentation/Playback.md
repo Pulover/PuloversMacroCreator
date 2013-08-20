@@ -24,8 +24,8 @@ The Playback Hotkeys are selected in the boxes at the top-right of the main wind
 **Man.** (Manual Hotkey): Selects the Hotkey to reproduce the currently selected Macro step-by-step. This is usually used to debug the Macro. If Show Info option is on a tooltip show the last and next steps will be shown next to the mouse pointer.
 
 **Stop**: Selects the Hotkey to stop execution and return it to start. You can also stop Playback by double-clicking the TrayIcon or right-clicking on it and selecting *Stop*.  
-The Pause option changes the behavior to pause/unpause execution instead. You can also pause/unpause Playback by Middle-Clicking the TrayIcon (even if Pause option is not enabled).  
-This key is global for all Macros.  
+
+**Pause**: Selects the Hotkey to pause execution, press it again to resume. You can also pause/unpause Playback by Middle-Clicking the TrayIcon.  
 
 *Note*: Mouse Actions are affected by [Mouse Coordinates Settings](p7-Settings.html#defaults).  
 
@@ -59,11 +59,13 @@ For more information see [AutoHotkey Help](http://l.autohotkey.net/docs/commands
 
 ## Playback Options
 
-To change options click the Options button on the main window or select Options Menu > Settings. Some of the options can also be accessed from the *Playback Options* button on the [Controls Toolbar](#controls-toolbar).
+To change options click the Options button on the main window or select Options Menu > Settings. Some of the options can also be accessible from the *Playback Options* button on the [Controls Toolbar](#controls-toolbar).
 
 **Speed Up**: Selects the hotkey to toggle playback speed Up/Normal. When this option is on delay values will be cut by value set. Does not work when *Random Sleeps* is activated.
 
 **Slow Down**: Selects the hotkey to toggle playback speed Down/Normal. When this option is on delay values will be multiplied by value set. Does not work when *Random Sleeps* is activated.
+
+**Display balloon tips**: Enables displaying of tooltips and traytips during Recording/Playback.
 
 **Return Mouse after playback**: If checked will return the mouse to the initial position after each Macro Playback that uses mouse movement. This will not work for Manual Playback.
 

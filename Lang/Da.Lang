@@ -48,6 +48,7 @@
 	i_Lang017 =	&COM Interface
 	i_Lang018 =	K&ør Scriptlet
 	i_Lang019 =	&Windows Messages
+	i_Lang020 =	Fin&d en kommando
 		
 ; Select Sub Menu		
 	s_Lang001 =	&Vælg alt
@@ -111,6 +112,7 @@
 	v_lang020 =	Manual
 	v_lang021 =	Stands
 	v_lang022 =	Pause
+	v_lang023 =	Nulstille Standard
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Indstillinger
@@ -127,9 +129,9 @@
 	h_Lang001 =	&Makro Creator Hjem
 	h_Lang002 =	&AHK Online Dokumentation
 	h_Lang003 =	&Kontrollere for opdateringer...
-	h_Lang004 =	K&ontrollere, om opstart
-	h_Lang005 =	Om
-	h_Lang006 =	&Tips
+	h_Lang004 =	&Tjek på opstart
+	h_Lang005 =	&Om
+	h_Lang006 =	T&ips
 	h_Lang007 =	&Forum
 		
 ; Tray Menu		
@@ -189,7 +191,7 @@
 	w_Lang049 =	Timer (Ctrl+Shift+T)
 	w_Lang050 =	Mus (F2)
 	w_Lang051 =	Tekst (F3)
-	w_Lang052 =	Særlige Keys (Shift+F3)
+	w_Lang052 =	(unused)
 	w_Lang053 =	Control (F4)
 	w_Lang054 =	Pause (F5)
 	w_Lang055 =	Besked (Shift+F5)
@@ -228,6 +230,8 @@
 	w_Lang088 =	Rediger kommentar (Ctrl+L)
 	w_Lang089 =	Edit farvemærke (Ctrl+M)
 	w_Lang090 =	Tilpas
+	w_Lang091 =	Find en kommando (Ctrl+Shift+F)
+	w_Lang092 =	Rediger (Enter)
 		
 ; Command Windows		
 	c_Lang001 =	Mus
@@ -478,7 +482,7 @@
 	t_Lang082 =	Erklæringer
 	t_Lang083 =	Vis Indrykning for-løkker og Udtalelser
 	t_Lang084 =	(Dobbeltklik på aktion kolonneoverskriften aktivere / deaktivere)
-	t_Lang085 =	Display Controls bar på opstart
+	t_Lang085 =	Display styrer bar ved opstart
 	t_Lang086 =	Søgning efter funktioner. Vent venligst...
 	t_Lang087 =	Medtag eksterne filer
 	t_Lang088 =	Opret EXE fil
@@ -530,6 +534,12 @@
 	t_Lang134 =	Mus
 	t_Lang135 =	Andre
 	t_Lang136 =	Fremhæve Rækker
+	t_Lang137 =	Standard Script Editor
+	t_Lang138 =	Rediger Script
+	t_Lang139 =	Vælg
+	t_Lang140 =	Ved Kolonne
+	t_Lang141 =	Alle Kolonner
+		
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Åbent
@@ -641,21 +651,27 @@
 	(LTrim	
 		Kunne du tænke dig at hente den nu?
 		
-		For at deaktivere automatiske kontroller Vælg Hjælp > Kontrollere, om opstart.
+		For at deaktivere automatiske kontroller Vælg Hjælp > Tjek på opstart
 	)	
+		
 	d_Lang062 =	Du har allerede den nyeste version.
 	d_Lang063 =	Der opstod en fejl under kontrol.
 	d_Lang064 =	COM objekt fejl i
 	d_Lang065 =	Row
 	d_Lang066 =	Konkret
-	d_Lang067 =	Vis tips om opstart.
+	d_Lang067 =	Vis dette vindue ved opstart
 	d_Lang068 =	Tips:
 	d_Lang069 =	
 	(LTrim	
-		Brug for hjælp, fundet en fejl eller har et forslag? Send en e-mail til forfatteren: <a href="mailto:rodolfoub@gmail.com">rodolfoub@gmail.com</a>
-		Dette er en gratis software. Hvis du har fundet det nyttigt at overveje <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=rodolfoub`%40gmail`%2ecom&lc=US&item_name=Pulover`%27s`%20Macro`%20Creator&item_number=App`%2ePMC&currency_code=USD&bn=PP`%2dDonationsBF`%3abtn_donateCC_LG`%2egif`%3aNonHosted">gør en donation</a> og støtte udvikling. Tak.
+		En masse tid og kræfter er gået ind i udviklingen af Pulover's Macro Creator. Hvis du finder det nyttigt, kan du overveje at vise din påskønnelse med en donation.
+		
+		Donere eller ej, vil der ikke være nogen forskel i sine funktioner og funktionalitet.
 	)	
-	d_Lang070 =	Fejl: Ugyldig Hotkey Selected.
+	d_Lang070 =	Doner...
+	d_Lang071 =	Nej tak
+	d_Lang072 =	Støtte Open Source software
+	d_Lang073 =	Fejl: Ugyldig Hotkey Selected.
+	d_Lang074 =	Find en kommando eller funktion
 		
 ; Start-up Tips		
 	Start_Tips =	

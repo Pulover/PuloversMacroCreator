@@ -353,6 +353,29 @@ SelectByType(SelType, Col=6)
 	}
 }
 
+SelectByFilter(Act, Det, Tim, Del, Typ, Tar, Win, Com, Col, Case)
+{
+	LV_Modify(0, "-Select"), Found := 0
+	Loop, % ListCount%A_List%
+	{
+		LV_GetTexts(A_Index, A, B, C, D, E, F, G, H, I)
+		If InStr(A, Trim(Act), Case)
+		&& InStr(B, Trim(Det), Case)
+		&& InStr(C, Trim(Tim), Case)
+		&& InStr(D, Trim(Del), Case)
+		&& InStr(E, Trim(Typ), Case)
+		&& InStr(F, Trim(Tar), Case)
+		&& InStr(G, Trim(Win), Case)
+		&& InStr(H, Trim(Com), Case)
+		&& InStr(I, Trim(Col), Case)
+		{
+			LV_Modify(A_Index, "Select")
+			Found++
+		}
+	}
+	return Found
+}
+
 class IfWin
 {
 	Active(Win)

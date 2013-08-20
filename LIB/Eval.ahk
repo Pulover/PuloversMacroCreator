@@ -1,22 +1,39 @@
-; MONSTER Version 1.2 to EVALUATE ARITHMETIC EXPRESSIONS in strings (needs AHK 1.0.48+)
-; Containing HEX, Signed Binary ('11 = -1, '011 = 3), scientific numbers (1.2e+5)
-; Assignments :=, preceding an expression. E.g: a:=1; b:=2; a+b
-; User defined functions: f(x) := expr;
-; AHK Functions Abs|Ceil|Exp|Floor|Log|Ln|Round|Sqrt|Sin|Cos|Tan|ASin|ACos|ATan
-; Predefined functions: SGN|Fib|Fac (sign, Fibonacci numbers, Factorials)
-; '(',')'; Variables; Predefined operators GCD,MIN,MAX,Choose (2-parameter functions)
-; Predefined constants: e, pi, inch, foot, mile, ounce, pint, gallon, oz, lb;
-; Logic operators: !, ||, &&; ternary operator: (_?_:_);
-; Relations: =,<>; <,>,<=,>=
-; Binary operators: ~; |, ^, &, <<, >>
-; Arithmetic operators: +, -; *, /, \ (or % = mod); ** (or @ = power)
-; Output FORMAT: $x,$h: Hex; $b{W}: W-bit binary;
-;    ${k}: k-digit fixpoint,  ${k}e,${k}g: k-digit scientific (Default $6g)
-
+;###########################################################
+; Original by Laszlo
+; http://www.autohotkey.com/board/topic/15675-monster
+; Modified by Pulover for Pulover's Macro Creator to support functions
+;###########################################################
 Eval(x) {                              ; non-recursive PRE/POST PROCESSING: I/O forms, numbers, ops, ";"
    Local FORM, FormF, FormI, i, W, y, y1, y2, y3, y4
    FormI := A_FormatInteger, FormF := A_FormatFloat
 
+	If RegExMatch(x, "([\w_]+)\((.*)\)", Funct)  ; Functions
+	{
+		If IsFunc(Funct1)
+		{
+			Params := Object()
+			StringReplace, Funct2, Funct2, ```,, `,, All
+			Loop, Parse, Funct2, `,, %A_Space%``""
+			{
+				LoopField := DerefVars(A_LoopField)
+				StringReplace, LoopField, LoopField, ```,, `,, All
+				StringReplace, LoopField, LoopField, ¢, `,, All
+				Params.Insert(LoopField)
+			}
+			FuncResult := %Funct1%(Params*)
+			StringReplace, FuncResult, FuncResult, `,, ```, 
+			return FuncResult
+		}
+	}
+	
+	If RegExMatch(x, "(\S+)\[(\S+)\]", Found) ; Arrays
+	{
+		Found := RegExReplace(Found, "[\[|\]]", "\$0")
+		If Found2 is not Number
+			Found2 := DerefVars("%" Found2 "%")
+		y := %Found1%[Found2]
+		return y
+	}
    SetFormat Integer, D                ; decimal intermediate results!
    RegExMatch(x, "\$(b|h|x|)(\d*[eEgG]?)", y)
    FORM := y1, W := y2                 ; HeX, Bin, .{digits} output format
