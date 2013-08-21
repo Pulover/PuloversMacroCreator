@@ -84,35 +84,30 @@
 	r_lang005 =	A&dicionar Macro
 	r_lang006 =	&Fechar Macro
 	r_lang007 =	Atalhos &Condicionais
-	r_lang008 =	&Mostrar / Ocultar Controles
-	r_lang009 =	Reproduzir a &Partir da Linha Selecionada
-	r_lang010 =	Reproduzir Até a &Linha Selecionada
-	r_lang011 =	Reproduzir Linhas &Selecionadas
+	r_lang008 =	Reproduzir a &Partir da Linha Selecionada
+	r_lang009 =	Reproduzir Até a &Linha Selecionada
+	r_lang010 =	Reproduzir Linhas &Selecionadas
 		
 ; View Sub Menu		
 	v_lang001 =	Sempre Visível
 	v_lang002 =	Destacar Linhas
 	v_lang003 =	Margem
-	v_lang004 =	Script
-	v_lang005 =	Barras de Ferramentas
-	v_lang006 =	Atalhos
-	v_lang007 =	Carregar Predefinição
-	v_lang008 =	Salvar Predefinição
+	v_lang004 =	Barra de Controles
+	v_lang005 =	Script
+	v_lang006 =	Barras de Ferramentas
+	v_lang007 =	Atalhos
+	v_lang008 =	Restaurar Colunas
 	v_lang009 =	Arquivo
 	v_lang010 =	Gravar  Reproduzir
 	v_lang011 =	Opções
 	v_lang012 =	Commandos
 	v_lang013 =	Editar
-	v_lang014 =	Padrão
-	v_lang015 =	Básico
-	v_lang016 =	Personalizado
-	v_lang017 =	Personalizar
-	v_lang018 =	Restaurar Colunas
-	v_lang019 =	Automatico
-	v_lang020 =	Manual
-	v_lang021 =	Parar
-	v_lang022 =	Pausa
-	v_lang023 =	Restaurar Padrão
+	v_lang014 =	Personalizar
+	v_lang015 =	Automatico
+	v_lang016 =	Manual
+	v_lang017 =	Parar
+	v_lang018 =	Pausa
+	v_lang019 =	Restaurar Padrão
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Configurações
@@ -137,7 +132,7 @@
 ; Tray Menu		
 	y_Lang001 =	Ocultar Janela
 	y_Lang002 =	Mostrar Janela
-	y_Lang003 =	Mostrar / Ocultar Controles
+	y_Lang003 =	Barra de Controles
 		
 ; Main Window		
 	w_Lang001 =	Exportar

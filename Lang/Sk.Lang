@@ -84,35 +84,30 @@
 	r_lang005 =	P&ridať makro
 	r_lang006 =	Za&vrieť Makro
 	r_lang007 =	&Kontextová Klávesové skratky
-	r_lang008 =	Z&obraziť / Skryť ovládací
-	r_lang009 =	Pr&ehrávanie z vybraného riadku
-	r_lang010 =	&Hrať, kým vybraný riadok
-	r_lang011 =	Prehra&ť vybrané riadky
+	r_lang008 =	Pr&ehrávanie z vybraného riadku
+	r_lang009 =	&Hrať, kým vybraný riadok
+	r_lang010 =	Prehra&ť vybrané riadky
 		
 ; View Sub Menu		
 	v_lang001 =	Always On Top
 	v_lang002 =	Zvýraznenie Riadkov
 	v_lang003 =	Odsadenie
-	v_lang004 =	Náhľad
-	v_lang005 =	Toolbar
-	v_lang006 =	Hotkeys
-	v_lang007 =	Memuat Ditetapkan
-	v_lang008 =	Menyimpan Ditetapkan
+	v_lang004 =	Ovládacie Prvky Panela Nástrojov
+	v_lang005 =	Náhľad
+	v_lang006 =	Toolbar
+	v_lang007 =	Hotkeys
+	v_lang008 =	Obnoviť stĺpce veľkosť
 	v_lang009 =	Berkas
 	v_lang010 =	Merekam  Memutar
 	v_lang011 =	Pilihan
 	v_lang012 =	Perintah
 	v_lang013 =	Mengedit
-	v_lang014 =	Kegagalan
-	v_lang015 =	Dasar
-	v_lang016 =	Adat
-	v_lang017 =	Vlastné
-	v_lang018 =	Obnoviť stĺpce veľkosť
-	v_lang019 =	Automatický
-	v_lang020 =	Manuál
-	v_lang021 =	Stop
-	v_lang022 =	Pauza
-	v_lang023 =	Obnoviť Predvolené Nastavenia
+	v_lang014 =	Vlastné
+	v_lang015 =	Automatický
+	v_lang016 =	Manuál
+	v_lang017 =	Stop
+	v_lang018 =	Pauza
+	v_lang019 =	Obnoviť Predvolené Nastavenia
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Nastavenie
@@ -137,7 +132,7 @@
 ; Tray Menu		
 	y_Lang001 =	Hide Window
 	y_Lang002 =	Zobraziť okno
-	y_Lang003 =	Zobraziť / Skryť ovládací
+	y_Lang003 =	Ovládacie Prvky Panela Nástrojov
 		
 ; Main Window		
 	w_Lang001 =	Export

@@ -84,35 +84,30 @@
 	r_lang005 =	添加宏
 	r_lang006 =	关闭宏
 	r_lang007 =	上下文相关的热键
-	r_lang008 =	显示/隐藏控制
-	r_lang009 =	播放选定的行
-	r_lang010 =	播放到选定的行
-	r_lang011 =	播放选定的行
+	r_lang008 =	播放选定的行
+	r_lang009 =	播放到选定的行
+	r_lang010 =	播放选定的行
 		
 ; View Sub Menu		
 	v_lang001 =	总在最前
 	v_lang002 =	亮点行
 	v_lang003 =	缩进
-	v_lang004 =	预览
-	v_lang005 =	工具栏
-	v_lang006 =	热键
-	v_lang007 =	加载预设
-	v_lang008 =	保存预设
+	v_lang004 =	控制工具栏
+	v_lang005 =	预览
+	v_lang006 =	工具栏
+	v_lang007 =	热键
+	v_lang008 =	重置列大小
 	v_lang009 =	文件
 	v_lang010 =	录制和播放
 	v_lang011 =	选项
 	v_lang012 =	命令
 	v_lang013 =	编辑
-	v_lang014 =	默认
-	v_lang015 =	基本的
-	v_lang016 =	习俗
-	v_lang017 =	定制
-	v_lang018 =	重置列大小
-	v_lang019 =	自动
-	v_lang020 =	手册
-	v_lang021 =	停止
-	v_lang022 =	暂停
-	v_lang023 =	기본값을 재설정...
+	v_lang014 =	定制
+	v_lang015 =	自动
+	v_lang016 =	手册
+	v_lang017 =	停止
+	v_lang018 =	暂停
+	v_lang019 =	기본값을 재설정...
 		
 ; Options Sub Menu		
 	o_Lang001 =	设置
@@ -137,7 +132,7 @@
 ; Tray Menu		
 	y_Lang001 =	隐藏窗口
 	y_Lang002 =	橱窗
-	y_Lang003 =	显示/隐藏控制
+	y_Lang003 =	控制工具栏
 		
 ; Main Window		
 	w_Lang001 =	导出

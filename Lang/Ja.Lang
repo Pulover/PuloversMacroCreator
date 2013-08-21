@@ -84,35 +84,30 @@
 	r_lang005 =	マクロを追加します
 	r_lang006 =	閉じるマクロ
 	r_lang007 =	コンテキスト·センシティブホットキー
-	r_lang008 =	コントロールの表示/非表示
-	r_lang009 =	選択した行から再生
-	r_lang010 =	選択した行まで再生
-	r_lang011 =	選択された行を再生する
+	r_lang008 =	選択した行から再生
+	r_lang009 =	選択した行まで再生
+	r_lang010 =	選択された行を再生する
 		
 ; View Sub Menu		
 	v_lang001 =	常に手前に表示
 	v_lang002 =	ハイライトの行
 	v_lang003 =	インデント
-	v_lang004 =	プレビュー
-	v_lang005 =	ツールバー
-	v_lang006 =	ホットキー
-	v_lang007 =	プリセットのロード
-	v_lang008 =	プリセットの保存
+	v_lang004 =	コントロールツールバー
+	v_lang005 =	プレビュー
+	v_lang006 =	ツールバー
+	v_lang007 =	ホットキー
+	v_lang008 =	列のサイズをリセット
 	v_lang009 =	ファイル
 	v_lang010 =	録音＆プレイ
 	v_lang011 =	オプション
 	v_lang012 =	コマンド
 	v_lang013 =	編集
-	v_lang014 =	デフォルト
-	v_lang015 =	基本
-	v_lang016 =	カスタム
-	v_lang017 =	カスタマイズ
-	v_lang018 =	列のサイズをリセット
-	v_lang019 =	自動
-	v_lang020 =	マニュアル
-	v_lang021 =	停止
-	v_lang022 =	休止
-	v_lang023 =	デフォルトにリセット
+	v_lang014 =	カスタマイズ
+	v_lang015 =	自動
+	v_lang016 =	マニュアル
+	v_lang017 =	停止
+	v_lang018 =	休止
+	v_lang019 =	デフォルトにリセット
 		
 ; Options Sub Menu		
 	o_Lang001 =	設定
@@ -137,7 +132,7 @@
 ; Tray Menu		
 	y_Lang001 =	ウィンドウを非表示
 	y_Lang002 =	ウィンドウを表示する
-	y_Lang003 =	コントロールの表示/非表示
+	y_Lang003 =	コントロールツールバー
 		
 ; Main Window		
 	w_Lang001 =	エクスポート

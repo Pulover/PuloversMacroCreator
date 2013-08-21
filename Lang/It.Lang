@@ -84,35 +84,30 @@
 	r_lang005 =	Agg&iungi Macro
 	r_lang006 =	&Chiudere Macro
 	r_lang007 =	Ta&sti di scelta rapida sensibili al contesto
-	r_lang008 =	&Mostra / Nascondi controlli
-	r_lang009 =	Gi&oca da riga selezionata
-	r_lang010 =	Gioca &fino a riga selezionata
-	r_lang011 =	Gioca rig&he selezionate
+	r_lang008 =	Gi&oca da riga selezionata
+	r_lang009 =	Gioca &fino a riga selezionata
+	r_lang010 =	Gioca rig&he selezionate
 		
 ; View Sub Menu		
 	v_lang001 =	Sempre in primo piano
 	v_lang002 =	Righe Evidenziare
 	v_lang003 =	Dentellatura
-	v_lang004 =	Anteprima
-	v_lang005 =	Barre Degli Strumenti
-	v_lang006 =	Tasti Di Scelta Rapida
-	v_lang007 =	Caricare I Preset
-	v_lang008 =	Salvare Preset
+	v_lang004 =	Controlli Di Barra Degli Strumenti Di
+	v_lang005 =	Anteprima
+	v_lang006 =	Barre Degli Strumenti
+	v_lang007 =	Tasti Di Scelta Rapida
+	v_lang008 =	Ripristina dimensioni Colonne
 	v_lang009 =	File
 	v_lang010 =	Registrare E Riprodurre
 	v_lang011 =	Opzioni
 	v_lang012 =	Comandi
 	v_lang013 =	Modificare
-	v_lang014 =	Predefinito
-	v_lang015 =	Di Base
-	v_lang016 =	Personalizzato
-	v_lang017 =	Personalizzare
-	v_lang018 =	Ripristina dimensioni Colonne
-	v_lang019 =	Automatica
-	v_lang020 =	Manuale
-	v_lang021 =	Arresto
-	v_lang022 =	Pausa
-	v_lang023 =	Ripristino Di Default
+	v_lang014 =	Personalizzare
+	v_lang015 =	Automatica
+	v_lang016 =	Manuale
+	v_lang017 =	Arresto
+	v_lang018 =	Pausa
+	v_lang019 =	Ripristino Di Default
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Impostazioni
@@ -137,7 +132,7 @@
 ; Tray Menu		
 	y_Lang001 =	Nascondi la finestra
 	y_Lang002 =	Mostra Finestra
-	y_Lang003 =	Mostra / Nascondi controlli
+	y_Lang003 =	Controlli Di Barra Degli Strumenti Di
 		
 ; Main Window		
 	w_Lang001 =	Esportazione

@@ -84,35 +84,30 @@
 	r_lang005 =	&Dodaj Macro
 	r_lang006 =	Zam&knij makro
 	r_lang007 =	K&ontekstowa Hotkeys
-	r_lang008 =	&Pokaż / Ukryj formantów
-	r_lang009 =	Za&graj z wybranego wiersza
-	r_lang010 =	Gra&ć do wybranego wiersza
-	r_lang011 =	Od&twórz wybrane wiersze
+	r_lang008 =	Za&graj z wybranego wiersza
+	r_lang009 =	Gra&ć do wybranego wiersza
+	r_lang010 =	Od&twórz wybrane wiersze
 		
 ; View Sub Menu		
 	v_lang001 =	Zawsze na wierzchu
 	v_lang002 =	Wiersze Highlight
 	v_lang003 =	Wcięcie
-	v_lang004 =	Podgląd
-	v_lang005 =	Paski Narzędzi
-	v_lang006 =	Hotkeys
-	v_lang007 =	Wczytaj Ustawienia
-	v_lang008 =	Zapisać Ustawienie
+	v_lang004 =	Pasek Narzędzi Kontroli
+	v_lang005 =	Podgląd
+	v_lang006 =	Paski Narzędzi
+	v_lang007 =	Hotkeys
+	v_lang008 =	Resetuj rozmiar kolumny
 	v_lang009 =	Plik
 	v_lang010 =	Nagrywać I Odtwarzać
 	v_lang011 =	Opcje
 	v_lang012 =	Polecenia
 	v_lang013 =	Edytować
-	v_lang014 =	Domyślne
-	v_lang015 =	Podstawowy
-	v_lang016 =	Zwyczaj
-	v_lang017 =	Настроить...
-	v_lang018 =	Resetuj rozmiar kolumny
-	v_lang019 =	Automatyczny
-	v_lang020 =	Ręczny
-	v_lang021 =	Zatrzymać
-	v_lang022 =	Pauza
-	v_lang023 =	Reset
+	v_lang014 =	Настроить...
+	v_lang015 =	Automatyczny
+	v_lang016 =	Ręczny
+	v_lang017 =	Zatrzymać
+	v_lang018 =	Pauza
+	v_lang019 =	Reset
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Ustawienia
@@ -137,7 +132,7 @@
 ; Tray Menu		
 	y_Lang001 =	Ukryj okno
 	y_Lang002 =	Pokaż okno
-	y_Lang003 =	Pokaż / Ukryj formantów
+	y_Lang003 =	Pasek Narzędzi Kontroli
 		
 ; Main Window		
 	w_Lang001 =	Eksportować

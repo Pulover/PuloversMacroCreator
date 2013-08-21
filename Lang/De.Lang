@@ -78,41 +78,36 @@
 		
 ; Macro Sub Menu		
 	r_lang001 =	&Makro aufzeichnen
-	r_lang002 =	Makros &aktivieren
-	r_lang003 =	Aktuelles Makro ab&spielen 
+	r_lang002 =	M&akros aktivieren
+	r_lang003 =	A&ktuelles Makro abspielen 
 	r_lang004 =	&Timer
-	r_lang005 =	Ma&kro hinzufügen
-	r_lang006 =	Makro s&chließen 
-	r_lang007 =	K&ontextsensitive Hotkeys
-	r_lang008 =	Steuerungleiste an&zeigen/verbergen
-	r_lang009 =	&Wiedergabe von ausgewählter Zeile
-	r_lang010 =	W&iedergabe bis zur ausgewählten Zeile
-	r_lang011 =	Ausgewählte Zeilen wiederge&ben
+	r_lang005 =	Mak&ro hinzufügen
+	r_lang006 =	Makr&o schließen 
+	r_lang007 =	Ko&ntextsensitive Hotkeys
+	r_lang008 =	&Wiedergabe von ausgewählter Zeile
+	r_lang009 =	W&iedergabe bis zur ausgewählten Zeile
+	r_lang010 =	A&usgewählte Zeilen wiedergeben
 		
 ; View Sub Menu		
 	v_lang001 =	Immer im Vordergrund
 	v_lang002 =	Zeilen markieren
 	v_lang003 =	Einzug
-	v_lang004 =	Vorschau
-	v_lang005 =	Symbolleisten
-	v_lang006 =	Hotkeys
-	v_lang007 =	Preset Laden
-	v_lang008 =	Preset Speichern
+	v_lang004 =	Steuerelemente Symbolleiste
+	v_lang005 =	Vorschau
+	v_lang006 =	Symbolleisten
+	v_lang007 =	Hotkeys
+	v_lang008 =	Spaltengröße zurücksetzen 
 	v_lang009 =	Datei
 	v_lang010 =	Aufzeichnen  Play
 	v_lang011 =	Optionen
 	v_lang012 =	Befehle
 	v_lang013 =	Bearbeiten
-	v_lang014 =	Standard
-	v_lang015 =	Grundlegende
-	v_lang016 =	Brauch
-	v_lang017 =	Anpassen
-	v_lang018 =	Spaltengröße zurücksetzen 
-	v_lang019 =	Automatische
-	v_lang020 =	Handbuch
-	v_lang021 =	Stopp
-	v_lang022 =	Pause
-	v_lang023 =	Standard Zurücksetzen
+	v_lang014 =	Anpassen
+	v_lang015 =	Automatische
+	v_lang016 =	Handbuch
+	v_lang017 =	Stopp
+	v_lang018 =	Pause
+	v_lang019 =	Standard Zurücksetzen
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Einstellungen
@@ -137,7 +132,7 @@
 ; Tray Menu		
 	y_Lang001 =	Fenster schließen
 	y_Lang002 =	Fenster anzeigen
-	y_Lang003 =	Steuerungleiste an&zeigen/verbergen
+	y_Lang003 =	Steuerelemente Symbolleiste
 		
 ; Main Window		
 	w_Lang001 =	Export

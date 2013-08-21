@@ -84,35 +84,30 @@
 	r_lang005 =	&Voeg Macro
 	r_lang006 =	S&luiten Macro
 	r_lang007 =	&Context gevoelige sneltoetsen
-	r_lang008 =	S&how / Hide Controls
-	r_lang009 =	A&fspelen vanaf geselecteerde rij
-	r_lang010 =	S&peel tot geselecteerde rij
-	r_lang011 =	Sp&elen Geselecteerde Rijen
+	r_lang008 =	A&fspelen vanaf geselecteerde rij
+	r_lang009 =	S&peel tot geselecteerde rij
+	r_lang010 =	Sp&elen Geselecteerde Rijen
 		
 ; View Sub Menu		
 	v_lang001 =	Altijd op voorgrond
 	v_lang002 =	Hoogtepunt Rijen
 	v_lang003 =	Inspringing
-	v_lang004 =	Voorbeeld
-	v_lang005 =	Werkbalken
-	v_lang006 =	Hotkeys
-	v_lang007 =	Laden Preset
-	v_lang008 =	Opslaan Preset
+	v_lang004 =	Controles Werkbalk
+	v_lang005 =	Voorbeeld
+	v_lang006 =	Werkbalken
+	v_lang007 =	Hotkeys
+	v_lang008 =	Reset Kolommen Grootte
 	v_lang009 =	Bestand
 	v_lang010 =	Opnemen En Afspelen
 	v_lang011 =	Opties
 	v_lang012 =	Commando's
 	v_lang013 =	Uitgeven
-	v_lang014 =	Verzuim
-	v_lang015 =	Basis-
-	v_lang016 =	Gewoonte
-	v_lang017 =	Aanpassen
-	v_lang018 =	Reset Kolommen Grootte
-	v_lang019 =	Automatisch
-	v_lang020 =	Handboek
-	v_lang021 =	Stoppen
-	v_lang022 =	Pauze
-	v_lang023 =	Reset Default
+	v_lang014 =	Aanpassen
+	v_lang015 =	Automatisch
+	v_lang016 =	Handboek
+	v_lang017 =	Stoppen
+	v_lang018 =	Pauze
+	v_lang019 =	Reset Default
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Instellingen
@@ -137,7 +132,7 @@
 ; Tray Menu		
 	y_Lang001 =	Venster te verbergen
 	y_Lang002 =	Toon venster
-	y_Lang003 =	Show / Hide Controls
+	y_Lang003 =	Controles Werkbalk
 		
 ; Main Window		
 	w_Lang001 =	Exporteren

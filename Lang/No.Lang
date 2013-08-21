@@ -84,35 +84,30 @@
 	r_lang005 =	&Legg Makro
 	r_lang006 =	L&ukk Makro
 	r_lang007 =	&Kontekstsensitiv Hurtigtaster
-	r_lang008 =	&Vis / skjul Controls
-	r_lang009 =	S&pille fra utvalgte rad
-	r_lang010 =	Sp&ille til valgt rad
-	r_lang011 =	Spill&e valgte rader
+	r_lang008 =	S&pille fra utvalgte rad
+	r_lang009 =	Sp&ille til valgt rad
+	r_lang010 =	Spill&e valgte rader
 		
 ; View Sub Menu		
 	v_lang001 =	Alltid på topp
 	v_lang002 =	Markere Rader
 	v_lang003 =	Innrykk
-	v_lang004 =	Forhåndsvisning
-	v_lang005 =	Verktøylinjer
-	v_lang006 =	Hurtigtaster
-	v_lang007 =	Laste Forhåndsinnstilt
-	v_lang008 =	Lagre Forhåndsinnstilte
+	v_lang004 =	Kontroller Verktøylinjen
+	v_lang005 =	Forhåndsvisning
+	v_lang006 =	Verktøylinjer
+	v_lang007 =	Hurtigtaster
+	v_lang008 =	Tilbakestille kolonner størrelse
 	v_lang009 =	Fil
 	v_lang010 =	Ta Opp Og Spille Av
 	v_lang011 =	Alternativer
 	v_lang012 =	Kommandoer
 	v_lang013 =	Redigere
-	v_lang014 =	Standard
-	v_lang015 =	Grunnleggende
-	v_lang016 =	Custom
-	v_lang017 =	Tilpass
-	v_lang018 =	Tilbakestille kolonner størrelse
-	v_lang019 =	Automatisk
-	v_lang020 =	Manuell
-	v_lang021 =	Stopp
-	v_lang022 =	Pause
-	v_lang023 =	Tilbakestille Standard
+	v_lang014 =	Tilpass
+	v_lang015 =	Automatisk
+	v_lang016 =	Manuell
+	v_lang017 =	Stopp
+	v_lang018 =	Pause
+	v_lang019 =	Tilbakestille Standard
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Innstillinger
@@ -137,7 +132,7 @@
 ; Tray Menu		
 	y_Lang001 =	Skjul vindu
 	y_Lang002 =	Vis Window
-	y_Lang003 =	Vis / skjul Controls
+	y_Lang003 =	Kontroller Verktøylinjen
 		
 ; Main Window		
 	w_Lang001 =	Eksportere

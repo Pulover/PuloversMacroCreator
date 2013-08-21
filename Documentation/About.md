@@ -44,7 +44,7 @@ Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jör
 * Added support for basic Arrays using the built-in function *Array*.
 * Added support for functions inside Expressions in *Assign Variable* window.
 * Added new feature: *Find a command*.
-* Added *Edit Script* button to *Preview* window to open script in external editor.
+* Added *Edit Script* button in *Preview* window to open script in external editor.
 * Added individual *Pause* hotkey.
 * Added *Multiple Column* search in *Find/Replace* window.
 * Main window size is remembered.

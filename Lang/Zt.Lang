@@ -84,35 +84,30 @@
 	r_lang005 =	添加宏
 	r_lang006 =	關閉宏
 	r_lang007 =	上下文敏感的熱鍵
-	r_lang008 =	顯示/隱藏控制
-	r_lang009 =	播放選中的行
-	r_lang010 =	玩直到選中的行
-	r_lang011 =	播放選定的行
+	r_lang008 =	播放選中的行
+	r_lang009 =	玩直到選中的行
+	r_lang010 =	播放選定的行
 		
 ; View Sub Menu		
 	v_lang001 =	總在最前
 	v_lang002 =	亮點行
 	v_lang003 =	縮進
-	v_lang004 =	預覽
-	v_lang005 =	工具欄
-	v_lang006 =	熱鍵
-	v_lang007 =	加載預設
-	v_lang008 =	保存預設
+	v_lang004 =	控制工具欄
+	v_lang005 =	預覽
+	v_lang006 =	工具欄
+	v_lang007 =	熱鍵
+	v_lang008 =	重列大小
 	v_lang009 =	文件
 	v_lang010 =	錄製和播放
 	v_lang011 =	選項
 	v_lang012 =	命令
 	v_lang013 =	編輯
-	v_lang014 =	默認
-	v_lang015 =	基本的
-	v_lang016 =	習俗
-	v_lang017 =	定制
-	v_lang018 =	重列大小
-	v_lang019 =	自動
-	v_lang020 =	手冊
-	v_lang021 =	停止
-	v_lang022 =	暫停
-	v_lang023 =	復位默認
+	v_lang014 =	定制
+	v_lang015 =	自動
+	v_lang016 =	手冊
+	v_lang017 =	停止
+	v_lang018 =	暫停
+	v_lang019 =	復位默認
 		
 ; Options Sub Menu		
 	o_Lang001 =	設置
@@ -137,7 +132,7 @@
 ; Tray Menu		
 	y_Lang001 =	隱藏窗口
 	y_Lang002 =	櫥窗
-	y_Lang003 =	顯示/隱藏控制
+	y_Lang003 =	控制工具欄
 		
 ; Main Window		
 	w_Lang001 =	出口

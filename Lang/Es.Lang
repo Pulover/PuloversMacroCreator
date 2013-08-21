@@ -84,35 +84,30 @@
 	r_lang005 =	A&ñadir Macro
 	r_lang006 =	&Cerrar Macro
 	r_lang007 =	T&eclas de acceso directo sensibles al contexto
-	r_lang008 =	&Mostrar / Ocultar controles
-	r_lang009 =	Re&producir desde la fila seleccionada
-	r_lang010 =	Repr&oducir hasta la fila seleccionada
-	r_lang011 =	Repro&ducir las filas seleccionadas
+	r_lang008 =	Re&producir desde la fila seleccionada
+	r_lang009 =	Repr&oducir hasta la fila seleccionada
+	r_lang010 =	Repro&ducir las filas seleccionadas
 		
 ; View Sub Menu		
 	v_lang001 =	Siempre visible
 	v_lang002 =	Destacar Filas
 	v_lang003 =	Sangría
-	v_lang004 =	Previa
-	v_lang005 =	Barras De Herramientas
-	v_lang006 =	Teclas De Acceso Rápido
-	v_lang007 =	Cargar El Preset
-	v_lang008 =	Guardar Preset
+	v_lang004 =	Barra de Controles
+	v_lang005 =	Previa
+	v_lang006 =	Barras De Herramientas
+	v_lang007 =	Teclas De Acceso Rápido
+	v_lang008 =	Cambiar Tamaño Columnas
 	v_lang009 =	Expediente
 	v_lang010 =	Grabar Y Reproducir
 	v_lang011 =	Opciones
 	v_lang012 =	Comandos
 	v_lang013 =	Editar
-	v_lang014 =	Defecto
-	v_lang015 =	Básico
-	v_lang016 =	Costumbre
-	v_lang017 =	Personalizar
-	v_lang018 =	Cambiar Tamaño Columnas
-	v_lang019 =	Automático
-	v_lang020 =	Manual
-	v_lang021 =	Detener
-	v_lang022 =	Pausa
-	v_lang023 =	Restablecer Por Defecto
+	v_lang014 =	Personalizar
+	v_lang015 =	Automático
+	v_lang016 =	Manual
+	v_lang017 =	Detener
+	v_lang018 =	Pausa
+	v_lang019 =	Restablecer Por Defecto
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Configuración
@@ -137,7 +132,7 @@
 ; Tray Menu		
 	y_Lang001 =	Ocultar ventana
 	y_Lang002 =	Mostrar ventana
-	y_Lang003 =	Mostrar / Ocultar controles
+	y_Lang003 =	Barra de Controles
 		
 ; Main Window		
 	w_Lang001 =	Exportar

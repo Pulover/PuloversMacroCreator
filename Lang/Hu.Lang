@@ -84,35 +84,30 @@
 	r_lang005 =	&Kedvencek Macro
 	r_lang006 =	&Bezárás Macro
 	r_lang007 =	&Context Sensitive gyorsbillentyűk
-	r_lang008 =	M&egjelenítése / elrejtése Controls
-	r_lang009 =	&Lejátszás kiválasztott sor
-	r_lang010 =	J&átssz, amíg a kijelölt sor
-	r_lang011 =	Lejá&tszás kijelölt sorok
+	r_lang008 =	&Lejátszás kiválasztott sor
+	r_lang009 =	J&átssz, amíg a kijelölt sor
+	r_lang010 =	L&ejátszás kijelölt sorok
 		
 ; View Sub Menu		
 	v_lang001 =	Mindig a tetején
 	v_lang002 =	Kiemelés Sorok
 	v_lang003 =	Behúzás
-	v_lang004 =	Előnézet
-	v_lang005 =	Eszköztárak
-	v_lang006 =	Gyorsbillentyűk
-	v_lang007 =	Terhelés Előre
-	v_lang008 =	Menteni Előre
+	v_lang004 =	Ellenőrzés Eszköztár
+	v_lang005 =	Előnézet
+	v_lang006 =	Eszköztárak
+	v_lang007 =	Gyorsbillentyűk
+	v_lang008 =	Visszaállítás oszlopok méret
 	v_lang009 =	Reszelő
 	v_lang010 =	Felvenni És Lejátszani
 	v_lang011 =	Lehetőségek
 	v_lang012 =	Parancsok
 	v_lang013 =	Szerkeszt
-	v_lang014 =	Alapértelmezett
-	v_lang015 =	Alapvető
-	v_lang016 =	Szokás
-	v_lang017 =	Testreszabása
-	v_lang018 =	Visszaállítás oszlopok méret
-	v_lang019 =	Automatikus
-	v_lang020 =	Kézi
-	v_lang021 =	Megáll
-	v_lang022 =	Szünet
-	v_lang023 =	Vissza Az Alapértelmezett
+	v_lang014 =	Testreszabása
+	v_lang015 =	Automatikus
+	v_lang016 =	Kézi
+	v_lang017 =	Megáll
+	v_lang018 =	Szünet
+	v_lang019 =	Vissza Az Alapértelmezett
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Beállítások
@@ -137,7 +132,7 @@
 ; Tray Menu		
 	y_Lang001 =	Ablak elrejtése
 	y_Lang002 =	Ablak megjelenítése
-	y_Lang003 =	Megjelenítése / elrejtése Controls
+	y_Lang003 =	Ellenőrzés Eszköztár
 		
 ; Main Window		
 	w_Lang001 =	Export

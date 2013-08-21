@@ -84,35 +84,30 @@
 	r_lang005 =	매크로를 추가합니다
 	r_lang006 =	닫기 매크로
 	r_lang007 =	문맥을 인식 단축키
-	r_lang008 =	컨트롤 표시 / 숨기기
-	r_lang009 =	선택한 행에서 재생
-	r_lang010 =	선택한 행까지 재생
-	r_lang011 =	선택한 행을 재생
+	r_lang008 =	선택한 행에서 재생
+	r_lang009 =	선택한 행까지 재생
+	r_lang010 =	선택한 행을 재생
 		
 ; View Sub Menu		
 	v_lang001 =	항상 상단에
 	v_lang002 =	하이라이트 행
 	v_lang003 =	톱니 모양
-	v_lang004 =	시사
-	v_lang005 =	도구 모음
-	v_lang006 =	단축키
-	v_lang007 =	사전로드
-	v_lang008 =	프리셋 저장
+	v_lang004 =	컨트롤 도구 모음
+	v_lang005 =	시사
+	v_lang006 =	도구 모음
+	v_lang007 =	단축키
+	v_lang008 =	열 크기를 재설정
 	v_lang009 =	파일
 	v_lang010 =	녹음 및 재생
 	v_lang011 =	옵션
 	v_lang012 =	명령
 	v_lang013 =	편집
-	v_lang014 =	디폴트 값
-	v_lang015 =	기본
-	v_lang016 =	사용자 정의
-	v_lang017 =	사용자 지정
-	v_lang018 =	열 크기를 재설정
-	v_lang019 =	자동적 인
-	v_lang020 =	사용 설명서
-	v_lang021 =	정지
-	v_lang022 =	중지
-	v_lang023 =	기본값을 재설정
+	v_lang014 =	사용자 지정
+	v_lang015 =	자동적 인
+	v_lang016 =	사용 설명서
+	v_lang017 =	정지
+	v_lang018 =	중지
+	v_lang019 =	기본값을 재설정
 		
 ; Options Sub Menu		
 	o_Lang001 =	설정
@@ -137,7 +132,7 @@
 ; Tray Menu		
 	y_Lang001 =	창 숨기기
 	y_Lang002 =	창 표시
-	y_Lang003 =	컨트롤 표시 / 숨기기
+	y_Lang003 =	컨트롤 도구 모음
 		
 ; Main Window		
 	w_Lang001 =	수출

@@ -84,35 +84,30 @@
 	r_lang005 =	&Lägg Makro
 	r_lang006 =	St&äng Makro
 	r_lang007 =	Sa&mmanhangsberoende Snabbtangenter
-	r_lang008 =	&Visa / dölj Kontroller
-	r_lang009 =	Sp&ela upp från vald rad
-	r_lang010 =	Spela t&ills utvalda raden
-	r_lang011 =	Spela ma&rkerade rader
+	r_lang008 =	Sp&ela upp från vald rad
+	r_lang009 =	Spela t&ills utvalda raden
+	r_lang010 =	Spela ma&rkerade rader
 		
 ; View Sub Menu		
 	v_lang001 =	Alltid överst
 	v_lang002 =	Markera Rader
 	v_lang003 =	Indrag
-	v_lang004 =	Förhandsgranska
-	v_lang005 =	Verktygsfält
-	v_lang006 =	Snabbtangenter
-	v_lang007 =	Ladda Förinställda
-	v_lang008 =	Spara Förinställning
+	v_lang004 =	Kontroller Verktygsfältet
+	v_lang005 =	Förhandsgranska
+	v_lang006 =	Verktygsfält
+	v_lang007 =	Snabbtangenter
+	v_lang008 =	Återställ kolumner Storlek
 	v_lang009 =	Fil
 	v_lang010 =	Spela In Och Spela Upp
 	v_lang011 =	Alternativ
 	v_lang012 =	Kommandon
 	v_lang013 =	Redigera
-	v_lang014 =	Standard
-	v_lang015 =	Grundläggande
-	v_lang016 =	Anpassningsbar
-	v_lang017 =	Anpassa
-	v_lang018 =	Återställ kolumner Storlek
-	v_lang019 =	Automatisk
-	v_lang020 =	Manuell
-	v_lang021 =	Stopp
-	v_lang022 =	Paus
-	v_lang023 =	Återställ Default
+	v_lang014 =	Anpassa
+	v_lang015 =	Automatisk
+	v_lang016 =	Manuell
+	v_lang017 =	Stopp
+	v_lang018 =	Paus
+	v_lang019 =	Återställ Default
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Inställningar
@@ -137,7 +132,7 @@
 ; Tray Menu		
 	y_Lang001 =	Dölj fönster
 	y_Lang002 =	Visa fönster
-	y_Lang003 =	Visa / dölj Kontroller
+	y_Lang003 =	Kontroller Verktygsfältet
 		
 ; Main Window		
 	w_Lang001 =	Exportera

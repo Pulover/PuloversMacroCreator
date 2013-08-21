@@ -8,6 +8,7 @@
 * [Can I execute a custom action based on Pixel/Image search result?](#can-i-execute-a-custom-action-based-on-pixel/image-search-result)
 * [Can I run a Macro in a timed interval?](#can-i-run-a-macro-in-a-timed-interval)
 * [Can I schedule a Macro to run when I want?](#can-i-schedule-a-macro-to-run-when-i-want)
+* [How do I increment/add a value in a variable on every loop iteration?](#how-do-i-increment/add-a-value-in-a-variable-on-every-loop-iteration?)
 * [Is Macro Creator Portable?](#is-macro-creator-portable)
 * [Which command line parameters are supported?](#which-command-line-parameters-are-supported)
 * [Can I execute an action every time a certain event occurs?](#can-i-execute-an-action-every-time-a-certain-event-occurs)
@@ -64,6 +65,24 @@ You can use Window's Task Scheduler to run Macro Creator from a command line usi
 > MacroCreator.exe SavedFile.pmc -a
 
 You can also export the Macro to an AutoHotkey script and run it using Window's Task Scheduler (you must have AutoHotkey installed).  
+
+### How do I increment/add a value in a variable on every loop iteration?
+
+You can use the [Assign Variable](Commands/Assign_Variable.html) window and the **+=** operator o the **:=** operator and the Expression option if you need to sum it to another value like the built-in variable A_Index, which contains the number of the current loop iteration.  
+The code below is a PMC file (you can copy and save it using any text editor).
+
+> [PMC Code]|F3||1|Window|1
+> 1|[Assign Variable]|Var := 0|1|0|Variable|||||
+> 2|[LoopStart]|LoopStart|10|0|Loop|||||
+> 3|[Assign Variable]|Var += 1|1|0|Variable|||||
+> 4|[Pause]|%Var%|1|0|MsgBox|262208||||
+> 5|[LoopEnd]|LoopEnd|1|0|Loop|||||
+> 6|[LoopStart]|LoopStart|10|0|Loop|||||
+> 7|[Assign Variable]|Var := 100 + %A_Index%|1|0|Variable|Expression||||
+> 8|[Pause]|%Var%|1|0|MsgBox|262208||||
+> 9|[LoopEnd]|LoopEnd|1|0|Loop|||||
+
+A_Index is only valid inside a Loop, but in PMC all macros are considered loops since you can set the number of repetitions for the whole macro.
 
 ### Is Macro Creator Portable?
 

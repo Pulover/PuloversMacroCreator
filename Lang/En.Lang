@@ -84,35 +84,30 @@
 	r_lang005 =	A&dd Macro
 	r_lang006 =	&Close Macro
 	r_lang007 =	Context Sensitive &Hotkeys
-	r_lang008 =	Show / Hide C&ontrols
-	r_lang009 =	Play &from Selected Row
-	r_lang010 =	Play &until Selected Row
-	r_lang011 =	Play &Selected Rows
+	r_lang008 =	Play &from Selected Row
+	r_lang009 =	Play &until Selected Row
+	r_lang010 =	Play &Selected Rows
 		
 ; View Sub Menu		
 	v_lang001 =	Always On Top
 	v_lang002 =	Highlight Rows
 	v_lang003 =	Indentation
-	v_lang004 =	Preview
-	v_lang005 =	Toolbars
-	v_lang006 =	Hotkeys
-	v_lang007 =	Load Preset
-	v_lang008 =	Save Preset
+	v_lang004 =	Controls Toolbar
+	v_lang005 =	Preview
+	v_lang006 =	Toolbars
+	v_lang007 =	Hotkeys
+	v_lang008 =	Reset Columns Size
 	v_lang009 =	File
 	v_lang010 =	Record  Play
 	v_lang011 =	Options
 	v_lang012 =	Commands
 	v_lang013 =	Edit
-	v_lang014 =	Default
-	v_lang015 =	Basic
-	v_lang016 =	Custom
-	v_lang017 =	Customize
-	v_lang018 =	Reset Columns Size
-	v_lang019 =	Automatic
-	v_lang020 =	Manual
-	v_lang021 =	Stop
-	v_lang022 =	Pause
-	v_lang023 =	Reset Default
+	v_lang014 =	Customize
+	v_lang015 =	Automatic
+	v_lang016 =	Manual
+	v_lang017 =	Stop
+	v_lang018 =	Pause
+	v_lang019 =	Reset Default
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Settings
@@ -137,7 +132,7 @@
 ; Tray Menu		
 	y_Lang001 =	Hide Window
 	y_Lang002 =	Show Window
-	y_Lang003 =	Show / Hide Controls
+	y_Lang003 =	Controls Toolbar
 		
 ; Main Window		
 	w_Lang001 =	Export

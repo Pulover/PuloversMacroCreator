@@ -827,9 +827,9 @@ Else
 	GoSub, PrevRefresh
 }
 If (ShowPrev)
-	Menu, ViewMenu, Check, %v_lang004%
+	Menu, ViewMenu, Check, %v_lang005%`t%_s%Ctrl+P
 Else
-	Menu, ViewMenu, UnCheck, %v_lang004%
+	Menu, ViewMenu, UnCheck, %v_lang005%`t%_s%Ctrl+P
 return
 
 PrevDock:
@@ -7130,33 +7130,33 @@ return
 PlayFrom:
 pb_From := !pb_From
 If !(pb_From)
-	Menu, MacroMenu, Uncheck, %r_Lang009%`t%_s%Alt+1
+	Menu, MacroMenu, Uncheck, %r_lang008%`t%_s%Alt+1
 Else
-	Menu, MacroMenu, Check, %r_Lang009%`t%_s%Alt+1
-Menu, MacroMenu, Uncheck, %r_Lang010%`t%_s%Alt+2
-Menu, MacroMenu, Uncheck, %r_Lang011%`t%_s%Alt+3
+	Menu, MacroMenu, Check, %r_lang008%`t%_s%Alt+1
+Menu, MacroMenu, Uncheck, %r_lang009%`t%_s%Alt+2
+Menu, MacroMenu, Uncheck, %r_lang010%`t%_s%Alt+3
 pb_To := "", pb_Sel := ""
 return
 
 PlayTo:
 pb_To := !pb_To
 If !(pb_To)
-	Menu, MacroMenu, Uncheck, %r_Lang010%`t%_s%Alt+2
+	Menu, MacroMenu, Uncheck, %r_lang009%`t%_s%Alt+2
 Else
-	Menu, MacroMenu, Check, %r_Lang010%`t%_s%Alt+2
-Menu, MacroMenu, Uncheck, %r_Lang009%`t%_s%Alt+1
-Menu, MacroMenu, Uncheck, %r_Lang011%`t%_s%Alt+3
+	Menu, MacroMenu, Check, %r_lang009%`t%_s%Alt+2
+Menu, MacroMenu, Uncheck, %r_lang008%`t%_s%Alt+1
+Menu, MacroMenu, Uncheck, %r_lang010%`t%_s%Alt+3
 pb_From := "", pb_Sel := ""
 return
 
 PlaySel:
 pb_Sel := !pb_Sel
 If !(pb_Sel)
-	Menu, MacroMenu, Uncheck, %r_Lang011%`t%_s%Alt+3
+	Menu, MacroMenu, Uncheck, %r_lang010%`t%_s%Alt+3
 Else
-	Menu, MacroMenu, Check, %r_Lang011%`t%_s%Alt+3
-Menu, MacroMenu, Uncheck, %r_Lang009%`t%_s%Alt+1
-Menu, MacroMenu, Uncheck, %r_Lang010%`t%_s%Alt+2
+	Menu, MacroMenu, Check, %r_lang010%`t%_s%Alt+3
+Menu, MacroMenu, Uncheck, %r_lang008%`t%_s%Alt+1
+Menu, MacroMenu, Uncheck, %r_lang009%`t%_s%Alt+2
 pb_To := "", pb_From := ""
 return
 
@@ -7238,6 +7238,8 @@ If (WinExist("ahk_id " PMCOSC))
 	return
 }
 ShowControls:
+Menu, ViewMenu, Check, %v_lang004%`t%_s%Ctrl+B
+Menu, Tray, Check, %y_Lang003%
 Gui, 28:Show, % OSCPos (ShowProgBar ? "H40" : "H30") " W415 NoActivate", %AppName%
 return
 
@@ -7323,6 +7325,8 @@ Gui, 28: +LastFound
 WinGetPos, OSX, OSY
 OSCPos := "X" OSX " Y" OSY
 Gui, 28:Hide
+Menu, ViewMenu, Uncheck, %v_lang004%`t%_s%Ctrl+B
+Menu, Tray, Uncheck, %y_Lang003%
 return
 
 ToggleTB:
@@ -9051,21 +9055,21 @@ bID := RBIndexHK[A_ThisMenuItemPos]
 ,	tBand := RbMain.IDToIndex(bID), ShowBand%bID% := !ShowBand%bID%
 ,	RbMain.ShowBand(tBand, ShowBand%bID%)
 If (ShowBand13)
-	Menu, HotkeyMenu, Check, %v_lang019%
+	Menu, HotkeyMenu, Check, %v_lang015%
 Else
 	Menu, HotkeyMenu, UnCheck, %v_lang009%
 If (ShowBand16)
-	Menu, HotkeyMenu, Check, %v_lang020%
+	Menu, HotkeyMenu, Check, %v_lang016%
 Else
-	Menu, HotkeyMenu, UnCheck, %v_lang020%
+	Menu, HotkeyMenu, UnCheck, %v_lang016%
 If (ShowBand17)
-	Menu, HotkeyMenu, Check, %v_lang021%
+	Menu, HotkeyMenu, Check, %v_lang017%
 Else
-	Menu, HotkeyMenu, UnCheck, %v_lang021%
+	Menu, HotkeyMenu, UnCheck, %v_lang017%
 If (ShowBand18)
-	Menu, HotkeyMenu, Check, %v_lang022%
+	Menu, HotkeyMenu, Check, %v_lang018%
 Else
-	Menu, HotkeyMenu, UnCheck, %v_lang022%
+	Menu, HotkeyMenu, UnCheck, %v_lang018%
 return
 
 ;##### Playback: #####
@@ -10280,10 +10284,10 @@ Menu, ToolbarsMenu, Check, %v_lang010%
 Menu, ToolbarsMenu, Check, %v_lang011%
 Menu, ToolbarsMenu, Check, %v_lang012%
 Menu, ToolbarsMenu, Check, %v_lang013%
-Menu, HotkeyMenu, Check, %v_lang019%
-Menu, HotkeyMenu, Check, %v_lang020%
-Menu, HotkeyMenu, Check, %v_lang021%
-Menu, HotkeyMenu, Check, %v_lang022%
+Menu, HotkeyMenu, Check, %v_lang015%
+Menu, HotkeyMenu, Check, %v_lang016%
+Menu, HotkeyMenu, Check, %v_lang017%
+Menu, HotkeyMenu, Check, %v_lang018%
 return
 
 WriteSettings:
@@ -10836,11 +10840,10 @@ Menu, MacroMenu, Add, %r_Lang005%`t%_s%Ctrl+T, TabPlus
 Menu, MacroMenu, Add, %r_Lang006%`t%_s%Ctrl+W, TabClose
 Menu, MacroMenu, Add
 Menu, MacroMenu, Add, %r_Lang007%`t%_s%Ctrl+H, SetWin
-Menu, MacroMenu, Add, %r_Lang008%`t%_s%Ctrl+B, OnScControls
 Menu, MacroMenu, Add
-Menu, MacroMenu, Add, %r_Lang009%`t%_s%Alt+1, PlayFrom
-Menu, MacroMenu, Add, %r_Lang010%`t%_s%Alt+2, PlayTo
-Menu, MacroMenu, Add, %r_Lang011%`t%_s%Alt+3, PlaySel
+Menu, MacroMenu, Add, %r_lang008%`t%_s%Alt+1, PlayFrom
+Menu, MacroMenu, Add, %r_lang009%`t%_s%Alt+2, PlayTo
+Menu, MacroMenu, Add, %r_lang010%`t%_s%Alt+3, PlaySel
 
 Menu, CustomMenu, Add, %v_lang009%, TbCustomize
 Menu, CustomMenu, Add, %v_lang010%, TbCustomize
@@ -10854,31 +10857,25 @@ Menu, ToolbarsMenu, Add, %v_lang011%, ShowHideBand
 Menu, ToolbarsMenu, Add, %v_lang012%, ShowHideBand
 Menu, ToolbarsMenu, Add, %v_lang013%, ShowHideBand
 Menu, ToolbarsMenu, Add
-Menu, ToolbarsMenu, Add, %v_lang017%, :CustomMenu
+Menu, ToolbarsMenu, Add, %v_lang014%, :CustomMenu
 Menu, ToolbarsMenu, Add
-Menu, ToolbarsMenu, Add, %v_lang023%, DefaultLayout
+Menu, ToolbarsMenu, Add, %v_lang019%, DefaultLayout
 
-Menu, HotkeyMenu, Add, %v_lang019%, ShowHideBandHK
-Menu, HotkeyMenu, Add, %v_lang020%, ShowHideBandHK
-Menu, HotkeyMenu, Add, %v_lang021%, ShowHideBandHK
-Menu, HotkeyMenu, Add, %v_lang022%, ShowHideBandHK
-
-; Menu, PreLoadMenu, Add, %v_lang014%, HelpAbout
-; Menu, PreLoadMenu, Add, %v_lang015%, HelpAbout
-; Menu, PreLoadMenu, Add, %v_lang016%, HelpAbout
-; Menu, PreSaveMenu, Add, %v_lang016%, HelpAbout
+Menu, HotkeyMenu, Add, %v_lang015%, ShowHideBandHK
+Menu, HotkeyMenu, Add, %v_lang016%, ShowHideBandHK
+Menu, HotkeyMenu, Add, %v_lang017%, ShowHideBandHK
+Menu, HotkeyMenu, Add, %v_lang018%, ShowHideBandHK
 
 Menu, ViewMenu, Add, %v_lang001%, MainOnTop
 Menu, ViewMenu, Add, %v_lang002%, ShowLoopIfMark
 Menu, ViewMenu, Add, %v_lang003%, ShowActIdent
 Menu, ViewMenu, Add
-Menu, ViewMenu, Add, %v_lang004%, Preview
-Menu, ViewMenu, Add, %v_lang005%, :ToolbarsMenu
-Menu, ViewMenu, Add, %v_lang006%, :HotkeyMenu
-; Menu, ViewMenu, Add, %v_lang007%, :PreLoadMenu
-; Menu, ViewMenu, Add, %v_lang008%, :PreSaveMenu
+Menu, ViewMenu, Add, %v_lang004%`t%_s%Ctrl+B, OnScControls
+Menu, ViewMenu, Add, %v_lang005%`t%_s%Ctrl+P, Preview
+Menu, ViewMenu, Add, %v_lang006%, :ToolbarsMenu
+Menu, ViewMenu, Add, %v_lang007%, :HotkeyMenu
 Menu, ViewMenu, Add
-Menu, ViewMenu, Add, %v_lang018%`t%_s%Alt+F5, SetColSizes
+Menu, ViewMenu, Add, %v_lang008%`t%_s%Alt+F5, SetColSizes
 
 Loop, Parse, Lang_All, |
 {
@@ -10960,8 +10957,13 @@ If ShowLoopIfMark
 	Menu, ViewMenu, Check, %v_lang002%
 If ShowActIdent
 	Menu, ViewMenu, Check, %v_lang003%
+If ShowBarOnStart
+{
+	Menu, ViewMenu, Check, %v_lang004%`t%_s%Ctrl+B
+	Menu, Tray, Check, %y_Lang003%
+}
 If ShowPrev
-	Menu, ViewMenu, Check, %v_lang004%
+	Menu, ViewMenu, Check, %v_lang005%`t%_s%Ctrl+P
 If ShowBand10
 	Menu, ToolbarsMenu, Check, %v_lang009%
 If ShowBand11
@@ -10973,13 +10975,13 @@ If ShowBand15
 If ShowBand19
 	Menu, ToolbarsMenu, Check, %v_lang013%
 If ShowBand13
-	Menu, HotkeyMenu, Check, %v_lang019%
+	Menu, HotkeyMenu, Check, %v_lang015%
 If ShowBand16
-	Menu, HotkeyMenu, Check, %v_lang020%
+	Menu, HotkeyMenu, Check, %v_lang016%
 If ShowBand17
-	Menu, HotkeyMenu, Check, %v_lang021%
+	Menu, HotkeyMenu, Check, %v_lang017%
 If ShowBand18
-	Menu, HotkeyMenu, Check, %v_lang022%
+	Menu, HotkeyMenu, Check, %v_lang018%
 
 ; Menu Icons
 Menu, FileMenu, Icon, %f_Lang001%`t%_s%Ctrl+N, %ResDllPath%, 42
@@ -11034,7 +11036,6 @@ Menu, MacroMenu, Icon, %r_Lang004%`t%_s%Ctrl+Shift+T, %ResDllPath%, 72
 Menu, MacroMenu, Icon, %r_Lang005%`t%_s%Ctrl+T, %ResDllPath%, 67
 Menu, MacroMenu, Icon, %r_Lang006%`t%_s%Ctrl+W, %ResDllPath%, 69
 Menu, MacroMenu, Icon, %r_Lang007%`t%_s%Ctrl+H, %ResDllPath%, 48
-Menu, MacroMenu, Icon, %r_Lang008%`t%_s%Ctrl+B, %ResDllPath%, 89
 Menu, OptionsMenu, Icon, %o_Lang001%`t%_s%Ctrl+G, %ResDllPath%, 44
 Menu, HelpMenu, Icon, %m_Lang010%`t%_s%F1, %ResDllPath%, 24
 Menu, DonationMenu, Icon, %p_Lang001%, %ResDllPath%, 12
@@ -11112,9 +11113,9 @@ Menu, SpeedDnMenu, Add, 4x, SpeedOpt
 Menu, SpeedDnMenu, Add, 8x, SpeedOpt
 Menu, SpeedDnMenu, Add, 16x, SpeedOpt
 Menu, SpeedDnMenu, Add, 32x, SpeedOpt
-Menu, PlayOptMenu, Add, %r_Lang009%, PlayFrom
-Menu, PlayOptMenu, Add, %r_Lang010%, PlayTo
-Menu, PlayOptMenu, Add, %r_Lang011%, PlaySel
+Menu, PlayOptMenu, Add, %r_lang008%, PlayFrom
+Menu, PlayOptMenu, Add, %r_lang009%, PlayTo
+Menu, PlayOptMenu, Add, %r_lang010%, PlaySel
 Menu, PlayOptMenu, Add
 Menu, PlayOptMenu, Add, %t_Lang038%, PlayOpt
 Menu, PlayOptMenu, Add, %t_Lang107%, RandOpt
@@ -11123,11 +11124,11 @@ Menu, PlayOptMenu, Add, %t_Lang036%, :SpeedUpMenu
 Menu, PlayOptMenu, Add, %t_Lang037%, :SpeedDnMenu
 
 If (pb_From)
-	Menu, PlayOptMenu, Check, %r_Lang009%
+	Menu, PlayOptMenu, Check, %r_lang008%
 If (pb_To)
-	Menu, PlayOptMenu, Check, %r_Lang010%
+	Menu, PlayOptMenu, Check, %r_lang009%
 If (pb_Sel)
-	Menu, PlayOptMenu, Check, %r_Lang011%
+	Menu, PlayOptMenu, Check, %r_lang010%
 If (MouseReturn)
 	Menu, PlayOptMenu, Check, %t_Lang038%
 If (RandomSleeps)

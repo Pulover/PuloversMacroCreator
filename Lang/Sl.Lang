@@ -84,35 +84,30 @@
 	r_lang005 =	&Dodaj makro
 	r_lang006 =	&Zapri Makro
 	r_lang007 =	&Konteksta Bližnjice
-	r_lang008 =	&Prikaži / skrij nadzor
-	r_lang009 =	P&redvajaj izbrano vrstico
-	r_lang010 =	I&grajo dokler izbrano vrstico
-	r_lang011 =	Pr&edvajanje izbrane vrstice
+	r_lang008 =	&Predvajaj izbrano vrstico
+	r_lang009 =	I&grajo dokler izbrano vrstico
+	r_lang010 =	P&redvajanje izbrane vrstice
 		
 ; View Sub Menu		
 	v_lang001 =	Always On Top
 	v_lang002 =	Vrhunec Vrstic
 	v_lang003 =	Nazobčanost
-	v_lang004 =	Predogled
-	v_lang005 =	Panely Nástrojov
-	v_lang006 =	Klávesové Skratky
-	v_lang007 =	Načítať Nastavenia
-	v_lang008 =	Uložiť Prednastavenia
+	v_lang004 =	Orodna Vrstica Nadzor
+	v_lang005 =	Predogled
+	v_lang006 =	Panely Nástrojov
+	v_lang007 =	Klávesové Skratky
+	v_lang008 =	Ponastavi stolpce Velikost
 	v_lang009 =	Súbor
 	v_lang010 =	Nahrávanie A Prehrávanie
 	v_lang011 =	Možnosti
 	v_lang012 =	Príkazy
 	v_lang013 =	Editovať
-	v_lang014 =	Štandardné
-	v_lang015 =	Základné
-	v_lang016 =	Zvyk
-	v_lang017 =	Prilagajanje
-	v_lang018 =	Ponastavi stolpce Velikost
-	v_lang019 =	Avtomatski
-	v_lang020 =	Ročni
-	v_lang021 =	Stop
-	v_lang022 =	Premor
-	v_lang023 =	Ponastaviti Privzete
+	v_lang014 =	Prilagajanje
+	v_lang015 =	Avtomatski
+	v_lang016 =	Ročni
+	v_lang017 =	Stop
+	v_lang018 =	Premor
+	v_lang019 =	Ponastaviti Privzete
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Nastavitve
@@ -137,7 +132,7 @@
 ; Tray Menu		
 	y_Lang001 =	Skrij okno
 	y_Lang002 =	Pokaži okno
-	y_Lang003 =	Prikaži / skrij nadzor
+	y_Lang003 =	Orodna Vrstica Nadzor
 		
 ; Main Window		
 	w_Lang001 =	Izvozi

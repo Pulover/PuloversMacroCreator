@@ -84,35 +84,30 @@
 	r_lang005 =	Ta&mbahkan Makro
 	r_lang006 =	T&utup Makro
 	r_lang007 =	&Konteks Hotkeys Sensitif
-	r_lang008 =	Tam&pilkan / Sembunyikan Kontrol
-	r_lang009 =	B&ermain dari Dipilih Row
-	r_lang010 =	Berma&in sampai Dipilih Row
-	r_lang011 =	Bermai&n Baris Terpilih
+	r_lang008 =	B&ermain dari Dipilih Row
+	r_lang009 =	Berma&in sampai Dipilih Row
+	r_lang010 =	Bermai&n Baris Terpilih
 		
 ; View Sub Menu		
 	v_lang001 =	Always On Top
 	v_lang002 =	Baris Sorot
 	v_lang003 =	Lekukan
-	v_lang004 =	Preview
-	v_lang005 =	Toolbar
-	v_lang006 =	Hotkeys
-	v_lang007 =	Memuat Ditetapkan
-	v_lang008 =	Menyimpan Ditetapkan
+	v_lang004 =	Kontrol Toolbar
+	v_lang005 =	Preview
+	v_lang006 =	Toolbar
+	v_lang007 =	Hotkeys
+	v_lang008 =	Ulang Kolom Ukuran
 	v_lang009 =	Berkas
 	v_lang010 =	Merekam  Memutar
 	v_lang011 =	Pilihan
 	v_lang012 =	Perintah
 	v_lang013 =	Mengedit
-	v_lang014 =	Kegagalan
-	v_lang015 =	Dasar
-	v_lang016 =	Adat
-	v_lang017 =	Sesuaikan
-	v_lang018 =	Ulang Kolom Ukuran
-	v_lang019 =	Otomatis
-	v_lang020 =	Pedoman
-	v_lang021 =	Berhenti
-	v_lang022 =	Berhenti sebentar
-	v_lang023 =	Default Reset
+	v_lang014 =	Sesuaikan
+	v_lang015 =	Otomatis
+	v_lang016 =	Pedoman
+	v_lang017 =	Berhenti
+	v_lang018 =	Berhenti sebentar
+	v_lang019 =	Default Reset
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Pengaturan
@@ -137,7 +132,7 @@
 ; Tray Menu		
 	y_Lang001 =	Sembunyikan Jendela
 	y_Lang002 =	Tampilkan Jendela
-	y_Lang003 =	Tampilkan / Sembunyikan Kontrol
+	y_Lang003 =	Kontrol Toolbar
 		
 ; Main Window		
 	w_Lang001 =	Ekspor

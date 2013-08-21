@@ -84,35 +84,30 @@
 	r_lang005 =	Aj&outer une macro
 	r_lang006 =	&Fermer Macro
 	r_lang007 =	&Touches sensibles au contexte
-	r_lang008 =	Aff&icher / Masquer les commandes
-	r_lang009 =	Jo&uez à partir de la ligne sélectionnée
-	r_lang010 =	Joue&z jusqu'à ce que la ligne sélectionnée
-	r_lang011 =	Jouez &Lignes sélectionnées
+	r_lang008 =	Jo&uez à partir de la ligne sélectionnée
+	r_lang009 =	Joue&z jusqu'à ce que la ligne sélectionnée
+	r_lang010 =	Jouez &Lignes sélectionnées
 		
 ; View Sub Menu		
 	v_lang001 =	Toujours à la pointe
 	v_lang002 =	Les Lignes En Surbrillance
 	v_lang003 =	Renfoncement
-	v_lang004 =	Avant-première
-	v_lang005 =	Barres D'outils
-	v_lang006 =	Raccourcis Clavier
-	v_lang007 =	Chargera Le Preset
-	v_lang008 =	Enregistrer Le Préréglage
+	v_lang004 =	Barre D'outils Des Contrôles
+	v_lang005 =	Avant-première
+	v_lang006 =	Barres D'outils
+	v_lang007 =	Raccourcis Clavier
+	v_lang008 =	Réinitialiser Taille colonnes
 	v_lang009 =	Fichier
 	v_lang010 =	Enregistrer Et Jouer
 	v_lang011 =	Les Options
 	v_lang012 =	Commandes
 	v_lang013 =	Éditer
-	v_lang014 =	Défaut
-	v_lang015 =	De Base
-	v_lang016 =	Coutume
-	v_lang017 =	Personnaliser
-	v_lang018 =	Réinitialiser Taille colonnes
-	v_lang019 =	Automatique
-	v_lang020 =	Manuel
-	v_lang021 =	Arrêter
-	v_lang022 =	Pause
-	v_lang023 =	Réinitialiser Par Défaut
+	v_lang014 =	Personnaliser
+	v_lang015 =	Automatique
+	v_lang016 =	Manuel
+	v_lang017 =	Arrêter
+	v_lang018 =	Pause
+	v_lang019 =	Réinitialiser Par Défaut
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Réglages
@@ -137,7 +132,7 @@
 ; Tray Menu		
 	y_Lang001 =	Masquer la fenêtre
 	y_Lang002 =	Afficher la fenêtre
-	y_Lang003 =	Afficher / Masquer les commandes
+	y_Lang003 =	Barre D'outils Des Contrôles
 		
 ; Main Window		
 	w_Lang001 =	Exporter
