@@ -602,7 +602,7 @@
 		Primeri:
 		MyVar > 1
 		MyVar = `%A_DDDD`%
-		Odložišče == `%MyVar`%
+		Clipboard == `%MyVar`%
 	)	
 	d_Lang043 =	Ali pa uporabite orodno vrstico Kontrolniki.
 	d_Lang044 =	

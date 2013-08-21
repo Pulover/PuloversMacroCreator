@@ -602,7 +602,7 @@
 		Príklady:
 		MyVar > 1
 		MyVar = `%A_DDDD`%
-		Schránka == `%MyVar`%
+		Clipboard == `%MyVar`%
 	)	
 	d_Lang043 =	Alebo použite paneli Ovládacie prvky.
 	d_Lang044 =	

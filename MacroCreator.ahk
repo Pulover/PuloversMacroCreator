@@ -6,7 +6,7 @@
 ; pulover@macrocreator.com
 ; Home: http://www.macrocreator.com
 ; Forum: http://www.autohotkey.com/board/topic/79763-macro-creator
-; Version: 4.0.0 Beta 1
+; Version: 4.0.0
 ; Release Date: August, 2013
 ; AutoHotkey Version: 1.1.12.00
 ; Copyright © 2012-2013 Rodolfo U. Batista
@@ -121,7 +121,7 @@ Loop
 		break
 }
 
-CurrentVersion := "4.0.0 Beta 1", ReleaseDate := "August, 2013"
+CurrentVersion := "4.0.0", ReleaseDate := "August, 2013"
 
 ;##### Ini File Read #####
 
@@ -275,12 +275,35 @@ If (Version < 4)
 User_Vars := new ObjIni(UserVarsPath)
 User_Vars.Read()
 
-LangCodes := {	Es: ["040a","080a","0c0a","100a","140a","180a","1c0a","200a","240a","280a","2c0a","300a","340a","380a","3c0a","400a","440a","480a","4c0a","500a"]
-			,	Pt: ["0416","0816"], De: ["0407","0807","0c07","1007","1407"], Fr: ["040c","080c","0c0c","100c","140c","180c"]
-			,	It: ["0410","0810"], Ru: ["0419"], Pl: ["0415"], Nl: ["0413","0813"], Da: ["0406"], No: ["0414","0814"]
-			,	Fi: ["040b"], Sv: ["041d","081d"], Ca: ["0403"], Hr: ["041a"], Cs: ["0405"], Tr: ["041f"], Hu: ["040e"]
-			,	Bg: ["0402"], Sr: ["1c1a","0c1a"], Uk: ["0422"], El: ["0408"], Zh: ["0804","0c04","1004","1404","0004","7c04"]
-			,	Zt: ["0404"], Ja: ["0411"], Ko: ["0412"]}
+LangCodes := {	Id: ["0421"]
+			,	Ms: ["043e","083e"]
+			,	Ca: ["0403"]
+			,	Da: ["0406"]
+			,	De: ["0407","0807","0c07","1007","1407"]
+			,	Es: ["040a","080a","0c0a","100a","140a","180a","1c0a","200a","240a","280a","2c0a","300a","340a","380a","3c0a","400a","440a","480a","4c0a","500a"]
+			,	Fr: ["040c","080c","0c0c","100c","140c","180c"]
+			,	Hr: ["041a"]
+			,	It: ["0410","0810"]
+			,	Hu: ["040e"]
+			,	Nl: ["0413","0813"]
+			,	No: ["0414","0814"]
+			,	Pl: ["0415"]
+			,	Pt: ["0416","0816"]
+			,	Sl: ["0424"]
+			,	Sk: ["041b"]
+			,	Fi: ["040b"]
+			,	Sv: ["041d","081d"]
+			,	Tr: ["041f"]
+			,	Cs: ["0405"]
+			,	El: ["0408"]
+			,	Bg: ["0402"]
+			,	Ru: ["0419"]
+			,	Sr: ["1c1a","0c1a"]
+			,	Uk: ["0422"]
+			,	Zh: ["0804","0c04","1004","1404","0004","7c04"]
+			,	Zt: ["0404"]
+			,	Ja: ["0411"]
+			,	Ko: ["0412"]}
 
 If (Lang = "ERROR")
 {
@@ -304,6 +327,7 @@ GoSub, WriteSettings
 CurrentLang := Lang
 
 ,	Lang_Id := "Bahasa Indonesia`t(Indonesian)"
+,	Lang_Ms := "Bahasa Malaysia`t(Malay)"
 ,	Lang_Ca := "Català`t(Catalan)"
 ,	Lang_Da := "Dansk`t(Danish﻿)"
 ,	Lang_De := "Deutsch`t(German)"
@@ -335,13 +359,14 @@ CurrentLang := Lang
 ,	Lang_All :=
 (Join|
 "Bahasa Indonesia`t(Indonesian)=Id
+Bahasa Malaysia`t(Malay)=Ms
 Català`t(Catalan)=Ca
 Dansk`t(Danish﻿)=Da
 Deutsch`t(German)=De
 English=En
 Español`t(Spanish)=Es
 Français`t(French)=Fr
-Hrvatski`t(Croatian)=Id
+Hrvatski`t(Croatian)=Hr
 Italiano`t(Italian)=It
 Magyar`t(Hungarian)=Hu
 Nederlands`t(Dutch)=Nl
@@ -11204,8 +11229,6 @@ Menu, MacroMenu, DeleteAll
 Menu, CustomMenu, DeleteAll
 Menu, ToolbarsMenu, DeleteAll
 Menu, HotkeyMenu, DeleteAll
-; Menu, PreLoadMenu, DeleteAll
-; Menu, PreSaveMenu, DeleteAll
 Menu, ViewMenu, DeleteAll
 Menu, OptionsMenu, DeleteAll
 Menu, DonationMenu, DeleteAll
@@ -11241,7 +11264,8 @@ TB_Edit(tbFile, "New", "", "", w_Lang040)
 , TB_Edit(tbFile, "Open", "", "", w_Lang041) , TB_Edit(tbFile, "Save", "", "", w_Lang042) 
 , TB_Edit(tbFile, "Export", "", "", w_Lang043), TB_Edit(tbFile, "Preview", "", "", w_Lang044), TB_Edit(tbFile, "Options", "", "", w_Lang045)
 ; RecPlay
-TB_Edit(tbRecPlay, "Record", "", "", w_Lang046), TB_Edit(tbRecPlay, "PlayStart", "", "", w_Lang047)
+TB_Edit(tbRecPlay, "Record", "", "", w_Lang046)
+, TB_Edit(tbRecPlay, "PlayStart", "", "", w_Lang047), TB_Edit(tbRecPlay, "TestRun", "", "", w_Lang048), TB_Edit(tbRecPlay, "RunTimer", "", "", w_Lang049)
 ; Command
 TB_Edit(tbCommand, "Mouse", "", "", w_Lang050), TB_Edit(tbCommand, "Text", "", "", w_Lang051), TB_Edit(tbCommand, "ControlCmd", "", "", w_Lang052)
 , TB_Edit(tbCommand, "Pause", "", "", w_Lang054), TB_Edit(tbCommand, "MsgBox", "", "", w_Lang055), TB_Edit(tbCommand, "KeyWait", "", "", w_Lang056)
@@ -11453,29 +11477,30 @@ return
 #Include <SCI>
 #SingleInstance Off
 
-#Include Lang\En.lang
-#Include Lang\Pt.lang
+#Include Lang\Id.lang
+#Include Lang\Ms.lang
 #Include Lang\Ca.lang
 #Include Lang\Da.lang
 #Include Lang\De.lang
+#Include Lang\En.lang
 #Include Lang\Es.lang
 #Include Lang\Fr.lang
-#Include Lang\It.lang
 #Include Lang\Hr.lang
+#Include Lang\It.lang
 #Include Lang\Hu.lang
 #Include Lang\Nl.lang
 #Include Lang\No.lang
 #Include Lang\Pl.lang
+#Include Lang\Pt.lang
+#Include Lang\Sl.lang
+#Include Lang\Sk.lang
 #Include Lang\Fi.lang
 #Include Lang\Sv.lang
 #Include Lang\Tr.lang
 #Include Lang\Cs.lang
 #Include Lang\El.lang
-#Include Lang\Id.lang
-#Include Lang\Sk.lang
-#Include Lang\Sl.lang
-#Include Lang\Ru.lang
 #Include Lang\Bg.lang
+#Include Lang\Ru.lang
 #Include Lang\Sr.lang
 #Include Lang\Uk.lang
 #Include Lang\Zh.lang

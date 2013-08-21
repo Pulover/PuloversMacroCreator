@@ -47,6 +47,7 @@ Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jör
 * Added *Edit Script* button in *Preview* window to open script in external editor.
 * Added individual *Pause* hotkey.
 * Added *Multiple Column* search in *Find/Replace* window.
+* Added translation to Malay.
 * Main window size is remembered.
 
 ## Version 3.8.4
