@@ -2888,8 +2888,40 @@ If (s_Caller = "Edit")
 	}
 	GuiControl, 5:Enable, MouseApply
 }
-Else
-	Window = A
+If (s_Caller = "Find")
+{
+	Gui, 5:Default
+	If (GotoRes1 = Action1)
+	{
+		GuiControl, 5:, Click, 1
+		GoSub, Click
+	}
+	Else If (GotoRes1 = Action2)
+	{
+		GuiControl, 5:, Point, 1
+		GoSub, Point
+	}
+	Else If (GotoRes1 = Action3)
+	{
+		GuiControl, 5:, PClick, 1
+		GoSub, PClick
+	}
+	Else If (GotoRes1 = Action4)
+	{
+		GuiControl, 5:, Drag, 1
+		GoSub, Drag
+	}
+	Else If (GotoRes1 = Action5)
+	{
+		GuiControl, 5:, WUp, 1
+		GoSub, WUp
+	}
+	Else If (GotoRes1 = Action6)
+	{
+		GuiControl, 5:, WDn, 1
+		GoSub, WDn
+	}
+}
 Gui, 5:Show,, %c_Lang001%
 Input
 Tooltip
@@ -3917,8 +3949,35 @@ If (s_Caller = "Edit")
 	Gui, chMacro:Default
 	GuiControl, 8:Enable, TextApply
 }
-Else
-	Window = A
+If (s_Caller = "Find")
+{
+	Gui, 8:Default
+	If (GotoRes1 = cType8)
+	{
+		GuiControl, 8:, Raw, 1
+		GoSub, Raw
+	}
+	Else If (GotoRes1 = cType1)
+	{
+		GuiControl, 8:, ComText, 1
+		GoSub, ComText
+	}
+	Else If (GotoRes1 = cType12)
+	{
+		GuiControl, 8:, Clip, 1
+		GoSub, Clip
+	}
+	Else If (GotoRes1 = cType22)
+	{
+		GuiControl, 8:, EditPaste, 1
+		GoSub, EditPaste
+	}
+	Else If (GotoRes1 = cType10)
+	{
+		GuiControl, 8:, SetText, 1
+		GoSub, SetText
+	}
+}
 Gui, 8:Show,, %c_Lang002%
 TB_Define(TbText, hTbText, hIL_Icons, FixedBar.Text, FixedBar.TextOpt)
 ,	TBHwndAll[7] := TbText
@@ -6159,8 +6218,24 @@ If (s_Caller = "Edit")
 }
 If (s_Caller = "Find")
 {
-	GuiControl, 23:ChooseString, ControlCmd, %GotoRes1%
-	GoSub, CtlCmd
+	OutputDebug, %GotoRes1%
+	If InStr(CtrlCmd, GotoRes1)
+	{
+		GuiControl, 23:ChooseString, Cmd, %GotoRes1%
+		GoSub, Cmd
+	}
+	Else If InStr(CtrlGetCmd, GotoRes1)
+	{
+		GuiControl, 23:ChooseString, ControlCmd, ControlGet
+		GoSub, CtlCmd
+		GuiControl, 23:ChooseString, Cmd, %GotoRes1%
+		GoSub, Cmd
+	}
+	Else
+	{
+		GuiControl, 23:ChooseString, ControlCmd, %GotoRes1%
+		GoSub, CtlCmd
+	}
 }
 Gui, 23:Show, , %c_Lang004%
 Tooltip
@@ -11432,17 +11507,14 @@ While, Action%A_Index%
 	Mouse_Keywords .= Action%A_Index% ","
 Mouse_Path := w_Lang050, Mouse_Goto := "Mouse"
 
-Ctrl_Keywords := "
-(Join`,
-)"
 Ctrl_Keywords := RegExReplace(CtrlCmdList, "\|", ",") ","
-,	Ctrl_Keywords .= RegExReplace(CtrlCmd, "\|", ",") ","
-,	Ctrl_Keywords .= RegExReplace(CtrlGetCmd, "\|", ",")
+.	RegExReplace(CtrlCmd, "\|", ",") ","
+.	RegExReplace(CtrlGetCmd, "\|", ",")
 ,	Ctrl_Path := w_Lang053, Ctrl_Goto := "ControlCmd"
 
 Win_Keywords := RegExReplace(WinCmdList, "\|", ",") ","
-,	Win_Keywords .= RegExReplace(WinCmd, "\|", ",") ","
-,	Win_Keywords .= RegExReplace(WinGetCmd, "\|", ",")
+.	RegExReplace(WinCmd, "\|", ",") ","
+.	RegExReplace(WinGetCmd, "\|", ",")
 ,	Win_Path := w_Lang057, Win_Goto := "Window"
 
 Misc_Keywords := RegExReplace(FileCmdList, "\|", ",")
