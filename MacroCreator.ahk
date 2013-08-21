@@ -4768,6 +4768,25 @@ If (s_Caller = "Find")
 {
 	GuiControl, 11:ChooseString, WinCom, %GotoRes1%
 	GoSub, WinCom
+	
+	
+	If InStr(WinCmd, GotoRes1)
+	{
+		GuiControl, 11:ChooseString, WCmd, %GotoRes1%
+		GoSub, WCmd
+	}
+	Else If InStr(WinGetCmd, GotoRes1)
+	{
+		GuiControl, 11:ChooseString, WinCom, WinGet
+		GoSub, WinCom
+		GuiControl, 11:ChooseString, WCmd, %GotoRes1%
+		GoSub, WCmd
+	}
+	Else
+	{
+		GuiControl, 11:ChooseString, WinCom, %GotoRes1%
+		GoSub, WinCom
+	}
 }
 Gui, 11:Show, , %c_Lang005%
 Tooltip
@@ -6218,7 +6237,6 @@ If (s_Caller = "Edit")
 }
 If (s_Caller = "Find")
 {
-	OutputDebug, %GotoRes1%
 	If InStr(CtrlCmd, GotoRes1)
 	{
 		GuiControl, 23:ChooseString, Cmd, %GotoRes1%
