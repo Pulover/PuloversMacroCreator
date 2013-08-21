@@ -19,14 +19,12 @@
 	f_Lang002 =	&Otwarte
 	f_Lang003 =	&Uratować
 	f_Lang004 =	&Zapisz jako
-	f_Lang005 =	&Import Makro
-	f_Lang006 =	Z&apisz bieżące makro
-	f_Lang007 =	O&statnie Pliki
-	f_Lang008 =	&Eksport do AHK
-	f_Lang009 =	S&cript podgląd
-	f_Lang010 =	&Lista zmiennych
-	f_Lang011 =	&Wyjście
-	f_Lang012 =	Brak plików
+	f_Lang005 =	O&statnie Pliki
+	f_Lang006 =	&Eksport do AHK
+	f_Lang007 =	S&cript podgląd
+	f_Lang008 =	&Lista zmiennych
+	f_Lang009 =	&Wyjście
+	f_Lang010 =	Brak plików
 		
 ; Insert Sub Menu		
 	i_Lang001 =	&Mysz
@@ -83,10 +81,13 @@
 	r_lang004 =	&Regulator czasowy
 	r_lang005 =	&Dodaj Macro
 	r_lang006 =	Zam&knij makro
-	r_lang007 =	K&ontekstowa Hotkeys
-	r_lang008 =	Za&graj z wybranego wiersza
-	r_lang009 =	Gra&ć do wybranego wiersza
-	r_lang010 =	Od&twórz wybrane wiersze
+	r_lang007 =	Powiel makro
+	r_lang008 =	&Import Makro
+	r_lang009 =	Z&apisz bieżące makro
+	r_lang010 =	K&ontekstowa Hotkeys
+	r_lang011 =	Za&graj z wybranego wiersza
+	r_lang012 =	Gra&ć do wybranego wiersza
+	r_lang013 =	Od&twórz wybrane wiersze
 		
 ; View Sub Menu		
 	v_lang001 =	Zawsze na wierzchu

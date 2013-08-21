@@ -19,14 +19,12 @@
 	f_Lang002 =	&Abrir
 	f_Lang003 =	&Salvar
 	f_Lang004 =	Salvar &Como
-	f_Lang005 =	&Importar Macro
-	f_Lang006 =	Salvar &Macro Atual
-	f_Lang007 =	Ar&quivos Recentes
-	f_Lang008 =	&Exportar para AHK
-	f_Lang009 =	&Visuali&zar Script
-	f_Lang010 =	&Listar Variáveis
-	f_Lang011 =	Sai&r
-	f_Lang012 =	Nenhum arquivo
+	f_Lang005 =	Ar&quivos Recentes
+	f_Lang006 =	&Exportar para AHK
+	f_Lang007 =	&Visuali&zar Script
+	f_Lang008 =	&Listar Variáveis
+	f_Lang009 =	Sai&r
+	f_Lang010 =	Nenhum arquivo
 		
 ; Insert Sub Menu		
 	i_Lang001 =	&Mouse
@@ -83,10 +81,13 @@
 	r_lang004 =	&Temporizador
 	r_lang005 =	A&dicionar Macro
 	r_lang006 =	&Fechar Macro
-	r_lang007 =	Atalhos &Condicionais
-	r_lang008 =	Reproduzir a &Partir da Linha Selecionada
-	r_lang009 =	Reproduzir Até a &Linha Selecionada
-	r_lang010 =	Reproduzir Linhas &Selecionadas
+	r_lang007 =	Duplicar Macro
+	r_lang008 =	&Importar Macro
+	r_lang009 =	Salvar &Macro Atual
+	r_lang010 =	Atalhos &Condicionais
+	r_lang011 =	Reproduzir a &Partir da Linha Selecionada
+	r_lang012 =	Reproduzir Até a &Linha Selecionada
+	r_lang013 =	Reproduzir Linhas &Selecionadas
 		
 ; View Sub Menu		
 	v_lang001 =	Sempre Visível

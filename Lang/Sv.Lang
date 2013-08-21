@@ -19,14 +19,12 @@
 	f_Lang002 =	&Öppna
 	f_Lang003 =	&Spara
 	f_Lang004 =	S&para som
-	f_Lang005 =	&Importera Makro
-	f_Lang006 =	Sp&ara aktuell Makro
-	f_Lang007 =	S&enaste använda Macro
-	f_Lang008 =	&Exportera till AHK
-	f_Lang009 =	&Förhandsgranska kod
-	f_Lang010 =	&Listvariabler
-	f_Lang011 =	&Avsluta
-	f_Lang012 =	Inga filer
+	f_Lang005 =	S&enaste använda Macro
+	f_Lang006 =	E&xportera till AHK
+	f_Lang007 =	&Förhandsgranska kod
+	f_Lang008 =	&Listvariabler
+	f_Lang009 =	&Avsluta
+	f_Lang010 =	Inga filer
 		
 ; Insert Sub Menu		
 	i_Lang001 =	&Mus
@@ -83,10 +81,13 @@
 	r_lang004 =	&Timer
 	r_lang005 =	&Lägg Makro
 	r_lang006 =	St&äng Makro
-	r_lang007 =	Sa&mmanhangsberoende Snabbtangenter
-	r_lang008 =	Sp&ela upp från vald rad
-	r_lang009 =	Spela t&ills utvalda raden
-	r_lang010 =	Spela ma&rkerade rader
+	r_lang007 =	Duplicera makro
+	r_lang008 =	&Importera Makro
+	r_lang009 =	Sp&ara aktuell Makro
+	r_lang010 =	Sa&mmanhangsberoende Snabbtangenter
+	r_lang011 =	Sp&ela upp från vald rad
+	r_lang012 =	Spela t&ills utvalda raden
+	r_lang013 =	Spela ma&rkerade rader
 		
 ; View Sub Menu		
 	v_lang001 =	Alltid överst

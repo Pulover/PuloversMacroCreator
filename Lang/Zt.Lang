@@ -19,14 +19,12 @@
 	f_Lang002 =	打開
 	f_Lang003 =	節省
 	f_Lang004 =	另存為
-	f_Lang005 =	進口宏
-	f_Lang006 =	保存當前宏觀經濟
-	f_Lang007 =	最近的文件
-	f_Lang008 =	導出到華民航空
-	f_Lang009 =	預覽腳本
-	f_Lang010 =	列出變量
-	f_Lang011 =	出口
-	f_Lang012 =	沒有文件
+	f_Lang005 =	最近的文件
+	f_Lang006 =	導出到華民航空
+	f_Lang007 =	預覽腳本
+	f_Lang008 =	列出變量
+	f_Lang009 =	出口
+	f_Lang010 =	沒有文件
 		
 ; Insert Sub Menu		
 	i_Lang001 =	鼠標
@@ -83,10 +81,13 @@
 	r_lang004 =	定時器
 	r_lang005 =	添加宏
 	r_lang006 =	關閉宏
-	r_lang007 =	上下文敏感的熱鍵
-	r_lang008 =	播放選中的行
-	r_lang009 =	玩直到選中的行
-	r_lang010 =	播放選定的行
+	r_lang007 =	重複宏
+	r_lang008 =	進口宏
+	r_lang009 =	保存當前宏觀經濟
+	r_lang010 =	上下文敏感的熱鍵
+	r_lang011 =	播放選中的行
+	r_lang012 =	玩直到選中的行
+	r_lang013 =	播放選定的行
 		
 ; View Sub Menu		
 	v_lang001 =	總在最前

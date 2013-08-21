@@ -19,14 +19,12 @@
 	f_Lang002 =	&Otvorené
 	f_Lang003 =	&Uložiť
 	f_Lang004 =	U&ložiť ako
-	f_Lang005 =	&Dovoz Makro
-	f_Lang006 =	Ulo&žiť aktuálne makro
-	f_Lang007 =	No&vé súbory
-	f_Lang008 =	&Export do AHK
-	f_Lang009 =	N&áhľad Script
-	f_Lang010 =	&Zoznam premenných
-	f_Lang011 =	V&ýstup
-	f_Lang012 =	&Žiadne súbory
+	f_Lang005 =	No&vé súbory
+	f_Lang006 =	&Export do AHK
+	f_Lang007 =	N&áhľad Script
+	f_Lang008 =	&Zoznam premenných
+	f_Lang009 =	V&ýstup
+	f_Lang010 =	Žiadne súbory
 		
 ; Insert Sub Menu		
 	i_Lang001 =	&Myš
@@ -83,10 +81,13 @@
 	r_lang004 =	&Časový spínač
 	r_lang005 =	P&ridať makro
 	r_lang006 =	Za&vrieť Makro
-	r_lang007 =	&Kontextová Klávesové skratky
-	r_lang008 =	Pr&ehrávanie z vybraného riadku
-	r_lang009 =	&Hrať, kým vybraný riadok
-	r_lang010 =	Prehra&ť vybrané riadky
+	r_lang007 =	Duplicitné makro
+	r_lang008 =	&Dovoz Makro
+	r_lang009 =	Ulo&žiť aktuálne makro
+	r_lang010 =	&Kontextová Klávesové skratky
+	r_lang011 =	Pr&ehrávanie z vybraného riadku
+	r_lang012 =	&Hrať, kým vybraný riadok
+	r_lang013 =	Prehra&ť vybrané riadky
 		
 ; View Sub Menu		
 	v_lang001 =	Always On Top

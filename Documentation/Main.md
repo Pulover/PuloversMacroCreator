@@ -111,16 +111,6 @@ To have other Macros active during Timer check the *Always Active* option or rig
 **Find / Replace**: This window helps finding and replacing parts of the commands in the *Details*, *Repeat*, *Delay*, *Control* and *Window* columns only. To select similar Command Types use the Select Menu.  
 Note: Changing parameters of certain commands may cause misbehavior in Playback. Replace should be used only when and where necessary.
 
-**Add Macro**: Creates a new Macro tab.
-
-**Close Macro**: Closes the currently selected Macro tab.
-
-**Duplicate Macro**: Copies all commands from currently selected Macro to a new tab.
-
-**Import**: Imports a Project without erasing the current one. All found Macros will be appended to the tab list.
-
-**Save Current Macro**: Saves the currently selected Macro to a PMC file.
-
 ## Modify / Insert
 
 **Insert from Box**: Inserts the command in the Hotkey box at the bottom in the current selected row (or at the end of the list if no row is selected).
@@ -140,6 +130,16 @@ When you click the Delete or Apply button (for Repeat or Delay) it will affect a
 When adding a new command either by Command Window, Capturing keys or the Insert button if no row is selected they will be added to the end of the list, if one row is selected they will be added on top of that row, and if more then one row is selected a new copy of the command will be added on top of each selected row, except for Loop, and If Statements which will add a Start on top of the first selected row and an End below the last selected row, and for Goto, Label, Break, Continue, Variable Assignment and Functions, which will add only one row on top of the first selected.
 
 ## Macros
+
+**Add Macro**: Creates a new Macro tab.
+
+**Close Macro**: Closes the currently selected Macro tab.
+
+**Duplicate Macro**: Copies all commands from currently selected Macro to a new tab.
+
+**Import Macro**: Imports a Project without erasing the current one. All found Macros will be appended to the tab list.
+
+**Save Current Macro**: Saves the currently selected Macro to a PMC file.
 
 **Macro Tabs**: Macro Creator supports multiple Macros / Hotkeys. To create a new Macro, click the **+** button (Add Macro / Ctrl+T). When you add or select a Macro in the tab list the current Hotkeys for it are displayed on the top-right part of the window, you can change them by clicking the box and pressing the keys on the keyboard. To remove a Hotkey click the box and press Backspace. Macros which have no Hotkey or no line of command will not be activated for Playback.
 

@@ -19,14 +19,12 @@
 	f_Lang002 =	&Open
 	f_Lang003 =	&Besparen
 	f_Lang004 =	O&pslaan als
-	f_Lang005 =	&Import Macro
-	f_Lang006 =	&Save huidige Macro
-	f_Lang007 =	&Recente Bestanden
-	f_Lang008 =	&Exporteren naar AHK
-	f_Lang009 =	&Voorbeeld Script
-	f_Lang010 =	&Lijstvariabelen
-	f_Lang011 =	&Uitgang
-	f_Lang012 =	Geen files
+	f_Lang005 =	&Recente Bestanden
+	f_Lang006 =	&Exporteren naar AHK
+	f_Lang007 =	&Voorbeeld Script
+	f_Lang008 =	&Lijstvariabelen
+	f_Lang009 =	&Uitgang
+	f_Lang010 =	Geen files
 		
 ; Insert Sub Menu		
 	i_Lang001 =	&Muis
@@ -83,10 +81,13 @@
 	r_lang004 =	&Timer
 	r_lang005 =	&Voeg Macro
 	r_lang006 =	S&luiten Macro
-	r_lang007 =	&Context gevoelige sneltoetsen
-	r_lang008 =	A&fspelen vanaf geselecteerde rij
-	r_lang009 =	S&peel tot geselecteerde rij
-	r_lang010 =	Sp&elen Geselecteerde Rijen
+	r_lang007 =	Dubbele Macro
+	r_lang008 =	&Import Macro
+	r_lang009 =	&Save huidige Macro
+	r_lang010 =	&Context gevoelige sneltoetsen
+	r_lang011 =	A&fspelen vanaf geselecteerde rij
+	r_lang012 =	S&peel tot geselecteerde rij
+	r_lang013 =	Sp&elen Geselecteerde Rijen
 		
 ; View Sub Menu		
 	v_lang001 =	Altijd op voorgrond

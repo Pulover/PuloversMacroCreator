@@ -19,14 +19,12 @@
 	f_Lang002 =	B&uka
 	f_Lang003 =	&Menyimpan
 	f_Lang004 =	&Save As
-	f_Lang005 =	&Impor Makro
-	f_Lang006 =	Sim&pan Makro sekarang
-	f_Lang007 =	&File terakhir
-	f_Lang008 =	&Ekspor ke AHK
-	f_Lang009 =	P&review Script
-	f_Lang010 =	&Daftar Variabel
-	f_Lang011 =	&Keluar
-	f_Lang012 =	&Tidak ada file
+	f_Lang005 =	&File terakhir
+	f_Lang006 =	&Ekspor ke AHK
+	f_Lang007 =	&Preview Script
+	f_Lang008 =	&Daftar Variabel
+	f_Lang009 =	&Keluar
+	f_Lang010 =	Tidak ada file
 		
 ; Insert Sub Menu		
 	i_Lang001 =	&Mouse
@@ -83,10 +81,13 @@
 	r_lang004 =	&Timer
 	r_lang005 =	Ta&mbahkan Makro
 	r_lang006 =	T&utup Makro
-	r_lang007 =	&Konteks Hotkeys Sensitif
-	r_lang008 =	B&ermain dari Dipilih Row
-	r_lang009 =	Berma&in sampai Dipilih Row
-	r_lang010 =	Bermai&n Baris Terpilih
+	r_lang007 =	Gandakan Makro
+	r_lang008 =	&Impor Makro
+	r_lang009 =	Sim&pan Makro sekarang
+	r_lang010 =	&Konteks Hotkeys Sensitif
+	r_lang011 =	B&ermain dari Dipilih Row
+	r_lang012 =	Berma&in sampai Dipilih Row
+	r_lang013 =	Bermai&n Baris Terpilih
 		
 ; View Sub Menu		
 	v_lang001 =	Always On Top

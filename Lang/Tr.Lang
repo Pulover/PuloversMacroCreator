@@ -19,14 +19,12 @@
 	f_Lang002 =	&Açık
 	f_Lang003 =	&Kurtarmak
 	f_Lang004 =	&Farklı Kaydet
-	f_Lang005 =	&İthalat Makro
-	f_Lang006 =	&Güncel Makro Kaydet
-	f_Lang007 =	Y&eni Dosyalar
-	f_Lang008 =	A&HK Aktar
-	f_Lang009 =	&Önizleme Senaryo
-	f_Lang010 =	&Listesi değişkenleri
-	f_Lang011 =	&Çıkış
-	f_Lang012 =	Hiçbir içerik
+	f_Lang005 =	Y&eni Dosyalar
+	f_Lang006 =	A&HK Aktar
+	f_Lang007 =	&Önizleme Senaryo
+	f_Lang008 =	&Listesi değişkenleri
+	f_Lang009 =	&Çıkış
+	f_Lang010 =	Hiçbir içerik
 		
 ; Insert Sub Menu		
 	i_Lang001 =	&Fare
@@ -83,10 +81,13 @@
 	r_lang004 =	&Kronometre
 	r_lang005 =	Mak&ro Ekle
 	r_lang006 =	Ka&pat Makro
-	r_lang007 =	&Bağlam Duyarlı Hotkeys
-	r_lang008 =	&Seçilen satırdaki oyna
-	r_lang009 =	S&eçili satır kadar oyna
-	r_lang010 =	Se&çilen Satırlar oyna
+	r_lang007 =	Makro çoğaltın
+	r_lang008 =	&İthalat Makro
+	r_lang009 =	&Güncel Makro Kaydet
+	r_lang010 =	&Bağlam Duyarlı Hotkeys
+	r_lang011 =	&Seçilen satırdaki oyna
+	r_lang012 =	S&eçili satır kadar oyna
+	r_lang013 =	Se&çilen Satırlar oyna
 		
 ; View Sub Menu		
 	v_lang001 =	Her zaman üstte

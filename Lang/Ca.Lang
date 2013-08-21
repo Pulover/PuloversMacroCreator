@@ -19,14 +19,12 @@
 	f_Lang002 =	&Obert
 	f_Lang003 =	&Desa
 	f_Lang004 =	D&esa
-	f_Lang005 =	&Importació Macro
-	f_Lang006 =	&Guardar Macro actual
-	f_Lang007 =	&Arxius recents
-	f_Lang008 =	E&xporta a AHK
-	f_Lang009 =	&Vista prèvia de script
-	f_Lang010 =	&Llista de les variables
-	f_Lang011 =	&Sortida
-	f_Lang012 =	No hi ha arxius
+	f_Lang005 =	&Arxius recents
+	f_Lang006 =	E&xporta a AHK
+	f_Lang007 =	&Vista prèvia de script
+	f_Lang008 =	&Llista de les variables
+	f_Lang009 =	&Sortida
+	f_Lang010 =	No hi ha arxius
 		
 ; Insert Sub Menu		
 	i_Lang001 =	&Ratolí
@@ -83,10 +81,13 @@
 	r_lang004 =	&Timer
 	r_lang005 =	A&fegir Macro
 	r_lang006 =	Ta&ncar Macro
-	r_lang007 =	T&ecles d'accés directe sensibles al context
-	r_lang008 =	J&uga de fila seleccionada
-	r_lang009 =	Juga f&ins que la Columna seleccionat
-	r_lang010 =	Juga fi&les seleccionades
+	r_lang007 =	Duplicar macro
+	r_lang008 =	&Importació Macro
+	r_lang009 =	&Guardar Macro actual
+	r_lang010 =	T&ecles d'accés directe sensibles al context
+	r_lang011 =	J&uga de fila seleccionada
+	r_lang012 =	Juga f&ins que la Columna seleccionat
+	r_lang013 =	Juga fi&les seleccionades
 		
 ; View Sub Menu		
 	v_lang001 =	Sempre visible

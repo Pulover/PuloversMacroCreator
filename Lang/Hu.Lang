@@ -19,14 +19,12 @@
 	f_Lang002 =	&Nyitva
 	f_Lang003 =	&Kivéve
 	f_Lang004 =	&Mentés másként
-	f_Lang005 =	&Import Macro
-	f_Lang006 =	M&entse el az aktuális makró
-	f_Lang007 =	Ú&jabb Kép
-	f_Lang008 =	E&xportálás AHK
-	f_Lang009 =	&Preview Script
-	f_Lang010 =	&Listaváltozókra
-	f_Lang011 =	Kij&árat
-	f_Lang012 =	Nincs kép
+	f_Lang005 =	Ú&jabb Kép
+	f_Lang006 =	&Exportálás AHK
+	f_Lang007 =	&Preview Script
+	f_Lang008 =	&Listaváltozókra
+	f_Lang009 =	K&ijárat
+	f_Lang010 =	Nincs kép
 		
 ; Insert Sub Menu		
 	i_Lang001 =	&Egér
@@ -83,10 +81,13 @@
 	r_lang004 =	&Időzítő
 	r_lang005 =	&Kedvencek Macro
 	r_lang006 =	&Bezárás Macro
-	r_lang007 =	&Context Sensitive gyorsbillentyűk
-	r_lang008 =	&Lejátszás kiválasztott sor
-	r_lang009 =	J&átssz, amíg a kijelölt sor
-	r_lang010 =	L&ejátszás kijelölt sorok
+	r_lang007 =	Ismétlődő Macro
+	r_lang008 =	&Import Macro
+	r_lang009 =	M&entse el az aktuális makró
+	r_lang010 =	&Context Sensitive gyorsbillentyűk
+	r_lang011 =	&Lejátszás kiválasztott sor
+	r_lang012 =	J&átssz, amíg a kijelölt sor
+	r_lang013 =	L&ejátszás kijelölt sorok
 		
 ; View Sub Menu		
 	v_lang001 =	Mindig a tetején

@@ -19,14 +19,12 @@
 	f_Lang002 =	열기
 	f_Lang003 =	저장
 	f_Lang004 =	다른 이름으로 저장
-	f_Lang005 =	가져 오기 매크로
-	f_Lang006 =	현재 매크로를 저장
-	f_Lang007 =	없음
-	f_Lang008 =	AHK로 내보내기
-	f_Lang009 =	미리보기 스크립트
-	f_Lang010 =	변수 목록
-	f_Lang011 =	출구
-	f_Lang012 =	없음
+	f_Lang005 =	없음
+	f_Lang006 =	AHK로 내보내기
+	f_Lang007 =	미리보기 스크립트
+	f_Lang008 =	변수 목록
+	f_Lang009 =	출구
+	f_Lang010 =	없음
 		
 ; Insert Sub Menu		
 	i_Lang001 =	마우스
@@ -83,10 +81,13 @@
 	r_lang004 =	타이머
 	r_lang005 =	매크로를 추가합니다
 	r_lang006 =	닫기 매크로
-	r_lang007 =	문맥을 인식 단축키
-	r_lang008 =	선택한 행에서 재생
-	r_lang009 =	선택한 행까지 재생
-	r_lang010 =	선택한 행을 재생
+	r_lang007 =	매크로를 복사
+	r_lang008 =	가져 오기 매크로
+	r_lang009 =	현재 매크로를 저장
+	r_lang010 =	문맥을 인식 단축키
+	r_lang011 =	선택한 행에서 재생
+	r_lang012 =	선택한 행까지 재생
+	r_lang013 =	선택한 행을 재생
 		
 ; View Sub Menu		
 	v_lang001 =	항상 상단에

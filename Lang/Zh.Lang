@@ -19,14 +19,12 @@
 	f_Lang002 =	打开
 	f_Lang003 =	保存
 	f_Lang004 =	另存为
-	f_Lang005 =	导入宏
-	f_Lang006 =	保存当前的宏
-	f_Lang007 =	最近的文件
-	f_Lang008 =	导出为ahk
-	f_Lang009 =	预览脚本
-	f_Lang010 =	列出变量
-	f_Lang011 =	导出
-	f_Lang012 =	没有文件
+	f_Lang005 =	最近的文件
+	f_Lang006 =	导出为ahk
+	f_Lang007 =	预览脚本
+	f_Lang008 =	列出变量
+	f_Lang009 =	导出
+	f_Lang010 =	没有文件
 		
 ; Insert Sub Menu		
 	i_Lang001 =	鼠标
@@ -83,10 +81,13 @@
 	r_lang004 =	定时器
 	r_lang005 =	添加宏
 	r_lang006 =	关闭宏
-	r_lang007 =	上下文相关的热键
-	r_lang008 =	播放选定的行
-	r_lang009 =	播放到选定的行
-	r_lang010 =	播放选定的行
+	r_lang007 =	重复宏
+	r_lang008 =	导入宏
+	r_lang009 =	保存当前的宏
+	r_lang010 =	上下文相关的热键
+	r_lang011 =	播放选定的行
+	r_lang012 =	播放到选定的行
+	r_lang013 =	播放选定的行
 		
 ; View Sub Menu		
 	v_lang001 =	总在最前

@@ -19,14 +19,12 @@
 	f_Lang002 =	&Avata
 	f_Lang003 =	&Tallentaa
 	f_Lang004 =	Ta&llenna Koska
-	f_Lang005 =	Tu&o Macro
-	f_Lang006 =	Tall&enna Nykyinen Macro
-	f_Lang007 =	&Viimeisimmät Tiedostot
-	f_Lang008 =	V&ie AHK
-	f_Lang009 =	E&sikatselu Script
-	f_Lang010 =	Lista&muuttujien
-	f_Lang011 =	&Poistua
-	f_Lang012 =	Ei tiedostoja
+	f_Lang005 =	&Viimeisimmät Tiedostot
+	f_Lang006 =	V&ie AHK
+	f_Lang007 =	&Esikatselu Script
+	f_Lang008 =	Li&stamuuttujien
+	f_Lang009 =	&Poistua
+	f_Lang010 =	Ei tiedostoja
 		
 ; Insert Sub Menu		
 	i_Lang001 =	&Hiiri
@@ -83,10 +81,13 @@
 	r_lang004 =	A&jastin
 	r_lang005 =	&Lisää Makro
 	r_lang006 =	&Sulje Makro
-	r_lang007 =	&Tilannekohtaisia ​​pikanäppäimet
-	r_lang008 =	T&oista valitun rivin
-	r_lang009 =	P&elaa kunnes valittu rivi
-	r_lang010 =	Pelaa &valitut rivit
+	r_lang007 =	Monista Makro
+	r_lang008 =	Tu&o Macro
+	r_lang009 =	Tall&enna Nykyinen Macro
+	r_lang010 =	&Tilannekohtaisia ​​pikanäppäimet
+	r_lang011 =	T&oista valitun rivin
+	r_lang012 =	P&elaa kunnes valittu rivi
+	r_lang013 =	Pelaa &valitut rivit
 		
 ; View Sub Menu		
 	v_lang001 =	Aina päällimmäisenä

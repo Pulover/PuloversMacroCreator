@@ -19,14 +19,12 @@
 	f_Lang002 =	&Abierto
 	f_Lang003 =	&Guardar
 	f_Lang004 =	G&uardar como
-	f_Lang005 =	&Importar Macro
-	f_Lang006 =	Gua&rdar macro actual
-	f_Lang007 =	Ar&chivos recientes
-	f_Lang008 =	&Exportar a AHK
-	f_Lang009 =	&Vista previa de Guión
-	f_Lang010 =	&Lista de las variables
-	f_Lang011 =	&Salida
-	f_Lang012 =	No hay archivos
+	f_Lang005 =	A&rchivos recientes
+	f_Lang006 =	&Exportar a AHK
+	f_Lang007 =	&Vista previa de Guión
+	f_Lang008 =	&Lista de las variables
+	f_Lang009 =	&Salida
+	f_Lang010 =	No hay archivos
 		
 ; Insert Sub Menu		
 	i_Lang001 =	&Ratón
@@ -83,10 +81,13 @@
 	r_lang004 =	&Timer
 	r_lang005 =	A&ñadir Macro
 	r_lang006 =	&Cerrar Macro
-	r_lang007 =	T&eclas de acceso directo sensibles al contexto
-	r_lang008 =	Re&producir desde la fila seleccionada
-	r_lang009 =	Repr&oducir hasta la fila seleccionada
-	r_lang010 =	Repro&ducir las filas seleccionadas
+	r_lang007 =	Duplicar macro
+	r_lang008 =	&Importar Macro
+	r_lang009 =	Gua&rdar macro actual
+	r_lang010 =	T&eclas de acceso directo sensibles al contexto
+	r_lang011 =	Re&producir desde la fila seleccionada
+	r_lang012 =	Repr&oducir hasta la fila seleccionada
+	r_lang013 =	Repro&ducir las filas seleccionadas
 		
 ; View Sub Menu		
 	v_lang001 =	Siempre visible

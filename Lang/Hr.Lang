@@ -19,14 +19,12 @@
 	f_Lang002 =	&Otvoreno
 	f_Lang003 =	&Spasiti
 	f_Lang004 =	S&premi
-	f_Lang005 =	&Uvoz Makro
-	f_Lang006 =	Sp&remi Trenutni Macro
-	f_Lang007 =	N&edavne datoteke
-	f_Lang008 =	&Izvoz u AHK
-	f_Lang009 =	Pri&kaz Script
-	f_Lang010 =	Popis &varijabli
-	f_Lang011 =	I&zlaz
-	f_Lang012 =	U datotekama
+	f_Lang005 =	N&edavne datoteke
+	f_Lang006 =	&Izvoz u AHK
+	f_Lang007 =	P&rikaz Script
+	f_Lang008 =	Popis &varijabli
+	f_Lang009 =	I&zlaz
+	f_Lang010 =	U datotekama
 		
 ; Insert Sub Menu		
 	i_Lang001 =	&Miš
@@ -83,10 +81,13 @@
 	r_lang004 =	&Timer
 	r_lang005 =	&Dodaj Macro
 	r_lang006 =	&Makro Zatvori
-	r_lang007 =	&Kontekstna Hotkeys
-	r_lang008 =	I&grati na odabrani redak
-	r_lang009 =	Ig&raj dok odabrani redak
-	r_lang010 =	Igra&jte odabrane retke
+	r_lang007 =	Dvostruki Macro
+	r_lang008 =	&Uvoz Makro
+	r_lang009 =	Sp&remi Trenutni Macro
+	r_lang010 =	&Kontekstna Hotkeys
+	r_lang011 =	I&grati na odabrani redak
+	r_lang012 =	Ig&raj dok odabrani redak
+	r_lang013 =	Igra&jte odabrane retke
 		
 ; View Sub Menu		
 	v_lang001 =	Uvijek na vrhu

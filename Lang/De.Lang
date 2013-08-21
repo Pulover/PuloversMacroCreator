@@ -19,14 +19,12 @@
 	f_Lang002 =	&Öffnen
 	f_Lang003 =	&Speichern
 	f_Lang004 =	S&peichern unter
-	f_Lang005 =	&Makro importieren
-	f_Lang006 =	Aktuelles Makro sp&eichern
-	f_Lang007 =	Z&uletzt geöffnete Dateien
-	f_Lang008 =	E&xport nach AHK
-	f_Lang009 =	Script-&Vorschau
-	f_Lang010 =	Variab&len anzeigen
-	f_Lang011 =	Been&den
-	f_Lang012 =	Keine Dateien
+	f_Lang005 =	&Zuletzt geöffnete Dateien
+	f_Lang006 =	&Export nach AHK
+	f_Lang007 =	S&cript-Vorschau
+	f_Lang008 =	&Variablen anzeigen
+	f_Lang009 =	&Beenden
+	f_Lang010 =	Keine Dateien
 		
 ; Insert Sub Menu		
 	i_Lang001 =	&Maus
@@ -83,10 +81,13 @@
 	r_lang004 =	&Timer
 	r_lang005 =	Mak&ro hinzufügen
 	r_lang006 =	Makr&o schließen 
-	r_lang007 =	Ko&ntextsensitive Hotkeys
-	r_lang008 =	&Wiedergabe von ausgewählter Zeile
-	r_lang009 =	W&iedergabe bis zur ausgewählten Zeile
-	r_lang010 =	A&usgewählte Zeilen wiedergeben
+	r_lang007 =	Makro duplizieren
+	r_lang008 =	&Makro importieren
+	r_lang009 =	Aktuelles Makro sp&eichern
+	r_lang010 =	Ko&ntextsensitive Hotkeys
+	r_lang011 =	&Wiedergabe von ausgewählter Zeile
+	r_lang012 =	W&iedergabe bis zur ausgewählten Zeile
+	r_lang013 =	A&usgewählte Zeilen wiedergeben
 		
 ; View Sub Menu		
 	v_lang001 =	Immer im Vordergrund

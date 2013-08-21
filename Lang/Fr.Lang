@@ -19,14 +19,12 @@
 	f_Lang002 =	&Ouvert
 	f_Lang003 =	&Sauver
 	f_Lang004 =	&Enregistrer sous
-	f_Lang005 =	&Importer Macro
-	f_Lang006 =	En&registrer la macro actuelle
-	f_Lang007 =	&Fichiers Récents
-	f_Lang008 =	E&xporter vers AHK
-	f_Lang009 =	&Aperçu du script
-	f_Lang010 =	&Les variables de la liste
-	f_Lang011 =	Sor&tie
-	f_Lang012 =	Aucun
+	f_Lang005 =	&Fichiers Récents
+	f_Lang006 =	E&xporter vers AHK
+	f_Lang007 =	&Aperçu du script
+	f_Lang008 =	&Les variables de la liste
+	f_Lang009 =	So&rtie
+	f_Lang010 =	Aucun
 		
 ; Insert Sub Menu		
 	i_Lang001 =	&Souris
@@ -83,10 +81,13 @@
 	r_lang004 =	&Minuteur
 	r_lang005 =	Aj&outer une macro
 	r_lang006 =	&Fermer Macro
-	r_lang007 =	&Touches sensibles au contexte
-	r_lang008 =	Jo&uez à partir de la ligne sélectionnée
-	r_lang009 =	Joue&z jusqu'à ce que la ligne sélectionnée
-	r_lang010 =	Jouez &Lignes sélectionnées
+	r_lang007 =	Dupliquer Macro
+	r_lang008 =	&Importer Macro
+	r_lang009 =	En&registrer la macro actuelle
+	r_lang010 =	&Touches sensibles au contexte
+	r_lang011 =	Jo&uez à partir de la ligne sélectionnée
+	r_lang012 =	Joue&z jusqu'à ce que la ligne sélectionnée
+	r_lang013 =	Jouez &Lignes sélectionnées
 		
 ; View Sub Menu		
 	v_lang001 =	Toujours à la pointe

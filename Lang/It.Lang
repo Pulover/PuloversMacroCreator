@@ -19,14 +19,12 @@
 	f_Lang002 =	&Aperto
 	f_Lang003 =	&Salvare
 	f_Lang004 =	Sa&lva con nome
-	f_Lang005 =	&Importa Macro
-	f_Lang006 =	Sal&va Macro corrente
-	f_Lang007 =	&File Recenti
-	f_Lang008 =	&Esporta in AHK
-	f_Lang009 =	An&teprima Script
-	f_Lang010 =	Va&riabili di lista
-	f_Lang011 =	&Uscita
-	f_Lang012 =	Nessun file
+	f_Lang005 =	&File Recenti
+	f_Lang006 =	&Esporta in AHK
+	f_Lang007 =	An&teprima Script
+	f_Lang008 =	&Variabili di lista
+	f_Lang009 =	&Uscita
+	f_Lang010 =	Nessun file
 		
 ; Insert Sub Menu		
 	i_Lang001 =	&Mouse
@@ -83,10 +81,13 @@
 	r_lang004 =	&Timer
 	r_lang005 =	Agg&iungi Macro
 	r_lang006 =	&Chiudere Macro
-	r_lang007 =	Ta&sti di scelta rapida sensibili al contesto
-	r_lang008 =	Gi&oca da riga selezionata
-	r_lang009 =	Gioca &fino a riga selezionata
-	r_lang010 =	Gioca rig&he selezionate
+	r_lang007 =	Duplica macro
+	r_lang008 =	&Importa Macro
+	r_lang009 =	Sal&va Macro corrente
+	r_lang010 =	Ta&sti di scelta rapida sensibili al contesto
+	r_lang011 =	Gi&oca da riga selezionata
+	r_lang012 =	Gioca &fino a riga selezionata
+	r_lang013 =	Gioca rig&he selezionate
 		
 ; View Sub Menu		
 	v_lang001 =	Sempre in primo piano
