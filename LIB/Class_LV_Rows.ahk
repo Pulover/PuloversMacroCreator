@@ -81,7 +81,7 @@ Class LV_Rows
     {
         global
         
-        If (Func <> "Copy")
+        If Func not in Copy,RowText,GetIconIndex
             SavePrompt := True
     }
 

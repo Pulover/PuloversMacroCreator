@@ -6,7 +6,7 @@
 ; pulover@macrocreator.com
 ; Home: http://www.macrocreator.com
 ; Forum: http://www.autohotkey.com/board/topic/79763-macro-creator
-; Version: 4.0.0 Alpha 3
+; Version: 4.0.0 Beta 1
 ; Release Date: August, 2013
 ; AutoHotkey Version: 1.1.12.00
 ; Copyright © 2012-2013 Rodolfo U. Batista
@@ -121,7 +121,7 @@ Loop
 		break
 }
 
-CurrentVersion := "4.0.0 Alpha 3", ReleaseDate := "August, 2013"
+CurrentVersion := "4.0.0 Beta 1", ReleaseDate := "August, 2013"
 
 ;##### Ini File Read #####
 

@@ -1199,7 +1199,20 @@ CheckVars(MatchList, Point="")
 			{
 				Found := RegExReplace(Found, "[\[|\]]", "\$0")
 				If Found2 is not Number
-					Found2 := DerefVars("%" Found2 "%")
+				{
+					If InStr(Found2, "A_")=1
+					{
+						If (Found2 = "A_Index")
+							Found2 := LoopIndex
+						While, RegExMatch(Found2, "i)(A_Loop\w+)", lMatch)
+						{
+							I := DerefVars(LoopIndex), L := SubStr(lMatch1, 3)
+						,	Found2 := RegExReplace(Found2, "U)" lMatch, o_Loop%Point%[I][L])
+						}
+					}
+					Else
+						Found2 := DerefVars("%" Found2 "%")
+				}
 				%A_LoopField% := RegExReplace(%A_LoopField%, Found, %Found1%[Found2])
 			}
 		}

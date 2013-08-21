@@ -675,14 +675,7 @@ ShowMenu(Menu, mX, mY)
 		Menu, TbMenu, DeleteAll
 	}
 	Else If (Menu = "PlayStart")
-	{
-		Menu, TbMenu, Add, %r_Lang003%, TestRun
-		Menu, TbMenu, Add, %r_Lang004%, RunTimer
-		Menu, TbMenu, Icon, %r_Lang003%, %ResDllPath%, 49
-		Menu, TbMenu, Icon, %r_Lang004%, %ResDllPath%, 72
-		Menu, TbMenu, Show, %mX%, %mY%
-		Menu, TbMenu, DeleteAll
-	}
+		GoSub, ShowPlayMenu
 	Else If (Menu = "OnFinish")
 		GoSub, OnFinish
 	Else If (Menu = "RecStart")
