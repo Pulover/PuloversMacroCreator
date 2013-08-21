@@ -10768,8 +10768,8 @@ If A_EventInfo = 1
 Critical 1000
 GuiGetSize(GuiWidth, GuiHeight)
 ,	RbMain.ShowBand(1)
-,	RbMacro.ModifyBand(1, "MinHeight", GuiHeight-MacroOffset)
-,	RbMacro.ModifyBand(2, "MinHeight", GuiHeight-MacroOffset)
+,	RbMacro.ModifyBand(1, "MinHeight", (GuiHeight-MacroOffset)*(A_ScreenDPI/96))
+,	RbMacro.ModifyBand(2, "MinHeight", (GuiHeight-MacroOffset)*(A_ScreenDPI/96))
 GuiControl, 1:Move, cRbMacro, % "W" GuiWidth
 GuiControl, 1:Move, Repeat, % "y" GuiHeight-23
 GuiControl, 1:Move, Rept, % "y" GuiHeight-27
