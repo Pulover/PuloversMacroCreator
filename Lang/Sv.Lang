@@ -228,6 +228,7 @@
 	w_Lang090 =	Anpassa
 	w_Lang091 =	Hitta ett kommando (Ctrl+Skift+F)
 	w_Lang092 =	Redigera (Enter)
+	w_Lang093 =	Dölja
 		
 ; Command Windows		
 	c_Lang001 =	Mus

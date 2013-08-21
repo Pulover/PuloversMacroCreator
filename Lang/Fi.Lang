@@ -228,6 +228,7 @@
 	w_Lang090 =	Muokkaa
 	w_Lang091 =	Etsi komento (Ctrl+Shift+F)
 	w_Lang092 =	Muokata (Enter)
+	w_Lang093 =	Piilottaa
 		
 ; Command Windows		
 	c_Lang001 =	Hiiri

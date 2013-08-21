@@ -742,7 +742,7 @@ DefineToolbars:
 ,	RbMain.InsertBand(hAbortKey, 0, "", 17, w_Lang008, 60, 0, "", "", 50)
 ,	RbMain.InsertBand(hPauseKey, 0, "", 18, c_Lang003, 60, 0, "", "", 50)
 ,	TB_Rebar(RbMain, 19, TbEdit, "Break"), RbMain.SetMaxRows(3)
-,	TBHwndAll := [TbFile, TbRecPlay, TbCommand, TbSettings, TbEdit, TbPrev, TbPrevF, TbOSC]
+,	TBHwndAll := [TbFile, TbRecPlay, TbSettings, TbCommand, TbEdit, TbPrev, TbPrevF, TbOSC]
 ,	RBIndexTB := [10, 11, 12, 15, 19], RBIndexHK := [13, 16, 17, 18]
 ,	Default_MainLayout := RbMain.GetLayout()
 If (MainLayout = "ERROR")
@@ -7554,6 +7554,7 @@ Else
 		If ((tbPtr.tbHwnd = hTbPrev) || (tbPtr.tbHwnd = hTbPrevF))
 			return
 		Menu, TbMenu, Add, %w_Lang090%, Customize
+		Menu, TbMenu, Add, %w_Lang093%, TbHide
 		Menu, TbMenu, Show
 		Menu, TbMenu, DeleteAll
 	}
@@ -7575,6 +7576,18 @@ return
 SetIdealSize:
 TB_IdealSize(tbRecPlay, 11), TB_IdealSize(tbSettings, 12)
 ,	TB_IdealSize(tbCommand, 15), TB_IdealSize(tbEdit, 19)
+return
+
+TbHide:
+For Index, Ptr in TBHwndAll
+{
+	If (Ptr.tbHwnd = tbPtr.tbHwnd)
+	{
+		bID := RBIndexTB[Index]
+		break
+	}
+}
+GoSub, ShowHideBandOn
 return
 
 CopyTo:
@@ -9143,7 +9156,8 @@ return
 
 ShowHideBand:
 bID := RBIndexTB[A_ThisMenuItemPos]
-,	tBand := RbMain.IDToIndex(bID), ShowBand%bID% := !ShowBand%bID%
+ShowHideBandOn:
+tBand := RbMain.IDToIndex(bID), ShowBand%bID% := !ShowBand%bID%
 ,	RbMain.ShowBand(tBand, ShowBand%bID%)
 ,	RbMain.ShowBand(RbMain.IDToIndex(10), ShowBand10)
 If (ShowBand10)
@@ -10171,7 +10185,7 @@ DetectHiddenWindows, On
 WinGet, WinState, MinMax, ahk_id %PMCWinID%
 If WinState = -1
 	WinState := 0
-Else
+Else If WinState = 0
 	GuiGetSize(mGuiWidth, mGuiHeight), MainWinSize := "W" mGuiWidth " H" mGuiHeight
 ColSizes := ""
 Loop % LV_GetCount("Col")

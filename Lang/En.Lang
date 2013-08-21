@@ -228,6 +228,7 @@
 	w_Lang090 =	Customize
 	w_Lang091 =	Find a command (Ctrl+Shift+F)
 	w_Lang092 =	Edit (Enter)
+	w_Lang093 =	Hide
 		
 ; Command Windows		
 	c_Lang001 =	Mouse

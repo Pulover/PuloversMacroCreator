@@ -228,6 +228,7 @@
 	w_Lang090 =	Personnaliser
 	w_Lang091 =	Trouvez une commande (Ctrl+Maj+F)
 	w_Lang092 =	Éditer (Enter)
+	w_Lang093 =	Cacher
 		
 ; Command Windows		
 	c_Lang001 =	Souris

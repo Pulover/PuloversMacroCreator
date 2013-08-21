@@ -228,6 +228,7 @@
 	w_Lang090 =	사용자 지정
 	w_Lang091 =	(Ctrl+Shift+F) 명령 찾기
 	w_Lang092 =	수정 (Enter)
+	w_Lang093 =	숨기기
 		
 ; Command Windows		
 	c_Lang001 =	마우스

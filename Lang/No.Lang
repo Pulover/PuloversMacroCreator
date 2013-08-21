@@ -228,6 +228,7 @@
 	w_Lang090 =	Tilpass
 	w_Lang091 =	Finn en kommando (Ctrl+Shift+F)
 	w_Lang092 =	Redigere (Enter)
+	w_Lang093 =	Skjule
 		
 ; Command Windows		
 	c_Lang001 =	Mus

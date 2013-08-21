@@ -228,6 +228,7 @@
 	w_Lang090 =	Personalizzare
 	w_Lang091 =	Trova un comando (Ctrl+Shift+F)
 	w_Lang092 =	Modifica (Enter)
+	w_Lang093 =	Nascondere
 		
 ; Command Windows		
 	c_Lang001 =	Mouse

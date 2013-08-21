@@ -228,6 +228,7 @@
 	w_Lang090 =	Настроить
 	w_Lang091 =	Найти команду (Ctrl+Shift+F)
 	w_Lang092 =	Редактировать (Enter)
+	w_Lang093 =	Скрывать
 		
 ; Command Windows		
 	c_Lang001 =	Мышь
