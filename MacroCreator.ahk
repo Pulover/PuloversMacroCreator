@@ -4664,8 +4664,8 @@ If (s_Caller = "Edit")
 {
 	EscCom("Details|TimesX|DelayX|Target|Window", 1)
 	WinCom := Type
-	GoSub, WinCom
 	GuiControl, 11:ChooseString, WinCom, %WinCom%
+	GoSub, WinCom
 	If (Type = "WinSet")
 	{
 		WCmd := RegExReplace(Details, "(^\w*).*", "$1")
@@ -11267,7 +11267,7 @@ TB_Edit(tbFile, "New", "", "", w_Lang040)
 TB_Edit(tbRecPlay, "Record", "", "", w_Lang046)
 , TB_Edit(tbRecPlay, "PlayStart", "", "", w_Lang047), TB_Edit(tbRecPlay, "TestRun", "", "", w_Lang048), TB_Edit(tbRecPlay, "RunTimer", "", "", w_Lang049)
 ; Command
-TB_Edit(tbCommand, "Mouse", "", "", w_Lang050), TB_Edit(tbCommand, "Text", "", "", w_Lang051), TB_Edit(tbCommand, "ControlCmd", "", "", w_Lang052)
+TB_Edit(tbCommand, "Mouse", "", "", w_Lang050), TB_Edit(tbCommand, "Text", "", "", w_Lang051), TB_Edit(tbCommand, "ControlCmd", "", "", w_Lang053)
 , TB_Edit(tbCommand, "Pause", "", "", w_Lang054), TB_Edit(tbCommand, "MsgBox", "", "", w_Lang055), TB_Edit(tbCommand, "KeyWait", "", "", w_Lang056)
 , TB_Edit(tbCommand, "Window", "", "", w_Lang057), TB_Edit(tbCommand, "Image", "", "", w_Lang058), TB_Edit(tbCommand, "Run", "", "", w_Lang059)
 , TB_Edit(tbCommand, "ComLoop", "", "", w_Lang060), TB_Edit(tbCommand, "ComGoto", "", "", w_Lang061), TB_Edit(tbCommand, "AddLabel", "", "", w_Lang062)
