@@ -2297,6 +2297,11 @@ GuiControl, 4:, OnEnter, %OnEnter%
 GuiControl, 4:Enable%RandomSleeps%, RandPercent
 GuiControl, 4:Enable%RandomSleeps%, RandPer
 GoSub, OptionsSub
+If (A_GuiControl = "CoordTip")
+{
+	GuiControl, 4:Choose, AltTab, 3
+	GoSub, AltTabControl
+}
 Gui, 4:Show,, %t_Lang017%
 OldMods := VirtualKeys
 Input
