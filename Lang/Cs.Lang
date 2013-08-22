@@ -90,25 +90,25 @@
 	r_lang013 =	Př&ehrát vybrané řádky
 		
 ; View Sub Menu		
-	v_lang001 =	Vždy navrchu
-	v_lang002 =	Zvýraznění Řádků
-	v_lang003 =	Odsazení
-	v_lang004 =	Ovládací Prvky Panelu Nástrojů
-	v_lang005 =	Náhled
-	v_lang006 =	Panely Nástrojů
-	v_lang007 =	Klávesové Zkratky
-	v_lang008 =	Obnovit sloupce Velikost
-	v_lang009 =	Soubor
-	v_lang010 =	Nahrávání A Přehrávání
-	v_lang011 =	Možnosti
-	v_lang012 =	Příkazy
-	v_lang013 =	Editovat
-	v_lang014 =	Vlastní
-	v_lang015 =	Automatický
-	v_lang016 =	Manuál
-	v_lang017 =	Zastavit
+	v_lang001 =	&Vždy navrchu
+	v_lang002 =	&Zvýraznění Řádků
+	v_lang003 =	&Odsazení
+	v_lang004 =	Ov&ládací Prvky Panelu Nástrojů
+	v_lang005 =	&Náhled
+	v_lang006 =	&Panely Nástrojů
+	v_lang007 =	&Klávesové Zkratky
+	v_lang008 =	O&bnovit sloupce Velikost
+	v_lang009 =	&Soubor
+	v_lang010 =	&Nahrávání A Přehrávání
+	v_lang011 =	&Možnosti
+	v_lang012 =	&Příkazy
+	v_lang013 =	&Editovat
+	v_lang014 =	&Vlastní
+	v_lang015 =	&Automatický
+	v_lang016 =	Man&uál
+	v_lang017 =	&Zastavit
 	v_lang018 =	Pauza
-	v_lang019 =	Resetovat Výchozí Nastavení
+	v_lang019 =	&Resetovat Výchozí Nastavení
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Nastavení

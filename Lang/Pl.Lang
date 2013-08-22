@@ -90,25 +90,25 @@
 	r_lang013 =	Od&twórz wybrane wiersze
 		
 ; View Sub Menu		
-	v_lang001 =	Zawsze na wierzchu
-	v_lang002 =	Wiersze Highlight
-	v_lang003 =	Wcięcie
-	v_lang004 =	Pasek Narzędzi Kontroli
-	v_lang005 =	Podgląd
-	v_lang006 =	Paski Narzędzi
-	v_lang007 =	Hotkeys
-	v_lang008 =	Resetuj rozmiar kolumny
-	v_lang009 =	Plik
-	v_lang010 =	Nagrywać I Odtwarzać
-	v_lang011 =	Opcje
-	v_lang012 =	Polecenia
-	v_lang013 =	Edytować
-	v_lang014 =	Настроить...
-	v_lang015 =	Automatyczny
-	v_lang016 =	Ręczny
-	v_lang017 =	Zatrzymać
-	v_lang018 =	Pauza
-	v_lang019 =	Reset
+	v_lang001 =	&Zawsze na wierzchu
+	v_lang002 =	&Wiersze Highlight
+	v_lang003 =	W&cięcie
+	v_lang004 =	&Pasek Narzędzi Kontroli
+	v_lang005 =	P&odgląd
+	v_lang006 =	P&aski Narzędzi
+	v_lang007 =	&Hotkeys
+	v_lang008 =	&Resetuj rozmiar kolumny
+	v_lang009 =	&Plik
+	v_lang010 =	&Nagrywać I Odtwarzać
+	v_lang011 =	&Opcje
+	v_lang012 =	Po&lecenia
+	v_lang013 =	&Edytować
+	v_lang014 =	&Настроить...
+	v_lang015 =	&Automatyczny
+	v_lang016 =	&Ręczny
+	v_lang017 =	&Zatrzymać
+	v_lang018 =	Pa&uza
+	v_lang019 =	Re&set
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Ustawienia

@@ -90,25 +90,25 @@
 	r_lang013 =	Reproduzir Linhas &Selecionadas
 		
 ; View Sub Menu		
-	v_lang001 =	Sempre Visível
-	v_lang002 =	Destacar Linhas
-	v_lang003 =	Margem
-	v_lang004 =	Barra de Controles
-	v_lang005 =	Script
-	v_lang006 =	Barras de Ferramentas
-	v_lang007 =	Atalhos
-	v_lang008 =	Restaurar Colunas
-	v_lang009 =	Arquivo
-	v_lang010 =	Gravar  Reproduzir
-	v_lang011 =	Opções
-	v_lang012 =	Commandos
-	v_lang013 =	Editar
-	v_lang014 =	Personalizar
-	v_lang015 =	Automatico
-	v_lang016 =	Manual
-	v_lang017 =	Parar
-	v_lang018 =	Pausa
-	v_lang019 =	Restaurar Padrão
+	v_lang001 =	&Sempre Visível
+	v_lang002 =	&Destacar Linhas
+	v_lang003 =	&Margem
+	v_lang004 =	&Barra de Controles
+	v_lang005 =	S&cript
+	v_lang006 =	B&arras de Ferramentas
+	v_lang007 =	A&talhos
+	v_lang008 =	&Restaurar Colunas
+	v_lang009 =	&Arquivo
+	v_lang010 =	&Gravar  Reproduzir
+	v_lang011 =	&Opções
+	v_lang012 =	&Commandos
+	v_lang013 =	&Editar
+	v_lang014 =	&Personalizar
+	v_lang015 =	A&utomatico
+	v_lang016 =	&Manual
+	v_lang017 =	Pa&rar
+	v_lang018 =	Pau&sa
+	v_lang019 =	Res&taurar Padrão
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Configurações

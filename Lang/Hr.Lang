@@ -90,25 +90,25 @@
 	r_lang013 =	Igra&jte odabrane retke
 		
 ; View Sub Menu		
-	v_lang001 =	Uvijek na vrhu
-	v_lang002 =	Istaknuto Redovi
-	v_lang003 =	Uvlačenje
-	v_lang004 =	Kontrole Traci
-	v_lang005 =	Pregled
-	v_lang006 =	Alatne Trake
-	v_lang007 =	Hotkeys
-	v_lang008 =	Veličina Reset Kolumne
-	v_lang009 =	File
-	v_lang010 =	Snimanje I Reprodukciju
-	v_lang011 =	Mogućnosti
-	v_lang012 =	Naredbe
-	v_lang013 =	Uredi
-	v_lang014 =	Prilagodite
-	v_lang015 =	Automatski
-	v_lang016 =	Priručnik
-	v_lang017 =	Stop
-	v_lang018 =	Pauza
-	v_lang019 =	Resetirati Zadani Skup
+	v_lang001 =	&Uvijek na vrhu
+	v_lang002 =	&Istaknuto Redovi
+	v_lang003 =	U&vlačenje
+	v_lang004 =	&Kontrole Traci
+	v_lang005 =	&Pregled
+	v_lang006 =	&Alatne Trake
+	v_lang007 =	&Hotkeys
+	v_lang008 =	V&eličina Reset Kolumne
+	v_lang009 =	&File
+	v_lang010 =	&Snimanje I Reprodukciju
+	v_lang011 =	&Mogućnosti
+	v_lang012 =	&Naredbe
+	v_lang013 =	&Uredi
+	v_lang014 =	&Prilagodite
+	v_lang015 =	&Automatski
+	v_lang016 =	P&riručnik
+	v_lang017 =	S&top
+	v_lang018 =	Pau&za
+	v_lang019 =	R&esetirati Zadani Skup
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Postavke

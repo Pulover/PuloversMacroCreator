@@ -90,25 +90,25 @@
 	r_lang013 =	Juga fi&les seleccionades
 		
 ; View Sub Menu		
-	v_lang001 =	Sempre visible
-	v_lang002 =	Files Destaquen
-	v_lang003 =	Sangria
-	v_lang004 =	Barra D'eines De Controls
-	v_lang005 =	Avanç
-	v_lang006 =	Barres D'eines
-	v_lang007 =	Tecles D'accés Ràpid
-	v_lang008 =	Restablir mida de les columnes
-	v_lang009 =	Expedient
-	v_lang010 =	Gravar I Reproduir
-	v_lang011 =	Opcions
-	v_lang012 =	Ordres
-	v_lang013 =	Modifica
-	v_lang014 =	Personalitzar
-	v_lang015 =	Automàtic
-	v_lang016 =	Manual
-	v_lang017 =	Aturi
-	v_lang018 =	Pausa
-	v_lang019 =	Restablir Per Defecte
+	v_lang001 =	&Sempre visible
+	v_lang002 =	&Files Destaquen
+	v_lang003 =	S&angria
+	v_lang004 =	&Barra D'eines De Controls
+	v_lang005 =	A&vanç
+	v_lang006 =	Ba&rres D'eines
+	v_lang007 =	&Tecles D'accés Ràpid
+	v_lang008 =	R&establir mida de les columnes
+	v_lang009 =	&Expedient
+	v_lang010 =	&Gravar I Reproduir
+	v_lang011 =	&Opcions
+	v_lang012 =	O&rdres
+	v_lang013 =	&Modifica
+	v_lang014 =	&Personalitzar
+	v_lang015 =	&Automàtic
+	v_lang016 =	Ma&nual
+	v_lang017 =	A&turi
+	v_lang018 =	Pa&usa
+	v_lang019 =	Re&stablir Per Defecte
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Configuració

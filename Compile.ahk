@@ -24,6 +24,13 @@ If ErrorLevel
 	ExitApp
 FileCopy, Documentation\MacroCreator_Help-doc\MacroCreator_Help.chm, Compiled\MacroCreator_Help.chm, 1
 
+FileDelete, Compiled\Resources.dll
+FileDelete, Compiled\SciLexer-x64.dll
+FileDelete, Compiled\SciLexer-x86.dll
+FileCopy, Resources.dll, Compiled\Resources.dll, 1
+FileCopy, SciLexer-x64.dll, Compiled\SciLexer-x64.dll, 1
+FileCopy, SciLexer-x86.dll, Compiled\SciLexer-x86.dll, 1
+
 RunWait, %AhkDir%\Compiler\Ahk2Exe.exe /in MacroCreator.ahk /out Compiled\MacroCreator.exe /icon Resources\PMC4_Mult.ico /bin "%AhkDir%\Compiler\Unicode 32-bit.bin" /mpress 1,, UseErrorLevel
 If ErrorLevel = ERROR
 {

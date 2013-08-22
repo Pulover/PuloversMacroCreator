@@ -47,6 +47,7 @@ Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jör
 * Added individual *Pause* hotkey.
 * Added *Multiple Column* search in *Find/Replace* window.
 * Added translations to Malay and Vietnamese.
+* Added *Portable Install* option in installer.
 * Main window size is remembered.
 
 ## Version 3.8.4

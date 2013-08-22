@@ -90,25 +90,25 @@
 	r_lang013 =	Se&çilen Satırlar oyna
 		
 ; View Sub Menu		
-	v_lang001 =	Her zaman üstte
-	v_lang002 =	Vurgulamak Satır
-	v_lang003 =	Girinti
-	v_lang004 =	Kontroller Araç Çubuğu
-	v_lang005 =	Önizleme
-	v_lang006 =	Araç Çubukları
-	v_lang007 =	Kısayol Tuşları
-	v_lang008 =	Sütunlar Boyutu Sıfırla
-	v_lang009 =	Dosya
-	v_lang010 =	Kayıt Ve Oynat
-	v_lang011 =	Seçenekleri
-	v_lang012 =	Komutları
-	v_lang013 =	Düzenleme
-	v_lang014 =	Özelleştirme
-	v_lang015 =	Otomatik
-	v_lang016 =	Manuel
-	v_lang017 =	Dur
-	v_lang018 =	Durma
-	v_lang019 =	Varsayılan Sıfırlamak
+	v_lang001 =	&Her zaman üstte
+	v_lang002 =	&Vurgulamak Satır
+	v_lang003 =	&Girinti
+	v_lang004 =	&Kontroller Araç Çubuğu
+	v_lang005 =	&Önizleme
+	v_lang006 =	&Araç Çubukları
+	v_lang007 =	K&ısayol Tuşları
+	v_lang008 =	&Sütunlar Boyutu Sıfırla
+	v_lang009 =	&Dosya
+	v_lang010 =	&Kayıt Ve Oynat
+	v_lang011 =	&Seçenekleri
+	v_lang012 =	K&omutları
+	v_lang013 =	D&üzenleme
+	v_lang014 =	&Özelleştirme
+	v_lang015 =	O&tomatik
+	v_lang016 =	&Manuel
+	v_lang017 =	D&ur
+	v_lang018 =	Du&rma
+	v_lang019 =	&Varsayılan Sıfırlamak
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Ayarlar

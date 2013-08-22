@@ -90,25 +90,25 @@
 	r_lang013 =	A&usgewählte Zeilen wiedergeben
 		
 ; View Sub Menu		
-	v_lang001 =	Immer im Vordergrund
-	v_lang002 =	Zeilen markieren
-	v_lang003 =	Einzug
-	v_lang004 =	Steuerelemente Symbolleiste
-	v_lang005 =	Vorschau
-	v_lang006 =	Symbolleisten
-	v_lang007 =	Hotkeys
-	v_lang008 =	Spaltengröße zurücksetzen 
-	v_lang009 =	Datei
-	v_lang010 =	Aufzeichnen  Play
-	v_lang011 =	Optionen
-	v_lang012 =	Befehle
-	v_lang013 =	Bearbeiten
-	v_lang014 =	Anpassen
-	v_lang015 =	Automatische
-	v_lang016 =	Handbuch
-	v_lang017 =	Stopp
-	v_lang018 =	Pause
-	v_lang019 =	Standard Zurücksetzen
+	v_lang001 =	&Immer im Vordergrund
+	v_lang002 =	&Zeilen markieren
+	v_lang003 =	&Einzug
+	v_lang004 =	&Steuerelemente Symbolleiste
+	v_lang005 =	&Vorschau
+	v_lang006 =	S&ymbolleisten
+	v_lang007 =	&Hotkeys
+	v_lang008 =	S&paltengröße zurücksetzen 
+	v_lang009 =	&Datei
+	v_lang010 =	&Aufzeichnen  Play
+	v_lang011 =	&Optionen
+	v_lang012 =	&Befehle
+	v_lang013 =	B&earbeiten
+	v_lang014 =	A&npassen
+	v_lang015 =	A&utomatische
+	v_lang016 =	&Handbuch
+	v_lang017 =	&Stopp
+	v_lang018 =	&Pause
+	v_lang019 =	S&tandard Zurücksetzen
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Einstellungen

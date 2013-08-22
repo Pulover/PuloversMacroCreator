@@ -90,25 +90,25 @@
 	r_lang013 =	Jouez &Lignes sélectionnées
 		
 ; View Sub Menu		
-	v_lang001 =	Toujours à la pointe
-	v_lang002 =	Les Lignes En Surbrillance
-	v_lang003 =	Renfoncement
-	v_lang004 =	Barre D'outils Des Contrôles
-	v_lang005 =	Avant-première
-	v_lang006 =	Barres D'outils
-	v_lang007 =	Raccourcis Clavier
-	v_lang008 =	Réinitialiser Taille colonnes
-	v_lang009 =	Fichier
-	v_lang010 =	Enregistrer Et Jouer
-	v_lang011 =	Les Options
-	v_lang012 =	Commandes
-	v_lang013 =	Éditer
-	v_lang014 =	Personnaliser
-	v_lang015 =	Automatique
-	v_lang016 =	Manuel
-	v_lang017 =	Arrêter
-	v_lang018 =	Pause
-	v_lang019 =	Réinitialiser Par Défaut
+	v_lang001 =	&Toujours à la pointe
+	v_lang002 =	&Les Lignes En Surbrillance
+	v_lang003 =	&Renfoncement
+	v_lang004 =	&Barre D'outils Des Contrôles
+	v_lang005 =	&Avant-première
+	v_lang006 =	Barr&es D'outils
+	v_lang007 =	Ra&ccourcis Clavier
+	v_lang008 =	R&éinitialiser Taille colonnes
+	v_lang009 =	&Fichier
+	v_lang010 =	&Enregistrer Et Jouer
+	v_lang011 =	&Les Options
+	v_lang012 =	&Commandes
+	v_lang013 =	&Éditer
+	v_lang014 =	&Personnaliser
+	v_lang015 =	&Automatique
+	v_lang016 =	&Manuel
+	v_lang017 =	A&rrêter
+	v_lang018 =	Pa&use
+	v_lang019 =	R&éinitialiser Par Défaut
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Réglages

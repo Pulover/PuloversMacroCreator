@@ -90,25 +90,25 @@
 	r_lang013 =	Chơi &dòng chọn
 		
 ; View Sub Menu		
-	v_lang001 =	Always On Top
-	v_lang002 =	Hàng nổi bật
-	v_lang003 =	Thụt đầu dòng
-	v_lang004 =	Thanh công cụ điều khiển
-	v_lang005 =	Xem trước
-	v_lang006 =	Thanh công cụ
-	v_lang007 =	Phím nóng
-	v_lang008 =	Thiết lập lại Cột Kích
-	v_lang009 =	Tập tin
-	v_lang010 =	Ghi lại chơi
-	v_lang011 =	Tùy chọn
-	v_lang012 =	Lệnh
-	v_lang013 =	Chỉnh sửa
-	v_lang014 =	Tùy chỉnh
-	v_lang015 =	Tự động
-	v_lang016 =	Hướng dẫn sử dụng
-	v_lang017 =	Thôi
-	v_lang018 =	Tạm dừng
-	v_lang019 =	Mặc định thiết lập lại
+	v_lang001 =	&Always On Top
+	v_lang002 =	&Hàng nổi bật
+	v_lang003 =	&Thụt đầu dòng
+	v_lang004 =	Tha&nh công cụ điều khiển
+	v_lang005 =	&Xem trước
+	v_lang006 =	Thanh &công cụ
+	v_lang007 =	&Phím nóng
+	v_lang008 =	Th&iết lập lại Cột Kích
+	v_lang009 =	&Tập tin
+	v_lang010 =	&Ghi lại chơi
+	v_lang011 =	T&ùy chọn
+	v_lang012 =	&Lệnh
+	v_lang013 =	&Chỉnh sửa
+	v_lang014 =	Tù&y chỉnh
+	v_lang015 =	T&ự động
+	v_lang016 =	&Hướng dẫn sử dụng
+	v_lang017 =	Th&ôi
+	v_lang018 =	T&ạm dừng
+	v_lang019 =	&Mặc định thiết lập lại
 		
 ; Options Sub Menu		
 	o_Lang001 =	Cài đặt

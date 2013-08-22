@@ -7042,6 +7042,7 @@ Gui, 26:Submit
 Gui, 26:Destroy
 return
 
+26GuiClose:
 TipClose3:
 NextTip++
 Gui, 26:Submit

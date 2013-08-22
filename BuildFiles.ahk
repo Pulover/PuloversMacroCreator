@@ -8,6 +8,8 @@ If PMCVer = Error
 	ExitApp, 2
 }
 
+IniWrite, %PMCVer%, Compiled\MacroCreator.ini, Application, Version
+
 Script =
 (
 #define PmcName "Pulover's Macro Creator"
@@ -76,6 +78,7 @@ Name: "install32bit"; Description: "{cm:NameAndVersion,[{#PmcExeName}],{#PmcVers
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked; OnlyBelowVersion: 0,6.1
 Name: pmcAssociation; Description: "{cm:AssocFileExtension,{#PmcName},""{#PmcExt}""}"; GroupDescription: File extensions:
+Name: "portableinstall"; Description: "Don't use `%AppData`%. Settings will be saved in the installation folder."; GroupDescription: "Portable Install:"; Flags: unchecked
 
 [Registry]
 Root: HKCR; Subkey: ".{#PmcExt}"; ValueType: string; ValueName: ""; ValueData: "MacroCreatorFile"; Flags: uninsdeletevalue; Tasks: pmcAssociation
@@ -86,6 +89,10 @@ Root: HKCR; Subkey: "MacroCreatorFile\shell\open\command"; ValueType: string; Va
 [Files]
 Source: "{#WorkDir}\Compiled\MacroCreator-x64.exe"; DestDir: "{app}"; DestName: "MacroCreator.exe"; Flags: ignoreversion; Tasks: install64bit
 Source: "{#WorkDir}\Compiled\MacroCreator.exe"; DestDir: "{app}"; DestName: "MacroCreator.exe"; Flags: ignoreversion; Tasks: install32bit
+Source: "{#WorkDir}\Compiled\SciLexer-x64.dll"; DestDir: "{app}"; DestName: "SciLexer.dll"; Flags: ignoreversion; Tasks: install64bit
+Source: "{#WorkDir}\Compiled\SciLexer-x86.dll"; DestDir: "{app}"; DestName: "SciLexer.dll"; Flags: ignoreversion; Tasks: install32bit
+Source: "{#WorkDir}\Compiled\MacroCreator.ini"; DestDir: "{app}"; DestName: "MacroCreator.ini"; Flags: ignoreversion; Tasks: portableinstall
+Source: "{#WorkDir}\Compiled\Resources.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#WorkDir}\Compiled\MacroCreator_Help.chm"; DestDir: "{app}"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 

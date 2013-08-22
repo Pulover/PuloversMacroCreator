@@ -90,25 +90,25 @@
 	r_lang013 =	P&redvajanje izbrane vrstice
 		
 ; View Sub Menu		
-	v_lang001 =	Always On Top
-	v_lang002 =	Vrhunec Vrstic
-	v_lang003 =	Nazobčanost
-	v_lang004 =	Orodna Vrstica Nadzor
-	v_lang005 =	Predogled
-	v_lang006 =	Panely Nástrojov
-	v_lang007 =	Klávesové Skratky
-	v_lang008 =	Ponastavi stolpce Velikost
-	v_lang009 =	Súbor
-	v_lang010 =	Nahrávanie A Prehrávanie
-	v_lang011 =	Možnosti
-	v_lang012 =	Príkazy
-	v_lang013 =	Editovať
-	v_lang014 =	Prilagajanje
-	v_lang015 =	Avtomatski
-	v_lang016 =	Ročni
-	v_lang017 =	Stop
+	v_lang001 =	&Always On Top
+	v_lang002 =	&Vrhunec Vrstic
+	v_lang003 =	&Nazobčanost
+	v_lang004 =	&Orodna Vrstica Nadzor
+	v_lang005 =	&Predogled
+	v_lang006 =	Pan&ely Nástrojov
+	v_lang007 =	&Klávesové Skratky
+	v_lang008 =	Pona&stavi stolpce Velikost
+	v_lang009 =	&Súbor
+	v_lang010 =	&Nahrávanie A Prehrávanie
+	v_lang011 =	&Možnosti
+	v_lang012 =	&Príkazy
+	v_lang013 =	&Editovať
+	v_lang014 =	P&rilagajanje
+	v_lang015 =	&Avtomatski
+	v_lang016 =	R&očni
+	v_lang017 =	S&top
 	v_lang018 =	Premor
-	v_lang019 =	Ponastaviti Privzete
+	v_lang019 =	Ponasta&viti Privzete
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Nastavitve

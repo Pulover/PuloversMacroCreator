@@ -1,6 +1,6 @@
 ﻿LoadLang_Ms:
 		
-		; Malaysian
+		; Malay
 		
 ; Main Menu		
 	m_Lang001 =	Fail
@@ -90,25 +90,25 @@
 	r_lang013 =	Main Baris Terpilih
 		
 ; View Sub Menu		
-	v_lang001 =	Sentiasa Pada Top
-	v_lang002 =	Baris Terkini
-	v_lang003 =	Indentasi
-	v_lang004 =	Kawalan Toolbar
-	v_lang005 =	Preview
-	v_lang006 =	Toolbars
-	v_lang007 =	Hotkeys
-	v_lang008 =	Reset Saiz Lajur
-	v_lang009 =	Fail
-	v_lang010 =	Rekod Play
-	v_lang011 =	Pilihan
-	v_lang012 =	Arahan
-	v_lang013 =	Edit
-	v_lang014 =	Menyesuaikan
-	v_lang015 =	Automatik
-	v_lang016 =	Manual
-	v_lang017 =	Hentikan
-	v_lang018 =	Jeda
-	v_lang019 =	Reset Default
+	v_lang001 =	&Sentiasa Pada Top
+	v_lang002 =	&Baris Terkini
+	v_lang003 =	&Indentasi
+	v_lang004 =	&Kawalan Toolbar
+	v_lang005 =	&Preview
+	v_lang006 =	&Toolbars
+	v_lang007 =	&Hotkeys
+	v_lang008 =	&Reset Saiz Lajur
+	v_lang009 =	&Fail
+	v_lang010 =	&Rekod Play
+	v_lang011 =	&Pilihan
+	v_lang012 =	&Arahan
+	v_lang013 =	&Edit
+	v_lang014 =	&Menyesuaikan
+	v_lang015 =	A&utomatik
+	v_lang016 =	Ma&nual
+	v_lang017 =	&Hentikan
+	v_lang018 =	&Jeda
+	v_lang019 =	Re&set Default
 		
 ; Options Sub Menu		
 	o_Lang001 =	Tetapan

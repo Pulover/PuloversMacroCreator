@@ -90,25 +90,25 @@
 	r_lang013 =	Sp&elen Geselecteerde Rijen
 		
 ; View Sub Menu		
-	v_lang001 =	Altijd op voorgrond
-	v_lang002 =	Hoogtepunt Rijen
-	v_lang003 =	Inspringing
-	v_lang004 =	Controles Werkbalk
-	v_lang005 =	Voorbeeld
-	v_lang006 =	Werkbalken
-	v_lang007 =	Hotkeys
-	v_lang008 =	Reset Kolommen Grootte
-	v_lang009 =	Bestand
-	v_lang010 =	Opnemen En Afspelen
-	v_lang011 =	Opties
-	v_lang012 =	Commando's
-	v_lang013 =	Uitgeven
-	v_lang014 =	Aanpassen
-	v_lang015 =	Automatisch
-	v_lang016 =	Handboek
-	v_lang017 =	Stoppen
-	v_lang018 =	Pauze
-	v_lang019 =	Reset Default
+	v_lang001 =	&Altijd op voorgrond
+	v_lang002 =	&Hoogtepunt Rijen
+	v_lang003 =	&Inspringing
+	v_lang004 =	&Controles Werkbalk
+	v_lang005 =	&Voorbeeld
+	v_lang006 =	&Werkbalken
+	v_lang007 =	H&otkeys
+	v_lang008 =	&Reset Kolommen Grootte
+	v_lang009 =	&Bestand
+	v_lang010 =	&Opnemen En Afspelen
+	v_lang011 =	O&pties
+	v_lang012 =	&Commando's
+	v_lang013 =	&Uitgeven
+	v_lang014 =	&Aanpassen
+	v_lang015 =	Au&tomatisch
+	v_lang016 =	&Handboek
+	v_lang017 =	&Stoppen
+	v_lang018 =	Pau&ze
+	v_lang019 =	&Reset Default
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Instellingen
