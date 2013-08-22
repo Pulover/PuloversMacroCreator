@@ -34,6 +34,29 @@ Insert::GoSub, ApplyL
 ^y::GoSub, Redo
 ^l::GoSub, EditComm
 ^m::GoSub, EditColor
++1::
++2::
++3::
++4::
++5::
++6::
++7::
++8::
++9::
++0::
+RowSelection := LV_GetCount("Selected"), OwnerID := PMCWinID
+If RowSelection = 1
+{
+	RowNumber := LV_GetNext()
+	LV_GetText(rColor, RowNumber, 10)
+}
+clr := SubStr(A_ThisHotkey, 2)
+If clr = 0
+	clr = 10
+StringSplit, Palette, CustomColors, `,, %A_Space%
+rColor := Palette%clr%
+GoSub, PaintRows
+return
 
 #If !HotkeyCtrlHasFocus() && WinActive("ahk_id" PMCWinID) && !HKOff
 
@@ -80,30 +103,6 @@ If mSel = 0
 	mSel = 10
 GuiControl, Choose, A_List, %mSel%
 GoSub, TabSel
-return
-
-+1::
-+2::
-+3::
-+4::
-+5::
-+6::
-+7::
-+8::
-+9::
-+0::
-RowSelection := LV_GetCount("Selected"), OwnerID := PMCWinID
-If RowSelection = 1
-{
-	RowNumber := LV_GetNext()
-	LV_GetText(rColor, RowNumber, 10)
-}
-clr := SubStr(A_ThisHotkey, 2)
-If clr = 0
-	clr = 10
-StringSplit, Palette, CustomColors, `,, %A_Space%
-rColor := Palette%clr%
-GoSub, PaintRows
 return
 
 #If !HotkeyCtrlHasFocus() && WinActive("ahk_id" PMCWinID)

@@ -49,16 +49,17 @@
 				Else
 					RowData := "`n" Type ", " Step
 				GoSub, Add_CD
+				If ((Action = "[Text]") && (TimesX > 1))
+					RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
+
 			}
-			Else 
+			Else
 			{
 				RowData := "`n" Type ", " Step
 				GoSub, Add_CD
 				If ((TimesX > 1) || InStr(TimesX, "%"))
 					RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
 			}
-			; If ((Action = "[Text]") && (TimesX > 1))
-				; RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
 		}
 		If (IsChecked <> A_Index)
 			continue
@@ -73,7 +74,7 @@
 				Step := RegExReplace(Step, "{\w+\K(})", " " TimesX "$1")
 			RowData := "`n" Type ", " Target ", " Step ", " Window
 			GoSub, Add_CD
-			If ((Action = "[Text]") && ((TimesX > 1) || InStr(TimesX, "%")))
+			If (TimesX > 1 || InStr(TimesX, "%"))
 				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
 		}
 		Else If (Type = cType4)

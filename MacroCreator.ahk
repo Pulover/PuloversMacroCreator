@@ -259,15 +259,17 @@ IniRead, RecPlayLayout, %IniFilePath%, ToolbarOptions, RecPlayLayout
 IniRead, SettingsLayout, %IniFilePath%, ToolbarOptions, SettingsLayout
 IniRead, CommandLayout, %IniFilePath%, ToolbarOptions, CommandLayout
 IniRead, EditLayout, %IniFilePath%, ToolbarOptions, EditLayout
-IniRead, ShowBand10, %IniFilePath%, ToolbarOptions, ShowBand10, 1
-IniRead, ShowBand11, %IniFilePath%, ToolbarOptions, ShowBand11, 1
-IniRead, ShowBand12, %IniFilePath%, ToolbarOptions, ShowBand12, 1
-IniRead, ShowBand13, %IniFilePath%, ToolbarOptions, ShowBand13, 1
-IniRead, ShowBand15, %IniFilePath%, ToolbarOptions, ShowBand15, 1
-IniRead, ShowBand16, %IniFilePath%, ToolbarOptions, ShowBand16, 1
-IniRead, ShowBand17, %IniFilePath%, ToolbarOptions, ShowBand17, 1
-IniRead, ShowBand18, %IniFilePath%, ToolbarOptions, ShowBand18, 1
-IniRead, ShowBand19, %IniFilePath%, ToolbarOptions, ShowBand19, 1
+IniRead, ShowBands, %IniFilePath%, ToolbarOptions, ShowBands, 1,1,1,1,1,1,1,1,1
+
+; IniRead, ShowBand10, %IniFilePath%, ToolbarOptions, ShowBand10, 1
+; IniRead, ShowBand11, %IniFilePath%, ToolbarOptions, ShowBand11, 1
+; IniRead, ShowBand12, %IniFilePath%, ToolbarOptions, ShowBand12, 1
+; IniRead, ShowBand13, %IniFilePath%, ToolbarOptions, ShowBand13, 1
+; IniRead, ShowBand15, %IniFilePath%, ToolbarOptions, ShowBand15, 1
+; IniRead, ShowBand16, %IniFilePath%, ToolbarOptions, ShowBand16, 1
+; IniRead, ShowBand17, %IniFilePath%, ToolbarOptions, ShowBand17, 1
+; IniRead, ShowBand18, %IniFilePath%, ToolbarOptions, ShowBand18, 1
+; IniRead, ShowBand19, %IniFilePath%, ToolbarOptions, ShowBand19, 1
 
 If (Version < 4)
 	ShowTips := 1
@@ -408,6 +410,8 @@ GoSub, ObjCreate
 ToggleMode := ToggleC ? "T" : "P"
 Loop, Parse, ColSizes, `,
 	Col_%A_Index% := A_LoopField
+Loop, Parse, ShowBands, `,
+	ShowBand%A_Index% := A_LoopField
 
 RegRead, DClickSpd, HKEY_CURRENT_USER, Control Panel\Mouse, DoubleClickSpeed
 DClickSpd := Round(DClickSpd * 0.001, 1)
@@ -582,7 +586,7 @@ Gui, Add, Hotkey, hwndhAbortKey vAbortKey, %AbortKey%
 Gui, Add, Hotkey, hwndhPauseKey vPauseKey, %PauseKey%
 
 Gui, Add, Text, -Wrap y+129 xm W100 H22 Section vRepeat, %w_Lang015%:
-Gui, Add, Edit, ys-3 x+5 W90 R1 vRept Number
+Gui, Add, Edit, ys-3 x+5 W90 R1 vRept
 Gui, Add, UpDown, vTimesM 0x80 Range0-999999999, 1
 Gui, Add, Button, -Wrap ys-4 x+0 W25 H23 hwndApplyT vApplyT gApplyT
 	ILButton(ApplyT, ResDllPath ":" 1)
@@ -734,37 +738,37 @@ DefineToolbars:
 ,	TB_Define(TbOSC, hTbOSC, hIL_Icons, FixedBar.OSC, FixedBar.OSCOpt)
 ,	TB_Edit(TbOSC, "ProgBarToggle", ShowProgBar)
 ,	RbMain := New Rebar(hRbMain)
-,	TB_Rebar(RbMain, 10, TbFile), TB_Rebar(RbMain, 11, TbRecPlay), TB_Rebar(RbMain, 12, TbSettings)
-,	RbMain.InsertBand(hAutoKey, 0, "", 13, w_Lang006, 50, 0, "", "", 50)
-,	RbMain.InsertBand(hTimesCh, 0, "FixedSize NoGripper", 14, w_Lang011 " (" t_Lang004 ")", 75, 0, "", "", 75)
-,	TB_Rebar(RbMain, 15, TbCommand, "Break")
-,	RbMain.InsertBand(hManKey, 0, "", 16, w_Lang007, 50, 0, "", "", 50)
-,	RbMain.InsertBand(hAbortKey, 0, "", 17, w_Lang008, 60, 0, "", "", 50)
-,	RbMain.InsertBand(hPauseKey, 0, "", 18, c_Lang003, 60, 0, "", "", 50)
-,	TB_Rebar(RbMain, 19, TbEdit, "Break"), RbMain.SetMaxRows(3)
+,	TB_Rebar(RbMain, 1, TbFile), TB_Rebar(RbMain, 2, TbRecPlay), TB_Rebar(RbMain, 3, TbSettings)
+,	RbMain.InsertBand(hAutoKey, 0, "", 4, w_Lang006, 50, 0, "", "", 50)
+,	RbMain.InsertBand(hTimesCh, 0, "FixedSize NoGripper", 11, w_Lang011 " (" t_Lang004 ")", 75, 0, "", "", 75)
+,	TB_Rebar(RbMain, 5, TbCommand, "Break")
+,	RbMain.InsertBand(hManKey, 0, "", 6, w_Lang007, 50, 0, "", "", 50)
+,	RbMain.InsertBand(hAbortKey, 0, "", 7, w_Lang008, 60, 0, "", "", 50)
+,	RbMain.InsertBand(hPauseKey, 0, "", 8, c_Lang003, 60, 0, "", "", 50)
+,	TB_Rebar(RbMain, 9, TbEdit, "Break"), RbMain.SetMaxRows(3)
 ,	TBHwndAll := [TbFile, TbRecPlay, TbSettings, TbCommand, TbEdit, TbPrev, TbPrevF, TbOSC]
-,	RBIndexTB := [10, 11, 12, 15, 19], RBIndexHK := [13, 16, 17, 18]
+,	RBIndexTB := [1, 2, 3, 5, 9], RBIndexHK := [4, 6, 7, 8]
 ,	Default_MainLayout := RbMain.GetLayout()
 If (MainLayout = "ERROR")
 	return
 Loop, 3
 	RbMain.SetLayout(MainLayout)
-RbMain.ShowBand(RbMain.IDToIndex(10), ShowBand10), RbMain.ShowBand(RbMain.IDToIndex(11), ShowBand11)
-,	RbMain.ShowBand(RbMain.IDToIndex(12), ShowBand12), RbMain.ShowBand(RbMain.IDToIndex(13), ShowBand13)
-,	RbMain.ShowBand(RbMain.IDToIndex(15), ShowBand15), RbMain.ShowBand(RbMain.IDToIndex(16), ShowBand16)
-,	RbMain.ShowBand(RbMain.IDToIndex(17), ShowBand17), RbMain.ShowBand(RbMain.IDToIndex(18), ShowBand18)
-,	RbMain.ShowBand(RbMain.IDToIndex(19), ShowBand19)
+RbMain.ShowBand(RbMain.IDToIndex(1), ShowBand1), RbMain.ShowBand(RbMain.IDToIndex(2), ShowBand2)
+,	RbMain.ShowBand(RbMain.IDToIndex(3), ShowBand3), RbMain.ShowBand(RbMain.IDToIndex(4), ShowBand4)
+,	RbMain.ShowBand(RbMain.IDToIndex(5), ShowBand5), RbMain.ShowBand(RbMain.IDToIndex(6), ShowBand6)
+,	RbMain.ShowBand(RbMain.IDToIndex(7), ShowBand7), RbMain.ShowBand(RbMain.IDToIndex(8), ShowBand8)
+,	RbMain.ShowBand(RbMain.IDToIndex(9), ShowBand9)
 ,	BtnsArray := [] 
 If (FileLayout <> "ERROR")
-	TB_Layout(TbFile, FileLayout, 10)
+	TB_Layout(TbFile, FileLayout, 1)
 If (RecPlayLayout <> "ERROR")
-	TB_Layout(TbRecPlay, RecPlayLayout, 11)
+	TB_Layout(TbRecPlay, RecPlayLayout, 2)
 If (SettingsLayout <> "ERROR")
-	TB_Layout(TbSettings, SettingsLayout, 12)
+	TB_Layout(TbSettings, SettingsLayout, 3)
 If (CommandLayout <> "ERROR")
-	TB_Layout(TbCommand, CommandLayout, 15)
+	TB_Layout(TbCommand, CommandLayout, 5)
 If (EditLayout <> "ERROR")
-	TB_Layout(TbEdit, EditLayout, 19)
+	TB_Layout(TbEdit, EditLayout, 9)
 return
 
 TbFile:
@@ -780,6 +784,13 @@ If (A_GuiEvent = "N")
 	,	ErrorLevel := TbPtr.OnNotify(A_EventInfo, MX, MY, bLabel, ID)
 	If (bLabel)
 		ShowMenu(bLabel, MX, MY)
+	If (ErrorLevel = 2) ; TBN_RESET
+	{
+		TB_Edit(TbFile, "Preview", ShowPrev), TB_Edit(TbSettings, "HideMainWin", HideMainWin)
+	,	TB_Edit(TbSettings, "OnScCtrl", OnScCtrl), TB_Edit(TbSettings, "CheckHkOn", KeepHkOn)
+	,	TB_Edit(TbSettings, "SetWin", (IfDirectContext = "None") ? 0 : 1)
+	,	TB_Edit(TbSettings, "SetJoyButton", JoyHK), TB_Edit(TbOSC, "ProgBarToggle", ShowProgBar)
+	}
 }
 return
 
@@ -8690,7 +8701,7 @@ GuiControl, 1:Disable, AutoKey
 If RegExMatch(o_AutoKey[A_List], "i)Joy\d+$")
 	GuiControl, 1:, JoyKey, % "|" o_AutoKey[A_List] "||"
 GuiControl, 1:Show, JoyKey
-aBand := RbMain.IDToIndex(13), RbMain.GetBand(aBand,,, bSize)
+aBand := RbMain.IDToIndex(4), RbMain.GetBand(aBand,,, bSize)
 ,	RbMain.ModifyBand(aBand, "Child", hJoyKey), RbMain.SetBandWidth(aBand, bSize)
 ,	ActivateHotkeys("", "", "", "", "", 1), TB_Edit(TbSettings, "WinKey", 0, 0)
 return
@@ -8702,7 +8713,7 @@ GuiControl, 1:Show, AutoKey
 GuiControl, 1:Hide, JoyKey
 GuiControl, 1:Enable, WinKey
 ActivateHotkeys(,,,,, 0), TB_Edit(TbSettings, "WinKey", 0, 1)
-,	aBand := RbMain.IDToIndex(13)
+,	aBand := RbMain.IDToIndex(4)
 ,	RbMain.GetBand(aBand,,, bSize,,,, cChild)
 If (cChild <> hAutoKey)
 	RbMain.ModifyBand(aBand, "Child", hAutoKey), RbMain.SetBandWidth(aBand, bSize)
@@ -9159,24 +9170,24 @@ bID := RBIndexTB[A_ThisMenuItemPos]
 ShowHideBandOn:
 tBand := RbMain.IDToIndex(bID), ShowBand%bID% := !ShowBand%bID%
 ,	RbMain.ShowBand(tBand, ShowBand%bID%)
-,	RbMain.ShowBand(RbMain.IDToIndex(10), ShowBand10)
-If (ShowBand10)
+,	RbMain.ShowBand(RbMain.IDToIndex(1), ShowBand1)
+If (ShowBand1)
 	Menu, ToolbarsMenu, Check, %v_lang009%
 Else
 	Menu, ToolbarsMenu, UnCheck, %v_lang009%
-If (ShowBand11)
+If (ShowBand2)
 	Menu, ToolbarsMenu, Check, %v_lang010%
 Else
 	Menu, ToolbarsMenu, UnCheck, %v_lang010%
-If (ShowBand12)
+If (ShowBand3)
 	Menu, ToolbarsMenu, Check, %v_lang011%
 Else
 	Menu, ToolbarsMenu, UnCheck, %v_lang011%
-If (ShowBand15)
+If (ShowBand5)
 	Menu, ToolbarsMenu, Check, %v_lang012%
 Else
 	Menu, ToolbarsMenu, UnCheck, %v_lang012%
-If (ShowBand19)
+If (ShowBand9)
 	Menu, ToolbarsMenu, Check, %v_lang013%
 Else
 	Menu, ToolbarsMenu, UnCheck, %v_lang013%
@@ -9186,19 +9197,19 @@ ShowHideBandHK:
 bID := RBIndexHK[A_ThisMenuItemPos]
 ,	tBand := RbMain.IDToIndex(bID), ShowBand%bID% := !ShowBand%bID%
 ,	RbMain.ShowBand(tBand, ShowBand%bID%)
-If (ShowBand13)
+If (ShowBand4)
 	Menu, HotkeyMenu, Check, %v_lang015%
 Else
-	Menu, HotkeyMenu, UnCheck, %v_lang009%
-If (ShowBand16)
+	Menu, HotkeyMenu, UnCheck, %v_lang015%
+If (ShowBand6)
 	Menu, HotkeyMenu, Check, %v_lang016%
 Else
 	Menu, HotkeyMenu, UnCheck, %v_lang016%
-If (ShowBand17)
+If (ShowBand7)
 	Menu, HotkeyMenu, Check, %v_lang017%
 Else
 	Menu, HotkeyMenu, UnCheck, %v_lang017%
-If (ShowBand18)
+If (ShowBand8)
 	Menu, HotkeyMenu, Check, %v_lang018%
 Else
 	Menu, HotkeyMenu, UnCheck, %v_lang018%
@@ -10201,7 +10212,9 @@ IfWinExist, ahk_id %PMCOSC%
 MainLayout := RbMain.GetLayout(), MacroLayout := RbMacro.GetLayout()
 ,	FileLayout := TbFile.Export(), RecPlayLayout := TbRecPlay.Export()
 ,	SettingsLayout := TbSettings.Export(), CommandLayout := TbCommand.Export()
-,	EditLayout := TbEdit.Export()
+,	EditLayout := TbEdit.Export(), ShowBands := ""
+Loop, 9
+	ShowBands .= ShowBand%A_Index% ","
 GoSub, WriteSettings
 IL_Destroy(hIL_Icons)
 Loop, %A_Temp%\PMC_*.ahk
@@ -10386,20 +10399,13 @@ Loop, Parse, ManKey, |
 return
 
 DefaultLayout:
-	ShowBand10 := 1
-,	ShowBand11 := 1
-,	ShowBand12 := 1
-,	ShowBand13 := 1
-,	ShowBand15 := 1
-,	ShowBand16 := 1
-,	ShowBand17 := 1
-,	ShowBand18 := 1
-,	ShowBand19 := 1
-,	TbFile.Reset(), TB_IdealSize(TbFile, 10)
-,	TbRecPlay.Reset(), TB_IdealSize(TbRecPlay, 11)
-,	TbSettings.Reset(), TB_IdealSize(TbSettings, 12)
-,	TbCommand.Reset(), TB_IdealSize(TbCommand, 15)
-,	TbEdit.Reset(), TB_IdealSize(TbEdit, 19)
+Loop, 9
+	ShowBand%A_Index% := 1
+	TbFile.Reset(), TB_IdealSize(TbFile, 1)
+,	TbRecPlay.Reset(), TB_IdealSize(TbRecPlay, 2)
+,	TbSettings.Reset(), TB_IdealSize(TbSettings, 3)
+,	TbCommand.Reset(), TB_IdealSize(TbCommand, 5)
+,	TbEdit.Reset(), TB_IdealSize(TbEdit, 9)
 ,	TB_Edit(TbFile, "Preview", ShowPrev)
 ,	TB_Edit(TbSettings, "HideMainWin", HideMainWin)
 ,	TB_Edit(TbSettings, "OnScCtrl", OnScCtrl)
@@ -10539,15 +10545,7 @@ IniWrite, %RecPlayLayout%, %IniFilePath%, ToolbarOptions, RecPlayLayout
 IniWrite, %SettingsLayout%, %IniFilePath%, ToolbarOptions, SettingsLayout
 IniWrite, %CommandLayout%, %IniFilePath%, ToolbarOptions, CommandLayout
 IniWrite, %EditLayout%, %IniFilePath%, ToolbarOptions, EditLayout
-IniWrite, %ShowBand10%, %IniFilePath%, ToolbarOptions, ShowBand10
-IniWrite, %ShowBand11%, %IniFilePath%, ToolbarOptions, ShowBand11
-IniWrite, %ShowBand12%, %IniFilePath%, ToolbarOptions, ShowBand12
-IniWrite, %ShowBand13%, %IniFilePath%, ToolbarOptions, ShowBand13
-IniWrite, %ShowBand15%, %IniFilePath%, ToolbarOptions, ShowBand15
-IniWrite, %ShowBand16%, %IniFilePath%, ToolbarOptions, ShowBand16
-IniWrite, %ShowBand17%, %IniFilePath%, ToolbarOptions, ShowBand17
-IniWrite, %ShowBand18%, %IniFilePath%, ToolbarOptions, ShowBand18
-IniWrite, %ShowBand19%, %IniFilePath%, ToolbarOptions, ShowBand19
+IniWrite, %ShowBands%, %IniFilePath%, ToolbarOptions, ShowBands
 return
 
 ;###########################################################
@@ -11097,24 +11095,24 @@ If ShowBarOnStart
 }
 If ShowPrev
 	Menu, ViewMenu, Check, %v_lang005%`t%_s%Ctrl+P
-If ShowBand10
+If ShowBand1
 	Menu, ToolbarsMenu, Check, %v_lang009%
-If ShowBand11
+If ShowBand2
 	Menu, ToolbarsMenu, Check, %v_lang010%
-If ShowBand12
+If ShowBand3
 	Menu, ToolbarsMenu, Check, %v_lang011%
-If ShowBand15
-	Menu, ToolbarsMenu, Check, %v_lang012%
-If ShowBand19
-	Menu, ToolbarsMenu, Check, %v_lang013%
-If ShowBand13
+If ShowBand4
 	Menu, HotkeyMenu, Check, %v_lang015%
-If ShowBand16
+If ShowBand5
+	Menu, ToolbarsMenu, Check, %v_lang012%
+If ShowBand6
 	Menu, HotkeyMenu, Check, %v_lang016%
-If ShowBand17
+If ShowBand7
 	Menu, HotkeyMenu, Check, %v_lang017%
-If ShowBand18
+If ShowBand8
 	Menu, HotkeyMenu, Check, %v_lang018%
+If ShowBand9
+	Menu, ToolbarsMenu, Check, %v_lang013%
 
 ; Menu Icons
 Menu, FileMenu, Icon, %f_Lang001%`t%_s%Ctrl+N, %ResDllPath%, 42
@@ -11361,11 +11359,11 @@ Gui, chMacro:ListView, InputList%A_List%
 GuiControl, 1:, Repeat, %w_Lang015%:
 GuiControl, 1:, DelayT, %w_Lang016%
 
-RbMain.ModifyBand(RbMain.IDToIndex(13), "Text", w_Lang006)
-, RbMain.ModifyBand(RbMain.IDToIndex(14), "Text", w_Lang011 " (" t_Lang004 ")")
-, RbMain.ModifyBand(RbMain.IDToIndex(16), "Text", w_Lang007)
-, RbMain.ModifyBand(RbMain.IDToIndex(17), "Text", w_Lang008)
-, RbMain.ModifyBand(RbMain.IDToIndex(18), "Text", c_Lang003)
+RbMain.ModifyBand(RbMain.IDToIndex(4), "Text", w_Lang006)
+, RbMain.ModifyBand(RbMain.IDToIndex(1), "Text", w_Lang011 " (" t_Lang004 ")")
+, RbMain.ModifyBand(RbMain.IDToIndex(6), "Text", w_Lang007)
+, RbMain.ModifyBand(RbMain.IDToIndex(7), "Text", w_Lang008)
+, RbMain.ModifyBand(RbMain.IDToIndex(8), "Text", c_Lang003)
 ; File
 TB_Edit(tbFile, "New", "", "", w_Lang040)
 , TB_Edit(tbFile, "Open", "", "", w_Lang041) , TB_Edit(tbFile, "Save", "", "", w_Lang042) 
