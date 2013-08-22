@@ -1485,7 +1485,7 @@ New:
 Gui, 1:+OwnDialogs
 If ((ListCount > 0) && (SavePrompt))
 {
-	MsgBox, 35, %d_Lang005%, %d_Lang002%`n`"%CurrentFileName%`"
+	MsgBox, 35, %d_Lang005%, % d_Lang002 "`n" (CurrentFileName ? """" CurrentFileName """" : "")
 	IfMsgBox, Yes
 		GoSub, Save
 	IfMsgBox, Cancel
@@ -1527,7 +1527,7 @@ Gui, 1:Submit, NoHide
 GoSub, SaveData
 If ((ListCount > 0) && (SavePrompt))
 {
-	MsgBox, 35, %d_Lang005%, %d_Lang002%`n`"%CurrentFileName%`"
+	MsgBox, 35, %d_Lang005%, % d_Lang002 "`n" (CurrentFileName ? """" CurrentFileName """" : "")
 	IfMsgBox, Yes
 	{
 		GoSub, Save
@@ -1547,7 +1547,7 @@ Open:
 Gui, 1:+OwnDialogs
 If ((ListCount > 0) && (SavePrompt))
 {
-	MsgBox, 35, %d_Lang005%, %d_Lang002%`n`"%CurrentFileName%`"
+	MsgBox, 35, %d_Lang005%, % d_Lang002 "`n" (CurrentFileName ? """" CurrentFileName """" : "")
 	IfMsgBox, Yes
 		GoSub, Save
 	IfMsgBox, Cancel
@@ -1724,7 +1724,7 @@ OpenRecent:
 Gui, 1:+OwnDialogs
 If ((ListCount > 0) && (SavePrompt))
 {
-	MsgBox, 35, %d_Lang005%, %d_Lang002%`n`"%CurrentFileName%`"
+	MsgBox, 35, %d_Lang005%, % d_Lang002 "`n" (CurrentFileName ? """" CurrentFileName """" : "")
 	IfMsgBox, Yes
 		GoSub, Save
 	IfMsgBox, Cancel
@@ -2390,7 +2390,7 @@ return
 DefaultMacro:
 If CurrentFileName = 
 {
-	MsgBox, 33, %d_Lang005%, %d_Lang002%`n`"%CurrentFileName%`"
+	MsgBox, 33, %d_Lang005%, % d_Lang002 "`n" (CurrentFileName ? """" CurrentFileName """" : "")
 	IfMsgBox, OK
 		GoSub, Save
 	IfMsgBox, Cancel
@@ -7708,7 +7708,7 @@ Gui, 1:+OwnDialogs
 Gui, 1:Submit, NoHide
 Gui, chMacro:Default
 RowSelection := LV_GetCount("Selected")
-If RowSelection = 0
+If (RowSelection = 0)
 {
 	MsgBox, 1, %d_Lang019%, %d_Lang020%
 	IfMsgBox, OK
@@ -7717,16 +7717,7 @@ If RowSelection = 0
 		return
 }
 Else
-{
-	RowNumber := 0
-	Loop
-	{
-		RowNumber := LV_GetNext(RowNumber - 1)
-		If !RowNumber
-			break
-		LV_Delete(RowNumber)
-	}
-}
+	LV_Rows.Delete()
 LV_Modify(LV_GetNext(0, "Focused"), "Select")
 GoSub, b_Start
 GoSub, RowCheck
@@ -9293,29 +9284,15 @@ return
 h_Del:
 Gui, chMacro:Default
 Gui, chMacro:ListView, InputList%A_List%
-RowNumber = 0
-Loop
-{
-	RowNumber := LV_GetNext(RowNumber - 1)
-	If !RowNumber
-		break
-	LV_Delete(RowNumber)
-}
-LV_Modify(LV_GetNext(0, "Focused"), "Select")
+RowNumber := 0, LV_Rows.Delete()
+,	LV_Modify(LV_GetNext(0, "Focused"), "Select")
 GoSub, RowCheck
 GoSub, b_Start
 return
 
 h_NumDel:
-RowNumber := 0
-Loop
-{
-	RowNumber := LV_GetNext(RowNumber - 1)
-	If !RowNumber
-		break
-	LV_Delete(RowNumber)
-}
-LV_Modify(LV_GetNext(0, "Focused"), "Select")
+RowNumber := 0, LV_Rows.Delete()
+,	LV_Modify(LV_GetNext(0, "Focused"), "Select")
 GoSub, RowCheck
 GoSub, b_Start
 return
@@ -10151,7 +10128,7 @@ Gui, chMacro:Default
 Gui, chMacro:ListView, InputList%A_List%
 If ((ListCount > 0) && (SavePrompt))
 {
-	MsgBox, 35, %d_Lang005%, %d_Lang002%`n`"%CurrentFileName%`"
+	MsgBox, 35, %d_Lang005%, % d_Lang002 "`n" (CurrentFileName ? """" CurrentFileName """" : "")
 	IfMsgBox, Yes
 	{
 		GoSub, Save
