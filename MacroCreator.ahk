@@ -578,7 +578,7 @@ Gui, Add, Hotkey, hwndhManKey vManKey gWaitKeys Limit190, % o_ManKey[1]
 Gui, Add, Hotkey, hwndhAbortKey vAbortKey, %AbortKey%
 Gui, Add, Hotkey, hwndhPauseKey vPauseKey, %PauseKey%
 
-Gui, Add, Text, -Wrap y+129 xm W100 H22 Section vRepeat, %w_Lang015%:
+Gui, Add, Text, -Wrap y+320 xm W100 H22 Section vRepeat, %w_Lang015%:
 Gui, Add, Edit, ys-3 x+5 W90 R1 vRept
 Gui, Add, UpDown, vTimesM 0x80 Range0-999999999, 1
 Gui, Add, Button, -Wrap ys-4 x+0 W25 H23 hwndApplyT vApplyT gApplyT
@@ -596,8 +596,9 @@ Gui, Add, Button, -Wrap ys-4 x+0 W25 H23 hwndApplyL vApplyL gApplyL
 Gui, Add, Button, -Wrap ys-4 x+5 W25 H23 hwndInsertKey vInsertKey gInsertKey
 	ILButton(InsertKey, ResDllPath ":" 94)
 Gui, Add, Text, W2 H25 ys-3 x+5 0x11 vSeparator3
-Gui, Add, Text, -Wrap ys-6 x+5 W100 vContextTip gSetWin cBlue, #IfWin: %IfDirectContext%
-Gui, Add, Text, -Wrap yp+16 W100 vCoordTip gOptions, CoordMode: %CoordMouse%
+Gui, Add, Text, -Wrap ys x+5 W90 vContextTip gSetWin cBlue, #IfWin: %IfDirectContext%
+Gui, Add, Text, W2 H25 ys-3 x+5 0x11 vSeparator4
+Gui, Add, Text, -Wrap ys x+5 W100 vCoordTip gOptions, CoordMode: %CoordMouse%
 GuiControl,, WinKey, % (InStr(o_AutoKey[1], "#")) ? 1 : 0
 Gui, Submit
 Gui, Show, %MainWinSize% Hide
@@ -10809,8 +10810,9 @@ GuiControl, 1:Move, InsertKey, % "y" GuiHeight-28
 GuiControl, 1:Move, Separator1, % "y" GuiHeight-27
 GuiControl, 1:Move, Separator2, % "y" GuiHeight-27
 GuiControl, 1:Move, Separator3, % "y" GuiHeight-27
-GuiControl, 1:MoveDraw, CoordTip, % "y" GuiHeight-14
-GuiControl, 1:MoveDraw, ContextTip, % "y" GuiHeight-30
+GuiControl, 1:Move, Separator4, % "y" GuiHeight-27
+GuiControl, 1:MoveDraw, ContextTip, % "y" GuiHeight-23
+GuiControl, 1:MoveDraw, CoordTip, % "y" GuiHeight-23
 return
 
 ;##### Subroutines: Substitution #####
