@@ -82,7 +82,6 @@ If A_OSVersion in WIN_2003,WIN_XP,WIN_2000
 			,	3: ["Commands/Pause.html", "Commands/Message.html", "Commands/KeyWait.html"]
 			,	4: ["p7-Settings.html", "p7-Settings.html#misc.", "p7-Settings.html#user-global-variables"]
 			,	5: ["Commands/Mouse.html"]
-			,	7: ["Commands/Special_Keys.html"]
 			,	8: ["Commands/Text.html"]
 			,	10: ["Commands/Run.html"]
 			,	11: ["Commands/Window.html"]
@@ -94,6 +93,7 @@ If A_OSVersion in WIN_2003,WIN_XP,WIN_2000
 			,	22: ["Commands/PostMessage_and_SendMessage.html"]
 			,	23: ["Commands/Control.html"]
 			,	24: ["Commands/Internet_Explorer.html", "Commands/COM_Interface.html", "Commands/Run_Scriptlet.html"]
+			,	26: ["Commands/Find_a_Command.html"]
 			,	30: ["Commands/COM_Interface.html"] }
 
 ,	RecOptChecks := ["ClearNewList", "Strokes", "CaptKDn", "Mouse", "MScroll"

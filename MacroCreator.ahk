@@ -7088,7 +7088,7 @@ If (A_ThisLabel <> "CmdFind")
 		GuiControl, 26:Disable, PTip
 }
 Else
-	Gui, 26:+Toolwindow
+	Gui, 26:+E0x00000400 +HwndCmdWin
 Gui, 26:Font, Bold
 Gui, 26:Add, Text, yp+5 -Wrap r1, %d_Lang074%:
 Gui, 26:Font
@@ -8063,20 +8063,20 @@ return
 InsertKey:
 Gui, 1:Submit, NoHide
 Gui, chMacro:Default
-Gui, 31:+owner1 -MinimizeBox +Delimiter¢ +HwndCmdWin
+Gui, 7:+owner1 -MinimizeBox +Delimiter¢ +HwndCmdWin
 Gui, 1:+Disabled
-Gui, 31:Add, Groupbox, Section W220 H100
-Gui, 31:Add, DDL, ys+15 xs+10 W200 vsKey, %KeybdList%
-Gui, 31:Add, Radio, Checked W200 vKeystroke, %t_Lang108%
-Gui, 31:Add, Radio, W200 vKeyDown, %t_Lang109%
-Gui, 31:Add, Radio, W200 vKeyUp, %t_Lang110%
-Gui, 31:Add, Button, -Wrap Section Default xm W75 H23 gInsertKeyOK, %c_Lang020%
-Gui, 31:Add, Button, -Wrap ys W75 H23 gInsertKeyCancel, %c_Lang021%
-Gui, 31:Show,, %t_Lang111%
+Gui, 7:Add, Groupbox, Section W220 H100
+Gui, 7:Add, DDL, ys+15 xs+10 W200 vsKey, %KeybdList%
+Gui, 7:Add, Radio, Checked W200 vKeystroke, %t_Lang108%
+Gui, 7:Add, Radio, W200 vKeyDown, %t_Lang109%
+Gui, 7:Add, Radio, W200 vKeyUp, %t_Lang110%
+Gui, 7:Add, Button, -Wrap Section Default xm W75 H23 gInsertKeyOK, %c_Lang020%
+Gui, 7:Add, Button, -Wrap ys W75 H23 gInsertKeyCancel, %c_Lang021%
+Gui, 7:Show,, %t_Lang111%
 return
 
 InsertKeyOK:
-Gui, 31:Submit, NoHide
+Gui, 7:Submit, NoHide
 If (KeyDown)
 	State := " Down"
 Else If (KeyUp)
@@ -8085,7 +8085,7 @@ Else
 	State := ""
 tKey := sKey, sKey := "{" sKey State "}"
 Gui, 1:-Disabled
-Gui, 31:Destroy
+Gui, 7:Destroy
 Gui, chMacro:Default
 RowSelection := LV_GetCount("Selected")
 If RowSelection = 0
@@ -8109,42 +8109,11 @@ GoSub, b_Start
 return
 
 InsertKeyCancel:
-31GuiClose:
-31GuiEscape:
+7GuiClose:
+7GuiEscape:
 Gui, 1:-Disabled
-Gui, 31:Destroy
+Gui, 7:Destroy
 return
-
-/*
-Gui, Submit, NoHide
-StringReplace, sInput, sInput, SC15D, AppsKey
-StringReplace, sInput, sInput, SC145, NumLock
-StringReplace, sInput, sInput, SC154, PrintScreen
-If sInput = 
-	return
-sKey := RegExReplace(sInput, "(.$)", "$l1"), tKey := sKey
-GoSub, Replace
-sKey := "{" sKey "}", RowSelection := LV_GetCount("Selected")
-If RowSelection = 0
-{
-	LV_Add("Check", ListCount%A_List%+1, tKey, sKey, 1, DelayG, cType1)
-	GoSub, b_Start
-	LV_Modify(ListCount%A_List%, "Vis")
-}
-Else
-{
-	RowNumber = 0
-	Loop, %RowSelection%
-	{
-		RowNumber := LV_GetNext(RowNumber)
-		LV_Insert(RowNumber, "Check", RowNumber, tKey, sKey, 1, DelayG, cType1)
-		RowNumber++
-	}
-}
-GoSub, RowCheck
-GoSub, b_Start
-return
-*/
 
 EditButton:
 Gui, 1:Submit, NoHide

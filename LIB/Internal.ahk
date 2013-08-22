@@ -104,7 +104,7 @@ CmdHelp()
 	Else
 		GuiControlGet, Pag,, TabControl
 	Title := ContHTitle[Gui][Pag ? Pag : 1]
-	If !Title
+	If ((!Title) || (WinActive("A") <> CmdWin))
 		Title := "index.html"
 	IfExist, MacroCreator_Help.chm
 		Run, hh.exe mk:@MSITStore:MacroCreator_Help.chm::/%Title%
