@@ -98,17 +98,17 @@
 	v_lang006 =	&Toolbar
 	v_lang007 =	&Hotkeys
 	v_lang008 =	O&bnoviť stĺpce veľkosť
-	v_lang009 =	&Berkas
-	v_lang010 =	&Merekam  Memutar
+	v_lang009 =	B&erkas
+	v_lang010 =	Nah&rávať a prehrávať
 	v_lang011 =	&Pilihan
-	v_lang012 =	P&erintah
-	v_lang013 =	Me&ngedit
-	v_lang014 =	&Vlastné
-	v_lang015 =	&Automatický
-	v_lang016 =	Man&uál
+	v_lang012 =	Per&intah
+	v_lang013 =	&Mengedit
+	v_lang014 =	V&lastné
+	v_lang015 =	A&utomatický
+	v_lang016 =	Manu&ál
 	v_lang017 =	&Stop
-	v_lang018 =	Pau&za
-	v_lang019 =	&Obnoviť Predvolené Nastavenia
+	v_lang018 =	Pauza
+	v_lang019 =	Obnovi&ť Predvolené Nastavenia
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Nastavenie

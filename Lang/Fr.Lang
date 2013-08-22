@@ -99,16 +99,16 @@
 	v_lang007 =	Ra&ccourcis Clavier
 	v_lang008 =	R&éinitialiser Taille colonnes
 	v_lang009 =	&Fichier
-	v_lang010 =	&Enregistrer Et Jouer
-	v_lang011 =	&Les Options
-	v_lang012 =	&Commandes
+	v_lang010 =	E&nregistrement et lecture
+	v_lang011 =	Le&s Options
+	v_lang012 =	C&ommandes
 	v_lang013 =	&Éditer
 	v_lang014 =	&Personnaliser
-	v_lang015 =	&Automatique
+	v_lang015 =	A&utomatique
 	v_lang016 =	&Manuel
-	v_lang017 =	A&rrêter
-	v_lang018 =	Pa&use
-	v_lang019 =	R&éinitialiser Par Défaut
+	v_lang017 =	Arr&êter
+	v_lang018 =	Pause
+	v_lang019 =	Ré&initialiser Par Défaut
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Réglages

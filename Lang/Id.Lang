@@ -98,16 +98,16 @@
 	v_lang006 =	&Toolbar
 	v_lang007 =	&Hotkeys
 	v_lang008 =	&Ulang Kolom Ukuran
-	v_lang009 =	&Berkas
-	v_lang010 =	&Merekam  Memutar
-	v_lang011 =	&Pilihan
-	v_lang012 =	P&erintah
-	v_lang013 =	Me&ngedit
+	v_lang009 =	B&erkas
+	v_lang010 =	&Rekam dan Putar
+	v_lang011 =	P&ilihan
+	v_lang012 =	Peri&ntah
+	v_lang013 =	&Mengedit
 	v_lang014 =	&Sesuaikan
 	v_lang015 =	&Otomatis
 	v_lang016 =	Pe&doman
-	v_lang017 =	Be&rhenti
-	v_lang018 =	Ber&henti sebentar
+	v_lang017 =	Berhenti
+	v_lang018 =	Berhenti sebentar
 	v_lang019 =	De&fault Reset
 		
 ; Options Sub Menu		

@@ -99,16 +99,16 @@
 	v_lang007 =	&Hotkeys
 	v_lang008 =	&Reset Saiz Lajur
 	v_lang009 =	&Fail
-	v_lang010 =	&Rekod Play
-	v_lang011 =	&Pilihan
-	v_lang012 =	&Arahan
+	v_lang010 =	R&akam dan Main
+	v_lang011 =	Pi&lihan
+	v_lang012 =	Araha&n
 	v_lang013 =	&Edit
 	v_lang014 =	&Menyesuaikan
 	v_lang015 =	A&utomatik
-	v_lang016 =	Ma&nual
-	v_lang017 =	&Hentikan
+	v_lang016 =	Manual
+	v_lang017 =	Hentikan
 	v_lang018 =	&Jeda
-	v_lang019 =	Re&set Default
+	v_lang019 =	Reset &Default
 		
 ; Options Sub Menu		
 	o_Lang001 =	Tetapan

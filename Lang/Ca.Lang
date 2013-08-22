@@ -98,17 +98,17 @@
 	v_lang006 =	Ba&rres D'eines
 	v_lang007 =	&Tecles D'accés Ràpid
 	v_lang008 =	R&establir mida de les columnes
-	v_lang009 =	&Expedient
-	v_lang010 =	&Gravar I Reproduir
+	v_lang009 =	E&xpedient
+	v_lang010 =	&Gravar i reproduir
 	v_lang011 =	&Opcions
-	v_lang012 =	O&rdres
+	v_lang012 =	Or&dres
 	v_lang013 =	&Modifica
 	v_lang014 =	&Personalitzar
-	v_lang015 =	&Automàtic
+	v_lang015 =	A&utomàtic
 	v_lang016 =	Ma&nual
-	v_lang017 =	A&turi
-	v_lang018 =	Pa&usa
-	v_lang019 =	Re&stablir Per Defecte
+	v_lang017 =	Atur&i
+	v_lang018 =	Pausa
+	v_lang019 =	Restab&lir Per Defecte
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Configuració

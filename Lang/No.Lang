@@ -98,17 +98,17 @@
 	v_lang006 =	&Verktøylinjer
 	v_lang007 =	&Hurtigtaster
 	v_lang008 =	&Tilbakestille kolonner størrelse
-	v_lang009 =	&Fil
-	v_lang010 =	&Ta Opp Og Spille Av
-	v_lang011 =	&Alternativer
-	v_lang012 =	&Kommandoer
+	v_lang009 =	Fi&l
+	v_lang010 =	Ta &opp og spille
+	v_lang011 =	Alt&ernativer
+	v_lang012 =	Komma&ndoer
 	v_lang013 =	&Redigere
-	v_lang014 =	T&ilpass
+	v_lang014 =	Til&pass
 	v_lang015 =	A&utomatisk
-	v_lang016 =	&Manuell
+	v_lang016 =	Manuell
 	v_lang017 =	&Stopp
-	v_lang018 =	&Pause
-	v_lang019 =	Ti&lbakestille Standard
+	v_lang018 =	Pause
+	v_lang019 =	Til&bakestille Standard
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Innstillinger

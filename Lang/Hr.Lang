@@ -99,16 +99,16 @@
 	v_lang007 =	&Hotkeys
 	v_lang008 =	V&eličina Reset Kolumne
 	v_lang009 =	&File
-	v_lang010 =	&Snimanje I Reprodukciju
+	v_lang010 =	&Snimanje i reprodukciju
 	v_lang011 =	&Mogućnosti
 	v_lang012 =	&Naredbe
-	v_lang013 =	&Uredi
-	v_lang014 =	&Prilagodite
-	v_lang015 =	&Automatski
-	v_lang016 =	P&riručnik
-	v_lang017 =	S&top
+	v_lang013 =	U&redi
+	v_lang014 =	Pri&lagodite
+	v_lang015 =	Au&tomatski
+	v_lang016 =	Priru&čnik
+	v_lang017 =	St&op
 	v_lang018 =	Pau&za
-	v_lang019 =	R&esetirati Zadani Skup
+	v_lang019 =	Resetirati Za&dani Skup
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Postavke

@@ -99,16 +99,16 @@
 	v_lang007 =	&Tasti Di Scelta Rapida
 	v_lang008 =	R&ipristina dimensioni Colonne
 	v_lang009 =	&File
-	v_lang010 =	&Registrare E Riprodurre
+	v_lang010 =	R&egistrare e riprodurre
 	v_lang011 =	&Opzioni
-	v_lang012 =	&Comandi
-	v_lang013 =	&Modificare
+	v_lang012 =	Co&mandi
+	v_lang013 =	Modificare
 	v_lang014 =	&Personalizzare
-	v_lang015 =	&Automatica
+	v_lang015 =	A&utomatica
 	v_lang016 =	Ma&nuale
-	v_lang017 =	Arr&esto
-	v_lang018 =	Pa&usa
-	v_lang019 =	R&ipristino Di Default
+	v_lang017 =	Arresto
+	v_lang018 =	Pausa
+	v_lang019 =	Ripristino Di Defau&lt
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Impostazioni

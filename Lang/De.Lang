@@ -99,16 +99,16 @@
 	v_lang007 =	&Hotkeys
 	v_lang008 =	S&paltengröße zurücksetzen 
 	v_lang009 =	&Datei
-	v_lang010 =	&Aufzeichnen  Play
+	v_lang010 =	&Aufnahme und Wiedergabe
 	v_lang011 =	&Optionen
 	v_lang012 =	&Befehle
-	v_lang013 =	B&earbeiten
+	v_lang013 =	Bea&rbeiten
 	v_lang014 =	A&npassen
 	v_lang015 =	A&utomatische
-	v_lang016 =	&Handbuch
-	v_lang017 =	&Stopp
-	v_lang018 =	&Pause
-	v_lang019 =	S&tandard Zurücksetzen
+	v_lang016 =	Handbu&ch
+	v_lang017 =	S&topp
+	v_lang018 =	Pause
+	v_lang019 =	Standard Zur&ücksetzen
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Einstellungen

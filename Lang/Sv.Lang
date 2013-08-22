@@ -98,17 +98,17 @@
 	v_lang006 =	&Verktygsfält
 	v_lang007 =	&Snabbtangenter
 	v_lang008 =	&Återställ kolumner Storlek
-	v_lang009 =	&Fil
-	v_lang010 =	&Spela In Och Spela Upp
-	v_lang011 =	&Alternativ
-	v_lang012 =	&Kommandon
+	v_lang009 =	Fi&l
+	v_lang010 =	S&pela in och spela
+	v_lang011 =	Al&ternativ
+	v_lang012 =	K&ommandon
 	v_lang013 =	&Redigera
 	v_lang014 =	A&npassa
 	v_lang015 =	A&utomatisk
-	v_lang016 =	&Manuell
-	v_lang017 =	S&topp
-	v_lang018 =	&Paus
-	v_lang019 =	&Återställ Default
+	v_lang016 =	Manu&ell
+	v_lang017 =	Stopp
+	v_lang018 =	Paus
+	v_lang019 =	Återst&äll Default
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Inställningar

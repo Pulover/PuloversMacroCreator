@@ -99,16 +99,16 @@
 	v_lang007 =	&Teclas De Acceso Rápido
 	v_lang008 =	&Cambiar Tamaño Columnas
 	v_lang009 =	&Expediente
-	v_lang010 =	&Grabar Y Reproducir
+	v_lang010 =	&Grabar y reproducir
 	v_lang011 =	&Opciones
-	v_lang012 =	&Comandos
-	v_lang013 =	E&ditar
-	v_lang014 =	&Personalizar
-	v_lang015 =	&Automático
-	v_lang016 =	&Manual
-	v_lang017 =	De&tener
-	v_lang018 =	Pa&usa
-	v_lang019 =	&Restablecer Por Defecto
+	v_lang012 =	Co&mandos
+	v_lang013 =	Ed&itar
+	v_lang014 =	Perso&nalizar
+	v_lang015 =	A&utomático
+	v_lang016 =	Manua&l
+	v_lang017 =	Detener
+	v_lang018 =	Pausa
+	v_lang019 =	Restablecer Por De&fecto
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Configuración

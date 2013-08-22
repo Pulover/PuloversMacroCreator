@@ -98,17 +98,17 @@
 	v_lang006 =	&Værktøjslinjer
 	v_lang007 =	&Genvejstaster
 	v_lang008 =	&Nulstil Kolonner Size
-	v_lang009 =	&Fil
-	v_lang010 =	&Optage Og Afspille
+	v_lang009 =	Fi&l
+	v_lang010 =	&Optage og afspille
 	v_lang011 =	O&ptioner
-	v_lang012 =	&Kommandoer
+	v_lang012 =	Ko&mmandoer
 	v_lang013 =	&Redigere
 	v_lang014 =	&Tilpas
-	v_lang015 =	&Automatisk
-	v_lang016 =	&Manual
+	v_lang015 =	A&utomatisk
+	v_lang016 =	Manual
 	v_lang017 =	&Stands
-	v_lang018 =	Pa&use
-	v_lang019 =	&Nulstille Standard
+	v_lang018 =	Pause
+	v_lang019 =	Nulstille Stan&dard
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Indstillinger

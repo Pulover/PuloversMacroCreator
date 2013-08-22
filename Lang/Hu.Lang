@@ -99,16 +99,16 @@
 	v_lang007 =	&Gyorsbillentyűk
 	v_lang008 =	&Visszaállítás oszlopok méret
 	v_lang009 =	&Reszelő
-	v_lang010 =	&Felvenni És Lejátszani
-	v_lang011 =	&Lehetőségek
+	v_lang010 =	R&ögzítése és lejátszása
+	v_lang011 =	Le&hetőségek
 	v_lang012 =	&Parancsok
-	v_lang013 =	&Szerkeszt
+	v_lang013 =	S&zerkeszt
 	v_lang014 =	&Testreszabása
 	v_lang015 =	&Automatikus
-	v_lang016 =	&Kézi
-	v_lang017 =	&Megáll
-	v_lang018 =	S&zünet
-	v_lang019 =	&Vissza Az Alapértelmezett
+	v_lang016 =	K&ézi
+	v_lang017 =	Meg&áll
+	v_lang018 =	Sz&ünet
+	v_lang019 =	V&issza Az Alapértelmezett
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Beállítások
