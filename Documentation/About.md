@@ -49,6 +49,7 @@ Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jör
 * Added translations to Malay and Vietnamese.
 * Added *Portable Install* option in installer.
 * Main window size is remembered.
+* Fixed bugs and issues.
 
 ## Version 3.8.4
 

@@ -68,8 +68,8 @@
 			,	o_TimesG[TabCount] := (Opt[4] <> "") ? Opt[4] : 1
 			,	CoordMouse := (Opt[5] <> "") ? Opt[5] : CoordMouse
 			,	OnFinishCode := (Opt[6] <> "") ? Opt[6] : 1
-			,	HistoryMacro%TabCount% := new RowsData()
-				HistoryMacro%TabCount%.Add()
+			,	HistoryMacro%TabCount% := new LV_Rows()
+			,	HistoryMacro%TabCount%.Add()
 			}
 		}
 		If (TabCount = 0)

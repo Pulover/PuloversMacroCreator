@@ -7753,7 +7753,7 @@ Gui, 1:Submit, NoHide
 TabCount++
 GuiCtrlAddTab(TabSel, "Macro" TabCount)
 Gui, chMacro:ListView, InputList%TabCount%
-HistoryMacro%TabCount% := new LV_Rows(), HistoryMacro%TabCount%.Slot[1] := ""
+HistoryMacro%TabCount% := new LV_Rows(), HistoryMacro%TabCount%.Add()
 Gui, chMacro:ListView, InputList%A_List%
 GuiAddLV(TabCount)
 GuiControl, chMacro:Choose, A_List, %TabCount%
@@ -10652,14 +10652,14 @@ Loop, % LV_GetCount()
 :	(Type = cType15) ? LV_Modify(A_Index, "Icon" 3)
 :	(Type = cType16) ? LV_Modify(A_Index, "Icon" 28)
 :	(Action = "[Control]") ? LV_Modify(A_Index, "Icon" 7)
-:	RegExMatch(Type, cType32 "|" cType33) ? LV_Modify(A_Index, "Icon" 26)
 :	(Type = cType34) ? LV_Modify(A_Index, "Icon" 4)
 :	(Type = cType42) ? LV_Modify(A_Index, "Icon" 77)
 :	(Type = cType43) ? LV_Modify(A_Index, "Icon" 34)
 :	(Type = cType35) ? LV_Modify(A_Index, "Icon" 35)
 :	RegExMatch(Type, cType36 "|" cType37) ? LV_Modify(A_Index, "Icon" 22)
 :	LV_Modify(A_Index, "Icon" 71)
-	RegExMatch(Type, "Process") ? LV_Modify(A_Index, "Icon" 51)
+	RegExMatch(Type, cType32 "|" cType33) ? LV_Modify(A_Index, "Icon" 26)
+:	RegExMatch(Type, "Process") ? LV_Modify(A_Index, "Icon" 51)
 :	RegExMatch(Type, "Shutdown") ? LV_Modify(A_Index, "Icon" 63)
 :	(InStr(Type, "Sort") || InStr(Type, "String") || InStr(Type, "Split")) ? LV_Modify(A_Index, "Icon" 5)
 :	(InStr(Type, "InputBox") || InStr(Type, "Msg") || InStr(Type, "Tip")
