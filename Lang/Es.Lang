@@ -321,7 +321,7 @@
 	c_Lang088 =	Borrar
 	c_Lang089 =	Nombre de la función
 	c_Lang090 =	Parámetros separados por comas (sin paréntesis).
-	c_Lang091 =	(Utilice `% para las variables. Las comas literal debe ser escapado [```,])
+	c_Lang091 =	(Utilice `% para las variables. Las comas literal debe ser escapado [ ```, ])
 	c_Lang092 =	Página Elemento / Índice
 	c_Lang093 =	Establecer
 	c_Lang094 =	Obtener

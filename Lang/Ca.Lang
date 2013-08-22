@@ -321,7 +321,7 @@
 	c_Lang088 =	Reajustar
 	c_Lang089 =	Nom de la funció
 	c_Lang090 =	Paràmetres separats per comes (sense parèntesis).
-	c_Lang091 =	(Utilitza `% per a variables. Han escapar comes literals [```,])
+	c_Lang091 =	(Utilitza `% per a variables. Han escapar comes literals [ ```, ])
 	c_Lang092 =	Element de pàgina / Índex
 	c_Lang093 =	Establir
 	c_Lang094 =	Aconseguir

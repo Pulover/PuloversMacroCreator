@@ -321,7 +321,7 @@
 	c_Lang088 =	Obnoviť
 	c_Lang089 =	Funkcia Meno
 	c_Lang090 =	Hodnôt oddelených čiarkami (bez zátvoriek).
-	c_Lang091 =	(Použite `% libier za premenné. Doslovné Čiarky musia byť sprevádzané [```,])
+	c_Lang091 =	(Použite `% libier za premenné. Doslovné Čiarky musia byť sprevádzané [ ```, ])
 	c_Lang092 =	Page Element / Index
 	c_Lang093 =	Sada
 	c_Lang094 =	Dostať
@@ -679,7 +679,7 @@
 		Pozrite sa na "Capture" Keys možnosť zadať kľúče a kombinácie do makra priamo z hlavného okna.
 		Enter a ich kombinácie v poli Hotkey dolu a stlačte tlačidlo Vložiť a pridať ich do vybraných riadkov.
 		Ak žiadne položky sú označené editačné tlačidlá platí pre všetky riadky v zozname.
-		Môžete priradiť svoje vlastné premenné v premennej windows (Vložiť> if / premennej / funkcie). Ak chcete používať je vnútri príkazy názov premennej uzavrite v percentách znaky, napr: `% MyVar `%.
+		Môžete priradiť svoje vlastné premenné v premennej windows (Vložiť> if / premennej / funkcie). Ak chcete používať je vnútri príkazy názov premennej uzavrite v percentách znaky, napr: `%MyVar`%.
 		Loop počítadlo v hornej časti stanovuje celkový počet slučiek pre vybrané makro.
 		Môžete upraviť riadok poklepaním, alebo jeho výberom a kliknutím na tlačidlo Upraviť tlačidlá v dolnej časti.
 		Tu môžete editovať viac vybraných riadkov pomocou voľby v editačnom riadku v dolnej časti.

@@ -261,16 +261,6 @@ IniRead, CommandLayout, %IniFilePath%, ToolbarOptions, CommandLayout
 IniRead, EditLayout, %IniFilePath%, ToolbarOptions, EditLayout
 IniRead, ShowBands, %IniFilePath%, ToolbarOptions, ShowBands, 1,1,1,1,1,1,1,1,1
 
-; IniRead, ShowBand10, %IniFilePath%, ToolbarOptions, ShowBand10, 1
-; IniRead, ShowBand11, %IniFilePath%, ToolbarOptions, ShowBand11, 1
-; IniRead, ShowBand12, %IniFilePath%, ToolbarOptions, ShowBand12, 1
-; IniRead, ShowBand13, %IniFilePath%, ToolbarOptions, ShowBand13, 1
-; IniRead, ShowBand15, %IniFilePath%, ToolbarOptions, ShowBand15, 1
-; IniRead, ShowBand16, %IniFilePath%, ToolbarOptions, ShowBand16, 1
-; IniRead, ShowBand17, %IniFilePath%, ToolbarOptions, ShowBand17, 1
-; IniRead, ShowBand18, %IniFilePath%, ToolbarOptions, ShowBand18, 1
-; IniRead, ShowBand19, %IniFilePath%, ToolbarOptions, ShowBand19, 1
-
 If (Version < 4)
 	ShowTips := 1
 
@@ -295,6 +285,7 @@ LangCodes := {	Id: ["0421"]
 			,	Sk: ["041b"]
 			,	Fi: ["040b"]
 			,	Sv: ["041d","081d"]
+			,	Vi: ["042a"]
 			,	Tr: ["041f"]
 			,	Cs: ["0405"]
 			,	El: ["0408"]
@@ -347,6 +338,7 @@ CurrentLang := Lang
 ,	Lang_Sk := "Slovenčina`t(Slovak)"
 ,	Lang_Fi := "Suomi`t(Finnish)"
 ,	Lang_Sv := "Svenska`t(Swedish)"
+,	Lang_Vi := "Tiếng Việt`t(Vietnamese)"
 ,	Lang_Tr := "Türkçe`t(Turkish)"
 ,	Lang_Cs := "Čeština`t(Czech)"
 ,	Lang_El := "ελληνικά`t(Greek)"
@@ -358,9 +350,9 @@ CurrentLang := Lang
 ,	Lang_Zt := "中文(繁體)`t(Chinese Traditional)"
 ,	Lang_Ja := "日本語`t(Japanese)"
 ,	Lang_Ko := "한국어`t(Korean)"
-,	Lang_All :=
+,	Lang_All := "
 (Join|
-"Bahasa Indonesia`t(Indonesian)=Id
+Bahasa Indonesia`t(Indonesian)=Id
 Bahasa Malaysia`t(Malay)=Ms
 Català`t(Catalan)=Ca
 Dansk`t(Danish﻿)=Da
@@ -379,6 +371,7 @@ Slovenski`t(Slovenian)=Sl
 Slovenčina`t(Slovak)=Sk
 Suomi`t(Finnish)=Fi
 Svenska`t(Swedish)=Sv
+Tiếng Việt`t(Vietnamese)=Vi
 Türkçe`t(Turkish)=Tr
 Čeština`t(Czech)=Cs
 ελληνικά`t(Greek)=El
@@ -389,8 +382,8 @@ Türkçe`t(Turkish)=Tr
 中文(简体)`t(Chinese Simplified)=Zh
 中文(繁體)`t(Chinese Traditional)=Zt
 日本語`t(Japanese)=Ja
-한국어`t(Korean)=Ko"
-)
+한국어`t(Korean)=Ko
+)"
 
 AppName := "Pulover's Macro Creator"
 ,	HeadLine := "; This script was created using Pulover's Macro Creator"
@@ -7075,12 +7068,12 @@ If (A_ThisLabel <> "CmdFind")
 	Gui, 26:Add, Button, Section -Wrap xm+60 W75 H23 gDonatePayPal, %d_Lang070%
 	Gui, 26:Add, Button, -Wrap ys W75 H23 gTipClose3, %d_Lang071%
 	Gui, 26:Add, Checkbox, -Wrap Checked%ShowTips% xm y+20 W220 vShowTips R1, %d_Lang067%
-	Gui, 26:Add, Text, x+10 ym h245 0x11
+	Gui, 26:Add, Text, x+10 ym h255 0x11
 	Gui, 26:Add, Pic, x+1 ym Icon73, %ResDllPath%
 	Gui, 26:Add, Text, Section yp x+10, %d_Lang068%%A_Space%
 	Gui, 26:Add, Text, yp x+0 vCurrTip, %NextTip%%A_Space%%A_Space%%A_Space%
 	Gui, 26:Add, Text, yp x+0, / %MaxTips%
-	Gui, 26:Add, Edit, xs W350 r5 vTipDisplay ReadOnly -0x200000 -E0x200, % StartTip_%NextTip%
+	Gui, 26:Add, Edit, xs W350 r6 vTipDisplay ReadOnly -0x200000 -E0x200, % StartTip_%NextTip%
 	Gui, 26:Add, Button, Section -Wrap y+0 W90 H25 vPTip gPrevTip, %d_Lang022%
 	Gui, 26:Add, Button, -Wrap yp x+5 W90 H25 vNTip gNextTip, %d_Lang021%
 	Gui, 26:Add, Text, xs-30 w380 0x10
@@ -11358,9 +11351,9 @@ Gui, chMacro:ListView, InputList%A_List%
 
 GuiControl, 1:, Repeat, %w_Lang015%:
 GuiControl, 1:, DelayT, %w_Lang016%
-
+GuiControl, 1:-Redraw, cRbMain
 RbMain.ModifyBand(RbMain.IDToIndex(4), "Text", w_Lang006)
-, RbMain.ModifyBand(RbMain.IDToIndex(1), "Text", w_Lang011 " (" t_Lang004 ")")
+, RbMain.ModifyBand(RbMain.IDToIndex(11), "Text", w_Lang011 " (" t_Lang004 ")")
 , RbMain.ModifyBand(RbMain.IDToIndex(6), "Text", w_Lang007)
 , RbMain.ModifyBand(RbMain.IDToIndex(7), "Text", w_Lang008)
 , RbMain.ModifyBand(RbMain.IDToIndex(8), "Text", c_Lang003)
@@ -11413,6 +11406,7 @@ TB_Edit(tbOSC, "OSPlay", "", "", t_Lang112), TB_Edit(tbOSC, "OSStop", "", "", t_
 FixedBar.Text := ["OpenT=" t_Lang126 ":43", "SaveT=" t_Lang127 ":60"
 				, "", "CutT=" t_Lang128 ":9", "CopyT=" t_Lang129 ":8", "PasteT=" t_Lang130 ":45"
 				, "", "SelAllT=" t_Lang131 ":5", "RemoveT=" t_Lang132 ":10"]
+GuiControl, 1:+Redraw, cRbMain
 
 Gui 18:+LastFoundExist
 IfWinExist
@@ -11598,6 +11592,7 @@ return
 #Include Lang\Sk.lang
 #Include Lang\Fi.lang
 #Include Lang\Sv.lang
+#Include Lang\Vi.lang
 #Include Lang\Tr.lang
 #Include Lang\Cs.lang
 #Include Lang\El.lang

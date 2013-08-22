@@ -1,0 +1,1000 @@
+﻿LoadLang_Vi:
+		
+		; Vietnamese
+		
+; Main Menu		
+	m_Lang001 =	&Tập tin
+	m_Lang002 =	&Chèn
+	m_Lang003 =	C&họn
+	m_Lang004 =	Ch&ỉnh sửa
+	m_Lang005 =	&Vĩ mô
+	m_Lang006 =	&Xem
+	m_Lang007 =	T&ùy chọn
+	m_Lang008 =	&Ngôn ngư
+	m_Lang009 =	T&ặng
+	m_Lang010 =	&Giúp
+		
+; File Sub Menu		
+	f_Lang001 =	&Mới
+	f_Lang002 =	M&ở
+	f_Lang003 =	&Tiết kiệm
+	f_Lang004 =	&Save As
+	f_Lang005 =	T&ập tin gần đây
+	f_Lang006 =	&Xuất khẩu sang AHK
+	f_Lang007 =	X&em trước Script
+	f_Lang008 =	&Danh sách các biến
+	f_Lang009 =	&Ra
+	f_Lang010 =	&Không có tập tin
+		
+; Insert Sub Menu		
+	i_Lang001 =	&Chuột
+	i_Lang002 =	&Văn bản
+	i_Lang003 =	&Kiểm soát
+	i_Lang004 =	&Tạm dừng
+	i_Lang005 =	T&in nhắn
+	i_Lang006 =	C&hờ chính
+	i_Lang007 =	C&ửa sổ
+	i_Lang008 =	H&ình ảnh / Pixel Tìm kiếm
+	i_Lang009 =	Ch&ạy / File / String / Misc.
+	i_Lang010 =	V&òng lặp
+	i_Lang011 =	&Goto
+	i_Lang012 =	&Nhãn
+	i_Lang013 =	N&ếu báo cáo
+	i_Lang014 =	&Biến
+	i_Lang015 =	Ch&ức năng
+	i_Lang016 =	Int&ernet Explorer
+	i_Lang017 =	C&OM giao diện
+	i_Lang018 =	Chạ&y Scriptlet
+	i_Lang019 =	Tin nh&ắn cửa sổ
+	i_Lang020 =	Tì&m một lệnh
+		
+; Select Sub Menu		
+	s_Lang001 =	&Chọn tất cả
+	s_Lang002 =	C&họn None
+	s_Lang003 =	&Đảo ngược lựa chọn
+	s_Lang004 =	&Kiểm tra chọn
+	s_Lang005 =	&Bỏ chọn
+	s_Lang006 =	Đ&ảo ngược Kiểm tra
+	s_Lang007 =	&Loại lựa chọn
+	s_Lang008 =	L&ệnh
+		
+; Edit Sub Menu		
+	e_Lang001 =	&Bản sao
+	e_Lang002 =	&Sửa Bình luận
+	e_Lang003 =	&Tìm / Thay thế
+	e_Lang004 =	S&ao chép vào ...
+	e_Lang005 =	&Lùi lại
+	e_Lang006 =	L&àm lại
+	e_Lang007 =	&Cắt
+	e_Lang008 =	Sa&o chép
+	e_Lang009 =	&Dán
+	e_Lang010 =	&Xóa
+	e_Lang011 =	&Move Up
+	e_Lang012 =	Mo&ve Down
+	e_Lang013 =	C&hèn từ Box
+	e_Lang014 =	S&ửa Màu Đánh dấu
+		
+; Macro Sub Menu		
+	r_lang001 =	&Record Macro
+	r_lang002 =	&Kích hoạt Macro
+	r_lang003 =	&Chơi vĩ mô hiện tại
+	r_lang004 =	&Hẹn giờ
+	r_lang005 =	&Thêm vĩ mô
+	r_lang006 =	&Gần vĩ mô
+	r_lang007 =	&Bản sao vĩ mô
+	r_lang008 =	&Nhập khẩu vĩ mô
+	r_lang009 =	&Lưu vĩ mô hiện tại
+	r_lang010 =	H&otkeys bối cảnh nhạy cảm
+	r_lang011 =	Ch&ơi từ Row chọn
+	r_lang012 =	Chơ&i cho đến khi hàng được chọn
+	r_lang013 =	Chơi &dòng chọn
+		
+; View Sub Menu		
+	v_lang001 =	Always On Top
+	v_lang002 =	Hàng nổi bật
+	v_lang003 =	Thụt đầu dòng
+	v_lang004 =	Thanh công cụ điều khiển
+	v_lang005 =	Xem trước
+	v_lang006 =	Thanh công cụ
+	v_lang007 =	Phím nóng
+	v_lang008 =	Thiết lập lại Cột Kích
+	v_lang009 =	Tập tin
+	v_lang010 =	Ghi lại chơi
+	v_lang011 =	Tùy chọn
+	v_lang012 =	Lệnh
+	v_lang013 =	Chỉnh sửa
+	v_lang014 =	Tùy chỉnh
+	v_lang015 =	Tự động
+	v_lang016 =	Hướng dẫn sử dụng
+	v_lang017 =	Thôi
+	v_lang018 =	Tạm dừng
+	v_lang019 =	Mặc định thiết lập lại
+		
+; Options Sub Menu		
+	o_Lang001 =	Cài đặt
+	o_Lang002 =	Thiết lập như Hotkeys Mặc định
+	o_Lang003 =	Thiết lập như mặc định file
+	o_Lang004 =	Gỡ bỏ mặc định file
+	o_Lang005 =	Các phím tắt mặc định
+	o_Lang006 =	Cài đặt mặc định
+		
+; Donate Sub Menu		
+	p_Lang001 =	Hiến PayPal
+		
+; Help Sub Menu		
+	h_Lang001 =	Vĩ mô Đấng Tạo Hóa Trang chủ
+	h_Lang002 =	AHK Tài liệu trực tuyến
+	h_Lang003 =	Kiểm tra các bản cập nhật ...
+	h_Lang004 =	Kiểm tra khi khởi động
+	h_Lang005 =	Về
+	h_Lang006 =	Mẹo
+	h_Lang007 =	Diễn đàn
+		
+; Tray Menu		
+	y_Lang001 =	Hide Window
+	y_Lang002 =	Hiển thị cửa sổ
+	y_Lang003 =	Thanh công cụ điều khiển
+		
+; Main Window		
+	w_Lang001 =	Xuất khẩu
+	w_Lang002 =	Xem trước
+	w_Lang003 =	Tùy chọn
+	w_Lang004 =	Ghi
+	w_Lang005 =	Chơi
+	w_Lang006 =	Tự động.
+	w_Lang007 =	Người đàn ông.
+	w_Lang008 =	Thôi
+	w_Lang009 =	Điều khiển hiển thị thanh công cụ
+	w_Lang010 =	Tạm dừng
+	w_Lang011 =	Vòng lặp
+	w_Lang012 =	Nắm bắt ép chính trong cửa sổ này
+	w_Lang013 =	Giảm thiểu để khay
+	w_Lang014 =	Phím nóng Luôn đăng nhập
+	w_Lang015 =	Lặp lại
+	w_Lang016 =	Sự chậm trễ (ms):
+	w_Lang017 =	Áp dụng
+	w_Lang018 =	Chèn
+	w_Lang019 =	Chỉnh sửa
+	w_Lang020 =	Tắt tùy chọn (Khi phát lại kết thúc ...)
+	w_Lang021 =	Không làm gì cả
+	w_Lang022 =	Đóng ứng dụng
+	w_Lang023 =	Tắt máy
+	w_Lang024 =	Tắt máy (có hiệu lực)
+	w_Lang025 =	Khởi động lại
+	w_Lang026 =	Log off
+	w_Lang027 =	Ngu suốt mùa đông
+	w_Lang028 =	Treo
+	w_Lang029 =	Khóa máy tính
+	w_Lang030 =	Chỉ số
+	w_Lang031 =	Hành động
+	w_Lang032 =	Chi tiết
+	w_Lang033 =	Lặp lại
+	w_Lang034 =	Trì hoãn
+	w_Lang035 =	Loại
+	w_Lang036 =	Kiểm soát
+	w_Lang037 =	Cửa sổ
+	w_Lang038 =	Bình luận
+	w_Lang039 =	Màu
+	w_Lang040 =	Mới (Ctrl + N)
+	w_Lang041 =	Mở (Ctrl + O)
+	w_Lang042 =	Save (Ctrl + S)
+	w_Lang043 =	Xuất khẩu sang AHK (Ctrl + E)
+	w_Lang044 =	Xem trước Script (Ctrl + P)
+	w_Lang045 =	Thiết lập (Ctrl + G)
+	w_Lang046 =	Record Macro (Ctrl + R)
+	w_Lang047 =	Kích hoạt Macro (Ctrl + Enter)
+	w_Lang048 =	Chơi vĩ mô hiện tại (Ctrl + Shift + Enter)
+	w_Lang049 =	Hẹn giờ (Ctrl + Shift + T)
+	w_Lang050 =	Chuột (F2)
+	w_Lang051 =	Văn bản (F3)
+	w_Lang052 =	(Không sử dụng)
+	w_Lang053 =	Kiểm soát (F4)
+	w_Lang054 =	Tạm dừng (F5)
+	w_Lang055 =	Tin nhắn (Shift + F5)
+	w_Lang056 =	Chờ chính (Control + F5)
+	w_Lang057 =	Cửa sổ (F6)
+	w_Lang058 =	Hình ảnh / Pixel Tìm kiếm (F7)
+	w_Lang059 =	Chạy / File / String / Misc. (F8)
+	w_Lang060 =	Vòng lặp (F9)
+	w_Lang061 =	Goto (Shift + F9)
+	w_Lang062 =	Nhãn (Ctrl + F9)
+	w_Lang063 =	Nếu báo cáo (F10)
+	w_Lang064 =	Biến (Shift + F10)
+	w_Lang065 =	Chức năng (Ctrl + F10)
+	w_Lang066 =	Internet Explorer (F11)
+	w_Lang067 =	COM giao diện (Shift + F11)
+	w_Lang068 =	Chạy Scriptlet (Ctrl + F11)
+	w_Lang069 =	Tin nhắn cửa sổ (F12)
+	w_Lang070 =	Thêm phím Windows như sửa đổi
+	w_Lang071 =	Phím điều khiển
+	w_Lang072 =	Thêm vĩ mô (Ctrl + T)
+	w_Lang073 =	Gần vĩ mô (Ctrl + W)
+	w_Lang074 =	Bản sao vĩ mô (Ctrl + Shift + D)
+	w_Lang075 =	Nhập khẩu vĩ mô (Ctrl + I)
+	w_Lang076 =	Lưu vĩ mô hiện tại (Ctrl + Alt + S)
+	w_Lang077 =	Move Up (Ctrl + PageUp)
+	w_Lang078 =	Move Down (Ctrl + PageDown)
+	w_Lang079 =	Bản sao dòng chọn (Ctrl + D)
+	w_Lang080 =	Cắt dòng chọn (Ctrl + X)
+	w_Lang081 =	Sao chép dòng chọn (Ctrl + C)
+	w_Lang082 =	Hàng dán sao chép (Ctrl + V)
+	w_Lang083 =	Xóa dòng chọn (Del)
+	w_Lang084 =	Undo (Ctrl + Z)
+	w_Lang085 =	Redo (Ctrl + Y)
+	w_Lang086 =	Sao chép vào ...
+	w_Lang087 =	Tìm / Thay thế (Ctrl + F)
+	w_Lang088 =	Sửa bình (Ctrl + L)
+	w_Lang089 =	Sửa màu Mark (Ctrl + M)
+	w_Lang090 =	Tùy chỉnh
+	w_Lang091 =	Tìm một lệnh (Ctrl + Shift + F)
+	w_Lang092 =	Chỉnh sửa (Enter)
+	w_Lang093 =	Che
+		
+; Command Windows		
+	c_Lang001 =	Chuột
+	c_Lang002 =	Văn bản
+	c_Lang003 =	Tạm dừng
+	c_Lang004 =	Kiểm soát
+	c_Lang005 =	Cửa sổ
+	c_Lang006 =	Tìm kiếm Hình ảnh
+	c_Lang007 =	Pixel Tìm kiếm
+	c_Lang008 =	Chạy / File / String / Misc.
+	c_Lang009 =	Nếu báo cáo
+	c_Lang010 =	Biến
+	c_Lang011 =	Chức năng
+	c_Lang012 =	Internet Explorer
+	c_Lang013 =	COM giao diện
+	c_Lang014 =	Chọn một ứng dụng (nâng cao)
+	c_Lang015 =	Tin nhắn
+	c_Lang016 =	Kiểm soát
+	c_Lang017 =	Trì hoãn
+	c_Lang018 =	Miliseconds
+	c_Lang019 =	Giây
+	c_Lang020 =	OK
+	c_Lang021 =	Hủy bỏ
+	c_Lang022 =	Đóng
+	c_Lang023 =	Sao chép
+	c_Lang024 =	Xóa
+	c_Lang025 =	(Sử dụng `% cho biến, ví dụ: `%Clipboard`%)
+	c_Lang026 =	Hành động
+	c_Lang027 =	Nhấp
+	c_Lang028 =	Di chuyển
+	c_Lang029 =	Di chuyển && Click vào
+	c_Lang030 =	Bánh xe ký
+	c_Lang031 =	Bánh xe xuống
+	c_Lang032 =	Kéo && thả
+	c_Lang033 =	Phối hợp
+	c_Lang034 =	Nhấp
+	c_Lang035 =	Gửi
+	c_Lang036 =	Tương đối
+	c_Lang037 =	Nút
+	c_Lang038 =	Lại
+	c_Lang039 =	Ngay
+	c_Lang040 =	Trung tâm
+	c_Lang041 =	X1
+	c_Lang042 =	X2
+	c_Lang043 =	Giữ / Thả
+	c_Lang044 =	Nhấp Đếm
+	c_Lang045 =	Plain Text (Nguyên)
+	c_Lang046 =	Văn bản với các lệnh
+	c_Lang047 =	Dán từ Clipboard
+	c_Lang048 =	Dán trên điều khiển
+	c_Lang049 =	Thiết lập Tiêu đề
+	c_Lang050 =	Thêm Tạm dừng
+	c_Lang051 =	Hộp tin nhắn
+	c_Lang052 =	Chờ đợi cho khóa
+	c_Lang053 =	Thời gian chờ đợi
+	c_Lang054 =	(Miliseconds) 0 = vô hạn
+	c_Lang055 =	Lệnh
+	c_Lang056 =	Giá trị
+	c_Lang057 =	Biến đầu ra
+	c_Lang058 =	Chức vụ
+	c_Lang059 =	Kích thước
+	c_Lang060 =	4 biến sẽ được tạo ra với tiền tố này và kết thúc với X, Y, W, H.
+	c_Lang061 =	Bắt đầu
+	c_Lang062 =	Cuối
+	c_Lang063 =	Hình ảnh
+	c_Lang064 =	Pixel
+	c_Lang065 =	Hãy Ảnh chụp màn hình
+	c_Lang066 =	Chờ chính
+	c_Lang067 =	Nếu tìm thấy
+	c_Lang068 =	Nếu không tìm thấy / Lỗi
+	c_Lang069 =	* Coords lưu trữ để `%FoundX`% / `%FoundY`%.
+	c_Lang070 =	Coord
+	c_Lang071 =	Biến thể
+	c_Lang072 =	Xem trước
+	c_Lang073 =	Vòng lặp
+	c_Lang074 =	* Không làm việc trong phát lại bằng tay.
+	c_Lang075 =	Phá vỡ
+	c_Lang076 =	Tiếp tục
+	c_Lang077 =	Goto
+	c_Lang078 =	Tới Nhãn
+	c_Lang079 =	Nhãn
+	c_Lang080 =	Thêm Nhãn
+	c_Lang081 =	Chuỗi (InputVar), giá trị
+	c_Lang082 =	Var [điều hành] Giá trị
+	c_Lang083 =	Khác
+	c_Lang084 =	Gán biến
+	c_Lang085 =	Nội dung
+	c_Lang086 =	Điều hành
+	c_Lang087 =	Biểu
+	c_Lang088 =	Thiết lập lại
+	c_Lang089 =	Tên chức năng
+	c_Lang090 =	Dấu phẩy tách ra các thông số (không có dấu ngoặc đơn).
+	c_Lang091 =	(Sử dụng `% cho biến. Dấu phẩy Nghĩa chữ phải được thoát [ ```, ])
+	c_Lang092 =	Trang Element / Index
+	c_Lang093 =	Đặt
+	c_Lang094 =	Được
+	c_Lang095 =	Phương pháp
+	c_Lang096 =	Tài sản
+	c_Lang097 =	Chờ đợi cho trang để tải.
+	c_Lang098 =	CLSID
+	c_Lang099 =	Kết nối
+	c_Lang100 =	Xử lý
+	c_Lang101 =	COM Script
+	c_Lang102 =	Số tin nhắn
+	c_Lang103 =	Các phím đặc biệt
+	c_Lang104 =	Trở lại trình duyệt
+	c_Lang105 =	Forward
+	c_Lang106 =	Làm mới trình duyệt
+	c_Lang107 =	Dừng trên trình duyệt
+	c_Lang108 =	Trình duyệt Tìm kiếm
+	c_Lang109 =	Trình duyệt có thích
+	c_Lang110 =	Trình duyệt chủ
+	c_Lang111 =	Phương tiện truyền thông
+	c_Lang112 =	Tắt
+	c_Lang113 =	Volume Up
+	c_Lang114 =	Volume Down
+	c_Lang115 =	Play / Pause
+	c_Lang116 =	Theo dõi tiếp theo
+	c_Lang117 =	Theo dõi trước
+	c_Lang118 =	Thôi
+	c_Lang119 =	E-mail
+	c_Lang120 =	Ứng dụng 1
+	c_Lang121 =	Ứng dụng 2
+	c_Lang122 =	Scancode
+	c_Lang123 =	Thêm
+	c_Lang124 =	Lịch sử quan trọng
+	c_Lang125 =	Nhập scancode ...
+	c_Lang126 =	Mã thêm vào phím ảo Danh sách!
+	c_Lang127 =	Nhập tên cho biến
+	c_Lang128 =	Sử dụng chức năng từ tập tin bên ngoài
+	c_Lang130 =	Phá vỡ vòng lặp nếu tìm thấy
+	c_Lang131 =	Áp dụng
+	c_Lang132 =	Vòng lặp
+	c_Lang133 =	Tập tin
+	c_Lang134 =	Phân tích
+	c_Lang135 =	Đọc
+	c_Lang136 =	Đăng ký
+	c_Lang137 =	Tập tin mẫu:
+	c_Lang138 =	Thư mục?
+	c_Lang139 =	Đệ quy?
+	c_Lang140 =	Đầu vào khác:
+	c_Lang141 =	Ký tự phân cách:
+	c_Lang142 =	Bỏ qua nhân vật:
+	c_Lang143 =	Input File:
+	c_Lang144 =	Chính:
+	c_Lang145 =	Gốc chính:
+	c_Lang146 =	Khóa?
+	c_Lang147 =	Biểu tượng
+	c_Lang148 =	Không có biểu tượng
+	c_Lang149 =	Lôi
+	c_Lang150 =	Câu hỏi
+	c_Lang151 =	Chấm than
+	c_Lang152 =	Thông tin
+	c_Lang153 =	Luôn luôn trên đầu trang
+	c_Lang154 =	Phút
+	c_Lang155 =	Chạy Scriptlet
+	c_Lang156 =	Kịch bản
+	c_Lang157 =	Ngôn ngữ kịch bản
+	c_Lang158 =	Không tương thích với 64-bit!
+	c_Lang159 =	Tùy chọn tìm kiếm
+	c_Lang160 =	Minh bạch
+	c_Lang161 =	Quy mô
+	c_Lang162 =	Thêm "Nếu tuyên bố"
+	c_Lang163 =	Gửi chế độ
+		
+; Other Windows		
+	t_Lang001 =	Xuất khẩu sang AHK
+	t_Lang002 =	Macro
+	t_Lang003 =	Vòng
+	t_Lang004 =	0 = vô hạn
+	t_Lang005 =	Sử dụng Hotstring
+	t_Lang006 =	Khối Chuột
+	t_Lang007 =	Tất cả
+	t_Lang008 =	Không ai
+	t_Lang009 =	Hotkeys bối cảnh nhạy cảm
+	t_Lang010 =	Xuất khẩu sang
+	t_Lang011 =	Thụt đầu dòng
+	t_Lang012 =	Bao gồm PMC Mã
+	t_Lang013 =	Không nối lệnh Gửi
+	t_Lang014 =	Làm mới
+	t_Lang015 =	Tự động Refresh
+	t_Lang016 =	Always On Top
+	t_Lang017 =	Cài đặt
+	t_Lang018 =	Chung
+	t_Lang019 =	Start / Stop Ghi
+	t_Lang020 =	Kỷ lục mới Macro
+	t_Lang021 =	Tổ hợp phím
+	t_Lang022 =	Ghi âm
+	t_Lang023 =	Chụp nhà nước chủ chốt (xuống / lên)
+	t_Lang024 =	Nhấp chuột chuột
+	t_Lang025 =	Chuột bánh xe
+	t_Lang026 =	Di chuyển chuột
+	t_Lang027 =	Khoảng đúng lúc
+	t_Lang028 =	Chậm trễ tối thiểu
+	t_Lang029 =	Các lớp cửa sổ
+	t_Lang030 =	Tựa đề cửa sổ
+	t_Lang031 =	Kỷ lục ControlSend
+	t_Lang032 =	Kỷ lục ControlClick
+	t_Lang033 =	Ghi lại tương đối chính
+	t_Lang034 =	Chuyển đổi
+	t_Lang035 =	Phát lại
+	t_Lang036 =	Tăng tốc độ
+	t_Lang037 =	Slow Down
+	t_Lang038 =	Chuột sau khi trở lại phát lại
+	t_Lang039 =	Tọa độ chuột
+	t_Lang040 =	Cửa sổ
+	t_Lang041 =	Màn hình
+	t_Lang042 =	Mặc định chuột trễ
+	t_Lang043 =	Mặc định cửa sổ trễ
+	t_Lang044 =	Lịch sử tối đa mỗi vĩ mô
+	t_Lang045 =	Rõ ràng Lịch sử
+	t_Lang046 =	Ảnh chụp màn hình
+	t_Lang047 =	Vẽ Nút
+	t_Lang048 =	Chiều rộng đường (px)
+	t_Lang049 =	Chụp trên phát hành
+	t_Lang050 =	Nhấn Enter để nắm bắt
+	t_Lang051 =	Ảnh chụp màn hình thư mục
+	t_Lang052 =	Misc.
+	t_Lang053 =	Phím nóng
+	t_Lang054 =	Đặt làm Hotkeys Mặc định
+	t_Lang055 =	Vô hiệu hóa phím tắt Window
+	t_Lang056 =	Thiết lập lại Cột Kích
+	t_Lang057 =	Mặc định vĩ mô tập tin
+	t_Lang058 =	Thư viện tiêu chuẩn tập tin
+	t_Lang059 =	Sử dụng biểu hiện mặc định cho biến chuyển nhượng
+	t_Lang060 =	Hiển thị Màu sắc && Marks Trợ giúp cho vòng lặp và báo cáo
+	t_Lang061 =	(Nhấp vào tiêu đề cột Index để bật / tắt)
+	t_Lang062 =	Phím ảo
+	t_Lang063 =	Mặc định
+	t_Lang064 =	Sửa Bình luận
+	t_Lang065 =	Bình luận
+	t_Lang066 =	Tìm kiếm Cột
+	t_Lang067 =	Tìm / Thay thế
+	t_Lang068 =	Tìm
+	t_Lang069 =	Phù hợp với trường hợp
+	t_Lang070 =	Thay thế
+	t_Lang071 =	Tìm thấy
+	t_Lang072 =	Thay thế
+	t_Lang073 =	Hàng được lựa chọn
+	t_Lang074 =	Tất cả các dòng
+	t_Lang075 =	Tất cả các Macro
+	t_Lang076 =	Về
+	t_Lang077 =	Biểu hiện thường xuyên
+	t_Lang078 =	Chơi một lần
+	t_Lang079 =	Chơi mỗi X (mili) giây
+	t_Lang080 =	Hẹn giờ
+	t_Lang081 =	Tạm dừng
+	t_Lang082 =	Báo cáo
+	t_Lang083 =	Hiện lõm cho vòng lặp và báo cáo
+	t_Lang084 =	(Double-Click vào tiêu đề cột Hành động bật / tắt)
+	t_Lang085 =	Điều khiển màn hình hiển thị trên thanh khởi động
+	t_Lang086 =	Chức năng tìm kiếm. Xin vui lòng chờ ...
+	t_Lang087 =	Bao gồm các tập tin bên ngoài
+	t_Lang088 =	Tạo EXE
+	t_Lang089 =	Nhiều trường hợp cho phép
+	t_Lang090 =	Mặc định
+	t_Lang091 =	Cho phép kéo dòng
+	t_Lang092 =	Nội dung toàn bộ tế bào
+	t_Lang093 =	Định dạng INI chuẩn
+	t_Lang094 =	Tên = giá trị gia tăng
+	t_Lang095 =	Nhập 1 biến trên mỗi dòng. Bạn cũng có thể thêm [Phần].
+	t_Lang096 =	Người sử dụng biến toàn cầu
+	t_Lang097 =	Nhấn một nút trên điều khiển
+	t_Lang098 =	Phím điều khiển
+	t_Lang099 =	Nút
+	t_Lang100 =	Hiển thị lời khuyên bóng
+	t_Lang101 =	Tốc độ
+	t_Lang102 =	Chậm
+	t_Lang103 =	Nhanh
+	t_Lang104 =	Hiện / Ẩn thanh tiêu đề
+	t_Lang105 =	Hiện / Ẩn Cửa sổ chính
+	t_Lang106 =	Chạy ngay lập tức
+	t_Lang107 =	Sự chậm trễ ngẫu nhiên
+	t_Lang108 =	Bình thường
+	t_Lang109 =	Xuống
+	t_Lang110 =	Lên
+	t_Lang111 =	Chèn Tổ hợp phím
+	t_Lang112 =	Play / Pause
+	t_Lang113 =	Thôi
+	t_Lang114 =	Tùy chọn phát lại
+	t_Lang115 =	Start / Stop Ghi
+	t_Lang116 =	Kỷ lục mới Macro
+	t_Lang117 =	Tùy chọn ghi âm
+	t_Lang118 =	Danh sách rõ ràng
+	t_Lang119 =	Hiển thị Progress Bar
+	t_Lang120 =	Tăng tốc độ
+	t_Lang121 =	Slow Down
+	t_Lang122 =	Hiện / Ẩn thanh tiêu đề
+	t_Lang123 =	Hiện / Ẩn Cửa sổ chính
+	t_Lang124 =	Undock
+	t_Lang125 =	Dock
+	t_Lang126 =	Mở
+	t_Lang127 =	Tiết kiệm
+	t_Lang128 =	Cắt
+	t_Lang129 =	Sao chép
+	t_Lang130 =	Dán
+	t_Lang131 =	Chọn tất cả
+	t_Lang132 =	Xóa
+	t_Lang133 =	Bàn phím
+	t_Lang134 =	Chuột
+	t_Lang135 =	Những người khác
+	t_Lang136 =	Hàng nổi bật
+	t_Lang137 =	Mặc định Script Editor
+	t_Lang138 =	Sửa Script
+	t_Lang139 =	Chọn
+	t_Lang140 =	Bởi Cột
+	t_Lang141 =	Tất cả các cột
+		
+		
+; Messages & Dialogs		
+	d_Lang001 =	Mở
+	d_Lang002 =	Bạn có muốn lưu các vĩ mô hiện tại?
+	d_Lang003 =	Cài đặt mặc định
+	d_Lang004 =	Người tạo tập tin vĩ mô
+	d_Lang005 =	Lưu vĩ mô
+	d_Lang006 =	Không thể lưu / ghi đè lên tập tin
+	d_Lang007 =	Lôi
+	d_Lang008 =	Lỗi: Không có Macro chọn.`nVui lòng kiểm tra ít nhất một Macro trong danh sách.
+	d_Lang009 =	Lỗi: Không có chọn Hotkey.
+	d_Lang010 =	Lỗi: Địa chỉ không hợp lệ.`nCác địa chỉ được lựa chọn hoặc tên tập tin không hợp lệ.
+	d_Lang011 =	Cảnh báo
+	d_Lang012 =	Không kiểm soát được lựa chọn.`nTiếp tục?
+	d_Lang013 =	Xuất khẩu Script
+	d_Lang014 =	Kịch bản xuất khẩu
+	d_Lang015 =	Tập tin đã thành công xuất khẩu!
+	d_Lang016 =	Nhấp vào 'Nhận' để đánh dấu vị trí.
+	d_Lang017 =	
+	(LTrim	
+		- Chọn cửa sổ.
+		- Chỉ vào vị trí mong muốn.
+		- Bấm vào nút ngay.
+	)	
+	d_Lang018 =	Điểm ảnh màu
+	d_Lang019 =	Danh sách rõ ràng
+	d_Lang020 =	Chắc chắn để xóa tất cả các mục?
+	d_Lang021 =	Tiếp theo
+	d_Lang022 =	Trước
+	d_Lang023 =	Tin nhắn
+	d_Lang024 =	Tải các cài đặt mặc định?
+	d_Lang025 =	Vĩ mô (s) kích hoạt.`nSử dụng các phím nóng để chơi.
+	d_Lang026 =	để bắt đầu / dừng ghi âm
+	d_Lang027 =	Ghi dừng lại
+	d_Lang028 =	Ghi âm ...
+	d_Lang029 =	để ngăn chặn
+	d_Lang030 =	để bắt đầu kỷ lục mới
+	d_Lang031 =	không phải là một tên hàm hợp lệ.
+	d_Lang032 =	Lỗi: Hotkeys trùng lặp.
+	d_Lang033 =	Kích hoạt Macro
+	d_Lang034 =	
+	(LTrim	
+		- Click và kéo với %DrawButton% để chọn khu vực.
+		- Click và phát hành mà không kéo để chọn khu vực kiểm soát.
+		- Click vào trong một khu vực mà không có một điều khiển để chọn khu vực của cửa sổ.
+	)	
+	d_Lang035 =	Tiếp tục không?
+	d_Lang036 =	Hình ảnh / Pixel tìm thấy tại
+	d_Lang037 =	Hình ảnh / Pixel Không tìm thấy.
+	d_Lang038 =	Bấm OK để tiếp tục.
+	d_Lang039 =	Thời gian chờ!
+	d_Lang040 =	
+	(LTrim	
+		Tính năng này đòi hỏi các thư viện GDI +.
+		Nhấn OK để đi tải trang.
+	)	
+	d_Lang041 =	Tên biến có chứa một nhân vật bất hợp pháp.
+	d_Lang042 =	
+	(LTrim	
+		Nhà điều hành không hợp lệ.
+		Các nhà khai thác sau đây được chấp nhận:
+		=, ==, <>,! =,>, <,> =, <=
+		
+		Ví dụ:
+		MyVar > 1
+		MyVar = `%A_DDDD`%
+		Clipboard == `%MyVar`%
+	)	
+	d_Lang043 =	Hoặc sử dụng điều khiển thanh công cụ.
+	d_Lang044 =	
+	(LTrim	
+		Tính năng này đòi hỏi phải có các chức năng eval ().
+		Nhấn OK để đi tải trang.
+	)	
+	d_Lang045 =	Hãy chọn một cửa sổ Internet Explorer!
+	d_Lang046 =	Kết nối thành công!
+	d_Lang047 =	Không thể kết nối!
+	d_Lang048 =	Chèn Xử lý và một CLSID.
+	d_Lang049 =	Tên nhãn không hợp lệ.
+	d_Lang050 =	Nhãn trùng lặp.
+	d_Lang051 =	Để chơi một Macro nhấn phím nóng tương ứng (Auto / Man).
+	d_Lang052 =	Để bắt đầu quay nhấn một phím nóng kỷ lục.
+	d_Lang053 =	Không hiển thị thông báo này một lần nữa.
+	d_Lang054 =	Hãy chọn một cửa sổ Excel!
+	d_Lang055 =	Vui lòng chọn một tập tin kịch bản AutoHotkey (AHK.) Và nhập Tên Chức năng.
+	d_Lang056 =	
+	(LTrim	
+		Tính năng này đòi hỏi phải cài đặt AutoHotkey.
+		Nhấn OK để đi tải trang.
+	)	
+	d_Lang057 =	
+	(LTrim	
+		- Nhấn Ctrl + phím mũi tên để di chuyển vùng chọn.
+		- Nhấn Shift + phím mũi tên để thay đổi kích thước vùng chọn.
+		- Nhấn Enter để kết thúc.
+	)	
+	d_Lang058 =	
+	(LTrim	
+		Một số tính năng đòi hỏi privilages admnistrator để hoạt động đúng.
+		Bạn nên khởi động lại ứng dụng như là Administrator.
+	)	
+	d_Lang059 =	
+	(LTrim	
+		Lệnh này không hỗ trợ các biểu thức hoặc chức năng.
+		Hãy chỉ định một biến và sử dụng nó trong các tham số.
+	)	
+	d_Lang060 =	Phiên bản mới có sẵn
+	d_Lang061 =	
+	(LTrim	
+		Bạn có muốn tải về ngay bây giờ?
+		
+		Để vô hiệu hóa tự động kiểm tra chọn Help> Check khi khởi động
+	)	
+		
+	d_Lang062 =	Bạn đã có phiên bản mới nhất.
+	d_Lang063 =	Một lỗi xảy ra trong khi kiểm tra.
+	d_Lang064 =	Lỗi đối tượng COM trong
+	d_Lang065 =	Hàng
+	d_Lang066 =	Đặc biệt
+	d_Lang067 =	Hiển thị cửa sổ này khi khởi động
+	d_Lang068 =	Lời khuyên:
+	d_Lang069 =	
+	(LTrim	
+		Rất nhiều thời gian và công sức đã đi vào sự phát triển của Đấng Tạo Hóa vĩ mô Pulover của. Nếu bạn tìm thấy nó hữu ích, xin vui lòng xem xét cho thấy sự đánh giá cao của bạn với một hiến.
+		
+		Tặng hay không, sẽ không có sự khác biệt về tính năng và chức năng của nó.
+	)	
+	d_Lang070 =	Tặng ...
+	d_Lang071 =	Không, cảm ơn
+	d_Lang072 =	Hỗ trợ phần mềm nguồn mở
+	d_Lang073 =	Lỗi: không hợp lệ Hotkey chọn.
+	d_Lang074 =	Tìm một lệnh hoặc chức năng
+		
+; Start-up Tips		
+	Start_Tips =	
+	(LTrim	
+		Bạn có thể tạo macro bằng cách sử dụng nút lệnh trong cửa sổ chính hoặc sử dụng máy ghi âm để sao chép các hành động của bạn. Vào Tùy chọn> Cài đặt> Ghi chọn những đầu vào sẽ được ghi lại.
+		Sử dụng máy ghi âm cho các nhiệm vụ nhanh chóng vào Tùy chọn> Cài đặt> Ghi âm và kiểm tra các "Clear List" tùy chọn. Sau đó nhấn vào nút Record trong cửa sổ chính và sử dụng F10 để xóa vĩ mô hiện tại và bắt đầu một cái mới với các hotkey. Bạn cũng có thể kiểm tra "Luôn đăng nhập" tùy chọn trong cửa sổ chính để tiếp tục ghi âm và phát lại các phím nóng hoạt động.
+		Để được trợ giúp cho một nhấp chuột phải lệnh cụ thể trên một nút lệnh trong cửa sổ chính hoặc bất cứ nơi nào trong một cửa sổ lệnh để hiển thị các liên kết đến AutoHotkey trợ giúp trực tuyến.
+		Kiểm tra "Capture phím" tùy chọn để nhập phím và kết hợp để vĩ mô của bạn trực tiếp từ cửa sổ chính.
+		Nhập phím và kết hợp trong hộp Hotkey ở phía dưới và nhấn nút Insert để thêm chúng vào các hàng lựa chọn.
+		Nếu không có hàng được lựa chọn các nút chỉnh sửa áp dụng cho tất cả các hàng trong danh sách.
+		Bạn có thể gán biến của riêng bạn trong các biến cửa sổ (Insert> Nếu cáo / biến / chức năng). Để sử dụng chúng trong các lệnh kèm theo tên biến trong dấu phần trăm, ví dụ như: `%MyVar`%.
+		Các "vòng" truy cập ở phía trên đặt tổng số vòng cho các vĩ mô được lựa chọn.
+		Bạn có thể chỉnh sửa một hàng bằng cách nhấp đúp nó hoặc bằng cách chọn nó và nhấn vào nút Edit ở phía dưới.
+		Bạn có thể chỉnh sửa nhiều hàng lựa chọn sử dụng các tùy chọn trong thanh chỉnh sửa ở phía dưới.
+		Chọn một hoặc nhiều hàng để thêm các lệnh mới trên đầu trang của họ.
+		Bạn có thể di chuyển hàng với nhấp chuột và kéo.
+		Nhấp đúp chuột vào biểu tượng trên khay để kích hoạt các phím nóng hoặc ngừng phát lại / ghi âm. Click vào nó với nút giữa trong khi phát hoặc ghi tạm dừng.
+		Bạn có thể xuất macro của bạn để kịch bản AutoHotkey làm việc hoặc thực thi độc lập từ cửa sổ xuất khẩu.
+		Ghi và chơi chuột sử dụng tọa độ tuyệt đối vào Tùy chọn> Cài đặt> mặc định và thiết lập chuột Tọa độ để màn hình.
+		Bạn có thể mở, sao chép, di chuyển hoặc xóa các tập tin và thư mục bằng cách sử dụng một trong các lệnh trong Insert> Run / File / String / Misc.
+		Để ghi lại Down và ký nhà nước của mỗi đi quan trọng để chọn> Cài đặt> Ghi âm và kiểm tra "Chụp nhà nước chủ chốt (Down / Up)" tùy chọn.
+		Bạn có thể sử dụng phím nóng để tăng tốc độ hoặc làm chậm phát lại. Vào Tùy chọn> Cài đặt> Phát lại để thiết lập phím và tốc độ.
+		Để điều chỉnh khu vực chụp bằng cách sử dụng "Hãy Ảnh chụp màn hình" công cụ vào Options> Settings> Ảnh chụp màn hình và chọn "Nhấn Enter để Capture". Sau khi vẽ hình chữ nhật sử dụng Control + phím mũi tên để di chuyển vùng chọn và phím Shift + phím mũi tên để thay đổi kích thước.
+		Chọn nhanh: Chọn bất kỳ hàng và nhấp chuột vào một tiêu đề cột để lựa chọn các hàng tương tự dựa trên văn bản của tế bào từ cột đó.
+		Run / File / String / Misc. cửa sổ có nhiều lệnh hữu ích khác như Shutdown và UrlDownloadToFile.
+		Sử dụng "Ảnh chụp màn hình" chức năng trong cửa sổ chức năng (Insert> Nếu cáo / biến / chức năng) để tạo ra một ảnh chụp màn hình của một phần của màn hình. Tham số đầu tiên là đường dẫn tập tin đích và tên có phần mở rộng png. Tham số thứ hai là các tọa độ ống cách nhau trong màn hình, ví dụ như 100 | 200 | 50 | 100 (X | Y | Chiều rộng | Chiều Cao).
+		Bấm vào chỉ số cột Header để chuyển On / Off Marks Trợ giúp và màu sắc cho vòng lặp và báo cáo. Double-Click vào hành động Cột Header để chuyển On / Off lõm cho vòng lặp và báo cáo.
+		Bạn có thể gỡ lỗi Macros của bạn bằng cách sử dụng phím tắt bằng tay và các tùy chọn chơi trong trình đơn vĩ mô. Bạn cũng có thể vô hiệu hóa hành động bằng cách bỏ chọn chúng trong danh sách vĩ mô.
+		Để làm cho Macro của bạn chỉ làm việc trên một cửa sổ nào đó đi để Macro> Hotkeys bối cảnh nhạy cảm.
+		Bạn có thể đặt biến toàn cầu của riêng bạn để được nạp vào khởi động và sẽ được xuất khẩu. Vào Tùy chọn> Cài đặt> Người dùng biến toàn cầu để thêm chúng.
+		Bạn có thể chạy các chức năng tiên tiến như SUBSTR và RegExReplace từ cửa sổ chức năng (Insert> Nếu cáo / biến / chức năng). Hoặc chạy các chức năng của riêng bạn từ các kịch bản AutoHotkey bên ngoài.
+	)	
+; Tooltips		
+	NewB_TT =	Mới (Ctrl + N)
+	OpenB_TT =	Mở (Ctrl + O)
+	SaveB_TT =	Save (Ctrl + S)
+	ExportB_TT =	Xuất khẩu sang AHK (Ctrl + E)
+	PreviewB_TT =	Xem trước Script (Ctrl + P)
+	OptionsB_TT =	Thiết lập (Ctrl + G)
+	RecordB_TT =	Record Macro (Ctrl + R)
+	StartB_TT =	Kích hoạt Macro (Ctrl + Enter)
+	TestRun_TT =	Chơi vĩ mô hiện tại (Ctrl + Shift + Enter)
+	RunTimer_TT =	Hẹn giờ (Ctrl + Shift + T)
+	MouseB_TT =	Chuột (F2)
+	TextB_TT =	Văn bản (F3)
+	SpecialB_TT =	Các phím đặc biệt
+	ControlB_TT =	Kiểm soát (F4)
+	PauseB_TT =	Tạm dừng (F5) / tin nhắn (Shift + F5) / Chờ chính (Control + F5)
+	WindowB_TT =	Cửa sổ (F6)
+	ImageB_TT =	Hình ảnh / Pixel Tìm kiếm (F7)
+	RunB_TT =	Chạy / File / String / Misc. (F8)
+	ComLoopB_TT =	Vòng lặp (F9) / Goto (Shift + F9) / Label (Ctrl + F9)
+	IfStB_TT =	Nếu báo cáo (F10) / biến (Shift + F10) / chức năng (Ctrl + F10)
+	IEComB_TT =	Internet Explorer (F11) / COM giao diện (Shift + F11) / Run Scriptlet (Ctrl + F11)
+	SendMsgB_TT =	Tin nhắn cửa sổ (F12)
+	AutoKey_TT =	Backspace để xóa
+	ManKey_TT =	Backspace để xóa
+	AbortKey_TT =	Backspace để xóa
+	PauseKey_TT =	Backspace để xóa
+	RecKey_TT =	Backspace để xóa
+	RecNewKey_TT =	Backspace để xóa
+	JoyKey_TT =	Nhấn một nút trên điều khiển
+	OnFinish_TT =	
+	(LTrim	
+		Tắt tùy chọn
+		Khi kết thúc phát ...
+	)	
+	Win1_TT =	Thêm phím Windows như sửa đổi
+	JoyHK_TT =	Phím điều khiển
+	ReptC_TT =	0 = vô hạn
+	TabPlus_TT =	Thêm vĩ mô (Ctrl + T)
+	TabClose_TT =	Gần vĩ mô (Ctrl + W)
+	DuplicateL_TT =	Bản sao vĩ mô (Ctrl + Shift + D)
+	SaveC_TT =	Lưu vĩ mô hiện tại (Ctrl + Alt + S)
+	ImportB_TT =	Nhập khẩu vĩ mô (Ctrl + I)
+	IfDirB_TT =	Làm Hotkeys làm việc tùy thuộc vào loại`ncủa cửa sổ đang hoạt động hay tồn tại (Ctrl + H)
+	KeepHKOn_TT =	Luôn luôn giữ Hotkeys Activated
+	A_List_TT =	Chọn vĩ mô (Ctrl +1 ~ 0)
+	OSHK_TT =	Chọn Macro
+	OSHKEd_TT =	Chọn Macro
+	Duplicate_TT =	Bản sao dòng chọn (Ctrl + D)
+	Order_TT =	Di chuyển dòng được chọn (Ctrl + PageUp / Ctrl + PageDown)
+	Cut_TT =	Cắt dòng chọn (Ctrl + X)
+	Copy_TT =	Sao chép dòng chọn (Ctrl + C)
+	Paste_TT =	Hàng dán sao chép (Ctrl + V)
+	Remove_TT =	Xóa dòng chọn (Del)
+	Undo_TT =	Undo (Ctrl + Z)
+	Redo_TT =	Redo (Ctrl + Y)
+	CopyTo_TT =	Sao chép vào ...
+	Capt_TT =	Nắm bắt ép chính trong cửa sổ này
+	OnScCtrl_TT =	Điều khiển hiển thị thanh công cụ
+	ApplyT_TT =	Áp dụng
+	ApplyI_TT =	Áp dụng
+	ApplyL_TT =	Chèn từ Box (Insert)
+	InsertKey_TT =	Chèn Tổ hợp phím (Ctrl + Insert)
+	EditButton_TT =	Chỉnh sửa (Enter)
+	PrevRefresh_TT =	Refresh (F5)
+	PrevCopy_TT =	Sao chép
+	OpenT_TT =	Mở (Ctrl + O)
+	SaveT_TT =	Save (Ctrl + S)
+	CutT_TT =	Cắt
+	CopyT_TT =	Sao chép
+	PasteT_TT =	Dán
+	SelAllT_TT =	Chọn tất cả
+	DefaultMacro_TT =	Chọn tập tin để tải về chương trình khởi động
+	VarCopyA_TT =	Sao chép nội dung biến hiện nay
+	VarCopyB_TT =	Sao chép nội dung biến hiện nay
+	FindReplace_TT =	Tìm / Thay thế (Ctrl + F)
+	EditComm_TT =	Sửa bình (Ctrl + L)
+	EditColor_TT =	Sửa màu Mark (Ctrl + M)
+	Reset_TT =	Rõ ràng nội dung biến
+	Screenshot_TT =	Hãy Ảnh chụp màn hình
+	ColorPick_TT =	Color Picker
+	PicPrev_TT =	Đúp Nhấn vào đây để mở hình ảnh
+	CoordPixel_TT =	Chế độ phối hợp
+	VariatT_TT =	Sắc thái của sự thay đổi
+	IconN_TT =	Số nhóm biểu tượng
+	TransC_TT =	Màu trong suốt
+	WScale_TT =	Quy mô chiều rộng
+	HScale_TT =	Quy mô chiều cao
+	LoopLVColor_TT =	Nhấn vào đây để chọn một màu
+	IfLVColor_TT =	Nhấn vào đây để chọn một màu
+	RefreshIEW_TT =	Làm mới Danh sách
+	ActiveObj_TT =	Cố gắng để kết nối với một đối tượng COM đăng nhập
+	ExpView_TT =	Biên tập viên cao cấp
+	ExpView2_TT =	Biên tập viên cao cấp
+	OSPlay_TT =	Play / Pause
+	OSStop_TT =	Thôi
+	OSRec_TT =	Start / Stop Ghi
+	OSRecNew_TT =	Kỷ lục mới Macro
+	OSRecOpt_TT =	Tùy chọn ghi âm
+	OSPlayOpt_TT =	Tùy chọn phát lại
+	OSClear_TT =	Danh sách rõ ràng
+	OSProgB_TT =	Hiển thị Progress Bar
+	OSFast_TT =	Tăng tốc độ
+	OSSlow_TT =	Slow Down
+	OSTrans_TT =	Opacity
+	ToggleTB_TT =	Hiện / Ẩn thanh tiêu đề
+	ToggleMW_TT =	Hiện / Ẩn Cửa sổ chính
+	MRel_TT =	
+	(LTrim	
+		Chuyển động tương đối so với vị trí hiện tại.
+		Hoặc nếu được sử dụng với điều khiển: Vị trí tương đối vào Control.
+	)	
+	Raw_TT =	
+	(LTrim	
+		Lệnh SendRaw giải thích tất cả các nhân vật theo nghĩa đen
+		chứ không phải là dịch {} Nhập một tổ hợp phím ENTER,
+		^ C vào Control-C, vv
+	)	
+	ComText_TT =	
+	(LTrim	
+		Khi không trong chế độ thô, các ký tự sau
+		được đối xử như một biến (những thứ sau ảnh hưởng đến
+		chỉ có chìa khóa tiếp theo):, +, ^, #
+	)	
+	Clip_TT =	
+	(LTrim	
+		Tạm thời sử dụng Clipboard để gửi văn bản.
+		Khi hoạt động được hoàn tất, kịch bản
+		khôi phục nội dung clipboard ban đầu.
+		(Để lại Tiêu trống để dán nội dung hiện tại)
+	)	
+	EditPaste_TT =	
+	(LTrim	
+		Bột nhão dây ở vị trí dấu nháy / chèn
+		trong một điều khiển Edit (điều này không ảnh hưởng đến
+		các nội dung của clipboard).
+	)	
+	SetText_TT =	Thay đổi nội dung của một điều khiển.
+	RelKey_TT =	
+	(LTrim	
+		Hồ sơ di chuyển chuột và nhấp chuột như hiệu số
+		từ vị trí trước khi tổ chức.
+	)	
+	ToggleC_TT =	Kích hoạt ghi âm tương đối khi nhà nước chính là trên.
+	Relative_TT =	Tọa độ có liên quan đến cửa sổ hoạt động.
+	Screen_TT =	Tọa độ tương đối so với máy tính để bàn (toàn màn hình).
+	IncFolders_TT =	
+	(LTrim	
+		0 - Chỉ có các tập tin / phím
+		1 - thư mục / khóa con và các tập tin / phím
+		2 - Chỉ có các thư mục / khóa
+	)	
+	Recurse_TT =	
+	(LTrim	
+		0 - Không recurse vào thư mục / khóa
+		1 - Đệ quy vào thư mục / khóa
+	)	
+		
+; Tooltips from AHK Docs		
+	ExpList_TT =	Đúp Nhấn vào đây để chỉnh sửa
+	Ex_IfDir_TT =	
+	(LTrim	
+		Tạo phím nóng và hotstrings tùy thuộc bối cảnh nhạy cảm
+		vào loại cửa sổ đang hoạt động hay tồn tại.
+	)	
+	Ex_IfDirType_TT =	
+	(LTrim	
+		Tạo phím nóng và hotstrings tùy thuộc bối cảnh nhạy cảm
+		vào loại cửa sổ đang hoạt động hay tồn tại.
+	)	
+	Ex_SM_TT =	
+	(LTrim	
+		Gửi làm đồng nghĩa với SendInput hoặc SendPlay hơn
+		mặc định (SendEvent). Cũng làm cho Click và MouseMove / Click / Kéo
+		sử dụng phương pháp xác định.
+	)	
+	SM_TT =	
+	(LTrim	
+		Sự kiện: Đây là mặc định bắt đầu được sử dụng bởi tất cả các kịch bản.
+		Nó sử dụng các phương pháp SendEvent cho Send, SendRaw, Click, và MouseMove / Click / Kéo.
+		Đầu vào: Công tắc phương pháp SendInput để gửi, SendRaw, Click, và MouseMove / Click / Kéo.
+		InputThenPlay: Tương tự như trên, ngoại trừ thay vì rơi trở lại chế độ tổ chức sự kiện
+		khi SendInput không có sẵn, nó trở về với chế độ chơi (bên dưới). Điều này cũng gây
+		lệnh SendInput bản thân để trở lại để chơi chế độ khi SendInput là không có.
+		Chơi: Thiết bị chuyển mạch với phương pháp SendPlay cho Send, SendRaw, Click, và MouseMove / Click / Kéo.
+	)	
+	Ex_SI_TT =	
+	(LTrim	
+		Xác định liệu một kịch bản được phép chạy một lần nữa khi nó đang chạy.
+	)	
+	SI_TT =	
+	(LTrim	
+		Các FORCE từ bỏ qua các hộp thoại và thay thế các ví dụ cũ sẽ tự động,
+		tương tự như trong thực thi các lệnh lại.
+		Từ bỏ qua bỏ qua hộp thoại và lá dụ cũ chạy.
+		Nói cách khác, cố gắng để khởi động một kịch bản đã chạy được bỏ qua.
+		OFF từ cho phép nhiều trường hợp của các kịch bản để chạy đồng thời.
+	)	
+	Ex_ST_TT =	
+	(LTrim	
+		Thiết lập các hành vi phù hợp với các tham số WinTitle trong lệnh như WinWait.
+	)	
+	ST_TT =	
+	(LTrim	
+		1: Một tiêu đề của cửa sổ phải bắt đầu với WinTitle quy định là một trận đấu.
+		2: tiêu đề của một cửa sổ có thể chứa WinTitle bất cứ nơi nào bên trong nó là một trận đấu.
+		3: Một tiêu đề của cửa sổ phải phù hợp chính xác WinTitle là một trận đấu.
+		Regex: Thay đổi WinTitle, WinText, ExcludeTitle, và ExcludeText được biểu thức thông thường.
+	)	
+	Ex_DH_TT =	
+	(LTrim	
+		Xác định liệu các cửa sổ vô hình được "nhìn thấy" bởi kịch bản.
+	)	
+	Ex_AF_TT =	
+	(LTrim	
+		Bỏ qua các phương pháp nhẹ nhàng kích hoạt một cửa sổ
+		và đi thẳng vào các phương pháp mạnh mẽ.
+	)	
+	Ex_HK_TT =	
+	(LTrim	
+		Buộc việc sử dụng các móc để thực hiện tất cả
+		hoặc một số phím tắt bàn phím.
+	)	
+	Ex_SK_TT =	
+	(LTrim	
+		Thiết lập sự chậm trễ đó sẽ xảy ra sau mỗi
+		tổ hợp phím gửi Gửi hoặc ControlSend.
+	)	
+	Ex_MD_TT =	
+	(LTrim	
+		Thiết lập sự chậm trễ đó sẽ xảy ra sau khi
+		mỗi di chuyển chuột hoặc nhấp chuột.
+	)	
+	Ex_SC_TT =	
+	(LTrim	
+		Thiết lập sự chậm trễ đó sẽ xảy ra sau khi
+		mỗi kiểm soát sửa đổi lệnh.
+	)	
+	Ex_SW_TT =	
+	(LTrim	
+		Thiết lập sự chậm trễ đó sẽ xảy ra sau khi
+		mỗi lệnh cửa sổ, chẳng hạn như WinActivate.
+	)	
+	Ex_SB_TT =	
+	(LTrim	
+		Xác định nhanh như thế nào một kịch bản sẽ chạy (ảnh hưởng đến việc sử dụng CPU).
+	)	
+	Ex_NT_TT =	
+	(LTrim	
+		Vô hiệu hóa hiển thị một biểu tượng trên khay.
+	)	
+		
+	Ex_IN_TT =	
+	(LTrim	
+		Gây ra các kịch bản để hành xử như thể các quy định
+		nội dung của tập tin có mặt tại vị trí này chính xác.
+	)	
+	Ex_PT_TT =	
+	(LTrim	
+		Giữ một kịch bản vĩnh viễn chạy
+		(Có nghĩa là, cho đến khi người dùng đóng nó hoặc ExitApp là gặp phải).
+	)	
+	Ex_MT_TT =	
+	(LTrim	
+		Thiết lập số lượng tối đa đồng thời
+		chủ đề cho mỗi phím nóng hoặc hotstring.
+	)	
+	Ex_UV_TT =	Xuất khẩu các biến toàn cầu.
+	Ex_EdVars_TT =	Chọn các biến toàn cầu được xuất khẩu.
+		
+; IE Commands Tips		
+	Tip_Navigate =	Điều hướng tới một URL hoặc đường dẫn.
+	Tip_Value =	Được hoặc đặt giá trị của đối tượng.
+	Tip_Focus =	Đặt trọng tâm vào đối tượng.
+	Tip_Click =	Mô phỏng một nhấp chuột vào đối tượng.
+	Tip_Submit =	Gửi biểu mẫu.
+	Tip_GoHome =	Điều hướng tới các nhà hiện tại hoặc trang bắt đầu.
+	Tip_GoBack =	Điều hướng ngược một mục trong danh sách lịch sử.
+	Tip_GoForward =	Chuyển tiếp đến một mục trong danh sách lịch sử.
+	Tip_GoSearch =	Điều hướng đến các trang tìm kiếm hiện tại.
+	Tip_Refresh =	Tải lại trang đang hiển thị.
+	Tip_Stop =	Hủy bỏ một chuyển hướng cấp phát chính thức hoặc tải về.
+	Tip_Quit =	Đóng cửa trang.
+	Tip_LocationName =	Nhận được đường dẫn hoặc trang tiêu đề hiện tại.
+	Tip_LocationURL =	Được URL của trang hiện tại.
+	Tip_InnerText =	Thiết lập hoặc nhận được văn bản của đối tượng.
+	Tip_InnerHTML =	Thiết lập hoặc lấy mã HTML của đối tượng.
+	Tip_Href =	Đặt hoặc nhận một URL đích hoặc một điểm neo.
+	Tip_Src =	Đặt hoặc nhận một URL được nạp bởi các đối tượng.
+	Tip_SelectedIndex =	Thiết lập hoặc lấy các chỉ số của các tùy chọn được chọn trong một đối tượng chọn.
+	Tip_Checked =	Thiết lập hoặc lấy trạng thái của hộp kiểm tra hoặc nút radio.
+	Tip_Type =	Thiết lập hoặc lấy các loại nội dung của đối tượng.
+	Tip_Width =	Thiết lập hoặc lấy chiều rộng của đối tượng.
+	Tip_Height =	Thiết lập hoặc lấy chiều cao của đối tượng.
+	Tip_Length =	Thiết lập hoặc lấy số lượng các đối tượng trong một bộ sưu tập.
+		
+return		

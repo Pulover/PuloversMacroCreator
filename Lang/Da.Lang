@@ -321,7 +321,7 @@
 	c_Lang088 =	Reset
 	c_Lang089 =	Funktion Navn
 	c_Lang090 =	Kommasepareret parametre (uden parentes).
-	c_Lang091 =	(Brug `% for variabler. Bogstavelige Kommaer skal escapes [```,])
+	c_Lang091 =	(Brug `% for variabler. Bogstavelige Kommaer skal escapes [ ```, ])
 	c_Lang092 =	Sideelement / Index
 	c_Lang093 =	Indstil
 	c_Lang094 =	Få

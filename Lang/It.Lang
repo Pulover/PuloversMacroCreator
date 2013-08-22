@@ -321,7 +321,7 @@
 	c_Lang088 =	Reset
 	c_Lang089 =	Nome Funzione
 	c_Lang090 =	Separati da virgola parametri (senza parentesi).
-	c_Lang091 =	(Usare `% per le variabili. Virgole letterali devono essere protette [```,])
+	c_Lang091 =	(Usare `% per le variabili. Virgole letterali devono essere protette [ ```, ])
 	c_Lang092 =	Pagina Elemento / Indice
 	c_Lang093 =	Set
 	c_Lang094 =	Ottenere

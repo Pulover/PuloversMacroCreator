@@ -321,7 +321,7 @@
 	c_Lang088 =	Ponastavi
 	c_Lang089 =	Funkcija Ime
 	c_Lang090 =	Ločene z vejico parametre (brez oklepajev).
-	c_Lang091 =	(Uporabite `% za spremenljivke. Je dobesedna Vejice je pobegnil [```,])
+	c_Lang091 =	(Uporabite `% za spremenljivke. Je dobesedna Vejice je pobegnil [ ```, ])
 	c_Lang092 =	Element stran / Index
 	c_Lang093 =	Set
 	c_Lang094 =	Get
@@ -679,7 +679,7 @@
 		Preverite "Capture Keys" možnost, da vstopijo tipke in kombinacije s svojim Macro neposredno iz glavnega okna.
 		Vpišite tipke in kombinacije v polje aktivne tipke na dnu in pritisnite gumb Insert, da jih dodate na izbranih vrstah.
 		Če ni izbran noben vrstic za urejanje gumbov veljajo za vse vrstice v seznamu.
-		Lahko določite svoje spremenljivke v spremenljivkah okna (Insert> Če Izjave / spremenljivke / funkcije). Če jih želite uporabljati v notranjosti ukazi priložiti ime spremenljivke v odstotkih znakov, na primer: `% MyVar ` \ funtov.
+		Lahko določite svoje spremenljivke v spremenljivkah okna (Insert> Če Izjave / spremenljivke / funkcije). Če jih želite uporabljati v notranjosti ukazi priložiti ime spremenljivke v odstotkih znakov, na primer: `%MyVar`% funtov.
 		Zanka Števec na vrhu določa skupno število zank za izbrano Macro.
 		Lahko uredite vrstico z dvojnim klikom ali ga izberete in kliknete Uredi gumbe na dnu.
 		Lahko urejate več izbrane vrstice z uporabo možnosti v vnosno vrstico na dnu.

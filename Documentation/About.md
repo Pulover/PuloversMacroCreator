@@ -40,14 +40,13 @@ Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jör
 
 * New Interface with customizable toolbars.
 * New *Preview* window with syntax highlighting.
-* Docked *Preview* window beside *Macro* list (can be undocked).
+* Added *Find a command* window.
 * Added support for basic Arrays using the built-in function *Array*.
-* Added support for functions inside Expressions in *Assign Variable* window.
-* Added new feature: *Find a command*.
-* Added *Edit Script* button in *Preview* window to open script in external editor.
+* Added support for functions in *Assign Variable* window when using the *Expression* option.
+* Added *Edit Script* button in *Preview* window.
 * Added individual *Pause* hotkey.
 * Added *Multiple Column* search in *Find/Replace* window.
-* Added translation to Malay.
+* Added translations to Malay and Vietnamese.
 * Main window size is remembered.
 
 ## Version 3.8.4

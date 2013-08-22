@@ -321,7 +321,7 @@
 	c_Lang088 =	Remettre
 	c_Lang089 =	Nom de la fonction
 	c_Lang090 =	Paramètres séparés par des virgules (sans parenthèses).
-	c_Lang091 =	(Utilisez `% pour les variables. Les virgules littéraux doivent être échappés [```,])
+	c_Lang091 =	(Utilisez `% pour les variables. Les virgules littéraux doivent être échappés [ ```, ])
 	c_Lang092 =	Élément Page / Index
 	c_Lang093 =	Fixer
 	c_Lang094 =	Obtenir

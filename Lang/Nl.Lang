@@ -321,7 +321,7 @@
 	c_Lang088 =	Reset
 	c_Lang089 =	Functie Naam
 	c_Lang090 =	Komma gescheiden parameters (zonder haakjes).
-	c_Lang091 =	(Gebruik `% voor Variabelen. Letterlijke Komma's moet worden ontsnapt [```,])
+	c_Lang091 =	(Gebruik `% voor Variabelen. Letterlijke Komma's moet worden ontsnapt [ ```, ])
 	c_Lang092 =	Pagina-element / Index
 	c_Lang093 =	Ingesteld
 	c_Lang094 =	Krijgen
