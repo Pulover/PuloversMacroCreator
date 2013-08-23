@@ -462,16 +462,16 @@
 	t_Lang065 =	Comment
 	t_Lang066 =	Search Column
 	t_Lang067 =	Find / Replace
-	t_Lang068 =	Find
-	t_Lang069 =	Match Case
-	t_Lang070 =	Replace
+	t_Lang068 =	&Find
+	t_Lang069 =	&Match Case
+	t_Lang070 =	&Replace
 	t_Lang071 =	Found
 	t_Lang072 =	Replaced
-	t_Lang073 =	Selected Rows
-	t_Lang074 =	All Rows
-	t_Lang075 =	All Macros
+	t_Lang073 =	&Selected Rows
+	t_Lang074 =	&All Rows
+	t_Lang075 =	A&ll Macros
 	t_Lang076 =	About
-	t_Lang077 =	Regular Expression
+	t_Lang077 =	Re&gular Expression
 	t_Lang078 =	Play once
 	t_Lang079 =	Play every X (mili)seconds
 	t_Lang080 =	Timer
@@ -486,7 +486,7 @@
 	t_Lang089 =	Allow Multiple Instances
 	t_Lang090 =	Defaults
 	t_Lang091 =	Allow Dragging Rows
-	t_Lang092 =	Entire cell contents
+	t_Lang092 =	&Entire cell contents
 	t_Lang093 =	Standard INI format
 	t_Lang094 =	Name = Value
 	t_Lang095 =	Enter 1 variable per line. You may also add [Sections].

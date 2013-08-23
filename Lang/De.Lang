@@ -462,16 +462,16 @@
 	t_Lang065 =	Kommentar
 	t_Lang066 =	Suchspalte
 	t_Lang067 =	Suchen/Ersetzen
-	t_Lang068 =	Suchen
-	t_Lang069 =	Groß- /Kleinschreibung
-	t_Lang070 =	Ersetzen
+	t_Lang068 =	&Suchen
+	t_Lang069 =	G&roß- /Kleinschreibung
+	t_Lang070 =	&Ersetzen
 	t_Lang071 =	Gefunden
 	t_Lang072 =	Ersetzt
-	t_Lang073 =	Ausgewählte Zeilen
-	t_Lang074 =	Alle Zeilen
-	t_Lang075 =	Alle Makros
+	t_Lang073 =	&Ausgewählte Zeilen
+	t_Lang074 =	A&lle Zeilen
+	t_Lang075 =	Alle &Makros
 	t_Lang076 =	Über
-	t_Lang077 =	Regular Expression
+	t_Lang077 =	Reg&ular Expression
 	t_Lang078 =	Einmal wiedergeben
 	t_Lang079 =	Alle X (Milli-)Sekunden wiedergeben
 	t_Lang080 =	Timer
@@ -486,7 +486,7 @@
 	t_Lang089 =	Mehrere Instanzen zulassen
 	t_Lang090 =	Standard
 	t_Lang091 =	Reihen ziehen erlauben 
-	t_Lang092 =	Gesamter Zellinhalt
+	t_Lang092 =	&Gesamter Zellinhalt
 	t_Lang093 =	Standard INI-Format
 	t_Lang094 =	Name = Wert
 	t_Lang095 =	Eine Variable pro Zeile eingeben. Sie können auch [Abschnitte] hinzufügen.

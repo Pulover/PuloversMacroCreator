@@ -462,16 +462,16 @@
 	t_Lang065 =	Comentário
 	t_Lang066 =	Pesquisar Coluna
 	t_Lang067 =	Localizar / Substituir
-	t_Lang068 =	Localizar
-	t_Lang069 =	Diferenciar Maiúsc./Minúsc.
-	t_Lang070 =	Substituir
+	t_Lang068 =	&Localizar
+	t_Lang069 =	&Diferenciar Maiúsc./Minúsc.
+	t_Lang070 =	&Substituir
 	t_Lang071 =	Encontrados
 	t_Lang072 =	Substituidos
-	t_Lang073 =	Linhas Selecionadas
-	t_Lang074 =	Todas as Linhas
-	t_Lang075 =	Todas as Macros Macros
+	t_Lang073 =	L&inhas Selecionadas
+	t_Lang074 =	&Todas as Linhas
+	t_Lang075 =	T&odas as Macros Macros
 	t_Lang076 =	Sobre
-	t_Lang077 =	Expressão Regular
+	t_Lang077 =	&Expressão Regular
 	t_Lang078 =	Reproduzir uma vez
 	t_Lang079 =	A cada X (mili)segundos
 	t_Lang080 =	Temporizador
@@ -486,7 +486,7 @@
 	t_Lang089 =	Permitir Multiplas Instâncias
 	t_Lang090 =	Padrões
 	t_Lang091 =	Permitir Arrastar Linhas
-	t_Lang092 =	Conteúdo da célula inteira
+	t_Lang092 =	&Conteúdo da célula inteira
 	t_Lang093 =	Formato INI padrão
 	t_Lang094 =	Nome = Valor
 	t_Lang095 =	Insira 1 variável por linha. Você também pode adicionar [Seções].

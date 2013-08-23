@@ -462,16 +462,16 @@
 	t_Lang065 =	Komentar
 	t_Lang066 =	Iskanje stolpec
 	t_Lang067 =	Najdi / zamenjaj
-	t_Lang068 =	Najdi
-	t_Lang069 =	Match Case
-	t_Lang070 =	Zamenjajte
+	t_Lang068 =	&Najdi
+	t_Lang069 =	&Match Case
+	t_Lang070 =	&Zamenjajte
 	t_Lang071 =	Najdeno
 	t_Lang072 =	Nadomesti
-	t_Lang073 =	Izbrane vrstice
-	t_Lang074 =	Vse vrstic
-	t_Lang075 =	Vse Makri
+	t_Lang073 =	&Izbrane vrstice
+	t_Lang074 =	V&se vrstic
+	t_Lang075 =	Vs&e Makri
 	t_Lang076 =	O
-	t_Lang077 =	Regular Expression
+	t_Lang077 =	&Regular Expression
 	t_Lang078 =	Predvajaj enkrat
 	t_Lang079 =	Igraj vsakih X (mili) sekund
 	t_Lang080 =	Timer
@@ -486,7 +486,7 @@
 	t_Lang089 =	Dovoli več primerkov
 	t_Lang090 =	Neplačila
 	t_Lang091 =	Dovoli Vlečenje vrstice
-	t_Lang092 =	Vsebino celotne celice
+	t_Lang092 =	&Vsebino celotne celice
 	t_Lang093 =	Standardni format INI
 	t_Lang094 =	Ime = vrednost
 	t_Lang095 =	Vnesite 1 spremenljivko na vrstico. Dodate lahko tudi [oddelkov].

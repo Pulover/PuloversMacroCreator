@@ -462,16 +462,16 @@
 	t_Lang065 =	Kommentar
 	t_Lang066 =	Søg Column
 	t_Lang067 =	Find / Erstat
-	t_Lang068 =	Find
-	t_Lang069 =	Match Case
-	t_Lang070 =	Erstat
+	t_Lang068 =	&Find
+	t_Lang069 =	&Match Case
+	t_Lang070 =	&Erstat
 	t_Lang071 =	Fundet
 	t_Lang072 =	Erstattet
-	t_Lang073 =	Valgte rækker
-	t_Lang074 =	Alle rækker
-	t_Lang075 =	Alle Makroer
+	t_Lang073 =	&Valgte rækker
+	t_Lang074 =	&Alle rækker
+	t_Lang075 =	A&lle Makroer
 	t_Lang076 =	Om
-	t_Lang077 =	Regular Expression
+	t_Lang077 =	&Regular Expression
 	t_Lang078 =	Afspil én gang
 	t_Lang079 =	Spil hver X (mili) sekunder
 	t_Lang080 =	Timer
@@ -486,7 +486,7 @@
 	t_Lang089 =	Tillad flere forekomster
 	t_Lang090 =	Defaults
 	t_Lang091 =	Tillad at trække rækker
-	t_Lang092 =	Hele celleindhold
+	t_Lang092 =	&Hele celleindhold
 	t_Lang093 =	Standard INI format
 	t_Lang094 =	Name = Value
 	t_Lang095 =	Indtast 1 variabel per linje. Du kan også tilføje [afsnit].

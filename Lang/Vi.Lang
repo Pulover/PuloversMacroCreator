@@ -462,16 +462,16 @@
 	t_Lang065 =	Bình luận
 	t_Lang066 =	Tìm kiếm Cột
 	t_Lang067 =	Tìm / Thay thế
-	t_Lang068 =	Tìm
-	t_Lang069 =	Phù hợp với trường hợp
-	t_Lang070 =	Thay thế
+	t_Lang068 =	&Tìm
+	t_Lang069 =	&Phù hợp với trường hợp
+	t_Lang070 =	T&hay thế
 	t_Lang071 =	Tìm thấy
 	t_Lang072 =	Thay thế
-	t_Lang073 =	Hàng được lựa chọn
-	t_Lang074 =	Tất cả các dòng
-	t_Lang075 =	Tất cả các Macro
+	t_Lang073 =	H&àng được lựa chọn
+	t_Lang074 =	T&ất cả các dòng
+	t_Lang075 =	Tất &cả các Macro
 	t_Lang076 =	Về
-	t_Lang077 =	Biểu hiện thường xuyên
+	t_Lang077 =	&Biểu hiện thường xuyên
 	t_Lang078 =	Chơi một lần
 	t_Lang079 =	Chơi mỗi X (mili) giây
 	t_Lang080 =	Hẹn giờ
@@ -486,7 +486,7 @@
 	t_Lang089 =	Nhiều trường hợp cho phép
 	t_Lang090 =	Mặc định
 	t_Lang091 =	Cho phép kéo dòng
-	t_Lang092 =	Nội dung toàn bộ tế bào
+	t_Lang092 =	&Nội dung toàn bộ tế bào
 	t_Lang093 =	Định dạng INI chuẩn
 	t_Lang094 =	Tên = giá trị gia tăng
 	t_Lang095 =	Nhập 1 biến trên mỗi dòng. Bạn cũng có thể thêm [Phần].

@@ -462,16 +462,16 @@
 	t_Lang065 =	Kommentti
 	t_Lang066 =	Etsi sarake
 	t_Lang067 =	Etsi / korvaa
-	t_Lang068 =	Löytää
-	t_Lang069 =	Match Case
-	t_Lang070 =	Korvata
+	t_Lang068 =	&Löytää
+	t_Lang069 =	&Match Case
+	t_Lang070 =	&Korvata
 	t_Lang071 =	Löydetty
 	t_Lang072 =	Korvaaminen
-	t_Lang073 =	Valitut rivit
-	t_Lang074 =	Kaikki rivit
-	t_Lang075 =	Kaikki Makrot
+	t_Lang073 =	&Valitut rivit
+	t_Lang074 =	K&aikki rivit
+	t_Lang075 =	Ka&ikki Makrot
 	t_Lang076 =	Noin
-	t_Lang077 =	Säännöllinen lauseke
+	t_Lang077 =	&Säännöllinen lauseke
 	t_Lang078 =	Toista kerran
 	t_Lang079 =	Toista jokainen X (soti) sekuntia
 	t_Lang080 =	Ajastin
@@ -486,7 +486,7 @@
 	t_Lang089 =	Salli useita esiintymiä
 	t_Lang090 =	Oletukset
 	t_Lang091 =	Salli vetämällä rivejä
-	t_Lang092 =	Koko solun sisältö
+	t_Lang092 =	K&oko solun sisältö
 	t_Lang093 =	Standard INI muodossa
 	t_Lang094 =	Nimi = arvo
 	t_Lang095 =	Anna 1 muuttujan riville. Voit myös lisätä [§].

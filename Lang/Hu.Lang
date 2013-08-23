@@ -462,16 +462,16 @@
 	t_Lang065 =	Megjegyzés
 	t_Lang066 =	Keresés oszlop
 	t_Lang067 =	Keresés / Csere
-	t_Lang068 =	Talál
-	t_Lang069 =	Match Case
-	t_Lang070 =	Cserélje
+	t_Lang068 =	&Talál
+	t_Lang069 =	&Match Case
+	t_Lang070 =	&Cserélje
 	t_Lang071 =	Talált
 	t_Lang072 =	Felváltotta
-	t_Lang073 =	Kijelölt sorok
-	t_Lang074 =	Minden Sorok
-	t_Lang075 =	Minden Makrók
+	t_Lang073 =	&Kijelölt sorok
+	t_Lang074 =	M&inden Sorok
+	t_Lang075 =	Mi&nden Makrók
 	t_Lang076 =	-Ról
-	t_Lang077 =	Reguláris kifejezés
+	t_Lang077 =	&Reguláris kifejezés
 	t_Lang078 =	Lejátszás egyszer
 	t_Lang079 =	Játssz minden X (katonai) másodperc
 	t_Lang080 =	Időzítő
@@ -486,7 +486,7 @@
 	t_Lang089 =	Több példány engedélyezése
 	t_Lang090 =	Alapértékek
 	t_Lang091 =	Engedélyezése húzással sorok
-	t_Lang092 =	Teljes cella tartalmát
+	t_Lang092 =	T&eljes cella tartalmát
 	t_Lang093 =	Szabványos INI formátum
 	t_Lang094 =	Név = érték
 	t_Lang095 =	Írja 1 változó soronként. Ön is hozzá [§].

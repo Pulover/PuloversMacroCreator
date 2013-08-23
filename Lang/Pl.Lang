@@ -462,16 +462,16 @@
 	t_Lang065 =	Komentarz
 	t_Lang066 =	Kolumna Szukaj
 	t_Lang067 =	Znajdź / Zastąp
-	t_Lang068 =	Odnaleźć
-	t_Lang069 =	Wielkość liter
-	t_Lang070 =	Zastąpić
+	t_Lang068 =	&Odnaleźć
+	t_Lang069 =	&Wielkość liter
+	t_Lang070 =	&Zastąpić
 	t_Lang071 =	Znaleziono
 	t_Lang072 =	Zastąpiony
-	t_Lang073 =	Wybrane wiersze
-	t_Lang074 =	Wszystkie wiersze
-	t_Lang075 =	Wszystkie makra
+	t_Lang073 =	Wy&brane wiersze
+	t_Lang074 =	W&szystkie wiersze
+	t_Lang075 =	Wszys&tkie makra
 	t_Lang076 =	O
-	t_Lang077 =	Wyrażenie regularne
+	t_Lang077 =	W&yrażenie regularne
 	t_Lang078 =	Odtwórz raz
 	t_Lang079 =	Zagraj każdego x (mili) sekund
 	t_Lang080 =	Regulator czasowy
@@ -486,7 +486,7 @@
 	t_Lang089 =	Zezwalaj na wiele wystąpień
 	t_Lang090 =	Defaults
 	t_Lang091 =	Pozwól przeciągając wiersze
-	t_Lang092 =	Cała zawartość komórek
+	t_Lang092 =	&Cała zawartość komórek
 	t_Lang093 =	Standardowy format INI
 	t_Lang094 =	Name = Value
 	t_Lang095 =	Wpisz 1 zmiennej na linię. Możesz także dodać [rozdziały].

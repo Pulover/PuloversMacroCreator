@@ -462,16 +462,16 @@
 	t_Lang065 =	Yorumlamak
 	t_Lang066 =	Arama Sütun
 	t_Lang067 =	Bul / Değiştir
-	t_Lang068 =	Bulmak
-	t_Lang069 =	Olgu Maç
-	t_Lang070 =	Değiştirmek
+	t_Lang068 =	&Bulmak
+	t_Lang069 =	&Olgu Maç
+	t_Lang070 =	&Değiştirmek
 	t_Lang071 =	Bulundu
 	t_Lang072 =	Değiştirilen
-	t_Lang073 =	Seçili Satırlar
-	t_Lang074 =	Tüm Satırlar
-	t_Lang075 =	Tüm Makrolar
+	t_Lang073 =	&Seçili Satırlar
+	t_Lang074 =	T&üm Satırlar
+	t_Lang075 =	Tü&m Makrolar
 	t_Lang076 =	Hakkında
-	t_Lang077 =	Normal İfade
+	t_Lang077 =	&Normal İfade
 	t_Lang078 =	Bir kez oynat
 	t_Lang079 =	Her X (mili) saniye Oyna
 	t_Lang080 =	Kronometre
@@ -486,7 +486,7 @@
 	t_Lang089 =	Çoklu örnekleri İzin
 	t_Lang090 =	Varsayılanları
 	t_Lang091 =	Satırları sürükleyerek izin ver
-	t_Lang092 =	Tüm hücre içeriğini
+	t_Lang092 =	&Tüm hücre içeriğini
 	t_Lang093 =	Standart INI biçimi
 	t_Lang094 =	Adı = Değer
 	t_Lang095 =	Satır başına 1 değişken girin. Ayrıca [Bölüm] ekleyebilirsiniz.

@@ -462,16 +462,16 @@
 	t_Lang065 =	Komentirati
 	t_Lang066 =	Traži stupcu
 	t_Lang067 =	Pronađi / Zamijeni
-	t_Lang068 =	Pronaći
-	t_Lang069 =	Match Case
-	t_Lang070 =	Zamijeniti
+	t_Lang068 =	&Pronaći
+	t_Lang069 =	&Match Case
+	t_Lang070 =	&Zamijeniti
 	t_Lang071 =	Pronađen
 	t_Lang072 =	Zamijenjen
-	t_Lang073 =	Odabrani reci
-	t_Lang074 =	Svi reci
-	t_Lang075 =	Svi Makro
+	t_Lang073 =	&Odabrani reci
+	t_Lang074 =	&Svi reci
+	t_Lang075 =	S&vi Makro
 	t_Lang076 =	Oko
-	t_Lang077 =	Regular Expression
+	t_Lang077 =	&Regular Expression
 	t_Lang078 =	Igrajte jednom
 	t_Lang079 =	Igrajte svakih X (mili) sekundi
 	t_Lang080 =	Timer
@@ -486,7 +486,7 @@
 	t_Lang089 =	Dopusti više primjeraka
 	t_Lang090 =	Zadane
 	t_Lang091 =	Dopustite Povlačenje retke
-	t_Lang092 =	Cijele sadržaj ćelije
+	t_Lang092 =	&Cijele sadržaj ćelije
 	t_Lang093 =	Standardni format INI
 	t_Lang094 =	Ime = Vrijednost
 	t_Lang095 =	Unesite jedna varijabla po liniji. Vi svibanj također dodati [sekcije].

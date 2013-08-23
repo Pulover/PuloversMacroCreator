@@ -462,16 +462,16 @@
 	t_Lang065 =	Commenter
 	t_Lang066 =	Colonne de recherche
 	t_Lang067 =	Rechercher / Remplacer
-	t_Lang068 =	Trouver
-	t_Lang069 =	Respecter la casse
-	t_Lang070 =	Remplacer
+	t_Lang068 =	&Trouver
+	t_Lang069 =	R&especter la casse
+	t_Lang070 =	&Remplacer
 	t_Lang071 =	Trouvé
 	t_Lang072 =	Remplacé
-	t_Lang073 =	Lignes sélectionnées
-	t_Lang074 =	Toutes les lignes
-	t_Lang075 =	Toutes les macros
+	t_Lang073 =	L&ignes sélectionnées
+	t_Lang074 =	T&outes les lignes
+	t_Lang075 =	To&utes les macros
 	t_Lang076 =	Sur
-	t_Lang077 =	Expression régulière
+	t_Lang077 =	E&xpression régulière
 	t_Lang078 =	Lire une fois
 	t_Lang079 =	Jouer tous les X (mili) secondes
 	t_Lang080 =	Minuteur
@@ -486,7 +486,7 @@
 	t_Lang089 =	Permettre à plusieurs instances
 	t_Lang090 =	Par défaut
 	t_Lang091 =	Laisser glisser les lignes
-	t_Lang092 =	Le contenu des cellules entières
+	t_Lang092 =	&Le contenu des cellules entières
 	t_Lang093 =	Format INI standard
 	t_Lang094 =	Nom = Valeur
 	t_Lang095 =	Entrez 1 variable par ligne. Vous pouvez également ajouter [Articles].

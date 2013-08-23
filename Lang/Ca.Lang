@@ -462,16 +462,16 @@
 	t_Lang065 =	Comentari
 	t_Lang066 =	Cercar columna
 	t_Lang067 =	Cercar / Reemplaçar
-	t_Lang068 =	Trobar
-	t_Lang069 =	Coincidir majúscules i minúscules
-	t_Lang070 =	Reemplaçar
+	t_Lang068 =	&Trobar
+	t_Lang069 =	&Coincidir majúscules i minúscules
+	t_Lang070 =	&Reemplaçar
 	t_Lang071 =	Fundar
 	t_Lang072 =	Substituït
-	t_Lang073 =	Les files seleccionades
-	t_Lang074 =	Totes les files
-	t_Lang075 =	Tots Macros
+	t_Lang073 =	&Les files seleccionades
+	t_Lang074 =	Tote&s les files
+	t_Lang075 =	Tots &Macros
 	t_Lang076 =	Sobre
-	t_Lang077 =	Expressió Regular
+	t_Lang077 =	&Expressió Regular
 	t_Lang078 =	Reproduir un cop
 	t_Lang079 =	Juga cada X (mili) segon
 	t_Lang080 =	Timer
@@ -486,7 +486,7 @@
 	t_Lang089 =	Permetre múltiples instàncies
 	t_Lang090 =	Valors predefinits
 	t_Lang091 =	Permetre arrossegar files
-	t_Lang092 =	Tot el contingut de la cel · la
+	t_Lang092 =	T&ot el contingut de la cel · la
 	t_Lang093 =	Format INI estàndard
 	t_Lang094 =	Nom = Valor
 	t_Lang095 =	Introduïu gener variable per línia. Vostè també pot afegir [Seccions].

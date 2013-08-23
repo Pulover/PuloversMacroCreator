@@ -462,16 +462,16 @@
 	t_Lang065 =	Comentario
 	t_Lang066 =	Buscar columna
 	t_Lang067 =	Buscar / Reemplazar
-	t_Lang068 =	Encontrar
-	t_Lang069 =	Coincidir mayúsculas y minúsculas
-	t_Lang070 =	Reemplazar
+	t_Lang068 =	&Encontrar
+	t_Lang069 =	&Coincidir mayúsculas y minúsculas
+	t_Lang070 =	&Reemplazar
 	t_Lang071 =	Encontrado
 	t_Lang072 =	Sustituido
-	t_Lang073 =	Las filas seleccionadas
-	t_Lang074 =	Todas las filas
-	t_Lang075 =	Todas las macros
+	t_Lang073 =	&Las filas seleccionadas
+	t_Lang074 =	T&odas las filas
+	t_Lang075 =	To&das las macros
 	t_Lang076 =	Acerca
-	t_Lang077 =	Expresión Regular
+	t_Lang077 =	E&xpresión Regular
 	t_Lang078 =	Reproducir una vez
 	t_Lang079 =	Juega cada X (mili) segundos
 	t_Lang080 =	Timer
@@ -486,7 +486,7 @@
 	t_Lang089 =	Permitir varias instancias
 	t_Lang090 =	Predeterminados
 	t_Lang091 =	Permitir Arrastrar Filas
-	t_Lang092 =	Todo el contenido de la celda
+	t_Lang092 =	&Todo el contenido de la celda
 	t_Lang093 =	Formato INI estándar
 	t_Lang094 =	Nombre = Valor
 	t_Lang095 =	Introduzca 1 variable por línea. Usted también puede agregar [Secciones].

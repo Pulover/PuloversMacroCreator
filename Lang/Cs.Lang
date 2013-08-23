@@ -462,16 +462,16 @@
 	t_Lang065 =	Komentář
 	t_Lang066 =	Hledat sloupec
 	t_Lang067 =	Najít / Nahradit
-	t_Lang068 =	Najít
-	t_Lang069 =	Zápas Case
-	t_Lang070 =	Nahradit
+	t_Lang068 =	&Najít
+	t_Lang069 =	&Zápas Case
+	t_Lang070 =	N&ahradit
 	t_Lang071 =	Nalezeno
 	t_Lang072 =	Nahrazeno
-	t_Lang073 =	Vybrané řádky
-	t_Lang074 =	Všechny Řádky
-	t_Lang075 =	Všechny Makra
+	t_Lang073 =	&Vybrané řádky
+	t_Lang074 =	V&šechny Řádky
+	t_Lang075 =	Vš&echny Makra
 	t_Lang076 =	O
-	t_Lang077 =	Regulárních výrazů
+	t_Lang077 =	&Regulárních výrazů
 	t_Lang078 =	Přehrát jednou
 	t_Lang079 =	Zahrajte si každých X (mili) sekund
 	t_Lang080 =	Časový spínač
@@ -486,7 +486,7 @@
 	t_Lang089 =	Povolit více instancí
 	t_Lang090 =	Výchozí
 	t_Lang091 =	Povolit přetahování řádky
-	t_Lang092 =	Celý obsah buňky
+	t_Lang092 =	&Celý obsah buňky
 	t_Lang093 =	Standardní INI formát
 	t_Lang094 =	Název = hodnota
 	t_Lang095 =	Zadejte 1 proměnnou na řádek. Můžete také přidat [sekce].

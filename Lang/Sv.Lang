@@ -462,16 +462,16 @@
 	t_Lang065 =	Kommentar
 	t_Lang066 =	Sök Kolumn
 	t_Lang067 =	Sök / Ersätt
-	t_Lang068 =	Hitta
-	t_Lang069 =	Matcha mål
-	t_Lang070 =	Ersätt
+	t_Lang068 =	&Hitta
+	t_Lang069 =	&Matcha mål
+	t_Lang070 =	&Ersätt
 	t_Lang071 =	Hittade
 	t_Lang072 =	Ersatt
-	t_Lang073 =	Valda rader
-	t_Lang074 =	Alla rader
-	t_Lang075 =	Alla makron
+	t_Lang073 =	V&alda rader
+	t_Lang074 =	Alla &rader
+	t_Lang075 =	Alla ma&kron
 	t_Lang076 =	Om
-	t_Lang077 =	Vanligt uttryck
+	t_Lang077 =	&Vanligt uttryck
 	t_Lang078 =	Spela en gång
 	t_Lang079 =	Spela varje X (Mili) sekunder
 	t_Lang080 =	Timer
@@ -486,7 +486,7 @@
 	t_Lang089 =	Tillåt flera instanser
 	t_Lang090 =	Standardvärden
 	t_Lang091 =	Tillåt dra rader
-	t_Lang092 =	Hela cellinnehållet
+	t_Lang092 =	He&la cellinnehållet
 	t_Lang093 =	Standard INI format
 	t_Lang094 =	Namn = Värde
 	t_Lang095 =	Skriv en variabel per linje. Du kan också lägga till [avsnitt].

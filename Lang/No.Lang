@@ -462,16 +462,16 @@
 	t_Lang065 =	Kommentar
 	t_Lang066 =	Søk Column
 	t_Lang067 =	Finn / Erstatt
-	t_Lang068 =	Finn
-	t_Lang069 =	Match sak
-	t_Lang070 =	Erstatt
+	t_Lang068 =	&Finn
+	t_Lang069 =	&Match sak
+	t_Lang070 =	&Erstatt
 	t_Lang071 =	Funnet
 	t_Lang072 =	Erstattet
-	t_Lang073 =	Valgte rader
-	t_Lang074 =	Alle Rader
-	t_Lang075 =	Alle Makroer
+	t_Lang073 =	&Valgte rader
+	t_Lang074 =	&Alle Rader
+	t_Lang075 =	A&lle Makroer
 	t_Lang076 =	Om
-	t_Lang077 =	Regular Expression
+	t_Lang077 =	&Regular Expression
 	t_Lang078 =	Spille en gang
 	t_Lang079 =	Spille hvert X (mili) sekunder
 	t_Lang080 =	Timer
@@ -486,7 +486,7 @@
 	t_Lang089 =	Tillat flere forekomster
 	t_Lang090 =	Mislighold
 	t_Lang091 =	Tillate å dra rader
-	t_Lang092 =	Hele innholdet i cellen
+	t_Lang092 =	&Hele innholdet i cellen
 	t_Lang093 =	Standard INI-format
 	t_Lang094 =	Navn = verdi
 	t_Lang095 =	Skriv inn en variabel per linje. Du kan også legge til [Seksjoner].

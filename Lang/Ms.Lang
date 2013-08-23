@@ -462,16 +462,16 @@
 	t_Lang065 =	Komen
 	t_Lang066 =	Search Ruangan
 	t_Lang067 =	Cari / Ganti
-	t_Lang068 =	Cari
-	t_Lang069 =	Match Kes
-	t_Lang070 =	Ganti
+	t_Lang068 =	&Cari
+	t_Lang069 =	&Match Kes
+	t_Lang070 =	&Ganti
 	t_Lang071 =	Found
 	t_Lang072 =	Digantikan
-	t_Lang073 =	Baris Terpilih
-	t_Lang074 =	Semua Baris
-	t_Lang075 =	Semua Makro
+	t_Lang073 =	&Baris Terpilih
+	t_Lang074 =	&Semua Baris
+	t_Lang075 =	S&emua Makro
 	t_Lang076 =	Mengenai
-	t_Lang077 =	Ungkapan Biasa
+	t_Lang077 =	&Ungkapan Biasa
 	t_Lang078 =	Bermain sekali
 	t_Lang079 =	Bermain setiap X (mili) saat
 	t_Lang080 =	Pemasa
@@ -486,7 +486,7 @@
 	t_Lang089 =	Benarkan Berbilang Kejadian
 	t_Lang090 =	Lalai
 	t_Lang091 =	Benarkan Menyeret Baris
-	t_Lang092 =	Kandungan sel Keseluruhan
+	t_Lang092 =	&Kandungan sel Keseluruhan
 	t_Lang093 =	Format INI Standard
 	t_Lang094 =	Nama = Nilai
 	t_Lang095 =	Masukkan 1 ubah setiap baris. Anda juga boleh menambah [Seksyen].

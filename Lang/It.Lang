@@ -462,16 +462,16 @@
 	t_Lang065 =	Commento
 	t_Lang066 =	Cerca Colonna
 	t_Lang067 =	Trova / Sostituisci
-	t_Lang068 =	Trovare
-	t_Lang069 =	Partita Caso
-	t_Lang070 =	Sostituire
+	t_Lang068 =	&Trovare
+	t_Lang069 =	&Partita Caso
+	t_Lang070 =	&Sostituire
 	t_Lang071 =	Trovato
 	t_Lang072 =	Sostituito
-	t_Lang073 =	Righe selezionate
-	t_Lang074 =	Tutte le righe
-	t_Lang075 =	Tutte le macro
+	t_Lang073 =	Ri&ghe selezionate
+	t_Lang074 =	T&utte le righe
+	t_Lang075 =	Tutt&e le macro
 	t_Lang076 =	Circa
-	t_Lang077 =	Regular Expression
+	t_Lang077 =	&Regular Expression
 	t_Lang078 =	Riproduci una volta
 	t_Lang079 =	Gioca ogni (mili) X secondi
 	t_Lang080 =	Timer
@@ -486,7 +486,7 @@
 	t_Lang089 =	Consentire di più istanze
 	t_Lang090 =	Impostazioni predefinite
 	t_Lang091 =	Consenti trascinamento righe
-	t_Lang092 =	Il contenuto delle celle intere
+	t_Lang092 =	&Il contenuto delle celle intere
 	t_Lang093 =	Formato INI standard
 	t_Lang094 =	Nome = Valore
 	t_Lang095 =	Inserisci 1 variabile per riga. Si può anche aggiungere [sezioni].

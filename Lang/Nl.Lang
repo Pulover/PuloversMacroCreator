@@ -462,16 +462,16 @@
 	t_Lang065 =	Commentaar
 	t_Lang066 =	Zoeken Column
 	t_Lang067 =	Zoeken / vervangen
-	t_Lang068 =	Vinden
-	t_Lang069 =	Match Case
-	t_Lang070 =	Vervang
+	t_Lang068 =	&Vinden
+	t_Lang069 =	&Match Case
+	t_Lang070 =	V&ervang
 	t_Lang071 =	Gevonden
 	t_Lang072 =	Vervangen
-	t_Lang073 =	Geselecteerde Rijen
-	t_Lang074 =	Alle Rijen
-	t_Lang075 =	Alle macro's
+	t_Lang073 =	&Geselecteerde Rijen
+	t_Lang074 =	&Alle Rijen
+	t_Lang075 =	A&lle macro's
 	t_Lang076 =	Over
-	t_Lang077 =	Regular Expression
+	t_Lang077 =	&Regular Expression
 	t_Lang078 =	Een keer afspelen
 	t_Lang079 =	Speel elke X (mili) seconden
 	t_Lang080 =	Timer
@@ -486,7 +486,7 @@
 	t_Lang089 =	Kunnen meerdere exemplaren
 	t_Lang090 =	Standaardwaarden
 	t_Lang091 =	Laat slepen rijen
-	t_Lang092 =	Celinhoud
+	t_Lang092 =	&Celinhoud
 	t_Lang093 =	Standaard INI formaat
 	t_Lang094 =	Naam = waarde
 	t_Lang095 =	Voer 1 variabele per regel. U kunt ook [secties] toe te voegen.

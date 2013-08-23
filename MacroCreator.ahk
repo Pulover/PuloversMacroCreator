@@ -2246,7 +2246,7 @@ Gui, 4:Add, Edit, yp x+0 W135 R1 -Multi ReadOnly, %ManKey%
 Gui, 4:Add, Checkbox, -Wrap Checked%KeepDefKeys% y+5 xs+10 vKeepDefKeys W320 R1, %t_Lang054%.
 Gui, 4:Tab, 4
 ; Screenshots
-Gui, 4:Add, GroupBox, Section ym xm+210 W400 H160, %t_Lang046%
+Gui, 4:Add, GroupBox, Section ym xm+210 W400 H150, %t_Lang046%
 Gui, 4:Add, Text, ys+20 xs+10, %t_Lang047%:
 Gui, 4:Add, DDL, yp-5 xs+100 vDrawButton W75, RButton||LButton|MButton
 Gui, 4:Add, Text, y+10 xs+10 W200, %t_Lang048%:
@@ -7379,7 +7379,7 @@ Tooltip
 return
 
 OnScControls:
-If (WinExist("ahk_id " PMCOSC))
+If WinExist("ahk_id " PMCOSC)
 {
 	GoSub, 28GuiClose
 	return
@@ -8865,17 +8865,17 @@ Gui, 18:+owner1 +ToolWindow
 Gui, chMacro:Default
 Gui, 18:Add, Tab2, Section W400 H400 vFindTabC, %t_Lang140%|%t_Lang141%
 Gui, 18:Add, Text, ys+40 xs+10 W100, %t_Lang066%:
-Gui, 18:Add, DDL, yp-5 xp+90 W120 vSearchCol AltSubmit, %w_Lang030%||%w_Lang031%|%w_Lang032%|%w_Lang033%|%w_Lang034%|%w_Lang035%|%w_Lang036%|%w_Lang037%|%w_Lang038%|%w_Lang039%
+Gui, 18:Add, DDL, yp-5 xp+90 W120 vSearchCol gSearchCol AltSubmit, %w_Lang031%||%w_Lang032%|%w_Lang033%|%w_Lang034%|%w_Lang035%|%w_Lang036%|%w_Lang037%|%w_Lang038%|%w_Lang039%
 Gui, 18:Add, GroupBox, ys+60 xs+10 W380 H155, %t_Lang068%:
 Gui, 18:Add, Edit, yp+20 xs+20 vFind W360 r3
-Gui, 18:Add, Button, -Wrap Default y+5 xs+305 W75 H23 gFindOK, %t_Lang068%
+Gui, 18:Add, Button, -Wrap Default y+5 xs+305 W75 H23 vFindOK gFindOK, %t_Lang068%
 Gui, 18:Add, Checkbox, -Wrap yp xs+20 W285 vWholC R1, %t_Lang092%
 Gui, 18:Add, Checkbox, -Wrap W285 vMCase R1, %t_Lang069%
 Gui, 18:Add, Checkbox, -Wrap W285 vRegExSearch gRegExSearch R1, %t_Lang077%
 Gui, 18:Add, Text, y+10 xs+20 W280 vFound
 Gui, 18:Add, GroupBox, Section y+20 xs+10 W380 H155, %t_Lang070%:
 Gui, 18:Add, Edit, ys+25 xs+10 vReplace W360 r3
-Gui, 18:Add, Button, -Wrap y+5 xs+295 W75 H23 gReplaceOK, %t_Lang070%
+Gui, 18:Add, Button, -Wrap y+5 xs+295 W75 H23 vReplaceOK gReplaceOK, %t_Lang070%
 Gui, 18:Add, Radio, -Wrap Checked yp xs+10 W285 vRepSelRows R1, %t_Lang073%
 Gui, 18:Add, Radio, -Wrap W285 vRepAllRows R1, %t_Lang074%
 Gui, 18:Add, Radio, -Wrap W285 vRepAllMacros R1, %t_Lang075%
@@ -8908,8 +8908,19 @@ Gui, 18:Add, Button, -Wrap Section xm W75 H23 gFindClose, %c_Lang022%
 If (A_ThisLabel = "FilterSelect")
 	GuiControl, 18:Choose, FindTabC, 2
 Gui, 18:Show,, %t_Lang067%
+GuiControl, 18:Choose, SearchCol, 2
 GuiControl, 18:Focus, Find
 Tooltip
+return
+
+SearchCol:
+Gui, 18:Submit, NoHide
+SeIsType := ((SearchCol = 1) || (SearchCol = 5)) ? 1 : 0
+GuiControl, 18:Disable%SeIsType%, Replace
+GuiControl, 18:Disable%SeIsType%, ReplaceOK
+GuiControl, 18:Disable%SeIsType%, RepSelRows
+GuiControl, 18:Disable%SeIsType%, RepAllRows
+GuiControl, 18:Disable%SeIsType%, RepAllMacros
 return
 
 FindOK:
@@ -8919,7 +8930,7 @@ If Find =
 Gui, chMacro:Default
 StringReplace, Find, Find, `n, ``n, All
 LV_Modify(0, "-Select")
-t_Col := (SearchCol < 4) ? SearchCol + 2 : SearchCol + 3
+t_Col := SearchCol + 1
 Loop
 {
 	RowNumber := A_Index
@@ -8957,7 +8968,7 @@ If Find =
 	return
 Gui, chMacro:Default
 StringReplace, Find, Find, `n, ``n, All
-t_Col := (SearchCol < 4) ? SearchCol + 2 : SearchCol + 3
+t_Col := SearchCol + 1
 If RepAllRows = 1
 {
 	Loop, % ListCount%A_List%

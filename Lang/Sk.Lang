@@ -462,16 +462,16 @@
 	t_Lang065 =	Komentár
 	t_Lang066 =	Hľadať stĺpec
 	t_Lang067 =	Nájsť / Nahradiť
-	t_Lang068 =	Nájsť
-	t_Lang069 =	Match Case
-	t_Lang070 =	Nahradiť
+	t_Lang068 =	&Nájsť
+	t_Lang069 =	&Match Case
+	t_Lang070 =	N&ahradiť
 	t_Lang071 =	Našiel
 	t_Lang072 =	Nahradil
-	t_Lang073 =	Vybrané riadky
-	t_Lang074 =	Všetky riadky
-	t_Lang075 =	Všetky Makrá
+	t_Lang073 =	&Vybrané riadky
+	t_Lang074 =	V&šetky riadky
+	t_Lang075 =	Vš&etky Makrá
 	t_Lang076 =	O
-	t_Lang077 =	Regulárny výraz
+	t_Lang077 =	&Regulárny výraz
 	t_Lang078 =	Prehrať jedenkrát
 	t_Lang079 =	Prehrať každých X (mili) sekúnd
 	t_Lang080 =	Časový spínač
@@ -486,7 +486,7 @@
 	t_Lang089 =	Povoliť viac inštancií
 	t_Lang090 =	Predvolené
 	t_Lang091 =	Povoliť preťahovanie riadky
-	t_Lang092 =	Celý obsah bunky
+	t_Lang092 =	&Celý obsah bunky
 	t_Lang093 =	Štandardné INI formát
 	t_Lang094 =	Názov = hodnota
 	t_Lang095 =	Zadajte 1 premennú na riadok. Môžete tiež pridať [sekcie].

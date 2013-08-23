@@ -462,16 +462,16 @@
 	t_Lang065 =	Komentar
 	t_Lang066 =	Cari Kolom
 	t_Lang067 =	Cari / Ganti
-	t_Lang068 =	Menemukan
-	t_Lang069 =	Cocokkan Kasus
-	t_Lang070 =	Menggantikan
+	t_Lang068 =	&Menemukan
+	t_Lang069 =	&Cocokkan Kasus
+	t_Lang070 =	M&enggantikan
 	t_Lang071 =	Ditemukan
 	t_Lang072 =	Diganti
-	t_Lang073 =	Baris Terpilih
-	t_Lang074 =	Semua Baris
-	t_Lang075 =	Semua Macro
+	t_Lang073 =	&Baris Terpilih
+	t_Lang074 =	Sem&ua Baris
+	t_Lang075 =	Semu&a Macro
 	t_Lang076 =	Tentang
-	t_Lang077 =	Regular Expression
+	t_Lang077 =	&Regular Expression
 	t_Lang078 =	Bermain sekali
 	t_Lang079 =	Bermain setiap (mili) detik X
 	t_Lang080 =	Timer
@@ -486,7 +486,7 @@
 	t_Lang089 =	Izinkan Beberapa Contoh
 	t_Lang090 =	Default
 	t_Lang091 =	Izinkan Menyeret Baris
-	t_Lang092 =	Seluruh isi sel
+	t_Lang092 =	&Seluruh isi sel
 	t_Lang093 =	Format INI standar
 	t_Lang094 =	Nama = Nilai
 	t_Lang095 =	Masukkan 1 variabel per baris. Anda juga bisa menambahkan [Bagian].
