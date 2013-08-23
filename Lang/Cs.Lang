@@ -536,7 +536,8 @@
 	t_Lang139 =	Vybrat
 	t_Lang140 =	Podle Sloupce
 	t_Lang141 =	Všechny Sloupce
-		
+	t_Lang142 =	Odebrat téma z Panely nástrojů (vyžaduje restartování)
+	t_Lang143 =	automaticky skrýt ovládací panel
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Otevřít

@@ -536,7 +536,8 @@
 	t_Lang139 =	Odabrati
 	t_Lang140 =	Do Stupcu
 	t_Lang141 =	Svi Stupovi
-		
+	t_Lang142 =	Ukloni temu iz Toolbars (zahtijeva ponovno pokretanje)
+	t_Lang143 =	automatski sakriti kontrole traci
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Otvoreno

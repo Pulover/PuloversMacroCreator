@@ -536,7 +536,8 @@
 	t_Lang139 =	Izberite
 	t_Lang140 =	S Kolone
 	t_Lang141 =	Vsi Stolpci
-		
+	t_Lang142 =	Odstranite Theme iz Orodne vrstice (zahteva ponovni zagon)
+	t_Lang143 =	samodejno skrijejo kontrolnike orodna vrstica
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Odprite

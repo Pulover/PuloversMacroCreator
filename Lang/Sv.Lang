@@ -536,7 +536,8 @@
 	t_Lang139 =	Välj
 	t_Lang140 =	Genom Kolumn
 	t_Lang141 =	Alla Kolumner
-		
+	t_Lang142 =	Ta bort tema från Verktygsfält (kräver omstart)
+	t_Lang143 =	automatiskt visa kontroller verktygsfältet
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Öppet

@@ -16,6 +16,11 @@
 	Pause, Off
 	Menu, Tray, Icon, %ResDllPath%, 47
 	Menu, Tray, Default, %w_Lang008%
+	If (AutoHideBar)
+	{
+		If !WinExist("ahk_id " PMCOSC)
+			GoSub, ShowControls
+	}
 	PlayOSOn := 1, ToggleButtonIcon(OSPlay, PauseIconB)
 ,	CurrentRange := m_ListCount, ChangeProgBarColor("20D000", "OSCProg", 28)
 	If (ShowProgBar = 1)
@@ -443,6 +448,11 @@
 		Menu, Tray, Default, %w_Lang005%
 		PlayOSOn := 0
 		ToggleButtonIcon(OSPlay, TestRunIcon)
+		If (AutoHideBar)
+		{
+			If WinExist("ahk_id " PMCOSC)
+				GoSub, 28GuiClose
+		}
 	}
 	If (CloseAfterPlay)
 		ExitApp

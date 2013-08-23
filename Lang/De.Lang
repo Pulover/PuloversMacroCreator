@@ -536,7 +536,8 @@
 	t_Lang139 =	Auswahl
 	t_Lang140 =	Nach Spalte
 	t_Lang141 =	Alle Spalten
-		
+	t_Lang142 =	Entfernen Theme von Symbolleisten (Neustart erforderlich)
+	t_Lang143 =	automatisch ausblenden Kontrollen Symbolleiste
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Öffnen

@@ -536,7 +536,8 @@
 	t_Lang139 =	Kiezen
 	t_Lang140 =	Door Column
 	t_Lang141 =	Alle Columns
-		
+	t_Lang142 =	Thema verwijderen uit Werkbalken (opnieuw opstarten)
+	t_Lang143 =	automatisch bedieningen te verbergen werkbalk
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Open

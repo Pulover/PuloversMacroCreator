@@ -536,7 +536,8 @@
 	t_Lang139 =	Vælg
 	t_Lang140 =	Ved Kolonne
 	t_Lang141 =	Alle Kolonner
-		
+	t_Lang142 =	Fjern tema fra Værktøjslinjer (kræver genstart)
+	t_Lang143 =	skjuler automatisk kontrol værktøjslinje
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Åbent

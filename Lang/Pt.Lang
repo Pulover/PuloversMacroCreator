@@ -536,7 +536,8 @@
 	t_Lang139 =	Selecionar
 	t_Lang140 =	Por Coluna
 	t_Lang141 =	Todas as Colunas
-		
+	t_Lang142 =	Remover Tema das Barras de Ferramentas (requer reinicialização)
+	t_Lang143 =	Auto Ocultar Barra de Controles
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Abrir

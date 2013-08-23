@@ -536,7 +536,8 @@
 	t_Lang139 =	Seleccionar
 	t_Lang140 =	Per La Columna
 	t_Lang141 =	Totes Les Columnes
-		
+	t_Lang142 =	Eliminar tema de les barres d'eines (cal reiniciar)
+	t_Lang143 =	amagar automàticament la barra d'eines controls
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Obert

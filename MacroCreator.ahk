@@ -177,6 +177,7 @@ IniRead, SpeedDn, %IniFilePath%, Options, SpeedDn, 2
 IniRead, MouseReturn, %IniFilePath%, Options, MouseReturn, 0
 IniRead, ShowProgBar, %IniFilePath%, Options, ShowProgBar, 1
 IniRead, ShowBarOnStart, %IniFilePath%, Options, ShowBarOnStart, 0
+IniRead, AutoHideBar, %IniFilePath%, Options, AutoHideBar, 0
 IniRead, RandomSleeps, %IniFilePath%, Options, RandomSleeps, 0
 IniRead, RandPercent, %IniFilePath%, Options, RandPercent, 50
 IniRead, DrawButton, %IniFilePath%, Options, DrawButton, RButton
@@ -189,6 +190,7 @@ IniRead, DefaultMacro, %IniFilePath%, Options, DefaultMacro, %A_Space%
 IniRead, StdLibFile, %IniFilePath%, Options, StdLibFile, %A_Space%
 IniRead, KeepDefKeys, %IniFilePath%, Options, KeepDefKeys, 0
 IniRead, HKOff, %IniFilePath%, Options, HKOff, 0
+IniRead, TbNoTheme, %IniFilePath%, Options, TbNoTheme, 0
 IniRead, MultInst, %IniFilePath%, Options, MultInst, 0
 IniRead, EvalDefault, %IniFilePath%, Options, EvalDefault, 0
 IniRead, AllowRowDrag, %IniFilePath%, Options, AllowRowDrag, 1
@@ -568,9 +570,11 @@ Gui, Add, Custom, ClassToolbarWindow32 hwndhTbRecPlay gTbRecPlay 0x0800 0x0100 0
 Gui, Add, Custom, ClassToolbarWindow32 hwndhTbCommand gTbCommand 0x0800 0x0100 0x0040 0x0008
 Gui, Add, Custom, ClassToolbarWindow32 hwndhTbSettings gTbSettings 0x0800 0x0100 0x0040 0x0008
 Gui, Add, Custom, ClassToolbarWindow32 hwndhTbEdit gTbEdit 0x0800 0x0100 0x0040 0x0008
+If (TbNoTheme)
+	Gui, -Theme
 Gui, Add, Custom, ClassReBarWindow32 hwndhRbMain vcRbMain gRB_Notify 0x0400 0x0040 0x8000
+Gui, +Theme
 Gui, Add, Custom, ClassReBarWindow32 hwndhRbMacro vcRbMacro gRB_Notify xm-10 ym+76 -Theme 0x0800 0x0400 0x0040 0x8000 0x0008 ; 0x0004
-
 Gui, Add, Hotkey, hwndhAutoKey vAutoKey gSaveData, % o_AutoKey[1]
 Gui, Add, ListBox, hwndhJoyKey vJoyKey r1 ReadOnly Hidden
 SendMessage, 0x01A0, 0, 22,, ahk_id %hJoyKey%
@@ -2200,10 +2204,11 @@ Gui, 4:Add, Text, y+10 xs+10, %t_Lang037%:
 Gui, 4:Add, DDL, yp-2 xp+70 W150 vSlowKey, None|Pause||F1|F2|F3|F4|F5|F6|F7|F8|F9|F10|F11|F12|CapsLock|NumLock|ScrollLock|
 Gui, 4:Add, DDL, yp x+5 W37 vSpeedDn, 2||4|8|16|32
 Gui, 4:Add, Text, yp+5 xp+40, X
-Gui, 4:Add, GroupBox, Section y+25 xs W400 H105, %w_Lang003%
+Gui, 4:Add, GroupBox, Section y+25 xs W400 H125, %w_Lang003%
 Gui, 4:Add, Checkbox, -Wrap Checked%ShowStep% ys+20 xs+10 W380 vShowStep R1, %t_Lang100%
 Gui, 4:Add, Checkbox, -Wrap Checked%MouseReturn% W380 vMouseReturn, %t_Lang038%
 Gui, 4:Add, Checkbox, -Wrap Checked%ShowBarOnStart% W380 vShowBarOnStart, %t_Lang085%
+Gui, 4:Add, Checkbox, -Wrap Checked%AutoHideBar% W380 vAutoHideBar, %t_Lang143%
 Gui, 4:Add, Checkbox, -Wrap Checked%RandomSleeps% W200 vRandomSleeps gOptionsSub, %t_Lang107%
 Gui, 4:Add, Edit, Limit Number yp-2 x+0 W50 R1 vRandPer
 Gui, 4:Add, UpDown, vRandPercent 0x80 Range0-1000, %RandPercent%
@@ -2254,22 +2259,23 @@ Gui, 4:Add, Edit, vScreenDir W350 R1 -Multi, %ScreenDir%
 Gui, 4:Add, Button, -Wrap yp-1 x+0 W30 H23 vSearchScreen gSearchDir, ...
 Gui, 4:Tab, 5
 ; General
-Gui, 4:Add, GroupBox, Section ym xm+210 W400 H100, %t_Lang018%
+Gui, 4:Add, GroupBox, Section ym xm+210 W400 H120, %t_Lang018%
 Gui, 4:Add, Checkbox, -Wrap Checked%HKOff% ys+20 xs+10 vHKOff W380 R1, %t_Lang055%
 Gui, 4:Add, Checkbox, -Wrap Checked%MultInst% vMultInst W380 R1, %t_Lang089%
+Gui, 4:Add, Checkbox, -Wrap Checked%TbNoTheme% vTbNoTheme W380 R1, %t_Lang142%
 Gui, 4:Add, Checkbox, -Wrap Checked%EvalDefault% vEvalDefault W380 R1, %t_Lang059%
 Gui, 4:Add, Checkbox, -Wrap Checked%AllowRowDrag% vAllowRowDrag W380 R1, %t_Lang091%
-Gui, 4:Add, GroupBox, Section y+15 xs W400 H135, %t_Lang136%
+Gui, 4:Add, GroupBox, Section y+15 xs W400 H125, %t_Lang136%
 Gui, 4:Add, Checkbox, -Wrap Checked%ShowLoopIfMark% ys+20 xs+10 vShowLoopIfMark W380 R1, %t_Lang060%
-Gui, 4:Add, Text, W380, %t_Lang061%
-Gui, 4:Add, Text, y+15 W85, %t_Lang003% "{"
+Gui, 4:Add, Text, xs+10 y+5 W380, %t_Lang061%
+Gui, 4:Add, Text, y+5 W85, %t_Lang003% "{"
 Gui, 4:Add, Text, yp x+10 W40 vLoopLVColor gEditColor c%LoopLVColor%, ██████
 Gui, 4:Add, Text, yp x+20 W85, %t_Lang082% "*"
 Gui, 4:Add, Text, yp x+10 W40 vIfLVColor gEditColor c%IfLVColor%, ██████
-Gui, 4:Add, Checkbox, -Wrap Checked%ShowActIdent% yp+25 xs+10 vShowActIdent W380 R1, %t_Lang083%
+Gui, 4:Add, Checkbox, -Wrap Checked%ShowActIdent% y+15 xs+10 vShowActIdent W380 R1, %t_Lang083%
 Gui, 4:Add, Text, W380, %t_Lang084%
-Gui, 4:Add, GroupBox, Section y+17 xs W400 H150, %t_Lang062%
-Gui, 4:Add, Edit, ys+20 xs+10 W380 r7 vEditMod, %VirtualKeys%
+Gui, 4:Add, GroupBox, Section y+15 xs W400 H140, %t_Lang062%
+Gui, 4:Add, Edit, ys+20 xs+10 W380 r6 vEditMod, %VirtualKeys%
 Gui, 4:Add, Button, -Wrap y+0 W75 H23 gConfigRestore, %t_Lang063%
 Gui, 4:Add, Button, -Wrap yp x+10 W75 H23 gKeyHistory, %c_Lang124%
 Gui, 4:Tab, 6
@@ -10225,6 +10231,7 @@ AbortKey := "F8"
 ,	MouseReturn := 0
 ,	ShowProgBar := 1
 ,	ShowBarOnStart := 0
+,	AutoHideBar := 0
 ,	RandomSleeps := 0
 ,	RandPercent := 50
 ,	DrawButton := "RButton"
@@ -10271,6 +10278,7 @@ AbortKey := "F8"
 ,	Exe_Exp := 0
 ,	WinState := 0
 ,	HKOff := 0
+,	TbNoTheme := 0
 ,	MultInst := 0
 ,	EvalDefault := 0
 ,	AllowRowDrag := 1
@@ -10433,6 +10441,7 @@ IniWrite, %SpeedDn%, %IniFilePath%, Options, SpeedDn
 IniWrite, %MouseReturn%, %IniFilePath%, Options, MouseReturn
 IniWrite, %ShowProgBar%, %IniFilePath%, Options, ShowProgBar
 IniWrite, %ShowBarOnStart%, %IniFilePath%, Options, ShowBarOnStart
+IniWrite, %AutoHideBar%, %IniFilePath%, Options, AutoHideBar
 IniWrite, %RandomSleeps%, %IniFilePath%, Options, RandomSleeps
 IniWrite, %RandPercent%, %IniFilePath%, Options, RandPercent
 IniWrite, %DrawButton%, %IniFilePath%, Options, DrawButton
@@ -10445,6 +10454,7 @@ IniWrite, %DefaultMacro%, %IniFilePath%, Options, DefaultMacro
 IniWrite, %StdLibFile%, %IniFilePath%, Options, StdLibFile
 IniWrite, %KeepDefKeys%, %IniFilePath%, Options, KeepDefKeys
 IniWrite, %HKOff%, %IniFilePath%, Options, HKOff
+IniWrite, %TbNoTheme%, %IniFilePath%, Options, TbNoTheme
 IniWrite, %MultInst%, %IniFilePath%, Options, MultInst
 IniWrite, %EvalDefault%, %IniFilePath%, Options, EvalDefault
 IniWrite, %AllowRowDrag%, %IniFilePath%, Options, AllowRowDrag
@@ -10577,6 +10587,7 @@ If ((WPHKC = 1) || (WPHKC = 2))
 		GoSub, RowCheck
 	If WinActive("ahk_id " PMCWinID)
 	{
+		GuiControl, chMacro:+Redraw, InputList%A_List%
 		Record := 0, StopIt := 1
 		Sleep, 100
 		GoSub, RecStop

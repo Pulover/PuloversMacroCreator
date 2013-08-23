@@ -536,7 +536,8 @@
 	t_Lang139 =	Pilih
 	t_Lang140 =	By Column
 	t_Lang141 =	Semua Lajur
-		
+	t_Lang142 =	Buang Tema dari Toolbars (perlu dimulakan semula)
+	t_Lang143 =	secara automatik menyembunyikan kawalan toolbar
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Buka

@@ -536,7 +536,8 @@
 	t_Lang139 =	选择
 	t_Lang140 =	通过列
 	t_Lang141 =	所有列
-		
+	t_Lang142 =	删除主题从“工具栏”（需要重新启动）
+	t_Lang143 =	自动隐藏控件工具栏
 		
 ; Messages & Dialogs		
 	d_Lang001 =	打开

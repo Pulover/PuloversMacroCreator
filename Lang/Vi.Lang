@@ -536,7 +536,8 @@
 	t_Lang139 =	Chọn
 	t_Lang140 =	Bởi Cột
 	t_Lang141 =	Tất cả các cột
-		
+	t_Lang142 =	Loại bỏ Theme từ Thanh công cụ (yêu cầu khởi động lại)
+	t_Lang143 =	tự động ẩn thanh công cụ điều khiển
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Mở

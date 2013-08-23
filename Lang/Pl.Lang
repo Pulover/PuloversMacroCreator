@@ -536,7 +536,8 @@
 	t_Lang139 =	Wybierać
 	t_Lang140 =	By Kolumnie
 	t_Lang141 =	Wszystkie Kolumny
-		
+	t_Lang142 =	Usuń motyw z Paski narzędzi (wymaga ponownego uruchomienia)
+	t_Lang143 =	automatyczne ukrywanie paska narzędzi kontroli
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Otwarte

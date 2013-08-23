@@ -536,7 +536,8 @@
 	t_Lang139 =	Valita
 	t_Lang140 =	Pylväs-
 	t_Lang141 =	Kaikki Sarakkeet
-		
+	t_Lang142 =	Poista Theme from Työkalurivit (vaatii uudelleenkäynnistyksen)
+	t_Lang143 =	piilottavat valvonta työkalurivi
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Avata

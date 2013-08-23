@@ -536,7 +536,8 @@
 	t_Lang139 =	Memilih
 	t_Lang140 =	Dengan Kolom
 	t_Lang141 =	Semua Kolom
-		
+	t_Lang142 =	Hapus Theme dari Toolbar (memerlukan restart)
+	t_Lang143 =	otomatis menyembunyikan kontrol toolbar
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Buka

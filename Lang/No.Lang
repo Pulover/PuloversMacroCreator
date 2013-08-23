@@ -536,7 +536,8 @@
 	t_Lang139 =	Velg
 	t_Lang140 =	Av Kolonne
 	t_Lang141 =	Alle Kolonner
-		
+	t_Lang142 =	Fjern Theme from verktøylinjer (krever omstart)
+	t_Lang143 =	automatisk skjule kontrollene verktøylinjen
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Åpent

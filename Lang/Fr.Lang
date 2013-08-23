@@ -536,7 +536,8 @@
 	t_Lang139 =	Sélectionner
 	t_Lang140 =	Par Colonne
 	t_Lang141 =	Tous Les Colonnes
-		
+	t_Lang142 =	Supprimer le thème de barres d'outils (nécessite un redémarrage)
+	t_Lang143 =	masquer automatiquement la barre d'outils de contrôle
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Ouvert

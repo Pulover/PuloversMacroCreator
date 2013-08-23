@@ -536,7 +536,8 @@
 	t_Lang139 =	Select
 	t_Lang140 =	By Column
 	t_Lang141 =	All Columns
-		
+	t_Lang142 =	Remove Theme from Toolbars (requires restart)
+	t_Lang143 =	Auto Hide Controls Toolbar
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Open
