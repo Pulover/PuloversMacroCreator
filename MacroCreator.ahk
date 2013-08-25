@@ -8090,11 +8090,22 @@ Else
 	Gui, 7:+owner1 -MinimizeBox +Delimiter¢
 	InsertToText := False
 }
-Gui, 7:Add, Groupbox, Section W360 H300
-Gui, 7:Add, ListBox, ys+15 xs+10 W200 H280 vsKey gInsertThisKey, %KeybdList%
+Gui, 7:Add, Groupbox, Section W360 H240
+Gui, 7:Add, ListBox, ys+15 xs+10 W200 H220 vsKey gInsertThisKey, %KeybdList%
 Gui, 7:Add, Radio, Checked yp x+10 W130 vKeystroke, %t_Lang108%
 Gui, 7:Add, Radio, W130 vKeyDown, %t_Lang109%
 Gui, 7:Add, Radio, W130 vKeyUp, %t_Lang110%
+If !(InsertToText)
+{
+	Gui, 7:Add, Text, y+20, %w_Lang015%:
+	Gui, 7:Add, Edit, W120 R1 vEdRept
+	Gui, 7:Add, UpDown, vTimesX 0x80 Range1-999999999, 1
+	Gui, 7:Add, Text,, %c_Lang017%:
+	Gui, 7:Add, Edit, W120 vDelayC
+	Gui, 7:Add, UpDown, vDelayX 0x80 Range0-999999999, %DelayM%
+	Gui, 7:Add, Radio, -Wrap Checked W125 vMsc R1, %c_Lang018%
+	Gui, 7:Add, Radio, -Wrap W125 vSec R1, %c_Lang019%
+}
 Gui, 7:Add, Button, -Wrap Section Default xm W75 H23 gInsertKeyOK, %w_Lang018%
 Gui, 7:Add, Button, -Wrap ys W75 H23 gInsertKeyClose, %c_Lang022%
 Gui, 7:Show,, %t_Lang111%
@@ -8116,11 +8127,17 @@ If (InsertToText)
 	Control, EditPaste, %sKey%, Edit1, ahk_id %CmdWin%
 Else
 {
+	DelayX := InStr(DelayC, "%") ? DelayC : DelayX
+	If Sec = 1
+		DelayX *= 1000
+	TimesX := InStr(EdRept, "%") ? EdRept : TimesX
+	If TimesX = 0
+		TimesX := 1
 	Gui, chMacro:Default
 	RowSelection := LV_GetCount("Selected")
 	If (RowSelection = 0)
 	{
-		LV_Add("Check", ListCount%A_List%+1, tKey, sKey, 1, DelayG, cType1)
+		LV_Add("Check", ListCount%A_List%+1, tKey, sKey, TimesX, DelayX, cType1)
 		GoSub, b_Start
 		LV_Modify(ListCount%A_List%, "Vis")
 	}
@@ -8130,7 +8147,7 @@ Else
 		Loop, %RowSelection%
 		{
 			RowNumber := LV_GetNext(RowNumber)
-			LV_Insert(RowNumber, "Check", RowNumber, tKey, sKey, 1, DelayG, cType1)
+			LV_Insert(RowNumber, "Check", RowNumber, tKey, sKey, TimesX, DelayX, cType1)
 			RowNumber++
 		}
 	}
