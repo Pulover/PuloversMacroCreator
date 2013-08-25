@@ -79,6 +79,7 @@ return
 ^w::GoSub, TabClose
 ^h::GoSub, SetWin
 ^b::GoSub, OnScControls
+Enter::GoSub, EditButton
 ^Enter::GoSub, PlayStart
 ^+Enter::GoSub, TestRun
 !1::GoSub, PlayFrom
