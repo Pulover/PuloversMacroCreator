@@ -765,6 +765,7 @@
 	ApplyI_TT =	適用する
 	ApplyL_TT =	ボックスから挿入（Insert）
 	InsertKey_TT =	キーストロークを挿入 (Ctrl+Insert)
+	InsertKeyT_TT =	キーストロークを挿入
 	EditButton_TT =	編集（Enter）
 	PrevRefresh_TT =	リフレッシュ（F5）
 	PrevCopy_TT =	コピー

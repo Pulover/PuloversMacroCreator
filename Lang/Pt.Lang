@@ -765,6 +765,7 @@
 	ApplyI_TT =	Aplicar
 	ApplyL_TT =	Inserir da Caixa (Insert)
 	InsertKey_TT =	Inserir Tecla (Ctrl+Insert)
+	InsertKeyT_TT =	Inserir Tecla
 	EditButton_TT =	Editar (Enter)
 	PrevRefresh_TT =	Atualizar (F5)
 	PrevCopy_TT =	Copiar

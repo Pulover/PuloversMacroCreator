@@ -3883,6 +3883,9 @@ return
 EditText:
 s_Caller = Edit
 Text:
+Gui 7:+LastFoundExist
+IfWinExist
+	GoSub, InsertKeyClose
 Gui, 1:Submit, NoHide
 Gui, 8:+owner1 -MinimizeBox +E0x00000400 +HwndCmdWin
 Gui, 1:+Disabled
@@ -3918,6 +3921,8 @@ Gui, 8:Add, Button, -Wrap yp-1 x+0 W30 H23 vGetWin gGetWin Disabled, ...
 Gui, 8:Add, Button, -Wrap Section Default xm W75 H23 gTextOK, %c_Lang020%
 Gui, 8:Add, Button, -Wrap ys W75 H23 gTextCancel, %c_Lang021%
 Gui, 8:Add, Button, -Wrap ys W75 H23 vTextApply gTextApply Disabled, %c_Lang131%
+Gui, 8:Add, Button, -Wrap ys W25 H23 hwndInsertKeyT vInsertKeyT gInsertKey
+	ILButton(InsertKeyT, ResDllPath ":" 94)
 Gui, 8:Add, StatusBar
 Gui, 8:Default
 SB_SetParts(480, 80)
@@ -8070,20 +8075,34 @@ GoSub, b_Start
 return
 
 InsertKey:
+Gui 7:+LastFoundExist
+IfWinExist
+	GoSub, InsertKeyClose
 Gui, 1:Submit, NoHide
 Gui, chMacro:Default
-Gui, 7:+owner1 -MinimizeBox +Delimiter¢ +HwndCmdWin
-Gui, 1:+Disabled
-Gui, 7:Add, Groupbox, Section W220 H100
-Gui, 7:Add, DDL, ys+15 xs+10 W200 vsKey, %KeybdList%
-Gui, 7:Add, Radio, Checked W200 vKeystroke, %t_Lang108%
-Gui, 7:Add, Radio, W200 vKeyDown, %t_Lang109%
-Gui, 7:Add, Radio, W200 vKeyUp, %t_Lang110%
-Gui, 7:Add, Button, -Wrap Section Default xm W75 H23 gInsertKeyOK, %c_Lang020%
-Gui, 7:Add, Button, -Wrap ys W75 H23 gInsertKeyCancel, %c_Lang021%
+If (A_GuiControl = "InsertKeyT")
+{
+	Gui, 7:+owner8 -MinimizeBox +Delimiter¢
+	InsertToText := True
+}
+Else
+{
+	Gui, 7:+owner1 -MinimizeBox +Delimiter¢
+	InsertToText := False
+}
+Gui, 7:Add, Groupbox, Section W360 H300
+Gui, 7:Add, ListBox, ys+15 xs+10 W200 H280 vsKey gInsertThisKey, %KeybdList%
+Gui, 7:Add, Radio, Checked yp x+10 W130 vKeystroke, %t_Lang108%
+Gui, 7:Add, Radio, W130 vKeyDown, %t_Lang109%
+Gui, 7:Add, Radio, W130 vKeyUp, %t_Lang110%
+Gui, 7:Add, Button, -Wrap Section Default xm W75 H23 gInsertKeyOK, %w_Lang018%
+Gui, 7:Add, Button, -Wrap ys W75 H23 gInsertKeyClose, %c_Lang022%
 Gui, 7:Show,, %t_Lang111%
 return
 
+InsertThisKey:
+If (A_GuiEvent <> "DoubleClick")
+	return
 InsertKeyOK:
 Gui, 7:Submit, NoHide
 If (KeyDown)
@@ -8093,35 +8112,38 @@ Else If (KeyUp)
 Else
 	State := ""
 tKey := sKey, sKey := "{" sKey State "}"
-Gui, 1:-Disabled
-Gui, 7:Destroy
-Gui, chMacro:Default
-RowSelection := LV_GetCount("Selected")
-If RowSelection = 0
-{
-	LV_Add("Check", ListCount%A_List%+1, tKey, sKey, 1, DelayG, cType1)
-	GoSub, b_Start
-	LV_Modify(ListCount%A_List%, "Vis")
-}
+If (InsertToText)
+	Control, EditPaste, %sKey%, Edit1, ahk_id %CmdWin%
 Else
 {
-	RowNumber = 0
-	Loop, %RowSelection%
+	Gui, chMacro:Default
+	RowSelection := LV_GetCount("Selected")
+	If (RowSelection = 0)
 	{
-		RowNumber := LV_GetNext(RowNumber)
-		LV_Insert(RowNumber, "Check", RowNumber, tKey, sKey, 1, DelayG, cType1)
-		RowNumber++
+		LV_Add("Check", ListCount%A_List%+1, tKey, sKey, 1, DelayG, cType1)
+		GoSub, b_Start
+		LV_Modify(ListCount%A_List%, "Vis")
 	}
+	Else
+	{
+		RowNumber := 0
+		Loop, %RowSelection%
+		{
+			RowNumber := LV_GetNext(RowNumber)
+			LV_Insert(RowNumber, "Check", RowNumber, tKey, sKey, 1, DelayG, cType1)
+			RowNumber++
+		}
+	}
+	GoSub, RowCheck
+	GoSub, b_Start
 }
-GoSub, RowCheck
-GoSub, b_Start
 return
 
-InsertKeyCancel:
+InsertKeyClose:
 7GuiClose:
 7GuiEscape:
-Gui, 1:-Disabled
 Gui, 7:Destroy
+InsertToText := False
 return
 
 EditButton:
@@ -10933,7 +10955,9 @@ Menu, EditMenu, Add, %e_Lang007%`t%_s%Ctrl+X, CutRows
 Menu, EditMenu, Add, %e_Lang008%`t%_s%Ctrl+C, CopyRows
 Menu, EditMenu, Add, %e_Lang009%`t%_s%Ctrl+V, PasteRows
 Menu, EditMenu, Add, %e_Lang010%`t%_s%Delete, Remove
+Menu, EditMenu, Add
 Menu, EditMenu, Add, %e_Lang013%`t%_s%Insert, ApplyL
+Menu, EditMenu, Add, %t_Lang111%`t%_s%Ctrl+Insert, InsertKey
 Menu, EditMenu, Add
 Menu, EditMenu, Add, %e_Lang011%`t%_s%Ctrl+PgUp, MoveUp
 Menu, EditMenu, Add, %e_Lang012%`t%_s%Ctrl+PgDn, MoveDn
@@ -11137,6 +11161,7 @@ Menu, EditMenu, Icon, %e_Lang008%`t%_s%Ctrl+C, %ResDllPath%, 8
 Menu, EditMenu, Icon, %e_Lang009%`t%_s%Ctrl+V, %ResDllPath%, 45
 Menu, EditMenu, Icon, %e_Lang010%`t%_s%Delete, %ResDllPath%, 10
 Menu, EditMenu, Icon, %e_Lang013%`t%_s%Insert, %ResDllPath%, 32
+Menu, EditMenu, Icon, %t_Lang111%`t%_s%Ctrl+Insert, %ResDllPath%, 94
 Menu, EditMenu, Icon, %e_Lang011%`t%_s%Ctrl+PgUp, %ResDllPath%, 41
 Menu, EditMenu, Icon, %e_Lang012%`t%_s%Ctrl+PgDn, %ResDllPath%, 40
 Menu, MacroMenu, Icon, %r_Lang001%`t%_s%Ctrl+R, %ResDllPath%, 55
@@ -11396,6 +11421,9 @@ FixedBar.Text := ["OpenT=" t_Lang126 ":43", "SaveT=" t_Lang127 ":60"
 				, "", "SelAllT=" t_Lang131 ":5", "RemoveT=" t_Lang132 ":10"]
 GuiControl, 1:+Redraw, cRbMain
 
+Gui 7:+LastFoundExist
+IfWinExist
+    GoSub, InsertKey
 Gui 18:+LastFoundExist
 IfWinExist
     GoSub, FindReplace

@@ -765,6 +765,7 @@
 	ApplyI_TT =	Anwenden
 	ApplyL_TT =	Einfügen aus Box (Einfg)
 	InsertKey_TT =	Tastendruck einfügen (Strg+Insert)
+	InsertKeyT_TT =	Tastendruck einfügen
 	EditButton_TT =	Bearbeiten
 	PrevRefresh_TT =	Aktualisieren (F5)
 	PrevCopy_TT =	Kopieren

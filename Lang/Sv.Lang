@@ -765,6 +765,7 @@
 	ApplyI_TT =	Ansök
 	ApplyL_TT =	Infoga från rutan (Insert)
 	InsertKey_TT =	Infoga Tangenttryckning (Ctrl+Insert)
+	InsertKeyT_TT =	Infoga Tangenttryckning
 	EditButton_TT =	Redigera (Enter)
 	PrevRefresh_TT =	Updatera (F5)
 	PrevCopy_TT =	Kopiera

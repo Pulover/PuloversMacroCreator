@@ -765,6 +765,7 @@
 	ApplyI_TT =	Memohon
 	ApplyL_TT =	Memasukkan dari Box (Insert)
 	InsertKey_TT =	Memasukkan keystroke (Ctrl+Sisipan)
+	InsertKeyT_TT =	Memasukkan keystroke
 	EditButton_TT =	Edit (Masukkan)
 	PrevRefresh_TT =	Refresh (F5)
 	PrevCopy_TT =	Menyalin

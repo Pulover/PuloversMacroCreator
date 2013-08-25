@@ -765,6 +765,7 @@
 	ApplyI_TT =	应用
 	ApplyL_TT =	从框中插入（Insert）
 	InsertKey_TT =	插入击键 (Ctrl+Insert)
+	InsertKeyT_TT =	插入击键
 	EditButton_TT =	编辑（Enter）
 	PrevRefresh_TT =	刷新（F5）
 	PrevCopy_TT =	复制

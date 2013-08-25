@@ -765,6 +765,7 @@
 	ApplyI_TT =	Van toepassing zijn
 	ApplyL_TT =	Invoegen van Box (Insert)
 	InsertKey_TT =	Steek Toetsaanslag (Ctrl+Insert)
+	InsertKeyT_TT =	Steek Toetsaanslag
 	EditButton_TT =	Redigeren (Enter)
 	PrevRefresh_TT =	Verversen (F5)
 	PrevCopy_TT =	Kopieer

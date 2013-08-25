@@ -765,6 +765,7 @@
 	ApplyI_TT =	Áp dụng
 	ApplyL_TT =	Chèn từ Box (Insert)
 	InsertKey_TT =	Chèn Tổ hợp phím (Ctrl + Insert)
+	InsertKeyT_TT =	Chèn Tổ hợp phím
 	EditButton_TT =	Chỉnh sửa (Enter)
 	PrevRefresh_TT =	Refresh (F5)
 	PrevCopy_TT =	Sao chép

@@ -765,6 +765,7 @@
 	ApplyI_TT =	申請
 	ApplyL_TT =	插入盒（插入）
 	InsertKey_TT =	插入擊鍵 (Ctrl+Insert)
+	InsertKeyT_TT =	插入擊鍵
 	EditButton_TT =	編輯（Enter）
 	PrevRefresh_TT =	刷新（F5）
 	PrevCopy_TT =	複製

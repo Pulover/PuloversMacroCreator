@@ -765,6 +765,7 @@
 	ApplyI_TT =	Applicare
 	ApplyL_TT =	Inserisci da scatola (Insert)
 	InsertKey_TT =	Inserire Battitura (Ctrl+Insert)
+	InsertKeyT_TT =	Inserire Battitura
 	EditButton_TT =	Modifica (Enter)
 	PrevRefresh_TT =	Rinfrescare (F5)
 	PrevCopy_TT =	Copiare

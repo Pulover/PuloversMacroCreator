@@ -765,6 +765,7 @@
 	ApplyI_TT =	Anvend
 	ApplyL_TT =	Indsæt fra kassen (Insert)
 	InsertKey_TT =	Indsæt Tastetryk (Ctrl+Insert)
+	InsertKeyT_TT =	Indsæt Tastetryk
 	EditButton_TT =	Rediger (Enter)
 	PrevRefresh_TT =	Opdater (F5)
 	PrevCopy_TT =	Kopiér

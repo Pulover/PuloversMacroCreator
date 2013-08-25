@@ -765,6 +765,7 @@
 	ApplyI_TT =	Käyttää
 	ApplyL_TT =	Insertin laatikko (Insert)
 	InsertKey_TT =	Aseta Näppäilyn (Ctrl+Insert)
+	InsertKeyT_TT =	Aseta Näppäilyn
 	EditButton_TT =	Muokata (Enter)
 	PrevRefresh_TT =	Virkistää (F5)
 	PrevCopy_TT =	Kopioi

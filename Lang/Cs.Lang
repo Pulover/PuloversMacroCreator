@@ -765,6 +765,7 @@
 	ApplyI_TT =	Platit
 	ApplyL_TT =	Vložit z krabice (Insert)
 	InsertKey_TT =	Vložit Klávesy (Ctrl+Insert)
+	InsertKeyT_TT =	Vložit Klávesy
 	EditButton_TT =	Upravit (Enter)
 	PrevRefresh_TT =	Občerstvit (F5)
 	PrevCopy_TT =	Kopírovat

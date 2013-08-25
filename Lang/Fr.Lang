@@ -765,6 +765,7 @@
 	ApplyI_TT =	Appliquer
 	ApplyL_TT =	Insérez de la case (Insert)
 	InsertKey_TT =	Insérer Frappe (Ctrl+Insert)
+	InsertKeyT_TT =	Insérer Frappe
 	EditButton_TT =	Éditer (Enter)
 	PrevRefresh_TT =	Rafraîchir (F5)
 	PrevCopy_TT =	Copier

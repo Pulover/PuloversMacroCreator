@@ -765,6 +765,7 @@
 	ApplyI_TT =	Нанесете
 	ApplyL_TT =	Поставете от кутия (Insert)
 	InsertKey_TT =	Вмъкнете Натискане На Клавиш (Ctrl+Insert)
+	InsertKeyT_TT =	Вмъкнете Натискане На Клавиш
 	EditButton_TT =	Редактирам (Enter)
 	PrevRefresh_TT =	Обнови (F5)
 	PrevCopy_TT =	Копирайте

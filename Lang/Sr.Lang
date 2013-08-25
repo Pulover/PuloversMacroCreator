@@ -765,6 +765,7 @@
 	ApplyI_TT =	Применити
 	ApplyL_TT =	Инсерт из Бок (Insert)
 	InsertKey_TT =	Убаците Пречицу (Ctrl+Insert)
+	InsertKeyT_TT =	Убаците Пречицу
 	EditButton_TT =	Измени (Enter)
 	PrevRefresh_TT =	Освежи (Ф5)
 	PrevCopy_TT =	Копирајте

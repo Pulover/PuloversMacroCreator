@@ -765,6 +765,7 @@
 	ApplyI_TT =	Uporabi
 	ApplyL_TT =	Vstavite okencu (Insert)
 	InsertKey_TT =	Vstavite Keystroke (Ctrl+Insert)
+	InsertKeyT_TT =	Vstavite Keystroke
 	EditButton_TT =	Uredi (Enter)
 	PrevRefresh_TT =	Refresh (F5)
 	PrevCopy_TT =	Kopirajte

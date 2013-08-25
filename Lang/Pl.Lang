@@ -765,6 +765,7 @@
 	ApplyI_TT =	Zastosować
 	ApplyL_TT =	Wstaw z pudełkiem (Insert)
 	InsertKey_TT =	Włóż Klawiszy (Ctrl+Insert)
+	InsertKeyT_TT =	Włóż Klawiszy
 	EditButton_TT =	Edytuj (Enter)
 	PrevRefresh_TT =	Odświeżać (F5)
 	PrevCopy_TT =	Skopiuj

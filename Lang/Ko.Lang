@@ -765,6 +765,7 @@
 	ApplyI_TT =	신청
 	ApplyL_TT =	상자 삽입 (Insert)
 	InsertKey_TT =	키를 삽입 (Ctrl+Insert)
+	InsertKeyT_TT =	키를 삽입
 	EditButton_TT =	수정 (Enter)
 	PrevRefresh_TT =	새롭게하다 (F5)
 	PrevCopy_TT =	복사

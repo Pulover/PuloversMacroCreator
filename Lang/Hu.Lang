@@ -765,6 +765,7 @@
 	ApplyI_TT =	Alkalmaz
 	ApplyL_TT =	Beszúrás box (Insert)
 	InsertKey_TT =	Be Gombnyomás (Ctrl+Insert)
+	InsertKeyT_TT =	Be Gombnyomás
 	EditButton_TT =	Szerkeszt (Enter)
 	PrevRefresh_TT =	Felfrissít (F5)
 	PrevCopy_TT =	Másolás

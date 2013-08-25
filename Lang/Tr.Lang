@@ -765,6 +765,7 @@
 	ApplyI_TT =	Uygulamak
 	ApplyL_TT =	Kutusundan Ekle (Insert)
 	InsertKey_TT =	Tuş Eklemek (Ctrl+Insert)
+	InsertKeyT_TT =	Tuş Eklemek
 	EditButton_TT =	Düzenle (Enter)
 	PrevRefresh_TT =	Yenile (F5)
 	PrevCopy_TT =	Kopyala
