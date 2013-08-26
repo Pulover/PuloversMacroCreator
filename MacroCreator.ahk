@@ -6,7 +6,7 @@
 ; pulover@macrocreator.com
 ; Home: http://www.macrocreator.com
 ; Forum: http://www.autohotkey.com/board/topic/79763-macro-creator
-; Version: 4.0.0 Beta 2
+; Version: 4.0.0
 ; Release Date: September, 2013
 ; AutoHotkey Version: 1.1.12.00
 ; Copyright © 2012-2013 Rodolfo U. Batista
@@ -121,7 +121,7 @@ Loop
 		break
 }
 
-CurrentVersion := "4.0.0 Beta 2", ReleaseDate := "September, 2013"
+CurrentVersion := "4.0.0", ReleaseDate := "September, 2013"
 
 ;##### Ini File Read #####
 
@@ -403,6 +403,8 @@ GoSub, LoadLang
 
 GoSub, ObjCreate
 ToggleMode := ToggleC ? "T" : "P"
+If InStr(ColSizes, "0,0,0,0,0,0,0,0,0,0")
+	ColSizes := "70,130,190,50,40,85,95,95,60,40"
 Loop, Parse, ColSizes, `,
 	Col_%A_Index% := A_LoopField
 Loop, Parse, ShowBands, `,
@@ -4381,6 +4383,7 @@ AddLabel:
 ComGoto:
 ComLoop:
 Proj_Labels := ""
+Gui, chMacro:Default
 Loop, %TabCount%
 {
 	Gui, chMacro:ListView, InputList%A_Index%
@@ -10232,7 +10235,7 @@ Else If WinState = 0
 ColSizes := ""
 Loop % LV_GetCount("Col")
 {
-    SendMessage, 4125, A_Index - 1, 0, SysListView321, ahk_id %PMCWinID%
+    SendMessage, 4125, A_Index - 1, 0,, % "ahk_id " ListID%A_List%
 	ColSizes .= Floor(ErrorLevel / Round(A_ScreenDPI / 96, 2)) ","
 }
 GoSub, GetHotkeys
@@ -10773,7 +10776,6 @@ Loop, % LV_GetCount()
 }
 Critical, Off
 GuiControl, chMacro:+Redraw, InputList%A_List%
-Gui, 1:Default
 FreeMemory()
 return
 

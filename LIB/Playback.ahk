@@ -280,7 +280,9 @@
 						GoToLab := LoopSection(Start%PointMarker%, End%PointMarker%, LoopCount%PointMarker%, Macro_On
 						, PointMarker, mLoopIndex, o_TimesG[Macro_On])
 						o_Loop%PointMarker% := ""
-						If (GoToLab)
+						If IsObject(GoToLab)
+							return GoToLab
+						Else If (GoToLab)
 						{
 							Lab := GoToLab, GoToLab := 0
 							Playback(Lab)
@@ -530,22 +532,28 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC)
 						Else
 							return t_Macro1
 					}
-					Loop, %TabCount%
+					Else
 					{
-						TabIdx := A_Index
-						Gui, chMacro:ListView, InputList%TabIdx%
-						Loop, % ListCount%A_Index%
+						Loop, %TabCount%
 						{
-							LV_GetText(TargetLabel, A_Index, 3)
-							LV_GetText(Row_Type, A_Index, 6)
-							If ((Row_Type = cType36) || (Row_Type = cType37))
-								continue
-							If ((Row_Type = cType35) && (TargetLabel = Step))
+							TabIdx := A_Index
+							Gui, chMacro:ListView, InputList%TabIdx%
+							Loop, % ListCount%A_Index%
 							{
-								If (Type = cType37)
-									Playback(TabIdx, A_Index)
-								Else
-									return t_Macro1
+								LV_GetText(Row_Type, A_Index, 6)
+								If ((Row_Type = cType36) || (Row_Type = cType37))
+									continue
+								LV_GetText(TargetLabel, A_Index, 3)
+								If ((Row_Type = cType35) && (TargetLabel = Step))
+								{
+									If (Type = cType37)
+										Playback(TabIdx, A_Index)
+									Else
+									{
+										_Label := [TabIdx, A_Index, 0]
+										return _Label
+									}
+								}
 							}
 						}
 					}
