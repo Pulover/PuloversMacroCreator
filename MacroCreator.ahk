@@ -3921,7 +3921,7 @@ Gui, 8:Add, Button, -Wrap yp-1 x+0 W30 H23 vGetWin gGetWin Disabled, ...
 Gui, 8:Add, Button, -Wrap Section Default xm W75 H23 gTextOK, %c_Lang020%
 Gui, 8:Add, Button, -Wrap ys W75 H23 gTextCancel, %c_Lang021%
 Gui, 8:Add, Button, -Wrap ys W75 H23 vTextApply gTextApply Disabled, %c_Lang131%
-Gui, 8:Add, Button, -Wrap ys W25 H23 hwndInsertKeyT vInsertKeyT gInsertKey
+Gui, 8:Add, Button, -Wrap ys W25 H23 hwndInsertKeyT vInsertKeyT gInsertKey Disabled
 	ILButton(InsertKeyT, ResDllPath ":" 94)
 Gui, 8:Add, StatusBar
 Gui, 8:Default
@@ -4105,13 +4105,18 @@ Raw:
 GuiControl, Enable, CSend
 GuiControl, Enable, DefCt
 GuiControl, Enable, GetCtrl
+GuiControl, Disable, InsertKeyT
 GoSub, CSend
+Gui 7:+LastFoundExist
+IfWinExist
+	GoSub, InsertKeyClose
 return
 
 ComText:
 GuiControl, Enable, CSend
 GuiControl, Enable, DefCt
 GuiControl, Enable, GetCtrl
+GuiControl, Enable, InsertKeyT
 GoSub, CSend
 return
 
@@ -4120,14 +4125,22 @@ GuiControl, , CSend, 1
 GuiControl, Disable, CSend
 GuiControl, Enable, DefCt
 GuiControl, Enable, GetCtrl
+GuiControl, Disable, InsertKeyT
 GoSub, CSend
+Gui 7:+LastFoundExist
+IfWinExist
+	GoSub, InsertKeyClose
 return
 
 Clip:
 GuiControl, Enable, CSend
 GuiControl, Enable, DefCt
 GuiControl, Enable, GetCtrl
+GuiControl, Disable, InsertKeyT
 GoSub, CSend
+Gui 7:+LastFoundExist
+IfWinExist
+	GoSub, InsertKeyClose
 return
 
 EditPaste:
@@ -4135,7 +4148,11 @@ GuiControl, , CSend, 1
 GuiControl, Disable, CSend
 GuiControl, Enable, DefCt
 GuiControl, Enable, GetCtrl
+GuiControl, Disable, InsertKeyT
 GoSub, CSend
+Gui 7:+LastFoundExist
+IfWinExist
+	GoSub, InsertKeyClose
 return
 
 TextEdit:

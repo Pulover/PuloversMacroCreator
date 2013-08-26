@@ -5,7 +5,7 @@
 ;
 ; Author:        Pulover [Rodolfo U. Batista] (rodolfoub@gmail.com)
 ; Credits:       DllCreateEmpty() by SKAN
-;                ReplaceIcon() based on ReplaceAhkIcon() by fincs.
+;                ReplaceIcon() based on ReplaceAhkIcon() by fincs
 ;
 ;=======================================================================================
 ;
