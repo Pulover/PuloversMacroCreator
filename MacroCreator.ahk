@@ -5492,7 +5492,7 @@ Loop, 6
 		{
 			If fTxt not in OutputVarPID,OutputVarX,OutputVarY,OutputVarWin,OutputVarControl
 			{
-				Tooltip, %c_Lang127%, 15, % (A_Index = 1) ? 80 : 130
+				Tooltip, %c_Lang127%, 25, % (A_Index = 1) ? 140 : 185
 				return
 			}
 		}
@@ -10734,7 +10734,6 @@ Loop, % LV_GetCount()
 :	RegExMatch(Type, cType7 "|" cType38 "|" cType39 "|" cType40 "|" cType41) ? LV_Modify(A_Index, "Icon" 37)
 :	(Type = cType29) ? LV_Modify(A_Index, "Icon" 2)
 :	(Type = cType30) ? LV_Modify(A_Index, "Icon" 6)
-:	RegExMatch(Type, cType11 "|" cType14 "|Run|RunWait|RunAs") ? LV_Modify(A_Index, "Icon" 59)
 :	(Action = "[Assign Variable]") ? LV_Modify(A_Index, "Icon" 76)
 :	(Type = cType21) ? LV_Modify(A_Index, "Icon" 21)
 :	(Type = cType17) ? LV_Modify(A_Index, "Icon" 27)
@@ -10749,6 +10748,7 @@ Loop, % LV_GetCount()
 :	RegExMatch(Type, cType36 "|" cType37) ? LV_Modify(A_Index, "Icon" 22)
 :	LV_Modify(A_Index, "Icon" 71)
 	RegExMatch(Type, cType32 "|" cType33) ? LV_Modify(A_Index, "Icon" 26)
+:	RegExMatch(Type, cType11 "|" cType14 "|Run|RunWait|RunAs") ? LV_Modify(A_Index, "Icon" 59)
 :	RegExMatch(Type, "Process") ? LV_Modify(A_Index, "Icon" 51)
 :	RegExMatch(Type, "Shutdown") ? LV_Modify(A_Index, "Icon" 63)
 :	(InStr(Type, "Sort") || InStr(Type, "String") || InStr(Type, "Split")) ? LV_Modify(A_Index, "Icon" 5)
