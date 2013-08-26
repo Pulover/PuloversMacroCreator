@@ -1,4 +1,5 @@
-﻿SetWorkingDir %A_ScriptDir%
+﻿#NoEnv
+SetWorkingDir %A_ScriptDir%
 SplitPath, A_AhkPath,, AhkDir
 
 FileCreateDir, Compiled

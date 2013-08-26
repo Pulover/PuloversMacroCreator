@@ -1,4 +1,7 @@
-﻿;##### Inno Setup #####
+﻿#NoEnv
+SetWorkingDir %A_ScriptDir%
+
+;##### Inno Setup #####
 
 AutoTrim, Off
 IniRead, PMCVer, MacroCreator.ini, Application, Version
