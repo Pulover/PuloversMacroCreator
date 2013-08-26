@@ -137,6 +137,7 @@
 		Paste from Clipboard - Temporarily uses Clipboard to send the text. When the operation is completed, the script restores the original clipboard contents.
 		Paste on Control - Uses *Control, EditPaste*. Pastes String at the caret/insert position in an Edit control (this does not affect the contents of the clipboard).
 		SetText - Uses *ControlSetText*. Changes the text of a control.
+		Insert KeyStroke - Opens the Insert Keystroke window where you can choose a keyboard key from a list. Double-click or click *Insert* to insert the key in the current cursor postion. The key will be inserted in AutoHotkey *Send* format, only valid for *Text with commands* option.
 
 	Extra:
 		### Related

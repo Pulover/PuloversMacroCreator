@@ -121,7 +121,7 @@ Note: Changing parameters of certain commands may cause misbehavior in Playback.
 
 **Insert Box**: This box can be used to add commands to the list. Click in the box and press the buttons to add on the keyboard then press the Insert button to add them to the list (you can also use the Insert key as a shortcut when the focus is on the ListView).
 
-**Insert Keystroke**: Alternative to the *Insert Box*. It opens a window where you choose a keyboard key from a list to insert. You can also choose to hold (Down) or release (Up) the key.
+**Insert Keystroke**: Alternative to the *Insert Box*. Opens a window where you can choose a keyboard key from a list. Double-click or click *Insert* to insert the key into the selected position. You can also choose to hold (Down) or release (Up) the key.
 
 ### General Remarks
 
