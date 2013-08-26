@@ -56,7 +56,6 @@ ReplaceIcon(re, IcoFile, iconID)
 		
 		f.RawRead(ige+0, 12) ; read all but the offset
 		NumPut(thisID, ige+12, "UShort")
-		OutputDebug, % isobject(f)
 		imgOffset := f.ReadUInt()
 		oldPos := f.Pos
 		f.Pos := imgOffset
