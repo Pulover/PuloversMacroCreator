@@ -15,6 +15,14 @@ MButton & WheelDown::
 ^+Down::
 GoSub, MoveDn
 return
++WheelUp::
+^[::
+GoSub, MoveSelUp
+return
++WheelDown::
+^]::
+GoSub, MoveSelDn
+return
 
 #If !HotkeyCtrlHasFocus() && ListFocus && !HKOff
 

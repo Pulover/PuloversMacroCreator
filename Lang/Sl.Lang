@@ -55,8 +55,10 @@
 	s_Lang004 =	&Preverite Izbrano
 	s_Lang005 =	Po&čistite Izbrano
 	s_Lang006 =	I&nvertnega Pregledi
-	s_Lang007 =	Iz&brana vrsta
-	s_Lang008 =	&Ukazi
+	s_Lang007 =	P&remakniti Izbor Navzgor
+	s_Lang008 =	Pr&emakniti Izbor Navzdol
+	s_Lang009 =	Iz&brana vrsta
+	s_Lang010 =	&Ukazi
 		
 ; Edit Sub Menu		
 	e_Lang001 =	&Dvojnik

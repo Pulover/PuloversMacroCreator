@@ -55,8 +55,10 @@
 	s_Lang004 =	S&eçilen kontrol
 	s_Lang005 =	&Işaretini kaldırın Seçilmiş
 	s_Lang006 =	&Çekler Invert
-	s_Lang007 =	Se&çilen Tip
-	s_Lang008 =	&Komutlar
+	s_Lang007 =	Se&çimi Yukarı Taşımak
+	s_Lang008 =	Seçi&mi Aşağı Hareket
+	s_Lang009 =	Seçi&len Tip
+	s_Lang010 =	&Komutlar
 		
 ; Edit Sub Menu		
 	e_Lang001 =	&Çift

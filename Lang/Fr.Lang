@@ -55,8 +55,10 @@
 	s_Lang004 =	&Vérifiez sélectionnés
 	s_Lang005 =	&Décochez sélectionnés
 	s_Lang006 =	I&nverser contrôles
-	s_Lang007 =	&Type sélectionné
-	s_Lang008 =	&Commandes
+	s_Lang007 =	Dé&placer La Sélection Vers Le Haut
+	s_Lang008 =	Dép&lacer La Sélection Vers Le Bas
+	s_Lang009 =	&Type sélectionné
+	s_Lang010 =	&Commandes
 		
 ; Edit Sub Menu		
 	e_Lang001 =	&Dupliquer

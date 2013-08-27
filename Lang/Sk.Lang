@@ -55,8 +55,10 @@
 	s_Lang004 =	&Skontrolujte výber
 	s_Lang005 =	Z&rušte výber
 	s_Lang006 =	&Kontroly Invertovať
-	s_Lang007 =	Zvo&lený typ
-	s_Lang008 =	&Príkazy
+	s_Lang007 =	&Posunie Sa Na Predchádzajúci
+	s_Lang008 =	Po&hybovať Výberu Dole
+	s_Lang009 =	Zvo&lený typ
+	s_Lang010 =	Pr&íkazy
 		
 ; Edit Sub Menu		
 	e_Lang001 =	&Duplikát

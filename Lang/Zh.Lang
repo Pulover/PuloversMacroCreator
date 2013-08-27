@@ -55,8 +55,10 @@
 	s_Lang004 =	检查所选
 	s_Lang005 =	取消选中所选
 	s_Lang006 =	反转检查
-	s_Lang007 =	选择的类型
-	s_Lang008 =	命令
+	s_Lang007 =	移动选择
+	s_Lang008 =	向下移动选择
+	s_Lang009 =	选择的类型
+	s_Lang010 =	命令
 		
 ; Edit Sub Menu		
 	e_Lang001 =	复制

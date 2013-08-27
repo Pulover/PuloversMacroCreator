@@ -55,8 +55,10 @@
 	s_Lang004 =	&Kontrollera vald
 	s_Lang005 =	&Avmarkera Selected
 	s_Lang006 =	I&nvertera Kontroller
-	s_Lang007 =	Va&ld typ
-	s_Lang008 =	K&ommandon
+	s_Lang007 =	&Flytta Markeringen Uppåt
+	s_Lang008 =	F&lytta Markeringen Nedåt
+	s_Lang009 =	Val&d typ
+	s_Lang010 =	K&ommandon
 		
 ; Edit Sub Menu		
 	e_Lang001 =	&Duplicera

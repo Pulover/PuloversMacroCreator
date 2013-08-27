@@ -55,8 +55,10 @@
 	s_Lang004 =	&Ellenőrizze Kiválasztott
 	s_Lang005 =	&Törölje Kiválasztott
 	s_Lang006 =	I&nvert Ellenőrzések
-	s_Lang007 =	&Kiválasztott típus
-	s_Lang008 =	&Parancsok
+	s_Lang007 =	&Mozog Kiválasztás Felfelé
+	s_Lang008 =	M&ozog Lefelé Kiválasztás
+	s_Lang009 =	&Kiválasztott típus
+	s_Lang010 =	&Parancsok
 		
 ; Edit Sub Menu		
 	e_Lang001 =	&Másolat

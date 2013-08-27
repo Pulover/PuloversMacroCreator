@@ -55,8 +55,10 @@
 	s_Lang004 =	&Controleer Geselecteerde
 	s_Lang005 =	&Haal het vinkje weg Geselecteerde
 	s_Lang006 =	&Omkeren Controles
-	s_Lang007 =	&Geselecteerde Type
-	s_Lang008 =	Co&mmando's
+	s_Lang007 =	&Bewegen Selectie Up
+	s_Lang008 =	Be&wegen Selectie Omlaag
+	s_Lang009 =	&Geselecteerde Type
+	s_Lang010 =	Co&mmando's
 		
 ; Edit Sub Menu		
 	e_Lang001 =	&Duplicaat

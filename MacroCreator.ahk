@@ -1002,8 +1002,9 @@ If ErrorLevel = NewInput
 sKey := (ErrorLevel <> "Max") ? SubStr(ErrorLevel, 8) : sKey
 If sKey in %A_Space%,`n,`t
 	return
-If (Asc(sKey) < 192) && ((sKey <> "/") && (sKey <> ".") && (!GetKeyState(sKey, "P")))
-	return
+If (InStr(sKey, "_") < 1)
+	If (Asc(sKey) < 192) && ((sKey <> "/") && (sKey <> ".") && (!GetKeyState(sKey, "P")))
+		return
 If ((GetKeyState("RAlt", "P")) && !(HoldRAlt))
 	sKey := "RAlt", HoldRAlt := 1
 If (Asc(sKey) < 192) && ((CaptKDn = 1) || InStr(sKey, "Control") || InStr(sKey, "Shift")
@@ -1154,8 +1155,9 @@ Loop
 	If sKey in %A_Space%,`n,`t
 		continue
 	GoSub, ChReplace
-	If (Asc(sKey) < 192) && ((sKey <> "/") && (sKey <> ".") && (sKey <> "?")&& (!GetKeyState(sKey, "P")))
-		continue
+	If (InStr(sKey, "_") < 1)
+		If (Asc(sKey) < 192) && ((sKey <> "/") && (sKey <> ".") && (sKey <> "?")&& (!GetKeyState(sKey, "P")))
+			continue
 	If ((GetKeyState("RAlt", "P")) && !(HoldRAlt))
 		sKey := "RAlt", HoldRAlt := 1
 	If (Asc(sKey) < 192) && ((CaptKDn = 1) || InStr(sKey, "Control") || InStr(sKey, "Shift")
@@ -1234,7 +1236,7 @@ RowSelection := LV_GetCount("Selected")
 If (Record || RowSelection = 0)
 {
 	LV_Add("Check", ListCount%A_List%+1, tKey, sKey, 1, InputDelay, Type, Target, Window)
-	LV_Modify(ListCount%A_List%+1, "Vis")
+,	LV_Modify(ListCount%A_List%+1, "Vis")
 }
 Else
 {
@@ -1242,8 +1244,8 @@ Else
 	Loop, %RowSelection%
 	{
 		RowNumber := LV_GetNext(RowNumber)
-		LV_Insert(RowNumber, "Check", RowNumber, tKey, sKey, 1, DelayG, Type, Target, Window)
-		RowNumber++
+	,	LV_Insert(RowNumber, "Check", RowNumber, tKey, sKey, 1, DelayG, Type, Target, Window)
+	,	RowNumber++
 	}
 	LV_Modify(RowNumber, "Vis")
 }
@@ -3045,13 +3047,11 @@ If (A_ThisLabel <> "MouseApply")
 Gui, chMacro:Default
 RowSelection := LV_GetCount("Selected")
 If (s_Caller = "Edit")
-{
 	LV_Modify(RowNumber, "Col2", Action, Details, TimesX, DelayX, Type, Target, Window)
-}
 Else If RowSelection = 0
 {
 	LV_Add("Check", ListCount%A_List%+1, Action, Details, TimesX, DelayX, Type, Target, Window)
-	LV_Modify(ListCount%A_List%+1, "Vis")
+,	LV_Modify(ListCount%A_List%+1, "Vis")
 }
 Else
 {
@@ -3059,8 +3059,8 @@ Else
 	Loop, %RowSelection%
 	{
 		RowNumber := LV_GetNext(RowNumber)
-		LV_Insert(RowNumber, "Check", RowNumber, Action, Details, TimesX, DelayX, Type, Target, Window)
-		RowNumber++
+	,	LV_Insert(RowNumber, "Check", RowNumber, Action, Details, TimesX, DelayX, Type, Target, Window)
+	,	RowNumber++
 	}
 }
 GoSub, b_Start
@@ -4066,13 +4066,11 @@ If (A_ThisLabel <> "TextApply")
 Gui, chMacro:Default
 RowSelection := LV_GetCount("Selected")
 If (s_Caller = "Edit")
-{
 	LV_Modify(RowNumber, "Col2", Action, TextEdit, TimesX, DelayX, Type, Target, Window)
-}	
 Else If RowSelection = 0
 {
 	LV_Add("Check", ListCount%A_List%+1, Action, TextEdit, TimesX, DelayX, Type, Target, Window)
-	LV_Modify(ListCount%A_List%+1, "Vis")
+,	LV_Modify(ListCount%A_List%+1, "Vis")
 }
 Else
 {
@@ -4080,8 +4078,8 @@ Else
 	Loop, %RowSelection%
 	{
 		RowNumber := LV_GetNext(RowNumber)
-		LV_Insert(RowNumber, "Check", RowNumber, Action, TextEdit, TimesX, DelayX, Type, Target, Window)
-		RowNumber++
+	,	LV_Insert(RowNumber, "Check", RowNumber, Action, TextEdit, TimesX, DelayX, Type, Target, Window)
+	,	RowNumber++
 	}
 }
 GoSub, b_Start
@@ -4353,7 +4351,7 @@ RowSelection := LV_GetCount("Selected")
 If RowSelection = 0
 {
 	LV_Add("Check", ListCount%A_List%+1, "[Pause]", Details, 1, DelayX, Type, Target)
-	LV_Modify(ListCount%A_List%+1, "Vis")
+,	LV_Modify(ListCount%A_List%+1, "Vis")
 }
 Else
 {
@@ -4361,8 +4359,8 @@ Else
 	Loop, %RowSelection%
 	{
 		RowNumber := LV_GetNext(RowNumber)
-		LV_Insert(RowNumber, "Check", RowNumber, "[Pause]", Details, 1, DelayX, Type, Target)
-		RowNumber++
+	,	LV_Insert(RowNumber, "Check", RowNumber, "[Pause]", Details, 1, DelayX, Type, Target)
+	,	RowNumber++
 	}
 }
 GoSub, b_Start
@@ -4902,7 +4900,7 @@ If (s_Caller = "Edit")
 Else If RowSelection = 0
 {
 	LV_Add("Check", ListCount%A_List%+1, WinCom, Details, TimesX, DelayWX, WinCom, "", Title)
-	LV_Modify(ListCount%A_List%+1, "Vis")
+,	LV_Modify(ListCount%A_List%+1, "Vis")
 }
 Else
 {
@@ -4910,8 +4908,8 @@ Else
 	Loop, %RowSelection%
 	{
 		RowNumber := LV_GetNext(RowNumber)
-		LV_Insert(RowNumber, "Check", RowNumber, WinCom, Details, TimesX, DelayWX, WinCom, "", Title)
-		RowNumber++
+	,	LV_Insert(RowNumber, "Check", RowNumber, WinCom, Details, TimesX, DelayWX, WinCom, "", Title)
+	,	RowNumber++
 	}
 }
 GoSub, b_Start
@@ -5427,7 +5425,7 @@ Gui, 10:Add, Button, -Wrap ys W75 H23 vRunApply gRunApply Disabled, %c_Lang131%
 If (s_Caller = "Edit")
 {
 	GuiControl, 10:ChooseString, FileCmdL, %Type%
-	StringReplace, Details, Details, ```,, ¢, All
+	StringReplace, Details, Details, `````,, ¢, All
 	Loop, Parse, Details, `,, %A_Space%
 	{
 		StringReplace, LoopField, A_LoopField, ¢, `,, All
@@ -5511,8 +5509,8 @@ Loop, 6
 	If (fState = 1)
 	{
 		IfInString, Par%A_Index%File, `,
-			StringReplace, Par%A_Index%File, Par%A_Index%File, `,, ```,, All
-		Details .= Par%A_Index%File ", "
+			StringReplace, Par%A_Index%File, Par%A_Index%File, `,, `````,, All
+		Details .= Par%A_Index%File "`, "
 	}
 }
 StringReplace, Details, Details, ```,, ¢, All
@@ -5530,7 +5528,7 @@ If (s_Caller = "Edit")
 Else If RowSelection = 0
 {
 	LV_Add("Check", ListCount%A_List%+1, FileCmdL, Details, 1, DelayG, FileCmdL)
-	LV_Modify(ListCount%A_List%+1, "Vis")
+,	LV_Modify(ListCount%A_List%+1, "Vis")
 }
 Else
 {
@@ -5538,8 +5536,8 @@ Else
 	Loop, %RowSelection%
 	{
 		RowNumber := LV_GetNext(RowNumber)
-		LV_Insert(RowNumber, "Check", RowNumber, FileCmdL, Details, 1, DelayG, FileCmdL)
-		RowNumber++
+	,	LV_Insert(RowNumber, "Check", RowNumber, FileCmdL, Details, 1, DelayG, FileCmdL)
+	,	RowNumber++
 	}
 }
 GoSub, b_Start
@@ -6173,7 +6171,7 @@ If (s_Caller = "Edit")
 Else If RowSelection = 0
 {
 	LV_Add("Check", ListCount%A_List%+1, "[Windows Message]", Details, TimesX, DelayG, MsgType, DefCt, Title)
-	LV_Modify(ListCount%A_List%+1, "Vis")
+,	LV_Modify(ListCount%A_List%+1, "Vis")
 }
 Else
 {
@@ -6181,8 +6179,8 @@ Else
 	Loop, %RowSelection%
 	{
 		RowNumber := LV_GetNext(RowNumber)
-		LV_Insert(RowNumber, "Check", RowNumber, "[Windows Message]", Details, TimesX, DelayG, MsgType, DefCt, Title)
-		RowNumber++
+	,	LV_Insert(RowNumber, "Check", RowNumber, "[Windows Message]", Details, TimesX, DelayG, MsgType, DefCt, Title)
+	,	RowNumber++
 	}
 }
 GoSub, b_Start
@@ -6367,7 +6365,7 @@ If (s_Caller = "Edit")
 Else If RowSelection = 0
 {
 	LV_Add("Check", ListCount%A_List%+1, "[Control]", Details, TimesX, DelayG, ControlCmd, DefCt, Title)
-	LV_Modify(ListCount%A_List%+1, "Vis")
+,	LV_Modify(ListCount%A_List%+1, "Vis")
 }
 Else
 {
@@ -6375,8 +6373,8 @@ Else
 	Loop, %RowSelection%
 	{
 		RowNumber := LV_GetNext(RowNumber)
-		LV_Insert(RowNumber, "Check", RowNumber, "[Control]", Details, TimesX, DelayG, ControlCmd, DefCt, Title)
-		RowNumber++
+	,	LV_Insert(RowNumber, "Check", RowNumber, "[Control]", Details, TimesX, DelayG, ControlCmd, DefCt, Title)
+	,	RowNumber++
 	}
 }
 GoSub, b_Start
@@ -6749,7 +6747,7 @@ If (s_Caller = "Edit")
 Else If RowSelection = 0
 {
 	LV_Add("Check", ListCount%A_List%+1, Action, ComSc, TimesX, DelayG, cType34, ComCLSID, Load)
-	LV_Modify(ListCount%A_List%+1, "Vis")
+,	LV_Modify(ListCount%A_List%+1, "Vis")
 }
 Else
 {
@@ -6757,8 +6755,8 @@ Else
 	Loop, %RowSelection%
 	{
 		RowNumber := LV_GetNext(RowNumber)
-		LV_Insert(RowNumber, "Check", RowNumber, Action, ComSc, TimesX, DelayG, cType34, ComCLSID, Load)
-		RowNumber++
+	,	LV_Insert(RowNumber, "Check", RowNumber, Action, ComSc, TimesX, DelayG, cType34, ComCLSID, Load)
+	,	RowNumber++
 	}
 }
 GoSub, RowCheck
@@ -6795,7 +6793,7 @@ If (s_Caller = "Edit")
 Else If RowSelection = 0
 {
 	LV_Add("Check", ListCount%A_List%+1, Action, ScLet, TimesX, DelayG, Type, "ScriptControl")
-	LV_Modify(ListCount%A_List%+1, "Vis")
+,	LV_Modify(ListCount%A_List%+1, "Vis")
 }
 Else
 {
@@ -6803,8 +6801,8 @@ Else
 	Loop, %RowSelection%
 	{
 		RowNumber := LV_GetNext(RowNumber)
-		LV_Insert(RowNumber, "Check", RowNumber, Action, ScLet, TimesX, DelayG, Type, "ScriptControl")
-		RowNumber++
+	,	LV_Insert(RowNumber, "Check", RowNumber, Action, ScLet, TimesX, DelayG, Type, "ScriptControl")
+	,	RowNumber++
 	}
 }
 GoSub, RowCheck
@@ -7707,14 +7705,11 @@ return
 
 Duplicate:
 Gui, chMacro:Default
-TempData := new LV_Rows()
-TempData.Copy()
-If TempData.Paste()
+If LV_Rows.Duplicate()
 {
 	GoSub, b_Start
 	GoSub, RowCheck
 }
-TempData := ""
 GuiControl, Focus, InputList%A_List%
 return
 
@@ -7739,7 +7734,7 @@ return
 
 PasteRows:
 Gui, chMacro:Default
-If CopyRows.Paste(, True)
+If CopyRows.Paste()
 {
 	GoSub, b_Start
 	GoSub, RowCheck
@@ -7793,6 +7788,7 @@ return
 
 TabPlus:
 Gui, 1:Submit, NoHide
+Gui, chMacro:Default
 TabCount++
 GuiCtrlAddTab(TabSel, "Macro" TabCount)
 Gui, chMacro:ListView, InputList%TabCount%
@@ -7807,6 +7803,7 @@ GuiControl, 28:+Range1-%TabCount%, OSHK
 TabSel:
 GoSub, SaveData
 Gui, 1:Submit, NoHide
+Gui, chMacro:Default
 Gui, chMacro:Submit, NoHide
 Gui, chMacro:ListView, InputList%A_List%
 GoSub, chMacroGuiSize
@@ -7820,6 +7817,7 @@ TabClose:
 GoSub, SaveData
 GoSub, ResetHotkeys
 Gui, 1:Submit, NoHide
+Gui, chMacro:Default
 Gui, chMacro:Submit, NoHide
 If (TabCount = 1)
 	return
@@ -7938,13 +7936,6 @@ Loop, %TabCount%
 Menu, CopyTo, Add, Macro1, CopyList
 return
 
-Order:
-Gui, chMacro:Default
-LV_Rows.Move(Order)
-HistCheck(A_List)
-GoSub, RowCheck
-return
-
 SelectAll:
 Gui, chMacro:Default
 LV_Modify(0, "Select")
@@ -7953,6 +7944,39 @@ return
 SelectNone:
 Gui, chMacro:Default
 LV_Modify(0, "-Select")
+return
+
+MoveSelDn:
+Gui, chMacro:Default
+RowSelection := LV_GetCount("Selected")
+If RowSelection = 0
+	return
+RowNumber := 0
+Loop, % RowSelection
+{
+	RowNumber := LV_GetNext(RowNumber)
+,	LV_Modify(RowNumber, "-Select")
+	If (LV_GetNext(RowNumber+1) <> (RowNumber+1))
+	{
+		LV_Modify(RowNumber+1, "Select")
+		RowNumber++
+	}
+}
+return
+
+MoveSelUp:
+Gui, chMacro:Default
+RowSelection := LV_GetCount("Selected")
+If RowSelection = 0
+	return
+RowNumber := 0
+Loop, % RowSelection
+{
+	RowNumber := LV_GetNext(RowNumber)
+,	LV_Modify(RowNumber, "-Select")
+	If (RowNumber > 1)
+		LV_Modify(RowNumber-1, "Select")
+}
 return
 
 InvertSel:
@@ -8086,8 +8110,8 @@ Else
 	Loop, %RowSelection%
 	{
 		RowNumber := LV_GetNext(RowNumber)
-		LV_Insert(RowNumber, "Check", RowNumber, tKey, sKey, 1, DelayG, cType1)
-		RowNumber++
+	,	LV_Insert(RowNumber, "Check", RowNumber, tKey, sKey, 1, DelayG, cType1)
+	,	RowNumber++
 	}
 }
 GoSub, RowCheck
@@ -8167,8 +8191,8 @@ Else
 		Loop, %RowSelection%
 		{
 			RowNumber := LV_GetNext(RowNumber)
-			LV_Insert(RowNumber, "Check", RowNumber, tKey, sKey, TimesX, DelayX, cType1)
-			RowNumber++
+		,	LV_Insert(RowNumber, "Check", RowNumber, tKey, sKey, TimesX, DelayX, cType1)
+		,	RowNumber++
 		}
 	}
 	GoSub, RowCheck
@@ -9626,6 +9650,7 @@ pb_StringReplace:
 	StringReplace, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%
 return
 pb_StringSplit:
+	OutputDebug, % %Par2%
 	StringSplit, %Par1%, %Par2%, %Par3%, %Par4%
 return
 pb_StringTrimLeft:
@@ -10110,6 +10135,11 @@ If (Type = cType39)
 	Step := RegExReplace(Step, "\w+", "%$0%", "", 1)
 EscCom("Step|TimesX|DelayX|Target|Window", 1)
 StringReplace, Step, Step, `%A_Space`%, ⱥ, All
+If ((InStr(FileCmdList, Type "|")) && (Action <> "[Pause]"))
+{
+	If RegExMatch(Step, "sU)%\s([\w%]+)\((.*)\)")
+		EscCom("Step", 1)
+}
 CheckVars("Step|TimesX|DelayX|Target|Window", This_Point)
 StringReplace, Step, Step, ```,, ¢, All
 StringReplace, Step, Step, ``n, `n, All
@@ -10968,8 +10998,11 @@ Menu, SelectMenu, Add, %s_Lang004%`t%_s%Ctrl+Q, CheckSel
 Menu, SelectMenu, Add, %s_Lang005%`t%_s%Ctrl+Shift+Q, UnCheckSel
 Menu, SelectMenu, Add, %s_Lang006%`t%_s%Ctrl+Alt+Q, InvertCheck
 Menu, SelectMenu, Add
-Menu, SelectMenu, Add, %s_Lang007%, SelType
-Menu, SelectMenu, Add, %s_Lang008%, :SelCmdMenu
+Menu, SelectMenu, Add, %s_Lang007%`t%_s%Ctrl+[, MoveSelUp
+Menu, SelectMenu, Add, %s_Lang008%`t%_s%Ctrl+], MoveSelDn
+Menu, SelectMenu, Add
+Menu, SelectMenu, Add, %s_Lang009%, SelType
+Menu, SelectMenu, Add, %s_Lang010%, :SelCmdMenu
 
 Menu, CopyTo, Add, Macro1, CopyList
 

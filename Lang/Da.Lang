@@ -55,8 +55,10 @@
 	s_Lang004 =	&Check Selected
 	s_Lang005 =	&Fravælg Valgt
 	s_Lang006 =	I&nvert Kontrol
-	s_Lang007 =	V&algt Type
-	s_Lang008 =	&Kommandoer
+	s_Lang007 =	F&lyt Markering Op
+	s_Lang008 =	Fl&ytte Markeringen Ned
+	s_Lang009 =	V&algt Type
+	s_Lang010 =	&Kommandoer
 		
 ; Edit Sub Menu		
 	e_Lang001 =	&Dupliker

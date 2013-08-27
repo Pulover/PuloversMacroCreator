@@ -55,8 +55,10 @@
 	s_Lang004 =	&Check Selected
 	s_Lang005 =	&Uncheck Selected
 	s_Lang006 =	In&vert Checks
-	s_Lang007 =	Selected &Type
-	s_Lang008 =	C&ommands
+	s_Lang007 =	Move Selection U&p
+	s_Lang008 =	Move Selection &Down
+	s_Lang009 =	Selected &Type
+	s_Lang010 =	C&ommands
 		
 ; Edit Sub Menu		
 	e_Lang001 =	Dup&licate

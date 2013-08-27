@@ -55,8 +55,10 @@
 	s_Lang004 =	&Provjerite Odabrani
 	s_Lang005 =	Po&ništite Odabrani
 	s_Lang006 =	&Invert Provjere
-	s_Lang007 =	I&zabrani Tip
-	s_Lang008 =	N&aredbe
+	s_Lang007 =	Po&micanje Gore Odabir
+	s_Lang008 =	P&remjestiti Izbor Dolje
+	s_Lang009 =	I&zabrani Tip
+	s_Lang010 =	N&aredbe
 		
 ; Edit Sub Menu		
 	e_Lang001 =	&Duplikat

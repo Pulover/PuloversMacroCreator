@@ -55,8 +55,10 @@
 	s_Lang004 =	&Comprovi seleccionat
 	s_Lang005 =	&Desactiveu l'opció seleccionada
 	s_Lang006 =	I&nvertir xecs
-	s_Lang007 =	&Tipus Seleccionat
-	s_Lang008 =	&Ordres
+	s_Lang007 =	&Mou La Selecció Amunt
+	s_Lang008 =	M&oure La Selecció Cap Avall
+	s_Lang009 =	&Tipus Seleccionat
+	s_Lang010 =	O&rdres
 		
 ; Edit Sub Menu		
 	e_Lang001 =	&Duplicar

@@ -55,8 +55,10 @@
 	s_Lang004 =	&Sprawdź Wybrane
 	s_Lang005 =	O&dznacz Wybrane
 	s_Lang006 =	Odw&róć Kontrole
-	s_Lang007 =	W&ybranego typu
-	s_Lang008 =	&Polecenia
+	s_Lang007 =	&Przenieść Wybór Do
+	s_Lang008 =	Prz&esunąć Zaznaczenie W Dół
+	s_Lang009 =	W&ybranego typu
+	s_Lang010 =	Po&lecenia
 		
 ; Edit Sub Menu		
 	e_Lang001 =	&Duplikat

@@ -10,8 +10,10 @@
 	Loop, % LV_GetCount()
 	{
 		LV_GetTexts(A_Index, Action, Step, TimesX, DelayX, Type, Target, Window, Comment)
-		IsChecked := LV_GetNext(A_Index-1, "Checked")
-	,	Step := CheckForExp(Step)
+	,	IsChecked := LV_GetNext(A_Index-1, "Checked")
+		If ((InStr(FileCmdList, Type "|")) && (Action <> "[Pause]"))
+			StringReplace, Step, Step, ```,, `,, All
+		Step := CheckForExp(Step)
 	,	TimesX := CheckForExp(TimesX)
 	,	DelayX := CheckForExp(DelayX)
 	,	Target := CheckForExp(Target)
@@ -416,16 +418,32 @@
 			GoSub, Add_CD
 		}
 		Else If ((Type = cType3) || (Type = cType8) || (Type = cType11)
-		|| (Type = cType13) || (Type = cType14) || InStr(FileCmdList, Type "|"))
+		|| (Type = cType13) || (Type = cType14))
 		{
 			If (InStr(Step, "``n") && (Type = cType8))
 			{
 				StringReplace, Step, Step, ``n, `n, All
 				Step := "`n(LTrim`n" Step "`n)"
 			}
-			StringReplace, Step, Step, ```,, `````,, All
+			StringReplace, Step, Step, `````,, ```,, All
 			RowData := "`n" Type ", " Step
-		,	RowData := RTrim(RowData, ", ")
+			If !RegExMatch(Step, "```,\s*?$")
+				RowData := RTrim(RowData, ", ")
+			GoSub, Add_CD
+			If ((TimesX > 1) || InStr(TimesX, "%"))
+				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
+		}
+		Else If (InStr(FileCmdList, Type "|"))
+		{
+			If (InStr(Step, "``n") && (Type = cType8))
+			{
+				StringReplace, Step, Step, ``n, `n, All
+				Step := "`n(LTrim`n" Step "`n)"
+			}
+			StringReplace, Step, Step, `````,, ```,, All
+			RowData := "`n" Type ", " Step
+			If !RegExMatch(Step, "```,\s*?$")
+				RowData := RTrim(RowData, ", ")
 			GoSub, Add_CD
 			If ((TimesX > 1) || InStr(TimesX, "%"))
 				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
@@ -468,7 +486,8 @@
 			If ((TimesX > 1) || InStr(TimesX, "%"))
 				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
 		}
-		StringReplace, RowData, RowData, ```,, `,, All
+		If ((Action = "[Pause]") || !(InStr(FileCmdList, Type "|")))
+			StringReplace, RowData, RowData, ```,, `,, All
 		LVData .= RowData
 	}
 	; LVData := RegExReplace(LVData, "Send, \n")

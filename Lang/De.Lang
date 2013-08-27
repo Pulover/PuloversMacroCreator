@@ -50,13 +50,15 @@
 		
 ; Select Sub Menu		
 	s_Lang001 =	&Alles auswählen
-	s_Lang002 =	Nichts aus&wählen
+	s_Lang002 =	&Nichts auswählen
 	s_Lang003 =	A&uswahl umkehren
-	s_Lang004 =	Auswahl akti&vieren
-	s_Lang005 =	Auswahl &deaktivieren
-	s_Lang006 =	Zustand um&kehren 
-	s_Lang007 =	Gleiche Typen au&swählen
-	s_Lang008 =	&Befehle
+	s_Lang004 =	Au&swahl aktivieren
+	s_Lang005 =	Aus&wahl deaktivieren
+	s_Lang006 =	&Zustand umkehren 
+	s_Lang007 =	&Bewegen Auswahl Bis
+	s_Lang008 =	Auswa&hl Nach Unten Verschieben
+	s_Lang009 =	&Gleiche Typen auswählen
+	s_Lang010 =	B&efehle
 		
 ; Edit Sub Menu		
 	e_Lang001 =	&Duplizieren

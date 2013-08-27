@@ -55,8 +55,10 @@
 	s_Lang004 =	&Controllo selezionata
 	s_Lang005 =	&Deselezionare selezionato
 	s_Lang006 =	I&nverti Controlli
-	s_Lang007 =	&Tipo selezionato
-	s_Lang008 =	C&omandi
+	s_Lang007 =	S&postare La Selezione Su
+	s_Lang008 =	Sp&ostare La Selezione Verso Il Basso
+	s_Lang009 =	&Tipo selezionato
+	s_Lang010 =	Co&mandi
 		
 ; Edit Sub Menu		
 	e_Lang001 =	&Duplicare

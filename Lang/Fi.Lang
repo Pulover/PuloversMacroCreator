@@ -55,8 +55,10 @@
 	s_Lang004 =	&Tarkista Valittu
 	s_Lang005 =	&Poista valinnat Valittu
 	s_Lang006 =	K&äänteinen Tarkastukset
-	s_Lang007 =	Va&littu tyyppi
-	s_Lang008 =	K&omennot
+	s_Lang007 =	&Siirrä Valintaa Ylös
+	s_Lang008 =	S&iirrä Valintaa Alas
+	s_Lang009 =	Va&littu tyyppi
+	s_Lang010 =	K&omennot
 		
 ; Edit Sub Menu		
 	e_Lang001 =	&Monistaa

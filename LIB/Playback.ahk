@@ -21,7 +21,7 @@
 		If !WinExist("ahk_id " PMCOSC)
 			GoSub, ShowControls
 	}
-	PlayOSOn := 1, ToggleButtonIcon(OSPlay, PauseIconB)
+	PlayOSOn := 1, ToggleButtonIcon(OSPlay, PauseIconB), LastError := ""
 ,	CurrentRange := m_ListCount, ChangeProgBarColor("20D000", "OSCProg", 28)
 	If (ShowProgBar = 1)
 	{
@@ -415,6 +415,7 @@
 						break 3
 					}
 					GoSub, pb_%Type%
+					LastError := ErrorLevel
 					If Type in Sleep,KeyWait,MsgBox
 						continue
 					If ((TakeAction = "Break") || ((Target = "Break") && (SearchResult = 0)))
@@ -497,8 +498,8 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC)
 				}
 				Gui, chMacro:ListView, InputList%lcL%
 				lIdx := Start + A_Index
-				LV_GetTexts(lIdx, Action, Step, TimesX, DelayX, Type, Target, Window)
-				IsChecked := LV_GetNext(lIdx-1, "Checked")
+			,	LV_GetTexts(lIdx, Action, Step, TimesX, DelayX, Type, Target, Window)
+			,	IsChecked := LV_GetNext(lIdx-1, "Checked")
 				If (IsChecked <> lIdx)
 					continue
 				If (pb_Sel)
@@ -796,6 +797,7 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC)
 					If StopIt
 						break 3
 					GoSub, pb_%Type%
+					LastError := ErrorLevel
 					If Type in Sleep,KeyWait
 						continue
 					
@@ -1180,6 +1182,8 @@ CheckVars(MatchList, Point="")
 	{
 		If InStr(%A_LoopField%, "%A_Index%")
 			StringReplace, %A_LoopField%, %A_LoopField%, `%A_Index`%, `%LoopIndex`%, All
+		If InStr(%A_LoopField%, "%ErrorLevel%")
+			StringReplace, %A_LoopField%, %A_LoopField%, `%ErrorLevel`%, `%LastError`%, All
 		While, RegExMatch(%A_LoopField%, "i)%(A_Loop\w+)%", lMatch)
 		{
 			I := DerefVars(LoopIndex), L := SubStr(lMatch1, 3)
@@ -1203,6 +1207,7 @@ CheckVars(MatchList, Point="")
 					FuncResult := %Funct1%(Params*)
 					StringReplace, FuncResult, FuncResult, `,, ```, 
 					StringReplace, %A_LoopField%, %A_LoopField%, %Funct%, %FuncResult%
+					FuncResult := ""
 				}
 				Else
 					break

@@ -264,6 +264,10 @@ You can load multiple files with multiple parameters.
 
 **Ctrl+Alt+Q**: Invert Checks in Selected Rows
 
+**Ctrl+[** or **Shift+WheelUp**: Move selection up
+
+**Ctrl+]** or **Shift+WheelDown**: Move selection down
+
 **Ctrl+C**: Copy Selected Rows
 
 **Ctrl+X**: Cut Selected Rows

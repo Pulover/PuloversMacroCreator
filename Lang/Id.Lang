@@ -55,8 +55,10 @@
 	s_Lang004 =	P&eriksa Dipilih
 	s_Lang005 =	&Hapus tanda centang Dipilih
 	s_Lang006 =	&Balikkan Cek
-	s_Lang007 =	&Dipilih Type
-	s_Lang008 =	Pe&rintah
+	s_Lang007 =	&Memindah Selection Up
+	s_Lang008 =	Memin&dahkan Pilihan Ke Bawah
+	s_Lang009 =	Dipi&lih Type
+	s_Lang010 =	Pe&rintah
 		
 ; Edit Sub Menu		
 	e_Lang001 =	&Duplikat

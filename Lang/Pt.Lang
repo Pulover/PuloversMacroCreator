@@ -55,8 +55,10 @@
 	s_Lang004 =	&Marcar Selecionados
 	s_Lang005 =	&Desmarcar Selecionados
 	s_Lang006 =	In&verter Marcados
-	s_Lang007 =	Ti&po Selecionado
-	s_Lang008 =	&Comandos
+	s_Lang007 =	Mover Seleção para Cim&a
+	s_Lang008 =	Mover Seleção para &Baixo
+	s_Lang009 =	Ti&po Selecionado
+	s_Lang010 =	&Comandos
 		
 ; Edit Sub Menu		
 	e_Lang001 =	D&uplicar

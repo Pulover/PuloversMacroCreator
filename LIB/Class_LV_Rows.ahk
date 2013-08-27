@@ -1,11 +1,12 @@
 ﻿;=======================================================================================
 ;
-;                 Class LV_Rows
+;                    Class LV_Rows
 ;
-; Author:        Pulover [Rodolfo U. Batista]
-;                rodolfoub@gmail.com
+; Author:            Pulover [Rodolfo U. Batista]
+;                    rodolfoub@gmail.com
+; Release date:      27 August 2013
 ;
-;                Additional functions for ListView controls
+;                    Additional functions for ListView controls
 ;=======================================================================================
 ;
 ; This class provides an easy way to add functionalities to ListViews that are not
@@ -16,7 +17,8 @@
 ; Edit Functions:
 ;    Copy()
 ;    Cut()
-;    Paste(Row=0)
+;    Paste(Row=0, Multiline=True)
+;    Duplicate()
 ;    Delete()
 ;    Move(Up=False)
 ;    Drag(DragButton="D", AutoScroll=True, ScrollDelay=100, LineThick=2, Color="Black")
@@ -142,7 +144,7 @@ Class LV_Rows
 ;        Multiline:      If True pastes the contents at every selected row.
 ;    Return:             True if memory contains data or False if not.
 ;=======================================================================================
-    Paste(Row=0, MultiLine=True)
+    Paste(Row=0, Multiline=True)
     {
         If !this.CopyData.MaxIndex()
             return False
@@ -154,27 +156,40 @@ Class LV_Rows
         }
         Else
         {
-			If (MultiLine)
-			{
-				LV_Row := 0
-				Loop
-				{
-					LV_Row := LV_GetNext(LV_Row - 1)
-					If !LV_Row
-						break
-					For each, Row in this.CopyData
-						LV_Insert(LV_Row, Row*), LV_Row += 1
-					LV_Row += 1
-				}
-			}
-			Else
-			{
-				LV_Row := TargetRow - 1
-				For each, Row in this.CopyData
-					LV_Insert(LV_Row+A_Index, Row*)
-			}
+            If (!Row && Multiline)
+            {
+                LV_Row := 0
+                Loop
+                {
+                    LV_Row := LV_GetNext(LV_Row - 1)
+                    If !LV_Row
+                        break
+                    For each, Row in this.CopyData
+                        LV_Insert(LV_Row, Row*), LV_Row += 1
+                    LV_Row += 1
+                }
+            }
+            Else
+            {
+                LV_Row := TargetRow - 1
+                For each, Row in this.CopyData
+                    LV_Insert(LV_Row+A_Index, Row*)
+            }
         }
         return True
+    }
+;=======================================================================================
+;    Function:           LV_Rows.Duplicate()
+;    Description:        Duplicates selected rows.
+;    Return:             Number of duplicated rows.
+;=======================================================================================
+    Duplicate()
+    {
+        DupRows := new LV_Rows()
+    ,   DupLines := DupRows.Copy()
+    ,   DupRows.Paste(, False)
+    ,   DupRows := ""
+        return DupLines
     }
 ;=======================================================================================
 ;    Function:           LV_Rows.Delete()

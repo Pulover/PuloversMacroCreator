@@ -55,8 +55,10 @@
 	s_Lang004 =	선택 확인
 	s_Lang005 =	선택을 취소 선택
 	s_Lang006 =	수표로 바꾸
-	s_Lang007 =	선택한 유형
-	s_Lang008 =	명령
+	s_Lang007 =	선택 이동
+	s_Lang008 =	선택 아래로 이동
+	s_Lang009 =	선택한 유형
+	s_Lang010 =	명령
 		
 ; Edit Sub Menu		
 	e_Lang001 =	복제

@@ -55,8 +55,10 @@
 	s_Lang004 =	&Kiểm tra chọn
 	s_Lang005 =	&Bỏ chọn
 	s_Lang006 =	Đ&ảo ngược Kiểm tra
-	s_Lang007 =	&Loại lựa chọn
-	s_Lang008 =	L&ệnh
+	s_Lang007 =	Ch&uyển Vùng Chọn Lên
+	s_Lang008 =	Chu&yển Vùng Chọn Xuống
+	s_Lang009 =	&Loại lựa chọn
+	s_Lang010 =	L&ệnh
 		
 ; Edit Sub Menu		
 	e_Lang001 =	&Bản sao

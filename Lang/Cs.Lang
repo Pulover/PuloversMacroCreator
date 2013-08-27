@@ -55,8 +55,10 @@
 	s_Lang004 =	&Zkontrolujte Vybrané
 	s_Lang005 =	Z&rušte zaškrtnutí políčka Vybrané
 	s_Lang006 =	I&nvertovat Kontroly
-	s_Lang007 =	Vy&brané Type
-	s_Lang008 =	&Příkazy
+	s_Lang007 =	&Posune Se Na Předchozí
+	s_Lang008 =	P&ohybovat Výběru Dolů
+	s_Lang009 =	Vy&brané Type
+	s_Lang010 =	P&říkazy
 		
 ; Edit Sub Menu		
 	e_Lang001 =	&Duplikát

@@ -49,14 +49,16 @@
 	i_Lang020 =	Cari perintah
 		
 ; Select Sub Menu		
-	s_Lang001 =	Pilih Semua
-	s_Lang002 =	Pilih Tiada
-	s_Lang003 =	Terbalikkan Pemilihan
-	s_Lang004 =	Semak Terpilih
-	s_Lang005 =	Padam tanda Terpilih
-	s_Lang006 =	Terbalikkan Pemeriksaan
-	s_Lang007 =	Jenis Terpilih
-	s_Lang008 =	Arahan
+	s_Lang001 =	&Pilih Semua
+	s_Lang002 =	P&ilih Tiada
+	s_Lang003 =	&Terbalikkan Pemilihan
+	s_Lang004 =	&Semak Terpilih
+	s_Lang005 =	P&adam tanda Terpilih
+	s_Lang006 =	T&erbalikkan Pemeriksaan
+	s_Lang007 =	&Bergerak Pemilihan Sehingga
+	s_Lang008 =	&Mengubah Pilihan Ke Bawah
+	s_Lang009 =	&Jenis Terpilih
+	s_Lang010 =	A&rahan
 		
 ; Edit Sub Menu		
 	e_Lang001 =	Gandakan

@@ -48,8 +48,12 @@ Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jör
 * Added *Multiple Column* search in *Find/Replace* window.
 * Added translations to Malay and Vietnamese.
 * Added *Portable Install* option in installer.
+* Paste command now works on mutiple selections.
 * Main window size is remembered.
-* Fixed bugs and issues.
+* Fixed ErrorLevel variable results for commands in playback.
+* Fixed automatic comma escaping in *Run* command window.
+* Fixed Media keys not being recorded/captured.
+* Fixed various bugs and issues.
 
 ## Version 3.8.4
 

@@ -55,8 +55,10 @@
 	s_Lang004 =	&Sjekk Valgt
 	s_Lang005 =	&Fjern merkingen Valgt
 	s_Lang006 =	I&nverter Sjekker
-	s_Lang007 =	V&algt type
-	s_Lang008 =	&Kommandoer
+	s_Lang007 =	F&lytte Valget Opp
+	s_Lang008 =	Fl&ytte Pekeren Ned
+	s_Lang009 =	V&algt type
+	s_Lang010 =	&Kommandoer
 		
 ; Edit Sub Menu		
 	e_Lang001 =	&Duplisere

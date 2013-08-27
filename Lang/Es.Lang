@@ -55,8 +55,10 @@
 	s_Lang004 =	&Comprobar seleccionado
 	s_Lang005 =	&Desactivar  seleccionadas
 	s_Lang006 =	I&nvertir cheques
-	s_Lang007 =	&Tipo seleccionado
-	s_Lang008 =	C&omandos
+	s_Lang007 =	&Mueve La Selección Arriba
+	s_Lang008 =	M&over La Selección Hacia Abajo
+	s_Lang009 =	&Tipo seleccionado
+	s_Lang010 =	Com&andos
 		
 ; Edit Sub Menu		
 	e_Lang001 =	&Duplicar
