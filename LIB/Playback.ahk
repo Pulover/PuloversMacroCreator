@@ -14,7 +14,7 @@
 		GoSub, RowCheck
 	}
 	Pause, Off
-	Menu, Tray, Icon, %ResDllPath%, 47
+	Try Menu, Tray, Icon, %ResDllPath%, 47
 	Menu, Tray, Default, %w_Lang008%
 	If (AutoHideBar)
 	{
@@ -35,7 +35,7 @@
 		{
 			If StopIt
 			{
-				Menu, Tray, Icon, %DefaultIcon%, 1
+				Try Menu, Tray, Icon, %DefaultIcon%, 1
 				Menu, Tray, Default, %w_Lang005%
 				break
 			}
@@ -410,7 +410,7 @@
 				{
 					If StopIt
 					{
-						Menu, Tray, Icon, %DefaultIcon%, 1
+						Try Menu, Tray, Icon, %DefaultIcon%, 1
 						Menu, Tray, Default, %w_Lang005%
 						break 3
 					}
@@ -447,7 +447,7 @@
 	CurrentRange := ""
 	If !(aHK_Timer)
 	{
-		Menu, Tray, Icon, %DefaultIcon%, 1
+		Try Menu, Tray, Icon, %DefaultIcon%, 1
 		Menu, Tray, Default, %w_Lang005%
 		PlayOSOn := 0
 		ToggleButtonIcon(OSPlay, TestRunIcon)

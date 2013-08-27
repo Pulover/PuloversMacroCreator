@@ -1106,7 +1106,7 @@ If (Record := !Record)
 	Tooltip
 	If (ShowStep = 1)
 		Traytip, %AppName%, Macro%A_List%: %d_Lang028% %RecKey% %d_Lang029%.,,1
-	Menu, Tray, Icon, %ResDllPath%, 55
+	Try Menu, Tray, Icon, %ResDllPath%, 55
 	Menu, Tray, Default, %w_Lang008%
 	ToggleButtonIcon(OSRec, RecStopIcon)
 	return
@@ -1138,7 +1138,7 @@ Hotkey, ~*WheelDown, MWDn, off
 SetTimer, MouseRecord, off
 If (!(WinActive("ahk_id" PMCWinID)) && (KeepHkOn = 1))
 	GoSub, KeepHkOn
-Menu, Tray, Icon, %DefaultIcon%, 1
+Try Menu, Tray, Icon, %DefaultIcon%, 1
 Try Menu, Tray, Default, %w_Lang005%
 ToggleButtonIcon(OSRec, RecordIcon)
 return
@@ -6469,10 +6469,10 @@ Gui, 24:Add, GroupBox, Section xm ym W410 H265
 Gui, 24:Add, Combobox, ys+15 xs+10 W160 vIECmd gIECmd, %IECmdList%
 Gui, 24:Add, Radio, -Wrap Checked W90 vSet gIECmd R1, %c_Lang093%
 Gui, 24:Add, Radio, -Wrap x+0 W90 vGet gIECmd Disabled R1, %c_Lang094%
-Gui, 24:Add, Radio, -Wrap Group Checked ys+75 xs+10 W90 vMethod gIECmd Disabled R1, %c_Lang095%
+Gui, 24:Add, Radio, -Wrap Group Checked y+5 xs+10 W90 vMethod gIECmd Disabled R1, %c_Lang095%
 Gui, 24:Add, Radio, -Wrap x+0 W90 vProperty gIECmd Disabled R1, %c_Lang096%
-Gui, 24:Add, Text, Section ys+95 xs+12 W250 vValueT, %c_Lang056%:
-Gui, 24:Add, Edit, yp+20 xs W385 -Multi vValue
+Gui, 24:Add, Text, Section y+10 xs+12 W250 vValueT, %c_Lang056%:
+Gui, 24:Add, Edit, yp+20 xs W385 R2 vValue
 Gui, 24:Add, Text, y+10 W55, %c_Lang005%:
 Gui, 24:Add, DDL, yp-2 xp+60 W295 vIEWindows AltSubmit, %IEWindows%
 Gui, 24:Add, Button, -Wrap yp-1 x+5 W25 H25 hwndRefreshIEW vRefreshIEW gRefreshIEW
@@ -9317,7 +9317,7 @@ If Record
 	GoSub, b_Start
 }
 GoSub, RowCheck
-Menu, Tray, Icon, %DefaultIcon%, 1
+Try Menu, Tray, Icon, %DefaultIcon%, 1
 ToggleButtonIcon(OSPlay, TestRunIcon)
 return
 
@@ -9438,18 +9438,18 @@ return
 pb_MsgBox:
 	StringReplace, Step, Step, ``n, `n, All
 	StringReplace, Step, Step, ```,, `,, All
-	Menu, Tray, Icon, %ResDllPath%, 78
+	Try Menu, Tray, Icon, %ResDllPath%, 78
 	ChangeProgBarColor("Blue", "OSCProg", 28)
 	If (Action = "MsgBox")
 	{
 		MsgBox, % Par1, %Par2%, %Par3%, %Par4%
-		Menu, Tray, Icon, %ResDllPath%, 47
+		Try Menu, Tray, Icon, %ResDllPath%, 47
 		ChangeProgBarColor("20D000", "OSCProg", 28)
 	}
 	Else
 	{
 		MsgBox, % Target, %d_Lang023%, %Step%
-		Menu, Tray, Icon, %ResDllPath%, 47
+		Try Menu, Tray, Icon, %ResDllPath%, 47
 		ChangeProgBarColor("20D000", "OSCProg", 28)
 		IfMsgBox, OK
 			return
@@ -9478,13 +9478,13 @@ pb_Run:
 		Run, %Par1%, %Par2%, %Par3%
 return
 pb_RunWait:
-	Menu, Tray, Icon, %ResDllPath%, 78
+	Try Menu, Tray, Icon, %ResDllPath%, 78
 	ChangeProgBarColor("Blue", "OSCProg", 28)
 	If (Par4 <> "")
 		RunWait, %Par1%, %Par2%, %Par3%, %Par4%
 	Else
 		RunWait, %Par1%, %Par2%, %Par3%
-	Menu, Tray, Icon, %ResDllPath%, 47
+	Try Menu, Tray, Icon, %ResDllPath%, 47
 	ChangeProgBarColor("20D000", "OSCProg", 28)
 return
 pb_RunAs:
@@ -9729,10 +9729,10 @@ pb_SoundSetWaveVolume:
 	SoundSetWaveVolume, %Par1%, %Par2%
 return
 pb_ClipWait:
-	Menu, Tray, Icon, %ResDllPath%, 78
+	Try Menu, Tray, Icon, %ResDllPath%, 78
 	ChangeProgBarColor("Blue", "OSCProg", 28)
 	ClipWait, %Par1%, %Par2%
-	Menu, Tray, Icon, %ResDllPath%, 47
+	Try Menu, Tray, Icon, %ResDllPath%, 47
 	ChangeProgBarColor("20D000", "OSCProg", 28)
 return
 pb_BlockInput:
@@ -9758,10 +9758,10 @@ pb_StatusBarGetText:
 	StatusBarGetText, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%, %Par6%
 return
 pb_StatusBarWait:
-	Menu, Tray, Icon, %ResDllPath%, 78
+	Try Menu, Tray, Icon, %ResDllPath%, 78
 	ChangeProgBarColor("Blue", "OSCProg", 28)
 	StatusBarWait, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%, %Par6%
-	Menu, Tray, Icon, %ResDllPath%, 47
+	Try Menu, Tray, Icon, %ResDllPath%, 47
 	ChangeProgBarColor("20D000", "OSCProg", 28)
 return
 pb_Clipboard:
@@ -9820,13 +9820,13 @@ pb_PostMessage:
 	PostMessage, %Par1%, %Par2%, %Par3%, %Target%, % Win[1], % Win[2], % Win[3], % Win[4]
 return
 pb_KeyWait:
-	Menu, Tray, Icon, %ResDllPath%, 78
+	Try Menu, Tray, Icon, %ResDllPath%, 78
 	ChangeProgBarColor("Blue", "OSCProg", 28)
 	If (Action = "KeyWait")
 		KeyWait, %Par1%, %Par2%
 	Else
 		WaitFor.Key(Step, DelayX / 1000)
-	Menu, Tray, Icon, %ResDllPath%, 47
+	Try Menu, Tray, Icon, %ResDllPath%, 47
 	ChangeProgBarColor("20D000", "OSCProg", 28)
 return
 pb_Input:
@@ -9907,31 +9907,31 @@ pb_WinSetTitle:
 	WinSetTitle, % Win[1], % Win[2], % Win[3], % Win[4], % Win[5]
 return
 pb_WinWait:
-	Menu, Tray, Icon, %ResDllPath%, 78
+	Try Menu, Tray, Icon, %ResDllPath%, 78
 	ChangeProgBarColor("Blue", "OSCProg", 28)
 ,	WaitFor.WinExist(SplitWin(Window), Step)
-	Menu, Tray, Icon, %ResDllPath%, 47
+	Try Menu, Tray, Icon, %ResDllPath%, 47
 	ChangeProgBarColor("20D000", "OSCProg", 28)
 return
 pb_WinWaitActive:
-	Menu, Tray, Icon, %ResDllPath%, 78
+	Try Menu, Tray, Icon, %ResDllPath%, 78
 	ChangeProgBarColor("Blue", "OSCProg", 28)
 ,	WaitFor.WinActive(SplitWin(Window), Step)
-	Menu, Tray, Icon, %ResDllPath%, 47
+	Try Menu, Tray, Icon, %ResDllPath%, 47
 	ChangeProgBarColor("20D000", "OSCProg", 28)
 return
 pb_WinWaitNotActive:
-	Menu, Tray, Icon, %ResDllPath%, 78
+	Try Menu, Tray, Icon, %ResDllPath%, 78
 	ChangeProgBarColor("Blue", "OSCProg", 28)
 ,	WaitFor.WinNotActive(SplitWin(Window), Step)
-	Menu, Tray, Icon, %ResDllPath%, 47
+	Try Menu, Tray, Icon, %ResDllPath%, 47
 	ChangeProgBarColor("20D000", "OSCProg", 28)
 return
 pb_WinWaitClose:
-	Menu, Tray, Icon, %ResDllPath%, 78
+	Try Menu, Tray, Icon, %ResDllPath%, 78
 	ChangeProgBarColor("Blue", "OSCProg", 28)
 ,	WaitFor.WinClose(SplitWin(Window), Step)
-	Menu, Tray, Icon, %ResDllPath%, 47
+	Try Menu, Tray, Icon, %ResDllPath%, 47
 	ChangeProgBarColor("20D000", "OSCProg", 28)
 return
 pb_WinGet:
