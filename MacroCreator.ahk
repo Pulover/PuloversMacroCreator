@@ -7739,7 +7739,7 @@ return
 
 PasteRows:
 Gui, chMacro:Default
-If CopyRows.Paste()
+If CopyRows.Paste(, True)
 {
 	GoSub, b_Start
 	GoSub, RowCheck

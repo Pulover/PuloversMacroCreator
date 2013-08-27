@@ -138,10 +138,11 @@ Class LV_Rows
 ;    Function:           LV_Rows.Paste()
 ;    Description:        Paste copied rows at selected position.
 ;    Parameters:
-;        Row:            If non-zero pastes memory contents into the specified row.
+;        Row:            If non-zero pastes memory contents at the specified row.
+;        Multiline:      If True pastes the contents at every selected row.
 ;    Return:             True if memory contains data or False if not.
 ;=======================================================================================
-    Paste(Row=0)
+    Paste(Row=0, MultiLine=True)
     {
         If !this.CopyData.MaxIndex()
             return False
@@ -153,9 +154,25 @@ Class LV_Rows
         }
         Else
         {
-            LV_Row := TargetRow - 1
-            For each, Row in this.CopyData
-                LV_Insert(LV_Row+A_Index, Row*)
+			If (MultiLine)
+			{
+				LV_Row := 0
+				Loop
+				{
+					LV_Row := LV_GetNext(LV_Row - 1)
+					If !LV_Row
+						break
+					For each, Row in this.CopyData
+						LV_Insert(LV_Row, Row*), LV_Row += 1
+					LV_Row += 1
+				}
+			}
+			Else
+			{
+				LV_Row := TargetRow - 1
+				For each, Row in this.CopyData
+					LV_Insert(LV_Row+A_Index, Row*)
+			}
         }
         return True
     }
