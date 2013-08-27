@@ -579,7 +579,7 @@ Gui, +Theme
 Gui, Add, Custom, ClassReBarWindow32 hwndhRbMacro vcRbMacro gRB_Notify xm-10 ym+76 -Theme 0x0800 0x0400 0x0040 0x8000 0x0008 ; 0x0004
 Gui, Add, Hotkey, hwndhAutoKey vAutoKey gSaveData, % o_AutoKey[1]
 Gui, Add, ListBox, hwndhJoyKey vJoyKey r1 ReadOnly Hidden
-SendMessage, 0x01A0, 0, 22,, ahk_id %hJoyKey%
+; SendMessage, 0x01A0, 0, 22,, ahk_id %hJoyKey%
 Gui, Add, Hotkey, hwndhManKey vManKey gWaitKeys Limit190, % o_ManKey[1]
 Gui, Add, Hotkey, hwndhAbortKey vAbortKey, %AbortKey%
 Gui, Add, Hotkey, hwndhPauseKey vPauseKey, %PauseKey%
@@ -739,12 +739,12 @@ DefineToolbars:
 ,	TB_Edit(TbOSC, "ProgBarToggle", ShowProgBar)
 ,	RbMain := New Rebar(hRbMain)
 ,	TB_Rebar(RbMain, 1, TbFile), TB_Rebar(RbMain, 2, TbRecPlay), TB_Rebar(RbMain, 3, TbSettings)
-,	RbMain.InsertBand(hAutoKey, 0, "", 4, w_Lang006, 50, 0, "", "", 50)
-,	RbMain.InsertBand(hTimesCh, 0, "FixedSize NoGripper", 11, w_Lang011 " (" t_Lang004 ")", 75, 0, "", "", 75)
+,	RbMain.InsertBand(hAutoKey, 0, "", 4, w_Lang006, 50, 0, "", 22, 50)
+,	RbMain.InsertBand(hTimesCh, 0, "FixedSize NoGripper", 11, w_Lang011 " (" t_Lang004 ")", 75, 0, "", 20, 75)
 ,	TB_Rebar(RbMain, 5, TbCommand, "Break")
-,	RbMain.InsertBand(hManKey, 0, "", 6, w_Lang007, 50, 0, "", "", 50)
-,	RbMain.InsertBand(hAbortKey, 0, "", 7, w_Lang008, 60, 0, "", "", 50)
-,	RbMain.InsertBand(hPauseKey, 0, "", 8, c_Lang003, 60, 0, "", "", 50)
+,	RbMain.InsertBand(hManKey, 0, "", 6, w_Lang007, 50, 0, "", 22, 50)
+,	RbMain.InsertBand(hAbortKey, 0, "", 7, w_Lang008, 60, 0, "", 22, 50)
+,	RbMain.InsertBand(hPauseKey, 0, "", 8, c_Lang003, 60, 0, "", 22, 50)
 ,	TB_Rebar(RbMain, 9, TbEdit, "Break"), RbMain.SetMaxRows(3)
 ,	TBHwndAll := [TbFile, TbRecPlay, TbSettings, TbCommand, TbEdit, TbPrev, TbPrevF, TbOSC]
 ,	RBIndexTB := [1, 2, 3, 5, 9], RBIndexHK := [4, 6, 7, 8]
@@ -848,7 +848,7 @@ return
 BuildMixedControls:
 Gui, chTimes:+LastFound
 Gui, chTimes:+hwndhTimesCh -Caption +Parent1
-Gui, chTimes:Add, Edit, x0 y0 W75 H25 Number vReptC
+Gui, chTimes:Add, Edit, x0 y0 W75 H22 Number vReptC
 Gui, chTimes:Add, UpDown, vTimesG 0x80 Range0-999999999, 1
 return
 
