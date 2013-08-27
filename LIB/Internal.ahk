@@ -312,7 +312,7 @@ ListIEWindows()
 	{
 		For Pwb in ComObjCreate( "Shell.Application" ).Windows
 			If InStr(Pwb.FullName, "iexplore.exe")
-				Try List .= Pwb.Document.Title "|"
+				Try List .= RegExReplace(Pwb.Document.Title, "\|", "§") "|"
 	}
 	return List
 }

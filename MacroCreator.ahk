@@ -3469,7 +3469,7 @@ Else
 		o_ie := ""
 	Else
 	{
-		o_ie := IEGet(SelIEWinName)
+		o_ie := IEGet(RegExReplace(SelIEWinName, "§", "|"))
 		DetectHiddenWindows, On
 		WinActivate, %SelIEWinName%
 		DetectHiddenWindows, Off
@@ -6560,11 +6560,11 @@ If (s_Caller = "Edit")
 			GuiControl, 24:ChooseString, IECmd, %IECmd%
 		Else
 			GuiControl, 24:, IECmd, %IECmd%||
-		GoSub, IECmd
 		GuiControl, 24:ChooseString, Ident, %Ident%
 		GuiControl, 24:, DefEl, %DefEl%
 		GuiControl, 24:, DefElInd, %DefElInd%
 		GuiControl, 24:, Value, %Details%
+		GoSub, IECmd
 		GuiTitle := c_Lang012
 	}
 	If (Window = "LoadWait")
@@ -6668,7 +6668,7 @@ SelIEWin := IEWindows
 If (SelIEWinName = "[blank]")
 	o_ie := ""
 Else
-	o_ie := IEGet(SelIEWinName)
+	o_ie := IEGet(RegExReplace(SelIEWinName, "§", "|"))
 If (A_ThisLabel <> "IEComApply")
 {
 	Gui, 1:-Disabled
@@ -7951,16 +7951,17 @@ Gui, chMacro:Default
 RowSelection := LV_GetCount("Selected")
 If RowSelection = 0
 	return
-RowNumber := 0
+RowNumber := 0, SelectedRows := ""
 Loop, % RowSelection
 {
 	RowNumber := LV_GetNext(RowNumber)
-,	LV_Modify(RowNumber, "-Select")
-	If (LV_GetNext(RowNumber+1) <> (RowNumber+1))
-	{
-		LV_Modify(RowNumber+1, "Select")
-		RowNumber++
-	}
+,	SelectedRows := RowNumber "|" SelectedRows
+}
+SelectedRows := RTrim(SelectedRows, "|")
+Loop, Parse, SelectedRows, |
+{
+	LV_Modify(A_LoopField+1, "Select")
+,	LV_Modify(A_LoopField, "-Select")
 }
 return
 
@@ -9650,7 +9651,6 @@ pb_StringReplace:
 	StringReplace, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%
 return
 pb_StringSplit:
-	OutputDebug, % %Par2%
 	StringSplit, %Par1%, %Par2%, %Par3%, %Par4%
 return
 pb_StringTrimLeft:
