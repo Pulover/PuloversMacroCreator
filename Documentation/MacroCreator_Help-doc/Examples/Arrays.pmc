@@ -13,10 +13,13 @@
 12|[Pause]|% N[4]|1|0|MsgBox|262209||||
 13|[Assign Variable]|Y := N[4] + N[6]|1|0|Variable|Expression||||
 14|[Pause]|%Y%|1|0|MsgBox|262209||||
-15|[Assign Variable]|Parameters := 3`,2`,1|1|0|Variable|||||
-16|StrSplit|Array := %String%, ¢|1|0|Variable|||||
-17|[LoopStart]|Parameters`, ``,`, |1|0|LoopParse|||||
-18|[Assign Variable]|ArO := N[A_LoopField]|1|0|Variable|Expression||||
-19|[Pause]|Loop: %A_Index%`nArray[%A_LoopField%]: %ArO%|1|0|MsgBox|262209||||
-20|[LoopEnd]|LoopEnd|1|0|Loop|||||
+
+[PMC Code]|F3||1|Window|1
+1|[Assign Variable]|String := A¢B¢C¢D¢E|1|0|Variable|||||
+2|[Assign Variable]|Parameters := 5`,4`,3`,2`,1|1|0|Variable|||||
+3|StrSplit|Array := %String%, ¢|1|0|Variable|||||
+4|[LoopStart]|Parameters`, ``,`, |1|0|LoopParse|||||
+5|[Assign Variable]|ArO := Array[A_LoopField]|1|0|Variable|Expression||||
+6|[Pause]|Loop: %A_Index%`nArray[%A_LoopField%]: %ArO%|1|0|MsgBox|262209||||
+7|[LoopEnd]|LoopEnd|1|0|Loop|||||
 
