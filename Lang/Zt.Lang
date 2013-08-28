@@ -143,7 +143,7 @@
 	w_Lang003 =	選項
 	w_Lang004 =	記錄
 	w_Lang005 =	玩
-	w_Lang006 =	運行
+	w_Lang006 =	播放
 	w_Lang007 =	手冊
 	w_Lang008 =	停止
 	w_Lang009 =	顯示控制工具欄
@@ -205,10 +205,10 @@
 	w_Lang065 =	功能（按Ctrl+F10）
 	w_Lang066 =	IE瀏覽器（F11）
 	w_Lang067 =	 COM接口（SHIFT+F11）
-	w_Lang068 =	
+	w_Lang068 =	運行的scriptlet（按Ctrl+ F11）
 	w_Lang069 =	Windows消息（F12）
-	w_Lang070 =	作為改性劑添加Windows鍵
-	w_Lang071 =	搖桿
+	w_Lang070 =	Windows鍵添加到“運行”熱鍵
+	w_Lang071 =	使用操縱桿按鈕，熱鍵
 	w_Lang072 =	添加宏（按Ctrl+T）
 	w_Lang073 =	關閉宏（按Ctrl+W）
 	w_Lang074 =	重複宏（按Ctrl+Shift+D）
@@ -494,7 +494,7 @@
 	t_Lang095 =	輸入每行1個變量。您還可以添加[第]。
 	t_Lang096 =	用戶全局變量
 	t_Lang097 =	按下操縱桿上的按鈕
-	t_Lang098 =	搖桿
+	t_Lang098 =	Backspace鍵來清除
 	t_Lang099 =	鈕
 	t_Lang100 =	顯示氣球提示
 	t_Lang101 =	速度
@@ -727,10 +727,10 @@
 	IfStB_TT =	如果報表附註（F10）/變量（按Shift+F10）/功能（按Ctrl+F10）
 	IEComB_TT =	IE瀏覽器（F11）/ COM接口（SHIFT+F11）
 	SendMsgB_TT =	Windows消息（F12）
-	AutoKey_TT =	Backspace鍵來清除
-	ManKey_TT =	Backspace鍵來清除
-	AbortKey_TT =	Backspace鍵來清除
-	PauseKey_TT =	Backspace鍵來清除
+	AutoKey_TT =	熱鍵玩宏
+	ManKey_TT =	熱鍵玩宏“一步一步”
+	AbortKey_TT =	熱鍵停止播放
+	PauseKey_TT =	熱鍵暫停播放
 	RecKey_TT =	Backspace鍵來清除
 	RecNewKey_TT =	Backspace鍵來清除
 	JoyKey_TT =	按下操縱桿上的按鈕

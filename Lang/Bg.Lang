@@ -143,7 +143,7 @@
 	w_Lang003 =	Опции
 	w_Lang004 =	Рекорд
 	w_Lang005 =	Играя
-	w_Lang006 =	Тичам
+	w_Lang006 =	Възпроизвеждане
 	w_Lang007 =	Наръчник
 	w_Lang008 =	Спиране
 	w_Lang009 =	Показване на контролите лентата с инструменти
@@ -207,8 +207,8 @@
 	w_Lang067 =	COM Interface (Shift+F11)
 	w_Lang068 =	Тичане Scriptlet (Ctrl+F11)
 	w_Lang069 =	Windows Съобщения (F12)
-	w_Lang070 =	Добавяне на клавиша Windows както модификатор
-	w_Lang071 =	Joystick
+	w_Lang070 =	Добави клавиша Windows на "Run" клавишна комбинация
+	w_Lang071 =	Използвайте джойстика бутон като клавиш
 	w_Lang072 =	Добави Macro (Ctrl+T)
 	w_Lang073 =	Затвори Macro (Ctrl+W)
 	w_Lang074 =	Дублиране на Macro (Ctrl+Shift+D)
@@ -494,7 +494,7 @@
 	t_Lang095 =	Въведете една променлива на ред. Можете също така да добавите [разделите].
 	t_Lang096 =	Потребителски Глобални Променливи
 	t_Lang097 =	Натиснете бутон на джойстика
-	t_Lang098 =	Joystick
+	t_Lang098 =	Backspace, за да изчистите
 	t_Lang099 =	Бутон
 	t_Lang100 =	Показване на балон съвети
 	t_Lang101 =	Скорост
@@ -727,10 +727,10 @@
 	IfStB_TT =	Ако отчети (F10) / променливи (Shift+F10) / Функции (Ctrl+F10)
 	IEComB_TT =	Internet Explorer (F11) / COM Interface (Shift+F11) / Тичане Scriptlet (Ctrl+F11)
 	SendMsgB_TT =	Windows Съобщения (F12)
-	AutoKey_TT =	Backspace, за да изчистите
-	ManKey_TT =	Backspace, за да изчистите
-	AbortKey_TT =	Backspace, за да изчистите
-	PauseKey_TT =	Backspace, за да изчистите
+	AutoKey_TT =	Hotkey да играе Macro
+	ManKey_TT =	Hotkey да играе Macro "стъпка по стъпка"
+	AbortKey_TT =	Hotkey за да спрете възпроизвеждането
+	PauseKey_TT =	Hotkey за пауза
 	RecKey_TT =	Backspace, за да изчистите
 	RecNewKey_TT =	Backspace, за да изчистите
 	JoyKey_TT =	Натиснете бутон на джойстика

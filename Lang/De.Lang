@@ -143,7 +143,7 @@
 	w_Lang003 =	Optionen
 	w_Lang004 =	Aufn.
 	w_Lang005 =	Wiederg.
-	w_Lang006 =	Führen
+	w_Lang006 =	Wiedergabe
 	w_Lang007 =	Handbuch
 	w_Lang008 =	Stopp
 	w_Lang009 =	Display-Steuerelemente Symbolleiste
@@ -207,8 +207,8 @@
 	w_Lang067 =	COM-Schnittstelle (Umschalt+F11)
 	w_Lang068 =	Scriptlet ausführen (Strg+F11)
 	w_Lang069 =	Windows-Messages (F12)
-	w_Lang070 =	Windows-Taste als Modifizierer einfügen
-	w_Lang071 =	Joystick
+	w_Lang070 =	Windows-Taste auf "Run" Hotkey fügen
+	w_Lang071 =	Joystick-Taste als Hotkey verwenden
 	w_Lang072 =	Makro hinzufügen (Strg+T)
 	w_Lang073 =	Makro schließen (Strg+W)
 	w_Lang074 =	Makro duplizieren (Strg+Umschalt+D)
@@ -494,7 +494,7 @@
 	t_Lang095 =	Eine Variable pro Zeile eingeben. Sie können auch [Abschnitte] hinzufügen.
 	t_Lang096 =	Globale Benutzer-Variablen
 	t_Lang097 =	Drücken Sie eine Taste auf dem Joystick
-	t_Lang098 =	Joystick
+	t_Lang098 =	Rückschritttaste zum Löschen
 	t_Lang099 =	Taste
 	t_Lang100 =	Ballon-Tipps anzeigen
 	t_Lang101 =	Geschwindigkeit
@@ -727,10 +727,10 @@
 	IfStB_TT =	If Anweisungen (F10)/Variablen (Umschalt+F10)/Funktionen (Strg+F10)
 	IEComB_TT =	Internet Explorer (F11)/COM-Schnittstelle (Umschalt+F11)/Scriptlet ausführen (Strg+F11)
 	SendMsgB_TT =	Windows-Messages (F12)
-	AutoKey_TT =	Rückschritttaste zum Löschen
-	ManKey_TT =	Rückschritttaste zum Löschen
-	AbortKey_TT =	Rückschritttaste zum Löschen
-	PauseKey_TT =	Rückschritttaste zum Löschen
+	AutoKey_TT =	Hotkey auf Makro spielen
+	ManKey_TT =	Hotkey zu spielen Macro "Schritt-für-Schritt"
+	AbortKey_TT =	Hotkey zum Stoppen der Wiedergabe
+	PauseKey_TT =	Hotkey zum Anhalten der Wiedergabe
 	RecKey_TT =	Rückschritttaste zum Löschen
 	RecNewKey_TT =	Rückschritttaste zum Löschen
 	JoyKey_TT =	Drücken Sie eine Taste auf dem Joystick

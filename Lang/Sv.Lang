@@ -143,7 +143,7 @@
 	w_Lang003 =	Alternativ
 	w_Lang004 =	Rekord
 	w_Lang005 =	Spela
-	w_Lang006 =	Kör
+	w_Lang006 =	Uppspelning
 	w_Lang007 =	Manuell
 	w_Lang008 =	Stopp
 	w_Lang009 =	Display kontroller verktygsfältet
@@ -207,8 +207,8 @@
 	w_Lang067 =	COM-gränssnitt (Skift+F11)
 	w_Lang068 =	Kör Skriptlet (Ctrl+F11)
 	w_Lang069 =	Windows-meddelanden (F12)
-	w_Lang070 =	Lägg till Windows-tangenten som modifierare
-	w_Lang071 =	Joystick
+	w_Lang070 =	Lägg den Windows-tangenten till "Kör" hotkey
+	w_Lang071 =	Använd en joystick knapp som hotkey
 	w_Lang072 =	Lägg Makro (Ctrl+T)
 	w_Lang073 =	Stäng Makro (Ctrl+W)
 	w_Lang074 =	Duplicera makro (Ctrl+Skift+D)
@@ -494,7 +494,7 @@
 	t_Lang095 =	Skriv en variabel per linje. Du kan också lägga till [avsnitt].
 	t_Lang096 =	Användaren Globala Variabler
 	t_Lang097 =	Tryck på en knapp på joysticken
-	t_Lang098 =	Joystick
+	t_Lang098 =	Backstag för att radera
 	t_Lang099 =	Knapp
 	t_Lang100 =	Visa tipsbubblor
 	t_Lang101 =	Hastighet
@@ -727,10 +727,10 @@
 	IfStB_TT =	Om rapporter (F10) / variabler (Shift+F10) / Funktioner (Ctrl+F10)
 	IEComB_TT =	Internet Explorer (F11) / COM-gränssnitt (Skift+F11) / Kör Skriptlet (Ctrl+F11)
 	SendMsgB_TT =	Windows-meddelanden (F12)
-	AutoKey_TT =	Backstag för att radera
-	ManKey_TT =	Backsteg för att radera
-	AbortKey_TT =	Backsteg för att radera
-	PauseKey_TT =	Backsteg för att radera
+	AutoKey_TT =	Snabbknappen till spela Makro
+	ManKey_TT =	Snabbknappen till spela Macro "steg-för-steg"
+	AbortKey_TT =	Hotkey för att stoppa uppspelningen
+	PauseKey_TT =	Hotkey för att pausa uppspelningen
 	RecKey_TT =	Backsteg för att radera
 	RecNewKey_TT =	Backsteg för att radera
 	JoyKey_TT =	Tryck på en knapp på joysticken

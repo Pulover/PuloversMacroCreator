@@ -143,7 +143,7 @@
 	w_Lang003 =	Pilihan
 	w_Lang004 =	Catatan
 	w_Lang005 =	Bermain
-	w_Lang006 =	Menjalankan
+	w_Lang006 =	Pemutaran
 	w_Lang007 =	Pedoman
 	w_Lang008 =	Berhenti
 	w_Lang009 =	Menampilkan kontrol toolbar
@@ -207,8 +207,8 @@
 	w_Lang067 =	COM Interface (Shift+F11)
 	w_Lang068 =	Run Scriptlet (Ctrl+F11)
 	w_Lang069 =	Jendela Messages (F12)
-	w_Lang070 =	Tambahkan tombol Windows sebagai pengubah
-	w_Lang071 =	Joystick
+	w_Lang070 =	Tambahkan tombol Windows untuk "Run" hotkey
+	w_Lang071 =	Gunakan tombol joystick sebagai hotkey
 	w_Lang072 =	Tambahkan Makro (Ctrl+T)
 	w_Lang073 =	Tutup Makro (Ctrl+W)
 	w_Lang074 =	Gandakan Makro (Ctrl+Shift+D)
@@ -494,7 +494,7 @@
 	t_Lang095 =	Masukkan 1 variabel per baris. Anda juga bisa menambahkan [Bagian].
 	t_Lang096 =	Pengguna global Variabel
 	t_Lang097 =	Tekan tombol pada joystick
-	t_Lang098 =	Joystick
+	t_Lang098 =	Backspace untuk menghapus
 	t_Lang099 =	Tombol
 	t_Lang100 =	Menampilkan tips balon
 	t_Lang101 =	Mempercepat
@@ -727,10 +727,10 @@
 	IfStB_TT =	Jika Laporan (F10) / Variabel (Shift+F10) / Fungsi (Ctrl+F10)
 	IEComB_TT =	Internet Explorer (F11) / COM Interface (Shift+F11) / Run Scriptlet (Ctrl+F11)
 	SendMsgB_TT =	Jendela Messages (F12)
-	AutoKey_TT =	Backspace untuk menghapus
-	ManKey_TT =	Backspace untuk menghapus
-	AbortKey_TT =	Backspace untuk menghapus
-	PauseKey_TT =	Backspace untuk menghapus
+	AutoKey_TT =	Hotkey untuk bermain Makro
+	ManKey_TT =	Hotkey untuk bermain Makro "langkah-demi-langkah"
+	AbortKey_TT =	Hotkey untuk menghentikan pemutaran
+	PauseKey_TT =	Hotkey untuk menjeda pemutaran
 	RecKey_TT =	Backspace untuk menghapus
 	RecNewKey_TT =	Backspace untuk menghapus
 	JoyKey_TT =	Tekan tombol pada joystick

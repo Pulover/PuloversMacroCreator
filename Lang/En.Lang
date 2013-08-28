@@ -143,7 +143,7 @@
 	w_Lang003 =	Options
 	w_Lang004 =	Record
 	w_Lang005 =	Play
-	w_Lang006 =	Run
+	w_Lang006 =	Playback
 	w_Lang007 =	Manual
 	w_Lang008 =	Stop
 	w_Lang009 =	Display controls toolbar
@@ -207,8 +207,8 @@
 	w_Lang067 =	COM Interface (Shift+F11)
 	w_Lang068 =	Run Scriptlet (Ctrl+F11)
 	w_Lang069 =	Windows Messages (F12)
-	w_Lang070 =	Add the Windows key as modifier
-	w_Lang071 =	Joystick
+	w_Lang070 =	Add the Windows key to "Run" hotkey
+	w_Lang071 =	Use a joystick button as hotkey
 	w_Lang072 =	Add Macro (Ctrl+T)
 	w_Lang073 =	Close Macro (Ctrl+W)
 	w_Lang074 =	Duplicate Macro (Ctrl+Shift+D)
@@ -494,7 +494,7 @@
 	t_Lang095 =	Enter 1 variable per line. You may also add [Sections].
 	t_Lang096 =	User Global Variables
 	t_Lang097 =	Press a button on the joystick
-	t_Lang098 =	Joystick
+	t_Lang098 =	Backspace to clear
 	t_Lang099 =	Button
 	t_Lang100 =	Display balloon tips
 	t_Lang101 =	Speed
@@ -727,10 +727,10 @@
 	IfStB_TT =	If Statements (F10) / Variables (Shift+F10) / Functions (Ctrl+F10)
 	IEComB_TT =	Internet Explorer (F11) / COM Interface (Shift+F11) / Run Scriptlet (Ctrl+F11)
 	SendMsgB_TT =	Windows Messages (F12)
-	AutoKey_TT =	Backspace to clear
-	ManKey_TT =	Backspace to clear
-	AbortKey_TT =	Backspace to clear
-	PauseKey_TT =	Backspace to clear
+	AutoKey_TT =	Hotkey to play Macro
+	ManKey_TT =	Hotkey to play Macro "step-by-step"
+	AbortKey_TT =	Hotkey to stop playback
+	PauseKey_TT =	Hotkey to pause playback
 	RecKey_TT =	Backspace to clear
 	RecNewKey_TT =	Backspace to clear
 	JoyKey_TT =	Press a button on the joystick

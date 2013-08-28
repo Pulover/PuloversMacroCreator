@@ -609,6 +609,10 @@ Gui, Add, Text, W2 H25 ys-3 x+5 0x11 vSeparator4
 Gui, Add, Text, -Wrap ys x+5 W100 vCoordTip gOptions, CoordMode: %CoordMouse%
 GuiControl,, WinKey, % (InStr(o_AutoKey[1], "#")) ? 1 : 0
 Gui, Submit
+If (MainWinSize = "W H")
+	MainWinSize := "W900 H630"
+If (MainWinPos = "X Y")
+	MainWinPos := "Center"
 Gui, Show, %MainWinSize% %MainWinPos% Hide
 GoSub, b_Start
 GoSub, DefineControls
@@ -741,7 +745,7 @@ DefineToolbars:
 ,	TB_Edit(TbOSC, "ProgBarToggle", ShowProgBar)
 ,	RbMain := New Rebar(hRbMain)
 ,	TB_Rebar(RbMain, 1, TbFile), TB_Rebar(RbMain, 2, TbRecPlay), TB_Rebar(RbMain, 3, TbSettings)
-,	RbMain.InsertBand(hAutoKey, 0, "", 4, w_Lang006, 50, 0, "", 22, 50)
+,	RbMain.InsertBand(hAutoKey, 0, "", 4, w_Lang005, 50, 0, "", 22, 50)
 ,	RbMain.InsertBand(hTimesCh, 0, "FixedSize NoGripper", 11, w_Lang011 " (" t_Lang004 ")", 75, 0, "", 20, 75)
 ,	TB_Rebar(RbMain, 5, TbCommand, "Break")
 ,	RbMain.InsertBand(hManKey, 0, "", 6, w_Lang007, 50, 0, "", 22, 50)
@@ -7882,6 +7886,7 @@ return
 
 LoadData:
 Gui, 1:Default
+OutputDebug, % A_List "|" o_AutoKey[A_List]
 If InStr(o_AutoKey[A_List], "Joy")
 {
 	TB_Edit(TbSettings, "SetJoyButton", JoyHK := 1)
@@ -11452,7 +11457,7 @@ Gui, chMacro:ListView, InputList%A_List%
 GuiControl, 1:, Repeat, %w_Lang015%:
 GuiControl, 1:, DelayT, %w_Lang016%
 GuiControl, 1:-Redraw, cRbMain
-RbMain.ModifyBand(RbMain.IDToIndex(4), "Text", w_Lang006)
+RbMain.ModifyBand(RbMain.IDToIndex(4), "Text", w_Lang005)
 , RbMain.ModifyBand(RbMain.IDToIndex(11), "Text", w_Lang011 " (" t_Lang004 ")")
 , RbMain.ModifyBand(RbMain.IDToIndex(6), "Text", w_Lang007)
 , RbMain.ModifyBand(RbMain.IDToIndex(7), "Text", w_Lang008)

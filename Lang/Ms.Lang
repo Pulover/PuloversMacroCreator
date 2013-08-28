@@ -143,7 +143,7 @@
 	w_Lang003 =	Pilihan
 	w_Lang004 =	Rekod
 	w_Lang005 =	Main
-	w_Lang006 =	Main
+	w_Lang006 =	Main semula
 	w_Lang007 =	Manual
 	w_Lang008 =	Hentikan
 	w_Lang009 =	Memaparkan kawalan toolbar
@@ -207,8 +207,8 @@
 	w_Lang067 =	COM Muka (Shift+F11)
 	w_Lang068 =	Run Scriptlet (Ctrl+F11)
 	w_Lang069 =	Mesej Windows (F12)
-	w_Lang070 =	Tambah kekunci Windows sebagai pengubahsuai
-	w_Lang071 =	Joystick
+	w_Lang070 =	Tambah utama Windows untuk "Run" hotkey
+	w_Lang071 =	Gunakan butang joystick sebagai hotkey
 	w_Lang072 =	Tambah Macro (Ctrl+T)
 	w_Lang073 =	Tutup Macro (Ctrl+W)
 	w_Lang074 =	Gandakan Macro (Ctrl+Shift+D)
@@ -494,7 +494,7 @@
 	t_Lang095 =	Masukkan 1 ubah setiap baris. Anda juga boleh menambah [Seksyen].
 	t_Lang096 =	Pengguna Pembolehubah Global
 	t_Lang097 =	Tekan butang pada kayu bedik
-	t_Lang098 =	Joystick
+	t_Lang098 =	Backspace untuk membersihkan
 	t_Lang099 =	Button
 	t_Lang100 =	Memaparkan tips belon
 	t_Lang101 =	Mempercepatkan
@@ -727,10 +727,10 @@
 	IfStB_TT =	Jika Penyata (F10) / Pembolehubah (Shift+F10) / Fungsi (Ctrl+F10)
 	IEComB_TT =	Internet Explorer (F11) / COM Muka (Shift+F11) / Run Scriptlet (Ctrl+F11)
 	SendMsgB_TT =	Mesej Windows (F12)
-	AutoKey_TT =	Backspace untuk membersihkan
-	ManKey_TT =	Backspace untuk membersihkan
-	AbortKey_TT =	Backspace untuk membersihkan
-	PauseKey_TT =	Backspace untuk membersihkan
+	AutoKey_TT =	Hotkey bermain Makro
+	ManKey_TT =	Hotkey bermain Macro "langkah demi langkah"
+	AbortKey_TT =	Hotkey untuk menghentikan main balik
+	PauseKey_TT =	Hotkey untuk menjeda main semula
 	RecKey_TT =	Backspace untuk membersihkan
 	RecNewKey_TT =	Backspace untuk membersihkan
 	JoyKey_TT =	Tekan butang pada kayu bedik

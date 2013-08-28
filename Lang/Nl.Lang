@@ -143,7 +143,7 @@
 	w_Lang003 =	Opties
 	w_Lang004 =	Record
 	w_Lang005 =	Spelen
-	w_Lang006 =	Lopen
+	w_Lang006 =	Afspelen
 	w_Lang007 =	Handleiding
 	w_Lang008 =	Stoppen
 	w_Lang009 =	Weer controles werkbalk
@@ -207,8 +207,8 @@
 	w_Lang067 =	COM-interface (Shift+F11)
 	w_Lang068 =	Run Scriptlet (Ctrl+F11)
 	w_Lang069 =	Windows Messages (F12)
-	w_Lang070 =	Voeg de Windows-toets als modifier
-	w_Lang071 =	Bedieningshendel
+	w_Lang070 =	Voeg de Windows-toets om "Run" sneltoets
+	w_Lang071 =	Gebruik een joystick knop als sneltoets
 	w_Lang072 =	Voeg Macro (Ctrl+T)
 	w_Lang073 =	Sluiten Macro (Ctrl+W)
 	w_Lang074 =	Dubbele Macro (Ctrl+Shift+D)
@@ -494,7 +494,7 @@
 	t_Lang095 =	Voer 1 variabele per regel. U kunt ook [secties] toe te voegen.
 	t_Lang096 =	Gebruiker Globale Variabelen
 	t_Lang097 =	Druk op een knop op de joystick
-	t_Lang098 =	Bedieningshendel
+	t_Lang098 =	Backspace om te wissen
 	t_Lang099 =	Knop
 	t_Lang100 =	Weer ballontips
 	t_Lang101 =	Snelheid
@@ -727,10 +727,10 @@
 	IfStB_TT =	Als Verklaringen (F10) / Variabelen (Shift+F10) / Functies (Ctrl+F10)
 	IEComB_TT =	Internet Explorer (F11) / COM-interface (Shift+F11) / Run Scriptlet (Ctrl+F11)
 	SendMsgB_TT =	Windows Messages (F12)
-	AutoKey_TT =	Backspace om te wissen
-	ManKey_TT =	Backspace om te wissen
-	AbortKey_TT =	Backspace om te wissen
-	PauseKey_TT =	Backspace om te wissen
+	AutoKey_TT =	Sneltoets om Macro te spelen
+	ManKey_TT =	Sneltoets naar macro "stap-voor-stap" play
+	AbortKey_TT =	Sneltoets om het afspelen te stoppen
+	PauseKey_TT =	Sneltoets om het afspelen te pauzeren
 	RecKey_TT =	Backspace om te wissen
 	RecNewKey_TT =	Backspace om te wissen
 	JoyKey_TT =	Druk op een knop op de joystick

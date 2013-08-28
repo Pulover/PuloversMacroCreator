@@ -143,7 +143,7 @@
 	w_Lang003 =	Tùy chọn
 	w_Lang004 =	Ghi
 	w_Lang005 =	Chơi
-	w_Lang006 =	Chạy
+	w_Lang006 =	Phát lại
 	w_Lang007 =	Hướng Dẫn Sử Dụng
 	w_Lang008 =	Thôi
 	w_Lang009 =	Điều khiển hiển thị thanh công cụ
@@ -207,8 +207,8 @@
 	w_Lang067 =	COM giao diện (Shift + F11)
 	w_Lang068 =	Chạy Scriptlet (Ctrl + F11)
 	w_Lang069 =	Tin nhắn cửa sổ (F12)
-	w_Lang070 =	Thêm phím Windows như sửa đổi
-	w_Lang071 =	Phím điều khiển
+	w_Lang070 =	Thêm phím Windows để "chạy" phím nóng
+	w_Lang071 =	Sử dụng nút điều khiển như phím nóng
 	w_Lang072 =	Thêm vĩ mô (Ctrl + T)
 	w_Lang073 =	Gần vĩ mô (Ctrl + W)
 	w_Lang074 =	Bản sao vĩ mô (Ctrl + Shift + D)
@@ -494,7 +494,7 @@
 	t_Lang095 =	Nhập 1 biến trên mỗi dòng. Bạn cũng có thể thêm [Phần].
 	t_Lang096 =	Người sử dụng biến toàn cầu
 	t_Lang097 =	Nhấn một nút trên điều khiển
-	t_Lang098 =	Phím điều khiển
+	t_Lang098 =	Backspace để xóa
 	t_Lang099 =	Nút
 	t_Lang100 =	Hiển thị lời khuyên bóng
 	t_Lang101 =	Tốc độ
@@ -727,10 +727,10 @@
 	IfStB_TT =	Nếu báo cáo (F10) / biến (Shift + F10) / chức năng (Ctrl + F10)
 	IEComB_TT =	Internet Explorer (F11) / COM giao diện (Shift + F11) / Run Scriptlet (Ctrl + F11)
 	SendMsgB_TT =	Tin nhắn cửa sổ (F12)
-	AutoKey_TT =	Backspace để xóa
-	ManKey_TT =	Backspace để xóa
-	AbortKey_TT =	Backspace để xóa
-	PauseKey_TT =	Backspace để xóa
+	AutoKey_TT =	Phím nóng để chơi vĩ mô
+	ManKey_TT =	Phím nóng để chơi vĩ mô "từng bước"
+	AbortKey_TT =	Phím nóng để ngăn chặn phát lại
+	PauseKey_TT =	Phím tắt để tạm dừng phát
 	RecKey_TT =	Backspace để xóa
 	RecNewKey_TT =	Backspace để xóa
 	JoyKey_TT =	Nhấn một nút trên điều khiển

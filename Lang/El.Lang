@@ -143,7 +143,7 @@
 	w_Lang003 =	Επιλογές
 	w_Lang004 =	Ρεκόρ
 	w_Lang005 =	Παιχνίδι
-	w_Lang006 =	Εκτέλεση
+	w_Lang006 =	Αναπαραγωγή
 	w_Lang007 =	Εγχειρίδιο
 	w_Lang008 =	Stop
 	w_Lang009 =	Οθόνη ελέγχου της γραμμής εργαλείων
@@ -207,8 +207,8 @@
 	w_Lang067 =	COM Interface (Shift+F11)
 	w_Lang068 =	Εκτέλεση Scriptlet (Ctrl+F11)
 	w_Lang069 =	Τα μηνύματα των Windows (F12)
-	w_Lang070 =	Προσθέστε το πλήκτρο των Windows ως τροποποιητής
-	w_Lang071 =	Χειριστήριο
+	w_Lang070 =	Προσθέστε το πλήκτρο των Windows για να "τρέξει" hotkey
+	w_Lang071 =	Χρησιμοποιήστε ένα κουμπί joystick ως hotkey
 	w_Lang072 =	Προσθήκη Macro (Ctrl+T)
 	w_Lang073 =	Κλείσιμο Macro (Ctrl+W)
 	w_Lang074 =	Διπλότυπο Macro (Ctrl+Shift+D)
@@ -494,7 +494,7 @@
 	t_Lang095 =	Πληκτρολογήστε 1 μεταβλητή ανά γραμμή. Μπορείτε επίσης να προσθέσετε [Ενότητες].
 	t_Lang096 =	Χρήστη Καθολικές Μεταβλητές
 	t_Lang097 =	Πατήστε ένα κουμπί στο χειριστήριο
-	t_Lang098 =	Χειριστήριο
+	t_Lang098 =	Backspace για εκκαθάριση
 	t_Lang099 =	Κουμπί
 	t_Lang100 =	Εμφάνιση συμβουλές μπαλόνι
 	t_Lang101 =	Ταχύτητα
@@ -727,10 +727,10 @@
 	IfStB_TT =	Αν Καταστάσεις (F10) / μεταβλητές (Shift+F10) / Λειτουργίες (Ctrl+F10)
 	IEComB_TT =	Internet Explorer (F11) / COM Interface (Shift+F11) / Εκτέλεση Scriptlet (Ctrl+F11)
 	SendMsgB_TT =	Τα μηνύματα των Windows (F12)
-	AutoKey_TT =	Backspace για εκκαθάριση
-	ManKey_TT =	Backspace για εκκαθάριση
-	AbortKey_TT =	Backspace για εκκαθάριση
-	PauseKey_TT =	Backspace για εκκαθάριση
+	AutoKey_TT =	Hotkey για να παίξει Macro
+	ManKey_TT =	Hotkey για να παίξει Macro "βήμα-βήμα"
+	AbortKey_TT =	Hotkey για να σταματήσετε την αναπαραγωγή
+	PauseKey_TT =	Hotkey για παύση της αναπαραγωγής
 	RecKey_TT =	Backspace για εκκαθάριση
 	RecNewKey_TT =	Backspace για εκκαθάριση
 	JoyKey_TT =	Πατήστε ένα κουμπί στο χειριστήριο

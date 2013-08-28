@@ -143,7 +143,7 @@
 	w_Lang003 =	Opzioni
 	w_Lang004 =	Registrazione
 	w_Lang005 =	Giocare
-	w_Lang006 =	Esegui
+	w_Lang006 =	Riproduzione
 	w_Lang007 =	Manuale
 	w_Lang008 =	Arresto
 	w_Lang009 =	Visualizzare i controlli barra degli strumenti
@@ -207,8 +207,8 @@
 	w_Lang067 =	COM Interface (Shift+F11)
 	w_Lang068 =	Esegui Scriptlet (Ctrl+F11)
 	w_Lang069 =	Messaggi di Windows (F12)
-	w_Lang070 =	Aggiungere la chiave di Windows come modificatore
-	w_Lang071 =	Joystick
+	w_Lang070 =	Aggiungere la chiave di Windows su "Esegui" hotkey
+	w_Lang071 =	Utilizzare un tasto del joystick come tasto di scelta rapida
 	w_Lang072 =	Aggiungi Macro (Ctrl+T)
 	w_Lang073 =	Chiudere Macro (Ctrl+W)
 	w_Lang074 =	Duplica macro (Ctrl+Shift+D)
@@ -494,7 +494,7 @@
 	t_Lang095 =	Inserisci 1 variabile per riga. Si può anche aggiungere [sezioni].
 	t_Lang096 =	Variabili Globali Dell'utente
 	t_Lang097 =	Premere un pulsante sul joystick
-	t_Lang098 =	Joystick
+	t_Lang098 =	Backspace per cancellare
 	t_Lang099 =	Pulsante
 	t_Lang100 =	Visualizzare i fumetti
 	t_Lang101 =	Velocità
@@ -727,10 +727,10 @@
 	IfStB_TT =	Se Dichiarazioni (F10) / variabili (Shift+F10) / Funzioni (Ctrl+F10)
 	IEComB_TT =	Internet Explorer (F11) / COM Interface (Shift+F11) / Esegui Scriptlet (Ctrl+F11)
 	SendMsgB_TT =	Messaggi di Windows (F12)
-	AutoKey_TT =	Backspace per cancellare
-	ManKey_TT =	Backspace per cancellare
-	AbortKey_TT =	Backspace per cancellare
-	PauseKey_TT =	Backspace per cancellare
+	AutoKey_TT =	Tasti di scelta rapida per riprodurre Macro
+	ManKey_TT =	Tasti di scelta rapida per riprodurre macro "passo-passo"
+	AbortKey_TT =	Tasti di scelta rapida per fermare la riproduzione
+	PauseKey_TT =	Tasti di scelta rapida per mettere in pausa
 	RecKey_TT =	Backspace per cancellare
 	RecNewKey_TT =	Backspace per cancellare
 	JoyKey_TT =	Premere un pulsante sul joystick

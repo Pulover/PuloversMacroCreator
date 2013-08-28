@@ -143,7 +143,7 @@
 	w_Lang003 =	Alternativer
 	w_Lang004 =	Rekord
 	w_Lang005 =	Spill
-	w_Lang006 =	Kjør
+	w_Lang006 =	Avspilling
 	w_Lang007 =	Manuell
 	w_Lang008 =	Stopp
 	w_Lang009 =	Vise kontrollene verktøylinjen
@@ -207,8 +207,8 @@
 	w_Lang067 =	COM-grensesnitt (Shift+F11)
 	w_Lang068 =	Kjør Skriptlet (Ctrl+F11)
 	w_Lang069 =	Windows-meldinger (F12)
-	w_Lang070 =	Legge til Windows-tasten som modifikator
-	w_Lang071 =	Joystick
+	w_Lang070 =	Legg Windows-tasten til "Kjør" hurtigtast
+	w_Lang071 =	Bruk en joystick knappen som hurtigtast
 	w_Lang072 =	Legg Makro (Ctrl+T)
 	w_Lang073 =	Lukk Makro (Ctrl+W)
 	w_Lang074 =	Duplisere Makro (Ctrl+Shift+D)
@@ -494,7 +494,7 @@
 	t_Lang095 =	Skriv inn en variabel per linje. Du kan også legge til [Seksjoner].
 	t_Lang096 =	Bruker Globale Variabler
 	t_Lang097 =	Trykk på en knapp på joysticken
-	t_Lang098 =	Joystick
+	t_Lang098 =	Tilbaketasten for å fjerne
 	t_Lang099 =	Button
 	t_Lang100 =	Vise boblehjelp
 	t_Lang101 =	Fart
@@ -727,10 +727,10 @@
 	IfStB_TT =	Hvis uttalelsene (F10) / variabler (Shift+F10) / Funksjoner (Ctrl+F10)
 	IEComB_TT =	Internet Explorer (F11) / COM-grensesnitt (Shift+F11) / Kjør Skriptlet (Ctrl+F11)
 	SendMsgB_TT =	Windows-meldinger (F12)
-	AutoKey_TT =	Tilbaketasten for å fjerne
-	ManKey_TT =	Tilbaketasten for å fjerne
-	AbortKey_TT =	Tilbaketasten for å fjerne
-	PauseKey_TT =	Tilbaketasten for å fjerne
+	AutoKey_TT =	Løsningen å spille Makro
+	ManKey_TT =	Løsningen å spille Macro "step-by-step"
+	AbortKey_TT =	Løsningen å stoppe avspillingen
+	PauseKey_TT =	Løsningen å pause avspillingen
 	RecKey_TT =	Tilbaketasten for å fjerne
 	RecNewKey_TT =	Tilbaketasten for å fjerne
 	JoyKey_TT =	Trykk på en knapp på joysticken

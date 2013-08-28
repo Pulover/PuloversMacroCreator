@@ -143,7 +143,7 @@
 	w_Lang003 =	Mogućnosti
 	w_Lang004 =	Zapis
 	w_Lang005 =	Igrati
-	w_Lang006 =	Trčanje
+	w_Lang006 =	Reprodukcija
 	w_Lang007 =	Priručnik
 	w_Lang008 =	Stop
 	w_Lang009 =	Prikaz kontrole traci
@@ -207,8 +207,8 @@
 	w_Lang067 =	COM sučelja (Shift+F11)
 	w_Lang068 =	Trčanje Scriptlet (Ctrl+F11)
 	w_Lang069 =	Windows Poruke (F12)
-	w_Lang070 =	Dodaj Windows tipku za izmjenu
-	w_Lang071 =	Džojstik
+	w_Lang070 =	Dodaj Windows tipku na "Run" prečac
+	w_Lang071 =	Koristite joystick tipke kao hotkey
 	w_Lang072 =	Dodaj Macro (Ctrl+T)
 	w_Lang073 =	Makro Close (Ctrl+W)
 	w_Lang074 =	Dvostruki Macro (Ctrl+Shift+D)
@@ -494,7 +494,7 @@
 	t_Lang095 =	Unesite jedna varijabla po liniji. Vi svibanj također dodati [sekcije].
 	t_Lang096 =	Korisnik Globalne Varijable
 	t_Lang097 =	Pritisnite tipku na palici
-	t_Lang098 =	Džojstik
+	t_Lang098 =	Povratna izbiti
 	t_Lang099 =	Dugme
 	t_Lang100 =	Prikaz balon savjete
 	t_Lang101 =	Ubrzati
@@ -727,10 +727,10 @@
 	IfStB_TT =	Ako izvještaji (F10) / varijable (Shift+F10) / funkcija (Ctrl+F10)
 	IEComB_TT =	Internet Explorer (F11) / COM sučelja (Shift+F11) / Trčanje Scriptlet (Ctrl+F11)
 	SendMsgB_TT =	Windows Poruke (F12)
-	AutoKey_TT =	Povratna izbiti
-	ManKey_TT =	Povratna izbiti
-	AbortKey_TT =	Povratna izbiti
-	PauseKey_TT =	Povratna izbiti
+	AutoKey_TT =	Hotkey igrati Macro
+	ManKey_TT =	Hotkey igrati Makro "korak po korak"
+	AbortKey_TT =	Prečac za zaustavljanje
+	PauseKey_TT =	Brza tipka za pauzu reprodukcije
 	RecKey_TT =	Povratna izbiti
 	RecNewKey_TT =	Povratna izbiti
 	JoyKey_TT =	Pritisnite tipku na palici

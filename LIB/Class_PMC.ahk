@@ -57,11 +57,9 @@
 			FoundC := PMC.Load(SelectedFile%A_Index%)
 			Loop, %FoundC%
 			{
-				Gui, 1:Submit, NoHide
-				Gui, chMacro:Default
-				Gui, chMacro:Submit, NoHide
-				TabCount++, GuiCtrlAddTab(TabSel, "Macro" TabCount)
+				TabCount++
 				Gui, chMacro:ListView, InputList%TabCount%
+				GuiCtrlAddTab(TabSel, "Macro" TabCount)
 				GuiAddLV(TabCount)
 				Menu, CopyTo, Add, Macro%TabCount%, CopyList
 				PMC.LVLoad("InputList" TabCount, PmcCode[A_Index])

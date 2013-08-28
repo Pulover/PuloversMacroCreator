@@ -143,7 +143,7 @@
 	w_Lang003 =	オプション
 	w_Lang004 =	記録
 	w_Lang005 =	遊ぶ
-	w_Lang006 =	実行
+	w_Lang006 =	再生
 	w_Lang007 =	マニュアル
 	w_Lang008 =	停止
 	w_Lang009 =	ツールバーコントロールを表示
@@ -207,8 +207,8 @@
 	w_Lang067 =	 COMインタフェース（Shift+F11）を
 	w_Lang068 =	スクリプトレットを実行 (Ctrl+F11)
 	w_Lang069 =	Windowsメッセージ（F12）
-	w_Lang070 =	モディファイアとして、Windowsキーを追加
-	w_Lang071 =	ジョイスティック
+	w_Lang070 =	ホットキーを"実行"するには、Windowsキーを追加
+	w_Lang071 =	ホットキーとしてジョイスティックボタンを使用し
 	w_Lang072 =	マクロを追加します（Ctrl+T）
 	w_Lang073 =	閉じるマクロ（Ctrl+Wを）
 	w_Lang074 =	マクロを複製（Ctrl+Shiftキー+ D）
@@ -494,7 +494,7 @@
 	t_Lang095 =	行につき1変数を入力します。また、[セクション]を追加することがあります。
 	t_Lang096 =	ユーザーのグローバル変数
 	t_Lang097 =	ジョイスティックのボタンを押し
-	t_Lang098 =	ジョイスティック
+	t_Lang098 =	クリアするには、Backspaceキー
 	t_Lang099 =	ボタン
 	t_Lang100 =	バルーンヒントを表示します
 	t_Lang101 =	スピード
@@ -727,10 +727,10 @@
 	IfStB_TT =	Ifステートメント（F10）/変数/関数の（Ctrl+F10）（+ F10キー、Shiftキーを押しながら）
 	IEComB_TT =	インターネットエクスプローラ（F11）/ COMインタフェース（Shift+F11）を / スクリプトレットを実行 (Ctrl+F11)
 	SendMsgB_TT =	Windowsメッセージ（F12）
-	AutoKey_TT =	クリアするには、Backspaceキー
-	ManKey_TT =	クリアするには、Backspaceキー
-	AbortKey_TT =	クリアするには、Backspaceキー
-	PauseKey_TT =	クリアするには、Backspaceキー
+	AutoKey_TT =	ホットキーマクロを再生する
+	ManKey_TT =	ホットキーは、マクロの"ステップバイステップ"を再生する
+	AbortKey_TT =	ホットキーは、再生を停止する
+	PauseKey_TT =	再生を一時停止するホットキー
 	RecKey_TT =	クリアするには、Backspaceキー
 	RecNewKey_TT =	クリアするには、Backspaceキー
 	JoyKey_TT =	ジョイスティックのボタンを押し

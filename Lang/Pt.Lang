@@ -142,8 +142,8 @@
 	w_Lang002 =	Script
 	w_Lang003 =	Opções
 	w_Lang004 =	Gravar
-	w_Lang005 =	Iniciar
-	w_Lang006 =	Executar
+	w_Lang005 =	Reproduzir
+	w_Lang006 =	Reproduzir
 	w_Lang007 =	Manual
 	w_Lang008 =	Parar
 	w_Lang009 =	Exibir a barra de controles
@@ -207,8 +207,8 @@
 	w_Lang067 =	Interface COM (Shift+F11)
 	w_Lang068 =	Executar Scriptlet (Ctrl+F11)
 	w_Lang069 =	Mensages do Windows (F12)
-	w_Lang070 =	Adicionar a tecla Windows como modificador
-	w_Lang071 =	Joystick
+	w_Lang070 =	Adicionar a tecla Windows ao atalho "Executar"
+	w_Lang071 =	Usar um botão do joystick como atalho
 	w_Lang072 =	Adicionar Macro (Ctrl+T)
 	w_Lang073 =	Fechar Macro (Ctrl+W)
 	w_Lang074 =	Duplicar Macro (Ctrl+Shift+D)
@@ -494,7 +494,7 @@
 	t_Lang095 =	Insira 1 variável por linha. Você também pode adicionar [Seções].
 	t_Lang096 =	Variáveis Globais do Usuário
 	t_Lang097 =	Pressione um botão no joystick
-	t_Lang098 =	Joystick
+	t_Lang098 =	Backspace para apagar
 	t_Lang099 =	Botão
 	t_Lang100 =	Mostrar dicas em balões
 	t_Lang101 =	Velocidade
@@ -727,10 +727,10 @@
 	IfStB_TT =	Declaração Se (F10) / Variáveis (Shift+F10) / Funções (Ctrl+F10)
 	IEComB_TT =	Internet Explorer (F11) / Interface COM (Shift+F11) / Executar Scriptlet (Ctrl+F11)
 	SendMsgB_TT =	Mensages do Windows (F12)
-	AutoKey_TT =	Backspace para apagar
-	ManKey_TT =	Backspace para apagar
-	AbortKey_TT =	Backspace para apagar
-	PauseKey_TT =	Backspace para apagar
+	AutoKey_TT =	Atalho para reproduzir Macro
+	ManKey_TT =	Atalho para reproduzir Macro "passo-a-passo"
+	AbortKey_TT =	Atalho para parar reprodução
+	PauseKey_TT =	Atalho para pausar reprodução
 	RecKey_TT =	Backspace para apagar
 	RecNewKey_TT =	Backspace para apagar
 	JoyKey_TT =	Pressione um botão no joystick

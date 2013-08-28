@@ -143,7 +143,7 @@
 	w_Lang003 =	Seçenekler
 	w_Lang004 =	Kayıt
 	w_Lang005 =	Oynamak
-	w_Lang006 =	Çalıştırmak
+	w_Lang006 =	Playback
 	w_Lang007 =	Manuel
 	w_Lang008 =	Dur
 	w_Lang009 =	Araç çubuğu kontrolleri görüntülemek
@@ -207,8 +207,8 @@
 	w_Lang067 =	COM Arabirimi (Shift+F11)
 	w_Lang068 =	Komut Dosyası Çalıştırmak (Ctrl+F11)
 	w_Lang069 =	Windows iletileri (F12)
-	w_Lang070 =	Değiştirici olarak Windows tuşu ekle
-	w_Lang071 =	Joystick
+	w_Lang070 =	Kısayol tuşu "Çalıştır" için Windows tuşu ekle
+	w_Lang071 =	Kısayol olarak bir joystick düğmesini kullanın
 	w_Lang072 =	Makro Ekle (Ctrl+T)
 	w_Lang073 =	Kapat Makro (Ctrl+W)
 	w_Lang074 =	Makro çoğaltın (Ctrl+Shift+D)
@@ -494,7 +494,7 @@
 	t_Lang095 =	Satır başına 1 değişken girin. Ayrıca [Bölüm] ekleyebilirsiniz.
 	t_Lang096 =	Kullanıcı Global Değişkenler
 	t_Lang097 =	Joystick üzerindeki bir düğmeye basın
-	t_Lang098 =	Joystick
+	t_Lang098 =	Temizlemek için Backspace
 	t_Lang099 =	Düğme
 	t_Lang100 =	Balon ipuçlarını görüntülemek
 	t_Lang101 =	Hız
@@ -727,10 +727,10 @@
 	IfStB_TT =	Eğer Tablolar (F10) / Değişkenler / İşlevler (Ctrl+F10) (+ F10 Shift)
 	IEComB_TT =	Internet Explorer (F11) / COM Arabirimi (Shift+F11) / Komut Dosyası Çalıştırmak (Ctrl+F11)
 	SendMsgB_TT =	Windows iletileri (F12)
-	AutoKey_TT =	Temizlemek için Backspace
-	ManKey_TT =	Temizlemek için Backspace
-	AbortKey_TT =	Temizlemek için Backspace
-	PauseKey_TT =	Temizlemek için Backspace
+	AutoKey_TT =	Kısayol Makro oynamak
+	ManKey_TT =	Kısayol Makro "adım adım" oynamak
+	AbortKey_TT =	Kısayol çalma durdurmak için
+	PauseKey_TT =	Duraklatmak için kısayol tuşu
 	RecKey_TT =	Temizlemek için Backspace
 	RecNewKey_TT =	Temizlemek için Backspace
 	JoyKey_TT =	Joystick üzerindeki bir düğmeye basın

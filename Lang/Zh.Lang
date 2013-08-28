@@ -143,7 +143,7 @@
 	w_Lang003 =	选项
 	w_Lang004 =	记录
 	w_Lang005 =	回放
-	w_Lang006 =	运行
+	w_Lang006 =	播放
 	w_Lang007 =	手册
 	w_Lang008 =	停止
 	w_Lang009 =	显示控制工具栏
@@ -205,10 +205,10 @@
 	w_Lang065 =	功能（按Ctrl+F10）
 	w_Lang066 =	IE浏览器（F11）
 	w_Lang067 =	 COM接口（按Shift+F11）
-	w_Lang068 =	
+	w_Lang068 =	运行的scriptlet（按Ctrl+ F11）
 	w_Lang069 =	Windows消息（F12）
-	w_Lang070 =	作为改性剂添加Windows键
-	w_Lang071 =	摇杆
+	w_Lang070 =	Windows键添加到“运行”热键
+	w_Lang071 =	使用操纵杆按钮，热键
 	w_Lang072 =	添加宏（Ctrl+T）
 	w_Lang073 =	关闭宏（Ctrl+W）
 	w_Lang074 =	重复宏（Ctrl+Shift+D）
@@ -494,7 +494,7 @@
 	t_Lang095 =	输入每行1个变量。您还可以添加[第]。
 	t_Lang096 =	用户全局变量
 	t_Lang097 =	按下操纵杆上的按钮
-	t_Lang098 =	摇杆
+	t_Lang098 =	退格键清除
 	t_Lang099 =	钮
 	t_Lang100 =	显示气球提示
 	t_Lang101 =	速度
@@ -727,10 +727,10 @@
 	IfStB_TT =	如果报表附注（F10）/变量（按Shift+F10）/功能（按Ctrl+F10）
 	IEComB_TT =	IE浏览器（F11）/ COM接口（按Shift+F11）
 	SendMsgB_TT =	Windows消息（F12）
-	AutoKey_TT =	退格键清除
-	ManKey_TT =	退格键清除
-	AbortKey_TT =	退格键清除
-	PauseKey_TT =	退格键清除
+	AutoKey_TT =	热键玩宏
+	ManKey_TT =	热键玩宏“一步一步”
+	AbortKey_TT =	热键停止播放
+	PauseKey_TT =	热键暂停播放
 	RecKey_TT =	退格键清除
 	RecNewKey_TT =	退格键清除
 	JoyKey_TT =	按下操纵杆上的按钮

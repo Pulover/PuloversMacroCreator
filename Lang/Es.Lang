@@ -142,8 +142,8 @@
 	w_Lang002 =	Previa
 	w_Lang003 =	Opciones
 	w_Lang004 =	Grabar
-	w_Lang005 =	Iniciar
-	w_Lang006 =	Ejecutar
+	w_Lang005 =	Reproducir
+	w_Lang006 =	Reproducción
 	w_Lang007 =	Manual
 	w_Lang008 =	Detener
 	w_Lang009 =	Mostrar barra de herramientas de controles
@@ -207,8 +207,8 @@
 	w_Lang067 =	COM Interface (Shift+F11)
 	w_Lang068 =	Executar Scriptlet (Ctrl+F11)
 	w_Lang069 =	Mensajes de Windows (F12)
-	w_Lang070 =	Agregue la clave de Windows como modificador
-	w_Lang071 =	Palanca de mando
+	w_Lang070 =	Añadir la tecla Windows a tecla de acceso directo "Ejecutar"
+	w_Lang071 =	Utilizar un botón del joystick como tecla de acceso directo
 	w_Lang072 =	Añadir Macro (Ctrl+T)
 	w_Lang073 =	Cerrar Macro (Ctrl+W)
 	w_Lang074 =	Duplicar macro (Ctrl+Shift+D)
@@ -494,7 +494,7 @@
 	t_Lang095 =	Introduzca 1 variable por línea. Usted también puede agregar [Secciones].
 	t_Lang096 =	Variables Globales Del Usuario
 	t_Lang097 =	Presione un botón en la palanca de mando
-	t_Lang098 =	Palanca de mando
+	t_Lang098 =	Retroceso para borrar
 	t_Lang099 =	Botón
 	t_Lang100 =	Mostrar globos de sugerencias
 	t_Lang101 =	Acelerar
@@ -727,10 +727,10 @@
 	IfStB_TT =	Si Declaraciones (F10) / Variables (Shift+F10) / Funciones (Ctrl+F10)
 	IEComB_TT =	Internet Explorer (F11) / COM Interface (Shift+F11) / Executar Scriptlet (Ctrl+F11)
 	SendMsgB_TT =	Mensajes de Windows (F12)
-	AutoKey_TT =	Retroceso para borrar
-	ManKey_TT =	Retroceso para borrar
-	AbortKey_TT =	Retroceso para borrar
-	PauseKey_TT =	Retroceso para borrar
+	AutoKey_TT =	Tecla de acceso directo para jugar Macro
+	ManKey_TT =	Tecla de acceso directo para jugar Macro "paso a paso"
+	AbortKey_TT =	Hotkey para detener la reproducción
+	PauseKey_TT =	Hotkey para pausar la reproducción
 	RecKey_TT =	Retroceso para borrar
 	RecNewKey_TT =	Retroceso para borrar
 	JoyKey_TT =	Presione un botón en la palanca de mando

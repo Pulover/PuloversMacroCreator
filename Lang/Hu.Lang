@@ -143,7 +143,7 @@
 	w_Lang003 =	Opciók
 	w_Lang004 =	Rekord
 	w_Lang005 =	Játék
-	w_Lang006 =	Fut
+	w_Lang006 =	Visszajátszás
 	w_Lang007 =	Kézi
 	w_Lang008 =	Megáll
 	w_Lang009 =	Kijelző vezérlők eszköztár
@@ -207,8 +207,8 @@
 	w_Lang067 =	COM Interface (Shift+F11)
 	w_Lang068 =	Fuss Scriptlet (Ctrl+F11)
 	w_Lang069 =	A Windows üzenetek (F12)
-	w_Lang070 =	Adja hozzá a Windows billentyű a módosító
-	w_Lang071 =	Joystick
+	w_Lang070 =	Adja hozzá a Windows billentyű a "Run" gyorsbillentyű
+	w_Lang071 =	Használjon joystick gombot hotkey
 	w_Lang072 =	Kedvencek Macro (Ctrl+T)
 	w_Lang073 =	Bezárás Macro (Ctrl+W)
 	w_Lang074 =	Ismétlődő Macro (Ctrl+Shift+D)
@@ -494,7 +494,7 @@
 	t_Lang095 =	Írja 1 változó soronként. Ön is hozzá [§].
 	t_Lang096 =	Felhasználó Globális Változók
 	t_Lang097 =	Nyomja meg a gombot a joystick
-	t_Lang098 =	Joystick
+	t_Lang098 =	Backspace törölni
 	t_Lang099 =	Gomb
 	t_Lang100 =	Kijelző buborékértesítések
 	t_Lang101 =	Sebesség
@@ -727,10 +727,10 @@
 	IfStB_TT =	Ha a nyilatkozatok (F10) / változók (Shift+F10) / Függvények (Ctrl+F10)
 	IEComB_TT =	Internet Explorer (F11) / COM Interface (Shift+F11) / Fuss Scriptlet (Ctrl+F11)
 	SendMsgB_TT =	A Windows üzenetek (F12)
-	AutoKey_TT =	Backspace törölni
-	ManKey_TT =	Backspace törölni
-	AbortKey_TT =	Backspace törölni
-	PauseKey_TT =	Backspace törölni
+	AutoKey_TT =	Gyorsgomb játszani Macro
+	ManKey_TT =	Gyorsgomb játszani Macro "lépésről-lépésre"
+	AbortKey_TT =	Gyorsgomb a lejátszás megállításához
+	PauseKey_TT =	Gyorsgomb a lejátszás
 	RecKey_TT =	Backspace törölni
 	RecNewKey_TT =	Backspace törölni
 	JoyKey_TT =	Nyomja meg a gombot a joystick

@@ -143,7 +143,7 @@
 	w_Lang003 =	Možnosti
 	w_Lang004 =	Zapis
 	w_Lang005 =	Igraj
-	w_Lang006 =	Run
+	w_Lang006 =	Predvajanje
 	w_Lang007 =	Ročni
 	w_Lang008 =	Stop
 	w_Lang009 =	Prikazati kontrolnike Orodna vrstica
@@ -207,8 +207,8 @@
 	w_Lang067 =	COM vmesnik (Shift+F11)
 	w_Lang068 =	Run skriptov (Ctrl+F11)
 	w_Lang069 =	Windows Sporočila (F12)
-	w_Lang070 =	Dodaj tipko Windows kot spreminjevalcem
-	w_Lang071 =	Joystick
+	w_Lang070 =	Dodaj tipko Windows na "Run" hotkey
+	w_Lang071 =	Uporabite gumb za igralno palico kot hotkey
 	w_Lang072 =	Dodaj Macro (Ctrl+T)
 	w_Lang073 =	Zapri Macro (Ctrl+W)
 	w_Lang074 =	Dvojnik makro (Ctrl+Shift+D)
@@ -494,7 +494,7 @@
 	t_Lang095 =	Vnesite 1 spremenljivko na vrstico. Dodate lahko tudi [oddelkov].
 	t_Lang096 =	Uporabniški globalnih spremenljivk
 	t_Lang097 =	Pritisnite gumb na ročici
-	t_Lang098 =	Joystick
+	t_Lang098 =	Backspace jasno
 	t_Lang099 =	Button
 	t_Lang100 =	Prikažete oblačke z namigi
 	t_Lang101 =	Speed
@@ -727,10 +727,10 @@
 	IfStB_TT =	Če izjave (F10) / spremenljivke (Shift+F10) / Funkcije (Ctrl+F10)
 	IEComB_TT =	Internet Explorer (F11) / COM vmesnik (Shift+F11) / Run skriptov (Ctrl+F11)
 	SendMsgB_TT =	Windows Sporočila (F12)
-	AutoKey_TT =	Backspace jasno
-	ManKey_TT =	Backspace jasno
-	AbortKey_TT =	Backspace jasno
-	PauseKey_TT =	Backspace jasno
+	AutoKey_TT =	Bližnjica za igranje makro
+	ManKey_TT =	Bližnjica za predvajanje makrov "korak za korakom"
+	AbortKey_TT =	Bližnjica za zaustavitev predvajanja
+	PauseKey_TT =	Bližnjica za pavzo
 	RecKey_TT =	Backspace jasno
 	RecNewKey_TT =	Backspace jasno
 	JoyKey_TT =	Pritisnite gumb na ročici

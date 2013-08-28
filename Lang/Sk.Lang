@@ -143,7 +143,7 @@
 	w_Lang003 =	Voľby
 	w_Lang004 =	Záznam
 	w_Lang005 =	Hrať
-	w_Lang006 =	Beh
+	w_Lang006 =	Prehrávanie
 	w_Lang007 =	Manuál
 	w_Lang008 =	Stop
 	w_Lang009 =	Ovládacie prvky panela nástrojov
@@ -207,8 +207,8 @@
 	w_Lang067 =	COM rozhranie (Shift+F11)
 	w_Lang068 =	Spustiť skripty (Ctrl+F11)
 	w_Lang069 =	Windows Správy (F12)
-	w_Lang070 =	Pridať klávesy Windows ako modifikátor
-	w_Lang071 =	Joystick
+	w_Lang070 =	Pridať kláves Windows na "Run" klávesové skratky
+	w_Lang071 =	Použite joystick ako klávesovú skratku
 	w_Lang072 =	Pridať makro (Ctrl+T)
 	w_Lang073 =	Zavrieť Makro (Ctrl+W)
 	w_Lang074 =	Duplicitné makro (Ctrl+Shift+D)
@@ -494,7 +494,7 @@
 	t_Lang095 =	Zadajte 1 premennú na riadok. Môžete tiež pridať [sekcie].
 	t_Lang096 =	Užívateľ Globálne premenné
 	t_Lang097 =	Stlačte tlačidlo na joysticku
-	t_Lang098 =	Joystick
+	t_Lang098 =	Backspace pre vymazanie
 	t_Lang099 =	Tlačidlo
 	t_Lang100 =	Zobraziť bublinové tipy
 	t_Lang101 =	Rýchlosť
@@ -727,10 +727,10 @@
 	IfStB_TT =	Pokiaľ závierka (F10) / premenné (Shift+F10) / Funkcia (Ctrl+F10)
 	IEComB_TT =	Internet Explorer (F11) / COM rozhranie (Shift+F11) / Spustiť skripty (Ctrl+F11)
 	SendMsgB_TT =	Windows Správy (F12)
-	AutoKey_TT =	Backspace pre vymazanie
-	ManKey_TT =	Backspace pre vymazanie
-	AbortKey_TT =	Backspace pre vymazanie
-	PauseKey_TT =	Backspace pre vymazanie
+	AutoKey_TT =	Klávesová skratka pre prehrávanie makra
+	ManKey_TT =	Klávesová skratka pre prehrávanie makra "krok-za-krokom"
+	AbortKey_TT =	Klávesová skratka pre zastavenie prehrávania
+	PauseKey_TT =	Klávesová skratka pre pozastavenie prehrávania
 	RecKey_TT =	Backspace pre vymazanie
 	RecNewKey_TT =	Backspace pre vymazanie
 	JoyKey_TT =	Stlačte tlačidlo na joysticku

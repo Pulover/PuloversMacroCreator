@@ -143,7 +143,7 @@
 	w_Lang003 =	옵션
 	w_Lang004 =	기록
 	w_Lang005 =	놀이
-	w_Lang006 =	실행
+	w_Lang006 =	재생
 	w_Lang007 =	사용 설명서
 	w_Lang008 =	정지
 	w_Lang009 =	도구 모음 컨트롤을 표시
@@ -207,8 +207,8 @@
 	w_Lang067 =	COM 인터페이스 (+ F11를 Shift)
 	w_Lang068 =	스크립틀릿을 실행 (Ctrl+F11)
 	w_Lang069 =	윈도우 메시지 (F12)
-	w_Lang070 =	수정으로 Windows 키를 추가합니다
-	w_Lang071 =	조종간
+	w_Lang070 =	단축키를 "실행"을 위해 Windows 키를 추가
+	w_Lang071 =	단축키로 조이스틱 버튼을 사용하여
 	w_Lang072 =	매크로를 추가합니다 (Ctrl+T)
 	w_Lang073 =	닫기 매크로 (Ctrl 키를+W)
 	w_Lang074 =	매크로를 복사 (Ctrl+Shift+D)
@@ -494,7 +494,7 @@
 	t_Lang095 =	라인 당 1 변수를 입력합니다. 또한 [섹션]을 추가 할 수 있습니다.
 	t_Lang096 =	사용자가 전역 변수
 	t_Lang097 =	조이스틱 버튼을 눌러
-	t_Lang098 =	조종간
+	t_Lang098 =	삭제하는 백 스페이스
 	t_Lang099 =	단추
 	t_Lang100 =	풍선 팁을 표시
 	t_Lang101 =	속도
@@ -727,10 +727,10 @@
 	IfStB_TT =	만약 명세서 (F10) / 변수 / 함수 (Ctrl 키를+F10) (+ F10를 Shift)
 	IEComB_TT =	인터넷 익스플로러 (F11) / COM 인터페이스 (+ F11를 Shift) / 스크립틀릿을 실행 (Ctrl+F11)
 	SendMsgB_TT =	윈도우 메시지 (F12)
-	AutoKey_TT =	삭제하는 백 스페이스
-	ManKey_TT =	삭제하는 백 스페이스
-	AbortKey_TT =	삭제하는 백 스페이스
-	PauseKey_TT =	삭제하는 백 스페이스
+	AutoKey_TT =	핫키 매크로를 재생할 수
+	ManKey_TT =	단축키 매크로 "단계별"를 재생
+	AbortKey_TT =	단축키 재생을 중지하려면
+	PauseKey_TT =	재생을 일시 정지 단축키
 	RecKey_TT =	삭제하는 백 스페이스
 	RecNewKey_TT =	삭제하는 백 스페이스
 	JoyKey_TT =	조이스틱 버튼을 눌러

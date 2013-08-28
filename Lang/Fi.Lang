@@ -143,7 +143,7 @@
 	w_Lang003 =	Valinnat
 	w_Lang004 =	Ennätys
 	w_Lang005 =	Pelata
-	w_Lang006 =	Ajaa
+	w_Lang006 =	Toisto
 	w_Lang007 =	Manuaalinen
 	w_Lang008 =	Lopettaa
 	w_Lang009 =	Näytön säädöt työkalurivi
@@ -207,8 +207,8 @@
 	w_Lang067 =	COM liitäntä (Shift+F11)
 	w_Lang068 =	Suorita Komentosarjasovelman (Ctrl+F11)
 	w_Lang069 =	Windows viestit (F12)
-	w_Lang070 =	Lisää Windows-näppäin muuntoaineena
-	w_Lang071 =	Peliohjain
+	w_Lang070 =	Lisää Windows avain "Run" pikanäppäin
+	w_Lang071 =	Käytä ohjainta painiketta kuin pikanäppäin
 	w_Lang072 =	Lisää Makro (Ctrl+T)
 	w_Lang073 =	Sulje Makro (Ctrl+W)
 	w_Lang074 =	Monista Makro (Ctrl+Shift+D)
@@ -494,7 +494,7 @@
 	t_Lang095 =	Anna 1 muuttujan riville. Voit myös lisätä [§].
 	t_Lang096 =	Käyttäjä Yleismuuttujat
 	t_Lang097 =	Paina painiketta joystick
-	t_Lang098 =	Peliohjain
+	t_Lang098 =	Backspace poistaa
 	t_Lang099 =	Nappi
 	t_Lang100 =	Näyttö selitevihjeet
 	t_Lang101 =	Nopeus
@@ -727,10 +727,10 @@
 	IfStB_TT =	Jos lausunnot (F10) / Muuttujat (Shift+F10) / Funktiot (Ctrl+F10)
 	IEComB_TT =	Internet Explorer (F11) / COM liitäntä (Shift+F11) / Suorita Komentosarjasovelman (Ctrl+F11)
 	SendMsgB_TT =	Windows viestit (F12)
-	AutoKey_TT =	Backspace poistaa
-	ManKey_TT =	Backspace poistaa
-	AbortKey_TT =	Backspace poistaa
-	PauseKey_TT =	Backspace poistaa
+	AutoKey_TT =	Pikanäppäin pelata Macro
+	ManKey_TT =	Pikanäppäin pelata Macro "askel-askeleelta"
+	AbortKey_TT =	Pikanäppäin lopettaa toiston
+	PauseKey_TT =	Pikanäppäin Voit keskeyttää toiston
 	RecKey_TT =	Backspace poistaa
 	RecNewKey_TT =	Backspace poistaa
 	JoyKey_TT =	Paina painiketta joystick

@@ -143,7 +143,7 @@
 	w_Lang003 =	Opcje
 	w_Lang004 =	Rekord
 	w_Lang005 =	Grać
-	w_Lang006 =	Run
+	w_Lang006 =	Odtwarzanie
 	w_Lang007 =	Ręczny
 	w_Lang008 =	Zatrzymać
 	w_Lang009 =	Pokaż pasek narzędzi kontroli
@@ -207,8 +207,8 @@
 	w_Lang067 =	COM interfejsu (Shift+F11)
 	w_Lang068 =	Uruchom Scriptlet (Ctrl+F11)
 	w_Lang069 =	Komunikaty Windows (F12)
-	w_Lang070 =	Dodaj klucz Windows jako modyfikator
-	w_Lang071 =	Drążek sterowy
+	w_Lang070 =	Dodaj klawisz Windows na "Uruchom" skrótu
+	w_Lang071 =	Użyj przycisku joysticka jako skrótu
 	w_Lang072 =	Dodaj Macro (Ctrl+T)
 	w_Lang073 =	Zamknij makro (Ctrl+W)
 	w_Lang074 =	Powiel makro (Ctrl+Shift+D)
@@ -494,7 +494,7 @@
 	t_Lang095 =	Wpisz 1 zmiennej na linię. Możesz także dodać [rozdziały].
 	t_Lang096 =	Użytkowników Zmienne Globalne
 	t_Lang097 =	Naciśnij przycisk na joysticku
-	t_Lang098 =	Drążek sterowy
+	t_Lang098 =	Backspace, aby usunąć
 	t_Lang099 =	Przycisk
 	t_Lang100 =	Pokaż porady w dymkach
 	t_Lang101 =	Prędkość
@@ -727,10 +727,10 @@
 	IfStB_TT =	If (F10) / zmiennych (Shift+F10) / Funkcje (Ctrl+F10)
 	IEComB_TT =	Internet Explorer (F11) / COM interfejsu (Shift+F11) / Uruchom Scriptlet (Ctrl+F11)
 	SendMsgB_TT =	Komunikaty Windows (F12)
-	AutoKey_TT =	Backspace, aby usunąć
-	ManKey_TT =	Backspace, aby usunąć
-	AbortKey_TT =	Backspace, aby usunąć
-	PauseKey_TT =	Backspace, aby usunąć
+	AutoKey_TT =	Skrót grać makro
+	ManKey_TT =	Skrót grać makro "krok po kroku"
+	AbortKey_TT =	Skrót, aby zatrzymać odtwarzanie
+	PauseKey_TT =	Skrót, aby wstrzymać odtwarzanie
 	RecKey_TT =	Backspace, aby usunąć
 	RecNewKey_TT =	Backspace, aby usunąć
 	JoyKey_TT =	Naciśnij przycisk na joysticku

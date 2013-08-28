@@ -143,7 +143,7 @@
 	w_Lang003 =	Opcions
 	w_Lang004 =	Registre
 	w_Lang005 =	Jugar
-	w_Lang006 =	Executar
+	w_Lang006 =	Reproducció
 	w_Lang007 =	Manual
 	w_Lang008 =	Aturi
 	w_Lang009 =	Mostra la barra d'eines de controls
@@ -207,8 +207,8 @@
 	w_Lang067 =	COM Interface (Shift+F11)
 	w_Lang068 =	Executar Scriptlet (Ctrl+F11)
 	w_Lang069 =	Missatges de Windows (F12)
-	w_Lang070 =	Afegir la tecla Windows com a modificador
-	w_Lang071 =	Palanca de comandament
+	w_Lang070 =	Afegir la tecla Windows a "Executar" tecla d'accés directe
+	w_Lang071 =	Utilitzeu un botó del joystick com a tecla d'accés directe
 	w_Lang072 =	Afegir Macro (Ctrl+T)
 	w_Lang073 =	Tancar Macro (Ctrl+W)
 	w_Lang074 =	Duplicar macro (Ctrl+Shift+D)
@@ -494,7 +494,7 @@
 	t_Lang095 =	Introduïu gener variable per línia. Vostè també pot afegir [Seccions].
 	t_Lang096 =	Variables Globals De L'usuari
 	t_Lang097 =	Premeu un botó a la palanca de comandament
-	t_Lang098 =	Palanca de comandament
+	t_Lang098 =	Retrocés per esborrar
 	t_Lang099 =	Botó
 	t_Lang100 =	Mostra globus de suggeriments
 	t_Lang101 =	Accelerar
@@ -727,10 +727,10 @@
 	IfStB_TT =	Si Declaracions (F10) / variables (Shift+F10) / Funcions (Ctrl+F10)
 	IEComB_TT =	Internet Explorer (F11) / COM Interface (Shift+F11) / Executar Scriptlet (Ctrl+F11)
 	SendMsgB_TT =	Missatges de Windows (F12)
-	AutoKey_TT =	Retrocés per esborrar
-	ManKey_TT =	Retrocés per esborrar
-	AbortKey_TT =	Retrocés per esborrar
-	PauseKey_TT =	Retrocés per esborrar
+	AutoKey_TT =	Tecla d'accés directe per jugar Macro
+	ManKey_TT =	Tecla d'accés directe per jugar Macro "pas a pas"
+	AbortKey_TT =	Hotkey per aturar la reproducció
+	PauseKey_TT =	Hotkey per pausar la reproducció
 	RecKey_TT =	Retrocés per esborrar
 	RecNewKey_TT =	Retrocés per esborrar
 	JoyKey_TT =	Premeu un botó a la palanca de comandament

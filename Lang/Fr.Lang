@@ -143,7 +143,7 @@
 	w_Lang003 =	Options de
 	w_Lang004 =	Registre
 	w_Lang005 =	Jouer
-	w_Lang006 =	Exécuter
+	w_Lang006 =	Lecture
 	w_Lang007 =	Manuel
 	w_Lang008 =	Arrêter
 	w_Lang009 =	Contrôles afficher la barre d'outils
@@ -207,8 +207,8 @@
 	w_Lang067 =	Interface COM (Maj+F11)
 	w_Lang068 =	Exécuter Scriplet (Ctrl+F11)
 	w_Lang069 =	Messages de Windows (F12)
-	w_Lang070 =	Ajouter la touche Windows en tant que modificateur
-	w_Lang071 =	Joystick
+	w_Lang070 =	Ajoutez la touche Windows "Exécuter" raccourci
+	w_Lang071 =	Utilisez un bouton de la manette comme raccourci
 	w_Lang072 =	Ajouter une macro (Ctrl+T)
 	w_Lang073 =	Fermer Macro (Ctrl+W)
 	w_Lang074 =	Dupliquer Macro (Ctrl+Maj+D)
@@ -494,7 +494,7 @@
 	t_Lang095 =	Entrez 1 variable par ligne. Vous pouvez également ajouter [Articles].
 	t_Lang096 =	Des Variables Globales Des Utilisateurs
 	t_Lang097 =	Appuyez sur un bouton sur la manette
-	t_Lang098 =	Joystick
+	t_Lang098 =	Retour arrière pour effacer
 	t_Lang099 =	Bouton
 	t_Lang100 =	Afficher les infobulles
 	t_Lang101 =	Accélérer
@@ -727,10 +727,10 @@
 	IfStB_TT =	Si états (F10) / Variables (Maj+F10) / Fonctions (Ctrl+F10)
 	IEComB_TT =	Internet Explorer (F11) / Interface COM (Maj+F11) / Exécuter Scriplet (Ctrl+F11)
 	SendMsgB_TT =	Messages de Windows (F12)
-	AutoKey_TT =	Retour arrière pour effacer
-	ManKey_TT =	Retour arrière pour effacer
-	AbortKey_TT =	Retour arrière pour effacer
-	PauseKey_TT =	Retour arrière pour effacer
+	AutoKey_TT =	Hotkey à jouer Macro
+	ManKey_TT =	Hotkey à jouer Macro "par étape par étape"
+	AbortKey_TT =	Raccourci pour arrêter la lecture
+	PauseKey_TT =	Raccourci pour interrompre la lecture
 	RecKey_TT =	Retour arrière pour effacer
 	RecNewKey_TT =	Retour arrière pour effacer
 	JoyKey_TT =	Appuyez sur un bouton sur la manette
