@@ -255,6 +255,7 @@ IniRead, WinState, %IniFilePath%, WindowOptions, WinState, 0
 IniRead, ColSizes, %IniFilePath%, WindowOptions, ColSizes, 70,130,190,50,40,85,95,95,60,40
 IniRead, ColOrder, %IniFilePath%, WindowOptions, ColOrder, 1,2,3,4,5,6,7,8,9,10
 IniRead, ShowPrev, %IniFilePath%, WindowOptions, ShowPrev, 0
+IniRead, TextWrap, %IniFilePath%, WindowOptions, TextWrap, 0
 IniRead, CustomColors, %IniFilePath%, WindowOptions, CustomColors, 0
 IniRead, OSCPos, %IniFilePath%, WindowOptions, OSCPos, X0 Y0
 IniRead, OSTrans, %IniFilePath%, WindowOptions, OSTrans, 255
@@ -916,7 +917,7 @@ Gui, chPrev:Show, W450 H600 Hide
 	TB_Define(TbPrev, hTbPrev, hIL_Icons, FixedBar.Preview, FixedBar.PrevOpt)
 ,	sciPrev := new scintilla(hSciPrev)
 ,	sciPrev.SetMarginWidthN(0, 20)
-,	sciPrev.SetWrapMode(False)
+,	sciPrev.SetWrapMode(TextWrap)
 ,	sciPrev.SetLexer(200)
 ,	sciPrev.StyleClearAll()
 ,	sciPrev.StyleSetFore(11, 0x0086B3)
@@ -940,7 +941,7 @@ Gui, chPrev:Show, W450 H600 Hide
 ,	tbPrevF.ModifyButtonInfo(1, "Text", t_Lang125),	tbPrevF.ModifyButtonInfo(1, "Image", 96)
 ,	sciPrevF := new scintilla(hSciPrevF)
 ,	sciPrevF.SetMarginWidthN(0, 20)
-,	sciPrevF.SetWrapMode(False)
+,	sciPrevF.SetWrapMode(TextWrap)
 ,	sciPrevF.SetLexer(200)
 ,	sciPrevF.StyleClearAll()
 ,	sciPrevF.StyleSetFore(11, 0x0086B3)
@@ -960,6 +961,8 @@ Gui, chPrev:Show, W450 H600 Hide
 ,	SB_SetText("Macro" A_List ": " o_AutoKey[A_List], 1)
 ,	SB_SetText("Record Keys: " RecKey "/" RecNewKey, 2)
 ,	SB_SetText("CoordMode: " CoordMouse, 3)
+,	TB_Edit(TbPrev, "TextWrap", TextWrap)
+,	TB_Edit(TbPrevF, "TextWrap", TextWrap)
 ,	TB_Edit(TbPrev, "TabIndent", TabIndent)
 ,	TB_Edit(TbPrevF, "TabIndent", TabIndent)
 	Gui, chMacro:Default
@@ -988,10 +991,12 @@ SB_SetText("CoordMode: " CoordMouse, 3)
 Gui, chMacro:Default
 return
 
+TextWrap:
 TabIndent:
 AutoRefresh:
 TB_Edit(TbPrev, A_ThisLabel, %A_ThisLabel% := !%A_ThisLabel%)
 ,	TB_Edit(TbPrevF, A_ThisLabel, %A_ThisLabel%)
+,	sciPrev.SetWrapMode(TextWrap), sciPrevF.SetWrapMode(TextWrap)
 GoSub, PrevRefresh
 return
 
@@ -1962,7 +1967,6 @@ return
 
 Ex_Checks:
 Gui, 14:Submit, NoHide
-; GuiControl, 14:Enable%Ex_AbortKey%, PauseKey
 GuiControl, 14:Enable%Ex_IfDir%, Ex_IfDirType
 GuiControl, 14:Enable%Ex_IfDir%, Ident
 GuiControl, 14:Enable%Ex_IfDir%, Title
@@ -1987,6 +1991,8 @@ Loop, %TabCount%
 Gui, 1:-Disabled
 Gui, 14:Destroy
 Gui, chMacro:Default
+	TB_Edit(TbPrev, "TabIndent", TabIndent)
+,	TB_Edit(TbPrevF, "TabIndent", TabIndent)
 return
 
 Exe_Exp:
@@ -4297,7 +4303,6 @@ GuiControl, Enable%MP%, Inf
 GuiControl, Enable%MP%, Aot
 GuiControl, Enable%MP%, CancelB
 GuiControl, Disable%MP%, DelayC
-; GuiControl, Disable%MP%, EdRept
 GuiControl, Disable%MP%, DelayX
 GuiControl, Disable%MP%, Msc
 GuiControl, Disable%MP%, Sec
@@ -9068,7 +9073,6 @@ RowSelection := LV_GetCount("Selected")
 GuiControl, 18:, Found, %t_Lang071%: %RowSelection%
 If (RowSelection)
 	LV_Modify(LV_GetNext(), "Vis")
-; GuiControl, Focus, InputList%A_List%
 return
 
 ReplaceOK:
@@ -9215,7 +9219,6 @@ Else
 		HistCheck(A_List)
 }
 GuiControl, 18:, Replaced, %t_Lang072%: %Replaces%
-; GuiControl, Focus, InputList%A_List%
 return
 
 RegExSearch:
@@ -10405,6 +10408,7 @@ AbortKey := "F8"
 ,	ComAc := 0
 ,	Send_Loop := 0
 ,	TabIndent := 1
+,	TextWrap := 0
 ,	IncPmc := 0
 ,	Exe_Exp := 0
 ,	WinState := 0
@@ -10423,6 +10427,13 @@ AbortKey := "F8"
 ,	OSCaption := 0
 ,	CustomColors := 0
 ,	OnFinishCode := 1
+,	sciPrev.SetWrapMode(TextWrap)
+,	sciPrevF.SetWrapMode(TextWrap)
+,	TB_Edit(TbPrev, "TextWrap", TextWrap)
+,	TB_Edit(TbPrevF, "TextWrap", TextWrap)
+,	TB_Edit(TbPrev, "TabIndent", TabIndent)
+,	TB_Edit(TbPrevF, "TabIndent", TabIndent)
+
 WinSet, Transparent, %OSTrans%, ahk_id %PMCOSC%
 GuiControl, 28:, OSTrans, 255
 Gui, 28:-Caption
@@ -10437,6 +10448,7 @@ GoSub, DefaultLayout
 GoSub, DefaultMod
 GoSub, ObjCreate
 GoSub, LoadData
+GoSub, PrevRefresh
 SetColOrder:
 ColOrder := "1,2,3,4,5,6,7,8,9,10"
 Loop, %TabCount%
@@ -10639,6 +10651,7 @@ IniWrite, %WinState%, %IniFilePath%, WindowOptions, WinState
 IniWrite, %ColSizes%, %IniFilePath%, WindowOptions, ColSizes
 IniWrite, %ColOrder%, %IniFilePath%, WindowOptions, ColOrder
 IniWrite, %ShowPrev%, %IniFilePath%, WindowOptions, ShowPrev
+IniWrite, %TextWrap%, %IniFilePath%, WindowOptions, TextWrap
 IniWrite, %CustomColors%, %IniFilePath%, WindowOptions, CustomColors
 IniWrite, %OSCPos%, %IniFilePath%, WindowOptions, OSCPos
 IniWrite, %OSTrans%, %IniFilePath%, WindowOptions, OSTrans
@@ -11510,11 +11523,11 @@ TB_Edit(tbEdit, "TabPlus", "", "", w_Lang072), TB_Edit(tbEdit, "TabClose", "", "
 ; Preview
 TB_Edit(tbPrev, "PrevDock", "", "", t_Lang124)
 , TB_Edit(tbPrev, "PrevCopy", "", "", c_Lang023), TB_Edit(tbPrev, "PrevRefresh", "", "", t_Lang014)
-, TB_Edit(tbPrev, "AutoRefresh", "", "", t_Lang015), TB_Edit(tbPrev, "OnTop", "", "", t_Lang016), TB_Edit(tbPrev, "TabIndent", "", "", t_Lang011)
+, TB_Edit(tbPrev, "AutoRefresh", "", "", t_Lang015), TB_Edit(tbPrev, "TextWrap", "", "", t_Lang052), TB_Edit(tbPrev, "TabIndent", "", "", t_Lang011), TB_Edit(tbPrev, "OnTop", "", "", t_Lang016)
 , TB_Edit(tbPrev, "EditScript", "", "", t_Lang138)
 , TB_Edit(tbPrevF, "PrevDock", "", "", t_Lang125)
 , TB_Edit(tbPrevF, "PrevCopy", "", "", c_Lang023), TB_Edit(tbPrevF, "PrevRefresh", "", "", t_Lang014)
-, TB_Edit(tbPrevF, "AutoRefresh", "", "", t_Lang015), TB_Edit(tbPrevF, "OnTop", "", "", t_Lang016), TB_Edit(tbPrevF, "TabIndent", "", "", t_Lang011)
+, TB_Edit(tbPrevF, "AutoRefresh", "", "", t_Lang015), TB_Edit(tbPrevF, "TextWrap", "", "", t_Lang052), TB_Edit(tbPrevF, "TabIndent", "", "", t_Lang011), TB_Edit(tbPrevF, "OnTop", "", "", t_Lang016)
 , TB_Edit(tbPrevF, "EditScript", "", "", t_Lang138)
 ; OSC
 TB_Edit(tbOSC, "OSPlay", "", "", t_Lang112), TB_Edit(tbOSC, "OSStop", "", "", t_Lang113), TB_Edit(tbOSC, "ShowPlayMenu", "", "", t_Lang114)

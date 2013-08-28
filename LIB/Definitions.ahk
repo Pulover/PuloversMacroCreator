@@ -1,14 +1,9 @@
-﻿If A_OSVersion in WIN_8,WIN_7
-	_s := Chr(8239)
-,	RecentFolder := A_AppData "\Microsoft\Windows\Recent"
-
-If A_OSVersion = WIN_VISTA
-	_s := Chr(8239)
-,	RecentFolder := A_AppData "\Microsoft\Windows\Recent"
-
-If A_OSVersion in WIN_2003,WIN_XP,WIN_2000
+﻿If A_OSVersion in WIN_2003,WIN_XP,WIN_2000
 	_s := Chr(4445)
 ,	RecentFolder := A_AppData "\..\Recent"
+Else
+	_s := Chr(8239)
+,	RecentFolder := A_AppData "\Microsoft\Windows\Recent"
 
 	ListCount1 := 0
 ,	TabCount := 1
@@ -839,7 +834,7 @@ DefaultBar := {FileOpt: "Enabled AutoSize", File: ["New=" w_Lang040 ":42", "Open
 														, "", "Import=" w_Lang075 ":29", "SaveCurrentList=" w_Lang076 ":68"]}
 FixedBar :=	{PrevOpt: "Enabled AutoSize", Preview: ["PrevDock=" t_Lang124 ":17"
 														, "", "PrevCopy=" c_Lang023 ":8", "PrevRefresh=" t_Lang014 ":37"
-														, "", "AutoRefresh=" t_Lang015 ":93", "OnTop=" t_Lang016 ":83", "TabIndent=" t_Lang011 ":87"
+														, "", "AutoRefresh=" t_Lang015 ":93", "TextWrap=" t_Lang052 ":99", "TabIndent=" t_Lang011 ":87", "OnTop=" t_Lang016 ":83"
 														, "", "EditScript=" t_Lang138 ":14"]
 			, TextOpt: "Enabled AutoSize", Text: ["OpenT=" t_Lang126 ":43", "SaveT=" t_Lang127 ":60"
 														, "", "CutT=" t_Lang128 ":9", "CopyT=" t_Lang129 ":8", "PasteT=" t_Lang130 ":45"

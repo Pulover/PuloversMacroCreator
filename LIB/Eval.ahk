@@ -39,7 +39,6 @@ Eval(x, l_Point) { ; non-recursive PRE/POST PROCESSING: I/O forms, numbers, ops,
 			{
 				I := DerefVars(LoopIndex), L := SubStr(lMatch1, 3)
 			,	Found2 := RegExReplace(Found2, "U)" lMatch, o_Loop%l_Point%[I][L])
-				OutputDebug, >>%lMatch1%|%l_Point%|%I%|%L%
 			}
 			Else
 				Found2 := DerefVars("%" Found2 "%")
