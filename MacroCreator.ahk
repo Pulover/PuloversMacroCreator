@@ -5886,7 +5886,7 @@ If TabControl = 3
 }
 If (VarName = "")
 {
-	Tooltip, %c_Lang127%, 25, 75
+	Tooltip, %c_Lang127%, 25, 65
 	return
 }
 Try
