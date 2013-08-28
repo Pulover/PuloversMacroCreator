@@ -19,9 +19,9 @@ The *Play Current Macro* button will run the active Macro immediately without ac
 
 The Playback Hotkeys are selected in the boxes at the top-right of the main window.
 
-**Auto.** (Auto Hotkey): Selects the Hotkey to reproduce the currently selected Macro the amount of times set in the Repeat box at the bottom. The Win option add Win key as a modifier. During playback the tray icon will change to playing state. The executing Macro must be finished or stopped before you can execute a new one.
+**Play** (Auto Hotkey): Selects the Hotkey to reproduce the currently selected Macro the amount of times set in the Repeat box at the bottom. The Win option add Win key as a modifier. During playback the tray icon will change to playing state. The executing Macro must be finished or stopped before you can execute a new one.
 
-**Man.** (Manual Hotkey): Selects the Hotkey to reproduce the currently selected Macro step-by-step. This is usually used to debug the Macro. If Show Info option is on a tooltip show the last and next steps will be shown next to the mouse pointer.
+**Manual** (Manual Hotkey): Selects the Hotkey to reproduce the currently selected Macro step-by-step. This is usually used to debug the Macro. If Show Info option is on a tooltip show the last and next steps will be shown next to the mouse pointer.
 
 **Stop**: Selects the Hotkey to stop execution and return it to start. You can also stop Playback by double-clicking the TrayIcon or right-clicking on it and selecting *Stop*.  
 
@@ -37,7 +37,7 @@ This small window allows you to control Playback and Recording using an interfac
 
 Macro Creator supports multiple Macros / Hotkeys. Each Macro will have its own Auto and Manual Hotkey that are shown when you add/select a Macro tab.
 
-When you press the Play Button (or when the main window is not active if "Always Active" option is on) all valid Hotkeys will be activated for all non-empty Macros. A traytip will be displayed (if *Show Info* is on) showing how many Auto. Hotkeys were activated. If any duplicate is found NO Hotkey will be activated.
+When you press the Play Button (or when the main window is not active if "Always Active" option is on) all valid Hotkeys will be activated for all non-empty Macros. A traytip will be displayed (if *Show Info* is on) showing how many Play Hotkeys were activated. If any duplicate is found NO Hotkey will be activated.
 
 ### Debugging Macros
 

@@ -66,15 +66,15 @@ To have other Macros active during Timer check the *Always Active* option or rig
 
 **Context Sensitive Hotkeys**: Makes hotkeys work depending on the type of window that is active or exists. For more information see [AutoHotkey documentation](http://l.autohotkey.net/docs).
 
-**Windows**: If checked adds the Windows Key as modifier to the Auto. Hotkey.
+**Windows**: If checked adds the Windows Key as modifier to the Play Hotkey.
 
-**Joystick**: Sets a joystick button to run the Macro. When activated the Auto. Hotkey box will switch to accept only joystick buttons. Only buttons are detected (axis, pov and others are not). The number before "Joy" is the joystick number and the number after it is the button number, so 2Joy1 is the second joystick's first button.
+**Joystick**: Sets a joystick button to run the Macro. When activated the Play Hotkey box will switch to accept only joystick buttons. Only buttons are detected (axis, pov and others are not). The number before "Joy" is the joystick number and the number after it is the button number, so 2Joy1 is the second joystick's first button.
 
 ## Hotkeys
 
-**Auto.**: Selects the Automatic Hotkey to execute the currently selected Macro
+**Play**: Selects the Automatic Hotkey to execute the currently selected Macro
 
-**Man.**: Selects the Manual Hotkey to execute the currently selected Macro step-by-step.
+**Manual**: Selects the Manual Hotkey to execute the currently selected Macro step-by-step.
 
 **Stop**: Selects the Hotkey to stop execution
 
