@@ -8,7 +8,7 @@
 ; Forum: http://www.autohotkey.com/board/topic/79763-macro-creator
 ; Version: 4.0.0
 ; Release Date: September, 2013
-; AutoHotkey Version: 1.1.12.00
+; AutoHotkey Version: 1.1.13.00
 ; Copyright © 2012-2013 Rodolfo U. Batista
 ; GNU General Public License 3.0 or higher
 ; <http://www.gnu.org/licenses/gpl-3.0.txt>
@@ -6076,6 +6076,8 @@ If FuncName in Abs,ACos,Asc,ASin,ATan,Ceil,Chr,Exp,FileExist,Floor,Func
 	Run, http://l.autohotkey.net/docs/Functions.htm#%FuncName%
 Else If (FuncName = "Array")
 	Run, http://l.autohotkey.net/docs/misc/Arrays.htm
+Else If (FuncName = "StrSplit")
+	Run, http://l.autohotkey.net/docs/commands/StringSplit.htm
 Else
 	Run, http://l.autohotkey.net/docs/commands/%FuncName%.htm
 return
@@ -10283,7 +10285,7 @@ DetectHiddenWindows, On
 WinGet, WindowState, MinMax, ahk_id %PMCWinID%
 If (WindowState <> -1)
 	WinState := WindowState
-If WinState = 0
+If WindowState = 0
 {
 	GuiGetSize(mGuiWidth, mGuiHeight), MainWinSize := "W" mGuiWidth " H" mGuiHeight
 	WinGetPos, mGuiX, mGuiY,,, ahk_id %PMCWinID%

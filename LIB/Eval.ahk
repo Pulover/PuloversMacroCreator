@@ -3,7 +3,7 @@
 ; http://www.autohotkey.com/board/topic/15675-monster
 ; Modified by Pulover for Pulover's Macro Creator to support functions
 ;###########################################################
-Eval(x) {                              ; non-recursive PRE/POST PROCESSING: I/O forms, numbers, ops, ";"
+Eval(x, l_Point) { ; non-recursive PRE/POST PROCESSING: I/O forms, numbers, ops, ";"
    Local FORM, FormF, FormI, i, W, y, y1, y2, y3, y4
    FormI := A_FormatInteger, FormF := A_FormatFloat
 
@@ -30,9 +30,27 @@ Eval(x) {                              ; non-recursive PRE/POST PROCESSING: I/O 
 	{
 		Found := RegExReplace(Found, "[\[|\]]", "\$0")
 		If Found2 is not Number
-			Found2 := DerefVars("%" Found2 "%")
+		{
+			If (Found2 = "A_Index")
+				Found2 := LoopIndex
+			Else If (Found2 = "ErrorLevel")
+				Found2 := LastError
+			Else If RegExMatch(Found2, "i)(A_Loop\w+)", lMatch)
+			{
+				I := DerefVars(LoopIndex), L := SubStr(lMatch1, 3)
+			,	Found2 := RegExReplace(Found2, "U)" lMatch, o_Loop%l_Point%[I][L])
+				OutputDebug, >>%lMatch1%|%l_Point%|%I%|%L%
+			}
+			Else
+				Found2 := DerefVars("%" Found2 "%")
+		}
 		y := %Found1%[Found2]
 		x := RegExReplace(x, Found, y)
+	}
+	If (y <> "")
+	{
+		If y is not Number
+			return x
 	}
    SetFormat Integer, D                ; decimal intermediate results!
    RegExMatch(x, "\$(b|h|x|)(\d*[eEgG]?)", y)

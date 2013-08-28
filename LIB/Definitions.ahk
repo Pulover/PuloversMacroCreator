@@ -577,6 +577,7 @@ Sqrt
 StrGet
 StrLen
 StrPut
+StrSplit
 SubStr
 Tan
 Trim

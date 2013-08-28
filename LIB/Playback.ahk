@@ -316,7 +316,7 @@
 							If IsFunc("Eval")
 							{
 								Monster := "Eval"
-							,	VarValue := %Monster%(VarValue)
+							,	VarValue := %Monster%(VarValue, PointMarker)
 							}
 						}
 						AssignVar(VarName, Oper, VarValue)
@@ -710,7 +710,7 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC)
 							If IsFunc("Eval")
 							{
 								Monster := "Eval"
-							,	VarValue := %Monster%(VarValue)
+							,	VarValue := %Monster%(VarValue, PointMarker)
 							}
 						}
 						AssignVar(VarName, Oper, VarValue)
@@ -901,7 +901,7 @@ RunExtFunc(File, FuncName, Params*)
 	return SubStr(Result, 1, -1)
 }
 
-IfStatement(ThisError, Point)
+IfStatement(ThisError, l_Point)
 {
 	global
 	
@@ -1011,12 +1011,12 @@ IfStatement(ThisError, Point)
 		}
 		Else If (Action = If11)
 		{
-			This_Point := Point
+			This_Point := l_Point
 			GoSub, SplitStep
 			If RegExMatch(Par1, "A_Loop\w+")
 			{
 				I := DerefVars(LoopIndex), L := SubStr(Par1, 3)
-			,	This_Par := o_Loop%Point%[I][L]
+			,	This_Par := o_Loop%l_Point%[I][L]
 			,	Par1 := "This_Par"
 			}
 			IfInString, %Par1%, %Par2%
@@ -1026,12 +1026,12 @@ IfStatement(ThisError, Point)
 		}
 		Else If (Action = If12)
 		{
-			This_Point := Point
+			This_Point := l_Point
 			GoSub, SplitStep
 			If RegExMatch(Par1, "A_Loop\w+")
 			{
 				I := DerefVars(LoopIndex), L := SubStr(Par1, 3)
-			,	This_Par := o_Loop%Point%[I][L]
+			,	This_Par := o_Loop%l_Point%[I][L]
 			,	Par1 := "This_Par"
 			}
 			IfNotInString, %Par1%, %Par2%
@@ -1063,7 +1063,7 @@ IfStatement(ThisError, Point)
 			If IsFunc("Eval")
 			{
 				Monster := "Eval"
-				If %Monster%(Step)
+				If %Monster%(Step, PointMarker)
 					ThisError := 0
 				Else
 					ThisError++
@@ -1175,10 +1175,10 @@ SplitWin(Window)
 	return WinPars
 }
 
-CheckVars(MatchList, Point="")
+CheckVars(Match_List, l_Point="")
 {
 	global
-	Loop, Parse, MatchList, |
+	Loop, Parse, Match_List, |
 	{
 		If InStr(%A_LoopField%, "%A_Index%")
 			StringReplace, %A_LoopField%, %A_LoopField%, `%A_Index`%, `%LoopIndex`%, All
@@ -1187,7 +1187,7 @@ CheckVars(MatchList, Point="")
 		While, RegExMatch(%A_LoopField%, "i)%(A_Loop\w+)%", lMatch)
 		{
 			I := DerefVars(LoopIndex), L := SubStr(lMatch1, 3)
-		,	%A_LoopField% := RegExReplace(%A_LoopField%, "U)" lMatch, o_Loop%Point%[I][L])
+		,	%A_LoopField% := RegExReplace(%A_LoopField%, "U)" lMatch, o_Loop%l_Point%[I][L])
 		}
 		If RegExMatch(%A_LoopField%, "sU)%\s([\w%]+)\((.*)\)")  ; Functions
 		{
@@ -1218,7 +1218,7 @@ CheckVars(MatchList, Point="")
 		{
 			While, RegExMatch(%A_LoopField%, "mU)%\s+([\w%]*)(``,|$)", Found)
 				%A_LoopField% := RegExReplace(%A_LoopField%, Found, %Found1%)
-			While, RegExMatch(%A_LoopField%, "mU)%\s+(\S+)\[(\S+)\]", Found)
+			While, RegExMatch(%A_LoopField%, "mU)%\s+(\S+)\[(\S+)\]", Found) ; Arrays
 			{
 				Found := RegExReplace(Found, "[\[|\]]", "\$0")
 				If Found2 is not Number
@@ -1230,7 +1230,7 @@ CheckVars(MatchList, Point="")
 						While, RegExMatch(Found2, "i)(A_Loop\w+)", lMatch)
 						{
 							I := DerefVars(LoopIndex), L := SubStr(lMatch1, 3)
-						,	Found2 := RegExReplace(Found2, "U)" lMatch, o_Loop%Point%[I][L])
+						,	Found2 := RegExReplace(Found2, "U)" lMatch, o_Loop%l_Point%[I][L])
 						}
 					}
 					Else
@@ -1242,17 +1242,17 @@ CheckVars(MatchList, Point="")
 	}
 }
 
-DerefVars(String)
+DerefVars(v_String)
 {
 	global
 	
-	StringReplace, String, String, ```%, ¤, All
-	While, RegExMatch(String, "%(\w+)%", rMatch)
+	StringReplace, v_String, v_String, ```%, ¤, All
+	While, RegExMatch(v_String, "%(\w+)%", rMatch)
 	{
 		FoundVar := RegExReplace(%rMatch1%, "%", "¤")
 	,	FoundVar := RegExReplace(FoundVar, "\$", "$$$$")
-	,	String := RegExReplace(String, rMatch, FoundVar)
+	,	v_String := RegExReplace(v_String, rMatch, FoundVar)
 	}
-	return RegExReplace(String, "¤", "%")
+	return RegExReplace(v_String, "¤", "%")
 }
 
