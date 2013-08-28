@@ -483,16 +483,16 @@ EnvMult, Var, Value
 EnvGet, OutputVar, EnvVarName
 EnvSet, EnvVar, Value
 EnvUpdate
-SetCapsLockState, State
-SetNumLockState, State
-SetScrollLockState, State
 FormatTime, OutputVar, YYYYMMDDHH24MISS, Format
 Transform, OutputVar, Cmd, Value1, Value2
 Random, OutputVar, Min, Max
 BlockInput, Mode
-UrlDownloadToFile, URL, Filename
 CoordMode, ToolTip|Pixel|Mouse|Caret|Menu, Screen|Window|Client
 SendLevel, Level
+SetCapsLockState, State
+SetNumLockState, State
+SetScrollLockState, State
+UrlDownloadToFile, URL, Filename
 Break, LoopNumber
 Continue, LoopNumber
 Pause

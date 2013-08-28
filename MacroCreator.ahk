@@ -842,8 +842,7 @@ Gui, chMacro:Default
 LV_SetImageList(hIL_Icons)
 Loop, 10
 	LV_ModifyCol(A_Index, Col_%A_Index%)
-OutputDebug, %ColOrder%
-	LVOrder_Set(10, ColOrder, ListID1)
+LVOrder_Set(10, ColOrder, ListID1)
 Gui, chMacro:Submit
 GuiControl, chMacro:Focus, InputList%A_List%
 Gui, 1:Default
@@ -10817,9 +10816,10 @@ Loop, % LV_GetCount()
 :	(Type = "Pause") ? LV_Modify(A_Index, "Icon" 56)
 :	(Type = "Return") ? LV_Modify(A_Index, "Icon" 66)
 :	(Type = "ExitApp") ? LV_Modify(A_Index, "Icon" 15)
+:	(InStr(Type, "Url")) ? LV_Modify(A_Index, "Icon" 98)
 :	(InStr(Type, "LockState") || InStr(Type, "Time") || InStr(Type, "Transform")
 	|| InStr(Type, "Random") || InStr(Type, "ClipWait") || InStr(Type, "Block")
-	|| InStr(Type, "Url") || InStr(Type, "Status") || InStr(Type, "SendLevel") || InStr(Type, "CoordMode")) ?  LV_Modify(A_Index, "Icon" 38)
+	|| InStr(Type, "Status") || InStr(Type, "SendLevel") || InStr(Type, "CoordMode")) ?  LV_Modify(A_Index, "Icon" 38)
 :	""
 }
 Critical, Off
