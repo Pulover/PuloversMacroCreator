@@ -25,13 +25,13 @@ http://www.autohotkey.com/board/topic/37147-ilbutton-image-buttons
 just me for LV_Colors Class, GuiCtrlAddTab and for updating ILButton to 64bit.
 http://www.autohotkey.com/board/topic/88699-class-lv-colors
 
-diebagger and Obi-Wahn for the function to move rows.
+diebagger and Obi-Wahn for the function to move rows (no longer used).
 http://www.autohotkey.com/board/topic/56396-techdemo-move-rows-in-a-listview
 
 Micahs for the base code of the Drag-Rows function.
 http://www.autohotkey.com/board/topic/30486-listview-tooltip-on-mouse-hover/?p=280843
 
-Kdoske & trueski for the CSV functions.
+Kdoske & trueski for the CSV functions (no longer used).
 http://www.autohotkey.com/board/topic/51681-csv-library-lib
 http://www.autohotkey.com/board/topic/39392-fairly-elaborate-csv-functions
 
@@ -52,6 +52,9 @@ http://www.autohotkey.com/board/topic/49214-ahk-ahk-l-forms-framework-08/
 
 rbrtryn for the ChooseColor function.
 http://www.autohotkey.com/board/topic/91229-windows-color-picker-plus/
+
+PhiLho and skwire for the function to Get/Set the order of columns.
+http://www.autohotkey.com/board/topic/11926-can-you-move-a-listview-column-programmatically/#entry237340
 
 fincs for GenDocs.
 http://www.autohotkey.com/board/topic/71751-gendocs-v30-alpha002
@@ -613,6 +616,19 @@ If (MainWinSize = "W H")
 	MainWinSize := "W920 H630"
 If (MainWinPos = "X Y")
 	MainWinPos := "Center"
+Else
+{
+	mGuiX := RegExReplace(MainWinPos, "X(\d+).*", "$1"), mGuiY := RegExReplace(MainWinPos, ".*Y(\d+)", "$1")
+	If (mGuiX < 0)
+		mGuiX := 0
+	Else If (mGuiX >= A_ScreenWidth)
+		mGuiX := A_ScreenWidth // 2
+	If (mGuiY < 0)
+		mGuiY := 0
+	Else If (mGuiY >= A_ScreenHeight)
+		mGuiY := A_ScreenHeight // 2
+	MainWinPos := "X" mGuiX " Y" mGuiY
+}
 Gui, Show, %MainWinSize% %MainWinPos% Hide
 GoSub, b_Start
 GoSub, DefineControls
@@ -2626,15 +2642,14 @@ Gui, 26:Add, Link, y+0, Chris and Lexikos for <a href="http://www.autohotkey.com
 Gui, 26:Add, Link, y+0, tic (Tariq Porter) for his <a href="http://www.autohotkey.com/board/topic/29449-gdi-standard-library">GDI+ Library</a>.
 Gui, 26:Add, Link, y+0, tkoi && majkinetor for the <a href="http://www.autohotkey.com/board/topic/37147-ilbutton-image-buttons">ILButton function</a>.
 Gui, 26:Add, Link, y+0, just me for <a href="http://www.autohotkey.com/board/topic/88699-class-lv-colors">LV_Colors Class</a>, GuiCtrlAddTab and for updating ILButton to 64bit.
-Gui, 26:Add, Link, y+0, diebagger and Obi-Wahn for the <a href="http://www.autohotkey.com/board/topic/56396-techdemo-move-rows-in-a-listview">function to move rows</a>.
 Gui, 26:Add, Link, y+0, Micahs for the <a href="http://www.autohotkey.com/board/topic/30486-listview-tooltip-on-mouse-hover/?p=280843">base code</a> of the Drag-Rows function.
-Gui, 26:Add, Link, y+0, Kdoske && trueski for the <a href="http://www.autohotkey.com/board/topic/51681-csv-library-lib">CSV functions</a>.
 Gui, 26:Add, Link, y+0, jaco0646 for the <a href="http://www.autohotkey.com/board/topic/47439-user-defined-dynamic-hotkeys">function</a> to make hotkey controls detect other keys.
 Gui, 26:Add, Link, y+0, Laszlo for the <a href="http://www.autohotkey.com/board/topic/15675-monster">Monster function</a> to solve expressions.
 Gui, 26:Add, Link, y+0, Jethrow for the <a href="http://www.autohotkey.com/board/topic/47052-basic-webpage-controls">IEGet Function</a>.
 Gui, 26:Add, Link, y+0, RaptorX for the <a href="http://www.autohotkey.com/board/topic/85928-wrapper-scintilla-wrapper">Scintilla Wrapper for AHK</a>.
 Gui, 26:Add, Link, y+0, majkinetor for the <a href="http://www.autohotkey.com/board/topic/49214-ahk-ahk-l-forms-framework-08/">Dlg_Color</a> function.
 Gui, 26:Add, Link, y+0, rbrtryn for the <a href="http://www.autohotkey.com/board/topic/91229-windows-color-picker-plus/">ChooseColor</a> function.
+Gui, 26:Add, Link, y+0, PhiLho and skwire for the <a href="http://www.autohotkey.com/board/topic/11926-can-you-move-a-listview-column-programmatically/#entry237340">function</a> to Get/Set the order of columns.
 Gui, 26:Add, Link, y+0, fincs for <a href="http://www.autohotkey.com/board/topic/71751-gendocs-v30-alpha002">GenDocs</a>.
 Gui, 26:Add, Link, y+0, T800 for <a href="http://www.autohotkey.com/board/topic/17984-html-help-utils">Html Help utils</a>.
 Gui, 26:Add, Text, y+0 w380, Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jörg Schmalenberger (German).
@@ -7886,7 +7901,6 @@ return
 
 LoadData:
 Gui, 1:Default
-OutputDebug, % A_List "|" o_AutoKey[A_List]
 If InStr(o_AutoKey[A_List], "Joy")
 {
 	TB_Edit(TbSettings, "SetJoyButton", JoyHK := 1)
