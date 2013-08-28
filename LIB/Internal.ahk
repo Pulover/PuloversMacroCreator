@@ -327,6 +327,7 @@ GuiAddLV(ident)
 	LV_SetImageList(hIL_Icons)
 	Loop, 10
 		LV_ModifyCol(A_Index, Col_%A_Index%)
+	LVOrder_Set(10, ColOrder, ListID%ident%)
 }
 
 SelectByType(SelType, Col=6)

@@ -33,6 +33,9 @@
 	Import(SelectedFile, DL="`n", New="1")
 	{
 		local FoundC
+
+		Gui, chMacro:Submit, NoHide
+		ColOrder := LVOrder_Get(10, ListID%A_List%)
 		If New
 		{
 			GoSub, DelLists
@@ -54,9 +57,11 @@
 			FoundC := PMC.Load(SelectedFile%A_Index%)
 			Loop, %FoundC%
 			{
-				TabCount++
+				Gui, 1:Submit, NoHide
+				Gui, chMacro:Default
+				Gui, chMacro:Submit, NoHide
+				TabCount++, GuiCtrlAddTab(TabSel, "Macro" TabCount)
 				Gui, chMacro:ListView, InputList%TabCount%
-				GuiCtrlAddTab(TabSel, "Macro" TabCount)
 				GuiAddLV(TabCount)
 				Menu, CopyTo, Add, Macro%TabCount%, CopyList
 				PMC.LVLoad("InputList" TabCount, PmcCode[A_Index])

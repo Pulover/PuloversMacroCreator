@@ -143,8 +143,8 @@
 	w_Lang003 =	Options
 	w_Lang004 =	Record
 	w_Lang005 =	Play
-	w_Lang006 =	Auto.
-	w_Lang007 =	Man.
+	w_Lang006 =	Run
+	w_Lang007 =	Manual
 	w_Lang008 =	Stop
 	w_Lang009 =	Display controls toolbar
 	w_Lang010 =	Pause

@@ -247,9 +247,11 @@ IniRead, TabIndent, %IniFilePath%, ExportOptions, TabIndent, 1
 IniRead, IncPmc, %IniFilePath%, ExportOptions, IncPmc, 0
 IniRead, Exe_Exp, %IniFilePath%, ExportOptions, Exe_Exp, 0
 IniRead, MainWinSize, %IniFilePath%, WindowOptions, MainWinSize, W900 H630
-IniRead, ShowPrev, %IniFilePath%, WindowOptions, ShowPrev, 0
+IniRead, MainWinPos, %IniFilePath%, WindowOptions, MainWinPos, Center
 IniRead, WinState, %IniFilePath%, WindowOptions, WinState, 0
 IniRead, ColSizes, %IniFilePath%, WindowOptions, ColSizes, 70,130,190,50,40,85,95,95,60,40
+IniRead, ColOrder, %IniFilePath%, WindowOptions, ColOrder, 1,2,3,4,5,6,7,8,9,10
+IniRead, ShowPrev, %IniFilePath%, WindowOptions, ShowPrev, 0
 IniRead, CustomColors, %IniFilePath%, WindowOptions, CustomColors, 0
 IniRead, OSCPos, %IniFilePath%, WindowOptions, OSCPos, X0 Y0
 IniRead, OSTrans, %IniFilePath%, WindowOptions, OSTrans, 255
@@ -403,7 +405,7 @@ GoSub, LoadLang
 
 GoSub, ObjCreate
 ToggleMode := ToggleC ? "T" : "P"
-If InStr(ColSizes, "0,0,0,0,0,0,0,0,0,0")
+If (ColSizes = "0,0,0,0,0,0,0,0,0,0")
 	ColSizes := "70,130,190,50,40,85,95,95,60,40"
 Loop, Parse, ColSizes, `,
 	Col_%A_Index% := A_LoopField
@@ -607,7 +609,7 @@ Gui, Add, Text, W2 H25 ys-3 x+5 0x11 vSeparator4
 Gui, Add, Text, -Wrap ys x+5 W100 vCoordTip gOptions, CoordMode: %CoordMouse%
 GuiControl,, WinKey, % (InStr(o_AutoKey[1], "#")) ? 1 : 0
 Gui, Submit
-Gui, Show, %MainWinSize% Hide
+Gui, Show, %MainWinSize% %MainWinPos% Hide
 GoSub, b_Start
 GoSub, DefineControls
 GoSub, DefineToolbars
@@ -674,7 +676,7 @@ Else
 	HistoryMacro1.Add()
 }
 Menu, Tray, Icon
-Gui, 1:Show, % ((WinState) ? "Maximize" : MainWinSize) ((HideWin) ? "Hide" : ""), %AppName% v%CurrentVersion% %CurrentFileName%
+Gui, 1:Show, % ((WinState) ? "Maximize" : MainWinSize " " MainWinPos) ((HideWin) ? "Hide" : ""), %AppName% v%CurrentVersion% %CurrentFileName%
 GoSub, LoadData
 TB_Edit(tbFile, "Preview", ShowPrev)
 ,	TB_Edit(TbSettings, "HideMainWin", HideMainWin), TB_Edit(TbSettings, "OnScCtrl", OnScCtrl)
@@ -840,6 +842,8 @@ Gui, chMacro:Default
 LV_SetImageList(hIL_Icons)
 Loop, 10
 	LV_ModifyCol(A_Index, Col_%A_Index%)
+OutputDebug, %ColOrder%
+	LVOrder_Set(10, ColOrder, ListID1)
 Gui, chMacro:Submit
 GuiControl, chMacro:Focus, InputList%A_List%
 Gui, 1:Default
@@ -7789,8 +7793,9 @@ return
 TabPlus:
 Gui, 1:Submit, NoHide
 Gui, chMacro:Default
-TabCount++
-GuiCtrlAddTab(TabSel, "Macro" TabCount)
+Gui, chMacro:Submit, NoHide
+ColOrder := LVOrder_Get(10, ListID%A_List%), TabCount++
+,	GuiCtrlAddTab(TabSel, "Macro" TabCount)
 Gui, chMacro:ListView, InputList%TabCount%
 HistoryMacro%TabCount% := new LV_Rows(), HistoryMacro%TabCount%.Add()
 Gui, chMacro:ListView, InputList%A_List%
@@ -10261,13 +10266,19 @@ WinGet, WindowState, MinMax, ahk_id %PMCWinID%
 If (WindowState <> -1)
 	WinState := WindowState
 If WinState = 0
+{
 	GuiGetSize(mGuiWidth, mGuiHeight), MainWinSize := "W" mGuiWidth " H" mGuiHeight
+	WinGetPos, mGuiX, mGuiY,,, ahk_id %PMCWinID%
+	MainWinPos := "X" mGuiX " Y" mGuiY
+}
 ColSizes := ""
 Loop % LV_GetCount("Col")
 {
     SendMessage, 4125, A_Index - 1, 0,, % "ahk_id " ListID%A_List%
 	ColSizes .= Floor(ErrorLevel / Round(A_ScreenDPI / 96, 2)) ","
 }
+StringTrimRight, ColSizes, ColSizes, 1
+ColOrder := LVOrder_Get(10, ListID%A_List%)
 GoSub, GetHotkeys
 If (KeepDefKeys = 1)
 	AutoKey := DefAutoKey, ManKey := DefManKey
@@ -10406,6 +10417,10 @@ GoSub, DefaultLayout
 GoSub, DefaultMod
 GoSub, ObjCreate
 GoSub, LoadData
+SetColOrder:
+ColOrder := "1,2,3,4,5,6,7,8,9,10"
+Loop, %TabCount%
+	LVOrder_Set(10, ColOrder, ListID%A_Index%)
 SetColSizes:
 ColSizes := "70,130,190,50,40,85,95,95,60,40"
 Loop, Parse, ColSizes, `,
@@ -10599,9 +10614,11 @@ IniWrite, %TabIndent%, %IniFilePath%, ExportOptions, TabIndent
 IniWrite, %IncPmc%, %IniFilePath%, ExportOptions, IncPmc
 IniWrite, %Exe_Exp%, %IniFilePath%, ExportOptions, Exe_Exp
 IniWrite, %MainWinSize%, %IniFilePath%, WindowOptions, MainWinSize
-IniWrite, %ShowPrev%, %IniFilePath%, WindowOptions, ShowPrev
+IniWrite, %MainWinPos%, %IniFilePath%, WindowOptions, MainWinPos
 IniWrite, %WinState%, %IniFilePath%, WindowOptions, WinState
 IniWrite, %ColSizes%, %IniFilePath%, WindowOptions, ColSizes
+IniWrite, %ColOrder%, %IniFilePath%, WindowOptions, ColOrder
+IniWrite, %ShowPrev%, %IniFilePath%, WindowOptions, ShowPrev
 IniWrite, %CustomColors%, %IniFilePath%, WindowOptions, CustomColors
 IniWrite, %OSCPos%, %IniFilePath%, WindowOptions, OSCPos
 IniWrite, %OSTrans%, %IniFilePath%, WindowOptions, OSTrans
