@@ -246,7 +246,7 @@ IniRead, Send_Loop, %IniFilePath%, ExportOptions, Send_Loop, 0
 IniRead, TabIndent, %IniFilePath%, ExportOptions, TabIndent, 1
 IniRead, IncPmc, %IniFilePath%, ExportOptions, IncPmc, 0
 IniRead, Exe_Exp, %IniFilePath%, ExportOptions, Exe_Exp, 0
-IniRead, MainWinSize, %IniFilePath%, WindowOptions, MainWinSize, W900 H630
+IniRead, MainWinSize, %IniFilePath%, WindowOptions, MainWinSize, W920 H630
 IniRead, MainWinPos, %IniFilePath%, WindowOptions, MainWinPos, Center
 IniRead, WinState, %IniFilePath%, WindowOptions, WinState, 0
 IniRead, ColSizes, %IniFilePath%, WindowOptions, ColSizes, 70,130,190,50,40,85,95,95,60,40
@@ -610,7 +610,7 @@ Gui, Add, Text, -Wrap ys x+5 W100 vCoordTip gOptions, CoordMode: %CoordMouse%
 GuiControl,, WinKey, % (InStr(o_AutoKey[1], "#")) ? 1 : 0
 Gui, Submit
 If (MainWinSize = "W H")
-	MainWinSize := "W900 H630"
+	MainWinSize := "W920 H630"
 If (MainWinPos = "X Y")
 	MainWinPos := "Center"
 Gui, Show, %MainWinSize% %MainWinPos% Hide
