@@ -4869,7 +4869,7 @@ If InStr(WinCom, "Get")
 {
 	If (VarName = "")
 	{
-		Tooltip, %c_Lang127%, 15, 210
+		Tooltip, %c_Lang127%, 25, 220
 		return
 	}
 	Try
@@ -6337,7 +6337,7 @@ If ((ControlCmd = cType23) || (ControlCmd = cType27)
 {
 	If (VarName = "")
 	{
-		Tooltip, %c_Lang127%, 15, 160
+		Tooltip, %c_Lang127%, 25, 185
 		return
 	}
 	Try
@@ -10257,10 +10257,10 @@ If ((ListCount > 0) && (SavePrompt))
 		return
 }
 DetectHiddenWindows, On
-WinGet, WinState, MinMax, ahk_id %PMCWinID%
-If WinState = -1
-	WinState := 0
-Else If WinState = 0
+WinGet, WindowState, MinMax, ahk_id %PMCWinID%
+If (WindowState <> -1)
+	WinState := WindowState
+If WinState = 0
 	GuiGetSize(mGuiWidth, mGuiHeight), MainWinSize := "W" mGuiWidth " H" mGuiHeight
 ColSizes := ""
 Loop % LV_GetCount("Col")
@@ -10760,7 +10760,8 @@ Loop, % LV_GetCount()
 			ActLv .= (ShowActIdent) ? "   " : ""
 	}
 	LV_Modify(A_Index, "", A_Index " " IdxLv)
-,	RegExMatch(Type, cType3 "|" cType4 "|" cType13) ? LV_Modify(A_Index, "Icon" 39)
+,	(Action = "[Text]") ? LV_Modify(A_Index, "Icon" 71)
+:	RegExMatch(Type, cType3 "|" cType4 "|" cType13) ? LV_Modify(A_Index, "Icon" 39)
 :	(Type = cType5) ? LV_Modify(A_Index, "Icon" 46)
 :	(Type = cType6) ? LV_Modify(A_Index, "Icon" 11)
 :	(Type = cType14) ? LV_Modify(A_Index, "Icon" 78)
@@ -10779,12 +10780,12 @@ Loop, % LV_GetCount()
 :	(Type = cType43) ? LV_Modify(A_Index, "Icon" 34)
 :	(Type = cType35) ? LV_Modify(A_Index, "Icon" 35)
 :	RegExMatch(Type, cType36 "|" cType37) ? LV_Modify(A_Index, "Icon" 22)
-:	LV_Modify(A_Index, "Icon" 71)
+:	LV_Modify(A_Index, "Icon" 94)
 	RegExMatch(Type, cType32 "|" cType33) ? LV_Modify(A_Index, "Icon" 26)
 :	RegExMatch(Type, cType11 "|" cType14 "|Run|RunWait|RunAs") ? LV_Modify(A_Index, "Icon" 59)
 :	RegExMatch(Type, "Process") ? LV_Modify(A_Index, "Icon" 51)
 :	RegExMatch(Type, "Shutdown") ? LV_Modify(A_Index, "Icon" 63)
-:	(InStr(Type, "Sort") || InStr(Type, "String") || InStr(Type, "Split")) ? LV_Modify(A_Index, "Icon" 5)
+:	(InStr(Type, "Sort") || InStr(Type, "String") || InStr(Type, "Split")) ? LV_Modify(A_Index, "Icon" 97)
 :	(InStr(Type, "InputBox") || InStr(Type, "Msg") || InStr(Type, "Tip")
 	|| InStr(Type, "Progress") || InStr(Type, "Splash")) ? LV_Modify(A_Index, "Icon" 11)
 :	InStr(Type, "Win") ? LV_Modify(A_Index, "Icon" 81)

@@ -17,59 +17,62 @@
 
 CreateIconsDll(File, Folder)
 {
-	IfNotExist, %File%
-		DllCreateEmpty(File)
+    IfNotExist, %File%
+        DllCreateEmpty(File)
 
-	Index := 1
-	; Creating and closing the module just once seems to corrupt the dll when adding +42 icons.
-	Loop, %Folder%\*.ico
-	{
-		module := DllCall("BeginUpdateResource", "str", File, "uint", 0, "ptr")
-		Sleep, 50  ; Some icons are not seen by AHK without these sleeps.
-		Index := ReplaceIcon(module, A_LoopFileLongPath, Index)
-		Sleep, 50
-		DllCall("EndUpdateResource", "ptr", module, "uint", 0)
-	}
-	return Index - 1
+    Index := 1, Counter := 0
+    module := DllCall("BeginUpdateResource", "str", File, "uint", 0, "ptr")
+    Loop, %Folder%\*.ico
+    {
+        Counter++, Index := ReplaceIcon(module, A_LoopFileLongPath, Index)
+        If Counter = 40
+        {
+            DllCall("EndUpdateResource", "ptr", module, "uint", 0)
+        ,   module := DllCall("BeginUpdateResource", "str", File, "uint", 0, "ptr")
+        ,   Counter := 0
+        }
+    }
+    DllCall("EndUpdateResource", "ptr", module, "uint", 0)
+    return Index - 1
 }
 
 ReplaceIcon(re, IcoFile, iconID)
 {
-	f := FileOpen(IcoFile, "r")
-	if !IsObject(f)
-		return false
-	
-	VarSetCapacity(igh, 8), f.RawRead(igh, 6)
-	if NumGet(igh, 0, "UShort") != 0 || NumGet(igh, 2, "UShort") != 1
-		return false
-	
-	wCount := NumGet(igh, 4, "UShort")
-	
-	VarSetCapacity(rsrcIconGroup, rsrcIconGroupSize := 6 + wCount*14)
-	NumPut(NumGet(igh, "Int64"), rsrcIconGroup, "Int64") ; fast copy
-	
-	ige := &rsrcIconGroup + 6
-	
-	Loop, %wCount%
-	{
-		thisID := (iconID-1) + A_Index
-		
-		f.RawRead(ige+0, 12) ; read all but the offset
-		NumPut(thisID, ige+12, "UShort")
-		imgOffset := f.ReadUInt()
-		oldPos := f.Pos
-		f.Pos := imgOffset
-		
-		VarSetCapacity(iconData, iconDataSize := NumGet(ige+8, "UInt"))
-		f.RawRead(iconData, iconDataSize)
-		f.Pos := oldPos
-		
-		DllCall("UpdateResource", "ptr", re, "ptr", 3, "ptr", thisID, "ushort", 0x409, "ptr", &iconData, "uint", iconDataSize, "uint")
-		
-		ige += 14
-	}
-	
-	return thisID + 1, DllCall("UpdateResource", "ptr", re, "ptr", 14, "ptr", iconID, "ushort", 0x409, "ptr", &rsrcIconGroup, "uint", rsrcIconGroupSize, "uint")
+    f := FileOpen(IcoFile, "r")
+    if !IsObject(f)
+        return false
+    
+    VarSetCapacity(igh, 8), f.RawRead(igh, 6)
+    if NumGet(igh, 0, "UShort") != 0 || NumGet(igh, 2, "UShort") != 1
+        return false
+    
+    wCount := NumGet(igh, 4, "UShort")
+    
+,   VarSetCapacity(rsrcIconGroup, rsrcIconGroupSize := 6 + wCount*14)
+,   NumPut(NumGet(igh, "Int64"), rsrcIconGroup, "Int64") ; fast copy
+    
+,   ige := &rsrcIconGroup + 6
+    
+    Loop, %wCount%
+    {
+        thisID := (iconID-1) + A_Index
+        
+    ,   f.RawRead(ige+0, 12) ; read all but the offset
+    ,   NumPut(thisID, ige+12, "UShort")
+    ,   imgOffset := f.ReadUInt()
+    ,   oldPos := f.Pos
+    ,   f.Pos := imgOffset
+        
+    ,   VarSetCapacity(iconData, iconDataSize := NumGet(ige+8, "UInt"))
+    ,   f.RawRead(iconData, iconDataSize)
+    ,   f.Pos := oldPos
+        
+    ,   DllCall("UpdateResource", "ptr", re, "ptr", 3, "ptr", thisID, "ushort", 0x409, "ptr", &iconData, "uint", iconDataSize, "uint")
+        
+    ,   ige += 14
+    }
+    
+    return thisID + 1, DllCall("UpdateResource", "ptr", re, "ptr", 14, "ptr", iconID, "ushort", 0x409, "ptr", &rsrcIconGroup, "uint", rsrcIconGroupSize, "uint")
 }
 
 DllCreateEmpty(F="empty.dll") { ; www.autohotkey.com/forum/viewtopic.php?p=381161#381161       
