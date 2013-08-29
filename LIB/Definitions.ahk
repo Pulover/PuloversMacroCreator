@@ -848,6 +848,9 @@ FixedBar :=	{PrevOpt: "Enabled AutoSize", Preview: ["PrevDock=" t_Lang124 ":17"
 														, "", "ProgBarToggle=" t_Lang119 ":52"
 														, "", "SlowKeyToggle=" t_Lang120 ":64", "FastKeyToggle=" t_Lang121 ":86"
 														, "", "ToggleTB=" t_Lang122 ":81", "ShowHideTB=" t_Lang123 ":82"]}
+
+TbFile_ID := 1, TbRecPlay_ID := 2, TbCommand_ID := 3, TbSettings_ID := 5, TbEdit_ID := 9
+
 Loop, 26
 	KeybdList .= Chr(A_Index+96) "¢" ((A_Index = 1) ? "¢" : "")
 Loop, 26

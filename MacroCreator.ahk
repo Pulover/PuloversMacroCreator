@@ -803,8 +803,9 @@ TbText:
 TbOSC:
 If (A_GuiEvent = "N")
 {
+	tbEventCode  := NumGet(A_EventInfo + (A_PtrSize * 2), 0, "Int")
 	TbPtr := %A_ThisLabel%
-	,	ErrorLevel := TbPtr.OnNotify(A_EventInfo, MX, MY, bLabel, ID)
+,	ErrorLevel := TbPtr.OnNotify(A_EventInfo, MX, MY, bLabel, ID)
 	If (bLabel)
 		ShowMenu(bLabel, MX, MY)
 	If (ErrorLevel = 2) ; TBN_RESET
@@ -814,27 +815,29 @@ If (A_GuiEvent = "N")
 	,	TB_Edit(TbSettings, "SetWin", (IfDirectContext = "None") ? 0 : 1)
 	,	TB_Edit(TbSettings, "SetJoyButton", JoyHK), TB_Edit(TbOSC, "ProgBarToggle", ShowProgBar)
 	}
+	Else If (ErrorLevel = 1)
+		TB_IdealSize(TbPtr, %A_ThisLabel%_ID)
 }
 return
 
 RB_Notify:
 If (A_GuiEvent = "N")
 {
-	EventCode := NumGet(A_EventInfo + (A_PtrSize * 2), 0, "Int")
+	rbEventCode := NumGet(A_EventInfo + (A_PtrSize * 2), 0, "Int")
 	If (RbMain.OnNotify(A_EventInfo, tbMX, tbMY, BandID))
 		ShowChevronMenu(RbMain, BandID, tbMX, tbMY)
 	Else If (RbMacro.OnNotify(A_EventInfo, tbMX, tbMY, BandID))
 		ShowChevronMenu(RbMacro, BandID, tbMX)
-	If (EventCode = -831) ; RBN_HEIGHTCHANGE
+	If (rbEventCode = -831) ; RBN_HEIGHTCHANGE
 	{
 		RowsCount := RbMain.GetRowCount()
 		MacroOffset := (RowsCount = 2) ? 90 : ((RowsCount = 1) ? 65 : 120)
 		GuiControl, 1:Move, cRbMacro, % (RowsCount = 2) ? "y55" : (RowsCount = 1 ? "y30" : "y85")
 		GoSub, GuiSize
 	}
-	If (EventCode = -835) ; RBN_BEGINDRAG
+	If (rbEventCode = -835) ; RBN_BEGINDRAG
 		OnMessage(WM_NOTIFY, ""), LV_Colors.Detach(ListID%A_List%)
-	If (EventCode = -836) ; RBN_ENDDRAG
+	If (rbEventCode = -836) ; RBN_ENDDRAG
 		GoSub, RowCheck
 }
 return
@@ -10950,7 +10953,7 @@ If A_EventInfo = 1
 	return
 Critical 1000
 GuiGetSize(GuiWidth, GuiHeight)
-,	RbMain.ShowBand(1)
+,	RbMain.ShowBand(RbMain.IDToIndex(11))
 ,	RbMacro.ModifyBand(1, "MinHeight", (GuiHeight-MacroOffset)*(A_ScreenDPI/96))
 ,	RbMacro.ModifyBand(2, "MinHeight", (GuiHeight-MacroOffset)*(A_ScreenDPI/96))
 GuiControl, 1:Move, cRbMacro, % "W" GuiWidth
