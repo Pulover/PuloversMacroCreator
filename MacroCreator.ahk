@@ -11580,6 +11580,7 @@ Menu, MacroMenu, DeleteAll
 Menu, CustomMenu, DeleteAll
 Menu, ToolbarsMenu, DeleteAll
 Menu, HotkeyMenu, DeleteAll
+Menu, SetLayoutMenu, DeleteAll
 Menu, ViewMenu, DeleteAll
 Menu, OptionsMenu, DeleteAll
 Menu, DonationMenu, DeleteAll
