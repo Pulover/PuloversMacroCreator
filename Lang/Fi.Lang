@@ -4,13 +4,13 @@
 		
 ; Main Menu		
 	m_Lang001 =	&Tiedosto
-	m_Lang002 =	&Lisätä
+	m_Lang002 =	&Komento
 	m_Lang003 =	&Valita
 	m_Lang004 =	&Muokata
 	m_Lang005 =	M&akro
-	m_Lang006 =	&Katsella
-	m_Lang007 =	Val&innat
-	m_Lang008 =	Ki&eli
+	m_Lang006 =	Kat&sella
+	m_Lang007 =	Va&linnat
+	m_Lang008 =	K&ieli
 	m_Lang009 =	La&hjoittaa
 	m_Lang010 =	A&pua
 		
@@ -26,7 +26,7 @@
 	f_Lang009 =	&Poistua
 	f_Lang010 =	Ei tiedostoja
 		
-; Insert Sub Menu		
+; Command Sub Menu		
 	i_Lang001 =	&Hiiri
 	i_Lang002 =	&Teksti
 	i_Lang003 =	&Ohjaa
@@ -74,7 +74,8 @@
 	e_Lang011 =	&Siirrä ylös
 	e_Lang012 =	Sii&rtyä alemmalle luokalle
 	e_Lang013 =	I&nsertin laatikko
-	e_Lang014 =	E&dit värimerkk
+	e_Lang014 =	Aseta N&äppäilyn
+	e_Lang015 =	E&dit värimerkk
 		
 ; Macro Sub Menu		
 	r_lang001 =	&Nauhoita makro

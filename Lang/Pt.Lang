@@ -4,7 +4,7 @@
 		
 ; Main Menu		
 	m_Lang001 =	&Arquivo
-	m_Lang002 =	&Inserir
+	m_Lang002 =	&Comando
 	m_Lang003 =	&Selecionar
 	m_Lang004 =	&Editar
 	m_Lang005 =	&Macro
@@ -26,7 +26,7 @@
 	f_Lang009 =	Sai&r
 	f_Lang010 =	Nenhum arquivo
 		
-; Insert Sub Menu		
+; Command Sub Menu		
 	i_Lang001 =	&Mouse
 	i_Lang002 =	&Texto
 	i_Lang003 =	&Controle
@@ -38,7 +38,7 @@
 	i_Lang009 =	E&xecutar / Arquivos / Texto / Misc.
 	i_Lang010 =	&Loop
 	i_Lang011 =	P&ular
-	i_Lang012 =	Rótul&o
+	i_Lang012 =	R&ótulo
 	i_Lang013 =	&Declaração Se
 	i_Lang014 =	&Variáveis
 	i_Lang015 =	&Funções
@@ -46,7 +46,7 @@
 	i_Lang017 =	I&nterface COM
 	i_Lang018 =	Execut&ar Scriptlet
 	i_Lang019 =	Mensa&ges Do Windows
-	i_Lang020 =	Locali&zar um comando
+	i_Lang020 =	L&ocalizar um comando
 		
 ; Select Sub Menu		
 	s_Lang001 =	Selecionar &Tudo
@@ -74,7 +74,8 @@
 	e_Lang011 =	Mo&ver para Cima
 	e_Lang012 =	Mover para &Baixo
 	e_Lang013 =	&Inserir da Caixa
-	e_Lang014 =	Editar &Marca de Cor
+	e_Lang014 =	In&serir Tecla
+	e_Lang015 =	Editar &Marca de Cor
 		
 ; Macro Sub Menu		
 	r_lang001 =	&Gravar Macro

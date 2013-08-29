@@ -4,7 +4,7 @@
 		
 ; Main Menu		
 	m_Lang001 =	&File
-	m_Lang002 =	&Inserire
+	m_Lang002 =	&Comando
 	m_Lang003 =	&Selezionare
 	m_Lang004 =	&Modifica
 	m_Lang005 =	M&acro
@@ -12,7 +12,7 @@
 	m_Lang007 =	&Opzioni
 	m_Lang008 =	&Lingua
 	m_Lang009 =	&Donare
-	m_Lang010 =	Ai&uto
+	m_Lang010 =	A&iuto
 		
 ; File Sub Menu		
 	f_Lang001 =	&Nuovo
@@ -26,7 +26,7 @@
 	f_Lang009 =	&Uscita
 	f_Lang010 =	Nessun file
 		
-; Insert Sub Menu		
+; Command Sub Menu		
 	i_Lang001 =	&Mouse
 	i_Lang002 =	&Testo
 	i_Lang003 =	&Controllo
@@ -74,7 +74,8 @@
 	e_Lang011 =	&Sposta su
 	e_Lang012 =	A&bbassare
 	e_Lang013 =	Inserisci da scato&la
-	e_Lang014 =	Modi&fica marchio di colore
+	e_Lang014 =	Inserire Battit&ura
+	e_Lang015 =	Modi&fica marchio di colore
 		
 ; Macro Sub Menu		
 	r_lang001 =	&Registra macro

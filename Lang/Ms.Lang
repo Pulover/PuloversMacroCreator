@@ -3,16 +3,16 @@
 		; Malay
 		
 ; Main Menu		
-	m_Lang001 =	Fail
-	m_Lang002 =	Memasukkan
-	m_Lang003 =	Pilih
-	m_Lang004 =	Edit
-	m_Lang005 =	Makro
-	m_Lang006 =	Lihat
-	m_Lang007 =	Pilihan
-	m_Lang008 =	Bahasa
-	m_Lang009 =	Menderma
-	m_Lang010 =	Bantuan
+	m_Lang001 =	&Fail
+	m_Lang002 =	&Perintah
+	m_Lang003 =	P&ilih
+	m_Lang004 =	&Edit
+	m_Lang005 =	&Makro
+	m_Lang006 =	&Lihat
+	m_Lang007 =	Pili&han
+	m_Lang008 =	&Bahasa
+	m_Lang009 =	Me&nderma
+	m_Lang010 =	B&antuan
 		
 ; File Sub Menu		
 	f_Lang001 =	New
@@ -26,7 +26,7 @@
 	f_Lang009 =	Keluar
 	f_Lang010 =	Tiada fail
 		
-; Insert Sub Menu		
+; Command Sub Menu		
 	i_Lang001 =	Mouse
 	i_Lang002 =	Text
 	i_Lang003 =	Kawalan
@@ -61,20 +61,21 @@
 	s_Lang010 =	A&rahan
 		
 ; Edit Sub Menu		
-	e_Lang001 =	Gandakan
-	e_Lang002 =	Edit Komen
-	e_Lang003 =	Cari / Ganti
-	e_Lang004 =	Salin ke...
-	e_Lang005 =	Buat asal
-	e_Lang006 =	Buat semula
-	e_Lang007 =	Potong
-	e_Lang008 =	Menyalin
-	e_Lang009 =	Tampal
-	e_Lang010 =	Padam
-	e_Lang011 =	Move Up
-	e_Lang012 =	Pindah Turun
-	e_Lang013 =	Memasukkan dari Box
-	e_Lang014 =	Edit Warna Mark
+	e_Lang001 =	&Gandakan
+	e_Lang002 =	&Edit Komen
+	e_Lang003 =	&Cari / Ganti
+	e_Lang004 =	&Salin ke...
+	e_Lang005 =	&Buat asal
+	e_Lang006 =	B&uat semula
+	e_Lang007 =	&Potong
+	e_Lang008 =	&Menyalin
+	e_Lang009 =	&Tampal
+	e_Lang010 =	P&adam
+	e_Lang011 =	M&ove Up
+	e_Lang012 =	P&indah Turun
+	e_Lang013 =	Memasu&kkan dari Box
+	e_Lang014 =	Memasukka&n keystroke
+	e_Lang015 =	E&dit Warna Mark
 		
 ; Macro Sub Menu		
 	r_lang001 =	Makro Rekod

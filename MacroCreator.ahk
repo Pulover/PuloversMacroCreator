@@ -249,6 +249,7 @@ IniRead, Send_Loop, %IniFilePath%, ExportOptions, Send_Loop, 0
 IniRead, TabIndent, %IniFilePath%, ExportOptions, TabIndent, 1
 IniRead, IncPmc, %IniFilePath%, ExportOptions, IncPmc, 0
 IniRead, Exe_Exp, %IniFilePath%, ExportOptions, Exe_Exp, 0
+IniRead, ShowExpOpt, %IniFilePath%, ExportOptions, ShowExpOpt, 0
 IniRead, MainWinSize, %IniFilePath%, WindowOptions, MainWinSize, W920 H630
 IniRead, MainWinPos, %IniFilePath%, WindowOptions, MainWinPos, Center
 IniRead, WinState, %IniFilePath%, WindowOptions, WinState, 0
@@ -762,7 +763,7 @@ DefineToolbars:
 ,	RbMain := New Rebar(hRbMain)
 ,	TB_Rebar(RbMain, 1, TbFile), TB_Rebar(RbMain, 2, TbRecPlay), TB_Rebar(RbMain, 3, TbSettings)
 ,	RbMain.InsertBand(hAutoKey, 0, "", 4, w_Lang005, 50, 0, "", 22, 50)
-,	RbMain.InsertBand(hTimesCh, 0, "FixedSize NoGripper", 11, w_Lang011 " (" t_Lang004 ")", 75, 0, "", 20, 75)
+,	RbMain.InsertBand(hTimesCh, 0, "FixedSize NoGripper", 11, w_Lang011 " (" t_Lang004 ")", 95, 0, "", 22, 95)
 ,	TB_Rebar(RbMain, 5, TbCommand, "Break")
 ,	RbMain.InsertBand(hManKey, 0, "", 6, w_Lang007, 50, 0, "", 22, 50)
 ,	RbMain.InsertBand(hAbortKey, 0, "", 7, w_Lang008, 60, 0, "", 22, 50)
@@ -897,7 +898,7 @@ FloatPrev := !FloatPrev
 If (FloatPrev)
 {
 	RbMacro.ModifyBand(2, "Style", "Hidden")
-	Gui, 2:Show, W450 H600, %c_Lang072% - %AppName%
+	Gui, 2:Show, W450 H500, %c_Lang072% - %AppName%
 }
 Else
 {
@@ -1793,15 +1794,28 @@ Gui, 14:Add, Checkbox, -Wrap Checked%Ex_AbortKey% yp+5 x+10 W65 vEx_AbortKey gEx
 Gui, 14:Add, Edit, yp-5 x+0 W45 vAbortKey, %AbortKey%
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_PauseKey% yp+5 x+10 W65 vEx_PauseKey R1, %t_Lang081%:
 Gui, 14:Add, Edit, yp-5 x+0 W45 vPauseKey, %PauseKey%
+; Export
+Gui, 14:Add, GroupBox, Section xm W415 H130
+Gui, 14:Add, Text, ys+15 xs+10, %t_Lang010%:
+Gui, 14:Add, Edit, vExpFile W365 R1 -Multi, %dir%\%name_no_ext%.ahk
+Gui, 14:Add, Button, -Wrap W30 H23 yp-1 x+0 gExpSearch, ...
+Gui, 14:Add, Checkbox, -Wrap Checked%TabIndent% y+5 xs+10 W200 vTabIndent R1, %t_Lang011%
+Gui, 14:Add, Checkbox, -Wrap Checked%IncPmc% yp xp+200 W145 vIncPmc R1, %t_Lang012%
+Gui, 14:Add, Checkbox, -Wrap Checked%Send_Loop% y+5 xs+10 W200 vSend_Loop R1, %t_Lang013%
+Gui, 14:Add, Checkbox, -Wrap Checked%Exe_Exp% yp xp+200 W145 vExe_Exp gExe_Exp R1,%t_Lang088% 
+Gui, 14:Add, Button, -Wrap Section Default y+5 xs+10 W75 H23 gExpButton, %w_Lang001%
+Gui, 14:Add, Button, -Wrap ys W75 H23 gExpClose, %c_Lang022%
+Gui, 14:Add, Button, -Wrap ys W75 H23 vShowMore gShowMore, % (ShowExpOpt) ? "<< " w_Lang003 : w_Lang003 " >>"
+Gui, 14:Add, Progress, ys W140 H20 vExpProgress
 ; Context
-Gui, 14:Add, GroupBox, Section xm W415 H80
+Gui, 14:Add, GroupBox, Section y+25 xm W415 H80
 Gui, 14:Add, Checkbox, -Wrap Section ys xs vEx_IfDir gEx_Checks R1, %t_Lang009%:
 Gui, 14:Add, DDL, xs+10 W105 vEx_IfDirType Disabled, #IfWinActive||#IfWinNotActive|#IfWinExist|#IfNotWinExist
 Gui, 14:Add, DDL, yp x+225 W65 vIdent Disabled, Title||Class|Process|ID|PID
 Gui, 14:Add, Edit, xs+10 W365 vTitle Disabled
 Gui, 14:Add, Button, -Wrap yp-1 x+0 W30 H23 vGetWin gGetWin Disabled, ...
 ; Options
-Gui, 14:Add, GroupBox, Section xm W415 H260, %w_Lang003%:
+Gui, 14:Add, GroupBox, Section xm W415 H270, %w_Lang003%:
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_SM% ys+20 xs+10 W110 vEx_SM R1, SendMode
 Gui, 14:Add, DDL, yp-3 xp+115 vSM w75, Input||Play|Event|InputThenPlay|
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_SI% y+5 xs+10 W110 vEx_SI R1, #SingleInstance
@@ -1837,18 +1851,6 @@ Gui, 14:Add, Text, yp+10 xs+320 W50, %t_Lang103%
 Gui, 14:Add, Text, y+15 xs+10 W95, COM Objects:
 Gui, 14:Add, Radio, -Wrap Checked%ComCr% yp xp+100 W95 vComCr R1, ComObjCreate
 Gui, 14:Add, Radio, -Wrap Checked%ComAc% yp xp+100 W95 vComAc R1, ComObjActive
-; Export
-Gui, 14:Add, GroupBox, Section xm W415 H100
-Gui, 14:Add, Text, Section ys+15 xs+10, %t_Lang010%:
-Gui, 14:Add, Edit, vExpFile xs W365 R1 -Multi, %dir%\%name_no_ext%.ahk
-Gui, 14:Add, Button, -Wrap W30 H23 yp-1 x+0 gExpSearch, ...
-Gui, 14:Add, Checkbox, -Wrap Checked%TabIndent% xs W200 vTabIndent R1, %t_Lang011%
-Gui, 14:Add, Checkbox, -Wrap Checked%IncPmc% yp xp+200 W145 vIncPmc R1, %t_Lang012%
-Gui, 14:Add, Checkbox, -Wrap Checked%Send_Loop% y+5 xs W200 vSend_Loop R1, %t_Lang013%
-Gui, 14:Add, Checkbox, -Wrap Checked%Exe_Exp% yp xp+200 W145 vExe_Exp gExe_Exp R1,%t_Lang088% 
-Gui, 14:Add, Button, -Wrap Section Default xm W75 H23 gExpButton, %w_Lang001%
-Gui, 14:Add, Button, -Wrap ys W75 H23 gExpClose, %c_Lang022%
-Gui, 14:Add, Progress, ys W245 H20 vExpProgress
 GuiControl, 14:ChooseString, SM, %SM%
 GuiControl, 14:ChooseString, SI, %SI%
 GuiControl, 14:ChooseString, ST, %ST%
@@ -1872,7 +1874,7 @@ LV_ModifyCol(5, 80)		; Block
 LV_Modify(0, "Check")
 If CurrentFileName = 
 	GuiControl, 14:, ExpFile, %A_MyDocuments%\MyScript.ahk
-Gui, 14:Show,, %t_Lang001%
+Gui, 14:Show, % (ShowExpOpt) ? "H670" : "H300", %t_Lang001%
 Tooltip
 return
 
@@ -1979,6 +1981,11 @@ If Ex_Hotstring = 1
 	GuiControl, 13:, Ex_AutoKey, ::%Ex_AutoKey%
 Else
 	GuiControl, 13:, Ex_AutoKey, % RegExReplace(Ex_AutoKey, ".*:")
+return
+
+ShowMore:
+Gui, 14:Show, % (ShowExpOpt := !ShowExpOpt) ? "H670" : "H300", %t_Lang001%
+GuiControl, 14:, ShowMore, % (ShowExpOpt) ? "<< " w_Lang003 : w_Lang003 " >>"
 return
 
 ExpClose:
@@ -8868,8 +8875,8 @@ RowSelection := LV_GetCount("Selected")
 Gui, 17:+owner1 -MinimizeBox
 Gui, chMacro:Default
 Gui, 1:+Disabled
-Gui, 17:Add, GroupBox, Section xm W230 H110, %t_Lang064%:
-Gui, 17:Add, Edit, ys+25 xs+10 vComm W210 r5
+Gui, 17:Add, GroupBox, Section xm W320 H110, %t_Lang064%:
+Gui, 17:Add, Edit, ys+25 xs+10 vComm W300 r5
 Gui, 17:Add, Button, -Wrap Section Default xm W75 H23 gCommOK, %c_Lang020%
 Gui, 17:Add, Button, -Wrap ys W75 H23 gCommCancel, %c_Lang021%
 If RowSelection = 1
@@ -10435,6 +10442,7 @@ AbortKey := "F8"
 ,	TextWrap := 0
 ,	IncPmc := 0
 ,	Exe_Exp := 0
+,	ShowExpOpt := 0
 ,	WinState := 0
 ,	HKOff := 0
 ,	TbNoTheme := 0
@@ -10669,6 +10677,7 @@ IniWrite, %Send_Loop%, %IniFilePath%, ExportOptions, Send_Loop
 IniWrite, %TabIndent%, %IniFilePath%, ExportOptions, TabIndent
 IniWrite, %IncPmc%, %IniFilePath%, ExportOptions, IncPmc
 IniWrite, %Exe_Exp%, %IniFilePath%, ExportOptions, Exe_Exp
+IniWrite, %ShowExpOpt%, %IniFilePath%, ExportOptions, ShowExpOpt
 IniWrite, %MainWinSize%, %IniFilePath%, WindowOptions, MainWinSize
 IniWrite, %MainWinPos%, %IniFilePath%, WindowOptions, MainWinPos
 IniWrite, %WinState%, %IniFilePath%, WindowOptions, WinState
@@ -11086,7 +11095,7 @@ Menu, EditMenu, Add, %m_Lang004%`t%_s%Enter, EditButton
 Menu, EditMenu, Add, %e_Lang001%`t%_s%Ctrl+D, Duplicate
 Menu, EditMenu, Add, %e_Lang003%`t%_s%Ctrl+F, FindReplace
 Menu, EditMenu, Add, %e_Lang002%`t%_s%Ctrl+L, EditComm
-Menu, EditMenu, Add, %e_Lang014%`t%_s%Ctrl+M, EditColor
+Menu, EditMenu, Add, %e_Lang015%`t%_s%Ctrl+M, EditColor
 Menu, EditMenu, Default, %m_Lang004%`t%_s%Enter
 Menu, EditMenu, Add
 Menu, EditMenu, Add, %m_Lang002%, :InsertMenu
@@ -11102,7 +11111,7 @@ Menu, EditMenu, Add, %e_Lang009%`t%_s%Ctrl+V, PasteRows
 Menu, EditMenu, Add, %e_Lang010%`t%_s%Delete, Remove
 Menu, EditMenu, Add
 Menu, EditMenu, Add, %e_Lang013%`t%_s%Insert, ApplyL
-Menu, EditMenu, Add, %t_Lang111%`t%_s%Ctrl+Insert, InsertKey
+Menu, EditMenu, Add, %e_Lang014%`t%_s%Ctrl+Insert, InsertKey
 Menu, EditMenu, Add
 Menu, EditMenu, Add, %e_Lang011%`t%_s%Ctrl+PgUp, MoveUp
 Menu, EditMenu, Add, %e_Lang012%`t%_s%Ctrl+PgDn, MoveDn
@@ -11208,6 +11217,7 @@ Menu, MenuBar, Add, %m_Lang010%, :HelpMenu
 Gui, Menu, MenuBar
 
 Menu, ToolbarMenu, Add, %c_Lang022%, OSCClose
+Menu, ToolbarMenu, Add
 Menu, ToolbarMenu, Add, %t_Lang104%, ToggleTB
 Menu, ToolbarMenu, Add, %t_Lang105%, ShowHide
 
@@ -11298,7 +11308,7 @@ Menu, EditMenu, Icon, %m_Lang004%`t%_s%Enter, %ResDllPath%, 14
 Menu, EditMenu, Icon, %e_Lang001%`t%_s%Ctrl+D, %ResDllPath%, 13
 Menu, EditMenu, Icon, %e_Lang003%`t%_s%Ctrl+F, %ResDllPath%, 19
 Menu, EditMenu, Icon, %e_Lang002%`t%_s%Ctrl+L, %ResDllPath%, 5
-Menu, EditMenu, Icon, %e_Lang014%`t%_s%Ctrl+M, %ResDllPath%, 3
+Menu, EditMenu, Icon, %e_Lang015%`t%_s%Ctrl+M, %ResDllPath%, 3
 Menu, EditMenu, Icon, %e_Lang005%`t%_s%Ctrl+Z, %ResDllPath%, 75
 Menu, EditMenu, Icon, %e_Lang006%`t%_s%Ctrl+Y, %ResDllPath%, 57
 Menu, EditMenu, Icon, %e_Lang007%`t%_s%Ctrl+X, %ResDllPath%, 9
@@ -11306,7 +11316,7 @@ Menu, EditMenu, Icon, %e_Lang008%`t%_s%Ctrl+C, %ResDllPath%, 8
 Menu, EditMenu, Icon, %e_Lang009%`t%_s%Ctrl+V, %ResDllPath%, 45
 Menu, EditMenu, Icon, %e_Lang010%`t%_s%Delete, %ResDllPath%, 10
 Menu, EditMenu, Icon, %e_Lang013%`t%_s%Insert, %ResDllPath%, 32
-Menu, EditMenu, Icon, %t_Lang111%`t%_s%Ctrl+Insert, %ResDllPath%, 94
+Menu, EditMenu, Icon, %e_Lang014%`t%_s%Ctrl+Insert, %ResDllPath%, 94
 Menu, EditMenu, Icon, %e_Lang011%`t%_s%Ctrl+PgUp, %ResDllPath%, 41
 Menu, EditMenu, Icon, %e_Lang012%`t%_s%Ctrl+PgDn, %ResDllPath%, 40
 Menu, MacroMenu, Icon, %r_Lang001%`t%_s%Ctrl+R, %ResDllPath%, 55

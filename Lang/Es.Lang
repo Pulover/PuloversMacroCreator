@@ -4,14 +4,14 @@
 		
 ; Main Menu		
 	m_Lang001 =	&Archivo
-	m_Lang002 =	&Insertar
+	m_Lang002 =	&Comando
 	m_Lang003 =	&Seleccionar
 	m_Lang004 =	&Editar
 	m_Lang005 =	&Macro
 	m_Lang006 =	&Ver
 	m_Lang007 =	&Opciones
-	m_Lang008 =	I&dioma
-	m_Lang009 =	Do&nar
+	m_Lang008 =	&Idioma
+	m_Lang009 =	&Donar
 	m_Lang010 =	A&yuda
 		
 ; File Sub Menu		
@@ -26,7 +26,7 @@
 	f_Lang009 =	&Salida
 	f_Lang010 =	No hay archivos
 		
-; Insert Sub Menu		
+; Command Sub Menu		
 	i_Lang001 =	&Ratón
 	i_Lang002 =	&Texto
 	i_Lang003 =	&Controle
@@ -74,7 +74,8 @@
 	e_Lang011 =	S&ubir
 	e_Lang012 =	Ba&jar
 	e_Lang013 =	&Inserte de Caja
-	e_Lang014 =	Edi&tar marca de color
+	e_Lang014 =	I&nsertar Pulsaciones
+	e_Lang015 =	Edi&tar marca de color
 		
 ; Macro Sub Menu		
 	r_lang001 =	&Grabar macro

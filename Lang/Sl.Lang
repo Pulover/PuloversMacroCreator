@@ -4,9 +4,9 @@
 		
 ; Main Menu		
 	m_Lang001 =	&Datoteka
-	m_Lang002 =	&Vstavite
+	m_Lang002 =	&Ukaz
 	m_Lang003 =	&Izberite
-	m_Lang004 =	&Urejanje
+	m_Lang004 =	U&rejanje
 	m_Lang005 =	&Makro
 	m_Lang006 =	&Poglej
 	m_Lang007 =	M&ožnosti
@@ -26,7 +26,7 @@
 	f_Lang009 =	E&xit
 	f_Lang010 =	Ni slik
 		
-; Insert Sub Menu		
+; Command Sub Menu		
 	i_Lang001 =	&Miška
 	i_Lang002 =	&Besedilo
 	i_Lang003 =	&Nadzor
@@ -74,7 +74,8 @@
 	e_Lang011 =	Pre&makni navzgor
 	e_Lang012 =	Prem&akni dol
 	e_Lang013 =	&Vstavite okencu
-	e_Lang014 =	Edi&t Color Mark
+	e_Lang014 =	V&stavite Keystroke
+	e_Lang015 =	Edi&t Color Mark
 		
 ; Macro Sub Menu		
 	r_lang001 =	&Snemaj makro

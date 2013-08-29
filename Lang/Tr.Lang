@@ -4,12 +4,12 @@
 		
 ; Main Menu		
 	m_Lang001 =	&Dosya
-	m_Lang002 =	&Eklemek
+	m_Lang002 =	&Komuta
 	m_Lang003 =	&Seçmek
 	m_Lang004 =	D&üzenle
 	m_Lang005 =	&Makro
 	m_Lang006 =	&Görmek
-	m_Lang007 =	Se&çenekler
+	m_Lang007 =	S&eçenekler
 	m_Lang008 =	D&il
 	m_Lang009 =	&Bağışlamak
 	m_Lang010 =	&Yardım
@@ -26,7 +26,7 @@
 	f_Lang009 =	&Çıkış
 	f_Lang010 =	Hiçbir içerik
 		
-; Insert Sub Menu		
+; Command Sub Menu		
 	i_Lang001 =	&Fare
 	i_Lang002 =	&Metin
 	i_Lang003 =	&Kontrol
@@ -74,7 +74,8 @@
 	e_Lang011 =	Yuka&rı çıkmak
 	e_Lang012 =	A&şağı Taşı
 	e_Lang013 =	Ku&tusundan Ekle
-	e_Lang014 =	&Düzen renk işareti
+	e_Lang014 =	Tuş Ek&lemek
+	e_Lang015 =	&Düzen renk işareti
 		
 ; Macro Sub Menu		
 	r_lang001 =	&Makro Kaydet

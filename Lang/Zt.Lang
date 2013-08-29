@@ -4,7 +4,7 @@
 		
 ; Main Menu		
 	m_Lang001 =	文件
-	m_Lang002 =	插入
+	m_Lang002 =	命令
 	m_Lang003 =	選擇
 	m_Lang004 =	編輯
 	m_Lang005 =	宏
@@ -26,7 +26,7 @@
 	f_Lang009 =	出口
 	f_Lang010 =	沒有文件
 		
-; Insert Sub Menu		
+; Command Sub Menu		
 	i_Lang001 =	鼠標
 	i_Lang002 =	文本
 	i_Lang003 =	控制
@@ -74,7 +74,8 @@
 	e_Lang011 =	上移
 	e_Lang012 =	“下移”
 	e_Lang013 =	從盒插入
-	e_Lang014 =	編輯顏色標誌
+	e_Lang014 =	插入擊鍵
+	e_Lang015 =	編輯顏色標誌
 		
 ; Macro Sub Menu		
 	r_lang001 =	錄製宏

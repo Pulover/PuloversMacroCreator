@@ -4,13 +4,13 @@
 		
 ; Main Menu		
 	m_Lang001 =	&Arkiv
-	m_Lang002 =	&Infoga
+	m_Lang002 =	&Kommando
 	m_Lang003 =	&Välj
 	m_Lang004 =	&Redigera
 	m_Lang005 =	&Makro
-	m_Lang006 =	Vi&sa
+	m_Lang006 =	V&isa
 	m_Lang007 =	A&lternativ
-	m_Lang008 =	S&pråk
+	m_Lang008 =	&Språk
 	m_Lang009 =	&Donera
 	m_Lang010 =	&Hjälp
 		
@@ -26,7 +26,7 @@
 	f_Lang009 =	&Avsluta
 	f_Lang010 =	Inga filer
 		
-; Insert Sub Menu		
+; Command Sub Menu		
 	i_Lang001 =	&Mus
 	i_Lang002 =	&Text
 	i_Lang003 =	&Kontroll
@@ -74,7 +74,8 @@
 	e_Lang011 =	&Flytta upp
 	e_Lang012 =	Fl&ytta ned
 	e_Lang013 =	I&nfoga från rutan
-	e_Lang014 =	R&edigera färgmarkering
+	e_Lang014 =	Infog&a Tangenttryckning
+	e_Lang015 =	R&edigera färgmarkering
 		
 ; Macro Sub Menu		
 	r_lang001 =	&Spela in makro

@@ -4,7 +4,7 @@
 		
 ; Main Menu		
 	m_Lang001 =	&Bestand
-	m_Lang002 =	&Invoegen
+	m_Lang002 =	&Commando
 	m_Lang003 =	&Kiezen
 	m_Lang004 =	&Redigeren
 	m_Lang005 =	&Macro
@@ -26,7 +26,7 @@
 	f_Lang009 =	&Uitgang
 	f_Lang010 =	Geen files
 		
-; Insert Sub Menu		
+; Command Sub Menu		
 	i_Lang001 =	&Muis
 	i_Lang002 =	&Tekst
 	i_Lang003 =	&Controle
@@ -74,7 +74,8 @@
 	e_Lang011 =	O&mhoog
 	e_Lang012 =	Oml&aag
 	e_Lang013 =	Invo&egen van Box
-	e_Lang014 =	&Bewerken kleurmarkering
+	e_Lang014 =	S&teek Toetsaanslag
+	e_Lang015 =	&Bewerken kleurmarkering
 		
 ; Macro Sub Menu		
 	r_lang001 =	&Macro opnemen

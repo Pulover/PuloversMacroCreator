@@ -4,13 +4,13 @@
 		
 ; Main Menu		
 	m_Lang001 =	&Fil
-	m_Lang002 =	&Sett
+	m_Lang002 =	&Command
 	m_Lang003 =	&Velg
 	m_Lang004 =	&Redigere
 	m_Lang005 =	&Makro
 	m_Lang006 =	V&is
 	m_Lang007 =	&Alternativer
-	m_Lang008 =	S&pråk
+	m_Lang008 =	&Språk
 	m_Lang009 =	&Donere
 	m_Lang010 =	&Hjelp
 		
@@ -26,7 +26,7 @@
 	f_Lang009 =	&Utgang
 	f_Lang010 =	Ingen filer
 		
-; Insert Sub Menu		
+; Command Sub Menu		
 	i_Lang001 =	&Mus
 	i_Lang002 =	&Tekst
 	i_Lang003 =	&Kontroll
@@ -74,7 +74,8 @@
 	e_Lang011 =	Fl&ytt opp
 	e_Lang012 =	Fly&tt ned
 	e_Lang013 =	S&ett fra boksen
-	e_Lang014 =	Ed&it fargemerki
+	e_Lang014 =	Sett Tastetrykk
+	e_Lang015 =	Ed&it fargemerki
 		
 ; Macro Sub Menu		
 	r_lang001 =	&Registrer makro

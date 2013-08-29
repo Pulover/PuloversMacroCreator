@@ -4,7 +4,7 @@
 		
 ; Main Menu		
 	m_Lang001 =	&File
-	m_Lang002 =	&Insert
+	m_Lang002 =	&Command
 	m_Lang003 =	&Select
 	m_Lang004 =	&Edit
 	m_Lang005 =	&Macro
@@ -26,7 +26,7 @@
 	f_Lang009 =	E&xit
 	f_Lang010 =	No files
 		
-; Insert Sub Menu		
+; Command Sub Menu		
 	i_Lang001 =	&Mouse
 	i_Lang002 =	&Text
 	i_Lang003 =	&Control
@@ -34,7 +34,7 @@
 	i_Lang005 =	M&essage
 	i_Lang006 =	&Key Wait
 	i_Lang007 =	&Window
-	i_Lang008 =	&Image / Pixel Search
+	i_Lang008 =	Image / Pi&xel Search
 	i_Lang009 =	&Run / File / String / Misc.
 	i_Lang010 =	&Loop
 	i_Lang011 =	&Goto
@@ -46,7 +46,7 @@
 	i_Lang017 =	C&OM Interface
 	i_Lang018 =	Run &Scriptlet
 	i_Lang019 =	Win&dows Messages
-	i_Lang020 =	Fin&d a command
+	i_Lang020 =	F&ind a command
 		
 ; Select Sub Menu		
 	s_Lang001 =	Select &All
@@ -74,7 +74,8 @@
 	e_Lang011 =	Mo&ve Up
 	e_Lang012 =	Move Dow&n
 	e_Lang013 =	&Insert from Box
-	e_Lang014 =	Edit Color &Mark
+	e_Lang014 =	Insert &Keystroke
+	e_Lang015 =	Edit Color &Mark
 		
 ; Macro Sub Menu		
 	r_lang001 =	&Record Macro

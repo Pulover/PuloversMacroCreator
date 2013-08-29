@@ -4,9 +4,9 @@
 		
 ; Main Menu		
 	m_Lang001 =	&Tập tin
-	m_Lang002 =	&Chèn
-	m_Lang003 =	C&họn
-	m_Lang004 =	Ch&ỉnh sửa
+	m_Lang002 =	&Lệnh
+	m_Lang003 =	&Chọn
+	m_Lang004 =	C&hỉnh sửa
 	m_Lang005 =	&Vĩ mô
 	m_Lang006 =	&Xem
 	m_Lang007 =	T&ùy chọn
@@ -26,7 +26,7 @@
 	f_Lang009 =	&Ra
 	f_Lang010 =	&Không có tập tin
 		
-; Insert Sub Menu		
+; Command Sub Menu		
 	i_Lang001 =	&Chuột
 	i_Lang002 =	&Văn bản
 	i_Lang003 =	&Kiểm soát
@@ -74,7 +74,8 @@
 	e_Lang011 =	&Move Up
 	e_Lang012 =	Mo&ve Down
 	e_Lang013 =	C&hèn từ Box
-	e_Lang014 =	S&ửa Màu Đánh dấu
+	e_Lang014 =	Ch&èn Tổ hợp phím
+	e_Lang015 =	S&ửa Màu Đánh dấu
 		
 ; Macro Sub Menu		
 	r_lang001 =	&Record Macro

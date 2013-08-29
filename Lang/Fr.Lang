@@ -4,7 +4,7 @@
 		
 ; Main Menu		
 	m_Lang001 =	&Dossier
-	m_Lang002 =	&Insérer
+	m_Lang002 =	&Commandement
 	m_Lang003 =	&Sélectionner
 	m_Lang004 =	&Éditer
 	m_Lang005 =	&Macro
@@ -26,7 +26,7 @@
 	f_Lang009 =	So&rtie
 	f_Lang010 =	Aucun
 		
-; Insert Sub Menu		
+; Command Sub Menu		
 	i_Lang001 =	&Souris
 	i_Lang002 =	&Texte
 	i_Lang003 =	&Contrôler
@@ -74,7 +74,8 @@
 	e_Lang011 =	D&éplacer vers le haut
 	e_Lang012 =	De&scendre
 	e_Lang013 =	&Insérez de la case
-	e_Lang014 =	Modifier mar&que de couleur
+	e_Lang014 =	I&nsérer Frappe
+	e_Lang015 =	Modifier mar&que de couleur
 		
 ; Macro Sub Menu		
 	r_lang001 =	&Enregistrer une macro

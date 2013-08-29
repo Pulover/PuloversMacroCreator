@@ -4,14 +4,14 @@
 		
 ; Main Menu		
 	m_Lang001 =	&Berkas
-	m_Lang002 =	&Menyisipkan
-	m_Lang003 =	M&emilih
-	m_Lang004 =	Me&ngedit
+	m_Lang002 =	&Perintah
+	m_Lang003 =	&Memilih
+	m_Lang004 =	M&engedit
 	m_Lang005 =	M&akro
 	m_Lang006 =	Me&lihat
-	m_Lang007 =	&Pilihan
+	m_Lang007 =	P&ilihan
 	m_Lang008 =	Ba&hasa
-	m_Lang009 =	Men&yumbangkan
+	m_Lang009 =	Me&nyumbangkan
 	m_Lang010 =	Memban&tu
 		
 ; File Sub Menu		
@@ -26,7 +26,7 @@
 	f_Lang009 =	&Keluar
 	f_Lang010 =	Tidak ada file
 		
-; Insert Sub Menu		
+; Command Sub Menu		
 	i_Lang001 =	&Mouse
 	i_Lang002 =	&Teks
 	i_Lang003 =	&Kontrol
@@ -74,7 +74,8 @@
 	e_Lang011 =	Mo&ve Up
 	e_Lang012 =	&Pindah ke Bawah
 	e_Lang013 =	S&isipkan dari Box
-	e_Lang014 =	S&unting Warna Mark
+	e_Lang014 =	M&asukkan keystroke
+	e_Lang015 =	S&unting Warna Mark
 		
 ; Macro Sub Menu		
 	r_lang001 =	&Rekam Makro

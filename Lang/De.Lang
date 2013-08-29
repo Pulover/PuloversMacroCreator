@@ -4,9 +4,9 @@
 		
 ; Main Menu		
 	m_Lang001 =	&Datei
-	m_Lang002 =	&Einfügen
+	m_Lang002 =	&Befehl
 	m_Lang003 =	&Auswahl
-	m_Lang004 =	&Bearbeiten
+	m_Lang004 =	B&earbeiten
 	m_Lang005 =	&Makro
 	m_Lang006 =	A&nzeigen
 	m_Lang007 =	&Optionen
@@ -26,7 +26,7 @@
 	f_Lang009 =	&Beenden
 	f_Lang010 =	Keine Dateien
 		
-; Insert Sub Menu		
+; Command Sub Menu		
 	i_Lang001 =	&Maus
 	i_Lang002 =	&Text
 	i_Lang003 =	&Steuerelement
@@ -66,15 +66,16 @@
 	e_Lang003 =	&Suchen und Ersetzen
 	e_Lang004 =	K&opieren...
 	e_Lang005 =	&Rückgängig
-	e_Lang006 =	Wi&ederholen
-	e_Lang007 =	Auss&chneiden
+	e_Lang006 =	&Wiederholen
+	e_Lang007 =	&Ausschneiden
 	e_Lang008 =	Ko&pieren
-	e_Lang009 =	Einfüge&n
+	e_Lang009 =	&Einfügen
 	e_Lang010 =	&Löschen
 	e_Lang011 =	&Nach oben
-	e_Lang012 =	Nac&h unten
+	e_Lang012 =	Na&ch unten
 	e_Lang013 =	E&infügen aus Fenster
-	e_Lang014 =	Farbmarkierung &bearbeiten 
+	e_Lang014 =	&Tastendruck einfügen
+	e_Lang015 =	&Farbmarkierung bearbeiten 
 		
 ; Macro Sub Menu		
 	r_lang001 =	&Makro aufzeichnen

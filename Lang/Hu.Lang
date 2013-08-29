@@ -4,7 +4,7 @@
 		
 ; Main Menu		
 	m_Lang001 =	&Fájl
-	m_Lang002 =	&Beszúrása
+	m_Lang002 =	&Parancs
 	m_Lang003 =	&Választ
 	m_Lang004 =	&Szerkeszt
 	m_Lang005 =	&Macro
@@ -26,7 +26,7 @@
 	f_Lang009 =	K&ijárat
 	f_Lang010 =	Nincs kép
 		
-; Insert Sub Menu		
+; Command Sub Menu		
 	i_Lang001 =	&Egér
 	i_Lang002 =	&Szöveg
 	i_Lang003 =	&Irányítsd
@@ -74,7 +74,8 @@
 	e_Lang011 =	&Felköltözik
 	e_Lang012 =	&Lefelé
 	e_Lang013 =	&Beszúrás box
-	e_Lang014 =	S&zerkesztés színvédjegy
+	e_Lang014 =	Be &Gombnyomás
+	e_Lang015 =	S&zerkesztés színvédjegy
 		
 ; Macro Sub Menu		
 	r_lang001 =	&Makró rögzítése

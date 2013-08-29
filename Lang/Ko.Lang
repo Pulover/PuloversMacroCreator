@@ -4,7 +4,7 @@
 		
 ; Main Menu		
 	m_Lang001 =	파일
-	m_Lang002 =	삽입하다
+	m_Lang002 =	명령
 	m_Lang003 =	선택
 	m_Lang004 =	수정
 	m_Lang005 =	매크로
@@ -26,7 +26,7 @@
 	f_Lang009 =	출구
 	f_Lang010 =	없음
 		
-; Insert Sub Menu		
+; Command Sub Menu		
 	i_Lang001 =	마우스
 	i_Lang002 =	본문
 	i_Lang003 =	제어
@@ -74,7 +74,8 @@
 	e_Lang011 =	끌어 올리다
 	e_Lang012 =	아래로 이동
 	e_Lang013 =	상자 삽입
-	e_Lang014 =	편집 색상 표
+	e_Lang014 =	키를 삽입
+	e_Lang015 =	편집 색상 표
 		
 ; Macro Sub Menu		
 	r_lang001 =	기록 매크로

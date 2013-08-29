@@ -4,12 +4,12 @@
 		
 ; Main Menu		
 	m_Lang001 =	&Súbor
-	m_Lang002 =	&Vložiť
-	m_Lang003 =	V&ybrať
+	m_Lang002 =	&Príkaz
+	m_Lang003 =	&Vybrať
 	m_Lang004 =	&Upraviť
 	m_Lang005 =	&Makro
-	m_Lang006 =	&Pohľad
-	m_Lang007 =	V&oľby
+	m_Lang006 =	P&ohľad
+	m_Lang007 =	Vo&ľby
 	m_Lang008 =	&Jazyk
 	m_Lang009 =	&Darovať
 	m_Lang010 =	Pomo&c
@@ -26,7 +26,7 @@
 	f_Lang009 =	V&ýstup
 	f_Lang010 =	Žiadne súbory
 		
-; Insert Sub Menu		
+; Command Sub Menu		
 	i_Lang001 =	&Myš
 	i_Lang002 =	&Text
 	i_Lang003 =	&Ovládanie
@@ -74,7 +74,8 @@
 	e_Lang011 =	P&resunúť nahor
 	e_Lang012 =	Do&le
 	e_Lang013 =	Vlo&žiť z Box
-	e_Lang014 =	&Edit Color Mark
+	e_Lang014 =	Vlož&te úhoz
+	e_Lang015 =	&Edit Color Mark
 		
 ; Macro Sub Menu		
 	r_lang001 =	&Záznam makra

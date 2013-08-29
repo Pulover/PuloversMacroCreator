@@ -4,12 +4,12 @@
 		
 ; Main Menu		
 	m_Lang001 =	&File
-	m_Lang002 =	&Indsæt
+	m_Lang002 =	&Command
 	m_Lang003 =	&Vælg
 	m_Lang004 =	&Rediger
 	m_Lang005 =	&Makro
 	m_Lang006 =	&Se
-	m_Lang007 =	I&ndstillinger
+	m_Lang007 =	&Indstillinger
 	m_Lang008 =	S&prog
 	m_Lang009 =	&Donere
 	m_Lang010 =	&Hjælp
@@ -26,7 +26,7 @@
 	f_Lang009 =	&Udgang
 	f_Lang010 =	Ingen filer
 		
-; Insert Sub Menu		
+; Command Sub Menu		
 	i_Lang001 =	&Mus
 	i_Lang002 =	&Tekst
 	i_Lang003 =	&Kontrol
@@ -74,7 +74,8 @@
 	e_Lang011 =	Fl&yt op
 	e_Lang012 =	Fly&t ned
 	e_Lang013 =	I&ndsæt fra kassen
-	e_Lang014 =	Edit f&arvemærke
+	e_Lang014 =	Inds&æt Tastetryk
+	e_Lang015 =	Edit f&arvemærke
 		
 ; Macro Sub Menu		
 	r_lang001 =	&Indspil makro

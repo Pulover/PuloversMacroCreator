@@ -4,7 +4,7 @@
 		
 ; Main Menu		
 	m_Lang001 =	ファイル
-	m_Lang002 =	挿入
+	m_Lang002 =	コマンド
 	m_Lang003 =	選択する
 	m_Lang004 =	編集
 	m_Lang005 =	マクロ
@@ -26,7 +26,7 @@
 	f_Lang009 =	終了する
 	f_Lang010 =	いいえファイルん
 		
-; Insert Sub Menu		
+; Command Sub Menu		
 	i_Lang001 =	マウス
 	i_Lang002 =	テキスト
 	i_Lang003 =	コントロール
@@ -74,7 +74,8 @@
 	e_Lang011 =	繰り上げる
 	e_Lang012 =	下へ移動
 	e_Lang013 =	ボックスから挿入
-	e_Lang014 =	編集色マーク
+	e_Lang014 =	キーストロークを挿入
+	e_Lang015 =	編集色マーク
 		
 ; Macro Sub Menu		
 	r_lang001 =	マクロの記録

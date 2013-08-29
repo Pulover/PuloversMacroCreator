@@ -4,15 +4,15 @@
 		
 ; Main Menu		
 	m_Lang001 =	&Expedient
-	m_Lang002 =	&Insereix
+	m_Lang002 =	&Comando
 	m_Lang003 =	&Seleccionar
 	m_Lang004 =	E&dita
 	m_Lang005 =	&Macro
 	m_Lang006 =	&Visa
 	m_Lang007 =	&Opcions
-	m_Lang008 =	Idiom&a
+	m_Lang008 =	&Idioma
 	m_Lang009 =	Do&nar
-	m_Lang010 =	A&judar
+	m_Lang010 =	&Ajudar
 		
 ; File Sub Menu		
 	f_Lang001 =	&Nou
@@ -26,7 +26,7 @@
 	f_Lang009 =	&Sortida
 	f_Lang010 =	No hi ha arxius
 		
-; Insert Sub Menu		
+; Command Sub Menu		
 	i_Lang001 =	&Ratolí
 	i_Lang002 =	&Text
 	i_Lang003 =	&Controlar
@@ -74,7 +74,8 @@
 	e_Lang011 =	P&ujar
 	e_Lang012 =	&Baixar
 	e_Lang013 =	&Inseriu de Caixa
-	e_Lang014 =	Edit&a color
+	e_Lang014 =	Inserir Pu&lsacions
+	e_Lang015 =	Edit&a color
 		
 ; Macro Sub Menu		
 	r_lang001 =	&Gravar macro
