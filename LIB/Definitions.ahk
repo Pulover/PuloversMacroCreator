@@ -451,7 +451,7 @@ GroupActivate, GroupName, R
 GroupDeactivate, GroupName, R
 GroupClose, GroupName, A|R
 MsgBox, Options, Title, Text, Timeout
-InputBox, OutputVar, Title, Prompt, HIDE, Width, Height
+InputBox, OutputVar, Title, Prompt, HIDE, Width, Height, X, Y, Font, Timeout, Default
 ToolTip, Text, X, Y, WhichToolTip
 TrayTip, Title, Text, Seconds, Options
 Progress, ProgressParam1, SubText, MainText, WinTitle, FontName
@@ -483,6 +483,7 @@ Transform, OutputVar, Cmd, Value1, Value2
 Random, OutputVar, Min, Max
 BlockInput, Mode
 CoordMode, ToolTip|Pixel|Mouse|Caret|Menu, Screen|Window|Client
+WinMenuSelectItem, WinTitle, WinText, Menu, SubMenu1, SubMenu2, SubMenu3, SubMenu4, SubMenu5, SubMenu6, ExcludeTitle, ExcludeText
 SendLevel, Level
 SetCapsLockState, State
 SetNumLockState, State

@@ -144,7 +144,7 @@ Class LV_Rows
 ;        Multiline:      If True pastes the contents at every selected row.
 ;    Return:             True if memory contains data or False if not.
 ;=======================================================================================
-    Paste(Row=0, Multiline=True)
+    Paste(Row=0, Multiline=False)
     {
         If !this.CopyData.MaxIndex()
             return False

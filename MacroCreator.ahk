@@ -617,18 +617,17 @@ If (MainWinSize = "W H")
 	MainWinSize := "W920 H630"
 If (MainWinPos = "X Y")
 	MainWinPos := "Center"
-Else
+Else If (MainWinPos <> "Center")
 {
 	mGuiX := RegExReplace(MainWinPos, "X(\d+).*", "$1"), mGuiY := RegExReplace(MainWinPos, ".*Y(\d+)", "$1")
 	If (mGuiX < 0)
 		mGuiX := 0
-	Else If (mGuiX >= A_ScreenWidth)
-		mGuiX := A_ScreenWidth // 2
 	If (mGuiY < 0)
 		mGuiY := 0
-	Else If (mGuiY >= A_ScreenHeight)
-		mGuiY := A_ScreenHeight // 2
-	MainWinPos := "X" mGuiX " Y" mGuiY
+	If (mGuiX >= A_ScreenWidth) || (mGuiY >= A_ScreenHeight)
+		MainWinPos := "Center"
+	Else
+		MainWinPos := "X" mGuiX " Y" mGuiY
 }
 Gui, Show, %MainWinSize% %MainWinPos% Hide
 GoSub, b_Start
@@ -922,7 +921,7 @@ Gui, chPrev:Show, W450 H600 Hide
 ,	sciPrev.StyleClearAll()
 ,	sciPrev.StyleSetFore(11, 0x0086B3)
 ,	sciPrev.StyleSetFore(12, 0x990000), sciPrev.StyleSetBold(12, True)
-,	sciPrev.StyleSetFore(13, 0x009B4E)
+,	sciPrev.StyleSetFore(13, 0x009B4E), sciPrev.StyleSetBold(13, True)
 ,	sciPrev.StyleSetFore(16, 0x008080)
 ,	sciPrev.StyleSetFore(15, 0xDD1144)
 ,	sciPrev.SetKeywords(0, SyHi_Com)
@@ -946,7 +945,7 @@ Gui, chPrev:Show, W450 H600 Hide
 ,	sciPrevF.StyleClearAll()
 ,	sciPrevF.StyleSetFore(11, 0x0086B3)
 ,	sciPrevF.StyleSetFore(12, 0x990000), sciPrevF.StyleSetBold(12, True)
-,	sciPrevF.StyleSetFore(13, 0x009B4E)
+,	sciPrevF.StyleSetFore(13, 0x009B4E), sciPrevF.StyleSetBold(13, True)
 ,	sciPrevF.StyleSetFore(16, 0x008080)
 ,	sciPrevF.StyleSetFore(15, 0xDD1144)
 ,	sciPrevF.SetKeywords(0, SyHi_Com)
@@ -5429,7 +5428,7 @@ Gui, 1:+Disabled
 Gui, 10:Add, Groupbox, Section W380 H70
 Gui, 10:Add, Text, ys+15 xs+10 W55, %c_Lang055%:
 Gui, 10:Add, ComboBox, W170 vFileCmdL gFileCmd, %FileCmdList%
-Gui, 10:Add, Groupbox, Section xs y+20 W380 H295
+Gui, 10:Add, Groupbox, Section xs y+20 W380 H520
 Gui, 10:Add, Text, ys+15 xs+10 W200 vFCmd1
 Gui, 10:Add, Edit, vPar1File W330 R1 -Multi
 Gui, 10:Add, Button, -Wrap yp-1 x+0 W30 H23 vSearchPar1 gSearch, ...
@@ -5446,6 +5445,16 @@ Gui, 10:Add, Text, xs+10 y+5 W200 vFCmd5
 Gui, 10:Add, Edit, vPar5File W330 R1 -Multi
 Gui, 10:Add, Text, xs+10 y+5 W200 vFCmd6
 Gui, 10:Add, Edit, vPar6File W330 R1 -Multi
+Gui, 10:Add, Text, xs+10 y+5 W200 vFCmd7
+Gui, 10:Add, Edit, vPar7File W330 R1 -Multi
+Gui, 10:Add, Text, xs+10 y+5 W200 vFCmd8
+Gui, 10:Add, Edit, vPar8File W330 R1 -Multi
+Gui, 10:Add, Text, xs+10 y+5 W200 vFCmd9
+Gui, 10:Add, Edit, vPar9File W330 R1 -Multi
+Gui, 10:Add, Text, xs+10 y+5 W200 vFCmd10
+Gui, 10:Add, Edit, vPar10File W330 R1 -Multi
+Gui, 10:Add, Text, xs+10 y+5 W200 vFCmd11
+Gui, 10:Add, Edit, vPar11File W330 R1 -Multi
 Gui, 10:Add, Button, -Wrap Section Default xm W75 H23 vRunOK gRunOK, %c_Lang020%
 Gui, 10:Add, Button, -Wrap ys W75 H23 gRunCancel, %c_Lang021%
 Gui, 10:Add, Button, -Wrap ys W75 H23 vRunApply gRunApply Disabled, %c_Lang131%
@@ -5510,7 +5519,7 @@ RunApply:
 RunOK:
 Gui, 10:Submit, NoHide
 Details := ""
-Loop, 6
+Loop, 11
 {
 	GuiControlGet, fTxt, 10:, FCmd%A_Index%
 	If (InStr(fTxt, "OutputVar") || InStr(fTxt, "InputVar"))
@@ -5559,7 +5568,7 @@ Else If RowSelection = 0
 }
 Else
 {
-	RowNumber = 0
+	RowNumber := 0
 	Loop, %RowSelection%
 	{
 		RowNumber := LV_GetNext(RowNumber)
@@ -5588,7 +5597,7 @@ return
 
 FileCmd:
 Gui, 10:Submit, NoHide
-Loop, 6
+Loop, 11
 {
 	Try
 	{
@@ -5613,6 +5622,10 @@ Loop, 6
 	Catch
 		GuiControl, 10:Disable, SearchPar%A_Index%
 }
+If (FileCmdL = "InputBox")
+	GuiControl, 10:+ReadOnly, Par9File
+Else
+	GuiControl, 10:-ReadOnly, Par9File
 If ((FileCmdL = "PixelGetColor") || (FileCmdL = "Tooltip"))
 {
 	GuiControl, 10:Hide, SearchPar2
@@ -7763,7 +7776,7 @@ return
 
 PasteRows:
 Gui, chMacro:Default
-If CopyRows.Paste()
+If CopyRows.Paste(, 1)
 {
 	GoSub, b_Start
 	GoSub, RowCheck
@@ -9697,7 +9710,7 @@ pb_SplitPath:
 	Null := ""
 return
 pb_InputBox:
-	InputBox, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%, %Par6%
+	InputBox, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%, %Par6%, %Par7%, %Par8%,, %Par10%, %Par11%
 return
 pb_ToolTip:
 	ToolTip, %Par1%, %Par2%, %Par3%, %Par4%
@@ -9771,6 +9784,9 @@ pb_UrlDownloadToFile:
 return
 pb_CoordMode:
 	CoordMode, %Par1%, %Par2%
+return
+pb_WinMenuSelectItem:
+	WinMenuSelectItem, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%, %Par6%, %Par7%, %Par8%, %Par9%, %Par10%, %Par11%
 return
 pb_SendLevel:
 	SendLevel, %Step%
@@ -10852,7 +10868,7 @@ Loop, % LV_GetCount()
 :	(Type = "ExitApp") ? LV_Modify(A_Index, "Icon" 15)
 :	(InStr(Type, "Url")) ? LV_Modify(A_Index, "Icon" 98)
 :	(InStr(Type, "LockState") || InStr(Type, "Time") || InStr(Type, "Transform")
-	|| InStr(Type, "Random") || InStr(Type, "ClipWait") || InStr(Type, "Block")
+	|| InStr(Type, "Random") || InStr(Type, "ClipWait") || InStr(Type, "Block") || InStr(Type, "WinMenu")
 	|| InStr(Type, "Status") || InStr(Type, "SendLevel") || InStr(Type, "CoordMode")) ?  LV_Modify(A_Index, "Icon" 38)
 :	""
 }
