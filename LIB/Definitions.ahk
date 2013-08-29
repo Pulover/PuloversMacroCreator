@@ -488,6 +488,7 @@ SendLevel, Level
 SetCapsLockState, State
 SetNumLockState, State
 SetScrollLockState, State
+OutputDebug, Text
 UrlDownloadToFile, URL, Filename
 Break, LoopNumber
 Continue, LoopNumber

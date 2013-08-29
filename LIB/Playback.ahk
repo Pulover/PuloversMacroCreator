@@ -21,7 +21,7 @@
 		If !WinExist("ahk_id " PMCOSC)
 			GoSub, ShowControls
 	}
-	PlayOSOn := 1, ToggleButtonIcon(OSPlay, PauseIconB), LastError := ""
+	PlayOSOn := 1, tbOSC.ModifyButtonInfo(1, "Image", 56), LastError := ""
 ,	CurrentRange := m_ListCount, ChangeProgBarColor("20D000", "OSCProg", 28)
 	If (ShowProgBar = 1)
 	{
@@ -450,7 +450,7 @@
 		Try Menu, Tray, Icon, %DefaultIcon%, 1
 		Menu, Tray, Default, %w_Lang005%
 		PlayOSOn := 0
-		ToggleButtonIcon(OSPlay, TestRunIcon)
+		tbOSC.ModifyButtonInfo(1, "Image", 49)
 		If (AutoHideBar)
 		{
 			If WinExist("ahk_id " PMCOSC)

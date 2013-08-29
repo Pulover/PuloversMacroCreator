@@ -1135,7 +1135,7 @@ If (Record := !Record)
 		Traytip, %AppName%, Macro%A_List%: %d_Lang028% %RecKey% %d_Lang029%.,,1
 	Try Menu, Tray, Icon, %ResDllPath%, 55
 	Menu, Tray, Default, %w_Lang008%
-	ToggleButtonIcon(OSRec, RecStopIcon)
+	tbOSC.ModifyButtonInfo(5, "Image", 66)
 	return
 }
 Else
@@ -1148,7 +1148,7 @@ Else
 	If ShowStep = 1
 		Traytip, %AppName%, % d_Lang027
 		. ".`nMacro" A_List ": " o_AutoKey[A_List],,1
-	ToggleButtonIcon(OSRec, RecordIcon)
+	tbOSC.ModifyButtonInfo(5, "Image", 55)
 	return
 }
 return
@@ -1167,7 +1167,7 @@ If (!(WinActive("ahk_id" PMCWinID)) && (KeepHkOn = 1))
 	GoSub, KeepHkOn
 Try Menu, Tray, Icon, %DefaultIcon%, 1
 Try Menu, Tray, Default, %w_Lang005%
-ToggleButtonIcon(OSRec, RecordIcon)
+tbOSC.ModifyButtonInfo(5, "Image", 55)
 return
 
 KeyboardRecord:
@@ -2619,7 +2619,7 @@ IfWinExist
 OsBit := (A_PtrSize = 8) ? "x64" : "x86"
 Gui, 26:-SysMenu +HwndTipScrID +owner1
 Gui, 26:Color, FFFFFF
-Gui, 26:Add, Pic, w48 y+20 Icon1, %DefaultIcon%
+Gui, 26:Add, Pic, W48 H48 y+20 Icon1, %DefaultIcon%
 Gui, 26:Font, Bold s12, Tahoma
 Gui, 26:Add, Text, yp x+10, PULOVER'S MACRO CREATOR
 Gui, 26:Font
@@ -2640,26 +2640,29 @@ AutoHotkey Version: %A_AhkVersion%
 )
 Gui, 26:Add, Link, y+0, Software Licence: <a href="http://www.gnu.org/licenses/gpl-3.0.txt">GNU General Public License</a>
 Gui, 26:Font, Bold, Tahoma
-Gui, 26:Add, Text,, Thanks to:
 Gui, 26:Font
+Gui, 26:Add, Groupbox, Section W360 H130 Center, Thanks to
 Gui, 26:Font,, Tahoma
-Gui, 26:Add, Link, y+0, Chris and Lexikos for <a href="http://www.autohotkey.com/">AutoHotkey</a>.
-Gui, 26:Add, Link, y+0, tic (Tariq Porter) for his <a href="http://www.autohotkey.com/board/topic/29449-gdi-standard-library">GDI+ Library</a>.
-Gui, 26:Add, Link, y+0, tkoi && majkinetor for the <a href="http://www.autohotkey.com/board/topic/37147-ilbutton-image-buttons">ILButton function</a>.
-Gui, 26:Add, Link, y+0, just me for <a href="http://www.autohotkey.com/board/topic/88699-class-lv-colors">LV_Colors Class</a>, GuiCtrlAddTab and for updating ILButton to 64bit.
-Gui, 26:Add, Link, y+0, Micahs for the <a href="http://www.autohotkey.com/board/topic/30486-listview-tooltip-on-mouse-hover/?p=280843">base code</a> of the Drag-Rows function.
-Gui, 26:Add, Link, y+0, jaco0646 for the <a href="http://www.autohotkey.com/board/topic/47439-user-defined-dynamic-hotkeys">function</a> to make hotkey controls detect other keys.
-Gui, 26:Add, Link, y+0, Laszlo for the <a href="http://www.autohotkey.com/board/topic/15675-monster">Monster function</a> to solve expressions.
-Gui, 26:Add, Link, y+0, Jethrow for the <a href="http://www.autohotkey.com/board/topic/47052-basic-webpage-controls">IEGet Function</a>.
-Gui, 26:Add, Link, y+0, RaptorX for the <a href="http://www.autohotkey.com/board/topic/85928-wrapper-scintilla-wrapper">Scintilla Wrapper for AHK</a>.
-Gui, 26:Add, Link, y+0, majkinetor for the <a href="http://www.autohotkey.com/board/topic/49214-ahk-ahk-l-forms-framework-08/">Dlg_Color</a> function.
-Gui, 26:Add, Link, y+0, rbrtryn for the <a href="http://www.autohotkey.com/board/topic/91229-windows-color-picker-plus/">ChooseColor</a> function.
-Gui, 26:Add, Link, y+0, PhiLho and skwire for the <a href="http://www.autohotkey.com/board/topic/11926-can-you-move-a-listview-column-programmatically/#entry237340">function</a> to Get/Set the order of columns.
-Gui, 26:Add, Link, y+0, fincs for <a href="http://www.autohotkey.com/board/topic/71751-gendocs-v30-alpha002">GenDocs</a>.
-Gui, 26:Add, Link, y+0, T800 for <a href="http://www.autohotkey.com/board/topic/17984-html-help-utils">Html Help utils</a>.
-Gui, 26:Add, Text, y+0 w380, Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jörg Schmalenberger (German).
-Gui, 26:Add, Groupbox, W380 H130 Center, GNU General Public License
-Gui, 26:Add, Edit, yp+20 xp+10 W360 H100 ReadOnly -E0x200,
+Gui, 26:Add, Edit, ys+20 xs+10 W340 H100 ReadOnly -E0x200,
+(
+Chris and Lexikos for AutoHotkey.
+tic (Tariq Porter) for his GDI+ Library.
+tkoi && majkinetor for the ILButton function.
+just me for LV_Colors Class, GuiCtrlAddTab and for updating ILButton to 64bit.
+Micahs for the base code of the Drag-Rows function.
+jaco0646 for the function to make hotkey controls detect other keys.
+Laszlo for the Monster function to solve expressions.
+Jethrow for the IEGet Function.
+RaptorX for the Scintilla Wrapper for AHK.
+majkinetor for the Dlg_Color function.
+rbrtryn for the ChooseColor function.
+PhiLho and skwire for the function to Get/Set the order of columns.
+fincs for GenDocs.
+T800 for Html Help utils.
+Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jörg Schmalenberger (German).
+)
+Gui, 26:Add, Groupbox, Section xm+58 W360 H130 Center, GNU General Public License
+Gui, 26:Add, Edit, ys+20 xs+10 W340 H100 ReadOnly -E0x200,
 (
 This program is free software, and you are welcome to redistribute it under  the terms of the GNU General Public License as published by the Free Software Foundation; either version 3 of the License, or any later version.
 
@@ -2670,9 +2673,9 @@ You should have received a copy of the GNU General Public License along with thi
 Gui, 26:Font
 Gui, 26:Add, Button, -Wrap Default y+20 xp-10 W80 H23 gTipClose, %c_Lang020%
 Gui, 26:Font, Bold, Tahoma
-Gui, 26:Add, Text, yp-3 xp+255 H25 Center Hidden vHolderStatic, %m_Lang009%
+Gui, 26:Add, Text, yp-3 xm+380 H25 Center Hidden vHolderStatic, %m_Lang009%
 GuiControlGet, Hold, 26:Pos, HolderStatic
-Gui, 26:Add, Progress, % "x" 429 - HoldW " yp wp+20 hp BackgroundF68C06 vProgStatic Disabled"
+Gui, 26:Add, Progress, % "x" 410 - HoldW " yp wp+20 hp BackgroundF68C06 vProgStatic Disabled"
 Gui, 26:Add, Text, xp yp wp hp Border cWhite Center 0x200 BackgroundTrans vDonateStatic gDonatePayPal, %m_Lang009%
 Gui, 26:Font
 GuiControl, 26:Focus, %c_Lang020%
@@ -3919,7 +3922,7 @@ Gui, 1:Submit, NoHide
 Gui, 8:+owner1 -MinimizeBox +E0x00000400 +HwndCmdWin
 Gui, 1:+Disabled
 Gui, 8:Add, Custom, ClassToolbarWindow32 hwndhTbText gTbText 0x0800 0x0100 0x0040
-Gui, 8:Add, Edit, Section xm ym+25 vTextEdit gTextEdit WantTab W710 R30
+Gui, 8:Add, Edit, Section xm ym+25 vTextEdit gTextEdit WantTab W710 R25
 ; Options
 Gui, 8:Add, GroupBox, Section W220 H125, %c_Lang163%:
 Gui, 8:Add, Radio, -Wrap Group Checked ys+20 xs+10 W200 vRaw gRaw R1, %c_Lang045%
@@ -5428,7 +5431,7 @@ Gui, 1:+Disabled
 Gui, 10:Add, Groupbox, Section W380 H70
 Gui, 10:Add, Text, ys+15 xs+10 W55, %c_Lang055%:
 Gui, 10:Add, ComboBox, W170 vFileCmdL gFileCmd, %FileCmdList%
-Gui, 10:Add, Groupbox, Section xs y+20 W380 H520
+Gui, 10:Add, Groupbox, Section xs y+20 W380 H380
 Gui, 10:Add, Text, ys+15 xs+10 W200 vFCmd1
 Gui, 10:Add, Edit, vPar1File W330 R1 -Multi
 Gui, 10:Add, Button, -Wrap yp-1 x+0 W30 H23 vSearchPar1 gSearch, ...
@@ -5443,18 +5446,18 @@ Gui, 10:Add, Text, xs+10 y+5 W200 vFCmd4
 Gui, 10:Add, Edit, vPar4File W330 R1 -Multi
 Gui, 10:Add, Text, xs+10 y+5 W200 vFCmd5
 Gui, 10:Add, Edit, vPar5File W330 R1 -Multi
-Gui, 10:Add, Text, xs+10 y+5 W200 vFCmd6
-Gui, 10:Add, Edit, vPar6File W330 R1 -Multi
-Gui, 10:Add, Text, xs+10 y+5 W200 vFCmd7
-Gui, 10:Add, Edit, vPar7File W330 R1 -Multi
-Gui, 10:Add, Text, xs+10 y+5 W200 vFCmd8
-Gui, 10:Add, Edit, vPar8File W330 R1 -Multi
-Gui, 10:Add, Text, xs+10 y+5 W200 vFCmd9
-Gui, 10:Add, Edit, vPar9File W330 R1 -Multi
-Gui, 10:Add, Text, xs+10 y+5 W200 vFCmd10
-Gui, 10:Add, Edit, vPar10File W330 R1 -Multi
-Gui, 10:Add, Text, xs+10 y+5 W200 vFCmd11
-Gui, 10:Add, Edit, vPar11File W330 R1 -Multi
+Gui, 10:Add, Text, xs+10 y+5 W95 vFCmd6
+Gui, 10:Add, Edit, vPar6File W160 R1 -Multi
+Gui, 10:Add, Text, x+10 yp-20 W95 vFCmd7
+Gui, 10:Add, Edit, vPar7File W160 R1 -Multi
+Gui, 10:Add, Text, xs+10 y+5 W95 vFCmd8
+Gui, 10:Add, Edit, vPar8File W160 R1 -Multi
+Gui, 10:Add, Text, x+10 yp-20 W95 vFCmd9
+Gui, 10:Add, Edit, vPar9File W160 R1 -Multi
+Gui, 10:Add, Text, xs+10 y+5 W95 vFCmd10
+Gui, 10:Add, Edit, vPar10File W160 R1 -Multi
+Gui, 10:Add, Text, x+10 yp-20 W95 vFCmd11
+Gui, 10:Add, Edit, vPar11File W160 R1 -Multi
 Gui, 10:Add, Button, -Wrap Section Default xm W75 H23 vRunOK gRunOK, %c_Lang020%
 Gui, 10:Add, Button, -Wrap ys W75 H23 gRunCancel, %c_Lang021%
 Gui, 10:Add, Button, -Wrap ys W75 H23 vRunApply gRunApply Disabled, %c_Lang131%
@@ -5623,7 +5626,10 @@ Loop, 11
 		GuiControl, 10:Disable, SearchPar%A_Index%
 }
 If (FileCmdL = "InputBox")
+{
+	GuiControl, 10:, Par9File
 	GuiControl, 10:+ReadOnly, Par9File
+}
 Else
 	GuiControl, 10:-ReadOnly, Par9File
 If ((FileCmdL = "PixelGetColor") || (FileCmdL = "Tooltip"))
@@ -7479,8 +7485,7 @@ GoSub, TabSel
 return
 
 OSPlay:
-Gui, 28:Submit, NoHide
-Gui, chMacro:Default
+GoSub, OSHK
 GoSub, b_Enable
 If (ListCount%OSHK% = 0)
 	return
@@ -9360,7 +9365,7 @@ If Record
 }
 GoSub, RowCheck
 Try Menu, Tray, Icon, %DefaultIcon%, 1
-ToggleButtonIcon(OSPlay, TestRunIcon)
+tbOSC.ModifyButtonInfo(1, "Image", 49)
 return
 
 PauseKey:
@@ -9371,9 +9376,9 @@ f_PauseKey:
 If !(CurrentRange) && !(Record)
 	return
 If ToggleIcon() && !(Record)
-	ToggleButtonIcon(OSPlay, PauseIconB)
+	tbOSC.ModifyButtonInfo(1, "Image", 56)
 Else
-	ToggleButtonIcon(OSPlay, TestRunIcon)
+	tbOSC.ModifyButtonInfo(1, "Image", 49)
 Pause,, 1
 return
 
@@ -9784,6 +9789,9 @@ pb_UrlDownloadToFile:
 return
 pb_CoordMode:
 	CoordMode, %Par1%, %Par2%
+return
+pb_OutputDebug:
+	OutputDebug, %Step%
 return
 pb_WinMenuSelectItem:
 	WinMenuSelectItem, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%, %Par6%, %Par7%, %Par8%, %Par9%, %Par10%, %Par11%
@@ -10867,7 +10875,7 @@ Loop, % LV_GetCount()
 :	(Type = "Return") ? LV_Modify(A_Index, "Icon" 66)
 :	(Type = "ExitApp") ? LV_Modify(A_Index, "Icon" 15)
 :	(InStr(Type, "Url")) ? LV_Modify(A_Index, "Icon" 98)
-:	(InStr(Type, "LockState") || InStr(Type, "Time") || InStr(Type, "Transform")
+:	(InStr(Type, "LockState") || InStr(Type, "Time") || InStr(Type, "Transform") || InStr(Type, "Debug")
 	|| InStr(Type, "Random") || InStr(Type, "ClipWait") || InStr(Type, "Block") || InStr(Type, "WinMenu")
 	|| InStr(Type, "Status") || InStr(Type, "SendLevel") || InStr(Type, "CoordMode")) ?  LV_Modify(A_Index, "Icon" 38)
 :	""
