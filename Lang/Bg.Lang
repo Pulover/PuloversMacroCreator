@@ -675,6 +675,10 @@
 	d_Lang072 =	Подкрепете софтуера с отворен код
 	d_Lang073 =	Грешка: Невалиден Hotkey Избрани.
 	d_Lang074 =	Намерете команда или функция
+	d_Lang075 =	Добре дошли в Pulover's Macro Creator
+	d_Lang076 =	Моля, изберете предпочитания от вас оформление
+	d_Lang077 =	Основен
+	d_Lang078 =	Default
 		
 ; Start-up Tips		
 	Start_Tips =	
