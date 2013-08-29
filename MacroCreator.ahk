@@ -7170,11 +7170,11 @@ return
 Welcome:
 Gui, 31:-MinimizeBox +owner1
 Gui, 31:Font, Bold s10, Tahoma
-Gui, 31:Add, Text, w300 Center, Welcome to %AppName%!
+Gui, 31:Add, Text, w300 Center, %d_Lang075%
 Gui, 31:Font
-Gui, 31:Add, Groupbox, Section w320 h60, Please choose your prefered layout:
-Gui, 31:Add, Radio, Checked xs+60 ys+30 W100 vBasic gBasicLayout, Basic
-Gui, 31:Add, Radio, yp x+20 W100 vDefault gDefaultLayout, Default
+Gui, 31:Add, Groupbox, Section w320 h60, %d_Lang076%:
+Gui, 31:Add, Radio, Checked xs+60 ys+30 W100 vBasic gBasicLayout, %d_Lang077%
+Gui, 31:Add, Radio, yp x+20 W100 vDefault gDefaultLayout, %d_Lang078%
 Gui, 31:Add, Button, Default xm W75 H23 gWelcClose, %c_Lang020%
 Gui, 31:Show,, %AppName%
 return
