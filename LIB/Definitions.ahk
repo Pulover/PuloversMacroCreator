@@ -93,6 +93,7 @@ Else
 
 ,	RecOptChecks := ["ClearNewList", "Strokes", "CaptKDn", "Mouse", "MScroll"
 			, "Moves", "TimedI", "WClass", "WTitle", "RecMouseCtrl", "RecKeybdCtrl"]
+,	PlayOptChecks := ["ShowStep", "MouseReturn", "ShowBarOnStart", "AutoHideBar", "RandomSleeps"]
 ,	OnFinishCode := 1
 ,	Exp_Mult := {1:2, 2:4, 3:8, 4:16, 5:32}
 ,	KeyNameRep := "

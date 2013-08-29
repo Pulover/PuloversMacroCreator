@@ -430,7 +430,7 @@
 					WaitFor.Key(o_ManKey[Manual], 0)
 			}
 		}
-		If (Manual || StopIt || BreakIt || (o_TimesG[Macro_On] > 0))
+		If (Manual || StopIt || BreakIt || !Macro_On || (o_TimesG[Macro_On] > 0))
 			break
 	}
 	If ((MouseReturn = 1) && (MouseReset = 1))

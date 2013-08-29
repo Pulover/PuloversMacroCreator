@@ -9363,7 +9363,7 @@ return
 
 f_AbortKey:
 Gui, chMacro:Default
-StopIt := 1
+StopIt := 1, PlayOSOn := 0, aHK_Timer := 0
 Pause, Off
 If Record
 {
@@ -11410,11 +11410,14 @@ Menu, PlayOptMenu, Add, %r_lang011%, PlayFrom
 Menu, PlayOptMenu, Add, %r_lang012%, PlayTo
 Menu, PlayOptMenu, Add, %r_lang013%, PlaySel
 Menu, PlayOptMenu, Add
-Menu, PlayOptMenu, Add, %t_Lang038%, PlayOpt
-Menu, PlayOptMenu, Add, %t_Lang107%, RandOpt
-Menu, PlayOptMenu, Add
 Menu, PlayOptMenu, Add, %t_Lang036%, :SpeedUpMenu
 Menu, PlayOptMenu, Add, %t_Lang037%, :SpeedDnMenu
+Menu, PlayOptMenu, Add
+Menu, PlayOptMenu, Add, %t_Lang100%, PlayOpt
+Menu, PlayOptMenu, Add, %t_Lang038%, PlayOpt
+Menu, PlayOptMenu, Add, %t_Lang085%, PlayOpt
+Menu, PlayOptMenu, Add, %t_Lang143%, PlayOpt
+Menu, PlayOptMenu, Add, %t_Lang107%, PlayOpt
 
 If (pb_From)
 	Menu, PlayOptMenu, Check, %r_lang011%
@@ -11422,10 +11425,18 @@ If (pb_To)
 	Menu, PlayOptMenu, Check, %r_lang012%
 If (pb_Sel)
 	Menu, PlayOptMenu, Check, %r_lang013%
+
+If (ShowStep)
+	Menu, PlayOptMenu, Check, %t_Lang100%
 If (MouseReturn)
 	Menu, PlayOptMenu, Check, %t_Lang038%
+If (ShowBarOnStart)
+	Menu, PlayOptMenu, Check, %t_Lang085%
+If (AutoHideBar)
+	Menu, PlayOptMenu, Check, %t_Lang143%
 If (RandomSleeps)
 	Menu, PlayOptMenu, Check, %t_Lang107%
+
 Menu, SpeedUpMenu, Check, %SpeedUp%x
 Menu, SpeedDnMenu, Check, %SpeedDn%x
 
@@ -11436,12 +11447,8 @@ Menu, SpeedDnMenu, DeleteAll
 mX := "", mY := ""
 return
 
-RandOpt:
-RandomSleeps := !RandomSleeps
-return
-
 PlayOpt:
-MouseReturn := !MouseReturn
+ItemVar := PlayOptChecks[A_ThisMenuItemPos-7], %ItemVar% := !%ItemVar%
 return
 
 SpeedOpt:
