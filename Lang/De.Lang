@@ -143,9 +143,9 @@
 	w_Lang002 =	Vorschau
 	w_Lang003 =	Optionen
 	w_Lang004 =	Aufn.
-	w_Lang005 =	Wiederg.
+	w_Lang005 =	Wiedergabe
 	w_Lang006 =	Wiedergabe
-	w_Lang007 =	Handbuch
+	w_Lang007 =	Manuell
 	w_Lang008 =	Stopp
 	w_Lang009 =	Display-Steuerelemente Symbolleiste
 	w_Lang010 =	Pause
@@ -208,7 +208,7 @@
 	w_Lang067 =	COM-Schnittstelle (Umschalt+F11)
 	w_Lang068 =	Scriptlet ausführen (Strg+F11)
 	w_Lang069 =	Windows-Messages (F12)
-	w_Lang070 =	Windows-Taste auf "Run" Hotkey fügen
+	w_Lang070 =	Windows-Taste auf "Wiederg." Hotkey fügen
 	w_Lang071 =	Joystick-Taste als Hotkey verwenden
 	w_Lang072 =	Makro hinzufügen (Strg+T)
 	w_Lang073 =	Makro schließen (Strg+W)

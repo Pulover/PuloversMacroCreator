@@ -763,7 +763,7 @@ DefineToolbars:
 ,	RbMain := New Rebar(hRbMain)
 ,	TB_Rebar(RbMain, 1, TbFile), TB_Rebar(RbMain, 2, TbRecPlay), TB_Rebar(RbMain, 3, TbSettings)
 ,	RbMain.InsertBand(hAutoKey, 0, "", 4, w_Lang005, 50, 0, "", 22, 50)
-,	RbMain.InsertBand(hTimesCh, 0, "FixedSize NoGripper", 11, w_Lang011 " (" t_Lang004 ")", 95, 0, "", 22, 95)
+,	RbMain.InsertBand(hTimesCh, 0, "FixedSize NoGripper", 11, w_Lang011 " (" t_Lang004 ")", 75 * (A_ScreenDPI/96), 0, "", 22, 75 * (A_ScreenDPI/96))
 ,	TB_Rebar(RbMain, 5, TbCommand, "Break")
 ,	RbMain.InsertBand(hManKey, 0, "", 6, w_Lang007, 50, 0, "", 22, 50)
 ,	RbMain.InsertBand(hAbortKey, 0, "", 7, w_Lang008, 60, 0, "", 22, 50)
@@ -915,6 +915,7 @@ Gui, chPrev:Add, Custom, ClassToolbarWindow32 hwndhTbPrev 0x0800 0x0100 0x0040 0
 Gui, chPrev:Add, Custom, ClassScintilla x0 y34 hwndhSciPrev vLVPrev
 Gui, chPrev:Show, W450 H600 Hide
 	TB_Define(TbPrev, hTbPrev, hIL_Icons, FixedBar.Preview, FixedBar.PrevOpt)
+,	TbPrev.ModifyButton(9, "Hide")
 ,	sciPrev := new scintilla(hSciPrev)
 ,	sciPrev.SetMarginWidthN(0, 20)
 ,	sciPrev.SetWrapMode(TextWrap)
@@ -969,8 +970,7 @@ Gui, chPrev:Show, W450 H600 Hide
 return
 
 OnTop:
-TB_Edit(TbPrev, "OnTop", OnTop := !OnTop)
-,	TB_Edit(TbPrevF, "OnTop", OnTop)
+TB_Edit(TbPrevF, "OnTop", OnTop := !OnTop)
 Gui, % (OnTop) ? "2:+AlwaysOnTop" : "2:-AlwaysOnTop"
 return
 
@@ -10884,8 +10884,8 @@ Loop, % LV_GetCount()
 :	(Type = "Return") ? LV_Modify(A_Index, "Icon" 66)
 :	(Type = "ExitApp") ? LV_Modify(A_Index, "Icon" 15)
 :	(InStr(Type, "Url")) ? LV_Modify(A_Index, "Icon" 98)
-:	(InStr(Type, "LockState") || InStr(Type, "Time") || InStr(Type, "Transform") || InStr(Type, "Debug")
-	|| InStr(Type, "Random") || InStr(Type, "ClipWait") || InStr(Type, "Block") || InStr(Type, "WinMenu")
+:	(InStr(Type, "LockState") || InStr(Type, "Time") || InStr(Type, "Transform")
+	|| InStr(Type, "Random") || InStr(Type, "ClipWait") || InStr(Type, "Block") || InStr(Type, "Debug")
 	|| InStr(Type, "Status") || InStr(Type, "SendLevel") || InStr(Type, "CoordMode")) ?  LV_Modify(A_Index, "Icon" 38)
 :	""
 }

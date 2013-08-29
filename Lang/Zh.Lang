@@ -208,7 +208,7 @@
 	w_Lang067 =	 COM接口（按Shift+F11）
 	w_Lang068 =	运行的scriptlet（按Ctrl+ F11）
 	w_Lang069 =	Windows消息（F12）
-	w_Lang070 =	Windows键添加到“运行”热键
+	w_Lang070 =	Windows键“播放”热键
 	w_Lang071 =	使用操纵杆按钮，热键
 	w_Lang072 =	添加宏（Ctrl+T）
 	w_Lang073 =	关闭宏（Ctrl+W）
