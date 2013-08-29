@@ -26,7 +26,7 @@
 	f_Lang009 =	导出
 	f_Lang010 =	没有文件
 		
-; Command Sub Menu		
+; Actions Sub Menu		
 	i_Lang001 =	鼠标
 	i_Lang002 =	文本
 	i_Lang003 =	控制
@@ -101,17 +101,19 @@
 	v_lang006 =	工具栏
 	v_lang007 =	热键
 	v_lang008 =	重置列大小
-	v_lang009 =	文件
-	v_lang010 =	录制和播放
-	v_lang011 =	选项
-	v_lang012 =	命令
-	v_lang013 =	编辑
-	v_lang014 =	定制
-	v_lang015 =	自动
-	v_lang016 =	手册
-	v_lang017 =	停止
-	v_lang018 =	暂停
-	v_lang019 =	기본값을 재설정...
+	v_lang009 =	重布局
+	v_lang010 =	文件
+	v_lang011 =	录制和播放
+	v_lang012 =	选项
+	v_lang013 =	命令
+	v_lang014 =	编辑
+	v_lang015 =	定制
+	v_lang016 =	自动
+	v_lang017 =	手册
+	v_lang018 =	停止
+	v_lang019 =	暂停
+	v_lang020 =	基本的
+	v_lang021 =	默认
 		
 ; Options Sub Menu		
 	o_Lang001 =	设置
@@ -1002,4 +1004,240 @@
 	Tip_Height =	设置或获取对象的高度。
 	Tip_Length =	设置或检索集合中的对象的数目。
 		
+; AHK Commands Tips		
+	Ahk_Cmd_Index =	
+	(LTrim	
+	Abs	
+	ASin	
+	ACos	
+	ATan	
+	BlockInput	
+	Break	
+	Ceil	
+	Click	
+	ClipWait	
+	ComObjActive	
+	ComObjArray	
+	ComObjConnect	
+	ComObjCreate	
+	ComObjEnwrap / ComObjUnwrap	
+	ComObjError	
+	ComObjFlags	
+	ComObjGet	
+	ComObjMissing	
+	ComObjParameter	
+	ComObjQuery	
+	ComObjType	
+	ComObjValue	
+	Continue	
+	Control	
+	ControlClick	
+	ControlFocus	
+	ControlGet	
+	ControlGetFocus	
+	ControlGetPos	
+	ControlGetText	
+	ControlMove	
+	ControlSend / ControlSendRaw 	
+	ControlSetText	
+	CoordMode	
+	Cos	
+	Critical	
+	DetectHiddenText	
+	DetectHiddenWindows	
+	DllCall	
+	Drive	
+	DriveGet	
+	DriveSpaceFree	
+	Edit	
+	Else	
+	EnvAdd	
+	EnvDiv	
+	EnvGet	
+	EnvMult	
+	EnvSet	
+	EnvSub	
+	EnvUpdate	
+	Exit	
+	ExitApp	
+	Exp	
+	FileAppend	
+	FileCopy	
+	FileCopyDir	
+	FileCreateDir	
+	FileCreateShortcut	
+	FileDelete	
+	FileEncoding	
+	FileInstall	
+	FileGetAttrib	
+	FileGetShortcut	
+	FileGetSize	
+	FileGetTime	
+	FileGetVersion	
+	FileMove	
+	FileMoveDir	
+	FileOpen	
+	FileRead	
+	FileReadLine	
+	FileRecycle	
+	FileRecycleEmpty	
+	FileRemoveDir	
+	FileSelectFile	
+	FileSelectFolder	
+	FileSetAttrib	
+	FileSetTime	
+	Floor	
+	For	
+	FormatTime	
+	Func	
+	GetKeyName / GetKeyVK / GetKeySC	
+	GetKeyState	
+	Gosub	
+	Goto	
+	GroupActivate	
+	GroupAdd	
+	GroupClose	
+	GroupDeactivate	
+	if	
+	if (expression)	
+	If var [not] between	
+	If var [not] in/contains MatchList 	
+	If var is [not] type	
+	IfEqual/IfNotEqual	
+	IfExist / FileExist	
+	IfGreater / IfGreaterOrEqual	
+	IfInString / InStr	
+	IfLess / IfLessOrEqual	
+	IfMsgBox	
+	IfWinActive / IfWinNotActive	
+	IfWinExist / IfWinNotExist	
+	ImageSearch	
+	IniDelete	
+	IniRead	
+	IniWrite	
+	Input	
+	InputBox	
+	InStr	
+	IsByRef	
+	IsObject	
+	)	
+	Ahk_Cmd_Index = %Ahk_Cmd_Index%`n	
+	(LTrim	
+	KeyHistory	
+	KeyWait	
+	Log	
+	Ln	
+	Loop (normal) 	
+	Loop (files & folders)	
+	Loop (parse a string) 	
+	Loop (read file contents)	
+	Loop (registry)	
+	Menu	
+	Mod	
+	MouseClickDrag	
+	MouseGetPos	
+	MouseMove	
+	MsgBox	
+	OnExit	
+	OnMessage	
+	OutputDebug	
+	Pause	
+	PixelGetColor	
+	PixelSearch	
+	PostMessage	
+	Process	
+	Progress	
+	Random	
+	RegExMatch	
+	RegExReplace	
+	RegDelete	
+	RegRead	
+	RegWrite	
+	RegisterCallback	
+	Return	
+	Round	
+	Run	
+	RunAs	
+	RunWait	
+	Send / SendRaw / SendInput / SendPlay	
+	SendLevel	
+	SendMessage	
+	SendMode	
+	SetCapslockState	
+	SetEnv (Var = Value)	
+	SetFormat	
+	SetKeyDelay	
+	SetMouseDelay	
+	SetNumlockState	
+	SetScrollLockState	
+	SetRegView	
+	Shutdown	
+	Sin	
+	Sleep	
+	Sort	
+	SoundBeep	
+	SoundGet	
+	SoundGetWaveVolume	
+	SoundPlay	
+	SoundSet	
+	SoundSetWaveVolume	
+	SplashImage	
+	SplashTextOn	
+	SplashTextOff	
+	SplitPath	
+	Sqrt	
+	StatusBarGetText	
+	StatusBarWait	
+	StrPut / StrGet	
+	StringCaseSense	
+	StringGetPos / InStr	
+	StringLeft	
+	StringLen / StrLen	
+	StringLower	
+	StringMid / SubStr	
+	StringReplace	
+	StringRight	
+	StringSplit	
+	StringTrimLeft	
+	StringTrimRight	
+	StringUpper	
+	Suspend	
+	SysGet	
+	Tan	
+	ToolTip	
+	Transform	
+	TrayTip	
+	Trim	
+	Try	
+	Until	
+	UrlDownloadToFile	
+	VarSetCapacity	
+	WinActivate	
+	WinActivateBottom	
+	WinClose	
+	WinExist	
+	WinGetActiveStats	
+	WinGetActiveTitle	
+	WinGetClass	
+	WinGet	
+	WinGetPos	
+	WinGetText	
+	WinGetTitle	
+	WinHide	
+	WinKill	
+	WinMaximize	
+	WinMenuSelectItem	
+	WinMinimize	
+	WinMinimizeAll	
+	WinMinimizeAllUndo	
+	WinMove	
+	WinRestore	
+	WinSet	
+	WinSetTitle	
+	WinShow	
+	WinWait	
+	WinWaitActive	
+	WinWaitClose	
+	WinWaitNotActive	
+	)	
 return		

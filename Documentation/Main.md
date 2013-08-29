@@ -330,6 +330,10 @@ You can load multiple files with multiple parameters.
 
 **Alt+F7**: Default Settings
 
+**Alt+F8**: Load Basic Layout
+
+**Alt+F9**: Load Default Layout
+
 **Ctrl+Shift+F**: Find a Command
 
 **F1**: Help

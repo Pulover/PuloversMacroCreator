@@ -4,15 +4,15 @@
 		
 ; Main Menu		
 	m_Lang001 =	&Plik
-	m_Lang002 =	&Komenda
+	m_Lang002 =	P&olecenia
 	m_Lang003 =	&Wybierać
 	m_Lang004 =	&Edytuj
 	m_Lang005 =	&Macro
 	m_Lang006 =	W&idok
-	m_Lang007 =	&Opcje
+	m_Lang007 =	Op&cje
 	m_Lang008 =	&Język
 	m_Lang009 =	&Darować
-	m_Lang010 =	Pomo&cy
+	m_Lang010 =	Pomoc&y
 		
 ; File Sub Menu		
 	f_Lang001 =	&Nowy
@@ -26,7 +26,7 @@
 	f_Lang009 =	&Wyjście
 	f_Lang010 =	Brak plików
 		
-; Command Sub Menu		
+; Actions Sub Menu		
 	i_Lang001 =	&Mysz
 	i_Lang002 =	&Tekst
 	i_Lang003 =	&Sterowanie
@@ -101,17 +101,19 @@
 	v_lang006 =	P&aski Narzędzi
 	v_lang007 =	&Hotkeys
 	v_lang008 =	&Resetuj rozmiar kolumny
-	v_lang009 =	P&lik
-	v_lang010 =	&Nagrywanie i odtwarzanie
-	v_lang011 =	Opc&je
-	v_lang012 =	Pol&ecenia
-	v_lang013 =	E&dytować
-	v_lang014 =	&Настроить...
-	v_lang015 =	A&utomatyczny
-	v_lang016 =	R&ęczny
-	v_lang017 =	Za&trzymać
-	v_lang018 =	Pauza
-	v_lang019 =	Re&set
+	v_lang009 =	W&yzeruj
+	v_lang010 =	&Plik
+	v_lang011 =	&Nagrywanie i odtwarzanie
+	v_lang012 =	&Opcje
+	v_lang013 =	Po&lecenia
+	v_lang014 =	&Edytować
+	v_lang015 =	&Настроить...
+	v_lang016 =	&Automatyczny
+	v_lang017 =	&Ręczny
+	v_lang018 =	&Zatrzymać
+	v_lang019 =	&Pauza
+	v_lang020 =	&Podstawowy
+	v_lang021 =	&Domyślnie
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Ustawienia
@@ -1002,4 +1004,240 @@
 	Tip_Height =	Ustawia lub pobiera wysokość przedmiotu.
 	Tip_Length =	Ustawia lub pobiera liczbę obiektów w kolekcji.
 		
+; AHK Commands Tips		
+	Ahk_Cmd_Index =	
+	(LTrim	
+	Abs	
+	ASin	
+	ACos	
+	ATan	
+	BlockInput	
+	Break	
+	Ceil	
+	Click	
+	ClipWait	
+	ComObjActive	
+	ComObjArray	
+	ComObjConnect	
+	ComObjCreate	
+	ComObjEnwrap / ComObjUnwrap	
+	ComObjError	
+	ComObjFlags	
+	ComObjGet	
+	ComObjMissing	
+	ComObjParameter	
+	ComObjQuery	
+	ComObjType	
+	ComObjValue	
+	Continue	
+	Control	
+	ControlClick	
+	ControlFocus	
+	ControlGet	
+	ControlGetFocus	
+	ControlGetPos	
+	ControlGetText	
+	ControlMove	
+	ControlSend / ControlSendRaw 	
+	ControlSetText	
+	CoordMode	
+	Cos	
+	Critical	
+	DetectHiddenText	
+	DetectHiddenWindows	
+	DllCall	
+	Drive	
+	DriveGet	
+	DriveSpaceFree	
+	Edit	
+	Else	
+	EnvAdd	
+	EnvDiv	
+	EnvGet	
+	EnvMult	
+	EnvSet	
+	EnvSub	
+	EnvUpdate	
+	Exit	
+	ExitApp	
+	Exp	
+	FileAppend	
+	FileCopy	
+	FileCopyDir	
+	FileCreateDir	
+	FileCreateShortcut	
+	FileDelete	
+	FileEncoding	
+	FileInstall	
+	FileGetAttrib	
+	FileGetShortcut	
+	FileGetSize	
+	FileGetTime	
+	FileGetVersion	
+	FileMove	
+	FileMoveDir	
+	FileOpen	
+	FileRead	
+	FileReadLine	
+	FileRecycle	
+	FileRecycleEmpty	
+	FileRemoveDir	
+	FileSelectFile	
+	FileSelectFolder	
+	FileSetAttrib	
+	FileSetTime	
+	Floor	
+	For	
+	FormatTime	
+	Func	
+	GetKeyName / GetKeyVK / GetKeySC	
+	GetKeyState	
+	Gosub	
+	Goto	
+	GroupActivate	
+	GroupAdd	
+	GroupClose	
+	GroupDeactivate	
+	if	
+	if (expression)	
+	If var [not] between	
+	If var [not] in/contains MatchList 	
+	If var is [not] type	
+	IfEqual/IfNotEqual	
+	IfExist / FileExist	
+	IfGreater / IfGreaterOrEqual	
+	IfInString / InStr	
+	IfLess / IfLessOrEqual	
+	IfMsgBox	
+	IfWinActive / IfWinNotActive	
+	IfWinExist / IfWinNotExist	
+	ImageSearch	
+	IniDelete	
+	IniRead	
+	IniWrite	
+	Input	
+	InputBox	
+	InStr	
+	IsByRef	
+	IsObject	
+	)	
+	Ahk_Cmd_Index = %Ahk_Cmd_Index%`n	
+	(LTrim	
+	KeyHistory	
+	KeyWait	
+	Log	
+	Ln	
+	Loop (normal) 	
+	Loop (files & folders)	
+	Loop (parse a string) 	
+	Loop (read file contents)	
+	Loop (registry)	
+	Menu	
+	Mod	
+	MouseClickDrag	
+	MouseGetPos	
+	MouseMove	
+	MsgBox	
+	OnExit	
+	OnMessage	
+	OutputDebug	
+	Pause	
+	PixelGetColor	
+	PixelSearch	
+	PostMessage	
+	Process	
+	Progress	
+	Random	
+	RegExMatch	
+	RegExReplace	
+	RegDelete	
+	RegRead	
+	RegWrite	
+	RegisterCallback	
+	Return	
+	Round	
+	Run	
+	RunAs	
+	RunWait	
+	Send / SendRaw / SendInput / SendPlay	
+	SendLevel	
+	SendMessage	
+	SendMode	
+	SetCapslockState	
+	SetEnv (Var = Value)	
+	SetFormat	
+	SetKeyDelay	
+	SetMouseDelay	
+	SetNumlockState	
+	SetScrollLockState	
+	SetRegView	
+	Shutdown	
+	Sin	
+	Sleep	
+	Sort	
+	SoundBeep	
+	SoundGet	
+	SoundGetWaveVolume	
+	SoundPlay	
+	SoundSet	
+	SoundSetWaveVolume	
+	SplashImage	
+	SplashTextOn	
+	SplashTextOff	
+	SplitPath	
+	Sqrt	
+	StatusBarGetText	
+	StatusBarWait	
+	StrPut / StrGet	
+	StringCaseSense	
+	StringGetPos / InStr	
+	StringLeft	
+	StringLen / StrLen	
+	StringLower	
+	StringMid / SubStr	
+	StringReplace	
+	StringRight	
+	StringSplit	
+	StringTrimLeft	
+	StringTrimRight	
+	StringUpper	
+	Suspend	
+	SysGet	
+	Tan	
+	ToolTip	
+	Transform	
+	TrayTip	
+	Trim	
+	Try	
+	Until	
+	UrlDownloadToFile	
+	VarSetCapacity	
+	WinActivate	
+	WinActivateBottom	
+	WinClose	
+	WinExist	
+	WinGetActiveStats	
+	WinGetActiveTitle	
+	WinGetClass	
+	WinGet	
+	WinGetPos	
+	WinGetText	
+	WinGetTitle	
+	WinHide	
+	WinKill	
+	WinMaximize	
+	WinMenuSelectItem	
+	WinMinimize	
+	WinMinimizeAll	
+	WinMinimizeAllUndo	
+	WinMove	
+	WinRestore	
+	WinSet	
+	WinSetTitle	
+	WinShow	
+	WinWait	
+	WinWaitActive	
+	WinWaitClose	
+	WinWaitNotActive	
+	)	
 return		

@@ -250,7 +250,7 @@ IniRead, TabIndent, %IniFilePath%, ExportOptions, TabIndent, 1
 IniRead, IncPmc, %IniFilePath%, ExportOptions, IncPmc, 0
 IniRead, Exe_Exp, %IniFilePath%, ExportOptions, Exe_Exp, 0
 IniRead, ShowExpOpt, %IniFilePath%, ExportOptions, ShowExpOpt, 0
-IniRead, MainWinSize, %IniFilePath%, WindowOptions, MainWinSize, W920 H630
+IniRead, MainWinSize, %IniFilePath%, WindowOptions, MainWinSize, W930 H630
 IniRead, MainWinPos, %IniFilePath%, WindowOptions, MainWinPos, Center
 IniRead, WinState, %IniFilePath%, WindowOptions, WinState, 0
 IniRead, ColSizes, %IniFilePath%, WindowOptions, ColSizes, 70,130,190,50,40,85,95,95,60,40
@@ -261,6 +261,7 @@ IniRead, CustomColors, %IniFilePath%, WindowOptions, CustomColors, 0
 IniRead, OSCPos, %IniFilePath%, WindowOptions, OSCPos, X0 Y0
 IniRead, OSTrans, %IniFilePath%, WindowOptions, OSTrans, 255
 IniRead, OSCaption, %IniFilePath%, WindowOptions, OSCaption, 0
+IniRead, UserLayout, %IniFilePath%, ToolbarOptions, UserLayout
 IniRead, MainLayout, %IniFilePath%, ToolbarOptions, MainLayout
 IniRead, MacroLayout, %IniFilePath%, ToolbarOptions, MacroLayout
 IniRead, FileLayout, %IniFilePath%, ToolbarOptions, FileLayout
@@ -271,7 +272,7 @@ IniRead, EditLayout, %IniFilePath%, ToolbarOptions, EditLayout
 IniRead, ShowBands, %IniFilePath%, ToolbarOptions, ShowBands, 1,1,1,1,1,1,1,1,1
 
 If (Version < 4)
-	ShowTips := 1
+	ShowTips := 1, NextTip := 1
 
 User_Vars := new ObjIni(UserVarsPath)
 User_Vars.Read()
@@ -615,7 +616,7 @@ Gui, Add, Text, -Wrap ys x+5 W100 vCoordTip gOptions, CoordMode: %CoordMouse%
 GuiControl,, WinKey, % (InStr(o_AutoKey[1], "#")) ? 1 : 0
 Gui, Submit
 If (MainWinSize = "W H")
-	MainWinSize := "W920 H630"
+	MainWinSize := "W930 H630"
 If (MainWinPos = "X Y")
 	MainWinPos := "Center"
 Else If (MainWinPos <> "Center")
@@ -741,7 +742,9 @@ Else
 	}
 	If (ShowBarOnStart)
 		GoSub, ShowControls
-	If (ShowTips)
+	If (UserLayout = "Error")
+		GoSub, Welcome
+	Else If (ShowTips)
 		GoSub, ShowTips
 	If (AutoUpdate)
 		SetTimer, CheckUpdates, -1
@@ -772,8 +775,18 @@ DefineToolbars:
 ,	TBHwndAll := [TbFile, TbRecPlay, TbSettings, TbCommand, TbEdit, TbPrev, TbPrevF, TbOSC]
 ,	RBIndexTB := [1, 2, 3, 5, 9], RBIndexHK := [4, 6, 7, 8]
 ,	Default_MainLayout := RbMain.GetLayout()
+Loop, Parse, Default_MainLayout, |
+	l_Band%A_Index% := A_LoopField
+NewOrder := "1,2,6,3,4,7,8,9,10,5"
+Loop, Parse, NewOrder, `,
+	Default_BasicLayout .= l_Band%A_LoopField% "|"
+StringReplace, Default_BasicLayout, Default_BasicLayout, 645|3, 644|3
 If (MainLayout = "ERROR")
+{
+	If (UserLayout = "ERROR")
+		GoSub, BasicLayout
 	return
+}
 Loop, 3
 	RbMain.SetLayout(MainLayout)
 RbMain.ShowBand(RbMain.IDToIndex(1), ShowBand1), RbMain.ShowBand(RbMain.IDToIndex(2), ShowBand2)
@@ -7154,6 +7167,31 @@ Gui, 26:Submit
 Gui, 26:Destroy
 return
 
+Welcome:
+Gui, 31:-MinimizeBox +owner1
+Gui, 31:Font, Bold s10, Tahoma
+Gui, 31:Add, Text, w300 Center, Welcome to %AppName%!
+Gui, 31:Font
+Gui, 31:Add, Groupbox, Section w320 h60, Please choose your prefered layout:
+Gui, 31:Add, Radio, Checked xs+60 ys+30 W100 vBasic gBasicLayout, Basic
+Gui, 31:Add, Radio, yp x+20 W100 vDefault gDefaultLayout, Default
+Gui, 31:Add, Button, Default xm W75 H23 gWelcClose, %c_Lang020%
+Gui, 31:Show,, %AppName%
+return
+
+31GuiClose:
+31GuiEscape:
+WelcClose:
+Gui, 31:Submit
+Gui, 31:Destroy
+If (Basic = 1)
+	UserLayout := "Basic"
+If (Default = 1)
+	UserLayout := "Default"
+If (ShowTips)
+	GoSub, ShowTips
+return
+
 CmdFind:
 ShowTips:
 Gui 26:+LastFoundExist
@@ -9301,25 +9339,25 @@ tBand := RbMain.IDToIndex(bID), ShowBand%bID% := !ShowBand%bID%
 ,	RbMain.ShowBand(tBand, ShowBand%bID%)
 ,	RbMain.ShowBand(RbMain.IDToIndex(1), ShowBand1)
 If (ShowBand1)
-	Menu, ToolbarsMenu, Check, %v_lang009%
-Else
-	Menu, ToolbarsMenu, UnCheck, %v_lang009%
-If (ShowBand2)
 	Menu, ToolbarsMenu, Check, %v_lang010%
 Else
 	Menu, ToolbarsMenu, UnCheck, %v_lang010%
-If (ShowBand3)
+If (ShowBand2)
 	Menu, ToolbarsMenu, Check, %v_lang011%
 Else
 	Menu, ToolbarsMenu, UnCheck, %v_lang011%
-If (ShowBand5)
+If (ShowBand3)
 	Menu, ToolbarsMenu, Check, %v_lang012%
 Else
 	Menu, ToolbarsMenu, UnCheck, %v_lang012%
-If (ShowBand9)
+If (ShowBand5)
 	Menu, ToolbarsMenu, Check, %v_lang013%
 Else
 	Menu, ToolbarsMenu, UnCheck, %v_lang013%
+If (ShowBand9)
+	Menu, ToolbarsMenu, Check, %v_lang014%
+Else
+	Menu, ToolbarsMenu, UnCheck, %v_lang014%
 return
 
 ShowHideBandHK:
@@ -9327,21 +9365,21 @@ bID := RBIndexHK[A_ThisMenuItemPos]
 ,	tBand := RbMain.IDToIndex(bID), ShowBand%bID% := !ShowBand%bID%
 ,	RbMain.ShowBand(tBand, ShowBand%bID%)
 If (ShowBand4)
-	Menu, HotkeyMenu, Check, %v_lang015%
-Else
-	Menu, HotkeyMenu, UnCheck, %v_lang015%
-If (ShowBand6)
 	Menu, HotkeyMenu, Check, %v_lang016%
 Else
 	Menu, HotkeyMenu, UnCheck, %v_lang016%
-If (ShowBand7)
+If (ShowBand6)
 	Menu, HotkeyMenu, Check, %v_lang017%
 Else
 	Menu, HotkeyMenu, UnCheck, %v_lang017%
-If (ShowBand8)
+If (ShowBand7)
 	Menu, HotkeyMenu, Check, %v_lang018%
 Else
 	Menu, HotkeyMenu, UnCheck, %v_lang018%
+If (ShowBand8)
+	Menu, HotkeyMenu, Check, %v_lang019%
+Else
+	Menu, HotkeyMenu, UnCheck, %v_lang019%
 return
 
 ;##### Playback: #####
@@ -10347,6 +10385,7 @@ MainLayout := RbMain.GetLayout(), MacroLayout := RbMacro.GetLayout()
 ,	EditLayout := TbEdit.Export(), ShowBands := ""
 Loop, 9
 	ShowBands .= ShowBand%A_Index% ","
+StringTrimRight, ShowBands, ShowBands, 1
 GoSub, WriteSettings
 IL_Destroy(hIL_Icons)
 Loop, %A_Temp%\PMC_*.ahk
@@ -10479,7 +10518,7 @@ GuiControl, 1:, ContextTip, #IfWin: %IfDirectContext%
 GuiControl, 1:, AbortKey, %AbortKey%
 GuiControl, 1:, PauseKey, %PauseKey%
 GuiControl, 1:, DelayG, 0
-GoSub, DefaultLayout
+GoSub, %UserLayout%Layout
 GoSub, DefaultMod
 GoSub, ObjCreate
 GoSub, LoadData
@@ -10563,17 +10602,50 @@ Loop, 9
 ,	TB_Edit(TbOSC, "ProgBarToggle", ShowProgBar)
 Loop, 3
 	RbMain.SetLayout(Default_MainLayout)
-Menu, ViewMenu, Check, %v_lang002%
-Menu, ViewMenu, Check, %v_lang003%
-Menu, ToolbarsMenu, Check, %v_lang009%
 Menu, ToolbarsMenu, Check, %v_lang010%
 Menu, ToolbarsMenu, Check, %v_lang011%
 Menu, ToolbarsMenu, Check, %v_lang012%
 Menu, ToolbarsMenu, Check, %v_lang013%
-Menu, HotkeyMenu, Check, %v_lang015%
+Menu, ToolbarsMenu, Check, %v_lang014%
 Menu, HotkeyMenu, Check, %v_lang016%
 Menu, HotkeyMenu, Check, %v_lang017%
 Menu, HotkeyMenu, Check, %v_lang018%
+Menu, HotkeyMenu, Check, %v_lang019%
+return
+
+SetBasicLayout:
+SetDefaultLayout:
+If (A_ThisLabel = "SetBasicLayout")
+	UserLayout := "Basic"
+If (A_ThisLabel = "SetDefaultLayout")
+	UserLayout := "Default"
+GoSub, %UserLayout%Layout
+return
+
+BasicLayout:
+Loop, 3
+	RbMain.SetLayout(Default_BasicLayout)
+ShowBands := "0,1,0,1,1,0,0,0,0"
+Loop, Parse, ShowBands, `,
+	ShowBand%A_Index% := A_LoopField
+RbMain.ShowBand(RbMain.IDToIndex(1), ShowBand1), RbMain.ShowBand(RbMain.IDToIndex(2), ShowBand2)
+,	RbMain.ShowBand(RbMain.IDToIndex(3), ShowBand3), RbMain.ShowBand(RbMain.IDToIndex(4), ShowBand4)
+,	RbMain.ShowBand(RbMain.IDToIndex(5), ShowBand5), RbMain.ShowBand(RbMain.IDToIndex(6), ShowBand6)
+,	RbMain.ShowBand(RbMain.IDToIndex(7), ShowBand7), RbMain.ShowBand(RbMain.IDToIndex(8), ShowBand8)
+,	RbMain.ShowBand(RbMain.IDToIndex(9), ShowBand9)
+,	RecPlayLayout := "Record=" w_Lang046 ":55(Enabled AutoSize Dropdown),, PlayStart=" w_Lang047 ":47(Enabled AutoSize Dropdown)"
+,	TB_Layout(TbRecPlay, RecPlayLayout, 2)
+,	TbCommand.Reset(), TB_IdealSize(TbCommand, 5)
+,	RbMain.SetBandWidth(2, TB_GetSize(tbRecPlay)+16)
+Menu, ToolbarsMenu, UnCheck, %v_lang010%
+Menu, ToolbarsMenu, Check, %v_lang011%
+Menu, ToolbarsMenu, UnCheck, %v_lang012%
+Menu, ToolbarsMenu, Check, %v_lang013%
+Menu, ToolbarsMenu, UnCheck, %v_lang014%
+Menu, HotkeyMenu, Check, %v_lang016%
+Menu, HotkeyMenu, UnCheck, %v_lang017%
+Menu, HotkeyMenu, UnCheck, %v_lang018%
+Menu, HotkeyMenu, UnCheck, %v_lang019%
 return
 
 WriteSettings:
@@ -10692,6 +10764,7 @@ IniWrite, %CustomColors%, %IniFilePath%, WindowOptions, CustomColors
 IniWrite, %OSCPos%, %IniFilePath%, WindowOptions, OSCPos
 IniWrite, %OSTrans%, %IniFilePath%, WindowOptions, OSTrans
 IniWrite, %OSCaption%, %IniFilePath%, WindowOptions, OSCaption
+IniWrite, %UserLayout%, %IniFilePath%, ToolbarOptions, UserLayout
 IniWrite, %MainLayout%, %IniFilePath%, ToolbarOptions, MainLayout
 IniWrite, %MacroLayout%, %IniFilePath%, ToolbarOptions, MacroLayout
 IniWrite, %FileLayout%, %IniFilePath%, ToolbarOptions, FileLayout
@@ -11039,33 +11112,33 @@ Menu, FileMenu, Add, %f_Lang008%`t%_s%Alt+F3, ListVars
 Menu, FileMenu, Add
 Menu, FileMenu, Add, %f_Lang009%`t%_s%Alt+F4, Exit
 
-Menu, InsertMenu, Add, %i_Lang001%`t%_s%F2, Mouse
-Menu, InsertMenu, Add, %i_Lang002%`t%_s%F3, Text
-Menu, InsertMenu, Add, %i_Lang003%`t%_s%F4, ControlCmd
-Menu, InsertMenu, Add
-Menu, InsertMenu, Add, %i_Lang004%`t%_s%F5, Pause
-Menu, InsertMenu, Add, %i_Lang005%`t%_s%Shift+F5, MsgBox
-Menu, InsertMenu, Add, %i_Lang006%`t%_s%Ctrl+F5, KeyWait
-Menu, InsertMenu, Add
-Menu, InsertMenu, Add, %i_Lang007%`t%_s%F6, Window
-Menu, InsertMenu, Add, %i_Lang008%`t%_s%F7, Image
-Menu, InsertMenu, Add, %i_Lang009%`t%_s%F8, Run
-Menu, InsertMenu, Add
-Menu, InsertMenu, Add, %i_Lang010%`t%_s%F9, ComLoop
-Menu, InsertMenu, Add, %i_Lang011%`t%_s%Shift+F9, ComGoto
-Menu, InsertMenu, Add, %i_Lang012%`t%_s%Ctrl+F9, AddLabel
-Menu, InsertMenu, Add
-Menu, InsertMenu, Add, %i_Lang013%`t%_s%F10, IfSt
-Menu, InsertMenu, Add, %i_Lang014%`t%_s%Shift+F10, AsVar
-Menu, InsertMenu, Add, %i_Lang015%`t%_s%Ctrl+F10, AsFunc
-Menu, InsertMenu, Add
-Menu, InsertMenu, Add, %i_Lang016%`t%_s%F11, IECom
-Menu, InsertMenu, Add, %i_Lang017%`t%_s%Shift+F11, ComInt
-Menu, InsertMenu, Add, %i_Lang018%`t%_s%Ctrl+F11, RunScrLet
-Menu, InsertMenu, Add
-Menu, InsertMenu, Add, %i_Lang019%`t%_s%F12, SendMsg
-Menu, InsertMenu, Add
-Menu, InsertMenu, Add, %i_Lang020%`t%_s%Ctrl+Shift+F, CmdFind
+Menu, CommandMenu, Add, %i_Lang001%`t%_s%F2, Mouse
+Menu, CommandMenu, Add, %i_Lang002%`t%_s%F3, Text
+Menu, CommandMenu, Add, %i_Lang003%`t%_s%F4, ControlCmd
+Menu, CommandMenu, Add
+Menu, CommandMenu, Add, %i_Lang004%`t%_s%F5, Pause
+Menu, CommandMenu, Add, %i_Lang005%`t%_s%Shift+F5, MsgBox
+Menu, CommandMenu, Add, %i_Lang006%`t%_s%Ctrl+F5, KeyWait
+Menu, CommandMenu, Add
+Menu, CommandMenu, Add, %i_Lang007%`t%_s%F6, Window
+Menu, CommandMenu, Add, %i_Lang008%`t%_s%F7, Image
+Menu, CommandMenu, Add, %i_Lang009%`t%_s%F8, Run
+Menu, CommandMenu, Add
+Menu, CommandMenu, Add, %i_Lang010%`t%_s%F9, ComLoop
+Menu, CommandMenu, Add, %i_Lang011%`t%_s%Shift+F9, ComGoto
+Menu, CommandMenu, Add, %i_Lang012%`t%_s%Ctrl+F9, AddLabel
+Menu, CommandMenu, Add
+Menu, CommandMenu, Add, %i_Lang013%`t%_s%F10, IfSt
+Menu, CommandMenu, Add, %i_Lang014%`t%_s%Shift+F10, AsVar
+Menu, CommandMenu, Add, %i_Lang015%`t%_s%Ctrl+F10, AsFunc
+Menu, CommandMenu, Add
+Menu, CommandMenu, Add, %i_Lang016%`t%_s%F11, IECom
+Menu, CommandMenu, Add, %i_Lang017%`t%_s%Shift+F11, ComInt
+Menu, CommandMenu, Add, %i_Lang018%`t%_s%Ctrl+F11, RunScrLet
+Menu, CommandMenu, Add
+Menu, CommandMenu, Add, %i_Lang019%`t%_s%F12, SendMsg
+Menu, CommandMenu, Add
+Menu, CommandMenu, Add, %i_Lang020%`t%_s%Ctrl+Shift+F, CmdFind
 
 TypesMenu := "Win`nFile`nString"
 Loop
@@ -11101,7 +11174,7 @@ Menu, EditMenu, Add, %e_Lang002%`t%_s%Ctrl+L, EditComm
 Menu, EditMenu, Add, %e_Lang015%`t%_s%Ctrl+M, EditColor
 Menu, EditMenu, Default, %m_Lang004%`t%_s%Enter
 Menu, EditMenu, Add
-Menu, EditMenu, Add, %m_Lang002%, :InsertMenu
+Menu, EditMenu, Add, %m_Lang002%, :CommandMenu
 Menu, EditMenu, Add, %m_Lang003%, :SelectMenu
 Menu, EditMenu, Add, %e_Lang004%, :CopyTo
 Menu, EditMenu, Add
@@ -11138,26 +11211,27 @@ Menu, MacroMenu, Add
 Menu, MacroMenu, Add, %r_Lang008%`t%_s%Ctrl+I, Import
 Menu, MacroMenu, Add, %r_Lang009%`t%_s%Ctrl+Alt+S, SaveCurrentList
 
-Menu, CustomMenu, Add, %v_lang009%, TbCustomize
 Menu, CustomMenu, Add, %v_lang010%, TbCustomize
 Menu, CustomMenu, Add, %v_lang011%, TbCustomize
 Menu, CustomMenu, Add, %v_lang012%, TbCustomize
 Menu, CustomMenu, Add, %v_lang013%, TbCustomize
+Menu, CustomMenu, Add, %v_lang014%, TbCustomize
 
-Menu, ToolbarsMenu, Add, %v_lang009%, ShowHideBand
 Menu, ToolbarsMenu, Add, %v_lang010%, ShowHideBand
 Menu, ToolbarsMenu, Add, %v_lang011%, ShowHideBand
 Menu, ToolbarsMenu, Add, %v_lang012%, ShowHideBand
 Menu, ToolbarsMenu, Add, %v_lang013%, ShowHideBand
+Menu, ToolbarsMenu, Add, %v_lang014%, ShowHideBand
 Menu, ToolbarsMenu, Add
-Menu, ToolbarsMenu, Add, %v_lang014%, :CustomMenu
-Menu, ToolbarsMenu, Add
-Menu, ToolbarsMenu, Add, %v_lang019%, DefaultLayout
+Menu, ToolbarsMenu, Add, %v_lang015%, :CustomMenu
 
-Menu, HotkeyMenu, Add, %v_lang015%, ShowHideBandHK
 Menu, HotkeyMenu, Add, %v_lang016%, ShowHideBandHK
 Menu, HotkeyMenu, Add, %v_lang017%, ShowHideBandHK
 Menu, HotkeyMenu, Add, %v_lang018%, ShowHideBandHK
+Menu, HotkeyMenu, Add, %v_lang019%, ShowHideBandHK
+
+Menu, SetLayoutMenu, Add, %v_lang020%`t%_s%Alt+F8, SetBasicLayout
+Menu, SetLayoutMenu, Add, %v_lang021%`t%_s%Alt+F9, SetDefaultLayout
 
 Menu, ViewMenu, Add, %v_lang001%, MainOnTop
 Menu, ViewMenu, Add, %v_lang002%, ShowLoopIfMark
@@ -11169,6 +11243,7 @@ Menu, ViewMenu, Add, %v_lang006%, :ToolbarsMenu
 Menu, ViewMenu, Add, %v_lang007%, :HotkeyMenu
 Menu, ViewMenu, Add
 Menu, ViewMenu, Add, %v_lang008%`t%_s%Alt+F5, SetColSizes
+Menu, ViewMenu, Add, %v_lang009%, :SetLayoutMenu
 
 Loop, Parse, Lang_All, |
 {
@@ -11208,11 +11283,11 @@ Loop, Parse, Start_Tips, `n
 Menu, DonationMenu, Add, %p_Lang001%, DonatePayPal
 
 Menu, MenuBar, Add, %m_Lang001%, :FileMenu
-Menu, MenuBar, Add, %m_Lang002%, :InsertMenu
-Menu, MenuBar, Add, %m_Lang003%, :SelectMenu
 Menu, MenuBar, Add, %m_Lang004%, :EditMenu
-Menu, MenuBar, Add, %m_Lang005%, :MacroMenu
+Menu, MenuBar, Add, %m_Lang003%, :SelectMenu
 Menu, MenuBar, Add, %m_Lang006%, :ViewMenu
+Menu, MenuBar, Add, %m_Lang002%, :CommandMenu
+Menu, MenuBar, Add, %m_Lang005%, :MacroMenu
 Menu, MenuBar, Add, %m_Lang007%, :OptionsMenu
 Menu, MenuBar, Add, %m_Lang009%, :DonationMenu
 Menu, MenuBar, Add, %m_Lang010%, :HelpMenu
@@ -11259,23 +11334,23 @@ If ShowBarOnStart
 If ShowPrev
 	Menu, ViewMenu, Check, %v_lang005%`t%_s%Ctrl+P
 If ShowBand1
-	Menu, ToolbarsMenu, Check, %v_lang009%
-If ShowBand2
 	Menu, ToolbarsMenu, Check, %v_lang010%
-If ShowBand3
+If ShowBand2
 	Menu, ToolbarsMenu, Check, %v_lang011%
-If ShowBand4
-	Menu, HotkeyMenu, Check, %v_lang015%
-If ShowBand5
+If ShowBand3
 	Menu, ToolbarsMenu, Check, %v_lang012%
-If ShowBand6
+If ShowBand4
 	Menu, HotkeyMenu, Check, %v_lang016%
-If ShowBand7
-	Menu, HotkeyMenu, Check, %v_lang017%
-If ShowBand8
-	Menu, HotkeyMenu, Check, %v_lang018%
-If ShowBand9
+If ShowBand5
 	Menu, ToolbarsMenu, Check, %v_lang013%
+If ShowBand6
+	Menu, HotkeyMenu, Check, %v_lang017%
+If ShowBand7
+	Menu, HotkeyMenu, Check, %v_lang018%
+If ShowBand8
+	Menu, HotkeyMenu, Check, %v_lang019%
+If ShowBand9
+	Menu, ToolbarsMenu, Check, %v_lang014%
 
 ; Menu Icons
 Menu, FileMenu, Icon, %f_Lang001%`t%_s%Ctrl+N, %ResDllPath%, 42
@@ -11287,26 +11362,26 @@ Menu, FileMenu, Icon, %f_Lang006%`t%_s%Ctrl+E, %ResDllPath%, 16
 Menu, FileMenu, Icon, %f_Lang007%`t%_s%Ctrl+P, %ResDllPath%, 50
 Menu, FileMenu, Icon, %f_Lang008%`t%_s%Alt+F3, %ResDllPath%, 36
 Menu, FileMenu, Icon, %f_Lang009%`t%_s%Alt+F4, %ResDllPath%, 15
-Menu, InsertMenu, Icon, %i_Lang001%`t%_s%F2, %ResDllPath%, 39
-Menu, InsertMenu, Icon, %i_Lang002%`t%_s%F3, %ResDllPath%, 71
-Menu, InsertMenu, Icon, %i_Lang003%`t%_s%F4, %ResDllPath%, 7
-Menu, InsertMenu, Icon, %i_Lang004%`t%_s%F5, %ResDllPath%, 46
-Menu, InsertMenu, Icon, %i_Lang005%`t%_s%Shift+F5, %ResDllPath%, 11
-Menu, InsertMenu, Icon, %i_Lang006%`t%_s%Ctrl+F5, %ResDllPath%, 78
-Menu, InsertMenu, Icon, %i_Lang007%`t%_s%F6, %ResDllPath%, 81
-Menu, InsertMenu, Icon, %i_Lang008%`t%_s%F7, %ResDllPath%, 28
-Menu, InsertMenu, Icon, %i_Lang009%`t%_s%F8, %ResDllPath%, 59
-Menu, InsertMenu, Icon, %i_Lang010%`t%_s%F9, %ResDllPath%, 37
-Menu, InsertMenu, Icon, %i_Lang011%`t%_s%Shift+F9, %ResDllPath%, 22
-Menu, InsertMenu, Icon, %i_Lang012%`t%_s%Ctrl+F9, %ResDllPath%, 35
-Menu, InsertMenu, Icon, %i_Lang013%`t%_s%F10, %ResDllPath%, 27
-Menu, InsertMenu, Icon, %i_Lang014%`t%_s%Shift+F10, %ResDllPath%, 76
-Menu, InsertMenu, Icon, %i_Lang015%`t%_s%Ctrl+F10, %ResDllPath%, 21
-Menu, InsertMenu, Icon, %i_Lang016%`t%_s%F11, %ResDllPath%, 26
-Menu, InsertMenu, Icon, %i_Lang017%`t%_s%Shift+F11, %ResDllPath%, 4
-Menu, InsertMenu, Icon, %i_Lang018%`t%_s%Ctrl+F11, %ResDllPath%, 77
-Menu, InsertMenu, Icon, %i_Lang019%`t%_s%F12, %ResDllPath%, 62
-Menu, InsertMenu, Icon, %i_Lang020%`t%_s%Ctrl+Shift+F, %ResDllPath%, 95
+Menu, CommandMenu, Icon, %i_Lang001%`t%_s%F2, %ResDllPath%, 39
+Menu, CommandMenu, Icon, %i_Lang002%`t%_s%F3, %ResDllPath%, 71
+Menu, CommandMenu, Icon, %i_Lang003%`t%_s%F4, %ResDllPath%, 7
+Menu, CommandMenu, Icon, %i_Lang004%`t%_s%F5, %ResDllPath%, 46
+Menu, CommandMenu, Icon, %i_Lang005%`t%_s%Shift+F5, %ResDllPath%, 11
+Menu, CommandMenu, Icon, %i_Lang006%`t%_s%Ctrl+F5, %ResDllPath%, 78
+Menu, CommandMenu, Icon, %i_Lang007%`t%_s%F6, %ResDllPath%, 81
+Menu, CommandMenu, Icon, %i_Lang008%`t%_s%F7, %ResDllPath%, 28
+Menu, CommandMenu, Icon, %i_Lang009%`t%_s%F8, %ResDllPath%, 59
+Menu, CommandMenu, Icon, %i_Lang010%`t%_s%F9, %ResDllPath%, 37
+Menu, CommandMenu, Icon, %i_Lang011%`t%_s%Shift+F9, %ResDllPath%, 22
+Menu, CommandMenu, Icon, %i_Lang012%`t%_s%Ctrl+F9, %ResDllPath%, 35
+Menu, CommandMenu, Icon, %i_Lang013%`t%_s%F10, %ResDllPath%, 27
+Menu, CommandMenu, Icon, %i_Lang014%`t%_s%Shift+F10, %ResDllPath%, 76
+Menu, CommandMenu, Icon, %i_Lang015%`t%_s%Ctrl+F10, %ResDllPath%, 21
+Menu, CommandMenu, Icon, %i_Lang016%`t%_s%F11, %ResDllPath%, 26
+Menu, CommandMenu, Icon, %i_Lang017%`t%_s%Shift+F11, %ResDllPath%, 4
+Menu, CommandMenu, Icon, %i_Lang018%`t%_s%Ctrl+F11, %ResDllPath%, 77
+Menu, CommandMenu, Icon, %i_Lang019%`t%_s%F12, %ResDllPath%, 62
+Menu, CommandMenu, Icon, %i_Lang020%`t%_s%Ctrl+Shift+F, %ResDllPath%, 95
 Menu, EditMenu, Icon, %m_Lang004%`t%_s%Enter, %ResDllPath%, 14
 Menu, EditMenu, Icon, %e_Lang001%`t%_s%Ctrl+D, %ResDllPath%, 13
 Menu, EditMenu, Icon, %e_Lang003%`t%_s%Ctrl+F, %ResDllPath%, 19
@@ -11497,7 +11572,7 @@ If !IsLabel("LoadLang_" Lang)
 Gui, Menu
 Menu, MenuBar, DeleteAll
 Menu, FileMenu, DeleteAll
-Menu, InsertMenu, DeleteAll
+Menu, CommandMenu, DeleteAll
 Menu, SelectMenu, DeleteAll
 Menu, SelCmdMenu, DeleteAll
 Menu, EditMenu, DeleteAll

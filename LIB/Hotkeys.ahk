@@ -97,6 +97,8 @@ Enter::GoSub, EditButton
 !F5::GoSub, SetColSizes
 !F6::GoSub, DefaultHotkeys
 !F7::GoSub, LoadDefaults
+!F8::GoSub, SetBasicLayout
+!F9::GoSub, SetDefaultLayout
 ^1::
 ^2::
 ^3::

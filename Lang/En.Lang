@@ -4,7 +4,7 @@
 		
 ; Main Menu		
 	m_Lang001 =	&File
-	m_Lang002 =	&Command
+	m_Lang002 =	&Commands
 	m_Lang003 =	&Select
 	m_Lang004 =	&Edit
 	m_Lang005 =	&Macro
@@ -26,7 +26,7 @@
 	f_Lang009 =	E&xit
 	f_Lang010 =	No files
 		
-; Command Sub Menu		
+; Actions Sub Menu		
 	i_Lang001 =	&Mouse
 	i_Lang002 =	&Text
 	i_Lang003 =	&Control
@@ -101,17 +101,19 @@
 	v_lang006 =	&Toolbars
 	v_lang007 =	H&otkeys
 	v_lang008 =	&Reset Columns Size
-	v_lang009 =	&File
-	v_lang010 =	&Record && Play
-	v_lang011 =	&Options
-	v_lang012 =	&Commands
-	v_lang013 =	&Edit
-	v_lang014 =	C&ustomize
-	v_lang015 =	&Automatic
-	v_lang016 =	&Manual
-	v_lang017 =	&Stop
-	v_lang018 =	&Pause
-	v_lang019 =	Rese&t Default
+	v_lang009 =	R&eset Layout
+	v_lang010 =	&File
+	v_lang011 =	&Record  Play
+	v_lang012 =	&Options
+	v_lang013 =	&Commands
+	v_lang014 =	&Edit
+	v_lang015 =	C&ustomize
+	v_lang016 =	&Automatic
+	v_lang017 =	&Manual
+	v_lang018 =	&Stop
+	v_lang019 =	&Pause
+	v_lang020 =	&Basic
+	v_lang021 =	&Default
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Settings
@@ -1002,4 +1004,240 @@
 	Tip_Height =	Sets or retrieves the height of the object.
 	Tip_Length =	Sets or retrieves the number of objects in a collection.
 		
+; AHK Commands Tips		
+	Ahk_Cmd_Index =	
+	(LTrim	
+	Abs	Returns the absolute value of Number.
+	ASin	Returns the arcsine (the number whose sine is Number) in radians.
+	ACos	Returns the arccosine (the number whose cosine is Number) in radians.
+	ATan	Returns the arctangent (the number whose tangent is Number) in radians.
+	BlockInput	Disables or enables the user's ability to interact with the computer via keyboard and mouse.
+	Break	Exits (terminates) a loop. Valid inside any kind of loop.
+	Ceil	Returns Number rounded up to the nearest integer (without any .00 suffix).
+	Click	Clicks a mouse button at the specified coordinates. It can also hold down a mouse button, turn the mouse wheel, or move the mouse.
+	ClipWait	Waits until the clipboard contains data.
+	ComObjActive	Retrieves a registered COM object.
+	ComObjArray	Creates a SAFEARRAY for use with COM.
+	ComObjConnect	Connects a COM object's event sources to functions with a given prefix.
+	ComObjCreate	Creates a COM object.
+	ComObjEnwrap / ComObjUnwrap	Wraps/unwraps a COM object.
+	ComObjError	Enables or disables notification of COM errors.
+	ComObjFlags	Retrieves or changes flags which control a COM wrapper object's behaviour.
+	ComObjGet	Returns a reference to an object provided by a COM component.
+	ComObjMissing	Creates a "missing parameter" object to pass to a COM method.
+	ComObjParameter	Wraps a value and type to pass as a parameter to a COM method.
+	ComObjQuery	Queries a COM object for an interface or service.
+	ComObjType	Retrieves type information from a COM object.
+	ComObjValue	Retrieves the value or pointer stored in a COM wrapper object.
+	Continue	Skips the rest of the current loop iteration and begins a new one. Valid inside any kind of loop.
+	Control	Makes a variety of changes to a control.
+	ControlClick	Sends a mouse button or mouse wheel event to a control.
+	ControlFocus	Sets input focus to a given control on a window.
+	ControlGet	Retrieves various types of information about a control.
+	ControlGetFocus	Retrieves which control of the target window has input focus, if any.
+	ControlGetPos	Retrieves the position and size of a control.
+	ControlGetText	Retrieves text from a control.
+	ControlMove	Moves or resizes a control.
+	ControlSend / ControlSendRaw 	Sends simulated keystrokes to a window or control.
+	ControlSetText	Changes the text of a control.
+	CoordMode	Sets coordinate mode for various commands to be relative to either the active window or the screen.
+	Cos	Returns the trigonometric cosine of Number.
+	Critical	Prevents the current thread from being interrupted by other threads.
+	DetectHiddenText	Determines whether invisible text in a window is "seen" for the purpose of finding the window. This affects commands such as IfWinExist and WinActivate.
+	DetectHiddenWindows	Determines whether invisible windows are "seen" by the script.
+	DllCall	Calls a function inside a DLL, such as a standard Windows API function.
+	Drive	Ejects/retracts the tray in a CD or DVD drive, or sets a drive's volume label.
+	DriveGet	Retrieves various types of information about the computer's drive(s).
+	DriveSpaceFree	Retrieves the free disk space of a drive, in Megabytes.
+	Edit	Opens the current script for editing in the associated editor.
+	Else	Specifies the command(s) to perform if an IF-statement evaluates to FALSE. When more than one command is present, enclose them in a block (braces).
+	EnvAdd	Sets a variable to the sum of itself plus the given value (can also add or subtract time from a date-time value). Synonymous with: Var += Value.
+	EnvDiv	Sets a variable to itself divided by the given value. Synonymous with: Var /= Value.
+	EnvGet	Retrieves an environment variable.
+	EnvMult	Sets a variable to itself times the given value. Synonymous with: Var *= Value.
+	EnvSet	Writes a value to a variable contained in the environment.
+	EnvSub	Sets a variable to itself minus the given value (can also compare date-time values). Synonymous with: Var -= Value.
+	EnvUpdate	Notifies the OS and all running applications that environment variable(s) have changed.
+	Exit	Exits the current thread or (if the script is not persistent and contains no hotkeys) the entire script.
+	ExitApp	Terminates the script unconditionally.
+	Exp	Returns e (which is approximately 2.71828182845905) raised to the Nth power.
+	FileAppend	Writes text to the end of a file (first creating the file, if necessary).
+	FileCopy	Copies one or more files.
+	FileCopyDir	Copies a folder along with all its sub-folders and files (similar to xcopy).
+	FileCreateDir	Creates a folder.
+	FileCreateShortcut	Creates a shortcut (.lnk) file.
+	FileDelete	Deletes one or more files.
+	FileEncoding	Sets the default encoding for FileRead, FileReadLine, Loop Read, FileAppend, and FileOpen.
+	FileInstall	Includes the specified file inside the compiled version of the script.
+	FileGetAttrib	Reports whether a file or folder is read-only, hidden, etc.
+	FileGetShortcut	Retrieves information about a shortcut (.lnk) file, such as its target file.
+	FileGetSize	Retrieves the size of a file.
+	FileGetTime	Retrieves the datetime stamp of a file or folder.
+	FileGetVersion	Retrieves the version of a file.
+	FileMove	Moves or renames one or more files.
+	FileMoveDir	Moves a folder along with all its sub-folders and files. It can also rename a folder.
+	FileOpen	Provides object-oriented file I/O.
+	FileRead	Reads a file's contents into a variable.
+	FileReadLine	Reads the specified line from a file and stores the text in a variable.
+	FileRecycle	Sends a file or directory to the recycle bin, if possible.
+	FileRecycleEmpty	Empties the recycle bin.
+	FileRemoveDir	Deletes a folder.
+	FileSelectFile	Displays a standard dialog that allows the user to open or save file(s).
+	FileSelectFolder	Displays a standard dialog that allows the user to select a folder.
+	FileSetAttrib	Changes the attributes of one or more files or folders. Wildcards are supported.
+	FileSetTime	Changes the datetime stamp of one or more files or folders. Wildcards are supported.
+	Floor	Returns Number rounded down to the nearest integer (without any .00 suffix).
+	For	Repeats a series of commands once for each key-value pair in an object.
+	FormatTime	Transforms a YYYYMMDDHH24MISS timestamp into the specified date/time format.
+	Func	Retrieves a reference to a function.
+	GetKeyName / GetKeyVK / GetKeySC	Retrieves the name or text, virtual key code or scan code of a key.
+	GetKeyState	Checks if a keyboard key or mouse/joystick button is down or up. Also retrieves joystick status.
+	Gosub	Jumps to the specified label and continues execution until Return is encountered.
+	Goto	Jumps to the specified label and continues execution.
+	GroupActivate	Activates the next window in a window group that was defined with GroupAdd.
+	GroupAdd	Adds a window specification to a window group, creating the group if necessary.
+	GroupClose	Closes the active window if it was just activated by GroupActivate or GroupDeactivate. It then activates the next window in the series. It can also close all windows in a group.
+	GroupDeactivate	Similar to GroupActivate except activates the next window not in the group.
+	if	Specifies the command(s) to perform if the comparison of a variable to a value evalutes to TRUE. When more than one command is present, enclose them in a block (braces).
+	if (expression)	Specifies the command(s) to perform if an expression evaluates to TRUE.
+	If var [not] between	Checks whether a variable's contents are numerically or alphabetically between two values (inclusive).
+	If var [not] in/contains MatchList 	Checks whether a variable's contents match one of the items in a list.
+	If var is [not] type	Checks whether a variable's contents are numeric, uppercase, etc.
+	IfEqual/IfNotEqual	Compares a variable to a value for equality. Synonymous with: if Var = Value | if Var <> Value.
+	IfExist / FileExist	Checks for the existence of a file or folder.
+	IfGreater / IfGreaterOrEqual	Compares a variable to a value. Synonymous with: if Var > Value | if Var >= Value.
+	IfInString / InStr	Checks if a variable contains the specified string.
+	IfLess / IfLessOrEqual	Compares a variable to a value. Synonymous with: if Var < Value | if Var <= Value.
+	IfMsgBox	Checks which button was pushed by the user during the most recent MsgBox command.
+	IfWinActive / IfWinNotActive	Checks if the specified window exists and is currently active (foremost).
+	IfWinExist / IfWinNotExist	Checks if the specified window exists.
+	ImageSearch	Searches a region of the screen for an image.
+	IniDelete	Deletes a value from a standard format .ini file.
+	IniRead	Reads a value from a standard format .ini file.
+	IniWrite	Writes a value to a standard format .ini file.
+	Input	Waits for the user to type a string (not supported on Windows 9x: it does nothing).
+	InputBox	Displays an input box to ask the user to enter a string.
+	InStr	Searches for a given occurrence of a string, from the left or the right.
+	IsByRef	Determines whether a ByRef parameter was supplied with a variable.
+	IsObject	Determines whether a value is an object.
+	)	
+	Ahk_Cmd_Index = %Ahk_Cmd_Index%`n	
+	(LTrim	
+	KeyHistory	Displays script info and a history of the most recent keystrokes and mouse clicks.
+	KeyWait	Waits for a key or mouse/joystick button to be released or pressed down.
+	Log	Returns the logarithm (base 10) of Number.
+	Ln	Returns the natural logarithm (base e) of Number.
+	Loop (normal) 	Perform a series of commands repeatedly: either the specified number of times or until break is encountered.
+	Loop (files & folders)	Retrieves the specified files or folders, one at a time.
+	Loop (parse a string) 	Retrieves substrings (fields) from a string, one at a time.
+	Loop (read file contents)	Retrieves the lines in a text file, one at a time (performs better than FileReadLine).
+	Loop (registry)	Retrieves the contents of the specified registry subkey, one item at a time.
+	Menu	Creates, deletes, modifies and displays menus and menu items. Changes the tray icon and its tooltip. Controls whether the main window of a compiled script can be opened.
+	Mod	Modulo. Returns the remainder when Dividend is divided by Divisor.
+	MouseClickDrag	Clicks and holds the specified mouse button, moves the mouse to the destination coordinates, then releases the button.
+	MouseGetPos	Retrieves the current position of the mouse cursor, and optionally which window and control it is hovering over.
+	MouseMove	Moves the mouse cursor.
+	MsgBox	Displays the specified text in a small window containing one or more buttons (such as Yes and No).
+	OnExit	Specifies a subroutine to run automatically when the script exits.
+	OnMessage	Specifies a function to call automatically when the script receives the specified message.
+	OutputDebug	Sends a string to the debugger (if any) for display.
+	Pause	Pauses the script's current thread.
+	PixelGetColor	Retrieves the color of the pixel at the specified x,y coordinates.
+	PixelSearch	Searches a region of the screen for a pixel of the specified color.
+	PostMessage	Places a message in the message queue of a window or control.
+	Process	Performs one of the following operations on a process: checks if it exists; changes its priority; closes it; waits for it to close.
+	Progress	Creates or updates a window containing a progress bar.
+	Random	Generates a pseudo-random number.
+	RegExMatch	Determines whether a string contains a pattern (regular expression).
+	RegExReplace	Replaces occurrences of a pattern (regular expression) inside a string.
+	RegDelete	Deletes a subkey or value from the registry.
+	RegRead	Reads a value from the registry.
+	RegWrite	Writes a value to the registry.
+	RegisterCallback	Creates a machine-code address that when called, redirects the call to a function in the script.
+	Return	Returns from a subroutine to which execution had previously jumped via function-call, Gosub, Hotkey activation, GroupActivate, or other means.
+	Round	If N is omitted or 0, Number is rounded to the nearest integer. If N is positive number, Number is rounded to N decimal places. If N is negative, Number is rounded by N digits to the left of the decimal point.
+	Run	Runs an external program.
+	RunAs	Specifies a set of user credentials to use for all subsequent uses of Run and RunWait. Requires Windows 2000/XP or later.
+	RunWait	Runs an external program and waits until it finishes.
+	Send / SendRaw / SendInput / SendPlay	Sends simulated keystrokes and mouse clicks to the active window.
+	SendLevel	Controls which artificial keyboard and mouse events are ignored by hotkeys and hotstrings.
+	SendMessage	Sends a message to a window or control and waits for acknowledgement.
+	SendMode	Makes Send synonymous with SendInput or SendPlay rather than the default (SendEvent). Also makes Click and MouseMove/Click/Drag use the specified method.
+	SetCapslockState	Sets the state of the Capslock key. Can also force the key to stay on or off.
+	SetEnv (Var = Value)	Assigns the specified value to a variable.
+	SetFormat	Sets the format of integers and floating point numbers generated by math operations.
+	SetKeyDelay	Sets the delay that will occur after each keystroke sent by Send or ControlSend.
+	SetMouseDelay	Sets the delay that will occur after each mouse movement or click.
+	SetNumlockState	Sets the state of the Numlock key. Can also force the key to stay on or off.
+	SetScrollLockState	Sets the state of the Scrolllock key. Can also force the key to stay on or off.
+	SetRegView	Allows registry commands in a 32-bit script to access the 64-bit registry view and vice versa.
+	Shutdown	Shuts down, restarts, or logs off the system.
+	Sin	Returns the trigonometric sine of Number.
+	Sleep	Waits the specified amount of time before continuing.
+	Sort	Arranges a variable's contents in alphabetical, numerical, or random order (optionally removing duplicates).
+	SoundBeep	Emits a tone from the PC speaker.
+	SoundGet	Retrieves various settings from a sound device (master mute, master volume, etc.)
+	SoundGetWaveVolume	Retrieves the wave output volume from a sound device.
+	SoundPlay	Plays a sound, video, or other supported file type.
+	SoundSet	Changes various settings of a sound device (master mute, master volume, etc.)
+	SoundSetWaveVolume	Changes the wave output volume for a sound device.
+	SplashImage	Creates or updates a window containing a JPG, GIF, or BMP image.
+	SplashTextOn	Creates a customizable text popup window.
+	SplashTextOff	Closes the above window.
+	SplitPath	Separates a file name or URL into its name, directory, extension, and drive.
+	Sqrt	Returns the square root of Number.
+	StatusBarGetText	Retrieves the text from a standard status bar control.
+	StatusBarWait	Waits until a window's status bar contains the specified string.
+	StrPut / StrGet	Copies a string to or from a memory address, optional converting it between code pages.
+	StringCaseSense	Determines whether string comparisons are case sensitive (default is "not case sensitive").
+	StringGetPos / InStr	Retrieves the position of the specified substring within a string.
+	StringLeft	Retrieves a number of characters from the left-hand side of a string.
+	StringLen / StrLen	Retrieves the count of how many characters are in a string.
+	StringLower	Converts a string to lowercase.
+	StringMid / SubStr	Retrieves one or more characters from the specified position in a string.
+	StringReplace	Replaces the specified substring with a new string.
+	StringRight	Retrieves a number of characters from the right-hand side of a string.
+	StringSplit	Separates a string into an array of substrings using the specified delimiters.
+	StringTrimLeft	Removes a number of characters from the left-hand side of a string.
+	StringTrimRight	Removes a number of characters from the right-hand side of a string.
+	StringUpper	Converts a string to uppercase.
+	Suspend	Disables or enables all or selected hotkeys and hotstrings.
+	SysGet	Retrieves screen resolution, multi-monitor info, dimensions of system objects, and other system properties.
+	Tan	Returns the trigonometric tangent of Number.
+	ToolTip	Creates an always-on-top window anywhere on the screen.
+	Transform	Performs miscellaneous math functions, bitwise operations, and tasks such as ASCII/Unicode conversion.
+	TrayTip	Creates a balloon message window near the tray icon. Requires Windows 2000/XP or later.
+	Trim	Trims certain characters from the beginning and/or end of a string.
+	Try	Guards one or more statements (commands or expressions) against runtime errors and exceptions thrown by the throw command.
+	Until	Applies a condition to the continuation of a Loop or For-loop.
+	UrlDownloadToFile	Downloads a file from the Internet.
+	VarSetCapacity	Enlarges a variable's holding capacity or frees its memory. Normally, this is necessary only for unusual circumstances such as DllCall.
+	WinActivate	Activates the specified window (makes it foremost).
+	WinActivateBottom	Same as WinActivate except that it activates the bottommost (least recently active) matching window rather than the topmost.
+	WinClose	Closes the specified window.
+	WinExist	Checks if the specified window exists.
+	WinGetActiveStats	Combines the functions of WinGetActiveTitle and WinGetPos into one command.
+	WinGetActiveTitle	Retrieves the title of the active window.
+	WinGetClass	Retrieves the specified window's class name.
+	WinGet	Retrieves the specified window's unique ID, process ID, process name, or a list of its controls. It can also retrieve a list of all windows matching the specified criteria.
+	WinGetPos	Retrieves the position and size of the specified window.
+	WinGetText	Retrieves the text from the specified window.
+	WinGetTitle	Retrieves the title of the specified window.
+	WinHide	Hides the specified window.
+	WinKill	Forces the specified window to close.
+	WinMaximize	Enlarges the specified window to its maximum size.
+	WinMenuSelectItem	Invokes a menu item from the menu bar of the specified window.
+	WinMinimize	Collapses the specified window into a button on the task bar.
+	WinMinimizeAll	Minimizes all windows.
+	WinMinimizeAllUndo	Reverses the effect of a previous WinMinimizeAll.
+	WinMove	Changes the position and/or size of the specified window.
+	WinRestore	Unminimizes or unmaximizes the specified window if it is minimized or maximized.
+	WinSet	Makes a variety of changes to the specified window, such as "always on top" and transparency.
+	WinSetTitle	Changes the title of the specified window.
+	WinShow	Unhides the specified window.
+	WinWait	Waits until the specified window exists.
+	WinWaitActive	Waits until the specified window is active.
+	WinWaitClose	Waits until the specified window does not exist.
+	WinWaitNotActive	Waits until the specified window is not active.
+	)	
 return		
