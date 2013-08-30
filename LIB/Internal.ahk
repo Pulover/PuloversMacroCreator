@@ -38,6 +38,21 @@ ShowTooltip()
 	return
 }
 
+SBShowTip(Command)
+{
+	global Cmd_Tips
+	
+	For each, Line in Cmd_Tips
+	{
+		If InStr(Line.Cmd, Command)
+		{
+			OutputDebug, % Line.Cmd "|" Command
+			SB_SetText(Line.Desc)
+			return
+		}
+	}
+}
+
 RebarLock(rbPtr, Lock=True)
 {
 	Loop, % rbPtr.GetBandCount()

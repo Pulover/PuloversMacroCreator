@@ -30,6 +30,7 @@ return
 ^x::GoSub, CutRows
 ^v::GoSub, PasteRows
 ^d::GoSub, Duplicate
+~Enter::GoSub, EditButton
 Insert::GoSub, ApplyL
 ^Insert::GoSub, InsertKey
 ^a::GoSub, SelectAll
@@ -87,7 +88,6 @@ return
 ^w::GoSub, TabClose
 ^h::GoSub, SetWin
 ^b::GoSub, OnScControls
-Enter::GoSub, EditButton
 ^Enter::GoSub, PlayStart
 ^+Enter::GoSub, TestRun
 !1::GoSub, PlayFrom

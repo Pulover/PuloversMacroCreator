@@ -196,7 +196,6 @@ IniRead, HKOff, %IniFilePath%, Options, HKOff, 0
 IniRead, TbNoTheme, %IniFilePath%, Options, TbNoTheme, 0
 IniRead, MultInst, %IniFilePath%, Options, MultInst, 0
 IniRead, EvalDefault, %IniFilePath%, Options, EvalDefault, 0
-IniRead, AllowRowDrag, %IniFilePath%, Options, AllowRowDrag, 1
 IniRead, ShowLoopIfMark, %IniFilePath%, Options, ShowLoopIfMark, 1
 IniRead, ShowActIdent, %IniFilePath%, Options, ShowActIdent, 1
 IniRead, LoopLVColor, %IniFilePath%, Options, LoopLVColor, 0xFFFF00
@@ -2314,12 +2313,11 @@ Gui, 4:Add, Edit, vScreenDir W350 R1 -Multi, %ScreenDir%
 Gui, 4:Add, Button, -Wrap yp-1 x+0 W30 H23 vSearchScreen gSearchDir, ...
 Gui, 4:Tab, 5
 ; General
-Gui, 4:Add, GroupBox, Section ym xm+210 W400 H120, %t_Lang018%
+Gui, 4:Add, GroupBox, Section ym xm+210 W400 H100, %t_Lang018%
 Gui, 4:Add, Checkbox, -Wrap Checked%HKOff% ys+20 xs+10 vHKOff W380 R1, %t_Lang055%
 Gui, 4:Add, Checkbox, -Wrap Checked%MultInst% vMultInst W380 R1, %t_Lang089%
 Gui, 4:Add, Checkbox, -Wrap Checked%TbNoTheme% vTbNoTheme W380 R1, %t_Lang142%
 Gui, 4:Add, Checkbox, -Wrap Checked%EvalDefault% vEvalDefault W380 R1, %t_Lang059%
-Gui, 4:Add, Checkbox, -Wrap Checked%AllowRowDrag% vAllowRowDrag W380 R1, %t_Lang091%
 Gui, 4:Add, GroupBox, Section y+15 xs W400 H125, %t_Lang136%
 Gui, 4:Add, Checkbox, -Wrap Checked%ShowLoopIfMark% ys+20 xs+10 vShowLoopIfMark W380 R1, %t_Lang060%
 Gui, 4:Add, Text, xs+10 y+5 W380, %t_Lang061%
@@ -2329,8 +2327,8 @@ Gui, 4:Add, Text, yp x+20 W85, %t_Lang082% "*"
 Gui, 4:Add, Text, yp x+10 W40 vIfLVColor gEditColor c%IfLVColor%, ██████
 Gui, 4:Add, Checkbox, -Wrap Checked%ShowActIdent% y+15 xs+10 vShowActIdent W380 R1, %t_Lang083%
 Gui, 4:Add, Text, W380, %t_Lang084%
-Gui, 4:Add, GroupBox, Section y+15 xs W400 H140, %t_Lang062%
-Gui, 4:Add, Edit, ys+20 xs+10 W380 r6 vEditMod, %VirtualKeys%
+Gui, 4:Add, GroupBox, Section y+15 xs W400 H160, %t_Lang062%
+Gui, 4:Add, Edit, ys+20 xs+10 W380 r8 vEditMod, %VirtualKeys%
 Gui, 4:Add, Button, -Wrap y+0 W75 H23 gConfigRestore, %t_Lang063%
 Gui, 4:Add, Button, -Wrap yp x+10 W75 H23 gKeyHistory, %c_Lang124%
 Gui, 4:Tab, 6
@@ -6314,6 +6312,7 @@ Gui, 23:Add, Edit, yp-3 xp+15 vSizeY W55 Disabled
 Gui, 23:Add, Button, -Wrap Section Default xm W75 H23 gControlOK, %c_Lang020%
 Gui, 23:Add, Button, -Wrap ys W75 H23 gControlCancel, %c_Lang021%
 Gui, 23:Add, Button, -Wrap ys W75 H23 vControlApply gControlApply Disabled, %c_Lang131%
+Gui, 23:Add, Statusbar
 If (s_Caller = "Edit")
 {
 	EscCom("Details|TimesX|DelayX|Target|Window", 1)
@@ -6377,6 +6376,8 @@ If (s_Caller = "Find")
 		GoSub, CtlCmd
 	}
 }
+Gui, 23:Default
+SBShowTip("Control")
 Gui, 23:Show, , %c_Lang004%
 Tooltip
 return
@@ -6469,6 +6470,7 @@ return
 
 CtlCmd:
 Gui, 23:Submit, NoHide
+SBShowTip(ControlCmd)
 If ((ControlCmd <> cType24) && (ControlCmd <> cType28))
 	GuiControl, 23:Disable, Cmd
 Else
@@ -7667,12 +7669,9 @@ If (A_GuiEvent == "ColClick")
 }
 If (A_GuiEvent == "D")
 {
-	If (AllowRowDrag)
-	{
-		LV_Rows.Drag()
-		GoSub, b_Start
-		GoSub, RowCheck
-	}
+	LV_Rows.Drag()
+	GoSub, b_Start
+	GoSub, RowCheck
 }
 If (A_GuiEvent == "RightClick")
 {
@@ -10490,7 +10489,6 @@ AbortKey := "F8"
 ,	TbNoTheme := 0
 ,	MultInst := 0
 ,	EvalDefault := 0
-,	AllowRowDrag := 1
 ,	ShowLoopIfMark := 1
 ,	ShowActIdent := 1
 ,	LoopLVColor := 0xFFFF00
@@ -10711,7 +10709,6 @@ IniWrite, %HKOff%, %IniFilePath%, Options, HKOff
 IniWrite, %TbNoTheme%, %IniFilePath%, Options, TbNoTheme
 IniWrite, %MultInst%, %IniFilePath%, Options, MultInst
 IniWrite, %EvalDefault%, %IniFilePath%, Options, EvalDefault
-IniWrite, %AllowRowDrag%, %IniFilePath%, Options, AllowRowDrag
 IniWrite, %ShowLoopIfMark%, %IniFilePath%, Options, ShowLoopIfMark
 IniWrite, %ShowActIdent%, %IniFilePath%, Options, ShowActIdent
 IniWrite, %LoopLVColor%, %IniFilePath%, Options, LoopLVColor
@@ -11682,6 +11679,13 @@ Else
 	Lang = En
 	GoSub, LoadLang_En
 }
+Cmd_Tips := {}
+Loop, Parse, Ahk_Cmd_Index, `n
+{
+	TipArray := StrSplit(A_LoopField, A_Tab)
+	Cmd_Tips.Insert({Cmd: TipArray[1], Desc: TipArray[2]})
+}
+TipArray := ""
 return
 
 ;##### Command Search: #####
