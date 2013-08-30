@@ -260,7 +260,7 @@ If String Contains|IfInString,
 If String Not Contains|IfNotInString, 
 If Message Box|IfMsgBox, 
 Compare Variables|If
-Evaluate Expression|Expression
+Evaluate Expression|If (expression)
 )"
 Loop, Parse, IfCmd, `n
 {
@@ -552,21 +552,14 @@ GetKeySC
 GetKeyState
 GetKeyVK
 InStr
-IsByRef
-IsFunc
-IsLabel
-IsObject
 Ln
 Log
 LTrim
 Mod
 NumGet
 NumPut
-ObjAddRef
-ObjRelease
 RegExMatch
 RegExReplace
-RegisterCallback
 Round
 RTrim
 Screenshot
@@ -579,7 +572,6 @@ StrSplit
 SubStr
 Tan
 Trim
-VarSetCapacity
 WinActive
 WinExist
 )"
@@ -816,7 +808,7 @@ DefaultBar := {FileOpt: "Enabled AutoSize", File: ["New=" w_Lang040 ":42", "Open
 			, RecPlayOpt: "Enabled AutoSize", RecPlay: ["Record=" w_Lang046 ":55(Enabled AutoSize Dropdown)"
 																, "", "PlayStart=" w_Lang047 ":47(Enabled AutoSize Dropdown)", "TestRun=" w_Lang048 ":49", "RunTimer=" w_Lang049 ":72"]
 			, CommandOpt: "Enabled AutoSize", Command: ["Mouse=" w_Lang050 ":39", "Text=" w_Lang051 ":71", "ControlCmd=" w_Lang053 ":7"
-														, "", "Pause=" w_Lang054 ":46", "MsgBox=" w_Lang055 ":11", "KeyWait=" w_Lang056 ":78"
+														, "", "Sleep=" w_Lang054 ":46", "MsgBox=" w_Lang055 ":11", "KeyWait=" w_Lang056 ":78"
 														, "", "Window=" w_Lang057 ":81", "Image=" w_Lang058 ":28", "Run=" w_Lang059 ":59"
 														, "", "ComLoop=" w_Lang060 ":37", "ComGoto=" w_Lang061 ":22", "AddLabel=" w_Lang062 ":35"
 														, "", "IfSt=" w_Lang063 ":27", "AsVar=" w_Lang064 ":76", "AsFunc=" w_Lang065 ":21"

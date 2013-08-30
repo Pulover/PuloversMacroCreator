@@ -58,7 +58,7 @@
 	s_Lang007 =	Move Selection U&p
 	s_Lang008 =	Move Selection &Down
 	s_Lang009 =	Selected &Type
-	s_Lang010 =	C&ommands
+	s_Lang010 =	Command type
 		
 ; Edit Sub Menu		
 	e_Lang001 =	Dup&licate
@@ -398,6 +398,22 @@
 	c_Lang161 =	Scale
 	c_Lang162 =	Add "If Statement"
 	c_Lang163 =	Send Mode
+	c_Lang164 =	Equal
+	c_Lang165 =	Contains
+	c_Lang166 =	Greater
+	c_Lang167 =	Less
+	c_Lang168 =	Yes
+	c_Lang169 =	No
+	c_Lang170 =	OK
+	c_Lang171 =	Cancel
+	c_Lang172 =	Abort
+	c_Lang173 =	Ignore
+	c_Lang174 =	Retry
+	c_Lang175 =	Continue
+	c_Lang176 =	Try Again
+	c_Lang177 =	Timeout 
+		
+		
 		
 ; Other Windows		
 	t_Lang001 =	Export to AHK
@@ -1014,12 +1030,16 @@
 	Abs	Returns the absolute value of Number.
 	ASin	Returns the arcsine (the number whose sine is Number) in radians.
 	ACos	Returns the arccosine (the number whose cosine is Number) in radians.
+	Array	Creates an Array Object.
+	Asc	Returns the character code (a number between 1 and 255 (in ANSI builds) or 65535 (in Unicode builds)) for the first character in String.
 	ATan	Returns the arctangent (the number whose tangent is Number) in radians.
 	BlockInput	Disables or enables the user's ability to interact with the computer via keyboard and mouse.
 	Break	Exits (terminates) a loop. Valid inside any kind of loop.
 	Ceil	Returns Number rounded up to the nearest integer (without any .00 suffix).
-	Click	Clicks a mouse button at the specified coordinates. It can also hold down a mouse button, turn the mouse wheel, or move the mouse.
+	Chr	Returns the single character corresponding to the character code indicated by Number.
+	Click	Clicks a mouse button at the specified coordinates. It can also hold down a button, turn the wheel, or move.
 	ClipWait	Waits until the clipboard contains data.
+	Clipboard	Pastes text from clipboard
 	ComObjActive	Retrieves a registered COM object.
 	ComObjArray	Creates a SAFEARRAY for use with COM.
 	ComObjConnect	Connects a COM object's event sources to functions with a given prefix.
@@ -1036,6 +1056,7 @@
 	Continue	Skips the rest of the current loop iteration and begins a new one. Valid inside any kind of loop.
 	Control	Makes a variety of changes to a control.
 	ControlClick	Sends a mouse button or mouse wheel event to a control.
+	ControlEditPaste	Pastes String at the caret/insert position in an Edit control (this does not affect the contents of the clipboard).
 	ControlFocus	Sets input focus to a given control on a window.
 	ControlGet	Retrieves various types of information about a control.
 	ControlGetFocus	Retrieves which control of the target window has input focus, if any.
@@ -1107,10 +1128,13 @@
 	If var [not] between	Checks whether a variable's contents are numerically or alphabetically between two values (inclusive).
 	If var [not] in/contains MatchList 	Checks whether a variable's contents match one of the items in a list.
 	If var is [not] type	Checks whether a variable's contents are numeric, uppercase, etc.
+	If Clipboard	Checks if the Clipboard text is matchs a specified string.
+	If ErrorLevel	Checks if a specified image or pixel was found in the screen.
+	If A_Index	Checks if the current loop iteration matchs a specified a number.
 	IfEqual/IfNotEqual	Compares a variable to a value for equality. Synonymous with: if Var = Value | if Var <> Value.
-	IfExist / FileExist	Checks for the existence of a file or folder.
+	IfExist / IfNotExist / FileExist	Checks for the existence of a file or folder.
 	IfGreater / IfGreaterOrEqual	Compares a variable to a value. Synonymous with: if Var > Value | if Var >= Value.
-	IfInString / InStr	Checks if a variable contains the specified string.
+	IfInString / IfNotInString / InStr	Checks if a variable contains the specified string.
 	IfLess / IfLessOrEqual	Compares a variable to a value. Synonymous with: if Var < Value | if Var <= Value.
 	IfMsgBox	Checks which button was pushed by the user during the most recent MsgBox command.
 	IfWinActive / IfWinNotActive	Checks if the specified window exists and is currently active (foremost).
@@ -1129,11 +1153,12 @@
 	(LTrim	
 	KeyHistory	Displays script info and a history of the most recent keystrokes and mouse clicks.
 	KeyWait	Waits for a key or mouse/joystick button to be released or pressed down.
+	Labels	A label identifies a line of code, and can be used as a Goto target or to form a subroutine.
 	Log	Returns the logarithm (base 10) of Number.
 	Ln	Returns the natural logarithm (base e) of Number.
 	Loop (normal) 	Perform a series of commands repeatedly: either the specified number of times or until break is encountered.
 	Loop (files & folders)	Retrieves the specified files or folders, one at a time.
-	Loop (parse a string) 	Retrieves substrings (fields) from a string, one at a time.
+	Loop (parse a string)	Retrieves substrings (fields) from a string, one at a time.
 	Loop (read file contents)	Retrieves the lines in a text file, one at a time (performs better than FileReadLine).
 	Loop (registry)	Retrieves the contents of the specified registry subkey, one item at a time.
 	Menu	Creates, deletes, modifies and displays menus and menu items. Changes the tray icon and its tooltip. Controls whether the main window of a compiled script can be opened.
@@ -1142,6 +1167,8 @@
 	MouseGetPos	Retrieves the current position of the mouse cursor, and optionally which window and control it is hovering over.
 	MouseMove	Moves the mouse cursor.
 	MsgBox	Displays the specified text in a small window containing one or more buttons (such as Yes and No).
+	NumGet	Returns the binary number stored at the specified address+offset.
+	NumPut	Stores Number in binary format at the specified address+offset and returns the address to the right of the item just written.
 	OnExit	Specifies a subroutine to run automatically when the script exits.
 	OnMessage	Specifies a function to call automatically when the script receives the specified message.
 	OutputDebug	Sends a string to the debugger (if any) for display.
@@ -1163,6 +1190,7 @@
 	Run	Runs an external program.
 	RunAs	Specifies a set of user credentials to use for all subsequent uses of Run and RunWait. Requires Windows 2000/XP or later.
 	RunWait	Runs an external program and waits until it finishes.
+	Screenshot	Creates a PNG screenshot of the an specified area.
 	Send / SendRaw / SendInput / SendPlay	Sends simulated keystrokes and mouse clicks to the active window.
 	SendLevel	Controls which artificial keyboard and mouse events are ignored by hotkeys and hotstrings.
 	SendMessage	Sends a message to a window or control and waits for acknowledgement.
@@ -1201,7 +1229,7 @@
 	StringMid / SubStr	Retrieves one or more characters from the specified position in a string.
 	StringReplace	Replaces the specified substring with a new string.
 	StringRight	Retrieves a number of characters from the right-hand side of a string.
-	StringSplit	Separates a string into an array of substrings using the specified delimiters.
+	StringSplit / StrSplit	Separates a string into an array of substrings using the specified delimiters.
 	StringTrimLeft	Removes a number of characters from the left-hand side of a string.
 	StringTrimRight	Removes a number of characters from the right-hand side of a string.
 	StringUpper	Converts a string to uppercase.
@@ -1211,13 +1239,14 @@
 	ToolTip	Creates an always-on-top window anywhere on the screen.
 	Transform	Performs miscellaneous math functions, bitwise operations, and tasks such as ASCII/Unicode conversion.
 	TrayTip	Creates a balloon message window near the tray icon. Requires Windows 2000/XP or later.
-	Trim	Trims certain characters from the beginning and/or end of a string.
+	Trim / LTrim / RTrim	Trims certain characters from the beginning and/or end of a string.
 	Try	Guards one or more statements (commands or expressions) against runtime errors and exceptions thrown by the throw command.
 	Until	Applies a condition to the continuation of a Loop or For-loop.
 	UrlDownloadToFile	Downloads a file from the Internet.
 	VarSetCapacity	Enlarges a variable's holding capacity or frees its memory. Normally, this is necessary only for unusual circumstances such as DllCall.
 	WinActivate	Activates the specified window (makes it foremost).
 	WinActivateBottom	Same as WinActivate except that it activates the bottommost (least recently active) matching window rather than the topmost.
+	WinActive	Returns the Unique ID (HWND) of the active window if it matches the specified criteria.
 	WinClose	Closes the specified window.
 	WinExist	Checks if the specified window exists.
 	WinGetActiveStats	Combines the functions of WinGetActiveTitle and WinGetPos into one command.

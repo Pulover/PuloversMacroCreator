@@ -7,7 +7,7 @@
 #singleinstance #usehook #warn #winactivateforce autotrim blockinput break catch click clipwait
 continue control controlclick controlfocus controlget controlgetfocus controlgetpos controlgettext
 controlmove controlsend controlsendraw controlsettext coordmode critical detecthiddentext
-detecthiddenwindows drive driveget drivespacefree edit else endrepeat envadd envdiv envget envmult
+detecthiddenwindows drive driveget drivespacefree else endrepeat envadd envdiv envget envmult
 envset envsub envupdate exit exitapp fileappend filecopy filecopydir filecreatedir
 filecreateshortcut filedelete fileencoding filegetattrib filegetshortcut filegetsize filegettime
 filegetversion fileinstall filemove filemovedir fileread filereadline filerecycle filerecycleempty
@@ -55,26 +55,26 @@ abort abovenormal activex add ahk_class ahk_group ahk_id ahk_pid all alnum alpha
 alttabandmenu alttabmenu alttabmenudismiss alwaysontop and astr ateof autosize background
 backgroundtrans base belownormal between bitand bitnot bitor bitshiftleft bitshiftright bitxor bold
 border bottom bottom button buttons byref cancel cancel capacity caption caret center center char
-charp check check3 checkbox checked checkedgray choose choosestring class clone close color
-combobox contains controllist controllisthwnd count custom date datetime days ddl default delete
-deleteall delimiter deref destroy digit disable disabled double doublep dropdownlist edit eject
-enable enabled encoding error exist exit expand exstyle filesystem first flash float float floatp
-focus font force fromcodepage global grid group groupbox guiclose guicontextmenu guidropfiles
-guiescape guisize hdr hidden hide high hkcc hkcr hkcu hkey_classes_root hkey_current_config
+charp check check3 checkbox checked checkedgray choice choose choosestring class clone close color combobox
+contains controllist controllisthwnd count currentcol currentline custom date datetime days ddl default delete
+deleteall delimiter deref destroy digit disable disabled double doublep dropdownlist edit editpaste eject
+enable enabled encoding error exist exit expand exstyle filesystem findstring first flash float float floatp
+focus focusv font force fromcodepage global grid group groupbox guiclose guicontextmenu guidropfiles
+guiescape guisize hdr hidden hide hidedropdown high hkcc hkcr hkcu hkey_classes_root hkey_current_config
 hkey_current_user hkey_local_machine hkey_users hklm hku hotkey hours hscroll hwnd icon iconsmall
 id idlast ignore imagelist in int int64 int64p integer integerfast interrupt intp is italic join
-label lastfound lastfoundexist left length limit lines list listbox listview local
+label lastfound lastfoundexist left length limit linecount line lines list listbox listview local
 localsameasglobal lock logoff low lower lowercase ltrim mainwindow margin maximize maximizebox menu
 minimize minimizebox minmax minutes monitorcount monitorname monitorprimary monitorworkarea
-monthcal mouse mousemove mousemoveoff move multi na no noactivate nodefault nohide noicon
+monthcal mouse mousemove mousemoveoff move movedraw multi na name no noactivate nodefault nohide noicon
 nomainwindow norm normal nosort nosorthdr nostandard not notab notimers number number off ok on or
 owndialogs owner parse password password pic picture pid pixel pos pow priority processname
 progress ptr radio range read readonly realtime redraw reg_binary reg_dword reg_dword_big_endian
 reg_expand_sz reg_full_resource_descriptor reg_link reg_multi_sz reg_qword reg_resource_list
 reg_resource_requirements_list reg_sz regex region relative reload rename report resize restore
-retry rgb right rtrim screen seconds section section send sendandmouse serial setlabel shiftalttab
-short shortp show shutdown single slider sortdesc standard static status statusbar statuscd str
-strike style submit sysmenu tab tab2 tabstop text text theme tile time tip tocodepage togglecheck
+retry rgb right rtrim screen seconds selected section section send sendandmouse serial setlabel shiftalttab
+short shortp show showdropdown shutdown single slider sortdesc standard static status statusbar statuscd str
+strike style submit sysmenu tab tab2 tableft tabright tabstop text text theme tile time tip tocodepage togglecheck
 toggleenable toolwindow top top topmost transcolor transparent tray treeview type uchar ucharp uint
 uint64 uint64p uintp uncheck underline unicode unlock updown upper uppercase useerrorlevel
 useunsetglobal useunsetlocal ushort ushortp vis visfirst visible vscroll wait waitclose wantctrla

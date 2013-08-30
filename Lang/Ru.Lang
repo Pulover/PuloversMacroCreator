@@ -58,7 +58,7 @@
 	s_Lang007 =	П&ереместить Выделение Вверх
 	s_Lang008 =	Пе&реместите Выделение Вниз
 	s_Lang009 =	Вы&бранный тип
-	s_Lang010 =	&Команды
+	s_Lang010 =	Тип команды
 		
 ; Edit Sub Menu		
 	e_Lang001 =	&Дублировать
@@ -398,6 +398,22 @@
 	c_Lang161 =	Шкала
 	c_Lang162 =	Добавить "Если Заявление"
 	c_Lang163 =	Режим Отправки
+	c_Lang164 =	
+	c_Lang165 =	
+	c_Lang166 =	
+	c_Lang167 =	
+	c_Lang168 =	
+	c_Lang169 =	
+	c_Lang170 =	
+	c_Lang171 =	
+	c_Lang172 =	
+	c_Lang173 =	
+	c_Lang174 =	
+	c_Lang175 =	
+	c_Lang176 =	
+	c_Lang177 =	
+		
+		
 		
 ; Other Windows		
 	t_Lang001 =	Экспорт в AHK
@@ -1014,12 +1030,16 @@
 	Abs	
 	ASin	
 	ACos	
+	Array	
+	Asc	
 	ATan	
 	BlockInput	
 	Break	
 	Ceil	
+	Chr	
 	Click	
 	ClipWait	
+	Clipboard	
 	ComObjActive	
 	ComObjArray	
 	ComObjConnect	
@@ -1036,6 +1056,7 @@
 	Continue	
 	Control	
 	ControlClick	
+	ControlEditPaste	
 	ControlFocus	
 	ControlGet	
 	ControlGetFocus	
@@ -1107,10 +1128,13 @@
 	If var [not] between	
 	If var [not] in/contains MatchList 	
 	If var is [not] type	
+	If Clipboard	
+	If ErrorLevel	
+	If A_Index	
 	IfEqual/IfNotEqual	
-	IfExist / FileExist	
+	IfExist / IfNotExist / FileExist	
 	IfGreater / IfGreaterOrEqual	
-	IfInString / InStr	
+	IfInString / IfNotInString / InStr	
 	IfLess / IfLessOrEqual	
 	IfMsgBox	
 	IfWinActive / IfWinNotActive	
@@ -1129,11 +1153,12 @@
 	(LTrim	
 	KeyHistory	
 	KeyWait	
+	Labels	
 	Log	
 	Ln	
 	Loop (normal) 	
 	Loop (files & folders)	
-	Loop (parse a string) 	
+	Loop (parse a string)	
 	Loop (read file contents)	
 	Loop (registry)	
 	Menu	
@@ -1142,6 +1167,8 @@
 	MouseGetPos	
 	MouseMove	
 	MsgBox	
+	NumGet	
+	NumPut	
 	OnExit	
 	OnMessage	
 	OutputDebug	
@@ -1163,6 +1190,7 @@
 	Run	
 	RunAs	
 	RunWait	
+	Screenshot	
 	Send / SendRaw / SendInput / SendPlay	
 	SendLevel	
 	SendMessage	
@@ -1201,7 +1229,7 @@
 	StringMid / SubStr	
 	StringReplace	
 	StringRight	
-	StringSplit	
+	StringSplit / StrSplit	
 	StringTrimLeft	
 	StringTrimRight	
 	StringUpper	
@@ -1211,13 +1239,14 @@
 	ToolTip	
 	Transform	
 	TrayTip	
-	Trim	
+	Trim / LTrim / RTrim	
 	Try	
 	Until	
 	UrlDownloadToFile	
 	VarSetCapacity	
 	WinActivate	
 	WinActivateBottom	
+	WinActive	
 	WinClose	
 	WinExist	
 	WinGetActiveStats	

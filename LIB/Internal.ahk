@@ -44,13 +44,34 @@ SBShowTip(Command)
 	
 	For each, Line in Cmd_Tips
 	{
-		If InStr(Line.Cmd, Command)
+		If (Line.Cmd = Command)
 		{
-			OutputDebug, % Line.Cmd "|" Command
 			SB_SetText(Line.Desc)
 			return
 		}
 	}
+	SB_SetText("")
+}
+
+Find_Command(SearchWord)
+{
+	local Results
+	
+	Results := {}
+	Loop, Parse, KeywordsList, |
+	{
+		SearchIn := A_LoopField
+		Loop, Parse, %A_LoopField%_Keywords, `,
+		{
+			If InStr(A_LoopField, FindCmd)
+			{
+				If (SearchIn = "Type")
+					SearchIn := "Type" A_Index
+				Results.Insert({Cmd: A_LoopField, Path: %SearchIn%_Path})
+			}
+		}
+	}
+	return Results
 }
 
 RebarLock(rbPtr, Lock=True)

@@ -30,7 +30,6 @@ return
 ^x::GoSub, CutRows
 ^v::GoSub, PasteRows
 ^d::GoSub, Duplicate
-~Enter::GoSub, EditButton
 Insert::GoSub, ApplyL
 ^Insert::GoSub, InsertKey
 ^a::GoSub, SelectAll
@@ -123,7 +122,7 @@ return
 F2::GoSub, Mouse
 F3::GoSub, Text
 F4::GoSub, ControlCmd
-F5::GoSub, Pause
+F5::GoSub, Sleep
 +F5::GoSub, MsgBox
 ^F5::GoSub, KeyWait
 F6::GoSub, Window
@@ -139,6 +138,7 @@ F11::GoSub, IECom
 +F11::GoSub, ComInt
 ^F11::GoSub, RunScrLet
 F12::GoSub, SendMsg
+~Enter::GoSub, EditButton
 
 #If WinActive("ahk_id " PrevID) && !HKOff
 
