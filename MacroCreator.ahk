@@ -1881,12 +1881,12 @@ If (IfDirectContext <> "None")
 LV_Delete()
 Loop, %TabCount%
 	LV_Add("Check", A_Index, o_AutoKey[A_Index], o_TimesG[A_Index], 0, (BckIt%A_Index% ? 1 : 0))
-LV_ModifyCol(1, 50)		; Macros
-LV_ModifyCol(2, 120)	; Hotkeys
-LV_ModifyCol(3, 60)		; Loop
-LV_ModifyCol(4, 60)		; Hotstrings
-LV_ModifyCol(5, 80)		; Block
-LV_Modify(0, "Check")
+	LV_ModifyCol(1, 50)		; Macros
+,	LV_ModifyCol(2, 120)	; Hotkeys
+,	LV_ModifyCol(3, 60)		; Loop
+,	LV_ModifyCol(4, 60)		; Hotstrings
+,	LV_ModifyCol(5, 80)		; Block
+,	LV_Modify(0, "Check")
 If CurrentFileName = 
 	GuiControl, 14:, ExpFile, %A_MyDocuments%\MyScript.ahk
 Gui, 14:Show, % (ShowExpOpt) ? "H670" : "H300", %t_Lang001%
@@ -1900,11 +1900,11 @@ If A_GuiEvent <> DoubleClick
 	return
 If (LV_GetCount("Selected") = 0)
 	return
-RowNumber := LV_GetNext()
-LV_GetText(Ex_AutoKey, RowNumber, 2)
-LV_GetText(Ex_TimesX, RowNumber, 3)
-LV_GetText(Ex_Hotstring, RowNumber, 4)
-LV_GetText(Ex_BM, RowNumber, 5)
+	RowNumber := LV_GetNext()
+,	LV_GetText(Ex_AutoKey, RowNumber, 2)
+,	LV_GetText(Ex_TimesX, RowNumber, 3)
+,	LV_GetText(Ex_Hotstring, RowNumber, 4)
+,	LV_GetText(Ex_BM, RowNumber, 5)
 Gui, 13:+owner14 +ToolWindow
 Gui, 14:Default
 Gui, 14:+Disabled
@@ -4949,8 +4949,8 @@ Gui, 11:Add, DDL, W120 -Multi vWCmd gWCmd, %WinCmd%
 Gui, 11:Add, Text, vTValue Disabled, 255
 Gui, 11:Add, Slider, yp+10 Buddy2TValue vN gN Range0-255 Disabled, 255
 Gui, 11:Add, Radio, -Wrap Checked yp+2 xp+150 vAoT R1, Toggle
-Gui, 11:Add, Radio, -Wrap yp xp+70 R1, On
-Gui, 11:Add, Radio, -Wrap yp xp+70 R1, Off
+Gui, 11:Add, Radio, -Wrap yp xp+70 R1 vOTOn, On
+Gui, 11:Add, Radio, -Wrap yp xp+70 R1 vOTOff, Off
 Gui, 11:Add, Text, xs+10 y+10 W80 vValueT, %c_Lang056%:
 Gui, 11:Add, Edit, W430 -Multi Disabled vValue
 Gui, 11:Add, Text, W180, %c_Lang057%:
@@ -5227,15 +5227,15 @@ Else
 }
 If ((WinCom = "WinSet") && (WCmd = "AlwaysOnTop"))
 {
-	GuiControl, 11:Enable, Button1
-	GuiControl, 11:Enable, Button2
-	GuiControl, 11:Enable, Button3
+	GuiControl, 11:Enable, AoT
+	GuiControl, 11:Enable, OTOn
+	GuiControl, 11:Enable, OTOff
 }
 Else
 {
-	GuiControl, 11:Disable, Button1
-	GuiControl, 11:Disable, Button2
-	GuiControl, 11:Disable, Button3
+	GuiControl, 11:Disable, AoT
+	GuiControl, 11:Disable, OTOn
+	GuiControl, 11:Disable, OTOff
 }
 If (WinCom = "WinSet")
 {
@@ -7424,14 +7424,14 @@ If (A_ThisLabel <> "CmdFind")
 	Gui, 26:Add, Text, yp+5 -Wrap r1, %d_Lang074%:
 	Gui, 26:Font
 	Gui, 26:Add, Edit, -Wrap W380 r1 vFindCmd gFindCmd
-	Gui, 26:Add, ListView, y+0 W380 r5 hwndhFindRes vFindResult gFindResult -Hdr, Command|Description
+	Gui, 26:Add, ListView, y+0 W380 r4 hwndhFindRes vFindResult gFindResult AltSubmit -Multi -Hdr, Command|Description
 }
 Else
 {
-	Gui, 26:+E0x00000400 +HwndCmdWin
+	Gui, 26:+E0x00000400 +HwndStartTipID
 	Gui, 26:Add, Groupbox, Section yp+5 -Wrap W450 H190, %d_Lang074%:
 	Gui, 26:Add, Edit, -Wrap ys+15 xs+10 W430 r1 vFindCmd gFindCmd
-	Gui, 26:Add, ListView, r8 y+0 W430 hwndhFindRes vFindResult gFindResult -Hdr, Command|Description
+	Gui, 26:Add, ListView, r8 y+0 W430 hwndhFindRes vFindResult gFindResult AltSubmit -Multi -Hdr, Command|Description
 	Gui, 26:Add, StatusBar
 	Gui, 26:Default
 }
@@ -7497,16 +7497,16 @@ ControlSend,, {Up}, ahk_id %hFindRes%
 return
 
 FindResult:
-Gui, 26:Submit, NoHide
-ResArr := StrSplit(FindResult, A_Tab)
-SBShowTip(ResArr[1])
+Gui, 26:Default
+LV_GetText(SelectedResult, LV_GetNext(), 1)
+SBShowTip(SelectedResult)
 If (A_GuiEvent <> "DoubleClick")
 	return
 GoResult:
 Gui, 26:Submit, NoHide
-If (FindResult = "")
-	return
-RegExMatch(FindResult, "(.*?)\t+\[(.*)\]", GotoRes)
+Gui, 26:Default
+; RegExMatch(FindResult, "(.*?)\t+\[(.*)\]", GotoRes)
+LV_GetText(GotoRes1, LV_GetNext(), 1), LV_GetText(GotoRes2, LV_GetNext(), 2)
 Loop, Parse, KeywordsList, |
 {
 	SearchIn := A_LoopField

@@ -55,7 +55,7 @@ SBShowTip(Command)
 
 Find_Command(SearchWord)
 {
-	local Results
+	local Results, SearchIn, Search
 	
 	Results := {}
 	Loop, Parse, KeywordsList, |
@@ -66,8 +66,10 @@ Find_Command(SearchWord)
 			If InStr(A_LoopField, FindCmd)
 			{
 				If (SearchIn = "Type")
-					SearchIn := "Type" A_Index
-				Results.Insert({Cmd: A_LoopField, Path: %SearchIn%_Path})
+					Search := "Type" A_Index
+				Else
+					Search := SearchIn
+				Results.Insert({Cmd: A_LoopField, Path: %Search%_Path})
 			}
 		}
 	}
