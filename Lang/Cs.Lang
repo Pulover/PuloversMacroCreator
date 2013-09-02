@@ -316,8 +316,8 @@
 	c_Lang078 =	Přejít na štítku
 	c_Lang079 =	Štítek
 	c_Lang080 =	Přidat štítek
-	c_Lang081 =	String (InputVar), hodnota
-	c_Lang082 =	Var [Provozovatel] Hodnota
+	c_Lang081 =	String (InputVar)
+	c_Lang082 =	proměnlivý
 	c_Lang083 =	Jiný
 	c_Lang084 =	Přiřazení proměnné
 	c_Lang085 =	Obsah
@@ -418,6 +418,27 @@
 	c_Lang181 =	
 	c_Lang182 =	
 	c_Lang183 =	
+	c_Lang184 =	
+	c_Lang185 =	
+	c_Lang186 =	
+	c_Lang187 =	
+	c_Lang188 =	
+	c_Lang189 =	
+	c_Lang190 =	
+	c_Lang191 =	
+	c_Lang192 =	
+	c_Lang193 =	
+	c_Lang194 =	
+	c_Lang195 =	
+	c_Lang196 =	
+	c_Lang197 =	
+	c_Lang198 =	
+	c_Lang199 =	
+	c_Lang200 =	
+	c_Lang201 =	
+	c_Lang202 =	
+	c_Lang203 =	
+	c_Lang204 =	
 		
 ; Other Windows		
 	t_Lang001 =	Export do AHK
@@ -825,6 +846,7 @@
 	IfLVColor_TT =	Klepněte na tlačítko vybrat barvu
 	RefreshIEW_TT =	Obnovit seznam
 	ActiveObj_TT =	Pokusí připojit k Active objektu COM
+	TimeoutM_TT =	0 = nekonečno
 	ExpView_TT =	Pokročilý Editor
 	ExpView2_TT =	Pokročilý Editor
 	OSPlay_TT =	Play / Pause

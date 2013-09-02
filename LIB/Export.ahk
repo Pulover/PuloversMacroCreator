@@ -105,8 +105,6 @@
 			RowData := "`n" Type ", " Target ",, " Step
 			If (Comment <> "")
 				RowData .= "  " "; " Comment
-			If (Mod(Target, 2))
-				RowData .= "`nIfMsgBox, Cancel`n`tReturn"
 			If ((TimesX > 1) || InStr(TimesX, "%"))
 				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
 		}
@@ -219,7 +217,7 @@
 			If ((TimesX > 1) || InStr(TimesX, "%"))
 				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
 		}
-		Else If ((Type = cType20) && (Action = "[Pause]"))
+		Else If (Type = cType20)
 		{
 			RowData := "`n" Type ", " Step
 			RowData .= "`n" Type ", " Step ", D"
@@ -488,7 +486,7 @@
 			If ((TimesX > 1) || InStr(TimesX, "%"))
 				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
 		}
-		If ((Action = "[Pause]") || !(InStr(FileCmdList, Type "|")))
+		If (!InStr(FileCmdList, Type "|"))
 			StringReplace, RowData, RowData, ```,, `,, All
 		LVData .= RowData
 	}

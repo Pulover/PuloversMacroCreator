@@ -316,8 +316,8 @@
 	c_Lang078 =	Pergi ke Label
 	c_Lang079 =	Label
 	c_Lang080 =	Tambahkan Label
-	c_Lang081 =	String (InputVar), Nilai
-	c_Lang082 =	Var [Operator] Nilai
+	c_Lang081 =	String (InputVar)
+	c_Lang082 =	variabel
 	c_Lang083 =	Lain
 	c_Lang084 =	Menetapkan Variabel
 	c_Lang085 =	Kadar
@@ -418,6 +418,27 @@
 	c_Lang181 =	
 	c_Lang182 =	
 	c_Lang183 =	
+	c_Lang184 =	
+	c_Lang185 =	
+	c_Lang186 =	
+	c_Lang187 =	
+	c_Lang188 =	
+	c_Lang189 =	
+	c_Lang190 =	
+	c_Lang191 =	
+	c_Lang192 =	
+	c_Lang193 =	
+	c_Lang194 =	
+	c_Lang195 =	
+	c_Lang196 =	
+	c_Lang197 =	
+	c_Lang198 =	
+	c_Lang199 =	
+	c_Lang200 =	
+	c_Lang201 =	
+	c_Lang202 =	
+	c_Lang203 =	
+	c_Lang204 =	
 		
 ; Other Windows		
 	t_Lang001 =	Ekspor ke AHK
@@ -825,6 +846,7 @@
 	IfLVColor_TT =	Klik untuk memilih warna
 	RefreshIEW_TT =	Segarkan Daftar
 	ActiveObj_TT =	Mencoba untuk terhubung ke COM Obyek Aktif
+	TimeoutM_TT =	0 = tak terbatas
 	ExpView_TT =	Editor canggih
 	ExpView2_TT =	Editor canggih
 	OSPlay_TT =	Play / Pause

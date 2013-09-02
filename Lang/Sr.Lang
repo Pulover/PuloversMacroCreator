@@ -316,8 +316,8 @@
 	c_Lang078 =	Иди на ознаку
 	c_Lang079 =	Ознака
 	c_Lang080 =	Додајте Лабел
-	c_Lang081 =	Стринг (InputVar), вредност
-	c_Lang082 =	Вар [оператер] Вредност
+	c_Lang081 =	Стринг (InputVar)
+	c_Lang082 =	варијабла
 	c_Lang083 =	Друго
 	c_Lang084 =	Додели променљиве
 	c_Lang085 =	Садржина
@@ -418,6 +418,27 @@
 	c_Lang181 =	
 	c_Lang182 =	
 	c_Lang183 =	
+	c_Lang184 =	
+	c_Lang185 =	
+	c_Lang186 =	
+	c_Lang187 =	
+	c_Lang188 =	
+	c_Lang189 =	
+	c_Lang190 =	
+	c_Lang191 =	
+	c_Lang192 =	
+	c_Lang193 =	
+	c_Lang194 =	
+	c_Lang195 =	
+	c_Lang196 =	
+	c_Lang197 =	
+	c_Lang198 =	
+	c_Lang199 =	
+	c_Lang200 =	
+	c_Lang201 =	
+	c_Lang202 =	
+	c_Lang203 =	
+	c_Lang204 =	
 		
 ; Other Windows		
 	t_Lang001 =	Извоз у АХК
@@ -825,6 +846,7 @@
 	IfLVColor_TT =	Кликните да изаберете боју
 	RefreshIEW_TT =	Освежи листу
 	ActiveObj_TT =	Покушава да се повеже са активног објекта ЦОМ
+	TimeoutM_TT =	0 = бесконачно
 	ExpView_TT =	Напредни Едитор
 	ExpView2_TT =	Напредни Едитор
 	OSPlay_TT =	Плаи / Паусе

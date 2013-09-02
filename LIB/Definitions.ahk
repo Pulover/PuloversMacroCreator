@@ -96,7 +96,8 @@ ListCount1 := 0
 ,	PlayOptChecks := ["ShowStep", "MouseReturn", "ShowBarOnStart", "AutoHideBar", "RandomSleeps"]
 ,	OnFinishCode := 1
 ,	Exp_Mult := {1:2, 2:4, 3:8, 4:16, 5:32}
-,	KeyNameRep := "
+,	MsgBoxStyles := [262144, 512, 256]
+KeyNameRep := "
 (Join,
 LControl|Left Control
 RControl|Right Control
@@ -270,14 +271,15 @@ Loop, Parse, IfCmd, `n
 		If A_Index = 1
 		{
 			If%Count% := A_LoopField
-			IfList .= A_LoopField "$"
+			IfList%Count% := A_LoopField
 		}
 		Else
 			c_If%Count% := A_LoopField
 	}
-	If A_Index = 1
-		IfList .= "$"
 }
+
+MsgButtons := "Yes,No,OK,Cancel,Abort,Ignore,Retry,Continue,TryAgain,Timeout"
+StringSplit, IfMsg, MsgButtons, `,
 
 IECmdList := "
 (Join|
@@ -451,7 +453,6 @@ GroupAdd, GroupName, WinTitle, WinText, Label, ExcludeTitle, ExcludeText
 GroupActivate, GroupName, R
 GroupDeactivate, GroupName, R
 GroupClose, GroupName, A|R
-MsgBox, Options, Title, Text, Timeout
 InputBox, OutputVar, Title, Prompt, HIDE, Width, Height, X, Y, Font, Timeout, Default
 ToolTip, Text, X, Y, WhichToolTip
 TrayTip, Title, Text, Seconds, Options

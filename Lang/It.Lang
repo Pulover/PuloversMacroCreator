@@ -316,8 +316,8 @@
 	c_Lang078 =	Vai alla Label
 	c_Lang079 =	Etichetta
 	c_Lang080 =	Aggiungi etichetta
-	c_Lang081 =	Stringa (InputVar), un valore
-	c_Lang082 =	Var [operatore] Valore
+	c_Lang081 =	Stringa (InputVar)
+	c_Lang082 =	variabile
 	c_Lang083 =	Else
 	c_Lang084 =	Assegnare variabile
 	c_Lang085 =	Contenuto
@@ -418,6 +418,27 @@
 	c_Lang181 =	
 	c_Lang182 =	
 	c_Lang183 =	
+	c_Lang184 =	
+	c_Lang185 =	
+	c_Lang186 =	
+	c_Lang187 =	
+	c_Lang188 =	
+	c_Lang189 =	
+	c_Lang190 =	
+	c_Lang191 =	
+	c_Lang192 =	
+	c_Lang193 =	
+	c_Lang194 =	
+	c_Lang195 =	
+	c_Lang196 =	
+	c_Lang197 =	
+	c_Lang198 =	
+	c_Lang199 =	
+	c_Lang200 =	
+	c_Lang201 =	
+	c_Lang202 =	
+	c_Lang203 =	
+	c_Lang204 =	
 		
 ; Other Windows		
 	t_Lang001 =	Esporta in AHK
@@ -825,6 +846,7 @@
 	IfLVColor_TT =	Fare clic per selezionare un colore
 	RefreshIEW_TT =	Aggiorna elenco
 	ActiveObj_TT =	Tenta di connettersi a un oggetto COM attiva
+	TimeoutM_TT =	0 = infinito
 	ExpView_TT =	Editor Avanzato
 	ExpView2_TT =	Editor Avanzato
 	OSPlay_TT =	Play / Pause

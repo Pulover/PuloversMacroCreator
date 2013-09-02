@@ -316,8 +316,8 @@
 	c_Lang078 =	Πηγαίνετε στο Label
 	c_Lang079 =	Επιγραφή
 	c_Lang080 =	Προσθήκη ετικέτας
-	c_Lang081 =	String (InputVar), Αξία
-	c_Lang082 =	Var [φορέα] Value
+	c_Lang081 =	String (InputVar)
+	c_Lang082 =	μεταβλητός
 	c_Lang083 =	Αλλιώς
 	c_Lang084 =	Εκχώρηση Μεταβλητή
 	c_Lang085 =	Περιεχόμενο
@@ -418,6 +418,27 @@
 	c_Lang181 =	
 	c_Lang182 =	
 	c_Lang183 =	
+	c_Lang184 =	
+	c_Lang185 =	
+	c_Lang186 =	
+	c_Lang187 =	
+	c_Lang188 =	
+	c_Lang189 =	
+	c_Lang190 =	
+	c_Lang191 =	
+	c_Lang192 =	
+	c_Lang193 =	
+	c_Lang194 =	
+	c_Lang195 =	
+	c_Lang196 =	
+	c_Lang197 =	
+	c_Lang198 =	
+	c_Lang199 =	
+	c_Lang200 =	
+	c_Lang201 =	
+	c_Lang202 =	
+	c_Lang203 =	
+	c_Lang204 =	
 		
 ; Other Windows		
 	t_Lang001 =	Εξαγωγή σε AHK
@@ -825,6 +846,7 @@
 	IfLVColor_TT =	Κάντε κλικ για να επιλέξετε ένα χρώμα
 	RefreshIEW_TT =	Ανανέωση λίστας
 	ActiveObj_TT =	Προσπαθεί να συνδεθεί με ένα ενεργό αντικείμενο COM
+	TimeoutM_TT =	0 = άπειρο
 	ExpView_TT =	Προηγμένο Επεξεργαστή
 	ExpView2_TT =	Προηγμένο Επεξεργαστή
 	OSPlay_TT =	Αναπαραγωγή / Παύση

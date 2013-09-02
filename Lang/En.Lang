@@ -316,8 +316,8 @@
 	c_Lang078 =	Go to Label
 	c_Lang079 =	Label
 	c_Lang080 =	Add Label
-	c_Lang081 =	String (InputVar), Value
-	c_Lang082 =	Var [operator] Value
+	c_Lang081 =	String (InputVar)
+	c_Lang082 =	Variable
 	c_Lang083 =	Else
 	c_Lang084 =	Assign Variable
 	c_Lang085 =	Content
@@ -418,6 +418,27 @@
 	c_Lang181 =	Minimum
 	c_Lang182 =	Maximum
 	c_Lang183 =	Disable random delays for this command
+	c_Lang184 =	Select from list
+	c_Lang185 =	Buttons
+	c_Lang186 =	First
+	c_Lang187 =	Second
+	c_Lang188 =	Third
+	c_Lang189 =	Title
+	c_Lang190 =	If window active
+	c_Lang191 =	If window not active
+	c_Lang192 =	If window exist
+	c_Lang193 =	If window not exist
+	c_Lang194 =	If file exist
+	c_Lang195 =	If file not exist
+	c_Lang196 =	If clipboard text
+	c_Lang197 =	If loop index
+	c_Lang198 =	If image/pixel found
+	c_Lang199 =	If image/pixel not found
+	c_Lang200 =	If string contains
+	c_Lang201 =	If string not contains
+	c_Lang202 =	If message box
+	c_Lang203 =	Compare variables
+	c_Lang204 =	Evaluate expression
 		
 ; Other Windows		
 	t_Lang001 =	Export to AHK
@@ -825,6 +846,7 @@
 	IfLVColor_TT =	Click to pick a color
 	RefreshIEW_TT =	Refresh List
 	ActiveObj_TT =	Tries to connect to an Active COM Object
+	TimeoutM_TT =	0 = infinite
 	ExpView_TT =	Advanced Editor
 	ExpView2_TT =	Advanced Editor
 	OSPlay_TT =	Play / Pause

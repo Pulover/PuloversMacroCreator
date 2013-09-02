@@ -47,10 +47,12 @@ Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jör
 * Added *Multiple Column* search in *Find/Replace* window.
 * Added *Set key delay* option in *Text* command window.
 * Added *Random delays* and *Disable random delays* options to *Pause* command window.
+* Added more options to *Message* window.
 * Added translations to Malay and Vietnamese.
 * Added *Portable Install* option in installer.
 * Paste command now works on mutiple selections.
 * Main window size, position and columns order are remembered.
+* Removed *MsgBox* command from *Run* command window.
 * Fixed *ErrorLevel* variable results for commands in playback.
 * Fixed automatic comma escaping in *Run* command window.
 * Fixed Media keys not being recorded/captured.

@@ -316,8 +316,8 @@
 	c_Lang078 =	К этикетки
 	c_Lang079 =	Этикетка
 	c_Lang080 =	Добавить ярлык
-	c_Lang081 =	String (InputVar), значение
-	c_Lang082 =	Var [оператор] Значение
+	c_Lang081 =	String (InputVar)
+	c_Lang082 =	переменная
 	c_Lang083 =	Еще
 	c_Lang084 =	Назначить переменную
 	c_Lang085 =	Содержание
@@ -418,6 +418,27 @@
 	c_Lang181 =	
 	c_Lang182 =	
 	c_Lang183 =	
+	c_Lang184 =	
+	c_Lang185 =	
+	c_Lang186 =	
+	c_Lang187 =	
+	c_Lang188 =	
+	c_Lang189 =	
+	c_Lang190 =	
+	c_Lang191 =	
+	c_Lang192 =	
+	c_Lang193 =	
+	c_Lang194 =	
+	c_Lang195 =	
+	c_Lang196 =	
+	c_Lang197 =	
+	c_Lang198 =	
+	c_Lang199 =	
+	c_Lang200 =	
+	c_Lang201 =	
+	c_Lang202 =	
+	c_Lang203 =	
+	c_Lang204 =	
 		
 ; Other Windows		
 	t_Lang001 =	Экспорт в AHK
@@ -825,6 +846,7 @@
 	IfLVColor_TT =	Нажмите, чтобы выбрать цвет
 	RefreshIEW_TT =	Обновить список
 	ActiveObj_TT =	Пытается подключиться к активным объектом COM
+	TimeoutM_TT =	0 = бесконечное
 	ExpView_TT =	Дополнительные Функции
 	ExpView2_TT =	Дополнительные Функции
 	OSPlay_TT =	воспроизведение / пауза

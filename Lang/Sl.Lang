@@ -316,8 +316,8 @@
 	c_Lang078 =	Pojdi na Label
 	c_Lang079 =	Oznaka
 	c_Lang080 =	Dodaj oznako
-	c_Lang081 =	String (InputVar), vrednost
-	c_Lang082 =	Var [operater] Vrednost
+	c_Lang081 =	String (InputVar)
+	c_Lang082 =	spremenljivka
 	c_Lang083 =	Else
 	c_Lang084 =	Določite spremenljivko
 	c_Lang085 =	Vsebina
@@ -418,6 +418,27 @@
 	c_Lang181 =	
 	c_Lang182 =	
 	c_Lang183 =	
+	c_Lang184 =	
+	c_Lang185 =	
+	c_Lang186 =	
+	c_Lang187 =	
+	c_Lang188 =	
+	c_Lang189 =	
+	c_Lang190 =	
+	c_Lang191 =	
+	c_Lang192 =	
+	c_Lang193 =	
+	c_Lang194 =	
+	c_Lang195 =	
+	c_Lang196 =	
+	c_Lang197 =	
+	c_Lang198 =	
+	c_Lang199 =	
+	c_Lang200 =	
+	c_Lang201 =	
+	c_Lang202 =	
+	c_Lang203 =	
+	c_Lang204 =	
 		
 ; Other Windows		
 	t_Lang001 =	Izvoz v AHK
@@ -825,6 +846,7 @@
 	IfLVColor_TT =	Kliknite, da izberete barvo
 	RefreshIEW_TT =	Osveži seznam
 	ActiveObj_TT =	Poskuša povezati z Active COM Object
+	TimeoutM_TT =	0 = neskončno
 	ExpView_TT =	Napredno Editor
 	ExpView2_TT =	Napredno Editor
 	OSPlay_TT =	Predvajanje / premor

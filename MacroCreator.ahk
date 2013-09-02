@@ -1820,7 +1820,7 @@ Gui, 14:Add, Checkbox, -Wrap Checked%Send_Loop% y+5 xs+10 W230 vSend_Loop R1, %t
 Gui, 14:Add, Checkbox, -Wrap Checked%Exe_Exp% yp x+5 W190 vExe_Exp gExe_Exp R1,%t_Lang088% 
 Gui, 14:Add, Button, -Wrap Section Default y+5 xs+10 W75 H23 gExpButton, %w_Lang001%
 Gui, 14:Add, Button, -Wrap ys W75 H23 gExpClose, %c_Lang022%
-Gui, 14:Add, Button, -Wrap ys W75 H23 vShowMore gShowMore, % (ShowExpOpt) ? "<< " w_Lang003 : w_Lang003 " >>"
+Gui, 14:Add, Button, -Wrap ys W75 H23 vShowMore gShowMore, % (ShowExpOpt) ? w_Lang003 " <<" : w_Lang003 ">> "
 Gui, 14:Add, Progress, ys W175 H20 vExpProgress
 ; Context
 Gui, 14:Add, GroupBox, Section y+25 xm W450 H80
@@ -1938,9 +1938,9 @@ Gui, 29:+owner14 +ToolWindow
 Gui, 14:+Disabled
 Gui, 29:Add, TreeView, Checked H500 W300 vIniTV -ReadOnly
 User_Vars.Tree(29)
-Gui, 29:Add, Button, -Wrap Section xs W75 H23 gCheckAll, %t_Lang007%
+Gui, 29:Add, Button, -Wrap Section xs W75 H23 gVarsTreeClose, %c_Lang020%
+Gui, 29:Add, Button, -Wrap yp x+5 W75 H23 gCheckAll, %t_Lang007%
 Gui, 29:Add, Button, -Wrap yp x+5 W75 H23 gUnCheckAll, %t_Lang008%
-Gui, 29:Add, Button, -Wrap yp x+5 W75 H23 gVarsTreeClose, %c_Lang020%
 Gui, 29:Show,, %t_Lang096%
 return
 
@@ -1998,7 +1998,7 @@ return
 
 ShowMore:
 Gui, 14:Show, % (ShowExpOpt := !ShowExpOpt) ? "H695" : "H325", %t_Lang001%
-GuiControl, 14:, ShowMore, % (ShowExpOpt) ? "<< " w_Lang003 : w_Lang003 " >>"
+GuiControl, 14:, ShowMore, % (ShowExpOpt) ? w_Lang003 " <<" : w_Lang003 " >>"
 return
 
 ExpClose:
@@ -4342,18 +4342,19 @@ s_Caller := "Edit"
 KeyWait:
 MsgBox:
 Sleep:
-Gui, 3:+owner1 -MinimizeBox +E0x00000400 +HwndCmdWin
+Gui, 3:+owner1 -MinimizeBox +Delimiter¢ +E0x00000400 +HwndCmdWin
 Gui, 1:+Disabled
-Gui, 3:Add, Tab2, W450 H0 vTabControl AltSubmit, %c_Lang003%|%c_Lang015%|%c_Lang066%
+Gui, 3:Add, Tab2, W450 H0 vTabControl AltSubmit, %c_Lang003%¢%c_Lang015%¢%c_Lang066%
 ; Sleep
-Gui, 3:Add, GroupBox, Section xm ym W450 H235
+Gui, 3:Add, GroupBox, Section xm ym W450 H110
 Gui, 3:Add, Text, ys+15 xs+10 W150, %c_Lang050%:
 Gui, 3:Add, Edit, yp-2 x+0 W170 vDelayC
 Gui, 3:Add, UpDown, vDelayX 0x80 Range0-9999999, 300
-Gui, 3:Add, Radio, -Wrap Checked W170 vMsc R1, %c_Lang018%
+Gui, 3:Add, Radio, -Wrap Checked y+12 W170 vMsc R1, %c_Lang018%
 Gui, 3:Add, Radio, -Wrap W170 vSec R1, %c_Lang019%
 Gui, 3:Add, Radio, -Wrap W170 vMin R1, %c_Lang154%
-Gui, 3:Add, Checkbox, -Wrap y+20 xs+10 W150 vRandom gRandomSleep, %c_Lang180%
+Gui, 3:Add, GroupBox, Section xs y+20 W450 H118
+Gui, 3:Add, Checkbox, -Wrap ys+15 xs+10 W150 vRandom gRandomSleep, %c_Lang180%
 Gui, 3:Add, Text, Section -Wrap yp x+0 W70 R1, %c_Lang181%
 Gui, 3:Add, Edit, yp-2 x+0 W100 R1 vRandMin Disabled
 Gui, 3:Add, UpDown, vRandMinimum 0x80 Range0-100000, 0
@@ -4363,27 +4364,45 @@ Gui, 3:Add, UpDown, vRandMaximum 0x80 Range0-100000, 500
 Gui, 3:Add, Checkbox, -Wrap y+20 xm+10 W400 vNoRandom gNoRandom, %c_Lang183%
 ; MsgBox
 Gui, 3:Tab, 2
-Gui, 3:Add, GroupBox, Section ym xm W450 H235
-Gui, 3:Add, Text, -Wrap Section ys+15 xs+10 W260 R1, %c_Lang051%:
-Gui, 3:Add, Edit, vMsgPt W430 r6
-Gui, 3:Add, Text, W260, %c_Lang025%
-Gui, 3:Add, Text, yp+30 W210, %c_Lang147%:
-Gui, 3:Add, Radio, -Wrap Checked W80 vNoI R1, %c_Lang148%
-Gui, 3:Add, Radio, -Wrap x+5 W80 vErr R1, %c_Lang149%
-Gui, 3:Add, Radio, -Wrap  x+5 W80 vQue R1, %c_Lang150%
-Gui, 3:Add, Radio, -Wrap xs W80 vExc R1, %c_Lang151%
-Gui, 3:Add, Radio, -Wrap x+5 W80 vInf R1, %c_Lang152%
-Gui, 3:Add, Checkbox, -Wrap W125 xs vAot R1, %c_Lang153%
-Gui, 3:Add, Checkbox, -Wrap Checked W125 yp xp+130 vCancelB R1, %c_Lang021%
+Gui, 3:Add, GroupBox, Section ym xm W450 H130
+Gui, 3:Add, Text, -Wrap ys+10 xs+10 W260 R1, %c_Lang051%:
+Gui, 3:Add, Edit, vMsgPt W430 r5
+Gui, 3:Add, Text, -Wrap W240 r1, %c_Lang025%
+Gui, 3:Add, Text, -Wrap yp x+0 W135 r1, %c_Lang177% (%c_Lang019%):
+Gui, 3:Add, Edit, yp-3 x+5 W50 vTimeoutM
+Gui, 3:Add, UpDown, vTimeoutMsg 0x80 Range0-2147483, 0
+Gui, 3:Add, Groupbox, Section y+16 xs W220 H98, %w_Lang003%:
+Gui, 3:Add, Text, -Wrap ys+20 xs+10 W50 r1, %c_Lang189%
+Gui, 3:Add, Edit, -Wrap yp x+10 W140 r1 vTitle
+Gui, 3:Add, Text, -Wrap y+10 xs+10 W75 r1, %c_Lang147%
+Gui, 3:Add, DDL, yp-2 x+10 W115 AltSubmit vIcon, %c_Lang148%¢¢%c_Lang149%¢%c_Lang150%¢%c_Lang151%¢%c_Lang152%
+Gui, 3:Add, Checkbox, -Wrap W200 y+5 xs+10 vAot R1, %c_Lang153%
+Gui, 3:Add, Groupbox, Section ys x+20 W220 H98, %c_Lang185%:
+Gui, 3:Add, DDL, ys+20 xs+10 W200 AltSubmit vButtons,
+(Join¢
+%c_Lang170%¢
+%c_Lang170%/%c_Lang171%
+%c_Lang172%/%c_Lang173%/%c_Lang174%
+%c_Lang168%/%c_Lang169%/%c_Lang171%
+%c_Lang168%/%c_Lang169%
+%c_Lang174%/%c_Lang171%
+%c_Lang171%/%c_Lang176%/%c_Lang175%
+)
+Gui, 3:Add, Text, y+10 xs+10 W75, %t_Lang063%:
+Gui, 3:Add, DDL, yp-2 x+10 W115 AltSubmit vDefault, %c_Lang186%¢¢%c_Lang187%¢%c_Lang188%
+Gui, 3:Add, CheckBox, -Wrap y+5 xs+10 W200 vAddIf, %c_Lang162%
 ; KeyWait
 Gui, 3:Tab, 3
-Gui, 3:Add, GroupBox, Section xm ym W450 H235
-Gui, 3:Add, Text, -Wrap Section ys+15 xs+10 W200 R1, %c_Lang052%:
+Gui, 3:Add, GroupBox, Section xm ym W450 H130
+Gui, 3:Add, Text, -Wrap ys+15 xs+10 W200 R1, %c_Lang052%:
 Gui, 3:Add, Hotkey, vWaitKeys gWaitKeys W260
-Gui, 3:Add, Text, Section xs vTimoutT, %c_Lang053%:
-Gui, 3:Add, Edit, ys-2 xs+90 W170 vTimeoutC
+Gui, 3:Add, Checkbox, y+20 xs+10 -Wrap W125 vWaitKeyList gWaitKeyList R1, %c_Lang184%:
+Gui, 3:Add, Combobox, W260 vKeyW Disabled, %KeybdList%
+Gui, 3:Add, GroupBox, Section xm y+22 W450 H98
+Gui, 3:Add, Text, ys+20 xs+10 vTimoutT W85, %c_Lang053%:
+Gui, 3:Add, Edit, Section yp-2 x+5 W170 vTimeoutC
 Gui, 3:Add, UpDown, vTimeout 0x80 Range0-999999999, 0
-Gui, 3:Add, Text, xs+90, %c_Lang054%
+Gui, 3:Add, Text, y+10 xs, %c_Lang054%
 Gui, 3:Tab
 Gui, 3:Add, Button, -Wrap Section Default xm W75 H23 gPauseOK, %c_Lang020%
 Gui, 3:Add, Button, -Wrap ys W75 H23 gPauseCancel, %c_Lang021%
@@ -4428,27 +4447,31 @@ If (s_Caller = "Edit")
 		StringReplace, Details, Details, ```,, `,, All
 		GuiControl, 3:, CancelB, 0
 		GuiControl, 3:, MsgPt, %Details%
-		GoSub, MP
+		GuiControl, 3:, Title, %Window%
 		GuiControl, 3:, DelayX, 0
-		MsgNum := Target
-		If (MsgNum > 64)
+		If InStr(DelayX, "%")
+			GuiControl, 3:, TimeoutM, %DelayX%
+		Else
+			GuiControl, 3:, TimeoutMsg, %DelayX%
+		InStyles := "|"
+		For i, v in MsgBoxStyles
 		{
-			GuiControl, 3:, Aot, 1
-			MsgNum := MsgNum - 262144
+			If (Target & v)
+				InStyles .= v "|", Target -= v
 		}
-		If (Mod(MsgNum, 2))
+		Loop, 6
 		{
-			GuiControl, 3:, CancelB, 1
-			MsgNum := MsgNum - 1
+			ic := (7-A_Index)
+			If ((Target & ic) = ic)
+			{
+				MsgButton := ic, Target -= ic
+				break
+			}
 		}
-		If MsgNum = 16
-			GuiControl, 3:, Err, 1
-		If MsgNum = 32
-			GuiControl, 3:, Que, 1
-		If MsgNum = 48
-			GuiControl, 3:, Exc, 1
-		If MsgNum = 64
-			GuiControl, 3:, Inf, 1
+		GuiControl, 3:, Aot, % InStr(InStyles, "|" 262144 "|") ? 1 : 0
+		GuiControl, 3:Choose, Default, % (InStr(InStyles, "|" 256 "|")) ? 2 : (InStr(InStyles, "|" 512 "|")) ? 3 : 1
+		GuiControl, 3:Choose, Icon, % (Target = 16) ? 2 : (Target = 32) ? 3	: (Target = 48) ? 4 : (Target = 64) ? 5 : 1
+		GuiControl, 3:Choose, Buttons, % MsgButton + 1
 	}
 	Else If (Type = cType20)
 	{
@@ -4460,6 +4483,8 @@ If (s_Caller = "Edit")
 			GuiControl, 3:, Timeout, %DelayX%
 	}
 	GuiControl, 3:Enable, PauseApply
+	GuiControl, 3:, AddIf, 0
+	GuiControl, 3:Disable, AddIf
 }
 If InStr(A_ThisLabel, "MsgBox")
 	GuiControl, 3:Choose, TabControl, 2
@@ -4469,36 +4494,6 @@ SBShowTip(LTrim(A_ThisLabel, "Edit"))
 Gui, 3:Show,, % InStr(A_ThisLabel, "Sleep") ? c_Lang003 : InStr(A_ThisLabel, "MsgBox") ? c_Lang015 : c_Lang066
 Input
 Tooltip
-return
-
-MP:
-Gui, Submit, NoHide
-GuiControl, Enable%MP%, MsgPt
-GuiControl, Enable%MP%, NoI
-GuiControl, Enable%MP%, Err
-GuiControl, Enable%MP%, Que
-GuiControl, Enable%MP%, Exc
-GuiControl, Enable%MP%, Inf
-GuiControl, Enable%MP%, Aot
-GuiControl, Enable%MP%, CancelB
-GuiControl, Disable%MP%, DelayC
-GuiControl, Disable%MP%, DelayX
-GuiControl, Disable%MP%, Msc
-GuiControl, Disable%MP%, Sec
-GuiControl, Disable%MP%, KW
-return
-
-KW:
-Gui, Submit, NoHide
-GuiControl, 3:Disable%KW%, DelayC
-GuiControl, 3:Disable%KW%, EdRept
-GuiControl, 3:Disable%KW%, DelayX
-GuiControl, 3:Disable%KW%, Msc
-GuiControl, 3:Disable%KW%, Sec
-GuiControl, 3:Enable%KW%, WaitKeys
-GuiControl, 3:Enable%KW%, TimeoutC
-GuiControl, 3:Enable%KW%, Timeout
-GuiControl, 3:Disable%KW%, MP
 return
 
 WaitKeys:
@@ -4532,6 +4527,12 @@ Gui, 3:Submit, NoHide
 GuiControl, 3:Disable%NoRandom%, Random
 return
 
+WaitKeyList:
+Gui, 3:Submit, NoHide
+GuiControl, 3:Enable%WaitKeyList%, KeyW
+GuiControl, 3:Disable%WaitKeyList%, WaitKeys
+return
+
 PauseApply:
 PauseOK:
 Gui, 3:Submit, NoHide
@@ -4545,32 +4546,25 @@ If TabControl = 2
 {
 	StringReplace, MsgPT, MsgPT, `n, ``n, All
 	StringReplace, MsgPT, MsgPT, `,, ```,, All
-	Type := cType6, Details := MsgPT, DelayX := 0
-	If NoI = 1
-		Target := 0
-	If Err = 1
-		Target := 16
-	If Que = 1
-		Target := 32
-	If Exc = 1
-		Target := 48
-	If Inf = 1
-		Target := 64
-	If Aot = 1
-		Target += 262144
-	If CancelB = 1
-		Target += 1
+	Type := cType6, Details := MsgPT, DelayX := (InStr(TimeoutM, "%") ? TimeoutM : TimeoutMsg)
+,	Target := 0
+,	Target += Aot ? 262144 : 0
+,	Target += (Default-1) * 256
+,	Target += (Icon-1) * 16
+,	Target += (Buttons-1)
 }
 Else If TabControl = 3
 {
-	If (WaitKeys = "")
+	If ((!WaitKeyList) && (WaitKeys = ""))
 		return
-	Type := cType20, tKey := WaitKeys
-,	Details := tKey, Target := ""
+	If ((WaitKeyList) && (KeyW = ""))
+		return
+	Type := cType20, tKey := (WaitKeyList) ? KeyW : WaitKeys
+,	Details := tKey, Target := "", Title := ""
 ,	DelayX := InStr(TimeoutC, "%") ? TimeoutC : Timeout
 }
 Else If TabControl = 1
-	Type := cType5, Details := (NoRandom) ? "NoRandom" : ((Random) ? "Random" : "")
+	Type := cType5, Title := "", Details := (NoRandom) ? "NoRandom" : ((Random) ? "Random" : "")
 	, Target := (Random) ? (InStr(RandMax, "%") ? RandMax : RandMaximum) : ""
 If (A_ThisLabel <> "PauseApply")
 {
@@ -4580,10 +4574,10 @@ If (A_ThisLabel <> "PauseApply")
 Gui, chMacro:Default
 RowSelection := LV_GetCount("Selected")
 If (s_Caller = "Edit")
-	LV_Modify(RowNumber, "Col3", Details, TimesX, DelayX, Type, Target)
+	LV_Modify(RowNumber, "Col3", Details, TimesX, DelayX, Type, Target, Title)
 Else If RowSelection = 0
 {
-	LV_Add("Check", ListCount%A_List%+1, "[Pause]", Details, 1, DelayX, Type, Target)
+	LV_Add("Check", ListCount%A_List%+1, "[Pause]", Details, 1, DelayX, Type, Target, Title)
 ,	LV_Modify(ListCount%A_List%+1, "Vis")
 }
 Else
@@ -4592,12 +4586,42 @@ Else
 	Loop, %RowSelection%
 	{
 		RowNumber := LV_GetNext(RowNumber)
-	,	LV_Insert(RowNumber, "Check", RowNumber, "[Pause]", Details, 1, DelayX, Type, Target)
+	,	LV_Insert(RowNumber, "Check", RowNumber, "[Pause]", Details, 1, DelayX, Type, Target, Title)
 	,	RowNumber++
+		If (AddIf = 1)
+			break
 	}
 }
 GoSub, b_Start
 GoSub, RowCheck
+If (AddIf = 1)
+{
+	IfMsg := (Buttons < 3) ? IfMsg3 : (Buttons = 3) ? IfMsg5
+			: ((Buttons > 3) && (Buttons < 6)) ? IfMsg1 : (Buttons > 5) ? IfMsg4
+	If RowSelection = 0
+	{
+		LV_Add("Check", ListCount%A_List%+1, If13, IfMsg, 1, 0, cType17)
+		LV_Add("Check", ListCount%A_List%+2, "[End If]", "EndIf", 1, 0, cType17)
+		LV_Modify(ListCount%A_List%+2, "Vis")
+	}
+	Else
+	{
+		LV_Insert(LV_GetNext(), "Check", "", If13, IfMsg, 1, 0, cType17)
+		RowNumber := 0, LastRow := 0
+		Loop
+		{
+			RowNumber := LV_GetNext(RowNumber)
+			If !RowNumber
+			{
+				LV_Insert(LastRow+1, "Check",LastRow+1, "[End If]", "EndIf", 1, 0, cType17)
+				break
+			}
+			LastRow := LV_GetNext(LastRow)
+		}
+	}
+	GoSub, b_Start
+	GoSub, RowCheck
+}
 If (A_ThisLabel = "PauseApply")
 	Gui, 3:Default
 Else
@@ -5380,12 +5404,12 @@ Gui, 19:Add, Text, y+10 xs+10 W180 H25, %c_Lang067%:
 Gui, 19:Add, DDL, yp-2 xs+185 W80 vIfFound gIfFound, Continue||Break|Stop|Prompt|Move|Left Click|Right Click|Middle Click
 Gui, 19:Add, Text, y+10 xs+10 W180 H25, %c_Lang068%:
 Gui, 19:Add, DDL, yp-2 xs+185 W80 vIfNotFound, Continue||Break|Stop|Prompt
-Gui, 19:Add, CheckBox, Checked -Wrap y+5 xs+10 W180 H25 vAddIf, %c_Lang162%
-Gui, 19:Add, Text, -Wrap y+0 xs+10 W250 r1 cBlue, %c_Lang069%
+Gui, 19:Add, CheckBox, Checked -Wrap y+5 xs+10 W180 vAddIf, %c_Lang162%
+Gui, 19:Add, Text, -Wrap y+10 xs+10 W250 r1 cBlue, %c_Lang069%
 ; Preview
-Gui, 19:Add, Groupbox, Section ys xs+280 W280 H240, %c_Lang072%:
-Gui, 19:Add, Pic, ys+20 xs+10 W260 H200 0x100 vPicPrev gPicOpen
-Gui, 19:Add, Progress, ys+20 xs+10 W260 H200 Disabled Hidden vColorPrev
+Gui, 19:Add, Groupbox, Section ys xs+280 W275 H240, %c_Lang072%:
+Gui, 19:Add, Pic, ys+20 xs+10 W255 H200 0x100 vPicPrev gPicOpen
+Gui, 19:Add, Progress, ys+20 xs+10 W255 H200 Disabled Hidden vColorPrev
 Gui, 19:Add, Text, y+0 xs+10 W150 vImgSize
 ; Options
 Gui, 19:Add, GroupBox, Section y+10 xm W275 H115, %c_Lang159%:
@@ -5611,7 +5635,7 @@ If InStr(file, "%")
 Gui, 9:Add, Pic, vLoadedPic, %file% 
 GuiControlGet, LoadedPic, 9:Pos
 Gui, 9:Destroy
-Width = 260
+Width = 255
 Height = 200
 PropH := LoadedPicH * Width // LoadedPicW, PropW := LoadedPicW * Height // LoadedPicH
 If ((LoadedPicW <= Width) && (LoadedPicH <= Height))
@@ -5962,11 +5986,34 @@ Gui, 1:+Disabled
 Gui, 21:Add, Tab2, W450 H0 vTabControl AltSubmit, %c_Lang009%$%c_Lang084%$%c_Lang011%
 ; Statements
 Gui, 21:Add, GroupBox, Section xm ym W450 H240
-Gui, 21:Add, DDL, ys+15 xs+10 W200 vStatement gStatement, %IfList%
-Gui, 21:Add, Button, -Wrap yp-1 x+15 W30 H23 vIfGet gIfGet, ...
-Gui, 21:Add, DDL, yp+1 x+0 W75 vIdent, Title$$Class$Process$ID
-Gui, 21:Add, Text, y+5 xs+10 W430 vFormatTip
-Gui, 21:Add, Edit, W430 H152 -vScroll vTestVar
+Gui, 21:Add, DDL, ys+15 xs+10 W190 vStatement gStatement AltSubmit,
+(Join$
+%c_Lang190%$
+%c_Lang191%
+%c_Lang192%
+%c_Lang193%
+%c_Lang194%
+%c_Lang195%
+%c_Lang196%
+%c_Lang197%
+%c_Lang198%
+%c_Lang199%
+%c_Lang200%
+%c_Lang201%
+%c_Lang202%
+%c_Lang203%
+%c_Lang204%
+)
+Gui, 21:Add, Text, yp x+5 h25 0x11
+Gui, 21:Add, DDL, yp x+0 W105 vIfMsgB AltSubmit Disabled, %c_Lang168%$$%c_Lang169%$%c_Lang170%$%c_Lang171%$%c_Lang172%$%c_Lang173%$%c_Lang174%$%c_Lang175%$%c_Lang176%$%c_Lang177%
+Gui, 21:Add, Text, yp x+5 h25 0x11
+Gui, 21:Add, DDL, yp x+0 W75 vIdent, Title$$Class$Process$ID
+Gui, 21:Add, Button, -Wrap yp-1 x+5 W30 H23 vIfGet gIfGet, ...
+Gui, 21:Add, Text, y+5 xs+10 W200 vFormatTip
+Gui, 21:Add, Edit, y+5 xs+10 W430 R4 -vScroll vTestVar
+Gui, 21:Add, Text, y+11 xs+10 W135 vFormatTip2
+Gui, 21:Add, DDL, yp-5 x+0 W55 vIfOper Disabled, =$$==$<>$!=$>$<$>=$<=
+Gui, 21:Add, Edit, y+5 xs+10 W430 R4 -vScroll vTestVar2 Disabled
 Gui, 21:Add, Text, W430 r1, %c_Lang025%
 Gui, 21:Add, Groupbox, Section xs y+15 W450 H50
 Gui, 21:Add, Text, -Wrap xs+10 ys+15 W75 H23, %c_Lang123%:
@@ -6022,8 +6069,34 @@ If (s_Caller = "Edit")
 	{
 		StringReplace, Details, Details, ``n, `n, All
 		EscCom("Details|TimesX|DelayX|Target|Window", 1)
-		GuiControl, 21:ChooseString, Statement, %Action%
-		GuiControl, 21:, TestVar, %Details%
+		Loop, 15
+		{
+			If (IfList%A_Index% = Action)
+				GuiControl, 21:Choose, Statement, %A_Index%
+		}
+		If InStr(Statement, "String")
+		{
+			RegExMatch(Details, "^(.*?)(,)(.*)", aMatch)
+			GuiControl, 21:, TestVar, % Trim(aMatch1)
+			GuiControl, 21:, TestVar2, % Trim(aMatch3)
+		}
+		Else If InStr(Action, "Compare")
+		{
+			AssignReplace(Details)
+			GuiControl, 21:, TestVar, %VarName%
+			GuiControl, 21:, TestVar2, %VarValue%
+			GuiControl, 21:ChooseString, IfOper, %Oper%
+		}
+		Else If (Action = "If Message Box")
+		{
+			Loop, %IfMsg0%
+			{
+				If (IfMsg%A_Index% = Details)
+					GuiControl, 21:Choose, IfMsgB, %A_Index%
+			}
+		}
+		Else
+			GuiControl, 21:, TestVar, %Details%
 		GoSub, Statement
 		If InStr(Action, "Image")
 			GuiControl, 21:Disable, TestVar
@@ -6110,7 +6183,8 @@ IfApply:
 IfOK:
 Gui, 21:+OwnDialogs
 Gui, 21:Submit, NoHide
-If InStr(Statement, "Image")
+Statement := IfList%Statement%
+If (InStr(Statement, "Image") || (Statement = "If Message Box"))
 	TestVar =
 Else
 {
@@ -6119,32 +6193,25 @@ Else
 }
 If InStr(Statement, "Compare")
 {
-	AssignReplace(TestVar)
 	Try
-		z_Check := VarSetCapacity(%VarName%)
+		z_Check := VarSetCapacity(%TestVar%)
 	Catch
 	{
 		MsgBox, 16, %d_Lang007%, %d_Lang041%
 		return
 	}
-	If Oper not in =,==,<>,!=,>,<,>=,<=
-	{
-		MsgBox, 16, %d_Lang007%, %d_Lang042%
-		return
-	}
+	TestVar := TestVar " " IfOper " " TestVar2
 }
 Else If InStr(Statement, "String")
 {
-	If !RegExMatch(TestVar, "(.+),\s.+", tMatch)
-		return
-	VarName := Trim(tMatch1)
 	Try
-		z_Check := VarSetCapacity(%VarName%)
+		z_Check := VarSetCapacity(%TestVar%)
 	Catch
 	{
 		MsgBox, 16, %d_Lang007%, %d_Lang041%
 		return
 	}
+	TestVar := TestVar ", " TestVar2
 }
 Else If (Statement = "Evaluate Expression")
 {
@@ -6156,6 +6223,8 @@ Else If (Statement = "Evaluate Expression")
 		return
 	}
 }
+Else If (Statement = "If Message Box")
+	TestVar := IfMsg%IfMsgB%
 EscCom("TestVar")
 If (A_ThisLabel <> "IfApply")
 {
@@ -6411,12 +6480,9 @@ Else
 return
 
 Statement:
-GuiControl, 21:+AltSubmit, Statement
 Gui, 21:Submit, NoHide
 SBShowTip(Trim(c_If%Statement%, "=0, "))
-GuiControl, 21:-AltSubmit, Statement
-Gui, 21:Submit, NoHide
-
+Statement := IfList%Statement%
 If InStr(Statement, "Window")
 	GuiControl, 21:Enable, Ident
 If !InStr(Statement, "Window")
@@ -6430,15 +6496,37 @@ If InStr(Statement, "Image")
 Else
 	GuiControl, 21:Enable, TestVar
 If InStr(Statement, "String")
+{
 	GuiControl, 21:, FormatTip, %c_Lang081%
+	GuiControl, 21:, FormatTip2, %c_Lang056%
+	GuiControl, 21:Enable, TestVar2
+}
 Else If InStr(Statement, "Compare")
+{
 	GuiControl, 21:, FormatTip, %c_Lang082%
+	GuiControl, 21:, FormatTip2, %c_Lang056%
+	GuiControl, 21:Enable, TestVar2
+	GuiControl, 21:Enable, IfOper
+}
 Else
+{
 	GuiControl, 21:, FormatTip
+	GuiControl, 21:, FormatTip2
+	GuiControl, 21:Disable, TestVar2
+	GuiControl, 21:Disable, IfOper
+}
+If (Statement = If13)
+{
+	GuiControl, 21:Enable, IfMsgB
+	GuiControl, 21:Disable, TestVar
+}
+Else
+	GuiControl, 21:Disable, IfMsgB
 return
 
 IfGet:
 Gui, 21:Submit, NoHide
+Statement := IfList%Statement%
 If InStr(Statement, "Window")
 {
 	Label = IfGet
@@ -9738,25 +9826,9 @@ pb_MsgBox:
 	StringReplace, Step, Step, ```,, `,, All
 	Try Menu, Tray, Icon, %ResDllPath%, 78
 	ChangeProgBarColor("Blue", "OSCProg", 28)
-	If (Action = "MsgBox")
-	{
-		MsgBox, % Par1, %Par2%, %Par3%, %Par4%
-		Try Menu, Tray, Icon, %ResDllPath%, 47
-		ChangeProgBarColor("20D000", "OSCProg", 28)
-	}
-	Else
-	{
-		MsgBox, % Target, %d_Lang023%, %Step%
-		Try Menu, Tray, Icon, %ResDllPath%, 47
-		ChangeProgBarColor("20D000", "OSCProg", 28)
-		IfMsgBox, OK
-			return
-		IfMsgBox, Cancel
-		{
-			StopIt := 1
-			return
-		}
-	}
+	MsgBox, % Target, %Window%, %Step%, %DelayX%
+	Try Menu, Tray, Icon, %ResDllPath%, 47
+	ChangeProgBarColor("20D000", "OSCProg", 28)
 return
 pb_SendRaw:
 	SendRaw, %Step%

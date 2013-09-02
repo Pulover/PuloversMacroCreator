@@ -316,8 +316,8 @@
 	c_Lang078 =	라벨로 이동
 	c_Lang079 =	상표
 	c_Lang080 =	라벨 추가
-	c_Lang081 =	문자열(InputVar) 값
-	c_Lang082 =	VAR [연산자] 값
+	c_Lang081 =	문자열(InputVar)
+	c_Lang082 =	변하기 쉬운
 	c_Lang083 =	그렇지 않으면
 	c_Lang084 =	변수를 할당
 	c_Lang085 =	내용
@@ -418,6 +418,27 @@
 	c_Lang181 =	
 	c_Lang182 =	
 	c_Lang183 =	
+	c_Lang184 =	
+	c_Lang185 =	
+	c_Lang186 =	
+	c_Lang187 =	
+	c_Lang188 =	
+	c_Lang189 =	
+	c_Lang190 =	
+	c_Lang191 =	
+	c_Lang192 =	
+	c_Lang193 =	
+	c_Lang194 =	
+	c_Lang195 =	
+	c_Lang196 =	
+	c_Lang197 =	
+	c_Lang198 =	
+	c_Lang199 =	
+	c_Lang200 =	
+	c_Lang201 =	
+	c_Lang202 =	
+	c_Lang203 =	
+	c_Lang204 =	
 		
 ; Other Windows		
 	t_Lang001 =	AHK로 내보내기
@@ -825,6 +846,7 @@
 	IfLVColor_TT =	색상을 선택하려면 클릭하십시오
 	RefreshIEW_TT =	새로 고침 목록
 	ActiveObj_TT =	활성 COM 객체에 연결하려고
+	TimeoutM_TT =	0 = 무한
 	ExpView_TT =	고급 편집기
 	ExpView2_TT =	고급 편집기
 	OSPlay_TT =	재생 / 일시 중지

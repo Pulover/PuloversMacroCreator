@@ -316,8 +316,8 @@
 	c_Lang078 =	Gå til etikett
 	c_Lang079 =	Etiketten
 	c_Lang080 =	Legg Produsent
-	c_Lang081 =	String (InputVar), Verdi
-	c_Lang082 =	Var [operatør] Verdi
+	c_Lang081 =	String (InputVar)
+	c_Lang082 =	variabel
 	c_Lang083 =	Else
 	c_Lang084 =	Tildele variabel
 	c_Lang085 =	Innhold
@@ -418,6 +418,27 @@
 	c_Lang181 =	
 	c_Lang182 =	
 	c_Lang183 =	
+	c_Lang184 =	
+	c_Lang185 =	
+	c_Lang186 =	
+	c_Lang187 =	
+	c_Lang188 =	
+	c_Lang189 =	
+	c_Lang190 =	
+	c_Lang191 =	
+	c_Lang192 =	
+	c_Lang193 =	
+	c_Lang194 =	
+	c_Lang195 =	
+	c_Lang196 =	
+	c_Lang197 =	
+	c_Lang198 =	
+	c_Lang199 =	
+	c_Lang200 =	
+	c_Lang201 =	
+	c_Lang202 =	
+	c_Lang203 =	
+	c_Lang204 =	
 		
 ; Other Windows		
 	t_Lang001 =	Eksportere til AHK
@@ -825,6 +846,7 @@
 	IfLVColor_TT =	Klikk for å velge en farge
 	RefreshIEW_TT =	Oppdater liste
 	ActiveObj_TT =	Forsøker å koble til en aktiv COM objekt
+	TimeoutM_TT =	0 = uendelig
 	ExpView_TT =	Avansert Redigeringsprogram
 	ExpView2_TT =	Avansert Redigeringsprogram
 	OSPlay_TT =	Spill av / Pause

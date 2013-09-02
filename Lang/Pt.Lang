@@ -316,8 +316,8 @@
 	c_Lang078 =	Pular para Rótulo
 	c_Lang079 =	Rótulo
 	c_Lang080 =	Adicionar Rótulo
-	c_Lang081 =	Texto (InputVar), Valor
-	c_Lang082 =	Var [operador] Valor
+	c_Lang081 =	Texto (InputVar)
+	c_Lang082 =	Variável
 	c_Lang083 =	Se Não
 	c_Lang084 =	Associar Variável
 	c_Lang085 =	Conteúdo
@@ -411,13 +411,34 @@
 	c_Lang174 =	Tentar
 	c_Lang175 =	Continuar
 	c_Lang176 =	Tentar Novamente
-	c_Lang177 =	Tempo Esgotado
+	c_Lang177 =	Tempo Limite
 	c_Lang178 =	Ajustar intervalo das teclas
 	c_Lang179 =	Intervalo das teclas
 	c_Lang180 =	Intervalo aleatório
 	c_Lang181 =	Mínimo
 	c_Lang182 =	Máximo
 	c_Lang183 =	Desabilitar intervalos aleatórios para este comando
+	c_Lang184 =	Selecionar da lista
+	c_Lang185 =	Botões
+	c_Lang186 =	Primeiro
+	c_Lang187 =	Segundo
+	c_Lang188 =	Terceiro
+	c_Lang189 =	Título
+	c_Lang190 =	Se janela ativa
+	c_Lang191 =	Se janela inativa
+	c_Lang192 =	Se janela existe
+	c_Lang193 =	Se janela não existe
+	c_Lang194 =	Se arquivo existe
+	c_Lang195 =	Se arquivo não existe
+	c_Lang196 =	Se o texto da área de transferência
+	c_Lang197 =	Se o índice do loop
+	c_Lang198 =	Se imagem/pixel encontrado
+	c_Lang199 =	Se imagem/pixel não encontrado
+	c_Lang200 =	Se texto contém
+	c_Lang201 =	Se texto não contém
+	c_Lang202 =	Se mensagem
+	c_Lang203 =	Comparar variáveis
+	c_Lang204 =	Avaliar expressão
 		
 ; Other Windows		
 	t_Lang001 =	Exportar para AHK
@@ -825,6 +846,7 @@
 	IfLVColor_TT =	Clique para selecionar uma cor
 	RefreshIEW_TT =	Atualizar Lista
 	ActiveObj_TT =	Tenta conectar-se a um Objeto COM Ativo
+	TimeoutM_TT =	0 = infinito
 	ExpView_TT =	Editor Avançado
 	ExpView2_TT =	Editor Avançado
 	OSPlay_TT =	Reproduzir / Pausar

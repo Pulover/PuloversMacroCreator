@@ -316,8 +316,8 @@
 	c_Lang078 =	Ga naar Label
 	c_Lang079 =	Label
 	c_Lang080 =	Label toevoegen
-	c_Lang081 =	String (InputVar), Value
-	c_Lang082 =	Var [operator] Waarde
+	c_Lang081 =	String (InputVar)
+	c_Lang082 =	veranderlijk
 	c_Lang083 =	Anders
 	c_Lang084 =	Wijs Variabele
 	c_Lang085 =	Inhoud
@@ -418,6 +418,27 @@
 	c_Lang181 =	
 	c_Lang182 =	
 	c_Lang183 =	
+	c_Lang184 =	
+	c_Lang185 =	
+	c_Lang186 =	
+	c_Lang187 =	
+	c_Lang188 =	
+	c_Lang189 =	
+	c_Lang190 =	
+	c_Lang191 =	
+	c_Lang192 =	
+	c_Lang193 =	
+	c_Lang194 =	
+	c_Lang195 =	
+	c_Lang196 =	
+	c_Lang197 =	
+	c_Lang198 =	
+	c_Lang199 =	
+	c_Lang200 =	
+	c_Lang201 =	
+	c_Lang202 =	
+	c_Lang203 =	
+	c_Lang204 =	
 		
 ; Other Windows		
 	t_Lang001 =	Exporteren naar AHK
@@ -825,6 +846,7 @@
 	IfLVColor_TT =	Klik hier om een ​​kleur te kiezen
 	RefreshIEW_TT =	Lijst vernieuwen
 	ActiveObj_TT =	Verbinding probeert te maken met een Active COM-object
+	TimeoutM_TT =	0 = oneindig
 	ExpView_TT =	Geavanceerde Editor
 	ExpView2_TT =	Geavanceerde Editor
 	OSPlay_TT =	play / pause

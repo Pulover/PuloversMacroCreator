@@ -316,8 +316,8 @@
 	c_Lang078 =	跳转到标签
 	c_Lang079 =	标签
 	c_Lang080 =	添加标签
-	c_Lang081 =	字符串（InputVar），值
-	c_Lang082 =	无功[操作]值
+	c_Lang081 =	字符串（InputVar）
+	c_Lang082 =	变量
 	c_Lang083 =	其他
 	c_Lang084 =	变量赋值
 	c_Lang085 =	内容
@@ -418,6 +418,27 @@
 	c_Lang181 =	
 	c_Lang182 =	
 	c_Lang183 =	
+	c_Lang184 =	
+	c_Lang185 =	
+	c_Lang186 =	
+	c_Lang187 =	
+	c_Lang188 =	
+	c_Lang189 =	
+	c_Lang190 =	
+	c_Lang191 =	
+	c_Lang192 =	
+	c_Lang193 =	
+	c_Lang194 =	
+	c_Lang195 =	
+	c_Lang196 =	
+	c_Lang197 =	
+	c_Lang198 =	
+	c_Lang199 =	
+	c_Lang200 =	
+	c_Lang201 =	
+	c_Lang202 =	
+	c_Lang203 =	
+	c_Lang204 =	
 		
 ; Other Windows		
 	t_Lang001 =	导出到华民航空
@@ -825,6 +846,7 @@
 	IfLVColor_TT =	单击以选择一种颜色
 	RefreshIEW_TT =	刷新列表
 	ActiveObj_TT =	尝试连接到Active COM对象
+	TimeoutM_TT =	0 =无限
 	ExpView_TT =	高级编辑
 	ExpView2_TT =	高级编辑
 	OSPlay_TT =	播放/暂停
