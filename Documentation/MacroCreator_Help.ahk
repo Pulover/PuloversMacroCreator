@@ -134,6 +134,7 @@
 	Parameters:
 		Plain Text (Raw) - Uses *SendRaw*. The SendRaw command interprets all characters literally rather than translating {Enter} to an ENTER keystroke, ^c to Control-C, etc.
 		Text with commands - Uses *SendInput*. When not in raw mode, the following characters are treated as modifiers (these modifiers affect only the very next key): !, +, ^, #.
+		Set key delay - Sets the delay that will occur after each keystroke sent in *Text with commands* mode.
 		Paste from Clipboard - Temporarily uses Clipboard to send the text. When the operation is completed, the script restores the original clipboard contents.
 		Paste on Control - Uses *Control, EditPaste*. Pastes String at the caret/insert position in an Edit control (this does not affect the contents of the clipboard).
 		SetText - Uses *ControlSetText*. Changes the text of a control.

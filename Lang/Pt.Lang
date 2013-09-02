@@ -412,8 +412,12 @@
 	c_Lang175 =	Continuar
 	c_Lang176 =	Tentar Novamente
 	c_Lang177 =	Tempo Esgotado
-		
-		
+	c_Lang178 =	Ajustar intervalo das teclas
+	c_Lang179 =	Intervalo das teclas
+	c_Lang180 =	Intervalo aleatório
+	c_Lang181 =	Mínimo
+	c_Lang182 =	Máximo
+	c_Lang183 =	Desabilitar intervalos aleatórios para este comando
 		
 ; Other Windows		
 	t_Lang001 =	Exportar para AHK
@@ -559,6 +563,7 @@
 	t_Lang141 =	Todas as Colunas
 	t_Lang142 =	Remover Tema das Barras de Ferramentas (requer reinicialização)
 	t_Lang143 =	Auto Ocultar Barra de Controles
+	t_Lang144 =	Clique e arraste para alterar a ordem. Dois clickques para editar.
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Abrir

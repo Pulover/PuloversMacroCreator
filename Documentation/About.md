@@ -45,6 +45,8 @@ Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jör
 * Added *Edit Script* button in *Preview* window.
 * Added individual *Pause* hotkey.
 * Added *Multiple Column* search in *Find/Replace* window.
+* Added *Set key delay* option in *Text* command window.
+* Added *Random delays* and *Disable random delays* options to *Pause* command window.
 * Added translations to Malay and Vietnamese.
 * Added *Portable Install* option in installer.
 * Paste command now works on mutiple selections.

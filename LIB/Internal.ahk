@@ -190,10 +190,13 @@ HotkeyCtrlHasFocus()
 	}
 }
 
-SleepRandom(Delay, Percent)
+SleepRandom(Delay=0, Min="", Max="", Percent="")
 {
-	Min := Floor(Delay - (Delay * Percent / 100))
-	Max := Floor(Delay + (Delay * Percent / 100))
+	If (Percent)
+	{
+		Min := Floor(Delay - (Delay * Percent / 100))
+		Max := Floor(Delay + (Delay * Percent / 100))
+	}
 	Random, RandTime, % (Min < 0) ? 0 : Min, %Max%
 	Sleep, %RandTime%
 }

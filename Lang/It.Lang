@@ -412,8 +412,12 @@
 	c_Lang175 =	
 	c_Lang176 =	
 	c_Lang177 =	
-		
-		
+	c_Lang178 =	
+	c_Lang179 =	
+	c_Lang180 =	
+	c_Lang181 =	
+	c_Lang182 =	
+	c_Lang183 =	
 		
 ; Other Windows		
 	t_Lang001 =	Esporta in AHK
@@ -559,6 +563,7 @@
 	t_Lang141 =	Tutte Le Colonne
 	t_Lang142 =	Rimuovi tema da barre degli strumenti (è necessario riavviare)
 	t_Lang143 =	nascondere automaticamente la barra degli strumenti di controllo
+	t_Lang144 =	
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Aperto

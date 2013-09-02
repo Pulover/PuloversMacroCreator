@@ -412,8 +412,12 @@
 	c_Lang175 =	Continue
 	c_Lang176 =	Try Again
 	c_Lang177 =	Timeout 
-		
-		
+	c_Lang178 =	Set key delay
+	c_Lang179 =	Key delay
+	c_Lang180 =	Random delay
+	c_Lang181 =	Minimum
+	c_Lang182 =	Maximum
+	c_Lang183 =	Disable random delays for this command
 		
 ; Other Windows		
 	t_Lang001 =	Export to AHK
@@ -559,6 +563,7 @@
 	t_Lang141 =	All Columns
 	t_Lang142 =	Remove Theme from Toolbars (requires restart)
 	t_Lang143 =	Auto Hide Controls Toolbar
+	t_Lang144 =	Click and Drag to change order. Double-Click to edit.
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Open

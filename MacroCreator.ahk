@@ -1801,9 +1801,9 @@ Gui, 14:+owner1 -MinimizeBox +E0x00000400 +HwndCmdWin
 Gui, 14:Default
 Gui, 1:+Disabled
 ; Macros
-Gui, 14:Add, GroupBox, W450 H170, %t_Lang002%:
-Gui, 14:Add, ListView, Section ys+20 xs+10 AltSubmit Checked W430 r4 vExpList gExpEdit -Multi NoSort -ReadOnly, Macro|Hotkey|Loop|Hotstring?|BlockMouse?
-Gui, 14:Add, Text, -Wrap W430, Click && Drag to change order. Double-Click to edit.
+Gui, 14:Add, GroupBox, W450 H190, %t_Lang002%:
+Gui, 14:Add, ListView, Section ys+20 xs+10 AltSubmit Checked W430 r5 vExpList gExpEdit NoSort -ReadOnly, Macro|Hotkey|Loop|BlockMouse
+Gui, 14:Add, Text, -Wrap W430, %t_Lang144%
 Gui, 14:Add, Button, -Wrap xs W75 H23 gCheckAll, %t_Lang007%
 Gui, 14:Add, Button, -Wrap yp x+5 W75 H23 gUnCheckAll, %t_Lang008%
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_AbortKey% yp+5 x+15 W65 vEx_AbortKey gEx_Checks R1, %w_Lang008%:
@@ -1883,15 +1883,14 @@ If (IfDirectContext <> "None")
 LV_Delete()
 Loop, %TabCount%
 	LV_Add("Check", A_Index, o_AutoKey[A_Index], o_TimesG[A_Index], 0, (BckIt%A_Index% ? 1 : 0))
-	LV_ModifyCol(1, 100)	; Macros
-,	LV_ModifyCol(2, 110)	; Hotkeys
-,	LV_ModifyCol(3, 60)		; Loop
-,	LV_ModifyCol(4, 60)		; Hotstrings
-,	LV_ModifyCol(5, 80)		; Block
+	LV_ModifyCol(1, 120)	; Macros
+,	LV_ModifyCol(2, 120)	; Hotkeys
+,	LV_ModifyCol(3, 80)		; Loop
+,	LV_ModifyCol(4, 80)		; Block
 ,	LV_Modify(0, "Check")
 If CurrentFileName = 
 	GuiControl, 14:, ExpFile, %A_MyDocuments%\MyScript.ahk
-Gui, 14:Show, % (ShowExpOpt) ? "H675" : "H305", %t_Lang001%
+Gui, 14:Show, % (ShowExpOpt) ? "H695" : "H325", %t_Lang001%
 Tooltip
 return
 
@@ -1905,30 +1904,33 @@ If (LV_GetCount("Selected") = 0)
 RowNumber := LV_GetNext()
 ,	LV_GetText(Ex_AutoKey, RowNumber, 2)
 ,	LV_GetText(Ex_TimesX, RowNumber, 3)
-,	LV_GetText(Ex_Hotstring, RowNumber, 4)
-,	LV_GetText(Ex_BM, RowNumber, 5)
-Gui, 13:+owner14 +ToolWindow
+,	LV_GetText(Ex_BM, RowNumber, 4)
+Gui, 13:+owner14 +ToolWindow +Delimiter¢
 Gui, 14:Default
 Gui, 14:+Disabled
 Gui, 13:Add, GroupBox, Section xm W270 H95
-Gui, 13:Add, Edit, ys+20 xs+10 W140 vEx_AutoKey, %Ex_AutoKey%
-Gui, 13:Add, Checkbox, -Wrap Checked%Ex_Hotstring% ys+25 xp+150 W100 vEx_Hotstring gEx_Hotstring R1, %t_Lang005%
+Gui, 13:Add, Combobox, ys+20 xs+10 W140 vEx_AutoKey, %KeybdList%
+Gui, 13:Add, Checkbox, -Wrap Checked%Ex_BM% ys+25 x+10 W100 vEx_BM R1, %t_Lang006%
 Gui, 13:Add, Text, Section ys+50 xs+10, %t_Lang003%:
 Gui, 13:Add, Edit, yp-3 xp+40 Limit Number W100 R1 vEx_TE, %Ex_TE%
 Gui, 13:Add, UpDown, 0x80 Range0-999999999 vEx_TimesX, %Ex_TimesX%
 Gui, 13:Add, Text,, %t_Lang004%
-Gui, 13:Add, Checkbox, -Wrap Checked%Ex_BM% yp-22 xp+110 W100 vEx_BM R1, %t_Lang006%
+Gui, 13:Add, Button, -Wrap xm W75 gExpEditClose, %c_Lang020%
+If InStr(KeybdList, Ex_AutoKey)
+	GuiControl, 13:ChooseString, Ex_AutoKey, %Ex_AutoKey%
+Else
+	GuiControl, 13:, Ex_AutoKey, %Ex_AutoKey%||
 Gui, 13:Show,, %w_Lang019%
 return
 
 13GuiClose:
 13GuiEscape:
+ExpEditClose:
 Gui, 13:Submit, NoHide
 Gui, 14:-Disabled
 Gui, 13:Destroy
 Gui, 14:Default
-Ex_Hotstring := InStr(Ex_AutoKey, "::")=1 ? 1 : 0
-LV_Modify(RowNumber, "Col2", Ex_AutoKey, Ex_TimesX, Ex_Hotstring, Ex_BM)
+LV_Modify(RowNumber, "Col2", Ex_AutoKey, Ex_TimesX, Ex_BM)
 return
 
 VarsTree:
@@ -1938,11 +1940,13 @@ Gui, 29:Add, TreeView, Checked H500 W300 vIniTV -ReadOnly
 User_Vars.Tree(29)
 Gui, 29:Add, Button, -Wrap Section xs W75 H23 gCheckAll, %t_Lang007%
 Gui, 29:Add, Button, -Wrap yp x+5 W75 H23 gUnCheckAll, %t_Lang008%
+Gui, 29:Add, Button, -Wrap yp x+5 W75 H23 gVarsTreeClose, %c_Lang020%
 Gui, 29:Show,, %t_Lang096%
 return
 
 29GuiClose:
 29GuiEscape:
+VarsTreeClose:
 Gui, 29:Submit, NoHide
 UserVarsList := "", ItemID := 0
 Loop
@@ -1992,16 +1996,8 @@ GuiControl, 14:Enable%Ex_IfDir%, GetWin
 GuiControl, 14:Enable%Ex_UV%, Ex_EdVars
 return
 
-Ex_Hotstring:
-Gui, 14:Submit, NoHide
-If Ex_Hotstring = 1
-	GuiControl, 13:, Ex_AutoKey, ::%Ex_AutoKey%
-Else
-	GuiControl, 13:, Ex_AutoKey, % RegExReplace(Ex_AutoKey, ".*:")
-return
-
 ShowMore:
-Gui, 14:Show, % (ShowExpOpt := !ShowExpOpt) ? "H675" : "H305", %t_Lang001%
+Gui, 14:Show, % (ShowExpOpt := !ShowExpOpt) ? "H695" : "H325", %t_Lang001%
 GuiControl, 14:, ShowMore, % (ShowExpOpt) ? "<< " w_Lang003 : w_Lang003 " >>"
 return
 
@@ -2099,8 +2095,7 @@ Loop, % LV_GetCount()
 	LV_GetText(Ex_Macro, RowNumber, 1)
 	LV_GetText(Ex_AutoKey, RowNumber, 2)
 	LV_GetText(Ex_TimesX, RowNumber, 3)
-	LV_GetText(Ex_Hotstring, RowNumber, 4)
-	LV_GetText(Ex_BM, RowNumber, 5)
+	LV_GetText(Ex_BM, RowNumber, 4)
 	If (ListCount%Ex_Macro% = 0)
 		continue
 	Body := LV_Export(Ex_Macro), AutoKey .= Ex_AutoKey "`n"
@@ -3957,7 +3952,7 @@ Gui, 8:Add, Radio, -Wrap W200 vComText gComText R1, %c_Lang046%
 Gui, 8:Add, Radio, -Wrap y+20 W200 vClip gClip R1, %c_Lang047%
 Gui, 8:Add, Radio, -Wrap W200 vEditPaste gEditPaste R1, %c_Lang048%
 Gui, 8:Add, Radio, -Wrap W200 vSetText gSetText R1, %c_Lang049%
-Gui, 8:Add, Checkbox, -Wrap yp-55 xs+30 W180 vComEvent gComEvent R1 Disabled, Set Input Delay
+Gui, 8:Add, Checkbox, -Wrap yp-55 xs+30 W180 vComEvent gComEvent R1 Disabled, %c_Lang178%
 ; Repeat
 Gui, 8:Add, GroupBox, Section ys x+20 W220 H135
 Gui, 8:Add, Text, ys+15 xs+10, %w_Lang015%:
@@ -3968,7 +3963,7 @@ Gui, 8:Add, Edit, W100 vDelayC
 Gui, 8:Add, UpDown, vDelayX 0x80 Range0-999999999, %DelayG%
 Gui, 8:Add, Radio, -Wrap Checked W100 vMsc R1, %c_Lang018%
 Gui, 8:Add, Radio, -Wrap W100 vSec R1, %c_Lang019%
-Gui, 8:Add, Text, -Wrap y+5 xs+10 R1, Input Delay:
+Gui, 8:Add, Text, -Wrap y+5 xs+10 R1, %c_Lang179%:
 Gui, 8:Add, Edit, yp xs+110 W100 vKeyDelayC Disabled
 Gui, 8:Add, UpDown, vKeyDelayX 0x80 Range0-999999999, -1
 ; Control
@@ -4352,12 +4347,20 @@ Gui, 1:+Disabled
 Gui, 3:Add, Tab2, W450 H0 vTabControl AltSubmit, %c_Lang003%|%c_Lang015%|%c_Lang066%
 ; Sleep
 Gui, 3:Add, GroupBox, Section xm ym W450 H235
-Gui, 3:Add, Text, ys+15 xs+10, %c_Lang050%:
-Gui, 3:Add, Edit, yp-2 xs+100 W170 vDelayC
+Gui, 3:Add, Text, ys+15 xs+10 W150, %c_Lang050%:
+Gui, 3:Add, Edit, yp-2 x+0 W170 vDelayC
 Gui, 3:Add, UpDown, vDelayX 0x80 Range0-9999999, 300
 Gui, 3:Add, Radio, -Wrap Checked W170 vMsc R1, %c_Lang018%
 Gui, 3:Add, Radio, -Wrap W170 vSec R1, %c_Lang019%
 Gui, 3:Add, Radio, -Wrap W170 vMin R1, %c_Lang154%
+Gui, 3:Add, Checkbox, -Wrap y+20 xs+10 W150 vRandom gRandomSleep, %c_Lang180%
+Gui, 3:Add, Text, Section -Wrap yp x+0 W70 R1, %c_Lang181%
+Gui, 3:Add, Edit, yp-2 x+0 W100 R1 vRandMin Disabled
+Gui, 3:Add, UpDown, vRandMinimum 0x80 Range0-100000, 0
+Gui, 3:Add, Text, -Wrap y+10 xs W70 R1, %c_Lang182%
+Gui, 3:Add, Edit, yp-2 x+0 W100 R1 vRandMax Disabled
+Gui, 3:Add, UpDown, vRandMaximum 0x80 Range0-100000, 500
+Gui, 3:Add, Checkbox, -Wrap y+20 xm+10 W400 vNoRandom gNoRandom, %c_Lang183%
 ; MsgBox
 Gui, 3:Tab, 2
 Gui, 3:Add, GroupBox, Section ym xm W450 H235
@@ -4393,10 +4396,31 @@ If (s_Caller = "Edit")
 	If (Type = cType5)
 	{
 		GuiControl, 3:, DelayX
-		If InStr(DelayX, "%")
-			GuiControl, 3:, DelayC, %DelayX%
+		If (Details = "Random")
+		{
+			GuiControl, 3:, Random, 1
+			If InStr(DelayX, "%")
+				GuiControl, 3:, RandMin, %DelayX%
+			Else
+				GuiControl, 3:, RandMinimum, %DelayX%
+			If InStr(Target, "%")
+				GuiControl, 3:, RandMax, %Target%
+			Else
+				GuiControl, 3:, RandMaximum, %Target%
+			GoSub, RandomSleep
+		}
 		Else
-			GuiControl, 3:, DelayX, %DelayX%
+		{
+			If InStr(DelayX, "%")
+				GuiControl, 3:, DelayC, %DelayX%
+			Else
+				GuiControl, 3:, DelayX, %DelayX%
+		}
+		If (Details = "NoRandom")
+		{
+			GuiControl, 3:, NoRandom, 1
+			GuiControl, 3:Disable%NoRandom%, Random
+		}
 	}
 	If (Type = cType6)
 	{
@@ -4489,10 +4513,30 @@ If %A_GuiControl% contains !
 	GuiControl, %GuiA%:, %A_GuiControl%, Alt
 return
 
+RandomSleep:
+Gui, 3:Submit, NoHide
+GuiControl, 3:Disable%Random%, DelayC
+GuiControl, 3:Disable%Random%, DelayX
+GuiControl, 3:Disable%Random%, Msc
+GuiControl, 3:Disable%Random%, Sec
+GuiControl, 3:Disable%Random%, Min
+GuiControl, 3:Disable%Random%, NoRandom
+GuiControl, 3:Enable%Random%, RandMin
+GuiControl, 3:Enable%Random%, RandMinimum
+GuiControl, 3:Enable%Random%, RandMax
+GuiControl, 3:Enable%Random%, RandMaximum
+return
+
+NoRandom:
+Gui, 3:Submit, NoHide
+GuiControl, 3:Disable%NoRandom%, Random
+return
+
 PauseApply:
 PauseOK:
-Gui, Submit, NoHide
-DelayX := InStr(DelayC, "%") ? DelayC : DelayX
+Gui, 3:Submit, NoHide
+DelayX := (Random) ? (InStr(RandMin, "%") ? RandMin : RandMinimum)
+:	(InStr(DelayC, "%") ? DelayC : DelayX)
 If Sec = 1
 	DelayX *= 1000
 Else If Min = 1
@@ -4526,7 +4570,8 @@ Else If TabControl = 3
 ,	DelayX := InStr(TimeoutC, "%") ? TimeoutC : Timeout
 }
 Else If TabControl = 1
-	Type := cType5, Details := "", Target := ""
+	Type := cType5, Details := (NoRandom) ? "NoRandom" : ((Random) ? "Random" : "")
+	, Target := (Random) ? (InStr(RandMax, "%") ? RandMax : RandMaximum) : ""
 If (A_ThisLabel <> "PauseApply")
 {
 	Gui, 1:-Disabled
@@ -9674,14 +9719,19 @@ pb_ControlClick:
 	ControlClick, %Target%, % Win[1], % Win[2], %Par1%, %Par2%, %Par3%, % Win[3], % Win[4]
 return
 pb_Sleep:
-	If (RandomSleeps)
-		SleepRandom(DelayX, RandPercent)
-	Else If (SlowKeyOn)
-		Sleep, (DelayX*SpeedDn)
-	Else If (FastKeyOn)
-		Sleep, (DelayX/SpeedUp)
+	If (Step = "Random")
+		SleepRandom(, DelayX, Target)
 	Else
-		Sleep, %DelayX%
+	{
+		If ((RandomSleeps) && (Step <> "NoRandom"))
+			SleepRandom(DelayX,,, RandPercent)
+		Else If (SlowKeyOn)
+			Sleep, (DelayX*SpeedDn)
+		Else If (FastKeyOn)
+			Sleep, (DelayX/SpeedUp)
+		Else
+			Sleep, %DelayX%
+	}
 return
 pb_MsgBox:
 	StringReplace, Step, Step, ``n, `n, All

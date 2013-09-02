@@ -412,8 +412,12 @@
 	c_Lang175 =	
 	c_Lang176 =	
 	c_Lang177 =	
-		
-		
+	c_Lang178 =	
+	c_Lang179 =	
+	c_Lang180 =	
+	c_Lang181 =	
+	c_Lang182 =	
+	c_Lang183 =	
 		
 ; Other Windows		
 	t_Lang001 =	AHK로 내보내기
@@ -559,6 +563,7 @@
 	t_Lang141 =	모든 열
 	t_Lang142 =	도구 모음 사용 (다시 시작해야 함)에서 테마를 제거
 	t_Lang143 =	자동 도구 모음 컨트롤을 숨 깁니다
+	t_Lang144 =	
 		
 ; Messages & Dialogs		
 	d_Lang001 =	열기

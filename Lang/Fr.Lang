@@ -412,8 +412,12 @@
 	c_Lang175 =	
 	c_Lang176 =	
 	c_Lang177 =	
-		
-		
+	c_Lang178 =	
+	c_Lang179 =	
+	c_Lang180 =	
+	c_Lang181 =	
+	c_Lang182 =	
+	c_Lang183 =	
 		
 ; Other Windows		
 	t_Lang001 =	Exporter vers AHK
@@ -559,6 +563,7 @@
 	t_Lang141 =	Tous Les Colonnes
 	t_Lang142 =	Supprimer le thème de barres d'outils (nécessite un redémarrage)
 	t_Lang143 =	masquer automatiquement la barre d'outils de contrôle
+	t_Lang144 =	
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Ouvert

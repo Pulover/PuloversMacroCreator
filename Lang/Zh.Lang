@@ -412,8 +412,12 @@
 	c_Lang175 =	
 	c_Lang176 =	
 	c_Lang177 =	
-		
-		
+	c_Lang178 =	
+	c_Lang179 =	
+	c_Lang180 =	
+	c_Lang181 =	
+	c_Lang182 =	
+	c_Lang183 =	
 		
 ; Other Windows		
 	t_Lang001 =	导出到华民航空
@@ -559,6 +563,7 @@
 	t_Lang141 =	所有列
 	t_Lang142 =	删除主题从“工具栏”（需要重新启动）
 	t_Lang143 =	自动隐藏控件工具栏
+	t_Lang144 =	
 		
 ; Messages & Dialogs		
 	d_Lang001 =	打开
