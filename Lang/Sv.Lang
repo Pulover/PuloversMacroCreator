@@ -583,8 +583,9 @@
 	t_Lang140 =	Genom Kolumn
 	t_Lang141 =	Alla Kolumner
 	t_Lang142 =	Ta bort tema från Verktygsfält (kräver omstart)
-	t_Lang143 =	automatiskt visa kontroller verktygsfältet
-	t_Lang144 =	
+	t_Lang143 =	Automatiskt visa kontroller verktygsfältet
+	t_Lang144 =	Klicka och dra för att ändra ordningen. Dubbelklicka för att redigera.
+	t_Lang145 =	Redigera Makron
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Öppet

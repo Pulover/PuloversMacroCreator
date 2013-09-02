@@ -583,8 +583,9 @@
 	t_Lang140 =	By Kolumnie
 	t_Lang141 =	Wszystkie Kolumny
 	t_Lang142 =	Usuń motyw z Paski narzędzi (wymaga ponownego uruchomienia)
-	t_Lang143 =	automatyczne ukrywanie paska narzędzi kontroli
-	t_Lang144 =	
+	t_Lang143 =	Automatyczne ukrywanie paska narzędzi kontroli
+	t_Lang144 =	Kliknij i przeciągnij, aby zmienić kolejność. Kliknij dwukrotnie, aby edytować.
+	t_Lang145 =	Edytowanie Makra
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Otwarte

@@ -583,8 +583,9 @@
 	t_Lang140 =	Par Colonne
 	t_Lang141 =	Tous Les Colonnes
 	t_Lang142 =	Supprimer le thème de barres d'outils (nécessite un redémarrage)
-	t_Lang143 =	masquer automatiquement la barre d'outils de contrôle
-	t_Lang144 =	
+	t_Lang143 =	Masquer automatiquement la barre d'outils de contrôle
+	t_Lang144 =	Cliquez et faites glisser pour modifier l'ordre. Double-cliquez pour éditer.
+	t_Lang145 =	Modifier Macros
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Ouvert

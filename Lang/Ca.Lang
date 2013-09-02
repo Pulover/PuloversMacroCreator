@@ -583,8 +583,9 @@
 	t_Lang140 =	Per La Columna
 	t_Lang141 =	Totes Les Columnes
 	t_Lang142 =	Eliminar tema de les barres d'eines (cal reiniciar)
-	t_Lang143 =	amagar automàticament la barra d'eines controls
-	t_Lang144 =	
+	t_Lang143 =	Amagar automàticament la barra d'eines controls
+	t_Lang144 =	Feu clic i arrossegueu per canviar l'ordre. Feu doble clic per editar.
+	t_Lang145 =	Edita Macros
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Obert

@@ -473,8 +473,8 @@ ActivateHotkeys(Rec="", Play="", Speed="", Stop="", Pause="", Joy="")
 	
 	If (Rec <> "")
 	{
-		Hotkey, %RecKey%, RecStart, % (Rec) ? "On" : "Off"
-		Hotkey, %RecNewKey%, RecStartNew, % (Rec) ? "On" : "Off"
+		Try Hotkey, %RecKey%, RecStart, % (Rec) ? "On" : "Off"
+		Try Hotkey, %RecNewKey%, RecStartNew, % (Rec) ? "On" : "Off"
 	}
 	
 	If (Play <> "")
@@ -759,4 +759,20 @@ ShowChevronMenu(rbPtr, BandID, X="", Y="")
 		Menu, ChevMenu, Show, %X%, %Y%
 		Menu, ChevMenu, DeleteAll
 	}
+}
+
+TabGetText(Hwnd, Tab)
+{
+	Static Size := (5 * 4) + (2 * A_PtrSize) + (A_PtrSize - 4)
+	Static TCIF_TEXT := 0x0001
+	Static TCM_GETITEM := 0x133C
+	
+	VarSetCapacity(ItemText, 512, 0)
+,	VarSetCapacity(TCITEM, Size, 0)
+,	NumPut(TCIF_TEXT, TCITEM, 0, "UInt")
+,	NumPut(&ItemText, TCITEM, (3 * 4) + (A_PtrSize - 4), "Ptr")
+,	NumPut(512, TCITEM, (3 * 4) + (A_PtrSize - 4) + A_PtrSize, "Int")
+	SendMessage, TCM_GETITEM, Tab - 1, &TCITEM,, ahk_id %Hwnd%
+	TxtPtr := NumGet(TCITEM, (3 * 4) + (A_PtrSize - 4), "UPtr")
+	return StrGet(TxtPtr, 512)
 }

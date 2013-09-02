@@ -585,6 +585,7 @@
 	t_Lang142 =	Remove Theme from Toolbars (requires restart)
 	t_Lang143 =	Auto Hide Controls Toolbar
 	t_Lang144 =	Click and Drag to change order. Double-Click to edit.
+	t_Lang145 =	Edit Macros
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Open

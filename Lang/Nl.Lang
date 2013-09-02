@@ -583,8 +583,9 @@
 	t_Lang140 =	Door Column
 	t_Lang141 =	Alle Columns
 	t_Lang142 =	Thema verwijderen uit Werkbalken (opnieuw opstarten)
-	t_Lang143 =	automatisch bedieningen te verbergen werkbalk
-	t_Lang144 =	
+	t_Lang143 =	Automatisch bedieningen te verbergen werkbalk
+	t_Lang144 =	Klikken en slepen om te wijzigen. Dubbelklik klik om te bewerken.
+	t_Lang145 =	Macro's Bewerken
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Open

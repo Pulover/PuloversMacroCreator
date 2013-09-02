@@ -583,8 +583,9 @@
 	t_Lang140 =	Bởi Cột
 	t_Lang141 =	Tất cả các cột
 	t_Lang142 =	Loại bỏ Theme từ Thanh công cụ (yêu cầu khởi động lại)
-	t_Lang143 =	tự động ẩn thanh công cụ điều khiển
-	t_Lang144 =	
+	t_Lang143 =	Tự động ẩn thanh công cụ điều khiển
+	t_Lang144 =	Nhấp và kéo để thay đổi thứ tự. Đúp nhấn vào đây để chỉnh sửa.
+	t_Lang145 =	Chỉnh Sửa Macro
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Mở

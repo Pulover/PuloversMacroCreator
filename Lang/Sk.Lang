@@ -583,8 +583,9 @@
 	t_Lang140 =	Podľa Stĺpca
 	t_Lang141 =	Všetky Stĺpce
 	t_Lang142 =	Odobrať tému z Panely nástrojov (vyžaduje reštart)
-	t_Lang143 =	automaticky skryť ovládací panel
-	t_Lang144 =	
+	t_Lang143 =	Automaticky skryť ovládací panel
+	t_Lang144 =	Kliknutím a pretiahnutím meniť ich poradie. Poklepaním na ikonu upraviť.
+	t_Lang145 =	Úprava Makra
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Otvorené

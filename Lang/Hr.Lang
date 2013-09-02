@@ -583,8 +583,9 @@
 	t_Lang140 =	Do Stupcu
 	t_Lang141 =	Svi Stupovi
 	t_Lang142 =	Ukloni temu iz Toolbars (zahtijeva ponovno pokretanje)
-	t_Lang143 =	automatski sakriti kontrole traci
-	t_Lang144 =	
+	t_Lang143 =	Automatski sakriti kontrole traci
+	t_Lang144 =	Kliknite i povucite za promjenu redoslijeda. Dvaput kliknite za uređivanje.
+	t_Lang145 =	Uredi Makronaredbe
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Otvoreno

@@ -585,6 +585,7 @@
 	t_Lang142 =	Remover Tema das Barras de Ferramentas (requer reinicialização)
 	t_Lang143 =	Auto Ocultar Barra de Controles
 	t_Lang144 =	Clique e arraste para alterar a ordem. Dois clickques para editar.
+	t_Lang145 =	Editar Macros
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Abrir

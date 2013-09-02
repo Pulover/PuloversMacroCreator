@@ -94,7 +94,7 @@
 			If ((TimesX > 1) || InStr(TimesX, "%"))
 				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
 		}
-		Else If ((Type = cType6) && (Action = "[Pause]"))
+		Else If (Type = cType6)
 		{
 			If InStr(Step, "``n")
 			{
@@ -102,7 +102,7 @@
 				Step := "`n(LTrim`n" Step "`n)"
 			}
 			StringReplace, Step, Step, ```,, `````,, All
-			RowData := "`n" Type ", " Target ",, " Step
+			RowData := "`n" Type ", " Target ", " Window ", " Step ((DelayX > 0) ? ", " DelayX : "")
 			If (Comment <> "")
 				RowData .= "  " "; " Comment
 			If ((TimesX > 1) || InStr(TimesX, "%"))

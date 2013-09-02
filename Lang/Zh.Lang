@@ -584,7 +584,8 @@
 	t_Lang141 =	所有列
 	t_Lang142 =	删除主题从“工具栏”（需要重新启动）
 	t_Lang143 =	自动隐藏控件工具栏
-	t_Lang144 =	
+	t_Lang144 =	单击并拖动来改变秩序。双击进行编辑。
+	t_Lang145 =	编辑宏
 		
 ; Messages & Dialogs		
 	d_Lang001 =	打开

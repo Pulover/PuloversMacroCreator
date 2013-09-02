@@ -1801,10 +1801,10 @@ Gui, 14:+owner1 -MinimizeBox +E0x00000400 +HwndCmdWin
 Gui, 14:Default
 Gui, 1:+Disabled
 ; Macros
-Gui, 14:Add, GroupBox, W450 H190, %t_Lang002%:
-Gui, 14:Add, ListView, Section ys+20 xs+10 AltSubmit Checked W430 r5 vExpList gExpEdit NoSort -ReadOnly, Macro|Hotkey|Loop|BlockMouse
+Gui, 14:Add, GroupBox, Section W450 H190, %t_Lang002%:
+Gui, 14:Add, ListView, ys+20 xs+10 AltSubmit Checked W430 r5 vExpList gExpEdit NoSort -ReadOnly, Macro|Hotkey|Loop|BlockMouse
 Gui, 14:Add, Text, -Wrap W430, %t_Lang144%
-Gui, 14:Add, Button, -Wrap xs W75 H23 gCheckAll, %t_Lang007%
+Gui, 14:Add, Button, -Wrap W75 H23 gCheckAll, %t_Lang007%
 Gui, 14:Add, Button, -Wrap yp x+5 W75 H23 gUnCheckAll, %t_Lang008%
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_AbortKey% yp+5 x+15 W65 vEx_AbortKey gEx_Checks R1, %w_Lang008%:
 Gui, 14:Add, Edit, yp-5 x+0 W60 vAbortKey, %AbortKey%
@@ -1882,7 +1882,7 @@ If (IfDirectContext <> "None")
 }
 LV_Delete()
 Loop, %TabCount%
-	LV_Add("Check", A_Index, o_AutoKey[A_Index], o_TimesG[A_Index], 0, (BckIt%A_Index% ? 1 : 0))
+	LV_Add("Check", TabGetText(TabSel, A_Index), o_AutoKey[A_Index], o_TimesG[A_Index], 0, (BckIt%A_Index% ? 1 : 0))
 	LV_ModifyCol(1, 120)	; Macros
 ,	LV_ModifyCol(2, 120)	; Hotkeys
 ,	LV_ModifyCol(3, 80)		; Loop
@@ -2093,20 +2093,20 @@ Loop, % LV_GetCount()
 	If RowNumber = 0
 		break
 	LV_GetText(Ex_Macro, RowNumber, 1)
-	LV_GetText(Ex_AutoKey, RowNumber, 2)
-	LV_GetText(Ex_TimesX, RowNumber, 3)
-	LV_GetText(Ex_BM, RowNumber, 4)
-	If (ListCount%Ex_Macro% = 0)
+,	LV_GetText(Ex_AutoKey, RowNumber, 2)
+,	LV_GetText(Ex_TimesX, RowNumber, 3)
+,	LV_GetText(Ex_BM, RowNumber, 4)
+	If (ListCount%RowNumber% = 0)
 		continue
-	Body := LV_Export(Ex_Macro), AutoKey .= Ex_AutoKey "`n"
+	Body := LV_Export(RowNumber), AutoKey .= Ex_AutoKey "`n"
 	GoSub, ExportOpt
 	AllScripts .= Body "`n"
 	PMCSet := "[PMC Code]|" Ex_AutoKey
-	. "|" o_ManKey[Ex_Macro] "|" Ex_TimesX
+	. "|" o_ManKey[RowNumber] "|" Ex_TimesX
 	. "|" CoordMouse "`n"
-	PmcCode .= PMCSet . PMC.LVGet("InputList" Ex_Macro).Text . "`n"
+	PmcCode .= PMCSet . PMC.LVGet("InputList" RowNumber).Text . "`n"
 	If (Ex_IN)
-		IncList .= IncludeFiles(Ex_Macro, ListCount%Ex_Macro%)
+		IncList .= IncludeFiles(RowNumber, ListCount%RowNumber%)
 }
 o_ExAutoKey := [], AbortKey := (Ex_AbortKey = 1) ? AbortKey : ""
 ,	PauseKey := (Ex_PauseKey = 1) ? PauseKey : ""
@@ -2193,7 +2193,7 @@ Else If Ex_TimesX > 1
 	Body := "Loop, " Ex_TimesX "`n{`n" Body "}`n"
 If Ex_BM = 1
 	Body := "BlockInput, MouseMove`n" Body "BlockInput, MouseMoveOff`n"
-Body := "Macro" Ex_Macro ":`n" Body "Return`n"
+Body := ((Ex_Macro <> "") ? Ex_Macro ":`n" : "") Body "Return`n"
 If (Ex_AutoKey <> "")
 	Body := Ex_AutoKey "::`n" Body
 return
@@ -8087,6 +8087,12 @@ GuiContextMenu:
 MouseGetPos,,,, cHwnd, 2
 If (cHwnd = ListID%A_List%)
 	Menu, EditMenu, Show, %A_GuiX%, %A_GuiY%
+Else If (cHwnd = TabSel)
+{
+	Menu, TabMenu, Add, %w_Lang019%, EditMacroTab
+	Menu, TabMenu, Show
+	Menu, TabMenu, DeleteAll
+}
 Else
 {
 	tbPtr := TB_GetHwnd(cHwnd)
@@ -8706,6 +8712,27 @@ If (RowSelection = 1)
 	GoSub, Edit
 Else
 	GoSub, MultiEdit
+return
+
+EditMacroTab:
+Gui, 32:-MinimizeBox +owner1
+Gui, 1:+Disabled
+Gui, 32:Add, GroupBox, Section W450 H300
+Gui, 32:Add, ListView, ys+15 xs+10 W430 r20 -ReadOnly -Hdr, Macro|Index
+Gui, 32:Add, Button, gMacroTabCancel, %c_Lang021%
+Gui, 32:Default
+Loop, %TabCount%
+	LV_Add("", TabGetText(TabSel, A_Index), A_Index)
+LV_ModifyCol(1, 400), LV_ModifyCol(2, 0)
+Gui, 32:Show,, %t_Lang145%
+return
+
+MacroTabCancel:
+32GuiClose:
+32GuiEscape:
+Gui, 1:-Disabled
+Gui, 32:Destroy
+Gui, chMacro:Default
 return
 
 Edit:

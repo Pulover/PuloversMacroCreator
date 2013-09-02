@@ -583,8 +583,9 @@
 	t_Lang140 =	Sütuna Göre
 	t_Lang141 =	Tüm Sütunları
 	t_Lang142 =	Araç Çubukları (yeniden başlatma gerektirir) Theme from çıkarın
-	t_Lang143 =	otomatik araç çubuğu kontrolleri gizlemek
-	t_Lang144 =	
+	t_Lang143 =	Otomatik araç çubuğu kontrolleri gizlemek
+	t_Lang144 =	Tıklayın ve sırasını değiştirmek için sürükleyin. Düzenlemek için çift tıklayın.
+	t_Lang145 =	Makrolar Düzenle
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Açık

@@ -583,8 +583,9 @@
 	t_Lang140 =	Nach Spalte
 	t_Lang141 =	Alle Spalten
 	t_Lang142 =	Entfernen Theme von Symbolleisten (Neustart erforderlich)
-	t_Lang143 =	automatisch ausblenden Kontrollen Symbolleiste
-	t_Lang144 =	
+	t_Lang143 =	Automatisch ausblenden kontrollen symbolleiste
+	t_Lang144 =	Klicken und ziehen, um zu ändern. Doppelklicken sie auf die zu bearbeiten.
+	t_Lang145 =	Makros Bearbeiten
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Öffnen

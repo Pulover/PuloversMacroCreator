@@ -583,8 +583,9 @@
 	t_Lang140 =	S Kolone
 	t_Lang141 =	Vsi Stolpci
 	t_Lang142 =	Odstranite Theme iz Orodne vrstice (zahteva ponovni zagon)
-	t_Lang143 =	samodejno skrijejo kontrolnike orodna vrstica
-	t_Lang144 =	
+	t_Lang143 =	Samodejno skrijejo kontrolnike orodna vrstica
+	t_Lang144 =	Kliknite in povlecite, da spremenite vrstni red. Dvakrat kliknite za urejanje.
+	t_Lang145 =	Uredi Makri
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Odprite

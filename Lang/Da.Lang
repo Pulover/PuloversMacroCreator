@@ -583,8 +583,9 @@
 	t_Lang140 =	Ved Kolonne
 	t_Lang141 =	Alle Kolonner
 	t_Lang142 =	Fjern tema fra Værktøjslinjer (kræver genstart)
-	t_Lang143 =	skjuler automatisk kontrol værktøjslinje
-	t_Lang144 =	
+	t_Lang143 =	Skjuler automatisk kontrol værktøjslinje
+	t_Lang144 =	Klik og træk for at ændre rækkefølge. Dobbeltklik for at redigere.
+	t_Lang145 =	Rediger Makroer
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Åbent

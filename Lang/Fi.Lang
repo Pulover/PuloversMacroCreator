@@ -583,8 +583,9 @@
 	t_Lang140 =	Pylväs-
 	t_Lang141 =	Kaikki Sarakkeet
 	t_Lang142 =	Poista Theme from Työkalurivit (vaatii uudelleenkäynnistyksen)
-	t_Lang143 =	piilottavat valvonta työkalurivi
-	t_Lang144 =	
+	t_Lang143 =	Piilottavat valvonta työkalurivi
+	t_Lang144 =	Klikkaa ja vetämällä muuttaa järjestystä. Kaksoisnapsauta muokata.
+	t_Lang145 =	Muokkaa Makrot
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Avata
