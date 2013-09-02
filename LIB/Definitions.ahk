@@ -5,7 +5,7 @@ Else
 	_s := Chr(8239)
 ,	RecentFolder := A_AppData "\Microsoft\Windows\Recent"
 
-	ListCount1 := 0
+ListCount1 := 0
 ,	TabCount := 1
 ,	FastKeyOn := 0
 ,	SlowKeyOn := 0
@@ -486,6 +486,7 @@ BlockInput, Mode
 CoordMode, ToolTip|Pixel|Mouse|Caret|Menu, Screen|Window|Client
 WinMenuSelectItem, WinTitle, WinText, Menu, SubMenu1, SubMenu2, SubMenu3, SubMenu4, SubMenu5, SubMenu6, ExcludeTitle, ExcludeText
 SendLevel, Level
+SetKeyDelay, Delay, PressDuration, Play
 SetCapsLockState, State
 SetNumLockState, State
 SetScrollLockState, State
@@ -576,12 +577,12 @@ WinActive
 WinExist
 )"
 
-GoSub, SetFindCmd
 KeywordsList := "Type|Text|Mouse|Ctrl|Win|Misc|If|IE|Com|Func"
+GoSub, SetFindCmd
 
 ;##### Messages: #####
 
-,	MsgList := "
+MsgList := "
 (
 WM_NULL = 0x00
 WM_CREATE = 0x01

@@ -24,8 +24,6 @@ return
 GoSub, MoveSelDn
 return
 
-#If !HotkeyCtrlHasFocus() && ListFocus && !HKOff
-
 ^c::GoSub, CopyRows
 ^x::GoSub, CutRows
 ^v::GoSub, PasteRows

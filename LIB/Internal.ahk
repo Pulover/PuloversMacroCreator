@@ -47,7 +47,7 @@ SBShowTip(Command)
 		If (Line.Cmd = Command)
 		{
 			SB_SetText(Line.Desc)
-			return
+			return Line.Desc
 		}
 	}
 	SB_SetText("")
@@ -63,13 +63,16 @@ Find_Command(SearchWord)
 		SearchIn := A_LoopField
 		Loop, Parse, %A_LoopField%_Keywords, `,
 		{
+			If (SearchIn = "Type")
+				Search := "Type" A_Index
+			Else
+				Search := SearchIn
 			If InStr(A_LoopField, FindCmd)
-			{
-				If (SearchIn = "Type")
-					Search := "Type" A_Index
-				Else
-					Search := SearchIn
 				Results.Insert({Cmd: A_LoopField, Path: %Search%_Path})
+			Else Try
+			{
+				If InStr(%A_LoopField%_Desc, FindCmd)
+					Results.Insert({Cmd: A_LoopField, Path: %Search%_Path})
 			}
 		}
 	}

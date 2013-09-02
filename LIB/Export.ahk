@@ -420,7 +420,7 @@
 		Else If ((Type = cType3) || (Type = cType8) || (Type = cType11)
 		|| (Type = cType13) || (Type = cType14))
 		{
-			If (InStr(Step, "``n") && (Type = cType8))
+			If (InStr(Step, "``n") && ((Type = cType8) || (Type = cType13)))
 			{
 				StringReplace, Step, Step, ``n, `n, All
 				Step := "`n(LTrim`n" Step "`n)"
@@ -432,6 +432,8 @@
 			GoSub, Add_CD
 			If ((TimesX > 1) || InStr(TimesX, "%"))
 				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
+			If (Action = "[Text]")
+				RowData := "`nSetKeyDelay, " DelayX RowData
 		}
 		Else If (InStr(FileCmdList, Type "|"))
 		{
