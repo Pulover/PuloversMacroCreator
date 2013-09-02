@@ -10,7 +10,7 @@ If PMCVer = Error
 	MsgBox, 0, Error!, INI file is missing!
 	ExitApp, 2
 }
-
+FileDelete, Compiled\MacroCreator.ini
 IniWrite, %PMCVer%, Compiled\MacroCreator.ini, Application, Version
 
 Script =

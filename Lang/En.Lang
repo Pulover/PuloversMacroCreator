@@ -721,6 +721,7 @@
 	d_Lang076 =	Please choose your prefered layout
 	d_Lang077 =	Basic
 	d_Lang078 =	Default
+	d_Lang079 =	Check for updates on start up.
 		
 ; Start-up Tips		
 	Start_Tips =	

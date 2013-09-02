@@ -7558,6 +7558,7 @@ Gui, 31:Add, Groupbox, Section w320 h60, %d_Lang076%:
 Gui, 31:Add, Radio, Checked xs+60 ys+30 W100 vBasic gBasicLayout, %d_Lang077%
 Gui, 31:Add, Radio, yp x+20 W100 vDefault gDefaultLayout, %d_Lang078%
 Gui, 31:Add, Button, Default xm W75 H23 gWelcClose, %c_Lang020%
+Gui, 31:Add, Checkbox, Checked%AutoUpdate% -Wrap yp+5 x+10 W235 r1 vAutoUpdate, %d_Lang079%
 Gui, 31:Show,, %AppName%
 return
 
@@ -7566,6 +7567,10 @@ return
 WelcClose:
 Gui, 31:Submit
 Gui, 31:Destroy
+If AutoUpdate
+	Menu, HelpMenu, Check, %h_Lang004%
+Else
+	Menu, HelpMenu, Uncheck, %h_Lang004%
 If (Basic = 1)
 	UserLayout := "Basic"
 If (Default = 1)
