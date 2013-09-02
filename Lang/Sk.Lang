@@ -1055,250 +1055,248 @@
 ; AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	(LTrim	
-	Abs	
-	ASin	
-	ACos	
-	Array	
-	Asc	
-	ATan	
-	BlockInput	
-	Break	
-	Ceil	
-	Chr	
-	Click	
-	ClipWait	
-	Clipboard	
-	ComObjActive	
-	ComObjArray	
-	ComObjConnect	
-	ComObjCreate	
-	ComObjEnwrap / ComObjUnwrap	
-	ComObjError	
-	ComObjFlags	
-	ComObjGet	
-	ComObjMissing	
-	ComObjParameter	
-	ComObjQuery	
-	ComObjType	
-	ComObjValue	
-	Continue	
-	Control	
-	ControlClick	
-	ControlEditPaste	
-	ControlFocus	
-	ControlGet	
-	ControlGetFocus	
-	ControlGetPos	
-	ControlGetText	
-	ControlMove	
-	ControlSend / ControlSendRaw 	
-	ControlSetText	
-	CoordMode	
-	Cos	
-	Critical	
-	DetectHiddenText	
-	DetectHiddenWindows	
-	DllCall	
-	Drive	
-	DriveGet	
-	DriveSpaceFree	
-	Edit	
-	Else	
-	EnvAdd	
-	EnvDiv	
-	EnvGet	
-	EnvMult	
-	EnvSet	
-	EnvSub	
-	EnvUpdate	
-	Exit	
-	ExitApp	
-	Exp	
-	FileAppend	
-	FileCopy	
-	FileCopyDir	
-	FileCreateDir	
-	FileCreateShortcut	
-	FileDelete	
-	FileEncoding	
-	FileInstall	
-	FileGetAttrib	
-	FileGetShortcut	
-	FileGetSize	
-	FileGetTime	
-	FileGetVersion	
-	FileMove	
-	FileMoveDir	
-	FileOpen	
-	FileRead	
-	FileReadLine	
-	FileRecycle	
-	FileRecycleEmpty	
-	FileRemoveDir	
-	FileSelectFile	
-	FileSelectFolder	
-	FileSetAttrib	
-	FileSetTime	
-	Floor	
-	For	
-	FormatTime	
-	Func	
-	GetKeyName / GetKeyVK / GetKeySC	
-	GetKeyState	
-	Gosub	
-	Goto	
-	GroupActivate	
-	GroupAdd	
-	GroupClose	
-	GroupDeactivate	
-	if	
-	if (expression)	
-	If var [not] between	
-	If var [not] in/contains MatchList 	
-	If var is [not] type	
-	If Clipboard	
-	If ErrorLevel	
-	If A_Index	
-	IfEqual/IfNotEqual	
-	IfExist / IfNotExist / FileExist	
-	IfGreater / IfGreaterOrEqual	
-	IfInString / IfNotInString / InStr	
-	IfLess / IfLessOrEqual	
-	IfMsgBox	
-	IfWinActive / IfWinNotActive	
-	IfWinExist / IfWinNotExist	
-	ImageSearch	
-	IniDelete	
-	IniRead	
-	IniWrite	
-	Input	
-	InputBox	
-	InStr	
-	IsByRef	
-	IsObject	
+	Abs	Vráti absolútnu hodnotu čísla.
+	ASin	Vracia arkussínus (číslo, ktorého sínus je číslo) v radiánoch.
+	ACos	Vracia arkuskosínus (číslo, ktorého kosínus je číslo) v radiánoch.
+	Array	Vytvorí objekt Array.
+	Asc	Vráti kód znaku (číslo medzi 1 a 255 (v zostavení ANSI) alebo 65535 (v Unicode zostavenie)) pre prvý znak v reťazci.
+	ATan	Vracia arkustangens (číslo, ktorého tangens je číslo) v radiánoch.
+	BlockInput	Zamknutie alebo odomknutie užívateľa schopnosť komunikovať s počítačom pomocou klávesnice a myši.
+	Break	Ukončí (ukončí) slučky. Platí v akejkoľvek slučky.
+	Ceil	Vráti číslo zaokrúhlené nahor na najbližšie celé číslo (bez prípony 0,00).
+	Chr	Vráti znak zodpovedajúci kód znaku označený číslami.
+	Click	Klikne na tlačidlo myši na zadané súradnice. To môže tiež podržať tlačidlo, otočte kolieskom alebo presunúť.
+	ClipWait	Čaká, až sa schránka obsahuje dáta.
+	Clipboard	Vloží text zo schránky
+	ComObjActive	Načíta zaregistrovaný objekt COM.
+	ComObjArray	Vytvorí SAFEARRAY pre použitie s COM.
+	ComObjConnect	Pripojenie objektu COM je udalosťou zdrojov do funkcie s daným prefixom.
+	ComObjCreate	Vytvorí objekt COM.
+	ComObjEnwrap / ComObjUnwrap	Zábaly / rozbalí objektu COM.
+	ComObjError	Povolí alebo zakáže o chybe COM.
+	ComObjFlags	Odstráni alebo zmeny vlajky, ktoré riadia vlastnosti COM Wrapper objektu správanie.
+	ComObjGet	Vracia odkaz na objekt zabezpečuje komponenty modelu COM.
+	ComObjMissing	Vytvorí "chýbajúci parameter" objekt odovzdať do metódy COM.
+	ComObjParameter	Zábaly hodnotu a typ odovzdať ako parameter metódy COM.
+	ComObjQuery	Otázky objektu COM pre rozhranie alebo služby.
+	ComObjType	Načíta informácie o type z objektu COM.
+	ComObjValue	Načíta hodnotu alebo ukazovateľ uloženej v objekte COM wrapper.
+	Continue	Preskočí zostávajúce prúdovej slučky iterácie a začne nový. Platí v akejkoľvek slučky.
+	Control	Robí celý rad zmien ovládacieho prvku.
+	ControlClick	Odošle tlačidlom myši alebo kolieskom myši udalosti ovládacieho prvku.
+	ControlEditPaste	Pasty String na striešky / uveďte pozíciu v prvku pre úpravy (to nemá vplyv na obsah schránky).
+	ControlFocus	Nastaví vstupný fokus na daný ovládací prvok na okne.
+	ControlGet	Načíta rôzne typy informácií o riadení.
+	ControlGetFocus	Odstráni ktoré kontrolujú cieľové okno má fokus vstupu, ak existuje.
+	ControlGetPos	Načíta pozíciu a veľkosť ovládacieho prvku.
+	ControlGetText	Načíta text z ovládacieho prvku.
+	ControlMove	Presunie alebo zmení kontrolu.
+	ControlSend / ControlSendRaw 	Odošle simulované stlačenia klávesov do okna alebo ovládací prvok.
+	ControlSetText	Zmení text ovládacieho prvku.
+	CoordMode	Sady koordinovať režim pre rôzne príkazy, ktoré sa v porovnaní s buď aktívne okno alebo na obrazovke.
+	Cos	Vráti trigonometrický COSINUS čísla.
+	Critical	Zabraňuje aktuálne vlákno z prerušovaný iných podprocesov.
+	DetectHiddenText	Určuje, či neviditeľný text okne je "vidieť" za účelom zistenia okno. To sa týka napr príkazy IfWinExist a WinActivate.
+	DetectHiddenWindows	Určuje, či neviditeľné okná sú "vidieť" pomocou skriptu.
+	DllCall	Volanie funkcie v DLL, ako je štandardné funkcie Windows API.
+	Drive	Vysunie / zasunie zásobník na CD alebo DVD, alebo nastaví meniče zväzku.
+	DriveGet	Načíta rôzne typy informácií o počítače disk (y).
+	DriveSpaceFree	Načíta voľného priestoru disku v MB.
+	Edit	Otvorí aktuálny skript pre editáciu v príslušnom editore.
+	Else	Určuje príkaz (y) vykonal v prípade IF-príkaz vyhodnotený ako FALSE. Pri viac ako jeden príkaz je k dispozícii, je uzavrieť do bloku (rovnátka).
+	EnvAdd	Nastaví premennú súčet sebe plus danú hodnotu (môžete tiež pridať alebo odpočítať čas z dátumu a časovej hodnoty). Synonymom: Var + = hodnota.
+	EnvDiv	Nastaví premennú na seba delia o danú hodnotu. Synonymom: Var / = hodnota.
+	EnvGet	Načíta premennú prostredia.
+	EnvMult	Nastaví premennú na sebe krát danú hodnotu. Synonymom: Var * = hodnota.
+	EnvSet	Zapíše hodnotu premennej obsiahnuté v životnom prostredí.
+	EnvSub	Nastaví premennú na seba mínus danú hodnotu (možno tiež porovnať dáta a časovej hodnoty). Synonymom: Var - = hodnota.
+	EnvUpdate	Upozorní OS a všetky spustené aplikácie, ktoré premenné prostredia (s) sa zmenili.
+	Exit	Ukončí aktuálny vlákno, alebo (v prípade, že skript nie je perzistentný a neobsahuje žiadne klávesové skratky) Celý skript.
+	ExitApp	Ukončí skript bezpodmienečne.
+	Exp	Vráti e (čo je približne 2.71828182845905) raisnul na tý moci.
+	FileAppend	Píše textu na koniec súboru (prvá vytvorenie súboru, ak je to potrebné).
+	FileCopy	Kópia jeden alebo viac súborov.
+	FileCopyDir	Skopíruje zložku spolu so všetkými podadresári a súbory (podobne ako xcopy).
+	FileCreateDir	Vytvorí priečinok.
+	FileCreateShortcut	Vytvorí zástupcu (. LNK) súbor.
+	FileDelete	Odstráni jeden alebo viac súborov.
+	FileEncoding	Nastaví predvolené kódovanie pre FILEREAD, FileReadLine, Loop čítať, FileAppend a FileOpen.
+	FileInstall	Zahŕňa zadaný súbor vnútri kompilovaný verziu skriptu.
+	FileGetAttrib	Ukazuje, či súbor alebo zložka je iba pre čítanie, skrytý, atď
+	FileGetShortcut	Načíta informácie o zástupcu (. LNK) súboru, ako je jeho cieľového súboru.
+	FileGetSize	Načíta veľkosť súboru.
+	FileGetTime	Načíta datetime pečiatka súboru alebo priečinka.
+	FileGetVersion	Načíta verziu súboru.
+	FileMove	Presun alebo zmena jedného alebo viacerých súborov.
+	FileMoveDir	Presunie zložku spolu so všetkými sub-zložky a súbory. To môže tiež premenovať zložku.
+	FileOpen	Poskytuje objektovo orientovaný súbor I / O.
+	FileRead	Prečíta obsah súboru do premennej.
+	FileReadLine	Prečíta zadaný riadok zo súboru a uloží text do premennej.
+	FileRecycle	Odošle súbor alebo adresár do koša, pokiaľ je to možné.
+	FileRecycleEmpty	Vysype kôš.
+	FileRemoveDir	Odstráni zložku.
+	FileSelectFile	Zobrazí štandardný dialóg, ktorý umožňuje užívateľovi otvoriť alebo uložiť súbor (y).
+	FileSelectFolder	Zobrazí štandardný dialóg umožňujúci užívateľovi vybrať zložku.
+	FileSetAttrib	Zmení atribúty jedného alebo viacerých súborov alebo priečinkov. Zástupné znaky sú podporované.
+	FileSetTime	Zmení datetime pečiatka jedného alebo viacerých súborov alebo priečinkov. Zástupné znaky sú podporované.
+	Floor	Vráti číslo zaokrúhlené nadol na najbližšie celé číslo (bez prípony 0,00).
+	For	Opakuje rad príkazov raz pre každý kľúč-hodnota dvojica v objekte.
+	FormatTime	Transformuje YYYYMMDDHH24MISS časovú pečiatku do zadaného dátumu / času vo formáte.
+	Func	Získa odkaz na funkciu.
+	GetKeyName / GetKeyVK / GetKeySC	Načíta názov alebo text, virtuálna klávesnica kód alebo kód skenovanie na kľúč.
+	GetKeyState	Overí, či je klávesnica kľúče alebo tlačidla myši / joysticku nadol alebo nahor. Tiež načítava joystick stav.
+	Gosub	Prechod na uvedené označenie a pokračuje v realizácii kým Späť narazí.
+	Goto	Prechod na uvedené označenie a pokračuje v realizácii.
+	GroupActivate	Aktivuje nasledujúce okno v okne skupiny, ktorý bol definovaný s groupadd.
+	GroupAdd	Pridá okná špecifikáciu k oknu skupiny, vytvorenie skupiny v prípade potreby.
+	GroupClose	Zatvorí aktívne okno, ak to bol práve aktivovaný GroupActivate alebo GroupDeactivate. To aktivuje nasledujúce okno v seriáli. To môže tiež zatvoriť všetky okná v skupine.
+	GroupDeactivate	Podobne GroupActivate okrem aktivuje nasledujúce okno nie je v skupine.
+	if	Určuje príkaz (y) na vykonanie, ak porovnanie premennej na hodnotu evalutes na TRUE. Pri viac ako jeden príkaz je k dispozícii, je uzavrieť do bloku (rovnátka).
+	if (expression)	Určuje príkaz (y) na vykonanie, pokiaľ výraz vyhodnotený ako PRAVDA.
+	If var [not] between	Kontroly, či premenná je obsahom sú číselne alebo abecedne medzi dvoma hodnotami (vrátane).
+	If var [not] in/contains MatchList 	Kontroly, či premenná je obsahom zodpovedať na jednu z položiek v zozname.
+	If var is [not] type	Skontroluje, či premenná je obsah sú číselné, veľká, atď
+	If Clipboard	Skontroluje, či je schránka text je matchs zadaný reťazec.
+	If ErrorLevel	Skontroluje, či zadané obrázku alebo pixelu bol nájdený na obrazovke.
+	If A_Index	Kontroluje, či aktuálna iterácii slučky matchs na zadané číslo.
+	IfEqual/IfNotEqual	Porovná premennú na hodnotu pre rovnosť. Synonymom: ak Var = hodnota | ak Var <> hodnota.
+	IfExist / IfNotExist / FileExist	Kontroly na existenciu súboru alebo priečinka.
+	IfGreater / IfGreaterOrEqual	Porovná premennú hodnotu. Synonymom: ak Var> hodnota | ak Var> = hodnota.
+	IfInString / IfNotInString / InStr	Skontroluje, či premenná obsahuje zadaný reťazec.
+	IfLess / IfLessOrEqual	Porovná premennú hodnotu. Synonymom: ak Var <hodnota | ak Var <= hodnota.
+	IfMsgBox	Kontroly, ktoré tlačidlo bolo tlačil užívateľom počas posledného príkazu MsgBox.
+	IfWinActive / IfWinNotActive	Skontroluje, či zadaný okno existuje a je aktívna (predovšetkým).
+	IfWinExist / IfWinNotExist	Skontroluje, či zadaný okno existuje.
+	ImageSearch	Prehľadá oblasť obrazovky pre obraz.
+	IniDelete	Odstráni hodnotu od štandardného formátu. INI súboru.
+	IniRead	Číta hodnoty zo štandardný formát. INI súboru.
+	IniWrite	Zapíše hodnotu štandardného formátu. INI súboru.
+	Input	Čaká na užívateľovi zadať reťazec (nie je podporovaná na Windows 9x: nerobí nič).
+	InputBox	Zobrazí vstupné pole požiadať užívateľa na zadanie reťazca.
+	InStr	Vyhľadá danú výskyt reťazca, z ľavej alebo pravej strane.
 	)	
 	Ahk_Cmd_Index = %Ahk_Cmd_Index%`n	
 	(LTrim	
-	KeyHistory	
-	KeyWait	
-	Labels	
-	Log	
-	Ln	
-	Loop (normal) 	
-	Loop (files & folders)	
-	Loop (parse a string)	
-	Loop (read file contents)	
-	Loop (registry)	
-	Menu	
-	Mod	
-	MouseClickDrag	
-	MouseGetPos	
-	MouseMove	
-	MsgBox	
-	NumGet	
-	NumPut	
-	OnExit	
-	OnMessage	
-	OutputDebug	
-	Pause	
-	PixelGetColor	
-	PixelSearch	
-	PostMessage	
-	Process	
-	Progress	
-	Random	
-	RegExMatch	
-	RegExReplace	
-	RegDelete	
-	RegRead	
-	RegWrite	
-	RegisterCallback	
-	Return	
-	Round	
-	Run	
-	RunAs	
-	RunWait	
-	Screenshot	
-	Send / SendRaw / SendInput / SendPlay	
-	SendLevel	
-	SendMessage	
-	SendMode	
-	SetCapslockState	
-	SetEnv (Var = Value)	
-	SetFormat	
-	SetKeyDelay	
-	SetMouseDelay	
-	SetNumlockState	
-	SetScrollLockState	
-	SetRegView	
-	Shutdown	
-	Sin	
-	Sleep	
-	Sort	
-	SoundBeep	
-	SoundGet	
-	SoundGetWaveVolume	
-	SoundPlay	
-	SoundSet	
-	SoundSetWaveVolume	
-	SplashImage	
-	SplashTextOn	
-	SplashTextOff	
-	SplitPath	
-	Sqrt	
-	StatusBarGetText	
-	StatusBarWait	
-	StrPut / StrGet	
-	StringCaseSense	
-	StringGetPos / InStr	
-	StringLeft	
-	StringLen / StrLen	
-	StringLower	
-	StringMid / SubStr	
-	StringReplace	
-	StringRight	
-	StringSplit / StrSplit	
-	StringTrimLeft	
-	StringTrimRight	
-	StringUpper	
-	Suspend	
-	SysGet	
-	Tan	
-	ToolTip	
-	Transform	
-	TrayTip	
-	Trim / LTrim / RTrim	
-	Try	
-	Until	
-	UrlDownloadToFile	
-	VarSetCapacity	
-	WinActivate	
-	WinActivateBottom	
-	WinActive	
-	WinClose	
-	WinExist	
-	WinGetActiveStats	
-	WinGetActiveTitle	
-	WinGetClass	
-	WinGet	
-	WinGetPos	
-	WinGetText	
-	WinGetTitle	
-	WinHide	
-	WinKill	
-	WinMaximize	
-	WinMenuSelectItem	
-	WinMinimize	
-	WinMinimizeAll	
-	WinMinimizeAllUndo	
-	WinMove	
-	WinRestore	
-	WinSet	
-	WinSetTitle	
-	WinShow	
-	WinWait	
-	WinWaitActive	
-	WinWaitClose	
-	WinWaitNotActive	
-	)	
+	KeyHistory	Zobrazuje skript info a história najnovších stlačení klávesov a myši.
+	KeyWait	Čaká kľúčom alebo tlačidla myši / joysticku byť prepustený alebo stlačená.
+	Labels	Štítok označuje riadok kódu, a môže byť použitý ako cieľ Goto alebo vytvoriť podprogram.
+	Log	Vráti logaritmus (základ 10) Number.
+	Ln	Vráti prirodzený logaritmus (základ e) Number.
+	Loop (normal) 	Vykonajte sériu príkazov opakovane: buď zadaný počet opakovaní alebo kým prestávke sa stretol.
+	Loop (files & folders)	Načíta určité súbory alebo priečinky, jeden po druhom.
+	Loop (parse a string)	Načíta čiastkové reťazca (pole), z povrázku, jeden po druhom.
+	Loop (read file contents)	Načíta riadky v textovom súbore, jeden po druhom (lepšie ako FileReadLine).
+	Loop (registry)	Načíta obsah zadaného podkľúč databázy Registry, jeden kus po druhom.
+	Menu	Vytvorí, odstráni, upraví a zobrazí sa menu a položky. Zmení ikonu a jej Tooltip. Určuje, či sa hlavné okno kompilovaný skript možno otvoriť.
+	Mod	Modulo. Vráti zvyšok, keď je dividenda podelil deliteľ.
+	MouseClickDrag	Kliknutie a má zadaný tlačidlo myši, pohyb myši na cieľové súradnice, a potom uvoľnenie tlačidla.
+	MouseGetPos	Načíta aktuálnu pozíciu kurzora a prípadne kde je otvorené okno a riadenie je vznášajúce sa nad.
+	MouseMove	Presunie kurzor myši.
+	MsgBox	Zobrazenie textu uvedené v malom okne, ktoré obsahuje jedno alebo viac tlačidiel (napríklad Áno a Nie).
+	NumGet	Vracia binárne číslo uložené na zadanú adresu + offset.
+	NumPut	Obchody číslo v binárnom formáte na určenú adresu + offset a vráti adresu vpravo od položky práve napísal.
+	OnExit	Určuje podprogram spustiť automaticky, keď skript východy.
+	OnMessage	Určuje funkcie pre volanie automaticky, keď skript dostane zadanú správu.
+	OutputDebug	Odošle reťazec ladiaci program (ak existuje) na displeji.
+	Pause	Pozastavenie skriptu aktuálne vlákno.
+	PixelGetColor	Načíta farbu pixelu na zadané súradnice X, Y.
+	PixelSearch	Prehľadá oblasť obrazovky pre pixelu určenie farby.
+	PostMessage	Umiestni správu do fronty správ okna alebo ovládací prvok.
+	Process	Vykoná jednu z nasledujúcich operácií na proces: skontroluje, či existuje, zmení svoju prioritu; zavrie, čaká na jeho ukončenie.
+	Progress	Vytvorí alebo aktualizuje okno obsahujúce priebehu.
+	Random	Generuje pseudo-náhodné číslo.
+	RegExMatch	Určuje, či reťazec obsahuje vzor (regulárny výraz).
+	RegExReplace	Nahrádza výskyty vzoru (regulárny výraz) vnútri reťazca.
+	RegDelete	Odstráni podkľúč alebo hodnotu z registra.
+	RegRead	Číta hodnotu z registra.
+	RegWrite	Zapíše hodnotu do registra.
+	RegisterCallback	Vytvorí strojovo kód adresy, ktorý pri volaní, presmerovanie hovoru na funkcie v skripte.
+	Return	Návrat z podprogramu, ktoré vykonávanie predtým skočil cez funkčné pohotovosti, GoSub, horúce aktivácia, GroupActivate, alebo inými prostriedkami.
+	Round	Je-li N vynechané, alebo 0, je číslo zaokrúhlené na najbližšie celé číslo. Ak n je kladné číslo, je číslo zaokrúhlené na N desatinných miest. Pokiaľ je n záporné, je číslo zaokrúhlené podľa číslic N vľavo od desatinnej čiarky.
+	Run	Spustí externý program.
+	RunAs	Určuje sadu užívateľských poverenia použiť pre všetky ďalšie použitie jazdy a RunWait. Vyžaduje systém Windows 2000/XP alebo novší.
+	RunWait	Spustí externý program, a čaká, až to skončí.
+	Screenshot	Vytvorí screenshot vo formáte PNG o uvedenej oblasti.
+	Send / SendRaw / SendInput / SendPlay	Odošle simulované stlačenia klávesov a kliknutí myšou na aktívne okno.
+	SendLevel	Ovládacie prvky, ktoré umelé klávesnice a myši udalosti sú ignorované klávesové skratky a hotstrings.
+	SendMessage	Odošle správu do okna alebo ovládací prvok a čaká na potvrdenie.
+	SendMode	Robí Poslať synonymom SendInput alebo SendPlay skôr ako predvolené (SendEvent). Tiež robí Kliknite a MouseMove / Kliknite / Pretiahnite použiť špecifikovanú metódu.
+	SetCapslockState	Nastaví stav klávesu CapsLock. Môžete tiež vynútiť kľúč zostať zapnutý alebo vypnutý.
+	SetEnv (Var = Value)	Priradí zadanú hodnotu premennej.
+	SetFormat	Nastaví formát čísiel a desatinných čísel vytvorených matematických operácií.
+	SetKeyDelay	Nastavuje oneskorenie, dôjde po každom stlačení tlačidla Odoslať alebo zaslanej ControlSend.
+	SetMouseDelay	Nastavuje oneskorenie, dôjde po každom pohybe myšou alebo kliknite na tlačidlo.
+	SetNumlockState	Nastaví stav klávesu NumLock. Môžete tiež vynútiť kľúč zostať zapnutý alebo vypnutý.
+	SetScrollLockState	Nastaví stav klávesy ScrollLock. Môžete tiež vynútiť kľúč zostať zapnutý alebo vypnutý.
+	SetRegView	Umožňuje registra príkazy v 32-bitovej skript pre prístup k 64-bit registra názor a naopak.
+	Shutdown	Sa vypne, reštartuje alebo sa odhlási systému.
+	Sin	Vráti trigonometrický sínus čísla.
+	Sleep	Čaká zadanú dobu pred pokračovaním.
+	Sort	Usporiada premenná jeho obsah v abecednom poradí, číselné alebo náhodnom poradí (prípadne odstránenie duplicít).
+	SoundBeep	Vydáva tón z reproduktora PC.
+	SoundGet	Načíta rôzne nastavenia zo zvukového zariadenia (master mute, Master Volume, atď)
+	SoundGetWaveVolume	Načíta vlny hlasitosť výstupu zo zvukové zariadenie.
+	SoundPlay	Prehrá zvuk, obraz alebo iný podporovaný typ súboru.
+	SoundSet	Zmeny rôzne nastavenia zvukového zariadenia (master mute, master hlasitosť, atď)
+	SoundSetWaveVolume	Zmení vlny výstupnú hlasitosť pre zvukové zariadenie.
+	SplashImage	Vytvorí alebo aktualizuje okno obsahujúce súbor vo formáte JPG, GIF, BMP alebo obraz.
+	SplashTextOn	Vytvorí upraviteľné textové vyskakovacie okno.
+	SplashTextOff	Zavrie okno nad.
+	SplitPath	Oddeľuje názov súboru alebo adresu URL do svojho názvu, adresár rozšírenia, a disk.
+	Sqrt	Vráti druhú odmocninu čísla.
+	StatusBarGetText	Načíta text zo štandardného ovládacieho prvku na stavovom riadku.
+	StatusBarWait	Čaká, až sa okno stavovom riadku obsahuje zadaný reťazec.
+	StrPut / StrGet	Skopíruje reťazec alebo z adresy v pamäti, voliteľné preradením medzi kódovými stránkami.
+	StringCaseSense	Určuje, či porovnávanie reťazcov sú malé a veľké písmená (predvolené nastavenie je "nie je case sensitive").
+	StringGetPos / InStr	Načíta pozíciu zadaného podreťazca v reťazci.
+	StringLeft	Načíta počet znakov z ľavej strany reťazca.
+	StringLen / StrLen	Načíta počet koľko znakov v reťazci.
+	StringLower	Prevedie reťazec na malé písmená.
+	StringMid / SubStr	Načíta jeden alebo viac znakov z určenej pozície v reťazci.
+	StringReplace	Nahradí zadaný podreťazec s novým reťazcom.
+	StringRight	Načíta počet znakov z pravej strany reťazca.
+	StringSplit / StrSplit	Rozdelí reťazec na pole podreťazec pomocou zadaného oddeľovača.
+	StringTrimLeft	Odstráni počet znakov z ľavej strany reťazca.
+	StringTrimRight	Odstráni počet znakov z pravej strany reťazca.
+	StringUpper	Prevedie reťazec na veľké písmená.
+	Suspend	Zamknutie alebo odomknutie všetkých alebo vybraných klávesových skratiek a hotstrings.
+	SysGet	Načíta rozlíšenie obrazovky, multi-monitorov Info, rozmery systémové objekty, a iné systémové vlastnosti.
+	Tan	Vráti trigonometrický tangens čísla.
+	ToolTip	Vytvorí vždy-na-top okno kdekoľvek na obrazovke.
+	Transform	Vykonáva rôzne matematické funkcie, bitové operácie a úlohy, ako je ASCII / Unicode.
+	TrayTip	Vytvorí balón okno so správou u ikonu na hlavnom paneli. Vyžaduje systém Windows 2000/XP alebo novší.
+	Trim / LTrim / RTrim	Lemy určité znaky zo začiatku a / alebo konci reťazca.
+	Try	Chrániče jeden alebo viac príkazov (príkazy alebo výrazy) proti runtime chyby a výnimky vyvolané príkazom throw.
+	Until	Platí podmienku pre pokračovanie Loop alebo cyklus for.
+	UrlDownloadToFile	Stiahne súbor z internetu.
+	VarSetCapacity	Zväčšenie premenné kapacitu ustajnenia alebo uvoľní jeho pamäť. Normálne, je to nutné len pre mimoriadnych okolností, ako sú DllCall.
+	WinActivate	Aktivuje uvedené okno (robí to predovšetkým).
+	WinActivateBottom	Rovnaké ako WinActivate okrem toho, že sa aktivuje najspodnejšej (aspoň v poslednej dobe aktívne) zodpovedajúce okno, skôr než najvyššia.
+	WinActive	Vracia jedinečný identifikátor (HWND) aktívneho okna, ak to zodpovedá zadaným kritériám.
+	WinClose	Zatvorí zadané okno.
+	WinExist	Skontroluje, či zadaný okno existuje.
+	WinGetActiveStats	Kombinuje funkcie WinGetActiveTitle a WinGetPos do jedného príkazu.
+	WinGetActiveTitle	Načíta názov aktívneho okna.
+	WinGetClass	Načíta zadaný názov triedy okna.
+	WinGet	Vyhľadá zadané okno je jedinečný identifikátor, ID procesu, procesné meno alebo zoznam svojich kontrol. To môže tiež získať zoznam všetkých okien zodpovedajúcich zadaným kritériám.
+	WinGetPos	Načíta polohu a veľkosť zadané okno.
+	WinGetText	Načíta text zo zadaného okna.
+	WinGetTitle	Načíta názov zadané okno.
+	WinHide	Skryje uvedené okno.
+	WinKill	Vynúti zadaný okno zatvorte.
+	WinMaximize	Zväčší zadané okno na maximálnu veľkosť.
+	WinMenuSelectItem	Vyvolá položku z panela ponúk zadané okno.
+	WinMinimize	Zbalí zadané okno do jedného tlačidla na paneli úloh.
+	WinMinimizeAll	Minimalizuje všetky okná.
+	WinMinimizeAllUndo	Obráti účinok predchádzajúcej WinMinimizeAll.
+	WinMove	Zmeny polohy a / alebo veľkosti zadané okno.
+	WinRestore	Unminimizes alebo unmaximizes zadaný okna, ak je minimalizácia alebo maximalizácia.
+	WinSet	Robí rad zmien uvedeného okna, ako "vždy navrchu" a transparentnosti.
+	WinSetTitle	Zmení názov určeného okna.
+	WinShow	Slúži na zobrazenie zadané okno.
+	WinWait	Čaká zadaný okno existuje.
+	WinWaitActive	Čaká zadaný okno je aktívny.
+	WinWaitClose	Čaká zadaný okno neexistuje.
+	WinWaitNotActive	Čaká zadaný okno nie je aktívne.
+	)	...
 return		

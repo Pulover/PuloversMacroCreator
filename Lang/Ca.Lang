@@ -1055,250 +1055,248 @@
 ; AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	(LTrim	
-	Abs	
-	ASin	
-	ACos	
-	Array	
-	Asc	
-	ATan	
-	BlockInput	
-	Break	
-	Ceil	
-	Chr	
-	Click	
-	ClipWait	
-	Clipboard	
-	ComObjActive	
-	ComObjArray	
-	ComObjConnect	
-	ComObjCreate	
-	ComObjEnwrap / ComObjUnwrap	
-	ComObjError	
-	ComObjFlags	
-	ComObjGet	
-	ComObjMissing	
-	ComObjParameter	
-	ComObjQuery	
-	ComObjType	
-	ComObjValue	
-	Continue	
-	Control	
-	ControlClick	
-	ControlEditPaste	
-	ControlFocus	
-	ControlGet	
-	ControlGetFocus	
-	ControlGetPos	
-	ControlGetText	
-	ControlMove	
-	ControlSend / ControlSendRaw 	
-	ControlSetText	
-	CoordMode	
-	Cos	
-	Critical	
-	DetectHiddenText	
-	DetectHiddenWindows	
-	DllCall	
-	Drive	
-	DriveGet	
-	DriveSpaceFree	
-	Edit	
-	Else	
-	EnvAdd	
-	EnvDiv	
-	EnvGet	
-	EnvMult	
-	EnvSet	
-	EnvSub	
-	EnvUpdate	
-	Exit	
-	ExitApp	
-	Exp	
-	FileAppend	
-	FileCopy	
-	FileCopyDir	
-	FileCreateDir	
-	FileCreateShortcut	
-	FileDelete	
-	FileEncoding	
-	FileInstall	
-	FileGetAttrib	
-	FileGetShortcut	
-	FileGetSize	
-	FileGetTime	
-	FileGetVersion	
-	FileMove	
-	FileMoveDir	
-	FileOpen	
-	FileRead	
-	FileReadLine	
-	FileRecycle	
-	FileRecycleEmpty	
-	FileRemoveDir	
-	FileSelectFile	
-	FileSelectFolder	
-	FileSetAttrib	
-	FileSetTime	
-	Floor	
-	For	
-	FormatTime	
-	Func	
-	GetKeyName / GetKeyVK / GetKeySC	
-	GetKeyState	
-	Gosub	
-	Goto	
-	GroupActivate	
-	GroupAdd	
-	GroupClose	
-	GroupDeactivate	
-	if	
-	if (expression)	
-	If var [not] between	
-	If var [not] in/contains MatchList 	
-	If var is [not] type	
-	If Clipboard	
-	If ErrorLevel	
-	If A_Index	
-	IfEqual/IfNotEqual	
-	IfExist / IfNotExist / FileExist	
-	IfGreater / IfGreaterOrEqual	
-	IfInString / IfNotInString / InStr	
-	IfLess / IfLessOrEqual	
-	IfMsgBox	
-	IfWinActive / IfWinNotActive	
-	IfWinExist / IfWinNotExist	
-	ImageSearch	
-	IniDelete	
-	IniRead	
-	IniWrite	
-	Input	
-	InputBox	
-	InStr	
-	IsByRef	
-	IsObject	
+	Abs	Retorna el valor absolut del nombre .
+	ASin	Retorna l'arc si ( el nombre el si és Number ) en radians .
+	ACos	Retorna l'arc cosinus ( el nombre el cosinus és número ) en radians .
+	Array	Crea un objecte Array .
+	Asc	Retorna el codi de caràcters (un nombre entre 1 i 255 ( en ANSI compilacions ) o 65.535 (en les versions Unicode ) ) per al primer caràcter en cadena .
+	ATan	Retorna l'arc tangent ( el nombre la tangent és número ) en radians .
+	BlockInput	Activa o desactiva la capacitat de l'usuari per interactuar amb l'ordinador a través del teclat i el ratolí .
+	Break	Surt ( acaba) un bucle . Vàlid dins de qualsevol tipus de bucle .
+	Ceil	Retorna Nombre arrodonit al nombre enter més pròxim ( sense sufix .00 ) .
+	Chr	Retorna el caràcter únic corresponent al codi de caràcters indicat per Nombre .
+	Click	Fa clic amb el botó del ratolí a les coordenades especificades . També pot mantenir premut un botó , giri la roda , o moure .
+	ClipWait	Espera fins que el portapapers conté dades .
+	Clipboard	Enganxa el text del porta-retalls
+	ComObjActive	Recupera un objecte COM registrat .
+	ComObjArray	Crear un SAFEARRAY per al seu ús amb COM .
+	ComObjConnect	Connexions fonts d'esdeveniments d'un objecte COM de funcions amb un prefix donat .
+	ComObjCreate	Crea un objecte COM.
+	ComObjEnwrap / ComObjUnwrap	Wraps / desembolica un objecte COM .
+	ComObjError	Activa o desactiva la notificació d'errors de COM .
+	ComObjFlags	Recupera o canvis de banderes que controlen el comportament d'un objecte contenidor COM.
+	ComObjGet	Retorna una referència a un objecte proporcionat per un component COM .
+	ComObjMissing	Crea un objecte "falta paràmetre " passar a un mètode COM.
+	ComObjParameter	Embolica un valor i tipus per passar com a paràmetre a un mètode COM.
+	ComObjQuery	Consulta un objecte COM per a una interfície o servei .
+	ComObjType	Recupera la informació de tipus d'un objecte COM .
+	ComObjValue	Recupera el valor o el punter emmagatzemat en un objecte contenidor COM.
+	Continue	Omet la resta del corrent de bucle d' iteració i comença una nova . Vàlid dins de qualsevol tipus de bucle .
+	Control	Fa una varietat de canvis en un control .
+	ControlClick	Envia un botó de ratolí o de roda del ratolí per a un control .
+	ControlEditPaste	Pastes cadena en la posició de cursor / inserció en un control d' edició (això no afecta els continguts del porta-retalls ) .
+	ControlFocus	Estableix el focus d'entrada en un control determinat en una finestra .
+	ControlGet	Recupera diversos tipus d'informació sobre un control .
+	ControlGetFocus	Recupera el que el control de la finestra de destinació té el focus d'entrada , si escau .
+	ControlGetPos	Recupera la posició i la mida d'un control .
+	ControlGetText	Recupera el text d'un control .
+	ControlMove	Mou o canvia la mida d'un control .
+	ControlSend / ControlSendRaw 	Envia pulsacions de tecles simulades per una finestra o de control .
+	ControlSetText	Canvia el text d'un control .
+	CoordMode	Estableix la manera de coordinar a diversos comandaments que és relatiu a qualsevol de la finestra activa o la pantalla .
+	Cos	Retorna el cosinus trigonomètric del Nombre .
+	Critical	Evita que el fil actual de ser interromput per altres threads .
+	DetectHiddenText	Determina si el text invisible en una finestra és " vista" amb el propòsit de trobar la finestra . Això afecta ordres com IfWinExist i WinActivate .
+	DetectHiddenWindows	Determina si les finestres invisibles són " vistos" per el guió .
+	DllCall	Crida a una funció dins d'una DLL , com una funció de l'API de Windows estàndard.
+	Drive	Expulsa / retreu la safata a la unitat de CD o DVD , o estableix l'etiqueta de volum d'una unitat .
+	DriveGet	Recupera diversos tipus d'informació sobre la unitat de l'equip ( s ) .
+	DriveSpaceFree	Recupera l' espai lliure d'un disc , en megabytes .
+	Edit	Obre l'script per a la seva edició en l'editor associat .
+	Else	Especifica la comanda ( s ) per dur a terme si una sentència if s'avalua com FALSE . Quan més d' un comando està present , tanqui en un bloc ( frens ) .
+	EnvAdd	Estableix una variable a la suma de si mateix més el valor donat ( també es pot sumar o restar el temps d'un valor de data i hora ) . Sinònim de : Var + = Valor .
+	EnvDiv	Estableix una variable a si mateix dividit pel valor donat . Sinònim de : Var / = Valor .
+	EnvGet	Recupera una variable d'entorn .
+	EnvMult	Estableix una variable de vegades el mateix valor donat . Sinònim de : Var * = Valor .
+	EnvSet	Escriu un valor a una variable continguda en el medi ambient.
+	EnvSub	Estableix una variable a si mateix menys el valor donat ( poden comparar els valors de data i hora ) . Sinònim de : Var - = Valor .
+	EnvUpdate	Notifica al sistema operatiu i totes les aplicacions que s'executen aquesta variable d'entorn ( s ) han canviat .
+	Exit	Surt del subprocés actual o ( si el guió no és persistent i no conté tecles d'accés ràpid ) tota la seqüència de comandaments .
+	ExitApp	Acaba la seqüència de comandaments de manera incondicional .
+	Exp	Retorna i (que és aproximadament 2,71828182845905 ) elevat a la potència N - èsim .
+	FileAppend	Escriu text en el final d'un arxiu ( creant primer l'arxiu , si cal) .
+	FileCopy	Copia un o més arxius .
+	FileCopyDir	Còpia una carpeta amb totes les seves subcarpetes i arxius ( similar a xcopy ) .
+	FileCreateDir	Crea una carpeta .
+	FileCreateShortcut	Crea un arxiu d'accés directe ( . Lnk ) .
+	FileDelete	Elimina un o més arxius .
+	FileEncoding	Estableix la codificació per defecte per FileRead , FileReadLine , Loop Read , FileAppend i FileOpen .
+	FileInstall	Inclou l'arxiu especificat dins de la versió compilada del script .
+	FileGetAttrib	Indica si un arxiu o carpeta és de només lectura , ocult , etc
+	FileGetShortcut	Recupera informació sobre un arxiu d'accés directe ( . Lnk ) , com el seu arxiu de destinació .
+	FileGetSize	Recupera la mida d'un arxiu .
+	FileGetTime	Recupera el segell de data i hora d'un arxiu o carpeta .
+	FileGetVersion	Recupera la versió d'un arxiu .
+	FileMove	Mou o canvia el nom d'un o més arxius .
+	FileMoveDir	Mou una carpeta amb totes les seves subcarpetes i arxius . També podeu canviar el nom d'una carpeta .
+	FileOpen	Proporciona arxiu orientat a objectes I / O.
+	FileRead	Llegeix el contingut d'un arxiu en una variable .
+	FileReadLine	Llegeix la línia especificada d'un fitxer i emmagatzema el text en una variable .
+	FileRecycle	Envia un fitxer o directori a la paperera de reciclatge , si és possible .
+	FileRecycleEmpty	Buida la paperera de reciclatge .
+	FileRemoveDir	Elimina una carpeta .
+	FileSelectFile	Mostra un quadre de diàleg estàndard que permet a l'usuari obrir o guardar l'arxiu ( s ) .
+	FileSelectFolder	Mostra un quadre de diàleg estàndard que permet a l'usuari seleccionar una carpeta .
+	FileSetAttrib	Canvia els atributs d'un o més arxius o carpetes . Els comodins són compatibles .
+	FileSetTime	Canvia el segell de data i hora d'un o més arxius o carpetes . Els comodins són compatibles .
+	Floor	Retorna Nombre arrodonit al nombre enter més pròxim ( sense sufix .00 ) .
+	For	Repeteix una sèrie de comandaments una vegada per a cada parell clau - valor en un objecte .
+	FormatTime	Transforma un timestamp YYYYMMDDHH24MISS en el format de data / hora especificada .
+	Func	Recupera una referència a una funció .
+	GetKeyName / GetKeyVK / GetKeySC	Recupera el nom o el text , codi de tecla virtual o codi scan d'una clau .
+	GetKeyState	Comprova si una tecla del teclat o el ratolí / joystick és cap avall o cap amunt . També es recupera l'estat joystick.
+	Gosub	Salta a l'etiqueta especificada i continua l'execució fins que es troba de tornada.
+	Goto	Salta a l'etiqueta especificada i continua l'execució .
+	GroupActivate	Activa la finestra en un grup de finestres que es va definir amb groupadd .
+	GroupAdd	Afegeix una especificació de finestra a un grup de finestres , creant el grup si cal .
+	GroupClose	Tanca la finestra activa si estava activat per GroupActivate o GroupDeactivate . A continuació , s'activa la següent finestra en la sèrie . També pot tancar totes les finestres d'un grup .
+	GroupDeactivate	Similar a GroupActivate excepte activa la finestra no en el grup .
+	if	Especifica la comanda ( s ) per dur a terme si la comparació d'una variable a un valor doni com a resultat VERDADER. Quan més d' un comando està present , tanqui en un bloc ( frens ) .
+	if (expression)	Especifica la comanda ( s ) per dur a terme si una expressió s'avalua com VERDADER.
+	If var [not] between	Comprova si el contingut d'una variable són numèricament o alfabèticament entre dos valors ( inclosos) .
+	If var [not] in/contains MatchList 	Comprova si el contingut d'una variable coincideixen amb un dels elements d'una llista .
+	If var is [not] type	Comprova si el contingut d'una variable són numèrics , majúscules , etc
+	If Clipboard	Comprova si el text del portapapers és matxs una cadena especificada .
+	If ErrorLevel	Comprova si una imatge o píxel especificat es troben a la pantalla .
+	If A_Index	Comprova si la interacció actual del loop matxs 1 especifiqui un nombre .
+	IfEqual/IfNotEqual	Compara una variable en un valor de la igualtat . Sinònim : si Var = Valor | si Var < > Value .
+	IfExist / IfNotExist / FileExist	Comprova l'existència d'un fitxer o carpeta .
+	IfGreater / IfGreaterOrEqual	Compara una variable a un valor . Sinònim : si Var > Valor | si Var > = Valor .
+	IfInString / IfNotInString / InStr	Comprova si una variable conté la cadena especificada .
+	IfLess / IfLessOrEqual	Compara una variable a un valor . Sinònim : si Var < Valor | si Var < = Valor .
+	IfMsgBox	Xecs botó que s'hagi premut per l'usuari durant l'últim comando MsgBox .
+	IfWinActive / IfWinNotActive	Comprova si hi ha la finestra especificada i es troba actualment activa ( sobretot) .
+	IfWinExist / IfWinNotExist	Comprova si hi ha la finestra especificada .
+	ImageSearch	Busca en una regió de la pantalla per una imatge .
+	IniDelete	Elimina un valor d'un arxiu de format . Ini estàndard.
+	IniRead	Llegeix un valor d'un arxiu de format . Ini estàndard.
+	IniWrite	Escriu un valor en un arxiu de format . Ini estàndard.
+	Input	Espera que l'usuari escrigui una cadena ( no suportat en Windows 9x : no fa res ) .
+	InputBox	Mostra un quadre d'entrada per demanar a l'usuari que introdueixi una cadena .
+	InStr	Busca un fet donat d'una cadena , de l'esquerra o la dreta .
 	)	
 	Ahk_Cmd_Index = %Ahk_Cmd_Index%`n	
 	(LTrim	
-	KeyHistory	
-	KeyWait	
-	Labels	
-	Log	
-	Ln	
-	Loop (normal) 	
-	Loop (files & folders)	
-	Loop (parse a string)	
-	Loop (read file contents)	
-	Loop (registry)	
-	Menu	
-	Mod	
-	MouseClickDrag	
-	MouseGetPos	
-	MouseMove	
-	MsgBox	
-	NumGet	
-	NumPut	
-	OnExit	
-	OnMessage	
-	OutputDebug	
-	Pause	
-	PixelGetColor	
-	PixelSearch	
-	PostMessage	
-	Process	
-	Progress	
-	Random	
-	RegExMatch	
-	RegExReplace	
-	RegDelete	
-	RegRead	
-	RegWrite	
-	RegisterCallback	
-	Return	
-	Round	
-	Run	
-	RunAs	
-	RunWait	
-	Screenshot	
-	Send / SendRaw / SendInput / SendPlay	
-	SendLevel	
-	SendMessage	
-	SendMode	
-	SetCapslockState	
-	SetEnv (Var = Value)	
-	SetFormat	
-	SetKeyDelay	
-	SetMouseDelay	
-	SetNumlockState	
-	SetScrollLockState	
-	SetRegView	
-	Shutdown	
-	Sin	
-	Sleep	
-	Sort	
-	SoundBeep	
-	SoundGet	
-	SoundGetWaveVolume	
-	SoundPlay	
-	SoundSet	
-	SoundSetWaveVolume	
-	SplashImage	
-	SplashTextOn	
-	SplashTextOff	
-	SplitPath	
-	Sqrt	
-	StatusBarGetText	
-	StatusBarWait	
-	StrPut / StrGet	
-	StringCaseSense	
-	StringGetPos / InStr	
-	StringLeft	
-	StringLen / StrLen	
-	StringLower	
-	StringMid / SubStr	
-	StringReplace	
-	StringRight	
-	StringSplit / StrSplit	
-	StringTrimLeft	
-	StringTrimRight	
-	StringUpper	
-	Suspend	
-	SysGet	
-	Tan	
-	ToolTip	
-	Transform	
-	TrayTip	
-	Trim / LTrim / RTrim	
-	Try	
-	Until	
-	UrlDownloadToFile	
-	VarSetCapacity	
-	WinActivate	
-	WinActivateBottom	
-	WinActive	
-	WinClose	
-	WinExist	
-	WinGetActiveStats	
-	WinGetActiveTitle	
-	WinGetClass	
-	WinGet	
-	WinGetPos	
-	WinGetText	
-	WinGetTitle	
-	WinHide	
-	WinKill	
-	WinMaximize	
-	WinMenuSelectItem	
-	WinMinimize	
-	WinMinimizeAll	
-	WinMinimizeAllUndo	
-	WinMove	
-	WinRestore	
-	WinSet	
-	WinSetTitle	
-	WinShow	
-	WinWait	
-	WinWaitActive	
-	WinWaitClose	
-	WinWaitNotActive	
-	)	
+	KeyHistory	Mostra informació guió i una història de les pulsacions de teclat més recents i els clics del ratolí.
+	KeyWait	Espera una tecla o botó del ratolí / joystick per ser posat en llibertat o pressionat.
+	Labels	Una etiqueta identifica una línia de codi, i es pot utilitzar com un objectiu Goto o per formar una subrutina.
+	Log	Retorna el logaritme (base 10) del nombre.
+	Ln	Retorna el logaritme natural (base e) del número.
+	Loop (normal) 	Realitzeu una sèrie d'ordres en diverses ocasions: es troben ja sigui el nombre especificat de vegades o fins trencament.
+	Loop (files & folders)	Recupera els arxius o carpetes especificats, un a la vegada.
+	Loop (parse a string)	Recupera subcadenes (camps) d'una cadena, d'una en una.
+	Loop (read file contents)	Recupera les línies en un arxiu de text, d'una en una (millor rendiment que FileReadLine).
+	Loop (registry)	Recupera el contingut de la subclau especificada, un element a la vegada.
+	Menu	Crea, elimina, modifica i mostra els menús i elements de menú. Canvia la icona de la safata i la seva descripció. Controla si la finestra principal d'un script compilat es pot obrir.
+	Mod	Mòdul. Retorna la resta al dividend es divideix per Divisor.
+	MouseClickDrag	Clicks i sosté el botó del ratolí especificat, mou el ratolí a les coordenades de destinació, després deixa anar el botó.
+	MouseGetPos	Recupera la posició actual del cursor del ratolí, i que opcionalment finestra i el control que plana sobre.
+	MouseMove	Mou el cursor del ratolí.
+	MsgBox	Mostra el text especificat en una petita finestra que conté un o més botons (com sí i no).
+	NumGet	Retorna el nombre binari emmagatzemat a l'adreça especificada + offset.
+	NumPut	Emmagatzema el número en format binari a l'adreça especificada + offset i retorna l'adreça a la dreta de l'element acabat escrit.
+	OnExit	Especifica una subrutina per executar automàticament quan l'script finalitza.
+	OnMessage	Especifica una funció per cridar automàticament quan l'script rep el missatge especificat.
+	OutputDebug	Envia una cadena per al depurador (si escau) per a la seva visualització.
+	Pause	Les pauses subprocés actual de l'script.
+	PixelGetColor	Recupera el color del píxel a la x especificat, les coordenades i.
+	PixelSearch	Busca en una regió de la pantalla per un píxel del color especificat.
+	PostMessage	Col · loca un missatge a la cua de missatges d'una finestra o control.
+	Process	Realitza una de les següents operacions en un procés: comprova si existeix, canvia la seva prioritat, el tanca, espera que es tanqui.
+	Progress	Crea o actualitza una finestra amb una barra de progrés.
+	Random	Genera un nombre pseudo-aleatori.
+	RegExMatch	Determina si una cadena conté un patró (expressió regular).
+	RegExReplace	Substitueix les aparicions d'un patró (expressió regular) dins d'una cadena.
+	RegDelete	Elimina una subclau o un valor del registre.
+	RegRead	Llegeix un valor del registre.
+	RegWrite	Escriu un valor al registre.
+	RegisterCallback	Crea una adreça de codi màquina que quan se'l crida, es redirigeix la crida a una funció en el guió.
+	Return	La rendibilitat d'una subrutina d'execució que havia saltat anteriorment a través de la funció de guàrdia, GOSUB, l'activació de tecles d'accés directe, GroupActivate, o per altres mitjans.
+	Round	Si N és omès o 0, nombre s'arrodoneix a l'enter més proper. Si N és nombre positiu, nombre s'arrodoneix al N decimals. Si N és negatiu, nombre s'arrodoneix per N dígits a l'esquerra del punt decimal.
+	Run	Executa un programa extern.
+	RunAs	Especifica un conjunt de credencials d'usuari que s'utilitzarà per a tots els usos posteriors d'execució i RunWait. Requereix Windows 2000/XP o posterior.
+	RunWait	Executa un programa extern i espera fins que acabi.
+	Screenshot	Crea un PNG de pantalla del una àrea especificada.
+	Send / SendRaw / SendInput / SendPlay	Envia les pulsacions de teclat i els clics del ratolí simulats a la finestra activa.
+	SendLevel	Controla quins esdeveniments de teclat i ratolí artificials són ignorats per tecles d'accés ràpid i hotstrings.
+	SendMessage	Envia un missatge a una finestra o control i espera confirmació.
+	SendMode	Fa Enviar sinònim SendInput o SendPlay en lloc de la predeterminada (SendEvent). També fa clic i mousemove / clic / arrossegar Utilitzar el mètode especificat.
+	SetCapslockState	Estableix l'estat de la tecla Bloq Maj. També es pot forçar la clau per mantenir-se encès o apagat.
+	SetEnv (Var = Value)	Assigna el valor especificat a una variable.
+	SetFormat	Estableix el format dels nombres enters i nombres de punt flotant generats per les operacions matemàtiques.
+	SetKeyDelay	Estableix la demora que es produirà després de cada clic d'tecla Envia o enviat per ControlSend.
+	SetMouseDelay	Estableix la demora que es produirà després de cada moviment del ratolí o feu clic.
+	SetNumlockState	Estableix l'estat de la tecla Bloq Num També es pot forçar la clau per mantenir-se encès o apagat.
+	SetScrollLockState	Estableix l'estat de la tecla Bloq Despl. També es pot forçar la clau per mantenir-se encès o apagat.
+	SetRegView	Permet que les ordres de registre en un script de 32 bits per accedir a la visualització del registre de 64 bits i viceversa.
+	Shutdown	Apaga, reinicia o tanca sessió en el sistema.
+	Sin	Retorna el si trigonomètric del Nombre.
+	Sleep	Espera durant el període de temps especificat abans de continuar.
+	Sort	Organitza el contingut d'una variable en ordre alfabètic, ordre numèric, o l'atzar (opcionalment eliminar duplicats).
+	SoundBeep	Emet un to des de l'altaveu del PC.
+	SoundGet	Recupera diversos ajustaments des d'un dispositiu de so (mute, volum màster màster, etc)
+	SoundGetWaveVolume	Recupera el volum de sortida d'ona d'un dispositiu de so.
+	SoundPlay	Reprodueix un so, vídeo o un altre tipus de fitxer compatible.
+	SoundSet	Canvis diverses configuracions d'un dispositiu de so (mute, volum màster màster, etc)
+	SoundSetWaveVolume	Canvia el volum de sortida d'ona per a un dispositiu de so.
+	SplashImage	Crea o actualitza una finestra amb una imatge JPG, GIF o BMP.
+	SplashTextOn	Crea un text personalitzable finestra emergent.
+	SplashTextOff	Tanca la finestra de dalt.
+	SplitPath	Separa un nom de fitxer o adreça URL al seu nom, el directori, l'extensió i la unitat.
+	Sqrt	Retorna l'arrel quadrada del nombre.
+	StatusBarGetText	Recupera el text d'un control de la barra d'estat estàndard.
+	StatusBarWait	Espera que la barra d'estat de la finestra conté la cadena especificada.
+	StrPut / StrGet	Còpia una cadena o a partir d'una adreça de memòria, opcional conversió entre pàgines de codis.
+	StringCaseSense	Determina si les comparacions de cadena distingeixen entre majúscules i minúscules (per defecte és "no entre majúscules i minúscules").
+	StringGetPos / InStr	Recupera la posició de la subcadena especificada dins d'una cadena.
+	StringLeft	Recupera el nombre de caràcters del costat esquerre d'una cadena.
+	StringLen / StrLen	Recupera el compte de quants personatges estan en una cadena.
+	StringLower	Converteix una cadena a minúscules.
+	StringMid / SubStr	Recupera un o més caràcters des de la posició especificada en una cadena.
+	StringReplace	Reemplaça la subcadena especificada amb una nova cadena.
+	StringRight	Recupera el nombre de caràcters del costat dret d'una cadena.
+	StringSplit / StrSplit	Separa una cadena en una matriu de subcadenes utilitzant els delimitadors especificats.
+	StringTrimLeft	Elimina un nombre de caràcters del costat esquerre d'una cadena.
+	StringTrimRight	Elimina un nombre de caràcters des del costat dret d'una cadena.
+	StringUpper	Converteix una cadena a majúscules.
+	Suspend	Desactiva o activa totes o determinades combinacions de tecles i hotstrings.
+	SysGet	Recupera la resolució de pantalla, la informació de diversos monitors, les dimensions dels objectes del sistema, i altres propietats del sistema.
+	Tan	Retorna la tangent trigonomètrica del Nombre.
+	ToolTip	Crea una finestra sempre-on-top en qualsevol lloc de la pantalla.
+	Transform	Realitza funcions auxiliars de matemàtiques, operacions a nivell de bits i tasques com ara ASCII / conversió d'Unicode.
+	TrayTip	Crea una finestra de missatge d'globus a prop de la icona de la safata. Requereix Windows 2000/XP o posterior.
+	Trim / LTrim / RTrim	Retalla alguns personatges del principi i / o al final d'una cadena.
+	Try	Guàrdies d'una o més instruccions (ordres o expressions) contra els errors d'execució i excepcions llançades pel comando de tir.
+	Until	Aplica una condició per a la continuació d'un cicle o bucle for.
+	UrlDownloadToFile	Descarrega un arxiu des d'Internet.
+	VarSetCapacity	Amplia la capacitat de retenció d'una variable o allibera la seva memòria. Normalment, això és necessari només per circumstàncies inusuals com ara DllCall.
+	WinActivate	Activa la finestra especificada (ho fa sobretot).
+	WinActivateBottom	Igual que WinActivate excepte que activa el situat més avall (menys actiu recentment) Finestra a joc en lloc de la més alta.
+	WinActive	Retorna l'ID únic (HWND) de la finestra activa si coincideix amb els criteris especificats.
+	WinClose	Tanca la finestra especificada.
+	WinExist	Comprova si hi ha la finestra especificada.
+	WinGetActiveStats	Combina les funcions de WinGetActiveTitle i WinGetPos en un mateix comandament.
+	WinGetActiveTitle	Recupera el títol de la finestra activa.
+	WinGetClass	Recupera el nom de classe de finestra especificada.
+	WinGet	Recupera la finestra especificada única ID, ID de procés, nom del procés, o una llista dels seus controls. També pot obtenir una llista de totes les finestres que coincideixen amb els criteris especificats.
+	WinGetPos	Recupera la posició i la mida de la finestra especificada.
+	WinGetText	Recupera el text de la finestra especificada.
+	WinGetTitle	Recupera el títol de la finestra especificada.
+	WinHide	Oculta la finestra especificada.
+	WinKill	Força la finestra especificada per tancar.
+	WinMaximize	Amplia la finestra especificada amb la seva mida màxim.
+	WinMenuSelectItem	Invoca una opció del menú de la barra de menús de la finestra especificada.
+	WinMinimize	Contreu la finestra especificada en un botó a la barra de tasques.
+	WinMinimizeAll	Minimitza totes les finestres.
+	WinMinimizeAllUndo	Inverteix l'efecte d'un WinMinimizeAll anterior.
+	WinMove	Els canvis de la posició i / o la mida de la finestra especificada.
+	WinRestore	Unminimizes o unmaximizes la finestra especificada si es minimitza o maximitza.
+	WinSet	Fa una varietat de canvis en la finestra especificada, com "sempre a sobre" i la transparència.
+	WinSetTitle	Canvia el títol de la finestra especificada.
+	WinShow	Unhides la finestra especificada.
+	WinWait	Espera que hi ha la finestra especificada.
+	WinWaitActive	Espera que la finestra especificada està activa.
+	WinWaitClose	Espera que no existeix la finestra especificada.
+	WinWaitNotActive	Espera fins que la finestra especificada no està actiu.
+	)	...
 return		

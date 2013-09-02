@@ -1055,250 +1055,248 @@
 ; AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	(LTrim	
-	Abs	
-	ASin	
-	ACos	
-	Array	
-	Asc	
-	ATan	
-	BlockInput	
-	Break	
-	Ceil	
-	Chr	
-	Click	
-	ClipWait	
-	Clipboard	
-	ComObjActive	
-	ComObjArray	
-	ComObjConnect	
-	ComObjCreate	
-	ComObjEnwrap / ComObjUnwrap	
-	ComObjError	
-	ComObjFlags	
-	ComObjGet	
-	ComObjMissing	
-	ComObjParameter	
-	ComObjQuery	
-	ComObjType	
-	ComObjValue	
-	Continue	
-	Control	
-	ControlClick	
-	ControlEditPaste	
-	ControlFocus	
-	ControlGet	
-	ControlGetFocus	
-	ControlGetPos	
-	ControlGetText	
-	ControlMove	
-	ControlSend / ControlSendRaw 	
-	ControlSetText	
-	CoordMode	
-	Cos	
-	Critical	
-	DetectHiddenText	
-	DetectHiddenWindows	
-	DllCall	
-	Drive	
-	DriveGet	
-	DriveSpaceFree	
-	Edit	
-	Else	
-	EnvAdd	
-	EnvDiv	
-	EnvGet	
-	EnvMult	
-	EnvSet	
-	EnvSub	
-	EnvUpdate	
-	Exit	
-	ExitApp	
-	Exp	
-	FileAppend	
-	FileCopy	
-	FileCopyDir	
-	FileCreateDir	
-	FileCreateShortcut	
-	FileDelete	
-	FileEncoding	
-	FileInstall	
-	FileGetAttrib	
-	FileGetShortcut	
-	FileGetSize	
-	FileGetTime	
-	FileGetVersion	
-	FileMove	
-	FileMoveDir	
-	FileOpen	
-	FileRead	
-	FileReadLine	
-	FileRecycle	
-	FileRecycleEmpty	
-	FileRemoveDir	
-	FileSelectFile	
-	FileSelectFolder	
-	FileSetAttrib	
-	FileSetTime	
-	Floor	
-	For	
-	FormatTime	
-	Func	
-	GetKeyName / GetKeyVK / GetKeySC	
-	GetKeyState	
-	Gosub	
-	Goto	
-	GroupActivate	
-	GroupAdd	
-	GroupClose	
-	GroupDeactivate	
-	if	
-	if (expression)	
-	If var [not] between	
-	If var [not] in/contains MatchList 	
-	If var is [not] type	
-	If Clipboard	
-	If ErrorLevel	
-	If A_Index	
-	IfEqual/IfNotEqual	
-	IfExist / IfNotExist / FileExist	
-	IfGreater / IfGreaterOrEqual	
-	IfInString / IfNotInString / InStr	
-	IfLess / IfLessOrEqual	
-	IfMsgBox	
-	IfWinActive / IfWinNotActive	
-	IfWinExist / IfWinNotExist	
-	ImageSearch	
-	IniDelete	
-	IniRead	
-	IniWrite	
-	Input	
-	InputBox	
-	InStr	
-	IsByRef	
-	IsObject	
+	Abs	Geeft de absolute waarde van het nummer .
+	ASin	Geeft de boogsinus ( het getal waarvan de sinus is Number ) in radialen .
+	ACos	Geeft de boogcosinus ( het getal waarvan de cosinus is Number ) in radialen .
+	Array	Maakt een Array- object .
+	Asc	Geeft het teken code ( een getal tussen 1 en 255 ( in ANSI builds ) of 65.535 ( in Unicode builds ) ) voor het eerste teken in string .
+	ATan	Geeft de boogtangens ( het nummer waarvan de tangens Number ) in radialen .
+	BlockInput	Schakelt het vermogen van de gebruiker om te interageren met de computer via het toetsenbord en de muis .
+	Break	Uitgangen ( beëindigt ) een lus . Geldig binnen elk soort lus .
+	Ceil	Returns Number afgerond op het dichtstbijzijnde gehele getal ( zonder 0,00 achtervoegsel ) .
+	Chr	Geeft als resultaat het teken dat overeenkomt met het karakter code aangegeven met nummer .
+	Click	Klikt op een muisknop op de opgegeven coördinaten . Het kan ook ingedrukt houden van een knop , draai aan het wiel , of verplaatsen .
+	ClipWait	Wacht tot de gegevens van het klembord bevat .
+	Clipboard	Plakt tekst van het klembord
+	ComObjActive	Haalt een geregistreerde COM-object .
+	ComObjArray	Creëert een SAFEARRAY voor gebruik met COM .
+	ComObjConnect	Verbindingen eventbronnen een COM- object in op functies met een bepaalde prefix .
+	ComObjCreate	Maakt een COM-object .
+	ComObjEnwrap / ComObjUnwrap	Wraps / unwraps een COM-object .
+	ComObjError	Schakelt kennisgeving van COM fouten .
+	ComObjFlags	Haalt of veranderingen vlaggen die het gedrag van een COM- wrapper object te controleren .
+	ComObjGet	Retourneert een verwijzing naar een object door een COM- component.
+	ComObjMissing	Creëert een "missing parameter " object doorgeven aan een COM- methode .
+	ComObjParameter	Wraps een waarde en het type door te geven als parameter aan een COM- methode .
+	ComObjQuery	Ondervraagt een COM-object voor een interface of dienst .
+	ComObjType	Haalt soort informatie van een COM-object .
+	ComObjValue	Haalt de waarde of de aanwijzer opgeslagen in een COM- wrapper object.
+	Continue	Slaat de rest van de huidige lus iteratie en begint een nieuwe. Geldig binnen elk soort lus .
+	Control	Maakt een verscheidenheid van veranderingen aan een controle .
+	ControlClick	Stuurt een muisknop of muiswiel evenement aan een controle.
+	ControlEditPaste	Plakt String op het dakje / insert positie in een besturingselement ( dit heeft geen invloed op de inhoud van het klembord ) .
+	ControlFocus	Stelt ingang focus op een bepaalde controle op een venster .
+	ControlGet	Haalt verschillende soorten informatie over een controle.
+	ControlGetFocus	Haalt die controle van de doelgroep venster heeft input focus , indien aanwezig .
+	ControlGetPos	Haalt de positie en grootte van een controle.
+	ControlGetText	Haalt tekst uit een controle.
+	ControlMove	Verplaatst of past de grootte van een controle.
+	ControlSend / ControlSendRaw 	Stuurt gesimuleerde toetsaanslagen naar een raam of controle.
+	ControlSetText	Verandert de tekst van een controle.
+	CoordMode	Sets coördineren modus voor verschillende opdrachten te zijn ten opzichte van zowel het actieve venster of het scherm .
+	Cos	Geeft de trigonometrische cosinus van nummer .
+	Critical	Voorkomt dat de huidige thread van wordt onderbroken door andere threads .
+	DetectHiddenText	Bepaalt of onzichtbare tekst in een venster wordt " gezien" voor het doel van het vinden van het venster . Dit heeft invloed op commando's zoals IfWinExist en WinActivate .
+	DetectHiddenWindows	Bepaalt of onzichtbare vensters worden 'gezien' door het script .
+	DllCall	Roept een functie in een DLL , zoals een standaard Windows API functie .
+	Drive	Werpt / trekt de lade in een cd-of dvd-station , of zet het volume label van een schijf .
+	DriveGet	Haalt verschillende soorten informatie over de schijf van de computer ( s ) .
+	DriveSpaceFree	Haalt de vrije schijfruimte van een station , in megabytes .
+	Edit	Opent het huidige script te bewerken in de bijbehorende editor .
+	Else	Geeft het commando ( s ) uit te voeren als een IF - statement evalueert naar FALSE . Wanneer meer dan een commando aanwezig is , omsluiten ze in een blok ( beugels ) .
+	EnvAdd	Stelt een variabele aan de som van zelf plus de gegeven waarde ( kan ook optellen of aftrekken tijd uit een datum - tijdwaarde ) . Synoniem : Var + = waarde .
+	EnvDiv	Zet een variabele om zichzelf gedeeld door de gegeven waarde . Synoniem : Var / = waarde .
+	EnvGet	Haalt een omgevingsvariabele .
+	EnvMult	Zet een variabele om zichzelf keer de opgegeven waarde . Synoniem : Var * = waarde .
+	EnvSet	Schrijft een waarde aan een variabele die in het milieu .
+	EnvSub	Zet een variabele om zichzelf min de opgegeven waarde ( kan ook datum-tijd waarden te vergelijken ) . Synoniem : Var - = waarde .
+	EnvUpdate	Meldt het besturingssysteem en alle toepassingen die omgeving variabele ( s ) zijn veranderd .
+	Exit	Verlaat de huidige thread of (als het script is niet persistent en bevat geen hotkeys ) het hele script .
+	ExitApp	Beëindigt het script onvoorwaardelijk .
+	Exp	Geeft e ( dat is ongeveer 2,71828182845905 ) verheven tot de macht n .
+	FileAppend	Schrijft tekst aan het einde van een bestand ( het bestand eerst maken , indien nodig) .
+	FileCopy	Kopieën van een of meer bestanden .
+	FileCopyDir	Kopieert een folder samen met alle submappen en bestanden ( vergelijkbaar met xcopy ) .
+	FileCreateDir	Maakt een map .
+	FileCreateShortcut	Creëert een snelkoppeling ( . Lnk -bestand) .
+	FileDelete	Verwijdert een of meer bestanden .
+	FileEncoding	Stelt de standaard codering voor FileRead , FileReadLine , Loop Read , FileAppend en FileOpen .
+	FileInstall	Omvat het opgegeven bestand in de gecompileerde versie van het script .
+	FileGetAttrib	Rapporten of een bestand of map is alleen-lezen , verborgen , enz.
+	FileGetShortcut	Haalt informatie over een snelkoppeling ( . Lnk -bestand) , zoals het doelbestand .
+	FileGetSize	Haalt de grootte van een bestand .
+	FileGetTime	Haalt de datetime stempel van een bestand of map .
+	FileGetVersion	Haalt de versie van een bestand .
+	FileMove	Verplaatst of hernoemt een of meer bestanden .
+	FileMoveDir	Verplaatst een folder samen met alle submappen en bestanden . Het kan ook een map hernoemen .
+	FileOpen	Biedt objectgeoriënteerde file I / O.
+	FileRead	Leest de inhoud van een bestand in een variabele .
+	FileReadLine	Leest de gespecificeerde lijn uit een bestand en slaat de tekst in een variabele .
+	FileRecycle	Stuurt een bestand of map naar de prullenbak , indien mogelijk .
+	FileRecycleEmpty	Leegt de prullenbak .
+	FileRemoveDir	Verwijdert een map .
+	FileSelectFile	Geeft een standaard dialoogvenster waarmee de gebruiker te openen of opslaan file (s ) .
+	FileSelectFolder	Geeft een standaard dialoogvenster waarmee de gebruiker om een map te selecteren .
+	FileSetAttrib	Verandert de eigenschappen van een of meer bestanden of mappen . Wildcards zijn ondersteund .
+	FileSetTime	Verandert de datetime stempel van een of meer bestanden of mappen . Wildcards zijn ondersteund .
+	Floor	Retourneren nummer naar beneden afgerond naar het dichtstbijzijnde gehele getal ( zonder 0,00 achtervoegsel ) .
+	For	Herhaalt een reeks opdrachten een keer voor elke key -value pair in een object .
+	FormatTime	Transformeert een YYYYMMDDHH24MISS timestamp in de opgegeven datum / tijd -formaat .
+	Func	Haalt een verwijzing naar een functie .
+	GetKeyName / GetKeyVK / GetKeySC	Haalt de naam of tekst , virtuele toets code of scan code van een sleutel .
+	GetKeyState	Controleert of een toets op het toetsenbord of de muis / joystick knop omlaag of omhoog . Ook haalt joystick -status .
+	Gosub	Springt naar het opgegeven label en gaat uitvoeren totdat Return wordt aangetroffen .
+	Goto	Springt naar het opgegeven label en gaat uitvoeren .
+	GroupActivate	Activeert het volgende venster in een venster groep die werd gedefinieerd met groupadd .
+	GroupAdd	Voegt een venster specificatie een raam groep , het creëren van de groep indien nodig.
+	GroupClose	Sluit het actieve venster als het alleen werd geactiveerd door GroupActivate of GroupDeactivate . Het activeert vervolgens het volgende venster in de reeks . Het kan ook alle ramen te sluiten in een groep .
+	GroupDeactivate	Vergelijkbaar met GroupActivate behalve activeert het volgende venster niet in de groep .
+	if	Specificeert het commando ( s ) uit te voeren als een vergelijking van een variabele een waarde evalutes WAAR . Wanneer meer dan een commando aanwezig is , omsluiten ze in een blok ( beugels ) .
+	if (expression)	Geeft het commando ( s ) uit te voeren als een expressie evalueert tot TRUE .
+	If var [not] between	Controleert of de inhoud van een variabele zijn numeriek of alfabetisch tussen twee waarden ( inclusief) .
+	If var [not] in/contains MatchList 	Controleert of de inhoud van een variabele overeenkomt met een van de items in een lijst .
+	If var is [not] type	Controleert of de inhoud van een variabele zijn numeriek , hoofdletters , enz.
+	If Clipboard	Controleert of de tekst in het klembord is matchs een opgegeven tekenreeks .
+	If ErrorLevel	Controleert of een bepaald beeld of pixel werd gevonden in het scherm .
+	If A_Index	Gecontroleerd of de huidige lus iteratie matchs een opgegeven een nummer.
+	IfEqual/IfNotEqual	Vergelijkt een variabele om een waarde voor de gelijkheid . Synoniem : indien Var = Waarde | indien Var < > Value .
+	IfExist / IfNotExist / FileExist	Controles voor het bestaan van een bestand of map .
+	IfGreater / IfGreaterOrEqual	Vergelijkt een variabele een waarde . Synoniem : indien Var > Waarde | Als Var > = waarde .
+	IfInString / IfNotInString / InStr	Controleert of een variabele bevat de opgegeven tekenreeks .
+	IfLess / IfLessOrEqual	Vergelijkt een variabele een waarde . Synoniem : indien Var < Waarde | indien Var < = Waarde .
+	IfMsgBox	Controles die knop werd door de gebruiker geduwd tijdens de meest recente MsgBox opdracht .
+	IfWinActive / IfWinNotActive	Controleert of het opgegeven venster bestaat en is momenteel actief ( vooral ) .
+	IfWinExist / IfWinNotExist	Controleert of het opgegeven venster bestaat.
+	ImageSearch	Zoekt een gebied van het scherm voor een afbeelding .
+	IniDelete	Verwijdert een waarde uit een standaard formaat . Ini-bestand .
+	IniRead	Leest een waarde uit een standaard formaat . Ini-bestand .
+	IniWrite	Schrijft een waarde naar een standaard formaat . Ini-bestand .
+	Input	Wacht tot de gebruiker een string ( niet ondersteund op Windows 9x : het doet niets ) typen .
+	InputBox	Geeft een invoerveld aan de gebruiker vragen om een string in te voeren .
+	InStr	Zoekt een bepaalde optreden van een string van links of rechts .
 	)	
 	Ahk_Cmd_Index = %Ahk_Cmd_Index%`n	
 	(LTrim	
-	KeyHistory	
-	KeyWait	
-	Labels	
-	Log	
-	Ln	
-	Loop (normal) 	
-	Loop (files & folders)	
-	Loop (parse a string)	
-	Loop (read file contents)	
-	Loop (registry)	
-	Menu	
-	Mod	
-	MouseClickDrag	
-	MouseGetPos	
-	MouseMove	
-	MsgBox	
-	NumGet	
-	NumPut	
-	OnExit	
-	OnMessage	
-	OutputDebug	
-	Pause	
-	PixelGetColor	
-	PixelSearch	
-	PostMessage	
-	Process	
-	Progress	
-	Random	
-	RegExMatch	
-	RegExReplace	
-	RegDelete	
-	RegRead	
-	RegWrite	
-	RegisterCallback	
-	Return	
-	Round	
-	Run	
-	RunAs	
-	RunWait	
-	Screenshot	
-	Send / SendRaw / SendInput / SendPlay	
-	SendLevel	
-	SendMessage	
-	SendMode	
-	SetCapslockState	
-	SetEnv (Var = Value)	
-	SetFormat	
-	SetKeyDelay	
-	SetMouseDelay	
-	SetNumlockState	
-	SetScrollLockState	
-	SetRegView	
-	Shutdown	
-	Sin	
-	Sleep	
-	Sort	
-	SoundBeep	
-	SoundGet	
-	SoundGetWaveVolume	
-	SoundPlay	
-	SoundSet	
-	SoundSetWaveVolume	
-	SplashImage	
-	SplashTextOn	
-	SplashTextOff	
-	SplitPath	
-	Sqrt	
-	StatusBarGetText	
-	StatusBarWait	
-	StrPut / StrGet	
-	StringCaseSense	
-	StringGetPos / InStr	
-	StringLeft	
-	StringLen / StrLen	
-	StringLower	
-	StringMid / SubStr	
-	StringReplace	
-	StringRight	
-	StringSplit / StrSplit	
-	StringTrimLeft	
-	StringTrimRight	
-	StringUpper	
-	Suspend	
-	SysGet	
-	Tan	
-	ToolTip	
-	Transform	
-	TrayTip	
-	Trim / LTrim / RTrim	
-	Try	
-	Until	
-	UrlDownloadToFile	
-	VarSetCapacity	
-	WinActivate	
-	WinActivateBottom	
-	WinActive	
-	WinClose	
-	WinExist	
-	WinGetActiveStats	
-	WinGetActiveTitle	
-	WinGetClass	
-	WinGet	
-	WinGetPos	
-	WinGetText	
-	WinGetTitle	
-	WinHide	
-	WinKill	
-	WinMaximize	
-	WinMenuSelectItem	
-	WinMinimize	
-	WinMinimizeAll	
-	WinMinimizeAllUndo	
-	WinMove	
-	WinRestore	
-	WinSet	
-	WinSetTitle	
-	WinShow	
-	WinWait	
-	WinWaitActive	
-	WinWaitClose	
-	WinWaitNotActive	
-	)	
+	KeyHistory	Geeft script info en een geschiedenis van de meest recente toetsaanslagen en muisklikken.
+	KeyWait	Wacht op een toets of muis / joystick knop worden vrijgegeven of ingedrukt.
+	Labels	Een label identificeert een regel code, en kan worden gebruikt als een doelwit Goto of een subroutine vormen.
+	Log	Geeft de logaritme (grondtal 10) van het nummer.
+	Ln	Geeft de natuurlijke logaritme (basis e) van Number.
+	Loop (normal) 	Voer een reeks opdrachten herhaaldelijk: ofwel het opgegeven aantal malen of tot breuk wordt aangetroffen.
+	Loop (files & folders)	Haalt de opgegeven bestanden of mappen, een voor een.
+	Loop (parse a string)	Haalt substrings (velden) uit een tekenreeks, een voor een.
+	Loop (read file contents)	Haalt de lijnen in een tekstbestand, een voor een (beter presteert dan FileReadLine).
+	Loop (registry)	Haalt de inhoud van de opgegeven registersubsleutel, een item tegelijk.
+	Menu	Creëert, verwijdert, wijzigt en toont menu's en menu-items. Verandert het pictogram in het systeemvak en de tooltip. Bepaalt of het hoofdvenster van een gecompileerd script kan worden geopend.
+	Mod	Modulo. Geeft de rest wanneer dividend wordt gedeeld door deler.
+	MouseClickDrag	Klikken en houdt de opgegeven muisknop, beweegt de muis naar de bestemming coördinaten, geeft vervolgens de knop.
+	MouseGetPos	Haalt de huidige positie van de muiscursor, en eventueel welk venster en controle wordt zweefde over.
+	MouseMove	Beweegt de muiscursor.
+	MsgBox	Toont de opgegeven tekst in een klein venster met een of meer knoppen (zoals ja en nee).
+	NumGet	Retourneert het binaire getal opgeslagen bij het opgegeven adres + offset.
+	NumPut	Winkels Nummer in binair formaat op het opgegeven adres + offset en het adres terug naar de rechterkant van de punt enkel geschreven.
+	OnExit	Hiermee geeft u een subroutine om automatisch wanneer het script eindigt draaien.
+	OnMessage	Geeft een functie om automatisch te bellen wanneer het script ontvangt de opgegeven boodschap.
+	OutputDebug	Stuurt een string naar de debugger (indien aanwezig) voor weergave.
+	Pause	Pauzeert huidige thread van het script.
+	PixelGetColor	Haalt de kleur van de pixel op de aangegeven x, y coördinaten.
+	PixelSearch	Zoekt een gebied van het scherm een pixel van de opgegeven kleur.
+	PostMessage	Plaatst een bericht in de wachtrij van een raam of controle.
+	Process	Voert een van de volgende bewerkingen op een proces: controleert of het bestaat, verandert haar prioriteit, sluit het, wacht tot het sluiten.
+	Progress	Creëert of updates van een venster met een voortgangsbalk.
+	Random	Genereert een pseudo-willekeurig getal.
+	RegExMatch	Bepaalt of een string bevat een patroon (reguliere expressie).
+	RegExReplace	Vervangt voorkomens van een patroon (reguliere expressie) in een string.
+	RegDelete	Verwijdert een subsleutel of waarde uit het register.
+	RegRead	Leest een waarde uit het register.
+	RegWrite	Schrijft een waarde in het register.
+	RegisterCallback	Maakt een machine-code-adres dat als ze worden opgeroepen, leidt de oproep naar een functie in het script.
+	Return	Keert terug van een subroutine waaraan uitvoering eerder had gesprongen via de functie-oproep, Gosub, Sneltoets activering, GroupActivate, of andere middelen.
+	Round	Als N wordt weggelaten of 0, wordt getal afgerond op het dichtstbijzijnde gehele getal. Als N is positief getal is, wordt nummer afgerond op N decimalen. Als N negatief is, wordt getal afgerond door N cijfers links van de decimale punt.
+	Run	Loopt een extern programma.
+	RunAs	Hiermee geeft u een set van gebruikersgegevens te gebruiken voor alle volgende vormen van gebruik van Run en RunWait. Vereist Windows 2000/XP of hoger.
+	RunWait	Loopt een extern programma en wacht tot het klaar is.
+	Screenshot	Maakt een PNG screenshot van de een gespecificeerde gebied.
+	Send / SendRaw / SendInput / SendPlay	Stuurt gesimuleerde toetsaanslagen en muisklikken om het actieve venster.
+	SendLevel	Controles die kunstmatige toetsenbord en muis gebeurtenissen worden genegeerd door de sneltoetsen en hotstrings.
+	SendMessage	Stuurt een bericht naar een raam of controle en wacht op bevestiging.
+	SendMode	Maakt Stuur synoniem met SendInput of SendPlay plaats van de standaard (sendEvent). Ook maakt Klik en mousemove / Klik / sleep gebruik van de voorgeschreven methode.
+	SetCapslockState	Zet de toestand van de Capslock sleutel. Kan ook dwingen de sleutel aan of uit blijven.
+	SetEnv (Var = Value)	Wijst de opgegeven waarde toe aan een variabele.
+	SetFormat	Stelt het formaat van integers en floating point getallen gegenereerd door wiskundige bewerkingen.
+	SetKeyDelay	Stelt de vertraging die zal plaatsvinden na iedere toetsaanslag die door Send of ControlSend.
+	SetMouseDelay	Stelt de vertraging die zal plaatsvinden na elke muisbeweging of klik.
+	SetNumlockState	Zet de toestand van de Numlock-toets. Kan ook dwingen de sleutel aan of uit blijven.
+	SetScrollLockState	Zet de toestand van de ScrollLock sleutel. Kan ook dwingen de sleutel aan of uit blijven.
+	SetRegView	Laat register commando's in een 32-bits script om toegang te krijgen tot de 64-bit register uitzicht en vice versa.
+	Shutdown	Afgesloten, herstart of afmeldt van het systeem.
+	Sin	Geeft de trigonometrische sinus van nummer.
+	Sleep	Wacht het ingestelde hoeveelheid tijd voordat u verder gaat.
+	Sort	Regelt de inhoud van een variabele in alfabetische, numerieke, of willekeurige volgorde (optioneel verwijderen van duplicaten).
+	SoundBeep	Er klinkt een toon uit de PC speaker.
+	SoundGet	Haalt verschillende instellingen van een geluidsapparaat (master mute, master volume, etc.)
+	SoundGetWaveVolume	Haalt de wave output volume van een geluidsapparaat.
+	SoundPlay	Speelt een geluid, video, of een ander ondersteund bestandstype.
+	SoundSet	Veranderingen verschillende instellingen van een geluidsapparaat (master mute, master volume, etc.)
+	SoundSetWaveVolume	Verandert de wave output volume voor een geluidsapparaat.
+	SplashImage	Creëert of updates van een venster een afbeelding JPG-, GIF-of BMP bevatten.
+	SplashTextOn	Zorgt voor een klantgerichte tekst popup-venster.
+	SplashTextOff	Sluit het bovenstaande venster.
+	SplitPath	Scheidt een bestandsnaam of URL in zijn naam, directory, uitbreiding, en rijden.
+	Sqrt	Geeft de vierkantswortel van het nummer.
+	StatusBarGetText	Haalt de tekst uit een standaard statusbalk controle.
+	StatusBarWait	Wacht tot statusbalk van een venster bevat de opgegeven tekenreeks.
+	StrPut / StrGet	Kopieert een string van of naar een geheugen adres, optioneel te converteren tussen codetabellen.
+	StringCaseSense	Bepaalt of tekenreeksvergelijkingen zijn hoofdlettergevoelig (standaard is "niet hoofdlettergevoelig").
+	StringGetPos / InStr	Haalt de positie van de opgegeven subtekenreeks binnen een string.
+	StringLeft	Haalt een aantal tekens van de linkerzijde van een string.
+	StringLen / StrLen	Haalt de telling van het aantal karakters in een string.
+	StringLower	Zet een tekenreeks naar kleine letters.
+	StringMid / SubStr	Haalt een of meer tekens uit de opgegeven positie in een string.
+	StringReplace	Vervangt het opgegeven subtekenreeks met een nieuwe string.
+	StringRight	Haalt een aantal personages uit de rechterzijde van een string.
+	StringSplit / StrSplit	Scheidt een string in een array van subtekenreeksen met de opgegeven scheidingstekens.
+	StringTrimLeft	Verwijdert een aantal tekens van de linkerzijde van een string.
+	StringTrimRight	Verwijdert een aantal personages uit de rechterzijde van een string.
+	StringUpper	Zet een tekenreeks om in hoofdletters.
+	Suspend	Schakelt alle of geselecteerde sneltoetsen en hotstrings.
+	SysGet	Haalt schermresolutie, multi-monitor info, afmetingen van het systeem objecten, en andere systeemeigenschappen.
+	Tan	Geeft de trigonometrische tangens van nummer.
+	ToolTip	Maakt een always-on-top-venster ergens op het scherm.
+	Transform	Voert diverse wiskundige functies, bitwise operaties en taken zoals ASCII / Unicode conversie.
+	TrayTip	Creëert een ballon bericht venster in de buurt van de tray icon. Vereist Windows 2000/XP of hoger.
+	Trim / LTrim / RTrim	Versieringen bepaalde tekens vanaf het begin en / of einde van een string.
+	Try	Bewakers een of meer verklaringen (opdrachten of uitdrukkingen) tegen runtime fouten en uitzonderingen door de worp commando gegooid.
+	Until	Geldt als voorwaarde voor de voortzetting van een Loop-of Voor-loop.
+	UrlDownloadToFile	Downloadt een bestand van het internet.
+	VarSetCapacity	Vergroot houden capaciteit van een variabele of bevrijdt het geheugen. Normaal, dat is alleen voor de ongewone omstandigheden, zoals DllCall.
+	WinActivate	Activeert het gespecificeerde venster (maakt het belangrijkste).
+	WinActivateBottom	Zelfde als WinActivate behalve dat het activeert de onderste (minst recent actieve) matching venster in plaats van de bovenste.
+	WinActive	Geeft de unieke ID (HWND) van het actieve venster of het overeenkomt met de opgegeven criteria.
+	WinClose	Sluit het opgegeven venster.
+	WinExist	Controleert of het opgegeven venster bestaat.
+	WinGetActiveStats	Combineert de functies van WinGetActiveTitle en WinGetPos in een opdrachtregel.
+	WinGetActiveTitle	Haalt de titel van het actieve venster.
+	WinGetClass	Haalt class naam het opgegeven venster.
+	WinGet	Haalt het opgegeven venster de unieke ID, proces ID, proces naam, of een lijst van haar controles. Het kan ook een lijst van alle vensters die voldoen aan de opgegeven criteria halen.
+	WinGetPos	Haalt de positie en grootte van het opgegeven venster.
+	WinGetText	Haalt de tekst uit het opgegeven venster.
+	WinGetTitle	Haalt de titel van het opgegeven venster.
+	WinHide	Verbergt het opgegeven venster.
+	WinKill	Dwingt het opgegeven venster te sluiten.
+	WinMaximize	Vergroot het gespecificeerde venster op de maximale grootte.
+	WinMenuSelectItem	Roept een menu-item in de menubalk van het opgegeven venster.
+	WinMinimize	Stort het opgegeven venster in een knop op de taakbalk.
+	WinMinimizeAll	Minimaliseert alle vensters.
+	WinMinimizeAllUndo	Draait het effect van een eerdere WinMinimizeAll.
+	WinMove	Verandert de positie en / of de grootte van het opgegeven venster.
+	WinRestore	Unminimizes of unmaximizes het gespecificeerde sluiten indien deze geminimaliseerd of gemaximaliseerd.
+	WinSet	Maakt een aantal veranderingen aan de opgegeven venster, zoals "always on top" en transparantie.
+	WinSetTitle	Verandert de titel van het gespecificeerde venster.
+	WinShow	Zichtbaar maken van de opgegeven venster.
+	WinWait	Wacht tot de opgegeven venster bestaat.
+	WinWaitActive	Wacht tot het opgegeven venster actief is.
+	WinWaitClose	Wacht tot de opgegeven venster niet bestaat.
+	WinWaitNotActive	Wacht tot het opgegeven venster niet actief is.
+	)	...
 return		

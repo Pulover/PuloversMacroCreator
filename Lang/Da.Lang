@@ -1055,250 +1055,248 @@
 ; AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	(LTrim	
-	Abs	
-	ASin	
-	ACos	
-	Array	
-	Asc	
-	ATan	
-	BlockInput	
-	Break	
-	Ceil	
-	Chr	
-	Click	
-	ClipWait	
-	Clipboard	
-	ComObjActive	
-	ComObjArray	
-	ComObjConnect	
-	ComObjCreate	
-	ComObjEnwrap / ComObjUnwrap	
-	ComObjError	
-	ComObjFlags	
-	ComObjGet	
-	ComObjMissing	
-	ComObjParameter	
-	ComObjQuery	
-	ComObjType	
-	ComObjValue	
-	Continue	
-	Control	
-	ControlClick	
-	ControlEditPaste	
-	ControlFocus	
-	ControlGet	
-	ControlGetFocus	
-	ControlGetPos	
-	ControlGetText	
-	ControlMove	
-	ControlSend / ControlSendRaw 	
-	ControlSetText	
-	CoordMode	
-	Cos	
-	Critical	
-	DetectHiddenText	
-	DetectHiddenWindows	
-	DllCall	
-	Drive	
-	DriveGet	
-	DriveSpaceFree	
-	Edit	
-	Else	
-	EnvAdd	
-	EnvDiv	
-	EnvGet	
-	EnvMult	
-	EnvSet	
-	EnvSub	
-	EnvUpdate	
-	Exit	
-	ExitApp	
-	Exp	
-	FileAppend	
-	FileCopy	
-	FileCopyDir	
-	FileCreateDir	
-	FileCreateShortcut	
-	FileDelete	
-	FileEncoding	
-	FileInstall	
-	FileGetAttrib	
-	FileGetShortcut	
-	FileGetSize	
-	FileGetTime	
-	FileGetVersion	
-	FileMove	
-	FileMoveDir	
-	FileOpen	
-	FileRead	
-	FileReadLine	
-	FileRecycle	
-	FileRecycleEmpty	
-	FileRemoveDir	
-	FileSelectFile	
-	FileSelectFolder	
-	FileSetAttrib	
-	FileSetTime	
-	Floor	
-	For	
-	FormatTime	
-	Func	
-	GetKeyName / GetKeyVK / GetKeySC	
-	GetKeyState	
-	Gosub	
-	Goto	
-	GroupActivate	
-	GroupAdd	
-	GroupClose	
-	GroupDeactivate	
-	if	
-	if (expression)	
-	If var [not] between	
-	If var [not] in/contains MatchList 	
-	If var is [not] type	
-	If Clipboard	
-	If ErrorLevel	
-	If A_Index	
-	IfEqual/IfNotEqual	
-	IfExist / IfNotExist / FileExist	
-	IfGreater / IfGreaterOrEqual	
-	IfInString / IfNotInString / InStr	
-	IfLess / IfLessOrEqual	
-	IfMsgBox	
-	IfWinActive / IfWinNotActive	
-	IfWinExist / IfWinNotExist	
-	ImageSearch	
-	IniDelete	
-	IniRead	
-	IniWrite	
-	Input	
-	InputBox	
-	InStr	
-	IsByRef	
-	IsObject	
+	Abs	Returnerer den absolutte værdi af nummer.
+	ASin	Returnerer arcus sinus (antallet , hvis sinus er Tal ) i radianer .
+	ACos	Returnerer arccosinus (antallet hvis cosinus er Tal ) i radianer .
+	Array	Opretter et Array objekt.
+	Asc	Giver tegnkoden ( et tal mellem 1 og 255 ( i ANSI builds ) eller 65535 ( i Unicode builds ) ) for det første tegn i String .
+	ATan	Returnerer arcus (antallet , hvis tangens er Number) i radianer .
+	BlockInput	Deaktiverer eller muliggør brugerens evne til at interagere med computeren via tastatur og mus .
+	Break	Udgange ( slutter ) en løkke. Gyldige inden enhver form for løkke .
+	Ceil	Retur nummer rundet op til nærmeste hele tal (uden nogen .00 suffix ) .
+	Chr	Returnerer enkelt tegn , der svarer til karakteren angivet af nummer.
+	Click	Klikker på en museknap på de angivne koordinater. Det kan også holde en knap, og drej rattet , eller flytte .
+	ClipWait	Venter, indtil klippebordet indeholder data.
+	Clipboard	Indsætter tekst fra klippebordet
+	ComObjActive	Henter en registreret COM objekt.
+	ComObjArray	Opretter en SAFEARRAY til brug med COM.
+	ComObjConnect	Tilslutter et COM objekts event kilder til funktioner med en given præfiks.
+	ComObjCreate	Opretter et COM-objekt .
+	ComObjEnwrap / ComObjUnwrap	Wraps / unwraps et COM-objekt .
+	ComObjError	Aktiverer eller deaktiverer meddelelse COM fejl.
+	ComObjFlags	Henter eller ændrer flag , der styrer en COM wrapper objekt adfærd.
+	ComObjGet	Returnerer en reference til et objekt fra en COM komponent .
+	ComObjMissing	Opretter en "missing parameter " objekt til at passere til en COM -metoden.
+	ComObjParameter	Wraps en værdi og type til at passere som en parameter til en COM metode .
+	ComObjQuery	Forespørger et COM-objekt for en grænseflade eller service.
+	ComObjType	Henter typen information fra et COM-objekt .
+	ComObjValue	Henter værdi eller pointer gemt i en COM wrapper objekt.
+	Continue	Springer resten af strømsløjfen iteration og begynder en ny. Gyldige inden enhver form for løkke .
+	Control	Gør en række ændringer til en kontrol.
+	ControlClick	Sender en museknap eller musehjulet begivenhed til en kontrol.
+	ControlEditPaste	Pastaer String på indsætningstegn / indsæt position i et Edit kontrol ( dette påvirker ikke indholdet af klippebordet ) .
+	ControlFocus	Indstiller input fokus til en given kontrol på et vindue .
+	ControlGet	Henter forskellige typer oplysninger om en kontrol.
+	ControlGetFocus	Henter , der styrer af målet vinduet har input fokus , hvis nogen.
+	ControlGetPos	Henter positionen og størrelsen af en kontrol.
+	ControlGetText	Henter tekst fra en kontrol.
+	ControlMove	Flytter eller ændrer størrelse på en kontrol.
+	ControlSend / ControlSendRaw 	Sender simulerede tastetryk til et vindue eller kontrol.
+	ControlSetText	Ændrer teksten til en kontrol.
+	CoordMode	Indstiller koordinere mode for forskellige kommandoer at være relativ til enten det aktive vindue eller skærmen.
+	Cos	Returnerer den trigonometriske cosinus af Tal .
+	Critical	Forhindrer aktuelle tråd fra at blive afbrudt af andre tråde .
+	DetectHiddenText	Afgør, om usynlige tekst i et vindue "ses " med henblik på at finde vinduet. Dette påvirker kommandoer såsom IfWinExist og WinActivate .
+	DetectHiddenWindows	Bestemmer om usynlige vinduer er " set" af scriptet .
+	DllCall	Kalder en funktion inde en DLL , såsom en standard Windows API-funktionen .
+	Drive	Skubber / trækker bakkens i en cd- eller dvd-drev , eller sætter et drev volumen etiket.
+	DriveGet	Henter forskellige oplysninger om computerens drev ( r) .
+	DriveSpaceFree	Henter den frie diskplads af et drev , i megabyte .
+	Edit	Åbner det aktuelle script til redigering i den tilhørende editor.
+	Else	Angiver kommandoen ( s) til at udføre, hvis en IF -sætning evalueres til FALSK . Når mere end én kommando er til stede, vedlægge dem i en blok ( seler ) .
+	EnvAdd	Sætter en variabel til summen af sig selv plus given værdi ( kan også tilføje eller trække tid fra en dato - tidsværdi ) . Synonymt med : Var + = Værdi .
+	EnvDiv	Sætter en variabel til sig selv divideret med den givne værdi . Synonymt med : Var / = Værdi .
+	EnvGet	Henter en miljøvariabel .
+	EnvMult	Sætter en variabel til selv gange den givne værdi . Synonymt med : Var * = Værdi .
+	EnvSet	Skriver en værdi til en variabel indeholdt i miljøet .
+	EnvSub	Sætter en variabel til sig selv minus given værdi ( kan også sammenligne date -time værdier). Synonymt med : Var - = Værdi .
+	EnvUpdate	Meddeler OS og alle de kørende programmer, som miljøvariabel (r) er ændret.
+	Exit	Afslutter aktuelle tråd , eller ( hvis scriptet ikke er vedvarende , og indeholder ingen genvejstaster ) hele scriptet .
+	ExitApp	Afslutter scriptet betingelsesløst.
+	Exp	Returnerer e ( der er ca 2,71828182845905 ) opløftet til n'te potens .
+	FileAppend	Skriver tekst til slutningen af en fil (første opretter filen , hvis det er nødvendigt ) .
+	FileCopy	Kopierer en eller flere filer.
+	FileCopyDir	Kopierer en mappe sammen med alle dens undermapper og filer (svarende til xcopy ) .
+	FileCreateDir	Opretter en mappe.
+	FileCreateShortcut	Opretter en genvej ( . LNK fil) .
+	FileDelete	Sletter en eller flere filer.
+	FileEncoding	Indstiller standard kodning for FileRead , FileReadLine , Loop Læs , FileAppend og FileOpen .
+	FileInstall	Inkluderer den angivne fil inde kompileret version af scriptet .
+	FileGetAttrib	Rapporter om en fil eller mappe er read -only , skjulte , etc.
+	FileGetShortcut	Henter oplysninger om en genvej ( . LNK -fil), som sit mål -fil.
+	FileGetSize	Henter størrelsen på en fil .
+	FileGetTime	Henter den datetime præg af en fil eller mappe .
+	FileGetVersion	Henter version af en fil.
+	FileMove	Flytter eller omdøber en eller flere filer.
+	FileMoveDir	Flytter en mappe sammen med alle dens undermapper og filer. Det kan også omdøbe en mappe .
+	FileOpen	Giver objektorienteret fil I / O.
+	FileRead	Læser en fils indhold i en variabel.
+	FileReadLine	Læser den angivne linje fra en fil og gemmer teksten i en variabel.
+	FileRecycle	Sender en fil eller mappe til papirkurven , hvis det er muligt .
+	FileRecycleEmpty	Tømmer papirkurven .
+	FileRemoveDir	Sletter en mappe.
+	FileSelectFile	Viser en standard dialogboks , der giver brugeren mulighed for at åbne eller gemme filen (erne).
+	FileSelectFolder	Viser en standard dialogboks , der giver brugeren mulighed for at vælge en mappe .
+	FileSetAttrib	Ændrer de attributter af en eller flere filer eller mapper . Wildcards er understøttet.
+	FileSetTime	Ændrer datetime stempel en eller flere filer eller mapper . Wildcards er understøttet.
+	Floor	Retur nummer rundet ned til nærmeste hele tal (uden nogen .00 suffix ) .
+	For	Gentager en række kommandoer én gang for hver nøgleværdi par i et objekt.
+	FormatTime	Forvandler en YYYYMMDDHH24MISS tidsstempel ind i den angivne dato / tid format.
+	Func	Henter en henvisning til en funktion .
+	GetKeyName / GetKeyVK / GetKeySC	Henter navn eller tekst, virtuel tast kode eller scan koden på en tast.
+	GetKeyState	Tjekker, om et tastatur nøgle eller mus / joystick knap er ned eller op . Henter også joystick status .
+	Gosub	Springer til den angivne label og fortsætter fuldbyrdelsen, indtil Return er stødt .
+	Goto	Springer til den angivne label og fortsætter henrettelse.
+	GroupActivate	Aktiverer næste vindue i et vindue gruppe, der blev defineret med groupadd .
+	GroupAdd	Tilføjer et vindue specifikation til et vindue gruppe , skaber gruppen, hvis det er nødvendigt.
+	GroupClose	Lukker det aktive vindue, hvis det bare blev aktiveret ved GroupActivate eller GroupDeactivate . Det aktiverer derefter den næste vindue i rækken . Det kan også lukke alle vinduer i en gruppe.
+	GroupDeactivate	Svarende til GroupActivate undtagen aktiverer den næste vinduet ikke i gruppen.
+	if	Angiver kommandoen ( r) at udføre, hvis sammenligningen af en variabel til en værdi evalutes til TRUE . Når mere end én kommando er til stede, vedlægge dem i en blok ( seler ) .
+	if (expression)	Angiver kommandoen ( s) til at udføre, hvis et udtryk evalueres til SAND .
+	If var [not] between	Kontrollerer, om en variabels indhold er numerisk eller alfabetisk mellem to værdier ( inklusive).
+	If var [not] in/contains MatchList 	Kontrollerer, om en variabels indhold matcher et af elementerne på en liste.
+	If var is [not] type	Kontrollerer , om en variabels indhold er numerisk , store osv.
+	If Clipboard	Kontrollerer om Udklipsholder teksten kampe den angivne streng .
+	If ErrorLevel	Tjekker, om en bestemt billede eller pixel blev fundet i skærmen.
+	If A_Index	Kontrollerer om den aktuelle løkke iteration kampe et angivet et nummer.
+	IfEqual/IfNotEqual	Sammenligner en variabel til en værdi for ligestilling . Synonymt med : Hvis Var = Værdi | hvis Var < > Value .
+	IfExist / IfNotExist / FileExist	Kontrollerer eksistensen af en fil eller mappe .
+	IfGreater / IfGreaterOrEqual	Sammenligner en variabel til en værdi . Synonymt med : Hvis Var> Value | hvis Var> = Værdi .
+	IfInString / IfNotInString / InStr	Tjekker, om en variabel indeholder den angivne streng .
+	IfLess / IfLessOrEqual	Sammenligner en variabel til en værdi . Synonymt med : Hvis Var < Value | hvis Var < = Værdi .
+	IfMsgBox	Kontrol, som tastetryk af brugeren under det seneste MsgBox kommando.
+	IfWinActive / IfWinNotActive	Kontrollerer om den angivne vindue eksisterer og er aktiv i øjeblikket (den forreste ) .
+	IfWinExist / IfWinNotExist	Kontrollerer om den angivne vindue eksisterer.
+	ImageSearch	Søger en region af skærmen for et billede .
+	IniDelete	Sletter en værdi fra et standardformat . Ini -filen .
+	IniRead	Læser en værdi fra et standardformat . Ini -filen .
+	IniWrite	Skriver en værdi til et standardformat . Ini -filen .
+	Input	Waits for brugeren at indtaste en streng ( understøttes ikke på Windows 9x : det gør ikke noget ) .
+	InputBox	Viser en tekstboks til at bede brugeren om at indtaste en streng.
+	InStr	Søger efter en given forekomst af en streng , fra venstre eller højre.
 	)	
 	Ahk_Cmd_Index = %Ahk_Cmd_Index%`n	
 	(LTrim	
-	KeyHistory	
-	KeyWait	
-	Labels	
-	Log	
-	Ln	
-	Loop (normal) 	
-	Loop (files & folders)	
-	Loop (parse a string)	
-	Loop (read file contents)	
-	Loop (registry)	
-	Menu	
-	Mod	
-	MouseClickDrag	
-	MouseGetPos	
-	MouseMove	
-	MsgBox	
-	NumGet	
-	NumPut	
-	OnExit	
-	OnMessage	
-	OutputDebug	
-	Pause	
-	PixelGetColor	
-	PixelSearch	
-	PostMessage	
-	Process	
-	Progress	
-	Random	
-	RegExMatch	
-	RegExReplace	
-	RegDelete	
-	RegRead	
-	RegWrite	
-	RegisterCallback	
-	Return	
-	Round	
-	Run	
-	RunAs	
-	RunWait	
-	Screenshot	
-	Send / SendRaw / SendInput / SendPlay	
-	SendLevel	
-	SendMessage	
-	SendMode	
-	SetCapslockState	
-	SetEnv (Var = Value)	
-	SetFormat	
-	SetKeyDelay	
-	SetMouseDelay	
-	SetNumlockState	
-	SetScrollLockState	
-	SetRegView	
-	Shutdown	
-	Sin	
-	Sleep	
-	Sort	
-	SoundBeep	
-	SoundGet	
-	SoundGetWaveVolume	
-	SoundPlay	
-	SoundSet	
-	SoundSetWaveVolume	
-	SplashImage	
-	SplashTextOn	
-	SplashTextOff	
-	SplitPath	
-	Sqrt	
-	StatusBarGetText	
-	StatusBarWait	
-	StrPut / StrGet	
-	StringCaseSense	
-	StringGetPos / InStr	
-	StringLeft	
-	StringLen / StrLen	
-	StringLower	
-	StringMid / SubStr	
-	StringReplace	
-	StringRight	
-	StringSplit / StrSplit	
-	StringTrimLeft	
-	StringTrimRight	
-	StringUpper	
-	Suspend	
-	SysGet	
-	Tan	
-	ToolTip	
-	Transform	
-	TrayTip	
-	Trim / LTrim / RTrim	
-	Try	
-	Until	
-	UrlDownloadToFile	
-	VarSetCapacity	
-	WinActivate	
-	WinActivateBottom	
-	WinActive	
-	WinClose	
-	WinExist	
-	WinGetActiveStats	
-	WinGetActiveTitle	
-	WinGetClass	
-	WinGet	
-	WinGetPos	
-	WinGetText	
-	WinGetTitle	
-	WinHide	
-	WinKill	
-	WinMaximize	
-	WinMenuSelectItem	
-	WinMinimize	
-	WinMinimizeAll	
-	WinMinimizeAllUndo	
-	WinMove	
-	WinRestore	
-	WinSet	
-	WinSetTitle	
-	WinShow	
-	WinWait	
-	WinWaitActive	
-	WinWaitClose	
-	WinWaitNotActive	
-	)	
+	KeyHistory	Viser script info og en historie af de seneste tastetryk og museklik.
+	KeyWait	Venter en nøgle eller mus / joystick knappen til at blive frigivet eller presses ned.
+	Labels	En etiket identificerer en linje kode, og kan bruges som en Goto mål eller til dannelse af en subrutine.
+	Log	Returnerer logaritme (basis 10) i nummer.
+	Ln	Returnerer den naturlige logaritme (base e) nummer.
+	Loop (normal) 	Udføre en række kommandoer gentagne gange: enten angivne antal gange, eller indtil pause stødt.
+	Loop (files & folders)	Henter de angivne filer eller mapper, en ad gangen.
+	Loop (parse a string)	Henter delstrenge (felter) fra en streng, en ad gangen.
+	Loop (read file contents)	Henter linjerne i en tekstfil, en ad gangen (præsterer bedre end FileReadLine).
+	Loop (registry)	Henter indholdet af den angivne undernøgle i registreringsdatabasen, et element ad gangen.
+	Menu	Opretter, sletter, ændrer og viser menuer og menupunkter. Ændrer ikonen og dens tooltip. Styrer om hovedvinduet i en kompileret script kan åbnes.
+	Mod	Modulo. Returnerer resten, når Udbytte divideret med Divisor.
+	MouseClickDrag	Klik og holder den specificerede museknap, flytter musen til destinationen koordinater, frigiver så knappen.
+	MouseGetPos	Henter den aktuelle position af musemarkøren, og eventuelt hvilket vindue og kontrol er det svæver over.
+	MouseMove	Flytter musemarkøren.
+	MsgBox	Viser den angivne tekst i et lille vindue, der indeholder en eller flere knapper (såsom Ja og Nej).
+	NumGet	Returnerer det binære tal er gemt på den angivne adresse + offset.
+	NumPut	Butikker Antal i binært format på den angivne adresse + offset og returnerer adressen til højre for elementet lige skrevet.
+	OnExit	Angiver en subrutine til at køre automatisk, når scriptet afslutter.
+	OnMessage	Angiver en funktion til at kalde automatisk, når scriptet modtager den angivne meddelelse.
+	OutputDebug	Sender en streng til debugger (hvis nogen) til visning.
+	Pause	Pauser scriptet aktuelle tråd.
+	PixelGetColor	Henter farven af pixel på den angivne x, y-koordinater.
+	PixelSearch	Søger en region af skærmen i en pixel af den angivne farve.
+	PostMessage	Placerer et budskab i beskeden kø af et vindue eller kontrol.
+	Process	Udfører en af følgende handlinger på en proces: tjekker om den eksisterer, ændrer prioritet; lukker det, venter det til at lukke.
+	Progress	Opretter eller opdaterer et vindue med en statuslinje.
+	Random	Genererer en pseudo-tilfældigt tal.
+	RegExMatch	Afgør, om en streng indeholder et mønster (regulært udtryk).
+	RegExReplace	Erstatter forekomster af et mønster (regulært udtryk) inde i en streng.
+	RegDelete	Sletter en undernøgleindstillingen eller værdi fra registreringsdatabasen.
+	RegRead	Læser en værdi fra registreringsdatabasen.
+	RegWrite	Skriver en værdi i registreringsdatabasen.
+	RegisterCallback	Opretter en maskin-kode, adresse, når du kalder, omdirigerer opkaldet til en funktion i scriptet.
+	Return	Returnerer fra en subrutine, som henrettelse tidligere havde sprunget via funktions-opkald, gosub, Genvejstast aktivering, GroupActivate eller andre midler.
+	Round	Hvis N udelades eller 0, Antal afrundes til nærmeste hele tal. Hvis N er positivt tal, Antal afrundes til N decimaler. Hvis N er negativ, Number afrundet med N cifre til venstre for decimaltegnet.
+	Run	Kører et eksternt program.
+	RunAs	Angiver et sæt brugerlegitimationsoplysninger til brug for alle efterfølgende anvendelser af Run-og RunWait. Kræver Windows 2000/XP eller nyere.
+	RunWait	Kører et eksternt program, og venter, indtil den er færdig.
+	Screenshot	Opretter en PNG skærmbillede af et specificeret område.
+	Send / SendRaw / SendInput / SendPlay	Sender simulerede tastetryk og museklik til det aktive vindue.
+	SendLevel	Controls som kunstige tastatur og mus begivenheder ignoreret af genvejstaster og hotstrings.
+	SendMessage	Sender en besked til et vindue eller kontrol og venter på anerkendelse.
+	SendMode	Gør Send synonymt med SendInput eller SendPlay snarere end standard (sendEvent). Også gør Klik og mouseMove / Klik / Træk bruge den angivne metode.
+	SetCapslockState	Indstiller tilstand Capslock tasten. Kan også tvinge nøglen til at blive på eller fra.
+	SetEnv (Var = Value)	Tildeler den angivne værdi til en variabel.
+	SetFormat	Indstiller formatet af heltal og floating point tal genereret af matematiske operationer.
+	SetKeyDelay	Indstiller forsinkelse, som vil opstå efter hvert tastetryk sendes af Send eller ControlSend.
+	SetMouseDelay	Indstiller forsinkelse, som vil opstå efter hver mus bevægelse eller klik på.
+	SetNumlockState	Indstiller tilstand Numlock-tasten. Kan også tvinge nøglen til at blive på eller fra.
+	SetScrollLockState	Indstiller tilstand ScrollLock tasten. Kan også tvinge nøglen til at blive på eller fra.
+	SetRegView	Giver indskrive kommandoer i en 32-bit script at få adgang til 64-bit register visning og vice versa.
+	Shutdown	Lukker, genstarter eller logger af systemet.
+	Sin	Returnerer den trigonometriske sinus af nummer.
+	Sleep	Venter den angivne mængde tid, før du fortsætter.
+	Sort	Arrangerer en variabels indhold i alfabetisk, numerisk eller tilfældig rækkefølge (eventuelt fjernelse dubletter).
+	SoundBeep	Udsender en tone fra pc'en højttaler.
+	SoundGet	Henter forskellige indstillinger fra en lydenhed (master mute, master volume, etc.)
+	SoundGetWaveVolume	Henter den bølge output volumen fra en lyd-enhed.
+	SoundPlay	Afspiller en lyd, video eller andet understøttet filtype.
+	SoundSet	Ændringer forskellige indstillinger af en lyd-enhed (master mute, master volume, etc.)
+	SoundSetWaveVolume	Ændrer den bølge lydstyrken for en lyd-enhed.
+	SplashImage	Opretter eller opdaterer et vindue med en JPG, GIF eller BMP billede.
+	SplashTextOn	Opretter en tilpasselig tekst popup-vinduet.
+	SplashTextOff	Lukker vinduet herover.
+	SplitPath	Adskiller et filnavn eller URL ind sit navn, bibliotek, udvidelse og drive.
+	Sqrt	Returnerer kvadratroden af nummer.
+	StatusBarGetText	Henter tekst fra en standard statuslinjen kontrol.
+	StatusBarWait	Venter, indtil et vindue statuslinje indeholder den angivne streng.
+	StrPut / StrGet	Kopierer en streng til eller fra en hukommelse adresse, valgfri konvertere den mellem kode sider.
+	StringCaseSense	Bestemmer, om strengen sammenligninger er små bogstaver (standard er "ikke små bogstaver").
+	StringGetPos / InStr	Henter position angiven streng i en streng.
+	StringLeft	Henter en række tegn fra venstre side af en streng.
+	StringLen / StrLen	Henter optælling af hvor mange tegn i en streng.
+	StringLower	Konverterer en streng til små bogstaver.
+	StringMid / SubStr	Henter et eller flere tegn fra den angivne position i en streng.
+	StringReplace	Erstatter det angivne delstreng med en ny streng.
+	StringRight	Henter en række tegn fra højre side af en streng.
+	StringSplit / StrSplit	Adskiller en streng i et array af delstrenge hjælp de angivne delimiters.
+	StringTrimLeft	Fjerner et antal tegn fra venstre side af en streng.
+	StringTrimRight	Fjerner et antal tegn fra højre side af en streng.
+	StringUpper	Konverterer en streng til store bogstaver.
+	Suspend	Deaktiverer eller aktiverer alle eller udvalgte genvejstaster og hotstrings.
+	SysGet	Henter skærmopløsning, multi-monitor info, dimensioner systemets objekter og andre system egenskaber.
+	Tan	Returnerer den trigonometriske tangens af nummer.
+	ToolTip	Opretter en altid-on-top vinduet vilkårligt sted på skærmen.
+	Transform	Udfører diverse matematiske funktioner, bitvise operationer og opgaver såsom ASCII / Unicode konvertering.
+	TrayTip	Opretter en ballon besked vindue i nærheden ikonen. Kræver Windows 2000/XP eller nyere.
+	Trim / LTrim / RTrim	Trims visse tegn fra begyndelsen og / eller slutningen af en streng.
+	Try	Guards én eller flere udsagn (kommandoer eller udtryk) mod runtime fejl og undtagelser kastet af kast kommando.
+	Until	Anvender en betingelse for videreførelse af en Loop eller For-løkke.
+	UrlDownloadToFile	Downloader en fil fra internettet.
+	VarSetCapacity	Forstørrer en variabels bedrift kapacitet eller frigør sin hukommelse. Normalt er dette kun nødvendigt for usædvanlige omstændigheder, såsom DllCall.
+	WinActivate	Aktiverer den angivne vindue (gør det forreste).
+	WinActivateBottom	Samme som WinActivate bortset fra at det aktiverer den nederste (mindst nylig aktiv) matchende vindue snarere end den øverste.
+	WinActive	Returnerer Unikt ID (HWND) af det aktive vindue, hvis det matcher de angivne kriterier.
+	WinClose	Lukker angivne vindue.
+	WinExist	Kontrollerer om den angivne vindue eksisterer.
+	WinGetActiveStats	Kombinerer funktionerne fra WinGetActiveTitle og WinGetPos i én kommando.
+	WinGetActiveTitle	Henter titlen på den aktive vindue.
+	WinGetClass	Henter den angivne vindue klasse navn.
+	WinGet	Henter den angivne vindue unikke id, proces-id, proces navn eller en liste over sine kontroller. Det kan også hente en liste over alle vinduer der matcher de angivne kriterier.
+	WinGetPos	Henter positionen og størrelsen af den angivne vindue.
+	WinGetText	Henter teksten fra angivne vindue.
+	WinGetTitle	Henter titlen på den angivne vindue.
+	WinHide	Skjuler angivne vinduet.
+	WinKill	Tvinger den angivne vinduet for at lukke.
+	WinMaximize	Forstørrer angivne vindue til dets maksimale størrelse.
+	WinMenuSelectItem	Starter et menupunkt fra menulinjen i angivne vindue.
+	WinMinimize	Skjuler det angivne vindue i en knap på proceslinjen.
+	WinMinimizeAll	Minimerer alle vinduer.
+	WinMinimizeAllUndo	Vender effekt af en tidligere WinMinimizeAll.
+	WinMove	Ændrer position og / eller størrelsen af den angivne vindue.
+	WinRestore	Unminimizes eller unmaximizes det angivne vindue, hvis det er minimeret eller maksimeret.
+	WinSet	Gør en række ændringer i den angivne vindue, såsom "always on top" og gennemsigtighed.
+	WinSetTitle	Ændrer titlen på den angivne vindue.
+	WinShow	Unhides den angivne vinduet.
+	WinWait	Venter, indtil den angivne vindue eksisterer.
+	WinWaitActive	Venter, indtil den angivne vindue er aktivt.
+	WinWaitClose	Venter, indtil den angivne vindue ikke eksisterer.
+	WinWaitNotActive	Venter, indtil den angivne vinduet ikke er aktivt.
+	)	...
 return		

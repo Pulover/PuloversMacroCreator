@@ -1055,250 +1055,248 @@
 ; AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	(LTrim	
-	Abs	
-	ASin	
-	ACos	
-	Array	
-	Asc	
-	ATan	
-	BlockInput	
-	Break	
-	Ceil	
-	Chr	
-	Click	
-	ClipWait	
-	Clipboard	
-	ComObjActive	
-	ComObjArray	
-	ComObjConnect	
-	ComObjCreate	
-	ComObjEnwrap / ComObjUnwrap	
-	ComObjError	
-	ComObjFlags	
-	ComObjGet	
-	ComObjMissing	
-	ComObjParameter	
-	ComObjQuery	
-	ComObjType	
-	ComObjValue	
-	Continue	
-	Control	
-	ControlClick	
-	ControlEditPaste	
-	ControlFocus	
-	ControlGet	
-	ControlGetFocus	
-	ControlGetPos	
-	ControlGetText	
-	ControlMove	
-	ControlSend / ControlSendRaw 	
-	ControlSetText	
-	CoordMode	
-	Cos	
-	Critical	
-	DetectHiddenText	
-	DetectHiddenWindows	
-	DllCall	
-	Drive	
-	DriveGet	
-	DriveSpaceFree	
-	Edit	
-	Else	
-	EnvAdd	
-	EnvDiv	
-	EnvGet	
-	EnvMult	
-	EnvSet	
-	EnvSub	
-	EnvUpdate	
-	Exit	
-	ExitApp	
-	Exp	
-	FileAppend	
-	FileCopy	
-	FileCopyDir	
-	FileCreateDir	
-	FileCreateShortcut	
-	FileDelete	
-	FileEncoding	
-	FileInstall	
-	FileGetAttrib	
-	FileGetShortcut	
-	FileGetSize	
-	FileGetTime	
-	FileGetVersion	
-	FileMove	
-	FileMoveDir	
-	FileOpen	
-	FileRead	
-	FileReadLine	
-	FileRecycle	
-	FileRecycleEmpty	
-	FileRemoveDir	
-	FileSelectFile	
-	FileSelectFolder	
-	FileSetAttrib	
-	FileSetTime	
-	Floor	
-	For	
-	FormatTime	
-	Func	
-	GetKeyName / GetKeyVK / GetKeySC	
-	GetKeyState	
-	Gosub	
-	Goto	
-	GroupActivate	
-	GroupAdd	
-	GroupClose	
-	GroupDeactivate	
-	if	
-	if (expression)	
-	If var [not] between	
-	If var [not] in/contains MatchList 	
-	If var is [not] type	
-	If Clipboard	
-	If ErrorLevel	
-	If A_Index	
-	IfEqual/IfNotEqual	
-	IfExist / IfNotExist / FileExist	
-	IfGreater / IfGreaterOrEqual	
-	IfInString / IfNotInString / InStr	
-	IfLess / IfLessOrEqual	
-	IfMsgBox	
-	IfWinActive / IfWinNotActive	
-	IfWinExist / IfWinNotExist	
-	ImageSearch	
-	IniDelete	
-	IniRead	
-	IniWrite	
-	Input	
-	InputBox	
-	InStr	
-	IsByRef	
-	IsObject	
+	Abs	Devuelve el valor absoluto del número .
+	ASin	Devuelve el arco seno (el número cuyo seno es Number) en radianes.
+	ACos	Devuelve el arco coseno (el número cuyo coseno es número) en radianes.
+	Array	Crea un objeto Array.
+	Asc	Devuelve el código de caracteres (un número entre 1 y 255 ( en ANSI compilaciones ) o 65.535 ( en las versiones Unicode) ) para el primer carácter en cadena.
+	ATan	Devuelve el arco tangente (el número cuya tangente es número) en radianes.
+	BlockInput	Activa o desactiva la capacidad del usuario para interactuar con el ordenador a través del teclado y el ratón.
+	Break	Sale ( termina ) un bucle. Válido dentro de cualquier tipo de bucle.
+	Ceil	Devuelve Número redondeado al número entero más próximo ( sin sufijo .00 ) .
+	Chr	Devuelve el carácter único correspondiente al código de caracteres indicado por Número .
+	Click	Hace clic con el botón del ratón en las coordenadas especificadas . También puede mantener pulsado un botón , gire la rueda , o mover.
+	ClipWait	Espera hasta que el portapapeles contiene datos.
+	Clipboard	Pega el texto del portapapeles
+	ComObjActive	Recupera un objeto COM registrado.
+	ComObjArray	Crea un SAFEARRAY para su uso con COM .
+	ComObjConnect	Conexiones fuentes de eventos de un objeto COM de funciones con un prefijo dado.
+	ComObjCreate	Crea un objeto COM .
+	ComObjEnwrap / ComObjUnwrap	Wraps / desenvuelve un objeto COM .
+	ComObjError	Activa o desactiva la notificación de errores de COM .
+	ComObjFlags	Recupera o cambios de banderas que controlan el comportamiento de un objeto contenedor COM .
+	ComObjGet	Devuelve una referencia a un objeto proporcionado por un componente COM .
+	ComObjMissing	Crea un objeto " falta parámetro " pasar a un método COM .
+	ComObjParameter	Envuelve un valor y tipo para pasar como parámetro a un método COM .
+	ComObjQuery	Consulta un objeto COM para una interfaz o servicio.
+	ComObjType	Recupera la información de tipo de un objeto COM .
+	ComObjValue	Recupera el valor o el puntero almacenado en un objeto contenedor COM .
+	Continue	Omite el resto de la corriente de bucle de iteración y comienza una nueva. Válido dentro de cualquier tipo de bucle.
+	Control	Hace una variedad de cambios en un control.
+	ControlClick	Envía un botón de ratón o de rueda del ratón para un control.
+	ControlEditPaste	Pastas cadena en la posición de cursor / inserción en un control de edición ( esto no afecta a los contenidos del portapapeles) .
+	ControlFocus	Establece el foco de entrada en un control determinado en una ventana.
+	ControlGet	Recupera varios tipos de información sobre un control.
+	ControlGetFocus	Recupera lo que el control de la ventana de destino tiene el foco de entrada , en su caso .
+	ControlGetPos	Recupera la posición y el tamaño de un control.
+	ControlGetText	Recupera el texto de un control.
+	ControlMove	Mueve o cambia el tamaño de un control.
+	ControlSend / ControlSendRaw 	Envía pulsaciones de teclas simuladas para una ventana o de control .
+	ControlSetText	Cambia el texto de un control.
+	CoordMode	Establece el modo de coordinar a varios comandos que es relativo a cualquiera de la ventana activa o la pantalla.
+	Cos	Devuelve el coseno trigonométrico del Número .
+	Critical	Evita que el hilo actual de ser interrumpido por otros threads.
+	DetectHiddenText	Determina si el texto invisible en una ventana es "vista " con el propósito de encontrar la ventana . Esto afecta a comandos como IfWinExist y WinActivate .
+	DetectHiddenWindows	Determina si las ventanas invisibles son "vistos " por el guión.
+	DllCall	Llama a una función dentro de una DLL , como una función de la API de Windows estándar.
+	Drive	Expulsa / retrae la bandeja en la unidad de CD o DVD, o establece la etiqueta de volumen de una unidad.
+	DriveGet	Recupera varios tipos de información acerca de la unidad del equipo ( s ) .
+	DriveSpaceFree	Recupera el espacio libre de un disco , en megabytes .
+	Edit	Abre el script actual para su edición en el editor asociado.
+	Else	Especifica el comando ( s ) para llevar a cabo si una sentencia if se evalúa como FALSE . Cuando más de un comando está presente , encierre en un bloque ( frenos) .
+	EnvAdd	Establece una variable a la suma de sí mismo más el valor dado (también se puede sumar o restar el tiempo de un valor de fecha y hora ) . Sinónimo de : Var + = Valor .
+	EnvDiv	Establece una variable a sí mismo dividido por el valor dado . Sinónimo de : Var / = Valor .
+	EnvGet	Recupera una variable de entorno .
+	EnvMult	Establece una variable a veces el mismo valor dado. Sinónimo de : Var * = Valor .
+	EnvSet	Escribe un valor a una variable contenida en el medio ambiente .
+	EnvSub	Establece una variable a sí mismo menos el valor dado ( pueden comparar los valores de fecha y hora ) . Sinónimo de : Var - = Valor .
+	EnvUpdate	Notifica al sistema operativo y todas las aplicaciones que se ejecutan esa variable de entorno ( s ) han cambiado.
+	Exit	Sale del subproceso actual o (si el guión no es persistente y no contiene teclas de acceso rápido ) toda la secuencia de comandos .
+	ExitApp	Termina la secuencia de comandos de forma incondicional .
+	Exp	Devuelve e ( que es aproximadamente 2,71828182845905 ) elevado a la potencia N-ésimo .
+	FileAppend	Escribe texto en el final de un archivo (creando primero el archivo , si es necesario ) .
+	FileCopy	Copia uno o más archivos.
+	FileCopyDir	Copia una carpeta junto con todas sus subcarpetas y archivos ( similar a xcopy ) .
+	FileCreateDir	Crea una carpeta .
+	FileCreateShortcut	Crea un archivo de acceso directo ( . Lnk ) .
+	FileDelete	Elimina uno o más archivos.
+	FileEncoding	Establece la codificación predeterminada para FileRead , FileReadLine , Loop Read, FileAppend y FileOpen .
+	FileInstall	Incluye el archivo especificado dentro de la versión compilada del script.
+	FileGetAttrib	Indica si un archivo o carpeta es de sólo lectura , oculto, etc
+	FileGetShortcut	Recupera información sobre un archivo de acceso directo ( . Lnk ) , como su archivo de destino .
+	FileGetSize	Recupera el tamaño de un archivo.
+	FileGetTime	Recupera el sello de fecha y hora de un archivo o carpeta.
+	FileGetVersion	Recupera la versión de un archivo .
+	FileMove	Mueve o cambia el nombre de uno o más archivos.
+	FileMoveDir	Mueve una carpeta con todas sus subcarpetas y archivos. También puede cambiar el nombre de una carpeta.
+	FileOpen	Proporciona archivo orientado a objetos I / O.
+	FileRead	Lee el contenido de un archivo en una variable.
+	FileReadLine	Lee la línea especificada de un archivo y almacena el texto en una variable.
+	FileRecycle	Envía un archivo o directorio a la papelera de reciclaje, si es posible.
+	FileRecycleEmpty	Vacía la papelera de reciclaje.
+	FileRemoveDir	Elimina una carpeta.
+	FileSelectFile	Muestra un cuadro de diálogo estándar que permite al usuario abrir o guardar el archivo ( s ) .
+	FileSelectFolder	Muestra un cuadro de diálogo estándar que permite al usuario seleccionar una carpeta.
+	FileSetAttrib	Cambia los atributos de uno o más archivos o carpetas . Los comodines son compatibles.
+	FileSetTime	Cambia el sello de fecha y hora de uno o más archivos o carpetas . Los comodines son compatibles.
+	Floor	Devuelve Número redondeado al número entero más próximo ( sin sufijo .00 ) .
+	For	Repite una serie de comandos una vez para cada par clave-valor en un objeto.
+	FormatTime	Transforma un timestamp YYYYMMDDHH24MISS en el formato de fecha / hora especificada.
+	Func	Recupera una referencia a una función .
+	GetKeyName / GetKeyVK / GetKeySC	Recupera el nombre o el texto , código de tecla virtual o código scan de una clave .
+	GetKeyState	Comprueba si una tecla del teclado o el ratón / joystick es hacia abajo o hacia arriba. También se recupera el estado joystick.
+	Gosub	Salta a la etiqueta especificada y continúa la ejecución hasta que se encuentra de regreso .
+	Goto	Salta a la etiqueta especificada y continúa la ejecución.
+	GroupActivate	Activa la siguiente ventana en un grupo de ventanas que se definió con groupadd .
+	GroupAdd	Añade una especificación de ventana a un grupo de ventanas , creando el grupo si es necesario .
+	GroupClose	Cierra la ventana activa si estaba activado por GroupActivate o GroupDeactivate . A continuación, se activa la siguiente ventana en la serie . También puede cerrar todas las ventanas de un grupo.
+	GroupDeactivate	Similar a GroupActivate excepto activa la siguiente ventana no en el grupo .
+	if	Especifica el comando ( s ) para llevar a cabo si la comparación de una variable a un valor dé como resultado VERDADERO . Cuando más de un comando está presente , encierre en un bloque ( frenos) .
+	if (expression)	Especifica el comando ( s ) para llevar a cabo si una expresión se evalúa como VERDADERO .
+	If var [not] between	Comprueba si el contenido de una variable son numéricamente o alfabéticamente entre dos valores ( inclusive).
+	If var [not] in/contains MatchList 	Comprueba si el contenido de una variable coinciden con uno de los elementos de una lista .
+	If var is [not] type	Comprueba si el contenido de una variable son numéricos, mayúsculas , etc
+	If Clipboard	Comprueba si el texto del Portapapeles es matchs una cadena especificada.
+	If ErrorLevel	Comprueba si una imagen o pixel especificado se encuentran en la pantalla.
+	If A_Index	Comprueba si la interación actual del loop matchs un especifique un número.
+	IfEqual/IfNotEqual	Compara una variable en un valor de la igualdad. Sinónimo : si Var = Valor | si Var < > Value.
+	IfExist / IfNotExist / FileExist	Comprueba la existencia de un archivo o carpeta .
+	IfGreater / IfGreaterOrEqual	Compara una variable a un valor. Sinónimo : si Var > Valor | si Var > = Valor .
+	IfInString / IfNotInString / InStr	Comprueba si una variable contiene la cadena especificada.
+	IfLess / IfLessOrEqual	Compara una variable a un valor. Sinónimo : si Var < Valor | si Var < = Valor .
+	IfMsgBox	Cheques botón que se haya pulsado por el usuario durante el último comando MsgBox .
+	IfWinActive / IfWinNotActive	Comprueba si existe la ventana especificada y se encuentra actualmente activa ( sobre todo ) .
+	IfWinExist / IfWinNotExist	Comprueba si existe la ventana especificada .
+	ImageSearch	Busca en una región de la pantalla para una imagen.
+	IniDelete	Elimina un valor de un archivo de formato. Ini estándar.
+	IniRead	Lee un valor de un archivo de formato. Ini estándar.
+	IniWrite	Escribe un valor en un archivo de formato . Ini estándar.
+	Input	Espera a que el usuario escriba una cadena (no soportado en Windows 9x : no hace nada ) .
+	InputBox	Muestra un cuadro de entrada para pedir al usuario que introduzca una cadena.
+	InStr	Busca un hecho dado de una cadena , de la izquierda o la derecha .
 	)	
 	Ahk_Cmd_Index = %Ahk_Cmd_Index%`n	
 	(LTrim	
-	KeyHistory	
-	KeyWait	
-	Labels	
-	Log	
-	Ln	
-	Loop (normal) 	
-	Loop (files & folders)	
-	Loop (parse a string)	
-	Loop (read file contents)	
-	Loop (registry)	
-	Menu	
-	Mod	
-	MouseClickDrag	
-	MouseGetPos	
-	MouseMove	
-	MsgBox	
-	NumGet	
-	NumPut	
-	OnExit	
-	OnMessage	
-	OutputDebug	
-	Pause	
-	PixelGetColor	
-	PixelSearch	
-	PostMessage	
-	Process	
-	Progress	
-	Random	
-	RegExMatch	
-	RegExReplace	
-	RegDelete	
-	RegRead	
-	RegWrite	
-	RegisterCallback	
-	Return	
-	Round	
-	Run	
-	RunAs	
-	RunWait	
-	Screenshot	
-	Send / SendRaw / SendInput / SendPlay	
-	SendLevel	
-	SendMessage	
-	SendMode	
-	SetCapslockState	
-	SetEnv (Var = Value)	
-	SetFormat	
-	SetKeyDelay	
-	SetMouseDelay	
-	SetNumlockState	
-	SetScrollLockState	
-	SetRegView	
-	Shutdown	
-	Sin	
-	Sleep	
-	Sort	
-	SoundBeep	
-	SoundGet	
-	SoundGetWaveVolume	
-	SoundPlay	
-	SoundSet	
-	SoundSetWaveVolume	
-	SplashImage	
-	SplashTextOn	
-	SplashTextOff	
-	SplitPath	
-	Sqrt	
-	StatusBarGetText	
-	StatusBarWait	
-	StrPut / StrGet	
-	StringCaseSense	
-	StringGetPos / InStr	
-	StringLeft	
-	StringLen / StrLen	
-	StringLower	
-	StringMid / SubStr	
-	StringReplace	
-	StringRight	
-	StringSplit / StrSplit	
-	StringTrimLeft	
-	StringTrimRight	
-	StringUpper	
-	Suspend	
-	SysGet	
-	Tan	
-	ToolTip	
-	Transform	
-	TrayTip	
-	Trim / LTrim / RTrim	
-	Try	
-	Until	
-	UrlDownloadToFile	
-	VarSetCapacity	
-	WinActivate	
-	WinActivateBottom	
-	WinActive	
-	WinClose	
-	WinExist	
-	WinGetActiveStats	
-	WinGetActiveTitle	
-	WinGetClass	
-	WinGet	
-	WinGetPos	
-	WinGetText	
-	WinGetTitle	
-	WinHide	
-	WinKill	
-	WinMaximize	
-	WinMenuSelectItem	
-	WinMinimize	
-	WinMinimizeAll	
-	WinMinimizeAllUndo	
-	WinMove	
-	WinRestore	
-	WinSet	
-	WinSetTitle	
-	WinShow	
-	WinWait	
-	WinWaitActive	
-	WinWaitClose	
-	WinWaitNotActive	
-	)	
+	KeyHistory	Muestra información guión y una historia de las pulsaciones de teclado más recientes y los clics del ratón.
+	KeyWait	Espera a una tecla o botón del ratón / joystick para ser puesto en libertad o presionado.
+	Labels	Una etiqueta identifica una línea de código, y se puede utilizar como un objetivo Goto o para formar una subrutina.
+	Log	Devuelve el logaritmo (base 10) del número.
+	Ln	Devuelve el logaritmo natural (base e) del número.
+	Loop (normal) 	Lleve a cabo una serie de comandos en varias ocasiones: se encuentran ya sea el número especificado de veces o hasta rotura.
+	Loop (files & folders)	Recupera los archivos o carpetas especificados, uno a la vez.
+	Loop (parse a string)	Recupera subcadenas (campos) de una cadena, de una en una.
+	Loop (read file contents)	Recupera las líneas en un archivo de texto, de una en una (mejor rendimiento que FileReadLine).
+	Loop (registry)	Recupera el contenido de la subclave especificada, un elemento a la vez.
+	Menu	Crea, elimina, modifica y muestra los menús y elementos de menú. Cambia el icono de la bandeja y su descripción. Controla si la ventana principal de un script compilado se puede abrir.
+	Mod	Modulo. Devuelve el resto al dividendo se divide por Divisor.
+	MouseClickDrag	Clicks y sostiene el botón del mouse especificado, mueve el ratón a las coordenadas de destino, después suelta el botón.
+	MouseGetPos	Recupera la posición actual del cursor del ratón, y que opcionalmente ventana y el control que se cierne sobre.
+	MouseMove	Mueve el cursor del ratón.
+	MsgBox	Muestra el texto especificado en una pequeña ventana que contiene uno o más botones (como sí y no).
+	NumGet	Devuelve el número binario almacenado en la dirección especificada + offset.
+	NumPut	Almacena el número en formato binario en la dirección especificada + offset y devuelve la dirección a la derecha del elemento recién escrito.
+	OnExit	Especifica una subrutina para ejecutar automáticamente cuando el script finaliza.
+	OnMessage	Especifica una función para llamar automáticamente cuando el script recibe el mensaje especificado.
+	OutputDebug	Envía una cadena para el depurador (en su caso) para su visualización.
+	Pause	Las pausas subproceso actual del script.
+	PixelGetColor	Recupera el color del píxel en la x especificado, las coordenadas y.
+	PixelSearch	Busca en una región de la pantalla para un pixel del color especificado.
+	PostMessage	Coloca un mensaje en la cola de mensajes de una ventana o control.
+	Process	Realiza una de las siguientes operaciones en un proceso: comprueba si existe, cambia su prioridad, lo cierra, espera a que se cierre.
+	Progress	Crea o actualiza una ventana con una barra de progreso.
+	Random	Genera un número pseudo-aleatorio.
+	RegExMatch	Determina si una cadena contiene un patrón (expresión regular).
+	RegExReplace	Sustituye las apariciones de un patrón (expresión regular) dentro de una cadena.
+	RegDelete	Elimina una subclave o un valor del registro.
+	RegRead	Lee un valor del registro.
+	RegWrite	Escribe un valor en el registro.
+	RegisterCallback	Crea una dirección de código máquina que cuando se le llama, se redirige la llamada a una función en el guión.
+	Return	La rentabilidad de una subrutina de ejecución que había saltado anteriormente a través de la función de guardia, Gosub, la activación de teclas de acceso directo, GroupActivate, o por otros medios.
+	Round	Si N es omitido o 0, número se redondea al entero más próximo. Si N es número positivo, número se redondea al N decimales. Si N es negativo, número se redondea por N dígitos a la izquierda del punto decimal.
+	Run	Ejecuta un programa externo.
+	RunAs	Especifica un conjunto de credenciales de usuario que se utilizará para todos los usos posteriores de ejecución y RunWait. Requiere Windows 2000/XP o posterior.
+	RunWait	Ejecuta un programa externo y espera hasta que termine.
+	Screenshot	Crea un PNG de pantalla del un área especificada.
+	Send / SendRaw / SendInput / SendPlay	Envía las pulsaciones de teclado y los clics del ratón simulados a la ventana activa.
+	SendLevel	Controla qué eventos de teclado y ratón artificiales son ignorados por teclas de acceso rápido y hotstrings.
+	SendMessage	Envía un mensaje a una ventana o control y espera confirmación.
+	SendMode	Hace Enviar sinónimo SendInput o SendPlay en lugar de la predeterminada (SendEvent). También hace clic y mousemove / clic / arrastrar Utilizar el método especificado.
+	SetCapslockState	Establece el estado de la tecla Bloq Mayús. También se puede forzar la clave para mantenerse encendido o apagado.
+	SetEnv (Var = Value)	Asigna el valor especificado a una variable.
+	SetFormat	Establece el formato de los números enteros y números de punto flotante generados por las operaciones matemáticas.
+	SetKeyDelay	Establece la demora que se producirá después de cada pulsación de tecla Enviar o enviado por ControlSend.
+	SetMouseDelay	Establece la demora que se producirá después de cada movimiento del ratón o haga clic.
+	SetNumlockState	Establece el estado de la tecla Bloq Num. También se puede forzar la clave para mantenerse encendido o apagado.
+	SetScrollLockState	Establece el estado de la tecla Bloq Despl. También se puede forzar la clave para mantenerse encendido o apagado.
+	SetRegView	Permite que los comandos de registro en una secuencia de comandos de 32 bits para acceder a la vista del registro de 64 bits y viceversa.
+	Shutdown	Apaga, reinicia o cierra sesión en el sistema.
+	Sin	Devuelve el seno trigonométrico del Número.
+	Sleep	Espera durante el período de tiempo especificado antes de continuar.
+	Sort	Organiza el contenido de una variable en orden alfabético, orden numérico, o al azar (opcionalmente eliminar duplicados).
+	SoundBeep	Emite un tono desde el altavoz del PC.
+	SoundGet	Recupera varios ajustes desde un dispositivo de sonido (mute, volumen master master, etc)
+	SoundGetWaveVolume	Recupera el volumen de salida de onda de un dispositivo de sonido.
+	SoundPlay	Reproduce un sonido, video u otro tipo de archivo compatible.
+	SoundSet	Cambios varias configuraciones de un dispositivo de sonido (mute, volumen master master, etc)
+	SoundSetWaveVolume	Cambia el volumen de salida de onda para un dispositivo de sonido.
+	SplashImage	Crea o actualiza una ventana con una imagen JPG, GIF o BMP.
+	SplashTextOn	Crea un texto personalizable ventana emergente.
+	SplashTextOff	Cierra la ventana de arriba.
+	SplitPath	Separa un nombre de archivo o dirección URL en su nombre, el directorio, la extensión y la unidad.
+	Sqrt	Devuelve la raíz cuadrada del número.
+	StatusBarGetText	Recupera el texto de un control de la barra de estado estándar.
+	StatusBarWait	Espera a que la barra de estado de la ventana contiene la cadena especificada.
+	StrPut / StrGet	Copia una cadena o a partir de una dirección de memoria, opcional conversión entre páginas de códigos.
+	StringCaseSense	Determina si las comparaciones de cadena distinguen entre mayúsculas y minúsculas (por defecto es "no entre mayúsculas y minúsculas").
+	StringGetPos / InStr	Recupera la posición de la subcadena especificada dentro de una cadena.
+	StringLeft	Recupera el número de caracteres del lado izquierdo de una cadena.
+	StringLen / StrLen	Recupera la cuenta de cuántos personajes están en una cadena.
+	StringLower	Convierte una cadena a minúsculas.
+	StringMid / SubStr	Recupera uno o más caracteres desde la posición especificada en una cadena.
+	StringReplace	Reemplaza la subcadena especificada con una nueva cadena.
+	StringRight	Recupera el número de caracteres del lado derecho de una cadena.
+	StringSplit / StrSplit	Separa una cadena en una matriz de subcadenas utilizando los delimitadores especificados.
+	StringTrimLeft	Elimina un número de caracteres del lado izquierdo de una cadena.
+	StringTrimRight	Elimina un número de caracteres desde el lado derecho de una cadena.
+	StringUpper	Convierte una cadena a mayúsculas.
+	Suspend	Desactiva o activa todas o determinadas combinaciones de teclas y hotstrings.
+	SysGet	Recupera la resolución de pantalla, la información de varios monitores, las dimensiones de los objetos del sistema, y otras propiedades del sistema.
+	Tan	Devuelve la tangente trigonométrica del Número.
+	ToolTip	Crea una ventana siempre-on-top en cualquier lugar de la pantalla.
+	Transform	Realiza funciones auxiliares de matemáticas, operaciones a nivel de bits y tareas tales como ASCII / conversión de Unicode.
+	TrayTip	Crea una ventana de mensaje de globo cerca del icono de la bandeja. Requiere Windows 2000/XP o posterior.
+	Trim / LTrim / RTrim	Recorta algunos personajes del principio y / o al final de una cadena.
+	Try	Guardias de una o más instrucciones (comandos o expresiones) contra los errores de ejecución y excepciones lanzadas por el comando de tiro.
+	Until	Aplica una condición para la continuación de un ciclo o bucle for.
+	UrlDownloadToFile	Descarga un archivo desde Internet.
+	VarSetCapacity	Amplía la capacidad de retención de una variable o libera su memoria. Normalmente, esto es necesario sólo para circunstancias inusuales tales como DllCall.
+	WinActivate	Activa la ventana especificada (lo hace ante todo).
+	WinActivateBottom	Igual que WinActivate excepto que activa el situado más abajo (menos activo recientemente) Ventana a juego en lugar de la más alta.
+	WinActive	Devuelve el ID único (HWND) de la ventana activa si coincide con los criterios especificados.
+	WinClose	Cierra la ventana especificada.
+	WinExist	Comprueba si existe la ventana especificada.
+	WinGetActiveStats	Combina las funciones de WinGetActiveTitle y WinGetPos en un mismo comando.
+	WinGetActiveTitle	Recupera el título de la ventana activa.
+	WinGetClass	Recupera el nombre de clase de ventana especificada.
+	WinGet	Recupera la ventana especificada única ID, ID de proceso, nombre del proceso, o una lista de sus controles. También puede obtener una lista de todas las ventanas que coinciden con los criterios especificados.
+	WinGetPos	Recupera la posición y el tamaño de la ventana especificada.
+	WinGetText	Recupera el texto de la ventana especificada.
+	WinGetTitle	Recupera el título de la ventana especificada.
+	WinHide	Oculta la ventana especificada.
+	WinKill	Fuerza la ventana especificada para cerrar.
+	WinMaximize	Amplía la ventana especificada con su tamaño máximo.
+	WinMenuSelectItem	Invoca una opción del menú de la barra de menús de la ventana especificada.
+	WinMinimize	Contrae la ventana especificada en un botón en la barra de tareas.
+	WinMinimizeAll	Minimiza todas las ventanas.
+	WinMinimizeAllUndo	Invierte el efecto de un WinMinimizeAll anterior.
+	WinMove	Los cambios de la posición y / o el tamaño de la ventana especificada.
+	WinRestore	Unminimizes o unmaximizes la ventana especificada si se minimiza o maximiza.
+	WinSet	Hace una variedad de cambios en la ventana especificada, como "siempre encima" y la transparencia.
+	WinSetTitle	Cambia el título de la ventana especificada.
+	WinShow	Unhides la ventana especificada.
+	WinWait	Espera a que existe la ventana especificada.
+	WinWaitActive	Espera a que la ventana especificada está activa.
+	WinWaitClose	Espera a que no existe la ventana especificada.
+	WinWaitNotActive	Espera hasta que la ventana especificada no está activo.
+	)	...
 return		

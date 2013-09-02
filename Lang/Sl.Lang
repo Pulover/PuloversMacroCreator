@@ -1055,250 +1055,248 @@
 ; AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	(LTrim	
-	Abs	
-	ASin	
-	ACos	
-	Array	
-	Asc	
-	ATan	
-	BlockInput	
-	Break	
-	Ceil	
-	Chr	
-	Click	
-	ClipWait	
-	Clipboard	
-	ComObjActive	
-	ComObjArray	
-	ComObjConnect	
-	ComObjCreate	
-	ComObjEnwrap / ComObjUnwrap	
-	ComObjError	
-	ComObjFlags	
-	ComObjGet	
-	ComObjMissing	
-	ComObjParameter	
-	ComObjQuery	
-	ComObjType	
-	ComObjValue	
-	Continue	
-	Control	
-	ControlClick	
-	ControlEditPaste	
-	ControlFocus	
-	ControlGet	
-	ControlGetFocus	
-	ControlGetPos	
-	ControlGetText	
-	ControlMove	
-	ControlSend / ControlSendRaw 	
-	ControlSetText	
-	CoordMode	
-	Cos	
-	Critical	
-	DetectHiddenText	
-	DetectHiddenWindows	
-	DllCall	
-	Drive	
-	DriveGet	
-	DriveSpaceFree	
-	Edit	
-	Else	
-	EnvAdd	
-	EnvDiv	
-	EnvGet	
-	EnvMult	
-	EnvSet	
-	EnvSub	
-	EnvUpdate	
-	Exit	
-	ExitApp	
-	Exp	
-	FileAppend	
-	FileCopy	
-	FileCopyDir	
-	FileCreateDir	
-	FileCreateShortcut	
-	FileDelete	
-	FileEncoding	
-	FileInstall	
-	FileGetAttrib	
-	FileGetShortcut	
-	FileGetSize	
-	FileGetTime	
-	FileGetVersion	
-	FileMove	
-	FileMoveDir	
-	FileOpen	
-	FileRead	
-	FileReadLine	
-	FileRecycle	
-	FileRecycleEmpty	
-	FileRemoveDir	
-	FileSelectFile	
-	FileSelectFolder	
-	FileSetAttrib	
-	FileSetTime	
-	Floor	
-	For	
-	FormatTime	
-	Func	
-	GetKeyName / GetKeyVK / GetKeySC	
-	GetKeyState	
-	Gosub	
-	Goto	
-	GroupActivate	
-	GroupAdd	
-	GroupClose	
-	GroupDeactivate	
-	if	
-	if (expression)	
-	If var [not] between	
-	If var [not] in/contains MatchList 	
-	If var is [not] type	
-	If Clipboard	
-	If ErrorLevel	
-	If A_Index	
-	IfEqual/IfNotEqual	
-	IfExist / IfNotExist / FileExist	
-	IfGreater / IfGreaterOrEqual	
-	IfInString / IfNotInString / InStr	
-	IfLess / IfLessOrEqual	
-	IfMsgBox	
-	IfWinActive / IfWinNotActive	
-	IfWinExist / IfWinNotExist	
-	ImageSearch	
-	IniDelete	
-	IniRead	
-	IniWrite	
-	Input	
-	InputBox	
-	InStr	
-	IsByRef	
-	IsObject	
+	Abs	Vrne absolutno vrednost številke.
+	ASin	Vrne arkus sinus (število, katerega sinus je število) v radianih.
+	ACos	Vrne arkus kosinus (število, katerega kosinus je število) v radianih.
+	Array	Ustvarja Array Object.
+	Asc	Vrne kodo znakov (število med 1 in 255 (v ANSI gradi) ali 65.535 (v gradi Unicode)) za prvi znak v nizu.
+	ATan	Vrne arkus (število, katerega tangens je število) v radianih.
+	BlockInput	Onemogoči ali omogoči uporabnikovo sposobnost, da komunicirajo z računalnikom preko tipkovnice in miške.
+	Break	Izhodi (konča) zanke. Veljaven znotraj kakršnokoli zanko.
+	Ceil	Vrne število zaokroži na najbližje celo število (brez končnice 0,00).
+	Chr	Vrne en znak, ki ustreza kodi znaka s številko.
+	Click	Klikne gumb miške ob določenem koordinatami. Prav tako lahko držite gumb, zavrtite kolesce, ali premakniti.
+	ClipWait	Počaka odložišče vsebuje podatke.
+	Clipboard	Prilepi besedilo iz odložišča
+	ComObjActive	Pridobi registrirani COM objekt.
+	ComObjArray	Ustvari SAFEARRAY za uporabo s COM.
+	ComObjConnect	Povezuje vire dogodkov predmet COM, da funkcije z določeno predpono.
+	ComObjCreate	Ustvari COM objekt.
+	ComObjEnwrap / ComObjUnwrap	Obloge / unwraps predmet COM.
+	ComObjError	Omogoči ali onemogoči prijavo COM napak.
+	ComObjFlags	Prejme ali spremembe zastavice, ki nadzorujejo vedenje com ovoj objekta.
+	ComObjGet	Vrne sklic na predmet, ki ga komponento COM.
+	ComObjMissing	Ustvarja "manjkajoči parameter" objekt za prehod na metodo COM.
+	ComObjParameter	Obloge vrednost in vrsto prenese kot parameter metodi COM.
+	ComObjQuery	Poizvedbe predmet COM za vmesnik ali storitev.
+	ComObjType	Pridobiva informacije od tipa predmet COM.
+	ComObjValue	Prikliče vrednost ali kazalec shranjena v COM ovoja objekta.
+	Continue	Preskoči preostanek trenutne zanke ponovitev in začenja novo. Veljaven znotraj kakršnokoli zanko.
+	Control	Omogoča različne spremembe v nadzoru.
+	ControlClick	Pošlje gumb miške ali kolešček miške na kontrolo.
+	ControlEditPaste	Paste String na položaju strešica / vstaviti v kontrolnik Edit (to ne vpliva na vsebino odložišča).
+	ControlFocus	Komplet vhodni fokus na določeno kontrolo na okno.
+	ControlGet	Pridobi različne vrste informacij o nadzoru.
+	ControlGetFocus	Prejme ki nadzorujejo ciljnega okna ima vhodni fokus, če sploh.
+	ControlGetPos	Pridobi položaj in velikost kontrolo.
+	ControlGetText	Prenese besedilo iz nadzora.
+	ControlMove	Premakne ali spremeni velikost kontrolo.
+	ControlSend / ControlSendRaw 	Pošlje simulirane tipkanja na okno ali nadzorom.
+	ControlSetText	Spremeni besedilo na kontroli.
+	CoordMode	Kompleti način koordinato različnih ukazov, relativno glede bodisi aktivno okno ali zaslon.
+	Cos	Vrne trigonometrične kosinus številko.
+	Critical	Preprečuje trenutno nit od prekinja z druge teme.
+	DetectHiddenText	Določa, ali je nevidna besedilo v oknu "videl" za iskanje okno. To vpliva na ukaze, kot IfWinExist in WinActivate.
+	DetectHiddenWindows	Ugotovi, ali so nevidni okna "videl", ki jih scenarija.
+	DllCall	Klici funkcije znotraj DLL, kot je standardni Windows API funkcijo.
+	Drive	Izvrže / noter pladenj v CD ali DVD pogon, ali vsebuje oznako nosilca v pogonu.
+	DriveGet	Pridobi različne vrste informacij o disku računalnika (e).
+	DriveSpaceFree	Prikliče nezasedenega prostora na disku za vožnjo v MB.
+	Edit	Odpre se sedanji scenarij za urejanje v pridruženi urednik.
+	Else	Določa ukaz (s) izvaja, če IF-izjavo ocenjuje na false. Če je prisoten več kot en ukaz, jih priloži v bloku (oporniki).
+	EnvAdd	Nastavi spremenljivko vsoti sebi plus dano vrednost (lahko tudi dodate ali odštejemo čas od datuma-časovne vrednosti). Sinonim: Var + = vrednost.
+	EnvDiv	Nastavi spremenljivko na sebi deljeno z določeno vrednostjo. Sinonim: Var / = vrednost.
+	EnvGet	Prenese spremenljivko okolja.
+	EnvMult	Nastavi spremenljivko na sebi krat dano vrednost. Sinonim: Var * = vrednost.
+	EnvSet	Writes vrednost spremenljivke iz okolja.
+	EnvSub	Nastavi spremenljivko sebi minus dano vrednost (lahko primerjajo Date-Time vrednosti). Sinonim: Var - = vrednost.
+	EnvUpdate	Obvesti OS in vse aplikacije, ki so okoljska spremenljivka (i) spremenila.
+	Exit	Izhodi trenutna nit ali (če scenarij ni obstojna in ne vsebuje nobenih bližnjic) celoten scenarij.
+	ExitApp	Prekine scenarij brezpogojno.
+	Exp	Vrne e (kar je približno 2,71828182845905) dvigne na n-to moč.
+	FileAppend	Writes besedilo koncu datoteke (prvi za ustvarjanje datoteke, če je potrebno).
+	FileCopy	Izvodov ene ali več datotek.
+	FileCopyDir	Kopira mapo skupaj z vsemi svojimi podmap in datotek (podobno kot xcopy).
+	FileCreateDir	Ustvari mapo.
+	FileCreateShortcut	Ustvarja (. Lnk) datoteko bližnjic.
+	FileDelete	Izbriše eno ali več datotek.
+	FileEncoding	Nastavi privzeto kodiranje FileRead, FileReadLine, Loop brati, FileAppend in FileOpen.
+	FileInstall	Vključuje določeno datoteko znotraj sestavil različico scenarija.
+	FileGetAttrib	Poročila, ali je datoteka ali mapa samo za branje, skrite, itd
+	FileGetShortcut	Pridobi informacije o bližnjico (. Lnk) datotek, kot svojo ciljno datoteko.
+	FileGetSize	Pridobi velikost datoteke.
+	FileGetTime	Pridobi datetime žig datoteke ali mape.
+	FileGetVersion	Pridobi različico datoteke.
+	FileMove	Premakne ali preimenuje eno ali več datotek.
+	FileMoveDir	Premakne mapo skupaj z vsemi svojimi podmap in datotek. Prav tako lahko preimenujete mapo.
+	FileOpen	Ponuja objektno sliko I / O.
+	FileRead	Prebere vsebino datoteke 'v spremenljivko.
+	FileReadLine	Prebere določeno vrstico iz datoteke in shrani besedilo v spremenljivko.
+	FileRecycle	Pošlje datoteko ali mapo v koš, če je to mogoče.
+	FileRecycleEmpty	Prazni koš.
+	FileRemoveDir	Izbriše mapo.
+	FileSelectFile	Prikaže standardno pogovorno okno, ki uporabniku omogoča odpreti ali shraniti datoteko (e).
+	FileSelectFolder	Prikaže standardno pogovorno okno, ki omogoča uporabniku, da izbere mapo.
+	FileSetAttrib	Spremeni lastnosti ene ali več datotek ali map. Nadomestni znaki so podprte.
+	FileSetTime	Spremeni datetime žig ene ali več datotek ali map. Nadomestni znaki so podprte.
+	Floor	Vrne število, zaokroženo navzdol na najbližje celo število (brez končnice 0,00).
+	For	Ponovi niz ukazov, ko za vsak par vrednosti ključa v predmet.
+	FormatTime	Transformira YYYYMMDDHH24MISS žig v določen format datuma / časa.
+	Func	Pridobi sklic na funkcijo.
+	GetKeyName / GetKeyVK / GetKeySC	Pridobi ime ali besedila, virtualni ključa ali optičnega kodo ključa.
+	GetKeyState	Pregledi če ključ tipkovnico ali miško / gumb joystick je navzdol ali navzgor. Pridobi tudi stanje joystick.
+	Gosub	Preskok na določeno okolje in nadaljuje toliko časa, dokler se pojavile Nazaj.
+	Goto	Preskok na določeno okolje in nadaljuje izvajanje.
+	GroupActivate	Aktivira naslednje okno v skupini okno, ki je bilo določeno z groupadd.
+	GroupAdd	Dodaja specifikacije v skupino okno okno, ki je ustvarila skupino, če je to potrebno.
+	GroupClose	Zapre aktivno okno, če je le aktivirati z GroupActivate ali GroupDeactivate. Nato se aktivira naslednjo okno v seriji. Prav tako lahko zapre vsa okna v skupini.
+	GroupDeactivate	Podobno kot GroupActivate razen aktivira naslednjo okno ni v skupini.
+	if	Določa ukaz (s) izvaja, če primerjava spremenljivko na vrednost evalutes na TRUE. Če je prisoten več kot en ukaz, jih priloži v bloku (oporniki).
+	if (expression)	Določa ukaz (s) izvaja, če je vrednost izraza TRUE.
+	If var [not] between	Preverièe vsebine s spremenljivo so številčno ali abecedno med dvema vrednostma (vključno).
+	If var [not] in/contains MatchList 	Preverièe vsebine s spremenljivo ujemajo enega od elementov na seznamu.
+	If var is [not] type	Preveri, ali so vsebina spremenljivka je številčna, z velikimi črkami, itd
+	If Clipboard	Preveri, ali je besedilo odložišče je matchs določen niz.
+	If ErrorLevel	Preveri, če je določeno podobo ali pikslom je bilo na zaslonu.
+	If A_Index	Preveri, če trenutni iteraciji zanke matchs na določeno številko.
+	IfEqual/IfNotEqual	Primerja spremenljivko na vrednost za enakost. Sinonim: če Var = vrednost | če Var <> vrednost.
+	IfExist / IfNotExist / FileExist	Pregledi za obstoj datoteke ali mape.
+	IfGreater / IfGreaterOrEqual	Primerja spremenljivko na vrednost. Sinonim: če Var> Vrednost | če Var> = vrednost.
+	IfInString / IfNotInString / InStr	Preveri, če spremenljivko vsebuje določen niz.
+	IfLess / IfLessOrEqual	Primerja spremenljivko na vrednost. Sinonim: če Var <Vrednost | če Var <= vrednost.
+	IfMsgBox	Pregledi kateri gumb je potisnilo s strani uporabnika v zadnjem ukaz MsgBox.
+	IfWinActive / IfWinNotActive	Preveri, če obstaja določena okno in je trenutno aktiven (predvsem).
+	IfWinExist / IfWinNotExist	Preveri, če obstaja določeno okno.
+	ImageSearch	Iskanje regijo na zaslonu za sliko.
+	IniDelete	Izbriše vrednost od standardnega formata. Ini datoteki.
+	IniRead	Prebere vrednost iz standardnega formata. Ini datoteki.
+	IniWrite	Piše vrednost standardnega formata. Ini datoteki.
+	Input	Počaka, da uporabnik vnesti niz (ne podpira Windows 9x: pa nič).
+	InputBox	Prikaže vnosno polje, da od uporabnika zahteva, da vnesete niz.
+	InStr	Išče danem pojavljanja niza, z leve ali desne.
 	)	
 	Ahk_Cmd_Index = %Ahk_Cmd_Index%`n	
 	(LTrim	
-	KeyHistory	
-	KeyWait	
-	Labels	
-	Log	
-	Ln	
-	Loop (normal) 	
-	Loop (files & folders)	
-	Loop (parse a string)	
-	Loop (read file contents)	
-	Loop (registry)	
-	Menu	
-	Mod	
-	MouseClickDrag	
-	MouseGetPos	
-	MouseMove	
-	MsgBox	
-	NumGet	
-	NumPut	
-	OnExit	
-	OnMessage	
-	OutputDebug	
-	Pause	
-	PixelGetColor	
-	PixelSearch	
-	PostMessage	
-	Process	
-	Progress	
-	Random	
-	RegExMatch	
-	RegExReplace	
-	RegDelete	
-	RegRead	
-	RegWrite	
-	RegisterCallback	
-	Return	
-	Round	
-	Run	
-	RunAs	
-	RunWait	
-	Screenshot	
-	Send / SendRaw / SendInput / SendPlay	
-	SendLevel	
-	SendMessage	
-	SendMode	
-	SetCapslockState	
-	SetEnv (Var = Value)	
-	SetFormat	
-	SetKeyDelay	
-	SetMouseDelay	
-	SetNumlockState	
-	SetScrollLockState	
-	SetRegView	
-	Shutdown	
-	Sin	
-	Sleep	
-	Sort	
-	SoundBeep	
-	SoundGet	
-	SoundGetWaveVolume	
-	SoundPlay	
-	SoundSet	
-	SoundSetWaveVolume	
-	SplashImage	
-	SplashTextOn	
-	SplashTextOff	
-	SplitPath	
-	Sqrt	
-	StatusBarGetText	
-	StatusBarWait	
-	StrPut / StrGet	
-	StringCaseSense	
-	StringGetPos / InStr	
-	StringLeft	
-	StringLen / StrLen	
-	StringLower	
-	StringMid / SubStr	
-	StringReplace	
-	StringRight	
-	StringSplit / StrSplit	
-	StringTrimLeft	
-	StringTrimRight	
-	StringUpper	
-	Suspend	
-	SysGet	
-	Tan	
-	ToolTip	
-	Transform	
-	TrayTip	
-	Trim / LTrim / RTrim	
-	Try	
-	Until	
-	UrlDownloadToFile	
-	VarSetCapacity	
-	WinActivate	
-	WinActivateBottom	
-	WinActive	
-	WinClose	
-	WinExist	
-	WinGetActiveStats	
-	WinGetActiveTitle	
-	WinGetClass	
-	WinGet	
-	WinGetPos	
-	WinGetText	
-	WinGetTitle	
-	WinHide	
-	WinKill	
-	WinMaximize	
-	WinMenuSelectItem	
-	WinMinimize	
-	WinMinimizeAll	
-	WinMinimizeAllUndo	
-	WinMove	
-	WinRestore	
-	WinSet	
-	WinSetTitle	
-	WinShow	
-	WinWait	
-	WinWaitActive	
-	WinWaitClose	
-	WinWaitNotActive	
-	)	
+	KeyHistory	Prikaže scenarij info in zgodovina zadnjih tipkanja in klikov z miško.
+	KeyWait	Počaka na gumb na ključ ali miška / igralno palico, ki se sprosti ali potlačen.
+	Labels	Oznaka opredeljuje kode in se lahko uporablja kot Goto cilj ali da bodo podprogram.
+	Log	Vrne logaritem (z osnovo 10) številke.
+	Ln	Vrne naravni logaritem (z osnovo e) na številki.
+	Loop (normal) 	Opravila vrsto ukazov večkrat: bodisi določeno število krat ali dokler premoru se srečujejo.
+	Loop (files & folders)	Pridobi določene datoteke ali mape, enega naenkrat.
+	Loop (parse a string)	Prenese nukleotidov (polja) iz niza, enega naenkrat.
+	Loop (read file contents)	Pridobi vrstico v besedilno datoteko, enega naenkrat (opravlja bolje kot FileReadLine).
+	Loop (registry)	Pridobi vsebino, ki registrski ključ, en predmet naenkrat.
+	Menu	Ustvarja, briše, spreminja in prikazuje menije in menijske postavke. Spremeni ikono pladenj in njegovo tooltip. Določa, ali se glavno okno prevedenim scenarij lahko odpre.
+	Mod	Modula. Vrne ostanek, ko je dividenda deljeno z delitelj.
+	MouseClickDrag	Klikov in ima določeno tipko miške, premakne miško v ciljni koordinate, nato sprosti na gumb.
+	MouseGetPos	Pridobi trenutni položaj kurzorja miške in opcijsko ki okno in nadzor je lebdi nad.
+	MouseMove	Premakne kazalec miške.
+	MsgBox	Prikaže določeno besedilo v majhnem oknu, ki vsebujejo eno ali več tipk (na primer Da in Ne).
+	NumGet	Vrne binarno število shranjeno na določenem naslovu zamika.
+	NumPut	Število trgovin v binarni obliki na določen naslov zamika in vrne naslov na desni strani predmeta samo pisno.
+	OnExit	Določa podprogram za samodejni zagon, ko se skript izhode.
+	OnMessage	Določa funkcijo za samodejno pokliče, ko scenarij prejme določeno sporočilo.
+	OutputDebug	Pošlje niz za iskanje in odpravljanje napak (če obstaja) za zaslon.
+	Pause	Premori trenutno nit, skript je.
+	PixelGetColor	Pridobi barvo pike na določenem x, y koordinate.
+	PixelSearch	Išče regijo na zaslonu za piko na določeno barvo.
+	PostMessage	Postavi sporočila v čakalne vrste sporočil za okna ali nadzora.
+	Process	Opravlja eno od naslednjih operacij na proces: preveri, če obstaja, spremembe njena prednostna naloga, jo zapre, čaka ga zapreti.
+	Progress	Ustvari ali osveži okno z vrstico napredka.
+	Random	Generira psevdo-naključno število.
+	RegExMatch	Določa, ali niz vsebuje vzorec (regularni izraz).
+	RegExReplace	Nadomešča pojavitve vzorec (regularni izraz) znotraj niza.
+	RegDelete	Izbriše podključ ali vrednost iz registra.
+	RegRead	Prebere vrednost iz registra.
+	RegWrite	Zapiše vrednost registra.
+	RegisterCallback	Ustvari strojno kodo naslov, ko je klical, preusmeri klic na funkciji v scenariju.
+	Return	Dobički iz podprograma, za katere izvedba je prej skočil s funkcijsko dežurstva, Gosub, aktiviranje bližnjice GroupActivate, ali z drugimi sredstvi.
+	Round	Če je N izpustijo ali 0, Število zaokroži na najbližje celo število. Če N je pozitivno število, se število zaokroži na N decimalnih mest. Če N je negativen, se število zaokroži z N cifer na levi strani decimalne vejice.
+	Run	Zažene zunanji program.
+	RunAs	Določa vrsto uporabniških poverilnic za uporabo pri vseh nadaljnjih uporabah Run RunWait. Zahteva Windows 2000/XP ali novejšo.
+	RunWait	Zažene zunanji program in čaka, dokler se ne konča.
+	Screenshot	Ustvari PNG screenshot na določenem območju.
+	Send / SendRaw / SendInput / SendPlay	Pošlje simulirane tipkanja in klikov z miško na aktivnem oknu.
+	SendLevel	Nadzor, ki so umetno tipkovnica in miška dogodkov ignorira bližnjice in hotstrings.
+	SendMessage	Pošlje sporočilo na okno ali nadzora in čaka na potrditev.
+	SendMode	Naredi Pošlji sinonim SendInput ali SendPlay kot privzeto (SendEvent). Prav tako Klikni in MouseMove / Kliknite / Drag uporabljajte predpisano metodo.
+	SetCapslockState	Nastavi stanje tipke CapsLock. More prisiliti tudi ključ, da ostanejo vklopite ali izklopite.
+	SetEnv (Var = Value)	Dodeli določeno vrednost spremenljivki.
+	SetFormat	Določa obliko števil in številk s plavajočo vejico, ki jih math operacij.
+	SetKeyDelay	Nastavi zakasnitev, da se bo zgodilo po vsakem pritisku, ki ga pošiljate ali ControlSend poslano.
+	SetMouseDelay	Nastavi zakasnitev, da se bo zgodilo po vsakem premiku miške ali kliknite.
+	SetNumlockState	Nastavi stanje tipke NumLock. More prisiliti tudi ključ, da ostanejo vklopite ali izklopite.
+	SetScrollLockState	Nastavi stanje tipke za Scrolllock. More prisiliti tudi ključ, da ostanejo vklopite ali izklopite.
+	SetRegView	Omogoča registra ukazi v 32-bitnem scenarij za dostop do 64-bitni pogled registra in obratno.
+	Shutdown	Izklopi, zažene ali odjavi sistem.
+	Sin	Vrne trigonometrične sinus številko.
+	Sleep	Počaka določen znesek časa, preden nadaljujete.
+	Sort	Uredi vsebino spremenljivka v abecednem, numerično ali naključnem vrstnem redu (po želji odstranite podvojene).
+	SoundBeep	Oddaja zvok iz zvočnika PC.
+	SoundGet	Pridobi različne nastavitve od zvočne naprave (master mute, master volumna, itd)
+	SoundGetWaveVolume	Prikliče obseg val izhod iz zvočno napravo.
+	SoundPlay	Predvaja zvok, video ali drugega podpira vrsto datoteke.
+	SoundSet	Spremembe različne nastavitve za zvočno napravo (master mute, mojster volumen, itd)
+	SoundSetWaveVolume	Spreminja obseg proizvodnje val za zvočno napravo.
+	SplashImage	Ustvari ali osveži okno z JPG, GIF ali BMP sliko.
+	SplashTextOn	Ustvari prilagodljiv besedila pojavno okno.
+	SplashTextOff	Zapre zgornje okno.
+	SplitPath	Ločuje ime datoteke ali URL v svojem imenu, imenik, podaljšanje, in pogon.
+	Sqrt	Vrne kvadratni koren številke.
+	StatusBarGetText	Prikliče besedilo iz standardnega stanja nadzora bar.
+	StatusBarWait	Počaka, vrstica stanja Okno ne vsebuje naveden niz.
+	StrPut / StrGet	Kopira niz za naslov pomnilnika, izbirni ali ga pretvorbo med kodnimi stranmi.
+	StringCaseSense	Ugotovi, ali so primerjave nizov črk (privzeto je "občutljiv ni primer").
+	StringGetPos / InStr	Pridobi položaj določenega podniz v nizu.
+	StringLeft	Pridobi število znakov od leve strani niza.
+	StringLen / StrLen	Pridobi štetje, koliko znakov v nizu.
+	StringLower	Pretvori niz v male črke.
+	StringMid / SubStr	Pridobi eno ali več črk iz določenega položaja v nizu.
+	StringReplace	Nadomešča določen podniz z novim nizom.
+	StringRight	Pridobi število znakov na desni strani niza.
+	StringSplit / StrSplit	Loči niz v niz nukleotidov, ki uporabljajo določene ločila.
+	StringTrimLeft	Odstrani število znakov od leve strani niza.
+	StringTrimRight	Odstrani število znakov na desni strani niza.
+	StringUpper	Pretvori niz v velike črke.
+	Suspend	Onemogoči ali omogoči vse ali izbrane bližnjic in hotstrings.
+	SysGet	Prenese ločljivost zaslona, multi-monitor info, dimenzije sistemskih objektov in drugih sistemskih lastnosti.
+	Tan	Vrne trigonometrične tangens številko.
+	ToolTip	Ustvarja vedno-on-top okno kjerkoli na zaslonu.
+	Transform	Opravlja razna matematične funkcije, bitni poslovanja in naloge, kot so ASCII / pretvorbo Unicode.
+	TrayTip	Odpirajo balon sporočilo bližini pladenj ikona. Zahteva Windows 2000/XP ali novejšo.
+	Trim / LTrim / RTrim	Obloge določenih znakov od začetka in / ali konca niza.
+	Try	Varovala ena ali več izjav (ukazi ali besedne zveze) proti runtime napake in izjeme vrgli z ukazom metov.
+	Until	Velja pogoj za nadaljevanje Loop ali za-loop.
+	UrlDownloadToFile	Prenese datoteko iz interneta.
+	VarSetCapacity	Poveča razpoložljivih zmogljivosti spremenljivka, ali pa osvobodi svoj spomin. Običajno je to potrebno, samo za neobičajnih dogodkov, kot DllCall.
+	WinActivate	Aktivira določeno okno (zaradi česar je predvsem).
+	WinActivateBottom	Enako kot WinActivate razen tega, da aktivira: Spodnja (vsaj v zadnjem času aktivno) ujemanje okno namesto vrhunska.
+	WinActive	Vrne Unique ID (hWnd) aktivnega okna, če se ujema določene kriterije.
+	WinClose	Zapre določeno okno.
+	WinExist	Preveri, če obstaja določeno okno.
+	WinGetActiveStats	Združuje funkcije WinGetActiveTitle in WinGetPos v en ukaz.
+	WinGetActiveTitle	Pridobi naziv aktivnega okna.
+	WinGetClass	Pridobi ime razreda v določenem okna.
+	WinGet	Prenese določenem okna edinstven ID, ID procesa ime procesa, ali seznam svojih kontrol. Prav tako lahko poiskati seznam vseh oknih, ki ustrezajo določene kriterije.
+	WinGetPos	Pridobi položaj in velikost določenem oknu.
+	WinGetText	Prikliče besedilo iz določenega okna.
+	WinGetTitle	Pridobi naziv v določenem oknu.
+	WinHide	Skrije določeno okno.
+	WinKill	Sili, določeno okno zapreti.
+	WinMaximize	Razširja določene okno na svojo največjo velikost.
+	WinMenuSelectItem	Sklicuje na element menija v menijski vrstici določenega okna.
+	WinMinimize	Zgrudi določeno okno v gumb v opravilni vrstici.
+	WinMinimizeAll	Zmanjša vsa okna.
+	WinMinimizeAllUndo	Obrne učinek prejšnje WinMinimizeAll.
+	WinMove	Spremembe položaj in / ali velikost določenega okna.
+	WinRestore	Unminimizes ali unmaximizes določeno okno, če je čim bolj zmanjšati ali čim večje.
+	WinSet	Omogoča različne spremembe v določenem oknu, kot so "vedno na vrhu" in preglednosti.
+	WinSetTitle	Spremeni naslov iz okna.
+	WinShow	Razkrije predpisano okno.
+	WinWait	Počaka, da obstaja določeno okno.
+	WinWaitActive	Počaka, da je določeno okno aktivno.
+	WinWaitClose	Počaka določen okno ne obstaja.
+	WinWaitNotActive	Počaka določen okno ni aktivna.
+	)	...
 return		

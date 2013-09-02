@@ -1055,250 +1055,248 @@
 ; AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	(LTrim	
-	Abs	
-	ASin	
-	ACos	
-	Array	
-	Asc	
-	ATan	
-	BlockInput	
-	Break	
-	Ceil	
-	Chr	
-	Click	
-	ClipWait	
-	Clipboard	
-	ComObjActive	
-	ComObjArray	
-	ComObjConnect	
-	ComObjCreate	
-	ComObjEnwrap / ComObjUnwrap	
-	ComObjError	
-	ComObjFlags	
-	ComObjGet	
-	ComObjMissing	
-	ComObjParameter	
-	ComObjQuery	
-	ComObjType	
-	ComObjValue	
-	Continue	
-	Control	
-	ControlClick	
-	ControlEditPaste	
-	ControlFocus	
-	ControlGet	
-	ControlGetFocus	
-	ControlGetPos	
-	ControlGetText	
-	ControlMove	
-	ControlSend / ControlSendRaw 	
-	ControlSetText	
-	CoordMode	
-	Cos	
-	Critical	
-	DetectHiddenText	
-	DetectHiddenWindows	
-	DllCall	
-	Drive	
-	DriveGet	
-	DriveSpaceFree	
-	Edit	
-	Else	
-	EnvAdd	
-	EnvDiv	
-	EnvGet	
-	EnvMult	
-	EnvSet	
-	EnvSub	
-	EnvUpdate	
-	Exit	
-	ExitApp	
-	Exp	
-	FileAppend	
-	FileCopy	
-	FileCopyDir	
-	FileCreateDir	
-	FileCreateShortcut	
-	FileDelete	
-	FileEncoding	
-	FileInstall	
-	FileGetAttrib	
-	FileGetShortcut	
-	FileGetSize	
-	FileGetTime	
-	FileGetVersion	
-	FileMove	
-	FileMoveDir	
-	FileOpen	
-	FileRead	
-	FileReadLine	
-	FileRecycle	
-	FileRecycleEmpty	
-	FileRemoveDir	
-	FileSelectFile	
-	FileSelectFolder	
-	FileSetAttrib	
-	FileSetTime	
-	Floor	
-	For	
-	FormatTime	
-	Func	
-	GetKeyName / GetKeyVK / GetKeySC	
-	GetKeyState	
-	Gosub	
-	Goto	
-	GroupActivate	
-	GroupAdd	
-	GroupClose	
-	GroupDeactivate	
-	if	
-	if (expression)	
-	If var [not] between	
-	If var [not] in/contains MatchList 	
-	If var is [not] type	
-	If Clipboard	
-	If ErrorLevel	
-	If A_Index	
-	IfEqual/IfNotEqual	
-	IfExist / IfNotExist / FileExist	
-	IfGreater / IfGreaterOrEqual	
-	IfInString / IfNotInString / InStr	
-	IfLess / IfLessOrEqual	
-	IfMsgBox	
-	IfWinActive / IfWinNotActive	
-	IfWinExist / IfWinNotExist	
-	ImageSearch	
-	IniDelete	
-	IniRead	
-	IniWrite	
-	Input	
-	InputBox	
-	InStr	
-	IsByRef	
-	IsObject	
+	Abs	Mengembalikan nilai mutlak bagi nombor.
+	ASin	Kembali arcsine itu (bilangan yang sine adalah Bilangan) dalam radian.
+	ACos	Kembali arccosine itu (bilangan yang kosinus adalah Bilangan) dalam radian.
+	Array	Cipta Objek Array.
+	Asc	Kembali kod aksara (nombor antara 1 dan 255 (dalam membina ANSI) atau 65535 (dalam membina Unicode)) bagi aksara pertama dalam rentetan.
+	ATan	Kembali arctangent itu (bilangan yang tangen adalah Bilangan) dalam radian.
+	BlockInput	Menyahboleh atau membolehkan keupayaan pengguna untuk berinteraksi dengan komputer melalui papan kekunci dan tetikus.
+	Break	Keluar (tamat) gelung. Sah di dalam apa-apa jenis gelung.
+	Ceil	Pulangan Bilangan dinaikkan kepada integer yang terdekat (tanpa apa-apa .00 akhiran).
+	Chr	Kembali watak tunggal yang sepadan dengan kod watak yang ditunjukkan oleh nombor.
+	Click	Klik butang tetikus pada koordinat dinyatakan. Ia juga boleh tahan butang, putarkan roda, atau bergerak.
+	ClipWait	Menunggu sehingga clipboard mengandungi data.
+	Clipboard	Menampal teks dari clipboard
+	ComObjActive	Mendapatkan semula objek COM berdaftar.
+	ComObjArray	Mewujudkan SAFEARRAY untuk digunakan dengan COM.
+	ComObjConnect	Menghubungkan sumber acara objek COM kepada fungsi-fungsi dengan awalan yang diberikan.
+	ComObjCreate	Mencipta objek COM.
+	ComObjEnwrap / ComObjUnwrap	Salutan / unwraps objek COM.
+	ComObjError	Membolehkan atau melumpuhkan pemberitahuan kesilapan COM.
+	ComObjFlags	Mendapatkan semula atau bendera perubahan yang mengawal tingkah laku pembungkus objek COM ini.
+	ComObjGet	Kembali merujuk kepada objek yang disediakan oleh komponen COM.
+	ComObjMissing	Mewujudkan "parameter hilang" objek untuk lulus dengan kaedah COM.
+	ComObjParameter	Salutan nilai dan jenis untuk lulus sebagai parameter untuk kaedah COM.
+	ComObjQuery	Pertanyaan objek COM untuk antara muka atau perkhidmatan.
+	ComObjType	Mendapatkan semula maklumat jenis dari objek COM.
+	ComObjValue	Mendapatkan semula nilai atau penunjuk yang disimpan di dalam objek pembungkus COM.
+	Continue	Melangkau seluruh lelaran gelung semasa dan mula yang baru. Sah di dalam apa-apa jenis gelung.
+	Control	Membuat pelbagai perubahan kepada kawalan.
+	ControlClick	Menghantar butang tetikus atau peristiwa roda tetikus untuk kawalan.
+	ControlEditPaste	Rentetan Pes pada kedudukan tanda sisipan / memasukkan dalam kawalan Edit (ini tidak memberi kesan kepada kandungan klipbod).
+	ControlFocus	Set fokus input kepada kawalan yang diberikan pada tingkap.
+	ControlGet	Mendapatkan semula pelbagai jenis maklumat mengenai kawalan.
+	ControlGetFocus	Mendapatkan semula yang mengawal tetingkap sasaran mempunyai fokus input, jika ada.
+	ControlGetPos	Mendapatkan semula kedudukan dan saiz kawalan.
+	ControlGetText	Mendapatkan semula teks dari kawalan.
+	ControlMove	Bergerak atau mengubah saiz kawalan.
+	ControlSend / ControlSendRaw 	Menghantar ketukan kekunci simulasi untuk tingkap atau kawalan.
+	ControlSetText	Perubahan teks kawalan.
+	CoordMode	Set menyelaras mod untuk pelbagai arahan untuk menjadi relatif kepada sama ada tingkap aktif atau skrin.
+	Cos	Mengembalikan kosinus trigonometri nombor.
+	Critical	Menghalang thread semasa dari diganggu oleh benang lain.
+	DetectHiddenText	Menentukan sama ada teks tidak dapat dilihat dalam tetingkap adalah "melihat" bagi maksud mencari tingkap. Ini memberi kesan kepada arahan seperti IfWinExist dan WinActivate.
+	DetectHiddenWindows	Menentukan sama ada tingkap kelihatan adalah "dilihat" oleh skrip.
+	DllCall	Panggilan fungsi di dalam DLL, seperti fungsi Windows API standard.
+	Drive	Mengeluarkan / menarik balik dulang di dalam pemacu CD atau DVD, atau menetapkan label kelantangan memandu itu.
+	DriveGet	Mendapatkan semula pelbagai jenis maklumat mengenai cakera komputer (s).
+	DriveSpaceFree	Mendapatkan semula ruang cakera bebas memandu, di Megabit.
+	Edit	Buka skrip semasa untuk menyunting dalam editor bersekutu.
+	Else	Menyatakan arahan (s) untuk melaksanakan jika IF-pernyataan dinilai sebagai FALSE. Apabila lebih daripada satu arahan hadir, letakkan mereka dalam satu blok (penyokong).
+	EnvAdd	Set ubah kepada jumlah nilai ditambah sendiri yang diberikan (juga boleh menambah atau menolak masa dari nilai tarikh masa). Sinonim dengan: Var + = Nilai.
+	EnvDiv	Menetapkan ubah kepada dirinya dibahagikan dengan nilai yang diberikan. Sinonim dengan: Var / = Nilai.
+	EnvGet	Semula pembolehubah persekitaran.
+	EnvMult	Menetapkan ubah kepada dirinya kali nilai yang diberikan. Sinonim dengan: Var * = Nilai.
+	EnvSet	Menulis nilai kepada pembolehubah yang terkandung dalam alam sekitar.
+	EnvSub	Set ubah untuk dirinya ditolak nilai yang diberikan (juga boleh membandingkan nilai-nilai tarikh-masa). Sinonim dengan: Var - = Nilai.
+	EnvUpdate	Memberitahu OS dan semua permohonan berjalan yang berubah-ubah persekitaran (s) telah berubah.
+	Exit	Keluar benang semasa atau (jika skrip tidak berterusan dan tidak mengandungi hotkeys) skrip keseluruhan.
+	ExitApp	Tamat skrip tanpa syarat.
+	Exp	Pulangan e (yang kira-kira 2,71828182845905) dinaikkan kepada kuasa N.
+	FileAppend	Tulis teks ke akhir fail (pertama mewujudkan fail tersebut, jika perlu).
+	FileCopy	Salinan satu atau lebih fail.
+	FileCopyDir	Salinan folder bersama-sama dengan semua sub-folder dan fail (sama xcopy) itu.
+	FileCreateDir	Mencipta folder.
+	FileCreateShortcut	Mewujudkan (. Lnk) fail pintas.
+	FileDelete	Memadam satu atau lebih fail.
+	FileEncoding	Menetapkan pengekodan lalai untuk FileRead, FileReadLine, Loop Read, FileAppend, dan FileOpen.
+	FileInstall	Termasuk fail yang ditetapkan dalam versi disusun skrip.
+	FileGetAttrib	Laporan sama ada fail atau folder adalah baca sahaja, tersembunyi, dan lain-lain
+	FileGetShortcut	Mendapatkan semula maklumat mengenai jalan pintas (. Lnk) fail, seperti fail sasaran.
+	FileGetSize	Semula saiz fail.
+	FileGetTime	Semula setem datetime daripada fail atau folder.
+	FileGetVersion	Semula versi fail.
+	FileMove	Bergerak atau menamakan semula satu atau lebih fail.
+	FileMoveDir	Bergerak folder bersama-sama dengan semua sub-folder dan fail itu. Ia juga boleh menamakan semula folder.
+	FileOpen	Menyediakan fail berorientasikan objek I / O.
+	FileRead	Membaca kandungan fail ke dalam pemboleh ubah.
+	FileReadLine	Membaca garis ditentukan dari fail dan menyimpan teks dalam pembolehubah.
+	FileRecycle	Menghantar fail atau direktori dengan tong kitar semula, jika boleh.
+	FileRecycleEmpty	Mengosongkan tong kitar semula.
+	FileRemoveDir	Memadam folder.
+	FileSelectFile	Memaparkan dialog standard yang membolehkan pengguna untuk membuka atau menyimpan fail (s).
+	FileSelectFolder	Memaparkan dialog standard yang membolehkan pengguna untuk memilih folder.
+	FileSetAttrib	Perubahan sifat-sifat satu atau lebih fail atau folder. Wildcard yang disokong.
+	FileSetTime	Perubahan setem datetime satu atau lebih fail atau folder. Wildcard yang disokong.
+	Floor	Pulangan Bilangan bulat ke integer terdekat (tanpa akhiran .00).
+	For	Mengulangi siri arahan sekali untuk setiap pasangan key-nilai dalam objek.
+	FormatTime	Mengubah a timestamp YYYYMMDDHH24MISS ke format tarikh / masa yang dinyatakan.
+	Func	Mendapatkan semula merujuk kepada fungsi.
+	GetKeyName / GetKeyVK / GetKeySC	Mendapatkan semula nama atau teks, kod kunci maya atau kod imbasan kunci.
+	GetKeyState	Pemeriksaan jika kunci papan kekunci atau tetikus / butang kayu bedik ke bawah atau ke atas. Juga mendapatkan semula status joystick.
+	Gosub	Melompat dengan label yang dinyatakan dan terus pelaksanaan sehingga Pulangan ditemui.
+	Goto	Melompat dengan label yang dinyatakan dan terus pelaksanaan.
+	GroupActivate	Mengaktifkan tetingkap berikutnya dalam kumpulan tingkap yang ditakrifkan dengan GroupAdd.
+	GroupAdd	Menambah spesifikasi tingkap kepada sekumpulan tingkap, mewujudkan kumpulan jika perlu.
+	GroupClose	Menutup tetingkap aktif jika ia hanya diaktifkan oleh GroupActivate atau GroupDeactivate. Ia kemudian mengaktifkan tetingkap berikutnya dalam siri ini. Ia juga boleh menutup semua tingkap dalam kumpulan.
+	GroupDeactivate	Sama seperti GroupActivate kecuali mengaktifkan tetingkap berikutnya tidak dalam kumpulan.
+	if	Menyatakan arahan (s) untuk melaksanakan jika perbandingan pembolehubah kepada nilai evalutes ke TRUE. Apabila lebih daripada satu arahan hadir, letakkan mereka dalam satu blok (penyokong).
+	if (expression)	Menyatakan arahan (s) untuk melaksanakan jika ungkapan untuk menilai BENAR.
+	If var [not] between	Cek sama ada kandungan yang berubah-ubah adalah berangka atau abjad antara dua nilai (termasuk).
+	If var [not] in/contains MatchList 	Cek sama ada kandungan yang berubah-ubah yang sesuai dengan salah satu perkara-perkara dalam senarai.
+	If var is [not] type	Cek sama ada kandungan yang berubah-ubah adalah angka, huruf besar, dan lain-lain
+	If Clipboard	Pemeriksaan jika teks klipbod adalah matchs rentetan tertentu.
+	If ErrorLevel	Pemeriksaan jika imej yang dinyatakan atau pixel ditemui di skrin.
+	If A_Index	Pemeriksaan jika lelaran gelung semasa matchs beberapa yang ditetapkan.
+	IfEqual/IfNotEqual	Membandingkan ubah untuk nilai untuk kesaksamaan. Sinonim dengan: jika Var = Nilai | jika Var <> Nilai.
+	IfExist / IfNotExist / FileExist	Pemeriksaan bagi kewujudan fail atau folder.
+	IfGreater / IfGreaterOrEqual	Membandingkan ubah untuk nilai. Sinonim dengan: jika Var> Nilai | jika Var> = Nilai.
+	IfInString / IfNotInString / InStr	Pemeriksaan jika ubah mengandungi rentetan tertentu.
+	IfLess / IfLessOrEqual	Membandingkan ubah untuk nilai. Sinonim dengan: jika Var <Nilai | jika Var <= Nilai.
+	IfMsgBox	Pemeriksaan butang yang telah ditolak oleh pengguna dalam arahan MsgBox yang terkini.
+	IfWinActive / IfWinNotActive	Pemeriksaan jika tingkap yang dinyatakan wujud dan kini aktif (utama).
+	IfWinExist / IfWinNotExist	Pemeriksaan jika tingkap yang dinyatakan wujud.
+	ImageSearch	Carian satu rantau skrin untuk imej.
+	IniDelete	Memadam nilai dari fail format. Jogja standard.
+	IniRead	Membaca nilai dari fail format. Jogja standard.
+	IniWrite	Tulis nilai kepada fail format. Jogja standard.
+	Input	Menunggu pengguna menaip rentetan (tidak disokong pada Windows 9x: ia tidak apa-apa).
+	InputBox	Memaparkan kotak input untuk meminta pengguna untuk memasukkan rentetan.
+	InStr	Searches untuk kejadian yang diberikan tali, dari sebelah kiri atau kanan.
 	)	
 	Ahk_Cmd_Index = %Ahk_Cmd_Index%`n	
 	(LTrim	
-	KeyHistory	
-	KeyWait	
-	Labels	
-	Log	
-	Ln	
-	Loop (normal) 	
-	Loop (files & folders)	
-	Loop (parse a string)	
-	Loop (read file contents)	
-	Loop (registry)	
-	Menu	
-	Mod	
-	MouseClickDrag	
-	MouseGetPos	
-	MouseMove	
-	MsgBox	
-	NumGet	
-	NumPut	
-	OnExit	
-	OnMessage	
-	OutputDebug	
-	Pause	
-	PixelGetColor	
-	PixelSearch	
-	PostMessage	
-	Process	
-	Progress	
-	Random	
-	RegExMatch	
-	RegExReplace	
-	RegDelete	
-	RegRead	
-	RegWrite	
-	RegisterCallback	
-	Return	
-	Round	
-	Run	
-	RunAs	
-	RunWait	
-	Screenshot	
-	Send / SendRaw / SendInput / SendPlay	
-	SendLevel	
-	SendMessage	
-	SendMode	
-	SetCapslockState	
-	SetEnv (Var = Value)	
-	SetFormat	
-	SetKeyDelay	
-	SetMouseDelay	
-	SetNumlockState	
-	SetScrollLockState	
-	SetRegView	
-	Shutdown	
-	Sin	
-	Sleep	
-	Sort	
-	SoundBeep	
-	SoundGet	
-	SoundGetWaveVolume	
-	SoundPlay	
-	SoundSet	
-	SoundSetWaveVolume	
-	SplashImage	
-	SplashTextOn	
-	SplashTextOff	
-	SplitPath	
-	Sqrt	
-	StatusBarGetText	
-	StatusBarWait	
-	StrPut / StrGet	
-	StringCaseSense	
-	StringGetPos / InStr	
-	StringLeft	
-	StringLen / StrLen	
-	StringLower	
-	StringMid / SubStr	
-	StringReplace	
-	StringRight	
-	StringSplit / StrSplit	
-	StringTrimLeft	
-	StringTrimRight	
-	StringUpper	
-	Suspend	
-	SysGet	
-	Tan	
-	ToolTip	
-	Transform	
-	TrayTip	
-	Trim / LTrim / RTrim	
-	Try	
-	Until	
-	UrlDownloadToFile	
-	VarSetCapacity	
-	WinActivate	
-	WinActivateBottom	
-	WinActive	
-	WinClose	
-	WinExist	
-	WinGetActiveStats	
-	WinGetActiveTitle	
-	WinGetClass	
-	WinGet	
-	WinGetPos	
-	WinGetText	
-	WinGetTitle	
-	WinHide	
-	WinKill	
-	WinMaximize	
-	WinMenuSelectItem	
-	WinMinimize	
-	WinMinimizeAll	
-	WinMinimizeAllUndo	
-	WinMove	
-	WinRestore	
-	WinSet	
-	WinSetTitle	
-	WinShow	
-	WinWait	
-	WinWaitActive	
-	WinWaitClose	
-	WinWaitNotActive	
-	)	
+	KeyHistory	Memaparkan info skrip dan sejarah ketukan kekunci yang paling baru-baru ini dan klik tetikus.
+	KeyWait	Menunggu kekunci atau tetikus / kayu bedik butang untuk dilepaskan atau ditekan ke bawah.
+	Labels	Label mengenal pasti baris kod, dan boleh digunakan sebagai sasaran Goto atau untuk membentuk subrutin.
+	Log	Kembali logaritma (asas 10) nombor.
+	Ln	Mengembalikan logaritma asli (asas e) Bilangan.
+	Loop (normal) 	Melaksanakan satu siri arahan berkali-kali: sama ada bilangan yang ditentukan masa atau sehingga rehat yang dihadapi.
+	Loop (files & folders)	Mendapatkan semula fail-fail tertentu atau folder, satu demi satu.
+	Loop (parse a string)	Mendapatkan semula substrings (bidang) daripada rentetan, satu pada satu masa.
+	Loop (read file contents)	Mendapatkan semula baris dalam fail teks, satu pada satu masa (melakukan lebih baik daripada FileReadLine).
+	Loop (registry)	Mendapatkan semula kandungan subkey pendaftaran yang dinyatakan, satu perkara pada satu masa.
+	Menu	Mencipta, memadam, mengubah dan memaparkan menu dan item menu. Perubahan ikon dulang dan tooltip itu. Mengawal sama ada tetingkap utama skrip disusun boleh dibuka.
+	Mod	Modulo. Kembali baki apabila dividen dibahagikan dengan Pembahagi.
+	MouseClickDrag	Klik dan memegang butang tetikus tertentu, menggerakkan tetikus untuk Koordinat destinasi, kemudian melepaskan butang.
+	MouseGetPos	Mendapatkan semula kedudukan semasa kursor tetikus, dan pilihan yang tingkap dan kawalan ia berlegar.
+	MouseMove	Menggerakkan kursor tetikus.
+	MsgBox	Memaparkan teks yang dinyatakan dalam tetingkap kecil yang mengandungi satu atau lebih butang (seperti Ya dan Tidak).
+	NumGet	Kembali nombor perduaan yang disimpan di alamat yang dinyatakan + mengimbangi.
+	NumPut	Bilangan kedai di format binari di alamat yang dinyatakan + mengimbangi dan mengembalikan alamat di sebelah kanan item hanya bertulis.
+	OnExit	Menetapkan satu subrutin untuk berjalan secara automatik apabila keluar skrip.
+	OnMessage	Menetapkan fungsi untuk memanggil secara automatik apabila skrip menerima mesej yang ditentukan.
+	OutputDebug	Menghantar rentetan kepada penyahpepijat (jika ada) untuk paparan.
+	Pause	Berhenti thread semasa skrip itu.
+	PixelGetColor	Semula warna pixel pada x yang ditetapkan, y menyelaras.
+	PixelSearch	Carian satu rantau skrin untuk piksel warna yang ditetapkan.
+	PostMessage	Meletakkan mesej dalam barisan mesej daripada tingkap atau kawalan.
+	Process	Melakukan salah satu operasi berikut pada proses: memeriksa jika ia wujud, perubahan keutamaan; menutup ia; menunggu ia untuk menutup.
+	Progress	Mencipta atau mengemaskini tingkap yang mengandungi bar kemajuan.
+	Random	Menjana nombor pseudo-rawak.
+	RegExMatch	Menentukan sama ada rentetan mengandungi corak (ungkapan biasa).
+	RegExReplace	Menggantikan kejadian corak (ungkapan biasa) di dalam rentetan.
+	RegDelete	Memadam satu subkey atau nilai dari Registry.
+	RegRead	Membaca nilai dari Registry.
+	RegWrite	Menulis nilai kepada Registry.
+	RegisterCallback	Mencipta alamat mesin kod yang apabila dipanggil, pelencongan panggilan kepada fungsi dalam skrip.
+	Return	Pulangan daripada satu subrutin yang pelaksanaan sebelum ini telah melonjak melalui fungsi-panggilan, Gosub, pengaktifan Hotkey, GroupActivate, atau cara lain.
+	Round	Jika N ditinggalkan atau 0, Nombor bulat kepada integer terhampir. Jika N adalah nombor positif, Nombor bulat kepada N tempat perpuluhan. Jika N adalah negatif, Nombor bulat oleh N digit di sebelah kiri titik perpuluhan.
+	Run	Menjalankan program luar.
+	RunAs	Menetapkan satu set kelayakan pengguna untuk menggunakan untuk semua kegunaan seterusnya Run dan RunWait. Memerlukan Windows 2000/XP atau kemudian.
+	RunWait	Menjalankan program luar dan menunggu sehingga ia selesai.
+	Screenshot	Mewujudkan screenshot PNG kawasan yang dinyatakan.
+	Send / SendRaw / SendInput / SendPlay	Menghantar simulasi ketukan kekunci dan klik tetikus untuk tetingkap aktif.
+	SendLevel	Kawalan yang papan kekunci dan tetikus peristiwa tiruan diabaikan oleh hotkeys dan hotstrings.
+	SendMessage	Menghantar mesej kepada tingkap atau kawalan dan menunggu pengakuan.
+	SendMode	Membuat Hantar sinonim dengan SendInput atau SendPlay bukannya lalai (SendEvent). Juga membuat Klik dan MouseMove / Klik / Seret menggunakan kaedah yang ditetapkan.
+	SetCapslockState	Set negeri utama CapsLock itu. Juga boleh memaksa utama untuk kekal hidup atau mati.
+	SetEnv (Var = Value)	Tetapkan nilai yang ditentukan pembolehubah.
+	SetFormat	Set format integer dan nombor titik apung dijana oleh operasi matematik.
+	SetKeyDelay	Set kelewatan yang akan berlaku selepas setiap kali kekunci ditekan dihantar oleh Hantar atau ControlSend.
+	SetMouseDelay	Set kelewatan yang akan berlaku selepas setiap pergerakan tetikus atau klik.
+	SetNumlockState	Menetapkan keadaan NumLock utama itu. Juga boleh memaksa utama untuk kekal hidup atau mati.
+	SetScrollLockState	Set negeri utama ScrollLock itu. Juga boleh memaksa utama untuk kekal hidup atau mati.
+	SetRegView	Membolehkan arahan pendaftaran dalam skrip 32-bit untuk mengakses pandangan pendaftaran 64-bit dan sebaliknya.
+	Shutdown	Menutup, mula semula, atau log off sistem.
+	Sin	Kembali sinus trigonometri nombor.
+	Sleep	Menunggu jumlah masa yang ditetapkan sebelum meneruskan.
+	Sort	Mengatur kandungan yang berubah-ubah dalam abjad, susunan nombor, atau rawak (pilihan mengeluarkan salinan).
+	SoundBeep	Mengeluarkan nada dari pembesar suara PC.
+	SoundGet	Mendapatkan semula pelbagai tetapan dari alat bunyi (master bisu, jumlah induk, dan lain-lain)
+	SoundGetWaveVolume	Mendapatkan semula jumlah output gelombang dari peranti bunyi.
+	SoundPlay	Memainkan bunyi, video, atau lain-lain jenis fail yang disokong.
+	SoundSet	Perubahan pelbagai tetapan peranti bunyi (master bisu, jumlah induk, dan lain-lain)
+	SoundSetWaveVolume	Perubahan jumlah output gelombang untuk peranti bunyi.
+	SplashImage	Mencipta atau mengemaskini tingkap yang mengandungi JPG, GIF, BMP atau imej.
+	SplashTextOn	Mencipta teks disesuaikan timbul tingkap.
+	SplashTextOff	Menutup tingkap di atas.
+	SplitPath	Memisahkan nama fail atau URL ke namanya, direktori, penyambungan, dan memandu.
+	Sqrt	Mengembalikan punca kuasa dua nombor.
+	StatusBarGetText	Mendapatkan semula teks dari kawalan bar status standard.
+	StatusBarWait	Menunggu sehingga bar status tingkap mengandungi rentetan tertentu.
+	StrPut / StrGet	Salinan tali ke atau dari alamat ingatan, pilihan menukar di antara laman kod.
+	StringCaseSense	Menentukan sama ada perbandingan rentetan sensitif (lalai adalah "tidak sensitif").
+	StringGetPos / InStr	Mendapatkan semula kedudukan subrentetan yang dinyatakan dalam rentetan.
+	StringLeft	Semula beberapa watak-watak dari sebelah kiri rentetan.
+	StringLen / StrLen	Mendapatkan semula kiraan berapa banyak aksara dalam rentetan.
+	StringLower	Menukarkan rentetan kepada huruf kecil.
+	StringMid / SubStr	Mendapatkan semula satu atau lebih watak-watak dari kedudukan yang dinyatakan dalam rentetan.
+	StringReplace	Menggantikan subrentetan yang dinyatakan dengan tali yang baru.
+	StringRight	Semula beberapa watak-watak dari sebelah kanan rentetan.
+	StringSplit / StrSplit	Memisahkan tali ke dalam pelbagai substrings menggunakan pembatas ditetapkan.
+	StringTrimLeft	Membuang beberapa watak-watak dari sebelah kiri rentetan.
+	StringTrimRight	Membuang beberapa watak-watak dari sebelah kanan rentetan.
+	StringUpper	Menukarkan rentetan kepada huruf besar.
+	Suspend	Menyahboleh atau membolehkan semua atau dipilih hotkeys dan hotstrings.
+	SysGet	Semula resolusi skrin, info multi-monitor, dimensi sistem objek, dan sifat-sifat sistem yang lain.
+	Tan	Kembali tangen trigonometri nombor.
+	ToolTip	Mewujudkan tingkap sentiasa ke atas mana-mana sahaja pada skrin.
+	Transform	Menjalankan fungsi-fungsi pelbagai matematik, operasi bitwise, dan tugas-tugas seperti ASCII / penukaran Unicode.
+	TrayTip	Mewujudkan tetingkap mesej belon berhampiran ikon dulang. Memerlukan Windows 2000/XP atau kemudian.
+	Trim / LTrim / RTrim	Trims watak-watak tertentu dari awal dan / atau akhir rentetan.
+	Try	Pengawal satu atau lebih kenyataan (arahan atau ungkapan) terhadap kesilapan runtime dan pengecualian dilemparkan oleh arahan membuang.
+	Until	Menggunakan keadaan untuk meneruskan kesinambungan daripada Loop atau Bagi gelung.
+	UrlDownloadToFile	Memuat turun fail dari Internet.
+	VarSetCapacity	Membesarkan kapasiti memegang ubah atau membebaskan ingatan. Biasanya, ini adalah perlu hanya untuk keadaan luar biasa seperti DllCall.
+	WinActivate	Mengaktifkan tingkap dinyatakan (menjadikannya sekali).
+	WinActivateBottom	Sama seperti WinActivate kecuali bahawa ia mengaktifkan panhandle (-kurangnya baru-baru ini aktif) tingkap yang hampir sama dan bukannya atas.
+	WinActive	Kembali ID Unik (HWND) tetingkap aktif jika ia sepadan dengan kriteria yang ditetapkan.
+	WinClose	Menutup tingkap yang ditetapkan.
+	WinExist	Pemeriksaan jika tingkap yang dinyatakan wujud.
+	WinGetActiveStats	Menggabungkan fungsi WinGetActiveTitle dan WinGetPos ke dalam satu arahan.
+	WinGetActiveTitle	Mendapatkan semula tajuk tetingkap aktif.
+	WinGetClass	Mendapatkan semula nama kelas tetingkap yang dinyatakan itu.
+	WinGet	Semula ID tingkap tertentu yang unik, proses ID, nama proses, atau senarai kawalan itu. Ia juga boleh dapatkan senarai semua tetingkap yang sepadan dengan kriteria yang ditetapkan.
+	WinGetPos	Mendapatkan semula kedudukan dan saiz tingkap yang ditetapkan.
+	WinGetText	Mendapatkan semula teks dari tingkap yang ditetapkan.
+	WinGetTitle	Mendapatkan semula gelaran tingkap yang ditetapkan.
+	WinHide	Menyembunyikan tetingkap yang dinyatakan.
+	WinKill	Angkatan tingkap yang dinyatakan untuk menutup.
+	WinMaximize	Membesarkan tetingkap yang dinyatakan kepada saiz maksimum.
+	WinMenuSelectItem	Menyembah item menu dari menu bar tetingkap tertentu.
+	WinMinimize	Runtuh tingkap yang ditetapkan ke dalam satu butang di bar tugas.
+	WinMinimizeAll	Meminimumkan semua tingkap.
+	WinMinimizeAllUndo	Membalikkan kesan daripada WinMinimizeAll sebelumnya.
+	WinMove	Perubahan kedudukan dan / atau saiz tetingkap tertentu.
+	WinRestore	Unminimizes atau unmaximizes tingkap yang ditetapkan jika ia dikurangkan atau dimaksimumkan.
+	WinSet	Membuat pelbagai perubahan kepada tingkap yang dinyatakan, seperti "sentiasa di atas" dan ketelusan.
+	WinSetTitle	Perubahan tajuk tetingkap yang dinyatakan.
+	WinShow	Unhides tingkap yang ditetapkan.
+	WinWait	Menunggu sehingga tingkap yang dinyatakan wujud.
+	WinWaitActive	Menunggu sehingga tingkap yang dinyatakan adalah aktif.
+	WinWaitClose	Menunggu sehingga tingkap yang dinyatakan tidak wujud.
+	WinWaitNotActive	Menunggu sehingga tingkap yang dinyatakan tidak aktif.
+	)	...
 return		

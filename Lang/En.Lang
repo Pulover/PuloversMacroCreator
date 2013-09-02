@@ -1174,8 +1174,6 @@
 	Input	Waits for the user to type a string (not supported on Windows 9x: it does nothing).
 	InputBox	Displays an input box to ask the user to enter a string.
 	InStr	Searches for a given occurrence of a string, from the left or the right.
-	IsByRef	Determines whether a ByRef parameter was supplied with a variable.
-	IsObject	Determines whether a value is an object.
 	)	
 	Ahk_Cmd_Index = %Ahk_Cmd_Index%`n	
 	(LTrim	

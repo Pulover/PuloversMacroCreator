@@ -1055,250 +1055,248 @@
 ; AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	(LTrim	
-	Abs	
-	ASin	
-	ACos	
-	Array	
-	Asc	
-	ATan	
-	BlockInput	
-	Break	
-	Ceil	
-	Chr	
-	Click	
-	ClipWait	
-	Clipboard	
-	ComObjActive	
-	ComObjArray	
-	ComObjConnect	
-	ComObjCreate	
-	ComObjEnwrap / ComObjUnwrap	
-	ComObjError	
-	ComObjFlags	
-	ComObjGet	
-	ComObjMissing	
-	ComObjParameter	
-	ComObjQuery	
-	ComObjType	
-	ComObjValue	
-	Continue	
-	Control	
-	ControlClick	
-	ControlEditPaste	
-	ControlFocus	
-	ControlGet	
-	ControlGetFocus	
-	ControlGetPos	
-	ControlGetText	
-	ControlMove	
-	ControlSend / ControlSendRaw 	
-	ControlSetText	
-	CoordMode	
-	Cos	
-	Critical	
-	DetectHiddenText	
-	DetectHiddenWindows	
-	DllCall	
-	Drive	
-	DriveGet	
-	DriveSpaceFree	
-	Edit	
-	Else	
-	EnvAdd	
-	EnvDiv	
-	EnvGet	
-	EnvMult	
-	EnvSet	
-	EnvSub	
-	EnvUpdate	
-	Exit	
-	ExitApp	
-	Exp	
-	FileAppend	
-	FileCopy	
-	FileCopyDir	
-	FileCreateDir	
-	FileCreateShortcut	
-	FileDelete	
-	FileEncoding	
-	FileInstall	
-	FileGetAttrib	
-	FileGetShortcut	
-	FileGetSize	
-	FileGetTime	
-	FileGetVersion	
-	FileMove	
-	FileMoveDir	
-	FileOpen	
-	FileRead	
-	FileReadLine	
-	FileRecycle	
-	FileRecycleEmpty	
-	FileRemoveDir	
-	FileSelectFile	
-	FileSelectFolder	
-	FileSetAttrib	
-	FileSetTime	
-	Floor	
-	For	
-	FormatTime	
-	Func	
-	GetKeyName / GetKeyVK / GetKeySC	
-	GetKeyState	
-	Gosub	
-	Goto	
-	GroupActivate	
-	GroupAdd	
-	GroupClose	
-	GroupDeactivate	
-	if	
-	if (expression)	
-	If var [not] between	
-	If var [not] in/contains MatchList 	
-	If var is [not] type	
-	If Clipboard	
-	If ErrorLevel	
-	If A_Index	
-	IfEqual/IfNotEqual	
-	IfExist / IfNotExist / FileExist	
-	IfGreater / IfGreaterOrEqual	
-	IfInString / IfNotInString / InStr	
-	IfLess / IfLessOrEqual	
-	IfMsgBox	
-	IfWinActive / IfWinNotActive	
-	IfWinExist / IfWinNotExist	
-	ImageSearch	
-	IniDelete	
-	IniRead	
-	IniWrite	
-	Input	
-	InputBox	
-	InStr	
-	IsByRef	
-	IsObject	
+	Abs	Trả về giá trị tuyệt đối của số.
+	ASin	Trả về arcsine (số có sin là số) trong radian.
+	ACos	Trả về arccosine (số có cosin là số) trong radian.
+	Array	Tạo ra một đối tượng Array.
+	Asc	Trả về mã ký tự (một số từ 1 đến 255 (trong ANSI xây dựng) hoặc 65535 (Unicode trong xây dựng)) cho ký tự đầu tiên trong chuỗi.
+	ATan	Trả về arctangent (số có tiếp tuyến là số) trong radian.
+	BlockInput	Vô hiệu hóa hoặc cho phép khả năng của người sử dụng tương tác với máy tính thông qua bàn phím và chuột.
+	Break	Thoát khỏi môi trường (chấm dứt) một vòng lặp. Hợp lệ trong các vòng lặp.
+	Ceil	Trả lại số làm tròn đến số nguyên gần nhất (không có hậu tố .00).
+	Chr	Trả về nhân vật duy nhất tương ứng với mã ký tự được chỉ định bởi số.
+	Click	Nhấn một nút chuột tại tọa độ quy định. Nó cũng có thể giữ một nút, quay bánh xe, hoặc di chuyển.
+	ClipWait	Đợi cho đến khi bộ nhớ tạm chứa dữ liệu.
+	Clipboard	Dán văn bản từ clipboard
+	ComObjActive	Lấy một đối tượng COM đăng ký.
+	ComObjArray	Tạo ra một SAFEARRAY để sử dụng với COM.
+	ComObjConnect	Kết nối các nguồn sự kiện một đối tượng COM của chức năng với một tiền tố nhất định.
+	ComObjCreate	Tạo ra một đối tượng COM.
+	ComObjEnwrap / ComObjUnwrap	Kết thúc tốt đẹp / unwraps một đối tượng COM.
+	ComObjError	Cho phép hoặc vô hiệu hóa các thông báo lỗi COM.
+	ComObjFlags	Truy xuất hoặc thay đổi lá cờ mà kiểm soát hành vi của một đối tượng bao bọc của COM.
+	ComObjGet	Trả về một tham chiếu đến một đối tượng được cung cấp bởi một thành phần COM.
+	ComObjMissing	Tạo ra một "tham số mất tích" đối tượng để vượt qua một phương pháp COM.
+	ComObjParameter	Kết thúc tốt đẹp một giá trị và loại để vượt qua như một tham số cho một phương pháp COM.
+	ComObjQuery	Truy vấn một đối tượng COM cho một giao diện dịch vụ.
+	ComObjType	Lấy loại thông tin từ một đối tượng COM.
+	ComObjValue	Lấy giá trị hoặc con trỏ được lưu trữ trong một đối tượng wrapper COM.
+	Continue	Bỏ qua phần còn lại của vòng lặp hiện tại và bắt đầu một cái mới. Hợp lệ trong các vòng lặp.
+	Control	Làm cho một loạt các thay đổi để điều khiển.
+	ControlClick	Gửi một nút chuột hoặc sự kiện bánh xe chuột để điều khiển.
+	ControlEditPaste	Bột nhão dây tại dấu nháy / chèn vị trí trong một điều khiển Edit (điều này không ảnh hưởng đến nội dung của clipboard).
+	ControlFocus	Đặt trọng tâm vào một điều khiển được trên một cửa sổ.
+	ControlGet	Lấy các loại thông tin về một điều khiển.
+	ControlGetFocus	Truy xuất mà kiểm soát các cửa sổ mục tiêu đã tập trung đầu vào, nếu có.
+	ControlGetPos	Lấy vị trí và kích thước của một điều khiển.
+	ControlGetText	Lấy văn bản từ một điều khiển.
+	ControlMove	Di chuyển hoặc thay đổi kích thước một điều khiển.
+	ControlSend / ControlSendRaw 	Gửi tổ hợp phím mô phỏng một cửa sổ hoặc kiểm soát.
+	ControlSetText	Thay đổi nội dung của một điều khiển.
+	CoordMode	Bộ phối hợp chế độ cho các lệnh khác nhau để được liên quan đến một trong hai cửa sổ đang hoạt động hoặc màn hình.
+	Cos	Trả về cosin lượng giác của số.
+	Critical	Ngăn chặn các chủ đề hiện tại không bị gián đoạn bởi các chủ đề khác.
+	DetectHiddenText	Xác định xem văn bản vô hình trong một cửa sổ được "nhìn thấy" với mục đích tìm kiếm các cửa sổ. Điều này ảnh hưởng đến lệnh như IfWinExist và WinActivate.
+	DetectHiddenWindows	Xác định liệu các cửa sổ vô hình được "nhìn thấy" bởi kịch bản.
+	DllCall	Gọi một chức năng trong một DLL, chẳng hạn như một chức năng Windows API chuẩn.
+	Drive	Đẩy / thu lại các khay trong một ổ đĩa CD hoặc DVD, hoặc đặt nhãn khối lượng của ổ đĩa.
+	DriveGet	Lấy các loại thông tin về ổ đĩa của máy tính (s).
+	DriveSpaceFree	Lấy không gian đĩa miễn phí của một ổ đĩa, trong MB.
+	Edit	Mở ra các kịch bản hiện tại để chỉnh sửa trong trình soạn thảo liên quan.
+	Else	Quy định cụ thể các lệnh (s) để thực hiện nếu một IF-tuyên bố đánh giá để FALSE. Khi có nhiều hơn một lệnh là hiện tại, đặt chúng trong một khối (niềng răng).
+	EnvAdd	Thiết đặt một biến với tổng của bản thân cộng với giá trị nhất định (cũng có thể thêm hoặc trừ đi thời gian từ một giá trị ngày tháng thời gian). Đồng nghĩa với: Var + = giá trị gia tăng.
+	EnvDiv	Thiết đặt một biến để tự chia cho giá trị nhất định. Đồng nghĩa với: Var / = giá trị gia tăng.
+	EnvGet	Lấy một biến môi trường.
+	EnvMult	Thiết đặt một biến để tự lần giá trị nhất định. Đồng nghĩa với: Var * = Giá trị.
+	EnvSet	Viết một giá trị cho một biến có trong môi trường.
+	EnvSub	Thiết đặt một biến để tự trừ đi giá trị nhất định (có thể so sánh giá trị ngày thời gian). Đồng nghĩa với: Var - = Giá trị.
+	EnvUpdate	Thông báo cho hệ điều hành và tất cả các ứng dụng đang chạy mà biến môi trường (s) đã thay đổi.
+	Exit	Thoát ra khỏi chủ đề hiện tại hoặc (nếu kịch bản là không bền vững và không chứa các phím nóng) toàn bộ kịch bản.
+	ExitApp	Kết thúc kịch bản vô điều kiện.
+	Exp	Lợi nhuận điện tử (đó là khoảng 2,71828182845905) nâng lên sức mạnh thứ N.
+	FileAppend	Viết văn bản đến cuối của một tập tin (đầu tiên tạo ra các tập tin, nếu cần thiết).
+	FileCopy	Bản sao một hoặc nhiều tập tin.
+	FileCopyDir	Sao chép một thư mục cùng với tất cả các tiểu thư mục và tập tin (tương tự như xcopy).
+	FileCreateDir	Tạo ra một thư mục.
+	FileCreateShortcut	Tạo ra một (LNK). File shortcut.
+	FileDelete	Xóa một hoặc nhiều tập tin.
+	FileEncoding	Thiết lập mã hóa mặc định cho FileRead, FileReadLine, Loop đã đọc, FileAppend, và FileOpen.
+	FileInstall	Bao gồm các tập tin được chỉ định trong các phiên bản biên dịch của kịch bản.
+	FileGetAttrib	Báo cáo xem một tập tin hoặc thư mục là chỉ đọc, ẩn, vv
+	FileGetShortcut	Lấy thông tin về một phím tắt (LNK.) Tập tin, chẳng hạn như tập tin mục tiêu của nó.
+	FileGetSize	Lấy kích thước của một tập tin.
+	FileGetTime	Lấy dấu datetime của một tập tin hoặc thư mục.
+	FileGetVersion	Lấy phiên bản của một tập tin.
+	FileMove	Di chuyển hoặc đổi tên một hoặc nhiều tập tin.
+	FileMoveDir	Di chuyển một thư mục cùng với tất cả các tiểu thư mục và tập tin. Nó cũng có thể đổi tên thư mục.
+	FileOpen	Cung cấp tập tin hướng đối tượng I / O.
+	FileRead	Đọc nội dung của một tập tin vào một biến.
+	FileReadLine	Đọc dòng quy định từ một tập tin và lưu trữ các văn bản trong một biến.
+	FileRecycle	Gửi một tập tin hoặc thư mục vào thùng rác, nếu có thể.
+	FileRecycleEmpty	Đổ thùng rác.
+	FileRemoveDir	Xóa một thư mục.
+	FileSelectFile	Hiển thị một hộp thoại tiêu chuẩn cho phép người dùng mở hoặc lưu file (s).
+	FileSelectFolder	Hiển thị một hộp thoại tiêu chuẩn cho phép người dùng lựa chọn một thư mục.
+	FileSetAttrib	Thay đổi các thuộc tính của một hoặc nhiều tập tin hoặc thư mục. Ký tự đại diện được hỗ trợ.
+	FileSetTime	Thay đổi con dấu datetime của một hoặc nhiều tập tin hoặc thư mục. Ký tự đại diện được hỗ trợ.
+	Floor	Số lợi nhuận được làm tròn xuống số nguyên gần nhất (không có hậu tố .00).
+	For	Lặp đi lặp lại một loạt các lệnh một lần cho mỗi cặp khoá-giá trị trong một đối tượng.
+	FormatTime	Biến đổi một dấu thời gian YYYYMMDDHH24MISS vào định dạng ngày / thời gian quy định.
+	Func	Lấy một tham chiếu đến một chức năng.
+	GetKeyName / GetKeyVK / GetKeySC	Lấy tên hoặc văn bản, mã phím ảo hoặc mã quét của một phím.
+	GetKeyState	Kiểm tra nếu một chìa khóa bàn phím hoặc chuột / nút điều khiển là xuống hoặc lên. Cũng lấy trạng thái điều khiển.
+	Gosub	Nhảy đến nhãn quy định và tiếp tục thực hiện cho đến khi trở lại là gặp phải.
+	Goto	Nhảy đến nhãn quy định và tiếp tục thực hiện.
+	GroupActivate	Kích hoạt cửa sổ tiếp theo trong một nhóm cửa sổ được định nghĩa với groupadd.
+	GroupAdd	Thêm một đặc điểm kỹ thuật cửa sổ cho một nhóm cửa sổ, tạo nhóm nếu cần thiết.
+	GroupClose	Đóng cửa sổ hoạt động nếu nó đã được chỉ kích hoạt bằng GroupActivate hoặc GroupDeactivate. Sau đó nó sẽ kích hoạt cửa sổ tiếp theo của loạt bài này. Nó cũng có thể đóng tất cả các cửa sổ trong một nhóm.
+	GroupDeactivate	Tương tự như GroupActivate ngoại trừ kích hoạt cửa sổ tiếp theo không trong nhóm.
+	if	Quy định cụ thể các lệnh (s) để thực hiện nếu so sánh của một biến với một giá trị evalutes đúng sự thật. Khi có nhiều hơn một lệnh là hiện tại, đặt chúng trong một khối (niềng răng).
+	if (expression)	Quy định cụ thể các lệnh (s) để thực hiện nếu biểu thức đánh giá này đúng.
+	If var [not] between	Kiểm tra xem nội dung của một biến có số lượng hoặc theo bảng chữ cái giữa hai giá trị (bao gồm).
+	If var [not] in/contains MatchList 	Kiểm tra xem nội dung của một biến phù hợp với một trong các mục trong một danh sách.
+	If var is [not] type	Kiểm tra xem nội dung của một biến là số, chữ hoa, vv
+	If Clipboard	Kiểm tra nếu văn bản Clipboard là Đá chuỗi đã xác định.
+	If ErrorLevel	Kiểm tra nếu một hình ảnh hoặc điểm ảnh quy định đã được tìm thấy trong màn hình.
+	If A_Index	Kiểm tra nếu vòng lặp hiện tại Đá một quy định một số.
+	IfEqual/IfNotEqual	So sánh một biến với một giá trị bình đẳng. Đồng nghĩa với: nếu Var = Giá trị | nếu Var <> Giá trị.
+	IfExist / IfNotExist / FileExist	Kiểm tra sự tồn tại của một tập tin hoặc thư mục.
+	IfGreater / IfGreaterOrEqual	So sánh một biến với một giá trị. Đồng nghĩa với: nếu Var> Giá trị | nếu Var> = giá trị gia tăng.
+	IfInString / IfNotInString / InStr	Kiểm tra nếu một biến chứa chuỗi định.
+	IfLess / IfLessOrEqual	So sánh một biến với một giá trị. Đồng nghĩa với: nếu Var <Giá trị | nếu Var <= giá trị gia tăng.
+	IfMsgBox	Kiểm tra nút đã được đẩy bởi người sử dụng trong các lệnh MsgBox gần đây nhất.
+	IfWinActive / IfWinNotActive	Kiểm tra nếu các cửa sổ chỉ định tồn tại và hiện đang hoạt động (quan trọng nhất).
+	IfWinExist / IfWinNotExist	Kiểm tra nếu các cửa sổ chỉ định tồn tại.
+	ImageSearch	Tìm kiếm một khu vực của màn hình cho hình ảnh.
+	IniDelete	Xóa một giá trị từ một định dạng tập tin này. Tiêu chuẩn.
+	IniRead	Đọc một giá trị từ một định dạng tập tin này. Tiêu chuẩn.
+	IniWrite	Viết một giá trị vào một tập tin định dạng ini. Tiêu chuẩn.
+	Input	Chờ đợi cho người sử dụng gõ một chuỗi (không được hỗ trợ trên Windows 9x: nó không làm gì).
+	InputBox	Hiển thị một hộp đầu vào để yêu cầu người dùng nhập vào một chuỗi.
+	InStr	Tìm kiếm cho một sự xuất hiện được một chuỗi, từ bên trái hoặc bên phải.
 	)	
 	Ahk_Cmd_Index = %Ahk_Cmd_Index%`n	
 	(LTrim	
-	KeyHistory	
-	KeyWait	
-	Labels	
-	Log	
-	Ln	
-	Loop (normal) 	
-	Loop (files & folders)	
-	Loop (parse a string)	
-	Loop (read file contents)	
-	Loop (registry)	
-	Menu	
-	Mod	
-	MouseClickDrag	
-	MouseGetPos	
-	MouseMove	
-	MsgBox	
-	NumGet	
-	NumPut	
-	OnExit	
-	OnMessage	
-	OutputDebug	
-	Pause	
-	PixelGetColor	
-	PixelSearch	
-	PostMessage	
-	Process	
-	Progress	
-	Random	
-	RegExMatch	
-	RegExReplace	
-	RegDelete	
-	RegRead	
-	RegWrite	
-	RegisterCallback	
-	Return	
-	Round	
-	Run	
-	RunAs	
-	RunWait	
-	Screenshot	
-	Send / SendRaw / SendInput / SendPlay	
-	SendLevel	
-	SendMessage	
-	SendMode	
-	SetCapslockState	
-	SetEnv (Var = Value)	
-	SetFormat	
-	SetKeyDelay	
-	SetMouseDelay	
-	SetNumlockState	
-	SetScrollLockState	
-	SetRegView	
-	Shutdown	
-	Sin	
-	Sleep	
-	Sort	
-	SoundBeep	
-	SoundGet	
-	SoundGetWaveVolume	
-	SoundPlay	
-	SoundSet	
-	SoundSetWaveVolume	
-	SplashImage	
-	SplashTextOn	
-	SplashTextOff	
-	SplitPath	
-	Sqrt	
-	StatusBarGetText	
-	StatusBarWait	
-	StrPut / StrGet	
-	StringCaseSense	
-	StringGetPos / InStr	
-	StringLeft	
-	StringLen / StrLen	
-	StringLower	
-	StringMid / SubStr	
-	StringReplace	
-	StringRight	
-	StringSplit / StrSplit	
-	StringTrimLeft	
-	StringTrimRight	
-	StringUpper	
-	Suspend	
-	SysGet	
-	Tan	
-	ToolTip	
-	Transform	
-	TrayTip	
-	Trim / LTrim / RTrim	
-	Try	
-	Until	
-	UrlDownloadToFile	
-	VarSetCapacity	
-	WinActivate	
-	WinActivateBottom	
-	WinActive	
-	WinClose	
-	WinExist	
-	WinGetActiveStats	
-	WinGetActiveTitle	
-	WinGetClass	
-	WinGet	
-	WinGetPos	
-	WinGetText	
-	WinGetTitle	
-	WinHide	
-	WinKill	
-	WinMaximize	
-	WinMenuSelectItem	
-	WinMinimize	
-	WinMinimizeAll	
-	WinMinimizeAllUndo	
-	WinMove	
-	WinRestore	
-	WinSet	
-	WinSetTitle	
-	WinShow	
-	WinWait	
-	WinWaitActive	
-	WinWaitClose	
-	WinWaitNotActive	
-	)	
+	KeyHistory	Hiển thị thông tin kịch bản và lịch sử của các tổ hợp phím gần đây nhất và cú click chuột.
+	KeyWait	Chờ đợi cho một phím hoặc chuột / phím điều khiển nút sẽ được phát hành hoặc ép xuống.
+	Labels	Một nhãn xác định một dòng mã, và có thể được sử dụng như là một mục tiêu Chuyển đến hoặc để tạo thành một chương trình con.
+	Log	Trả về logarit (cơ số 10) của số.
+	Ln	Trả về logarit tự nhiên (cơ số e) của số.
+	Loop (normal) 	Thực hiện một loạt các lệnh liên tục: hoặc số quy định của lần hoặc cho đến khi nghỉ là gặp phải.
+	Loop (files & folders)	Lấy các tập tin hoặc thư mục được chỉ định, tại một thời điểm.
+	Loop (parse a string)	Truy xuất chuỗi con (lĩnh vực) từ một chuỗi, một tại một thời điểm.
+	Loop (read file contents)	Lấy các dòng trong một tập tin văn bản, một tại một thời điểm (thực hiện tốt hơn so với FileReadLine).
+	Loop (registry)	Lấy nội dung của các khóa registry được chỉ định, một mục tại một thời điểm.
+	Menu	Tạo, xóa, chỉnh sửa và hiển thị các menu và các mục menu. Thay đổi các biểu tượng trên khay và tooltip của nó. Kiểm soát cho dù cửa sổ chính của một kịch bản biên dịch có thể được mở ra.
+	Mod	Modulo. Trả về phần còn lại khi cổ tức được chia cho Số chia.
+	MouseClickDrag	Nhấp chuột và giữ nút chuột được chỉ định, di chuyển chuột đến tọa độ điểm đến, sau đó ra mắt nút.
+	MouseGetPos	Lấy vị trí hiện tại của con trỏ chuột, và tùy chọn mà cửa sổ và kiểm soát nó được lơ lửng trên.
+	MouseMove	Di chuyển con trỏ chuột.
+	MsgBox	Hiển thị các văn bản quy định trong một cửa sổ nhỏ chứa một hay nhiều nút (như Yes và No).
+	NumGet	Trả về số nhị phân được lưu trữ tại địa chỉ cụ thể + bù đắp.
+	NumPut	Số cửa hàng trong định dạng nhị phân theo địa chỉ cho trước + bù đắp và trả về địa chỉ ở bên phải của mục chỉ bằng văn bản.
+	OnExit	Quy định cụ thể một chương trình con để chạy tự động khi thoát khỏi kịch bản.
+	OnMessage	Quy định cụ thể chức năng gọi tự động khi kịch bản nhận được thông báo cụ thể.
+	OutputDebug	Gửi một chuỗi các trình sửa lỗi (nếu có) để hiển thị.
+	Pause	Tạm dừng chủ đề hiện tại của kịch bản.
+	PixelGetColor	Lấy màu sắc của các điểm ảnh ở định x, y tọa độ.
+	PixelSearch	Tìm kiếm một khu vực của màn hình cho một điểm ảnh của các màu sắc quy định.
+	PostMessage	Đặt một thông điệp trong hàng đợi tin nhắn của một cửa sổ hoặc kiểm soát.
+	Process	Thực hiện một trong những hoạt động sau đây trên một quá trình: kiểm tra nếu nó tồn tại, thay đổi ưu tiên; đóng nó, chờ đợi cho nó để đóng.
+	Progress	Tạo ra hoặc cập nhật một cửa sổ có chứa một thanh tiến trình.
+	Random	Tạo ra một số giả ngẫu nhiên.
+	RegExMatch	Xác định xem một chuỗi có chứa một mô hình (biểu hiện thường xuyên).
+	RegExReplace	Thay thế lần xuất hiện của một mô hình (biểu thức chính quy) trong một chuỗi.
+	RegDelete	Xóa một khóa hoặc giá trị từ registry.
+	RegRead	Đọc một giá trị từ registry.
+	RegWrite	Viết một giá trị để đăng ký.
+	RegisterCallback	Tạo ra một địa chỉ máy mã mà khi gọi, chuyển hướng cuộc gọi đến một chức năng trong kịch bản.
+	Return	Lợi nhuận từ một chương trình con mà thực hiện trước đó đã nhảy qua chức năng cuộc gọi, GOSUB, Hotkey kích hoạt, GroupActivate, hoặc các phương tiện khác.
+	Round	Nếu N được bỏ qua hoặc 0, số được làm tròn đến số nguyên gần nhất. Nếu N là số dương, số được làm tròn đến chữ số thập phân N. Nếu N là số âm, số được làm tròn bởi N chữ số bên trái dấu thập phân.
+	Run	Chạy một chương trình bên ngoài.
+	RunAs	Xác định một tập hợp các thông tin người dùng để sử dụng cho tất cả các ứng dụng tiếp theo của Run và RunWait. Yêu cầu Windows 2000/XP hoặc sau đó.
+	RunWait	Chạy một chương trình bên ngoài và chờ đợi cho đến khi nó kết thúc.
+	Screenshot	Tạo ra một ảnh chụp màn hình PNG của một khu vực xác định.
+	Send / SendRaw / SendInput / SendPlay	Gửi tổ hợp phím mô phỏng và nhấp chuột vào cửa sổ hoạt động.
+	SendLevel	Điều khiển thiết bị bàn phím và chuột sự kiện nhân tạo được bỏ qua bởi các phím nóng và hotstrings.
+	SendMessage	Gửi tin nhắn đến một cửa sổ hoặc điều khiển và chờ đợi sự thừa nhận.
+	SendMode	Gửi làm đồng nghĩa với SendInput hoặc SendPlay thay vì mặc định (SendEvent). Cũng làm cho Click và MouseMove / Click / Kéo sử dụng phương pháp xác định.
+	SetCapslockState	Thiết lập trạng thái của phím Capslock. Cũng có thể buộc chìa khóa để ở trên hoặc tắt.
+	SetEnv (Var = Value)	Gán giá trị cụ thể cho một biến.
+	SetFormat	Thiết lập định dạng số nguyên và số dấu chấm động được tạo ra bởi hoạt động toán học.
+	SetKeyDelay	Thiết lập sự chậm trễ đó sẽ xảy ra sau mỗi một phím thường gửi Gửi hoặc ControlSend.
+	SetMouseDelay	Thiết lập sự chậm trễ đó sẽ xảy ra sau mỗi lần di chuyển chuột hoặc nhấp chuột.
+	SetNumlockState	Thiết lập trạng thái của phím NumLock. Cũng có thể buộc chìa khóa để ở trên hoặc tắt.
+	SetScrollLockState	Thiết lập trạng thái của phím ScrollLock. Cũng có thể buộc chìa khóa để ở trên hoặc tắt.
+	SetRegView	Cho phép lệnh đăng ký trong một kịch bản 32-bit để truy cập vào xem đăng ký 64-bit và ngược lại.
+	Shutdown	Tắt, khởi động lại, hoặc log off hệ thống.
+	Sin	Trả về sin lượng giác của số.
+	Sleep	Chờ đợi những khoảng thời gian định trước khi tiếp tục.
+	Sort	Sắp xếp nội dung của biến trong bảng chữ cái, số thứ tự hoặc ngẫu nhiên (tùy chọn loại bỏ bản sao).
+	SoundBeep	Phát ra một âm thanh từ loa máy tính.
+	SoundGet	Lấy cài đặt khác nhau từ một thiết bị âm thanh (chủ câm, âm lượng tổng thể, vv)
+	SoundGetWaveVolume	Lấy khối lượng đầu ra sóng từ một thiết bị âm thanh.
+	SoundPlay	Đóng một âm thanh, video hoặc loại tập tin hỗ trợ khác.
+	SoundSet	Thay đổi các thiết lập khác nhau của một thiết bị âm thanh (chủ câm, âm lượng tổng thể, vv)
+	SoundSetWaveVolume	Thay đổi âm lượng đầu ra sóng cho một thiết bị âm thanh.
+	SplashImage	Tạo ra hoặc cập nhật một cửa sổ chứa một JPG, GIF, BMP hoặc hình ảnh.
+	SplashTextOn	Tạo ra một văn bản cửa sổ popup tùy chỉnh.
+	SplashTextOff	Đóng cửa sổ ở trên.
+	SplitPath	Tách một tên file hoặc URL của nó vào tên, thư mục, mở rộng, và ổ đĩa.
+	Sqrt	Trả về căn bậc hai của số.
+	StatusBarGetText	Lấy văn bản từ một điều khiển thanh trạng thái tiêu chuẩn.
+	StatusBarWait	Đợi cho đến khi thanh trạng thái của cửa sổ chứa các chuỗi xác định.
+	StrPut / StrGet	Sao chép một chuỗi hoặc từ một địa chỉ bộ nhớ, tùy chọn chuyển đổi nó giữa các trang mã.
+	StringCaseSense	Quyết định nếu so sánh chuỗi là trường hợp nhạy cảm (mặc định là "không trường hợp nhạy cảm").
+	StringGetPos / InStr	Lấy vị trí của chuỗi xác định trong một chuỗi.
+	StringLeft	Lấy một số ký tự từ phía bên tay trái của một chuỗi.
+	StringLen / StrLen	Lấy số lượng bao nhiêu ký tự trong một chuỗi.
+	StringLower	Chuyển đổi một chuỗi thành chữ thường.
+	StringMid / SubStr	Lấy một hoặc nhiều ký tự từ vị trí quy định trong một chuỗi.
+	StringReplace	Thay thế các chuỗi con được chỉ định với một chuỗi mới.
+	StringRight	Lấy một số ký tự từ phía bên phải của một chuỗi.
+	StringSplit / StrSplit	Tách một chuỗi thành một mảng các chuỗi con bằng cách sử dụng ký tự phân cách chỉ định.
+	StringTrimLeft	Loại bỏ một số ký tự từ phía bên tay trái của một chuỗi.
+	StringTrimRight	Loại bỏ một số ký tự từ phía bên phải của một chuỗi.
+	StringUpper	Chuyển đổi một chuỗi thành chữ hoa.
+	Suspend	Vô hiệu hóa hoặc cho phép tất cả hoặc chọn phím nóng và hotstrings.
+	SysGet	Lấy độ phân giải màn hình, thông tin đa màn hình, kích thước của các đối tượng hệ thống, và hệ thống tài sản khác.
+	Tan	Trả về tang lượng giác của số.
+	ToolTip	Tạo ra một cửa sổ luôn luôn-on-top bất cứ nơi nào trên màn hình.
+	Transform	Thực hiện chức năng linh tinh toán, hoạt động bitwise, và nhiệm vụ như ASCII / chuyển đổi Unicode.
+	TrayTip	Tạo ra một cửa sổ thông báo bóng gần khay hệ thống. Yêu cầu Windows 2000/XP hoặc sau đó.
+	Trim / LTrim / RTrim	Cắt tỉa một số ký tự từ đầu và / hoặc kết thúc của một chuỗi.
+	Try	Bảo vệ một hoặc nhiều câu lệnh (lệnh hoặc biểu thức) chống lại các lỗi thời gian chạy và hợp ngoại lệ ném bởi lệnh ném.
+	Until	Áp dụng một điều kiện để việc tiếp tục một vòng hoặc Đối với vòng lặp.
+	UrlDownloadToFile	Tải về một tập tin từ Internet.
+	VarSetCapacity	Phóng to khả năng giữ một biến hoặc giải phóng bộ nhớ của nó. Thông thường, điều này chỉ cần thiết cho trường hợp bất thường như DllCall.
+	WinActivate	Kích hoạt các cửa sổ chỉ định (làm cho nó quan trọng nhất).
+	WinActivateBottom	Giống như WinActivate ngoại trừ việc nó kích hoạt dưới cùng (ít nhất là gần đây hoạt động) cửa sổ phù hợp chứ không phải là trên cùng.
+	WinActive	Trả về ID duy nhất (HWND) của cửa sổ hoạt động nếu nó phù hợp với tiêu chuẩn quy định.
+	WinClose	Đóng cửa sổ chỉ định.
+	WinExist	Kiểm tra nếu các cửa sổ chỉ định tồn tại.
+	WinGetActiveStats	Kết hợp các chức năng của WinGetActiveTitle và WinGetPos vào một lệnh.
+	WinGetActiveTitle	Lấy tiêu đề của cửa sổ hoạt động.
+	WinGetClass	Lấy tên lớp cửa sổ chỉ định của.
+	WinGet	Lấy ID của cửa sổ chỉ định của độc đáo, quá trình ID, tên quá trình, hoặc một danh sách các điều khiển của nó. Nó cũng có thể lấy một danh sách của tất cả các cửa sổ phù hợp với tiêu chuẩn quy định.
+	WinGetPos	Lấy vị trí và kích thước của cửa sổ chỉ định.
+	WinGetText	Lấy văn bản từ cửa sổ xác định.
+	WinGetTitle	Lấy tiêu đề của cửa sổ chỉ định.
+	WinHide	Ẩn các cửa sổ chỉ định.
+	WinKill	Buộc các cửa sổ chỉ định đóng cửa.
+	WinMaximize	Phóng to cửa sổ chỉ định kích thước tối đa của nó.
+	WinMenuSelectItem	Gọi một mục trình đơn từ thanh menu của cửa sổ chỉ định.
+	WinMinimize	Lấp các cửa sổ chỉ định vào một nút trên thanh tác vụ.
+	WinMinimizeAll	Thu nhỏ tất cả các cửa sổ.
+	WinMinimizeAllUndo	Đảo ngược tác dụng của một WinMinimizeAll trước.
+	WinMove	Thay đổi vị trí và / hoặc kích thước của cửa sổ chỉ định.
+	WinRestore	Unminimizes hoặc unmaximizes cửa sổ xác định nếu nó được giảm thiểu hoặc tối đa.
+	WinSet	Làm cho một loạt các thay đổi trong cửa sổ chỉ định, chẳng hạn như "luôn luôn trên đầu trang" và minh bạch.
+	WinSetTitle	Thay đổi tiêu đề của cửa sổ chỉ định.
+	WinShow	Unhides cửa sổ chỉ định.
+	WinWait	Đợi cho đến khi cửa sổ chỉ định tồn tại.
+	WinWaitActive	Đợi cho đến khi cửa sổ chỉ định đang hoạt động.
+	WinWaitClose	Đợi cho đến khi cửa sổ chỉ định không tồn tại.
+	WinWaitNotActive	Đợi cho đến khi cửa sổ chỉ định là không hoạt động.
+	)	...
 return		

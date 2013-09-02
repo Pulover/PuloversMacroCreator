@@ -1055,250 +1055,248 @@
 ; AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	(LTrim	
-	Abs	
-	ASin	
-	ACos	
-	Array	
-	Asc	
-	ATan	
-	BlockInput	
-	Break	
-	Ceil	
-	Chr	
-	Click	
-	ClipWait	
-	Clipboard	
-	ComObjActive	
-	ComObjArray	
-	ComObjConnect	
-	ComObjCreate	
-	ComObjEnwrap / ComObjUnwrap	
-	ComObjError	
-	ComObjFlags	
-	ComObjGet	
-	ComObjMissing	
-	ComObjParameter	
-	ComObjQuery	
-	ComObjType	
-	ComObjValue	
-	Continue	
-	Control	
-	ControlClick	
-	ControlEditPaste	
-	ControlFocus	
-	ControlGet	
-	ControlGetFocus	
-	ControlGetPos	
-	ControlGetText	
-	ControlMove	
-	ControlSend / ControlSendRaw 	
-	ControlSetText	
-	CoordMode	
-	Cos	
-	Critical	
-	DetectHiddenText	
-	DetectHiddenWindows	
-	DllCall	
-	Drive	
-	DriveGet	
-	DriveSpaceFree	
-	Edit	
-	Else	
-	EnvAdd	
-	EnvDiv	
-	EnvGet	
-	EnvMult	
-	EnvSet	
-	EnvSub	
-	EnvUpdate	
-	Exit	
-	ExitApp	
-	Exp	
-	FileAppend	
-	FileCopy	
-	FileCopyDir	
-	FileCreateDir	
-	FileCreateShortcut	
-	FileDelete	
-	FileEncoding	
-	FileInstall	
-	FileGetAttrib	
-	FileGetShortcut	
-	FileGetSize	
-	FileGetTime	
-	FileGetVersion	
-	FileMove	
-	FileMoveDir	
-	FileOpen	
-	FileRead	
-	FileReadLine	
-	FileRecycle	
-	FileRecycleEmpty	
-	FileRemoveDir	
-	FileSelectFile	
-	FileSelectFolder	
-	FileSetAttrib	
-	FileSetTime	
-	Floor	
-	For	
-	FormatTime	
-	Func	
-	GetKeyName / GetKeyVK / GetKeySC	
-	GetKeyState	
-	Gosub	
-	Goto	
-	GroupActivate	
-	GroupAdd	
-	GroupClose	
-	GroupDeactivate	
-	if	
-	if (expression)	
-	If var [not] between	
-	If var [not] in/contains MatchList 	
-	If var is [not] type	
-	If Clipboard	
-	If ErrorLevel	
-	If A_Index	
-	IfEqual/IfNotEqual	
-	IfExist / IfNotExist / FileExist	
-	IfGreater / IfGreaterOrEqual	
-	IfInString / IfNotInString / InStr	
-	IfLess / IfLessOrEqual	
-	IfMsgBox	
-	IfWinActive / IfWinNotActive	
-	IfWinExist / IfWinNotExist	
-	ImageSearch	
-	IniDelete	
-	IniRead	
-	IniWrite	
-	Input	
-	InputBox	
-	InStr	
-	IsByRef	
-	IsObject	
+	Abs	返回数字的绝对值。
+	ASin	返回的反正弦弧度（其正弦是Number）。
+	ACos	返回弧度反余弦（余弦数）。
+	Array	创建一个数组对象。
+	Asc	返回字符串的第一个字符的字符代码（1和255（ANSI版本）或65535（Unicode版本）之间的数字）。
+	ATan	返回弧度的反正切值（正切数）。
+	BlockInput	禁止或允许用户通过键盘和鼠标与电脑互动的能力。
+	Break	退出（终止）一个循环。有效期内任何一种循环。
+	Ceil	返回Number向上舍入到最接近的整数（不带任何.00后缀）。
+	Chr	返回以数字表示的字符代码对应的单个字符。
+	Click	单击鼠标按钮在指定的坐标。它也可以按住一个按钮，转动方向盘，或移动。
+	ClipWait	等待直至剪贴板包含数据。
+	Clipboard	从剪贴板粘贴文本
+	ComObjActive	检索注册的COM对象。
+	ComObjArray	创建一个SAFEARRAY使用COM。
+	ComObjConnect	连接一个COM对象的事件源与给定前缀的功能。
+	ComObjCreate	创建一个COM对象。
+	ComObjEnwrap / ComObjUnwrap	包装/解开一个COM对象。
+	ComObjError	启用或禁用COM的错误通知。
+	ComObjFlags	检索或更改标志控制一个COM包装对象的行为。
+	ComObjGet	返回一个COM组件提供的对象的引用。
+	ComObjMissing	创建一个“缺少参数”对象传递给一个COM方法。
+	ComObjParameter	裹值和类型作为参数传递给一个COM方法。
+	ComObjQuery	查询一个COM对象的接口或服务。
+	ComObjType	从COM对象获取类型信息。
+	ComObjValue	检索的价值或指针存储在COM包装对象。
+	Continue	跳过当前循环迭代的其余部分，并开始一个新的。有效期内任何一种循环。
+	Control	使得各种控制的变化。
+	ControlClick	发送鼠标按钮或鼠标滚轮事件的控制。
+	ControlEditPaste	胶泥的字符串插入符/编辑控件中的插入位置（这并不影响剪贴板中的内容）。
+	ControlFocus	设置输入焦点上的一个窗口，一个给定的控制。
+	ControlGet	检索各类有关控件的信息。
+	ControlGetFocus	获取控制的目标窗口拥有输入焦点，如果有的话。
+	ControlGetPos	检索的位置和大小的控制。
+	ControlGetText	撷取文字的控制。
+	ControlMove	移动或调整大小的控制。
+	ControlSend / ControlSendRaw 	发送模拟击键一个窗口或控制。
+	ControlSetText	更改文本的控制。
+	CoordMode	集协调各种命令模式是相对的活动窗口或屏幕。
+	Cos	返回三角余弦数。
+	Critical	防止当前线程的其他线程被打断。
+	DetectHiddenText	确定是否有隐形文字在一个窗口“看到”的目的找到窗口。这种影响如IfWinExist WinActivate的命令。
+	DetectHiddenWindows	确定无形窗口“看到”的脚本。
+	DllCall	DLL内部调用一个函数，比如一个标准的Windows API函数。
+	Drive	CD或DVD驱动器的托盘弹出/缩回，或设置驱动器的卷标。
+	DriveGet	检索计算机的驱动器（S）的各类信息。
+	DriveSpaceFree	检索可用磁盘空间的驱动器，以兆字节为单位。
+	Edit	打开当前脚本在关联编辑器进行编辑。
+	Else	指定执行命令（S），如果IF语句的计算结果为FALSE。当一个以上的命令是，把它们括在一个块（大括号）。
+	EnvAdd	设置一个变量本身以及给定值（也可以添加或减去时间从日期时间值）的总和。代名词：VAR + =价值。
+	EnvDiv	设置一个变量除以给定的值本身。代名词：无功/ =价值。
+	EnvGet	获取环境变量。
+	EnvMult	设置一个变量，以本身乘以给定的值。代名词：VAR =价值。
+	EnvSet	一个值写入到一个环境中的变量。
+	EnvSub	设置一个变量减去给定值（也可以比较日期时间值）。代名词：瓦尔省 - =价值。
+	EnvUpdate	通知OS及所有运行的应用程序的环境变量（S）已经改变。
+	Exit	退出当前线程或（如果脚本不是持久的，不包含热键）整个脚本。
+	ExitApp	终止无条件脚本。
+	Exp	返回e（约2.71828182845905）提出的N次方。
+	FileAppend	将文本写入到一个文件结束（先创建该文件，如果必要的话）。
+	FileCopy	复制一个或多个文件。
+	FileCopyDir	复制一个文件夹以及其所有子文件夹和文件（类似于XCOPY）。
+	FileCreateDir	创建一个文件夹。
+	FileCreateShortcut	创建一个快捷方式（LNK）文件。
+	FileDelete	删除一个或多个文件。
+	FileEncoding	设置FileReadLine FILEREAD，循环读取，FileAppend和文件打开的默认编码。
+	FileInstall	包括指定的文件里面的脚本的编译版本。
+	FileGetAttrib	报告文件或文件夹是否是只读，隐藏等。
+	FileGetShortcut	获取信息的快捷方式（LNK）的文件，如目标文件。
+	FileGetSize	检索一个文件的大小。
+	FileGetTime	检索日期时间戳的文件或文件夹。
+	FileGetVersion	检索一个文件的版本。
+	FileMove	移动或重命名一个或多个文件。
+	FileMoveDir	将文件夹以及其所有子文件夹和文件。它也可以重命名文件夹。
+	FileOpen	提供面向对象的文件I / O。
+	FileRead	读取文件的内容到一个变量。
+	FileReadLine	从文件中读取指定的行和存储文本的变量。
+	FileRecycle	发送到回收站的文件或目录，如果可能的话。
+	FileRecycleEmpty	清空回收站。
+	FileRemoveDir	删除一个文件夹。
+	FileSelectFile	显示一个标准的对话框，允许用户打开或保存文件（S）。
+	FileSelectFolder	显示一个标准的对话框，允许用户选择一个文件夹。
+	FileSetAttrib	一个或多个文件或文件夹的属性更改。支持通配符。
+	FileSetTime	更改一个或多个文件或文件夹的日期时间戳。支持通配符。
+	Floor	返回Number向下调整至最接近的整数（不带任何.00后缀）。
+	For	再次重复一系列命令在一个对象中的每个键 - 值对。
+	FormatTime	到指定的日期/时间格式转换一个YYYYMMDDHH24MISS时间戳。
+	Func	检索功能。
+	GetKeyName / GetKeyVK / GetKeySC	检索的名称或文字，虚拟键码或扫描代码的一个关键。
+	GetKeyState	检查如果键盘按键或鼠标/操纵杆按钮向上或向下。此外，还检索操纵杆状态。
+	Gosub	跳转到指定的标签和继续执行，直到遇到返回。
+	Goto	跳转到指定的标签和继续执行。
+	GroupActivate	激活下一个窗口，在窗口组GroupAdd命令定义。
+	GroupAdd	添加一个窗口规范窗口组，创建组，如果必要的。
+	GroupClose	关闭活动窗口，如果它只是激活，GroupActivate或GroupDeactivate的。然后激活该系列中的下一个窗口。它也可以关闭所有的窗口，在一组。
+	GroupDeactivate	类似GroupActivate不在组中除了激活下一个窗口。
+	if	指定命令（S）来执行，如果一个变量的值比较evalutes TRUE。当一个以上的命令是，把它们括在一个块（大括号）。
+	if (expression)	指定执行命令（S），如果表达式的计算结果为TRUE。
+	If var [not] between	检查变量的内容是数字或字母，两个值之间（含）。
+	If var [not] in/contains MatchList 	检查变量的内容是否匹配列表中的项目之一。
+	If var is [not] type	检查变量的内容是否是数字，大写等。
+	If Clipboard	检查如果剪贴板文本配指定的字符串。
+	If ErrorLevel	如果指定的图像或像素的检查，发现在屏幕上。
+	If A_Index	的检查，如果在当前循环的迭代配指定了一些。
+	IfEqual/IfNotEqual	比较变量的值相等。代名词：如果var =价值瓦尔省<>价值。
+	IfExist / IfNotExist / FileExist	检查文件或文件夹的存在。
+	IfGreater / IfGreaterOrEqual	比较变数的值。代名词：如果瓦尔省>价值|如果瓦尔省> =价值。
+	IfInString / IfNotInString / InStr	检查一个变量是否包含指定的字符串。
+	IfLess / IfLessOrEqual	比较变数的值。代名词：如果var <价值|瓦尔省<=价值。
+	IfMsgBox	在最近的MsgBox命令时，检查由用户按压了哪个按钮。
+	IfWinActive / IfWinNotActive	检查是否存在指定的窗口，是目前活跃（最重要的）。
+	IfWinExist / IfWinNotExist	检查是否存在指定的窗口。
+	ImageSearch	搜索用于图像的屏幕的区域。
+	IniDelete	删除标准格式。ini文件中的值。
+	IniRead	读取标准格式。ini文件中的值。
+	IniWrite	值写入到标准格式。ini文件。
+	Input	等待用户输入一个字符串（不支持Windows 9x上：它什么也不做）。
+	InputBox	显示一个输入框，要求用户输入一个字符串。
+	InStr	检索数据对于一个给定的字符串的发生，从左侧或右侧。
 	)	
 	Ahk_Cmd_Index = %Ahk_Cmd_Index%`n	
 	(LTrim	
-	KeyHistory	
-	KeyWait	
-	Labels	
-	Log	
-	Ln	
-	Loop (normal) 	
-	Loop (files & folders)	
-	Loop (parse a string)	
-	Loop (read file contents)	
-	Loop (registry)	
-	Menu	
-	Mod	
-	MouseClickDrag	
-	MouseGetPos	
-	MouseMove	
-	MsgBox	
-	NumGet	
-	NumPut	
-	OnExit	
-	OnMessage	
-	OutputDebug	
-	Pause	
-	PixelGetColor	
-	PixelSearch	
-	PostMessage	
-	Process	
-	Progress	
-	Random	
-	RegExMatch	
-	RegExReplace	
-	RegDelete	
-	RegRead	
-	RegWrite	
-	RegisterCallback	
-	Return	
-	Round	
-	Run	
-	RunAs	
-	RunWait	
-	Screenshot	
-	Send / SendRaw / SendInput / SendPlay	
-	SendLevel	
-	SendMessage	
-	SendMode	
-	SetCapslockState	
-	SetEnv (Var = Value)	
-	SetFormat	
-	SetKeyDelay	
-	SetMouseDelay	
-	SetNumlockState	
-	SetScrollLockState	
-	SetRegView	
-	Shutdown	
-	Sin	
-	Sleep	
-	Sort	
-	SoundBeep	
-	SoundGet	
-	SoundGetWaveVolume	
-	SoundPlay	
-	SoundSet	
-	SoundSetWaveVolume	
-	SplashImage	
-	SplashTextOn	
-	SplashTextOff	
-	SplitPath	
-	Sqrt	
-	StatusBarGetText	
-	StatusBarWait	
-	StrPut / StrGet	
-	StringCaseSense	
-	StringGetPos / InStr	
-	StringLeft	
-	StringLen / StrLen	
-	StringLower	
-	StringMid / SubStr	
-	StringReplace	
-	StringRight	
-	StringSplit / StrSplit	
-	StringTrimLeft	
-	StringTrimRight	
-	StringUpper	
-	Suspend	
-	SysGet	
-	Tan	
-	ToolTip	
-	Transform	
-	TrayTip	
-	Trim / LTrim / RTrim	
-	Try	
-	Until	
-	UrlDownloadToFile	
-	VarSetCapacity	
-	WinActivate	
-	WinActivateBottom	
-	WinActive	
-	WinClose	
-	WinExist	
-	WinGetActiveStats	
-	WinGetActiveTitle	
-	WinGetClass	
-	WinGet	
-	WinGetPos	
-	WinGetText	
-	WinGetTitle	
-	WinHide	
-	WinKill	
-	WinMaximize	
-	WinMenuSelectItem	
-	WinMinimize	
-	WinMinimizeAll	
-	WinMinimizeAllUndo	
-	WinMove	
-	WinRestore	
-	WinSet	
-	WinSetTitle	
-	WinShow	
-	WinWait	
-	WinWaitActive	
-	WinWaitClose	
-	WinWaitNotActive	
-	)	
+	KeyHistory	显示脚本信息和最近期的键盘和鼠标操作的历史。
+	KeyWait	等待被释放或按下一个键或鼠标/操纵杆按钮。
+	Labels	一个标签标识的代码行，并可以用作转到目标或形成一个子程序。
+	Log	返回数的对数（基数为10）。
+	Ln	返回自然对数（以e为底）数目。
+	Loop (normal) 	反复执行的一系列命令：要么指定次数或休息，直到遇到。
+	Loop (files & folders)	检索指定的文件或文件夹，一次一个。
+	Loop (parse a string)	检索子字符串（字段）从一个字符串，一次一个。
+	Loop (read file contents)	检索在一个文本文件，一个（执行优于FileReadLine）时间线。
+	Loop (registry)	检索指定的注册表子项，一个项目的内容在同一时间。
+	Menu	创建，删除，修改和显示菜单和菜单项。更改托盘图标和工具提示。控制编译脚本的主窗口是否可以打开。
+	Mod	模。返回剩余股利除以除数时。
+	MouseClickDrag	点击次数，并持有指定的鼠标按钮，将鼠标移动到目的地的坐标，然后释放按钮。
+	MouseGetPos	检索当前鼠标光标位置，以及可选的窗口和控件悬停。
+	MouseMove	移动鼠标光标。
+	MsgBox	显示在一个小窗口，其中包含一个或多个按钮（如“是”和“否”）指定的文本。
+	NumGet	返回+偏移量存储在指定的地址的二进制数。
+	NumPut	商店数量以二进制格式在指定的地址+偏移量的地址，并返回刚刚写入的项目的右侧。
+	OnExit	指定一个子程序时自动运行的脚本退出。
+	OnMessage	指定一个函数调用脚本时自动接收到指定的消息。
+	OutputDebug	将字符串发送到显示调试器（如果有的话）。
+	Pause	暂停脚本的电流线程。
+	PixelGetColor	检索处的像素的颜色指定的x，y坐标。
+	PixelSearch	搜索指定的颜色的像素的屏幕的一个区域。
+	PostMessage	将消息放入消息队列中的一个窗口或控制。
+	Process	执行过程下列操作之一：检查是否存在改变其优先关闭它等待它关闭。
+	Progress	创建或更新窗口，其中包含一个进度条。
+	Random	产生一个伪随机数。
+	RegExMatch	确定一个字符串是否包含一个模式（正则表达式）。
+	RegExReplace	出现替换字符串内的模式（正则表达式）。
+	RegDelete	删除注册表子项或值。
+	RegRead	从注册表中读取一个值。
+	RegWrite	写入到注册表的值。
+	RegisterCallback	创建一个机器代码地址，调用时，将呼叫重定向到一个脚本中的函数。
+	Return	返回从子程序执行此前通过函数调用，GOSUB，热键激活，GroupActivate，或其他手段跳下。
+	Round	如果省略N或0，四舍五入到最接近的整数。如果N为正数，数到N小数点后四舍五入。如果N是负号是由N位四舍五入到小数点左边的。
+	Run	运行外部程序。
+	RunAs	指定一组用户凭据用于所有后续的运行和RunWait用途。需要Windows 2000/XP或更高版本。
+	RunWait	运行一个外部程序和等待，直到它完成。
+	Screenshot	创建一个PNG截图的指定区域。
+	Send / SendRaw / SendInput / SendPlay	模拟键盘和鼠标操作发送到活动窗口。
+	SendLevel	控制热键和热字串人工键盘和鼠标事件被忽略。
+	SendMessage	一个窗口或控制发送消息，并等待确认。
+	SendMode	使得与SendInput或SendPlay模式的代名词，而不是默认的SendEvent发送。也使得MOUSEMOVE /点击/拖动使用指定的方法。
+	SetCapslockState	设置CapsLock键的状态。也可以强制钥匙留在或关闭。
+	SetEnv (Var = Value)	将指定值分配给一个变量。
+	SetFormat	数学运算所产生的整数和浮点数的格式设置。
+	SetKeyDelay	设置发送或至于ControlSend发送每个按键后会发生延迟。
+	SetMouseDelay	设定每个鼠标移动或点击后会发生延迟。
+	SetNumlockState	设置的NumLock键的状态。也可以强制钥匙留在或关闭。
+	SetScrollLockState	设置ScrollLock键键的状态。也可以强制钥匙留在或关闭。
+	SetRegView	允许一个32位注册表中的命令脚本访问64位注册表视图，反之亦然。
+	Shutdown	关机，重启或注销系统。
+	Sin	返回数的三角正弦。
+	Sleep	等待指定的时间，然后再继续。
+	Sort	排列变量的内容，字母，数字，或按随机顺序（任选去除重复）。
+	SoundBeep	从PC扬声器发出声音。
+	SoundGet	检索各种声音设备（主静音，主音量等设置）
+	SoundGetWaveVolume	从声音装置撷取波形输出音量。
+	SoundPlay	播放声音，视频或其他支持的文件类型。
+	SoundSet	更改各种设置声音设备（主静音，主音量等）
+	SoundSetWaveVolume	更改波形输出音量的声音设备。
+	SplashImage	创建或更新窗口，其中包含一个JPG，GIF，或BMP图像。
+	SplashTextOn	创建一个自定义的文本弹出式窗口。
+	SplashTextOff	关闭上面的窗口。
+	SplitPath	分离文件名或URL，其名称，目录，扩展和驱动。
+	Sqrt	返回的平方根数目。
+	StatusBarGetText	检索文本，从一个标准的状态栏控制。
+	StatusBarWait	等待，直到窗口的状态栏包含指定的字符串。
+	StrPut / StrGet	一个字符串复制或从一个内存地址，可选的代码页之间转换。
+	StringCaseSense	确定字符串比较是否区分大小写（默认是“不区分大小写”）。
+	StringGetPos / InStr	检索的指定子字符串内的位置。
+	StringLeft	检索一个从左手侧的一个字符串的字符数。
+	StringLen / StrLen	检索在一个字符串中有多少个字符的计数。
+	StringLower	将字符串转换为小写。
+	StringMid / SubStr	检索一个或多个字符在一个字符串中的指定位置。
+	StringReplace	一个新的字符串替换指定的子串。
+	StringRight	检索从右侧的字符串的字符数。
+	StringSplit / StrSplit	分离到一个数组中使用指定的分隔符的子串。
+	StringTrimLeft	删除一些从左侧的字符串的字符。
+	StringTrimRight	从右侧的字符串中删除的字符数。
+	StringUpper	将字符串转换为大写。
+	Suspend	禁用或启用所有或选定的热键和热字串。
+	SysGet	检索屏幕分辨率，多显示器的信息，系统对象的尺寸，和其他系统的性能。
+	Tan	返回数的三角正切。
+	ToolTip	创建一个始终保持接通顶窗口在屏幕上的任何地方。
+	Transform	执行杂的数学函数，按位运算，如ASCII / Unicode转换任务。
+	TrayTip	创建一个气球消息窗口附近的托盘图标。需要Windows 2000/XP或更高版本。
+	Trim / LTrim / RTrim	修剪某些字符从一个字符串的开头和/或结尾。
+	Try	卫队的一个或多个语句（命令或表达式）对运行时错误和异常抛出由throw命令。
+	Until	适用条件回路或For循环的延续。
+	UrlDownloadToFile	从互联网上下载一个文件。
+	VarSetCapacity	放大一个变量的控股能力，或释放其内存。通常，这是必要的，只有不寻常的情况下，如DllCall。
+	WinActivate	激活指定的窗口（使得它最重要的）。
+	WinActivateBottom	同WinActivate，除非它激活最底部（最近最少活跃）匹配窗口，而不是最顶层。
+	WinActive	返回活动窗口的唯一ID（HWND），如果它符合指定的条件。
+	WinClose	关闭指定的窗口。
+	WinExist	检查是否存在指定的窗口。
+	WinGetActiveStats	结合到一个命令中的职能WinGetActiveTitle WinGetPos。
+	WinGetActiveTitle	检索活动窗口的标题。
+	WinGetClass	检索指定窗口的类名。
+	WinGet	检索指定窗口的唯一ID，进程ID，进程名称，或者其控制清单。它也可以检索符合指定条件的所有窗口的列表。
+	WinGetPos	检索指定窗口的位置和大小。
+	WinGetText	检索文本从指定的窗口。
+	WinGetTitle	检索指定窗口的标题。
+	WinHide	隐藏指定的窗口。
+	WinKill	强制关闭指定的窗口。
+	WinMaximize	指定的窗口放大为最大尺寸。
+	WinMenuSelectItem	从菜单栏中指定的窗口调用菜单项。
+	WinMinimize	折叠指定的窗口到任务栏上的一个按钮。
+	WinMinimizeAll	将所有窗口最小化。
+	WinMinimizeAllUndo	反转以前WinMinimizeAll效果。
+	WinMove	变更位置和/或指定窗口的尺寸。
+	WinRestore	Unminimizes，或unmaximizes指定的窗口，如果它最小化或最大化。
+	WinSet	使得各种改变到指定的窗口，如“总在最前面”和透明度。
+	WinSetTitle	更改指定的窗口的标题。
+	WinShow	取消隐藏指定的窗口。
+	WinWait	等待，直到指定的窗口是否存在。
+	WinWaitActive	等待，直到指定的窗口处于活动状态。
+	WinWaitClose	等待，直到指定的窗口不存在。
+	WinWaitNotActive	等待，直到指定的窗口不活跃。
+	)	...
 return		

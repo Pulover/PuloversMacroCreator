@@ -1055,250 +1055,248 @@
 ; AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	(LTrim	
-	Abs	
-	ASin	
-	ACos	
-	Array	
-	Asc	
-	ATan	
-	BlockInput	
-	Break	
-	Ceil	
-	Chr	
-	Click	
-	ClipWait	
-	Clipboard	
-	ComObjActive	
-	ComObjArray	
-	ComObjConnect	
-	ComObjCreate	
-	ComObjEnwrap / ComObjUnwrap	
-	ComObjError	
-	ComObjFlags	
-	ComObjGet	
-	ComObjMissing	
-	ComObjParameter	
-	ComObjQuery	
-	ComObjType	
-	ComObjValue	
-	Continue	
-	Control	
-	ControlClick	
-	ControlEditPaste	
-	ControlFocus	
-	ControlGet	
-	ControlGetFocus	
-	ControlGetPos	
-	ControlGetText	
-	ControlMove	
-	ControlSend / ControlSendRaw 	
-	ControlSetText	
-	CoordMode	
-	Cos	
-	Critical	
-	DetectHiddenText	
-	DetectHiddenWindows	
-	DllCall	
-	Drive	
-	DriveGet	
-	DriveSpaceFree	
-	Edit	
-	Else	
-	EnvAdd	
-	EnvDiv	
-	EnvGet	
-	EnvMult	
-	EnvSet	
-	EnvSub	
-	EnvUpdate	
-	Exit	
-	ExitApp	
-	Exp	
-	FileAppend	
-	FileCopy	
-	FileCopyDir	
-	FileCreateDir	
-	FileCreateShortcut	
-	FileDelete	
-	FileEncoding	
-	FileInstall	
-	FileGetAttrib	
-	FileGetShortcut	
-	FileGetSize	
-	FileGetTime	
-	FileGetVersion	
-	FileMove	
-	FileMoveDir	
-	FileOpen	
-	FileRead	
-	FileReadLine	
-	FileRecycle	
-	FileRecycleEmpty	
-	FileRemoveDir	
-	FileSelectFile	
-	FileSelectFolder	
-	FileSetAttrib	
-	FileSetTime	
-	Floor	
-	For	
-	FormatTime	
-	Func	
-	GetKeyName / GetKeyVK / GetKeySC	
-	GetKeyState	
-	Gosub	
-	Goto	
-	GroupActivate	
-	GroupAdd	
-	GroupClose	
-	GroupDeactivate	
-	if	
-	if (expression)	
-	If var [not] between	
-	If var [not] in/contains MatchList 	
-	If var is [not] type	
-	If Clipboard	
-	If ErrorLevel	
-	If A_Index	
-	IfEqual/IfNotEqual	
-	IfExist / IfNotExist / FileExist	
-	IfGreater / IfGreaterOrEqual	
-	IfInString / IfNotInString / InStr	
-	IfLess / IfLessOrEqual	
-	IfMsgBox	
-	IfWinActive / IfWinNotActive	
-	IfWinExist / IfWinNotExist	
-	ImageSearch	
-	IniDelete	
-	IniRead	
-	IniWrite	
-	Input	
-	InputBox	
-	InStr	
-	IsByRef	
-	IsObject	
+	Abs	数値の絶対値を返します。
+	ASin	アークサイン（正弦数ある数値）ラジアンで返します。
+	ACos	アークコサイン（余弦数ある数値）ラジアンで返します。
+	Array	Arrayオブジェクトを作成します。
+	Asc	文字列の最初の文字の文字コード（1〜255（ANSIでビルド）または65535（Unicodeのビルドで）の間の数）を返します。
+	ATan	逆正接（タンジェント数ある数）ラジアンで返します。
+	BlockInput	無効またはキーボードとマウスを介してコンピュータと対話するユーザの能力を可能にします。
+	Break	終了します（終了）ループ。ループのいずれかの種類の内側で有効。
+	Ceil	戻り値Numberは、最も近い整数（いずれ.00サフィックスなし）に切り上げ。
+	Chr	番号で示される文字コードに対応する単一の文字を返します。
+	Click	指定された座標でマウスのボタンをクリックします。また、ボタンを押しながらホイールを回す、または移動することができます。
+	ClipWait	クリップボードにデータが含まれているまで待機。
+	Clipboard	クリップボードからテキストを貼り付けます
+	ComObjActive	登録されたCOMオブジェクトを取得します。
+	ComObjArray	COMで使用するためのSAFEARRAYを作成します。
+	ComObjConnect	指定された接頭辞で関数にCOMオブジェクトのイベントソースを接続します。
+	ComObjCreate	COMオブジェクトを作成します。
+	ComObjEnwrap / ComObjUnwrap	COMオブジェクトをラップ/アンラップ。
+	ComObjError	有効またはCOMエラーの通知を無効にします。
+	ComObjFlags	COMラッパーオブジェクトの動作を制御する取得または変更フラグ。
+	ComObjGet	COMコンポーネントで提供されるオブジェクトへの参照を返します。
+	ComObjMissing	COMメソッドに渡す "欠落パラメータ"オブジェクトを作成します。
+	ComObjParameter	COMメソッドにパラメータとして渡す値と型をラップします。
+	ComObjQuery	インターフェイスまたはサービスのCOMオブジェクトを照会します。
+	ComObjType	COMオブジェクトから型情報を取得します。
+	ComObjValue	COMラッパーオブジェクトに格納された値やポインタを取得します。
+	Continue	現在のループ反復の残りの部分をスキップして、新しいものを開始します。ループのいずれかの種類の内側で有効。
+	Control	コントロールへの変更の様になります。
+	ControlClick	マウスボタンまたはコントロールにマウスホイールのイベントを送信します。
+	ControlEditPaste	エディットコントロールのキャレット/挿入位置にペースト文字列（これはクリップボードの内容には影響しません）。
+	ControlFocus	ウィンドウの特定のコントロールに入力フォーカスを設定します。
+	ControlGet	制御に関する各種の情報を取得します。
+	ControlGetFocus	もしあれば、ターゲットウィンドウのコントロール取得は、入力フォーカスを持っています。
+	ControlGetPos	コントロールの位置とサイズを取得します。
+	ControlGetText	コントロールからテキストを取得します。
+	ControlMove	移動したり、コントロールのサイズを変更します。
+	ControlSend / ControlSendRaw 	ウィンドウやコントロールにシミュレートされたキーストロークを送信します。
+	ControlSetText	コントロールのテキストを変更します。
+	CoordMode	セットには、アクティブなウィンドウや画面のどちらに対して相対的であるために様々なコマンドのモードを調整する。
+	Cos	数の三角関数コサインを返します。
+	Critical	現在のスレッドが他のスレッドによって中断されるのを防ぎます。
+	DetectHiddenText	ウィンドウ内の目に見えないテキストがウィンドウを見つけることを目的に、 "見"されているかどうかを決定します。これは、このようなIfWinExistとWinActivateなどのコマンドに影響を与えます。
+	DetectHiddenWindows	目に見えないウィンドウがスクリプトによって "見える"かどうかを決定します。
+	DllCall	DLL内の関数は、標準のWindows API関数などを呼び出します。
+	Drive	/引っ込むCDまたはDVDドライブのトレイを取り出し、またはドライブのボリュームラベルを設定します。
+	DriveGet	コンピュータのドライブ（複数可）に関する各種の情報を取得します。
+	DriveSpaceFree	メガバイトで、ドライブの空きディスク容量を取得します。
+	Edit	関連付けられたエディタで編集するために、現在のスクリプトを開きます。
+	Else	if文がfalseと評価された場合、コマンド（s）が実行するように指定します。複数のコマンドが存在する場合、ブロック（カッコ）で囲む。
+	EnvAdd	自体の和与えられた値（これも追加したり、日時の値から時刻を減算することができます）に変数を設定します。と同義：ヴァール+ =値。
+	EnvDiv	与えられた値で割った値自体に変数を設定します。 = /ヴァール値：と同義。
+	EnvGet	環境変数を取得します。
+	EnvMult	自体に変数回与えられた値を設定します。と同義：ヴァール* =値。
+	EnvSet	環境に含まれている変数に値を書き込みます。
+	EnvSub	与えられた値（また、日時の値を比較することができます）マイナス自体に変数を設定します。- =値変数：と同義。
+	EnvUpdate	OSや環境変数（s）は変更されていること、実行中のすべてのアプリケーションに通知します。
+	Exit	を終了し、現在のスレッドまたは（スクリプトが永続的なものではなく、全くのホットキーが含まれていない場合）スクリプト全体。
+	ExitApp	無条件にスクリプトを終了します。
+	Exp	返しeは（約2.71828182845905です）N乗に引き上げ。
+	FileAppend	ファイルの末尾に（必要であれば、最初にファイルを作成する）にテキストを書き込みます。
+	FileCopy	コピーは一つ以上のファイル。
+	FileCopyDir	そのすべてのサブフォルダとファイル（xcopyのに似ています）と一緒にフォルダをコピーします。
+	FileCreateDir	フォルダを作成します。
+	FileCreateShortcut	ショートカット（。LNK）ファイルを作成します。
+	FileDelete	削除する1つまたは複数のファイルを。
+	FileEncoding	FileRead関数、FileReadLine、ループ読み取り、FileAppend、およびFileOpen関数のデフォルトのエンコーディングを設定します。
+	FileInstall	スクリプトのコンパイルされたバージョンが内部指定されたファイルが含まれています。
+	FileGetAttrib	ファイルまたはフォルダが読み取り専用であるかどうかを報告し、隠された、など
+	FileGetShortcut	そのようなそのターゲットファイルなどのショートカット（。LNK）ファイルに関する情報を取得します。
+	FileGetSize	ファイルのサイズを取得します。
+	FileGetTime	ファイルやフォルダの日付と時刻のスタンプを取得します。
+	FileGetVersion	ファイルのバージョンを取得します。
+	FileMove	移動または名前を変更し、1つまたは複数のファイルを。
+	FileMoveDir	そのすべてのサブフォルダとファイルと共にフォルダに移動します。また、フォルダの名前を変更することができます。
+	FileOpen	提供するオブジェクト指向のファイルI / O
+	FileRead	変数にファイルの内容を読み込みます。
+	FileReadLine	ファイルから指定された行を読み込み、変数に文字列を格納します。
+	FileRecycle	可能であれば、ごみ箱にファイルまたはディレクトリを送信します。
+	FileRecycleEmpty	ごみ箱を空にします。
+	FileRemoveDir	削除フォルダ。
+	FileSelectFile	ユーザー（s）は、ファイルを開いたり保存することができます標準のダイアログを表示します。
+	FileSelectFolder	ユーザーがフォルダを選択できるようにする標準のダイアログを表示します。
+	FileSetAttrib	つまたは複数のファイルまたはフォルダの属性を変更します。ワイルドカードはサポートされています。
+	FileSetTime	つまたは複数のファイルやフォルダの日時スタンプを変更します。ワイルドカードはサポートされています。
+	Floor	最も近い整数（いずれ.00サフィックスなし）に切り捨て数値を返します。
+	For	オブジェクト内の各キーと値のペアのために一度一連のコマンドを繰り返します。
+	FormatTime	指定された日付/時刻の形式にYYYYMMDDHH24MISSタイムスタンプを変換します。
+	Func	関数への参照を取得します。
+	GetKeyName / GetKeyVK / GetKeySC	名前またはテキスト、仮想キーコードまたはキーのスキャンコードを取得します。
+	GetKeyState	キーボードのキーやマウス/ジョイスティックのボタンかどうかを確認するには、ダウンしているか次第です。また、ジョイスティックの状態を取得します。
+	Gosub	指定されたラベルにジャンプして、Returnが検出されるまで実行を継続します。
+	Goto	指定されたラベルにジャンプして実行を継続します。
+	GroupActivate	groupaddを使用して定義されたウィンドウ·グループ内の次のウィンドウをアクティブにします。
+	GroupAdd	必要に応じてグループを作成し、ウィンドウ·グループのウィンドウの仕様を追加します。
+	GroupClose	それだけGroupActivateまたはGroupDeactivateによって活性化された場合は、アクティブなウィンドウを閉じます。その後、シリーズの次のウィンドウをアクティブにします。また、グループ内のすべてのウィンドウを閉じることができます。
+	GroupDeactivate	いないグループ内の次のウィンドウをアクティブに除いGroupActivateに似。
+	if	値と変数の比較がTRUEにevalutes場合、コマンド（s）が実行するように指定します。複数のコマンドが存在する場合、ブロック（カッコ）で囲む。
+	if (expression)	式がTRUEと評価された場合、コマンド（s）が実行するように指定します。
+	If var [not] between	変数の内容かどうかを確認し、2つの値（両端を含む）の間の数値順またはアルファベット順である。
+	If var [not] in/contains MatchList 	変数の内容かどうかを確認し、リスト内の項目のいずれかに一致。
+	If var is [not] type	変数の内容が数値であるかどうかをチェックし、大文字など
+	If Clipboard	クリップボードのテキストであるかのチェックは、指定された文字列をマッチする部分。
+	If ErrorLevel	指定した画像またはピクセルかどうかをチェックし、画面で発見された。
+	If A_Index	現在のループの繰り返しかどうかをチェックし、指定された番号をマッチする部分。
+	IfEqual/IfNotEqual	平等のための値に変数を比較します。と同義：もしヴァール=値|場合Varの<>の値。
+	IfExist / IfNotExist / FileExist	ファイルまたはフォルダが存在するかどうかをチェック。
+	IfGreater / IfGreaterOrEqual	値に変数を比較します。と同義ます：if var>の値|場合ヴァール> =値。
+	IfInString / IfNotInString / InStr	変数かどうかをチェックし、指定した文字列が含まれています。
+	IfLess / IfLessOrEqual	値に変数を比較します。と同義ます：if Varの<値|場合ヴァール<=値。
+	IfMsgBox	ボタンは、最新のMsgBoxコマンドの実行中にユーザーによって押されたかどうかをチェックします。
+	IfWinActive / IfWinNotActive	チェックし指定されたウィンドウが存在し、（何よりも）は、現在アクティブであるかどうか。
+	IfWinExist / IfWinNotExist	チェックし指定したウィンドウが存在するかどうか。
+	ImageSearch	画像用の画面領域を検索します。
+	IniDelete	標準フォーマットiniファイルから削除した値。
+	IniRead	標準フォーマットiniファイルから値を読み込みます。
+	IniWrite	標準フォーマットiniファイルに値を書き込みます。
+	Input	文字列（：それは何もしませんWindows 9xの上ではサポートされません）を入力するようにユーザーを待ちます。
+	InputBox	文字列を入力するようにユーザに依頼するための入力ボックスが表示されます。
+	InStr	左または右から文字列の任意の出現を検索し、。
 	)	
 	Ahk_Cmd_Index = %Ahk_Cmd_Index%`n	
 	(LTrim	
-	KeyHistory	
-	KeyWait	
-	Labels	
-	Log	
-	Ln	
-	Loop (normal) 	
-	Loop (files & folders)	
-	Loop (parse a string)	
-	Loop (read file contents)	
-	Loop (registry)	
-	Menu	
-	Mod	
-	MouseClickDrag	
-	MouseGetPos	
-	MouseMove	
-	MsgBox	
-	NumGet	
-	NumPut	
-	OnExit	
-	OnMessage	
-	OutputDebug	
-	Pause	
-	PixelGetColor	
-	PixelSearch	
-	PostMessage	
-	Process	
-	Progress	
-	Random	
-	RegExMatch	
-	RegExReplace	
-	RegDelete	
-	RegRead	
-	RegWrite	
-	RegisterCallback	
-	Return	
-	Round	
-	Run	
-	RunAs	
-	RunWait	
-	Screenshot	
-	Send / SendRaw / SendInput / SendPlay	
-	SendLevel	
-	SendMessage	
-	SendMode	
-	SetCapslockState	
-	SetEnv (Var = Value)	
-	SetFormat	
-	SetKeyDelay	
-	SetMouseDelay	
-	SetNumlockState	
-	SetScrollLockState	
-	SetRegView	
-	Shutdown	
-	Sin	
-	Sleep	
-	Sort	
-	SoundBeep	
-	SoundGet	
-	SoundGetWaveVolume	
-	SoundPlay	
-	SoundSet	
-	SoundSetWaveVolume	
-	SplashImage	
-	SplashTextOn	
-	SplashTextOff	
-	SplitPath	
-	Sqrt	
-	StatusBarGetText	
-	StatusBarWait	
-	StrPut / StrGet	
-	StringCaseSense	
-	StringGetPos / InStr	
-	StringLeft	
-	StringLen / StrLen	
-	StringLower	
-	StringMid / SubStr	
-	StringReplace	
-	StringRight	
-	StringSplit / StrSplit	
-	StringTrimLeft	
-	StringTrimRight	
-	StringUpper	
-	Suspend	
-	SysGet	
-	Tan	
-	ToolTip	
-	Transform	
-	TrayTip	
-	Trim / LTrim / RTrim	
-	Try	
-	Until	
-	UrlDownloadToFile	
-	VarSetCapacity	
-	WinActivate	
-	WinActivateBottom	
-	WinActive	
-	WinClose	
-	WinExist	
-	WinGetActiveStats	
-	WinGetActiveTitle	
-	WinGetClass	
-	WinGet	
-	WinGetPos	
-	WinGetText	
-	WinGetTitle	
-	WinHide	
-	WinKill	
-	WinMaximize	
-	WinMenuSelectItem	
-	WinMinimize	
-	WinMinimizeAll	
-	WinMinimizeAllUndo	
-	WinMove	
-	WinRestore	
-	WinSet	
-	WinSetTitle	
-	WinShow	
-	WinWait	
-	WinWaitActive	
-	WinWaitClose	
-	WinWaitNotActive	
-	)	
+	KeyHistory	スクリプト情報と最新のキーストロークやマウスクリックの履歴を表示します。
+	KeyWait	キーまたはマウス/ジョイスティックボタン解放または押されるのを待ちます。
+	Labels	ラベルは、コード行を識別し、ジャンプターゲットとして使用することができ、またはサブルーチンを形成することができる。
+	Log	数の対数（底10）を返します。
+	Ln	数の自然対数（底e）を返します。
+	Loop (normal) 	繰り返して一連のコマンドを実行します指定された回数、または休憩までのどちらかに遭遇する。
+	Loop (files & folders)	指定したファイルやフォルダを1つずつ取得します。
+	Loop (parse a string)	一度は、文字列から部分文字列（フィールド）を取得します。
+	Loop (read file contents)	テキストファイルの行は、時間（FileReadLineより良い行い）少なくとも一つを取得します。
+	Loop (registry)	つの項目同時に、指定されたレジストリサブキーの内容を取得します。
+	Menu	、作成、削除変更し、メニューとメニュー項目が表示されます。トレイアイコンとそのツールチップを変更します。コンパイルされたスクリプトのメインウィンドウを開くことができるかどうかを制御します。
+	Mod	モジュロ。配当を除数で割った余りを返します。
+	MouseClickDrag	クリックとは、指定されたマウスボタンを保持している先の座標にマウスを移動し、その後ボタンを離す。
+	MouseGetPos	現在のマウスカーソルの位置、および必要に応じてどのウィンドウとコントロール、それが上に浮かんでいるを取得します。
+	MouseMove	マウスカーソルを移動します。
+	MsgBox	1つ以上のボタン（例えば[はい]と[いいえなど）を含む小さなウィンドウに指定したテキストを表示します。
+	NumGet	指定されたアドレス+オフセットに格納されている2進数を返します。
+	NumPut	指定されたアドレスのバイナリ形式の店が数+オフセットとだけ書かれた項目の右側にアドレスを返します。
+	OnExit	スクリプトが終了し自動的に実行するサブルーチンを指定します。
+	OnMessage	スクリプトが指定されたメッセージを受信したときに自動的に呼び出す関数を指定します。
+	OutputDebug	ディスプレイ用のデバッガ（もしあれば）に文字列を送信します。
+	Pause	スクリプトの現在のスレッドを一時停止します。
+	PixelGetColor	指定されたxのピクセルの色を取得し、yは座標。
+	PixelSearch	指定された色のピクセルのための画面領域を検索します。
+	PostMessage	ウィンドウまたはコントロールのメッセージキューにメッセージを格納します。
+	Process	それが存在する場合はチェックあり、その優先順位を変更し、それを閉じて、それが終了するのを待ちます。プロセスで次のいずれかの操作を実行します。
+	Progress	プログレスバーを含むウィンドウを作成または更新します。
+	Random	擬似乱数を生成します。
+	RegExMatch	文字列がパターン（正規表現）が含まれているかどうかを確認します。
+	RegExReplace	文字列内のパターン（正規表現）の発生を置き換えます。
+	RegDelete	レジストリから削除サブキーまたは値。
+	RegRead	レジストリから値を読み取ります。
+	RegWrite	レジストリに値を書き込みます。
+	RegisterCallback	呼び出されたときに、スクリプト内の関数の呼び出しをリダイレクトする機械語コード·アドレスを作成します。
+	Return	実行が以前に関数呼び出し、GOSUB、ホットキーのアクティベーション、GroupActivate、または他の手段を介して跳ね上がっていたようにサブルーチンから復帰します。
+	Round	Nが省略されるか0の場合、数値は最も近い整数に丸められます。 Nは正の数であれば、数をN小数に丸められます。 nが負の場合、数値は小数点の左側の桁数をnで丸められます。
+	Run	外部プログラムを実行します。
+	RunAs	ランとrunwaitでの後続のすべての目的で使用する場合は、使用するユーザーの資格情報のセットを指定します。 Windows 2000/XPの以降が必要です。
+	RunWait	外部プログラムを実行し、それが終了するまで待機します。
+	Screenshot	指定された領域のPNG形式のスクリーンショットを作成します。
+	Send / SendRaw / SendInput / SendPlay	アクティブなウィンドウにキーストロークをシミュレートし、マウスクリックを送信します。
+	SendLevel	人工的なキーボードとマウスイベントはホットキーとhotstringsによって無視されているコントロール。
+	SendMessage	ウィンドウまたはコントロールにメッセージを送信し、承認を待ちます。
+	SendMode	SendInputまたはSendPlayよりむしろデフォルト（SendEvent）と同義に送信できます。また、クリックして、クリック/指定したメソッドを使用してドラッグ/ MouseMoveのなります。
+	SetCapslockState	CapsLockキーのキーの状態を設定します。また、キーをオンまたはオフに滞在するように強制することができます。
+	SetEnv (Var = Value)	変数に指定した値を割り当てます。
+	SetFormat	数学演算によって生成された整数と浮動小数点数のフォーマットを設定します。
+	SetKeyDelay	送信のcontrolSendによって送られた各キーストロークの後に発生する遅延時間を設定します。
+	SetMouseDelay	各マウスの動きやクリックした後に発生する遅延時間を設定します。
+	SetNumlockState	NUMLOCKキーの状態を設定します。また、キーをオンまたはオフに滞在するように強制することができます。
+	SetScrollLockState	Scrolllockキーの状態を設定します。また、キーをオンまたはオフに滞在するように強制することができます。
+	SetRegView	32ビットスクリプトでレジストリのコマンドは、64ビットのレジストリビュー、およびその逆へのアクセスを許可します。
+	Shutdown	、シャットダウンし再起動するか、システムをログオフします。
+	Sin	数の三角関数サインを返します。
+	Sleep	続行する前に、指定された時間待機します。
+	Sort	アルファベット、数字、またはランダムな順序（オプションで重複を削除）で変数の内容を配置します。
+	SoundBeep	PCスピーカーから音を発する。
+	SoundGet	サウンドデバイス（マスターミュート、マスターボリューム、など）から各種設定を取得
+	SoundGetWaveVolume	サウンドデバイスからの波出力音量を取得します。
+	SoundPlay	サウンド、ビデオ、またはその他のサポートされているファイルの種類を再生します。
+	SoundSet	変更サウンドデバイスの各種設定（マスターミュート、マスターボリューム、など）
+	SoundSetWaveVolume	サウンドデバイスのための波出力音量を変更します。
+	SplashImage	JPG、GIF、またはBMP画像を含むウィンドウを作成または更新します。
+	SplashTextOn	カスタマイズ可能なテキストポップアップウィンドウを作成します。
+	SplashTextOff	上記のウィンドウを閉じます。
+	SplitPath	その名、ディレクトリ、拡張子、およびドライブにファイル名またはURLを区切ります。
+	Sqrt	数値の平方根を返します。
+	StatusBarGetText	標準のステータスバーコントロールからテキストを取得します。
+	StatusBarWait	ウィンドウのステータスバーには、指定された文字列が含まれてまで待機します。
+	StrPut / StrGet	コードページ間で変換する任意のメモリアドレス、またはから文字列をコピーします。
+	StringCaseSense	文字列比較は、大文字（デフォルトでは "大文字と小文字を区別しない"である）の影響を受けやすいかどうかを判断します。
+	StringGetPos / InStr	文字列内の指定された部分文字列の位置を取得します。
+	StringLeft	文字列の左側から文字の数を取得します。
+	StringLen / StrLen	文字列にある文字数のカウントを取得します。
+	StringLower	文字列を小文字に変換します。
+	StringMid / SubStr	文字列内の指定した位置から1つ以上の文字を取得します。
+	StringReplace	新しい文字列で指定された部分文字列を置き換えます。
+	StringRight	文字列の右側から文字の数を取得します。
+	StringSplit / StrSplit	指定された区切り文字を使用する文字列の配列に文字列を区切ります。
+	StringTrimLeft	文字列の左側からの文字数を削除します。
+	StringTrimRight	文字列の右側から文字の数を削除します。
+	StringUpper	文字列を大文字に変換します。
+	Suspend	無効またはすべてまたは選択したホットキーとhotstringsを可能にします。
+	SysGet	画面の解像度、マルチモニタ情報、システムオブジェクトの大きさ、および他のシステムプロパティを取得します。
+	Tan	数の三角関数タンジェントを返します。
+	ToolTip	常時オン·トップウィンドウは画面上の任意の場所に作成されます。
+	Transform	雑多な数学関数、ビット単位の操作、およびそのようなASCII / Unicode変換などのタスクを実行します。
+	TrayTip	トレイアイコンの近くにバルーンメッセージウィンドウを作成します。 Windows 2000/XPの以降が必要です。
+	Trim / LTrim / RTrim	トリム開始および/または文字列の末尾から特定の文字。
+	Try	ランタイムエラーと投げコマンドによってスローされた例外に対するガードは、1つ以上の文（コマンドまたは式）。
+	Until	ループまたはforループの継続に条件を適用します。
+	UrlDownloadToFile	インターネットからファイルをダウンロードします。
+	VarSetCapacity	変数の保持容量を拡大したり、メモリを解放します。通常、これは唯一のそのようなDllCallなど、異常な状況のために必要である。
+	WinActivate	指定されたウィンドウは、（それが一番になる）アクティブにします。
+	WinActivateBottom	それはむしろ最上位よりも一番下の（少なくとも最近アクティブ）マッチングウィンドウをアクティブにしますことを除いWinActivateと同じ。
+	WinActive	それは指定された条件に一致した場合、アクティブなウィンドウの一意のID（HWND）を返します。
+	WinClose	指定されたウィンドウを閉じます。
+	WinExist	チェックし指定したウィンドウが存在するかどうか。
+	WinGetActiveStats	つのコマンドにWinGetActiveTitleとWinGetPosの機能を兼ね備えています。
+	WinGetActiveTitle	アクティブなウィンドウのタイトルを取得します。
+	WinGetClass	指定されたウィンドウのクラス名を取得します。
+	WinGet	指定されたウィンドウの一意のID、プロセスID、プロセス名、またはそのコントロールのリストを取得します。また、指定された条件に一致するすべてのウィンドウのリストを取得できます。
+	WinGetPos	指定したウィンドウの位置とサイズを取得します。
+	WinGetText	指定されたウィンドウからテキストを取得します。
+	WinGetTitle	指定したウィンドウのタイトルを取得します。
+	WinHide	指定したウィンドウを非表示にします。
+	WinKill	指定されたウィンドウが閉じるように強制します。
+	WinMaximize	その最大サイズに指定されたウィンドウを拡大します。
+	WinMenuSelectItem	指定したウィンドウのメニューバーからメニュー項目を呼び出します。
+	WinMinimize	タスクバーのボタンに指定されたウィンドウを折りたたみ。
+	WinMinimizeAll	すべてのウィンドウを最小化します。
+	WinMinimizeAllUndo	以前WinMinimizeAllの効果を元に戻します。
+	WinMove	位置および/または指定されたウィンドウのサイズを変更します。
+	WinRestore	それが最小化または最大化されている場合は指定したウィンドウ最小化を解除またはunmaximizes。
+	WinSet	指定したウィンドウへの変更、などと透明性 "の上に常に"として、様々なことができます。
+	WinSetTitle	指定したウィンドウのタイトルを変更します。
+	WinShow	指定したウィンドウを再表示。
+	WinWait	指定したウィンドウが存在するまで待機します。
+	WinWaitActive	指定したウィンドウがアクティブになるまで待機します。
+	WinWaitClose	指定したウィンドウが存在しないまで待機。
+	WinWaitNotActive	指定したウィンドウがアクティブでなくなるまで待機します。
+	)	...
 return		

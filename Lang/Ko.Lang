@@ -1055,250 +1055,248 @@
 ; AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	(LTrim	
-	Abs	
-	ASin	
-	ACos	
-	Array	
-	Asc	
-	ATan	
-	BlockInput	
-	Break	
-	Ceil	
-	Chr	
-	Click	
-	ClipWait	
-	Clipboard	
-	ComObjActive	
-	ComObjArray	
-	ComObjConnect	
-	ComObjCreate	
-	ComObjEnwrap / ComObjUnwrap	
-	ComObjError	
-	ComObjFlags	
-	ComObjGet	
-	ComObjMissing	
-	ComObjParameter	
-	ComObjQuery	
-	ComObjType	
-	ComObjValue	
-	Continue	
-	Control	
-	ControlClick	
-	ControlEditPaste	
-	ControlFocus	
-	ControlGet	
-	ControlGetFocus	
-	ControlGetPos	
-	ControlGetText	
-	ControlMove	
-	ControlSend / ControlSendRaw 	
-	ControlSetText	
-	CoordMode	
-	Cos	
-	Critical	
-	DetectHiddenText	
-	DetectHiddenWindows	
-	DllCall	
-	Drive	
-	DriveGet	
-	DriveSpaceFree	
-	Edit	
-	Else	
-	EnvAdd	
-	EnvDiv	
-	EnvGet	
-	EnvMult	
-	EnvSet	
-	EnvSub	
-	EnvUpdate	
-	Exit	
-	ExitApp	
-	Exp	
-	FileAppend	
-	FileCopy	
-	FileCopyDir	
-	FileCreateDir	
-	FileCreateShortcut	
-	FileDelete	
-	FileEncoding	
-	FileInstall	
-	FileGetAttrib	
-	FileGetShortcut	
-	FileGetSize	
-	FileGetTime	
-	FileGetVersion	
-	FileMove	
-	FileMoveDir	
-	FileOpen	
-	FileRead	
-	FileReadLine	
-	FileRecycle	
-	FileRecycleEmpty	
-	FileRemoveDir	
-	FileSelectFile	
-	FileSelectFolder	
-	FileSetAttrib	
-	FileSetTime	
-	Floor	
-	For	
-	FormatTime	
-	Func	
-	GetKeyName / GetKeyVK / GetKeySC	
-	GetKeyState	
-	Gosub	
-	Goto	
-	GroupActivate	
-	GroupAdd	
-	GroupClose	
-	GroupDeactivate	
-	if	
-	if (expression)	
-	If var [not] between	
-	If var [not] in/contains MatchList 	
-	If var is [not] type	
-	If Clipboard	
-	If ErrorLevel	
-	If A_Index	
-	IfEqual/IfNotEqual	
-	IfExist / IfNotExist / FileExist	
-	IfGreater / IfGreaterOrEqual	
-	IfInString / IfNotInString / InStr	
-	IfLess / IfLessOrEqual	
-	IfMsgBox	
-	IfWinActive / IfWinNotActive	
-	IfWinExist / IfWinNotExist	
-	ImageSearch	
-	IniDelete	
-	IniRead	
-	IniWrite	
-	Input	
-	InputBox	
-	InStr	
-	IsByRef	
-	IsObject	
+	Abs	숫자의 절대 값을 반환합니다.
+	ASin	라디안 아크를 (사인 수있는 수)를 반환합니다.
+	ACos	라디안 단위 아크 코사인 (코사인 수있는 수)를 반환합니다.
+	Array	Array 객체를 만듭니다.
+	Asc	문자열의 첫 번째 문자에 대한 문자 코드를 (1과 255 (ANSI 빌드) 또는 65535 사이의 숫자 (유니 코드 빌드에서))을 반환합니다.
+	ATan	라디안 단위 아크 탄젠트 (탄젠트 수있는 수)를 반환합니다.
+	BlockInput	비활성화 또는 키보드와 마우스를 통해 컴퓨터와 상호 작용하는 사용자의 능력을 가능하게합니다.
+	Break	종료 (종료) 루프. 루프의 모든 종류의 내부 유효합니다.
+	Ceil	반환 번호가 가장 가까운 정수 (어떤 .00 접미사없이)로 반올림.
+	Chr	번호로 표시된 문자 코드에 해당하는 단일 문자를 반환합니다.
+	Click	지정된 좌표에 마우스 버튼을 클릭합니다. 또한, 버튼을 누른 상태에서 휠을 켜거나 이동할 수 있습니다.
+	ClipWait	클립 보드에 데이터를 포함 할 때까지 기다립니다.
+	Clipboard	클립 보드에서 텍스트를 붙여 넣습니다
+	ComObjActive	등록 된 COM 개체를 검색합니다.
+	ComObjArray	COM 사용하기 위해 SAFEARRAY를 만듭니다.
+	ComObjConnect	지정된 접두사로 함수에 COM 개체의 이벤트 소스를 연결합니다.
+	ComObjCreate	COM 객체를 만듭니다.
+	ComObjEnwrap / ComObjUnwrap	랩 / COM 개체를 랩핑 해제.
+	ComObjError	활성화 또는 COM 오류의 알림을 비활성화합니다.
+	ComObjFlags	COM 래퍼 객체의 동작을 제어하는 검색하거나 변경 플래그.
+	ComObjGet	COM 구성 요소에 의해 제공된 개체에 대한 참조를 반환합니다.
+	ComObjMissing	COM 메서드에 전달하는 "누락 된 매개 변수"개체를 만듭니다.
+	ComObjParameter	COM 메서드에 매개 변수로 전달하는 값 형식을 래핑합니다.
+	ComObjQuery	인터페이스 또는 서비스의 COM 개체를 쿼리합니다.
+	ComObjType	COM 개체에서 형식 정보를 검색합니다.
+	ComObjValue	COM 래퍼 개체에 저장된 값이나 포인터를 검색합니다.
+	Continue	현재 루프 반복의 나머지 부분을 건너 뛰고 새로운 하나를 시작합니다. 루프의 모든 종류의 내부 유효합니다.
+	Control	컨트롤에 다양한 변화를 만듭니다.
+	ControlClick	마우스 버튼이나 컨트롤에 마우스 휠 이벤트를 보냅니다.
+	ControlEditPaste	편집 컨트롤의 캐럿 / 삽입 위치에 붙여 넣 문자열 (이 클립 보드의 내용에 영향을 미치지 않습니다.)
+	ControlFocus	창에 특정 컨트롤에 입력 포커스를 설정합니다.
+	ControlGet	컨트롤에 대한 다양한 유형의 정보를 검색합니다.
+	ControlGetFocus	어떤 경우 대상 윈도우의 제어를 가져가 입력 포커스를 가지고 있습니다.
+	ControlGetPos	컨트롤의 위치와 크기를 검색합니다.
+	ControlGetText	컨트롤에서 텍스트를 검색합니다.
+	ControlMove	이동 또는 컨트롤 크기를 조정합니다.
+	ControlSend / ControlSendRaw 	창이나 컨트롤에 시뮬레이션 키 입력을 보냅니다.
+	ControlSetText	컨트롤의 텍스트를 변경합니다.
+	CoordMode	설정은 활성 창 또는 화면 하나에 상대적 다양한 명령 모드를 조정.
+	Cos	수의 삼각 코사인을 반환합니다.
+	Critical	다른 스레드에 의해 중단되는 현재 스레드를 방지 할 수 있습니다.
+	DetectHiddenText	창에 보이지 않는 텍스트 창을 찾는 목적으로 "본"여부를 결정합니다. 이 같은 IfWinExist와 WinActivate 같은 명령에 영향을 미칩니다.
+	DetectHiddenWindows	보이지 않는 창을 스크립트에서 "볼"할지 여부를 결정합니다.
+	DllCall	같은 표준 Windows API 함수와 DLL 내부의 함수를 호출합니다.
+	Drive	/ 후퇴 CD 또는 DVD 드라이브에서 트레이를 꺼냅니다, 또는 드라이브의 볼륨 레이블을 설정합니다.
+	DriveGet	컴퓨터의 드라이브 (들)에 대한 다양한 유형의 정보를 검색합니다.
+	DriveSpaceFree	메가 바이트에서 드라이브의 디스크 공간을 검색합니다.
+	Edit	관련 편집기에서 편집을 위해 현재 스크립트를 엽니 다.
+	Else	IF-문이 FALSE로 평가되면 명령 (들)을 수행하도록 지정합니다. 하나 이상의 명령이있을 때, 블록 (중괄호)로 묶습니다.
+	EnvAdd	자체의 합을 더한 주어진 값 (추가하거나 날짜 및 시간 값에서 시간을 뺄 수)에 변수를 설정합니다. 와 동의어 : 바르 + = 값입니다.
+	EnvDiv	주어진 값으로 나눈 자체에 대한 변수를 설정합니다. 와 동의어 : 바르 / = 값입니다.
+	EnvGet	환경 변수를 검색합니다.
+	EnvMult	자체 변수 번 지정된 값을 설정합니다. 와 동의어 : 바르 * = 값입니다.
+	EnvSet	환경에 포함 된 변수에 값을 씁니다.
+	EnvSub	주어진 값 (또는 날짜 - 시간 값을 비교할 수 있습니다) 마이너스 자체에 변수를 설정합니다. 와 동의어 : 바르 - = 값입니다.
+	EnvUpdate	OS 및 환경 변수 (들)을 변경하는 실행중인 모든 응용 프로그램에 알립니다.
+	Exit	종료 현재 스레드 또는 (스크립트가 지속되지 않으며 단축키가없는 경우) 전체 스크립트입니다.
+	ExitApp	무조건 스크립트를 종료합니다.
+	Exp	반환 E는 (약 2.71828182845905입니다) N 번째 전원을 올렸다.
+	FileAppend	파일의 끝 (필요한 경우, 먼저 파일을 생성) 텍스트를 씁니다.
+	FileCopy	복사본 하나 이상의 파일.
+	FileCopyDir	하위 폴더 및 파일 (xcopy는 유사) 모두와 함께 폴더를 복사합니다.
+	FileCreateDir	폴더를 만듭니다.
+	FileCreateShortcut	바로 가기 (. LNK) 파일을 만듭니다.
+	FileDelete	삭제 하나 이상의 파일을.
+	FileEncoding	FILEREAD, FileReadLine, 반복 읽기, FileAppend 및 FileOpen을위한 기본 인코딩을 설정합니다.
+	FileInstall	스크립트의 컴파일 된 버전 내부의 지정된 파일을 포함합니다.
+	FileGetAttrib	파일이나 폴더가 읽기 전용인지 여부를보고, 숨김 등
+	FileGetShortcut	이러한 목표 파일로 바로 가기 (. LNK) 파일에 대한 정보를 검색합니다.
+	FileGetSize	파일의 크기를 검색합니다.
+	FileGetTime	파일이나 폴더의 날짜 스탬프를 검색합니다.
+	FileGetVersion	파일의 버전을 검색합니다.
+	FileMove	이동하거나 이름을 변경 하나 이상의 파일을.
+	FileMoveDir	하위 폴더 및 모든 파일과 함께 폴더로 이동합니다. 또한 폴더의 이름을 바꿀 수 있습니다.
+	FileOpen	제공하는 객체 지향 파일 I / O
+	FileRead	변수로 파일의 내용을 읽습니다.
+	FileReadLine	파일에서 지정된 행을 읽어 변수에 텍스트를 저장합니다.
+	FileRecycle	가능하면 휴지통에 파일이나 디렉토리를 보냅니다.
+	FileRecycleEmpty	휴지통을 비 웁니다.
+	FileRemoveDir	폴더를 삭제합니다.
+	FileSelectFile	사용자가 열거 나 저장 파일 (들)을 할 수있는 표준 대화 상자를 표시합니다.
+	FileSelectFolder	사용자가 폴더를 선택할 수있는 표준 대화 상자를 표시합니다.
+	FileSetAttrib	하나 이상의 파일 또는 폴더의 속성을 변경합니다. 와일드 카드가 지원됩니다.
+	FileSetTime	하나 이상의 파일 또는 폴더의 날짜 스탬프를 변경합니다. 와일드 카드가 지원됩니다.
+	Floor	반환 번호가 가장 가까운 정수 (어떤 .00 접미사없이)로 내림.
+	For	개체의 각 키 - 값 쌍에 대해 한 번씩 일련의 명령을 반복합니다.
+	FormatTime	지정된 날짜 / 시간 형식으로 YYYYMMDDHH24MISS 타임 스탬프를 변환합니다.
+	Func	함수에 대한 참조를 검색합니다.
+	GetKeyName / GetKeyVK / GetKeySC	이름이나 텍스트, 가상 키 코드 또는 키의 스캔 코드를 검색합니다.
+	GetKeyState	키보드 키 또는 마우스 / 조이스틱 버튼 경우에는 검사 또는 아래입니다. 또한 조이스틱 상태를 검색합니다.
+	Gosub	반품이 발생 될 때까지 지정된 라벨로 점프합니다 실행을 계속합니다.
+	Goto	지정된 레이블로 점프합니다 실행을 계속합니다.
+	GroupActivate	GroupAdd로 정의 된 창 그룹에서 다음 창을 활성화합니다.
+	GroupAdd	필요한 경우 그룹을 생성, 윈도우 그룹에 윈도우 사양을 추가합니다.
+	GroupClose	그것은 단지 GroupActivate 또는 GroupDeactivate에 의해 활성화 된 경우 활성 창을 닫습니다. 그런 다음 시리즈의 다음 창을 활성화합니다. 또한 그룹의 모든 창을 닫을 수 있습니다.
+	GroupDeactivate	없는 그룹에서 다음 창을 활성화 제외 GroupActivate 유사합니다.
+	if	값으로 변수의 비교는 TRUE로 evalutes 경우 명령 (들)을 수행하도록 지정합니다. 하나 이상의 명령이있을 때, 블록 (중괄호)로 묶습니다.
+	if (expression)	표현식이 TRUE로 평가되면 명령 (들)을 수행하도록 지정합니다.
+	If var [not] between	변수의 내용 여부를 검사 두 개의 값 (포함) 사이의 숫자 또는 알파벳입니다.
+	If var [not] in/contains MatchList 	변수의 내용 여부를 점검 목록에있는 항목 중 하나를 일치합니다.
+	If var is [not] type	변수의 내용이 숫자인지 검사, 대문자 등
+	If Clipboard	클립 보드에 텍스트가 있는지 검사는 지정된 문자열을하는 matchs.
+	If ErrorLevel	지정된 이미지 또는 픽셀 경우 검사가 화면에 발견되었다.
+	If A_Index	현재 루프 반복하면 검사는 지정된 숫자를하는 matchs.
+	IfEqual/IfNotEqual	평등에 대한 값에 변수를 비교합니다. 와 동의어 : 만약 바르 = 값 | 바르가 <> 값 경우.
+	IfExist / IfNotExist / FileExist	파일이나 폴더의 존재 여부를 확인합니다.
+	IfGreater / IfGreaterOrEqual	값에 변수를 비교합니다. 와 동의어 : 만약 바르> 가격 | 만약 바르> = 값입니다.
+	IfInString / IfNotInString / InStr	변수의 경우 검사는 지정된 문자열을 포함합니다.
+	IfLess / IfLessOrEqual	값에 변수를 비교합니다. 와 동의어 : 만약 바르 <값 | 바르가 <= 값 경우.
+	IfMsgBox	어떤 버튼 수표는 가장 최근의 MSGBOX 명령을 실행하는 동안 사용자에 의해 추진되었다.
+	IfWinActive / IfWinNotActive	검사 지정 창이 존재하고 (제일) 현재 활성화됩니다.
+	IfWinExist / IfWinNotExist	검사를 지정된 윈도우가 존재합니다.
+	ImageSearch	이미지가 화면의 영역을 검색합니다.
+	IniDelete	표준 형식. ini 파일에서 삭제 값을 반환합니다.
+	IniRead	표준 형식. ini 파일에서 값을 읽습니다.
+	IniWrite	표준 형식. ini 파일에 값을 씁니다.
+	Input	사용자가 문자열 (: 그것은 아무것도하지 않습니다 윈도우 9x에서 지원되지 않습니다)를 입력하기를 기다립니다.
+	InputBox	입력 상자에 문자열을 입력하도록 사용자에게 요청하는 표시됩니다.
+	InStr	왼쪽 또는 오른쪽에서 문자열의 특정 발생을 검색합니다.
 	)	
 	Ahk_Cmd_Index = %Ahk_Cmd_Index%`n	
 	(LTrim	
-	KeyHistory	
-	KeyWait	
-	Labels	
-	Log	
-	Ln	
-	Loop (normal) 	
-	Loop (files & folders)	
-	Loop (parse a string)	
-	Loop (read file contents)	
-	Loop (registry)	
-	Menu	
-	Mod	
-	MouseClickDrag	
-	MouseGetPos	
-	MouseMove	
-	MsgBox	
-	NumGet	
-	NumPut	
-	OnExit	
-	OnMessage	
-	OutputDebug	
-	Pause	
-	PixelGetColor	
-	PixelSearch	
-	PostMessage	
-	Process	
-	Progress	
-	Random	
-	RegExMatch	
-	RegExReplace	
-	RegDelete	
-	RegRead	
-	RegWrite	
-	RegisterCallback	
-	Return	
-	Round	
-	Run	
-	RunAs	
-	RunWait	
-	Screenshot	
-	Send / SendRaw / SendInput / SendPlay	
-	SendLevel	
-	SendMessage	
-	SendMode	
-	SetCapslockState	
-	SetEnv (Var = Value)	
-	SetFormat	
-	SetKeyDelay	
-	SetMouseDelay	
-	SetNumlockState	
-	SetScrollLockState	
-	SetRegView	
-	Shutdown	
-	Sin	
-	Sleep	
-	Sort	
-	SoundBeep	
-	SoundGet	
-	SoundGetWaveVolume	
-	SoundPlay	
-	SoundSet	
-	SoundSetWaveVolume	
-	SplashImage	
-	SplashTextOn	
-	SplashTextOff	
-	SplitPath	
-	Sqrt	
-	StatusBarGetText	
-	StatusBarWait	
-	StrPut / StrGet	
-	StringCaseSense	
-	StringGetPos / InStr	
-	StringLeft	
-	StringLen / StrLen	
-	StringLower	
-	StringMid / SubStr	
-	StringReplace	
-	StringRight	
-	StringSplit / StrSplit	
-	StringTrimLeft	
-	StringTrimRight	
-	StringUpper	
-	Suspend	
-	SysGet	
-	Tan	
-	ToolTip	
-	Transform	
-	TrayTip	
-	Trim / LTrim / RTrim	
-	Try	
-	Until	
-	UrlDownloadToFile	
-	VarSetCapacity	
-	WinActivate	
-	WinActivateBottom	
-	WinActive	
-	WinClose	
-	WinExist	
-	WinGetActiveStats	
-	WinGetActiveTitle	
-	WinGetClass	
-	WinGet	
-	WinGetPos	
-	WinGetText	
-	WinGetTitle	
-	WinHide	
-	WinKill	
-	WinMaximize	
-	WinMenuSelectItem	
-	WinMinimize	
-	WinMinimizeAll	
-	WinMinimizeAllUndo	
-	WinMove	
-	WinRestore	
-	WinSet	
-	WinSetTitle	
-	WinShow	
-	WinWait	
-	WinWaitActive	
-	WinWaitClose	
-	WinWaitNotActive	
-	)	
+	KeyHistory	스크립트 정보와 가장 최근의 키 입력과 마우스 클릭의 역사를 표시합니다.
+	KeyWait	공개 또는 아래로 누를 수 키나 마우스 / 조이스틱 버튼을 기다립니다.
+	Labels	레이블은 한 줄의 코드를 식별하고, 고토 대상으로 또는 서브 루틴을 형성하는 데 사용할 수 있습니다.
+	Log	숫자의 로그 (밑이 10)을 반환합니다.
+	Ln	숫자의 자연 로그 (밑 e)을 반환합니다.
+	Loop (normal) 	반복 일련의 명령을 수행 지정한 횟수 또는 중단 될 때까지 하나가 발생합니다.
+	Loop (files & folders)	지정된 파일 또는 폴더를 한 번에 하나씩 검색합니다.
+	Loop (parse a string)	문자열에서 검색하는 하위 문자열 (필드), 한 번에 하나의.
+	Loop (read file contents)	텍스트 파일에 라인 시간 (FileReadLine보다 더 나은 수행) 하나를 검색합니다.
+	Loop (registry)	한 번에 지정된 레지스트리 하위 키를 하나의 항목의 내용을 검색합니다.
+	Menu	, 삭제를 만들고 수정하고 메뉴와 메뉴 항목을 표시합니다. 트레이 아이콘의 툴팁을 변경합니다. 컴파일 된 스크립트의 메인 창을 열 수 있는지 여부를 제어합니다.
+	Mod	모듈. 배당금은 제수로 나눈 나머지를 반환합니다.
+	MouseClickDrag	클릭하고, 지정된 마우스 버튼을 보유하고 대상 좌표로 마우스를 이동 한 후 버튼을 해제합니다.
+	MouseGetPos	현재 마우스 커서의 위치를 선택적으로 어떤 창 및 제어가에 공중 선회를 검색합니다.
+	MouseMove	마우스 커서를 이동합니다.
+	MsgBox	하나 이상의 버튼 (예 : 예 및 아니오 등)이 포함 된 작은 창에 지정된 텍스트가 표시됩니다.
+	NumGet	지정된 주소 + 오프셋 (offset)에 저장된 이진 숫자를 반환합니다.
+	NumPut	지정된 주소의 바이너리 형식의 매장 수 + 오프셋 단지 기록 항목의 오른쪽에 주소를 반환합니다.
+	OnExit	때 자동으로 스크립트가 종료를 실행하는 서브 루틴을 지정합니다.
+	OnMessage	스크립트가 지정된 메시지를받을 때 자동으로 호출하는 함수를 지정합니다.
+	OutputDebug	표시 디버거 (있는 경우)에 문자열을 보냅니다.
+	Pause	스크립트의 현재 스레드를 일시 중지합니다.
+	PixelGetColor	지정된 X에서 픽셀의 색상을 검색, Y 좌표.
+	PixelSearch	지정된 색상의 픽셀의 화면의 영역을 검색합니다.
+	PostMessage	창이나 컨트롤의 메시지 큐에 메시지를 배치합니다.
+	Process	프로세스에서 다음 작업 중 하나를 수행합니다 : 존재하는 경우 확인, 변경, 우선 순위, 그것은을 닫고, 그것은 닫 기다립니다.
+	Progress	작성하거나 진행률 표시 줄을 포함하는 창을 업데이트합니다.
+	Random	의사 난수를 생성합니다.
+	RegExMatch	문자열이 패턴 (정규 표현식)가 포함되어 있는지 여부를 확인합니다.
+	RegExReplace	문자열 안에 패턴 (정규 표현식)의 발생을 대체합니다.
+	RegDelete	삭제 레지스트리 하위 키 또는 값.
+	RegRead	레지스트리에서 값을 읽습니다.
+	RegWrite	레지스트리에 값을 씁니다.
+	RegisterCallback	호출하면, 스크립트의 함수에 대한 호출을 리디렉션하는 기계 코드 주소를 만듭니다.
+	Return	실행 이전에 함수 호출 GOSUB, 핫키 활성화 GroupActivate, 또는 다른 수단을 통해 점프했다하는 서브 루틴에서 반환합니다.
+	Round	N이 생략되거나 0이면, 숫자는 가장 가까운 정수로 반올림됩니다. N이 양수이면, 숫자는 N 소수 자릿수로 반올림됩니다. N은 음수이면 번호는 소수점의 왼쪽에 N 숫자로 반올림됩니다.
+	Run	외부 프로그램을 실행합니다.
+	RunAs	실행 및 RunWait 이후의 모든 용도에 사용할 사용자 자격 증명 집합을 지정합니다. 윈도우 2000/XP 이상이 필요합니다.
+	RunWait	외부 프로그램을 실행하고 완료 될 때까지 기다립니다.
+	Screenshot	지정된 영역의 PNG 스크린 샷을 만듭니다.
+	Send / SendRaw / SendInput / SendPlay	활성 창에 시뮬레이션 키 입력과 마우스 클릭을 보냅니다.
+	SendLevel	인공 키보드와 마우스 이벤트가 핫키 단축 문에 의해 무시되는 컨트롤.
+	SendMessage	창이나 컨트롤에 메시지를 보내고 승인을 기다립니다.
+	SendMode	SendInput을하거나 SendPlay으로 대신 기본값 (sendEvent가)보다 동의어로 전송합니다. 또한하게는 클릭하고 마우스의 움직임과 클릭 / / 지정된 메서드를 사용하여 드래그합니다.
+	SetCapslockState	CAPSLOCK 키의 상태를 설정합니다. 또한 키가 on 또는 off 유지하도록 할 수 있습니다.
+	SetEnv (Var = Value)	변수에 지정된 값을 할당합니다.
+	SetFormat	수학 연산에 의해 생성 된 정수와 부동 소수점 숫자의 형식을 설정합니다.
+	SetKeyDelay	보내기 또는 ControlSend에 의해 전송 된 각 키 입력 후 발생하는 지연을 설정합니다.
+	SetMouseDelay	각 마우스 움직임이나 클릭 한 후 발생 지연을 설정합니다.
+	SetNumlockState	숫자 잠금 키의 상태를 설정합니다. 또한 키가 on 또는 off 유지하도록 할 수 있습니다.
+	SetScrollLockState	ScrollLock이 키의 상태를 설정합니다. 또한 키가 on 또는 off 유지하도록 할 수 있습니다.
+	SetRegView	32 비트 스크립트에서 레지스트리 명령은 64 비트 레지스트리보기 및 그 반대에 액세스 할 수 있습니다.
+	Shutdown	, 종료 다시 시작하거나 시스템을 로그 오프합니다.
+	Sin	수의 삼각 사인을 반환합니다.
+	Sleep	계속하기 전에 지정된 시간을 기다립니다.
+	Sort	알파벳, 숫자, 또는 임의의 순서 (선택적으로 중복 제거)에서 변수의 내용을 정렬합니다.
+	SoundBeep	PC 스피커에서 톤을 방출한다.
+	SoundGet	사운드 장치 (마스터 음소거, 마스터 볼륨, 등)의 다양한 설정을 검색
+	SoundGetWaveVolume	사운드 장치에서 파 출력 볼륨을 검색합니다.
+	SoundPlay	사운드, 비디오 또는 기타 지원되는 파일 형식을 재생합니다.
+	SoundSet	변경 사운드 장치의 다양한 설정 (마스터 음소거, 마스터 볼륨 등)
+	SoundSetWaveVolume	사운드 장치에 대한 파 출력 볼륨을 변경합니다.
+	SplashImage	작성하거나 JPG, GIF 또는 BMP 이미지가 포함 된 창을 업데이트합니다.
+	SplashTextOn	사용자 정의 텍스트 팝업 창을 만듭니다.
+	SplashTextOff	위의 창을 닫습니다.
+	SplitPath	이름, 디렉토리, 확장 및 드라이브에 파일 이름 또는 URL을 구분합니다.
+	Sqrt	숫자의 제곱근을 반환합니다.
+	StatusBarGetText	표준 상태 표시 줄 컨트롤에서 텍스트를 검색합니다.
+	StatusBarWait	윈도우의 상태 표시 줄에 지정된 문자열을 포함 할 때까지 기다립니다.
+	StrPut / StrGet	코드 페이지 사이를 변환 옵션 메모리 주소, 또는에서 문자열을 복사합니다.
+	StringCaseSense	문자열 비교가 있는지 대소 문자를 구분합니다 (기본값은 "대소 문자를 구분하지 않습니다"입니다.)에게 결정
+	StringGetPos / InStr	문자열 내에서 지정된 문자열의 위치를 검색합니다.
+	StringLeft	문자열의 왼쪽의 문자 수를 취득합니다.
+	StringLen / StrLen	문자열에있는 문자의 수를 검색합니다.
+	StringLower	문자열을 소문자로 변환합니다.
+	StringMid / SubStr	문자열의 지정된 위치에서 하나 이상의 문자를 검색합니다.
+	StringReplace	새로운 문자열로 지정된 문자열을 대체합니다.
+	StringRight	문자열의 오른쪽의 문자 수를 취득합니다.
+	StringSplit / StrSplit	지정된 구분 기호를 사용하여 문자열의 배열로 문자열을 분리합니다.
+	StringTrimLeft	문자열의 왼쪽의 문자 수를 제거합니다.
+	StringTrimRight	문자열의 오른쪽의 문자 수를 제거합니다.
+	StringUpper	문자열을 대문자로 변환합니다.
+	Suspend	비활성화하거나 전체 또는 선택한 단축키와 단축 문을 수 있습니다.
+	SysGet	화면 해상도, 다중 모니터 정보 시스템 개체의 크기 및 기타 시스템 속성을 검색합니다.
+	Tan	수의 삼각 탄젠트 값을 반환합니다.
+	ToolTip	화면의 아무 곳에서 항상 온 - 상단 창을 만듭니다.
+	Transform	기타 수학 함수, 비트 연산, 그리고 ASCII / 유니 코드 변환 등의 작업을 수행합니다.
+	TrayTip	트레이 아이콘 근처에 풍선 메시지 창을 만듭니다. 윈도우 2000/XP 이상이 필요합니다.
+	Trim / LTrim / RTrim	시작 및 / 또는 문자열의 끝에서 손질 특정 문자를.
+	Try	런타임 오류 던져 명령에 의해 throw 된 예외에 대한 감시는 하나 이상의 문 (명령 또는 식).
+	Until	루프 또는 루프의 지속에 조건을 적용합니다.
+	UrlDownloadToFile	인터넷에서 파일을 다운로드합니다.
+	VarSetCapacity	변수의 보유 용량을 확대하거나 메모리를 해제합니다. 일반적으로, 이것은 단지 등 DllCall 같은 특별한 상황을 위해 필요합니다.
+	WinActivate	지정된 창 (그것이 최초한다) 활성화합니다.
+	WinActivateBottom	그것은 맨 아래 (가장 최근에 활성화) 매칭 창이 아닌 최상위를 활성화하는 것을 제외 WinActivate과 동일합니다.
+	WinActive	는 지정된 기준과 일치하면 활성 창의 고유 ID (HWND)을 반환합니다.
+	WinClose	지정된 창을 닫습니다.
+	WinExist	검사를 지정된 윈도우가 존재합니다.
+	WinGetActiveStats	한 명령 WinGetActiveTitle 및 WinGetPos의 기능을 결합합니다.
+	WinGetActiveTitle	활성 창의 제목을 검색합니다.
+	WinGetClass	지정된 윈도우의 클래스 이름을 검색합니다.
+	WinGet	지정된 윈도우의 고유 ID, 프로세스 ID, 프로세스 이름, 또는 해당 컨트롤의 목록을 검색합니다. 또한 지정된 기준과 일치하는 모든 창의 목록을 검색 할 수 있습니다.
+	WinGetPos	지정된 윈도우의 위치와 크기를 검색합니다.
+	WinGetText	지정된 창에서 텍스트를 검색합니다.
+	WinGetTitle	지정된 윈도우의 제목을 검색합니다.
+	WinHide	지정된 창을 숨 깁니다.
+	WinKill	지정된 창을 강제로 닫습니다.
+	WinMaximize	최대 크기로 지정 창을 확대합니다.
+	WinMenuSelectItem	지정된 윈도우의 메뉴 표시 줄에서 메뉴 항목을 호출합니다.
+	WinMinimize	작업 표시 줄 단추에 지정된 창을 축소합니다.
+	WinMinimizeAll	모든 창을 최소화합니다.
+	WinMinimizeAllUndo	이전 WinMinimizeAll의 효과를 취소합니다.
+	WinMove	변경 위치 및 / 또는 지정된 윈도우의 크기입니다.
+	WinRestore	Unminimizes 또는 최소화 또는 최대화 된 경우 지정된 창을 unmaximizes.
+	WinSet	이러한 투명성 "항상 위에"로 지정 창 변경의 다양한 있습니다.
+	WinSetTitle	지정된 윈도우의 제목을 변경합니다.
+	WinShow	지정된 창을 보이게합니다.
+	WinWait	지정한 윈도우가 존재 할 때까지 기다립니다.
+	WinWaitActive	지정된 윈도우가 활성화 될 때까지 기다립니다.
+	WinWaitClose	지정한 윈도우가 존재하지 않을 때까지 기다립니다.
+	WinWaitNotActive	지정된 윈도우가 활성화되지 때까지 기다립니다.
+	)	...
 return		
