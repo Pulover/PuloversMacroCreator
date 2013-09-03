@@ -82,15 +82,16 @@
 	r_lang002 =	&Aktivácia makrá
 	r_lang003 =	&Prehrať aktuálne makro
 	r_lang004 =	&Časový spínač
-	r_lang005 =	P&ridať makro
-	r_lang006 =	Za&vrieť Makro
-	r_lang007 =	Duplicitné makro
-	r_lang008 =	&Dovoz Makro
-	r_lang009 =	Ulo&žiť aktuálne makro
-	r_lang010 =	&Kontextová Klávesové skratky
-	r_lang011 =	Pr&ehrávanie z vybraného riadku
-	r_lang012 =	&Hrať, kým vybraný riadok
-	r_lang013 =	Prehra&ť vybrané riadky
+	r_lang005 =	P&rehrávanie z vybraného riadku
+	r_lang006 =	&Hrať, kým vybraný riadok
+	r_lang007 =	Pr&ehrať vybrané riadky
+	r_lang008 =	&Kontextová Klávesové skratky
+	r_lang009 =	Pr&idať makro
+	r_lang010 =	Za&vrieť Makro
+	r_lang011 =	&Duplicitné makro
+	r_lang012 =	&Úprava Makra
+	r_lang013 =	D&ovoz Makro
+	r_lang014 =	&Uložiť aktuálne makro
 		
 ; View Sub Menu		
 	v_lang001 =	&Always On Top

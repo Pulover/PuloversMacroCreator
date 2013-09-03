@@ -82,15 +82,16 @@
 	r_lang002 =	&Aktywuj Makra
 	r_lang003 =	&Zagraj w bieżącym makrze
 	r_lang004 =	&Regulator czasowy
-	r_lang005 =	&Dodaj Macro
-	r_lang006 =	Zam&knij makro
-	r_lang007 =	Powiel makro
-	r_lang008 =	&Import Makro
-	r_lang009 =	Z&apisz bieżące makro
-	r_lang010 =	K&ontekstowa Hotkeys
-	r_lang011 =	Za&graj z wybranego wiersza
-	r_lang012 =	Gra&ć do wybranego wiersza
-	r_lang013 =	Od&twórz wybrane wiersze
+	r_lang005 =	Za&graj z wybranego wiersza
+	r_lang006 =	Gra&ć do wybranego wiersza
+	r_lang007 =	&Odtwórz wybrane wiersze
+	r_lang008 =	&Kontekstowa Hotkeys
+	r_lang009 =	&Dodaj Macro
+	r_lang010 =	Zamk&nij makro
+	r_lang011 =	&Powiel makro
+	r_lang012 =	&Edytowanie Makra
+	r_lang013 =	&Import Makro
+	r_lang014 =	Zapi&sz bieżące makro
 		
 ; View Sub Menu		
 	v_lang001 =	&Zawsze na wierzchu

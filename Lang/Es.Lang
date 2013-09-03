@@ -82,15 +82,16 @@
 	r_lang002 =	&Activar Macros
 	r_lang003 =	&Reproducir macro actual
 	r_lang004 =	&Timer
-	r_lang005 =	A&ñadir Macro
-	r_lang006 =	&Cerrar Macro
-	r_lang007 =	Duplicar macro
-	r_lang008 =	&Importar Macro
-	r_lang009 =	Gua&rdar macro actual
-	r_lang010 =	T&eclas de acceso directo sensibles al contexto
-	r_lang011 =	Re&producir desde la fila seleccionada
-	r_lang012 =	Repr&oducir hasta la fila seleccionada
-	r_lang013 =	Repro&ducir las filas seleccionadas
+	r_lang005 =	R&eproducir desde la fila seleccionada
+	r_lang006 =	Re&producir hasta la fila seleccionada
+	r_lang007 =	Repr&oducir las filas seleccionadas
+	r_lang008 =	Te&clas de acceso directo sensibles al contexto
+	r_lang009 =	A&ñadir Macro
+	r_lang010 =	Cerrar &Macro
+	r_lang011 =	&Duplicar macro
+	r_lang012 =	Ed&itar Macros
+	r_lang013 =	Importar Macro
+	r_lang014 =	G&uardar macro actual
 		
 ; View Sub Menu		
 	v_lang001 =	&Siempre visible

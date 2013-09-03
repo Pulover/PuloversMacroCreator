@@ -82,15 +82,16 @@
 	r_lang002 =	&Aktivera makron
 	r_lang003 =	S&pela Aktuell Makro
 	r_lang004 =	&Timer
-	r_lang005 =	&Lägg Makro
-	r_lang006 =	St&äng Makro
-	r_lang007 =	Duplicera makro
-	r_lang008 =	&Importera Makro
-	r_lang009 =	Sp&ara aktuell Makro
-	r_lang010 =	Sa&mmanhangsberoende Snabbtangenter
-	r_lang011 =	Sp&ela upp från vald rad
-	r_lang012 =	Spela t&ills utvalda raden
-	r_lang013 =	Spela ma&rkerade rader
+	r_lang005 =	Sp&ela upp från vald rad
+	r_lang006 =	Spe&la tills utvalda raden
+	r_lang007 =	Spela &markerade rader
+	r_lang008 =	Samma&nhangsberoende Snabbtangenter
+	r_lang009 =	L&ägg Makro
+	r_lang010 =	Stän&g Makro
+	r_lang011 =	&Duplicera makro
+	r_lang012 =	&Redigera Makron
+	r_lang013 =	&Importera Makro
+	r_lang014 =	Spara a&ktuell Makro
 		
 ; View Sub Menu		
 	v_lang001 =	&Alltid överst

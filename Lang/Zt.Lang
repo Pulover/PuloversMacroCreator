@@ -82,15 +82,16 @@
 	r_lang002 =	激活宏
 	r_lang003 =	播放當前宏觀經濟
 	r_lang004 =	定時器
-	r_lang005 =	添加宏
-	r_lang006 =	關閉宏
-	r_lang007 =	重複宏
-	r_lang008 =	進口宏
-	r_lang009 =	保存當前宏觀經濟
-	r_lang010 =	上下文敏感的熱鍵
-	r_lang011 =	播放選中的行
-	r_lang012 =	玩直到選中的行
-	r_lang013 =	播放選定的行
+	r_lang005 =	播放選中的行
+	r_lang006 =	玩直到選中的行
+	r_lang007 =	播放選定的行
+	r_lang008 =	上下文敏感的熱鍵
+	r_lang009 =	添加宏
+	r_lang010 =	關閉宏
+	r_lang011 =	重複宏
+	r_lang012 =	編輯宏
+	r_lang013 =	進口宏
+	r_lang014 =	保存當前宏觀經濟
 		
 ; View Sub Menu		
 	v_lang001 =	總在最前

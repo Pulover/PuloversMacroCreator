@@ -82,15 +82,16 @@
 	r_lang002 =	&Vključite Makri
 	r_lang003 =	&Igraj trenutni makro
 	r_lang004 =	&Timer
-	r_lang005 =	&Dodaj makro
-	r_lang006 =	&Zapri Makro
-	r_lang007 =	Dvojnik makro
-	r_lang008 =	&Uvoz Makro
-	r_lang009 =	S&hrani trenutni makro
-	r_lang010 =	&Konteksta Bližnjice
-	r_lang011 =	&Predvajaj izbrano vrstico
-	r_lang012 =	I&grajo dokler izbrano vrstico
-	r_lang013 =	P&redvajanje izbrane vrstice
+	r_lang005 =	&Predvajaj izbrano vrstico
+	r_lang006 =	I&grajo dokler izbrano vrstico
+	r_lang007 =	P&redvajanje izbrane vrstice
+	r_lang008 =	&Konteksta Bližnjice
+	r_lang009 =	&Dodaj makro
+	r_lang010 =	&Zapri Makro
+	r_lang011 =	Dv&ojnik makro
+	r_lang012 =	&Uredi Makri
+	r_lang013 =	Uvoz &Makro
+	r_lang014 =	S&hrani trenutni makro
 		
 ; View Sub Menu		
 	v_lang001 =	&Always On Top

@@ -78,19 +78,20 @@
 	e_Lang015 =	E&dit Warna Mark
 		
 ; Macro Sub Menu		
-	r_lang001 =	Makro Rekod
-	r_lang002 =	Aktifkan Makro
-	r_lang003 =	Main Makro Semasa
-	r_lang004 =	Pemasa
-	r_lang005 =	Tambah Makro
-	r_lang006 =	Tutup Makro
-	r_lang007 =	Gandakan Makro
-	r_lang008 =	Import Makro
-	r_lang009 =	Simpan Makro Semasa
-	r_lang010 =	Konteks hotkeys Sensitif
-	r_lang011 =	Main dari Row Terpilih
-	r_lang012 =	Bermain sehingga Row Terpilih
-	r_lang013 =	Main Baris Terpilih
+	r_lang001 =	&Makro Rekod
+	r_lang002 =	&Aktifkan Makro
+	r_lang003 =	Ma&in Makro Semasa
+	r_lang004 =	&Pemasa
+	r_lang005 =	Mai&n dari Row Terpilih
+	r_lang006 =	&Bermain sehingga Row Terpilih
+	r_lang007 =	Main Ba&ris Terpilih
+	r_lang008 =	&Konteks hotkeys Sensitif
+	r_lang009 =	&Tambah Makro
+	r_lang010 =	T&utup Makro
+	r_lang011 =	&Gandakan Makro
+	r_lang012 =	&Edit Makro
+	r_lang013 =	Imp&ort Makro
+	r_lang014 =	&Simpan Makro Semasa
 		
 ; View Sub Menu		
 	v_lang001 =	&Sentiasa Pada Top

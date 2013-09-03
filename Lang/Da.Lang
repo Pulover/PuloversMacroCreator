@@ -82,15 +82,16 @@
 	r_lang002 =	&Aktiver makroer
 	r_lang003 =	A&fspil aktuelle Macro
 	r_lang004 =	&Timer
-	r_lang005 =	Ti&lføj Makro
-	r_lang006 =	L&uk Makro
-	r_lang007 =	Dublet Makro
-	r_lang008 =	&Import Macro
-	r_lang009 =	Ge&m nuværende Macro
-	r_lang010 =	&Kontekstafhængig genvejstaster
-	r_lang011 =	Af&spil fra valgte række
-	r_lang012 =	S&pille, indtil valgte række
-	r_lang013 =	Spil &valgte rækker
+	r_lang005 =	Af&spil fra valgte række
+	r_lang006 =	S&pille, indtil valgte række
+	r_lang007 =	Spi&l valgte rækker
+	r_lang008 =	&Kontekstafhængig genvejstaster
+	r_lang009 =	Tilf&øj Makro
+	r_lang010 =	L&uk Makro
+	r_lang011 =	&Dublet Makro
+	r_lang012 =	&Rediger Makroer
+	r_lang013 =	I&mport Macro
+	r_lang014 =	&Gem nuværende Macro
 		
 ; View Sub Menu		
 	v_lang001 =	&Altid på toppen

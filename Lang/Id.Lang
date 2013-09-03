@@ -82,15 +82,16 @@
 	r_lang002 =	&Aktifkan Macro
 	r_lang003 =	&Bermain Makro sekarang
 	r_lang004 =	&Timer
-	r_lang005 =	Ta&mbahkan Makro
-	r_lang006 =	T&utup Makro
-	r_lang007 =	Gandakan Makro
-	r_lang008 =	&Impor Makro
-	r_lang009 =	Sim&pan Makro sekarang
-	r_lang010 =	&Konteks Hotkeys Sensitif
-	r_lang011 =	B&ermain dari Dipilih Row
-	r_lang012 =	Berma&in sampai Dipilih Row
-	r_lang013 =	Bermai&n Baris Terpilih
+	r_lang005 =	B&ermain dari Dipilih Row
+	r_lang006 =	Ber&main sampai Dipilih Row
+	r_lang007 =	Berma&in Baris Terpilih
+	r_lang008 =	&Konteks Hotkeys Sensitif
+	r_lang009 =	Tamba&hkan Makro
+	r_lang010 =	T&utup Makro
+	r_lang011 =	&Gandakan Makro
+	r_lang012 =	Me&ngedit Macro
+	r_lang013 =	Im&por Makro
+	r_lang014 =	&Simpan Makro sekarang
 		
 ; View Sub Menu		
 	v_lang001 =	&Always On Top

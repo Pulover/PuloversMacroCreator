@@ -82,15 +82,16 @@
 	r_lang002 =	激活宏
 	r_lang003 =	播放当前宏观经济
 	r_lang004 =	定时器
-	r_lang005 =	添加宏
-	r_lang006 =	关闭宏
-	r_lang007 =	重复宏
-	r_lang008 =	导入宏
-	r_lang009 =	保存当前的宏
-	r_lang010 =	上下文相关的热键
-	r_lang011 =	播放选定的行
-	r_lang012 =	播放到选定的行
-	r_lang013 =	播放选定的行
+	r_lang005 =	播放选定的行
+	r_lang006 =	播放到选定的行
+	r_lang007 =	播放选定的行
+	r_lang008 =	上下文相关的热键
+	r_lang009 =	添加宏
+	r_lang010 =	关闭宏
+	r_lang011 =	重复宏
+	r_lang012 =	编辑宏
+	r_lang013 =	导入宏
+	r_lang014 =	保存当前的宏
 		
 ; View Sub Menu		
 	v_lang001 =	总在最前

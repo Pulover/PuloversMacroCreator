@@ -82,15 +82,16 @@
 	r_lang002 =	M&akrolar etkinleştirin
 	r_lang003 =	&Güncel Makro oyna
 	r_lang004 =	&Kronometre
-	r_lang005 =	Mak&ro Ekle
-	r_lang006 =	Ka&pat Makro
-	r_lang007 =	Makro çoğaltın
-	r_lang008 =	&İthalat Makro
-	r_lang009 =	&Güncel Makro Kaydet
-	r_lang010 =	&Bağlam Duyarlı Hotkeys
-	r_lang011 =	&Seçilen satırdaki oyna
-	r_lang012 =	S&eçili satır kadar oyna
-	r_lang013 =	Se&çilen Satırlar oyna
+	r_lang005 =	&Seçilen satırdaki oyna
+	r_lang006 =	S&eçili satır kadar oyna
+	r_lang007 =	Se&çilen Satırlar oyna
+	r_lang008 =	&Bağlam Duyarlı Hotkeys
+	r_lang009 =	Mak&ro Ekle
+	r_lang010 =	Ka&pat Makro
+	r_lang011 =	Makr&o çoğaltın
+	r_lang012 =	Makro&lar Düzenle
+	r_lang013 =	&İthalat Makro
+	r_lang014 =	G&üncel Makro Kaydet
 		
 ; View Sub Menu		
 	v_lang001 =	&Her zaman üstte

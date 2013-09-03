@@ -2673,6 +2673,7 @@ return
 
 HelpAbout:
 Gui 26:+LastFoundExist
+Gui, 1:+Disabled
 IfWinExist
     GoSub, TipClose
 OsBit := (A_PtrSize = 8) ? "x64" : "x86"
@@ -7577,6 +7578,7 @@ return
 TipClose:
 Gui, 26:Submit
 Gui, 26:Destroy
+Gui, 1:-Disabled
 WinActivate,,, ahk_id %PMCWinID%
 return
 
@@ -7590,10 +7592,12 @@ TipClose3:
 NextTip++
 Gui, 26:Submit
 Gui, 26:Destroy
+Gui, 1:-Disabled
 return
 
 Welcome:
 Gui, 31:-MinimizeBox +owner1
+Gui, 1:+Disabled
 Gui, 31:Font, Bold s10, Tahoma
 Gui, 31:Add, Text, w300 Center, %d_Lang075%
 Gui, 31:Font
@@ -7610,6 +7614,7 @@ return
 WelcClose:
 Gui, 31:Submit
 Gui, 31:Destroy
+Gui, 1:-Disabled
 If AutoUpdate
 	Menu, HelpMenu, Check, %h_Lang004%
 Else
@@ -7630,6 +7635,7 @@ IfWinExist
 If (NextTip > MaxTips)
 	NextTip := 1
 Gui, 26:-MinimizeBox +HwndStartTipID +owner1
+Gui, 1:+Disabled
 If (A_ThisLabel <> "CmdFind")
 {
 	Gui, 26:Color, FFFFFF
@@ -7661,7 +7667,7 @@ If (A_ThisLabel <> "CmdFind")
 }
 Else
 {
-	Gui, 26:+E0x00000400 +HwndStartTipID
+	Gui, 26:+E0x00000400 +HwndStartTipID +owner1
 	Gui, 26:Add, Groupbox, Section yp+5 -Wrap W450 H190, %d_Lang074%:
 	Gui, 26:Add, Edit, -Wrap ys+15 xs+10 W430 r1 vFindCmd gFindCmd
 	Gui, 26:Add, ListView, r8 y+0 W430 hwndhFindRes vFindResult gFindResult AltSubmit -Multi -Hdr, Command|Description
@@ -7710,15 +7716,6 @@ LV_Delete()
 For each, Line in FoundResults
 	LV_Add("", Line.Cmd, Line.Path)
 LV_ModifyCol()
-; GuiControl, 26:, FindResult, |%FoundResults%
-; For each, Line in Cmd_Tips
-; {
-	; If InStr(Line.Desc, FindCmd)
-	; {
-		; If !InStr(FoundResults, Line.Cmd "|")
-			; GuiControl, 26:, FindResult, % Find_Command(Line.Cmd)
-	; }
-; }
 return
 
 NextResult:
@@ -11668,18 +11665,19 @@ Menu, MacroMenu, Add, %r_Lang002%`t%_s%Ctrl+Enter, PlayStart
 Menu, MacroMenu, Add, %r_Lang003%`t%_s%Ctrl+Shift+Enter, TestRun
 Menu, MacroMenu, Add, %r_Lang004%`t%_s%Ctrl+Shift+T, RunTimer
 Menu, MacroMenu, Add
-Menu, MacroMenu, Add, %r_lang011%`t%_s%Alt+1, PlayFrom
-Menu, MacroMenu, Add, %r_lang012%`t%_s%Alt+2, PlayTo
-Menu, MacroMenu, Add, %r_lang013%`t%_s%Alt+3, PlaySel
+Menu, MacroMenu, Add, %r_Lang005%`t%_s%Alt+1, PlayFrom
+Menu, MacroMenu, Add, %r_Lang006%`t%_s%Alt+2, PlayTo
+Menu, MacroMenu, Add, %r_Lang007%`t%_s%Alt+3, PlaySel
 Menu, MacroMenu, Add
-Menu, MacroMenu, Add, %r_lang010%`t%_s%Ctrl+H, SetWin
+Menu, MacroMenu, Add, %r_Lang008%`t%_s%Ctrl+H, SetWin
 Menu, MacroMenu, Add
-Menu, MacroMenu, Add, %r_Lang005%`t%_s%Ctrl+T, TabPlus
-Menu, MacroMenu, Add, %r_Lang006%`t%_s%Ctrl+W, TabClose
-Menu, MacroMenu, Add, %r_Lang007%`t%_s%Ctrl+Shift+D, DuplicateList
+Menu, MacroMenu, Add, %r_Lang009%`t%_s%Ctrl+T, TabPlus
+Menu, MacroMenu, Add, %r_Lang010%`t%_s%Ctrl+W, TabClose
+Menu, MacroMenu, Add, %r_Lang011%`t%_s%Ctrl+Shift+D, DuplicateList
+Menu, MacroMenu, Add, %r_Lang012%`t%_s%Ctrl+Shift+E, EditMacros
 Menu, MacroMenu, Add
-Menu, MacroMenu, Add, %r_Lang008%`t%_s%Ctrl+I, Import
-Menu, MacroMenu, Add, %r_Lang009%`t%_s%Ctrl+Alt+S, SaveCurrentList
+Menu, MacroMenu, Add, %r_Lang013%`t%_s%Ctrl+I, Import
+Menu, MacroMenu, Add, %r_Lang014%`t%_s%Ctrl+Alt+S, SaveCurrentList
 
 Menu, CustomMenu, Add, %v_lang010%, TbCustomize
 Menu, CustomMenu, Add, %v_lang011%, TbCustomize
@@ -11870,13 +11868,14 @@ Menu, EditMenu, Icon, %e_Lang012%`t%_s%Ctrl+PgDn, %ResDllPath%, 40
 Menu, MacroMenu, Icon, %r_Lang001%`t%_s%Ctrl+R, %ResDllPath%, 55
 Menu, MacroMenu, Icon, %r_Lang002%`t%_s%Ctrl+Enter, %ResDllPath%, 47
 Menu, MacroMenu, Icon, %r_Lang003%`t%_s%Ctrl+Shift+Enter, %ResDllPath%, 49
-Menu, MacroMenu, Icon, %r_lang010%`t%_s%Ctrl+H, %ResDllPath%, 48
 Menu, MacroMenu, Icon, %r_Lang004%`t%_s%Ctrl+Shift+T, %ResDllPath%, 72
-Menu, MacroMenu, Icon, %r_Lang005%`t%_s%Ctrl+T, %ResDllPath%, 67
-Menu, MacroMenu, Icon, %r_Lang006%`t%_s%Ctrl+W, %ResDllPath%, 69
-Menu, MacroMenu, Icon, %r_Lang007%`t%_s%Ctrl+Shift+D, %ResDllPath%, 70
-Menu, MacroMenu, Icon, %r_Lang008%`t%_s%Ctrl+I, %ResDllPath%, 29
-Menu, MacroMenu, Icon, %r_Lang009%`t%_s%Ctrl+Alt+S, %ResDllPath%, 68
+Menu, MacroMenu, Icon, %r_lang008%`t%_s%Ctrl+H, %ResDllPath%, 48
+Menu, MacroMenu, Icon, %r_Lang009%`t%_s%Ctrl+T, %ResDllPath%, 67
+Menu, MacroMenu, Icon, %r_Lang010%`t%_s%Ctrl+W, %ResDllPath%, 69
+Menu, MacroMenu, Icon, %r_Lang011%`t%_s%Ctrl+Shift+D, %ResDllPath%, 70
+Menu, MacroMenu, Icon, %r_Lang012%`t%_s%Ctrl+Shift+E, %ResDllPath%, 100
+Menu, MacroMenu, Icon, %r_Lang013%`t%_s%Ctrl+I, %ResDllPath%, 29
+Menu, MacroMenu, Icon, %r_Lang014%`t%_s%Ctrl+Alt+S, %ResDllPath%, 68
 Menu, OptionsMenu, Icon, %o_Lang001%`t%_s%Ctrl+G, %ResDllPath%, 44
 Menu, HelpMenu, Icon, %m_Lang010%`t%_s%F1, %ResDllPath%, 24
 Menu, DonationMenu, Icon, %p_Lang001%, %ResDllPath%, 12
@@ -12219,7 +12218,7 @@ COMInterface
 ,	Types_Goto := "
 (
 Mouse
-Pause
+Sleep
 MsgBox
 ComLoop
 Image

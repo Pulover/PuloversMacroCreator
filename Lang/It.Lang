@@ -82,15 +82,16 @@
 	r_lang002 =	&Attiva macro
 	r_lang003 =	&Gioca Macro corrente
 	r_lang004 =	&Timer
-	r_lang005 =	Agg&iungi Macro
-	r_lang006 =	&Chiudere Macro
-	r_lang007 =	Duplica macro
-	r_lang008 =	&Importa Macro
-	r_lang009 =	Sal&va Macro corrente
-	r_lang010 =	Ta&sti di scelta rapida sensibili al contesto
-	r_lang011 =	Gi&oca da riga selezionata
-	r_lang012 =	Gioca &fino a riga selezionata
-	r_lang013 =	Gioca rig&he selezionate
+	r_lang005 =	G&ioca da riga selezionata
+	r_lang006 =	Gi&oca fino a riga selezionata
+	r_lang007 =	Gio&ca righe selezionate
+	r_lang008 =	Ta&sti di scelta rapida sensibili al contesto
+	r_lang009 =	Aggi&ungi Macro
+	r_lang010 =	C&hiudere Macro
+	r_lang011 =	&Duplica macro
+	r_lang012 =	&Modifica Macro
+	r_lang013 =	Im&porta Macro
+	r_lang014 =	Sa&lva Macro corrente
 		
 ; View Sub Menu		
 	v_lang001 =	&Sempre in primo piano

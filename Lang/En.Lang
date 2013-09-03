@@ -82,15 +82,16 @@
 	r_lang002 =	&Activate Macros
 	r_lang003 =	&Play Current Macro
 	r_lang004 =	&Timer
-	r_lang005 =	A&dd Macro
-	r_lang006 =	&Close Macro
-	r_lang007 =	Duplicate Macro
-	r_lang008 =	&Import Macro
-	r_lang009 =	Save &Current Macro
-	r_lang010 =	Context Sensitive &Hotkeys
-	r_lang011 =	Play &from Selected Row
-	r_lang012 =	Play &until Selected Row
-	r_lang013 =	Play &Selected Rows
+	r_lang005 =	P&lay from Selected Row
+	r_lang006 =	Pla&y until Selected Row
+	r_lang007 =	Play &Selected Rows
+	r_lang008 =	&Context Sensitive Hotkeys
+	r_lang009 =	A&dd Macro
+	r_lang010 =	Cl&ose Macro
+	r_lang011 =	D&uplicate Macro
+	r_lang012 =	&Edit Macros
+	r_lang013 =	&Import Macro
+	r_lang014 =	Sa&ve Current Macro
 		
 ; View Sub Menu		
 	v_lang001 =	&Always On Top

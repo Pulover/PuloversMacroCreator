@@ -82,15 +82,16 @@
 	r_lang002 =	&Aktivirajte Makronaredbe
 	r_lang003 =	&Igrajte Trenutna Macro
 	r_lang004 =	&Timer
-	r_lang005 =	&Dodaj Macro
-	r_lang006 =	&Makro Zatvori
-	r_lang007 =	Dvostruki Macro
-	r_lang008 =	&Uvoz Makro
-	r_lang009 =	Sp&remi Trenutni Macro
-	r_lang010 =	&Kontekstna Hotkeys
-	r_lang011 =	I&grati na odabrani redak
-	r_lang012 =	Ig&raj dok odabrani redak
-	r_lang013 =	Igra&jte odabrane retke
+	r_lang005 =	I&grati na odabrani redak
+	r_lang006 =	Ig&raj dok odabrani redak
+	r_lang007 =	Igra&jte odabrane retke
+	r_lang008 =	&Kontekstna Hotkeys
+	r_lang009 =	&Dodaj Macro
+	r_lang010 =	&Makro Zatvori
+	r_lang011 =	D&vostruki Macro
+	r_lang012 =	&Uredi Makronaredbe
+	r_lang013 =	Uv&oz Makro
+	r_lang014 =	S&premi Trenutni Macro
 		
 ; View Sub Menu		
 	v_lang001 =	&Uvijek na vrhu
