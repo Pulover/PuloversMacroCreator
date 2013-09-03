@@ -231,9 +231,10 @@
 	w_Lang088 =	コメントを編集（Ctrl+L）を
 	w_Lang089 =	編集色マーク（Ctrl+M）を
 	w_Lang090 =	カスタマイズ
-	w_Lang091 =	（Ctrlキー+ Shiftキー+ F）コマンドを見つける
+	w_Lang091 =	コマンドを見つける（Ctrlキー+ Shiftキー+ F）
 	w_Lang092 =	編集（Enter）
 	w_Lang093 =	隠す
+	w_Lang094 =	マクロを編集する（Ctrlキー+ Shiftキー+ E）
 		
 ; Command Windows		
 	c_Lang001 =	マウス
@@ -1299,5 +1300,5 @@
 	WinWaitActive	指定したウィンドウがアクティブになるまで待機します。
 	WinWaitClose	指定したウィンドウが存在しないまで待機。
 	WinWaitNotActive	指定したウィンドウがアクティブでなくなるまで待機します。
-	)	...
+	)	
 return		

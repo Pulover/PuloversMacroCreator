@@ -234,6 +234,7 @@
 	w_Lang091 =	Nájsť príkaz (Ctrl+Shift+F)
 	w_Lang092 =	Upraviť (Enter)
 	w_Lang093 =	Schovať
+	w_Lang094 =	Úprava Makra (Ctrl+Shift+E)
 		
 ; Command Windows		
 	c_Lang001 =	Myš
@@ -1299,5 +1300,5 @@
 	WinWaitActive	Čaká zadaný okno je aktívny.
 	WinWaitClose	Čaká zadaný okno neexistuje.
 	WinWaitNotActive	Čaká zadaný okno nie je aktívne.
-	)	...
+	)	
 return		

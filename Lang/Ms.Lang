@@ -234,6 +234,7 @@
 	w_Lang091 =	Cari arahan (Ctrl+Shift+F)
 	w_Lang092 =	Edit (Masukkan)
 	w_Lang093 =	Menyembunyikan
+	w_Lang094 =	Edit Makro (Ctrl+Shift+E)
 		
 ; Command Windows		
 	c_Lang001 =	Mouse
@@ -1299,5 +1300,5 @@
 	WinWaitActive	Menunggu sehingga tingkap yang dinyatakan adalah aktif.
 	WinWaitClose	Menunggu sehingga tingkap yang dinyatakan tidak wujud.
 	WinWaitNotActive	Menunggu sehingga tingkap yang dinyatakan tidak aktif.
-	)	...
+	)	
 return		

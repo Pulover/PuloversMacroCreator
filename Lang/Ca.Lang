@@ -234,6 +234,7 @@
 	w_Lang091 =	Trobar una ordre (Ctrl+Shift+F)
 	w_Lang092 =	Edita (Enter)
 	w_Lang093 =	Amagar
+	w_Lang094 =	Edita Macros (Ctrl+Shift+E)
 		
 ; Command Windows		
 	c_Lang001 =	Ratolí
@@ -1299,5 +1300,5 @@
 	WinWaitActive	Espera que la finestra especificada està activa.
 	WinWaitClose	Espera que no existeix la finestra especificada.
 	WinWaitNotActive	Espera fins que la finestra especificada no està actiu.
-	)	...
+	)	
 return		

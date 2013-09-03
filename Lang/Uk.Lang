@@ -234,6 +234,7 @@
 	w_Lang091 =	Знайти команду (Ctrl+Shift+F)
 	w_Lang092 =	Редагувати (Enter)
 	w_Lang093 =	Приховувати
+	w_Lang094 =	Редагувати Макроси (Ctrl+Shift+E)
 		
 ; Command Windows		
 	c_Lang001 =	Миша
@@ -1299,5 +1300,5 @@
 	WinWaitActive	Чекає, поки зазначена вікно не є активним.
 	WinWaitClose	Чекає, поки зазначена вікно не існує.
 	WinWaitNotActive	Чекає, поки зазначена вікно не є активним.
-	)	...
+	)	
 return		

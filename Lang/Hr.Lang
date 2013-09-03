@@ -234,6 +234,7 @@
 	w_Lang091 =	Pronađite naredbu (Ctrl+Shift+C)
 	w_Lang092 =	Uredi (Enter)
 	w_Lang093 =	Sakriti
+	w_Lang094 =	Uredi Makronaredbe (Ctrl+Shift+E)
 		
 ; Command Windows		
 	c_Lang001 =	Miš
@@ -1299,5 +1300,5 @@
 	WinWaitActive	Waits sve navedeno prozor aktivan.
 	WinWaitClose	Waits sve navedeno prozor ne postoji.
 	WinWaitNotActive	Waits sve navedeno prozor nije aktivna.
-	)	...
+	)	
 return		

@@ -234,6 +234,7 @@
 	w_Lang091 =	Trova un comando (Ctrl+Shift+F)
 	w_Lang092 =	Modifica (Enter)
 	w_Lang093 =	Nascondere
+	w_Lang094 =	Modifica Macro (Ctrl+Shift+E)
 		
 ; Command Windows		
 	c_Lang001 =	Mouse
@@ -1299,5 +1300,5 @@
 	WinWaitActive	Attende fino a quando la finestra è attiva specificato.
 	WinWaitClose	Attende fino a quando non è presente la finestra specificata.
 	WinWaitNotActive	Attende fino a quando la finestra specificata non è attivo.
-	)	...
+	)	
 return		

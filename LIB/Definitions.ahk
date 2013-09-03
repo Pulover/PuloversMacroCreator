@@ -827,7 +827,7 @@ DefaultBar := {FileOpt: "Enabled AutoSize", File: ["New=" w_Lang040 ":42", "Open
 														, "" , "MoveUp=" w_Lang077 ":41", "MoveDn=" w_Lang078 ":40"
 														, "", "Duplicate=" w_Lang079 ":13", "CopyTo=" w_Lang086 ":8(Enabled WholeDropdown)"
 														, "", "EditColor=" w_Lang089 ":3", "EditComm=" w_Lang088 ":5", "FindReplace=" w_Lang087 ":19"
-														, "", "TabPlus=" w_Lang072 ":67", "TabClose=" w_Lang073 ":69", "DuplicateList=" w_Lang074 ":70"
+														, "", "TabPlus=" w_Lang072 ":67", "TabClose=" w_Lang073 ":69", "DuplicateList=" w_Lang074 ":70", "EditMacros=" w_Lang094 ":100"
 														, "", "Import=" w_Lang075 ":29", "SaveCurrentList=" w_Lang076 ":68"]}
 FixedBar :=	{PrevOpt: "Enabled AutoSize", Preview: ["PrevDock=" t_Lang124 ":17"
 														, "", "PrevCopy=" c_Lang023 ":8", "PrevRefresh=" t_Lang014 ":37"

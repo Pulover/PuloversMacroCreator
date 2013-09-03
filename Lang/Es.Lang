@@ -234,6 +234,7 @@
 	w_Lang091 =	Encontrar un comando (Ctrl+Shift+F)
 	w_Lang092 =	Editar (Enter)
 	w_Lang093 =	Ocultar
+	w_Lang094 =	Editar Macros (Ctrl+Shift+E)
 		
 ; Command Windows		
 	c_Lang001 =	Ratón
@@ -1299,5 +1300,5 @@
 	WinWaitActive	Espera a que la ventana especificada está activa.
 	WinWaitClose	Espera a que no existe la ventana especificada.
 	WinWaitNotActive	Espera hasta que la ventana especificada no está activo.
-	)	...
+	)	
 return		

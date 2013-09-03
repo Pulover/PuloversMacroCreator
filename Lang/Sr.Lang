@@ -234,6 +234,7 @@
 	w_Lang091 =	Пронађите команде (Цтрл+Схифт+Ф)
 	w_Lang092 =	Измени (Enter)
 	w_Lang093 =	Сакрити
+	w_Lang094 =	Измени Макрое (Ctrl+Shift+E)
 		
 ; Command Windows		
 	c_Lang001 =	Миш
@@ -1299,5 +1300,5 @@
 	WinWaitActive	Чека док наведено је активан прозор.
 	WinWaitClose	Чека док наведено прозор не постоји.
 	WinWaitNotActive	Чека док наведено прозор није активан.
-	)	...
+	)	
 return		

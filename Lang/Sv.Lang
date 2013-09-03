@@ -234,6 +234,7 @@
 	w_Lang091 =	Hitta ett kommando (Ctrl+Skift+F)
 	w_Lang092 =	Redigera (Enter)
 	w_Lang093 =	Dölja
+	w_Lang094 =	Redigera Makron (Ctrl+Shift+E)
 		
 ; Command Windows		
 	c_Lang001 =	Mus
@@ -1299,5 +1300,5 @@
 	WinWaitActive	Väntar tills den angivna fönstret är aktivt.
 	WinWaitClose	Väntar tills den angivna fönstret inte existerar.
 	WinWaitNotActive	Väntar tills den angivna fönstret inte är aktivt.
-	)	...
+	)	
 return		

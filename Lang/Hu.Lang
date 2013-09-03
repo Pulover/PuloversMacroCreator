@@ -234,6 +234,7 @@
 	w_Lang091 =	Keresse meg a parancsot (Ctrl+Shift+F)
 	w_Lang092 =	Szerkeszt (Enter)
 	w_Lang093 =	Elrejt
+	w_Lang094 =	Szerkeszteni Makrók (Ctrl+Shift+E)
 		
 ; Command Windows		
 	c_Lang001 =	Egér
@@ -1299,5 +1300,5 @@
 	WinWaitActive	Megvárja, amíg a megadott ablak aktív.
 	WinWaitClose	Megvárja, amíg a meghatározott ablak nem létezik.
 	WinWaitNotActive	Megvárja, amíg a meghatározott ablak nem aktív.
-	)	...
+	)	
 return		

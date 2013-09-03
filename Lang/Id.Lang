@@ -234,6 +234,7 @@
 	w_Lang091 =	Cari perintah (Ctrl+Shift+F)
 	w_Lang092 =	Mengedit (Enter)
 	w_Lang093 =	Menyembunyikan
+	w_Lang094 =	Mengedit Macro (Ctrl+Shift+E)
 		
 ; Command Windows		
 	c_Lang001 =	Mouse
@@ -1299,5 +1300,5 @@
 	WinWaitActive	Menunggu sampai jendela yang ditentukan aktif.
 	WinWaitClose	Menunggu sampai jendela yang ditentukan tidak ada.
 	WinWaitNotActive	Menunggu sampai jendela yang ditentukan tidak aktif.
-	)	...
+	)	
 return		

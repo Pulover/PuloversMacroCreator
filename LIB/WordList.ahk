@@ -61,7 +61,7 @@ deleteall delimiter deref destroy digit disable disabled double doublep dropdown
 enable enabled encoding error exist exit expand exstyle filesystem findstring first flash float float floatp
 focus focusv font force fromcodepage global grid group groupbox guiclose guicontextmenu guidropfiles
 guiescape guisize hdr hidden hide hidedropdown high hkcc hkcr hkcu hkey_classes_root hkey_current_config
-hkey_current_user hkey_local_machine hkey_users hklm hku hotkey hours hscroll hwnd icon iconsmall
+hkey_current_user hkey_local_machine hkey_users hklm hku horz hotkey hours hscroll hwnd icon iconsmall
 id idlast ignore imagelist in int int64 int64p integer integerfast interrupt intp is italic join
 label lastfound lastfoundexist left length limit linecount line lines list listbox listview local
 localsameasglobal lock logoff low lower lowercase ltrim mainwindow margin maximize maximizebox menu

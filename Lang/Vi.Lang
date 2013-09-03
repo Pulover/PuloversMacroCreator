@@ -234,6 +234,7 @@
 	w_Lang091 =	Tìm một lệnh (Ctrl + Shift + F)
 	w_Lang092 =	Chỉnh sửa (Enter)
 	w_Lang093 =	Che
+	w_Lang094 =	Chỉnh Sửa Macro (Ctrl+Shift+E)
 		
 ; Command Windows		
 	c_Lang001 =	Chuột
@@ -1299,5 +1300,5 @@
 	WinWaitActive	Đợi cho đến khi cửa sổ chỉ định đang hoạt động.
 	WinWaitClose	Đợi cho đến khi cửa sổ chỉ định không tồn tại.
 	WinWaitNotActive	Đợi cho đến khi cửa sổ chỉ định là không hoạt động.
-	)	...
+	)	
 return		

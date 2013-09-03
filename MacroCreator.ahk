@@ -192,7 +192,6 @@ IniRead, DefaultEditor, %IniFilePath%, Options, DefaultEditor, notepad.exe
 IniRead, DefaultMacro, %IniFilePath%, Options, DefaultMacro, %A_Space%
 IniRead, StdLibFile, %IniFilePath%, Options, StdLibFile, %A_Space%
 IniRead, KeepDefKeys, %IniFilePath%, Options, KeepDefKeys, 0
-IniRead, HKOff, %IniFilePath%, Options, HKOff, 0
 IniRead, TbNoTheme, %IniFilePath%, Options, TbNoTheme, 0
 IniRead, MultInst, %IniFilePath%, Options, MultInst, 0
 IniRead, EvalDefault, %IniFilePath%, Options, EvalDefault, 0
@@ -1713,7 +1712,7 @@ Loop, %TabCount%
 		continue
 	PMCSet := "[PMC Code]|" o_AutoKey[A_Index]
 	. "|" o_ManKey[A_Index] "|" o_TimesG[A_Index]
-	. "|" CoordMouse "|" OnFinishCode "`n"
+	. "|" CoordMouse "|" OnFinishCode "|" TabGetText(TabSel, A_Index) "`n"
 	LV_Data := PMCSet . PMC.LVGet("InputList" A_Index).Text . "`n"
 	FileAppend, %LV_Data%, %CurrentFileName%
 }
@@ -1906,7 +1905,7 @@ RowNumber := LV_GetNext()
 ,	LV_GetText(Ex_AutoKey, RowNumber, 2)
 ,	LV_GetText(Ex_TimesX, RowNumber, 3)
 ,	LV_GetText(Ex_BM, RowNumber, 4)
-Gui, 13:+owner14 +ToolWindow +Delimiter¢
+Gui, 13:+owner14 +ToolWindow +Delimiter¢ +HwndExLVEdit
 Gui, 14:Default
 Gui, 14:+Disabled
 Gui, 13:Add, GroupBox, Section xm W270 H105
@@ -1914,10 +1913,11 @@ Gui, 13:Add, Edit, ys+15 xs+10 W250 vEx_Macro, %Ex_Macro%
 Gui, 13:Add, Combobox, W140 vEx_AutoKey, %KeybdList%
 Gui, 13:Add, Checkbox, -Wrap Checked%Ex_BM% yp+3 x+10 W100 vEx_BM R1, %t_Lang006%
 Gui, 13:Add, Text, Section y+17 xs+10, %t_Lang003%:
-Gui, 13:Add, Edit, yp-3 xp+40 Limit Number W100 R1 vEx_TE, %Ex_TE%
+Gui, 13:Add, Edit, yp-3 xp+40 Limit Number W100 R1 vEx_TE
 Gui, 13:Add, UpDown, 0x80 Range0-999999999 vEx_TimesX, %Ex_TimesX%
 Gui, 13:Add, Text, yp+3 x+10 , %t_Lang004%
-Gui, 13:Add, Button, Default -Wrap xm W75 gExpEditClose, %c_Lang020%
+Gui, 13:Add, Button, Section Default -Wrap xm W75 H23 gExpEditClose, %c_Lang020%
+Gui, 13:Add, Updown, ys x+145 W50 H20 Horz vExpSel gExpSelList Range0-1
 If InStr(KeybdList, Ex_AutoKey)
 	GuiControl, 13:ChooseString, Ex_AutoKey, %Ex_AutoKey%
 Else
@@ -1928,11 +1928,51 @@ return
 13GuiClose:
 13GuiEscape:
 ExpEditClose:
+Gui, 13:+OwnDialogs
 Gui, 13:Submit, NoHide
+Try
+	z_Check := VarSetCapacity(%Ex_Macro%)
+Catch
+{
+	MsgBox, 16, %d_Lang007%, %d_Lang049%
+	return
+}
 Gui, 14:-Disabled
 Gui, 13:Destroy
 Gui, 14:Default
 LV_Modify(RowNumber, "", Ex_Macro, Ex_AutoKey, Ex_TimesX, Ex_BM)
+return
+
+ExpSelList:
+NewRow := ExpSel ? (RowNumber + 1) : (RowNumber - 1)
+Gui, 13:+OwnDialogs
+Gui, 13:Submit, NoHide
+Try
+	z_Check := VarSetCapacity(%Ex_Macro%)
+Catch
+{
+	MsgBox, 16, %d_Lang007%, %d_Lang049%
+	return
+}
+Gui, 14:Default
+LV_Modify(RowNumber, "", Ex_Macro, Ex_AutoKey, Ex_TimesX, Ex_BM)
+,	RowNumber := NewRow
+If (RowNumber > LV_GetCount())
+	RowNumber := 1
+Else If (RowNumber = 0)
+	RowNumber := LV_GetCount()
+LV_Modify(0, "-Select"), LV_Modify(RowNumber, "Select")
+,	LV_GetText(Ex_Macro, RowNumber, 1)
+,	LV_GetText(Ex_AutoKey, RowNumber, 2)
+,	LV_GetText(Ex_TimesX, RowNumber, 3)
+,	LV_GetText(Ex_BM, RowNumber, 4)
+GuiControl, 13:, Ex_Macro, %Ex_Macro%
+GuiControl, 13:, Ex_BM, %Ex_BM%
+GuiControl, 13:, Ex_TimesX, %Ex_TimesX%
+If InStr(KeybdList, Ex_AutoKey)
+	GuiControl, 13:ChooseString, Ex_AutoKey, %Ex_AutoKey%
+Else
+	GuiControl, 13:, Ex_AutoKey, %Ex_AutoKey%||
 return
 
 VarsTree:
@@ -2312,9 +2352,8 @@ Gui, 4:Add, Edit, vScreenDir W350 R1 -Multi, %ScreenDir%
 Gui, 4:Add, Button, -Wrap yp-1 x+0 W30 H23 vSearchScreen gSearchDir, ...
 Gui, 4:Tab, 5
 ; General
-Gui, 4:Add, GroupBox, Section ym xm+210 W400 H100, %t_Lang018%
-Gui, 4:Add, Checkbox, -Wrap Checked%HKOff% ys+20 xs+10 vHKOff W380 R1, %t_Lang055%
-Gui, 4:Add, Checkbox, -Wrap Checked%MultInst% vMultInst W380 R1, %t_Lang089%
+Gui, 4:Add, GroupBox, Section ym xm+210 W400 H80, %t_Lang018%
+Gui, 4:Add, Checkbox, -Wrap Checked%MultInst% ys+20 xs+10 vMultInst W380 R1, %t_Lang089%
 Gui, 4:Add, Checkbox, -Wrap Checked%TbNoTheme% vTbNoTheme W380 R1, %t_Lang142%
 Gui, 4:Add, Checkbox, -Wrap Checked%EvalDefault% vEvalDefault W380 R1, %t_Lang059%
 Gui, 4:Add, GroupBox, Section y+15 xs W400 H125, %t_Lang136%
@@ -2326,8 +2365,8 @@ Gui, 4:Add, Text, yp x+20 W85, %t_Lang082% "*"
 Gui, 4:Add, Text, yp x+10 W40 vIfLVColor gEditColor c%IfLVColor%, ██████
 Gui, 4:Add, Checkbox, -Wrap Checked%ShowActIdent% y+15 xs+10 vShowActIdent W380 R1, %t_Lang083%
 Gui, 4:Add, Text, W380, %t_Lang084%
-Gui, 4:Add, GroupBox, Section y+15 xs W400 H160, %t_Lang062%
-Gui, 4:Add, Edit, ys+20 xs+10 W380 r8 vEditMod, %VirtualKeys%
+Gui, 4:Add, GroupBox, Section y+15 xs W400 H180, %t_Lang062%
+Gui, 4:Add, Edit, ys+20 xs+10 W380 r9 vEditMod, %VirtualKeys%
 Gui, 4:Add, Button, -Wrap y+0 W75 H23 gConfigRestore, %t_Lang063%
 Gui, 4:Add, Button, -Wrap yp x+10 W75 H23 gKeyHistory, %c_Lang124%
 Gui, 4:Tab, 6
@@ -4275,6 +4314,8 @@ GuiControl, Enable%ComEvent%, KeyDelayC
 GuiControl, Enable%ComEvent%, KeyDelayX
 GuiControl, Disable%ComEvent%, DelayC
 GuiControl, Disable%ComEvent%, DelayX
+GuiControl, Disable%ComEvent%, Sec
+GuiControl,, Msc, 1
 return
 
 TextEdit:
@@ -4665,7 +4706,7 @@ Loop, %TabCount%
 }
 Gui, chMacro:ListView, InputList%A_List%
 Loop, %TabCount%
-	Proj_Labels .= "Macro" A_Index "|"
+	Proj_Labels .= TabGetText(TabSel, A_Index) "|"
 Gui, 12:+owner1 -MinimizeBox +E0x00000400 +HwndCmdWin
 Gui, 1:+Disabled
 Gui, 12:Add, Tab2, W450 H0 vTabControl AltSubmit, %c_Lang073%|%c_Lang077%|%c_Lang079%
@@ -8720,34 +8761,38 @@ EditMacros:
 Input
 Gui, 1:Submit, NoHide
 GoSub, SaveData
-Gui, 32:-MinimizeBox +owner1
+Gui, 32:-MinimizeBox +owner1 +HwndLVEditMacros
 Gui, 1:+Disabled
 Gui, 32:Add, GroupBox, Section W450 H240
-Gui, 32:Add, ListView, ys+15 xs+10 W430 r10 hwndMacroL vMacroList gMacroList -ReadOnly NoSort, Macro|Hotkey|Loop|Index
+Gui, 32:Add, ListView, ys+15 xs+10 W430 r10 hwndMacroL vMacroList gMacroList -ReadOnly NoSort, Macro|Play|Manual|Loop|Index
 Gui, 32:Add, Text, -Wrap W430, %t_Lang144%
-Gui, 32:Add, Button, -Wrap Section Default xm W75 H23 gEditMacrosOK, %c_Lang020%
+Gui, 32:Add, Button, -Wrap Section xm W75 H23 gEditMacrosOK, %c_Lang020%
 Gui, 32:Add, Button, -Wrap ys W75 H23 gEditMacrosCancel, %c_Lang021%
 Gui, 32:Default
 Loop, %TabCount%
-	LV_Add("", TabGetText(TabSel, A_Index), o_AutoKey[A_Index], o_TimesG[A_Index], A_Index)
-	LV_ModifyCol(1, 120)	; Macros
-,	LV_ModifyCol(2, 120)	; Hotkeys
-,	LV_ModifyCol(3, 80)		; Loop
-,	LV_ModifyCol(4, 80)		; Index
+	LV_Add("", TabGetText(TabSel, A_Index), o_AutoKey[A_Index], o_ManKey[A_Index], o_TimesG[A_Index], A_Index)
+	LV_ModifyCol(1, 100)	; Macros
+,	LV_ModifyCol(2, 100)	; Play
+,	LV_ModifyCol(3, 100)	; Manual
+,	LV_ModifyCol(4, 60)		; Loop
+,	LV_ModifyCol(5, 60)		; Index
 Gui, 32:Show,, %t_Lang145%
 return
 
 EditMacrosOK:
 Gui, 32:Submit, NoHide
-Project := []
+Project := [], Labels := ""
 Loop, %TabCount%
 {
 	Gui, 32:Default
 	LV_GetText(Macro, A_Index, 1)
 ,	LV_GetText(AutoKey, A_Index, 2)
-,	LV_GetText(TimesX, A_Index, 3)
-,	LV_GetText(Index, A_Index, 4)
+,	LV_GetText(ManKey, A_Index, 3)
+,	LV_GetText(TimesX, A_Index, 4)
+,	LV_GetText(Index, A_Index, 5)
+,	Labels .= ((Macro <> "") ? Macro : "Macro" Index) "|"
 ,	o_AutoKey[A_Index] := AutoKey
+,	o_ManKey[A_Index] := ManKey
 ,	o_TimesG[A_Index] := TimesX
 	If (ListCount%Index% = 0)
 		continue
@@ -8759,6 +8804,7 @@ Loop, %TabCount%
 }
 Loop, %TabCount%
 	PMC.LVLoad("InputList" A_Index, Project[A_Index])
+GuiControl, chMacro:, A_List, |%Labels%
 GoSub, LoadData
 GoSub, RowCheck
 Gui, 1:-Disabled
@@ -8779,34 +8825,76 @@ If (A_GuiEvent = "D")
 	LV_Rows.Drag()
 If (A_GuiEvent <> "DoubleClick")
 	return
+MacroListEdit:
+Gui, 32:Default
 If (LV_GetCount("Selected") = 0)
 	return
 RowNumber := LV_GetNext()
 ,	LV_GetText(Macro, RowNumber, 1)
 ,	LV_GetText(AutoKey, RowNumber, 2)
-,	LV_GetText(TimesX, RowNumber, 3)
-Gui, 33:+owner32 +ToolWindow +Delimiter¢
+,	LV_GetText(ManKey, RowNumber, 3)
+,	LV_GetText(TimesX, RowNumber, 4)
+Gui, 33:+owner32 +ToolWindow +Delimiter¢ +HwndLVEdit
 Gui, 32:Default
 Gui, 32:+Disabled
-Gui, 33:Add, GroupBox, Section xm W270 H105
+Gui, 33:Add, Groupbox, Section xm W270 H130
 Gui, 33:Add, Edit, ys+15 xs+10 W250 vMacro, %Macro%
 Gui, 33:Add, Hotkey, W250 vAutoKey, %AutoKey%
+Gui, 33:Add, Hotkey, W250 vManKey, %ManKey%
 Gui, 33:Add, Text, Section y+10 xs+10, %t_Lang003%:
 Gui, 33:Add, Edit, yp-3 xp+40 Limit Number W100 R1 vTE
 Gui, 33:Add, UpDown, 0x80 Range0-999999999 vTimesX, %TimesX%
 Gui, 33:Add, Text, yp+3 x+10 , %t_Lang004%
-Gui, 33:Add, Button, Default -Wrap xm W75 gEditMacroClose, %c_Lang020%
+Gui, 33:Add, Button, Section Default -Wrap xm W75 H23 gEditMacroClose, %c_Lang020%
+Gui, 33:Add, Updown, ys x+145 W50 H20 Horz vEditSel gSelList Range0-1
 Gui, 33:Show,, %w_Lang019%
 return
 
 33GuiClose:
 33GuiEscape:
 EditMacroClose:
+Gui, 33:+OwnDialogs
 Gui, 33:Submit, NoHide
+Try
+	z_Check := VarSetCapacity(%Macro%)
+Catch
+{
+	MsgBox, 16, %d_Lang007%, %d_Lang049%
+	return
+}
 Gui, 32:-Disabled
 Gui, 33:Destroy
 Gui, 32:Default
-LV_Modify(RowNumber, "", Macro, AutoKey, TimesX)
+LV_Modify(RowNumber, "", Macro, AutoKey, ManKey, TimesX)
+return
+
+SelList:
+NewRow := EditSel ? (RowNumber + 1) : (RowNumber - 1)
+Gui, 33:+OwnDialogs
+Gui, 33:Submit, NoHide
+Try
+	z_Check := VarSetCapacity(%Macro%)
+Catch
+{
+	MsgBox, 16, %d_Lang007%, %d_Lang049%
+	return
+}
+Gui, 32:Default
+LV_Modify(RowNumber, "", Macro, AutoKey, ManKey, TimesX)
+,	RowNumber := NewRow
+If (RowNumber > LV_GetCount())
+	RowNumber := 1
+Else If (RowNumber = 0)
+	RowNumber := LV_GetCount()
+LV_Modify(0, "-Select"), LV_Modify(RowNumber, "Select")
+,	LV_GetText(Macro, RowNumber, 1)
+,	LV_GetText(AutoKey, RowNumber, 2)
+,	LV_GetText(ManKey, RowNumber, 3)
+,	LV_GetText(TimesX, RowNumber, 4)
+GuiControl, 33:, Macro, %Macro%
+GuiControl, 33:, AutoKey, %AutoKey%
+GuiControl, 33:, ManKey, %ManKey%
+GuiControl, 33:, TimesX, %TimesX%
 return
 
 Edit:
@@ -9932,7 +10020,7 @@ pb_MsgBox:
 	StringReplace, Step, Step, ```,, `,, All
 	Try Menu, Tray, Icon, %ResDllPath%, 78
 	ChangeProgBarColor("Blue", "OSCProg", 28)
-	MsgBox, % Target, %Window%, %Step%, %DelayX%
+	MsgBox, % Target, % (Window <> "") ? Window : AppName, %Step%, %DelayX%
 	Try Menu, Tray, Icon, %ResDllPath%, 47
 	ChangeProgBarColor("20D000", "OSCProg", 28)
 return
@@ -10872,7 +10960,6 @@ AbortKey := "F8"
 ,	Exe_Exp := 0
 ,	ShowExpOpt := 0
 ,	WinState := 0
-,	HKOff := 0
 ,	TbNoTheme := 0
 ,	MultInst := 0
 ,	EvalDefault := 0
@@ -11092,7 +11179,6 @@ IniWrite, %DefaultEditor%, %IniFilePath%, Options, DefaultEditor
 IniWrite, %DefaultMacro%, %IniFilePath%, Options, DefaultMacro
 IniWrite, %StdLibFile%, %IniFilePath%, Options, StdLibFile
 IniWrite, %KeepDefKeys%, %IniFilePath%, Options, KeepDefKeys
-IniWrite, %HKOff%, %IniFilePath%, Options, HKOff
 IniWrite, %TbNoTheme%, %IniFilePath%, Options, TbNoTheme
 IniWrite, %MultInst%, %IniFilePath%, Options, MultInst
 IniWrite, %EvalDefault%, %IniFilePath%, Options, EvalDefault
@@ -11996,8 +12082,7 @@ RbMain.ModifyBand(RbMain.IDToIndex(4), "Text", w_Lang005)
 , RbMain.ModifyBand(RbMain.IDToIndex(7), "Text", w_Lang008)
 , RbMain.ModifyBand(RbMain.IDToIndex(8), "Text", c_Lang003)
 ; File
-TB_Edit(tbFile, "New", "", "", w_Lang040)
-, TB_Edit(tbFile, "Open", "", "", w_Lang041) , TB_Edit(tbFile, "Save", "", "", w_Lang042) 
+TB_Edit(tbFile, "New", "", "", w_Lang040), TB_Edit(tbFile, "Open", "", "", w_Lang041) , TB_Edit(tbFile, "Save", "", "", w_Lang042) 
 , TB_Edit(tbFile, "Export", "", "", w_Lang043), TB_Edit(tbFile, "Preview", "", "", w_Lang044), TB_Edit(tbFile, "Options", "", "", w_Lang045)
 ; RecPlay
 TB_Edit(tbRecPlay, "Record", "", "", w_Lang046)
@@ -12017,13 +12102,14 @@ TB_Edit(tbSettings, "HideMainWin", "", "", w_Lang013), TB_Edit(tbSettings, "OnSc
 , TB_Edit(tbSettings, "OnFinish", "", "", w_Lang020) , TB_Edit(tbSettings, "SetWin", "", "", t_Lang009)
 , TB_Edit(tbSettings, "WinKey", "", "", w_Lang070), TB_Edit(tbSettings, "SetJoyButton", "", "", w_Lang071)
 ; Edit
-TB_Edit(tbEdit, "TabPlus", "", "", w_Lang072), TB_Edit(tbEdit, "TabClose", "", "", w_Lang073), TB_Edit(tbEdit, "DuplicateList", "", "", w_Lang074)
-, TB_Edit(tbEdit, "Import", "", "", w_Lang075), TB_Edit(tbEdit, "SaveCurrentList", "", "", w_Lang076)
-, TB_Edit(tbEdit, "MoveUp", "", "", w_Lang077), TB_Edit(tbEdit, "MoveDn", "", "", w_Lang078)
+TB_Edit(tbEdit, "EditButton", "", "", w_Lang092)
 , TB_Edit(tbEdit, "CutRows", "", "", w_Lang080), TB_Edit(tbEdit, "CopyRows", "", "", w_Lang081), TB_Edit(tbEdit, "PasteRows", "", "", w_Lang082), TB_Edit(tbEdit, "Remove", "", "", w_Lang083)
 , TB_Edit(tbEdit, "Undo", "", "", w_Lang084), TB_Edit(tbEdit, "Redo", "", "", w_Lang085)
+, TB_Edit(tbEdit, "MoveUp", "", "", w_Lang077), TB_Edit(tbEdit, "MoveDn", "", "", w_Lang078)
 , TB_Edit(tbEdit, "Duplicate", "", "", w_Lang079), TB_Edit(tbEdit, "CopyTo", "", "", w_Lang086) 
 , TB_Edit(tbEdit, "EditColor", "", "", w_Lang089), TB_Edit(tbEdit, "EditComm", "", "", w_Lang088), TB_Edit(tbEdit, "FindReplace", "", "", w_Lang087)
+, TB_Edit(tbEdit, "TabPlus", "", "", w_Lang072), TB_Edit(tbEdit, "TabClose", "", "", w_Lang073), TB_Edit(tbEdit, "DuplicateList", "", "", w_Lang074), TB_Edit(tbEdit, "EditMacros", "", "", w_Lang094)
+, TB_Edit(tbEdit, "Import", "", "", w_Lang075), TB_Edit(tbEdit, "SaveCurrentList", "", "", w_Lang076)
 ; Preview
 TB_Edit(tbPrev, "PrevDock", "", "", t_Lang124)
 , TB_Edit(tbPrev, "PrevCopy", "", "", c_Lang023), TB_Edit(tbPrev, "PrevRefresh", "", "", t_Lang014)

@@ -32,7 +32,7 @@
 
 	Import(SelectedFile, DL="`n", New="1")
 	{
-		local FoundC
+		local FoundC, Labels
 
 		Gui, chMacro:Submit, NoHide
 		ColOrder := LVOrder_Get(10, ListID%A_List%)
@@ -71,12 +71,15 @@
 			,	o_TimesG[TabCount] := (Opt[4] <> "") ? Opt[4] : 1
 			,	CoordMouse := (Opt[5] <> "") ? Opt[5] : CoordMouse
 			,	OnFinishCode := (Opt[6] <> "") ? Opt[6] : 1
+			,	Labels .= ((Opt[7] <> "") ? Opt[7] : "Macro" TabCount) "|"
 			,	HistoryMacro%TabCount% := new LV_Rows()
 			,	HistoryMacro%TabCount%.Add()
 			}
 		}
 		If (TabCount = 0)
 			GoSub, TabPlus
+		Else
+			GuiControl, chMacro:, A_List, |%Labels%
 		GoSub, SetFinishButtom
 		GuiControl, 1:, CoordTip, CoordMode: %CoordMouse%
 		Gui, 1:-Disabled

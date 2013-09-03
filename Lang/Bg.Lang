@@ -234,6 +234,7 @@
 	w_Lang091 =	Намерете командата (Ctrl+Shift+F)
 	w_Lang092 =	Редактирам (Enter)
 	w_Lang093 =	Крия
+	w_Lang094 =	Редактиране Macros (Ctrl+Shift+E)
 		
 ; Command Windows		
 	c_Lang001 =	Мишка
@@ -1299,5 +1300,5 @@
 	WinWaitActive	Περιμένει μέχρι την καθορισμένη παράθυρο είναι ενεργό.
 	WinWaitClose	Περιμένει μέχρι την καθορισμένη παράθυρο δεν υπάρχει.
 	WinWaitNotActive	Περιμένει μέχρι την καθορισμένη παράθυρο δεν είναι ενεργό.
-	)	...
+	)	
 return		

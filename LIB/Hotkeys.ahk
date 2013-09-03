@@ -1,5 +1,5 @@
 ﻿#If ListFocus && !HotkeyCtrlHasFocus()
-&& !HKOff && WinActive("ahk_id" PMCWinID) && !Capt
+&& WinActive("ahk_id" PMCWinID) && !Capt
 
 Del::GoSub, h_Del
 NumpadDel::GoSub, h_Numdel
@@ -64,7 +64,7 @@ rColor := Palette%clr%
 GoSub, PaintRows
 return
 
-#If !HotkeyCtrlHasFocus() && WinActive("ahk_id" PMCWinID) && !HKOff
+#If !HotkeyCtrlHasFocus() && WinActive("ahk_id" PMCWinID)
 
 ^f::GoSub, FindReplace
 ^+f::GoSub, CmdFind
@@ -76,6 +76,7 @@ return
 ^!s::GoSub, SaveCurrentList
 ^i::GoSub, Import
 ^+d::GoSub, DuplicateList
+^+e::GoSub, EditMacros
 ^e::GoSub, Export
 ^p::GoSub, Preview
 ^g::GoSub, Options
@@ -113,8 +114,7 @@ GuiControl, Choose, A_List, %mSel%
 GoSub, TabSel
 return
 
-#If !HotkeyCtrlHasFocus() && WinActive("ahk_id" PMCWinID)
-&& !Capt && !HKOff
+#If !HotkeyCtrlHasFocus() && WinActive("ahk_id" PMCWinID) && !Capt
 
 +F1::GoSub, HelpAbout
 F2::GoSub, Mouse
@@ -138,7 +138,33 @@ F11::GoSub, IECom
 F12::GoSub, SendMsg
 ~Enter::GoSub, EditButton
 
-#If WinActive("ahk_id " PrevID) && !HKOff
+#If WinActive("ahk_id " LVEditMacros)
+
+Enter::GoSub, MacroListEdit
+
+#If !HotkeyCtrlHasFocus() && WinActive("ahk_id " LVEdit)
+
+^PgDn::
+EditSel := 1
+GoSub, SelList
+return
+^PgUp::
+EditSel := 0
+GoSub, SelList
+return
+
+#If !HotkeyCtrlHasFocus() && WinActive("ahk_id " ExLVEdit)
+
+^PgDn::
+ExpSel := 1
+GoSub, ExpSelList
+return
+^PgUp::
+ExpSel := 0
+GoSub, ExpSelList
+return
+
+#If WinActive("ahk_id " PrevID)
 
 F5::GoSub, PrevRefresh
 

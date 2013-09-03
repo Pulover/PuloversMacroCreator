@@ -104,21 +104,32 @@
 					If ((BreakIt > 0) || (SkipIt > 0))
 						continue
 					CheckVars("Step", PointMarker)
-					If RegExMatch(Step, "^Macro(\d+)$", t_Macro)
+					Loop, %TabCount%
 					{
-						If (Type = cType36)
+						TabIdx := A_Index
+						If (Step = TabGetText(TabSel, A_Index))
 						{
-							_Label := [t_Macro1, 0, Manual]
-							return _Label
+							If (Type = cType36)
+							{
+								_Label := [A_Index, 0, Manual]
+								return _Label
+							}
+							Else
+							{
+								_Label := (Playback(A_Index, 0, Manual))
+								If IsObject(_Label)
+									return _Label
+								Else If (_Label)
+								{
+									Lab := _Label, _Label := 0
+									If (_Label := Playback(Lab))
+										return _Label
+								}
+								break
+							}
 						}
 						Else
-							Playback(t_Macro1, 0, Manual)
-					}
-					Else
-					{
-						Loop, %TabCount%
 						{
-							TabIdx := A_Index
 							Gui, chMacro:ListView, InputList%TabIdx%
 							Loop, % ListCount%A_Index%
 							{
@@ -134,7 +145,18 @@
 										return _Label
 									}
 									Else
-										Playback(TabIdx, A_Index, Manual)
+									{
+										_Label := Playback(TabIdx, A_Index, Manual)
+										If IsObject(_Label)
+											return _Label
+										Else If (_Label)
+										{
+											Lab := _Label, _Label := 0
+											If (_Label := Playback(Lab))
+												return _Label
+										}
+										break
+									}
 								}
 							}
 						}
@@ -285,7 +307,8 @@
 						Else If (GoToLab)
 						{
 							Lab := GoToLab, GoToLab := 0
-							Playback(Lab)
+							If (_Label := Playback(Lab))
+								return _Label
 							return
 						}
 						PointMarker--
@@ -465,7 +488,7 @@
 
 LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC)
 {
-	local lCount, lIdx, L_Index, mLoopIndex, IfError := 0
+	local lCount, lIdx, L_Index, mLoopIndex, _Label, IfError := 0
 
 	f_Loop:
 	CoordMode, Mouse, %CoordMouse%
@@ -520,22 +543,23 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC)
 					If ((BreakIt > 0) || (SkipIt > 0))
 						continue
 					CheckVars("Step", PointMarker)
-					If RegExMatch(Step, "^Macro(\d+)$", t_Macro)
+					Loop, %TabCount%
 					{
-						If (Type = cType37)
+						If (Step = TabGetText(TabSel, A_Index))
 						{
-							L_Index := LoopIndex
-							Playback(t_Macro1)
-							LoopIndex := L_Index
-							Gui, chMacro:ListView, InputList%lcL%
-							continue
+							If (Type = cType37)
+							{
+								L_Index := LoopIndex
+								If (_Label := Playback(A_Index))
+									return _Label
+								LoopIndex := L_Index
+								Gui, chMacro:ListView, InputList%lcL%
+								break
+							}
+							Else
+								return A_Index
 						}
 						Else
-							return t_Macro1
-					}
-					Else
-					{
-						Loop, %TabCount%
 						{
 							TabIdx := A_Index
 							Gui, chMacro:ListView, InputList%TabIdx%
@@ -548,7 +572,11 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC)
 								If ((Row_Type = cType35) && (TargetLabel = Step))
 								{
 									If (Type = cType37)
-										Playback(TabIdx, A_Index)
+									{
+										If (_Label := Playback(TabIdx, A_Index))
+											return _Label
+										break
+									}
 									Else
 									{
 										_Label := [TabIdx, A_Index, 0]

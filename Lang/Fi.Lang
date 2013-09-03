@@ -234,6 +234,7 @@
 	w_Lang091 =	Etsi komento (Ctrl+Shift+F)
 	w_Lang092 =	Muokata (Enter)
 	w_Lang093 =	Piilottaa
+	w_Lang094 =	Muokkaa Makrot (Ctrl+Shift+E)
 		
 ; Command Windows		
 	c_Lang001 =	Hiiri
@@ -1299,5 +1300,5 @@
 	WinWaitActive	Odottaa, kunnes määritelty ikkuna on aktiivinen.
 	WinWaitClose	Odottaa, kunnes määritelty ikkuna ei ole olemassa.
 	WinWaitNotActive	Odottaa, kunnes määritelty ikkuna ei ole aktiivinen.
-	)	...
+	)	
 return		

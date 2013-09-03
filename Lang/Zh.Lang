@@ -234,6 +234,7 @@
 	w_Lang091 =	查找命令（按Ctrl+Shift+ F）
 	w_Lang092 =	编辑（Enter）
 	w_Lang093 =	隐藏
+	w_Lang094 =	编辑宏（按Ctrl+Shift+ E）
 		
 ; Command Windows		
 	c_Lang001 =	鼠标
@@ -1299,5 +1300,5 @@
 	WinWaitActive	等待，直到指定的窗口处于活动状态。
 	WinWaitClose	等待，直到指定的窗口不存在。
 	WinWaitNotActive	等待，直到指定的窗口不活跃。
-	)	...
+	)	
 return		

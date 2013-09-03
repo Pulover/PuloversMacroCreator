@@ -234,6 +234,7 @@
 	w_Lang091 =	Finn en kommando (Ctrl+Shift+F)
 	w_Lang092 =	Redigere (Enter)
 	w_Lang093 =	Skjule
+	w_Lang094 =	Redigere Makroer (Ctrl+Shift+E)
 		
 ; Command Windows		
 	c_Lang001 =	Mus
@@ -1299,5 +1300,5 @@
 	WinWaitActive	Venter til den angitte vinduet er aktivt.
 	WinWaitClose	Venter til den angitte vinduet ikke eksisterer.
 	WinWaitNotActive	Venter til den angitte vinduet er ikke aktiv.
-	)	...
+	)	
 return		
