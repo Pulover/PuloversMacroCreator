@@ -1895,27 +1895,29 @@ Tooltip
 return
 
 ExpEdit:
-If A_GuiEvent = D
+If (A_GuiEvent = "D")
 	LV_Rows.Drag()
-If A_GuiEvent <> DoubleClick
+If (A_GuiEvent <> "DoubleClick")
 	return
 If (LV_GetCount("Selected") = 0)
 	return
 RowNumber := LV_GetNext()
+,	LV_GetText(Ex_Macro, RowNumber, 1)
 ,	LV_GetText(Ex_AutoKey, RowNumber, 2)
 ,	LV_GetText(Ex_TimesX, RowNumber, 3)
 ,	LV_GetText(Ex_BM, RowNumber, 4)
 Gui, 13:+owner14 +ToolWindow +Delimiter¢
 Gui, 14:Default
 Gui, 14:+Disabled
-Gui, 13:Add, GroupBox, Section xm W270 H95
-Gui, 13:Add, Combobox, ys+20 xs+10 W140 vEx_AutoKey, %KeybdList%
-Gui, 13:Add, Checkbox, -Wrap Checked%Ex_BM% ys+25 x+10 W100 vEx_BM R1, %t_Lang006%
-Gui, 13:Add, Text, Section ys+50 xs+10, %t_Lang003%:
+Gui, 13:Add, GroupBox, Section xm W270 H105
+Gui, 13:Add, Edit, ys+15 xs+10 W250 vEx_Macro, %Ex_Macro%
+Gui, 13:Add, Combobox, W140 vEx_AutoKey, %KeybdList%
+Gui, 13:Add, Checkbox, -Wrap Checked%Ex_BM% yp+3 x+10 W100 vEx_BM R1, %t_Lang006%
+Gui, 13:Add, Text, Section y+17 xs+10, %t_Lang003%:
 Gui, 13:Add, Edit, yp-3 xp+40 Limit Number W100 R1 vEx_TE, %Ex_TE%
 Gui, 13:Add, UpDown, 0x80 Range0-999999999 vEx_TimesX, %Ex_TimesX%
-Gui, 13:Add, Text,, %t_Lang004%
-Gui, 13:Add, Button, -Wrap xm W75 gExpEditClose, %c_Lang020%
+Gui, 13:Add, Text, yp+3 x+10 , %t_Lang004%
+Gui, 13:Add, Button, Default -Wrap xm W75 gExpEditClose, %c_Lang020%
 If InStr(KeybdList, Ex_AutoKey)
 	GuiControl, 13:ChooseString, Ex_AutoKey, %Ex_AutoKey%
 Else
@@ -1930,7 +1932,7 @@ Gui, 13:Submit, NoHide
 Gui, 14:-Disabled
 Gui, 13:Destroy
 Gui, 14:Default
-LV_Modify(RowNumber, "Col2", Ex_AutoKey, Ex_TimesX, Ex_BM)
+LV_Modify(RowNumber, "", Ex_Macro, Ex_AutoKey, Ex_TimesX, Ex_BM)
 return
 
 VarsTree:
@@ -8089,7 +8091,7 @@ If (cHwnd = ListID%A_List%)
 	Menu, EditMenu, Show, %A_GuiX%, %A_GuiY%
 Else If (cHwnd = TabSel)
 {
-	Menu, TabMenu, Add, %w_Lang019%, EditMacroTab
+	Menu, TabMenu, Add, %w_Lang019%, EditMacros
 	Menu, TabMenu, Show
 	Menu, TabMenu, DeleteAll
 }
@@ -8714,25 +8716,97 @@ Else
 	GoSub, MultiEdit
 return
 
-EditMacroTab:
+EditMacros:
+Input
+Gui, 1:Submit, NoHide
+GoSub, SaveData
 Gui, 32:-MinimizeBox +owner1
 Gui, 1:+Disabled
-Gui, 32:Add, GroupBox, Section W450 H300
-Gui, 32:Add, ListView, ys+15 xs+10 W430 r20 -ReadOnly -Hdr, Macro|Index
-Gui, 32:Add, Button, gMacroTabCancel, %c_Lang021%
+Gui, 32:Add, GroupBox, Section W450 H240
+Gui, 32:Add, ListView, ys+15 xs+10 W430 r10 hwndMacroL vMacroList gMacroList -ReadOnly NoSort, Macro|Hotkey|Loop|Index
+Gui, 32:Add, Text, -Wrap W430, %t_Lang144%
+Gui, 32:Add, Button, -Wrap Section Default xm W75 H23 gEditMacrosOK, %c_Lang020%
+Gui, 32:Add, Button, -Wrap ys W75 H23 gEditMacrosCancel, %c_Lang021%
 Gui, 32:Default
 Loop, %TabCount%
-	LV_Add("", TabGetText(TabSel, A_Index), A_Index)
-LV_ModifyCol(1, 400), LV_ModifyCol(2, 0)
+	LV_Add("", TabGetText(TabSel, A_Index), o_AutoKey[A_Index], o_TimesG[A_Index], A_Index)
+	LV_ModifyCol(1, 120)	; Macros
+,	LV_ModifyCol(2, 120)	; Hotkeys
+,	LV_ModifyCol(3, 80)		; Loop
+,	LV_ModifyCol(4, 80)		; Index
 Gui, 32:Show,, %t_Lang145%
 return
 
-MacroTabCancel:
+EditMacrosOK:
+Gui, 32:Submit, NoHide
+Project := []
+Loop, %TabCount%
+{
+	Gui, 32:Default
+	LV_GetText(Macro, A_Index, 1)
+,	LV_GetText(AutoKey, A_Index, 2)
+,	LV_GetText(TimesX, A_Index, 3)
+,	LV_GetText(Index, A_Index, 4)
+,	o_AutoKey[A_Index] := AutoKey
+,	o_TimesG[A_Index] := TimesX
+	If (ListCount%Index% = 0)
+		continue
+	PMCSet := "[PMC Code]|" o_AutoKey[A_Index]
+	. "|" o_ManKey[A_Index] "|" o_TimesG[A_Index]
+	. "|" CoordMouse "|" OnFinishCode "`n"
+	LV_Data := PMCSet . PMC.LVGet("InputList" Index).Text . "`n"
+	Project.Insert(PMC.LVGet("InputList" Index))
+}
+Loop, %TabCount%
+	PMC.LVLoad("InputList" A_Index, Project[A_Index])
+GoSub, LoadData
+GoSub, RowCheck
+Gui, 1:-Disabled
+Gui, 32:Destroy
+Project := ""
+return
+
+EditMacrosCancel:
 32GuiClose:
 32GuiEscape:
 Gui, 1:-Disabled
 Gui, 32:Destroy
 Gui, chMacro:Default
+return
+
+MacroList:
+If (A_GuiEvent = "D")
+	LV_Rows.Drag()
+If (A_GuiEvent <> "DoubleClick")
+	return
+If (LV_GetCount("Selected") = 0)
+	return
+RowNumber := LV_GetNext()
+,	LV_GetText(Macro, RowNumber, 1)
+,	LV_GetText(AutoKey, RowNumber, 2)
+,	LV_GetText(TimesX, RowNumber, 3)
+Gui, 33:+owner32 +ToolWindow +Delimiter¢
+Gui, 32:Default
+Gui, 32:+Disabled
+Gui, 33:Add, GroupBox, Section xm W270 H105
+Gui, 33:Add, Edit, ys+15 xs+10 W250 vMacro, %Macro%
+Gui, 33:Add, Hotkey, W250 vAutoKey, %AutoKey%
+Gui, 33:Add, Text, Section y+10 xs+10, %t_Lang003%:
+Gui, 33:Add, Edit, yp-3 xp+40 Limit Number W100 R1 vTE
+Gui, 33:Add, UpDown, 0x80 Range0-999999999 vTimesX, %TimesX%
+Gui, 33:Add, Text, yp+3 x+10 , %t_Lang004%
+Gui, 33:Add, Button, Default -Wrap xm W75 gEditMacroClose, %c_Lang020%
+Gui, 33:Show,, %w_Lang019%
+return
+
+33GuiClose:
+33GuiEscape:
+EditMacroClose:
+Gui, 33:Submit, NoHide
+Gui, 32:-Disabled
+Gui, 33:Destroy
+Gui, 32:Default
+LV_Modify(RowNumber, "", Macro, AutoKey, TimesX)
 return
 
 Edit:
