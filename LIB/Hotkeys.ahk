@@ -138,7 +138,7 @@ F11::GoSub, IECom
 F12::GoSub, SendMsg
 ~Enter::GoSub, EditButton
 
-#If WinActive("ahk_id " LVEditMacros)
+#If WinActive("ahk_id " LVEditMacros) && !InEdit
 
 Enter::GoSub, MacroListEdit
 

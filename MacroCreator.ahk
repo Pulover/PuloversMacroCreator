@@ -1894,6 +1894,26 @@ Tooltip
 return
 
 ExpEdit:
+Gui, 14:+OwnDialogs
+If (A_GuiEvent == "E")
+{
+	InEdit := 1
+,	EditRow := LV_GetNext(0, "Focused")
+,	LV_GetText(BeforeEdit, EditRow, 1)
+}
+If (A_GuiEvent == "e")
+{
+	InEdit := 0
+,	LV_GetText(AfterEdit, EditRow, 1)
+	Try
+		z_Check := VarSetCapacity(%AfterEdit%)
+	Catch
+	{
+		LV_Modify(EditRow, "", BeforeEdit)
+		MsgBox, 16, %d_Lang007%, %d_Lang049%
+		return
+	}
+}
 If (A_GuiEvent = "D")
 	LV_Rows.Drag()
 If (A_GuiEvent <> "DoubleClick")
@@ -1916,8 +1936,9 @@ Gui, 13:Add, Text, Section y+17 xs+10, %t_Lang003%:
 Gui, 13:Add, Edit, yp-3 xp+40 Limit Number W100 R1 vEx_TE
 Gui, 13:Add, UpDown, 0x80 Range0-999999999 vEx_TimesX, %Ex_TimesX%
 Gui, 13:Add, Text, yp+3 x+10 , %t_Lang004%
-Gui, 13:Add, Button, Section Default -Wrap xm W75 H23 gExpEditClose, %c_Lang020%
-Gui, 13:Add, Updown, ys x+145 W50 H20 Horz vExpSel gExpSelList Range0-1
+Gui, 13:Add, Button, Section Default -Wrap xm W75 H23 gExpEditOK, %c_Lang020%
+Gui, 13:Add, Button, -Wrap ys W75 H23 gExpEditCancel, %c_Lang021%
+Gui, 13:Add, Updown, ys x+60 W50 H20 Horz vExpSel gExpSelList Range0-1
 If InStr(KeybdList, Ex_AutoKey)
 	GuiControl, 13:ChooseString, Ex_AutoKey, %Ex_AutoKey%
 Else
@@ -1927,7 +1948,13 @@ return
 
 13GuiClose:
 13GuiEscape:
-ExpEditClose:
+ExpEditCancel:
+Gui, 14:-Disabled
+Gui, 13:Destroy
+Gui, 14:Default
+return
+
+ExpEditOK:
 Gui, 13:+OwnDialogs
 Gui, 13:Submit, NoHide
 Try
@@ -8367,8 +8394,8 @@ Loop, % TabCount - A_List
 ,	HistoryMacro%s_Tab% := HistoryMacro%n_Tab%
 	Gui, chMacro:ListView, InputList%s_Tab%
 	LV_Delete()
-	PMC.LVLoad("InputList" s_Tab, LV_Data)
-	Menu, CopyTo, Rename, % "Macro" n_Tab, Macro%s_Tab%
+,	PMC.LVLoad("InputList" s_Tab, LV_Data)
+	Labels .= TabGetText(TabSel, s_Tab) "|"
 	s_Tab++
 }
 Gui, chMacro:ListView, InputList%s_Tab%
@@ -8379,10 +8406,13 @@ If (A_List <> TabCount)
 	o_ManKey.Remove(A_List)
 	o_TimesG.Remove(A_List)
 }
-TabCount--
+Menu, CopyTo, DeleteAll
 s_List := ""
 Loop, %TabCount%
-	s_List .= "|Macro" A_Index
+	s_List .= (A_Index <> A_List) ? "|" (Title := TabGetText(TabSel, A_Index)) : ""
+TabCount--
+; Loop, %TabCount%
+; Menu, CopyTo, Rename, %Title%, Macro%s_Tab%
 Gui, chMacro:ListView, InputList%A_List%
 GuiControl, chMacro:, A_List, %s_List%
 GuiControl, chMacro:Choose, A_List, % (A_List < TabCount) ? A_List : TabCount
@@ -8761,7 +8791,7 @@ GoSub, SaveData
 Gui, 32:-MinimizeBox +owner1 +HwndLVEditMacros
 Gui, 1:+Disabled
 Gui, 32:Add, GroupBox, Section W450 H240
-Gui, 32:Add, ListView, ys+15 xs+10 W430 r10 hwndMacroL vMacroList gMacroList -ReadOnly NoSort, Macro|Play|Manual|Loop|Index
+Gui, 32:Add, ListView, ys+15 xs+10 W430 r10 hwndMacroL vMacroList gMacroList -ReadOnly NoSort AltSubmit, Macro|Play|Manual|Loop|Index
 Gui, 32:Add, Text, -Wrap W430, %t_Lang144%
 Gui, 32:Add, Button, -Wrap Section xm W75 H23 gEditMacrosOK, %c_Lang020%
 Gui, 32:Add, Button, -Wrap ys W75 H23 gEditMacrosCancel, %c_Lang021%
@@ -8818,6 +8848,26 @@ Gui, chMacro:Default
 return
 
 MacroList:
+Gui, 32:+OwnDialogs
+If (A_GuiEvent == "E")
+{
+	InEdit := 1
+,	EditRow := LV_GetNext(0, "Focused")
+,	LV_GetText(BeforeEdit, EditRow, 1)
+}
+If (A_GuiEvent == "e")
+{
+	InEdit := 0
+,	LV_GetText(AfterEdit, EditRow, 1)
+	Try
+		z_Check := VarSetCapacity(%AfterEdit%)
+	Catch
+	{
+		LV_Modify(EditRow, "", BeforeEdit)
+		MsgBox, 16, %d_Lang007%, %d_Lang049%
+		return
+	}
+}
 If (A_GuiEvent = "D")
 	LV_Rows.Drag()
 If (A_GuiEvent <> "DoubleClick")
@@ -8834,22 +8884,31 @@ RowNumber := LV_GetNext()
 Gui, 33:+owner32 +ToolWindow +Delimiter¢ +HwndLVEdit
 Gui, 32:Default
 Gui, 32:+Disabled
-Gui, 33:Add, Groupbox, Section xm W270 H130
-Gui, 33:Add, Edit, ys+15 xs+10 W250 vMacro, %Macro%
-Gui, 33:Add, Hotkey, W250 vAutoKey, %AutoKey%
-Gui, 33:Add, Hotkey, W250 vManKey, %ManKey%
-Gui, 33:Add, Text, Section y+10 xs+10, %t_Lang003%:
-Gui, 33:Add, Edit, yp-3 xp+40 Limit Number W100 R1 vTE
+Gui, 33:Add, Groupbox, Section xm W300 H130
+Gui, 33:Add, Edit, ys+15 xs+10 W280 vMacro, %Macro%
+Gui, 33:Add, Text, W70, %w_Lang005%
+Gui, 33:Add, Hotkey, yp x+0 W210 vAutoKey, %AutoKey%
+Gui, 33:Add, Text, y+5 xs+10 W70, %w_Lang007%
+Gui, 33:Add, Hotkey, yp x+0 W210 vManKey, %ManKey%
+Gui, 33:Add, Text, y+5 xs+10 W70, %t_Lang003%:
+Gui, 33:Add, Edit, yp x+0 Limit Number W100 R1 vTE
 Gui, 33:Add, UpDown, 0x80 Range0-999999999 vTimesX, %TimesX%
-Gui, 33:Add, Text, yp+3 x+10 , %t_Lang004%
-Gui, 33:Add, Button, Section Default -Wrap xm W75 H23 gEditMacroClose, %c_Lang020%
-Gui, 33:Add, Updown, ys x+145 W50 H20 Horz vEditSel gSelList Range0-1
+Gui, 33:Add, Text, yp+3 x+10 W100, %t_Lang004%
+Gui, 33:Add, Button, Section Default -Wrap xm W75 H23 gEditMacroOK, %c_Lang020%
+Gui, 33:Add, Button, Wrap ys W75 H23 gEditMacroCancel, %c_Lang021%
+Gui, 33:Add, Updown, ys x+90 W50 H20 Horz vEditSel gSelList Range0-1
 Gui, 33:Show,, %w_Lang019%
 return
 
 33GuiClose:
 33GuiEscape:
-EditMacroClose:
+EditMacroCancel:
+Gui, 32:-Disabled
+Gui, 33:Destroy
+Gui, 32:Default
+return
+
+EditMacroOK:
 Gui, 33:+OwnDialogs
 Gui, 33:Submit, NoHide
 Try
