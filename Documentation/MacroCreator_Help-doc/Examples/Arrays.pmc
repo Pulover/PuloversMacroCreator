@@ -1,4 +1,4 @@
-﻿[PMC Code]|F5||1|Window|1
+﻿[PMC Code]|F5||1|Window|1|Macro1
 1|[Assign Variable]|Z := 0|1|0|Variable|||||
 2|[Assign Variable]|S := 0|1|0|Variable|||||
 3|[Assign Variable]|X := 0|1|0|Variable|||||
@@ -6,20 +6,20 @@
 5|[LoopStart]|LoopStart|10|0|Loop|||||
 6|[Assign Variable]|X += 1|1|0|Variable|||||
 7|[Assign Variable]|Z := N[X]|1|0|Variable|Expression||||
-8|[Pause]|% N[X]|1|0|MsgBox|262209||||
+8|[Pause]|% N[X]|1|0|MsgBox|262208||||
 9|[Assign Variable]|S := %S%+%Z%|1|0|Variable|Expression||||
 10|[LoopEnd]|LoopEnd|1|0|Loop|||||
-11|[Pause]|%S%`,%X%`,%Z%|1|0|MsgBox|262209||||
-12|[Pause]|% N[4]|1|0|MsgBox|262209||||
+11|[Pause]|%S%`,%X%`,%Z%|1|0|MsgBox|262208||||
+12|[Pause]|% N[4]|1|0|MsgBox|262208||||
 13|[Assign Variable]|Y := N[4] + N[6]|1|0|Variable|Expression||||
-14|[Pause]|%Y%|1|0|MsgBox|262209||||
+14|[Pause]|%Y%|1|0|MsgBox|262208||||
 
-[PMC Code]|F3||1|Window|1
+[PMC Code]|F3||1|Window|1|Macro2
 1|[Assign Variable]|String := A¢B¢C¢D¢E|1|0|Variable|||||
 2|[Assign Variable]|Parameters := 5`,4`,3`,2`,1|1|0|Variable|||||
 3|StrSplit|Array := %String%, ¢|1|0|Variable|||||
 4|[LoopStart]|Parameters`, ``,`, |1|0|LoopParse|||||
 5|[Assign Variable]|ArO := Array[A_LoopField]|1|0|Variable|Expression||||
-6|[Pause]|Loop: %A_Index%`nArray[%A_LoopField%]: %ArO%|1|0|MsgBox|262209||||
+6|[Pause]|Loop: %A_Index%`nArray[%A_LoopField%]: %ArO%|1|0|MsgBox|262208||||
 7|[LoopEnd]|LoopEnd|1|0|Loop|||||
 

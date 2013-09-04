@@ -8090,7 +8090,7 @@ If (A_GuiEvent == "ColClick")
 {
 	If (A_EventInfo = 1)
 	{
-		ShowLoopIfMark := !ShowLoopIfMark
+		GoSub, ShowLoopIfMark
 		GoSub, RowCheck
 	}
 	Else If (A_EventInfo = 2)
@@ -8105,7 +8105,7 @@ If (A_GuiEvent == "ColClick")
 		}
 		Else
 		{
-			ShowActIdent := !ShowActIdent
+			GoSub, ShowActIdent
 			GoSub, RowCheck
 		}
 	}
@@ -8486,6 +8486,7 @@ GuiControl, chMacro:+Redraw, InputList%A_List%
 return
 
 DelLists:
+OnMessage(WM_NOTIFY, ""), LV_Colors.Detach(ListID%A_List%)
 Gui, chMacro:Default
 Loop, %TabCount%
 {

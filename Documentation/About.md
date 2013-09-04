@@ -55,6 +55,7 @@ Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jör
 * Paste command now works on mutiple selections.
 * Main window size, position and columns order are remembered.
 * Removed *MsgBox* command from *Run* command window.
+* Removed automatic *Cancel* button handling for *MsgBox* for compatibility with new options.
 * Fixed *ErrorLevel* variable results for commands in playback.
 * Fixed automatic comma escaping in *Run* command window.
 * Fixed Media keys not being recorded/captured.
