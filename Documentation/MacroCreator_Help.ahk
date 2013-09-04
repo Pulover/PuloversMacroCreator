@@ -189,7 +189,7 @@
 		Title - The title of the message box window.
 		Icon - Sets the icon to be shown on the Message Box.
 		Always On Top - Sets the message to stay on top of other windows.
-		Buttons - Sets which buttons will show in the message box.
+		Buttons - Sets which buttons will be shown on the message box.
 		Add "If Statement" - Automatically adds an *If Message Box* statement below the command. You may select a range of rows to be wrapped by the statement block.
 
 	Extra:
@@ -288,6 +288,7 @@
 			To execute a different action Select 'Continue' (or 'Break' to exit the command's loop) and use the 'If Image/Pixel Found' option in the If Statements window.
 		If not found / Error - Selects an action to execute when an image/pixel is not found or if the command finds an error.  
 			To execute a different action Select 'Continue' (or 'Break' to exit the command's loop) and use the 'If Image/Pixel Not Found' option in the If Statements window.
+		Add "If Statement" - Automatically adds an *If Image/Pixel Found* statement below the command. You may select a range of rows to be wrapped by the statement block.
 		Preview - Previews the selected pixel to search.
 		Coord - Sets coordinate mode for the search to be relative to either the active window or the screen.
 		Variations - Specify for n a number between 0 and 255 (inclusive) to indicate the allowed number of shades of variation in either direction for the intensity of the red, green, and blue components of each pixel's color.
