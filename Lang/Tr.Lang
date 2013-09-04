@@ -31,7 +31,7 @@
 	i_Lang002 =	&Metin
 	i_Lang003 =	&Kontrol
 	i_Lang004 =	&Durma
-	i_Lang005 =	M&esaj
+	i_Lang005 =	M&esaj Kutusu
 	i_Lang006 =	&Anahtar Bekleyin
 	i_Lang007 =	&Pencere
 	i_Lang008 =	&Görüntü / Piksel Arama
@@ -47,6 +47,7 @@
 	i_Lang018 =	Kom&ut Dosyası Çalıştırmak
 	i_Lang019 =	&Windows Iletileri
 	i_Lang020 =	&(Ctrl+Shift+F) bir komut bul
+		
 		
 ; Select Sub Menu		
 	s_Lang001 =	&Tümünü Seç
@@ -196,7 +197,7 @@
 	w_Lang052 =	(unused)
 	w_Lang053 =	Kontrol (F4)
 	w_Lang054 =	Durma (F5)
-	w_Lang055 =	Mesaj (Shift+F5)
+	w_Lang055 =	Mesaj Kutusu (Shift+F5)
 	w_Lang056 =	Anahtar Bekleyin (Control+F5)
 	w_Lang057 =	Pencere (F6)
 	w_Lang058 =	Görüntü / Piksel Arama (F7)

@@ -31,7 +31,7 @@
 	i_Lang002 =	&Texte
 	i_Lang003 =	&Contrôler
 	i_Lang004 =	&Pause
-	i_Lang005 =	&Un Message
+	i_Lang005 =	&Message Box
 	i_Lang006 =	&Attente Touche
 	i_Lang007 =	&Fenêtre
 	i_Lang008 =	&Image / Pas De Pixel Recherche
@@ -43,10 +43,11 @@
 	i_Lang014 =	&Variables
 	i_Lang015 =	F&onctions
 	i_Lang016 =	I&nternet Explorer
-	i_Lang017 =	CO&M Interface
+	i_Lang017 =	COM Inte&rface
 	i_Lang018 =	E&xécuter Scriplet
 	i_Lang019 =	Messa&ges De Windows
-	i_Lang020 =	T&rouvez une commande
+	i_Lang020 =	Tro&uvez une commande
+		
 		
 ; Select Sub Menu		
 	s_Lang001 =	&Sélectionner tout
@@ -196,7 +197,7 @@
 	w_Lang052 =	(unused)
 	w_Lang053 =	Commande (F4)
 	w_Lang054 =	Pause (F5)
-	w_Lang055 =	Un message (Shift+F5)
+	w_Lang055 =	Message Box (Shift+F5)
 	w_Lang056 =	Attente Touche (Control+F5)
 	w_Lang057 =	Fenêtre (F6)
 	w_Lang058 =	Image / pas de pixel Recherche (F7)

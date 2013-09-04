@@ -31,7 +31,7 @@
 	i_Lang002 =	&Текст
 	i_Lang003 =	&Контрол
 	i_Lang004 =	&Пауза
-	i_Lang005 =	&Съобщение
+	i_Lang005 =	&Съобщение Box
 	i_Lang006 =	К&люч Изчакайте
 	i_Lang007 =	П&розорец
 	i_Lang008 =	&Image / Pixel Търсене
@@ -47,6 +47,7 @@
 	i_Lang018 =	Т&ичане Scriptlet
 	i_Lang019 =	&Windows Съобщения
 	i_Lang020 =	&Намерете командата
+		
 		
 ; Select Sub Menu		
 	s_Lang001 =	&Избери всички
@@ -196,7 +197,7 @@
 	w_Lang052 =	(unused)
 	w_Lang053 =	Control (F4)
 	w_Lang054 =	Пауза (F5)
-	w_Lang055 =	Съобщение (Shift+F5)
+	w_Lang055 =	Съобщение Box (Shift+F5)
 	w_Lang056 =	Ключ Изчакайте (Control+F5)
 	w_Lang057 =	Window (F6)
 	w_Lang058 =	Image / Pixel Търсене (F7)

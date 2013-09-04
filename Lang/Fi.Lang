@@ -31,7 +31,7 @@
 	i_Lang002 =	&Teksti
 	i_Lang003 =	&Ohjaa
 	i_Lang004 =	T&auko
-	i_Lang005 =	&Viesti
+	i_Lang005 =	&Message Box
 	i_Lang006 =	&Näppäintä Odotus
 	i_Lang007 =	&Ikkuna
 	i_Lang008 =	&Kuva / Pixel Search
@@ -40,13 +40,14 @@
 	i_Lang011 =	&Goto
 	i_Lang012 =	L&evy
 	i_Lang013 =	&Jos Lausumat
-	i_Lang014 =	&Muuttujat
+	i_Lang014 =	M&uuttujat
 	i_Lang015 =	Toiminnot
 	i_Lang016 =	Internet E&xplorer
 	i_Lang017 =	&COM-Liitäntä
 	i_Lang018 =	&Suorita Komentosarjasovelman
 	i_Lang019 =	&Windows Viestit
 	i_Lang020 =	Etsi komento
+		
 		
 ; Select Sub Menu		
 	s_Lang001 =	&Valitse kaikki
@@ -196,7 +197,7 @@
 	w_Lang052 =	(unused)
 	w_Lang053 =	Control (F4)
 	w_Lang054 =	Tauko (F5)
-	w_Lang055 =	Viesti (Shift+F5)
+	w_Lang055 =	Message Box (Shift+F5)
 	w_Lang056 =	Näppäintä Odotus (Control+F5)
 	w_Lang057 =	Window (F6)
 	w_Lang058 =	Kuva / Pixel Search (F7)

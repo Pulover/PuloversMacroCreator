@@ -31,7 +31,7 @@
 	i_Lang002 =	&Text
 	i_Lang003 =	&Steuerelement
 	i_Lang004 =	&Pause
-	i_Lang005 =	&Nachricht
+	i_Lang005 =	M&essagebox
 	i_Lang006 =	T&asten Erfassen
 	i_Lang007 =	&Fenster
 	i_Lang008 =	&Bild / Pixelsuche
@@ -41,12 +41,13 @@
 	i_Lang012 =	Spr&ungmarke
 	i_Lang013 =	&If Anweisung
 	i_Lang014 =	&Variablen
-	i_Lang015 =	Fun&ktionen
-	i_Lang016 =	Int&ernet Explorer
+	i_Lang015 =	Fu&nktionen
+	i_Lang016 =	Internet E&xplorer
 	i_Lang017 =	&COM-Schnittstelle
 	i_Lang018 =	Scriptlet Ausf&ühren
 	i_Lang019 =	&Windows-Messages
 	i_Lang020 =	Fin&den Sie einen Befehl
+		
 		
 ; Select Sub Menu		
 	s_Lang001 =	&Alles auswählen
@@ -196,7 +197,7 @@
 	w_Lang052 =	(unused)
 	w_Lang053 =	Steuerelement (F4)
 	w_Lang054 =	Pause (F5)
-	w_Lang055 =	Nachricht (Umschalt+F5)
+	w_Lang055 =	Messagebox (Umschalt+F5)
 	w_Lang056 =	Taste erfassen (Strg+F5)
 	w_Lang057 =	Fenster (F6)
 	w_Lang058 =	Bild/Pixelsuche (F7)

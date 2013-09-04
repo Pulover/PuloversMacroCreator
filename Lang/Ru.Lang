@@ -31,7 +31,7 @@
 	i_Lang002 =	&Текст
 	i_Lang003 =	&Управление
 	i_Lang004 =	&Пауза
-	i_Lang005 =	&Сообщение
+	i_Lang005 =	&Сообщение Box
 	i_Lang006 =	&Ключевые Ожидания
 	i_Lang007 =	&Окно
 	i_Lang008 =	&Изображение / Pixel Поиск
@@ -47,6 +47,7 @@
 	i_Lang018 =	В&ыполнить Скриптлете
 	i_Lang019 =	&Windows Messages
 	i_Lang020 =	Н&айти команду
+		
 		
 ; Select Sub Menu		
 	s_Lang001 =	&Выбрать все
@@ -196,7 +197,7 @@
 	w_Lang052 =	(unused)
 	w_Lang053 =	Управления (F4)
 	w_Lang054 =	Пауза (F5)
-	w_Lang055 =	Сообщение (Shift+F5)
+	w_Lang055 =	Сообщение Box (Shift+F5)
 	w_Lang056 =	Ключевые Ожидания (Control+F5)
 	w_Lang057 =	Window (F6)
 	w_Lang058 =	Изображение / Pixel поиска (F7)

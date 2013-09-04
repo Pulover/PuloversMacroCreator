@@ -27,26 +27,27 @@
 	f_Lang010 =	Tiada fail
 		
 ; Actions Sub Menu		
-	i_Lang001 =	Mouse
-	i_Lang002 =	Text
-	i_Lang003 =	Kawalan
-	i_Lang004 =	Jeda
-	i_Lang005 =	Mesej
-	i_Lang006 =	Tunggu Utama
-	i_Lang007 =	Tingkap
-	i_Lang008 =	Imej / Pixel Search
-	i_Lang009 =	Run / File / String / Misc.
-	i_Lang010 =	Loop
-	i_Lang011 =	Goto
-	i_Lang012 =	Label
-	i_Lang013 =	Jika Penyata
-	i_Lang014 =	Pembolehubah
-	i_Lang015 =	Fungsi
-	i_Lang016 =	Internet Explorer
-	i_Lang017 =	COM Muka
-	i_Lang018 =	Main Scriptlet
-	i_Lang019 =	Windows Mesej
-	i_Lang020 =	Cari perintah
+	i_Lang001 =	&Mouse
+	i_Lang002 =	&Text
+	i_Lang003 =	&Kawalan
+	i_Lang004 =	&Jeda
+	i_Lang005 =	&Box Mesej
+	i_Lang006 =	T&unggu Utama
+	i_Lang007 =	T&ingkap
+	i_Lang008 =	Im&ej / Pixel Search
+	i_Lang009 =	&Run / File / String / Misc.
+	i_Lang010 =	&Loop
+	i_Lang011 =	&Goto
+	i_Lang012 =	L&abel
+	i_Lang013 =	Jika &Penyata
+	i_Lang014 =	Pemb&olehubah
+	i_Lang015 =	&Fungsi
+	i_Lang016 =	I&nternet Explorer
+	i_Lang017 =	&COM Muka
+	i_Lang018 =	Main &Scriptlet
+	i_Lang019 =	&Windows Mesej
+	i_Lang020 =	Cari perinta&h
+		
 		
 ; Select Sub Menu		
 	s_Lang001 =	&Pilih Semua
@@ -196,7 +197,7 @@
 	w_Lang052 =	(Tidak digunakan)
 	w_Lang053 =	Kawalan (F4)
 	w_Lang054 =	Jeda (F5)
-	w_Lang055 =	Mesej (Shift+F5)
+	w_Lang055 =	Box Mesej (Shift+F5)
 	w_Lang056 =	Tunggu Utama (Control+F5)
 	w_Lang057 =	Tingkap (F6)
 	w_Lang058 =	Imej / Pixel Search (F7)

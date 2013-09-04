@@ -31,8 +31,8 @@
 	i_Lang002 =	&Κείμενο
 	i_Lang003 =	&Έλεγχος
 	i_Lang004 =	Π&αύση
-	i_Lang005 =	&Μήνυμα
-	i_Lang006 =	Κ&λειδί Αναμονή
+	i_Lang005 =	Π&λαίσιο Μηνύματος
+	i_Lang006 =	Κλ&ειδί Αναμονή
 	i_Lang007 =	Πα&ράθυρο
 	i_Lang008 =	&Εικόνα / Pixel Αναζήτηση
 	i_Lang009 =	&Run / Αρχείο / String / Διάφορα.
@@ -40,13 +40,14 @@
 	i_Lang011 =	&Goto
 	i_Lang012 =	L&abel
 	i_Lang013 =	&Αν Καταστάσεις
-	i_Lang014 =	Μ&εταβλητές
+	i_Lang014 =	&Μεταβλητές
 	i_Lang015 =	&Λειτουργίες
 	i_Lang016 =	&Internet Explorer
 	i_Lang017 =	&COM Interface
 	i_Lang018 =	Ε&κτέλεση Scriptlet
 	i_Lang019 =	&Τα Μηνύματα Των Windows
 	i_Lang020 =	&Βρείτε μια εντολή
+		
 		
 ; Select Sub Menu		
 	s_Lang001 =	&Επιλογή όλων
@@ -196,7 +197,7 @@
 	w_Lang052 =	(unused)
 	w_Lang053 =	Ελέγχου (F4)
 	w_Lang054 =	Παύση (F5)
-	w_Lang055 =	Μήνυμα (Shift+F5)
+	w_Lang055 =	Πλαίσιο Μηνύματος (Shift+F5)
 	w_Lang056 =	Κλειδί Αναμονή (Control+F5)
 	w_Lang057 =	Παράθυρο (F6)
 	w_Lang058 =	Εικόνα / Pixel αναζήτησης (F7)

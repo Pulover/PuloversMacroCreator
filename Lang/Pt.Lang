@@ -31,22 +31,23 @@
 	i_Lang002 =	&Texto
 	i_Lang003 =	&Controle
 	i_Lang004 =	&Pausa
-	i_Lang005 =	M&ensagem
-	i_Lang006 =	E&sperar Tecla
+	i_Lang005 =	C&aixa de Mensagem
+	i_Lang006 =	&Esperar Tecla
 	i_Lang007 =	&Janela
 	i_Lang008 =	P&rocurar Imagem / Pixel
 	i_Lang009 =	E&xecutar / Arquivos / Texto / Misc.
 	i_Lang010 =	&Loop
 	i_Lang011 =	P&ular
-	i_Lang012 =	R&ótulo
+	i_Lang012 =	Rótul&o
 	i_Lang013 =	&Declaração Se
 	i_Lang014 =	&Variáveis
 	i_Lang015 =	&Funções
 	i_Lang016 =	&Internet Explorer
 	i_Lang017 =	I&nterface COM
-	i_Lang018 =	Execut&ar Scriptlet
+	i_Lang018 =	Executar &Scriptlet
 	i_Lang019 =	Mensa&ges Do Windows
-	i_Lang020 =	L&ocalizar um comando
+	i_Lang020 =	Locali&zar um comando
+		
 		
 ; Select Sub Menu		
 	s_Lang001 =	Selecionar &Tudo
@@ -196,7 +197,7 @@
 	w_Lang052 =	(unused)
 	w_Lang053 =	Controle (F4)
 	w_Lang054 =	Pausa (F5)
-	w_Lang055 =	Mensagem (Shift+F5)
+	w_Lang055 =	Caixa de Mensagem (Shift+F5)
 	w_Lang056 =	Esperar Tecla (Control+F5)
 	w_Lang057 =	Janela (F6)
 	w_Lang058 =	Procurar Imagem / Pixel (F7)

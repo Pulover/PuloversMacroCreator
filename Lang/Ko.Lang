@@ -31,7 +31,7 @@
 	i_Lang002 =	본문
 	i_Lang003 =	제어
 	i_Lang004 =	중지
-	i_Lang005 =	메시지
+	i_Lang005 =	메시지 박스
 	i_Lang006 =	키 대기
 	i_Lang007 =	창
 	i_Lang008 =	이미지 / 픽셀 검색
@@ -47,6 +47,7 @@
 	i_Lang018 =	스크립틀릿을 실행
 	i_Lang019 =	윈도우 메시지
 	i_Lang020 =	명령 찾기
+		
 		
 ; Select Sub Menu		
 	s_Lang001 =	모두 선택
@@ -196,7 +197,7 @@
 	w_Lang052 =	(unused)
 	w_Lang053 =	컨트롤 (F4)
 	w_Lang054 =	중지
-	w_Lang055 =	메시지
+	w_Lang055 =	메시지 박스 (Shift+F5)
 	w_Lang056 =	키 대기
 	w_Lang057 =	창 (F6)
 	w_Lang058 =	이미지 / 픽셀 검색 (F7)

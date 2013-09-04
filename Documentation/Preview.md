@@ -21,9 +21,11 @@ Unchecked rows will be removed from preview script.
 
 **Auto-Refresh**: Automatically refreshes the code whenever the active Macro is changed.
 
-**Always On Top**: Keeps this window on top. This may be useful to code creation during Recording.
-
 **Indentation**: Uses Tab-Indentation for Loops and If Statements.
+
+**Line Wrap**: Automatically add a line break to long lines.
+
+**Always On Top**: Keeps this window on top. This may be useful to code creation during Recording.
 
 **Edit Script**: Exports the current preview to the Temp folder and opens it in the default editor.
 

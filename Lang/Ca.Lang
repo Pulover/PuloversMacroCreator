@@ -31,22 +31,23 @@
 	i_Lang002 =	&Text
 	i_Lang003 =	&Controlar
 	i_Lang004 =	&Pausa
-	i_Lang005 =	&Missatge
+	i_Lang005 =	&Bústia de missatges
 	i_Lang006 =	&Espera Clau
 	i_Lang007 =	&Finestra
 	i_Lang008 =	&Imatge / Píxel Cerca
 	i_Lang009 =	E&xecutar / Arxiu / Cadena / Misc.
 	i_Lang010 =	&Loop
 	i_Lang011 =	&Anar A
-	i_Lang012 =	La&bel
+	i_Lang012 =	Label
 	i_Lang013 =	&Si Els Estats
 	i_Lang014 =	&Variables
 	i_Lang015 =	F&uncions
 	i_Lang016 =	I&nterfície d'Internet Explorer
 	i_Lang017 =	C&OM
 	i_Lang018 =	Executar Scriptlet
-	i_Lang019 =	Missat&ges De Windows
+	i_Lang019 =	&Missatges De Windows
 	i_Lang020 =	Trobar una or&dre
+		
 		
 ; Select Sub Menu		
 	s_Lang001 =	&Selecciona tot
@@ -196,7 +197,7 @@
 	w_Lang052 =	(unused)
 	w_Lang053 =	Control de (F4)
 	w_Lang054 =	Pausa (F5)
-	w_Lang055 =	Missatge (Shift+F5)
+	w_Lang055 =	Bústia de missatges (Shift+F5)
 	w_Lang056 =	Espera Clau (Control+F5)
 	w_Lang057 =	Finestra (F6)
 	w_Lang058 =	Imatge / píxel motor (F7)

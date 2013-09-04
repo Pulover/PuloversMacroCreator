@@ -31,7 +31,7 @@
 	i_Lang002 =	&Tekst
 	i_Lang003 =	&Kontroll
 	i_Lang004 =	&Pause
-	i_Lang005 =	M&elding
+	i_Lang005 =	M&elding Box
 	i_Lang006 =	&Nøkkelen Vente
 	i_Lang007 =	&Vindu
 	i_Lang008 =	&Image / Pixel Søk
@@ -47,6 +47,7 @@
 	i_Lang018 =	Kj&ør Skriptlet
 	i_Lang019 =	&Windows-Meldinger
 	i_Lang020 =	Finn en k&ommando
+		
 		
 ; Select Sub Menu		
 	s_Lang001 =	&Velg Alle
@@ -196,7 +197,7 @@
 	w_Lang052 =	(unused)
 	w_Lang053 =	Kontroll (F4)
 	w_Lang054 =	Pause (F5)
-	w_Lang055 =	Melding (Shift+F5)
+	w_Lang055 =	Melding Box (Shift+F5)
 	w_Lang056 =	Nøkkelen Vente (Control+F5)
 	w_Lang057 =	Window (F6)
 	w_Lang058 =	Image / Pixel Søk (F7)

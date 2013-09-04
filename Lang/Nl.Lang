@@ -31,14 +31,14 @@
 	i_Lang002 =	&Tekst
 	i_Lang003 =	&Controle
 	i_Lang004 =	&Pauzeren
-	i_Lang005 =	&Bericht
+	i_Lang005 =	M&essage Box
 	i_Lang006 =	&Key Wachten
 	i_Lang007 =	&Venster
 	i_Lang008 =	&Afbeelding / Pixel Zoeken
 	i_Lang009 =	&Run / Bestand / String / Misc.
 	i_Lang010 =	&Loop
 	i_Lang011 =	&Ga Naar
-	i_Lang012 =	Lab&el
+	i_Lang012 =	La&bel
 	i_Lang013 =	Al&s Verklaringen
 	i_Lang014 =	Var&iabelen
 	i_Lang015 =	&Functies
@@ -47,6 +47,7 @@
 	i_Lang018 =	R&un Scriptlet
 	i_Lang019 =	&Windows Messages
 	i_Lang020 =	&Zoek een commando
+		
 		
 ; Select Sub Menu		
 	s_Lang001 =	&Alles selecteren
@@ -196,7 +197,7 @@
 	w_Lang052 =	(unused)
 	w_Lang053 =	Control (F4)
 	w_Lang054 =	Pauzeren (F5)
-	w_Lang055 =	Bericht (Shift+F5)
+	w_Lang055 =	Message Box (Shift+F5)
 	w_Lang056 =	Key Wachten (Control+F5)
 	w_Lang057 =	Window (F6)
 	w_Lang058 =	Afbeelding / Pixel Zoeken (F7)

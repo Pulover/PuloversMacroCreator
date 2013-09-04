@@ -10,7 +10,7 @@
 * [Text](Commands/Text.html)
 * [Control](Commands/Control.html)
 * [Pause](Commands/Pause.html)
-* [Message](Commands/Message.html)
+* [Message Box](Commands/Message_Box.html)
 * [KeyWait](Commands/KeyWait.html)
 * [Window](Commands/Window.html)
 * [Image Search](Commands/Image_Search.html)

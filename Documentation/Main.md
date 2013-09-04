@@ -141,6 +141,8 @@ When adding a new command either by Command Window, Capturing keys or the Insert
 
 **Save Current Macro**: Saves the currently selected Macro to a PMC file.
 
+**Edit Macros**: Opens the *Edit Macros* window where you can reorder and rename macros. Double click an item to change also hotkeys and loops.
+
 **Macro Tabs**: Macro Creator supports multiple Macros / Hotkeys. To create a new Macro, click the **+** button (Add Macro / Ctrl+T). When you add or select a Macro in the tab list the current Hotkeys for it are displayed on the top-right part of the window, you can change them by clicking the box and pressing the keys on the keyboard. To remove a Hotkey click the box and press Backspace. Macros which have no Hotkey or no line of command will not be activated for Playback.
 
 **Macro Lists**: All commands of the Macros are displayed in the ListView.  
@@ -281,6 +283,8 @@ You can load multiple files with multiple parameters.
 **Ctrl+W**: Close Macro
 
 **Ctrl+Shift+D**: Duplicate Macro
+
+**Ctrl+Shift+E**: Edit Macros
 
 **Ctrl+F**: Find / Replace (By Column)
 

@@ -31,10 +31,10 @@
 	i_Lang002 =	&Text
 	i_Lang003 =	&Control
 	i_Lang004 =	&Pause
-	i_Lang005 =	M&essage
+	i_Lang005 =	M&essage Box
 	i_Lang006 =	&Key Wait
 	i_Lang007 =	&Window
-	i_Lang008 =	Image / Pi&xel Search
+	i_Lang008 =	&Image / Pixel Search
 	i_Lang009 =	&Run / File / String / Misc.
 	i_Lang010 =	&Loop
 	i_Lang011 =	&Goto
@@ -46,7 +46,8 @@
 	i_Lang017 =	C&OM Interface
 	i_Lang018 =	Run &Scriptlet
 	i_Lang019 =	Win&dows Messages
-	i_Lang020 =	F&ind a command
+	i_Lang020 =	Find a command
+		
 		
 ; Select Sub Menu		
 	s_Lang001 =	Select &All
@@ -196,7 +197,7 @@
 	w_Lang052 =	(unused)
 	w_Lang053 =	Control (F4)
 	w_Lang054 =	Pause (F5)
-	w_Lang055 =	Message (Shift+F5)
+	w_Lang055 =	Message Box (Shift+F5)
 	w_Lang056 =	Key Wait (Control+F5) 
 	w_Lang057 =	Window (F6)
 	w_Lang058 =	Image / Pixel Search (F7)

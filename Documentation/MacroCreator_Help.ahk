@@ -134,10 +134,11 @@
 	Parameters:
 		Plain Text (Raw) - Uses *SendRaw*. The SendRaw command interprets all characters literally rather than translating {Enter} to an ENTER keystroke, ^c to Control-C, etc.
 		Text with commands - Uses *SendInput*. When not in raw mode, the following characters are treated as modifiers (these modifiers affect only the very next key): !, +, ^, #.
-		Set key delay - Sets the delay that will occur after each keystroke sent in *Text with commands* mode.
+		Set key delay - Uses *SendEvent*. The rate at which keystrokes are sent is determined by Key Delay.
 		Paste from Clipboard - Temporarily uses Clipboard to send the text. When the operation is completed, the script restores the original clipboard contents.
 		Paste on Control - Uses *Control, EditPaste*. Pastes String at the caret/insert position in an Edit control (this does not affect the contents of the clipboard).
 		SetText - Uses *ControlSetText*. Changes the text of a control.
+		Key delay - Sets the delay that will occur after each keystroke sent in *Text with commands* mode.
 		Insert KeyStroke - Opens the Insert Keystroke window where you can choose a keyboard key from a list. Double-click or click *Insert* to insert the key in the current cursor postion. The key will be inserted in AutoHotkey *Send* format, only valid for *Text with commands* option.
 
 	Extra:
@@ -169,6 +170,8 @@
 	Parameters:
 		Add Pause - The amount of time to pause (choose format in the options below).
 		Miliseconds / Seconds / Minutes - Sets format of time (seconds and minutes will be converted to miliseconds when the command is added).
+		Random delay - Sets the command use a random value between Minimum and Maximum instead of a predefined value.
+		Disable random delays for this command - If the global option for *Random delays" is active the command won't be affected.
 
 	Extra:
 		### Related
@@ -176,15 +179,18 @@
 */
 
 /*!
-	Function: Message()
+	Function: Message_Box()
 		Displays the specified text in a small window containing two default buttons (OK and Cancel).
 
 	Parameters:
 		Message - Text to display in the message. If the Cancel button is pressed, execution will stop.  
 			This field accepts [Variables & Functions](p8-Variables.html).
+		Timeout - Timeout in seconds.
+		Title - The title of the message box window.
 		Icon - Sets the icon to be shown on the Message Box.
 		Always On Top - Sets the message to stay on top of other windows.
-		Cancel - Adds a Cancel button to stop execution.
+		Buttons - Sets which buttons will show in the message box.
+		Add "If Statement" - Automatically adds an *If Message Box* statement below the command. You may select a range of rows to be wrapped by the statement block.
 
 	Extra:
 		### Related
@@ -197,6 +203,7 @@
 
 	Parameters:
 		Wait for Key - Single key to wait for. Macro will remain in sleep state until the selected key is pressed.
+		Select from list - List of keyboard keys.
 		Wait Timeout - Defines the limit of time to wait for the input.
 
 	Extra:
@@ -232,7 +239,7 @@
 			To execute a different action Select 'Continue' (or 'Break' to exit the command's loop) and use the 'If Image/Pixel Found' option in the If Statements window.
 		If not found / Error - Selects an action to execute when an image/pixel is not found or if the command finds an error.  
 			To execute a different action Select 'Continue' (or 'Break' to exit the command's loop) and use the 'If Image/Pixel Not Found' option in the If Statements window.
-		Add "If Statement" - Automatically adds an *If Image/Pixel Found* statement below the command. You may select a range of rows to be wrapped by the statement block.  
+		Add "If Statement" - Automatically adds an *If Image/Pixel Found* statement below the command. You may select a range of rows to be wrapped by the statement block.
 		Preview - Previews the selected image.  
 			Double-Click an image to open the file with the associated application.
 		Coord - Sets coordinate mode for the search to be relative to either the active window or the screen.

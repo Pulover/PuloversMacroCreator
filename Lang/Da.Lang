@@ -31,22 +31,23 @@
 	i_Lang002 =	&Tekst
 	i_Lang003 =	&Kontrol
 	i_Lang004 =	&Pause
-	i_Lang005 =	&Besked
+	i_Lang005 =	M&essage Box
 	i_Lang006 =	&Nøgle Vente
 	i_Lang007 =	&Vindue
-	i_Lang008 =	B&illede / Pixel Søg
+	i_Lang008 =	&Billede / Pixel Søg
 	i_Lang009 =	&Run / File / String / Misc.
 	i_Lang010 =	&Loop
 	i_Lang011 =	&Goto
 	i_Lang012 =	L&abel
 	i_Lang013 =	&Hvis Erklæringer
-	i_Lang014 =	Variabl&er
+	i_Lang014 =	Var&iabler
 	i_Lang015 =	&Funktioner
 	i_Lang016 =	Internet E&xplorer
 	i_Lang017 =	&COM Interface
 	i_Lang018 =	K&ør Scriptlet
 	i_Lang019 =	&Windows Messages
 	i_Lang020 =	Fin&d en kommando
+		
 		
 ; Select Sub Menu		
 	s_Lang001 =	&Vælg alt
@@ -196,7 +197,7 @@
 	w_Lang052 =	(unused)
 	w_Lang053 =	Control (F4)
 	w_Lang054 =	Pause (F5)
-	w_Lang055 =	Besked (Shift+F5)
+	w_Lang055 =	Message Box (Shift+F5)
 	w_Lang056 =	Nøgle Vente (Control+F5)
 	w_Lang057 =	Window (F6)
 	w_Lang058 =	Billede / Pixel Søg (F7)

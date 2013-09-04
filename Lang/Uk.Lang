@@ -31,9 +31,9 @@
 	i_Lang002 =	&Текст
 	i_Lang003 =	&Управління
 	i_Lang004 =	&Пауза
-	i_Lang005 =	П&овідомлення
+	i_Lang005 =	&Вікно повідомлення
 	i_Lang006 =	&Ключові Очікування
-	i_Lang007 =	&Вікно
+	i_Lang007 =	В&ікно
 	i_Lang008 =	&Зображення / Піксел Пошук
 	i_Lang009 =	&Run / Файл / String / Різне.
 	i_Lang010 =	&Loop
@@ -45,8 +45,9 @@
 	i_Lang016 =	&Internet Explorer
 	i_Lang017 =	&COM-Інтерфейсу
 	i_Lang018 =	В&иконати Скріптлете
-	i_Lang019 =	По&відомлення Windows
+	i_Lang019 =	П&овідомлення Windows
 	i_Lang020 =	З&найти команду
+		
 		
 ; Select Sub Menu		
 	s_Lang001 =	&Вибрати всі
@@ -196,7 +197,7 @@
 	w_Lang052 =	(unused)
 	w_Lang053 =	Управління (F4)
 	w_Lang054 =	Пауза (F5)
-	w_Lang055 =	Повідомлення (Shift+F5)
+	w_Lang055 =	Вікно повідомлення (Shift+F5)
 	w_Lang056 =	Ключові Очікування (Control+F5)
 	w_Lang057 =	Вікно (F6)
 	w_Lang058 =	Зображення / піксел пошуку (F7)

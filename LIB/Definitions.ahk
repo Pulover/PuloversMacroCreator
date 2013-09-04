@@ -74,7 +74,7 @@ ListCount1 := 0
 ,	Help23 := "ControlB"
 ,	Help24 := "IEComB"
 ,	ContHTitle := {	2: ["p6-Preview.html"]
-			,	3: ["Commands/Pause.html", "Commands/Message.html", "Commands/KeyWait.html"]
+			,	3: ["Commands/Pause.html", "Commands/Message_Box.html", "Commands/KeyWait.html"]
 			,	4: ["p7-Settings.html", "p7-Settings.html#misc.", "p7-Settings.html#user-global-variables"]
 			,	5: ["Commands/Mouse.html"]
 			,	8: ["Commands/Text.html"]

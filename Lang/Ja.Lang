@@ -31,7 +31,7 @@
 	i_Lang002 =	テキスト
 	i_Lang003 =	コントロール
 	i_Lang004 =	一時停止
-	i_Lang005 =	メッセージ
+	i_Lang005 =	メッセージボックス
 	i_Lang006 =	キー待ち
 	i_Lang007 =	ウィンドウ
 	i_Lang008 =	イメージ / ピクセル検索
@@ -47,6 +47,7 @@
 	i_Lang018 =	スクリプトレットを実行
 	i_Lang019 =	Windowsメッセージ
 	i_Lang020 =	コマンドを見つける
+		
 		
 ; Select Sub Menu		
 	s_Lang001 =	[すべて]を選択します
@@ -196,7 +197,7 @@
 	w_Lang052 =	(unused)
 	w_Lang053 =	コントロール（F4）
 	w_Lang054 =	一時停止 （F5）
-	w_Lang055 =	メッセージ （Shift+F5）
+	w_Lang055 =	メッセージボックス （Shift+F5）
 	w_Lang056 =	キー待ち （Control+F5）
 	w_Lang057 =	ウィンドウ（F6）
 	w_Lang058 =	イメージ/ピクセル検索（F7）

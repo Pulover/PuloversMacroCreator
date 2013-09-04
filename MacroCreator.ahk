@@ -4424,7 +4424,7 @@ Gui, 3:Add, Checkbox, -Wrap y+20 xm+10 W400 vNoRandom gNoRandom, %c_Lang183%
 ; MsgBox
 Gui, 3:Tab, 2
 Gui, 3:Add, GroupBox, Section ym xm W450 H130
-Gui, 3:Add, Text, -Wrap ys+10 xs+10 W260 R1, %c_Lang051%:
+Gui, 3:Add, Text, -Wrap ys+10 xs+10 W260 R1, %c_Lang015%:
 Gui, 3:Add, Edit, vMsgPt W430 r5
 Gui, 3:Add, Text, -Wrap W240 r1, %c_Lang025%
 Gui, 3:Add, Text, -Wrap yp x+0 W135 r1, %c_Lang177% (%c_Lang019%):
@@ -4550,7 +4550,7 @@ If InStr(A_ThisLabel, "MsgBox")
 If InStr(A_ThisLabel, "KeyWait")
 	GuiControl, 3:Choose, TabControl, 3
 SBShowTip(LTrim(A_ThisLabel, "Edit"))
-Gui, 3:Show,, % InStr(A_ThisLabel, "Sleep") ? c_Lang003 : InStr(A_ThisLabel, "MsgBox") ? c_Lang015 : c_Lang066
+Gui, 3:Show,, % InStr(A_ThisLabel, "Sleep") ? c_Lang003 : InStr(A_ThisLabel, "MsgBox") ? c_Lang051 : c_Lang066
 Input
 Tooltip
 return
@@ -9447,8 +9447,8 @@ RowSelection := LV_GetCount("Selected")
 Gui, 17:+owner1 -MinimizeBox
 Gui, chMacro:Default
 Gui, 1:+Disabled
-Gui, 17:Add, GroupBox, Section xm W320 H105, %t_Lang064%:
-Gui, 17:Add, Edit, ys+20 xs+10 vComm W300 r5
+Gui, 17:Add, GroupBox, Section xm W450 H105, %t_Lang064%:
+Gui, 17:Add, Edit, ys+20 xs+10 vComm W430 r5
 Gui, 17:Add, Button, -Wrap Section Default xm W75 H23 gCommOK, %c_Lang020%
 Gui, 17:Add, Button, -Wrap ys W75 H23 gCommCancel, %c_Lang021%
 If RowSelection = 1

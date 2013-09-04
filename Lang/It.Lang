@@ -31,7 +31,7 @@
 	i_Lang002 =	&Testo
 	i_Lang003 =	&Controllo
 	i_Lang004 =	&Pausa
-	i_Lang005 =	M&essaggio
+	i_Lang005 =	M&essage Box
 	i_Lang006 =	&Wait Chiave
 	i_Lang007 =	&Finestra
 	i_Lang008 =	&Immagine / Pixel Ricerca
@@ -47,6 +47,7 @@
 	i_Lang018 =	Esegui Scriptlet
 	i_Lang019 =	Mess&aggi Di Windows
 	i_Lang020 =	Tr&ova un comando
+		
 		
 ; Select Sub Menu		
 	s_Lang001 =	&Seleziona tutto
@@ -196,7 +197,7 @@
 	w_Lang052 =	(unused)
 	w_Lang053 =	Control (F4)
 	w_Lang054 =	Pausa (F5)
-	w_Lang055 =	Messaggio (Shift+F5)
+	w_Lang055 =	Message Box (Shift+F5)
 	w_Lang056 =	Wait Chiave (Control+F5)
 	w_Lang057 =	Finestra (F6)
 	w_Lang058 =	Immagine / Pixel Search (F7)

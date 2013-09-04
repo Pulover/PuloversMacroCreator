@@ -31,7 +31,7 @@
 	i_Lang002 =	文本
 	i_Lang003 =	控制
 	i_Lang004 =	暫停
-	i_Lang005 =	信息
+	i_Lang005 =	消息框
 	i_Lang006 =	關鍵的等待
 	i_Lang007 =	窗口
 	i_Lang008 =	圖片 / 像素搜索
@@ -47,6 +47,7 @@
 	i_Lang018 =	運行的Scriptlet
 	i_Lang019 =	Windows消息
 	i_Lang020 =	查找命令
+		
 		
 ; Select Sub Menu		
 	s_Lang001 =	全選
@@ -196,7 +197,7 @@
 	w_Lang052 =	(unused)
 	w_Lang053 =	控制（F4）
 	w_Lang054 =	暫停 （F5）
-	w_Lang055 =	信息 （Shift+F5）
+	w_Lang055 =	消息框 （Shift+F5）
 	w_Lang056 =	關鍵的等待 （Control+F5）
 	w_Lang057 =	窗口（F6）
 	w_Lang058 =	圖片/像素搜索（F7）

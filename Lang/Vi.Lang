@@ -31,8 +31,8 @@
 	i_Lang002 =	&Văn bản
 	i_Lang003 =	&Kiểm soát
 	i_Lang004 =	&Tạm dừng
-	i_Lang005 =	T&in nhắn
-	i_Lang006 =	C&hờ chính
+	i_Lang005 =	&Hộp tin nhắn
+	i_Lang006 =	Ch&ờ chính
 	i_Lang007 =	C&ửa sổ
 	i_Lang008 =	H&ình ảnh / Pixel Tìm kiếm
 	i_Lang009 =	Ch&ạy / File / String / Misc.
@@ -42,11 +42,12 @@
 	i_Lang013 =	N&ếu báo cáo
 	i_Lang014 =	&Biến
 	i_Lang015 =	Ch&ức năng
-	i_Lang016 =	Int&ernet Explorer
+	i_Lang016 =	&Internet Explorer
 	i_Lang017 =	C&OM giao diện
 	i_Lang018 =	Chạ&y Scriptlet
 	i_Lang019 =	Tin nh&ắn cửa sổ
 	i_Lang020 =	Tì&m một lệnh
+		
 		
 ; Select Sub Menu		
 	s_Lang001 =	&Chọn tất cả
@@ -196,7 +197,7 @@
 	w_Lang052 =	(Không sử dụng)
 	w_Lang053 =	Kiểm soát (F4)
 	w_Lang054 =	Tạm dừng (F5)
-	w_Lang055 =	Tin nhắn (Shift + F5)
+	w_Lang055 =	Hộp tin nhắn (Shift + F5)
 	w_Lang056 =	Chờ chính (Control + F5)
 	w_Lang057 =	Cửa sổ (F6)
 	w_Lang058 =	Hình ảnh / Pixel Tìm kiếm (F7)

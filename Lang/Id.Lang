@@ -31,7 +31,7 @@
 	i_Lang002 =	&Teks
 	i_Lang003 =	&Kontrol
 	i_Lang004 =	&Jeda
-	i_Lang005 =	&Pesan
+	i_Lang005 =	K&otak pesan
 	i_Lang006 =	T&unggu Key
 	i_Lang007 =	J&endela
 	i_Lang008 =	&Image / Pixel Pencarian
@@ -39,7 +39,7 @@
 	i_Lang010 =	&Loop
 	i_Lang011 =	&Goto
 	i_Lang012 =	La&bel
-	i_Lang013 =	Jika Lap&oran
+	i_Lang013 =	Jika La&poran
 	i_Lang014 =	&Variabel
 	i_Lang015 =	&Fungsi
 	i_Lang016 =	I&nternet Explorer
@@ -47,6 +47,7 @@
 	i_Lang018 =	Jalankan &Scriptlet
 	i_Lang019 =	Jen&dela Pesan
 	i_Lang020 =	Ca&ri perintah
+		
 		
 ; Select Sub Menu		
 	s_Lang001 =	&Pilih Semua
@@ -196,7 +197,7 @@
 	w_Lang052 =	(unused)
 	w_Lang053 =	Control (F4)
 	w_Lang054 =	Jeda (F5)
-	w_Lang055 =	Pesan (Shift+F5)
+	w_Lang055 =	Kotak pesan (Shift+F5)
 	w_Lang056 =	Tunggu Key (Control+F5)
 	w_Lang057 =	Window (F6)
 	w_Lang058 =	Image / Pixel Cari (F7)

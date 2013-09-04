@@ -57,8 +57,6 @@ See [Playback Page](p3-Playback.html#playback-options).
 
 ## General
 
-**Disable Window Shortcuts**: Disable Shortcuts for commands in the main window.
-
 **Allow Multiple Instances**: Determines whether Macro Creator is allowed to run concurrent instances.
 
 **Remove Theme from Toolbars**: Removes the current theme colors from the main window toolbars (you must restart the application to apply the changes).

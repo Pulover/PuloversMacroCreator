@@ -31,7 +31,7 @@
 	i_Lang002 =	&Text
 	i_Lang003 =	&Ovládání
 	i_Lang004 =	&Pauza
-	i_Lang005 =	&Zpráva
+	i_Lang005 =	M&essage Box
 	i_Lang006 =	&Klíč Čekání
 	i_Lang007 =	Ok&no
 	i_Lang008 =	O&brázek / Pixel Hledat
@@ -47,6 +47,7 @@
 	i_Lang018 =	Spustit Skript&y
 	i_Lang019 =	&Windows Zprávy
 	i_Lang020 =	Na&jít příkaz
+		
 		
 ; Select Sub Menu		
 	s_Lang001 =	&Vybrat vše
@@ -196,7 +197,7 @@
 	w_Lang052 =	(unused)
 	w_Lang053 =	Control (F4)
 	w_Lang054 =	Pauza (F5)
-	w_Lang055 =	Zpráva (Shift+F5)
+	w_Lang055 =	Message Box (Shift+F5)
 	w_Lang056 =	Klíč Čekání (Control+F5)
 	w_Lang057 =	Window (F6)
 	w_Lang058 =	Obrázek / Pixel Search (F7)
