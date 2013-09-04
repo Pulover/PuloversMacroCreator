@@ -89,7 +89,8 @@ ListCount1 := 0
 			,	23: ["Commands/Control.html"]
 			,	24: ["Commands/Internet_Explorer.html", "Commands/COM_Interface.html", "Commands/Run_Scriptlet.html"]
 			,	26: ["Commands/Find_a_Command.html"]
-			,	30: ["Commands/COM_Interface.html"] }
+			,	30: ["Commands/COM_Interface.html"]
+			,	34: ["Commands/Find_a_Command.html"] }
 
 ,	RecOptChecks := ["ClearNewList", "Strokes", "CaptKDn", "Mouse", "MScroll"
 			, "Moves", "TimedI", "WClass", "WTitle", "RecMouseCtrl", "RecKeybdCtrl"]
