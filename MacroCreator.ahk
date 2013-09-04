@@ -725,17 +725,13 @@ Else
 {
 	If (!DontShowAdm && !A_IsAdmin)
 	{
-		Gui 26:+LastFoundExist
-		IfWinExist
-			GoSub, TipClose
-		Gui, 26:-SysMenu +HwndTipScrID +owner1
-		Gui, 26:Color, FFFFFF
-		; Gui, 26:Font, s7
-		Gui, 26:Add, Pic, y+20 Icon80, %ResDllPath%
-		Gui, 26:Add, Text, yp x+10, %d_Lang058%`n
-		Gui, 26:Add, Checkbox, -Wrap W300 vDontShowAdm R1, %d_Lang053%
-		Gui, 26:Add, Button, -Wrap Default y+10 W90 H25 gTipClose2, %c_Lang020%
-		Gui, 26:Show,, %AppName%
+		Gui, 35:-SysMenu +HwndTipScrID +owner1
+		Gui, 35:Color, FFFFFF
+		Gui, 35:Add, Pic, y+20 Icon80, %ResDllPath%
+		Gui, 35:Add, Text, yp x+10, %d_Lang058%`n
+		Gui, 35:Add, Checkbox, -Wrap W300 vDontShowAdm R1, %d_Lang053%
+		Gui, 35:Add, Button, -Wrap Default y+10 W90 H23 gTipClose2, %c_Lang020%
+		Gui, 35:Show,, %AppName%
 		WinWaitClose, ahk_id %TipScrID%
 	}
 	If (ShowBarOnStart)
@@ -1094,11 +1090,10 @@ If !DontShowRec
 		GoSub, TipClose
 	Gui, 26:-SysMenu +HwndTipScrID
 	Gui, 26:Color, FFFFFF
-	; Gui, 26:Font, s7
 	Gui, 26:Add, Pic, y+20 Icon91, %ResDllPath%
 	Gui, 26:Add, Text, yp x+10, %d_Lang052%`n`n- %RecKey% %d_Lang026%`n- %RecNewKey% %d_Lang030%`n`n%d_Lang043%`n
 	Gui, 26:Add, Checkbox, -Wrap W300 vDontShowRec R1, %d_Lang053%
-	Gui, 26:Add, Button, -Wrap Default y+10 W90 H25 gTipClose, %c_Lang020%
+	Gui, 26:Add, Button, -Wrap Default y+10 W90 H23 gTipClose, %c_Lang020%
 	Gui, 26:Show,, %AppName%
 }
 If (ShowStep = 1)
@@ -1794,19 +1789,20 @@ SplitPath, CurrentFileName, name, dir, ext, name_no_ext, drive
 If !A_AhkPath
 	Exe_Exp := 0
 UserVarsList := User_Vars.Get()
-Gui, 14:+owner1 -MinimizeBox +E0x00000400 +HwndCmdWin
+Gui, 14:+owner1 -MinimizeBox +E0x00000400 +Delimiter¢ +HwndCmdWin
 Gui, 14:Default
 Gui, 1:+Disabled
 ; Macros
 Gui, 14:Add, GroupBox, Section W450 H190, %t_Lang002%:
-Gui, 14:Add, ListView, ys+20 xs+10 AltSubmit Checked W430 r5 vExpList gExpEdit NoSort -ReadOnly, Macro|Hotkey|Loop|BlockMouse
+Gui, 14:Add, ListView, ys+20 xs+10 AltSubmit Checked W430 r5 vExpList gExpEdit NoSort -ReadOnly, Macro ¢Hotkey ¢Loop ¢BlockMouse
 Gui, 14:Add, Text, -Wrap W430, %t_Lang144%
 Gui, 14:Add, Button, -Wrap W75 H23 gCheckAll, %t_Lang007%
 Gui, 14:Add, Button, -Wrap yp x+5 W75 H23 gUnCheckAll, %t_Lang008%
-Gui, 14:Add, Checkbox, -Wrap Checked%Ex_AbortKey% yp+5 x+15 W65 vEx_AbortKey gEx_Checks R1, %w_Lang008%:
-Gui, 14:Add, Edit, yp-5 x+0 W60 vAbortKey, %AbortKey%
+Gui, 14:Add, Text, yp x+5 h25 0x11
+Gui, 14:Add, Checkbox, -Wrap Checked%Ex_AbortKey% yp+5 x+0 W65 vEx_AbortKey gEx_Checks R1, %w_Lang008%:
+Gui, 14:Add, Combobox, yp-5 x+0 W60 vAbortKey, %KeybdList%
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_PauseKey% yp+5 x+10 W65 vEx_PauseKey R1, %t_Lang081%:
-Gui, 14:Add, Edit, yp-5 x+0 W60 vPauseKey, %PauseKey%
+Gui, 14:Add, Combobox, yp-5 x+0 W60 vPauseKey, %KeybdList%
 ; Export
 Gui, 14:Add, GroupBox, Section xm W450 H115, %t_Lang010%:
 Gui, 14:Add, Edit, ys+20 xs+10 W400 R1 vExpFile -Multi, %dir%\%name_no_ext%.ahk
@@ -1822,23 +1818,22 @@ Gui, 14:Add, Progress, ys W175 H20 vExpProgress
 ; Context
 Gui, 14:Add, GroupBox, Section y+25 xm W450 H80
 Gui, 14:Add, Checkbox, -Wrap Section ys xs vEx_IfDir gEx_Checks R1, %t_Lang009%:
-Gui, 14:Add, DDL, xs+10 W105 vEx_IfDirType Disabled, #IfWinActive||#IfWinNotActive|#IfWinExist|#IfNotWinExist
-Gui, 14:Add, DDL, yp x+250 W75 vIdent Disabled, Title||Class|Process|ID|PID
+Gui, 14:Add, DDL, xs+10 W105 vEx_IfDirType Disabled, #IfWinActive ¢ ¢#IfWinNotActive ¢#IfWinExist ¢#IfNotWinExist
+Gui, 14:Add, DDL, yp x+250 W75 vIdent Disabled, Title ¢ ¢Class ¢Process ¢ID ¢PID
 Gui, 14:Add, Edit, xs+10 W400 vTitle Disabled
 Gui, 14:Add, Button, -Wrap yp-1 x+0 W30 H23 vGetWin gGetWin Disabled, ...
 ; Options
 Gui, 14:Add, GroupBox, Section xm W450 H270, %w_Lang003%:
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_SM% ys+20 xs+10 W140 vEx_SM R1, SendMode
-Gui, 14:Add, DDL, yp-3 x+5 vSM w75, Input||Play|Event|InputThenPlay|
+Gui, 14:Add, DDL, yp-3 x+5 vSM w75, Input ¢ ¢Play ¢Event ¢InputThenPlay ¢
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_SI% y+5 xs+10 W140 vEx_SI R1, #SingleInstance
-Gui, 14:Add, DDL, yp-3 x+5 vSI w75, Force|Ignore||Off|
+Gui, 14:Add, DDL, yp-3 x+5 vSI w75, Force ¢Ignore ¢ ¢Off ¢
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_ST% y+5 xs+10 W140 vEx_ST R1, SetTitleMatchMode
-Gui, 14:Add, DDL, yp-3 x+5 vST w75, 1|2||3|RegEx|
+Gui, 14:Add, DDL, yp-3 x+5 vST w75, 1 ¢2 ¢ ¢3 ¢RegEx ¢
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_DH% y+5 xs+10 W220 vEx_DH R1, DetectHiddenWindows
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_AF% y+8 W220 vEx_AF R1, #WinActivateForce
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_PT% y+8 W220 vEx_PT R1, #Persistent
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_HK% y+8 W220 vEx_HK R1, #UseHook
-
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_SK% ys+15 xs+245 W165 vEx_SK R1, SetKeyDelay
 Gui, 14:Add, Edit, yp-3 xp+165 W30 vSK, %SK%
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_MD% y+5 xs+245 W165 vEx_MD R1, SetMouseDelay
@@ -1852,11 +1847,10 @@ Gui, 14:Add, Edit, yp-3 xp+165 W30 vSB, %SB%
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_MT% y+5 xs+245 W165 vEx_MT R1, #MaxThreadsPerHotkey
 Gui, 14:Add, Edit, yp-3 xp+165 W30 vMT, %MT%
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_NT% y+5 xs+245 W165 vEx_NT R1, #NoTrayIcon
-
 Gui, 14:Add, Text, y+10 xs+10 W430 H2 0x10
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_IN% y+10 xs+10 W230 vEx_IN R1, `#`Include (%t_Lang087%)
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_UV% yp x+5 W165 vEx_UV gEx_Checks R1, Global Variables
-Gui, 14:Add, Button, yp-5 xp+170 H25 W25 hwndEx_EdVars vEx_EdVars gVarsTree Disabled
+Gui, 14:Add, Button, yp-5 xp+170 H23 W25 hwndEx_EdVars vEx_EdVars gVarsTree Disabled
 	ILButton(Ex_EdVars, ResDllPath ":" 74)
 Gui, 14:Add, Text, y+5 xs+10 W80, %t_Lang101%:
 Gui, 14:Add, Text, yp xs+90 W50, %t_Lang102%
@@ -1865,6 +1859,8 @@ Gui, 14:Add, Text, yp+10 xs+350 W50, %t_Lang103%
 Gui, 14:Add, Text, y+20 xs+10 W105, COM Objects:
 Gui, 14:Add, Radio, -Wrap Checked%ComCr% yp x+5 W120 vComCr R1, ComObjCreate
 Gui, 14:Add, Radio, -Wrap Checked%ComAc% yp x+5 W120 vComAc R1, ComObjActive
+GuiControl, 14:ChooseString, AbortKey, %AbortKey%
+GuiControl, 14:ChooseString, PauseKey, %PauseKey%
 GuiControl, 14:ChooseString, SM, %SM%
 GuiControl, 14:ChooseString, SI, %SI%
 GuiControl, 14:ChooseString, ST, %ST%
@@ -1937,10 +1933,7 @@ Gui, 13:Add, Text, yp+3 x+10 , %t_Lang004%
 Gui, 13:Add, Button, Section Default -Wrap xm W75 H23 gExpEditOK, %c_Lang020%
 Gui, 13:Add, Button, -Wrap ys W75 H23 gExpEditCancel, %c_Lang021%
 Gui, 13:Add, Updown, ys x+60 W50 H20 Horz vExpSel gExpSelList Range0-1
-If InStr(KeybdList, Ex_AutoKey)
-	GuiControl, 13:ChooseString, Ex_AutoKey, %Ex_AutoKey%
-Else
-	GuiControl, 13:, Ex_AutoKey, %Ex_AutoKey%||
+GuiControl, 13:ChooseString, Ex_AutoKey, %Ex_AutoKey%
 Gui, 13:Show,, %w_Lang019%
 return
 
@@ -2697,25 +2690,22 @@ Menu, HelpMenu, % (AutoUpdate) ? "Check" : "Uncheck", %h_Lang004%
 return
 
 HelpAbout:
-Gui 26:+LastFoundExist
 Gui, 1:+Disabled
-IfWinExist
-    GoSub, TipClose
 OsBit := (A_PtrSize = 8) ? "x64" : "x86"
-Gui, 26:-SysMenu +HwndTipScrID +owner1
-Gui, 26:Color, FFFFFF
-Gui, 26:Add, Pic, W48 H48 y+20 Icon1, %DefaultIcon%
-Gui, 26:Font, Bold s12, Tahoma
-Gui, 26:Add, Text, yp x+10, PULOVER'S MACRO CREATOR
-Gui, 26:Font
-Gui, 26:Font, Italic, Tahoma
-Gui, 26:Add, Text, y+0 w300, The Complete Automation Tool
-Gui, 26:Font
-Gui, 26:Font,, Tahoma
-Gui, 26:Add, Link,, <a href="http://www.macrocreator.com">www.macrocreator.com</a>
-Gui, 26:Add, Text,, Author: Pulover [Rodolfo U. Batista]
-Gui, 26:Add, Link, y+0, <a href="mailto:pulover@macrocreator.com">pulover@macrocreator.com</a>
-Gui, 26:Add, Text, y+0,
+Gui, 34:-SysMenu +HwndTipScrID +owner1
+Gui, 34:Color, FFFFFF
+Gui, 34:Add, Pic, W48 H48 y+20 Icon1, %DefaultIcon%
+Gui, 34:Font, Bold s12, Tahoma
+Gui, 34:Add, Text, yp x+10, PULOVER'S MACRO CREATOR
+Gui, 34:Font
+Gui, 34:Font, Italic, Tahoma
+Gui, 34:Add, Text, y+0 w300, The Complete Automation Tool
+Gui, 34:Font
+Gui, 34:Font,, Tahoma
+Gui, 34:Add, Link,, <a href="http://www.macrocreator.com">www.macrocreator.com</a>
+Gui, 34:Add, Text,, Author: Pulover [Rodolfo U. Batista]
+Gui, 34:Add, Link, y+0, <a href="mailto:pulover@macrocreator.com">pulover@macrocreator.com</a>
+Gui, 34:Add, Text, y+0,
 (
 Copyright © 2012-2013 Rodolfo U. Batista
 
@@ -2723,12 +2713,12 @@ Version: %CurrentVersion% (%OsBit%)
 Release Date: %ReleaseDate%
 AutoHotkey Version: %A_AhkVersion%
 )
-Gui, 26:Add, Link, y+0, Software Licence: <a href="http://www.gnu.org/licenses/gpl-3.0.txt">GNU General Public License</a>
-Gui, 26:Font, Bold, Tahoma
-Gui, 26:Font
-Gui, 26:Add, Groupbox, Section W360 H130 Center, Thanks to
-Gui, 26:Font,, Tahoma
-Gui, 26:Add, Edit, ys+20 xs+10 W340 H100 ReadOnly -E0x200,
+Gui, 34:Add, Link, y+0, Software Licence: <a href="http://www.gnu.org/licenses/gpl-3.0.txt">GNU General Public License</a>
+Gui, 34:Font, Bold, Tahoma
+Gui, 34:Font
+Gui, 34:Add, Groupbox, Section W360 H130 Center, Thanks to
+Gui, 34:Font,, Tahoma
+Gui, 34:Add, Edit, ys+20 xs+10 W340 H100 ReadOnly -E0x200,
 (
 Chris and Lexikos for AutoHotkey.
 tic (Tariq Porter) for his GDI+ Library.
@@ -2746,8 +2736,8 @@ fincs for GenDocs.
 T800 for Html Help utils.
 Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jörg Schmalenberger (German).
 )
-Gui, 26:Add, Groupbox, Section xm+58 W360 H130 Center, GNU General Public License
-Gui, 26:Add, Edit, ys+20 xs+10 W340 H100 ReadOnly -E0x200,
+Gui, 34:Add, Groupbox, Section xm+58 W360 H130 Center, GNU General Public License
+Gui, 34:Add, Edit, ys+20 xs+10 W340 H100 ReadOnly -E0x200,
 (
 This program is free software, and you are welcome to redistribute it under  the terms of the GNU General Public License as published by the Free Software Foundation; either version 3 of the License, or any later version.
 
@@ -2755,16 +2745,16 @@ This program comes with ABSOLUTELY NO WARRANTY; for details see GNU General Publ
 
 You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 )
-Gui, 26:Font
-Gui, 26:Add, Button, -Wrap Default y+20 xp-10 W80 H23 gTipClose, %c_Lang020%
-Gui, 26:Font, Bold, Tahoma
-Gui, 26:Add, Text, yp-3 xm+380 H25 Center Hidden vHolderStatic, %m_Lang009%
-GuiControlGet, Hold, 26:Pos, HolderStatic
-Gui, 26:Add, Progress, % "x" 410 - HoldW " yp wp+20 hp BackgroundF68C06 vProgStatic Disabled"
-Gui, 26:Add, Text, xp yp wp hp Border cWhite Center 0x200 BackgroundTrans vDonateStatic gDonatePayPal, %m_Lang009%
-Gui, 26:Font
-GuiControl, 26:Focus, %c_Lang020%
-Gui, 26:Show, W460, %t_Lang076%
+Gui, 34:Font
+Gui, 34:Add, Button, -Wrap Default y+20 xp-10 W80 H23 gTipsClose, %c_Lang020%
+Gui, 34:Font, Bold, Tahoma
+Gui, 34:Add, Text, yp-3 xm+380 H25 Center Hidden vHolderStatic, %m_Lang009%
+GuiControlGet, Hold, 34:Pos, HolderStatic
+Gui, 34:Add, Progress, % "x" 410 - HoldW " yp wp+20 hp BackgroundF68C06 vProgStatic Disabled"
+Gui, 34:Add, Text, xp yp wp hp Border cWhite Center 0x200 BackgroundTrans vDonateStatic gDonatePayPal, %m_Lang009%
+Gui, 34:Font
+GuiControl, 34:Focus, %c_Lang020%
+Gui, 34:Show, W460, %t_Lang076%
 hCurs := DllCall("LoadCursor", "Int", 0, "Int", 32649, "UInt")
 return
 
@@ -5463,9 +5453,9 @@ Gui, 19:Add, Text, yp x+15, Y:
 Gui, 19:Add, Edit, yp x+5 vePosY W60, %A_ScreenHeight%
 Gui, 19:Add, Radio, -Wrap Checked y+10 xs+10 W90 vImageS gImageS R1, %c_Lang063%
 Gui, 19:Add, Radio, -Wrap yp xs+145 W90 vPixelS gPixelS R1, %c_Lang064%
-Gui, 19:Add, Button, -Wrap yp-1 xs+115 W25 H25 hwndScreenshot vScreenshot gScreenshot ;, %c_Lang065%
+Gui, 19:Add, Button, -Wrap yp-1 xs+115 W25 H23 hwndScreenshot vScreenshot gScreenshot ;, %c_Lang065%
 	ILButton(Screenshot, ResDllPath ":" 61)
-Gui, 19:Add, Button, -Wrap yp xs+240 W25 H25 hwndColorPick vColorPick gSearchImg Disabled
+Gui, 19:Add, Button, -Wrap yp xs+240 W25 H23 hwndColorPick vColorPick gSearchImg Disabled
 	ILButton(ColorPick, ResDllPath ":" 3)
 Gui, 19:Add, Edit, y+10 xs+10 vImgFile W225 R1 -Multi
 Gui, 19:Add, Button, -Wrap yp-1 x+0 W30 H23 vSearchImg gSearchImg, ...
@@ -7003,7 +6993,7 @@ Gui, 24:Add, Text, Section ys+35 xm+10 W250 vValueT, %c_Lang056%:
 Gui, 24:Add, Edit, yp+20 xs W430 R4 vValue
 Gui, 24:Add, Text, y+10 W55, %c_Lang005%:
 Gui, 24:Add, DDL, yp-2 xp+60 W340 vIEWindows AltSubmit, %IEWindows%
-Gui, 24:Add, Button, -Wrap yp-1 x+5 W25 H25 hwndRefreshIEW vRefreshIEW gRefreshIEW
+Gui, 24:Add, Button, -Wrap yp-1 x+5 W25 H23 hwndRefreshIEW vRefreshIEW gRefreshIEW
 	ILButton(RefreshIEW, ResDllPath ":" 37)
 ; Gui, 24:Add, Text, Section ym+20 xm+180 W215 R4 vComTip
 Gui, 24:Add, Button, -Wrap Section Default ym+270 xm W75 H23 gIEComOK, %c_Lang020%
@@ -7021,7 +7011,7 @@ Gui, 24:Add, Text, x+5 W100, %c_Lang057%:
 Gui, 24:Add, Edit, x+5 W140 vVarName
 Gui, 24:Add, Text, y+5 xs+10 W200, %c_Lang101%:
 Gui, 24:Add, Edit, y+5 xs+10 W430 R5 vComSc gComSc
-Gui, 24:Add, Button, -Wrap y+2 xs+415 W25 H25 hwndExpView vExpView gExpView
+Gui, 24:Add, Button, -Wrap y+2 xs+415 W25 H23 hwndExpView vExpView gExpView
 	ILButton(ExpView, ResDllPath ":" 17)
 Gui, 24:Add, Button, -Wrap Section Default ym+270 xm W75 H23 gComOK, %c_Lang020%
 Gui, 24:Add, Button, -Wrap ys xs+170 W75 H23 vComApply gComApply Disabled, %c_Lang131%
@@ -7035,7 +7025,7 @@ Gui, 24:Add, Edit, ys+35 xs+10 W430 R10 vScLet
 Gui, 24:Add, Text, W100, %c_Lang157%:
 Gui, 24:Add, Radio, -Wrap Checked yp x+5 W100 vRunVB R1, VBScript
 Gui, 24:Add, Radio, -Wrap x+5 W100 vRunJS R1, JScript
-Gui, 24:Add, Button, -Wrap yp-2 xs+415 W25 H25 hwndExpView2 vExpView2 gExpView
+Gui, 24:Add, Button, -Wrap yp-2 xs+415 W25 H23 hwndExpView2 vExpView2 gExpView
 	ILButton(ExpView2, ResDllPath ":" 17)
 Gui, 24:Add, Button, -Wrap Section Default ym+270 xm W75 H23 gScLetOK, %c_Lang020%
 Gui, 24:Add, Button, -Wrap ys xs+170 W75 H23 vScLetApply gScLetApply Disabled, %c_Lang131%
@@ -7600,6 +7590,7 @@ Else
 return
 
 26GuiEscape:
+26GuiClose:
 TipClose:
 Gui, 26:Submit
 Gui, 26:Destroy
@@ -7607,17 +7598,11 @@ Gui, 1:-Disabled
 WinActivate,,, ahk_id %PMCWinID%
 return
 
+35GuiEscape:
+35GuiClose:
 TipClose2:
-Gui, 26:Submit
-Gui, 26:Destroy
-return
-
-26GuiClose:
-TipClose3:
-NextTip++
-Gui, 26:Submit
-Gui, 26:Destroy
-Gui, 1:-Disabled
+Gui, 35:Submit
+Gui, 35:Destroy
 return
 
 Welcome:
@@ -7654,66 +7639,71 @@ return
 
 CmdFind:
 ShowTips:
-Gui 26:+LastFoundExist
-IfWinExist
-	GoSub, TipClose
 If (NextTip > MaxTips)
 	NextTip := 1
-Gui, 26:-MinimizeBox +HwndStartTipID +owner1
+Gui, 34:+owner1 -MinimizeBox +E0x00000400 +HwndStartTipID
 Gui, 1:+Disabled
 If (A_ThisLabel <> "CmdFind")
 {
-	Gui, 26:Color, FFFFFF
-	Gui, 26:Font, Bold s10, Tahoma
-	Gui, 26:Add, Text, w220, %d_Lang072%
-	Gui, 26:Font
-	Gui, 26:Font,, Tahoma
-	Gui, 26:Add, Text, w220, %d_Lang069%
-	Gui, 26:Font
-	Gui, 26:Add, Button, Section -Wrap xm+60 W75 H23 gDonatePayPal, %d_Lang070%
-	Gui, 26:Add, Button, -Wrap ys W75 H23 gTipClose3, %d_Lang071%
-	Gui, 26:Add, Checkbox, -Wrap Checked%ShowTips% xm y+20 W220 vShowTips R1, %d_Lang067%
-	Gui, 26:Add, Text, x+10 ym h255 0x11
-	Gui, 26:Add, Pic, x+1 ym Icon73, %ResDllPath%
-	Gui, 26:Add, Text, Section yp x+10, %d_Lang068%%A_Space%
-	Gui, 26:Add, Text, yp x+0 vCurrTip, %NextTip%%A_Space%%A_Space%%A_Space%
-	Gui, 26:Add, Text, yp x+0, / %MaxTips%
-	Gui, 26:Add, Edit, xs W350 r6 vTipDisplay ReadOnly -0x200000 -E0x200, % StartTip_%NextTip%
-	Gui, 26:Add, Button, Section -Wrap y+0 W90 H25 vPTip gPrevTip, %d_Lang022%
-	Gui, 26:Add, Button, -Wrap yp x+5 W90 H25 vNTip gNextTip, %d_Lang021%
-	Gui, 26:Add, Text, xs-30 w380 0x10
+	Gui, 34:Color, FFFFFF
+	Gui, 34:Font, Bold s10, Tahoma
+	Gui, 34:Add, Text, w220, %d_Lang072%
+	Gui, 34:Font
+	Gui, 34:Font,, Tahoma
+	Gui, 34:Add, Text, w220, %d_Lang069%
+	Gui, 34:Font
+	Gui, 34:Add, Button, Section -Wrap xm+60 W75 H23 gDonatePayPal, %d_Lang070%
+	Gui, 34:Add, Button, -Wrap ys W75 H23 gTipsClose, %d_Lang071%
+	Gui, 34:Add, Checkbox, -Wrap Checked%ShowTips% xm y+20 W220 vShowTips R1, %d_Lang067%
+	Gui, 34:Add, Text, x+10 ym h255 0x11
+	Gui, 34:Add, Pic, x+1 ym Icon73, %ResDllPath%
+	Gui, 34:Add, Text, Section yp x+10, %d_Lang068%%A_Space%
+	Gui, 34:Add, Text, yp x+0 vCurrTip, %NextTip%%A_Space%%A_Space%%A_Space%
+	Gui, 34:Add, Text, yp x+0, / %MaxTips%
+	Gui, 34:Add, Edit, xs W350 r6 vTipDisplay ReadOnly -0x200000 -E0x200, % StartTip_%NextTip%
+	Gui, 34:Add, Button, Section -Wrap y+0 W90 H23 vPTip gPrevTip, %d_Lang022%
+	Gui, 34:Add, Button, -Wrap yp x+5 W90 H23 vNTip gNextTip, %d_Lang021%
+	Gui, 34:Add, Text, xs-30 w380 0x10
 	If (NextTip = 1)
-		GuiControl, 26:Disable, PTip
-	Gui, 26:Font, Bold
-	Gui, 26:Add, Text, yp+5 -Wrap r1, %d_Lang074%:
-	Gui, 26:Font
-	Gui, 26:Add, Edit, -Wrap W380 r1 vFindCmd gFindCmd
-	Gui, 26:Add, ListView, y+0 W380 r4 hwndhFindRes vFindResult gFindResult AltSubmit -Multi -Hdr, Command|Description
+		GuiControl, 34:Disable, PTip
+	Gui, 34:Font, Bold
+	Gui, 34:Add, Text, yp+5 -Wrap r1, %d_Lang074%:
+	Gui, 34:Font
+	Gui, 34:Add, Edit, -Wrap W380 r1 vFindCmd gFindCmd
+	Gui, 34:Add, ListView, y+0 W380 r4 hwndhFindRes vFindResult gFindResult AltSubmit -Multi -Hdr, Command|Description
 }
 Else
 {
-	Gui, 26:+E0x00000400 +HwndStartTipID +owner1
-	Gui, 26:Add, Groupbox, Section yp+5 -Wrap W450 H190, %d_Lang074%:
-	Gui, 26:Add, Edit, -Wrap ys+15 xs+10 W430 r1 vFindCmd gFindCmd
-	Gui, 26:Add, ListView, r8 y+0 W430 hwndhFindRes vFindResult gFindResult AltSubmit -Multi -Hdr, Command|Description
-	Gui, 26:Add, StatusBar
-	Gui, 26:Default
+	Gui, 34:Add, Groupbox, Section yp+5 -Wrap W450 H190, %d_Lang074%:
+	Gui, 34:Add, Edit, -Wrap ys+15 xs+10 W430 r1 vFindCmd gFindCmd
+	Gui, 34:Add, ListView, r8 y+0 W430 hwndhFindRes vFindResult gFindResult AltSubmit -Multi -Hdr, Command|Description
+	Gui, 34:Add, StatusBar
+	Gui, 34:Default
 }
-GuiControl, 26:Focus, FindCmd
-Gui, 26:Show,, %AppName%
+GuiControl, 34:Focus, FindCmd
+Gui, 34:Show,, %AppName%
+return
+
+34GuiEscape:
+34GuiClose:
+TipsClose:
+NextTip++
+Gui, 1:-Disabled
+Gui, 34:Submit
+Gui, 34:Destroy
 return
 
 PrevTip:
 If (NextTip = 1)
 	return
 NextTip--
-GuiControl, 26:, CurrTip, %NextTip%
-GuiControl, 26:, TipDisplay, % StartTip_%NextTip%
-GuiControl, 26:Enable, NTip
+GuiControl, 34:, CurrTip, %NextTip%
+GuiControl, 34:, TipDisplay, % StartTip_%NextTip%
+GuiControl, 34:Enable, NTip
 If (NextTip = 1)
 {
-	GuiControl, 26:Disable, PTip
-	GuiControl, 26:Focus, NTip
+	GuiControl, 34:Disable, PTip
+	GuiControl, 34:Focus, NTip
 }
 return
 
@@ -7721,22 +7711,22 @@ NextTip:
 If (NextTip = MaxTips)
 	return
 NextTip++
-GuiControl, 26:, CurrTip, %NextTip%
-GuiControl, 26:, TipDisplay, % StartTip_%NextTip%
-GuiControl, 26:Enable, PTip
+GuiControl, 34:, CurrTip, %NextTip%
+GuiControl, 34:, TipDisplay, % StartTip_%NextTip%
+GuiControl, 34:Enable, PTip
 If (NextTip = MaxTips)
 {
-	GuiControl, 26:Disable, NTip
-	GuiControl, 26:Focus, PTip
+	GuiControl, 34:Disable, NTip
+	GuiControl, 34:Focus, PTip
 }
 return
 
 FindCmd:
-Gui, 26:Submit, NoHide
+Gui, 34:Submit, NoHide
 If (FindCmd = "")
 	return
 FoundResults := Find_Command(FindCmd)
-Gui, 26:Default
+Gui, 34:Default
 LV_Delete()
 For each, Line in FoundResults
 	LV_Add("", Line.Cmd, Line.Path)
@@ -7752,14 +7742,14 @@ ControlSend,, {Up}, ahk_id %hFindRes%
 return
 
 FindResult:
-Gui, 26:Default
+Gui, 34:Default
 LV_GetText(SelectedResult, LV_GetNext(), 1)
 SBShowTip(SelectedResult)
 If (A_GuiEvent <> "DoubleClick")
 	return
 GoResult:
-Gui, 26:Submit, NoHide
-Gui, 26:Default
+Gui, 34:Submit, NoHide
+Gui, 34:Default
 LV_GetText(GotoRes1, LV_GetNext(), 1), LV_GetText(GotoRes2, LV_GetNext(), 2)
 Loop, Parse, KeywordsList, |
 {
@@ -7771,7 +7761,7 @@ Loop, Parse, KeywordsList, |
 		If ((A_LoopField = GotoRes1) && (%SearchIn%_Path = GotoRes2))
 		{
 			s_Caller := "Find"
-			GoSub, TipClose3
+			GoSub, TipsClose
 			Goto, % %SearchIn%_Goto
 		}
 	}
@@ -7922,11 +7912,10 @@ If !DontShowPb
 		GoSub, TipClose
 	Gui, 26:-SysMenu +HwndTipScrID
 	Gui, 26:Color, FFFFFF
-	; Gui, 26:Font, s7
 	Gui, 26:Add, Pic, y+20 Icon91, %ResDllPath%
 	Gui, 26:Add, Text, yp x+10, %d_Lang051%`n`n%d_Lang043%`n
 	Gui, 26:Add, Checkbox, -Wrap W300 vDontShowPb R1, %d_Lang053%
-	Gui, 26:Add, Button, -Wrap Default y+10 W75 H25 gTipClose, %c_Lang020%
+	Gui, 26:Add, Button, -Wrap Default y+10 W75 H23 gTipClose, %c_Lang020%
 	Gui, 26:Show,, %AppName%
 }
 If (HideMainWin)
@@ -9458,8 +9447,8 @@ RowSelection := LV_GetCount("Selected")
 Gui, 17:+owner1 -MinimizeBox
 Gui, chMacro:Default
 Gui, 1:+Disabled
-Gui, 17:Add, GroupBox, Section xm W320 H110, %t_Lang064%:
-Gui, 17:Add, Edit, ys+25 xs+10 vComm W300 r5
+Gui, 17:Add, GroupBox, Section xm W320 H105, %t_Lang064%:
+Gui, 17:Add, Edit, ys+20 xs+10 vComm W300 r5
 Gui, 17:Add, Button, -Wrap Section Default xm W75 H23 gCommOK, %c_Lang020%
 Gui, 17:Add, Button, -Wrap ys W75 H23 gCommCancel, %c_Lang021%
 If RowSelection = 1
@@ -12187,7 +12176,7 @@ TB_Edit(tbEdit, "EditButton", "", "", w_Lang092)
 ; Preview
 TB_Edit(tbPrev, "PrevDock", "", "", t_Lang124)
 , TB_Edit(tbPrev, "PrevCopy", "", "", c_Lang023), TB_Edit(tbPrev, "PrevRefresh", "", "", t_Lang014)
-, TB_Edit(tbPrev, "AutoRefresh", "", "", t_Lang015), TB_Edit(tbPrev, "TextWrap", "", "", t_Lang052), TB_Edit(tbPrev, "TabIndent", "", "", t_Lang011), TB_Edit(tbPrev, "OnTop", "", "", t_Lang016)
+, TB_Edit(tbPrev, "AutoRefresh", "", "", t_Lang015), TB_Edit(tbPrev, "TabIndent", "", "", t_Lang011), TB_Edit(tbPrev, "TextWrap", "", "", t_Lang052), TB_Edit(tbPrev, "OnTop", "", "", t_Lang016)
 , TB_Edit(tbPrev, "EditScript", "", "", t_Lang138)
 , TB_Edit(tbPrevF, "PrevDock", "", "", t_Lang125)
 , TB_Edit(tbPrevF, "PrevCopy", "", "", c_Lang023), TB_Edit(tbPrevF, "PrevRefresh", "", "", t_Lang014)

@@ -264,7 +264,6 @@ Exit
 Up::GoSub, PrevResult
 Down::GoSub, NextResult
 Enter::GoSub, GoResult
-Esc::GoSub, TipClose3
 
 #If
 

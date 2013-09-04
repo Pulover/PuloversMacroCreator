@@ -832,7 +832,7 @@ DefaultBar := {FileOpt: "Enabled AutoSize", File: ["New=" w_Lang040 ":42", "Open
 														, "", "Import=" w_Lang075 ":29", "SaveCurrentList=" w_Lang076 ":68"]}
 FixedBar :=	{PrevOpt: "Enabled AutoSize", Preview: ["PrevDock=" t_Lang124 ":17"
 														, "", "PrevCopy=" c_Lang023 ":8", "PrevRefresh=" t_Lang014 ":37"
-														, "", "AutoRefresh=" t_Lang015 ":93", "TextWrap=" t_Lang052 ":99", "TabIndent=" t_Lang011 ":87", "OnTop=" t_Lang016 ":83"
+														, "", "AutoRefresh=" t_Lang015 ":93", "TabIndent=" t_Lang011 ":87", "TextWrap=" t_Lang052 ":99", "OnTop=" t_Lang016 ":83"
 														, "", "EditScript=" t_Lang138 ":14"]
 			, TextOpt: "Enabled AutoSize", Text: ["OpenT=" t_Lang126 ":43", "SaveT=" t_Lang127 ":60"
 														, "", "CutT=" t_Lang128 ":9", "CopyT=" t_Lang129 ":8", "PasteT=" t_Lang130 ":45"
@@ -842,7 +842,7 @@ FixedBar :=	{PrevOpt: "Enabled AutoSize", Preview: ["PrevDock=" t_Lang124 ":17"
 														, "", "OSClear=" t_Lang118 ":10"
 														, "", "ProgBarToggle=" t_Lang119 ":52"
 														, "", "SlowKeyToggle=" t_Lang120 ":64", "FastKeyToggle=" t_Lang121 ":86"
-														, "", "ToggleTB=" t_Lang122 ":81", "ShowHideTB=" t_Lang123 ":82"]}
+														, "", "ToggleTB=" t_Lang122 ":103", "ShowHideTB=" t_Lang123 ":82"]}
 
 TbFile_ID := 1, TbRecPlay_ID := 2, TbCommand_ID := 3, TbSettings_ID := 5, TbEdit_ID := 9
 
