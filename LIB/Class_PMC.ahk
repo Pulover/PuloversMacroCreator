@@ -32,7 +32,7 @@
 
 	Import(SelectedFile, DL="`n", New="1")
 	{
-		local FoundC, Labels
+		local FoundC, Labels, TabText
 
 		Gui, chMacro:Submit, NoHide
 		ColOrder := LVOrder_Get(10, ListID%A_List%)
@@ -60,8 +60,8 @@
 				TabCount++
 				Gui, chMacro:ListView, InputList%TabCount%
 				GuiCtrlAddTab(TabSel, "Macro" TabCount)
-			,	GuiAddLV(TabCount)
-				Menu, CopyTo, Add, Macro%TabCount%, CopyList
+			,	GuiAddLV(TabCount), CopyMenuLabels[TabCount] := "Macro" TabCount
+				Menu, CopyTo, Add, % CopyMenuLabels[TabCount], CopyList
 				PMC.LVLoad("InputList" TabCount, PmcCode[A_Index])
 				Gui, chMacro:ListView, InputList%TabCount%
 				ListCount%TabCount% := LV_GetCount()
@@ -79,7 +79,10 @@
 		If (TabCount = 0)
 			GoSub, TabPlus
 		Else
+		{
 			GuiControl, chMacro:, A_List, |%Labels%
+			GoSub, UpdateCopyTo
+		}
 		GoSub, SetFinishButtom
 		GuiControl, 1:, CoordTip, CoordMode: %CoordMouse%
 		Gui, 1:-Disabled

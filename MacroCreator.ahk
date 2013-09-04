@@ -1713,7 +1713,7 @@ Loop, %TabCount%
 	PMCSet := "[PMC Code]|" o_AutoKey[A_Index]
 	. "|" o_ManKey[A_Index] "|" o_TimesG[A_Index]
 	. "|" CoordMouse "|" OnFinishCode "|" TabGetText(TabSel, A_Index) "`n"
-	LV_Data := PMCSet . PMC.LVGet("InputList" A_Index).Text . "`n"
+,	LV_Data := PMCSet . PMC.LVGet("InputList" A_Index).Text . "`n"
 	FileAppend, %LV_Data%, %CurrentFileName%
 }
 Gui, 1:Show, % ((WinExist("ahk_id" PMCWinID)) ? "NA" : "Hide"), %AppName% v%CurrentVersion% %CurrentFileName%
@@ -1741,7 +1741,7 @@ IfExist %ThisListFile%
 PMCSet := "[PMC Code]|" o_AutoKey[A_List]
 . "|" o_ManKey[A_List] "|" o_TimesG[A_List]
 . "|" CoordMouse "`n"
-LV_Data := PMCSet . PMC.LVGet("InputList" A_List).Text . "`n"
+,	LV_Data := PMCSet . PMC.LVGet("InputList" A_List).Text . "`n"
 FileAppend, %LV_Data%, %ThisListFile%
 GoSub, RecentFiles
 return
@@ -8360,7 +8360,8 @@ Gui, chMacro:ListView, InputList%A_List%
 GuiAddLV(TabCount)
 GuiControl, chMacro:Choose, A_List, %TabCount%
 GoSub, chMacroGuiSize
-Menu, CopyTo, Add, Macro%TabCount%, CopyList
+CopyMenuLabels[TabCount] := "Macro" TabCount
+Menu, CopyTo, Add, % CopyMenuLabels[TabCount], CopyList
 GuiControl, 28:+Range1-%TabCount%, OSHK
 
 TabSel:
@@ -8385,7 +8386,8 @@ Gui, chMacro:Submit, NoHide
 If (TabCount = 1)
 	return
 HistoryMacro%A_List% := ""
-Menu, CopyTo, Delete, Macro%A_List%
+Menu, CopyTo, Delete, % CopyMenuLabels[A_List]
+CopyMenuLabels.Remove(A_List)
 s_Tab := A_List
 Loop, % TabCount - A_List
 {
@@ -8395,8 +8397,8 @@ Loop, % TabCount - A_List
 	Gui, chMacro:ListView, InputList%s_Tab%
 	LV_Delete()
 ,	PMC.LVLoad("InputList" s_Tab, LV_Data)
-	Labels .= TabGetText(TabSel, s_Tab) "|"
-	s_Tab++
+,	Labels .= TabGetText(TabSel, s_Tab) "|"
+,	s_Tab++
 }
 Gui, chMacro:ListView, InputList%s_Tab%
 LV_Delete()
@@ -8406,13 +8408,10 @@ If (A_List <> TabCount)
 	o_ManKey.Remove(A_List)
 	o_TimesG.Remove(A_List)
 }
-Menu, CopyTo, DeleteAll
 s_List := ""
 Loop, %TabCount%
 	s_List .= (A_Index <> A_List) ? "|" (Title := TabGetText(TabSel, A_Index)) : ""
 TabCount--
-; Loop, %TabCount%
-; Menu, CopyTo, Rename, %Title%, Macro%s_Tab%
 Gui, chMacro:ListView, InputList%A_List%
 GuiControl, chMacro:, A_List, %s_List%
 GuiControl, chMacro:Choose, A_List, % (A_List < TabCount) ? A_List : TabCount
@@ -8497,9 +8496,10 @@ Loop, %TabCount%
 	Gui, chMacro:ListView, InputList%A_Index%
 	LV_Delete()
 	GuiControl, chMacro:+Redraw, InputList%A_Index%
-	Menu, CopyTo, Delete, Macro%A_Index%
+	Menu, CopyTo, Delete, % CopyMenuLabels[A_Index]
 }
-Menu, CopyTo, Add, Macro1, CopyList
+CopyMenuLabels[1] := "Macro1"
+Menu, CopyTo, Add, % CopyMenuLabels[1], CopyList
 return
 
 SelectAll:
@@ -8826,14 +8826,15 @@ Loop, %TabCount%
 	PMCSet := "[PMC Code]|" o_AutoKey[A_Index]
 	. "|" o_ManKey[A_Index] "|" o_TimesG[A_Index]
 	. "|" CoordMouse "|" OnFinishCode "`n"
-	LV_Data := PMCSet . PMC.LVGet("InputList" Index).Text . "`n"
-	Project.Insert(PMC.LVGet("InputList" Index))
+,	LV_Data := PMCSet . PMC.LVGet("InputList" Index).Text . "`n"
+,	Project.Insert(PMC.LVGet("InputList" Index))
 }
 Loop, %TabCount%
 	PMC.LVLoad("InputList" A_Index, Project[A_Index])
 GuiControl, chMacro:, A_List, |%Labels%
 GoSub, LoadData
 GoSub, RowCheck
+GoSub, UpdateCopyTo
 Gui, 1:-Disabled
 Gui, 32:Destroy
 Project := ""
@@ -11691,7 +11692,8 @@ Menu, SelectMenu, Add
 Menu, SelectMenu, Add, %s_Lang009%, SelType
 Menu, SelectMenu, Add, %s_Lang010%, :SelCmdMenu
 
-Menu, CopyTo, Add, Macro1, CopyList
+CopyMenuLabels[1] := "Macro1"
+Menu, CopyTo, Add, % CopyMenuLabels[1], CopyList
 
 Menu, EditMenu, Add, %m_Lang004%`t%_s%Enter, EditButton
 Menu, EditMenu, Add, %e_Lang001%`t%_s%Ctrl+D, Duplicate
@@ -11949,6 +11951,16 @@ Menu, Tray, Icon, %f_Lang002%, %ResDllPath%, 43
 Menu, Tray, Icon, %f_Lang003%, %ResDllPath%, 60
 Menu, Tray, Icon, %w_Lang003%, %ResDllPath%, 44
 Menu, Tray, Icon, %f_Lang009%, %ResDllPath%, 15
+return
+
+UpdateCopyTo:
+Loop, %TabCount%
+	Menu, CopyTo, Delete, % CopyMenuLabels[A_Index]
+Loop, %TabCount%
+{
+	CopyMenuLabels[A_Index] := TabGetText(TabSel, A_Index)
+	Menu, CopyTo, Add, % CopyMenuLabels[A_Index], CopyList
+}
 return
 
 ; Playback / Recording options menu:
