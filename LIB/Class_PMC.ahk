@@ -18,8 +18,9 @@
 				Loop, Parse, A_LoopReadLine, |
 					Col.Insert(A_LoopField)
 				Row.Insert(Col)
-				PmcCode[ID] := {Opt: Opt, Row: Row}
 			}
+			Else If (A_LoopReadLine = "")
+				PmcCode[ID] := {Opt: Opt, Row: Row}
 		}
 		If (ID = 0)
 		{

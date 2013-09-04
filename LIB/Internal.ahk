@@ -108,11 +108,6 @@ ShowContextHelp()
 		Menu, ToolbarMenu, Show
 		return
 	}
-	; Else If A_GuiControl not in MouseB,TextB,ControlB
-	; ,SpecialB,PauseB,WindowB,ImageB,RunB,ComLoopB
-	; ,IfStB,SendMsgB,IEComB,IfDirB
-		; return
-	; Menu, %A_GuiControl%, Show
 }
 
 CmdHelp()

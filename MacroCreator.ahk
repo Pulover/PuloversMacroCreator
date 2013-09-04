@@ -1708,8 +1708,6 @@ IfExist %CurrentFileName%
 Gui, chMacro:Default
 Loop, %TabCount%
 {
-	If (ListCount%A_Index% = 0)
-		continue
 	PMCSet := "[PMC Code]|" o_AutoKey[A_Index]
 	. "|" o_ManKey[A_Index] "|" o_TimesG[A_Index]
 	. "|" CoordMouse "|" OnFinishCode "|" TabGetText(TabSel, A_Index) "`n"
@@ -2172,7 +2170,7 @@ Loop, % LV_GetCount()
 	AllScripts .= Body "`n"
 	PMCSet := "[PMC Code]|" Ex_AutoKey
 	. "|" o_ManKey[RowNumber] "|" Ex_TimesX
-	. "|" CoordMouse "`n"
+	. "|" CoordMouse "|" OnFinishCode "|" TabGetText(TabSel, RowNumber) "`n"
 	PmcCode .= PMCSet . PMC.LVGet("InputList" RowNumber).Text . "`n"
 	If (Ex_IN)
 		IncList .= IncludeFiles(RowNumber, ListCount%RowNumber%)
@@ -8352,15 +8350,24 @@ TabPlus:
 Gui, 1:Submit, NoHide
 Gui, chMacro:Default
 Gui, chMacro:Submit, NoHide
-ColOrder := LVOrder_Get(10, ListID%A_List%), TabCount++
-,	GuiCtrlAddTab(TabSel, "Macro" TabCount)
+IColOrder := LVOrder_Get(10, ListID%A_List%), AllTabs := ""
+Loop, %TabCount%
+	AllTabs .= TabGetText(TabSel, A_Index) ","
+TabCount++
+Loop, %TabCount%
+{
+	TabName := "Macro" A_Index
+	If TabName not in %AllTabs%
+		break
+}
+GuiCtrlAddTab(TabSel, TabName)
 Gui, chMacro:ListView, InputList%TabCount%
 HistoryMacro%TabCount% := new LV_Rows(), HistoryMacro%TabCount%.Add()
 Gui, chMacro:ListView, InputList%A_List%
 GuiAddLV(TabCount)
 GuiControl, chMacro:Choose, A_List, %TabCount%
 GoSub, chMacroGuiSize
-CopyMenuLabels[TabCount] := "Macro" TabCount
+CopyMenuLabels[TabCount] := TabName
 Menu, CopyTo, Add, % CopyMenuLabels[TabCount], CopyList
 GuiControl, 28:+Range1-%TabCount%, OSHK
 
@@ -8816,18 +8823,16 @@ Loop, %TabCount%
 ,	LV_GetText(AutoKey, A_Index, 2)
 ,	LV_GetText(ManKey, A_Index, 3)
 ,	LV_GetText(TimesX, A_Index, 4)
-,	LV_GetText(Index, A_Index, 5)
-,	Labels .= ((Macro <> "") ? Macro : "Macro" Index) "|"
+,	LV_GetText(IndexN, A_Index, 5)
+,	Labels .= ((Macro <> "") ? Macro : "Macro" IndexN) "|"
 ,	o_AutoKey[A_Index] := AutoKey
 ,	o_ManKey[A_Index] := ManKey
 ,	o_TimesG[A_Index] := TimesX
-	If (ListCount%Index% = 0)
-		continue
 	PMCSet := "[PMC Code]|" o_AutoKey[A_Index]
 	. "|" o_ManKey[A_Index] "|" o_TimesG[A_Index]
 	. "|" CoordMouse "|" OnFinishCode "`n"
-,	LV_Data := PMCSet . PMC.LVGet("InputList" Index).Text . "`n"
-,	Project.Insert(PMC.LVGet("InputList" Index))
+,	LV_Data := PMCSet . PMC.LVGet("InputList" IndexN).Text . "`n"
+,	Project.Insert(PMC.LVGet("InputList" IndexN))
 }
 Loop, %TabCount%
 	PMC.LVLoad("InputList" A_Index, Project[A_Index])
@@ -11542,7 +11547,6 @@ If (WinExist("ahk_id " PMCOSC))
 return
 
 chMacroGuiSize:
-Critical
 GuiGetSize(GuiWidth, GuiHeight, "chMacro")
 GuiControl, chMacro:Move, InputList%A_List%, % "W" GuiWidth-15 "H" GuiHeight-35
 GuiControl, chMacro:Move, A_List, % "W" GuiWidth-15
