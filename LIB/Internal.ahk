@@ -142,8 +142,8 @@ CmdHelp()
 	Title := ContHTitle[Gui][Pag ? Pag : 1]
 	If (WinActive("A") <> StartTipID) && ((!Title) || (WinActive("A") <> CmdWin))
 		Title := "index.html"
-	IfExist, MacroCreator_Help.chm
-		Run, hh.exe mk:@MSITStore:MacroCreator_Help.chm::/%Title%
+	IfExist, %A_ScriptDir%\MacroCreator_Help.chm
+		Run, hh.exe mk:@MSITStore:%A_ScriptDir%\MacroCreator_Help.chm::/%Title%
 	Else
 		Run, http://www.macrocreator.com/Docs/%Title%
 	return 0
