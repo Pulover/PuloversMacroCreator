@@ -6,7 +6,7 @@
 ; pulover@macrocreator.com
 ; Home: http://www.macrocreator.com
 ; Forum: http://www.autohotkey.com/board/topic/79763-macro-creator
-; Version: 4.0.0
+; Version: 4.0.0 [Release Candidate]
 ; Release Date: September, 2013
 ; AutoHotkey Version: 1.1.13.00
 ; Copyright © 2012-2013 Rodolfo U. Batista
@@ -124,7 +124,7 @@ Loop
 		break
 }
 
-CurrentVersion := "4.0.0", ReleaseDate := "September, 2013"
+CurrentVersion := "4.0.0 [RC1]", ReleaseDate := "September, 2013"
 
 ;##### Ini File Read #####
 
@@ -8804,7 +8804,7 @@ return
 
 EditMacrosOK:
 Gui, 32:Submit, NoHide
-Project := [], Labels := ""
+Project := [], Labels := "", ActiveList := A_List
 Loop, %TabCount%
 {
 	Gui, 32:Default
@@ -8826,6 +8826,7 @@ Loop, %TabCount%
 Loop, %TabCount%
 	PMC.LVLoad("InputList" A_Index, Project[A_Index])
 GuiControl, chMacro:, A_List, |%Labels%
+GuiControl, chMacro:Choose, A_List, %ActiveList%
 GoSub, LoadData
 GoSub, RowCheck
 GoSub, UpdateCopyTo
