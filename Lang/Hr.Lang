@@ -328,7 +328,7 @@
 	c_Lang087 =	Izraz
 	c_Lang088 =	Ponovno
 	c_Lang089 =	Funkcija Ime
-	c_Lang090 =	Odvojenih zarezom parametre (bez zagrada).
+	c_Lang090 =	Odvojenih zarezom parametre (bez zagrada)
 	c_Lang091 =	(Koristite `% za varijabli. Literarne zarezima mora biti pobjegao [ ```, ])
 	c_Lang092 =	Stranica Element / Index
 	c_Lang093 =	Postaviti
@@ -590,6 +590,7 @@
 	t_Lang144 =	Kliknite i povucite za promjenu redoslijeda. Dvaput kliknite za uređivanje.
 	t_Lang145 =	Uredi Makronaredbe
 	t_Lang146 =	U skladu
+	t_Lang147 =	Makro
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Otvoreno

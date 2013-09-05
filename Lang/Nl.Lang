@@ -328,7 +328,7 @@
 	c_Lang087 =	Uitdrukking
 	c_Lang088 =	Reset
 	c_Lang089 =	Functie Naam
-	c_Lang090 =	Komma gescheiden parameters (zonder haakjes).
+	c_Lang090 =	Komma gescheiden parameters (zonder haakjes)
 	c_Lang091 =	(Gebruik `% voor Variabelen. Letterlijke Komma's moet worden ontsnapt [ ```, ])
 	c_Lang092 =	Pagina-element / Index
 	c_Lang093 =	Ingesteld
@@ -590,6 +590,7 @@
 	t_Lang144 =	Klikken en slepen om te wijzigen. Dubbelklik klik om te bewerken.
 	t_Lang145 =	Macro's Bewerken
 	t_Lang146 =	In lijn
+	t_Lang147 =	Macro
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Open

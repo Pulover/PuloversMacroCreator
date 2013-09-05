@@ -328,7 +328,7 @@
 	c_Lang087 =	Expression
 	c_Lang088 =	Remettre
 	c_Lang089 =	Nom de la fonction
-	c_Lang090 =	Paramètres séparés par des virgules (sans parenthèses).
+	c_Lang090 =	Paramètres séparés par des virgules (sans parenthèses)
 	c_Lang091 =	(Utilisez `% pour les variables. Les virgules littéraux doivent être échappés [ ```, ])
 	c_Lang092 =	Élément Page / Index
 	c_Lang093 =	Fixer
@@ -590,6 +590,7 @@
 	t_Lang144 =	Cliquez et faites glisser pour modifier l'ordre. Double-cliquez pour éditer.
 	t_Lang145 =	Modifier Macros
 	t_Lang146 =	En ligne
+	t_Lang147 =	Macro
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Ouvert

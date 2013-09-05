@@ -328,7 +328,7 @@
 	c_Lang087 =	Expressão
 	c_Lang088 =	Apagar
 	c_Lang089 =	Nome da Função
-	c_Lang090 =	Parametros separados por vírgula (sem parenteses).
+	c_Lang090 =	Parametros separados por vírgula (sem parenteses)
 	c_Lang091 =	(Use `% para variáveis. Vírgulas literais devem ser escapadas [ ```, ])
 	c_Lang092 =	Elemento da Página / Índice
 	c_Lang093 =	Definir
@@ -590,6 +590,7 @@
 	t_Lang144 =	Clique e arraste para alterar a ordem. Dois cliques para editar.
 	t_Lang145 =	Editar Macros
 	t_Lang146 =	Em linha
+	t_Lang147 =	Macro
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Abrir

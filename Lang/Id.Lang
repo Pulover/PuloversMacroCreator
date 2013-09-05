@@ -328,7 +328,7 @@
 	c_Lang087 =	Ekspresi
 	c_Lang088 =	Ulang
 	c_Lang089 =	Fungsi Nama
-	c_Lang090 =	Dipisahkan koma parameter (tanpa kurung).
+	c_Lang090 =	Dipisahkan koma parameter (tanpa kurung)
 	c_Lang091 =	(Gunakan `% untuk Variabel. Koma Literal harus melarikan diri [ ```, ])
 	c_Lang092 =	Elemen Halaman / Index
 	c_Lang093 =	Mengatur
@@ -590,6 +590,7 @@
 	t_Lang144 =	Klik dan drag untuk mengubah urutan. Double-klik untuk mengedit.
 	t_Lang145 =	Mengedit Macro
 	t_Lang146 =	Sejalan
+	t_Lang147 =	Makro
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Buka

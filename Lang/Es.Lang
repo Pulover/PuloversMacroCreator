@@ -328,7 +328,7 @@
 	c_Lang087 =	Expresión
 	c_Lang088 =	Borrar
 	c_Lang089 =	Nombre de la función
-	c_Lang090 =	Parámetros separados por comas (sin paréntesis).
+	c_Lang090 =	Parámetros separados por comas (sin paréntesis)
 	c_Lang091 =	(Utilice `% para las variables. Las comas literal debe ser escapado [ ```, ])
 	c_Lang092 =	Página Elemento / Índice
 	c_Lang093 =	Establecer
@@ -590,6 +590,7 @@
 	t_Lang144 =	Haga clic y arrastre para cambiar el orden. Haga doble clic para editar.
 	t_Lang145 =	Editar Macros
 	t_Lang146 =	En línea
+	t_Lang147 =	Macro
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Abierto

@@ -328,7 +328,7 @@
 	c_Lang087 =	Výraz
 	c_Lang088 =	Obnoviť
 	c_Lang089 =	Funkcia Meno
-	c_Lang090 =	Hodnôt oddelených čiarkami (bez zátvoriek).
+	c_Lang090 =	Hodnôt oddelených čiarkami (bez zátvoriek)
 	c_Lang091 =	(Použite `% libier za premenné. Doslovné Čiarky musia byť sprevádzané [ ```, ])
 	c_Lang092 =	Page Element / Index
 	c_Lang093 =	Sada
@@ -590,6 +590,7 @@
 	t_Lang144 =	Kliknutím a pretiahnutím meniť ich poradie. Poklepaním na ikonu upraviť.
 	t_Lang145 =	Úprava Makra
 	t_Lang146 =	V súlade
+	t_Lang147 =	Makro
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Otvorené

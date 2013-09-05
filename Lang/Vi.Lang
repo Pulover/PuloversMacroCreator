@@ -328,7 +328,7 @@
 	c_Lang087 =	Biểu
 	c_Lang088 =	Thiết lập lại
 	c_Lang089 =	Tên chức năng
-	c_Lang090 =	Dấu phẩy tách ra các thông số (không có dấu ngoặc đơn).
+	c_Lang090 =	Dấu phẩy tách ra các thông số (không có dấu ngoặc đơn)
 	c_Lang091 =	(Sử dụng `% cho biến. Dấu phẩy Nghĩa chữ phải được thoát [ ```, ])
 	c_Lang092 =	Trang Element / Index
 	c_Lang093 =	Đặt
@@ -590,6 +590,7 @@
 	t_Lang144 =	Nhấp và kéo để thay đổi thứ tự. Đúp nhấn vào đây để chỉnh sửa.
 	t_Lang145 =	Chỉnh Sửa Macro
 	t_Lang146 =	Trong dòng
+	t_Lang147 =	Vĩ mô
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Mở

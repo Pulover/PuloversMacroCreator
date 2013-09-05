@@ -328,7 +328,7 @@
 	c_Lang087 =	Expression
 	c_Lang088 =	Zurücksetzen
 	c_Lang089 =	Name der Funktion
-	c_Lang090 =	Kommagetrennte Parameter (ohne Klammern).
+	c_Lang090 =	Kommagetrennte Parameter (ohne Klammern)
 	c_Lang091 =	(`% für Variablen verwenden. Literale Kommas müssen escaped werden [ ```, ])
 	c_Lang092 =	Seite Element/Index
 	c_Lang093 =	Set
@@ -590,6 +590,7 @@
 	t_Lang144 =	Klicken und ziehen, um zu ändern. Doppelklicken sie auf die zu bearbeiten.
 	t_Lang145 =	Makros Bearbeiten
 	t_Lang146 =	Im Einklang
+	t_Lang147 =	Makro
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Öffnen

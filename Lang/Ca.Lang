@@ -328,7 +328,7 @@
 	c_Lang087 =	Expressió
 	c_Lang088 =	Reajustar
 	c_Lang089 =	Nom de la funció
-	c_Lang090 =	Paràmetres separats per comes (sense parèntesis).
+	c_Lang090 =	Paràmetres separats per comes (sense parèntesis)
 	c_Lang091 =	(Utilitza `% per a variables. Han escapar comes literals [ ```, ])
 	c_Lang092 =	Element de pàgina / Índex
 	c_Lang093 =	Establir
@@ -590,6 +590,7 @@
 	t_Lang144 =	Feu clic i arrossegueu per canviar l'ordre. Feu doble clic per editar.
 	t_Lang145 =	Edita Macros
 	t_Lang146 =	En línia
+	t_Lang147 =	Macro
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Obert

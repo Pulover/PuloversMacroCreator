@@ -328,7 +328,7 @@
 	c_Lang087 =	Expression
 	c_Lang088 =	Reset
 	c_Lang089 =	Function Name
-	c_Lang090 =	Comma separated parameters (without parenthesis).
+	c_Lang090 =	Comma separated parameters (without parenthesis)
 	c_Lang091 =	(Use `% for Variables. Literal Commas must be escaped [ ```, ])
 	c_Lang092 =	Page Element / Index
 	c_Lang093 =	Set
@@ -590,6 +590,7 @@
 	t_Lang144 =	Click and Drag to change order. Double-Click to edit.
 	t_Lang145 =	Edit Macros
 	t_Lang146 =	In line
+	t_Lang147 =	Macro
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Open

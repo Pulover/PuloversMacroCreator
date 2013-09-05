@@ -328,7 +328,7 @@
 	c_Lang087 =	Wyrażenie
 	c_Lang088 =	Resetuj
 	c_Lang089 =	Nazwa funkcji
-	c_Lang090 =	Oddzielonych przecinkami parametrów (bez nawiasów).
+	c_Lang090 =	Oddzielonych przecinkami parametrów (bez nawiasów)
 	c_Lang091 =	(Użyj `% dla zmiennych. Dosłowne Przecinki należy uciekł [ ```, ])
 	c_Lang092 =	Element Page / Index
 	c_Lang093 =	Zestaw
@@ -590,6 +590,7 @@
 	t_Lang144 =	Kliknij i przeciągnij, aby zmienić kolejność. Kliknij dwukrotnie, aby edytować.
 	t_Lang145 =	Edytowanie Makra
 	t_Lang146 =	Zgodnie
+	t_Lang147 =	Macro
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Otwarte

@@ -328,7 +328,7 @@
 	c_Lang087 =	Ungkapan
 	c_Lang088 =	Reset
 	c_Lang089 =	Nama Fungsi
-	c_Lang090 =	Dipisahkan koma parameter (tanpa kurungan).
+	c_Lang090 =	Dipisahkan koma parameter (tanpa kurungan)
 	c_Lang091 =	(Gunakan `% untuk Pembolehubah. Koma literal mesti melarikan diri [ ```, ])
 	c_Lang092 =	Page Element / Indeks
 	c_Lang093 =	Set
@@ -590,6 +590,7 @@
 	t_Lang144 =	Klik dan drag untuk mengubah perintah. Klik dua kali untuk mengedit.
 	t_Lang145 =	Edit Makro
 	t_Lang146 =	Selaras
+	t_Lang147 =	Makro
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Buka

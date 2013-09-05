@@ -328,7 +328,7 @@
 	c_Lang087 =	Izraz
 	c_Lang088 =	Ponastavi
 	c_Lang089 =	Funkcija Ime
-	c_Lang090 =	Ločene z vejico parametre (brez oklepajev).
+	c_Lang090 =	Ločene z vejico parametre (brez oklepajev)
 	c_Lang091 =	(Uporabite `% za spremenljivke. Je dobesedna Vejice je pobegnil [ ```, ])
 	c_Lang092 =	Element stran / Index
 	c_Lang093 =	Set
@@ -590,6 +590,7 @@
 	t_Lang144 =	Kliknite in povlecite, da spremenite vrstni red. Dvakrat kliknite za urejanje.
 	t_Lang145 =	Uredi Makri
 	t_Lang146 =	V skladu
+	t_Lang147 =	Makro
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Odprite

@@ -328,7 +328,7 @@
 	c_Lang087 =	Lauseke
 	c_Lang088 =	Nollaa
 	c_Lang089 =	Toiminto Nimi
-	c_Lang090 =	Pilkulla erotettu parametreja (ilman suluissa).
+	c_Lang090 =	Pilkulla erotettu parametreja (ilman suluissa)
 	c_Lang091 =	(Käytä `% muuttujia. Kirjaimellinen Pilkut on karannut [ ```, ])
 	c_Lang092 =	Sivuelementti / Indeksi
 	c_Lang093 =	Asettaa
@@ -590,6 +590,7 @@
 	t_Lang144 =	Klikkaa ja vetämällä muuttaa järjestystä. Kaksoisnapsauta muokata.
 	t_Lang145 =	Muokkaa Makrot
 	t_Lang146 =	Linjassa
+	t_Lang147 =	Makro
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Avata

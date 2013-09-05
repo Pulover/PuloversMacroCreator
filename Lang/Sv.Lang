@@ -328,7 +328,7 @@
 	c_Lang087 =	Expression
 	c_Lang088 =	Återställ
 	c_Lang089 =	Funktion Namn
-	c_Lang090 =	Kommaseparerad parametrar (utan parentes).
+	c_Lang090 =	Kommaseparerad parametrar (utan parentes)
 	c_Lang091 =	(Använd `% för variabler. Bokstavliga Kommatecken måste flydde [ ```, ])
 	c_Lang092 =	Sidelement / Index
 	c_Lang093 =	Ställ
@@ -590,6 +590,7 @@
 	t_Lang144 =	Klicka och dra för att ändra ordningen. Dubbelklicka för att redigera.
 	t_Lang145 =	Redigera Makron
 	t_Lang146 =	I linje
+	t_Lang147 =	Makro
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Öppet

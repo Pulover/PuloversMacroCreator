@@ -328,7 +328,7 @@
 	c_Lang087 =	Ifade
 	c_Lang088 =	Ayarlamak
 	c_Lang089 =	Fonksiyon Adı
-	c_Lang090 =	Virgül (parantez olmadan) parametreleri ayrılmış.
+	c_Lang090 =	Virgül (parantez olmadan) parametreleri ayrılmış
 	c_Lang091 =	(Değişkenler için `% kullanın. Birebir Virgüller öncelenmesi gerekir [ ```, ])
 	c_Lang092 =	Sayfa Öğesi / Endeks
 	c_Lang093 =	Ayarlamak
@@ -590,6 +590,7 @@
 	t_Lang144 =	Tıklayın ve sırasını değiştirmek için sürükleyin. Düzenlemek için çift tıklayın.
 	t_Lang145 =	Makrolar Düzenle
 	t_Lang146 =	Doğrultusunda
+	t_Lang147 =	Makro
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Açık

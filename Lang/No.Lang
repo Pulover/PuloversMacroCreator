@@ -328,7 +328,7 @@
 	c_Lang087 =	Expression
 	c_Lang088 =	Tilbakestille
 	c_Lang089 =	Funksjon Navn
-	c_Lang090 =	Kommaseparert parametre (uten parentes).
+	c_Lang090 =	Kommaseparert parametre (uten parentes)
 	c_Lang091 =	(Bruk `% for variabler. Bokstavelige Komma må rømt [ ```, ])
 	c_Lang092 =	Sideelement / Index
 	c_Lang093 =	Satt
@@ -590,6 +590,7 @@
 	t_Lang144 =	Klikk og dra for å endre rekkefølgen. Dobbeltklikk for å redigere.
 	t_Lang145 =	Redigere Makroer
 	t_Lang146 =	I tråd
+	t_Lang147 =	Makro
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Åpent

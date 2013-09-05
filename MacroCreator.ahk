@@ -1800,7 +1800,7 @@ Gui, 14:Default
 Gui, 1:+Disabled
 ; Macros
 Gui, 14:Add, GroupBox, Section W450 H190, %t_Lang002%:
-Gui, 14:Add, ListView, ys+20 xs+10 AltSubmit Checked W430 r5 vExpList gExpEdit NoSort -ReadOnly, Macro ¢Hotkey ¢Loop ¢BlockMouse
+Gui, 14:Add, ListView, ys+20 xs+10 AltSubmit Checked W430 r5 vExpList gExpEdit NoSort -ReadOnly, %t_Lang147%¢%w_Lang005%¢%t_Lang003%¢%t_Lang006%
 Gui, 14:Add, Text, -Wrap W430, %t_Lang144%
 Gui, 14:Add, Button, -Wrap W75 H23 gCheckAll, %t_Lang007%
 Gui, 14:Add, Button, -Wrap yp x+5 W75 H23 gUnCheckAll, %t_Lang008%
@@ -1824,18 +1824,18 @@ Gui, 14:Add, Progress, ys W175 H20 vExpProgress
 ; Context
 Gui, 14:Add, GroupBox, Section y+25 xm W450 H80
 Gui, 14:Add, Checkbox, -Wrap Section ys xs vEx_IfDir gEx_Checks R1, %t_Lang009%:
-Gui, 14:Add, DDL, xs+10 W105 vEx_IfDirType Disabled, #IfWinActive ¢ ¢#IfWinNotActive ¢#IfWinExist ¢#IfNotWinExist
-Gui, 14:Add, DDL, yp x+250 W75 vIdent Disabled, Title ¢ ¢Class ¢Process ¢ID ¢PID
+Gui, 14:Add, DDL, xs+10 W105 vEx_IfDirType Disabled, #IfWinActive¢¢#IfWinNotActive¢#IfWinExist¢#IfNotWinExist
+Gui, 14:Add, DDL, yp x+250 W75 vIdent Disabled, Title¢¢Class¢Process¢ID¢PID
 Gui, 14:Add, Edit, xs+10 W400 vTitle Disabled
 Gui, 14:Add, Button, -Wrap yp-1 x+0 W30 H23 vGetWin gGetWin Disabled, ...
 ; Options
 Gui, 14:Add, GroupBox, Section xm W450 H270, %w_Lang003%:
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_SM% ys+20 xs+10 W140 vEx_SM R1, SendMode
-Gui, 14:Add, DDL, yp-3 x+5 vSM w75, Input ¢ ¢Play ¢Event ¢InputThenPlay ¢
+Gui, 14:Add, DDL, yp-3 x+5 vSM w75, Input¢¢Play¢Event¢InputThenPlay
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_SI% y+5 xs+10 W140 vEx_SI R1, #SingleInstance
-Gui, 14:Add, DDL, yp-3 x+5 vSI w75, Force ¢Ignore ¢ ¢Off ¢
+Gui, 14:Add, DDL, yp-3 x+5 vSI w75, Force¢Ignore¢¢Off
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_ST% y+5 xs+10 W140 vEx_ST R1, SetTitleMatchMode
-Gui, 14:Add, DDL, yp-3 x+5 vST w75, 1 ¢2 ¢ ¢3 ¢RegEx ¢
+Gui, 14:Add, DDL, yp-3 x+5 vST w75, 1¢2¢¢3¢RegEx
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_DH% y+5 xs+10 W220 vEx_DH R1, DetectHiddenWindows
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_AF% y+8 W220 vEx_AF R1, #WinActivateForce
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_PT% y+8 W220 vEx_PT R1, #Persistent
@@ -1901,12 +1901,15 @@ If (A_GuiEvent == "E")
 	InEdit := 1
 ,	EditRow := LV_GetNext(0, "Focused")
 ,	LV_GetText(BeforeEdit, EditRow, 1)
+	return
 }
 If (A_GuiEvent == "e")
 {
 	InEdit := 0
 ,	LV_GetText(AfterEdit, EditRow, 1)
-	If !RegExMatch(AfterEdit, "^\w+$")
+	If (AfterEdit = "")
+		return
+	Else If !RegExMatch(AfterEdit, "^\w+$")
 	{
 		LV_Modify(EditRow, "", BeforeEdit)
 		MsgBox, 16, %d_Lang007%, %d_Lang049%
@@ -1925,6 +1928,7 @@ If (A_GuiEvent == "e")
 			}
 		}
 	}
+	return
 }
 If (A_GuiEvent = "D")
 	LV_Rows.Drag()
@@ -1967,20 +1971,23 @@ ExpEditOK:
 Gui, 13:+OwnDialogs
 Gui, 13:Submit, NoHide
 Gui, 14:Default
-If !RegExMatch(Ex_Macro, "^\w+$")
+If (Ex_Macro <> "")
 {
-	MsgBox, 16, %d_Lang007%, %d_Lang049%
-	return
-}
-Else
-{
-	Loop, % LV_GetCount()
+	If !RegExMatch(Ex_Macro, "^\w+$")
 	{
-		LV_GetText(mLabel, A_Index, 1)
-		If ((A_Index <> RowNumber) && (mLabel = Ex_Macro))
+		MsgBox, 16, %d_Lang007%, %d_Lang049%
+		return
+	}
+	Else
+	{
+		Loop, % LV_GetCount()
 		{
-			MsgBox, 16, %d_Lang007%, %d_Lang050%
-			return
+			LV_GetText(mLabel, A_Index, 1)
+			If ((A_Index <> RowNumber) && (mLabel = Ex_Macro))
+			{
+				MsgBox, 16, %d_Lang007%, %d_Lang050%
+				return
+			}
 		}
 	}
 }
@@ -1994,20 +2001,23 @@ NewRow := ExpSel ? (RowNumber + 1) : (RowNumber - 1)
 Gui, 13:+OwnDialogs
 Gui, 13:Submit, NoHide
 Gui, 14:Default
-If !RegExMatch(Ex_Macro, "^\w+$")
+If (Ex_Macro <> "")
 {
-	MsgBox, 16, %d_Lang007%, %d_Lang049%
-	return
-}
-Else
-{
-	Loop, % LV_GetCount()
+	If !RegExMatch(Ex_Macro, "^\w+$")
 	{
-		LV_GetText(mLabel, A_Index, 1)
-		If ((A_Index <> RowNumber) && (mLabel = Ex_Macro))
+		MsgBox, 16, %d_Lang007%, %d_Lang049%
+		return
+	}
+	Else
+	{
+		Loop, % LV_GetCount()
 		{
-			MsgBox, 16, %d_Lang007%, %d_Lang050%
-			return
+			LV_GetText(mLabel, A_Index, 1)
+			If ((A_Index <> RowNumber) && (mLabel = Ex_Macro))
+			{
+				MsgBox, 16, %d_Lang007%, %d_Lang050%
+				return
+			}
 		}
 	}
 }
@@ -2831,9 +2841,9 @@ Gui, 5:Add, Radio, -Wrap yp x+5 W90 vRB R1, %c_Lang039%
 Gui, 5:Add, Radio, -Wrap yp x+5 W90 vMB R1, %c_Lang040%
 Gui, 5:Add, Radio, -Wrap yp x+5 W90 vX1 R1, %c_Lang041%
 Gui, 5:Add, Radio, -Wrap yp x+5 W90 vX2 R1, %c_Lang042%
-Gui, 5:Add, Checkbox, -Wrap Check3 y+10 xs+10 vMHold gMHold R1, %c_Lang043%
-Gui, 5:Add, Text, yp x+10 vClicks, %c_Lang044%:
-Gui, 5:Add, Edit, Limit Number yp-2 x+5 W60 R1 vCCount
+Gui, 5:Add, Checkbox, -Wrap Check3 y+10 xs+10 vMHold gMHold W150 R1, %c_Lang043%
+Gui, 5:Add, Text, yp x+10 vClicks W100 R1 Right, %c_Lang044%:
+Gui, 5:Add, Edit, Limit Number yp-2 x+10 W60 R1 vCCount
 Gui, 5:Add, UpDown, 0x80 Range0-999999999, 1
 ; Repeat
 Gui, 5:Add, GroupBox, Section xm W250 H125
@@ -5522,7 +5532,7 @@ Gui, 19:Add, Edit, yp-3 x+10 W45 vIconN
 Gui, 19:Add, Text, yp+3 x+0 W75 R1 Right, %c_Lang160%:
 Gui, 19:Add, Edit, yp-3 x+10 W45 vTransC
 Gui, 19:Add, Button, -Wrap yp-1 x+0 W30 H23 vTransCS gGetPixel, ...
-Gui, 19:Add, Text, y+5 xs+10 W170 R1 Right, %c_Lang161% (W/H):
+Gui, 19:Add, Text, y+5 xs+10 W170 R1 Right, %c_Lang161%:
 Gui, 19:Add, Edit, yp-3 x+10 W35 vWScale
 Gui, 19:Add, Text, yp+5 x+0, x
 Gui, 19:Add, Edit, yp-5 x+0 W35 vHScale
@@ -7867,6 +7877,12 @@ If RunOnce = 1
 	DelayX := DelayX * -1
 ActivateHotkeys(0, 1, 1, 1, 1)
 aHK_Timer := A_List
+If (CheckDuplicateLabels())
+{
+	MsgBox, 16, %d_Lang007%, %d_Lang050%
+	StopIt := 1
+	return
+}
 SetTimer, RunTimerOn, %DelayX%
 If (TimedRun) && (RunFirst)
 	GoSub, RunTimerOn
@@ -8834,7 +8850,7 @@ GoSub, SaveData
 Gui, 32:-MinimizeBox +owner1 +HwndLVEditMacros
 Gui, 1:+Disabled
 Gui, 32:Add, GroupBox, Section W450 H240
-Gui, 32:Add, ListView, ys+15 xs+10 W430 r10 hwndMacroL vMacroList gMacroList -ReadOnly NoSort AltSubmit, Macro|Play|Manual|Loop|Index
+Gui, 32:Add, ListView, ys+15 xs+10 W430 r10 hwndMacroL vMacroList gMacroList -ReadOnly NoSort AltSubmit, %t_Lang147%|%w_Lang005%|%w_Lang007%|%t_Lang003%|%w_Lang030%
 Gui, 32:Add, Text, -Wrap W430, %t_Lang144%
 Gui, 32:Add, Button, -Wrap Section xm W75 H23 gEditMacrosOK, %c_Lang020%
 Gui, 32:Add, Button, -Wrap ys W75 H23 gEditMacrosCancel, %c_Lang021%
@@ -8897,6 +8913,7 @@ If (A_GuiEvent == "E")
 	InEdit := 1
 ,	EditRow := LV_GetNext(0, "Focused")
 ,	LV_GetText(BeforeEdit, EditRow, 1)
+	return
 }
 If (A_GuiEvent == "e")
 {
@@ -8921,6 +8938,7 @@ If (A_GuiEvent == "e")
 			}
 		}
 	}
+	return
 }
 If (A_GuiEvent = "D")
 	LV_Rows.Drag()
@@ -9995,11 +10013,23 @@ return
 ;##### Playback: #####
 
 f_AutoKey:
+If (CheckDuplicateLabels())
+{
+	MsgBox, 16, %d_Lang007%, %d_Lang050%
+	StopIt := 1
+	return
+}
 Loop, %TabCount%  
 	If (o_AutoKey[A_Index] = A_ThisHotkey)
 		aHK_On := [A_Index]
 StopIt := 0
 f_RunMacro:
+If (CheckDuplicateLabels())
+{
+	MsgBox, 16, %d_Lang007%, %d_Lang050%
+	StopIt := 1
+	return
+}
 If (aHK_On := Playback(aHK_On*))
 	Goto, f_RunMacro
 return
@@ -11495,6 +11525,7 @@ Loop, % LV_GetCount()
 	If ShowLoopIfMark = 1
 	{
 		OnMessage(WM_NOTIFY, "LV_ColorsMessage")
+	,	LV_Colors.Row(ListID%A_List%, A_Index, "", "")
 	,	LV_Colors.Attach(ListID%A_List%, False, False)
 		If (Action = "[LoopEnd]")
 			RowColorLoop--, IdxLv := SubStr(IdxLv, 1, StrLen(IdxLv)-1)

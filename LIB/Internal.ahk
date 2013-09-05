@@ -511,6 +511,30 @@ ActivateHotkeys(Rec="", Play="", Speed="", Stop="", Pause="", Joy="")
 	return ActiveKeys
 }
 
+CheckDuplicateLabels()
+{
+	local Proj_Labels
+	
+	Gui, chMacro:Default
+	Loop, %TabCount%
+	{
+		Gui, chMacro:ListView, InputList%A_Index%
+		Loop, % ListCount%A_Index%
+		{
+			LV_GetText(Row_Type, A_Index, 6)
+			If (Row_Type = cType35)
+			{
+				LV_GetText(Row_Label, A_Index, 3)
+				Proj_Labels .= Row_Label "`n"
+			}
+		}
+	}
+	Loop, %TabCount%
+		Proj_Labels .= TabGetText(TabSel, A_Index) "`n"
+	Sort, Proj_Labels, U
+	return ErrorLevel
+}
+
 CheckDuplicates(Obj1, Obj2, Obj3*)
 {
 	global TabCount
