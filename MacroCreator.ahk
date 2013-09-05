@@ -11241,7 +11241,7 @@ RbMain.ShowBand(RbMain.IDToIndex(1), ShowBand1), RbMain.ShowBand(RbMain.IDToInde
 ,	RbMain.ShowBand(RbMain.IDToIndex(5), ShowBand5), RbMain.ShowBand(RbMain.IDToIndex(6), ShowBand6)
 ,	RbMain.ShowBand(RbMain.IDToIndex(7), ShowBand7), RbMain.ShowBand(RbMain.IDToIndex(8), ShowBand8)
 ,	RbMain.ShowBand(RbMain.IDToIndex(9), ShowBand9)
-,	RecPlayLayout := "Record=" w_Lang046 ":55(Enabled AutoSize Dropdown),, PlayStart=" w_Lang047 ":47(Enabled AutoSize Dropdown)"
+,	RecPlayLayout := "Record=" w_Lang046 ":54(Enabled AutoSize Dropdown),, PlayStart=" w_Lang047 ":46(Enabled AutoSize Dropdown)"
 ,	TB_Layout(TbRecPlay, RecPlayLayout, 2)
 ,	TbCommand.Reset(), TB_IdealSize(TbCommand, 5)
 ,	RbMain.SetBandWidth(2, TB_GetSize(tbRecPlay)+16)
