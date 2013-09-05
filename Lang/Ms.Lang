@@ -1072,7 +1072,7 @@
 	Chr	Kembali watak tunggal yang sepadan dengan kod watak yang ditunjukkan oleh nombor.
 	Click	Klik butang tetikus pada koordinat dinyatakan. Ia juga boleh tahan butang, putarkan roda, atau bergerak.
 	ClipWait	Menunggu sehingga clipboard mengandungi data.
-	Clipboard	Menampal teks dari clipboard
+	Clipboard	Menampal teks dari clipboard.
 	ComObjActive	Mendapatkan semula objek COM berdaftar.
 	ComObjArray	Mewujudkan SAFEARRAY untuk digunakan dengan COM.
 	ComObjConnect	Menghubungkan sumber acara objek COM kepada fungsi-fungsi dengan awalan yang diberikan.

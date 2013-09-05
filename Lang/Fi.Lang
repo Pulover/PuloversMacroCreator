@@ -1072,7 +1072,7 @@
 	Chr	Palauttaayhden merkin vastaavanmerkin koodin luvuilla .
 	Click	Napsauttaa hiiren painikettamääritellyt koordinaatit . Se voi myös pitämälläpainiketta , käännä pyörää , tai siirtää .
 	ClipWait	Odottaa, kunnesleikepöydän sisältää tietoja.
-	Clipboard	Liittää tekstiä leikepöydältä
+	Clipboard	Liittää tekstiä leikepöydältä.
 	ComObjActive	Hakeerekisteröidyn COM-objekti .
 	ComObjArray	LuoSAFEARRAY käytettäväksi COM .
 	ComObjConnect	YhdistääCOM-objekti tapahtuma lähteistä toimintojatietyn etuliitteen .

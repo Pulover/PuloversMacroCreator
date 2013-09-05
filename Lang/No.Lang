@@ -1072,7 +1072,7 @@
 	Chr	Returnerer enkelt tegn som tilsvarer tegnet koden angitt med nummer .
 	Click	Klikker en museknapp på de angitte koordinatene. Det kan også holde nede en knapp , slå hjul , eller flytte.
 	ClipWait	Venter til utklippstavlen inneholder data .
-	Clipboard	Limer inn tekst fra utklippstavlen
+	Clipboard	Limer inn tekst fra utklippstavlen.
 	ComObjActive	Henter et registrert COM-objektet .
 	ComObjArray	Oppretter en SAFEARRAY for bruk med COM .
 	ComObjConnect	Kobler en COM objekt event kilder til funksjoner med en gitt prefiks .

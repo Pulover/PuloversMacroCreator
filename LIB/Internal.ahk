@@ -610,7 +610,7 @@ ToggleIcon()
 	ChangeProgBarColor(Color, "OSCProg", 28)
 	If !A_IsPaused
 		IconFile := A_IconFile, IconNumber := A_IconNumber
-	Menu, Tray, Icon, % (A_IsPaused = 0) ? ResDllPath : IconFile, % (A_IsPaused = 0) ? 56 : IconNumber
+	Menu, Tray, Icon, % (A_IsPaused = 0) ? ResDllPath : IconFile, % (A_IsPaused = 0) ? 55 : IconNumber
 	return A_IsPaused
 }
 
@@ -622,6 +622,15 @@ ToggleButtonIcon(Button, Icon)
 ChangeProgBarColor(Color, Control, Gui=1)
 {
 	GuiControl, %Gui%:+c%Color%, %Control%
+}
+
+ChangeIcon(hInst, ID, Icon)
+{
+	hIcon := DllCall("LoadImage", "Uint", hInst, "Uint", Icon, "Uint", 1, "int", 96, "int", 96, "Uint", 0x8000)
+
+	SendMessage, 0x80, 0, hIcon,, ahk_id %ID% ;set the window's small icon (0x80 is WM_SETICON).
+	SendMessage, 0x80, 1, hIcon,, ahk_id %ID% ;set the window's big icon to the same one.
+	OutputDebug, %hInst% / %hIcon%
 }
 
 AHK_NOTIFYICON(wParam, lParam)

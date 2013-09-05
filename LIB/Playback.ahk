@@ -14,14 +14,14 @@
 		GoSub, RowCheck
 	}
 	Pause, Off
-	Try Menu, Tray, Icon, %ResDllPath%, 47
+	Try Menu, Tray, Icon, %ResDllPath%, 46
 	Menu, Tray, Default, %w_Lang008%
 	If (AutoHideBar)
 	{
 		If !WinExist("ahk_id " PMCOSC)
 			GoSub, ShowControls
 	}
-	PlayOSOn := 1, tbOSC.ModifyButtonInfo(1, "Image", 56), LastError := ""
+	PlayOSOn := 1, tbOSC.ModifyButtonInfo(1, "Image", 55), LastError := ""
 ,	CurrentRange := m_ListCount, ChangeProgBarColor("20D000", "OSCProg", 28)
 	If (ShowProgBar = 1)
 	{
@@ -328,7 +328,7 @@
 					StringReplace, Step, Step, ``n, `n, All
 					StringReplace, Step, Step, ``t, `t, All
 					AssignReplace(Step)
-					CheckVars("Step|Target|Window", PointMarker)
+					CheckVars("Step|Target|Window|VarName|VarValue", PointMarker)
 					If (Action = "[Assign Variable]")
 					{
 						If RegExMatch(VarValue, "U)%\s([\w%]+)\((.*)\)")  ; Functions
@@ -473,7 +473,7 @@
 		Try Menu, Tray, Icon, %DefaultIcon%, 1
 		Menu, Tray, Default, %w_Lang005%
 		PlayOSOn := 0
-		tbOSC.ModifyButtonInfo(1, "Image", 49)
+		tbOSC.ModifyButtonInfo(1, "Image", 48)
 		If (AutoHideBar)
 		{
 			If WinExist("ahk_id " PMCOSC)
@@ -727,7 +727,7 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC)
 					StringReplace, Step, Step, ``n, `n, All
 					StringReplace, Step, Step, ``t, `t, All
 					AssignReplace(Step)
-					CheckVars("Step|Target|Window", PointMarker)
+					CheckVars("Step|Target|Window|VarName|VarValue", PointMarker)
 					If (Action = "[Assign Variable]")
 					{
 						If RegExMatch(VarValue, "U)%\s([\w%]+)\((.*)\)")  ; Functions
@@ -1077,7 +1077,7 @@ IfStatement(ThisError, l_Point)
 		Else If (Action = If14)
 		{
 			AssignReplace(Step)
-			CheckVars("VarValue", PointMarker)
+			CheckVars("VarName|VarValue", PointMarker)
 			EscCom("VarValue|VarName", 1)
 			If (VarName = "A_Index")
 				VarName := "LoopIndex"

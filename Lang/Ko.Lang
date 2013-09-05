@@ -1072,7 +1072,7 @@
 	Chr	번호로 표시된 문자 코드에 해당하는 단일 문자를 반환합니다.
 	Click	지정된 좌표에 마우스 버튼을 클릭합니다. 또한, 버튼을 누른 상태에서 휠을 켜거나 이동할 수 있습니다.
 	ClipWait	클립 보드에 데이터를 포함 할 때까지 기다립니다.
-	Clipboard	클립 보드에서 텍스트를 붙여 넣습니다
+	Clipboard	클립 보드에서 텍스트를 붙여 넣습니다.
 	ComObjActive	등록 된 COM 개체를 검색합니다.
 	ComObjArray	COM 사용하기 위해 SAFEARRAY를 만듭니다.
 	ComObjConnect	지정된 접두사로 함수에 COM 개체의 이벤트 소스를 연결합니다.

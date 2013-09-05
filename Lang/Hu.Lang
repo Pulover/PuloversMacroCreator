@@ -1072,7 +1072,7 @@
 	Chr	Visszaadja az egyetlen karakter megfelelő karaktert kódot jelzett szám.
 	Click	Kattintás az egérrel a megadott koordinátákat. Azt is tartsuk lenyomva a gombot, forgassa a kereket, vagy áthelyezni.
 	ClipWait	Megvárja, amíg a vágólap adatait tartalmazza.
-	Clipboard	Beilleszti szöveget a vágólapról
+	Clipboard	Beilleszti szöveget a vágólapról.
 	ComObjActive	Lekéri a regisztrált COM objektumot.
 	ComObjArray	Létrehoz egy SAFEARRAY használható COM.
 	ComObjConnect	Csatlakozik a COM-objektum rendezvény források funkciók egy adott előtaggal.

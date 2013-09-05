@@ -1072,7 +1072,7 @@
 	Chr	Trả về nhân vật duy nhất tương ứng với mã ký tự được chỉ định bởi số.
 	Click	Nhấn một nút chuột tại tọa độ quy định. Nó cũng có thể giữ một nút, quay bánh xe, hoặc di chuyển.
 	ClipWait	Đợi cho đến khi bộ nhớ tạm chứa dữ liệu.
-	Clipboard	Dán văn bản từ clipboard
+	Clipboard	Dán văn bản từ clipboard.
 	ComObjActive	Lấy một đối tượng COM đăng ký.
 	ComObjArray	Tạo ra một SAFEARRAY để sử dụng với COM.
 	ComObjConnect	Kết nối các nguồn sự kiện một đối tượng COM của chức năng với một tiền tố nhất định.

@@ -1072,7 +1072,7 @@
 	Chr	Renvoie le caractère unique correspondant au code de caractère indiqué par le numéro .
 	Click	Clique sur un bouton de la souris aux coordonnées indiquées . Il peut également maintenir enfoncée une touche, tournez la roue, ni bouger.
 	ClipWait	Attend que le presse-papiers contient des données.
-	Clipboard	Colle le texte du presse-papiers
+	Clipboard	Colle le texte du presse-papiers.
 	ComObjActive	Récupère un objet COM enregistré.
 	ComObjArray	Crée un SAFEARRAY pour une utilisation avec COM .
 	ComObjConnect	Connecte les sources d'événements d'un objet COM à des fonctions avec un préfixe donné .

@@ -1072,7 +1072,7 @@
 	Chr	Vraća jedan lik odgovara znakovni kod označena brojem .
 	Click	Klikne na tipku miša na određenom koordinatama . Također možete držite gumb , okrenuti kotač , ili premjestiti .
 	ClipWait	Waits dokprijenosnik sadrži podatke .
-	Clipboard	Lijepi tekst iz međuspremnika
+	Clipboard	Lijepi tekst iz međuspremnika.
 	ComObjActive	Dohvaća registriranih COM objekt .
 	ComObjArray	Stvara SAFEARRAY za korištenje s COM .
 	ComObjConnect	Povezuje COM objekt je događaj izvora funkcija s obzirom prefiksa .

@@ -1072,7 +1072,7 @@
 	Chr	Mengembalikan karakter tunggal sesuai dengan kode karakter yang ditunjukkan oleh Nomor.
 	Click	Mengklik tombol mouse pada koordinat yang ditentukan. Hal ini juga dapat menekan tombol, memutar roda, atau bergerak.
 	ClipWait	Menunggu sampai clipboard berisi data.
-	Clipboard	Paste teks dari clipboard
+	Clipboard	Paste teks dari clipboard.
 	ComObjActive	Mengambil objek COM terdaftar.
 	ComObjArray	Menciptakan SAFEARRAY untuk digunakan dengan COM.
 	ComObjConnect	Menghubungkan sumber event objek COM untuk fungsi dengan awalan yang diberikan.

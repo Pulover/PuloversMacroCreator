@@ -1072,7 +1072,7 @@
 	Chr	Gibt die einzelnen Zeichen entsprechend dem Charakter von einer Zahl angegeben .
 	Click	Einer Maustaste an den angegebenen Koordinaten . Es kann auch bei gedrückter eine Taste, und drehen Sie das Rad , oder zu verschieben.
 	ClipWait	Wartet, bis der Zwischenablage Daten enthält.
-	Clipboard	Fügt Text aus der Zwischenablage
+	Clipboard	Fügt Text aus der Zwischenablage.
 	ComObjActive	Ruft einen registrierten COM-Objekt.
 	ComObjArray	Erstellt ein SAFEARRAY für die Verwendung mit COM.
 	ComObjConnect	Verbindet ein COM-Objekt Veranstaltung Quellen , Funktionen mit einem gegebenen Präfix .

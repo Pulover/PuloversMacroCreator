@@ -1072,7 +1072,7 @@
 	Chr	Sayısı ile gösterilen karakter koduna karşılık gelentek bir karakter döndürür.
 	Click	Belirtilen koordinatlarda bir fare düğmesini tıklar. Ayrıca , bir düğmesini basılı tutuntekerleği çevirmek , ya da taşıyabilirsiniz .
 	ClipWait	Panoya verileri içeren kadar bekler .
-	Clipboard	Panodan metin macunlar
+	Clipboard	Panodan metin macunlar.
 	ComObjActive	Kayıtlı bir COM nesnesi alır .
 	ComObjArray	COM ile kullanmak için bir SAFEARRAY oluşturur .
 	ComObjConnect	Belirli bir önek ile işlevlerine bir COM nesnesinin olay kaynaklarını bağlar.

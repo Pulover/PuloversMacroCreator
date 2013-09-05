@@ -1072,7 +1072,7 @@
 	Chr	返回以數字表示的字符代碼對應的單個字符。
 	Click	單擊鼠標按鈕在指定的坐標。它也可以按住一個按鈕，轉動方向盤，或移動。
 	ClipWait	等待直至剪貼板包含數據。
-	Clipboard	從剪貼板粘貼文本
+	Clipboard	從剪貼板粘貼文本。
 	ComObjActive	檢索註冊的COM對象。
 	ComObjArray	創建一個SAFEARRAY使用COM。
 	ComObjConnect	連接一個COM對象的事件源與給定前綴的功能。

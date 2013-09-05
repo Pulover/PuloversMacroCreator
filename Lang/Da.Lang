@@ -1072,7 +1072,7 @@
 	Chr	Returnerer enkelt tegn , der svarer til karakteren angivet af nummer.
 	Click	Klikker på en museknap på de angivne koordinater. Det kan også holde en knap, og drej rattet , eller flytte .
 	ClipWait	Venter, indtil klippebordet indeholder data.
-	Clipboard	Indsætter tekst fra klippebordet
+	Clipboard	Indsætter tekst fra klippebordet.
 	ComObjActive	Henter en registreret COM objekt.
 	ComObjArray	Opretter en SAFEARRAY til brug med COM.
 	ComObjConnect	Tilslutter et COM objekts event kilder til funktioner med en given præfiks.

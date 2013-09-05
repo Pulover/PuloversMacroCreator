@@ -1072,7 +1072,7 @@
 	Chr	Restituisce il singolo carattere corrispondente al codice del carattere indicato dal numero .
 	Click	Fa clic su un pulsante del mouse alle coordinate specificate . Si può anche tenere premuto un pulsante, girare la ruota , o spostare .
 	ClipWait	Attende fino a quando gli Appunti contengono dati .
-	Clipboard	Incolla il testo dagli Appunti
+	Clipboard	Incolla il testo dagli Appunti.
 	ComObjActive	Recupera un oggetto COM registrato.
 	ComObjArray	Crea un SAFEARRAY per l'utilizzo con COM .
 	ComObjConnect	Collega sorgenti di eventi di un oggetto COM di funzioni con un determinato prefisso .

@@ -1072,7 +1072,7 @@
 	Chr	Devuelve el carácter único correspondiente al código de caracteres indicado por Número .
 	Click	Hace clic con el botón del ratón en las coordenadas especificadas . También puede mantener pulsado un botón , gire la rueda , o mover.
 	ClipWait	Espera hasta que el portapapeles contiene datos.
-	Clipboard	Pega el texto del portapapeles
+	Clipboard	Pega el texto del portapapeles.
 	ComObjActive	Recupera un objeto COM registrado.
 	ComObjArray	Crea un SAFEARRAY para su uso con COM .
 	ComObjConnect	Conexiones fuentes de eventos de un objeto COM de funciones con un prefijo dado.

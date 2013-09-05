@@ -580,6 +580,72 @@ WinActive
 WinExist
 )"
 
+BuiltinFuncParams := "
+(
+Abs (Number)
+ACos (Number)
+Array (Value1, Value2, Value3...)
+Asc (String)
+ASin (Number)
+ATan (Number)
+Ceil (Number)
+Chr (Number)
+ComObjActive (CLSID)
+ComObjArray (VarType, Count1 [, Count2, ... Count8])
+ComObjConnect (ComObject [, Prefix])
+ComObjCreate (CLSID [, IID])
+ComObjEnwrap (DispPtr)
+ComObjError ([Enable])
+ComObjFlags (ComObject [, NewFlags, Mask])
+ComObjGet (Name)
+ComObjMissing ()
+ComObjParameter (VarType, Value [, Flags])
+ComObjQuery (ComObject, [SID,] IID)
+ComObjType (ComObject)
+ComObjUnwrap (ComObject)
+ComObjValue (ComObject)
+Cos (Number)
+DllCall (""[DllFile\]Function"" [, Type1, Arg1, Type2, Arg2, ""Cdecl ReturnType""])
+Exp (N)
+FileExist (FilePattern)
+FileOpen ()
+Floor (Number)
+Func (FunctionName)
+GetKeyName (Key)
+GetKeySC (Key)
+GetKeyState (KeyName [, ""P"" or ""T""])
+GetKeyVK (Key)
+InStr (Haystack, Needle [, CaseSensitive = false, StartingPos = 1, Occurrence = 1])
+Ln (Number)
+Log (Number)
+LTrim (String, OmitChars = "" `t"")
+Mod (Dividend, Divisor)
+NumGet (VarOrAddress [, Offset = 0][, Type = ""UPtr""])
+NumPut (Number, VarOrAddress [, Offset = 0][, Type = ""UPtr""])
+RegExMatch (Haystack, NeedleRegEx [, UnquotedOutputVar = "", StartingPos = 1])
+RegExReplace (Haystack, NeedleRegEx [, Replacement = """", OutputVarCount = """", Limit = -1, StartingPos = 1])
+Round (Number [, N])
+RTrim (String, OmitChars = "" `t"")
+Screenshot (FilePattern, X|Y|Width|Height)
+Sin (Number)
+Sqrt (Number)
+StrGet (Address [, Length] [, Encoding = None ] )
+StrLen (String)
+StrPut (String, Address [, Length] [, Encoding = None ] )
+StrSplit (String [, Delimiters, OmitChars])
+SubStr (String, StartingPos [, Length])
+Tan (Number)
+Trim (String, OmitChars = "" `t"")
+WinActive ([WinTitle, WinText, ExcludeTitle, ExcludeText])
+WinExist ([WinTitle, WinText, ExcludeTitle, ExcludeText])
+)"
+
+Loop, Parse, BuiltinFuncParams, `n
+{
+	RegExMatch(A_LoopField, "(\w+)\s(\(.*\))", FuncT)
+,	%FuncT1%_Hint := FuncT2
+}
+
 KeywordsList := "Type|Text|Mouse|Ctrl|Win|Misc|If|IE|Com|Func"
 GoSub, SetFindCmd
 
@@ -807,43 +873,43 @@ Loop, Parse, MsgList, `n
 
 Sort, WM_Msgs, D|
 
-DefaultBar := {FileOpt: "Enabled AutoSize", File: ["New=" w_Lang040 ":42", "Open=" w_Lang041 ":43(Enabled Dropdown)", "Save=" w_Lang042 ":60(Enabled Dropdown)"
-													, "", "Export=" w_Lang043 ":16", "Preview=" w_Lang044 ":50", "Options=" w_Lang045 ":44"]
-			, RecPlayOpt: "Enabled AutoSize", RecPlay: ["Record=" w_Lang046 ":55(Enabled AutoSize Dropdown)"
-																, "", "PlayStart=" w_Lang047 ":47(Enabled AutoSize Dropdown)", "TestRun=" w_Lang048 ":49", "RunTimer=" w_Lang049 ":72"]
-			, CommandOpt: "Enabled AutoSize", Command: ["Mouse=" w_Lang050 ":39", "Text=" w_Lang051 ":71", "ControlCmd=" w_Lang053 ":7"
-														, "", "Sleep=" w_Lang054 ":46", "MsgBox=" w_Lang055 ":11", "KeyWait=" w_Lang056 ":78"
-														, "", "Window=" w_Lang057 ":81", "Image=" w_Lang058 ":28", "Run=" w_Lang059 ":59"
-														, "", "ComLoop=" w_Lang060 ":37", "ComGoto=" w_Lang061 ":22", "AddLabel=" w_Lang062 ":35"
-														, "", "IfSt=" w_Lang063 ":27", "AsVar=" w_Lang064 ":76", "AsFunc=" w_Lang065 ":21"
-														, "", "IECom=" w_Lang066 ":26", "ComInt=" w_Lang067 ":4", "RunScrLet=" w_Lang068 ":77"
-														, "", "SendMsg=" w_Lang069 ":62"
-														, "", "CmdFind=" w_Lang091 ":95"]
-			, SetOpt: "Enabled AutoSize", Settings: ["HideMainWin=" w_Lang013 ":82", "OnScCtrl=" w_Lang009 ":89"
-														, "", "Capt=" w_Lang012 ":85", "CheckHkOn=" w_Lang014 ":84"
-														, "", "OnFinish=" w_Lang020 ":20(Enabled WholeDropdown)", "SetWin=" t_Lang009 ":48"
-														, "", "WinKey=" w_Lang070 ":90", "SetJoyButton=" w_Lang071 ":33"]
+DefaultBar := {FileOpt: "Enabled AutoSize", File: ["New=" w_Lang040 ":41", "Open=" w_Lang041 ":42(Enabled Dropdown)", "Save=" w_Lang042 ":59(Enabled Dropdown)"
+													, "", "Export=" w_Lang043 ":16", "Preview=" w_Lang044 ":49", "Options=" w_Lang045 ":43"]
+			, RecPlayOpt: "Enabled AutoSize", RecPlay: ["Record=" w_Lang046 ":54(Enabled AutoSize Dropdown)"
+																, "", "PlayStart=" w_Lang047 ":46(Enabled AutoSize Dropdown)", "TestRun=" w_Lang048 ":48", "RunTimer=" w_Lang049 ":71"]
+			, CommandOpt: "Enabled AutoSize", Command: ["Mouse=" w_Lang050 ":38", "Text=" w_Lang051 ":70", "ControlCmd=" w_Lang053 ":7"
+														, "", "Sleep=" w_Lang054 ":45", "MsgBox=" w_Lang055 ":11", "KeyWait=" w_Lang056 ":77"
+														, "", "Window=" w_Lang057 ":79", "Image=" w_Lang058 ":27", "Run=" w_Lang059 ":58"
+														, "", "ComLoop=" w_Lang060 ":36", "ComGoto=" w_Lang061 ":22", "AddLabel=" w_Lang062 ":34"
+														, "", "IfSt=" w_Lang063 ":26", "AsVar=" w_Lang064 ":75", "AsFunc=" w_Lang065 ":21"
+														, "", "IECom=" w_Lang066 ":25", "ComInt=" w_Lang067 ":4", "RunScrLet=" w_Lang068 ":76"
+														, "", "SendMsg=" w_Lang069 ":61"
+														, "", "CmdFind=" w_Lang091 ":92"]
+			, SetOpt: "Enabled AutoSize", Settings: ["HideMainWin=" w_Lang013 ":80", "OnScCtrl=" w_Lang009 ":87"
+														, "", "Capt=" w_Lang012 ":83", "CheckHkOn=" w_Lang014 ":82"
+														, "", "OnFinish=" w_Lang020 ":20(Enabled WholeDropdown)", "SetWin=" t_Lang009 ":47"
+														, "", "WinKey=" w_Lang070 ":88", "SetJoyButton=" w_Lang071 ":32"]
 			, EditOpt: "Enabled AutoSize", Edit: ["EditButton=" w_Lang092 ":14"
-														, "", "CutRows=" w_Lang080 ":9", "CopyRows=" w_Lang081 ":8", "PasteRows=" w_Lang082 ":45", "Remove=" w_Lang083 ":10"
-														, "", "Undo=" w_Lang084 ":75", "Redo=" w_Lang085 ":57"
-														, "" , "MoveUp=" w_Lang077 ":41", "MoveDn=" w_Lang078 ":40"
+														, "", "CutRows=" w_Lang080 ":9", "CopyRows=" w_Lang081 ":8", "PasteRows=" w_Lang082 ":44", "Remove=" w_Lang083 ":10"
+														, "", "Undo=" w_Lang084 ":74", "Redo=" w_Lang085 ":56"
+														, "" , "MoveUp=" w_Lang077 ":40", "MoveDn=" w_Lang078 ":39"
 														, "", "Duplicate=" w_Lang079 ":13", "CopyTo=" w_Lang086 ":8(Enabled WholeDropdown)"
 														, "", "EditColor=" w_Lang089 ":3", "EditComm=" w_Lang088 ":5", "FindReplace=" w_Lang087 ":19"
-														, "", "TabPlus=" w_Lang072 ":67", "TabClose=" w_Lang073 ":69", "DuplicateList=" w_Lang074 ":70", "EditMacros=" w_Lang094 ":100"
-														, "", "Import=" w_Lang075 ":29", "SaveCurrentList=" w_Lang076 ":68"]}
+														, "", "TabPlus=" w_Lang072 ":66", "TabClose=" w_Lang073 ":68", "DuplicateList=" w_Lang074 ":69", "EditMacros=" w_Lang094 ":97"
+														, "", "Import=" w_Lang075 ":28", "SaveCurrentList=" w_Lang076 ":67"]}
 FixedBar :=	{PrevOpt: "Enabled AutoSize", Preview: ["PrevDock=" t_Lang124 ":17"
-														, "", "PrevCopy=" c_Lang023 ":8", "PrevRefresh=" t_Lang014 ":37"
-														, "", "AutoRefresh=" t_Lang015 ":93", "TabIndent=" t_Lang011 ":87", "TextWrap=" t_Lang052 ":99", "OnTop=" t_Lang016 ":83"
+														, "", "PrevCopy=" c_Lang023 ":8", "PrevRefresh=" t_Lang014 ":36"
+														, "", "AutoRefresh=" t_Lang015 ":90", "TabIndent=" t_Lang011 ":85", "TextWrap=" t_Lang052 ":96", "OnTop=" t_Lang016 ":81"
 														, "", "EditScript=" t_Lang138 ":14"]
-			, TextOpt: "Enabled AutoSize", Text: ["OpenT=" t_Lang126 ":43", "SaveT=" t_Lang127 ":60"
-														, "", "CutT=" t_Lang128 ":9", "CopyT=" t_Lang129 ":8", "PasteT=" t_Lang130 ":45"
-														, "", "SelAllT=" t_Lang131 ":5", "RemoveT=" t_Lang132 ":10"]
-			, OSCOpt: "Enabled AutoSize", OSC: ["OSPlay=" t_Lang112 ":49", "OSStop=" t_Lang113 ":66", "ShowPlayMenu=" t_Lang114 ":48"
-														, "", "RecStart=" t_Lang115 ":55", "RecStartNew=" t_Lang116 ":92", "ShowRecMenu=" t_Lang117 ":54"
+			, TextOpt: "Enabled AutoSize", Text: ["OpenT=" t_Lang126 ":42", "SaveT=" t_Lang127 ":59"
+														, "", "CutT=" t_Lang128 ":9", "CopyT=" t_Lang129 ":8", "PasteT=" t_Lang130 ":44"
+														, "", "SelAllT=" t_Lang131 ":99", "RemoveT=" t_Lang132 ":10"]
+			, OSCOpt: "Enabled AutoSize", OSC: ["OSPlay=" t_Lang112 ":48", "OSStop=" t_Lang113 ":65", "ShowPlayMenu=" t_Lang114 ":47"
+														, "", "RecStart=" t_Lang115 ":54", "RecStartNew=" t_Lang116 ":89", "ShowRecMenu=" t_Lang117 ":53"
 														, "", "OSClear=" t_Lang118 ":10"
-														, "", "ProgBarToggle=" t_Lang119 ":52"
-														, "", "SlowKeyToggle=" t_Lang120 ":64", "FastKeyToggle=" t_Lang121 ":86"
-														, "", "ToggleTB=" t_Lang122 ":103", "ShowHideTB=" t_Lang123 ":82"]}
+														, "", "ProgBarToggle=" t_Lang119 ":51"
+														, "", "SlowKeyToggle=" t_Lang120 ":63", "FastKeyToggle=" t_Lang121 ":84"
+														, "", "ToggleTB=" t_Lang122 ":98", "ShowHideTB=" t_Lang123 ":80"]}
 
 TbFile_ID := 1, TbRecPlay_ID := 2, TbCommand_ID := 3, TbSettings_ID := 5, TbEdit_ID := 9
 

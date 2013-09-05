@@ -1072,7 +1072,7 @@
 	Chr	Returns the single character corresponding to the character code indicated by Number.
 	Click	Clicks a mouse button at the specified coordinates. It can also hold down a button, turn the wheel, or move.
 	ClipWait	Waits until the clipboard contains data.
-	Clipboard	Pastes text from clipboard
+	Clipboard	Pastes text from clipboard.
 	ComObjActive	Retrieves a registered COM object.
 	ComObjArray	Creates a SAFEARRAY for use with COM.
 	ComObjConnect	Connects a COM object's event sources to functions with a given prefix.

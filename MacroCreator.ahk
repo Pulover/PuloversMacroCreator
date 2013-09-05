@@ -117,6 +117,7 @@ IfNotExist, %ResDllPath%
 	MsgBox A required DLL is missing. Please reinstall the application.
 	ExitApp
 }
+ReshInst := DllCall("LoadLibrary", "Str", ResDllPath)
 
 Loop
 {
@@ -253,6 +254,7 @@ IniRead, MainWinPos, %IniFilePath%, WindowOptions, MainWinPos, Center
 IniRead, WinState, %IniFilePath%, WindowOptions, WinState, 0
 IniRead, ColSizes, %IniFilePath%, WindowOptions, ColSizes, 70,130,190,50,40,85,95,95,60,40
 IniRead, ColOrder, %IniFilePath%, WindowOptions, ColOrder, 1,2,3,4,5,6,7,8,9,10
+IniRead, PrevWinSize, %IniFilePath%, WindowOptions, PrevWinSize, W450 H500
 IniRead, ShowPrev, %IniFilePath%, WindowOptions, ShowPrev, 0
 IniRead, TextWrap, %IniFilePath%, WindowOptions, TextWrap, 0
 IniRead, CustomColors, %IniFilePath%, WindowOptions, CustomColors, 0
@@ -604,9 +606,9 @@ Gui, Add, Button, -Wrap ys-4 x+0 W25 H23 hwndApplyI vApplyI gApplyI
 Gui, Add, Text, W2 H25 ys-3 x+5 0x11 vSeparator2
 Gui, Add, Hotkey, ys-3 x+5 W150 vsInput
 Gui, Add, Button, -Wrap ys-4 x+0 W25 H23 hwndApplyL vApplyL gApplyL
-	ILButton(ApplyL, ResDllPath ":" 32)
+	ILButton(ApplyL, ResDllPath ":" 31)
 Gui, Add, Button, -Wrap ys-4 x+5 W25 H23 hwndInsertKey vInsertKey gInsertKey
-	ILButton(InsertKey, ResDllPath ":" 94)
+	ILButton(InsertKey, ResDllPath ":" 91)
 Gui, Add, Text, W2 H25 ys-3 x+5 0x11 vSeparator3
 Gui, Add, Text, -Wrap ys x+5 W90 vContextTip gSetWin cBlue, #IfWin: %IfDirectContext%
 Gui, Add, Text, W2 H25 ys-3 x+5 0x11 vSeparator4
@@ -727,7 +729,7 @@ Else
 	{
 		Gui, 35:-SysMenu +HwndTipScrID +owner1
 		Gui, 35:Color, FFFFFF
-		Gui, 35:Add, Pic, y+20 Icon80, %ResDllPath%
+		Gui, 35:Add, Pic, y+20 Icon78 W48 H48, %ResDllPath%
 		Gui, 35:Add, Text, yp x+10, %d_Lang058%`n
 		Gui, 35:Add, Checkbox, -Wrap W300 vDontShowAdm R1, %d_Lang053%
 		Gui, 35:Add, Button, -Wrap Default y+10 W90 H23 gTipClose2, %c_Lang020%
@@ -908,11 +910,14 @@ FloatPrev := !FloatPrev
 If (FloatPrev)
 {
 	RbMacro.ModifyBand(2, "Style", "Hidden")
-	Gui, 2:Show, W450 H500, %c_Lang072% - %AppName%
+	If (PrevWinSize = "W H")
+		PrevWinSize := "W450 H500"
+	Gui, 2:Show, %PrevWinSize%, %c_Lang072% - %AppName%
 }
 Else
 {
 	Gui, 2:Hide
+	GuiGetSize(pGuiWidth, pGuiHeight, 2), PrevWinSize := "W" pGuiWidth " H" pGuiHeight
 	RbMacro.ModifyBand(2, "Style", "Hidden", False)
 }
 Tooltip
@@ -949,7 +954,7 @@ Gui, 2:Add, Custom, ClassToolbarWindow32 hwndhTbPrevF 0x0800 0x0100 0x0040 0x000
 Gui, 2:Add, Custom, ClassScintilla x0 y34 hwndhSciPrevF vLVPrev
 Gui, 2:Add, StatusBar
 TB_Define(TbPrevF, hTbPrevF, hIL_Icons, FixedBar.Preview, FixedBar.PrevOpt)
-,	tbPrevF.ModifyButtonInfo(1, "Text", t_Lang125),	tbPrevF.ModifyButtonInfo(1, "Image", 96)
+,	tbPrevF.ModifyButtonInfo(1, "Text", t_Lang125),	tbPrevF.ModifyButtonInfo(1, "Image", 93)
 ,	sciPrevF := new scintilla(hSciPrevF)
 ,	sciPrevF.SetMarginWidthN(0, 20)
 ,	sciPrevF.SetWrapMode(TextWrap)
@@ -1013,6 +1018,7 @@ return
 PrevClose:
 2GuiClose:
 2GuiEscape:
+GuiGetSize(pGuiWidth, pGuiHeight, 2), PrevWinSize := "W" pGuiWidth " H" pGuiHeight
 TB_Edit(TbFile, "Preview", ShowPrev := 0), FloatPrev := 0
 Menu, ViewMenu, UnCheck, %v_lang002%
 Gui, 2:Hide
@@ -1090,7 +1096,7 @@ If !DontShowRec
 		GoSub, TipClose
 	Gui, 26:-SysMenu +HwndTipScrID
 	Gui, 26:Color, FFFFFF
-	Gui, 26:Add, Pic, y+20 Icon91, %ResDllPath%
+	Gui, 26:Add, Pic, y+20 Icon29 W48 H48, %ResDllPath%
 	Gui, 26:Add, Text, yp x+10, %d_Lang052%`n`n- %RecKey% %d_Lang026%`n- %RecNewKey% %d_Lang030%`n`n%d_Lang043%`n
 	Gui, 26:Add, Checkbox, -Wrap W300 vDontShowRec R1, %d_Lang053%
 	Gui, 26:Add, Button, -Wrap Default y+10 W90 H23 gTipClose, %c_Lang020%
@@ -1143,9 +1149,9 @@ If (Record := !Record)
 	Tooltip
 	If (ShowStep = 1)
 		Traytip, %AppName%, Macro%A_List%: %d_Lang028% %RecKey% %d_Lang029%.,,1
-	Try Menu, Tray, Icon, %ResDllPath%, 55
+	Try Menu, Tray, Icon, %ResDllPath%, 54
 	Menu, Tray, Default, %w_Lang008%
-	tbOSC.ModifyButtonInfo(5, "Image", 66)
+	tbOSC.ModifyButtonInfo(5, "Image", 65)
 	return
 }
 Else
@@ -1158,7 +1164,7 @@ Else
 	If ShowStep = 1
 		Traytip, %AppName%, % d_Lang027
 		. ".`nMacro" A_List ": " o_AutoKey[A_List],,1
-	tbOSC.ModifyButtonInfo(5, "Image", 55)
+	tbOSC.ModifyButtonInfo(5, "Image", 54)
 	return
 }
 return
@@ -1177,7 +1183,7 @@ If (!(WinActive("ahk_id" PMCWinID)) && (KeepHkOn = 1))
 	GoSub, KeepHkOn
 Try Menu, Tray, Icon, %DefaultIcon%, 1
 Try Menu, Tray, Default, %w_Lang005%
-tbOSC.ModifyButtonInfo(5, "Image", 55)
+tbOSC.ModifyButtonInfo(5, "Image", 54)
 return
 
 KeyboardRecord:
@@ -1851,7 +1857,7 @@ Gui, 14:Add, Text, y+10 xs+10 W430 H2 0x10
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_IN% y+10 xs+10 W230 vEx_IN R1, `#`Include (%t_Lang087%)
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_UV% yp x+5 W165 vEx_UV gEx_Checks R1, Global Variables
 Gui, 14:Add, Button, yp-5 xp+170 H23 W25 hwndEx_EdVars vEx_EdVars gVarsTree Disabled
-	ILButton(Ex_EdVars, ResDllPath ":" 74)
+	ILButton(Ex_EdVars, ResDllPath ":" 73)
 Gui, 14:Add, Text, y+5 xs+10 W80, %t_Lang101%:
 Gui, 14:Add, Text, yp xs+90 W50, %t_Lang102%
 Gui, 14:Add, Slider, yp-10 xs+140 H35 W180 Center TickInterval Range-5-5 vEx_Speed, %Ex_Speed%
@@ -1884,6 +1890,7 @@ Loop, %TabCount%
 If CurrentFileName = 
 	GuiControl, 14:, ExpFile, %A_MyDocuments%\MyScript.ahk
 Gui, 14:Show, % (ShowExpOpt) ? "H695" : "H325", %t_Lang001%
+ChangeIcon(ReshInst, CmdWin, 16)
 Tooltip
 return
 
@@ -1899,9 +1906,7 @@ If (A_GuiEvent == "e")
 {
 	InEdit := 0
 ,	LV_GetText(AfterEdit, EditRow, 1)
-	Try
-		z_Check := VarSetCapacity(%AfterEdit%)
-	Catch
+	If !RegExMatch(AfterEdit, "^\w+$")
 	{
 		LV_Modify(EditRow, "", BeforeEdit)
 		MsgBox, 16, %d_Lang007%, %d_Lang049%
@@ -1948,9 +1953,7 @@ return
 ExpEditOK:
 Gui, 13:+OwnDialogs
 Gui, 13:Submit, NoHide
-Try
-	z_Check := VarSetCapacity(%Ex_Macro%)
-Catch
+If !RegExMatch(Ex_Macro, "^\w+$")
 {
 	MsgBox, 16, %d_Lang007%, %d_Lang049%
 	return
@@ -1965,9 +1968,7 @@ ExpSelList:
 NewRow := ExpSel ? (RowNumber + 1) : (RowNumber - 1)
 Gui, 13:+OwnDialogs
 Gui, 13:Submit, NoHide
-Try
-	z_Check := VarSetCapacity(%Ex_Macro%)
-Catch
+If !RegExMatch(Ex_Macro, "^\w+$")
 {
 	MsgBox, 16, %d_Lang007%, %d_Lang049%
 	return
@@ -2799,11 +2800,11 @@ Gui, 5:Add, Edit, Limit Number yp-2 x+5 W60 R1 vCCount
 Gui, 5:Add, UpDown, 0x80 Range0-999999999, 1
 ; Repeat
 Gui, 5:Add, GroupBox, Section xm W250 H125
-Gui, 5:Add, Text, ys+15 xs+10, %w_Lang015%:
-Gui, 5:Add, Text,, %c_Lang017%:
-Gui, 5:Add, Edit, ys+15 xs+120 W120 R1 vEdRept
+Gui, 5:Add, Text, ys+20 xs+10 W100 Right, %w_Lang015%:
+Gui, 5:Add, Edit, yp x+10 W120 R1 vEdRept
 Gui, 5:Add, UpDown, vTimesX 0x80 Range1-999999999, 1
-Gui, 5:Add, Edit, W120 vDelayC
+Gui, 5:Add, Text, y+10 xs+10 W100 Right, %c_Lang017%:
+Gui, 5:Add, Edit, yp x+10 W120 vDelayC
 Gui, 5:Add, UpDown, vDelayX 0x80 Range0-999999999, %DelayM%
 Gui, 5:Add, Radio, -Wrap Checked W125 vMsc R1, %c_Lang018%
 Gui, 5:Add, Radio, -Wrap W125 vSec R1, %c_Lang019%
@@ -2813,7 +2814,7 @@ Gui, 5:Add, Checkbox, -Wrap ys+15 xs+10 W160 vCSend gCSend R1, %c_Lang016%:
 Gui, 5:Add, Edit, vDefCt W200 Disabled
 Gui, 5:Add, Button, -Wrap yp-1 x+0 W30 H23 vGetCtrl gGetCtrl Disabled, ...
 Gui, 5:Add, DDL, y+5 xs+10 W75 vIdent Disabled, Title||Class|Process|ID|PID
-Gui, 5:Add, Text, -Wrap yp+5 x+5 W140 H20 vWinParsTip Disabled, %wcmd_All%
+Gui, 5:Add, Text, -Wrap yp+5 x+5 W140 H20 vWinParsTip cGray, %wcmd_All%
 Gui, 5:Add, Edit, y+5 xs+10 W200 vTitle Disabled, A
 Gui, 5:Add, Button, -Wrap yp-1 x+0 W30 H23 vGetWin gGetWin Disabled, ...
 Gui, 5:Add, Button, -Wrap Section Default xm W75 H23 gMouseOK, %c_Lang020%
@@ -3052,6 +3053,7 @@ If (s_Caller = "Find")
 Gui, 5:Submit, NoHide
 SBShowTip((CSend ? "Control" : "") "Click")
 Gui, 5:Show,, %c_Lang001%
+ChangeIcon(ReshInst, CmdWin, 42)
 Input
 Tooltip
 return
@@ -4000,7 +4002,7 @@ IfWinExist
 Gui, 1:Submit, NoHide
 Gui, 8:+owner1 -MinimizeBox +E0x00000400 +HwndCmdWin
 Gui, 1:+Disabled
-Gui, 8:Add, Custom, ClassToolbarWindow32 hwndhTbText gTbText 0x0800 0x0100 0x0040
+Gui, 8:Add, Custom, ClassToolbarWindow32 hwndhTbText gTbText 0x0800 0x0100 0x0040 0x0008 0x0004
 Gui, 8:Add, Edit, Section xm ym+25 vTextEdit gTextEdit WantTab W710 R25
 ; Options
 Gui, 8:Add, GroupBox, Section W220 H135, %c_Lang163%:
@@ -4011,34 +4013,34 @@ Gui, 8:Add, Radio, -Wrap W200 vEditPaste gEditPaste R1, %c_Lang048%
 Gui, 8:Add, Radio, -Wrap W200 vSetText gSetText R1, %c_Lang049%
 Gui, 8:Add, Checkbox, -Wrap yp-55 xs+30 W180 vComEvent gComEvent R1 Disabled, %c_Lang178%
 ; Repeat
-Gui, 8:Add, GroupBox, Section ys x+20 W220 H135
-Gui, 8:Add, Text, ys+15 xs+10, %w_Lang015%:
-Gui, 8:Add, Text,, %c_Lang017%:
-Gui, 8:Add, Edit, ys+15 xs+110 W100 R1 vEdRept
+Gui, 8:Add, GroupBox, Section ys x+20 W230 H135
+Gui, 8:Add, Text, ys+15 xs+10 W100 R1 Right, %w_Lang015%:
+Gui, 8:Add, Edit, yp x+10 W100 R1 vEdRept
 Gui, 8:Add, UpDown, vTimesX 0x80 Range1-999999999, 1
-Gui, 8:Add, Edit, W100 vDelayC
+Gui, 8:Add, Text, y+5 xs+10 W100 R1 Right, %c_Lang017%:
+Gui, 8:Add, Edit, yp x+10 W100 vDelayC
 Gui, 8:Add, UpDown, vDelayX 0x80 Range0-999999999, %DelayG%
 Gui, 8:Add, Radio, -Wrap Checked W100 vMsc R1, %c_Lang018%
 Gui, 8:Add, Radio, -Wrap W100 vSec R1, %c_Lang019%
-Gui, 8:Add, Text, -Wrap y+5 xs+10 R1, %c_Lang179%:
-Gui, 8:Add, Edit, yp xs+110 W100 vKeyDelayC Disabled
+Gui, 8:Add, Text, -Wrap y+5 xs+10 W100 Right, %c_Lang179%:
+Gui, 8:Add, Edit, yp x+10 W100 vKeyDelayC Disabled
 Gui, 8:Add, UpDown, vKeyDelayX 0x80 Range0-999999999, -1
 ; Control
-Gui, 8:Add, GroupBox, Section ys x+20 W250 H135
-Gui, 8:Add, Checkbox, -Wrap ys+15 xs+10 W160 vCSend gCSend R1, %c_Lang016%:
-Gui, 8:Add, Edit, vDefCt W200 Disabled
+Gui, 8:Add, GroupBox, Section ys x+20 W240 H135
+Gui, 8:Add, Checkbox, -Wrap ys+15 xs+10 W150 vCSend gCSend R1, %c_Lang016%:
+Gui, 8:Add, Edit, vDefCt W190 Disabled
 Gui, 8:Add, Button, -Wrap yp-1 x+0 W30 H23 vGetCtrl gGetCtrl Disabled, ...
 Gui, 8:Add, DDL, y+20 xs+10 W75 vIdent Disabled, Title||Class|Process|ID|PID
-Gui, 8:Add, Text, -Wrap yp+5 x+5 W140 H20 vWinParsTip Disabled, %wcmd_All%
-Gui, 8:Add, Edit, y+5 xs+10 W200 vTitle Disabled, A
+Gui, 8:Add, Text, -Wrap yp+5 x+5 W140 H20 vWinParsTip cGray, %wcmd_All%
+Gui, 8:Add, Edit, y+5 xs+10 W190 vTitle Disabled, A
 Gui, 8:Add, Button, -Wrap yp-1 x+0 W30 H23 vGetWin gGetWin Disabled, ...
 ; Buttons
 Gui, 8:Add, Button, -Wrap Section Default xm W75 H23 gTextOK, %c_Lang020%
 Gui, 8:Add, Button, -Wrap ys W75 H23 gTextCancel, %c_Lang021%
 Gui, 8:Add, Button, -Wrap ys W75 H23 vTextApply gTextApply Disabled, %c_Lang131%
 Gui, 8:Add, Button, -Wrap ys W25 H23 hwndInsertKeyT vInsertKeyT gInsertKey Disabled
-Gui, 8:Add, Text, -Wrap ys+5, %c_Lang025%
-	ILButton(InsertKeyT, ResDllPath ":" 94)
+Gui, 8:Add, Text, -Wrap ys+5 cGray, %c_Lang025%
+	ILButton(InsertKeyT, ResDllPath ":" 91)
 Gui, 8:Add, StatusBar
 Gui, 8:Default
 SB_SetParts(600, 70)
@@ -4139,7 +4141,8 @@ If (s_Caller = "Find")
 Else
 	SBShowTip("SendRaw")
 Gui, 8:Show,, %c_Lang002%
-TB_Define(TbText, hTbText, hIL_Icons, FixedBar.Text, FixedBar.TextOpt)
+ChangeIcon(ReshInst, CmdWin, 74)
+,	TB_Define(TbText, hTbText, hIL_Icons, FixedBar.Text, FixedBar.TextOpt)
 ,	TBHwndAll[7] := TbText
 GuiControl, 8:Focus, TextEdit
 Input
@@ -4405,35 +4408,35 @@ Gui, 3:+owner1 -MinimizeBox +Delimiter¢ +E0x00000400 +HwndCmdWin
 Gui, 1:+Disabled
 Gui, 3:Add, Tab2, W450 H0 vTabControl AltSubmit, %c_Lang003%¢%c_Lang015%¢%c_Lang066%
 ; Sleep
-Gui, 3:Add, GroupBox, Section xm ym W450 H110
-Gui, 3:Add, Text, ys+15 xs+10 W150, %c_Lang050%:
-Gui, 3:Add, Edit, yp-2 x+0 W170 vDelayC
+Gui, 3:Add, GroupBox, Section xm ym W450 H115
+Gui, 3:Add, Text, ys+20 xs+10 W180 Right, %c_Lang050%:
+Gui, 3:Add, Edit, yp-2 x+10 W100 vDelayC
 Gui, 3:Add, UpDown, vDelayX 0x80 Range0-9999999, 300
 Gui, 3:Add, Radio, -Wrap Checked y+12 W170 vMsc R1, %c_Lang018%
 Gui, 3:Add, Radio, -Wrap W170 vSec R1, %c_Lang019%
 Gui, 3:Add, Radio, -Wrap W170 vMin R1, %c_Lang154%
 Gui, 3:Add, GroupBox, Section xs y+20 W450 H118
-Gui, 3:Add, Checkbox, -Wrap ys+15 xs+10 W150 vRandom gRandomSleep, %c_Lang180%
-Gui, 3:Add, Text, Section -Wrap yp x+0 W70 R1, %c_Lang181%
-Gui, 3:Add, Edit, yp-2 x+0 W100 R1 vRandMin Disabled
+Gui, 3:Add, Checkbox, -Wrap ys+20 xs+10 W110 vRandom gRandomSleep, %c_Lang180%
+Gui, 3:Add, Text, Section -Wrap yp x+0 W70 R1 Right, %c_Lang181%:
+Gui, 3:Add, Edit, yp-2 x+10 W100 R1 vRandMin Disabled
 Gui, 3:Add, UpDown, vRandMinimum 0x80 Range0-100000, 0
-Gui, 3:Add, Text, -Wrap y+10 xs W70 R1, %c_Lang182%
-Gui, 3:Add, Edit, yp-2 x+0 W100 R1 vRandMax Disabled
+Gui, 3:Add, Text, -Wrap y+10 xs W70 R1 Right, %c_Lang182%:
+Gui, 3:Add, Edit, yp-2 x+10 W100 R1 vRandMax Disabled
 Gui, 3:Add, UpDown, vRandMaximum 0x80 Range0-100000, 500
 Gui, 3:Add, Checkbox, -Wrap y+20 xm+10 W400 vNoRandom gNoRandom, %c_Lang183%
 ; MsgBox
 Gui, 3:Tab, 2
 Gui, 3:Add, GroupBox, Section ym xm W450 H130
 Gui, 3:Add, Text, -Wrap ys+10 xs+10 W260 R1, %c_Lang015%:
-Gui, 3:Add, Edit, vMsgPt W430 r5
-Gui, 3:Add, Text, -Wrap W240 r1, %c_Lang025%
-Gui, 3:Add, Text, -Wrap yp x+0 W135 r1, %c_Lang177% (%c_Lang019%):
+Gui, 3:Add, Edit, vMsgPt W430 R5
+Gui, 3:Add, Text, -Wrap W240 R1 cGray, %c_Lang025%
+Gui, 3:Add, Text, -Wrap yp x+0 W135 R1 Right, %c_Lang177% (%c_Lang019%):
 Gui, 3:Add, Edit, yp-3 x+5 W50 vTimeoutM
 Gui, 3:Add, UpDown, vTimeoutMsg 0x80 Range0-2147483, 0
 Gui, 3:Add, Groupbox, Section y+16 xs W220 H98, %w_Lang003%:
-Gui, 3:Add, Text, -Wrap ys+20 xs+10 W50 r1, %c_Lang189%
-Gui, 3:Add, Edit, -Wrap yp x+10 W140 r1 vTitle
-Gui, 3:Add, Text, -Wrap y+10 xs+10 W75 r1, %c_Lang147%
+Gui, 3:Add, Text, -Wrap ys+20 xs+10 W50 R1 Right, %c_Lang189%:
+Gui, 3:Add, Edit, -Wrap yp x+10 W140 R1 vTitle
+Gui, 3:Add, Text, -Wrap y+10 xs+10 W50 R1 Right, %c_Lang147%:
 Gui, 3:Add, DDL, yp-2 x+10 W115 AltSubmit vIcon, %c_Lang148%¢¢%c_Lang149%¢%c_Lang150%¢%c_Lang151%¢%c_Lang152%
 Gui, 3:Add, Checkbox, -Wrap W200 y+5 xs+10 vAot R1, %c_Lang153%
 Gui, 3:Add, Groupbox, Section ys x+20 W220 H98, %c_Lang185%:
@@ -4447,19 +4450,19 @@ Gui, 3:Add, DDL, ys+20 xs+10 W200 AltSubmit vButtons,
 %c_Lang174%/%c_Lang171%
 %c_Lang171%/%c_Lang176%/%c_Lang175%
 )
-Gui, 3:Add, Text, y+10 xs+10 W75, %t_Lang063%:
+Gui, 3:Add, Text, y+10 xs+10 W75 R1 Right, %t_Lang063%:
 Gui, 3:Add, DDL, yp-2 x+10 W115 AltSubmit vDefault, %c_Lang186%¢¢%c_Lang187%¢%c_Lang188%
 Gui, 3:Add, CheckBox, -Wrap y+5 xs+10 W200 vAddIf, %c_Lang162%
 ; KeyWait
 Gui, 3:Tab, 3
 Gui, 3:Add, GroupBox, Section xm ym W450 H130
-Gui, 3:Add, Text, -Wrap ys+15 xs+10 W200 R1, %c_Lang052%:
-Gui, 3:Add, Hotkey, vWaitKeys gWaitKeys W260
-Gui, 3:Add, Checkbox, y+20 xs+10 -Wrap W125 vWaitKeyList gWaitKeyList R1, %c_Lang184%:
-Gui, 3:Add, Combobox, W260 vKeyW Disabled, %KeybdList%
-Gui, 3:Add, GroupBox, Section xm y+22 W450 H98
-Gui, 3:Add, Text, ys+20 xs+10 vTimoutT W85, %c_Lang053%:
-Gui, 3:Add, Edit, Section yp-2 x+5 W170 vTimeoutC
+Gui, 3:Add, Text, -Wrap ys+20 xs+10 W180 R1 Right, %c_Lang052%:
+Gui, 3:Add, Hotkey, yp x+10 vWaitKeys gWaitKeys W120
+Gui, 3:Add, Checkbox, y+20 xs+10 -Wrap W180 R1 Right vWaitKeyList gWaitKeyList, %c_Lang184%:
+Gui, 3:Add, Combobox, yp-3 x+10 W120 vKeyW Disabled, %KeybdList%
+Gui, 3:Add, GroupBox, Section xm y+58 W450 H98
+Gui, 3:Add, Text, ys+20 xs+10 vTimoutT W180 R1 Right, %c_Lang053%:
+Gui, 3:Add, Edit, Section yp-2 x+10 W120 vTimeoutC
 Gui, 3:Add, UpDown, vTimeout 0x80 Range0-999999999, 0
 Gui, 3:Add, Text, y+10 xs, %c_Lang054%
 Gui, 3:Tab
@@ -4551,6 +4554,7 @@ If InStr(A_ThisLabel, "KeyWait")
 	GuiControl, 3:Choose, TabControl, 3
 SBShowTip(LTrim(A_ThisLabel, "Edit"))
 Gui, 3:Show,, % InStr(A_ThisLabel, "Sleep") ? c_Lang003 : InStr(A_ThisLabel, "MsgBox") ? c_Lang051 : c_Lang066
+ChangeIcon(ReshInst, CmdWin, InStr(A_ThisLabel, "Sleep") ? 49 : InStr(A_ThisLabel, "MsgBox") ? 11 : 81)
 Input
 Tooltip
 return
@@ -4733,8 +4737,8 @@ Gui, 12:Add, Radio, -Wrap x+5 W80 vLFilePattern gLoopType R1, %c_Lang133%
 Gui, 12:Add, Radio, -Wrap x+5 W80 vLParse gLoopType R1, %c_Lang134%
 Gui, 12:Add, Radio, -Wrap x+5 W80 vLRead gLoopType R1, %c_Lang135%
 Gui, 12:Add, Radio, -Wrap x+5 W80 R1 vLRegistry gLoopType R1, %c_Lang136%
-Gui, 12:Add, Text, y+10 xs+10 W160, %w_Lang015% (%t_Lang004%):
-Gui, 12:Add, Edit, yp x+10 W260 R1 vEdRept
+Gui, 12:Add, Text, y+10 xs+10 W160 R1 Right, %w_Lang015% (%t_Lang004%):
+Gui, 12:Add, Edit, yp x+10 W120 R1 vEdRept
 Gui, 12:Add, UpDown, vTimesL 0x80 Range0-999999999, 2
 Gui, 12:Add, Text, y+10 xs+10 W160 vField1, %c_Lang137%
 Gui, 12:Add, CheckBox, -Wrap Check3 yp x+10 W120 vIncFolders Disabled R1, %c_Lang138%
@@ -4746,31 +4750,30 @@ Gui, 12:Add, Text, yp x+10 W210 vField3, %c_Lang142%
 Gui, 12:Add, Edit, y+5 xs+10 W210 R1 vDelim Disabled
 Gui, 12:Add, Edit, yp x+10 W210 R1 vOmit Disabled
 Gui, 12:Add, Text, y+5 xs+15 r1, %c_Lang074%
-Gui, 12:Add, Text, y+5 r1, %c_Lang025%
-Gui, 12:Add, Groupbox, Section xs y+15 W450 H50
-Gui, 12:Add, Text, -Wrap xs+10 ys+15 W75 H23, %c_Lang123%:
-Gui, 12:Add, Button, -Wrap yp x+0 W75 H23 gAddBreak, %c_Lang075%
+Gui, 12:Add, Text, y+5 r1 cGray, %c_Lang025%
+Gui, 12:Add, Groupbox, Section xs y+18 W450 H50, %c_Lang123%:
+Gui, 12:Add, Button, -Wrap ys+18 xs+85 W75 H23 gAddBreak, %c_Lang075%
 Gui, 12:Add, Button, -Wrap yp x+10 W75 H23 gAddContinue, %c_Lang076%
 Gui, 12:Add, Button, -Wrap Section Default xm W75 H23 gLoopOK, %c_Lang020%
 Gui, 12:Add, Button, -Wrap ys W75 H23 gLoopCancel, %c_Lang021%
 Gui, 12:Add, Button, -Wrap ys W75 H23 vLoopApply gLoopApply Disabled, %c_Lang131%
 Gui, 12:Tab, 2
 ; Goto
-Gui, 12:Add, Groupbox, Section xm ym W450 H254
-Gui, 12:Add, Text, ys+15 xs+10, %c_Lang078%:
-Gui, 12:Add, ComboBox, W430 vGoLabel, %Proj_Labels%
-Gui, 12:Add, Radio, Checked vGoto gGoto, Goto
+Gui, 12:Add, Groupbox, Section xm ym W450 H100
+Gui, 12:Add, Text, ys+20 xs+10 W150 R1 Right, %c_Lang078%:
+Gui, 12:Add, ComboBox, yp x+10 W150 vGoLabel, %Proj_Labels%
+Gui, 12:Add, Radio, Section Checked vGoto gGoto, Goto
 Gui, 12:Add, Radio, yp x+25 vGosub gGoto, Gosub
-Gui, 12:Add, Text, y+5 xs+10 r1, %c_Lang025%
-Gui, 12:Add, Button, -Wrap Section xm ys+260 W75 H23 gGotoOK, %c_Lang020%
+Gui, 12:Add, Text, y+15 xs R1 cGray, %c_Lang025%
+Gui, 12:Add, Button, -Wrap Section xm y+20 W75 H23 gGotoOK, %c_Lang020%
 Gui, 12:Add, Button, -Wrap ys W75 H23 gLoopCancel, %c_Lang021%
 Gui, 12:Add, Button, -Wrap ys W75 H23 vGotoApply gGotoApply Disabled, %c_Lang131%
 Gui, 12:Tab, 3
 ; Label
-Gui, 12:Add, Groupbox, Section xm ym W450 H254
-Gui, 12:Add, Text, ys+15 xs+10, %c_Lang080%:
-Gui, 12:Add, Edit, W430 R1 vNewLabel
-Gui, 12:Add, Button, -Wrap Section xm ys+260 W75 H23 gLabelOK, %c_Lang020%
+Gui, 12:Add, Groupbox, Section xm ym W450 H100
+Gui, 12:Add, Text, ys+20 xs+10 W150 R1 Right, %c_Lang080%:
+Gui, 12:Add, Edit, yp x+10 W150 R1 vNewLabel
+Gui, 12:Add, Button, -Wrap Section xm y+67 W75 H23 gLabelOK, %c_Lang020%
 Gui, 12:Add, Button, -Wrap ys W75 H23 gLoopCancel, %c_Lang021%
 Gui, 12:Add, Button, -Wrap ys W75 H23 vLabelApply gLabelApply Disabled, %c_Lang131%
 Gui, 12:Add, StatusBar
@@ -4861,7 +4864,8 @@ Else If ((s_Caller = "Find") && (InStr(GotoRes1, "Loop")))
 }
 Else
 	SBShowTip("Loop (normal)")
-Gui, 12:Show,, % InStr(A_ThisLabel, "Goto") ? c_Lang077 : InStr(A_ThisLabel, "Label") ? c_Lang079 : c_Lang073
+Gui, 12:Show, % InStr(A_ThisLabel, "Loop") ? "" : "H167", % InStr(A_ThisLabel, "Goto") ? c_Lang077 : InStr(A_ThisLabel, "Label") ? c_Lang079 : c_Lang073
+ChangeIcon(ReshInst, CmdWin, InStr(A_ThisLabel, "Goto") ? 22 : InStr(A_ThisLabel, "Label") ? 38 : 40)
 Input
 Tooltip
 return
@@ -5000,9 +5004,7 @@ Gui, 12:+OwnDialogs
 Gui, 12:Submit, NoHide
 If (NewLabel = "")
 	return
-Try
-	z_Check := VarSetCapacity(%NewLabel%)
-Catch
+If !RegExMatch(NewLabel, "^\w+$")
 {
 	MsgBox, 16, %d_Lang007%, %d_Lang049%
 	return
@@ -5138,7 +5140,7 @@ Gui, 11:Add, Edit, W430 -Multi Disabled vVarName
 Gui, 11:Add, Text, xs+10 y+5 W430 r1 vCPosT
 Gui, 11:Add, Groupbox, Section xs y+15 W450 H85
 Gui, 11:Add, DDL, ys+15 xs+10 W75 vIdent, Title||Class|Process|ID|PID
-Gui, 11:Add, Text, -Wrap yp+5 x+5 W240 H20 vWinParsTip Disabled, %wcmd_WinSet%
+Gui, 11:Add, Text, -Wrap yp+5 x+5 W240 H20 vWinParsTip cGray, %wcmd_WinSet%
 Gui, 11:Add, Edit, xs+10 y+10 W400 vTitle, A
 Gui, 11:Add, Button, -Wrap yp-1 x+0 W30 H23 vGetWin gGetWin, ...
 Gui, 11:Add, Text, Section ym+20 xm+205, %c_Lang058%
@@ -5229,6 +5231,7 @@ Else If (s_Caller = "Find")
 Else
 	SBShowTip("WinSet")
 Gui, 11:Show, , %c_Lang005%
+ChangeIcon(ReshInst, CmdWin, 84)
 Tooltip
 return
 
@@ -5454,15 +5457,15 @@ Gui, 19:Add, Edit, yp x+5 vePosY W60, %A_ScreenHeight%
 Gui, 19:Add, Radio, -Wrap Checked y+10 xs+10 W90 vImageS gImageS R1, %c_Lang063%
 Gui, 19:Add, Radio, -Wrap yp xs+145 W90 vPixelS gPixelS R1, %c_Lang064%
 Gui, 19:Add, Button, -Wrap yp-1 xs+115 W25 H23 hwndScreenshot vScreenshot gScreenshot ;, %c_Lang065%
-	ILButton(Screenshot, ResDllPath ":" 61)
+	ILButton(Screenshot, ResDllPath ":" 60)
 Gui, 19:Add, Button, -Wrap yp xs+240 W25 H23 hwndColorPick vColorPick gSearchImg Disabled
 	ILButton(ColorPick, ResDllPath ":" 3)
 Gui, 19:Add, Edit, y+10 xs+10 vImgFile W225 R1 -Multi
 Gui, 19:Add, Button, -Wrap yp-1 x+0 W30 H23 vSearchImg gSearchImg, ...
-Gui, 19:Add, Text, y+10 xs+10 W180 H25, %c_Lang067%:
-Gui, 19:Add, DDL, yp-2 xs+185 W80 vIfFound gIfFound, Continue||Break|Stop|Prompt|Move|Left Click|Right Click|Middle Click
-Gui, 19:Add, Text, y+10 xs+10 W180 H25, %c_Lang068%:
-Gui, 19:Add, DDL, yp-2 xs+185 W80 vIfNotFound, Continue||Break|Stop|Prompt
+Gui, 19:Add, Text, y+10 xs+10 W165 R1 Right, %c_Lang067%:
+Gui, 19:Add, DDL, yp-2 x+10 W80 vIfFound gIfFound, Continue||Break|Stop|Prompt|Move|Left Click|Right Click|Middle Click
+Gui, 19:Add, Text, y+10 xs+10 W165 R1 Right, %c_Lang068%:
+Gui, 19:Add, DDL, yp-2 x+10 W80 vIfNotFound, Continue||Break|Stop|Prompt
 Gui, 19:Add, CheckBox, Checked -Wrap y+5 xs+10 W180 vAddIf, %c_Lang162%
 Gui, 19:Add, Text, -Wrap y+10 xs+10 W250 r1 cBlue, %c_Lang069%
 ; Preview
@@ -5472,29 +5475,28 @@ Gui, 19:Add, Progress, ys+20 xs+10 W255 H200 Disabled Hidden vColorPrev
 Gui, 19:Add, Text, y+0 xs+10 W150 vImgSize
 ; Options
 Gui, 19:Add, GroupBox, Section y+10 xm W275 H115, %c_Lang159%:
-Gui, 19:Add, Text, ys+20 xs+10 W80, %c_Lang070%:
-Gui, 19:Add, DDL, ys+20 xs+45 W65 vCoordPixel, Screen||Window
-Gui, 19:Add, Text, yp+3 xs+115 W85, %c_Lang071%:
-Gui, 19:Add, Edit, yp-3 xs+190 vVariatT W45 Number Limit
+Gui, 19:Add, Text, ys+20 xs+10 W40 R1 Right, %c_Lang070%:
+Gui, 19:Add, DDL, yp x+10 W65 vCoordPixel, Screen||Window
+Gui, 19:Add, Text, yp+3 x+0 W85 R1 Right, %c_Lang071%:
+Gui, 19:Add, Edit, yp-3 x+10 vVariatT W45 Number Limit
 Gui, 19:Add, UpDown, vVariat 0x80 Range0-255, 0
-Gui, 19:Add, Text, y+5 xs+10 W55 r1, %c_Lang147%:
-Gui, 19:Add, Edit, yp-3 xp+55 W45 vIconN
-Gui, 19:Add, Text, yp+3 xs+115 W65 r1, %c_Lang160%:
-Gui, 19:Add, Edit, yp-3 xs+190 W45 vTransC
+Gui, 19:Add, Text, y+5 xs+10 W40 R1 Right, %c_Lang147%:
+Gui, 19:Add, Edit, yp-3 x+10 W45 vIconN
+Gui, 19:Add, Text, yp+3 x+0 W75 R1 Right, %c_Lang160%:
+Gui, 19:Add, Edit, yp-3 x+10 W45 vTransC
 Gui, 19:Add, Button, -Wrap yp-1 x+0 W30 H23 vTransCS gGetPixel, ...
-Gui, 19:Add, Text, y+5 xs+10 W40 r1, %c_Lang161%:
-Gui, 19:Add, Text, yp xs+50 W20, W:
-Gui, 19:Add, Edit, yp-3 xs+65 W45 vWScale
-Gui, 19:Add, Text, yp+3 xs+168 W20, H:
-Gui, 19:Add, Edit, yp-3 xs+190 W45 vHScale
+Gui, 19:Add, Text, y+5 xs+10 W170 R1 Right, %c_Lang161% (W/H):
+Gui, 19:Add, Edit, yp-3 x+10 W35 vWScale
+Gui, 19:Add, Text, yp+5 x+0, x
+Gui, 19:Add, Edit, yp-5 x+0 W35 vHScale
 Gui, 19:Add, Checkbox, -Wrap y+5 xs+10 W250 vBreakLoop R1, %c_Lang130%
 ; Repeat
 Gui, 19:Add, GroupBox, Section ys xs+280 W275 H115
-Gui, 19:Add, Text, ys+15 xs+10, %w_Lang015%:
-Gui, 19:Add, Text,, %c_Lang017%:
-Gui, 19:Add, Edit, ys+15 xs+145 W120 R1 vEdRept
+Gui, 19:Add, Text, ys+15 xs+10 W100 R1 Right, %w_Lang015%:
+Gui, 19:Add, Edit, yp x+10 W120 R1 vEdRept
 Gui, 19:Add, UpDown, vTimesX 0x80 Range1-999999999, 1
-Gui, 19:Add, Edit, W120 vDelayC
+Gui, 19:Add, Text, y+10 xs+10 W100 R1 Right, %c_Lang017%:
+Gui, 19:Add, Edit, yp x+10 W120 vDelayC
 Gui, 19:Add, UpDown, vDelayX 0x80 Range0-999999999, %DelayG%
 Gui, 19:Add, Radio, -Wrap Checked W120 vMsc R1, %c_Lang018%
 Gui, 19:Add, Radio, -Wrap W120 vSec R1, %c_Lang019%
@@ -5569,6 +5571,7 @@ Else If ((s_Caller = "Find") && (GotoRes1 = "PixelSearch"))
 Gui, Submit, NoHide
 SBShowTip(ImageS ? "ImageSearch" : "PixelSearch")
 Gui, 19:Show,, %c_Lang006% / %c_Lang007%
+ChangeIcon(ReshInst, CmdWin, 28)
 Input
 Tooltip
 return
@@ -5804,9 +5807,9 @@ s_Caller := "Edit"
 Run:
 Gui, 10:+owner1 -MinimizeBox +E0x00000400 +HwndCmdWin
 Gui, 1:+Disabled
-Gui, 10:Add, Groupbox, Section W600 H70
-Gui, 10:Add, Text, ys+15 xs+10 W55, %c_Lang055%:
-Gui, 10:Add, ComboBox, W170 vFileCmdL gFileCmd, %FileCmdList%
+Gui, 10:Add, Groupbox, Section W600 H55
+Gui, 10:Add, Text, ys+20 xs+10 W200 R1 Right, %c_Lang055%:
+Gui, 10:Add, ComboBox, yp x+10 W170 vFileCmdL gFileCmd, %FileCmdList%
 Gui, 10:Add, Groupbox, Section xs y+20 W600 H380
 Gui, 10:Add, Text, ys+15 xs+10 W550 vFCmd1
 Gui, 10:Add, Edit, vPar1File W550 R1 -Multi
@@ -5857,6 +5860,7 @@ If (s_Caller = "Find")
 	GoSub, FileCmd
 }
 Gui, 10:Show,, %c_Lang008%
+ChangeIcon(ReshInst, CmdWin, 62)
 Tooltip
 Input
 return
@@ -5910,7 +5914,7 @@ Loop, 11
 		{
 			If fTxt not in OutputVarPID,OutputVarX,OutputVarY,OutputVarWin,OutputVarControl
 			{
-				Tooltip, %c_Lang127%, 25, % (A_Index = 1) ? 140 : 185
+				Tooltip, %c_Lang127%, 25, % (A_Index = 1) ? 125 : 170
 				return
 			}
 		}
@@ -6073,11 +6077,10 @@ Gui, 21:Add, Edit, y+5 xs+10 W430 R4 -vScroll vTestVar
 Gui, 21:Add, Text, y+11 xs+10 W135 vFormatTip2
 Gui, 21:Add, DDL, yp-5 x+0 W55 vIfOper Disabled, =$$==$<>$!=$>$<$>=$<=
 Gui, 21:Add, Edit, y+5 xs+10 W430 R4 -vScroll vTestVar2 Disabled
-Gui, 21:Add, Text, W430 r1, %c_Lang025%
-Gui, 21:Add, Groupbox, Section xs y+15 W450 H50
-Gui, 21:Add, Text, -Wrap xs+10 ys+15 W75 H23, %c_Lang123%:
-Gui, 21:Add, Button, -Wrap yp x+0 W75 H23 vAddElse gAddElse, %c_Lang083%
-Gui, 21:Add, Button, -Wrap Section Default xm y+17 W75 H23 gIfOK, %c_Lang020%
+Gui, 21:Add, Text, W430 r1 cGray, %c_Lang025%
+Gui, 21:Add, Groupbox, Section xs y+15 W450 H50, %c_Lang123%:
+Gui, 21:Add, Button, -Wrap ys+18 xs+85 W75 H23 vAddElse gAddElse, %c_Lang083%
+Gui, 21:Add, Button, -Wrap Section Default xm y+14 W75 H23 gIfOK, %c_Lang020%
 Gui, 21:Add, Button, -Wrap ys W75 H23 gIfCancel, %c_Lang021%
 Gui, 21:Add, Button, -Wrap ys W75 H23 vIfApply gIfApply Disabled, %c_Lang131%
 Gui, 21:Tab, 2
@@ -6090,20 +6093,19 @@ Gui, 21:Add, DDL, y+7 W60 vOper, :=$$+=$-=$*=$/=$//=$.=$|=$&=$^=$>>=$<<=
 Gui, 21:Add, Text, y+9 xs+10 W200, %c_Lang056%:
 Gui, 21:Add, Checkbox, -Wrap Checked%EvalDefault% yp x+5 W220 vUseEval gUseEval R1, %c_Lang087%
 Gui, 21:Add, Edit, y+10 xs+10 W430 H125 vVarValue
-Gui, 21:Add, Text, W300 r1, %c_Lang025%
-Gui, 21:Add, Groupbox, Section xs y+15 W450 H50
-Gui, 21:Add, Text, -Wrap xs+10 ys+15 W75 H23, %c_Lang010%:
-Gui, 21:Add, Button, -Wrap yp x+0 W75 H23 vVarCopyA gVarCopy, %c_Lang023%
+Gui, 21:Add, Text, W300 r1 cGray, %c_Lang025%
+Gui, 21:Add, Groupbox, Section xs y+15 W450 H50, %c_Lang010%:
+Gui, 21:Add, Button, -Wrap ys+18 xs+85 W75 H23 vVarCopyA gVarCopy, %c_Lang023%
 Gui, 21:Add, Button, -Wrap x+10 yp W75 H23 gReset, %c_Lang088%
-Gui, 21:Add, Button, -Wrap Section xm y+17 W75 H23 gVarOK, %c_Lang020%
+Gui, 21:Add, Button, -Wrap Section xm y+14 W75 H23 gVarOK, %c_Lang020%
 Gui, 21:Add, Button, -Wrap ys W75 H23 gIfCancel, %c_Lang021%
 Gui, 21:Add, Button, -Wrap ys W75 H23 vVarApplyA gVarApply Disabled, %c_Lang131%
 Gui, 21:Tab, 3
 ; Functions
 Gui, 21:Add, GroupBox, Section xm ym W450 H240
 Gui, 21:Add, Text, ys+15 xs+10, %c_Lang057%:
-Gui, 21:Add, Edit, W430 R1 -Multi vVarNameF
-Gui, 21:Add, Checkbox, y+25 xs+10 W430 vUseExtFunc gUseExtFunc, %c_Lang128%
+Gui, 21:Add, Edit, W200 R1 -Multi vVarNameF
+Gui, 21:Add, Checkbox, W430 vUseExtFunc gUseExtFunc, %c_Lang128%
 Gui, 21:Add, Edit, W400 R1 -Multi vFileNameEx Disabled, %StdLibFile%
 Gui, 21:Add, Button, -Wrap yp-1 x+0 W30 H23 vSearchFEX gSearchAHK Disabled, ...
 Gui, 21:Add, Text, yp+30 xs+10 W130, %c_Lang089%:
@@ -6112,12 +6114,12 @@ Gui, 21:Add, Button, -Wrap W25 yp-1 x+5 hwndFuncHelp vFuncHelp gFuncHelp Disable
 	ILButton(FuncHelp, ResDllPath ":" 24)
 Gui, 21:Add, Text, W430 yp+25 xs+10, %c_Lang090%:
 Gui, 21:Add, Edit, W430 R1 -Multi vVarValueF
-Gui, 21:Add, Text, y+7 W430 r1, %c_Lang091%
-Gui, 21:Add, Groupbox, Section xs y+15 W450 H50
-Gui, 21:Add, Text, -Wrap xs+10 ys+15 W75 H23, %c_Lang010%:
-Gui, 21:Add, Button, -Wrap yp x+0 W75 H23 vVarCopyB gVarCopy, %c_Lang023%
+Gui, 21:Add, Text, W430 R1 vFuncTip
+Gui, 21:Add, Text, y+7 W430 R1 cGray, %c_Lang091%
+Gui, 21:Add, Groupbox, Section xs y+15 W450 H50, %c_Lang010%:
+Gui, 21:Add, Button, -Wrap ys+18 xs+85 W75 H23 vVarCopyB gVarCopy, %c_Lang023%
 Gui, 21:Add, Button, -Wrap x+10 yp W75 H23 gReset, %c_Lang088%
-Gui, 21:Add, Button, -Wrap Section xm y+17 W75 H23 gVarOK, %c_Lang020%
+Gui, 21:Add, Button, -Wrap Section xm y+14 W75 H23 gVarOK, %c_Lang020%
 Gui, 21:Add, Button, -Wrap ys W75 H23 gIfCancel, %c_Lang021%
 Gui, 21:Add, Button, -Wrap ys W75 H23 vVarApplyB gVarApply Disabled, %c_Lang131%
 Gui, 21:Add, StatusBar
@@ -6235,6 +6237,7 @@ Else If (A_ThisLabel = "AsFunc")
 	}
 }
 Gui, 21:Show,, %GuiTitle%
+ChangeIcon(ReshInst, CmdWin, InStr(A_ThisLabel, "AsVar") ? 79 : InStr(A_ThisLabel, "AsFunc") ? 21 : 27)
 Tooltip
 return
 
@@ -6481,6 +6484,7 @@ FuncName:
 Gui, 21:Submit, NoHide
 Try IsBuiltIn := Func(FuncName).IsBuiltIn ? 1 : 0
 GuiControl, 21:Enable%IsBuiltIn%, FuncHelp
+GuiControl, 21:, FuncTip, % %FuncName%_Hint
 SBShowTip(FuncName)
 return
 
@@ -6621,7 +6625,7 @@ Gui, 22:Add, Text, ys+15 xs+10, %c_Lang004%:
 Gui, 22:Add, Edit, vDefCt W400
 Gui, 22:Add, Button, -Wrap yp-1 x+0 W30 H23 vGetCtrl gGetCtrl, ...
 Gui, 22:Add, DDL, xs+10 y+10 W75 vIdent, Title||Class|Process|ID|PID
-Gui, 22:Add, Text, -Wrap yp+5 x+5 W240 H20 vWinParsTip Disabled, %wcmd_WinSet%
+Gui, 22:Add, Text, -Wrap yp+5 x+5 W240 H20 vWinParsTip cGray, %wcmd_WinSet%
 Gui, 22:Add, Edit, xs+10 y+5 W400 vTitle, A
 Gui, 22:Add, Button, -Wrap yp-1 x+0 W30 H23 vGetWin gGetWin, ...
 Gui, 22:Add, Button, -Wrap Section Default xm W75 H23 gSendMsgOK, %c_Lang020%
@@ -6649,6 +6653,7 @@ If (s_Caller = "Find")
 	GuiControl, 22:ChooseString, MsgType, %GotoRes1%
 GoSub, MsgType
 Gui, 22:Show, , % cType19 " / " cType18
+ChangeIcon(ReshInst, CmdWin, 65)
 Tooltip
 return
 
@@ -6738,7 +6743,7 @@ Gui, 23:Add, Text, ys+15 xs+10, %c_Lang004%:
 Gui, 23:Add, Edit, vDefCt W400
 Gui, 23:Add, Button, -Wrap yp-1 x+0 W30 H23 vGetCtrl gGetCtrl, ...
 Gui, 23:Add, DDL, xs+10 y+10 W75 vIdent, Title||Class|Process|ID|PID
-Gui, 23:Add, Text, -Wrap yp+5 x+5 W240 H20 vWinParsTip Disabled, %wcmd_WinSet%
+Gui, 23:Add, Text, -Wrap yp+5 x+5 W240 H20 vWinParsTip cGray, %wcmd_WinSet%
 Gui, 23:Add, Edit, xs+10 y+5 W400 vTitle, A
 Gui, 23:Add, Button, -Wrap yp-1 x+0 W30 H23 vGetWin gGetWin, ...
 Gui, 23:Add, Text, Section ym+20 xm+205, %c_Lang058%
@@ -6824,6 +6829,7 @@ Else If (s_Caller = "Find")
 Else
 	SBShowTip("Control")
 Gui, 23:Show, , %c_Lang004%
+ChangeIcon(ReshInst, CmdWin, 7)
 Tooltip
 return
 
@@ -6994,21 +7000,20 @@ Gui, 24:Add, Edit, yp+20 xs W430 R4 vValue
 Gui, 24:Add, Text, y+10 W55, %c_Lang005%:
 Gui, 24:Add, DDL, yp-2 xp+60 W340 vIEWindows AltSubmit, %IEWindows%
 Gui, 24:Add, Button, -Wrap yp-1 x+5 W25 H23 hwndRefreshIEW vRefreshIEW gRefreshIEW
-	ILButton(RefreshIEW, ResDllPath ":" 37)
-; Gui, 24:Add, Text, Section ym+20 xm+180 W215 R4 vComTip
+	ILButton(RefreshIEW, ResDllPath ":" 36)
 Gui, 24:Add, Button, -Wrap Section Default ym+270 xm W75 H23 gIEComOK, %c_Lang020%
 Gui, 24:Add, Button, -Wrap ys xs+170 W75 H23 vIEComApply gIEComApply Disabled, %c_Lang131%
 Gui, 24:Tab, 2
 ; COM Interface
 Gui, 24:Add, GroupBox, Section xm ym W450 H265
-Gui, 24:Add, Text, ys+15 xs+10 W40, %c_Lang098%:
-Gui, 24:Add, Combobox, yp xp+50 W305 vComCLSID gTabControl, %CLSList%
+Gui, 24:Add, Text, ys+15 xs+10 W60 R1 Right, %c_Lang098%:
+Gui, 24:Add, Combobox, yp x+10 W285 vComCLSID gTabControl, %CLSList%
 GuiControl, 24:ChooseString, ComCLSID, %ComCLSID%
 Gui, 24:Add, Button, -Wrap yp-1 x+0 W75 H23 vActiveObj gActiveObj, %c_Lang099%
-Gui, 24:Add, Text, y+5 xs+10 W80, %c_Lang100%:
-Gui, 24:Add, Edit, xp+50 W130 vComHwnd, %ComHwnd%
-Gui, 24:Add, Text, x+5 W100, %c_Lang057%:
-Gui, 24:Add, Edit, x+5 W140 vVarName
+Gui, 24:Add, Text, y+5 xs+10 W60 R1 Right, %c_Lang100%:
+Gui, 24:Add, Edit, yp x+10 W120 vComHwnd, %ComHwnd%
+Gui, 24:Add, Text, yp x+5 W100 R1 Right, %c_Lang057%:
+Gui, 24:Add, Edit, yp x+10 W125 vVarName
 Gui, 24:Add, Text, y+5 xs+10 W200, %c_Lang101%:
 Gui, 24:Add, Edit, y+5 xs+10 W430 R5 vComSc gComSc
 Gui, 24:Add, Button, -Wrap y+2 xs+415 W25 H23 hwndExpView vExpView gExpView
@@ -7021,12 +7026,13 @@ Gui, 24:Add, GroupBox, Section xm ym W450 H265
 Gui, 24:Add, Text, ys+15 xs+10 W100, %c_Lang156%:
 If (A_PtrSize = 8)
 	Gui, 24:Add, Text, ys+15 x+30 W210 cRed, %c_Lang158%
-Gui, 24:Add, Edit, ys+35 xs+10 W430 R10 vScLet
+Gui, 24:Add, Edit, ys+35 xs+10 W430 R13 vScLet
 Gui, 24:Add, Text, W100, %c_Lang157%:
 Gui, 24:Add, Radio, -Wrap Checked yp x+5 W100 vRunVB R1, VBScript
 Gui, 24:Add, Radio, -Wrap x+5 W100 vRunJS R1, JScript
 Gui, 24:Add, Button, -Wrap yp-2 xs+415 W25 H23 hwndExpView2 vExpView2 gExpView
 	ILButton(ExpView2, ResDllPath ":" 17)
+Gui, 24:Add, Text, y+5 xs+10 cGray, %c_Lang025%
 Gui, 24:Add, Button, -Wrap Section Default ym+270 xm W75 H23 gScLetOK, %c_Lang020%
 Gui, 24:Add, Button, -Wrap ys xs+170 W75 H23 vScLetApply gScLetApply Disabled, %c_Lang131%
 Gui, 24:Tab
@@ -7035,8 +7041,8 @@ Gui, 24:Add, DDL, W70 vIdent Disabled, Name||ID|TagName|Links
 Gui, 24:Add, Edit, yp xp+70 vDefEl W245 Disabled
 Gui, 24:Add, Edit, yp x+0 vDefElInd W85 Disabled
 Gui, 24:Add, Button, -Wrap yp-1 x+0 W30 H23 vGetEl gGetEl Disabled, ...
-Gui, 24:Add, Text, y+10 xs, %c_Lang025%
-Gui, 24:Add, Checkbox, -Wrap Checked ym+240 xs W300 vLoadWait R1, %c_Lang097%
+Gui, 24:Add, Text, y+5 xs vClipTip cGray, %c_Lang025%
+Gui, 24:Add, Checkbox, -Wrap Checked y+10 xs W300 vLoadWait R1, %c_Lang097%
 Gui, 24:Add, Button, -Wrap Section ym+270 xs+72 W75 H23 gIEComCancel, %c_Lang021%
 Gui, 24:Add, StatusBar
 Gui, 24:Default
@@ -7122,6 +7128,7 @@ Else If (A_ThisLabel = "RunScrLet")
 }
 GuiControl, 24:Choose, IEWindows, %SelIEWin%
 Gui, 24:Show, , %GuiTitle%
+ChangeIcon(ReshInst, CmdWin, InStr(A_ThisLabel, "ComInt") ? 4 : InStr(A_ThisLabel, "RunScrLet") ? 80 : 26)
 Tooltip
 return
 
@@ -7524,6 +7531,7 @@ If (TabControl = 3)
 	GuiControl, 24:Hide, DefElInd
 	GuiControl, 24:Hide, GetEl
 	GuiControl, 24:Hide, Ident
+	GuiControl, 24:Hide, ClipTip
 	GuiControl, 24:Hide, LoadWait
 }
 Else
@@ -7533,6 +7541,7 @@ Else
 	GuiControl, 24:Show, DefElInd
 	GuiControl, 24:Show, GetEl
 	GuiControl, 24:Show, Ident
+	GuiControl, 24:Show, ClipTip
 	GuiControl, 24:Show, LoadWait
 }
 return
@@ -7547,7 +7556,7 @@ Gui, Submit, NoHide
 Script := (TabControl = 2) ? ComSc : ScLet
 Gui, 30:+owner1 -MinimizeBox +E0x00000400 +hwndCmdWin
 Gui, 24:+Disabled
-Gui, 30:Add, Custom, ClassToolbarWindow32 hwndhTbText gTbText 0x0800 0x0100 0x0040
+Gui, 30:Add, Custom, ClassToolbarWindow32 hwndhTbText gTbText 0x0800 0x0100 0x0040 0x0008 0x0004
 Gui, 30:Font, s9, Courier New
 Gui, 30:Add, Edit, Section xm ym+25 vTextEdit gTextEdit WantTab W720 R30, %Script%
 Gui, 30:Font
@@ -7656,7 +7665,7 @@ If (A_ThisLabel <> "CmdFind")
 	Gui, 34:Add, Button, -Wrap ys W75 H23 gTipsClose, %d_Lang071%
 	Gui, 34:Add, Checkbox, -Wrap Checked%ShowTips% xm y+20 W220 vShowTips R1, %d_Lang067%
 	Gui, 34:Add, Text, x+10 ym h255 0x11
-	Gui, 34:Add, Pic, x+1 ym Icon73, %ResDllPath%
+	Gui, 34:Add, Pic, x+1 ym Icon72 W48 H48, %ResDllPath%
 	Gui, 34:Add, Text, Section yp x+10, %d_Lang068%%A_Space%
 	Gui, 34:Add, Text, yp x+0 vCurrTip, %NextTip%%A_Space%%A_Space%%A_Space%
 	Gui, 34:Add, Text, yp x+0, / %MaxTips%
@@ -7912,7 +7921,7 @@ If !DontShowPb
 		GoSub, TipClose
 	Gui, 26:-SysMenu +HwndTipScrID
 	Gui, 26:Color, FFFFFF
-	Gui, 26:Add, Pic, y+20 Icon91, %ResDllPath%
+	Gui, 26:Add, Pic, y+20 Icon29 W48 H48, %ResDllPath%
 	Gui, 26:Add, Text, yp x+10, %d_Lang051%`n`n%d_Lang043%`n
 	Gui, 26:Add, Checkbox, -Wrap W300 vDontShowPb R1, %d_Lang053%
 	Gui, 26:Add, Button, -Wrap Default y+10 W75 H23 gTipClose, %c_Lang020%
@@ -8856,9 +8865,7 @@ If (A_GuiEvent == "e")
 {
 	InEdit := 0
 ,	LV_GetText(AfterEdit, EditRow, 1)
-	Try
-		z_Check := VarSetCapacity(%AfterEdit%)
-	Catch
+	If !RegExMatch(AfterEdit, "^\w+$")
 	{
 		LV_Modify(EditRow, "", BeforeEdit)
 		MsgBox, 16, %d_Lang007%, %d_Lang049%
@@ -8908,9 +8915,7 @@ return
 EditMacroOK:
 Gui, 33:+OwnDialogs
 Gui, 33:Submit, NoHide
-Try
-	z_Check := VarSetCapacity(%Macro%)
-Catch
+If !RegExMatch(Macro, "^\w+$")
 {
 	MsgBox, 16, %d_Lang007%, %d_Lang049%
 	return
@@ -8925,9 +8930,7 @@ SelList:
 NewRow := EditSel ? (RowNumber + 1) : (RowNumber - 1)
 Gui, 33:+OwnDialogs
 Gui, 33:Submit, NoHide
-Try
-	z_Check := VarSetCapacity(%Macro%)
-Catch
+If !RegExMatch(Macro, "^\w+$")
 {
 	MsgBox, 16, %d_Lang007%, %d_Lang049%
 	return
@@ -8999,7 +9002,7 @@ Gui, 15:Add, Checkbox, -Wrap Section ys+15 xs+10 W260 vCSend gCSend R1, %c_Lang0
 Gui, 15:Add, Edit, vDefCt W230 Disabled
 Gui, 15:Add, Button, -Wrap yp-1 x+0 W30 H23 vGetCtrl gGetCtrl Disabled, ...
 Gui, 15:Add, DDL, Section xs W75 vIdent Disabled, Title||Class|Process|ID|PID
-Gui, 15:Add, Text, -Wrap yp+5 x+5 W180 H20 vWinParsTip Disabled, %wcmd_All%
+Gui, 15:Add, Text, -Wrap yp+5 x+5 W180 H20 vWinParsTip cGray, %wcmd_All%
 Gui, 15:Add, Edit, xs+2 W230 vTitle Disabled, A
 Gui, 15:Add, Button, -Wrap yp-1 x+0 W30 H23 vGetWin gGetWin Disabled, ...
 Gui, 15:Add, GroupBox, Section xm W280 H110
@@ -9205,7 +9208,7 @@ Gui, 6:Add, Checkbox, -Wrap Section ys+15 xs+10 W250 vCSend gCSend R1, %c_Lang01
 Gui, 6:Add, Edit, vDefCt W230 Disabled
 Gui, 6:Add, Button, -Wrap yp-1 x+0 W30 H23 vGetCtrl gGetCtrl Disabled, ...
 Gui, 6:Add, DDL, Section xs W75 vIdent Disabled, Title||Class|Process|ID|PID
-Gui, 6:Add, Text, -Wrap yp+5 x+5 W180 H20 vWinParsTip Disabled, %wcmd_All%
+Gui, 6:Add, Text, -Wrap yp+5 x+5 W180 H20 vWinParsTip cGray, %wcmd_All%
 Gui, 6:Add, Edit, xs+2 W230 vTitle Disabled, A
 Gui, 6:Add, Button, -Wrap yp-1 x+0 W30 H23 vGetWin gGetWin Disabled, ...
 Gui, 6:Add, GroupBox, Section xm W280 H110
@@ -9946,7 +9949,7 @@ If Record
 }
 GoSub, RowCheck
 Try Menu, Tray, Icon, %DefaultIcon%, 1
-tbOSC.ModifyButtonInfo(1, "Image", 49)
+tbOSC.ModifyButtonInfo(1, "Image", 48)
 return
 
 PauseKey:
@@ -9957,9 +9960,9 @@ f_PauseKey:
 If !(CurrentRange) && !(Record)
 	return
 If ToggleIcon() && !(Record)
-	tbOSC.ModifyButtonInfo(1, "Image", 56)
+	tbOSC.ModifyButtonInfo(1, "Image", 55)
 Else
-	tbOSC.ModifyButtonInfo(1, "Image", 49)
+	tbOSC.ModifyButtonInfo(1, "Image", 48)
 Pause,, 1
 return
 
@@ -10071,10 +10074,10 @@ return
 pb_MsgBox:
 	StringReplace, Step, Step, ``n, `n, All
 	StringReplace, Step, Step, ```,, `,, All
-	Try Menu, Tray, Icon, %ResDllPath%, 78
+	Try Menu, Tray, Icon, %ResDllPath%, 77
 	ChangeProgBarColor("Blue", "OSCProg", 28)
 	MsgBox, % Target, % (Window <> "") ? Window : AppName, %Step%, %DelayX%
-	Try Menu, Tray, Icon, %ResDllPath%, 47
+	Try Menu, Tray, Icon, %ResDllPath%, 46
 	ChangeProgBarColor("20D000", "OSCProg", 28)
 return
 pb_SendRaw:
@@ -10095,13 +10098,13 @@ pb_Run:
 		Run, %Par1%, %Par2%, %Par3%
 return
 pb_RunWait:
-	Try Menu, Tray, Icon, %ResDllPath%, 78
+	Try Menu, Tray, Icon, %ResDllPath%, 77
 	ChangeProgBarColor("Blue", "OSCProg", 28)
 	If (Par4 <> "")
 		RunWait, %Par1%, %Par2%, %Par3%, %Par4%
 	Else
 		RunWait, %Par1%, %Par2%, %Par3%
-	Try Menu, Tray, Icon, %ResDllPath%, 47
+	Try Menu, Tray, Icon, %ResDllPath%, 46
 	ChangeProgBarColor("20D000", "OSCProg", 28)
 return
 pb_RunAs:
@@ -10345,10 +10348,10 @@ pb_SoundSetWaveVolume:
 	SoundSetWaveVolume, %Par1%, %Par2%
 return
 pb_ClipWait:
-	Try Menu, Tray, Icon, %ResDllPath%, 78
+	Try Menu, Tray, Icon, %ResDllPath%, 77
 	ChangeProgBarColor("Blue", "OSCProg", 28)
 	ClipWait, %Par1%, %Par2%
-	Try Menu, Tray, Icon, %ResDllPath%, 47
+	Try Menu, Tray, Icon, %ResDllPath%, 46
 	ChangeProgBarColor("20D000", "OSCProg", 28)
 return
 pb_BlockInput:
@@ -10383,10 +10386,10 @@ pb_StatusBarGetText:
 	StatusBarGetText, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%, %Par6%
 return
 pb_StatusBarWait:
-	Try Menu, Tray, Icon, %ResDllPath%, 78
+	Try Menu, Tray, Icon, %ResDllPath%, 77
 	ChangeProgBarColor("Blue", "OSCProg", 28)
 	StatusBarWait, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%, %Par6%
-	Try Menu, Tray, Icon, %ResDllPath%, 47
+	Try Menu, Tray, Icon, %ResDllPath%, 46
 	ChangeProgBarColor("20D000", "OSCProg", 28)
 return
 pb_Clipboard:
@@ -10447,13 +10450,13 @@ pb_PostMessage:
 	PostMessage, %Par1%, %Par2%, %Par3%, %Target%, % Win[1], % Win[2], % Win[3], % Win[4]
 return
 pb_KeyWait:
-	Try Menu, Tray, Icon, %ResDllPath%, 78
+	Try Menu, Tray, Icon, %ResDllPath%, 77
 	ChangeProgBarColor("Blue", "OSCProg", 28)
 	If (Action = "KeyWait")
 		KeyWait, %Par1%, %Par2%
 	Else
 		WaitFor.Key(Step, DelayX / 1000)
-	Try Menu, Tray, Icon, %ResDllPath%, 47
+	Try Menu, Tray, Icon, %ResDllPath%, 46
 	ChangeProgBarColor("20D000", "OSCProg", 28)
 return
 pb_Input:
@@ -10534,31 +10537,31 @@ pb_WinSetTitle:
 	WinSetTitle, % Win[1], % Win[2], % Win[3], % Win[4], % Win[5]
 return
 pb_WinWait:
-	Try Menu, Tray, Icon, %ResDllPath%, 78
+	Try Menu, Tray, Icon, %ResDllPath%, 77
 	ChangeProgBarColor("Blue", "OSCProg", 28)
 ,	WaitFor.WinExist(SplitWin(Window), Step)
-	Try Menu, Tray, Icon, %ResDllPath%, 47
+	Try Menu, Tray, Icon, %ResDllPath%, 46
 	ChangeProgBarColor("20D000", "OSCProg", 28)
 return
 pb_WinWaitActive:
-	Try Menu, Tray, Icon, %ResDllPath%, 78
+	Try Menu, Tray, Icon, %ResDllPath%, 77
 	ChangeProgBarColor("Blue", "OSCProg", 28)
 ,	WaitFor.WinActive(SplitWin(Window), Step)
-	Try Menu, Tray, Icon, %ResDllPath%, 47
+	Try Menu, Tray, Icon, %ResDllPath%, 46
 	ChangeProgBarColor("20D000", "OSCProg", 28)
 return
 pb_WinWaitNotActive:
-	Try Menu, Tray, Icon, %ResDllPath%, 78
+	Try Menu, Tray, Icon, %ResDllPath%, 77
 	ChangeProgBarColor("Blue", "OSCProg", 28)
 ,	WaitFor.WinNotActive(SplitWin(Window), Step)
-	Try Menu, Tray, Icon, %ResDllPath%, 47
+	Try Menu, Tray, Icon, %ResDllPath%, 46
 	ChangeProgBarColor("20D000", "OSCProg", 28)
 return
 pb_WinWaitClose:
-	Try Menu, Tray, Icon, %ResDllPath%, 78
+	Try Menu, Tray, Icon, %ResDllPath%, 77
 	ChangeProgBarColor("Blue", "OSCProg", 28)
 ,	WaitFor.WinClose(SplitWin(Window), Step)
-	Try Menu, Tray, Icon, %ResDllPath%, 47
+	Try Menu, Tray, Icon, %ResDllPath%, 46
 	ChangeProgBarColor("20D000", "OSCProg", 28)
 return
 pb_WinGet:
@@ -10892,6 +10895,12 @@ If WindowState = 0
 	GuiGetSize(mGuiWidth, mGuiHeight), MainWinSize := "W" mGuiWidth " H" mGuiHeight
 	WinGetPos, mGuiX, mGuiY,,, ahk_id %PMCWinID%
 	MainWinPos := "X" mGuiX " Y" mGuiY
+}
+If WinExist("ahk_id " PrevID)
+{
+	WinGet, WindowState, MinMax, ahk_id %PrevID%
+	If WindowState = 0
+		GuiGetSize(pGuiWidth, pGuiHeight, 2), PrevWinSize := "W" pGuiWidth " H" pGuiHeight
 }
 ColSizes := ""
 Loop % LV_GetCount("Col")
@@ -11281,6 +11290,7 @@ IniWrite, %MainWinPos%, %IniFilePath%, WindowOptions, MainWinPos
 IniWrite, %WinState%, %IniFilePath%, WindowOptions, WinState
 IniWrite, %ColSizes%, %IniFilePath%, WindowOptions, ColSizes
 IniWrite, %ColOrder%, %IniFilePath%, WindowOptions, ColOrder
+IniWrite, %PrevWinSize%, %IniFilePath%, WindowOptions, PrevWinSize
 IniWrite, %ShowPrev%, %IniFilePath%, WindowOptions, ShowPrev
 IniWrite, %TextWrap%, %IniFilePath%, WindowOptions, TextWrap
 IniWrite, %CustomColors%, %IniFilePath%, WindowOptions, CustomColors
@@ -11442,50 +11452,50 @@ Loop, % LV_GetCount()
 			ActLv .= (ShowActIdent) ? "   " : ""
 	}
 	LV_Modify(A_Index, "", A_Index " " IdxLv)
-,	(Action = "[Text]") ? LV_Modify(A_Index, "Icon" 71)
-:	RegExMatch(Type, cType3 "|" cType4 "|" cType13) ? LV_Modify(A_Index, "Icon" 39)
-:	(Type = cType5) ? LV_Modify(A_Index, "Icon" 46)
+,	(Action = "[Text]") ? LV_Modify(A_Index, "Icon" 70)
+:	RegExMatch(Type, cType3 "|" cType4 "|" cType13) ? LV_Modify(A_Index, "Icon" 38)
+:	(Type = cType5) ? LV_Modify(A_Index, "Icon" 45)
 :	(Type = cType6) ? LV_Modify(A_Index, "Icon" 11)
-:	(Type = cType14) ? LV_Modify(A_Index, "Icon" 78)
-:	RegExMatch(Type, cType7 "|" cType38 "|" cType39 "|" cType40 "|" cType41) ? LV_Modify(A_Index, "Icon" 37)
+:	(Type = cType14) ? LV_Modify(A_Index, "Icon" 77)
+:	RegExMatch(Type, cType7 "|" cType38 "|" cType39 "|" cType40 "|" cType41) ? LV_Modify(A_Index, "Icon" 36)
 :	(Type = cType29) ? LV_Modify(A_Index, "Icon" 2)
 :	(Type = cType30) ? LV_Modify(A_Index, "Icon" 6)
-:	(Action = "[Assign Variable]") ? LV_Modify(A_Index, "Icon" 76)
+:	(Action = "[Assign Variable]") ? LV_Modify(A_Index, "Icon" 75)
 :	(Type = cType21) ? LV_Modify(A_Index, "Icon" 21)
-:	(Type = cType17) ? LV_Modify(A_Index, "Icon" 27)
-:	RegExMatch(Type, cType18 "|" cType19) ? LV_Modify(A_Index, "Icon" 62)
+:	(Type = cType17) ? LV_Modify(A_Index, "Icon" 26)
+:	RegExMatch(Type, cType18 "|" cType19) ? LV_Modify(A_Index, "Icon" 61)
 :	(Type = cType15) ? LV_Modify(A_Index, "Icon" 3)
-:	(Type = cType16) ? LV_Modify(A_Index, "Icon" 28)
+:	(Type = cType16) ? LV_Modify(A_Index, "Icon" 27)
 :	(Action = "[Control]") ? LV_Modify(A_Index, "Icon" 7)
 :	(Type = cType34) ? LV_Modify(A_Index, "Icon" 4)
-:	(Type = cType42) ? LV_Modify(A_Index, "Icon" 77)
-:	(Type = cType43) ? LV_Modify(A_Index, "Icon" 34)
-:	(Type = cType35) ? LV_Modify(A_Index, "Icon" 35)
+:	(Type = cType42) ? LV_Modify(A_Index, "Icon" 76)
+:	(Type = cType43) ? LV_Modify(A_Index, "Icon" 33)
+:	(Type = cType35) ? LV_Modify(A_Index, "Icon" 34)
 :	RegExMatch(Type, cType36 "|" cType37) ? LV_Modify(A_Index, "Icon" 22)
-:	LV_Modify(A_Index, "Icon" 94)
-	RegExMatch(Type, cType32 "|" cType33) ? LV_Modify(A_Index, "Icon" 26)
-:	RegExMatch(Type, cType11 "|" cType14 "|Run|RunWait|RunAs") ? LV_Modify(A_Index, "Icon" 59)
-:	RegExMatch(Type, "Process") ? LV_Modify(A_Index, "Icon" 51)
-:	RegExMatch(Type, "Shutdown") ? LV_Modify(A_Index, "Icon" 63)
-:	(InStr(Type, "Sort") || InStr(Type, "String") || InStr(Type, "Split")) ? LV_Modify(A_Index, "Icon" 97)
+:	LV_Modify(A_Index, "Icon" 92)
+	RegExMatch(Type, cType32 "|" cType33) ? LV_Modify(A_Index, "Icon" 25)
+:	RegExMatch(Type, cType11 "|" cType14 "|Run|RunWait|RunAs") ? LV_Modify(A_Index, "Icon" 58)
+:	RegExMatch(Type, "Process") ? LV_Modify(A_Index, "Icon" 50)
+:	RegExMatch(Type, "Shutdown") ? LV_Modify(A_Index, "Icon" 62)
+:	(InStr(Type, "Sort") || InStr(Type, "String") || InStr(Type, "Split")) ? LV_Modify(A_Index, "Icon" 94)
 :	(InStr(Type, "InputBox") || InStr(Type, "Msg") || InStr(Type, "Tip")
 	|| InStr(Type, "Progress") || InStr(Type, "Splash")) ? LV_Modify(A_Index, "Icon" 11)
-:	InStr(Type, "Win") ? LV_Modify(A_Index, "Icon" 81)
+:	InStr(Type, "Win") ? LV_Modify(A_Index, "Icon" 79)
 :	(InStr(Type, "File")=1 || InStr(Type, "Drive")=1) ? LV_Modify(A_Index, "Icon" 18)
-:	(InStr(Type, "Wait") || InStr(Type, "Input")=1) ? LV_Modify(A_Index, "Icon" 78)
-:	InStr(Type, "Ini") ? LV_Modify(A_Index, "Icon" 31)
-:	InStr(Type, "Reg") ? LV_Modify(A_Index, "Icon" 58)
-:	InStr(Type, "Sound") ? LV_Modify(A_Index, "Icon" 65)
+:	(InStr(Type, "Wait") || InStr(Type, "Input")=1) ? LV_Modify(A_Index, "Icon" 77)
+:	InStr(Type, "Ini") ? LV_Modify(A_Index, "Icon" 30)
+:	InStr(Type, "Reg") ? LV_Modify(A_Index, "Icon" 57)
+:	InStr(Type, "Sound") ? LV_Modify(A_Index, "Icon" 64)
 :	InStr(Type, "Group") ? LV_Modify(A_Index, "Icon" 23)
-:	InStr(Type, "Env") ? LV_Modify(A_Index, "Icon" 76)
-:	(!InStr(Type, "Control") && InStr(Type, "Get")) ? LV_Modify(A_Index, "Icon" 30)
-:	(Type = "Pause") ? LV_Modify(A_Index, "Icon" 56)
-:	(Type = "Return") ? LV_Modify(A_Index, "Icon" 66)
+:	InStr(Type, "Env") ? LV_Modify(A_Index, "Icon" 75)
+:	(!InStr(Type, "Control") && InStr(Type, "Get")) ? LV_Modify(A_Index, "Icon" 29)
+:	(Type = "Pause") ? LV_Modify(A_Index, "Icon" 55)
+:	(Type = "Return") ? LV_Modify(A_Index, "Icon" 65)
 :	(Type = "ExitApp") ? LV_Modify(A_Index, "Icon" 15)
-:	(InStr(Type, "Url")) ? LV_Modify(A_Index, "Icon" 98)
+:	(InStr(Type, "Url")) ? LV_Modify(A_Index, "Icon" 95)
 :	(InStr(Type, "LockState") || InStr(Type, "Time") || InStr(Type, "Transform")
 	|| InStr(Type, "Random") || InStr(Type, "ClipWait") || InStr(Type, "Block") || InStr(Type, "Debug")
-	|| InStr(Type, "Status") || InStr(Type, "SendLevel") || InStr(Type, "CoordMode")) ?  LV_Modify(A_Index, "Icon" 38)
+	|| InStr(Type, "Status") || InStr(Type, "SendLevel") || InStr(Type, "CoordMode")) ?  LV_Modify(A_Index, "Icon" 37)
 :	""
 }
 Critical, Off
@@ -11877,74 +11887,74 @@ If ShowBand9
 	Menu, ToolbarsMenu, Check, %v_lang014%
 
 ; Menu Icons
-Menu, FileMenu, Icon, %f_Lang001%`t%_s%Ctrl+N, %ResDllPath%, 42
-Menu, FileMenu, Icon, %f_Lang002%`t%_s%Ctrl+O, %ResDllPath%, 43
-Menu, FileMenu, Icon, %f_Lang003%`t%_s%Ctrl+S, %ResDllPath%, 60
-Menu, FileMenu, Icon, %f_Lang004%`t%_s%Ctrl+Shift+S, %ResDllPath%, 88
-Menu, FileMenu, Icon, %f_Lang005%, %ResDllPath%, 53
+Menu, FileMenu, Icon, %f_Lang001%`t%_s%Ctrl+N, %ResDllPath%, 41
+Menu, FileMenu, Icon, %f_Lang002%`t%_s%Ctrl+O, %ResDllPath%, 42
+Menu, FileMenu, Icon, %f_Lang003%`t%_s%Ctrl+S, %ResDllPath%, 59
+Menu, FileMenu, Icon, %f_Lang004%`t%_s%Ctrl+Shift+S, %ResDllPath%, 86
+Menu, FileMenu, Icon, %f_Lang005%, %ResDllPath%, 52
 Menu, FileMenu, Icon, %f_Lang006%`t%_s%Ctrl+E, %ResDllPath%, 16
-Menu, FileMenu, Icon, %f_Lang007%`t%_s%Ctrl+P, %ResDllPath%, 50
-Menu, FileMenu, Icon, %f_Lang008%`t%_s%Alt+F3, %ResDllPath%, 36
+Menu, FileMenu, Icon, %f_Lang007%`t%_s%Ctrl+P, %ResDllPath%, 49
+Menu, FileMenu, Icon, %f_Lang008%`t%_s%Alt+F3, %ResDllPath%, 35
 Menu, FileMenu, Icon, %f_Lang009%`t%_s%Alt+F4, %ResDllPath%, 15
-Menu, CommandMenu, Icon, %i_Lang001%`t%_s%F2, %ResDllPath%, 39
-Menu, CommandMenu, Icon, %i_Lang002%`t%_s%F3, %ResDllPath%, 71
+Menu, CommandMenu, Icon, %i_Lang001%`t%_s%F2, %ResDllPath%, 38
+Menu, CommandMenu, Icon, %i_Lang002%`t%_s%F3, %ResDllPath%, 70
 Menu, CommandMenu, Icon, %i_Lang003%`t%_s%F4, %ResDllPath%, 7
-Menu, CommandMenu, Icon, %i_Lang004%`t%_s%F5, %ResDllPath%, 46
+Menu, CommandMenu, Icon, %i_Lang004%`t%_s%F5, %ResDllPath%, 45
 Menu, CommandMenu, Icon, %i_Lang005%`t%_s%Shift+F5, %ResDllPath%, 11
-Menu, CommandMenu, Icon, %i_Lang006%`t%_s%Ctrl+F5, %ResDllPath%, 78
-Menu, CommandMenu, Icon, %i_Lang007%`t%_s%F6, %ResDllPath%, 81
+Menu, CommandMenu, Icon, %i_Lang006%`t%_s%Ctrl+F5, %ResDllPath%, 77
+Menu, CommandMenu, Icon, %i_Lang007%`t%_s%F6, %ResDllPath%, 79
 Menu, CommandMenu, Icon, %i_Lang008%`t%_s%F7, %ResDllPath%, 28
-Menu, CommandMenu, Icon, %i_Lang009%`t%_s%F8, %ResDllPath%, 59
-Menu, CommandMenu, Icon, %i_Lang010%`t%_s%F9, %ResDllPath%, 37
+Menu, CommandMenu, Icon, %i_Lang009%`t%_s%F8, %ResDllPath%, 58
+Menu, CommandMenu, Icon, %i_Lang010%`t%_s%F9, %ResDllPath%, 36
 Menu, CommandMenu, Icon, %i_Lang011%`t%_s%Shift+F9, %ResDllPath%, 22
-Menu, CommandMenu, Icon, %i_Lang012%`t%_s%Ctrl+F9, %ResDllPath%, 35
+Menu, CommandMenu, Icon, %i_Lang012%`t%_s%Ctrl+F9, %ResDllPath%, 34
 Menu, CommandMenu, Icon, %i_Lang013%`t%_s%F10, %ResDllPath%, 27
-Menu, CommandMenu, Icon, %i_Lang014%`t%_s%Shift+F10, %ResDllPath%, 76
+Menu, CommandMenu, Icon, %i_Lang014%`t%_s%Shift+F10, %ResDllPath%, 75
 Menu, CommandMenu, Icon, %i_Lang015%`t%_s%Ctrl+F10, %ResDllPath%, 21
 Menu, CommandMenu, Icon, %i_Lang016%`t%_s%F11, %ResDllPath%, 26
 Menu, CommandMenu, Icon, %i_Lang017%`t%_s%Shift+F11, %ResDllPath%, 4
-Menu, CommandMenu, Icon, %i_Lang018%`t%_s%Ctrl+F11, %ResDllPath%, 77
-Menu, CommandMenu, Icon, %i_Lang019%`t%_s%F12, %ResDllPath%, 62
-Menu, CommandMenu, Icon, %i_Lang020%`t%_s%Ctrl+Shift+F, %ResDllPath%, 95
+Menu, CommandMenu, Icon, %i_Lang018%`t%_s%Ctrl+F11, %ResDllPath%, 76
+Menu, CommandMenu, Icon, %i_Lang019%`t%_s%F12, %ResDllPath%, 61
+Menu, CommandMenu, Icon, %i_Lang020%`t%_s%Ctrl+Shift+F, %ResDllPath%, 92
 Menu, EditMenu, Icon, %m_Lang004%`t%_s%Enter, %ResDllPath%, 14
 Menu, EditMenu, Icon, %e_Lang001%`t%_s%Ctrl+D, %ResDllPath%, 13
 Menu, EditMenu, Icon, %e_Lang003%`t%_s%Ctrl+F, %ResDllPath%, 19
 Menu, EditMenu, Icon, %e_Lang002%`t%_s%Ctrl+L, %ResDllPath%, 5
 Menu, EditMenu, Icon, %e_Lang015%`t%_s%Ctrl+M, %ResDllPath%, 3
-Menu, EditMenu, Icon, %e_Lang005%`t%_s%Ctrl+Z, %ResDllPath%, 75
-Menu, EditMenu, Icon, %e_Lang006%`t%_s%Ctrl+Y, %ResDllPath%, 57
+Menu, EditMenu, Icon, %e_Lang005%`t%_s%Ctrl+Z, %ResDllPath%, 74
+Menu, EditMenu, Icon, %e_Lang006%`t%_s%Ctrl+Y, %ResDllPath%, 56
 Menu, EditMenu, Icon, %e_Lang007%`t%_s%Ctrl+X, %ResDllPath%, 9
 Menu, EditMenu, Icon, %e_Lang008%`t%_s%Ctrl+C, %ResDllPath%, 8
-Menu, EditMenu, Icon, %e_Lang009%`t%_s%Ctrl+V, %ResDllPath%, 45
+Menu, EditMenu, Icon, %e_Lang009%`t%_s%Ctrl+V, %ResDllPath%, 44
 Menu, EditMenu, Icon, %e_Lang010%`t%_s%Delete, %ResDllPath%, 10
-Menu, EditMenu, Icon, %e_Lang013%`t%_s%Insert, %ResDllPath%, 32
-Menu, EditMenu, Icon, %e_Lang014%`t%_s%Ctrl+Insert, %ResDllPath%, 94
-Menu, EditMenu, Icon, %e_Lang011%`t%_s%Ctrl+PgUp, %ResDllPath%, 41
-Menu, EditMenu, Icon, %e_Lang012%`t%_s%Ctrl+PgDn, %ResDllPath%, 40
-Menu, MacroMenu, Icon, %r_Lang001%`t%_s%Ctrl+R, %ResDllPath%, 55
-Menu, MacroMenu, Icon, %r_Lang002%`t%_s%Ctrl+Enter, %ResDllPath%, 47
-Menu, MacroMenu, Icon, %r_Lang003%`t%_s%Ctrl+Shift+Enter, %ResDllPath%, 49
-Menu, MacroMenu, Icon, %r_Lang004%`t%_s%Ctrl+Shift+T, %ResDllPath%, 72
-Menu, MacroMenu, Icon, %r_lang008%`t%_s%Ctrl+H, %ResDllPath%, 48
-Menu, MacroMenu, Icon, %r_Lang009%`t%_s%Ctrl+T, %ResDllPath%, 67
-Menu, MacroMenu, Icon, %r_Lang010%`t%_s%Ctrl+W, %ResDllPath%, 69
-Menu, MacroMenu, Icon, %r_Lang011%`t%_s%Ctrl+Shift+D, %ResDllPath%, 70
-Menu, MacroMenu, Icon, %r_Lang012%`t%_s%Ctrl+Shift+E, %ResDllPath%, 100
-Menu, MacroMenu, Icon, %r_Lang013%`t%_s%Ctrl+I, %ResDllPath%, 29
-Menu, MacroMenu, Icon, %r_Lang014%`t%_s%Ctrl+Alt+S, %ResDllPath%, 68
-Menu, OptionsMenu, Icon, %o_Lang001%`t%_s%Ctrl+G, %ResDllPath%, 44
+Menu, EditMenu, Icon, %e_Lang013%`t%_s%Insert, %ResDllPath%, 31
+Menu, EditMenu, Icon, %e_Lang014%`t%_s%Ctrl+Insert, %ResDllPath%, 92
+Menu, EditMenu, Icon, %e_Lang011%`t%_s%Ctrl+PgUp, %ResDllPath%, 40
+Menu, EditMenu, Icon, %e_Lang012%`t%_s%Ctrl+PgDn, %ResDllPath%, 39
+Menu, MacroMenu, Icon, %r_Lang001%`t%_s%Ctrl+R, %ResDllPath%, 54
+Menu, MacroMenu, Icon, %r_Lang002%`t%_s%Ctrl+Enter, %ResDllPath%, 46
+Menu, MacroMenu, Icon, %r_Lang003%`t%_s%Ctrl+Shift+Enter, %ResDllPath%, 48
+Menu, MacroMenu, Icon, %r_Lang004%`t%_s%Ctrl+Shift+T, %ResDllPath%, 71
+Menu, MacroMenu, Icon, %r_lang008%`t%_s%Ctrl+H, %ResDllPath%, 47
+Menu, MacroMenu, Icon, %r_Lang009%`t%_s%Ctrl+T, %ResDllPath%, 66
+Menu, MacroMenu, Icon, %r_Lang010%`t%_s%Ctrl+W, %ResDllPath%, 68
+Menu, MacroMenu, Icon, %r_Lang011%`t%_s%Ctrl+Shift+D, %ResDllPath%, 69
+Menu, MacroMenu, Icon, %r_Lang012%`t%_s%Ctrl+Shift+E, %ResDllPath%, 97
+Menu, MacroMenu, Icon, %r_Lang013%`t%_s%Ctrl+I, %ResDllPath%, 28
+Menu, MacroMenu, Icon, %r_Lang014%`t%_s%Ctrl+Alt+S, %ResDllPath%, 67
+Menu, OptionsMenu, Icon, %o_Lang001%`t%_s%Ctrl+G, %ResDllPath%, 43
 Menu, HelpMenu, Icon, %m_Lang010%`t%_s%F1, %ResDllPath%, 24
 Menu, DonationMenu, Icon, %p_Lang001%, %ResDllPath%, 12
-Menu, Tray, Icon, %w_Lang005%, %ResDllPath%, 47
-Menu, Tray, Icon, %w_Lang008%, %ResDllPath%, 66
-Menu, Tray, Icon, %w_Lang004%, %ResDllPath%, 55
-Menu, Tray, Icon, %r_Lang004%, %ResDllPath%, 72
-Menu, Tray, Icon, %w_Lang002%, %ResDllPath%, 50
-Menu, Tray, Icon, %f_Lang008%, %ResDllPath%, 36
-Menu, Tray, Icon, %f_Lang001%, %ResDllPath%, 42
-Menu, Tray, Icon, %f_Lang002%, %ResDllPath%, 43
-Menu, Tray, Icon, %f_Lang003%, %ResDllPath%, 60
-Menu, Tray, Icon, %w_Lang003%, %ResDllPath%, 44
+Menu, Tray, Icon, %w_Lang005%, %ResDllPath%, 46
+Menu, Tray, Icon, %w_Lang008%, %ResDllPath%, 65
+Menu, Tray, Icon, %w_Lang004%, %ResDllPath%, 54
+Menu, Tray, Icon, %r_Lang004%, %ResDllPath%, 71
+Menu, Tray, Icon, %w_Lang002%, %ResDllPath%, 49
+Menu, Tray, Icon, %f_Lang008%, %ResDllPath%, 35
+Menu, Tray, Icon, %f_Lang001%, %ResDllPath%, 41
+Menu, Tray, Icon, %f_Lang002%, %ResDllPath%, 42
+Menu, Tray, Icon, %f_Lang003%, %ResDllPath%, 59
+Menu, Tray, Icon, %w_Lang003%, %ResDllPath%, 43
 Menu, Tray, Icon, %f_Lang009%, %ResDllPath%, 15
 return
 

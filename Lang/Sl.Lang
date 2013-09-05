@@ -1072,7 +1072,7 @@
 	Chr	Vrne en znak, ki ustreza kodi znaka s številko.
 	Click	Klikne gumb miške ob določenem koordinatami. Prav tako lahko držite gumb, zavrtite kolesce, ali premakniti.
 	ClipWait	Počaka odložišče vsebuje podatke.
-	Clipboard	Prilepi besedilo iz odložišča
+	Clipboard	Prilepi besedilo iz odložišča.
 	ComObjActive	Pridobi registrirani COM objekt.
 	ComObjArray	Ustvari SAFEARRAY za uporabo s COM.
 	ComObjConnect	Povezuje vire dogodkov predmet COM, da funkcije z določeno predpono.

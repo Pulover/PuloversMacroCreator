@@ -1072,7 +1072,7 @@
 	Chr	Vráti znak zodpovedajúci kód znaku označený číslami.
 	Click	Klikne na tlačidlo myši na zadané súradnice. To môže tiež podržať tlačidlo, otočte kolieskom alebo presunúť.
 	ClipWait	Čaká, až sa schránka obsahuje dáta.
-	Clipboard	Vloží text zo schránky
+	Clipboard	Vloží text zo schránky.
 	ComObjActive	Načíta zaregistrovaný objekt COM.
 	ComObjArray	Vytvorí SAFEARRAY pre použitie s COM.
 	ComObjConnect	Pripojenie objektu COM je udalosťou zdrojov do funkcie s daným prefixom.

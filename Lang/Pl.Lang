@@ -1072,7 +1072,7 @@
 	Chr	Zwraca jeden znak odpowiadający kod znaku wskazanego przez numer .
 	Click	Kliknie przycisk myszy w podanych współrzędnych. Można również przytrzymać przycisk, obróć tarczę , lub przenieść.
 	ClipWait	Czeka , ażschowek zawiera dane.
-	Clipboard	Wkleja tekst ze schowka
+	Clipboard	Wkleja tekst ze schowka.
 	ComObjActive	Pobiera zarejestrowany obiekt COM .
 	ComObjArray	Tworzy SAFEARRAY do pracy z COM .
 	ComObjConnect	Łączy obiekt COM w źródła zdarzeń z funkcji z danego prefiksu.

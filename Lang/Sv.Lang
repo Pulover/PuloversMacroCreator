@@ -1072,7 +1072,7 @@
 	Chr	Returnerar enstaka tecken motsvarar det tecken -nummer efter nummer .
 	Click	Klickar på en musknapp på de angivna koordinaterna . Det kan också hålla ned en knapp , vrid ratten , eller flytta .
 	ClipWait	Väntar tills klippbordet innehåller data .
-	Clipboard	Klistrar text från urklipp
+	Clipboard	Klistrar text från urklipp.
 	ComObjActive	Hämtar ett registrerat COM-objekt .
 	ComObjArray	Skapar en SAFEARRAY för användning med COM .
 	ComObjConnect	Ansluter en COM -objektets händelsekällor till funktioner med ett givet prefix .

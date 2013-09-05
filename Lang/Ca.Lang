@@ -1072,7 +1072,7 @@
 	Chr	Retorna el caràcter únic corresponent al codi de caràcters indicat per Nombre .
 	Click	Fa clic amb el botó del ratolí a les coordenades especificades . També pot mantenir premut un botó , giri la roda , o moure .
 	ClipWait	Espera fins que el portapapers conté dades .
-	Clipboard	Enganxa el text del porta-retalls
+	Clipboard	Enganxa el text del porta-retalls.
 	ComObjActive	Recupera un objecte COM registrat .
 	ComObjArray	Crear un SAFEARRAY per al seu ús amb COM .
 	ComObjConnect	Connexions fonts d'esdeveniments d'un objecte COM de funcions amb un prefix donat .

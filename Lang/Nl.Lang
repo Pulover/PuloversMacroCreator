@@ -1072,7 +1072,7 @@
 	Chr	Geeft als resultaat het teken dat overeenkomt met het karakter code aangegeven met nummer .
 	Click	Klikt op een muisknop op de opgegeven coördinaten . Het kan ook ingedrukt houden van een knop , draai aan het wiel , of verplaatsen .
 	ClipWait	Wacht tot de gegevens van het klembord bevat .
-	Clipboard	Plakt tekst van het klembord
+	Clipboard	Plakt tekst van het klembord.
 	ComObjActive	Haalt een geregistreerde COM-object .
 	ComObjArray	Creëert een SAFEARRAY voor gebruik met COM .
 	ComObjConnect	Verbindingen eventbronnen een COM- object in op functies met een bepaalde prefix .
