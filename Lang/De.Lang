@@ -444,7 +444,7 @@
 	c_Lang204 =	Bewerten Ausdruck
 		
 ; Other Windows		
-	t_Lang001 =	Export nach AHK
+	t_Lang001 =	Export nach AutoHotkey
 	t_Lang002 =	Makros
 	t_Lang003 =	Schleifen
 	t_Lang004 =	0=unendlich

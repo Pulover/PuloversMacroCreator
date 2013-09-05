@@ -444,7 +444,7 @@
 	c_Lang204 =	식을 계산
 		
 ; Other Windows		
-	t_Lang001 =	AHK로 내보내기
+	t_Lang001 =	AutoHotkey로 내보내기
 	t_Lang002 =	매크로
 	t_Lang003 =	루프
 	t_Lang004 =	0 = 무한

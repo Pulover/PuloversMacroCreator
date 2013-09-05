@@ -444,7 +444,7 @@
 	c_Lang204 =	Avaliar expressão
 		
 ; Other Windows		
-	t_Lang001 =	Exportar para AHK
+	t_Lang001 =	Exportar para AutoHotkey
 	t_Lang002 =	Macros
 	t_Lang003 =	Repetir
 	t_Lang004 =	0 = infinito

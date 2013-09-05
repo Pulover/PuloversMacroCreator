@@ -719,7 +719,7 @@ ShowMenu(Menu, mX, mY)
 	Else If (Menu = "Save")
 	{
 		Menu, TbMenu, Add, %f_Lang004%, SaveAs
-		Menu, TbMenu, Icon, %f_Lang004%, %ResDllPath%, 88
+		Menu, TbMenu, Icon, %f_Lang004%, %ResDllPath%, 86
 		Menu, TbMenu, Show, %mX%, %mY%
 		Menu, TbMenu, DeleteAll
 	}

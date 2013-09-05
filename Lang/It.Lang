@@ -444,7 +444,7 @@
 	c_Lang204 =	Valutare l'espressione
 		
 ; Other Windows		
-	t_Lang001 =	Esporta in AHK
+	t_Lang001 =	Esporta in AutoHotkey
 	t_Lang002 =	Macro
 	t_Lang003 =	Loops
 	t_Lang004 =	0 = infinito

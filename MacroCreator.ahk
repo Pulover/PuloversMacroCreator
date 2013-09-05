@@ -1912,6 +1912,19 @@ If (A_GuiEvent == "e")
 		MsgBox, 16, %d_Lang007%, %d_Lang049%
 		return
 	}
+	Else
+	{
+		Loop, % LV_GetCount()
+		{
+			LV_GetText(mLabel, A_Index, 1)
+			If ((A_Index <> EditRow) && (mLabel = AfterEdit))
+			{
+				LV_Modify(EditRow, "", BeforeEdit)
+				MsgBox, 16, %d_Lang007%, %d_Lang050%
+				return
+			}
+		}
+	}
 }
 If (A_GuiEvent = "D")
 	LV_Rows.Drag()
@@ -1953,14 +1966,26 @@ return
 ExpEditOK:
 Gui, 13:+OwnDialogs
 Gui, 13:Submit, NoHide
+Gui, 14:Default
 If !RegExMatch(Ex_Macro, "^\w+$")
 {
 	MsgBox, 16, %d_Lang007%, %d_Lang049%
 	return
 }
+Else
+{
+	Loop, % LV_GetCount()
+	{
+		LV_GetText(mLabel, A_Index, 1)
+		If ((A_Index <> RowNumber) && (mLabel = Ex_Macro))
+		{
+			MsgBox, 16, %d_Lang007%, %d_Lang050%
+			return
+		}
+	}
+}
 Gui, 14:-Disabled
 Gui, 13:Destroy
-Gui, 14:Default
 LV_Modify(RowNumber, "", Ex_Macro, Ex_AutoKey, Ex_TimesX, Ex_BM)
 return
 
@@ -1968,12 +1993,24 @@ ExpSelList:
 NewRow := ExpSel ? (RowNumber + 1) : (RowNumber - 1)
 Gui, 13:+OwnDialogs
 Gui, 13:Submit, NoHide
+Gui, 14:Default
 If !RegExMatch(Ex_Macro, "^\w+$")
 {
 	MsgBox, 16, %d_Lang007%, %d_Lang049%
 	return
 }
-Gui, 14:Default
+Else
+{
+	Loop, % LV_GetCount()
+	{
+		LV_GetText(mLabel, A_Index, 1)
+		If ((A_Index <> RowNumber) && (mLabel = Ex_Macro))
+		{
+			MsgBox, 16, %d_Lang007%, %d_Lang050%
+			return
+		}
+	}
+}
 LV_Modify(RowNumber, "", Ex_Macro, Ex_AutoKey, Ex_TimesX, Ex_BM)
 ,	RowNumber := NewRow
 If (RowNumber > LV_GetCount())
@@ -8871,6 +8908,19 @@ If (A_GuiEvent == "e")
 		MsgBox, 16, %d_Lang007%, %d_Lang049%
 		return
 	}
+	Else
+	{
+		Loop, % LV_GetCount()
+		{
+			LV_GetText(mLabel, A_Index, 1)
+			If ((A_Index <> EditRow) && (mLabel = AfterEdit))
+			{
+				LV_Modify(EditRow, "", BeforeEdit)
+				MsgBox, 16, %d_Lang007%, %d_Lang050%
+				return
+			}
+		}
+	}
 }
 If (A_GuiEvent = "D")
 	LV_Rows.Drag()
@@ -8915,14 +8965,26 @@ return
 EditMacroOK:
 Gui, 33:+OwnDialogs
 Gui, 33:Submit, NoHide
+Gui, 32:Default
 If !RegExMatch(Macro, "^\w+$")
 {
 	MsgBox, 16, %d_Lang007%, %d_Lang049%
 	return
 }
+Else
+{
+	Loop, % LV_GetCount()
+	{
+		LV_GetText(mLabel, A_Index, 1)
+		If ((A_Index <> RowNumber) && (mLabel = Macro))
+		{
+			MsgBox, 16, %d_Lang007%, %d_Lang050%
+			return
+		}
+	}
+}
 Gui, 32:-Disabled
 Gui, 33:Destroy
-Gui, 32:Default
 LV_Modify(RowNumber, "", Macro, AutoKey, ManKey, TimesX)
 return
 
@@ -8930,12 +8992,24 @@ SelList:
 NewRow := EditSel ? (RowNumber + 1) : (RowNumber - 1)
 Gui, 33:+OwnDialogs
 Gui, 33:Submit, NoHide
+Gui, 32:Default
 If !RegExMatch(Macro, "^\w+$")
 {
 	MsgBox, 16, %d_Lang007%, %d_Lang049%
 	return
 }
-Gui, 32:Default
+Else
+{
+	Loop, % LV_GetCount()
+	{
+		LV_GetText(mLabel, A_Index, 1)
+		If ((A_Index <> RowNumber) && (mLabel = Macro))
+		{
+			MsgBox, 16, %d_Lang007%, %d_Lang050%
+			return
+		}
+	}
+}
 LV_Modify(RowNumber, "", Macro, AutoKey, ManKey, TimesX)
 ,	RowNumber := NewRow
 If (RowNumber > LV_GetCount())
@@ -9580,8 +9654,8 @@ IfWinExist
 Gui, 18:+owner1 +ToolWindow
 Gui, chMacro:Default
 Gui, 18:Add, Tab2, Section W400 H400 vFindTabC, %t_Lang140%|%t_Lang141%
-Gui, 18:Add, Text, ys+40 xs+10 W100, %t_Lang066%:
-Gui, 18:Add, DDL, yp-5 xp+90 W120 vSearchCol gSearchCol AltSubmit, %w_Lang031%||%w_Lang032%|%w_Lang033%|%w_Lang034%|%w_Lang035%|%w_Lang036%|%w_Lang037%|%w_Lang038%|%w_Lang039%
+Gui, 18:Add, Text, ys+40 xs+10 W150 R1 Right, %t_Lang066%:
+Gui, 18:Add, DDL, yp-5 x+10 W120 vSearchCol gSearchCol AltSubmit, %w_Lang031%||%w_Lang032%|%w_Lang033%|%w_Lang034%|%w_Lang035%|%w_Lang036%|%w_Lang037%|%w_Lang038%|%w_Lang039%
 Gui, 18:Add, GroupBox, ys+60 xs+10 W380 H155, %t_Lang068%:
 Gui, 18:Add, Edit, yp+20 xs+20 vFind W360 r3
 Gui, 18:Add, Button, -Wrap Default y+5 xs+305 W75 H23 vFindOK gFindOK, %t_Lang068%
@@ -9598,24 +9672,24 @@ Gui, 18:Add, Radio, -Wrap W285 vRepAllMacros R1, %t_Lang075%
 Gui, 18:Add, Text, y+10 xs+10 W280 vReplaced
 Gui, 18:Tab, 2
 Gui, 18:Add, Groupbox, Section ym+60 xm+10 W380 H321
-Gui, 18:Add, Text, ys+20 xs+10 W100, %w_Lang031%:
-Gui, 18:Add, Edit, yp x+0 W260 vFilterA, %FilterA%
-Gui, 18:Add, Text, y+5 xs+10 W100, %w_Lang032%:
-Gui, 18:Add, Edit, yp x+0 W260 vFilterB, %FilterB%
-Gui, 18:Add, Text, y+5 xs+10 W100, %w_Lang033%:
-Gui, 18:Add, Edit, yp x+0 W260 vFilterC, %FilterC%
-Gui, 18:Add, Text, y+5 xs+10 W100, %w_Lang034%:
-Gui, 18:Add, Edit, yp x+0 W260 vFilterD, %FilterD%
-Gui, 18:Add, Text, y+5 xs+10 W100, %w_Lang035%:
-Gui, 18:Add, Edit, yp x+0 W260 vFilterE, %FilterE%
-Gui, 18:Add, Text, y+5 xs+10 W100, %w_Lang036%:
-Gui, 18:Add, Edit, yp x+0 W260 vFilterF, %FilterF%
-Gui, 18:Add, Text, y+5 xs+10 W100, %w_Lang037%:
-Gui, 18:Add, Edit, yp x+0 W260 vFilterG, %FilterG%
-Gui, 18:Add, Text, y+5 xs+10 W100, %w_Lang038%:
-Gui, 18:Add, Edit, yp x+0 W260 vFilterH, %FilterH%
-Gui, 18:Add, Text, y+5 xs+10 W100, %w_Lang039%:
-Gui, 18:Add, Edit, yp x+0 W260 vFilterI, %FilterI%
+Gui, 18:Add, Text, ys+20 xs+10 W100 R1 Right, %w_Lang031%:
+Gui, 18:Add, Edit, yp x+10 W250 vFilterA, %FilterA%
+Gui, 18:Add, Text, y+5 xs+10 W100 R1 Right, %w_Lang032%:
+Gui, 18:Add, Edit, yp x+10 W250 vFilterB, %FilterB%
+Gui, 18:Add, Text, y+5 xs+10 W100 R1 Right, %w_Lang033%:
+Gui, 18:Add, Edit, yp x+10 W250 vFilterC, %FilterC%
+Gui, 18:Add, Text, y+5 xs+10 W100 R1 Right, %w_Lang034%:
+Gui, 18:Add, Edit, yp x+10 W250 vFilterD, %FilterD%
+Gui, 18:Add, Text, y+5 xs+10 W100 R1 Right, %w_Lang035%:
+Gui, 18:Add, Edit, yp x+10 W250 vFilterE, %FilterE%
+Gui, 18:Add, Text, y+5 xs+10 W100 R1 Right, %w_Lang036%:
+Gui, 18:Add, Edit, yp x+10 W250 vFilterF, %FilterF%
+Gui, 18:Add, Text, y+5 xs+10 W100 R1 Right, %w_Lang037%:
+Gui, 18:Add, Edit, yp x+10 W250 vFilterG, %FilterG%
+Gui, 18:Add, Text, y+5 xs+10 W100 R1 Right, %w_Lang038%:
+Gui, 18:Add, Edit, yp x+10 W250 vFilterH, %FilterH%
+Gui, 18:Add, Text, y+5 xs+10 W100 R1 Right, %w_Lang039%:
+Gui, 18:Add, Edit, yp x+10 W250 vFilterI, %FilterI%
 Gui, 18:Add, Checkbox, -Wrap y+25 xs+10 W185 vFCase R1, %t_Lang069%
 Gui, 18:Add, Button, -Wrap yp-5 xs+295 W75 H23 gFilterOK, %t_Lang068%
 Gui, 18:Add, Text, y+5 xs+10 W280 vFFound
@@ -11903,15 +11977,15 @@ Menu, CommandMenu, Icon, %i_Lang004%`t%_s%F5, %ResDllPath%, 45
 Menu, CommandMenu, Icon, %i_Lang005%`t%_s%Shift+F5, %ResDllPath%, 11
 Menu, CommandMenu, Icon, %i_Lang006%`t%_s%Ctrl+F5, %ResDllPath%, 77
 Menu, CommandMenu, Icon, %i_Lang007%`t%_s%F6, %ResDllPath%, 79
-Menu, CommandMenu, Icon, %i_Lang008%`t%_s%F7, %ResDllPath%, 28
+Menu, CommandMenu, Icon, %i_Lang008%`t%_s%F7, %ResDllPath%, 27
 Menu, CommandMenu, Icon, %i_Lang009%`t%_s%F8, %ResDllPath%, 58
 Menu, CommandMenu, Icon, %i_Lang010%`t%_s%F9, %ResDllPath%, 36
 Menu, CommandMenu, Icon, %i_Lang011%`t%_s%Shift+F9, %ResDllPath%, 22
 Menu, CommandMenu, Icon, %i_Lang012%`t%_s%Ctrl+F9, %ResDllPath%, 34
-Menu, CommandMenu, Icon, %i_Lang013%`t%_s%F10, %ResDllPath%, 27
+Menu, CommandMenu, Icon, %i_Lang013%`t%_s%F10, %ResDllPath%, 26
 Menu, CommandMenu, Icon, %i_Lang014%`t%_s%Shift+F10, %ResDllPath%, 75
 Menu, CommandMenu, Icon, %i_Lang015%`t%_s%Ctrl+F10, %ResDllPath%, 21
-Menu, CommandMenu, Icon, %i_Lang016%`t%_s%F11, %ResDllPath%, 26
+Menu, CommandMenu, Icon, %i_Lang016%`t%_s%F11, %ResDllPath%, 25
 Menu, CommandMenu, Icon, %i_Lang017%`t%_s%Shift+F11, %ResDllPath%, 4
 Menu, CommandMenu, Icon, %i_Lang018%`t%_s%Ctrl+F11, %ResDllPath%, 76
 Menu, CommandMenu, Icon, %i_Lang019%`t%_s%F12, %ResDllPath%, 61
@@ -12202,9 +12276,9 @@ TB_Edit(tbOSC, "OSPlay", "", "", t_Lang112), TB_Edit(tbOSC, "OSStop", "", "", t_
 , TB_Edit(tbOSC, "SlowKeyToggle", "", "", t_Lang120), TB_Edit(tbOSC, "FastKeyToggle", "", "", t_Lang121)
 , TB_Edit(tbOSC, "ToggleTB", "", "", t_Lang122), TB_Edit(tbOSC, "ShowHideTB", "", "", t_Lang123)
 
-FixedBar.Text := ["OpenT=" t_Lang126 ":43", "SaveT=" t_Lang127 ":60"
-				, "", "CutT=" t_Lang128 ":9", "CopyT=" t_Lang129 ":8", "PasteT=" t_Lang130 ":45"
-				, "", "SelAllT=" t_Lang131 ":5", "RemoveT=" t_Lang132 ":10"]
+FixedBar.Text := ["OpenT=" t_Lang126 ":42", "SaveT=" t_Lang127 ":59"
+				, "", "CutT=" t_Lang128 ":9", "CopyT=" t_Lang129 ":8", "PasteT=" t_Lang130 ":44"
+				, "", "SelAllT=" t_Lang131 ":99", "RemoveT=" t_Lang132 ":10"]
 GuiControl, 1:+Redraw, cRbMain
 
 Gui 7:+LastFoundExist
