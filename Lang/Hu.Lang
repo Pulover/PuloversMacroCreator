@@ -307,7 +307,7 @@
 	c_Lang066 =	Kulcs Várakozás
 	c_Lang067 =	Ha talált
 	c_Lang068 =	Ha nem talált / Error
-	c_Lang069 =	* Koordináták tárolt `%FoundX`% / `%FoundY`%.
+	c_Lang069 =	Koordináták tárolt `%FoundX`%/`%FoundY`%.
 	c_Lang070 =	Coord
 	c_Lang071 =	Változatok
 	c_Lang072 =	Előnézet
@@ -442,6 +442,8 @@
 	c_Lang202 =	Ha az üzenet box
 	c_Lang203 =	Hasonlítsa össze a változókat
 	c_Lang204 =	Értékelje kifejezés
+	c_Lang205 =	Vidék
+	c_Lang206 =	Keresés
 		
 ; Other Windows		
 	t_Lang001 =	Exportálás AutoHotkey
@@ -761,28 +763,6 @@
 		Futtathat speciális funkciókat, mint a substr és RegExReplace a funkciók ablakban (Beszúrás > IF / változók / függvények). Vagy futtatni a saját funkciók külső AutoHotkey szkripteket.
 	)	
 ; Tooltips		
-	NewB_TT =	Új (Ctrl+N)
-	OpenB_TT =	Open (Ctrl+O)
-	SaveB_TT =	Mentés (Ctrl+S)
-	ExportB_TT =	Exportálás AHK (Ctrl+E)
-	PreviewB_TT =	Preview Script (Ctrl+P)
-	OptionsB_TT =	Settings (Ctrl+G)
-	RecordB_TT =	Makró rögzítése (Ctrl+R)
-	StartB_TT =	Activate makrók (Ctrl+Enter)
-	TestRun_TT =	Játssz Current Macro (Ctrl+Shift+Enter)
-	RunTimer_TT =	Timer (Ctrl+Shift+T)
-	MouseB_TT =	Mouse (F2)
-	TextB_TT =	Text (F3)
-	SpecialB_TT =	Speciális gombok
-	ControlB_TT =	Control (F4)
-	PauseB_TT =	Szünet (F5) / Üzenet (Shift+F5) / Kulcs Várakozás (Control+F5) 
-	WindowB_TT =	Window (F6)
-	ImageB_TT =	Image / Pixel Search (F7)
-	RunB_TT =	Run / Fájl / String / Misc. (F8)
-	ComLoopB_TT =	Loop (F9) / Goto (Shift+F9) / Label (Ctrl+F9)
-	IfStB_TT =	Ha a nyilatkozatok (F10) / változók (Shift+F10) / Függvények (Ctrl+F10)
-	IEComB_TT =	Internet Explorer (F11) / COM Interface (Shift+F11) / Fuss Scriptlet (Ctrl+F11)
-	SendMsgB_TT =	A Windows üzenetek (F12)
 	AutoKey_TT =	Gyorsgomb játszani Macro
 	ManKey_TT =	Gyorsgomb játszani Macro "lépésről-lépésre"
 	AbortKey_TT =	Gyorsgomb a lejátszás megállításához
@@ -795,38 +775,17 @@
 		shutdown lehetőségek
 		Ha a lejátszás befejeződik...
 	)	
-	Win1_TT =	Adja hozzá a Windows billentyű a módosító
-	JoyHK_TT =	Joystick
 	ReptC_TT =	0 = végtelen
-	TabPlus_TT =	Kedvencek Macro (Ctrl+T)
-	TabClose_TT =	Bezárás Macro (Ctrl+W)
-	DuplicateL_TT =	Ismétlődő Macro (Ctrl+Shift+D)
-	SaveC_TT =	Save Current Macro (Ctrl+Alt+S)
-	ImportB_TT =	Import Macro (Ctrl+I)
 	IfDirB_TT =	Győződjön Gyorsbillentyűk munka függően`ntípusú ablak aktív, illetve létezik (Ctrl+H)
 	KeepHKOn_TT =	Tartsa gyorsbillentyűk aktiválva Mindig
 	A_List_TT =	Makró Kiválasztása (Ctrl+1~0)
 	OSHK_TT =	Makró Kiválasztása
 	OSHKEd_TT =	Makró Kiválasztása
-	Duplicate_TT =	Kijelölt sorok másolása (Ctrl+D)
-	Order_TT =	A kijelölt sorok (Ctrl+PageUp / Ctrl+PageDown)
-	Cut_TT =	Vágott Kiválasztott sorok (Ctrl+X)
-	Copy_TT =	Kijelölt sorok másolása (Ctrl+C)
-	Paste_TT =	Paste másolt sorok (Ctrl+V)
-	Remove_TT =	A kijelölt sorok törlése (Del)
-	Undo_TT =	Visszavonás (Ctrl+Z)
-	Redo_TT =	Ismét (Ctrl+Y)
-	CopyTo_TT =	Másolás...
-	Capt_TT =	Capture gombot megnyomja ebben az ablakban
-	OnScCtrl_TT =	Megjelenítheti A Vezérlő Eszköztár
 	ApplyT_TT =	Alkalmaz
 	ApplyI_TT =	Alkalmaz
 	ApplyL_TT =	Beszúrás box (Insert)
 	InsertKey_TT =	Be Gombnyomás (Ctrl+Insert)
 	InsertKeyT_TT =	Be Gombnyomás
-	EditButton_TT =	Szerkeszt (Enter)
-	PrevRefresh_TT =	Felfrissít (F5)
-	PrevCopy_TT =	Másolás
 	OpenT_TT =	Open (Ctrl+O)
 	SaveT_TT =	Mentés (Ctrl+S)
 	CutT_TT =	Vágott
@@ -836,9 +795,6 @@
 	DefaultMacro_TT =	Válassza ki a fájlt betölteni a program elindul
 	VarCopyA_TT =	Másolása a jelenlegi változó tartalmát
 	VarCopyB_TT =	Másolása a jelenlegi változó tartalmát
-	FindReplace_TT =	Keresés / Csere (Ctrl+F)
-	EditComm_TT =	Megjegyzés szerkesztése (Ctrl+L)
-	EditColor_TT =	Szerkesztés színvédjegy (Ctrl+M)
 	Reset_TT =	Kódolatlan változó tartalma
 	Screenshot_TT =	Gyártó Screenshot
 	ColorPick_TT =	Color Picker
@@ -849,6 +805,8 @@
 	TransC_TT =	Átlátszó szín
 	WScale_TT =	Szélesség skála
 	HScale_TT =	Magasság méret
+	Fast_TT =	Használ egy gyorsabb keresési módot (ajánlott)
+	RGB_TT =	Okok színt kell értelmezni, hogy az RGB érték helyett BGR
 	LoopLVColor_TT =	Kattintson válasszon egy színt
 	IfLVColor_TT =	Kattintson válasszon egy színt
 	RefreshIEW_TT =	Lista frissítése
@@ -886,6 +844,7 @@
 		kezelni módosítók (ezek a módosítók befolyásolhatják
 		Csak a nagyon következő gomb):!, +, ^, #
 	)	
+	ComEvent_TT =	Tuş vuruşlarını gönderilen hızını önemli gecikme ile belirlenir.
 	Clip_TT =	
 	(LTrim	
 		Ideiglenesen használ vágólap küldje el a szöveget.

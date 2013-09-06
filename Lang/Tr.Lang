@@ -307,7 +307,7 @@
 	c_Lang066 =	Anahtar Bekleyin
 	c_Lang067 =	Eğer bulunursa
 	c_Lang068 =	/ Hata bulundu değilse
-	c_Lang069 =	* Coords `%FoundX`% / `%FoundY`% saklanır.
+	c_Lang069 =	Coords `%FoundX`%/`%FoundY`% saklanır.
 	c_Lang070 =	Koord
 	c_Lang071 =	Varyasyonlar
 	c_Lang072 =	Önizleme
@@ -442,6 +442,8 @@
 	c_Lang202 =	Eğer mesaj kutusu
 	c_Lang203 =	Değişkenleri karşılaştırın
 	c_Lang204 =	Ifade değerlendirmek
+	c_Lang205 =	Bölge
+	c_Lang206 =	Arama
 		
 ; Other Windows		
 	t_Lang001 =	AutoHotkey Aktar
@@ -761,28 +763,6 @@
 		Sen Fonksiyonlar pencere (Eğer Tablolar / Değişkenler / İşlevleri > Ekle) bu tür substr ve RegExReplace gibi gelişmiş fonksiyonları çalıştırabilirsiniz. Veya harici AutoHotkey komut, kendi fonksiyonları çalıştırmak.
 	)	
 ; Tooltips		
-	NewB_TT =	Yeni (Ctrl+N)
-	OpenB_TT =	Aç (Ctrl+O)
-	SaveB_TT =	Kaydet (Ctrl+S)
-	ExportB_TT =	AHK (Ctrl+E) aktar
-	PreviewB_TT =	Önizleme Script (Ctrl+P)
-	OptionsB_TT =	Ayarlar (Ctrl+G)
-	RecordB_TT =	Makro Kaydet (Ctrl+R)
-	StartB_TT =	Etkinleştir Makrolar (Ctrl+Enter)
-	TestRun_TT =	Cari Makro Oyna (Ctrl+Shift+Enter)
-	RunTimer_TT =	Timer (Ctrl+Shift+T)
-	MouseB_TT =	Fare (F2)
-	TextB_TT =	Metin (F3)
-	SpecialB_TT =	Özel Tuşlar
-	ControlB_TT =	Kontrol (F4)
-	PauseB_TT =	Durma (F5) / Mesaj (Shift+F5) / Anahtar Bekleyin (Control+F5) 
-	WindowB_TT =	Pencere (F6)
-	ImageB_TT =	Görüntü / Piksel Arama (F7)
-	RunB_TT =	/ Dosya / Dizi / Misc çalıştırın. (F8)
-	ComLoopB_TT =	Döngü (F9) / Git (Shift+F9) / Etiket (Ctrl+F9)
-	IfStB_TT =	Eğer Tablolar (F10) / Değişkenler / İşlevler (Ctrl+F10) (+ F10 Shift)
-	IEComB_TT =	Internet Explorer (F11) / COM Arabirimi (Shift+F11) / Komut Dosyası Çalıştırmak (Ctrl+F11)
-	SendMsgB_TT =	Windows iletileri (F12)
 	AutoKey_TT =	Kısayol Makro oynamak
 	ManKey_TT =	Kısayol Makro "adım adım" oynamak
 	AbortKey_TT =	Kısayol çalma durdurmak için
@@ -795,38 +775,17 @@
 		kapatma seçenekleri
 		Ne zaman çalma bitirir...
 	)	
-	Win1_TT =	Değiştirici olarak Windows tuşu ekle
-	JoyHK_TT =	Joystick
 	ReptC_TT =	0 = sonsuz
-	TabPlus_TT =	Makro Ekle (Ctrl+T)
-	TabClose_TT =	Kapat Makro (Ctrl+W)
-	DuplicateL_TT =	Makro çoğaltın (Ctrl+Shift+D)
-	SaveC_TT =	Cari Makro Kaydet (Ctrl+Alt+S)
-	ImportB_TT =	İthalat Makro (Ctrl+I)
 	IfDirB_TT =	Hotkeys aktif veya bulunduğu pencerenin`ntip (Ctrl+H) bağlı olarak çalışmasını sağlayın
 	KeepHKOn_TT =	Daima Aktif Hotkeys tutun
 	A_List_TT =	Makro Seçin (Ctrl+1~0)
 	OSHK_TT =	Makro Seçin
 	OSHKEd_TT =	Makro Seçin
-	Duplicate_TT =	Seçili Satırlar çoğaltın (Ctrl+D)
-	Order_TT =	Seçili Satırlar Taşı (Ctrl+PageUp / Ctrl+PageUp)
-	Cut_TT =	Seçili Satırlar (Ctrl+X) Cut
-	Copy_TT =	Seçili Satırlar (Ctrl+C) kopyalayın
-	Paste_TT =	Yapıştır Kopyalanan Satırlar (Ctrl+V)
-	Remove_TT =	Seçili Satırlar (Del) Sil
-	Undo_TT =	Geri Al (Ctrl+Z)
-	Redo_TT =	Yinele (Ctrl+Y)
-	CopyTo_TT =	Kopyala...
-	Capt_TT =	Bu pencerede basılmasını Capture
-	OnScCtrl_TT =	Araç Çubuğu Kontrolleri Görüntülemek
 	ApplyT_TT =	Uygulamak
 	ApplyI_TT =	Uygulamak
 	ApplyL_TT =	Kutusundan Ekle (Insert)
 	InsertKey_TT =	Tuş Eklemek (Ctrl+Insert)
 	InsertKeyT_TT =	Tuş Eklemek
-	EditButton_TT =	Düzenle (Enter)
-	PrevRefresh_TT =	Yenile (F5)
-	PrevCopy_TT =	Kopyala
 	OpenT_TT =	Aç (Ctrl+O)
 	SaveT_TT =	Kaydet (Ctrl+S)
 	CutT_TT =	Kesmek
@@ -836,9 +795,6 @@
 	DefaultMacro_TT =	Program yüklemek başlatmak için dosyayı seçin
 	VarCopyA_TT =	Akım değişken içeriğini kopyalama
 	VarCopyB_TT =	Akım değişken içeriğini kopyalama
-	FindReplace_TT =	Bul / Değiştir (Ctrl+F)
-	EditComm_TT =	Yorum düzenle (Ctrl+L)
-	EditColor_TT =	Düzen renk işareti (Ctrl+M)
 	Reset_TT =	Temizle değişken içeriği
 	Screenshot_TT =	Ekran Yap
 	ColorPick_TT =	Renk Seçici
@@ -849,6 +805,8 @@
 	TransC_TT =	Şeffaf renk
 	WScale_TT =	Genişlik ölçekli
 	HScale_TT =	Yükseklik ölçekli
+	Fast_TT =	Daha hızlı bir arama yöntemi (önerilir) kullanır
+	RGB_TT =	Yerine BGR bir RGB değeri olarak yorumlanabilir renk neden olur
 	LoopLVColor_TT =	Bir renk seçmek için tıklayınız
 	IfLVColor_TT =	Bir renk seçmek için tıklayınız
 	RefreshIEW_TT =	Yenile Listesi
@@ -886,6 +844,7 @@
 		düzenleyiciler (bu değiştiricileri etkiler olarak kabul edilir
 		Sadece çok sonraki anahtar):!, +, ^, #
 	)	
+	ComEvent_TT =	Tuş vuruşlarını gönderilen hızını önemli gecikme ile belirlenir.
 	Clip_TT =	
 	(LTrim	
 		Geçici metni göndermek için Pano kullanır.

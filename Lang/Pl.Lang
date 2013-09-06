@@ -307,7 +307,7 @@
 	c_Lang066 =	Key Czekać
 	c_Lang067 =	Jeśli stwierdzono
 	c_Lang068 =	Jeśli nie znaleziono / błąd
-	c_Lang069 =	* Coords przechowywane na `%FoundX`% / `%FoundY`%.
+	c_Lang069 =	Coords przechowywane na `%FoundX`%/`%FoundY`%.
 	c_Lang070 =	Coord
 	c_Lang071 =	Odmiany
 	c_Lang072 =	Podgląd
@@ -442,6 +442,8 @@
 	c_Lang202 =	Jeżeli okno komunikatu
 	c_Lang203 =	Porównaj zmienne
 	c_Lang204 =	Oceny ekspresji
+	c_Lang205 =	Region
+	c_Lang206 =	Szukaj
 		
 ; Other Windows		
 	t_Lang001 =	Eksport do AutoHotkey
@@ -761,28 +763,6 @@
 		Możesz uruchomić zaawansowane funkcje, takie jak substr i RegExReplace w oknie funkcji (Wstaw > if / zmienne / funkcje). Albo uruchomić własnych funkcji z zewnętrznych skryptów AutoHotkey.
 	)	
 ; Tooltips		
-	NewB_TT =	Nowy (Ctrl+N)
-	OpenB_TT =	Otwórz (Ctrl+O)
-	SaveB_TT =	Zapisz (Ctrl+S)
-	ExportB_TT =	Eksport do AHK (Ctrl+E)
-	PreviewB_TT =	Podgląd Script (Ctrl+P)
-	OptionsB_TT =	Ustawienia (Ctrl+G)
-	RecordB_TT =	Record Macro (Ctrl+R)
-	StartB_TT =	Makra Aktywowanie (Ctrl+Enter)
-	TestRun_TT =	Zagraj w bieżącym makrze (Ctrl+Shift+Enter)
-	RunTimer_TT =	Timer (Ctrl+Shift+T)
-	MouseB_TT =	Myszy (F2)
-	TextB_TT =	Tekst (F3)
-	SpecialB_TT =	Klawisze specjalne
-	ControlB_TT =	Control (F4)
-	PauseB_TT =	Pauza (F5) / Wiadomość (Shift+F5) / Key Czekać (Control+F5) 
-	WindowB_TT =	Window (F6)
-	ImageB_TT =	Image / Pixel Szukaj (F7)
-	RunB_TT =	Uruchom / Plik / String / Misc. (F8)
-	ComLoopB_TT =	Loop (F9) / Goto (Shift+F9) / Label (Ctrl+F9)
-	IfStB_TT =	If (F10) / zmiennych (Shift+F10) / Funkcje (Ctrl+F10)
-	IEComB_TT =	Internet Explorer (F11) / COM interfejsu (Shift+F11) / Uruchom Scriptlet (Ctrl+F11)
-	SendMsgB_TT =	Komunikaty Windows (F12)
 	AutoKey_TT =	Skrót grać makro
 	ManKey_TT =	Skrót grać makro "krok po kroku"
 	AbortKey_TT =	Skrót, aby zatrzymać odtwarzanie
@@ -795,38 +775,17 @@
 		opcje wyłączania
 		Po zakończeniu odtwarzania...
 	)	
-	Win1_TT =	Dodaj klucz Windows jako modyfikator
-	JoyHK_TT =	Drążek sterowy
 	ReptC_TT =	0 = nieskończony
-	TabPlus_TT =	Dodaj Macro (Ctrl+T)
-	TabClose_TT =	Zamknij makro (Ctrl+W)
-	DuplicateL_TT =	Powiel makro (Ctrl+Shift+D)
-	SaveC_TT =	Zapisz bieżące makro (Ctrl+Alt+S)
-	ImportB_TT =	Import Makro (Ctrl+I)
 	IfDirB_TT =	Producent Hotkeys pracy w zależności od rodzaju`nokna, które jest aktywne lub istnieje (Ctrl+H)
 	KeepHKOn_TT =	Zachowaj Hotkeys zawsze aktywna
 	A_List_TT =	Wybierz Makro (Ctrl+1~0)
 	OSHK_TT =	Wybierz Makro
 	OSHKEd_TT =	Wybierz Makro
-	Duplicate_TT =	Duplikat wybranych wierszy (Ctrl+D)
-	Order_TT =	Przenoszenie wybranych wierszy (Ctrl+PageUp / Ctrl+PageDown)
-	Cut_TT =	Wytnij wybranych wierszy (Ctrl+X)
-	Copy_TT =	Kopiowanie wybranych wierszy (Ctrl+C)
-	Paste_TT =	Wklej Skopiowane wiersze (Ctrl+V)
-	Remove_TT =	Usuń zaznaczone wiersze (DEL)
-	Undo_TT =	Cofnij (Ctrl+Z)
-	Redo_TT =	Ponów (Ctrl+Y)
-	CopyTo_TT =	Skopiuj do...
-	Capt_TT =	Przechwytywanie naciśnięć klawiszy w tym oknie
-	OnScCtrl_TT =	Wyświetlić Przyciski Paska Narzędzi
 	ApplyT_TT =	Zastosować
 	ApplyI_TT =	Zastosować
 	ApplyL_TT =	Wstaw z pudełkiem (Insert)
 	InsertKey_TT =	Włóż Klawiszy (Ctrl+Insert)
 	InsertKeyT_TT =	Włóż Klawiszy
-	EditButton_TT =	Edytuj (Enter)
-	PrevRefresh_TT =	Odświeżać (F5)
-	PrevCopy_TT =	Skopiuj
 	OpenT_TT =	Otwórz (Ctrl+O)
 	SaveT_TT =	Zapisz (Ctrl+S)
 	CutT_TT =	Ciąć
@@ -836,9 +795,6 @@
 	DefaultMacro_TT =	Wybierz plik do załadowania na program uruchomić
 	VarCopyA_TT =	Skopiuj aktualnej zmiennej treści
 	VarCopyB_TT =	Skopiuj aktualnej zmiennej treści
-	FindReplace_TT =	Znajdź / Zamień (Ctrl+F)
-	EditComm_TT =	Edytuj komentarz (Ctrl+L)
-	EditColor_TT =	Zmień kolor zapytania (Ctrl+M)
 	Reset_TT =	Wyczyść zawartość zmiennej
 	Screenshot_TT =	Dodać Screenshot
 	ColorPick_TT =	Wyboru Koloru
@@ -849,6 +805,8 @@
 	TransC_TT =	Kolor przezroczysty
 	WScale_TT =	Skala Szerokość
 	HScale_TT =	Skala wzrost
+	Fast_TT =	Używa szybsze wyszukiwanie metody (zalecane)
+	RGB_TT =	Powoduje kolor należy interpretować jako wartości RGB zamiast BGR
 	LoopLVColor_TT =	Kliknij, aby wybrać kolor
 	IfLVColor_TT =	Kliknij, aby wybrać kolor
 	RefreshIEW_TT =	Odśwież Listę
@@ -886,6 +844,7 @@
 		są traktowane jako modyfikatory (te modyfikatory wpływu
 		tylko bardzo następnego key):, +, ^ #
 	)	
+	ComEvent_TT =	Szybkość, z jaką naciśnięcia klawiszy są przesyłane określa klucz opóźnienia.
 	Clip_TT =	
 	(LTrim	
 		Czasowo używa Schowka wysłać tekst.

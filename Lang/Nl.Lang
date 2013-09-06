@@ -307,7 +307,7 @@
 	c_Lang066 =	Key Wachten
 	c_Lang067 =	Indien gevonden
 	c_Lang068 =	Indien niet gevonden / fout
-	c_Lang069 =	* Coords opgeslagen om `%FoundX`% / `%FoundY`%.
+	c_Lang069 =	Coords opgeslagen om `%FoundX`%/`%FoundY`%.
 	c_Lang070 =	Coord
 	c_Lang071 =	Variaties
 	c_Lang072 =	Voorbeeld
@@ -442,6 +442,8 @@
 	c_Lang202 =	Als message box
 	c_Lang203 =	Vergelijk variabelen
 	c_Lang204 =	Evalueer meningsuiting
+	c_Lang205 =	Regio
+	c_Lang206 =	Zoeken
 		
 ; Other Windows		
 	t_Lang001 =	Exporteren naar AutoHotkey
@@ -761,28 +763,6 @@
 		U kunt geavanceerde functies zoals substr en RegExReplace uit het raam Functions (Invoegen > Als Verklaringen / variabelen / functies) draaien. Of draai je eigen functies van externe AutoHotkey scripts.
 	)	
 ; Tooltips		
-	NewB_TT =	Nieuw (Ctrl+N)
-	OpenB_TT =	Openen (Ctrl+O)
-	SaveB_TT =	Opslaan (Ctrl+S)
-	ExportB_TT =	Exporteren naar AHK (Ctrl+E)
-	PreviewB_TT =	Voorbeeld Script (Ctrl+P)
-	OptionsB_TT =	Instellingen (Ctrl+G)
-	RecordB_TT =	Macro opnemen (Ctrl+R)
-	StartB_TT =	Macro's activeren (Ctrl+Enter)
-	TestRun_TT =	Speel huidige macro (Ctrl+Shift+Enter)
-	RunTimer_TT =	Timer (Ctrl+Shift+T)
-	MouseB_TT =	Muis (F2)
-	TextB_TT =	Tekst (F3)
-	SpecialB_TT =	Speciale toetsen
-	ControlB_TT =	Control (F4)
-	PauseB_TT =	Pauzeren (F5) / Bericht (Shift+F5) / Key Wachten (Control+F5) 
-	WindowB_TT =	Window (F6)
-	ImageB_TT =	Afbeelding / Pixel Zoeken (F7)
-	RunB_TT =	Run / Bestand / String / Misc. (F8)
-	ComLoopB_TT =	Loop (F9) / Ga naar (Shift+F9) / Label (Ctrl+F9)
-	IfStB_TT =	Als Verklaringen (F10) / Variabelen (Shift+F10) / Functies (Ctrl+F10)
-	IEComB_TT =	Internet Explorer (F11) / COM-interface (Shift+F11) / Run Scriptlet (Ctrl+F11)
-	SendMsgB_TT =	Windows Messages (F12)
 	AutoKey_TT =	Sneltoets om Macro te spelen
 	ManKey_TT =	Sneltoets naar macro "stap-voor-stap" play
 	AbortKey_TT =	Sneltoets om het afspelen te stoppen
@@ -795,38 +775,17 @@
 		shutdown opties
 		Wanneer het afspelen is voltooid...
 	)	
-	Win1_TT =	Voeg de Windows-toets als modifier
-	JoyHK_TT =	Bedieningshendel
 	ReptC_TT =	0 = oneindig
-	TabPlus_TT =	Voeg Macro (Ctrl+T)
-	TabClose_TT =	Sluiten Macro (Ctrl+W)
-	DuplicateL_TT =	Dubbele Macro (Ctrl+Shift+D)
-	SaveC_TT =	Save Current Macro (Ctrl+Alt+S)
-	ImportB_TT =	Import Macro (Ctrl+I)
 	IfDirB_TT =	Maak Sneltoetsen werken, afhankelijk van het`ntype venster dat actief is of bestaat (Ctrl+H)
 	KeepHKOn_TT =	Houd Sneltoetsen altijd geactiveerd
 	A_List_TT =	Selecteert Macro (Ctrl+1~0)
 	OSHK_TT =	Selecteert Macro
 	OSHKEd_TT =	Selecteert Macro
-	Duplicate_TT =	Geselecteerde rijen dupliceren (Ctrl+D)
-	Order_TT =	Verplaats geselecteerde rijen (Ctrl+PageUp / Ctrl+PageDown)
-	Cut_TT =	Snijd Geselecteerde rijen (Ctrl+X)
-	Copy_TT =	Kopieer geselecteerde rijen (Ctrl+C)
-	Paste_TT =	Plakken Gekopieerde rijen (Ctrl+V)
-	Remove_TT =	Geselecteerde rijen verwijderen (Del)
-	Undo_TT =	Ongedaan maken (Ctrl+Z)
-	Redo_TT =	Opnieuw (Ctrl+Y)
-	CopyTo_TT =	Kopiëren naar...
-	Capt_TT =	Capture-toets drukt in dit venster
-	OnScCtrl_TT =	Weer Controles Werkbalk
 	ApplyT_TT =	Van toepassing zijn
 	ApplyI_TT =	Van toepassing zijn
 	ApplyL_TT =	Invoegen van Box (Insert)
 	InsertKey_TT =	Steek Toetsaanslag (Ctrl+Insert)
 	InsertKeyT_TT =	Steek Toetsaanslag
-	EditButton_TT =	Redigeren (Enter)
-	PrevRefresh_TT =	Verversen (F5)
-	PrevCopy_TT =	Kopieer
 	OpenT_TT =	Openen (Ctrl+O)
 	SaveT_TT =	Opslaan (Ctrl+S)
 	CutT_TT =	Snijden
@@ -836,9 +795,6 @@
 	DefaultMacro_TT =	Selecteer bestand te laden op het programma opstarten
 	VarCopyA_TT =	Kopieer huidige variabele inhoud
 	VarCopyB_TT =	Kopieer huidige variabele inhoud
-	FindReplace_TT =	Zoeken / Vervangen (Ctrl+F)
-	EditComm_TT =	Opmerking bewerken (Ctrl+L)
-	EditColor_TT =	Bewerken kleurmarkering (Ctrl+M)
 	Reset_TT =	Clear variabele inhoud
 	Screenshot_TT =	Maak Screenshot
 	ColorPick_TT =	Kleurenkiezer
@@ -849,6 +805,8 @@
 	TransC_TT =	Transparante kleur
 	WScale_TT =	Schaal breedte
 	HScale_TT =	Hoogte schaal
+	Fast_TT =	Maakt gebruik van een snellere zoekmethode (aanbevolen)
+	RGB_TT =	Oorzaken kleur te worden geïnterpreteerd als een RGB-waarde in plaats van BGR
 	LoopLVColor_TT =	Klik hier om een ​​kleur te kiezen
 	IfLVColor_TT =	Klik hier om een ​​kleur te kiezen
 	RefreshIEW_TT =	Lijst vernieuwen
@@ -886,6 +844,7 @@
 		worden behandeld als modifiers (deze bepalingen van invloed zijn
 		alleen de volgende toets):, +, ^, #
 	)	
+	ComEvent_TT =	De snelheid waarmee toetsaanslagen worden verzonden, wordt bepaald door de belangrijkste vertraging.
 	Clip_TT =	
 	(LTrim	
 		Tijdelijk gebruik van het klembord te sturen van de tekst.

@@ -307,7 +307,7 @@
 	c_Lang066 =	Näppäintä Odotus
 	c_Lang067 =	Jos löytyy
 	c_Lang068 =	Jos ei löydy / Error
-	c_Lang069 =	* & Koordinaatit tallennetaan `%FoundX`% / `%FoundY`%.
+	c_Lang069 =	Koordinaatit tallennetaan `%FoundX`%/`%FoundY`%.
 	c_Lang070 =	Coord
 	c_Lang071 =	Muunnelmia
 	c_Lang072 =	Preview
@@ -442,6 +442,8 @@
 	c_Lang202 =	Jos postilaatikko
 	c_Lang203 =	Vertaa muuttujat
 	c_Lang204 =	Arvioi ilme
+	c_Lang205 =	Alue
+	c_Lang206 =	Etsi
 		
 ; Other Windows		
 	t_Lang001 =	Vie AutoHotkey
@@ -761,28 +763,6 @@
 		Voit käyttää kehittyneitä toimintoja, kuten substr ja RegExReplace päässä toiminnot ikkunan (Lisää > Jos Lausunnot / muuttujat / toiminnot). Tai ajaa omia toimintoja ulkopuolisilta AutoHotkey skriptejä.
 	)	
 ; Tooltips		
-	NewB_TT =	Uusi (Ctrl+N)
-	OpenB_TT =	Open (Ctrl+O)
-	SaveB_TT =	Tallenna (Ctrl+S)
-	ExportB_TT =	Vie AHK (Ctrl+E)
-	PreviewB_TT =	Esikatselu Script (Ctrl+P)
-	OptionsB_TT =	Asetukset (Ctrl+G)
-	RecordB_TT =	Nauhoita makro (Ctrl+R)
-	StartB_TT =	Aktivoi Makrot (Ctrl+Enter)
-	TestRun_TT =	Pelaa Nykyinen Makro (Ctrl+Shift+Enter)
-	RunTimer_TT =	Ajastin (Ctrl+Shift+T)
-	MouseB_TT =	Hiiri (F2)
-	TextB_TT =	Teksti (F3)
-	SpecialB_TT =	Special Keys
-	ControlB_TT =	Control (F4)
-	PauseB_TT =	Tauko (F5) / Viesti (Shift+F5) / Näppäintä Odotus (Control+F5) 
-	WindowB_TT =	Window (F6)
-	ImageB_TT =	Kuva / Pixel Search (F7)
-	RunB_TT =	Run / File / String / Misc. (F8)
-	ComLoopB_TT =	Loop (F9) / Goto (Shift+F9) / Label (Ctrl+F9)
-	IfStB_TT =	Jos lausunnot (F10) / Muuttujat (Shift+F10) / Funktiot (Ctrl+F10)
-	IEComB_TT =	Internet Explorer (F11) / COM liitäntä (Shift+F11) / Suorita Komentosarjasovelman (Ctrl+F11)
-	SendMsgB_TT =	Windows viestit (F12)
 	AutoKey_TT =	Pikanäppäin pelata Macro
 	ManKey_TT =	Pikanäppäin pelata Macro "askel-askeleelta"
 	AbortKey_TT =	Pikanäppäin lopettaa toiston
@@ -795,38 +775,17 @@
 		shutdown vaihtoehtoja
 		Kun toisto päättyy...
 	)	
-	Win1_TT =	Lisää Windows-näppäin muuntoaineena
-	JoyHK_TT =	Peliohjain
 	ReptC_TT =	0 = ääretön
-	TabPlus_TT =	Lisää Makro (Ctrl+T)
-	TabClose_TT =	Sulje Makro (Ctrl+W)
-	DuplicateL_TT =	Monista Makro (Ctrl+Shift+D)
-	SaveC_TT =	Tallenna Nykyinen Makro (Ctrl+Alt+S)
-	ImportB_TT =	Tuo Makro (Ctrl+I)
 	IfDirB_TT =	Tee Pikanäppäimet toimivat riippuen`ntyyppinen ikkuna, joka on aktiivinen tai olemassa (Ctrl+H)
 	KeepHKOn_TT =	Pidä pikanäppäimet aina päällä
 	A_List_TT =	Valitse Makro (Ctrl+1~0)
 	OSHK_TT =	Valitse Makro
 	OSHKEd_TT =	Valitse Makro
-	Duplicate_TT =	Monista valitut rivit (Ctrl+D)
-	Order_TT =	Siirrä valitut rivit (Ctrl+PageUp / Ctrl+Page Down)
-	Cut_TT =	Leikkaa valitut rivit (Ctrl+X)
-	Copy_TT =	Kopioi valitut rivit (Ctrl+C)
-	Paste_TT =	Liitä kopioidut rivit (Ctrl+V)
-	Remove_TT =	Poista valitut rivit (Del)
-	Undo_TT =	Kumoa (Ctrl+Z)
-	Redo_TT =	Redo (Ctrl+Y)
-	CopyTo_TT =	Kopioida...
-	Capt_TT =	Capture näppäinpainallukset tässä ikkunassa
-	OnScCtrl_TT =	Näyttösäädöt Työkalurivi
 	ApplyT_TT =	Käyttää
 	ApplyI_TT =	Käyttää
 	ApplyL_TT =	Insertin laatikko (Insert)
 	InsertKey_TT =	Aseta Näppäilyn (Ctrl+Insert)
 	InsertKeyT_TT =	Aseta Näppäilyn
-	EditButton_TT =	Muokata (Enter)
-	PrevRefresh_TT =	Virkistää (F5)
-	PrevCopy_TT =	Kopioi
 	OpenT_TT =	Open (Ctrl+O)
 	SaveT_TT =	Tallenna (Ctrl+S)
 	CutT_TT =	Leikata
@@ -836,9 +795,6 @@
 	DefaultMacro_TT =	Valitse ladattava tiedosto ohjelman käynnistyksen
 	VarCopyA_TT =	Kopioi nykyinen muuttujan sisältö
 	VarCopyB_TT =	Kopioi nykyinen muuttujan sisältö
-	FindReplace_TT =	Etsi / Korvaa (Ctrl+F)
-	EditComm_TT =	Edit Kommentti (Ctrl+L)
-	EditColor_TT =	Edit värimerkk (Ctrl+M)
 	Reset_TT =	Tyhjennä muuttujan sisältö
 	Screenshot_TT =	Tee Screenshot
 	ColorPick_TT =	Värivaihtoehtojamme
@@ -849,6 +805,8 @@
 	TransC_TT =	Läpinäkyvä väri
 	WScale_TT =	Leveys mittakaavassa
 	HScale_TT =	Korkeusasteikon
+	Fast_TT =	Käyttää nopeampi hakutapa (suositus)
+	RGB_TT =	Aiheuttaa väriä voidaan tulkita RGB-arvon sijasta BGR
 	LoopLVColor_TT =	Klikkaa valita värin
 	IfLVColor_TT =	Klikkaa valita värin
 	RefreshIEW_TT =	Päivitä lista
@@ -886,6 +844,7 @@
 		käsitellään määritteet (nämä määritteet vaikuttavat
 		vain hyvin seuraava näppäin):!, +, ^, #
 	)	
+	ComEvent_TT =	Nopeus, jolla näppäimistön lähetetään määräytyy avaimen viiveellä.
 	Clip_TT =	
 	(LTrim	
 		Tilapäisesti käyttää Leikepöytä lähettää tekstiä.

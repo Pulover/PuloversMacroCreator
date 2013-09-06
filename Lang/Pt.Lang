@@ -307,7 +307,7 @@
 	c_Lang066 =	Esperar Tecla
 	c_Lang067 =	Se encontrada
 	c_Lang068 =	Se não encontrada / Erro
-	c_Lang069 =	Coords gravadas em `%FoundX`% / `%FoundY`%.
+	c_Lang069 =	Coords gravadas em `%FoundX`%/`%FoundY`%.
 	c_Lang070 =	Coord
 	c_Lang071 =	Variações
 	c_Lang072 =	Pré-Visualização
@@ -442,6 +442,8 @@
 	c_Lang202 =	Se mensagem
 	c_Lang203 =	Comparar variáveis
 	c_Lang204 =	Avaliar expressão
+	c_Lang205 =	Região
+	c_Lang206 =	Búsca
 		
 ; Other Windows		
 	t_Lang001 =	Exportar para AutoHotkey
@@ -761,28 +763,6 @@
 		Você pode executar funções avançadas como SubStr e RegExReplace da janela Funções (Inserir > Declaração Se / Variáveis / Funções). Ou executar suas próprias funções a partir de scripts AutoHotkey externos.
 	)	
 ; Tooltips		
-	NewB_TT =	Novo (Ctrl+N)
-	OpenB_TT =	Abrir (Ctrl+O)
-	SaveB_TT =	Salvar (Ctrl+S)
-	ExportB_TT =	Exportar para AHK (Ctrl+E)
-	PreviewB_TT =	Visualizar Script (Ctrl+P)
-	OptionsB_TT =	Configurações (Ctrl+G)
-	RecordB_TT =	Gravar Macro (Ctrl+R)
-	StartB_TT =	Ativar Macros (Ctrl+Enter)
-	TestRun_TT =	Reproduzir Macro Atual (Ctrl+Shift+Enter)
-	RunTimer_TT =	Temporizador (Ctrl+Shift+T)
-	MouseB_TT =	Mouse (F2)
-	TextB_TT =	Texto (F3)
-	SpecialB_TT =	Teclas Especiais
-	ControlB_TT =	Controle (F4)
-	PauseB_TT =	Pausa (F5) / Mensagem (Shift+F5) / Esperar Tecla (Control+F5) 
-	WindowB_TT =	Janela (F6)
-	ImageB_TT =	Procurar Imagem / Pixel (F7)
-	RunB_TT =	Executar / Arquivos / Texto / Misc. (F8)
-	ComLoopB_TT =	Loop (F9) / Pular (Shift+F9) / Rótulo (Ctrl+F9)
-	IfStB_TT =	Declaração Se (F10) / Variáveis (Shift+F10) / Funções (Ctrl+F10)
-	IEComB_TT =	Internet Explorer (F11) / Interface COM (Shift+F11) / Executar Scriptlet (Ctrl+F11)
-	SendMsgB_TT =	Mensages do Windows (F12)
 	AutoKey_TT =	Atalho para reproduzir Macro
 	ManKey_TT =	Atalho para reproduzir Macro "passo-a-passo"
 	AbortKey_TT =	Atalho para parar reprodução
@@ -795,38 +775,17 @@
 		Opções de desligamento
 		Quando a reprodução terminar...
 	)	
-	Win1_TT =	Adicionar a tecla Windows como modificador
-	JoyHK_TT =	Joystick
 	ReptC_TT =	0 = infinito
-	TabPlus_TT =	Adicionar Macro (Ctrl+T)
-	TabClose_TT =	Fechar Macro (Ctrl+W)
-	DuplicateL_TT =	Duplicar Macro (Ctrl+Shift+D)
-	SaveC_TT =	Salvar Macro Atual (Ctrl+Alt+S)
-	ImportB_TT =	Importar Macro (Ctrl+I)
 	IfDirB_TT =	Faz os Atalhos funcionarem dependendo`ndo tipo de janela ativa ou existente.
 	KeepHKOn_TT =	Manter Atalhos Sempre Ativos
 	A_List_TT =	Selecionar Macro (Ctrl+1~0)
 	OSHK_TT =	Selecionar Macro
 	OSHKEd_TT =	Selecionar Macro
-	Duplicate_TT =	Duplicar Linhas Selecionadas (Ctrl+D)
-	Order_TT =	Mover Linhas Selecionadas (Ctrl+PageUp / Ctrl+PageDown)
-	Cut_TT =	Recortar Linhas Selecionadas (Ctrl+X)
-	Copy_TT =	Copiar Linhas Selecionadas (Ctrl+C)
-	Paste_TT =	Colar Linhas Copiadas (Ctrl+V)
-	Remove_TT =	Excluir Linhas Selecionadas (Del)
-	Undo_TT =	Desfazer (Ctrl+Z)
-	Redo_TT =	Refazer (Ctrl+Y)
-	CopyTo_TT =	Copiar para...
-	Capt_TT =	Capturar teclas pressionadas nesta janela
-	OnScCtrl_TT =	Exibir a Barra de Controles
 	ApplyT_TT =	Aplicar
 	ApplyI_TT =	Aplicar
 	ApplyL_TT =	Inserir da Caixa (Insert)
 	InsertKey_TT =	Inserir Tecla (Ctrl+Insert)
 	InsertKeyT_TT =	Inserir Tecla
-	EditButton_TT =	Editar (Enter)
-	PrevRefresh_TT =	Atualizar (F5)
-	PrevCopy_TT =	Copiar
 	OpenT_TT =	Abrir (Ctrl+O)
 	SaveT_TT =	Salvar (Ctrl+S)
 	CutT_TT =	Recortar
@@ -836,9 +795,6 @@
 	DefaultMacro_TT =	Selecione um arquivo para abrir ao iniciar
 	VarCopyA_TT =	Copy current variable contents
 	VarCopyB_TT =	Copy current variable contents
-	FindReplace_TT =	Localizar / Substituir (Ctrl+F)
-	EditComm_TT =	Editar Comentário (Ctrl+L)
-	EditColor_TT =	Editar Marca de Cor (Ctrl+M)
 	Reset_TT =	Apagar conteúdo da variável
 	Screenshot_TT =	Capturar Imagem
 	ColorPick_TT =	Seletor de Cores
@@ -849,6 +805,8 @@
 	TransC_TT =	Cor transparente
 	WScale_TT =	Escala de largura
 	HScale_TT =	Escala de altura
+	Fast_TT =	Usa um método de busca mais rápido (recomendado)
+	RGB_TT =	Faz a cor ser interpretado como um RGB ao invés de BGR
 	LoopLVColor_TT =	Clique para selecionar uma cor
 	IfLVColor_TT =	Clique para selecionar uma cor
 	RefreshIEW_TT =	Atualizar Lista
@@ -886,6 +844,7 @@
 		são tradados como modificadores (estes modificadores afetam
 		somente o texto próximo à tecla): !, +, ^, #
 	)	
+	ComEvent_TT =	A taxa à qual as teclas são enviadas é determinada pelo intervalo das teclas.
 	Clip_TT =	
 	(LTrim	
 		Utiliza temporiariamente a Área de Transferência para enviar o texto.

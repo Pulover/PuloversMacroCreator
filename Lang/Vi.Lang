@@ -307,7 +307,7 @@
 	c_Lang066 =	Chờ chính
 	c_Lang067 =	Nếu tìm thấy
 	c_Lang068 =	Nếu không tìm thấy / Lỗi
-	c_Lang069 =	* Coords lưu trữ để `%FoundX`% / `%FoundY`%.
+	c_Lang069 =	Coords lưu trữ để `%FoundX`%/`%FoundY`%.
 	c_Lang070 =	Coord
 	c_Lang071 =	Biến thể
 	c_Lang072 =	Xem trước
@@ -442,6 +442,8 @@
 	c_Lang202 =	Nếu hộp thông báo
 	c_Lang203 =	So sánh các biến
 	c_Lang204 =	Đánh giá biểu thức
+	c_Lang205 =	Khu
+	c_Lang206 =	Tìm kiếm
 		
 ; Other Windows		
 	t_Lang001 =	Xuất khẩu sang AutoHotkey
@@ -761,28 +763,6 @@
 		Bạn có thể chạy các chức năng tiên tiến như SUBSTR và RegExReplace từ cửa sổ chức năng (Insert> Nếu cáo / biến / chức năng). Hoặc chạy các chức năng của riêng bạn từ các kịch bản AutoHotkey bên ngoài.
 	)	
 ; Tooltips		
-	NewB_TT =	Mới (Ctrl + N)
-	OpenB_TT =	Mở (Ctrl + O)
-	SaveB_TT =	Save (Ctrl + S)
-	ExportB_TT =	Xuất khẩu sang AHK (Ctrl + E)
-	PreviewB_TT =	Xem trước Script (Ctrl + P)
-	OptionsB_TT =	Thiết lập (Ctrl + G)
-	RecordB_TT =	Record Macro (Ctrl + R)
-	StartB_TT =	Kích hoạt Macro (Ctrl + Enter)
-	TestRun_TT =	Chơi vĩ mô hiện tại (Ctrl + Shift + Enter)
-	RunTimer_TT =	Hẹn giờ (Ctrl + Shift + T)
-	MouseB_TT =	Chuột (F2)
-	TextB_TT =	Văn bản (F3)
-	SpecialB_TT =	Các phím đặc biệt
-	ControlB_TT =	Kiểm soát (F4)
-	PauseB_TT =	Tạm dừng (F5) / tin nhắn (Shift + F5) / Chờ chính (Control + F5)
-	WindowB_TT =	Cửa sổ (F6)
-	ImageB_TT =	Hình ảnh / Pixel Tìm kiếm (F7)
-	RunB_TT =	Chạy / File / String / Misc. (F8)
-	ComLoopB_TT =	Vòng lặp (F9) / Goto (Shift + F9) / Label (Ctrl + F9)
-	IfStB_TT =	Nếu báo cáo (F10) / biến (Shift + F10) / chức năng (Ctrl + F10)
-	IEComB_TT =	Internet Explorer (F11) / COM giao diện (Shift + F11) / Run Scriptlet (Ctrl + F11)
-	SendMsgB_TT =	Tin nhắn cửa sổ (F12)
 	AutoKey_TT =	Phím nóng để chơi vĩ mô
 	ManKey_TT =	Phím nóng để chơi vĩ mô "từng bước"
 	AbortKey_TT =	Phím nóng để ngăn chặn phát lại
@@ -795,38 +775,17 @@
 		Tắt tùy chọn
 		Khi kết thúc phát ...
 	)	
-	Win1_TT =	Thêm phím Windows như sửa đổi
-	JoyHK_TT =	Phím điều khiển
 	ReptC_TT =	0 = vô hạn
-	TabPlus_TT =	Thêm vĩ mô (Ctrl + T)
-	TabClose_TT =	Gần vĩ mô (Ctrl + W)
-	DuplicateL_TT =	Bản sao vĩ mô (Ctrl + Shift + D)
-	SaveC_TT =	Lưu vĩ mô hiện tại (Ctrl + Alt + S)
-	ImportB_TT =	Nhập khẩu vĩ mô (Ctrl + I)
 	IfDirB_TT =	Làm Hotkeys làm việc tùy thuộc vào loại`ncủa cửa sổ đang hoạt động hay tồn tại (Ctrl + H)
 	KeepHKOn_TT =	Luôn luôn giữ Hotkeys Activated
 	A_List_TT =	Chọn vĩ mô (Ctrl +1 ~ 0)
 	OSHK_TT =	Chọn Macro
 	OSHKEd_TT =	Chọn Macro
-	Duplicate_TT =	Bản sao dòng chọn (Ctrl + D)
-	Order_TT =	Di chuyển dòng được chọn (Ctrl + PageUp / Ctrl + PageDown)
-	Cut_TT =	Cắt dòng chọn (Ctrl + X)
-	Copy_TT =	Sao chép dòng chọn (Ctrl + C)
-	Paste_TT =	Hàng dán sao chép (Ctrl + V)
-	Remove_TT =	Xóa dòng chọn (Del)
-	Undo_TT =	Undo (Ctrl + Z)
-	Redo_TT =	Redo (Ctrl + Y)
-	CopyTo_TT =	Sao chép vào ...
-	Capt_TT =	Nắm bắt ép chính trong cửa sổ này
-	OnScCtrl_TT =	Điều khiển hiển thị thanh công cụ
 	ApplyT_TT =	Áp dụng
 	ApplyI_TT =	Áp dụng
 	ApplyL_TT =	Chèn từ Box (Insert)
 	InsertKey_TT =	Chèn Tổ hợp phím (Ctrl + Insert)
 	InsertKeyT_TT =	Chèn Tổ hợp phím
-	EditButton_TT =	Chỉnh sửa (Enter)
-	PrevRefresh_TT =	Refresh (F5)
-	PrevCopy_TT =	Sao chép
 	OpenT_TT =	Mở (Ctrl + O)
 	SaveT_TT =	Save (Ctrl + S)
 	CutT_TT =	Cắt
@@ -836,9 +795,6 @@
 	DefaultMacro_TT =	Chọn tập tin để tải về chương trình khởi động
 	VarCopyA_TT =	Sao chép nội dung biến hiện nay
 	VarCopyB_TT =	Sao chép nội dung biến hiện nay
-	FindReplace_TT =	Tìm / Thay thế (Ctrl + F)
-	EditComm_TT =	Sửa bình (Ctrl + L)
-	EditColor_TT =	Sửa màu Mark (Ctrl + M)
 	Reset_TT =	Rõ ràng nội dung biến
 	Screenshot_TT =	Hãy Ảnh chụp màn hình
 	ColorPick_TT =	Color Picker
@@ -849,6 +805,8 @@
 	TransC_TT =	Màu trong suốt
 	WScale_TT =	Quy mô chiều rộng
 	HScale_TT =	Quy mô chiều cao
+	Fast_TT =	Sử dụng một phương pháp tìm kiếm nhanh hơn (đề nghị)
+	RGB_TT =	Gây màu được hiểu như là một giá trị thay vì BGR RGB
 	LoopLVColor_TT =	Nhấn vào đây để chọn một màu
 	IfLVColor_TT =	Nhấn vào đây để chọn một màu
 	RefreshIEW_TT =	Làm mới Danh sách
@@ -886,6 +844,7 @@
 		được đối xử như một biến (những thứ sau ảnh hưởng đến
 		chỉ có chìa khóa tiếp theo):, +, ^, #
 	)	
+	ComEvent_TT =	Tốc độ mà tổ hợp phím được gửi được xác định do sự chậm trễ chính.
 	Clip_TT =	
 	(LTrim	
 		Tạm thời sử dụng Clipboard để gửi văn bản.

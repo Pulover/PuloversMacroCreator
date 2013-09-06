@@ -307,7 +307,7 @@
 	c_Lang066 =	Key Wait
 	c_Lang067 =	If found
 	c_Lang068 =	If not found / Error
-	c_Lang069 =	*Coords stored to `%FoundX`% / `%FoundY`%.
+	c_Lang069 =	Coords stored to `%FoundX`%/`%FoundY`%.
 	c_Lang070 =	Coord
 	c_Lang071 =	Variations
 	c_Lang072 =	Preview
@@ -442,6 +442,8 @@
 	c_Lang202 =	If message box
 	c_Lang203 =	Compare variables
 	c_Lang204 =	Evaluate expression
+	c_Lang205 =	Region
+	c_Lang206 =	Search
 		
 ; Other Windows		
 	t_Lang001 =	Export to AutoHotkey
@@ -761,28 +763,6 @@
 		You can run advanced functions such as SubStr and RegExReplace from the Functions window (Insert > If Statements / Variables / Functions). Or run your own functions from external AutoHotkey scripts.
 	)	
 ; Tooltips		
-	NewB_TT =	New (Ctrl+N)
-	OpenB_TT =	Open (Ctrl+O)
-	SaveB_TT =	Save (Ctrl+S)
-	ExportB_TT =	Export to AHK (Ctrl+E)
-	PreviewB_TT =	Preview Script (Ctrl+P)
-	OptionsB_TT =	Settings (Ctrl+G)
-	RecordB_TT =	Record Macro (Ctrl+R)
-	StartB_TT =	Activate Macros (Ctrl+Enter)
-	TestRun_TT =	Play Current Macro (Ctrl+Shift+Enter)
-	RunTimer_TT =	Timer (Ctrl+Shift+T)
-	MouseB_TT =	Mouse (F2)
-	TextB_TT =	Text (F3)
-	SpecialB_TT =	Special Keys
-	ControlB_TT =	Control (F4)
-	PauseB_TT =	Pause (F5) / Message (Shift+F5) / Key Wait (Control+F5) 
-	WindowB_TT =	Window (F6)
-	ImageB_TT =	Image / Pixel Search (F7)
-	RunB_TT =	Run / File / String / Misc. (F8)
-	ComLoopB_TT =	Loop (F9) / Goto (Shift+F9) / Label (Ctrl+F9)
-	IfStB_TT =	If Statements (F10) / Variables (Shift+F10) / Functions (Ctrl+F10)
-	IEComB_TT =	Internet Explorer (F11) / COM Interface (Shift+F11) / Run Scriptlet (Ctrl+F11)
-	SendMsgB_TT =	Windows Messages (F12)
 	AutoKey_TT =	Hotkey to play Macro
 	ManKey_TT =	Hotkey to play Macro "step-by-step"
 	AbortKey_TT =	Hotkey to stop playback
@@ -795,38 +775,17 @@
 		Shutdown options
 		When playback finishes...
 	)	
-	Win1_TT =	Add the Windows key as modifier
-	JoyHK_TT =	Joystick
 	ReptC_TT =	0 = infinite
-	TabPlus_TT =	Add Macro (Ctrl+T)
-	TabClose_TT =	Close Macro (Ctrl+W)
-	DuplicateL_TT =	Duplicate Macro (Ctrl+Shift+D)
-	SaveC_TT =	Save Current Macro (Ctrl+Alt+S)
-	ImportB_TT =	Import Macro (Ctrl+I)
 	IfDirB_TT =	Make Hotkeys work depending on the`ntype of window that is active or exists (Ctrl+H)
 	KeepHKOn_TT =	Keep Hotkeys Always Activated
 	A_List_TT =	Select Macro (Ctrl+1~0)
 	OSHK_TT =	Select Macro
 	OSHKEd_TT =	Select Macro
-	Duplicate_TT =	Duplicate Selected Rows (Ctrl+D)
-	Order_TT =	Move Selected Rows (Ctrl+PageUp / Ctrl+PageDown)
-	Cut_TT =	Cut Selected Rows (Ctrl+X)
-	Copy_TT =	Copy Selected Rows (Ctrl+C)
-	Paste_TT =	Paste Copied Rows (Ctrl+V)
-	Remove_TT =	Delete Selected Rows (Del)
-	Undo_TT =	Undo (Ctrl+Z)
-	Redo_TT =	Redo (Ctrl+Y)
-	CopyTo_TT =	Copy to...
-	Capt_TT =	Capture key presses in this window
-	OnScCtrl_TT =	Display Controls Toolbar
 	ApplyT_TT =	Apply
 	ApplyI_TT =	Apply
 	ApplyL_TT =	Insert from Box (Insert)
 	InsertKey_TT =	Insert Keystroke (Ctrl+Insert)
 	InsertKeyT_TT =	Insert Keystroke
-	EditButton_TT =	Edit (Enter)
-	PrevRefresh_TT =	Refresh (F5)
-	PrevCopy_TT =	Copy
 	OpenT_TT =	Open (Ctrl+O)
 	SaveT_TT =	Save (Ctrl+S)
 	CutT_TT =	Cut
@@ -836,9 +795,6 @@
 	DefaultMacro_TT =	Select file to load on program start up
 	VarCopyA_TT =	Copy current variable contents
 	VarCopyB_TT =	Copy current variable contents
-	FindReplace_TT =	Find / Replace (Ctrl+F)
-	EditComm_TT =	Edit Comment (Ctrl+L)
-	EditColor_TT =	Edit Color Mark (Ctrl+M)
 	Reset_TT =	Clear variable contents
 	Screenshot_TT =	Make Screenshot
 	ColorPick_TT =	Color Picker
@@ -849,6 +805,8 @@
 	TransC_TT =	Transparent color
 	WScale_TT =	Width scale
 	HScale_TT =	Height scale
+	Fast_TT =	Uses a faster searching method (recommended)
+	RGB_TT =	Causes color to be interpreted as an RGB value instead of BGR
 	LoopLVColor_TT =	Click to pick a color
 	IfLVColor_TT =	Click to pick a color
 	RefreshIEW_TT =	Refresh List
@@ -886,6 +844,7 @@
 		are treated as modifiers (these modifiers affect
 		only the very next key): !, +, ^, #
 	)	
+	ComEvent_TT =	The rate at which keystrokes are sent is determined by key delay.
 	Clip_TT =	
 	(LTrim	
 		Temporarily uses Clipboard to send the text.

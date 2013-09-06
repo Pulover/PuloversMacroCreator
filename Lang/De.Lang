@@ -307,7 +307,7 @@
 	c_Lang066 =	Taste erfassen
 	c_Lang067 =	Wenn gefunden
 	c_Lang068 =	Wenn nicht, bzw. Fehler gefunden
-	c_Lang069 =	* Coords in `%FoundX`%/`%FoundY`% gespeichert.
+	c_Lang069 =	Coords in `%FoundX`%/`%FoundY`% gespeichert.
 	c_Lang070 =	Coord
 	c_Lang071 =	Variationen
 	c_Lang072 =	Vorschau
@@ -442,6 +442,8 @@
 	c_Lang202 =	Wenn Meldungsfeld
 	c_Lang203 =	Vergleichen Variablen
 	c_Lang204 =	Bewerten Ausdruck
+	c_Lang205 =	Region
+	c_Lang206 =	Suchen
 		
 ; Other Windows		
 	t_Lang001 =	Export nach AutoHotkey
@@ -761,28 +763,6 @@
 		Sie können erweiterte Funktionen wie SubStr und RegExReplace aus dem Funktionen-Fenster ausführen (Einfügen > If-Anweisungen/Variablen/Funktionen). Oder führen Sie eigene Funktionen aus externen AutoHotkey-Skripten aus.
 	)	
 ; Tooltips		
-	NewB_TT =	Neu (Strg+N)
-	OpenB_TT =	Öffnen (Strg+O)
-	SaveB_TT =	Speichern (Strg+S)
-	ExportB_TT =	Export nach AHK (Strg+E)
-	PreviewB_TT =	Skriptvorschau (Strg+P)
-	OptionsB_TT =	Einstellungen (Strg+G)
-	RecordB_TT =	Makro aufzeichnen (Strg+R)
-	StartB_TT =	Makros aktivieren (Strg+Eingabe)
-	TestRun_TT =	Aktuelles Makro wiedergeben (Strg+Umschalt+Enter)
-	RunTimer_TT =	Timer (Strg+Umschalt+T)
-	MouseB_TT =	Maus (F2)
-	TextB_TT =	Text (F3)
-	SpecialB_TT =	Sondertasten
-	ControlB_TT =	Steuerelement (F4)
-	PauseB_TT =	Pause (F5)/Nachricht (Umschalt+F5)/Taste erfassen (Strg+F5) 
-	WindowB_TT =	Fenster (F6)
-	ImageB_TT =	Bild/Pixelsuche (F7)
-	RunB_TT =	Run/File/String/Versch. (F8)
-	ComLoopB_TT =	Loop (F9)/Goto (Umschalt+F9)/Label (Strg+F9)
-	IfStB_TT =	If Anweisungen (F10)/Variablen (Umschalt+F10)/Funktionen (Strg+F10)
-	IEComB_TT =	Internet Explorer (F11)/COM-Schnittstelle (Umschalt+F11)/Scriptlet ausführen (Strg+F11)
-	SendMsgB_TT =	Windows-Messages (F12)
 	AutoKey_TT =	Hotkey auf Makro spielen
 	ManKey_TT =	Hotkey zu spielen Macro "Schritt-für-Schritt"
 	AbortKey_TT =	Hotkey zum Stoppen der Wiedergabe
@@ -795,38 +775,17 @@
 		Optionen für das Herunterfahren
 		Wenn Wiedergabe beendet,...
 	)	
-	Win1_TT =	Windows-Taste als Modifizierer einfügen
-	JoyHK_TT =	Joystick
 	ReptC_TT =	0=unendlich
-	TabPlus_TT =	Makro hinzufügen (Strg+T)
-	TabClose_TT =	Makro schließen (Strg+W)
-	DuplicateL_TT =	Makro duplizieren (Strg+Umschalt+D)
-	SaveC_TT =	Aktuelles Makro speichern (Strg+Alt+S)
-	ImportB_TT =	Makro importieren (Strg+I)
 	IfDirB_TT =	Hotkeys abhängig von aktivem oder vorhandenem Fenstertyp aktivieren (Strg+H)
 	KeepHKOn_TT =	Hotkeys immer aktivieren
 	A_List_TT =	Makro wählen (Strg+1~0)
 	OSHK_TT =	Makro wählen
 	OSHKEd_TT =	Makro wählen
-	Duplicate_TT =	Ausgewählte Zeilen duplizieren (Strg+D)
-	Order_TT =	Ausgewählte Zeilen verschieben (Strg+Bild auf/Strg+Bild ab)
-	Cut_TT =	Ausgewählte Zeilen ausschneiden (Strg+X)
-	Copy_TT =	Ausgewählte Zeilen kopieren (Strg+C)
-	Paste_TT =	Kopierten Zeilen einfügen (Strg+V)
-	Remove_TT =	Ausgewählte Zeilen löschen (Entf)
-	Undo_TT =	Rückgängig (Strg+Z)
-	Redo_TT =	Wiederholen (Strg+Y)
-	CopyTo_TT =	Kopieren...
-	Capt_TT =	Tastdruck in diesem Fenster erfassen
-	OnScCtrl_TT =	Steuerungs-Symbolleiste anzeigen
 	ApplyT_TT =	Anwenden
 	ApplyI_TT =	Anwenden
 	ApplyL_TT =	Einfügen aus Box (Einfg)
 	InsertKey_TT =	Tastendruck einfügen (Strg+Insert)
 	InsertKeyT_TT =	Tastendruck einfügen
-	EditButton_TT =	Bearbeiten
-	PrevRefresh_TT =	Aktualisieren (F5)
-	PrevCopy_TT =	Kopieren
 	OpenT_TT =	Öffnen (Strg+O)
 	SaveT_TT =	Speichern (Strg+S)
 	CutT_TT =	Ausschneiden
@@ -836,9 +795,6 @@
 	DefaultMacro_TT =	Datei wählen, die beim Programmstart geladen werden soll
 	VarCopyA_TT =	Aktuelle Variablen-Inhalte kopieren
 	VarCopyB_TT =	Aktuelle Variablen-Inhalte kopieren
-	FindReplace_TT =	Suchen/Ersetzen (Strg+F)
-	EditComm_TT =	Kommentar bearbeiten
-	EditColor_TT =	Farbmarkierung bearbeiten
 	Reset_TT =	Variablen-Inhalte löschen
 	Screenshot_TT =	Screenshot erzeugen
 	ColorPick_TT =	Farbauswahl
@@ -849,6 +805,8 @@
 	TransC_TT =	Transparente Farbe
 	WScale_TT =	Breite festlegen
 	HScale_TT =	Höhe festlegen
+	Fast_TT =	Verwendet einen schnelleren Suchverfahren (empfohlen)
+	RGB_TT =	Verursacht Farbe als RGB-Wert statt BGR interpretiert werden
 	LoopLVColor_TT =	Klicken, um eine Farbe auswählen
 	IfLVColor_TT =	Klicken, um eine Farbe auswählen
 	RefreshIEW_TT =	Liste aktualisieren
@@ -886,6 +844,7 @@
 		Modifikatoren behandelt (diese Modifikatoren beeinflussen 
 		nur die nachfolgende Taste)::, +, ^, #
 	)	
+	ComEvent_TT =	Die Rate, mit der Tastenanschläge gesendet wird durch Schlüssel Verzögerung bestimmt.
 	Clip_TT =	
 	(LTrim	
 		Text kurzzeitig mithilfe der Zwischenablage senden.

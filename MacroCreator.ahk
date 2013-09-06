@@ -1948,8 +1948,8 @@ Gui, 13:Add, GroupBox, Section xm W270 H105
 Gui, 13:Add, Edit, ys+15 xs+10 W250 vEx_Macro, %Ex_Macro%
 Gui, 13:Add, Combobox, W140 vEx_AutoKey, %KeybdList%
 Gui, 13:Add, Checkbox, -Wrap Checked%Ex_BM% yp+3 x+10 W100 vEx_BM R1, %t_Lang006%
-Gui, 13:Add, Text, Section y+17 xs+10, %t_Lang003%:
-Gui, 13:Add, Edit, yp-3 xp+40 Limit Number W100 R1 vEx_TE
+Gui, 13:Add, Text, -Wrap y+17 xs+10 W60 R1, %t_Lang003%:
+Gui, 13:Add, Edit, yp-3 x+10 Limit Number W70 R1 vEx_TE
 Gui, 13:Add, UpDown, 0x80 Range0-999999999 vEx_TimesX, %Ex_TimesX%
 Gui, 13:Add, Text, yp+3 x+10 , %t_Lang004%
 Gui, 13:Add, Button, Section Default -Wrap xm W75 H23 gExpEditOK, %c_Lang020%
@@ -3550,7 +3550,8 @@ return
 MouseGetI:
 CoordMode, Mouse, %CoordMouse%
 Gui, 5:Submit, NoHide
-NoKey := 1
+Hotkey, RButton, NoKey, On
+Hotkey, Esc, EscNoKey, On
 WinMinimize, ahk_id %CmdWin%
 SetTimer, WatchCursor, 100
 StopIt := 0
@@ -3558,7 +3559,8 @@ WaitFor.Key("RButton")
 SetTimer, WatchCursor, off
 ToolTip
 Sleep, 200
-NoKey := 0
+Hotkey, RButton, NoKey, Off
+Hotkey, Esc, EscNoKey, Off
 WinActivate, ahk_id %CmdWin%
 If (StopIt)
 	Exit
@@ -3584,7 +3586,8 @@ return
 
 MouseGetE:
 CoordMode, Mouse, %CoordMouse%
-NoKey := 1
+Hotkey, RButton, NoKey, On
+Hotkey, Esc, EscNoKey, On
 WinMinimize, ahk_id %CmdWin%
 SetTimer, WatchCursor, 100
 StopIt := 0
@@ -3592,7 +3595,8 @@ WaitFor.Key("RButton")
 SetTimer, WatchCursor, off
 ToolTip
 Sleep, 200
-NoKey := 0
+Hotkey, RButton, NoKey, Off
+Hotkey, Esc, EscNoKey, Off
 WinActivate, ahk_id %CmdWin%
 If (StopIt)
 	Exit
@@ -3615,7 +3619,8 @@ If (TabControl = 2)
 Else
 	ControlGet, SelIEWinName, Choice,, ComboBox2, ahk_id %CmdWin%
 CoordMode, Mouse, Window
-NoKey := 1
+Hotkey, RButton, NoKey, On
+Hotkey, Esc, EscNoKey, On
 WinMinimize, ahk_id %CmdWin%
 ComObjError(false)
 If (TabControl = 2)
@@ -3644,7 +3649,8 @@ WaitFor.Key("RButton")
 SetTimer, WatchCursorIE, off
 ToolTip
 Sleep, 200
-NoKey := 0
+Hotkey, RButton, NoKey, Off
+Hotkey, Esc, EscNoKey, Off
 WinActivate, ahk_id %CmdWin%
 If (StopIt)
 {
@@ -3698,7 +3704,8 @@ return
 
 GetCtrl:
 CoordMode, Mouse, %CoordMouse%
-NoKey := 1
+Hotkey, RButton, NoKey, On
+Hotkey, Esc, EscNoKey, On
 WinMinimize, ahk_id %CmdWin%
 SetTimer, WatchCursor, 100
 StopIt := 0
@@ -3706,7 +3713,8 @@ WaitFor.Key("RButton")
 SetTimer, WatchCursor, off
 ToolTip
 Sleep, 200
-NoKey := 0
+Hotkey, RButton, NoKey, Off
+Hotkey, Esc, EscNoKey, Off
 WinActivate, ahk_id %CmdWin%
 If (StopIt)
 	Exit
@@ -3718,7 +3726,8 @@ return
 GetWin:
 CoordMode, Mouse, %CoordMouse%
 Gui, Submit, NoHide
-NoKey := 1
+Hotkey, RButton, NoKey, On
+Hotkey, Esc, EscNoKey, On
 WinMinimize, ahk_id %CmdWin%
 SetTimer, WatchCursor, 100
 StopIt := 0
@@ -3726,7 +3735,8 @@ WaitFor.Key("RButton")
 SetTimer, WatchCursor, off
 ToolTip
 Sleep, 200
-NoKey := 0
+Hotkey, RButton, NoKey, Off
+Hotkey, Esc, EscNoKey, Off
 WinActivate, ahk_id %CmdWin%
 If (StopIt)
 	Exit
@@ -3765,7 +3775,8 @@ return
 WinGetP:
 CoordMode, Mouse, %CoordMouse%
 Gui, Submit, NoHide
-NoKey := 1
+Hotkey, RButton, NoKey, On
+Hotkey, Esc, EscNoKey, On
 WinMinimize, ahk_id %CmdWin%
 SetTimer, WatchCursor, 100
 StopIt := 0
@@ -3774,7 +3785,8 @@ WinGetPos, X, Y, W, H, ahk_id %id%
 SetTimer, WatchCursor, off
 ToolTip
 Sleep, 200
-NoKey := 0
+Hotkey, RButton, NoKey, Off
+Hotkey, Esc, EscNoKey, Off
 WinActivate, ahk_id %CmdWin%
 If (StopIt)
 	Exit
@@ -3788,7 +3800,8 @@ return
 CtrlGetP:
 CoordMode, Mouse, %CoordMouse%
 Gui, Submit, NoHide
-NoKey := 1
+Hotkey, RButton, NoKey, On
+Hotkey, Esc, EscNoKey, On
 WinMinimize, ahk_id %CmdWin%
 SetTimer, WatchCursor, 100
 StopIt := 0
@@ -3797,7 +3810,8 @@ ControlGetPos, X, Y, W, H, %control%, ahk_id %id%
 SetTimer, WatchCursor, off
 ToolTip
 Sleep, 200
-NoKey := 0
+Hotkey, RButton, NoKey, Off
+Hotkey, Esc, EscNoKey, Off
 WinActivate, ahk_id %CmdWin%
 If (StopIt)
 	Exit
@@ -3888,7 +3902,8 @@ return
 
 GetPixel:
 CoordMode, Mouse, %CoordPixel%
-NoKey := 1
+Hotkey, RButton, NoKey, On
+Hotkey, Esc, EscNoKey, On
 WinMinimize, ahk_id %CmdWin%
 SetTimer, WatchCursor, 10
 StopIt := 0
@@ -3896,7 +3911,8 @@ WaitFor.Key("RButton")
 SetTimer, WatchCursor, off
 ToolTip
 Sleep, 200
-NoKey := 0
+Hotkey, RButton, NoKey, Off
+Hotkey, Esc, EscNoKey, Off
 WinActivate, ahk_id %CmdWin%
 If (StopIt)
 	Exit
@@ -4473,14 +4489,13 @@ Gui, 3:Add, UpDown, vRandMaximum 0x80 Range0-100000, 500
 Gui, 3:Add, Checkbox, -Wrap y+20 xm+10 W400 vNoRandom gNoRandom, %c_Lang183%
 ; MsgBox
 Gui, 3:Tab, 2
-Gui, 3:Add, GroupBox, Section ym xm W450 H130
-Gui, 3:Add, Text, -Wrap ys+10 xs+10 W260 R1, %c_Lang015%:
-Gui, 3:Add, Edit, vMsgPt W430 R5
+Gui, 3:Add, GroupBox, Section ym xm W450 H137, %c_Lang015%:
+Gui, 3:Add, Edit, ys+20 xs+10 W430 R6 WantTab vMsgPt
 Gui, 3:Add, Text, -Wrap W240 R1 cGray, %c_Lang025%
 Gui, 3:Add, Text, -Wrap yp x+0 W135 R1 Right, %c_Lang177% (%c_Lang019%):
 Gui, 3:Add, Edit, yp-3 x+5 W50 vTimeoutM
 Gui, 3:Add, UpDown, vTimeoutMsg 0x80 Range0-2147483, 0
-Gui, 3:Add, Groupbox, Section y+16 xs W220 H98, %w_Lang003%:
+Gui, 3:Add, Groupbox, Section y+12 xs W220 H98, %w_Lang003%:
 Gui, 3:Add, Text, -Wrap ys+20 xs+10 W50 R1 Right, %c_Lang189%:
 Gui, 3:Add, Edit, -Wrap yp x+10 W140 R1 vTitle
 Gui, 3:Add, Text, -Wrap y+10 xs+10 W50 R1 Right, %c_Lang147%:
@@ -4507,7 +4522,7 @@ Gui, 3:Add, Text, -Wrap ys+20 xs+10 W180 R1 Right, %c_Lang052%:
 Gui, 3:Add, Hotkey, yp x+10 vWaitKeys gWaitKeys W120
 Gui, 3:Add, Checkbox, y+20 xs+10 -Wrap W180 R1 Right vWaitKeyList gWaitKeyList, %c_Lang184%:
 Gui, 3:Add, Combobox, yp-3 x+10 W120 vKeyW Disabled, %KeybdList%
-Gui, 3:Add, GroupBox, Section xm y+58 W450 H98
+Gui, 3:Add, GroupBox, Section xm y+58 W450 H103
 Gui, 3:Add, Text, ys+20 xs+10 vTimoutT W180 R1 Right, %c_Lang053%:
 Gui, 3:Add, Edit, Section yp-2 x+10 W120 vTimeoutC
 Gui, 3:Add, UpDown, vTimeout 0x80 Range0-999999999, 0
@@ -5489,8 +5504,9 @@ Image:
 Gui, 1:Submit, NoHide
 Gui, 19:+owner1 -MinimizeBox +E0x00000400 +HwndCmdWin
 Gui, 1:+Disabled
-Gui, 19:Add, GroupBox, Section W275 H240
-Gui, 19:Add, Text, ys+15 xs+10, %c_Lang061%
+; Region
+Gui, 19:Add, GroupBox, Section W275 H80, %c_Lang205%:
+Gui, 19:Add, Text, ys+20 xs+10, %c_Lang061%
 Gui, 19:Add, Text, yp xs+65, X:
 Gui, 19:Add, Edit, yp x+5 viPosX W60, 0
 Gui, 19:Add, Text, yp x+15, Y:
@@ -5501,54 +5517,56 @@ Gui, 19:Add, Text, yp xs+65, X:
 Gui, 19:Add, Edit, yp-3 x+5 vePosX W60, %A_ScreenWidth%
 Gui, 19:Add, Text, yp x+15, Y:
 Gui, 19:Add, Edit, yp x+5 vePosY W60, %A_ScreenHeight%
-Gui, 19:Add, Radio, -Wrap Checked y+10 xs+10 W90 vImageS gImageS R1, %c_Lang063%
-Gui, 19:Add, Radio, -Wrap yp xs+145 W90 vPixelS gPixelS R1, %c_Lang064%
-Gui, 19:Add, Button, -Wrap yp-1 xs+115 W25 H23 hwndScreenshot vScreenshot gScreenshot ;, %c_Lang065%
+; Search
+Gui, 19:Add, GroupBox, Section y+12 xs W275 H158, %c_Lang206%:
+Gui, 19:Add, Radio, -Wrap Checked ys+20 xs+10 W100 vImageS gImageS R1 Right, %c_Lang063%
+Gui, 19:Add, Radio, -Wrap yp xs+140 W95 vPixelS gPixelS R1 Right, %c_Lang064%
+Gui, 19:Add, Button, -Wrap yp-1 xs+115 W25 H23 hwndScreenshot vScreenshot gScreenshot
 	ILButton(Screenshot, ResDllPath ":" 60)
 Gui, 19:Add, Button, -Wrap yp xs+240 W25 H23 hwndColorPick vColorPick gSearchImg Disabled
 	ILButton(ColorPick, ResDllPath ":" 3)
-Gui, 19:Add, Edit, y+10 xs+10 vImgFile W225 R1 -Multi
+Gui, 19:Add, Edit, y+5 xs+10 vImgFile W225 R1 -Multi
 Gui, 19:Add, Button, -Wrap yp-1 x+0 W30 H23 vSearchImg gSearchImg, ...
-Gui, 19:Add, Text, y+10 xs+10 W165 R1 Right, %c_Lang067%:
-Gui, 19:Add, DDL, yp-2 x+10 W80 vIfFound gIfFound, Continue||Break|Stop|Prompt|Move|Left Click|Right Click|Middle Click
-Gui, 19:Add, Text, y+10 xs+10 W165 R1 Right, %c_Lang068%:
-Gui, 19:Add, DDL, yp-2 x+10 W80 vIfNotFound, Continue||Break|Stop|Prompt
-Gui, 19:Add, CheckBox, Checked -Wrap y+5 xs+10 W180 vAddIf, %c_Lang162%
-Gui, 19:Add, Text, -Wrap y+10 xs+10 W250 r1 cBlue, %c_Lang069%
+Gui, 19:Add, Text, y+5 xs+10 W173 R1 Right, %c_Lang067%:
+Gui, 19:Add, DDL, yp-2 x+10 W70 vIfFound gIfFound, Continue||Break|Stop|Prompt|Move|Left Click|Right Click|Middle Click
+Gui, 19:Add, Text, y+5 xs+10 W173 R1 Right, %c_Lang068%:
+Gui, 19:Add, DDL, yp-2 x+10 W70 vIfNotFound, Continue||Break|Stop|Prompt
+Gui, 19:Add, CheckBox, Checked -Wrap y+0 xs+10 W180 vAddIf, %c_Lang162%
+Gui, 19:Add, Text, -Wrap y+5 xs+10 W250 r1 cGray, %c_Lang069%
 ; Preview
-Gui, 19:Add, Groupbox, Section ys xs+280 W275 H240, %c_Lang072%:
+Gui, 19:Add, Groupbox, Section ym xs+280 W275 H240, %c_Lang072%:
 Gui, 19:Add, Pic, ys+20 xs+10 W255 H200 0x100 vPicPrev gPicOpen
 Gui, 19:Add, Progress, ys+20 xs+10 W255 H200 Disabled Hidden vColorPrev
 Gui, 19:Add, Text, y+0 xs+10 W150 vImgSize
 ; Options
-Gui, 19:Add, GroupBox, Section y+10 xm W275 H125, %c_Lang159%:
+Gui, 19:Add, GroupBox, Section y+10 xm W275 H115, %c_Lang159%:
 Gui, 19:Add, Text, ys+20 xs+10 W40 R1 Right, %c_Lang070%:
 Gui, 19:Add, DDL, yp x+10 W65 vCoordPixel, Screen||Window
 Gui, 19:Add, Text, yp+3 x+0 W85 R1 Right, %c_Lang071%:
 Gui, 19:Add, Edit, yp-3 x+10 vVariatT W45 Number Limit
 Gui, 19:Add, UpDown, vVariat 0x80 Range0-255, 0
-Gui, 19:Add, Text, y+5 xs+10 W40 R1 Right, %c_Lang147%:
+Gui, 19:Add, Text, y+10 xs+10 W40 R1 Right, %c_Lang147%:
 Gui, 19:Add, Edit, yp-3 x+10 W45 vIconN
 Gui, 19:Add, Text, yp+3 x+0 W75 R1 Right, %c_Lang160%:
 Gui, 19:Add, Edit, yp-3 x+10 W45 vTransC
 Gui, 19:Add, Button, -Wrap yp-1 x+0 W30 H23 vTransCS gGetPixel, ...
 Gui, 19:Add, Checkbox, Checked y+5 xs+10 W100 R1 vFast Disabled, %t_Lang103%
 Gui, 19:Add, Checkbox, Checked y+5 xs+10 W100 R1 vRGB Disabled, RGB
-Gui, 19:Add, Text, yp-5 x+0 W70 R1 Right, %c_Lang161%:
+Gui, 19:Add, Text, yp-10 x+0 W70 R1 Right, %c_Lang161%:
 Gui, 19:Add, Edit, yp-3 x+10 W35 vWScale
 Gui, 19:Add, Text, yp+5 x+0, x
 Gui, 19:Add, Edit, yp-5 x+0 W35 vHScale
-Gui, 19:Add, Checkbox, -Wrap y+5 xs+10 W250 vBreakLoop R1, %c_Lang130%
 ; Repeat
-Gui, 19:Add, GroupBox, Section ys xs+280 W275 H125
-Gui, 19:Add, Text, ys+20 xs+10 W100 R1 Right, %w_Lang015%:
+Gui, 19:Add, GroupBox, Section ys xs+280 W275 H115
+Gui, 19:Add, Text, ys+20 xs+35 W100 R1 Right, %w_Lang015%:
 Gui, 19:Add, Edit, yp x+10 W120 R1 vEdRept
 Gui, 19:Add, UpDown, vTimesX 0x80 Range1-999999999, 1
-Gui, 19:Add, Text, y+10 xs+10 W100 R1 Right, %c_Lang017%:
+Gui, 19:Add, Text, y+5 xs+35 W100 R1 Right, %c_Lang017%:
 Gui, 19:Add, Edit, yp x+10 W120 vDelayC
 Gui, 19:Add, UpDown, vDelayX 0x80 Range0-999999999, %DelayG%
 Gui, 19:Add, Radio, -Wrap Checked W120 vMsc R1, %c_Lang018%
 Gui, 19:Add, Radio, -Wrap W120 vSec R1, %c_Lang019%
+Gui, 19:Add, Checkbox, ys+75 xs+10 W125 vBreakLoop R2, %c_Lang130%
 Gui, 19:Add, Button, -Wrap Section Default xm W75 H23 gImageOK, %c_Lang020%
 Gui, 19:Add, Button, -Wrap ys W75 H23 gImageCancel, %c_Lang021%
 Gui, 19:Add, Button, -Wrap ys W75 H23 vImageApply gImageApply Disabled, %c_Lang131%
@@ -7492,7 +7510,9 @@ Catch
 If (ComCLSID = "InternetExplorer.Application")
 {
 	CoordMode, Mouse, Window
-	NoKey := 1, L_Label := ComCLSID
+	Hotkey, RButton, NoKey, On
+	Hotkey, Esc, EscNoKey, On
+	L_Label := ComCLSID
 	WinMinimize, ahk_id %CmdWin%
 	SetTimer, WatchCursorIE, 100
 	StopIt := 0
@@ -7500,7 +7520,9 @@ If (ComCLSID = "InternetExplorer.Application")
 	SetTimer, WatchCursorIE, off
 	ToolTip
 	Sleep, 200
-	NoKey := 0, L_Label := ""
+	Hotkey, RButton, NoKey, Off
+	Hotkey, Esc, EscNoKey, Off
+	L_Label := ""
 	WinActivate, ahk_id %CmdWin%
 	If (StopIt)
 		Exit
@@ -7518,7 +7540,8 @@ If (ComCLSID = "InternetExplorer.Application")
 Else If (ComCLSID = "Excel.Application")
 {
 	CoordMode, Mouse, Window
-	NoKey := 1
+	Hotkey, RButton, NoKey, On
+	Hotkey, Esc, EscNoKey, On
 	WinMinimize, ahk_id %CmdWin%
 	SetTimer, WatchCursorXL, 100
 	StopIt := 0
@@ -7526,7 +7549,8 @@ Else If (ComCLSID = "Excel.Application")
 	SetTimer, WatchCursorXL, off
 	ToolTip
 	Sleep, 200
-	NoKey := 0
+	Hotkey, RButton, NoKey, Off
+	Hotkey, Esc, EscNoKey, Off
 	WinActivate, ahk_id %CmdWin%
 	If (StopIt)
 		Exit
@@ -7740,8 +7764,8 @@ If (A_ThisLabel <> "CmdFind")
 }
 Else
 {
-	Gui, 34:Add, Groupbox, Section yp+5 -Wrap W450 H190, %d_Lang074%:
-	Gui, 34:Add, Edit, -Wrap ys+15 xs+10 W430 r1 vFindCmd gFindCmd
+	Gui, 34:Add, Groupbox, Section yp+5 -Wrap W450 H195, %d_Lang074%:
+	Gui, 34:Add, Edit, -Wrap ys+20 xs+10 W430 r1 vFindCmd gFindCmd
 	Gui, 34:Add, ListView, r8 y+0 W430 hwndhFindRes vFindResult gFindResult AltSubmit -Multi -Hdr, Command|Description
 	Gui, 34:Add, StatusBar
 	Gui, 34:Default
@@ -8968,14 +8992,14 @@ Gui, 32:Default
 Gui, 32:+Disabled
 Gui, 33:Add, Groupbox, Section xm W300 H130
 Gui, 33:Add, Edit, ys+15 xs+10 W280 vMacro, %Macro%
-Gui, 33:Add, Text, W70, %w_Lang005%
-Gui, 33:Add, Hotkey, yp x+0 W210 vAutoKey, %AutoKey%
-Gui, 33:Add, Text, y+5 xs+10 W70, %w_Lang007%
-Gui, 33:Add, Hotkey, yp x+0 W210 vManKey, %ManKey%
-Gui, 33:Add, Text, y+5 xs+10 W70, %t_Lang003%:
-Gui, 33:Add, Edit, yp x+0 Limit Number W100 R1 vTE
+Gui, 33:Add, Text, -Wrap W100 R1, %w_Lang005%:
+Gui, 33:Add, Hotkey, yp x+0 W180 vAutoKey, %AutoKey%
+Gui, 33:Add, Text, -Wrap y+5 xs+10 W100 R1, %w_Lang007%:
+Gui, 33:Add, Hotkey, yp x+0 W180 vManKey, %ManKey%
+Gui, 33:Add, Text, -Wrap y+5 xs+10 W100 R1, %t_Lang003%:
+Gui, 33:Add, Edit, yp x+0 Limit Number W70 R1 vTE
 Gui, 33:Add, UpDown, 0x80 Range0-999999999 vTimesX, %TimesX%
-Gui, 33:Add, Text, yp+3 x+10 W100, %t_Lang004%
+Gui, 33:Add, Text, -Wrap yp+3 x+10 W100, %t_Lang004%
 Gui, 33:Add, Button, Section Default -Wrap xm W75 H23 gEditMacroOK, %c_Lang020%
 Gui, 33:Add, Button, Wrap ys W75 H23 gEditMacroCancel, %c_Lang021%
 Gui, 33:Add, Updown, ys x+90 W50 H20 Horz vEditSel gSelList Range0-1

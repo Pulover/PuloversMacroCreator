@@ -307,7 +307,7 @@
 	c_Lang066 =	Ключевые Ожидания
 	c_Lang067 =	Если найден
 	c_Lang068 =	Если не найдена / Error
-	c_Lang069 =	* Coords хранится в`%FoundX`% / `%FoundY`%.
+	c_Lang069 =	Coords хранится в`%FoundX`%/`%FoundY`%.
 	c_Lang070 =	Coord
 	c_Lang071 =	Вариации
 	c_Lang072 =	Предварительный просмотр
@@ -442,6 +442,8 @@
 	c_Lang202 =	Если окно сообщения
 	c_Lang203 =	Сравните переменных
 	c_Lang204 =	Вычисление выражения
+	c_Lang205 =	Регион
+	c_Lang206 =	Поиск
 		
 ; Other Windows		
 	t_Lang001 =	Экспорт в AutoHotkey
@@ -761,28 +763,6 @@
 		Вы можете запустить дополнительные функции, такие как SubStr и RegExReplace из оконных функций (Вставка > Если Заявления / переменных / функций). Или запустить свой собственный функций из внешних скриптов AutoHotkey.
 	)	
 ; Tooltips		
-	NewB_TT =	Новый (Ctrl+N)
-	OpenB_TT =	Открыть (Ctrl+O)
-	SaveB_TT =	Сохранить (Ctrl+S)
-	ExportB_TT =	Экспорт в AHK (Ctrl+E)
-	PreviewB_TT =	Предварительный просмотр Script (Ctrl+P)
-	OptionsB_TT =	Настройки (Ctrl+G)
-	RecordB_TT =	Запись макроса (Ctrl+R)
-	StartB_TT =	Включить макросы (Ctrl+Enter)
-	TestRun_TT =	Играть текущего макроса (Ctrl+Shift+Enter)
-	RunTimer_TT =	Таймер (Ctrl+Shift+T)
-	MouseB_TT =	Мышь (F2)
-	TextB_TT =	Текст (F3)
-	SpecialB_TT =	Специальные клавиши
-	ControlB_TT =	Управления (F4)
-	PauseB_TT =	Пауза (F5) / Сообщение (Shift+F5) / Ключевые Ожидания (Control+F5) 
-	WindowB_TT =	Window (F6)
-	ImageB_TT =	Изображение / Pixel поиска (F7)
-	RunB_TT =	Выполнить / File / String / Разное. (F8)
-	ComLoopB_TT =	Loop (F9) / Goto (Shift+F9) / Label (Ctrl+F9)
-	IfStB_TT =	Если отчетность (F10) / Переменные (Shift+F10) / Функции (Ctrl+F10)
-	IEComB_TT =	Internet Explorer (F11) / COM интерфейса (Shift+F11) / Выполнить Скриптлете (Ctrl+F11)
-	SendMsgB_TT =	Windows Messages (F12)
 	AutoKey_TT =	Горячую клавишу для воспроизведения макросов
 	ManKey_TT =	Горячую клавишу для воспроизведения макросов "шаг за шагом"
 	AbortKey_TT =	Горячая клавиша для остановки воспроизведения
@@ -795,38 +775,17 @@
 		Параметры завершения работы
 		Когда заканчивается воспроизведение...
 	)	
-	Win1_TT =	Добавить ключ Windows, в качестве модификатора
-	JoyHK_TT =	Джойстик
 	ReptC_TT =	0 = бесконечное
-	TabPlus_TT =	Добавить Macro (Ctrl+T)
-	TabClose_TT =	Закрыть Macro (Ctrl+W)
-	DuplicateL_TT =	Дубликат Macro (Ctrl+Shift+D)
-	SaveC_TT =	Сохранить текущий Macro (Ctrl+Alt+S)
-	ImportB_TT =	Импорт макроса (Ctrl+I)
 	IfDirB_TT =	Сделать Горячие клавиши работают в зависимости от`nтип окна, который является активным или существует (Ctrl+H)
 	KeepHKOn_TT =	Держите горячие клавиши всегда активируется
 	A_List_TT =	Выбрать Макрос (Ctrl+1~0)
 	OSHK_TT =	Выбрать Макрос
 	OSHKEd_TT =	Выбрать Макрос
-	Duplicate_TT =	Копировать выбранные строки (Ctrl+D)
-	Order_TT =	Перемещение выделенных строк (Ctrl+PageUp / Ctrl+PageDown)
-	Cut_TT =	Вырезать выделенные строки (Ctrl+X)
-	Copy_TT =	Копирование выбранных строк (Ctrl+C)
-	Paste_TT =	Вставить скопированный строк (Ctrl+V)
-	Remove_TT =	Удалить выбранные строки (Del)
-	Undo_TT =	Отменить (Ctrl+Z)
-	Redo_TT =	Redo (Ctrl+Y)
-	CopyTo_TT =	Копировать в...
-	Capt_TT =	Захват нажатия клавиш в этом окне
-	OnScCtrl_TT =	Отображения Элементов Управления, Панели Инструментов
 	ApplyT_TT =	Применять
 	ApplyI_TT =	Применять
 	ApplyL_TT =	Вставить из коробки (Insert)
 	InsertKey_TT =	Вставить Нажатием Клавиши (Ctrl+Insert)
 	InsertKeyT_TT =	Вставить Нажатием Клавиши
-	EditButton_TT =	Редактировать (Enter)
-	PrevRefresh_TT =	Обновление (F5)
-	PrevCopy_TT =	Скопировать
 	OpenT_TT =	Открыть (Ctrl+O)
 	SaveT_TT =	Сохранить (Ctrl+S)
 	CutT_TT =	Вырезать
@@ -836,9 +795,6 @@
 	DefaultMacro_TT =	Выберите файл для загрузки в программе запуска
 	VarCopyA_TT =	Скопировать содержимое текущей переменной
 	VarCopyB_TT =	Скопировать содержимое текущей переменной
-	FindReplace_TT =	Найти / Заменить (Ctrl+F)
-	EditComm_TT =	Редактировать комментарий (Ctrl+L)
-	EditColor_TT =	Редактировать метку цвета (Ctrl+M)
 	Reset_TT =	Очистить содержимое переменной
 	Screenshot_TT =	Сделать Скриншот
 	ColorPick_TT =	Color Picker
@@ -849,6 +805,8 @@
 	TransC_TT =	Прозрачный цвет
 	WScale_TT =	Ширина масштабе
 	HScale_TT =	Рост масштабов
+	Fast_TT =	Использует метод быстрого поиска (рекомендуется)
+	RGB_TT =	Причины цвет, который будет интерпретироваться как значения RGB, а BGR
 	LoopLVColor_TT =	Нажмите, чтобы выбрать цвет
 	IfLVColor_TT =	Нажмите, чтобы выбрать цвет
 	RefreshIEW_TT =	Обновить список
@@ -886,6 +844,7 @@
 		рассматриваются в качестве модификаторов (эти модификаторы влияют
 		Только на следующий ключ):, +, *, #
 	)	
+	ComEvent_TT =	Скорость, с которой посылаются нажатия клавиш определяется ключевыми задержки.
 	Clip_TT =	
 	(LTrim	
 		Временно использует буфер обмена для передачи текста.

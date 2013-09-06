@@ -307,7 +307,7 @@
 	c_Lang066 =	Klíč Čekání
 	c_Lang067 =	Pokud zjistíme,
 	c_Lang068 =	Pokud není nalezena / Chyba
-	c_Lang069 =	* Coords ukládány do `%FoundX`% / `%FoundY`%.
+	c_Lang069 =	Coords ukládány do `%FoundX`%/`%FoundY`%.
 	c_Lang070 =	Coord
 	c_Lang071 =	Varianty
 	c_Lang072 =	Náhled
@@ -442,6 +442,8 @@
 	c_Lang202 =	Pokud se zobrazí okno
 	c_Lang203 =	Porovnání proměnné
 	c_Lang204 =	Vyhodnotit výraz
+	c_Lang205 =	Kraj
+	c_Lang206 =	Vyhledávání
 		
 ; Other Windows		
 	t_Lang001 =	Export do AutoHotkey
@@ -761,28 +763,6 @@
 		Můžete spustit pokročilé funkce jako substr a RegExReplace z funkcí okna (Vložit > if / proměnné / funkce). Nebo spustit vlastní funkce z externích AutoHotKey skriptů.
 	)	
 ; Tooltips		
-	NewB_TT =	New (Ctrl+N)
-	OpenB_TT =	Open (Ctrl+O)
-	SaveB_TT =	Save (Ctrl+S)
-	ExportB_TT =	Export do AHK (Ctrl+E)
-	PreviewB_TT =	Náhled Script (Ctrl+P)
-	OptionsB_TT =	Nastavení (Ctrl+G)
-	RecordB_TT =	Záznam makra (Ctrl+R)
-	StartB_TT =	Aktivace Makra (Ctrl+Enter)
-	TestRun_TT =	Zahrajte si aktuální makro (Ctrl+Shift+Enter)
-	RunTimer_TT =	Timer (Ctrl+Shift+T)
-	MouseB_TT =	Myš (F2)
-	TextB_TT =	Text (F3)
-	SpecialB_TT =	Speciální klávesy
-	ControlB_TT =	Control (F4)
-	PauseB_TT =	Pauza (F5) / Zpráva (Shift+F5) / Klíč Čekání (Control+F5) 
-	WindowB_TT =	Window (F6)
-	ImageB_TT =	Obrázek / Pixel Search (F7)
-	RunB_TT =	Spustit / Soubor / String / Misc. (F8)
-	ComLoopB_TT =	Loop (F9) / Goto (Shift+F9) / Label (Ctrl+F9)
-	IfStB_TT =	Pokud výkazy (F10) / proměnné (Shift+F10) / Funkce (Ctrl+F10)
-	IEComB_TT =	Internet Explorer (F11) / COM rozhraní (Shift+F11) / Spustit Skripty (Ctrl+F11)
-	SendMsgB_TT =	Windows Zprávy (F12)
 	AutoKey_TT =	Klávesová zkratka pro přehrávání makra
 	ManKey_TT =	Klávesová zkratka pro přehrávání makra "krok-za-krokem"
 	AbortKey_TT =	Klávesová zkratka pro zastavení přehrávání
@@ -795,38 +775,17 @@
 		vypnutí možnosti
 		Pokud přehrávání skončí...
 	)	
-	Win1_TT =	Přidejte klávesu Windows jako modifikátor
-	JoyHK_TT =	Joystick
 	ReptC_TT =	0 = nekonečno
-	TabPlus_TT =	Přidat makro (Ctrl+T)
-	TabClose_TT =	Zavřít Makro (Ctrl+W)
-	DuplicateL_TT =	Duplicitní makro (Ctrl+Shift+D)
-	SaveC_TT =	Uložit aktuální makro (Ctrl+Alt+S)
-	ImportB_TT =	Dovoz Makro (Ctrl+I)
 	IfDirB_TT =	Značka Hotkeys pracovat v závislosti na typu`nokna, který je aktivní, nebo existuje (Ctrl+H)
 	KeepHKOn_TT =	Mějte klávesových zkratek vždy aktivní
 	A_List_TT =	Vyberte Makro (Ctrl+1~0)
 	OSHK_TT =	Vyberte Makro
 	OSHKEd_TT =	Vyberte Makro
-	Duplicate_TT =	Duplikovat vybrané řádky (Ctrl+D)
-	Order_TT =	Přesuňte vybrané řádky (Ctrl+PageUp / Ctrl+PageDown)
-	Cut_TT =	Vyjmout vybrané řádky (Ctrl+X)
-	Copy_TT =	Kopírovat vybrané řádky (Ctrl+C)
-	Paste_TT =	Vložit kopírované řádky (Ctrl+V)
-	Remove_TT =	Smazat vybrané řádky (Del)
-	Undo_TT =	Undo (Ctrl+Z)
-	Redo_TT =	Znovu (Ctrl+Y)
-	CopyTo_TT =	Kopírovat do...
-	Capt_TT =	Zachytit stisky kláves v tomto okně
-	OnScCtrl_TT =	Zobrazit Ovládací Panel
 	ApplyT_TT =	Platit
 	ApplyI_TT =	Platit
 	ApplyL_TT =	Vložit z krabice (Insert)
 	InsertKey_TT =	Vložit Klávesy (Ctrl+Insert)
 	InsertKeyT_TT =	Vložit Klávesy
-	EditButton_TT =	Upravit (Enter)
-	PrevRefresh_TT =	Občerstvit (F5)
-	PrevCopy_TT =	Kopírovat
 	OpenT_TT =	Open (Ctrl+O)
 	SaveT_TT =	Save (Ctrl+S)
 	CutT_TT =	Snížit
@@ -836,9 +795,6 @@
 	DefaultMacro_TT =	Vyberte soubor, který chcete nahrát na programu startu
 	VarCopyA_TT =	Zkopírujte aktuální proměnné obsah
 	VarCopyB_TT =	Zkopírujte aktuální proměnné obsah
-	FindReplace_TT =	Najít / Nahradit (Ctrl+F)
-	EditComm_TT =	Upravit komentář (Ctrl+L)
-	EditColor_TT =	Edit barva označuje (Ctrl+M)
 	Reset_TT =	Vymazat proměnné obsah
 	Screenshot_TT =	Značka Screenshot
 	ColorPick_TT =	Color Picker
@@ -849,6 +805,8 @@
 	TransC_TT =	Transparentní barva
 	WScale_TT =	Šířka stupnice
 	HScale_TT =	Výška stupnice
+	Fast_TT =	Používá rychlejší vyhledávání metodu (doporučeno)
+	RGB_TT =	Příčiny barvy interpretovat jako hodnoty RGB BGR místo
 	LoopLVColor_TT =	Klepněte na tlačítko vybrat barvu
 	IfLVColor_TT =	Klepněte na tlačítko vybrat barvu
 	RefreshIEW_TT =	Obnovit seznam
@@ -886,6 +844,7 @@
 		jsou považovány jako modifikátory (tyto modifikátory ovlivňují
 		pouze velmi další klíč):!, +, ^, #
 	)	
+	ComEvent_TT =	Sazba, za kterou jsou zasílány kláves je určeno klíčové zpožděním.
 	Clip_TT =	
 	(LTrim	
 		Dočasně používá Schránka zaslat znění.

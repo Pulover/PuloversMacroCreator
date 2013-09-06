@@ -307,7 +307,7 @@
 	c_Lang066 =	Tunggu Kunci
 	c_Lang067 =	Jika ditemukan
 	c_Lang068 =	Jika tidak ditemukan / Kesalahan
-	c_Lang069 =	* Coords disimpan ke `%FoundX`% / `%FoundY`%.
+	c_Lang069 =	Coords disimpan ke `%FoundX`%/`%FoundY`%.
 	c_Lang070 =	Coord
 	c_Lang071 =	Variasi
 	c_Lang072 =	Preview
@@ -442,6 +442,8 @@
 	c_Lang202 =	Jika kotak pesan
 	c_Lang203 =	Bandingkan variabel
 	c_Lang204 =	Evaluasi ekspresi
+	c_Lang205 =	Wilayah
+	c_Lang206 =	Cari
 		
 ; Other Windows		
 	t_Lang001 =	Ekspor ke AutoHotkey
@@ -761,28 +763,6 @@
 		Anda dapat menjalankan fungsi-fungsi lanjutan seperti substr dan RegExReplace dari jendela Fungsi (Insert> Jika Laporan / Variabel / Fungsi). Atau menjalankan fungsi-fungsi anda sendiri dari script Autohotkey eksternal.
 	)	
 ; Tooltips		
-	NewB_TT =	Baru (Ctrl+N)
-	OpenB_TT =	Buka (Ctrl+O)
-	SaveB_TT =	Simpan (Ctrl+S)
-	ExportB_TT =	Ekspor ke AHK (Ctrl+E)
-	PreviewB_TT =	Preview Script (Ctrl+P)
-	OptionsB_TT =	Pengaturan (Ctrl+G)
-	RecordB_TT =	Rekam Makro (Ctrl+R)
-	StartB_TT =	Aktifkan Macro (Ctrl+Enter)
-	TestRun_TT =	Bermain Makro sekarang (Ctrl+Shift+Enter)
-	RunTimer_TT =	Timer (Ctrl+Shift+T)
-	MouseB_TT =	Mouse (F2)
-	TextB_TT =	Teks (F3)
-	SpecialB_TT =	Tombol Khusus
-	ControlB_TT =	Control (F4)
-	PauseB_TT =	Jeda (F5) / Pesan (Shift+F5) / Tunggu Key (Control+F5)
-	WindowB_TT =	Window (F6)
-	ImageB_TT =	Image / Pixel Cari (F7)
-	RunB_TT =	Jalankan / file / String / Misc. (F8)
-	ComLoopB_TT =	Lingkaran (F9) / Goto (Shift+F9) / Label (Ctrl+F9)
-	IfStB_TT =	Jika Laporan (F10) / Variabel (Shift+F10) / Fungsi (Ctrl+F10)
-	IEComB_TT =	Internet Explorer (F11) / COM Interface (Shift+F11) / Run Scriptlet (Ctrl+F11)
-	SendMsgB_TT =	Jendela Messages (F12)
 	AutoKey_TT =	Hotkey untuk bermain Makro
 	ManKey_TT =	Hotkey untuk bermain Makro "langkah-demi-langkah"
 	AbortKey_TT =	Hotkey untuk menghentikan pemutaran
@@ -795,38 +775,17 @@
 		Pilihan Shutdown
 		Ketika selesai pemutaran...
 	)	
-	Win1_TT =	Tambahkan tombol Windows sebagai pengubah
-	JoyHK_TT =	Joystick
 	ReptC_TT =	0 = tak terbatas
-	TabPlus_TT =	Tambahkan Makro (Ctrl+T)
-	TabClose_TT =	Tutup Makro (Ctrl+W)
-	DuplicateL_TT =	Gandakan Makro (Ctrl+Shift+D)
-	SaveC_TT =	Simpan Makro saat ini (Ctrl+Alt+S)
-	ImportB_TT =	Impor Makro (Ctrl+I)
 	IfDirB_TT =	Membuat Hotkeys bekerja tergantung pada`ntype jendela yang aktif atau ada (Ctrl+H)
 	KeepHKOn_TT =	Jauhkan Hotkeys Selalu Diaktifkan
 	A_List_TT =	Pilih Makro (Ctrl +1 ~ 0)
 	OSHK_TT =	Pilih Makro
 	OSHKEd_TT =	Pilih Makro
-	Duplicate_TT =	Gandakan Baris Terpilih (Ctrl+D)
-	Order_TT =	Pindahkan Baris Terpilih (Ctrl+PageUp / Ctrl+PageDown)
-	Cut_TT =	Potong Baris Dipilih (Ctrl+X)
-	Copy_TT =	Kopi Baris Dipilih (Ctrl+C)
-	Paste_TT =	Baris Paste Disalin (Ctrl+V)
-	Remove_TT =	Hapus Baris Terpilih (Del)
-	Undo_TT =	Undo (Ctrl+Z)
-	Redo_TT =	Redo (Ctrl+Y)
-	CopyTo_TT =	Salin ke...
-	Capt_TT =	Menangkap penekanan tombol dalam jendela ini
-	OnScCtrl_TT =	Tampilan Toolbar Kontrol
 	ApplyT_TT =	Menerapkan
 	ApplyI_TT =	Menerapkan
 	ApplyL_TT =	Masukkan dari Box (Insert)
 	InsertKey_TT =	Masukkan keystroke (Ctrl+Insert)
 	InsertKeyT_TT =	Masukkan keystroke
-	EditButton_TT =	Mengedit (Enter)
-	PrevRefresh_TT =	Refresh (F5)
-	PrevCopy_TT =	Kopi
 	OpenT_TT =	Buka (Ctrl+O)
 	SaveT_TT =	Simpan (Ctrl+S)
 	CutT_TT =	Memotong
@@ -836,9 +795,6 @@
 	DefaultMacro_TT =	Pilih berkas untuk memuat pada program start up
 	VarCopyA_TT =	Menyalin isi variabel saat ini
 	VarCopyB_TT =	Menyalin isi variabel saat ini
-	FindReplace_TT =	Cari / Ganti (Ctrl+F)
-	EditComm_TT =	Mengedit Komentar (Ctrl+L)
-	EditColor_TT =	Sunting Color Mark (Ctrl+M)
 	Reset_TT =	Hapus isi variabel
 	Screenshot_TT =	Membuat Screenshot
 	ColorPick_TT =	Color Picker
@@ -849,6 +805,8 @@
 	TransC_TT =	Transparan warna
 	WScale_TT =	Skala Lebar
 	HScale_TT =	Skala Tinggi
+	Fast_TT =	Menggunakan metode yang lebih cepat mencari (dianjurkan)
+	RGB_TT =	Penyebab warna harus ditafsirkan sebagai nilai RGB bukan BGR
 	LoopLVColor_TT =	Klik untuk memilih warna
 	IfLVColor_TT =	Klik untuk memilih warna
 	RefreshIEW_TT =	Segarkan Daftar
@@ -886,6 +844,7 @@
 		diperlakukan sebagai pengubah (pengubah ini mempengaruhi
 		hanya kunci berikutnya):!, +, ^, #
 	)	
+	ComEvent_TT =	Tingkat di mana keystrokes dikirim ditentukan oleh penundaan kunci.
 	Clip_TT =	
 	(LTrim	
 		Sementara menggunakan Clipboard untuk mengirim teks.

@@ -307,7 +307,7 @@
 	c_Lang066 =	Espera Clau
 	c_Lang067 =	Si es troba
 	c_Lang068 =	Si no el troba / Error
-	c_Lang069 =	* Coordenades emmagatzemat per `%FoundX`% / `%FoundY`%.
+	c_Lang069 =	Coordenades emmagatzemat per `%FoundX`%/`%FoundY`%.
 	c_Lang070 =	Coord
 	c_Lang071 =	Variacions
 	c_Lang072 =	Avanç
@@ -442,6 +442,8 @@
 	c_Lang202 =	Si el quadre de missatge
 	c_Lang203 =	Comparació de les variables
 	c_Lang204 =	Avaluar expressió
+	c_Lang205 =	Regió
+	c_Lang206 =	Cercar
 		
 ; Other Windows		
 	t_Lang001 =	Exporta a AutoHotkey
@@ -761,28 +763,6 @@
 		Podeu executar funcions avançades com ara substr i RegExReplace de la finestra Funcions (Inserir> Si Declaracions / variables / funcions). O executar les seves pròpies funcions de seqüència AutoHotkey externs.
 	)	
 ; Tooltips		
-	NewB_TT =	Nou (Ctrl+N)
-	OpenB_TT =	Obrir (Ctrl+O)
-	SaveB_TT =	Desa (Ctrl+S)
-	ExportB_TT =	Exporta a AHK (Ctrl+I)
-	PreviewB_TT =	Vista prèvia de script (Ctrl+P)
-	OptionsB_TT =	Settings (Ctrl+G)
-	RecordB_TT =	Gravar macro (Ctrl+R)
-	StartB_TT =	Activar Macros (Ctrl+Enter)
-	TestRun_TT =	Jugar Macro actual (Ctrl+Shift+Enter)
-	RunTimer_TT =	Timer (Ctrl+Shift+T)
-	MouseB_TT =	Mouse (F2)
-	TextB_TT =	Text (F3)
-	SpecialB_TT =	Tecles especials
-	ControlB_TT =	Control de (F4)
-	PauseB_TT =	Pausa (F5) / Missatge (Shift+F5) / Espera Clau (Control+F5) 
-	WindowB_TT =	Finestra (F6)
-	ImageB_TT =	Imatge / píxel motor (F7)
-	RunB_TT =	Executar / Arxiu / cadena / Misc. (F8)
-	ComLoopB_TT =	Loop (F9) / Ir (Shift+F9) / Label (Ctrl+F9)
-	IfStB_TT =	Si Declaracions (F10) / variables (Shift+F10) / Funcions (Ctrl+F10)
-	IEComB_TT =	Internet Explorer (F11) / COM Interface (Shift+F11) / Executar Scriptlet (Ctrl+F11)
-	SendMsgB_TT =	Missatges de Windows (F12)
 	AutoKey_TT =	Tecla d'accés directe per jugar Macro
 	ManKey_TT =	Tecla d'accés directe per jugar Macro "pas a pas"
 	AbortKey_TT =	Hotkey per aturar la reproducció
@@ -795,38 +775,17 @@
 		Opcions d'apagada
 		Quan finalitzi la reproducció...
 	)	
-	Win1_TT =	Afegir la tecla Windows com a modificador
-	JoyHK_TT =	Palanca de comandament
 	ReptC_TT =	0 = infinit
-	TabPlus_TT =	Afegir Macro (Ctrl+T)
-	TabClose_TT =	Tancar Macro (Ctrl+W)
-	DuplicateL_TT =	Duplicar macro (Ctrl+Shift+D)
-	SaveC_TT =	Guardar macro actual (Ctrl+Alt+S)
-	ImportB_TT =	Importació Macro (Ctrl+I)
 	IfDirB_TT =	Feu Hotkeys funcionen depenent del `nType de la finestra que està activa o no existeix (Ctrl+H)
 	KeepHKOn_TT =	Mantingui Hotkeys Sempre Activat
 	A_List_TT =	Seleccioneu Macro (Ctrl+1~0)
 	OSHK_TT =	Seleccioneu Macro
 	OSHKEd_TT =	Seleccioneu Macro
-	Duplicate_TT =	Duplicar files seleccionades (Ctrl+D)
-	Order_TT =	Mou les files seleccionades (Ctrl+RePàg / Ctrl+AvPàg)
-	Cut_TT =	Tallar files seleccionades (Ctrl+X)
-	Copy_TT =	Copia files seleccionades (Ctrl+C)
-	Paste_TT =	Files Enganxa copiar (Ctrl+V)
-	Remove_TT =	Eliminar files seleccionades (Del)
-	Undo_TT =	Desfer (Ctrl+Z)
-	Redo_TT =	Refer (Ctrl+I)
-	CopyTo_TT =	Copiar a...
-	Capt_TT =	Captura pulsacions de tecles en aquesta finestra
-	OnScCtrl_TT =	Mostrar Els Controls De La Barra D'eines
 	ApplyT_TT =	Aplicar
 	ApplyI_TT =	Aplicar
 	ApplyL_TT =	Inseriu de Caixa (Insert)
 	InsertKey_TT =	Inserir Pulsacions (Ctrl+Insert)
 	InsertKeyT_TT =	Inserir Pulsacions
-	EditButton_TT =	Edita (Enter)
-	PrevRefresh_TT =	Actualitzar (F5)
-	PrevCopy_TT =	Copieu
 	OpenT_TT =	Obrir (Ctrl+O)
 	SaveT_TT =	Desa (Ctrl+S)
 	CutT_TT =	Tallar
@@ -836,9 +795,6 @@
 	DefaultMacro_TT =	Selecciona arxiu a carregar en el programa de posada en marxa
 	VarCopyA_TT =	Copia contingut actual de variables
 	VarCopyB_TT =	Copia contingut actual de variables
-	FindReplace_TT =	Cercar / Reemplaçar (Ctrl+F)
-	EditComm_TT =	Redactar comentari (Ctrl+L)
-	EditColor_TT =	Edita color (Ctrl+M)
 	Reset_TT =	Esborrar el contingut de variables
 	Screenshot_TT =	Fer Screenshot
 	ColorPick_TT =	Selector de Color
@@ -849,6 +805,8 @@
 	TransC_TT =	Color Transparent
 	WScale_TT =	Escala Ample
 	HScale_TT =	Escala d'altura
+	Fast_TT =	Utilitza un mètode de cerca més ràpid (recomanat)
+	RGB_TT =	Fa que el color s'ha d'interpretar com un valor en lloc de BGR RGB
 	LoopLVColor_TT =	Feu clic per seleccionar un color
 	IfLVColor_TT =	Feu clic per seleccionar un color
 	RefreshIEW_TT =	Actualitzar llista
@@ -886,6 +844,7 @@
 		es tracten com a modificadors (aquests modificadors afecten
 		solament la següent clau):, +, ^, #
 	)	
+	ComEvent_TT =	La velocitat a la qual s'envien les pulsacions de teclat es determina pel retard clau.
 	Clip_TT =	
 	(LTrim	
 		Temporalment utilitza portapapers per enviar el text.

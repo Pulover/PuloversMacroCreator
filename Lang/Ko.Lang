@@ -307,7 +307,7 @@
 	c_Lang066 =	키 대기
 	c_Lang067 =	발견하는 경우
 	c_Lang068 =	/ 오류를 발견하지 않은 경우
-	c_Lang069 =	* Coords는 `%FoundX`% / `%FoundY`%로 저장됩니다.
+	c_Lang069 =	Coords는 `%FoundX`%/`%FoundY`%로 저장됩니다.
 	c_Lang070 =	Coord
 	c_Lang071 =	유사
 	c_Lang072 =	시사
@@ -442,6 +442,8 @@
 	c_Lang202 =	경우 메시지 상자
 	c_Lang203 =	변수를 비교
 	c_Lang204 =	식을 계산
+	c_Lang205 =	지방
+	c_Lang206 =	검색
 		
 ; Other Windows		
 	t_Lang001 =	AutoHotkey로 내보내기
@@ -761,28 +763,6 @@
 		당신은 기능 창 (IF 문 / 변수 / 함수 삽입 >)에서 같은 SUBSTR 및 RegExReplace 같은 고급 기능을 실행할 수 있습니다. 또는 외부 오토 핫키 스크립트에서 자신의 함수를 실행합니다.
 	)	
 ; Tooltips		
-	NewB_TT =	새 (Ctrl 키+N)
-	OpenB_TT =	열기 (Ctrl 키+O)
-	SaveB_TT =	저장하기 (Ctrl+S)
-	ExportB_TT =	AHK (Ctrl 키+E)로 내보내기
-	PreviewB_TT =	미리보기 스크립트 (Ctrl 키+P)
-	OptionsB_TT =	설정 (Ctrl 키를+G)
-	RecordB_TT =	기록 매크로 (Ctrl 키+R)
-	StartB_TT =	활성화 매크로 (Ctrl 키를+입력)
-	TestRun_TT =	현재 매크로를 재생 (Ctrl+Shift+입력)
-	RunTimer_TT =	타이머 (Ctrl+Shift+T)
-	MouseB_TT =	마우스 (F2​​)
-	TextB_TT =	텍스트 (F3)
-	SpecialB_TT =	특수 키
-	ControlB_TT =	컨트롤 (F4)
-	PauseB_TT =	중지 / 메시지 / 키 대기
-	WindowB_TT =	창 (F6)
-	ImageB_TT =	이미지 / 픽셀 검색 (F7)
-	RunB_TT =	/ 파일 / 문자열 / 기타를 실행합니다. (F8)
-	ComLoopB_TT =	루프 (F9) / 고토 (+ F9를 Shift) / 라벨 (Ctrl 키를+F9)
-	IfStB_TT =	만약 명세서 (F10) / 변수 / 함수 (Ctrl 키를+F10) (+ F10를 Shift)
-	IEComB_TT =	인터넷 익스플로러 (F11) / COM 인터페이스 (+ F11를 Shift) / 스크립틀릿을 실행 (Ctrl+F11)
-	SendMsgB_TT =	윈도우 메시지 (F12)
 	AutoKey_TT =	핫키 매크로를 재생할 수
 	ManKey_TT =	단축키 매크로 "단계별"를 재생
 	AbortKey_TT =	단축키 재생을 중지하려면
@@ -795,38 +775,17 @@
 		종료 옵션
 		재생시 마감...
 	)	
-	Win1_TT =	수정으로 Windows 키를 추가합니다
-	JoyHK_TT =	조종간
 	ReptC_TT =	0 = 무한
-	TabPlus_TT =	매크로를 추가합니다 (Ctrl+T)
-	TabClose_TT =	닫기 매크로 (Ctrl 키를+W)
-	DuplicateL_TT =	매크로를 복사 (Ctrl+Shift+D)
-	SaveC_TT =	현재 매크로를 저장 (Ctrl+Alt+S)
-	ImportB_TT =	가져 오기 매크로 (Ctrl 키를+I)
 	IfDirB_TT =	키가 활성 상태 또는 존재 창`n타입 (Ctrl 키를+H)에 따라 작동합니다
 	KeepHKOn_TT =	항상 활성화 키 보관
 	A_List_TT =	매크로를 선택 (Ctrl+1~0)
 	OSHK_TT =	매크로를 선택
 	OSHKEd_TT =	매크로를 선택
-	Duplicate_TT =	선택한 행을 복제 (Ctrl 키+D)
-	Order_TT =	선택한 행을 이동 (Ctrl 키를+PageUp / PageDown Ctrl 키를 +)
-	Cut_TT =	선택한 행합니다 (Ctrl+X)를 잘라
-	Copy_TT =	선택한 행합니다 (Ctrl+C)를 복사합니다
-	Paste_TT =	붙여 넣기 복사 행 (Ctrl 키를+V)
-	Remove_TT =	선택된 행 (델)을 삭제
-	Undo_TT =	실행 취소 (Ctrl 키+Z)
-	Redo_TT =	다시 실행 (Ctrl 키를+Y)
-	CopyTo_TT =	에 복사...
-	Capt_TT =	이 창에서 키 누름을 캡처
-	OnScCtrl_TT =	도구 모음 컨트롤을 표시
 	ApplyT_TT =	신청
 	ApplyI_TT =	신청
 	ApplyL_TT =	상자 삽입 (Insert)
 	InsertKey_TT =	키를 삽입 (Ctrl+Insert)
 	InsertKeyT_TT =	키를 삽입
-	EditButton_TT =	수정 (Enter)
-	PrevRefresh_TT =	새롭게하다 (F5)
-	PrevCopy_TT =	복사
 	OpenT_TT =	열기 (Ctrl 키+O)
 	SaveT_TT =	저장하기 (Ctrl+S)
 	CutT_TT =	절단
@@ -836,9 +795,6 @@
 	DefaultMacro_TT =	프로그램에로드 시작하는 파일을 선택합니다
 	VarCopyA_TT =	현재 변수 내용을 복사
 	VarCopyB_TT =	현재 변수 내용을 복사
-	FindReplace_TT =	찾기 / 바꾸기 (Ctrl 키+F)
-	EditComm_TT =	댓글 수정 (Ctrl 키+L)
-	EditColor_TT =	편집 색상 표 (Ctrl 키+M)
 	Reset_TT =	지우기 변수 내용
 	Screenshot_TT =	스크린 샷 만들기
 	ColorPick_TT =	색상 선택기
@@ -849,6 +805,8 @@
 	TransC_TT =	투명한 색깔
 	WScale_TT =	폭 규모
 	HScale_TT =	높이 규모
+	Fast_TT =	빠른 검색 방법 (권장)를 사용
+	RGB_TT =	대신 BGR의 RGB 값으로 해석 할 색상을 발생
 	LoopLVColor_TT =	색상을 선택하려면 클릭하십시오
 	IfLVColor_TT =	색상을 선택하려면 클릭하십시오
 	RefreshIEW_TT =	새로 고침 목록
@@ -886,6 +844,7 @@
 		수식 (이 수식 영향으로 처리됩니다
 		만 매우 다음 키):!, +, ^, #
 	)	
+	ComEvent_TT =	키가 전송되는 속도는 키 지연에 의해 결정됩니다.
 	Clip_TT =	
 	(LTrim	
 		일시적으로 텍스트를 보낼 클립 보드를 사용합니다.

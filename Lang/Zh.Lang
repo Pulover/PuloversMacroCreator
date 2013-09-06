@@ -307,7 +307,7 @@
 	c_Lang066 =	关键的等待
 	c_Lang067 =	如果发现
 	c_Lang068 =	如果没有找到/错误
-	c_Lang069 =	* COORDS存储`%FoundX`% / `%FoundY`%。
+	c_Lang069 =	COORDS存储`%FoundX`%/`%FoundY`%。
 	c_Lang070 =	坐标
 	c_Lang071 =	变化
 	c_Lang072 =	预览
@@ -442,6 +442,8 @@
 	c_Lang202 =	如果消息框
 	c_Lang203 =	比较变量
 	c_Lang204 =	计算表达式
+	c_Lang205 =	地区
+	c_Lang206 =	搜索
 		
 ; Other Windows		
 	t_Lang001 =	导出到华民航空
@@ -761,28 +763,6 @@
 		您可以运行先进的功能，如SUBSTR和RegExReplace从“功能”窗口（“插入”> if语句/变量/函数）。或来自外部的AutoHotkey脚本运行自己的职能。
 	)	
 ; Tooltips		
-	NewB_TT =	新建（Ctrl+N）
-	OpenB_TT =	开放（按Ctrl+O）
-	SaveB_TT =	保存（Ctrl+S）
-	ExportB_TT =	导出AHK（Ctrl+E组合键）
-	PreviewB_TT =	预览脚本（Ctrl+P）
-	OptionsB_TT =	设置（Ctrl+G）
-	RecordB_TT =	录制宏（按Ctrl+R）
-	StartB_TT =	激活宏（Ctrl+Enter键）
-	TestRun_TT =	播放当前宏（按Ctrl+Shift+Enter键）
-	RunTimer_TT =	定时器（Ctrl+Shift+T）
-	MouseB_TT =	鼠标（F2）
-	TextB_TT =	文本（F3）
-	SpecialB_TT =	特殊的键
-	ControlB_TT =	控制（F4）
-	PauseB_TT =	暂停（F5）/消息（Shift+F5）/键等待（Control+F5）
-	WindowB_TT =	窗口（F6）
-	ImageB_TT =	图片/像素搜索（F7）
-	RunB_TT =	运行/文件/字符串/其他。 （F8）
-	ComLoopB_TT =	环路（F9）/后藤（按Shift+F9）/标签（按Ctrl+F9）
-	IfStB_TT =	如果报表附注（F10）/变量（按Shift+F10）/功能（按Ctrl+F10）
-	IEComB_TT =	IE浏览器（F11）/ COM接口（按Shift+F11）
-	SendMsgB_TT =	Windows消息（F12）
 	AutoKey_TT =	热键玩宏
 	ManKey_TT =	热键玩宏“一步一步”
 	AbortKey_TT =	热键停止播放
@@ -795,38 +775,17 @@
 		关机选项
 		当播放结束...
 	)	
-	Win1_TT =	作为改性剂添加Windows键
-	JoyHK_TT =	摇杆
 	ReptC_TT =	0 =无限
-	TabPlus_TT =	添加宏（Ctrl+T）
-	TabClose_TT =	关闭宏（Ctrl+W）
-	DuplicateL_TT =	重复宏（Ctrl+Shift+D）
-	SaveC_TT =	保存当前宏（CTRL+ALT+S）
-	ImportB_TT =	进口宏（按Ctrl+I）
 	IfDirB_TT =	热键工作依赖于_类型的窗口，是积极的，或存在（按Ctrl+H）
 	KeepHKOn_TT =	保持热键始终处于激活状态
 	A_List_TT =	选择“宏”（Ctrl+1~0）
 	OSHK_TT =	选择“宏”
 	OSHKEd_TT =	选择“宏”
-	Duplicate_TT =	复制选中的行（按Ctrl+D）
-	Order_TT =	将选定的行（CTRL+PAGEUP / CTRL+PAGEDOWN）
-	Cut_TT =	剪切选定的行（Ctrl+X）
-	Copy_TT =	选定行复制（Ctrl+C）
-	Paste_TT =	粘贴复制的行（Ctrl+V）
-	Remove_TT =	删除选定的行（DEL）
-	Undo_TT =	撤消（Ctrl+Z）
-	Redo_TT =	重做（Ctrl+Y）
-	CopyTo_TT =	复制到...
-	Capt_TT =	在此窗口中捕捉按键
-	OnScCtrl_TT =	显示控件工具栏
 	ApplyT_TT =	应用
 	ApplyI_TT =	应用
 	ApplyL_TT =	从框中插入（Insert）
 	InsertKey_TT =	插入击键 (Ctrl+Insert)
 	InsertKeyT_TT =	插入击键
-	EditButton_TT =	编辑（Enter）
-	PrevRefresh_TT =	刷新（F5）
-	PrevCopy_TT =	复制
 	OpenT_TT =	开放（按Ctrl+O）
 	SaveT_TT =	保存（Ctrl+S）
 	CutT_TT =	切
@@ -836,9 +795,6 @@
 	DefaultMacro_TT =	选择要加载的文件在程序启动时
 	VarCopyA_TT =	复制当前变量的内容
 	VarCopyB_TT =	复制当前变量的内容
-	FindReplace_TT =	查找/替换（Ctrl+F）
-	EditComm_TT =	编辑注释（Ctrl+L）
-	EditColor_TT =	编辑颜色标志（Ctrl+M）
 	Reset_TT =	清除变量的内容
 	Screenshot_TT =	请截图
 	ColorPick_TT =	拾色器
@@ -849,6 +805,8 @@
 	TransC_TT =	透明色
 	WScale_TT =	宽规模
 	HScale_TT =	身高规模
+	Fast_TT =	使用更快的搜索方法（推荐）
+	RGB_TT =	被解释为一个RGB值而不是BGR导致颜色
 	LoopLVColor_TT =	单击以选择一种颜色
 	IfLVColor_TT =	单击以选择一种颜色
 	RefreshIEW_TT =	刷新列表
@@ -886,6 +844,7 @@
 		被视为改性剂（这些修饰符的影响
 		只有极下键）：！，+，^，＃
 	)	
+	ComEvent_TT =	发送击键的速度，是由按键延迟。
 	Clip_TT =	
 	(LTrim	
 		暂时使用剪贴板发送文本。

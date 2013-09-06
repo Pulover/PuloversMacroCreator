@@ -307,7 +307,7 @@
 	c_Lang066 =	Κλειδί Αναμονή
 	c_Lang067 =	Αν βρεθεί
 	c_Lang068 =	Αν δεν βρεθεί / Σφάλμα
-	c_Lang069 =	* Coords αποθηκεύονται `%FoundX`% / `%FoundY`%.
+	c_Lang069 =	Coords αποθηκεύονται `%FoundX`%/`%FoundY`%.
 	c_Lang070 =	Coord
 	c_Lang071 =	Παραλλαγές
 	c_Lang072 =	Προεπισκόπηση
@@ -442,6 +442,8 @@
 	c_Lang202 =	Αν παράθυρο μηνύματος
 	c_Lang203 =	Σύγκριση μεταβλητών
 	c_Lang204 =	Αξιολογήστε την έκφραση
+	c_Lang205 =	Περιοχή
+	c_Lang206 =	Αναζήτηση
 		
 ; Other Windows		
 	t_Lang001 =	Εξαγωγή σε AutoHotkey
@@ -761,28 +763,6 @@
 		Μπορείτε να εκτελέσετε προηγμένες λειτουργίες, όπως SUBSTR και RegExReplace από το παράθυρο Λειτουργίες (Insert > Αν Καταστάσεις / μεταβλητές / Λειτουργίες). Ή να τρέξει τις δικές σας συναρτήσεις από εξωτερικές σενάρια AutoHotkey.
 	)	
 ; Tooltips		
-	NewB_TT =	Νέο (Ctrl+N)
-	OpenB_TT =	Άνοιγμα (Ctrl+O)
-	SaveB_TT =	Αποθήκευση (Ctrl+S)
-	ExportB_TT =	Εξαγωγή σε AHK (Ctrl+E)
-	PreviewB_TT =	Preview Script (Ctrl+P)
-	OptionsB_TT =	Ρυθμίσεις (Ctrl+G)
-	RecordB_TT =	Εγγραφή Macro (Ctrl+R)
-	StartB_TT =	Ενεργοποιήσετε τις μακροεντολές (Ctrl+Enter)
-	TestRun_TT =	Παίξτε τρέχουσα μακροοικονομική (Ctrl+Shift+Enter)
-	RunTimer_TT =	Timer (Ctrl+Shift+T)
-	MouseB_TT =	Mouse (F2)
-	TextB_TT =	Κείμενο (F3)
-	SpecialB_TT =	Ειδικά πλήκτρα
-	ControlB_TT =	Ελέγχου (F4)
-	PauseB_TT =	Παύση (F5) / Μήνυμα (Shift+F5) / Κλειδί Αναμονή (Control+F5) 
-	WindowB_TT =	Παράθυρο (F6)
-	ImageB_TT =	Εικόνα / Pixel αναζήτησης (F7)
-	RunB_TT =	Run / Αρχείο / String / Διάφορα. (F8)
-	ComLoopB_TT =	Loop (F9) / Goto (Shift+F9) / Label (Ctrl+F9)
-	IfStB_TT =	Αν Καταστάσεις (F10) / μεταβλητές (Shift+F10) / Λειτουργίες (Ctrl+F10)
-	IEComB_TT =	Internet Explorer (F11) / COM Interface (Shift+F11) / Εκτέλεση Scriptlet (Ctrl+F11)
-	SendMsgB_TT =	Τα μηνύματα των Windows (F12)
 	AutoKey_TT =	Hotkey για να παίξει Macro
 	ManKey_TT =	Hotkey για να παίξει Macro "βήμα-βήμα"
 	AbortKey_TT =	Hotkey για να σταματήσετε την αναπαραγωγή
@@ -795,38 +775,17 @@
 		Επιλογές τερματισμού
 		Όταν τελειώσει η αναπαραγωγή...
 	)	
-	Win1_TT =	Προσθέστε το πλήκτρο των Windows ως τροποποιητής
-	JoyHK_TT =	Χειριστήριο
 	ReptC_TT =	0 = άπειρο
-	TabPlus_TT =	Προσθήκη Macro (Ctrl+T)
-	TabClose_TT =	Κλείσιμο Macro (Ctrl+W)
-	DuplicateL_TT =	Διπλότυπο Macro (Ctrl+Shift+D)
-	SaveC_TT =	Αποθήκευση της τρέχουσας Macro (Ctrl+Alt+S)
-	ImportB_TT =	Εισαγωγή Macro (Ctrl+I)
 	IfDirB_TT =	Κάντε Hotkeys λειτουργεί ανάλογα με τον `ntype του παραθύρου που είναι ενεργή ή υπάρχει (Ctrl+H)
 	KeepHKOn_TT =	Κρατήστε Hotkeys ενεργοποιείται πάντα
 	A_List_TT =	Επιλέξτε Macro (Ctrl+1~0)
 	OSHK_TT =	Επιλέξτε Macro
 	OSHKEd_TT =	Επιλέξτε Macro
-	Duplicate_TT =	Διπλασιασμός των επιλεγμένων σειρών (Ctrl+D)
-	Order_TT =	Μετακίνηση των επιλεγμένων σειρών (Ctrl+PageUp / Ctrl+PageDown)
-	Cut_TT =	Αποκοπή των επιλεγμένων σειρών (Ctrl+X)
-	Copy_TT =	Αντιγραφή των επιλεγμένων σειρών (Ctrl+C)
-	Paste_TT =	Επικολλήσετε το αντιγραμμένο Γραμμές (Ctrl+V)
-	Remove_TT =	Διαγραφή των επιλεγμένων σειρών (Del)
-	Undo_TT =	Αναίρεση (Ctrl+Z)
-	Redo_TT =	Επανάληψη (Ctrl+Y)
-	CopyTo_TT =	Αντιγραφή σε...
-	Capt_TT =	Σύλληψη πατήματα πλήκτρων σε αυτό το παράθυρο
-	OnScCtrl_TT =	Εμφανίσετε Ελέγχου Της Γραμμής Εργαλείων
 	ApplyT_TT =	Εφαρμογή
 	ApplyI_TT =	Εφαρμογή
 	ApplyL_TT =	Εισαγωγή από Box (Insert)
 	InsertKey_TT =	Εισάγετε Πληκτρολόγησης (Ctrl+Insert)
 	InsertKeyT_TT =	Εισάγετε Πληκτρολόγησης
-	EditButton_TT =	Επεξεργασία (Enter)
-	PrevRefresh_TT =	Refresh (F5)
-	PrevCopy_TT =	Αντιγραφή
 	OpenT_TT =	Άνοιγμα (Ctrl+O)
 	SaveT_TT =	Αποθήκευση (Ctrl+S)
 	CutT_TT =	Κόβω
@@ -836,9 +795,6 @@
 	DefaultMacro_TT =	Επιλογή αρχείου για να φορτώσετε το πρόγραμμα εκκίνηση
 	VarCopyA_TT =	Αντιγράψτε σημερινό περιεχόμενο των μεταβλητών
 	VarCopyB_TT =	Αντιγράψτε σημερινό περιεχόμενο των μεταβλητών
-	FindReplace_TT =	Εύρεση / Αντικατάσταση (Ctrl+F)
-	EditComm_TT =	Επεξεργασία Σχόλιο (Ctrl+L)
-	EditColor_TT =	Επεξεργασία χρωματικό σήμα (Ctrl+M)
 	Reset_TT =	Αίθριος τα περιεχόμενα της μεταβλητής
 	Screenshot_TT =	Κάντε Screenshot
 	ColorPick_TT =	Επιλογέα Χρώματος
@@ -849,6 +805,8 @@
 	TransC_TT =	Διαφανές χρώμα
 	WScale_TT =	Κλίμακα Πλάτος
 	HScale_TT =	Κλίμακα Ύψος
+	Fast_TT =	Χρησιμοποιεί μια ταχύτερη μέθοδος αναζήτησης (συνιστάται)
+	RGB_TT =	Προκαλεί το χρώμα πρέπει να ερμηνευθεί ως μια τιμή RGB αντί του BGR
 	LoopLVColor_TT =	Κάντε κλικ για να επιλέξετε ένα χρώμα
 	IfLVColor_TT =	Κάντε κλικ για να επιλέξετε ένα χρώμα
 	RefreshIEW_TT =	Ανανέωση λίστας
@@ -886,6 +844,7 @@
 		αντιμετωπίζονται ως τροποποιητές (αυτοί οι τροποποιητές επηρεάζουν
 		μόνο την επόμενη κιόλας κλειδί):!, +, ^, #
 	)	
+	ComEvent_TT =	Το ποσοστό στο οποίο αποστέλλονται πληκτρολογήσεις καθορίζεται από βασικούς καθυστέρηση.
 	Clip_TT =	
 	(LTrim	
 		Προσωρινά χρησιμοποιεί το Πρόχειρο, για να στείλει το κείμενο.

@@ -307,7 +307,7 @@
 	c_Lang066 =	Tunggu Utama
 	c_Lang067 =	Jika didapati
 	c_Lang068 =	Jika tidak ditemui / Ralat
-	c_Lang069 =	* Coords disimpan untuk `%FoundX`% / `%FoundY`%.
+	c_Lang069 =	Coords disimpan untuk `%FoundX`%/`%FoundY`%.
 	c_Lang070 =	Coord
 	c_Lang071 =	Variasi
 	c_Lang072 =	Preview
@@ -442,6 +442,8 @@
 	c_Lang202 =	Jika kotak mesej
 	c_Lang203 =	Bandingkan pembolehubah
 	c_Lang204 =	Menilai ungkapan
+	c_Lang205 =	Wilayah
+	c_Lang206 =	Carian
 		
 ; Other Windows		
 	t_Lang001 =	Eksport ke AutoHotkey
@@ -761,28 +763,6 @@
 		Anda boleh menjalankan fungsi-fungsi canggih seperti SubStr dan RegExReplace dari tingkap Fungsi yang (Masukkan> Jika Penyata / Pembolehubah / Fungsi). Atau menjalankan fungsi-fungsi anda sendiri dari skrip AutoHotkey luar.
 	)	
 ; Tooltips		
-	NewB_TT =	Baru (Ctrl+N)
-	OpenB_TT =	Terbuka (Ctrl+O)
-	SaveB_TT =	Simpan (Ctrl+S)
-	ExportB_TT =	Eksport ke AHK (Ctrl+E)
-	PreviewB_TT =	Preview Skrip (Ctrl+P)
-	OptionsB_TT =	Tetapan (Ctrl+G)
-	RecordB_TT =	Rekod Macro (Ctrl+R)
-	StartB_TT =	Makro Aktifkan (Ctrl+Enter)
-	TestRun_TT =	Main Makro Semasa (Ctrl+Shift+Enter)
-	RunTimer_TT =	Pemasa (Ctrl+Shift+T)
-	MouseB_TT =	Tetikus (F2)
-	TextB_TT =	Text (F3)
-	SpecialB_TT =	Kunci Khas
-	ControlB_TT =	Kawalan (F4)
-	PauseB_TT =	Jeda (F5) / Mesej (Shift+F5) / Tunggu Utama (Control+F5)
-	WindowB_TT =	Tingkap (F6)
-	ImageB_TT =	Imej / Pixel Search (F7)
-	RunB_TT =	Run / File / String / Misc. (F8)
-	ComLoopB_TT =	Gelung (F9) / Goto (Shift+F9) / Label (Ctrl+F9)
-	IfStB_TT =	Jika Penyata (F10) / Pembolehubah (Shift+F10) / Fungsi (Ctrl+F10)
-	IEComB_TT =	Internet Explorer (F11) / COM Muka (Shift+F11) / Run Scriptlet (Ctrl+F11)
-	SendMsgB_TT =	Mesej Windows (F12)
 	AutoKey_TT =	Hotkey bermain Makro
 	ManKey_TT =	Hotkey bermain Macro "langkah demi langkah"
 	AbortKey_TT =	Hotkey untuk menghentikan main balik
@@ -795,38 +775,17 @@
 		Pilihan Shutdown
 		Apabila selesai main...
 	)	
-	Win1_TT =	Tambah kekunci Windows sebagai pengubahsuai
-	JoyHK_TT =	Joystick
 	ReptC_TT =	0 = tidak terhingga
-	TabPlus_TT =	Tambah Macro (Ctrl+T)
-	TabClose_TT =	Tutup Macro (Ctrl+W)
-	DuplicateL_TT =	Gandakan Macro (Ctrl+Shift+D)
-	SaveC_TT =	Simpan Makro Semasa (Ctrl+Alt+S)
-	ImportB_TT =	Import Macro (Ctrl+I)
 	IfDirB_TT =	Buat hotkeys bekerja bergantung kepada jenis`ndaripada tingkap yang aktif atau wujud (Ctrl+H)
 	KeepHKOn_TT =	Pastikan hotkeys Sentiasa Diaktifkan
 	A_List_TT =	Pilih Macro (Ctrl +1 ~ 0)
 	OSHK_TT =	Pilih Makro
 	OSHKEd_TT =	Pilih Makro
-	Duplicate_TT =	Gandakan Baris Terpilih (Ctrl+D)
-	Order_TT =	Pindah Baris Terpilih (Ctrl+PageUp / Ctrl+PageDown)
-	Cut_TT =	Potong Baris Terpilih (Ctrl+X)
-	Copy_TT =	Salinan Baris Terpilih (Ctrl+C)
-	Paste_TT =	Baris Tampalkan Disalin (Ctrl+V)
-	Remove_TT =	Padam Baris Terpilih (Del)
-	Undo_TT =	Undo (Ctrl+Z)
-	Redo_TT =	Buat semula (Ctrl+Y)
-	CopyTo_TT =	Salin ke...
-	Capt_TT =	Tangkap tekanan kekunci dalam tetingkap ini
-	OnScCtrl_TT =	Memaparkan Kawalan Toolbar
 	ApplyT_TT =	Memohon
 	ApplyI_TT =	Memohon
 	ApplyL_TT =	Memasukkan dari Box (Insert)
 	InsertKey_TT =	Memasukkan keystroke (Ctrl+Sisipan)
 	InsertKeyT_TT =	Memasukkan keystroke
-	EditButton_TT =	Edit (Masukkan)
-	PrevRefresh_TT =	Refresh (F5)
-	PrevCopy_TT =	Menyalin
 	OpenT_TT =	Terbuka (Ctrl+O)
 	SaveT_TT =	Simpan (Ctrl+S)
 	CutT_TT =	Potong
@@ -836,9 +795,6 @@
 	DefaultMacro_TT =	Pilih fail untuk memuatkan program memulakan
 	VarCopyA_TT =	Menyalin kandungan ubah semasa
 	VarCopyB_TT =	Menyalin kandungan ubah semasa
-	FindReplace_TT =	Cari / Ganti (Ctrl+F)
-	EditComm_TT =	Edit Komen (Ctrl+L)
-	EditColor_TT =	Edit Warna Mark (Ctrl+M)
 	Reset_TT =	Kandungan ubah jelas
 	Screenshot_TT =	Buat Screenshot
 	ColorPick_TT =	Pemilih Warna
@@ -849,6 +805,8 @@
 	TransC_TT =	Warna telus
 	WScale_TT =	Skala Lebar
 	HScale_TT =	Skala ketinggian
+	Fast_TT =	Menggunakan kaedah cepat mencari (disyorkan)
+	RGB_TT =	Punca warna ditafsirkan sebagai nilai RGB bukan BGR
 	LoopLVColor_TT =	Klik untuk memilih warna yang
 	IfLVColor_TT =	Klik untuk memilih warna yang
 	RefreshIEW_TT =	Senarai Refresh
@@ -886,6 +844,7 @@
 		dianggap sebagai pengubah (ini pengubah menjejaskan
 		hanya kunci yang akan datang):, +, ^, #
 	)	
+	ComEvent_TT =	Kadar di mana ketukan kekunci dihantar ditentukan oleh kelewatan utama.
 	Clip_TT =	
 	(LTrim	
 		Sementara menggunakan klipbod untuk menghantar teks.

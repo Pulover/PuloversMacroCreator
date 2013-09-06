@@ -183,17 +183,6 @@ MButton::GoSub, DrawStart
 #If Draw && OnEnter
 Enter::GoSub, Restore
 
-#If NoKey
-RButton::
-; RButton Up::
-return
-
-#If NoKey
-
-Esc::
-StopIt := 1
-return
-
 #If Draw
 
 ^Up::
@@ -266,4 +255,11 @@ Down::GoSub, NextResult
 Enter::GoSub, GoResult
 
 #If
+
+NoKey:
+return
+
+EscNoKey:
+StopIt := 1
+return
 

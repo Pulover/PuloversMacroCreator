@@ -307,7 +307,7 @@
 	c_Lang066 =	Ключ Изчакайте
 	c_Lang067 =	Ако се установи,
 	c_Lang068 =	Ако не е намерен / Грешка
-	c_Lang069 =	* Coords съхраняват `%FoundX`% / `%FoundY`%.
+	c_Lang069 =	Coords съхраняват `%FoundX`%/`%FoundY`%.
 	c_Lang070 =	Coord
 	c_Lang071 =	Вариации
 	c_Lang072 =	Предварителен преглед
@@ -442,6 +442,8 @@
 	c_Lang202 =	Ако полето за съобщения
 	c_Lang203 =	Сравни променливи
 	c_Lang204 =	Оценете израз
+	c_Lang205 =	Област
+	c_Lang206 =	Търсене
 		
 ; Other Windows		
 	t_Lang001 =	Износ за AutoHotkey
@@ -761,28 +763,6 @@
 		Можете да пуснете разширени функции като SUBSTR и RegExReplace от функциите прозорец (Insert > Ако отчет / променливи / функции). Или стартирате свой собствен функции от външни скриптове AutoHotkey.
 	)	
 ; Tooltips		
-	NewB_TT =	New (Ctrl+N)
-	OpenB_TT =	Open (Ctrl+O)
-	SaveB_TT =	Save (Ctrl+S)
-	ExportB_TT =	Износ за AHK (Ctrl+E)
-	PreviewB_TT =	Преглед Script (Ctrl+P)
-	OptionsB_TT =	Настройки (Ctrl+G)
-	RecordB_TT =	Записване на макрос (Ctrl+R)
-	StartB_TT =	Активиране макроси (Ctrl+Enter)
-	TestRun_TT =	Възпроизвеждане на настоящите макро (Ctrl+Shift+Enter)
-	RunTimer_TT =	Таймер (Ctrl+Shift+T)
-	MouseB_TT =	Mouse (F2)
-	TextB_TT =	Текст (F3)
-	SpecialB_TT =	Специални клавиши
-	ControlB_TT =	Control (F4)
-	PauseB_TT =	Пауза (F5) / Съобщение (Shift+F5) / Ключ Изчакайте (Control+F5) 
-	WindowB_TT =	Window (F6)
-	ImageB_TT =	Image / Pixel Търсене (F7)
-	RunB_TT =	Run / File / String / Misc. (F8)
-	ComLoopB_TT =	Loop (F9) / Гото (Shift+F9) / Label (Ctrl+F9)
-	IfStB_TT =	Ако отчети (F10) / променливи (Shift+F10) / Функции (Ctrl+F10)
-	IEComB_TT =	Internet Explorer (F11) / COM Interface (Shift+F11) / Тичане Scriptlet (Ctrl+F11)
-	SendMsgB_TT =	Windows Съобщения (F12)
 	AutoKey_TT =	Hotkey да играе Macro
 	ManKey_TT =	Hotkey да играе Macro "стъпка по стъпка"
 	AbortKey_TT =	Hotkey за да спрете възпроизвеждането
@@ -795,38 +775,17 @@
 		изключване опции
 		Когато възпроизвеждането облицовки...
 	)	
-	Win1_TT =	Добавяне на клавиша Windows, както модификатор
-	JoyHK_TT =	Joystick
 	ReptC_TT =	0 = безкрайно
-	TabPlus_TT =	Добави Macro (Ctrl+T)
-	TabClose_TT =	Затвори Macro (Ctrl+W)
-	DuplicateL_TT =	Дублиране на Macro (Ctrl+Shift+D)
-	SaveC_TT =	Запазване на настоящите макро (Ctrl+Alt+S)
-	ImportB_TT =	Внос Macro (Ctrl+I)
 	IfDirB_TT =	Hotkeys работят в зависимост от`nвид на прозореца, който е активен или съществува (Ctrl+H)
 	KeepHKOn_TT =	Пазете Hotkeys активира винаги
 	A_List_TT =	Изберете Макроса (Ctrl+1~0)
 	OSHK_TT =	Изберете Макроса
 	OSHKEd_TT =	Изберете Макроса
-	Duplicate_TT =	Дублиране на избраните редове (Ctrl+D)
-	Order_TT =	Преместване на избраните редове (Ctrl+PageUp / Ctrl+PageDown)
-	Cut_TT =	Нарежете избраните редове (Ctrl+X)
-	Copy_TT =	Копиране на избраните редове (Ctrl+C)
-	Paste_TT =	Поставете копирани редове (Ctrl+V)
-	Remove_TT =	Изтриване на избраните редове (Del)
-	Undo_TT =	Undo (Ctrl+Z)
-	Redo_TT =	Възстановяване (Ctrl+Y)
-	CopyTo_TT =	Копирайте...
-	Capt_TT =	Улавяне на ключови преси в този прозорец
-	OnScCtrl_TT =	Покажете Контролите Лентата С Инструменти
 	ApplyT_TT =	Нанесете
 	ApplyI_TT =	Нанесете
 	ApplyL_TT =	Поставете от кутия (Insert)
 	InsertKey_TT =	Вмъкнете Натискане На Клавиш (Ctrl+Insert)
 	InsertKeyT_TT =	Вмъкнете Натискане На Клавиш
-	EditButton_TT =	Редактирам (Enter)
-	PrevRefresh_TT =	Обнови (F5)
-	PrevCopy_TT =	Копирайте
 	OpenT_TT =	Open (Ctrl+O)
 	SaveT_TT =	Save (Ctrl+S)
 	CutT_TT =	Рязане
@@ -836,9 +795,6 @@
 	DefaultMacro_TT =	Изберете файл за зареждане на стартиране на програмата
 	VarCopyA_TT =	Копиране на текущите променливи съдържание
 	VarCopyB_TT =	Копиране на текущите променливи съдържание
-	FindReplace_TT =	Търсене / замяна (Ctrl+F)
-	EditComm_TT =	Редактиране Коментар (Ctrl+L)
-	EditColor_TT =	Edit цвят марка (Ctrl+M)
 	Reset_TT =	Ясно променливи съдържание
 	Screenshot_TT =	Направете Screenshot
 	ColorPick_TT =	Избор На Цвят
@@ -849,6 +805,8 @@
 	TransC_TT =	Прозрачен цвят
 	WScale_TT =	Ширина мащаб
 	HScale_TT =	Височина мащаб
+	Fast_TT =	Използва по-бързо търсене метод (препоръчително)
+	RGB_TT =	Предизвиква цвят, за да се интерпретира като стойност RGB вместо BGR
 	LoopLVColor_TT =	Кликнете, за да изберете цвят
 	IfLVColor_TT =	Кликнете, за да изберете цвят
 	RefreshIEW_TT =	Обнови списъка
@@ -886,6 +844,7 @@
 		се третират като модификатори (тези модификатори влияят
 		само следващия ключ): +, ^ #
 	)	
+	ComEvent_TT =	Скоростта, с която се изпращат клавиши се определя от ключова закъснение.
 	Clip_TT =	
 	(LTrim	
 		Временно използва клипборда да изпрати текста.

@@ -307,7 +307,7 @@
 	c_Lang066 =	Espera Clave
 	c_Lang067 =	Si se encuentra
 	c_Lang068 =	Si no se encuentra / Error
-	c_Lang069 =	* Coords almacenado `%FoundX`% / `%FoundY`%.
+	c_Lang069 =	Coords almacenado `%FoundX`%/`%FoundY`%.
 	c_Lang070 =	Coord
 	c_Lang071 =	Variaciones
 	c_Lang072 =	Previa
@@ -442,6 +442,8 @@
 	c_Lang202 =	Si el cuadro de mensaje
 	c_Lang203 =	Comparación de las variables
 	c_Lang204 =	Evaluar expresión
+	c_Lang205 =	Región
+	c_Lang206 =	Buscar
 		
 ; Other Windows		
 	t_Lang001 =	Exportar a AutoHotkey
@@ -761,28 +763,6 @@
 		Puede ejecutar funciones avanzadas tales como SUBSTR y RegExReplace de la ventana Funciones (Insertar > Si Declaraciones / variables / funciones). O ejecutar sus propias funciones de secuencias de comandos AutoHotkey externos.
 	)	
 ; Tooltips		
-	NewB_TT =	Nuevo (Ctrl+N)
-	OpenB_TT =	Abrir (Ctrl+O)
-	SaveB_TT =	Guardar (Ctrl+S)
-	ExportB_TT =	Exportar a AHK (Ctrl+E)
-	PreviewB_TT =	Previa de Guión (Ctrl+P)
-	OptionsB_TT =	Configuración (Ctrl+G)
-	RecordB_TT =	Record Macro (Ctrl+R)
-	StartB_TT =	Activar Macros (Ctrl+Enter)
-	TestRun_TT =	Reproducir macro actual (Ctrl+Shift+Enter)
-	RunTimer_TT =	Timer (Ctrl+Shift+T)
-	MouseB_TT =	Mouse (F2)
-	TextB_TT =	Texto (F3)
-	SpecialB_TT =	Teclas especiales
-	ControlB_TT =	Control (F4)
-	PauseB_TT =	Pausa (F5) / Mensaje (Shift+F5) / Espera Clave (Control+F5) 
-	WindowB_TT =	Ventana (F6)
-	ImageB_TT =	Imagen / Tamaño de píxel Search (F7)
-	RunB_TT =	Ejecutar / Archivo / String / Misc. (F8)
-	ComLoopB_TT =	Loop (F9) / Ir a (Shift+F9) / Etiqueta (Ctrl+F9)
-	IfStB_TT =	Si Declaraciones (F10) / Variables (Shift+F10) / Funciones (Ctrl+F10)
-	IEComB_TT =	Internet Explorer (F11) / COM Interface (Shift+F11) / Executar Scriptlet (Ctrl+F11)
-	SendMsgB_TT =	Mensajes de Windows (F12)
 	AutoKey_TT =	Tecla de acceso directo para jugar Macro
 	ManKey_TT =	Tecla de acceso directo para jugar Macro "paso a paso"
 	AbortKey_TT =	Hotkey para detener la reproducción
@@ -795,38 +775,17 @@
 		opciones de apagado
 		Cuando finalice la reproducción...
 	)	
-	Win1_TT =	Agregue la clave de Windows como modificador
-	JoyHK_TT =	Palanca de mando
 	ReptC_TT =	0 = infinito
-	TabPlus_TT =	Añadir Macro (Ctrl+T)
-	TabClose_TT =	Cerrar Macro (Ctrl+W)
-	DuplicateL_TT =	Duplicar macro (Ctrl+Shift+D)
-	SaveC_TT =	Guardar macro actual (Ctrl+Alt+S)
-	ImportB_TT =	Importación Macro (Ctrl+I)
 	IfDirB_TT =	Hacer Hotkeys funcionar dependiendo del tipo`nde ventana activa o existe (Ctrl+H)
 	KeepHKOn_TT =	Mantenga siempre se activa Teclas de acceso directo
 	A_List_TT =	Seleccione Macro (Ctrl+1~0)
 	OSHK_TT =	Seleccione Macro
 	OSHKEd_TT =	Seleccione Macro
-	Duplicate_TT =	Duplicar filas seleccionadas (Ctrl+D)
-	Order_TT =	Mover filas seleccionadas (Ctrl+RePág / Ctrl+AvPág)
-	Cut_TT =	Cortar filas seleccionadas (Ctrl+X)
-	Copy_TT =	Copia las filas seleccionadas (Ctrl+C)
-	Paste_TT =	Pegar Filas copiadas (Ctrl+V)
-	Remove_TT =	Eliminar filas seleccionadas (Del)
-	Undo_TT =	Deshacer (Ctrl+Z)
-	Redo_TT =	Rehacer (Ctrl+Y)
-	CopyTo_TT =	Copiar a...
-	Capt_TT =	Capturar pulsaciones de teclas en esta ventana
-	OnScCtrl_TT =	Mostrar Los Controles De La Barra De Herramientas
 	ApplyT_TT =	Aplicar
 	ApplyI_TT =	Aplicar
 	ApplyL_TT =	Inserte de Caja (Insert)
 	InsertKey_TT =	Insertar Pulsaciones (Ctrl+Insert)
 	InsertKeyT_TT =	Insertar Pulsaciones
-	EditButton_TT =	Editar (Enter)
-	PrevRefresh_TT =	Refrescar (F5)
-	PrevCopy_TT =	Copiar
 	OpenT_TT =	Abrir (Ctrl+O)
 	SaveT_TT =	Guardar (Ctrl+S)
 	CutT_TT =	Cortar
@@ -836,9 +795,6 @@
 	DefaultMacro_TT =	Seleccione archivo para cargar en el programa de puesta en marcha
 	VarCopyA_TT =	Copie los contenidos actuales de las variables
 	VarCopyB_TT =	Copie los contenidos actuales de las variables
-	FindReplace_TT =	Buscar / Reemplazar (Ctrl+F)
-	EditComm_TT =	Editar comentario (Ctrl+L)
-	EditColor_TT =	Editar marca de color (Ctrl+M)
 	Reset_TT =	Borrar contenido de la variable
 	Screenshot_TT =	Captura de Pantalla
 	ColorPick_TT =	Selector de Color
@@ -849,6 +805,8 @@
 	TransC_TT =	Color transparente
 	WScale_TT =	Escala Ancho
 	HScale_TT =	Escala de altura
+	Fast_TT =	Utiliza un método de búsqueda más rápido (recomendado)
+	RGB_TT =	Hace que el color debe interpretarse como un valor en lugar de BGR RGB
 	LoopLVColor_TT =	Haga clic para seleccionar un color
 	IfLVColor_TT =	Haga clic para seleccionar un color
 	RefreshIEW_TT =	Recargar lista
@@ -886,6 +844,7 @@
 		se tratan como modificadores (estos modificadores afecta
 		sólo la clave siguiente):, +, ^, #
 	)	
+	ComEvent_TT =	La velocidad a la que se envían las pulsaciones de teclado se determina por el retraso clave.
 	Clip_TT =	
 	(LTrim	
 		Temporalmente Portapapeles utiliza para enviar el texto.

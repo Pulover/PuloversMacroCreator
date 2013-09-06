@@ -307,7 +307,7 @@
 	c_Lang066 =	Nyckel Vänta
 	c_Lang067 =	Om den finns
 	c_Lang068 =	Om den inte hittas / Fel
-	c_Lang069 =	* Coords lagras `%FoundX`% / `%FoundY`%.
+	c_Lang069 =	Coords lagras `%FoundX`%/`%FoundY`%.
 	c_Lang070 =	Coord
 	c_Lang071 =	Variationer
 	c_Lang072 =	Förhandsgranska
@@ -442,6 +442,8 @@
 	c_Lang202 =	Om meddelandet box
 	c_Lang203 =	Jämför variabler
 	c_Lang204 =	Utvärdera uttryck
+	c_Lang205 =	Region
+	c_Lang206 =	Sök
 		
 ; Other Windows		
 	t_Lang001 =	Exportera till AutoHotkey
@@ -761,28 +763,6 @@
 		Du kan köra avancerade funktioner såsom SUBSTR och RegExReplace från funktionsfönstret (Sätt> Om Uttalanden / variabler / funktioner). Eller köra egna funktioner från externa AutoHotkey skript.
 	)	
 ; Tooltips		
-	NewB_TT =	Ny (Ctrl+N)
-	OpenB_TT =	Öppna (Ctrl+O)
-	SaveB_TT =	Spara (Ctrl+S)
-	ExportB_TT =	Exportera till AHK (Ctrl+E)
-	PreviewB_TT =	Förhandsgranska Script (Ctrl+P)
-	OptionsB_TT =	Inställningar (Ctrl+G)
-	RecordB_TT =	Spela in makro (Ctrl+R)
-	StartB_TT =	Aktivera makron (Ctrl+Enter)
-	TestRun_TT =	Spela Aktuell Makro (Ctrl+Skift+Enter)
-	RunTimer_TT =	Timer (Ctrl+Skift+T)
-	MouseB_TT =	Mus (F2)
-	TextB_TT =	Text (F3)
-	SpecialB_TT =	Specialtangenter
-	ControlB_TT =	Kontroll (F4)
-	PauseB_TT =	Paus (F5) / Meddelande (Shift+F5) / Nyckel Vänta (Control+F5) 
-	WindowB_TT =	Fönster (F6)
-	ImageB_TT =	Bild / Pixel Sök (F7)
-	RunB_TT =	Kör / Arkiv / String / Misc. (F8)
-	ComLoopB_TT =	Loop (F9) / Gå (Shift+F9) / Etikett (Ctrl+F9)
-	IfStB_TT =	Om rapporter (F10) / variabler (Shift+F10) / Funktioner (Ctrl+F10)
-	IEComB_TT =	Internet Explorer (F11) / COM-gränssnitt (Skift+F11) / Kör Skriptlet (Ctrl+F11)
-	SendMsgB_TT =	Windows-meddelanden (F12)
 	AutoKey_TT =	Snabbknappen till spela Makro
 	ManKey_TT =	Snabbknappen till spela Macro "steg-för-steg"
 	AbortKey_TT =	Hotkey för att stoppa uppspelningen
@@ -795,38 +775,17 @@
 		avstängningsalternativen
 		När uppspelningen slutar...
 	)	
-	Win1_TT =	Lägg till Windows-tangenten som modifierare
-	JoyHK_TT =	Joystick
 	ReptC_TT =	0 = oändlig
-	TabPlus_TT =	Lägg Makro (Ctrl+T)
-	TabClose_TT =	Stäng Makro (Ctrl+W)
-	DuplicateL_TT =	Duplicera makro (Ctrl+Skift+D)
-	SaveC_TT =	Spara Aktuell Makro (Ctrl+Alt+S)
-	ImportB_TT =	Importera Makro (Ctrl+I)
 	IfDirB_TT =	Gör Snabbtangenter fungerar beroende på`ntyp av fönster som är aktivt eller existerar (Ctrl+H)
 	KeepHKOn_TT =	Håll snabbtangenter alltid aktiverat
 	A_List_TT =	Välj Makro (Ctrl+1~0)
 	OSHK_TT =	Välj Makro
 	OSHKEd_TT =	Välj Makro
-	Duplicate_TT =	Duplicera markerade rader (Ctrl+D)
-	Order_TT =	Flytta markerade rader (Ctrl+PageUp / Ctrl+Page Down)
-	Cut_TT =	Klippa ut markerad rader (Ctrl+X)
-	Copy_TT =	Kopiera valda rader (Ctrl+C)
-	Paste_TT =	Klistra in kopierad rader (Ctrl+V)
-	Remove_TT =	Ta bort markerade rader (DEL)
-	Undo_TT =	Ångra (Ctrl+Z)
-	Redo_TT =	Gör om (Ctrl+Y)
-	CopyTo_TT =	Kopiera till...
-	Capt_TT =	Fånga tangenttryckningar i detta fönster
-	OnScCtrl_TT =	Näyttösäädöt Työkalurivi
 	ApplyT_TT =	Ansök
 	ApplyI_TT =	Ansök
 	ApplyL_TT =	Infoga från rutan (Insert)
 	InsertKey_TT =	Infoga Tangenttryckning (Ctrl+Insert)
 	InsertKeyT_TT =	Infoga Tangenttryckning
-	EditButton_TT =	Redigera (Enter)
-	PrevRefresh_TT =	Updatera (F5)
-	PrevCopy_TT =	Kopiera
 	OpenT_TT =	Öppna (Ctrl+O)
 	SaveT_TT =	Spara (Ctrl+S)
 	CutT_TT =	Klipp
@@ -836,9 +795,6 @@
 	DefaultMacro_TT =	Välj fil att ladda om programmet startar
 	VarCopyA_TT =	Kopiera befintliga variabla innehåll
 	VarCopyB_TT =	Kopiera befintliga variabla innehåll
-	FindReplace_TT =	Sök / Ersätt (Ctrl+F)
-	EditComm_TT =	Redigera kommentar (Ctrl+L)
-	EditColor_TT =	Redigera färgmarkering (Ctrl+M)
 	Reset_TT =	För tydliga varierande innehåll
 	Screenshot_TT =	Gör Skärmdump
 	ColorPick_TT =	Färgväljaren
@@ -849,6 +805,8 @@
 	TransC_TT =	Transparent färg
 	WScale_TT =	Bredd skala
 	HScale_TT =	Höjd skala
+	Fast_TT =	Använder en snabbare sökning metod (rekommenderas)
+	RGB_TT =	Orsaker färg tolkas som ett RGB-värde istället för BGR
 	LoopLVColor_TT =	Klicka här för att välja en färg
 	IfLVColor_TT =	Klicka här för att välja en färg
 	RefreshIEW_TT =	Uppdatera lista
@@ -886,6 +844,7 @@
 		behandlas som modifierare (dessa modifierare påverkar
 		endast mycket nästa tangent):, +, ^, #
 	)	
+	ComEvent_TT =	Den hastighet med vilken tangenttryckningar sänds bestäms av nyckel fördröjning.
 	Clip_TT =	
 	(LTrim	
 		Tillfälligt använder Urklipp för att skicka texten.

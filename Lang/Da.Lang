@@ -307,7 +307,7 @@
 	c_Lang066 =	Nøgle Vente
 	c_Lang067 =	Hvis der konstateres
 	c_Lang068 =	Hvis den ikke findes / Error
-	c_Lang069 =	* Koordinater gemt på `%FoundX`% / `%FoundY`%.
+	c_Lang069 =	Koordinater gemt på `%FoundX`%/`%FoundY`%.
 	c_Lang070 =	Coord
 	c_Lang071 =	Variationer
 	c_Lang072 =	Eksempel
@@ -442,6 +442,8 @@
 	c_Lang202 =	Hvis besked boks
 	c_Lang203 =	Sammenlign variabler
 	c_Lang204 =	Evaluer udtryk
+	c_Lang205 =	Region
+	c_Lang206 =	Søg
 		
 ; Other Windows		
 	t_Lang001 =	Eksporter til AutoHotkey
@@ -761,28 +763,6 @@
 		Du kan køre avancerede funktioner såsom SUBSTR og RegExReplace fra Funktioner vindue (Indsæt > Hvis Statements / variable / funktioner). Eller køre dine egne funktioner fra eksterne AutoHotkey scripts.
 	)	
 ; Tooltips		
-	NewB_TT =	Ny (Ctrl+N)
-	OpenB_TT =	Åbn (Ctrl+O)
-	SaveB_TT =	Gem (Ctrl+S)
-	ExportB_TT =	Eksporter til AHK (Ctrl+E)
-	PreviewB_TT =	Eksempel Script (Ctrl+P)
-	OptionsB_TT =	Indstillinger (Ctrl+G)
-	RecordB_TT =	Indspil makro (Ctrl+R)
-	StartB_TT =	Aktivér Makroer (Ctrl+Enter)
-	TestRun_TT =	Afspil aktuelle Makro (Ctrl+Shift+Enter)
-	RunTimer_TT =	Timer (Ctrl+Shift+T)
-	MouseB_TT =	Mus (F2)
-	TextB_TT =	Tekst (F3)
-	SpecialB_TT =	Særlige Keys
-	ControlB_TT =	Control (F4)
-	PauseB_TT =	Pause (F5) / Besked (Shift+F5) / Nøgle Vente (Control+F5) 
-	WindowB_TT =	Window (F6)
-	ImageB_TT =	Billede / Pixel Søg (F7)
-	RunB_TT =	Run / File / String / Misc. (F8)
-	ComLoopB_TT =	Loop (F9) / Goto (Shift+F9) / Label (Ctrl+F9)
-	IfStB_TT =	Hvis Erklæringer (F10) / variabler (Shift+F10) / Funktioner (Ctrl+F10)
-	IEComB_TT =	Internet Explorer (F11) / COM Interface (Shift+F11) / Kør Scriptlet (Ctrl+F11)
-	SendMsgB_TT =	Windows Messages (F12)
 	AutoKey_TT =	Genvejstast for at spille Macro
 	ManKey_TT =	Genvejstast for at spille Macro "step-by-step"
 	AbortKey_TT =	Genvejstast for at stoppe afspilningen
@@ -795,38 +775,17 @@
 		nedlukningsvalgmulighederne
 		Når afspilningen er færdig...
 	)	
-	Win1_TT =	Tilføj på Windows-tasten som modifier
-	JoyHK_TT =	Joystick
 	ReptC_TT =	0 = uendelig
-	TabPlus_TT =	Tilføj Makro (Ctrl+T)
-	TabClose_TT =	Luk Makro (Ctrl+W)
-	DuplicateL_TT =	Dublet Makro (Ctrl+Shift+D)
-	SaveC_TT =	Gem aktuelt Makro (Ctrl+Alt+S)
-	ImportB_TT =	Import Makro (Ctrl+I)
 	IfDirB_TT =	Gør genvejstaster arbejde afhængigt`ntype vindue, der er aktiv eller eksisterer (Ctrl+H)
 	KeepHKOn_TT =	Hold Hotkeys altid aktiveret
 	A_List_TT =	Vælge Macro (Ctrl+1~0)
 	OSHK_TT =	Vælge Macro
 	OSHKEd_TT =	Vælge Macro
-	Duplicate_TT =	Kopier de valgte rækker (Ctrl+D)
-	Order_TT =	Flyt valgte rækker (Ctrl+PageUp / Ctrl+PageDown)
-	Cut_TT =	Klip markerede rækker (Ctrl+X)
-	Copy_TT =	Kopiér markerede rækker (Ctrl+C)
-	Paste_TT =	Indsætte kopieret Rækker (Ctrl+V)
-	Remove_TT =	Slet markerede rækker (DEL)
-	Undo_TT =	Fortryd (Ctrl+Z)
-	Redo_TT =	Redo (Ctrl+Y)
-	CopyTo_TT =	Kopier til...
-	Capt_TT =	Capture tastetryk i dette vindue
-	OnScCtrl_TT =	Vise Kontroller Værktøjslinje
 	ApplyT_TT =	Anvend
 	ApplyI_TT =	Anvend
 	ApplyL_TT =	Indsæt fra kassen (Insert)
 	InsertKey_TT =	Indsæt Tastetryk (Ctrl+Insert)
 	InsertKeyT_TT =	Indsæt Tastetryk
-	EditButton_TT =	Rediger (Enter)
-	PrevRefresh_TT =	Opdater (F5)
-	PrevCopy_TT =	Kopiér
 	OpenT_TT =	Åbn (Ctrl+O)
 	SaveT_TT =	Gem (Ctrl+S)
 	CutT_TT =	Klip
@@ -836,9 +795,6 @@
 	DefaultMacro_TT =	Vælg fil at indlæse på programmet starter op
 	VarCopyA_TT =	Kopier nuværende variable indhold
 	VarCopyB_TT =	Kopier nuværende variable indhold
-	FindReplace_TT =	Find / Erstat (Ctrl+F)
-	EditComm_TT =	Rediger kommentar (Ctrl+L)
-	EditColor_TT =	Edit farvemærke (Ctrl+M)
 	Reset_TT =	Ryd variable indhold
 	Screenshot_TT =	Gør Screenshot
 	ColorPick_TT =	Farvevælgeren
@@ -849,6 +805,8 @@
 	TransC_TT =	Gennemsigtig farve
 	WScale_TT =	Bredde skala
 	HScale_TT =	Højde skala
+	Fast_TT =	Bruger en hurtigere søgemetode (anbefales)
+	RGB_TT =	Årsager farve, der skal fortolkes som en RGB-værdi i stedet for BGR
 	LoopLVColor_TT =	Klik for at vælge en farve
 	IfLVColor_TT =	Klik for at vælge en farve
 	RefreshIEW_TT =	Refresh List
@@ -886,6 +844,7 @@
 		behandles som modifikatorer (disse modifikatorer påvirker
 		kun den meget næste tast):!, +, ^, #
 	)	
+	ComEvent_TT =	Den hastighed, hvormed tastetryk sendes bestemmes af centrale forsinkelse.
 	Clip_TT =	
 	(LTrim	
 		Midlertidigt bruger Udklipsholder til at sende teksten.

@@ -307,7 +307,7 @@
 	c_Lang066 =	Ključ Čekati
 	c_Lang067 =	Ako se utvrdi da
 	c_Lang068 =	Ako nije pronađen Greška /
-	c_Lang069 =	* Coords pohranjeni FoundX u `%FoundX`% / `%FoundY`%.
+	c_Lang069 =	Coords pohranjeni FoundX u `%FoundX`%/`%FoundY`%.
 	c_Lang070 =	Coord
 	c_Lang071 =	Varijacije
 	c_Lang072 =	Pregled
@@ -442,6 +442,8 @@
 	c_Lang202 =	Ako porukom
 	c_Lang203 =	Usporedi varijable
 	c_Lang204 =	Procijenite izraz
+	c_Lang205 =	Regija
+	c_Lang206 =	Traži
 		
 ; Other Windows		
 	t_Lang001 =	Izvoz u AutoHotkey
@@ -761,28 +763,6 @@
 		Podeu executar funcions avançades com ara substr i RegExReplace de la finestra Funcions (Inserir > Si Declaracions / variables / funcions). O executar les seves pròpies funcions de seqüència AutoHotkey externs.
 	)	
 ; Tooltips		
-	NewB_TT =	New (Ctrl+N)
-	OpenB_TT =	Open (Ctrl+O)
-	SaveB_TT =	Spremi (Ctrl+S)
-	ExportB_TT =	Izvoz u AHK (Ctrl+E)
-	PreviewB_TT =	Prikaz Skripta (Ctrl+P)
-	OptionsB_TT =	Postavke (Ctrl+G)
-	RecordB_TT =	Zapis Makro (Ctrl+R)
-	StartB_TT =	Aktivirajte Makro (Ctrl+Enter)
-	TestRun_TT =	Igrajte Trenutna Macro (Ctrl+Shift+Enter)
-	RunTimer_TT =	Timer (Ctrl+Shift+T)
-	MouseB_TT =	Miš (F2)
-	TextB_TT =	Tekst (F3)
-	SpecialB_TT =	Posebne tipke
-	ControlB_TT =	Kontrola (F4)
-	PauseB_TT =	Pauza (F5) / Poruka (Shift+F5) / Ključ Čekati (Control+F5) 
-	WindowB_TT =	Prozor (F6)
-	ImageB_TT =	Slika / Pixel pretrage (F7)
-	RunB_TT =	Trčanje / File / String / Razno. (F8)
-	ComLoopB_TT =	Petlja (F9) / Goto (Shift+F9) / oznaka (Ctrl+F9)
-	IfStB_TT =	Ako izvještaji (F10) / varijable (Shift+F10) / funkcija (Ctrl+F10)
-	IEComB_TT =	Internet Explorer (F11) / COM sučelja (Shift+F11) / Trčanje Scriptlet (Ctrl+F11)
-	SendMsgB_TT =	Windows Poruke (F12)
 	AutoKey_TT =	Hotkey igrati Macro
 	ManKey_TT =	Hotkey igrati Makro "korak po korak"
 	AbortKey_TT =	Prečac za zaustavljanje
@@ -795,38 +775,17 @@
 		shutdown opcije
 		Kad reprodukcija završi...
 	)	
-	Win1_TT =	Dodaj Windows tipku za izmjenu
-	JoyHK_TT =	Džojstik
 	ReptC_TT =	0 = beskonačno
-	TabPlus_TT =	Dodaj Macro (Ctrl+T)
-	TabClose_TT =	Makro Close (Ctrl+W)
-	DuplicateL_TT =	Dvostruki Macro (Ctrl+Shift+D)
-	SaveC_TT =	Spremi Trenutni Macro (Ctrl+Alt+S)
-	ImportB_TT =	Uvoz Makro (Ctrl+I)
 	IfDirB_TT =	Provjerite Hotkeys raditi ovisno o `nType od prozora koji je aktivan ili ne postoji (Ctrl+H)
 	KeepHKOn_TT =	Hotkeys Uvijek držite Aktiviran
 	A_List_TT =	Odabir Makro (Ctrl+1~0)
 	OSHK_TT =	Odabir Makro
 	OSHKEd_TT =	Odabir Makro
-	Duplicate_TT =	Dvostruki odabrane retke (Ctrl+D)
-	Order_TT =	Premještanje odabrane retke (Ctrl+PageUp / Ctrl+PageDown)
-	Cut_TT =	Odabrani Redovi Cut (Ctrl+X)
-	Copy_TT =	Kopirajte odabrane retke (Ctrl+C)
-	Paste_TT =	Kopirano Redovi paste (Ctrl+V)
-	Remove_TT =	Izbriši odabrane retke (Del)
-	Undo_TT =	Poništi (Ctrl+Z)
-	Redo_TT =	Ponovi (Ctrl+Y)
-	CopyTo_TT =	Kopirajte se...
-	Capt_TT =	Hvatanje pritiskanje tipki u ovom prozoru
-	OnScCtrl_TT =	Prikazali Kontrole Traci
 	ApplyT_TT =	Primijeniti
 	ApplyI_TT =	Primijeniti
 	ApplyL_TT =	Stavite na kutiji (Insert)
 	InsertKey_TT =	Umetnite Pritisak Na Tipku (Ctrl+Insert)
 	InsertKeyT_TT =	Umetnite Pritisak Na Tipku
-	EditButton_TT =	Uredi (Enter)
-	PrevRefresh_TT =	Refresh (F5)
-	PrevCopy_TT =	Kopirajte
 	OpenT_TT =	Open (Ctrl+O)
 	SaveT_TT =	Spremi (Ctrl+S)
 	CutT_TT =	Rezati
@@ -836,9 +795,6 @@
 	DefaultMacro_TT =	Odabir datoteke za učitavanje na start up programa
 	VarCopyA_TT =	Kopirajte trenutne varijabilne sadržaj
 	VarCopyB_TT =	Kopirajte trenutne varijabilne sadržaj
-	FindReplace_TT =	Pronađi / Zamijeni (Ctrl+F)
-	EditComm_TT =	Uredi komentar (Ctrl+L)
-	EditColor_TT =	Uredi Boja oznaka (Ctrl+M)
 	Reset_TT =	Vedro promjenjivi sadržaj
 	Screenshot_TT =	Provjerite Screenshot
 	ColorPick_TT =	Boja Berač
@@ -849,6 +805,8 @@
 	TransC_TT =	Prozirna boja
 	WScale_TT =	Širina razmjera
 	HScale_TT =	Visina razmjera
+	Fast_TT =	Koristi se brže pretraživanje metodu (preporučeno)
+	RGB_TT =	Uzroci boju treba tumačiti kao RGB vrijednosti umjesto BGR
 	LoopLVColor_TT =	Kliknite da odaberete boju
 	IfLVColor_TT =	Kliknite da odaberete boju
 	RefreshIEW_TT =	Osvježi popis
@@ -886,6 +844,7 @@
 		su liječeni su modifikatori (ovi parametri utjecati
 		Samo vrlo sljedeći ključ)!, +, ^, #
 	)	
+	ComEvent_TT =	Stopa po kojoj tipke su poslani određuje ključne zakašnjenjem.
 	Clip_TT =	
 	(LTrim	
 		Privremeno koristi međuspremnik poslati tekst.

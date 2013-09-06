@@ -307,7 +307,7 @@
 	c_Lang066 =	キー待ち
 	c_Lang067 =	見つけたら
 	c_Lang068 =	/エラーが見つからない場合
-	c_Lang069 =	* COORDSは、 `%FoundX`% / `%FoundY`%に格納されている。
+	c_Lang069 =	COORDSは、 `%FoundX`%/`%FoundY`%に格納されている。
 	c_Lang070 =	座標
 	c_Lang071 =	バリエーション
 	c_Lang072 =	プレビュー
@@ -442,6 +442,8 @@
 	c_Lang202 =	Якщо вікно повідомлення
 	c_Lang203 =	Порівняйте змінних
 	c_Lang204 =	Обчислення виразу...
+	c_Lang205 =	地域
+	c_Lang206 =	検索
 		
 ; Other Windows		
 	t_Lang001 =	AutoHotkeyにエクスポート
@@ -761,28 +763,6 @@
 		このような機能ウィンドウ（文/変数/関数場合 >を挿入します）からは、SUBSTRとRegExReplaceなどの高度な機能を実行することができます。または外部AutoHotkeyをスクリプトから独自の関数を実行します。
 	)	
 ; Tooltips		
-	NewB_TT =	新規作成（Ctrl+Nキー）
-	OpenB_TT =	開く（Ctrl+Oキー）
-	SaveB_TT =	保存（Ctrl+S）
-	ExportB_TT =	AHKにエクスポート（CTRL+E）
-	PreviewB_TT =	プレビュースクリプト（Ctrl+P）を
-	OptionsB_TT =	設定（Ctrl+Gキー）
-	RecordB_TT =	マクロの記録（CTRL+R）
-	StartB_TT =	アクティベートマクロ（Ctrl+Enterキー）
-	TestRun_TT =	現在のマクロを再生します（Ctrl+Shift+Enter）
-	RunTimer_TT =	タイマー（Ctrl+Shift+Tを）
-	MouseB_TT =	マウス（F2）
-	TextB_TT =	テキスト（F3）
-	SpecialB_TT =	特殊キー
-	ControlB_TT =	コントロール（F4）
-	PauseB_TT =	一時停止 （F5） / メッセージ （Shift+F5） / キー待ち （Control+F5）
-	WindowB_TT =	ウィンドウ（F6）
-	ImageB_TT =	イメージ/ピクセル検索（F7）
-	RunB_TT =	ファイル/文字列/その他/実行します。 （F8）
-	ComLoopB_TT =	ループ（F9）/後藤（+ F9キーをシフト）/ラベル（Ctrlキーを押しながらF9キー）
-	IfStB_TT =	Ifステートメント（F10）/変数/関数の（Ctrl+F10）（+ F10キー、Shiftキーを押しながら）
-	IEComB_TT =	インターネットエクスプローラ（F11）/ COMインタフェース（Shift+F11）を / スクリプトレットを実行 (Ctrl+F11)
-	SendMsgB_TT =	Windowsメッセージ（F12）
 	AutoKey_TT =	ホットキーマクロを再生する
 	ManKey_TT =	ホットキーは、マクロの"ステップバイステップ"を再生する
 	AbortKey_TT =	ホットキーは、再生を停止する
@@ -795,38 +775,17 @@
 		シャットダウンオプション
 		再生が終了すると...
 	)	
-	Win1_TT =	モディファイアとして、Windowsキーを追加
-	JoyHK_TT =	ジョイスティック
 	ReptC_TT =	0 =無限大
-	TabPlus_TT =	マクロを追加します（Ctrl+T）
-	TabClose_TT =	閉じるマクロ（Ctrl+Wを）
-	DuplicateL_TT =	マクロを複製（Ctrl+Shiftキー+ D）
-	SaveC_TT =	現在のマクロを保存します（Ctrl+Alt+Sキー）
-	ImportB_TT =	インポートマクロ（Ctrl+Iキー）
 	IfDirB_TT =	ホットキーがアクティブであるか、または存在します（Ctrl+H）ウィンドウの_のタイプに応じて動作させる
 	KeepHKOn_TT =	ホットキーは常​​に有効に保つ
 	A_List_TT =	マクロを選択（Ctrl+1~0）
 	OSHK_TT =	マクロを選択
 	OSHKEd_TT =	マクロを選択
-	Duplicate_TT =	選択した行を複製（Ctrl+Dキー）
-	Order_TT =	選択した行を移動します（Ctrl+PageUpキー/ Ctrlキーを押しながらPageDownキー）
-	Cut_TT =	[選択した行の（Ctrl+X）をカット
-	Copy_TT =	[選択した行の（Ctrl+C）をコピーします
-	Paste_TT =	コピーした行を選択（Ctrl+V）を貼り付け
-	Remove_TT =	[選択した行（デル）を削除
-	Undo_TT =	元に戻す（Ctrl+Z）を
-	Redo_TT =	やり直し（Ctrl+Y）
-	CopyTo_TT =	にコピーして...
-	Capt_TT =	このウィンドウでのキー押下を捕捉する
-	OnScCtrl_TT =	ツールバーコントロールを表示
 	ApplyT_TT =	適用する
 	ApplyI_TT =	適用する
 	ApplyL_TT =	ボックスから挿入（Insert）
 	InsertKey_TT =	キーストロークを挿入 (Ctrl+Insert)
 	InsertKeyT_TT =	キーストロークを挿入
-	EditButton_TT =	編集（Enter）
-	PrevRefresh_TT =	リフレッシュ（F5）
-	PrevCopy_TT =	コピー
 	OpenT_TT =	開く（Ctrl+Oキー）
 	SaveT_TT =	保存（Ctrl+S）
 	CutT_TT =	カット
@@ -836,9 +795,6 @@
 	DefaultMacro_TT =	起動プログラムにロードするファイルを選択します
 	VarCopyA_TT =	現在の変数の内容をコピーします
 	VarCopyB_TT =	現在の変数の内容をコピーします
-	FindReplace_TT =	検索/置換（Ctrl+F）を
-	EditComm_TT =	コメントを編集（Ctrl+L）を
-	EditColor_TT =	編集色マーク（Ctrl+M）を
 	Reset_TT =	クリア変数の内容
 	Screenshot_TT =	スクリーンを作る
 	ColorPick_TT =	カラーピッカー
@@ -849,6 +805,8 @@
 	TransC_TT =	透明色
 	WScale_TT =	幅スケール
 	HScale_TT =	高さスケール
+	Fast_TT =	高速な探索方法（推奨）を使用してい
+	RGB_TT =	代わりにBGRのRGB値として解釈されるように色を引き起こす
 	LoopLVColor_TT =	色を選択するためにクリック
 	IfLVColor_TT =	色を選択するためにクリック
 	RefreshIEW_TT =	リストのリフレッシュ
@@ -886,6 +844,7 @@
 		修飾子（これらの修飾子が影響として扱われます。
 		唯一の非常に次のキー）：+、^、＃
 	)	
+	ComEvent_TT =	キーストロークが送信される速度は、キー遅延によって決定される。
 	Clip_TT =	
 	(LTrim	
 		一時的にテキストを送信するためにクリップボードを使用しています。
