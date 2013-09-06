@@ -879,14 +879,14 @@ DoAction(X, Y, Action1, Action2, Coord, Error)
 		If (Action1 = "Move")
 		{
 			Click, %X%, %Y%, 0
-			return
+			return ""
 		}
 		If InStr(Action1, "Click")
 		{
 			Loop, Parse, Action1, %A_Space%
 				Act%A_Index% := A_LoopField
 			Click, %X%, %Y% %Act1%, 1
-			return
+			return ""
 		}
 		Else
 			return Action1

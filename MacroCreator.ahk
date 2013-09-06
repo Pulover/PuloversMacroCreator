@@ -5610,7 +5610,6 @@ If (s_Caller = "Edit")
 	}
 	If (Type = cType15)
 	{
-		OUTPUTDEBUG, % InStr(Det7, "RGB")
 		color := Det5, Fast := InStr(Det7, "Fast") ? 1 : 0, RGB := InStr(Det7, "RGB") ? 1 : 0
 		GuiControl, 19:, PixelS, 1
 		GuiControl, 19:Hide, PicPrev
@@ -8058,7 +8057,7 @@ If WinExist("ahk_id " PMCOSC)
 ShowControls:
 Menu, ViewMenu, Check, %v_lang004%`t%_s%Ctrl+B
 Menu, Tray, Check, %y_Lang003%
-Gui, 28:Show, % OSCPos (ShowProgBar ? "H40" : "H30") " W415 NoActivate", %AppName%
+Gui, 28:Show, % (ShowProgBar ? "H40" : "H30") " W415 NoActivate", %AppName%
 return
 
 BuildOSCWin:
@@ -10955,7 +10954,6 @@ ClearPars:
 Loop, 7
 	Par%A_Index% := ""
 ,	Det%A_Index% := ""
-,	Act%A_Index% := ""
 return
 
 ListVars:
@@ -12240,12 +12238,12 @@ Menu, OnFinish, Check, % w_Lang02%OnFinishCode%
 
 Menu, OnFinish, Show, %mX%, %mY%
 Menu, OnFinish, DeleteAll
+TB_Edit(TbSettings, "OnFinish", (OnFinishCode = 1) ? 0 : 1)
 return
 
 FinishOpt:
 OnFinishCode := A_ThisMenuItemPos
 SetFinishButtom:
-TB_Edit(TbSettings, "OnFinish", (OnFinishCode = 1) ? 0 : 1)
 return
 
 ;##### Languages: #####
