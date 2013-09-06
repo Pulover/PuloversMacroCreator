@@ -292,6 +292,8 @@
 		Preview - Previews the selected pixel to search.
 		Coord - Sets coordinate mode for the search to be relative to either the active window or the screen.
 		Variations - Specify for n a number between 0 and 255 (inclusive) to indicate the allowed number of shades of variation in either direction for the intensity of the red, green, and blue components of each pixel's color.
+		Fast - Uses a faster searching method that in most cases dramatically reduces the amount of CPU time used by the search.
+		RGB - Causes ColorID to be interpreted as an RGB value instead of BGR. This is the default format for the Color Picker and Search, unchecking this option will cause their values to be reversed during search.
 		Break loop if found - When setting more then 1 loop in the *Repeat* field, this option will break the loop if the image is found right after executing the selected action.
 
 	Remarks:

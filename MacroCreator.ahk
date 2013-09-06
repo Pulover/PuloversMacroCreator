@@ -8786,12 +8786,12 @@ Gui, 1:Submit, NoHide
 Gui, chMacro:Default
 If (A_GuiControl = "InsertKeyT")
 {
-	Gui, 7:+owner8 -MinimizeBox +Delimiter¢
+	Gui, 7:+owner8 +ToolWindow +Delimiter¢
 	InsertToText := True
 }
 Else
 {
-	Gui, 7:+owner1 -MinimizeBox +Delimiter¢
+	Gui, 7:+owner1 +ToolWindow +Delimiter¢
 	InsertToText := False
 }
 Gui, 7:Add, Groupbox, Section W360 H240
@@ -9539,7 +9539,7 @@ If (cChild <> hAutoKey)
 return
 
 SetWin:
-Gui, 16:+owner1 +ToolWindow +HwndCmdWin
+Gui, 16:+owner1 -MinimizeBox +HwndCmdWin
 Gui, chMacro:Default
 Gui, 1:+Disabled
 Gui, 16:Add, Groupbox, W450 H75
