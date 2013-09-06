@@ -4132,7 +4132,8 @@ If (s_Caller = "Edit")
 	If ((Type = cType1) || (Type = cType2) || (Type = cType13))
 	{
 		GuiControl, 8:, ComText, 1
-		GuiControl, 8:Enable, ComEvent
+		If !InStr(Type, "Control")
+			GuiControl, 8:Enable, ComEvent
 		GuiControl, 8:Enable, InsertKeyT
 		SBShowTip((CSend ? "Control" : "") "Send")
 		If (Type = cType13)
@@ -12069,7 +12070,7 @@ Menu, EditMenu, Icon, %e_Lang008%`t%_s%Ctrl+C, %ResDllPath%, 8
 Menu, EditMenu, Icon, %e_Lang009%`t%_s%Ctrl+V, %ResDllPath%, 44
 Menu, EditMenu, Icon, %e_Lang010%`t%_s%Delete, %ResDllPath%, 10
 Menu, EditMenu, Icon, %e_Lang013%`t%_s%Insert, %ResDllPath%, 31
-Menu, EditMenu, Icon, %e_Lang014%`t%_s%Ctrl+Insert, %ResDllPath%, 92
+Menu, EditMenu, Icon, %e_Lang014%`t%_s%Ctrl+Insert, %ResDllPath%, 91
 Menu, EditMenu, Icon, %e_Lang011%`t%_s%Ctrl+PgUp, %ResDllPath%, 40
 Menu, EditMenu, Icon, %e_Lang012%`t%_s%Ctrl+PgDn, %ResDllPath%, 39
 Menu, MacroMenu, Icon, %r_Lang001%`t%_s%Ctrl+R, %ResDllPath%, 54
