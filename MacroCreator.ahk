@@ -1955,7 +1955,10 @@ Gui, 13:Add, Text, yp+3 x+10 , %t_Lang004%
 Gui, 13:Add, Button, Section Default -Wrap xm W75 H23 gExpEditOK, %c_Lang020%
 Gui, 13:Add, Button, -Wrap ys W75 H23 gExpEditCancel, %c_Lang021%
 Gui, 13:Add, Updown, ys x+60 W50 H20 Horz vExpSel gExpSelList Range0-1
-GuiControl, 13:ChooseString, Ex_AutoKey, %Ex_AutoKey%
+If InStr(KeybdList, Ex_AutoKey "¢")
+	GuiControl, 13:ChooseString, Ex_AutoKey, %Ex_AutoKey%
+Else
+	GuiControl, 13:, Ex_AutoKey, %Ex_AutoKey%¢¢
 Gui, 13:Show,, %w_Lang019%
 return
 
