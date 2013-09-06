@@ -797,7 +797,7 @@
 	VarCopyB_TT =	Copy current variable contents
 	Reset_TT =	Apagar conteúdo da variável
 	Screenshot_TT =	Capturar Imagem
-	ColorPick_TT =	Seletor de Cores
+	ColorPick_TT =	Buscar Pixel na Tela
 	PicPrev_TT =	Duplo-Clique para abrir a imagem
 	CoordPixel_TT =	Modo de coordenada
 	VariatT_TT =	Tons de variação

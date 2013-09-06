@@ -797,7 +797,7 @@
 	VarCopyB_TT =	現在の変数の内容をコピーします
 	Reset_TT =	クリア変数の内容
 	Screenshot_TT =	スクリーンを作る
-	ColorPick_TT =	カラーピッカー
+	ColorPick_TT =	画面上のピクセルを取得する
 	PicPrev_TT =	画像をダブルクリックして開き
 	CoordPixel_TT =	モードを調整
 	VariatT_TT =	バリエーションの色合い

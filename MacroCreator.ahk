@@ -5525,7 +5525,7 @@ Gui, 19:Add, Radio, -Wrap yp xs+140 W95 vPixelS gPixelS R1 Right, %c_Lang064%
 Gui, 19:Add, Button, -Wrap yp-1 xs+115 W25 H23 hwndScreenshot vScreenshot gScreenshot
 	ILButton(Screenshot, ResDllPath ":" 60)
 Gui, 19:Add, Button, -Wrap yp xs+240 W25 H23 hwndColorPick vColorPick gSearchImg Disabled
-	ILButton(ColorPick, ResDllPath ":" 3)
+	ILButton(ColorPick, ResDllPath ":" 100)
 Gui, 19:Add, Edit, y+5 xs+10 vImgFile W225 R1 -Multi
 Gui, 19:Add, Button, -Wrap yp-1 x+0 W30 H23 vSearchImg gSearchImg, ...
 Gui, 19:Add, Text, y+5 xs+10 W173 R1 Right, %c_Lang067%:

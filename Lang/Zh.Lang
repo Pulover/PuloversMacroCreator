@@ -797,7 +797,7 @@
 	VarCopyB_TT =	复制当前变量的内容
 	Reset_TT =	清除变量的内容
 	Screenshot_TT =	请截图
-	ColorPick_TT =	拾色器
+	ColorPick_TT =	获取屏幕上的像素
 	PicPrev_TT =	双击打开图片
 	CoordPixel_TT =	协调模式
 	VariatT_TT =	色调的变化

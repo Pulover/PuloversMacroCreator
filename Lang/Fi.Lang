@@ -797,7 +797,7 @@
 	VarCopyB_TT =	Kopioi nykyinen muuttujan sisältö
 	Reset_TT =	Tyhjennä muuttujan sisältö
 	Screenshot_TT =	Tee Screenshot
-	ColorPick_TT =	Värivaihtoehtojamme
+	ColorPick_TT =	Saada pikselin näytöllä
 	PicPrev_TT =	Kaksoisnapsauta Avaa Image
 	CoordPixel_TT =	Koordinoida tilassa
 	VariatT_TT =	Shades of vaihtelu

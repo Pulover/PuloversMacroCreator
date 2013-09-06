@@ -797,7 +797,7 @@
 	VarCopyB_TT =	Copiez le contenu des variables actuelles
 	Reset_TT =	Effacer le contenu des variables
 	Screenshot_TT =	Faire une capture d'écran
-	ColorPick_TT =	Sélecteur de Couleurs
+	ColorPick_TT =	Obtenir pixel à l'écran
 	PicPrev_TT =	Double-cliquez sur l'image pour ouvrir
 	CoordPixel_TT =	Mode coordonner
 	VariatT_TT =	Nuances de variation

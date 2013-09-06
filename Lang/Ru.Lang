@@ -797,7 +797,7 @@
 	VarCopyB_TT =	Скопировать содержимое текущей переменной
 	Reset_TT =	Очистить содержимое переменной
 	Screenshot_TT =	Сделать Скриншот
-	ColorPick_TT =	Color Picker
+	ColorPick_TT =	Получить пикселя на экране
 	PicPrev_TT =	Дважды щелкните, чтобы открыть изображение
 	CoordPixel_TT =	Координатный режим
 	VariatT_TT =	Оттенки изменения

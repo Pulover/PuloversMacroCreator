@@ -797,7 +797,7 @@
 	VarCopyB_TT =	현재 변수 내용을 복사
 	Reset_TT =	지우기 변수 내용
 	Screenshot_TT =	스크린 샷 만들기
-	ColorPick_TT =	색상 선택기
+	ColorPick_TT =	화면에 픽셀을
 	PicPrev_TT =	이미지를 열려면 두 번 클릭하십시오
 	CoordPixel_TT =	모드를 조정
 	VariatT_TT =	변화의 그늘
