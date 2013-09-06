@@ -573,7 +573,7 @@ Menu, LangMenu, Check, % Lang_%Lang%
 
 ;##### Main Window: #####
 
-Gui, +Resize +MinSize310x140 +HwndPMCWinID
+Gui, +Resize +MinSize310x175 +HwndPMCWinID
 
 Gui, Add, Custom, ClassToolbarWindow32 hwndhTbFile gTbFile 0x0800 0x0100 0x0040 0x0008 0x0004
 Gui, Add, Custom, ClassToolbarWindow32 hwndhTbRecPlay gTbRecPlay 0x0800 0x0100 0x0040 0x0008 0x0004
@@ -949,7 +949,7 @@ TB_Define(TbPrev, hTbPrev, hIL_Icons, FixedBar.Preview, FixedBar.PrevOpt)
 ,	sciPrev.SetText("", Preview)
 ,	sciPrev.SetReadOnly(True)
 
-Gui, 2:+Resize +hwndPrevID
+Gui, 2:+Resize +MinSize215x20 +hwndPrevID
 Gui, 2:Add, Custom, ClassToolbarWindow32 hwndhTbPrevF 0x0800 0x0100 0x0040 0x0008
 Gui, 2:Add, Custom, ClassScintilla x0 y34 hwndhSciPrevF vLVPrev
 Gui, 2:Add, StatusBar
@@ -1948,7 +1948,7 @@ Gui, 13:Add, GroupBox, Section xm W270 H105
 Gui, 13:Add, Edit, ys+15 xs+10 W250 vEx_Macro, %Ex_Macro%
 Gui, 13:Add, Combobox, W140 vEx_AutoKey, %KeybdList%
 Gui, 13:Add, Checkbox, -Wrap Checked%Ex_BM% yp+3 x+10 W100 vEx_BM R1, %t_Lang006%
-Gui, 13:Add, Text, -Wrap y+17 xs+10 W60 R1, %t_Lang003%:
+Gui, 13:Add, Text, -Wrap y+17 xs+10 W60 R1 Right, %t_Lang003%:
 Gui, 13:Add, Edit, yp-3 x+10 Limit Number W70 R1 vEx_TE
 Gui, 13:Add, UpDown, 0x80 Range0-999999999 vEx_TimesX, %Ex_TimesX%
 Gui, 13:Add, Text, yp+3 x+10 , %t_Lang004%
@@ -2729,7 +2729,7 @@ If vFound
 		MsgBox, 64, %AppName%, %d_Lang062%
 }
 Else If (A_ThisLabel = "CheckNow")
-	MsgBox, 16, %d_Lang007%, % d_Lang063 "`n`n""" RegExReplace(VerChk, ".*<H2>(.*)</H2>.*", "$1") """"
+	MsgBox, 16, %d_Lang007%, % d_Lang063 "`n`n""" SubStr(RegExReplace(VerChk, ".*<H2>(.*)</H2>.*", "$1"), 1, 500) """"
 return
 
 AutoUpdate:
@@ -8993,12 +8993,12 @@ Gui, 32:Default
 Gui, 32:+Disabled
 Gui, 33:Add, Groupbox, Section xm W300 H130
 Gui, 33:Add, Edit, ys+15 xs+10 W280 vMacro, %Macro%
-Gui, 33:Add, Text, -Wrap W100 R1, %w_Lang005%:
-Gui, 33:Add, Hotkey, yp x+0 W180 vAutoKey, %AutoKey%
-Gui, 33:Add, Text, -Wrap y+5 xs+10 W100 R1, %w_Lang007%:
-Gui, 33:Add, Hotkey, yp x+0 W180 vManKey, %ManKey%
-Gui, 33:Add, Text, -Wrap y+5 xs+10 W100 R1, %t_Lang003%:
-Gui, 33:Add, Edit, yp x+0 Limit Number W70 R1 vTE
+Gui, 33:Add, Text, -Wrap W90 R1 Right, %w_Lang005%:
+Gui, 33:Add, Hotkey, yp x+10 W180 vAutoKey, %AutoKey%
+Gui, 33:Add, Text, -Wrap y+5 xs+10 W90 R1 Right, %w_Lang007%:
+Gui, 33:Add, Hotkey, yp x+10 W180 vManKey, %ManKey%
+Gui, 33:Add, Text, -Wrap y+5 xs+10 W90 R1 Right, %t_Lang003%:
+Gui, 33:Add, Edit, yp x+10 Limit Number W70 R1 vTE
 Gui, 33:Add, UpDown, 0x80 Range0-999999999 vTimesX, %TimesX%
 Gui, 33:Add, Text, -Wrap yp+3 x+10 W100, %t_Lang004%
 Gui, 33:Add, Button, Section Default -Wrap xm W75 H23 gEditMacroOK, %c_Lang020%
