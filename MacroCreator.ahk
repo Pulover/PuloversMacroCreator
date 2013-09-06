@@ -5549,8 +5549,9 @@ Gui, 19:Add, UpDown, vVariat 0x80 Range0-255, 0
 Gui, 19:Add, Text, y+10 xs+10 W40 R1 Right, %c_Lang147%:
 Gui, 19:Add, Edit, yp-3 x+10 W45 vIconN
 Gui, 19:Add, Text, yp+3 x+0 W75 R1 Right, %c_Lang160%:
-Gui, 19:Add, Edit, yp-3 x+10 W45 vTransC
-Gui, 19:Add, Button, -Wrap yp-1 x+0 W30 H23 vTransCS gGetPixel, ...
+Gui, 19:Add, Edit, yp-3 x+10 W50 vTransC
+Gui, 19:Add, Button, -Wrap yp-1 x+0 W25 H23 hwndTransCS vTransCS gGetPixel
+	ILButton(TransCS, ResDllPath ":" 100)
 Gui, 19:Add, Checkbox, Checked y+5 xs+10 W100 R1 vFast Disabled, %t_Lang103%
 Gui, 19:Add, Checkbox, Checked y+5 xs+10 W100 R1 vRGB Disabled, RGB
 Gui, 19:Add, Text, yp-10 x+0 W70 R1 Right, %c_Lang161%:
