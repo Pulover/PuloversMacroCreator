@@ -56,8 +56,9 @@ http://www.autohotkey.com/board/topic/91229-windows-color-picker-plus/
 PhiLho and skwire for the function to Get/Set the order of columns.
 http://www.autohotkey.com/board/topic/11926-can-you-move-a-listview-column-programmatically/#entry237340
 
-fincs for GenDocs.
+fincs for GenDocs and SciLexer.dll custom builds.
 http://www.autohotkey.com/board/topic/71751-gendocs-v30-alpha002
+http://www.autohotkey.com/board/topic/54431-scite4autohotkey-v3004-updated-aug-14-2013/page-58#entry566139
 
 T800 for Html Help utils.
 http://www.autohotkey.com/board/topic/17984-html-help-utils
@@ -2783,7 +2784,7 @@ RaptorX for the Scintilla Wrapper for AHK.
 majkinetor for the Dlg_Color function.
 rbrtryn for the ChooseColor function.
 PhiLho and skwire for the function to Get/Set the order of columns.
-fincs for GenDocs.
+fincs for GenDocs and SciLexer.dll custom builds.
 T800 for Html Help utils.
 Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jörg Schmalenberger (German).
 )
