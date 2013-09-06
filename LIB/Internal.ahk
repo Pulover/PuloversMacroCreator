@@ -654,7 +654,6 @@ ChangeIcon(hInst, ID, Icon)
 
 	SendMessage, 0x80, 0, hIcon,, ahk_id %ID% ;set the window's small icon (0x80 is WM_SETICON).
 	SendMessage, 0x80, 1, hIcon,, ahk_id %ID% ;set the window's big icon to the same one.
-	OutputDebug, %hInst% / %hIcon%
 }
 
 AHK_NOTIFYICON(wParam, lParam)

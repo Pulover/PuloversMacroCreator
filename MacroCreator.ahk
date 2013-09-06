@@ -4049,7 +4049,7 @@ IfWinExist
 Gui, 1:Submit, NoHide
 Gui, 8:+owner1 -MinimizeBox +E0x00000400 +HwndCmdWin
 Gui, 1:+Disabled
-Gui, 8:Add, Custom, ClassToolbarWindow32 hwndhTbText gTbText 0x0800 0x0100 0x0040 0x0008 0x0004
+Gui, 8:Add, Custom, ClassToolbarWindow32 hwndhTbText gTbText H25 0x0800 0x0100 0x0040 0x0008 0x0004
 Gui, 8:Add, Edit, Section xm ym+25 vTextEdit gTextEdit WantTab W710 R25
 ; Options
 Gui, 8:Add, GroupBox, Section W220 H135, %c_Lang163%:
@@ -5521,7 +5521,7 @@ Gui, 19:Add, Pic, ys+20 xs+10 W255 H200 0x100 vPicPrev gPicOpen
 Gui, 19:Add, Progress, ys+20 xs+10 W255 H200 Disabled Hidden vColorPrev
 Gui, 19:Add, Text, y+0 xs+10 W150 vImgSize
 ; Options
-Gui, 19:Add, GroupBox, Section y+10 xm W275 H115, %c_Lang159%:
+Gui, 19:Add, GroupBox, Section y+10 xm W275 H125, %c_Lang159%:
 Gui, 19:Add, Text, ys+20 xs+10 W40 R1 Right, %c_Lang070%:
 Gui, 19:Add, DDL, yp x+10 W65 vCoordPixel, Screen||Window
 Gui, 19:Add, Text, yp+3 x+0 W85 R1 Right, %c_Lang071%:
@@ -5532,14 +5532,16 @@ Gui, 19:Add, Edit, yp-3 x+10 W45 vIconN
 Gui, 19:Add, Text, yp+3 x+0 W75 R1 Right, %c_Lang160%:
 Gui, 19:Add, Edit, yp-3 x+10 W45 vTransC
 Gui, 19:Add, Button, -Wrap yp-1 x+0 W30 H23 vTransCS gGetPixel, ...
-Gui, 19:Add, Text, y+5 xs+10 W170 R1 Right, %c_Lang161%:
+Gui, 19:Add, Checkbox, Checked y+5 xs+10 W100 R1 vFast Disabled, %t_Lang103%
+Gui, 19:Add, Checkbox, Checked y+5 xs+10 W100 R1 vRGB Disabled, RGB
+Gui, 19:Add, Text, yp-5 x+0 W70 R1 Right, %c_Lang161%:
 Gui, 19:Add, Edit, yp-3 x+10 W35 vWScale
 Gui, 19:Add, Text, yp+5 x+0, x
 Gui, 19:Add, Edit, yp-5 x+0 W35 vHScale
 Gui, 19:Add, Checkbox, -Wrap y+5 xs+10 W250 vBreakLoop R1, %c_Lang130%
 ; Repeat
-Gui, 19:Add, GroupBox, Section ys xs+280 W275 H115
-Gui, 19:Add, Text, ys+15 xs+10 W100 R1 Right, %w_Lang015%:
+Gui, 19:Add, GroupBox, Section ys xs+280 W275 H125
+Gui, 19:Add, Text, ys+20 xs+10 W100 R1 Right, %w_Lang015%:
 Gui, 19:Add, Edit, yp x+10 W120 R1 vEdRept
 Gui, 19:Add, UpDown, vTimesX 0x80 Range1-999999999, 1
 Gui, 19:Add, Text, y+10 xs+10 W100 R1 Right, %c_Lang017%:
@@ -5585,10 +5587,13 @@ If (s_Caller = "Edit")
 	}
 	If (Type = cType15)
 	{
+		OUTPUTDEBUG, % InStr(Det7, "RGB")
+		color := Det5, Fast := InStr(Det7, "Fast") ? 1 : 0, RGB := InStr(Det7, "RGB") ? 1 : 0
 		GuiControl, 19:, PixelS, 1
 		GuiControl, 19:Hide, PicPrev
 		GuiControl, 19:Show, ColorPrev
-		color := Det5
+		GuiControl, 19:, Fast, %Fast%
+		GuiControl, 19:, RGB, %RGB%
 		GuiControl, 19:, Variat, %Det6%
 		GuiControl, 19:Disable, Screenshot
 		GoSub, PixelS
@@ -5652,7 +5657,8 @@ If ImageS = 1
 }
 Details := iPosX "`, " iPosY "`, " ePosX "`, " ePosY "`, " ImgFile
 If PixelS = 1
-	Type := cType15, Details .= ", " Variat ", Fast RGB"
+	Type := cType15, Details .= ", " Variat "," (Fast ? " Fast" : "") (RGB ? " RGB" : "")
+Details := RTrim(Details, ", ")
 Target := BreakLoop ? "Break" : ""
 EscCom("Details|TimesX|DelayX|CoordPixel")
 If (A_ThisLabel <> "ImageApply")
@@ -5765,6 +5771,8 @@ GuiControl, +BackgroundDefault, ColorPrev
 GuiControl, 19:Show, PicPrev
 GuiControl, 19:Hide, ColorPrev
 GuiControl, 19:Disable, ColorPick
+GuiControl, 19:Disable, Fast
+GuiControl, 19:Disable, RGB
 GuiControl, 19:Enable, Screenshot
 GuiControl, 19:Enable, IconN
 GuiControl, 19:Enable, TransC
@@ -5783,6 +5791,8 @@ GuiControl, +BackgroundDefault, ColorPrev
 GuiControl, 19:Hide, PicPrev
 GuiControl, 19:Show, ColorPrev
 GuiControl, 19:Enable, ColorPick
+GuiControl, 19:Enable, Fast
+GuiControl, 19:Enable, RGB
 GuiControl, 19:Disable, Screenshot
 GuiControl, 19:Disable, IconN
 GuiControl, 19:Disable, TransC
@@ -7603,7 +7613,7 @@ Gui, Submit, NoHide
 Script := (TabControl = 2) ? ComSc : ScLet
 Gui, 30:+owner1 -MinimizeBox +E0x00000400 +hwndCmdWin
 Gui, 24:+Disabled
-Gui, 30:Add, Custom, ClassToolbarWindow32 hwndhTbText gTbText 0x0800 0x0100 0x0040 0x0008 0x0004
+Gui, 30:Add, Custom, ClassToolbarWindow32 hwndhTbText gTbText H25 0x0800 0x0100 0x0040 0x0008 0x0004
 Gui, 30:Font, s9, Courier New
 Gui, 30:Add, Edit, Section xm ym+25 vTextEdit gTextEdit WantTab W720 R30, %Script%
 Gui, 30:Font
@@ -10915,6 +10925,8 @@ return
 ClearPars:
 Loop, 7
 	Par%A_Index% := ""
+,	Det%A_Index% := ""
+,	Act%A_Index% := ""
 return
 
 ListVars:
