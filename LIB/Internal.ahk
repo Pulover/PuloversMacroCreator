@@ -535,6 +535,14 @@ CheckDuplicateLabels()
 	return ErrorLevel
 }
 
+RemoveDuplicates(ByRef String)
+{
+	StringTrimRight, String, String, 1
+	Loop, Parse, String, |
+		NewStr .= (InStr(NewStr, A_LoopField "|") ? "Macro" A_Index : A_LoopField) "|"
+	String := NewStr
+}
+
 CheckDuplicates(Obj1, Obj2, Obj3*)
 {
 	global TabCount

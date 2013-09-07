@@ -2596,7 +2596,7 @@ SearchFile:
 Gui, 4:Submit, NoHide
 Gui, 4:+OwnDialogs
 Gui, 4:+Disabled
-FileSelectFile, SelectedFileName,,,, Project Files (*.pmc; *.ahk)
+FileSelectFile, SelectedFileName,,, %AppName%, Project Files (*.pmc; *.ahk)
 Gui, 4:-Disabled
 FreeMemory()
 If !SelectedFileName
@@ -2608,7 +2608,7 @@ SearchEXE:
 Gui, 4:Submit, NoHide
 Gui, 4:+OwnDialogs
 Gui, 4:+Disabled
-FileSelectFile, SelectedFileName,, %ProgramFiles%,, Executable Files (*.exe)
+FileSelectFile, SelectedFileName,, %ProgramFiles%, %AppName%, Executable Files (*.exe)
 Gui, 4:-Disabled
 FreeMemory()
 If !SelectedFileName
@@ -4414,7 +4414,7 @@ return
 
 OpenT:
 Gui, +OwnDialogs
-FileSelectFile, TextFile, 3
+FileSelectFile, TextFile, 3,, %AppName%
 FreeMemory()
 If !TextFile
 	return
@@ -4426,7 +4426,7 @@ return
 SaveT:
 Gui, Submit, NoHide
 Gui +OwnDialogs
-FileSelectFile, TextFile, S16
+FileSelectFile, TextFile, S16,, %AppName%
 FreeMemory()
 If TextFile = 
 	Exit
@@ -5761,7 +5761,7 @@ If (PixelS = 1)
 return
 
 GetImage:
-FileSelectFile, file,,,, Images (*.gif; *.jpg; *.bmp; *.png; *.tif; *.ico; *.cur; *.ani; *.exe; *.dll)
+FileSelectFile, file,,, %AppName%, Images (*.gif; *.jpg; *.bmp; *.png; *.tif; *.ico; *.cur; *.ani; *.exe; *.dll)
 FreeMemory()
 If (file = "")
 	return
@@ -5961,7 +5961,7 @@ If (InStr(FcCmd, "Dir") || InStr(FcCmd, "Folder") || InStr(FcCtrl, "WorkingDir")
 	GuiControl,, %EdField%, %Folder%
 	return
 }
-FileSelectFile, File, 2
+FileSelectFile, File, 2,, %AppName%
 FreeMemory()
 If File = 
 	return
@@ -5972,7 +5972,7 @@ return
 SearchDir:
 Gui, +OwnDialogs
 Gui, Submit, NoHide
-FileSelectFolder, Folder, *%A_ScriptDir%
+FileSelectFolder, Folder, *%A_ScriptDir%,, %AppName%
 FreeMemory()
 If Folder = 
 	return
@@ -6592,7 +6592,7 @@ return
 SearchAHK:
 Gui, +OwnDialogs
 Gui, Submit, NoHide
-FileSelectFile, File, 1,,, AutoHotkey Scripts (*.ahk)
+FileSelectFile, File, 1,, %AppName%, AutoHotkey Scripts (*.ahk)
 FreeMemory()
 If File = 
 	return

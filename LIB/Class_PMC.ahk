@@ -44,6 +44,11 @@
 			GuiControl, chMacro:, A_List, |
 			TabCount := 0
 		}
+		Else
+		{
+			Loop, %TabCount%
+				Labels .= TabGetText(TabSel, A_Index) "|"
+		}
 		Gui, 1:+Disabled
 		Gui, chMacro:Default
 		StringSplit, SelectedFile, SelectedFile, %DL%, `r
@@ -81,6 +86,7 @@
 			GoSub, TabPlus
 		Else
 		{
+			RemoveDuplicates(Labels)
 			GuiControl, chMacro:, A_List, |%Labels%
 			GoSub, UpdateCopyTo
 		}
