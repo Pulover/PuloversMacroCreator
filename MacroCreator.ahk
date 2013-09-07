@@ -8440,16 +8440,12 @@ TabPlus:
 Gui, 1:Submit, NoHide
 Gui, chMacro:Default
 Gui, chMacro:Submit, NoHide
-IColOrder := LVOrder_Get(10, ListID%A_List%), AllTabs := ""
+IColOrder := LVOrder_Get(10, ListID%A_List%), AllTabs := "", TabName := ""
 Loop, %TabCount%
 	AllTabs .= TabGetText(TabSel, A_Index) ","
+While, InStr(AllTabs, TabName ",")
+	TabName := "Macro" TabCount+A_Index
 TabCount++
-Loop, %TabCount%
-{
-	TabName := "Macro" A_Index
-	If TabName not in %AllTabs%
-		break
-}
 GuiCtrlAddTab(TabSel, TabName)
 Gui, chMacro:ListView, InputList%TabCount%
 HistoryMacro%TabCount% := new LV_Rows(), HistoryMacro%TabCount%.Add()
