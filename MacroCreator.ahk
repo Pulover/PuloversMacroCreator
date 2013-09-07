@@ -199,8 +199,8 @@ IniRead, MultInst, %IniFilePath%, Options, MultInst, 0
 IniRead, EvalDefault, %IniFilePath%, Options, EvalDefault, 0
 IniRead, ShowLoopIfMark, %IniFilePath%, Options, ShowLoopIfMark, 1
 IniRead, ShowActIdent, %IniFilePath%, Options, ShowActIdent, 1
-IniRead, LoopLVColor, %IniFilePath%, Options, LoopLVColor, 0xFFFF00
-IniRead, IfLVColor, %IniFilePath%, Options, IfLVColor, 0x0000FF
+IniRead, LoopLVColor, %IniFilePath%, Options, LoopLVColor, 0xFFFF80
+IniRead, IfLVColor, %IniFilePath%, Options, IfLVColor, 0x0080FF
 IniRead, VirtualKeys, %IniFilePath%, Options, VirtualKeys, % "
 (Join
 {LControl}{RControl}{LAlt}{RAlt}{LShift}{RShift}{LWin}{RWin}{AppsKey}
@@ -11171,8 +11171,8 @@ AbortKey := "F8"
 ,	EvalDefault := 0
 ,	ShowLoopIfMark := 1
 ,	ShowActIdent := 1
-,	LoopLVColor := 0xFFFF00
-,	IfLVColor := 0x0000FF
+,	LoopLVColor := 0xFFFF80
+,	IfLVColor := 0x0080FF
 ,	OSCPos := "X0 Y0"
 ,	OSTrans := 255
 ,	OSCaption := 0
