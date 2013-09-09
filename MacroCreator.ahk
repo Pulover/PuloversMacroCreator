@@ -8906,7 +8906,7 @@ Loop, %TabCount%
 ,	LV_ModifyCol(2, 100)	; Play
 ,	LV_ModifyCol(3, 100)	; Manual
 ,	LV_ModifyCol(4, 60)		; Loop
-,	LV_ModifyCol(5, 60)		; Index
+,	LV_ModifyCol(5, 45)		; Index
 Gui, 32:Show,, %t_Lang145%
 return
 
