@@ -825,6 +825,7 @@ If (A_GuiEvent = "N")
 	,	TB_Edit(TbSettings, "OnScCtrl", OnScCtrl), TB_Edit(TbSettings, "CheckHkOn", KeepHkOn)
 	,	TB_Edit(TbSettings, "SetWin", (IfDirectContext = "None") ? 0 : 1)
 	,	TB_Edit(TbSettings, "SetJoyButton", JoyHK), TB_Edit(TbOSC, "ProgBarToggle", ShowProgBar)
+	,	TB_Edit(TbSettings, "OnFinish",(OnFinishCode = 1) ? 0 : 1,,, (OnFinishCode = 1) ? 20 : 62)
 	}
 	Else If (ErrorLevel = 1)
 		TB_IdealSize(TbPtr, %A_ThisLabel%_ID)
