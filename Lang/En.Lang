@@ -594,6 +594,9 @@
 	t_Lang145 =	Edit Macros
 	t_Lang146 =	In line
 	t_Lang147 =	Macro
+	t_Lang148 =	Action of main window's close button
+	t_Lang149 =	Close application
+	t_Lang150 =	Minimize to tray
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Open
@@ -731,6 +734,7 @@
 	d_Lang077 =	Basic
 	d_Lang078 =	Default
 	d_Lang079 =	Check for updates on start up.
+	d_Lang080 =	You can change this going to Options > Settings > General.
 		
 ; Start-up Tips		
 	Start_Tips =	

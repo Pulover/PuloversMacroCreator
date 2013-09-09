@@ -594,6 +594,9 @@
 	t_Lang145 =	Úprava Makra
 	t_Lang146 =	V súlade
 	t_Lang147 =	Makro
+	t_Lang148 =	Akcie z hlavného okna tlačidlo Zavrieť
+	t_Lang149 =	Zavrieť aplikácie
+	t_Lang150 =	Minimalizovať do tray
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Otvorené
@@ -731,6 +734,7 @@
 	d_Lang077 =	Základné
 	d_Lang078 =	Štandardné
 	d_Lang079 =	Semak kemas kini pada permulaan....
+	d_Lang080 =	Môžete zmeniť to bude Voľby> Nastavenia> Všeobecné.
 		
 ; Start-up Tips		
 	Start_Tips =	

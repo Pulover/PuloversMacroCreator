@@ -594,6 +594,9 @@
 	t_Lang145 =	Edita Macros
 	t_Lang146 =	En línia
 	t_Lang147 =	Macro
+	t_Lang148 =	Acció de botó de tancament de la finestra principal
+	t_Lang149 =	Tancar l'aplicació
+	t_Lang150 =	Minimitza a la safata
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Obert
@@ -731,6 +734,7 @@
 	d_Lang077 =	Bàsic
 	d_Lang078 =	Defecte
 	d_Lang079 =	Sök efter uppdateringar vid start....
+	d_Lang080 =	Vostè pot canviar això anant a Opcions> Configuració> General.
 		
 ; Start-up Tips		
 	Start_Tips =	

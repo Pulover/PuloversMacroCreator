@@ -197,6 +197,7 @@ IniRead, KeepDefKeys, %IniFilePath%, Options, KeepDefKeys, 0
 IniRead, TbNoTheme, %IniFilePath%, Options, TbNoTheme, 0
 IniRead, MultInst, %IniFilePath%, Options, MultInst, 0
 IniRead, EvalDefault, %IniFilePath%, Options, EvalDefault, 0
+IniRead, CloseAction, %IniFilePath%, Options, CloseAction, %A_Space%
 IniRead, ShowLoopIfMark, %IniFilePath%, Options, ShowLoopIfMark, 1
 IniRead, ShowActIdent, %IniFilePath%, Options, ShowActIdent, 1
 IniRead, LoopLVColor, %IniFilePath%, Options, LoopLVColor, 0xFFFF80
@@ -2426,10 +2427,13 @@ Gui, 4:Add, Edit, vScreenDir W350 R1 -Multi, %ScreenDir%
 Gui, 4:Add, Button, -Wrap yp-1 x+0 W30 H23 vSearchScreen gSearchDir, ...
 Gui, 4:Tab, 5
 ; General
-Gui, 4:Add, GroupBox, Section ym xm+210 W400 H80, %t_Lang018%:
+Gui, 4:Add, GroupBox, Section ym xm+210 W400 H120, %t_Lang018%:
 Gui, 4:Add, Checkbox, -Wrap Checked%MultInst% ys+20 xs+10 vMultInst W380 R1, %t_Lang089%
 Gui, 4:Add, Checkbox, -Wrap Checked%TbNoTheme% vTbNoTheme W380 R1, %t_Lang142%
 Gui, 4:Add, Checkbox, -Wrap Checked%EvalDefault% vEvalDefault W380 R1, %t_Lang059%
+Gui, 4:Add, Text, -Wrap W380 R1, %t_Lang148%:
+Gui, 4:Add, Radio, -Wrap W180 vCloseApp R1, %t_Lang149%
+Gui, 4:Add, Radio, -Wrap yp x+5 W180 vMinToTray R1, %t_Lang150%
 Gui, 4:Add, GroupBox, Section y+15 xs W400 H125, %t_Lang136%:
 Gui, 4:Add, Checkbox, -Wrap Checked%ShowLoopIfMark% ys+20 xs+10 vShowLoopIfMark W380 R1, %t_Lang060%
 Gui, 4:Add, Text, xs+10 y+5 W380, %t_Lang061%
@@ -2439,8 +2443,8 @@ Gui, 4:Add, Text, yp x+20 W85, %t_Lang082% "*"
 Gui, 4:Add, Text, yp x+10 W40 vIfLVColor gEditColor c%IfLVColor%, ██████
 Gui, 4:Add, Checkbox, -Wrap Checked%ShowActIdent% y+15 xs+10 vShowActIdent W380 R1, %t_Lang083%
 Gui, 4:Add, Text, W380, %t_Lang084%
-Gui, 4:Add, GroupBox, Section y+15 xs W400 H180, %t_Lang062%:
-Gui, 4:Add, Edit, ys+20 xs+10 W380 r9 vEditMod, %VirtualKeys%
+Gui, 4:Add, GroupBox, Section y+15 xs W400 H140, %t_Lang062%:
+Gui, 4:Add, Edit, ys+20 xs+10 W380 r6 vEditMod, %VirtualKeys%
 Gui, 4:Add, Button, -Wrap y+0 W75 H23 gConfigRestore, %t_Lang063%
 Gui, 4:Add, Button, -Wrap yp x+10 W75 H23 gKeyHistory, %c_Lang124%
 Gui, 4:Tab, 6
@@ -2459,6 +2463,10 @@ GuiControl, 4:ChooseString, SlowKey, %SlowKey%
 GuiControl, 4:ChooseString, SpeedUp, %SpeedUp%
 GuiControl, 4:ChooseString, SpeedDn, %SpeedDn%
 GuiControl, 4:ChooseString, DrawButton, %DrawButton%
+If (CloseAction = "Minimize")
+	GuiControl, 4:, MinToTray, 1
+Else If (CloseAction = "Close")
+	GuiControl, 4:, CloseApp, 1
 If CoordMouse = Window
 	GuiControl, 4:, Relative, 1
 Else If CoordMouse = Screen
@@ -2486,10 +2494,8 @@ If Relative = 1
 	CoordMouse = Window
 Else If Screen = 1
 	CoordMouse = Screen
-If OnRelease = 1
-	SSMode = OnRelease
-Else If OnEnter = 1
-	SSMode = OnEnter
+SSMode := OnRelease ? "OnRelease" : "OnEnter"
+CloseAction := MinToTray ? "Minimize" : (CloseApp ? "Close" : "")
 VirtualKeys := EditMod, UserVarsList := RegExReplace(UserVarsList, "U)\s+=\s+", "=")
 User_Vars.Set(UserVarsList)
 User_Vars.Read()
@@ -8011,7 +8017,12 @@ PlayStart:
 Gui, 1:+OwnDialogs
 Gui, 1:Submit, NoHide
 GoSub, b_Enable
-If !ListCount
+If !WinExist("ahk_id" PMCWinID)
+{
+	GoSub, ShowHide
+	return
+}
+Else If !ListCount
 	return
 Gui, chMacro:Submit, NoHide
 GoSub, PlayActive
@@ -11018,8 +11029,30 @@ If OnFinishCode =  9
 	DllCall("LockWorkStation")
 return
 
-Exit:
 GuiClose:
+If !CloseAction
+{
+	Gui, 1:+Disabled
+	Gui, 35:-SysMenu hwndCloseSel +owner1
+	Gui, 35:Color, FFFFFF
+	Gui, 35:Add, Pic, y+20 Icon24 W48 H48, %ResDllPath%
+	Gui, 35:Add, Text, yp x+10, %t_Lang148%:
+	Gui, 35:Add, Radio, -Wrap Section Checked y+20 W140 vCloseApp R1, %t_Lang149%
+	Gui, 35:Add, Radio, -Wrap yp x+10 W140 vMinToTray R1, %t_Lang150%
+	Gui, 35:Add, Text, -Wrap xs R1, %d_Lang080%
+	Gui, 35:Add, Button, -Wrap Section Default xs y+10 W90 H23 gTipClose2, %c_Lang020%`n
+	Gui, 35:Show,, %AppName%
+	WinWaitClose, ahk_id %CloseSel%
+	Gui, 35:Submit, NoHide
+	CloseAction := MinToTray ? "Minimize" : "Close"
+	Gui, 1:-Disabled
+}
+If (CloseAction = "Minimize")
+{
+	GoSub, ShowHide
+	return
+}
+Exit:
 Gui, 1:+OwnDialogs
 Gui, 1:Submit, NoHide
 GoSub, SaveData
@@ -11176,6 +11209,7 @@ AbortKey := "F8"
 ,	TbNoTheme := 0
 ,	MultInst := 0
 ,	EvalDefault := 0
+,	CloseAction := ""
 ,	ShowLoopIfMark := 1
 ,	ShowActIdent := 1
 ,	LoopLVColor := 0xFFFF80
@@ -11395,6 +11429,7 @@ IniWrite, %KeepDefKeys%, %IniFilePath%, Options, KeepDefKeys
 IniWrite, %TbNoTheme%, %IniFilePath%, Options, TbNoTheme
 IniWrite, %MultInst%, %IniFilePath%, Options, MultInst
 IniWrite, %EvalDefault%, %IniFilePath%, Options, EvalDefault
+IniWrite, %CloseAction%, %IniFilePath%, Options, CloseAction
 IniWrite, %ShowLoopIfMark%, %IniFilePath%, Options, ShowLoopIfMark
 IniWrite, %ShowActIdent%, %IniFilePath%, Options, ShowActIdent
 IniWrite, %LoopLVColor%, %IniFilePath%, Options, LoopLVColor

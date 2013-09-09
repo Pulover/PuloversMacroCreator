@@ -65,7 +65,7 @@
 	e_Lang001 =	&Bản sao
 	e_Lang002 =	&Sửa Bình luận
 	e_Lang003 =	&Tìm / Thay thế
-	e_Lang004 =	S&ao chép vào ...
+	e_Lang004 =	S&ao chép vào...
 	e_Lang005 =	&Lùi lại
 	e_Lang006 =	L&àm lại
 	e_Lang007 =	&Cắt
@@ -131,7 +131,7 @@
 ; Help Sub Menu		
 	h_Lang001 =	Vĩ mô Đấng Tạo Hóa Trang chủ
 	h_Lang002 =	AHK Tài liệu trực tuyến
-	h_Lang003 =	Kiểm tra các bản cập nhật ...
+	h_Lang003 =	Kiểm tra các bản cập nhật...
 	h_Lang004 =	Kiểm tra khi khởi động
 	h_Lang005 =	Về
 	h_Lang006 =	Mẹo
@@ -162,7 +162,7 @@
 	w_Lang017 =	Áp dụng
 	w_Lang018 =	Chèn
 	w_Lang019 =	Chỉnh sửa
-	w_Lang020 =	Tắt tùy chọn (Khi phát lại kết thúc ...)
+	w_Lang020 =	Tắt tùy chọn (Khi phát lại kết thúc...)
 	w_Lang021 =	Không làm gì cả
 	w_Lang022 =	Đóng ứng dụng
 	w_Lang023 =	Tắt máy
@@ -228,7 +228,7 @@
 	w_Lang083 =	Xóa dòng chọn (Del)
 	w_Lang084 =	Undo (Ctrl + Z)
 	w_Lang085 =	Redo (Ctrl + Y)
-	w_Lang086 =	Sao chép vào ...
+	w_Lang086 =	Sao chép vào...
 	w_Lang087 =	Tìm / Thay thế (Ctrl + F)
 	w_Lang088 =	Sửa bình (Ctrl + L)
 	w_Lang089 =	Sửa màu Mark (Ctrl + M)
@@ -363,7 +363,7 @@
 	c_Lang122 =	Scancode
 	c_Lang123 =	Thêm
 	c_Lang124 =	Lịch sử quan trọng
-	c_Lang125 =	Nhập scancode ...
+	c_Lang125 =	Nhập scancode...
 	c_Lang126 =	Mã thêm vào phím ảo Danh sách!
 	c_Lang127 =	Nhập tên cho biến
 	c_Lang128 =	Sử dụng chức năng từ tập tin bên ngoài
@@ -532,7 +532,7 @@
 	t_Lang083 =	Hiện lõm cho vòng lặp và báo cáo
 	t_Lang084 =	(Double-Click vào tiêu đề cột Hành động bật / tắt)
 	t_Lang085 =	Điều khiển màn hình hiển thị trên thanh khởi động
-	t_Lang086 =	Chức năng tìm kiếm. Xin vui lòng chờ ...
+	t_Lang086 =	Chức năng tìm kiếm. Xin vui lòng chờ...
 	t_Lang087 =	Bao gồm các tập tin bên ngoài
 	t_Lang088 =	Tạo EXE
 	t_Lang089 =	Nhiều trường hợp cho phép
@@ -594,6 +594,9 @@
 	t_Lang145 =	Chỉnh Sửa Macro
 	t_Lang146 =	Trong dòng
 	t_Lang147 =	Vĩ mô
+	t_Lang148 =	Hành động của nút cửa sổ chính của gần
+	t_Lang149 =	Đóng ứng dụng
+	t_Lang150 =	Giảm thiểu để khay
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Mở
@@ -628,7 +631,7 @@
 	d_Lang025 =	Vĩ mô (s) kích hoạt.`nSử dụng các phím nóng để chơi.
 	d_Lang026 =	để bắt đầu / dừng ghi âm
 	d_Lang027 =	Ghi dừng lại
-	d_Lang028 =	Ghi âm ...
+	d_Lang028 =	Ghi âm...
 	d_Lang029 =	để ngăn chặn
 	d_Lang030 =	để bắt đầu kỷ lục mới
 	d_Lang031 =	không phải là một tên hàm hợp lệ.
@@ -721,7 +724,7 @@
 		
 		Tặng hay không, sẽ không có sự khác biệt về tính năng và chức năng của nó.
 	)	
-	d_Lang070 =	Tặng ...
+	d_Lang070 =	Tặng...
 	d_Lang071 =	Không, cảm ơn
 	d_Lang072 =	Hỗ trợ phần mềm nguồn mở
 	d_Lang073 =	Lỗi: không hợp lệ Hotkey chọn.
@@ -731,6 +734,7 @@
 	d_Lang077 =	Cơ Bản
 	d_Lang078 =	Mặc Định
 	d_Lang079 =	Preveri za posodobitve ob zagonu....
+	d_Lang080 =	Bạn có thể thay đổi cách vào Options> Settings> General.
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -774,7 +778,7 @@
 	OnFinish_TT =	
 	(LTrim	
 		Tắt tùy chọn
-		Khi kết thúc phát ...
+		Khi kết thúc phát...
 	)	
 	ReptC_TT =	0 = vô hạn
 	IfDirB_TT =	Làm Hotkeys làm việc tùy thuộc vào loại`ncủa cửa sổ đang hoạt động hay tồn tại (Ctrl + H)

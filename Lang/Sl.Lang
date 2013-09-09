@@ -594,6 +594,9 @@
 	t_Lang145 =	Uredi Makri
 	t_Lang146 =	V skladu
 	t_Lang147 =	Makro
+	t_Lang148 =	Delovanje gumb za zapiranje glavnega okna
+	t_Lang149 =	Zapri aplikacija
+	t_Lang150 =	Zmanjšati v pladenj
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Odprite
@@ -731,6 +734,7 @@
 	d_Lang077 =	Osnovni
 	d_Lang078 =	Privzeto
 	d_Lang079 =	Preveri za posodobitve ob zagonu.
+	d_Lang080 =	Lahko spremenite to dogaja Možnosti> Nastavitve> Splošno.
 		
 ; Start-up Tips		
 	Start_Tips =	

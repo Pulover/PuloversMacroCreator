@@ -594,6 +594,9 @@
 	t_Lang145 =	Mengedit Macro
 	t_Lang146 =	Sejalan
 	t_Lang147 =	Makro
+	t_Lang148 =	Aksi tombol close jendela utama ini
+	t_Lang149 =	Tutup aplikasi
+	t_Lang150 =	Minimalkan ke tray
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Buka
@@ -731,6 +734,7 @@
 	d_Lang077 =	Dasar
 	d_Lang078 =	Kegagalan
 	d_Lang079 =	Frissítések keresése a beindításához....
+	d_Lang080 =	Anda dapat mengubah ini masuk ke Options> Settings> General.
 		
 ; Start-up Tips		
 	Start_Tips =	

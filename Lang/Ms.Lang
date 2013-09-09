@@ -594,6 +594,9 @@
 	t_Lang145 =	Edit Makro
 	t_Lang146 =	Selaras
 	t_Lang147 =	Makro
+	t_Lang148 =	Tindakan butang tetingkap utama yang berhampiran
+	t_Lang149 =	Tutup permohonan
+	t_Lang150 =	Kurangkan ke dulang
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Buka
@@ -731,6 +734,7 @@
 	d_Lang077 =	Asas
 	d_Lang078 =	Default
 	d_Lang079 =	Semak kemas kini pada permulaan.
+	d_Lang080 =	Anda boleh menukar ini akan Pilihan> Tetapan> Umum.
 		
 ; Start-up Tips		
 	Start_Tips =	

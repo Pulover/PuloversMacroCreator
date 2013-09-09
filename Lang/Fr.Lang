@@ -594,6 +594,9 @@
 	t_Lang145 =	Modifier Macros
 	t_Lang146 =	En ligne
 	t_Lang147 =	Macro
+	t_Lang148 =	Action du bouton de fermeture de la fenêtre principale
+	t_Lang149 =	Fermer l'application
+	t_Lang150 =	Réduire en icône
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Ouvert
@@ -731,6 +734,7 @@
 	d_Lang077 =	Basic
 	d_Lang078 =	Par Défaut
 	d_Lang079 =	Check for updates on starten....
+	d_Lang080 =	Vous pouvez modifier cette allant dans Options> Paramètres> Général.
 		
 ; Start-up Tips		
 	Start_Tips =	

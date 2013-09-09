@@ -594,6 +594,9 @@
 	t_Lang145 =	Uredi Makronaredbe
 	t_Lang146 =	U skladu
 	t_Lang147 =	Makro
+	t_Lang148 =	Akcija je glavni prozor bliski gumb
+	t_Lang149 =	Zatvori prijava
+	t_Lang150 =	Smanji u ladicu
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Otvoreno
@@ -731,6 +734,7 @@
 	d_Lang077 =	Osnovni
 	d_Lang078 =	Default
 	d_Lang079 =	Cercar actualitzacions en l'arrencada....
+	d_Lang080 =	Možete promijeniti ovo ide na Opcije> Postavke> Opće.
 		
 ; Start-up Tips		
 	Start_Tips =	

@@ -594,6 +594,9 @@
 	t_Lang145 =	Edytowanie Makra
 	t_Lang146 =	Zgodnie
 	t_Lang147 =	Macro
+	t_Lang148 =	Action głównej przycisk Zamknij okna
+	t_Lang149 =	Close aplikacji
+	t_Lang150 =	Zminimalizować do zasobnika
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Otwarte
@@ -731,6 +734,7 @@
 	d_Lang077 =	Podstawowy
 	d_Lang078 =	Domyślnie
 	d_Lang079 =	Проверить наличие обновлений при запуске....
+	d_Lang080 =	Można to zmienić zamiar Opcje> Ustawienia> Ogólne.
 		
 ; Start-up Tips		
 	Start_Tips =	

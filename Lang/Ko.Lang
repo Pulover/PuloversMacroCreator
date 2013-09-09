@@ -594,6 +594,9 @@
 	t_Lang145 =	매크로 편집
 	t_Lang146 =	라인
 	t_Lang147 =	매크로
+	t_Lang148 =	메인 윈도우의 닫기 버튼의 동작
+	t_Lang149 =	응용 프로그램 닫기
+	t_Lang150 =	트레이로 최소화
 		
 ; Messages & Dialogs		
 	d_Lang001 =	열기
@@ -731,6 +734,7 @@
 	d_Lang077 =	기본
 	d_Lang078 =	디폴트 값
 	d_Lang079 =	시작에 업데이트를 확인합니다.
+	d_Lang080 =	당신은이> 설정> 일반 옵션에가는 변경할 수 있습니다.
 		
 ; Start-up Tips		
 	Start_Tips =	

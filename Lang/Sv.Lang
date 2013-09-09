@@ -594,6 +594,9 @@
 	t_Lang145 =	Redigera Makron
 	t_Lang146 =	I linje
 	t_Lang147 =	Makro
+	t_Lang148 =	Åtgärd av huvudfönstret stängknapp
+	t_Lang149 =	Stäng program
+	t_Lang150 =	Minimera till aktivitetsfältet
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Öppet
@@ -731,6 +734,7 @@
 	d_Lang077 =	Grundläggande
 	d_Lang078 =	Default
 	d_Lang079 =	Tarkista päivitykset käynnistettäessä....
+	d_Lang080 =	Du kan ändra detta gå till Alternativ> Inställningar> Allmänt.
 		
 ; Start-up Tips		
 	Start_Tips =	

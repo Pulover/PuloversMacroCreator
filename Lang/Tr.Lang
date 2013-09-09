@@ -594,6 +594,9 @@
 	t_Lang145 =	Makrolar Düzenle
 	t_Lang146 =	Doğrultusunda
 	t_Lang147 =	Makro
+	t_Lang148 =	Ana pencerenin kapatma düğmesini Eylem
+	t_Lang149 =	yakın başvuru
+	t_Lang150 =	Tepsisine küçült
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Açık
@@ -731,6 +734,7 @@
 	d_Lang077 =	Temel
 	d_Lang078 =	Varsayılan
 	d_Lang079 =	Açılışta güncelleştirmeleri denetleyin.
+	d_Lang080 =	Bu> Ayarlar> Genel Seçenekler giderek değiştirebilirsiniz.
 		
 ; Start-up Tips		
 	Start_Tips =	

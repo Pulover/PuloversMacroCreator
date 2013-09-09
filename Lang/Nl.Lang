@@ -594,6 +594,9 @@
 	t_Lang145 =	Macro's Bewerken
 	t_Lang146 =	In lijn
 	t_Lang147 =	Macro
+	t_Lang148 =	Actie van het hoofdvenster's sluitknop
+	t_Lang149 =	Sluit de toepassing
+	t_Lang150 =	Minimaliseren naar tray
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Open
@@ -731,6 +734,7 @@
 	d_Lang077 =	Basis-
 	d_Lang078 =	Verzuim
 	d_Lang079 =	Controleren op updates bij het opstarten.
+	d_Lang080 =	U kunt dit veranderen ga naar Opties> Instellingen> Algemeen.
 		
 ; Start-up Tips		
 	Start_Tips =	

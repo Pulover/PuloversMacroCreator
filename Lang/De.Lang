@@ -594,6 +594,9 @@
 	t_Lang145 =	Makros Bearbeiten
 	t_Lang146 =	Im Einklang
 	t_Lang147 =	Makro
+	t_Lang148 =	Aktion vom Hauptfenster die Taste zum Schließen
+	t_Lang149 =	Anwendung schließen
+	t_Lang150 =	Minimieren in den Tray
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Öffnen
@@ -731,6 +734,7 @@
 	d_Lang077 =	Grundlegende
 	d_Lang078 =	Standard
 	d_Lang079 =	Check for updates on starten.
+	d_Lang080 =	Sie können dies ändern werde Optionen> Einstellungen> Allgemein.
 		
 ; Start-up Tips		
 	Start_Tips =	

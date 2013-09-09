@@ -594,6 +594,9 @@
 	t_Lang145 =	Editar Macros
 	t_Lang146 =	En línea
 	t_Lang147 =	Macro
+	t_Lang148 =	Acción de botón de cierre de la ventana principal
+	t_Lang149 =	Cerrar la aplicación
+	t_Lang150 =	Minimizar a la bandeja
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Abierto
@@ -731,6 +734,7 @@
 	d_Lang077 =	Básico
 	d_Lang078 =	Defecto
 	d_Lang079 =	Buscar actualizaciones en el arranque.
+	d_Lang080 =	Usted puede cambiar esto yendo a Opciones> Configuración> General.
 		
 ; Start-up Tips		
 	Start_Tips =	

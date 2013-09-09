@@ -594,6 +594,9 @@
 	t_Lang145 =	编辑宏
 	t_Lang146 =	线
 	t_Lang147 =	宏
+	t_Lang148 =	主窗口的关闭按钮行动
+	t_Lang149 =	关闭应用程序
+	t_Lang150 =	最小化到托盘
 		
 ; Messages & Dialogs		
 	d_Lang001 =	打开
@@ -731,6 +734,7 @@
 	d_Lang077 =	基本的
 	d_Lang078 =	默认
 	d_Lang079 =	在启动时检查更新。
+	d_Lang080 =	你可以改变这个选项>设置>常规。
 		
 ; Start-up Tips		
 	Start_Tips =	

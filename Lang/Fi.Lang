@@ -594,6 +594,9 @@
 	t_Lang145 =	Muokkaa Makrot
 	t_Lang146 =	Linjassa
 	t_Lang147 =	Makro
+	t_Lang148 =	Toimintaa pääikkunan sulkupainiketta
+	t_Lang149 =	Sulje sovellus
+	t_Lang150 =	Pienennä Tray
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Avata
@@ -731,6 +734,7 @@
 	d_Lang077 =	Perustiedot
 	d_Lang078 =	Oletusarvo
 	d_Lang079 =	Tarkista päivitykset käynnistettäessä.
+	d_Lang080 =	Voit muuttaa tätä menossa Valinnat> Asetukset> Yleiset.
 		
 ; Start-up Tips		
 	Start_Tips =	
