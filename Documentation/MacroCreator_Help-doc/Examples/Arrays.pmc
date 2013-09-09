@@ -1,4 +1,4 @@
-﻿[PMC Code]|F5||1|Window|1|Macro1
+﻿[PMC Code]|F1||1|Window|1|Arrays1
 1|[Assign Variable]|Z := 0|1|0|Variable|||||
 2|[Assign Variable]|S := 0|1|0|Variable|||||
 3|[Assign Variable]|X := 0|1|0|Variable|||||
@@ -14,7 +14,7 @@
 13|[Assign Variable]|Y := N[4] + N[6]|1|0|Variable|Expression||||
 14|[Pause]|%Y%|1|0|MsgBox|262208||||
 
-[PMC Code]|F3||1|Window|1|Macro2
+[PMC Code]|F2||1|Window|1|Arrays2
 1|[Assign Variable]|String := A¢B¢C¢D¢E|1|0|Variable|||||
 2|[Assign Variable]|Parameters := 5`,4`,3`,2`,1|1|0|Variable|||||
 3|StrSplit|Array := %String%, ¢|1|0|Variable|||||

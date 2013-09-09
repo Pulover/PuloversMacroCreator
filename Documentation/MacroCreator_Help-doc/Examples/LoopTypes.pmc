@@ -1,4 +1,4 @@
-﻿[PMC Code]|F3|F6|1|Window|1|Macro1
+﻿[PMC Code]|F7||1|Window|1|LoopTypes
 1|FileDelete|%A_Temp%\LoopTest.txt|1|10|FileDelete|||||
 2|[Assign Variable]|Folders := %A_Startup%¢%A_MyDocuments%`n%A_Desktop%¢%A_Programs%|1|0|Variable|||||
 3|FileAppend|%Folders%, %A_Temp%\LoopTest.txt|1|10|FileAppend|||||

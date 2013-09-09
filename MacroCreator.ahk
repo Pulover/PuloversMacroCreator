@@ -1729,7 +1729,7 @@ return
 
 SaveCurrentList:
 Input
-ActiveFile := CurrentFileName
+ActiveFile := CurrentFileName, CurrentFileName := TabGetText(TabSel, A_List) ".pmc"
 GoSub, SaveData
 GoSub, SelectFile
 ThisListFile := CurrentFileName, CurrentFileName := ActiveFile
@@ -1744,7 +1744,7 @@ IfExist %ThisListFile%
 }
 PMCSet := "[PMC Code]|" o_AutoKey[A_List]
 . "|" o_ManKey[A_List] "|" o_TimesG[A_List]
-. "|" CoordMouse "`n"
+. "|" CoordMouse "|" OnFinishCode "|" TabGetText(TabSel, A_List) "`n"
 ,	LV_Data := PMCSet . PMC.LVGet("InputList" A_List).Text . "`n"
 FileAppend, %LV_Data%, %ThisListFile%
 GoSub, RecentFiles

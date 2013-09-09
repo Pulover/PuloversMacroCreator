@@ -1,4 +1,4 @@
-﻿[PMC Code]|F5|F6|1|Window|1|Macro1
+﻿[PMC Code]|+F4||1|Window|1|Variables
 1|WinGetPos|WinPos_|1|20|WinGetPos||A|||
 2|[Assign Variable]|X_Pos := %WinPos_W% / 2|1|0|Variable|Expression||||
 3|[Assign Variable]|Y_Pos := %WinPos_H% / 2|1|0|Variable|Expression||||
