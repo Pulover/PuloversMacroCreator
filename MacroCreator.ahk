@@ -6813,9 +6813,10 @@ s_Caller := "Edit"
 ControlCmd:
 Gui, 23:+owner1 -MinimizeBox +E0x00000400 +HwndCmdWin
 Gui, 1:+Disabled
-Gui, 23:Add, Groupbox, Section W450 H200
-Gui, 23:Add, DDL, ys+15 xs+10 W120 vControlCmd gCtlCmd, %CtrlCmdList%
-Gui, 23:Add, Text, W120, %c_Lang055%:
+Gui, 23:Add, Groupbox, Section W450 H220
+Gui, 23:Add, Text, ys+15 xs+10 W120, %c_Lang055%:
+Gui, 23:Add, DDL, W120 vControlCmd gCtlCmd, %CtrlCmdList%
+Gui, 23:Add, Text, W120, %c_Lang207%:
 Gui, 23:Add, DDL, W120 -Multi vCmd gCmd, %CtrlCmd%
 Gui, 23:Add, Text, W80, %c_Lang056%:
 Gui, 23:Add, Edit, W430 -Multi Disabled vValue

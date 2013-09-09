@@ -444,6 +444,7 @@
 	c_Lang204 =	Evaluar expresión
 	c_Lang205 =	Región
 	c_Lang206 =	Buscar
+	c_Lang207 =	Subcomando
 		
 ; Other Windows		
 	t_Lang001 =	Exportar a AutoHotkey
