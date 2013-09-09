@@ -8084,7 +8084,7 @@ Gui, 28:Show, % (ShowProgBar ? "H40" : "H30") " W415 NoActivate", %AppName%
 return
 
 BuildOSCWin:
-Gui, 28: +Toolwindow +AlwaysOntop +HwndPMCOSC +E0x08000000
+Gui, 28:+Toolwindow +AlwaysOntop +HwndPMCOSC +E0x08000000
 If !(OSCaption)
 	Gui, 28:-Caption
 Gui, 28:Add, Edit, W40 H23 vOSHKEd Number
@@ -11039,7 +11039,7 @@ If !CloseAction
 	Gui, 35:Add, Text, yp x+10, %t_Lang148%:
 	Gui, 35:Add, Radio, -Wrap Section Checked y+20 W140 vCloseApp R1, %t_Lang149%
 	Gui, 35:Add, Radio, -Wrap yp x+10 W140 vMinToTray R1, %t_Lang150%
-	Gui, 35:Add, Text, -Wrap xs R1, %d_Lang080%
+	Gui, 35:Add, Text, -Wrap xs R1 cGray, %d_Lang080%
 	Gui, 35:Add, Button, -Wrap Section Default xs y+10 W90 H23 gTipClose2, %c_Lang020%`n
 	Gui, 35:Show,, %AppName%
 	WinWaitClose, ahk_id %CloseSel%
@@ -11571,6 +11571,8 @@ If ((WPHKC = 1) || (WPHKC = 2))
 		GoSub, RecStop
 		GoSub, ResetHotkeys
 	}
+	IfWinExist, ahk_id %PMCOSC%
+		Gui, 28:+AlwaysOntop
 }
 Else
 	GoSub, KeepHkOn
@@ -12004,11 +12006,11 @@ Loop, Parse, Start_Tips, `n
 Menu, DonationMenu, Add, %p_Lang001%, DonatePayPal
 
 Menu, MenuBar, Add, %m_Lang001%, :FileMenu
+Menu, MenuBar, Add, %m_Lang005%, :MacroMenu
+Menu, MenuBar, Add, %m_Lang002%, :CommandMenu
 Menu, MenuBar, Add, %m_Lang004%, :EditMenu
 Menu, MenuBar, Add, %m_Lang003%, :SelectMenu
 Menu, MenuBar, Add, %m_Lang006%, :ViewMenu
-Menu, MenuBar, Add, %m_Lang002%, :CommandMenu
-Menu, MenuBar, Add, %m_Lang005%, :MacroMenu
 Menu, MenuBar, Add, %m_Lang007%, :OptionsMenu
 Menu, MenuBar, Add, %m_Lang009%, :DonationMenu
 Menu, MenuBar, Add, %m_Lang010%, :HelpMenu

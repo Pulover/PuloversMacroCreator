@@ -734,7 +734,7 @@
 	d_Lang077 =	Basic
 	d_Lang078 =	Default
 	d_Lang079 =	Check for updates on start up.
-	d_Lang080 =	You can change this going to Options > Settings > General.
+	d_Lang080 =	You can change this in Options > Settings > General.
 		
 ; Start-up Tips		
 	Start_Tips =	

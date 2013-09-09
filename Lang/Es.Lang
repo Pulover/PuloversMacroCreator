@@ -734,7 +734,7 @@
 	d_Lang077 =	Básico
 	d_Lang078 =	Defecto
 	d_Lang079 =	Buscar actualizaciones en el arranque.
-	d_Lang080 =	Usted puede cambiar esto yendo a Opciones> Configuración> General.
+	d_Lang080 =	Usted puede cambiar esto en Opciones> Configuración> General.
 		
 ; Start-up Tips		
 	Start_Tips =	

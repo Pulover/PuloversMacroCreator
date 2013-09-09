@@ -1,6 +1,6 @@
 ﻿LoadLang_Pt:
 		
-		; Portuguese
+		; English
 		
 ; Main Menu		
 	m_Lang001 =	&Arquivo
@@ -8,7 +8,7 @@
 	m_Lang003 =	&Selecionar
 	m_Lang004 =	&Editar
 	m_Lang005 =	&Macro
-	m_Lang006 =	&Ver
+	m_Lang006 =	E&xibir
 	m_Lang007 =	&Opções
 	m_Lang008 =	I&dioma
 	m_Lang009 =	&Doar
@@ -734,7 +734,7 @@
 	d_Lang077 =	Básico
 	d_Lang078 =	Padrão
 	d_Lang079 =	Verificar atualizações ao iniciar.
-	d_Lang080 =	Você pode mudar isto indo em Opções > Configurações > Geral.
+	d_Lang080 =	Você pode mudar isto em Opções > Configurações > Geral.
 		
 ; Start-up Tips		
 	Start_Tips =	
