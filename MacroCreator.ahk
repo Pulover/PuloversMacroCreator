@@ -4079,7 +4079,7 @@ Gui, 8:Add, Radio, -Wrap W200 vComText gComText R1, %c_Lang046%
 Gui, 8:Add, Radio, -Wrap y+20 W200 vClip gClip R1, %c_Lang047%
 Gui, 8:Add, Radio, -Wrap W200 vEditPaste gEditPaste R1, %c_Lang048%
 Gui, 8:Add, Radio, -Wrap W200 vSetText gSetText R1, %c_Lang049%
-Gui, 8:Add, Checkbox, -Wrap yp-55 xs+30 W180 vComEvent gComEvent R1 Disabled, %c_Lang178%
+Gui, 8:Add, Checkbox, -Wrap yp-55 xp+15 W180 vComEvent gComEvent R1 Disabled, %c_Lang178%
 ; Repeat
 Gui, 8:Add, GroupBox, Section ys x+20 W230 H135
 Gui, 8:Add, Text, ys+15 xs+10 W100 R1 Right, %w_Lang015%:
@@ -7867,15 +7867,17 @@ return
 RunTimer:
 Gui, 27:+owner1 -MinimizeBox
 Gui, 1:+Disabled
-Gui, 27:Add, Groupbox, W180 H100
-Gui, 27:Add, Edit, ys+15 xs+15 Limit Number W150
+Gui, 27:Add, Groupbox, Section W220 H100
+Gui, 27:Add, Edit, ys+15 xs+30 Limit Number W150
 Gui, 27:Add, UpDown, vTimerDelayX 0x80 Range0-9999999, %TimerDelayX%
 Gui, 27:Add, Radio, -Wrap Section Checked%TimerMsc% yp+25 W150 vTimerMsc R1, %c_Lang018%
 Gui, 27:Add, Radio, -Wrap Checked%TimerSec% W150 vTimerSec R1, %c_Lang019%
 Gui, 27:Add, Radio, -Wrap Checked%TimerMin% W150 vTimerMin R1, %c_Lang154%
-Gui, 27:Add, Radio, -Wrap Section Group Checked%RunOnce% xm W180 vRunOnce gTimerSub R1, %t_Lang078%
+Gui, 27:Add, Groupbox, Section W220 H100 ym x+50, %w_Lang003%:
+Gui, 27:Add, Radio, -Wrap Group Checked%RunOnce% ys+20 xs+30 W180 vRunOnce gTimerSub R1, %t_Lang078%
 Gui, 27:Add, Radio, -Wrap Checked%TimedRun% W180 vTimedRun gTimerSub R1, %t_Lang079%
-Gui, 27:Add, Checkbox, -Wrap Checked%RunFirst% xp+15 y+5 W165 vRunFirst R1 Disabled, %t_Lang106%
+Gui, 27:Add, Checkbox, -Wrap Checked%RunFirst% y+5 xp+15 W165 vRunFirst R1 Disabled, %t_Lang106%
+Gui, 27:Add, Checkbox, -Wrap Checked%ShowBar% y+8 xs+30 W165 vShowBar R1, %w_Lang009%
 Gui, 27:Add, Button, -Wrap Section Default xm W75 H23 gTimerOK, %c_Lang020%
 Gui, 27:Add, Button, -Wrap ys W75 H23 gTimerCancel, %c_Lang021%
 If !(Timer_ran)
@@ -7884,6 +7886,7 @@ If !(Timer_ran)
 	GuiControl, 27:, TimerMsc, 1
 	GuiControl, 27:, RunOnce, 1
 	GuiControl, 27:, RunFirst, 0
+	GuiControl, 27:, ShowBar, 0
 }
 If (TimedRun)
 	GuiControl, 27:Enable, RunFirst
@@ -7923,6 +7926,8 @@ If (CheckDuplicateLabels())
 	StopIt := 1
 	return
 }
+If (ShowBar)
+	GoSub, ShowControls
 SetTimer, RunTimerOn, %DelayX%
 If (TimedRun) && (RunFirst)
 	GoSub, RunTimerOn
