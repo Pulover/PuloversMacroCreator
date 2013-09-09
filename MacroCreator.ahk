@@ -748,6 +748,7 @@ Else
 }
 HideWin := "", PlayHK := "", AutoPlay := "", TimerPlay := ""
 FreeMemory()
+SetTimer, FinishIcon, -1
 return
 
 ;##### Toolbars #####
@@ -1565,10 +1566,11 @@ CurrentFileName =
 Gui, 1:Show, % ((WinExist("ahk_id" PMCWinID)) ? "" : "Hide"), %AppName% v%CurrentVersion%
 GuiControl, chMacro:Focus, InputList%A_List%
 GoSub, b_Start
-FreeMemory(), OnFinishCode := 1, TB_Edit(TbSettings, "OnFinish", 0)
+FreeMemory(), OnFinishCode := 1
 SetWorkingDir %A_ScriptDir%
 GoSub, SetFinishButtom
 GoSub, RecentFiles
+SetTimer, FinishIcon, -1
 return
 
 GuiDropFiles:
@@ -12226,7 +12228,6 @@ ItemVar := SubStr(A_ThisMenu, 1, 7), %ItemVar% := RegExReplace(A_ThisMenuItem, "
 return
 
 OnFinish:
-TB_Edit(TbSettings, "OnFinish", (OnFinishCode = 1) ? 0 : 1)
 Menu, OnFinish, Add, %w_Lang021%, FinishOpt
 Menu, OnFinish, Add, %w_Lang022%, FinishOpt
 Menu, OnFinish, Add, %w_Lang023%, FinishOpt
@@ -12241,12 +12242,16 @@ Menu, OnFinish, Check, % w_Lang02%OnFinishCode%
 
 Menu, OnFinish, Show, %mX%, %mY%
 Menu, OnFinish, DeleteAll
-TB_Edit(TbSettings, "OnFinish", (OnFinishCode = 1) ? 0 : 1)
+SetTimer, FinishIcon, -1
 return
 
 FinishOpt:
 OnFinishCode := A_ThisMenuItemPos
 SetFinishButtom:
+return
+
+FinishIcon:
+TB_Edit(TbSettings, "OnFinish",(OnFinishCode = 1) ? 0 : 1,,, (OnFinishCode = 1) ? 20 : 62)
 return
 
 ;##### Languages: #####

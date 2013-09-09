@@ -25,7 +25,7 @@ TB_GetSize(tbPtr)
 	return tbWidth
 }
 
-TB_Edit(tbPtr, tbButton, Check="", Enable="", Capt="")
+TB_Edit(tbPtr, tbButton, Check="", Enable="", Capt="", Icon="")
 {
 	Index := tbPtr.LabelToIndex(tbButton)
 	If (Check <> "")
@@ -34,6 +34,8 @@ TB_Edit(tbPtr, tbButton, Check="", Enable="", Capt="")
 		tbPtr.ModifyButton(Index, "Enable", Enable)
 	If (Capt <> "")
 		tbPtr.ModifyButtonInfo(Index, "Text", Capt)
+	If (Icon <> "")
+		tbPtr.ModifyButtonInfo(Index, "Image", Icon)
 }
 
 TB_Layout(tbPtr, Layout, Band)
