@@ -5195,15 +5195,16 @@ s_Caller := "Edit"
 Window:
 Gui, 11:+owner1 -MinimizeBox +E0x00000400 +HwndCmdWin
 Gui, 1:+Disabled
-Gui, 11:Add, Groupbox, Section W450 H235
-Gui, 11:Add, DDL, ys+15 xs+10 W120 vWinCom gWinCom, %WinCmdList%
-Gui, 11:Add, Text, W120, %c_Lang055%:
+Gui, 11:Add, Groupbox, Section W450 H220
+Gui, 11:Add, Text, ys+15 xs+10 W120, %c_Lang055%:
+Gui, 11:Add, DDL, W120 vWinCom gWinCom, %WinCmdList%
+Gui, 11:Add, Text, W120, %c_Lang207%:
 Gui, 11:Add, DDL, W120 -Multi vWCmd gWCmd, %WinCmd%
-Gui, 11:Add, Text, vTValue Disabled, 255
-Gui, 11:Add, Slider, yp+10 Buddy2TValue vN gN Range0-255 Disabled, 255
-Gui, 11:Add, Radio, -Wrap Checked yp+2 xp+150 vAoT R1, Toggle
-Gui, 11:Add, Radio, -Wrap yp xp+70 R1 vOTOn, On
-Gui, 11:Add, Radio, -Wrap yp xp+70 R1 vOTOff, Off
+Gui, 11:Add, Text, yp-10 x+10 W20 vTValue Disabled, 255
+Gui, 11:Add, Slider, y+0 W100 Buddy2TValue vN gN Range0-255 Disabled, 255
+Gui, 11:Add, Radio, -Wrap Checked yp+2 x+30 W70 vAoT R1, Toggle
+Gui, 11:Add, Radio, -Wrap yp x+5 W45 R1 vOTOn, On
+Gui, 11:Add, Radio, -Wrap yp x+5 W45 R1 vOTOff, Off
 Gui, 11:Add, Text, xs+10 y+10 W80 vValueT, %c_Lang056%:
 Gui, 11:Add, Edit, W430 -Multi Disabled vValue
 Gui, 11:Add, Text, W180, %c_Lang057%:
