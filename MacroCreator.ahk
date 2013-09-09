@@ -1635,6 +1635,7 @@ GuiControl, 1:, Capt, 0
 Gui, 1:Show, % ((WinExist("ahk_id" PMCWinID)) ? "" : "Hide"), %AppName% v%CurrentVersion% %CurrentFileName%
 SplitPath, CurrentFileName,, wDir
 SetWorkingDir %wDir%
+GoSub, chMacroGuiSize
 GoSub, RowCheck
 GoSub, LoadData
 GoSub, PrevRefresh
@@ -1660,7 +1661,7 @@ Loop, Parse, SelectedFileName, `n
 		Files .= FilePath . A_LoopField "`n"
 }
 Files := RTrim(Files, "`n")
-PMC.Import(Files, "`n", 0)
+PMC.Import(Files,, 0)
 Files := ""
 GuiControl, chMacro:Choose, A_List, %TabCount%
 Gui, chMacro:Submit, NoHide
@@ -8510,7 +8511,7 @@ GuiControl, chMacro:, A_List, %s_List%
 GuiControl, chMacro:Choose, A_List, % (A_List < TabCount) ? A_List : TabCount
 Gui, 1:Submit, NoHide
 Gui, chMacro:Submit, NoHide
-GoSub, GuiSize
+GoSub, chMacroGuiSize
 GoSub, LoadData
 GoSub, RowCheck
 GoSub, PrevRefresh
@@ -12101,7 +12102,7 @@ return
 
 UpdateCopyTo:
 Loop, %TabCount%
-	Menu, CopyTo, Delete, % CopyMenuLabels[A_Index]
+	Try Menu, CopyTo, Delete, % CopyMenuLabels[A_Index]
 Loop, %TabCount%
 {
 	CopyMenuLabels[A_Index] := TabGetText(TabSel, A_Index)

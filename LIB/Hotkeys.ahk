@@ -110,7 +110,7 @@ return
 mSel := SubStr(A_ThisHotkey, 2)
 If mSel = 0
 	mSel = 10
-GuiControl, Choose, A_List, %mSel%
+GuiControl, chMacro:Choose, A_List, %mSel%
 GoSub, TabSel
 return
 
