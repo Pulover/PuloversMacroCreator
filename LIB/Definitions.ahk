@@ -92,8 +92,9 @@ ListCount1 := 0
 			,	30: ["Commands/COM_Interface.html"]
 			,	34: ["Commands/Find_a_Command.html"] }
 
-,	RecOptChecks := ["ClearNewList", "Strokes", "CaptKDn", "Mouse", "MScroll"
-			, "Moves", "TimedI", "WClass", "WTitle", "RecMouseCtrl", "RecKeybdCtrl"]
+,	RecOptChecks := ["ClearNewList", "", "Strokes", "CaptKDn", "RecKeybdCtrl"
+					, "", "Mouse", "MScroll", "Moves", "RecMouseCtrl"
+					, "", "TimedI", "WClass", "WTitle"]
 ,	PlayOptChecks := ["ShowStep", "MouseReturn", "ShowBarOnStart", "AutoHideBar", "RandomSleeps"]
 ,	OnFinishCode := 1
 ,	CopyMenuLabels := []

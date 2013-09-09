@@ -7960,33 +7960,33 @@ return
 PlayFrom:
 pb_From := !pb_From
 If !(pb_From)
-	Menu, MacroMenu, Uncheck, %r_lang011%`t%_s%Alt+1
+	Menu, MacroMenu, Uncheck, %r_Lang005%`t%_s%Alt+1
 Else
-	Menu, MacroMenu, Check, %r_lang011%`t%_s%Alt+1
-Menu, MacroMenu, Uncheck, %r_lang012%`t%_s%Alt+2
-Menu, MacroMenu, Uncheck, %r_lang013%`t%_s%Alt+3
+	Menu, MacroMenu, Check, %r_Lang005%`t%_s%Alt+1
+Menu, MacroMenu, Uncheck, %r_Lang006%`t%_s%Alt+2
+Menu, MacroMenu, Uncheck, %r_Lang007%`t%_s%Alt+3
 pb_To := "", pb_Sel := ""
 return
 
 PlayTo:
 pb_To := !pb_To
 If !(pb_To)
-	Menu, MacroMenu, Uncheck, %r_lang012%`t%_s%Alt+2
+	Menu, MacroMenu, Uncheck, %r_Lang006%`t%_s%Alt+2
 Else
-	Menu, MacroMenu, Check, %r_lang012%`t%_s%Alt+2
-Menu, MacroMenu, Uncheck, %r_lang011%`t%_s%Alt+1
-Menu, MacroMenu, Uncheck, %r_lang013%`t%_s%Alt+3
+	Menu, MacroMenu, Check, %r_Lang006%`t%_s%Alt+2
+Menu, MacroMenu, Uncheck, %r_Lang005%`t%_s%Alt+1
+Menu, MacroMenu, Uncheck, %r_Lang007%`t%_s%Alt+3
 pb_From := "", pb_Sel := ""
 return
 
 PlaySel:
 pb_Sel := !pb_Sel
 If !(pb_Sel)
-	Menu, MacroMenu, Uncheck, %r_lang013%`t%_s%Alt+3
+	Menu, MacroMenu, Uncheck, %r_Lang007%`t%_s%Alt+3
 Else
-	Menu, MacroMenu, Check, %r_lang013%`t%_s%Alt+3
-Menu, MacroMenu, Uncheck, %r_lang011%`t%_s%Alt+1
-Menu, MacroMenu, Uncheck, %r_lang012%`t%_s%Alt+2
+	Menu, MacroMenu, Check, %r_Lang007%`t%_s%Alt+3
+Menu, MacroMenu, Uncheck, %r_Lang005%`t%_s%Alt+1
+Menu, MacroMenu, Uncheck, %r_Lang006%`t%_s%Alt+2
 pb_To := "", pb_From := ""
 return
 
@@ -12181,9 +12181,9 @@ Menu, SpeedDnMenu, Add, 4x, SpeedOpt
 Menu, SpeedDnMenu, Add, 8x, SpeedOpt
 Menu, SpeedDnMenu, Add, 16x, SpeedOpt
 Menu, SpeedDnMenu, Add, 32x, SpeedOpt
-Menu, PlayOptMenu, Add, %r_lang011%, PlayFrom
-Menu, PlayOptMenu, Add, %r_lang012%, PlayTo
-Menu, PlayOptMenu, Add, %r_lang013%, PlaySel
+Menu, PlayOptMenu, Add, %r_Lang005%, PlayFrom
+Menu, PlayOptMenu, Add, %r_Lang006%, PlayTo
+Menu, PlayOptMenu, Add, %r_Lang007%, PlaySel
 Menu, PlayOptMenu, Add
 Menu, PlayOptMenu, Add, %t_Lang036%, :SpeedUpMenu
 Menu, PlayOptMenu, Add, %t_Lang037%, :SpeedDnMenu
@@ -12195,11 +12195,11 @@ Menu, PlayOptMenu, Add, %t_Lang143%, PlayOpt
 Menu, PlayOptMenu, Add, %t_Lang107%, PlayOpt
 
 If (pb_From)
-	Menu, PlayOptMenu, Check, %r_lang011%
+	Menu, PlayOptMenu, Check, %r_Lang005%
 If (pb_To)
-	Menu, PlayOptMenu, Check, %r_lang012%
+	Menu, PlayOptMenu, Check, %r_Lang006%
 If (pb_Sel)
-	Menu, PlayOptMenu, Check, %r_lang013%
+	Menu, PlayOptMenu, Check, %r_Lang007%
 
 If (ShowStep)
 	Menu, PlayOptMenu, Check, %t_Lang100%
