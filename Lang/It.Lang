@@ -1000,6 +1000,22 @@
 	Ex_UV_TT =	Esportare le variabili globali.
 	Ex_EdVars_TT =	Selezionare le variabili globali da esportare.
 		
+; Operators		
+	As_Oper_1 =	Assegna
+	As_Oper_2 =	Aggiungi
+	As_Oper_3 =	Sottrarre
+	As_Oper_4 =	Moltiplicare
+	As_Oper_5 =	Divide
+	As_Oper_6 =	Piano divide
+	As_Oper_7 =	Concatenare
+	Co_Oper_1 =	Equal
+	Co_Oper_2 =	Equal (maiuscole e minuscole)
+	Co_Oper_3 =	Non uguale
+	Co_Oper_4 =	Maggiore
+	Co_Oper_5 =	Meno
+	Co_Oper_6 =	Maggiore o uguale
+	Co_Oper_7 =	Minore o uguale
+		
 ; IE Commands Tips		
 	Tip_Navigate =	Accede a un URL o un percorso.
 	Tip_Value =	Ottiene o imposta il valore dell'oggetto.

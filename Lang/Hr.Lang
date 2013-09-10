@@ -1000,6 +1000,22 @@
 	Ex_UV_TT =	Izvoz globalne varijable.
 	Ex_EdVars_TT =	Odaberite globalne varijable se izvozi.
 		
+; Operators		
+	As_Oper_1 =	Dodijeliti
+	As_Oper_2 =	Dodati
+	As_Oper_3 =	Oduzeti
+	As_Oper_4 =	Množiti
+	As_Oper_5 =	Podijeliti
+	As_Oper_6 =	Kat podijeljenost
+	As_Oper_7 =	Povezati u obliku lanca
+	Co_Oper_1 =	Jednak
+	Co_Oper_2 =	Jednak (mala i velika slova)
+	Co_Oper_3 =	Nije jednako
+	Co_Oper_4 =	Veća
+	Co_Oper_5 =	Manje
+	Co_Oper_6 =	Veće ili jednako
+	Co_Oper_7 =	Manje ili jednako
+		
 ; IE Commands Tips		
 	Tip_Navigate =	Kreće na URL ili put.
 	Tip_Value =	Dobiva ili postavlja vrijednost objekta.

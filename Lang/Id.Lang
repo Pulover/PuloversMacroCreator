@@ -1000,6 +1000,22 @@
 	Ex_UV_TT =	Ekspor variabel global.
 	Ex_EdVars_TT =	Pilih variabel global yang akan diekspor.
 		
+; Operators		
+	As_Oper_1 =	Menetapkan
+	As_Oper_2 =	Menambahkan
+	As_Oper_3 =	Mengurangi
+	As_Oper_4 =	Mengalikan
+	As_Oper_5 =	Membagi
+	As_Oper_6 =	Membagi lantai
+	As_Oper_7 =	Menyatukan
+	Co_Oper_1 =	Sama
+	Co_Oper_2 =	Sama (case sensitive)
+	Co_Oper_3 =	Tidak sama
+	Co_Oper_4 =	Lebih besar
+	Co_Oper_5 =	Kurang
+	Co_Oper_6 =	Lebih besar atau sama
+	Co_Oper_7 =	Kurang atau sama
+		
 ; IE Commands Tips		
 	Tip_Navigate =	Menavigasi ke URL atau path.
 	Tip_Value =	Mendapatkan atau menetapkan nilai objek.

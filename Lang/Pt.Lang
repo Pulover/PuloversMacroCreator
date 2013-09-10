@@ -1,6 +1,6 @@
 ﻿LoadLang_Pt:
 		
-		; English
+		; Portuguese
 		
 ; Main Menu		
 	m_Lang001 =	&Arquivo
@@ -325,7 +325,7 @@
 	c_Lang081 =	Texto (InputVar)
 	c_Lang082 =	Variável
 	c_Lang083 =	Se Não
-	c_Lang084 =	Associar Variável
+	c_Lang084 =	Atribuir Variável
 	c_Lang085 =	Conteúdo
 	c_Lang086 =	Operador
 	c_Lang087 =	Expressão
@@ -508,7 +508,7 @@
 	t_Lang056 =	Restaurar Colunas
 	t_Lang057 =	Arquivo de Macro Padrão
 	t_Lang058 =	Arquivo de Biblioteca Padrão
-	t_Lang059 =	Usar Expressão por padrão para Associar Variáveis
+	t_Lang059 =	Usar Expressão por padrão para Atribuir Variáveis
 	t_Lang060 =	Mostrar Cores && Marcas para Loops e Declarações
 	t_Lang061 =	(Clique no cabeçalho da coluna Index para ativar/desativar)
 	t_Lang062 =	Teclas Virtuais
@@ -999,6 +999,22 @@
 	)	
 	Ex_UV_TT =	Exportar variáveis globais.
 	Ex_EdVars_TT =	Selecionar variáveis globais a serem exportadas.
+		
+; Operators		
+	As_Oper_1 =	Atribuir
+	As_Oper_2 =	Adicionar
+	As_Oper_3 =	Subtrair
+	As_Oper_4 =	Multiplicar
+	As_Oper_5 =	Dividir
+	As_Oper_6 =	Dividir (arrendondar)
+	As_Oper_7 =	Concatenar
+	Co_Oper_1 =	Igual
+	Co_Oper_2 =	Igual (diferenciar maiúsc./minúsc.)
+	Co_Oper_3 =	Diferente
+	Co_Oper_4 =	Maior
+	Co_Oper_5 =	Menor
+	Co_Oper_6 =	Maior ou igual
+	Co_Oper_7 =	Menor ou igual
 		
 ; IE Commands Tips		
 	Tip_Navigate =	Navega para uma URL ou caminho.

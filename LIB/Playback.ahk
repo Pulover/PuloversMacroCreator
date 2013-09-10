@@ -858,8 +858,6 @@ IfEval(Name, Operator, Value)
 		result := (%Name% == Value) ? true : false
 	Else If (Operator = "<>")
 		result := (%Name% <> Value) ? true : false
-	Else If (Operator = "!=")
-		result := (%Name% != Value) ? true : false
 	Else If (Operator = ">")
 		result := (%Name% > Value) ? true : false
 	Else If (Operator = "<")

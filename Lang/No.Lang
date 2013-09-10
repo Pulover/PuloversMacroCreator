@@ -1000,6 +1000,22 @@
 	Ex_UV_TT =	Eksportere globale variabler.
 	Ex_EdVars_TT =	Velg globale variabler som skal eksporteres.
 		
+; Operators		
+	As_Oper_1 =	Tildele
+	As_Oper_2 =	Legg
+	As_Oper_3 =	Trekk fra
+	As_Oper_4 =	Multipliser
+	As_Oper_5 =	Fordel
+	As_Oper_6 =	Etasje skillet
+	As_Oper_7 =	Sette sammen
+	Co_Oper_1 =	Equal
+	Co_Oper_2 =	Lik (case sensitive)
+	Co_Oper_3 =	Ikke lik
+	Co_Oper_4 =	Greater
+	Co_Oper_5 =	Mindre
+	Co_Oper_6 =	Større eller lik
+	Co_Oper_7 =	Mindre eller lik
+		
 ; IE Commands Tips		
 	Tip_Navigate =	Navigerer til en URL eller bane.
 	Tip_Value =	Får eller setter verdien av objektet.

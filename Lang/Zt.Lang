@@ -1000,6 +1000,22 @@
 	Ex_UV_TT =	導出全局變量。
 	Ex_EdVars_TT =	選擇要導出的全局變量。
 		
+; Operators		
+	As_Oper_1 =	分配
+	As_Oper_2 =	加
+	As_Oper_3 =	減去
+	As_Oper_4 =	乘
+	As_Oper_5 =	劃分
+	As_Oper_6 =	地板鴻溝
+	As_Oper_7 =	串連
+	Co_Oper_1 =	等於
+	Co_Oper_2 =	平等（區分大小寫）
+	Co_Oper_3 =	不等於
+	Co_Oper_4 =	大
+	Co_Oper_5 =	少
+	Co_Oper_6 =	大於或等於
+	Co_Oper_7 =	小於或等於
+		
 ; IE Commands Tips		
 	Tip_Navigate =	導航到URL或路徑。
 	Tip_Value =	獲取或設置對象的值。

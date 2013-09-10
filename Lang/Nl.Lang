@@ -1000,6 +1000,22 @@
 	Ex_UV_TT =	Exporteren globale variabelen.
 	Ex_EdVars_TT =	Selecteer globale variabelen te exporteren.
 		
+; Operators		
+	As_Oper_1 =	Toewijzen
+	As_Oper_2 =	Toevoegen
+	As_Oper_3 =	Aftrekken
+	As_Oper_4 =	Vermenigvuldigen
+	As_Oper_5 =	Verdelen
+	As_Oper_6 =	Vloer kloof
+	As_Oper_7 =	Aaneenschakelen
+	Co_Oper_1 =	Gelijk
+	Co_Oper_2 =	Equal (hoofdlettergevoelig)
+	Co_Oper_3 =	Niet gelijk
+	Co_Oper_4 =	Groter
+	Co_Oper_5 =	Minder
+	Co_Oper_6 =	Groter dan of gelijk
+	Co_Oper_7 =	Minder of gelijk
+		
 ; IE Commands Tips		
 	Tip_Navigate =	Hiermee navigeert u naar een URL of pad.
 	Tip_Value =	Hiermee wordt de waarde van het object.

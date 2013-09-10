@@ -1000,6 +1000,22 @@
 	Ex_UV_TT =	导出全局变量。
 	Ex_EdVars_TT =	选择要导出的全局变量。
 		
+; Operators		
+	As_Oper_1 =	分配
+	As_Oper_2 =	加
+	As_Oper_3 =	减去
+	As_Oper_4 =	乘
+	As_Oper_5 =	划分
+	As_Oper_6 =	地板鸿沟
+	As_Oper_7 =	串连
+	Co_Oper_1 =	等于
+	Co_Oper_2 =	平等（区分大小写）
+	Co_Oper_3 =	不等于
+	Co_Oper_4 =	大
+	Co_Oper_5 =	少
+	Co_Oper_6 =	大于或等于
+	Co_Oper_7 =	小于或等于
+		
 ; IE Commands Tips		
 	Tip_Navigate =	导航到一个URL或路径。
 	Tip_Value =	获取或设置对象的值。

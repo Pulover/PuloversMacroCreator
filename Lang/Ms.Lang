@@ -1000,6 +1000,22 @@
 	Ex_UV_TT =	Eksport pembolehubah global.
 	Ex_EdVars_TT =	Pilih pembolehubah global untuk dieksport.
 		
+; Operators		
+	As_Oper_1 =	Berikan
+	As_Oper_2 =	Tambah
+	As_Oper_3 =	Tolak
+	As_Oper_4 =	Membiak
+	As_Oper_5 =	Bahagikan
+	As_Oper_6 =	Jurang Floor
+	As_Oper_7 =	Concatenate
+	Co_Oper_1 =	Sama
+	Co_Oper_2 =	Sama (kes sensitif)
+	Co_Oper_3 =	Tidak sama
+	Co_Oper_4 =	Lebih
+	Co_Oper_5 =	Kurang
+	Co_Oper_6 =	Lebih besar atau sama
+	Co_Oper_7 =	Kurang atau sama
+		
 ; IE Commands Tips		
 	Tip_Navigate =	Mengemudi ke URL atau laluan.
 	Tip_Value =	Dapat atau menetapkan nilai objek.

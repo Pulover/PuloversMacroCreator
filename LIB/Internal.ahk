@@ -332,16 +332,6 @@ AssignVar(Name, Operator, Value)
 		%Name% //= Value
 	Else If (Operator = ".=")
 		%Name% .= Value
-	Else If (Operator = "|=")
-		%Name% |= Value
-	Else If (Operator = "&=")
-		%Name% &= Value
-	Else If (Operator = "^=")
-		%Name% ^= Value
-	Else If (Operator = ">>=")
-		%Name% >>= Value
-	Else If (Operator = "<<=")
-		%Name% <<= Value
 }
 
 ListIEWindows()

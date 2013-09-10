@@ -6171,7 +6171,8 @@ Gui, 21:Add, Button, -Wrap yp-1 x+5 W30 H23 vIfGet gIfGet, ...
 Gui, 21:Add, Text, y+5 xs+10 W200 vFormatTip
 Gui, 21:Add, Edit, y+5 xs+10 W430 R4 -vScroll vTestVar
 Gui, 21:Add, Text, y+11 xs+10 W135 vFormatTip2
-Gui, 21:Add, DDL, yp-5 x+0 W55 vIfOper Disabled, =$$==$<>$!=$>$<$>=$<=
+Gui, 21:Add, DDL, yp-5 x+0 W55 vIfOper gCoOper Disabled, =$$==$<>$>$<$>=$<=
+Gui, 21:Add, Text, yp+5 x+5 W150 vCoOper cGray, %Co_Oper_1%
 Gui, 21:Add, Edit, y+5 xs+10 W430 R4 -vScroll vTestVar2 Disabled
 Gui, 21:Add, Text, W430 r1 cGray, %c_Lang025%
 Gui, 21:Add, Groupbox, Section xs y+15 W450 H50, %c_Lang123%:
@@ -6185,7 +6186,8 @@ Gui, 21:Add, GroupBox, Section xm ym W450 H240
 Gui, 21:Add, Text, ys+15 xs+10, %c_Lang057%:
 Gui, 21:Add, Edit, W200 R1 -Multi vVarName
 Gui, 21:Add, Text, yp-20 x+5 W120, %c_Lang086%:
-Gui, 21:Add, DDL, y+7 W60 vOper, :=$$+=$-=$*=$/=$//=$.=$|=$&=$^=$>>=$<<=
+Gui, 21:Add, DDL, y+7 W60 vOper gAsOper, :=$$+=$-=$*=$/=$//=$.=
+Gui, 21:Add, Text, yp+5 x+5 W150 vAsOper cGray, %As_Oper_1%
 Gui, 21:Add, Text, y+9 xs+10 W200, %c_Lang056%:
 Gui, 21:Add, Checkbox, -Wrap Checked%EvalDefault% yp x+5 W220 vUseEval gUseEval R1, %c_Lang087%
 Gui, 21:Add, Edit, y+10 xs+10 W430 H125 vVarValue
@@ -6258,6 +6260,7 @@ If (s_Caller = "Edit")
 		If InStr(Action, "Image")
 			GuiControl, 21:Disable, TestVar
 		GuiControl, 21:, TabControl, $%c_Lang009%
+		GoSub, CoOper
 		GuiTitle := c_Lang009
 	}
 	Else If (A_ThisLabel = "EditVar")
@@ -6296,6 +6299,7 @@ If (s_Caller = "Edit")
 			}
 			GoSub, FuncName
 		}
+		GoSub, AsOper
 	}
 	GuiControl, 21:Enable, IfApply
 	GuiControl, 21:Enable, VarApplyA
@@ -6504,6 +6508,20 @@ Else
 	s_Caller := ""
 	GuiControl, Focus, InputList%A_List%
 }
+return
+
+CoOper:
+GuiControl, 21:+AltSubmit, IfOper
+Gui, 21:Submit, NoHide
+GuiControl, 21:, CoOper, % Co_Oper_%IfOper%
+GuiControl, 21:-AltSubmit, IfOper
+return
+
+AsOper:
+GuiControl, 21:+AltSubmit, Oper
+Gui, 21:Submit, NoHide
+GuiControl, 21:, AsOper, % As_Oper_%Oper%
+GuiControl, 21:-AltSubmit, Oper
 return
 
 AddElse:
@@ -10944,7 +10962,7 @@ If (InStr(FileCmdList, Type "|"))
 		StringReplace, LoopField, LoopField, `,, ¢, All
 		_Step .= LoopField ", "
 	}
-	Step := LTrim(_Step, ", ")
+	Step := RTrim(_Step, ", ")
 }
 CheckVars("Step|TimesX|DelayX|Target|Window", This_Point)
 StringReplace, Step, Step, ```,, ¢, All

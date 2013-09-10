@@ -1000,6 +1000,22 @@
 	Ex_UV_TT =	グローバル変数をエクスポートします。
 	Ex_EdVars_TT =	エクスポートするグローバル変数を選択します。
 		
+; Operators		
+	As_Oper_1 =	割り当てる
+	As_Oper_2 =	加える
+	As_Oper_3 =	引く
+	As_Oper_4 =	掛ける
+	As_Oper_5 =	分割
+	As_Oper_6 =	フロア除算
+	As_Oper_7 =	連結
+	Co_Oper_1 =	等しい
+	Co_Oper_2 =	等しい（大文字と小文字を区別）
+	Co_Oper_3 =	等しくない
+	Co_Oper_4 =	グレーター
+	Co_Oper_5 =	レス
+	Co_Oper_6 =	大きいか等しい
+	Co_Oper_7 =	小さいか等しい
+		
 ; IE Commands Tips		
 	Tip_Navigate =	URLまたはパスに移動します。
 	Tip_Value =	オブジェクトの値を取得または設定します。

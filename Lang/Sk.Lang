@@ -1000,6 +1000,22 @@
 	Ex_UV_TT =	Export globálne premenné.
 	Ex_EdVars_TT =	Vyberte globálne premenné, ktoré chcete exportovať.
 		
+; Operators		
+	As_Oper_1 =	Priradiť
+	As_Oper_2 =	Pridať
+	As_Oper_3 =	Odčítať
+	As_Oper_4 =	Násobenie
+	As_Oper_5 =	Rozdeliť
+	As_Oper_6 =	Podlahové delenie
+	As_Oper_7 =	Spájať
+	Co_Oper_1 =	Rovný
+	Co_Oper_2 =	Rovné (case sensitive)
+	Co_Oper_3 =	Nie je rovné
+	Co_Oper_4 =	Väčšia
+	Co_Oper_5 =	Menej
+	Co_Oper_6 =	Väčšie alebo rovné
+	Co_Oper_7 =	Menší alebo rovný
+		
 ; IE Commands Tips		
 	Tip_Navigate =	Prejde na adresu URL alebo cestu.
 	Tip_Value =	Získa alebo nastaví hodnotu objektu.

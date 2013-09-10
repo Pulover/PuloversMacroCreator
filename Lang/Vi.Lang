@@ -1000,6 +1000,22 @@
 	Ex_UV_TT =	Xuất khẩu các biến toàn cầu.
 	Ex_EdVars_TT =	Chọn các biến toàn cầu được xuất khẩu.
 		
+; Operators		
+	As_Oper_1 =	Gán
+	As_Oper_2 =	Thêm
+	As_Oper_3 =	Trừ
+	As_Oper_4 =	Nhân
+	As_Oper_5 =	Chia
+	As_Oper_6 =	Tầng chia
+	As_Oper_7 =	Tiếp nhau
+	Co_Oper_1 =	Như nhau
+	Co_Oper_2 =	Bằng (chữ hoa)
+	Co_Oper_3 =	Không bình đẳng
+	Co_Oper_4 =	Lớn hơn
+	Co_Oper_5 =	Ít
+	Co_Oper_6 =	Lớn hơn hoặc bằng
+	Co_Oper_7 =	Ít hơn hoặc bằng
+		
 ; IE Commands Tips		
 	Tip_Navigate =	Điều hướng tới một URL hoặc đường dẫn.
 	Tip_Value =	Được hoặc đặt giá trị của đối tượng.

@@ -1000,6 +1000,22 @@
 	Ex_UV_TT =	Export globális változók.
 	Ex_EdVars_TT =	Válassza globális változók exportálni.
 		
+; Operators		
+	As_Oper_1 =	Hozzárendelése
+	As_Oper_2 =	Hozzáad
+	As_Oper_3 =	Levon
+	As_Oper_4 =	Multiply
+	As_Oper_5 =	Oszt
+	As_Oper_6 =	Floor szakadék
+	As_Oper_7 =	Összekapcsol
+	Co_Oper_1 =	Egyenlő
+	Co_Oper_2 =	Egyenlő (nagybetűk)
+	Co_Oper_3 =	Nem egyenlő
+	Co_Oper_4 =	Nagyobb
+	Co_Oper_5 =	Kevesebb
+	Co_Oper_6 =	Nagyobb vagy egyenlő
+	Co_Oper_7 =	Kisebb vagy egyenlő
+		
 ; IE Commands Tips		
 	Tip_Navigate =	Navigál egy URL-t vagy elérési utat.
 	Tip_Value =	Gets vagy beállítja az értékét a tárgy.

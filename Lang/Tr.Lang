@@ -1000,6 +1000,22 @@
 	Ex_UV_TT =	Global değişkenler ihracat.
 	Ex_EdVars_TT =	Ihraç edilecek genel değişkenleri seçin.
 		
+; Operators		
+	As_Oper_1 =	Atamak
+	As_Oper_2 =	Eklemek
+	As_Oper_3 =	Çıkarmak
+	As_Oper_4 =	Çarpmak
+	As_Oper_5 =	Bölmek
+	As_Oper_6 =	Kat bölmek
+	As_Oper_7 =	Bağlamak
+	Co_Oper_1 =	Eşit
+	Co_Oper_2 =	Eşit (küçük harf duyarlı)
+	Co_Oper_3 =	Eşit değil
+	Co_Oper_4 =	Büyük
+	Co_Oper_5 =	Daha az
+	Co_Oper_6 =	Büyük veya eşit
+	Co_Oper_7 =	Daha az ya da eşit
+		
 ; IE Commands Tips		
 	Tip_Navigate =	Bir URL veya yol gider.
 	Tip_Value =	Alır veya nesnesinin değerini belirler.

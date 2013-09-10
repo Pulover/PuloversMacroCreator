@@ -1000,6 +1000,22 @@
 	Ex_UV_TT =	Viedä globaalien muuttujien.
 	Ex_EdVars_TT =	Valitse globaalien muuttujien viedään.
 		
+; Operators		
+	As_Oper_1 =	Antaa
+	As_Oper_2 =	Lisätä
+	As_Oper_3 =	Vähentää
+	As_Oper_4 =	Lisääntyä
+	As_Oper_5 =	Jakaa
+	As_Oper_6 =	Lattia kahtiajaon
+	As_Oper_7 =	Kytkeä peräkkäin
+	Co_Oper_1 =	Yhtäläinen
+	Co_Oper_2 =	Equal (isot ja pienet kirjaimet)
+	Co_Oper_3 =	Ei yhtä
+	Co_Oper_4 =	Suur-
+	Co_Oper_5 =	Vähemmän
+	Co_Oper_6 =	Suurempi tai yhtä suuri
+	Co_Oper_7 =	Pienempi tai yhtä suuri
+		
 ; IE Commands Tips		
 	Tip_Navigate =	Siirtyy URL tai polku.
 	Tip_Value =	Saa tai asettaa kohteen arvo.

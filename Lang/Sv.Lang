@@ -1000,6 +1000,22 @@
 	Ex_UV_TT =	Exportera globala variabler.
 	Ex_EdVars_TT =	Välj globala variabler som skall exporteras.
 		
+; Operators		
+	As_Oper_1 =	Tilldela
+	As_Oper_2 =	Lägg
+	As_Oper_3 =	Subtrahera
+	As_Oper_4 =	Multiplicera
+	As_Oper_5 =	Dividera
+	As_Oper_6 =	Golv klyftan
+	As_Oper_7 =	Hoplänka
+	Co_Oper_1 =	Lika
+	Co_Oper_2 =	Lika (skiftlägeskänsligt)
+	Co_Oper_3 =	Inte lika
+	Co_Oper_4 =	Greater
+	Co_Oper_5 =	Mindre
+	Co_Oper_6 =	Större än eller lika
+	Co_Oper_7 =	Mindre eller lika
+		
 ; IE Commands Tips		
 	Tip_Navigate =	Navigerar till en webbadress eller sökväg.
 	Tip_Value =	Hämtar eller ställer in värdet för objektet.
