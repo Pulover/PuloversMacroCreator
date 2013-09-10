@@ -26,7 +26,23 @@
 	f_Lang009 =	I&zlaz
 	f_Lang010 =	U datotekama
 		
-; Actions Sub Menu		
+; Macro Sub Menu		
+	r_lang001 =	&Snimanje makro
+	r_lang002 =	&Aktivirajte Makronaredbe
+	r_lang003 =	&Igrajte Trenutna Macro
+	r_lang004 =	&Timer
+	r_lang005 =	I&grati na odabrani redak
+	r_lang006 =	Ig&raj dok odabrani redak
+	r_lang007 =	Igra&jte odabrane retke
+	r_lang008 =	&Kontekstna Hotkeys
+	r_lang009 =	&Dodaj Macro
+	r_lang010 =	&Makro Zatvori
+	r_lang011 =	D&vostruki Macro
+	r_lang012 =	&Uredi Makronaredbe
+	r_lang013 =	Uv&oz Makro
+	r_lang014 =	S&premi Trenutni Macro
+		
+; Commands Sub Menu		
 	i_Lang001 =	&Miš
 	i_Lang002 =	&Tekst
 	i_Lang003 =	&Kontrolirajte
@@ -49,18 +65,6 @@
 	i_Lang020 =	Prona&đite naredbu
 		
 		
-; Select Sub Menu		
-	s_Lang001 =	&Odaberi sve
-	s_Lang002 =	O&daberite None
-	s_Lang003 =	&Sve osim odabranog
-	s_Lang004 =	&Provjerite Odabrani
-	s_Lang005 =	Po&ništite Odabrani
-	s_Lang006 =	&Invert Provjere
-	s_Lang007 =	Po&micanje Gore Odabir
-	s_Lang008 =	P&remjestiti Izbor Dolje
-	s_Lang009 =	I&zabrani Tip
-	s_Lang010 =	Naredba putovanja
-		
 ; Edit Sub Menu		
 	e_Lang001 =	&Duplikat
 	e_Lang002 =	&Uredi komentar
@@ -78,21 +82,17 @@
 	e_Lang014 =	Ume&tnite Pritisak Na Tipku
 	e_Lang015 =	Uredi Bo&ja oznaka
 		
-; Macro Sub Menu		
-	r_lang001 =	&Snimanje makro
-	r_lang002 =	&Aktivirajte Makronaredbe
-	r_lang003 =	&Igrajte Trenutna Macro
-	r_lang004 =	&Timer
-	r_lang005 =	I&grati na odabrani redak
-	r_lang006 =	Ig&raj dok odabrani redak
-	r_lang007 =	Igra&jte odabrane retke
-	r_lang008 =	&Kontekstna Hotkeys
-	r_lang009 =	&Dodaj Macro
-	r_lang010 =	&Makro Zatvori
-	r_lang011 =	D&vostruki Macro
-	r_lang012 =	&Uredi Makronaredbe
-	r_lang013 =	Uv&oz Makro
-	r_lang014 =	S&premi Trenutni Macro
+; Select Sub Menu		
+	s_Lang001 =	&Odaberi sve
+	s_Lang002 =	O&daberite None
+	s_Lang003 =	&Sve osim odabranog
+	s_Lang004 =	&Provjerite Odabrani
+	s_Lang005 =	Po&ništite Odabrani
+	s_Lang006 =	&Invert Provjere
+	s_Lang007 =	Po&micanje Gore Odabir
+	s_Lang008 =	P&remjestiti Izbor Dolje
+	s_Lang009 =	I&zabrani Tip
+	s_Lang010 =	Naredba putovanja
 		
 ; View Sub Menu		
 	v_lang001 =	&Uvijek na vrhu

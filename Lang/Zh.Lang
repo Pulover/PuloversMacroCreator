@@ -26,7 +26,23 @@
 	f_Lang009 =	导出
 	f_Lang010 =	没有文件
 		
-; Actions Sub Menu		
+; Macro Sub Menu		
+	r_lang001 =	录制宏
+	r_lang002 =	激活宏
+	r_lang003 =	播放当前宏观经济
+	r_lang004 =	定时器
+	r_lang005 =	播放选定的行
+	r_lang006 =	播放到选定的行
+	r_lang007 =	播放选定的行
+	r_lang008 =	上下文相关的热键
+	r_lang009 =	添加宏
+	r_lang010 =	关闭宏
+	r_lang011 =	重复宏
+	r_lang012 =	编辑宏
+	r_lang013 =	导入宏
+	r_lang014 =	保存当前的宏
+		
+; Commands Sub Menu		
 	i_Lang001 =	鼠标
 	i_Lang002 =	文本
 	i_Lang003 =	控制
@@ -49,18 +65,6 @@
 	i_Lang020 =	查找命令
 		
 		
-; Select Sub Menu		
-	s_Lang001 =	全选
-	s_Lang002 =	全不选
-	s_Lang003 =	反选
-	s_Lang004 =	检查所选
-	s_Lang005 =	取消选中所选
-	s_Lang006 =	反转检查
-	s_Lang007 =	移动选择
-	s_Lang008 =	向下移动选择
-	s_Lang009 =	选择的类型
-	s_Lang010 =	命令类型
-		
 ; Edit Sub Menu		
 	e_Lang001 =	复制
 	e_Lang002 =	编辑注释
@@ -78,21 +82,17 @@
 	e_Lang014 =	插入击键
 	e_Lang015 =	编辑颜色标识
 		
-; Macro Sub Menu		
-	r_lang001 =	录制宏
-	r_lang002 =	激活宏
-	r_lang003 =	播放当前宏观经济
-	r_lang004 =	定时器
-	r_lang005 =	播放选定的行
-	r_lang006 =	播放到选定的行
-	r_lang007 =	播放选定的行
-	r_lang008 =	上下文相关的热键
-	r_lang009 =	添加宏
-	r_lang010 =	关闭宏
-	r_lang011 =	重复宏
-	r_lang012 =	编辑宏
-	r_lang013 =	导入宏
-	r_lang014 =	保存当前的宏
+; Select Sub Menu		
+	s_Lang001 =	全选
+	s_Lang002 =	全不选
+	s_Lang003 =	反选
+	s_Lang004 =	检查所选
+	s_Lang005 =	取消选中所选
+	s_Lang006 =	反转检查
+	s_Lang007 =	移动选择
+	s_Lang008 =	向下移动选择
+	s_Lang009 =	选择的类型
+	s_Lang010 =	命令类型
 		
 ; View Sub Menu		
 	v_lang001 =	总在最前

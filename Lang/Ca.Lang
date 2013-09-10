@@ -26,7 +26,23 @@
 	f_Lang009 =	&Sortida
 	f_Lang010 =	No hi ha arxius
 		
-; Actions Sub Menu		
+; Macro Sub Menu		
+	r_lang001 =	&Gravar macro
+	r_lang002 =	&Activar Macros
+	r_lang003 =	&Jugar Macro actual
+	r_lang004 =	&Timer
+	r_lang005 =	J&uga de fila seleccionada
+	r_lang006 =	Juga &fins que la Columna seleccionat
+	r_lang007 =	Juga f&iles seleccionades
+	r_lang008 =	T&ecles d'accés directe sensibles al context
+	r_lang009 =	Afegi&r Macro
+	r_lang010 =	Ta&ncar Macro
+	r_lang011 =	&Duplicar macro
+	r_lang012 =	Edita &Macros
+	r_lang013 =	Im&portació Macro
+	r_lang014 =	Guardar Ma&cro actual
+		
+; Commands Sub Menu		
 	i_Lang001 =	&Ratolí
 	i_Lang002 =	&Text
 	i_Lang003 =	&Controlar
@@ -49,18 +65,6 @@
 	i_Lang020 =	Trobar una or&dre
 		
 		
-; Select Sub Menu		
-	s_Lang001 =	&Selecciona tot
-	s_Lang002 =	S&eleccioneu Cap
-	s_Lang003 =	&Inverteix la selecció
-	s_Lang004 =	&Comprovi seleccionat
-	s_Lang005 =	&Desactiveu l'opció seleccionada
-	s_Lang006 =	I&nvertir xecs
-	s_Lang007 =	&Mou La Selecció Amunt
-	s_Lang008 =	M&oure La Selecció Cap Avall
-	s_Lang009 =	&Tipus Seleccionat
-	s_Lang010 =	Tipus comando
-		
 ; Edit Sub Menu		
 	e_Lang001 =	&Duplicar
 	e_Lang002 =	&Redactar comentari
@@ -78,21 +82,17 @@
 	e_Lang014 =	Inserir Pu&lsacions
 	e_Lang015 =	Edit&a color
 		
-; Macro Sub Menu		
-	r_lang001 =	&Gravar macro
-	r_lang002 =	&Activar Macros
-	r_lang003 =	&Jugar Macro actual
-	r_lang004 =	&Timer
-	r_lang005 =	J&uga de fila seleccionada
-	r_lang006 =	Juga &fins que la Columna seleccionat
-	r_lang007 =	Juga f&iles seleccionades
-	r_lang008 =	T&ecles d'accés directe sensibles al context
-	r_lang009 =	Afegi&r Macro
-	r_lang010 =	Ta&ncar Macro
-	r_lang011 =	&Duplicar macro
-	r_lang012 =	Edita &Macros
-	r_lang013 =	Im&portació Macro
-	r_lang014 =	Guardar Ma&cro actual
+; Select Sub Menu		
+	s_Lang001 =	&Selecciona tot
+	s_Lang002 =	S&eleccioneu Cap
+	s_Lang003 =	&Inverteix la selecció
+	s_Lang004 =	&Comprovi seleccionat
+	s_Lang005 =	&Desactiveu l'opció seleccionada
+	s_Lang006 =	I&nvertir xecs
+	s_Lang007 =	&Mou La Selecció Amunt
+	s_Lang008 =	M&oure La Selecció Cap Avall
+	s_Lang009 =	&Tipus Seleccionat
+	s_Lang010 =	Tipus comando
 		
 ; View Sub Menu		
 	v_lang001 =	&Sempre visible

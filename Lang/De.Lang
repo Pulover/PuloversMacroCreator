@@ -26,7 +26,23 @@
 	f_Lang009 =	&Beenden
 	f_Lang010 =	Keine Dateien
 		
-; Actions Sub Menu		
+; Macro Sub Menu		
+	r_lang001 =	&Makro aufzeichnen
+	r_lang002 =	M&akros aktivieren
+	r_lang003 =	A&ktuelles Makro abspielen 
+	r_lang004 =	&Timer
+	r_lang005 =	&Wiedergabe von ausgewählter Zeile
+	r_lang006 =	W&iedergabe bis zur ausgewählten Zeile
+	r_lang007 =	A&usgewählte Zeilen wiedergeben
+	r_lang008 =	K&ontextsensitive Hotkeys
+	r_lang009 =	Mak&ro hinzufügen
+	r_lang010 =	Makro &schließen 
+	r_lang011 =	Makro &duplizieren
+	r_lang012 =	Makros &Bearbeiten
+	r_lang013 =	Makro im&portieren
+	r_lang014 =	Aktu&elles Makro speichern
+		
+; Commands Sub Menu		
 	i_Lang001 =	&Maus
 	i_Lang002 =	&Text
 	i_Lang003 =	&Steuerelement
@@ -49,18 +65,6 @@
 	i_Lang020 =	Fin&den Sie einen Befehl
 		
 		
-; Select Sub Menu		
-	s_Lang001 =	&Alles auswählen
-	s_Lang002 =	&Nichts auswählen
-	s_Lang003 =	A&uswahl umkehren
-	s_Lang004 =	Au&swahl aktivieren
-	s_Lang005 =	Aus&wahl deaktivieren
-	s_Lang006 =	&Zustand umkehren 
-	s_Lang007 =	&Bewegen Auswahl Bis
-	s_Lang008 =	Auswa&hl Nach Unten Verschieben
-	s_Lang009 =	&Gleiche Typen auswählen
-	s_Lang010 =	Befehlstyp
-		
 ; Edit Sub Menu		
 	e_Lang001 =	&Duplizieren
 	e_Lang002 =	&Kommentar bearbeiten
@@ -78,21 +82,17 @@
 	e_Lang014 =	&Tastendruck einfügen
 	e_Lang015 =	&Farbmarkierung bearbeiten 
 		
-; Macro Sub Menu		
-	r_lang001 =	&Makro aufzeichnen
-	r_lang002 =	M&akros aktivieren
-	r_lang003 =	A&ktuelles Makro abspielen 
-	r_lang004 =	&Timer
-	r_lang005 =	&Wiedergabe von ausgewählter Zeile
-	r_lang006 =	W&iedergabe bis zur ausgewählten Zeile
-	r_lang007 =	A&usgewählte Zeilen wiedergeben
-	r_lang008 =	K&ontextsensitive Hotkeys
-	r_lang009 =	Mak&ro hinzufügen
-	r_lang010 =	Makro &schließen 
-	r_lang011 =	Makro &duplizieren
-	r_lang012 =	Makros &Bearbeiten
-	r_lang013 =	Makro im&portieren
-	r_lang014 =	Aktu&elles Makro speichern
+; Select Sub Menu		
+	s_Lang001 =	&Alles auswählen
+	s_Lang002 =	&Nichts auswählen
+	s_Lang003 =	A&uswahl umkehren
+	s_Lang004 =	Au&swahl aktivieren
+	s_Lang005 =	Aus&wahl deaktivieren
+	s_Lang006 =	&Zustand umkehren 
+	s_Lang007 =	&Bewegen Auswahl Bis
+	s_Lang008 =	Auswa&hl Nach Unten Verschieben
+	s_Lang009 =	&Gleiche Typen auswählen
+	s_Lang010 =	Befehlstyp
 		
 ; View Sub Menu		
 	v_lang001 =	&Immer im Vordergrund

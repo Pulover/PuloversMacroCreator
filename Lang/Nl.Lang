@@ -26,7 +26,23 @@
 	f_Lang009 =	&Uitgang
 	f_Lang010 =	Geen files
 		
-; Actions Sub Menu		
+; Macro Sub Menu		
+	r_lang001 =	&Macro opnemen
+	r_lang002 =	&Activeer Macro's
+	r_lang003 =	&Speel huidige macro
+	r_lang004 =	&Timer
+	r_lang005 =	A&fspelen vanaf geselecteerde rij
+	r_lang006 =	S&peel tot geselecteerde rij
+	r_lang007 =	Sp&elen Geselecteerde Rijen
+	r_lang008 =	&Context gevoelige sneltoetsen
+	r_lang009 =	&Voeg Macro
+	r_lang010 =	S&luiten Macro
+	r_lang011 =	&Dubbele Macro
+	r_lang012 =	Mac&ro's Bewerken
+	r_lang013 =	&Import Macro
+	r_lang014 =	Save &huidige Macro
+		
+; Commands Sub Menu		
 	i_Lang001 =	&Muis
 	i_Lang002 =	&Tekst
 	i_Lang003 =	&Controle
@@ -49,18 +65,6 @@
 	i_Lang020 =	&Zoek een commando
 		
 		
-; Select Sub Menu		
-	s_Lang001 =	&Alles selecteren
-	s_Lang002 =	&Selecteer Geen
-	s_Lang003 =	S&electie omkeren
-	s_Lang004 =	&Controleer Geselecteerde
-	s_Lang005 =	&Haal het vinkje weg Geselecteerde
-	s_Lang006 =	&Omkeren Controles
-	s_Lang007 =	&Bewegen Selectie Up
-	s_Lang008 =	Be&wegen Selectie Omlaag
-	s_Lang009 =	&Geselecteerde Type
-	s_Lang010 =	Opdracht type
-		
 ; Edit Sub Menu		
 	e_Lang001 =	&Duplicaat
 	e_Lang002 =	&Opmerking bewerken
@@ -78,21 +82,17 @@
 	e_Lang014 =	S&teek Toetsaanslag
 	e_Lang015 =	&Bewerken kleurmarkering
 		
-; Macro Sub Menu		
-	r_lang001 =	&Macro opnemen
-	r_lang002 =	&Activeer Macro's
-	r_lang003 =	&Speel huidige macro
-	r_lang004 =	&Timer
-	r_lang005 =	A&fspelen vanaf geselecteerde rij
-	r_lang006 =	S&peel tot geselecteerde rij
-	r_lang007 =	Sp&elen Geselecteerde Rijen
-	r_lang008 =	&Context gevoelige sneltoetsen
-	r_lang009 =	&Voeg Macro
-	r_lang010 =	S&luiten Macro
-	r_lang011 =	&Dubbele Macro
-	r_lang012 =	Mac&ro's Bewerken
-	r_lang013 =	&Import Macro
-	r_lang014 =	Save &huidige Macro
+; Select Sub Menu		
+	s_Lang001 =	&Alles selecteren
+	s_Lang002 =	&Selecteer Geen
+	s_Lang003 =	S&electie omkeren
+	s_Lang004 =	&Controleer Geselecteerde
+	s_Lang005 =	&Haal het vinkje weg Geselecteerde
+	s_Lang006 =	&Omkeren Controles
+	s_Lang007 =	&Bewegen Selectie Up
+	s_Lang008 =	Be&wegen Selectie Omlaag
+	s_Lang009 =	&Geselecteerde Type
+	s_Lang010 =	Opdracht type
 		
 ; View Sub Menu		
 	v_lang001 =	&Altijd op voorgrond

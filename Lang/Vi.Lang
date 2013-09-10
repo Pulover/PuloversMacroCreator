@@ -26,7 +26,23 @@
 	f_Lang009 =	&Ra
 	f_Lang010 =	&Không có tập tin
 		
-; Actions Sub Menu		
+; Macro Sub Menu		
+	r_lang001 =	&Record Macro
+	r_lang002 =	&Kích hoạt Macro
+	r_lang003 =	&Chơi vĩ mô hiện tại
+	r_lang004 =	&Hẹn giờ
+	r_lang005 =	Ch&ơi từ Row chọn
+	r_lang006 =	Chơ&i cho đến khi hàng được chọn
+	r_lang007 =	Chơi &dòng chọn
+	r_lang008 =	H&otkeys bối cảnh nhạy cảm
+	r_lang009 =	&Thêm vĩ mô
+	r_lang010 =	&Gần vĩ mô
+	r_lang011 =	&Bản sao vĩ mô
+	r_lang012 =	Ch&ỉnh Sửa Macro
+	r_lang013 =	&Nhập khẩu vĩ mô
+	r_lang014 =	&Lưu vĩ mô hiện tại
+		
+; Commands Sub Menu		
 	i_Lang001 =	&Chuột
 	i_Lang002 =	&Văn bản
 	i_Lang003 =	&Kiểm soát
@@ -49,18 +65,6 @@
 	i_Lang020 =	Tì&m một lệnh
 		
 		
-; Select Sub Menu		
-	s_Lang001 =	&Chọn tất cả
-	s_Lang002 =	C&họn None
-	s_Lang003 =	&Đảo ngược lựa chọn
-	s_Lang004 =	&Kiểm tra chọn
-	s_Lang005 =	&Bỏ chọn
-	s_Lang006 =	Đ&ảo ngược Kiểm tra
-	s_Lang007 =	Ch&uyển Vùng Chọn Lên
-	s_Lang008 =	Chu&yển Vùng Chọn Xuống
-	s_Lang009 =	&Loại lựa chọn
-	s_Lang010 =	Loại lệnh
-		
 ; Edit Sub Menu		
 	e_Lang001 =	&Bản sao
 	e_Lang002 =	&Sửa Bình luận
@@ -78,21 +82,17 @@
 	e_Lang014 =	Ch&èn Tổ hợp phím
 	e_Lang015 =	S&ửa Màu Đánh dấu
 		
-; Macro Sub Menu		
-	r_lang001 =	&Record Macro
-	r_lang002 =	&Kích hoạt Macro
-	r_lang003 =	&Chơi vĩ mô hiện tại
-	r_lang004 =	&Hẹn giờ
-	r_lang005 =	Ch&ơi từ Row chọn
-	r_lang006 =	Chơ&i cho đến khi hàng được chọn
-	r_lang007 =	Chơi &dòng chọn
-	r_lang008 =	H&otkeys bối cảnh nhạy cảm
-	r_lang009 =	&Thêm vĩ mô
-	r_lang010 =	&Gần vĩ mô
-	r_lang011 =	&Bản sao vĩ mô
-	r_lang012 =	Ch&ỉnh Sửa Macro
-	r_lang013 =	&Nhập khẩu vĩ mô
-	r_lang014 =	&Lưu vĩ mô hiện tại
+; Select Sub Menu		
+	s_Lang001 =	&Chọn tất cả
+	s_Lang002 =	C&họn None
+	s_Lang003 =	&Đảo ngược lựa chọn
+	s_Lang004 =	&Kiểm tra chọn
+	s_Lang005 =	&Bỏ chọn
+	s_Lang006 =	Đ&ảo ngược Kiểm tra
+	s_Lang007 =	Ch&uyển Vùng Chọn Lên
+	s_Lang008 =	Chu&yển Vùng Chọn Xuống
+	s_Lang009 =	&Loại lựa chọn
+	s_Lang010 =	Loại lệnh
 		
 ; View Sub Menu		
 	v_lang001 =	&Always On Top

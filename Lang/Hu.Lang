@@ -26,7 +26,23 @@
 	f_Lang009 =	K&ijárat
 	f_Lang010 =	Nincs kép
 		
-; Actions Sub Menu		
+; Macro Sub Menu		
+	r_lang001 =	&Makró rögzítése
+	r_lang002 =	&Aktiválása Makrók
+	r_lang003 =	&Játssz Current Macro
+	r_lang004 =	&Időzítő
+	r_lang005 =	&Lejátszás kiválasztott sor
+	r_lang006 =	J&átssz, amíg a kijelölt sor
+	r_lang007 =	L&ejátszás kijelölt sorok
+	r_lang008 =	&Context Sensitive gyorsbillentyűk
+	r_lang009 =	&Kedvencek Macro
+	r_lang010 =	&Bezárás Macro
+	r_lang011 =	I&smétlődő Macro
+	r_lang012 =	S&zerkeszteni Makrók
+	r_lang013 =	Im&port Macro
+	r_lang014 =	Me&ntse el az aktuális makró
+		
+; Commands Sub Menu		
 	i_Lang001 =	&Egér
 	i_Lang002 =	&Szöveg
 	i_Lang003 =	&Irányítsd
@@ -49,18 +65,6 @@
 	i_Lang020 =	Keresse meg a &parancsot
 		
 		
-; Select Sub Menu		
-	s_Lang001 =	&Az összes kijelölése
-	s_Lang002 =	&Válassza a None
-	s_Lang003 =	&Invert Selection
-	s_Lang004 =	&Ellenőrizze Kiválasztott
-	s_Lang005 =	&Törölje Kiválasztott
-	s_Lang006 =	I&nvert Ellenőrzések
-	s_Lang007 =	&Mozog Kiválasztás Felfelé
-	s_Lang008 =	M&ozog Lefelé Kiválasztás
-	s_Lang009 =	&Kiválasztott típus
-	s_Lang010 =	Command típus
-		
 ; Edit Sub Menu		
 	e_Lang001 =	&Másolat
 	e_Lang002 =	M&egjegyzés szerkesztése
@@ -78,21 +82,17 @@
 	e_Lang014 =	Be &Gombnyomás
 	e_Lang015 =	S&zerkesztés színvédjegy
 		
-; Macro Sub Menu		
-	r_lang001 =	&Makró rögzítése
-	r_lang002 =	&Aktiválása Makrók
-	r_lang003 =	&Játssz Current Macro
-	r_lang004 =	&Időzítő
-	r_lang005 =	&Lejátszás kiválasztott sor
-	r_lang006 =	J&átssz, amíg a kijelölt sor
-	r_lang007 =	L&ejátszás kijelölt sorok
-	r_lang008 =	&Context Sensitive gyorsbillentyűk
-	r_lang009 =	&Kedvencek Macro
-	r_lang010 =	&Bezárás Macro
-	r_lang011 =	I&smétlődő Macro
-	r_lang012 =	S&zerkeszteni Makrók
-	r_lang013 =	Im&port Macro
-	r_lang014 =	Me&ntse el az aktuális makró
+; Select Sub Menu		
+	s_Lang001 =	&Az összes kijelölése
+	s_Lang002 =	&Válassza a None
+	s_Lang003 =	&Invert Selection
+	s_Lang004 =	&Ellenőrizze Kiválasztott
+	s_Lang005 =	&Törölje Kiválasztott
+	s_Lang006 =	I&nvert Ellenőrzések
+	s_Lang007 =	&Mozog Kiválasztás Felfelé
+	s_Lang008 =	M&ozog Lefelé Kiválasztás
+	s_Lang009 =	&Kiválasztott típus
+	s_Lang010 =	Command típus
 		
 ; View Sub Menu		
 	v_lang001 =	&Mindig a tetején

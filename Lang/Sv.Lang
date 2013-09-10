@@ -26,7 +26,23 @@
 	f_Lang009 =	&Avsluta
 	f_Lang010 =	Inga filer
 		
-; Actions Sub Menu		
+; Macro Sub Menu		
+	r_lang001 =	&Spela in makro
+	r_lang002 =	&Aktivera makron
+	r_lang003 =	S&pela Aktuell Makro
+	r_lang004 =	&Timer
+	r_lang005 =	Sp&ela upp från vald rad
+	r_lang006 =	Spe&la tills utvalda raden
+	r_lang007 =	Spela &markerade rader
+	r_lang008 =	Samma&nhangsberoende Snabbtangenter
+	r_lang009 =	L&ägg Makro
+	r_lang010 =	Stän&g Makro
+	r_lang011 =	&Duplicera makro
+	r_lang012 =	&Redigera Makron
+	r_lang013 =	&Importera Makro
+	r_lang014 =	Spara a&ktuell Makro
+		
+; Commands Sub Menu		
 	i_Lang001 =	&Mus
 	i_Lang002 =	&Text
 	i_Lang003 =	&Kontroll
@@ -49,18 +65,6 @@
 	i_Lang020 =	&Hitta ett kommando
 		
 		
-; Select Sub Menu		
-	s_Lang001 =	&Markera allt
-	s_Lang002 =	&Väljer Ingen
-	s_Lang003 =	&Invertera markering
-	s_Lang004 =	&Kontrollera vald
-	s_Lang005 =	&Avmarkera Selected
-	s_Lang006 =	I&nvertera Kontroller
-	s_Lang007 =	&Flytta Markeringen Uppåt
-	s_Lang008 =	F&lytta Markeringen Nedåt
-	s_Lang009 =	Val&d typ
-	s_Lang010 =	Kommando typ
-		
 ; Edit Sub Menu		
 	e_Lang001 =	&Duplicera
 	e_Lang002 =	&Redigera kommentar
@@ -78,21 +82,17 @@
 	e_Lang014 =	Infog&a Tangenttryckning
 	e_Lang015 =	R&edigera färgmarkering
 		
-; Macro Sub Menu		
-	r_lang001 =	&Spela in makro
-	r_lang002 =	&Aktivera makron
-	r_lang003 =	S&pela Aktuell Makro
-	r_lang004 =	&Timer
-	r_lang005 =	Sp&ela upp från vald rad
-	r_lang006 =	Spe&la tills utvalda raden
-	r_lang007 =	Spela &markerade rader
-	r_lang008 =	Samma&nhangsberoende Snabbtangenter
-	r_lang009 =	L&ägg Makro
-	r_lang010 =	Stän&g Makro
-	r_lang011 =	&Duplicera makro
-	r_lang012 =	&Redigera Makron
-	r_lang013 =	&Importera Makro
-	r_lang014 =	Spara a&ktuell Makro
+; Select Sub Menu		
+	s_Lang001 =	&Markera allt
+	s_Lang002 =	&Väljer Ingen
+	s_Lang003 =	&Invertera markering
+	s_Lang004 =	&Kontrollera vald
+	s_Lang005 =	&Avmarkera Selected
+	s_Lang006 =	I&nvertera Kontroller
+	s_Lang007 =	&Flytta Markeringen Uppåt
+	s_Lang008 =	F&lytta Markeringen Nedåt
+	s_Lang009 =	Val&d typ
+	s_Lang010 =	Kommando typ
 		
 ; View Sub Menu		
 	v_lang001 =	&Alltid överst

@@ -26,7 +26,23 @@
 	f_Lang009 =	&Salida
 	f_Lang010 =	No hay archivos
 		
-; Actions Sub Menu		
+; Macro Sub Menu		
+	r_lang001 =	&Grabar macro
+	r_lang002 =	&Activar Macros
+	r_lang003 =	&Reproducir macro actual
+	r_lang004 =	&Timer
+	r_lang005 =	R&eproducir desde la fila seleccionada
+	r_lang006 =	Re&producir hasta la fila seleccionada
+	r_lang007 =	Repr&oducir las filas seleccionadas
+	r_lang008 =	Te&clas de acceso directo sensibles al contexto
+	r_lang009 =	A&ñadir Macro
+	r_lang010 =	Cerrar &Macro
+	r_lang011 =	&Duplicar macro
+	r_lang012 =	Ed&itar Macros
+	r_lang013 =	Importar Macro
+	r_lang014 =	G&uardar macro actual
+		
+; Commands Sub Menu		
 	i_Lang001 =	&Ratón
 	i_Lang002 =	&Texto
 	i_Lang003 =	&Controle
@@ -49,18 +65,6 @@
 	i_Lang020 =	Encontrar &un comando
 		
 		
-; Select Sub Menu		
-	s_Lang001 =	&Seleccionar todo
-	s_Lang002 =	S&eleccione Ninguno
-	s_Lang003 =	&Invertir selección
-	s_Lang004 =	&Comprobar seleccionado
-	s_Lang005 =	&Desactivar  seleccionadas
-	s_Lang006 =	I&nvertir cheques
-	s_Lang007 =	&Mueve La Selección Arriba
-	s_Lang008 =	M&over La Selección Hacia Abajo
-	s_Lang009 =	&Tipo seleccionado
-	s_Lang010 =	Tipo de comando
-		
 ; Edit Sub Menu		
 	e_Lang001 =	&Duplicar
 	e_Lang002 =	&Editar comentario
@@ -78,21 +82,17 @@
 	e_Lang014 =	I&nsertar Pulsaciones
 	e_Lang015 =	Edi&tar marca de color
 		
-; Macro Sub Menu		
-	r_lang001 =	&Grabar macro
-	r_lang002 =	&Activar Macros
-	r_lang003 =	&Reproducir macro actual
-	r_lang004 =	&Timer
-	r_lang005 =	R&eproducir desde la fila seleccionada
-	r_lang006 =	Re&producir hasta la fila seleccionada
-	r_lang007 =	Repr&oducir las filas seleccionadas
-	r_lang008 =	Te&clas de acceso directo sensibles al contexto
-	r_lang009 =	A&ñadir Macro
-	r_lang010 =	Cerrar &Macro
-	r_lang011 =	&Duplicar macro
-	r_lang012 =	Ed&itar Macros
-	r_lang013 =	Importar Macro
-	r_lang014 =	G&uardar macro actual
+; Select Sub Menu		
+	s_Lang001 =	&Seleccionar todo
+	s_Lang002 =	S&eleccione Ninguno
+	s_Lang003 =	&Invertir selección
+	s_Lang004 =	&Comprobar seleccionado
+	s_Lang005 =	&Desactivar  seleccionadas
+	s_Lang006 =	I&nvertir cheques
+	s_Lang007 =	&Mueve La Selección Arriba
+	s_Lang008 =	M&over La Selección Hacia Abajo
+	s_Lang009 =	&Tipo seleccionado
+	s_Lang010 =	Tipo de comando
 		
 ; View Sub Menu		
 	v_lang001 =	&Siempre visible

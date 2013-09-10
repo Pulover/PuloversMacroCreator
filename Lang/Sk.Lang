@@ -26,7 +26,23 @@
 	f_Lang009 =	V&ýstup
 	f_Lang010 =	Žiadne súbory
 		
-; Actions Sub Menu		
+; Macro Sub Menu		
+	r_lang001 =	&Záznam makra
+	r_lang002 =	&Aktivácia makrá
+	r_lang003 =	&Prehrať aktuálne makro
+	r_lang004 =	&Časový spínač
+	r_lang005 =	P&rehrávanie z vybraného riadku
+	r_lang006 =	&Hrať, kým vybraný riadok
+	r_lang007 =	Pr&ehrať vybrané riadky
+	r_lang008 =	&Kontextová Klávesové skratky
+	r_lang009 =	Pr&idať makro
+	r_lang010 =	Za&vrieť Makro
+	r_lang011 =	&Duplicitné makro
+	r_lang012 =	&Úprava Makra
+	r_lang013 =	D&ovoz Makro
+	r_lang014 =	&Uložiť aktuálne makro
+		
+; Commands Sub Menu		
 	i_Lang001 =	&Myš
 	i_Lang002 =	&Text
 	i_Lang003 =	&Ovládanie
@@ -49,18 +65,6 @@
 	i_Lang020 =	N&ájsť príkaz
 		
 		
-; Select Sub Menu		
-	s_Lang001 =	&Vybrať všetko
-	s_Lang002 =	&Zvoľte None
-	s_Lang003 =	&Obrátiť výber
-	s_Lang004 =	&Skontrolujte výber
-	s_Lang005 =	Z&rušte výber
-	s_Lang006 =	&Kontroly Invertovať
-	s_Lang007 =	&Posunie Sa Na Predchádzajúci
-	s_Lang008 =	Po&hybovať Výberu Dole
-	s_Lang009 =	Zvo&lený typ
-	s_Lang010 =	Typ príkazu
-		
 ; Edit Sub Menu		
 	e_Lang001 =	&Duplikát
 	e_Lang002 =	&Upraviť komentár
@@ -78,21 +82,17 @@
 	e_Lang014 =	Vlož&te úhoz
 	e_Lang015 =	&Edit Color Mark
 		
-; Macro Sub Menu		
-	r_lang001 =	&Záznam makra
-	r_lang002 =	&Aktivácia makrá
-	r_lang003 =	&Prehrať aktuálne makro
-	r_lang004 =	&Časový spínač
-	r_lang005 =	P&rehrávanie z vybraného riadku
-	r_lang006 =	&Hrať, kým vybraný riadok
-	r_lang007 =	Pr&ehrať vybrané riadky
-	r_lang008 =	&Kontextová Klávesové skratky
-	r_lang009 =	Pr&idať makro
-	r_lang010 =	Za&vrieť Makro
-	r_lang011 =	&Duplicitné makro
-	r_lang012 =	&Úprava Makra
-	r_lang013 =	D&ovoz Makro
-	r_lang014 =	&Uložiť aktuálne makro
+; Select Sub Menu		
+	s_Lang001 =	&Vybrať všetko
+	s_Lang002 =	&Zvoľte None
+	s_Lang003 =	&Obrátiť výber
+	s_Lang004 =	&Skontrolujte výber
+	s_Lang005 =	Z&rušte výber
+	s_Lang006 =	&Kontroly Invertovať
+	s_Lang007 =	&Posunie Sa Na Predchádzajúci
+	s_Lang008 =	Po&hybovať Výberu Dole
+	s_Lang009 =	Zvo&lený typ
+	s_Lang010 =	Typ príkazu
 		
 ; View Sub Menu		
 	v_lang001 =	&Always On Top

@@ -26,7 +26,23 @@
 	f_Lang009 =	Keluar
 	f_Lang010 =	Tiada fail
 		
-; Actions Sub Menu		
+; Macro Sub Menu		
+	r_lang001 =	&Makro Rekod
+	r_lang002 =	&Aktifkan Makro
+	r_lang003 =	Ma&in Makro Semasa
+	r_lang004 =	&Pemasa
+	r_lang005 =	Mai&n dari Row Terpilih
+	r_lang006 =	&Bermain sehingga Row Terpilih
+	r_lang007 =	Main Ba&ris Terpilih
+	r_lang008 =	&Konteks hotkeys Sensitif
+	r_lang009 =	&Tambah Makro
+	r_lang010 =	T&utup Makro
+	r_lang011 =	&Gandakan Makro
+	r_lang012 =	&Edit Makro
+	r_lang013 =	Imp&ort Makro
+	r_lang014 =	&Simpan Makro Semasa
+		
+; Commands Sub Menu		
 	i_Lang001 =	&Mouse
 	i_Lang002 =	&Text
 	i_Lang003 =	&Kawalan
@@ -49,18 +65,6 @@
 	i_Lang020 =	Cari perinta&h
 		
 		
-; Select Sub Menu		
-	s_Lang001 =	&Pilih Semua
-	s_Lang002 =	P&ilih Tiada
-	s_Lang003 =	&Terbalikkan Pemilihan
-	s_Lang004 =	&Semak Terpilih
-	s_Lang005 =	P&adam tanda Terpilih
-	s_Lang006 =	T&erbalikkan Pemeriksaan
-	s_Lang007 =	&Bergerak Pemilihan Sehingga
-	s_Lang008 =	&Mengubah Pilihan Ke Bawah
-	s_Lang009 =	&Jenis Terpilih
-	s_Lang010 =	Jenis perintah
-		
 ; Edit Sub Menu		
 	e_Lang001 =	&Gandakan
 	e_Lang002 =	&Edit Komen
@@ -78,21 +82,17 @@
 	e_Lang014 =	Memasukka&n keystroke
 	e_Lang015 =	E&dit Warna Mark
 		
-; Macro Sub Menu		
-	r_lang001 =	&Makro Rekod
-	r_lang002 =	&Aktifkan Makro
-	r_lang003 =	Ma&in Makro Semasa
-	r_lang004 =	&Pemasa
-	r_lang005 =	Mai&n dari Row Terpilih
-	r_lang006 =	&Bermain sehingga Row Terpilih
-	r_lang007 =	Main Ba&ris Terpilih
-	r_lang008 =	&Konteks hotkeys Sensitif
-	r_lang009 =	&Tambah Makro
-	r_lang010 =	T&utup Makro
-	r_lang011 =	&Gandakan Makro
-	r_lang012 =	&Edit Makro
-	r_lang013 =	Imp&ort Makro
-	r_lang014 =	&Simpan Makro Semasa
+; Select Sub Menu		
+	s_Lang001 =	&Pilih Semua
+	s_Lang002 =	P&ilih Tiada
+	s_Lang003 =	&Terbalikkan Pemilihan
+	s_Lang004 =	&Semak Terpilih
+	s_Lang005 =	P&adam tanda Terpilih
+	s_Lang006 =	T&erbalikkan Pemeriksaan
+	s_Lang007 =	&Bergerak Pemilihan Sehingga
+	s_Lang008 =	&Mengubah Pilihan Ke Bawah
+	s_Lang009 =	&Jenis Terpilih
+	s_Lang010 =	Jenis perintah
 		
 ; View Sub Menu		
 	v_lang001 =	&Sentiasa Pada Top

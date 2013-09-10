@@ -26,7 +26,23 @@
 	f_Lang009 =	&Çıkış
 	f_Lang010 =	Hiçbir içerik
 		
-; Actions Sub Menu		
+; Macro Sub Menu		
+	r_lang001 =	&Makro Kaydet
+	r_lang002 =	M&akrolar etkinleştirin
+	r_lang003 =	&Güncel Makro oyna
+	r_lang004 =	&Kronometre
+	r_lang005 =	&Seçilen satırdaki oyna
+	r_lang006 =	S&eçili satır kadar oyna
+	r_lang007 =	Se&çilen Satırlar oyna
+	r_lang008 =	&Bağlam Duyarlı Hotkeys
+	r_lang009 =	Mak&ro Ekle
+	r_lang010 =	Ka&pat Makro
+	r_lang011 =	Makr&o çoğaltın
+	r_lang012 =	Makro&lar Düzenle
+	r_lang013 =	&İthalat Makro
+	r_lang014 =	G&üncel Makro Kaydet
+		
+; Commands Sub Menu		
 	i_Lang001 =	&Fare
 	i_Lang002 =	&Metin
 	i_Lang003 =	&Kontrol
@@ -49,18 +65,6 @@
 	i_Lang020 =	&(Ctrl+Shift+F) bir komut bul
 		
 		
-; Select Sub Menu		
-	s_Lang001 =	&Tümünü Seç
-	s_Lang002 =	&Yok seçeneğini
-	s_Lang003 =	&Seçim Invert
-	s_Lang004 =	S&eçilen kontrol
-	s_Lang005 =	&Işaretini kaldırın Seçilmiş
-	s_Lang006 =	&Çekler Invert
-	s_Lang007 =	Se&çimi Yukarı Taşımak
-	s_Lang008 =	Seçi&mi Aşağı Hareket
-	s_Lang009 =	Seçi&len Tip
-	s_Lang010 =	Komut türü
-		
 ; Edit Sub Menu		
 	e_Lang001 =	&Çift
 	e_Lang002 =	&Yorum düzenle
@@ -78,21 +82,17 @@
 	e_Lang014 =	Tuş Ek&lemek
 	e_Lang015 =	&Düzen renk işareti
 		
-; Macro Sub Menu		
-	r_lang001 =	&Makro Kaydet
-	r_lang002 =	M&akrolar etkinleştirin
-	r_lang003 =	&Güncel Makro oyna
-	r_lang004 =	&Kronometre
-	r_lang005 =	&Seçilen satırdaki oyna
-	r_lang006 =	S&eçili satır kadar oyna
-	r_lang007 =	Se&çilen Satırlar oyna
-	r_lang008 =	&Bağlam Duyarlı Hotkeys
-	r_lang009 =	Mak&ro Ekle
-	r_lang010 =	Ka&pat Makro
-	r_lang011 =	Makr&o çoğaltın
-	r_lang012 =	Makro&lar Düzenle
-	r_lang013 =	&İthalat Makro
-	r_lang014 =	G&üncel Makro Kaydet
+; Select Sub Menu		
+	s_Lang001 =	&Tümünü Seç
+	s_Lang002 =	&Yok seçeneğini
+	s_Lang003 =	&Seçim Invert
+	s_Lang004 =	S&eçilen kontrol
+	s_Lang005 =	&Işaretini kaldırın Seçilmiş
+	s_Lang006 =	&Çekler Invert
+	s_Lang007 =	Se&çimi Yukarı Taşımak
+	s_Lang008 =	Seçi&mi Aşağı Hareket
+	s_Lang009 =	Seçi&len Tip
+	s_Lang010 =	Komut türü
 		
 ; View Sub Menu		
 	v_lang001 =	&Her zaman üstte

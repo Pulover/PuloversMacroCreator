@@ -26,7 +26,23 @@
 	f_Lang009 =	Sai&r
 	f_Lang010 =	Nenhum arquivo
 		
-; Actions Sub Menu		
+; Macro Sub Menu		
+	r_lang001 =	&Gravar Macro
+	r_lang002 =	&Ativar Macros
+	r_lang003 =	&Reproduzir Macro Atual
+	r_lang004 =	&Temporizador
+	r_lang005 =	R&eproduzir a Partir da Linha Selecionada
+	r_lang006 =	Re&produzir Até a Linha Selecionada
+	r_lang007 =	Repr&oduzir Linhas Selecionadas
+	r_lang008 =	Ata&lhos Condicionais
+	r_lang009 =	A&dicionar Macro
+	r_lang010 =	&Fechar Macro
+	r_lang011 =	D&uplicar Macro
+	r_lang012 =	Ed&itar Macros
+	r_lang013 =	I&mportar Macro
+	r_lang014 =	&Salvar Macro Atual
+		
+; Commands Sub Menu		
 	i_Lang001 =	&Mouse
 	i_Lang002 =	&Texto
 	i_Lang003 =	&Controle
@@ -49,18 +65,6 @@
 	i_Lang020 =	Locali&zar um comando
 		
 		
-; Select Sub Menu		
-	s_Lang001 =	Selecionar &Tudo
-	s_Lang002 =	Selecionar &Nenhum
-	s_Lang003 =	&Inverter Seleção
-	s_Lang004 =	&Marcar Selecionados
-	s_Lang005 =	&Desmarcar Selecionados
-	s_Lang006 =	In&verter Marcados
-	s_Lang007 =	Mover Seleção para Cim&a
-	s_Lang008 =	Mover Seleção para &Baixo
-	s_Lang009 =	Ti&po Selecionado
-	s_Lang010 =	Tipo de comando
-		
 ; Edit Sub Menu		
 	e_Lang001 =	D&uplicar
 	e_Lang002 =	Editar Come&ntário
@@ -78,21 +82,17 @@
 	e_Lang014 =	In&serir Tecla
 	e_Lang015 =	Editar &Marca de Cor
 		
-; Macro Sub Menu		
-	r_lang001 =	&Gravar Macro
-	r_lang002 =	&Ativar Macros
-	r_lang003 =	&Reproduzir Macro Atual
-	r_lang004 =	&Temporizador
-	r_lang005 =	R&eproduzir a Partir da Linha Selecionada
-	r_lang006 =	Re&produzir Até a Linha Selecionada
-	r_lang007 =	Repr&oduzir Linhas Selecionadas
-	r_lang008 =	Ata&lhos Condicionais
-	r_lang009 =	A&dicionar Macro
-	r_lang010 =	&Fechar Macro
-	r_lang011 =	D&uplicar Macro
-	r_lang012 =	Ed&itar Macros
-	r_lang013 =	I&mportar Macro
-	r_lang014 =	&Salvar Macro Atual
+; Select Sub Menu		
+	s_Lang001 =	Selecionar &Tudo
+	s_Lang002 =	Selecionar &Nenhum
+	s_Lang003 =	&Inverter Seleção
+	s_Lang004 =	&Marcar Selecionados
+	s_Lang005 =	&Desmarcar Selecionados
+	s_Lang006 =	In&verter Marcados
+	s_Lang007 =	Mover Seleção para Cim&a
+	s_Lang008 =	Mover Seleção para &Baixo
+	s_Lang009 =	Ti&po Selecionado
+	s_Lang010 =	Tipo de comando
 		
 ; View Sub Menu		
 	v_lang001 =	&Sempre Visível

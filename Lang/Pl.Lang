@@ -26,7 +26,23 @@
 	f_Lang009 =	&Wyjście
 	f_Lang010 =	Brak plików
 		
-; Actions Sub Menu		
+; Macro Sub Menu		
+	r_lang001 =	&Macro Record
+	r_lang002 =	&Aktywuj Makra
+	r_lang003 =	&Zagraj w bieżącym makrze
+	r_lang004 =	&Regulator czasowy
+	r_lang005 =	Za&graj z wybranego wiersza
+	r_lang006 =	Gra&ć do wybranego wiersza
+	r_lang007 =	&Odtwórz wybrane wiersze
+	r_lang008 =	&Kontekstowa Hotkeys
+	r_lang009 =	&Dodaj Macro
+	r_lang010 =	Zamk&nij makro
+	r_lang011 =	&Powiel makro
+	r_lang012 =	&Edytowanie Makra
+	r_lang013 =	&Import Makro
+	r_lang014 =	Zapi&sz bieżące makro
+		
+; Commands Sub Menu		
 	i_Lang001 =	&Mysz
 	i_Lang002 =	&Tekst
 	i_Lang003 =	&Sterowanie
@@ -49,18 +65,6 @@
 	i_Lang020 =	Zna&jdź polecenia
 		
 		
-; Select Sub Menu		
-	s_Lang001 =	&Zaznacz wszystko
-	s_Lang002 =	&Wybierz None
-	s_Lang003 =	&Odwróć zaznaczenie
-	s_Lang004 =	&Sprawdź Wybrane
-	s_Lang005 =	O&dznacz Wybrane
-	s_Lang006 =	Odw&róć Kontrole
-	s_Lang007 =	&Przenieść Wybór Do
-	s_Lang008 =	Prz&esunąć Zaznaczenie W Dół
-	s_Lang009 =	W&ybranego typu
-	s_Lang010 =	Typ polecenia
-		
 ; Edit Sub Menu		
 	e_Lang001 =	&Duplikat
 	e_Lang002 =	&Edytuj komentarz
@@ -78,21 +82,17 @@
 	e_Lang014 =	W&łóż Klawiszy
 	e_Lang015 =	Z&mień kolor zapytania
 		
-; Macro Sub Menu		
-	r_lang001 =	&Macro Record
-	r_lang002 =	&Aktywuj Makra
-	r_lang003 =	&Zagraj w bieżącym makrze
-	r_lang004 =	&Regulator czasowy
-	r_lang005 =	Za&graj z wybranego wiersza
-	r_lang006 =	Gra&ć do wybranego wiersza
-	r_lang007 =	&Odtwórz wybrane wiersze
-	r_lang008 =	&Kontekstowa Hotkeys
-	r_lang009 =	&Dodaj Macro
-	r_lang010 =	Zamk&nij makro
-	r_lang011 =	&Powiel makro
-	r_lang012 =	&Edytowanie Makra
-	r_lang013 =	&Import Makro
-	r_lang014 =	Zapi&sz bieżące makro
+; Select Sub Menu		
+	s_Lang001 =	&Zaznacz wszystko
+	s_Lang002 =	&Wybierz None
+	s_Lang003 =	&Odwróć zaznaczenie
+	s_Lang004 =	&Sprawdź Wybrane
+	s_Lang005 =	O&dznacz Wybrane
+	s_Lang006 =	Odw&róć Kontrole
+	s_Lang007 =	&Przenieść Wybór Do
+	s_Lang008 =	Prz&esunąć Zaznaczenie W Dół
+	s_Lang009 =	W&ybranego typu
+	s_Lang010 =	Typ polecenia
 		
 ; View Sub Menu		
 	v_lang001 =	&Zawsze na wierzchu

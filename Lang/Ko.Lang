@@ -26,7 +26,23 @@
 	f_Lang009 =	출구
 	f_Lang010 =	없음
 		
-; Actions Sub Menu		
+; Macro Sub Menu		
+	r_lang001 =	기록 매크로
+	r_lang002 =	매크로 활성화
+	r_lang003 =	현재 매크로를 재생
+	r_lang004 =	타이머
+	r_lang005 =	선택한 행에서 재생
+	r_lang006 =	선택한 행까지 재생
+	r_lang007 =	선택한 행을 재생
+	r_lang008 =	문맥을 인식 단축키
+	r_lang009 =	매크로를 추가합니다
+	r_lang010 =	닫기 매크로
+	r_lang011 =	매크로를 복사
+	r_lang012 =	매크로 편집
+	r_lang013 =	가져 오기 매크로
+	r_lang014 =	현재 매크로를 저장
+		
+; Commands Sub Menu		
 	i_Lang001 =	마우스
 	i_Lang002 =	본문
 	i_Lang003 =	제어
@@ -49,18 +65,6 @@
 	i_Lang020 =	명령 찾기
 		
 		
-; Select Sub Menu		
-	s_Lang001 =	모두 선택
-	s_Lang002 =	없음을 선택
-	s_Lang003 =	선택 반전
-	s_Lang004 =	선택 확인
-	s_Lang005 =	선택을 취소 선택
-	s_Lang006 =	수표로 바꾸
-	s_Lang007 =	선택 이동
-	s_Lang008 =	선택 아래로 이동
-	s_Lang009 =	선택한 유형
-	s_Lang010 =	명령 유형
-		
 ; Edit Sub Menu		
 	e_Lang001 =	복제
 	e_Lang002 =	댓글 수정
@@ -78,21 +82,17 @@
 	e_Lang014 =	키를 삽입
 	e_Lang015 =	편집 색상 표
 		
-; Macro Sub Menu		
-	r_lang001 =	기록 매크로
-	r_lang002 =	매크로 활성화
-	r_lang003 =	현재 매크로를 재생
-	r_lang004 =	타이머
-	r_lang005 =	선택한 행에서 재생
-	r_lang006 =	선택한 행까지 재생
-	r_lang007 =	선택한 행을 재생
-	r_lang008 =	문맥을 인식 단축키
-	r_lang009 =	매크로를 추가합니다
-	r_lang010 =	닫기 매크로
-	r_lang011 =	매크로를 복사
-	r_lang012 =	매크로 편집
-	r_lang013 =	가져 오기 매크로
-	r_lang014 =	현재 매크로를 저장
+; Select Sub Menu		
+	s_Lang001 =	모두 선택
+	s_Lang002 =	없음을 선택
+	s_Lang003 =	선택 반전
+	s_Lang004 =	선택 확인
+	s_Lang005 =	선택을 취소 선택
+	s_Lang006 =	수표로 바꾸
+	s_Lang007 =	선택 이동
+	s_Lang008 =	선택 아래로 이동
+	s_Lang009 =	선택한 유형
+	s_Lang010 =	명령 유형
 		
 ; View Sub Menu		
 	v_lang001 =	항상 상단에

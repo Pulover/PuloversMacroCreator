@@ -26,7 +26,23 @@
 	f_Lang009 =	&Udgang
 	f_Lang010 =	Ingen filer
 		
-; Actions Sub Menu		
+; Macro Sub Menu		
+	r_lang001 =	&Indspil makro
+	r_lang002 =	&Aktiver makroer
+	r_lang003 =	A&fspil aktuelle Macro
+	r_lang004 =	&Timer
+	r_lang005 =	Af&spil fra valgte række
+	r_lang006 =	S&pille, indtil valgte række
+	r_lang007 =	Spi&l valgte rækker
+	r_lang008 =	&Kontekstafhængig genvejstaster
+	r_lang009 =	Tilf&øj Makro
+	r_lang010 =	L&uk Makro
+	r_lang011 =	&Dublet Makro
+	r_lang012 =	&Rediger Makroer
+	r_lang013 =	I&mport Macro
+	r_lang014 =	&Gem nuværende Macro
+		
+; Commands Sub Menu		
 	i_Lang001 =	&Mus
 	i_Lang002 =	&Tekst
 	i_Lang003 =	&Kontrol
@@ -49,18 +65,6 @@
 	i_Lang020 =	Fin&d en kommando
 		
 		
-; Select Sub Menu		
-	s_Lang001 =	&Vælg alt
-	s_Lang002 =	V&ælg Ingen
-	s_Lang003 =	&Invert Selection
-	s_Lang004 =	&Check Selected
-	s_Lang005 =	&Fravælg Valgt
-	s_Lang006 =	I&nvert Kontrol
-	s_Lang007 =	F&lyt Markering Op
-	s_Lang008 =	Fl&ytte Markeringen Ned
-	s_Lang009 =	V&algt Type
-	s_Lang010 =	Command typen
-		
 ; Edit Sub Menu		
 	e_Lang001 =	&Dupliker
 	e_Lang002 =	&Rediger kommentar
@@ -78,21 +82,17 @@
 	e_Lang014 =	Inds&æt Tastetryk
 	e_Lang015 =	Edit f&arvemærke
 		
-; Macro Sub Menu		
-	r_lang001 =	&Indspil makro
-	r_lang002 =	&Aktiver makroer
-	r_lang003 =	A&fspil aktuelle Macro
-	r_lang004 =	&Timer
-	r_lang005 =	Af&spil fra valgte række
-	r_lang006 =	S&pille, indtil valgte række
-	r_lang007 =	Spi&l valgte rækker
-	r_lang008 =	&Kontekstafhængig genvejstaster
-	r_lang009 =	Tilf&øj Makro
-	r_lang010 =	L&uk Makro
-	r_lang011 =	&Dublet Makro
-	r_lang012 =	&Rediger Makroer
-	r_lang013 =	I&mport Macro
-	r_lang014 =	&Gem nuværende Macro
+; Select Sub Menu		
+	s_Lang001 =	&Vælg alt
+	s_Lang002 =	V&ælg Ingen
+	s_Lang003 =	&Invert Selection
+	s_Lang004 =	&Check Selected
+	s_Lang005 =	&Fravælg Valgt
+	s_Lang006 =	I&nvert Kontrol
+	s_Lang007 =	F&lyt Markering Op
+	s_Lang008 =	Fl&ytte Markeringen Ned
+	s_Lang009 =	V&algt Type
+	s_Lang010 =	Command typen
 		
 ; View Sub Menu		
 	v_lang001 =	&Altid på toppen

@@ -26,7 +26,23 @@
 	f_Lang009 =	E&xit
 	f_Lang010 =	No files
 		
-; Actions Sub Menu		
+; Macro Sub Menu		
+	r_lang001 =	&Record Macro
+	r_lang002 =	&Activate Macros
+	r_lang003 =	&Play Current Macro
+	r_lang004 =	&Timer
+	r_lang005 =	P&lay from Selected Row
+	r_lang006 =	Pla&y until Selected Row
+	r_lang007 =	Play &Selected Rows
+	r_lang008 =	&Context Sensitive Hotkeys
+	r_lang009 =	A&dd Macro
+	r_lang010 =	Cl&ose Macro
+	r_lang011 =	D&uplicate Macro
+	r_lang012 =	&Edit Macros
+	r_lang013 =	&Import Macro
+	r_lang014 =	Sa&ve Current Macro
+		
+; Commands Sub Menu		
 	i_Lang001 =	&Mouse
 	i_Lang002 =	&Text
 	i_Lang003 =	&Control
@@ -49,18 +65,6 @@
 	i_Lang020 =	Find a command
 		
 		
-; Select Sub Menu		
-	s_Lang001 =	Select &All
-	s_Lang002 =	Select &None
-	s_Lang003 =	&Invert Selection
-	s_Lang004 =	&Check Selected
-	s_Lang005 =	&Uncheck Selected
-	s_Lang006 =	In&vert Checks
-	s_Lang007 =	Move Selection U&p
-	s_Lang008 =	Move Selection &Down
-	s_Lang009 =	Selected &Type
-	s_Lang010 =	Command type
-		
 ; Edit Sub Menu		
 	e_Lang001 =	Dup&licate
 	e_Lang002 =	Edit C&omment
@@ -78,21 +82,17 @@
 	e_Lang014 =	Insert &Keystroke
 	e_Lang015 =	Edit Color &Mark
 		
-; Macro Sub Menu		
-	r_lang001 =	&Record Macro
-	r_lang002 =	&Activate Macros
-	r_lang003 =	&Play Current Macro
-	r_lang004 =	&Timer
-	r_lang005 =	P&lay from Selected Row
-	r_lang006 =	Pla&y until Selected Row
-	r_lang007 =	Play &Selected Rows
-	r_lang008 =	&Context Sensitive Hotkeys
-	r_lang009 =	A&dd Macro
-	r_lang010 =	Cl&ose Macro
-	r_lang011 =	D&uplicate Macro
-	r_lang012 =	&Edit Macros
-	r_lang013 =	&Import Macro
-	r_lang014 =	Sa&ve Current Macro
+; Select Sub Menu		
+	s_Lang001 =	Select &All
+	s_Lang002 =	Select &None
+	s_Lang003 =	&Invert Selection
+	s_Lang004 =	&Check Selected
+	s_Lang005 =	&Uncheck Selected
+	s_Lang006 =	In&vert Checks
+	s_Lang007 =	Move Selection U&p
+	s_Lang008 =	Move Selection &Down
+	s_Lang009 =	Selected &Type
+	s_Lang010 =	Command type
 		
 ; View Sub Menu		
 	v_lang001 =	&Always On Top

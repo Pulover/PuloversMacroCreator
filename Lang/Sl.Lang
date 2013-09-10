@@ -26,7 +26,23 @@
 	f_Lang009 =	E&xit
 	f_Lang010 =	Ni slik
 		
-; Actions Sub Menu		
+; Macro Sub Menu		
+	r_lang001 =	&Snemaj makro
+	r_lang002 =	&Vključite Makri
+	r_lang003 =	&Igraj trenutni makro
+	r_lang004 =	&Timer
+	r_lang005 =	&Predvajaj izbrano vrstico
+	r_lang006 =	I&grajo dokler izbrano vrstico
+	r_lang007 =	P&redvajanje izbrane vrstice
+	r_lang008 =	&Konteksta Bližnjice
+	r_lang009 =	&Dodaj makro
+	r_lang010 =	&Zapri Makro
+	r_lang011 =	Dv&ojnik makro
+	r_lang012 =	&Uredi Makri
+	r_lang013 =	Uvoz &Makro
+	r_lang014 =	S&hrani trenutni makro
+		
+; Commands Sub Menu		
 	i_Lang001 =	&Miška
 	i_Lang002 =	&Besedilo
 	i_Lang003 =	&Nadzor
@@ -49,18 +65,6 @@
 	i_Lang020 =	Na&jdi ukaz
 		
 		
-; Select Sub Menu		
-	s_Lang001 =	&Izberi vse
-	s_Lang002 =	I&zberete Brez
-	s_Lang003 =	&Obrni izbor
-	s_Lang004 =	&Preverite Izbrano
-	s_Lang005 =	Po&čistite Izbrano
-	s_Lang006 =	I&nvertnega Pregledi
-	s_Lang007 =	P&remakniti Izbor Navzgor
-	s_Lang008 =	Pr&emakniti Izbor Navzdol
-	s_Lang009 =	Iz&brana vrsta
-	s_Lang010 =	Tip ukaz
-		
 ; Edit Sub Menu		
 	e_Lang001 =	&Dvojnik
 	e_Lang002 =	&Urejanje komentarja
@@ -78,21 +82,17 @@
 	e_Lang014 =	V&stavite Keystroke
 	e_Lang015 =	Edi&t Color Mark
 		
-; Macro Sub Menu		
-	r_lang001 =	&Snemaj makro
-	r_lang002 =	&Vključite Makri
-	r_lang003 =	&Igraj trenutni makro
-	r_lang004 =	&Timer
-	r_lang005 =	&Predvajaj izbrano vrstico
-	r_lang006 =	I&grajo dokler izbrano vrstico
-	r_lang007 =	P&redvajanje izbrane vrstice
-	r_lang008 =	&Konteksta Bližnjice
-	r_lang009 =	&Dodaj makro
-	r_lang010 =	&Zapri Makro
-	r_lang011 =	Dv&ojnik makro
-	r_lang012 =	&Uredi Makri
-	r_lang013 =	Uvoz &Makro
-	r_lang014 =	S&hrani trenutni makro
+; Select Sub Menu		
+	s_Lang001 =	&Izberi vse
+	s_Lang002 =	I&zberete Brez
+	s_Lang003 =	&Obrni izbor
+	s_Lang004 =	&Preverite Izbrano
+	s_Lang005 =	Po&čistite Izbrano
+	s_Lang006 =	I&nvertnega Pregledi
+	s_Lang007 =	P&remakniti Izbor Navzgor
+	s_Lang008 =	Pr&emakniti Izbor Navzdol
+	s_Lang009 =	Iz&brana vrsta
+	s_Lang010 =	Tip ukaz
 		
 ; View Sub Menu		
 	v_lang001 =	&Always On Top

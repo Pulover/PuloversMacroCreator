@@ -26,7 +26,23 @@
 	f_Lang009 =	&Uscita
 	f_Lang010 =	Nessun file
 		
-; Actions Sub Menu		
+; Macro Sub Menu		
+	r_lang001 =	&Registra macro
+	r_lang002 =	&Attiva macro
+	r_lang003 =	&Gioca Macro corrente
+	r_lang004 =	&Timer
+	r_lang005 =	G&ioca da riga selezionata
+	r_lang006 =	Gi&oca fino a riga selezionata
+	r_lang007 =	Gio&ca righe selezionate
+	r_lang008 =	Ta&sti di scelta rapida sensibili al contesto
+	r_lang009 =	Aggi&ungi Macro
+	r_lang010 =	C&hiudere Macro
+	r_lang011 =	&Duplica macro
+	r_lang012 =	&Modifica Macro
+	r_lang013 =	Im&porta Macro
+	r_lang014 =	Sa&lva Macro corrente
+		
+; Commands Sub Menu		
 	i_Lang001 =	&Mouse
 	i_Lang002 =	&Testo
 	i_Lang003 =	&Controllo
@@ -49,18 +65,6 @@
 	i_Lang020 =	Tr&ova un comando
 		
 		
-; Select Sub Menu		
-	s_Lang001 =	&Seleziona tutto
-	s_Lang002 =	S&elezionare Nessuno
-	s_Lang003 =	&Inverti selezione
-	s_Lang004 =	&Controllo selezionata
-	s_Lang005 =	&Deselezionare selezionato
-	s_Lang006 =	I&nverti Controlli
-	s_Lang007 =	S&postare La Selezione Su
-	s_Lang008 =	Sp&ostare La Selezione Verso Il Basso
-	s_Lang009 =	&Tipo selezionato
-	s_Lang010 =	Tipo di comando
-		
 ; Edit Sub Menu		
 	e_Lang001 =	&Duplicare
 	e_Lang002 =	&Modifica commento
@@ -78,21 +82,17 @@
 	e_Lang014 =	Inserire Battit&ura
 	e_Lang015 =	Modi&fica marchio di colore
 		
-; Macro Sub Menu		
-	r_lang001 =	&Registra macro
-	r_lang002 =	&Attiva macro
-	r_lang003 =	&Gioca Macro corrente
-	r_lang004 =	&Timer
-	r_lang005 =	G&ioca da riga selezionata
-	r_lang006 =	Gi&oca fino a riga selezionata
-	r_lang007 =	Gio&ca righe selezionate
-	r_lang008 =	Ta&sti di scelta rapida sensibili al contesto
-	r_lang009 =	Aggi&ungi Macro
-	r_lang010 =	C&hiudere Macro
-	r_lang011 =	&Duplica macro
-	r_lang012 =	&Modifica Macro
-	r_lang013 =	Im&porta Macro
-	r_lang014 =	Sa&lva Macro corrente
+; Select Sub Menu		
+	s_Lang001 =	&Seleziona tutto
+	s_Lang002 =	S&elezionare Nessuno
+	s_Lang003 =	&Inverti selezione
+	s_Lang004 =	&Controllo selezionata
+	s_Lang005 =	&Deselezionare selezionato
+	s_Lang006 =	I&nverti Controlli
+	s_Lang007 =	S&postare La Selezione Su
+	s_Lang008 =	Sp&ostare La Selezione Verso Il Basso
+	s_Lang009 =	&Tipo selezionato
+	s_Lang010 =	Tipo di comando
 		
 ; View Sub Menu		
 	v_lang001 =	&Sempre in primo piano

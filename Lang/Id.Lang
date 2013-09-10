@@ -26,7 +26,23 @@
 	f_Lang009 =	&Keluar
 	f_Lang010 =	Tidak ada file
 		
-; Actions Sub Menu		
+; Macro Sub Menu		
+	r_lang001 =	&Rekam Makro
+	r_lang002 =	&Aktifkan Macro
+	r_lang003 =	&Bermain Makro sekarang
+	r_lang004 =	&Timer
+	r_lang005 =	B&ermain dari Dipilih Row
+	r_lang006 =	Ber&main sampai Dipilih Row
+	r_lang007 =	Berma&in Baris Terpilih
+	r_lang008 =	&Konteks Hotkeys Sensitif
+	r_lang009 =	Tamba&hkan Makro
+	r_lang010 =	T&utup Makro
+	r_lang011 =	&Gandakan Makro
+	r_lang012 =	Me&ngedit Macro
+	r_lang013 =	Im&por Makro
+	r_lang014 =	&Simpan Makro sekarang
+		
+; Commands Sub Menu		
 	i_Lang001 =	&Mouse
 	i_Lang002 =	&Teks
 	i_Lang003 =	&Kontrol
@@ -49,18 +65,6 @@
 	i_Lang020 =	Ca&ri perintah
 		
 		
-; Select Sub Menu		
-	s_Lang001 =	&Pilih Semua
-	s_Lang002 =	P&ilih Kosong
-	s_Lang003 =	I&nvert Selection
-	s_Lang004 =	P&eriksa Dipilih
-	s_Lang005 =	&Hapus tanda centang Dipilih
-	s_Lang006 =	&Balikkan Cek
-	s_Lang007 =	&Memindah Selection Up
-	s_Lang008 =	Memin&dahkan Pilihan Ke Bawah
-	s_Lang009 =	Dipi&lih Type
-	s_Lang010 =	Ketik perintah
-		
 ; Edit Sub Menu		
 	e_Lang001 =	&Duplikat
 	e_Lang002 =	&Mengedit Komentar
@@ -78,21 +82,17 @@
 	e_Lang014 =	M&asukkan keystroke
 	e_Lang015 =	S&unting Warna Mark
 		
-; Macro Sub Menu		
-	r_lang001 =	&Rekam Makro
-	r_lang002 =	&Aktifkan Macro
-	r_lang003 =	&Bermain Makro sekarang
-	r_lang004 =	&Timer
-	r_lang005 =	B&ermain dari Dipilih Row
-	r_lang006 =	Ber&main sampai Dipilih Row
-	r_lang007 =	Berma&in Baris Terpilih
-	r_lang008 =	&Konteks Hotkeys Sensitif
-	r_lang009 =	Tamba&hkan Makro
-	r_lang010 =	T&utup Makro
-	r_lang011 =	&Gandakan Makro
-	r_lang012 =	Me&ngedit Macro
-	r_lang013 =	Im&por Makro
-	r_lang014 =	&Simpan Makro sekarang
+; Select Sub Menu		
+	s_Lang001 =	&Pilih Semua
+	s_Lang002 =	P&ilih Kosong
+	s_Lang003 =	I&nvert Selection
+	s_Lang004 =	P&eriksa Dipilih
+	s_Lang005 =	&Hapus tanda centang Dipilih
+	s_Lang006 =	&Balikkan Cek
+	s_Lang007 =	&Memindah Selection Up
+	s_Lang008 =	Memin&dahkan Pilihan Ke Bawah
+	s_Lang009 =	Dipi&lih Type
+	s_Lang010 =	Ketik perintah
 		
 ; View Sub Menu		
 	v_lang001 =	&Always On Top

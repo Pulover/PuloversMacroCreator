@@ -26,7 +26,23 @@
 	f_Lang009 =	So&rtie
 	f_Lang010 =	Aucun
 		
-; Actions Sub Menu		
+; Macro Sub Menu		
+	r_lang001 =	&Enregistrer une macro
+	r_lang002 =	&Activer les macros
+	r_lang003 =	&Jouer Macro actuelle
+	r_lang004 =	&Minuteur
+	r_lang005 =	J&ouez à partir de la ligne sélectionnée
+	r_lang006 =	Jo&uez jusqu'à ce que la ligne sélectionnée
+	r_lang007 =	Joue&z Lignes sélectionnées
+	r_lang008 =	&Touches sensibles au contexte
+	r_lang009 =	Ajoute&r une macro
+	r_lang010 =	&Fermer Macro
+	r_lang011 =	&Dupliquer Macro
+	r_lang012 =	Mod&ifier Macros
+	r_lang013 =	Im&porter Macro
+	r_lang014 =	E&nregistrer la macro actuelle
+		
+; Commands Sub Menu		
 	i_Lang001 =	&Souris
 	i_Lang002 =	&Texte
 	i_Lang003 =	&Contrôler
@@ -49,18 +65,6 @@
 	i_Lang020 =	Tro&uvez une commande
 		
 		
-; Select Sub Menu		
-	s_Lang001 =	&Sélectionner tout
-	s_Lang002 =	S&électionnez Aucun
-	s_Lang003 =	&Inverser la sélection
-	s_Lang004 =	&Vérifiez sélectionnés
-	s_Lang005 =	&Décochez sélectionnés
-	s_Lang006 =	I&nverser contrôles
-	s_Lang007 =	Dé&placer La Sélection Vers Le Haut
-	s_Lang008 =	Dép&lacer La Sélection Vers Le Bas
-	s_Lang009 =	&Type sélectionné
-	s_Lang010 =	Type de commande
-		
 ; Edit Sub Menu		
 	e_Lang001 =	&Dupliquer
 	e_Lang002 =	&Modifier le commentaire
@@ -78,21 +82,17 @@
 	e_Lang014 =	I&nsérer Frappe
 	e_Lang015 =	Modifier mar&que de couleur
 		
-; Macro Sub Menu		
-	r_lang001 =	&Enregistrer une macro
-	r_lang002 =	&Activer les macros
-	r_lang003 =	&Jouer Macro actuelle
-	r_lang004 =	&Minuteur
-	r_lang005 =	J&ouez à partir de la ligne sélectionnée
-	r_lang006 =	Jo&uez jusqu'à ce que la ligne sélectionnée
-	r_lang007 =	Joue&z Lignes sélectionnées
-	r_lang008 =	&Touches sensibles au contexte
-	r_lang009 =	Ajoute&r une macro
-	r_lang010 =	&Fermer Macro
-	r_lang011 =	&Dupliquer Macro
-	r_lang012 =	Mod&ifier Macros
-	r_lang013 =	Im&porter Macro
-	r_lang014 =	E&nregistrer la macro actuelle
+; Select Sub Menu		
+	s_Lang001 =	&Sélectionner tout
+	s_Lang002 =	S&électionnez Aucun
+	s_Lang003 =	&Inverser la sélection
+	s_Lang004 =	&Vérifiez sélectionnés
+	s_Lang005 =	&Décochez sélectionnés
+	s_Lang006 =	I&nverser contrôles
+	s_Lang007 =	Dé&placer La Sélection Vers Le Haut
+	s_Lang008 =	Dép&lacer La Sélection Vers Le Bas
+	s_Lang009 =	&Type sélectionné
+	s_Lang010 =	Type de commande
 		
 ; View Sub Menu		
 	v_lang001 =	&Toujours à la pointe

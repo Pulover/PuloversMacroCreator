@@ -26,7 +26,23 @@
 	f_Lang009 =	&Utgang
 	f_Lang010 =	Ingen filer
 		
-; Actions Sub Menu		
+; Macro Sub Menu		
+	r_lang001 =	&Registrer makro
+	r_lang002 =	&Aktivere makroer
+	r_lang003 =	&Spille Gjeldende Macro
+	r_lang004 =	&Timer
+	r_lang005 =	S&pille fra utvalgte rad
+	r_lang006 =	Sp&ille til valgt rad
+	r_lang007 =	Spi&lle valgte rader
+	r_lang008 =	&Kontekstsensitiv Hurtigtaster
+	r_lang009 =	L&egg Makro
+	r_lang010 =	L&ukk Makro
+	r_lang011 =	&Duplisere Makro
+	r_lang012 =	Redi&gere Makroer
+	r_lang013 =	I&mport Macro
+	r_lang014 =	Lagre g&jeldende Macro
+		
+; Commands Sub Menu		
 	i_Lang001 =	&Mus
 	i_Lang002 =	&Tekst
 	i_Lang003 =	&Kontroll
@@ -49,18 +65,6 @@
 	i_Lang020 =	Finn en k&ommando
 		
 		
-; Select Sub Menu		
-	s_Lang001 =	&Velg Alle
-	s_Lang002 =	V&elg Ingen
-	s_Lang003 =	&Inverter
-	s_Lang004 =	&Sjekk Valgt
-	s_Lang005 =	&Fjern merkingen Valgt
-	s_Lang006 =	I&nverter Sjekker
-	s_Lang007 =	F&lytte Valget Opp
-	s_Lang008 =	Fl&ytte Pekeren Ned
-	s_Lang009 =	V&algt type
-	s_Lang010 =	Kommandotypen
-		
 ; Edit Sub Menu		
 	e_Lang001 =	&Duplisere
 	e_Lang002 =	&Rediger Kommentar
@@ -78,21 +82,17 @@
 	e_Lang014 =	Sett Tastetrykk
 	e_Lang015 =	Ed&it fargemerki
 		
-; Macro Sub Menu		
-	r_lang001 =	&Registrer makro
-	r_lang002 =	&Aktivere makroer
-	r_lang003 =	&Spille Gjeldende Macro
-	r_lang004 =	&Timer
-	r_lang005 =	S&pille fra utvalgte rad
-	r_lang006 =	Sp&ille til valgt rad
-	r_lang007 =	Spi&lle valgte rader
-	r_lang008 =	&Kontekstsensitiv Hurtigtaster
-	r_lang009 =	L&egg Makro
-	r_lang010 =	L&ukk Makro
-	r_lang011 =	&Duplisere Makro
-	r_lang012 =	Redi&gere Makroer
-	r_lang013 =	I&mport Macro
-	r_lang014 =	Lagre g&jeldende Macro
+; Select Sub Menu		
+	s_Lang001 =	&Velg Alle
+	s_Lang002 =	V&elg Ingen
+	s_Lang003 =	&Inverter
+	s_Lang004 =	&Sjekk Valgt
+	s_Lang005 =	&Fjern merkingen Valgt
+	s_Lang006 =	I&nverter Sjekker
+	s_Lang007 =	F&lytte Valget Opp
+	s_Lang008 =	Fl&ytte Pekeren Ned
+	s_Lang009 =	V&algt type
+	s_Lang010 =	Kommandotypen
 		
 ; View Sub Menu		
 	v_lang001 =	&Alltid på topp
