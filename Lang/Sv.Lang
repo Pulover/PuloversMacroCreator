@@ -32,7 +32,7 @@
 	i_Lang003 =	&Kontroll
 	i_Lang004 =	&Paus
 	i_Lang005 =	M&eddelanderuta
-	i_Lang006 =	&Nyckel Vänta
+	i_Lang006 =	&Tangent Vänta
 	i_Lang007 =	&Fönster
 	i_Lang008 =	&Bild / Pixel Sök
 	i_Lang009 =	K&ör / Arkiv / String / Misc.
@@ -227,7 +227,7 @@
 	w_Lang079 =	Duplicera markerade rader (Ctrl+D)
 	w_Lang080 =	Klippa ut markerad rader (Ctrl+X)
 	w_Lang081 =	Kopiera valda rader (Ctrl+C)
-	w_Lang082 =	Klistra in kopierad rader (Ctrl+V)
+	w_Lang082 =	Klistra in kopierade rader (Ctrl+V)
 	w_Lang083 =	Ta bort markerade rader (DEL)
 	w_Lang084 =	Ångra (Ctrl+Z)
 	w_Lang085 =	Gör om (Ctrl+Y)
@@ -238,7 +238,7 @@
 	w_Lang090 =	Anpassa
 	w_Lang091 =	Hitta ett kommando (Ctrl+Skift+F)
 	w_Lang092 =	Redigera (Enter)
-	w_Lang093 =	Dölja
+	w_Lang093 =	Dölj
 	w_Lang094 =	Redigera Makron (Ctrl+Shift+E)
 		
 ; Command Windows		
@@ -315,7 +315,7 @@
 	c_Lang071 =	Variationer
 	c_Lang072 =	Förhandsgranska
 	c_Lang073 =	Loop
-	c_Lang074 =	* Fungerar inte i manuellt uppspelning.
+	c_Lang074 =	* Fungerar inte i manuel uppspelning.
 	c_Lang075 =	Break
 	c_Lang076 =	Fortsätt
 	c_Lang077 =	Gå
@@ -367,7 +367,7 @@
 	c_Lang123 =	Lägg
 	c_Lang124 =	Nyckel historia
 	c_Lang125 =	Ange en scankod...
-	c_Lang126 =	Kod läggs till virtuella knapparna listan!
+	c_Lang126 =	Koden läggs till virtuella knapparna listan!
 	c_Lang127 =	Skriv ett namn för variabeln
 	c_Lang128 =	Använd funktionen från en extern fil
 	c_Lang130 =	Bryt slinga om de befinns
@@ -406,7 +406,7 @@
 	c_Lang163 =	Skicka Läge
 	c_Lang164 =	Lika
 	c_Lang165 =	Innehåller
-	c_Lang166 =	Greater
+	c_Lang166 =	Större
 	c_Lang167 =	Mindre
 	c_Lang168 =	Ja
 	c_Lang169 =	Ingen
@@ -419,7 +419,7 @@
 	c_Lang176 =	Försök igen
 	c_Lang177 =	Timeout
 	c_Lang178 =	Ställ knappfördröjningen
-	c_Lang179 =	Key fördröjning
+	c_Lang179 =	Tangent fördröjning
 	c_Lang180 =	Slumpmässig fördröjning
 	c_Lang181 =	Minsta
 	c_Lang182 =	Maximum
@@ -430,10 +430,10 @@
 	c_Lang187 =	Andra
 	c_Lang188 =	Tredje
 	c_Lang189 =	Titel
-	c_Lang190 =	Om fönster aktiv
+	c_Lang190 =	Om fönstret är aktivt
 	c_Lang191 =	Om fönstret inte är aktivt
-	c_Lang192 =	Om fönster existerar
-	c_Lang193 =	Om fönster finns inte
+	c_Lang192 =	Om fönstret existerar
+	c_Lang193 =	Om fönstret finns inte
 	c_Lang194 =	Om filen existerar
 	c_Lang195 =	Om filen existerar inte
 	c_Lang196 =	Om urklipp text
@@ -485,14 +485,14 @@
 	t_Lang033 =	Relativ Inspelningsknappen
 	t_Lang034 =	Växla
 	t_Lang035 =	Uppspelning
-	t_Lang036 =	Fart upp
+	t_Lang036 =	Snabba upp
 	t_Lang037 =	Sakta Ner
 	t_Lang038 =	Återgå Mus efter uppspelningen
 	t_Lang039 =	Mus Koordinater
 	t_Lang040 =	Fönster
 	t_Lang041 =	Skärm
-	t_Lang042 =	Default Mus Delay
-	t_Lang043 =	Default Fönster Delay
+	t_Lang042 =	Standard Mus Delay
+	t_Lang043 =	Standard Fönster Delay
 	t_Lang044 =	Max Historia per Macro
 	t_Lang045 =	Rensa Historik
 	t_Lang046 =	Skärmdumpar
@@ -521,7 +521,7 @@
 	t_Lang069 =	&Matcha mål
 	t_Lang070 =	&Ersätt
 	t_Lang071 =	Hittade
-	t_Lang072 =	Ersatt
+	t_Lang072 =	Ersätt
 	t_Lang073 =	V&alda rader
 	t_Lang074 =	Alla &rader
 	t_Lang075 =	Alla ma&kron
@@ -614,9 +614,9 @@
 	d_Lang010 =	Fel: Ogiltig adress.`nDen valda adressen eller filnamnet är ogiltigt.
 	d_Lang011 =	Varning
 	d_Lang012 =	Ingen kontroll vald.`nFortsätta?
-	d_Lang013 =	Exportera skript
-	d_Lang014 =	Script Exporterade
-	d_Lang015 =	Filen framgångsrikt exporterats!
+	d_Lang013 =	Exportera skriptet
+	d_Lang014 =	Scriptet Exporterades
+	d_Lang015 =	Filen har framgångsrikt exporterats!
 	d_Lang016 =	Klicka på "Hämta" för att markera positionen.
 	d_Lang017 =	
 	(LTrim	
@@ -692,13 +692,13 @@
 	)	
 	d_Lang057 =	
 	(LTrim	
-		- Tryck på Ctrl+piltangenterna för att flytta på det  markerade området.
+		- Tryck på Ctrl+piltangenterna för att flytta på det markerade området.
 		- Tryck på Skift+piltangenterna för att ändra storlek på markerade området.
 		- Tryck på Enter för att avsluta.
 	)	
 	d_Lang058 =	
 	(LTrim	
-		Vissa funktioner kräver admnistrator privilages för att kuna fungera korrekt.
+		Vissa funktioner kräver admnistrator privilages för att kunna fungera korrekt.
 		Det rekommenderas att du starta programmet som administratör.
 	)	
 	d_Lang059 =	
@@ -711,7 +711,7 @@
 	(LTrim	
 		Vill du ladda ner den nu?
 		
-		Vill du avaktivera automatiska kontroller väljer Hjälp > Kontrollera vid uppstart
+		Vill du avaktivera automatiska Updatering  väljer du Hjälp > Kontrollera updatering vid uppstart
 	)	
 		
 	d_Lang062 =	Du har redan den senaste versionen.
@@ -902,7 +902,7 @@
 	)	
 	Ex_SM_TT =	
 	(LTrim	
-		Gör Skicka synonymt med SendInput eller SendPlay snarare än
+		Skicka synonymt med SendInput eller SendPlay snarare än
 		standard (sendEvent). Gör också Klicka och mouseMove / Klicka / dra
 		Använd den angivna metoden.
 	)	
@@ -950,7 +950,7 @@
 	)	
 	Ex_HK_TT =	
 	(LTrim	
-		Tvingar använda kroken för att genomföra alla
+		Tvingar att använda kroken för att genomföra alla
 		eller vissa tangentbordets snabbknappar.
 	)	
 	Ex_SK_TT =	
@@ -1266,11 +1266,11 @@
 	WinMove	Ändrar positionen och / eller storleken på det specificerade fönstret.
 	WinRestore	Unminimizes eller unmaximizes det specificerade fönstret om det är minimerat eller maximerat.
 	WinSet	Gör en mängd ändringar i specificerade fönstret, t.ex. "alltid överst" och öppenhet.
-	WinSetTitle	Ändrar titeln på den angivna fönstret.
+	WinSetTitle	Ändrar titeln på det angivna fönstret.
 	WinShow	Unhides den angivna fönstret.
 	WinWait	Väntar tills den angivna fönstret existerar.
-	WinWaitActive	Väntar tills den angivna fönstret är aktivt.
-	WinWaitClose	Väntar tills den angivna fönstret inte existerar.
-	WinWaitNotActive	Väntar tills den angivna fönstret inte är aktivt.
+	WinWaitActive	Väntar tills det angivna fönstret är aktivt.
+	WinWaitClose	Väntar tills det angivna fönstret inte existerar.
+	WinWaitNotActive	Väntar tills det angivna fönstret inte är aktivt.
 	)	
 return		
