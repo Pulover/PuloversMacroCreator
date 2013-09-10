@@ -104,17 +104,20 @@
 	v_lang007 =	P&ikanäppäimet
 	v_lang008 =	Pa&lauta sarakkeet Koko
 	v_lang009 =	Pala&uta Layout
+		
 	v_lang010 =	&Tiedosto
 	v_lang011 =	T&allentaa ja toistaa
 	v_lang012 =	&Vaihtoehtoja
 	v_lang013 =	&Komennot
 	v_lang014 =	&Muokata
 	v_lang015 =	M&uokkaa
+		
 	v_lang016 =	&Automaattinen
 	v_lang017 =	&Manuaalinen
 	v_lang018 =	&Lopettaa
 	v_lang019 =	&Tauko
-	v_lang020 =	&Perustiedot
+		
+	v_lang020 =	&Kompakti
 	v_lang021 =	&Oletusarvo
 		
 ; Options Sub Menu		
@@ -742,7 +745,7 @@
 	(LTrim	
 		Voit luoda makroja käyttäen Command painikkeet pääikkunassa tai käyttämällä Recorder kopioida toimia. Valitse Valinnat > Asetukset > Tallennus valita mitä panoksia tallennetaan.
 		Voit käyttää tallenninta nopeasti tehtäviä mene Valinnat > Asetukset > Tallennus ja tarkista "Clear List" vaihtoehto. Napsauta sitten Tallenna-painiketta pääikkunassa ja käyttää F10 tyhjentää nykyisen Macro ja aloittaa uuden samalla pikanäppäin. Voit myös tarkistaa "Aina aktiivinen" vaihtoehto pääikkunassa pitää Tallennus ja toisto pikanäppäimiä aktiivinen.
-		Saadaksesi apua tietyn komennon hiiren kakkospainikkeella komentopainikkeella pääikkunassa tai missä tahansa komento ikkunassa näyttää linkkejä AutoHotkey ohjeessa.
+		Saada apua tietyn komennon hiiren kakkospainikkeella missä tahansa komento ikkuna näyttää linkkejä AutoHotkey ohjeessa.
 		Tarkista "Capture Keys" mahdollisuus tulla Avainten ja yhdistelmien teidän Macro suoraan pääikkunassa.
 		Anna avaimet ja yhdistelmät pikanäppäin alalaidassa ja paina Lisää-painiketta ja lisää ne valita rivejä.
 		Jos rivejä on valittu edit painikkeet koskevat kaikkia rivejä luettelon.

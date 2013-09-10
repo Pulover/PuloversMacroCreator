@@ -104,17 +104,20 @@
 	v_lang007 =	&Teclas De Acceso Rápido
 	v_lang008 =	&Cambiar Tamaño Columnas
 	v_lang009 =	R&establecer Diseño
+		
 	v_lang010 =	&Expediente
 	v_lang011 =	&Grabar y reproducir
 	v_lang012 =	&Opciones
 	v_lang013 =	&Comandos
 	v_lang014 =	E&ditar
 	v_lang015 =	&Personalizar
+		
 	v_lang016 =	&Automático
 	v_lang017 =	&Manual
 	v_lang018 =	&Detener
 	v_lang019 =	&Pausa
-	v_lang020 =	&Básico
+		
+	v_lang020 =	&Compacto
 	v_lang021 =	&Defecto
 		
 ; Options Sub Menu		
@@ -742,7 +745,7 @@
 	(LTrim	
 		Puede crear macros utilizando los botones de comando en la ventana principal o el uso de la grabadora para copiar sus acciones. Vaya a Opciones > Configuración > Grabación para seleccionar lo que se registran las entradas.
 		Para utilizar la grabadora para tareas rápidas vaya a Opciones > Configuración > Grabación y marque la opción "Borrar lista". A continuación, haga clic en el botón de grabación en la ventana principal y utilizar F10 para borrar la macro actual e iniciar uno nuevo con la misma combinación de teclas. También puede consultar la opción "Siempre activo" en la ventana principal a tener grabación y reproducción hotkeys activo.
-		Para obtener ayuda para un comando específico haga clic en un botón de comando en la ventana principal o en cualquier lugar de una ventana de comandos para mostrar enlaces a AutoHotkey ayuda en línea.
+		Para obtener ayuda para un comando específico haga clic derecho en cualquier parte de la ventana de comandos para mostrar enlaces a AutoHotkey ayuda en línea.
 		Marque la opción "Claves Capture" para entrar teclas y combinaciones a la macro directamente desde la ventana principal.
 		Introduzca teclas y combinaciones de teclas de acceso rápido en la caja en la parte inferior y pulse el botón Insertar para añadir a las filas seleccionadas.
 		Si no se selecciona ninguna fila de los botones de edición se aplican a todas las filas de la lista.

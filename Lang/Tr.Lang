@@ -104,17 +104,20 @@
 	v_lang007 =	K&ısayol Tuşları
 	v_lang008 =	&Sütunlar Boyutu Sıfırla
 	v_lang009 =	&Düzen Sıfırla
+		
 	v_lang010 =	&Dosya
 	v_lang011 =	&Kaydedin ve oyna
 	v_lang012 =	&Seçenekleri
 	v_lang013 =	K&omutları
 	v_lang014 =	D&üzenleme
 	v_lang015 =	&Özelleştirme
+		
 	v_lang016 =	&Otomatik
 	v_lang017 =	&Manuel
 	v_lang018 =	&Dur
 	v_lang019 =	D&urma
-	v_lang020 =	&Temel
+		
+	v_lang020 =	&Kompakt
 	v_lang021 =	&Varsayılan
 		
 ; Options Sub Menu		
@@ -742,7 +745,7 @@
 	(LTrim	
 		Bu ana pencerede komut düğmeleri kullanarak ya da eylemleri kopyalamak için Kayıt kullanarak Makrolar oluşturabilirsiniz. Seçenekler > Ayarlar > giriş kaydedilecektir ne seçmek için kayıt.
 		Hızlı görevleri Seçenek > Ayarlar > Kayıt gidin ve "Listeyi Temizle" seçeneğini işaretleyin için kayıt kullanmak için. Daha sonra ana pencerede Record düğmesine tıklayın ve mevcut makro temizlemek için F10 kullanın ve aynı kısayol tuşu ile yeni bir başlangıç. Ayrıca Kayıt ve Oynatma kısayol tuşları aktif tutmak için ana pencerede "Her zaman Aktif" seçeneğini kontrol edebilirsiniz.
-		Veya herhangi bir yerde AutoHotkey çevrimiçi Yardım bağlantıları göstermek için bir komut penceresinde ana penceresinde bir komut düğmesi üzerinde özel bir komut sağ tıklama için yardım almak için.
+		Bir özel komut için yardım almak için AutoHotkey çevrimiçi Yardım'a bağlantıları göstermek için bir komut penceresi üzerinde herhangi bir yere sağ tıklayın.
 		Ana pencerede doğrudan makro tuşları ve kombinasyonları girmek için "Yakalama Keys" seçeneğini işaretleyin.
 		Altındaki Kısayol tuşu kutusuna tuşları ve kombinasyonları girin ve seçin satır eklemek için Ekle düğmesine basın.
 		Hiçbir satır seçilirse Edit Listedeki tüm satırlar için geçerlidir.

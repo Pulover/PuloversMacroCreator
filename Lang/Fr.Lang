@@ -104,17 +104,20 @@
 	v_lang007 =	Ra&ccourcis Clavier
 	v_lang008 =	R&éinitialiser Taille colonnes
 	v_lang009 =	Rétabl&ir La Disposition
+		
 	v_lang010 =	&Fichier
 	v_lang011 =	&Enregistrement et lecture
 	v_lang012 =	&Les Options
 	v_lang013 =	&Commandes
 	v_lang014 =	&Éditer
 	v_lang015 =	&Personnaliser
+		
 	v_lang016 =	&Automatique
 	v_lang017 =	&Manuel
 	v_lang018 =	A&rrêter
 	v_lang019 =	&Pause
-	v_lang020 =	&Basic
+		
+	v_lang020 =	&Compact
 	v_lang021 =	&Par Défaut
 		
 ; Options Sub Menu		
@@ -742,7 +745,7 @@
 	(LTrim	
 		Vous pouvez créer des macros à l'aide des boutons de commande dans la fenêtre principale ou en utilisant l'enregistreur de copier vos actions. Allez dans Options > Paramètres > Enregistrer pour sélectionner les entrées seront enregistrées.
 		Pour utiliser l'enregistreur pour des tâches rapides allez dans Options > Paramètres > Enregistrement et cochez l'option "Effacer la liste". Puis cliquez sur le bouton Enregistrer dans la fenêtre principale et utiliser F10 pour effacer la macro en cours et en commencer une nouvelle avec le même raccourci clavier. Vous pouvez également cocher l'option "Toujours actif" dans la fenêtre principale de maintenir enregistrement et de lecture raccourcis clavier active.
-		Pour obtenir de l'aide pour un clic-droit commande spécifique sur un bouton de commande dans la fenêtre principale ou n'importe où dans une fenêtre de commande pour afficher des liens vers AutoHotkey aide en ligne.
+		Pour obtenir de l'aide pour une commande spécifique clic droit n'importe où sur une fenêtre de commande pour afficher des liens vers AutoHotkey aide en ligne.
 		Cochez l'option "Capture Keys" pour saisir les clés et les combinaisons de votre macro directement à partir de la fenêtre principale.
 		Entrez touches et combinaisons dans la zone Touche de raccourci vers le bas et appuyez sur le bouton Insérer pour les ajouter aux lignes de sélection.
 		Si aucune ligne n'est sélectionnée les boutons d'édition s'appliquent à toutes les lignes de la liste.

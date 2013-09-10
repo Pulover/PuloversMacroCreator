@@ -104,17 +104,20 @@
 	v_lang007 =	H&otkeys
 	v_lang008 =	&Reset Columns Size
 	v_lang009 =	R&eset Layout
+		
 	v_lang010 =	&File
 	v_lang011 =	&Record  Play
 	v_lang012 =	&Options
 	v_lang013 =	&Commands
 	v_lang014 =	&Edit
 	v_lang015 =	C&ustomize
+		
 	v_lang016 =	&Automatic
 	v_lang017 =	&Manual
 	v_lang018 =	&Stop
 	v_lang019 =	&Pause
-	v_lang020 =	&Basic
+		
+	v_lang020 =	&Compact
 	v_lang021 =	&Default
 		
 ; Options Sub Menu		
@@ -742,7 +745,7 @@
 	(LTrim	
 		You can create Macros using the Command Buttons in the main window or using the Recorder to copy your actions. Go to Options > Settings > Recording to select what inputs will be recorded.
 		To use the recorder for quick tasks go to Options > Settings > Recording and check the "Clear List" option. Then click the Record button in the main window and use F10 to clear the current Macro and start a new one with the same hotkey. You can also check the "Always Active" option in the main window to keep Recording and Playback hotkeys active.
-		To get help for an specific command right-click on a command button in the main window or anywhere in a command window to show links to AutoHotkey online Help.
+		To get help for an specific command right-click anywhere on a command window to show links to AutoHotkey online Help.
 		Check the "Capture Keys" option to enter keys and combinations to your Macro directly from the main window.
 		Enter keys and combinations in the Hotkey box at the bottom and press the Insert button to add them to the select rows.
 		If no rows are selected the edit buttons apply to all rows in the list.

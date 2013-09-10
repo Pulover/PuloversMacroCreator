@@ -104,17 +104,20 @@
 	v_lang007 =	&Hotkeys
 	v_lang008 =	S&paltengröße zurücksetzen 
 	v_lang009 =	&Layout zurücksetzen
+		
 	v_lang010 =	&Datei
 	v_lang011 =	&Aufnahme und Wiedergabe
 	v_lang012 =	&Optionen
 	v_lang013 =	&Befehle
 	v_lang014 =	B&earbeiten
 	v_lang015 =	A&npassen
+		
 	v_lang016 =	&Automatische
 	v_lang017 =	&Handbuch
 	v_lang018 =	&Stopp
 	v_lang019 =	&Pause
-	v_lang020 =	&Grundlegende
+		
+	v_lang020 =	&Compact
 	v_lang021 =	&Standard
 		
 ; Options Sub Menu		
@@ -742,7 +745,7 @@
 	(LTrim	
 		Sie können Makros mit den Befehls-Schaltflächen im Hauptfenster erzeugen oder mittels Rekorder Ihre Aktionen kopieren. Klicken Sie auf Optionen > Einstellungen > Aufnahme, um festzulegen welche Eingaben aufgezeichnet werden sollen.
 		Um den Rekorder für schnelle Aufgaben zu verwenden wählen Sie Optionen > Einstellungen > Aufnahme und aktivieren Sie die Option "Liste löschen". Dann klicken Sie auf die Aufnahme-Schaltfläche im Hauptfenster und wählen F10, um das aktuelle Makro zu löschen und ein neues mit der gleichen Tastenkombination aufzuzeichnen. Sie können auch das Kontrollkästchen "Immer aktiv" im Hauptfenster aktivieren, um die Hotsrings für Aufnahme und Wiedergabe dauerhaft zu aktivieren.
-		Um Hilfe zu einem bestimmten Befehl zu erhalten, klicken Sie mit der rechten Maustaste auf eine Schaltfläche im Hauptfenster oder irgendwo in der Eingabeaufforderung, um zur AutoHotkey Online-Hilfe zu gelangen.
+		Um Hilfe zu einem bestimmten Befehl zu erhalten, klicken Sie mit der rechten Maustaste irgendwo in der Eingabeaufforderung, um zur AutoHotkey Online-Hilfe zu gelangen.
 		Aktivieren Sie "Tasten erfassen", um Tasten und Kombinationen direkt aus dem Hauptfenster in Ihr Makro einzufügen.
 		Geben Sie Tasten und Kombinationen unten im Hotkey-Fenster ein und klicken Sie auf die Schaltfläche Einfügen, um sie zu den ausgewählten Zeilen hinzuzufügen.
 		Wenn keine Zeilen ausgewählt sind, werden die Bearbeiten-Schaltflächen auf alle Zeilen in der Liste angewendet.

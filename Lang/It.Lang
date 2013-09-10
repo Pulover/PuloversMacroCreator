@@ -104,17 +104,20 @@
 	v_lang007 =	&Tasti Di Scelta Rapida
 	v_lang008 =	R&ipristina dimensioni Colonne
 	v_lang009 =	Ri&pristina Layout
+		
 	v_lang010 =	&File
 	v_lang011 =	&Registrare e riprodurre
 	v_lang012 =	&Opzioni
 	v_lang013 =	&Comandi
 	v_lang014 =	&Modificare
 	v_lang015 =	&Personalizzare
+		
 	v_lang016 =	&Automatica
 	v_lang017 =	&Manuale
 	v_lang018 =	A&rresto
 	v_lang019 =	&Pausa
-	v_lang020 =	&Di Base
+		
+	v_lang020 =	&Compatta
 	v_lang021 =	&Predefinito
 		
 ; Options Sub Menu		
@@ -742,7 +745,7 @@
 	(LTrim	
 		È possibile creare macro utilizzando i pulsanti di comando nella finestra principale o utilizzando il registratore per copiare le vostre azioni. Andare su Opzioni > Impostazioni > Registrazione per selezionare ciò che verrà registrato ingressi.
 		Per utilizzare il registratore per operazioni rapide andare su Opzioni > Impostazioni > Registrazione e selezionare l'opzione "Cancella elenco". Quindi fare clic sul pulsante Record nella finestra principale e usare F10 per cancellare la macro corrente e iniziarne uno nuovo con la stessa combinazione di tasti. È anche possibile selezionare l'opzione "Sempre attivo" nella finestra principale di tenere registrazione e riproduzione hotkeys attivo.
-		Per ottenere aiuto per un comando specifico pulsante destro del mouse su un pulsante di comando nella finestra principale o in qualsiasi punto di una finestra di comando per visualizzare collegamenti ad AutoHotkey Guida in linea.
+		Per ottenere aiuto per un comando specifico destro del mouse su un punto qualsiasi della finestra di comando per visualizzare collegamenti ad AutoHotkey Guida in linea.
 		Selezionare l'opzione "Capture Keys" per immettere le chiavi e le combinazioni per la macro direttamente dalla finestra principale.
 		Inserisci le chiavi e le combinazioni nella casella Tasti di scelta rapida in basso e premere il pulsante Inserisci per aggiungerli ai selezionare righe.
 		Se non è selezionato alcun file dei tasti di modifica si applicano a tutte le righe della lista.

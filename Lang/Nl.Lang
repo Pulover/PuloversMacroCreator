@@ -104,17 +104,20 @@
 	v_lang007 =	H&otkeys
 	v_lang008 =	&Reset Kolommen Grootte
 	v_lang009 =	R&eset Layout
+		
 	v_lang010 =	&Bestand
 	v_lang011 =	&Opnemen en afspelen
 	v_lang012 =	O&pties
 	v_lang013 =	&Commando's
 	v_lang014 =	&Uitgeven
 	v_lang015 =	&Aanpassen
+		
 	v_lang016 =	&Automatisch
 	v_lang017 =	&Handboek
 	v_lang018 =	&Stoppen
 	v_lang019 =	&Pauze
-	v_lang020 =	&Basis-
+		
+	v_lang020 =	&Compact
 	v_lang021 =	&Verzuim
 		
 ; Options Sub Menu		
@@ -742,7 +745,7 @@
 	(LTrim	
 		U kunt macro's met behulp van de Command Knoppen in het hoofdvenster of het gebruik van de recorder om uw acties te kopiëren creëren. Ga naar Opties > Instellingen > Opname te selecteren wat input wordt opgenomen.
 		Om de recorder te gebruiken voor snelle taken ga naar Opties > Instellingen > Opname en controleer de "Lijst wissen" optie. Klik vervolgens op de knop Opnemen in het hoofdvenster en gebruik F10 om de huidige macro wissen en een nieuwe te beginnen met dezelfde sneltoets. U kunt ook de "Always Active"-optie in het hoofdvenster naar Opnemen en afspelen sneltoetsen actief te houden.
-		Om u te helpen voor een specifieke opdracht met de rechtermuisknop op een commando knop in het hoofdvenster of ergens in een command-venster om links naar AutoHotkey online Help zien krijgen.
+		Om hulp voor een specifieke opdracht krijgen klik met de rechtermuisknop ergens op een commando venster om links naar AutoHotkey online Help te tonen.
 		Controleer de "Capture Sleutels" optie om sleutels en combinaties direct in te voeren om uw Macro vanuit het hoofdvenster.
 		Enter-toetsen en combinaties in het vak Sneltoets aan de onderkant en druk op de knop Invoegen om ze toe te voegen aan het selecte rijen.
 		Als er geen rijen zijn geselecteerd de bewerking knoppen gelden voor alle rijen in de lijst.

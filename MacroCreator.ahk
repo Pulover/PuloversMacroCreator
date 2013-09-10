@@ -80,6 +80,7 @@ If A_OSVersion in WIN_NT4,WIN_95,WIN_98,WIN_ME
 }
 
 #NoEnv
+ListLines Off
 #InstallKeybdHook
 #MaxThreadsBuffer On
 #MaxHotkeysPerInterval 999999999
@@ -4498,11 +4499,11 @@ Gui, 3:Add, Radio, -Wrap Checked y+12 W170 vMsc R1, %c_Lang018%
 Gui, 3:Add, Radio, -Wrap W170 vSec R1, %c_Lang019%
 Gui, 3:Add, Radio, -Wrap W170 vMin R1, %c_Lang154%
 Gui, 3:Add, GroupBox, Section xs y+20 W450 H118
-Gui, 3:Add, Checkbox, ys+20 xs+10 W85 vRandom gRandomSleep, %c_Lang180%
-Gui, 3:Add, Text, Section -Wrap yp x+5 W90 R1 Right, %c_Lang181%:
+Gui, 3:Add, Checkbox, ys+20 xs+10 W100 vRandom gRandomSleep, %c_Lang180%
+Gui, 3:Add, Text, Section -Wrap yp x+5 W75 R1 Right, %c_Lang181%:
 Gui, 3:Add, Edit, yp-2 x+10 W100 R1 vRandMin Disabled
 Gui, 3:Add, UpDown, vRandMinimum 0x80 Range0-100000, 0
-Gui, 3:Add, Text, -Wrap y+10 xs W90 R1 Right, %c_Lang182%:
+Gui, 3:Add, Text, -Wrap y+10 xs W75 R1 Right, %c_Lang182%:
 Gui, 3:Add, Edit, yp-2 x+10 W100 R1 vRandMax Disabled
 Gui, 3:Add, UpDown, vRandMaximum 0x80 Range0-100000, 500
 Gui, 3:Add, Checkbox, -Wrap y+20 xm+10 W400 vNoRandom gNoRandom, %c_Lang183%
@@ -5225,10 +5226,10 @@ Gui, 11:Add, DDL, ys+15 xs+10 W75 vIdent, Title||Class|Process|ID|PID
 Gui, 11:Add, Text, -Wrap yp+5 x+5 W240 H20 vWinParsTip cGray, %wcmd_WinSet%
 Gui, 11:Add, Edit, xs+10 y+10 W400 vTitle, A
 Gui, 11:Add, Button, -Wrap yp-1 x+0 W30 H23 vGetWin gGetWin, ...
-Gui, 11:Add, Text, Section ym+20 xm+150 W104 R1 Right, %c_Lang058%
+Gui, 11:Add, Text, Section ym+20 xm+145 W104 R1 Right, %c_Lang058%
 Gui, 11:Add, Text, yp x+5 W10, X:
 Gui, 11:Add, Edit, yp-3 x+5 vPosX W55 Disabled
-Gui, 11:Add, Text, yp+3 x+10 W10, Y:
+Gui, 11:Add, Text, yp+3 x+11 W10, Y:
 Gui, 11:Add, Edit, yp-3 x+5 vPosY W55 Disabled
 Gui, 11:Add, Button, -Wrap yp-2 x+5 W30 H23 vWinGetP gWinGetP Disabled, ...
 Gui, 11:Add, Text, xs W100 R1 Right, %c_Lang059%
@@ -6842,10 +6843,10 @@ Gui, 23:Add, DDL, xs+10 y+10 W75 vIdent, Title||Class|Process|ID|PID
 Gui, 23:Add, Text, -Wrap yp+5 x+5 W240 H20 vWinParsTip cGray, %wcmd_WinSet%
 Gui, 23:Add, Edit, xs+10 y+5 W400 vTitle, A
 Gui, 23:Add, Button, -Wrap yp-1 x+0 W30 H23 vGetWin gGetWin, ...
-Gui, 23:Add, Text, Section ym+20 xm+150 W104 R1 Right, %c_Lang058%
+Gui, 23:Add, Text, Section ym+20 xm+145 W104 R1 Right, %c_Lang058%
 Gui, 23:Add, Text, yp x+5 W10, X:
 Gui, 23:Add, Edit, yp-3 x+5 vPosX W55 Disabled
-Gui, 23:Add, Text, yp+3 x+10 W10, Y:
+Gui, 23:Add, Text, yp+3 x+11 W10, Y:
 Gui, 23:Add, Edit, yp-3 x+5 vPosY W55 Disabled
 Gui, 23:Add, Button, -Wrap yp-2 x+5 W30 H23 vGetCtrlP gCtrlGetP Disabled, ...
 Gui, 23:Add, Text, xs W100 R1 Right, %c_Lang059%

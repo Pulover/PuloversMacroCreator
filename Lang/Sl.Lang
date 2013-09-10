@@ -104,17 +104,20 @@
 	v_lang007 =	&Klávesové Skratky
 	v_lang008 =	Pona&stavi stolpce Velikost
 	v_lang009 =	&Reset Postavitev
+		
 	v_lang010 =	&Súbor
 	v_lang011 =	S&nemanje in predvajanje
 	v_lang012 =	&Možnosti
 	v_lang013 =	&Príkazy
 	v_lang014 =	&Editovať
 	v_lang015 =	P&rilagajanje
+		
 	v_lang016 =	&Avtomatski
 	v_lang017 =	&Ročni
 	v_lang018 =	&Stop
 	v_lang019 =	&Premor
-	v_lang020 =	&Osnovni
+		
+	v_lang020 =	&Kompaktna
 	v_lang021 =	&Privzeto
 		
 ; Options Sub Menu		
@@ -742,7 +745,7 @@
 	(LTrim	
 		Lahko ustvarite makre z uporabo ukaznih gumbov v glavnem oknu ali z uporabo snemalnika kopirati dejanja. Pojdi na Možnosti> Nastavitve> Snemanje izbrati tisto vhodi bo posnet.
 		Za uporabo snemalnika za hitre naloge, pojdite na Možnosti> Nastavitve> Snemanje in preverite "Počisti seznam" možnost. Nato kliknite na gumb Snemaj v glavnem oknu in uporabite F10, da počistite trenutni makro in začeti novega z isto hotkey. Si lahko ogledate tudi "Vedno Active" možnost v glavnem oknu za ohranitev snemanje in predvajanje Bližnjice aktiven.
-		Da bi dobili pomoč za določen ukaz desnim klikom na ukazni gumb v glavnem oknu ali kjerkoli v ukazno okno pokazati povezave do AutoHotkey spletni pomoči.
+		Da bi dobili pomoč za določen ukaz desno tipko miške kliknite kjer koli na ukazno okno za prikaz povezave na AutoHotkey spletni pomoči.
 		Preverite "Capture Keys" možnost, da vstopijo tipke in kombinacije s svojim Macro neposredno iz glavnega okna.
 		Vpišite tipke in kombinacije v polje aktivne tipke na dnu in pritisnite gumb Insert, da jih dodate na izbranih vrstah.
 		Če ni izbran noben vrstic za urejanje gumbov veljajo za vse vrstice v seznamu.

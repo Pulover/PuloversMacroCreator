@@ -104,17 +104,20 @@
 	v_lang007 =	&Hotkeys
 	v_lang008 =	&Resetuj rozmiar kolumny
 	v_lang009 =	W&yzeruj
+		
 	v_lang010 =	&Plik
 	v_lang011 =	&Nagrywanie i odtwarzanie
 	v_lang012 =	&Opcje
 	v_lang013 =	Po&lecenia
 	v_lang014 =	&Edytować
 	v_lang015 =	&Настроить...
+		
 	v_lang016 =	&Automatyczny
 	v_lang017 =	&Ręczny
 	v_lang018 =	&Zatrzymać
 	v_lang019 =	&Pauza
-	v_lang020 =	&Podstawowy
+		
+	v_lang020 =	&Zwarty
 	v_lang021 =	&Domyślnie
 		
 ; Options Sub Menu		
@@ -742,7 +745,7 @@
 	(LTrim	
 		Makra można tworzyć za pomocą przycisków poleceń w oknie głównym lub za pomocą dyktafonu skopiować swoje działania. Przejdź do Opcje > Ustawienia > Nagrywanie, aby wybrać to, co wejścia zostaną zapisane.
 		Aby korzystać z rejestratora do szybkiego zadania przejdź do Opcje > Ustawienia > Nagrywanie i zaznacz opcję "Wyczyść listę" opcji. Następnie kliknij przycisk Record w głównym oknie i użyć F10, aby usunąć bieżące makro i rozpocząć nową z tym samym skrótu. Możesz także zaznaczyć opcję "Zawsze Aktywny" opcji w oknie głównym, aby zachować zapis i odtwarzanie skrótów aktywne.
-		Aby uzyskać pomoc dla konkretnego polecenia prawym przyciskiem myszy na przycisku polecenia w oknie głównym lub w dowolnym miejscu w oknie polecenia, aby wyświetlić linki do AutoHotkey Pomocy online.
+		Aby uzyskać pomoc dla konkretnej komendy kliknij prawym przyciskiem myszy w dowolnym miejscu na oknie polecenia, aby wyświetlić linki do AutoHotkey Pomocy online.
 		Sprawdź "Capture Keys" opcję, aby wprowadzić klucze i kombinacje do makra bezpośrednio z głównego okna.
 		Wprowadź klucze i kombinacje w polu Hotkey na dole i wciśnij przycisk Insert, aby dodać je do wybranych wierszy.
 		Jeśli wiersze nie są wybrane przyciski EDIT zastosowanie do wszystkich wierszy w liście.

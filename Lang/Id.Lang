@@ -104,17 +104,20 @@
 	v_lang007 =	&Hotkeys
 	v_lang008 =	&Ulang Kolom Ukuran
 	v_lang009 =	Atu&r Ulang Tata Letak
+		
 	v_lang010 =	&Berkas
 	v_lang011 =	&Rekam dan Putar
 	v_lang012 =	&Pilihan
 	v_lang013 =	P&erintah
 	v_lang014 =	&Mengedit
 	v_lang015 =	&Sesuaikan
+		
 	v_lang016 =	&Otomatis
 	v_lang017 =	&Pedoman
 	v_lang018 =	&Berhenti
 	v_lang019 =	B&erhenti sebentar
-	v_lang020 =	&Dasar
+		
+	v_lang020 =	&Padat
 	v_lang021 =	&Kegagalan
 		
 ; Options Sub Menu		
@@ -742,7 +745,7 @@
 	(LTrim	
 		Anda dapat membuat Macro dengan menggunakan Tombol Perintah di jendela utama atau menggunakan Recorder untuk menyalin tindakan Anda. Buka Opsi> Pengaturan> Merekam untuk memilih apa yang input akan disimpan.
 		Untuk menggunakan perekam untuk tugas-tugas cepat masuk ke Pilihan> Pengaturan> Recording dan periksa "Clear List" pilihan. Kemudian klik tombol Record di jendela utama dan menggunakan F10 untuk menghapus Makro saat ini dan memulai yang baru dengan hotkey yang sama. Anda juga dapat memeriksa "Selalu Aktif" pilihan di jendela utama untuk menjaga Recording dan Playback hotkeys aktif.
-		Untuk mendapatkan bantuan untuk perintah tertentu klik kanan pada tombol perintah di jendela utama atau di mana saja di jendela perintah untuk menampilkan link ke Autohotkey Bantuan online.
+		Untuk mendapatkan bantuan untuk perintah tertentu klik kanan di mana saja di jendela perintah untuk menampilkan link ke Autohotkey Bantuan online.
 		Periksa "Capture Tombol" pilihan untuk memasukkan kunci dan kombinasi Makro Anda langsung dari jendela utama.
 		Masukkan kunci dan kombinasi di kotak Hotkey di bagian bawah dan tekan tombol Insert untuk menambahkan mereka ke pilih baris.
 		Jika tidak ada baris yang dipilih tombol sunting berlaku untuk semua baris dalam daftar.

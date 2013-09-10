@@ -104,17 +104,20 @@
 	v_lang007 =	A&talhos
 	v_lang008 =	&Restaurar Colunas
 	v_lang009 =	R&estaurar Layout
+		
 	v_lang010 =	&Arquivo
 	v_lang011 =	&Gravar e Reproduzir
 	v_lang012 =	&Opções
 	v_lang013 =	&Comandos
 	v_lang014 =	&Editar
 	v_lang015 =	&Personalizar
+		
 	v_lang016 =	&Automatico
 	v_lang017 =	&Manual
 	v_lang018 =	&Parar
 	v_lang019 =	Pa&usa
-	v_lang020 =	&Básico
+		
+	v_lang020 =	&Compacto
 	v_lang021 =	&Padrão
 		
 ; Options Sub Menu		
@@ -742,7 +745,7 @@
 	(LTrim	
 		Você pode criar Macros utilizando os botões de comando na janela principal ou usar o gravador para copiar suas ações. Vá até Opções > Configurações > Gravar para selecionar quais entradas serão gravadas.
 		Para utilizar o gravador para tarefas rápidas vá em Opções > Configurações > Gravação e marque a opção "Limpar Lista". Em seguida, clique no botão Gravar na janela principal e use F10 para limpar a Macro atual e iniciar uma nova com a mesma hotkey. Você também pode marcar a opção "Sempre Ativo" na janela principal para manter as teclas de gravação e reprodução ativas.
-		Para obter ajuda para um comando específico botão direito do mouse sobre um botão de comando na janela principal ou em qualquer lugar em uma janela de comando para mostrar links para a Ajuda online AutoHotkey.
+		Para obter ajuda para um comando específico clique com o botão direito do mouse em qualquer lugar em uma janela de comando para mostrar links para a Ajuda online AutoHotkey.
 		Marque a opção "Capturar Teclas" para inserir teclas e combinações à sua Macro diretamente na da janela principal.
 		Digite teclas e combinações na Caixa de Atalhos na parte inferior e pressione o botão Inserir para adicioná-las às linhas selecionadas.
 		Se nenhuma linha estiver selecionada os botões de edição se aplicam a todas as linhas da lista.

@@ -104,17 +104,20 @@
 	v_lang007 =	&Hotkeys
 	v_lang008 =	V&eličina Reset Kolumne
 	v_lang009 =	&Reset Raspored
+		
 	v_lang010 =	&File
 	v_lang011 =	&Snimanje i reprodukciju
 	v_lang012 =	&Mogućnosti
 	v_lang013 =	&Naredbe
 	v_lang014 =	&Uredi
 	v_lang015 =	&Prilagodite
+		
 	v_lang016 =	&Automatski
 	v_lang017 =	&Priručnik
 	v_lang018 =	&Stop
 	v_lang019 =	Pa&uza
-	v_lang020 =	&Osnovni
+		
+	v_lang020 =	&Kompaktan
 	v_lang021 =	&Default
 		
 ; Options Sub Menu		
@@ -742,7 +745,7 @@
 	(LTrim	
 		Možete stvoriti makronaredbe pomoću naredbenog gumba u glavnom prozoru ili pomoću snimača kopirati svoje radnje. Idi na Opcije > Postavke > Snimanje odabrati ono što ulazi će biti zabilježen.
 		Za korištenje rekorder brze zadatke ići na Opcije > Postavke > Snimanje i provjeriti "Clear List" opciju. Zatim pritisnite gumb rekord u glavnom prozoru i F10 izbiti trenutni makro i započeti novu s istim hotkey. Također možete provjeriti "Uvijek aktivan" opciju u glavnom prozoru da bi se snimanje i reprodukcija hotkeys aktivna.
-		Za pomoć za određene naredbe desnim klikom na naredbeni gumb u glavnom prozoru ili bilo gdje u naredbeni prozor pokazati linkove na AutoHotKey online pomoći.
+		Da biste dobili pomoć za određene naredbe desnom tipkom miša bilo gdje na naredbeni prozor pokazati linkove na AutoHotKey online pomoći.
 		Provjerite "Hvatanje Keys" opciju za ulazak i kombinacije tipki na Macro izravno iz glavnog prozora.
 		Unesite tipki i kombinacije u hotkey kutiji na dnu i pritisnite tipku Insert bi ih dodali na odabranim redovima.
 		Ako nema reda odabrao edit tipke primjenjuje na sve retke na popisu.

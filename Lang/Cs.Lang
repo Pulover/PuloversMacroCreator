@@ -104,17 +104,20 @@
 	v_lang007 =	&Klávesové Zkratky
 	v_lang008 =	O&bnovit sloupce Velikost
 	v_lang009 =	Obnov&it Rozložení
+		
 	v_lang010 =	&Soubor
 	v_lang011 =	&Nahrávat a přehrávat
 	v_lang012 =	&Možnosti
 	v_lang013 =	&Příkazy
 	v_lang014 =	&Editovat
 	v_lang015 =	&Vlastní
+		
 	v_lang016 =	&Automatický
 	v_lang017 =	&Manuál
 	v_lang018 =	&Zastavit
 	v_lang019 =	&Pauza
-	v_lang020 =	&Základní
+		
+	v_lang020 =	&Kompaktní
 	v_lang021 =	&Standardní
 		
 ; Options Sub Menu		
@@ -742,7 +745,7 @@
 	(LTrim	
 		Můžete vytvářet makra pomocí příkazových tlačítek v hlavním okně, nebo pomocí rekordéru kopírovat své akce. Přejít na Možnosti > Nastavení > Nahrávání na vstupy vybrat, co budou zaznamenány.
 		Chcete-li použít rekordér pro rychlé úkoly, jít do Volby > Nastavení > Nahrávání a zaškrtněte "Vymazat seznam" možnost volby. Poté klikněte na tlačítko Record v hlavním okně a pomocí F10 pro vymazání aktuálního makra a začít novou se stejnou klávesovou zkratku. Můžete také zaškrtnout volbu "vždy aktivní" v hlavním okně udržet nahrávání a přehrávání klávesy aktivní.
-		Chcete-li získat pomoc pro určitý příkaz pravým tlačítkem myši na příkazové tlačítko v hlavním okně, nebo kdekoli v okně příkazového řádku pro zobrazení odkazů na AutoHotkey nápovědě.
+		Chcete-li získat nápovědu pro konkrétní příkaz klepněte pravým tlačítkem myši na okně příkazového řádku se zobrazí odkazy na AutoHotkey nápovědě.
 		Podívejte se na "Capture" Keys možnost zadat klíče a kombinace do makra přímo z hlavního okna.
 		Enter a jejich kombinace v poli Hotkey dole a stiskněte tlačítko Vložit a přidat je do vybraných řádků.
 		Pokud žádné položky jsou označeny editační tlačítka platí pro všechny řádky v seznamu.

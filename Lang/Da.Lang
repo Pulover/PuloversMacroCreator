@@ -104,17 +104,20 @@
 	v_lang007 =	&Genvejstaster
 	v_lang008 =	&Nulstil Kolonner Size
 	v_lang009 =	&Reset Layout
+		
 	v_lang010 =	&Fil
 	v_lang011 =	&Optage og afspille
 	v_lang012 =	O&ptioner
 	v_lang013 =	&Kommandoer
 	v_lang014 =	&Redigere
 	v_lang015 =	&Tilpas
+		
 	v_lang016 =	&Automatisk
 	v_lang017 =	&Manual
 	v_lang018 =	&Stands
 	v_lang019 =	&Pause
-	v_lang020 =	&Grundlæggende
+		
+	v_lang020 =	&Compact
 	v_lang021 =	&Standard
 		
 ; Options Sub Menu		
@@ -742,7 +745,7 @@
 	(LTrim	
 		Du kan oprette makroer ved hjælp af kommandoen knapper i hovedvinduet eller ved hjælp af optageren til at kopiere dine handlinger. Gå til Valg > Indstillinger > Optagelse at vælge, hvad input vil blive registreret.
 		Hvis du vil bruge optageren i hurtige opgaver gå til Valg > Indstillinger > Optagelse og tjek "Clear List" valgmulighed. Klik derefter på knappen Optag i hovedvinduet og bruge F10 til at rydde den aktuelle Makro og starte en ny med samme genvejstast. Du kan også tjekke "altid aktiv" i hovedvinduet til at holde Optagelse og afspilning genvejstaster aktive.
-		For at få hjælp til en specifik kommando højreklikke på en kommandoknap i hovedvinduet eller hvor som helst i et kommandovindue til at vise links til AutoHotkey online Hjælp.
+		For at få hjælp til en specifik kommando højreklikke et vilkårligt sted på et kommandovindue til at vise links til AutoHotkey online Hjælp.
 		Check "Capture taster" mulighed for at indtaste nøgler og koder til din makro direkte fra hovedvinduet.
 		Indtast nøgler og koder i Genvejstast boksen nederst og tryk på knappen Indsæt for at føje dem til de udvalgte rækker.
 		Hvis der ikke rækker udvalgt de edit knapper gælder for alle rækker i listen.

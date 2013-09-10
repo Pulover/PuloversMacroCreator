@@ -104,18 +104,21 @@
 	v_lang007 =	&Gyorsbillentyűk
 	v_lang008 =	&Visszaállítás oszlopok méret
 	v_lang009 =	&Törlés Layout
+		
 	v_lang010 =	&Reszelő
 	v_lang011 =	R&ögzítése és lejátszása
 	v_lang012 =	&Lehetőségek
 	v_lang013 =	&Parancsok
 	v_lang014 =	&Szerkeszt
 	v_lang015 =	&Testreszabása
+		
 	v_lang016 =	&Automatikus
 	v_lang017 =	&Kézi
 	v_lang018 =	&Megáll
 	v_lang019 =	&Szünet
-	v_lang020 =	&Alapvető
-	v_lang021 =	A&lapértelmezett
+		
+	v_lang020 =	&Kompakt
+	v_lang021 =	&Alapértelmezett
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Beállítások
@@ -742,7 +745,7 @@
 	(LTrim	
 		Hozhat létre makrók a Command gombok a fő ablakban, vagy a felvevő másolni a tevékenységét. Válassza az Opciók > Beállítások > Felvétel kiválasztható, hogy milyen bemeneteket kerülnek rögzítésre.
 		Ahhoz, hogy a felvevő gyors feladatok válasszuk az Opciók > Beállítások > Felvétel és ellenőrizze a "Lista törlése" opciót. Majd kattintson a Felvétel gombra a fő ablakot, majd F10 gombbal törölheti az aktuális makro-és újat azonos gyorsbillentyűket. Ön is ellenőrizheti a "Mindig aktív" opciót a fő ablakban, hogy felvétel és lejátszás gyorsbillentyűk aktív.
-		Ahhoz, hogy segítséget egy adott parancs Kattintson a jobb gombbal a parancs gombra a fő ablakban, vagy bárhol a parancssori ablakot, hogy bemutathatja a AutoHotkey súgójában.
+		A súgó egy adott parancs a jobb gombbal bárhol egy parancssori ablakot mutatni linkek AutoHotkey súgójában.
 		Ellenőrizze, hogy a "Capture Keys" opciót be kulcsok és kombinációk a Macro közvetlenül a fő ablakban.
 		Adja meg a kulcsok és kombinációk a gyorsbillentyűket doboz alján, és nyomja meg az Insert gombot, hogy vegye fel őket a kiválasztott sorokat.
 		Ha nincs sor van kijelölve a szerkesztés funkció alkalmazni az összes sort a listában.

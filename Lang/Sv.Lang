@@ -104,17 +104,20 @@
 	v_lang007 =	&Snabbtangenter
 	v_lang008 =	&Återställ kolumner Storlek
 	v_lang009 =	Å&terställ Layout
+		
 	v_lang010 =	&Fil
 	v_lang011 =	&Spela in och spela
 	v_lang012 =	&Alternativ
 	v_lang013 =	&Kommandon
 	v_lang014 =	&Redigera
 	v_lang015 =	A&npassa
+		
 	v_lang016 =	&Automatisk
 	v_lang017 =	&Manuell
 	v_lang018 =	&Stopp
 	v_lang019 =	&Paus
-	v_lang020 =	&Grundläggande
+		
+	v_lang020 =	&Kompakt
 	v_lang021 =	&Default
 		
 ; Options Sub Menu		
@@ -742,7 +745,7 @@
 	(LTrim	
 		Du kan skapa makron med hjälp av kommandoknapparna i huvudfönstret eller använda inspelaren för att kopiera dina handlingar. Gå till Alternativ> Inställningar> Inspelning för att välja vilka ingångar kommer att registreras.
 		Om du vill använda brännaren för snabbuppgifter gå till Alternativ> Inställningar> Inspelning och kontrollera "Rensa lista" alternativet. Sedan klickar du på knappen Spela in i huvudfönstret och använd F10 för att rensa den aktuella Makro och starta en ny med samma kortkommando. Du kan också kolla "alltid aktiv" i huvudfönstret för att hålla Inspelning och uppspelning snabbtangenter aktiv.
-		För att få hjälp för ett specifikt kommando högerklicka på en kommandoknapp i huvudfönstret eller någonstans i ett kommando fönster för att visa länkar till AutoHotkey onlinehjälpen.
+		För att få hjälp för ett visst kommando högerklicka någonstans på ett kommando fönster för att visa länkar till AutoHotkey onlinehjälpen.
 		Kontrollera "Capture Keys" alternativ för att ange nycklar och kombinationer till ditt makro direkt från huvudfönstret.
 		Enter och kombinationer på Hotkey rutan längst ner och tryck på knappen Infoga för att lägga dem till de utvalda raderna.
 		Om inga rader valt redigera knapparna gälla för alla rader i listan.

@@ -104,17 +104,20 @@
 	v_lang007 =	&Phím nóng
 	v_lang008 =	Th&iết lập lại Cột Kích
 	v_lang009 =	&Giao Diện Thiết Lập Lại
+		
 	v_lang010 =	&Tập tin
 	v_lang011 =	&Ghi lại và chơi
 	v_lang012 =	T&ùy chọn
 	v_lang013 =	&Lệnh
 	v_lang014 =	&Chỉnh sửa
 	v_lang015 =	Tù&y chỉnh
+		
 	v_lang016 =	&Tự động
 	v_lang017 =	&Hướng dẫn sử dụng
 	v_lang018 =	Th&ôi
 	v_lang019 =	T&ạm dừng
-	v_lang020 =	&Cơ Bản
+		
+	v_lang020 =	&Nhỏ gọn
 	v_lang021 =	&Mặc Định
 		
 ; Options Sub Menu		
@@ -742,7 +745,7 @@
 	(LTrim	
 		Bạn có thể tạo macro bằng cách sử dụng nút lệnh trong cửa sổ chính hoặc sử dụng máy ghi âm để sao chép các hành động của bạn. Vào Tùy chọn> Cài đặt> Ghi chọn những đầu vào sẽ được ghi lại.
 		Sử dụng máy ghi âm cho các nhiệm vụ nhanh chóng vào Tùy chọn> Cài đặt> Ghi âm và kiểm tra các "Clear List" tùy chọn. Sau đó nhấn vào nút Record trong cửa sổ chính và sử dụng F10 để xóa vĩ mô hiện tại và bắt đầu một cái mới với các hotkey. Bạn cũng có thể kiểm tra "Luôn đăng nhập" tùy chọn trong cửa sổ chính để tiếp tục ghi âm và phát lại các phím nóng hoạt động.
-		Để được trợ giúp cho một nhấp chuột phải lệnh cụ thể trên một nút lệnh trong cửa sổ chính hoặc bất cứ nơi nào trong một cửa sổ lệnh để hiển thị các liên kết đến AutoHotkey trợ giúp trực tuyến.
+		Để có được sự giúp đỡ cho một lệnh cụ thể kích chuột phải vào bất cứ nơi nào trên một cửa sổ lệnh để hiển thị các liên kết đến AutoHotkey trợ giúp trực tuyến.
 		Kiểm tra "Capture phím" tùy chọn để nhập phím và kết hợp để vĩ mô của bạn trực tiếp từ cửa sổ chính.
 		Nhập phím và kết hợp trong hộp Hotkey ở phía dưới và nhấn nút Insert để thêm chúng vào các hàng lựa chọn.
 		Nếu không có hàng được lựa chọn các nút chỉnh sửa áp dụng cho tất cả các hàng trong danh sách.

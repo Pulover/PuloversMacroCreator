@@ -104,17 +104,20 @@
 	v_lang007 =	&Hurtigtaster
 	v_lang008 =	&Tilbakestille kolonner størrelse
 	v_lang009 =	Ti&lbakestille Layout
+		
 	v_lang010 =	&Fil
 	v_lang011 =	&Ta opp og spille
 	v_lang012 =	&Alternativer
 	v_lang013 =	&Kommandoer
 	v_lang014 =	&Redigere
 	v_lang015 =	T&ilpass
+		
 	v_lang016 =	&Automatisk
 	v_lang017 =	&Manuell
 	v_lang018 =	&Stopp
 	v_lang019 =	&Pause
-	v_lang020 =	&Basic
+		
+	v_lang020 =	&Kompakt
 	v_lang021 =	&Standard
 		
 ; Options Sub Menu		
@@ -742,7 +745,7 @@
 	(LTrim	
 		Du kan lage makroer ved hjelp av kommandoen Knapper i hovedvinduet eller bruke opptaker til å kopiere dine handlinger. Gå til Valg > Innstillinger > Opptak til å velge hvilke innganger vil bli registrert.
 		For å bruke opptakeren for raske oppgaver gå til Valg > Innstillinger > Recording og sjekke "Clear List" alternativet. Deretter klikker du på Record-knappen i hovedvinduet og bruke F10 for å slette gjeldende Makro og starte en ny en med samme hurtigtast. Du kan også sjekke "Alltid aktiv" i hovedvinduet for å holde Opptak og avspilling hurtigtaster aktiv.
-		For å få hjelp til en bestemt kommando høyre-klikk på et kommando-knappen i hovedvinduet eller hvor som helst i et kommandovindu for å vise lenker til AutoHotkey elektroniske hjelpen.
+		For å få hjelp til en bestemt kommando høyreklikke hvor som helst på en kommando vinduet for å vise lenker til AutoHotkey elektroniske hjelpen.
 		Sjekk "Capture Keys" for å gå inn nøkler og kombinasjoner for å Macro din direkte fra hovedvinduet.
 		Skriv inn nøkler og kombinasjoner i Hurtigtast-boksen nederst og trykk på Insert-knappen for å legge dem til utvalgte rader.
 		Hvis ingen punkter valgt edit knapper gjelder for alle radene i listen.

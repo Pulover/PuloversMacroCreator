@@ -104,17 +104,20 @@
 	v_lang007 =	&Tecles D'accés Ràpid
 	v_lang008 =	R&establir mida de les columnes
 	v_lang009 =	Restab&lir Disseny
+		
 	v_lang010 =	&Expedient
 	v_lang011 =	&Gravar i reproduir
 	v_lang012 =	&Opcions
 	v_lang013 =	O&rdres
 	v_lang014 =	&Modifica
 	v_lang015 =	&Personalitzar
+		
 	v_lang016 =	&Automàtic
 	v_lang017 =	&Manual
 	v_lang018 =	A&turi
 	v_lang019 =	&Pausa
-	v_lang020 =	&Bàsic
+		
+	v_lang020 =	&Compacte
 	v_lang021 =	&Defecte
 		
 ; Options Sub Menu		
@@ -742,7 +745,7 @@
 	(LTrim	
 		Podeu crear macros utilitzant els botons de comandament a la finestra principal o l'ús de la gravadora per copiar les seves accions. Aneu a Opcions> Configuració> Gravació per seleccionar el que es registren les entrades.
 		Per utilitzar la gravadora per a tasques ràpides aneu a Opcions> Configuració> Gravació i marqui l'opció "Esborrar llista". A continuació, feu clic al botó de gravació a la finestra principal i utilitzar F10 per esborrar la macro actual i iniciar un de nou amb la mateixa combinació de tecles. També podeu consultar l'opció "Sempre actiu" en la finestra principal a tenir enregistrament i reproducció hotkeys actiu.
-		Per obtenir ajuda per a una ordre específic feu clic a un botó de comandament a la finestra principal o en qualsevol lloc d'una finestra de comandaments per mostrar enllaços a AutoHotkey ajuda en línia.
+		Per obtenir ajuda per a una ordre específic feu clic dret en qualsevol part de la finestra de comandaments per mostrar enllaços a AutoHotkey ajuda en línia.
 		Marqueu l'opció "Claus Capture" per entrar tecles i combinacions a la macro directament de la finestra principal.
 		Introduïu tecles i combinacions de tecles d'accés ràpid a la caixa a la part inferior i premi el botó Insereix per afegir a les files seleccionades.
 		Si no se selecciona cap fila dels botons d'edició s'apliquen a totes les files de la llista.
