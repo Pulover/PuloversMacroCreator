@@ -731,10 +731,11 @@
 	d_Lang074 =	Find a command or function
 	d_Lang075 =	Welcome to Pulover's Macro Creator
 	d_Lang076 =	Please choose your prefered layout
-	d_Lang077 =	Basic
+	d_Lang077 =	Compact
 	d_Lang078 =	Default
-	d_Lang079 =	Check for updates on start up.
+	d_Lang079 =	Check for updates on startup.
 	d_Lang080 =	You can change this in Options > Settings > General.
+	d_Lang081 =	You can change and customize layouts in the View menu.
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -764,7 +765,7 @@
 		Click on the Index Column Header to turn On/Off Help Marks and Colors for Loops and Statements. Double-Click on the Action Column Header to turn On/Off Indentation for Loops and Statements.
 		You can debug your Macros using the Manual Hotkey and the Play options in the Macro menu. You can also disable actions by unchecking them in the Macro list.
 		To make your Macros work only on a certain window go to Macro > Context Sensitive Hotkeys.
-		You can set your own Global Variables to be loaded on start up and to be exported. Go to Options > Settings > User Global Variables to add them.
+		You can set your own Global Variables to be loaded on startup and to be exported. Go to Options > Settings > User Global Variables to add them.
 		You can run advanced functions such as SubStr and RegExReplace from the Functions window (Insert > If Statements / Variables / Functions). Or run your own functions from external AutoHotkey scripts.
 	)	
 ; Tooltips		
@@ -797,7 +798,7 @@
 	CopyT_TT =	Copy
 	PasteT_TT =	Paste
 	SelAllT_TT =	Select All
-	DefaultMacro_TT =	Select file to load on program start up
+	DefaultMacro_TT =	Select file to load on program startup
 	VarCopyA_TT =	Copy current variable contents
 	VarCopyB_TT =	Copy current variable contents
 	Reset_TT =	Clear variable contents

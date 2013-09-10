@@ -731,10 +731,11 @@
 	d_Lang074 =	Localizar um comando ou função
 	d_Lang075 =	Benvindo ao Pulover's Macro Creator
 	d_Lang076 =	Por favor, escolha o seu layout preferido
-	d_Lang077 =	Básico
+	d_Lang077 =	Compacto
 	d_Lang078 =	Padrão
 	d_Lang079 =	Verificar atualizações ao iniciar.
 	d_Lang080 =	Você pode mudar isto em Opções > Configurações > Geral.
+	d_Lang081 =	Você pode alterar e personalizar layouts no menu Exibir.
 		
 ; Start-up Tips		
 	Start_Tips =	

@@ -731,10 +731,11 @@
 	d_Lang074 =	Etsi komento tai toiminto
 	d_Lang075 =	Tervetuloa Pulover's Macro Creator
 	d_Lang076 =	Valitse mieleisesi asettelu
-	d_Lang077 =	Perustiedot
+	d_Lang077 =	Kompakti
 	d_Lang078 =	Oletusarvo
-	d_Lang079 =	Tarkista päivitykset käynnistettäessä.
-	d_Lang080 =	Voit muuttaa tätä Valinnat> Asetukset> Yleiset.
+	d_Lang079 =	Tarkista päivitykset käynnistyksen yhteydessä.
+	d_Lang080 =	Voit muuttaa tätä Valinnat > Asetukset > Yleiset.
+	d_Lang081 =	Voit muuttaa ja muokata kaavoihin Näytä-valikosta.
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -797,7 +798,7 @@
 	CopyT_TT =	Kopioi
 	PasteT_TT =	Tahna
 	SelAllT_TT =	Valitse kaikki
-	DefaultMacro_TT =	Valitse ladattava tiedosto ohjelman käynnistyksen
+	DefaultMacro_TT =	Valitse ladattava tiedosto on ohjelman käynnistyessä
 	VarCopyA_TT =	Kopioi nykyinen muuttujan sisältö
 	VarCopyB_TT =	Kopioi nykyinen muuttujan sisältö
 	Reset_TT =	Tyhjennä muuttujan sisältö

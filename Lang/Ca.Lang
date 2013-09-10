@@ -731,10 +731,11 @@
 	d_Lang074 =	Trobar una comanda o una funció
 	d_Lang075 =	Benvinguts a Pulover's Macro Creator
 	d_Lang076 =	Trieu seu disseny preferit
-	d_Lang077 =	Bàsic
+	d_Lang077 =	Compacte
 	d_Lang078 =	Defecte
-	d_Lang079 =	Sök efter uppdateringar vid start....
-	d_Lang080 =	Vostè pot canviar això a Opcions> Configuració> General.
+	d_Lang079 =	Cerca actualitzacions en iniciar.
+	d_Lang080 =	Vostè pot canviar això a Opcions > Configuració > General.
+	d_Lang081 =	Vostè pot canviar i personalitzar els dissenys al menú View.
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -797,7 +798,7 @@
 	CopyT_TT =	Copieu
 	PasteT_TT =	Enganxar
 	SelAllT_TT =	Selecciona tot
-	DefaultMacro_TT =	Selecciona arxiu a carregar en el programa de posada en marxa
+	DefaultMacro_TT =	Selecciona arxiu a carregar en l'arrencada del programa
 	VarCopyA_TT =	Copia contingut actual de variables
 	VarCopyB_TT =	Copia contingut actual de variables
 	Reset_TT =	Esborrar el contingut de variables

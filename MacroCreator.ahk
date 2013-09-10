@@ -2330,10 +2330,10 @@ GoSub, ResetHotkeys
 OldLoopColor := LoopLVColor, OldIfColor := IfLVColor
 , OldMoves := Moves, OldTimed := TimedI, OldRandM := RandomSleeps, OldRandP := RandPercent
 FileRead, UserVarsList, %UserVarsPath%
-Gui, 4:Add, Listbox, W200 H400 vAltTab gAltTabControl AltSubmit, %t_Lang022%||%t_Lang035%|%t_Lang090%|%t_Lang046%|%t_Lang018%|%t_Lang096%
+Gui, 4:Add, Listbox, W160 H400 vAltTab gAltTabControl AltSubmit, %t_Lang022%||%t_Lang035%|%t_Lang090%|%t_Lang046%|%t_Lang018%|%t_Lang096%
 Gui, 4:Add, Tab2, yp x+0 W400 H0 vTabControl gAltTabControl AltSubmit, Recording|Playback|Defaults|Screenshots|Misc|UserVars
 ; Recording
-Gui, 4:Add, GroupBox, Section ym xm+210 W400 H85, %t_Lang053%:
+Gui, 4:Add, GroupBox, Section ym xm+170 W400 H85, %t_Lang053%:
 Gui, 4:Add, Text, ys+20 xs+10, %t_Lang019%:
 Gui, 4:Add, Hotkey, y+1 W150 vRecKey, %RecKey%
 Gui, 4:Add, Text, ys+20 x+20, %t_Lang020%:
@@ -2363,7 +2363,7 @@ Gui, 4:Add, Checkbox, -Wrap Checked%WClass% y+0 xs+10 vWClass W380 R1, %t_Lang02
 Gui, 4:Add, Checkbox, -Wrap Checked%WTitle% vWTitle W380 R1, %t_Lang030%
 Gui, 4:Tab, 2
 ; Playback
-Gui, 4:Add, GroupBox, Section ym xm+210 W400 H80, %t_Lang053%:
+Gui, 4:Add, GroupBox, Section ym xm+170 W400 H80, %t_Lang053%:
 Gui, 4:Add, Text, ys+20 xs+10, %t_Lang036%:
 Gui, 4:Add, DDL, yp-2 xp+70 W150 vFastKey, None|Insert||F1|F2|F3|F4|F5|F6|F7|F8|F9|F10|F11|F12|CapsLock|NumLock|ScrollLock|
 Gui, 4:Add, DDL, yp x+5 W37 vSpeedUp, 2||4|8|16|32
@@ -2383,7 +2383,7 @@ Gui, 4:Add, UpDown, vRandPercent 0x80 Range0-1000, %RandPercent%
 Gui, 4:Add, Text, yp+5 x+5, `%
 Gui, 4:Tab, 3
 ; Defaults
-Gui, 4:Add, GroupBox, Section ym xm+210 W400 H140, %t_Lang090%:
+Gui, 4:Add, GroupBox, Section ym xm+170 W400 H140, %t_Lang090%:
 Gui, 4:Add, Text, ys+20 xs+10, %t_Lang039%:
 Gui, 4:Add, Radio, -Wrap y+5 xS+10 W180 R1 vRelative R1, %c_Lang005%
 Gui, 4:Add, Radio, -Wrap yp x+5 W180 R1 vScreen R1, %t_Lang041%
@@ -2414,7 +2414,7 @@ Gui, 4:Add, Edit, yp x+0 W100 R1 -Multi ReadOnly, %ManKey%
 Gui, 4:Add, Checkbox, -Wrap Checked%KeepDefKeys% y+5 xs+10 vKeepDefKeys W380 R1, %t_Lang054%.
 Gui, 4:Tab, 4
 ; Screenshots
-Gui, 4:Add, GroupBox, Section ym xm+210 W400 H150, %t_Lang046%:
+Gui, 4:Add, GroupBox, Section ym xm+170 W400 H150, %t_Lang046%:
 Gui, 4:Add, Text, ys+20 xs+10, %t_Lang047%:
 Gui, 4:Add, DDL, yp-5 xs+100 vDrawButton W75, RButton||LButton|MButton
 Gui, 4:Add, Text, y+10 xs+10 W200, %t_Lang048%:
@@ -2427,7 +2427,7 @@ Gui, 4:Add, Edit, vScreenDir W350 R1 -Multi, %ScreenDir%
 Gui, 4:Add, Button, -Wrap yp-1 x+0 W30 H23 vSearchScreen gSearchDir, ...
 Gui, 4:Tab, 5
 ; General
-Gui, 4:Add, GroupBox, Section ym xm+210 W400 H120, %t_Lang018%:
+Gui, 4:Add, GroupBox, Section ym xm+170 W400 H120, %t_Lang018%:
 Gui, 4:Add, Checkbox, -Wrap Checked%MultInst% ys+20 xs+10 vMultInst W380 R1, %t_Lang089%
 Gui, 4:Add, Checkbox, -Wrap Checked%TbNoTheme% vTbNoTheme W380 R1, %t_Lang142%
 Gui, 4:Add, Checkbox, -Wrap Checked%EvalDefault% vEvalDefault W380 R1, %t_Lang059%
@@ -2449,7 +2449,7 @@ Gui, 4:Add, Button, -Wrap y+0 W75 H23 gConfigRestore, %t_Lang063%
 Gui, 4:Add, Button, -Wrap yp x+10 W75 H23 gKeyHistory, %c_Lang124%
 Gui, 4:Tab, 6
 ; User Variables
-Gui, 4:Add, GroupBox, Section ym xm+210 W400 H395, %t_Lang096%:
+Gui, 4:Add, GroupBox, Section ym xm+170 W400 H395, %t_Lang096%:
 Gui, 4:Add, Text, ys+20 xs+10 -Wrap W150 R1, %t_Lang093%:
 Gui, 4:Add, Text, -Wrap W200 R1 yp xs+155 cRed, %t_Lang094%
 Gui, 4:Add, Text, -Wrap W380 R1 y+5 xs+10, %t_Lang095%
@@ -2457,6 +2457,7 @@ Gui, 4:Add, Edit, W380 r24 vUserVarsList, %UserVarsList%
 Gui, 4:Tab
 Gui, 4:Add, Button, -Wrap Default Section xm W75 H23 gConfigOK, %c_Lang020%
 Gui, 4:Add, Button, -Wrap ys W75 H23 gConfigCancel, %c_Lang021%
+Gui, 4:Add, Button, -Wrap ys W75 H23 gLoadDefaults, %t_Lang063%
 GuiControl, 4:ChooseString, RelKey, %RelKey%
 GuiControl, 4:ChooseString, FastKey, %FastKey%
 GuiControl, 4:ChooseString, SlowKey, %SlowKey%
@@ -2547,6 +2548,9 @@ GuiControl, 4:Choose, TabControl, %AltTab%
 return
 
 LoadDefaults:
+Gui, 4:+LastFoundExist
+IfWinExist
+	GoSub, ConfigCancel
 Gui, 1:+OwnDialogs
 MsgBox, 49, %d_Lang003%, %d_Lang024%
 IfMsgBox, OK
@@ -7718,9 +7722,10 @@ Gui, 1:+Disabled
 Gui, 31:Font, Bold s10, Tahoma
 Gui, 31:Add, Text, w300 Center, %d_Lang075%
 Gui, 31:Font
-Gui, 31:Add, Groupbox, Section w320 h60, %d_Lang076%:
+Gui, 31:Add, Groupbox, Section w320 h70 Center, %d_Lang076%:
 Gui, 31:Add, Radio, Checked xs+60 ys+30 W100 vBasic gBasicLayout, %d_Lang077%
 Gui, 31:Add, Radio, yp x+20 W100 vDefault gDefaultLayout, %d_Lang078%
+Gui, 31:Add, Text, -Wrap y+5 xs+10 W300 R1 cGray, %d_Lang081%
 Gui, 31:Add, Button, Default xm W75 H23 gWelcClose, %c_Lang020%
 Gui, 31:Add, Checkbox, Checked%AutoUpdate% -Wrap yp+5 x+10 W235 r1 vAutoUpdate, %d_Lang079%
 Gui, 31:Show,, %AppName%

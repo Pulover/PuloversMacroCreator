@@ -731,10 +731,11 @@
 	d_Lang074 =	Tìm một lệnh hoặc chức năng
 	d_Lang075 =	Chào mừng bạn đến Pulover's Macro Creator
 	d_Lang076 =	Hãy chọn bố trí ưa thích của bạn
-	d_Lang077 =	Cơ Bản
+	d_Lang077 =	Nhỏ gọn
 	d_Lang078 =	Mặc Định
-	d_Lang079 =	Preveri za posodobitve ob zagonu....
-	d_Lang080 =	Bạn có thể thay đổi điều này trong Tùy chọn> Cài đặt> Chung.
+	d_Lang079 =	Kiểm tra cập nhật khi khởi động.
+	d_Lang080 =	Bạn có thể thay đổi điều này trong Tùy chọn > Cài đặt > Chung.
+	d_Lang081 =	Bạn có thể thay đổi và tùy chỉnh bố trí trong menu View.
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -797,7 +798,7 @@
 	CopyT_TT =	Sao chép
 	PasteT_TT =	Dán
 	SelAllT_TT =	Chọn tất cả
-	DefaultMacro_TT =	Chọn tập tin để tải về chương trình khởi động
+	DefaultMacro_TT =	Chọn tập tin để tải về khởi động chương trình
 	VarCopyA_TT =	Sao chép nội dung biến hiện nay
 	VarCopyB_TT =	Sao chép nội dung biến hiện nay
 	Reset_TT =	Rõ ràng nội dung biến

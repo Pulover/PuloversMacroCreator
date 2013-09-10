@@ -731,10 +731,11 @@
 	d_Lang074 =	Keresse meg a parancs vagy funkció
 	d_Lang075 =	Welcome to Pulover's Macro Creator
 	d_Lang076 =	Kérjük, válaszd ki a preferált elrendezés
-	d_Lang077 =	Alapvető
+	d_Lang077 =	Kompakt
 	d_Lang078 =	Alapértelmezett
-	d_Lang079 =	Frissítések keresése a beindításához.
-	d_Lang080 =	Ezt meg lehet változtani az Opciók> Beállítások> Általános.
+	d_Lang079 =	Frissítések keresése indításkor.
+	d_Lang080 =	Ezt meg lehet változtani az Opciók > Beállítások > Általános.
+	d_Lang081 =	Meg lehet változtatni, és testre elrendezést a Nézet menüben.
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -797,7 +798,7 @@
 	CopyT_TT =	Másolás
 	PasteT_TT =	Paszta
 	SelAllT_TT =	Az összes kijelölése
-	DefaultMacro_TT =	Válassza ki a fájlt betölteni a program elindul
+	DefaultMacro_TT =	Válassza ki a fájlt betölteni a program indításakor
 	VarCopyA_TT =	Másolása a jelenlegi változó tartalmát
 	VarCopyB_TT =	Másolása a jelenlegi változó tartalmát
 	Reset_TT =	Kódolatlan változó tartalma

@@ -731,10 +731,11 @@
 	d_Lang074 =	Etsi komento tai toiminto...
 	d_Lang075 =	Välkommen till Pulover's Macro Creator
 	d_Lang076 =	Välj din föredragna layout
-	d_Lang077 =	Grundläggande
+	d_Lang077 =	Kompakt
 	d_Lang078 =	Default
-	d_Lang079 =	Tarkista päivitykset käynnistettäessä....
-	d_Lang080 =	Du kan ändra detta i Alternativ> Inställningar> Allmänt.
+	d_Lang079 =	Sök efter uppdateringar vid start.
+	d_Lang080 =	Du kan ändra detta i Alternativ > Inställningar > Allmänt.
+	d_Lang081 =	Du kan ändra och anpassa layouter på menyn Visa.
 		
 ; Start-up Tips		
 	Start_Tips =	

@@ -731,10 +731,11 @@
 	d_Lang074 =	Pronađite naredbu ili funkciju...
 	d_Lang075 =	Vítejte na Pulover's Macro Creator
 	d_Lang076 =	Vyberte preferovaný rozvržení
-	d_Lang077 =	Základní
+	d_Lang077 =	Kompaktní
 	d_Lang078 =	Standardní
 	d_Lang079 =	Zkontrolovat aktualizace při spuštění.
-	d_Lang080 =	Toto nastavení můžete změnit v Možnosti> Nastavení> Obecné.
+	d_Lang080 =	Toto nastavení můžete změnit v Možnosti > Nastavení > Obecné.
+	d_Lang081 =	Můžete změnit a přizpůsobit rozvržení v nabídce Zobrazit.
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -797,7 +798,7 @@
 	CopyT_TT =	Kopírovat
 	PasteT_TT =	Pasta
 	SelAllT_TT =	Vybrat vše
-	DefaultMacro_TT =	Vyberte soubor, který chcete nahrát na programu startu
+	DefaultMacro_TT =	Vyberte soubor, který chcete nahrát na startu programu
 	VarCopyA_TT =	Zkopírujte aktuální proměnné obsah
 	VarCopyB_TT =	Zkopírujte aktuální proměnné obsah
 	Reset_TT =	Vymazat proměnné obsah
