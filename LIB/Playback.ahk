@@ -1262,7 +1262,10 @@ CheckVars(Match_List, l_Point="")
 					Else
 						Found2 := DerefVars("%" Found2 "%")
 				}
-				%A_LoopField% := RegExReplace(%A_LoopField%, Found, %Found1%[Found2])
+				Try
+					%A_LoopField% := RegExReplace(%A_LoopField%, Found, %Found1%[Found2])
+				Catch
+					%A_LoopField% := RegExReplace(%A_LoopField%, Found)
 			}
 		}
 	}
