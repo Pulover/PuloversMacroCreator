@@ -595,14 +595,14 @@ Gui, Add, Hotkey, hwndhManKey vManKey gWaitKeys Limit190, % o_ManKey[1]
 Gui, Add, Hotkey, hwndhAbortKey vAbortKey, %AbortKey%
 Gui, Add, Hotkey, hwndhPauseKey vPauseKey, %PauseKey%
 
-Gui, Add, Text, -Wrap y+320 xm W100 H22 Section vRepeat, %w_Lang015%:
-Gui, Add, Edit, ys-3 x+5 W90 R1 vRept
+Gui, Add, Text, Section -Wrap y+320 xm W95 R1 Right vRepeat, %w_Lang015%:
+Gui, Add, Edit, ys-3 x+10 W90 R1 vRept
 Gui, Add, UpDown, vTimesM 0x80 Range0-999999999, 1
 Gui, Add, Button, -Wrap ys-4 x+0 W25 H23 hwndApplyT vApplyT gApplyT
 	ILButton(ApplyT, ResDllPath ":" 1)
 Gui, Add, Text, W2 H25 ys-3 x+5 0x11 vSeparator1
-Gui, Add, Text, -Wrap x+5 ys W100 H22 vDelayT, %w_Lang016%
-Gui, Add, Edit, ys-3 x+5 W90 R1 vDelay
+Gui, Add, Text, -Wrap x+5 ys W95 R1 Right vDelayT, %w_Lang016%:
+Gui, Add, Edit, ys-3 x+10 W90 R1 vDelay
 Gui, Add, UpDown, vDelayG 0x80 Range0-999999999, %DelayG%
 Gui, Add, Button, -Wrap ys-4 x+0 W25 H23 hwndApplyI vApplyI gApplyI
 	ILButton(ApplyI, ResDllPath ":" 1)
@@ -613,9 +613,9 @@ Gui, Add, Button, -Wrap ys-4 x+0 W25 H23 hwndApplyL vApplyL gApplyL
 Gui, Add, Button, -Wrap ys-4 x+5 W25 H23 hwndInsertKey vInsertKey gInsertKey
 	ILButton(InsertKey, ResDllPath ":" 91)
 Gui, Add, Text, W2 H25 ys-3 x+5 0x11 vSeparator3
-Gui, Add, Text, -Wrap ys x+5 W90 vContextTip gSetWin cBlue, #IfWin: %IfDirectContext%
+Gui, Add, Text, -Wrap ys x+5 W90 R1 vContextTip gSetWin cBlue, #IfWin: %IfDirectContext%
 Gui, Add, Text, W2 H25 ys-3 x+5 0x11 vSeparator4
-Gui, Add, Text, -Wrap ys x+5 W100 vCoordTip gOptions, CoordMode: %CoordMouse%
+Gui, Add, Text, -Wrap ys x+5 W100 R1 vCoordTip gOptions, CoordMode: %CoordMouse%
 GuiControl,, WinKey, % (InStr(o_AutoKey[1], "#")) ? 1 : 0
 Gui, Submit
 If (MainWinSize = "W H")
@@ -8835,7 +8835,7 @@ If !(InsertToText)
 	Gui, 7:Add, UpDown, vTimesX 0x80 Range1-999999999, 1
 	Gui, 7:Add, Text,, %c_Lang017%:
 	Gui, 7:Add, Edit, W120 vDelayC
-	Gui, 7:Add, UpDown, vDelayX 0x80 Range0-999999999, %DelayM%
+	Gui, 7:Add, UpDown, vDelayX 0x80 Range0-999999999, %DelayG%
 	Gui, 7:Add, Radio, -Wrap Checked W125 vMsc R1, %c_Lang018%
 	Gui, 7:Add, Radio, -Wrap W125 vSec R1, %c_Lang019%
 }
@@ -10932,10 +10932,19 @@ If (Type = cType39)
 	Step := RegExReplace(Step, "\w+", "%$0%", "", 1)
 EscCom("Step|TimesX|DelayX|Target|Window", 1)
 StringReplace, Step, Step, `%A_Space`%, ⱥ, All
-If ((InStr(FileCmdList, Type "|")) && (Action <> "[Pause]"))
+If (InStr(FileCmdList, Type "|"))
 {
 	If RegExMatch(Step, "sU)%\s([\w%]+)\((.*)\)")
 		EscCom("Step", 1)
+	_Step := ""
+	Loop, Parse, Step, `,, %A_Space%
+	{
+		LoopField := A_LoopField
+	,	CheckVars("LoopField", This_Point)
+		StringReplace, LoopField, LoopField, `,, ¢, All
+		_Step .= LoopField ", "
+	}
+	Step := LTrim(_Step, ", ")
 }
 CheckVars("Step|TimesX|DelayX|Target|Window", This_Point)
 StringReplace, Step, Step, ```,, ¢, All
@@ -10945,8 +10954,8 @@ StringReplace, Step, Step, ``t, `t, All
 Loop, Parse, Step, `,, %A_Space%
 {
 	LoopField := A_LoopField
-	CheckVars("LoopField", This_Point)
-	If ((InStr(Type, "String") = 1) || (Type = SplitPath))
+,	CheckVars("LoopField", This_Point)
+	If ((InStr(Type, "String") = 1) || (Type = "SplitPath"))
 	{
 		If RegExMatch(LoopField, "i)^A_Loop\w+$", lMatch)
 		{
@@ -12347,7 +12356,7 @@ Loop, %TabCount%
 Gui, chMacro:ListView, InputList%A_List%
 
 GuiControl, 1:, Repeat, %w_Lang015%:
-GuiControl, 1:, DelayT, %w_Lang016%
+GuiControl, 1:, DelayT, %w_Lang016%:
 GuiControl, 1:-Redraw, cRbMain
 RbMain.ModifyBand(RbMain.IDToIndex(4), "Text", w_Lang005)
 , RbMain.ModifyBand(RbMain.IDToIndex(11), "Text", w_Lang011 " (" t_Lang004 ")")
