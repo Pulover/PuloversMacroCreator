@@ -3924,7 +3924,8 @@ GuiControl, 19:, ePosY, %eY%
 return
 
 GetPixel:
-CoordMode, Mouse, %CoordPixel%
+Gui, 19:Submit, NoHide
+iPixel := 1
 Hotkey, RButton, NoKey, On
 Hotkey, Esc, EscNoKey, On
 WinMinimize, ahk_id %CmdWin%
@@ -3936,23 +3937,23 @@ ToolTip
 Sleep, 200
 Hotkey, RButton, NoKey, Off
 Hotkey, Esc, EscNoKey, Off
+iPixel := 0
 WinActivate, ahk_id %CmdWin%
 If (StopIt)
 	Exit
 If (A_GuiControl = "TransCS")
-{
 	GuiControl, 19:, TransC, %color%
-}
 Else
 {
-	GuiControl,, ImgFile, %color%
-	GuiControl, +Background%color%, ColorPrev
+	GuiControl, 19:, ImgFile, %color%
+	GuiControl, 19:+Background%color%, ColorPrev
 }
 StopIt := 1
 return
 
 WatchCursor:
-CoordMode, Mouse, % (Draw) ? CoordPixel : CoordMouse
+CoordMode, Mouse, % (Draw || iPixel) ? CoordPixel : CoordMouse
+CoordMode, Pixel, % (Draw || iPixel) ? CoordPixel : CoordMouse
 MouseGetPos, xPos, yPos, id, control
 WinGetTitle, title, ahk_id %id%
 WinGetClass, class, ahk_id %id%
@@ -5548,7 +5549,7 @@ Gui, 19:Add, Radio, -Wrap Checked ys+20 xs+10 W100 vImageS gImageS R1 Right, %c_
 Gui, 19:Add, Radio, -Wrap yp xs+140 W95 vPixelS gPixelS R1 Right, %c_Lang064%
 Gui, 19:Add, Button, -Wrap yp-1 xs+115 W25 H23 hwndScreenshot vScreenshot gScreenshot
 	ILButton(Screenshot, ResDllPath ":" 60)
-Gui, 19:Add, Button, -Wrap yp xs+240 W25 H23 hwndColorPick vColorPick gSearchImg Disabled
+Gui, 19:Add, Button, -Wrap yp xs+240 W25 H23 hwndColorPick vColorPick gGetPixel Disabled
 	ILButton(ColorPick, ResDllPath ":" 100)
 Gui, 19:Add, Edit, y+5 xs+10 vImgFile W225 R1 -Multi
 Gui, 19:Add, Button, -Wrap yp-1 x+0 W30 H23 vSearchImg gSearchImg, ...
@@ -5772,12 +5773,7 @@ Gui, 19:Submit, NoHide
 If (ImageS = 1)
 	GoSub, GetImage
 If (PixelS = 1)
-{
-	If (A_GuiControl = "SearchImg")
 		GoSub, EditColor
-	Else
-		GoSub, GetPixel
-}
 return
 
 GetImage:
