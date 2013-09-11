@@ -358,7 +358,7 @@
 							%VarName% := %Action%(Params*)
 						Catch e
 						{
-							MsgBox, 20, %d_Lang007%, % d_Lang064 " Macro" mMacroOn ", " d_Lang065 " " mListRow
+							MsgBox, 20, %d_Lang007%, % "Macro" mMacroOn ", " d_Lang065 " " mListRow
 								.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" e.Extra "`n`n" d_Lang035
 							IfMsgBox, No
 							{
@@ -757,7 +757,7 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC)
 							%VarName% := %Action%(Params*)
 						Catch e
 						{
-							MsgBox, 20, %d_Lang007%, % d_Lang064 " Macro" mMacroOn ", " d_Lang065 " " mListRow
+							MsgBox, 20, %d_Lang007%, % "Macro" mMacroOn ", " d_Lang065 " " mListRow
 								.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" e.Extra "`n`n" d_Lang035
 							IfMsgBox, No
 							{

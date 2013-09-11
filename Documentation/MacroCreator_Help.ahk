@@ -282,7 +282,7 @@
 
 	Parameters:
 		Start X/Y / End X/Y - Defines the Search area of the screen/window.
-		Color Picker - Opens the Color Pick Tool. Point the mouse to the desired location and Right-Click to get the pixel code (in RGB format).  
+		Color Picker - Opens the Color Picker Tool. Point the mouse to the desired location and Right-Click to get the pixel code (in RGB format).  
 		Search - Opens the Windows Color Pick dialog to select a pixel color.  
 		If found - Selects an action to execute when an image/pixel is found.  
 			To execute a different action Select 'Continue' (or 'Break' to exit the command's loop) and use the 'If Image/Pixel Found' option in the If Statements window.
@@ -293,7 +293,7 @@
 		Coord - Sets coordinate mode for the search to be relative to either the active window or the screen.
 		Variations - Specify for n a number between 0 and 255 (inclusive) to indicate the allowed number of shades of variation in either direction for the intensity of the red, green, and blue components of each pixel's color.
 		Fast - Uses a faster searching method that in most cases dramatically reduces the amount of CPU time used by the search.
-		RGB - Causes ColorID to be interpreted as an RGB value instead of BGR. This is the default format for the Color Picker and Search, unchecking this option will cause their values to be reversed during search.
+		RGB - Causes ColorID to be interpreted as an RGB value instead of BGR. This option affects the Color Picker Tool but the retrieved color will be reversed in preview and Color Pick Dialog.
 		Break loop if found - When setting more then 1 loop in the *Repeat* field, this option will break the loop if the image is found right after executing the selected action.
 
 	Remarks:

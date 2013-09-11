@@ -3925,7 +3925,8 @@ return
 
 GetPixel:
 Gui, 19:Submit, NoHide
-iPixel := 1
+If (A_GuiControl = "ColorPick")
+	iPixel := 1
 Hotkey, RButton, NoKey, On
 Hotkey, Esc, EscNoKey, On
 WinMinimize, ahk_id %CmdWin%
@@ -3960,7 +3961,7 @@ WinGetClass, class, ahk_id %id%
 WinGetText, text, ahk_id %id%
 text := SubStr(text, 1, 50)
 WinGet, pid, PID, ahk_id %id%
-PixelGetColor, color, %xPos%, %yPos%, RGB
+PixelGetColor, color, %xPos%, %yPos%, % (iPixel) ? (RGB ? "RGB" : "") : "RGB"
 WinGet, pname, ProcessName, ahk_id %id%
 ControlGetPos, cX, cY, cW, cH, %control%, ahk_id %id%
 xcpos := Controlpos(xPos, cx), ycpos := Controlpos(yPos, cy)
@@ -6233,9 +6234,9 @@ If (s_Caller = "Edit")
 			If (IfList%A_Index% = Action)
 				GuiControl, 21:Choose, Statement, %A_Index%
 		}
-		If InStr(Statement, "String")
+		If InStr(Action, "String")
 		{
-			RegExMatch(Details, "^(.*?)(,)(.*)", aMatch)
+			RegExMatch(Details, "^(\w*?)(,)(.*)", aMatch)
 			GuiControl, 21:, TestVar, % Trim(aMatch1)
 			GuiControl, 21:, TestVar2, % Trim(aMatch3)
 		}
