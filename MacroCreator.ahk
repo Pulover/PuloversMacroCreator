@@ -849,7 +849,7 @@ If (A_GuiEvent = "N")
 	If (rbEventCode = -831) ; RBN_HEIGHTCHANGE
 	{
 		RowsCount := RbMain.GetRowCount()
-		MacroOffset := (RowsCount = 2) ? 90 : ((RowsCount = 1) ? 65 : 120)
+		MacroOffset := (RowsCount = 2) ? 88 : ((RowsCount = 1) ? 63 : 118)
 		GuiControl, 1:Move, cRbMacro, % (RowsCount = 2) ? "y55" : (RowsCount = 1 ? "y30" : "y85")
 		GoSub, GuiSize
 	}
@@ -878,7 +878,7 @@ return
 BuildMacroWin:
 Gui, chMacro:+LastFound
 Gui, chMacro:+hwndhMacroCh -Caption +Parent1
-Gui, chMacro:Add, Tab2, Section Buttons 0x0008 -Wrap AltSubmit H22 hwndTabSel vA_List gTabSel, Macro1
+Gui, chMacro:Add, Tab2, Section Buttons 0x0008 -Wrap AltSubmit y+0 H22 hwndTabSel vA_List gTabSel, Macro1
 Gui, chMacro:Add, ListView, AltSubmit Checked x+0 y+0 hwndListID1 vInputList1 gInputList NoSort LV0x10000, %w_Lang030%|%w_Lang031%|%w_Lang032%|%w_Lang033%|%w_Lang034%|%w_Lang035%|%w_Lang036%|%w_Lang037%|%w_Lang038%|%w_Lang039%
 Gui, chMacro:Default
 LV_SetImageList(hIL_Icons)
@@ -935,8 +935,8 @@ return
 BuildPrevWin:
 Gui, chPrev:+LastFound
 Gui, chPrev:+hwndhPrevCh -Resize -Caption +Parent1
-Gui, chPrev:Add, Custom, ClassToolbarWindow32 hwndhTbPrev 0x0800 0x0100 0x0040 0x0008
-Gui, chPrev:Add, Custom, ClassScintilla x0 y34 hwndhSciPrev vLVPrev
+Gui, chPrev:Add, Custom, ClassToolbarWindow32 y+0 hwndhTbPrev 0x0800 0x0100 0x0040 0x0008
+Gui, chPrev:Add, Custom, ClassScintilla x0 y25 hwndhSciPrev vLVPrev
 Gui, chPrev:Show, W450 H600 Hide
 TB_Define(TbPrev, hTbPrev, hIL_Icons, FixedBar.Preview, FixedBar.PrevOpt)
 ,	TbPrev.ModifyButton(9, "Hide")
@@ -960,7 +960,7 @@ TB_Define(TbPrev, hTbPrev, hIL_Icons, FixedBar.Preview, FixedBar.PrevOpt)
 
 Gui, 2:+Resize +MinSize215x20 +hwndPrevID
 Gui, 2:Add, Custom, ClassToolbarWindow32 hwndhTbPrevF 0x0800 0x0100 0x0040 0x0008
-Gui, 2:Add, Custom, ClassScintilla x0 y34 hwndhSciPrevF vLVPrev
+Gui, 2:Add, Custom, ClassScintilla x0 y34 hwndhSciPrevF vLVPrevF
 Gui, 2:Add, StatusBar
 TB_Define(TbPrevF, hTbPrevF, hIL_Icons, FixedBar.Preview, FixedBar.PrevOpt)
 ,	tbPrevF.ModifyButtonInfo(1, "Text", t_Lang125),	tbPrevF.ModifyButtonInfo(1, "Image", 93)
@@ -11789,12 +11789,12 @@ If A_EventInfo = 1
 	return
 
 GuiGetSize(GuiWidth, GuiHeight, 2)
-GuiControl, Move, LVPrev, % "W" GuiWidth "H" GuiHeight-57
+GuiControl, 2:Move, LVPrevF, % "W" GuiWidth "H" GuiHeight-57
 return
 
 chPrevGuiSize:
 GuiGetSize(GuiWidth, GuiHeight, "chPrev")
-GuiControl, chPrev:Move, LVPrev, % "W" GuiWidth "H" GuiHeight-40
+GuiControl, chPrev:Move, LVPrev, % "W" GuiWidth "H" GuiHeight-27
 return
 
 28GuiSize:
@@ -11804,7 +11804,7 @@ return
 
 chMacroGuiSize:
 GuiGetSize(GuiWidth, GuiHeight, "chMacro")
-GuiControl, chMacro:Move, InputList%A_List%, % "W" GuiWidth-15 "H" GuiHeight-35
+GuiControl, chMacro:Move, InputList%A_List%, % "W" GuiWidth-15 "H" GuiHeight-25
 GuiControl, chMacro:Move, A_List, % "W" GuiWidth-15
 return
 
