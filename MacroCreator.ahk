@@ -5068,14 +5068,14 @@ If (A_ThisLabel <> "GotoApply")
 Gui, chMacro:Default
 RowSelection := LV_GetCount("Selected"), Type := (Goto = 1) ? "Goto" : "Gosub"
 If (s_Caller = "Edit")
-	LV_Modify(RowNumber, "Col3", GoLabel, TimesX, DelayX, Type)
+	LV_Modify(RowNumber, "Col2", "[" Type "]", GoLabel, TimesX, DelayX, Type)
 Else If RowSelection = 0
 {
-	LV_Add("Check", ListCount%A_List%+1, "[Goto]", GoLabel, 1, 0, Type)
+	LV_Add("Check", ListCount%A_List%+1, "[" Type "]", GoLabel, 1, 0, Type)
 	LV_Modify(ListCount%A_List%+1, "Vis")
 }
 Else
-	LV_Insert(LV_GetNext(), "Check", "", "[Goto]", GoLabel, 1, 0, Type)
+	LV_Insert(LV_GetNext(), "Check", "", "[" Type "]", GoLabel, 1, 0, Type)
 GoSub, b_Start
 GoSub, RowCheck
 If (A_ThisLabel = "GotoApply")
@@ -9295,12 +9295,9 @@ EditApply:
 EditOK:
 Gui, 15:+OwnDialogs
 Gui, 15:Submit, NoHide
-DelayX := InStr(DelayC, "%") ? DelayC : DelayX
+TimesX := InStr(EdRept, "%") ? EdRept : TimesX, DelayX := InStr(DelayC, "%") ? DelayC : DelayX
 If Sec = 1
 	DelayX *= 1000
-TimesX := InStr(EdRept, "%") ? EdRept : TimesX
-If TimesX = 0
-	TimesX := 1
 Window := Title
 If CSend = 1
 {
@@ -9421,7 +9418,9 @@ MultiApply:
 MultiOK:
 Gui, 6:+OwnDialogs
 Gui, 6:Submit, NoHide
-DelayX := InStr(DelayC, "%") ? DelayC : DelayX, TimesX := InStr(EdRept, "%") ? EdRept : TimesX
+TimesX := InStr(EdRept, "%") ? EdRept : TimesX, DelayX := InStr(DelayC, "%") ? DelayC : DelayX
+If Sec = 1
+	DelayX *= 1000
 If MEditRept = 1
 {
 	TimesTemp := TimesM, TimesM := TimesX
