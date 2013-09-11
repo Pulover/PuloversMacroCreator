@@ -8496,16 +8496,19 @@ Gui, chMacro:ListView, InputList%TabCount%
 HistoryMacro%TabCount% := new LV_Rows(), HistoryMacro%TabCount%.Add()
 Gui, chMacro:ListView, InputList%A_List%
 GuiAddLV(TabCount)
+Menu, CopyTo, Uncheck, % CopyMenuLabels[A_List]
 GuiControl, chMacro:Choose, A_List, %TabCount%
 Gui, chMacro:Submit, NoHide
 GoSub, chMacroGuiSize
 CopyMenuLabels[TabCount] := TabName
 Menu, CopyTo, Add, % CopyMenuLabels[TabCount], CopyList
+Menu, CopyTo, Check, % CopyMenuLabels[A_List]
 GuiControl, 28:+Range1-%TabCount%, OSHK
 
 TabSel:
 GoSub, SaveData
 Gui, 1:Submit, NoHide
+Menu, CopyTo, Uncheck, % CopyMenuLabels[A_List]
 Gui, chMacro:Default
 Gui, chMacro:Submit, NoHide
 Gui, chMacro:ListView, InputList%A_List%
@@ -8514,6 +8517,7 @@ GoSub, LoadData
 GoSub, RowCheck
 GuiControl, 28:, OSHK, %A_List%
 GoSub, PrevRefresh
+Menu, CopyTo, Check, % CopyMenuLabels[A_List]
 return
 
 TabClose:
@@ -8544,6 +8548,7 @@ ConfirmDel:
 Gui, 1:-Disabled
 Gui, 35:Submit
 Gui, 35:Destroy
+Menu, CopyTo, Uncheck, % CopyMenuLabels[A_List]
 Gui, chMacro:Default
 Gui, chMacro:Submit, NoHide
 HistoryMacro%c_List% := ""
@@ -8582,6 +8587,7 @@ GoSub, chMacroGuiSize
 GoSub, LoadData
 GoSub, RowCheck
 GoSub, PrevRefresh
+Menu, CopyTo, Check, % CopyMenuLabels[A_List]
 return
 
 SaveData:
@@ -8662,6 +8668,7 @@ Loop, %TabCount%
 }
 CopyMenuLabels[1] := "Macro1"
 Menu, CopyTo, Add, % CopyMenuLabels[1], CopyList
+Menu, CopyTo, Check, % CopyMenuLabels[1]
 return
 
 SelectAll:
@@ -11947,6 +11954,7 @@ Menu, SelectMenu, Add, %s_Lang010%, :SelCmdMenu
 
 CopyMenuLabels[1] := "Macro1"
 Menu, CopyTo, Add, % CopyMenuLabels[1], CopyList
+Menu, CopyTo, Check, % CopyMenuLabels[1]
 
 Menu, EditMenu, Add, %m_Lang004%`t%_s%Enter, EditButton
 Menu, EditMenu, Add, %e_Lang001%`t%_s%Ctrl+D, Duplicate
@@ -12212,8 +12220,10 @@ Loop, %TabCount%
 Loop, %TabCount%
 {
 	CopyMenuLabels[A_Index] := TabGetText(TabSel, A_Index)
+	Try Menu, CopyTo, Uncheck, % CopyMenuLabels[A_Index]
 	Menu, CopyTo, Add, % CopyMenuLabels[A_Index], CopyList
 }
+Menu, CopyTo, Check, % CopyMenuLabels[A_List]
 return
 
 ; Playback / Recording options menu:
