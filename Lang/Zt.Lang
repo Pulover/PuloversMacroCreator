@@ -600,6 +600,7 @@
 	t_Lang148 =	主窗口的關閉按鈕行動
 	t_Lang149 =	關閉應用程序
 	t_Lang150 =	最小化到托盤
+	t_Lang151 =	關閉宏時顯示確認
 		
 ; Messages & Dialogs		
 	d_Lang001 =	打開

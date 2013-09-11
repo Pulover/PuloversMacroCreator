@@ -600,6 +600,7 @@
 	t_Lang148 =	Action głównej przycisk Zamknij okna
 	t_Lang149 =	Close aplikacji
 	t_Lang150 =	Zminimalizować do zasobnika
+	t_Lang151 =	Wyświetlanie potwierdzenia przy zamykaniu makro
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Otwarte

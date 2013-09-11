@@ -600,6 +600,7 @@
 	t_Lang148 =	Åtgärd av huvudfönstret stängknapp
 	t_Lang149 =	Stäng program
 	t_Lang150 =	Minimera till aktivitetsfältet
+	t_Lang151 =	Visa bekräftelse när du stänger ett makro
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Öppet

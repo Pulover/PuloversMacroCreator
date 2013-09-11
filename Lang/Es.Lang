@@ -600,6 +600,7 @@
 	t_Lang148 =	Acción de botón de cierre de la ventana principal
 	t_Lang149 =	Cerrar la aplicación
 	t_Lang150 =	Minimizar a la bandeja
+	t_Lang151 =	Pantalla de confirmación al cerrar una macro
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Abierto

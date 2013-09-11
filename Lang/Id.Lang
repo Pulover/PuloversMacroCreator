@@ -600,6 +600,7 @@
 	t_Lang148 =	Aksi tombol close jendela utama ini
 	t_Lang149 =	Tutup aplikasi
 	t_Lang150 =	Minimalkan ke tray
+	t_Lang151 =	Tampilan konfirmasi ketika menutup makro
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Buka

@@ -600,6 +600,7 @@
 	t_Lang148 =	主窗口的关闭按钮行动
 	t_Lang149 =	关闭应用程序
 	t_Lang150 =	最小化到托盘
+	t_Lang151 =	关闭宏时显示确认
 		
 ; Messages & Dialogs		
 	d_Lang001 =	打开

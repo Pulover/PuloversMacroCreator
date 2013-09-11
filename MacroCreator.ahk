@@ -156,7 +156,7 @@ IniRead, HideMainWin, %IniFilePath%, Options, HideMainWin, 1
 IniRead, DontShowPb, %IniFilePath%, Options, DontShowPb, 0
 IniRead, DontShowRec, %IniFilePath%, Options, DontShowRec, 0
 IniRead, DontShowAdm, %IniFilePath%, Options, DontShowAdm, 0
-IniRead, DontConfirmDel, %IniFilePath%, Options, DontConfirmDel, 0
+IniRead, ConfirmDelete, %IniFilePath%, Options, ConfirmDelete, 1
 IniRead, ShowTips, %IniFilePath%, Options, ShowTips, 1
 IniRead, NextTip, %IniFilePath%, Options, NextTip, 1
 IniRead, IfDirectContext, %IniFilePath%, Options, IfDirectContext, None
@@ -2431,10 +2431,11 @@ Gui, 4:Add, Edit, vScreenDir W350 R1 -Multi, %ScreenDir%
 Gui, 4:Add, Button, -Wrap yp-1 x+0 W30 H23 vSearchScreen gSearchDir, ...
 Gui, 4:Tab, 5
 ; General
-Gui, 4:Add, GroupBox, Section ym xm+170 W400 H120, %t_Lang018%:
+Gui, 4:Add, GroupBox, Section ym xm+170 W400 H140, %t_Lang018%:
 Gui, 4:Add, Checkbox, -Wrap Checked%MultInst% ys+20 xs+10 vMultInst W380 R1, %t_Lang089%
 Gui, 4:Add, Checkbox, -Wrap Checked%TbNoTheme% vTbNoTheme W380 R1, %t_Lang142%
 Gui, 4:Add, Checkbox, -Wrap Checked%EvalDefault% vEvalDefault W380 R1, %t_Lang059%
+Gui, 4:Add, Checkbox, -Wrap Checked%ConfirmDelete% vConfirmDelete W380 R1, %t_Lang151%
 Gui, 4:Add, Text, -Wrap W380 R1, %t_Lang148%:
 Gui, 4:Add, Radio, -Wrap W180 vCloseApp R1, %t_Lang149%
 Gui, 4:Add, Radio, -Wrap yp x+5 W180 vMinToTray R1, %t_Lang150%
@@ -2447,8 +2448,8 @@ Gui, 4:Add, Text, yp x+20 W85, %t_Lang082% "*"
 Gui, 4:Add, Text, yp x+10 W40 vIfLVColor gEditColor c%IfLVColor%, ██████
 Gui, 4:Add, Checkbox, -Wrap Checked%ShowActIdent% y+15 xs+10 vShowActIdent W380 R1, %t_Lang083%
 Gui, 4:Add, Text, W380, %t_Lang084%
-Gui, 4:Add, GroupBox, Section y+15 xs W400 H140, %t_Lang062%:
-Gui, 4:Add, Edit, ys+20 xs+10 W380 r6 vEditMod, %VirtualKeys%
+Gui, 4:Add, GroupBox, Section y+15 xs W400 H120, %t_Lang062%:
+Gui, 4:Add, Edit, ys+20 xs+10 W380 r5 vEditMod, %VirtualKeys%
 Gui, 4:Add, Button, -Wrap y+0 W75 H23 gConfigRestore, %t_Lang063%
 Gui, 4:Add, Button, -Wrap yp x+10 W75 H23 gKeyHistory, %c_Lang124%
 Gui, 4:Tab, 6
@@ -8482,7 +8483,7 @@ TabPlus:
 Gui, 1:Submit, NoHide
 Gui, chMacro:Default
 Gui, chMacro:Submit, NoHide
-IColOrder := LVOrder_Get(10, ListID%A_List%), AllTabs := "", TabName := ""
+ColOrder := LVOrder_Get(10, ListID%A_List%), AllTabs := "", TabName := ""
 Loop, %TabCount%
 	AllTabs .= TabGetText(TabSel, A_Index) ","
 While, InStr(AllTabs, TabName ",")
@@ -8519,7 +8520,7 @@ GoSub, ResetHotkeys
 Gui, 1:Submit, NoHide
 If (TabCount = 1)
 	return
-If ((!DontConfirmDel) && (ListCount%A_List% > 0))
+If ((ConfirmDelete) && (ListCount%A_List% > 0))
 {
 
 	Gui, 1:+Disabled
@@ -8527,10 +8528,11 @@ If ((!DontConfirmDel) && (ListCount%A_List% > 0))
 	Gui, 35:Color, FFFFFF
 	Gui, 35:Add, Pic, y+20 Icon78 W48 H48, %ResDllPath%
 	Gui, 35:Add, Text, Section yp x+10 W250, %d_Lang020%`n
-	Gui, 35:Add, Checkbox, -Wrap xs W250 R1 vDontConfirmDel cGray, %d_Lang053%
+	Gui, 35:Add, Checkbox, Checked -Wrap xs W250 R1 vConfirmDelete cGray, %t_Lang151%
 	Gui, 35:Add, Button, -Wrap Section Default xs y+10 W90 H23 gConfirmDel, %c_Lang020%
 	Gui, 35:Add, Button, -Wrap ys W90 H23 gTipClose2, %c_Lang021%
-	Gui, 35:Show,, %d_Lang019%
+	GuiControl, 35:Focus, %c_Lang020%
+	Gui, 35:Show,, %AppName%
 	WinWaitClose, ahk_id %CloseTab%
 	return
 }
@@ -11179,7 +11181,7 @@ AbortKey := "F8"
 ,	DontShowPb := 0
 ,	DontShowRec := 0
 ,	DontShowAdm := 0
-,	DontConfirmDel := 0
+,	ConfirmDelete := 1
 ,	IfDirectContext := "None"
 ,	IfDirectWindow := ""
 ,	KeepHkOn := 0
@@ -11437,7 +11439,7 @@ IniWrite, %HideMainWin%, %IniFilePath%, Options, HideMainWin
 IniWrite, %DontShowPb%, %IniFilePath%, Options, DontShowPb
 IniWrite, %DontShowRec%, %IniFilePath%, Options, DontShowRec
 IniWrite, %DontShowAdm%, %IniFilePath%, Options, DontShowAdm
-IniWrite, %DontConfirmDel%, %IniFilePath%, Options, DontConfirmDel
+IniWrite, %ConfirmDelete%, %IniFilePath%, Options, ConfirmDelete
 IniWrite, %ShowTips%, %IniFilePath%, Options, ShowTips
 IniWrite, %NextTip%, %IniFilePath%, Options, NextTip
 IniWrite, %IfDirectContext%, %IniFilePath%, Options, IfDirectContext

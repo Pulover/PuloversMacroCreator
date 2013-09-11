@@ -600,6 +600,7 @@
 	t_Lang148 =	메인 윈도우의 닫기 버튼의 동작
 	t_Lang149 =	응용 프로그램 닫기
 	t_Lang150 =	트레이로 최소화
+	t_Lang151 =	매크로를 닫을 때 확인 표시
 		
 ; Messages & Dialogs		
 	d_Lang001 =	열기

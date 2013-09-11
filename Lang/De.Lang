@@ -600,6 +600,7 @@
 	t_Lang148 =	Aktion vom Hauptfenster die Taste zum Schließen
 	t_Lang149 =	Anwendung schließen
 	t_Lang150 =	Minimieren in den Tray
+	t_Lang151 =	Anzeige Bestätigung beim Schließen eines Makros
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Öffnen

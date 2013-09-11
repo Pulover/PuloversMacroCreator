@@ -600,6 +600,7 @@
 	t_Lang148 =	Action of main window's close button
 	t_Lang149 =	Close application
 	t_Lang150 =	Minimize to tray
+	t_Lang151 =	Display confirmation when closing a macro
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Open

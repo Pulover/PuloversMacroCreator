@@ -600,6 +600,7 @@
 	t_Lang148 =	Action du bouton de fermeture de la fenêtre principale
 	t_Lang149 =	Fermer l'application
 	t_Lang150 =	Réduire en icône
+	t_Lang151 =	Afficher confirmation lors de la fermeture d'une macro
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Ouvert

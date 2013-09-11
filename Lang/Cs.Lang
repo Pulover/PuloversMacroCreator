@@ -600,6 +600,7 @@
 	t_Lang148 =	Akce z hlavního okna tlačítko Zavřít
 	t_Lang149 =	Zavřít aplikace
 	t_Lang150 =	Minimalizovat do tray
+	t_Lang151 =	Zobrazit potvrzení při zavírání makra
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Otevřít

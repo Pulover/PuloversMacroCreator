@@ -600,6 +600,7 @@
 	t_Lang148 =	Azione del pulsante di chiusura della finestra principale
 	t_Lang149 =	Chiudi applicazione
 	t_Lang150 =	Riduci a icona nella tray
+	t_Lang151 =	Display di conferma quando si chiude una macro
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Aperto
