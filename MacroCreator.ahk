@@ -643,6 +643,7 @@ OnMessage(WM_COMMAND, "TB_Messages")
 OnMessage(WM_MOUSEMOVE, "ShowTooltip")
 OnMessage(WM_RBUTTONDOWN, "ShowContextHelp")
 OnMessage(WM_LBUTTONDOWN, "DragToolbar")
+OnMessage(WM_MBUTTONDOWN, "CloseTab")
 OnMessage(WM_ACTIVATE, "WinCheck")
 OnMessage(WM_COPYDATA, "Receive_Params")
 OnMessage(WM_HELP, "CmdHelp")
@@ -1643,6 +1644,7 @@ GuiControl, 1:, Capt, 0
 Gui, 1:Show, % ((WinExist("ahk_id" PMCWinID)) ? "" : "Hide"), %AppName% v%CurrentVersion% %CurrentFileName%
 SplitPath, CurrentFileName,, wDir
 SetWorkingDir %wDir%
+Gui, chMacro:Submit, NoHide
 GoSub, chMacroGuiSize
 GoSub, RowCheck
 GoSub, LoadData
@@ -8495,6 +8497,7 @@ HistoryMacro%TabCount% := new LV_Rows(), HistoryMacro%TabCount%.Add()
 Gui, chMacro:ListView, InputList%A_List%
 GuiAddLV(TabCount)
 GuiControl, chMacro:Choose, A_List, %TabCount%
+Gui, chMacro:Submit, NoHide
 GoSub, chMacroGuiSize
 CopyMenuLabels[TabCount] := TabName
 Menu, CopyTo, Add, % CopyMenuLabels[TabCount], CopyList
@@ -8967,7 +8970,7 @@ return
 
 EditMacrosOK:
 Gui, 32:Submit, NoHide
-Project := [], Labels := "", ActiveList := A_List
+Project := [], Proj_Hist := [], Labels := "", ActiveList := A_List
 Loop, %TabCount%
 {
 	Gui, 32:Default
@@ -8980,22 +8983,25 @@ Loop, %TabCount%
 ,	o_AutoKey[A_Index] := AutoKey
 ,	o_ManKey[A_Index] := ManKey
 ,	o_TimesG[A_Index] := TimesX
-	PMCSet := "[PMC Code]|" o_AutoKey[A_Index]
-	. "|" o_ManKey[A_Index] "|" o_TimesG[A_Index]
-	. "|" CoordMouse "|" OnFinishCode "`n"
-,	LV_Data := PMCSet . PMC.LVGet("InputList" IndexN).Text . "`n"
 ,	Project.Insert(PMC.LVGet("InputList" IndexN))
+,	Proj_Hist.Insert(HistoryMacro%IndexN%)
+	If (IndexN = ActiveList)
+		NewActive := A_Index
 }
+ActiveList := NewActive
 Loop, %TabCount%
 	PMC.LVLoad("InputList" A_Index, Project[A_Index])
+,	HistoryMacro%A_Index% := Proj_Hist[A_Index]
 GuiControl, chMacro:, A_List, |%Labels%
 GuiControl, chMacro:Choose, A_List, %ActiveList%
+Gui, chMacro:Submit, NoHide
+GoSub, chMacroGuiSize
 GoSub, LoadData
 GoSub, RowCheck
 GoSub, UpdateCopyTo
 Gui, 1:-Disabled
 Gui, 32:Destroy
-Project := ""
+Project := "", Proj_Hist := ""
 return
 
 EditMacrosCancel:

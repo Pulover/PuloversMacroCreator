@@ -85,42 +85,71 @@ RebarLock(rbPtr, Lock=True)
 		rbPtr.ModifyBand(A_Index, "Style", "NoGripper", Lock)
 }
 
+CloseTab()
+{
+	global
+	
+	MouseGetPos,,,, cHwnd, 2
+	If (cHwnd = TabSel)
+	{
+		If (ClickedTab := TabClick.Get())
+			GoSub, TabClose
+		ClickedTab := ""
+	}
+}
+
 DragToolbar()
 {
 	global
 	
+	CoordMode, Mouse, Window
 	If (A_Gui = 28)
 		PostMessage, 0xA1, 2,,, ahk_id %PMCOSC%
 	Else If (A_Gui = "chMacro")
 	{
-		MouseGetPos,,,, Control, 2
-		If (Control = TabSel)
+		MouseGetPos, HitX, HitY,, cHwnd, 2
+		If (cHwnd = TabSel)
 		{
-			NewOrder := TabClick.Drag()
+			GuiControl, chMacro:Choose, A_List, % TabClick.Get()
+			GoSub, TabSel
+			NewOrder := TabClick.Drag(,, "Red")
 			If IsObject(NewOrder)
 			{
-				GoSub, SaveData
-				Project := [], ActiveList := A_List
-				For each, Index in NewOrder
+				Project := [], Proj_Opts := [], ActiveList := A_List
+				For each, Index in NewOrder.Order
+					Proj_Opts.Insert({Auto: o_AutoKey[Index], Man: o_ManKey[Index]
+									, Times: o_TimesG[Index], Hist: HistoryMacro%Index%})
+				For each, Index in NewOrder.Order
 				{
-					PMCSet := "[PMC Code]|" o_AutoKey[Index]
-					. "|" o_ManKey[Index] "|" o_TimesG[Index]
-					. "|" CoordMouse "|" OnFinishCode "`n"
-				,	LV_Data := PMCSet . PMC.LVGet("InputList" Index).Text . "`n"
+					o_AutoKey[A_Index] := Proj_Opts[A_Index].Auto
+				,	o_ManKey[A_Index] := Proj_Opts[A_Index].Man
+				,	o_TimesG[A_Index] := Proj_Opts[A_Index].Times
 				,	Project.Insert(PMC.LVGet("InputList" Index))
+					If (Index = ActiveList)
+						NewActive := A_Index
 				}
+				ActiveList := NewActive
 				Loop, %TabCount%
 					PMC.LVLoad("InputList" A_Index, Project[A_Index])
+				,	HistoryMacro%A_Index% := Proj_Opts[A_Index].Hist
+				GuiControl, chMacro:, A_List, |
 				GuiControl, chMacro:, A_List, % NewOrder.Tabs
 				GuiControl, chMacro:Choose, A_List, %ActiveList%
+				Gui, chMacro:Submit, NoHide
+				GoSub, chMacroGuiSize
 				GoSub, LoadData
 				GoSub, RowCheck
 				GoSub, UpdateCopyTo
-				Project := ""
+				Project := "", Proj_Opts := ""
+				SetTimer, HitFix, -10
 			}
 		}
 	}
 }
+
+HitFix:
+ControlClick,, ahk_id %cHwnd%,,,, x%HitX% y%HitY% NA
+return
 
 ShowContextHelp()
 {

@@ -43,6 +43,9 @@ Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jör
 * Added tips in command windows.
 * Added more options to *Message* window.
 * Added *Edit Macros* window.
+* Added Drag-Macros feature.
+* Added Close and Edit menu when clicking over a Macro tab.
+* Added Close with Mouse Middle click over a Macro tab.
 * Added individual *Pause* hotkey.
 * Added *Multiple Column* search in *Find/Replace* window.
 * Added *Set key delay* option in *Text* command window.
