@@ -156,6 +156,7 @@ IniRead, HideMainWin, %IniFilePath%, Options, HideMainWin, 1
 IniRead, DontShowPb, %IniFilePath%, Options, DontShowPb, 0
 IniRead, DontShowRec, %IniFilePath%, Options, DontShowRec, 0
 IniRead, DontShowAdm, %IniFilePath%, Options, DontShowAdm, 0
+IniRead, DontConfirmDel, %IniFilePath%, Options, DontConfirmDel, 0
 IniRead, ShowTips, %IniFilePath%, Options, ShowTips, 1
 IniRead, NextTip, %IniFilePath%, Options, NextTip, 1
 IniRead, IfDirectContext, %IniFilePath%, Options, IfDirectContext, None
@@ -730,6 +731,7 @@ Else
 {
 	If (!DontShowAdm && !A_IsAdmin)
 	{
+		Gui, 1:+Disabled
 		Gui, 35:-SysMenu +HwndTipScrID +owner1
 		Gui, 35:Color, FFFFFF
 		Gui, 35:Add, Pic, y+20 Icon78 W48 H48, %ResDllPath%
@@ -738,6 +740,7 @@ Else
 		Gui, 35:Add, Button, -Wrap Default y+10 W90 H23 gTipClose2, %c_Lang020%
 		Gui, 35:Show,, %AppName%
 		WinWaitClose, ahk_id %TipScrID%
+		Gui, 1:-Disabled
 	}
 	If (ShowBarOnStart)
 		GoSub, ShowControls
@@ -1103,8 +1106,8 @@ If !DontShowRec
 	Gui, 26:Color, FFFFFF
 	Gui, 26:Add, Pic, y+20 Icon29 W48 H48, %ResDllPath%
 	Gui, 26:Add, Text, yp x+10, %d_Lang052%`n`n- %RecKey% %d_Lang026%`n- %RecNewKey% %d_Lang030%`n`n%d_Lang043%`n
-	Gui, 26:Add, Checkbox, -Wrap W300 vDontShowRec R1, %d_Lang053%
-	Gui, 26:Add, Button, -Wrap Default y+10 W90 H23 gTipClose, %c_Lang020%
+	Gui, 26:Add, Checkbox, Section -Wrap W300 vDontShowRec R1 cGray, %d_Lang053%
+	Gui, 26:Add, Button, -Wrap Default xs y+10 W90 H23 gTipClose, %c_Lang020%
 	Gui, 26:Show,, %AppName%
 }
 If (ShowStep = 1)
@@ -7731,6 +7734,7 @@ return
 35GuiEscape:
 35GuiClose:
 TipClose2:
+Gui, 1:-Disabled
 Gui, 35:Submit
 Gui, 35:Destroy
 return
@@ -8061,8 +8065,8 @@ If !DontShowPb
 	Gui, 26:Color, FFFFFF
 	Gui, 26:Add, Pic, y+20 Icon29 W48 H48, %ResDllPath%
 	Gui, 26:Add, Text, yp x+10, %d_Lang051%`n`n%d_Lang043%`n
-	Gui, 26:Add, Checkbox, -Wrap W300 vDontShowPb R1, %d_Lang053%
-	Gui, 26:Add, Button, -Wrap Default y+10 W75 H23 gTipClose, %c_Lang020%
+	Gui, 26:Add, Checkbox, Section -Wrap W300 vDontShowPb R1 cGray, %d_Lang053%
+	Gui, 26:Add, Button, -Wrap Default xs y+10 W75 H23 gTipClose, %c_Lang020%
 	Gui, 26:Show,, %AppName%
 }
 If (HideMainWin)
@@ -8438,18 +8442,10 @@ If CopyRows.Paste(, 1)
 return
 
 Remove:
-Gui, 1:+OwnDialogs
-Gui, 1:Submit, NoHide
 Gui, chMacro:Default
 RowSelection := LV_GetCount("Selected")
 If (RowSelection = 0)
-{
-	MsgBox, 1, %d_Lang019%, %d_Lang020%
-	IfMsgBox, OK
-		LV_Delete()
-	IfMsgBox, Cancel
-		return
-}
+	LV_Delete()
 Else
 	LV_Rows.Delete()
 LV_Modify(LV_GetNext(0, "Focused"), "Select")
@@ -8517,13 +8513,33 @@ GoSub, PrevRefresh
 return
 
 TabClose:
+Gui, 1:+OwnDialogs
 GoSub, SaveData
 GoSub, ResetHotkeys
 Gui, 1:Submit, NoHide
-Gui, chMacro:Default
-Gui, chMacro:Submit, NoHide
 If (TabCount = 1)
 	return
+If ((!DontConfirmDel) && (ListCount%A_List% > 0))
+{
+
+	Gui, 1:+Disabled
+	Gui, 35:-SysMenu hwndCloseTab +owner1
+	Gui, 35:Color, FFFFFF
+	Gui, 35:Add, Pic, y+20 Icon78 W48 H48, %ResDllPath%
+	Gui, 35:Add, Text, Section yp x+10 W250, %d_Lang020%`n
+	Gui, 35:Add, Checkbox, -Wrap xs W250 R1 vDontConfirmDel cGray, %d_Lang053%
+	Gui, 35:Add, Button, -Wrap Section Default xs y+10 W90 H23 gConfirmDel, %c_Lang020%
+	Gui, 35:Add, Button, -Wrap ys W90 H23 gTipClose2, %c_Lang021%
+	Gui, 35:Show,, %d_Lang019%
+	WinWaitClose, ahk_id %CloseTab%
+	return
+}
+ConfirmDel:
+Gui, 1:-Disabled
+Gui, 35:Submit
+Gui, 35:Destroy
+Gui, chMacro:Default
+Gui, chMacro:Submit, NoHide
 HistoryMacro%A_List% := ""
 Menu, CopyTo, Delete, % CopyMenuLabels[A_List]
 CopyMenuLabels.Remove(A_List)
@@ -11073,7 +11089,7 @@ If !CloseAction
 	Gui, 35:Add, Radio, -Wrap Section Checked y+20 W140 vCloseApp R1, %t_Lang149%
 	Gui, 35:Add, Radio, -Wrap yp x+10 W140 vMinToTray R1, %t_Lang150%
 	Gui, 35:Add, Text, -Wrap xs R1 cGray, %d_Lang080%
-	Gui, 35:Add, Button, -Wrap Section Default xs y+10 W90 H23 gTipClose2, %c_Lang020%`n
+	Gui, 35:Add, Button, -Wrap Section Default xs y+10 W90 H23 gTipClose2, %c_Lang020%
 	Gui, 35:Show,, %AppName%
 	WinWaitClose, ahk_id %CloseSel%
 	Gui, 35:Submit, NoHide
@@ -11163,6 +11179,7 @@ AbortKey := "F8"
 ,	DontShowPb := 0
 ,	DontShowRec := 0
 ,	DontShowAdm := 0
+,	DontConfirmDel := 0
 ,	IfDirectContext := "None"
 ,	IfDirectWindow := ""
 ,	KeepHkOn := 0
@@ -11420,6 +11437,7 @@ IniWrite, %HideMainWin%, %IniFilePath%, Options, HideMainWin
 IniWrite, %DontShowPb%, %IniFilePath%, Options, DontShowPb
 IniWrite, %DontShowRec%, %IniFilePath%, Options, DontShowRec
 IniWrite, %DontShowAdm%, %IniFilePath%, Options, DontShowAdm
+IniWrite, %DontConfirmDel%, %IniFilePath%, Options, DontConfirmDel
 IniWrite, %ShowTips%, %IniFilePath%, Options, ShowTips
 IniWrite, %NextTip%, %IniFilePath%, Options, NextTip
 IniWrite, %IfDirectContext%, %IniFilePath%, Options, IfDirectContext
