@@ -8292,9 +8292,12 @@ If (cHwnd = ListID%A_List%)
 	Menu, EditMenu, Show, %A_GuiX%, %A_GuiY%
 Else If (cHwnd = TabSel)
 {
+	If (ClickedTab := TabClick.Get())
+		Menu, TabMenu, Add, %c_Lang022%, TabClose
 	Menu, TabMenu, Add, %w_Lang019%, EditMacros
 	Menu, TabMenu, Show
 	Menu, TabMenu, DeleteAll
+	ClickedTab := ""
 }
 Else
 {
@@ -8517,7 +8520,8 @@ GoSub, ResetHotkeys
 Gui, 1:Submit, NoHide
 If (TabCount = 1)
 	return
-If ((ConfirmDelete) && (ListCount%A_List% > 0))
+c_List := ClickedTab ? ClickedTab : A_List
+If ((ConfirmDelete) && (ListCount%c_List% > 0))
 {
 
 	Gui, 1:+Disabled
@@ -8539,11 +8543,11 @@ Gui, 35:Submit
 Gui, 35:Destroy
 Gui, chMacro:Default
 Gui, chMacro:Submit, NoHide
-HistoryMacro%A_List% := ""
-Menu, CopyTo, Delete, % CopyMenuLabels[A_List]
-CopyMenuLabels.Remove(A_List)
-s_Tab := A_List
-Loop, % TabCount - A_List
+HistoryMacro%c_List% := ""
+Menu, CopyTo, Delete, % CopyMenuLabels[c_List]
+CopyMenuLabels.Remove(c_List)
+s_Tab := c_List
+Loop, % TabCount - c_List
 {
 	n_Tab := s_Tab+1
 ,	LV_Data := PMC.LVGet("InputList" n_Tab)
@@ -8556,15 +8560,15 @@ Loop, % TabCount - A_List
 }
 Gui, chMacro:ListView, InputList%s_Tab%
 LV_Delete()
-If (A_List <> TabCount)
+If (c_List <> TabCount)
 {
-	o_AutoKey.Remove(A_List)
-	o_ManKey.Remove(A_List)
-	o_TimesG.Remove(A_List)
+	o_AutoKey.Remove(c_List)
+	o_ManKey.Remove(c_List)
+	o_TimesG.Remove(c_List)
 }
 s_List := ""
 Loop, %TabCount%
-	s_List .= (A_Index <> A_List) ? "|" (Title := TabGetText(TabSel, A_Index)) : ""
+	s_List .= (A_Index <> c_List) ? "|" (Title := TabGetText(TabSel, A_Index)) : ""
 TabCount--
 Gui, chMacro:ListView, InputList%A_List%
 GuiControl, chMacro:, A_List, %s_List%
@@ -12621,6 +12625,7 @@ return
 #Include <Class_Toolbar>
 #Include <Class_Rebar>
 #Include <Class_LV_Rows>
+#Include <Class_TabClick>
 #Include <Class_ObjIni>
 #Include <Gdip>
 #Include <Eval>

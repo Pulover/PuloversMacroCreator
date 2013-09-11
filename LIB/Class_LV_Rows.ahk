@@ -303,7 +303,7 @@ Class LV_Rows
         MouseGetPos,,, LV_Win, LV_LView, 2
         WinGetPos, Win_X, Win_Y, Win_W, Win_H, ahk_id %LV_Win%
         ControlGetPos, LV_lx, LV_ly, LV_lw, LV_lh, , ahk_id %LV_LView%
-        VarSetCapacity(LV_XYstruct, 4 * A_PtrSize, 0)
+        VarSetCapacity(LV_XYstruct, 16, 0)
 
         While, GetKeyState(DragButton, "P")
         {
@@ -314,12 +314,12 @@ Class LV_Rows
             {
                 If (LV_my < 0)
                 {
-                    SendMessage, LVM_SCROLL, 0, -LV_currColHeight, , ahk_id %LV_LView%
+                    SendMessage, LVM_SCROLL, 0, -LV_currColHeight,, ahk_id %LV_LView%
                     Sleep, %ScrollDelay%
                 }
                 If (LV_my > LV_lh)
                 {
-                    SendMessage, LVM_SCROLL, 0, LV_currColHeight, , ahk_id %LV_LView%
+                    SendMessage, LVM_SCROLL, 0, LV_currColHeight,, ahk_id %LV_LView%
                     Sleep, %ScrollDelay%
                 }
             }
@@ -331,11 +331,11 @@ Class LV_Rows
                 continue
             }
 
-            SendMessage, LVM_GETITEMCOUNT, 0, 0, , ahk_id %LV_LView%
+            SendMessage, LVM_GETITEMCOUNT, 0, 0,, ahk_id %LV_LView%
             LV_TotalNumOfRows := ErrorLevel
-            SendMessage, LVM_GETCOUNTPERPAGE, 0, 0, , ahk_id %LV_LView%
+            SendMessage, LVM_GETCOUNTPERPAGE, 0, 0,, ahk_id %LV_LView%
             LV_NumOfRows := ErrorLevel
-            SendMessage, LVM_GETTOPINDEX, 0, 0, , ahk_id %LV_LView%
+            SendMessage, LVM_GETTOPINDEX, 0, 0,, ahk_id %LV_LView%
             LV_topIndex := ErrorLevel
         ,   Line_W := (LV_TotalNumOfRows > LV_NumOfRows) ? LV_lw - SM_CXVSCROLL : LV_lw
 
@@ -344,7 +344,7 @@ Class LV_Rows
                 LV_which := LV_topIndex + A_Index - 1
                 NumPut(LVIR_LABEL, LV_XYstruct, 0, "UInt")
             ,   NumPut(A_Index - 1, LV_XYstruct, 4, "UInt")
-                SendMessage, LVM_GETSUBITEMRECT, %LV_which%, &LV_XYstruct, , ahk_id %LV_LView%
+                SendMessage, LVM_GETSUBITEMRECT, LV_which, &LV_XYstruct,, ahk_id %LV_LView%
                 LV_RowY := NumGet(LV_XYstruct, 4, "UInt")
             ,   LV_RowY2 := NumGet(LV_XYstruct, 12, "UInt")
             ,   LV_currColHeight := LV_RowY2 - LV_RowY

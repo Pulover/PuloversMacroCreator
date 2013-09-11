@@ -87,10 +87,39 @@ RebarLock(rbPtr, Lock=True)
 
 DragToolbar()
 {
-	global PMCOSC
+	global
 	
 	If (A_Gui = 28)
 		PostMessage, 0xA1, 2,,, ahk_id %PMCOSC%
+	Else If (A_Gui = "chMacro")
+	{
+		MouseGetPos,,,, Control, 2
+		If (Control = TabSel)
+		{
+			NewOrder := TabClick.Drag()
+			If IsObject(NewOrder)
+			{
+				GoSub, SaveData
+				Project := [], ActiveList := A_List
+				For each, Index in NewOrder
+				{
+					PMCSet := "[PMC Code]|" o_AutoKey[Index]
+					. "|" o_ManKey[Index] "|" o_TimesG[Index]
+					. "|" CoordMouse "|" OnFinishCode "`n"
+				,	LV_Data := PMCSet . PMC.LVGet("InputList" Index).Text . "`n"
+				,	Project.Insert(PMC.LVGet("InputList" Index))
+				}
+				Loop, %TabCount%
+					PMC.LVLoad("InputList" A_Index, Project[A_Index])
+				GuiControl, chMacro:, A_List, % NewOrder.Tabs
+				GuiControl, chMacro:Choose, A_List, %ActiveList%
+				GoSub, LoadData
+				GoSub, RowCheck
+				GoSub, UpdateCopyTo
+				Project := ""
+			}
+		}
+	}
 }
 
 ShowContextHelp()
