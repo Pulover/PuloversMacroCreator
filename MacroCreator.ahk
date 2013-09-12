@@ -971,7 +971,8 @@ Else
 	GuiGetSize(pGuiWidth, pGuiHeight, 2), PrevWinSize := "W" pGuiWidth " H" pGuiHeight
 	RbMacro.ModifyBand(2, "Style", "Hidden", False)
 }
-Tooltip
+lastCalcMargin := ""
+GoSub, PrevRefresh
 return
 
 BuildPrevWin:
@@ -1052,16 +1053,17 @@ Else
 return
 
 PrevRefresh:
+If !(ShowPrev)
+	return
+PrevPtr := FloatPrev ? sciPrevF : sciPrev
 Preview := LV_Export(A_List)
-,	sciPrev.SetReadOnly(False), sciPrev.ClearAll(), sciPrev.SetText("", Preview)
-,	sciPrev.ScrollToEnd(), sciPrev.SetReadOnly(True)
-,	sciPrevF.SetReadOnly(False), sciPrevF.ClearAll(), sciPrevF.SetText("", Preview)
-,	sciPrevF.ScrollToEnd(), sciPrevF.SetReadOnly(True)
-,	calcMargin := StrLen(sciPrev.GetLineCount())*10
+,	PrevPtr.SetReadOnly(False), PrevPtr.ClearAll(), PrevPtr.SetText("", Preview)
+,	PrevPtr.ScrollToEnd(), PrevPtr.SetReadOnly(True)
+,	calcMargin := StrLen(PrevPtr.GetLineCount())*10
 If (calcMargin <> lastCalcMargin)
 {
 	lastCalcMargin := calcMargin
-	,	sciPrev.SetMarginWidthN(0, calcMargin)
+	,	PrevPtr.SetMarginWidthN(0, calcMargin)
 }
 Gui, 2:Default
 SB_SetText("Macro" A_List ": " o_AutoKey[A_List], 1)
