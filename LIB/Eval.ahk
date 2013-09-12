@@ -1,7 +1,7 @@
 ;###########################################################
 ; Original by Laszlo
 ; http://www.autohotkey.com/board/topic/15675-monster
-; Modified by Pulover for Pulover's Macro Creator to support functions
+; Modified by Pulover for Pulover's Macro Creator to support functions and arrays
 ;###########################################################
 Eval(x, l_Point) { ; non-recursive PRE/POST PROCESSING: I/O forms, numbers, ops, ";"
    Local FORM, FormF, FormI, i, W, y, y1, y2, y3, y4
@@ -44,7 +44,11 @@ Eval(x, l_Point) { ; non-recursive PRE/POST PROCESSING: I/O forms, numbers, ops,
 				Found2 := DerefVars("%" Found2 "%")
 		}
 		y := %Found1%[Found2]
-		x := RegExReplace(x, Found, y)
+		Try _isobj := IsObject(y)
+		If _isobj
+			return y
+		Else
+			x := RegExReplace(x, Found, y)
 	}
 	If (y <> "")
 	{
