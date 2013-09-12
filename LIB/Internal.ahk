@@ -153,12 +153,16 @@ return
 
 ShowContextHelp()
 {
+	local Pag,Title
+	
 	MouseGetPos,,,, Control
 	If InStr(Control, "Edit")
 		return
 	If A_Gui in 3,5,7,8,10,11,12,14,16,19,21,22,23,24
 	{
-		Menu, % Help%A_Gui%, Show
+		GuiControlGet, Pag,, TabControl
+		Title := ContHelp[A_Gui][Pag ? Pag : 1]
+		Menu, %Title%, Show
 		return
 	}
 	Else If A_Gui = 28

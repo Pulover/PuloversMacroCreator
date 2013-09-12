@@ -53,26 +53,26 @@ ListCount1 := 0
 ,	cType42 := "VBScript"
 ,	cType43 := "JScript"
 
-,	Action1 := "Click"
+Action1 := "Click"
 ,	Action2 := "Move"
 ,	Action3 := "Move & Click"
 ,	Action4 := "Click & Drag"
 ,	Action5 := "Mouse Wheel Up"
 ,	Action6 := "Mouse Wheel Down"
-,	Help5 := "MouseB"
-,	Help8 := "TextB"
-,	Help7 := "SpecialB"
-,	Help14 := "ExportG"
-,	Help3 := "PauseB"
-,	Help11 := "WindowB"
-,	Help16 := "IfDirB"
-,	Help19 := "ImageB"
-,	Help10 := "RunB"
-,	Help12 := "ComLoopB"
-,	Help21 := "IfStB"
-,	Help22 := "SendMsgB"
-,	Help23 := "ControlB"
-,	Help24 := "IEComB"
+,	ContHelp := { 3: ["PauseB", "MsgboxB", "KeyWaitB"]
+			,	5: ["MouseB"]
+			,	7: ["SpecialB"]
+			,	8: ["TextB"]
+			,	10: ["RunB"]
+			,	11: ["WindowB"]
+			,	12: ["ComLoopB", "ComGotoB", "AddLabelB"]
+			,	14: ["ExportG"]
+			,	16: ["IfDirB"]
+			,	19: ["ImageB"]
+			,	21: ["IfStB", "AsVarB", "AsFuncB"]
+			,	22: ["SendMsgB"]
+			,	23: ["ControlB"]
+			,	24: ["IEComB", "IEComB", "IEComB"]}
 ,	ContHTitle := {	2: ["p6-Preview.html"]
 			,	3: ["Commands/Pause.html", "Commands/Message_Box.html", "Commands/KeyWait.html"]
 			,	4: ["p7-Settings.html", "p7-Settings.html#misc.", "p7-Settings.html#user-global-variables"]
@@ -92,7 +92,7 @@ ListCount1 := 0
 			,	30: ["Commands/COM_Interface.html"]
 			,	34: ["Commands/Find_a_Command.html"] }
 
-,	RecOptChecks := ["ClearNewList", "", "Strokes", "CaptKDn", "RecKeybdCtrl"
+RecOptChecks := ["ClearNewList", "", "Strokes", "CaptKDn", "RecKeybdCtrl"
 					, "", "Mouse", "MScroll", "Moves", "RecMouseCtrl"
 					, "", "TimedI", "WClass", "WTitle"]
 ,	PlayOptChecks := ["ShowStep", "MouseReturn", "ShowBarOnStart", "AutoHideBar", "RandomSleeps"]

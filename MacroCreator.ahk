@@ -436,11 +436,15 @@ GoSub, CreateMenuBar
 Menu, MouseB, Add, Click, HelpB
 Menu, MouseB, Add, ControlClick, HelpB
 Menu, MouseB, Add, MouseClickDrag, HelpB
+Menu, MouseB, Add
+Menu, MouseB, Add, Built-in Variables, HelpB
 Menu, MouseB, Icon, Click, %ResDllPath%, 24
 Menu, TextB, Add, Send / SendRaw, HelpB
 Menu, TextB, Add, ControlSend, HelpB
 Menu, TextB, Add, ControlSetText, HelpB
 Menu, TextB, Add, Clipboard, HelpB
+Menu, TextB, Add
+Menu, TextB, Add, Built-in Variables, HelpB
 Menu, TextB, Icon, Send / SendRaw, %ResDllPath%, 24
 Menu, ControlB, Add, Control, HelpB
 Menu, ControlB, Add, ControlFocus, HelpB
@@ -450,13 +454,23 @@ Menu, ControlB, Add, ControlGetPos, HelpB
 Menu, ControlB, Add, ControlGetText, HelpB
 Menu, ControlB, Add, ControlMove, HelpB
 Menu, ControlB, Add, ControlSetText, HelpB
+Menu, ControlB, Add
+Menu, ControlB, Add, Built-in Variables, HelpB
 Menu, ControlB, Icon, Control, %ResDllPath%, 24
 Menu, SpecialB, Add, List of Keys, SpecialB
 Menu, SpecialB, Icon, List of Keys, %ResDllPath%, 24
 Menu, PauseB, Add, Sleep, HelpB
-Menu, PauseB, Add, MsgBox, HelpB
-Menu, PauseB, Add, KeyWait, HelpB
+Menu, PauseB, Add
+Menu, PauseB, Add, Built-in Variables, HelpB
 Menu, PauseB, Icon, Sleep, %ResDllPath%, 24
+Menu, MsgboxB, Add, MsgBox, HelpB
+Menu, MsgboxB, Add
+Menu, MsgboxB, Add, Built-in Variables, HelpB
+Menu, MsgboxB, Icon, MsgBox, %ResDllPath%, 24
+Menu, KeyWaitB, Add, KeyWait, HelpB
+Menu, KeyWaitB, Add
+Menu, KeyWaitB, Add, Built-in Variables, HelpB
+Menu, KeyWaitB, Icon, KeyWait, %ResDllPath%, 24
 Menu, WindowB, Add, WinActivate, HelpB
 Menu, WindowB, Add, WinActivateBottom, HelpB
 Menu, WindowB, Add, WinClose, HelpB
@@ -477,9 +491,13 @@ Menu, WindowB, Add, WinShow, HelpB
 Menu, WindowB, Add, WinWait, HelpB
 Menu, WindowB, Add, WinWaitActive / WinWaitNotActive, HelpB
 Menu, WindowB, Add, WinWaitClose, HelpB
+Menu, WindowB, Add
+Menu, WindowB, Add, Built-in Variables, HelpB
 Menu, WindowB, Icon, WinActivate, %ResDllPath%, 24
 Menu, ImageB, Add, ImageSearch, HelpB
 Menu, ImageB, Add, PixelSearch, HelpB
+Menu, ImageB, Add
+Menu, ImageB, Add, Built-in Variables, HelpB
 Menu, ImageB, Icon, ImageSearch, %ResDllPath%, 24
 Loop, Parse, FileCmdList, |
 {
@@ -533,6 +551,8 @@ Menu, RunB, Add, Reg && Ini, :m_Registry
 Menu, RunB, Add, Sound, :m_Sound
 Menu, RunB, Add, Variables, :m_Vars
 Menu, RunB, Add, Misc., :m_Misc
+Menu, RunB, Add
+Menu, RunB, Add, Built-in Variables, HelpB
 Menu, RunB, Icon, Run / RunWait, %ResDllPath%, 24
 Menu, ComLoopB, Add, Loop, LoopB
 Menu, ComLoopB, Add, Loop`, FilePattern, LoopB
@@ -541,26 +561,46 @@ Menu, ComLoopB, Add, Loop`, Read File, LoopB
 Menu, ComLoopB, Add, Loop`, Registry, LoopB
 Menu, ComLoopB, Add, Break, HelpB
 Menu, ComLoopB, Add, Continue, HelpB
-Menu, ComLoopB, Add, Goto, HelpB
-Menu, ComLoopB, Add, Gosub, HelpB
-Menu, ComLoopB, Add, Labels, HelpB
+Menu, ComLoopB, Add
+Menu, ComLoopB, Add, Built-in Variables, HelpB
 Menu, ComLoopB, Icon, Loop, %ResDllPath%, 24
+Menu, ComGotoB, Add, Goto, HelpB
+Menu, ComGotoB, Add, Gosub, HelpB
+Menu, ComGotoB, Add
+Menu, ComGotoB, Add, Built-in Variables, HelpB
+Menu, ComGotoB, Icon, Goto, %ResDllPath%, 24
+Menu, AddLabelB, Add, Labels, HelpB
+Menu, AddLabelB, Add
+Menu, AddLabelB, Add, Built-in Variables, HelpB
+Menu, AddLabelB, Icon, Labels, %ResDllPath%, 24
 Menu, IfStB, Add, IfWinActive / IfWinNotActive, HelpB
 Menu, IfStB, Add, IfWinExist / IfWinNotExist, HelpB
 Menu, IfStB, Add, IfExist / IfNotExist, HelpB
 Menu, IfStB, Add, IfInString / IfNotInString, HelpB
 Menu, IfStB, Add, IfMsgBox, HelpB
 Menu, IfStB, Add, If Statements, HelpB
-Menu, IfStB, Add, Variables, HelpB
-Menu, IfStB, Add, Functions, HelpB
+Menu, IfStB, Add
+Menu, IfStB, Add, Built-in Variables, HelpB
 Menu, IfStB, Icon, IfWinActive / IfWinNotActive, %ResDllPath%, 24
+Menu, AsVarB, Add, Variables, HelpB
+Menu, AsVarB, Add
+Menu, AsVarB, Add, Built-in Variables, HelpB
+Menu, AsVarB, Icon, Variables, %ResDllPath%, 24
+Menu, AsFuncB, Add, Functions, HelpB
+Menu, AsFuncB, Add
+Menu, AsFuncB, Add, Built-in Variables, HelpB
+Menu, AsFuncB, Icon, Functions, %ResDllPath%, 24
 Menu, IEComB, Add, COM, IEComB
 Menu, IEComB, Add, Basic Webpage COM Tutorial, IEComB
 Menu, IEComB, Add, IWebBrowser2 Interface (MSDN), IEComB
+Menu, IEComB, Add
+Menu, IEComB, Add, Built-in Variables, HelpB
 Menu, IEComB, Icon, COM, %ResDllPath%, 24
 Menu, SendMsgB, Add, PostMessage / SendMessage, HelpB
 Menu, SendMsgB, Add, Message List, SendMsgB
 Menu, SendMsgB, Add, Microsoft MSDN, SendMsgB
+Menu, SendMsgB, Add
+Menu, SendMsgB, Add, Built-in Variables, HelpB
 Menu, SendMsgB, Icon, PostMessage / SendMessage, %ResDllPath%, 24
 Menu, IfDirB, Add, #IfWinActive / #IfWinExist, HelpB
 Menu, IfDirB, Icon, #IfWinActive / #IfWinExist, %ResDllPath%, 24
@@ -2680,6 +2720,8 @@ Else If ThisMenuItem = Variables
 	Run, http://l.autohotkey.net/docs/Variables.htm
 Else If ThisMenuItem = Functions
 	Run, http://l.autohotkey.net/docs/Functions.htm
+Else If ThisMenuItem = Built-in Variables
+	Run, http://l.autohotkey.net/docs/Variables.htm#BuiltIn
 Else
 	Run, http://l.autohotkey.net/docs/commands/%ThisMenuItem%.htm
 return
