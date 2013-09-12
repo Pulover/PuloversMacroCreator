@@ -654,9 +654,9 @@ Gui, Add, Button, -Wrap ys-4 x+0 W25 H23 hwndApplyL vApplyL gApplyL
 Gui, Add, Button, -Wrap ys-4 x+5 W25 H23 hwndInsertKey vInsertKey gInsertKey
 	ILButton(InsertKey, ResDllPath ":" 91)
 Gui, Add, Text, W2 H25 ys-3 x+5 0x11 vSeparator3
-Gui, Add, Text, -Wrap ys x+5 W90 R1 vContextTip gSetWin cBlue, #IfWin: %IfDirectContext%
+Gui, Add, Text, -Wrap ys x+5 W85 R1 vContextTip gSetWin cBlue, #IfWin: %IfDirectContext%
 Gui, Add, Text, W2 H25 ys-3 x+5 0x11 vSeparator4
-Gui, Add, Text, -Wrap ys x+5 W100 R1 vCoordTip gOptions, CoordMode: %CoordMouse%
+Gui, Add, Text, -Wrap ys x+5 W105 R1 vCoordTip gOptions, CoordMode: %CoordMouse%
 GuiControl,, WinKey, % (InStr(o_AutoKey[1], "#")) ? 1 : 0
 Gui, Submit
 If (MainWinSize = "W H")
@@ -1044,6 +1044,13 @@ PrevCopy:
 Clipboard := sciPrev.GetText(sciPrev.getLength()+1)
 return
 
+PrevRefreshButton:
+If (AutoRefresh)
+	GoSub, AutoRefresh
+Else
+	GoSub, PrevRefresh
+return
+
 PrevRefresh:
 Preview := LV_Export(A_List)
 sciPrev.SetReadOnly(False), sciPrev.ClearAll(), sciPrev.SetText("", Preview)
@@ -1066,8 +1073,8 @@ GoSub, PrevRefresh
 return
 
 AutoRefresh:
-TB_Edit(TbPrev, "PrevRefresh", AutoRefresh := !AutoRefresh)
-,	TB_Edit(TbPrevF, "PrevRefresh", AutoRefresh)
+TB_Edit(TbPrev, "PrevRefreshButton", AutoRefresh := !AutoRefresh)
+,	TB_Edit(TbPrevF, "PrevRefreshButton", AutoRefresh)
 GoSub, PrevRefresh
 return
 
@@ -12497,11 +12504,11 @@ TB_Edit(tbEdit, "EditButton", "", "", w_Lang092)
 , TB_Edit(tbEdit, "Import", "", "", w_Lang075), TB_Edit(tbEdit, "SaveCurrentList", "", "", w_Lang076)
 ; Preview
 TB_Edit(tbPrev, "PrevDock", "", "", t_Lang124)
-, TB_Edit(tbPrev, "PrevCopy", "", "", c_Lang023), TB_Edit(tbPrev, "PrevRefresh", "", "", t_Lang014)
+, TB_Edit(tbPrev, "PrevCopy", "", "", c_Lang023), TB_Edit(tbPrev, "PrevRefreshButton", "", "", t_Lang014)
 , TB_Edit(tbPrev, "AutoRefresh", "", "", t_Lang015), TB_Edit(tbPrev, "TabIndent", "", "", t_Lang011), TB_Edit(tbPrev, "TextWrap", "", "", t_Lang052), TB_Edit(tbPrev, "OnTop", "", "", t_Lang016)
 , TB_Edit(tbPrev, "EditScript", "", "", t_Lang138)
 , TB_Edit(tbPrevF, "PrevDock", "", "", t_Lang125)
-, TB_Edit(tbPrevF, "PrevCopy", "", "", c_Lang023), TB_Edit(tbPrevF, "PrevRefresh", "", "", t_Lang014)
+, TB_Edit(tbPrevF, "PrevCopy", "", "", c_Lang023), TB_Edit(tbPrevF, "PrevRefreshButton", "", "", t_Lang014)
 , TB_Edit(tbPrevF, "AutoRefresh", "", "", t_Lang015), TB_Edit(tbPrevF, "TextWrap", "", "", t_Lang052), TB_Edit(tbPrevF, "TabIndent", "", "", t_Lang011), TB_Edit(tbPrevF, "OnTop", "", "", t_Lang016)
 , TB_Edit(tbPrevF, "EditScript", "", "", t_Lang138)
 ; OSC

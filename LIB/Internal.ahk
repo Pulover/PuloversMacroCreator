@@ -820,7 +820,7 @@ ShowMenu(Menu, mX, mY)
 		GoSub, ShowRecMenu
 	Else If (Menu = "ShowPlayMenu")
 		GoSub, ShowPlayMenu
-	Else If (Menu = "PrevRefresh")
+	Else If (Menu = "PrevRefreshButton")
 	{
 		Menu, TbMenu, Add, %t_Lang015%, AutoRefresh
 		If (AutoRefresh)
