@@ -8351,7 +8351,11 @@ If (cHwnd = ListID%A_List%)
 Else If (cHwnd = TabSel)
 {
 	If (ClickedTab := TabGet())
+	{
+		GuiControl, chMacro:Choose, A_List, %ClickedTab%
+		GoSub, TabSel
 		Menu, TabMenu, Add, %c_Lang022%, TabClose
+	}
 	Menu, TabMenu, Add, %w_Lang019%, EditMacros
 	Menu, TabMenu, Show
 	Menu, TabMenu, DeleteAll
