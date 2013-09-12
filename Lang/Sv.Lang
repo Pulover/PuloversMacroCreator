@@ -1034,6 +1034,7 @@
 	Tip_LocationURL =	Hämtar URL för den aktuella sidan.
 	Tip_InnerText =	Ställer eller får texten i objektet.
 	Tip_InnerHTML =	Ställer eller hämtar HTML av objektet.
+	Tip_OuterHTML =	Anger eller hämtar objektet och dess innehåll i HTML.
 	Tip_Href =	Ställer eller hämtar ett destinationsadress eller en fästpunkt.
 	Tip_Src =	Ställer eller hämtar en URL som ska laddas av objektet.
 	Tip_SelectedIndex =	Ställer eller hämtar index för valda alternativet i en utvald objekt.

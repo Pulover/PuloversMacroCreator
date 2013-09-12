@@ -1034,6 +1034,7 @@
 	Tip_LocationURL =	Được URL của trang hiện tại.
 	Tip_InnerText =	Thiết lập hoặc nhận được văn bản của đối tượng.
 	Tip_InnerHTML =	Thiết lập hoặc lấy mã HTML của đối tượng.
+	Tip_OuterHTML =	Thiết lập hoặc lấy các đối tượng và nội dung của nó trong HTML.
 	Tip_Href =	Đặt hoặc nhận một URL đích hoặc một điểm neo.
 	Tip_Src =	Đặt hoặc nhận một URL được nạp bởi các đối tượng.
 	Tip_SelectedIndex =	Thiết lập hoặc lấy các chỉ số của các tùy chọn được chọn trong một đối tượng chọn.

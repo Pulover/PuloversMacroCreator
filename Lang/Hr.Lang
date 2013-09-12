@@ -1034,6 +1034,7 @@
 	Tip_LocationURL =	Dobiva URL trenutne stranice.
 	Tip_InnerText =	Postavlja ili dobiva tekst objekta.
 	Tip_InnerHTML =	Postavlja ili vraća HTML tog objekta.
+	Tip_OuterHTML =	Postavlja ili vraća predmet i njegov sadržaj u HTML-u.
 	Tip_Href =	Postavlja ili vraća odredišni URL ili točka sidrišta.
 	Tip_Src =	Postavlja ili vraća URL biti učitan od strane objekta.
 	Tip_SelectedIndex =	Postavlja ili vraća indeks odabrane opcije u određenom objektu.

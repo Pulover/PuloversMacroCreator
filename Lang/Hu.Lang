@@ -1034,6 +1034,7 @@
 	Tip_LocationURL =	Gets az URL-t az aktuális oldal.
 	Tip_InnerText =	Beállítja vagy megkapja a szöveget az objektum.
 	Tip_InnerHTML =	Beállítja vagy visszaadja a HTML az objektum.
+	Tip_OuterHTML =	Beállítja vagy beolvassa a tárgy és annak tartalmát a HTML.
 	Tip_Href =	Beállítja vagy lekéri a cél URL-t vagy egy horgony pontot.
 	Tip_Src =	Beállítja vagy letölti egy URL betöltését a tárgy.
 	Tip_SelectedIndex =	Beállítja vagy beolvassa az index a kiválasztott opció a select objektum.

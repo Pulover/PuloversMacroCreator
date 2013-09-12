@@ -1034,6 +1034,7 @@
 	Tip_LocationURL =	Mendapatkan URL dari halaman saat ini.
 	Tip_InnerText =	Mengatur atau mendapatkan teks objek.
 	Tip_InnerHTML =	Mengatur atau mengambil HTML objek.
+	Tip_OuterHTML =	Mengatur atau mengambil obyek dan konten dalam HTML.
 	Tip_Href =	Set atau mengambil URL tujuan atau titik anchor.
 	Tip_Src =	Set atau mengambil URL yang akan diambil oleh objek.
 	Tip_SelectedIndex =	Mengatur atau mengambil indeks opsi yang dipilih dalam sebuah objek tertentu.

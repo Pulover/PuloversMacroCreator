@@ -1034,6 +1034,7 @@
 	Tip_LocationURL =	Får nettadressen til den aktuelle siden.
 	Tip_InnerText =	Stiller eller får teksten i objektet.
 	Tip_InnerHTML =	Stiller eller henter HTML av objektet.
+	Tip_OuterHTML =	Stiller eller henter objektet og dens innhold i HTML.
 	Tip_Href =	Stiller eller henter en destinasjonsadresse eller et ankerpunkt.
 	Tip_Src =	Stiller eller henter en nettadresse som skal lastes av objektet.
 	Tip_SelectedIndex =	Stiller eller henter indeksen til den valgte alternativet i en utvalgt objekt.

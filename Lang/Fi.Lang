@@ -1034,6 +1034,7 @@
 	Tip_LocationURL =	Gets URL nykyisen sivun.
 	Tip_InnerText =	Asettaa tai saa tekstin objektin.
 	Tip_InnerHTML =	Asettaa tai noutaa HTML kohteen.
+	Tip_OuterHTML =	Asettaa tai noutaa esineen ja sen sisällön HTML.
 	Tip_Href =	Asettaa tai noutaa kohde-URL tai ankkuri pisteen.
 	Tip_Src =	Asettaa tai noutaa URL voidaan ladata objektin.
 	Tip_SelectedIndex =	Asettaa tai hakee indeksi valitun vaihtoehdon valitsemalla objektin.

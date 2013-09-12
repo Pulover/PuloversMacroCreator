@@ -596,14 +596,14 @@ Gui, Add, Hotkey, hwndhManKey vManKey gWaitKeys Limit190, % o_ManKey[1]
 Gui, Add, Hotkey, hwndhAbortKey vAbortKey, %AbortKey%
 Gui, Add, Hotkey, hwndhPauseKey vPauseKey, %PauseKey%
 
-Gui, Add, Text, Section -Wrap y+320 xm W95 R1 Right vRepeat, %w_Lang015%:
-Gui, Add, Edit, ys-3 x+10 W90 R1 vRept
+Gui, Add, Text, Section -Wrap y+320 xm W85 R1 Right vRepeat, %w_Lang015%:
+Gui, Add, Edit, ys-3 x+10 W75 R1 vRept
 Gui, Add, UpDown, vTimesM 0x80 Range0-999999999, 1
 Gui, Add, Button, -Wrap ys-4 x+0 W25 H23 hwndApplyT vApplyT gApplyT
 	ILButton(ApplyT, ResDllPath ":" 1)
 Gui, Add, Text, W2 H25 ys-3 x+5 0x11 vSeparator1
-Gui, Add, Text, -Wrap x+5 ys W95 R1 Right vDelayT, %w_Lang016%:
-Gui, Add, Edit, ys-3 x+10 W90 R1 vDelay
+Gui, Add, Text, -Wrap x+5 ys W85 R1 Right vDelayT, %w_Lang016%:
+Gui, Add, Edit, ys-3 x+10 W75 R1 vDelay
 Gui, Add, UpDown, vDelayG 0x80 Range0-999999999, %DelayG%
 Gui, Add, Button, -Wrap ys-4 x+0 W25 H23 hwndApplyI vApplyI gApplyI
 	ILButton(ApplyI, ResDllPath ":" 1)
@@ -818,6 +818,8 @@ TbSettings:
 TbEdit:
 TbText:
 TbOSC:
+TbPrev:
+tbPrevF:
 If (A_GuiEvent = "N")
 {
 	tbEventCode  := NumGet(A_EventInfo + (A_PtrSize * 2), 0, "Int")
@@ -935,11 +937,11 @@ return
 BuildPrevWin:
 Gui, chPrev:+LastFound
 Gui, chPrev:+hwndhPrevCh -Resize -Caption +Parent1
-Gui, chPrev:Add, Custom, ClassToolbarWindow32 y+0 hwndhTbPrev 0x0800 0x0100 0x0040 0x0008
+Gui, chPrev:Add, Custom, ClassToolbarWindow32 y+0 hwndhTbPrev gtbPrev 0x0800 0x0100 0x0040 0x0008
 Gui, chPrev:Add, Custom, ClassScintilla x0 y25 hwndhSciPrev vLVPrev
 Gui, chPrev:Show, W450 H600 Hide
 TB_Define(TbPrev, hTbPrev, hIL_Icons, FixedBar.Preview, FixedBar.PrevOpt)
-,	TbPrev.ModifyButton(9, "Hide")
+,	TbPrev.ModifyButton(8, "Hide")
 ,	sciPrev := new scintilla(hSciPrev)
 ,	sciPrev.SetMarginWidthN(0, 40)
 ,	sciPrev.SetWrapMode(TextWrap)
@@ -959,7 +961,7 @@ TB_Define(TbPrev, hTbPrev, hIL_Icons, FixedBar.Preview, FixedBar.PrevOpt)
 ,	sciPrev.SetReadOnly(True)
 
 Gui, 2:+Resize +MinSize215x20 +hwndPrevID
-Gui, 2:Add, Custom, ClassToolbarWindow32 hwndhTbPrevF 0x0800 0x0100 0x0040 0x0008
+Gui, 2:Add, Custom, ClassToolbarWindow32 hwndhTbPrevF gtbPrevF 0x0800 0x0100 0x0040 0x0008
 Gui, 2:Add, Custom, ClassScintilla x0 y34 hwndhSciPrevF vLVPrevF
 Gui, 2:Add, StatusBar
 TB_Define(TbPrevF, hTbPrevF, hIL_Icons, FixedBar.Preview, FixedBar.PrevOpt)
@@ -1017,10 +1019,15 @@ return
 
 TextWrap:
 TabIndent:
-AutoRefresh:
 TB_Edit(TbPrev, A_ThisLabel, %A_ThisLabel% := !%A_ThisLabel%)
 ,	TB_Edit(TbPrevF, A_ThisLabel, %A_ThisLabel%)
 ,	sciPrev.SetWrapMode(TextWrap), sciPrevF.SetWrapMode(TextWrap)
+GoSub, PrevRefresh
+return
+
+AutoRefresh:
+TB_Edit(TbPrev, "PrevRefresh", AutoRefresh := !AutoRefresh)
+,	TB_Edit(TbPrevF, "PrevRefresh", AutoRefresh)
 GoSub, PrevRefresh
 return
 
@@ -4839,7 +4846,7 @@ Gui, 12:Add, Text, y+5 xs+10 W210 vField2, %c_Lang141%
 Gui, 12:Add, Text, yp x+10 W210 vField3, %c_Lang142%
 Gui, 12:Add, Edit, y+5 xs+10 W210 R1 vDelim Disabled
 Gui, 12:Add, Edit, yp x+10 W210 R1 vOmit Disabled
-Gui, 12:Add, Text, y+5 xs+15 r1, %c_Lang074%
+Gui, 12:Add, Text, y+5 xs+15 r1 cGray, %c_Lang074%
 Gui, 12:Add, Text, y+5 r1 cGray, %c_Lang025%
 Gui, 12:Add, Groupbox, Section xs y+18 W450 H50, %c_Lang123%:
 Gui, 12:Add, Button, -Wrap ys+18 xs+85 W75 H23 gAddBreak, %c_Lang075%
@@ -7118,7 +7125,7 @@ Gui, 24:Add, Edit, yp+20 xs W430 R4 vValue
 Gui, 24:Add, Text, y+10 W55, %c_Lang005%:
 Gui, 24:Add, DDL, yp-2 xp+60 W340 vIEWindows AltSubmit, %IEWindows%
 Gui, 24:Add, Button, -Wrap yp-1 x+5 W25 H23 hwndRefreshIEW vRefreshIEW gRefreshIEW
-	ILButton(RefreshIEW, ResDllPath ":" 36)
+	ILButton(RefreshIEW, ResDllPath ":" 90)
 Gui, 24:Add, Button, -Wrap Section Default ym+270 xm W75 H23 gIEComOK, %c_Lang020%
 Gui, 24:Add, Button, -Wrap ys xs+170 W75 H23 vIEComApply gIEComApply Disabled, %c_Lang131%
 Gui, 24:Tab, 2

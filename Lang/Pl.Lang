@@ -1034,6 +1034,7 @@
 	Tip_LocationURL =	Pobiera adres URL bieżącej strony.
 	Tip_InnerText =	Ustawia lub pobiera tekst z obiektu.
 	Tip_InnerHTML =	Ustawia lub pobiera HTML obiektu.
+	Tip_OuterHTML =	Ustawia lub pobiera obiekt i jego zawartości w formacie HTML.
 	Tip_Href =	Ustawia lub pobiera docelowy adres URL lub punkt kontrolny.
 	Tip_Src =	Ustawia lub pobiera adres URL do wczytania przez obiekt.
 	Tip_SelectedIndex =	Ustawia lub pobiera indeks wybranej opcji w kameralnym obiekcie.

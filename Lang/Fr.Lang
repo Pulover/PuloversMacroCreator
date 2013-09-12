@@ -1034,6 +1034,7 @@
 	Tip_LocationURL =	Obtient l'URL de la page actuelle.
 	Tip_InnerText =	Définit ou obtient le texte de l'objet.
 	Tip_InnerHTML =	Définit ou récupère le code HTML de l'objet.
+	Tip_OuterHTML =	Définit ou récupère l'objet et son contenu en HTML.
 	Tip_Href =	Définit ou récupère une URL de destination ou un point d'ancrage.
 	Tip_Src =	Définit ou récupère une URL à charger par l'objet.
 	Tip_SelectedIndex =	Définit ou récupère l'index de l'option choisie dans un objet select.

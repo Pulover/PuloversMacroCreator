@@ -1034,6 +1034,7 @@
 	Tip_LocationURL =	获取当前页面的URL。
 	Tip_InnerText =	设置或获取对象的文本。
 	Tip_InnerHTML =	设置或检索对象的HTML。
+	Tip_OuterHTML =	设置或检索HTML中的对象和它的内容。
 	Tip_Href =	获取或设置一个目标URL或锚点。
 	Tip_Src =	获取或设置一个URL要加载的对象。
 	Tip_SelectedIndex =	设置或检索的索引选择的选项中选择对象。

@@ -1034,6 +1034,7 @@
 	Tip_LocationURL =	Ruft die URL der aktuellen Seite ab.
 	Tip_InnerText =	Setzt oder erfasst den Text des Objekts.
 	Tip_InnerHTML =	Setzt oder erfasst das HTML des Objekts.
+	Tip_OuterHTML =	Setzt oder holt das Objekt und seinen Inhalt in HTML.
 	Tip_Href =	Setzt oder erfasst eine Ziel-URL oder einen Ankerpunkt.
 	Tip_Src =	Setzt oder erfasst eine URL, die vom Objekt geladen wird.
 	Tip_SelectedIndex =	Setzt oder erfasst den Index der ausgewählten Option in einem gewählten Objekt.

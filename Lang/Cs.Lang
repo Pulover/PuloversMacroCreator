@@ -1034,6 +1034,7 @@
 	Tip_LocationURL =	Získá URL aktuální stránky.
 	Tip_InnerText =	Nastaví nebo získá textu objektu.
 	Tip_InnerHTML =	Nastaví nebo získá HTML objektu.
+	Tip_OuterHTML =	Nastaví nebo získá objekt a její obsah ve formátu HTML.
 	Tip_Href =	Nastaví nebo načte cílovou adresu URL nebo kotevní bod.
 	Tip_Src =	Nastaví nebo načte URL být načten v objektu.
 	Tip_SelectedIndex =	Nastaví nebo získá index vybrané volby v objektu select.

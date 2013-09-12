@@ -1034,6 +1034,7 @@
 	Tip_LocationURL =	Gets webadressen for den aktuelle side.
 	Tip_InnerText =	Indstiller eller får teksten til objektet.
 	Tip_InnerHTML =	Indstiller eller henter HTML af objektet.
+	Tip_OuterHTML =	Indstiller eller henter objektet og dets indhold i HTML.
 	Tip_Href =	Indstiller eller henter en destinationswebadresse eller et ankerpunkt.
 	Tip_Src =	Indstiller eller henter en webadresse, der skal lastes af objektet.
 	Tip_SelectedIndex =	Indstiller eller henter indekset for den valgte indstilling i en udvalgt objekt.

@@ -1034,6 +1034,7 @@
 	Tip_LocationURL =	Obté l'adreça URL de la pàgina actual.
 	Tip_InnerText =	Estableix o obté el text de l'objecte.
 	Tip_InnerHTML =	Estableix o el codi HTML de l'objecte.
+	Tip_OuterHTML =	Estableix o recupera l'objecte i el contingut en HTML.
 	Tip_Href =	Estableix o un URL de destinació o un punt d'ancoratge.
 	Tip_Src =	Estableix o un URL a carregar l'objecte.
 	Tip_SelectedIndex =	Estableix o l'índex de l'opció seleccionada en un objecte de selecció.

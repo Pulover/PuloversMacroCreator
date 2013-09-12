@@ -1034,6 +1034,7 @@
 	Tip_LocationURL =	Copia a URL da página atual.
 	Tip_InnerText =	Define ou copia o texto do objeto.
 	Tip_InnerHTML =	Define ou copia a HTML do objeto.
+	Tip_OuterHTML =	Define ou copia o objeto e seu conteúdo em HTML.
 	Tip_Href =	Define ou copia uma URL destino ou ponto de âncora.
 	Tip_Src =	Define ou copia uma URL para ser carregada pelo objeto.
 	Tip_SelectedIndex =	Define ou copia o índice da seleção em um objeto selecionável.

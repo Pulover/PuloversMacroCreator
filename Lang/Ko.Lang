@@ -1034,6 +1034,7 @@
 	Tip_LocationURL =	현재 페이지의 URL을 가져옵니다.
 	Tip_InnerText =	설정하거나 객체의 텍스트를 얻을 수 있습니다.
 	Tip_InnerHTML =	설정하거나 객체의 HTML을 검색합니다.
+	Tip_OuterHTML =	설정하거나 HTML에있는 객체와 그 내용을 검색합니다.
 	Tip_Href =	설정하거나 대상 URL 또는 앵커 지점을 검색합니다.
 	Tip_Src =	설정하거나 객체에 의해로드 할 URL을 검색합니다.
 	Tip_SelectedIndex =	설정 또는 선택 개체의 선택 옵션의 인덱스를 검색합니다.

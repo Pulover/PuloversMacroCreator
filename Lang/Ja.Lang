@@ -1034,6 +1034,7 @@
 	Tip_LocationURL =	現在のページのURLを取得します。
 	Tip_InnerText =	オブジェクトのテキストを設定または取得します。
 	Tip_InnerHTML =	設定するか、またはオブジェクトのHTMLを取得します。
+	Tip_OuterHTML =	設定またはHTML内のオブジェクトとそのコンテンツを取得します。
 	Tip_Href =	設定または宛先URLまたはアンカーポイントを取得します。
 	Tip_Src =	設定するか、またはオブジェクトがロードするURLを取得します。
 	Tip_SelectedIndex =	設定または選択したオブジェクトに、選択したオプションのインデックスを取得します。

@@ -302,6 +302,7 @@ LocationName
 LocationURL
 InnerText
 InnerHTML
+OuterHTML
 Href
 Src
 SelectedIndex
@@ -381,6 +382,7 @@ Width
 Value
 InnerText
 InnerHTML
+OuterHTML
 SelectedIndex
 Checked
 )"
@@ -899,8 +901,8 @@ DefaultBar := {FileOpt: "Enabled AutoSize", File: ["New=" w_Lang040 ":41", "Open
 														, "", "TabPlus=" w_Lang072 ":66", "TabClose=" w_Lang073 ":68", "DuplicateList=" w_Lang074 ":69", "EditMacros=" w_Lang094 ":97"
 														, "", "Import=" w_Lang075 ":28", "SaveCurrentList=" w_Lang076 ":67"]}
 FixedBar :=	{PrevOpt: "Enabled AutoSize", Preview: ["PrevDock=" t_Lang124 ":17"
-														, "", "PrevCopy=" c_Lang023 ":8", "PrevRefresh=" t_Lang014 ":36"
-														, "", "AutoRefresh=" t_Lang015 ":90", "TabIndent=" t_Lang011 ":85", "TextWrap=" t_Lang052 ":96", "OnTop=" t_Lang016 ":81"
+														, "", "PrevCopy=" c_Lang023 ":8", "PrevRefresh=" t_Lang014 ":90(Enabled Dropdown)"
+														, "", "TabIndent=" t_Lang011 ":85", "TextWrap=" t_Lang052 ":96", "OnTop=" t_Lang016 ":81"
 														, "", "EditScript=" t_Lang138 ":14"]
 			, TextOpt: "Enabled AutoSize", Text: ["OpenT=" t_Lang126 ":42", "SaveT=" t_Lang127 ":59"
 														, "", "CutT=" t_Lang128 ":9", "CopyT=" t_Lang129 ":8", "PasteT=" t_Lang130 ":44"

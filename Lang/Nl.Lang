@@ -1034,6 +1034,7 @@
 	Tip_LocationURL =	Haalt de URL van de huidige pagina.
 	Tip_InnerText =	Stelt of krijgt de tekst van het object.
 	Tip_InnerHTML =	Stelt of haalt de HTML van het object.
+	Tip_OuterHTML =	Bepaalt of haalt het object en de inhoud in HTML.
 	Tip_Href =	Stelt of haalt een bestemmings-URL of een ankerpunt.
 	Tip_Src =	Stelt of haalt een URL die moet worden geladen door het object.
 	Tip_SelectedIndex =	Stelt of haalt de index van de geselecteerde optie in een select object.

@@ -1034,6 +1034,7 @@
 	Tip_LocationURL =	Ottiene l'URL della pagina corrente.
 	Tip_InnerText =	Ottiene o imposta il testo dell'oggetto.
 	Tip_InnerHTML =	Imposta o recupera il codice HTML dell'oggetto.
+	Tip_OuterHTML =	Imposta o recupera l'oggetto e il suo contenuto in HTML.
 	Tip_Href =	Imposta o recupera un URL di destinazione o di un punto di ancoraggio.
 	Tip_Src =	Imposta o recupera un URL da caricare dall'oggetto.
 	Tip_SelectedIndex =	Imposta o recupera l'indice dell'opzione selezionata in un oggetto di selezione.

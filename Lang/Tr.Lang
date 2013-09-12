@@ -1034,6 +1034,7 @@
 	Tip_LocationURL =	Geçerli sayfanın URL'sini alır.
 	Tip_InnerText =	Ayarlar ya da nesnenin metin alır.
 	Tip_InnerHTML =	Ayarlar ya da nesnenin HTML alır.
+	Tip_OuterHTML =	Ayarlar veya HTML nesne ve içeriği alır.
 	Tip_Href =	Ayarlar veya hedef URL veya bir çapa noktası alır.
 	Tip_Src =	Ayarlar ya da nesnesi tarafından yüklenecek bir URL alır.
 	Tip_SelectedIndex =	Ayarlar veya bir select nesnesi seçili seçeneği dizin alır.

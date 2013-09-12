@@ -1034,6 +1034,7 @@
 	Tip_LocationURL =	Gets the URL of the current page.
 	Tip_InnerText =	Sets or gets the text of the object.
 	Tip_InnerHTML =	Sets or retrieves the HTML of the object.
+	Tip_OuterHTML =	Sets or retrieves the object and its content in HTML.
 	Tip_Href =	Sets or retrieves a destination URL or an anchor point.
 	Tip_Src =	Sets or retrieves a URL to be loaded by the object.
 	Tip_SelectedIndex =	Sets or retrieves the index of the selected option in a select object. 

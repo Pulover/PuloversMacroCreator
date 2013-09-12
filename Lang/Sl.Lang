@@ -1034,6 +1034,7 @@
 	Tip_LocationURL =	Dobi URL trenutne strani.
 	Tip_InnerText =	Nastavi, ali dobi besedilo predmeta.
 	Tip_InnerHTML =	Nastavi ali pridobi HTML predmeta.
+	Tip_OuterHTML =	Nastavi ali pridobi predmeta in njeno vsebino v HTML.
 	Tip_Href =	Določa ali pridobi ciljni URL ali sidro točko.
 	Tip_Src =	Določa ali pridobi URL, ki se naloži na cilj.
 	Tip_SelectedIndex =	Nastavi ali pridobi indeks izbrano možnost v izbrani predmet.
