@@ -5001,7 +5001,7 @@ Else If ((s_Caller = "Find") && (InStr(GotoRes1, "Loop")))
 	GuiControl, 12:, %GotoRes%, 1
 	GoSub, LoopType
 }
-Else
+Else If (s_Caller <> "Edit")
 	SBShowTip("Loop (normal)")
 Gui, 12:Show, % InStr(A_ThisLabel, "Loop") ? "" : "H167", % InStr(A_ThisLabel, "Goto") ? c_Lang077 : InStr(A_ThisLabel, "Label") ? c_Lang079 : c_Lang073
 ChangeIcon(ReshInst, CmdWin, InStr(A_ThisLabel, "Goto") ? 22 : InStr(A_ThisLabel, "Label") ? 38 : 40)
