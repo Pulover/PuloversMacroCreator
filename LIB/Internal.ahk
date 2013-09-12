@@ -92,7 +92,7 @@ CloseTab()
 	MouseGetPos,,,, cHwnd, 2
 	If (cHwnd = TabSel)
 	{
-		If (ClickedTab := TabClick.Get())
+		If (ClickedTab := TabGet())
 			GoSub, TabClose
 		ClickedTab := ""
 	}
@@ -110,9 +110,9 @@ DragToolbar()
 		MouseGetPos, HitX, HitY,, cHwnd, 2
 		If (cHwnd = TabSel)
 		{
-			GuiControl, chMacro:Choose, A_List, % TabClick.Get()
+			GuiControl, chMacro:Choose, A_List, % TabGet()
 			GoSub, TabSel
-			NewOrder := TabClick.Drag(,, "Red")
+			NewOrder := TabDrag()
 			If IsObject(NewOrder)
 			{
 				Project := [], Proj_Opts := [], ActiveList := A_List
@@ -140,7 +140,7 @@ DragToolbar()
 				GoSub, LoadData
 				GoSub, RowCheck
 				GoSub, UpdateCopyTo
-				Project := "", Proj_Opts := ""
+				Project := "", Proj_Opts := "", SavePrompt := 1
 				SetTimer, HitFix, -10
 			}
 		}
@@ -854,20 +854,4 @@ ShowChevronMenu(rbPtr, BandID, X="", Y="")
 		Menu, ChevMenu, Show, %X%, %Y%
 		Menu, ChevMenu, DeleteAll
 	}
-}
-
-TabGetText(Hwnd, Tab)
-{
-	Static Size := (5 * 4) + (2 * A_PtrSize) + (A_PtrSize - 4)
-	Static TCIF_TEXT := 0x0001
-	Static TCM_GETITEM := 0x133C
-	
-	VarSetCapacity(ItemText, 512, 0)
-,	VarSetCapacity(TCITEM, Size, 0)
-,	NumPut(TCIF_TEXT, TCITEM, 0, "UInt")
-,	NumPut(&ItemText, TCITEM, (3 * 4) + (A_PtrSize - 4), "Ptr")
-,	NumPut(512, TCITEM, (3 * 4) + (A_PtrSize - 4) + A_PtrSize, "Int")
-	SendMessage, TCM_GETITEM, Tab - 1, &TCITEM,, ahk_id %Hwnd%
-	TxtPtr := NumGet(TCITEM, (3 * 4) + (A_PtrSize - 4), "UPtr")
-	return StrGet(TxtPtr, 512)
 }

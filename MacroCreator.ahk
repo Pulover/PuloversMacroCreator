@@ -8343,7 +8343,7 @@ If (cHwnd = ListID%A_List%)
 	Menu, EditMenu, Show, %A_GuiX%, %A_GuiY%
 Else If (cHwnd = TabSel)
 {
-	If (ClickedTab := TabClick.Get())
+	If (ClickedTab := TabGet())
 		Menu, TabMenu, Add, %c_Lang022%, TabClose
 	Menu, TabMenu, Add, %w_Lang019%, EditMacros
 	Menu, TabMenu, Show
@@ -12686,15 +12686,15 @@ return
 #Include <Recording>
 #Include <Playback>
 #Include <Export>
+#Include <TabDrag>
 #Include <Class_PMC>
 #Include <Class_Toolbar>
 #Include <Class_Rebar>
 #Include <Class_LV_Rows>
-#Include <Class_TabClick>
 #Include <Class_ObjIni>
+#Include <Class_LV_Colors>
 #Include <Gdip>
 #Include <Eval>
-#Include <Class_LV_Colors>
 #Include <SCI>
 #SingleInstance Off
 
