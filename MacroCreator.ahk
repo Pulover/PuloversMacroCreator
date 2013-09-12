@@ -7576,7 +7576,10 @@ Else
 	GuiControl, 24:Enable, Method
 	GuiControl, 24:Enable, Property
 }
-SB_SetText(Tip_%IECmd%)
+Try
+	SB_SetText(Tip_%IECmd%)
+Catch
+	SB_SetText("")
 return
 
 ComSc:
