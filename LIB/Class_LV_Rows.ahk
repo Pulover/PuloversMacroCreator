@@ -4,7 +4,7 @@
 ;
 ; Author:            Pulover [Rodolfo U. Batista]
 ;                    rodolfoub@gmail.com
-; Release date:      27 August 2013
+; Release date:      12 September 2013
 ;
 ;                    Additional functions for ListView controls
 ;=======================================================================================
