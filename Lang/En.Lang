@@ -740,6 +740,7 @@
 	d_Lang079 =	Check for updates on startup.
 	d_Lang080 =	You can change this in Options > Settings > General.
 	d_Lang081 =	You can change and customize layouts in the View menu.
+	d_Lang082 =	The file was not found!
 		
 ; Start-up Tips		
 	Start_Tips =	

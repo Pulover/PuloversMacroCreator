@@ -1846,7 +1846,13 @@ If ((ListCount > 0) && (SavePrompt))
 		return
 }
 Input
-PMC.Import(RegExReplace(A_ThisMenuItem, "^\d+:\s"))
+File := RegExReplace(A_ThisMenuItem, "^\d+:\s")
+If !FileExist(File)
+{
+	MsgBox, 16, %d_Lang007%, %d_Lang082%`n"%File%"
+	return
+}
+PMC.Import(File)
 CurrentFileName := LoadedFileName, Files := ""
 GoSub, b_Start
 GoSub, FileRead

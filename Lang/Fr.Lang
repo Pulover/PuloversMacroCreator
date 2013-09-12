@@ -740,6 +740,7 @@
 	d_Lang079 =	Vérifier les mises à jour au démarrage.
 	d_Lang080 =	Vous pouvez modifier ce paramètre dans Options > Paramètres > Général.
 	d_Lang081 =	Vous pouvez modifier et personnaliser la disposition dans le menu Affichage.
+	d_Lang082 =	Le fichier n'a pas été trouvé!
 		
 ; Start-up Tips		
 	Start_Tips =	
