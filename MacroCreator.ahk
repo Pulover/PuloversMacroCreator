@@ -628,7 +628,7 @@ If (TbNoTheme)
 	Gui, -Theme
 Gui, Add, Custom, ClassReBarWindow32 hwndhRbMain vcRbMain gRB_Notify 0x0400 0x0040 0x8000
 Gui, +Theme
-Gui, Add, Custom, ClassReBarWindow32 hwndhRbMacro vcRbMacro gRB_Notify xm-10 ym+76 -Theme 0x0800 0x0400 0x0040 0x8000 0x0008 ; 0x0004
+Gui, Add, Custom, ClassReBarWindow32 hwndhRbMacro vcRbMacro gRB_Notify xm-10 ym+76 -Theme 0x0800 0x0040 0x8000 0x0008 ; 0x0004
 Gui, Add, Hotkey, hwndhAutoKey vAutoKey gSaveData, % o_AutoKey[1]
 Gui, Add, ListBox, hwndhJoyKey vJoyKey r1 ReadOnly Hidden
 ; SendMessage, 0x01A0, 0, 22,, ahk_id %hJoyKey%
@@ -909,9 +909,9 @@ GoSub, BuildMacroWin
 GoSub, BuildPrevWin
 GoSub, BuildMixedControls
 GoSub, BuildOSCWin
-GuiGetSize(gWidth, gHeight), rHeight := gHeight-120, Ideal := TB_GetSize(TbEdit)
+GuiGetSize(gWidth, gHeight), rHeight := gHeight-120
 ,	RbMacro := New Rebar(hRbMacro)
-,	RbMacro.InsertBand(hMacroCh, 0, "NoGripper", 30, "", gWidth/2, 0, "", rHeight, 0, Ideal)
+,	RbMacro.InsertBand(hMacroCh, 0, "NoGripper", 30, "", gWidth/2, 0, "", rHeight, 10, 10)
 ,	RbMacro.InsertBand(hPrevCh, 0, "", 31, "", gWidth/2, 0, "", rHeight, 0)
 ,	(MacroLayout = "ERROR") ? "" : RbMacro.SetLayout(MacroLayout)
 ,	!ShowPrev ? RbMacro.ModifyBand(2, "Style", "Hidden")
@@ -983,7 +983,7 @@ Gui, chPrev:Show, W450 H600 Hide
 TB_Define(TbPrev, hTbPrev, hIL_Icons, FixedBar.Preview, FixedBar.PrevOpt)
 ,	TbPrev.ModifyButton(8, "Hide")
 ,	sciPrev := new scintilla(hSciPrev)
-,	sciPrev.SetMarginWidthN(0, 40)
+,	sciPrev.SetMarginWidthN(0, 10)
 ,	sciPrev.SetWrapMode(TextWrap)
 ,	sciPrev.SetLexer(200)
 ,	sciPrev.StyleClearAll()
@@ -1007,7 +1007,7 @@ Gui, 2:Add, StatusBar
 TB_Define(TbPrevF, hTbPrevF, hIL_Icons, FixedBar.Preview, FixedBar.PrevOpt)
 ,	tbPrevF.ModifyButtonInfo(1, "Text", t_Lang125),	tbPrevF.ModifyButtonInfo(1, "Image", 93)
 ,	sciPrevF := new scintilla(hSciPrevF)
-,	sciPrevF.SetMarginWidthN(0, 40)
+,	sciPrevF.SetMarginWidthN(0, 10)
 ,	sciPrevF.SetWrapMode(TextWrap)
 ,	sciPrevF.SetLexer(200)
 ,	sciPrevF.StyleClearAll()
@@ -1053,10 +1053,16 @@ return
 
 PrevRefresh:
 Preview := LV_Export(A_List)
-sciPrev.SetReadOnly(False), sciPrev.ClearAll(), sciPrev.SetText("", Preview)
+,	sciPrev.SetReadOnly(False), sciPrev.ClearAll(), sciPrev.SetText("", Preview)
 ,	sciPrev.ScrollToEnd(), sciPrev.SetReadOnly(True)
 ,	sciPrevF.SetReadOnly(False), sciPrevF.ClearAll(), sciPrevF.SetText("", Preview)
 ,	sciPrevF.ScrollToEnd(), sciPrevF.SetReadOnly(True)
+,	calcMargin := StrLen(sciPrev.GetLineCount())*10
+If (calcMargin <> lastCalcMargin)
+{
+	lastCalcMargin := calcMargin
+	,	sciPrev.SetMarginWidthN(0, calcMargin)
+}
 Gui, 2:Default
 SB_SetText("Macro" A_List ": " o_AutoKey[A_List], 1)
 SB_SetText("Record Keys: " RecKey "/" RecNewKey, 2)
@@ -8519,7 +8525,12 @@ RowSelection := LV_GetCount("Selected")
 If (RowSelection = 0)
 	LV_Delete()
 Else
-	LV_Rows.Delete()
+{
+	PrevState := AutoRefresh
+,	AutoRefresh := 0
+,	LV_Rows.Delete()
+,	AutoRefresh := PrevState
+}
 LV_Modify(LV_GetNext(0, "Focused"), "Select")
 GoSub, b_Start
 GoSub, RowCheck
@@ -10312,14 +10323,20 @@ return
 h_Del:
 Gui, chMacro:Default
 Gui, chMacro:ListView, InputList%A_List%
-RowNumber := 0, LV_Rows.Delete()
+	PrevState := AutoRefresh
+,	AutoRefresh := 0
+,	LV_Rows.Delete()
+,	AutoRefresh := PrevState
 ,	LV_Modify(LV_GetNext(0, "Focused"), "Select")
 GoSub, RowCheck
 GoSub, b_Start
 return
 
 h_NumDel:
-RowNumber := 0, LV_Rows.Delete()
+	PrevState := AutoRefresh
+,	AutoRefresh := 0
+,	LV_Rows.Delete()
+,	AutoRefresh := PrevState
 ,	LV_Modify(LV_GetNext(0, "Focused"), "Select")
 GoSub, RowCheck
 GoSub, b_Start
