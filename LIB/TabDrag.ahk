@@ -23,6 +23,7 @@ TabDrag(DragButton="LButton", LineThick=2, Color="Black", ShowUnder=False)
 	,	Line_Y := Win_Y + Tab_ly + iTab_Y2
 	,   Line_X := Win_X + Tab_lx + iTab_X
 	,   Line_W := iTab_X2 - iTab_X
+	,   Line_W := Line_W * 96 / A_ScreenDPI
 		Gui, MarkLineH:Color, %Color%
 		Gui, MarkLineH:+LastFound +AlwaysOnTop +Toolwindow -Caption +HwndLineMark
 		Gui, MarkLineH:Show, W%Line_W% H%LineThick% Y%Line_Y% X%Line_X% NoActivate Hide
@@ -37,6 +38,7 @@ TabDrag(DragButton="LButton", LineThick=2, Color="Black", ShowUnder=False)
 			continue
 		TabGetRect(CurrTab, TabCtrl, Tab_X, Tab_Y, Tab_X2, Tab_Y2)
 	,   Line_H := Tab_Y2-Tab_Y
+	,	Line_H := Line_H * 96 / A_ScreenDPI
 		If (CurrTab < HitTab)
 		{
 			Line_Y := Win_Y + Tab_ly + Tab_Y

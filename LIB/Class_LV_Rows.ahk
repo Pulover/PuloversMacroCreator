@@ -303,7 +303,8 @@ Class LV_Rows
         MouseGetPos,,, LV_Win, LV_LView, 2
         WinGetPos, Win_X, Win_Y, Win_W, Win_H, ahk_id %LV_Win%
         ControlGetPos, LV_lx, LV_ly, LV_lw, LV_lh, , ahk_id %LV_LView%
-        VarSetCapacity(LV_XYstruct, 16, 0)
+        LV_lw := LV_lw * 96 / A_ScreenDPI
+    ,   VarSetCapacity(LV_XYstruct, 16, 0)
 
         While, GetKeyState(DragButton, "P")
         {
