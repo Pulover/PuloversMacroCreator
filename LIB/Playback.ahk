@@ -1278,6 +1278,8 @@ DerefVars(v_String)
 	StringReplace, v_String, v_String, ```%, ¤, All
 	While, RegExMatch(v_String, "%(\w+)%", rMatch)
 	{
+		If rMatch1 in Temp,AppData,WinDir
+			rMatch1 := RegExReplace(rMatch1, "\V+", "A_$0")
 		FoundVar := RegExReplace(%rMatch1%, "%", "¤")
 	,	FoundVar := RegExReplace(FoundVar, "\$", "$$$$")
 	,	v_String := RegExReplace(v_String, rMatch, FoundVar)

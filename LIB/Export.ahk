@@ -490,8 +490,10 @@
 			StringReplace, RowData, RowData, ```,, `,, All
 		LVData .= RowData
 	}
-	; LVData := RegExReplace(LVData, "Send, \n")
-	LVData := LTrim(LVData, "`n")
+	LVData := RegExReplace(LVData, "i)%(Temp)%", "%A_$1%")
+,	LVData := RegExReplace(LVData, "i)%(AppData)%", "%A_$1%")
+,	LVData := RegExReplace(LVData, "i)%(WinDir)%", "%A_$1%")
+,	LVData := LTrim(LVData, "`n")
 	If TabIndent
 	{
 		Loop, Parse, LVData, `n
