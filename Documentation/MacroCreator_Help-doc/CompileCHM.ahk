@@ -10,7 +10,7 @@ FileDelete, %File%
 FileAppend, %FileData%, %File%
 
 File := A_ScriptDir "\index.html"
-Data := "<h1><a href=""http://www.autohotkey.net/~Pulover""><img src=""Images/PMC.png"" alt=""Pulover's Macro Creator"" border=""0""></a></h1>"
+Data := "<h1><a href=""http://www.macrocreator.com/""><img src=""Images/PMC.png"" alt=""Pulover's Macro Creator"" border=""0""></a></h1>"
 FileRead, FileData, %File%
 FileMod_Change(FileData, Data, 11)
 FileDelete, %File%
