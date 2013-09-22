@@ -4,52 +4,67 @@
 		
 ; Main Menu		
 	m_Lang001 =	文件
-	m_Lang002 =	插入
+	m_Lang002 =	命令
 	m_Lang003 =	選擇
 	m_Lang004 =	編輯
 	m_Lang005 =	宏
-	m_Lang006 =	選項
-	m_Lang007 =	語
-	m_Lang008 =	捐贈
-	m_Lang009 =	幫助
+	m_Lang006 =	視圖
+	m_Lang007 =	選項
+	m_Lang008 =	語
+	m_Lang009 =	捐贈
+	m_Lang010 =	幫助
 		
-; File Submenu		
+; File Sub Menu		
 	f_Lang001 =	新
 	f_Lang002 =	打開
 	f_Lang003 =	節省
 	f_Lang004 =	另存為
-	f_Lang005 =	進口宏
-	f_Lang006 =	保存當前宏觀經濟
-	f_Lang007 =	最近的文件
-	f_Lang008 =	導出到華民航空
-	f_Lang009 =	預覽腳本
-	f_Lang010 =	列出變量
-	f_Lang011 =	出口
-	f_Lang012 =	沒有文件
+	f_Lang005 =	最近的文件
+	f_Lang006 =	導出到華民航空
+	f_Lang007 =	預覽腳本
+	f_Lang008 =	編輯腳本
+	f_Lang009 =	列出變量
+	f_Lang010 =	出口
+	f_Lang011 =	沒有文件
 		
-; Insert Sub Menu		
+; Macro Sub Menu		
+	r_lang001 =	錄製宏
+	r_lang002 =	激活宏
+	r_lang003 =	播放當前宏觀經濟
+	r_lang004 =	定時器
+	r_lang005 =	播放選中的行
+	r_lang006 =	玩直到選中的行
+	r_lang007 =	播放選定的行
+	r_lang008 =	上下文敏感的熱鍵
+	r_lang009 =	添加宏
+	r_lang010 =	關閉宏
+	r_lang011 =	重複宏
+	r_lang012 =	編輯宏
+	r_lang013 =	進口宏
+	r_lang014 =	保存當前宏觀經濟
+		
+; Commands Sub Menu		
 	i_Lang001 =	鼠標
 	i_Lang002 =	文本
 	i_Lang003 =	控制
-	i_Lang004 =	暫停 / 信息 / 關鍵的等待
-	i_Lang005 =	窗口
-	i_Lang006 =	圖片/像素搜索
-	i_Lang007 =	運行/文件/串/ MISC。
-	i_Lang008 =	迴路/轉到/標籤
-	i_Lang009 =	如果報表/變量/函數
-	i_Lang010 =	IE瀏覽器/ COM接口
-	i_Lang011 =	Windows消息
-	i_Lang012 =	特殊鍵
+	i_Lang004 =	暫停
+	i_Lang005 =	消息框
+	i_Lang006 =	關鍵的等待
+	i_Lang007 =	窗口
+	i_Lang008 =	圖片 / 像素搜索
+	i_Lang009 =	運行 / 文件 / 串 / MISC。
+	i_Lang010 =	迴路
+	i_Lang011 =	轉到
+	i_Lang012 =	標籤
+	i_Lang013 =	如果報表
+	i_Lang014 =	變量
+	i_Lang015 =	函數
+	i_Lang016 =	IE瀏覽器
+	i_Lang017 =	COM接口
+	i_Lang018 =	運行的Scriptlet
+	i_Lang019 =	Windows消息
+	i_Lang020 =	查找命令
 		
-; Select Sub Menu		
-	s_Lang001 =	全選
-	s_Lang002 =	選擇“無”
-	s_Lang003 =	反向選擇
-	s_Lang004 =	檢查選擇
-	s_Lang005 =	取消選中所選
-	s_Lang006 =	反轉檢查
-	s_Lang007 =	所選類型
-	s_Lang008 =	命令
 		
 ; Edit Sub Menu		
 	e_Lang001 =	複製
@@ -65,46 +80,73 @@
 	e_Lang011 =	上移
 	e_Lang012 =	“下移”
 	e_Lang013 =	從盒插入
-	e_Lang014 =	編輯顏色標誌
+	e_Lang014 =	插入擊鍵
+	e_Lang015 =	編輯顏色標誌
 		
-; Macro Sub Menu		
-	r_lang001 =	錄製宏
-	r_lang002 =	激活宏
-	r_lang003 =	播放當前宏觀經濟
-	r_lang004 =	定時器
-	r_lang005 =	添加宏
-	r_lang006 =	關閉宏
-	r_lang007 =	上下文敏感的熱鍵
-	r_lang008 =	顯示/隱藏控制
-	r_lang009 =	播放選中的行
-	r_lang010 =	玩直到選中的行
-	r_lang011 =	播放選定的行
+; Select Sub Menu		
+	s_Lang001 =	全選
+	s_Lang002 =	選擇“無”
+	s_Lang003 =	反向選擇
+	s_Lang004 =	檢查選擇
+	s_Lang005 =	取消選中所選
+	s_Lang006 =	反轉檢查
+	s_Lang007 =	移動選擇
+	s_Lang008 =	向下移動選擇
+	s_Lang009 =	所選類型
+	s_Lang010 =	命令類型
+		
+; View Sub Menu		
+	v_lang001 =	總在最前
+	v_lang002 =	亮點行
+	v_lang003 =	縮進
+	v_lang004 =	控制工具欄
+	v_lang005 =	預覽
+	v_lang006 =	工具欄
+	v_lang007 =	熱鍵
+	v_lang008 =	重列大小
+	v_lang009 =	重佈局
+		
+	v_lang010 =	文件
+	v_lang011 =	錄製和播放
+	v_lang012 =	命令
+	v_lang013 =	編輯
+	v_lang014 =	選項
+	v_lang015 =	定制
+		
+	v_lang016 =	自動
+	v_lang017 =	手冊
+	v_lang018 =	停止
+	v_lang019 =	暫停
+		
+	v_lang020 =	緊湊
+	v_lang021 =	默認
 		
 ; Options Sub Menu		
 	o_Lang001 =	設置
 	o_Lang002 =	設為默認熱鍵
 	o_Lang003 =	設置為默認文件
 	o_Lang004 =	刪除默認文件
-	o_Lang005 =	重列大小
-	o_Lang006 =	默認熱鍵
-	o_Lang007 =	默認設置
+	o_Lang005 =	默認熱鍵
+	o_Lang006 =	默認設置
 		
 ; Donate Sub Menu		
 	p_Lang001 =	PayPal捐贈
 		
 ; Help Sub Menu		
-	h_Lang001 =	宏造物主首頁
-	h_Lang002 =	AHK在線文檔
-	h_Lang003 =	檢查更新...
-	h_Lang004 =	檢查啟動
-	h_Lang005 =	關於
-	h_Lang006 =	溫馨提示
-	h_Lang007 =	論壇
+	h_Lang001 =	幫助
+	h_Lang002 =	教程
+	h_Lang003 =	溫馨提示
+	h_Lang004 =	宏造物主首頁
+	h_Lang005 =	論壇
+	h_Lang006 =	AHK在線文檔
+	h_Lang007 =	檢查更新...
+	h_Lang008 =	檢查啟動
+	h_Lang009 =	關於
 		
 ; Tray Menu		
 	y_Lang001 =	隱藏窗口
 	y_Lang002 =	櫥窗
-	y_Lang003 =	顯示/隱藏控制
+	y_Lang003 =	控制工具欄
 		
 ; Main Window		
 	w_Lang001 =	出口
@@ -112,21 +154,21 @@
 	w_Lang003 =	選項
 	w_Lang004 =	記錄
 	w_Lang005 =	玩
-	w_Lang006 =	自動。
-	w_Lang007 =	男人。
+	w_Lang006 =	播放
+	w_Lang007 =	手冊
 	w_Lang008 =	停止
-	w_Lang009 =	顯示控制
+	w_Lang009 =	顯示控制工具欄
 	w_Lang010 =	暫停
 	w_Lang011 =	循環
-	w_Lang012 =	擷取鍵
-	w_Lang013 =	隱藏窗口
-	w_Lang014 =	始終活躍
+	w_Lang012 =	在此窗口中捕捉按鍵
+	w_Lang013 =	最小化到托盤
+	w_Lang014 =	的熱鍵始終活躍
 	w_Lang015 =	重複
-	w_Lang016 =	延時（ms）：
+	w_Lang016 =	延時（ms）
 	w_Lang017 =	申請
 	w_Lang018 =	插入
 	w_Lang019 =	編輯
-	w_Lang020 =	(unused)
+	w_Lang020 =	關機選項 (當播放結束...)
 	w_Lang021 =	什麼都不做
 	w_Lang022 =	關閉應用程序
 	w_Lang023 =	關閉
@@ -146,6 +188,60 @@
 	w_Lang037 =	窗口
 	w_Lang038 =	評論
 	w_Lang039 =	顏色
+	w_Lang040 =	新（按Ctrl+N）
+	w_Lang041 =	開放（按Ctrl+O）
+	w_Lang042 =	保存（Ctrl+S）
+	w_Lang043 =	導出華民航空（Ctrl+E鍵）
+	w_Lang044 =	預覽腳本（按Ctrl+P）
+	w_Lang045 =	設置（按Ctrl+G）
+	w_Lang046 =	錄製宏（按Ctrl+R）
+	w_Lang047 =	激活宏（按Ctrl+Enter鍵）
+	w_Lang048 =	播放當前宏觀經濟（按Ctrl+Shift +回車）
+	w_Lang049 =	定時器（按Ctrl+Shift+T）
+	w_Lang050 =	鼠標（F2）
+	w_Lang051 =	文本（F3）
+	w_Lang052 =	編輯宏（按Ctrl+Shift+ M）
+	w_Lang053 =	控制（F4）
+	w_Lang054 =	暫停 （F5）
+	w_Lang055 =	消息框 （Shift+F5）
+	w_Lang056 =	關鍵的等待 （Control+F5）
+	w_Lang057 =	窗口（F6）
+	w_Lang058 =	圖片/像素搜索（F7）
+	w_Lang059 =	運行/文件/串/ MISC。 （F8）。
+	w_Lang060 =	環路（F9）
+	w_Lang061 =	後藤（按Shift+F9）
+	w_Lang062 =	標籤（按Ctrl+F9）
+	w_Lang063 =	如果報表附註（F10）
+	w_Lang064 =	變量（按Shift+F10）
+	w_Lang065 =	功能（按Ctrl+F10）
+	w_Lang066 =	IE瀏覽器（F11）
+	w_Lang067 =	 COM接口（SHIFT+F11）
+	w_Lang068 =	運行的scriptlet（按Ctrl+ F11）
+	w_Lang069 =	Windows消息（F12）
+	w_Lang070 =	Windows鍵“播放”熱鍵
+	w_Lang071 =	使用操縱桿按鈕，熱鍵
+	w_Lang072 =	添加宏（按Ctrl+T）
+	w_Lang073 =	關閉宏（按Ctrl+W）
+	w_Lang074 =	重複宏（按Ctrl+Shift+D）
+	w_Lang075 =	進口宏（按Ctrl+I）
+	w_Lang076 =	保存當前宏（按Ctrl+Alt+S）
+	w_Lang077 =	向上移動（按Ctrl+上一頁）
+	w_Lang078 =	“下移”（按Ctrl+下一頁）
+	w_Lang079 =	複製選中的行（CTRL+D）
+	w_Lang080 =	剪切選定行（Ctrl+X鍵）
+	w_Lang081 =	選定行複製（Ctrl+C組合鍵）
+	w_Lang082 =	粘貼複製的行（Ctrl+V鍵）
+	w_Lang083 =	刪除選定的行（DEL）
+	w_Lang084 =	撤消（CTRL+Z）
+	w_Lang085 =	重做（CTRL+Y）
+	w_Lang086 =	複製到...
+	w_Lang087 =	查找/替換（Ctrl+F鍵）
+	w_Lang088 =	編輯點評（Ctrl+L鍵）
+	w_Lang089 =	編輯顏色標誌（Ctrl+M鍵）
+	w_Lang090 =	定制
+	w_Lang091 =	查找命令（按Ctrl+Shift+ F）
+	w_Lang092 =	編輯（Enter）
+	w_Lang093 =	隱藏
 		
 ; Command Windows		
 	c_Lang001 =	鼠標
@@ -181,8 +277,8 @@
 	c_Lang031 =	滾輪向下
 	c_Lang032 =	拖動&&下降
 	c_Lang033 =	坐標
-	c_Lang034 =	點擊
-	c_Lang035 =	發送
+	c_Lang034 =	搜索
+	c_Lang035 =	子
 	c_Lang036 =	相對的
 	c_Lang037 =	鈕
 	c_Lang038 =	左
@@ -216,7 +312,7 @@
 	c_Lang066 =	關鍵的等待
 	c_Lang067 =	如果發現
 	c_Lang068 =	如果沒有找到/錯誤
-	c_Lang069 =	*，以`%FoundX`% / `%FoundY`%COORDS存儲。
+	c_Lang069 =	，以`%FoundX`%/`%FoundY`%COORDS存儲。
 	c_Lang070 =	座標
 	c_Lang071 =	變奏曲
 	c_Lang072 =	預覽
@@ -228,17 +324,17 @@
 	c_Lang078 =	轉到標籤
 	c_Lang079 =	標籤
 	c_Lang080 =	添加標籤
-	c_Lang081 =	字符串（InputVar），值
-	c_Lang082 =	VAR [運營商]值
-	c_Lang083 =	添加其他
+	c_Lang081 =	字符串（InputVar）
+	c_Lang082 =	變量
+	c_Lang083 =	其他
 	c_Lang084 =	指定變量
 	c_Lang085 =	內容
 	c_Lang086 =	操作者
-	c_Lang087 =	使用eval（）來解決表達式
+	c_Lang087 =	表達
 	c_Lang088 =	復位
 	c_Lang089 =	功能名稱
-	c_Lang090 =	以逗號分隔的參數（不包括括號）。
-	c_Lang091 =	（使用`％作為變量。文字的逗號必須進行轉義[```]）
+	c_Lang090 =	以逗號分隔的參數（不包括括號）
+	c_Lang091 =	（使用`％作為變量。文字的逗號必須進行轉義[ ```]）
 	c_Lang092 =	頁面元素/指數
 	c_Lang093 =	集
 	c_Lang094 =	得到
@@ -276,7 +372,7 @@
 	c_Lang126 =	代碼添加到虛擬鍵列表！
 	c_Lang127 =	鍵入一個名稱為變量
 	c_Lang128 =	使用功能從外部文件
-	c_Lang130 =	打破循環，如果發現
+	c_Lang130 =	重複，直到
 	c_Lang131 =	申請
 	c_Lang132 =	循環
 	c_Lang133 =	文件
@@ -309,6 +405,49 @@
 	c_Lang160 =	透明
 	c_Lang161 =	規模
 	c_Lang162 =	加上“If語句”
+	c_Lang163 =	發送模式
+	c_Lang164 =	等於
+	c_Lang165 =	包含
+	c_Lang166 =	大
+	c_Lang167 =	少
+	c_Lang168 =	是
+	c_Lang169 =	沒有
+	c_Lang170 =	行
+	c_Lang171 =	取消
+	c_Lang172 =	退出
+	c_Lang173 =	忽略
+	c_Lang174 =	重試
+	c_Lang175 =	繼續
+	c_Lang176 =	再試一次
+	c_Lang177 =	超時
+	c_Lang178 =	設置按鍵延遲
+	c_Lang179 =	關鍵延遲
+	c_Lang180 =	隨機延遲
+	c_Lang181 =	最低限度
+	c_Lang182 =	最大
+	c_Lang183 =	此命令禁用隨機延遲
+	c_Lang184 =	從列表中選擇
+	c_Lang185 =	按鈕
+	c_Lang186 =	第一
+	c_Lang187 =	第二
+	c_Lang188 =	第三
+	c_Lang189 =	標題
+	c_Lang190 =	如果激活窗口
+	c_Lang191 =	如果窗口不活躍
+	c_Lang192 =	如果窗口存在
+	c_Lang193 =	如果窗口不存在
+	c_Lang194 =	如果文件存在
+	c_Lang195 =	如果文件不存在
+	c_Lang196 =	如果剪貼板文本
+	c_Lang197 =	如果循環索引
+	c_Lang198 =	如果發現圖像/像素
+	c_Lang199 =	如果沒有找到圖像/像素
+	c_Lang200 =	如果字符串包含
+	c_Lang201 =	如果字符串不包含
+	c_Lang202 =	如果消息框
+	c_Lang203 =	比較變量
+	c_Lang204 =	計算表達式
+	c_Lang205 =	地區
 		
 ; Other Windows		
 	t_Lang001 =	導出到華民航空
@@ -362,14 +501,14 @@
 	t_Lang049 =	捕捉釋放
 	t_Lang050 =	按Enter鍵來捕捉
 	t_Lang051 =	截圖目錄
-	t_Lang052 =	雜項。
+	t_Lang052 =	換行
 	t_Lang053 =	熱鍵
 	t_Lang054 =	設置為默認熱鍵
 	t_Lang055 =	禁用窗口捷徑“
 	t_Lang056 =	重列大小
 	t_Lang057 =	默認的宏文件
 	t_Lang058 =	標準庫文件
-	t_Lang059 =	默認情況下，使用eval（）為變量賦值
+	t_Lang059 =	默認情況下，使用Expression變量賦值
 	t_Lang060 =	顯示顏色&&幫助標記為循環和報表
 	t_Lang061 =	（單擊索引列標題來啟用/禁用）
 	t_Lang062 =	虛擬按鍵
@@ -395,7 +534,7 @@
 	t_Lang082 =	報表
 	t_Lang083 =	循環和報表顯示縮進
 	t_Lang084 =	（雙擊操作“列頭啟用/禁用）
-	t_Lang085 =	顯示控制欄上啟動
+	t_Lang085 =	顯示控制欄上的啟動
 	t_Lang086 =	搜索功能。請稍候...
 	t_Lang087 =	包括外部文件
 	t_Lang088 =	創建EXE文件
@@ -408,9 +547,9 @@
 	t_Lang095 =	輸入每行1個變量。您還可以添加[第]。
 	t_Lang096 =	用戶全局變量
 	t_Lang097 =	按下操縱桿上的按鈕
-	t_Lang098 =	搖桿
+	t_Lang098 =	Backspace鍵來清除
 	t_Lang099 =	鈕
-	t_Lang100 =	顯示信息
+	t_Lang100 =	顯示氣球提示
 	t_Lang101 =	速度
 	t_Lang102 =	慢
 	t_Lang103 =	快
@@ -422,6 +561,47 @@
 	t_Lang109 =	下
 	t_Lang110 =	上
 	t_Lang111 =	插入擊鍵
+	t_Lang112 =	播放/暫停
+	t_Lang113 =	停止
+	t_Lang114 =	播放選項
+	t_Lang115 =	啟動/停止錄影
+	t_Lang116 =	錄製新宏
+	t_Lang117 =	錄製選項
+	t_Lang118 =	清除列表
+	t_Lang119 =	顯示進度條
+	t_Lang120 =	加快
+	t_Lang121 =	減緩
+	t_Lang122 =	顯示/隱藏標題欄
+	t_Lang123 =	顯示/隱藏主窗口
+	t_Lang124 =	碼頭
+	t_Lang125 =	取消停靠
+	t_Lang126 =	開放
+	t_Lang127 =	節省
+	t_Lang128 =	切
+	t_Lang129 =	複製
+	t_Lang130 =	貼
+	t_Lang131 =	全選
+	t_Lang132 =	刪除
+	t_Lang133 =	鍵盤
+	t_Lang134 =	鼠標
+	t_Lang135 =	他人
+	t_Lang136 =	亮點行
+	t_Lang137 =	默認的腳本編輯器
+	t_Lang138 =	編輯腳本（按Ctrl+Shift+E）
+	t_Lang139 =	選擇
+	t_Lang140 =	通過列
+	t_Lang141 =	所有列
+	t_Lang142 =	刪除主題從“工具欄”（需要重新啟動）
+	t_Lang143 =	自動隱藏控件工具欄
+	t_Lang144 =	單擊並拖動來改變秩序。雙擊進行編輯。
+	t_Lang145 =	編輯宏
+	t_Lang146 =	線
+	t_Lang147 =	宏
+	t_Lang148 =	主窗口的關閉按鈕行動
+	t_Lang149 =	關閉應用程序
+	t_Lang150 =	最小化到托盤
+	t_Lang151 =	關閉宏時顯示確認
+	t_Lang152 =	自動創建備份
 		
 ; Messages & Dialogs		
 	d_Lang001 =	打開
@@ -448,7 +628,7 @@
 	)	
 	d_Lang018 =	像素的顏色
 	d_Lang019 =	清除列表
-	d_Lang020 =	一定要刪除所有項目？
+	d_Lang020 =	關閉宏？
 	d_Lang021 =	下
 	d_Lang022 =	前
 	d_Lang023 =	信息
@@ -533,28 +713,43 @@
 	(LTrim	
 		你想現在就下載嗎？
 		
-		要禁用自動檢查，選擇“啟動”幫助“>”檢查。
+		要禁用自動檢查，選擇“啟動”幫助“>”檢查。 > 檢查啟動
 	)	
+		
 	d_Lang062 =	您已經有最新的版本。
 	d_Lang063 =	檢查時發生錯誤。
 	d_Lang064 =	COM對象錯誤
 	d_Lang065 =	排
 	d_Lang066 =	特別是
-	d_Lang067 =	在啟動時顯示提示。
+	d_Lang067 =	顯示這個窗口啟動
 	d_Lang068 =	溫馨提示：
 	d_Lang069 =	
 	(LTrim	
-		需要幫助，發現了一個bug或者有一個建議嗎？發送電子郵件至作者：<a href="mailto:rodolfoub@gmail.com">rodolfoub@gmail.com</a>
-		這是一個免費的軟件。如果你覺得它有用的考慮<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=rodolfoub`%40gmail`%2ecom&lc=US&item_name=Pulover`%27s`%20Macro`%20Creator&item_number=App`%2ePMC&currency_code=USD&bn=PP`%2dDonationsBF`%3abtn_donateCC_LG`%2egif`%3aNonHosted">捐贈</a>和支持發展。謝謝。
+		Pulover's Macro Creator的發展已經進入了很多的時間和精力。如果你覺得它有用，請考慮捐贈升值。
+		
+		捐贈與否，將不會有差異的特點和功能。
 	)	
-	d_Lang070 =	錯誤：無效的熱鍵選擇。
+	d_Lang070 =	捐贈...
+	d_Lang071 =	不用了，謝謝
+	d_Lang072 =	支持開源軟件
+	d_Lang073 =	錯誤：無效的熱鍵選擇。
+	d_Lang074 =	查找命令或函數
+	d_Lang075 =	歡迎來到Pulover's Macro Creator
+	d_Lang076 =	請選擇您首選的佈局
+	d_Lang077 =	緊湊
+	d_Lang078 =	默認
+	d_Lang079 =	在啟動時檢查更新。
+	d_Lang080 =	您可以更改此選項 > 設置 > 常規。
+	d_Lang081 =	在“視圖”菜單中，您可以更改和自定義佈局。
+	d_Lang082 =	該文件未找到！
+	d_Lang083 =	備份文件已經被發現。你想打開它？
 		
 ; Start-up Tips		
 	Start_Tips =	
 	(LTrim	
 		您可以創建宏命令按鈕在主窗口中，或者使用記錄，複製你的行動。轉到“選項”>“設置”>“錄製到選擇什麼樣的輸入將被記錄。
 		要使用錄音機，快速任務選項 >設置 >錄音，並勾選“清除列表”選項。然後在主窗口中單擊“錄製”按鈕，使用F10鍵來清除當前的宏，並開始一個新的相同的熱鍵。 您也可以勾選“始終活躍在主窗口中保持激活錄製和播放熱鍵”選項。
-		要獲得特定命令的幫助右鍵單擊命令按鈕，在主窗口中或在命令窗口中顯示AutoHotkey的在線幫助鏈接到任何地方。
+		要获得一个特定命令的帮助权的任意位置单击命令窗口中显示链接到AutoHotkey的在线帮助。
 		檢查“拍攝鍵”選項，從主窗口直接進入到您的宏按鍵和組合。
 		回車鍵和組合熱鍵框的底部，然後按下“插入”按鈕，將它們添加到選擇行。
 		如果沒有選定行的編輯按鈕適用於列表中的所有行。
@@ -581,85 +776,28 @@
 		您可以運行先進的功能，如SUBSTR和RegExReplace從“功能”窗口（“插入”> if語句/變量/函數）。或來自外部的AutoHotkey腳本運行自己的職能。
 	)	
 ; Tooltips		
-	NewB_TT =	新（按Ctrl+N）
-	OpenB_TT =	開放（按Ctrl+O）
-	SaveB_TT =	保存（Ctrl+S）
-	ExportB_TT =	導出華民航空（Ctrl+E鍵）
-	PreviewB_TT =	預覽腳本（按Ctrl+P）
-	OptionsB_TT =	設置（按Ctrl+G）
-	RecordB_TT =	錄製宏（按Ctrl+R）
-	StartB_TT =	激活宏（按Ctrl+Enter鍵）
-	TestRun_TT =	播放當前宏觀經濟（按Ctrl+Shift +回車）
-	RunTimer_TT =	定時器（按Ctrl+Shift+T）
-	MouseB_TT =	鼠標（F2）
-	TextB_TT =	文本（F3）
-	SpecialB_TT =	特殊鍵
-	ControlB_TT =	控制（F4）
-	PauseB_TT =	暫停 （F5） / 信息 （Shift+F5） / 關鍵的等待 （Control+F5）
-	WindowB_TT =	窗口（F6）
-	ImageB_TT =	圖片/像素搜索（F7）
-	RunB_TT =	運行/文件/串/ MISC。 （F8）。
-	ComLoopB_TT =	環路（F9）/後藤（按Shift+F9）/標籤（按Ctrl+F9）
-	IfStB_TT =	如果報表附註（F10）/變量（按Shift+F10）/功能（按Ctrl+F10）
-	IEComB_TT =	IE瀏覽器（F11）/ COM接口（SHIFT+F11）
-	SendMsgB_TT =	Windows消息（F12）
-	AutoKey_TT =	Backspace鍵來清除
-	ManKey_TT =	Backspace鍵來清除
-	AbortKey_TT =	Backspace鍵來清除
+	AutoKey_TT =	熱鍵玩宏
+	ManKey_TT =	熱鍵玩宏“一步一步”
+	AbortKey_TT =	熱鍵停止播放
+	PauseKey_TT =	熱鍵暫停播放
+	RecKey_TT =	Backspace鍵來清除
+	RecNewKey_TT =	Backspace鍵來清除
 	JoyKey_TT =	按下操縱桿上的按鈕
-	PauseKey_TT =	暫停執行，而不是停止
-	OnFinish_TT =	
-	(LTrim	
-		關機選項
-		當播放結束...
-	)	
-	Win1_TT =	作為改性劑添加Windows鍵
-	JoyHK_TT =	搖桿
 	ReptC_TT =	0 =無限
-	TabPlus_TT =	添加宏（按Ctrl+T）
-	TabClose_TT =	關閉宏（按Ctrl+W）
-	DuplicateL_TT =	重複宏（按Ctrl+Shift+D）
-	SaveC_TT =	保存當前宏（按Ctrl+Alt+S）
-	ImportB_TT =	進口宏（按Ctrl+I）
-	IfDirB_TT =	進行熱鍵取決於`N型的窗口，是主動或存在（按Ctrl+H）
-	KeepHKOn_TT =	保持始終處於激活熱鍵
 	A_List_TT =	選擇“宏”（Ctrl+1~0）
 	OSHK_TT =	選擇“宏”
 	OSHKEd_TT =	選擇“宏”
-	Duplicate_TT =	複製選中的行（CTRL+D）
-	Order_TT =	將選定行（按Ctrl +上一頁/ CTRL +下一頁）
-	Cut_TT =	剪切選定行（Ctrl+X鍵）
-	Copy_TT =	選定行複製（Ctrl+C組合鍵）
-	Paste_TT =	粘貼複製的行（Ctrl+V鍵）
-	Remove_TT =	刪除選定的行（DEL）
-	Undo_TT =	撤消（CTRL+Z）
-	Redo_TT =	重做（CTRL+Y）
-	CopyTo_TT =	複製到...
-	Capt_TT =	在此窗口中捕捉按鍵
-	OnScCtrl_TT =	顯示控件工具欄
-	ShowStep_TT =	顯示氣球提示
 	ApplyT_TT =	申請
 	ApplyI_TT =	申請
 	ApplyL_TT =	插入盒（插入）
 	InsertKey_TT =	插入擊鍵 (Ctrl+Insert)
-	EditButton_TT =	編輯（Enter）
-	PrevRefresh_TT =	刷新（F5）
-	PrevCopy_TT =	複製
-	OpenT_TT =	開放（按Ctrl+O）
-	SaveT_TT =	保存（Ctrl+S）
-	CutT_TT =	切
-	CopyT_TT =	複製
-	PasteT_TT =	貼
-	SelAllT_TT =	全選
-	DefaultMacro_TT =	選擇文件加載程序啟動
+	InsertKeyT_TT =	插入擊鍵
+	DefaultMacro_TT =	選擇要加載的文件在程序啟動
 	VarCopyA_TT =	複製當前變量內容
 	VarCopyB_TT =	複製當前變量內容
-	FindReplace_TT =	查找/替換（Ctrl+F鍵）
-	EditComm_TT =	編輯點評（Ctrl+L鍵）
-	EditColor_TT =	編輯顏色標誌（Ctrl+M鍵）
 	Reset_TT =	清除變量的內容
 	Screenshot_TT =	製作截圖
-	ColorPick_TT =	拾色器
+	ColorPick_TT =	獲取屏幕上的像素
 	PicPrev_TT =	雙擊打開圖片
 	CoordPixel_TT =	協調模式
 	VariatT_TT =	色調的變化
@@ -667,25 +805,17 @@
 	TransC_TT =	透明色
 	WScale_TT =	寬規模
 	HScale_TT =	身高規模
+	Fast_TT =	使用更快的搜索方法（推薦）
+	RGB_TT =	被解釋為一個RGB值而不是BGR導致顏色
 	LoopLVColor_TT =	點擊挑顏色
 	IfLVColor_TT =	點擊挑顏色
 	RefreshIEW_TT =	刷新列表
 	ActiveObj_TT =	嘗試連接到一個活躍的COM對象
+	TimeoutM_TT =	0 =無限
 	ExpView_TT =	高級編輯
 	ExpView2_TT =	高級編輯
-	OSPlay_TT =	播放/暫停
-	OSStop_TT =	停止
-	OSRec_TT =	啟動/停止錄影
-	OSRecNew_TT =	錄製新宏
-	OSRecOpt_TT =	錄製選項
-	OSPlayOpt_TT =	播放選項
-	OSClear_TT =	清除列表
 	OSProgB_TT =	顯示進度條
-	OSFast_TT =	加快
-	OSSlow_TT =	減緩
 	OSTrans_TT =	透明度
-	ToggleTB_TT =	顯示/隱藏標題欄
-	ToggleMW_TT =	顯示/隱藏主窗口
 	MRel_TT =	
 	(LTrim	
 		相對於當前位置的變動。
@@ -703,6 +833,7 @@
 		被視為修飾符（這些修飾符影響
 		只有在第二天的關鍵）：！+ ^，＃
 	)	
+	ComEvent_TT =	發送擊鍵的速度，是由按鍵延遲。
 	Clip_TT =	
 	(LTrim	
 		暫時使用剪貼板發送文本。
@@ -849,6 +980,22 @@
 	Ex_UV_TT =	導出全局變量。
 	Ex_EdVars_TT =	選擇要導出的全局變量。
 		
+; Operators		
+	As_Oper_1 =	分配
+	As_Oper_2 =	加
+	As_Oper_3 =	減去
+	As_Oper_4 =	乘
+	As_Oper_5 =	劃分
+	As_Oper_6 =	地板鴻溝
+	As_Oper_7 =	串連
+	Co_Oper_1 =	等於
+	Co_Oper_2 =	平等（區分大小寫）
+	Co_Oper_3 =	不等於
+	Co_Oper_4 =	大
+	Co_Oper_5 =	少
+	Co_Oper_6 =	大於或等於
+	Co_Oper_7 =	小於或等於
+		
 ; IE Commands Tips		
 	Tip_Navigate =	導航到URL或路徑。
 	Tip_Value =	獲取或設置對象的值。
@@ -866,6 +1013,7 @@
 	Tip_LocationURL =	獲取當前頁面的URL。
 	Tip_InnerText =	設置或獲取對象的文本。
 	Tip_InnerHTML =	設置或檢索對象的HTML。
+	Tip_OuterHTML =	設置或檢索HTML中的對象和它的內容。
 	Tip_Href =	設置或檢索的目標URL或錨點。
 	Tip_Src =	設置或獲取要由對象裝入的URL。
 	Tip_SelectedIndex =	設置或檢索索引選擇的選項中選擇的對象。
@@ -875,4 +1023,251 @@
 	Tip_Height =	設置或獲取對象的高度。
 	Tip_Length =	設置或檢索一個集合中的對象的數目。
 		
+; AHK Commands Tips		
+	Ahk_Cmd_Index =	
+	(LTrim	
+	Abs	返回數字的絕對值。
+	ASin	返回的反正弦弧度（其正弦是Number）。
+	ACos	返回弧度反餘弦（餘弦數）。
+	Array	創建一個數組對象。
+	Asc	返回字符串的第一個字符的字符代碼（1和255（ANSI版本）或65535（Unicode版本）之間的數字）。
+	ATan	返回弧度的反正切值（正切數）。
+	BlockInput	禁止或允許用戶通過鍵盤和鼠標與電腦互動的能力。
+	Break	退出（終止）一個循環。有效期內任何一種循環。
+	Ceil	返回Number向上舍入到最接近的整數（不帶任何.00後綴）。
+	Chr	返回以數字表示的字符代碼對應的單個字符。
+	Click	單擊鼠標按鈕在指定的坐標。它也可以按住一個按鈕，轉動方向盤，或移動。
+	ClipWait	等待直至剪貼板包含數據。
+	Clipboard	從剪貼板粘貼文本。
+	ComObjActive	檢索註冊的COM對象。
+	ComObjArray	創建一個SAFEARRAY使用COM。
+	ComObjConnect	連接一個COM對象的事件源與給定前綴的功能。
+	ComObjCreate	創建一個COM對象。
+	ComObjEnwrap / ComObjUnwrap	包裝/解開一個COM對象。
+	ComObjError	啟用或禁用COM的錯誤通知。
+	ComObjFlags	檢索或更改標誌控制一個COM包裝對象的行為。
+	ComObjGet	返回一個COM組件提供的對象的引用。
+	ComObjMissing	創建一個“缺少參數”對象傳遞給一個COM方法。
+	ComObjParameter	裹值和類型作為參數傳遞給一個COM方法。
+	ComObjQuery	查詢一個COM對象的接口或服務。
+	ComObjType	從COM對象獲取類型信息。
+	ComObjValue	檢索的價值或指針存儲在COM包裝對象。
+	Continue	跳過當前循環迭代的其餘部分，並開始一個新的。有效期內任何一種循環。
+	Control	使得各種控制的變化。
+	ControlClick	發送鼠標按鈕或鼠標滾輪事件的控制。
+	ControlEditPaste	膠泥的字符串插入符/編輯控件中的插入位置（這並不影響剪貼板中的內容）。
+	ControlFocus	設置輸入焦點上的一個窗口，一個給定的控制。
+	ControlGet	檢索各類有關控件的信息。
+	ControlGetFocus	獲取控制的目標窗口擁有輸入焦點，如果有的話。
+	ControlGetPos	檢索的位置和大小的控制。
+	ControlGetText	擷取文字的控制。
+	ControlMove	移動或調整大小的控制。
+	ControlSend / ControlSendRaw 	發送模擬擊鍵一個窗口或控制。
+	ControlSetText	更改文本的控制。
+	CoordMode	集協調各種命令模式是相對的活動窗口或屏幕。
+	Cos	返回三角餘弦數。
+	Critical	防止當前線程的其他線程被打斷。
+	DetectHiddenText	確定是否有隱形文字在一個窗口“看到”的目的找到窗口。這種影響如IfWinExist WinActivate的命令。
+	DetectHiddenWindows	確定無形窗口“看到”的腳本。
+	DllCall	DLL內部調用一個函數，比如一個標準的Windows API函數。
+	Drive	CD或DVD驅動器的托盤彈出/縮回，或設置驅動器的卷標。
+	DriveGet	檢索計算機的驅動器（S）的各類信息。
+	DriveSpaceFree	檢索可用磁盤空間的驅動器，以兆字節為單位。
+	Edit	打開當前腳本在關聯編輯器進行編輯。
+	Else	指定執行命令（S），如果IF語句的計算結果為FALSE。當一個以上的命令是，把它們括在一個塊（大括號）。
+	EnvAdd	設置一個變量本身以及給定值（也可以添加或減去時間從日期時間值）的總和。代名詞：VAR + =價值。
+	EnvDiv	設置一個變量除以給定的值本身。代名詞：無功/ =價值。
+	EnvGet	獲取環境變量。
+	EnvMult	設置一個變量，以本身乘以給定的值。代名詞：VAR =價值。
+	EnvSet	一個值寫入到一個環境中的變量。
+	EnvSub	設置一個變量減去給定值（也可以比較日期時間值）。代名詞：瓦爾省 - =價值。
+	EnvUpdate	通知OS及所有運行的應用程序的環境變量（S）已經改變。
+	Exit	退出當前線程或（如果腳本不是持久的，不包含熱鍵）整個腳本。
+	ExitApp	終止無條件腳本。
+	Exp	返回e（約2.71828182845905）提出的N次方。
+	FileAppend	將文本寫入到一個文件結束（先創建該文件，如果必要的話）。
+	FileCopy	複製一個或多個文件。
+	FileCopyDir	複製一個文件夾以及其所有子文件夾和文件（類似於XCOPY）。
+	FileCreateDir	創建一個文件夾。
+	FileCreateShortcut	創建一個快捷方式（LNK）文件。
+	FileDelete	刪除一個或多個文件。
+	FileEncoding	設置FileReadLine FILEREAD，循環讀取，FileAppend和文件打開的默認編碼。
+	FileInstall	包括指定的文件裡面的腳本的編譯版本。
+	FileGetAttrib	報告文件或文件夾是否是只讀，隱藏等。
+	FileGetShortcut	獲取信息的快捷方式（LNK）的文件，如目標文件。
+	FileGetSize	檢索一個文件的大小。
+	FileGetTime	檢索日期時間戳的文件或文件夾。
+	FileGetVersion	檢索一個文件的版本。
+	FileMove	移動或重命名一個或多個文件。
+	FileMoveDir	將文件夾以及其所有子文件夾和文件。它也可以重命名文件夾。
+	FileOpen	提供面向對象的文件I / O。
+	FileRead	讀取文件的內容到一個變量。
+	FileReadLine	從文件中讀取指定的行和存儲文本的變量。
+	FileRecycle	發送到回收站的文件或目錄，如果可能的話。
+	FileRecycleEmpty	清空回收站。
+	FileRemoveDir	刪除一個文件夾。
+	FileSelectFile	顯示一個標準的對話框，允許用戶打開或保存文件（S）。
+	FileSelectFolder	顯示一個標準的對話框，允許用戶選擇一個文件夾。
+	FileSetAttrib	一個或多個文件或文件夾的屬性更改。支持通配符。
+	FileSetTime	更改一個或多個文件或文件夾的日期時間戳。支持通配符。
+	Floor	返回Number向下調整至最接近的整數（不帶任何.00後綴）。
+	For	再次重複一系列命令在一個對象中的每個鍵 - 值對。
+	FormatTime	到指定的日期/時間格式轉換一個YYYYMMDDHH24MISS時間戳。
+	Func	檢索功能。
+	GetKeyName / GetKeyVK / GetKeySC	檢索的名稱或文字，虛擬鍵碼或掃描代碼的一個關鍵。
+	GetKeyState	檢查如果鍵盤按鍵或鼠標/操縱桿按鈕向上或向下。此外，還檢索操縱桿狀態。
+	Gosub	跳轉到指定的標籤和繼續執行，直到遇到返回。
+	Goto	跳轉到指定的標籤和繼續執行。
+	GroupActivate	激活下一個窗口，在窗口組GroupAdd命令定義。
+	GroupAdd	添加一個窗口規範窗口組，創建組，如果必要的。
+	GroupClose	關閉活動窗口，如果它只是激活，GroupActivate或GroupDeactivate的。然後激活該系列中的下一個窗口。它也可以關閉所有的窗口，在一組。
+	GroupDeactivate	類似GroupActivate不在組中除了激活下一個窗口。
+	if	指定命令（S）來執行，如果一個變量的值比較evalutes TRUE。當一個以上的命令是，把它們括在一個塊（大括號）。
+	if (expression)	指定執行命令（S），如果表達式的計算結果為TRUE。
+	If var [not] between	檢查變量的內容是數字或字母，兩個值之間（含）。
+	If var [not] in/contains MatchList 	檢查變量的內容是否匹配列表中的項目之一。
+	If var is [not] type	檢查變量的內容是否是數字，大寫等。
+	If Clipboard	檢查如果剪貼板文本配指定的字符串。
+	If ErrorLevel	如果指定的圖像或像素的檢查，發現在屏幕上。
+	If A_Index	的檢查，如果在當前循環的迭代配指定了一些。
+	IfEqual/IfNotEqual	比較變量的值相等。代名詞：如果var =價值瓦爾省<>價值。
+	IfExist / IfNotExist / FileExist	檢查文件或文件夾的存在。
+	IfGreater / IfGreaterOrEqual	比較變數的值。代名詞：如果瓦爾省>價值|如果瓦爾省> =價值。
+	IfInString / IfNotInString / InStr	檢查一個變量是否包含指定的字符串。
+	IfLess / IfLessOrEqual	比較變數的值。代名詞：如果var <價值|瓦爾省<=價值。
+	IfMsgBox	在最近的MsgBox命令時，檢查由用戶按壓了哪個按鈕。
+	IfWinActive / IfWinNotActive	檢查是否存在指定的窗口，是目前活躍（最重要的）。
+	IfWinExist / IfWinNotExist	檢查是否存在指定的窗口。
+	ImageSearch	搜索用於圖像的屏幕的區域。
+	IniDelete	刪除標準格式。ini文件中的值。
+	IniRead	讀取標準格式。ini文件中的值。
+	IniWrite	值寫入到標準格式。ini文件。
+	Input	等待用戶輸入一個字符串（不支持Windows 9x上：它什麼也不做）。
+	InputBox	顯示一個輸入框，要求用戶輸入一個字符串。
+	InStr	檢索數據對於一個給定的字符串的發生，從左側或右側。
+	)	
+	Ahk_Cmd_Index = %Ahk_Cmd_Index%`n	
+	(LTrim	
+	KeyHistory	顯示腳本信息和最近期的鍵盤和鼠標操作的歷史。
+	KeyWait	等待被釋放或按下一個鍵或鼠標/操縱桿按鈕。
+	Labels	一個標籤標識的代碼行，並可以用作轉到目標或形成一個子程序。
+	Log	返回數的對數（基數為10）。
+	Ln	返回自然對數（以e為底）數目。
+	Loop (normal) 	反复執行的一系列命令：要么指定次數或休息，直到遇到。
+	Loop (files & folders)	檢索指定的文件或文件夾，一次一個。
+	Loop (parse a string)	檢索子字符串（字段）從一個字符串，一次一個。
+	Loop (read file contents)	檢索在一個文本文件，一個（執行優於FileReadLine）時間線。
+	Loop (registry)	檢索指定的註冊表子項，一個項目的內容在同一時間。
+	Menu	創建，刪除，修改和顯示菜單和菜單項。更改托盤圖標和工具提示。控制編譯腳本的主窗口是否可以打開。
+	Mod	模。返回剩餘股利除以除數時。
+	MouseClickDrag	點擊次數，並持有指定的鼠標按鈕，將鼠標移動到目的地的坐標，然後釋放按鈕。
+	MouseGetPos	檢索當前鼠標光標位置，以及可選的窗口和控件懸停。
+	MouseMove	移動鼠標光標。
+	MsgBox	顯示在一個小窗口，其中包含一個或多個按鈕（如“是”和“否”）指定的文本。
+	NumGet	返回+偏移量存儲在指定的地址的二進制數。
+	NumPut	商店數量以二進制格式在指定的地址+偏移量的地址，並返回剛剛寫入的項目的右側。
+	OnExit	指定一個子程序時自動運行的腳本退出。
+	OnMessage	指定一個函數調用腳本時自動接收到指定的消息。
+	OutputDebug	將字符串發送到顯示調試器（如果有的話）。
+	Pause	暫停腳本的電流線程。
+	PixelGetColor	檢索處的像素的顏色指定的x，y坐標。
+	PixelSearch	搜索指定的顏色的像素的屏幕的一個區域。
+	PostMessage	將消息放入消息隊列中的一個窗口或控制。
+	Process	執行過程下列操作之一：檢查是否存在改變其優先關閉它等待它關閉。
+	Progress	創建或更新窗口，其中包含一個進度條。
+	Random	產生一個偽隨機數。
+	RegExMatch	確定一個字符串是否包含一個模式（正則表達式）。
+	RegExReplace	出現替換字符串內的模式（正則表達式）。
+	RegDelete	刪除註冊表子項或值。
+	RegRead	從註冊表中讀取一個值。
+	RegWrite	寫入到註冊表的值。
+	RegisterCallback	創建一個機器代碼地址，調用時，將呼叫重定向到一個腳本中的函數。
+	Return	返回從子程序執行此前通過函數調用，GOSUB，熱鍵激活，GroupActivate，或其他手段跳下。
+	Round	如果省略N或0，四捨五入到最接近的整數。如果N為正數，數到N小數點後四捨五入。如果N是負號是由N位四捨五入到小數點左邊的。
+	Run	運行外部程序。
+	RunAs	指定一組用戶憑據用於所有後續的運行和RunWait用途。需要Windows 2000/XP或更高版本。
+	RunWait	運行一個外部程序和等待，直到它完成。
+	Screenshot	創建一個PNG截圖的指定區域。
+	Send / SendRaw / SendInput / SendPlay	模擬鍵盤和鼠標操作發送到活動窗口。
+	SendLevel	控制熱鍵和熱字串人工鍵盤和鼠標事件被忽略。
+	SendMessage	一個窗口或控制發送消息，並等待確認。
+	SendMode	使得與SendInput或SendPlay模式的代名詞，而不是默認的SendEvent發送。也使得MOUSEMOVE /點擊/拖動使用指定的方法。
+	SetCapslockState	設置CapsLock鍵的狀態。也可以強制鑰匙留在或關閉。
+	SetEnv (Var = Value)	將指定值分配給一個變量。
+	SetFormat	數學運算所產生的整數和浮點數的格式設置。
+	SetKeyDelay	設置發送或至於ControlSend發送每個按鍵後會發生延遲。
+	SetMouseDelay	設定每個鼠標移動或點擊後會發生延遲。
+	SetNumlockState	設置的NumLock鍵的狀態。也可以強制鑰匙留在或關閉。
+	SetScrollLockState	設置ScrollLock鍵鍵的狀態。也可以強制鑰匙留在或關閉。
+	SetRegView	允許一個32位註冊表中的命令腳本訪問64位註冊表視圖，反之亦然。
+	Shutdown	關機，重啟或註銷系統。
+	Sin	返回數的三角正弦。
+	Sleep	等待指定的時間，然後再繼續。
+	Sort	排列變量的內容，字母，數字，或按隨機順序（任選去除重複）。
+	SoundBeep	從PC揚聲器發出聲音。
+	SoundGet	檢索各種聲音設備（主靜音，主音量等設置）
+	SoundGetWaveVolume	從聲音裝置擷取波形輸出音量。
+	SoundPlay	播放聲音，視頻或其他支持的文件類型。
+	SoundSet	更改各種設置聲音設備（主靜音，主音量等）
+	SoundSetWaveVolume	更改波形輸出音量的聲音設備。
+	SplashImage	創建或更新窗口，其中包含一個JPG，GIF，或BMP圖像。
+	SplashTextOn	創建一個自定義的文本彈出式窗口。
+	SplashTextOff	關閉上面的窗口。
+	SplitPath	分離文件名或URL，其名稱，目錄，擴展和驅動。
+	Sqrt	返回的平方根數目。
+	StatusBarGetText	檢索文本，從一個標準的狀態欄控制。
+	StatusBarWait	等待，直到窗口的狀態欄包含指定的字符串。
+	StrPut / StrGet	一個字符串複製或從一個內存地址，可選的代碼頁之間轉換。
+	StringCaseSense	確定字符串比較是否區分大小寫（默認是“不區分大小寫”）。
+	StringGetPos / InStr	檢索的指定子字符串內的位置。
+	StringLeft	檢索一個從左手側的一個字符串的字符數。
+	StringLen / StrLen	檢索在一個字符串中有多少個字符的計數。
+	StringLower	將字符串轉換為小寫。
+	StringMid / SubStr	檢索一個或多個字符在一個字符串中的指定位置。
+	StringReplace	一個新的字符串替換指定的子串。
+	StringRight	檢索從右側的字符串的字符數。
+	StringSplit / StrSplit	分離到一個數組中使用指定的分隔符的子串。
+	StringTrimLeft	刪除一些從左側的字符串的字符。
+	StringTrimRight	從右側的字符串中刪除的字符數。
+	StringUpper	將字符串轉換為大寫。
+	Suspend	禁用或啟用所有或選定的熱鍵和熱字串。
+	SysGet	檢索屏幕分辨率，多顯示器的信息，系統對象的尺寸，和其他系統的性能。
+	Tan	返回數的三角正切。
+	ToolTip	創建一個始終保持接通頂窗口在屏幕上的任何地方。
+	Transform	執行雜的數學函數，按位運算，如ASCII / Unicode轉換任務。
+	TrayTip	創建一個氣球消息窗口附近的托盤圖標。需要Windows 2000/XP或更高版本。
+	Trim / LTrim / RTrim	修剪某些字符從一個字符串的開頭和/或結尾。
+	Try	衛隊的一個或多個語句（命令或表達式）對運行時錯誤和異常拋出由throw命令。
+	Until	適用條件迴路或For循環的延續。
+	UrlDownloadToFile	從互聯網上下載一個文件。
+	VarSetCapacity	放大一個變量的控股能力，或釋放其內存。通常，這是必要的，只有不尋常的情況下，如DllCall。
+	WinActivate	激活指定的窗口（使得它最重要的）。
+	WinActivateBottom	同WinActivate，除非它激活最底部（最近最少活躍）匹配窗口，而不是最頂層。
+	WinActive	返回活動窗口的唯一ID（HWND），如果它符合指定的條件。
+	WinClose	關閉指定的窗口。
+	WinExist	檢查是否存在指定的窗口。
+	WinGetActiveStats	結合到一個命令中的職能WinGetActiveTitle WinGetPos。
+	WinGetActiveTitle	檢索活動窗口的標題。
+	WinGetClass	檢索指定窗口的類名。
+	WinGet	檢索指定窗口的唯一ID，進程ID，進程名稱，或者其控制清單。它也可以檢索符合指定條件的所有窗口的列表。
+	WinGetPos	檢索指定窗口的位置和大小。
+	WinGetText	檢索文本從指定的窗口。
+	WinGetTitle	檢索指定窗口的標題。
+	WinHide	隱藏指定的窗口。
+	WinKill	強制關閉指定的窗口。
+	WinMaximize	指定的窗口放大為最大尺寸。
+	WinMenuSelectItem	從菜單欄中指定的窗口調用菜單項。
+	WinMinimize	折疊指定的窗口到任務欄上的一個按鈕。
+	WinMinimizeAll	將所有窗口最小化。
+	WinMinimizeAllUndo	反轉以前WinMinimizeAll效果。
+	WinMove	變更位置和/或指定窗口的尺寸。
+	WinRestore	Unminimizes，或unmaximizes指定的窗口，如果它最小化或最大化。
+	WinSet	使得各種改變到指定的窗口，如“總在最前面”和透明度。
+	WinSetTitle	更改指定的窗口的標題。
+	WinShow	取消隱藏指定的窗口。
+	WinWait	等待，直到指定的窗口是否存在。
+	WinWaitActive	等待，直到指定的窗口處於活動狀態。
+	WinWaitClose	等待，直到指定的窗口不存在。
+	WinWaitNotActive	等待，直到指定的窗口不活躍。
+	)	
 return		

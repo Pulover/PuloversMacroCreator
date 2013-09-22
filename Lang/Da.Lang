@@ -4,52 +4,67 @@
 		
 ; Main Menu		
 	m_Lang001 =	&File
-	m_Lang002 =	&Indsæt
+	m_Lang002 =	&Kommandoer
 	m_Lang003 =	&Vælg
 	m_Lang004 =	&Rediger
 	m_Lang005 =	&Makro
-	m_Lang006 =	I&ndstillinger
-	m_Lang007 =	&Sprog
-	m_Lang008 =	&Donere
-	m_Lang009 =	&Hjælp
+	m_Lang006 =	&Se
+	m_Lang007 =	&Indstillinger
+	m_Lang008 =	S&prog
+	m_Lang009 =	&Donere
+	m_Lang010 =	&Hjælp
 		
-; File Submenu		
+; File Sub Menu		
 	f_Lang001 =	&Nyt
 	f_Lang002 =	&Åbent
 	f_Lang003 =	&Gem
 	f_Lang004 =	G&em som
-	f_Lang005 =	&Import Macro
-	f_Lang006 =	Ge&m nuværende Macro
-	f_Lang007 =	N&ylige Filer
-	f_Lang008 =	E&ksporter til AHK
-	f_Lang009 =	Ek&sempel Script
-	f_Lang010 =	&Listevariable
-	f_Lang011 =	&Udgang
-	f_Lang012 =	Ingen filer
+	f_Lang005 =	N&ylige Filer
+	f_Lang006 =	E&ksporter til AHK
+	f_Lang007 =	Ek&sempel Script
+	f_Lang008 =	&Rediger Script
+	f_Lang009 =	&Listevariable
+	f_Lang010 =	&Udgang
+	f_Lang011 =	&Ingen filer
 		
-; Insert Sub Menu		
+; Macro Sub Menu		
+	r_lang001 =	&Indspil makro
+	r_lang002 =	&Aktiver makroer
+	r_lang003 =	A&fspil aktuelle Macro
+	r_lang004 =	&Timer
+	r_lang005 =	Af&spil fra valgte række
+	r_lang006 =	S&pille, indtil valgte række
+	r_lang007 =	Spi&l valgte rækker
+	r_lang008 =	&Kontekstafhængig genvejstaster
+	r_lang009 =	Tilf&øj Makro
+	r_lang010 =	L&uk Makro
+	r_lang011 =	&Dublet Makro
+	r_lang012 =	&Rediger Makroer
+	r_lang013 =	I&mport Macro
+	r_lang014 =	&Gem nuværende Macro
+		
+; Commands Sub Menu		
 	i_Lang001 =	&Mus
 	i_Lang002 =	&Tekst
 	i_Lang003 =	&Kontrol
-	i_Lang004 =	&Pause / Besked / Nøgle Vente
-	i_Lang005 =	&Vindue
-	i_Lang006 =	&Billede / Pixel Søg
-	i_Lang007 =	&Run / File / String / Misc.
-	i_Lang008 =	&Loop / Goto / Label
-	i_Lang009 =	&Hvis Erklæringer / variabler / funktioner
-	i_Lang010 =	&Internet Explorer / COM interface
-	i_Lang011 =	&Windows Messages
-	i_Lang012 =	&Særlige Keys
+	i_Lang004 =	&Pause
+	i_Lang005 =	M&essage Box
+	i_Lang006 =	&Nøgle Vente
+	i_Lang007 =	&Vindue
+	i_Lang008 =	&Billede / Pixel Søg
+	i_Lang009 =	&Run / File / String / Misc.
+	i_Lang010 =	&Loop
+	i_Lang011 =	&Goto
+	i_Lang012 =	L&abel
+	i_Lang013 =	&Hvis Erklæringer
+	i_Lang014 =	Var&iabler
+	i_Lang015 =	&Funktioner
+	i_Lang016 =	Internet E&xplorer
+	i_Lang017 =	&COM Interface
+	i_Lang018 =	K&ør Scriptlet
+	i_Lang019 =	&Windows Messages
+	i_Lang020 =	Fin&d en kommando
 		
-; Select Sub Menu		
-	s_Lang001 =	&Vælg alt
-	s_Lang002 =	V&ælg Ingen
-	s_Lang003 =	&Invert Selection
-	s_Lang004 =	&Check Selected
-	s_Lang005 =	&Fravælg Valgt
-	s_Lang006 =	I&nvert Kontrol
-	s_Lang007 =	V&algt Type
-	s_Lang008 =	&Kommandoer
 		
 ; Edit Sub Menu		
 	e_Lang001 =	&Dupliker
@@ -65,46 +80,73 @@
 	e_Lang011 =	Fl&yt op
 	e_Lang012 =	Fly&t ned
 	e_Lang013 =	I&ndsæt fra kassen
-	e_Lang014 =	Edit f&arvemærke
+	e_Lang014 =	Inds&æt Tastetryk
+	e_Lang015 =	Edit f&arvemærke
 		
-; Macro Sub Menu		
-	r_lang001 =	&Indspil makro
-	r_lang002 =	&Aktiver makroer
-	r_lang003 =	A&fspil aktuelle Macro
-	r_lang004 =	&Timer
-	r_lang005 =	Ti&lføj Makro
-	r_lang006 =	L&uk Makro
-	r_lang007 =	&Kontekstafhængig genvejstaster
-	r_lang008 =	&Vis / skjul Controls
-	r_lang009 =	Af&spil fra valgte række
-	r_lang010 =	S&pille, indtil valgte række
-	r_lang011 =	Spil val&gte rækker
+; Select Sub Menu		
+	s_Lang001 =	&Vælg alt
+	s_Lang002 =	V&ælg Ingen
+	s_Lang003 =	&Invert Selection
+	s_Lang004 =	&Check Selected
+	s_Lang005 =	&Fravælg Valgt
+	s_Lang006 =	I&nvert Kontrol
+	s_Lang007 =	F&lyt Markering Op
+	s_Lang008 =	Fl&ytte Markeringen Ned
+	s_Lang009 =	V&algt Type
+	s_Lang010 =	Command typen
+		
+; View Sub Menu		
+	v_lang001 =	&Altid på toppen
+	v_lang002 =	&Fremhæve Rækker
+	v_lang003 =	&Indrykning
+	v_lang004 =	&Kontrol Værktøjslinje
+	v_lang005 =	&Eksempel
+	v_lang006 =	&Værktøjslinjer
+	v_lang007 =	&Genvejstaster
+	v_lang008 =	&Nulstil Kolonner Size
+	v_lang009 =	&Reset Layout
+		
+	v_lang010 =	&Fil
+	v_lang011 =	&Optage og afspille
+	v_lang012 =	&Kommandoer
+	v_lang013 =	&Redigere
+	v_lang014 =	O&ptioner
+	v_lang015 =	&Tilpas
+		
+	v_lang016 =	&Automatisk
+	v_lang017 =	&Manual
+	v_lang018 =	&Stands
+	v_lang019 =	&Pause
+		
+	v_lang020 =	&Compact
+	v_lang021 =	&Standard
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Indstillinger
 	o_Lang002 =	&Sæt som standard genvejstaster
 	o_Lang003 =	&Angiv som standard File
 	o_Lang004 =	&Fjern Standard File
-	o_Lang005 =	&Nulstil Kolonner Size
-	o_Lang006 =	S&tandard Genvejstaster
-	o_Lang007 =	Stan&dardindstillinger
+	o_Lang005 =	S&tandard Genvejstaster
+	o_Lang006 =	Stan&dardindstillinger
 		
 ; Donate Sub Menu		
 	p_Lang001 =	&PayPal Donation
 		
 ; Help Sub Menu		
-	h_Lang001 =	&Makro Creator Hjem
-	h_Lang002 =	&AHK Online Dokumentation
-	h_Lang003 =	&Kontrollere for opdateringer...
-	h_Lang004 =	K&ontrollere, om opstart
-	h_Lang005 =	Om
-	h_Lang006 =	&Tips
-	h_Lang007 =	&Forum
+	h_Lang001 =	&Hjælp
+	h_Lang002 =	&Tutorials
+	h_Lang003 =	T&ips
+	h_Lang004 =	&Makro Creator Hjem
+	h_Lang005 =	&Forum
+	h_Lang006 =	&AHK Online Dokumentation
+	h_Lang007 =	&Kontrollere for opdateringer...
+	h_Lang008 =	T&jek på opstart
+	h_Lang009 =	&Om
 		
 ; Tray Menu		
 	y_Lang001 =	Skjul vindue
 	y_Lang002 =	Vis vindue
-	y_Lang003 =	Vis / skjul Controls
+	y_Lang003 =	Kontrol Værktøjslinje
 		
 ; Main Window		
 	w_Lang001 =	Eksport
@@ -112,21 +154,21 @@
 	w_Lang003 =	Indstillinger
 	w_Lang004 =	Optag
 	w_Lang005 =	Spil
-	w_Lang006 =	Auto.
-	w_Lang007 =	Man.
+	w_Lang006 =	Afspilning
+	w_Lang007 =	Manual
 	w_Lang008 =	Stands
-	w_Lang009 =	Vis &kontrolelementer
-	w_Lang010 =	&Pause
-	w_Lang011 =	&Loop
-	w_Lang012 =	&Capture Keys
-	w_Lang013 =	Sk&jul vindue
-	w_Lang014 =	&Altid aktiv
+	w_Lang009 =	Display kontrol værktøjslinje
+	w_Lang010 =	Pause
+	w_Lang011 =	Loop
+	w_Lang012 =	Capture tastetryk i dette vindue
+	w_Lang013 =	Minimaliseren naar tray...
+	w_Lang014 =	Hotkeys Altid Aktive
 	w_Lang015 =	Gentag
-	w_Lang016 =	Forsinkelse (ms):
+	w_Lang016 =	Forsinkelse (ms)
 	w_Lang017 =	Anvend
 	w_Lang018 =	Indsæt
 	w_Lang019 =	Rediger
-	w_Lang020 =	(unused)
+	w_Lang020 =	nedlukningsvalgmulighederne (Når afspilningen er færdig...)
 	w_Lang021 =	Gør intet
 	w_Lang022 =	Luk ansøgning
 	w_Lang023 =	Luk ned
@@ -146,6 +188,60 @@
 	w_Lang037 =	Vindue
 	w_Lang038 =	Kommentar
 	w_Lang039 =	Farve
+	w_Lang040 =	Ny (Ctrl+N)
+	w_Lang041 =	Åbn (Ctrl+O)
+	w_Lang042 =	Gem (Ctrl+S)
+	w_Lang043 =	Eksporter til AHK (Ctrl+E)
+	w_Lang044 =	Eksempel Script (Ctrl+P)
+	w_Lang045 =	Indstillinger (Ctrl+G)
+	w_Lang046 =	Indspil makro (Ctrl+R)
+	w_Lang047 =	Aktivér Makroer (Ctrl+Enter)
+	w_Lang048 =	Afspil aktuelle Makro (Ctrl+Shift+Enter)
+	w_Lang049 =	Timer (Ctrl+Shift+T)
+	w_Lang050 =	Mus (F2)
+	w_Lang051 =	Tekst (F3)
+	w_Lang052 =	Rediger Makroer (Ctrl+Shift+M)
+	w_Lang053 =	Control (F4)
+	w_Lang054 =	Pause (F5)
+	w_Lang055 =	Message Box (Shift+F5)
+	w_Lang056 =	Nøgle Vente (Control+F5)
+	w_Lang057 =	Window (F6)
+	w_Lang058 =	Billede / Pixel Søg (F7)
+	w_Lang059 =	Run / File / String / Misc. (F8)
+	w_Lang060 =	Loop (F9)
+	w_Lang061 =	Goto (Shift+F9)
+	w_Lang062 =	Label (Ctrl+F9)
+	w_Lang063 =	Hvis Erklæringer (F10)
+	w_Lang064 =	variabler (Shift+F10)
+	w_Lang065 =	Funktioner (Ctrl+F10)
+	w_Lang066 =	Internet Explorer (F11)
+	w_Lang067 =	COM Interface (Shift+F11)
+	w_Lang068 =	Kør Scriptlet (Ctrl+F11)
+	w_Lang069 =	Windows Messages (F12)
+	w_Lang070 =	Tilføj på Windows-tasten på "Play" genvejen
+	w_Lang071 =	Brug et joystick knap som genvejstast
+	w_Lang072 =	Tilføj Makro (Ctrl+T)
+	w_Lang073 =	Luk Makro (Ctrl+W)
+	w_Lang074 =	Dublet Makro (Ctrl+Shift+D)
+	w_Lang075 =	Import Makro (Ctrl+I)
+	w_Lang076 =	Gem aktuelt Makro (Ctrl+Alt+S)
+	w_Lang077 =	Flyt op (Ctrl+PageUp)
+	w_Lang078 =	Flyt ned (Ctrl+PageDown)
+	w_Lang079 =	Kopier de valgte rækker (Ctrl+D)
+	w_Lang080 =	Klip markerede rækker (Ctrl+X)
+	w_Lang081 =	Kopiér markerede rækker (Ctrl+C)
+	w_Lang082 =	Indsætte kopieret Rækker (Ctrl+V)
+	w_Lang083 =	Slet markerede rækker (DEL)
+	w_Lang084 =	Fortryd (Ctrl+Z)
+	w_Lang085 =	Redo (Ctrl+Y)
+	w_Lang086 =	Kopier til...
+	w_Lang087 =	Find / Erstat (Ctrl+F)
+	w_Lang088 =	Rediger kommentar (Ctrl+L)
+	w_Lang089 =	Edit farvemærke (Ctrl+M)
+	w_Lang090 =	Tilpas
+	w_Lang091 =	Find en kommando (Ctrl+Shift+F)
+	w_Lang092 =	Rediger (Enter)
+	w_Lang093 =	Skjule
 		
 ; Command Windows		
 	c_Lang001 =	Mus
@@ -181,8 +277,8 @@
 	c_Lang031 =	Wheel Down
 	c_Lang032 =	Træk og slip
 	c_Lang033 =	Koordinater
-	c_Lang034 =	Klik
-	c_Lang035 =	Send
+	c_Lang034 =	Søg
+	c_Lang035 =	Underkommando
 	c_Lang036 =	Relativ
 	c_Lang037 =	Knap
 	c_Lang038 =	Venstre
@@ -216,7 +312,7 @@
 	c_Lang066 =	Nøgle Vente
 	c_Lang067 =	Hvis der konstateres
 	c_Lang068 =	Hvis den ikke findes / Error
-	c_Lang069 =	* Koordinater gemt på `%FoundX`% / `%FoundY`%.
+	c_Lang069 =	Koordinater gemt på `%FoundX`%/`%FoundY`%.
 	c_Lang070 =	Coord
 	c_Lang071 =	Variationer
 	c_Lang072 =	Eksempel
@@ -228,17 +324,17 @@
 	c_Lang078 =	Gå til Label
 	c_Lang079 =	Label
 	c_Lang080 =	Tilføj Label
-	c_Lang081 =	String (InputVar), Value
-	c_Lang082 =	Var [operatør] Value
-	c_Lang083 =	Tilføj Else
+	c_Lang081 =	String (InputVar)
+	c_Lang082 =	Variabel
+	c_Lang083 =	Else
 	c_Lang084 =	Tildel Variabel
 	c_Lang085 =	Indhold
 	c_Lang086 =	Operatør
-	c_Lang087 =	Brug Eval() til at løse udtryk
+	c_Lang087 =	Expression
 	c_Lang088 =	Reset
 	c_Lang089 =	Funktion Navn
-	c_Lang090 =	Kommasepareret parametre (uden parentes).
-	c_Lang091 =	(Brug `% for variabler. Bogstavelige Kommaer skal escapes [```,])
+	c_Lang090 =	Kommasepareret parametre (uden parentes)
+	c_Lang091 =	(Brug `% for variabler. Bogstavelige Kommaer skal escapes [ ```, ])
 	c_Lang092 =	Sideelement / Index
 	c_Lang093 =	Indstil
 	c_Lang094 =	Få
@@ -276,7 +372,7 @@
 	c_Lang126 =	Kode føjet til virtuelle taster List!
 	c_Lang127 =	Indtaste et navn til den variable
 	c_Lang128 =	Brug Funktion fra ekstern fil
-	c_Lang130 =	Break loop, hvis det findes
+	c_Lang130 =	Gentag indtil
 	c_Lang131 =	Anvend
 	c_Lang132 =	Loop
 	c_Lang133 =	File
@@ -309,9 +405,52 @@
 	c_Lang160 =	Transparent
 	c_Lang161 =	Scale
 	c_Lang162 =	Tilføje ", Hvis Udsagnet"
+	c_Lang163 =	Stuur Modus...
+	c_Lang164 =	Equal
+	c_Lang165 =	Indeholder
+	c_Lang166 =	Større
+	c_Lang167 =	Mindre
+	c_Lang168 =	Ja
+	c_Lang169 =	Ingen
+	c_Lang170 =	Ok
+	c_Lang171 =	Annuller
+	c_Lang172 =	Abort
+	c_Lang173 =	Ignorer
+	c_Lang174 =	Prøv igen
+	c_Lang175 =	Fortsæt
+	c_Lang176 =	Prøv igen
+	c_Lang177 =	Timeout
+	c_Lang178 =	Sæt nøglen forsinkelse
+	c_Lang179 =	Tastforsinkelse
+	c_Lang180 =	Tilfældig forsinkelse
+	c_Lang181 =	Minimum
+	c_Lang182 =	Maximum
+	c_Lang183 =	Deaktiver tilfældige forsinkelser for denne kommando
+	c_Lang184 =	Vælg fra listen
+	c_Lang185 =	Knapper
+	c_Lang186 =	Første
+	c_Lang187 =	Second
+	c_Lang188 =	Tredje
+	c_Lang189 =	Titel
+	c_Lang190 =	Hvis vinduet aktivt
+	c_Lang191 =	Hvis vinduet ikke aktiv
+	c_Lang192 =	Hvis vinduet eksisterer
+	c_Lang193 =	Hvis vinduet ikke findes
+	c_Lang194 =	Hvis filen eksisterer
+	c_Lang195 =	Hvis filen ikke eksisterer
+	c_Lang196 =	Hvis clipboard tekst
+	c_Lang197 =	Hvis loop indeks
+	c_Lang198 =	Hvis billedet/pixel fundet
+	c_Lang199 =	Hvis billedet/pixel ikke fundet
+	c_Lang200 =	Hvis streng indeholder
+	c_Lang201 =	Hvis streng ikke indeholder
+	c_Lang202 =	Hvis besked boks
+	c_Lang203 =	Sammenlign variabler
+	c_Lang204 =	Evaluer udtryk
+	c_Lang205 =	Region
 		
 ; Other Windows		
-	t_Lang001 =	Eksporter til AHK
+	t_Lang001 =	Eksporter til AutoHotkey
 	t_Lang002 =	Makroer
 	t_Lang003 =	Loops
 	t_Lang004 =	0 = uendelig
@@ -362,14 +501,14 @@
 	t_Lang049 =	Capture om frigivelse
 	t_Lang050 =	Tryk på Enter for at fange
 	t_Lang051 =	Screenshots firmavejviser
-	t_Lang052 =	Misc.
+	t_Lang052 =	Linje wrap
 	t_Lang053 =	Hotkeys
 	t_Lang054 =	Sæt som standard genvejstaster
 	t_Lang055 =	Deaktiver Window Genveje
 	t_Lang056 =	Nulstil Kolonner Size
 	t_Lang057 =	Standard Macro File
 	t_Lang058 =	Standard Library File
-	t_Lang059 =	Brug Eval() som standard for variabler Assignment
+	t_Lang059 =	Brug Expression som standard til variable Opgave
 	t_Lang060 =	Vis Farver og Hjælp Marks for-løkker og Udtalelser
 	t_Lang061 =	(Klik på Index kolonneoverskriften for at aktivere / deaktivere)
 	t_Lang062 =	Virtuelle taster
@@ -378,16 +517,16 @@
 	t_Lang065 =	Kommentar
 	t_Lang066 =	Søg Column
 	t_Lang067 =	Find / Erstat
-	t_Lang068 =	Find
-	t_Lang069 =	Match Case
-	t_Lang070 =	Erstat
+	t_Lang068 =	&Find
+	t_Lang069 =	&Match Case
+	t_Lang070 =	&Erstat
 	t_Lang071 =	Fundet
 	t_Lang072 =	Erstattet
-	t_Lang073 =	Valgte rækker
-	t_Lang074 =	Alle rækker
-	t_Lang075 =	Alle Makroer
+	t_Lang073 =	&Valgte rækker
+	t_Lang074 =	&Alle rækker
+	t_Lang075 =	A&lle Makroer
 	t_Lang076 =	Om
-	t_Lang077 =	Regular Expression
+	t_Lang077 =	&Regular Expression
 	t_Lang078 =	Afspil én gang
 	t_Lang079 =	Spil hver X (mili) sekunder
 	t_Lang080 =	Timer
@@ -395,22 +534,22 @@
 	t_Lang082 =	Erklæringer
 	t_Lang083 =	Vis Indrykning for-løkker og Udtalelser
 	t_Lang084 =	(Dobbeltklik på aktion kolonneoverskriften aktivere / deaktivere)
-	t_Lang085 =	Display Controls bar på opstart
+	t_Lang085 =	Display styrer bar ved opstart
 	t_Lang086 =	Søgning efter funktioner. Vent venligst...
 	t_Lang087 =	Medtag eksterne filer
 	t_Lang088 =	Opret EXE fil
 	t_Lang089 =	Tillad flere forekomster
 	t_Lang090 =	Defaults
 	t_Lang091 =	Tillad at trække rækker
-	t_Lang092 =	Hele celleindhold
+	t_Lang092 =	&Hele celleindhold
 	t_Lang093 =	Standard INI format
 	t_Lang094 =	Name = Value
 	t_Lang095 =	Indtast 1 variabel per linje. Du kan også tilføje [afsnit].
 	t_Lang096 =	Bruger Globale Variabler
 	t_Lang097 =	Tryk på en knap på joysticket
-	t_Lang098 =	Joystick
+	t_Lang098 =	Backspace for at slette
 	t_Lang099 =	Knap
-	t_Lang100 =	Vis Info
+	t_Lang100 =	Vis ballontip
 	t_Lang101 =	Hastighed
 	t_Lang102 =	Langsom
 	t_Lang103 =	Fast
@@ -422,6 +561,47 @@
 	t_Lang109 =	Ned
 	t_Lang110 =	Up
 	t_Lang111 =	Indsæt Tastetryk
+	t_Lang112 =	Afspil / Pause
+	t_Lang113 =	Stands
+	t_Lang114 =	indstillinger til afspilning
+	t_Lang115 =	Start / Stop Record
+	t_Lang116 =	Indspil ny makro
+	t_Lang117 =	Optagemuligheder
+	t_Lang118 =	Ryd liste
+	t_Lang119 =	Display Progress Bar
+	t_Lang120 =	Fremskynde
+	t_Lang121 =	Sæt farten ned
+	t_Lang122 =	Vis / skjul Titel Bar
+	t_Lang123 =	Vis / skjul hovedvinduet
+	t_Lang124 =	Dock
+	t_Lang125 =	Fradock
+	t_Lang126 =	Åbn
+	t_Lang127 =	Gem
+	t_Lang128 =	Klip
+	t_Lang129 =	Kopiér
+	t_Lang130 =	Indsæt
+	t_Lang131 =	Vælg alt
+	t_Lang132 =	Slet
+	t_Lang133 =	Keyboard
+	t_Lang134 =	Mus
+	t_Lang135 =	Andre
+	t_Lang136 =	Fremhæve Rækker
+	t_Lang137 =	Standard Script Editor
+	t_Lang138 =	Rediger Script (Ctrl+Shift+E)
+	t_Lang139 =	Vælg
+	t_Lang140 =	Ved Kolonne
+	t_Lang141 =	Alle Kolonner
+	t_Lang142 =	Fjern tema fra Værktøjslinjer (kræver genstart)
+	t_Lang143 =	Skjuler automatisk kontrol værktøjslinje
+	t_Lang144 =	Klik og træk for at ændre rækkefølge. Dobbeltklik for at redigere.
+	t_Lang145 =	Rediger Makroer
+	t_Lang146 =	I overensstemmelse
+	t_Lang147 =	Makro
+	t_Lang148 =	Aktion af hovedvinduet er lukkeknappen
+	t_Lang149 =	Luk ansøgning
+	t_Lang150 =	Minimer til bakken
+	t_Lang151 =	Display bekræftelse, når lukker en makro
+	t_Lang152 =	Opret sikkerhedskopier automatisk
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Åbent
@@ -448,7 +628,7 @@
 	)	
 	d_Lang018 =	Pixelfarve
 	d_Lang019 =	Ryd liste
-	d_Lang020 =	Sørge for at slette alle poster?
+	d_Lang020 =	Luk Makro?
 	d_Lang021 =	Næste
 	d_Lang022 =	Forrige
 	d_Lang023 =	Message
@@ -514,8 +694,8 @@
 	)	
 	d_Lang057 =	
 	(LTrim	
-		- Tryk Ctrl + piletasterne til at flytte valgte område.
-		- Tryk på Skift + piletasterne for at ændre størrelsen valgte område.
+		- Tryk Ctrl+piletasterne til at flytte valgte område.
+		- Tryk på Skift+piletasterne for at ændre størrelsen valgte område.
 		- Tryk på Enter for at afslutte.
 	)	
 	d_Lang058 =	
@@ -533,28 +713,43 @@
 	(LTrim	
 		Kunne du tænke dig at hente den nu?
 		
-		For at deaktivere automatiske kontroller Vælg Hjælp > Kontrollere, om opstart.
+		For at deaktivere automatiske kontroller Vælg Hjælp > Tjek på opstart
 	)	
+		
 	d_Lang062 =	Du har allerede den nyeste version.
 	d_Lang063 =	Der opstod en fejl under kontrol.
 	d_Lang064 =	COM objekt fejl i
 	d_Lang065 =	Row
 	d_Lang066 =	Konkret
-	d_Lang067 =	Vis tips om opstart.
+	d_Lang067 =	Vis dette vindue ved opstart
 	d_Lang068 =	Tips:
 	d_Lang069 =	
 	(LTrim	
-		Brug for hjælp, fundet en fejl eller har et forslag? Send en e-mail til forfatteren: <a href="mailto:rodolfoub@gmail.com">rodolfoub@gmail.com</a>
-		Dette er en gratis software. Hvis du har fundet det nyttigt at overveje <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=rodolfoub`%40gmail`%2ecom&lc=US&item_name=Pulover`%27s`%20Macro`%20Creator&item_number=App`%2ePMC&currency_code=USD&bn=PP`%2dDonationsBF`%3abtn_donateCC_LG`%2egif`%3aNonHosted">gør en donation</a> og støtte udvikling. Tak.
+		En masse tid og kræfter er gået ind i udviklingen af Pulover's Macro Creator. Hvis du finder det nyttigt, kan du overveje at vise din påskønnelse med en donation.
+		
+		Donere eller ej, vil der ikke være nogen forskel i sine funktioner og funktionalitet.
 	)	
-	d_Lang070 =	Fejl: Ugyldig Hotkey Selected.
+	d_Lang070 =	Doner...
+	d_Lang071 =	Nej tak
+	d_Lang072 =	Støtte Open Source software
+	d_Lang073 =	Fejl: Ugyldig Hotkey Selected.
+	d_Lang074 =	Find en kommando eller funktion
+	d_Lang075 =	Velkommen til Pulover's Macro Creator
+	d_Lang076 =	Vælg din foretrukne layout
+	d_Lang077 =	Compact
+	d_Lang078 =	Standard
+	d_Lang079 =	Check for opdateringer om opstart.
+	d_Lang080 =	Du kan ændre dette i Indstillinger > Indstillinger > Generelt.
+	d_Lang081 =	Du kan ændre og tilpasse layout i menuen Vis.
+	d_Lang082 =	Filen blev ikke fundet!
+	d_Lang083 =	En backup-fil er fundet. Kunne du tænke dig at åbne den?
 		
 ; Start-up Tips		
 	Start_Tips =	
 	(LTrim	
 		Du kan oprette makroer ved hjælp af kommandoen knapper i hovedvinduet eller ved hjælp af optageren til at kopiere dine handlinger. Gå til Valg > Indstillinger > Optagelse at vælge, hvad input vil blive registreret.
 		Hvis du vil bruge optageren i hurtige opgaver gå til Valg > Indstillinger > Optagelse og tjek "Clear List" valgmulighed. Klik derefter på knappen Optag i hovedvinduet og bruge F10 til at rydde den aktuelle Makro og starte en ny med samme genvejstast. Du kan også tjekke "altid aktiv" i hovedvinduet til at holde Optagelse og afspilning genvejstaster aktive.
-		For at få hjælp til en specifik kommando højreklikke på en kommandoknap i hovedvinduet eller hvor som helst i et kommandovindue til at vise links til AutoHotkey online Hjælp.
+		For at få hjælp til en specifik kommando højreklikke et vilkårligt sted på et kommandovindue til at vise links til AutoHotkey online Hjælp.
 		Check "Capture taster" mulighed for at indtaste nøgler og koder til din makro direkte fra hovedvinduet.
 		Indtast nøgler og koder i Genvejstast boksen nederst og tryk på knappen Indsæt for at føje dem til de udvalgte rækker.
 		Hvis der ikke rækker udvalgt de edit knapper gælder for alle rækker i listen.
@@ -581,85 +776,28 @@
 		Du kan køre avancerede funktioner såsom SUBSTR og RegExReplace fra Funktioner vindue (Indsæt > Hvis Statements / variable / funktioner). Eller køre dine egne funktioner fra eksterne AutoHotkey scripts.
 	)	
 ; Tooltips		
-	NewB_TT =	Ny (Ctrl+N)
-	OpenB_TT =	Åbn (Ctrl+O)
-	SaveB_TT =	Gem (Ctrl+S)
-	ExportB_TT =	Eksporter til AHK (Ctrl+E)
-	PreviewB_TT =	Eksempel Script (Ctrl+P)
-	OptionsB_TT =	Indstillinger (Ctrl+G)
-	RecordB_TT =	Indspil makro (Ctrl+R)
-	StartB_TT =	Aktivér Makroer (Ctrl+Enter)
-	TestRun_TT =	Afspil aktuelle Makro (Ctrl+Shift+Enter)
-	RunTimer_TT =	Timer (Ctrl+Shift+T)
-	MouseB_TT =	Mus (F2)
-	TextB_TT =	Tekst (F3)
-	SpecialB_TT =	Særlige Keys
-	ControlB_TT =	Control (F4)
-	PauseB_TT =	Pause (F5) / Besked (Shift+F5) / Nøgle Vente (Control+F5) 
-	WindowB_TT =	Window (F6)
-	ImageB_TT =	Billede / Pixel Søg (F7)
-	RunB_TT =	Run / File / String / Misc. (F8)
-	ComLoopB_TT =	Loop (F9) / Goto (Shift+F9) / Label (Ctrl+F9)
-	IfStB_TT =	Hvis Erklæringer (F10) / variabler (Shift+F10) / Funktioner (Ctrl+F10)
-	IEComB_TT =	Internet Explorer (F11) / COM Interface (Shift+F11) / Kør Scriptlet (Ctrl+F11)
-	SendMsgB_TT =	Windows Messages (F12)
-	AutoKey_TT =	Backspace for at slette
-	ManKey_TT =	Backspace for at slette
-	AbortKey_TT =	Backspace for at slette
+	AutoKey_TT =	Genvejstast for at spille Macro
+	ManKey_TT =	Genvejstast for at spille Macro "step-by-step"
+	AbortKey_TT =	Genvejstast for at stoppe afspilningen
+	PauseKey_TT =	Genvejstast for at pause afspilningen
+	RecKey_TT =	Backspace for at slette
+	RecNewKey_TT =	Backspace for at slette
 	JoyKey_TT =	Tryk på en knap på joysticket
-	PauseKey_TT =	Pauser udførelse stedet for at stoppe
-	OnFinish_TT =	
-	(LTrim	
-		nedlukningsvalgmulighederne
-		Når afspilningen er færdig...
-	)	
-	Win1_TT =	Tilføj på Windows-tasten som modifier
-	JoyHK_TT =	Joystick
 	ReptC_TT =	0 = uendelig
-	TabPlus_TT =	Tilføj Makro (Ctrl+T)
-	TabClose_TT =	Luk Makro (Ctrl+W)
-	DuplicateL_TT =	Dublet Makro (Ctrl+Shift+D)
-	SaveC_TT =	Gem aktuelt Makro (Ctrl+Alt+S)
-	ImportB_TT =	Import Makro (Ctrl+I)
-	IfDirB_TT =	Gør genvejstaster arbejde afhængigt`ntype vindue, der er aktiv eller eksisterer (Ctrl+H)
-	KeepHKOn_TT =	Hold Hotkeys altid aktiveret
 	A_List_TT =	Vælge Macro (Ctrl+1~0)
 	OSHK_TT =	Vælge Macro
 	OSHKEd_TT =	Vælge Macro
-	Duplicate_TT =	Kopier de valgte rækker (Ctrl+D)
-	Order_TT =	Flyt valgte rækker (Ctrl+PageUp / Ctrl+PageDown)
-	Cut_TT =	Klip markerede rækker (Ctrl+X)
-	Copy_TT =	Kopiér markerede rækker (Ctrl+C)
-	Paste_TT =	Indsætte kopieret Rækker (Ctrl+V)
-	Remove_TT =	Slet markerede rækker (DEL)
-	Undo_TT =	Fortryd (Ctrl+Z)
-	Redo_TT =	Redo (Ctrl+Y)
-	CopyTo_TT =	Kopier til...
-	Capt_TT =	Capture tastetryk i dette vindue
-	OnScCtrl_TT =	Vise Kontroller Værktøjslinje
-	ShowStep_TT =	Vis ballontip
 	ApplyT_TT =	Anvend
 	ApplyI_TT =	Anvend
 	ApplyL_TT =	Indsæt fra kassen (Insert)
 	InsertKey_TT =	Indsæt Tastetryk (Ctrl+Insert)
-	EditButton_TT =	Rediger (Enter)
-	PrevRefresh_TT =	Opdater (F5)
-	PrevCopy_TT =	Kopiér
-	OpenT_TT =	Åbn (Ctrl+O)
-	SaveT_TT =	Gem (Ctrl+S)
-	CutT_TT =	Klip
-	CopyT_TT =	Kopiér
-	PasteT_TT =	Indsæt
-	SelAllT_TT =	Vælg alt
-	DefaultMacro_TT =	Vælg fil at indlæse på programmet starter op
+	InsertKeyT_TT =	Indsæt Tastetryk
+	DefaultMacro_TT =	Vælg fil at indlæse på programmets opstart
 	VarCopyA_TT =	Kopier nuværende variable indhold
 	VarCopyB_TT =	Kopier nuværende variable indhold
-	FindReplace_TT =	Find / Erstat (Ctrl+F)
-	EditComm_TT =	Rediger kommentar (Ctrl+L)
-	EditColor_TT =	Edit farvemærke (Ctrl+M)
 	Reset_TT =	Ryd variable indhold
 	Screenshot_TT =	Gør Screenshot
-	ColorPick_TT =	Farvevælgeren
+	ColorPick_TT =	Få pixel på skærmen
 	PicPrev_TT =	Dobbeltklik for at åbne billedet
 	CoordPixel_TT =	Koordinere tilstand
 	VariatT_TT =	Shades of variation
@@ -667,25 +805,17 @@
 	TransC_TT =	Gennemsigtig farve
 	WScale_TT =	Bredde skala
 	HScale_TT =	Højde skala
+	Fast_TT =	Bruger en hurtigere søgemetode (anbefales)
+	RGB_TT =	Årsager farve, der skal fortolkes som en RGB-værdi i stedet for BGR
 	LoopLVColor_TT =	Klik for at vælge en farve
 	IfLVColor_TT =	Klik for at vælge en farve
 	RefreshIEW_TT =	Refresh List
 	ActiveObj_TT =	Forsøger at oprette forbindelse til en Active COM objekt
+	TimeoutM_TT =	0 = uendelig
 	ExpView_TT =	Avanceret Editor
 	ExpView2_TT =	Avanceret Editor
-	OSPlay_TT =	Afspil / Pause
-	OSStop_TT =	Stands
-	OSRec_TT =	Start / Stop Record
-	OSRecNew_TT =	Indspil ny makro
-	OSRecOpt_TT =	Optagemuligheder
-	OSPlayOpt_TT =	indstillinger til afspilning
-	OSClear_TT =	Ryd liste
 	OSProgB_TT =	Display Progress Bar
-	OSFast_TT =	Fremskynde
-	OSSlow_TT =	Sæt farten ned
 	OSTrans_TT =	opacitet
-	ToggleTB_TT =	Vis / skjul Titel Bar
-	ToggleMW_TT =	Vis / skjul hovedvinduet
 	MRel_TT =	
 	(LTrim	
 		Bevægelser i forhold til den aktuelle position.
@@ -703,6 +833,7 @@
 		behandles som modifikatorer (disse modifikatorer påvirker
 		kun den meget næste tast):!, +, ^, #
 	)	
+	ComEvent_TT =	Den hastighed, hvormed tastetryk sendes bestemmes af centrale forsinkelse.
 	Clip_TT =	
 	(LTrim	
 		Midlertidigt bruger Udklipsholder til at sende teksten.
@@ -849,6 +980,22 @@
 	Ex_UV_TT =	Eksportere globale variabler.
 	Ex_EdVars_TT =	Vælg globale variabler, der skal eksporteres.
 		
+; Operators		
+	As_Oper_1 =	Tildel
+	As_Oper_2 =	Tilføj
+	As_Oper_3 =	Trække
+	As_Oper_4 =	Multiply
+	As_Oper_5 =	Opdel
+	As_Oper_6 =	Gulv kløft
+	As_Oper_7 =	Sammenkæde
+	Co_Oper_1 =	Equal
+	Co_Oper_2 =	Equal (små bogstaver)
+	Co_Oper_3 =	Ikke lig
+	Co_Oper_4 =	Større
+	Co_Oper_5 =	Mindre
+	Co_Oper_6 =	Større end eller lig
+	Co_Oper_7 =	Mindre end eller lig
+		
 ; IE Commands Tips		
 	Tip_Navigate =	Navigerer til en webadresse eller sti.
 	Tip_Value =	Får eller indstiller værdien af ​​genstanden.
@@ -866,6 +1013,7 @@
 	Tip_LocationURL =	Gets webadressen for den aktuelle side.
 	Tip_InnerText =	Indstiller eller får teksten til objektet.
 	Tip_InnerHTML =	Indstiller eller henter HTML af objektet.
+	Tip_OuterHTML =	Indstiller eller henter objektet og dets indhold i HTML.
 	Tip_Href =	Indstiller eller henter en destinationswebadresse eller et ankerpunkt.
 	Tip_Src =	Indstiller eller henter en webadresse, der skal lastes af objektet.
 	Tip_SelectedIndex =	Indstiller eller henter indekset for den valgte indstilling i en udvalgt objekt.
@@ -875,4 +1023,251 @@
 	Tip_Height =	Indstiller eller henter højden af ​​objektet.
 	Tip_Length =	Indstiller eller henter antallet af objekter i en samling.
 		
+; AHK Commands Tips		
+	Ahk_Cmd_Index =	
+	(LTrim	
+	Abs	Returnerer den absolutte værdi af nummer.
+	ASin	Returnerer arcus sinus (antallet , hvis sinus er Tal ) i radianer .
+	ACos	Returnerer arccosinus (antallet hvis cosinus er Tal ) i radianer .
+	Array	Opretter et Array objekt.
+	Asc	Giver tegnkoden ( et tal mellem 1 og 255 ( i ANSI builds ) eller 65535 ( i Unicode builds ) ) for det første tegn i String .
+	ATan	Returnerer arcus (antallet , hvis tangens er Number) i radianer .
+	BlockInput	Deaktiverer eller muliggør brugerens evne til at interagere med computeren via tastatur og mus .
+	Break	Udgange ( slutter ) en løkke. Gyldige inden enhver form for løkke .
+	Ceil	Retur nummer rundet op til nærmeste hele tal (uden nogen .00 suffix ) .
+	Chr	Returnerer enkelt tegn , der svarer til karakteren angivet af nummer.
+	Click	Klikker på en museknap på de angivne koordinater. Det kan også holde en knap, og drej rattet , eller flytte .
+	ClipWait	Venter, indtil klippebordet indeholder data.
+	Clipboard	Indsætter tekst fra klippebordet.
+	ComObjActive	Henter en registreret COM objekt.
+	ComObjArray	Opretter en SAFEARRAY til brug med COM.
+	ComObjConnect	Tilslutter et COM objekts event kilder til funktioner med en given præfiks.
+	ComObjCreate	Opretter et COM-objekt .
+	ComObjEnwrap / ComObjUnwrap	Wraps / unwraps et COM-objekt .
+	ComObjError	Aktiverer eller deaktiverer meddelelse COM fejl.
+	ComObjFlags	Henter eller ændrer flag , der styrer en COM wrapper objekt adfærd.
+	ComObjGet	Returnerer en reference til et objekt fra en COM komponent .
+	ComObjMissing	Opretter en "missing parameter " objekt til at passere til en COM -metoden.
+	ComObjParameter	Wraps en værdi og type til at passere som en parameter til en COM metode .
+	ComObjQuery	Forespørger et COM-objekt for en grænseflade eller service.
+	ComObjType	Henter typen information fra et COM-objekt .
+	ComObjValue	Henter værdi eller pointer gemt i en COM wrapper objekt.
+	Continue	Springer resten af strømsløjfen iteration og begynder en ny. Gyldige inden enhver form for løkke .
+	Control	Gør en række ændringer til en kontrol.
+	ControlClick	Sender en museknap eller musehjulet begivenhed til en kontrol.
+	ControlEditPaste	Pastaer String på indsætningstegn / indsæt position i et Edit kontrol ( dette påvirker ikke indholdet af klippebordet ) .
+	ControlFocus	Indstiller input fokus til en given kontrol på et vindue .
+	ControlGet	Henter forskellige typer oplysninger om en kontrol.
+	ControlGetFocus	Henter , der styrer af målet vinduet har input fokus , hvis nogen.
+	ControlGetPos	Henter positionen og størrelsen af en kontrol.
+	ControlGetText	Henter tekst fra en kontrol.
+	ControlMove	Flytter eller ændrer størrelse på en kontrol.
+	ControlSend / ControlSendRaw 	Sender simulerede tastetryk til et vindue eller kontrol.
+	ControlSetText	Ændrer teksten til en kontrol.
+	CoordMode	Indstiller koordinere mode for forskellige kommandoer at være relativ til enten det aktive vindue eller skærmen.
+	Cos	Returnerer den trigonometriske cosinus af Tal .
+	Critical	Forhindrer aktuelle tråd fra at blive afbrudt af andre tråde .
+	DetectHiddenText	Afgør, om usynlige tekst i et vindue "ses " med henblik på at finde vinduet. Dette påvirker kommandoer såsom IfWinExist og WinActivate .
+	DetectHiddenWindows	Bestemmer om usynlige vinduer er " set" af scriptet .
+	DllCall	Kalder en funktion inde en DLL , såsom en standard Windows API-funktionen .
+	Drive	Skubber / trækker bakkens i en cd- eller dvd-drev , eller sætter et drev volumen etiket.
+	DriveGet	Henter forskellige oplysninger om computerens drev ( r) .
+	DriveSpaceFree	Henter den frie diskplads af et drev , i megabyte .
+	Edit	Åbner det aktuelle script til redigering i den tilhørende editor.
+	Else	Angiver kommandoen ( s) til at udføre, hvis en IF -sætning evalueres til FALSK . Når mere end én kommando er til stede, vedlægge dem i en blok ( seler ) .
+	EnvAdd	Sætter en variabel til summen af sig selv plus given værdi ( kan også tilføje eller trække tid fra en dato - tidsværdi ) . Synonymt med : Var + = Værdi .
+	EnvDiv	Sætter en variabel til sig selv divideret med den givne værdi . Synonymt med : Var / = Værdi .
+	EnvGet	Henter en miljøvariabel .
+	EnvMult	Sætter en variabel til selv gange den givne værdi . Synonymt med : Var * = Værdi .
+	EnvSet	Skriver en værdi til en variabel indeholdt i miljøet .
+	EnvSub	Sætter en variabel til sig selv minus given værdi ( kan også sammenligne date -time værdier). Synonymt med : Var - = Værdi .
+	EnvUpdate	Meddeler OS og alle de kørende programmer, som miljøvariabel (r) er ændret.
+	Exit	Afslutter aktuelle tråd , eller ( hvis scriptet ikke er vedvarende , og indeholder ingen genvejstaster ) hele scriptet .
+	ExitApp	Afslutter scriptet betingelsesløst.
+	Exp	Returnerer e ( der er ca 2,71828182845905 ) opløftet til n'te potens .
+	FileAppend	Skriver tekst til slutningen af en fil (første opretter filen , hvis det er nødvendigt ) .
+	FileCopy	Kopierer en eller flere filer.
+	FileCopyDir	Kopierer en mappe sammen med alle dens undermapper og filer (svarende til xcopy ) .
+	FileCreateDir	Opretter en mappe.
+	FileCreateShortcut	Opretter en genvej ( . LNK fil) .
+	FileDelete	Sletter en eller flere filer.
+	FileEncoding	Indstiller standard kodning for FileRead , FileReadLine , Loop Læs , FileAppend og FileOpen .
+	FileInstall	Inkluderer den angivne fil inde kompileret version af scriptet .
+	FileGetAttrib	Rapporter om en fil eller mappe er read -only , skjulte , etc.
+	FileGetShortcut	Henter oplysninger om en genvej ( . LNK -fil), som sit mål -fil.
+	FileGetSize	Henter størrelsen på en fil .
+	FileGetTime	Henter den datetime præg af en fil eller mappe .
+	FileGetVersion	Henter version af en fil.
+	FileMove	Flytter eller omdøber en eller flere filer.
+	FileMoveDir	Flytter en mappe sammen med alle dens undermapper og filer. Det kan også omdøbe en mappe .
+	FileOpen	Giver objektorienteret fil I / O.
+	FileRead	Læser en fils indhold i en variabel.
+	FileReadLine	Læser den angivne linje fra en fil og gemmer teksten i en variabel.
+	FileRecycle	Sender en fil eller mappe til papirkurven , hvis det er muligt .
+	FileRecycleEmpty	Tømmer papirkurven .
+	FileRemoveDir	Sletter en mappe.
+	FileSelectFile	Viser en standard dialogboks , der giver brugeren mulighed for at åbne eller gemme filen (erne).
+	FileSelectFolder	Viser en standard dialogboks , der giver brugeren mulighed for at vælge en mappe .
+	FileSetAttrib	Ændrer de attributter af en eller flere filer eller mapper . Wildcards er understøttet.
+	FileSetTime	Ændrer datetime stempel en eller flere filer eller mapper . Wildcards er understøttet.
+	Floor	Retur nummer rundet ned til nærmeste hele tal (uden nogen .00 suffix ) .
+	For	Gentager en række kommandoer én gang for hver nøgleværdi par i et objekt.
+	FormatTime	Forvandler en YYYYMMDDHH24MISS tidsstempel ind i den angivne dato / tid format.
+	Func	Henter en henvisning til en funktion .
+	GetKeyName / GetKeyVK / GetKeySC	Henter navn eller tekst, virtuel tast kode eller scan koden på en tast.
+	GetKeyState	Tjekker, om et tastatur nøgle eller mus / joystick knap er ned eller op . Henter også joystick status .
+	Gosub	Springer til den angivne label og fortsætter fuldbyrdelsen, indtil Return er stødt .
+	Goto	Springer til den angivne label og fortsætter henrettelse.
+	GroupActivate	Aktiverer næste vindue i et vindue gruppe, der blev defineret med groupadd .
+	GroupAdd	Tilføjer et vindue specifikation til et vindue gruppe , skaber gruppen, hvis det er nødvendigt.
+	GroupClose	Lukker det aktive vindue, hvis det bare blev aktiveret ved GroupActivate eller GroupDeactivate . Det aktiverer derefter den næste vindue i rækken . Det kan også lukke alle vinduer i en gruppe.
+	GroupDeactivate	Svarende til GroupActivate undtagen aktiverer den næste vinduet ikke i gruppen.
+	if	Angiver kommandoen ( r) at udføre, hvis sammenligningen af en variabel til en værdi evalutes til TRUE . Når mere end én kommando er til stede, vedlægge dem i en blok ( seler ) .
+	if (expression)	Angiver kommandoen ( s) til at udføre, hvis et udtryk evalueres til SAND .
+	If var [not] between	Kontrollerer, om en variabels indhold er numerisk eller alfabetisk mellem to værdier ( inklusive).
+	If var [not] in/contains MatchList 	Kontrollerer, om en variabels indhold matcher et af elementerne på en liste.
+	If var is [not] type	Kontrollerer , om en variabels indhold er numerisk , store osv.
+	If Clipboard	Kontrollerer om Udklipsholder teksten kampe den angivne streng .
+	If ErrorLevel	Tjekker, om en bestemt billede eller pixel blev fundet i skærmen.
+	If A_Index	Kontrollerer om den aktuelle løkke iteration kampe et angivet et nummer.
+	IfEqual/IfNotEqual	Sammenligner en variabel til en værdi for ligestilling . Synonymt med : Hvis Var = Værdi | hvis Var < > Value .
+	IfExist / IfNotExist / FileExist	Kontrollerer eksistensen af en fil eller mappe .
+	IfGreater / IfGreaterOrEqual	Sammenligner en variabel til en værdi . Synonymt med : Hvis Var> Value | hvis Var> = Værdi .
+	IfInString / IfNotInString / InStr	Tjekker, om en variabel indeholder den angivne streng .
+	IfLess / IfLessOrEqual	Sammenligner en variabel til en værdi . Synonymt med : Hvis Var < Value | hvis Var < = Værdi .
+	IfMsgBox	Kontrol, som tastetryk af brugeren under det seneste MsgBox kommando.
+	IfWinActive / IfWinNotActive	Kontrollerer om den angivne vindue eksisterer og er aktiv i øjeblikket (den forreste ) .
+	IfWinExist / IfWinNotExist	Kontrollerer om den angivne vindue eksisterer.
+	ImageSearch	Søger en region af skærmen for et billede .
+	IniDelete	Sletter en værdi fra et standardformat . Ini -filen .
+	IniRead	Læser en værdi fra et standardformat . Ini -filen .
+	IniWrite	Skriver en værdi til et standardformat . Ini -filen .
+	Input	Waits for brugeren at indtaste en streng ( understøttes ikke på Windows 9x : det gør ikke noget ) .
+	InputBox	Viser en tekstboks til at bede brugeren om at indtaste en streng.
+	InStr	Søger efter en given forekomst af en streng , fra venstre eller højre.
+	)	
+	Ahk_Cmd_Index = %Ahk_Cmd_Index%`n	
+	(LTrim	
+	KeyHistory	Viser script info og en historie af de seneste tastetryk og museklik.
+	KeyWait	Venter en nøgle eller mus / joystick knappen til at blive frigivet eller presses ned.
+	Labels	En etiket identificerer en linje kode, og kan bruges som en Goto mål eller til dannelse af en subrutine.
+	Log	Returnerer logaritme (basis 10) i nummer.
+	Ln	Returnerer den naturlige logaritme (base e) nummer.
+	Loop (normal) 	Udføre en række kommandoer gentagne gange: enten angivne antal gange, eller indtil pause stødt.
+	Loop (files & folders)	Henter de angivne filer eller mapper, en ad gangen.
+	Loop (parse a string)	Henter delstrenge (felter) fra en streng, en ad gangen.
+	Loop (read file contents)	Henter linjerne i en tekstfil, en ad gangen (præsterer bedre end FileReadLine).
+	Loop (registry)	Henter indholdet af den angivne undernøgle i registreringsdatabasen, et element ad gangen.
+	Menu	Opretter, sletter, ændrer og viser menuer og menupunkter. Ændrer ikonen og dens tooltip. Styrer om hovedvinduet i en kompileret script kan åbnes.
+	Mod	Modulo. Returnerer resten, når Udbytte divideret med Divisor.
+	MouseClickDrag	Klik og holder den specificerede museknap, flytter musen til destinationen koordinater, frigiver så knappen.
+	MouseGetPos	Henter den aktuelle position af musemarkøren, og eventuelt hvilket vindue og kontrol er det svæver over.
+	MouseMove	Flytter musemarkøren.
+	MsgBox	Viser den angivne tekst i et lille vindue, der indeholder en eller flere knapper (såsom Ja og Nej).
+	NumGet	Returnerer det binære tal er gemt på den angivne adresse + offset.
+	NumPut	Butikker Antal i binært format på den angivne adresse + offset og returnerer adressen til højre for elementet lige skrevet.
+	OnExit	Angiver en subrutine til at køre automatisk, når scriptet afslutter.
+	OnMessage	Angiver en funktion til at kalde automatisk, når scriptet modtager den angivne meddelelse.
+	OutputDebug	Sender en streng til debugger (hvis nogen) til visning.
+	Pause	Pauser scriptet aktuelle tråd.
+	PixelGetColor	Henter farven af pixel på den angivne x, y-koordinater.
+	PixelSearch	Søger en region af skærmen i en pixel af den angivne farve.
+	PostMessage	Placerer et budskab i beskeden kø af et vindue eller kontrol.
+	Process	Udfører en af følgende handlinger på en proces: tjekker om den eksisterer, ændrer prioritet; lukker det, venter det til at lukke.
+	Progress	Opretter eller opdaterer et vindue med en statuslinje.
+	Random	Genererer en pseudo-tilfældigt tal.
+	RegExMatch	Afgør, om en streng indeholder et mønster (regulært udtryk).
+	RegExReplace	Erstatter forekomster af et mønster (regulært udtryk) inde i en streng.
+	RegDelete	Sletter en undernøgleindstillingen eller værdi fra registreringsdatabasen.
+	RegRead	Læser en værdi fra registreringsdatabasen.
+	RegWrite	Skriver en værdi i registreringsdatabasen.
+	RegisterCallback	Opretter en maskin-kode, adresse, når du kalder, omdirigerer opkaldet til en funktion i scriptet.
+	Return	Returnerer fra en subrutine, som henrettelse tidligere havde sprunget via funktions-opkald, gosub, Genvejstast aktivering, GroupActivate eller andre midler.
+	Round	Hvis N udelades eller 0, Antal afrundes til nærmeste hele tal. Hvis N er positivt tal, Antal afrundes til N decimaler. Hvis N er negativ, Number afrundet med N cifre til venstre for decimaltegnet.
+	Run	Kører et eksternt program.
+	RunAs	Angiver et sæt brugerlegitimationsoplysninger til brug for alle efterfølgende anvendelser af Run-og RunWait. Kræver Windows 2000/XP eller nyere.
+	RunWait	Kører et eksternt program, og venter, indtil den er færdig.
+	Screenshot	Opretter en PNG skærmbillede af et specificeret område.
+	Send / SendRaw / SendInput / SendPlay	Sender simulerede tastetryk og museklik til det aktive vindue.
+	SendLevel	Controls som kunstige tastatur og mus begivenheder ignoreret af genvejstaster og hotstrings.
+	SendMessage	Sender en besked til et vindue eller kontrol og venter på anerkendelse.
+	SendMode	Gør Send synonymt med SendInput eller SendPlay snarere end standard (sendEvent). Også gør Klik og mouseMove / Klik / Træk bruge den angivne metode.
+	SetCapslockState	Indstiller tilstand Capslock tasten. Kan også tvinge nøglen til at blive på eller fra.
+	SetEnv (Var = Value)	Tildeler den angivne værdi til en variabel.
+	SetFormat	Indstiller formatet af heltal og floating point tal genereret af matematiske operationer.
+	SetKeyDelay	Indstiller forsinkelse, som vil opstå efter hvert tastetryk sendes af Send eller ControlSend.
+	SetMouseDelay	Indstiller forsinkelse, som vil opstå efter hver mus bevægelse eller klik på.
+	SetNumlockState	Indstiller tilstand Numlock-tasten. Kan også tvinge nøglen til at blive på eller fra.
+	SetScrollLockState	Indstiller tilstand ScrollLock tasten. Kan også tvinge nøglen til at blive på eller fra.
+	SetRegView	Giver indskrive kommandoer i en 32-bit script at få adgang til 64-bit register visning og vice versa.
+	Shutdown	Lukker, genstarter eller logger af systemet.
+	Sin	Returnerer den trigonometriske sinus af nummer.
+	Sleep	Venter den angivne mængde tid, før du fortsætter.
+	Sort	Arrangerer en variabels indhold i alfabetisk, numerisk eller tilfældig rækkefølge (eventuelt fjernelse dubletter).
+	SoundBeep	Udsender en tone fra pc'en højttaler.
+	SoundGet	Henter forskellige indstillinger fra en lydenhed (master mute, master volume, etc.)
+	SoundGetWaveVolume	Henter den bølge output volumen fra en lyd-enhed.
+	SoundPlay	Afspiller en lyd, video eller andet understøttet filtype.
+	SoundSet	Ændringer forskellige indstillinger af en lyd-enhed (master mute, master volume, etc.)
+	SoundSetWaveVolume	Ændrer den bølge lydstyrken for en lyd-enhed.
+	SplashImage	Opretter eller opdaterer et vindue med en JPG, GIF eller BMP billede.
+	SplashTextOn	Opretter en tilpasselig tekst popup-vinduet.
+	SplashTextOff	Lukker vinduet herover.
+	SplitPath	Adskiller et filnavn eller URL ind sit navn, bibliotek, udvidelse og drive.
+	Sqrt	Returnerer kvadratroden af nummer.
+	StatusBarGetText	Henter tekst fra en standard statuslinjen kontrol.
+	StatusBarWait	Venter, indtil et vindue statuslinje indeholder den angivne streng.
+	StrPut / StrGet	Kopierer en streng til eller fra en hukommelse adresse, valgfri konvertere den mellem kode sider.
+	StringCaseSense	Bestemmer, om strengen sammenligninger er små bogstaver (standard er "ikke små bogstaver").
+	StringGetPos / InStr	Henter position angiven streng i en streng.
+	StringLeft	Henter en række tegn fra venstre side af en streng.
+	StringLen / StrLen	Henter optælling af hvor mange tegn i en streng.
+	StringLower	Konverterer en streng til små bogstaver.
+	StringMid / SubStr	Henter et eller flere tegn fra den angivne position i en streng.
+	StringReplace	Erstatter det angivne delstreng med en ny streng.
+	StringRight	Henter en række tegn fra højre side af en streng.
+	StringSplit / StrSplit	Adskiller en streng i et array af delstrenge hjælp de angivne delimiters.
+	StringTrimLeft	Fjerner et antal tegn fra venstre side af en streng.
+	StringTrimRight	Fjerner et antal tegn fra højre side af en streng.
+	StringUpper	Konverterer en streng til store bogstaver.
+	Suspend	Deaktiverer eller aktiverer alle eller udvalgte genvejstaster og hotstrings.
+	SysGet	Henter skærmopløsning, multi-monitor info, dimensioner systemets objekter og andre system egenskaber.
+	Tan	Returnerer den trigonometriske tangens af nummer.
+	ToolTip	Opretter en altid-on-top vinduet vilkårligt sted på skærmen.
+	Transform	Udfører diverse matematiske funktioner, bitvise operationer og opgaver såsom ASCII / Unicode konvertering.
+	TrayTip	Opretter en ballon besked vindue i nærheden ikonen. Kræver Windows 2000/XP eller nyere.
+	Trim / LTrim / RTrim	Trims visse tegn fra begyndelsen og / eller slutningen af en streng.
+	Try	Guards én eller flere udsagn (kommandoer eller udtryk) mod runtime fejl og undtagelser kastet af kast kommando.
+	Until	Anvender en betingelse for videreførelse af en Loop eller For-løkke.
+	UrlDownloadToFile	Downloader en fil fra internettet.
+	VarSetCapacity	Forstørrer en variabels bedrift kapacitet eller frigør sin hukommelse. Normalt er dette kun nødvendigt for usædvanlige omstændigheder, såsom DllCall.
+	WinActivate	Aktiverer den angivne vindue (gør det forreste).
+	WinActivateBottom	Samme som WinActivate bortset fra at det aktiverer den nederste (mindst nylig aktiv) matchende vindue snarere end den øverste.
+	WinActive	Returnerer Unikt ID (HWND) af det aktive vindue, hvis det matcher de angivne kriterier.
+	WinClose	Lukker angivne vindue.
+	WinExist	Kontrollerer om den angivne vindue eksisterer.
+	WinGetActiveStats	Kombinerer funktionerne fra WinGetActiveTitle og WinGetPos i én kommando.
+	WinGetActiveTitle	Henter titlen på den aktive vindue.
+	WinGetClass	Henter den angivne vindue klasse navn.
+	WinGet	Henter den angivne vindue unikke id, proces-id, proces navn eller en liste over sine kontroller. Det kan også hente en liste over alle vinduer der matcher de angivne kriterier.
+	WinGetPos	Henter positionen og størrelsen af den angivne vindue.
+	WinGetText	Henter teksten fra angivne vindue.
+	WinGetTitle	Henter titlen på den angivne vindue.
+	WinHide	Skjuler angivne vinduet.
+	WinKill	Tvinger den angivne vinduet for at lukke.
+	WinMaximize	Forstørrer angivne vindue til dets maksimale størrelse.
+	WinMenuSelectItem	Starter et menupunkt fra menulinjen i angivne vindue.
+	WinMinimize	Skjuler det angivne vindue i en knap på proceslinjen.
+	WinMinimizeAll	Minimerer alle vinduer.
+	WinMinimizeAllUndo	Vender effekt af en tidligere WinMinimizeAll.
+	WinMove	Ændrer position og / eller størrelsen af den angivne vindue.
+	WinRestore	Unminimizes eller unmaximizes det angivne vindue, hvis det er minimeret eller maksimeret.
+	WinSet	Gør en række ændringer i den angivne vindue, såsom "always on top" og gennemsigtighed.
+	WinSetTitle	Ændrer titlen på den angivne vindue.
+	WinShow	Unhides den angivne vinduet.
+	WinWait	Venter, indtil den angivne vindue eksisterer.
+	WinWaitActive	Venter, indtil den angivne vindue er aktivt.
+	WinWaitClose	Venter, indtil den angivne vindue ikke eksisterer.
+	WinWaitNotActive	Venter, indtil den angivne vinduet ikke er aktivt.
+	)	
 return		

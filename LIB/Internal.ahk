@@ -38,22 +38,135 @@ ShowTooltip()
 	return
 }
 
-DragToolBar()
+SBShowTip(Command)
 {
-	global PMCOSC
+	global Cmd_Tips
 	
+	For each, Line in Cmd_Tips
+	{
+		If (Line.Cmd = Command)
+		{
+			SB_SetText(Line.Desc)
+			return Line.Desc
+		}
+	}
+	SB_SetText("")
+}
+
+Find_Command(SearchWord)
+{
+	local Results, SearchIn, Search
+	
+	Results := {}
+	Loop, Parse, KeywordsList, |
+	{
+		SearchIn := A_LoopField
+		Loop, Parse, %A_LoopField%_Keywords, `,
+		{
+			If (SearchIn = "Type")
+				Search := "Type" A_Index
+			Else
+				Search := SearchIn
+			If InStr(A_LoopField, FindCmd)
+				Results.Insert({Cmd: A_LoopField, Path: %Search%_Path})
+			Else Try
+			{
+				If InStr(%A_LoopField%_Desc, FindCmd)
+					Results.Insert({Cmd: A_LoopField, Path: %Search%_Path})
+			}
+		}
+	}
+	return Results
+}
+
+RebarLock(rbPtr, Lock=True)
+{
+	Loop, % rbPtr.GetBandCount()
+		rbPtr.ModifyBand(A_Index, "Style", "NoGripper", Lock)
+}
+
+CloseTab()
+{
+	global
+	
+	MouseGetPos,,,, cHwnd, 2
+	If (cHwnd = TabSel)
+	{
+		If (ClickedTab := TabGet())
+			GoSub, TabClose
+		ClickedTab := ""
+	}
+}
+
+DragToolbar()
+{
+	global
+	
+	CoordMode, Mouse, Window
 	If (A_Gui = 28)
 		PostMessage, 0xA1, 2,,, ahk_id %PMCOSC%
+	Else If (A_Gui = "chMacro")
+	{
+		MouseGetPos, HitX, HitY,, cHwnd, 2
+		If (cHwnd = TabSel)
+		{
+			GuiControl, chMacro:Choose, A_List, % TabGet()
+			GoSub, TabSel
+			NewOrder := TabDrag()
+			If IsObject(NewOrder)
+			{
+				Project := [], Proj_Opts := [], ActiveList := A_List
+				For each, Index in NewOrder.Order
+					Proj_Opts.Insert({Auto: o_AutoKey[Index], Man: o_ManKey[Index]
+									, Times: o_TimesG[Index], Hist: HistoryMacro%Index%})
+				For each, Index in NewOrder.Order
+				{
+					o_AutoKey[A_Index] := Proj_Opts[A_Index].Auto
+				,	o_ManKey[A_Index] := Proj_Opts[A_Index].Man
+				,	o_TimesG[A_Index] := Proj_Opts[A_Index].Times
+				,	Project.Insert(PMC.LVGet("InputList" Index))
+					If (Index = ActiveList)
+						NewActive := A_Index
+				}
+				ActiveList := NewActive
+				Loop, %TabCount%
+					PMC.LVLoad("InputList" A_Index, Project[A_Index])
+				,	HistoryMacro%A_Index% := Proj_Opts[A_Index].Hist
+				GuiControl, chMacro:, A_List, |
+				GuiControl, chMacro:, A_List, % NewOrder.Tabs
+				GuiControl, chMacro:Choose, A_List, %ActiveList%
+				Gui, chMacro:Submit, NoHide
+				GoSub, chMacroGuiSize
+				GoSub, LoadData
+				GoSub, RowCheck
+				GoSub, UpdateCopyTo
+				Project := "", Proj_Opts := "", SavePrompt := 1
+				SetTimer, HitFix, -10
+			}
+			Else
+				SetTimer, SetListFocus, -10
+		}
+	}
 }
+
+HitFix:
+ControlClick,, ahk_id %cHwnd%,,,, x%HitX% y%HitY% NA
+SetListFocus:
+GuiControl, chMacro:Focus, InputList%A_List%
+return
 
 ShowContextHelp()
 {
+	local Pag,Title
+	
 	MouseGetPos,,,, Control
 	If InStr(Control, "Edit")
 		return
 	If A_Gui in 3,5,7,8,10,11,12,14,16,19,21,22,23,24
 	{
-		Menu, % Help%A_Gui%, Show
+		GuiControlGet, Pag,, TabControl
+		Title := ContHelp[A_Gui][Pag ? Pag : 1]
+		Menu, %Title%, Show
 		return
 	}
 	Else If A_Gui = 28
@@ -61,11 +174,6 @@ ShowContextHelp()
 		Menu, ToolbarMenu, Show
 		return
 	}
-	Else If A_GuiControl not in MouseB,TextB,ControlB
-	,SpecialB,PauseB,WindowB,ImageB,RunB,ComLoopB
-	,IfStB,SendMsgB,IEComB,IfDirB
-		return
-	Menu, %A_GuiControl%, Show
 }
 
 CmdHelp()
@@ -98,12 +206,12 @@ CmdHelp()
 	Else
 		GuiControlGet, Pag,, TabControl
 	Title := ContHTitle[Gui][Pag ? Pag : 1]
-	If !Title
+	If (WinActive("A") <> StartTipID) && ((!Title) || (WinActive("A") <> CmdWin))
 		Title := "index.html"
-	IfExist, MacroCreator_Help.chm
-		Run, hh.exe mk:@MSITStore:MacroCreator_Help.chm::/%Title%
+	IfExist, %A_ScriptDir%\MacroCreator_Help.chm
+		Run, hh.exe mk:@MSITStore:%A_ScriptDir%\MacroCreator_Help.chm::/%Title%
 	Else
-		Run, http://www.autohotkey.net/~Pulover/Docs/%Title%
+		Run, http://www.macrocreator.com/docs/%Title%
 	return 0
 }
 
@@ -120,6 +228,7 @@ ActiveGui(Hwnd)
 
 GuiGetSize(ByRef W, ByRef H, GuiID=1)
 {
+	DetectHiddenWindows, On
 	Gui %GuiID%:+LastFoundExist
 	IfWinExist
 	{
@@ -128,6 +237,7 @@ GuiGetSize(ByRef W, ByRef H, GuiID=1)
 	,	W := Floor(NumGet(rect, 8, "int") / Round(A_ScreenDPI / 96, 2))
 	,	H := Floor(NumGet(rect, 12, "int") / Round(A_ScreenDPI / 96, 2))
 	}
+	DetectHiddenWindows, Off
 }
 
 HotkeyCtrlHasFocus()
@@ -141,10 +251,13 @@ HotkeyCtrlHasFocus()
 	}
 }
 
-SleepRandom(Delay, Percent)
+SleepRandom(Delay=0, Min="", Max="", Percent="")
 {
-	Min := Floor(Delay - (Delay * Percent / 100))
-	Max := Floor(Delay + (Delay * Percent / 100))
+	If (Percent)
+	{
+		Min := Floor(Delay - (Delay * Percent / 100))
+		Max := Floor(Delay + (Delay * Percent / 100))
+	}
 	Random, RandTime, % (Min < 0) ? 0 : Min, %Max%
 	Sleep, %RandTime%
 }
@@ -156,18 +269,12 @@ EditCtrlHasFocus()
 	return ctrl
 }
 
-WM_CTLCOLOR(wParam, lParam)
-{
-	global GuiA := ActiveGui(WinActive("A"))
-	Static hBrush
-	BG_COLOR   := 0xFFFFFF
-	IfEqual, hBrush,, SetEnv, hBrush, % DllCall("CreateSolidBrush", UInt, BG_COLOR)
-	GuiControlGet, ctrl, Name, %lParam%
-	If (ctrl = "JoyKey")
-	{
-		DllCall("SetBkColor", UInt,wParam, UInt, BG_COLOR)
-		Return hBrush
-	}
+SCI_NOTIFY(wParam, lParam, msg, hwnd, sciObj) {
+
+	line := sciObj.LineFromPosition(sciObj.position)
+
+	if (sciObj.scnCode = SCN_MARGINCLICK)
+		sciObj.ToggleFold(line)
 }
 
 MarkArea(LineW)
@@ -291,16 +398,6 @@ AssignVar(Name, Operator, Value)
 		%Name% //= Value
 	Else If (Operator = ".=")
 		%Name% .= Value
-	Else If (Operator = "|=")
-		%Name% |= Value
-	Else If (Operator = "&=")
-		%Name% &= Value
-	Else If (Operator = "^=")
-		%Name% ^= Value
-	Else If (Operator = ">>=")
-		%Name% >>= Value
-	Else If (Operator = "<<=")
-		%Name% <<= Value
 }
 
 ListIEWindows()
@@ -310,7 +407,7 @@ ListIEWindows()
 	{
 		For Pwb in ComObjCreate( "Shell.Application" ).Windows
 			If InStr(Pwb.FullName, "iexplore.exe")
-				Try List .= Pwb.Document.Title "|"
+				Try List .= RegExReplace(Pwb.Document.Title, "\|", "§") "|"
 	}
 	return List
 }
@@ -318,12 +415,14 @@ ListIEWindows()
 GuiAddLV(ident)
 {
 	global
-	Gui, Tab, %ident%
-	Try
-		Gui, Add, ListView, x+0 y+0 AltSubmit Checked hwndListID%ident% vInputList%ident% gInputList W760 r26 NoSort LV0x10000, %w_Lang030%|%w_Lang031%|%w_Lang032%|%w_Lang033%|%w_Lang034%|%w_Lang035%|%w_Lang036%|%w_Lang037%|%w_Lang038%|%w_Lang039%
-	LV_SetImageList(LV_hIL)
+	Critical
+	Gui, chMacro:Default
+	Gui, chMacro:Tab, %ident%
+	Try Gui, chMacro:Add, ListView, x+0 y+0 AltSubmit Checked hwndListID%ident% vInputList%ident% gInputList NoSort LV0x10000, %w_Lang030%|%w_Lang031%|%w_Lang032%|%w_Lang033%|%w_Lang034%|%w_Lang035%|%w_Lang036%|%w_Lang037%|%w_Lang038%|%w_Lang039%
+	LV_SetImageList(hIL_Icons)
 	Loop, 10
 		LV_ModifyCol(A_Index, Col_%A_Index%)
+	LVOrder_Set(10, ColOrder, ListID%ident%)
 }
 
 SelectByType(SelType, Col=6)
@@ -350,6 +449,29 @@ SelectByType(SelType, Col=6)
 	}
 }
 
+SelectByFilter(Act, Det, Tim, Del, Typ, Tar, Win, Com, Col, Case)
+{
+	LV_Modify(0, "-Select"), Found := 0
+	Loop, % ListCount%A_List%
+	{
+		LV_GetTexts(A_Index, A, B, C, D, E, F, G, H, I)
+		If InStr(A, Trim(Act), Case)
+		&& InStr(B, Trim(Det), Case)
+		&& InStr(C, Trim(Tim), Case)
+		&& InStr(D, Trim(Del), Case)
+		&& InStr(E, Trim(Typ), Case)
+		&& InStr(F, Trim(Tar), Case)
+		&& InStr(G, Trim(Win), Case)
+		&& InStr(H, Trim(Com), Case)
+		&& InStr(I, Trim(Col), Case)
+		{
+			LV_Modify(A_Index, "Select")
+			Found++
+		}
+	}
+	return Found
+}
+
 class IfWin
 {
 	Active(Win)
@@ -374,14 +496,36 @@ class IfWin
 	}
 }
 
-ActivateHotkeys(Rec="", Play="", Speed="", Stop="", Joy="")
+ActivateHotkeys(Rec="", Play="", Speed="", Stop="", Pause="", Joy="")
 {
 	local ActiveKeys
 	
+	If (Speed <> "")
+	{
+		If (FastKey <>  "None")
+			Hotkey, %FastKey%, FastKeyToggle, % (Speed) ? "On" : "Off"
+		If (SlowKey <>  "None")
+			Hotkey, %SlowKey%, SlowKeyToggle, % (Speed) ? "On" : "Off"
+	}
+	
+	If (Pause <> "")
+	{
+		Hotkey, %PauseKey%, f_PauseKey, Off
+		If ((PauseKey <> "") && (Pause = 1))
+			Hotkey, %PauseKey%, f_PauseKey, On
+	}
+	
+	If (Stop <> "")
+	{
+		Hotkey, %AbortKey%, f_AbortKey, Off
+		If ((AbortKey <> "") && (Stop = 1))
+			Hotkey, %AbortKey%, f_AbortKey, On
+	}
+	
 	If (Rec <> "")
 	{
-		Hotkey, %RecKey%, RecStart, % (Rec) ? "On" : "Off"
-		Hotkey, %RecNewKey%, RecStartNew, % (Rec) ? "On" : "Off"
+		Try Hotkey, %RecKey%, RecStart, % (Rec) ? "On" : "Off"
+		Try Hotkey, %RecNewKey%, RecStartNew, % (Rec) ? "On" : "Off"
 	}
 	
 	If (Play <> "")
@@ -404,22 +548,6 @@ ActivateHotkeys(Rec="", Play="", Speed="", Stop="", Joy="")
 		}
 	}
 	
-	If (Speed <> "")
-	{
-		If (FastKey <>  "None")
-			Hotkey, *%FastKey%, FastKeyToggle, % (Speed) ? "On" : "Off"
-		If (SlowKey <>  "None")
-			Hotkey, *%SlowKey%, SlowKeyToggle, % (Speed) ? "On" : "Off"
-	}
-	
-	If (Stop <> "")
-	{
-		Hotkey, *%AbortKey%, f_PauseKey, Off
-		Hotkey, *%AbortKey%, f_AbortKey, Off
-		If ((AbortKey <> "") && (Stop = 1))
-			Hotkey, *%AbortKey%, % (PauseKey) ? "f_PauseKey" : "f_AbortKey", On
-	}
-	
 	If (Joy <> "")
 	{
 		Loop, 16
@@ -437,6 +565,38 @@ ActivateHotkeys(Rec="", Play="", Speed="", Stop="", Joy="")
 	}
 	
 	return ActiveKeys
+}
+
+CheckDuplicateLabels()
+{
+	local Proj_Labels
+	
+	Gui, chMacro:Default
+	Loop, %TabCount%
+	{
+		Gui, chMacro:ListView, InputList%A_Index%
+		Loop, % ListCount%A_Index%
+		{
+			LV_GetText(Row_Type, A_Index, 6)
+			If (Row_Type = cType35)
+			{
+				LV_GetText(Row_Label, A_Index, 3)
+				Proj_Labels .= Row_Label "`n"
+			}
+		}
+	}
+	Loop, %TabCount%
+		Proj_Labels .= TabGetText(TabSel, A_Index) "`n"
+	Sort, Proj_Labels, U
+	return ErrorLevel
+}
+
+RemoveDuplicates(ByRef String)
+{
+	StringTrimRight, String, String, 1
+	Loop, Parse, String, |
+		NewStr .= (InStr(NewStr, A_LoopField "|") ? "Macro" A_Index : A_LoopField) "|"
+	String := NewStr
 }
 
 CheckDuplicates(Obj1, Obj2, Obj3*)
@@ -538,7 +698,7 @@ ToggleIcon()
 	ChangeProgBarColor(Color, "OSCProg", 28)
 	If !A_IsPaused
 		IconFile := A_IconFile, IconNumber := A_IconNumber
-	Try Menu, Tray, Icon, % (A_IsPaused = 0) ? t_PauseIcon[1] : IconFile, % (A_IsPaused = 0) ? t_PauseIcon[2] : IconNumber
+	Menu, Tray, Icon, % (A_IsPaused = 0) ? ResDllPath : IconFile, % (A_IsPaused = 0) ? 55 : IconNumber
 	return A_IsPaused
 }
 
@@ -550,6 +710,14 @@ ToggleButtonIcon(Button, Icon)
 ChangeProgBarColor(Color, Control, Gui=1)
 {
 	GuiControl, %Gui%:+c%Color%, %Control%
+}
+
+ChangeIcon(hInst, ID, Icon)
+{
+	hIcon := DllCall("LoadImage", "Uint", hInst, "Uint", Icon, "Uint", 1, "int", 96, "int", 96, "Uint", 0x8000)
+
+	SendMessage, 0x80, 0, hIcon,, ahk_id %ID% ;set the window's small icon (0x80 is WM_SETICON).
+	SendMessage, 0x80, 1, hIcon,, ahk_id %ID% ;set the window's big icon to the same one.
 }
 
 AHK_NOTIFYICON(wParam, lParam)
@@ -586,8 +754,8 @@ Receive_Params(wParam, lParam)
 	StringAddress := NumGet(lParam + 2*A_PtrSize)
 ,	CopyOfData := StrGet(StringAddress)
 	Gui, 1:Default
-	Gui, +OwnDialogs
-	Gui, Submit, NoHide
+	Gui, 1:+OwnDialogs
+	Gui, 1:Submit, NoHide
 	GoSub, SaveData
 	If ((ListCount > 0) && (SavePrompt))
 	{
@@ -612,19 +780,82 @@ FreeMemory()
 	return, DllCall("psapi.dll\EmptyWorkingSet", "UInt", -1)
 }
 
-LV_ColorsMessage(W, L)
+LV_ColorsMessage(wParam, lParam)
 {
 	Static NM_CUSTOMDRAW := -12
 	Static LVN_COLUMNCLICK := -108
 	Critical, 1000
-	If LV_Colors.HasKey(H := NumGet(L + 0, 0, "UPtr"))
+	If LV_Colors.HasKey(H := NumGet(lParam + 0, 0, "UPtr"))
 	{
-		M := NumGet(L + (A_PtrSize * 2), 0, "Int")
+		M := NumGet(lParam + (A_PtrSize * 2), 0, "Int")
 		; NM_CUSTOMDRAW --------------------------------------------------------------------------------------------------
 		If (M = NM_CUSTOMDRAW)
-			Return LV_Colors.On_NM_CUSTOMDRAW(H, L)
+			Return LV_Colors.On_NM_CUSTOMDRAW(H, lParam)
 		; LVN_COLUMNCLICK ------------------------------------------------------------------------------------------------
 		If (LV_Colors[H].NS && (M = LVN_COLUMNCLICK))
 			Return 0
+	}
+}
+
+ShowMenu(Menu, mX, mY)
+{
+	global
+	
+	If (Menu = "Open")
+		Menu, RecentMenu, Show, %mX%, %mY%
+	Else If (Menu = "Save")
+	{
+		Menu, TbMenu, Add, %f_Lang004%, SaveAs
+		Menu, TbMenu, Icon, %f_Lang004%, %ResDllPath%, 86
+		Menu, TbMenu, Show, %mX%, %mY%
+		Menu, TbMenu, DeleteAll
+	}
+	Else If (Menu = "PlayStart")
+		GoSub, ShowPlayMenu
+	Else If (Menu = "OnFinish")
+		GoSub, OnFinish
+	Else If (Menu = "RecStart")
+	{
+		Menu, TbMenu, Add, %t_Lang020%, RecStartNew
+		Menu, TbMenu, Show, %mX%, %mY%
+		Menu, TbMenu, DeleteAll
+	}
+	Else If InStr(Menu, "Rec")
+		GoSub, ShowRecMenu
+	Else If (Menu = "ShowPlayMenu")
+		GoSub, ShowPlayMenu
+	Else If (Menu = "PrevRefreshButton")
+	{
+		Menu, TbMenu, Add, %t_Lang015%, AutoRefresh
+		If (AutoRefresh)
+			Menu, TbMenu, Check, %t_Lang015%
+		Menu, TbMenu, Show, %mX%, %mY%
+		Menu, TbMenu, DeleteAll
+	}
+	Else
+		Menu, %Menu%, Show, %mX%, %mY%
+}
+
+ShowChevronMenu(rbPtr, BandID, X="", Y="")
+{
+	Global TbEdit, ResDllPath
+	Band := rbPtr.IDToIndex(BandID)
+,	rbPtr.GetBand(Band, "", "", "", "", "", "", hChild)
+	tbPtr := TB_GetHwnd(hChild)
+	If !IsObject(tbPtr)
+		tbPtr := TbEdit
+	If (tbPtr)
+	{
+		HidBtns := tbPtr.GetHiddenButtons()
+		Loop, % HidBtns.MaxIndex()
+		{
+			Try
+			{
+				Menu, ChevMenu, Add, % HidBtns[A_Index].Text, % HidBtns[A_Index].Label
+				Menu, ChevMenu, Icon, % HidBtns[A_Index].Text, %ResDllPath%, % HidBtns[A_Index].Icon
+			}
+		}
+		Menu, ChevMenu, Show, %X%, %Y%
+		Menu, ChevMenu, DeleteAll
 	}
 }

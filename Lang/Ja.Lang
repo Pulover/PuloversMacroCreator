@@ -4,52 +4,67 @@
 		
 ; Main Menu		
 	m_Lang001 =	ファイル
-	m_Lang002 =	挿入
+	m_Lang002 =	コマンド
 	m_Lang003 =	選択する
 	m_Lang004 =	編集
 	m_Lang005 =	マクロ
-	m_Lang006 =	オプション
-	m_Lang007 =	言語
-	m_Lang008 =	寄付する
-	m_Lang009 =	助ける
+	m_Lang006 =	表示
+	m_Lang007 =	オプション
+	m_Lang008 =	言語
+	m_Lang009 =	寄付する
+	m_Lang010 =	助ける
 		
-; File Submenu		
+; File Sub Menu		
 	f_Lang001 =	新しい
 	f_Lang002 =	開く
 	f_Lang003 =	保存
 	f_Lang004 =	名前を付けて保存
-	f_Lang005 =	インポートマクロ
-	f_Lang006 =	現在のマクロを保存
-	f_Lang007 =	最近使ったファイル
-	f_Lang008 =	AHKにエクスポート
-	f_Lang009 =	プレビュー·スクリプト
-	f_Lang010 =	リスト変数
-	f_Lang011 =	終了する
-	f_Lang012 =	いいえファイルん
+	f_Lang005 =	最近使ったファイル
+	f_Lang006 =	AHKにエクスポート
+	f_Lang007 =	プレビュー·スクリプト
+	f_Lang008 =	スクリプトを編集
+	f_Lang009 =	リスト変数
+	f_Lang010 =	終了する
+	f_Lang011 =	いいえファイルん
 		
-; Insert Sub Menu		
+; Macro Sub Menu		
+	r_lang001 =	マクロの記録
+	r_lang002 =	マクロをアクティブにする
+	r_lang003 =	現在のマクロを再生する
+	r_lang004 =	タイマー
+	r_lang005 =	選択した行から再生
+	r_lang006 =	選択した行まで再生
+	r_lang007 =	選択された行を再生する
+	r_lang008 =	コンテキスト·センシティブホットキー
+	r_lang009 =	マクロを追加します
+	r_lang010 =	閉じるマクロ
+	r_lang011 =	マクロを複製
+	r_lang012 =	マクロを編集する
+	r_lang013 =	インポートマクロ
+	r_lang014 =	現在のマクロを保存
+		
+; Commands Sub Menu		
 	i_Lang001 =	マウス
 	i_Lang002 =	テキスト
 	i_Lang003 =	コントロール
-	i_Lang004 =	一時停止 / メッセージ / キー待ち
-	i_Lang005 =	ウィンドウ
-	i_Lang006 =	イメージ/ピクセル検索
-	i_Lang007 =	ファイル/文字列/その他/実行します。
-	i_Lang008 =	ループ/後藤/ラベル
-	i_Lang009 =	If文/変数/関数
-	i_Lang010 =	インターネットエクスプローラ/ COMインタフェース
-	i_Lang011 =	Windowsメッセージ
-	i_Lang012 =	特殊キー
+	i_Lang004 =	一時停止
+	i_Lang005 =	メッセージボックス
+	i_Lang006 =	キー待ち
+	i_Lang007 =	ウィンドウ
+	i_Lang008 =	イメージ / ピクセル検索
+	i_Lang009 =	ファイル / 文字列 / その他 / 実行します。
+	i_Lang010 =	ループ
+	i_Lang011 =	後藤
+	i_Lang012 =	ラベル
+	i_Lang013 =	If文
+	i_Lang014 =	変数
+	i_Lang015 =	関数
+	i_Lang016 =	インターネットエクスプローラ
+	i_Lang017 =	COMインタフェース
+	i_Lang018 =	スクリプトレットを実行
+	i_Lang019 =	Windowsメッセージ
+	i_Lang020 =	コマンドを見つける
 		
-; Select Sub Menu		
-	s_Lang001 =	[すべて]を選択します
-	s_Lang002 =	[なし]を選択します
-	s_Lang003 =	選択範囲を反転
-	s_Lang004 =	選択された状態のチェック
-	s_Lang005 =	チェックを外して[選択
-	s_Lang006 =	チェックを反転
-	s_Lang007 =	選択されたタイプ
-	s_Lang008 =	コマンド
 		
 ; Edit Sub Menu		
 	e_Lang001 =	複製
@@ -65,46 +80,73 @@
 	e_Lang011 =	繰り上げる
 	e_Lang012 =	下へ移動
 	e_Lang013 =	ボックスから挿入
-	e_Lang014 =	編集色マーク
+	e_Lang014 =	キーストロークを挿入
+	e_Lang015 =	編集色マーク
 		
-; Macro Sub Menu		
-	r_lang001 =	マクロの記録
-	r_lang002 =	マクロをアクティブにする
-	r_lang003 =	現在のマクロを再生する
-	r_lang004 =	タイマー
-	r_lang005 =	マクロを追加します
-	r_lang006 =	閉じるマクロ
-	r_lang007 =	コンテキスト·センシティブホットキー
-	r_lang008 =	コントロールの表示/非表示
-	r_lang009 =	選択した行から再生
-	r_lang010 =	選択した行まで再生
-	r_lang011 =	選択された行を再生する
+; Select Sub Menu		
+	s_Lang001 =	[すべて]を選択します
+	s_Lang002 =	[なし]を選択します
+	s_Lang003 =	選択範囲を反転
+	s_Lang004 =	選択された状態のチェック
+	s_Lang005 =	チェックを外して[選択
+	s_Lang006 =	チェックを反転
+	s_Lang007 =	選択を上に移動
+	s_Lang008 =	選択を下に移動
+	s_Lang009 =	選択されたタイプ
+	s_Lang010 =	コマンドの種類
+		
+; View Sub Menu		
+	v_lang001 =	常に手前に表示
+	v_lang002 =	ハイライトの行
+	v_lang003 =	インデント
+	v_lang004 =	コントロールツールバー
+	v_lang005 =	プレビュー
+	v_lang006 =	ツールバー
+	v_lang007 =	ホットキー
+	v_lang008 =	列のサイズをリセット
+	v_lang009 =	レイアウトをリセット
+		
+	v_lang010 =	ファイル
+	v_lang011 =	記録と再生
+	v_lang012 =	コマンド
+	v_lang013 =	編集
+	v_lang014 =	オプション
+	v_lang015 =	カスタマイズ
+		
+	v_lang016 =	自動
+	v_lang017 =	マニュアル
+	v_lang018 =	停止
+	v_lang019 =	休止
+		
+	v_lang020 =	コンパクト
+	v_lang021 =	デフォルト
 		
 ; Options Sub Menu		
 	o_Lang001 =	設定
 	o_Lang002 =	デフォルトのホットキーとして設定
 	o_Lang003 =	デフォルトファイルとして設定
 	o_Lang004 =	デフォルトのファイルを削除します
-	o_Lang005 =	列のサイズをリセット
-	o_Lang006 =	デフォルトのホットキー
-	o_Lang007 =	デフォルト設定
+	o_Lang005 =	デフォルトのホットキー
+	o_Lang006 =	デフォルト設定
 		
 ; Donate Sub Menu		
 	p_Lang001 =	PayPalの寄付
 		
 ; Help Sub Menu		
-	h_Lang001 =	マクロクリエーターホーム
-	h_Lang002 =	AHKオンライン·ドキュメント
-	h_Lang003 =	アップデートを確認...
-	h_Lang004 =	起動時にチェック
-	h_Lang005 =	約
-	h_Lang006 =	ヒント
-	h_Lang007 =	フォーラム
+	h_Lang001 =	助ける
+	h_Lang002 =	チュートリアル
+	h_Lang003 =	ヒント
+	h_Lang004 =	マクロクリエーターホーム
+	h_Lang005 =	フォーラム
+	h_Lang006 =	AHKオンライン·ドキュメント
+	h_Lang007 =	アップデートを確認...
+	h_Lang008 =	起動時にチェック
+	h_Lang009 =	約
 		
 ; Tray Menu		
 	y_Lang001 =	ウィンドウを非表示
 	y_Lang002 =	ウィンドウを表示する
-	y_Lang003 =	コントロールの表示/非表示
+	y_Lang003 =	コントロールツールバー
 		
 ; Main Window		
 	w_Lang001 =	エクスポート
@@ -112,21 +154,21 @@
 	w_Lang003 =	オプション
 	w_Lang004 =	記録
 	w_Lang005 =	遊ぶ
-	w_Lang006 =	オート。
-	w_Lang007 =	男。
+	w_Lang006 =	再生
+	w_Lang007 =	マニュアル
 	w_Lang008 =	停止
-	w_Lang009 =	コントロールを表示
+	w_Lang009 =	ツールバーコントロールを表示
 	w_Lang010 =	休止
 	w_Lang011 =	ループ
-	w_Lang012 =	キーをキャプチャ
-	w_Lang013 =	ウィンドウを非表示
-	w_Lang014 =	常にアクティブ
+	w_Lang012 =	このウィンドウでのキー押下を捕捉する
+	w_Lang013 =	トレイに最小化
+	w_Lang014 =	常にアクティブなホットキー
 	w_Lang015 =	繰り返し
-	w_Lang016 =	遅延（ms）：
+	w_Lang016 =	遅延（ms）
 	w_Lang017 =	適用する
 	w_Lang018 =	挿入
 	w_Lang019 =	編集
-	w_Lang020 =	(unused)
+	w_Lang020 =	シャットダウンオプション (再生が終了すると...)
 	w_Lang021 =	何もしない
 	w_Lang022 =	閉じるアプリケーション
 	w_Lang023 =	シャットダウン
@@ -146,6 +188,60 @@
 	w_Lang037 =	ウィンドウ
 	w_Lang038 =	コメント
 	w_Lang039 =	色
+	w_Lang040 =	新規作成（Ctrl+Nキー）
+	w_Lang041 =	開く（Ctrl+Oキー）
+	w_Lang042 =	保存（Ctrl+S）
+	w_Lang043 =	AHKにエクスポート（CTRL+E）
+	w_Lang044 =	プレビュースクリプト（Ctrl+P）を
+	w_Lang045 =	設定（Ctrl+Gキー）
+	w_Lang046 =	マクロの記録（CTRL+R）
+	w_Lang047 =	アクティベートマクロ（Ctrl+Enterキー）
+	w_Lang048 =	現在のマクロを再生します（Ctrl+Shift+Enter）
+	w_Lang049 =	タイマー（Ctrl+Shift+Tを）
+	w_Lang050 =	マウス（F2）
+	w_Lang051 =	テキスト（F3）
+	w_Lang052 =	マクロを編集する（Ctrlキー+ Shiftキー+ M）
+	w_Lang053 =	コントロール（F4）
+	w_Lang054 =	一時停止 （F5）
+	w_Lang055 =	メッセージボックス （Shift+F5）
+	w_Lang056 =	キー待ち （Control+F5）
+	w_Lang057 =	ウィンドウ（F6）
+	w_Lang058 =	イメージ/ピクセル検索（F7）
+	w_Lang059 =	ファイル/文字列/その他/実行します。 （F8）
+	w_Lang060 =	ループ（F9）
+	w_Lang061 =	後藤（+ F9キーをシフト）
+	w_Lang062 =	ラベル（Ctrlキーを押しながらF9キー）
+	w_Lang063 =	Ifステートメント（F10）
+	w_Lang064 =	変数
+	w_Lang065 =	関数の（Ctrl+F10）（+ F10キー、Shiftキーを押しながら）
+	w_Lang066 =	インターネットエクスプローラ（F11）
+	w_Lang067 =	 COMインタフェース（Shift+F11）を
+	w_Lang068 =	スクリプトレットを実行 (Ctrl+F11)
+	w_Lang069 =	Windowsメッセージ（F12）
+	w_Lang070 =	ホットキーを"再生"するには、Windowsキーを追加
+	w_Lang071 =	ホットキーとしてジョイスティックボタンを使用し
+	w_Lang072 =	マクロを追加します（Ctrl+T）
+	w_Lang073 =	閉じるマクロ（Ctrl+Wを）
+	w_Lang074 =	マクロを複製（Ctrl+Shiftキー+ D）
+	w_Lang075 =	インポートマクロ（Ctrl+Iキー）
+	w_Lang076 =	現在のマクロを保存します（Ctrl+Alt+Sキー）
+	w_Lang077 =	[上に移動（Ctrlキーを押しながらPageUpキー）
+	w_Lang078 =	（Ctrlキーを押しながらPageDownキー）下に移動
+	w_Lang079 =	選択した行を複製（Ctrl+Dキー）
+	w_Lang080 =	[選択した行の（Ctrl+X）をカット
+	w_Lang081 =	[選択した行の（Ctrl+C）をコピーします
+	w_Lang082 =	コピーした行を選択（Ctrl+V）を貼り付け
+	w_Lang083 =	[選択した行（デル）を削除
+	w_Lang084 =	元に戻す（Ctrl+Z）を
+	w_Lang085 =	やり直し（Ctrl+Y）
+	w_Lang086 =	にコピーして...
+	w_Lang087 =	検索/置換（Ctrl+F）を
+	w_Lang088 =	コメントを編集（Ctrl+L）を
+	w_Lang089 =	編集色マーク（Ctrl+M）を
+	w_Lang090 =	カスタマイズ
+	w_Lang091 =	コマンドを見つける（Ctrlキー+ Shiftキー+ F）
+	w_Lang092 =	編集（Enter）
+	w_Lang093 =	隠す
 		
 ; Command Windows		
 	c_Lang001 =	マウス
@@ -181,8 +277,8 @@
 	c_Lang031 =	ホイールダウン
 	c_Lang032 =	ドラッグ·アンド·ドロップ
 	c_Lang033 =	座標
-	c_Lang034 =	クリック
-	c_Lang035 =	送信
+	c_Lang034 =	検索
+	c_Lang035 =	サブコマンド
 	c_Lang036 =	相対
 	c_Lang037 =	ボタン
 	c_Lang038 =	左
@@ -216,7 +312,7 @@
 	c_Lang066 =	キー待ち
 	c_Lang067 =	見つけたら
 	c_Lang068 =	/エラーが見つからない場合
-	c_Lang069 =	* COORDSは、 `%FoundX`% / `%FoundY`%に格納されている。
+	c_Lang069 =	COORDSは、 `%FoundX`%/`%FoundY`%に格納されている。
 	c_Lang070 =	座標
 	c_Lang071 =	バリエーション
 	c_Lang072 =	プレビュー
@@ -228,17 +324,17 @@
 	c_Lang078 =	ラベルに行く
 	c_Lang079 =	ラベル
 	c_Lang080 =	ラベルを追加
-	c_Lang081 =	文字列（InputVar）、値
-	c_Lang082 =	Varの[演算子]の値
-	c_Lang083 =	エルス追加
+	c_Lang081 =	文字列（InputVar）
+	c_Lang082 =	変数
+	c_Lang083 =	ほかに
 	c_Lang084 =	変数を割り当てる
 	c_Lang085 =	コンテンツ
 	c_Lang086 =	オペレータ
-	c_Lang087 =	式を解くためにeval（）を使う
+	c_Lang087 =	表現
 	c_Lang088 =	リセット
 	c_Lang089 =	機能名
-	c_Lang090 =	コンマ（括弧なし）パラメータを分離した。
-	c_Lang091 =	（変数に "％"を使用します。 リテラルのカンマをエスケープする必要があります[```,]）。
+	c_Lang090 =	コンマ（括弧なし）パラメータを分離した
+	c_Lang091 =	（変数に "％"を使用します。 リテラルのカンマをエスケープする必要があります[ ```, ]）。
 	c_Lang092 =	ページ要素/インデックス
 	c_Lang093 =	セット
 	c_Lang094 =	得る
@@ -276,7 +372,7 @@
 	c_Lang126 =	コー​​ドは仮想キー·リストに追加しました！
 	c_Lang127 =	変数の名前を入力します
 	c_Lang128 =	外部ファイルからの関数を使用します。...
-	c_Lang130 =	見つかった場合は、ループを破る
+	c_Lang130 =	繰り返しになるまで
 	c_Lang131 =	適用する
 	c_Lang132 =	ループ
 	c_Lang133 =	ファイル
@@ -309,9 +405,52 @@
 	c_Lang160 =	透明な
 	c_Lang161 =	スケール
 	c_Lang162 =	If文を追加
+	c_Lang163 =	送信モード
+	c_Lang164 =	Рівний
+	c_Lang165 =	Містить
+	c_Lang166 =	Великий
+	c_Lang167 =	Менше
+	c_Lang168 =	Та
+	c_Lang169 =	Немає
+	c_Lang170 =	Добре
+	c_Lang171 =	Скасувати
+	c_Lang172 =	Викинути
+	c_Lang173 =	Ігнорувати
+	c_Lang174 =	Повторити
+	c_Lang175 =	Продовжувати
+	c_Lang176 =	Спробуйте ще раз
+	c_Lang177 =	Тайм-аут
+	c_Lang178 =	Встановити затримку ключового
+	c_Lang179 =	Основні затримки
+	c_Lang180 =	Випадкові затримки
+	c_Lang181 =	Мінімальний
+	c_Lang182 =	Максимальний
+	c_Lang183 =	Вимкнути випадкові затримки для цієї команди
+	c_Lang184 =	Вибрати зі списку
+	c_Lang185 =	Кнопки
+	c_Lang186 =	Перший
+	c_Lang187 =	Другий
+	c_Lang188 =	Третій
+	c_Lang189 =	Назва
+	c_Lang190 =	Якщо активне вікно
+	c_Lang191 =	Якщо екран не активно
+	c_Lang192 =	Якщо вікно існує
+	c_Lang193 =	Якщо вікно не існує
+	c_Lang194 =	Якщо файл вже існує
+	c_Lang195 =	Якщо файл не існує
+	c_Lang196 =	Якщо текст з буфера обміну
+	c_Lang197 =	Якщо індекс циклу
+	c_Lang198 =	Якщо зображення/піксель знайдений
+	c_Lang199 =	Якщо зображення/піксель не знайдене
+	c_Lang200 =	Якщо рядок містить
+	c_Lang201 =	Якщо рядок не містить
+	c_Lang202 =	Якщо вікно повідомлення
+	c_Lang203 =	Порівняйте змінних
+	c_Lang204 =	Обчислення виразу...
+	c_Lang205 =	地域
 		
 ; Other Windows		
-	t_Lang001 =	AHKにエクスポート
+	t_Lang001 =	AutoHotkeyにエクスポート
 	t_Lang002 =	マクロ
 	t_Lang003 =	ループ
 	t_Lang004 =	0 =無限大
@@ -362,14 +501,14 @@
 	t_Lang049 =	リリースでキャプチャ
 	t_Lang050 =	キャプチャするには、Enterキーを押し
 	t_Lang051 =	スクリーンショットディレクトリ
-	t_Lang052 =	その他。
+	t_Lang052 =	ラインラップ
 	t_Lang053 =	ホットキー
 	t_Lang054 =	デフォルトのホットキーとして設定
 	t_Lang055 =	ウィンドウのショートカットを無効にする
 	t_Lang056 =	列のサイズをリセット
 	t_Lang057 =	デフォルトのマクロファイル
 	t_Lang058 =	標準ライブラリファイル
-	t_Lang059 =	変数の割り当てでは、デフォルトでeval（）を使う
+	t_Lang059 =	変数の割り当てはデフォルトで式を使用する
 	t_Lang060 =	ループおよびfor文色とヘルプのマークを表示
 	t_Lang061 =	（有効/無効にするには、インデックスの列ヘッダーをクリックしてください）
 	t_Lang062 =	仮想キー
@@ -395,7 +534,7 @@
 	t_Lang082 =	文
 	t_Lang083 =	ループおよびステートメントのインデントを表示
 	t_Lang084 =	（ダブルクリックして、[アクション]列ヘッダーが有効/無効）
-	t_Lang085 =	ディスプレイには、起動のバーを制御
+	t_Lang085 =	ディスプレイは、起動時にバーを制御
 	t_Lang086 =	関数の検索。しばらくお待ちください...
 	t_Lang087 =	外部ファイルをインクルード
 	t_Lang088 =	EXEファイルを作成します。
@@ -408,9 +547,9 @@
 	t_Lang095 =	行につき1変数を入力します。また、[セクション]を追加することがあります。
 	t_Lang096 =	ユーザーのグローバル変数
 	t_Lang097 =	ジョイスティックのボタンを押し
-	t_Lang098 =	ジョイスティック
+	t_Lang098 =	クリアするには、Backspaceキー
 	t_Lang099 =	ボタン
-	t_Lang100 =	情報を表示する
+	t_Lang100 =	バルーンヒントを表示します
 	t_Lang101 =	スピード
 	t_Lang102 =	遅く
 	t_Lang103 =	速い
@@ -422,6 +561,47 @@
 	t_Lang109 =	ダウン
 	t_Lang110 =	アップ
 	t_Lang111 =	キーストロークを挿入
+	t_Lang112 =	再生/一時停止
+	t_Lang113 =	停止
+	t_Lang114 =	再生オプション
+	t_Lang115 =	録音の開始/停止
+	t_Lang116 =	新しいマクロの記録
+	t_Lang117 =	録画オプション
+	t_Lang118 =	一覧をクリアする
+	t_Lang119 =	プログレスバーを表示
+	t_Lang120 =	スピードアップ
+	t_Lang121 =	速度を落とす
+	t_Lang122 =	表示/非表示のタイトルバー
+	t_Lang123 =	メインウィンドウの表示/非表示
+	t_Lang124 =	ドック
+	t_Lang125 =	切り離す
+	t_Lang126 =	開く
+	t_Lang127 =	保存
+	t_Lang128 =	カット
+	t_Lang129 =	コピー
+	t_Lang130 =	貼り付ける
+	t_Lang131 =	[すべて]を選択します
+	t_Lang132 =	削除
+	t_Lang133 =	キーボード
+	t_Lang134 =	マウス
+	t_Lang135 =	他人
+	t_Lang136 =	ハイライトの行
+	t_Lang137 =	デフォルトのスクリプトエディタ
+	t_Lang138 =	スクリプトを編集（Ctrl+Shiftキー+ E）
+	t_Lang139 =	選択する
+	t_Lang140 =	列で
+	t_Lang141 =	すべての列
+	t_Lang142 =	ツールバー（再起動が必要）からテーマを削除する
+	t_Lang143 =	自動的にツールバーコントロールを非表示
+	t_Lang144 =	クリックして、順序を変更するにはドラッグします。編集するためにダブルクリックします。
+	t_Lang145 =	マクロを編集する
+	t_Lang146 =	ラインで
+	t_Lang147 =	マクロ
+	t_Lang148 =	メインウィンドウのクローズボタンのアクション
+	t_Lang149 =	閉じるアプリケーション
+	t_Lang150 =	トレイに最小化
+	t_Lang151 =	マクロを閉じる際に確認を表示します
+	t_Lang152 =	自動的にバックアップを作成する
 		
 ; Messages & Dialogs		
 	d_Lang001 =	開く
@@ -448,7 +628,7 @@
 	)	
 	d_Lang018 =	ピクセルの色
 	d_Lang019 =	一覧をクリアする
-	d_Lang020 =	すべての項目を削除するようにしてください？
+	d_Lang020 =	閉じるマクロ？
 	d_Lang021 =	次の
 	d_Lang022 =	前
 	d_Lang023 =	メッセージ
@@ -514,7 +694,7 @@
 	)	
 	d_Lang057 =	
 	(LTrim	
-		 - 選択した領域を移動するCtrl + Aを押して、矢印キー。
+		 - 選択した領域を移動するCtrl+Aを押して、矢印キー。
 		 -  Shiftキーを押しながら矢印キー選択した領域のサイズを変更します。
 		 - 終了するにはEnterキーを押します。
 	)	
@@ -533,28 +713,43 @@
 	(LTrim	
 		あなたは今、それをダウンロードしますか？
 		
-		自動チェックを無効にするには、[ヘルプ]を選択>起動時にチェック。
+		自動チェックを無効にするには、[ヘルプ]を選択>起動時にチェック。 > 起動時にチェック
 	)	
+		
 	d_Lang062 =	すでに最新のバージョンを持っている。
 	d_Lang063 =	チェック中にエラーが発生しました。
 	d_Lang064 =	でCOMオブジェクトエラー
 	d_Lang065 =	行
 	d_Lang066 =	特に
-	d_Lang067 =	起動時にヒントを表示します。
+	d_Lang067 =	起動時にこのウィンドウを表示する
 	d_Lang068 =	ヒント：
 	d_Lang069 =	
 	(LTrim	
-		助けを必要とするバグを発見したり、提案がありますか？作者にメールを送信：<a href="mailto:rodolfoub@gmail.com">rodolfoub@gmail.com</a>
-		これはフリーソフトウェアです。あなたはそれが有用である考える見つかった場合<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=rodolfoub`%40gmail`%2ecom&lc=US&item_name=Pulover`%27s`%20Macro`%20Creator&item_number=App`%2ePMC&currency_code=USD&bn=PP`%2dDonationsBF`%3abtn_donateCC_LG`%2egif`%3aNonHosted">寄付をすること</a>と開発をサポート。ありがとう。
+		多くの時間と労力は、Pulover's Macro Creatorの開発に行ってきました。あなたはそれが有用である見つけた場合は、寄付金であなたの感謝を示してご検討ください。
+		
+		寄付かは、その特徴や機能に違いはありません。
 	)	
-	d_Lang070 =	エラー：無効なホットキー選択。
+	d_Lang070 =	寄付...
+	d_Lang071 =	いや、いいよ
+	d_Lang072 =	オープンソースソフトウェアをサポート
+	d_Lang073 =	エラー：無効なホットキー選択。
+	d_Lang074 =	コマンドや関数を見つける
+	d_Lang075 =	Pulover's Macro Creatorへようこそ
+	d_Lang076 =	あなたの好まれたレイアウトを選択してください
+	d_Lang077 =	コンパクト
+	d_Lang078 =	デフォルト
+	d_Lang079 =	起動時にアップデートをチェック。
+	d_Lang080 =	[オプション] > [設定] > [全般]でこれを変更することができます。
+	d_Lang081 =	あなたは、変更して、[表示]メニューのレイアウトをカスタマイズすることができます。
+	d_Lang082 =	ファイルが見つかりませんでした！
+	d_Lang083 =	バックアップファイルが見出された。あなたはそれを開きたい？
 		
 ; Start-up Tips		
 	Start_Tips =	
 	(LTrim	
 		あなたは、メインウィンドウのコマンドボタンを使用するか、あなたの行動をコピーするためにレコーダーを使用してマクロを作成することができます。入力が記録されるかを選択するには、[オプション]> [設定]> [録音]に移動します。
 		迅速なタスクのためにレコーダーを使用するには、[オプション]> [設定]> [レコーディングに行くと "一覧をクリアする"オプションをチェックします。次に、メインウィンドウで[録音]ボタンをクリックして、現在のマクロをクリアするためにF10キーを使用し、同じホットキーで新しいものを開始します。 また、録音と再生のホットキーをアクティブにしておくためのメインウィンドウで"常にアクティブ"オプションをチェックすることができます。
-		特定のコマンドのヘルプを取得するにはAutoHotkeyをオンラインヘルプへのリンクを表示するには、メインウィンドウで、または任意の場所をコマンドウィンドウでコマンドボタンを右クリックします。
+		特定のコマンドのヘルプを表示するにはAutoHotkeyをオンラインヘルプへのリンクを表示するには、コマンドウィンドウ上の任意の場所を右クリックします。
 		メインウィンドウから直接マクロキーとの組み合わせを入力する "キャプチャキー"オプションをチェックします。
 		一番下にあるホットキーボックス内のキーとの組み合わせを入力し、選択行に追加し、[挿入]ボタンを押してください。
 		行が選択されていない場合、編集ボタンは、リスト内のすべての行に適用されます。
@@ -581,85 +776,28 @@
 		このような機能ウィンドウ（文/変数/関数場合 >を挿入します）からは、SUBSTRとRegExReplaceなどの高度な機能を実行することができます。または外部AutoHotkeyをスクリプトから独自の関数を実行します。
 	)	
 ; Tooltips		
-	NewB_TT =	新規作成（Ctrl+Nキー）
-	OpenB_TT =	開く（Ctrl+Oキー）
-	SaveB_TT =	保存（Ctrl+S）
-	ExportB_TT =	AHKにエクスポート（CTRL+E）
-	PreviewB_TT =	プレビュースクリプト（Ctrl+P）を
-	OptionsB_TT =	設定（Ctrl+Gキー）
-	RecordB_TT =	マクロの記録（CTRL+R）
-	StartB_TT =	アクティベートマクロ（Ctrl+Enterキー）
-	TestRun_TT =	現在のマクロを再生します（Ctrl+Shift+Enter）
-	RunTimer_TT =	タイマー（Ctrl+Shift+Tを）
-	MouseB_TT =	マウス（F2）
-	TextB_TT =	テキスト（F3）
-	SpecialB_TT =	特殊キー
-	ControlB_TT =	コントロール（F4）
-	PauseB_TT =	一時停止 （F5） / メッセージ （Shift+F5） / キー待ち （Control+F5）
-	WindowB_TT =	ウィンドウ（F6）
-	ImageB_TT =	イメージ/ピクセル検索（F7）
-	RunB_TT =	ファイル/文字列/その他/実行します。 （F8）
-	ComLoopB_TT =	ループ（F9）/後藤（+ F9キーをシフト）/ラベル（Ctrlキーを押しながらF9キー）
-	IfStB_TT =	Ifステートメント（F10）/変数/関数の（Ctrl+F10）（+ F10キー、Shiftキーを押しながら）
-	IEComB_TT =	インターネットエクスプローラ（F11）/ COMインタフェース（Shift+F11）を / スクリプトレットを実行 (Ctrl+F11)
-	SendMsgB_TT =	Windowsメッセージ（F12）
-	AutoKey_TT =	クリアするには、Backspaceキー
-	ManKey_TT =	クリアするには、Backspaceキー
-	AbortKey_TT =	クリアするには、Backspaceキー
+	AutoKey_TT =	ホットキーマクロを再生する
+	ManKey_TT =	ホットキーは、マクロの"ステップバイステップ"を再生する
+	AbortKey_TT =	ホットキーは、再生を停止する
+	PauseKey_TT =	再生を一時停止するホットキー
+	RecKey_TT =	クリアするには、Backspaceキー
+	RecNewKey_TT =	クリアするには、Backspaceキー
 	JoyKey_TT =	ジョイスティックのボタンを押し
-	PauseKey_TT =	実行の代わりに停止を一時停止します
-	OnFinish_TT =	
-	(LTrim	
-		シャットダウンオプション
-		再生が終了すると...
-	)	
-	Win1_TT =	モディファイアとして、Windowsキーを追加
-	JoyHK_TT =	ジョイスティック
 	ReptC_TT =	0 =無限大
-	TabPlus_TT =	マクロを追加します（Ctrl+T）
-	TabClose_TT =	閉じるマクロ（Ctrl+Wを）
-	DuplicateL_TT =	マクロを複製（Ctrl+Shiftキー+ D）
-	SaveC_TT =	現在のマクロを保存します（Ctrl+Alt+Sキー）
-	ImportB_TT =	インポートマクロ（Ctrl+Iキー）
-	IfDirB_TT =	ホットキーがアクティブであるか、または存在します（Ctrl+H）ウィンドウの_のタイプに応じて動作させる
-	KeepHKOn_TT =	ホットキーは常​​に有効に保つ
 	A_List_TT =	マクロを選択（Ctrl+1~0）
 	OSHK_TT =	マクロを選択
 	OSHKEd_TT =	マクロを選択
-	Duplicate_TT =	選択した行を複製（Ctrl+Dキー）
-	Order_TT =	選択した行を移動します（Ctrl+PageUpキー/ Ctrlキーを押しながらPageDownキー）
-	Cut_TT =	[選択した行の（Ctrl+X）をカット
-	Copy_TT =	[選択した行の（Ctrl+C）をコピーします
-	Paste_TT =	コピーした行を選択（Ctrl+V）を貼り付け
-	Remove_TT =	[選択した行（デル）を削除
-	Undo_TT =	元に戻す（Ctrl+Z）を
-	Redo_TT =	やり直し（Ctrl+Y）
-	CopyTo_TT =	にコピーして...
-	Capt_TT =	このウィンドウでのキー押下を捕捉する
-	OnScCtrl_TT =	ツールバーコントロールを表示
-	ShowStep_TT =	バルーンヒントを表示します
 	ApplyT_TT =	適用する
 	ApplyI_TT =	適用する
 	ApplyL_TT =	ボックスから挿入（Insert）
 	InsertKey_TT =	キーストロークを挿入 (Ctrl+Insert)
-	EditButton_TT =	編集（Enter）
-	PrevRefresh_TT =	リフレッシュ（F5）
-	PrevCopy_TT =	コピー
-	OpenT_TT =	開く（Ctrl+Oキー）
-	SaveT_TT =	保存（Ctrl+S）
-	CutT_TT =	カット
-	CopyT_TT =	コピー
-	PasteT_TT =	貼り付ける
-	SelAllT_TT =	[すべて]を選択します
-	DefaultMacro_TT =	起動プログラムにロードするファイルを選択します
+	InsertKeyT_TT =	キーストロークを挿入
+	DefaultMacro_TT =	プログラムの起動時にロードするファイルを選択してください
 	VarCopyA_TT =	現在の変数の内容をコピーします
 	VarCopyB_TT =	現在の変数の内容をコピーします
-	FindReplace_TT =	検索/置換（Ctrl+F）を
-	EditComm_TT =	コメントを編集（Ctrl+L）を
-	EditColor_TT =	編集色マーク（Ctrl+M）を
 	Reset_TT =	クリア変数の内容
 	Screenshot_TT =	スクリーンを作る
-	ColorPick_TT =	カラーピッカー
+	ColorPick_TT =	画面上のピクセルを取得する
 	PicPrev_TT =	画像をダブルクリックして開き
 	CoordPixel_TT =	モードを調整
 	VariatT_TT =	バリエーションの色合い
@@ -667,25 +805,17 @@
 	TransC_TT =	透明色
 	WScale_TT =	幅スケール
 	HScale_TT =	高さスケール
+	Fast_TT =	高速な探索方法（推奨）を使用してい
+	RGB_TT =	代わりにBGRのRGB値として解釈されるように色を引き起こす
 	LoopLVColor_TT =	色を選択するためにクリック
 	IfLVColor_TT =	色を選択するためにクリック
 	RefreshIEW_TT =	リストのリフレッシュ
 	ActiveObj_TT =	アクティブなCOMオブジェクトへの接続を試行します
+	TimeoutM_TT =	0 =無限大
 	ExpView_TT =	高度なエディタ
 	ExpView2_TT =	高度なエディタ
-	OSPlay_TT =	再生/一時停止
-	OSStop_TT =	停止
-	OSRec_TT =	録音の開始/停止
-	OSRecNew_TT =	新しいマクロの記録
-	OSRecOpt_TT =	録画オプション
-	OSPlayOpt_TT =	再生オプション
-	OSClear_TT =	一覧をクリアする
 	OSProgB_TT =	プログレスバーを表示
-	OSFast_TT =	スピードアップ
-	OSSlow_TT =	速度を落とす
 	OSTrans_TT =	不透明
-	ToggleTB_TT =	表示/非表示のタイトルバー
-	ToggleMW_TT =	メインウィンドウの表示/非表示
 	MRel_TT =	
 	(LTrim	
 		現在位置からの相対的な動き。
@@ -703,6 +833,7 @@
 		修飾子（これらの修飾子が影響として扱われます。
 		唯一の非常に次のキー）：+、^、＃
 	)	
+	ComEvent_TT =	キーストロークが送信される速度は、キー遅延によって決定される。
 	Clip_TT =	
 	(LTrim	
 		一時的にテキストを送信するためにクリップボードを使用しています。
@@ -849,6 +980,22 @@
 	Ex_UV_TT =	グローバル変数をエクスポートします。
 	Ex_EdVars_TT =	エクスポートするグローバル変数を選択します。
 		
+; Operators		
+	As_Oper_1 =	割り当てる
+	As_Oper_2 =	加える
+	As_Oper_3 =	引く
+	As_Oper_4 =	掛ける
+	As_Oper_5 =	分割
+	As_Oper_6 =	フロア除算
+	As_Oper_7 =	連結
+	Co_Oper_1 =	等しい
+	Co_Oper_2 =	等しい（大文字と小文字を区別）
+	Co_Oper_3 =	等しくない
+	Co_Oper_4 =	グレーター
+	Co_Oper_5 =	レス
+	Co_Oper_6 =	大きいか等しい
+	Co_Oper_7 =	小さいか等しい
+		
 ; IE Commands Tips		
 	Tip_Navigate =	URLまたはパスに移動します。
 	Tip_Value =	オブジェクトの値を取得または設定します。
@@ -866,6 +1013,7 @@
 	Tip_LocationURL =	現在のページのURLを取得します。
 	Tip_InnerText =	オブジェクトのテキストを設定または取得します。
 	Tip_InnerHTML =	設定するか、またはオブジェクトのHTMLを取得します。
+	Tip_OuterHTML =	設定またはHTML内のオブジェクトとそのコンテンツを取得します。
 	Tip_Href =	設定または宛先URLまたはアンカーポイントを取得します。
 	Tip_Src =	設定するか、またはオブジェクトがロードするURLを取得します。
 	Tip_SelectedIndex =	設定または選択したオブジェクトに、選択したオプションのインデックスを取得します。
@@ -875,4 +1023,251 @@
 	Tip_Height =	設定するか、またはオブジェクトの高さを取得します。
 	Tip_Length =	設定またはコレクション内のオブジェクトの数を取得します。
 		
+; AHK Commands Tips		
+	Ahk_Cmd_Index =	
+	(LTrim	
+	Abs	数値の絶対値を返します。
+	ASin	アークサイン（正弦数ある数値）ラジアンで返します。
+	ACos	アークコサイン（余弦数ある数値）ラジアンで返します。
+	Array	Arrayオブジェクトを作成します。
+	Asc	文字列の最初の文字の文字コード（1〜255（ANSIでビルド）または65535（Unicodeのビルドで）の間の数）を返します。
+	ATan	逆正接（タンジェント数ある数）ラジアンで返します。
+	BlockInput	無効またはキーボードとマウスを介してコンピュータと対話するユーザの能力を可能にします。
+	Break	終了します（終了）ループ。ループのいずれかの種類の内側で有効。
+	Ceil	戻り値Numberは、最も近い整数（いずれ.00サフィックスなし）に切り上げ。
+	Chr	番号で示される文字コードに対応する単一の文字を返します。
+	Click	指定された座標でマウスのボタンをクリックします。また、ボタンを押しながらホイールを回す、または移動することができます。
+	ClipWait	クリップボードにデータが含まれているまで待機。
+	Clipboard	クリップボードからテキストを貼り付けます。
+	ComObjActive	登録されたCOMオブジェクトを取得します。
+	ComObjArray	COMで使用するためのSAFEARRAYを作成します。
+	ComObjConnect	指定された接頭辞で関数にCOMオブジェクトのイベントソースを接続します。
+	ComObjCreate	COMオブジェクトを作成します。
+	ComObjEnwrap / ComObjUnwrap	COMオブジェクトをラップ/アンラップ。
+	ComObjError	有効またはCOMエラーの通知を無効にします。
+	ComObjFlags	COMラッパーオブジェクトの動作を制御する取得または変更フラグ。
+	ComObjGet	COMコンポーネントで提供されるオブジェクトへの参照を返します。
+	ComObjMissing	COMメソッドに渡す "欠落パラメータ"オブジェクトを作成します。
+	ComObjParameter	COMメソッドにパラメータとして渡す値と型をラップします。
+	ComObjQuery	インターフェイスまたはサービスのCOMオブジェクトを照会します。
+	ComObjType	COMオブジェクトから型情報を取得します。
+	ComObjValue	COMラッパーオブジェクトに格納された値やポインタを取得します。
+	Continue	現在のループ反復の残りの部分をスキップして、新しいものを開始します。ループのいずれかの種類の内側で有効。
+	Control	コントロールへの変更の様になります。
+	ControlClick	マウスボタンまたはコントロールにマウスホイールのイベントを送信します。
+	ControlEditPaste	エディットコントロールのキャレット/挿入位置にペースト文字列（これはクリップボードの内容には影響しません）。
+	ControlFocus	ウィンドウの特定のコントロールに入力フォーカスを設定します。
+	ControlGet	制御に関する各種の情報を取得します。
+	ControlGetFocus	もしあれば、ターゲットウィンドウのコントロール取得は、入力フォーカスを持っています。
+	ControlGetPos	コントロールの位置とサイズを取得します。
+	ControlGetText	コントロールからテキストを取得します。
+	ControlMove	移動したり、コントロールのサイズを変更します。
+	ControlSend / ControlSendRaw 	ウィンドウやコントロールにシミュレートされたキーストロークを送信します。
+	ControlSetText	コントロールのテキストを変更します。
+	CoordMode	セットには、アクティブなウィンドウや画面のどちらに対して相対的であるために様々なコマンドのモードを調整する。
+	Cos	数の三角関数コサインを返します。
+	Critical	現在のスレッドが他のスレッドによって中断されるのを防ぎます。
+	DetectHiddenText	ウィンドウ内の目に見えないテキストがウィンドウを見つけることを目的に、 "見"されているかどうかを決定します。これは、このようなIfWinExistとWinActivateなどのコマンドに影響を与えます。
+	DetectHiddenWindows	目に見えないウィンドウがスクリプトによって "見える"かどうかを決定します。
+	DllCall	DLL内の関数は、標準のWindows API関数などを呼び出します。
+	Drive	/引っ込むCDまたはDVDドライブのトレイを取り出し、またはドライブのボリュームラベルを設定します。
+	DriveGet	コンピュータのドライブ（複数可）に関する各種の情報を取得します。
+	DriveSpaceFree	メガバイトで、ドライブの空きディスク容量を取得します。
+	Edit	関連付けられたエディタで編集するために、現在のスクリプトを開きます。
+	Else	if文がfalseと評価された場合、コマンド（s）が実行するように指定します。複数のコマンドが存在する場合、ブロック（カッコ）で囲む。
+	EnvAdd	自体の和与えられた値（これも追加したり、日時の値から時刻を減算することができます）に変数を設定します。と同義：ヴァール+ =値。
+	EnvDiv	与えられた値で割った値自体に変数を設定します。 = /ヴァール値：と同義。
+	EnvGet	環境変数を取得します。
+	EnvMult	自体に変数回与えられた値を設定します。と同義：ヴァール* =値。
+	EnvSet	環境に含まれている変数に値を書き込みます。
+	EnvSub	与えられた値（また、日時の値を比較することができます）マイナス自体に変数を設定します。- =値変数：と同義。
+	EnvUpdate	OSや環境変数（s）は変更されていること、実行中のすべてのアプリケーションに通知します。
+	Exit	を終了し、現在のスレッドまたは（スクリプトが永続的なものではなく、全くのホットキーが含まれていない場合）スクリプト全体。
+	ExitApp	無条件にスクリプトを終了します。
+	Exp	返しeは（約2.71828182845905です）N乗に引き上げ。
+	FileAppend	ファイルの末尾に（必要であれば、最初にファイルを作成する）にテキストを書き込みます。
+	FileCopy	コピーは一つ以上のファイル。
+	FileCopyDir	そのすべてのサブフォルダとファイル（xcopyのに似ています）と一緒にフォルダをコピーします。
+	FileCreateDir	フォルダを作成します。
+	FileCreateShortcut	ショートカット（。LNK）ファイルを作成します。
+	FileDelete	削除する1つまたは複数のファイルを。
+	FileEncoding	FileRead関数、FileReadLine、ループ読み取り、FileAppend、およびFileOpen関数のデフォルトのエンコーディングを設定します。
+	FileInstall	スクリプトのコンパイルされたバージョンが内部指定されたファイルが含まれています。
+	FileGetAttrib	ファイルまたはフォルダが読み取り専用であるかどうかを報告し、隠された、など
+	FileGetShortcut	そのようなそのターゲットファイルなどのショートカット（。LNK）ファイルに関する情報を取得します。
+	FileGetSize	ファイルのサイズを取得します。
+	FileGetTime	ファイルやフォルダの日付と時刻のスタンプを取得します。
+	FileGetVersion	ファイルのバージョンを取得します。
+	FileMove	移動または名前を変更し、1つまたは複数のファイルを。
+	FileMoveDir	そのすべてのサブフォルダとファイルと共にフォルダに移動します。また、フォルダの名前を変更することができます。
+	FileOpen	提供するオブジェクト指向のファイルI / O
+	FileRead	変数にファイルの内容を読み込みます。
+	FileReadLine	ファイルから指定された行を読み込み、変数に文字列を格納します。
+	FileRecycle	可能であれば、ごみ箱にファイルまたはディレクトリを送信します。
+	FileRecycleEmpty	ごみ箱を空にします。
+	FileRemoveDir	削除フォルダ。
+	FileSelectFile	ユーザー（s）は、ファイルを開いたり保存することができます標準のダイアログを表示します。
+	FileSelectFolder	ユーザーがフォルダを選択できるようにする標準のダイアログを表示します。
+	FileSetAttrib	つまたは複数のファイルまたはフォルダの属性を変更します。ワイルドカードはサポートされています。
+	FileSetTime	つまたは複数のファイルやフォルダの日時スタンプを変更します。ワイルドカードはサポートされています。
+	Floor	最も近い整数（いずれ.00サフィックスなし）に切り捨て数値を返します。
+	For	オブジェクト内の各キーと値のペアのために一度一連のコマンドを繰り返します。
+	FormatTime	指定された日付/時刻の形式にYYYYMMDDHH24MISSタイムスタンプを変換します。
+	Func	関数への参照を取得します。
+	GetKeyName / GetKeyVK / GetKeySC	名前またはテキスト、仮想キーコードまたはキーのスキャンコードを取得します。
+	GetKeyState	キーボードのキーやマウス/ジョイスティックのボタンかどうかを確認するには、ダウンしているか次第です。また、ジョイスティックの状態を取得します。
+	Gosub	指定されたラベルにジャンプして、Returnが検出されるまで実行を継続します。
+	Goto	指定されたラベルにジャンプして実行を継続します。
+	GroupActivate	groupaddを使用して定義されたウィンドウ·グループ内の次のウィンドウをアクティブにします。
+	GroupAdd	必要に応じてグループを作成し、ウィンドウ·グループのウィンドウの仕様を追加します。
+	GroupClose	それだけGroupActivateまたはGroupDeactivateによって活性化された場合は、アクティブなウィンドウを閉じます。その後、シリーズの次のウィンドウをアクティブにします。また、グループ内のすべてのウィンドウを閉じることができます。
+	GroupDeactivate	いないグループ内の次のウィンドウをアクティブに除いGroupActivateに似。
+	if	値と変数の比較がTRUEにevalutes場合、コマンド（s）が実行するように指定します。複数のコマンドが存在する場合、ブロック（カッコ）で囲む。
+	if (expression)	式がTRUEと評価された場合、コマンド（s）が実行するように指定します。
+	If var [not] between	変数の内容かどうかを確認し、2つの値（両端を含む）の間の数値順またはアルファベット順である。
+	If var [not] in/contains MatchList 	変数の内容かどうかを確認し、リスト内の項目のいずれかに一致。
+	If var is [not] type	変数の内容が数値であるかどうかをチェックし、大文字など
+	If Clipboard	クリップボードのテキストであるかのチェックは、指定された文字列をマッチする部分。
+	If ErrorLevel	指定した画像またはピクセルかどうかをチェックし、画面で発見された。
+	If A_Index	現在のループの繰り返しかどうかをチェックし、指定された番号をマッチする部分。
+	IfEqual/IfNotEqual	平等のための値に変数を比較します。と同義：もしヴァール=値|場合Varの<>の値。
+	IfExist / IfNotExist / FileExist	ファイルまたはフォルダが存在するかどうかをチェック。
+	IfGreater / IfGreaterOrEqual	値に変数を比較します。と同義ます：if var>の値|場合ヴァール> =値。
+	IfInString / IfNotInString / InStr	変数かどうかをチェックし、指定した文字列が含まれています。
+	IfLess / IfLessOrEqual	値に変数を比較します。と同義ます：if Varの<値|場合ヴァール<=値。
+	IfMsgBox	ボタンは、最新のMsgBoxコマンドの実行中にユーザーによって押されたかどうかをチェックします。
+	IfWinActive / IfWinNotActive	チェックし指定されたウィンドウが存在し、（何よりも）は、現在アクティブであるかどうか。
+	IfWinExist / IfWinNotExist	チェックし指定したウィンドウが存在するかどうか。
+	ImageSearch	画像用の画面領域を検索します。
+	IniDelete	標準フォーマットiniファイルから削除した値。
+	IniRead	標準フォーマットiniファイルから値を読み込みます。
+	IniWrite	標準フォーマットiniファイルに値を書き込みます。
+	Input	文字列（：それは何もしませんWindows 9xの上ではサポートされません）を入力するようにユーザーを待ちます。
+	InputBox	文字列を入力するようにユーザに依頼するための入力ボックスが表示されます。
+	InStr	左または右から文字列の任意の出現を検索し、。
+	)	
+	Ahk_Cmd_Index = %Ahk_Cmd_Index%`n	
+	(LTrim	
+	KeyHistory	スクリプト情報と最新のキーストロークやマウスクリックの履歴を表示します。
+	KeyWait	キーまたはマウス/ジョイスティックボタン解放または押されるのを待ちます。
+	Labels	ラベルは、コード行を識別し、ジャンプターゲットとして使用することができ、またはサブルーチンを形成することができる。
+	Log	数の対数（底10）を返します。
+	Ln	数の自然対数（底e）を返します。
+	Loop (normal) 	繰り返して一連のコマンドを実行します指定された回数、または休憩までのどちらかに遭遇する。
+	Loop (files & folders)	指定したファイルやフォルダを1つずつ取得します。
+	Loop (parse a string)	一度は、文字列から部分文字列（フィールド）を取得します。
+	Loop (read file contents)	テキストファイルの行は、時間（FileReadLineより良い行い）少なくとも一つを取得します。
+	Loop (registry)	つの項目同時に、指定されたレジストリサブキーの内容を取得します。
+	Menu	、作成、削除変更し、メニューとメニュー項目が表示されます。トレイアイコンとそのツールチップを変更します。コンパイルされたスクリプトのメインウィンドウを開くことができるかどうかを制御します。
+	Mod	モジュロ。配当を除数で割った余りを返します。
+	MouseClickDrag	クリックとは、指定されたマウスボタンを保持している先の座標にマウスを移動し、その後ボタンを離す。
+	MouseGetPos	現在のマウスカーソルの位置、および必要に応じてどのウィンドウとコントロール、それが上に浮かんでいるを取得します。
+	MouseMove	マウスカーソルを移動します。
+	MsgBox	1つ以上のボタン（例えば[はい]と[いいえなど）を含む小さなウィンドウに指定したテキストを表示します。
+	NumGet	指定されたアドレス+オフセットに格納されている2進数を返します。
+	NumPut	指定されたアドレスのバイナリ形式の店が数+オフセットとだけ書かれた項目の右側にアドレスを返します。
+	OnExit	スクリプトが終了し自動的に実行するサブルーチンを指定します。
+	OnMessage	スクリプトが指定されたメッセージを受信したときに自動的に呼び出す関数を指定します。
+	OutputDebug	ディスプレイ用のデバッガ（もしあれば）に文字列を送信します。
+	Pause	スクリプトの現在のスレッドを一時停止します。
+	PixelGetColor	指定されたxのピクセルの色を取得し、yは座標。
+	PixelSearch	指定された色のピクセルのための画面領域を検索します。
+	PostMessage	ウィンドウまたはコントロールのメッセージキューにメッセージを格納します。
+	Process	それが存在する場合はチェックあり、その優先順位を変更し、それを閉じて、それが終了するのを待ちます。プロセスで次のいずれかの操作を実行します。
+	Progress	プログレスバーを含むウィンドウを作成または更新します。
+	Random	擬似乱数を生成します。
+	RegExMatch	文字列がパターン（正規表現）が含まれているかどうかを確認します。
+	RegExReplace	文字列内のパターン（正規表現）の発生を置き換えます。
+	RegDelete	レジストリから削除サブキーまたは値。
+	RegRead	レジストリから値を読み取ります。
+	RegWrite	レジストリに値を書き込みます。
+	RegisterCallback	呼び出されたときに、スクリプト内の関数の呼び出しをリダイレクトする機械語コード·アドレスを作成します。
+	Return	実行が以前に関数呼び出し、GOSUB、ホットキーのアクティベーション、GroupActivate、または他の手段を介して跳ね上がっていたようにサブルーチンから復帰します。
+	Round	Nが省略されるか0の場合、数値は最も近い整数に丸められます。 Nは正の数であれば、数をN小数に丸められます。 nが負の場合、数値は小数点の左側の桁数をnで丸められます。
+	Run	外部プログラムを実行します。
+	RunAs	ランとrunwaitでの後続のすべての目的で使用する場合は、使用するユーザーの資格情報のセットを指定します。 Windows 2000/XPの以降が必要です。
+	RunWait	外部プログラムを実行し、それが終了するまで待機します。
+	Screenshot	指定された領域のPNG形式のスクリーンショットを作成します。
+	Send / SendRaw / SendInput / SendPlay	アクティブなウィンドウにキーストロークをシミュレートし、マウスクリックを送信します。
+	SendLevel	人工的なキーボードとマウスイベントはホットキーとhotstringsによって無視されているコントロール。
+	SendMessage	ウィンドウまたはコントロールにメッセージを送信し、承認を待ちます。
+	SendMode	SendInputまたはSendPlayよりむしろデフォルト（SendEvent）と同義に送信できます。また、クリックして、クリック/指定したメソッドを使用してドラッグ/ MouseMoveのなります。
+	SetCapslockState	CapsLockキーのキーの状態を設定します。また、キーをオンまたはオフに滞在するように強制することができます。
+	SetEnv (Var = Value)	変数に指定した値を割り当てます。
+	SetFormat	数学演算によって生成された整数と浮動小数点数のフォーマットを設定します。
+	SetKeyDelay	送信のcontrolSendによって送られた各キーストロークの後に発生する遅延時間を設定します。
+	SetMouseDelay	各マウスの動きやクリックした後に発生する遅延時間を設定します。
+	SetNumlockState	NUMLOCKキーの状態を設定します。また、キーをオンまたはオフに滞在するように強制することができます。
+	SetScrollLockState	Scrolllockキーの状態を設定します。また、キーをオンまたはオフに滞在するように強制することができます。
+	SetRegView	32ビットスクリプトでレジストリのコマンドは、64ビットのレジストリビュー、およびその逆へのアクセスを許可します。
+	Shutdown	、シャットダウンし再起動するか、システムをログオフします。
+	Sin	数の三角関数サインを返します。
+	Sleep	続行する前に、指定された時間待機します。
+	Sort	アルファベット、数字、またはランダムな順序（オプションで重複を削除）で変数の内容を配置します。
+	SoundBeep	PCスピーカーから音を発する。
+	SoundGet	サウンドデバイス（マスターミュート、マスターボリューム、など）から各種設定を取得
+	SoundGetWaveVolume	サウンドデバイスからの波出力音量を取得します。
+	SoundPlay	サウンド、ビデオ、またはその他のサポートされているファイルの種類を再生します。
+	SoundSet	変更サウンドデバイスの各種設定（マスターミュート、マスターボリューム、など）
+	SoundSetWaveVolume	サウンドデバイスのための波出力音量を変更します。
+	SplashImage	JPG、GIF、またはBMP画像を含むウィンドウを作成または更新します。
+	SplashTextOn	カスタマイズ可能なテキストポップアップウィンドウを作成します。
+	SplashTextOff	上記のウィンドウを閉じます。
+	SplitPath	その名、ディレクトリ、拡張子、およびドライブにファイル名またはURLを区切ります。
+	Sqrt	数値の平方根を返します。
+	StatusBarGetText	標準のステータスバーコントロールからテキストを取得します。
+	StatusBarWait	ウィンドウのステータスバーには、指定された文字列が含まれてまで待機します。
+	StrPut / StrGet	コードページ間で変換する任意のメモリアドレス、またはから文字列をコピーします。
+	StringCaseSense	文字列比較は、大文字（デフォルトでは "大文字と小文字を区別しない"である）の影響を受けやすいかどうかを判断します。
+	StringGetPos / InStr	文字列内の指定された部分文字列の位置を取得します。
+	StringLeft	文字列の左側から文字の数を取得します。
+	StringLen / StrLen	文字列にある文字数のカウントを取得します。
+	StringLower	文字列を小文字に変換します。
+	StringMid / SubStr	文字列内の指定した位置から1つ以上の文字を取得します。
+	StringReplace	新しい文字列で指定された部分文字列を置き換えます。
+	StringRight	文字列の右側から文字の数を取得します。
+	StringSplit / StrSplit	指定された区切り文字を使用する文字列の配列に文字列を区切ります。
+	StringTrimLeft	文字列の左側からの文字数を削除します。
+	StringTrimRight	文字列の右側から文字の数を削除します。
+	StringUpper	文字列を大文字に変換します。
+	Suspend	無効またはすべてまたは選択したホットキーとhotstringsを可能にします。
+	SysGet	画面の解像度、マルチモニタ情報、システムオブジェクトの大きさ、および他のシステムプロパティを取得します。
+	Tan	数の三角関数タンジェントを返します。
+	ToolTip	常時オン·トップウィンドウは画面上の任意の場所に作成されます。
+	Transform	雑多な数学関数、ビット単位の操作、およびそのようなASCII / Unicode変換などのタスクを実行します。
+	TrayTip	トレイアイコンの近くにバルーンメッセージウィンドウを作成します。 Windows 2000/XPの以降が必要です。
+	Trim / LTrim / RTrim	トリム開始および/または文字列の末尾から特定の文字。
+	Try	ランタイムエラーと投げコマンドによってスローされた例外に対するガードは、1つ以上の文（コマンドまたは式）。
+	Until	ループまたはforループの継続に条件を適用します。
+	UrlDownloadToFile	インターネットからファイルをダウンロードします。
+	VarSetCapacity	変数の保持容量を拡大したり、メモリを解放します。通常、これは唯一のそのようなDllCallなど、異常な状況のために必要である。
+	WinActivate	指定されたウィンドウは、（それが一番になる）アクティブにします。
+	WinActivateBottom	それはむしろ最上位よりも一番下の（少なくとも最近アクティブ）マッチングウィンドウをアクティブにしますことを除いWinActivateと同じ。
+	WinActive	それは指定された条件に一致した場合、アクティブなウィンドウの一意のID（HWND）を返します。
+	WinClose	指定されたウィンドウを閉じます。
+	WinExist	チェックし指定したウィンドウが存在するかどうか。
+	WinGetActiveStats	つのコマンドにWinGetActiveTitleとWinGetPosの機能を兼ね備えています。
+	WinGetActiveTitle	アクティブなウィンドウのタイトルを取得します。
+	WinGetClass	指定されたウィンドウのクラス名を取得します。
+	WinGet	指定されたウィンドウの一意のID、プロセスID、プロセス名、またはそのコントロールのリストを取得します。また、指定された条件に一致するすべてのウィンドウのリストを取得できます。
+	WinGetPos	指定したウィンドウの位置とサイズを取得します。
+	WinGetText	指定されたウィンドウからテキストを取得します。
+	WinGetTitle	指定したウィンドウのタイトルを取得します。
+	WinHide	指定したウィンドウを非表示にします。
+	WinKill	指定されたウィンドウが閉じるように強制します。
+	WinMaximize	その最大サイズに指定されたウィンドウを拡大します。
+	WinMenuSelectItem	指定したウィンドウのメニューバーからメニュー項目を呼び出します。
+	WinMinimize	タスクバーのボタンに指定されたウィンドウを折りたたみ。
+	WinMinimizeAll	すべてのウィンドウを最小化します。
+	WinMinimizeAllUndo	以前WinMinimizeAllの効果を元に戻します。
+	WinMove	位置および/または指定されたウィンドウのサイズを変更します。
+	WinRestore	それが最小化または最大化されている場合は指定したウィンドウ最小化を解除またはunmaximizes。
+	WinSet	指定したウィンドウへの変更、などと透明性 "の上に常に"として、様々なことができます。
+	WinSetTitle	指定したウィンドウのタイトルを変更します。
+	WinShow	指定したウィンドウを再表示。
+	WinWait	指定したウィンドウが存在するまで待機します。
+	WinWaitActive	指定したウィンドウがアクティブになるまで待機します。
+	WinWaitClose	指定したウィンドウが存在しないまで待機。
+	WinWaitNotActive	指定したウィンドウがアクティブでなくなるまで待機します。
+	)	
 return		

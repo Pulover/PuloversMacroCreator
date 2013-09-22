@@ -1,5 +1,5 @@
 ﻿#If ListFocus && !HotkeyCtrlHasFocus()
-&& HKOff = 0 && WinActive("ahk_id" PMCWinID) && Capt = 0
+&& WinActive("ahk_id" PMCWinID) && !Capt
 
 Del::GoSub, h_Del
 NumpadDel::GoSub, h_Numdel
@@ -15,8 +15,14 @@ MButton & WheelDown::
 ^+Down::
 GoSub, MoveDn
 return
-
-#If !HotkeyCtrlHasFocus() && WinActive("ahk_id" PMCWinID) && HKOff = 0
++WheelUp::
+^[::
+GoSub, MoveSelUp
+return
++WheelDown::
+^]::
+GoSub, MoveSelDn
+return
 
 ^c::GoSub, CopyRows
 ^x::GoSub, CutRows
@@ -32,51 +38,8 @@ Insert::GoSub, ApplyL
 ^!q::GoSub, InvertCheck
 ^z::GoSub, Undo
 ^y::GoSub, Redo
-^f::GoSub, FindReplace
 ^l::GoSub, EditComm
 ^m::GoSub, EditColor
-^n::GoSub, New
-^o::GoSub, Open
-^s::GoSub, Save
-^+s::GoSub, SaveAs
-^!s::GoSub, SaveCurrentList
-^i::GoSub, Import
-^+d::GoSub, DuplicateList
-^e::GoSub, Export
-^p::GoSub, Preview
-^g::GoSub, Options
-^r::GoSub, Record
-^+t::GoSub, RunTimer
-^t::GoSub, TabPlus
-^w::GoSub, TabClose
-^h::GoSub, SetWin
-^b::GoSub, OnScControls
-^Enter::GoSub, PlayStart
-^+Enter::GoSub, TestRun
-!1::GoSub, PlayFrom
-!2::GoSub, PlayTo
-!3::GoSub, PlaySel
-!F3::GoSub, ListVars
-!F5::GoSub, SetColSizes
-!F6::GoSub, DefaultHotkeys
-!F7::GoSub, LoadDefaults
-^1::
-^2::
-^3::
-^4::
-^5::
-^6::
-^7::
-^8::
-^9::
-^0::
-mSel := SubStr(A_ThisHotkey, 2)
-If mSel = 0
-	mSel = 10
-GuiControl, Choose, A_List, %mSel%
-GoSub, TabSel
-return
-
 +1::
 +2::
 +3::
@@ -102,14 +65,63 @@ GoSub, PaintRows
 return
 
 #If !HotkeyCtrlHasFocus() && WinActive("ahk_id" PMCWinID)
-&& Capt = 0 && HKOff = 0
+
+^f::GoSub, FindReplace
+^+f::GoSub, CmdFind
+^u::GoSub, FilterSelect
+^n::GoSub, New
+^o::GoSub, Open
+^s::GoSub, Save
+^+s::GoSub, SaveAs
+^!s::GoSub, SaveCurrentList
+^i::GoSub, Import
+^+d::GoSub, DuplicateList
+^+m::GoSub, EditMacros
+^e::GoSub, Export
+^p::GoSub, Preview
+^+e::GoSub, EditScript
+^g::GoSub, Options
+^r::GoSub, Record
+^+t::GoSub, RunTimer
+^t::GoSub, TabPlus
+^w::GoSub, TabClose
+^h::GoSub, SetWin
+^b::GoSub, OnScControls
+^Enter::GoSub, PlayStart
+^+Enter::GoSub, TestRun
+!1::GoSub, PlayFrom
+!2::GoSub, PlayTo
+!3::GoSub, PlaySel
+!F3::GoSub, ListVars
+!F5::GoSub, SetColSizes
+!F6::GoSub, DefaultHotkeys
+!F7::GoSub, LoadDefaults
+!F8::GoSub, SetBasicLayout
+!F9::GoSub, SetDefaultLayout
+^1::
+^2::
+^3::
+^4::
+^5::
+^6::
+^7::
+^8::
+^9::
+^0::
+mSel := SubStr(A_ThisHotkey, 2)
+If mSel = 0
+	mSel = 10
+GuiControl, chMacro:Choose, A_List, %mSel%
+GoSub, TabSel
+return
+
+#If !HotkeyCtrlHasFocus() && WinActive("ahk_id" PMCWinID) && !Capt
 
 +F1::GoSub, HelpAbout
 F2::GoSub, Mouse
 F3::GoSub, Text
-+F3::GoSub, Special
 F4::GoSub, ControlCmd
-F5::GoSub, Pause
+F5::GoSub, Sleep
 +F5::GoSub, MsgBox
 ^F5::GoSub, KeyWait
 F6::GoSub, Window
@@ -125,15 +137,37 @@ F11::GoSub, IECom
 +F11::GoSub, ComInt
 ^F11::GoSub, RunScrLet
 F12::GoSub, SendMsg
+~Enter::GoSub, EditButton
 
-#If WinActive("ahk_id " PrevID) && HKOff = 0
+#If WinActive("ahk_id " LVEditMacros) && !InEdit
+
+Enter::GoSub, MacroListEdit
+
+#If !HotkeyCtrlHasFocus() && WinActive("ahk_id " LVEdit)
+
+^PgDn::
+EditSel := 1
+GoSub, SelList
+return
+^PgUp::
+EditSel := 0
+GoSub, SelList
+return
+
+#If !HotkeyCtrlHasFocus() && WinActive("ahk_id " ExLVEdit)
+
+^PgDn::
+ExpSel := 1
+GoSub, ExpSelList
+return
+^PgUp::
+ExpSel := 0
+GoSub, ExpSelList
+return
+
+#If WinActive("ahk_id " PrevID)
 
 F5::GoSub, PrevRefresh
-
-#If ActiveGui(WinExist("A"))=8
-
-^o::GoSub, OpenT
-^s::GoSub, SaveT
 
 #If Draw && DrawButton = "RButton"
 RButton::GoSub, DrawStart
@@ -149,17 +183,6 @@ MButton::GoSub, DrawStart
 
 #If Draw && OnEnter
 Enter::GoSub, Restore
-
-#If NoKey
-RButton::
-; RButton Up::
-return
-
-#If NoKey
-
-Esc::
-StopIt := 1
-return
 
 #If Draw
 
@@ -228,9 +251,6 @@ Exit
 
 #If WinActive("ahk_id " StartTipID)
 
-Left::GoSub, PrevTip
-Right::GoSub, NextTip
-Esc::GoSub, TipClose3
-
-#If
-
+Up::GoSub, PrevResult
+Down::GoSub, NextResult
+Enter::GoSub, GoResult

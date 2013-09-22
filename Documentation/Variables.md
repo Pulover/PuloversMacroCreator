@@ -5,6 +5,7 @@
 * [Built-in Variables](#built-in-variables)
 * [Using Variables In Playback](#using-variables-in-playback)
 * [Assigning And Comparing Variables](#assigning-and-comparing-variables)
+* [Assigning And Retrieving Arrays](#assigning-and-retrieving-arrays)
 * [Dynamic Variable References](#dynamic-variable-references)
 * [Using Functions In Playback](#using-functions-in-playback)
 * [Eval()](#eval)
@@ -73,6 +74,17 @@ Although **Macro Creator doesn't actually supports Expressions** in the same way
 *Note*: Field must start with "% " and must contain only ONE reference.
 
 Download Example: [Accessing a Pseudo-Array inside Command Parameters](Examples\DynamicVars.pmc).
+
+## Assigning And Retrieving Arrays
+
+**Pulover's Macro Creator** supports basic arrays usage. To assign an array you can use the *Array* function in the *Functions* window.  
+To retrieve an array inside a command use the same method as *Dynamic Variable Reference* by preceding the parameter with a percent sign and the following syntax:
+
+> % MyArray[1]
+> % MyArray[X]    ; For arrays it's not necessary to enclose variables in percent signs.
+> % MyArray[Var]  ; Any non-number parameter will be treated as a variable.
+
+Download Example: [Assigning and retrieving an Array inside Command Parameters](Examples\Arrays.pmc).
 
 ## Using Functions In Playback
 

@@ -18,8 +18,9 @@
 				Loop, Parse, A_LoopReadLine, |
 					Col.Insert(A_LoopField)
 				Row.Insert(Col)
-				PmcCode[ID] := {Opt: Opt, Row: Row}
 			}
+			Else If (A_LoopReadLine = "")
+				PmcCode[ID] := {Opt: Opt, Row: Row}
 		}
 		If (ID = 0)
 		{
@@ -32,15 +33,24 @@
 
 	Import(SelectedFile, DL="`n", New="1")
 	{
-		local FoundC
+		local FoundC, Labels, TabText
+
+		Gui, chMacro:Submit, NoHide
+		ColOrder := LVOrder_Get(10, ListID%A_List%)
 		If New
 		{
 			GoSub, DelLists
-			GuiControl, Choose, A_List, 1
-			GuiControl,, A_List, |
+			GuiControl, chMacro:Choose, A_List, 1
+			GuiControl, chMacro:, A_List, |
 			TabCount := 0
 		}
-		Gui, +Disabled
+		Else
+		{
+			Loop, %TabCount%
+				Labels .= TabGetText(TabSel, A_Index) "|"
+		}
+		Gui, 1:+Disabled
+		Gui, chMacro:Default
 		StringSplit, SelectedFile, SelectedFile, %DL%, `r
 		Loop, %SelectedFile0%
 		{
@@ -54,13 +64,12 @@
 			Loop, %FoundC%
 			{
 				TabCount++
-				Gui, ListView, InputList%TabCount%
+				Gui, chMacro:ListView, InputList%TabCount%
 				GuiCtrlAddTab(TabSel, "Macro" TabCount)
-				GuiAddLV(TabCount)
-				Menu, CopyMenu, Add, Macro%TabCount%, CopyList
+			,	GuiAddLV(TabCount), CopyMenuLabels[TabCount] := "Macro" TabCount
+				Menu, CopyTo, Add, % CopyMenuLabels[TabCount], CopyList
 				PMC.LVLoad("InputList" TabCount, PmcCode[A_Index])
-				Sleep, 1
-				Gui, ListView, InputList%TabCount%
+				Gui, chMacro:ListView, InputList%TabCount%
 				ListCount%TabCount% := LV_GetCount()
 			,	Opt := PmcCode[A_Index].Opt
 			,	o_AutoKey[TabCount] := (Opt[2] <> "") ? Opt[2] : ""
@@ -68,39 +77,49 @@
 			,	o_TimesG[TabCount] := (Opt[4] <> "") ? Opt[4] : 1
 			,	CoordMouse := (Opt[5] <> "") ? Opt[5] : CoordMouse
 			,	OnFinishCode := (Opt[6] <> "") ? Opt[6] : 1
-			,	HistoryMacro%TabCount% := new RowsData()
-				HistoryMacro%TabCount%.Add()
+			,	Labels .= ((Opt[7] <> "") ? Opt[7] : "Macro" TabCount) "|"
+			,	HistoryMacro%TabCount% := new LV_Rows()
+			,	HistoryMacro%TabCount%.Add()
 			}
 		}
 		If (TabCount = 0)
 			GoSub, TabPlus
+		Else
+		{
+			RemoveDuplicates(Labels)
+			GuiControl, chMacro:, A_List, |%Labels%
+			GoSub, UpdateCopyTo
+		}
 		GoSub, SetFinishButtom
-		GuiControl,, CoordTip, CoordMode: %CoordMouse%
-		Gui, -Disabled
+		GuiControl, 1:, CoordTip, CoordMode: %CoordMouse%
+		Gui, 1:-Disabled
 	}
 
 	LVLoad(List, Code)
 	{
 		Critical
-		Gui, 1:Default
-		Gui, ListView, %List%
-		GuiControl, -Redraw, %List%
+		Gui, chMacro:Default
+		Gui, chMacro:ListView, %List%
+		GuiControl, chMacro:-Redraw, %List%
 		LV_Delete()
 		For each, Col in Code.Row
 		{
 			Loop, % Col.MaxIndex()
 				Col[A_Index] := RegExReplace(Col[A_Index], "¢", "|")
 			chk := SubStr(Col[1], 1, 1)
-			LV_Add("Check" chk, Col*)
+		,	((Col[2] = "[Pause]") && (Col[6] <> "Sleep")) ? (Col[2] := "[" Col[6] "]") : ""
+		,	((Col[6] = "Variable") && (Col[2] <> "[Assign Variable]")) ? (Col[6] := "Function") : ""
+		,	Col[6] := RegExReplace(Col[6], "\s", "_")
+		,	LV_Add("Check" chk, Col*)
 		}
-		GuiControl, +Redraw, %List%
+		GuiControl, chMacro:+Redraw, %List%
 		Critical, Off
 	}
 
 	LVGet(List, DL="|")
 	{
-		Gui, 1:Default
-		Gui, ListView, %List%
+		Gui, chMacro:Default
+		Gui, chMacro:ListView, %List%
 		Row := []
 		Loop, % LV_GetCount()
 		{
@@ -114,6 +133,7 @@
 			}
 			Text .= "`n"
 		}
+		StringReplace, Text, Text, `r,, All
 		Data := {Row: Row, Text: Text}
 		return Data
 	}

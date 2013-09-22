@@ -14,9 +14,16 @@
 		GoSub, RowCheck
 	}
 	Pause, Off
-	Try Menu, Tray, Icon, % t_PlayIcon[1], % t_PlayIcon[2]
+	Try Menu, Tray, Icon, %ResDllPath%, 46
 	Menu, Tray, Default, %w_Lang008%
-	PlayOSOn := 1, ToggleButtonIcon(OSPlay, PauseIconB)
+	If (AutoHideBar)
+	{
+		If !WinExist("ahk_id " PMCOSC)
+			GoSub, ShowControls
+		Else
+			Gui, 28:+AlwaysOntop
+	}
+	PlayOSOn := 1, tbOSC.ModifyButtonInfo(1, "Image", 55), LastError := ""
 ,	CurrentRange := m_ListCount, ChangeProgBarColor("20D000", "OSCProg", 28)
 	If (ShowProgBar = 1)
 	{
@@ -52,8 +59,8 @@
 					Skip_Line--
 					continue
 				}
-				Gui, 1:Default
-				Gui, ListView, InputList%Macro_On%
+				Gui, chMacro:Default
+				Gui, chMacro:ListView, InputList%Macro_On%
 				If ((pb_From) && (A_Index < LV_GetNext(0)))
 					continue
 				Else If ((pb_To) && ((LV_GetNext(0) > 0) && (A_Index > LV_GetNext(0))))
@@ -99,22 +106,33 @@
 					If ((BreakIt > 0) || (SkipIt > 0))
 						continue
 					CheckVars("Step", PointMarker)
-					If RegExMatch(Step, "^Macro(\d+)$", t_Macro)
+					Loop, %TabCount%
 					{
-						If (Type = cType36)
+						TabIdx := A_Index
+						If (Step = TabGetText(TabSel, A_Index))
 						{
-							_Label := [t_Macro1, 0, Manual]
-							return _Label
+							If (Type = cType36)
+							{
+								_Label := [A_Index, 0, Manual]
+								return _Label
+							}
+							Else
+							{
+								_Label := (Playback(A_Index, 0, Manual))
+								If IsObject(_Label)
+									return _Label
+								Else If (_Label)
+								{
+									Lab := _Label, _Label := 0
+									If (_Label := Playback(Lab))
+										return _Label
+								}
+								break
+							}
 						}
 						Else
-							Playback(t_Macro1, 0, Manual)
-					}
-					Else
-					{
-						Loop, %TabCount%
 						{
-							TabIdx := A_Index
-							Gui, ListView, InputList%TabIdx%
+							Gui, chMacro:ListView, InputList%TabIdx%
 							Loop, % ListCount%A_Index%
 							{
 								LV_GetText(Row_Type, A_Index, 6)
@@ -129,7 +147,18 @@
 										return _Label
 									}
 									Else
-										Playback(TabIdx, A_Index, Manual)
+									{
+										_Label := Playback(TabIdx, A_Index, Manual)
+										If IsObject(_Label)
+											return _Label
+										Else If (_Label)
+										{
+											Lab := _Label, _Label := 0
+											If (_Label := Playback(Lab))
+												return _Label
+										}
+										break
+									}
 								}
 							}
 						}
@@ -143,7 +172,7 @@
 						GuiControl, 28:+Range0-%m_ListCount%, OSCProg
 						GuiControl, 28:, OSCProgTip, % "M" Macro_On " [Loop: 0 / " o_TimesG[Macro_On] " | Row: 0 / " m_ListCount "]"
 					}
-					Gui, ListView, InputList%Macro_On%
+					Gui, chMacro:ListView, InputList%Macro_On%
 					continue
 				}
 				If (Type = cType35)
@@ -275,10 +304,15 @@
 						GoToLab := LoopSection(Start%PointMarker%, End%PointMarker%, LoopCount%PointMarker%, Macro_On
 						, PointMarker, mLoopIndex, o_TimesG[Macro_On])
 						o_Loop%PointMarker% := ""
-						If (GoToLab)
+						If IsObject(GoToLab)
+							return GoToLab
+						Else If (GoToLab = "_return")
+							break 2
+						Else If (GoToLab)
 						{
 							Lab := GoToLab, GoToLab := 0
-							Playback(Lab)
+							If (_Label := Playback(Lab))
+								return _Label
 							return
 						}
 						PointMarker--
@@ -293,13 +327,13 @@
 				}
 				If ((BreakIt > 0) || (SkipIt > 0))
 					continue
-				If (Type = cType21)
+				If ((Type = cType21) || (Type = cType44))
 				{
 					StringReplace, Step, Step, ``n, `n, All
 					StringReplace, Step, Step, ``t, `t, All
 					AssignReplace(Step)
-					CheckVars("Step|Target|Window", PointMarker)
-					If (Action = "[Assign Variable]")
+					CheckVars("Step|Target|Window|VarName|VarValue", PointMarker)
+					If (Type = cType21)
 					{
 						If RegExMatch(VarValue, "U)%\s([\w%]+)\((.*)\)")  ; Functions
 							StringReplace, VarValue, VarValue, `,, ```,, All
@@ -309,7 +343,7 @@
 							If IsFunc("Eval")
 							{
 								Monster := "Eval"
-							,	VarValue := %Monster%(VarValue)
+							,	VarValue := %Monster%(VarValue, PointMarker)
 							}
 						}
 						AssignVar(VarName, Oper, VarValue)
@@ -328,7 +362,7 @@
 							%VarName% := %Action%(Params*)
 						Catch e
 						{
-							MsgBox, 20, %d_Lang007%, % d_Lang064 " Macro" mMacroOn ", " d_Lang065 " " mListRow
+							MsgBox, 20, %d_Lang007%, % "Macro" mMacroOn ", " d_Lang065 " " mListRow
 								.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" e.Extra "`n`n" d_Lang035
 							IfMsgBox, No
 							{
@@ -399,7 +433,7 @@
 				}
 				This_Point := PointMarker
 				GoSub, SplitStep
-				Loop, %TimesX%
+				While, TimesX
 				{
 					If StopIt
 					{
@@ -408,13 +442,23 @@
 						break 3
 					}
 					GoSub, pb_%Type%
+					LastError := ErrorLevel
+					If ((Type = cType15) || (Type = cType16))
+					{
+						If ((TakeAction = "Break") || ((Target = "Break") && (SearchResult = 0)))
+						{
+							TakeAction := 0
+							break
+						}
+						Else If ((Target = "Continue") && (SearchResult))
+							break
+						Else If (Target = "")
+							TimesX--
+					}
+					Else
+						TimesX--
 					If Type in Sleep,KeyWait,MsgBox
 						continue
-					If ((TakeAction = "Break") || ((Target = "Break") && (SearchResult = 0)))
-					{
-						TakeAction := 0
-						break
-					}
 					If !(Manual)
 						GoSub, pb_Sleep
 				}
@@ -422,7 +466,7 @@
 					WaitFor.Key(o_ManKey[Manual], 0)
 			}
 		}
-		If (Manual || StopIt || BreakIt || (o_TimesG[Macro_On] > 0))
+		If (Manual || StopIt || BreakIt || !Macro_On || (o_TimesG[Macro_On] > 0))
 			break
 	}
 	If ((MouseReturn = 1) && (MouseReset = 1))
@@ -442,7 +486,14 @@
 		Try Menu, Tray, Icon, %DefaultIcon%, 1
 		Menu, Tray, Default, %w_Lang005%
 		PlayOSOn := 0
-		ToggleButtonIcon(OSPlay, TestRunIcon)
+		tbOSC.ModifyButtonInfo(1, "Image", 48)
+		If (AutoHideBar)
+		{
+			If WinExist("ahk_id " PMCOSC)
+				GoSub, 28GuiClose
+			Else
+				Gui, 28:+AlwaysOntop
+		}
 	}
 	If (CloseAfterPlay)
 		ExitApp
@@ -452,7 +503,7 @@
 
 LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC)
 {
-	local lCount, lIdx, L_Index, mLoopIndex, IfError := 0
+	local lCount, lIdx, L_Index, mLoopIndex, _Label, IfError := 0
 
 	f_Loop:
 	CoordMode, Mouse, %CoordMouse%
@@ -483,10 +534,10 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC)
 					Skip_Line--
 					continue
 				}
-				Gui, ListView, InputList%lcL%
+				Gui, chMacro:ListView, InputList%lcL%
 				lIdx := Start + A_Index
-				LV_GetTexts(lIdx, Action, Step, TimesX, DelayX, Type, Target, Window)
-				IsChecked := LV_GetNext(lIdx-1, "Checked")
+			,	LV_GetTexts(lIdx, Action, Step, TimesX, DelayX, Type, Target, Window)
+			,	IsChecked := LV_GetNext(lIdx-1, "Checked")
 				If (IsChecked <> lIdx)
 					continue
 				If (pb_Sel)
@@ -507,39 +558,50 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC)
 					If ((BreakIt > 0) || (SkipIt > 0))
 						continue
 					CheckVars("Step", PointMarker)
-					If RegExMatch(Step, "^Macro(\d+)$", t_Macro)
-					{
-						If (Type = cType37)
-						{
-							L_Index := LoopIndex
-							Playback(t_Macro1)
-							LoopIndex := L_Index
-							Gui, ListView, InputList%lcL%
-							continue
-						}
-						Else
-							return t_Macro1
-					}
 					Loop, %TabCount%
 					{
-						TabIdx := A_Index
-						Gui, ListView, InputList%TabIdx%
-						Loop, % ListCount%A_Index%
+						If (Step = TabGetText(TabSel, A_Index))
 						{
-							LV_GetText(TargetLabel, A_Index, 3)
-							LV_GetText(Row_Type, A_Index, 6)
-							If ((Row_Type = cType36) || (Row_Type = cType37))
-								continue
-							If ((Row_Type = cType35) && (TargetLabel = Step))
+							If (Type = cType37)
 							{
-								If (Type = cType37)
-									Playback(TabIdx, A_Index)
-								Else
-									return t_Macro1
+								L_Index := LoopIndex
+								If (_Label := Playback(A_Index))
+									return _Label
+								LoopIndex := L_Index
+								Gui, chMacro:ListView, InputList%lcL%
+								break
+							}
+							Else
+								return A_Index
+						}
+						Else
+						{
+							TabIdx := A_Index
+							Gui, chMacro:ListView, InputList%TabIdx%
+							Loop, % ListCount%A_Index%
+							{
+								LV_GetText(Row_Type, A_Index, 6)
+								If ((Row_Type = cType36) || (Row_Type = cType37))
+									continue
+								LV_GetText(TargetLabel, A_Index, 3)
+								If ((Row_Type = cType35) && (TargetLabel = Step))
+								{
+									If (Type = cType37)
+									{
+										If (_Label := Playback(TabIdx, A_Index))
+											return _Label
+										break
+									}
+									Else
+									{
+										_Label := [TabIdx, A_Index, 0]
+										return _Label
+									}
+								}
 							}
 						}
 					}
-					Gui, ListView, InputList%Macro_On%
+					Gui, chMacro:ListView, InputList%Macro_On%
 					continue
 				}
 				If (Type = cType35)
@@ -666,7 +728,9 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC)
 					,	GoToLab := LoopSection(Start%PointMarker%, End%PointMarker%, LoopCount%PointMarker%, lcL
 						, PointMarker, mainL, mainC)
 					,	o_Loop%PointMarker% := ""
-						If (GoToLab)
+						If (GoToLab = "_return")
+							return GoToLab
+						Else If (GoToLab)
 							return GoToLab
 						PointMarker--
 						LoopIndex := mLoopIndex
@@ -675,13 +739,13 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC)
 				}
 				If ((BreakIt > 0) || (SkipIt > 0))
 					continue
-				If (Type = cType21)
+				If ((Type = cType21) || (Type = cType44))
 				{
 					StringReplace, Step, Step, ``n, `n, All
 					StringReplace, Step, Step, ``t, `t, All
 					AssignReplace(Step)
-					CheckVars("Step|Target|Window", PointMarker)
-					If (Action = "[Assign Variable]")
+					CheckVars("Step|Target|Window|VarName|VarValue", PointMarker)
+					If (Type = cType21)
 					{
 						If RegExMatch(VarValue, "U)%\s([\w%]+)\((.*)\)")  ; Functions
 							StringReplace, VarValue, VarValue, `,, ```,, All
@@ -691,7 +755,7 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC)
 							If IsFunc("Eval")
 							{
 								Monster := "Eval"
-							,	VarValue := %Monster%(VarValue)
+							,	VarValue := %Monster%(VarValue, PointMarker)
 							}
 						}
 						AssignVar(VarName, Oper, VarValue)
@@ -710,7 +774,7 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC)
 							%VarName% := %Action%(Params*)
 						Catch e
 						{
-							MsgBox, 20, %d_Lang007%, % d_Lang064 " Macro" mMacroOn ", " d_Lang065 " " mListRow
+							MsgBox, 20, %d_Lang007%, % "Macro" mMacroOn ", " d_Lang065 " " mListRow
 								.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" e.Extra "`n`n" d_Lang035
 							IfMsgBox, No
 							{
@@ -746,10 +810,7 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC)
 				If InStr(Step, "``t")
 					StringReplace, Step, Step, ``t, `t, All
 				If (Type = "Return")
-				{
-					StopIt := 1
-					continue
-				}
+					return "_return"
 				If (Type = cType29)
 				{
 					If (PointMarker = 0)
@@ -773,18 +834,23 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC)
 				}
 				This_Point := PointMarker
 				GoSub, SplitStep
-				Loop, %TimesX%
+				While, TimesX
 				{
 					If StopIt
 						break 3
 					GoSub, pb_%Type%
+					LastError := ErrorLevel, TimesX--
 					If Type in Sleep,KeyWait
 						continue
-					
-					If ((TakeAction = "Break") || ((Target = "Break") && (SearchResult = 0)))
+					If ((Type = cType15) || (Type = cType16))
 					{
-						TakeAction := 0
-						break
+						If ((TakeAction = "Break") || ((Target = "Break") && (SearchResult = 0)))
+						{
+							TakeAction := 0
+							break
+						}
+						Else If ((Target = "Continue") && (SearchResult = 0))
+							TimesX := 1
 					}
 					GoSub, pb_Sleep
 				}
@@ -810,8 +876,6 @@ IfEval(Name, Operator, Value)
 		result := (%Name% == Value) ? true : false
 	Else If (Operator = "<>")
 		result := (%Name% <> Value) ? true : false
-	Else If (Operator = "!=")
-		result := (%Name% != Value) ? true : false
 	Else If (Operator = ">")
 		result := (%Name% > Value) ? true : false
 	Else If (Operator = "<")
@@ -831,14 +895,14 @@ DoAction(X, Y, Action1, Action2, Coord, Error)
 		If (Action1 = "Move")
 		{
 			Click, %X%, %Y%, 0
-			return
+			return ""
 		}
 		If InStr(Action1, "Click")
 		{
 			Loop, Parse, Action1, %A_Space%
 				Act%A_Index% := A_LoopField
 			Click, %X%, %Y% %Act1%, 1
-			return
+			return ""
 		}
 		Else
 			return Action1
@@ -881,7 +945,7 @@ RunExtFunc(File, FuncName, Params*)
 	return SubStr(Result, 1, -1)
 }
 
-IfStatement(ThisError, Point)
+IfStatement(ThisError, l_Point)
 {
 	global
 	
@@ -991,12 +1055,12 @@ IfStatement(ThisError, Point)
 		}
 		Else If (Action = If11)
 		{
-			This_Point := Point
+			This_Point := l_Point
 			GoSub, SplitStep
 			If RegExMatch(Par1, "A_Loop\w+")
 			{
 				I := DerefVars(LoopIndex), L := SubStr(Par1, 3)
-			,	This_Par := o_Loop%Point%[I][L]
+			,	This_Par := o_Loop%l_Point%[I][L]
 			,	Par1 := "This_Par"
 			}
 			IfInString, %Par1%, %Par2%
@@ -1006,12 +1070,12 @@ IfStatement(ThisError, Point)
 		}
 		Else If (Action = If12)
 		{
-			This_Point := Point
+			This_Point := l_Point
 			GoSub, SplitStep
 			If RegExMatch(Par1, "A_Loop\w+")
 			{
 				I := DerefVars(LoopIndex), L := SubStr(Par1, 3)
-			,	This_Par := o_Loop%Point%[I][L]
+			,	This_Par := o_Loop%l_Point%[I][L]
 			,	Par1 := "This_Par"
 			}
 			IfNotInString, %Par1%, %Par2%
@@ -1029,7 +1093,7 @@ IfStatement(ThisError, Point)
 		Else If (Action = If14)
 		{
 			AssignReplace(Step)
-			CheckVars("VarValue", PointMarker)
+			CheckVars("VarName|VarValue", PointMarker)
 			EscCom("VarValue|VarName", 1)
 			If (VarName = "A_Index")
 				VarName := "LoopIndex"
@@ -1043,7 +1107,7 @@ IfStatement(ThisError, Point)
 			If IsFunc("Eval")
 			{
 				Monster := "Eval"
-				If %Monster%(Step)
+				If %Monster%(Step, PointMarker)
 					ThisError := 0
 				Else
 					ThisError++
@@ -1070,6 +1134,7 @@ class WaitFor
 		{
 			KeyWait, %Key%
 			KeyWait, %Key%, % (Delay > 0) ? "D T" Delay : "D T0.5"
+			Sleep, 10
 		}
 		Until ((ErrorLevel = 0)
 		|| ((ErrorLevel = 1) && Delay > 0)
@@ -1155,17 +1220,19 @@ SplitWin(Window)
 	return WinPars
 }
 
-CheckVars(MatchList, Point="")
+CheckVars(Match_List, l_Point="")
 {
 	global
-	Loop, Parse, MatchList, |
+	Loop, Parse, Match_List, |
 	{
 		If InStr(%A_LoopField%, "%A_Index%")
 			StringReplace, %A_LoopField%, %A_LoopField%, `%A_Index`%, `%LoopIndex`%, All
+		If InStr(%A_LoopField%, "%ErrorLevel%")
+			StringReplace, %A_LoopField%, %A_LoopField%, `%ErrorLevel`%, `%LastError`%, All
 		While, RegExMatch(%A_LoopField%, "i)%(A_Loop\w+)%", lMatch)
 		{
 			I := DerefVars(LoopIndex), L := SubStr(lMatch1, 3)
-		,	%A_LoopField% := RegExReplace(%A_LoopField%, "U)" lMatch, o_Loop%Point%[I][L])
+		,	%A_LoopField% := RegExReplace(%A_LoopField%, "U)" lMatch, o_Loop%l_Point%[I][L])
 		}
 		If RegExMatch(%A_LoopField%, "sU)%\s([\w%]+)\((.*)\)")  ; Functions
 		{
@@ -1185,31 +1252,58 @@ CheckVars(MatchList, Point="")
 					FuncResult := %Funct1%(Params*)
 					StringReplace, FuncResult, FuncResult, `,, ```, 
 					StringReplace, %A_LoopField%, %A_LoopField%, %Funct%, %FuncResult%
+					FuncResult := ""
 				}
 				Else
 					break
 			}
 		}
 		%A_LoopField% := DerefVars(%A_LoopField%)
-		If RegExMatch(%A_LoopField%, "U)^%\s+\w+$")  ; DynamicVars
+		If RegExMatch(%A_LoopField%, "U)^%\s+[\w\d_\[\]\(\)]+$")  ; DynamicVars
 		{
-			While, RegExMatch(%A_LoopField%, "mU)%\s([\w%]*)(``,|$)", Found)
+			While, RegExMatch(%A_LoopField%, "mU)%\s+([\w%]*)(``,|$)", Found)
 				%A_LoopField% := RegExReplace(%A_LoopField%, Found, %Found1%)
+			While, RegExMatch(%A_LoopField%, "mU)%\s+(\S+)\[(\S+)\]", Found) ; Arrays
+			{
+				Found := RegExReplace(Found, "[\[|\]]", "\$0")
+				If Found2 is not Number
+				{
+					If InStr(Found2, "A_")=1
+					{
+						If (Found2 = "A_Index")
+							Found2 := LoopIndex
+						While, RegExMatch(Found2, "i)(A_Loop\w+)", lMatch)
+						{
+							I := DerefVars(LoopIndex), L := SubStr(lMatch1, 3)
+						,	Found2 := RegExReplace(Found2, "U)" lMatch, o_Loop%l_Point%[I][L])
+						}
+					}
+					Else
+						Found2 := DerefVars("%" Found2 "%")
+				}
+				Try
+					%A_LoopField% := RegExReplace(%A_LoopField%, Found, %Found1%[Found2])
+				Catch
+					%A_LoopField% := RegExReplace(%A_LoopField%, Found)
+			}
 		}
 	}
 }
 
-DerefVars(String)
+DerefVars(v_String)
 {
 	global
 	
-	StringReplace, String, String, ```%, ¤, All
-	While, RegExMatch(String, "%(\w+)%", rMatch)
+	StringReplace, v_String, v_String, ```%, ¤, All
+	While, RegExMatch(v_String, "%(\w+)%", rMatch)
 	{
+		If rMatch1 in Temp,AppData,WinDir
+			rMatch1 := RegExReplace(rMatch1, "\V+", "A_$0")
 		FoundVar := RegExReplace(%rMatch1%, "%", "¤")
 	,	FoundVar := RegExReplace(FoundVar, "\$", "$$$$")
-	,	String := RegExReplace(String, rMatch, FoundVar)
+	,	FoundVar := RegExReplace(FoundVar, ",", "``,")
+	,	v_String := RegExReplace(v_String, rMatch, FoundVar)
 	}
-	return RegExReplace(String, "¤", "%")
+	return RegExReplace(v_String, "¤", "%")
 }
 

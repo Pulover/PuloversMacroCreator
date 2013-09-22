@@ -4,52 +4,67 @@
 		
 ; Main Menu		
 	m_Lang001 =	&File
-	m_Lang002 =	&Insert
+	m_Lang002 =	&Commands
 	m_Lang003 =	&Select
 	m_Lang004 =	&Edit
 	m_Lang005 =	&Macro
-	m_Lang006 =	&Options
-	m_Lang007 =	Lan&guage
-	m_Lang008 =	&Donate
-	m_Lang009 =	&Help
+	m_Lang006 =	&View
+	m_Lang007 =	&Options
+	m_Lang008 =	Lan&guage
+	m_Lang009 =	&Donate
+	m_Lang010 =	&Help
 		
-; File Submenu		
+; File Sub Menu		
 	f_Lang001 =	&New
 	f_Lang002 =	&Open
 	f_Lang003 =	&Save
 	f_Lang004 =	Save &As
-	f_Lang005 =	&Import Macro
-	f_Lang006 =	Save &Current Macro
-	f_Lang007 =	&Recent Files
-	f_Lang008 =	&Export to AHK
-	f_Lang009 =	&Preview Script
-	f_Lang010 =	&List Variables
-	f_Lang011 =	E&xit
-	f_Lang012 =	No files
+	f_Lang005 =	&Recent Files
+	f_Lang006 =	&Export to AHK
+	f_Lang007 =	&Preview Script
+	f_Lang008 =	E&dit Script
+	f_Lang009 =	&List Variables
+	f_Lang010 =	E&xit
+	f_Lang011 =	No files
 		
-; Insert Sub Menu		
+; Macro Sub Menu		
+	r_lang001 =	&Record Macro
+	r_lang002 =	&Activate Macros
+	r_lang003 =	&Play Current Macro
+	r_lang004 =	&Timer
+	r_lang005 =	P&lay from Selected Row
+	r_lang006 =	Pla&y until Selected Row
+	r_lang007 =	Play &Selected Rows
+	r_lang008 =	&Context Sensitive Hotkeys
+	r_lang009 =	A&dd Macro
+	r_lang010 =	Cl&ose Macro
+	r_lang011 =	D&uplicate Macro
+	r_lang012 =	&Edit Macros
+	r_lang013 =	&Import Macro
+	r_lang014 =	Sa&ve Current Macro
+		
+; Commands Sub Menu		
 	i_Lang001 =	&Mouse
 	i_Lang002 =	&Text
 	i_Lang003 =	&Control
-	i_Lang004 =	&Pause / Message / Key Wait
-	i_Lang005 =	&Window
-	i_Lang006 =	&Image / Pixel Search
-	i_Lang007 =	&Run / File / String / Misc.
-	i_Lang008 =	&Loop / Goto / Label
-	i_Lang009 =	If &Statements / Variables / Functions
-	i_Lang010 =	Internet &Explorer / COM Interface
-	i_Lang011 =	Win&dows Messages
-	i_Lang012 =	Special &Keys
+	i_Lang004 =	&Pause
+	i_Lang005 =	M&essage Box
+	i_Lang006 =	&Key Wait
+	i_Lang007 =	&Window
+	i_Lang008 =	&Image / Pixel Search
+	i_Lang009 =	&Run / File / String / Misc.
+	i_Lang010 =	&Loop
+	i_Lang011 =	&Goto
+	i_Lang012 =	L&abel
+	i_Lang013 =	I&f Statements
+	i_Lang014 =	&Variables
+	i_Lang015 =	F&unctions
+	i_Lang016 =	I&nternet Explorer
+	i_Lang017 =	C&OM Interface
+	i_Lang018 =	Run &Scriptlet
+	i_Lang019 =	Win&dows Messages
+	i_Lang020 =	Find a command
 		
-; Select Sub Menu		
-	s_Lang001 =	Select &All
-	s_Lang002 =	Select &None
-	s_Lang003 =	&Invert Selection
-	s_Lang004 =	&Check Selected
-	s_Lang005 =	&Uncheck Selected
-	s_Lang006 =	In&vert Checks
-	s_Lang007 =	Selected &Type
-	s_Lang008 =	C&ommands
 		
 ; Edit Sub Menu		
 	e_Lang001 =	Dup&licate
@@ -65,46 +80,73 @@
 	e_Lang011 =	Mo&ve Up
 	e_Lang012 =	Move Dow&n
 	e_Lang013 =	&Insert from Box
-	e_Lang014 =	Edit Color &Mark
+	e_Lang014 =	Insert &Keystroke
+	e_Lang015 =	Edit Color &Mark
 		
-; Macro Sub Menu		
-	r_lang001 =	&Record Macro
-	r_lang002 =	&Activate Macros
-	r_lang003 =	&Play Current Macro
-	r_lang004 =	&Timer
-	r_lang005 =	A&dd Macro
-	r_lang006 =	&Close Macro
-	r_lang007 =	Context Sensitive &Hotkeys
-	r_lang008 =	Show / Hide C&ontrols
-	r_lang009 =	Play &from Selected Row
-	r_lang010 =	Play &until Selected Row
-	r_lang011 =	Play &Selected Rows
+; Select Sub Menu		
+	s_Lang001 =	Select &All
+	s_Lang002 =	Select &None
+	s_Lang003 =	&Invert Selection
+	s_Lang004 =	&Check Selected
+	s_Lang005 =	&Uncheck Selected
+	s_Lang006 =	In&vert Checks
+	s_Lang007 =	Move Selection U&p
+	s_Lang008 =	Move Selection &Down
+	s_Lang009 =	Selected &Type
+	s_Lang010 =	Command type
+		
+; View Sub Menu		
+	v_lang001 =	&Always On Top
+	v_lang002 =	&Highlight Rows
+	v_lang003 =	&Indentation
+	v_lang004 =	&Controls Toolbar
+	v_lang005 =	&Preview
+	v_lang006 =	&Toolbars
+	v_lang007 =	H&otkeys
+	v_lang008 =	&Reset Columns Size
+	v_lang009 =	R&eset Layout
+		
+	v_lang010 =	&File
+	v_lang011 =	&Record  Play
+	v_lang012 =	&Commands
+	v_lang013 =	&Edit
+	v_lang014 =	&Options
+	v_lang015 =	C&ustomize
+		
+	v_lang016 =	&Automatic
+	v_lang017 =	&Manual
+	v_lang018 =	&Stop
+	v_lang019 =	&Pause
+		
+	v_lang020 =	&Compact
+	v_lang021 =	&Default
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Settings
 	o_Lang002 =	Set as &Default Hotkeys
 	o_Lang003 =	Set as Default &File
 	o_Lang004 =	&Remove Default File
-	o_Lang005 =	Reset &Columns Size
-	o_Lang006 =	Default &Hotkeys
-	o_Lang007 =	D&efault Settings
+	o_Lang005 =	Default &Hotkeys
+	o_Lang006 =	D&efault Settings
 		
 ; Donate Sub Menu		
 	p_Lang001 =	&PayPal Donation
 		
 ; Help Sub Menu		
-	h_Lang001 =	&Macro Creator Home
-	h_Lang002 =	&AHK Online Documentation
-	h_Lang003 =	&Check for updates...
-	h_Lang004 =	Check on &start-up
-	h_Lang005 =	Abo&ut
-	h_Lang006 =	&Tips
-	h_Lang007 =	&Forum
+	h_Lang001 =	&Help
+	h_Lang002 =	&Tutorials
+	h_Lang003 =	T&ips
+	h_Lang004 =	&Macro Creator Home
+	h_Lang005 =	&Forum
+	h_Lang006 =	&AHK Online Documentation
+	h_Lang007 =	&Check for updates...
+	h_Lang008 =	Ch&eck on startup
+	h_Lang009 =	A&bout
 		
 ; Tray Menu		
 	y_Lang001 =	Hide Window
 	y_Lang002 =	Show Window
-	y_Lang003 =	Show / Hide Controls
+	y_Lang003 =	Controls Toolbar
 		
 ; Main Window		
 	w_Lang001 =	Export
@@ -112,21 +154,21 @@
 	w_Lang003 =	Options
 	w_Lang004 =	Record
 	w_Lang005 =	Play
-	w_Lang006 =	Auto.
-	w_Lang007 =	Man.
+	w_Lang006 =	Playback
+	w_Lang007 =	Manual
 	w_Lang008 =	Stop
-	w_Lang009 =	Show Co&ntrols
-	w_Lang010 =	&Pause
-	w_Lang011 =	&Loop
-	w_Lang012 =	&Capture Keys
-	w_Lang013 =	Hide &Window
-	w_Lang014 =	&Always Active
+	w_Lang009 =	Display controls toolbar
+	w_Lang010 =	Pause
+	w_Lang011 =	Loop
+	w_Lang012 =	Capture key presses in this window
+	w_Lang013 =	Minimize to tray
+	w_Lang014 =	Hotkeys Always Active
 	w_Lang015 =	Repeat
-	w_Lang016 =	Delay (ms):
+	w_Lang016 =	Delay (ms)
 	w_Lang017 =	Apply
 	w_Lang018 =	Insert
 	w_Lang019 =	Edit
-	w_Lang020 =	(unused)
+	w_Lang020 =	Shutdown options (When playback finishes...)
 	w_Lang021 =	Do nothing
 	w_Lang022 =	Close application
 	w_Lang023 =	Shutdown
@@ -146,6 +188,60 @@
 	w_Lang037 =	Window
 	w_Lang038 =	Comment
 	w_Lang039 =	Color
+	w_Lang040 =	New (Ctrl+N)
+	w_Lang041 =	Open (Ctrl+O)
+	w_Lang042 =	Save (Ctrl+S)
+	w_Lang043 =	Export to AHK (Ctrl+E)
+	w_Lang044 =	Preview Script (Ctrl+P)
+	w_Lang045 =	Settings (Ctrl+G)
+	w_Lang046 =	Record Macro (Ctrl+R)
+	w_Lang047 =	Activate Macros (Ctrl+Enter)
+	w_Lang048 =	Play Current Macro (Ctrl+Shift+Enter)
+	w_Lang049 =	Timer (Ctrl+Shift+T)
+	w_Lang050 =	Mouse (F2)
+	w_Lang051 =	Text (F3)
+	w_Lang052 =	Edit Macros (Ctrl+Shift+M)
+	w_Lang053 =	Control (F4)
+	w_Lang054 =	Pause (F5)
+	w_Lang055 =	Message Box (Shift+F5)
+	w_Lang056 =	Key Wait (Control+F5) 
+	w_Lang057 =	Window (F6)
+	w_Lang058 =	Image / Pixel Search (F7)
+	w_Lang059 =	Run / File / String / Misc. (F8)
+	w_Lang060 =	Loop (F9)
+	w_Lang061 =	Goto (Shift+F9)
+	w_Lang062 =	Label (Ctrl+F9)
+	w_Lang063 =	If Statements (F10)
+	w_Lang064 =	Variables (Shift+F10)
+	w_Lang065 =	Functions (Ctrl+F10)
+	w_Lang066 =	Internet Explorer (F11)
+	w_Lang067 =	COM Interface (Shift+F11)
+	w_Lang068 =	Run Scriptlet (Ctrl+F11)
+	w_Lang069 =	Windows Messages (F12)
+	w_Lang070 =	Add the Windows key to "Play" hotkey
+	w_Lang071 =	Use a joystick button as hotkey
+	w_Lang072 =	Add Macro (Ctrl+T)
+	w_Lang073 =	Close Macro (Ctrl+W)
+	w_Lang074 =	Duplicate Macro (Ctrl+Shift+D)
+	w_Lang075 =	Import Macro (Ctrl+I)
+	w_Lang076 =	Save Current Macro (Ctrl+Alt+S)
+	w_Lang077 =	Move Up (Ctrl+PageUp)
+	w_Lang078 =	Move Down (Ctrl+PageDown)
+	w_Lang079 =	Duplicate Selected Rows (Ctrl+D)
+	w_Lang080 =	Cut Selected Rows (Ctrl+X)
+	w_Lang081 =	Copy Selected Rows (Ctrl+C)
+	w_Lang082 =	Paste Copied Rows (Ctrl+V)
+	w_Lang083 =	Delete Selected Rows (Del)
+	w_Lang084 =	Undo (Ctrl+Z)
+	w_Lang085 =	Redo (Ctrl+Y)
+	w_Lang086 =	Copy to...
+	w_Lang087 =	Find / Replace (Ctrl+F)
+	w_Lang088 =	Edit Comment (Ctrl+L)
+	w_Lang089 =	Edit Color Mark (Ctrl+M)
+	w_Lang090 =	Customize
+	w_Lang091 =	Find a command (Ctrl+Shift+F)
+	w_Lang092 =	Edit (Enter)
+	w_Lang093 =	Hide
 		
 ; Command Windows		
 	c_Lang001 =	Mouse
@@ -181,8 +277,8 @@
 	c_Lang031 =	Wheel Down
 	c_Lang032 =	Drag && Drop
 	c_Lang033 =	Coordinates
-	c_Lang034 =	Click
-	c_Lang035 =	Send
+	c_Lang034 =	Search
+	c_Lang035 =	Subcommand
 	c_Lang036 =	Relative
 	c_Lang037 =	Button
 	c_Lang038 =	Left
@@ -216,7 +312,7 @@
 	c_Lang066 =	Key Wait
 	c_Lang067 =	If found
 	c_Lang068 =	If not found / Error
-	c_Lang069 =	*Coords stored to `%FoundX`% / `%FoundY`%.
+	c_Lang069 =	Coords stored to `%FoundX`%/`%FoundY`%.
 	c_Lang070 =	Coord
 	c_Lang071 =	Variations
 	c_Lang072 =	Preview
@@ -228,16 +324,16 @@
 	c_Lang078 =	Go to Label
 	c_Lang079 =	Label
 	c_Lang080 =	Add Label
-	c_Lang081 =	String (InputVar), Value
-	c_Lang082 =	Var [operator] Value
-	c_Lang083 =	Add Else
+	c_Lang081 =	String (InputVar)
+	c_Lang082 =	Variable
+	c_Lang083 =	Else
 	c_Lang084 =	Assign Variable
 	c_Lang085 =	Content
 	c_Lang086 =	Operator
-	c_Lang087 =	Use Eval() to solve expressions
+	c_Lang087 =	Expression
 	c_Lang088 =	Reset
 	c_Lang089 =	Function Name
-	c_Lang090 =	Comma separated parameters (without parenthesis).
+	c_Lang090 =	Comma separated parameters (without parenthesis)
 	c_Lang091 =	(Use `% for Variables. Literal Commas must be escaped [ ```, ])
 	c_Lang092 =	Page Element / Index
 	c_Lang093 =	Set
@@ -276,7 +372,7 @@
 	c_Lang126 =	Code added to Virtual Keys List!
 	c_Lang127 =	Type a name for the variable
 	c_Lang128 =	Use Function from External File
-	c_Lang130 =	Break loop if found
+	c_Lang130 =	Repeat until
 	c_Lang131 =	Apply
 	c_Lang132 =	Loop
 	c_Lang133 =	File
@@ -309,9 +405,52 @@
 	c_Lang160 =	Transparent
 	c_Lang161 =	Scale
 	c_Lang162 =	Add "If Statement"
+	c_Lang163 =	Send Mode
+	c_Lang164 =	Equal
+	c_Lang165 =	Contains
+	c_Lang166 =	Greater
+	c_Lang167 =	Less
+	c_Lang168 =	Yes
+	c_Lang169 =	No
+	c_Lang170 =	OK
+	c_Lang171 =	Cancel
+	c_Lang172 =	Abort
+	c_Lang173 =	Ignore
+	c_Lang174 =	Retry
+	c_Lang175 =	Continue
+	c_Lang176 =	Try Again
+	c_Lang177 =	Timeout 
+	c_Lang178 =	Set key delay
+	c_Lang179 =	Key delay
+	c_Lang180 =	Random delay
+	c_Lang181 =	Minimum
+	c_Lang182 =	Maximum
+	c_Lang183 =	Disable random delays for this command
+	c_Lang184 =	Select from list
+	c_Lang185 =	Buttons
+	c_Lang186 =	First
+	c_Lang187 =	Second
+	c_Lang188 =	Third
+	c_Lang189 =	Title
+	c_Lang190 =	If window active
+	c_Lang191 =	If window not active
+	c_Lang192 =	If window exist
+	c_Lang193 =	If window not exist
+	c_Lang194 =	If file exist
+	c_Lang195 =	If file not exist
+	c_Lang196 =	If clipboard text
+	c_Lang197 =	If loop index
+	c_Lang198 =	If image/pixel found
+	c_Lang199 =	If image/pixel not found
+	c_Lang200 =	If string contains
+	c_Lang201 =	If string not contains
+	c_Lang202 =	If message box
+	c_Lang203 =	Compare variables
+	c_Lang204 =	Evaluate expression
+	c_Lang205 =	Region
 		
 ; Other Windows		
-	t_Lang001 =	Export to AHK
+	t_Lang001 =	Export to AutoHotkey
 	t_Lang002 =	Macros
 	t_Lang003 =	Loops
 	t_Lang004 =	0 = infinite
@@ -362,14 +501,14 @@
 	t_Lang049 =	Capture on release
 	t_Lang050 =	Press Enter to capture
 	t_Lang051 =	Screenshots Directory
-	t_Lang052 =	Misc.
+	t_Lang052 =	Line wrap
 	t_Lang053 =	Hotkeys
 	t_Lang054 =	Set As Default Hotkeys
 	t_Lang055 =	Disable Window Shortcuts
 	t_Lang056 =	Reset Columns Size
 	t_Lang057 =	Default Macro File
 	t_Lang058 =	Standard Library File
-	t_Lang059 =	Use Eval() by default for Variables Assignment
+	t_Lang059 =	Use Expression by default for Variables Assignment
 	t_Lang060 =	Show Colors && Help Marks for Loops and Statements
 	t_Lang061 =	(Click the Index column header to enable / disable)
 	t_Lang062 =	Virtual Keys
@@ -378,16 +517,16 @@
 	t_Lang065 =	Comment
 	t_Lang066 =	Search Column
 	t_Lang067 =	Find / Replace
-	t_Lang068 =	Find
-	t_Lang069 =	Match Case
-	t_Lang070 =	Replace
+	t_Lang068 =	&Find
+	t_Lang069 =	&Match Case
+	t_Lang070 =	&Replace
 	t_Lang071 =	Found
 	t_Lang072 =	Replaced
-	t_Lang073 =	Selected Rows
-	t_Lang074 =	All Rows
-	t_Lang075 =	All Macros
+	t_Lang073 =	&Selected Rows
+	t_Lang074 =	&All Rows
+	t_Lang075 =	A&ll Macros
 	t_Lang076 =	About
-	t_Lang077 =	Regular Expression
+	t_Lang077 =	Re&gular Expression
 	t_Lang078 =	Play once
 	t_Lang079 =	Play every X (mili)seconds
 	t_Lang080 =	Timer
@@ -395,22 +534,22 @@
 	t_Lang082 =	Statements
 	t_Lang083 =	Show Indentation for Loops and Statements
 	t_Lang084 =	(Double-Click the Action column header enable / disable)
-	t_Lang085 =	Display Controls Bar on start-up
+	t_Lang085 =	Display Controls Bar on startup
 	t_Lang086 =	Searching for Functions. Please wait...
 	t_Lang087 =	Include External Files
 	t_Lang088 =	Create EXE File
 	t_Lang089 =	Allow Multiple Instances
 	t_Lang090 =	Defaults
 	t_Lang091 =	Allow Dragging Rows
-	t_Lang092 =	Entire cell contents
+	t_Lang092 =	&Entire cell contents
 	t_Lang093 =	Standard INI format
 	t_Lang094 =	Name = Value
 	t_Lang095 =	Enter 1 variable per line. You may also add [Sections].
 	t_Lang096 =	User Global Variables
 	t_Lang097 =	Press a button on the joystick
-	t_Lang098 =	Joystick
+	t_Lang098 =	Backspace to clear
 	t_Lang099 =	Button
-	t_Lang100 =	Show Info
+	t_Lang100 =	Display balloon tips
 	t_Lang101 =	Speed
 	t_Lang102 =	Slow
 	t_Lang103 =	Fast
@@ -422,6 +561,47 @@
 	t_Lang109 =	Down
 	t_Lang110 =	Up
 	t_Lang111 =	Insert Keystroke
+	t_Lang112 =	Play / Pause
+	t_Lang113 =	Stop
+	t_Lang114 =	Playback Options
+	t_Lang115 =	Start / Stop Record
+	t_Lang116 =	Record New Macro
+	t_Lang117 =	Recording Options
+	t_Lang118 =	Clear List
+	t_Lang119 =	Display Progress Bar
+	t_Lang120 =	Speed Up
+	t_Lang121 =	Slow Down
+	t_Lang122 =	Show / Hide Title Bar
+	t_Lang123 =	Show / Hide Main Window
+	t_Lang124 =	Undock
+	t_Lang125 =	Dock
+	t_Lang126 =	Open
+	t_Lang127 =	Save
+	t_Lang128 =	Cut
+	t_Lang129 =	Copy
+	t_Lang130 =	Paste
+	t_Lang131 =	Select All
+	t_Lang132 =	Delete
+	t_Lang133 =	Keyboard
+	t_Lang134 =	Mouse
+	t_Lang135 =	Others
+	t_Lang136 =	Highlight Rows
+	t_Lang137 =	Default Script Editor
+	t_Lang138 =	Edit Script (Ctrl+Shift+E)
+	t_Lang139 =	Select
+	t_Lang140 =	By Column
+	t_Lang141 =	All Columns
+	t_Lang142 =	Remove Theme from Toolbars (requires restart)
+	t_Lang143 =	Auto Hide Controls Toolbar
+	t_Lang144 =	Click and Drag to change order. Double-Click to edit.
+	t_Lang145 =	Edit Macros
+	t_Lang146 =	In line
+	t_Lang147 =	Macro
+	t_Lang148 =	Action of main window's close button
+	t_Lang149 =	Close application
+	t_Lang150 =	Minimize to tray
+	t_Lang151 =	Display confirmation when closing a macro
+	t_Lang152 =	Create backups automatically
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Open
@@ -448,7 +628,7 @@
 	)	
 	d_Lang018 =	Pixel Color
 	d_Lang019 =	Clear List
-	d_Lang020 =	Sure to delete all items?
+	d_Lang020 =	Close Macro?
 	d_Lang021 =	Next
 	d_Lang022 =	Previous
 	d_Lang023 =	Message
@@ -514,8 +694,8 @@
 	)	
 	d_Lang057 =	
 	(LTrim	
-		- Press Ctrl + Arrow keys to move selected area.
-		- Press Shift + Arrow keys to resize selected area.
+		- Press Ctrl+Arrow keys to move selected area.
+		- Press Shift+Arrow keys to resize selected area.
 		- Press Enter to finish.
 	)	
 	d_Lang058 =	
@@ -533,28 +713,43 @@
 	(LTrim	
 		Would you like to download it now?
 		
-		To disable automatic checks select Help > Check on start-up.
+		To disable automatic checks select Help > Check on startup
 	)	
+		
 	d_Lang062 =	You already have the most recent version.
 	d_Lang063 =	An error occured while checking.
 	d_Lang064 =	COM object error in
 	d_Lang065 =	Row
 	d_Lang066 =	Specifically
-	d_Lang067 =	Show tips on start-up.
+	d_Lang067 =	Show this window on startup
 	d_Lang068 =	Tips:
 	d_Lang069 =	
 	(LTrim	
-		Need help, found a bug or have a suggestion? Send an email to the author: <a href="mailto:rodolfoub@gmail.com">rodolfoub@gmail.com</a>
-		This is a free software. If you found it useful consider <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=rodolfoub`%40gmail`%2ecom&lc=US&item_name=Pulover`%27s`%20Macro`%20Creator&item_number=App`%2ePMC&currency_code=USD&bn=PP`%2dDonationsBF`%3abtn_donateCC_LG`%2egif`%3aNonHosted">making a donation</a> and support development. Thank you.
+		A lot of time and effort has gone into the development of Pulover's Macro Creator. If you find it useful, please consider showing your appreciation with a donation.
+		
+		Donating or not, there will be no difference in its features and functionality.
 	)	
-	d_Lang070 =	Error: Invalid Hotkey Selected.
+	d_Lang070 =	Donate...
+	d_Lang071 =	No, thanks
+	d_Lang072 =	Support Open Source software
+	d_Lang073 =	Error: Invalid Hotkey Selected.
+	d_Lang074 =	Find a command or function
+	d_Lang075 =	Welcome to Pulover's Macro Creator
+	d_Lang076 =	Please choose your prefered layout
+	d_Lang077 =	Compact
+	d_Lang078 =	Default
+	d_Lang079 =	Check for updates on startup.
+	d_Lang080 =	You can change this in Options > Settings > General.
+	d_Lang081 =	You can change and customize layouts in the View menu.
+	d_Lang082 =	The file was not found!
+	d_Lang083 =	A backup file has been found. Would you like to open it?
 		
 ; Start-up Tips		
 	Start_Tips =	
 	(LTrim	
 		You can create Macros using the Command Buttons in the main window or using the Recorder to copy your actions. Go to Options > Settings > Recording to select what inputs will be recorded.
 		To use the recorder for quick tasks go to Options > Settings > Recording and check the "Clear List" option. Then click the Record button in the main window and use F10 to clear the current Macro and start a new one with the same hotkey. You can also check the "Always Active" option in the main window to keep Recording and Playback hotkeys active.
-		To get help for an specific command right-click on a command button in the main window or anywhere in a command window to show links to AutoHotkey online Help.
+		To get help for an specific command right-click anywhere on a command window to show links to AutoHotkey online Help.
 		Check the "Capture Keys" option to enter keys and combinations to your Macro directly from the main window.
 		Enter keys and combinations in the Hotkey box at the bottom and press the Insert button to add them to the select rows.
 		If no rows are selected the edit buttons apply to all rows in the list.
@@ -570,96 +765,39 @@
 		You can open, copy, move or delete files and folders using one of the commands in Insert > Run / File / String / Misc.
 		To record Down and Up state of every key go to Options > Settings > Recording and check "Capture key state (Down / Up)" option.
 		You can use hotkeys to speed up or slow down Playback. Go to Options > Settings > Playback to set keys and speed.
-		To adjust capture area using the "Make Screenshot" tool go to Options > Settings > Screenshots and select "Press Enter to Capture". After drawing the rectangle use Control + arrow keys to move the selection and Shift + arrow keys to resize it.
+		To adjust capture area using the "Make Screenshot" tool go to Options > Settings > Screenshots and select "Press Enter to Capture". After drawing the rectangle use Control+arrow keys to move the selection and Shift+arrow keys to resize it.
 		Quick Select: Select any row and click on a column header to select similar rows based on cell's text from that column.
 		The Run / File / String / Misc. window have many other useful commands such as Shutdown and UrlDownloadToFile.
 		Use the "Screenshot" function in the functions window (Insert > If Statements / Variables / Functions) to make a screenshot of part of the screen. First parameter is the destination file's path and name with a png extension. Second parameter are the pipe-separated coordinates in the screen, e.g. 100|200|50|100 (X|Y|Width|Height).
 		Click on the Index Column Header to turn On/Off Help Marks and Colors for Loops and Statements. Double-Click on the Action Column Header to turn On/Off Indentation for Loops and Statements.
 		You can debug your Macros using the Manual Hotkey and the Play options in the Macro menu. You can also disable actions by unchecking them in the Macro list.
 		To make your Macros work only on a certain window go to Macro > Context Sensitive Hotkeys.
-		You can set your own Global Variables to be loaded on start up and to be exported. Go to Options > Settings > User Global Variables to add them.
+		You can set your own Global Variables to be loaded on startup and to be exported. Go to Options > Settings > User Global Variables to add them.
 		You can run advanced functions such as SubStr and RegExReplace from the Functions window (Insert > If Statements / Variables / Functions). Or run your own functions from external AutoHotkey scripts.
 	)	
 ; Tooltips		
-	NewB_TT =	New (Ctrl+N)
-	OpenB_TT =	Open (Ctrl+O)
-	SaveB_TT =	Save (Ctrl+S)
-	ExportB_TT =	Export to AHK (Ctrl+E)
-	PreviewB_TT =	Preview Script (Ctrl+P)
-	OptionsB_TT =	Settings (Ctrl+G)
-	RecordB_TT =	Record Macro (Ctrl+R)
-	StartB_TT =	Activate Macros (Ctrl+Enter)
-	TestRun_TT =	Play Current Macro (Ctrl+Shift+Enter)
-	RunTimer_TT =	Timer (Ctrl+Shift+T)
-	MouseB_TT =	Mouse (F2)
-	TextB_TT =	Text (F3)
-	SpecialB_TT =	Special Keys
-	ControlB_TT =	Control (F4)
-	PauseB_TT =	Pause (F5) / Message (Shift+F5) / Key Wait (Control+F5) 
-	WindowB_TT =	Window (F6)
-	ImageB_TT =	Image / Pixel Search (F7)
-	RunB_TT =	Run / File / String / Misc. (F8)
-	ComLoopB_TT =	Loop (F9) / Goto (Shift+F9) / Label (Ctrl+F9)
-	IfStB_TT =	If Statements (F10) / Variables (Shift+F10) / Functions (Ctrl+F10)
-	IEComB_TT =	Internet Explorer (F11) / COM Interface (Shift+F11) / Run Scriptlet (Ctrl+F11)
-	SendMsgB_TT =	Windows Messages (F12)
-	AutoKey_TT =	Backspace to clear
-	ManKey_TT =	Backspace to clear
-	AbortKey_TT =	Backspace to clear
+	AutoKey_TT =	Hotkey to play Macro
+	ManKey_TT =	Hotkey to play Macro "step-by-step"
+	AbortKey_TT =	Hotkey to stop playback
+	PauseKey_TT =	Hotkey to pause playback
+	RecKey_TT =	Backspace to clear
+	RecNewKey_TT =	Backspace to clear
 	JoyKey_TT =	Press a button on the joystick
-	PauseKey_TT =	Pauses execution instead of stopping
-	OnFinish_TT =	
-	(LTrim	
-		Shutdown options
-		When playback finishes...
-	)	
-	Win1_TT =	Add the Windows key as modifier
-	JoyHK_TT =	Joystick
 	ReptC_TT =	0 = infinite
-	TabPlus_TT =	Add Macro (Ctrl+T)
-	TabClose_TT =	Close Macro (Ctrl+W)
-	DuplicateL_TT =	Duplicate Macro (Ctrl+Shift+D)
-	SaveC_TT =	Save Current Macro (Ctrl+Alt+S)
-	ImportB_TT =	Import Macro (Ctrl+I)
-	IfDirB_TT =	Make Hotkeys work depending on the`ntype of window that is active or exists (Ctrl+H)
-	KeepHKOn_TT =	Keep Hotkeys Always Activated
 	A_List_TT =	Select Macro (Ctrl+1~0)
 	OSHK_TT =	Select Macro
 	OSHKEd_TT =	Select Macro
-	Duplicate_TT =	Duplicate Selected Rows (Ctrl+D)
-	Order_TT =	Move Selected Rows (Ctrl+PageUp / Ctrl+PageDown)
-	Cut_TT =	Cut Selected Rows (Ctrl+X)
-	Copy_TT =	Copy Selected Rows (Ctrl+C)
-	Paste_TT =	Paste Copied Rows (Ctrl+V)
-	Remove_TT =	Delete Selected Rows (Del)
-	Undo_TT =	Undo (Ctrl+Z)
-	Redo_TT =	Redo (Ctrl+Y)
-	CopyTo_TT =	Copy to...
-	Capt_TT =	Capture key presses in this window
-	OnScCtrl_TT =	Display Controls Toolbar
-	ShowStep_TT =	Display balloon tips
 	ApplyT_TT =	Apply
 	ApplyI_TT =	Apply
 	ApplyL_TT =	Insert from Box (Insert)
 	InsertKey_TT =	Insert Keystroke (Ctrl+Insert)
-	EditButton_TT =	Edit (Enter)
-	PrevRefresh_TT =	Refresh (F5)
-	PrevCopy_TT =	Copy
-	OpenT_TT =	Open (Ctrl+O)
-	SaveT_TT =	Save (Ctrl+S)
-	CutT_TT =	Cut
-	CopyT_TT =	Copy
-	PasteT_TT =	Paste
-	SelAllT_TT =	Select All
-	DefaultMacro_TT =	Select file to load on program start up
+	InsertKeyT_TT =	Insert Keystroke
+	DefaultMacro_TT =	Select file to load on program startup
 	VarCopyA_TT =	Copy current variable contents
 	VarCopyB_TT =	Copy current variable contents
-	FindReplace_TT =	Find / Replace (Ctrl+F)
-	EditComm_TT =	Edit Comment (Ctrl+L)
-	EditColor_TT =	Edit Color Mark (Ctrl+M)
 	Reset_TT =	Clear variable contents
 	Screenshot_TT =	Make Screenshot
-	ColorPick_TT =	Color Picker
+	ColorPick_TT =	Get Pixel on Screen
 	PicPrev_TT =	Double-Click to open Image
 	CoordPixel_TT =	Coordinate mode
 	VariatT_TT =	Shades of variation
@@ -667,25 +805,17 @@
 	TransC_TT =	Transparent color
 	WScale_TT =	Width scale
 	HScale_TT =	Height scale
+	Fast_TT =	Uses a faster searching method (recommended)
+	RGB_TT =	Causes color to be interpreted as an RGB value instead of BGR
 	LoopLVColor_TT =	Click to pick a color
 	IfLVColor_TT =	Click to pick a color
 	RefreshIEW_TT =	Refresh List
 	ActiveObj_TT =	Tries to connect to an Active COM Object
+	TimeoutM_TT =	0 = infinite
 	ExpView_TT =	Advanced Editor
 	ExpView2_TT =	Advanced Editor
-	OSPlay_TT =	Play / Pause
-	OSStop_TT =	Stop
-	OSRec_TT =	Start / Stop Record
-	OSRecNew_TT =	Record New Macro
-	OSRecOpt_TT =	Recording Options
-	OSPlayOpt_TT =	Playback Options
-	OSClear_TT =	Clear List
 	OSProgB_TT =	Display Progress Bar
-	OSFast_TT =	Speed Up
-	OSSlow_TT =	Slow Down
 	OSTrans_TT =	Opacity
-	ToggleTB_TT =	Show / Hide Title Bar
-	ToggleMW_TT =	Show / Hide Main Window
 	MRel_TT =	
 	(LTrim	
 		Movements relative to current position.
@@ -703,6 +833,7 @@
 		are treated as modifiers (these modifiers affect
 		only the very next key): !, +, ^, #
 	)	
+	ComEvent_TT =	The rate at which keystrokes are sent is determined by key delay.
 	Clip_TT =	
 	(LTrim	
 		Temporarily uses Clipboard to send the text.
@@ -849,6 +980,22 @@
 	Ex_UV_TT =	Export global variables.
 	Ex_EdVars_TT =	Select global variables to be exported.
 		
+; Operators		
+	As_Oper_1 =	Assign
+	As_Oper_2 =	Add
+	As_Oper_3 =	Subtract
+	As_Oper_4 =	Multiply
+	As_Oper_5 =	Divide
+	As_Oper_6 =	Floor divide
+	As_Oper_7 =	Concatenate
+	Co_Oper_1 =	Equal
+	Co_Oper_2 =	Equal (case sensitive)
+	Co_Oper_3 =	Not equal
+	Co_Oper_4 =	Greater
+	Co_Oper_5 =	Less
+	Co_Oper_6 =	Greater or equal
+	Co_Oper_7 =	Less or equal
+		
 ; IE Commands Tips		
 	Tip_Navigate =	Navigates to a URL or path.
 	Tip_Value =	Gets or sets the value of the object.
@@ -866,6 +1013,7 @@
 	Tip_LocationURL =	Gets the URL of the current page.
 	Tip_InnerText =	Sets or gets the text of the object.
 	Tip_InnerHTML =	Sets or retrieves the HTML of the object.
+	Tip_OuterHTML =	Sets or retrieves the object and its content in HTML.
 	Tip_Href =	Sets or retrieves a destination URL or an anchor point.
 	Tip_Src =	Sets or retrieves a URL to be loaded by the object.
 	Tip_SelectedIndex =	Sets or retrieves the index of the selected option in a select object. 
@@ -875,4 +1023,251 @@
 	Tip_Height =	Sets or retrieves the height of the object.
 	Tip_Length =	Sets or retrieves the number of objects in a collection.
 		
+; AHK Commands Tips		
+	Ahk_Cmd_Index =	
+	(LTrim	
+	Abs	Returns the absolute value of Number.
+	ASin	Returns the arcsine (the number whose sine is Number) in radians.
+	ACos	Returns the arccosine (the number whose cosine is Number) in radians.
+	Array	Creates an Array Object.
+	Asc	Returns the character code (a number between 1 and 255 (in ANSI builds) or 65535 (in Unicode builds)) for the first character in String.
+	ATan	Returns the arctangent (the number whose tangent is Number) in radians.
+	BlockInput	Disables or enables the user's ability to interact with the computer via keyboard and mouse.
+	Break	Exits (terminates) a loop. Valid inside any kind of loop.
+	Ceil	Returns Number rounded up to the nearest integer (without any .00 suffix).
+	Chr	Returns the single character corresponding to the character code indicated by Number.
+	Click	Clicks a mouse button at the specified coordinates. It can also hold down a button, turn the wheel, or move.
+	ClipWait	Waits until the clipboard contains data.
+	Clipboard	Pastes text from clipboard.
+	ComObjActive	Retrieves a registered COM object.
+	ComObjArray	Creates a SAFEARRAY for use with COM.
+	ComObjConnect	Connects a COM object's event sources to functions with a given prefix.
+	ComObjCreate	Creates a COM object.
+	ComObjEnwrap / ComObjUnwrap	Wraps/unwraps a COM object.
+	ComObjError	Enables or disables notification of COM errors.
+	ComObjFlags	Retrieves or changes flags which control a COM wrapper object's behaviour.
+	ComObjGet	Returns a reference to an object provided by a COM component.
+	ComObjMissing	Creates a "missing parameter" object to pass to a COM method.
+	ComObjParameter	Wraps a value and type to pass as a parameter to a COM method.
+	ComObjQuery	Queries a COM object for an interface or service.
+	ComObjType	Retrieves type information from a COM object.
+	ComObjValue	Retrieves the value or pointer stored in a COM wrapper object.
+	Continue	Skips the rest of the current loop iteration and begins a new one. Valid inside any kind of loop.
+	Control	Makes a variety of changes to a control.
+	ControlClick	Sends a mouse button or mouse wheel event to a control.
+	ControlEditPaste	Pastes String at the caret/insert position in an Edit control (this does not affect the contents of the clipboard).
+	ControlFocus	Sets input focus to a given control on a window.
+	ControlGet	Retrieves various types of information about a control.
+	ControlGetFocus	Retrieves which control of the target window has input focus, if any.
+	ControlGetPos	Retrieves the position and size of a control.
+	ControlGetText	Retrieves text from a control.
+	ControlMove	Moves or resizes a control.
+	ControlSend / ControlSendRaw 	Sends simulated keystrokes to a window or control.
+	ControlSetText	Changes the text of a control.
+	CoordMode	Sets coordinate mode for various commands to be relative to either the active window or the screen.
+	Cos	Returns the trigonometric cosine of Number.
+	Critical	Prevents the current thread from being interrupted by other threads.
+	DetectHiddenText	Determines whether invisible text in a window is "seen" for the purpose of finding the window. This affects commands such as IfWinExist and WinActivate.
+	DetectHiddenWindows	Determines whether invisible windows are "seen" by the script.
+	DllCall	Calls a function inside a DLL, such as a standard Windows API function.
+	Drive	Ejects/retracts the tray in a CD or DVD drive, or sets a drive's volume label.
+	DriveGet	Retrieves various types of information about the computer's drive(s).
+	DriveSpaceFree	Retrieves the free disk space of a drive, in Megabytes.
+	Edit	Opens the current script for editing in the associated editor.
+	Else	Specifies the command(s) to perform if an IF-statement evaluates to FALSE. When more than one command is present, enclose them in a block (braces).
+	EnvAdd	Sets a variable to the sum of itself plus the given value (can also add or subtract time from a date-time value). Synonymous with: Var += Value.
+	EnvDiv	Sets a variable to itself divided by the given value. Synonymous with: Var /= Value.
+	EnvGet	Retrieves an environment variable.
+	EnvMult	Sets a variable to itself times the given value. Synonymous with: Var *= Value.
+	EnvSet	Writes a value to a variable contained in the environment.
+	EnvSub	Sets a variable to itself minus the given value (can also compare date-time values). Synonymous with: Var -= Value.
+	EnvUpdate	Notifies the OS and all running applications that environment variable(s) have changed.
+	Exit	Exits the current thread or (if the script is not persistent and contains no hotkeys) the entire script.
+	ExitApp	Terminates the script unconditionally.
+	Exp	Returns e (which is approximately 2.71828182845905) raised to the Nth power.
+	FileAppend	Writes text to the end of a file (first creating the file, if necessary).
+	FileCopy	Copies one or more files.
+	FileCopyDir	Copies a folder along with all its sub-folders and files (similar to xcopy).
+	FileCreateDir	Creates a folder.
+	FileCreateShortcut	Creates a shortcut (.lnk) file.
+	FileDelete	Deletes one or more files.
+	FileEncoding	Sets the default encoding for FileRead, FileReadLine, Loop Read, FileAppend, and FileOpen.
+	FileInstall	Includes the specified file inside the compiled version of the script.
+	FileGetAttrib	Reports whether a file or folder is read-only, hidden, etc.
+	FileGetShortcut	Retrieves information about a shortcut (.lnk) file, such as its target file.
+	FileGetSize	Retrieves the size of a file.
+	FileGetTime	Retrieves the datetime stamp of a file or folder.
+	FileGetVersion	Retrieves the version of a file.
+	FileMove	Moves or renames one or more files.
+	FileMoveDir	Moves a folder along with all its sub-folders and files. It can also rename a folder.
+	FileOpen	Provides object-oriented file I/O.
+	FileRead	Reads a file's contents into a variable.
+	FileReadLine	Reads the specified line from a file and stores the text in a variable.
+	FileRecycle	Sends a file or directory to the recycle bin, if possible.
+	FileRecycleEmpty	Empties the recycle bin.
+	FileRemoveDir	Deletes a folder.
+	FileSelectFile	Displays a standard dialog that allows the user to open or save file(s).
+	FileSelectFolder	Displays a standard dialog that allows the user to select a folder.
+	FileSetAttrib	Changes the attributes of one or more files or folders. Wildcards are supported.
+	FileSetTime	Changes the datetime stamp of one or more files or folders. Wildcards are supported.
+	Floor	Returns Number rounded down to the nearest integer (without any .00 suffix).
+	For	Repeats a series of commands once for each key-value pair in an object.
+	FormatTime	Transforms a YYYYMMDDHH24MISS timestamp into the specified date/time format.
+	Func	Retrieves a reference to a function.
+	GetKeyName / GetKeyVK / GetKeySC	Retrieves the name or text, virtual key code or scan code of a key.
+	GetKeyState	Checks if a keyboard key or mouse/joystick button is down or up. Also retrieves joystick status.
+	Gosub	Jumps to the specified label and continues execution until Return is encountered.
+	Goto	Jumps to the specified label and continues execution.
+	GroupActivate	Activates the next window in a window group that was defined with GroupAdd.
+	GroupAdd	Adds a window specification to a window group, creating the group if necessary.
+	GroupClose	Closes the active window if it was just activated by GroupActivate or GroupDeactivate. It then activates the next window in the series. It can also close all windows in a group.
+	GroupDeactivate	Similar to GroupActivate except activates the next window not in the group.
+	if	Specifies the command(s) to perform if the comparison of a variable to a value evalutes to TRUE. When more than one command is present, enclose them in a block (braces).
+	if (expression)	Specifies the command(s) to perform if an expression evaluates to TRUE.
+	If var [not] between	Checks whether a variable's contents are numerically or alphabetically between two values (inclusive).
+	If var [not] in/contains MatchList 	Checks whether a variable's contents match one of the items in a list.
+	If var is [not] type	Checks whether a variable's contents are numeric, uppercase, etc.
+	If Clipboard	Checks if the Clipboard text is matchs a specified string.
+	If ErrorLevel	Checks if a specified image or pixel was found in the screen.
+	If A_Index	Checks if the current loop iteration matchs a specified a number.
+	IfEqual/IfNotEqual	Compares a variable to a value for equality. Synonymous with: if Var = Value | if Var <> Value.
+	IfExist / IfNotExist / FileExist	Checks for the existence of a file or folder.
+	IfGreater / IfGreaterOrEqual	Compares a variable to a value. Synonymous with: if Var > Value | if Var >= Value.
+	IfInString / IfNotInString / InStr	Checks if a variable contains the specified string.
+	IfLess / IfLessOrEqual	Compares a variable to a value. Synonymous with: if Var < Value | if Var <= Value.
+	IfMsgBox	Checks which button was pushed by the user during the most recent MsgBox command.
+	IfWinActive / IfWinNotActive	Checks if the specified window exists and is currently active (foremost).
+	IfWinExist / IfWinNotExist	Checks if the specified window exists.
+	ImageSearch	Searches a region of the screen for an image.
+	IniDelete	Deletes a value from a standard format .ini file.
+	IniRead	Reads a value from a standard format .ini file.
+	IniWrite	Writes a value to a standard format .ini file.
+	Input	Waits for the user to type a string (not supported on Windows 9x: it does nothing).
+	InputBox	Displays an input box to ask the user to enter a string.
+	InStr	Searches for a given occurrence of a string, from the left or the right.
+	)	
+	Ahk_Cmd_Index = %Ahk_Cmd_Index%`n	
+	(LTrim	
+	KeyHistory	Displays script info and a history of the most recent keystrokes and mouse clicks.
+	KeyWait	Waits for a key or mouse/joystick button to be released or pressed down.
+	Labels	A label identifies a line of code, and can be used as a Goto target or to form a subroutine.
+	Log	Returns the logarithm (base 10) of Number.
+	Ln	Returns the natural logarithm (base e) of Number.
+	Loop (normal) 	Perform a series of commands repeatedly: either the specified number of times or until break is encountered.
+	Loop (files & folders)	Retrieves the specified files or folders, one at a time.
+	Loop (parse a string)	Retrieves substrings (fields) from a string, one at a time.
+	Loop (read file contents)	Retrieves the lines in a text file, one at a time (performs better than FileReadLine).
+	Loop (registry)	Retrieves the contents of the specified registry subkey, one item at a time.
+	Menu	Creates, deletes, modifies and displays menus and menu items. Changes the tray icon and its tooltip. Controls whether the main window of a compiled script can be opened.
+	Mod	Modulo. Returns the remainder when Dividend is divided by Divisor.
+	MouseClickDrag	Clicks and holds the specified mouse button, moves the mouse to the destination coordinates, then releases the button.
+	MouseGetPos	Retrieves the current position of the mouse cursor, and optionally which window and control it is hovering over.
+	MouseMove	Moves the mouse cursor.
+	MsgBox	Displays the specified text in a small window containing one or more buttons (such as Yes and No).
+	NumGet	Returns the binary number stored at the specified address+offset.
+	NumPut	Stores Number in binary format at the specified address+offset and returns the address to the right of the item just written.
+	OnExit	Specifies a subroutine to run automatically when the script exits.
+	OnMessage	Specifies a function to call automatically when the script receives the specified message.
+	OutputDebug	Sends a string to the debugger (if any) for display.
+	Pause	Pauses the script's current thread.
+	PixelGetColor	Retrieves the color of the pixel at the specified x,y coordinates.
+	PixelSearch	Searches a region of the screen for a pixel of the specified color.
+	PostMessage	Places a message in the message queue of a window or control.
+	Process	Performs one of the following operations on a process: checks if it exists; changes its priority; closes it; waits for it to close.
+	Progress	Creates or updates a window containing a progress bar.
+	Random	Generates a pseudo-random number.
+	RegExMatch	Determines whether a string contains a pattern (regular expression).
+	RegExReplace	Replaces occurrences of a pattern (regular expression) inside a string.
+	RegDelete	Deletes a subkey or value from the registry.
+	RegRead	Reads a value from the registry.
+	RegWrite	Writes a value to the registry.
+	RegisterCallback	Creates a machine-code address that when called, redirects the call to a function in the script.
+	Return	Returns from a subroutine to which execution had previously jumped via function-call, Gosub, Hotkey activation, GroupActivate, or other means.
+	Round	If N is omitted or 0, Number is rounded to the nearest integer. If N is positive number, Number is rounded to N decimal places. If N is negative, Number is rounded by N digits to the left of the decimal point.
+	Run	Runs an external program.
+	RunAs	Specifies a set of user credentials to use for all subsequent uses of Run and RunWait. Requires Windows 2000/XP or later.
+	RunWait	Runs an external program and waits until it finishes.
+	Screenshot	Creates a PNG screenshot of the an specified area.
+	Send / SendRaw / SendInput / SendPlay	Sends simulated keystrokes and mouse clicks to the active window.
+	SendLevel	Controls which artificial keyboard and mouse events are ignored by hotkeys and hotstrings.
+	SendMessage	Sends a message to a window or control and waits for acknowledgement.
+	SendMode	Makes Send synonymous with SendInput or SendPlay rather than the default (SendEvent). Also makes Click and MouseMove/Click/Drag use the specified method.
+	SetCapslockState	Sets the state of the Capslock key. Can also force the key to stay on or off.
+	SetEnv (Var = Value)	Assigns the specified value to a variable.
+	SetFormat	Sets the format of integers and floating point numbers generated by math operations.
+	SetKeyDelay	Sets the delay that will occur after each keystroke sent by Send or ControlSend.
+	SetMouseDelay	Sets the delay that will occur after each mouse movement or click.
+	SetNumlockState	Sets the state of the Numlock key. Can also force the key to stay on or off.
+	SetScrollLockState	Sets the state of the Scrolllock key. Can also force the key to stay on or off.
+	SetRegView	Allows registry commands in a 32-bit script to access the 64-bit registry view and vice versa.
+	Shutdown	Shuts down, restarts, or logs off the system.
+	Sin	Returns the trigonometric sine of Number.
+	Sleep	Waits the specified amount of time before continuing.
+	Sort	Arranges a variable's contents in alphabetical, numerical, or random order (optionally removing duplicates).
+	SoundBeep	Emits a tone from the PC speaker.
+	SoundGet	Retrieves various settings from a sound device (master mute, master volume, etc.)
+	SoundGetWaveVolume	Retrieves the wave output volume from a sound device.
+	SoundPlay	Plays a sound, video, or other supported file type.
+	SoundSet	Changes various settings of a sound device (master mute, master volume, etc.)
+	SoundSetWaveVolume	Changes the wave output volume for a sound device.
+	SplashImage	Creates or updates a window containing a JPG, GIF, or BMP image.
+	SplashTextOn	Creates a customizable text popup window.
+	SplashTextOff	Closes the above window.
+	SplitPath	Separates a file name or URL into its name, directory, extension, and drive.
+	Sqrt	Returns the square root of Number.
+	StatusBarGetText	Retrieves the text from a standard status bar control.
+	StatusBarWait	Waits until a window's status bar contains the specified string.
+	StrPut / StrGet	Copies a string to or from a memory address, optional converting it between code pages.
+	StringCaseSense	Determines whether string comparisons are case sensitive (default is "not case sensitive").
+	StringGetPos / InStr	Retrieves the position of the specified substring within a string.
+	StringLeft	Retrieves a number of characters from the left-hand side of a string.
+	StringLen / StrLen	Retrieves the count of how many characters are in a string.
+	StringLower	Converts a string to lowercase.
+	StringMid / SubStr	Retrieves one or more characters from the specified position in a string.
+	StringReplace	Replaces the specified substring with a new string.
+	StringRight	Retrieves a number of characters from the right-hand side of a string.
+	StringSplit / StrSplit	Separates a string into an array of substrings using the specified delimiters.
+	StringTrimLeft	Removes a number of characters from the left-hand side of a string.
+	StringTrimRight	Removes a number of characters from the right-hand side of a string.
+	StringUpper	Converts a string to uppercase.
+	Suspend	Disables or enables all or selected hotkeys and hotstrings.
+	SysGet	Retrieves screen resolution, multi-monitor info, dimensions of system objects, and other system properties.
+	Tan	Returns the trigonometric tangent of Number.
+	ToolTip	Creates an always-on-top window anywhere on the screen.
+	Transform	Performs miscellaneous math functions, bitwise operations, and tasks such as ASCII/Unicode conversion.
+	TrayTip	Creates a balloon message window near the tray icon. Requires Windows 2000/XP or later.
+	Trim / LTrim / RTrim	Trims certain characters from the beginning and/or end of a string.
+	Try	Guards one or more statements (commands or expressions) against runtime errors and exceptions thrown by the throw command.
+	Until	Applies a condition to the continuation of a Loop or For-loop.
+	UrlDownloadToFile	Downloads a file from the Internet.
+	VarSetCapacity	Enlarges a variable's holding capacity or frees its memory. Normally, this is necessary only for unusual circumstances such as DllCall.
+	WinActivate	Activates the specified window (makes it foremost).
+	WinActivateBottom	Same as WinActivate except that it activates the bottommost (least recently active) matching window rather than the topmost.
+	WinActive	Returns the Unique ID (HWND) of the active window if it matches the specified criteria.
+	WinClose	Closes the specified window.
+	WinExist	Checks if the specified window exists.
+	WinGetActiveStats	Combines the functions of WinGetActiveTitle and WinGetPos into one command.
+	WinGetActiveTitle	Retrieves the title of the active window.
+	WinGetClass	Retrieves the specified window's class name.
+	WinGet	Retrieves the specified window's unique ID, process ID, process name, or a list of its controls. It can also retrieve a list of all windows matching the specified criteria.
+	WinGetPos	Retrieves the position and size of the specified window.
+	WinGetText	Retrieves the text from the specified window.
+	WinGetTitle	Retrieves the title of the specified window.
+	WinHide	Hides the specified window.
+	WinKill	Forces the specified window to close.
+	WinMaximize	Enlarges the specified window to its maximum size.
+	WinMenuSelectItem	Invokes a menu item from the menu bar of the specified window.
+	WinMinimize	Collapses the specified window into a button on the task bar.
+	WinMinimizeAll	Minimizes all windows.
+	WinMinimizeAllUndo	Reverses the effect of a previous WinMinimizeAll.
+	WinMove	Changes the position and/or size of the specified window.
+	WinRestore	Unminimizes or unmaximizes the specified window if it is minimized or maximized.
+	WinSet	Makes a variety of changes to the specified window, such as "always on top" and transparency.
+	WinSetTitle	Changes the title of the specified window.
+	WinShow	Unhides the specified window.
+	WinWait	Waits until the specified window exists.
+	WinWaitActive	Waits until the specified window is active.
+	WinWaitClose	Waits until the specified window does not exist.
+	WinWaitNotActive	Waits until the specified window is not active.
+	)	
 return		

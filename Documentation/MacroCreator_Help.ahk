@@ -1,14 +1,14 @@
 ﻿/*!
 	Library: Pulover's Macro Creator
-		*An Interface-Based Automation Tool & Script Writer.*
+		*The Complete Automation Tool*
 		
-		Version: 3.8.3  
+		Version: 4.0.0  
 		
-		[www.autohotkey.net/~Pulover](http://www.autohotkey.net/~Pulover)  
+		[www.macrocreator.com](http://www.macrocreator.com)  
 		[Forum Thread](http://www.autohotkey.com/board/topic/79763-macro-creator)  
 		
 		Author: Pulover \[Rodolfo U. Batista\]  
-		[rodolfoub@gmail.com](mailto:rodolfoub@gmail.com)  
+		[pulover@macrocreator.com](mailto:pulover@macrocreator.com)  
 		Copyright © 2012-2013 Rodolfo U. Batista  
 		
 		Software License: [GNU General Public License](License.html)  
@@ -97,6 +97,12 @@
 */
 
 /*!
+	Function: Find_a_Command()
+		This window allows you to easily search for a command or function.  
+		Simply type a keyword and the results will be displayed in the box below. Double-Click an item or press Enter to open the target window.
+*/
+
+/*!
 	Function: Mouse()
 		Clicks a mouse button at the specified coordinates. It can also hold down a mouse button, turn the mouse wheel, or move the mouse.
 
@@ -128,9 +134,12 @@
 	Parameters:
 		Plain Text (Raw) - Uses *SendRaw*. The SendRaw command interprets all characters literally rather than translating {Enter} to an ENTER keystroke, ^c to Control-C, etc.
 		Text with commands - Uses *SendInput*. When not in raw mode, the following characters are treated as modifiers (these modifiers affect only the very next key): !, +, ^, #.
+		Set key delay - Uses *SendEvent*. The rate at which keystrokes are sent is determined by Key Delay.
 		Paste from Clipboard - Temporarily uses Clipboard to send the text. When the operation is completed, the script restores the original clipboard contents.
 		Paste on Control - Uses *Control, EditPaste*. Pastes String at the caret/insert position in an Edit control (this does not affect the contents of the clipboard).
 		SetText - Uses *ControlSetText*. Changes the text of a control.
+		Key delay - Sets the delay that will occur after each keystroke sent in *Text with commands* mode.
+		Insert KeyStroke - Opens the Insert Keystroke window where you can choose a keyboard key from a list. Double-click or click *Insert* to insert the key in the current cursor postion. The key will be inserted in AutoHotkey *Send* format, only valid for *Text with commands* option.
 
 	Extra:
 		### Related
@@ -161,6 +170,8 @@
 	Parameters:
 		Add Pause - The amount of time to pause (choose format in the options below).
 		Miliseconds / Seconds / Minutes - Sets format of time (seconds and minutes will be converted to miliseconds when the command is added).
+		Random delay - Sets the command use a random value between Minimum and Maximum instead of a predefined value.
+		Disable random delays for this command - If the global option for *Random delays" is active the command won't be affected.
 
 	Extra:
 		### Related
@@ -168,15 +179,18 @@
 */
 
 /*!
-	Function: Message()
+	Function: Message_Box()
 		Displays the specified text in a small window containing two default buttons (OK and Cancel).
 
 	Parameters:
 		Message - Text to display in the message. If the Cancel button is pressed, execution will stop.  
 			This field accepts [Variables & Functions](p8-Variables.html).
+		Timeout - Timeout in seconds.
+		Title - The title of the message box window.
 		Icon - Sets the icon to be shown on the Message Box.
 		Always On Top - Sets the message to stay on top of other windows.
-		Cancel - Adds a Cancel button to stop execution.
+		Buttons - Sets which buttons will be shown on the message box.
+		Add "If Statement" - Automatically adds an *If Message Box* statement below the command. You may select a range of rows to be wrapped by the statement block.
 
 	Extra:
 		### Related
@@ -189,6 +203,7 @@
 
 	Parameters:
 		Wait for Key - Single key to wait for. Macro will remain in sleep state until the selected key is pressed.
+		Select from list - List of keyboard keys.
 		Wait Timeout - Defines the limit of time to wait for the input.
 
 	Extra:
@@ -219,12 +234,12 @@
 	Parameters:
 		Start X/Y / End X/Y - Defines the Search area of the screen/window.
 		Make Screenshot - Use this tool to take a screenshot of an area of the screen (see [Instructions](#make-screenshot-tool-instructions) for details on usage).
-		Search - Search the computer for an Image File.
+		Search - Opens the File Select dialog to select an Image File.
 		If found - Selects an action to execute when an image/pixel is found.  
 			To execute a different action Select 'Continue' (or 'Break' to exit the command's loop) and use the 'If Image/Pixel Found' option in the If Statements window.
 		If not found / Error - Selects an action to execute when an image/pixel is not found or if the command finds an error.  
 			To execute a different action Select 'Continue' (or 'Break' to exit the command's loop) and use the 'If Image/Pixel Not Found' option in the If Statements window.
-		Add "If Statement" - Automatically adds an *If Image/Pixel Found* statement below the command. You may select a range of rows to be wrapped by the statement block.  
+		Add "If Statement" - Automatically adds an *If Image/Pixel Found* statement below the command. You may select a range of rows to be wrapped by the statement block.
 		Preview - Previews the selected image.  
 			Double-Click an image to open the file with the associated application.
 		Coord - Sets coordinate mode for the search to be relative to either the active window or the screen.
@@ -232,10 +247,10 @@
 		Icon - Specify for n a number between 0 and 255 (inclusive) to indicate the allowed number of shades of variation in either direction for the intensity of the red, green, and blue components of each pixel's color.
 		Transparent - Specify one color within the image that will match any color on the screen.
 		Scale - Width and height to which to scale the image (this width and height also determines which icon to load from a multi-icon .ICO file).
-		Break loop if found - When setting more then 1 loop in the *Repeat* field, this option will break the loop if the image is found right after executing the selected action.
+		Repeat until - Loops the command until the image is found or not found, according to the option selected.
 
 	Remarks:
-		You may use the variables %FoundX% and %FoundY% on other commands like Mouse Move & Click when the image/pixel is found. To save the values to a different variable and to edit them use the [Assign Variable](Commands\Assign_Variable.html) tab of 'If Statements' window.
+		You may use the variables %FoundX% and %FoundY% on other commands like Mouse Move & Click when the image/pixel is found. To save the values to a different variable or increment the values, use the [Assign Variable](Commands\Assign_Variable.html) tab of 'If Statements' window.
 
 	Extra:
 		### Related
@@ -267,18 +282,22 @@
 
 	Parameters:
 		Start X/Y / End X/Y - Defines the Search area of the screen/window.
-		Search - Opens the Color Pick Tool. Point the mouse to the desired location and Right-Click to get the pixel code (in RGB format).
+		Color Picker - Opens the Color Picker Tool. Point the mouse to the desired location and Right-Click to get the pixel code (in RGB format).  
+		Search - Opens the Windows Color Pick dialog to select a pixel color.  
 		If found - Selects an action to execute when an image/pixel is found.  
 			To execute a different action Select 'Continue' (or 'Break' to exit the command's loop) and use the 'If Image/Pixel Found' option in the If Statements window.
 		If not found / Error - Selects an action to execute when an image/pixel is not found or if the command finds an error.  
 			To execute a different action Select 'Continue' (or 'Break' to exit the command's loop) and use the 'If Image/Pixel Not Found' option in the If Statements window.
+		Add "If Statement" - Automatically adds an *If Image/Pixel Found* statement below the command. You may select a range of rows to be wrapped by the statement block.
 		Preview - Previews the selected pixel to search.
 		Coord - Sets coordinate mode for the search to be relative to either the active window or the screen.
 		Variations - Specify for n a number between 0 and 255 (inclusive) to indicate the allowed number of shades of variation in either direction for the intensity of the red, green, and blue components of each pixel's color.
-		Break loop if found - When setting more then 1 loop in the *Repeat* field, this option will break the loop if the image is found right after executing the selected action.
+		Fast - Uses a faster searching method that in most cases dramatically reduces the amount of CPU time used by the search.
+		RGB - Causes ColorID to be interpreted as an RGB value instead of BGR. This option affects the Color Picker Tool but the retrieved color will be reversed in preview and Color Pick Dialog.
+		Repeat until - Loops the command until the image is found or not found, according to the option selected.
 
 	Remarks:
-		You may use the variables %FoundX% and %FoundY% on other commands like Mouse Move & Click when the image/pixel is found. To save the values to a different variable and to edit them use the [Assign Variable](Commands\Assign_Variable.html) tab of 'If Statements' window.
+		You may use the variables %FoundX% and %FoundY% on other commands like Mouse Move & Click when the image/pixel is found. To save the values to a different variable or increment the values, use the [Assign Variable](Commands\Assign_Variable.html) tab of 'If Statements' window.
 
 	Extra:
 		### Related
@@ -515,8 +534,12 @@
 		Output Variable - Name of the Variable in which to store the contents.
 		Operator - Operator to use in the assignment.
 		Content - Text, Variables or Function to be assigned.  
-		Use Eval() to solve expressions - If enabled will execute the [Eval()](http://www.autohotkey.com/board/topic/15675-monster) function on the contents to solve Math Expressions. This is especially useful to modify variables values without the need to create more Assignments.
-			> %FoundX% + 100 ; This would assign the value of FoundX + 100 to the chosen variable name without the need to use the += operator.
+		Expression - If enabled will execute the [Eval()](http://www.autohotkey.com/board/topic/15675-monster) function on the contents to solve functions and math expressions. This is especially useful to modify variables values without the need to create more Assignments. It also allows you to assign the variable to a function result like the in the *Functions* window, or use a function inside an expression.
+			> X := %FoundX% + 100 ; Assigns X to the value of FoundX + 100.
+			> X := InStr(AutoHotkey, y) + 4 ; Assigns X to 14.
+			> X := Array(1, 2, 3) ; Creates an array.
+			> Y := X[1] ; Assigns Y to the first value in the X array.
+			> Y += 1 ; Increments Y by 1.
 			*Note*: To keep this option enabled by default go to Options Menu > Settings > Misc. and check the option.
 		Copy - Copies the variable's contents to the Clipboard.
 		Reset - Erases the variable's contents.
@@ -669,11 +692,3 @@
 			[PostMessage / SendMessage](http://l.autohotkey.net/docs/commands/PostMessage.htm), [Message List](http://l.autohotkey.net/docs/misc/SendMessageList.htm), [Microsoft MSDN](http://msdn.microsoft.com)
 */
 
-/*!
-	Function: Special_Keys()
-		Add Special Keys such as Internet and Media keys.
-
-	Extra:
-		### Related
-			[List of Keys](http://l.autohotkey.net/docs/KeyList.htm)
-/*

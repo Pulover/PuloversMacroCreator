@@ -4,52 +4,67 @@
 		
 ; Main Menu		
 	m_Lang001 =	&File
-	m_Lang002 =	&Umetnuti
+	m_Lang002 =	&Naredbe
 	m_Lang003 =	&Odabrati
-	m_Lang004 =	U&redi
+	m_Lang004 =	&Uredi
 	m_Lang005 =	&Makro
-	m_Lang006 =	Mo&gućnosti
-	m_Lang007 =	&Jezik
-	m_Lang008 =	&Darovati
-	m_Lang009 =	&Pomoći
+	m_Lang006 =	&Pogled
+	m_Lang007 =	Mo&gućnosti
+	m_Lang008 =	&Jezik
+	m_Lang009 =	&Darovati
+	m_Lang010 =	Pomo&ći
 		
-; File Submenu		
+; File Sub Menu		
 	f_Lang001 =	&Novi
 	f_Lang002 =	&Otvoreno
 	f_Lang003 =	&Spasiti
 	f_Lang004 =	S&premi
-	f_Lang005 =	&Uvoz Makro
-	f_Lang006 =	Sp&remi Trenutni Macro
-	f_Lang007 =	N&edavne datoteke
-	f_Lang008 =	&Izvoz u AHK
-	f_Lang009 =	Pri&kaz Script
-	f_Lang010 =	Popis &varijabli
-	f_Lang011 =	I&zlaz
-	f_Lang012 =	U datotekama
+	f_Lang005 =	N&edavne datoteke
+	f_Lang006 =	&Izvoz u AHK
+	f_Lang007 =	P&rikaz Script
+	f_Lang008 =	&Uredi Skriptu
+	f_Lang009 =	Popis &varijabli
+	f_Lang010 =	I&zlaz
+	f_Lang011 =	U &datotekama
 		
-; Insert Sub Menu		
+; Macro Sub Menu		
+	r_lang001 =	&Snimanje makro
+	r_lang002 =	&Aktivirajte Makronaredbe
+	r_lang003 =	&Igrajte Trenutna Macro
+	r_lang004 =	&Timer
+	r_lang005 =	I&grati na odabrani redak
+	r_lang006 =	Ig&raj dok odabrani redak
+	r_lang007 =	Igra&jte odabrane retke
+	r_lang008 =	&Kontekstna Hotkeys
+	r_lang009 =	&Dodaj Macro
+	r_lang010 =	&Makro Zatvori
+	r_lang011 =	D&vostruki Macro
+	r_lang012 =	&Uredi Makronaredbe
+	r_lang013 =	Uv&oz Makro
+	r_lang014 =	S&premi Trenutni Macro
+		
+; Commands Sub Menu		
 	i_Lang001 =	&Miš
 	i_Lang002 =	&Tekst
 	i_Lang003 =	&Kontrolirajte
-	i_Lang004 =	&Pauza / Poruka / Ključ Čekati
-	i_Lang005 =	P&rozor
-	i_Lang006 =	&Slika / Pixel Traži
-	i_Lang007 =	Tr&čanje / File / String / Razno.
-	i_Lang008 =	P&etlja / Goto / Label
-	i_Lang009 =	&Ako Izjave / / varijable funkcije
-	i_Lang010 =	&Internet Explorer / COM sučelja
-	i_Lang011 =	&Windows Poruke
-	i_Lang012 =	P&osebne tipke
+	i_Lang004 =	&Pauza
+	i_Lang005 =	P&oruka Box
+	i_Lang006 =	K&ljuč Čekati
+	i_Lang007 =	P&rozor
+	i_Lang008 =	&Slika / Pixel Traži
+	i_Lang009 =	Tr&čanje / File / String / Razno.
+	i_Lang010 =	P&etlja
+	i_Lang011 =	&Goto
+	i_Lang012 =	L&abel
+	i_Lang013 =	Ako &Izjave
+	i_Lang014 =	&Varijable
+	i_Lang015 =	Vari&jable Funkcije
+	i_Lang016 =	I&nternet Explorer
+	i_Lang017 =	&COM Sučelja
+	i_Lang018 =	Trčanje Scriptlet
+	i_Lang019 =	&Windows Poruke
+	i_Lang020 =	Prona&đite naredbu
 		
-; Select Sub Menu		
-	s_Lang001 =	&Odaberi sve
-	s_Lang002 =	O&daberite None
-	s_Lang003 =	&Sve osim odabranog
-	s_Lang004 =	&Provjerite Odabrani
-	s_Lang005 =	Po&ništite Odabrani
-	s_Lang006 =	&Invert Provjere
-	s_Lang007 =	I&zabrani Tip
-	s_Lang008 =	N&aredbe
 		
 ; Edit Sub Menu		
 	e_Lang001 =	&Duplikat
@@ -65,46 +80,73 @@
 	e_Lang011 =	&Napredovati
 	e_Lang012 =	Po&micanje dolje
 	e_Lang013 =	&Stavite na kutiji
-	e_Lang014 =	Uredi Bo&ja oznaka
+	e_Lang014 =	Ume&tnite Pritisak Na Tipku
+	e_Lang015 =	Uredi Bo&ja oznaka
 		
-; Macro Sub Menu		
-	r_lang001 =	&Snimanje makro
-	r_lang002 =	&Aktivirajte Makronaredbe
-	r_lang003 =	&Igrajte Trenutna Macro
-	r_lang004 =	&Timer
-	r_lang005 =	&Dodaj Macro
-	r_lang006 =	&Makro Zatvori
-	r_lang007 =	&Kontekstna Hotkeys
-	r_lang008 =	S&how / Hide Kontrole
-	r_lang009 =	I&grati na odabrani redak
-	r_lang010 =	Ig&raj dok odabrani redak
-	r_lang011 =	Igra&jte odabrane retke
+; Select Sub Menu		
+	s_Lang001 =	&Odaberi sve
+	s_Lang002 =	O&daberite None
+	s_Lang003 =	&Sve osim odabranog
+	s_Lang004 =	&Provjerite Odabrani
+	s_Lang005 =	Po&ništite Odabrani
+	s_Lang006 =	&Invert Provjere
+	s_Lang007 =	Po&micanje Gore Odabir
+	s_Lang008 =	P&remjestiti Izbor Dolje
+	s_Lang009 =	I&zabrani Tip
+	s_Lang010 =	Naredba putovanja
+		
+; View Sub Menu		
+	v_lang001 =	&Uvijek na vrhu
+	v_lang002 =	&Istaknuto Redovi
+	v_lang003 =	U&vlačenje
+	v_lang004 =	&Kontrole Traci
+	v_lang005 =	&Pregled
+	v_lang006 =	&Alatne Trake
+	v_lang007 =	&Hotkeys
+	v_lang008 =	V&eličina Reset Kolumne
+	v_lang009 =	&Reset Raspored
+		
+	v_lang010 =	&File
+	v_lang011 =	&Snimanje i reprodukciju
+	v_lang012 =	&Naredbe
+	v_lang013 =	&Uredi
+	v_lang014 =	&Mogućnosti
+	v_lang015 =	&Prilagodite
+		
+	v_lang016 =	&Automatski
+	v_lang017 =	&Priručnik
+	v_lang018 =	&Stop
+	v_lang019 =	Pa&uza
+		
+	v_lang020 =	&Kompaktan
+	v_lang021 =	&Default
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Postavke
 	o_Lang002 =	P&ostavi kao zadani Hotkeys
 	o_Lang003 =	Po&stavljen Kao Zadani Datoteku
 	o_Lang004 =	&Uklonite propust varalica
-	o_Lang005 =	&Veličina Reset Kolumne
-	o_Lang006 =	&Zadane Hotkeys
-	o_Lang007 =	&Tvorničke postavke
+	o_Lang005 =	&Zadane Hotkeys
+	o_Lang006 =	&Tvorničke postavke
 		
 ; Donate Sub Menu		
 	p_Lang001 =	&PayPal donacija
 		
 ; Help Sub Menu		
-	h_Lang001 =	&Makro Stvoritelja Home
-	h_Lang002 =	&AHK Online Dokumentacija
-	h_Lang003 =	&Provjeriti ažuriranja...
-	h_Lang004 =	P&rovjeriti na start up
-	h_Lang005 =	&Oko
-	h_Lang006 =	&Savjet
-	h_Lang007 =	&Forum
+	h_Lang001 =	&Pomoći
+	h_Lang002 =	&Tutoriali
+	h_Lang003 =	&Savjet
+	h_Lang004 =	&Makro Stvoritelja Home
+	h_Lang005 =	&Forum
+	h_Lang006 =	&AHK Online Dokumentacija
+	h_Lang007 =	P&rovjeriti ažuriranja...
+	h_Lang008 =	Pr&ovjerite na startup
+	h_Lang009 =	O&ko
 		
 ; Tray Menu		
 	y_Lang001 =	Sakrij Prozor
 	y_Lang002 =	Pokaži prozor
-	y_Lang003 =	Show / Hide Kontrole
+	y_Lang003 =	Kontrole Traci
 		
 ; Main Window		
 	w_Lang001 =	Izvoz
@@ -112,21 +154,21 @@
 	w_Lang003 =	Mogućnosti
 	w_Lang004 =	Zapis
 	w_Lang005 =	Igrati
-	w_Lang006 =	Samostalno.
-	w_Lang007 =	Čovjek
+	w_Lang006 =	Reprodukcija
+	w_Lang007 =	Priručnik
 	w_Lang008 =	Stop
-	w_Lang009 =	Po&kaži kontrole
-	w_Lang010 =	P&auza
-	w_Lang011 =	P&etlja
-	w_Lang012 =	&Hvatanje Keys
-	w_Lang013 =	&Sakrij Prozor
-	w_Lang014 =	U&vijek je aktivna
+	w_Lang009 =	Prikaz kontrole traci
+	w_Lang010 =	Pauza
+	w_Lang011 =	Petlja
+	w_Lang012 =	Hvatanje pritiskanje tipki u ovom prozoru
+	w_Lang013 =	Smanji u ladicu
+	w_Lang014 =	Hotkeys Uvijek Aktivni
 	w_Lang015 =	Ponovite
-	w_Lang016 =	Kašnjenje (ms):
+	w_Lang016 =	Kašnjenje (ms)
 	w_Lang017 =	Primijeniti
 	w_Lang018 =	Umetnuti
 	w_Lang019 =	Uredi
-	w_Lang020 =	(unused)
+	w_Lang020 =	shutdown opcije (Kad reprodukcija završi...)
 	w_Lang021 =	Ne učiniti ništa
 	w_Lang022 =	Zatvori prijava
 	w_Lang023 =	Zatvoriti
@@ -146,6 +188,60 @@
 	w_Lang037 =	Prozor
 	w_Lang038 =	Komentirati
 	w_Lang039 =	Boja
+	w_Lang040 =	New (Ctrl+N)
+	w_Lang041 =	Open (Ctrl+O)
+	w_Lang042 =	Spremi (Ctrl+S)
+	w_Lang043 =	Izvoz u AHK (Ctrl+E)
+	w_Lang044 =	Prikaz Skripta (Ctrl+P)
+	w_Lang045 =	Postavke (Ctrl+G)
+	w_Lang046 =	Zapis Makro (Ctrl+R)
+	w_Lang047 =	Aktivirajte Makro (Ctrl+Enter)
+	w_Lang048 =	Igrajte Trenutna Macro (Ctrl+Shift+Enter)
+	w_Lang049 =	Timer (Ctrl+Shift+T)
+	w_Lang050 =	Miš (F2)
+	w_Lang051 =	Tekst (F3)
+	w_Lang052 =	Uredi Makronaredbe (Ctrl+Shift+M)
+	w_Lang053 =	Kontrola (F4)
+	w_Lang054 =	Pauza (F5)
+	w_Lang055 =	Poruka Box (Shift+F5)
+	w_Lang056 =	Ključ Čekati (Control+F5)
+	w_Lang057 =	Prozor (F6)
+	w_Lang058 =	Slika / Pixel pretrage (F7)
+	w_Lang059 =	Trčanje / File / String / Razno. (F8)
+	w_Lang060 =	Petlja (F9)
+	w_Lang061 =	Goto (Shift+F9)
+	w_Lang062 =	oznaka (Ctrl+F9)
+	w_Lang063 =	Ako izvještaji (F10)
+	w_Lang064 =	varijable (Shift+F10)
+	w_Lang065 =	funkcija (Ctrl+F10)
+	w_Lang066 =	Internet Explorer (F11)
+	w_Lang067 =	COM sučelja (Shift+F11)
+	w_Lang068 =	Trčanje Scriptlet (Ctrl+F11)
+	w_Lang069 =	Windows Poruke (F12)
+	w_Lang070 =	Dodaj Windows tipku "igrati" prečac
+	w_Lang071 =	Koristite joystick tipke kao hotkey
+	w_Lang072 =	Dodaj Macro (Ctrl+T)
+	w_Lang073 =	Makro Close (Ctrl+W)
+	w_Lang074 =	Dvostruki Macro (Ctrl+Shift+D)
+	w_Lang075 =	Uvoz Makro (Ctrl+I)
+	w_Lang076 =	Spremi Trenutni Macro (Ctrl+Alt+S)
+	w_Lang077 =	Move Up (Ctrl+PageUp)
+	w_Lang078 =	Move Down (Ctrl+PageDown)
+	w_Lang079 =	Dvostruki odabrane retke (Ctrl+D)
+	w_Lang080 =	Odabrani Redovi Cut (Ctrl+X)
+	w_Lang081 =	Kopirajte odabrane retke (Ctrl+C)
+	w_Lang082 =	Kopirano Redovi paste (Ctrl+V)
+	w_Lang083 =	Izbriši odabrane retke (Del)
+	w_Lang084 =	Poništi (Ctrl+Z)
+	w_Lang085 =	Ponovi (Ctrl+Y)
+	w_Lang086 =	Kopirajte se...
+	w_Lang087 =	Pronađi / Zamijeni (Ctrl+F)
+	w_Lang088 =	Uredi komentar (Ctrl+L)
+	w_Lang089 =	Uredi Boja oznaka (Ctrl+M)
+	w_Lang090 =	Prilagodite
+	w_Lang091 =	Pronađite naredbu (Ctrl+Shift+C)
+	w_Lang092 =	Uredi (Enter)
+	w_Lang093 =	Sakriti
 		
 ; Command Windows		
 	c_Lang001 =	Miš
@@ -181,8 +277,8 @@
 	c_Lang031 =	Kotača Down
 	c_Lang032 =	Drag Drop &&
 	c_Lang033 =	Koordinate
-	c_Lang034 =	Klik
-	c_Lang035 =	Poslati
+	c_Lang034 =	Traži
+	c_Lang035 =	Podnaredbe
 	c_Lang036 =	Rođak
 	c_Lang037 =	Dugme
 	c_Lang038 =	Lijeva
@@ -216,7 +312,7 @@
 	c_Lang066 =	Ključ Čekati
 	c_Lang067 =	Ako se utvrdi da
 	c_Lang068 =	Ako nije pronađen Greška /
-	c_Lang069 =	* Coords pohranjeni FoundX u `%FoundX`% / `%FoundY`%.
+	c_Lang069 =	Coords pohranjeni FoundX u `%FoundX`%/`%FoundY`%.
 	c_Lang070 =	Coord
 	c_Lang071 =	Varijacije
 	c_Lang072 =	Pregled
@@ -228,17 +324,17 @@
 	c_Lang078 =	Idi na oznaku
 	c_Lang079 =	Naljepnica
 	c_Lang080 =	Dodaj oznaku
-	c_Lang081 =	String (InputVar), vrijednost
-	c_Lang082 =	Var [operatera] Vrijednost
-	c_Lang083 =	Dodaj Else
+	c_Lang081 =	String (InputVar)
+	c_Lang082 =	Varijabla
+	c_Lang083 =	Još
 	c_Lang084 =	Dodjela Variable
 	c_Lang085 =	Sadržaj
 	c_Lang086 =	Operator
-	c_Lang087 =	Koristite eval () izraze za rješavanje
+	c_Lang087 =	Izraz
 	c_Lang088 =	Ponovno
 	c_Lang089 =	Funkcija Ime
-	c_Lang090 =	Odvojenih zarezom parametre (bez zagrada).
-	c_Lang091 =	(Koristite `% za varijabli. Literarne zarezima mora biti pobjegao [```,])
+	c_Lang090 =	Odvojenih zarezom parametre (bez zagrada)
+	c_Lang091 =	(Koristite `% za varijabli. Literarne zarezima mora biti pobjegao [ ```, ])
 	c_Lang092 =	Stranica Element / Index
 	c_Lang093 =	Postaviti
 	c_Lang094 =	Dobiti
@@ -276,7 +372,7 @@
 	c_Lang126 =	Kod dodan Virtualni ključevi listu!
 	c_Lang127 =	Upišite naziv za promjenjive
 	c_Lang128 =	Pomoću funkcije s vanjske datoteke
-	c_Lang130 =	Break petlju ako se otkrije
+	c_Lang130 =	Ponovite sve dok
 	c_Lang131 =	Primijeniti
 	c_Lang132 =	Petlja
 	c_Lang133 =	File
@@ -309,9 +405,52 @@
 	c_Lang160 =	Transparentan
 	c_Lang161 =	Skala
 	c_Lang162 =	Dodaj "If"
+	c_Lang163 =	Pošalji Modu
+	c_Lang164 =	Jednak
+	c_Lang165 =	Sadrži
+	c_Lang166 =	Veća
+	c_Lang167 =	Manje
+	c_Lang168 =	Da
+	c_Lang169 =	Ne
+	c_Lang170 =	Ok
+	c_Lang171 =	Otkazati
+	c_Lang172 =	Pobaciti
+	c_Lang173 =	Ignorirati
+	c_Lang174 =	Ponoviti
+	c_Lang175 =	Nastaviti
+	c_Lang176 =	Try again
+	c_Lang177 =	Tajm-aut
+	c_Lang178 =	Postavite ključ kašnjenje
+	c_Lang179 =	Ključ kašnjenje
+	c_Lang180 =	Random kašnjenje
+	c_Lang181 =	Minimum
+	c_Lang182 =	Maksimum
+	c_Lang183 =	Bez slučajnih odgode za ovu naredbu
+	c_Lang184 =	Odaberite s popisa
+	c_Lang185 =	Tipke
+	c_Lang186 =	Prvi
+	c_Lang187 =	Drugi
+	c_Lang188 =	Treći
+	c_Lang189 =	Naslov
+	c_Lang190 =	Ako prozor aktivna
+	c_Lang191 =	Ako prozor nije aktivan
+	c_Lang192 =	Ako postoji prozor
+	c_Lang193 =	Ako se prozor ne postoji
+	c_Lang194 =	Ako datoteka postoji
+	c_Lang195 =	Ako datoteka ne postoji
+	c_Lang196 =	Ako prijenosnik tekst
+	c_Lang197 =	Ako loop indeksa
+	c_Lang198 =	Ako image/piksel naći
+	c_Lang199 =	Ako image/pixel nije pronađen
+	c_Lang200 =	Ako string sadrži
+	c_Lang201 =	Ako string ne sadrži
+	c_Lang202 =	Ako porukom
+	c_Lang203 =	Usporedi varijable
+	c_Lang204 =	Procijenite izraz
+	c_Lang205 =	Regija
 		
 ; Other Windows		
-	t_Lang001 =	Izvoz u AHK
+	t_Lang001 =	Izvoz u AutoHotkey
 	t_Lang002 =	Makro
 	t_Lang003 =	Loops
 	t_Lang004 =	0 = beskonačno
@@ -362,14 +501,14 @@
 	t_Lang049 =	Hvatanje na oslobađanje
 	t_Lang050 =	Pritisnite Enter za snimanje
 	t_Lang051 =	Slike imenik
-	t_Lang052 =	Razno.
+	t_Lang052 =	Line folijom
 	t_Lang053 =	Hotkeys
 	t_Lang054 =	Postavi kao zadani Hotkeys
 	t_Lang055 =	Bez Prozor prečica
 	t_Lang056 =	Veličina Reset Kolumne
 	t_Lang057 =	Default Makro datoteke
 	t_Lang058 =	Standardni knjižnica datoteke
-	t_Lang059 =	Koristite Eval () po defaultu za varijable ustupanju
+	t_Lang059 =	Koristite izraz po defaultu za varijable ustupanju
 	t_Lang060 =	Pokaži Boje && maraka Pomoć za izvještaje i Loops
 	t_Lang061 =	(Kliknite zaglavlje stupca indeksa za uključivanje / isključivanje)
 	t_Lang062 =	Virtualni Keys
@@ -378,16 +517,16 @@
 	t_Lang065 =	Komentirati
 	t_Lang066 =	Traži stupcu
 	t_Lang067 =	Pronađi / Zamijeni
-	t_Lang068 =	Pronaći
-	t_Lang069 =	Match Case
-	t_Lang070 =	Zamijeniti
+	t_Lang068 =	&Pronaći
+	t_Lang069 =	&Match Case
+	t_Lang070 =	&Zamijeniti
 	t_Lang071 =	Pronađen
 	t_Lang072 =	Zamijenjen
-	t_Lang073 =	Odabrani reci
-	t_Lang074 =	Svi reci
-	t_Lang075 =	Svi Makro
+	t_Lang073 =	&Odabrani reci
+	t_Lang074 =	&Svi reci
+	t_Lang075 =	S&vi Makro
 	t_Lang076 =	Oko
-	t_Lang077 =	Regular Expression
+	t_Lang077 =	&Regular Expression
 	t_Lang078 =	Igrajte jednom
 	t_Lang079 =	Igrajte svakih X (mili) sekundi
 	t_Lang080 =	Timer
@@ -395,22 +534,22 @@
 	t_Lang082 =	Izjave
 	t_Lang083 =	Pokaži Utiskivanje je Loops i izvješća
 	t_Lang084 =	(Dvaput kliknite zaglavlje stupca Akcija uključiti / isključiti)
-	t_Lang085 =	Display Kontrole bar na start-up
+	t_Lang085 =	Zaslon kontrolira bar na startup
 	t_Lang086 =	U potrazi za funkcije. Molimo pričekajte...
 	t_Lang087 =	Uključiti vanjske datoteke
 	t_Lang088 =	Stvaranje EXE datoteke
 	t_Lang089 =	Dopusti više primjeraka
 	t_Lang090 =	Zadane
 	t_Lang091 =	Dopustite Povlačenje retke
-	t_Lang092 =	Cijele sadržaj ćelije
+	t_Lang092 =	&Cijele sadržaj ćelije
 	t_Lang093 =	Standardni format INI
 	t_Lang094 =	Ime = Vrijednost
 	t_Lang095 =	Unesite jedna varijabla po liniji. Vi svibanj također dodati [sekcije].
 	t_Lang096 =	Korisnik Globalne Varijable
 	t_Lang097 =	Pritisnite tipku na palici
-	t_Lang098 =	Džojstik
+	t_Lang098 =	Povratna izbiti
 	t_Lang099 =	Dugme
-	t_Lang100 =	Pokaži Info
+	t_Lang100 =	Prikaz balon savjete
 	t_Lang101 =	Ubrzati
 	t_Lang102 =	Usporite
 	t_Lang103 =	Brz
@@ -422,6 +561,47 @@
 	t_Lang109 =	Dole
 	t_Lang110 =	Gore
 	t_Lang111 =	Umetnite Pritisak Na Tipku
+	t_Lang112 =	Reprodukcija / pauza
+	t_Lang113 =	Stop
+	t_Lang114 =	Playback Options
+	t_Lang115 =	Start / Stop Record
+	t_Lang116 =	Zapis New Macro
+	t_Lang117 =	Opcije Snimanja
+	t_Lang118 =	Jasno Popis
+	t_Lang119 =	Prikaz Progress Bar
+	t_Lang120 =	Ubrzati
+	t_Lang121 =	Usporiti
+	t_Lang122 =	Show / Hide Naslov Bar
+	t_Lang123 =	Show / Hide glavni prozor
+	t_Lang124 =	Pristanište
+	t_Lang125 =	Odsidri
+	t_Lang126 =	Open
+	t_Lang127 =	Spremi
+	t_Lang128 =	Rezati
+	t_Lang129 =	Kopirajte
+	t_Lang130 =	Zalijepiti
+	t_Lang131 =	Odaberi sve
+	t_Lang132 =	Izbrisati
+	t_Lang133 =	Tastatura
+	t_Lang134 =	Miš
+	t_Lang135 =	Drugi
+	t_Lang136 =	Istaknuto Redovi
+	t_Lang137 =	Zadana Skripta Urednik
+	t_Lang138 =	Uredi Skriptu (Ctrl+Shift+E)
+	t_Lang139 =	Odabrati
+	t_Lang140 =	Do Stupcu
+	t_Lang141 =	Svi Stupovi
+	t_Lang142 =	Ukloni temu iz Toolbars (zahtijeva ponovno pokretanje)
+	t_Lang143 =	Automatski sakriti kontrole traci
+	t_Lang144 =	Kliknite i povucite za promjenu redoslijeda. Dvaput kliknite za uređivanje.
+	t_Lang145 =	Uredi Makronaredbe
+	t_Lang146 =	U skladu
+	t_Lang147 =	Makro
+	t_Lang148 =	Akcija je glavni prozor bliski gumb
+	t_Lang149 =	Zatvori prijava
+	t_Lang150 =	Smanji u ladicu
+	t_Lang151 =	Prikaz potvrdu prilikom zatvaranja makro
+	t_Lang152 =	Stvaranje sigurnosne kopije automatski
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Otvoreno
@@ -448,7 +628,7 @@
 	)	
 	d_Lang018 =	Pixel Color
 	d_Lang019 =	Jasno Popis
-	d_Lang020 =	Sigurni da želite izbrisati sve stavke?
+	d_Lang020 =	Makro Close?
 	d_Lang021 =	Sljedeći
 	d_Lang022 =	Prijašnji
 	d_Lang023 =	Poruka
@@ -514,8 +694,8 @@
 	)	
 	d_Lang057 =	
 	(LTrim	
-		- Pritisnite CTRL + tipke sa strelicama za pomicanje odabranog područja.
-		- Pritisnite Shift + tipke sa strelicama za promjenu veličine odabranog područja.
+		- Pritisnite CTRL+tipke sa strelicama za pomicanje odabranog područja.
+		- Pritisnite Shift+tipke sa strelicama za promjenu veličine odabranog područja.
 		- Pritisnite Enter završiti.
 	)	
 	d_Lang058 =	
@@ -533,28 +713,43 @@
 	(LTrim	
 		Želite li ga skinuti sada?
 		
-		Kako onemogućiti automatske provjere odabir Pomoć > Provjeriti na start up.
+		Kako onemogućiti automatske provjere odabir Pomoć > Provjerite na startup
 	)	
+		
 	d_Lang062 =	Vi već imate najnoviju verziju.
 	d_Lang063 =	Došlo je do pogreške tijekom provjere.
 	d_Lang064 =	COM objekt pogreška u
 	d_Lang065 =	Red
 	d_Lang066 =	Posebno
-	d_Lang067 =	Pokaži savjete o start-up.
+	d_Lang067 =	Pokažite ovaj prozor na startup
 	d_Lang068 =	Savjet:
 	d_Lang069 =	
 	(LTrim	
-		Trebate pomoć, našli bug ili imate prijedlog? Pošaljite e-mail autoru: <a href="mailto:rodolfoub@gmail.com">rodolfoub@gmail.com</a>
-		Ovo je besplatan softver. Ako ste pronašli korisne obzir <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=rodolfoub`%40gmail`%2ecom&lc=US&item_name=Pulover`%27s`%20Macro`%20Creator&item_number=App`%2ePMC&currency_code=USD&bn=PP`%2dDonationsBF`%3abtn_donateCC_LG`%2egif`%3aNonHosted">što je donaciju</a> i podržati razvoj. Hvala Vam.
+		Puno vremena i truda je otišao u razvoju Pulover's Macro Creator. Ako vam je koristan, molimo vas da razmislite pokazuje svoju zahvalnost s donacijom.
+		
+		Doniranje ili ne, tu će biti razlike u njegovim značajkama i funkcionalnosti.
 	)	
-	d_Lang070 =	Pogreška: Invalid Hotkey Odabrani.
+	d_Lang070 =	Donirajte...
+	d_Lang071 =	Ne, hvala
+	d_Lang072 =	Podrška open source softvera
+	d_Lang073 =	Pogreška: Invalid Hotkey Odabrani.
+	d_Lang074 =	Pronađite naredbu ili funkciju
+	d_Lang075 =	Dobrodošli u Pulover's Macro Creator
+	d_Lang076 =	Molimo odaberite željene izgled
+	d_Lang077 =	Kompaktan
+	d_Lang078 =	Default
+	d_Lang079 =	Traženje ažuriranja na početak.
+	d_Lang080 =	Možete promijeniti u Opcije > Postavke > Općenito.
+	d_Lang081 =	Možete promijeniti i prilagoditi izglede u izborniku View.
+	d_Lang082 =	Datoteka nije pronađena!
+	d_Lang083 =	Kopija je pronađena. Želite li ga otvoriti?
 		
 ; Start-up Tips		
 	Start_Tips =	
 	(LTrim	
 		Možete stvoriti makronaredbe pomoću naredbenog gumba u glavnom prozoru ili pomoću snimača kopirati svoje radnje. Idi na Opcije > Postavke > Snimanje odabrati ono što ulazi će biti zabilježen.
 		Za korištenje rekorder brze zadatke ići na Opcije > Postavke > Snimanje i provjeriti "Clear List" opciju. Zatim pritisnite gumb rekord u glavnom prozoru i F10 izbiti trenutni makro i započeti novu s istim hotkey. Također možete provjeriti "Uvijek aktivan" opciju u glavnom prozoru da bi se snimanje i reprodukcija hotkeys aktivna.
-		Za pomoć za određene naredbe desnim klikom na naredbeni gumb u glavnom prozoru ili bilo gdje u naredbeni prozor pokazati linkove na AutoHotKey online pomoći.
+		Da biste dobili pomoć za određene naredbe desnom tipkom miša bilo gdje na naredbeni prozor pokazati linkove na AutoHotKey online pomoći.
 		Provjerite "Hvatanje Keys" opciju za ulazak i kombinacije tipki na Macro izravno iz glavnog prozora.
 		Unesite tipki i kombinacije u hotkey kutiji na dnu i pritisnite tipku Insert bi ih dodali na odabranim redovima.
 		Ako nema reda odabrao edit tipke primjenjuje na sve retke na popisu.
@@ -581,85 +776,28 @@
 		Podeu executar funcions avançades com ara substr i RegExReplace de la finestra Funcions (Inserir > Si Declaracions / variables / funcions). O executar les seves pròpies funcions de seqüència AutoHotkey externs.
 	)	
 ; Tooltips		
-	NewB_TT =	New (Ctrl+N)
-	OpenB_TT =	Open (Ctrl+O)
-	SaveB_TT =	Spremi (Ctrl+S)
-	ExportB_TT =	Izvoz u AHK (Ctrl+E)
-	PreviewB_TT =	Prikaz Skripta (Ctrl+P)
-	OptionsB_TT =	Postavke (Ctrl+G)
-	RecordB_TT =	Zapis Makro (Ctrl+R)
-	StartB_TT =	Aktivirajte Makro (Ctrl+Enter)
-	TestRun_TT =	Igrajte Trenutna Macro (Ctrl+Shift+Enter)
-	RunTimer_TT =	Timer (Ctrl+Shift+T)
-	MouseB_TT =	Miš (F2)
-	TextB_TT =	Tekst (F3)
-	SpecialB_TT =	Posebne tipke
-	ControlB_TT =	Kontrola (F4)
-	PauseB_TT =	Pauza (F5) / Poruka (Shift+F5) / Ključ Čekati (Control+F5) 
-	WindowB_TT =	Prozor (F6)
-	ImageB_TT =	Slika / Pixel pretrage (F7)
-	RunB_TT =	Trčanje / File / String / Razno. (F8)
-	ComLoopB_TT =	Petlja (F9) / Goto (Shift+F9) / oznaka (Ctrl+F9)
-	IfStB_TT =	Ako izvještaji (F10) / varijable (Shift+F10) / funkcija (Ctrl+F10)
-	IEComB_TT =	Internet Explorer (F11) / COM sučelja (Shift+F11) / Trčanje Scriptlet (Ctrl+F11)
-	SendMsgB_TT =	Windows Poruke (F12)
-	AutoKey_TT =	Povratna izbiti
-	ManKey_TT =	Povratna izbiti
-	AbortKey_TT =	Povratna izbiti
+	AutoKey_TT =	Hotkey igrati Macro
+	ManKey_TT =	Hotkey igrati Makro "korak po korak"
+	AbortKey_TT =	Prečac za zaustavljanje
+	PauseKey_TT =	Brza tipka za pauzu reprodukcije
+	RecKey_TT =	Povratna izbiti
+	RecNewKey_TT =	Povratna izbiti
 	JoyKey_TT =	Pritisnite tipku na palici
-	PauseKey_TT =	Pauziranje izvršenje umjesto zaustavljanja
-	OnFinish_TT =	
-	(LTrim	
-		shutdown opcije
-		Kad reprodukcija završi...
-	)	
-	Win1_TT =	Dodaj Windows tipku za izmjenu
-	JoyHK_TT =	Džojstik
 	ReptC_TT =	0 = beskonačno
-	TabPlus_TT =	Dodaj Macro (Ctrl+T)
-	TabClose_TT =	Makro Close (Ctrl+W)
-	DuplicateL_TT =	Dvostruki Macro (Ctrl+Shift+D)
-	SaveC_TT =	Spremi Trenutni Macro (Ctrl+Alt+S)
-	ImportB_TT =	Uvoz Makro (Ctrl+I)
-	IfDirB_TT =	Provjerite Hotkeys raditi ovisno o `nType od prozora koji je aktivan ili ne postoji (Ctrl+H)
-	KeepHKOn_TT =	Hotkeys Uvijek držite Aktiviran
 	A_List_TT =	Odabir Makro (Ctrl+1~0)
 	OSHK_TT =	Odabir Makro
 	OSHKEd_TT =	Odabir Makro
-	Duplicate_TT =	Dvostruki odabrane retke (Ctrl+D)
-	Order_TT =	Premještanje odabrane retke (Ctrl+PageUp / Ctrl+PageDown)
-	Cut_TT =	Odabrani Redovi Cut (Ctrl+X)
-	Copy_TT =	Kopirajte odabrane retke (Ctrl+C)
-	Paste_TT =	Kopirano Redovi paste (Ctrl+V)
-	Remove_TT =	Izbriši odabrane retke (Del)
-	Undo_TT =	Poništi (Ctrl+Z)
-	Redo_TT =	Ponovi (Ctrl+Y)
-	CopyTo_TT =	Kopirajte se...
-	Capt_TT =	Hvatanje pritiskanje tipki u ovom prozoru
-	OnScCtrl_TT =	Prikazali Kontrole Traci
-	ShowStep_TT =	Prikaz balon savjete
 	ApplyT_TT =	Primijeniti
 	ApplyI_TT =	Primijeniti
 	ApplyL_TT =	Stavite na kutiji (Insert)
 	InsertKey_TT =	Umetnite Pritisak Na Tipku (Ctrl+Insert)
-	EditButton_TT =	Uredi (Enter)
-	PrevRefresh_TT =	Refresh (F5)
-	PrevCopy_TT =	Kopirajte
-	OpenT_TT =	Open (Ctrl+O)
-	SaveT_TT =	Spremi (Ctrl+S)
-	CutT_TT =	Rezati
-	CopyT_TT =	Kopirajte
-	PasteT_TT =	Zalijepiti
-	SelAllT_TT =	Odaberi sve
-	DefaultMacro_TT =	Odabir datoteke za učitavanje na start up programa
+	InsertKeyT_TT =	Umetnite Pritisak Na Tipku
+	DefaultMacro_TT =	Odaberite datoteku za učitavanje na pokretanju programa
 	VarCopyA_TT =	Kopirajte trenutne varijabilne sadržaj
 	VarCopyB_TT =	Kopirajte trenutne varijabilne sadržaj
-	FindReplace_TT =	Pronađi / Zamijeni (Ctrl+F)
-	EditComm_TT =	Uredi komentar (Ctrl+L)
-	EditColor_TT =	Uredi Boja oznaka (Ctrl+M)
 	Reset_TT =	Vedro promjenjivi sadržaj
 	Screenshot_TT =	Provjerite Screenshot
-	ColorPick_TT =	Boja Berač
+	ColorPick_TT =	Dobili piksel na ekranu
 	PicPrev_TT =	Dvaput kliknite na sliku otvorite
 	CoordPixel_TT =	Koordinacija rada
 	VariatT_TT =	Nijanse varijacije
@@ -667,25 +805,17 @@
 	TransC_TT =	Prozirna boja
 	WScale_TT =	Širina razmjera
 	HScale_TT =	Visina razmjera
+	Fast_TT =	Koristi se brže pretraživanje metodu (preporučeno)
+	RGB_TT =	Uzroci boju treba tumačiti kao RGB vrijednosti umjesto BGR
 	LoopLVColor_TT =	Kliknite da odaberete boju
 	IfLVColor_TT =	Kliknite da odaberete boju
 	RefreshIEW_TT =	Osvježi popis
 	ActiveObj_TT =	Pokušava se povezati s Active COM objekt
+	TimeoutM_TT =	0 = beskonačno
 	ExpView_TT =	Napredni Uređivač
 	ExpView2_TT =	Napredni Uređivač
-	OSPlay_TT =	Reprodukcija / pauza
-	OSStop_TT =	Stop
-	OSRec_TT =	Start / Stop Record
-	OSRecNew_TT =	Zapis New Macro
-	OSRecOpt_TT =	Opcije Snimanja
-	OSPlayOpt_TT =	Playback Options
-	OSClear_TT =	Jasno Popis
 	OSProgB_TT =	Prikaz Progress Bar
-	OSFast_TT =	Ubrzati
-	OSSlow_TT =	Usporiti
 	OSTrans_TT =	neprozirnost
-	ToggleTB_TT =	Show / Hide Naslov Bar
-	ToggleMW_TT =	Show / Hide glavni prozor
 	MRel_TT =	
 	(LTrim	
 		Promjene u odnosu na trenutnu poziciju.
@@ -703,6 +833,7 @@
 		su liječeni su modifikatori (ovi parametri utjecati
 		Samo vrlo sljedeći ključ)!, +, ^, #
 	)	
+	ComEvent_TT =	Stopa po kojoj tipke su poslani određuje ključne zakašnjenjem.
 	Clip_TT =	
 	(LTrim	
 		Privremeno koristi međuspremnik poslati tekst.
@@ -849,6 +980,22 @@
 	Ex_UV_TT =	Izvoz globalne varijable.
 	Ex_EdVars_TT =	Odaberite globalne varijable se izvozi.
 		
+; Operators		
+	As_Oper_1 =	Dodijeliti
+	As_Oper_2 =	Dodati
+	As_Oper_3 =	Oduzeti
+	As_Oper_4 =	Množiti
+	As_Oper_5 =	Podijeliti
+	As_Oper_6 =	Kat podijeljenost
+	As_Oper_7 =	Povezati u obliku lanca
+	Co_Oper_1 =	Jednak
+	Co_Oper_2 =	Jednak (mala i velika slova)
+	Co_Oper_3 =	Nije jednako
+	Co_Oper_4 =	Veća
+	Co_Oper_5 =	Manje
+	Co_Oper_6 =	Veće ili jednako
+	Co_Oper_7 =	Manje ili jednako
+		
 ; IE Commands Tips		
 	Tip_Navigate =	Kreće na URL ili put.
 	Tip_Value =	Dobiva ili postavlja vrijednost objekta.
@@ -866,6 +1013,7 @@
 	Tip_LocationURL =	Dobiva URL trenutne stranice.
 	Tip_InnerText =	Postavlja ili dobiva tekst objekta.
 	Tip_InnerHTML =	Postavlja ili vraća HTML tog objekta.
+	Tip_OuterHTML =	Postavlja ili vraća predmet i njegov sadržaj u HTML-u.
 	Tip_Href =	Postavlja ili vraća odredišni URL ili točka sidrišta.
 	Tip_Src =	Postavlja ili vraća URL biti učitan od strane objekta.
 	Tip_SelectedIndex =	Postavlja ili vraća indeks odabrane opcije u određenom objektu.
@@ -875,4 +1023,251 @@
 	Tip_Height =	Postavlja ili vraća visinu objekta.
 	Tip_Length =	Postavlja ili vraća broj predmeta u zbirci.
 		
+; AHK Commands Tips		
+	Ahk_Cmd_Index =	
+	(LTrim	
+	Abs	Vraća apsolutnu vrijednost broja .
+	ASin	Vraća arkus sinus (čiji broj je broj sine ) u radijanima .
+	ACos	Vraća arkus kosinus (broj čiji kosinus je broj ) u radijanima .
+	Array	Stvara niz objekt .
+	Asc	Vraća kod znaka (broj između 1 i 255 ( u ANSI gradi ) ili 65535 ( u Unicode gradi ) ) po prvi lik u String .
+	ATan	Vraća arkus tangens (čiji broj je tangente broj ) u radijanima .
+	BlockInput	Onemogućuje ili omogućuje korisniku sposobnost za interakciju s računalom putem tipkovnice i miša .
+	Break	Izlaz ( prestaje )petljom . Vrijedi unutar bilo koje vrste petlji .
+	Ceil	Vraća broj zaokružen na najbliži cijeli broj ( bez sufiks 0,00 ) .
+	Chr	Vraća jedan lik odgovara znakovni kod označena brojem .
+	Click	Klikne na tipku miša na određenom koordinatama . Također možete držite gumb , okrenuti kotač , ili premjestiti .
+	ClipWait	Waits dokprijenosnik sadrži podatke .
+	Clipboard	Lijepi tekst iz međuspremnika.
+	ComObjActive	Dohvaća registriranih COM objekt .
+	ComObjArray	Stvara SAFEARRAY za korištenje s COM .
+	ComObjConnect	Povezuje COM objekt je događaj izvora funkcija s obzirom prefiksa .
+	ComObjCreate	Stvara COM objekt .
+	ComObjEnwrap / ComObjUnwrap	Zavrsena / unwraps COM objekt .
+	ComObjError	Omogućuje ili onemogućuje obavijest o COM pogreške .
+	ComObjFlags	Dohvaća ili promijenjene zastave koje kontroliraju objektom COM Wrapper ponašanje .
+	ComObjGet	Vraća referencu na objekt koji pruža COM komponente .
+	ComObjMissing	Stvara "nedostaje parametar" objekt proći na COM metode .
+	ComObjParameter	Zavrsena vrijednost i vrstu proći kao parametar na COM metode .
+	ComObjQuery	Upiti COM objekt za sučelja ili uslugu .
+	ComObjType	Dohvaća informacije tipa iz COM objekt .
+	ComObjValue	Dohvaća vrijednost ili upustvo pohranjene u objekt COM omotu .
+	Continue	Preskače ostatak tekuće iteracije petlje i započinje nova . Vrijedi unutar bilo koje vrste petlji .
+	Control	Stvara razne promjene na kontrolu .
+	ControlClick	Šalje tipku miša ili miša kotača događaj na upravljaču .
+	ControlEditPaste	Lijepi Gudački na znak za umetanje / insert poziciju u uređivanje kontrole ( to ne utječe na sadržaj međuspremnika ) .
+	ControlFocus	Postavlja ulazni fokus na određenu kontrolu na prozoru .
+	ControlGet	Dohvaća različite vrste informacija o kontroli .
+	ControlGetFocus	Dohvaća koji kontroliraju od ciljane prozora ima ulazni fokus , ako ih ima .
+	ControlGetPos	Dohvaća položaj i veličinu kontrole .
+	ControlGetText	Dohvaća tekst iz kontrole .
+	ControlMove	Pomiče ili mijenja veličinu kontrole .
+	ControlSend / ControlSendRaw 	Šalje simulirane tipke na prozor ili kontrolu .
+	ControlSetText	Mijenja tekst kontrole .
+	CoordMode	Postavlja koordinirati način za razne naredbe da se u odnosu na bilo aktivnog prozora ili zaslona .
+	Cos	Vraća kosinus broja trigonometrijsku .
+	Critical	Sprječava trenutni lanac od čega je bio prekinut druge teme .
+	DetectHiddenText	Određuje li nevidljivi tekst u prozor je " vidjeti " u cilju pronalaženja prozor . To utječe na naredbe poput IfWinExist i WinActivate .
+	DetectHiddenWindows	Određuje li nevidljivi prozori su " vidjeli " u skripti .
+	DllCall	Nazivafunkcija unutar DLL, kao što je standardni Windows API funkcija .
+	Drive	Izbacuje ladicu / uvlačiu CD ili DVD pogon , ili postavi pogona oznaku jedinice .
+	DriveGet	Dohvaća različite vrste informacija o računalu vožnje ( s) .
+	DriveSpaceFree	Dohvaća slobodnog prostora na disku od pogona , u megabajta .
+	Edit	Otvara trenutnu skriptu za uređivanje u udruženom urednika .
+	Else	Određujenaredba ( e ) za izvođenje akoIF - izjavu procjenjuje na FALSE . Kada je više od jedan naredbeni je prisutan, ih priložiti u blok ( proteza ) .
+	EnvAdd	Postavlja varijablu zbroju sebi plus zadane vrijednosti ( također može dodati ili oduzeti vrijeme od datuma -vremena ) . Sinonim : Var + = vrijednost .
+	EnvDiv	Postavlja varijablu sebi podijeljen na zadanu vrijednost . Sinonim : Var / = vrijednost .
+	EnvGet	Dohvaća je varijabla okruženja.
+	EnvMult	Postavlja varijablu sebi puta na zadanu vrijednost . Sinonim : Var * = vrijednost .
+	EnvSet	Piševrijednosti varijabli sadržane u okoliš.
+	EnvSub	Postavlja varijablu sebi minus zadane vrijednosti ( također može usporediti datum - vrijeme vrijednosti ) . Sinonim : Var - = vrijednost .
+	EnvUpdate	Obavještava OS i sve pokrenute aplikacije koje su varijabla okruženja ( e ) promijenjene .
+	Exit	Izlaztrenutni razgovor ili ( ako jeoriginal nije uporni i ne sadrži HotKeys)cijelu skriptu .
+	ExitApp	Raskine skriptu bezuvjetno .
+	Exp	Vraća e (što je otprilike 2,71828182845905 ) podignuta na n-ti snage .
+	FileAppend	Piše tekst do kraja datoteke ( prva stvaranje datoteke , ako je potrebno ) .
+	FileCopy	Kopije jednu ili više datoteka .
+	FileCopyDir	Kopira mapu zajedno sa svim svojim pod -mape i datoteke (slično xcopy ) .
+	FileCreateDir	Stvara mapu .
+	FileCreateShortcut	Stvara prečac ( . LNK ) datoteku .
+	FileDelete	Briše jednu ili više datoteka.
+	FileEncoding	Postavlja zadanu kodiranja FileRead , FileReadLine , Loop čitati, FileAppend , i FileOpen .
+	FileInstall	Uključuje navedenu datoteku unutar sastavio verziji scenarija .
+	FileGetAttrib	Izvješća lidatoteka ili mapa je samo za čitanje , skriven, itd.
+	FileGetShortcut	Dohvaća informacije o prečac ( . LNK ) datoteka , kao što su njegove ciljne datoteke .
+	FileGetSize	Dohvaća veličinu datoteke .
+	FileGetTime	Dohvaća DATETIME pečat datoteke ili mape .
+	FileGetVersion	Dohvaća verziju datoteke .
+	FileMove	Prelazak ili promjena jednog ili više datoteka.
+	FileMoveDir	Pomiče mapu zajedno sa svim svojim pod -mape i datoteke . Također možete preimenovati mapu .
+	FileOpen	Pruža objektno - orijentirane file I / O.
+	FileRead	Čita datoteku sadržaja u varijablu .
+	FileReadLine	Čita navedenu liniju iz datoteke i pohranjuje tekst u varijablu .
+	FileRecycle	Šalje datoteku ili direktorij u koš za smeće , ako je moguće .
+	FileRecycleEmpty	Prazni koš za smeće .
+	FileRemoveDir	Brišemape .
+	FileSelectFile	Prikazuje standardni dijalog koji omogućujekorisniku da otvoriti ili spremiti datoteku ( e ) .
+	FileSelectFolder	Prikazuje standardni dijalog koji omogućujekorisniku da odaberete mapu .
+	FileSetAttrib	Mijenja atribute jedne ili više datoteka ili mapa . Zamjenski znakovi su podržani .
+	FileSetTime	Mijenja DATETIME pečat jedne ili više datoteka ili mapa . Zamjenski znakovi su podržani .
+	Floor	Vraća broj zaokružen na najbliži cijeli broj ( bez sufiks 0,00 ) .
+	For	Ponavlja niz naredbi jednom za svaki ključ - vrijednost par u objekt .
+	FormatTime	Pretvara se YYYYMMDDHH24MISS oznaku u određenom datumu / vremenu formatu .
+	Func	Dohvaća referencu na funkciji .
+	GetKeyName / GetKeyVK / GetKeySC	Dohvaća ime ili tekst, virtualni kod ključa ili skeniranje koda ključa .
+	GetKeyState	Provjerava da li je ključ tipkovnice ili miša / joysticka tipka dolje ili gore . Također dohvaća joystick status .
+	Gosub	Skače na navedenu oznaku i dalje izvršenje dok Vrati se susreće .
+	Goto	Skače na navedenu oznaku i dalje izvršenje .
+	GroupActivate	Aktivira sljedeći prozor u prozoru skupini koja je definirana s GroupAdd .
+	GroupAdd	Dodaje prozor specifikaciju na prozor skupine , stvaranje grupu ako je to potrebno .
+	GroupClose	Zatvara aktivni prozor , ako je to samo aktivira GroupActivate ili GroupDeactivate . To onda aktivira sljedeći prozor u seriji . On također može zatvoriti sve prozore u skupini .
+	GroupDeactivate	Slično GroupActivate osim aktivira sljedeći prozor nije u skupini .
+	if	Određujenaredba ( e ) za izvođenje ako seusporedba varijable na vrijednost evalutes na TRUE . Kada je više od jedan naredbeni je prisutan, ih priložiti u blok ( proteza ) .
+	if (expression)	Određujenaredba ( e ) za izvođenje ako seizraz vrednuje na TRUE .
+	If var [not] between	Provjerava je li varijabla sadržaju su numerički ili po abecednom redu između dvije vrijednosti ( uključivo) .
+	If var [not] in/contains MatchList 	Provjerava je li varijabla sadržaju odgovaraju jednu od stavki na popisu .
+	If var is [not] type	Provjerava je li varijabla je sadržaji su numerički , velikih , itd.
+	If Clipboard	Provjerava da likorpa tekst matchs zadani niz .
+	If ErrorLevel	Provjerava ako je navedeni slike ili piksela pronađen je na zaslonu .
+	If A_Index	Provjerava ako je trenutni petlje iteraciji matchs je naveden niz .
+	IfEqual/IfNotEqual	Uspoređuje varijablu na vrijednost za jednakost . Sinonim : ako Var = Vrijednost | ako Var < > vrijednost .
+	IfExist / IfNotExist / FileExist	Provjerava postojanje datoteke ili mape .
+	IfGreater / IfGreaterOrEqual	Uspoređuje varijable na vrijednost . Sinonim : ako Var > Vrijednost | ako Var > = vrijednost .
+	IfInString / IfNotInString / InStr	Provjerava ako varijabla sadrži zadani niz .
+	IfLess / IfLessOrEqual	Uspoređuje varijable na vrijednost . Sinonim : ako Var < Vrijednost | ako Var < = vrijednost .
+	IfMsgBox	Provjerava koji gumb je gurnula od strane korisnika tijekom najnovijeg MsgBox zapovjedništvom .
+	IfWinActive / IfWinNotActive	Provjerava jesu linavedeni prozor postoji i trenutno je aktivan ( prije svega ) .
+	IfWinExist / IfWinNotExist	Provjerava jesu linavedeni prozor postoji.
+	ImageSearch	Pretražuje se područje na zaslonu za slikom .
+	IniDelete	Briševrijednost od standardnog formata . Ini datoteci .
+	IniRead	Čita vrijednost iz standardnog formata . Ini datoteci .
+	IniWrite	Piševrijednost standardnog formata . Ini datoteci .
+	Input	Čekakorisniku da tip string (nije podržan na Windows 9x : to ne radi ništa ) .
+	InputBox	Prikazujeinput box pitati korisnika da unesete string .
+	InStr	Pretrage za određenu pojavu niza , s lijeve ili desne strane.
+	)	
+	Ahk_Cmd_Index = %Ahk_Cmd_Index%`n	
+	(LTrim	
+	KeyHistory	Prikazuje skriptu info i povijest najnovijih tipke i klikova mišem.
+	KeyWait	Waits za ključne ili miša / joysticka gumb pustiti na slobodu ili mišu.
+	Labels	Oznaka identificira liniju koda, i može se koristiti kao Goto cilj ili da se formira potprogram.
+	Log	Vraća logaritam (baza 10) broja.
+	Ln	Vraća prirodni logaritam (baze e) broja.
+	Loop (normal) 	Izvođenje niz naredbi puta: ili određeni broj puta ili do prekida je naišao.
+	Loop (files & folders)	Dohvaća određene datoteke ili mape, jednu po jednu.
+	Loop (parse a string)	Dohvaća podnizova (polja) iz niza, jedan po jedan.
+	Loop (read file contents)	Dohvaća linije u tekstualnu datoteku, jednu po jednu (i bolji od FileReadLine).
+	Loop (registry)	Dohvaća sadržaj navedenog registra potključem, jedna točka na vrijeme.
+	Menu	Stvara, briše, mijenja i prikazuje izbornike i stavke izbornika. Mijenja ikona i njegov Tooltip. Kontrole li glavni prozor sastaviti skripte mogu otvoriti.
+	Mod	Modulo. Vraća ostatak pri Dividenda je podijeljen djelitelj.
+	MouseClickDrag	Klikovi i drži navedenu tipku miša, premjestiti miš na odredište koordinatama, izvadit tipku.
+	MouseGetPos	Dohvaća trenutni položaj pokazivača miša i izboru koji prozor i kontrola se nadvili nad.
+	MouseMove	Pomiče pokazivač miša.
+	MsgBox	Prikazuje naveden tekst u malom prozoru koji sadrži jedan ili više tipki (kao da i ne).
+	NumGet	Vraća binarni broj pohranjen na navedenoj adresi + prebijanje.
+	NumPut	Prodavaonice broj u binarnom formatu na navedenoj adresi + offset i vraća adresu na desno od stavke samo pismeni.
+	OnExit	Određuje potprogram se automatski pokrenuti kada skriptu izlaze.
+	OnMessage	Određuje funkciju na poziv automatski kada skriptu prima određenu poruku.
+	OutputDebug	Šalje niz na ispravljanje pogrešaka (ako ih ima) za prikaz.
+	Pause	Pauziranje skriptu trenutnu nit.
+	PixelGetColor	Dohvaća boju piksela na određeno x, y koordinata.
+	PixelSearch	Pretražuje se područje na zaslonu za piksel u određenom bojom.
+	PostMessage	Mjesta poruku u red poruka od prozora ili kontrole.
+	Process	Obavlja jedan od sljedećih operacija na proces: provjerava ako postoji; mijenja njezin prioritet; ga zatvara, čeka ga zatvoriti.
+	Progress	Stvara i ažurira prozor s traku napretka.
+	Random	Ostvaruje se pseudo-slučajni broj.
+	RegExMatch	Određuje li string sadrži uzorak (regularni izraz).
+	RegExReplace	Zamjenjuje pojavljivanja uzorak (regularni izraz) unutar niza.
+	RegDelete	Briše potključem ili vrijednosti iz registra.
+	RegRead	Čita vrijednost iz registra.
+	RegWrite	Piše vrijednost u registru.
+	RegisterCallback	Stvara strojno kod adresu da kad zove, preusmjerava poziv na djelovanje u pismu.
+	Return	Povratak iz potprogramu kojoj izvršenja ranije skočio preko funkcija poziva, Gosub, prečac aktivacije, GroupActivate, ili drugim sredstvima.
+	Round	Ako N nije izostavljeno ili 0, broj se zaokružuje na najbliži cijeli broj. Ako je N pozitivan broj, broj se zaokružuje na N decimalnih mjesta. Ako je N negativna, broj se zaokružuje N znamenki s lijeve strane decimalne točke.
+	Run	Pokreće vanjski program.
+	RunAs	Određuje skup korisničkih vjerodajnica koristiti za sve sljedeće namjene Run i RunWait. Zahtijeva Windows 2000/XP ili noviji.
+	RunWait	Pokreće vanjski program i čeka dok se ne završi.
+	Screenshot	Stvara PNG screenshot na navedenom području.
+	Send / SendRaw / SendInput / SendPlay	Šalje simulirane tipke i klikova mišem na aktivnom prozoru.
+	SendLevel	Kontrole koje umjetne tipkovnica i miš događanja su ignorirali hotkeys i hotstrings.
+	SendMessage	Šalje poruku na prozor ili kontrolu i čeka potvrdu.
+	SendMode	Stvara Pošalji sinonim SendInput ili SendPlay umjesto zadane (SendEvent). Također čini Kliknite i MouseMove / Kliknite / Povucite koristiti navedenu metodu.
+	SetCapslockState	Postavlja stanje CapsLock tipku. Može se također prisiliti ključna ostati ili isključiti.
+	SetEnv (Var = Value)	Dodjeljuje navedenu vrijednost na željenu vrijednost.
+	SetFormat	Postavlja format brojeva i brojeva s pomičnim zarezom koje generira matematičkim operacijama.
+	SetKeyDelay	Postavlja kašnjenja do kojega će doći nakon svakog pritiska poslao Pošaljite ControlSend.
+	SetMouseDelay	Postavlja kašnjenje koje će doći nakon svakog pokret miša ili kliknite.
+	SetNumlockState	Postavlja stanje NumLock ključ. Može se također prisiliti ključna ostati ili isključiti.
+	SetScrollLockState	Postavlja stanje ScrollLock ključ. Može se također prisiliti ključna ostati ili isključiti.
+	SetRegView	Omogućuje registra naredbe u 32-bitnom skriptu za pristup 64-bitnog registra pogled i obrnuto.
+	Shutdown	Zatvara, ponovo pokrene ili odjavi sustav.
+	Sin	Vraća trigonometrijsku sinus broja.
+	Sleep	Waits određenu količinu vremena prije nego što nastavite.
+	Sort	Raspoređuje uz promjenjivu sadržaja, abecednim redom, numerička, ili slučajnim redoslijedom (opcionalno uklanjanje duplikata).
+	SoundBeep	Emitira ton iz zvučnika računala.
+	SoundGet	Dohvaća različite postavke iz zvučni uređaj (master nijemi, master volumen, itd.)
+	SoundGetWaveVolume	Dohvaća glasnoću val izlaz iz zvuka uređaja.
+	SoundPlay	Igra zvuk, videozapis ili neku drugu podržanu vrstu datoteke.
+	SoundSet	Promjene različite postavke zvuka uređaja (master nijemi, master volume, i sl.)
+	SoundSetWaveVolume	Mijenja glasnoću val izlaz za zvuk uređaja.
+	SplashImage	Stvara i ažurira prozor s JPG, GIF, BMP ili sliku.
+	SplashTextOn	Stvara prilagodljiv tekst popup prozor.
+	SplashTextOff	Zatvara iznad prozora.
+	SplitPath	Odvaja naziv datoteke ili URL u svoje ime, mape, ekstenzije, a pogon.
+	Sqrt	Vraća drugi korijen broja.
+	StatusBarGetText	Dohvaća tekst iz standardnog status bar kontrole.
+	StatusBarWait	Waits dok Prozor status traka sadrži zadani niz.
+	StrPut / StrGet	Kopira string ili s memorijske adrese, dodatnim ga pretvoriti između kodnih stranica.
+	StringCaseSense	Određuje li string usporedbe su velika i mala slova (default je "nije velika i mala slova").
+	StringGetPos / InStr	Dohvaća položaja određenog podniz u nizu.
+	StringLeft	Dohvaća broj znakova na lijevoj strani niz.
+	StringLen / StrLen	Dohvaća brojati koliko znakova u nizu.
+	StringLower	Pretvara string u mala slova.
+	StringMid / SubStr	Dohvaća jedan ili više znakova od navedenog položaj u nizu.
+	StringReplace	Zamjenjuje navedenu podniz s novim nizom.
+	StringRight	Dohvaća broj znakova s desne strane niza.
+	StringSplit / StrSplit	Dijeli niz u niz podnizova prema definiranom graničnika.
+	StringTrimLeft	Uklanja niz likova iz lijevoj strani nizu.
+	StringTrimRight	Uklanja niz znakova s desne strane niza.
+	StringUpper	Pretvara niz u velika slova.
+	Suspend	Onemogućuje ili omogućuje sve ili odabrane hotkeys i hotstrings.
+	SysGet	Dohvaća razlučivost zaslona, multi-monitor info, dimenzije sustava, objekata i drugih sustava svojstva.
+	Tan	Vraća trigonometrijsku tangens broja.
+	ToolTip	Stvara uvijek na vrhu prozora bilo gdje na zaslonu.
+	Transform	Obavlja razne matematičke funkcije, bitovne operacije i zadatke kao što su ASCII / Unicode pretvorbe.
+	TrayTip	Stvara prozor balon poruku blizini ikona. Zahtijeva Windows 2000/XP ili noviji.
+	Trim / LTrim / RTrim	Presvlake određene znakove od početka i / ili na kraju niza.
+	Try	Štitnici jedan ili više izvještaji (naredbe ili izrazi) protiv runtime pogreške i iznimke bačen od bacanja naredbe.
+	Until	Odnosi uvjet za nastavak petlje ili for-petlje.
+	UrlDownloadToFile	Preuzimanja datoteku s Interneta.
+	VarSetCapacity	Povećava varijabla je sposobnost zadržavanja ili oslobađa svoju memoriju. Inače, ovo je neophodno samo za neobičnim okolnostima kao što su DllCall.
+	WinActivate	Aktivira navedene prozor (čini najvažnije).
+	WinActivateBottom	Isto kao WinActivate osim da aktivira najniži (najmanje zadnje aktivne) isti prozor umjesto najviši.
+	WinActive	Vraća jedinstveni ID (HWND) od aktivnog prozora, ako to odgovara zadanim uvjetima.
+	WinClose	Zatvara odabrani prozor.
+	WinExist	Provjerava jesu li navedeni prozor postoji.
+	WinGetActiveStats	Objedinjuje funkcije WinGetActiveTitle i WinGetPos u jednu zapovijed.
+	WinGetActiveTitle	Dohvaća naslov aktivnog prozora.
+	WinGetClass	Dohvaća odabrani prozor u ime klase.
+	WinGet	Dohvaća navedeni prozor je jedinstveni ID, ID procesa, proces ime, ili popis njezinih kontrola. On također može dohvatiti popis svih prozora koji odgovaraju zadanim uvjetima.
+	WinGetPos	Dohvaća položaj i veličinu navedenog prozora.
+	WinGetText	Dohvaća tekst iz određenog prozora.
+	WinGetTitle	Dohvaća titulu navedenog prozora.
+	WinHide	Skriva navedenu prozor.
+	WinKill	Snaga navedeno prozor zatvorite.
+	WinMaximize	Povećava naveden prozor svoje maksimalne veličine.
+	WinMenuSelectItem	Priziva izbornika na traci izbornika u određenom prozoru.
+	WinMinimize	Sažimanje odabrani prozor na gumb na traci.
+	WinMinimizeAll	Minimizira sve prozore.
+	WinMinimizeAllUndo	Zakretanje učinak prethodnog WinMinimizeAll.
+	WinMove	Mijenja položaj i / ili veličinu navedeni prozor.
+	WinRestore	Unminimizes ili unmaximizes navedenu prozor ako je minimiziran ili maksimiziran.
+	WinSet	Stvara razne promjene u navedenom prozora, kao što su "uvijek na vrhu" i transparentnosti.
+	WinSetTitle	Mijenja naslov navedenom prozoru.
+	WinShow	Otkriva navedenu prozor.
+	WinWait	Waits sve navedeno postoji prozor.
+	WinWaitActive	Waits sve navedeno prozor aktivan.
+	WinWaitClose	Waits sve navedeno prozor ne postoji.
+	WinWaitNotActive	Waits sve navedeno prozor nije aktivna.
+	)	
 return		

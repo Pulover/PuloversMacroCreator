@@ -4,52 +4,67 @@
 		
 ; Main Menu		
 	m_Lang001 =	&Expedient
-	m_Lang002 =	&Insereix
+	m_Lang002 =	&Ordres
 	m_Lang003 =	&Seleccionar
 	m_Lang004 =	E&dita
 	m_Lang005 =	&Macro
-	m_Lang006 =	&Opcions
-	m_Lang007 =	Idiom&a
-	m_Lang008 =	Do&nar
-	m_Lang009 =	A&judar
+	m_Lang006 =	&Visa
+	m_Lang007 =	O&pcions
+	m_Lang008 =	&Idioma
+	m_Lang009 =	Do&nar
+	m_Lang010 =	&Ajudar
 		
-; File Submenu		
+; File Sub Menu		
 	f_Lang001 =	&Nou
 	f_Lang002 =	&Obert
 	f_Lang003 =	&Desa
 	f_Lang004 =	D&esa
-	f_Lang005 =	&Importació Macro
-	f_Lang006 =	&Guardar Macro actual
-	f_Lang007 =	&Arxius recents
-	f_Lang008 =	E&xporta a AHK
-	f_Lang009 =	&Vista prèvia de script
-	f_Lang010 =	&Llista de les variables
-	f_Lang011 =	&Sortida
-	f_Lang012 =	No hi ha arxius
+	f_Lang005 =	&Arxius recents
+	f_Lang006 =	E&xporta a AHK
+	f_Lang007 =	&Vista prèvia de script
+	f_Lang008 =	Ed&ita Guió
+	f_Lang009 =	&Llista de les variables
+	f_Lang010 =	&Sortida
+	f_Lang011 =	No &hi ha arxius
 		
-; Insert Sub Menu		
+; Macro Sub Menu		
+	r_lang001 =	&Gravar macro
+	r_lang002 =	&Activar Macros
+	r_lang003 =	&Jugar Macro actual
+	r_lang004 =	&Timer
+	r_lang005 =	J&uga de fila seleccionada
+	r_lang006 =	Juga &fins que la Columna seleccionat
+	r_lang007 =	Juga f&iles seleccionades
+	r_lang008 =	T&ecles d'accés directe sensibles al context
+	r_lang009 =	Afegi&r Macro
+	r_lang010 =	Ta&ncar Macro
+	r_lang011 =	&Duplicar macro
+	r_lang012 =	Edita &Macros
+	r_lang013 =	Im&portació Macro
+	r_lang014 =	Guardar Ma&cro actual
+		
+; Commands Sub Menu		
 	i_Lang001 =	&Ratolí
 	i_Lang002 =	&Text
 	i_Lang003 =	&Controlar
-	i_Lang004 =	&Pausa / Missatge / Espera Clau
-	i_Lang005 =	&Finestra
-	i_Lang006 =	&Imatge / píxel Cerca
-	i_Lang007 =	&Executar / Arxiu / cadena / Misc.
-	i_Lang008 =	&Loop / Anar a / Label
-	i_Lang009 =	&Si els estats / Variables / Funcions
-	i_Lang010 =	I&nterfície d'Internet Explorer / COM
-	i_Lang011 =	&Missatges de Windows
-	i_Lang012 =	Tecles especi&als
+	i_Lang004 =	&Pausa
+	i_Lang005 =	&Bústia de missatges
+	i_Lang006 =	&Espera Clau
+	i_Lang007 =	&Finestra
+	i_Lang008 =	&Imatge / Píxel Cerca
+	i_Lang009 =	E&xecutar / Arxiu / Cadena / Misc.
+	i_Lang010 =	&Loop
+	i_Lang011 =	&Anar A
+	i_Lang012 =	Label
+	i_Lang013 =	&Si Els Estats
+	i_Lang014 =	&Variables
+	i_Lang015 =	F&uncions
+	i_Lang016 =	I&nterfície d'Internet Explorer
+	i_Lang017 =	C&OM
+	i_Lang018 =	Executar Scriptlet
+	i_Lang019 =	&Missatges De Windows
+	i_Lang020 =	Trobar una or&dre
 		
-; Select Sub Menu		
-	s_Lang001 =	&Selecciona tot
-	s_Lang002 =	S&eleccioneu Cap
-	s_Lang003 =	&Inverteix la selecció
-	s_Lang004 =	&Comprovi seleccionat
-	s_Lang005 =	&Desactiveu l'opció seleccionada
-	s_Lang006 =	I&nvertir xecs
-	s_Lang007 =	&Tipus Seleccionat
-	s_Lang008 =	&Ordres
 		
 ; Edit Sub Menu		
 	e_Lang001 =	&Duplicar
@@ -65,46 +80,73 @@
 	e_Lang011 =	P&ujar
 	e_Lang012 =	&Baixar
 	e_Lang013 =	&Inseriu de Caixa
-	e_Lang014 =	Edit&a color
+	e_Lang014 =	Inserir Pu&lsacions
+	e_Lang015 =	Edit&a color
 		
-; Macro Sub Menu		
-	r_lang001 =	&Gravar macro
-	r_lang002 =	&Activar Macros
-	r_lang003 =	&Jugar Macro actual
-	r_lang004 =	&Timer
-	r_lang005 =	A&fegir Macro
-	r_lang006 =	Ta&ncar Macro
-	r_lang007 =	T&ecles d'accés directe sensibles al context
-	r_lang008 =	&Mostra / Amaga controls
-	r_lang009 =	J&uga de fila seleccionada
-	r_lang010 =	Juga f&ins que la Columna seleccionat
-	r_lang011 =	Juga fi&les seleccionades
+; Select Sub Menu		
+	s_Lang001 =	&Selecciona tot
+	s_Lang002 =	S&eleccioneu Cap
+	s_Lang003 =	&Inverteix la selecció
+	s_Lang004 =	&Comprovi seleccionat
+	s_Lang005 =	&Desactiveu l'opció seleccionada
+	s_Lang006 =	I&nvertir xecs
+	s_Lang007 =	&Mou La Selecció Amunt
+	s_Lang008 =	M&oure La Selecció Cap Avall
+	s_Lang009 =	&Tipus Seleccionat
+	s_Lang010 =	Tipus comando
+		
+; View Sub Menu		
+	v_lang001 =	&Sempre visible
+	v_lang002 =	&Files Destaquen
+	v_lang003 =	S&angria
+	v_lang004 =	&Barra D'eines De Controls
+	v_lang005 =	A&vanç
+	v_lang006 =	Ba&rres D'eines
+	v_lang007 =	&Tecles D'accés Ràpid
+	v_lang008 =	R&establir mida de les columnes
+	v_lang009 =	Restab&lir Disseny
+		
+	v_lang010 =	&Expedient
+	v_lang011 =	&Gravar i reproduir
+	v_lang012 =	&Ordres
+	v_lang013 =	&Modifica
+	v_lang014 =	O&pcions
+	v_lang015 =	Pe&rsonalitzar
+		
+	v_lang016 =	&Automàtic
+	v_lang017 =	&Manual
+	v_lang018 =	A&turi
+	v_lang019 =	&Pausa
+		
+	v_lang020 =	&Compacte
+	v_lang021 =	&Defecte
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Configuració
 	o_Lang002 =	&Establir com a tecles d'accés ràpid predeterminades
 	o_Lang003 =	&Selecciona per defecte del fitxer
 	o_Lang004 =	E&liminar fitxer per defecte
-	o_Lang005 =	&Restablir mida de les columnes
-	o_Lang006 =	&Tecles d'accés ràpid predeterminades
-	o_Lang007 =	C&onfiguració per defecte
+	o_Lang005 =	&Tecles d'accés ràpid predeterminades
+	o_Lang006 =	C&onfiguració per defecte
 		
 ; Donate Sub Menu		
 	p_Lang001 =	&PayPal Donació
 		
 ; Help Sub Menu		
-	h_Lang001 =	&Macro Creator Home
-	h_Lang002 =	&AHK Documentació en línia
-	h_Lang003 =	A &buscar actualitzacions...
-	h_Lang004 =	&Comprovar en l'arrencada
-	h_Lang005 =	&Sobre
-	h_Lang006 =	C&onsells
-	h_Lang007 =	&Fòrum
+	h_Lang001 =	&Ajudar
+	h_Lang002 =	&Tutorials
+	h_Lang003 =	&Consells
+	h_Lang004 =	&Macro Creator Home
+	h_Lang005 =	&Fòrum
+	h_Lang006 =	A&HK Documentació en línia
+	h_Lang007 =	A &buscar actualitzacions...
+	h_Lang008 =	C&omproveu en l'arrencada
+	h_Lang009 =	&Sobre
 		
 ; Tray Menu		
 	y_Lang001 =	Hide Window
 	y_Lang002 =	Mostrar finestra
-	y_Lang003 =	Mostra / Amaga controls
+	y_Lang003 =	Barra D'eines De Controls
 		
 ; Main Window		
 	w_Lang001 =	Exportar
@@ -112,21 +154,21 @@
 	w_Lang003 =	Opcions
 	w_Lang004 =	Registre
 	w_Lang005 =	Jugar
-	w_Lang006 =	Acte.
-	w_Lang007 =	Man
+	w_Lang006 =	Reproducció
+	w_Lang007 =	Manual
 	w_Lang008 =	Aturi
-	w_Lang009 =	&Barra de control
-	w_Lang010 =	&Pausa
-	w_Lang011 =	B&ucle
-	w_Lang012 =	&Captura Keys
-	w_Lang013 =	&Hide Window
-	w_Lang014 =	Semp&re actiu
+	w_Lang009 =	Mostra la barra d'eines de controls
+	w_Lang010 =	Pausa
+	w_Lang011 =	Bucle
+	w_Lang012 =	Captura pulsacions de tecles en aquesta finestra
+	w_Lang013 =	Minimitza a la safata
+	w_Lang014 =	Tecles D'accés Directe Sempre Actives
 	w_Lang015 =	Repetir
-	w_Lang016 =	Retard (ms):
+	w_Lang016 =	Retard (ms)
 	w_Lang017 =	Aplicar
 	w_Lang018 =	Insereix
 	w_Lang019 =	Edita
-	w_Lang020 =	(unused)
+	w_Lang020 =	Opcions d'apagada (Quan finalitzi la reproducció...)
 	w_Lang021 =	No fer res
 	w_Lang022 =	Tancar l'aplicació
 	w_Lang023 =	Tancar
@@ -146,6 +188,60 @@
 	w_Lang037 =	Finestra
 	w_Lang038 =	Comentari
 	w_Lang039 =	Color
+	w_Lang040 =	Nou (Ctrl+N)
+	w_Lang041 =	Obrir (Ctrl+O)
+	w_Lang042 =	Desa (Ctrl+S)
+	w_Lang043 =	Exporta a AHK (Ctrl+I)
+	w_Lang044 =	Vista prèvia de script (Ctrl+P)
+	w_Lang045 =	Settings (Ctrl+G)
+	w_Lang046 =	Gravar macro (Ctrl+R)
+	w_Lang047 =	Activar Macros (Ctrl+Enter)
+	w_Lang048 =	Jugar Macro actual (Ctrl+Shift+Enter)
+	w_Lang049 =	Timer (Ctrl+Shift+T)
+	w_Lang050 =	Mouse (F2)
+	w_Lang051 =	Text (F3)
+	w_Lang052 =	Edita Macros (Ctrl+Shift+M)
+	w_Lang053 =	Control de (F4)
+	w_Lang054 =	Pausa (F5)
+	w_Lang055 =	Bústia de missatges (Shift+F5)
+	w_Lang056 =	Espera Clau (Control+F5)
+	w_Lang057 =	Finestra (F6)
+	w_Lang058 =	Imatge / píxel motor (F7)
+	w_Lang059 =	Executar / Arxiu / cadena / Misc. (F8)
+	w_Lang060 =	Loop (F9)
+	w_Lang061 =	Ir (Shift+F9)
+	w_Lang062 =	Label (Ctrl+F9)
+	w_Lang063 =	Si Declaracions (F10)
+	w_Lang064 =	variables (Shift+F10)
+	w_Lang065 =	Funcions (Ctrl+F10)
+	w_Lang066 =	Internet Explorer (F11)
+	w_Lang067 =	COM Interface (Shift+F11)
+	w_Lang068 =	Executar Scriptlet (Ctrl+F11)
+	w_Lang069 =	Missatges de Windows (F12)
+	w_Lang070 =	Afegiu la clau de Windows per "Play" tecla d'accés ràpid
+	w_Lang071 =	Utilitzeu un botó del joystick com a tecla d'accés directe
+	w_Lang072 =	Afegir Macro (Ctrl+T)
+	w_Lang073 =	Tancar Macro (Ctrl+W)
+	w_Lang074 =	Duplicar macro (Ctrl+Shift+D)
+	w_Lang075 =	Importació Macro (Ctrl+I)
+	w_Lang076 =	Guardar macro actual (Ctrl+Alt+S)
+	w_Lang077 =	Move Up (Ctrl+RePàg)
+	w_Lang078 =	Moure baix (Ctrl+AvPàg)
+	w_Lang079 =	Duplicar files seleccionades (Ctrl+D)
+	w_Lang080 =	Tallar files seleccionades (Ctrl+X)
+	w_Lang081 =	Copia files seleccionades (Ctrl+C)
+	w_Lang082 =	Files Enganxa copiar (Ctrl+V)
+	w_Lang083 =	Eliminar files seleccionades (Del)
+	w_Lang084 =	Desfer (Ctrl+Z)
+	w_Lang085 =	Refer (Ctrl+I)
+	w_Lang086 =	Copiar a...
+	w_Lang087 =	Cercar / Reemplaçar (Ctrl+F)
+	w_Lang088 =	Redactar comentari (Ctrl+L)
+	w_Lang089 =	Edita color (Ctrl+M)
+	w_Lang090 =	Personalitzar
+	w_Lang091 =	Trobar una ordre (Ctrl+Shift+F)
+	w_Lang092 =	Edita (Enter)
+	w_Lang093 =	Amagar
 		
 ; Command Windows		
 	c_Lang001 =	Ratolí
@@ -181,8 +277,8 @@
 	c_Lang031 =	Roda de Down
 	c_Lang032 =	Arrossegueu && gota
 	c_Lang033 =	Coordina
-	c_Lang034 =	Clic
-	c_Lang035 =	Enviar
+	c_Lang034 =	Cercar
+	c_Lang035 =	Subcomando
 	c_Lang036 =	Relatiu
 	c_Lang037 =	Botó
 	c_Lang038 =	Esquerra
@@ -216,7 +312,7 @@
 	c_Lang066 =	Espera Clau
 	c_Lang067 =	Si es troba
 	c_Lang068 =	Si no el troba / Error
-	c_Lang069 =	* Coordenades emmagatzemat per `%FoundX`% / `%FoundY`%.
+	c_Lang069 =	Coordenades emmagatzemat per `%FoundX`%/`%FoundY`%.
 	c_Lang070 =	Coord
 	c_Lang071 =	Variacions
 	c_Lang072 =	Avanç
@@ -228,17 +324,17 @@
 	c_Lang078 =	Aneu a l'etiqueta
 	c_Lang079 =	Etiqueta
 	c_Lang080 =	Afegir etiqueta
-	c_Lang081 =	String Valor
-	c_Lang082 =	Var [operador] Valor
-	c_Lang083 =	Afegir Altres
+	c_Lang081 =	String (InputVar)
+	c_Lang082 =	Variable
+	c_Lang083 =	Més
 	c_Lang084 =	Assignació Variable
 	c_Lang085 =	Contingut
 	c_Lang086 =	Operador
-	c_Lang087 =	Utilitzeu Aval () per a resoldre expressions
+	c_Lang087 =	Expressió
 	c_Lang088 =	Reajustar
 	c_Lang089 =	Nom de la funció
-	c_Lang090 =	Paràmetres separats per comes (sense parèntesis).
-	c_Lang091 =	(Utilitza `% per a variables. Han escapar comes literals [```,])
+	c_Lang090 =	Paràmetres separats per comes (sense parèntesis)
+	c_Lang091 =	(Utilitza `% per a variables. Han escapar comes literals [ ```, ])
 	c_Lang092 =	Element de pàgina / Índex
 	c_Lang093 =	Establir
 	c_Lang094 =	Aconseguir
@@ -276,7 +372,7 @@
 	c_Lang126 =	Codi afegida a la llista de tecles virtuals!
 	c_Lang127 =	Escriviu el nom de la variable
 	c_Lang128 =	Utilitzeu la funció d'arxiu extern
-	c_Lang130 =	Trencament de llaç si es troba
+	c_Lang130 =	Repetiu fins que
 	c_Lang131 =	Aplicar
 	c_Lang132 =	Bucle
 	c_Lang133 =	Expedient
@@ -309,9 +405,52 @@
 	c_Lang160 =	Transparent
 	c_Lang161 =	Escala
 	c_Lang162 =	Afegir "If"
+	c_Lang163 =	Manera D'enviament
+	c_Lang164 =	Igual
+	c_Lang165 =	Conté
+	c_Lang166 =	Major
+	c_Lang167 =	Menys
+	c_Lang168 =	Sí
+	c_Lang169 =	No
+	c_Lang170 =	Bé
+	c_Lang171 =	Cancel
+	c_Lang172 =	Avortar
+	c_Lang173 =	Passar per alt
+	c_Lang174 =	Reintenta
+	c_Lang175 =	Continuar
+	c_Lang176 =	Try again
+	c_Lang177 =	Temps d'espera
+	c_Lang178 =	Fixar demora clau
+	c_Lang179 =	Retard clau
+	c_Lang180 =	Retard aleatori
+	c_Lang181 =	Mínim
+	c_Lang182 =	Màxim
+	c_Lang183 =	Desactivar retards aleatoris per aquesta comanda
+	c_Lang184 =	Seleccionar de la llista
+	c_Lang185 =	Botons
+	c_Lang186 =	Primer
+	c_Lang187 =	Segon
+	c_Lang188 =	Tercer
+	c_Lang189 =	Títol
+	c_Lang190 =	Si la finestra activa
+	c_Lang191 =	Si la finestra no està activa
+	c_Lang192 =	Si hi ha finestra
+	c_Lang193 =	Si no hi ha finestra
+	c_Lang194 =	Si existeix el fitxer
+	c_Lang195 =	Si no hi ha fitxer
+	c_Lang196 =	Si el text del portapapers
+	c_Lang197 =	Si l'índex de bucle
+	c_Lang198 =	Si troba image/píxel
+	c_Lang199 =	Si no el troba image/píxel
+	c_Lang200 =	Si la cadena conté
+	c_Lang201 =	Si la cadena no conté
+	c_Lang202 =	Si el quadre de missatge
+	c_Lang203 =	Comparació de les variables
+	c_Lang204 =	Avaluar expressió
+	c_Lang205 =	Regió
 		
 ; Other Windows		
-	t_Lang001 =	Exporta a AHK
+	t_Lang001 =	Exporta a AutoHotkey
 	t_Lang002 =	Macros
 	t_Lang003 =	Loops
 	t_Lang004 =	0 = infinit
@@ -362,14 +501,14 @@
 	t_Lang049 =	Captura d'alliberament
 	t_Lang050 =	Premeu Retorn per capturar
 	t_Lang051 =	Imatges Directori
-	t_Lang052 =	Misc.
+	t_Lang052 =	Enrotlleu
 	t_Lang053 =	Tecles d'accés ràpid
 	t_Lang054 =	Establir com a tecles d'accés ràpid predeterminades
 	t_Lang055 =	Desactivar la finestra Mètodes abreujats
 	t_Lang056 =	Restablir mida de les columnes
 	t_Lang057 =	Arxiu Macro defecte
 	t_Lang058 =	Arxiu Biblioteca estàndard
-	t_Lang059 =	Utilitzeu Aval () per defecte per a variables Assignació
+	t_Lang059 =	Utilitzeu expressions per defecte per a variables Assignació
 	t_Lang060 =	Mostra colors && Ajuda marques de bucles i sentències
 	t_Lang061 =	(Feu clic a la capçalera de la columna Índex per activar / desactivar)
 	t_Lang062 =	Tecles virtuals
@@ -378,16 +517,16 @@
 	t_Lang065 =	Comentari
 	t_Lang066 =	Cercar columna
 	t_Lang067 =	Cercar / Reemplaçar
-	t_Lang068 =	Trobar
-	t_Lang069 =	Coincidir majúscules i minúscules
-	t_Lang070 =	Reemplaçar
+	t_Lang068 =	&Trobar
+	t_Lang069 =	&Coincidir majúscules i minúscules
+	t_Lang070 =	&Reemplaçar
 	t_Lang071 =	Fundar
 	t_Lang072 =	Substituït
-	t_Lang073 =	Les files seleccionades
-	t_Lang074 =	Totes les files
-	t_Lang075 =	Tots Macros
+	t_Lang073 =	&Les files seleccionades
+	t_Lang074 =	Tote&s les files
+	t_Lang075 =	Tots &Macros
 	t_Lang076 =	Sobre
-	t_Lang077 =	Expressió Regular
+	t_Lang077 =	&Expressió Regular
 	t_Lang078 =	Reproduir un cop
 	t_Lang079 =	Juga cada X (mili) segon
 	t_Lang080 =	Timer
@@ -395,22 +534,22 @@
 	t_Lang082 =	Declaracions
 	t_Lang083 =	Mostra sagnia de bucles i sentències
 	t_Lang084 =	(Feu doble clic a la capçalera de la columna Acció d'activar / desactivar)
-	t_Lang085 =	Mostra la barra de controls en l'arrencada
+	t_Lang085 =	Visualització controla bar a l'arrencada
 	t_Lang086 =	Cerca de Funcions. Si us plau, esperi...
 	t_Lang087 =	Incloure arxius externs
 	t_Lang088 =	Crea un fitxer EXE
 	t_Lang089 =	Permetre múltiples instàncies
 	t_Lang090 =	Valors predefinits
 	t_Lang091 =	Permetre arrossegar files
-	t_Lang092 =	Tot el contingut de la cel · la
+	t_Lang092 =	T&ot el contingut de la cel · la
 	t_Lang093 =	Format INI estàndard
 	t_Lang094 =	Nom = Valor
 	t_Lang095 =	Introduïu gener variable per línia. Vostè també pot afegir [Seccions].
 	t_Lang096 =	Variables Globals De L'usuari
 	t_Lang097 =	Premeu un botó a la palanca de comandament
-	t_Lang098 =	Palanca de comandament
+	t_Lang098 =	Retrocés per esborrar
 	t_Lang099 =	Botó
-	t_Lang100 =	Mostrar informació
+	t_Lang100 =	Mostra globus de suggeriments
 	t_Lang101 =	Accelerar
 	t_Lang102 =	Poc a poc
 	t_Lang103 =	Ràpid
@@ -422,6 +561,47 @@
 	t_Lang109 =	Baix
 	t_Lang110 =	Fins
 	t_Lang111 =	Inserir Pulsacions
+	t_Lang112 =	Reproduir / Pausa
+	t_Lang113 =	Aturi
+	t_Lang114 =	Opcions de reproducció
+	t_Lang115 =	Start / Stop Record
+	t_Lang116 =	Gravar nova macro
+	t_Lang117 =	Opcions de Gravació
+	t_Lang118 =	Esborrar llista
+	t_Lang119 =	Mostra la barra de progrés
+	t_Lang120 =	Accelerar
+	t_Lang121 =	Alentir
+	t_Lang122 =	Mostra / Oculta la barra de títol
+	t_Lang123 =	Mostra / oculta la finestra principal
+	t_Lang124 =	Moll
+	t_Lang125 =	Desacoblar
+	t_Lang126 =	Obrir
+	t_Lang127 =	Desa
+	t_Lang128 =	Tallar
+	t_Lang129 =	Copieu
+	t_Lang130 =	Enganxar
+	t_Lang131 =	Selecciona tot
+	t_Lang132 =	Esborrar
+	t_Lang133 =	Teclat
+	t_Lang134 =	Ratolí
+	t_Lang135 =	Altres
+	t_Lang136 =	Files Destaquen
+	t_Lang137 =	Editor De Scripts Per Defecte
+	t_Lang138 =	Edita Guió (Ctrl+Shift+E)
+	t_Lang139 =	Seleccionar
+	t_Lang140 =	Per La Columna
+	t_Lang141 =	Totes Les Columnes
+	t_Lang142 =	Eliminar tema de les barres d'eines (cal reiniciar)
+	t_Lang143 =	Amagar automàticament la barra d'eines controls
+	t_Lang144 =	Feu clic i arrossegueu per canviar l'ordre. Feu doble clic per editar.
+	t_Lang145 =	Edita Macros
+	t_Lang146 =	En línia
+	t_Lang147 =	Macro
+	t_Lang148 =	Acció de botó de tancament de la finestra principal
+	t_Lang149 =	Tancar l'aplicació
+	t_Lang150 =	Minimitza a la safata
+	t_Lang151 =	Pantalla de confirmació en tancar una macro
+	t_Lang152 =	Crea còpies de seguretat de forma automàtica
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Obert
@@ -448,7 +628,7 @@
 	)	
 	d_Lang018 =	Color del píxel
 	d_Lang019 =	Esborrar llista
-	d_Lang020 =	Assegureu-vos d'eliminar tots els elements?
+	d_Lang020 =	Tancar Macro?
 	d_Lang021 =	Pròxim
 	d_Lang022 =	Anterior
 	d_Lang023 =	Missatge
@@ -514,8 +694,8 @@
 	)	
 	d_Lang057 =	
 	(LTrim	
-		- Premeu Ctrl + Tecles de cursor per moure l'àrea seleccionada.
-		- Premeu les tecles Maj + tecles de fletxa per canviar la mida d'àrea seleccionada.
+		- Premeu Ctrl+Tecles de cursor per moure l'àrea seleccionada.
+		- Premeu les tecles Maj+tecles de fletxa per canviar la mida d'àrea seleccionada.
 		- Premeu D'acord per finalitzar.
 	)	
 	d_Lang058 =	
@@ -533,28 +713,43 @@
 	(LTrim	
 		Voleu descarregar-ho ara?
 		
-		Per desactivar les comprovacions automàtiques seleccioneu Ajuda > Comprovar en l'arrencada.
+		Per desactivar les comprovacions automàtiques seleccioneu Ajuda > Comproveu en l'arrencada
 	)	
+		
 	d_Lang062 =	Vostè ja té la versió més recent.
 	d_Lang063 =	S'ha produït un error durant la comprovació.
 	d_Lang064 =	Error d'objecte COM en
 	d_Lang065 =	Fila
 	d_Lang066 =	Específicament
-	d_Lang067 =	Mostra consells sobre la posada en marxa.
+	d_Lang067 =	Mostra aquesta finestra en iniciar
 	d_Lang068 =	Consells:
 	d_Lang069 =	
 	(LTrim	
-		Necessites ajuda, que es troba un error o té algun suggeriment? Envieu un correu electrònic a l'autor: <a href="mailto:rodolfoub@gmail.com">rodolfoub@gmail.com</a>
-		Aquest és un programari lliure. Si has trobat útils <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=rodolfoub`%40gmail`%2ecom&lc=US&item_name=Pulover`%27s`%20Macro`%20Creator&item_number=App`%2ePMC&currency_code=USD&bn=PP`%2dDonationsBF`%3abtn_donateCC_LG`%2egif`%3aNonHosted">una donació</a> i donar suport al desenvolupament. Gràcies.
+		Una gran quantitat de temps i esforços es van centrar en el desenvolupament de Pulover's Macro Creator. Si li resulta útil, si us plau consideri mostrar el seu agraïment amb una donació.
+		
+		Donar o no, no hi haurà diferència en les seves característiques i funcionalitat.
 	)	
-	d_Lang070 =	Error: Invalid Hotkey seleccionat.
+	d_Lang070 =	Donar...
+	d_Lang071 =	No, gràcies
+	d_Lang072 =	Doni suport el programari de codi obert
+	d_Lang073 =	Error: Invalid Hotkey seleccionat.
+	d_Lang074 =	Trobar una comanda o una funció
+	d_Lang075 =	Benvinguts a Pulover's Macro Creator
+	d_Lang076 =	Trieu seu disseny preferit
+	d_Lang077 =	Compacte
+	d_Lang078 =	Defecte
+	d_Lang079 =	Cerca actualitzacions en iniciar.
+	d_Lang080 =	Vostè pot canviar això a Opcions > Configuració > General.
+	d_Lang081 =	Vostè pot canviar i personalitzar els dissenys al menú View.
+	d_Lang082 =	El fitxer no s'ha trobat!
+	d_Lang083 =	S'ha trobat un fitxer de còpia de seguretat. Vols obrir-lo?
 		
 ; Start-up Tips		
 	Start_Tips =	
 	(LTrim	
 		Podeu crear macros utilitzant els botons de comandament a la finestra principal o l'ús de la gravadora per copiar les seves accions. Aneu a Opcions> Configuració> Gravació per seleccionar el que es registren les entrades.
 		Per utilitzar la gravadora per a tasques ràpides aneu a Opcions> Configuració> Gravació i marqui l'opció "Esborrar llista". A continuació, feu clic al botó de gravació a la finestra principal i utilitzar F10 per esborrar la macro actual i iniciar un de nou amb la mateixa combinació de tecles. També podeu consultar l'opció "Sempre actiu" en la finestra principal a tenir enregistrament i reproducció hotkeys actiu.
-		Per obtenir ajuda per a una ordre específic feu clic a un botó de comandament a la finestra principal o en qualsevol lloc d'una finestra de comandaments per mostrar enllaços a AutoHotkey ajuda en línia.
+		Per obtenir ajuda per a una ordre específic feu clic dret en qualsevol part de la finestra de comandaments per mostrar enllaços a AutoHotkey ajuda en línia.
 		Marqueu l'opció "Claus Capture" per entrar tecles i combinacions a la macro directament de la finestra principal.
 		Introduïu tecles i combinacions de tecles d'accés ràpid a la caixa a la part inferior i premi el botó Insereix per afegir a les files seleccionades.
 		Si no se selecciona cap fila dels botons d'edició s'apliquen a totes les files de la llista.
@@ -570,7 +765,7 @@
 		Vostè pot obrir, copiar, moure o esborrar arxius i carpetes utilitzant un dels comandaments de Inserir> Run / Arxiu / cadena / Misc.
 		Per gravar Down i Up estat de tots els go clau a Opcions> Configuració> Gravació i seleccioneu "Capturar estat clau (baix / dalt)" opció.
 		Podeu utilitzar tecles d'accés ràpid per accelerar o reduir la velocitat de reproducció. Aneu a Opcions> Configuració> Reprodueix per establir les claus i la velocitat.
-		Per ajustar l'àrea de captura amb "Fer Screenshot" aneu a Opcions> Configuració> Imatges i seleccioneu "Premeu Enter per capturar". Després de dibuixar el control d'ús rectangle + tecles de cursor per moure la selecció i Shift + tecles de fletxa per canviar la seva mida.
+		Per ajustar l'àrea de captura amb "Fer Screenshot" aneu a Opcions> Configuració> Imatges i seleccioneu "Premeu Enter per capturar". Després de dibuixar el control d'ús rectangle+tecles de cursor per moure la selecció i Shift+tecles de fletxa per canviar la seva mida.
 		Seleccioneu ràpida: Seleccioneu qualsevol fila i feu clic a una capçalera de columna per seleccionar files similars basades en text de la cel d'aquesta columna.
 		The Run / Arxiu / cadena / Misc. finestra té molts altres ordres útils com ara apagat i URLDownloadToFile.
 		Utilitzeu la funció "Captura" a la finestra de funcions (Inserir> Si Declaracions / Variables / Funcions) per fer una captura de pantalla d'una part de la pantalla. El primer paràmetre és la ruta del fitxer de destinació i el nom amb una extensió png. El segon paràmetre són les coordenades canonada separats a la pantalla, per exemple, 100 | 200 | 50 | 100 (X | Y | Ample | Alt).
@@ -581,85 +776,28 @@
 		Podeu executar funcions avançades com ara substr i RegExReplace de la finestra Funcions (Inserir> Si Declaracions / variables / funcions). O executar les seves pròpies funcions de seqüència AutoHotkey externs.
 	)	
 ; Tooltips		
-	NewB_TT =	Nou (Ctrl+N)
-	OpenB_TT =	Obrir (Ctrl+O)
-	SaveB_TT =	Desa (Ctrl+S)
-	ExportB_TT =	Exporta a AHK (Ctrl+I)
-	PreviewB_TT =	Vista prèvia de script (Ctrl+P)
-	OptionsB_TT =	Settings (Ctrl+G)
-	RecordB_TT =	Gravar macro (Ctrl+R)
-	StartB_TT =	Activar Macros (Ctrl+Enter)
-	TestRun_TT =	Jugar Macro actual (Ctrl+Shift+Enter)
-	RunTimer_TT =	Timer (Ctrl+Shift+T)
-	MouseB_TT =	Mouse (F2)
-	TextB_TT =	Text (F3)
-	SpecialB_TT =	Tecles especials
-	ControlB_TT =	Control de (F4)
-	PauseB_TT =	Pausa (F5) / Missatge (Shift+F5) / Espera Clau (Control+F5) 
-	WindowB_TT =	Finestra (F6)
-	ImageB_TT =	Imatge / píxel motor (F7)
-	RunB_TT =	Executar / Arxiu / cadena / Misc. (F8)
-	ComLoopB_TT =	Loop (F9) / Ir (Shift+F9) / Label (Ctrl+F9)
-	IfStB_TT =	Si Declaracions (F10) / variables (Shift+F10) / Funcions (Ctrl+F10)
-	IEComB_TT =	Internet Explorer (F11) / COM Interface (Shift+F11) / Executar Scriptlet (Ctrl+F11)
-	SendMsgB_TT =	Missatges de Windows (F12)
-	AutoKey_TT =	Retrocés per esborrar
-	ManKey_TT =	Retrocés per esborrar
-	AbortKey_TT =	Retrocés per esborrar
+	AutoKey_TT =	Tecla d'accés directe per jugar Macro
+	ManKey_TT =	Tecla d'accés directe per jugar Macro "pas a pas"
+	AbortKey_TT =	Hotkey per aturar la reproducció
+	PauseKey_TT =	Hotkey per pausar la reproducció
+	RecKey_TT =	Retrocés per esborrar
+	RecNewKey_TT =	Retrocés per esborrar
 	JoyKey_TT =	Premeu un botó a la palanca de comandament
-	PauseKey_TT =	Fa una pausa en l'execució en comptes d'aturar
-	OnFinish_TT =	
-	(LTrim	
-		Opcions d'apagada
-		Quan finalitzi la reproducció...
-	)	
-	Win1_TT =	Afegir la tecla Windows com a modificador
-	JoyHK_TT =	Palanca de comandament
 	ReptC_TT =	0 = infinit
-	TabPlus_TT =	Afegir Macro (Ctrl+T)
-	TabClose_TT =	Tancar Macro (Ctrl+W)
-	DuplicateL_TT =	Duplicar macro (Ctrl+Shift+D)
-	SaveC_TT =	Guardar macro actual (Ctrl+Alt+S)
-	ImportB_TT =	Importació Macro (Ctrl+I)
-	IfDirB_TT =	Feu Hotkeys funcionen depenent del `nType de la finestra que està activa o no existeix (Ctrl+H)
-	KeepHKOn_TT =	Mantingui Hotkeys Sempre Activat
 	A_List_TT =	Seleccioneu Macro (Ctrl+1~0)
 	OSHK_TT =	Seleccioneu Macro
 	OSHKEd_TT =	Seleccioneu Macro
-	Duplicate_TT =	Duplicar files seleccionades (Ctrl+D)
-	Order_TT =	Mou les files seleccionades (Ctrl+RePàg / Ctrl+AvPàg)
-	Cut_TT =	Tallar files seleccionades (Ctrl+X)
-	Copy_TT =	Copia files seleccionades (Ctrl+C)
-	Paste_TT =	Files Enganxa copiar (Ctrl+V)
-	Remove_TT =	Eliminar files seleccionades (Del)
-	Undo_TT =	Desfer (Ctrl+Z)
-	Redo_TT =	Refer (Ctrl+I)
-	CopyTo_TT =	Copiar a...
-	Capt_TT =	Captura pulsacions de tecles en aquesta finestra
-	OnScCtrl_TT =	Mostrar Els Controls De La Barra D'eines
-	ShowStep_TT =	Mostra globus de suggeriments
 	ApplyT_TT =	Aplicar
 	ApplyI_TT =	Aplicar
 	ApplyL_TT =	Inseriu de Caixa (Insert)
 	InsertKey_TT =	Inserir Pulsacions (Ctrl+Insert)
-	EditButton_TT =	Edita (Enter)
-	PrevRefresh_TT =	Actualitzar (F5)
-	PrevCopy_TT =	Copieu
-	OpenT_TT =	Obrir (Ctrl+O)
-	SaveT_TT =	Desa (Ctrl+S)
-	CutT_TT =	Tallar
-	CopyT_TT =	Copieu
-	PasteT_TT =	Enganxar
-	SelAllT_TT =	Selecciona tot
-	DefaultMacro_TT =	Selecciona arxiu a carregar en el programa de posada en marxa
+	InsertKeyT_TT =	Inserir Pulsacions
+	DefaultMacro_TT =	Selecciona arxiu a carregar en l'arrencada del programa
 	VarCopyA_TT =	Copia contingut actual de variables
 	VarCopyB_TT =	Copia contingut actual de variables
-	FindReplace_TT =	Cercar / Reemplaçar (Ctrl+F)
-	EditComm_TT =	Redactar comentari (Ctrl+L)
-	EditColor_TT =	Edita color (Ctrl+M)
 	Reset_TT =	Esborrar el contingut de variables
 	Screenshot_TT =	Fer Screenshot
-	ColorPick_TT =	Selector de Color
+	ColorPick_TT =	Aconseguir píxel a la pantalla
 	PicPrev_TT =	Feu doble clic per ampliar imatge
 	CoordPixel_TT =	Mode de coordenades
 	VariatT_TT =	Les ombres de variació
@@ -667,25 +805,17 @@
 	TransC_TT =	Color Transparent
 	WScale_TT =	Escala Ample
 	HScale_TT =	Escala d'altura
+	Fast_TT =	Utilitza un mètode de cerca més ràpid (recomanat)
+	RGB_TT =	Fa que el color s'ha d'interpretar com un valor en lloc de BGR RGB
 	LoopLVColor_TT =	Feu clic per seleccionar un color
 	IfLVColor_TT =	Feu clic per seleccionar un color
 	RefreshIEW_TT =	Actualitzar llista
 	ActiveObj_TT =	Intenta connectar-se a un objecte COM actiu
+	TimeoutM_TT =	0 = infinit
 	ExpView_TT =	Editor Avançat
 	ExpView2_TT =	Editor Avançat
-	OSPlay_TT =	Reproduir / Pausa
-	OSStop_TT =	Aturi
-	OSRec_TT =	Start / Stop Record
-	OSRecNew_TT =	Gravar nova macro
-	OSRecOpt_TT =	Opcions de Gravació
-	OSPlayOpt_TT =	Opcions de reproducció
-	OSClear_TT =	Esborrar llista
 	OSProgB_TT =	Mostra la barra de progrés
-	OSFast_TT =	Accelerar
-	OSSlow_TT =	Alentir
 	OSTrans_TT =	opacitat
-	ToggleTB_TT =	Mostra / Oculta la barra de títol
-	ToggleMW_TT =	Mostra / oculta la finestra principal
 	MRel_TT =	
 	(LTrim	
 		Moviments relatius a la posició actual.
@@ -703,6 +833,7 @@
 		es tracten com a modificadors (aquests modificadors afecten
 		solament la següent clau):, +, ^, #
 	)	
+	ComEvent_TT =	La velocitat a la qual s'envien les pulsacions de teclat es determina pel retard clau.
 	Clip_TT =	
 	(LTrim	
 		Temporalment utilitza portapapers per enviar el text.
@@ -849,6 +980,22 @@
 	Ex_UV_TT =	Exportar variables globals.
 	Ex_EdVars_TT =	Seleccionar variables globals destinats a l'exportació.
 		
+; Operators		
+	As_Oper_1 =	Assignar
+	As_Oper_2 =	Afegir
+	As_Oper_3 =	Sostreure
+	As_Oper_4 =	Multiplicar
+	As_Oper_5 =	Dividir
+	As_Oper_6 =	Divisió Floor
+	As_Oper_7 =	Concatenar
+	Co_Oper_1 =	Igual
+	Co_Oper_2 =	Equal (majúscules i minúscules)
+	Co_Oper_3 =	No és igual
+	Co_Oper_4 =	Major
+	Co_Oper_5 =	Menys
+	Co_Oper_6 =	Major o igual
+	Co_Oper_7 =	Menor o igual
+		
 ; IE Commands Tips		
 	Tip_Navigate =	Es desplaça a una adreça URL o la ruta.
 	Tip_Value =	Obté o estableix el valor de l'objecte.
@@ -866,6 +1013,7 @@
 	Tip_LocationURL =	Obté l'adreça URL de la pàgina actual.
 	Tip_InnerText =	Estableix o obté el text de l'objecte.
 	Tip_InnerHTML =	Estableix o el codi HTML de l'objecte.
+	Tip_OuterHTML =	Estableix o recupera l'objecte i el contingut en HTML.
 	Tip_Href =	Estableix o un URL de destinació o un punt d'ancoratge.
 	Tip_Src =	Estableix o un URL a carregar l'objecte.
 	Tip_SelectedIndex =	Estableix o l'índex de l'opció seleccionada en un objecte de selecció.
@@ -875,4 +1023,251 @@
 	Tip_Height =	Estableix o recupera l'alçada de l'objecte.
 	Tip_Length =	Estableix o recupera el nombre d'objectes en una col · lecció.
 		
+; AHK Commands Tips		
+	Ahk_Cmd_Index =	
+	(LTrim	
+	Abs	Retorna el valor absolut del nombre .
+	ASin	Retorna l'arc si ( el nombre el si és Number ) en radians .
+	ACos	Retorna l'arc cosinus ( el nombre el cosinus és número ) en radians .
+	Array	Crea un objecte Array .
+	Asc	Retorna el codi de caràcters (un nombre entre 1 i 255 ( en ANSI compilacions ) o 65.535 (en les versions Unicode ) ) per al primer caràcter en cadena .
+	ATan	Retorna l'arc tangent ( el nombre la tangent és número ) en radians .
+	BlockInput	Activa o desactiva la capacitat de l'usuari per interactuar amb l'ordinador a través del teclat i el ratolí .
+	Break	Surt ( acaba) un bucle . Vàlid dins de qualsevol tipus de bucle .
+	Ceil	Retorna Nombre arrodonit al nombre enter més pròxim ( sense sufix .00 ) .
+	Chr	Retorna el caràcter únic corresponent al codi de caràcters indicat per Nombre .
+	Click	Fa clic amb el botó del ratolí a les coordenades especificades . També pot mantenir premut un botó , giri la roda , o moure .
+	ClipWait	Espera fins que el portapapers conté dades .
+	Clipboard	Enganxa el text del porta-retalls.
+	ComObjActive	Recupera un objecte COM registrat .
+	ComObjArray	Crear un SAFEARRAY per al seu ús amb COM .
+	ComObjConnect	Connexions fonts d'esdeveniments d'un objecte COM de funcions amb un prefix donat .
+	ComObjCreate	Crea un objecte COM.
+	ComObjEnwrap / ComObjUnwrap	Wraps / desembolica un objecte COM .
+	ComObjError	Activa o desactiva la notificació d'errors de COM .
+	ComObjFlags	Recupera o canvis de banderes que controlen el comportament d'un objecte contenidor COM.
+	ComObjGet	Retorna una referència a un objecte proporcionat per un component COM .
+	ComObjMissing	Crea un objecte "falta paràmetre " passar a un mètode COM.
+	ComObjParameter	Embolica un valor i tipus per passar com a paràmetre a un mètode COM.
+	ComObjQuery	Consulta un objecte COM per a una interfície o servei .
+	ComObjType	Recupera la informació de tipus d'un objecte COM .
+	ComObjValue	Recupera el valor o el punter emmagatzemat en un objecte contenidor COM.
+	Continue	Omet la resta del corrent de bucle d' iteració i comença una nova . Vàlid dins de qualsevol tipus de bucle .
+	Control	Fa una varietat de canvis en un control .
+	ControlClick	Envia un botó de ratolí o de roda del ratolí per a un control .
+	ControlEditPaste	Pastes cadena en la posició de cursor / inserció en un control d' edició (això no afecta els continguts del porta-retalls ) .
+	ControlFocus	Estableix el focus d'entrada en un control determinat en una finestra .
+	ControlGet	Recupera diversos tipus d'informació sobre un control .
+	ControlGetFocus	Recupera el que el control de la finestra de destinació té el focus d'entrada , si escau .
+	ControlGetPos	Recupera la posició i la mida d'un control .
+	ControlGetText	Recupera el text d'un control .
+	ControlMove	Mou o canvia la mida d'un control .
+	ControlSend / ControlSendRaw 	Envia pulsacions de tecles simulades per una finestra o de control .
+	ControlSetText	Canvia el text d'un control .
+	CoordMode	Estableix la manera de coordinar a diversos comandaments que és relatiu a qualsevol de la finestra activa o la pantalla .
+	Cos	Retorna el cosinus trigonomètric del Nombre .
+	Critical	Evita que el fil actual de ser interromput per altres threads .
+	DetectHiddenText	Determina si el text invisible en una finestra és " vista" amb el propòsit de trobar la finestra . Això afecta ordres com IfWinExist i WinActivate .
+	DetectHiddenWindows	Determina si les finestres invisibles són " vistos" per el guió .
+	DllCall	Crida a una funció dins d'una DLL , com una funció de l'API de Windows estàndard.
+	Drive	Expulsa / retreu la safata a la unitat de CD o DVD , o estableix l'etiqueta de volum d'una unitat .
+	DriveGet	Recupera diversos tipus d'informació sobre la unitat de l'equip ( s ) .
+	DriveSpaceFree	Recupera l' espai lliure d'un disc , en megabytes .
+	Edit	Obre l'script per a la seva edició en l'editor associat .
+	Else	Especifica la comanda ( s ) per dur a terme si una sentència if s'avalua com FALSE . Quan més d' un comando està present , tanqui en un bloc ( frens ) .
+	EnvAdd	Estableix una variable a la suma de si mateix més el valor donat ( també es pot sumar o restar el temps d'un valor de data i hora ) . Sinònim de : Var + = Valor .
+	EnvDiv	Estableix una variable a si mateix dividit pel valor donat . Sinònim de : Var / = Valor .
+	EnvGet	Recupera una variable d'entorn .
+	EnvMult	Estableix una variable de vegades el mateix valor donat . Sinònim de : Var * = Valor .
+	EnvSet	Escriu un valor a una variable continguda en el medi ambient.
+	EnvSub	Estableix una variable a si mateix menys el valor donat ( poden comparar els valors de data i hora ) . Sinònim de : Var - = Valor .
+	EnvUpdate	Notifica al sistema operatiu i totes les aplicacions que s'executen aquesta variable d'entorn ( s ) han canviat .
+	Exit	Surt del subprocés actual o ( si el guió no és persistent i no conté tecles d'accés ràpid ) tota la seqüència de comandaments .
+	ExitApp	Acaba la seqüència de comandaments de manera incondicional .
+	Exp	Retorna i (que és aproximadament 2,71828182845905 ) elevat a la potència N - èsim .
+	FileAppend	Escriu text en el final d'un arxiu ( creant primer l'arxiu , si cal) .
+	FileCopy	Copia un o més arxius .
+	FileCopyDir	Còpia una carpeta amb totes les seves subcarpetes i arxius ( similar a xcopy ) .
+	FileCreateDir	Crea una carpeta .
+	FileCreateShortcut	Crea un arxiu d'accés directe ( . Lnk ) .
+	FileDelete	Elimina un o més arxius .
+	FileEncoding	Estableix la codificació per defecte per FileRead , FileReadLine , Loop Read , FileAppend i FileOpen .
+	FileInstall	Inclou l'arxiu especificat dins de la versió compilada del script .
+	FileGetAttrib	Indica si un arxiu o carpeta és de només lectura , ocult , etc
+	FileGetShortcut	Recupera informació sobre un arxiu d'accés directe ( . Lnk ) , com el seu arxiu de destinació .
+	FileGetSize	Recupera la mida d'un arxiu .
+	FileGetTime	Recupera el segell de data i hora d'un arxiu o carpeta .
+	FileGetVersion	Recupera la versió d'un arxiu .
+	FileMove	Mou o canvia el nom d'un o més arxius .
+	FileMoveDir	Mou una carpeta amb totes les seves subcarpetes i arxius . També podeu canviar el nom d'una carpeta .
+	FileOpen	Proporciona arxiu orientat a objectes I / O.
+	FileRead	Llegeix el contingut d'un arxiu en una variable .
+	FileReadLine	Llegeix la línia especificada d'un fitxer i emmagatzema el text en una variable .
+	FileRecycle	Envia un fitxer o directori a la paperera de reciclatge , si és possible .
+	FileRecycleEmpty	Buida la paperera de reciclatge .
+	FileRemoveDir	Elimina una carpeta .
+	FileSelectFile	Mostra un quadre de diàleg estàndard que permet a l'usuari obrir o guardar l'arxiu ( s ) .
+	FileSelectFolder	Mostra un quadre de diàleg estàndard que permet a l'usuari seleccionar una carpeta .
+	FileSetAttrib	Canvia els atributs d'un o més arxius o carpetes . Els comodins són compatibles .
+	FileSetTime	Canvia el segell de data i hora d'un o més arxius o carpetes . Els comodins són compatibles .
+	Floor	Retorna Nombre arrodonit al nombre enter més pròxim ( sense sufix .00 ) .
+	For	Repeteix una sèrie de comandaments una vegada per a cada parell clau - valor en un objecte .
+	FormatTime	Transforma un timestamp YYYYMMDDHH24MISS en el format de data / hora especificada .
+	Func	Recupera una referència a una funció .
+	GetKeyName / GetKeyVK / GetKeySC	Recupera el nom o el text , codi de tecla virtual o codi scan d'una clau .
+	GetKeyState	Comprova si una tecla del teclat o el ratolí / joystick és cap avall o cap amunt . També es recupera l'estat joystick.
+	Gosub	Salta a l'etiqueta especificada i continua l'execució fins que es troba de tornada.
+	Goto	Salta a l'etiqueta especificada i continua l'execució .
+	GroupActivate	Activa la finestra en un grup de finestres que es va definir amb groupadd .
+	GroupAdd	Afegeix una especificació de finestra a un grup de finestres , creant el grup si cal .
+	GroupClose	Tanca la finestra activa si estava activat per GroupActivate o GroupDeactivate . A continuació , s'activa la següent finestra en la sèrie . També pot tancar totes les finestres d'un grup .
+	GroupDeactivate	Similar a GroupActivate excepte activa la finestra no en el grup .
+	if	Especifica la comanda ( s ) per dur a terme si la comparació d'una variable a un valor doni com a resultat VERDADER. Quan més d' un comando està present , tanqui en un bloc ( frens ) .
+	if (expression)	Especifica la comanda ( s ) per dur a terme si una expressió s'avalua com VERDADER.
+	If var [not] between	Comprova si el contingut d'una variable són numèricament o alfabèticament entre dos valors ( inclosos) .
+	If var [not] in/contains MatchList 	Comprova si el contingut d'una variable coincideixen amb un dels elements d'una llista .
+	If var is [not] type	Comprova si el contingut d'una variable són numèrics , majúscules , etc
+	If Clipboard	Comprova si el text del portapapers és matxs una cadena especificada .
+	If ErrorLevel	Comprova si una imatge o píxel especificat es troben a la pantalla .
+	If A_Index	Comprova si la interacció actual del loop matxs 1 especifiqui un nombre .
+	IfEqual/IfNotEqual	Compara una variable en un valor de la igualtat . Sinònim : si Var = Valor | si Var < > Value .
+	IfExist / IfNotExist / FileExist	Comprova l'existència d'un fitxer o carpeta .
+	IfGreater / IfGreaterOrEqual	Compara una variable a un valor . Sinònim : si Var > Valor | si Var > = Valor .
+	IfInString / IfNotInString / InStr	Comprova si una variable conté la cadena especificada .
+	IfLess / IfLessOrEqual	Compara una variable a un valor . Sinònim : si Var < Valor | si Var < = Valor .
+	IfMsgBox	Xecs botó que s'hagi premut per l'usuari durant l'últim comando MsgBox .
+	IfWinActive / IfWinNotActive	Comprova si hi ha la finestra especificada i es troba actualment activa ( sobretot) .
+	IfWinExist / IfWinNotExist	Comprova si hi ha la finestra especificada .
+	ImageSearch	Busca en una regió de la pantalla per una imatge .
+	IniDelete	Elimina un valor d'un arxiu de format . Ini estàndard.
+	IniRead	Llegeix un valor d'un arxiu de format . Ini estàndard.
+	IniWrite	Escriu un valor en un arxiu de format . Ini estàndard.
+	Input	Espera que l'usuari escrigui una cadena ( no suportat en Windows 9x : no fa res ) .
+	InputBox	Mostra un quadre d'entrada per demanar a l'usuari que introdueixi una cadena .
+	InStr	Busca un fet donat d'una cadena , de l'esquerra o la dreta .
+	)	
+	Ahk_Cmd_Index = %Ahk_Cmd_Index%`n	
+	(LTrim	
+	KeyHistory	Mostra informació guió i una història de les pulsacions de teclat més recents i els clics del ratolí.
+	KeyWait	Espera una tecla o botó del ratolí / joystick per ser posat en llibertat o pressionat.
+	Labels	Una etiqueta identifica una línia de codi, i es pot utilitzar com un objectiu Goto o per formar una subrutina.
+	Log	Retorna el logaritme (base 10) del nombre.
+	Ln	Retorna el logaritme natural (base e) del número.
+	Loop (normal) 	Realitzeu una sèrie d'ordres en diverses ocasions: es troben ja sigui el nombre especificat de vegades o fins trencament.
+	Loop (files & folders)	Recupera els arxius o carpetes especificats, un a la vegada.
+	Loop (parse a string)	Recupera subcadenes (camps) d'una cadena, d'una en una.
+	Loop (read file contents)	Recupera les línies en un arxiu de text, d'una en una (millor rendiment que FileReadLine).
+	Loop (registry)	Recupera el contingut de la subclau especificada, un element a la vegada.
+	Menu	Crea, elimina, modifica i mostra els menús i elements de menú. Canvia la icona de la safata i la seva descripció. Controla si la finestra principal d'un script compilat es pot obrir.
+	Mod	Mòdul. Retorna la resta al dividend es divideix per Divisor.
+	MouseClickDrag	Clicks i sosté el botó del ratolí especificat, mou el ratolí a les coordenades de destinació, després deixa anar el botó.
+	MouseGetPos	Recupera la posició actual del cursor del ratolí, i que opcionalment finestra i el control que plana sobre.
+	MouseMove	Mou el cursor del ratolí.
+	MsgBox	Mostra el text especificat en una petita finestra que conté un o més botons (com sí i no).
+	NumGet	Retorna el nombre binari emmagatzemat a l'adreça especificada + offset.
+	NumPut	Emmagatzema el número en format binari a l'adreça especificada + offset i retorna l'adreça a la dreta de l'element acabat escrit.
+	OnExit	Especifica una subrutina per executar automàticament quan l'script finalitza.
+	OnMessage	Especifica una funció per cridar automàticament quan l'script rep el missatge especificat.
+	OutputDebug	Envia una cadena per al depurador (si escau) per a la seva visualització.
+	Pause	Les pauses subprocés actual de l'script.
+	PixelGetColor	Recupera el color del píxel a la x especificat, les coordenades i.
+	PixelSearch	Busca en una regió de la pantalla per un píxel del color especificat.
+	PostMessage	Col · loca un missatge a la cua de missatges d'una finestra o control.
+	Process	Realitza una de les següents operacions en un procés: comprova si existeix, canvia la seva prioritat, el tanca, espera que es tanqui.
+	Progress	Crea o actualitza una finestra amb una barra de progrés.
+	Random	Genera un nombre pseudo-aleatori.
+	RegExMatch	Determina si una cadena conté un patró (expressió regular).
+	RegExReplace	Substitueix les aparicions d'un patró (expressió regular) dins d'una cadena.
+	RegDelete	Elimina una subclau o un valor del registre.
+	RegRead	Llegeix un valor del registre.
+	RegWrite	Escriu un valor al registre.
+	RegisterCallback	Crea una adreça de codi màquina que quan se'l crida, es redirigeix la crida a una funció en el guió.
+	Return	La rendibilitat d'una subrutina d'execució que havia saltat anteriorment a través de la funció de guàrdia, GOSUB, l'activació de tecles d'accés directe, GroupActivate, o per altres mitjans.
+	Round	Si N és omès o 0, nombre s'arrodoneix a l'enter més proper. Si N és nombre positiu, nombre s'arrodoneix al N decimals. Si N és negatiu, nombre s'arrodoneix per N dígits a l'esquerra del punt decimal.
+	Run	Executa un programa extern.
+	RunAs	Especifica un conjunt de credencials d'usuari que s'utilitzarà per a tots els usos posteriors d'execució i RunWait. Requereix Windows 2000/XP o posterior.
+	RunWait	Executa un programa extern i espera fins que acabi.
+	Screenshot	Crea un PNG de pantalla del una àrea especificada.
+	Send / SendRaw / SendInput / SendPlay	Envia les pulsacions de teclat i els clics del ratolí simulats a la finestra activa.
+	SendLevel	Controla quins esdeveniments de teclat i ratolí artificials són ignorats per tecles d'accés ràpid i hotstrings.
+	SendMessage	Envia un missatge a una finestra o control i espera confirmació.
+	SendMode	Fa Enviar sinònim SendInput o SendPlay en lloc de la predeterminada (SendEvent). També fa clic i mousemove / clic / arrossegar Utilitzar el mètode especificat.
+	SetCapslockState	Estableix l'estat de la tecla Bloq Maj. També es pot forçar la clau per mantenir-se encès o apagat.
+	SetEnv (Var = Value)	Assigna el valor especificat a una variable.
+	SetFormat	Estableix el format dels nombres enters i nombres de punt flotant generats per les operacions matemàtiques.
+	SetKeyDelay	Estableix la demora que es produirà després de cada clic d'tecla Envia o enviat per ControlSend.
+	SetMouseDelay	Estableix la demora que es produirà després de cada moviment del ratolí o feu clic.
+	SetNumlockState	Estableix l'estat de la tecla Bloq Num També es pot forçar la clau per mantenir-se encès o apagat.
+	SetScrollLockState	Estableix l'estat de la tecla Bloq Despl. També es pot forçar la clau per mantenir-se encès o apagat.
+	SetRegView	Permet que les ordres de registre en un script de 32 bits per accedir a la visualització del registre de 64 bits i viceversa.
+	Shutdown	Apaga, reinicia o tanca sessió en el sistema.
+	Sin	Retorna el si trigonomètric del Nombre.
+	Sleep	Espera durant el període de temps especificat abans de continuar.
+	Sort	Organitza el contingut d'una variable en ordre alfabètic, ordre numèric, o l'atzar (opcionalment eliminar duplicats).
+	SoundBeep	Emet un to des de l'altaveu del PC.
+	SoundGet	Recupera diversos ajustaments des d'un dispositiu de so (mute, volum màster màster, etc)
+	SoundGetWaveVolume	Recupera el volum de sortida d'ona d'un dispositiu de so.
+	SoundPlay	Reprodueix un so, vídeo o un altre tipus de fitxer compatible.
+	SoundSet	Canvis diverses configuracions d'un dispositiu de so (mute, volum màster màster, etc)
+	SoundSetWaveVolume	Canvia el volum de sortida d'ona per a un dispositiu de so.
+	SplashImage	Crea o actualitza una finestra amb una imatge JPG, GIF o BMP.
+	SplashTextOn	Crea un text personalitzable finestra emergent.
+	SplashTextOff	Tanca la finestra de dalt.
+	SplitPath	Separa un nom de fitxer o adreça URL al seu nom, el directori, l'extensió i la unitat.
+	Sqrt	Retorna l'arrel quadrada del nombre.
+	StatusBarGetText	Recupera el text d'un control de la barra d'estat estàndard.
+	StatusBarWait	Espera que la barra d'estat de la finestra conté la cadena especificada.
+	StrPut / StrGet	Còpia una cadena o a partir d'una adreça de memòria, opcional conversió entre pàgines de codis.
+	StringCaseSense	Determina si les comparacions de cadena distingeixen entre majúscules i minúscules (per defecte és "no entre majúscules i minúscules").
+	StringGetPos / InStr	Recupera la posició de la subcadena especificada dins d'una cadena.
+	StringLeft	Recupera el nombre de caràcters del costat esquerre d'una cadena.
+	StringLen / StrLen	Recupera el compte de quants personatges estan en una cadena.
+	StringLower	Converteix una cadena a minúscules.
+	StringMid / SubStr	Recupera un o més caràcters des de la posició especificada en una cadena.
+	StringReplace	Reemplaça la subcadena especificada amb una nova cadena.
+	StringRight	Recupera el nombre de caràcters del costat dret d'una cadena.
+	StringSplit / StrSplit	Separa una cadena en una matriu de subcadenes utilitzant els delimitadors especificats.
+	StringTrimLeft	Elimina un nombre de caràcters del costat esquerre d'una cadena.
+	StringTrimRight	Elimina un nombre de caràcters des del costat dret d'una cadena.
+	StringUpper	Converteix una cadena a majúscules.
+	Suspend	Desactiva o activa totes o determinades combinacions de tecles i hotstrings.
+	SysGet	Recupera la resolució de pantalla, la informació de diversos monitors, les dimensions dels objectes del sistema, i altres propietats del sistema.
+	Tan	Retorna la tangent trigonomètrica del Nombre.
+	ToolTip	Crea una finestra sempre-on-top en qualsevol lloc de la pantalla.
+	Transform	Realitza funcions auxiliars de matemàtiques, operacions a nivell de bits i tasques com ara ASCII / conversió d'Unicode.
+	TrayTip	Crea una finestra de missatge d'globus a prop de la icona de la safata. Requereix Windows 2000/XP o posterior.
+	Trim / LTrim / RTrim	Retalla alguns personatges del principi i / o al final d'una cadena.
+	Try	Guàrdies d'una o més instruccions (ordres o expressions) contra els errors d'execució i excepcions llançades pel comando de tir.
+	Until	Aplica una condició per a la continuació d'un cicle o bucle for.
+	UrlDownloadToFile	Descarrega un arxiu des d'Internet.
+	VarSetCapacity	Amplia la capacitat de retenció d'una variable o allibera la seva memòria. Normalment, això és necessari només per circumstàncies inusuals com ara DllCall.
+	WinActivate	Activa la finestra especificada (ho fa sobretot).
+	WinActivateBottom	Igual que WinActivate excepte que activa el situat més avall (menys actiu recentment) Finestra a joc en lloc de la més alta.
+	WinActive	Retorna l'ID únic (HWND) de la finestra activa si coincideix amb els criteris especificats.
+	WinClose	Tanca la finestra especificada.
+	WinExist	Comprova si hi ha la finestra especificada.
+	WinGetActiveStats	Combina les funcions de WinGetActiveTitle i WinGetPos en un mateix comandament.
+	WinGetActiveTitle	Recupera el títol de la finestra activa.
+	WinGetClass	Recupera el nom de classe de finestra especificada.
+	WinGet	Recupera la finestra especificada única ID, ID de procés, nom del procés, o una llista dels seus controls. També pot obtenir una llista de totes les finestres que coincideixen amb els criteris especificats.
+	WinGetPos	Recupera la posició i la mida de la finestra especificada.
+	WinGetText	Recupera el text de la finestra especificada.
+	WinGetTitle	Recupera el títol de la finestra especificada.
+	WinHide	Oculta la finestra especificada.
+	WinKill	Força la finestra especificada per tancar.
+	WinMaximize	Amplia la finestra especificada amb la seva mida màxim.
+	WinMenuSelectItem	Invoca una opció del menú de la barra de menús de la finestra especificada.
+	WinMinimize	Contreu la finestra especificada en un botó a la barra de tasques.
+	WinMinimizeAll	Minimitza totes les finestres.
+	WinMinimizeAllUndo	Inverteix l'efecte d'un WinMinimizeAll anterior.
+	WinMove	Els canvis de la posició i / o la mida de la finestra especificada.
+	WinRestore	Unminimizes o unmaximizes la finestra especificada si es minimitza o maximitza.
+	WinSet	Fa una varietat de canvis en la finestra especificada, com "sempre a sobre" i la transparència.
+	WinSetTitle	Canvia el títol de la finestra especificada.
+	WinShow	Unhides la finestra especificada.
+	WinWait	Espera que hi ha la finestra especificada.
+	WinWaitActive	Espera que la finestra especificada està activa.
+	WinWaitClose	Espera que no existeix la finestra especificada.
+	WinWaitNotActive	Espera fins que la finestra especificada no està actiu.
+	)	
 return		

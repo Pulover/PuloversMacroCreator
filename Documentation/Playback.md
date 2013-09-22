@@ -19,13 +19,13 @@ The *Play Current Macro* button will run the active Macro immediately without ac
 
 The Playback Hotkeys are selected in the boxes at the top-right of the main window.
 
-**Auto.** (Auto Hotkey): Selects the Hotkey to reproduce the currently selected Macro the amount of times set in the Repeat box at the bottom. The Win option add Win key as a modifier. During playback the tray icon will change to playing state. The executing Macro must be finished or stopped before you can execute a new one.
+**Play** (Auto Hotkey): Selects the Hotkey to reproduce the currently selected Macro the amount of times set in the Repeat box at the bottom. The Win option add Win key as a modifier. During playback the tray icon will change to playing state. The executing Macro must be finished or stopped before you can execute a new one.
 
-**Man.** (Manual Hotkey): Selects the Hotkey to reproduce the currently selected Macro step-by-step. This is usually used to debug the Macro. If Show Info option is on a tooltip show the last and next steps will be shown next to the mouse pointer.
+**Manual** (Manual Hotkey): Selects the Hotkey to reproduce the currently selected Macro step-by-step. This is usually used to debug the Macro. If Show Info option is on a tooltip show the last and next steps will be shown next to the mouse pointer.
 
 **Stop**: Selects the Hotkey to stop execution and return it to start. You can also stop Playback by double-clicking the TrayIcon or right-clicking on it and selecting *Stop*.  
-The Pause option changes the behavior to pause/unpause execution instead. You can also pause/unpause Playback by Middle-Clicking the TrayIcon (even if Pause option is not enabled).  
-This key is global for all Macros.  
+
+**Pause**: Selects the Hotkey to pause execution, press it again to resume. You can also pause/unpause Playback by Middle-Clicking the TrayIcon.  
 
 *Note*: Mouse Actions are affected by [Mouse Coordinates Settings](p7-Settings.html#defaults).  
 
@@ -37,7 +37,7 @@ This small window allows you to control Playback and Recording using an interfac
 
 Macro Creator supports multiple Macros / Hotkeys. Each Macro will have its own Auto and Manual Hotkey that are shown when you add/select a Macro tab.
 
-When you press the Play Button (or when the main window is not active if "Always Active" option is on) all valid Hotkeys will be activated for all non-empty Macros. A traytip will be displayed (if *Show Info* is on) showing how many Auto. Hotkeys were activated. If any duplicate is found NO Hotkey will be activated.
+When you press the Play Button (or when the main window is not active if "Always Active" option is on) all valid Hotkeys will be activated for all non-empty Macros. A traytip will be displayed (if *Show Info* is on) showing how many Play Hotkeys were activated. If any duplicate is found NO Hotkey will be activated.
 
 ### Debugging Macros
 
@@ -59,14 +59,18 @@ For more information see [AutoHotkey Help](http://l.autohotkey.net/docs/commands
 
 ## Playback Options
 
-To change options click the Options button on the main window or select Options Menu > Settings. Some of the options can also be accessed from the *Playback Options* button on the [Controls Toolbar](#controls-toolbar).
+To change options click the Options button on the main window or select Options Menu > Settings. Some of the options can also be accessible from the *Playback Options* button on the [Controls Toolbar](#controls-toolbar).
 
 **Speed Up**: Selects the hotkey to toggle playback speed Up/Normal. When this option is on delay values will be cut by value set. Does not work when *Random Sleeps* is activated.
 
 **Slow Down**: Selects the hotkey to toggle playback speed Down/Normal. When this option is on delay values will be multiplied by value set. Does not work when *Random Sleeps* is activated.
 
+**Display balloon tips**: Enables displaying of tooltips and traytips during Recording/Playback.
+
 **Return Mouse after playback**: If checked will return the mouse to the initial position after each Macro Playback that uses mouse movement. This will not work for Manual Playback.
 
 **Display Controls Bar on startu-up**: If checked will display the Controls bar upon every start.
+
+**Auto Hide Controls Toolbar**: If checked the Controls Toolbar will be automatically shown when a Playback hotkey is pressed and hidden when execution finishes.
 
 **Random Sleeps**: If checked all delays during playback will be a random value for more or less of the defined percentage, e.g.: if percentage is set to 50, a command with a delay of 300ms will be set to any value between 150ms and 450ms. Percentage can be set in the counter.

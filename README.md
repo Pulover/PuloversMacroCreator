@@ -1,10 +1,10 @@
 ﻿# Pulover's Macro Creator #
 
-Pulover's Macro Creator is a Free Automation and Script Writting Tool with a graphic interface, based on AutoHotkey language. It features a large range of automation commands, has a built-in recorder and can capture inputs in its interface. The macros can be executed from the program itself or you can export them to AutoHotkey Script format.
+Pulover's Macro Creator is a Free Automation Tool and Script Generator based on AutoHotkey language. It features a large range of automation commands, has a built-in recorder and can capture inputs in its interface. The macros can be executed from the program itself or you can export them to AutoHotkey Script format.
 
-http://www.autohotkey.net/~Pulover
+[www.macrocreator.com](http://www.macrocreator.com)
 
-**Current Version**: 3.8.3
+**Current Version:** 4.0.0
 
 ## For developers ##
 
@@ -19,7 +19,7 @@ To compile you'll need:
 * hhc.exe and hha.dll in Documentation\MacroCreator_Help-doc directory.
 * Inno Setup (5.5.2 or higher) installed.
 
-Note: Execute MacroCreator.ahk at least once to create the .ini file with the current version.
-
-Language files should be edited in Languages.xls. Run ExtractLangFiles.ahk to create the .Lang files in the Lang directory.
+Notes:
+* Execute MacroCreator.ahk at least once to create the .ini file with the current version. You might need to copy from %AppData% to the script folder.
+* Language files should be edited in Languages.xls. Run ExtractLangFiles.ahk to create the .Lang files in the Lang directory.
 

@@ -1,11 +1,12 @@
 ﻿;=======================================================================================
 ;
-;                 Class LV_Rows
+;                    Class LV_Rows
 ;
-; Author:        Pulover [Rodolfo U. Batista]
-;                rodolfoub@gmail.com
+; Author:            Pulover [Rodolfo U. Batista]
+;                    rodolfoub@gmail.com
+; Release date:      12 September 2013
 ;
-;                Additional functions for ListView controls
+;                    Additional functions for ListView controls
 ;=======================================================================================
 ;
 ; This class provides an easy way to add functionalities to ListViews that are not
@@ -16,7 +17,8 @@
 ; Edit Functions:
 ;    Copy()
 ;    Cut()
-;    Paste(Row=0)
+;    Paste(Row=0, Multiline=True)
+;    Duplicate()
 ;    Delete()
 ;    Move(Up=False)
 ;    Drag(DragButton="D", AutoScroll=True, ScrollDelay=100, LineThick=2, Color="Black")
@@ -81,7 +83,7 @@ Class LV_Rows
     {
         global
         
-        If (Func <> "Copy")
+        If Func not in Copy,RowText,GetIconIndex
             SavePrompt := True
     }
 
@@ -138,10 +140,11 @@ Class LV_Rows
 ;    Function:           LV_Rows.Paste()
 ;    Description:        Paste copied rows at selected position.
 ;    Parameters:
-;        Row:            If non-zero pastes memory contents into the specified row.
+;        Row:            If non-zero pastes memory contents at the specified row.
+;        Multiline:      If True pastes the contents at every selected row.
 ;    Return:             True if memory contains data or False if not.
 ;=======================================================================================
-    Paste(Row=0)
+    Paste(Row=0, Multiline=False)
     {
         If !this.CopyData.MaxIndex()
             return False
@@ -153,11 +156,40 @@ Class LV_Rows
         }
         Else
         {
-            LV_Row := TargetRow - 1
-            For each, Row in this.CopyData
-                LV_Insert(LV_Row+A_Index, Row*)
+            If (!Row && Multiline)
+            {
+                LV_Row := 0
+                Loop
+                {
+                    LV_Row := LV_GetNext(LV_Row - 1)
+                    If !LV_Row
+                        break
+                    For each, Row in this.CopyData
+                        LV_Insert(LV_Row, Row*), LV_Row += 1
+                    LV_Row += 1
+                }
+            }
+            Else
+            {
+                LV_Row := TargetRow - 1
+                For each, Row in this.CopyData
+                    LV_Insert(LV_Row+A_Index, Row*)
+            }
         }
         return True
+    }
+;=======================================================================================
+;    Function:           LV_Rows.Duplicate()
+;    Description:        Duplicates selected rows.
+;    Return:             Number of duplicated rows.
+;=======================================================================================
+    Duplicate()
+    {
+        DupRows := new LV_Rows()
+    ,   DupLines := DupRows.Copy()
+    ,   DupRows.Paste(, False)
+    ,   DupRows := ""
+        return DupLines
     }
 ;=======================================================================================
 ;    Function:           LV_Rows.Delete()
@@ -271,7 +303,8 @@ Class LV_Rows
         MouseGetPos,,, LV_Win, LV_LView, 2
         WinGetPos, Win_X, Win_Y, Win_W, Win_H, ahk_id %LV_Win%
         ControlGetPos, LV_lx, LV_ly, LV_lw, LV_lh, , ahk_id %LV_LView%
-        VarSetCapacity(LV_XYstruct, 4 * A_PtrSize, 0)
+        LV_lw := LV_lw * 96 / A_ScreenDPI
+    ,   VarSetCapacity(LV_XYstruct, 16, 0)
 
         While, GetKeyState(DragButton, "P")
         {
@@ -282,12 +315,12 @@ Class LV_Rows
             {
                 If (LV_my < 0)
                 {
-                    SendMessage, LVM_SCROLL, 0, -LV_currColHeight, , ahk_id %LV_LView%
+                    SendMessage, LVM_SCROLL, 0, -LV_currColHeight,, ahk_id %LV_LView%
                     Sleep, %ScrollDelay%
                 }
                 If (LV_my > LV_lh)
                 {
-                    SendMessage, LVM_SCROLL, 0, LV_currColHeight, , ahk_id %LV_LView%
+                    SendMessage, LVM_SCROLL, 0, LV_currColHeight,, ahk_id %LV_LView%
                     Sleep, %ScrollDelay%
                 }
             }
@@ -299,11 +332,11 @@ Class LV_Rows
                 continue
             }
 
-            SendMessage, LVM_GETITEMCOUNT, 0, 0, , ahk_id %LV_LView%
+            SendMessage, LVM_GETITEMCOUNT, 0, 0,, ahk_id %LV_LView%
             LV_TotalNumOfRows := ErrorLevel
-            SendMessage, LVM_GETCOUNTPERPAGE, 0, 0, , ahk_id %LV_LView%
+            SendMessage, LVM_GETCOUNTPERPAGE, 0, 0,, ahk_id %LV_LView%
             LV_NumOfRows := ErrorLevel
-            SendMessage, LVM_GETTOPINDEX, 0, 0, , ahk_id %LV_LView%
+            SendMessage, LVM_GETTOPINDEX, 0, 0,, ahk_id %LV_LView%
             LV_topIndex := ErrorLevel
         ,   Line_W := (LV_TotalNumOfRows > LV_NumOfRows) ? LV_lw - SM_CXVSCROLL : LV_lw
 
@@ -312,7 +345,7 @@ Class LV_Rows
                 LV_which := LV_topIndex + A_Index - 1
                 NumPut(LVIR_LABEL, LV_XYstruct, 0, "UInt")
             ,   NumPut(A_Index - 1, LV_XYstruct, 4, "UInt")
-                SendMessage, LVM_GETSUBITEMRECT, %LV_which%, &LV_XYstruct, , ahk_id %LV_LView%
+                SendMessage, LVM_GETSUBITEMRECT, LV_which, &LV_XYstruct,, ahk_id %LV_LView%
                 LV_RowY := NumGet(LV_XYstruct, 4, "UInt")
             ,   LV_RowY2 := NumGet(LV_XYstruct, 12, "UInt")
             ,   LV_currColHeight := LV_RowY2 - LV_RowY

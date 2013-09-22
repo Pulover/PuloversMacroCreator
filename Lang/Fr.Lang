@@ -4,52 +4,67 @@
 		
 ; Main Menu		
 	m_Lang001 =	&Dossier
-	m_Lang002 =	&Insérer
+	m_Lang002 =	&Commandes
 	m_Lang003 =	&Sélectionner
 	m_Lang004 =	&Éditer
 	m_Lang005 =	&Macro
-	m_Lang006 =	&Options de
-	m_Lang007 =	&Langue
-	m_Lang008 =	&Faire Un Don
-	m_Lang009 =	&Aider
+	m_Lang006 =	&Voir
+	m_Lang007 =	&Options de
+	m_Lang008 =	&Langue
+	m_Lang009 =	&Faire Un Don
+	m_Lang010 =	&Aider
 		
-; File Submenu		
+; File Sub Menu		
 	f_Lang001 =	&Nouveau
 	f_Lang002 =	&Ouvert
 	f_Lang003 =	&Sauver
 	f_Lang004 =	&Enregistrer sous
-	f_Lang005 =	&Importer Macro
-	f_Lang006 =	En&registrer la macro actuelle
-	f_Lang007 =	&Fichiers Récents
-	f_Lang008 =	E&xporter vers AHK
-	f_Lang009 =	&Aperçu du script
-	f_Lang010 =	&Les variables de la liste
-	f_Lang011 =	Sor&tie
-	f_Lang012 =	Aucun
+	f_Lang005 =	&Fichiers Récents
+	f_Lang006 =	E&xporter vers AHK
+	f_Lang007 =	&Aperçu du script
+	f_Lang008 =	&Modifier Le Script
+	f_Lang009 =	&Les variables de la liste
+	f_Lang010 =	So&rtie
+	f_Lang011 =	A&ucun
 		
-; Insert Sub Menu		
+; Macro Sub Menu		
+	r_lang001 =	&Enregistrer une macro
+	r_lang002 =	&Activer les macros
+	r_lang003 =	&Jouer Macro actuelle
+	r_lang004 =	&Minuteur
+	r_lang005 =	J&ouez à partir de la ligne sélectionnée
+	r_lang006 =	Jo&uez jusqu'à ce que la ligne sélectionnée
+	r_lang007 =	Joue&z Lignes sélectionnées
+	r_lang008 =	&Touches sensibles au contexte
+	r_lang009 =	Ajoute&r une macro
+	r_lang010 =	&Fermer Macro
+	r_lang011 =	&Dupliquer Macro
+	r_lang012 =	Mod&ifier Macros
+	r_lang013 =	Im&porter Macro
+	r_lang014 =	E&nregistrer la macro actuelle
+		
+; Commands Sub Menu		
 	i_Lang001 =	&Souris
 	i_Lang002 =	&Texte
 	i_Lang003 =	&Contrôler
-	i_Lang004 =	&Pause / Un message / Attente Touche
-	i_Lang005 =	&Fenêtre
-	i_Lang006 =	&Image / pas de pixel Recherche
-	i_Lang007 =	&Exécuter / fichier / String / Misc.
-	i_Lang008 =	&Boucle / Aller à / étiquettes
-	i_Lang009 =	Si &états / variables / fonctions
-	i_Lang010 =	I&nternet Explorer / COM Interface
-	i_Lang011 =	&Messages de Windows
-	i_Lang012 =	T&ouches spéciales
+	i_Lang004 =	&Pause
+	i_Lang005 =	&Message Box
+	i_Lang006 =	&Attente Touche
+	i_Lang007 =	&Fenêtre
+	i_Lang008 =	&Image / Pas De Pixel Recherche
+	i_Lang009 =	&Exécuter / Fichier / String / Misc.
+	i_Lang010 =	&Boucle
+	i_Lang011 =	A&ller À
+	i_Lang012 =	&Étiquettes
+	i_Lang013 =	Si États
+	i_Lang014 =	&Variables
+	i_Lang015 =	F&onctions
+	i_Lang016 =	I&nternet Explorer
+	i_Lang017 =	COM Inte&rface
+	i_Lang018 =	E&xécuter Scriplet
+	i_Lang019 =	Messa&ges De Windows
+	i_Lang020 =	Tro&uvez une commande
 		
-; Select Sub Menu		
-	s_Lang001 =	&Sélectionner tout
-	s_Lang002 =	S&électionnez Aucun
-	s_Lang003 =	&Inverser la sélection
-	s_Lang004 =	&Vérifiez sélectionnés
-	s_Lang005 =	&Décochez sélectionnés
-	s_Lang006 =	I&nverser contrôles
-	s_Lang007 =	&Type sélectionné
-	s_Lang008 =	&Commandes
 		
 ; Edit Sub Menu		
 	e_Lang001 =	&Dupliquer
@@ -65,46 +80,73 @@
 	e_Lang011 =	D&éplacer vers le haut
 	e_Lang012 =	De&scendre
 	e_Lang013 =	&Insérez de la case
-	e_Lang014 =	Modifier mar&que de couleur
+	e_Lang014 =	I&nsérer Frappe
+	e_Lang015 =	Modifier mar&que de couleur
 		
-; Macro Sub Menu		
-	r_lang001 =	&Enregistrer une macro
-	r_lang002 =	&Activer les macros
-	r_lang003 =	&Jouer Macro actuelle
-	r_lang004 =	&Minuteur
-	r_lang005 =	Aj&outer une macro
-	r_lang006 =	&Fermer Macro
-	r_lang007 =	&Touches sensibles au contexte
-	r_lang008 =	Aff&icher / Masquer les commandes
-	r_lang009 =	Jo&uez à partir de la ligne sélectionnée
-	r_lang010 =	Joue&z jusqu'à ce que la ligne sélectionnée
-	r_lang011 =	Jouez &Lignes sélectionnées
+; Select Sub Menu		
+	s_Lang001 =	&Sélectionner tout
+	s_Lang002 =	S&électionnez Aucun
+	s_Lang003 =	&Inverser la sélection
+	s_Lang004 =	&Vérifiez sélectionnés
+	s_Lang005 =	&Décochez sélectionnés
+	s_Lang006 =	I&nverser contrôles
+	s_Lang007 =	Dé&placer La Sélection Vers Le Haut
+	s_Lang008 =	Dép&lacer La Sélection Vers Le Bas
+	s_Lang009 =	&Type sélectionné
+	s_Lang010 =	Type de commande
+		
+; View Sub Menu		
+	v_lang001 =	&Toujours à la pointe
+	v_lang002 =	&Les Lignes En Surbrillance
+	v_lang003 =	&Renfoncement
+	v_lang004 =	&Barre D'outils Des Contrôles
+	v_lang005 =	&Avant-première
+	v_lang006 =	Barr&es D'outils
+	v_lang007 =	Ra&ccourcis Clavier
+	v_lang008 =	R&éinitialiser Taille colonnes
+	v_lang009 =	Rétabl&ir La Disposition
+		
+	v_lang010 =	&Fichier
+	v_lang011 =	&Enregistrement et lecture
+	v_lang012 =	&Commandes
+	v_lang013 =	&Éditer
+	v_lang014 =	&Les Options
+	v_lang015 =	&Personnaliser
+		
+	v_lang016 =	&Automatique
+	v_lang017 =	&Manuel
+	v_lang018 =	A&rrêter
+	v_lang019 =	&Pause
+		
+	v_lang020 =	&Compact
+	v_lang021 =	&Par Défaut
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Réglages
 	o_Lang002 =	&Définir comme touches de raccourci par défaut
 	o_Lang003 =	D&éfinir comme fichier par défaut
 	o_Lang004 =	&Supprimer le fichier par défaut
-	o_Lang005 =	Ré&initialiser Taille colonnes
-	o_Lang006 =	R&accourcis clavier par défaut
-	o_Lang007 =	&Paramètres par défaut
+	o_Lang005 =	R&accourcis clavier par défaut
+	o_Lang006 =	&Paramètres par défaut
 		
 ; Donate Sub Menu		
 	p_Lang001 =	&Donation PayPal
 		
 ; Help Sub Menu		
-	h_Lang001 =	&Macro Creator Home
-	h_Lang002 =	&AHK Documentation en ligne
-	h_Lang003 =	&Vérifier les mises à jour...
-	h_Lang004 =	V&érifier au démarrage
-	h_Lang005 =	&Sur
-	h_Lang006 =	&Conseils
-	h_Lang007 =	&Forum
+	h_Lang001 =	&Aider
+	h_Lang002 =	&Tutoriels
+	h_Lang003 =	&Conseils
+	h_Lang004 =	&Macro Creator Home
+	h_Lang005 =	&Forum
+	h_Lang006 =	A&HK Documentation en ligne
+	h_Lang007 =	&Vérifier les mises à jour...
+	h_Lang008 =	V&érifier au démarrage
+	h_Lang009 =	&Sur
 		
 ; Tray Menu		
 	y_Lang001 =	Masquer la fenêtre
 	y_Lang002 =	Afficher la fenêtre
-	y_Lang003 =	Afficher / Masquer les commandes
+	y_Lang003 =	Barre D'outils Des Contrôles
 		
 ; Main Window		
 	w_Lang001 =	Exporter
@@ -112,21 +154,21 @@
 	w_Lang003 =	Options de
 	w_Lang004 =	Registre
 	w_Lang005 =	Jouer
-	w_Lang006 =	Auto.
-	w_Lang007 =	Man.
+	w_Lang006 =	Lecture
+	w_Lang007 =	Manuel
 	w_Lang008 =	Arrêter
-	w_Lang009 =	Affi&cher les contrôles
-	w_Lang010 =	&Pause
-	w_Lang011 =	&Boucle
-	w_Lang012 =	Cap&turez clés
-	w_Lang013 =	Mas&quer la fenêtre
-	w_Lang014 =	To&ujours actif
+	w_Lang009 =	Contrôles afficher la barre d'outils
+	w_Lang010 =	Pause
+	w_Lang011 =	Boucle
+	w_Lang012 =	Capturez touches dans cette fenêtre
+	w_Lang013 =	Réduire en icône
+	w_Lang014 =	Raccourcis Toujours Actifs
 	w_Lang015 =	Répétez
-	w_Lang016 =	Délai (ms):
+	w_Lang016 =	Délai (ms)
 	w_Lang017 =	Appliquer
 	w_Lang018 =	Insérer
 	w_Lang019 =	Éditer
-	w_Lang020 =	(unused)
+	w_Lang020 =	Options d'arrêt (Quand se termine la lecture...)
 	w_Lang021 =	Ne rien faire
 	w_Lang022 =	Fermer l'application
 	w_Lang023 =	Arrêter
@@ -146,6 +188,60 @@
 	w_Lang037 =	Fenêtre
 	w_Lang038 =	Commenter
 	w_Lang039 =	Couleur
+	w_Lang040 =	Nouveau (Ctrl+N)
+	w_Lang041 =	Ouvrir (Ctrl+O)
+	w_Lang042 =	Enregistrer (Ctrl+S)
+	w_Lang043 =	Exporter vers AHK (Ctrl+E)
+	w_Lang044 =	Aperçu de script (Ctrl+P)
+	w_Lang045 =	Réglages (Ctrl+G)
+	w_Lang046 =	Enregistrer une macro (Ctrl+R)
+	w_Lang047 =	Macros Activer (Ctrl+Entrée)
+	w_Lang048 =	Jouer Macro actuelle (Ctrl+Maj+Entrée)
+	w_Lang049 =	Timer (Ctrl+Maj+T)
+	w_Lang050 =	Souris (F2)
+	w_Lang051 =	Texte (F3)
+	w_Lang052 =	Modifier Macros (Ctrl+Shift+M)
+	w_Lang053 =	Commande (F4)
+	w_Lang054 =	Pause (F5)
+	w_Lang055 =	Message Box (Shift+F5)
+	w_Lang056 =	Attente Touche (Control+F5)
+	w_Lang057 =	Fenêtre (F6)
+	w_Lang058 =	Image / pas de pixel Recherche (F7)
+	w_Lang059 =	Exécuter / fichier / String / Misc. (F8)
+	w_Lang060 =	Loop (F9)
+	w_Lang061 =	Aller à (Maj+F9)
+	w_Lang062 =	Label (Ctrl+F9)
+	w_Lang063 =	Si états (F10)
+	w_Lang064 =	Variables (Maj+F10)
+	w_Lang065 =	Fonctions (Ctrl+F10)
+	w_Lang066 =	Internet Explorer (F11)
+	w_Lang067 =	Interface COM (Maj+F11)
+	w_Lang068 =	Exécuter Scriplet (Ctrl+F11)
+	w_Lang069 =	Messages de Windows (F12)
+	w_Lang070 =	Ajoutez la touche Windows de "jouer" raccourci
+	w_Lang071 =	Utilisez un bouton de la manette comme raccourci
+	w_Lang072 =	Ajouter une macro (Ctrl+T)
+	w_Lang073 =	Fermer Macro (Ctrl+W)
+	w_Lang074 =	Dupliquer Macro (Ctrl+Maj+D)
+	w_Lang075 =	Importer Macro (Ctrl+I)
+	w_Lang076 =	Enregistrer la macro en cours (Ctrl+Alt+S)
+	w_Lang077 =	Déplacer vers le haut (Ctrl+PageUp)
+	w_Lang078 =	Descendre (Ctrl+PageDown)
+	w_Lang079 =	Dupliquer Lignes sélectionnées (Ctrl+D)
+	w_Lang080 =	Couper les lignes sélectionnées (Ctrl+X)
+	w_Lang081 =	Copie les lignes sélectionnées (Ctrl+C)
+	w_Lang082 =	Les lignes copiées Colle (Ctrl+V)
+	w_Lang083 =	Supprimer les lignes sélectionnées (Del)
+	w_Lang084 =	Annuler (Ctrl+Z)
+	w_Lang085 =	Rétablir (Ctrl+Y)
+	w_Lang086 =	Copier sur...
+	w_Lang087 =	Rechercher / Remplacer (Ctrl+F)
+	w_Lang088 =	Modifier le commentaire (Ctrl+L)
+	w_Lang089 =	Modifier marque de couleur (Ctrl+M)
+	w_Lang090 =	Personnaliser
+	w_Lang091 =	Trouvez une commande (Ctrl+Maj+F)
+	w_Lang092 =	Éditer (Enter)
+	w_Lang093 =	Cacher
 		
 ; Command Windows		
 	c_Lang001 =	Souris
@@ -181,8 +277,8 @@
 	c_Lang031 =	Roue Bas
 	c_Lang032 =	Drag and Drop
 	c_Lang033 =	Coordonnées
-	c_Lang034 =	Cliquez sur
-	c_Lang035 =	Envoyer
+	c_Lang034 =	Rechercher
+	c_Lang035 =	Sous-Commande
 	c_Lang036 =	Relatif
 	c_Lang037 =	Bouton
 	c_Lang038 =	Gauche
@@ -216,7 +312,7 @@
 	c_Lang066 =	Attente Touche
 	c_Lang067 =	S'il est trouvé
 	c_Lang068 =	S'il n'est pas trouvé d'erreur /
-	c_Lang069 =	* Coords stockées en `%FoundX`% / `%FoundY`%.
+	c_Lang069 =	Coords stockées en `%FoundX`%/`%FoundY`%.
 	c_Lang070 =	Coord
 	c_Lang071 =	Variations
 	c_Lang072 =	Avant-première
@@ -228,17 +324,17 @@
 	c_Lang078 =	Aller à l'étiquette
 	c_Lang079 =	Étiquette
 	c_Lang080 =	Ajouter une étiquette
-	c_Lang081 =	String (InputVar), la valeur
-	c_Lang082 =	Var [l'opérateur] Valeur
-	c_Lang083 =	Ajouter Else
+	c_Lang081 =	String (InputVar)
+	c_Lang082 =	Variable
+	c_Lang083 =	Else
 	c_Lang084 =	Affecter variable
 	c_Lang085 =	Teneur
 	c_Lang086 =	Opérateur
-	c_Lang087 =	Utilisez Eval() pour résoudre les expressions
+	c_Lang087 =	Expression
 	c_Lang088 =	Remettre
 	c_Lang089 =	Nom de la fonction
-	c_Lang090 =	Paramètres séparés par des virgules (sans parenthèses).
-	c_Lang091 =	(Utilisez `% pour les variables. Les virgules littéraux doivent être échappés [```,])
+	c_Lang090 =	Paramètres séparés par des virgules (sans parenthèses)
+	c_Lang091 =	(Utilisez `% pour les variables. Les virgules littéraux doivent être échappés [ ```, ])
 	c_Lang092 =	Élément Page / Index
 	c_Lang093 =	Fixer
 	c_Lang094 =	Obtenir
@@ -276,7 +372,7 @@
 	c_Lang126 =	Code ajouté à la liste des touches virtuelles!
 	c_Lang127 =	Tapez le nom de la variable
 	c_Lang128 =	Utilisez la fonction de fichier externe
-	c_Lang130 =	Casser boucle s'il est trouvé
+	c_Lang130 =	Répétez jusqu'à ce que
 	c_Lang131 =	Appliquer
 	c_Lang132 =	Boucle
 	c_Lang133 =	Dossier
@@ -309,9 +405,52 @@
 	c_Lang160 =	Transparent
 	c_Lang161 =	Échelle
 	c_Lang162 =	Ajouter "If"
+	c_Lang163 =	Mode D'envoi
+	c_Lang164 =	Egalité
+	c_Lang165 =	Contient
+	c_Lang166 =	Plus grand
+	c_Lang167 =	Moins
+	c_Lang168 =	Oui
+	c_Lang169 =	Non
+	c_Lang170 =	Ok
+	c_Lang171 =	Résilier
+	c_Lang172 =	Abandonner
+	c_Lang173 =	Ignorer
+	c_Lang174 =	Réessayez
+	c_Lang175 =	Continuer
+	c_Lang176 =	Try again
+	c_Lang177 =	Pause
+	c_Lang178 =	Régler délai clé
+	c_Lang179 =	Retard clé
+	c_Lang180 =	Délai aléatoire
+	c_Lang181 =	Minimum
+	c_Lang182 =	Maximum
+	c_Lang183 =	Désactiver retards aléatoires pour cette commande
+	c_Lang184 =	Sélectionnez dans la liste
+	c_Lang185 =	Boutons
+	c_Lang186 =	Première
+	c_Lang187 =	Deuxième
+	c_Lang188 =	Troisième
+	c_Lang189 =	Titre
+	c_Lang190 =	Si fenêtre active
+	c_Lang191 =	Si la fenêtre n'est pas actif
+	c_Lang192 =	Si la fenêtre n'existe
+	c_Lang193 =	Si la fenêtre n'existe pas
+	c_Lang194 =	Si le fichier existe
+	c_Lang195 =	Si le fichier n'existe pas
+	c_Lang196 =	Si le texte du presse-papiers
+	c_Lang197 =	Si l'indice de boucle
+	c_Lang198 =	Si l'image/pixel trouvé
+	c_Lang199 =	Si l'image/pixel introuvable
+	c_Lang200 =	Si la chaîne contient
+	c_Lang201 =	Si la chaîne ne contient pas
+	c_Lang202 =	Si la boîte de message
+	c_Lang203 =	Comparer les variables
+	c_Lang204 =	Évaluer expression
+	c_Lang205 =	Région
 		
 ; Other Windows		
-	t_Lang001 =	Exporter vers AHK
+	t_Lang001 =	Exporter vers AutoHotkey
 	t_Lang002 =	Macros
 	t_Lang003 =	Boucles
 	t_Lang004 =	0 = infini
@@ -362,14 +501,14 @@
 	t_Lang049 =	Capture sur la libération
 	t_Lang050 =	Appuyez sur Entrée pour saisir
 	t_Lang051 =	Répertoire de captures d'écran
-	t_Lang052 =	Divers.
+	t_Lang052 =	Wrap ligne
 	t_Lang053 =	Raccourcis clavier
 	t_Lang054 =	Définir comme touches de raccourci par défaut
 	t_Lang055 =	Désactiver les raccourcis de fenêtres
 	t_Lang056 =	Réinitialiser Taille colonnes
 	t_Lang057 =	Fichier de macro par défaut
 	t_Lang058 =	Fichier bibliothèque standard
-	t_Lang059 =	Utiliser Eval() par défaut pour les variables Affectation
+	t_Lang059 =	Utilisez Expression par défaut pour les variables Affectation
 	t_Lang060 =	Afficher les couleurs et les marques d'aide pour les boucles et les états
 	t_Lang061 =	(Cliquez sur l'entête de la colonne Index pour activer / désactiver)
 	t_Lang062 =	Les touches virtuelles
@@ -378,16 +517,16 @@
 	t_Lang065 =	Commenter
 	t_Lang066 =	Colonne de recherche
 	t_Lang067 =	Rechercher / Remplacer
-	t_Lang068 =	Trouver
-	t_Lang069 =	Respecter la casse
-	t_Lang070 =	Remplacer
+	t_Lang068 =	&Trouver
+	t_Lang069 =	R&especter la casse
+	t_Lang070 =	&Remplacer
 	t_Lang071 =	Trouvé
 	t_Lang072 =	Remplacé
-	t_Lang073 =	Lignes sélectionnées
-	t_Lang074 =	Toutes les lignes
-	t_Lang075 =	Toutes les macros
+	t_Lang073 =	L&ignes sélectionnées
+	t_Lang074 =	T&outes les lignes
+	t_Lang075 =	To&utes les macros
 	t_Lang076 =	Sur
-	t_Lang077 =	Expression régulière
+	t_Lang077 =	E&xpression régulière
 	t_Lang078 =	Lire une fois
 	t_Lang079 =	Jouer tous les X (mili) secondes
 	t_Lang080 =	Minuteur
@@ -395,22 +534,22 @@
 	t_Lang082 =	Déclarations
 	t_Lang083 =	Voir Indentation pour les boucles et les états
 	t_Lang084 =	(Double-cliquez sur l'en-tête de colonne Action activer / désactiver)
-	t_Lang085 =	Commandes de l'affichage bar au démarrage
+	t_Lang085 =	Affichage contrôle bar au démarrage
 	t_Lang086 =	Recherche de fonctions. S'il vous plaît patienter...
 	t_Lang087 =	Inclure les fichiers externes
 	t_Lang088 =	Créer un fichier EXE
 	t_Lang089 =	Permettre à plusieurs instances
 	t_Lang090 =	Par défaut
 	t_Lang091 =	Laisser glisser les lignes
-	t_Lang092 =	Le contenu des cellules entières
+	t_Lang092 =	&Le contenu des cellules entières
 	t_Lang093 =	Format INI standard
 	t_Lang094 =	Nom = Valeur
 	t_Lang095 =	Entrez 1 variable par ligne. Vous pouvez également ajouter [Articles].
 	t_Lang096 =	Des Variables Globales Des Utilisateurs
 	t_Lang097 =	Appuyez sur un bouton sur la manette
-	t_Lang098 =	Joystick
+	t_Lang098 =	Retour arrière pour effacer
 	t_Lang099 =	Bouton
-	t_Lang100 =	Afficher les infos
+	t_Lang100 =	Afficher les infobulles
 	t_Lang101 =	Accélérer
 	t_Lang102 =	Lent
 	t_Lang103 =	Rapide
@@ -422,6 +561,47 @@
 	t_Lang109 =	Vers le bas
 	t_Lang110 =	Up
 	t_Lang111 =	Insérer Frappe
+	t_Lang112 =	Lecture / Pause
+	t_Lang113 =	Arrêter
+	t_Lang114 =	Options de lecture
+	t_Lang115 =	Démarrer / Arrêter l'enregistrement
+	t_Lang116 =	Nouvelle macro
+	t_Lang117 =	Options d'enregistrement
+	t_Lang118 =	Supprimer la liste
+	t_Lang119 =	Afficher la barre de progression
+	t_Lang120 =	Accélérer
+	t_Lang121 =	Ralentir
+	t_Lang122 =	Afficher / Masquer la barre de titre
+	t_Lang123 =	Afficher / Masquer la fenêtre principale
+	t_Lang124 =	Dock
+	t_Lang125 =	Undock
+	t_Lang126 =	Ouvrir
+	t_Lang127 =	Enregistrer
+	t_Lang128 =	Couper
+	t_Lang129 =	Copier
+	t_Lang130 =	Coller
+	t_Lang131 =	Sélectionner tout
+	t_Lang132 =	Effacer
+	t_Lang133 =	Clavier
+	t_Lang134 =	Souris
+	t_Lang135 =	Autres
+	t_Lang136 =	Les Lignes En Surbrillance
+	t_Lang137 =	Éditeur De Script Par Défaut
+	t_Lang138 =	Modifier Le Script (Ctrl+Maj+E)
+	t_Lang139 =	Sélectionner
+	t_Lang140 =	Par Colonne
+	t_Lang141 =	Tous Les Colonnes
+	t_Lang142 =	Supprimer le thème de barres d'outils (nécessite un redémarrage)
+	t_Lang143 =	Masquer automatiquement la barre d'outils de contrôle
+	t_Lang144 =	Cliquez et faites glisser pour modifier l'ordre. Double-cliquez pour éditer.
+	t_Lang145 =	Modifier Macros
+	t_Lang146 =	En ligne
+	t_Lang147 =	Macro
+	t_Lang148 =	Action du bouton de fermeture de la fenêtre principale
+	t_Lang149 =	Fermer l'application
+	t_Lang150 =	Réduire en icône
+	t_Lang151 =	Afficher confirmation lors de la fermeture d'une macro
+	t_Lang152 =	Créer des sauvegardes automatiquement
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Ouvert
@@ -448,7 +628,7 @@
 	)	
 	d_Lang018 =	Couleur du pixel
 	d_Lang019 =	Supprimer la liste
-	d_Lang020 =	Assurez-vous de supprimer tous les éléments?
+	d_Lang020 =	Fermer Macro?
 	d_Lang021 =	Suivant
 	d_Lang022 =	Précédent
 	d_Lang023 =	Message
@@ -514,8 +694,8 @@
 	)	
 	d_Lang057 =	
 	(LTrim	
-		- Appuyez sur Ctrl + touches fléchées pour déplacer la zone sélectionnée.
-		- Appuyez sur Maj + touches fléchées pour redimensionner la zone sélectionnée.
+		- Appuyez sur Ctrl+touches fléchées pour déplacer la zone sélectionnée.
+		- Appuyez sur Maj+touches fléchées pour redimensionner la zone sélectionnée.
 		- Appuyez sur Entrée pour terminer.
 	)	
 	d_Lang058 =	
@@ -533,28 +713,43 @@
 	(LTrim	
 		Voulez-vous la télécharger maintenant?
 		
-		Pour désactiver la vérification automatique Sélectionnez Aide > Vérifier au démarrage.
+		Pour désactiver la vérification automatique Sélectionnez Aide > Vérifier au démarrage
 	)	
+		
 	d_Lang062 =	Vous avez déjà la version la plus récente.
 	d_Lang063 =	Une erreur s'est produite lors de la vérification.
 	d_Lang064 =	Erreur d'objet COM dans
 	d_Lang065 =	Row
 	d_Lang066 =	Spécifiquement
-	d_Lang067 =	Afficher les astuces au démarrage.
+	d_Lang067 =	Afficher cette fenêtre au démarrage
 	d_Lang068 =	Conseils:
 	d_Lang069 =	
 	(LTrim	
-		Besoin d'aide, trouvé un bug ou une suggestion? Envoyer un mail à l'auteur: <a href="mailto:rodolfoub@gmail.com">rodolfoub@gmail.com</a>
-		Il s'agit d'un logiciel libre. Si vous l'avez trouvé jugerez utiles <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=rodolfoub`%40gmail`%2ecom&lc=US&item_name=Pulover`%27s`%20Macro`%20Creator&item_number=App`%2ePMC&currency_code=USD&bn=PP`%2dDonationsBF`%3abtn_donateCC_LG`%2egif`%3aNonHosted">faire un don</a> et de soutien au développement. Je vous remercie.
+		Beaucoup de temps et d'efforts ont été consacrés à l'élaboration de Pulover's Macro Creator. Si vous le trouvez utile, s'il vous plaît pensez à montrer votre appréciation avec un don.
+		
+		Donner ou non, il n'y aura pas de différence dans ses fonctions et fonctionnalités.
 	)	
-	d_Lang070 =	Erreur: Invalid Hotkey sélectionnée.
+	d_Lang070 =	Faites un don...
+	d_Lang071 =	Non, merci
+	d_Lang072 =	Soutenez le logiciel Open Source
+	d_Lang073 =	Erreur: Invalid Hotkey sélectionnée.
+	d_Lang074 =	Trouvez une commande ou une fonction
+	d_Lang075 =	Bienvenue à Pulover's Macro Creator
+	d_Lang076 =	S'il vous plaît choisissez votre disposition préféré
+	d_Lang077 =	Compact
+	d_Lang078 =	Par Défaut
+	d_Lang079 =	Vérifier les mises à jour au démarrage.
+	d_Lang080 =	Vous pouvez modifier ce paramètre dans Options > Paramètres > Général.
+	d_Lang081 =	Vous pouvez modifier et personnaliser la disposition dans le menu Affichage.
+	d_Lang082 =	Le fichier n'a pas été trouvé!
+	d_Lang083 =	Un fichier de sauvegarde a été trouvé. Voulez-vous ouvrir?
 		
 ; Start-up Tips		
 	Start_Tips =	
 	(LTrim	
 		Vous pouvez créer des macros à l'aide des boutons de commande dans la fenêtre principale ou en utilisant l'enregistreur de copier vos actions. Allez dans Options > Paramètres > Enregistrer pour sélectionner les entrées seront enregistrées.
 		Pour utiliser l'enregistreur pour des tâches rapides allez dans Options > Paramètres > Enregistrement et cochez l'option "Effacer la liste". Puis cliquez sur le bouton Enregistrer dans la fenêtre principale et utiliser F10 pour effacer la macro en cours et en commencer une nouvelle avec le même raccourci clavier. Vous pouvez également cocher l'option "Toujours actif" dans la fenêtre principale de maintenir enregistrement et de lecture raccourcis clavier active.
-		Pour obtenir de l'aide pour un clic-droit commande spécifique sur un bouton de commande dans la fenêtre principale ou n'importe où dans une fenêtre de commande pour afficher des liens vers AutoHotkey aide en ligne.
+		Pour obtenir de l'aide pour une commande spécifique clic droit n'importe où sur une fenêtre de commande pour afficher des liens vers AutoHotkey aide en ligne.
 		Cochez l'option "Capture Keys" pour saisir les clés et les combinaisons de votre macro directement à partir de la fenêtre principale.
 		Entrez touches et combinaisons dans la zone Touche de raccourci vers le bas et appuyez sur le bouton Insérer pour les ajouter aux lignes de sélection.
 		Si aucune ligne n'est sélectionnée les boutons d'édition s'appliquent à toutes les lignes de la liste.
@@ -581,85 +776,28 @@
 		Vous pouvez exécuter des fonctions avancées telles que SUBSTR et RegExReplace de la fenêtre des fonctions (Insertion > Si Déclarations / variables / fonctions). Ou d'exécuter vos propres fonctions de scripts AutoHotkey externes.
 	)	
 ; Tooltips		
-	NewB_TT =	Nouveau (Ctrl+N)
-	OpenB_TT =	Ouvrir (Ctrl+O)
-	SaveB_TT =	Enregistrer (Ctrl+S)
-	ExportB_TT =	Exporter vers AHK (Ctrl+E)
-	PreviewB_TT =	Aperçu de script (Ctrl+P)
-	OptionsB_TT =	Réglages (Ctrl+G)
-	RecordB_TT =	Enregistrer une macro (Ctrl+R)
-	StartB_TT =	Macros Activer (Ctrl+Entrée)
-	TestRun_TT =	Jouer Macro actuelle (Ctrl+Maj+Entrée)
-	RunTimer_TT =	Timer (Ctrl+Maj+T)
-	MouseB_TT =	Souris (F2)
-	TextB_TT =	Texte (F3)
-	SpecialB_TT =	Touches spéciales
-	ControlB_TT =	Commande (F4)
-	PauseB_TT =	Pause (F5) / Un message (Shift+F5) / Attente Touche (Control+F5) 
-	WindowB_TT =	Fenêtre (F6)
-	ImageB_TT =	Image / pas de pixel Recherche (F7)
-	RunB_TT =	Exécuter / fichier / String / Misc. (F8)
-	ComLoopB_TT =	Loop (F9) / Aller à (Maj+F9) / Label (Ctrl+F9)
-	IfStB_TT =	Si états (F10) / Variables (Maj+F10) / Fonctions (Ctrl+F10)
-	IEComB_TT =	Internet Explorer (F11) / Interface COM (Maj+F11) / Exécuter Scriplet (Ctrl+F11)
-	SendMsgB_TT =	Messages de Windows (F12)
-	AutoKey_TT =	Retour arrière pour effacer
-	ManKey_TT =	Retour arrière pour effacer
-	AbortKey_TT =	Retour arrière pour effacer
+	AutoKey_TT =	Hotkey à jouer Macro
+	ManKey_TT =	Hotkey à jouer Macro "par étape par étape"
+	AbortKey_TT =	Raccourci pour arrêter la lecture
+	PauseKey_TT =	Raccourci pour interrompre la lecture
+	RecKey_TT =	Retour arrière pour effacer
+	RecNewKey_TT =	Retour arrière pour effacer
 	JoyKey_TT =	Appuyez sur un bouton sur la manette
-	PauseKey_TT =	Interrompt l'exécution au lieu de s'arrêter
-	OnFinish_TT =	
-	(LTrim	
-		Options d'arrêt
-		Quand se termine la lecture...
-	)	
-	Win1_TT =	Ajouter la touche Windows en tant que modificateur
-	JoyHK_TT =	Joystick
 	ReptC_TT =	0 = infini
-	TabPlus_TT =	Ajouter une macro (Ctrl+T)
-	TabClose_TT =	Fermer Macro (Ctrl+W)
-	DuplicateL_TT =	Dupliquer Macro (Ctrl+Maj+D)
-	SaveC_TT =	Enregistrer la macro en cours (Ctrl+Alt+S)
-	ImportB_TT =	Importer Macro (Ctrl+I)
-	IfDirB_TT =	Assurez-Hotkeys travailler en fonction du type`nde fenêtre qui est active ou existe (Ctrl+H)
-	KeepHKOn_TT =	Gardez toujours activé Hotkeys
 	A_List_TT =	Sélectionner Macro (Ctrl+1~0)
 	OSHK_TT =	Sélectionner Macro
 	OSHKEd_TT =	Sélectionner Macro
-	Duplicate_TT =	Dupliquer Lignes sélectionnées (Ctrl+D)
-	Order_TT =	Déplacez Lignes sélectionnées (Ctrl+PageUp / Ctrl+PageDown)
-	Cut_TT =	Couper les lignes sélectionnées (Ctrl+X)
-	Copy_TT =	Copie les lignes sélectionnées (Ctrl+C)
-	Paste_TT =	Les lignes copiées Colle (Ctrl+V)
-	Remove_TT =	Supprimer les lignes sélectionnées (Del)
-	Undo_TT =	Annuler (Ctrl+Z)
-	Redo_TT =	Rétablir (Ctrl+Y)
-	CopyTo_TT =	Copier sur...
-	Capt_TT =	Capturez touches dans cette fenêtre
-	OnScCtrl_TT =	Contrôles Afficher La Barre D'outils
-	ShowStep_TT =	Afficher les infobulles
 	ApplyT_TT =	Appliquer
 	ApplyI_TT =	Appliquer
 	ApplyL_TT =	Insérez de la case (Insert)
 	InsertKey_TT =	Insérer Frappe (Ctrl+Insert)
-	EditButton_TT =	Éditer (Enter)
-	PrevRefresh_TT =	Rafraîchir (F5)
-	PrevCopy_TT =	Copier
-	OpenT_TT =	Ouvrir (Ctrl+O)
-	SaveT_TT =	Enregistrer (Ctrl+S)
-	CutT_TT =	Couper
-	CopyT_TT =	Copier
-	PasteT_TT =	Coller
-	SelAllT_TT =	Sélectionner tout
-	DefaultMacro_TT =	Sélectionner un fichier à charger sur le programme de démarrage
+	InsertKeyT_TT =	Insérer Frappe
+	DefaultMacro_TT =	Sélectionnez le fichier à charger au démarrage du programme
 	VarCopyA_TT =	Copiez le contenu des variables actuelles
 	VarCopyB_TT =	Copiez le contenu des variables actuelles
-	FindReplace_TT =	Rechercher / Remplacer (Ctrl+F)
-	EditComm_TT =	Modifier le commentaire (Ctrl+L)
-	EditColor_TT =	Modifier marque de couleur (Ctrl+M)
 	Reset_TT =	Effacer le contenu des variables
 	Screenshot_TT =	Faire une capture d'écran
-	ColorPick_TT =	Sélecteur de Couleurs
+	ColorPick_TT =	Obtenir pixel à l'écran
 	PicPrev_TT =	Double-cliquez sur l'image pour ouvrir
 	CoordPixel_TT =	Mode coordonner
 	VariatT_TT =	Nuances de variation
@@ -667,25 +805,17 @@
 	TransC_TT =	Couleur transparente
 	WScale_TT =	Échelle de la largeur
 	HScale_TT =	Échelle de la hauteur
+	Fast_TT =	Utilise une méthode de recherche rapide (recommandé)
+	RGB_TT =	Provoque une couleur à être interprété comme une valeur RVB au lieu de BGR
 	LoopLVColor_TT =	Cliquez pour choisir une couleur
 	IfLVColor_TT =	Cliquez pour choisir une couleur
 	RefreshIEW_TT =	Rafraîchir la liste
 	ActiveObj_TT =	Tente de se connecter à un objet COM active
+	TimeoutM_TT =	0 = infini
 	ExpView_TT =	Éditeur Avancé
 	ExpView2_TT =	Éditeur Avancé
-	OSPlay_TT =	Lecture / Pause
-	OSStop_TT =	Arrêter
-	OSRec_TT =	Démarrer / Arrêter l'enregistrement
-	OSRecNew_TT =	Nouvelle macro
-	OSRecOpt_TT =	Options d'enregistrement
-	OSPlayOpt_TT =	Options de lecture
-	OSClear_TT =	Supprimer la liste
 	OSProgB_TT =	Afficher la barre de progression
-	OSFast_TT =	Accélérer
-	OSSlow_TT =	Ralentir
 	OSTrans_TT =	opacité
-	ToggleTB_TT =	Afficher / Masquer la barre de titre
-	ToggleMW_TT =	Afficher / Masquer la fenêtre principale
 	MRel_TT =	
 	(LTrim	
 		Mouvements relatifs à la position actuelle.
@@ -703,6 +833,7 @@
 		sont traités comme des modificateurs (ces modificateurs agissent
 		seule la clé très prochaine):, +, ^, #
 	)	
+	ComEvent_TT =	La vitesse à laquelle les frappes sont envoyés est déterminé par le retard clé.
 	Clip_TT =	
 	(LTrim	
 		Utilise temporairement le Presse-papiers pour envoyer le texte.
@@ -849,6 +980,22 @@
 	Ex_UV_TT =	Exporter des variables globales.
 	Ex_EdVars_TT =	Sélectionner des variables globales pour être exportés.
 		
+; Operators		
+	As_Oper_1 =	Attribuer
+	As_Oper_2 =	Ajouter
+	As_Oper_3 =	Soustraire
+	As_Oper_4 =	Multipliez
+	As_Oper_5 =	Diviser
+	As_Oper_6 =	Fracture du plancher
+	As_Oper_7 =	Concaténer
+	Co_Oper_1 =	Egalité
+	Co_Oper_2 =	Equal (sensible à la casse)
+	Co_Oper_3 =	Pas égaux
+	Co_Oper_4 =	Plus grand
+	Co_Oper_5 =	Moins
+	Co_Oper_6 =	Supérieur ou égal
+	Co_Oper_7 =	Inférieur ou égal
+		
 ; IE Commands Tips		
 	Tip_Navigate =	Navigue vers une URL ou un chemin.
 	Tip_Value =	Obtient ou définit la valeur de l'objet.
@@ -866,6 +1013,7 @@
 	Tip_LocationURL =	Obtient l'URL de la page actuelle.
 	Tip_InnerText =	Définit ou obtient le texte de l'objet.
 	Tip_InnerHTML =	Définit ou récupère le code HTML de l'objet.
+	Tip_OuterHTML =	Définit ou récupère l'objet et son contenu en HTML.
 	Tip_Href =	Définit ou récupère une URL de destination ou un point d'ancrage.
 	Tip_Src =	Définit ou récupère une URL à charger par l'objet.
 	Tip_SelectedIndex =	Définit ou récupère l'index de l'option choisie dans un objet select.
@@ -875,4 +1023,251 @@
 	Tip_Height =	Définit ou récupère la hauteur de l'objet.
 	Tip_Length =	Définit ou récupère le nombre d'objets dans une collection.
 		
+; AHK Commands Tips		
+	Ahk_Cmd_Index =	
+	(LTrim	
+	Abs	Retourne la valeur absolue d'un nombre .
+	ASin	Renvoie l' arc sinus ( le nombre dont le sinus est Number) en radians.
+	ACos	Retourne le cosinus ( le nombre dont le cosinus est Number) en radians.
+	Array	Crée un objet Array.
+	Asc	Retourne le code de caractères ( un nombre entre 1 et 255 ( ANSI builds ) ou 65535 ( dans les versions Unicode) ) pour le premier caractère de la chaîne .
+	ATan	Renvoie l'arctangente ( le nombre dont la tangente est Number) en radians.
+	BlockInput	Active ou désactive la capacité de l' utilisateur d'interagir avec l'ordinateur via le clavier et la souris.
+	Break	Quitte ( se termine ) une boucle. Valable dans une sorte de boucle .
+	Ceil	Retours nombre arrondi à l'entier le plus proche ( sans suffixe .00 ) .
+	Chr	Renvoie le caractère unique correspondant au code de caractère indiqué par le numéro .
+	Click	Clique sur un bouton de la souris aux coordonnées indiquées . Il peut également maintenir enfoncée une touche, tournez la roue, ni bouger.
+	ClipWait	Attend que le presse-papiers contient des données.
+	Clipboard	Colle le texte du presse-papiers.
+	ComObjActive	Récupère un objet COM enregistré.
+	ComObjArray	Crée un SAFEARRAY pour une utilisation avec COM .
+	ComObjConnect	Connecte les sources d'événements d'un objet COM à des fonctions avec un préfixe donné .
+	ComObjCreate	Crée un objet COM .
+	ComObjEnwrap / ComObjUnwrap	Wraps / déballe un objet COM .
+	ComObjError	Active ou désactive la notification des erreurs COM .
+	ComObjFlags	Récupère ou des changements drapeaux qui contrôlent le comportement d'un objet wrapper COM.
+	ComObjGet	Renvoie une référence à un objet fourni par un composant COM .
+	ComObjMissing	Crée un objet " paramètre manquant" pour passer à une méthode COM.
+	ComObjParameter	Wraps une valeur et le type de passer comme paramètre à une méthode COM .
+	ComObjQuery	Interroge un objet COM pour une interface ou d'un service .
+	ComObjType	Récupère les informations de type d'un objet COM .
+	ComObjValue	Extrait la valeur ou d'un pointeur stocké dans un objet de wrapper COM .
+	Continue	Ignore le reste de l'itération de la boucle de courant et commence un nouveau. Valable dans une sorte de boucle .
+	Control	Fait une variété de changements à un contrôle.
+	ControlClick	Envoie un bouton de la souris ou d'un événement de roulette de la souris à un contrôle.
+	ControlEditPaste	Pâtes chaîne à la position du curseur / d'insertion dans un contrôle Edit ( cela n'affecte pas le contenu du presse-papiers ) .
+	ControlFocus	Définit le focus d'entrée à un contrôle donné sur une fenêtre.
+	ControlGet	Récupère différents types d'informations sur une commande .
+	ControlGetFocus	Récupère laquelle le contrôle de la fenêtre cible a le focus d'entrée , le cas échéant .
+	ControlGetPos	Récupère la position et la taille d'un contrôle.
+	ControlGetText	Extrait texte à partir d'une commande .
+	ControlMove	Se déplace ou redimensionne un contrôle.
+	ControlSend / ControlSendRaw 	Envoie frappes simulées à une fenêtre ou un contrôle .
+	ControlSetText	Modifie le texte d'un contrôle.
+	CoordMode	Définit le mode de coordonnées pour les différentes commandes à être relatif soit à la fenêtre active ou l'écran.
+	Cos	Retourne le cosinus trigonométrique de Number.
+	Critical	Empêche le thread en cours d'être interrompu par d'autres threads.
+	DetectHiddenText	Détermine si le texte invisible dans une fenêtre est «vu» dans le but de trouver la fenêtre. Cela s'applique aux commandes telles que IfWinExist et WinActivate .
+	DetectHiddenWindows	Détermine si les fenêtres invisibles sont «vus » par le script.
+	DllCall	Appelle une fonction dans une DLL , comme une fonction de l'API Windows standard.
+	Drive	Éjecte / rétracte le plateau dans un lecteur de CD ou de DVD, ou définit le nom de volume d'un lecteur.
+	DriveGet	Récupère différents types d' informations sur le lecteur de l'ordinateur (s) .
+	DriveSpaceFree	Récupère l'espace libre sur le disque d'un disque , en mégaoctets .
+	Edit	Ouvre le script en cours d'édition dans l'éditeur associé.
+	Else	Indique la commande (s) à exécuter si une instruction if évalue à FALSE . Lorsque plus d'une commande est présente , mettez-les dans un bloc ( accolades) .
+	EnvAdd	Définit une variable à la somme elle-même , plus la valeur donnée (on peut aussi ajouter ou soustraire le temps à partir d'une valeur date-heure ) . Synonyme de : Var + = valeur.
+	EnvDiv	Définit une variable d' elle-même divisée par la valeur donnée. Synonyme de : Var / = Valeur .
+	EnvGet	Récupère une variable d'environnement .
+	EnvMult	Définit une variable d' elle-même fois la valeur donnée. Synonyme de : Var * = valeur.
+	EnvSet	Écrit une valeur dans une variable contenu dans l'environnement.
+	EnvSub	Définit une variable d' elle-même diminuée de la valeur donnée (on peut aussi comparer les valeurs date-heure ) . Synonyme de : Var - = valeur.
+	EnvUpdate	Avertit le système d'exploitation et toutes les applications en cours d'exécution que la variable d'environnement (s) ont changé.
+	Exit	Quitte le thread en cours ou ( si le script n'est pas persistant et ne contient pas de raccourcis ) le script entier .
+	ExitApp	Termine le script sans condition.
+	Exp	Retours e ( qui est d'environ 2.71828182845905 ) élevé à la puissance n .
+	FileAppend	Ecrit texte à la fin d'un fichier ( première création du fichier, si nécessaire).
+	FileCopy	Copie un ou plusieurs fichiers.
+	FileCopyDir	Copie d'un dossier avec tous ses sous- dossiers et fichiers ( similaire à xcopy ) .
+	FileCreateDir	Crée un dossier .
+	FileCreateShortcut	Crée un fichier de raccourci ( . Lnk ) .
+	FileDelete	Supprime un ou plusieurs fichiers.
+	FileEncoding	Définit l'encodage par défaut pour FileRead , FileReadLine , boucle de lecture , FileAppend et FileOpen .
+	FileInstall	Comprend le fichier spécifié dans la version compilée du script.
+	FileGetAttrib	Indique si un fichier ou un dossier est en lecture seule , caché, etc
+	FileGetShortcut	Récupère les informations relatives à un fichier raccourci ( . Lnk ) , tels que le fichier cible.
+	FileGetSize	Récupère la taille d'un fichier .
+	FileGetTime	Récupère le timbre datetime d'un fichier ou d'un dossier .
+	FileGetVersion	Récupère la version d'un fichier .
+	FileMove	Déplace ou renomme un ou plusieurs fichiers.
+	FileMoveDir	Déplace un dossier avec tous ses sous- dossiers et fichiers. Il peut aussi renommer un dossier .
+	FileOpen	Fournit fichier orienté objet I / O.
+	FileRead	Lit le contenu d'un fichier dans une variable .
+	FileReadLine	Lit la ligne spécifiée à partir d'un fichier et stocke le texte dans une variable.
+	FileRecycle	Envoie un fichier ou un répertoire à la corbeille, si possible.
+	FileRecycleEmpty	Vide la corbeille.
+	FileRemoveDir	Supprime un dossier.
+	FileSelectFile	Affiche une boîte de dialogue standard qui permet à l'utilisateur d' ouvrir ou d'enregistrer le fichier (s) .
+	FileSelectFolder	Affiche une boîte de dialogue standard qui permet à l'utilisateur de sélectionner un dossier.
+	FileSetAttrib	Modifie les attributs d'un ou plusieurs fichiers ou dossiers. Les caractères génériques sont pris en charge.
+	FileSetTime	Modifie le timbre datetime d'un ou plusieurs fichiers ou dossiers. Les caractères génériques sont pris en charge.
+	Floor	Retours nombre arrondi à l'entier le plus proche ( sans suffixe .00 ) .
+	For	Répéter une série de commandes une fois pour chaque paire clé-valeur dans un objet.
+	FormatTime	Transforme un horodatage YYYYMMDDHH24MISS dans le format de date / heure spécifiée .
+	Func	Récupère une référence à une fonction .
+	GetKeyName / GetKeyVK / GetKeySC	Récupère le nom ou le texte , le code de touche virtuel ou un code scan d'une clé.
+	GetKeyState	Vérifie si une touche du clavier ou de la souris / bouton de la manette est bas ou le haut . Récupère également le statut de joystick.
+	Gosub	Passe à l' étiquette spécifiée et continue l'exécution jusqu'à ce retour est rencontré.
+	Goto	Passe à l' étiquette spécifiée et continue l'exécution .
+	GroupActivate	Active la fenêtre suivante dans un groupe de la fenêtre qui a été défini avec Groupadd .
+	GroupAdd	Ajoute une spécification de la fenêtre à un groupe de fenêtres , la création du groupe , si nécessaire.
+	GroupClose	Ferme la fenêtre active si elle a été tout simplement activé par GroupActivate ou GroupDeactivate . Il active alors la fenêtre suivante dans la série. Il peut également fermer toutes les fenêtres dans un groupe.
+	GroupDeactivate	Semblable à GroupActivate sauf active la fenêtre suivante pas dans le groupe .
+	if	Indique la commande (s) à exécuter si la comparaison d'une variable à une valeur s'évalue à TRUE. Lorsque plus d'une commande est présente , mettez-les dans un bloc ( accolades) .
+	if (expression)	Indique la commande (s) à exécuter si une expression est évaluée à TRUE.
+	If var [not] between	Vérifie si le contenu d'une variable sont numérique ou alphabétique entre deux valeurs ( inclus) .
+	If var [not] in/contains MatchList 	Vérifie si le contenu d'une variable correspond à l'un des éléments d'une liste .
+	If var is [not] type	Vérifie si le contenu d'une variable sont numérique , majuscules , etc
+	If Clipboard	Vérifie si le texte du presse-papiers est Matchs une chaîne spécifiée.
+	If ErrorLevel	Vérifie si une image ou pixel spécifié a été trouvé dans l'écran.
+	If A_Index	Vérifie si l' itération courante de la boucle match a un nombre spécifié .
+	IfEqual/IfNotEqual	Compare une variable à une valeur pour l'égalité. Synonyme de : si Var = Valeur | si Var <> Valeur .
+	IfExist / IfNotExist / FileExist	Vérifie l'existence d'un fichier ou d'un dossier .
+	IfGreater / IfGreaterOrEqual	Compare une variable à une valeur. Synonyme de : si Var> Valeur | si Var> = valeur.
+	IfInString / IfNotInString / InStr	Vérifie si une variable contient la chaîne spécifiée.
+	IfLess / IfLessOrEqual	Compare une variable à une valeur. Synonyme de : si Var < Valeur | si Var < = valeur.
+	IfMsgBox	Contrôles bouton qui a été poussé par l'utilisateur lors de la commande la plus récente MsgBox.
+	IfWinActive / IfWinNotActive	Vérifie si la fenêtre spécifiée existe et est actuellement active ( avant tout ) .
+	IfWinExist / IfWinNotExist	Vérifie si la fenêtre spécifiée existe.
+	ImageSearch	Une recherche dans une région de l'écran d'une image.
+	IniDelete	Supprime une valeur d'un format de fichier . Ini standard.
+	IniRead	Lit une valeur à partir d'un format de fichier . Ini standard.
+	IniWrite	Écrit une valeur dans un format de fichier . Ini standard.
+	Input	Attend que l'utilisateur tape une chaîne ( non pris en charge sur Windows 9x : il ne fait rien ) .
+	InputBox	Affiche une boîte de saisie pour demander à l'utilisateur de saisir une chaîne .
+	InStr	Recherche d'une occurrence donnée d'une chaîne , à partir de la gauche ou la droite.
+	)	
+	Ahk_Cmd_Index = %Ahk_Cmd_Index%`n	
+	(LTrim	
+	KeyHistory	Affiche des informations de script et une histoire des frappes les plus récentes et les clics de souris.
+	KeyWait	Temps d'attente pour un bouton de clé ou de la souris / joystick pour être libéré ou enfoncé.
+	Labels	Une étiquette identifie une ligne de code, et peut être utilisé comme une cible Goto ou pour former une sous-routine.
+	Log	Renvoie le logarithme (base 10) de Number.
+	Ln	Renvoie le logarithme naturel (base e) du nombre.
+	Loop (normal) 	Effectuer une série de commandes à plusieurs reprises: soit le nombre de fois spécifié ou jusqu'à ce que la rupture se produit.
+	Loop (files & folders)	Extrait les fichiers spécifiés ou des dossiers, une à la fois.
+	Loop (parse a string)	Récupère les chaînes (champs) d'une chaîne, un à la fois.
+	Loop (read file contents)	Récupère les lignes dans un fichier texte, un à la fois (performant que FileReadLine).
+	Loop (registry)	Récupère le contenu de la clé de Registre spécifiée, un seul élément à la fois.
+	Menu	Crée, supprime, modifie et affiche les menus et options de menu. Modifie l'icône et son info-bulle. Contrôle si la fenêtre principale d'un script compilé peut être ouvert.
+	Mod	Modulo. Renvoie le reste de dividende est divisé par diviseur.
+	MouseClickDrag	Clics et maintient le bouton de la souris spécifié, déplace la souris sur les coordonnées de destination, puis relâche le bouton.
+	MouseGetPos	Récupère la position actuelle du curseur de la souris, et éventuellement quelle fenêtre et de contrôle, il plane au-dessus.
+	MouseMove	Déplace le curseur de la souris.
+	MsgBox	Affiche le texte spécifié dans une petite fenêtre contenant un ou plusieurs boutons (comme Oui et Non).
+	NumGet	Renvoie le nombre binaire stocké à l'adresse spécifiée + offset.
+	NumPut	Magasins numéro en format binaire à l'adresse spécifiée + offset et retourne l'adresse à droite de l'article juste écrit.
+	OnExit	Indique un sous-programme pour s'exécuter automatiquement lorsque le script se termine.
+	OnMessage	Indique une fonction à appeler automatiquement lorsque le script reçoit le message spécifié.
+	OutputDebug	Envoie une chaîne au débogueur (le cas échéant) pour l'affichage.
+	Pause	Pauses thread courant du script.
+	PixelGetColor	Extrait la couleur du pixel à l'spécifiées x, y.
+	PixelSearch	Une recherche dans une zone de l'écran pour un pixel de la couleur spécifiée.
+	PostMessage	Place un message dans la file d'attente de messages d'une fenêtre ou de contrôle.
+	Process	Effectue l'une des opérations suivantes sur un processus: vérifie s'il existe; change sa prioritaires; referme; attend sa fermeture.
+	Progress	Crée ou met à jour une fenêtre contenant une barre de progression.
+	Random	Génère un nombre pseudo-aléatoire.
+	RegExMatch	Détermine si une chaîne contient un motif (expression régulière).
+	RegExReplace	Remplace les occurrences d'un motif (expression régulière) à l'intérieur d'une chaîne.
+	RegDelete	Supprime une sous-clé ou la valeur du registre.
+	RegRead	Lit une valeur dans le Registre.
+	RegWrite	Écrit une valeur dans le Registre.
+	RegisterCallback	Création d'une adresse par machine du code qui lorsqu'il est appelé, redirige l'appel d'une fonction dans le script.
+	Return	Retours à partir d'un sous-programme dont l'exécution avait déjà sauté par la fonction appel, Gosub, activation Hotkey, GroupActivate, ou d'autres moyens.
+	Round	Si N est omis ou 0, nombre est arrondi à l'entier le plus proche. Si N est le nombre positif, nombre est arrondi à N décimales. Si N est négatif, nombre est arrondi par N chiffres à gauche de la virgule.
+	Run	Exécute un programme externe.
+	RunAs	Indique un ensemble d'informations d'identification de l'utilisateur à utiliser pour toutes les utilisations ultérieures de Run et RunWait. Nécessite Windows 2000/XP ou version ultérieure.
+	RunWait	Exécute un programme externe et attend jusqu'à ce qu'elle se termine.
+	Screenshot	Crée une capture d'écran PNG de l'une zone spécifiée.
+	Send / SendRaw / SendInput / SendPlay	Envoie frappes simulées et les clics de souris sur la fenêtre active.
+	SendLevel	Contrôles laquelle les événements de clavier et de souris artificiels sont ignorés par les raccourcis et les substitutions de chaînes.
+	SendMessage	Il envoie un message à une fenêtre ou une commande et attend l'accusé de réception.
+	SendMode	Donne Envoyer synonyme de SendInput ou SendPlay plutôt que la valeur par défaut (SendEvent). Rend également cliquer et mousemove / cliquer / glisser utiliser la méthode spécifiée.
+	SetCapslockState	Définit l'état de la touche verrouillage majuscule. Pouvez également forcer la clé pour rester allumé ou éteint.
+	SetEnv (Var = Value)	Affecte la valeur spécifiée à une variable.
+	SetFormat	Définit le format des nombres entiers et en virgule flottante générés par les opérations mathématiques.
+	SetKeyDelay	Définit le délai qui aura lieu après chaque frappe envoyée par envoi ou ControlSend.
+	SetMouseDelay	Définit le délai qui aura lieu après chaque mouvement de la souris ou cliquez sur.
+	SetNumlockState	Définit l'état de la touche Verr Num. Pouvez également forcer la clé pour rester allumé ou éteint.
+	SetScrollLockState	Définit l'état de la touche Arrêt défil. Pouvez également forcer la clé pour rester allumé ou éteint.
+	SetRegView	Permet commandes de registre dans un script 32 bits pour accéder à la vue de Registre 64 bits et vice versa.
+	Shutdown	Arrête, redémarre ou déconnecte le système.
+	Sin	Renvoie le sinus trigonométrique de Number.
+	Sleep	Attend le laps de temps spécifié avant de poursuivre.
+	Sort	Organise le contenu d'une variable dans l'ordre alphabétique, numérique ou un ordre aléatoire (éventuellement éliminer les doublons).
+	SoundBeep	Emet une tonalité du haut-parleur du PC.
+	SoundGet	Récupère les différents réglages à partir d'un périphérique audio (mute, du volume principal maître, etc)
+	SoundGetWaveVolume	Extrait le volume de sortie d'onde à partir d'un dispositif sonore.
+	SoundPlay	Joue un son, vidéo, ou tout autre type de fichier pris en charge.
+	SoundSet	Changements divers paramètres d'un périphérique audio (mute, volume maître des maîtres, etc)
+	SoundSetWaveVolume	Change le volume de sortie d'onde pour un dispositif sonore.
+	SplashImage	Crée ou met à jour une fenêtre contenant une image JPG, GIF ou BMP.
+	SplashTextOn	Crée un texte personnalisable fenêtre.
+	SplashTextOff	Ferme la fenêtre ci-dessus.
+	SplitPath	Sépare un nom de fichier ou une URL dans son nom, le répertoire, la vulgarisation et dur.
+	Sqrt	Renvoie la racine carrée du nombre.
+	StatusBarGetText	Récupère le texte d'un contrôle de la barre d'état standard.
+	StatusBarWait	Attend que la barre d'état de la fenêtre contient la chaîne spécifiée.
+	StrPut / StrGet	Copie d'une chaîne ou d'une adresse mémoire, en option convertir entre les pages de code.
+	StringCaseSense	Détermine si les comparaisons de chaînes sont sensibles à la casse (par défaut "n'est pas sensible à la casse»).
+	StringGetPos / InStr	Extrait la position de la sous-chaîne spécifiée à l'intérieur d'une chaîne.
+	StringLeft	Extrait un nombre de caractères à partir du côté gauche d'une chaîne.
+	StringLen / StrLen	Récupère le décompte du nombre de caractères dans une chaîne.
+	StringLower	Convertit une chaîne en minuscules.
+	StringMid / SubStr	Extrait des un ou plusieurs caractères de la position spécifiée dans une chaîne.
+	StringReplace	Remplace la chaîne spécifiée par une nouvelle chaîne.
+	StringRight	Extrait un nombre de caractères à partir de la partie droite d'une chaîne.
+	StringSplit / StrSplit	Sépare une chaîne en un tableau de sous-chaînes à l'aide des séparateurs spécifiés.
+	StringTrimLeft	Supprime un certain nombre de caractères à partir du côté gauche d'une chaîne.
+	StringTrimRight	Supprime un nombre de caractères à partir de la partie droite d'une chaîne.
+	StringUpper	Convertit une chaîne en majuscules.
+	Suspend	Active ou désactive tous ou certains raccourcis clavier et les substitutions de chaînes.
+	SysGet	Récupère résolution de l'écran, des infos multi-écran, les dimensions des objets du système, et d'autres propriétés du système.
+	Tan	Renvoie la tangente trigonométrique de Number.
+	ToolTip	Crée une fenêtre toujours-sur-dessus n'importe où sur l'écran.
+	Transform	Exerce des fonctions diverses de mathématiques, les opérations de bits, et des tâches telles que ASCII / conversion Unicode.
+	TrayTip	Crée une fenêtre de message de ballon près de l'icône. Nécessite Windows 2000/XP ou version ultérieure.
+	Trim / LTrim / RTrim	Versions certains personnages du début et / ou fin d'une chaîne.
+	Try	Gardes une ou plusieurs instructions (commandes ou expressions) contre les erreurs d'exécution et les exceptions lancées par la commande lancer.
+	Until	S'applique une condition à la poursuite d'une boucle ou boucle for.
+	UrlDownloadToFile	Il télécharge un fichier depuis Internet.
+	VarSetCapacity	Élargit la capacité de rétention d'une variable ou libère sa mémoire. Normalement, ce n'est nécessaire que pour des circonstances exceptionnelles telles que DllCall.
+	WinActivate	Active la fenêtre spécifiée (en fait avant tout).
+	WinActivateBottom	Même que WinActivate sauf qu'il active la plus inférieure (moins récemment actif) fenêtre correspondante plutôt que le plus élevé.
+	WinActive	Retourne l'identifiant unique (HWND) de la fenêtre active si elle correspond aux critères spécifiés.
+	WinClose	Ferme la fenêtre spécifiée.
+	WinExist	Vérifie si la fenêtre spécifiée existe.
+	WinGetActiveStats	Combine les fonctions d'WinGetActiveTitle et WinGetPos en une seule commande.
+	WinGetActiveTitle	Extrait le titre de la fenêtre active.
+	WinGetClass	Récupère le nom de classe de la fenêtre spécifiée.
+	WinGet	Récupère l'ID unique de la fenêtre spécifiée, ID du processus, le nom de processus ou d'une liste de ses contrôles. Il peut également récupérer une liste de toutes les fenêtres correspondant aux critères spécifiés.
+	WinGetPos	Extrait la position et la taille de la fenêtre spécifiée.
+	WinGetText	Récupère le texte de la fenêtre spécifiée.
+	WinGetTitle	Récupère le titre de la fenêtre spécifiée.
+	WinHide	Masque la fenêtre spécifiée.
+	WinKill	Force la fenêtre spécifiée pour fermer.
+	WinMaximize	Agrandit la fenêtre spécifiée à sa taille maximale.
+	WinMenuSelectItem	Appelle un élément de menu dans la barre de menus de la fenêtre spécifiée.
+	WinMinimize	Réduit la fenêtre spécifiée en un bouton sur la barre de tâches.
+	WinMinimizeAll	Réduit toutes les fenêtres.
+	WinMinimizeAllUndo	Inverse l'effet d'une WinMinimizeAll précédente.
+	WinMove	Les changements de la position et / ou la taille de la fenêtre spécifiée.
+	WinRestore	Unminimizes ou unmaximizes la fenêtre spécifiée si elle est réduite ou agrandie.
+	WinSet	Fait une variété de changements à la fenêtre spécifiée, comme "toujours au top" et de transparence.
+	WinSetTitle	Modifie le titre de la fenêtre spécifiée.
+	WinShow	Unhides la fenêtre spécifiée.
+	WinWait	Attend que la fenêtre spécifiée existe.
+	WinWaitActive	Attend que la fenêtre spécifiée est active.
+	WinWaitClose	Attend que la fenêtre spécifiée n'existe pas.
+	WinWaitNotActive	Attend que la fenêtre spécifiée n'est pas active.
+	)	
 return		

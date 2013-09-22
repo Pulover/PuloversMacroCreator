@@ -4,14 +4,16 @@
 	local LVData, Id_LVData, Indent, RowData, Action, Match, ExpValue
 	, Step, TimesX, DelayX, Type, Target, Window, Comment, sArray
 	, PAction, PType, PDelayX, PComment, Act, iCount, init_ie, ComExp
-	Gui, 1:Default
-	Gui, ListView, InputList%ListID%
+	Gui, chMacro:Default
+	Gui, chMacro:ListView, InputList%ListID%
 	ComType := ComCr ? "ComObjCreate" : "ComObjActive"
 	Loop, % LV_GetCount()
 	{
 		LV_GetTexts(A_Index, Action, Step, TimesX, DelayX, Type, Target, Window, Comment)
-		IsChecked := LV_GetNext(A_Index-1, "Checked")
-	,	Step := CheckForExp(Step)
+	,	IsChecked := LV_GetNext(A_Index-1, "Checked")
+		If (InStr(FileCmdList, Type "|"))
+			StringReplace, Step, Step, ```,, `,, All
+		Step := CheckForExp(Step)
 	,	TimesX := CheckForExp(TimesX)
 	,	DelayX := CheckForExp(DelayX)
 	,	Target := CheckForExp(Target)
@@ -49,16 +51,17 @@
 				Else
 					RowData := "`n" Type ", " Step
 				GoSub, Add_CD
+				If ((Action = "[Text]") && (TimesX > 1))
+					RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
+
 			}
-			Else 
+			Else
 			{
 				RowData := "`n" Type ", " Step
 				GoSub, Add_CD
 				If ((TimesX > 1) || InStr(TimesX, "%"))
 					RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
 			}
-			; If ((Action = "[Text]") && (TimesX > 1))
-				; RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
 		}
 		If (IsChecked <> A_Index)
 			continue
@@ -73,7 +76,7 @@
 				Step := RegExReplace(Step, "{\w+\K(})", " " TimesX "$1")
 			RowData := "`n" Type ", " Target ", " Step ", " Window
 			GoSub, Add_CD
-			If ((Action = "[Text]") && ((TimesX > 1) || InStr(TimesX, "%")))
+			If (TimesX > 1 || InStr(TimesX, "%"))
 				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
 		}
 		Else If (Type = cType4)
@@ -91,7 +94,7 @@
 			If ((TimesX > 1) || InStr(TimesX, "%"))
 				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
 		}
-		Else If ((Type = cType6) && (Action = "[Pause]"))
+		Else If (Type = cType6)
 		{
 			If InStr(Step, "``n")
 			{
@@ -99,11 +102,10 @@
 				Step := "`n(LTrim`n" Step "`n)"
 			}
 			StringReplace, Step, Step, ```,, `````,, All
-			RowData := "`n" Type ", " Target ",, " Step
+			StringReplace, Window, Window, ```,, `````,, All
+			RowData := "`n" Type ", " Target ", " Window ", " Step ((DelayX > 0) ? ", " DelayX : "")
 			If (Comment <> "")
 				RowData .= "  " "; " Comment
-			If (Mod(Target, 2))
-				RowData .= "`nIfMsgBox, Cancel`n`tReturn"
 			If ((TimesX > 1) || InStr(TimesX, "%"))
 				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
 		}
@@ -162,15 +164,15 @@
 				Else If (Act1 = "Stop")
 					RowData .= "`n`tReturn"
 				Else If (Act1 = "Move")
-					RowData .= "`n" ((Target = "Break") ? "{`n" : "`t") "Click, %FoundX%, %FoundY%, 0" ((Target = "Break") ? "`nBreak`n}" : "")
+					RowData .= "`nClick, %FoundX%, %FoundY%, 0"
 				Else If InStr(Act1, "Click")
 				{
 					Loop, Parse, Act1, %A_Space%
 						Action%A_Index% := A_LoopField
-					RowData .= "`n" ((Target = "Break") ? "{`n" : "`t") "Click, %FoundX%, %FoundY% " Action1 ", 1" ((Target = "Break") ? "`nBreak`n}" : "")
+					RowData .= "`nClick, %FoundX%, %FoundY% " Action1 ", 1"
 				}
 				Else If (Act1 = "Prompt")
-					RowData .= "`n{`nMsgBox, 49, " d_Lang035 ", " d_Lang036 " %FoundX%x%FoundY%.``n" d_Lang038 "`nIfMsgBox, Cancel`n`tReturn" ((Target = "Break") ? "`nBreak" : "") "`n}"
+					RowData .= "`n{`nMsgBox, 49, " d_Lang035 ", " d_Lang036 " %FoundX%x%FoundY%.``n" d_Lang038 "`nIfMsgBox, Cancel`n`tReturn`n}"
 			}
 			If (Act2 <> "Continue")
 			{
@@ -183,7 +185,11 @@
 					RowData .= "`n{`nMsgBox, 49, " d_Lang035 ", " d_Lang037 "``n" d_Lang038 "`nIfMsgBox, Cancel`n`tReturn`n}"
 			}
 			GoSub, Add_CD
-			If ((TimesX > 1) || InStr(TimesX, "%"))
+			If (Target = "Break")
+				RowData := "`nLoop`n{" RowData "`n}`nUntil ErrorLevel = 0"
+			Else If (Target = "Continue")
+				RowData := "`nLoop`n{" RowData "`n}`nUntil ErrorLevel"
+			Else If ((TimesX > 1) || InStr(TimesX, "%"))
 				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
 		}
 		Else If (Type = cType17)
@@ -216,7 +222,7 @@
 			If ((TimesX > 1) || InStr(TimesX, "%"))
 				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
 		}
-		Else If ((Type = cType20) && (Action = "[Pause]"))
+		Else If (Type = cType20)
 		{
 			RowData := "`n" Type ", " Step
 			RowData .= "`n" Type ", " Step ", D"
@@ -229,7 +235,7 @@
 			If ((TimesX > 1) || InStr(TimesX, "%"))
 				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
 		}
-		Else If (Type = cType21)
+		Else If ((Type = cType21) || (Type = cType44))
 		{
 			AssignReplace(Step)
 			If (VarValue = "")
@@ -244,7 +250,7 @@
 					VarValue := CheckExp(VarValue)
 				}
 			}
-			If (Action = "[Assign Variable]")
+			If (Type = cType21)
 			{
 				If InStr(VarValue, "``n")
 				{
@@ -415,16 +421,34 @@
 			GoSub, Add_CD
 		}
 		Else If ((Type = cType3) || (Type = cType8) || (Type = cType11)
-		|| (Type = cType13) || (Type = cType14) || InStr(FileCmdList, Type "|"))
+		|| (Type = cType13) || (Type = cType14))
+		{
+			If (InStr(Step, "``n") && ((Type = cType8) || (Type = cType13)))
+			{
+				StringReplace, Step, Step, ``n, `n, All
+				Step := "`n(LTrim`n" Step "`n)"
+			}
+			StringReplace, Step, Step, `````,, ```,, All
+			RowData := "`n" Type ", " Step
+			If !RegExMatch(Step, "```,\s*?$")
+				RowData := RTrim(RowData, ", ")
+			GoSub, Add_CD
+			If ((TimesX > 1) || InStr(TimesX, "%"))
+				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
+			If (Action = "[Text]")
+				RowData := "`nSetKeyDelay, " DelayX RowData
+		}
+		Else If (InStr(FileCmdList, Type "|"))
 		{
 			If (InStr(Step, "``n") && (Type = cType8))
 			{
 				StringReplace, Step, Step, ``n, `n, All
 				Step := "`n(LTrim`n" Step "`n)"
 			}
-			StringReplace, Step, Step, ```,, `````,, All
+			StringReplace, Step, Step, `````,, ```,, All
 			RowData := "`n" Type ", " Step
-		,	RowData := RTrim(RowData, ", ")
+			If !RegExMatch(Step, "```,\s*?$")
+				RowData := RTrim(RowData, ", ")
 			GoSub, Add_CD
 			If ((TimesX > 1) || InStr(TimesX, "%"))
 				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
@@ -467,11 +491,14 @@
 			If ((TimesX > 1) || InStr(TimesX, "%"))
 				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
 		}
-		StringReplace, RowData, RowData, ```,, `,, All
+		If (!InStr(FileCmdList, Type "|"))
+			StringReplace, RowData, RowData, ```,, `,, All
 		LVData .= RowData
 	}
-	; LVData := RegExReplace(LVData, "Send, \n")
-	LVData := LTrim(LVData, "`n")
+	LVData := RegExReplace(LVData, "i)%(Temp)%", "%A_$1%")
+,	LVData := RegExReplace(LVData, "i)%(AppData)%", "%A_$1%")
+,	LVData := RegExReplace(LVData, "i)%(WinDir)%", "%A_$1%")
+,	LVData := LTrim(LVData, "`n")
 	If TabIndent
 	{
 		Loop, Parse, LVData, `n
@@ -550,16 +577,16 @@ Script_Header()
 
 IncludeFiles(L, N)
 {
-	global cType21
+	global cType44
 	
-	Gui, 1:Default
-	Gui, ListView, InputList%L%
+	Gui, chMacro:Default
+	Gui, chMacro:ListView, InputList%L%
 	Loop, %N%
 	{
 		If (LV_GetNext(A_Index-1, "Checked") <> A_Index)
 			continue
 		LV_GetText(Row_Type, A_Index, 6)
-		If (Row_Type <> cType21)
+		If (Row_Type <> cType44)
 			continue
 		LV_GetText(IncFile, A_Index, 7)
 		If ((IncFile <> "") && (IncFile <> "Expression"))
@@ -571,14 +598,14 @@ IncludeFiles(L, N)
 
 CheckForExp(Field)
 {
-	global cType21
+	global cType44
 	
 	RegExReplace(Field, "U)%\s+([\w%]+)\((.*)\)", "", iCount)
 	Match := 0
 	Loop, %iCount%
 	{
 		Match := RegExMatch(Field, "U)%\s+([\w%]+)\((.*)\)", Funct, Match+1)
-		If (Type = cType21)
+		If (Type = cType44)
 			StringReplace, Funct2, Funct2, `,, ```,
 		If ((ExpValue := CheckExp(Funct2)) = """""")
 			ExpValue := ""

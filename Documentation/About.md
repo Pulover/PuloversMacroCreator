@@ -1,16 +1,16 @@
 ﻿# Pulover's Macro Creator
-*An Interface-Based Automation Tool & Script Writer.*
+*The Complete Automation Tool*
 
-[www.autohotkey.net/~Pulover](http://www.autohotkey.net/~Pulover)  
+[www.macrocreator.com](http://www.macrocreator.com)  
 [Forum Thread](http://www.autohotkey.com/board/topic/79763-macro-creator)  
 
 Author: Pulover \[Rodolfo U. Batista\]  
-[rodolfoub@gmail.com](mailto:rodolfoub@gmail.com)  
+[pulover@macrocreator.com](mailto:pulover@macrocreator.com)  
 Copyright © 2012-2013 Rodolfo U. Batista  
 
-Version: 3.8.3  
-Release Date: August, 2013  
-AutoHotkey Version: 1.1.11.02  
+Version: 4.0.0  
+Release Date: September, 2013  
+AutoHotkey Version: 1.1.13.00  
 
 Software License: [GNU General Public License](License.html)  
 
@@ -20,20 +20,58 @@ Chris and Lexikos for [AutoHotkey](http://www.autohotkey.com/).
 tic (Tariq Porter) for his [GDI+ Library](http://www.autohotkey.com/board/topic/29449-gdi-standard-library).  
 tkoi & majkinetor for the [ILButton function](http://www.autohotkey.com/board/topic/37147-ilbutton-image-buttons).  
 just me for [LV_Colors Class](http://www.autohotkey.com/board/topic/88699-class-lv-colors), GuiCtrlAddTab and for updating ILButton to 64bit.  
-diebagger and Obi-Wahn for the [function to move rows](http://www.autohotkey.com/board/topic/56396-techdemo-move-rows-in-a-listview).  
 Micahs for the [base code](http://www.autohotkey.com/board/topic/30486-listview-tooltip-on-mouse-hover/?p=280843) of the Drag-Rows function.  
-Kdoske & trueski for the [CSV functions](http://www.autohotkey.com/board/topic/51681-csv-library-lib).  
 jaco0646 for the [function](http://www.autohotkey.com/board/topic/47439-user-defined-dynamic-hotkeys) to make hotkey controls detect other keys.  
 Laszlo for the [Monster function](http://www.autohotkey.com/board/topic/15675-monster) to solve expressions.  
 Jethrow for the [IEGet Function](http://www.autohotkey.com/board/topic/47052-basic-webpage-controls).  
+RaptorX for the [Scintilla Wrapper for AHK](http://www.autohotkey.com/board/topic/85928-wrapper-scintilla-wrapper).  
 majkinetor for the [Dlg_Color](http://www.autohotkey.com/board/topic/49214-ahk-ahk-l-forms-framework-08/) function.  
 rbrtryn for the [ChooseColor](http://www.autohotkey.com/board/topic/91229-windows-color-picker-plus/) function.  
-fincs for [GenDocs](http://www.autohotkey.com/board/topic/71751-gendocs-v30-alpha002).  
+PhiLho and skwire for the [function](http://www.autohotkey.com/board/topic/11926-can-you-move-a-listview-column-programmatically/#entry237340) to Get/Set the order of columns.  
+fincs for [GenDocs](http://www.autohotkey.com/board/topic/71751-gendocs-v30-alpha002) and [SciLexer.dll custom builds](http://www.autohotkey.com/board/topic/54431-scite4autohotkey-v3004-updated-aug-14-2013/page-58#entry566139).  
 T800 for [Html Help utils](http://www.autohotkey.com/board/topic/17984-html-help-utils).  
-Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jörg Schmalenberger (German).
+Thiago Talma for some improvements to the code, debugging and many suggestions.  
+Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jörg Schmalenberger (German).  
 
 
 # Change Log
+
+## Version 4.0.0
+
+* New Interface with customizable toolbars.
+* New *Preview* window with syntax highlighting.
+* Added *Find a command* window.
+* Added tips in command windows.
+* Added more options to *Message* window.
+* Added *Edit Macros* window.
+* Added Drag-Macros feature.
+* Added Close and Edit menu when clicking over a Macro tab.
+* Added Close with Mouse Middle click over a Macro tab.
+* Added *Loop until* option in *Image/Pixel Search* (replaces "Break if found").
+* Added individual *Pause* hotkey.
+* Added *Multiple Column* search in *Find/Replace* window.
+* Added *Set key delay* option in *Text* command window.
+* Added *Random delays* and *Disable random delays* options to *Pause* command window.
+* Added *Edit Script* button in *Preview* window.
+* Added support for basic Arrays using the built-in function *Array*.
+* Added support for functions in *Assign Variable* window when using the *Expression* option.
+* Added automatic backups.
+* Added translations to Malay and Vietnamese.
+* Added *Portable Install* option in installer.
+* Paste command now works on mutiple selections.
+* Main window size, position and columns order are remembered.
+* Removed *MsgBox* command from *Run* command window.
+* Removed automatic *Cancel* button handling for *MsgBox* for compatibility with new options.
+* Fixed *ErrorLevel* variable results for commands in playback.
+* Fixed automatic comma escaping in *Run* command window.
+* Fixed Media keys not being recorded/captured.
+* Fixed various bugs and issues.
+
+## Version 3.8.4
+
+* Switched functionality of *Color Picker* and *Search* buttons in *PixelSearch* for a more intuitive behavior.
+* Removed *Special Keys* window. Replaced by *Insert Keystroke*.
+* Fixed some minor issues.
 
 ## Version 3.8.3
 
