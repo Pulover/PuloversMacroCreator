@@ -20,8 +20,6 @@
 	{
 		If !WinExist("ahk_id " PMCOSC)
 			GoSub, ShowControls
-		Else
-			Gui, 28:+AlwaysOntop
 	}
 	PlayOSOn := 1, tbOSC.ModifyButtonInfo(1, "Image", 55), LastError := ""
 ,	CurrentRange := m_ListCount, ChangeProgBarColor("20D000", "OSCProg", 28)
@@ -92,6 +90,8 @@
 					If (IsSelected <> A_Index)
 						continue
 				}
+				If WinExist("ahk_id " PMCOSC)
+					Gui, 28:+AlwaysOntop
 				If ((Type = cType3) OR (Type = cType13))
 					MouseReset := 1
 				If (Type = cType17)
@@ -546,6 +546,8 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC)
 					If (IsSelected <> lIdx)
 						continue
 				}
+				If WinExist("ahk_id " PMCOSC)
+					Gui, 28:+AlwaysOntop
 				If (Type = cType17)
 				{
 					IfError := IfStatement(IfError, PointMarker)

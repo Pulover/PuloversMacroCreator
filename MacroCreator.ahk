@@ -720,11 +720,13 @@ If %0%
 			ShowCtrlBar := 1
 	}
 	Files := RTrim(Param, "`n")
+	DetectHiddenWindows, On
 	If !MultInst && (TargetID := WinExist("ahk_exe " A_ScriptFullPath))
 	{
 		Send_Params(Files, TargetID)
 		ExitApp
 	}
+	DetectHiddenWindows, Off
 	GoSub, OpenFile
 }
 Else If !MultInst && (TargetID := WinExist("ahk_exe " A_ScriptFullPath))
