@@ -951,9 +951,9 @@ IfStatement(ThisError, l_Point)
 {
 	global
 	
-	If Step = EndIf
+	If (Step = "EndIf")
 	{
-		If ThisError > 0
+		If (ThisError > 0)
 			ThisError--
 		Else
 			ThisError := 0
@@ -961,15 +961,15 @@ IfStatement(ThisError, l_Point)
 	}
 	If ((BreakIt > 0) || (SkipIt > 0))
 		return ThisError
-	If Step = Else
+	If (Step = "Else")
 	{
-		If ThisError > 0
-			ThisError--
-		Else
-			ThisError++
+		If (ThisError = 1)
+			ThisError := 0
+		Else If (ThisError = 0)
+			ThisError := 1
 		return ThisError
 	}
-	If ThisError > 0
+	If (ThisError > 0)
 	{
 		ThisError++
 		return ThisError
@@ -979,7 +979,7 @@ IfStatement(ThisError, l_Point)
 		Tooltip
 		CheckVars("Step|Target|Window", PointMarker)
 		EscCom("Step|TimesX|DelayX|Target|Window", 1)
-		If ThisError > 0
+		If (ThisError > 0)
 		{
 			ThisError++
 			return
@@ -1043,14 +1043,14 @@ IfStatement(ThisError, l_Point)
 		}
 		Else If (Action = If9)
 		{
-			If SearchResult = 0
+			If (SearchResult = 0)
 				ThisError := 0
 			Else
 				ThisError++
 		}
 		Else If (Action = If10)
 		{
-			If SearchResult <> 0
+			If (SearchResult <> 0)
 				ThisError := 0
 			Else
 				ThisError++
