@@ -20,6 +20,6 @@ To compile you'll need:
 * Inno Setup (5.5.2 or higher) installed.
 
 Notes:
-* Execute MacroCreator.ahk at least once to create the .ini file with the current version. You might need to copy from %AppData% to the script folder.
+* Execute MacroCreator.ahk at least once to create the .ini file with the current version. You might need to copy it from %AppData% to the script folder.
 * Language files should be edited in Languages.xls. Run ExtractLangFiles.ahk to create the .Lang files in the Lang directory.
 
