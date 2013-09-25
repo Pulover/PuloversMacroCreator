@@ -8417,7 +8417,7 @@ If (A_GuiEvent == "ColClick")
 If (A_GuiEvent = "D")
 {
 	Dest_Row := LV_Rows.Drag(A_GuiEvent)
-	If (A_GuiEvent == "d")
+	If ((Dest_Row) && (A_GuiEvent == "d"))
 	{
 		Menu, MoveCopy, Add, %w_Lang094%, MoveHere
 		Menu, MoveCopy, Add, %w_Lang095%, CopyHere
