@@ -242,6 +242,8 @@
 	w_Lang091 =	Cari arahan (Ctrl+Shift+F)
 	w_Lang092 =	Edit (Masukkan)
 	w_Lang093 =	Menyembunyikan
+	w_Lang094 =	Bergerak di sini
+	w_Lang095 =	Salinan di sini
 		
 ; Command Windows		
 	c_Lang001 =	Mouse

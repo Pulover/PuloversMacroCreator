@@ -242,6 +242,8 @@
 	w_Lang091 =	Keresse meg a parancsot (Ctrl+Shift+F)
 	w_Lang092 =	Szerkeszt (Enter)
 	w_Lang093 =	Elrejt
+	w_Lang094 =	Áthelyezés ide
+	w_Lang095 =	Másolás ide
 		
 ; Command Windows		
 	c_Lang001 =	Egér

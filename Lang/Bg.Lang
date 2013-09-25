@@ -242,6 +242,8 @@
 	w_Lang091 =	Намерете командата (Ctrl+Shift+F)
 	w_Lang092 =	Редактирам (Enter)
 	w_Lang093 =	Крия
+	w_Lang094 =	Преместете тук
+	w_Lang095 =	Копирай тук
 		
 ; Command Windows		
 	c_Lang001 =	Мишка

@@ -242,6 +242,8 @@
 	w_Lang091 =	Localizar um comando (Ctrl+Shift+F)
 	w_Lang092 =	Editar (Enter)
 	w_Lang093 =	Ocultar
+	w_Lang094 =	Mover para cá
+	w_Lang095 =	Copiar aqui
 		
 ; Command Windows		
 	c_Lang001 =	Mouse

@@ -242,6 +242,8 @@
 	w_Lang091 =	Najít příkaz (Ctrl+Shift+F)
 	w_Lang092 =	Upravit (Enter)
 	w_Lang093 =	Schovat
+	w_Lang094 =	Přesunout sem
+	w_Lang095 =	Kopírování zde
 		
 ; Command Windows		
 	c_Lang001 =	Myš

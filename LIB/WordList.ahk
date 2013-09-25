@@ -1,12 +1,12 @@
 ﻿SyHi_Com =
 (
 #allowsamelinecomments #clipboardtimeout #commentflag #errorstdout #escapechar #hotkeyinterval
-#hotkeymodifiertimeout #hotstring #if #iftimeout #ifwinactive #ifwinexist #include #includeagain
-#inputlevel #installkeybdhook #installmousehook #keyhistory #ltrim #maxhotkeysperinterval #maxmem
-#maxthreads #maxthreadsbuffer #maxthreadsperhotkey #menumaskkey #noenv #notrayicon #persistent
-#singleinstance #usehook #warn #winactivateforce autotrim blockinput break catch click clipwait
-continue control controlclick controlfocus controlget controlgetfocus controlgetpos controlgettext
-controlmove controlsend controlsendraw controlsettext coordmode critical detecthiddentext
+#hotkeymodifiertimeout #hotstring #if #iftimeout #ifwinactive #ifwinexist #ifwinnotactive #ifwinnotexist
+#include #includeagain #inputlevel #installkeybdhook #installmousehook #keyhistory #ltrim
+#maxhotkeysperinterval #maxmem #maxthreads #maxthreadsbuffer #maxthreadsperhotkey #menumaskkey #noenv
+#notrayicon #persistent #singleinstance #usehook #warn #winactivateforce autotrim blockinput break
+catch click clipwait continue control controlclick controlfocus controlget controlgetfocus controlgetpos
+controlgettext controlmove controlsend controlsendraw controlsettext coordmode critical detecthiddentext
 detecthiddenwindows drive driveget drivespacefree else endrepeat envadd envdiv envget envmult
 envset envsub envupdate exit exitapp fileappend filecopy filecopydir filecreatedir
 filecreateshortcut filedelete fileencoding filegetattrib filegetshortcut filegetsize filegettime

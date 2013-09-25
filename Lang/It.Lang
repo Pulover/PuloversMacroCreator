@@ -242,6 +242,8 @@
 	w_Lang091 =	Trova un comando (Ctrl+Shift+F)
 	w_Lang092 =	Modifica (Enter)
 	w_Lang093 =	Nascondere
+	w_Lang094 =	Sposta qui
+	w_Lang095 =	Copia qui
 		
 ; Command Windows		
 	c_Lang001 =	Mouse

@@ -242,6 +242,8 @@
 	w_Lang091 =	Finn en kommando (Ctrl+Shift+F)
 	w_Lang092 =	Redigere (Enter)
 	w_Lang093 =	Skjule
+	w_Lang094 =	Flytte hit
+	w_Lang095 =	Kopier hit
 		
 ; Command Windows		
 	c_Lang001 =	Mus

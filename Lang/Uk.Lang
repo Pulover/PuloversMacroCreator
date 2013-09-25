@@ -242,6 +242,8 @@
 	w_Lang091 =	Знайти команду (Ctrl+Shift+F)
 	w_Lang092 =	Редагувати (Enter)
 	w_Lang093 =	Приховувати
+	w_Lang094 =	перенести сюди
+	w_Lang095 =	копіювати сюди
 		
 ; Command Windows		
 	c_Lang001 =	Миша

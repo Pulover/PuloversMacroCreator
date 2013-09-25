@@ -242,6 +242,8 @@
 	w_Lang091 =	Zoek een commando (Ctrl+Shift+F)
 	w_Lang092 =	Redigeren (Enter)
 	w_Lang093 =	Verbergen
+	w_Lang094 =	Bewegen hier
+	w_Lang095 =	Kopieer hier
 		
 ; Command Windows		
 	c_Lang001 =	Muis

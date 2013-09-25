@@ -242,6 +242,8 @@
 	w_Lang091 =	Pronađite naredbu (Ctrl+Shift+C)
 	w_Lang092 =	Uredi (Enter)
 	w_Lang093 =	Sakriti
+	w_Lang094 =	Pomicanje ovdje
+	w_Lang095 =	Kopirajte ovdje
 		
 ; Command Windows		
 	c_Lang001 =	Miš

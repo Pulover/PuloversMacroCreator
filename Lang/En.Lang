@@ -242,6 +242,8 @@
 	w_Lang091 =	Find a command (Ctrl+Shift+F)
 	w_Lang092 =	Edit (Enter)
 	w_Lang093 =	Hide
+	w_Lang094 =	Move here
+	w_Lang095 =	Copy here
 		
 ; Command Windows		
 	c_Lang001 =	Mouse

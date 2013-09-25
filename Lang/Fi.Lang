@@ -242,6 +242,8 @@
 	w_Lang091 =	Etsi komento (Ctrl+Shift+F)
 	w_Lang092 =	Muokata (Enter)
 	w_Lang093 =	Piilottaa
+	w_Lang094 =	Pendelöintifoorumi
+	w_Lang095 =	Kopioi täällä
 		
 ; Command Windows		
 	c_Lang001 =	Hiiri

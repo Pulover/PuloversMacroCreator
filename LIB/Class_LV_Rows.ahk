@@ -4,7 +4,7 @@
 ;
 ; Author:            Pulover [Rodolfo U. Batista]
 ;                    rodolfoub@gmail.com
-; Release date:      12 September 2013
+; Release date:      25 September 2013
 ;
 ;                    Additional functions for ListView controls
 ;=======================================================================================
@@ -371,10 +371,10 @@ Class LV_Rows
                 Gui, MarkLine:Show, W%Line_W% H%LineThick% Y%Line_Y% X%Line_X% NoActivate
             }
         }
-        Gui, MarkLine:Cancel
 
-        If LV_currRow
+        If (DragButton = "LButton" && LV_currRow)
         {
+			Gui, MarkLine:Cancel
             DragRows := new LV_Rows(this.LVHwnd)
         ,   Lines := DragRows.Copy()
             DragRows.Paste(LV_currRow)

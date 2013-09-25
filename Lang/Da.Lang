@@ -242,6 +242,8 @@
 	w_Lang091 =	Find en kommando (Ctrl+Shift+F)
 	w_Lang092 =	Rediger (Enter)
 	w_Lang093 =	Skjule
+	w_Lang094 =	Flyt her
+	w_Lang095 =	Kopier her
 		
 ; Command Windows		
 	c_Lang001 =	Mus

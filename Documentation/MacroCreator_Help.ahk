@@ -2,7 +2,7 @@
 	Library: Pulover's Macro Creator
 		*The Complete Automation Tool*
 		
-		Version: 4.0.0  
+		Version: 4.0.1  
 		
 		[www.macrocreator.com](http://www.macrocreator.com)  
 		[Forum Thread](http://www.autohotkey.com/board/topic/79763-macro-creator)  

@@ -242,6 +242,8 @@
 	w_Lang091 =	Hitta ett kommando (Ctrl+Skift+F)
 	w_Lang092 =	Redigera (Enter)
 	w_Lang093 =	Dölj
+	w_Lang094 =	Flytta hit
+	w_Lang095 =	Kopiera här
 		
 ; Command Windows		
 	c_Lang001 =	Mus

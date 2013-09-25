@@ -242,6 +242,8 @@
 	w_Lang091 =	Znajdź polecenia (Ctrl+Shift+F)
 	w_Lang092 =	Edytuj (Enter)
 	w_Lang093 =	Ukryć
+	w_Lang094 =	Przenieś tutaj
+	w_Lang095 =	Skopiuj tutaj
 		
 ; Command Windows		
 	c_Lang001 =	Mysz

@@ -242,6 +242,8 @@
 	w_Lang091 =	Tìm một lệnh (Ctrl + Shift + F)
 	w_Lang092 =	Chỉnh sửa (Enter)
 	w_Lang093 =	Che
+	w_Lang094 =	Di chuyển đây
+	w_Lang095 =	Sao chép ở đây
 		
 ; Command Windows		
 	c_Lang001 =	Chuột

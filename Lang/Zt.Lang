@@ -242,6 +242,8 @@
 	w_Lang091 =	查找命令（按Ctrl+Shift+ F）
 	w_Lang092 =	編輯（Enter）
 	w_Lang093 =	隱藏
+	w_Lang094 =	搬到這裡
+	w_Lang095 =	複製到這裡
 		
 ; Command Windows		
 	c_Lang001 =	鼠標

@@ -8,7 +8,7 @@ Author: Pulover \[Rodolfo U. Batista\]
 [pulover@macrocreator.com](mailto:pulover@macrocreator.com)  
 Copyright © 2012-2013 Rodolfo U. Batista  
 
-Version: 4.0.0  
+Version: 4.0.1  
 Release Date: September, 2013  
 AutoHotkey Version: 1.1.13.00  
 
@@ -35,6 +35,12 @@ Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jör
 
 
 # Change Log
+
+## Version 4.0.1
+
+* Added Right-Click-Drag Move/Copy menu.
+* Fixed issues with command line parameters.
+* Fixed bugs.
 
 ## Version 4.0.0
 

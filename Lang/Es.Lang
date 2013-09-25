@@ -242,6 +242,8 @@
 	w_Lang091 =	Encontrar un comando (Ctrl+Shift+F)
 	w_Lang092 =	Editar (Enter)
 	w_Lang093 =	Ocultar
+	w_Lang094 =	Mover aquí
+	w_Lang095 =	Copiar aquí
 		
 ; Command Windows		
 	c_Lang001 =	Ratón

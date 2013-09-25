@@ -242,6 +242,8 @@
 	w_Lang091 =	명령 찾기 (Ctrl+Shift+F)
 	w_Lang092 =	수정 (Enter)
 	w_Lang093 =	숨기기
+	w_Lang094 =	여기에 이동
+	w_Lang095 =	여기에 복사
 		
 ; Command Windows		
 	c_Lang001 =	마우스

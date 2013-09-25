@@ -8414,9 +8414,21 @@ If (A_GuiEvent == "ColClick")
 		SelectByType(SelType, A_EventInfo)
 	}
 }
-If (A_GuiEvent == "D")
+If (A_GuiEvent = "D")
 {
-	LV_Rows.Drag()
+	Dest_Row := LV_Rows.Drag(A_GuiEvent)
+	If (A_GuiEvent == "d")
+	{
+		Menu, MoveCopy, Add, %w_Lang094%, MoveHere
+		Menu, MoveCopy, Add, %w_Lang095%, CopyHere
+		Menu, MoveCopy, Add
+		Menu, MoveCopy, Add, %c_Lang021%, NoKey
+		Menu, MoveCopy, Default, %w_Lang094%
+		Menu, MoveCopy, Show
+		Menu, MoveCopy, DeleteAll
+		Gui, MarkLine:Cancel
+	}
+	Dest_Row := ""
 	GoSub, b_Start
 	GoSub, RowCheck
 }
@@ -8436,6 +8448,8 @@ Tooltip
 return
 
 GuiContextMenu:
+If (Dest_Row)
+	return
 MouseGetPos,,,, cHwnd, 2
 If (cHwnd = ListID%A_List%)
 	Menu, EditMenu, Show, %A_GuiX%, %A_GuiY%
@@ -8604,6 +8618,23 @@ LV_Modify(LV_GetNext(0, "Focused"), "Select")
 GoSub, b_Start
 GoSub, RowCheck
 GuiControl, Focus, InputList%A_List%
+return
+
+CopyHere:
+Gui, chMacro:Default
+TempData := new LV_Rows()
+,	TempData.Copy()
+,	TempData.Paste(Dest_Row)
+,	TempData := ""
+return
+
+MoveHere:
+Gui, chMacro:Default
+TempData := new LV_Rows()
+,	TempData.Copy()
+,	TempData.Paste(Dest_Row)
+,	TempData.Delete()
+,	TempData := ""
 return
 
 Undo:
