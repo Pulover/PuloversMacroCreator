@@ -6,7 +6,7 @@
 ; pulover@macrocreator.com
 ; Home: http://www.macrocreator.com
 ; Forum: http://www.autohotkey.com/board/topic/79763-macro-creator
-; Version: 4.0.0
+; Version: 4.0.1
 ; Release Date: September, 2013
 ; AutoHotkey Version: 1.1.13.00
 ; Copyright © 2012-2013 Rodolfo U. Batista
@@ -129,7 +129,7 @@ Loop
 		break
 }
 
-CurrentVersion := "4.0.0", ReleaseDate := "September, 2013"
+CurrentVersion := "4.0.1", ReleaseDate := "September, 2013"
 
 ;##### Ini File Read #####
 
@@ -8087,7 +8087,10 @@ If ListCount%A_List% = 0
 GoSub, SaveData
 StopIt := 0
 Tooltip
-WinMinimize, ahk_id %PMCWinID%
+If (!(PlayHK) && !(HideWin) && (HideMainWin))
+	GoSub, ShowHide
+Else
+	WinMinimize, ahk_id %PMCWinID%
 If TimerSec = 1
 	DelayX := TimerDelayX * 1000
 Else If TimerMin = 1
@@ -8175,7 +8178,7 @@ Gui, chMacro:ListView, InputList%A_List%
 ActivateHotkeys(0, 0, 1, 1, 1)
 StopIt := 0
 Tooltip
-If (!(PlayHK) && (HideMainWin))
+If (!(PlayHK) && !(HideWin) && (HideMainWin))
 	GoSub, ShowHide
 Else
 	WinMinimize, ahk_id %PMCWinID%
@@ -8187,7 +8190,7 @@ PlayStart:
 Gui, 1:+OwnDialogs
 Gui, 1:Submit, NoHide
 GoSub, b_Enable
-If (!(PlayHK) && !(WinExist("ahk_id" PMCWinID)))
+If (!(PlayHK) && !(HideWin) && !(WinExist("ahk_id" PMCWinID)))
 {
 	GoSub, ShowHide
 	return
@@ -8213,7 +8216,7 @@ If !DontShowPb
 	Gui, 26:Add, Button, -Wrap Default xs y+10 W75 H23 gTipClose, %c_Lang020%
 	Gui, 26:Show,, %AppName%
 }
-If (!(PlayHK) && (HideMainWin))
+If (!(PlayHK) && !(HideWin) && (HideMainWin))
 	GoSub, ShowHide
 Else
 	WinMinimize, ahk_id %PMCWinID%
@@ -9995,7 +9998,7 @@ return
 
 FindOK:
 Gui, 18:Submit, NoHide
-If Find = 
+If (Find = "")
 	return
 Gui, chMacro:Default
 StringReplace, Find, Find, `n, ``n, All
@@ -10033,12 +10036,12 @@ return
 
 ReplaceOK:
 Gui, 18:Submit, NoHide
-If Find = 
+If (Find = "")
 	return
 Gui, chMacro:Default
 StringReplace, Find, Find, `n, ``n, All
-t_Col := SearchCol + 1
-If RepAllRows = 1
+t_Col := SearchCol + 1, Replaces := 0
+If (RepAllRows = 1)
 {
 	Loop, % ListCount%A_List%
 	{
@@ -10080,7 +10083,7 @@ If RepAllRows = 1
 	If Replaces > 0
 		HistCheck(A_List)
 }
-Else If RepAllMacros = 1
+Else If (RepAllMacros = 1)
 {
 	Tmp_List := A_List
 	Loop, %TabCount%
@@ -10130,7 +10133,7 @@ Else If RepAllMacros = 1
 }
 Else
 {
-	RowNumber = 0
+	RowNumber := 0
 	Loop
 	{
 		RowNumber := LV_GetNext(RowNumber)
