@@ -631,7 +631,7 @@ If (TbNoTheme)
 	Gui, -Theme
 Gui, Add, Custom, ClassReBarWindow32 hwndhRbMain vcRbMain gRB_Notify 0x0400 0x0040 0x8000
 Gui, +Theme
-Gui, Add, Custom, ClassReBarWindow32 hwndhRbMacro vcRbMacro gRB_Notify xm-10 ym+76 -Theme 0x0800 0x0040 0x8000 0x0008 ; 0x0004
+Gui, Add, Custom, ClassReBarWindow32 hwndhRbMacro vcRbMacro gRB_Notify xm-15 ym+76 -Theme 0x0800 0x0040 0x8000 0x0008 ; 0x0004
 Gui, Add, Hotkey, hwndhAutoKey vAutoKey gSaveData, % o_AutoKey[1]
 Gui, Add, ListBox, hwndhJoyKey vJoyKey r1 ReadOnly Hidden
 ; SendMessage, 0x01A0, 0, 22,, ahk_id %hJoyKey%
@@ -12006,7 +12006,7 @@ GuiGetSize(GuiWidth, GuiHeight)
 ,	RbMain.ShowBand(RbMain.IDToIndex(10))
 ,	RbMacro.ModifyBand(1, "MinHeight", (GuiHeight-MacroOffset)*(A_ScreenDPI/96))
 ,	RbMacro.ModifyBand(2, "MinHeight", (GuiHeight-MacroOffset)*(A_ScreenDPI/96))
-GuiControl, 1:Move, cRbMacro, % "W" GuiWidth
+GuiControl, 1:Move, cRbMacro, % "W" GuiWidth+5
 GuiControl, 1:Move, Repeat, % "y" GuiHeight-23
 GuiControl, 1:Move, Rept, % "y" GuiHeight-27
 GuiControl, 1:Move, TimesM, % "y" GuiHeight-27
