@@ -8042,6 +8042,33 @@ Loop, Parse, KeywordsList, |
 }
 return
 
+Scheduler:
+Gui, 1:-Disabled
+Gui, 27:Destroy
+Gui, 36:+owner1 -MinimizeBox
+Gui, 1:+Disabled
+Gui, 36:Add, Groupbox, Section W165 H50, Time of first run:
+Gui, 36:Add, DateTime, xs+10 ys+20 vSchedTime W140, yyyy/MM/dd HH:mm
+Gui, 36:Add, Groupbox, Section x+25 ym W165 H50, Schedule Type:
+Gui, 36:Add, DDL, xs+10 ys+20 vSchedFreq W140, Once||Minute|Hourly|Daily|Weekly|Monthly|On Start|On Logon|On Idle
+Gui, 36:Add, Radio, Checked Section xm+10 y+15 vTargetPMC W160, Target PMC file
+Gui, 36:Add, Radio, vTargetAHK W160, Target AHK file
+Gui, 36:Add, Text, W300 cRed, *The script will be saved or overwritten in the current directory!
+Gui, 36:Add, Button, -Wrap Section Default xm W75 H23 gSchedOK, %c_Lang020%
+Gui, 36:Add, Button, -Wrap ys W75 H23 gSchedCancel, %c_Lang021%
+Gui, 36:Add, Link, ys+5 W160, <a href="taskschd.msc">Open Task Scheduler</a>
+Gui, 36:Show,, Scheduler
+return
+
+SchedOK:
+SchedCancel:
+36GuiClose:
+36GuiEscape:
+Gui, 36:Submit, NoHide
+Gui, 1:-Disabled
+Gui, 36:Destroy
+return
+
 RunTimer:
 Gui, 27:+owner1 -MinimizeBox
 Gui, 1:+Disabled
@@ -8058,6 +8085,7 @@ Gui, 27:Add, Checkbox, -Wrap Checked%RunFirst% y+5 xp+15 W185 vRunFirst R1 Disab
 Gui, 27:Add, Checkbox, -Wrap Checked%ShowBar% y+8 xs+10 W200 vShowBar R1, %w_Lang009%
 Gui, 27:Add, Button, -Wrap Section Default xm W75 H23 gTimerOK, %c_Lang020%
 Gui, 27:Add, Button, -Wrap ys W75 H23 gTimerCancel, %c_Lang021%
+Gui, 27:Add, Button, -Wrap ys W75 H23 gScheduler, Scheduler
 If !(Timer_ran)
 {
 	GuiControl, 27:, TimerDelayX, 250

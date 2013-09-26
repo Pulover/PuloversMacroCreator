@@ -63,7 +63,7 @@ focus focusv font force fromcodepage global grid group groupbox guiclose guicont
 guiescape guisize hdr hidden hide hidedropdown high hkcc hkcr hkcu hkey_classes_root hkey_current_config
 hkey_current_user hkey_local_machine hkey_users hklm hku horz hotkey hours hscroll hwnd icon iconsmall
 id idlast ignore imagelist in int int64 int64p integer integerfast interrupt intp is italic join
-label lastfound lastfoundexist left length limit linecount line lines list listbox listview local
+label lastfound lastfoundexist left length limit linecount line lines link list listbox listview local
 localsameasglobal lock logoff low lower lowercase ltrim mainwindow margin maximize maximizebox menu
 minimize minimizebox minmax minutes monitorcount monitorname monitorprimary monitorworkarea
 monthcal mouse mousemove mousemoveoff move movedraw multi na name no noactivate nodefault nohide noicon
@@ -96,7 +96,7 @@ a_loopfilesizekb a_loopfilesizemb a_loopfiletimeaccessed a_loopfiletimecreated a
 a_loopreadline a_loopregkey a_loopregname a_loopregsubkey a_loopregtimemodified a_loopregtype a_mday
 a_min a_mm a_mmm a_mmmm a_mon a_mousedelay a_msec a_mydocuments a_now a_nowutc a_numbatchlines a_ostype
 a_osversion a_priorhotkey a_priorkey a_programfiles a_programs a_programscommon a_ptrsize a_regview
-a_screendpi a_screenheight a_screenwidth a_scriptdir a_scriptfullpath a_scriptname a_sec a_space
+a_screendpi a_screenheight a_screenwidth a_scriptdir a_scriptfullpath a_scripthwnd a_scriptname a_sec a_space
 a_startmenu a_startmenucommon a_startup a_startupcommon a_stringcasesense a_tab a_temp a_thisfunc
 a_thishotkey a_thislabel a_thismenu a_thismenuitem a_thismenuitempos a_tickcount a_timeidle
 a_timeidlephysical a_timesincepriorhotkey a_timesincethishotkey a_titlematchmode a_titlematchmodespeed
