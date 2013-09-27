@@ -508,7 +508,10 @@ Loop, Parse, FileCmdList, |
 	If (A_LoopField = "")
 		continue
 	If (InStr(A_LoopField, "File")=1 || InStr(A_LoopField, "Drive")=1)
+	{
+		RunList_File .= A_LoopField "|"
 		Menu, m_File, Add, %A_LoopField%, HelpB
+	}
 	Else If (InStr(A_LoopField, "Sort")=1 || InStr(A_LoopField, "String")=1
 	|| InStr(A_LoopField, "Split")=1)
 	{
@@ -522,24 +525,49 @@ Loop, Parse, FileCmdList, |
 			Menu, m_String, Add, %LastCmd%%A_LoopField%, HelpB
 			LastCmd := ""
 		}
+		RunList_String .= A_LoopField "|"
 	}
 	Else If (!InStr(A_LoopField, "Run") && (InStr(A_LoopField, "Wait")
 	|| (A_LoopField = "Input")))
+	{
 		Menu, m_Wait, Add, %A_LoopField%, HelpB
+		RunList_Wait .= A_LoopField "|"
+	}
 	Else If A_LoopField contains Box,Tip,Progress,Splash
+	{
 		Menu, m_Dialogs, Add, %A_LoopField%, HelpB
+		RunList_Dialogs .= A_LoopField "|"
+	}
 	Else If (InStr(A_LoopField, "Reg") || InStr(A_LoopField, "Ini")=1)
+	{
 		Menu, m_Registry, Add, %A_LoopField%, HelpB
+		RunList_Registry .= A_LoopField "|"
+	}
 	Else If InStr(A_LoopField, "Sound")=1
+	{
 		Menu, m_Sound, Add, %A_LoopField%, HelpB
+		RunList_Sound .= A_LoopField "|"
+	}
 	Else If InStr(A_LoopField, "Group")=1
+	{
 		Menu, m_Group, Add, %A_LoopField%, HelpB
+		RunList_Group .= A_LoopField "|"
+	}
 	Else If InStr(A_LoopField, "Env")=1
+	{
 		Menu, m_Vars, Add, %A_LoopField%, HelpB
+		RunList_Vars .= A_LoopField "|"
+	}
 	Else If InStr(A_LoopField, "Get")
+	{
 		Menu, m_Get, Add, %A_LoopField%, HelpB
+		RunList_Get .= A_LoopField "|"
+	}
 	Else If A_LoopField not contains Run,Process,Shutdown
+	{
 		Menu, m_Misc, Add, %A_LoopField%, HelpB
+		RunList_Misc .= A_LoopField "|"
+	}
 }
 Menu, RunB, Add, Run / RunWait, HelpB
 Menu, RunB, Add, RunAs, HelpB
@@ -550,7 +578,7 @@ Menu, RunB, Add, String, :m_String
 Menu, RunB, Add, Get Info, :m_Get
 Menu, RunB, Add, Wait, :m_Wait
 Menu, RunB, Add, Window Groups, :m_Group
-Menu, RunB, Add, Dialogs, :m_Dialogs
+Menu, RunB, Add, Messages, :m_Dialogs
 Menu, RunB, Add, Reg && Ini, :m_Registry
 Menu, RunB, Add, Sound, :m_Sound
 Menu, RunB, Add, Variables, :m_Vars
@@ -6049,6 +6077,8 @@ Gui, 1:+Disabled
 Gui, 10:Add, Groupbox, Section W600 H55
 Gui, 10:Add, Text, ys+20 xs+10 W200 R1 Right, %c_Lang055%:
 Gui, 10:Add, ComboBox, yp x+10 W170 vFileCmdL gFileCmd, %FileCmdList%
+Gui, 10:Add, Button, yp-1 x+0 W25 H23 hwndCmdFilter vCmdFilter gCmdFilter
+	ILButton(CmdFilter, ResDllPath ":" 102)
 Gui, 10:Add, Groupbox, Section xs y+20 W600 H380
 Gui, 10:Add, Text, ys+15 xs+10 W550 vFCmd1
 Gui, 10:Add, Edit, vPar1File W550 R1 -Multi
@@ -6098,6 +6128,7 @@ If (s_Caller = "Find")
 	GuiControl, 10:ChooseString, FileCmdL, %GotoRes1%
 	GoSub, FileCmd
 }
+SetFilter := t_Lang007
 Gui, 10:Show,, %c_Lang008%
 ChangeIcon(ReshInst, CmdWin, 62)
 Tooltip
@@ -6275,6 +6306,34 @@ Else
 	If (s_Caller = "Edit")
 		GuiControl, 10:Enable, RunApply
 }
+return
+
+CmdFilter:
+Menu, RunFilterMenu, Add, %t_Lang007%, SetRunFilter
+Menu, RunFilterMenu, Add, %t_Lang166%, SetRunFilter
+Menu, RunFilterMenu, Add, %t_Lang167%, SetRunFilter
+Menu, RunFilterMenu, Add, %t_Lang168%, SetRunFilter
+Menu, RunFilterMenu, Add, %t_Lang169%, SetRunFilter
+Menu, RunFilterMenu, Add, %t_Lang170%, SetRunFilter
+Menu, RunFilterMenu, Add, %t_Lang171%, SetRunFilter
+Menu, RunFilterMenu, Add, %t_Lang172%, SetRunFilter
+Menu, RunFilterMenu, Add, %t_Lang173%, SetRunFilter
+Menu, RunFilterMenu, Add, %t_Lang174%, SetRunFilter
+Menu, RunFilterMenu, Add, %t_Lang175%, SetRunFilter
+Menu, RunFilterMenu, Check, %SetFilter%
+Menu, RunFilterMenu, Show
+Menu, RunFilterMenu, DeleteAll
+return
+
+SetRunFilter:
+Filter := Run_Filter_%A_ThisMenuItemPos%
+If (Filter = "All")
+	GuiControl, 10:, FileCmdL, |%FileCmdList%
+Else
+	GuiControl, 10:, FileCmdL, % "|" RunList_%Filter%
+GuiControl, 10:Choose, FileCmdL, 1
+GoSub, FileCmd
+SetFilter := A_ThisMenuItem
 return
 
 EditFunc:

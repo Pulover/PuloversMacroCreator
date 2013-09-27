@@ -627,6 +627,16 @@
 	t_Lang163 =	Scheduler
 	t_Lang164 =	Menetrend MakróK
 	t_Lang165 =	Run Macro
+	t_Lang166 =	Reszelő
+	t_Lang167 =	HúR
+	t_Lang168 =	Get Info
+	t_Lang169 =	VáRjon
+	t_Lang170 =	Window Csoportok
+	t_Lang171 =	ÜZenetek
+	t_Lang172 =	Registry éS INI
+	t_Lang173 =	Hang
+	t_Lang174 =	VáLtozóK
+	t_Lang175 =	Misc.
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Nyitva
@@ -816,6 +826,7 @@
 	ApplyT_TT =	Alkalmaz
 	ApplyI_TT =	Alkalmaz
 	ApplyL_TT =	Beszúrás box (Insert)
+	CmdFilter_TT =	Szűrés típus
 	InsertKey_TT =	Be Gombnyomás (Ctrl+Insert)
 	InsertKeyT_TT =	Be Gombnyomás
 	DefaultMacro_TT =	Válassza ki a fájlt betölteni a program indításakor

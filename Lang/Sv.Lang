@@ -627,6 +627,16 @@
 	t_Lang163 =	Scheduler
 	t_Lang164 =	Schema Makron
 	t_Lang165 =	KöR Makro
+	t_Lang166 =	Fil
+	t_Lang167 =	String
+	t_Lang168 =	Få Info
+	t_Lang169 =	VäNta
+	t_Lang170 =	FöNster Grupper
+	t_Lang171 =	Meddelanden
+	t_Lang172 =	Registry Och INI
+	t_Lang173 =	Ljud
+	t_Lang174 =	Variabler
+	t_Lang175 =	Misc.
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Öppet
@@ -816,6 +826,7 @@
 	ApplyT_TT =	Ansök
 	ApplyI_TT =	Ansök
 	ApplyL_TT =	Infoga från rutan (Insert)
+	CmdFilter_TT =	Filtrera efter typ
 	InsertKey_TT =	Infoga Tangenttryckning (Ctrl+Insert)
 	InsertKeyT_TT =	Infoga Tangenttryckning
 	DefaultMacro_TT =	Välj fil att ladda om programmet startar

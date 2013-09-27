@@ -627,6 +627,16 @@
 	t_Lang163 =	Scheduler
 	t_Lang164 =	Planlegge Makroer
 	t_Lang165 =	KjøR Makro
+	t_Lang166 =	Fil
+	t_Lang167 =	String
+	t_Lang168 =	Få Info
+	t_Lang169 =	Vent
+	t_Lang170 =	VindusbåNd
+	t_Lang171 =	Meldinger
+	t_Lang172 =	Registret Og INI
+	t_Lang173 =	HøRes
+	t_Lang174 =	Variabler
+	t_Lang175 =	Div.
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Åpent
@@ -816,6 +826,7 @@
 	ApplyT_TT =	Påfør
 	ApplyI_TT =	Påfør
 	ApplyL_TT =	Sett fra boksen (Insert)
+	CmdFilter_TT =	Filtrere etter type
 	InsertKey_TT =	Sett Tastetrykk (Ctrl+Insert)
 	InsertKeyT_TT =	Sett Tastetrykk
 	DefaultMacro_TT =	Velg fil å laste på oppstart av programmet

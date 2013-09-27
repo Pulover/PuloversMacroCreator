@@ -627,6 +627,16 @@
 	t_Lang163 =	Programador
 	t_Lang164 =	Programar Macros
 	t_Lang165 =	Executar Macro
+	t_Lang166 =	Expedient
+	t_Lang167 =	Cadena
+	t_Lang168 =	Obtenir Informació
+	t_Lang169 =	Esperar
+	t_Lang170 =	Grups De Finestra
+	t_Lang171 =	Missatges
+	t_Lang172 =	Registre I INI
+	t_Lang173 =	So
+	t_Lang174 =	Variables
+	t_Lang175 =	Misc.
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Obert
@@ -816,6 +826,7 @@
 	ApplyT_TT =	Aplicar
 	ApplyI_TT =	Aplicar
 	ApplyL_TT =	Inseriu de Caixa (Insert)
+	CmdFilter_TT =	Filtrar per tipus
 	InsertKey_TT =	Inserir Pulsacions (Ctrl+Insert)
 	InsertKeyT_TT =	Inserir Pulsacions
 	DefaultMacro_TT =	Selecciona arxiu a carregar en l'arrencada del programa

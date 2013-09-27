@@ -627,6 +627,16 @@
 	t_Lang163 =	Планер
 	t_Lang164 =	Распоред макрое
 	t_Lang165 =	Покрени макро
+	t_Lang166 =	фајл
+	t_Lang167 =	ниска
+	t_Lang168 =	Гет Инфо
+	t_Lang169 =	Чекајте
+	t_Lang170 =	Виндов групе
+	t_Lang171 =	Поруке
+	t_Lang172 =	Регистар и ИНИ
+	t_Lang173 =	звучати
+	t_Lang174 =	варијабле
+	t_Lang175 =	Остало.
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Отворено
@@ -816,6 +826,7 @@
 	ApplyT_TT =	Применити
 	ApplyI_TT =	Применити
 	ApplyL_TT =	Инсерт из Бок (Insert)
+	CmdFilter_TT =	Филтрирај по типу
 	InsertKey_TT =	Убаците Пречицу (Ctrl+Insert)
 	InsertKeyT_TT =	Убаците Пречицу
 	DefaultMacro_TT =	Изаберите фајл за учитавање програма на старту

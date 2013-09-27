@@ -627,6 +627,16 @@
 	t_Lang163 =	调度
 	t_Lang164 =	附表宏
 	t_Lang165 =	运行宏
+	t_Lang166 =	文件
+	t_Lang167 =	串
+	t_Lang168 =	获取信息
+	t_Lang169 =	等待
+	t_Lang170 =	窗口组
+	t_Lang171 =	消息
+	t_Lang172 =	注册表和INI
+	t_Lang173 =	声音
+	t_Lang174 =	变量
+	t_Lang175 =	杂项。
 		
 ; Messages & Dialogs		
 	d_Lang001 =	打开
@@ -816,6 +826,7 @@
 	ApplyT_TT =	应用
 	ApplyI_TT =	应用
 	ApplyL_TT =	从框中插入（Insert）
+	CmdFilter_TT =	按类型筛选
 	InsertKey_TT =	插入击键 (Ctrl+Insert)
 	InsertKeyT_TT =	插入击键
 	DefaultMacro_TT =	选择要加载的文件在程序启动

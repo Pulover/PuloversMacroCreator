@@ -627,6 +627,16 @@
 	t_Lang163 =	Zeitplaner
 	t_Lang164 =	Makro Planen
 	t_Lang165 =	Makro Ausführen
+	t_Lang166 =	Datei
+	t_Lang167 =	String
+	t_Lang168 =	Holen Info
+	t_Lang169 =	Warten
+	t_Lang170 =	Fenster Gruppen
+	t_Lang171 =	Nachrichten
+	t_Lang172 =	Registry Und INI
+	t_Lang173 =	Ertönen
+	t_Lang174 =	Variablen
+	t_Lang175 =	Misc.
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Öffnen
@@ -816,6 +826,7 @@
 	ApplyT_TT =	Anwenden
 	ApplyI_TT =	Anwenden
 	ApplyL_TT =	Einfügen aus Box (Einfg)
+	CmdFilter_TT =	Nach Typ filtern
 	InsertKey_TT =	Tastendruck einfügen (Strg+Insert)
 	InsertKeyT_TT =	Tastendruck einfügen
 	DefaultMacro_TT =	Datei wählen, die beim Programmstart geladen werden soll

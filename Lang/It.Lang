@@ -627,6 +627,16 @@
 	t_Lang163 =	Scheduler
 	t_Lang164 =	Programmare Le Macro
 	t_Lang165 =	Esegui Macro
+	t_Lang166 =	File
+	t_Lang167 =	Stringa
+	t_Lang168 =	Richiedi Informazioni
+	t_Lang169 =	Attendere
+	t_Lang170 =	Gruppi Di Finestre
+	t_Lang171 =	Messaggi
+	t_Lang172 =	Registro E INI
+	t_Lang173 =	Suono
+	t_Lang174 =	Variabili
+	t_Lang175 =	Varie.
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Aperto
@@ -816,6 +826,7 @@
 	ApplyT_TT =	Applicare
 	ApplyI_TT =	Applicare
 	ApplyL_TT =	Inserisci da scatola (Insert)
+	CmdFilter_TT =	Filtra per tipo
 	InsertKey_TT =	Inserire Battitura (Ctrl+Insert)
 	InsertKeyT_TT =	Inserire Battitura
 	DefaultMacro_TT =	Seleziona il file da caricare all'avvio del programma

@@ -627,6 +627,16 @@
 	t_Lang163 =	스케줄러
 	t_Lang164 =	매크로를 일정
 	t_Lang165 =	매크로 실행
+	t_Lang166 =	파일
+	t_Lang167 =	끈
+	t_Lang168 =	정보를 얻을
+	t_Lang169 =	기다리다
+	t_Lang170 =	윈도우 그룹
+	t_Lang171 =	메시지
+	t_Lang172 =	레지스트리와 INI
+	t_Lang173 =	소리
+	t_Lang174 =	변수
+	t_Lang175 =	기타.
 		
 ; Messages & Dialogs		
 	d_Lang001 =	열기
@@ -816,6 +826,7 @@
 	ApplyT_TT =	신청
 	ApplyI_TT =	신청
 	ApplyL_TT =	상자 삽입 (Insert)
+	CmdFilter_TT =	유형별로 필터링
 	InsertKey_TT =	키를 삽입 (Ctrl+Insert)
 	InsertKeyT_TT =	키를 삽입
 	DefaultMacro_TT =	프로그램 시작시로드 할 파일을 선택

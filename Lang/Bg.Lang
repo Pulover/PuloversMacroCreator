@@ -627,6 +627,16 @@
 	t_Lang163 =	Scheduler
 	t_Lang164 =	График макроси
 	t_Lang165 =	Стартиране на макрос
+	t_Lang166 =	досие
+	t_Lang167 =	низ
+	t_Lang168 =	Получавайте информация
+	t_Lang169 =	чакам
+	t_Lang170 =	Window групи
+	t_Lang171 =	Съобщения
+	t_Lang172 =	Регистър и INI
+	t_Lang173 =	звук
+	t_Lang174 =	Променливи
+	t_Lang175 =	Misc.
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Отворен
@@ -816,6 +826,7 @@
 	ApplyT_TT =	Нанесете
 	ApplyI_TT =	Нанесете
 	ApplyL_TT =	Поставете от кутия (Insert)
+	CmdFilter_TT =	Филтър по тип
 	InsertKey_TT =	Вмъкнете Натискане На Клавиш (Ctrl+Insert)
 	InsertKeyT_TT =	Вмъкнете Натискане На Клавиш
 	DefaultMacro_TT =	Изберете файл за зареждане на стартиране на програмата

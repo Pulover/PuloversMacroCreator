@@ -627,6 +627,16 @@
 	t_Lang163 =	スケジューラ
 	t_Lang164 =	マクロをスケジュール
 	t_Lang165 =	マクロを実行する
+	t_Lang166 =	ファイル
+	t_Lang167 =	文字列
+	t_Lang168 =	情報を取得
+	t_Lang169 =	待って
+	t_Lang170 =	ウィンドウ·グループ
+	t_Lang171 =	メッセージ
+	t_Lang172 =	レジストリとINI
+	t_Lang173 =	サウンド
+	t_Lang174 =	変数
+	t_Lang175 =	その他。
 		
 ; Messages & Dialogs		
 	d_Lang001 =	開く
@@ -816,6 +826,7 @@
 	ApplyT_TT =	適用する
 	ApplyI_TT =	適用する
 	ApplyL_TT =	ボックスから挿入（Insert）
+	CmdFilter_TT =	タイプによるフィルタ
 	InsertKey_TT =	キーストロークを挿入 (Ctrl+Insert)
 	InsertKeyT_TT =	キーストロークを挿入
 	DefaultMacro_TT =	プログラムの起動時にロードするファイルを選択してください

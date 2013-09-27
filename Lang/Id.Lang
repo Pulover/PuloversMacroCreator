@@ -627,6 +627,16 @@
 	t_Lang163 =	Scheduler
 	t_Lang164 =	Jadwal Macro
 	t_Lang165 =	Jalankan Makro
+	t_Lang166 =	Berkas
+	t_Lang167 =	Senar
+	t_Lang168 =	Dapatkan Info
+	t_Lang169 =	Tunggu
+	t_Lang170 =	Kelompok Jendela
+	t_Lang171 =	Pesan
+	t_Lang172 =	Registry Dan INI
+	t_Lang173 =	Suara
+	t_Lang174 =	Variabel
+	t_Lang175 =	Lain-Lain.
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Buka
@@ -816,6 +826,7 @@
 	ApplyT_TT =	Menerapkan
 	ApplyI_TT =	Menerapkan
 	ApplyL_TT =	Masukkan dari Box (Insert)
+	CmdFilter_TT =	Menyaring menurut jenis
 	InsertKey_TT =	Masukkan keystroke (Ctrl+Insert)
 	InsertKeyT_TT =	Masukkan keystroke
 	DefaultMacro_TT =	Pilih berkas untuk memuat pada startup program yang

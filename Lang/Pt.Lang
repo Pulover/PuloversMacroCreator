@@ -627,6 +627,16 @@
 	t_Lang163 =	Agendador
 	t_Lang164 =	Agendar Macros
 	t_Lang165 =	Executar Macro
+	t_Lang166 =	Arquivo
+	t_Lang167 =	Texto
+	t_Lang168 =	Obter Informações
+	t_Lang169 =	Esperar
+	t_Lang170 =	Grupo De Janelas
+	t_Lang171 =	Mensagens
+	t_Lang172 =	Registro E INI
+	t_Lang173 =	Som
+	t_Lang174 =	VariáVeis
+	t_Lang175 =	Misc.
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Abrir
@@ -816,6 +826,7 @@
 	ApplyT_TT =	Aplicar
 	ApplyI_TT =	Aplicar
 	ApplyL_TT =	Inserir da Caixa (Insert)
+	CmdFilter_TT =	Filtrar por tipo
 	InsertKey_TT =	Inserir Tecla (Ctrl+Insert)
 	InsertKeyT_TT =	Inserir Tecla
 	DefaultMacro_TT =	Selecione um arquivo para abrir ao iniciar

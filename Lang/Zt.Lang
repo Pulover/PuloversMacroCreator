@@ -627,6 +627,16 @@
 	t_Lang163 =	調度
 	t_Lang164 =	附表宏
 	t_Lang165 =	運行宏
+	t_Lang166 =	文件
+	t_Lang167 =	串
+	t_Lang168 =	獲取信息
+	t_Lang169 =	等待
+	t_Lang170 =	窗口組
+	t_Lang171 =	消息
+	t_Lang172 =	註冊表和INI
+	t_Lang173 =	聲音
+	t_Lang174 =	變量
+	t_Lang175 =	雜項。
 		
 ; Messages & Dialogs		
 	d_Lang001 =	打開
@@ -816,6 +826,7 @@
 	ApplyT_TT =	申請
 	ApplyI_TT =	申請
 	ApplyL_TT =	插入盒（插入）
+	CmdFilter_TT =	按類型篩選
 	InsertKey_TT =	插入擊鍵 (Ctrl+Insert)
 	InsertKeyT_TT =	插入擊鍵
 	DefaultMacro_TT =	選擇要加載的文件在程序啟動

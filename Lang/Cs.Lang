@@ -627,6 +627,16 @@
 	t_Lang163 =	PláNovač
 	t_Lang164 =	PláN Makra
 	t_Lang165 =	Spustit Makro
+	t_Lang166 =	Soubor
+	t_Lang167 =	řEtěZ
+	t_Lang168 =	ZíSkejte Informace
+	t_Lang169 =	PočKejte
+	t_Lang170 =	Okenní Skupiny
+	t_Lang171 =	ZpráVy
+	t_Lang172 =	Registry A INI
+	t_Lang173 =	Zvuk
+	t_Lang174 =	ProměNné
+	t_Lang175 =	Misc.
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Otevřít
@@ -816,6 +826,7 @@
 	ApplyT_TT =	Platit
 	ApplyI_TT =	Platit
 	ApplyL_TT =	Vložit z krabice (Insert)
+	CmdFilter_TT =	Filtrovat podle typu
 	InsertKey_TT =	Vložit Klávesy (Ctrl+Insert)
 	InsertKeyT_TT =	Vložit Klávesy
 	DefaultMacro_TT =	Vyberte soubor, který chcete nahrát na startu programu

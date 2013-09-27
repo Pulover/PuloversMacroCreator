@@ -627,6 +627,16 @@
 	t_Lang163 =	планировщик
 	t_Lang164 =	планировать макросы
 	t_Lang165 =	Выполнить макрос
+	t_Lang166 =	файл
+	t_Lang167 =	строка
+	t_Lang168 =	Получить информацию
+	t_Lang169 =	ждать
+	t_Lang170 =	Окно группы
+	t_Lang171 =	сообщения
+	t_Lang172 =	Реестр и INI
+	t_Lang173 =	звучать
+	t_Lang174 =	Переменные
+	t_Lang175 =	Разный
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Открыто
@@ -816,6 +826,7 @@
 	ApplyT_TT =	Применять
 	ApplyI_TT =	Применять
 	ApplyL_TT =	Вставить из коробки (Insert)
+	CmdFilter_TT =	Фильтр по типу
 	InsertKey_TT =	Вставить Нажатием Клавиши (Ctrl+Insert)
 	InsertKeyT_TT =	Вставить Нажатием Клавиши
 	DefaultMacro_TT =	Выберите файл для загрузки при запуске программы

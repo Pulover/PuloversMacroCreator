@@ -627,6 +627,16 @@
 	t_Lang163 =	ZamanlayıCı
 	t_Lang164 =	Makro Programı
 	t_Lang165 =	Makro ÇAlışTıR
+	t_Lang166 =	Dosya
+	t_Lang167 =	Dizi
+	t_Lang168 =	HakkıNda Bilgi AlıN
+	t_Lang169 =	Bekleyin
+	t_Lang170 =	Pencere Grupları
+	t_Lang171 =	Mesajlar
+	t_Lang172 =	KayıT Ve INI
+	t_Lang173 =	Ses
+	t_Lang174 =	DeğIşKenler
+	t_Lang175 =	ÇEşItli.
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Açık
@@ -816,6 +826,7 @@
 	ApplyT_TT =	Uygulamak
 	ApplyI_TT =	Uygulamak
 	ApplyL_TT =	Kutusundan Ekle (Insert)
+	CmdFilter_TT =	Türleri filtresi
 	InsertKey_TT =	Tuş Eklemek (Ctrl+Insert)
 	InsertKeyT_TT =	Tuş Eklemek
 	DefaultMacro_TT =	Program başlangıçta yüklemek için dosyayı seçin

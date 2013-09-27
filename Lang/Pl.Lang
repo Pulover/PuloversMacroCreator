@@ -627,6 +627,16 @@
 	t_Lang163 =	Scheduler
 	t_Lang164 =	Harmonogram Makr
 	t_Lang165 =	Uruchom Makro
+	t_Lang166 =	Plik
+	t_Lang167 =	Smyczkowy
+	t_Lang168 =	Uzyskaj Informacje
+	t_Lang169 =	Zaczekaj
+	t_Lang170 =	Grupy Okienne
+	t_Lang171 =	WiadomośCi
+	t_Lang172 =	Kancelaria I INI
+	t_Lang173 =	Brzmieć
+	t_Lang174 =	Zmienne
+	t_Lang175 =	Inne.
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Otwarte
@@ -816,6 +826,7 @@
 	ApplyT_TT =	Zastosować
 	ApplyI_TT =	Zastosować
 	ApplyL_TT =	Wstaw z pudełkiem (Insert)
+	CmdFilter_TT =	Filtrować według typu
 	InsertKey_TT =	Włóż Klawiszy (Ctrl+Insert)
 	InsertKeyT_TT =	Włóż Klawiszy
 	DefaultMacro_TT =	Wybierz plik do załadowania przy starcie programu

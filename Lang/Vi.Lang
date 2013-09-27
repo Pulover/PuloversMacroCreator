@@ -627,6 +627,16 @@
 	t_Lang163 =	LịCh
 	t_Lang164 =	LịCh TrìNh Macro
 	t_Lang165 =	ChạY Macro
+	t_Lang166 =	TậP Tin
+	t_Lang167 =	ChuỗI
+	t_Lang168 =	NhậN đượC ThôNg Tin
+	t_Lang169 =	đợI
+	t_Lang170 =	NhóM CửA Sổ
+	t_Lang171 =	Tin NhắN
+	t_Lang172 =	ĐăNg Ký Và INI
+	t_Lang173 =	âM Thanh
+	t_Lang174 =	BiếN
+	t_Lang175 =	Misc.
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Mở
@@ -816,6 +826,7 @@
 	ApplyT_TT =	Áp dụng
 	ApplyI_TT =	Áp dụng
 	ApplyL_TT =	Chèn từ Box (Insert)
+	CmdFilter_TT =	Lọc theo loại
 	InsertKey_TT =	Chèn Tổ hợp phím (Ctrl + Insert)
 	InsertKeyT_TT =	Chèn Tổ hợp phím
 	DefaultMacro_TT =	Chọn tập tin để tải về khởi động chương trình

@@ -627,6 +627,16 @@
 	t_Lang163 =	Raspored
 	t_Lang164 =	Raspored Makroe
 	t_Lang165 =	TrčAnje Macro
+	t_Lang166 =	File
+	t_Lang167 =	GudačKi
+	t_Lang168 =	Dobiti Informacije
+	t_Lang169 =	ČEkaj
+	t_Lang170 =	Prozor Skupine
+	t_Lang171 =	Poruke
+	t_Lang172 =	Registar I INI
+	t_Lang173 =	Zvuk
+	t_Lang174 =	Varijable
+	t_Lang175 =	Razno.
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Otvoreno
@@ -816,6 +826,7 @@
 	ApplyT_TT =	Primijeniti
 	ApplyI_TT =	Primijeniti
 	ApplyL_TT =	Stavite na kutiji (Insert)
+	CmdFilter_TT =	Filtriranje po tipu
 	InsertKey_TT =	Umetnite Pritisak Na Tipku (Ctrl+Insert)
 	InsertKeyT_TT =	Umetnite Pritisak Na Tipku
 	DefaultMacro_TT =	Odaberite datoteku za učitavanje na pokretanju programa

@@ -627,6 +627,16 @@
 	t_Lang163 =	Ajastimella
 	t_Lang164 =	Aikataulu Makrot
 	t_Lang165 =	Suorita Makro
+	t_Lang166 =	Tiedosto
+	t_Lang167 =	Jono
+	t_Lang168 =	Get Info
+	t_Lang169 =	Odota
+	t_Lang170 =	Ikkuna RyhmäT
+	t_Lang171 =	Viestit
+	t_Lang172 =	Ini-
+	t_Lang173 =	Kuulostaa
+	t_Lang174 =	Muuttujat
+	t_Lang175 =	Muut.
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Avata
@@ -816,6 +826,7 @@
 	ApplyT_TT =	Käyttää
 	ApplyI_TT =	Käyttää
 	ApplyL_TT =	Insertin laatikko (Insert)
+	CmdFilter_TT =	Suodattaa tyyppi
 	InsertKey_TT =	Aseta Näppäilyn (Ctrl+Insert)
 	InsertKeyT_TT =	Aseta Näppäilyn
 	DefaultMacro_TT =	Valitse ladattava tiedosto on ohjelman käynnistyessä

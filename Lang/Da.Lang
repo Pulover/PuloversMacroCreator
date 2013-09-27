@@ -627,6 +627,16 @@
 	t_Lang163 =	Scheduler
 	t_Lang164 =	PlanlæG Makroer
 	t_Lang165 =	KøR Makro
+	t_Lang166 =	File
+	t_Lang167 =	String
+	t_Lang168 =	Få Info
+	t_Lang169 =	Vent
+	t_Lang170 =	Window Grupper
+	t_Lang171 =	Meddelelser
+	t_Lang172 =	Registry Og INI
+	t_Lang173 =	Lyd
+	t_Lang174 =	Variable
+	t_Lang175 =	Misc.
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Åbent
@@ -816,6 +826,7 @@
 	ApplyT_TT =	Anvend
 	ApplyI_TT =	Anvend
 	ApplyL_TT =	Indsæt fra kassen (Insert)
+	CmdFilter_TT =	Filtrere efter type
 	InsertKey_TT =	Indsæt Tastetryk (Ctrl+Insert)
 	InsertKeyT_TT =	Indsæt Tastetryk
 	DefaultMacro_TT =	Vælg fil at indlæse på programmets opstart

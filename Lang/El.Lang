@@ -627,6 +627,16 @@
 	t_Lang163 =	Scheduler
 	t_Lang164 =	Προγραμματίστε μακροεντολές
 	t_Lang165 =	Εκτέλεση μακροεντολής
+	t_Lang166 =	αρχείο
+	t_Lang167 =	κορδόνι
+	t_Lang168 =	Πάρτε πληροφορίες
+	t_Lang169 =	περιμένετε
+	t_Lang170 =	ομάδες Παράθυρο
+	t_Lang171 =	Μηνύματα
+	t_Lang172 =	Μητρώο και INI
+	t_Lang173 =	ήχος
+	t_Lang174 =	μεταβλητές
+	t_Lang175 =	Διάφορα.
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Ανοιχτό
@@ -816,6 +826,7 @@
 	ApplyT_TT =	Εφαρμογή
 	ApplyI_TT =	Εφαρμογή
 	ApplyL_TT =	Εισαγωγή από Box (Insert)
+	CmdFilter_TT =	Φιλτράρισμα με βάση τον τύπο
 	InsertKey_TT =	Εισάγετε Πληκτρολόγησης (Ctrl+Insert)
 	InsertKeyT_TT =	Εισάγετε Πληκτρολόγησης
 	DefaultMacro_TT =	Επιλέξτε το αρχείο να φορτώσει κατά την εκκίνηση του προγράμματος

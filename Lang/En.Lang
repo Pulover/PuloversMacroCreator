@@ -627,6 +627,16 @@
 	t_Lang163 =	Scheduler
 	t_Lang164 =	Schedule Macros
 	t_Lang165 =	Run Macro
+	t_Lang166 =	File
+	t_Lang167 =	String
+	t_Lang168 =	Get Info
+	t_Lang169 =	Wait
+	t_Lang170 =	Window Groups
+	t_Lang171 =	Messages
+	t_Lang172 =	Registry And INI
+	t_Lang173 =	Sound
+	t_Lang174 =	Variables
+	t_Lang175 =	Misc.
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Open
@@ -816,6 +826,7 @@
 	ApplyT_TT =	Apply
 	ApplyI_TT =	Apply
 	ApplyL_TT =	Insert from Box (Insert)
+	CmdFilter_TT =	Filter by type
 	InsertKey_TT =	Insert Keystroke (Ctrl+Insert)
 	InsertKeyT_TT =	Insert Keystroke
 	DefaultMacro_TT =	Select file to load on program startup

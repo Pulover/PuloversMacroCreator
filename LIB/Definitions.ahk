@@ -938,6 +938,9 @@ Media_Stop¢Media_Play_Pause¢Launch_Mail¢Launch_Media¢Launch_App1¢Launch_App
 LButton¢RButton¢MButton¢XButton1¢XButton2¢WheelDown¢WheelUp¢WheelLeft¢WheelRight
 )"
 
+Run_Filters := "All|File|String|Get|Wait|Group|Dialogs|Registry|Sound|Vars|Misc"
+Loop, Parse, Run_Filters, |
+	Run_Filter_%A_Index% := A_LoopField
 SchedTypes := "1|2|3|4|8|9|6"
 Loop, Parse, SchedTypes, |
 	Sched_%A_Index% := A_LoopField

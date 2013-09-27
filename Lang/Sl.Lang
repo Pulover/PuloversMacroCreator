@@ -627,6 +627,16 @@
 	t_Lang163 =	Scheduler
 	t_Lang164 =	Urnik Makrov
 	t_Lang165 =	ZažEni Makro
+	t_Lang166 =	Datoteka
+	t_Lang167 =	String
+	t_Lang168 =	Pridobite Informacije
+	t_Lang169 =	PočAkajte
+	t_Lang170 =	Okenski Skupine
+	t_Lang171 =	SporočIla
+	t_Lang172 =	Registra In INI
+	t_Lang173 =	Zvok
+	t_Lang174 =	Spremenljivke
+	t_Lang175 =	Razno.
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Odprite
@@ -816,6 +826,7 @@
 	ApplyT_TT =	Uporabi
 	ApplyI_TT =	Uporabi
 	ApplyL_TT =	Vstavite okencu (Insert)
+	CmdFilter_TT =	Filtrirati po tipu
 	InsertKey_TT =	Vstavite Keystroke (Ctrl+Insert)
 	InsertKeyT_TT =	Vstavite Keystroke
 	DefaultMacro_TT =	Izberite datoteko za nalaganje ob zagonu programa

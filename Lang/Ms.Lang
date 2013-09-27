@@ -627,6 +627,16 @@
 	t_Lang163 =	Berjadual
 	t_Lang164 =	Jadual Makro
 	t_Lang165 =	Main Makro
+	t_Lang166 =	Fail
+	t_Lang167 =	Rentetan
+	t_Lang168 =	Dapatkan Maklumat
+	t_Lang169 =	Tunggu
+	t_Lang170 =	Kumpulan Tingkap
+	t_Lang171 =	Mesej
+	t_Lang172 =	Pendaftaran Dan INI
+	t_Lang173 =	Bunyi
+	t_Lang174 =	Pembolehubah
+	t_Lang175 =	Misc.
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Buka
@@ -816,6 +826,7 @@
 	ApplyT_TT =	Memohon
 	ApplyI_TT =	Memohon
 	ApplyL_TT =	Memasukkan dari Box (Insert)
+	CmdFilter_TT =	Menapis mengikut jenis
 	InsertKey_TT =	Memasukkan keystroke (Ctrl+Sisipan)
 	InsertKeyT_TT =	Memasukkan keystroke
 	DefaultMacro_TT =	Pilih fail untuk memuatkan pada permulaan program

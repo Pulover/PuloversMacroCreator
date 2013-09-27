@@ -627,6 +627,16 @@
 	t_Lang163 =	Scheduler
 	t_Lang164 =	Plan Macro'S
 	t_Lang165 =	Macro Uitvoeren
+	t_Lang166 =	Bestand
+	t_Lang167 =	Koord
+	t_Lang168 =	Get Info
+	t_Lang169 =	Wachten
+	t_Lang170 =	Window Groepen
+	t_Lang171 =	Berichten
+	t_Lang172 =	Register En INI
+	t_Lang173 =	Klinken
+	t_Lang174 =	Variabelen
+	t_Lang175 =	Misc.
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Open
@@ -816,6 +826,7 @@
 	ApplyT_TT =	Van toepassing zijn
 	ApplyI_TT =	Van toepassing zijn
 	ApplyL_TT =	Invoegen van Box (Insert)
+	CmdFilter_TT =	Filteren op soort
 	InsertKey_TT =	Steek Toetsaanslag (Ctrl+Insert)
 	InsertKeyT_TT =	Steek Toetsaanslag
 	DefaultMacro_TT =	Selecteer bestand te laden bij het opstarten van het programma

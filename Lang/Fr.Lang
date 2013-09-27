@@ -627,6 +627,16 @@
 	t_Lang163 =	Scheduler
 	t_Lang164 =	Programmer Des Macros
 	t_Lang165 =	ExéCuter Une Macro
+	t_Lang166 =	Fichier
+	t_Lang167 =	ChaîNe
+	t_Lang168 =	Obtenez De L'Information
+	t_Lang169 =	Attendre
+	t_Lang170 =	Groupes De FenêTre
+	t_Lang171 =	Messages
+	t_Lang172 =	Registre Et INI
+	t_Lang173 =	Sonner
+	t_Lang174 =	Variables
+	t_Lang175 =	Divers.
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Ouvert
@@ -816,6 +826,7 @@
 	ApplyT_TT =	Appliquer
 	ApplyI_TT =	Appliquer
 	ApplyL_TT =	Insérez de la case (Insert)
+	CmdFilter_TT =	Filtrer par type
 	InsertKey_TT =	Insérer Frappe (Ctrl+Insert)
 	InsertKeyT_TT =	Insérer Frappe
 	DefaultMacro_TT =	Sélectionnez le fichier à charger au démarrage du programme
