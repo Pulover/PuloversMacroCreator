@@ -22,6 +22,8 @@
 			Else If (A_LoopReadLine = "")
 				PmcCode[ID] := {Opt: Opt, Row: Row}
 		}
+		If !IsObject(PmcCode[ID].opt)
+			PmcCode[ID] := {Opt: Opt, Row: Row}
 		If (ID = 0)
 		{
 			If (PmcCode[0] = "")
