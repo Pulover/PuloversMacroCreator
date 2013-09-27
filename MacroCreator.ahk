@@ -8137,7 +8137,7 @@ Gui, 36:Add, StatusBar
 Gui, 36:Default
 SB_SetText(t_Lang153)
 Gui, 36:Show,, %t_Lang164%
-ChangeIcon(ReshInst, CmdWin, 75)
+ChangeIcon(ReshInst, CmdWin, 111)
 return
 
 SchedOK:
@@ -12556,7 +12556,7 @@ Menu, FileMenu, Icon, %f_Lang005%, %ResDllPath%, 52
 Menu, FileMenu, Icon, %f_Lang006%`t%_s%Ctrl+E, %ResDllPath%, 16
 Menu, FileMenu, Icon, %f_Lang007%`t%_s%Ctrl+P, %ResDllPath%, 49
 Menu, FileMenu, Icon, %f_Lang008%`t%_s%Ctrl+Shift+E, %ResDllPath%, 14
-Menu, FileMenu, Icon, %f_Lang009%`t%_s%Ctrl+Alt+T, %ResDllPath%, 71
+Menu, FileMenu, Icon, %f_Lang009%`t%_s%Ctrl+Alt+T, %ResDllPath%, 103
 Menu, FileMenu, Icon, %f_Lang010%`t%_s%Alt+F3, %ResDllPath%, 35
 Menu, FileMenu, Icon, %f_Lang011%`t%_s%Alt+F4, %ResDllPath%, 15
 Menu, CommandMenu, Icon, %i_Lang001%`t%_s%F2, %ResDllPath%, 38
