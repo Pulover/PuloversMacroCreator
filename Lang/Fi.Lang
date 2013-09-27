@@ -23,9 +23,10 @@
 	f_Lang006 =	V&ie AHK
 	f_Lang007 =	&Esikatselu Script
 	f_Lang008 =	&Muokkaa Script
-	f_Lang009 =	Li&stamuuttujien
-	f_Lang010 =	&Poistua
-	f_Lang011 =	Ei tie&dostoja
+	f_Lang009 =	Ai&kataulu Makrot
+	f_Lang010 =	Li&stamuuttujien
+	f_Lang011 =	&Poistua
+	f_Lang012 =	Ei tie&dostoja
 		
 ; Macro Sub Menu		
 	r_lang001 =	&Nauhoita makro
@@ -147,6 +148,15 @@
 	y_Lang001 =	Piilota ikkuna
 	y_Lang002 =	Näytä ikkuna
 	y_Lang003 =	Hallinnan Työkalupalkki
+		
+; Built-in Vars Menu		
+	b_Lang001 =	erikoismerkit
+	b_Lang002 =	ominaisuudet
+	b_Lang003 =	Päivämäärä ja aika
+	b_Lang004 =	Käyttäjän Idle Time
+	b_Lang005 =	Järjestelmän ja käyttäjän
+	b_Lang006 =	Muut.
+	b_Lang007 =	Silmukka
 		
 ; Main Window		
 	w_Lang001 =	Vienti
@@ -604,6 +614,19 @@
 	t_Lang150 =	Pienennä Tray
 	t_Lang151 =	Näyttö vahvistus suljettaessa makro
 	t_Lang152 =	Luo varmuuskopiot automaattisesti
+	t_Lang153 =	Luo ajoitetun tehtävän Windows Task Scheduler.
+	t_Lang154 =	Ensimmäisen nousun
+	t_Lang155 =	Aikataulu tyyppi
+	t_Lang156 =	Kun||Päivittäin|Viikoittain|Kuukausittain|Etusivu|Kirjautuminen|Joutokäynti
+	t_Lang157 =	Target PMC tiedosto
+	t_Lang158 =	Target AHK tiedosto
+	t_Lang159 =	Skripti tallennetaan tai korvata nykyisen hakemiston!
+	t_Lang160 =	Open Tehtävien ajoitus
+	t_Lang161 =	Tehtävä luotu!
+	t_Lang162 =	Virhe. Tehtävä ei voitu luoda.
+	t_Lang163 =	Ajastimella
+	t_Lang164 =	Aikataulu Makrot
+	t_Lang165 =	Suorita Makro
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Avata
@@ -745,6 +768,7 @@
 	d_Lang081 =	Voit muuttaa ja muokata kaavoihin Näytä-valikosta.
 	d_Lang082 =	Tiedostoa ei löydy!
 	d_Lang083 =	Varmuuskopio on löytynyt. Haluatko avata sen?
+	d_Lang084 =	Ole hyvä ja tallentaa muutokset ennen aikataulujen tehtävä.
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -1202,6 +1226,7 @@
 	SetNumlockState	Asettaa tila Numlock-näppäintä. Myös pakottaa avain jäädä päälle tai pois päältä.
 	SetScrollLockState	Asettaa tila ScrollLock näppäintä. Myös pakottaa avain jäädä päälle tai pois päältä.
 	SetRegView	Mahdollistaa rekisterin komennot 32-bittinen script käyttää 64-bittinen rekisterin mieltä ja päinvastoin.
+	SetTimer	Aiheuttaa aliohjelma käynnistyy automaattisesti ja toistuvasti määritetyn ajan.
 	Shutdown	Sammuu, käynnistyy uudelleen tai kirjautuu ulos järjestelmästä.
 	Sin	Palauttaa trigonometriset sini lukumäärä.
 	Sleep	Odottaa määritetyn ajan ennen kuin jatkat.

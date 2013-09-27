@@ -23,9 +23,10 @@
 	f_Lang006 =	E&xportera till AHK
 	f_Lang007 =	&Förhandsgranska kod
 	f_Lang008 =	&Redigera Skript
-	f_Lang009 =	&Listvariabler
-	f_Lang010 =	&Avsluta
-	f_Lang011 =	&Inga filer
+	f_Lang009 =	S&chema Makron
+	f_Lang010 =	&Listvariabler
+	f_Lang011 =	&Avsluta
+	f_Lang012 =	&Inga filer
 		
 ; Macro Sub Menu		
 	r_lang001 =	&Spela in makro
@@ -147,6 +148,15 @@
 	y_Lang001 =	Dölj fönster
 	y_Lang002 =	Visa fönster
 	y_Lang003 =	Kontroller Verktygsfältet
+		
+; Built-in Vars Menu		
+	b_Lang001 =	SPECIALTECKEN
+	b_Lang002 =	Egenskaper
+	b_Lang003 =	Datum och tid
+	b_Lang004 =	Användare Idle Time
+	b_Lang005 =	System och Användare
+	b_Lang006 =	Misc.
+	b_Lang007 =	Loop
 		
 ; Main Window		
 	w_Lang001 =	Exportera
@@ -604,6 +614,19 @@
 	t_Lang150 =	Minimera till aktivitetsfältet
 	t_Lang151 =	Visa bekräftelse när du stänger ett makro
 	t_Lang152 =	Skapa säkerhetskopior automatiskt
+	t_Lang153 =	Skapar en schemalagd aktivitet i Windows Schemaläggaren.
+	t_Lang154 =	Tid för första körningen
+	t_Lang155 =	Schema typ
+	t_Lang156 =	När||Dagens|Veckans|månad|Start|Inloggning|Idle
+	t_Lang157 =	Target PMC fil
+	t_Lang158 =	Target AHK fil
+	t_Lang159 =	Manuset kommer att sparas eller skrivas i den aktuella katalogen!
+	t_Lang160 =	Öppna Schemaläggaren
+	t_Lang161 =	Uppgift skapats!
+	t_Lang162 =	Ett fel inträffade. Uppgiften kunde inte skapas.
+	t_Lang163 =	Scheduler
+	t_Lang164 =	Schema Makron
+	t_Lang165 =	KöR Makro
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Öppet
@@ -745,6 +768,7 @@
 	d_Lang081 =	Du kan ändra och anpassa layouter på menyn Visa.
 	d_Lang082 =	Filen hittades inte!
 	d_Lang083 =	En backup-fil har hittats. Vill du öppna den?
+	d_Lang084 =	Vänligen spara dina ändringar innan du schemalägger aktiviteter.
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -1202,6 +1226,7 @@
 	SetNumlockState	Ställer in tillståndet för NumLock. Kan också tvinga nyckeln för att stanna på eller av.
 	SetScrollLockState	Ställer in tillståndet för ScrollLock tangenten. Kan också tvinga nyckeln för att stanna på eller av.
 	SetRegView	Tillåter registret kommandon i en 32-bitars script för att få tillgång till 64-bitars register vy och vice versa.
+	SetTimer	Orsakar en subrutin som ska startas automatiskt och upprepade gånger vid en viss tidsintervall.
 	Shutdown	Stänger, startar, eller loggar ut systemet.
 	Sin	Returnerar trigonometrisk sinus för Number.
 	Sleep	Waits angiven tid innan du fortsätter.

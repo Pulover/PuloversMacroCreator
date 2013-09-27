@@ -23,9 +23,10 @@
 	f_Lang006 =	AHK로 내보내기
 	f_Lang007 =	미리보기 스크립트
 	f_Lang008 =	스크립트를 편집
-	f_Lang009 =	변수 목록
-	f_Lang010 =	출구
-	f_Lang011 =	없음
+	f_Lang009 =	매크로를 일정
+	f_Lang010 =	변수 목록
+	f_Lang011 =	출구
+	f_Lang012 =	없음
 		
 ; Macro Sub Menu		
 	r_lang001 =	기록 매크로
@@ -147,6 +148,15 @@
 	y_Lang001 =	창 숨기기
 	y_Lang002 =	창 표시
 	y_Lang003 =	컨트롤 도구 모음
+		
+; Built-in Vars Menu		
+	b_Lang001 =	특수 문자
+	b_Lang002 =	등록
+	b_Lang003 =	날짜 및 시간
+	b_Lang004 =	사용자 유휴 시간
+	b_Lang005 =	시스템 및 사용자
+	b_Lang006 =	기타.
+	b_Lang007 =	고리
 		
 ; Main Window		
 	w_Lang001 =	수출
@@ -604,6 +614,19 @@
 	t_Lang150 =	트레이로 최소화
 	t_Lang151 =	매크로를 닫을 때 확인 표시
 	t_Lang152 =	自動的にバックアップを作成する
+	t_Lang153 =	Windows 작업 스케줄러에서 예약 된 작업을 생성.
+	t_Lang154 =	처음 실행시
+	t_Lang155 =	일정 유형
+	t_Lang156 =	일단||일간|주간|월간|시작|로그인|공회전
+	t_Lang157 =	대상 PMC 파일
+	t_Lang158 =	대상 AHK 파일
+	t_Lang159 =	스크립트를 저장하거나 현재 디렉토리에 덮어 쓰기합니다!
+	t_Lang160 =	열기 작업 스케줄러
+	t_Lang161 =	작업이 성공적으로 생성!
+	t_Lang162 =	오류가 발생했습니다.작업을 만들 수 없습니다.
+	t_Lang163 =	스케줄러
+	t_Lang164 =	매크로를 일정
+	t_Lang165 =	매크로 실행
 		
 ; Messages & Dialogs		
 	d_Lang001 =	열기
@@ -745,6 +768,7 @@
 	d_Lang081 =	당신은 변경하고보기 메뉴에서 레이아웃을 사용자 정의 할 수 있습니다.
 	d_Lang082 =	파일을 찾을 수 없습니다!
 	d_Lang083 =	バックアップファイルが見出された。あなたはそれを開きたい？
+	d_Lang084 =	작업을 예약하기 전에 변경 사항을 저장하십시오.
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -1202,6 +1226,7 @@
 	SetNumlockState	숫자 잠금 키의 상태를 설정합니다. 또한 키가 on 또는 off 유지하도록 할 수 있습니다.
 	SetScrollLockState	ScrollLock이 키의 상태를 설정합니다. 또한 키가 on 또는 off 유지하도록 할 수 있습니다.
 	SetRegView	32 비트 스크립트에서 레지스트리 명령은 64 비트 레지스트리보기 및 그 반대에 액세스 할 수 있습니다.
+	SetTimer	지정된 시간 간격으로 자동으로 반복적으로 실행되는 서브 루틴을 발생합니다.
 	Shutdown	, 종료 다시 시작하거나 시스템을 로그 오프합니다.
 	Sin	수의 삼각 사인을 반환합니다.
 	Sleep	계속하기 전에 지정된 시간을 기다립니다.

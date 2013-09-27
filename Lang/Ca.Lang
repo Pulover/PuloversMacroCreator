@@ -23,9 +23,10 @@
 	f_Lang006 =	E&xporta a AHK
 	f_Lang007 =	&Vista prèvia de script
 	f_Lang008 =	Ed&ita Guió
-	f_Lang009 =	&Llista de les variables
-	f_Lang010 =	&Sortida
-	f_Lang011 =	No &hi ha arxius
+	f_Lang009 =	&Programar Macros
+	f_Lang010 =	&Llista de les variables
+	f_Lang011 =	&Sortida
+	f_Lang012 =	No &hi ha arxius
 		
 ; Macro Sub Menu		
 	r_lang001 =	&Gravar macro
@@ -147,6 +148,15 @@
 	y_Lang001 =	Hide Window
 	y_Lang002 =	Mostrar finestra
 	y_Lang003 =	Barra D'eines De Controls
+		
+; Built-in Vars Menu		
+	b_Lang001 =	Caràcters especials
+	b_Lang002 =	Propietats
+	b_Lang003 =	Data i Hora
+	b_Lang004 =	Usuari Temps d'inactivitat
+	b_Lang005 =	Sistema i Usuari
+	b_Lang006 =	Misc.
+	b_Lang007 =	Bucle
 		
 ; Main Window		
 	w_Lang001 =	Exportar
@@ -604,6 +614,19 @@
 	t_Lang150 =	Minimitza a la safata
 	t_Lang151 =	Pantalla de confirmació en tancar una macro
 	t_Lang152 =	Crea còpies de seguretat de forma automàtica
+	t_Lang153 =	Crea una tasca programada al programador de tasques de Windows.
+	t_Lang154 =	Temps del primer termini
+	t_Lang155 =	Programar tipus
+	t_Lang156 =	Un cop||Diari|Setmanal|Mensual|Inici|Iniciar sessió|Idle
+	t_Lang157 =	Arxiu PMC Target
+	t_Lang158 =	Target arxiu AHK
+	t_Lang159 =	L'script es guarda o es sobreescriu en el directori actual!
+	t_Lang160 =	Programador de tasques obert
+	t_Lang161 =	Grup creat amb èxit!
+	t_Lang162 =	S'ha produït un error. La tasca no va poder ser creada.
+	t_Lang163 =	Programador
+	t_Lang164 =	Programar Macros
+	t_Lang165 =	Executar Macro
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Obert
@@ -745,6 +768,7 @@
 	d_Lang081 =	Vostè pot canviar i personalitzar els dissenys al menú View.
 	d_Lang082 =	El fitxer no s'ha trobat!
 	d_Lang083 =	S'ha trobat un fitxer de còpia de seguretat. Vols obrir-lo?
+	d_Lang084 =	Deseu els canvis abans de programar una tasca.
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -1202,6 +1226,7 @@
 	SetNumlockState	Estableix l'estat de la tecla Bloq Num També es pot forçar la clau per mantenir-se encès o apagat.
 	SetScrollLockState	Estableix l'estat de la tecla Bloq Despl. També es pot forçar la clau per mantenir-se encès o apagat.
 	SetRegView	Permet que les ordres de registre en un script de 32 bits per accedir a la visualització del registre de 64 bits i viceversa.
+	SetTimer	Provoca un subprograma que es llançarà de forma automàtica i repetidament a un interval de temps especificat.
 	Shutdown	Apaga, reinicia o tanca sessió en el sistema.
 	Sin	Retorna el si trigonomètric del Nombre.
 	Sleep	Espera durant el període de temps especificat abans de continuar.

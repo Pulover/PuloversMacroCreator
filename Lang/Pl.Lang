@@ -23,9 +23,10 @@
 	f_Lang006 =	&Eksport do AHK
 	f_Lang007 =	S&cript podgląd
 	f_Lang008 =	E&dycja Skryptu
-	f_Lang009 =	&Lista zmiennych
-	f_Lang010 =	&Wyjście
-	f_Lang011 =	&Brak plików
+	f_Lang009 =	&Harmonogram Makr
+	f_Lang010 =	&Lista zmiennych
+	f_Lang011 =	&Wyjście
+	f_Lang012 =	&Brak plików
 		
 ; Macro Sub Menu		
 	r_lang001 =	&Macro Record
@@ -147,6 +148,15 @@
 	y_Lang001 =	Ukryj okno
 	y_Lang002 =	Pokaż okno
 	y_Lang003 =	Pasek Narzędzi Kontroli
+		
+; Built-in Vars Menu		
+	b_Lang001 =	Znaki specjalne
+	b_Lang002 =	właściwości
+	b_Lang003 =	Data i godzina
+	b_Lang004 =	User Idle Time
+	b_Lang005 =	System i użytkownika
+	b_Lang006 =	Inne.
+	b_Lang007 =	Pętla
 		
 ; Main Window		
 	w_Lang001 =	Eksportować
@@ -604,6 +614,19 @@
 	t_Lang150 =	Zminimalizować do zasobnika
 	t_Lang151 =	Wyświetlanie potwierdzenia przy zamykaniu makro
 	t_Lang152 =	Tworzenie kopii zapasowych automatycznie
+	t_Lang153 =	Tworzy zaplanowane zadanie w Harmonogramie zadań systemu Windows.
+	t_Lang154 =	Czas od pierwszego uruchomienia
+	t_Lang155 =	Harmonogram typu
+	t_Lang156 =	Po||Codzienne|tygodniu|W miesiącu|Start|Logowanie|Idle
+	t_Lang157 =	Plik docelowy PMC
+	t_Lang158 =	Plik docelowy AHK
+	t_Lang159 =	Skrypt zostanie zapisany lub zastąpione w bieżącym katalogu!
+	t_Lang160 =	Otwórz Harmonogram zadań
+	t_Lang161 =	Zadanie utworzona!
+	t_Lang162 =	Wystąpił błąd.Zadanie to nie może być utworzony.
+	t_Lang163 =	Scheduler
+	t_Lang164 =	Harmonogram Makr
+	t_Lang165 =	Uruchom Makro
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Otwarte
@@ -745,6 +768,7 @@
 	d_Lang081 =	Możesz zmienić i dostosować układy w menu Widok.
 	d_Lang082 =	Plik nie został znaleziony!
 	d_Lang083 =	Plik kopii zapasowej został znaleziony. Czy chcesz go otworzyć?
+	d_Lang084 =	Proszę zapisać zmiany przed planowania zadania.
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -1202,6 +1226,7 @@
 	SetNumlockState	Ustawia stan klawisza NumLock. Można także wymusić, aby zatrzymać lub wyłączyć.
 	SetScrollLockState	Ustawia stan klawisza ScrollLock. Można także wymusić, aby zatrzymać lub wyłączyć.
 	SetRegView	Pozwala rejestru poleceń w skrypcie 32-bitowym, aby przejść do widoku 64-bitowego rejestru i vice versa.
+	SetTimer	Wywołuje podprogram być uruchamiany automatycznie i wielokrotnie w określonym przedziale czasu.
 	Shutdown	Wyłącza się, restartuje lub wyloguje się z systemu.
 	Sin	Zwraca sinus trygonometryczne numer.
 	Sleep	Czeka na określony czas przed kontynuowaniem.

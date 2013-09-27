@@ -23,9 +23,10 @@
 	f_Lang006 =	導出到華民航空
 	f_Lang007 =	預覽腳本
 	f_Lang008 =	編輯腳本
-	f_Lang009 =	列出變量
-	f_Lang010 =	出口
-	f_Lang011 =	沒有文件
+	f_Lang009 =	附表宏
+	f_Lang010 =	列出變量
+	f_Lang011 =	出口
+	f_Lang012 =	沒有文件
 		
 ; Macro Sub Menu		
 	r_lang001 =	錄製宏
@@ -147,6 +148,15 @@
 	y_Lang001 =	隱藏窗口
 	y_Lang002 =	櫥窗
 	y_Lang003 =	控制工具欄
+		
+; Built-in Vars Menu		
+	b_Lang001 =	特殊字符
+	b_Lang002 =	屬性
+	b_Lang003 =	日期和時間
+	b_Lang004 =	用戶空閒時間
+	b_Lang005 =	系統和用戶
+	b_Lang006 =	雜項。
+	b_Lang007 =	循環
 		
 ; Main Window		
 	w_Lang001 =	出口
@@ -604,6 +614,19 @@
 	t_Lang150 =	最小化到托盤
 	t_Lang151 =	關閉宏時顯示確認
 	t_Lang152 =	自動創建備份
+	t_Lang153 =	在Windows任務調度程序創建一個計劃任務。
+	t_Lang154 =	第一次運行的時間
+	t_Lang155 =	計劃類型
+	t_Lang156 =	一旦|||一周|月刊|開始|登錄|空閒
+	t_Lang157 =	目標PMC文件
+	t_Lang158 =	目標AHK文件
+	t_Lang159 =	該腳本將被保存在當前目錄下覆蓋！
+	t_Lang160 =	打開任務計劃程序
+	t_Lang161 =	任務創建成功！
+	t_Lang162 =	發生錯誤。無法創建的任務。
+	t_Lang163 =	調度
+	t_Lang164 =	附表宏
+	t_Lang165 =	運行宏
 		
 ; Messages & Dialogs		
 	d_Lang001 =	打開
@@ -745,6 +768,7 @@
 	d_Lang081 =	在“視圖”菜單中，您可以更改和自定義佈局。
 	d_Lang082 =	該文件未找到！
 	d_Lang083 =	備份文件已經被發現。你想打開它？
+	d_Lang084 =	調度任務之前，請保存更改。
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -1202,6 +1226,7 @@
 	SetNumlockState	設置的NumLock鍵的狀態。也可以強制鑰匙留在或關閉。
 	SetScrollLockState	設置ScrollLock鍵鍵的狀態。也可以強制鑰匙留在或關閉。
 	SetRegView	允許一個32位註冊表中的命令腳本訪問64位註冊表視圖，反之亦然。
+	SetTimer	導致一個子程序自動啟動，並在指定的時間間隔重複。
 	Shutdown	關機，重啟或註銷系統。
 	Sin	返回數的三角正弦。
 	Sleep	等待指定的時間，然後再繼續。

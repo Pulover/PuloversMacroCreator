@@ -23,9 +23,10 @@
 	f_Lang006 =	导出为ahk
 	f_Lang007 =	预览脚本
 	f_Lang008 =	编辑脚本
-	f_Lang009 =	列出变量
-	f_Lang010 =	导出
-	f_Lang011 =	没有文件
+	f_Lang009 =	附表宏
+	f_Lang010 =	列出变量
+	f_Lang011 =	导出
+	f_Lang012 =	没有文件
 		
 ; Macro Sub Menu		
 	r_lang001 =	录制宏
@@ -147,6 +148,15 @@
 	y_Lang001 =	隐藏窗口
 	y_Lang002 =	橱窗
 	y_Lang003 =	控制工具栏
+		
+; Built-in Vars Menu		
+	b_Lang001 =	特殊字符
+	b_Lang002 =	属性
+	b_Lang003 =	日期和时间
+	b_Lang004 =	用户空闲时间
+	b_Lang005 =	系统和用户
+	b_Lang006 =	杂项。
+	b_Lang007 =	循环
 		
 ; Main Window		
 	w_Lang001 =	导出
@@ -604,6 +614,19 @@
 	t_Lang150 =	最小化到托盘
 	t_Lang151 =	关闭宏时显示确认
 	t_Lang152 =	自动创建备份
+	t_Lang153 =	在Windows任务调度程序创建一个计划任务。
+	t_Lang154 =	第一次运行的时间
+	t_Lang155 =	计划类型
+	t_Lang156 =	一旦|||一周|月刊|开始|登录|空闲
+	t_Lang157 =	目标PMC文件
+	t_Lang158 =	目标AHK文件
+	t_Lang159 =	该脚本将被保存在当前目录下覆盖！
+	t_Lang160 =	打开任务计划程序
+	t_Lang161 =	任务创建成功！
+	t_Lang162 =	发生错误。无法创建的任务。
+	t_Lang163 =	调度
+	t_Lang164 =	附表宏
+	t_Lang165 =	运行宏
 		
 ; Messages & Dialogs		
 	d_Lang001 =	打开
@@ -745,6 +768,7 @@
 	d_Lang081 =	在“视图”菜单中，您可以更改和自定义布局。
 	d_Lang082 =	该文件未找到！
 	d_Lang083 =	备份文件已经被发现。你想打开它？
+	d_Lang084 =	调度任务之前，请保存更改。
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -1202,6 +1226,7 @@
 	SetNumlockState	设置的NumLock键的状态。也可以强制钥匙留在或关闭。
 	SetScrollLockState	设置ScrollLock键键的状态。也可以强制钥匙留在或关闭。
 	SetRegView	允许一个32位注册表中的命令脚本访问64位注册表视图，反之亦然。
+	SetTimer	导致一个子程序自动启动，并在指定的时间间隔重复。
 	Shutdown	关机，重启或注销系统。
 	Sin	返回数的三角正弦。
 	Sleep	等待指定的时间，然后再继续。

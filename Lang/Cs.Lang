@@ -23,9 +23,10 @@
 	f_Lang006 =	E&xport do AHK
 	f_Lang007 =	N&áhled Script
 	f_Lang008 =	U&pravit Skript
-	f_Lang009 =	&Seznam proměnných
-	f_Lang010 =	O&dchod
-	f_Lang011 =	&Žádné soubory
+	f_Lang009 =	PláN &Makra
+	f_Lang010 =	&Seznam proměnných
+	f_Lang011 =	O&dchod
+	f_Lang012 =	&Žádné soubory
 		
 ; Macro Sub Menu		
 	r_lang001 =	&Záznam makra
@@ -147,6 +148,15 @@
 	y_Lang001 =	Skrýt okno
 	y_Lang002 =	Zobrazit okno
 	y_Lang003 =	Ovládací Prvky Panelu Nástrojů
+		
+; Built-in Vars Menu		
+	b_Lang001 =	Speciální znaky
+	b_Lang002 =	Nemovitosti
+	b_Lang003 =	Datum a čas
+	b_Lang004 =	Uživatel Idle Time
+	b_Lang005 =	Systém a uživatele
+	b_Lang006 =	Misc.
+	b_Lang007 =	Smyčka
 		
 ; Main Window		
 	w_Lang001 =	Export
@@ -604,6 +614,19 @@
 	t_Lang150 =	Minimalizovat do tray
 	t_Lang151 =	Zobrazit potvrzení při zavírání makra
 	t_Lang152 =	Vytvoření zálohy automaticky
+	t_Lang153 =	Vytvoří naplánované úlohy v Plánovači úloh systému Windows.
+	t_Lang154 =	Čas prvního běhu
+	t_Lang155 =	Plán typ
+	t_Lang156 =	Jakmile||Denní|Týdenní|Měsíční|Start|Přihlášení|Idle
+	t_Lang157 =	Cílový soubor PMC
+	t_Lang158 =	Cílová AHK soubor
+	t_Lang159 =	Skript bude uložen nebo přepsány v aktuálním adresáři!
+	t_Lang160 =	Otevřít Plánovač úloh
+	t_Lang161 =	Úkol byl úspěšně vytvořen!
+	t_Lang162 =	Došlo k chybě.Úkol nemohl být vytvořen.
+	t_Lang163 =	PláNovač
+	t_Lang164 =	PláN Makra
+	t_Lang165 =	Spustit Makro
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Otevřít
@@ -745,6 +768,7 @@
 	d_Lang081 =	Můžete změnit a přizpůsobit rozvržení v nabídce Zobrazit.
 	d_Lang082 =	Soubor nebyl nalezen!
 	d_Lang083 =	Záložní soubor nebyl nalezen. Chtěli byste jej otevřít?
+	d_Lang084 =	Prosím uložte změny před plánování úkolu.
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -1202,6 +1226,7 @@
 	SetNumlockState	Nastaví stav klávesu NumLock. Můžete také vynutit klíč zůstat zapnutý nebo vypnutý.
 	SetScrollLockState	Nastaví stav klávesy ScrollLock. Můžete také vynutit klíč zůstat zapnutý nebo vypnutý.
 	SetRegView	Umožňuje registru příkazy v 32bitové skript pro přístup k 64-bit registru názor a naopak.
+	SetTimer	Způsobuje podprogram spouštěna automaticky a opakovaně v zadaném časovém intervalu.
 	Shutdown	Se vypne, restartuje nebo se odhlásí systému.
 	Sin	Vrátí trigonometrický sinus čísla.
 	Sleep	Čeká zadanou dobu před pokračováním.

@@ -23,9 +23,10 @@
 	f_Lang006 =	E&xporter vers AHK
 	f_Lang007 =	&Aperçu du script
 	f_Lang008 =	&Modifier Le Script
-	f_Lang009 =	&Les variables de la liste
-	f_Lang010 =	So&rtie
-	f_Lang011 =	A&ucun
+	f_Lang009 =	&Programmer Des Macros
+	f_Lang010 =	&Les variables de la liste
+	f_Lang011 =	So&rtie
+	f_Lang012 =	A&ucun
 		
 ; Macro Sub Menu		
 	r_lang001 =	&Enregistrer une macro
@@ -147,6 +148,15 @@
 	y_Lang001 =	Masquer la fenêtre
 	y_Lang002 =	Afficher la fenêtre
 	y_Lang003 =	Barre D'outils Des Contrôles
+		
+; Built-in Vars Menu		
+	b_Lang001 =	Caractères spéciaux
+	b_Lang002 =	propriétés
+	b_Lang003 =	Date et heure
+	b_Lang004 =	User Time Idle
+	b_Lang005 =	Système et utilisateur
+	b_Lang006 =	Divers.
+	b_Lang007 =	Boucle
 		
 ; Main Window		
 	w_Lang001 =	Exporter
@@ -604,6 +614,19 @@
 	t_Lang150 =	Réduire en icône
 	t_Lang151 =	Afficher confirmation lors de la fermeture d'une macro
 	t_Lang152 =	Créer des sauvegardes automatiquement
+	t_Lang153 =	Crée une tâche planifiée dans Windows Task Scheduler.
+	t_Lang154 =	Heure de la première course
+	t_Lang155 =	TYPE DE PROGRAMME
+	t_Lang156 =	Une fois|||Dernière Cours|Mensuel|Accueil|Se connecter|Idle
+	t_Lang157 =	PMC fichier cible
+	t_Lang158 =	AHK fichier cible
+	t_Lang159 =	Le script sera enregistré ou écrasées dans le répertoire courant!
+	t_Lang160 =	Ouvrez le Planificateur de tâches
+	t_Lang161 =	Groupe créé avec succès!
+	t_Lang162 =	Une erreur s'est produite. La tâche n'a pas pu être créé.
+	t_Lang163 =	Scheduler
+	t_Lang164 =	Programmer Des Macros
+	t_Lang165 =	ExéCuter Une Macro
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Ouvert
@@ -745,6 +768,7 @@
 	d_Lang081 =	Vous pouvez modifier et personnaliser la disposition dans le menu Affichage.
 	d_Lang082 =	Le fichier n'a pas été trouvé!
 	d_Lang083 =	Un fichier de sauvegarde a été trouvé. Voulez-vous ouvrir?
+	d_Lang084 =	S'il vous plaît enregistrer vos modifications avant de planifier une tâche.
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -1202,6 +1226,7 @@
 	SetNumlockState	Définit l'état de la touche Verr Num. Pouvez également forcer la clé pour rester allumé ou éteint.
 	SetScrollLockState	Définit l'état de la touche Arrêt défil. Pouvez également forcer la clé pour rester allumé ou éteint.
 	SetRegView	Permet commandes de registre dans un script 32 bits pour accéder à la vue de Registre 64 bits et vice versa.
+	SetTimer	Provoque un sous-programme doit être lancé automatiquement et de façon répétée à un intervalle de temps spécifié.
 	Shutdown	Arrête, redémarre ou déconnecte le système.
 	Sin	Renvoie le sinus trigonométrique de Number.
 	Sleep	Attend le laps de temps spécifié avant de poursuivre.

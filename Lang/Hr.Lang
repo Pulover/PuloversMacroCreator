@@ -23,9 +23,10 @@
 	f_Lang006 =	&Izvoz u AHK
 	f_Lang007 =	P&rikaz Script
 	f_Lang008 =	&Uredi Skriptu
-	f_Lang009 =	Popis &varijabli
-	f_Lang010 =	I&zlaz
-	f_Lang011 =	U &datotekama
+	f_Lang009 =	R&aspored Makroe
+	f_Lang010 =	Popis &varijabli
+	f_Lang011 =	I&zlaz
+	f_Lang012 =	U &datotekama
 		
 ; Macro Sub Menu		
 	r_lang001 =	&Snimanje makro
@@ -147,6 +148,15 @@
 	y_Lang001 =	Sakrij Prozor
 	y_Lang002 =	Pokaži prozor
 	y_Lang003 =	Kontrole Traci
+		
+; Built-in Vars Menu		
+	b_Lang001 =	Posebni Likovi
+	b_Lang002 =	Svojstva
+	b_Lang003 =	Datum i vrijeme
+	b_Lang004 =	Korisnik Idle vrijeme
+	b_Lang005 =	Sustav i Upute
+	b_Lang006 =	Razno.
+	b_Lang007 =	Petlja
 		
 ; Main Window		
 	w_Lang001 =	Izvoz
@@ -604,6 +614,19 @@
 	t_Lang150 =	Smanji u ladicu
 	t_Lang151 =	Prikaz potvrdu prilikom zatvaranja makro
 	t_Lang152 =	Stvaranje sigurnosne kopije automatski
+	t_Lang153 =	Stvara zakazani zadatak u Windows Task Planer.
+	t_Lang154 =	Vrijeme prvoj vožnji
+	t_Lang155 =	Raspored tip
+	t_Lang156 =	Nakon||Dnevni|Tjedni|Mjesečni|Početak|Prijava|Idle
+	t_Lang157 =	Ciljana PMC file
+	t_Lang158 =	Ciljana AHK file
+	t_Lang159 =	Skripta će biti spašen ili prepisati u trenutnom direktoriju!
+	t_Lang160 =	Otvorite Task Scheduler
+	t_Lang161 =	Zadatak je uspješno izrađen!
+	t_Lang162 =	Došlo je do pogreške.Zadatak nije mogao biti stvoren.
+	t_Lang163 =	Raspored
+	t_Lang164 =	Raspored Makroe
+	t_Lang165 =	TrčAnje Macro
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Otvoreno
@@ -745,6 +768,7 @@
 	d_Lang081 =	Možete promijeniti i prilagoditi izglede u izborniku View.
 	d_Lang082 =	Datoteka nije pronađena!
 	d_Lang083 =	Kopija je pronađena. Želite li ga otvoriti?
+	d_Lang084 =	Molimo spremite promjene prije zakazivanja zadatak.
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -1202,6 +1226,7 @@
 	SetNumlockState	Postavlja stanje NumLock ključ. Može se također prisiliti ključna ostati ili isključiti.
 	SetScrollLockState	Postavlja stanje ScrollLock ključ. Može se također prisiliti ključna ostati ili isključiti.
 	SetRegView	Omogućuje registra naredbe u 32-bitnom skriptu za pristup 64-bitnog registra pogled i obrnuto.
+	SetTimer	Uzroci potprogram biti pokrenuta automatski i više puta u određenom vremenskom intervalu.
 	Shutdown	Zatvara, ponovo pokrene ili odjavi sustav.
 	Sin	Vraća trigonometrijsku sinus broja.
 	Sleep	Waits određenu količinu vremena prije nego što nastavite.

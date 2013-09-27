@@ -23,9 +23,10 @@
 	f_Lang006 =	&Xuất khẩu sang AHK
 	f_Lang007 =	X&em trước Script
 	f_Lang008 =	S&ửa Script
-	f_Lang009 =	&Danh sách các biến
-	f_Lang010 =	&Ra
-	f_Lang011 =	&Không có tập tin
+	f_Lang009 =	&LịCh TrìNh Macro
+	f_Lang010 =	&Danh sách các biến
+	f_Lang011 =	&Ra
+	f_Lang012 =	&Không có tập tin
 		
 ; Macro Sub Menu		
 	r_lang001 =	&Record Macro
@@ -147,6 +148,15 @@
 	y_Lang001 =	Hide Window
 	y_Lang002 =	Hiển thị cửa sổ
 	y_Lang003 =	Thanh công cụ điều khiển
+		
+; Built-in Vars Menu		
+	b_Lang001 =	Nhân vật đặc biệt
+	b_Lang002 =	bất động sản
+	b_Lang003 =	Thời gian
+	b_Lang004 =	Người sử dụng thời gian nhàn rỗi
+	b_Lang005 =	Hệ thống và người dùng
+	b_Lang006 =	Misc.
+	b_Lang007 =	Vòng lặp
 		
 ; Main Window		
 	w_Lang001 =	Xuất khẩu
@@ -604,6 +614,19 @@
 	t_Lang150 =	Giảm thiểu để khay
 	t_Lang151 =	Hiển thị xác nhận khi đóng một vĩ mô
 	t_Lang152 =	Tạo bản sao lưu tự động
+	t_Lang153 =	Tạo ra một nhiệm vụ theo lịch trình trong Windows Task Scheduler.
+	t_Lang154 =	Thời gian chạy đầu tiên
+	t_Lang155 =	Lịch trình loại
+	t_Lang156 =	Một lần||hàng ngày|Tuần|Tháng|Bắt đầu|Đăng nhập nhàn rỗi
+	t_Lang157 =	Mục tiêu tập tin PMC
+	t_Lang158 =	Mục tiêu tập tin AHK
+	t_Lang159 =	Kịch bản sẽ được lưu hoặc ghi đè trong thư mục hiện hành!
+	t_Lang160 =	Mở Task Scheduler
+	t_Lang161 =	Nhiệm vụ tạo thành công!
+	t_Lang162 =	Đã xảy ra lỗi. Nhiệm vụ không thể được tạo ra.
+	t_Lang163 =	LịCh
+	t_Lang164 =	LịCh TrìNh Macro
+	t_Lang165 =	ChạY Macro
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Mở
@@ -745,6 +768,7 @@
 	d_Lang081 =	Bạn có thể thay đổi và tùy chỉnh bố trí trong menu View.
 	d_Lang082 =	Các tập tin không tìm thấy!
 	d_Lang083 =	Một tập tin sao lưu đã được tìm thấy. Bạn có muốn mở nó?
+	d_Lang084 =	Xin lưu các thay đổi của bạn trước khi lập kế hoạch một nhiệm vụ.
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -1202,6 +1226,7 @@
 	SetNumlockState	Thiết lập trạng thái của phím NumLock. Cũng có thể buộc chìa khóa để ở trên hoặc tắt.
 	SetScrollLockState	Thiết lập trạng thái của phím ScrollLock. Cũng có thể buộc chìa khóa để ở trên hoặc tắt.
 	SetRegView	Cho phép lệnh đăng ký trong một kịch bản 32-bit để truy cập vào xem đăng ký 64-bit và ngược lại.
+	SetTimer	Nguyên nhân một chương trình con sẽ được tung ra tự động và liên tục tại một khoảng thời gian quy định.
 	Shutdown	Tắt, khởi động lại, hoặc log off hệ thống.
 	Sin	Trả về sin lượng giác của số.
 	Sleep	Chờ đợi những khoảng thời gian định trước khi tiếp tục.

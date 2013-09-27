@@ -23,9 +23,10 @@
 	f_Lang006 =	&Export to AHK
 	f_Lang007 =	&Preview Script
 	f_Lang008 =	E&dit Script
-	f_Lang009 =	&List Variables
-	f_Lang010 =	E&xit
-	f_Lang011 =	No files
+	f_Lang009 =	S&chedule Macros
+	f_Lang010 =	&List Variables
+	f_Lang011 =	E&xit
+	f_Lang012 =	No files
 		
 ; Macro Sub Menu		
 	r_lang001 =	&Record Macro
@@ -147,6 +148,15 @@
 	y_Lang001 =	Hide Window
 	y_Lang002 =	Show Window
 	y_Lang003 =	Controls Toolbar
+		
+; Built-in Vars Menu		
+	b_Lang001 =	Special Characters
+	b_Lang002 =	Properties
+	b_Lang003 =	Date and Time
+	b_Lang004 =	User Idle Time
+	b_Lang005 =	System and User
+	b_Lang006 =	Misc.
+	b_Lang007 =	Loop
 		
 ; Main Window		
 	w_Lang001 =	Export
@@ -604,6 +614,19 @@
 	t_Lang150 =	Minimize to tray
 	t_Lang151 =	Display confirmation when closing a macro
 	t_Lang152 =	Create backups automatically
+	t_Lang153 =	Creates a scheduled task in Windows Task Scheduler.
+	t_Lang154 =	Time of first run
+	t_Lang155 =	Schedule type
+	t_Lang156 =	Once||Daily|Weekly|Monthly|Start|Logon|Idle
+	t_Lang157 =	Target PMC file
+	t_Lang158 =	Target AHK file
+	t_Lang159 =	The script will be saved or overwritten in the current directory!
+	t_Lang160 =	Open Task Scheduler
+	t_Lang161 =	Task created successfully!
+	t_Lang162 =	An error occurred. The task could not be created.
+	t_Lang163 =	Scheduler
+	t_Lang164 =	Schedule Macros
+	t_Lang165 =	Run Macro
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Open
@@ -745,6 +768,7 @@
 	d_Lang081 =	You can change and customize layouts in the View menu.
 	d_Lang082 =	The file was not found!
 	d_Lang083 =	A backup file has been found. Would you like to open it?
+	d_Lang084 =	Please save your changes before scheduling a task.
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -1202,6 +1226,7 @@
 	SetNumlockState	Sets the state of the Numlock key. Can also force the key to stay on or off.
 	SetScrollLockState	Sets the state of the Scrolllock key. Can also force the key to stay on or off.
 	SetRegView	Allows registry commands in a 32-bit script to access the 64-bit registry view and vice versa.
+	SetTimer	Causes a subroutine to be launched automatically and repeatedly at a specified time interval.
 	Shutdown	Shuts down, restarts, or logs off the system.
 	Sin	Returns the trigonometric sine of Number.
 	Sleep	Waits the specified amount of time before continuing.

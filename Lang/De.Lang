@@ -23,9 +23,10 @@
 	f_Lang006 =	&Export nach AHK
 	f_Lang007 =	S&cript-Vorschau
 	f_Lang008 =	S&kript Bearbeiten
-	f_Lang009 =	&Variablen anzeigen
-	f_Lang010 =	&Beenden
-	f_Lang011 =	Ke&ine Dateien
+	f_Lang009 =	&Makro Planen
+	f_Lang010 =	&Variablen anzeigen
+	f_Lang011 =	&Beenden
+	f_Lang012 =	Ke&ine Dateien
 		
 ; Macro Sub Menu		
 	r_lang001 =	&Makro aufzeichnen
@@ -147,6 +148,15 @@
 	y_Lang001 =	Fenster schließen
 	y_Lang002 =	Fenster anzeigen
 	y_Lang003 =	Steuerelemente Symbolleiste
+		
+; Built-in Vars Menu		
+	b_Lang001 =	Sonderzeichen
+	b_Lang002 =	Eigenschaften
+	b_Lang003 =	Datum und Uhrzeit
+	b_Lang004 =	Benutzer Idle Time
+	b_Lang005 =	System und Benutzer
+	b_Lang006 =	Misc.
+	b_Lang007 =	Schleife
 		
 ; Main Window		
 	w_Lang001 =	Export
@@ -604,6 +614,19 @@
 	t_Lang150 =	Minimieren in den Tray
 	t_Lang151 =	Anzeige Bestätigung beim Schließen eines Makros
 	t_Lang152 =	Erstellen Sie Backups automatisch
+	t_Lang153 =	Erstellt eine geplante Task in Windows Task Scheduler.
+	t_Lang154 =	Zeitpunkt des ersten Lauf
+	t_Lang155 =	Planen Typ
+	t_Lang156 =	Sobald||Täglich|Wöchentlich|Monatlich|Start|Anmelden|Idle
+	t_Lang157 =	Ziel PMC-Datei
+	t_Lang158 =	Ziel AHK-Datei
+	t_Lang159 =	Das Skript wird gespeichert oder überschrieben werden im aktuellen Verzeichnis!
+	t_Lang160 =	Öffnen Sie den Task Scheduler
+	t_Lang161 =	Aufgabe erfolgreich erstellt!
+	t_Lang162 =	Ein Fehler ist aufgetreten. Die Aufgabe konnte nicht erstellt werden.
+	t_Lang163 =	Zeitplaner
+	t_Lang164 =	Makro Planen
+	t_Lang165 =	Makro Ausführen
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Öffnen
@@ -745,6 +768,7 @@
 	d_Lang081 =	Sie können sich ändern und anpassen Layouts im Menü Ansicht.
 	d_Lang082 =	Die Datei wurde nicht gefunden!
 	d_Lang083 =	Ein Backup-Datei gefunden wurde. Möchten Sie es zu öffnen?
+	d_Lang084 =	Bitte speichern Sie die Änderungen vor dem Planen einer Aufgabe.
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -1202,6 +1226,7 @@
 	SetNumlockState	Legt den Zustand der Num-Taste. Kann auch erzwingen, dass der Schlüssel zu bleiben oder aus.
 	SetScrollLockState	Legt den Zustand des Scrolllock Taste. Kann auch erzwingen, dass der Schlüssel zu bleiben oder aus.
 	SetRegView	Ermöglicht registry-Befehle in einer 32-Bit-Skript, um die 64-Bit-Register Ansicht und umgekehrt übersetzen.
+	SetTimer	Bewirkt eine Subroutine, um automatisch und wiederholt in einem vorgegebenen Zeitintervall gestartet werden.
 	Shutdown	Fährt, startet neu oder abmeldet das System.
 	Sin	Gibt den trigonometrischen Sinus-Nummer.
 	Sleep	Wartet die angegebene Zeit, bevor Sie fortfahren.

@@ -434,20 +434,21 @@ Gui, 1:+LastFound
 Gui, 1:Default
 
 Menu, Tray, NoStandard
+
 GoSub, CreateMenuBar
 
 Menu, MouseB, Add, Click, HelpB
 Menu, MouseB, Add, ControlClick, HelpB
 Menu, MouseB, Add, MouseClickDrag, HelpB
 Menu, MouseB, Add
-Menu, MouseB, Add, Built-in Variables, HelpB
+Menu, MouseB, Add, Built-in Variables, :BuiltInMenu
 Menu, MouseB, Icon, Click, %ResDllPath%, 24
 Menu, TextB, Add, Send / SendRaw, HelpB
 Menu, TextB, Add, ControlSend, HelpB
 Menu, TextB, Add, ControlSetText, HelpB
 Menu, TextB, Add, Clipboard, HelpB
 Menu, TextB, Add
-Menu, TextB, Add, Built-in Variables, HelpB
+Menu, TextB, Add, Built-in Variables, :BuiltInMenu
 Menu, TextB, Icon, Send / SendRaw, %ResDllPath%, 24
 Menu, ControlB, Add, Control, HelpB
 Menu, ControlB, Add, ControlFocus, HelpB
@@ -458,21 +459,21 @@ Menu, ControlB, Add, ControlGetText, HelpB
 Menu, ControlB, Add, ControlMove, HelpB
 Menu, ControlB, Add, ControlSetText, HelpB
 Menu, ControlB, Add
-Menu, ControlB, Add, Built-in Variables, HelpB
+Menu, ControlB, Add, Built-in Variables, :BuiltInMenu
 Menu, ControlB, Icon, Control, %ResDllPath%, 24
 Menu, SpecialB, Add, List of Keys, SpecialB
 Menu, SpecialB, Icon, List of Keys, %ResDllPath%, 24
 Menu, PauseB, Add, Sleep, HelpB
 Menu, PauseB, Add
-Menu, PauseB, Add, Built-in Variables, HelpB
+Menu, PauseB, Add, Built-in Variables, :BuiltInMenu
 Menu, PauseB, Icon, Sleep, %ResDllPath%, 24
 Menu, MsgboxB, Add, MsgBox, HelpB
 Menu, MsgboxB, Add
-Menu, MsgboxB, Add, Built-in Variables, HelpB
+Menu, MsgboxB, Add, Built-in Variables, :BuiltInMenu
 Menu, MsgboxB, Icon, MsgBox, %ResDllPath%, 24
 Menu, KeyWaitB, Add, KeyWait, HelpB
 Menu, KeyWaitB, Add
-Menu, KeyWaitB, Add, Built-in Variables, HelpB
+Menu, KeyWaitB, Add, Built-in Variables, :BuiltInMenu
 Menu, KeyWaitB, Icon, KeyWait, %ResDllPath%, 24
 Menu, WindowB, Add, WinActivate, HelpB
 Menu, WindowB, Add, WinActivateBottom, HelpB
@@ -495,12 +496,12 @@ Menu, WindowB, Add, WinWait, HelpB
 Menu, WindowB, Add, WinWaitActive / WinWaitNotActive, HelpB
 Menu, WindowB, Add, WinWaitClose, HelpB
 Menu, WindowB, Add
-Menu, WindowB, Add, Built-in Variables, HelpB
+Menu, WindowB, Add, Built-in Variables, :BuiltInMenu
 Menu, WindowB, Icon, WinActivate, %ResDllPath%, 24
 Menu, ImageB, Add, ImageSearch, HelpB
 Menu, ImageB, Add, PixelSearch, HelpB
 Menu, ImageB, Add
-Menu, ImageB, Add, Built-in Variables, HelpB
+Menu, ImageB, Add, Built-in Variables, :BuiltInMenu
 Menu, ImageB, Icon, ImageSearch, %ResDllPath%, 24
 Loop, Parse, FileCmdList, |
 {
@@ -555,7 +556,7 @@ Menu, RunB, Add, Sound, :m_Sound
 Menu, RunB, Add, Variables, :m_Vars
 Menu, RunB, Add, Misc., :m_Misc
 Menu, RunB, Add
-Menu, RunB, Add, Built-in Variables, HelpB
+Menu, RunB, Add, Built-in Variables, :BuiltInMenu
 Menu, RunB, Icon, Run / RunWait, %ResDllPath%, 24
 Menu, ComLoopB, Add, Loop, LoopB
 Menu, ComLoopB, Add, Loop`, FilePattern, LoopB
@@ -565,16 +566,16 @@ Menu, ComLoopB, Add, Loop`, Registry, LoopB
 Menu, ComLoopB, Add, Break, HelpB
 Menu, ComLoopB, Add, Continue, HelpB
 Menu, ComLoopB, Add
-Menu, ComLoopB, Add, Built-in Variables, HelpB
+Menu, ComLoopB, Add, Built-in Variables, :BuiltInMenu
 Menu, ComLoopB, Icon, Loop, %ResDllPath%, 24
 Menu, ComGotoB, Add, Goto, HelpB
 Menu, ComGotoB, Add, Gosub, HelpB
 Menu, ComGotoB, Add
-Menu, ComGotoB, Add, Built-in Variables, HelpB
+Menu, ComGotoB, Add, Built-in Variables, :BuiltInMenu
 Menu, ComGotoB, Icon, Goto, %ResDllPath%, 24
 Menu, AddLabelB, Add, Labels, HelpB
 Menu, AddLabelB, Add
-Menu, AddLabelB, Add, Built-in Variables, HelpB
+Menu, AddLabelB, Add, Built-in Variables, :BuiltInMenu
 Menu, AddLabelB, Icon, Labels, %ResDllPath%, 24
 Menu, IfStB, Add, IfWinActive / IfWinNotActive, HelpB
 Menu, IfStB, Add, IfWinExist / IfWinNotExist, HelpB
@@ -583,27 +584,27 @@ Menu, IfStB, Add, IfInString / IfNotInString, HelpB
 Menu, IfStB, Add, IfMsgBox, HelpB
 Menu, IfStB, Add, If Statements, HelpB
 Menu, IfStB, Add
-Menu, IfStB, Add, Built-in Variables, HelpB
+Menu, IfStB, Add, Built-in Variables, :BuiltInMenu
 Menu, IfStB, Icon, IfWinActive / IfWinNotActive, %ResDllPath%, 24
 Menu, AsVarB, Add, Variables, HelpB
 Menu, AsVarB, Add
-Menu, AsVarB, Add, Built-in Variables, HelpB
+Menu, AsVarB, Add, Built-in Variables, :BuiltInMenu
 Menu, AsVarB, Icon, Variables, %ResDllPath%, 24
 Menu, AsFuncB, Add, Functions, HelpB
 Menu, AsFuncB, Add
-Menu, AsFuncB, Add, Built-in Variables, HelpB
+Menu, AsFuncB, Add, Built-in Variables, :BuiltInMenu
 Menu, AsFuncB, Icon, Functions, %ResDllPath%, 24
 Menu, IEComB, Add, COM, IEComB
 Menu, IEComB, Add, Basic Webpage COM Tutorial, IEComB
 Menu, IEComB, Add, IWebBrowser2 Interface (MSDN), IEComB
 Menu, IEComB, Add
-Menu, IEComB, Add, Built-in Variables, HelpB
+Menu, IEComB, Add, Built-in Variables, :BuiltInMenu
 Menu, IEComB, Icon, COM, %ResDllPath%, 24
 Menu, SendMsgB, Add, PostMessage / SendMessage, HelpB
 Menu, SendMsgB, Add, Message List, SendMsgB
 Menu, SendMsgB, Add, Microsoft MSDN, SendMsgB
 Menu, SendMsgB, Add
-Menu, SendMsgB, Add, Built-in Variables, HelpB
+Menu, SendMsgB, Add, Built-in Variables, :BuiltInMenu
 Menu, SendMsgB, Icon, PostMessage / SendMessage, %ResDllPath%, 24
 Menu, IfDirB, Add, #IfWinActive / #IfWinExist, HelpB
 Menu, IfDirB, Icon, #IfWinActive / #IfWinExist, %ResDllPath%, 24
@@ -1872,9 +1873,9 @@ Loop, Parse, PmcRecentFiles, `n
 	Menu, RecentMenu, Add, %A_Index%: %A_LoopField%, OpenRecent
 If (PmcRecentFiles = "")
 {
-	Menu, RecentMenu, Add, 1: %f_Lang011%, OpenRecent
-	Menu, RecentMenu, Disable, 1: %f_Lang011%
-	PmcRecentFiles := f_Lang011
+	Menu, RecentMenu, Add, 1: %f_Lang012%, OpenRecent
+	Menu, RecentMenu, Disable, 1: %f_Lang012%
+	PmcRecentFiles := f_Lang012
 }
 return
 
@@ -2288,7 +2289,7 @@ If (Ex_PauseKey = 1)
 	}
 }
 SelectedFileName := ExpFile
-SplitPath, SelectedFileName, name, dir, ext, name_no_ext, drive
+SplitPath, SelectedFileName,,, ext
 If (ext <> "ahk")
 	SelectedFileName .= ".ahk"
 If drive = 
@@ -2398,9 +2399,9 @@ If ErrorLevel
 	MsgBox, 16, %d_Lang007%, %d_Lang006% "%ChoosenFileName%".
 	return
 }
-If IncPmc
+If (IncPmc)
 	FileAppend, `n%PmcHead%%PmcCode%*/`n, %SelectedFileName%
-If Exe_Exp
+If (Exe_Exp)
 {
 	SplitPath, A_AhkPath,, AhkDir
 	RunWait, "%AhkDir%\Compiler\Ahk2Exe.exe" /in "%SelectedFileName%" /bin "%AhkDir%\Compiler\Unicode 32-bit.bin" /mpress 1,, UseErrorLevel
@@ -2411,13 +2412,13 @@ GuiControl, 14:, ExpProgress, 0
 return
 
 ExportOpt:
-If ((TabIndent = 1) &&(Ex_TimesX <> 1))
+If ((TabIndent = 1) && (Ex_TimesX <> 1))
 	Body := RegExReplace(Body, "`am)^", "`t")
-If Ex_TimesX = 0
+If (Ex_TimesX = 0)
 	Body := "Loop`n{`n" Body "}`n"
 Else If Ex_TimesX > 1
 	Body := "Loop, " Ex_TimesX "`n{`n" Body "}`n"
-If Ex_BM = 1
+If (Ex_BM = 1)
 	Body := "BlockInput, MouseMove`n" Body "BlockInput, MouseMoveOff`n"
 Body := ((Ex_Macro <> "") ? Ex_Macro ":`n" : "") Body "Return`n"
 If (Ex_AutoKey <> "")
@@ -2865,6 +2866,10 @@ If (vFound)
 }
 Else If (A_ThisLabel = "CheckNow")
 	MsgBox, 16, %d_Lang007%, % d_Lang063 "`n`n""" SubStr(RegExReplace(VerChk, ".*<H2>(.*)</H2>.*", "$1"), 1, 500) """"
+return
+
+InsertBIVar:
+Send, `%%A_ThisMenuItem%`%
 return
 
 AutoUpdate:
@@ -8043,24 +8048,75 @@ Loop, Parse, KeywordsList, |
 return
 
 Scheduler:
+Gui, 1:+OwnDialogs
+If (SavePrompt)
+{
+	Gui, 27:+Disabled
+	MsgBox, 48, %AppName%, %d_Lang084%
+	Gui, 27:-Disabled
+	return
+}
 Gui, 1:-Disabled
 Gui, 27:Destroy
-Gui, 36:+owner1 -MinimizeBox
+Gui, 36:+owner1 -MinimizeBox +HwndCmdWin
 Gui, 1:+Disabled
-Gui, 36:Add, Groupbox, Section W165 H50, Time of first run:
-Gui, 36:Add, DateTime, xs+10 ys+20 vSchedTime W140, yyyy/MM/dd HH:mm
-Gui, 36:Add, Groupbox, Section x+25 ym W165 H50, Schedule Type:
-Gui, 36:Add, DDL, xs+10 ys+20 vSchedFreq W140, Once||Minute|Hourly|Daily|Weekly|Monthly|On Start|On Logon|On Idle
-Gui, 36:Add, Radio, Checked Section xm+10 y+15 vTargetPMC W160, Target PMC file
-Gui, 36:Add, Radio, vTargetAHK W160, Target AHK file
-Gui, 36:Add, Text, W300 cRed, *The script will be saved or overwritten in the current directory!
+Gui, 36:Add, Groupbox, Section W165 H50, %t_Lang154%:
+Gui, 36:Add, DateTime, xs+10 ys+20 vScheduleTime W140, yyyy/MM/dd HH:mm
+Gui, 36:Add, Groupbox, Section x+25 ym W165 H50, %t_Lang155%:
+Gui, 36:Add, DDL, xs+10 ys+20 vScheduleType W140 AltSubmit, %t_Lang156%
+Gui, 36:Add, GroupBox, Section xm y+15 W340 H85, %w_Lang003%:
+Gui, 36:Add, Radio, Checked xs+10 ys+20 vTargetPMC gTargetFile W160, %t_Lang157%
+Gui, 36:Add, Radio, y+10 vTargetAHK gTargetFile W160, %t_Lang158%
+Gui, 36:Add, Text, x+15 ys+20 W150, %t_Lang165%:
+Gui, 36:Add, Edit, W75 vSchedEd Number
+Gui, 36:Add, UpDown, vSchedHK 0x80 Range1-%TabCount%, %A_List%
+Gui, 36:Add, Text, xs+10 y+5 W300 cRed vWarning
 Gui, 36:Add, Button, -Wrap Section Default xm W75 H23 gSchedOK, %c_Lang020%
 Gui, 36:Add, Button, -Wrap ys W75 H23 gSchedCancel, %c_Lang021%
-Gui, 36:Add, Link, ys+5 W160, <a href="taskschd.msc">Open Task Scheduler</a>
-Gui, 36:Show,, Scheduler
+Gui, 36:Add, Link, ys+5 W160, <a href="taskschd.msc">%t_Lang160%</a>
+Gui, 36:Add, StatusBar
+Gui, 36:Default
+SB_SetText(t_Lang153)
+Gui, 36:Show,, %t_Lang164%
+ChangeIcon(ReshInst, CmdWin, 75)
 return
 
 SchedOK:
+Gui, 36:Submit, NoHide
+Gui, 36:+OwnDialogs
+FormatTime, StartTime, %ScheduleTime%, yyyy-MM-ddTHH`:mm`:ss
+FormatTime, SchedDate, %ScheduleTime%, LongDate
+If (TargetAHK)
+{
+	_IncPmc := IncPmc, _Exe_Exp := Exe_Exp
+,	IncPmc := 0, Exe_Exp := 0, Ex_BM := 0, Ex_AutoKey := ""
+	SplitPath, CurrentFileName,, dir,, name_no_ext
+	TaskRun := dir "\" name_no_ext ".ahk"
+	Header := Script_Header(), LV_Export(RowNumber)
+	Loop, %TabCount%
+	{
+		If !(ListCount%A_Index%)
+			continue
+		Ex_TimesX := o_TimesG[A_Index], Body := LV_Export(A_Index)
+		GoSub, ExportOpt
+		AllScripts .= Body
+	}
+	IfExist %TaskRun%
+		FileDelete %TaskRun%
+	Body := AllScripts
+,	Script := Header . Body, Body := "", AllScripts := ""
+,	IncPmc := _IncPmc, Exe_Exp := _Exe_Exp
+	FileAppend, %Script%, %TaskRun%
+}
+Else
+	TaskRun := A_ScriptFullPath " " CurrentFileName " -s" SchedHK
+Try
+{
+	ScheduleTask(Sched_%ScheduleType%, StartTime, TaskRun)
+	MsgBox, 64, %AppName%, %t_Lang161%`n`n'%SchedDate%'
+}
+Catch
+	MsgBox, 16, %AppName%, %t_Lang162%
 SchedCancel:
 36GuiClose:
 36GuiEscape:
@@ -8069,8 +8125,18 @@ Gui, 1:-Disabled
 Gui, 36:Destroy
 return
 
+TargetFile:
+Gui, 36:Submit, NoHide
+GuiControl, 36:Disable%TargetAHK%, SchedEd
+GuiControl, 36:Disable%TargetAHK%, SchedHK
+If (TargetAHK)
+	GuiControl, 36:, Warning, * %t_Lang159%
+Else
+	GuiControl, 36:, Warning
+return
+
 RunTimer:
-Gui, 27:+owner1 -MinimizeBox
+Gui, 27:+owner1 -MinimizeBox +HwndCmdWin
 Gui, 1:+Disabled
 Gui, 27:Add, Groupbox, Section W220 H100
 Gui, 27:Add, Edit, ys+15 xs+30 Limit Number W150
@@ -8085,7 +8151,9 @@ Gui, 27:Add, Checkbox, -Wrap Checked%RunFirst% y+5 xp+15 W185 vRunFirst R1 Disab
 Gui, 27:Add, Checkbox, -Wrap Checked%ShowBar% y+8 xs+10 W200 vShowBar R1, %w_Lang009%
 Gui, 27:Add, Button, -Wrap Section Default xm W75 H23 gTimerOK, %c_Lang020%
 Gui, 27:Add, Button, -Wrap ys W75 H23 gTimerCancel, %c_Lang021%
-Gui, 27:Add, Button, -Wrap ys W75 H23 gScheduler, Scheduler
+Gui, 27:Add, Button, -Wrap ys W75 H23 gScheduler, %t_Lang163%
+Gui, 27:Add, StatusBar
+Gui, 27:Default
 If !(Timer_ran)
 {
 	GuiControl, 27:, TimerDelayX, 250
@@ -8096,7 +8164,9 @@ If !(Timer_ran)
 }
 If (TimedRun)
 	GuiControl, 27:Enable, RunFirst
+SBShowTip("SetTimer")
 Gui, 27:Show,, %t_Lang080%
+ChangeIcon(ReshInst, CmdWin, 75)
 return
 
 TimerSub:
@@ -12135,6 +12205,20 @@ return
 CreateMenuBar:
 GoSub, RecentFiles
 ; Menus
+Loop, Parse, BIV_Characters, `n
+	Menu, BI_Characters, Add, %A_LoopField%, InsertBIVar
+Loop, Parse, BIV_Properties, `n
+	Menu, BI_Properties, Add, %A_LoopField%, InsertBIVar
+Loop, Parse, BIV_Date, `n
+	Menu, BI_Date, Add, %A_LoopField%, InsertBIVar
+Loop, Parse, BIV_Idle, `n
+	Menu, BI_Idle, Add, %A_LoopField%, InsertBIVar
+Loop, Parse, BIV_System, `n
+	Menu, BI_System, Add, %A_LoopField%, InsertBIVar
+Loop, Parse, BIV_Misc, `n
+	Menu, BI_Misc, Add, %A_LoopField%, InsertBIVar
+Loop, Parse, BIV_Loop, `n
+	Menu, BI_Loop, Add, %A_LoopField%, InsertBIVar
 Menu, FileMenu, Add, %f_Lang001%`t%_s%Ctrl+N, New
 Menu, FileMenu, Add, %f_Lang002%`t%_s%Ctrl+O, Open
 Menu, FileMenu, Add, %f_Lang003%`t%_s%Ctrl+S, Save
@@ -12144,10 +12228,11 @@ Menu, FileMenu, Add
 Menu, FileMenu, Add, %f_Lang006%`t%_s%Ctrl+E, Export
 Menu, FileMenu, Add, %f_Lang007%`t%_s%Ctrl+P, Preview
 Menu, FileMenu, Add, %f_Lang008%`t%_s%Ctrl+Shift+E, EditScript
+Menu, FileMenu, Add, %f_Lang009%`t%_s%Ctrl+Alt+T, Scheduler
 Menu, FileMenu, Add
-Menu, FileMenu, Add, %f_Lang009%`t%_s%Alt+F3, ListVars
+Menu, FileMenu, Add, %f_Lang010%`t%_s%Alt+F3, ListVars
 Menu, FileMenu, Add
-Menu, FileMenu, Add, %f_Lang010%`t%_s%Alt+F4, Exit
+Menu, FileMenu, Add, %f_Lang011%`t%_s%Alt+F4, Exit
 
 Menu, CommandMenu, Add, %i_Lang001%`t%_s%F2, Mouse
 Menu, CommandMenu, Add, %i_Lang002%`t%_s%F3, Text
@@ -12339,13 +12424,24 @@ Menu, ToolbarMenu, Add
 Menu, ToolbarMenu, Add, %t_Lang104%, ToggleTB
 Menu, ToolbarMenu, Add, %t_Lang105%, ShowHide
 
+Menu, BuiltInMenu, Add, %b_Lang001%, :BI_Characters
+Menu, BuiltInMenu, Add, %b_Lang002%, :BI_Properties
+Menu, BuiltInMenu, Add, %b_Lang003%, :BI_Date
+Menu, BuiltInMenu, Add, %b_Lang004%, :BI_Idle
+Menu, BuiltInMenu, Add, %b_Lang005%, :BI_System
+Menu, BuiltInMenu, Add, %b_Lang006%, :BI_Misc
+Menu, BuiltInMenu, Add, %b_Lang007%, :BI_Loop
+Menu, BuiltInMenu, Add
+Menu, BuiltInMenu, Add, Built-in Variables, HelpB
+Menu, BuiltInMenu, Icon, Built-in Variables, %ResDllPath%, 24
+
 Menu, Tray, Add, %w_Lang005%, PlayStart
 Menu, Tray, Add, %w_Lang008%, f_AbortKey
 Menu, Tray, Add, %w_Lang004%, Record
 Menu, Tray, Add, %r_Lang004%, RunTimer
 Menu, Tray, Add
 Menu, Tray, Add, %w_Lang002%, Preview
-Menu, Tray, Add, %f_Lang009%, ListVars
+Menu, Tray, Add, %f_Lang010%, ListVars
 Menu, Tray, Add, %y_Lang003%, OnScControls
 Menu, Tray, Add, %w_Lang014%, CheckHkOn
 Menu, Tray, Add
@@ -12355,7 +12451,7 @@ Menu, Tray, Add, %f_Lang003%, Save
 Menu, Tray, Add, %w_Lang003%, Options
 Menu, Tray, Add
 Menu, Tray, Add, %y_Lang001%, ShowHide
-Menu, Tray, Add, %f_Lang010%, Exit
+Menu, Tray, Add, %f_Lang011%, Exit
 Menu, Tray, Default, %w_Lang005%
 
 If KeepDefKeys
@@ -12401,8 +12497,9 @@ Menu, FileMenu, Icon, %f_Lang005%, %ResDllPath%, 52
 Menu, FileMenu, Icon, %f_Lang006%`t%_s%Ctrl+E, %ResDllPath%, 16
 Menu, FileMenu, Icon, %f_Lang007%`t%_s%Ctrl+P, %ResDllPath%, 49
 Menu, FileMenu, Icon, %f_Lang008%`t%_s%Ctrl+Shift+E, %ResDllPath%, 14
-Menu, FileMenu, Icon, %f_Lang009%`t%_s%Alt+F3, %ResDllPath%, 35
-Menu, FileMenu, Icon, %f_Lang010%`t%_s%Alt+F4, %ResDllPath%, 15
+Menu, FileMenu, Icon, %f_Lang009%`t%_s%Ctrl+Alt+T, %ResDllPath%, 71
+Menu, FileMenu, Icon, %f_Lang010%`t%_s%Alt+F3, %ResDllPath%, 35
+Menu, FileMenu, Icon, %f_Lang011%`t%_s%Alt+F4, %ResDllPath%, 15
 Menu, CommandMenu, Icon, %i_Lang001%`t%_s%F2, %ResDllPath%, 38
 Menu, CommandMenu, Icon, %i_Lang002%`t%_s%F3, %ResDllPath%, 70
 Menu, CommandMenu, Icon, %i_Lang003%`t%_s%F4, %ResDllPath%, 7
@@ -12457,12 +12554,12 @@ Menu, Tray, Icon, %w_Lang008%, %ResDllPath%, 65
 Menu, Tray, Icon, %w_Lang004%, %ResDllPath%, 54
 Menu, Tray, Icon, %r_Lang004%, %ResDllPath%, 71
 Menu, Tray, Icon, %w_Lang002%, %ResDllPath%, 49
-Menu, Tray, Icon, %f_Lang009%, %ResDllPath%, 35
+Menu, Tray, Icon, %f_Lang010%, %ResDllPath%, 35
 Menu, Tray, Icon, %f_Lang001%, %ResDllPath%, 41
 Menu, Tray, Icon, %f_Lang002%, %ResDllPath%, 42
 Menu, Tray, Icon, %f_Lang003%, %ResDllPath%, 59
 Menu, Tray, Icon, %w_Lang003%, %ResDllPath%, 43
-Menu, Tray, Icon, %f_Lang010%, %ResDllPath%, 15
+Menu, Tray, Icon, %f_Lang011%, %ResDllPath%, 15
 return
 
 UpdateCopyTo:
@@ -12645,6 +12742,14 @@ Menu, DonationMenu, DeleteAll
 Menu, LangMenu, DeleteAll
 Menu, HelpMenu, DeleteAll
 Menu, ToolbarMenu, DeleteAll
+Menu, BI_Characters, DeleteAll
+Menu, BI_Properties, DeleteAll
+Menu, BI_Date, DeleteAll
+Menu, BI_Idle, DeleteAll
+Menu, BI_System, DeleteAll
+Menu, BI_Misc, DeleteAll
+Menu, BI_Loop, DeleteAll
+Menu, BuiltInMenu, DeleteAll
 Menu, Tray, DeleteAll
 GoSub, LoadLang
 GoSub, CreateMenuBar

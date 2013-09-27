@@ -23,9 +23,10 @@
 	f_Lang006 =	E&ksporter til AHK
 	f_Lang007 =	Ek&sempel Script
 	f_Lang008 =	&Rediger Script
-	f_Lang009 =	&Listevariable
-	f_Lang010 =	&Udgang
-	f_Lang011 =	&Ingen filer
+	f_Lang009 =	&PlanlæG Makroer
+	f_Lang010 =	&Listevariable
+	f_Lang011 =	&Udgang
+	f_Lang012 =	&Ingen filer
 		
 ; Macro Sub Menu		
 	r_lang001 =	&Indspil makro
@@ -147,6 +148,15 @@
 	y_Lang001 =	Skjul vindue
 	y_Lang002 =	Vis vindue
 	y_Lang003 =	Kontrol Værktøjslinje
+		
+; Built-in Vars Menu		
+	b_Lang001 =	Specialtegn
+	b_Lang002 =	egenskaber
+	b_Lang003 =	Dato og tid
+	b_Lang004 =	Bruger Idle Time
+	b_Lang005 =	System og Bruger
+	b_Lang006 =	Misc.
+	b_Lang007 =	Loop
 		
 ; Main Window		
 	w_Lang001 =	Eksport
@@ -604,6 +614,19 @@
 	t_Lang150 =	Minimer til bakken
 	t_Lang151 =	Display bekræftelse, når lukker en makro
 	t_Lang152 =	Opret sikkerhedskopier automatisk
+	t_Lang153 =	Opretter en planlagt opgave i Windows Opgavestyring.
+	t_Lang154 =	Tidspunkt for første run
+	t_Lang155 =	Planlæg typen
+	t_Lang156 =	Når||Dagligt|Weekly|Månedlig|Start|Logon|Idle
+	t_Lang157 =	Target PMC-fil
+	t_Lang158 =	Target AHK fil
+	t_Lang159 =	Scriptet skal gemmes eller overskrives i den aktuelle mappe!
+	t_Lang160 =	Åben Task Scheduler
+	t_Lang161 =	Opgave blev oprettet med succes!
+	t_Lang162 =	Der opstod en fejl. Opgaven kunne ikke oprettes.
+	t_Lang163 =	Scheduler
+	t_Lang164 =	PlanlæG Makroer
+	t_Lang165 =	KøR Makro
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Åbent
@@ -745,6 +768,7 @@
 	d_Lang081 =	Du kan ændre og tilpasse layout i menuen Vis.
 	d_Lang082 =	Filen blev ikke fundet!
 	d_Lang083 =	En backup-fil er fundet. Kunne du tænke dig at åbne den?
+	d_Lang084 =	Gem dine ændringer før du planlægger en opgave.
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -1202,6 +1226,7 @@
 	SetNumlockState	Indstiller tilstand Numlock-tasten. Kan også tvinge nøglen til at blive på eller fra.
 	SetScrollLockState	Indstiller tilstand ScrollLock tasten. Kan også tvinge nøglen til at blive på eller fra.
 	SetRegView	Giver indskrive kommandoer i en 32-bit script at få adgang til 64-bit register visning og vice versa.
+	SetTimer	Årsager en subrutine til at blive lanceret automatisk og gentagne gange på et bestemt tidsinterval.
 	Shutdown	Lukker, genstarter eller logger af systemet.
 	Sin	Returnerer den trigonometriske sinus af nummer.
 	Sleep	Venter den angivne mængde tid, før du fortsætter.

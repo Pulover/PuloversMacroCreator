@@ -23,9 +23,10 @@
 	f_Lang006 =	&Izvoz v AHK
 	f_Lang007 =	&Predogled Script
 	f_Lang008 =	&Uredi Skript
-	f_Lang009 =	S&eznam spremenljivk
-	f_Lang010 =	E&xit
-	f_Lang011 =	Ni s&lik
+	f_Lang009 =	U&rnik Makrov
+	f_Lang010 =	S&eznam spremenljivk
+	f_Lang011 =	E&xit
+	f_Lang012 =	Ni s&lik
 		
 ; Macro Sub Menu		
 	r_lang001 =	&Snemaj makro
@@ -147,6 +148,15 @@
 	y_Lang001 =	Skrij okno
 	y_Lang002 =	Pokaži okno
 	y_Lang003 =	Orodna Vrstica Nadzor
+		
+; Built-in Vars Menu		
+	b_Lang001 =	Posebni znaki
+	b_Lang002 =	Nepremičnine
+	b_Lang003 =	Datum in čas
+	b_Lang004 =	Uporabnik Idle čas
+	b_Lang005 =	Sistem in uporabniški
+	b_Lang006 =	Razno.
+	b_Lang007 =	Zanka
 		
 ; Main Window		
 	w_Lang001 =	Izvozi
@@ -604,6 +614,19 @@
 	t_Lang150 =	Zmanjšati v pladenj
 	t_Lang151 =	Prikaže potrditev pri zapiranju makro
 	t_Lang152 =	Ustvarite varnostne kopije samodejno
+	t_Lang153 =	Ustvari redne naloge v Windows Task Scheduler.
+	t_Lang154 =	Čas prvi vožnji
+	t_Lang155 =	Urnik vrsto
+	t_Lang156 =	Ko||Dnevno|Tedensko|Mesečno|Začetek|Logon|Idle
+	t_Lang157 =	Ciljna PMC datoteke
+	t_Lang158 =	Ciljna AHK datoteke
+	t_Lang159 =	Scenarij bo shranjen ali prepisan v trenutnem imeniku!
+	t_Lang160 =	Odprt Task Scheduler
+	t_Lang161 =	Naloga uspešno ustvarjena!
+	t_Lang162 =	Prišlo je do napake. Ni mogoče ustvariti naloga.
+	t_Lang163 =	Scheduler
+	t_Lang164 =	Urnik Makrov
+	t_Lang165 =	ZažEni Makro
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Odprite
@@ -745,6 +768,7 @@
 	d_Lang081 =	Lahko spremenite in prilagodite postavitev v meniju Pogled.
 	d_Lang082 =	Datoteke ni bilo mogoče najti!
 	d_Lang083 =	Varnostna kopija je bila najdena. Bi radi, da jo odprete?
+	d_Lang084 =	Prosimo, shranite spremembe, preden načrtujete opravilo.
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -1202,6 +1226,7 @@
 	SetNumlockState	Nastavi stanje tipke NumLock. More prisiliti tudi ključ, da ostanejo vklopite ali izklopite.
 	SetScrollLockState	Nastavi stanje tipke za Scrolllock. More prisiliti tudi ključ, da ostanejo vklopite ali izklopite.
 	SetRegView	Omogoča registra ukazi v 32-bitnem scenarij za dostop do 64-bitni pogled registra in obratno.
+	SetTimer	Povzroča podprogram, ki se samodejno zažene in večkrat v določenem časovnem intervalu.
 	Shutdown	Izklopi, zažene ali odjavi sistem.
 	Sin	Vrne trigonometrične sinus številko.
 	Sleep	Počaka določen znesek časa, preden nadaljujete.

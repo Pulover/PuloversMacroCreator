@@ -23,9 +23,10 @@
 	f_Lang006 =	&Exportálás AHK
 	f_Lang007 =	&Preview Script
 	f_Lang008 =	&Szerkeszteni Script
-	f_Lang009 =	&Listaváltozókra
-	f_Lang010 =	K&ijárat
-	f_Lang011 =	Nin&cs kép
+	f_Lang009 =	Mene&trend MakróK
+	f_Lang010 =	&Listaváltozókra
+	f_Lang011 =	K&ijárat
+	f_Lang012 =	Nin&cs kép
 		
 ; Macro Sub Menu		
 	r_lang001 =	&Makró rögzítése
@@ -147,6 +148,15 @@
 	y_Lang001 =	Ablak elrejtése
 	y_Lang002 =	Ablak megjelenítése
 	y_Lang003 =	Ellenőrzés Eszköztár
+		
+; Built-in Vars Menu		
+	b_Lang001 =	speciális karakterek
+	b_Lang002 =	Tulajdonságok
+	b_Lang003 =	Dátum és idő
+	b_Lang004 =	Felhasználó Idle idő
+	b_Lang005 =	Rendszer és felhasználói
+	b_Lang006 =	Misc.
+	b_Lang007 =	Hurok
 		
 ; Main Window		
 	w_Lang001 =	Export
@@ -604,6 +614,19 @@
 	t_Lang150 =	Tálcára
 	t_Lang151 =	Jelenítsen meg bezárásakor a makró
 	t_Lang152 =	Létrehozása mentések automatikusan
+	t_Lang153 =	Létrehoz egy ütemezett feladatot a Windows Task Scheduler.
+	t_Lang154 =	Ideje az első futás
+	t_Lang155 =	Menetrend típus
+	t_Lang156 =	Ha||Napi|Heti|Havi|Első|bejelentkezés|Idle
+	t_Lang157 =	Cél PMC fájlt
+	t_Lang158 =	Cél AHK fájl
+	t_Lang159 =	A szkript menti, vagy felülírja az aktuális könyvtárban!
+	t_Lang160 =	Nyitott Task Scheduler
+	t_Lang161 =	Feladat sikeresen létrehozva!
+	t_Lang162 =	Hiba történt. A feladat nem hozható létre.
+	t_Lang163 =	Scheduler
+	t_Lang164 =	Menetrend MakróK
+	t_Lang165 =	Run Macro
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Nyitva
@@ -745,6 +768,7 @@
 	d_Lang081 =	Meg lehet változtatni, és testre elrendezést a Nézet menüben.
 	d_Lang082 =	A fájl nem található!
 	d_Lang083 =	A biztonsági mentés találtak. Szeretnéd, hogy nyissa meg?
+	d_Lang084 =	Kérjük, mentse el a módosításokat, mielőtt ütemezése a feladat.
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -1202,6 +1226,7 @@
 	SetNumlockState	Állítja az állam a NumLock gomb. Is kényszeríti a legfontosabb, hogy maradni vagy ki.
 	SetScrollLockState	Állítja az állam a ScrollLock gombot. Is kényszeríti a legfontosabb, hogy maradni vagy ki.
 	SetRegView	Lehetővé teszi a regisztrációs parancsokat egy 32 bites script eléréséhez a 64 bites adatbázis nézet, és fordítva.
+	SetTimer	Okoz alprogram automatikusan elindul, és ismételten egy meghatározott időintervallumban.
 	Shutdown	Kikapcsol, újraindul, vagy kilép a rendszerből.
 	Sin	Visszaadja a trigonometrikus szinuszát száma.
 	Sleep	Vár egy meghatározott ideig, mielőtt folytatná.

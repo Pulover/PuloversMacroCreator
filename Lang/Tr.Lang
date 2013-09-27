@@ -23,9 +23,10 @@
 	f_Lang006 =	A&HK Aktar
 	f_Lang007 =	&Önizleme Senaryo
 	f_Lang008 =	K&omut Dosyasını Düzenleyin
-	f_Lang009 =	&Listesi değişkenleri
-	f_Lang010 =	&Çıkış
-	f_Lang011 =	H&içbir içerik
+	f_Lang009 =	&Makro Programı
+	f_Lang010 =	&Listesi değişkenleri
+	f_Lang011 =	&Çıkış
+	f_Lang012 =	H&içbir içerik
 		
 ; Macro Sub Menu		
 	r_lang001 =	&Makro Kaydet
@@ -147,6 +148,15 @@
 	y_Lang001 =	Pencere gizle
 	y_Lang002 =	Pencere göster
 	y_Lang003 =	Kontroller Araç Çubuğu
+		
+; Built-in Vars Menu		
+	b_Lang001 =	özel Karakterler
+	b_Lang002 =	özellikleri
+	b_Lang003 =	Tarih ve Saat
+	b_Lang004 =	Kullanıcı Boş Zaman
+	b_Lang005 =	Sistem ve Kullanıcı
+	b_Lang006 =	Çeşitli.
+	b_Lang007 =	Döngü
 		
 ; Main Window		
 	w_Lang001 =	Ihracat
@@ -604,6 +614,19 @@
 	t_Lang150 =	Tepsisine küçült
 	t_Lang151 =	Bir makro kapatırken onayını görüntüleyebilir
 	t_Lang152 =	Otomatik yedekleme oluşturma
+	t_Lang153 =	Windows Görev Zamanlayıcı bir zamanlanmış görev oluşturur.
+	t_Lang154 =	Ilk çalıştırma zamanı
+	t_Lang155 =	Tipi Programı
+	t_Lang156 =	Bir kez||Günlük|Haftalık|Aylık|Başlangıç|Oturum Açma|Boşta
+	t_Lang157 =	Hedef PMC dosya
+	t_Lang158 =	Hedef AHK dosya
+	t_Lang159 =	Komut dosyası kaydedilir veya geçerli dizinde üzerine olacak!
+	t_Lang160 =	Açık Görev Zamanlayıcı
+	t_Lang161 =	Görev başarıyla oluşturuldu!
+	t_Lang162 =	Bir hata oluştu. Görev oluşturulamadı.
+	t_Lang163 =	ZamanlayıCı
+	t_Lang164 =	Makro Programı
+	t_Lang165 =	Makro ÇAlışTıR
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Açık
@@ -745,6 +768,7 @@
 	d_Lang081 =	Değiştirmek Görünüm menüsünden düzenleri özelleştirebilirsiniz.
 	d_Lang082 =	Dosya bulunamadı!
 	d_Lang083 =	Bir yedekleme dosyası tespit edilmiştir. Bunu açmak ister misiniz?
+	d_Lang084 =	Bir görev zamanlama önce değişiklikleri kaydedin.
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -1202,6 +1226,7 @@
 	SetNumlockState	Numlock tuşunun durumunu ayarlar. Ayrıca anahtar açık veya kapalı kalmak zorlayabilir.
 	SetScrollLockState	ScrollLock anahtarın durumunu ayarlar. Ayrıca anahtar açık veya kapalı kalmak zorlayabilir.
 	SetRegView	32-bit komut kayıt komutları 64-bit kayıt defteri görünümü ve tersi erişmenizi sağlar.
+	SetTimer	Belirli bir zaman aralığında otomatik olarak ve tekrar tekrar açılacak bir alt yordam neden olur.
 	Shutdown	, Kapanır yeniden veya sistem kapattığında.
 	Sin	Sayısı trigonometrik sinüsünü verir.
 	Sleep	Devam etmeden önce zaman belirtilen miktarda bekler.

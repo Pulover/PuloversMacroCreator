@@ -938,13 +938,17 @@ Media_Stop¢Media_Play_Pause¢Launch_Mail¢Launch_Media¢Launch_App1¢Launch_App
 LButton¢RButton¢MButton¢XButton1¢XButton2¢WheelDown¢WheelUp¢WheelLeft¢WheelRight
 )"
 
-BIV_Special_Characters := "
+SchedTypes := "1|2|3|4|8|9|6"
+Loop, Parse, SchedTypes, |
+	Sched_%A_Index% := A_LoopField
+
+BIV_Characters := "
 (
 A_Space
 A_Tab
 )"
 
-BIV_Script_Properties := "
+BIV_Properties := "
 (
 A_WorkingDir
 A_ScriptDir
@@ -962,7 +966,7 @@ A_IsCompiled
 A_ExitReason
 )"
 
-BIV_Date_and_Time := "
+BIV_Date := "
 (
 A_YYYY
 A_MM
@@ -983,50 +987,13 @@ A_NowUTC
 A_TickCount
 )"
 
-BIV_Script_Settings := "
-(
-A_IsSuspended
-A_IsPaused
-A_IsCritical
-A_BatchLines
-A_TitleMatchMode
-A_TitleMatchModeSpeed
-A_DetectHiddenWindows
-A_DetectHiddenText
-A_AutoTrim
-A_StringCaseSense
-A_FileEncoding
-A_FormatInteger
-A_FormatFloat
-A_KeyDelay
-A_WinDelay
-A_ControlDelay
-A_MouseDelay
-A_DefaultMouseSpeed
-A_RegView
-A_IconHidden
-A_IconTip
-A_IconFile
-A_IconNumber
-)"
-
-BIV_User_Idle_Time := "
+BIV_Idle := "
 (
 A_TimeIdle
 A_TimeIdlePhysical
 )"
 
-BIV_Hotkeys_and_Hotstrings := "
-(
-A_ThisHotkey
-A_PriorHotkey
-A_PriorKey
-A_TimeSinceThisHotkey
-A_TimeSincePriorHotkey
-A_EndChar
-)"
-
-BIV_Operating_System_and_User_Info := "
+BIV_System := "
 (
 ComSpec
 A_Temp

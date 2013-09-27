@@ -83,6 +83,7 @@ return
 ^g::GoSub, Options
 ^r::GoSub, Record
 ^+t::GoSub, RunTimer
+^!t::GoSub, Scheduler
 ^t::GoSub, TabPlus
 ^w::GoSub, TabClose
 ^h::GoSub, SetWin

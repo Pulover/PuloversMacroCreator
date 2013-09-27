@@ -23,9 +23,10 @@
 	f_Lang006 =	&Eksport ke AHK
 	f_Lang007 =	S&krip Preview
 	f_Lang008 =	E&dit Script
-	f_Lang009 =	Sen&arai Pembolehubah
-	f_Lang010 =	Ke&luar
-	f_Lang011 =	&Tiada fail
+	f_Lang009 =	&Jadual Makro
+	f_Lang010 =	Sen&arai Pembolehubah
+	f_Lang011 =	Ke&luar
+	f_Lang012 =	&Tiada fail
 		
 ; Macro Sub Menu		
 	r_lang001 =	&Makro Rekod
@@ -147,6 +148,15 @@
 	y_Lang001 =	Sembunyikan Tetingkap
 	y_Lang002 =	Menunjukkan Window
 	y_Lang003 =	Kawalan Toolbar
+		
+; Built-in Vars Menu		
+	b_Lang001 =	Aksara Khas
+	b_Lang002 =	Hartanah
+	b_Lang003 =	Tarikh dan Masa
+	b_Lang004 =	Pengguna Time Terbiar
+	b_Lang005 =	Sistem dan Pengguna
+	b_Lang006 =	Misc.
+	b_Lang007 =	Loop
 		
 ; Main Window		
 	w_Lang001 =	Eksport
@@ -604,6 +614,19 @@
 	t_Lang150 =	Kurangkan ke dulang
 	t_Lang151 =	Memaparkan pengesahan apabila menutup makro
 	t_Lang152 =	Membuat sandaran secara automatik
+	t_Lang153 =	Mencipta satu tugas yang dijadualkan pada Windows Task Scheduler.
+	t_Lang154 =	Masa mula-mula dijalankan
+	t_Lang155 =	Jadual jenis
+	t_Lang156 =	Sebaik sahaja||harian|Mingguan|Bulanan|Mula|Logon|Terbiar
+	t_Lang157 =	Sasaran PMC fail
+	t_Lang158 =	Sasaran AHK fail
+	t_Lang159 =	Skrip akan disimpan atau ditulis ganti dalam direktori semasa!
+	t_Lang160 =	Terbuka Task Scheduler
+	t_Lang161 =	Petugas berjaya dicipta!
+	t_Lang162 =	Ralat berlaku. Tugas ini tidak dapat diwujudkan.
+	t_Lang163 =	Berjadual
+	t_Lang164 =	Jadual Makro
+	t_Lang165 =	Main Makro
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Buka
@@ -745,6 +768,7 @@
 	d_Lang081 =	Anda boleh menukar dan menyesuaikan susun atur dalam menu View.
 	d_Lang082 =	Fail tidak dijumpai!
 	d_Lang083 =	Satu fail sandaran yang telah dijumpai. Adakah anda ingin membukanya?
+	d_Lang084 =	Sila simpan perubahan anda sebelum penjadualan tugas.
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -1202,6 +1226,7 @@
 	SetNumlockState	Menetapkan keadaan NumLock utama itu. Juga boleh memaksa utama untuk kekal hidup atau mati.
 	SetScrollLockState	Set negeri utama ScrollLock itu. Juga boleh memaksa utama untuk kekal hidup atau mati.
 	SetRegView	Membolehkan arahan pendaftaran dalam skrip 32-bit untuk mengakses pandangan pendaftaran 64-bit dan sebaliknya.
+	SetTimer	Menyebabkan satu subrutin yang akan dilancarkan secara automatik dan berkali-kali pada selang masa yang ditetapkan.
 	Shutdown	Menutup, mula semula, atau log off sistem.
 	Sin	Kembali sinus trigonometri nombor.
 	Sleep	Menunggu jumlah masa yang ditetapkan sebelum meneruskan.

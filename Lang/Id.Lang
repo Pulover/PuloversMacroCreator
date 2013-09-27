@@ -23,9 +23,10 @@
 	f_Lang006 =	&Ekspor ke AHK
 	f_Lang007 =	&Preview Script
 	f_Lang008 =	Me&ngedit Skrip
-	f_Lang009 =	&Daftar Variabel
-	f_Lang010 =	&Keluar
-	f_Lang011 =	&Tidak ada file
+	f_Lang009 =	&Jadwal Macro
+	f_Lang010 =	&Daftar Variabel
+	f_Lang011 =	&Keluar
+	f_Lang012 =	&Tidak ada file
 		
 ; Macro Sub Menu		
 	r_lang001 =	&Rekam Makro
@@ -147,6 +148,15 @@
 	y_Lang001 =	Sembunyikan Jendela
 	y_Lang002 =	Tampilkan Jendela
 	y_Lang003 =	Kontrol Toolbar
+		
+; Built-in Vars Menu		
+	b_Lang001 =	Karakter Khusus
+	b_Lang002 =	properti
+	b_Lang003 =	Tanggal dan Waktu
+	b_Lang004 =	Pengguna Idle Time
+	b_Lang005 =	Sistem dan User
+	b_Lang006 =	Lain-lain.
+	b_Lang007 =	Putaran
 		
 ; Main Window		
 	w_Lang001 =	Ekspor
@@ -604,6 +614,19 @@
 	t_Lang150 =	Minimalkan ke tray
 	t_Lang151 =	Tampilan konfirmasi ketika menutup makro
 	t_Lang152 =	Buat backup otomatis
+	t_Lang153 =	Menciptakan tugas yang dijadwalkan pada Windows Task Scheduler.
+	t_Lang154 =	Waktu pertama kali dijalankan
+	t_Lang155 =	Jadwal Jenis
+	t_Lang156 =	Setelah||Harian|Mingguan|Bulanan|Mulai|Logon|Menganggur
+	t_Lang157 =	File target PMC
+	t_Lang158 =	File target AHK
+	t_Lang159 =	Script akan disimpan atau ditimpa di direktori saat ini!
+	t_Lang160 =	Buka Task Scheduler
+	t_Lang161 =	Tugas berhasil dibuat!
+	t_Lang162 =	Terjadi kesalahan. Tugas tidak dapat dibuat.
+	t_Lang163 =	Scheduler
+	t_Lang164 =	Jadwal Macro
+	t_Lang165 =	Jalankan Makro
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Buka
@@ -745,6 +768,7 @@
 	d_Lang081 =	Anda dapat mengubah dan menyesuaikan tata letak dalam menu View.
 	d_Lang082 =	Berkas tidak ditemukan!
 	d_Lang083 =	Sebuah file cadangan telah ditemukan. Apakah Anda ingin membukanya?
+	d_Lang084 =	Harap menyimpan perubahan sebelum penjadwalan tugas.
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -1202,6 +1226,7 @@
 	SetNumlockState	Mengatur keadaan tombol Numlock. Bisa juga memaksa kunci untuk tetap hidup atau mati.
 	SetScrollLockState	Mengatur negara dari kunci ScrollLock. Bisa juga memaksa kunci untuk tetap hidup atau mati.
 	SetRegView	Memungkinkan perintah registry dalam naskah 32-bit untuk mengakses tampilan registry 64-bit dan sebaliknya.
+	SetTimer	Penyebab subrutin yang akan diluncurkan secara otomatis dan berulang pada interval waktu tertentu.
 	Shutdown	Shut down, restart, atau log off sistem.
 	Sin	Mengembalikan sinus trigonometri Nomor.
 	Sleep	Menunggu jumlah waktu tertentu sebelum melanjutkan.

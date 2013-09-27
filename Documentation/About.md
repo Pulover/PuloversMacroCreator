@@ -38,6 +38,8 @@ Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jör
 
 ## Version 4.0.1
 
+* Added tool to schedule macros in Windows Task Scheduler.
+* Added shortcuts to insert built-in variables in Command Windows context-menu.
 * Added Right-Click-Drag Move/Copy menu.
 * Fixed issues with command line parameters.
 * Fixed bugs.

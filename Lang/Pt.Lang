@@ -23,9 +23,10 @@
 	f_Lang006 =	&Exportar para AHK
 	f_Lang007 =	&Visuali&zar Script
 	f_Lang008 =	E&ditar Script
-	f_Lang009 =	&Listar Variáveis
-	f_Lang010 =	Sai&r
-	f_Lang011 =	Nenhum arquivo
+	f_Lang009 =	A&gendar Macros
+	f_Lang010 =	&Listar Variáveis
+	f_Lang011 =	Sai&r
+	f_Lang012 =	Nenhum arquivo
 		
 ; Macro Sub Menu		
 	r_lang001 =	&Gravar Macro
@@ -147,6 +148,15 @@
 	y_Lang001 =	Ocultar Janela
 	y_Lang002 =	Mostrar Janela
 	y_Lang003 =	Barra de Controles
+		
+; Built-in Vars Menu		
+	b_Lang001 =	Caracteres Especiais
+	b_Lang002 =	Propriedades
+	b_Lang003 =	Data e Hora
+	b_Lang004 =	Tempo Ocioso do Usuário
+	b_Lang005 =	Sistema e Usuário
+	b_Lang006 =	Variado
+	b_Lang007 =	Loop
 		
 ; Main Window		
 	w_Lang001 =	Exportar
@@ -604,6 +614,19 @@
 	t_Lang150 =	Minimizar para bandeja
 	t_Lang151 =	Exibir confirmação ao fechar uma macro
 	t_Lang152 =	Criar backups automaticamente
+	t_Lang153 =	Cria uma tarefa agendada no Agendador de Tarefas do Windows.
+	t_Lang154 =	Hora da primeira execução
+	t_Lang155 =	Tipo de agendamento
+	t_Lang156 =	Uma vez||Diário|Semanal|Mensal|Iniciar|Logon|Ocioso
+	t_Lang157 =	Apontar para arquivo PMC
+	t_Lang158 =	Apontar para arquivo AHK
+	t_Lang159 =	O script será salvo ou sobreescrito na pasta atual!
+	t_Lang160 =	Abrir Agendador de Tarefas
+	t_Lang161 =	Tarefa criada com sucesso!
+	t_Lang162 =	Um erro ocorreu. A tarefa não pôde ser criada.
+	t_Lang163 =	Agendador
+	t_Lang164 =	Agendar Macros
+	t_Lang165 =	Executar Macro
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Abrir
@@ -745,6 +768,7 @@
 	d_Lang081 =	Você pode alterar e personalizar layouts no menu Exibir.
 	d_Lang082 =	O arquivo não foi encontrado!
 	d_Lang083 =	Um arquivo de backup foi encontrado. Gostaria de abri-lo?
+	d_Lang084 =	Por favor, salve suas alterações antes de agendar uma tarefa.
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -1202,6 +1226,7 @@
 	SetNumlockState	Define o estado da tecla NumLock. Também é possível forçar a chave para permanecer ligado ou desligado.
 	SetScrollLockState	Define o estado da chave ScrollLock. Também é possível forçar a chave para permanecer ligado ou desligado.
 	SetRegView	Permite que os comandos de registro em um roteiro de 32 bits para acessar a exibição do registro de 64-bit e vice-versa.
+	SetTimer	Faz com que uma sub-rotina para ser iniciado automaticamente e repetidamente em um intervalo de tempo especificado.
 	Shutdown	Desliga, reinicia ou faz logoff do sistema.
 	Sin	Retorna o seno trigonométrico de Número.
 	Sleep	Aguarda o período de tempo especificado antes de continuar.

@@ -23,9 +23,10 @@
 	f_Lang006 =	&Exportar a AHK
 	f_Lang007 =	&Vista previa de Guión
 	f_Lang008 =	E&ditar guión
-	f_Lang009 =	&Lista de las variables
-	f_Lang010 =	&Salida
-	f_Lang011 =	N&o hay archivos
+	f_Lang009 =	&Programar Macros
+	f_Lang010 =	&Lista de las variables
+	f_Lang011 =	&Salida
+	f_Lang012 =	N&o hay archivos
 		
 ; Macro Sub Menu		
 	r_lang001 =	&Grabar macro
@@ -147,6 +148,15 @@
 	y_Lang001 =	Ocultar ventana
 	y_Lang002 =	Mostrar ventana
 	y_Lang003 =	Barra de Controles
+		
+; Built-in Vars Menu		
+	b_Lang001 =	Caracteres especiales
+	b_Lang002 =	Propiedades
+	b_Lang003 =	Fecha y Hora
+	b_Lang004 =	Usuario Tiempo de inactividad
+	b_Lang005 =	Sistema y Usuario
+	b_Lang006 =	Misc.
+	b_Lang007 =	Bucle
 		
 ; Main Window		
 	w_Lang001 =	Exportar
@@ -604,6 +614,19 @@
 	t_Lang150 =	Minimizar a la bandeja
 	t_Lang151 =	Pantalla de confirmación al cerrar una macro
 	t_Lang152 =	Crear copias de seguridad de forma automática
+	t_Lang153 =	Crea una tarea programada en el programador de tareas de Windows.
+	t_Lang154 =	Tiempo del primer plazo
+	t_Lang155 =	Programar tipo
+	t_Lang156 =	Una vez||Diario|Semanal|Mensual|Inicio|Iniciar sesión|Idle
+	t_Lang157 =	Archivo PMC Target
+	t_Lang158 =	Target archivo AHK
+	t_Lang159 =	El script se guarda o se sobrescribe en el directorio actual!
+	t_Lang160 =	Programador de tareas abierto
+	t_Lang161 =	Grupo creado con éxito!
+	t_Lang162 =	Se ha producido un error. La tarea no pudo ser creada.
+	t_Lang163 =	Programador
+	t_Lang164 =	Programar Macros
+	t_Lang165 =	Ejecutar Macro
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Abierto
@@ -745,6 +768,7 @@
 	d_Lang081 =	Usted puede cambiar y personalizar los diseños en el menú View.
 	d_Lang082 =	El archivo no se ha encontrado!
 	d_Lang083 =	Se ha encontrado un archivo de copia de seguridad. ¿Quieres abrirlo?
+	d_Lang084 =	Guarde sus cambios antes de programar una tarea.
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -1202,6 +1226,7 @@
 	SetNumlockState	Establece el estado de la tecla Bloq Num. También se puede forzar la clave para mantenerse encendido o apagado.
 	SetScrollLockState	Establece el estado de la tecla Bloq Despl. También se puede forzar la clave para mantenerse encendido o apagado.
 	SetRegView	Permite que los comandos de registro en una secuencia de comandos de 32 bits para acceder a la vista del registro de 64 bits y viceversa.
+	SetTimer	Provoca un subprograma que se lanzará de forma automática y repetidamente a un intervalo de tiempo especificado.
 	Shutdown	Apaga, reinicia o cierra sesión en el sistema.
 	Sin	Devuelve el seno trigonométrico del Número.
 	Sleep	Espera durante el período de tiempo especificado antes de continuar.

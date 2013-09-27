@@ -23,9 +23,10 @@
 	f_Lang006 =	&Esporta in AHK
 	f_Lang007 =	An&teprima Script
 	f_Lang008 =	&Modifica Script
-	f_Lang009 =	&Variabili di lista
-	f_Lang010 =	&Uscita
-	f_Lang011 =	Nessun f&ile
+	f_Lang009 =	&Programmare Le Macro
+	f_Lang010 =	&Variabili di lista
+	f_Lang011 =	&Uscita
+	f_Lang012 =	Nessun f&ile
 		
 ; Macro Sub Menu		
 	r_lang001 =	&Registra macro
@@ -147,6 +148,15 @@
 	y_Lang001 =	Nascondi la finestra
 	y_Lang002 =	Mostra Finestra
 	y_Lang003 =	Controlli Di Barra Degli Strumenti Di
+		
+; Built-in Vars Menu		
+	b_Lang001 =	Caratteri speciali
+	b_Lang002 =	proprietà
+	b_Lang003 =	Data e Ora
+	b_Lang004 =	Utente Tempo di inattività
+	b_Lang005 =	Di sistema e utente
+	b_Lang006 =	Varie.
+	b_Lang007 =	Loop
 		
 ; Main Window		
 	w_Lang001 =	Esportazione
@@ -604,6 +614,19 @@
 	t_Lang150 =	Riduci a icona nella tray
 	t_Lang151 =	Display di conferma quando si chiude una macro
 	t_Lang152 =	Creare automaticamente copie di backup
+	t_Lang153 =	Crea un'operazione pianificata in Windows Task Scheduler.
+	t_Lang154 =	Tempo di prima esecuzione
+	t_Lang155 =	Pianificare tipo
+	t_Lang156 =	Una volta||Giornaliero|Settimanale|Mensile|Start|Accedi|Idle
+	t_Lang157 =	File di PMC target
+	t_Lang158 =	File di AHK destinazione
+	t_Lang159 =	Lo script verrà salvato o sovrascritto nella directory corrente!
+	t_Lang160 =	Aprire Task Scheduler
+	t_Lang161 =	Task creata con successo!
+	t_Lang162 =	Si è verificato un errore. Il compito non può essere creata.
+	t_Lang163 =	Scheduler
+	t_Lang164 =	Programmare Le Macro
+	t_Lang165 =	Esegui Macro
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Aperto
@@ -745,6 +768,7 @@
 	d_Lang081 =	È possibile modificare e personalizzare i layout nel menu Visualizza.
 	d_Lang082 =	Il file non è stato trovato!
 	d_Lang083 =	È stato trovato un file di backup. Ti piacerebbe aprirlo?
+	d_Lang084 =	Si prega di salvare le modifiche prima di pianificare un compito.
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -1202,6 +1226,7 @@
 	SetNumlockState	Imposta lo stato del tasto Bloc Num. Può anche forzare la chiave per rimanere acceso o spento.
 	SetScrollLockState	Imposta lo stato del tasto Scrolllock. Può anche forzare la chiave per rimanere acceso o spento.
 	SetRegView	Consente comandi Registro di sistema in uno script a 32 bit di accedere alla visualizzazione del Registro di 64 bit e viceversa.
+	SetTimer	Provoca una subroutine per essere lanciato automaticamente e ripetutamente in un intervallo di tempo specificato.
 	Shutdown	Si spegne, riavvia o si disconnette il sistema.
 	Sin	Restituisce il seno trigonometrico di numero.
 	Sleep	Attende il periodo di tempo specificato prima di proseguire.
