@@ -55,7 +55,7 @@ Makes all Hotkeys context-sensitive. Such hotkeys perform a different action (or
 
 This option affects ALL Hotkeys and will be saved to the programs settings when it's closed. There's a text tip at the bottom-right of the main window to show if it's active. To deactivate this option select *None* in the list.
 
-For more information see [AutoHotkey Help](http://l.autohotkey.net/docs/commands/_IfWinActive.htm).
+For more information see [AutoHotkey Help](http://auto-hotkey.com/docs/commands/_IfWinActive.htm).
 
 ## Playback Options
 

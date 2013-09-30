@@ -13,7 +13,7 @@
 		
 		Software License: [GNU General Public License](License.html)  
 		
-		[AutoHotkey Online Documentation](http://l.autohotkey.net/docs)  
+		[AutoHotkey Online Documentation](http://auto-hotkey.com/docs)  
 		
 		**Support Open Source software: [Donate](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=rodolfoub%40gmail%2ecom&lc=US&item_name=Pulover%27s%20Macro%20Creator&item_number=App%2ePMC&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted)**
 */
@@ -124,7 +124,7 @@
 
 	Extra:
 		### Related
-			[Click](http://l.autohotkey.net/docs/commands/Click.htm), [ControlClick](http://l.autohotkey.net/docs/commands/ControlClick.htm), [MouseClickDrag](http://l.autohotkey.net/docs/commands/MouseClickDrag.htm)
+			[Click](http://auto-hotkey.com/docs/commands/Click.htm), [ControlClick](http://auto-hotkey.com/docs/commands/ControlClick.htm), [MouseClickDrag](http://auto-hotkey.com/docs/commands/MouseClickDrag.htm)
 */
 
 /*!
@@ -143,12 +143,12 @@
 
 	Extra:
 		### Related
-			[Send / SendRaw](http://l.autohotkey.net/docs/commands/Send.htm), [ControlSend](http://l.autohotkey.net/docs/commands/ControlSend.htm), [ControlSetText](http://l.autohotkey.net/docs/commands/ControlSetText.htm), [Clipboard](http://l.autohotkey.net/docs/misc/Clipboard.htm)
+			[Send / SendRaw](http://auto-hotkey.com/docs/commands/Send.htm), [ControlSend](http://auto-hotkey.com/docs/commands/ControlSend.htm), [ControlSetText](http://auto-hotkey.com/docs/commands/ControlSetText.htm), [Clipboard](http://auto-hotkey.com/docs/misc/Clipboard.htm)
 */
 
 /*!
 	Function: Control()
-		Gathers various control commands. Please refer to [AutoHotkey documentation](http://l.autohotkey.net/docs) for details on each one.
+		Gathers various control commands. Please refer to [AutoHotkey documentation](http://auto-hotkey.com/docs) for details on each one.
 
 	Parameters:
 		Value - Second parameter of a Control Command when available. This field accepts [Variables & Functions](p8-Variables.html).
@@ -157,7 +157,7 @@
 
 	Extra:
 		### Related
-			[Control](http://l.autohotkey.net/docs/commands/Control.htm), [ControlFocus](http://l.autohotkey.net/docs/commands/ControlFocus.htm), [ControlGet](http://l.autohotkey.net/docs/commands/ControlGet.htm), [ControlGetFocus](http://l.autohotkey.net/docs/commands/ControlGetFocus.htm), [ControlGetPos](http://l.autohotkey.net/docs/commands/ControlGetPos.htm), [ControlGetText](http://l.autohotkey.net/docs/commands/ControlGetText.htm), [ControlMove](http://l.autohotkey.net/docs/commands/ControlMove.htm), [ControlSetText](http://l.autohotkey.net/docs/commands/ControlSetText.htm)
+			[Control](http://auto-hotkey.com/docs/commands/Control.htm), [ControlFocus](http://auto-hotkey.com/docs/commands/ControlFocus.htm), [ControlGet](http://auto-hotkey.com/docs/commands/ControlGet.htm), [ControlGetFocus](http://auto-hotkey.com/docs/commands/ControlGetFocus.htm), [ControlGetPos](http://auto-hotkey.com/docs/commands/ControlGetPos.htm), [ControlGetText](http://auto-hotkey.com/docs/commands/ControlGetText.htm), [ControlMove](http://auto-hotkey.com/docs/commands/ControlMove.htm), [ControlSetText](http://auto-hotkey.com/docs/commands/ControlSetText.htm)
 		
 		### Download Example
 			[Using Control Commands to Read and Set Text](Examples\ControlCmd.pmc).
@@ -175,7 +175,7 @@
 
 	Extra:
 		### Related
-			[Sleep](http://l.autohotkey.net/docs/commands/Sleep.htm)
+			[Sleep](http://auto-hotkey.com/docs/commands/Sleep.htm)
 */
 
 /*!
@@ -194,7 +194,7 @@
 
 	Extra:
 		### Related
-			[MsgBox](http://l.autohotkey.net/docs/commands/MsgBox.htm)
+			[MsgBox](http://auto-hotkey.com/docs/commands/MsgBox.htm)
 */
 
 /*!
@@ -208,12 +208,12 @@
 
 	Extra:
 		### Related
-			[KeyWait](http://l.autohotkey.net/docs/commands/KeyWait.htm)
+			[KeyWait](http://auto-hotkey.com/docs/commands/KeyWait.htm)
 */
 
 /*!
 	Function: Window()
-		Gathers various Window commands. Please refer to [AutoHotkey documentation](http://l.autohotkey.net/docs) for details on each one.
+		Gathers various Window commands. Please refer to [AutoHotkey documentation](http://auto-hotkey.com/docs) for details on each one.
 	Parameters:
 		Value - Second parameter of a Window Command when available.  
 			This field accepts [Variables & Functions](p8-Variables.html).
@@ -224,7 +224,7 @@
 
 	Extra:
 		### Related
-			[WinActivate](http://l.autohotkey.net/docs/commands/WinActivate.htm), [WinActivateBottom](http://l.autohotkey.net/docs/commands/WinActivateBottom.htm), [WinClose](http://l.autohotkey.net/docs/commands/WinClose.htm), [WinGet](http://l.autohotkey.net/docs/commands/WinGet.htm), [WinGetClass](http://l.autohotkey.net/docs/commands/WinGetClass.htm), [WinGetText](http://l.autohotkey.net/docs/commands/WinGetText.htm), [WinGetTitle](http://l.autohotkey.net/docs/commands/WinGetTitle.htm), [WinGetPos](http://l.autohotkey.net/docs/commands/WinGetPos.htm), [WinHide](http://l.autohotkey.net/docs/commands/WinHide.htm), [WinKill](http://l.autohotkey.net/docs/commands/WinKill.htm), [WinMaximize](http://l.autohotkey.net/docs/commands/WinMaximize.htm), [WinMinimize](http://l.autohotkey.net/docs/commands/WinMinimize.htm), [WinMinimizeAll / WinMinimizeAllUndo](http://l.autohotkey.net/docs/commands/WinMinimizeAll.htm), [WinMove](http://l.autohotkey.net/docs/commands/WinMove.htm), [WinRestore](http://l.autohotkey.net/docs/commands/WinRestore.htm), [WinSet](http://l.autohotkey.net/docs/commands/WinSet.htm), [WinShow](http://l.autohotkey.net/docs/commands/WinShow.htm), [WinWait](http://l.autohotkey.net/docs/commands/WinWait.htm), [WinWaitActive / WinWaitNotActive](http://l.autohotkey.net/docs/commands/WinWaitActive.htm), [WinWaitClose](http://l.autohotkey.net/docs/commands/WinWaitClose.htm)
+			[WinActivate](http://auto-hotkey.com/docs/commands/WinActivate.htm), [WinActivateBottom](http://auto-hotkey.com/docs/commands/WinActivateBottom.htm), [WinClose](http://auto-hotkey.com/docs/commands/WinClose.htm), [WinGet](http://auto-hotkey.com/docs/commands/WinGet.htm), [WinGetClass](http://auto-hotkey.com/docs/commands/WinGetClass.htm), [WinGetText](http://auto-hotkey.com/docs/commands/WinGetText.htm), [WinGetTitle](http://auto-hotkey.com/docs/commands/WinGetTitle.htm), [WinGetPos](http://auto-hotkey.com/docs/commands/WinGetPos.htm), [WinHide](http://auto-hotkey.com/docs/commands/WinHide.htm), [WinKill](http://auto-hotkey.com/docs/commands/WinKill.htm), [WinMaximize](http://auto-hotkey.com/docs/commands/WinMaximize.htm), [WinMinimize](http://auto-hotkey.com/docs/commands/WinMinimize.htm), [WinMinimizeAll / WinMinimizeAllUndo](http://auto-hotkey.com/docs/commands/WinMinimizeAll.htm), [WinMove](http://auto-hotkey.com/docs/commands/WinMove.htm), [WinRestore](http://auto-hotkey.com/docs/commands/WinRestore.htm), [WinSet](http://auto-hotkey.com/docs/commands/WinSet.htm), [WinShow](http://auto-hotkey.com/docs/commands/WinShow.htm), [WinWait](http://auto-hotkey.com/docs/commands/WinWait.htm), [WinWaitActive / WinWaitNotActive](http://auto-hotkey.com/docs/commands/WinWaitActive.htm), [WinWaitClose](http://auto-hotkey.com/docs/commands/WinWaitClose.htm)
 */
 
 /*!
@@ -254,7 +254,7 @@
 
 	Extra:
 		### Related
-			[ImageSearch](http://l.autohotkey.net/docs/commands/ImageSearch.htm)
+			[ImageSearch](http://auto-hotkey.com/docs/commands/ImageSearch.htm)
 		
 		## Make Screenshot Tool Instructions
 		
@@ -301,12 +301,12 @@
 
 	Extra:
 		### Related
-			[PixelSearch](http://l.autohotkey.net/docs/commands/PixelSearch.htm)
+			[PixelSearch](http://auto-hotkey.com/docs/commands/PixelSearch.htm)
 */
 
 /*!
 	Function: Run()
-		Gathers various AutoHotkey commands to execute different types of tasks. To get help on each command **right-click anywhere on the window** and select the corresponding link. For a complete list of commands refer to [AutoHotkey documentation](http://l.autohotkey.net/docs/).
+		Gathers various AutoHotkey commands to execute different types of tasks. To get help on each command **right-click anywhere on the window** and select the corresponding link. For a complete list of commands refer to [AutoHotkey documentation](http://auto-hotkey.com/docs/).
 
 	Parameters:
 		Parameters Fields - Parameters will vary according to the selected command.  
@@ -317,7 +317,7 @@
 
 	Extra:
 		### Related
-			[Command and Function Index](http://l.autohotkey.net/docs/commands/index.htm)
+			[Command and Function Index](http://auto-hotkey.com/docs/commands/index.htm)
 */
 
 /*!
@@ -335,7 +335,7 @@
 
 	Extra:
 		### Related
-			[Loop](http://l.autohotkey.net/docs/commands/Loop.htm)
+			[Loop](http://auto-hotkey.com/docs/commands/Loop.htm)
 */
 
 /*!
@@ -362,7 +362,7 @@
 
 	Extra:
 		### Related
-			[Loop FilePattern](http://l.autohotkey.net/docs/commands/LoopFile.htm)
+			[Loop FilePattern](http://auto-hotkey.com/docs/commands/LoopFile.htm)
 		
 		### Download Example
 			[Loop through folders, parse and read file's contents](Examples\LoopTypes.pmc).
@@ -389,7 +389,7 @@
 
 	Extra:
 		### Related
-			[Loop Parse](http://l.autohotkey.net/docs/commands/LoopParse.htm)
+			[Loop Parse](http://auto-hotkey.com/docs/commands/LoopParse.htm)
 		
 		### Download Example
 			[Loop through folders, parse and read file's contents](Examples\LoopTypes.pmc).
@@ -411,7 +411,7 @@
 
 	Extra:
 		### Related
-			[Loop Read File](http://l.autohotkey.net/docs/commands/LoopReadFile.htm)
+			[Loop Read File](http://auto-hotkey.com/docs/commands/LoopReadFile.htm)
 		
 		### Download Example
 			[Loop through folders, parse and read file's contents](Examples\LoopTypes.pmc).
@@ -443,7 +443,7 @@
 
 	Extra:
 		### Related
-			[Loop Registry](http://l.autohotkey.net/docs/commands/LoopReg.htm)
+			[Loop Registry](http://auto-hotkey.com/docs/commands/LoopReg.htm)
 */
 
 /*!
@@ -456,7 +456,7 @@
 
 	Extra:
 		### Related
-			[Break](http://l.autohotkey.net/docs/commands/Break.htm)
+			[Break](http://auto-hotkey.com/docs/commands/Break.htm)
 */
 
 /*!
@@ -469,7 +469,7 @@
 
 	Extra:
 		### Related
-			[Continue](http://l.autohotkey.net/docs/commands/Continue.htm)
+			[Continue](http://auto-hotkey.com/docs/commands/Continue.htm)
 */
 
 /*!
@@ -488,7 +488,7 @@
 
 	Extra:
 		### Related
-			[Goto](http://l.autohotkey.net/docs/commands/Goto.htm), [Gosub](http://l.autohotkey.net/docs/commands/Gosub.htm)
+			[Goto](http://auto-hotkey.com/docs/commands/Goto.htm), [Gosub](http://auto-hotkey.com/docs/commands/Gosub.htm)
 */
 
 /*!
@@ -501,7 +501,7 @@
 
 	Extra:
 		### Related
-			[Labels](http://l.autohotkey.net/docs/misc/Labels.htm)
+			[Labels](http://auto-hotkey.com/docs/misc/Labels.htm)
 */
 
 /*!
@@ -523,7 +523,7 @@
 
 	Extra:
 		### Related
-			[IfWinActive / IfWinNotActive](http://l.autohotkey.net/docs/commands/IfWinActive.htm), [IfWinExist / IfWinNotExist](http://l.autohotkey.net/docs/commands/IfWinExist.htm), [IfExist / IfNotExist](http://l.autohotkey.net/docs/commands/IfExist.htm), [IfInString / IfNotInString](http://l.autohotkey.net/docs/commands/IfInString.htm), [IfMsgBox](http://l.autohotkey.net/docs/commands/IfMsgBox.htm), [If Statements](http://l.autohotkey.net/docs/commands/IfEqual.htm)
+			[IfWinActive / IfWinNotActive](http://auto-hotkey.com/docs/commands/IfWinActive.htm), [IfWinExist / IfWinNotExist](http://auto-hotkey.com/docs/commands/IfWinExist.htm), [IfExist / IfNotExist](http://auto-hotkey.com/docs/commands/IfExist.htm), [IfInString / IfNotInString](http://auto-hotkey.com/docs/commands/IfInString.htm), [IfMsgBox](http://auto-hotkey.com/docs/commands/IfMsgBox.htm), [If Statements](http://auto-hotkey.com/docs/commands/IfEqual.htm)
 */
 
 /*!
@@ -550,7 +550,7 @@
 
 	Extra:
 		### Related
-			[Variables](http://l.autohotkey.net/docs/Variables.htm)
+			[Variables](http://auto-hotkey.com/docs/Variables.htm)
 */
 
 /*!
@@ -589,7 +589,7 @@
 			Since those functions are not loaded with Macro Creator they may take longer to execute.
 		
 		### Related
-			[Functions](http://l.autohotkey.net/docs/Functions.htm)
+			[Functions](http://auto-hotkey.com/docs/Functions.htm)
 */
 
 /*!
@@ -616,7 +616,7 @@
 
 	Extra:
 		### Related
-			[COM](http://l.autohotkey.net/docs/commands/ComObjCreate.htm), [Basic Webpage COM Tutorial](http://www.autohotkey.com/board/topic/47052-basic-webpage-controls), [IWebBrowser2 Interface (MSDN)](http://msdn.microsoft.com/en-us/library/aa752127)
+			[COM](http://auto-hotkey.com/docs/commands/ComObjCreate.htm), [Basic Webpage COM Tutorial](http://www.autohotkey.com/board/topic/47052-basic-webpage-controls), [IWebBrowser2 Interface (MSDN)](http://msdn.microsoft.com/en-us/library/aa752127)
 */
 
 /*!
@@ -657,7 +657,7 @@
 	
 	Extra:
 		### Related
-			[COM](http://l.autohotkey.net/docs/commands/ComObjCreate.htm), [Basic Webpage COM Tutorial](http://www.autohotkey.com/board/topic/47052-basic-webpage-controls), [IWebBrowser2 Interface (MSDN)](http://msdn.microsoft.com/en-us/library/aa752127)
+			[COM](http://auto-hotkey.com/docs/commands/ComObjCreate.htm), [Basic Webpage COM Tutorial](http://www.autohotkey.com/board/topic/47052-basic-webpage-controls), [IWebBrowser2 Interface (MSDN)](http://msdn.microsoft.com/en-us/library/aa752127)
 */
 
 /*!
@@ -689,6 +689,6 @@
 
 	Extra:
 		### Related
-			[PostMessage / SendMessage](http://l.autohotkey.net/docs/commands/PostMessage.htm), [Message List](http://l.autohotkey.net/docs/misc/SendMessageList.htm), [Microsoft MSDN](http://msdn.microsoft.com)
+			[PostMessage / SendMessage](http://auto-hotkey.com/docs/commands/PostMessage.htm), [Message List](http://auto-hotkey.com/docs/misc/SendMessageList.htm), [Microsoft MSDN](http://msdn.microsoft.com)
 */
 

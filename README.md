@@ -8,7 +8,7 @@ Pulover's Macro Creator is a Free Automation Tool and Script Generator based on 
 
 ## For developers ##
 
-Source requires the latest version of [AutoHotkey](http://l.autohotkey.net/) to run.
+Source requires the latest version of [AutoHotkey](http://auto-hotkey.com/) to run.
 
 Installer is created with [Inno Setup](http://www.jrsoftware.org/).
 

@@ -44,11 +44,11 @@ Once a script is compiled, it becomes a standalone executable; that is, it can b
 
 ## Context Sensitive Hotkeys
 
-Makes hotkeys and hotstrings work depending on the type of window that is active or exists. For more information see [AutoHotkey documentation](http://l.autohotkey.net/docs).
+Makes hotkeys and hotstrings work depending on the type of window that is active or exists. For more information see [AutoHotkey documentation](http://auto-hotkey.com/docs).
 
 ## Options
 
-Changes various options for the exported script's Auto-Execute Section. For more information see [AutoHotkey documentation](http://l.autohotkey.net/docs).
+Changes various options for the exported script's Auto-Execute Section. For more information see [AutoHotkey documentation](http://auto-hotkey.com/docs).
 
 ## Global Variables
 
@@ -56,4 +56,4 @@ If you have defined [User Global Variables](p7-Settings.html#user-global-variabl
 
 ### Related
 
-[Hotkeys](http://l.autohotkey.net/docs/Hotkeys.htm), [Hotstrings](http://l.autohotkey.net/docs/Hotstrings.htm), [List of Keys](http://l.autohotkey.net/docs/KeyList.htm), [ComObjCreate](http://l.autohotkey.net/docs/commands/ComObjCreate.htm), [ComObjActive](http://l.autohotkey.net/docs/commands/ComObjActive.htm), [Auto-execute Section](http://l.autohotkey.net/docs/Scripts.htm#auto), [#ifwinactive / #ifwinexist](http://l.autohotkey.net/docs/commands/_ifwinactive.htm)
+[Hotkeys](http://auto-hotkey.com/docs/Hotkeys.htm), [Hotstrings](http://auto-hotkey.com/docs/Hotstrings.htm), [List of Keys](http://auto-hotkey.com/docs/KeyList.htm), [ComObjCreate](http://auto-hotkey.com/docs/commands/ComObjCreate.htm), [ComObjActive](http://auto-hotkey.com/docs/commands/ComObjActive.htm), [Auto-execute Section](http://auto-hotkey.com/docs/Scripts.htm#auto), [#ifwinactive / #ifwinexist](http://auto-hotkey.com/docs/commands/_ifwinactive.htm)

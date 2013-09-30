@@ -42,6 +42,7 @@ Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jör
 * Added shortcuts to insert built-in variables in command windows context-menu.
 * Added *Filter by type* button in *Run* command window.
 * Added Right-Click-Drag Move/Copy menu.
+* Added *Play Sound* option to *Image/Pixel Search* result actions.
 * Fixed issues with command line parameters.
 * Fixed bugs.
 

@@ -2791,25 +2791,25 @@ HelpB:
 ThisMenuItem := RegExReplace(A_ThisMenuItem, "\s/.*")
 StringReplace, ThisMenuItem, ThisMenuItem, #, _
 If ThisMenuItem = Clipboard
-	Run, http://l.autohotkey.net/docs/misc/Clipboard.htm
+	Run, http://auto-hotkey.com/docs/misc/Clipboard.htm
 Else If ThisMenuItem = If Statements
-	Run, http://l.autohotkey.net/docs/commands/IfEqual.htm
+	Run, http://auto-hotkey.com/docs/commands/IfEqual.htm
 Else If ThisMenuItem = Labels
-	Run, http://l.autohotkey.net/docs/misc/Labels.htm
+	Run, http://auto-hotkey.com/docs/misc/Labels.htm
 Else If ThisMenuItem = SplashImage
-	Run, http://l.autohotkey.net/docs/commands/Progress.htm
+	Run, http://auto-hotkey.com/docs/commands/Progress.htm
 Else If ThisMenuItem = SplashTextOff
-	Run, http://l.autohotkey.net/docs/commands/SplashTextOn.htm
+	Run, http://auto-hotkey.com/docs/commands/SplashTextOn.htm
 Else If InStr(ThisMenuItem, "LockState")
-	Run, http://l.autohotkey.net/docs/commands/SetNumScrollCapsLockState.htm
+	Run, http://auto-hotkey.com/docs/commands/SetNumScrollCapsLockState.htm
 Else If ThisMenuItem = Variables
-	Run, http://l.autohotkey.net/docs/Variables.htm
+	Run, http://auto-hotkey.com/docs/Variables.htm
 Else If ThisMenuItem = Functions
-	Run, http://l.autohotkey.net/docs/Functions.htm
+	Run, http://auto-hotkey.com/docs/Functions.htm
 Else If ThisMenuItem = Built-in Variables
-	Run, http://l.autohotkey.net/docs/Variables.htm#BuiltIn
+	Run, http://auto-hotkey.com/docs/Variables.htm#BuiltIn
 Else
-	Run, http://l.autohotkey.net/docs/commands/%ThisMenuItem%.htm
+	Run, http://auto-hotkey.com/docs/commands/%ThisMenuItem%.htm
 return
 
 LoopB:
@@ -2818,24 +2818,24 @@ StringReplace, ThisMenuItem, ThisMenuItem, `,
 StringReplace, ThisMenuItem, ThisMenuItem, %A_Space%,, All
 StringReplace, ThisMenuItem, ThisMenuItem, Pattern
 StringReplace, ThisMenuItem, ThisMenuItem, istry
-Run, http://l.autohotkey.net/docs/commands/%ThisMenuItem%.htm
+Run, http://auto-hotkey.com/docs/commands/%ThisMenuItem%.htm
 return
 
 ExportG:
 SpecialB:
 If A_ThisMenuItem = List of Keys
-	Run, http://l.autohotkey.net/docs/KeyList.htm
+	Run, http://auto-hotkey.com/docs/KeyList.htm
 Else If A_ThisMenuItem = Auto-execute Section
-	Run, http://l.autohotkey.net/docs/Scripts.htm#auto
+	Run, http://auto-hotkey.com/docs/Scripts.htm#auto
 Else If InStr(A_ThisMenuItem, "ComObj")
-	Run, http://l.autohotkey.net/docs/commands/%A_ThisMenuItem%.htm
+	Run, http://auto-hotkey.com/docs/commands/%A_ThisMenuItem%.htm
 Else
-	Run, http://l.autohotkey.net/docs/%A_ThisMenuItem%.htm
+	Run, http://auto-hotkey.com/docs/%A_ThisMenuItem%.htm
 return
 
 IEComB:
 If A_ThisMenuItem = COM
-	Run, http://l.autohotkey.net/docs/commands/ComObjCreate.htm
+	Run, http://auto-hotkey.com/docs/commands/ComObjCreate.htm
 If A_ThisMenuItem = Basic Webpage COM Tutorial
 	Run, http://www.autohotkey.com/board/topic/47052-basic-webpage-controls
 If A_ThisMenuItem = IWebBrowser2 Interface (MSDN)
@@ -2844,7 +2844,7 @@ return
 
 SendMsgB:
 If A_ThisMenuItem = Message List
-	Run, http://l.autohotkey.net/docs/misc/SendMessageList.htm
+	Run, http://auto-hotkey.com/docs/misc/SendMessageList.htm
 If A_ThisMenuItem = Microsoft MSDN
 	Run, http://msdn.microsoft.com
 return
@@ -2869,7 +2869,7 @@ Run, http://www.autohotkey.com/board/topic/79763-macro-creator
 return
 
 HelpAHK:
-Run, http://l.autohotkey.net/docs
+Run, http://auto-hotkey.com/docs
 return
 
 CheckNow:
@@ -5699,9 +5699,9 @@ Gui, 19:Add, Button, -Wrap yp xs+240 W25 H23 hwndColorPick vColorPick gGetPixel 
 Gui, 19:Add, Edit, y+5 xs+10 vImgFile W225 R1 -Multi
 Gui, 19:Add, Button, -Wrap yp-1 x+0 W30 H23 vSearchImg gSearchImg, ...
 Gui, 19:Add, Text, y+5 xs+10 W163 R1 Right, %c_Lang067%:
-Gui, 19:Add, DDL, yp-2 x+10 W80 vIfFound gIfFound, Continue||Break|Stop|Prompt|Move|Left Click|Right Click|Middle Click
+Gui, 19:Add, DDL, yp-2 x+10 W80 vIfFound gIfFound, Continue||Break|Stop|Prompt|Move|Left Click|Right Click|Middle Click|Play Sound
 Gui, 19:Add, Text, y+5 xs+10 W163 R1 Right, %c_Lang068%:
-Gui, 19:Add, DDL, yp-2 x+10 W80 vIfNotFound, Continue||Break|Stop|Prompt
+Gui, 19:Add, DDL, yp-2 x+10 W80 vIfNotFound, Continue||Break|Stop|Prompt|Play Sound
 Gui, 19:Add, CheckBox, Checked -Wrap y+0 xs+10 W180 vAddIf, %c_Lang162%
 Gui, 19:Add, Text, -Wrap y+5 xs+10 W250 r1 cGray, %c_Lang069%
 ; Preview
@@ -6849,13 +6849,13 @@ If FuncName in Abs,ACos,Asc,ASin,ATan,Ceil,Chr,Exp,FileExist,Floor,Func
 ,GetKeyName,GetKeySC,GetKeyState,GetKeyVK,InStr,IsByRef,IsFunc,IsLabel
 ,IsObject,Ln,Log,LTrim,Mod,NumGet,NumPut,Round,RTrim,Sin,Sqrt,StrGet
 ,StrLen,StrPut,SubStr,Tan,Trim,WinActive,WinExist
-	Run, http://l.autohotkey.net/docs/Functions.htm#%FuncName%
+	Run, http://auto-hotkey.com/docs/Functions.htm#%FuncName%
 Else If (FuncName = "Array")
-	Run, http://l.autohotkey.net/docs/misc/Arrays.htm
+	Run, http://auto-hotkey.com/docs/misc/Arrays.htm
 Else If (FuncName = "StrSplit")
-	Run, http://l.autohotkey.net/docs/commands/StringSplit.htm
+	Run, http://auto-hotkey.com/docs/commands/StringSplit.htm
 Else
-	Run, http://l.autohotkey.net/docs/commands/%FuncName%.htm
+	Run, http://auto-hotkey.com/docs/commands/%FuncName%.htm
 return
 
 Statement:
@@ -11342,6 +11342,14 @@ Else If (TakeAction = "Prompt")
 		MsgBox, 49, %d_Lang035%, %d_Lang037%`n%d_Lang038%
 	IfMsgBox, Cancel
 		StopIt := 1
+}
+Else If (TakeAction = "Play Sound")
+{
+	If (SearchResult = 0)
+		SoundBeep
+	Else
+		Loop, 2
+			SoundBeep
 }
 CoordMode, Mouse, %CoordMouse%
 return
