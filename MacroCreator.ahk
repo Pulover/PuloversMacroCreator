@@ -6,7 +6,7 @@
 ; pulover@macrocreator.com
 ; Home: http://www.macrocreator.com
 ; Forum: http://www.autohotkey.com/board/topic/79763-macro-creator
-; Version: 4.0.1
+; Version: 4.1.0
 ; Release Date: September, 2013
 ; AutoHotkey Version: 1.1.13.00
 ; Copyright © 2012-2013 Rodolfo U. Batista
@@ -71,7 +71,7 @@ Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jör
 ; Compiler Settings
 ;@Ahk2Exe-SetName Pulover's Macro Creator
 ;@Ahk2Exe-SetDescription Pulover's Macro Creator
-;@Ahk2Exe-SetVersion 4.0.0
+;@Ahk2Exe-SetVersion 4.1.0
 ;@Ahk2Exe-SetCopyright Copyright © 2012-2013 Rodolfo U. Batista
 ;@Ahk2Exe-SetOrigFilename MacroCreator.exe
 
@@ -129,7 +129,7 @@ Loop
 		break
 }
 
-CurrentVersion := "4.0.1", ReleaseDate := "September, 2013"
+CurrentVersion := "4.1.0", ReleaseDate := "September, 2013"
 
 ;##### Ini File Read #####
 

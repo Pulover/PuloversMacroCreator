@@ -44,6 +44,8 @@
 The Abort Hotkey can be used to turn the Timer off.  
 To have other Macros active during Timer check the *Always Active* option or right-click the TrayMenu icon and select **Play**.  
 
+**Schedule Macros**: In this window you can schedule a macro on Windows Task Scheduler. You can select the time to start and how frequent it will run. When select to target the PMC file, it will launch Macro Creator with the selected file and run it automatically in [Silent Mode](#command-line-parameters) (you can select the target macro to run from your project). When you select to target the AHK file, it will write an ahk script with the current project in the same directory of the pmc file, this script will have no hotkeys which means it will run the first macro automatically (you can run other macros in the same project using [Goto/Gosub](Commands/Goto_and_GoSub.html)).
+
 **Play From Selected Row**: If checked Playback will run each Macro from the first selected row in its list. Valid for all Playback commands.
 
 **Play Until Selected Row**: If checked Playback will stop each Macro when the first selected row in its list is reached. Valid for all Playback commands.
