@@ -10,9 +10,8 @@
 	m_Lang005 =	&Macro
 	m_Lang006 =	W&idok
 	m_Lang007 =	Op&cje
-	m_Lang008 =	&Język
-	m_Lang009 =	&Darować
-	m_Lang010 =	Pomoc&y
+	m_Lang008 =	&Darować
+	m_Lang009 =	Pomoc&y
 		
 ; File Sub Menu		
 	f_Lang001 =	&Nowy
@@ -124,11 +123,12 @@
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Ustawienia
-	o_Lang002 =	U&staw jako domyślne Hotkeys
-	o_Lang003 =	Us&taw jako domyślny plik
-	o_Lang004 =	Usu&ń plik domyślny
-	o_Lang005 =	&Hotkeys Domyślnie
-	o_Lang006 =	Ust&awienia domyślne
+	o_Lang002 =	&Język
+	o_Lang003 =	U&staw jako domyślne Hotkeys
+	o_Lang004 =	Us&taw jako domyślny plik
+	o_Lang005 =	Usu&ń plik domyślny
+	o_Lang006 =	&Hotkeys Domyślnie
+	o_Lang007 =	Ust&awienia domyślne
 		
 ; Donate Sub Menu		
 	p_Lang001 =	&PayPal Darowizna

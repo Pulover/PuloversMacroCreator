@@ -10,9 +10,8 @@
 	m_Lang005 =	&Makro
 	m_Lang006 =	&Lihat
 	m_Lang007 =	P&ilihan
-	m_Lang008 =	&Bahasa
-	m_Lang009 =	Me&nderma
-	m_Lang010 =	Ban&tuan
+	m_Lang008 =	Me&nderma
+	m_Lang009 =	&Bantuan
 		
 ; File Sub Menu		
 	f_Lang001 =	&New
@@ -123,12 +122,13 @@
 	v_lang021 =	&Default
 		
 ; Options Sub Menu		
-	o_Lang001 =	Tetapan
-	o_Lang002 =	Ditetapkan sebagai hotkeys lalai
-	o_Lang003 =	Ditetapkan sebagai fail lalai
-	o_Lang004 =	Buang Fail Default
-	o_Lang005 =	Hotkeys lalai
-	o_Lang006 =	Tetapan lalai
+	o_Lang001 =	&Tetapan
+	o_Lang002 =	&Bahasa
+	o_Lang003 =	&Ditetapkan sebagai hotkeys lalai
+	o_Lang004 =	D&itetapkan sebagai fail lalai
+	o_Lang005 =	B&uang Fail Default
+	o_Lang006 =	&Hotkeys lalai
+	o_Lang007 =	T&etapan lalai
 		
 ; Donate Sub Menu		
 	p_Lang001 =	Derma PayPal

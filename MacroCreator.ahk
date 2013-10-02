@@ -401,6 +401,7 @@ Türkçe`t(Turkish)=Tr
 日本語`t(Japanese)=Ja
 한국어`t(Korean)=Ko
 )"
+,	Lang_List := RegExReplace(Lang_All, "=..")
 
 AppName := "Pulover's Macro Creator"
 ,	HeadLine := "; This script was created using Pulover's Macro Creator"
@@ -2741,9 +2742,9 @@ return
 
 KeepMenuCheck:
 If KeepDefKeys
-	Menu, OptionsMenu, Check, %o_Lang002%
+	Menu, OptionsMenu, Check, %o_Lang003%
 Else
-	Menu, OptionsMenu, Uncheck, %o_Lang002%
+	Menu, OptionsMenu, Uncheck, %o_Lang003%
 return
 
 SearchFile:
@@ -2965,10 +2966,10 @@ You should have received a copy of the GNU General Public License along with thi
 Gui, 34:Font
 Gui, 34:Add, Button, -Wrap Default y+20 xp-10 W80 H23 gTipsClose, %c_Lang020%
 Gui, 34:Font, Bold, Tahoma
-Gui, 34:Add, Text, yp-3 xm+380 H25 Center Hidden vHolderStatic, %m_Lang009%
+Gui, 34:Add, Text, yp-3 xm+380 H25 Center Hidden vHolderStatic, %m_Lang008%
 GuiControlGet, Hold, 34:Pos, HolderStatic
 Gui, 34:Add, Progress, % "x" 410 - HoldW " yp wp+20 hp BackgroundF68C06 vProgStatic Disabled"
-Gui, 34:Add, Text, xp yp wp hp Border cWhite Center 0x200 BackgroundTrans vDonateStatic gDonatePayPal, %m_Lang009%
+Gui, 34:Add, Text, xp yp wp hp Border cWhite Center 0x200 BackgroundTrans vDonateStatic gDonatePayPal, %m_Lang008%
 Gui, 34:Font
 GuiControl, 34:Focus, %c_Lang020%
 Gui, 34:Show, W460, %t_Lang076%
@@ -7952,6 +7953,9 @@ Gui, 31:Add, Groupbox, Section w320 h70 Center, %d_Lang076%:
 Gui, 31:Add, Radio, Checked xs+60 ys+30 W100 vBasic gBasicLayout, %d_Lang077%
 Gui, 31:Add, Radio, yp x+20 W100 vDefault gDefaultLayout, %d_Lang078%
 Gui, 31:Add, Text, -Wrap y+5 xs+10 W300 R1 cGray, %d_Lang081%
+Gui, 31:Add, Text, -Wrap y+20 xs W120 R1, %o_Lang002% (Language):
+Gui, 31:Add, DDL, yp x+5 W190 vCurrLang, %Lang_List%
+GuiControl, 31:ChooseString, CurrLang, % Lang_%CurrentLang%
 Gui, 31:Add, Button, Default xm W75 H23 gWelcClose, %c_Lang020%
 Gui, 31:Add, Checkbox, Checked%AutoUpdate% -Wrap yp+5 x+10 W235 r1 vAutoUpdate, %d_Lang079%
 Gui, 31:Show,, %AppName%
@@ -7960,9 +7964,9 @@ return
 31GuiClose:
 31GuiEscape:
 WelcClose:
+Gui, 1:-Disabled
 Gui, 31:Submit
 Gui, 31:Destroy
-Gui, 1:-Disabled
 If AutoUpdate
 	Menu, HelpMenu, Check, %h_Lang008%
 Else
@@ -7971,6 +7975,8 @@ If (Basic = 1)
 	UserLayout := "Basic"
 If (Default = 1)
 	UserLayout := "Default"
+SelLang := CurrLang
+SetTimer, LangChangeOn, -1
 If (ShowTips)
 	GoSub, ShowTips
 return
@@ -12444,14 +12450,14 @@ Loop, Parse, Lang_All, |
 }
 
 Menu, OptionsMenu, Add, %o_Lang001%`t%_s%Ctrl+G, Options
-Menu, OptionsMenu, Add, %m_Lang008%, :LangMenu
+Menu, OptionsMenu, Add, %o_Lang002%, :LangMenu
 Menu, OptionsMenu, Add
-Menu, OptionsMenu, Add, %o_Lang002%, KeepDefKeys
-Menu, OptionsMenu, Add, %o_Lang003%, DefaultMacro
-Menu, OptionsMenu, Add, %o_Lang004%, RemoveDefault
+Menu, OptionsMenu, Add, %o_Lang003%, KeepDefKeys
+Menu, OptionsMenu, Add, %o_Lang004%, DefaultMacro
+Menu, OptionsMenu, Add, %o_Lang005%, RemoveDefault
 Menu, OptionsMenu, Add
-Menu, OptionsMenu, Add, %o_Lang005%`t%_s%Alt+F6, DefaultHotkeys
-Menu, OptionsMenu, Add, %o_Lang006%`t%_s%Alt+F7, LoadDefaults
+Menu, OptionsMenu, Add, %o_Lang006%`t%_s%Alt+F6, DefaultHotkeys
+Menu, OptionsMenu, Add, %o_Lang007%`t%_s%Alt+F7, LoadDefaults
 
 Menu, HelpMenu, Add, %h_Lang001%`t%_s%F1, Help
 Menu, HelpMenu, Add, %h_Lang002%, Tutorials
@@ -12481,8 +12487,8 @@ Menu, MenuBar, Add, %m_Lang004%, :EditMenu
 Menu, MenuBar, Add, %m_Lang003%, :SelectMenu
 Menu, MenuBar, Add, %m_Lang006%, :ViewMenu
 Menu, MenuBar, Add, %m_Lang007%, :OptionsMenu
-Menu, MenuBar, Add, %m_Lang009%, :DonationMenu
-Menu, MenuBar, Add, %m_Lang010%, :HelpMenu
+Menu, MenuBar, Add, %m_Lang008%, :DonationMenu
+Menu, MenuBar, Add, %m_Lang009%, :HelpMenu
 
 Gui, Menu, MenuBar
 
@@ -12522,7 +12528,7 @@ Menu, Tray, Add, %f_Lang011%, Exit
 Menu, Tray, Default, %w_Lang005%
 
 If KeepDefKeys
-	Menu, OptionsMenu, Check, %o_Lang002%
+	Menu, OptionsMenu, Check, %o_Lang003%
 If AutoUpdate
 	Menu, HelpMenu, Check, %h_Lang008%
 If ShowLoopIfMark
@@ -12782,9 +12788,11 @@ return
 ;##### Languages: #####
 
 LangChange:
+SelLang := A_ThisMenuItem
+LangChangeOn:
 Loop, Parse, Lang_All, |
 {
-	If InStr(A_LoopField, A_ThisMenuItem)=1
+	If InStr(A_LoopField, SelLang)=1
 		Lang := SubStr(A_LoopField, -1)
 }
 If (Lang = CurrentLang)

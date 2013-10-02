@@ -10,9 +10,8 @@
 	m_Lang005 =	&Makro
 	m_Lang006 =	&Görmek
 	m_Lang007 =	S&eçenekler
-	m_Lang008 =	D&il
-	m_Lang009 =	&Bağışlamak
-	m_Lang010 =	&Yardım
+	m_Lang008 =	&Bağışlamak
+	m_Lang009 =	&Yardım
 		
 ; File Sub Menu		
 	f_Lang001 =	&Yeni
@@ -124,11 +123,12 @@
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Ayarlar
-	o_Lang002 =	&Varsayılan Hotkeys Olarak Ayarla
-	o_Lang003 =	Va&Rsayılan Dosya Olarak Ayarla
-	o_Lang004 =	Var&sayılan Dosya kaldır
-	o_Lang005 =	Varsa&yılan Hotkeys
-	o_Lang006 =	Varsay&ılan Ayarlar
+	o_Lang002 =	&Dil
+	o_Lang003 =	&Varsayılan Hotkeys Olarak Ayarla
+	o_Lang004 =	Va&Rsayılan Dosya Olarak Ayarla
+	o_Lang005 =	Var&sayılan Dosya kaldır
+	o_Lang006 =	Varsa&yılan Hotkeys
+	o_Lang007 =	Varsay&ılan Ayarlar
 		
 ; Donate Sub Menu		
 	p_Lang001 =	&PayPal Bağış
@@ -624,9 +624,9 @@
 	t_Lang160 =	Açık Görev Zamanlayıcı
 	t_Lang161 =	Görev başarıyla oluşturuldu!
 	t_Lang162 =	Bir hata oluştu. Görev oluşturulamadı.
-	t_Lang163 =	ZamanlayıCı
+	t_Lang163 =	Zamanlayıcı
 	t_Lang164 =	Makro Programı
-	t_Lang165 =	Makro ÇAlışTıR
+	t_Lang165 =	Makro Çalıştır
 	t_Lang166 =	Dosya
 	t_Lang167 =	Dizi
 	t_Lang168 =	HakkıNda Bilgi AlıN

@@ -10,9 +10,8 @@
 	m_Lang005 =	&Makro
 	m_Lang006 =	P&ohled
 	m_Lang007 =	Mo&žnosti
-	m_Lang008 =	&Jazyk
-	m_Lang009 =	&Darovat
-	m_Lang010 =	Pomo&c
+	m_Lang008 =	&Darovat
+	m_Lang009 =	Pomo&c
 		
 ; File Sub Menu		
 	f_Lang001 =	&Nový
@@ -124,11 +123,12 @@
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Nastavení
-	o_Lang002 =	N&astavit jako výchozí klávesové zkratky
-	o_Lang003 =	Na&Stavit Jako Výchozí Soubor
-	o_Lang004 =	&Odebrat výchozí soubor
-	o_Lang005 =	&Výchozí Klávesové zkratky
-	o_Lang006 =	V&ýchozí nastavení
+	o_Lang002 =	&Jazyk
+	o_Lang003 =	N&astavit jako výchozí klávesové zkratky
+	o_Lang004 =	Na&Stavit Jako Výchozí Soubor
+	o_Lang005 =	&Odebrat výchozí soubor
+	o_Lang006 =	&Výchozí Klávesové zkratky
+	o_Lang007 =	V&ýchozí nastavení
 		
 ; Donate Sub Menu		
 	p_Lang001 =	&PayPal Donation
@@ -624,18 +624,18 @@
 	t_Lang160 =	Otevřít Plánovač úloh
 	t_Lang161 =	Úkol byl úspěšně vytvořen!
 	t_Lang162 =	Došlo k chybě.Úkol nemohl být vytvořen.
-	t_Lang163 =	PláNovač
-	t_Lang164 =	PláN Makra
+	t_Lang163 =	Plánovač
+	t_Lang164 =	Plán Makra
 	t_Lang165 =	Spustit Makro
 	t_Lang166 =	Soubor
-	t_Lang167 =	řEtěZ
-	t_Lang168 =	ZíSkejte Informace
-	t_Lang169 =	PočKejte
+	t_Lang167 =	Řetěz
+	t_Lang168 =	Získejte Informace
+	t_Lang169 =	Počkejte
 	t_Lang170 =	Okenní Skupiny
-	t_Lang171 =	ZpráVy
+	t_Lang171 =	Zprávy
 	t_Lang172 =	Registry A INI
 	t_Lang173 =	Zvuk
-	t_Lang174 =	ProměNné
+	t_Lang174 =	Proměnné
 	t_Lang175 =	Misc.
 		
 ; Messages & Dialogs		

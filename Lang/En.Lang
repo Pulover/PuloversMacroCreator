@@ -10,9 +10,8 @@
 	m_Lang005 =	&Macro
 	m_Lang006 =	&View
 	m_Lang007 =	&Options
-	m_Lang008 =	Lan&guage
-	m_Lang009 =	&Donate
-	m_Lang010 =	&Help
+	m_Lang008 =	&Donate
+	m_Lang009 =	&Help
 		
 ; File Sub Menu		
 	f_Lang001 =	&New
@@ -124,11 +123,12 @@
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Settings
-	o_Lang002 =	Set as &Default Hotkeys
-	o_Lang003 =	Set as Default &File
-	o_Lang004 =	&Remove Default File
-	o_Lang005 =	Default &Hotkeys
-	o_Lang006 =	D&efault Settings
+	o_Lang002 =	&Language
+	o_Lang003 =	Set as &Default Hotkeys
+	o_Lang004 =	Set as Default &File
+	o_Lang005 =	&Remove Default File
+	o_Lang006 =	Default &Hotkeys
+	o_Lang007 =	D&efault Settings
 		
 ; Donate Sub Menu		
 	p_Lang001 =	&PayPal Donation

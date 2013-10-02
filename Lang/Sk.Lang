@@ -10,9 +10,8 @@
 	m_Lang005 =	&Makro
 	m_Lang006 =	P&ohľad
 	m_Lang007 =	Vo&ľby
-	m_Lang008 =	&Jazyk
-	m_Lang009 =	&Darovať
-	m_Lang010 =	Pomo&c
+	m_Lang008 =	&Darovať
+	m_Lang009 =	Pomo&c
 		
 ; File Sub Menu		
 	f_Lang001 =	&Nový
@@ -124,11 +123,12 @@
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Nastavenie
-	o_Lang002 =	N&astaviť ako predvolený klávesové skratky
-	o_Lang003 =	Na&staviť ako predvolený súborový
-	o_Lang004 =	&Odstrániť predvolený súbor
-	o_Lang005 =	&Predvolené Klávesové skratky
-	o_Lang006 =	P&redvolené nastavenie
+	o_Lang002 =	&Jazyk
+	o_Lang003 =	N&astaviť ako predvolený klávesové skratky
+	o_Lang004 =	Na&staviť ako predvolený súborový
+	o_Lang005 =	&Odstrániť predvolený súbor
+	o_Lang006 =	&Predvolené Klávesové skratky
+	o_Lang007 =	P&redvolené nastavenie
 		
 ; Donate Sub Menu		
 	p_Lang001 =	&PayPal Dar

@@ -10,9 +10,8 @@
 	m_Lang005 =	マクロ
 	m_Lang006 =	表示
 	m_Lang007 =	オプション
-	m_Lang008 =	言語
-	m_Lang009 =	寄付する
-	m_Lang010 =	助ける
+	m_Lang008 =	寄付する
+	m_Lang009 =	助ける
 		
 ; File Sub Menu		
 	f_Lang001 =	新しい
@@ -124,11 +123,12 @@
 		
 ; Options Sub Menu		
 	o_Lang001 =	設定
-	o_Lang002 =	デフォルトのホットキーとして設定
-	o_Lang003 =	デフォルトファイルとして設定
-	o_Lang004 =	デフォルトのファイルを削除します
-	o_Lang005 =	デフォルトのホットキー
-	o_Lang006 =	デフォルト設定
+	o_Lang002 =	言語
+	o_Lang003 =	デフォルトのホットキーとして設定
+	o_Lang004 =	デフォルトファイルとして設定
+	o_Lang005 =	デフォルトのファイルを削除します
+	o_Lang006 =	デフォルトのホットキー
+	o_Lang007 =	デフォルト設定
 		
 ; Donate Sub Menu		
 	p_Lang001 =	PayPalの寄付

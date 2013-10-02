@@ -10,9 +10,8 @@
 	m_Lang005 =	M&akro
 	m_Lang006 =	Kat&sella
 	m_Lang007 =	Va&linnat
-	m_Lang008 =	K&ieli
-	m_Lang009 =	La&hjoittaa
-	m_Lang010 =	A&pua
+	m_Lang008 =	La&hjoittaa
+	m_Lang009 =	A&pua
 		
 ; File Sub Menu		
 	f_Lang001 =	&Uusi
@@ -124,11 +123,12 @@
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Asetukset
-	o_Lang002 =	A&seta oletukseksi pikanäppäimet
-	o_Lang003 =	As&eta oletukseksi File
-	o_Lang004 =	&Poista Tiedostojärjestelmät
-	o_Lang005 =	&Oletus Pikanäppäimet
-	o_Lang006 =	Ole&tusasetukset
+	o_Lang002 =	&Kieli
+	o_Lang003 =	A&seta oletukseksi pikanäppäimet
+	o_Lang004 =	As&eta oletukseksi File
+	o_Lang005 =	&Poista Tiedostojärjestelmät
+	o_Lang006 =	&Oletus Pikanäppäimet
+	o_Lang007 =	O&letusasetukset
 		
 ; Donate Sub Menu		
 	p_Lang001 =	&PayPal lahjoituksen
@@ -631,7 +631,7 @@
 	t_Lang167 =	Jono
 	t_Lang168 =	Get Info
 	t_Lang169 =	Odota
-	t_Lang170 =	Ikkuna RyhmäT
+	t_Lang170 =	Ikkuna Ryhmät
 	t_Lang171 =	Viestit
 	t_Lang172 =	Ini-
 	t_Lang173 =	Kuulostaa

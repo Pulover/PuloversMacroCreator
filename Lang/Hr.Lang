@@ -10,9 +10,8 @@
 	m_Lang005 =	&Makro
 	m_Lang006 =	&Pogled
 	m_Lang007 =	Mo&gućnosti
-	m_Lang008 =	&Jezik
-	m_Lang009 =	&Darovati
-	m_Lang010 =	Pomo&ći
+	m_Lang008 =	&Darovati
+	m_Lang009 =	Pomo&ći
 		
 ; File Sub Menu		
 	f_Lang001 =	&Novi
@@ -124,11 +123,12 @@
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Postavke
-	o_Lang002 =	P&ostavi kao zadani Hotkeys
-	o_Lang003 =	Po&stavljen Kao Zadani Datoteku
-	o_Lang004 =	&Uklonite propust varalica
-	o_Lang005 =	&Zadane Hotkeys
-	o_Lang006 =	&Tvorničke postavke
+	o_Lang002 =	&Jezik
+	o_Lang003 =	P&ostavi kao zadani Hotkeys
+	o_Lang004 =	Po&stavljen Kao Zadani Datoteku
+	o_Lang005 =	&Uklonite propust varalica
+	o_Lang006 =	&Zadane Hotkeys
+	o_Lang007 =	&Tvorničke postavke
 		
 ; Donate Sub Menu		
 	p_Lang001 =	&PayPal donacija
@@ -626,11 +626,11 @@
 	t_Lang162 =	Došlo je do pogreške.Zadatak nije mogao biti stvoren.
 	t_Lang163 =	Raspored
 	t_Lang164 =	Raspored Makroe
-	t_Lang165 =	TrčAnje Macro
+	t_Lang165 =	Trčanje Macro
 	t_Lang166 =	File
-	t_Lang167 =	GudačKi
+	t_Lang167 =	Gudački
 	t_Lang168 =	Dobiti Informacije
-	t_Lang169 =	ČEkaj
+	t_Lang169 =	Čekaj
 	t_Lang170 =	Prozor Skupine
 	t_Lang171 =	Poruke
 	t_Lang172 =	Registar I INI

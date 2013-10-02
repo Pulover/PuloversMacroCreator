@@ -10,9 +10,8 @@
 	m_Lang005 =	&Makro
 	m_Lang006 =	&Se
 	m_Lang007 =	&Indstillinger
-	m_Lang008 =	S&prog
-	m_Lang009 =	&Donere
-	m_Lang010 =	&Hjælp
+	m_Lang008 =	&Donere
+	m_Lang009 =	&Hjælp
 		
 ; File Sub Menu		
 	f_Lang001 =	&Nyt
@@ -124,11 +123,12 @@
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Indstillinger
-	o_Lang002 =	&Sæt som standard genvejstaster
-	o_Lang003 =	&Angiv som standard File
-	o_Lang004 =	&Fjern Standard File
-	o_Lang005 =	S&tandard Genvejstaster
-	o_Lang006 =	Stan&dardindstillinger
+	o_Lang002 =	&Sprog
+	o_Lang003 =	S&æt som standard genvejstaster
+	o_Lang004 =	&Angiv som standard File
+	o_Lang005 =	&Fjern Standard File
+	o_Lang006 =	S&tandard Genvejstaster
+	o_Lang007 =	Sta&ndardindstillinger
 		
 ; Donate Sub Menu		
 	p_Lang001 =	&PayPal Donation
@@ -625,8 +625,8 @@
 	t_Lang161 =	Opgave blev oprettet med succes!
 	t_Lang162 =	Der opstod en fejl. Opgaven kunne ikke oprettes.
 	t_Lang163 =	Scheduler
-	t_Lang164 =	PlanlæG Makroer
-	t_Lang165 =	KøR Makro
+	t_Lang164 =	Planlæg Makroer
+	t_Lang165 =	Kør Makro
 	t_Lang166 =	File
 	t_Lang167 =	String
 	t_Lang168 =	Få Info

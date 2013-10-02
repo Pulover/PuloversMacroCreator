@@ -10,9 +10,8 @@
 	m_Lang005 =	&Makro
 	m_Lang006 =	V&is
 	m_Lang007 =	&Alternativer
-	m_Lang008 =	&Språk
-	m_Lang009 =	&Donere
-	m_Lang010 =	&Hjelp
+	m_Lang008 =	&Donere
+	m_Lang009 =	&Hjelp
 		
 ; File Sub Menu		
 	f_Lang001 =	&Ny
@@ -124,11 +123,12 @@
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Innstillinger
-	o_Lang002 =	&Angi som standard hurtigtaster
-	o_Lang003 =	&Sett som standard fil
-	o_Lang004 =	&Fjern Standard File
-	o_Lang005 =	Sta&ndard Hurtigtaster
-	o_Lang006 =	Stan&dardinnstillinger
+	o_Lang002 =	&Språk
+	o_Lang003 =	&Angi som standard hurtigtaster
+	o_Lang004 =	S&ett som standard fil
+	o_Lang005 =	&Fjern Standard File
+	o_Lang006 =	S&tandard Hurtigtaster
+	o_Lang007 =	Sta&ndardinnstillinger
 		
 ; Donate Sub Menu		
 	p_Lang001 =	&PayPal donasjon
@@ -626,15 +626,15 @@
 	t_Lang162 =	Det oppstod en feil. Oppgaven kunne ikke opprettes.
 	t_Lang163 =	Scheduler
 	t_Lang164 =	Planlegge Makroer
-	t_Lang165 =	KjøR Makro
+	t_Lang165 =	Kjør Makro
 	t_Lang166 =	Fil
 	t_Lang167 =	String
 	t_Lang168 =	Få Info
 	t_Lang169 =	Vent
-	t_Lang170 =	VindusbåNd
+	t_Lang170 =	Vindusbånd
 	t_Lang171 =	Meldinger
 	t_Lang172 =	Registret Og INI
-	t_Lang173 =	HøRes
+	t_Lang173 =	Høres
 	t_Lang174 =	Variabler
 	t_Lang175 =	Div.
 		

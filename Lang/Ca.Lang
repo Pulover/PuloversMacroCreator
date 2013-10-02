@@ -10,9 +10,8 @@
 	m_Lang005 =	&Macro
 	m_Lang006 =	&Visa
 	m_Lang007 =	O&pcions
-	m_Lang008 =	&Idioma
-	m_Lang009 =	Do&nar
-	m_Lang010 =	&Ajudar
+	m_Lang008 =	Do&nar
+	m_Lang009 =	&Ajudar
 		
 ; File Sub Menu		
 	f_Lang001 =	&Nou
@@ -124,11 +123,12 @@
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Configuració
-	o_Lang002 =	&Establir com a tecles d'accés ràpid predeterminades
-	o_Lang003 =	&Selecciona per defecte del fitxer
-	o_Lang004 =	E&liminar fitxer per defecte
-	o_Lang005 =	&Tecles d'accés ràpid predeterminades
-	o_Lang006 =	C&onfiguració per defecte
+	o_Lang002 =	&Idioma
+	o_Lang003 =	&Establir com a tecles d'accés ràpid predeterminades
+	o_Lang004 =	&Selecciona per defecte del fitxer
+	o_Lang005 =	E&liminar fitxer per defecte
+	o_Lang006 =	&Tecles d'accés ràpid predeterminades
+	o_Lang007 =	C&onfiguració per defecte
 		
 ; Donate Sub Menu		
 	p_Lang001 =	&PayPal Donació

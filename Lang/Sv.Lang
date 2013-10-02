@@ -10,9 +10,8 @@
 	m_Lang005 =	&Makro
 	m_Lang006 =	V&isa
 	m_Lang007 =	A&lternativ
-	m_Lang008 =	&Språk
-	m_Lang009 =	&Donera
-	m_Lang010 =	&Hjälp
+	m_Lang008 =	&Donera
+	m_Lang009 =	&Hjälp
 		
 ; File Sub Menu		
 	f_Lang001 =	&Nytt
@@ -124,11 +123,12 @@
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Inställningar
-	o_Lang002 =	&Ange som standard snabbtangenter
-	o_Lang003 =	A&nge som standard fil
-	o_Lang004 =	&Ta bort standardfilen
-	o_Lang005 =	&Standard Snabbtangenter
-	o_Lang006 =	&Standardinställningar
+	o_Lang002 =	&Språk
+	o_Lang003 =	&Ange som standard snabbtangenter
+	o_Lang004 =	A&nge som standard fil
+	o_Lang005 =	&Ta bort standardfilen
+	o_Lang006 =	Stan&dard Snabbtangenter
+	o_Lang007 =	Standa&rdinställningar
 		
 ; Donate Sub Menu		
 	p_Lang001 =	&PayPal donation
@@ -626,12 +626,12 @@
 	t_Lang162 =	Ett fel inträffade. Uppgiften kunde inte skapas.
 	t_Lang163 =	Scheduler
 	t_Lang164 =	Schema Makron
-	t_Lang165 =	KöR Makro
+	t_Lang165 =	Kör Makro
 	t_Lang166 =	Fil
 	t_Lang167 =	String
 	t_Lang168 =	Få Info
-	t_Lang169 =	VäNta
-	t_Lang170 =	FöNster Grupper
+	t_Lang169 =	Vänta
+	t_Lang170 =	Fönster Grupper
 	t_Lang171 =	Meddelanden
 	t_Lang172 =	Registry Och INI
 	t_Lang173 =	Ljud

@@ -10,9 +10,8 @@
 	m_Lang005 =	매크로
 	m_Lang006 =	전망
 	m_Lang007 =	옵션
-	m_Lang008 =	언어
-	m_Lang009 =	기부
-	m_Lang010 =	도움
+	m_Lang008 =	기부
+	m_Lang009 =	도움
 		
 ; File Sub Menu		
 	f_Lang001 =	새로운
@@ -124,11 +123,12 @@
 		
 ; Options Sub Menu		
 	o_Lang001 =	설정
-	o_Lang002 =	기본 단축키로 설정
-	o_Lang003 =	기본 파일로 설정
-	o_Lang004 =	기본 파일을 제거
-	o_Lang005 =	기본 단축키
-	o_Lang006 =	기본 설정
+	o_Lang002 =	언어
+	o_Lang003 =	기본 단축키로 설정
+	o_Lang004 =	기본 파일로 설정
+	o_Lang005 =	기본 파일을 제거
+	o_Lang006 =	기본 단축키
+	o_Lang007 =	기본 설정
 		
 ; Donate Sub Menu		
 	p_Lang001 =	페이팔 기부

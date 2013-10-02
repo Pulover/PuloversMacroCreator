@@ -10,9 +10,8 @@
 	m_Lang005 =	&Macro
 	m_Lang006 =	&Ver
 	m_Lang007 =	&Opciones
-	m_Lang008 =	&Idioma
-	m_Lang009 =	&Donar
-	m_Lang010 =	A&yuda
+	m_Lang008 =	&Donar
+	m_Lang009 =	A&yuda
 		
 ; File Sub Menu		
 	f_Lang001 =	&Nuevo
@@ -124,11 +123,12 @@
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Configuración
-	o_Lang002 =	&Establecer como teclas de acceso rápido predeterminadas
-	o_Lang003 =	&Definir como archivo predeterminado
-	o_Lang004 =	E&liminar archivo predeterminado
-	o_Lang005 =	&Teclas de acceso directo predeterminadas
-	o_Lang006 =	C&onfiguración predeterminada
+	o_Lang002 =	&Idioma
+	o_Lang003 =	&Establecer como teclas de acceso rápido predeterminadas
+	o_Lang004 =	&Definir como archivo predeterminado
+	o_Lang005 =	E&liminar archivo predeterminado
+	o_Lang006 =	&Teclas de acceso directo predeterminadas
+	o_Lang007 =	C&onfiguración predeterminada
 		
 ; Donate Sub Menu		
 	p_Lang001 =	&Donación PayPal
@@ -629,7 +629,7 @@
 	t_Lang165 =	Ejecutar Macro
 	t_Lang166 =	Expediente
 	t_Lang167 =	Cadena
-	t_Lang168 =	Obtener InformacióN
+	t_Lang168 =	Obtener Información
 	t_Lang169 =	Esperar
 	t_Lang170 =	Grupos De Ventana
 	t_Lang171 =	Mensajes

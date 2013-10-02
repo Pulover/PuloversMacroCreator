@@ -10,9 +10,8 @@
 	m_Lang005 =	&Makro
 	m_Lang006 =	P&oglej
 	m_Lang007 =	Mo&žnosti
-	m_Lang008 =	&Jezik
-	m_Lang009 =	D&arujte
-	m_Lang010 =	&Help
+	m_Lang008 =	D&arujte
+	m_Lang009 =	&Help
 		
 ; File Sub Menu		
 	f_Lang001 =	&New
@@ -124,11 +123,12 @@
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Nastavitve
-	o_Lang002 =	N&astavi kot privzeti Bližnjice
-	o_Lang003 =	Na&stavi kot privzeti datotečni
-	o_Lang004 =	&Odstranite privzeti datotečni
-	o_Lang005 =	P&rivzete Bližnjice
-	o_Lang006 =	Pr&ivzete nastavitve
+	o_Lang002 =	&Jezik
+	o_Lang003 =	N&astavi kot privzeti Bližnjice
+	o_Lang004 =	Na&stavi kot privzeti datotečni
+	o_Lang005 =	&Odstranite privzeti datotečni
+	o_Lang006 =	&Privzete Bližnjice
+	o_Lang007 =	P&rivzete nastavitve
 		
 ; Donate Sub Menu		
 	p_Lang001 =	&PayPal Donacija

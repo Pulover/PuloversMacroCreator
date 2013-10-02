@@ -10,9 +10,8 @@
 	m_Lang005 =	&Makro
 	m_Lang006 =	A&nzeigen
 	m_Lang007 =	&Optionen
-	m_Lang008 =	&Sprache
-	m_Lang009 =	S&penden
-	m_Lang010 =	&Hilfe
+	m_Lang008 =	&Spenden
+	m_Lang009 =	&Hilfe
 		
 ; File Sub Menu		
 	f_Lang001 =	&Neu
@@ -124,11 +123,12 @@
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Einstellungen
-	o_Lang002 =	Hotkeys &als Standard festlegen 
-	o_Lang003 =	A&ls Standard-Datei festlegen
-	o_Lang004 =	Standard-Datei e&ntfernen 
-	o_Lang005 =	&Standard-Hotkeys
-	o_Lang006 =	S&tandardeinstellungen
+	o_Lang002 =	&Sprache
+	o_Lang003 =	&Hotkeys als Standard festlegen 
+	o_Lang004 =	&Als Standard-Datei festlegen
+	o_Lang005 =	S&tandard-Datei entfernen 
+	o_Lang006 =	Sta&ndard-Hotkeys
+	o_Lang007 =	Stan&dardeinstellungen
 		
 ; Donate Sub Menu		
 	p_Lang001 =	&PayPal Spende

@@ -10,9 +10,8 @@
 	m_Lang005 =	&Vĩ mô
 	m_Lang006 =	&Xem
 	m_Lang007 =	T&ùy chọn
-	m_Lang008 =	&Ngôn ngư
-	m_Lang009 =	T&ặng
-	m_Lang010 =	&Giúp
+	m_Lang008 =	T&ặng
+	m_Lang009 =	&Giúp
 		
 ; File Sub Menu		
 	f_Lang001 =	&Mới
@@ -123,12 +122,13 @@
 	v_lang021 =	&Mặc Định
 		
 ; Options Sub Menu		
-	o_Lang001 =	Cài đặt
-	o_Lang002 =	Thiết lập như Hotkeys Mặc định
-	o_Lang003 =	Thiết lập như mặc định file
-	o_Lang004 =	Gỡ bỏ mặc định file
-	o_Lang005 =	Các phím tắt mặc định
-	o_Lang006 =	Cài đặt mặc định
+	o_Lang001 =	&Cài đặt
+	o_Lang002 =	&Ngôn ngư
+	o_Lang003 =	&Thiết lập như Hotkeys Mặc định
+	o_Lang004 =	T&hiết lập như mặc định file
+	o_Lang005 =	&Gỡ bỏ mặc định file
+	o_Lang006 =	C&ác phím tắt mặc định
+	o_Lang007 =	C&ài đặt mặc định
 		
 ; Donate Sub Menu		
 	p_Lang001 =	Hiến PayPal
@@ -629,12 +629,12 @@
 	t_Lang165 =	ChạY Macro
 	t_Lang166 =	TậP Tin
 	t_Lang167 =	ChuỗI
-	t_Lang168 =	NhậN đượC ThôNg Tin
-	t_Lang169 =	đợI
+	t_Lang168 =	NhậN ĐượC ThôNg Tin
+	t_Lang169 =	ĐợI
 	t_Lang170 =	NhóM CửA Sổ
 	t_Lang171 =	Tin NhắN
 	t_Lang172 =	ĐăNg Ký Và INI
-	t_Lang173 =	âM Thanh
+	t_Lang173 =	ÂM Thanh
 	t_Lang174 =	BiếN
 	t_Lang175 =	Misc.
 		

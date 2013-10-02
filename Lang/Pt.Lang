@@ -10,9 +10,8 @@
 	m_Lang005 =	&Macro
 	m_Lang006 =	E&xibir
 	m_Lang007 =	&Opções
-	m_Lang008 =	I&dioma
-	m_Lang009 =	&Doar
-	m_Lang010 =	Aj&uda
+	m_Lang008 =	&Doar
+	m_Lang009 =	Aj&uda
 		
 ; File Sub Menu		
 	f_Lang001 =	&Novo
@@ -124,11 +123,12 @@
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Configurações
-	o_Lang002 =	&Definir como Atalhos Padrão
-	o_Lang003 =	Definir como &Arquivo Padrão
-	o_Lang004 =	&Remover Arquivo Padrão
-	o_Lang005 =	A&talhos Padrão
-	o_Lang006 =	Configuração &Padrão
+	o_Lang002 =	&Idioma
+	o_Lang003 =	&Definir como Atalhos Padrão
+	o_Lang004 =	Definir como &Arquivo Padrão
+	o_Lang005 =	&Remover Arquivo Padrão
+	o_Lang006 =	A&talhos Padrão
+	o_Lang007 =	Configuração &Padrão
 		
 ; Donate Sub Menu		
 	p_Lang001 =	&Doação via PayPal
@@ -635,7 +635,7 @@
 	t_Lang171 =	Mensagens
 	t_Lang172 =	Registro E INI
 	t_Lang173 =	Som
-	t_Lang174 =	VariáVeis
+	t_Lang174 =	Variáveis
 	t_Lang175 =	Misc.
 		
 ; Messages & Dialogs		
@@ -769,7 +769,7 @@
 	d_Lang072 =	Apoie software Livre / Código Aberto
 	d_Lang073 =	Erro: Atalho Inválido Selecionado.
 	d_Lang074 =	Localizar um comando ou função
-	d_Lang075 =	Benvindo ao Pulover's Macro Creator
+	d_Lang075 =	Bem-vindo ao Pulover's Macro Creator
 	d_Lang076 =	Por favor, escolha o seu layout preferido
 	d_Lang077 =	Compacto
 	d_Lang078 =	Padrão

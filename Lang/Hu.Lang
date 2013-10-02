@@ -10,9 +10,8 @@
 	m_Lang005 =	&Macro
 	m_Lang006 =	&Kilátás
 	m_Lang007 =	&Opciók
-	m_Lang008 =	&Nyelv
-	m_Lang009 =	&Adományoz
-	m_Lang010 =	S&egítség
+	m_Lang008 =	&Adományoz
+	m_Lang009 =	S&egítség
 		
 ; File Sub Menu		
 	f_Lang001 =	&Új
@@ -124,11 +123,12 @@
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Beállítások
-	o_Lang002 =	&Set As Default gyorsbillentyűk
-	o_Lang003 =	&Az Alapértelmezett Beállítás Fájl
-	o_Lang004 =	&Eltávolítása Alapértelmezett fájl
-	o_Lang005 =	A&lapértelmezett gyorsbillentyűk
-	o_Lang006 =	Ala&pértelmezett beállítások
+	o_Lang002 =	&Nyelv
+	o_Lang003 =	&Set As Default gyorsbillentyűk
+	o_Lang004 =	&Az Alapértelmezett Beállítás Fájl
+	o_Lang005 =	&Eltávolítása Alapértelmezett fájl
+	o_Lang006 =	A&lapértelmezett gyorsbillentyűk
+	o_Lang007 =	Ala&pértelmezett beállítások
 		
 ; Donate Sub Menu		
 	p_Lang001 =	&PayPal adomány
@@ -633,7 +633,7 @@
 	t_Lang169 =	VáRjon
 	t_Lang170 =	Window Csoportok
 	t_Lang171 =	ÜZenetek
-	t_Lang172 =	Registry éS INI
+	t_Lang172 =	Registry ÉS INI
 	t_Lang173 =	Hang
 	t_Lang174 =	VáLtozóK
 	t_Lang175 =	Misc.

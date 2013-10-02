@@ -10,9 +10,8 @@
 	m_Lang005 =	宏
 	m_Lang006 =	視圖
 	m_Lang007 =	選項
-	m_Lang008 =	語
-	m_Lang009 =	捐贈
-	m_Lang010 =	幫助
+	m_Lang008 =	捐贈
+	m_Lang009 =	幫助
 		
 ; File Sub Menu		
 	f_Lang001 =	新
@@ -124,11 +123,12 @@
 		
 ; Options Sub Menu		
 	o_Lang001 =	設置
-	o_Lang002 =	設為默認熱鍵
-	o_Lang003 =	設置為默認文件
-	o_Lang004 =	刪除默認文件
-	o_Lang005 =	默認熱鍵
-	o_Lang006 =	默認設置
+	o_Lang002 =	語
+	o_Lang003 =	設為默認熱鍵
+	o_Lang004 =	設置為默認文件
+	o_Lang005 =	刪除默認文件
+	o_Lang006 =	默認熱鍵
+	o_Lang007 =	默認設置
 		
 ; Donate Sub Menu		
 	p_Lang001 =	PayPal捐贈
