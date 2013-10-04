@@ -902,7 +902,7 @@ tbPrevF:
 If (A_GuiEvent = "N")
 {
 	TbPtr := %A_ThisLabel%
-,	ErrorLevel := TbPtr.OnNotify(A_EventInfo, MX, MY, bLabel, ID)
+,	ErrorLevel := TbPtr.OnNotify(A_EventInfo, MX, MY, bLabel)
 	If (bLabel)
 		ShowMenu(bLabel, MX, MY)
 	If (ErrorLevel = 2) ; TBN_RESET
@@ -3911,31 +3911,31 @@ Hotkey, Esc, EscNoKey, Off
 WinActivate, ahk_id %CmdWin%
 If (StopIt)
 	Exit
-If Ident = Title
+If (Ident = "Title")
 {
-	If Label = IfGet
+	If (Label = "IfGet")
 	{
 		FoundTitle := Title
 		return
 	}
 	GuiControl,, Title, %Title%
 }
-Else If Ident = Class
+Else If (Ident = "Class")
 {
 	GuiControl,, Title, ahk_class %class%
 	FoundTitle := "ahk_class " class
 }
-Else If Ident = Process
+Else If (Ident = "Process")
 {
 	GuiControl,, Title, ahk_exe %pname%
 	FoundTitle := "ahk_exe " pname
 }
-Else If Ident = ID
+Else If (Ident = "ID")
 {
 	GuiControl,, Title, ahk_id %id%
 	FoundTitle := "ahk_id " id
 }
-Else If Ident = PID
+Else If (Ident = "PID")
 {
 	GuiControl,, Title, ahk_pid %pid%
 	FoundTitle := "ahk_pid " pid
