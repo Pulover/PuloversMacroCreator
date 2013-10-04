@@ -49,6 +49,7 @@ Compression=lzma
 SolidCompression=yes
 ChangesAssociations=yes
 ArchitecturesInstallIn64BitMode=x64
+Uninstallable=not IsTaskSelected('portableinstall')
 
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl"
@@ -108,6 +109,11 @@ Name: "{userappdata}\Microsoft\Internet Explorer\Quick Launch\{#PmcName}"; Filen
 
 [Run]
 Filename: "{app}\{#PmcExeName}"; Description: "{cm:LaunchProgram,{#StringChange(PmcName, '&', '&&')}}"; Flags: nowait postinstall skipifsilent
+
+[UninstallDelete]
+Type: filesandordirs; Name: "{userappdata}\MacroCreator"
+
+
 
 )
 
