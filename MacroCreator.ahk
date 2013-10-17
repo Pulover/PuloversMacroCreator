@@ -7297,6 +7297,8 @@ Else If (ControlCmd = cType28)
 }
 return
 
+EditRunScrLet:
+EditComInt:
 EditIECom:
 s_Caller := "Edit"
 RunScrLet:
@@ -9527,8 +9529,12 @@ If ((Type = cType11) || (Type = cType14) || InStr(FileCmdList, Type "|"))
 	Goto, EditRun
 If Type in %cType29%,%cType30%
 	return
-If Type in %cType32%,%cType33%,%cType34%,%cType42%,%cType43%
+If Type in %cType32%,%cType33%
 	Goto, EditIECom
+If Type in %cType34%
+	Goto, EditComInt
+If Type in %cType42%,%cType43%
+	Goto, EditRunScrLet
 If InStr(Type, "Win")
 	Goto, EditWindow
 If Action contains %Action1%,%Action2%,%Action3%,%Action4%,%Action5%,%Action6%
