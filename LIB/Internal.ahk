@@ -22,10 +22,6 @@ ShowTooltip()
 		ToolTip
 		SetTimer, DisplayToolTip, -500
 		PrevControl := CurrControl
-		If InStr(A_GuiControl, "Static")
-			SetTimer, HandCursor, 0
-		Else
-			SetTimer, HandCursor, Off
 	}
 	return
 
@@ -36,6 +32,13 @@ ShowTooltip()
 		ToolTip, % %CurrControl%_TT
 	SetTimer, RemoveToolTip, -3000
 	return
+}
+
+ReplaceCursor(hControl, hCursor) {
+    if (A_PtrSize = 8)
+        DllCall("SetClassLongPtr", "Ptr", hControl, "int", -12, "Ptr", hCursor)
+    else
+        DllCall("SetClassLong", "Uint", hControl, "int", -12, "int", hCursor)
 }
 
 SBShowTip(Command)
@@ -510,14 +513,14 @@ ActivateHotkeys(Rec="", Play="", Speed="", Stop="", Pause="", Joy="")
 	
 	If (Pause <> "")
 	{
-		Hotkey, %PauseKey%, f_PauseKey, Off
+		Try Hotkey, %PauseKey%, f_PauseKey, Off
 		If ((PauseKey <> "") && (Pause = 1))
 			Hotkey, %PauseKey%, f_PauseKey, On
 	}
 	
 	If (Stop <> "")
 	{
-		Hotkey, %AbortKey%, f_AbortKey, Off
+		Try Hotkey, %AbortKey%, f_AbortKey, Off
 		If ((AbortKey <> "") && (Stop = 1))
 			Hotkey, %AbortKey%, f_AbortKey, On
 	}

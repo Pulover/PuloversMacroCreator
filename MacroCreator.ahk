@@ -2781,11 +2781,6 @@ Loop, %TabCount%
 Gui, chMacro:Listview, InputList%A_List%
 return
 
-HandCursor:
-DllCall("SetCursor", "UInt", hCurs)
-return
-
-
 ;##### Context Help: #####
 
 HelpB:
@@ -2969,11 +2964,12 @@ Gui, 34:Font, Bold, Tahoma
 Gui, 34:Add, Text, yp-3 xm+380 H25 Center Hidden vHolderStatic, %m_Lang008%
 GuiControlGet, Hold, 34:Pos, HolderStatic
 Gui, 34:Add, Progress, % "x" 410 - HoldW " yp wp+20 hp BackgroundF68C06 vProgStatic Disabled"
-Gui, 34:Add, Text, xp yp wp hp Border cWhite Center 0x200 BackgroundTrans vDonateStatic gDonatePayPal, %m_Lang008%
+Gui, 34:Add, Text, xp yp wp hp Border cWhite Center 0x200 BackgroundTrans hwndhStatic vDonateStatic gDonatePayPal, %m_Lang008%
 Gui, 34:Font
 GuiControl, 34:Focus, %c_Lang020%
 Gui, 34:Show, W460, %t_Lang076%
 hCurs := DllCall("LoadCursor", "Int", 0, "Int", 32649, "UInt")
+ReplaceCursor(hStatic, hCurs)
 return
 
 EditMouse:
@@ -4710,6 +4706,7 @@ Gui, 3:Default
 If (s_Caller = "Edit")
 {
 	EscCom("Details|TimesX|DelayX|Target|Window", 1)
+	StringReplace, Details, Details, ``n, `n, All
 	If (Type = cType5)
 	{
 		GuiControl, 3:, DelayX
@@ -4848,6 +4845,7 @@ If TabControl = 2
 ,	Target += (Icon-1) * 16
 ,	Target += (Buttons-1)
 ,	EscCom("Details|Title")
+	StringReplace, Details, Details, `n, ``n, All
 }
 Else If TabControl = 3
 {
