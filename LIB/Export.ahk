@@ -164,15 +164,17 @@
 				Else If (Act1 = "Stop")
 					RowData .= "`n`tReturn"
 				Else If (Act1 = "Move")
-					RowData .= "`nClick, %FoundX%, %FoundY%, 0"
+					RowData .= "`n`tClick, %FoundX%, %FoundY%, 0"
 				Else If InStr(Act1, "Click")
 				{
 					Loop, Parse, Act1, %A_Space%
 						Action%A_Index% := A_LoopField
-					RowData .= "`nClick, %FoundX%, %FoundY% " Action1 ", 1"
+					RowData .= "`n`tClick, %FoundX%, %FoundY% " Action1 ", 1"
 				}
 				Else If (Act1 = "Prompt")
 					RowData .= "`n{`nMsgBox, 49, " d_Lang035 ", " d_Lang036 " %FoundX%x%FoundY%.``n" d_Lang038 "`nIfMsgBox, Cancel`n`tReturn`n}"
+				Else If (Act1 = "Play Sound")
+					RowData .= "`n`tSoundBeep"
 			}
 			If (Act2 <> "Continue")
 			{
@@ -183,6 +185,8 @@
 					RowData .= "`n`tReturn"
 				Else If (Act2 = "Prompt")
 					RowData .= "`n{`nMsgBox, 49, " d_Lang035 ", " d_Lang037 "``n" d_Lang038 "`nIfMsgBox, Cancel`n`tReturn`n}"
+				Else If (Act2 = "Play Sound")
+					RowData .= "`n`tLoop, 2`n`t`tSoundBeep"
 			}
 			GoSub, Add_CD
 			If (Target = "Break")

@@ -18,7 +18,7 @@ Script =
 #define PmcName "Pulover's Macro Creator"
 #define PmcVersion "%PMCVer%"
 #define PmcCompany "Rodolfo U. Batista"
-#define PmcURL "http://www.autohotkey.net/~Pulover"
+#define PmcURL "http://www.macrocreator.com"
 #define PmcCopyright "Copyright (C) 2012-2013 Rodolfo U. Batista"
 #define PmcExeName "MacroCreator.exe"
 #define PmcExt "pmc"
@@ -81,7 +81,7 @@ Name: "install64bit"; Description: "{cm:NameAndVersion,[{#PmcExeName}],{#PmcVers
 Name: "install32bit"; Description: "{cm:NameAndVersion,[{#PmcExeName}],{#PmcVersion} - 32-bit (x86)}"; Flags: exclusive unchecked
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked; OnlyBelowVersion: 0,6.1
-Name: pmcAssociation; Description: "{cm:AssocFileExtension,{#PmcName},""{#PmcExt}""}"; GroupDescription: File extensions:
+Name: "pmcAssociation"; Description: "{cm:AssocFileExtension,{#PmcName},""{#PmcExt}""}"; GroupDescription: File extensions:
 Name: "portableinstall"; Description: "Don't use `%AppData`%. Settings will be saved in the installation folder."; GroupDescription: "Portable Install:"; Flags: unchecked
 
 [Registry]
@@ -111,7 +111,7 @@ Name: "{userappdata}\Microsoft\Internet Explorer\Quick Launch\{#PmcName}"; Filen
 Filename: "{app}\{#PmcExeName}"; Description: "{cm:LaunchProgram,{#StringChange(PmcName, '&', '&&')}}"; Flags: nowait postinstall skipifsilent
 
 [UninstallDelete]
-Type: filesandordirs; Name: "{userappdata}\MacroCreator"
+Type: "filesandordirs"; Name: "{userappdata}\MacroCreator"
 
 
 
