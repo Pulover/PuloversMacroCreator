@@ -40,15 +40,15 @@ Select Macros to be exported. Empty Macros and unchecked rows will be ignored. Y
 
 **Create EXE File**: Runs Ahk2Exe Compiler after exporting the script to create an Executable File. The EXE file will be saved to the same folder as the script.  
 Once a script is compiled, it becomes a standalone executable; that is, it can be used even on machines where AutoHotkey is not installed (and such EXEs can be distributed or sold with no restrictions).  
-*Note*: This feature requires [AutoHotkey](http://www.autohotkey.com/) installed. The Ahk2Exe file must be present in the Compiler folder inside AutoHotkey installation folder, if the file is not found the EXE will not be created (no error will be shown).
+*Note*: This feature requires [AutoHotkey](http://ahkscript.org/) installed. The Ahk2Exe file must be present in the Compiler folder inside AutoHotkey installation folder, if the file is not found the EXE will not be created (no error will be shown).
 
 ## Context Sensitive Hotkeys
 
-Makes hotkeys and hotstrings work depending on the type of window that is active or exists. For more information see [AutoHotkey documentation](http://auto-hotkey.com/docs).
+Makes hotkeys and hotstrings work depending on the type of window that is active or exists. For more information see [AutoHotkey documentation](http://ahkscript.org/docs).
 
 ## Options
 
-Changes various options for the exported script's Auto-Execute Section. For more information see [AutoHotkey documentation](http://auto-hotkey.com/docs).
+Changes various options for the exported script's Auto-Execute Section. For more information see [AutoHotkey documentation](http://ahkscript.org/docs).
 
 ## Global Variables
 
@@ -56,4 +56,4 @@ If you have defined [User Global Variables](p7-Settings.html#user-global-variabl
 
 ### Related
 
-[Hotkeys](http://auto-hotkey.com/docs/Hotkeys.htm), [Hotstrings](http://auto-hotkey.com/docs/Hotstrings.htm), [List of Keys](http://auto-hotkey.com/docs/KeyList.htm), [ComObjCreate](http://auto-hotkey.com/docs/commands/ComObjCreate.htm), [ComObjActive](http://auto-hotkey.com/docs/commands/ComObjActive.htm), [Auto-execute Section](http://auto-hotkey.com/docs/Scripts.htm#auto), [#ifwinactive / #ifwinexist](http://auto-hotkey.com/docs/commands/_ifwinactive.htm)
+[Hotkeys](http://ahkscript.org/docs/Hotkeys.htm), [Hotstrings](http://ahkscript.org/docs/Hotstrings.htm), [List of Keys](http://ahkscript.org/docs/KeyList.htm), [ComObjCreate](http://ahkscript.org/docs/commands/ComObjCreate.htm), [ComObjActive](http://ahkscript.org/docs/commands/ComObjActive.htm), [Auto-execute Section](http://ahkscript.org/docs/Scripts.htm#auto), [#ifwinactive / #ifwinexist](http://ahkscript.org/docs/commands/_ifwinactive.htm)

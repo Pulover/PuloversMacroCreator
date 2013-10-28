@@ -2,7 +2,7 @@
 *The Complete Automation Tool*
 
 [www.macrocreator.com](http://www.macrocreator.com)  
-[Forum Thread](http://www.autohotkey.com/board/topic/79763-macro-creator)  
+[Forum Thread](http://ahkscript.org/boards/viewtopic.php?f=6&t=143)  
 
 Author: Pulover \[Rodolfo U. Batista\]  
 [pulover@macrocreator.com](mailto:pulover@macrocreator.com)  
@@ -16,7 +16,7 @@ Software License: [GNU General Public License](License.html)
 
 ## Thanks to
 
-Chris and Lexikos for [AutoHotkey](http://www.autohotkey.com/).  
+Chris and Lexikos for [AutoHotkey](http://ahkscript.org/).  
 tic (Tariq Porter) for his [GDI+ Library](http://www.autohotkey.com/board/topic/29449-gdi-standard-library).  
 tkoi & majkinetor for the [ILButton function](http://www.autohotkey.com/board/topic/37147-ilbutton-image-buttons).  
 just me for [LV_Colors Class](http://www.autohotkey.com/board/topic/88699-class-lv-colors), GuiCtrlAddTab and for updating ILButton to 64bit.  
@@ -43,6 +43,7 @@ Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jör
 * Added *Filter by type* button in *Run* command window.
 * Added Right-Click-Drag Move/Copy menu.
 * Added *Play Sound* option to *Image/Pixel Search* result actions.
+* Added Launcher to portable version (automatically updates INI and selects between x86 and x64 based on Windows version).
 * Fixed issues with command line parameters.
 * Fixed bugs.
 

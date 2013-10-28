@@ -5,7 +5,7 @@
 ; Author: Pulover [Rodolfo U. Batista]
 ; pulover@macrocreator.com
 ; Home: http://www.macrocreator.com
-; Forum: http://www.autohotkey.com/board/topic/79763-macro-creator
+; Forum: http://ahkscript.org/boards/viewtopic.php?f=6&t=143
 ; Version: 4.1.0
 ; Release Date: September, 2013
 ; AutoHotkey Version: 1.1.13.00
@@ -2277,7 +2277,7 @@ If !A_AhkPath
 	GuiControl, 14:, Exe_Exp, 0
 	MsgBox, 17, %d_Lang007%, %d_Lang056%
 	IfMsgBox, OK
-		Run, http://www.autohotkey.com
+		Run, http://ahkscript.org/
 	return
 }
 return
@@ -2787,25 +2787,25 @@ HelpB:
 ThisMenuItem := RegExReplace(A_ThisMenuItem, "\s/.*")
 StringReplace, ThisMenuItem, ThisMenuItem, #, _
 If ThisMenuItem = Clipboard
-	Run, http://auto-hotkey.com/docs/misc/Clipboard.htm
+	Run, http://ahkscript.org/docs/misc/Clipboard.htm
 Else If ThisMenuItem = If Statements
-	Run, http://auto-hotkey.com/docs/commands/IfEqual.htm
+	Run, http://ahkscript.org/docs/commands/IfEqual.htm
 Else If ThisMenuItem = Labels
-	Run, http://auto-hotkey.com/docs/misc/Labels.htm
+	Run, http://ahkscript.org/docs/misc/Labels.htm
 Else If ThisMenuItem = SplashImage
-	Run, http://auto-hotkey.com/docs/commands/Progress.htm
+	Run, http://ahkscript.org/docs/commands/Progress.htm
 Else If ThisMenuItem = SplashTextOff
-	Run, http://auto-hotkey.com/docs/commands/SplashTextOn.htm
+	Run, http://ahkscript.org/docs/commands/SplashTextOn.htm
 Else If InStr(ThisMenuItem, "LockState")
-	Run, http://auto-hotkey.com/docs/commands/SetNumScrollCapsLockState.htm
+	Run, http://ahkscript.org/docs/commands/SetNumScrollCapsLockState.htm
 Else If ThisMenuItem = Variables
-	Run, http://auto-hotkey.com/docs/Variables.htm
+	Run, http://ahkscript.org/docs/Variables.htm
 Else If ThisMenuItem = Functions
-	Run, http://auto-hotkey.com/docs/Functions.htm
+	Run, http://ahkscript.org/docs/Functions.htm
 Else If ThisMenuItem = Built-in Variables
-	Run, http://auto-hotkey.com/docs/Variables.htm#BuiltIn
+	Run, http://ahkscript.org/docs/Variables.htm#BuiltIn
 Else
-	Run, http://auto-hotkey.com/docs/commands/%ThisMenuItem%.htm
+	Run, http://ahkscript.org/docs/commands/%ThisMenuItem%.htm
 return
 
 LoopB:
@@ -2814,24 +2814,24 @@ StringReplace, ThisMenuItem, ThisMenuItem, `,
 StringReplace, ThisMenuItem, ThisMenuItem, %A_Space%,, All
 StringReplace, ThisMenuItem, ThisMenuItem, Pattern
 StringReplace, ThisMenuItem, ThisMenuItem, istry
-Run, http://auto-hotkey.com/docs/commands/%ThisMenuItem%.htm
+Run, http://ahkscript.org/docs/commands/%ThisMenuItem%.htm
 return
 
 ExportG:
 SpecialB:
 If A_ThisMenuItem = List of Keys
-	Run, http://auto-hotkey.com/docs/KeyList.htm
+	Run, http://ahkscript.org/docs/KeyList.htm
 Else If A_ThisMenuItem = Auto-execute Section
-	Run, http://auto-hotkey.com/docs/Scripts.htm#auto
+	Run, http://ahkscript.org/docs/Scripts.htm#auto
 Else If InStr(A_ThisMenuItem, "ComObj")
-	Run, http://auto-hotkey.com/docs/commands/%A_ThisMenuItem%.htm
+	Run, http://ahkscript.org/docs/commands/%A_ThisMenuItem%.htm
 Else
-	Run, http://auto-hotkey.com/docs/%A_ThisMenuItem%.htm
+	Run, http://ahkscript.org/docs/%A_ThisMenuItem%.htm
 return
 
 IEComB:
 If A_ThisMenuItem = COM
-	Run, http://auto-hotkey.com/docs/commands/ComObjCreate.htm
+	Run, http://ahkscript.org/docs/commands/ComObjCreate.htm
 If A_ThisMenuItem = Basic Webpage COM Tutorial
 	Run, http://www.autohotkey.com/board/topic/47052-basic-webpage-controls
 If A_ThisMenuItem = IWebBrowser2 Interface (MSDN)
@@ -2840,7 +2840,7 @@ return
 
 SendMsgB:
 If A_ThisMenuItem = Message List
-	Run, http://auto-hotkey.com/docs/misc/SendMessageList.htm
+	Run, http://ahkscript.org/docs/misc/SendMessageList.htm
 If A_ThisMenuItem = Microsoft MSDN
 	Run, http://msdn.microsoft.com
 return
@@ -2865,7 +2865,7 @@ Run, http://www.autohotkey.com/board/topic/79763-macro-creator
 return
 
 HelpAHK:
-Run, http://auto-hotkey.com/docs
+Run, http://ahkscript.org/docs
 return
 
 CheckNow:
@@ -6811,7 +6811,7 @@ If !A_AhkPath
 	GuiControl, 21:, UseExtFunc, 0
 	MsgBox, 17, %d_Lang007%, %d_Lang056%
 	IfMsgBox, OK
-		Run, http://www.autohotkey.com
+		Run, http://ahkscript.org/
 	return
 }
 GuiControl, 21:Enable%UseExtFunc%, FileNameEx
@@ -6848,13 +6848,13 @@ If FuncName in Abs,ACos,Asc,ASin,ATan,Ceil,Chr,Exp,FileExist,Floor,Func
 ,GetKeyName,GetKeySC,GetKeyState,GetKeyVK,InStr,IsByRef,IsFunc,IsLabel
 ,IsObject,Ln,Log,LTrim,Mod,NumGet,NumPut,Round,RTrim,Sin,Sqrt,StrGet
 ,StrLen,StrPut,SubStr,Tan,Trim,WinActive,WinExist
-	Run, http://auto-hotkey.com/docs/Functions.htm#%FuncName%
+	Run, http://ahkscript.org/docs/Functions.htm#%FuncName%
 Else If (FuncName = "Array")
-	Run, http://auto-hotkey.com/docs/misc/Arrays.htm
+	Run, http://ahkscript.org/docs/misc/Arrays.htm
 Else If (FuncName = "StrSplit")
-	Run, http://auto-hotkey.com/docs/commands/StringSplit.htm
+	Run, http://ahkscript.org/docs/commands/StringSplit.htm
 Else
-	Run, http://auto-hotkey.com/docs/commands/%FuncName%.htm
+	Run, http://ahkscript.org/docs/commands/%FuncName%.htm
 return
 
 Statement:
@@ -11482,7 +11482,7 @@ If OnFinishCode =  8
 	DllCall("PowrProf\SetSuspendState", "int", 0, "int", 0, "int", 0)
 If OnFinishCode =  9
 	DllCall("LockWorkStation")
-return
+ExitApp
 
 GuiClose:
 If !CloseAction

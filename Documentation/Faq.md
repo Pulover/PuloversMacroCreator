@@ -135,7 +135,7 @@ Although the Timer is limited to run one Macro at a time, you can still activate
 ### Can I save my Macros as EXE to run on any computer?
 
 Macro Creator has an option to convert exported scripts to EXE using Ahk2Exe that is installed with AutoHotkey:  
-1. Download and install [AutoHotkey](http://www.autohotkey.com).  
+1. Download and install [AutoHotkey](http://ahkscript.org/).  
 2. Go to [Export](p5-Export.html#destination-file) in PMC and check *Create EXE File* option.  
 3. Click the *Export* button.  
 

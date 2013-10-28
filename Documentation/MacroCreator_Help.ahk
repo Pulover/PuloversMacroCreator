@@ -5,7 +5,7 @@
 		Version: 4.1.0  
 		
 		[www.macrocreator.com](http://www.macrocreator.com)  
-		[Forum Thread](http://www.autohotkey.com/board/topic/79763-macro-creator)  
+		[Forum Thread](http://ahkscript.org/boards/viewtopic.php?f=6&t=143)  
 		
 		Author: Pulover \[Rodolfo U. Batista\]  
 		[pulover@macrocreator.com](mailto:pulover@macrocreator.com)  
@@ -13,7 +13,7 @@
 		
 		Software License: [GNU General Public License](License.html)  
 		
-		[AutoHotkey Online Documentation](http://auto-hotkey.com/docs)  
+		[AutoHotkey Online Documentation](http://ahkscript.org/docs)  
 		
 		**Support Open Source software: [Donate](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=rodolfoub%40gmail%2ecom&lc=US&item_name=Pulover%27s%20Macro%20Creator&item_number=App%2ePMC&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted)**
 */
@@ -124,7 +124,7 @@
 
 	Extra:
 		### Related
-			[Click](http://auto-hotkey.com/docs/commands/Click.htm), [ControlClick](http://auto-hotkey.com/docs/commands/ControlClick.htm), [MouseClickDrag](http://auto-hotkey.com/docs/commands/MouseClickDrag.htm)
+			[Click](http://ahkscript.org/docs/commands/Click.htm), [ControlClick](http://ahkscript.org/docs/commands/ControlClick.htm), [MouseClickDrag](http://ahkscript.org/docs/commands/MouseClickDrag.htm)
 */
 
 /*!
@@ -143,12 +143,12 @@
 
 	Extra:
 		### Related
-			[Send / SendRaw](http://auto-hotkey.com/docs/commands/Send.htm), [ControlSend](http://auto-hotkey.com/docs/commands/ControlSend.htm), [ControlSetText](http://auto-hotkey.com/docs/commands/ControlSetText.htm), [Clipboard](http://auto-hotkey.com/docs/misc/Clipboard.htm)
+			[Send / SendRaw](http://ahkscript.org/docs/commands/Send.htm), [ControlSend](http://ahkscript.org/docs/commands/ControlSend.htm), [ControlSetText](http://ahkscript.org/docs/commands/ControlSetText.htm), [Clipboard](http://ahkscript.org/docs/misc/Clipboard.htm)
 */
 
 /*!
 	Function: Control()
-		Gathers various control commands. Please refer to [AutoHotkey documentation](http://auto-hotkey.com/docs) for details on each one.
+		Gathers various control commands. Please refer to [AutoHotkey documentation](http://ahkscript.org/docs) for details on each one.
 
 	Parameters:
 		Value - Second parameter of a Control Command when available. This field accepts [Variables & Functions](p8-Variables.html).
@@ -157,7 +157,7 @@
 
 	Extra:
 		### Related
-			[Control](http://auto-hotkey.com/docs/commands/Control.htm), [ControlFocus](http://auto-hotkey.com/docs/commands/ControlFocus.htm), [ControlGet](http://auto-hotkey.com/docs/commands/ControlGet.htm), [ControlGetFocus](http://auto-hotkey.com/docs/commands/ControlGetFocus.htm), [ControlGetPos](http://auto-hotkey.com/docs/commands/ControlGetPos.htm), [ControlGetText](http://auto-hotkey.com/docs/commands/ControlGetText.htm), [ControlMove](http://auto-hotkey.com/docs/commands/ControlMove.htm), [ControlSetText](http://auto-hotkey.com/docs/commands/ControlSetText.htm)
+			[Control](http://ahkscript.org/docs/commands/Control.htm), [ControlFocus](http://ahkscript.org/docs/commands/ControlFocus.htm), [ControlGet](http://ahkscript.org/docs/commands/ControlGet.htm), [ControlGetFocus](http://ahkscript.org/docs/commands/ControlGetFocus.htm), [ControlGetPos](http://ahkscript.org/docs/commands/ControlGetPos.htm), [ControlGetText](http://ahkscript.org/docs/commands/ControlGetText.htm), [ControlMove](http://ahkscript.org/docs/commands/ControlMove.htm), [ControlSetText](http://ahkscript.org/docs/commands/ControlSetText.htm)
 		
 		### Download Example
 			[Using Control Commands to Read and Set Text](Examples\ControlCmd.pmc).
@@ -175,7 +175,7 @@
 
 	Extra:
 		### Related
-			[Sleep](http://auto-hotkey.com/docs/commands/Sleep.htm)
+			[Sleep](http://ahkscript.org/docs/commands/Sleep.htm)
 */
 
 /*!
@@ -194,7 +194,7 @@
 
 	Extra:
 		### Related
-			[MsgBox](http://auto-hotkey.com/docs/commands/MsgBox.htm)
+			[MsgBox](http://ahkscript.org/docs/commands/MsgBox.htm)
 */
 
 /*!
@@ -208,12 +208,12 @@
 
 	Extra:
 		### Related
-			[KeyWait](http://auto-hotkey.com/docs/commands/KeyWait.htm)
+			[KeyWait](http://ahkscript.org/docs/commands/KeyWait.htm)
 */
 
 /*!
 	Function: Window()
-		Gathers various Window commands. Please refer to [AutoHotkey documentation](http://auto-hotkey.com/docs) for details on each one.
+		Gathers various Window commands. Please refer to [AutoHotkey documentation](http://ahkscript.org/docs) for details on each one.
 	Parameters:
 		Value - Second parameter of a Window Command when available.  
 			This field accepts [Variables & Functions](p8-Variables.html).
@@ -224,7 +224,7 @@
 
 	Extra:
 		### Related
-			[WinActivate](http://auto-hotkey.com/docs/commands/WinActivate.htm), [WinActivateBottom](http://auto-hotkey.com/docs/commands/WinActivateBottom.htm), [WinClose](http://auto-hotkey.com/docs/commands/WinClose.htm), [WinGet](http://auto-hotkey.com/docs/commands/WinGet.htm), [WinGetClass](http://auto-hotkey.com/docs/commands/WinGetClass.htm), [WinGetText](http://auto-hotkey.com/docs/commands/WinGetText.htm), [WinGetTitle](http://auto-hotkey.com/docs/commands/WinGetTitle.htm), [WinGetPos](http://auto-hotkey.com/docs/commands/WinGetPos.htm), [WinHide](http://auto-hotkey.com/docs/commands/WinHide.htm), [WinKill](http://auto-hotkey.com/docs/commands/WinKill.htm), [WinMaximize](http://auto-hotkey.com/docs/commands/WinMaximize.htm), [WinMinimize](http://auto-hotkey.com/docs/commands/WinMinimize.htm), [WinMinimizeAll / WinMinimizeAllUndo](http://auto-hotkey.com/docs/commands/WinMinimizeAll.htm), [WinMove](http://auto-hotkey.com/docs/commands/WinMove.htm), [WinRestore](http://auto-hotkey.com/docs/commands/WinRestore.htm), [WinSet](http://auto-hotkey.com/docs/commands/WinSet.htm), [WinShow](http://auto-hotkey.com/docs/commands/WinShow.htm), [WinWait](http://auto-hotkey.com/docs/commands/WinWait.htm), [WinWaitActive / WinWaitNotActive](http://auto-hotkey.com/docs/commands/WinWaitActive.htm), [WinWaitClose](http://auto-hotkey.com/docs/commands/WinWaitClose.htm)
+			[WinActivate](http://ahkscript.org/docs/commands/WinActivate.htm), [WinActivateBottom](http://ahkscript.org/docs/commands/WinActivateBottom.htm), [WinClose](http://ahkscript.org/docs/commands/WinClose.htm), [WinGet](http://ahkscript.org/docs/commands/WinGet.htm), [WinGetClass](http://ahkscript.org/docs/commands/WinGetClass.htm), [WinGetText](http://ahkscript.org/docs/commands/WinGetText.htm), [WinGetTitle](http://ahkscript.org/docs/commands/WinGetTitle.htm), [WinGetPos](http://ahkscript.org/docs/commands/WinGetPos.htm), [WinHide](http://ahkscript.org/docs/commands/WinHide.htm), [WinKill](http://ahkscript.org/docs/commands/WinKill.htm), [WinMaximize](http://ahkscript.org/docs/commands/WinMaximize.htm), [WinMinimize](http://ahkscript.org/docs/commands/WinMinimize.htm), [WinMinimizeAll / WinMinimizeAllUndo](http://ahkscript.org/docs/commands/WinMinimizeAll.htm), [WinMove](http://ahkscript.org/docs/commands/WinMove.htm), [WinRestore](http://ahkscript.org/docs/commands/WinRestore.htm), [WinSet](http://ahkscript.org/docs/commands/WinSet.htm), [WinShow](http://ahkscript.org/docs/commands/WinShow.htm), [WinWait](http://ahkscript.org/docs/commands/WinWait.htm), [WinWaitActive / WinWaitNotActive](http://ahkscript.org/docs/commands/WinWaitActive.htm), [WinWaitClose](http://ahkscript.org/docs/commands/WinWaitClose.htm)
 */
 
 /*!
@@ -254,7 +254,7 @@
 
 	Extra:
 		### Related
-			[ImageSearch](http://auto-hotkey.com/docs/commands/ImageSearch.htm)
+			[ImageSearch](http://ahkscript.org/docs/commands/ImageSearch.htm)
 		
 		## Make Screenshot Tool Instructions
 		
@@ -301,12 +301,12 @@
 
 	Extra:
 		### Related
-			[PixelSearch](http://auto-hotkey.com/docs/commands/PixelSearch.htm)
+			[PixelSearch](http://ahkscript.org/docs/commands/PixelSearch.htm)
 */
 
 /*!
 	Function: Run()
-		Gathers various AutoHotkey commands to execute different types of tasks. To get help on each command **right-click anywhere on the window** and select the corresponding link. For a complete list of commands refer to [AutoHotkey documentation](http://auto-hotkey.com/docs/).
+		Gathers various AutoHotkey commands to execute different types of tasks. To get help on each command **right-click anywhere on the window** and select the corresponding link. For a complete list of commands refer to [AutoHotkey documentation](http://ahkscript.org/docs/).
 
 	Parameters:
 		Parameters Fields - Parameters will vary according to the selected command.  
@@ -317,7 +317,7 @@
 
 	Extra:
 		### Related
-			[Command and Function Index](http://auto-hotkey.com/docs/commands/index.htm)
+			[Command and Function Index](http://ahkscript.org/docs/commands/index.htm)
 */
 
 /*!
@@ -335,7 +335,7 @@
 
 	Extra:
 		### Related
-			[Loop](http://auto-hotkey.com/docs/commands/Loop.htm)
+			[Loop](http://ahkscript.org/docs/commands/Loop.htm)
 */
 
 /*!
@@ -362,7 +362,7 @@
 
 	Extra:
 		### Related
-			[Loop FilePattern](http://auto-hotkey.com/docs/commands/LoopFile.htm)
+			[Loop FilePattern](http://ahkscript.org/docs/commands/LoopFile.htm)
 		
 		### Download Example
 			[Loop through folders, parse and read file's contents](Examples\LoopTypes.pmc).
@@ -389,7 +389,7 @@
 
 	Extra:
 		### Related
-			[Loop Parse](http://auto-hotkey.com/docs/commands/LoopParse.htm)
+			[Loop Parse](http://ahkscript.org/docs/commands/LoopParse.htm)
 		
 		### Download Example
 			[Loop through folders, parse and read file's contents](Examples\LoopTypes.pmc).
@@ -411,7 +411,7 @@
 
 	Extra:
 		### Related
-			[Loop Read File](http://auto-hotkey.com/docs/commands/LoopReadFile.htm)
+			[Loop Read File](http://ahkscript.org/docs/commands/LoopReadFile.htm)
 		
 		### Download Example
 			[Loop through folders, parse and read file's contents](Examples\LoopTypes.pmc).
@@ -443,7 +443,7 @@
 
 	Extra:
 		### Related
-			[Loop Registry](http://auto-hotkey.com/docs/commands/LoopReg.htm)
+			[Loop Registry](http://ahkscript.org/docs/commands/LoopReg.htm)
 */
 
 /*!
@@ -456,7 +456,7 @@
 
 	Extra:
 		### Related
-			[Break](http://auto-hotkey.com/docs/commands/Break.htm)
+			[Break](http://ahkscript.org/docs/commands/Break.htm)
 */
 
 /*!
@@ -469,7 +469,7 @@
 
 	Extra:
 		### Related
-			[Continue](http://auto-hotkey.com/docs/commands/Continue.htm)
+			[Continue](http://ahkscript.org/docs/commands/Continue.htm)
 */
 
 /*!
@@ -488,7 +488,7 @@
 
 	Extra:
 		### Related
-			[Goto](http://auto-hotkey.com/docs/commands/Goto.htm), [Gosub](http://auto-hotkey.com/docs/commands/Gosub.htm)
+			[Goto](http://ahkscript.org/docs/commands/Goto.htm), [Gosub](http://ahkscript.org/docs/commands/Gosub.htm)
 */
 
 /*!
@@ -501,7 +501,7 @@
 
 	Extra:
 		### Related
-			[Labels](http://auto-hotkey.com/docs/misc/Labels.htm)
+			[Labels](http://ahkscript.org/docs/misc/Labels.htm)
 */
 
 /*!
@@ -523,7 +523,7 @@
 
 	Extra:
 		### Related
-			[IfWinActive / IfWinNotActive](http://auto-hotkey.com/docs/commands/IfWinActive.htm), [IfWinExist / IfWinNotExist](http://auto-hotkey.com/docs/commands/IfWinExist.htm), [IfExist / IfNotExist](http://auto-hotkey.com/docs/commands/IfExist.htm), [IfInString / IfNotInString](http://auto-hotkey.com/docs/commands/IfInString.htm), [IfMsgBox](http://auto-hotkey.com/docs/commands/IfMsgBox.htm), [If Statements](http://auto-hotkey.com/docs/commands/IfEqual.htm)
+			[IfWinActive / IfWinNotActive](http://ahkscript.org/docs/commands/IfWinActive.htm), [IfWinExist / IfWinNotExist](http://ahkscript.org/docs/commands/IfWinExist.htm), [IfExist / IfNotExist](http://ahkscript.org/docs/commands/IfExist.htm), [IfInString / IfNotInString](http://ahkscript.org/docs/commands/IfInString.htm), [IfMsgBox](http://ahkscript.org/docs/commands/IfMsgBox.htm), [If Statements](http://ahkscript.org/docs/commands/IfEqual.htm)
 */
 
 /*!
@@ -550,7 +550,7 @@
 
 	Extra:
 		### Related
-			[Variables](http://auto-hotkey.com/docs/Variables.htm)
+			[Variables](http://ahkscript.org/docs/Variables.htm)
 */
 
 /*!
@@ -559,7 +559,7 @@
 
 	Parameters:
 		Output Variable (Optional) - Name of the Variable in which to store the contents.
-		Use Function from External File - Check this option to select an AutoHotkey Script File (.ahk) containing one or more functions to be used. This feature requires [AutoHotkey](http://www.autohotkey.com/) installed.  
+		Use Function from External File - Check this option to select an AutoHotkey Script File (.ahk) containing one or more functions to be used. This feature requires [AutoHotkey](http://ahkscript.org/) installed.  
 			See Remarks below for more information.  
 		Function Name - A valid AHK Built-in Function name or the name of a Function in the selected external .ahk file.
 		Comma separated parameters - The list of parameters for the function.  
@@ -574,7 +574,7 @@
 			The function above have 6 possible parameters. In this example parameters 3 and 4 will have blank values and parameter 6 will use the default value.  
 
 	Remarks:
-		AutoHotkey's Built-in Functions are supported by default. You can also run functions from external AutoHotkey Script Files if you have [AutoHotkey](http://www.autohotkey.com/) installed.  
+		AutoHotkey's Built-in Functions are supported by default. You can also run functions from external AutoHotkey Script Files if you have [AutoHotkey](http://www.ahkscript.org/) installed.  
 
 	Extra:
 		### External Functions
@@ -589,7 +589,7 @@
 			Since those functions are not loaded with Macro Creator they may take longer to execute.
 		
 		### Related
-			[Functions](http://auto-hotkey.com/docs/Functions.htm)
+			[Functions](http://ahkscript.org/docs/Functions.htm)
 */
 
 /*!
@@ -616,7 +616,7 @@
 
 	Extra:
 		### Related
-			[COM](http://auto-hotkey.com/docs/commands/ComObjCreate.htm), [Basic Webpage COM Tutorial](http://www.autohotkey.com/board/topic/47052-basic-webpage-controls), [IWebBrowser2 Interface (MSDN)](http://msdn.microsoft.com/en-us/library/aa752127)
+			[COM](http://ahkscript.org/docs/commands/ComObjCreate.htm), [Basic Webpage COM Tutorial](http://www.autohotkey.com/board/topic/47052-basic-webpage-controls), [IWebBrowser2 Interface (MSDN)](http://msdn.microsoft.com/en-us/library/aa752127)
 */
 
 /*!
@@ -657,7 +657,7 @@
 	
 	Extra:
 		### Related
-			[COM](http://auto-hotkey.com/docs/commands/ComObjCreate.htm), [Basic Webpage COM Tutorial](http://www.autohotkey.com/board/topic/47052-basic-webpage-controls), [IWebBrowser2 Interface (MSDN)](http://msdn.microsoft.com/en-us/library/aa752127)
+			[COM](http://ahkscript.org/docs/commands/ComObjCreate.htm), [Basic Webpage COM Tutorial](http://www.autohotkey.com/board/topic/47052-basic-webpage-controls), [IWebBrowser2 Interface (MSDN)](http://msdn.microsoft.com/en-us/library/aa752127)
 */
 
 /*!
@@ -689,6 +689,6 @@
 
 	Extra:
 		### Related
-			[PostMessage / SendMessage](http://auto-hotkey.com/docs/commands/PostMessage.htm), [Message List](http://auto-hotkey.com/docs/misc/SendMessageList.htm), [Microsoft MSDN](http://msdn.microsoft.com)
+			[PostMessage / SendMessage](http://ahkscript.org/docs/commands/PostMessage.htm), [Message List](http://ahkscript.org/docs/misc/SendMessageList.htm), [Microsoft MSDN](http://msdn.microsoft.com)
 */
 
