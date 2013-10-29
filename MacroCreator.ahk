@@ -11477,11 +11477,20 @@ If OnFinishCode =  5
 If OnFinishCode =  6
 	Shutdown, 0
 If OnFinishCode =  7
+{
 	DllCall("PowrProf\SetSuspendState", "int", 1, "int", 0, "int", 0)
+	return
+}
 If OnFinishCode =  8
+{
 	DllCall("PowrProf\SetSuspendState", "int", 0, "int", 0, "int", 0)
+	return
+}
 If OnFinishCode =  9
+{
 	DllCall("LockWorkStation")
+	return
+}
 ExitApp
 
 GuiClose:
