@@ -46,7 +46,7 @@ If ErrorLevel = ERROR
 	ExitApp
 }
 
-RunWait, %AhkDir%\Compiler\Ahk2Exe.exe /in Launcher.ahk /out Compiled\Launcher.exe /icon Resources\PMC4_Mult.ico /bin "%AhkDir%\Compiler\Unicode 32-bit.bin" /mpress 1,, UseErrorLevel
+RunWait, %AhkDir%\Compiler\Ahk2Exe.exe /in Launcher.ahk /out Compiled\MacroCreatorPortable.exe /icon Resources\PMC4_Mult.ico /bin "%AhkDir%\Compiler\Unicode 32-bit.bin" /mpress 1,, UseErrorLevel
 If ErrorLevel = ERROR
 {
 	MsgBox, 0x40000, Error, Error code: %A_LastError%
@@ -80,7 +80,7 @@ FileCopy, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\MacroCreator.ini
 FileCopy, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\MacroCreator_Help.chm, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\Portable\x64\MacroCreator\, 1
 FileCopy, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\Resources.dll, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\Portable\x64\MacroCreator\, 1
 FileCopy, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\SciLexer-x64.dll, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\Portable\x64\MacroCreator\SciLexer.dll, 1
-FileCopy, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\Launcher.exe, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\Portable\, 1
+FileCopy, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\MacroCreatorPortable.exe, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\Portable\, 1
 
 IniRead, Ver, %A_MyDocuments%\Scripts\PuloversMacroCreator\MacroCreator.ini, Application, Version
 FileAppend,
