@@ -6,7 +6,7 @@
 ; pulover@macrocreator.com
 ; Home: http://www.macrocreator.com
 ; Forum: http://ahkscript.org/boards/viewtopic.php?f=6&t=143
-; Version: 4.1.0
+; Version: 4.1.1
 ; Release Date: September, 2013
 ; AutoHotkey Version: 1.1.13.00
 ; Copyright © 2012-2013 Rodolfo U. Batista
@@ -129,7 +129,7 @@ Loop
 		break
 }
 
-CurrentVersion := "4.1.0", ReleaseDate := "September, 2013"
+CurrentVersion := "4.1.1", ReleaseDate := "September, 2013"
 
 ;##### Ini File Read #####
 
@@ -8449,6 +8449,8 @@ GoSub, OSHK
 GoSub, b_Enable
 If (ListCount%OSHK% = 0)
 	return
+If WinActive("ahk_id " PMCWinID)
+	WinActivate,,, ahk_id %PMCWinID%
 If !(PlayOSOn)
 {
 	ActivateHotkeys("", "", 1, 1, 1)
