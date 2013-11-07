@@ -38,6 +38,7 @@ Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jör
 
 ## Version 4.1.1
 
+* Fixed command line parameters not working for MacroCreatorPortable.exe.
 * Fixed bugs.
 
 ## Version 4.1.0

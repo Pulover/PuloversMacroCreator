@@ -1,9 +1,9 @@
 ﻿; Pulover's Macro Creator Portable Launcher
-; Version: 1.0.0
+; Version: 1.0.1
 ; Compiler Settings
 ;@Ahk2Exe-SetName Pulover's Macro Creator Portable Launcher
 ;@Ahk2Exe-SetDescription Pulover's Macro Creator Portable Launcher
-;@Ahk2Exe-SetVersion 1.0.0
+;@Ahk2Exe-SetVersion 1.0.1
 ;@Ahk2Exe-SetCopyright Copyright © 2012-2013 Rodolfo U. Batista
 ;@Ahk2Exe-SetOrigFilename MacroCreatorPortable.exe
 
@@ -19,7 +19,10 @@ If (ModTime86 > ModTime64)
 Else If (ModTime64 > ModTime86)
 	FileCopy, x64\MacroCreator\MacroCreator.ini, x86\MacroCreator\MacroCreator.ini, 1
 
+Loop, %0%
+	Params .= " " %A_Index%
+
 If (A_Is64BitOS)
-	Run, % "x64\MacroCreator\MacroCreator.exe" (%0% ? " " %0% : ""), x64\MacroCreator
+	Run, % "x64\MacroCreator\MacroCreator.exe" Params, x64\MacroCreator
 Else
-	Run, % "x86\MacroCreator\MacroCreator.exe" (%0% ? " " %0% : ""), x86\MacroCreator
+	Run, % "x86\MacroCreator\MacroCreator.exe" Params, x86\MacroCreator
