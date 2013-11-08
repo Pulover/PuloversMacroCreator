@@ -2,7 +2,7 @@
 	Library: Pulover's Macro Creator
 		*The Complete Automation Tool*
 		
-		Version: 4.1.0  
+		Version: 4.1.1  
 		
 		[www.macrocreator.com](http://www.macrocreator.com)  
 		[Forum Thread](http://ahkscript.org/boards/viewtopic.php?f=6&t=143)  

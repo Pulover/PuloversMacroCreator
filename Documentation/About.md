@@ -8,7 +8,7 @@ Author: Pulover \[Rodolfo U. Batista\]
 [pulover@macrocreator.com](mailto:pulover@macrocreator.com)  
 Copyright © 2012-2013 Rodolfo U. Batista  
 
-Version: 4.1.0  
+Version: 4.1.1  
 Release Date: September, 2013  
 AutoHotkey Version: 1.1.13.00  
 
@@ -35,6 +35,12 @@ Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jör
 
 
 # Change Log
+
+## Version 4.1.1
+
+* Detects default AHK editor on first run.
+* Fixed command line parameters not working for MacroCreatorPortable.exe.
+* Fixed bugs.
 
 ## Version 4.1.0
 

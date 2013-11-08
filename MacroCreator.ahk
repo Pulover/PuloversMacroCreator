@@ -6,7 +6,7 @@
 ; pulover@macrocreator.com
 ; Home: http://www.macrocreator.com
 ; Forum: http://ahkscript.org/boards/viewtopic.php?f=6&t=143
-; Version: 4.1.0
+; Version: 4.1.1
 ; Release Date: September, 2013
 ; AutoHotkey Version: 1.1.13.00
 ; Copyright © 2012-2013 Rodolfo U. Batista
@@ -129,7 +129,7 @@ Loop
 		break
 }
 
-CurrentVersion := "4.1.0", ReleaseDate := "September, 2013"
+CurrentVersion := "4.1.1", ReleaseDate := "September, 2013"
 
 ;##### Ini File Read #####
 
@@ -194,7 +194,7 @@ IniRead, OnRelease, %IniFilePath%, Options, OnRelease, 1
 IniRead, OnEnter, %IniFilePath%, Options, OnEnter, 0
 IniRead, LineW, %IniFilePath%, Options, LineW, 2
 IniRead, ScreenDir, %IniFilePath%, Options, ScreenDir, %SettingsFolder%\Screenshots
-IniRead, DefaultEditor, %IniFilePath%, Options, DefaultEditor, notepad.exe
+IniRead, DefaultEditor, %IniFilePath%, Options, DefaultEditor
 IniRead, DefaultMacro, %IniFilePath%, Options, DefaultMacro, %A_Space%
 IniRead, StdLibFile, %IniFilePath%, Options, StdLibFile, %A_Space%
 IniRead, KeepDefKeys, %IniFilePath%, Options, KeepDefKeys, 0
@@ -331,6 +331,15 @@ If (Lang = "ERROR")
 	If (Lang = "ERROR")
 		Lang := "En"
 }
+
+If (DefaultEditor = "ERROR")
+{
+	RegRead, DefaultEditor, HKEY_CLASSES_ROOT, AutoHotkeyScript\Shell\Edit\Command
+	StringReplace, DefaultEditor, DefaultEditor, ",, All ; "
+	StringReplace, DefaultEditor, DefaultEditor, `%1
+}
+If (DefaultEdit = "")
+	DefaultEdit := "notepad.exe"
 
 GoSub, WriteSettings
 
@@ -6539,7 +6548,7 @@ Else If (A_ThisLabel = "AsFunc")
 	}
 }
 Gui, 21:Show,, %GuiTitle%
-ChangeIcon(ReshInst, CmdWin, InStr(A_ThisLabel, "AsVar") ? 79 : InStr(A_ThisLabel, "AsFunc") ? 21 : 27)
+ChangeIcon(ReshInst, CmdWin, InStr(A_ThisLabel, "Var") ? 79 : InStr(A_ThisLabel, "Func") ? 21 : 27)
 Tooltip
 return
 
@@ -8449,6 +8458,8 @@ GoSub, OSHK
 GoSub, b_Enable
 If (ListCount%OSHK% = 0)
 	return
+If WinActive("ahk_id " PMCWinID)
+	WinActivate,,, ahk_id %PMCWinID%
 If !(PlayOSOn)
 {
 	ActivateHotkeys("", "", 1, 1, 1)
@@ -11632,7 +11643,6 @@ AbortKey := "F8"
 ,	OnEnter := 0
 ,	LineW := 2
 ,	ScreenDir := A_AppData "\MacroCreator\Screenshots"
-,	DefaultEditor := "notepad.exe"
 ,	DefaultMacro := ""
 ,	StdLibFile := ""
 ,	Ex_AbortKey := 0
@@ -11693,6 +11703,11 @@ AbortKey := "F8"
 ,	TB_Edit(tbPrev, "TabIndent", 1)
 ,	TB_Edit(tbPrevF, "TabIndent", 1)
 
+RegRead, DefaultEditor, HKEY_CLASSES_ROOT, AutoHotkeyScript\Shell\Edit\Command
+StringReplace, DefaultEditor, DefaultEditor, ",, All ; "
+StringReplace, DefaultEditor, DefaultEditor, `%1
+If (DefaultEdit = "")
+	DefaultEdit := "notepad.exe"
 WinSet, Transparent, %OSTrans%, ahk_id %PMCOSC%
 GuiControl, 28:, OSTrans, 255
 Gui, 28:-Caption
