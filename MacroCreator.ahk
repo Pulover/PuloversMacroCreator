@@ -194,7 +194,7 @@ IniRead, OnRelease, %IniFilePath%, Options, OnRelease, 1
 IniRead, OnEnter, %IniFilePath%, Options, OnEnter, 0
 IniRead, LineW, %IniFilePath%, Options, LineW, 2
 IniRead, ScreenDir, %IniFilePath%, Options, ScreenDir, %SettingsFolder%\Screenshots
-IniRead, DefaultEditor, %IniFilePath%, Options, DefaultEditor, notepad.exe
+IniRead, DefaultEditor, %IniFilePath%, Options, DefaultEditor
 IniRead, DefaultMacro, %IniFilePath%, Options, DefaultMacro, %A_Space%
 IniRead, StdLibFile, %IniFilePath%, Options, StdLibFile, %A_Space%
 IniRead, KeepDefKeys, %IniFilePath%, Options, KeepDefKeys, 0
@@ -331,6 +331,15 @@ If (Lang = "ERROR")
 	If (Lang = "ERROR")
 		Lang := "En"
 }
+
+If (DefaultEditor = "ERROR")
+{
+	RegRead, DefaultEditor, HKEY_CLASSES_ROOT, AutoHotkeyScript\Shell\Edit\Command
+	StringReplace, DefaultEditor, DefaultEditor, ",, All ; "
+	StringReplace, DefaultEditor, DefaultEditor, `%1
+}
+If (DefaultEdit = "")
+	DefaultEdit := "notepad.exe"
 
 GoSub, WriteSettings
 
@@ -11625,7 +11634,6 @@ AbortKey := "F8"
 ,	OnEnter := 0
 ,	LineW := 2
 ,	ScreenDir := A_AppData "\MacroCreator\Screenshots"
-,	DefaultEditor := "notepad.exe"
 ,	DefaultMacro := ""
 ,	StdLibFile := ""
 ,	Ex_AbortKey := 0
@@ -11686,6 +11694,11 @@ AbortKey := "F8"
 ,	TB_Edit(tbPrev, "TabIndent", 1)
 ,	TB_Edit(tbPrevF, "TabIndent", 1)
 
+RegRead, DefaultEditor, HKEY_CLASSES_ROOT, AutoHotkeyScript\Shell\Edit\Command
+StringReplace, DefaultEditor, DefaultEditor, ",, All ; "
+StringReplace, DefaultEditor, DefaultEditor, `%1
+If (DefaultEdit = "")
+	DefaultEdit := "notepad.exe"
 WinSet, Transparent, %OSTrans%, ahk_id %PMCOSC%
 GuiControl, 28:, OSTrans, 255
 Gui, 28:-Caption

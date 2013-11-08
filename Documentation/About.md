@@ -38,6 +38,7 @@ Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jör
 
 ## Version 4.1.1
 
+* Detects default AHK editor on first run.
 * Fixed command line parameters not working for MacroCreatorPortable.exe.
 * Fixed bugs.
 
