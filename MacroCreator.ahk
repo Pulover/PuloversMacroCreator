@@ -6539,7 +6539,7 @@ Else If (A_ThisLabel = "AsFunc")
 	}
 }
 Gui, 21:Show,, %GuiTitle%
-ChangeIcon(ReshInst, CmdWin, InStr(A_ThisLabel, "AsVar") ? 79 : InStr(A_ThisLabel, "AsFunc") ? 21 : 27)
+ChangeIcon(ReshInst, CmdWin, InStr(A_ThisLabel, "Var") ? 79 : InStr(A_ThisLabel, "Func") ? 21 : 27)
 Tooltip
 return
 

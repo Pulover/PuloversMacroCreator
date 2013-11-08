@@ -1069,8 +1069,7 @@ Class Toolbar extends Toolbar.Private
         Static TBN_ENDDRAG         := -702
         Static TBN_GETBUTTONINFO   := -720 ; A_IsUnicode ? -720 : -700
         Static TBN_GETDISPINFO     := A_IsUnicode ? -717 : -716
-        Static TBN_GETINFOTIPA     := -718
-        Static TBN_GETINFOTIPW     := -719
+        Static TBN_GETINFOTIP      := A_IsUnicode ? -719 : -718
         Static TBN_GETOBJECT       := -712
         Static TBN_HOTITEMCHANGE   := -713
         Static TBN_INITCUSTOMIZE   := -723
