@@ -60,27 +60,27 @@ If ErrorLevel = ERROR
 	ExitApp
 }
 
-FileRemoveDir, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\Portable, 1
-FileCreateDir, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\Portable
-FileCreateDir, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\Portable\x86
-FileCreateDir, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\Portable\x64
-FileCreateDir, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\Portable\x86\MacroCreator
-FileCreateDir, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\Portable\x64\MacroCreator
+FileRemoveDir, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\MacroCreatorPortable, 1
+FileCreateDir, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\MacroCreatorPortable
+FileCreateDir, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\MacroCreatorPortable\x86
+FileCreateDir, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\MacroCreatorPortable\x64
+FileCreateDir, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\MacroCreatorPortable\x86\MacroCreator
+FileCreateDir, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\MacroCreatorPortable\x64\MacroCreator
 
 IniWrite, 0, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\MacroCreator.ini, Options, AutoUpdate
 
-FileCopy, %A_MyDocuments%\Scripts\PuloversMacroCreator\License.txt, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\Portable\, 1
-FileCopy, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\MacroCreator.exe, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\Portable\x86\MacroCreator\, 1
-FileCopy, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\MacroCreator.ini, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\Portable\x86\MacroCreator\, 1
-FileCopy, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\MacroCreator_Help.chm, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\Portable\x86\MacroCreator\, 1
-FileCopy, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\Resources.dll, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\Portable\x86\MacroCreator\, 1
-FileCopy, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\SciLexer-x86.dll, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\Portable\x86\MacroCreator\SciLexer.dll, 1
-FileCopy, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\MacroCreator-x64.exe, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\Portable\x64\MacroCreator\MacroCreator.exe, 1
-FileCopy, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\MacroCreator.ini, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\Portable\x64\MacroCreator\, 1
-FileCopy, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\MacroCreator_Help.chm, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\Portable\x64\MacroCreator\, 1
-FileCopy, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\Resources.dll, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\Portable\x64\MacroCreator\, 1
-FileCopy, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\SciLexer-x64.dll, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\Portable\x64\MacroCreator\SciLexer.dll, 1
-FileCopy, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\MacroCreatorPortable.exe, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\Portable\, 1
+FileCopy, %A_MyDocuments%\Scripts\PuloversMacroCreator\License.txt, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\MacroCreatorPortable\, 1
+FileCopy, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\MacroCreator.exe, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\MacroCreatorPortable\x86\MacroCreator\, 1
+FileCopy, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\MacroCreator.ini, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\MacroCreatorPortable\x86\MacroCreator\, 1
+FileCopy, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\MacroCreator_Help.chm, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\MacroCreatorPortable\x86\MacroCreator\, 1
+FileCopy, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\Resources.dll, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\MacroCreatorPortable\x86\MacroCreator\, 1
+FileCopy, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\SciLexer-x86.dll, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\MacroCreatorPortable\x86\MacroCreator\SciLexer.dll, 1
+FileCopy, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\MacroCreator-x64.exe, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\MacroCreatorPortable\x64\MacroCreator\MacroCreator.exe, 1
+FileCopy, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\MacroCreator.ini, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\MacroCreatorPortable\x64\MacroCreator\, 1
+FileCopy, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\MacroCreator_Help.chm, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\MacroCreatorPortable\x64\MacroCreator\, 1
+FileCopy, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\Resources.dll, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\MacroCreatorPortable\x64\MacroCreator\, 1
+FileCopy, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\SciLexer-x64.dll, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\MacroCreatorPortable\x64\MacroCreator\SciLexer.dll, 1
+FileCopy, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\MacroCreatorPortable.exe, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\MacroCreatorPortable\, 1
 
 IniRead, Ver, %A_MyDocuments%\Scripts\PuloversMacroCreator\MacroCreator.ini, Application, Version
 FileAppend,
@@ -98,12 +98,12 @@ processor and updates the INI configuration file to the most
 recent one. You may use either MacroCreatorPortable.exe or
 MacroCreator.exe from the x86 or x64 folders.
 
-), %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\Portable\ReadMe.txt
+), %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\MacroCreatorPortable\ReadMe.txt
 FileDelete, %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\MacroCreator-Portable.zip
 Try
-	RunWait, %ProgramFiles%\7-Zip\7z.exe a -tzip %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\MacroCreator-Portable.zip %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\Portable\*
+	RunWait, %ProgramFiles%\7-Zip\7z.exe a -tzip %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\MacroCreator-Portable.zip %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\MacroCreatorPortable
 Catch
-	RunWait, C:\Program Files\7-Zip\7z.exe a -tzip %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\MacroCreator-Portable.zip %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\Portable\*
+	RunWait, C:\Program Files\7-Zip\7z.exe a -tzip %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\MacroCreator-Portable.zip %A_MyDocuments%\Scripts\PuloversMacroCreator\Compiled\MacroCreatorPortable
 
 TrayTip,, Finished compiling files.
 Sleep, 2000

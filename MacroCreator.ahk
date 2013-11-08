@@ -7986,6 +7986,7 @@ If (Default = 1)
 	UserLayout := "Default"
 SelLang := CurrLang
 SetTimer, LangChangeOn, -1
+Sleep, 500
 If (ShowTips)
 	GoSub, ShowTips
 return
