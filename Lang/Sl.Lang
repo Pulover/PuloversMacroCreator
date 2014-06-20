@@ -124,11 +124,19 @@
 ; Options Sub Menu		
 	o_Lang001 =	&Nastavitve
 	o_Lang002 =	&Jezik
-	o_Lang003 =	N&astavi kot privzeti Bližnjice
-	o_Lang004 =	Na&stavi kot privzeti datotečni
-	o_Lang005 =	&Odstranite privzeti datotečni
-	o_Lang006 =	&Privzete Bližnjice
-	o_Lang007 =	P&rivzete nastavitve
+	o_Lang003 =	&Zmanjšati v pladenj
+	o_Lang004 =	&Prikazati kontrolnike Orodna vrstica
+	o_Lang005 =	Z&ajemanje pritiske na tipke v tem oknu
+	o_Lang006 =	&Bližnjice Vedno Aktivna
+	o_Lang007 =	&Možnosti zaustavitev (Ko se predvajanje konča.)
+	o_Lang008 =	&Konteksta Bližnjice
+	o_Lang009 =	&Dodaj na tipko Windows in »Play" hotkey
+	o_Lang010 =	&Uporabite gumb za igralno palico kot hotkey
+	o_Lang011 =	Na&stavi kot privzeti Bližnjice
+	o_Lang012 =	Nas&tavi kot privzeti datotečni
+	o_Lang013 =	&Odstranite privzeti datotečni
+	o_Lang014 =	P&rivzete Bližnjice
+	o_Lang015 =	Pr&ivzete nastavitve
 		
 ; Donate Sub Menu		
 	p_Lang001 =	&PayPal Donacija

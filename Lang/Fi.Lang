@@ -124,11 +124,19 @@
 ; Options Sub Menu		
 	o_Lang001 =	&Asetukset
 	o_Lang002 =	&Kieli
-	o_Lang003 =	A&seta oletukseksi pikanäppäimet
-	o_Lang004 =	As&eta oletukseksi File
-	o_Lang005 =	&Poista Tiedostojärjestelmät
-	o_Lang006 =	&Oletus Pikanäppäimet
-	o_Lang007 =	O&letusasetukset
+	o_Lang003 =	&Pienennä Tray
+	o_Lang004 =	&Näytön säädöt työkalurivi
+	o_Lang005 =	&Capture näppäinpainallukset tässä ikkunassa
+	o_Lang006 =	P&ikanäppäimet Aina Aktiivinen
+	o_Lang007 =	&shutdown vaihtoehtoja (Kun toisto päättyy...)
+	o_Lang008 =	&Tilannekohtaisia ​​pikanäppäimet
+	o_Lang009 =	&Lisää Windows-näppäintä "Play" pikanäppäin
+	o_Lang010 =	K&äytä ohjainta painiketta kuin pikanäppäin
+	o_Lang011 =	As&eta oletukseksi pikanäppäimet
+	o_Lang012 =	Aseta &oletukseksi File
+	o_Lang013 =	Poista Tie&dostojärjestelmät
+	o_Lang014 =	Olet&us Pikanäppäimet
+	o_Lang015 =	Oletusasetukset
 		
 ; Donate Sub Menu		
 	p_Lang001 =	&PayPal lahjoituksen

@@ -2751,9 +2751,9 @@ return
 
 KeepMenuCheck:
 If KeepDefKeys
-	Menu, OptionsMenu, Check, %o_Lang003%
+	Menu, OptionsMenu, Check, %o_Lang011%
 Else
-	Menu, OptionsMenu, Uncheck, %o_Lang003%
+	Menu, OptionsMenu, Uncheck, %o_Lang011%
 return
 
 SearchFile:
@@ -8547,12 +8547,28 @@ WinKey:
 OnScCtrl:
 HideMainWin:
 TB_Edit(TbSettings, A_ThisLabel, %A_ThisLabel% := !%A_ThisLabel%)
+If (OnScCtrl)
+	Menu, OptionsMenu, Check, %o_Lang004%
+Else
+	Menu, OptionsMenu, Uncheck, %o_Lang004%
+If (WinKey)
+	Menu, OptionsMenu, Check, %o_Lang009%
+Else
+	Menu, OptionsMenu, Uncheck, %o_Lang009%
+If (HideMainWin)
+	Menu, OptionsMenu, Check, %o_Lang003%
+Else
+	Menu, OptionsMenu, Uncheck, %o_Lang003%
 return
 
 Capt:
 SetTimer, MainLoop, % (Capt := !Capt) ? 100 : "Off"
 Input
 TB_Edit(TbSettings, "Capt", Capt)
+If (Capt)
+	Menu, OptionsMenu, Check, %o_Lang005%
+Else
+	Menu, OptionsMenu, Uncheck, %o_Lang005%
 return
 
 InputList:
@@ -9962,9 +9978,13 @@ If (JoyHK = 1)
 	If (JoyKey = "")
 		GuiControl, 1:, JoyKey, |%t_Lang097%
 	GuiControl, 1:Focus, JoyKey
+	Menu, OptionsMenu, Check, %o_Lang010%
 }
 Else
+{
 	GoSub, SetNoJoy
+	Menu, OptionsMenu, Uncheck, %o_Lang010%
+}
 return
 
 CaptureJoyB:
@@ -10590,11 +10610,13 @@ If (KeepHkOn = 1)
 {
 	GoSub, KeepHkOn
 	Menu, Tray, Check, %w_Lang014%
+	Menu, OptionsMenu, Check, %o_Lang006%
 }
 Else
 {
 	GoSub, ResetHotkeys
 	Menu, Tray, Uncheck, %w_Lang014%
+	Menu, OptionsMenu, Uncheck, %o_Lang006%
 	Traytip
 }
 return
@@ -12496,15 +12518,25 @@ Loop, Parse, Lang_All, |
 		Menu, LangMenu, Add, % Lang_%LangTxt%, LangChange
 }
 
+GoSub, BuildOnFinishMenu
 Menu, OptionsMenu, Add, %o_Lang001%`t%_s%Ctrl+G, Options
 Menu, OptionsMenu, Add, %o_Lang002%, :LangMenu
 Menu, OptionsMenu, Add
-Menu, OptionsMenu, Add, %o_Lang003%, KeepDefKeys
-Menu, OptionsMenu, Add, %o_Lang004%, DefaultMacro
-Menu, OptionsMenu, Add, %o_Lang005%, RemoveDefault
+Menu, OptionsMenu, Add, %o_Lang003%, HideMainWin
+Menu, OptionsMenu, Add, %o_Lang004%, OnScCtrl
+Menu, OptionsMenu, Add, %o_Lang005%, Capt
+Menu, OptionsMenu, Add, %o_Lang006%, CheckHkOn
+Menu, OptionsMenu, Add, %o_Lang007%, :OnFinishMenu
+Menu, OptionsMenu, Add, %o_Lang008%, SetWin
+Menu, OptionsMenu, Add, %o_Lang009%, WinKey
+Menu, OptionsMenu, Add, %o_Lang010%, SetJoyButton
 Menu, OptionsMenu, Add
-Menu, OptionsMenu, Add, %o_Lang006%`t%_s%Alt+F6, DefaultHotkeys
-Menu, OptionsMenu, Add, %o_Lang007%`t%_s%Alt+F7, LoadDefaults
+Menu, OptionsMenu, Add, %o_Lang011%, KeepDefKeys
+Menu, OptionsMenu, Add, %o_Lang012%, DefaultMacro
+Menu, OptionsMenu, Add, %o_Lang013%, RemoveDefault
+Menu, OptionsMenu, Add
+Menu, OptionsMenu, Add, %o_Lang014%`t%_s%Alt+F6, DefaultHotkeys
+Menu, OptionsMenu, Add, %o_Lang015%`t%_s%Alt+F7, LoadDefaults
 
 Menu, HelpMenu, Add, %h_Lang001%`t%_s%F1, Help
 Menu, HelpMenu, Add, %h_Lang002%, Tutorials
@@ -12522,7 +12554,7 @@ Menu, HelpMenu, Add, %h_Lang009%`t%_s%Shift+F1, HelpAbout
 Loop, Parse, Start_Tips, `n
 {
 	StartTip_%A_Index% := A_LoopField
-	MaxTips := A_Index
+,	MaxTips := A_Index
 }
 
 Menu, DonationMenu, Add, %p_Lang001%, DonatePayPal
@@ -12575,7 +12607,18 @@ Menu, Tray, Add, %f_Lang011%, Exit
 Menu, Tray, Default, %w_Lang005%
 
 If KeepDefKeys
+	Menu, OptionsMenu, Check, %o_Lang011%
+If (OnScCtrl)
+	Menu, OptionsMenu, Check, %o_Lang004%
+If (WinKey)
+	Menu, OptionsMenu, Check, %o_Lang009%
+If (HideMainWin)
 	Menu, OptionsMenu, Check, %o_Lang003%
+If (KeepHkOn)
+	Menu, OptionsMenu, Check, %o_Lang006%
+If (JoyHK)
+	Menu, OptionsMenu, Check, %o_Lang010%
+
 If AutoUpdate
 	Menu, HelpMenu, Check, %h_Lang008%
 If ShowLoopIfMark
@@ -12821,10 +12864,36 @@ Menu, OnFinish, Check, % w_Lang02%OnFinishCode%
 Menu, OnFinish, Show, %mX%, %mY%
 Menu, OnFinish, DeleteAll
 SetTimer, FinishIcon, -1
+GoSub, BuildOnFinishMenu
+return
+
+BuildOnFinishMenu:
+Menu, OnFinishMenu, Add, %w_Lang021%, FinishOpt
+Menu, OnFinishMenu, Add, %w_Lang022%, FinishOpt
+Menu, OnFinishMenu, Add, %w_Lang023%, FinishOpt
+Menu, OnFinishMenu, Add, %w_Lang024%, FinishOpt
+Menu, OnFinishMenu, Add, %w_Lang025%, FinishOpt
+Menu, OnFinishMenu, Add, %w_Lang026%, FinishOpt
+Menu, OnFinishMenu, Add, %w_Lang027%, FinishOpt
+Menu, OnFinishMenu, Add, %w_Lang028%, FinishOpt
+Menu, OnFinishMenu, Add, %w_Lang029%, FinishOpt
+
+Menu, OnFinishMenu, Uncheck, %w_Lang021%
+Menu, OnFinishMenu, Uncheck, %w_Lang022%
+Menu, OnFinishMenu, Uncheck, %w_Lang023%
+Menu, OnFinishMenu, Uncheck, %w_Lang024%
+Menu, OnFinishMenu, Uncheck, %w_Lang025%
+Menu, OnFinishMenu, Uncheck, %w_Lang026%
+Menu, OnFinishMenu, Uncheck, %w_Lang027%
+Menu, OnFinishMenu, Uncheck, %w_Lang028%
+Menu, OnFinishMenu, Uncheck, %w_Lang029%
+Menu, OnFinishMenu, Check, % w_Lang02%OnFinishCode%
+SetTimer, FinishIcon, -1
 return
 
 FinishOpt:
 OnFinishCode := A_ThisMenuItemPos
+GoSub, BuildOnFinishMenu
 SetFinishButtom:
 return
 

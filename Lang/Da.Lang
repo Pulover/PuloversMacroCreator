@@ -124,11 +124,19 @@
 ; Options Sub Menu		
 	o_Lang001 =	&Indstillinger
 	o_Lang002 =	&Sprog
-	o_Lang003 =	S&æt som standard genvejstaster
-	o_Lang004 =	&Angiv som standard File
-	o_Lang005 =	&Fjern Standard File
-	o_Lang006 =	S&tandard Genvejstaster
-	o_Lang007 =	Sta&ndardindstillinger
+	o_Lang003 =	&Minimaliseren naar tray...
+	o_Lang004 =	&Display kontrol værktøjslinje
+	o_Lang005 =	&Capture tastetryk i dette vindue
+	o_Lang006 =	&Hotkeys Altid Aktive
+	o_Lang007 =	&nedlukningsvalgmulighederne (Når afspilningen er færdig...)
+	o_Lang008 =	&Kontekstafhængig genvejstaster
+	o_Lang009 =	&Tilføj på Windows-tasten på "Play" genvejen
+	o_Lang010 =	&Brug et joystick knap som genvejstast
+	o_Lang011 =	S&æt som standard genvejstaster
+	o_Lang012 =	&Angiv som standard File
+	o_Lang013 =	&Fjern Standard File
+	o_Lang014 =	Standa&rd Genvejstaster
+	o_Lang015 =	Standardindsti&llinger
 		
 ; Donate Sub Menu		
 	p_Lang001 =	&PayPal Donation

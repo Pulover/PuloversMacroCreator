@@ -124,11 +124,19 @@
 ; Options Sub Menu		
 	o_Lang001 =	&Impostazioni
 	o_Lang002 =	&Lingua
-	o_Lang003 =	I&mposta come tasti di scelta rapida predefiniti
-	o_Lang004 =	Im&posta come file predefinito
-	o_Lang005 =	&Rimuovere file predefinito
-	o_Lang006 =	&Tasti di scelta rapida di default
-	o_Lang007 =	Imp&ostazioni predefinite
+	o_Lang003 =	&Riduci a icona nella tray
+	o_Lang004 =	&Visualizzare i controlli barra degli strumenti
+	o_Lang005 =	&Catturare pressioni di tasti in questa finestra
+	o_Lang006 =	&Tasti Di Scelta Rapida Sempre Attivi
+	o_Lang007 =	&opzioni di spegnimento (Quando termina la riproduzione...)
+	o_Lang008 =	T&asti di scelta rapida sensibili al contesto
+	o_Lang009 =	A&ggiungere la chiave di Windows per "giocare" hotkey
+	o_Lang010 =	&Utilizzare un tasto del joystick come tasto di scelta rapida
+	o_Lang011 =	I&mposta come tasti di scelta rapida predefiniti
+	o_Lang012 =	Im&posta come file predefinito
+	o_Lang013 =	Rimuov&ere file predefinito
+	o_Lang014 =	Ta&sti di scelta rapida di default
+	o_Lang015 =	Imposta&zioni predefinite
 		
 ; Donate Sub Menu		
 	p_Lang001 =	&Donazione PayPal

@@ -124,11 +124,19 @@
 ; Options Sub Menu		
 	o_Lang001 =	&Ayarlar
 	o_Lang002 =	&Dil
-	o_Lang003 =	&Varsayılan Hotkeys Olarak Ayarla
-	o_Lang004 =	Va&Rsayılan Dosya Olarak Ayarla
-	o_Lang005 =	Var&sayılan Dosya kaldır
-	o_Lang006 =	Varsa&yılan Hotkeys
-	o_Lang007 =	Varsay&ılan Ayarlar
+	o_Lang003 =	&Tepsisine küçült
+	o_Lang004 =	A&raç çubuğu kontrolleri görüntülemek
+	o_Lang005 =	&Bu pencerede basılmasını Capture
+	o_Lang006 =	&Her Zaman Aktif Kısayollar
+	o_Lang007 =	&kapatma seçenekleri (Ne zaman çalma bitirir...)
+	o_Lang008 =	Ba&ğlam Duyarlı Hotkeys
+	o_Lang009 =	K&ısayol tuşu "Play" için Windows tuşu ekle
+	o_Lang010 =	Kı&sayol olarak bir joystick düğmesini kullanın
+	o_Lang011 =	&Varsayılan Hotkeys Olarak Ayarla
+	o_Lang012 =	VaRsa&yılan Dosya Olarak Ayarla
+	o_Lang013 =	Varsayı&lan Dosya kaldır
+	o_Lang014 =	Varsayıla&n Hotkeys
+	o_Lang015 =	Varsayılan Ayarlar
 		
 ; Donate Sub Menu		
 	p_Lang001 =	&PayPal Bağış

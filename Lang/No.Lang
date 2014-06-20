@@ -124,11 +124,19 @@
 ; Options Sub Menu		
 	o_Lang001 =	&Innstillinger
 	o_Lang002 =	&Språk
-	o_Lang003 =	&Angi som standard hurtigtaster
-	o_Lang004 =	S&ett som standard fil
-	o_Lang005 =	&Fjern Standard File
-	o_Lang006 =	S&tandard Hurtigtaster
-	o_Lang007 =	Sta&ndardinnstillinger
+	o_Lang003 =	&Minimere å brett
+	o_Lang004 =	&Vise kontrollene verktøylinjen
+	o_Lang005 =	&Fange tastetrykk i dette vinduet
+	o_Lang006 =	&Hurtigtaster Alltid Aktive
+	o_Lang007 =	&nedleggelse alternativer (Når avspillingen fullføres...)
+	o_Lang008 =	&Kontekstsensitiv Hurtigtaster
+	o_Lang009 =	&Legg Windows-tasten til "Play" hurtigtast
+	o_Lang010 =	&Bruk en joystick knappen som hurtigtast
+	o_Lang011 =	&Angi som standard hurtigtaster
+	o_Lang012 =	S&ett som standard fil
+	o_Lang013 =	F&jern Standard File
+	o_Lang014 =	S&tandard Hurtigtaster
+	o_Lang015 =	Stan&dardinnstillinger
 		
 ; Donate Sub Menu		
 	p_Lang001 =	&PayPal donasjon

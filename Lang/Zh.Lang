@@ -1,6 +1,6 @@
 ﻿LoadLang_Zh:
 		
-		; Chinese （Simplified） [Revised by huyaowen and Amnesiac]
+		; Chinese （Simplified） [Revised by huyaowen and amnesiac]
 		
 ; Main Menu		
 	m_Lang001 =	文件(&F)
@@ -124,11 +124,19 @@
 ; Options Sub Menu		
 	o_Lang001 =	设置(&S)
 	o_Lang002 =	语言(&L)
-	o_Lang003 =	设为默认热键(&D)
-	o_Lang004 =	设为默认文件(&F)
-	o_Lang005 =	移除默认文件(&R)
-	o_Lang006 =	默认热键(&H)
-	o_Lang007 =	默认设置(&E)
+	o_Lang003 =	最小化到托盘
+	o_Lang004 =	显示控制工具栏
+	o_Lang005 =	捕获此窗口中的键击
+	o_Lang006 =	热键总是激活
+	o_Lang007 =	关机选项（当回放结束时）
+	o_Lang008 =	上下文热键
+	o_Lang009 =	添加Windows键到“回放”热键
+	o_Lang010 =	使用操作杆作为热键
+	o_Lang011 =	设为默认热键(&D)
+	o_Lang012 =	设为默认文件(&F)
+	o_Lang013 =	移除默认文件(&R)
+	o_Lang014 =	默认热键(&H)
+	o_Lang015 =	默认设置(&E)
 		
 ; Donate Sub Menu		
 	p_Lang001 =	用PayPal捐赠(&P)

@@ -124,11 +124,19 @@
 ; Options Sub Menu		
 	o_Lang001 =	&Tetapan
 	o_Lang002 =	&Bahasa
-	o_Lang003 =	&Ditetapkan sebagai hotkeys lalai
-	o_Lang004 =	D&itetapkan sebagai fail lalai
-	o_Lang005 =	B&uang Fail Default
-	o_Lang006 =	&Hotkeys lalai
-	o_Lang007 =	T&etapan lalai
+	o_Lang003 =	&Kurangkan ke dulang
+	o_Lang004 =	&Memaparkan kawalan toolbar
+	o_Lang005 =	T&angkap tekanan kekunci dalam tetingkap ini
+	o_Lang006 =	&Hotkeys Sentiasa Aktif
+	o_Lang007 =	&Pilihan penutupan (Apabila selesai main...)
+	o_Lang008 =	K&onteks hotkeys Sensitif
+	o_Lang009 =	Tambah &utama Windows untuk "Main" hotkey
+	o_Lang010 =	&Gunakan butang joystick sebagai hotkey
+	o_Lang011 =	&Ditetapkan sebagai hotkeys lalai
+	o_Lang012 =	D&itetapkan sebagai fail lalai
+	o_Lang013 =	Bua&ng Fail Default
+	o_Lang014 =	Hotk&eys lalai
+	o_Lang015 =	Tetapan &lalai
 		
 ; Donate Sub Menu		
 	p_Lang001 =	Derma PayPal

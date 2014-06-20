@@ -124,11 +124,19 @@
 ; Options Sub Menu		
 	o_Lang001 =	&Beállítások
 	o_Lang002 =	&Nyelv
-	o_Lang003 =	&Set As Default gyorsbillentyűk
-	o_Lang004 =	&Az Alapértelmezett Beállítás Fájl
-	o_Lang005 =	&Eltávolítása Alapértelmezett fájl
-	o_Lang006 =	A&lapértelmezett gyorsbillentyűk
-	o_Lang007 =	Ala&pértelmezett beállítások
+	o_Lang003 =	&Tálcára
+	o_Lang004 =	&Kijelző vezérlők eszköztár
+	o_Lang005 =	&Capture gombot megnyomja ebben az ablakban
+	o_Lang006 =	&Gyorsbillentyűk Mindig Aktív
+	o_Lang007 =	&shutdown lehetőségek (Ha a lejátszás befejeződik...)
+	o_Lang008 =	C&ontext Sensitive gyorsbillentyűk
+	o_Lang009 =	&Adja hozzá a Windows billentyű a "Play" gyorsbillentyű
+	o_Lang010 =	&Használjon joystick gombot hotkey
+	o_Lang011 =	S&et As Default gyorsbillentyűk
+	o_Lang012 =	A&z Alapértelmezett Beállítás Fájl
+	o_Lang013 =	E&ltávolítása Alapértelmezett fájl
+	o_Lang014 =	Ala&pértelmezett gyorsbillentyűk
+	o_Lang015 =	Alap&értelmezett beállítások
 		
 ; Donate Sub Menu		
 	p_Lang001 =	&PayPal adomány

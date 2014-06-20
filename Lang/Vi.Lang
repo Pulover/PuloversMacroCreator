@@ -124,11 +124,19 @@
 ; Options Sub Menu		
 	o_Lang001 =	&Cài đặt
 	o_Lang002 =	&Ngôn ngư
-	o_Lang003 =	&Thiết lập như Hotkeys Mặc định
-	o_Lang004 =	T&hiết lập như mặc định file
-	o_Lang005 =	&Gỡ bỏ mặc định file
-	o_Lang006 =	C&ác phím tắt mặc định
-	o_Lang007 =	C&ài đặt mặc định
+	o_Lang003 =	&Giảm thiểu để khay
+	o_Lang004 =	&Điều khiển hiển thị thanh công cụ
+	o_Lang005 =	N&ắm bắt ép chính trong cửa sổ này
+	o_Lang006 =	&Phím nóng Luôn đăng nhập
+	o_Lang007 =	&Tắt tùy chọn (Khi phát lại kết thúc...)
+	o_Lang008 =	&Hotkeys bối cảnh nhạy cảm
+	o_Lang009 =	Th&êm phím Windows để "chơi" phím nóng
+	o_Lang010 =	&Sử dụng nút điều khiển như phím nóng
+	o_Lang011 =	Th&iết lập như Hotkeys Mặc định
+	o_Lang012 =	Thi&ết lập như mặc định file
+	o_Lang013 =	G&ỡ bỏ mặc định file
+	o_Lang014 =	C&ác phím tắt mặc định
+	o_Lang015 =	C&ài đặt mặc định
 		
 ; Donate Sub Menu		
 	p_Lang001 =	Hiến PayPal

@@ -124,11 +124,19 @@
 ; Options Sub Menu		
 	o_Lang001 =	&Einstellungen
 	o_Lang002 =	&Sprache
-	o_Lang003 =	&Hotkeys als Standard festlegen 
-	o_Lang004 =	&Als Standard-Datei festlegen
-	o_Lang005 =	S&tandard-Datei entfernen 
-	o_Lang006 =	Sta&ndard-Hotkeys
-	o_Lang007 =	Stan&dardeinstellungen
+	o_Lang003 =	&Minimieren in den Tray
+	o_Lang004 =	&Display-Steuerelemente Symbolleiste
+	o_Lang005 =	&Tastdruck in diesem Fenster erfassen
+	o_Lang006 =	&Hotkeys Immer Aktiv
+	o_Lang007 =	&Optionen für das Herunterfahren (Wenn Wiedergabe beendet...)
+	o_Lang008 =	&Kontextabhängige Hotkeys
+	o_Lang009 =	&Windows-Taste auf "Wiederg." Hotkey fügen
+	o_Lang010 =	&Joystick-Taste als Hotkey verwenden
+	o_Lang011 =	Hotke&ys als Standard festlegen 
+	o_Lang012 =	&Als Standard-Datei festlegen
+	o_Lang013 =	Sta&ndard-Datei entfernen 
+	o_Lang014 =	Standa&rd-Hotkeys
+	o_Lang015 =	Standarde&instellungen
 		
 ; Donate Sub Menu		
 	p_Lang001 =	&PayPal Spende

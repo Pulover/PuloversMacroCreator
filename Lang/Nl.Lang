@@ -124,11 +124,19 @@
 ; Options Sub Menu		
 	o_Lang001 =	&Instellingen
 	o_Lang002 =	&Taal
-	o_Lang003 =	&Als standaard instellen Sneltoetsen
-	o_Lang004 =	A&ls standaard instellen File
-	o_Lang005 =	&Verwijder Standaard File
-	o_Lang006 =	&Standaard Sneltoetsen
-	o_Lang007 =	Sta&ndaardinstellingen
+	o_Lang003 =	&Minimaliseren naar tray
+	o_Lang004 =	&Weer controles werkbalk
+	o_Lang005 =	&Capture-toets drukt in dit venster
+	o_Lang006 =	&Sneltoetsen Altijd Actief
+	o_Lang007 =	s&hutdown opties (Wanneer het afspelen is voltooid...)
+	o_Lang008 =	C&ontext gevoelige sneltoetsen
+	o_Lang009 =	&Voeg de Windows-toets op "Play" sneltoets
+	o_Lang010 =	&Gebruik een joystick knop als sneltoets
+	o_Lang011 =	&Als standaard instellen Sneltoetsen
+	o_Lang012 =	A&ls standaard instellen File
+	o_Lang013 =	V&erwijder Standaard File
+	o_Lang014 =	Sta&ndaard Sneltoetsen
+	o_Lang015 =	Stan&daardinstellingen
 		
 ; Donate Sub Menu		
 	p_Lang001 =	&PayPal Donatie
