@@ -1,6 +1,6 @@
 ﻿Playback(Macro_On, Skip_Line=0, Manual="")
 {
-	local IfError := 0, PointMarker := 0, LoopCount := 0
+	local IfError := 0, PointMarker := 0, LoopCount := [0]
 	, m_ListCount := ListCount%Macro_On%, mLoopIndex, _Label
 
 	CoordMode, Mouse, Screen
@@ -215,7 +215,7 @@
 								}
 								o_Loop%PointMarker%[A_Index, "LoopReadLine"] := A_LoopReadLine
 							}
-							LoopCount%PointMarker% := o_Loop%PointMarker%.MaxIndex()
+							LoopCount[PointMarker] := o_Loop%PointMarker%.MaxIndex()
 						}
 						Else If (Type = cType39)
 						{
@@ -229,7 +229,7 @@
 								}
 								o_Loop%PointMarker%[A_Index, "LoopField"] := A_LoopField
 							}
-							LoopCount%PointMarker% := o_Loop%PointMarker%.MaxIndex()
+							LoopCount[PointMarker] := o_Loop%PointMarker%.MaxIndex()
 						}
 						Else If (Type = cType40)
 						{
@@ -256,7 +256,7 @@
 							,	o_Loop%PointMarker%[A_Index, "LoopFileSizeKB"] := A_LoopFileSizeKB
 							,	o_Loop%PointMarker%[A_Index, "LoopFileSizeMB"] := A_LoopFileSizeMB
 							}
-							LoopCount%PointMarker% := o_Loop%PointMarker%.MaxIndex()
+							LoopCount[PointMarker] := o_Loop%PointMarker%.MaxIndex()
 						}
 						Else If (Type = cType41)
 						{
@@ -274,11 +274,11 @@
 							,	o_Loop%PointMarker%[A_Index, "LoopRegSubKey"] := A_LoopRegSubKey
 							,	o_Loop%PointMarker%[A_Index, "LoopRegTimeModified"] := A_LoopRegTimeModified
 							}
-							LoopCount%PointMarker% := o_Loop%PointMarker%.MaxIndex()
+							LoopCount[PointMarker] := o_Loop%PointMarker%.MaxIndex()
 						}
 						Else
-							LoopCount%PointMarker% := TimesX
-						If (LoopCount%PointMarker% = "")
+							LoopCount[PointMarker] := TimesX
+						If (LoopCount[PointMarker] = "")
 						{
 							LoopIndex := mLoopIndex
 							BreakIt++
@@ -301,7 +301,7 @@
 						If (SkipIt > 0)
 							SkipIt--
 						End%PointMarker% := A_Index, aHK_Or := Macro_On
-						GoToLab := LoopSection(Start%PointMarker%, End%PointMarker%, LoopCount%PointMarker%, Macro_On
+						GoToLab := LoopSection(Start%PointMarker%, End%PointMarker%, LoopCount[PointMarker], Macro_On
 						, PointMarker, mLoopIndex, o_TimesG[Macro_On])
 						o_Loop%PointMarker% := ""
 						If IsObject(GoToLab)
@@ -644,7 +644,7 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC)
 								}
 								o_Loop%PointMarker%[A_Index, "LoopReadLine"] := A_LoopReadLine
 							}
-							LoopCount%PointMarker% := o_Loop%PointMarker%.MaxIndex()
+							LoopCount[PointMarker] := o_Loop%PointMarker%.MaxIndex()
 						}
 						Else If (Type = cType39)
 						{
@@ -658,7 +658,7 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC)
 								}
 								o_Loop%PointMarker%[A_Index, "LoopField"] := A_LoopField
 							}
-							LoopCount%PointMarker% := o_Loop%PointMarker%.MaxIndex()
+							LoopCount[PointMarker] := o_Loop%PointMarker%.MaxIndex()
 						}
 						Else If (Type = cType40)
 						{
@@ -685,7 +685,7 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC)
 							,	o_Loop%PointMarker%[A_Index, "LoopFileSizeKB"] := A_LoopFileSizeKB
 							,	o_Loop%PointMarker%[A_Index, "LoopFileSizeMB"] := A_LoopFileSizeMB
 							}
-							LoopCount%PointMarker% := o_Loop%PointMarker%.MaxIndex()
+							LoopCount[PointMarker] := o_Loop%PointMarker%.MaxIndex()
 						}
 						Else If (Type = cType41)
 						{
@@ -703,11 +703,11 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC)
 							,	o_Loop%PointMarker%[A_Index, "LoopRegSubKey"] := A_LoopRegSubKey
 							,	o_Loop%PointMarker%[A_Index, "LoopRegTimeModified"] := A_LoopRegTimeModified
 							}
-							LoopCount%PointMarker% := o_Loop%PointMarker%.MaxIndex()
+							LoopCount[PointMarker] := o_Loop%PointMarker%.MaxIndex()
 						}
 						Else
-							LoopCount%PointMarker% := TimesX
-						If (LoopCount%PointMarker% = "")
+							LoopCount[PointMarker] := TimesX
+						If (LoopCount[PointMarker] = "")
 						{
 							LoopIndex := mLoopIndex
 							BreakIt++
@@ -730,7 +730,7 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC)
 						If (SkipIt > 0)
 							SkipIt--
 						End%PointMarker% := Start + A_Index
-					,	GoToLab := LoopSection(Start%PointMarker%, End%PointMarker%, LoopCount%PointMarker%, lcL
+					,	GoToLab := LoopSection(Start%PointMarker%, End%PointMarker%, LoopCount[PointMarker], lcL
 						, PointMarker, mainL, mainC)
 					,	o_Loop%PointMarker% := ""
 						If (GoToLab = "_return")
