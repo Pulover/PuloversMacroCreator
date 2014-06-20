@@ -394,6 +394,7 @@ Excel.Application
 Word.Application
 Outlook.Application
 PowerPoint.Application
+WinHttp.WinHttpRequest.5.1
 SAPI.SpVoice
 Schedule.Service
 ScriptControl

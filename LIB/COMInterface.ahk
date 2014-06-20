@@ -125,25 +125,57 @@ COMInterface(String, Ptr="", ByRef OutputVar="", CLSID="InternetExplorer.Applica
 				{
 					If IsByRef(OutputVar)
 						OutputVar := ComSet[Obj](Params*)[%Index%1]
-					return ComSet[Obj](Params*)[%Index%1]
+					Try
+						Result := ComSet[Obj](Params*)[%Index%1]
+					If (IsObject(Result))
+						return Result
+					Try
+						Result := ComSet[Obj](Params*)
+					If (IsObject(Result))
+						return Result
+					Try
+						Result := ComSet[Obj]
+					If (IsObject(Result))
+						return Result
+					return ComSet
 				}
 				Else If (Par <> "")
 				{
 					If IsByRef(OutputVar)
 						OutputVar := ComSet[Obj](Params*)
-					return ComSet[Obj](Params*)
+					Try
+						Result := ComSet[Obj](Params*)
+					If (IsObject(Result))
+						return Result
+					Try
+						Result := ComSet[Obj]
+					If (IsObject(Result))
+						return Result
+					return ComSet
 				}
 				Else If (Index <> "")
 				{
 					If IsByRef(OutputVar)
 						OutputVar := ComSet[Obj][%Index%1]
-					return ComSet[Obj][%Index%1]
+					Try
+						Result := ComSet[Obj][%Index%1]
+					If (IsObject(Result))
+						return Result
+					Try
+						Result := ComSet[Obj]
+					If (IsObject(Result))
+						return Result
+					return ComSet
 				}
 				Else
 				{
 					If IsByRef(OutputVar)
 						OutputVar := ComSet[Obj]
-					return ComSet[Obj]
+					Try
+						Result := ComSet[Obj]
+					If (IsObject(Result))
+						return Result
+					return ComSet
 				}
 			}
 		}
