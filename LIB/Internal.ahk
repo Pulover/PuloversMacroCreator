@@ -381,28 +381,6 @@ ReadFunctions(LibFile, Msg="")
 	return (ExtList <> "") ? ExtList : "$"
 }
 
-AssignVar(Name, Operator, Value)
-{
-	global
-	local TempVar
-	If InStr(Value, "!")=1
-		Value := !SubStr(Value, 2)
-	If (Operator = ":=")
-		%Name% := Value
-	Else If (Operator = "+=")
-		%Name% += Value
-	Else If (Operator = "-=")
-		%Name% -= Value
-	Else If (Operator = "*=")
-		%Name% *= Value
-	Else If (Operator = "/=")
-		%Name% /= Value
-	Else If (Operator = "//=")
-		%Name% //= Value
-	Else If (Operator = ".=")
-		%Name% .= Value
-}
-
 ListIEWindows()
 {
 	List := "[blank]||"

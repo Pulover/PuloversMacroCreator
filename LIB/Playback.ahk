@@ -331,6 +331,7 @@
 				{
 					StringReplace, Step, Step, ``n, `n, All
 					StringReplace, Step, Step, ``t, `t, All
+					StringReplace, Step, Step, ```,, `,, All
 					AssignReplace(Step)
 					CheckVars("Step|Target|Window|VarName|VarValue", PointMarker)
 					If (Type = cType21)
@@ -399,6 +400,8 @@
 						StringReplace, Step, Step, ``n, `n, All
 					If InStr(Step, "``t")
 						StringReplace, Step, Step, ``t, `t, All
+					If InStr(Step, "```,")
+						StringReplace, Step, Step, ```,, `,, All
 				}
 				If (Type = "Return")
 					break 2
@@ -745,6 +748,7 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC)
 				{
 					StringReplace, Step, Step, ``n, `n, All
 					StringReplace, Step, Step, ``t, `t, All
+					StringReplace, Step, Step, ```,, `,, All
 					AssignReplace(Step)
 					CheckVars("Step|Target|Window|VarName|VarValue", PointMarker)
 					If (Type = cType21)
@@ -811,6 +815,8 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC)
 					StringReplace, Step, Step, ``n, `n, All
 				If InStr(Step, "``t")
 					StringReplace, Step, Step, ``t, `t, All
+				If InStr(Step "```,")
+					StringReplace, Step, Step, ```,, `,, All
 				If (Type = "Return")
 					return "_return"
 				If (Type = cType29)
@@ -1233,6 +1239,28 @@ SplitWin(Window)
 		WinPars.Insert(LoopField)
 	}
 	return WinPars
+}
+
+AssignVar(Name, Operator, Value)
+{
+	global
+	local TempVar
+	If InStr(Value, "!")=1
+		Value := !SubStr(Value, 2)
+	If (Operator = ":=")
+		%Name% := Value
+	Else If (Operator = "+=")
+		%Name% += Value
+	Else If (Operator = "-=")
+		%Name% -= Value
+	Else If (Operator = "*=")
+		%Name% *= Value
+	Else If (Operator = "/=")
+		%Name% /= Value
+	Else If (Operator = "//=")
+		%Name% //= Value
+	Else If (Operator = ".=")
+		%Name% .= Value
 }
 
 CheckVars(Match_List, l_Point="")
