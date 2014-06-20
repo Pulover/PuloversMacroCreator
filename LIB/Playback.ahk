@@ -1059,7 +1059,7 @@ IfStatement(ThisError, l_Point)
 		{
 			This_Point := l_Point
 			GoSub, SplitStep
-			If RegExMatch(Par1, "A_Loop\w+")
+			If RegExMatch(Par1, "i)A_Loop\w+")
 			{
 				I := DerefVars(LoopIndex), L := SubStr(Par1, 3)
 			,	This_Par := o_Loop%l_Point%[I][L]
@@ -1074,7 +1074,7 @@ IfStatement(ThisError, l_Point)
 		{
 			This_Point := l_Point
 			GoSub, SplitStep
-			If RegExMatch(Par1, "A_Loop\w+")
+			If RegExMatch(Par1, "i)A_Loop\w+")
 			{
 				I := DerefVars(LoopIndex), L := SubStr(Par1, 3)
 			,	This_Par := o_Loop%l_Point%[I][L]
@@ -1097,6 +1097,19 @@ IfStatement(ThisError, l_Point)
 			AssignReplace(Step)
 			CheckVars("VarName|VarValue", PointMarker)
 			EscCom("VarValue|VarName", 1)
+			This_Point := l_Point
+			If RegExMatch(VarName, "i)A_Loop\w+")
+			{
+				I := DerefVars(LoopIndex), L := SubStr(VarName, 3)
+			,	This_Par := o_Loop%l_Point%[I][L]
+			,	VarName := "This_Par"
+			}
+			If RegExMatch(VarValue, "i)A_Loop\w+")
+			{
+				I := DerefVars(LoopIndex), L := SubStr(VarValue, 3)
+			,	This_Par := o_Loop%l_Point%[I][L]
+			,	VarValue := "This_Par"
+			}
 			If (VarName = "A_Index")
 				VarName := "LoopIndex"
 			If IfEval(VarName, Oper, VarValue)
