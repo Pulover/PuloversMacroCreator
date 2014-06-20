@@ -650,7 +650,7 @@ GetElIndex(elwb, GetBy)
 AssignReplace(String)
 {
 	global
-	RegExMatch(String, "sU)(.+)\s(\W\W?)(?-U)\s(.*)", Out)
+	RegExMatch(String, "sU)(.+)\s(\W?\W\W?)(?-U)\s(.*)", Out)
 	VarName := Out1, Oper := Out2, VarValue := Out3
 }
 

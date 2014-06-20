@@ -160,7 +160,7 @@
 			[Control](http://ahkscript.org/docs/commands/Control.htm), [ControlFocus](http://ahkscript.org/docs/commands/ControlFocus.htm), [ControlGet](http://ahkscript.org/docs/commands/ControlGet.htm), [ControlGetFocus](http://ahkscript.org/docs/commands/ControlGetFocus.htm), [ControlGetPos](http://ahkscript.org/docs/commands/ControlGetPos.htm), [ControlGetText](http://ahkscript.org/docs/commands/ControlGetText.htm), [ControlMove](http://ahkscript.org/docs/commands/ControlMove.htm), [ControlSetText](http://ahkscript.org/docs/commands/ControlSetText.htm)
 		
 		### Download Example
-			[Using Control Commands to Read and Set Text](Examples\ControlCmd.pmc).
+			[Using Control Commands to Read and Set Text](Examples/ControlCmd.pmc).
 */
 
 /*!
@@ -365,7 +365,7 @@
 			[Loop FilePattern](http://ahkscript.org/docs/commands/LoopFile.htm)
 		
 		### Download Example
-			[Loop through folders, parse and read file's contents](Examples\LoopTypes.pmc).
+			[Loop through folders, parse and read file's contents](Examples/LoopTypes.pmc).
 */
 
 /*!
@@ -392,7 +392,7 @@
 			[Loop Parse](http://ahkscript.org/docs/commands/LoopParse.htm)
 		
 		### Download Example
-			[Loop through folders, parse and read file's contents](Examples\LoopTypes.pmc).
+			[Loop through folders, parse and read file's contents](Examples/LoopTypes.pmc).
 */
 
 /*!
@@ -414,7 +414,7 @@
 			[Loop Read File](http://ahkscript.org/docs/commands/LoopReadFile.htm)
 		
 		### Download Example
-			[Loop through folders, parse and read file's contents](Examples\LoopTypes.pmc).
+			[Loop through folders, parse and read file's contents](Examples/LoopTypes.pmc).
 */
 
 /*!

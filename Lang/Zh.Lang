@@ -1,152 +1,152 @@
 ﻿LoadLang_Zh:
 		
-		; Chinese （Simplified） [Revised by huyaowen]
+		; Chinese （Simplified） [Revised by huyaowen and Amnesiac]
 		
 ; Main Menu		
-	m_Lang001 =	文件
-	m_Lang002 =	命令
-	m_Lang003 =	选择
-	m_Lang004 =	编辑
-	m_Lang005 =	宏
-	m_Lang006 =	视图
-	m_Lang007 =	选项
-	m_Lang008 =	捐赠
-	m_Lang009 =	帮助
+	m_Lang001 =	文件(&F)
+	m_Lang002 =	命令(&C)
+	m_Lang003 =	选择(&S)
+	m_Lang004 =	编辑(&E)
+	m_Lang005 =	宏(&M)
+	m_Lang006 =	视图(&V)
+	m_Lang007 =	选项(&O)
+	m_Lang008 =	捐赠(&D)
+	m_Lang009 =	帮助(&H)
 		
 ; File Sub Menu		
-	f_Lang001 =	新建
-	f_Lang002 =	打开
-	f_Lang003 =	保存
-	f_Lang004 =	另存为
-	f_Lang005 =	最近的文件
-	f_Lang006 =	导出为ahk
-	f_Lang007 =	预览脚本
-	f_Lang008 =	编辑脚本
-	f_Lang009 =	附表宏
-	f_Lang010 =	列出变量
-	f_Lang011 =	导出
+	f_Lang001 =	新建(&N)
+	f_Lang002 =	打开(&O)
+	f_Lang003 =	保存(&S)
+	f_Lang004 =	另存为(&A)
+	f_Lang005 =	文件历史(&R)
+	f_Lang006 =	导出为AHK(&E)
+	f_Lang007 =	预览脚本(&P)
+	f_Lang008 =	编辑脚本(&D)
+	f_Lang009 =	计划宏(&C)
+	f_Lang010 =	列出变量(&L)
+	f_Lang011 =	退出(&X)
 	f_Lang012 =	没有文件
 		
 ; Macro Sub Menu		
-	r_lang001 =	录制宏
-	r_lang002 =	激活宏
-	r_lang003 =	播放当前宏观经济
-	r_lang004 =	定时器
-	r_lang005 =	播放选定的行
-	r_lang006 =	播放到选定的行
-	r_lang007 =	播放选定的行
-	r_lang008 =	上下文相关的热键
-	r_lang009 =	添加宏
-	r_lang010 =	关闭宏
-	r_lang011 =	重复宏
-	r_lang012 =	编辑宏
-	r_lang013 =	导入宏
-	r_lang014 =	保存当前的宏
+	r_lang001 =	录制宏(&R)
+	r_lang002 =	激活宏(&A)
+	r_lang003 =	播放当前宏(&P)
+	r_lang004 =	定时器(&T)
+	r_lang005 =	从选择行回放(&L)
+	r_lang006 =	回放到选择行(&Y)
+	r_lang007 =	回放选择行(&S)
+	r_lang008 =	上下文热键(&C)
+	r_lang009 =	增加宏(&D)
+	r_lang010 =	关闭宏(&O)
+	r_lang011 =	重复宏(&U)
+	r_lang012 =	编辑宏(&E)
+	r_lang013 =	导入宏(&I)
+	r_lang014 =	保存当前宏(&V)
 		
 ; Commands Sub Menu		
-	i_Lang001 =	鼠标
-	i_Lang002 =	文本
-	i_Lang003 =	控制
-	i_Lang004 =	暂停
-	i_Lang005 =	消息框
-	i_Lang006 =	键等待
-	i_Lang007 =	窗口
-	i_Lang008 =	图片 / 像素搜索
-	i_Lang009 =	运行 / 文件 / 字符串 / 其他。
-	i_Lang010 =	环
-	i_Lang011 =	页转到
-	i_Lang012 =	标签
-	i_Lang013 =	如果报表
-	i_Lang014 =	变量
-	i_Lang015 =	函数
-	i_Lang016 =	互联网资源管理器
-	i_Lang017 =	COM接口
-	i_Lang018 =	运行的Scriptlet
-	i_Lang019 =	Windows消息
+	i_Lang001 =	鼠标(&M)
+	i_Lang002 =	文本(&T)
+	i_Lang003 =	控件(&C)
+	i_Lang004 =	暂停(&P)
+	i_Lang005 =	消息框(&E)
+	i_Lang006 =	等待按键(&K)
+	i_Lang007 =	窗口(&W)
+	i_Lang008 =	图片/像素搜索(&I)
+	i_Lang009 =	运行/文件/字符串/其他(&R)
+	i_Lang010 =	循环(&L)
+	i_Lang011 =	转到(&G)
+	i_Lang012 =	标签(&A)
+	i_Lang013 =	If语句(&F)
+	i_Lang014 =	变量(&V)
+	i_Lang015 =	函数(&U)
+	i_Lang016 =	IE浏览器(&N)
+	i_Lang017 =	COM接口(&O)
+	i_Lang018 =	运行小脚本(&S)
+	i_Lang019 =	Windows消息(&D)
 	i_Lang020 =	查找命令
 		
 		
 ; Edit Sub Menu		
-	e_Lang001 =	复制
-	e_Lang002 =	编辑注释
-	e_Lang003 =	查找/替换
-	e_Lang004 =	复制到...
-	e_Lang005 =	撤销
-	e_Lang006 =	重做
-	e_Lang007 =	剪切
-	e_Lang008 =	复制
-	e_Lang009 =	粘贴
-	e_Lang010 =	删除
-	e_Lang011 =	上移
-	e_Lang012 =	下移
-	e_Lang013 =	从框中插入
-	e_Lang014 =	插入击键
-	e_Lang015 =	编辑颜色标识
+	e_Lang001 =	复写(&L)
+	e_Lang002 =	编辑注释(&O)
+	e_Lang003 =	查找/替换(&F)
+	e_Lang004 =	复制到(&Y)
+	e_Lang005 =	撤销(&U)
+	e_Lang006 =	重做(&R)
+	e_Lang007 =	剪切(&T)
+	e_Lang008 =	复制(&C)
+	e_Lang009 =	粘贴(&P)
+	e_Lang010 =	删除(&D)
+	e_Lang011 =	上移(&V)
+	e_Lang012 =	下移(&N)
+	e_Lang013 =	从框中插入(&I)
+	e_Lang014 =	插入键击(&K)
+	e_Lang015 =	编辑颜色标记(&M)
 		
 ; Select Sub Menu		
-	s_Lang001 =	全选
-	s_Lang002 =	全不选
-	s_Lang003 =	反选
-	s_Lang004 =	检查所选
-	s_Lang005 =	取消选中所选
-	s_Lang006 =	反转检查
-	s_Lang007 =	移动选择
-	s_Lang008 =	向下移动选择
-	s_Lang009 =	选择的类型
+	s_Lang001 =	全选(&A)
+	s_Lang002 =	全不选(&N)
+	s_Lang003 =	反选(&I)
+	s_Lang004 =	复选高亮(&C)
+	s_Lang005 =	不选高亮(&U)
+	s_Lang006 =	反转复选(&V)
+	s_Lang007 =	上移选区(&P)
+	s_Lang008 =	下移选区(&D)
+	s_Lang009 =	选择类型(&T)
 	s_Lang010 =	命令类型
 		
 ; View Sub Menu		
-	v_lang001 =	总在最前
-	v_lang002 =	亮点行
-	v_lang003 =	缩进
-	v_lang004 =	控制工具栏
-	v_lang005 =	预览
-	v_lang006 =	工具栏
-	v_lang007 =	热键
-	v_lang008 =	重置列大小
-	v_lang009 =	重布局
+	v_lang001 =	总在最前(&A)
+	v_lang002 =	高亮行(&H)
+	v_lang003 =	缩进(&I)
+	v_lang004 =	控制工具栏(&C)
+	v_lang005 =	预览(&P)
+	v_lang006 =	工具栏(&T)
+	v_lang007 =	热键(&O)
+	v_lang008 =	复位列宽(&R)
+	v_lang009 =	复位布局(&E)
 		
-	v_lang010 =	文件
-	v_lang011 =	录制和播放
-	v_lang012 =	命令
-	v_lang013 =	编辑
-	v_lang014 =	选项
-	v_lang015 =	定制
+	v_lang010 =	文件(&F)
+	v_lang011 =	录制回放(&R)
+	v_lang012 =	命令(&C)
+	v_lang013 =	编辑(&E)
+	v_lang014 =	选项(&O)
+	v_lang015 =	定制(&U)
 		
-	v_lang016 =	自动
-	v_lang017 =	手册
-	v_lang018 =	停止
-	v_lang019 =	暂停
+	v_lang016 =	自动(&A)
+	v_lang017 =	手动(&M)
+	v_lang018 =	停止(&S)
+	v_lang019 =	暂停(&P)
 		
-	v_lang020 =	紧凑
-	v_lang021 =	默认
+	v_lang020 =	简洁(&C)
+	v_lang021 =	默认(&D)
 		
 ; Options Sub Menu		
-	o_Lang001 =	设置
-	o_Lang002 =	语言
-	o_Lang003 =	设置为默认热键
-	o_Lang004 =	设置为默认文件
-	o_Lang005 =	删除默认文件
-	o_Lang006 =	默认热键
-	o_Lang007 =	默认设置
+	o_Lang001 =	设置(&S)
+	o_Lang002 =	语言(&L)
+	o_Lang003 =	设为默认热键(&D)
+	o_Lang004 =	设为默认文件(&F)
+	o_Lang005 =	移除默认文件(&R)
+	o_Lang006 =	默认热键(&H)
+	o_Lang007 =	默认设置(&E)
 		
 ; Donate Sub Menu		
-	p_Lang001 =	PayPal捐赠
+	p_Lang001 =	用PayPal捐赠(&P)
 		
 ; Help Sub Menu		
-	h_Lang001 =	帮助
-	h_Lang002 =	教程
-	h_Lang003 =	温馨提示
-	h_Lang004 =	宏造物主首页
-	h_Lang005 =	论坛
-	h_Lang006 =	AHK在线文档
-	h_Lang007 =	检查更新...
-	h_Lang008 =	检查启动
-	h_Lang009 =	关于
+	h_Lang001 =	帮助(&H)
+	h_Lang002 =	教程(&T)
+	h_Lang003 =	提示(&I)
+	h_Lang004 =	Macro Creator主页(&M)
+	h_Lang005 =	论坛(&F)
+	h_Lang006 =	AHK在线帮助(&A)
+	h_Lang007 =	检查更新(&C)
+	h_Lang008 =	启动时检查(&E)
+	h_Lang009 =	关于(&B)
 		
 ; Tray Menu		
 	y_Lang001 =	隐藏窗口
-	y_Lang002 =	橱窗
+	y_Lang002 =	显示窗口
 	y_Lang003 =	控制工具栏
 		
 ; Built-in Vars Menu		
@@ -155,412 +155,412 @@
 	b_Lang003 =	日期和时间
 	b_Lang004 =	用户空闲时间
 	b_Lang005 =	系统和用户
-	b_Lang006 =	杂项。
+	b_Lang006 =	杂项
 	b_Lang007 =	循环
 		
 ; Main Window		
 	w_Lang001 =	导出
 	w_Lang002 =	预览
 	w_Lang003 =	选项
-	w_Lang004 =	记录
+	w_Lang004 =	录制
 	w_Lang005 =	回放
-	w_Lang006 =	播放
-	w_Lang007 =	手册
+	w_Lang006 =	回放
+	w_Lang007 =	手动
 	w_Lang008 =	停止
 	w_Lang009 =	显示控制工具栏
 	w_Lang010 =	暂停
 	w_Lang011 =	循环
-	w_Lang012 =	在此窗口中捕捉按键
+	w_Lang012 =	捕获此窗口中的键击
 	w_Lang013 =	最小化到托盘
-	w_Lang014 =	的热键始终活跃
+	w_Lang014 =	热键总是激活
 	w_Lang015 =	重复
 	w_Lang016 =	延时（ms）
 	w_Lang017 =	应用
 	w_Lang018 =	插入
 	w_Lang019 =	编辑
-	w_Lang020 =	关机选项 (当播放结束...)
+	w_Lang020 =	关机选项（当回放结束时）
 	w_Lang021 =	什么都不做
-	w_Lang022 =	关闭应用程序
-	w_Lang023 =	关闭
-	w_Lang024 =	关机
-	w_Lang025 =	重新启动
+	w_Lang022 =	关闭程序
+	w_Lang023 =	关机
+	w_Lang024 =	关机（强制）
+	w_Lang025 =	重启
 	w_Lang026 =	注销
 	w_Lang027 =	休眠
-	w_Lang028 =	暂停
+	w_Lang028 =	挂起
 	w_Lang029 =	锁定计算机
-	w_Lang030 =	指数
-	w_Lang031 =	行动
-	w_Lang032 =	详细信息
+	w_Lang030 =	索引
+	w_Lang031 =	操作
+	w_Lang032 =	详情
 	w_Lang033 =	重复
-	w_Lang034 =	延迟
+	w_Lang034 =	延时
 	w_Lang035 =	类型
-	w_Lang036 =	控制
+	w_Lang036 =	控件
 	w_Lang037 =	窗口
-	w_Lang038 =	评论
+	w_Lang038 =	注释
 	w_Lang039 =	颜色
-	w_Lang040 =	新建（Ctrl+N）
-	w_Lang041 =	开放（按Ctrl+O）
-	w_Lang042 =	保存（Ctrl+S）
-	w_Lang043 =	导出AHK（Ctrl+E组合键）
-	w_Lang044 =	预览脚本（Ctrl+P）
-	w_Lang045 =	设置（Ctrl+G）
-	w_Lang046 =	录制宏（按Ctrl+R）
-	w_Lang047 =	激活宏（Ctrl+Enter键）
-	w_Lang048 =	播放当前宏（按Ctrl+Shift+Enter键）
-	w_Lang049 =	定时器（Ctrl+Shift+T）
-	w_Lang050 =	鼠标（F2）
-	w_Lang051 =	文本（F3）
-	w_Lang052 =	编辑宏（按Ctrl+Shift+ M）
-	w_Lang053 =	控制（F4）
-	w_Lang054 =	暂停（F5）
-	w_Lang055 =	消息框 （Shift+F5）
-	w_Lang056 =	键等待（Control+F5）
-	w_Lang057 =	窗口（F6）
-	w_Lang058 =	图片/像素搜索（F7）
-	w_Lang059 =	运行/文件/字符串/其他。 （F8）
-	w_Lang060 =	环路（F9）
-	w_Lang061 =	后藤（按Shift+F9）
-	w_Lang062 =	标签（按Ctrl+F9）
-	w_Lang063 =	如果报表附注（F10）
-	w_Lang064 =	变量（按Shift+F10）
-	w_Lang065 =	功能（按Ctrl+F10）
-	w_Lang066 =	IE浏览器（F11）
-	w_Lang067 =	 COM接口（按Shift+F11）
-	w_Lang068 =	运行的scriptlet（按Ctrl+ F11）
-	w_Lang069 =	Windows消息（F12）
-	w_Lang070 =	Windows键“播放”热键
-	w_Lang071 =	使用操纵杆按钮，热键
-	w_Lang072 =	添加宏（Ctrl+T）
-	w_Lang073 =	关闭宏（Ctrl+W）
-	w_Lang074 =	重复宏（Ctrl+Shift+D）
-	w_Lang075 =	进口宏（按Ctrl+I）
-	w_Lang076 =	保存当前宏（CTRL+ALT+S）
-	w_Lang077 =	向上移动（按Ctrl+上一页）
-	w_Lang078 =	“下移”（按Ctrl+下一页）
-	w_Lang079 =	复制选中的行（按Ctrl+D）
-	w_Lang080 =	剪切选定的行（Ctrl+X）
-	w_Lang081 =	选定行复制（Ctrl+C）
-	w_Lang082 =	粘贴复制的行（Ctrl+V）
-	w_Lang083 =	删除选定的行（DEL）
-	w_Lang084 =	撤消（Ctrl+Z）
-	w_Lang085 =	重做（Ctrl+Y）
+	w_Lang040 =	新建(Ctrl+N)
+	w_Lang041 =	打开(Ctrl+O)
+	w_Lang042 =	保存(Ctrl+S)
+	w_Lang043 =	导出为AHK (Ctrl+E)
+	w_Lang044 =	预览脚本(Ctrl+P)
+	w_Lang045 =	设置(Ctrl+G)
+	w_Lang046 =	录制宏(Ctrl+R)
+	w_Lang047 =	激活宏(Ctrl+Enter)
+	w_Lang048 =	回放当前宏(Ctrl+Shift+Enter)
+	w_Lang049 =	定时器(Ctrl+Shift+T)
+	w_Lang050 =	鼠标(F2)
+	w_Lang051 =	文本(F3)
+	w_Lang052 =	编辑宏(Ctrl+Shift+M)
+	w_Lang053 =	控制(F4)
+	w_Lang054 =	暂停(F5)
+	w_Lang055 =	消息框(Shift+F5)
+	w_Lang056 =	等待按键(Control+F5) 
+	w_Lang057 =	窗口(F6)
+	w_Lang058 =	图片/像素搜索(F7)
+	w_Lang059 =	运行/文件/字符串/其他。(F8)
+	w_Lang060 =	循环(F9)
+	w_Lang061 =	转到(Shift+F9)
+	w_Lang062 =	标签(Ctrl+F9)
+	w_Lang063 =	If语句(F10)
+	w_Lang064 =	变量(Shift+F10)
+	w_Lang065 =	函数(Ctrl+F10)
+	w_Lang066 =	IE浏览器(F11)
+	w_Lang067 =	COM接口(Shift+F11)
+	w_Lang068 =	运行小脚本(Ctrl+F11)
+	w_Lang069 =	Windows消息(F12)
+	w_Lang070 =	添加Windows键到“回放”热键
+	w_Lang071 =	使用操作杆作为热键
+	w_Lang072 =	添加宏(Ctrl+T)
+	w_Lang073 =	关闭宏(Ctrl+W)
+	w_Lang074 =	重复宏(Ctrl+Shift+D)
+	w_Lang075 =	导入宏(Ctrl+I)
+	w_Lang076 =	保存当前宏(Ctrl+Alt+S)
+	w_Lang077 =	上移(Ctrl+PageUp)
+	w_Lang078 =	下移(Ctrl+PageDown)
+	w_Lang079 =	复写选择行(Ctrl+D)
+	w_Lang080 =	剪切选择行(Ctrl+X)
+	w_Lang081 =	复制选择行(Ctrl+C)
+	w_Lang082 =	粘贴已复制行(Ctrl+V)
+	w_Lang083 =	删除选择行(Del)
+	w_Lang084 =	撤销(Ctrl+Z)
+	w_Lang085 =	重做(Ctrl+Y)
 	w_Lang086 =	复制到...
-	w_Lang087 =	查找/替换（Ctrl+F）
-	w_Lang088 =	编辑注释（Ctrl+L）
-	w_Lang089 =	编辑颜色标志（Ctrl+M）
+	w_Lang087 =	查找/替换(Ctrl+F)
+	w_Lang088 =	编辑注释(Ctrl+L)
+	w_Lang089 =	编辑颜色标记(Ctrl+M)
 	w_Lang090 =	定制
-	w_Lang091 =	查找命令（按Ctrl+Shift+ F）
-	w_Lang092 =	编辑（Enter）
+	w_Lang091 =	查找命令(Ctrl+Shift+F)
+	w_Lang092 =	编辑（回车）
 	w_Lang093 =	隐藏
-	w_Lang094 =	搬到这里
+	w_Lang094 =	移到这里
 	w_Lang095 =	复制到这里
 		
 ; Command Windows		
 	c_Lang001 =	鼠标
 	c_Lang002 =	文本
 	c_Lang003 =	暂停
-	c_Lang004 =	控制
+	c_Lang004 =	控件
 	c_Lang005 =	窗口
 	c_Lang006 =	图片搜索
 	c_Lang007 =	像素搜索
 	c_Lang008 =	运行/文件/字符串/其他。
-	c_Lang009 =	如果报表
+	c_Lang009 =	If语句
 	c_Lang010 =	变量
-	c_Lang011 =	功能
-	c_Lang012 =	Internet Explorer的
+	c_Lang011 =	函数
+	c_Lang012 =	IE浏览器
 	c_Lang013 =	COM接口
-	c_Lang014 =	选择应用程序（高级）
-	c_Lang015 =	信息
-	c_Lang016 =	控制
-	c_Lang017 =	延迟
+	c_Lang014 =	选择程序（高级）
+	c_Lang015 =	消息
+	c_Lang016 =	控件
+	c_Lang017 =	延时
 	c_Lang018 =	毫秒
 	c_Lang019 =	秒
-	c_Lang020 =	行
+	c_Lang020 =	确定
 	c_Lang021 =	取消
 	c_Lang022 =	关闭
 	c_Lang023 =	复制
 	c_Lang024 =	删除
-	c_Lang025 =	（使用`%的变量，例如：`%Clipboard`%）
-	c_Lang026 =	行动
+	c_Lang025 =	（使用`%表示变量，例如`%Clipboard`%）
+	c_Lang026 =	操作
 	c_Lang027 =	点击
 	c_Lang028 =	移动
-	c_Lang029 =	移动和单击
-	c_Lang030 =	轮向上
-	c_Lang031 =	车轮下
+	c_Lang029 =	移动和点击
+	c_Lang030 =	向上滚动
+	c_Lang031 =	向下滚动
 	c_Lang032 =	拖放
 	c_Lang033 =	坐标
 	c_Lang034 =	搜索
-	c_Lang035 =	子
-	c_Lang036 =	相对的
-	c_Lang037 =	钮
+	c_Lang035 =	子命令
+	c_Lang036 =	相对
+	c_Lang037 =	按钮
 	c_Lang038 =	左
-	c_Lang039 =	权
+	c_Lang039 =	右
 	c_Lang040 =	中间
 	c_Lang041 =	X1
 	c_Lang042 =	X2
-	c_Lang043 =	保留/释放
-	c_Lang044 =	点击数
-	c_Lang045 =	普通文本（RAW）
-	c_Lang046 =	文本的命令
+	c_Lang043 =	按住/释放
+	c_Lang044 =	点击次数
+	c_Lang045 =	普通文本（Raw）
+	c_Lang046 =	含命令文本
 	c_Lang047 =	从剪贴板粘贴
-	c_Lang048 =	粘贴的控制
+	c_Lang048 =	粘贴控制
 	c_Lang049 =	设置文本
-	c_Lang050 =	新增暂停
+	c_Lang050 =	增加暂停
 	c_Lang051 =	消息框
 	c_Lang052 =	等待按键
 	c_Lang053 =	等待超时
-	c_Lang054 =	（毫秒）0 =无限
+	c_Lang054 =	（毫秒）0 =无限期
 	c_Lang055 =	命令
 	c_Lang056 =	值
 	c_Lang057 =	输出变量
 	c_Lang058 =	位置
 	c_Lang059 =	大小
-	c_Lang060 =	4个变量将被创建该前缀和结束的X，Y，W，H
+	c_Lang060 =	将创建含此前缀且以X、Y、W、H结尾的4个变量。
 	c_Lang061 =	开始
 	c_Lang062 =	结束
-	c_Lang063 =	图像
+	c_Lang063 =	图片
 	c_Lang064 =	像素
-	c_Lang065 =	请截图
-	c_Lang066 =	关键的等待
-	c_Lang067 =	如果发现
-	c_Lang068 =	如果没有找到/错误
-	c_Lang069 =	COORDS存储`%FoundX`%/`%FoundY`%。
+	c_Lang065 =	截图
+	c_Lang066 =	等待按键
+	c_Lang067 =	如果找到
+	c_Lang068 =	如果未找到或出错
+	c_Lang069 =	坐标保存在`%FoundX`%/`%FoundY`%。
 	c_Lang070 =	坐标
-	c_Lang071 =	变化
+	c_Lang071 =	变体
 	c_Lang072 =	预览
 	c_Lang073 =	循环
-	c_Lang074 =	*不工作在手动播放。
-	c_Lang075 =	打破
+	c_Lang074 =	* 无法手动回放。
+	c_Lang075 =	中断
 	c_Lang076 =	继续
-	c_Lang077 =	转到：
-	c_Lang078 =	跳转到标签
+	c_Lang077 =	转到
+	c_Lang078 =	转到标签
 	c_Lang079 =	标签
 	c_Lang080 =	添加标签
 	c_Lang081 =	字符串（InputVar）
 	c_Lang082 =	变量
-	c_Lang083 =	其他
+	c_Lang083 =	Else
 	c_Lang084 =	变量赋值
 	c_Lang085 =	内容
-	c_Lang086 =	操作者
-	c_Lang087 =	表达
+	c_Lang086 =	运算符
+	c_Lang087 =	表达式
 	c_Lang088 =	复位
-	c_Lang089 =	功能名称
-	c_Lang090 =	以逗号分隔的参数（不包括括号）
-	c_Lang091 =	（使用“％”作为变量。 文字逗号必须转义[ ```, ]）。
-	c_Lang092 =	页面元素/指数
-	c_Lang093 =	集
-	c_Lang094 =	得到
+	c_Lang089 =	函数名
+	c_Lang090 =	逗号分隔的参数（不含括号）
+	c_Lang091 =	（使用`%表示变量。原义逗号必须转义[ ```, ]）
+	c_Lang092 =	页面元素/索引
+	c_Lang093 =	Set
+	c_Lang094 =	Get
 	c_Lang095 =	方法
-	c_Lang096 =	财产
+	c_Lang096 =	属性
 	c_Lang097 =	等待页面加载。
 	c_Lang098 =	CLSID
-	c_Lang099 =	连
-	c_Lang100 =	处理
+	c_Lang099 =	连接
+	c_Lang100 =	句柄
 	c_Lang101 =	COM脚本
-	c_Lang102 =	消息编号
-	c_Lang103 =	特殊键
-	c_Lang104 =	浏览器的后退
-	c_Lang105 =	浏览器前进
-	c_Lang106 =	浏览器刷新
-	c_Lang107 =	浏览器停止
-	c_Lang108 =	浏览器搜索
-	c_Lang109 =	浏览器收藏
-	c_Lang110 =	浏览器首页
-	c_Lang111 =	媒体
+	c_Lang102 =	消息号
+	c_Lang103 =	特殊按键
+	c_Lang104 =	后退
+	c_Lang105 =	前进
+	c_Lang106 =	刷新
+	c_Lang107 =	停止
+	c_Lang108 =	搜索
+	c_Lang109 =	收藏夹
+	c_Lang110 =	主页
+	c_Lang111 =	打开默认的媒体播放器
 	c_Lang112 =	静音
-	c_Lang113 =	音量
-	c_Lang114 =	降低音量
+	c_Lang113 =	增大音量
+	c_Lang114 =	减小音量
 	c_Lang115 =	播放/暂停
-	c_Lang116 =	下一个曲目
-	c_Lang117 =	上一首曲目
+	c_Lang116 =	下一首
+	c_Lang117 =	上一首
 	c_Lang118 =	停止
-	c_Lang119 =	电子邮件
-	c_Lang120 =	应用程序1
-	c_Lang121 =	应用2
+	c_Lang119 =	打开默认的电子邮件程序
+	c_Lang120 =	打开我的电脑
+	c_Lang121 =	打开计算器
 	c_Lang122 =	扫描码
 	c_Lang123 =	加
-	c_Lang124 =	关键的历史
-	c_Lang125 =	键入一个扫描码...
-	c_Lang126 =	代码添加到虚拟键列表！
-	c_Lang127 =	键入一个名称为变量
-	c_Lang128 =	从外部文件的使用功能
-	c_Lang130 =	重复，直到
+	c_Lang124 =	按键历史
+	c_Lang125 =	输入扫描码...
+	c_Lang126 =	添加到虚拟按键列表的代码！
+	c_Lang127 =	请输入变量名
+	c_Lang128 =	使用外部文件的函数
+	c_Lang130 =	一直重复直到
 	c_Lang131 =	应用
 	c_Lang132 =	循环
 	c_Lang133 =	文件
 	c_Lang134 =	解析
-	c_Lang135 =	阅读
-	c_Lang136 =	注册处
-	c_Lang137 =	文件模式：
-	c_Lang138 =	文件夹？
+	c_Lang135 =	读取
+	c_Lang136 =	注册表
+	c_Lang137 =	文件名模式：
+	c_Lang138 =	含文件夹？
 	c_Lang139 =	递归？
 	c_Lang140 =	输入变量：
 	c_Lang141 =	分隔符：
-	c_Lang142 =	省略字符：
+	c_Lang142 =	忽略字符：
 	c_Lang143 =	输入文件：
-	c_Lang144 =	关键：
-	c_Lang145 =	根密钥：
-	c_Lang146 =	子项吗？
+	c_Lang144 =	键：
+	c_Lang145 =	根键：
+	c_Lang146 =	含子键？
 	c_Lang147 =	图标
-	c_Lang148 =	没有图标
+	c_Lang148 =	无图标
 	c_Lang149 =	错误
-	c_Lang150 =	问题
-	c_Lang151 =	感叹
+	c_Lang150 =	问号
+	c_Lang151 =	惊叹号
 	c_Lang152 =	信息
-	c_Lang153 =	总在最前
+	c_Lang153 =	总是在顶部
 	c_Lang154 =	分钟
-	c_Lang155 =	运行的Scriptlet
+	c_Lang155 =	运行小脚本
 	c_Lang156 =	脚本
 	c_Lang157 =	脚本语言
-	c_Lang158 =	不兼容64位！
+	c_Lang158 =	不适用于64位！
 	c_Lang159 =	搜索选项
-	c_Lang160 =	透明
-	c_Lang161 =	规模
-	c_Lang162 =	加上“If语句”
+	c_Lang160 =	透明度
+	c_Lang161 =	尺寸
+	c_Lang162 =	添加“If语句”
 	c_Lang163 =	发送模式
 	c_Lang164 =	等于
 	c_Lang165 =	包含
-	c_Lang166 =	大
-	c_Lang167 =	少
+	c_Lang166 =	大于
+	c_Lang167 =	小于
 	c_Lang168 =	是
-	c_Lang169 =	没有
-	c_Lang170 =	行
+	c_Lang169 =	否
+	c_Lang170 =	确定
 	c_Lang171 =	取消
-	c_Lang172 =	退出
+	c_Lang172 =	终止
 	c_Lang173 =	忽略
 	c_Lang174 =	重试
 	c_Lang175 =	继续
-	c_Lang176 =	再试一次
-	c_Lang177 =	超时
-	c_Lang178 =	设置按键延迟
-	c_Lang179 =	关键延迟
-	c_Lang180 =	随机延迟
-	c_Lang181 =	最低限度
-	c_Lang182 =	最大
-	c_Lang183 =	此命令禁用随机延迟
+	c_Lang176 =	再次重试
+	c_Lang177 =	超时 
+	c_Lang178 =	设置按键延时
+	c_Lang179 =	按键延时
+	c_Lang180 =	随机延时
+	c_Lang181 =	最小值
+	c_Lang182 =	最大值
+	c_Lang183 =	此命令禁用随机延时
 	c_Lang184 =	从列表中选择
 	c_Lang185 =	按钮
-	c_Lang186 =	第一
-	c_Lang187 =	第二
+	c_Lang186 =	首先
+	c_Lang187 =	其次
 	c_Lang188 =	第三
 	c_Lang189 =	标题
-	c_Lang190 =	如果激活窗口
-	c_Lang191 =	如果窗口不活跃
+	c_Lang190 =	如果窗口处于活动状态
+	c_Lang191 =	如果窗口不处于活动状态
 	c_Lang192 =	如果窗口存在
 	c_Lang193 =	如果窗口不存在
 	c_Lang194 =	如果文件存在
 	c_Lang195 =	如果文件不存在
 	c_Lang196 =	如果剪贴板文本
 	c_Lang197 =	如果循环索引
-	c_Lang198 =	如果发现图像/像素
-	c_Lang199 =	如果没有找到图像/像素
+	c_Lang198 =	如果找到图片/像素
+	c_Lang199 =	如果没有找到图片/像素
 	c_Lang200 =	如果字符串包含
 	c_Lang201 =	如果字符串不包含
 	c_Lang202 =	如果消息框
 	c_Lang203 =	比较变量
 	c_Lang204 =	计算表达式
-	c_Lang205 =	地区
+	c_Lang205 =	区域
 		
 ; Other Windows		
-	t_Lang001 =	导出到华民航空
+	t_Lang001 =	导出为AutoHotkey
 	t_Lang002 =	宏
 	t_Lang003 =	循环
-	t_Lang004 =	0 =无限
-	t_Lang005 =	使用Hotstring
-	t_Lang006 =	阻止鼠标
+	t_Lang004 =	0 = 无限期
+	t_Lang005 =	使用热字串
+	t_Lang006 =	禁用鼠标
 	t_Lang007 =	所有
-	t_Lang008 =	无
-	t_Lang009 =	上下文相关的热键
-	t_Lang010 =	导出到
+	t_Lang008 =	没有
+	t_Lang009 =	上下文热键
+	t_Lang010 =	导出为
 	t_Lang011 =	缩进
-	t_Lang012 =	包括PMC代码
-	t_Lang013 =	不要连接发送命令
+	t_Lang012 =	包含PMC代码
+	t_Lang013 =	不要连接Send命令
 	t_Lang014 =	刷新
 	t_Lang015 =	自动刷新
 	t_Lang016 =	总在最前
 	t_Lang017 =	设置
-	t_Lang018 =	一般
+	t_Lang018 =	常规
 	t_Lang019 =	开始/停止录制
 	t_Lang020 =	录制新宏
-	t_Lang021 =	击键
-	t_Lang022 =	记录
-	t_Lang023 =	抓住国家重点（上/下）
+	t_Lang021 =	键击
+	t_Lang022 =	录制中
+	t_Lang023 =	捕获按键状态（按下/弹起）
 	t_Lang024 =	鼠标点击
 	t_Lang025 =	鼠标滚轮
 	t_Lang026 =	鼠标移动
-	t_Lang027 =	的时间间隔
-	t_Lang028 =	最小延迟
+	t_Lang027 =	计时间隔
+	t_Lang028 =	最小延时
 	t_Lang029 =	窗口类
 	t_Lang030 =	窗口标题
-	t_Lang031 =	记录至于ControlSend
-	t_Lang032 =	记录ControlClick
-	t_Lang033 =	相对记录键
+	t_Lang031 =	录制ControlSend
+	t_Lang032 =	录制ControlClick
+	t_Lang033 =	相对录制键
 	t_Lang034 =	切换
-	t_Lang035 =	播放
+	t_Lang035 =	回放
 	t_Lang036 =	加快
-	t_Lang037 =	减缓
-	t_Lang038 =	返回后小鼠播放
+	t_Lang037 =	减慢
+	t_Lang038 =	回放后恢复鼠标
 	t_Lang039 =	鼠标坐标
 	t_Lang040 =	窗口
 	t_Lang041 =	屏幕
-	t_Lang042 =	默认的鼠标延迟
-	t_Lang043 =	默认窗口延迟
-	t_Lang044 =	最大每微距历史
-	t_Lang045 =	“清除历史记录”
+	t_Lang042 =	默认鼠标延时
+	t_Lang043 =	默认窗口延时
+	t_Lang044 =	每个宏最大历史
+	t_Lang045 =	清楚历史
 	t_Lang046 =	截图
 	t_Lang047 =	绘制按钮
-	t_Lang048 =	线宽度（px）
-	t_Lang049 =	捕捉释放
-	t_Lang050 =	按Enter键来捕捉
+	t_Lang048 =	行宽（Px）
+	t_Lang049 =	释放时捕获
+	t_Lang050 =	按回车捕获
 	t_Lang051 =	截图目录
 	t_Lang052 =	换行
 	t_Lang053 =	热键
-	t_Lang054 =	设置为默认热键
-	t_Lang055 =	禁用Windows快捷方式
-	t_Lang056 =	重置列大小
-	t_Lang057 =	默认的宏文件
+	t_Lang054 =	设为默认热键
+	t_Lang055 =	禁用窗口快捷方式
+	t_Lang056 =	复位列宽
+	t_Lang057 =	默认宏文件
 	t_Lang058 =	标准库文件
-	t_Lang059 =	默认情况下，使用Expression变量赋值
-	t_Lang060 =	显示颜色“和”帮助“商标循环和报表
-	t_Lang061 =	（单击索引列标题来启用/禁用）
+	t_Lang059 =	默认使用表达式赋值变量
+	t_Lang060 =	为循环和语句显示颜色和帮助标记
+	t_Lang061 =	（点击索引列标题以启用/禁用）
 	t_Lang062 =	虚拟键
 	t_Lang063 =	默认
 	t_Lang064 =	编辑注释
-	t_Lang065 =	评论
-	t_Lang066 =	搜索栏
+	t_Lang065 =	注释
+	t_Lang066 =	搜索列
 	t_Lang067 =	查找/替换
-	t_Lang068 =	发现
-	t_Lang069 =	区分大小写
-	t_Lang070 =	更换
-	t_Lang071 =	找到
-	t_Lang072 =	更换
-	t_Lang073 =	选定的行
-	t_Lang074 =	所有行
-	t_Lang075 =	所有宏
+	t_Lang068 =	查找(&F)
+	t_Lang069 =	区分大小写(&M)
+	t_Lang070 =	替换(&R)
+	t_Lang071 =	已找到
+	t_Lang072 =	已替换
+	t_Lang073 =	选择行(&S)
+	t_Lang074 =	所有行(&A)
+	t_Lang075 =	所有宏(&L)
 	t_Lang076 =	关于
-	t_Lang077 =	正则表达式
-	t_Lang078 =	播放一次
-	t_Lang079 =	发挥每一个X（米利秒）
+	t_Lang077 =	正则表达式(&G)
+	t_Lang078 =	回放一次
+	t_Lang079 =	每X（毫）秒时回放
 	t_Lang080 =	定时器
 	t_Lang081 =	暂停
-	t_Lang082 =	报表
-	t_Lang083 =	显示缩进循环和报表
-	t_Lang084 =	（双击操作“列头启用/禁用）
-	t_Lang085 =	显示控制栏上启动
-	t_Lang086 =	搜索功能。请稍候...
-	t_Lang087 =	包括外部文件
-	t_Lang088 =	创建EXE文件
-	t_Lang089 =	允许运行多个实例
+	t_Lang082 =	语句
+	t_Lang083 =	对循环和语句显示缩进
+	t_Lang084 =	（双击操作列标题以启用/禁用）
+	t_Lang085 =	在启动时显示控制栏
+	t_Lang086 =	搜索函数。请等待…
+	t_Lang087 =	包含外部文件
+	t_Lang088 =	创建可执行文件
+	t_Lang089 =	允许多个实例
 	t_Lang090 =	默认值
-	t_Lang091 =	允许拖行
-	t_Lang092 =	整个单元格内容
-	t_Lang093 =	标准的INI格式
-	t_Lang094 =	名称=值
-	t_Lang095 =	输入每行1个变量。您还可以添加[第]。
+	t_Lang091 =	允许拖动行
+	t_Lang092 =	整个单元格内容(&E)
+	t_Lang093 =	标准INI格式
+	t_Lang094 =	Name = Value
+	t_Lang095 =	每行输入一个变量。您还可以添加[Sections]。
 	t_Lang096 =	用户全局变量
-	t_Lang097 =	按下操纵杆上的按钮
+	t_Lang097 =	按下操纵杆按钮
 	t_Lang098 =	退格键清除
-	t_Lang099 =	钮
+	t_Lang099 =	按钮
 	t_Lang100 =	显示气球提示
 	t_Lang101 =	速度
 	t_Lang102 =	慢
@@ -568,67 +568,67 @@
 	t_Lang104 =	显示/隐藏标题栏
 	t_Lang105 =	显示/隐藏主窗口
 	t_Lang106 =	立即运行
-	t_Lang107 =	随机延迟
+	t_Lang107 =	随机延时 
 	t_Lang108 =	正常
-	t_Lang109 =	下
-	t_Lang110 =	上
-	t_Lang111 =	插入击键
+	t_Lang109 =	减小
+	t_Lang110 =	增大
+	t_Lang111 =	插入键击
 	t_Lang112 =	播放/暂停
 	t_Lang113 =	停止
-	t_Lang114 =	播放选项
+	t_Lang114 =	回放选项
 	t_Lang115 =	开始/停止录制
 	t_Lang116 =	录制新宏
 	t_Lang117 =	录制选项
 	t_Lang118 =	清除列表
 	t_Lang119 =	显示进度条
 	t_Lang120 =	加快
-	t_Lang121 =	减缓
+	t_Lang121 =	减慢
 	t_Lang122 =	显示/隐藏标题栏
 	t_Lang123 =	显示/隐藏主窗口
-	t_Lang124 =	码头
-	t_Lang125 =	取消停靠
-	t_Lang126 =	开放
+	t_Lang124 =	取消停靠
+	t_Lang125 =	停靠
+	t_Lang126 =	打开
 	t_Lang127 =	保存
-	t_Lang128 =	切
+	t_Lang128 =	剪切
 	t_Lang129 =	复制
-	t_Lang130 =	贴
+	t_Lang130 =	粘贴
 	t_Lang131 =	全选
 	t_Lang132 =	删除
 	t_Lang133 =	键盘
 	t_Lang134 =	鼠标
-	t_Lang135 =	他人
-	t_Lang136 =	亮点行
-	t_Lang137 =	默认的脚本编辑器
-	t_Lang138 =	编辑脚本（Ctrl+Shift+E）
+	t_Lang135 =	其他
+	t_Lang136 =	高亮行
+	t_Lang137 =	默认脚本编辑器
+	t_Lang138 =	编辑脚本(Ctrl+Shift+E)
 	t_Lang139 =	选择
-	t_Lang140 =	通过列
+	t_Lang140 =	按列
 	t_Lang141 =	所有列
-	t_Lang142 =	删除主题从“工具栏”（需要重新启动）
-	t_Lang143 =	自动隐藏控件工具栏
-	t_Lang144 =	单击并拖动来改变秩序。双击进行编辑。
+	t_Lang142 =	移除工具栏主题（需重启）
+	t_Lang143 =	自动隐藏控制工具栏
+	t_Lang144 =	点击并拖动来改变次序。双击进行编辑。
 	t_Lang145 =	编辑宏
-	t_Lang146 =	线
+	t_Lang146 =	行内
 	t_Lang147 =	宏
-	t_Lang148 =	主窗口的关闭按钮行动
-	t_Lang149 =	关闭应用程序
+	t_Lang148 =	主窗口关闭按钮的操作
+	t_Lang149 =	关闭程序
 	t_Lang150 =	最小化到托盘
-	t_Lang151 =	关闭宏时显示确认
+	t_Lang151 =	关闭宏时需要确认
 	t_Lang152 =	自动创建备份
-	t_Lang153 =	在Windows任务调度程序创建一个计划任务。
-	t_Lang154 =	第一次运行的时间
+	t_Lang153 =	在Windows任务计划中创建计划任务。
+	t_Lang154 =	首次运行的时间
 	t_Lang155 =	计划类型
-	t_Lang156 =	一旦|||一周|月刊|开始|登录|空闲
+	t_Lang156 =	一次||每天|每周|每月|启动时|登录时|空闲时
 	t_Lang157 =	目标PMC文件
-	t_Lang158 =	目标AHK文件
-	t_Lang159 =	该脚本将被保存在当前目录下覆盖！
-	t_Lang160 =	打开任务计划程序
+	t_Lang158 =	目前AHK文件
+	t_Lang159 =	该脚本将被保存或覆盖到当前目录！
+	t_Lang160 =	打开任务计划
 	t_Lang161 =	任务创建成功！
-	t_Lang162 =	发生错误。无法创建的任务。
-	t_Lang163 =	调度
-	t_Lang164 =	附表宏
+	t_Lang162 =	发生了错误。无法创建任务。
+	t_Lang163 =	计划
+	t_Lang164 =	计划宏
 	t_Lang165 =	运行宏
 	t_Lang166 =	文件
-	t_Lang167 =	串
+	t_Lang167 =	字符串
 	t_Lang168 =	获取信息
 	t_Lang169 =	等待
 	t_Lang170 =	窗口组
@@ -636,676 +636,676 @@
 	t_Lang172 =	注册表和INI
 	t_Lang173 =	声音
 	t_Lang174 =	变量
-	t_Lang175 =	杂项。
+	t_Lang175 =	杂项
 		
 ; Messages & Dialogs		
 	d_Lang001 =	打开
-	d_Lang002 =	你想保存当前的宏？
+	d_Lang002 =	保存当前宏吗？
 	d_Lang003 =	默认设置
 	d_Lang004 =	Macro Creator文件
 	d_Lang005 =	保存宏
 	d_Lang006 =	无法保存/覆盖文件
 	d_Lang007 =	错误
-	d_Lang008 =	错误：没有宏的选择。`n在列表中，请在至少一个宏。
-	d_Lang009 =	错误：没有热键选择。
-	d_Lang010 =	错误：无效的地址。`n选定的地址或文件名是无效的。
+	d_Lang008 =	错误：未选择宏。`n请至少选中列表中的一个宏。
+	d_Lang009 =	错误：未选择热键。
+	d_Lang010 =	错误：地址无效。`n选择的地址或文件名是无效的。
 	d_Lang011 =	警告
-	d_Lang012 =	控制选择。`n要继续吗？
+	d_Lang012 =	未选择控件。`n继续吗？
 	d_Lang013 =	导出脚本
-	d_Lang014 =	脚本导出
-	d_Lang015 =	该文件被成功地出口了！
-	d_Lang016 =	点击“获取”，以纪念位置。
+	d_Lang014 =	要导出的脚本
+	d_Lang015 =	文件已成功导出！
+	d_Lang016 =	点击“获取”以标记位置。
 	d_Lang017 =	
 	(LTrim	
 		- 选择窗口。
-		- 到所需位置。
-		- 按右边的按钮。
+		- 指向期望的位置。
+		- 按下右键。
 	)	
 	d_Lang018 =	像素颜色
 	d_Lang019 =	清除列表
 	d_Lang020 =	关闭宏？
-	d_Lang021 =	下
-	d_Lang022 =	前
-	d_Lang023 =	信息
+	d_Lang021 =	下一个
+	d_Lang022 =	前一个
+	d_Lang023 =	消息
 	d_Lang024 =	加载默认设置？
-	d_Lang025 =	宏（S）激活。`n使用热键来播放。
+	d_Lang025 =	宏已激活。`n请用热键回放。
 	d_Lang026 =	开始/停止录制
 	d_Lang027 =	录制已停止
-	d_Lang028 =	录制中...
+	d_Lang028 =	录制中…
 	d_Lang029 =	停止
-	d_Lang030 =	开始新纪录
-	d_Lang031 =	是不是一个有效的功能名称。
-	d_Lang032 =	错误：重复的热键。
+	d_Lang030 =	开始新录制
+	d_Lang031 =	不是有效的函数名。
+	d_Lang032 =	错误：热键重复。
 	d_Lang033 =	激活宏
 	d_Lang034 =	
 	(LTrim	
-		- 选择区域单击并拖动与 %DrawButton%。
-		- 单击并拖动选择控制区释放。
-		- 在一个地区，而控制的窗口中选择“区域”。
+		- 通过%DrawButton%单击并拖动来选择区域。
+		- 单击并释放而不拖动来选择控件区域。
+		- 在控件外区域点击来选择窗口区域。
 	)	
-	d_Lang035 =	要继续吗？
-	d_Lang036 =	图片/像素在
-	d_Lang037 =	图片/像素没有找到。
-	d_Lang038 =	按“确定”继续。
+	d_Lang035 =	继续吗？
+	d_Lang036 =	找到的图片/像素处于
+	d_Lang037 =	图片/像素未找到。
+	d_Lang038 =	点击确定继续。
 	d_Lang039 =	超时！
 	d_Lang040 =	
 	(LTrim	
-		此功能要求GDI+库。
-		单击“确定”，进入下载页。
+		此功能需要GDI+库。
+		请点击确定打开下载页。
 	)	
-	d_Lang041 =	变量名称中包含非法字符。
+	d_Lang041 =	此变量名包含非法字符。
 	d_Lang042 =	
 	(LTrim	
 		运算符无效。
-		接受下列运算符：
-		=，==，<>，=，>，<，> =，<=
+		接受下列运算符。
+		=、==、<>、!=、>、<、>=、<=
 		
-		例子：
+		例如：
 		MyVar > 1
 		MyVar = `%A_DDDD`%
 		Clipboard == `%MyVar`%
 	)	
-	d_Lang043 =	或使用该控件工具栏
+	d_Lang043 =	或使用控制工具栏。
 	d_Lang044 =	
 	(LTrim	
-		此功能需要eval（）函数。
-		单击“确定”，进入下载页。
+		此功能需要Eval()函数。
+		请点击确定打开下载页。
 	)	
-	d_Lang045 =	请选择一个Internet Explorer窗口！
+	d_Lang045 =	请选择IE窗口！
 	d_Lang046 =	连接成功！
-	d_Lang047 =	无法连接！
-	d_Lang048 =	将一个句柄和一个CLSID。
-	d_Lang049 =	无效的标签名称。
-	d_Lang050 =	重复的标签。
-	d_Lang051 =	要玩宏，按下相应的热键（自动/手动）。
-	d_Lang052 =	要开始录制按下“记录”的热键。
+	d_Lang047 =	连接失败！
+	d_Lang048 =	插入句柄和CLSID。
+	d_Lang049 =	标签名无效。
+	d_Lang050 =	标签重复。
+	d_Lang051 =	要回放宏请按下相应的热键（自动/手动）。
+	d_Lang052 =	要开始录制请按下录制热键。
 	d_Lang053 =	不要再次显示此消息。
-	d_Lang054 =	请选择一个Excel窗口！
-	d_Lang055 =	请选择一个AutoHotkey脚本文件（AHK）和输入函数名。
+	d_Lang054 =	请选择Excel窗口！
+	d_Lang055 =	请选择AutoHotkey脚本文件（.ahk）并输入函数名。
 	d_Lang056 =	
 	(LTrim	
-		此功能需要安装AutoHotkey的。
-		单击“确定”，进入下载页。
+		此功能需要安装好的AutoHotkey。
+		请点击确定打开下载页。
 	)	
 	d_Lang057 =	
 	(LTrim	
-		Ctrl+箭头键将选定的区域。
-		Shift+箭头键来调整所选区域。
-		Enter键完成。
+		- 按下Ctrl+箭头键来移动选区。
+		- 按下Shift+箭头键来调整选区大小。
+		- 按回车结束。
 	)	
 	d_Lang058 =	
 	(LTrim	
-		中才能正常工作，的某些功能需要admnistrator privilages，。
-		建议重新启动应用程序以管理员身份。
+		某些功能需要管理员权限才能正常执行。
+		建议以管理员权限重新打开程序。
 	)	
 	d_Lang059 =	
 	(LTrim	
 		此命令不支持表达式或函数。
-		请指定一个变量，并用它在参数。
+		请赋值变量并将其用于参数中。
 	)	
-	d_Lang060 =	新版本
+	d_Lang060 =	有新版本
 	d_Lang061 =	
 	(LTrim	
-		你想现在就下载吗？
+		现在下载吗？
 		
-		要禁用自动检查选择帮助>检查启动。 > 检查启动
+		要禁用自动检查请取消选择帮助>启动时检查
 	)	
 		
-	d_Lang062 =	您已经有最新的版本。
-	d_Lang063 =	检查时发生错误。
-	d_Lang064 =	COM对象错误
-	d_Lang065 =	排
-	d_Lang066 =	特别是
-	d_Lang067 =	显示这个窗口启动
-	d_Lang068 =	温馨提示：
+	d_Lang062 =	您使用的已经是最新版本。
+	d_Lang063 =	检查时出错。
+	d_Lang064 =	COM对象错误出现在
+	d_Lang065 =	行
+	d_Lang066 =	具体地：
+	d_Lang067 =	启动时显示此窗口
+	d_Lang068 =	提示：
 	d_Lang069 =	
 	(LTrim	
-		Pulover's Macro Creator的发展已经进入了很多的时间和精力。如果你觉得它有用，请考虑捐赠升值。
+		Pulover's Macro Creator的开发花费了大量时间和精力。如果您觉得它有用并感激，请考虑捐赠。
 		
-		捐赠与否，将不会有差异的特点和功能。
+		不过捐赠与否不会影响程序功能的完整性。
 	)	
-	d_Lang070 =	捐赠...
-	d_Lang071 =	不用了，谢谢
+	d_Lang070 =	捐赠…
+	d_Lang071 =	不了，谢谢
 	d_Lang072 =	支持开源软件
-	d_Lang073 =	错误：无效的热键选择。
+	d_Lang073 =	错误：选择的热键无效。
 	d_Lang074 =	查找命令或函数
 	d_Lang075 =	欢迎来到Pulover's Macro Creator
-	d_Lang076 =	请选择您首选的布局
-	d_Lang077 =	紧凑
+	d_Lang076 =	请选择您喜欢的布局
+	d_Lang077 =	简洁
 	d_Lang078 =	默认
 	d_Lang079 =	在启动时检查更新。
-	d_Lang080 =	您可以更改此选项 > 设置 > 常规。
-	d_Lang081 =	在“视图”菜单中，您可以更改和自定义布局。
-	d_Lang082 =	该文件未找到！
-	d_Lang083 =	备份文件已经被发现。你想打开它？
-	d_Lang084 =	调度任务之前，请保存更改。
+	d_Lang080 =	您可以在选项>设置>常规中改变此设置。
+	d_Lang081 =	您可以在视图菜单中改变或自定义布局。
+	d_Lang082 =	文件未找到！
+	d_Lang083 =	找到了备份文件。打开它吗？
+	d_Lang084 =	请在设置计划任务前保存更改。
 		
 ; Start-up Tips		
 	Start_Tips =	
 	(LTrim	
-		您可以创建宏命令按钮在主窗口中，或者使用记录，复制你的行动。转到“选项”>“设置”>“录制到选择什么样的输入将被记录。
-		要使用录音机，快速任务选项 >设置 >录音，并勾选“清除列表”选项。然后在主窗口中单击“录制”按钮，使用F10键来清除当前的宏，并开始一个新的相同的热键。 您也可以勾选“始终活跃在主窗口中保持激活录制和播放热键”选项。
-		要获得一个特定命令的帮助权的任意位置单击命令窗口中显示链接到AutoHotkey的在线帮助。
-		检查“拍摄键”选项，从主窗口直接进入到您的宏按键和组合。
-		回车键和组合热键框的底部，然后按下“插入”按钮，将它们添加到选择行。
-		如果没有选定行的编辑按钮适用于列表中的所有行。
-		您可以指定自己的变量，在变量窗口（“插入”> if语句/变量/函数）。若要使用这些内部命令百分号将变量名，例如： `%MyVar`%.
-		在顶部的“循环”计数器设置选定的宏环路的总数。
-		您可以编辑通过双击它，或通过选择它并点击“编辑”按钮，在底部的一排。
-		您可以编辑多个选定的行使用的选项在编辑栏底部。
-		中选择一个或多个行，在它们的顶部添加新的命令。
-		您可以点击和拖动移动行。
-		双击托盘图标激活的热键或停止播放/录音。点击中间的按钮在播放或录音暂停。
-		您可以导出宏工作的AutoHotkey脚本或独立可执行文件导出窗口。
-		录制和播放鼠标使用绝对坐标去选项 >“设置”>“默认设置鼠标坐标屏幕。
-		您可以打开，复制，移动或删除文件和文件夹使用的命令插入 >运行/文件/字符串/ MISC。
-		记录下来状态选项 >设置 >记录每个键去，并检查“拍摄键状态（向下/向上）”选项。
-		您可以使用热键加快或减慢播放。转到选项 >设置 >播放设置键和速度。
-		调整拍摄面积使用“截图”工具前往并选择选项 >设置 >截图“按Enter捕捉”。在绘制矩形使用箭头键移动控制选择和换档箭头键来调整。
-		快速选择：选择任何行并单击一个列标题，选择从该列中的单元格的文本基础上的类似的行。
-		运行/文件/字符串/ MISC。窗口有许多其他有用的命令，如关机和UrlDownloadToFile。
-		功能“窗口中使用”截图“功能（”插入“> if语句/变量/函数），使部分的屏幕截图。第一个参数是一个png扩展目标文件的路径和名称。第二个参数是的管分隔的坐标在屏幕上，如100|200| 50 |100（X|Y |宽度|高度）。
-		点击的指数列标题上，打开/关闭帮助循环和报表的商标和颜色。双击“操作”列头转开/关循环和报表的压痕。
-		您可以调试您的宏使用手册热键和“宏”菜单中的播放选项。您还可以禁用行动，通过取消他们在宏列表。
-		为了让你的宏只在某个窗口的工作去宏 >上下文相关的热键。
-		你可以设置你自己的全局变量，要加载的启动和出口。转到选项 >设置 >用户全局变量添加它们。
-		您可以运行先进的功能，如SUBSTR和RegExReplace从“功能”窗口（“插入”> if语句/变量/函数）。或来自外部的AutoHotkey脚本运行自己的职能。
+		您可以用主窗口中的命令按钮创建宏或使用录制器录制您的操作。打开选项>设置>录制来选择录制哪些。
+		要用录制器快速创建任务请打开选项>设置>录制并选中“清除列表”选项。接着点击主窗口中的录制按钮并用F10清除当前宏，然后用相同的热键开始新录制。您还可以选中主窗口中的“总是活动”选项以让录制和回放热键保持活动。
+		要获取某个命令的帮助，请在命令窗口任意位置点击右键以显示到AutoHotkey在线帮助的链接。
+		选中“捕获键”选项后直接输入按键组合到主窗口的宏。
+		在底部热键框中输入按键组合后按Insert按钮把它们添加到选择行。
+		如果没有已选择的行，则编辑按钮应用于列表中所有行。
+		您可以在变量窗口中赋值自己的变量（插入>If语句/变量/函数）。要在命令中使用它们，请把它们括在百分号中，例如：`%MyVar`%。
+		在顶部的循环次数设置了已选择宏的总循环数。
+		您可以双击某行或选择此行后点击编辑底部的编辑按钮进行编辑。
+		您可以使用底部编辑栏选项编辑多个选择行。
+		选择一行或多行后可在它们的上面添加新命令。
+		使用拖放可移动行。
+		双击托盘图标以激活热键或停止回放/录制。在回放或录制时用中键点击此图标则暂停。
+		您可以在导出窗口把宏导出为工作的AutoHotkey脚本或单独的可执行文件。
+		要使用绝对坐标录制和回放鼠标操作请打开选项>设置>默认值，然后设置鼠标坐标模式为Screen。
+		您可以使用插入>运行/文件/字符串/其他来打开、复制、移动或删除文件和文件夹。
+		要录制按键的按下和弹起状态请打开选项>设置>录制并选中“捕获按键状态（按下/弹起）”选项。
+		您可用热键加快或减慢回放速度。请打开选项>设置>回放来设置按键和速度。
+		要调整截图时的捕获区域请打开选项>设置>截图并选择“按回车捕获”。画出矩形区域后使用Control+方向键移动选区或用Shift+方向键调整大小。
+		快速选择：选择任意行并点击列标题来根据此列文本选择类似行。
+		运行/文件/字符串/其他窗口有许多其他有用的命令，例如Shutdown和UrlDownloadToFile。
+		使用功能窗口中的截图功能（插入>If语句/变量/函数）来截图部分屏幕区域。首个参数为目标文件的路径和扩展名为png的文件名。第二个参数为管道符分隔的屏幕坐标，例如100|200|50|100（X|Y|Width|Height）。
+		在索引列标题上单击以打开/关闭帮助标记及循环和语句的颜色。在操作列标题上双击以打开/关闭循环和语句的缩进。
+		您可以使用宏菜单中的手动热键和回放选项来调试宏。您还可以取消选中宏列表中的宏来禁用它们的操作。
+		要让宏仅工作于特定窗口，请打开宏>上下文热键。
+		您可以设置在启动时加载且可导出的自己的全局变量。打开选项>设置>用户全局变量来添加它们。
+		您可以在功能窗口（插入>If语句/变量/函数）中执行高级函数，例如SubStr和RegExReplace。或运行外部AutoHotkey脚本中的函数。
 	)	
 ; Tooltips		
-	AutoKey_TT =	热键玩宏
-	ManKey_TT =	热键玩宏“一步一步”
-	AbortKey_TT =	热键停止播放
-	PauseKey_TT =	热键暂停播放
+	AutoKey_TT =	回放宏的热键
+	ManKey_TT =	步进回放宏的热键
+	AbortKey_TT =	停止回放热键
+	PauseKey_TT =	暂停回放热键
 	RecKey_TT =	退格键清除
 	RecNewKey_TT =	退格键清除
-	JoyKey_TT =	按下操纵杆上的按钮
-	ReptC_TT =	0 =无限
-	A_List_TT =	选择“宏”（Ctrl+1~0）
-	OSHK_TT =	选择“宏”
-	OSHKEd_TT =	选择“宏”
+	JoyKey_TT =	按下操纵杆按钮
+	ReptC_TT =	0 = 无限期
+	A_List_TT =	选择宏(Ctrl+1~0)
+	OSHK_TT =	选择宏
+	OSHKEd_TT =	选择宏
 	ApplyT_TT =	应用
 	ApplyI_TT =	应用
-	ApplyL_TT =	从框中插入（Insert）
-	CmdFilter_TT =	按类型筛选
-	InsertKey_TT =	插入击键 (Ctrl+Insert)
-	InsertKeyT_TT =	插入击键
-	DefaultMacro_TT =	选择要加载的文件在程序启动
+	ApplyL_TT =	从框中插入(Insert)
+	CmdFilter_TT =	按类型过滤
+	InsertKey_TT =	插入键击(Ctrl+Insert)
+	InsertKeyT_TT =	插入键击
+	DefaultMacro_TT =	选择在程序启动时加载的文件
 	VarCopyA_TT =	复制当前变量的内容
 	VarCopyB_TT =	复制当前变量的内容
-	Reset_TT =	清除变量的内容
-	Screenshot_TT =	请截图
-	ColorPick_TT =	获取屏幕上的像素
+	Reset_TT =	清除变量内容
+	Screenshot_TT =	截图
+	ColorPick_TT =	获取屏幕像素
 	PicPrev_TT =	双击打开图片
-	CoordPixel_TT =	协调模式
-	VariatT_TT =	色调的变化
-	IconN_TT =	图标组中的数
+	CoordPixel_TT =	坐标模式
+	VariatT_TT =	渐变值
+	IconN_TT =	图标组编号
 	TransC_TT =	透明色
-	WScale_TT =	宽规模
-	HScale_TT =	身高规模
+	WScale_TT =	宽度缩放
+	HScale_TT =	高度缩放
 	Fast_TT =	使用更快的搜索方法（推荐）
-	RGB_TT =	被解释为一个RGB值而不是BGR导致颜色
-	LoopLVColor_TT =	单击以选择一种颜色
-	IfLVColor_TT =	单击以选择一种颜色
+	RGB_TT =	把颜色解释为RGB值而不是BGR
+	LoopLVColor_TT =	单击选取颜色
+	IfLVColor_TT =	单击选取颜色
 	RefreshIEW_TT =	刷新列表
-	ActiveObj_TT =	尝试连接到Active COM对象
-	TimeoutM_TT =	0 =无限
-	ExpView_TT =	高级编辑
-	ExpView2_TT =	高级编辑
+	ActiveObj_TT =	尝试连接到活动的COM对象
+	TimeoutM_TT =	0 = 无限期
+	ExpView_TT =	高级编辑器
+	ExpView2_TT =	高级编辑器
 	OSProgB_TT =	显示进度条
 	OSTrans_TT =	不透明
 	MRel_TT =	
 	(LTrim	
-		相对于当前位置的变动。
-		或者，如果使用控制：相对位置控制。
+		相对当前位置移动。
+		当用于控件时则相对于当前控件的位置。
 	)	
 	Raw_TT =	
 	(LTrim	
-		SendRaw命令解释所有字符的字面
-		而不是翻译{ENTER}到ENTER键击，
-		^ C为Control-C等。
+		SendRaw命令按原义解释所有字符
+		而不把{Enter}转换成ENTER键击，
+		把^c转换成Control-C，等等。
 	)	
 	ComText_TT =	
 	(LTrim	
-		当没有在原始模式下，下面的字符
-		被视为改性剂（这些修饰符的影响
-		只有极下键）：！，+，^，＃
+		不处于原始模式时，下列字符
+		被看成是修饰键（这些修饰键
+		仅影响紧跟着的下一个键：!、+、^、#
 	)	
-	ComEvent_TT =	发送击键的速度，是由按键延迟。
+	ComEvent_TT =	键击发送的频率由按键延时决定。
 	Clip_TT =	
 	(LTrim	
-		暂时使用剪贴板发送文本。
-		当操作完成时，该脚本
-		恢撤销来的剪贴板中的内容。
-		（留下空的文本粘贴当前内容）
+		临时使用剪贴板发送文本。
+		操作结束时，脚本会
+		恢复剪贴板原来的内容。
+		（留空Text则粘贴当前内容）
 	)	
 	EditPaste_TT =	
 	(LTrim	
-		粘贴字符串在插入符号/插入的位置
-		在一个Edit控件（这并不影响
-		剪贴板中的内容）。
+		在编辑控件的光标处/插入位置
+		粘贴String（此操作不会影响
+		剪贴板的内容）。
 	)	
-	SetText_TT =	更改文本的控制。
+	SetText_TT =	改变控件的文本。
 	RelKey_TT =	
 	(LTrim	
-		记录鼠标移动和点击，
-		从以前的位置偏移时举行。
+		把鼠标的移动和点击记录为相对于
+		之前按住位置处的位移。
 	)	
-	ToggleC_TT =	国家重点时，激活相对录制。
-	Relative_TT =	坐标是相对于活动窗口。
-	Screen_TT =	坐标是相对于桌面（整个屏幕）。
+	ToggleC_TT =	当按键状态弹起时激活相对录制。
+	Relative_TT =	坐标相对于活动窗口。
+	Screen_TT =	坐标相对于桌面（整个屏幕）。
 	IncFolders_TT =	
 	(LTrim	
-		0 - 只有文件/密钥
-		1 - 子项和文件夹/文件/密钥
-		2 - 只有文件夹/子项
+		0 - 仅文件/按键
+		1 - 文件夹/子键和文件/按键
+		2 - 仅文件夹/子键
 	)	
 	Recurse_TT =	
 	(LTrim	
-		0 - 不递归到文件夹/子项
-		1 - 递归到文件夹/子项
+		0 - 不对文件夹/子键进行递归
+		1 - 对文件夹/子键进行递归
 	)	
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	双击编辑
 	Ex_IfDir_TT =	
 	(LTrim	
-		创建上下文相关的热键和热字串，根据
-		上的类型的窗口，该窗口被激活或存在。
+		创建根据创建活动或存在的不同状态
+		执行的上下文热键。
 	)	
 	Ex_IfDirType_TT =	
 	(LTrim	
-		创建上下文相关的热键和热字串，根据
-		上的类型的窗口，该窗口被激活或存在。
+		创建根据创建活动或存在的不同状态
+		执行的上下文热键。
 	)	
 	Ex_SM_TT =	
 	(LTrim	
-		使SendInput或SendPlay发送的代名词，而不是
-		在默认情况下（的SendEvent）。也使得和mouseMove / /拖动
+		让Send和SendInput或SendPlay执行相同的功能
+		而非默认模式（SendEvent）。同时也会让Click和MouseMove/Click/Drag
 		使用指定的方法。
 	)	
 	SM_TT =	
 	(LTrim	
-		事件：这是开始默认使用的所有脚本。
-		它使用的的SendEvent的方法的发送，SendRaw，点击，和MOUSEMOVE / /拖动。
-		输入：开关的SendInput方法发送，SendRaw的，点击，和mouseMove / /拖动。
-		InputThenPlay：以上述相同，而不是回落到事件模式
-		SendInput是无法使用时，它会恢复到播放模式（下）。这还会导致
-		SendInput命令本身SendInput是无法恢复到播放模式。
-		播放：切换到发送，SendRaw的SendPlay方法，点击，和mouseMove / /拖动。
+		Event：这是用于所有脚本的初始默认设置。
+		它让Send、SendRaw、Click和MouseMove/Click/Drag使用SendEvent模式。
+		Input：让Send、SendRaw、Click和MouseMove/Click/Drag切换到SendInput方法。
+		InputThenPlay：与上面相同，不过当SendInput不可用时恢复为下面的Play模式
+		而不是退回到Event模式。这同时会让
+		SendInput命令自身在SendInput不可用时恢复到Play模式。
+		Play：让Send、SendRaw、Click和MouseMove/Click/Drag切换到SendPlay方法。
 	)	
 	Ex_SI_TT =	
 	(LTrim	
-		确定脚本是否被允许再次运行时，它已经在运行。
+		决定当脚本已经运行时是否允许它再次运行。
 	)	
 	SI_TT =	
 	(LTrim	
-		这个词FORCE将跳过对话框，并自动替换旧的实例，
-		这在效果上是相似的reload命令。
-		这个词忽略跳过对话框，并让旧的实例运行。
-		换句话说，试图启动一个已经运行的脚本将被忽略。
-		这个词时，可以有多个实例同时运行的脚本。
+		单词FORCE会跳过对话框并自动替换旧实例。
+		效果类似于Reload命令。
+		单词IGNORE会跳过对话框并让旧实例继续运行。
+		换句话说，试图启动已经运行的脚本会被忽略。
+		单词OFF允许一个脚本同时运行多个实例。
 	)	
 	Ex_ST_TT =	
 	(LTrim	
-		设置WinWait的命令，如WinTitle参数的匹配行为。
+		设置在类似WinWait命令中WinTitle参数的匹配模式。
 	)	
 	ST_TT =	
 	(LTrim	
-		1：在窗口的标题必须开始与指定的WinTitle的，是比赛。
-		2：在窗口的标题可以包含WinTitle内的任何地方它是一个比赛。
-		3：在窗口的标题必须完全匹配WinTitle“是一个比赛。
-		正则表达式：的变化WinTitle，WinText，ExcludeTitle，并ExcludeText的正则表达式。
+		1：窗口标题必须以指定的WinTitle开头。
+		2：窗口标题的某个位置必须包含WinTitle。
+		3：窗口标题必须准确匹配WinTitle。
+		RegEx：改变WinTitle、WinText、ExcludeTitle和ExcludeText为正则表达式。
 	)	
 	Ex_DH_TT =	
 	(LTrim	
-		确定不可见窗口“看到”的脚本。
+		设置脚本是否可以“看见”隐藏的窗口。
 	)	
 	Ex_AF_TT =	
 	(LTrim	
-		跳过温和的方法，激活一个窗口
-		直接进入强而有力的方法。
+		跳过温和的方法而
+		直接使用强制的方法激活窗口。
 	)	
 	Ex_HK_TT =	
 	(LTrim	
-		强制利用钩子实现所有
-		或一些键盘热键。
+		强制使用钩子实现全部
+		或部分键盘热键。
 	)	
 	Ex_SK_TT =	
 	(LTrim	
-		设置的延迟会发生在每个
-		按键发送的发送或至于ControlSend。
+		设置在每次Send或ControlSend发送
+		键击后自动的延时。
 	)	
 	Ex_MD_TT =	
 	(LTrim	
-		设置的延迟之后会发生
-		每个鼠标移动或点击。
+		设置自动的延时在
+		每次鼠标移动或点击后。
 	)	
 	Ex_SC_TT =	
 	(LTrim	
-		设置的延迟之后会发生
-		每个控件修改命令。
+		设置自动的延时在
+		每次控件修改命令后。
 	)	
 	Ex_SW_TT =	
 	(LTrim	
-		设置的延迟之后会发生
-		每个窗口命令，如WinActivate。
+		设置自动的延时在
+		每次执行窗口命令（例如WinActivate）后。
 	)	
 	Ex_SB_TT =	
 	(LTrim	
-		确定一个脚本运行的速度有多快，影响CPU的利用率。
+		设置脚本的执行速度（影响 CPU 使用率）。
 	)	
 	Ex_NT_TT =	
 	(LTrim	
-		禁止上映的托盘图标。
+		不显示托盘图标。
 	)	
 		
 	Ex_IN_TT =	
 	(LTrim	
-		导致脚本的行为，虽然规定
-		文件的内容是在此的确切位置。
+		让脚本认为指定文件的内容
+		会出现在这个准确的位置。
 	)	
 	Ex_PT_TT =	
 	(LTrim	
-		永久保持一个脚本运行
-		（即，直到用户关闭或ExitApp命令遇到）。
+		让脚本持续运行
+		（即直到用户关闭或遇到ExitApp）。
 	)	
 	Ex_MT_TT =	
 	(LTrim	
-		设置最大数量的同时
-		线程，每个热键或热字串。
+		设置每个热键或热字串
+		可同时存在的最大线程数。
 	)	
 	Ex_UV_TT =	导出全局变量。
 	Ex_EdVars_TT =	选择要导出的全局变量。
 		
 ; Operators		
-	As_Oper_1 =	分配
+	As_Oper_1 =	赋值
 	As_Oper_2 =	加
-	As_Oper_3 =	减去
+	As_Oper_3 =	减
 	As_Oper_4 =	乘
-	As_Oper_5 =	划分
-	As_Oper_6 =	地板鸿沟
-	As_Oper_7 =	串连
+	As_Oper_5 =	除
+	As_Oper_6 =	向下舍除
+	As_Oper_7 =	连接
 	Co_Oper_1 =	等于
-	Co_Oper_2 =	平等（区分大小写）
+	Co_Oper_2 =	等于（区分大小写）
 	Co_Oper_3 =	不等于
-	Co_Oper_4 =	大
-	Co_Oper_5 =	少
+	Co_Oper_4 =	大于
+	Co_Oper_5 =	小于
 	Co_Oper_6 =	大于或等于
 	Co_Oper_7 =	小于或等于
 		
 ; IE Commands Tips		
-	Tip_Navigate =	导航到一个URL或路径。
+	Tip_Navigate =	导航到网址或路径。
 	Tip_Value =	获取或设置对象的值。
-	Tip_Focus =	设置焦点的对象。
-	Tip_Click =	模拟点击的对象。
+	Tip_Focus =	设置焦点到对象。
+	Tip_Click =	模拟点击对象。
 	Tip_Submit =	提交表单。
-	Tip_GoHome =	导航到目前的家庭或起始页面。
-	Tip_GoBack =	向后浏览历史记录列表中的一个项目。
-	Tip_GoForward =	向前浏览历史记录列表中的一个项目。
-	Tip_GoSearch =	导航到当前的搜索页面。
-	Tip_Refresh =	重新载入当前显示的页面。
-	Tip_Stop =	取消挂起的浏览或下载。
-	Tip_Quit =	关闭该页面。
-	Tip_LocationName =	获取的路径或标题当前页的。
-	Tip_LocationURL =	获取当前页面的URL。
+	Tip_GoHome =	导航到当前主页或首页。
+	Tip_GoBack =	导航到历史列表中的后一项。
+	Tip_GoForward =	导航到历史列表中的前一项。
+	Tip_GoSearch =	导航到当前搜索页。
+	Tip_Refresh =	刷新当前显示页。
+	Tip_Stop =	取消挂起的导航或下载。
+	Tip_Quit =	关闭此页面。
+	Tip_LocationName =	获取当前页面的路径或标题。
+	Tip_LocationURL =	获取当前页面的网址。
 	Tip_InnerText =	设置或获取对象的文本。
-	Tip_InnerHTML =	设置或检索对象的HTML。
-	Tip_OuterHTML =	设置或检索HTML中的对象和它的内容。
-	Tip_Href =	获取或设置一个目标URL或锚点。
-	Tip_Src =	获取或设置一个URL要加载的对象。
-	Tip_SelectedIndex =	设置或检索的索引选择的选项中选择对象。
-	Tip_Checked =	获取或设置复选框或单选按钮的状态。
-	Tip_Type =	设置或检索对象的内容类型。
+	Tip_InnerHTML =	设置或获取对象的HTML。
+	Tip_OuterHTML =	设置或获取HTML中的对象及其内容。
+	Tip_Href =	设置或获取目标网址或锚点。
+	Tip_Src =	设置或获取对象加载的网址。
+	Tip_SelectedIndex =	设置或获取在选择对象中选择项的索引。 
+	Tip_Checked =	设置或获取复选框或单选按钮的状态。
+	Tip_Type =	设置或获取对象的内容类型。
 	Tip_Width =	设置或获取对象的宽度。
 	Tip_Height =	设置或获取对象的高度。
-	Tip_Length =	设置或检索集合中的对象的数目。
+	Tip_Length =	设置或检索容器中对象的数目。
 		
 ; AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	(LTrim	
 	Abs	返回数字的绝对值。
-	ASin	返回的反正弦弧度（其正弦是Number）。
-	ACos	返回弧度反余弦（余弦数）。
-	Array	创建一个数组对象。
-	Asc	返回字符串的第一个字符的字符代码（1和255（ANSI版本）或65535（Unicode版本）之间的数字）。
-	ATan	返回弧度的反正切值（正切数）。
-	BlockInput	禁止或允许用户通过键盘和鼠标与电脑互动的能力。
-	Break	退出（终止）一个循环。有效期内任何一种循环。
-	Ceil	返回Number向上舍入到最接近的整数（不带任何.00后缀）。
-	Chr	返回以数字表示的字符代码对应的单个字符。
-	Click	单击鼠标按钮在指定的坐标。它也可以按住一个按钮，转动方向盘，或移动。
+	ASin	返回弧度表示的反正弦值（其正弦是Number）。
+	ACos	返回弧度表示的反余弦值（其余弦值为Number）。
+	Array	创建数组对象。
+	Asc	返回String中首个字符的字符编码（介于1和255（在ANSI版本中）或65535（在Unicode版本中）的数字）。
+	ATan	返回弧度表示的反正切值（其正切值为Number）。
+	BlockInput	禁用或启用用户通过键盘和鼠标与计算机交互的能力。
+	Break	退出（终止）循环。在各种循环中都是有效的。
+	Ceil	返回由Number向上取整到最近的整数（不带任何.00后缀）。
+	Chr	返回与Number表示的字符编码相对应的单个字符。
+	Click	在指定坐标处点击鼠标按钮。它还可以按下按钮、转动滚轮或移动鼠标。
 	ClipWait	等待直至剪贴板包含数据。
-	Clipboard	从剪贴板粘贴文本。
-	ComObjActive	检索注册的COM对象。
-	ComObjArray	创建一个SAFEARRAY使用COM。
-	ComObjConnect	连接一个COM对象的事件源与给定前缀的功能。
-	ComObjCreate	创建一个COM对象。
-	ComObjEnwrap / ComObjUnwrap	包装/解开一个COM对象。
-	ComObjError	启用或禁用COM的错误通知。
-	ComObjFlags	检索或更改标志控制一个COM包装对象的行为。
-	ComObjGet	返回一个COM组件提供的对象的引用。
-	ComObjMissing	创建一个“缺少参数”对象传递给一个COM方法。
-	ComObjParameter	裹值和类型作为参数传递给一个COM方法。
-	ComObjQuery	查询一个COM对象的接口或服务。
+	Clipboard	粘贴剪贴板中的文本。
+	ComObjActive	获取注册的COM对象。
+	ComObjArray	创建用于COM的SAFEARRAY。
+	ComObjConnect	连接COM对象的事件源到带有给定前缀的函数。
+	ComObjCreate	创建COM对象。
+	ComObjEnwrap / ComObjUnwrap	包装/解开COM对象。
+	ComObjError	启用或禁用COM错误通告。
+	ComObjFlags	获取或改变控制COM包装器对象行为的标志。
+	ComObjGet	返回由COM组件提供的对象引用。
+	ComObjMissing	创建传递给COM方法的“遗漏参数”对象。
+	ComObjParameter	把值和类型包装成参数传递给COM方法。
+	ComObjQuery	查询COM对象的接口或服务。
 	ComObjType	从COM对象获取类型信息。
-	ComObjValue	检索的价值或指针存储在COM包装对象。
-	Continue	跳过当前循环迭代的其余部分，并开始一个新的。有效期内任何一种循环。
-	Control	使得各种控制的变化。
-	ControlClick	发送鼠标按钮或鼠标滚轮事件的控制。
-	ControlEditPaste	胶泥的字符串插入符/编辑控件中的插入位置（这并不影响剪贴板中的内容）。
-	ControlFocus	设置输入焦点上的一个窗口，一个给定的控制。
-	ControlGet	检索各类有关控件的信息。
-	ControlGetFocus	获取控制的目标窗口拥有输入焦点，如果有的话。
-	ControlGetPos	检索的位置和大小的控制。
-	ControlGetText	撷取文字的控制。
-	ControlMove	移动或调整大小的控制。
-	ControlSend / ControlSendRaw 	发送模拟击键一个窗口或控制。
-	ControlSetText	更改文本的控制。
-	CoordMode	集协调各种命令模式是相对的活动窗口或屏幕。
-	Cos	返回三角余弦数。
-	Critical	防止当前线程的其他线程被打断。
-	DetectHiddenText	确定是否有隐形文字在一个窗口“看到”的目的找到窗口。这种影响如IfWinExist WinActivate的命令。
-	DetectHiddenWindows	确定无形窗口“看到”的脚本。
-	DllCall	DLL内部调用一个函数，比如一个标准的Windows API函数。
-	Drive	CD或DVD驱动器的托盘弹出/缩回，或设置驱动器的卷标。
-	DriveGet	检索计算机的驱动器（S）的各类信息。
-	DriveSpaceFree	检索可用磁盘空间的驱动器，以兆字节为单位。
-	Edit	打开当前脚本在关联编辑器进行编辑。
-	Else	指定执行命令（S），如果IF语句的计算结果为FALSE。当一个以上的命令是，把它们括在一个块（大括号）。
-	EnvAdd	设置一个变量本身以及给定值（也可以添加或减去时间从日期时间值）的总和。代名词：VAR + =价值。
-	EnvDiv	设置一个变量除以给定的值本身。代名词：无功/ =价值。
-	EnvGet	获取环境变量。
-	EnvMult	设置一个变量，以本身乘以给定的值。代名词：VAR =价值。
-	EnvSet	一个值写入到一个环境中的变量。
-	EnvSub	设置一个变量减去给定值（也可以比较日期时间值）。代名词：瓦尔省 - =价值。
-	EnvUpdate	通知OS及所有运行的应用程序的环境变量（S）已经改变。
-	Exit	退出当前线程或（如果脚本不是持久的，不包含热键）整个脚本。
-	ExitApp	终止无条件脚本。
-	Exp	返回e（约2.71828182845905）提出的N次方。
-	FileAppend	将文本写入到一个文件结束（先创建该文件，如果必要的话）。
+	ComObjValue	获取存储在COM包装器对象中的值或指针。
+	Continue	跳过当前循环的剩余部分并继续下一次循环。在各种循环中都是有效的。
+	Control	对控件进行各种改变。
+	ControlClick	发送鼠标按钮或鼠标滚轮事件到控件。
+	ControlEditPaste	在编辑控件的光标处/插入位置粘贴String（此功能不会影响剪贴板的内容）。
+	ControlFocus	设置输入焦点到窗口的指定控件上。
+	ControlGet	获取控件的各种类型的信息。
+	ControlGetFocus	获取目标窗口中含输入焦点的控件，如果有的话。
+	ControlGetPos	获取控件的位置和大小。
+	ControlGetText	获取控件的文本。
+	ControlMove	移动控件或调整其大小。
+	ControlSend / ControlSendRaw 	发送模拟键击到窗口或控件。
+	ControlSetText	改变控件的文本。
+	CoordMode	为多个命令设置坐标模式，相对于活动窗口还是屏幕。
+	Cos	返回Number的余弦三角函数值。
+	Critical	防止当前线程被其他线程中断。
+	DetectHiddenText	设置在探测窗口时窗口中隐藏的文本是否“可见”。此设置影响例如IfWinExist和WinActivate的这些命令。
+	DetectHiddenWindows	设置脚本是否可以“看见”隐藏的窗口。
+	DllCall	调用DLL文件中的函数，例如标准的Windows API函数。
+	Drive	弹出/收进CD或DVD驱动器托盘，或设置驱动器的卷标。
+	DriveGet	获取计算机驱动器的各种类型的信息。
+	DriveSpaceFree	获取驱动器的可用磁盘空间，单位为 MB。
+	Edit	在关联编辑器中打开当前脚本进行编辑。
+	Else	指定当IF语句计算结果为FALSE时执行的命令。包含多个命令时，需要把它们括在区块（大括号）中。
+	EnvAdd	设置变量的值为它自身加上给定的值的和（还可以从日期-时间值中增加或减去时间）。同义于：var += value。
+	EnvDiv	设置变量的值为它自身除以给定的值。同义于：var /= value。
+	EnvGet	获取环境变量的内容。
+	EnvMult	设置变量的值为它自身乘以给定的值。同义于：var *= value。
+	EnvSet	向系统环境中的变量写入值。
+	EnvSub	设置变量的值为它自身减去给定的值（还可以比较日期-时间值）。同义于：var -= value。
+	EnvUpdate	通知操作系统和所有正在运行的程序环境变量已经改变。
+	Exit	退出当前线程或（如果脚本不是持续运行的且不包含热键时）整个脚本。
+	ExitApp	无条件终止脚本。
+	Exp	返回e（其近似值为2.71828182845905）的N次幂。
+	FileAppend	在文件末尾处追加文本（如果有必要，首先创建文本）。
 	FileCopy	复制一个或多个文件。
-	FileCopyDir	复制一个文件夹以及其所有子文件夹和文件（类似于XCOPY）。
-	FileCreateDir	创建一个文件夹。
-	FileCreateShortcut	创建一个快捷方式（LNK）文件。
+	FileCopyDir	复制文件夹及其所有子文件夹和文件（类似于xcopy）。
+	FileCreateDir	创建文件夹。
+	FileCreateShortcut	创建快捷方式（.lnk）文件。
 	FileDelete	删除一个或多个文件。
-	FileEncoding	设置FileReadLine FILEREAD，循环读取，FileAppend和文件打开的默认编码。
-	FileInstall	包括指定的文件里面的脚本的编译版本。
-	FileGetAttrib	报告文件或文件夹是否是只读，隐藏等。
-	FileGetShortcut	获取信息的快捷方式（LNK）的文件，如目标文件。
-	FileGetSize	检索一个文件的大小。
-	FileGetTime	检索日期时间戳的文件或文件夹。
-	FileGetVersion	检索一个文件的版本。
+	FileEncoding	为FileRead、FileReadLine、Loop Read、FileAppend和FileOpen设置默认编码。
+	FileInstall	封装指定的文件到脚本的已编译版本中。
+	FileGetAttrib	报告文件或文件夹是否为只读、隐藏等。
+	FileGetShortcut	获取快捷方式（.lnk）文件的信息，例如其目标文件。
+	FileGetSize	获取文件的大小。
+	FileGetTime	获取文件或文件夹的时间戳。
+	FileGetVersion	获取文件的版本。
 	FileMove	移动或重命名一个或多个文件。
-	FileMoveDir	将文件夹以及其所有子文件夹和文件。它也可以重命名文件夹。
-	FileOpen	提供面向对象的文件I / O。
-	FileRead	读取文件的内容到一个变量。
-	FileReadLine	从文件中读取指定的行和存储文本的变量。
-	FileRecycle	发送到回收站的文件或目录，如果可能的话。
+	FileMoveDir	移动文件夹及其所有子文件夹和文件。它还可以重命名文件夹。
+	FileOpen	提供面向对象的文件I/O。
+	FileRead	读取文件的内容到变量。
+	FileReadLine	读取文件指定行的文本并保存到变量。
+	FileRecycle	发送文件或目录到回收站，如果可行的话。
 	FileRecycleEmpty	清空回收站。
-	FileRemoveDir	删除一个文件夹。
-	FileSelectFile	显示一个标准的对话框，允许用户打开或保存文件（S）。
-	FileSelectFolder	显示一个标准的对话框，允许用户选择一个文件夹。
-	FileSetAttrib	一个或多个文件或文件夹的属性更改。支持通配符。
-	FileSetTime	更改一个或多个文件或文件夹的日期时间戳。支持通配符。
-	Floor	返回Number向下调整至最接近的整数（不带任何.00后缀）。
-	For	再次重复一系列命令在一个对象中的每个键 - 值对。
-	FormatTime	到指定的日期/时间格式转换一个YYYYMMDDHH24MISS时间戳。
-	Func	检索功能。
-	GetKeyName / GetKeyVK / GetKeySC	检索的名称或文字，虚拟键码或扫描代码的一个关键。
-	GetKeyState	检查如果键盘按键或鼠标/操纵杆按钮向上或向下。此外，还检索操纵杆状态。
-	Gosub	跳转到指定的标签和继续执行，直到遇到返回。
-	Goto	跳转到指定的标签和继续执行。
-	GroupActivate	激活下一个窗口，在窗口组GroupAdd命令定义。
-	GroupAdd	添加一个窗口规范窗口组，创建组，如果必要的。
-	GroupClose	关闭活动窗口，如果它只是激活，GroupActivate或GroupDeactivate的。然后激活该系列中的下一个窗口。它也可以关闭所有的窗口，在一组。
-	GroupDeactivate	类似GroupActivate不在组中除了激活下一个窗口。
-	if	指定命令（S）来执行，如果一个变量的值比较evalutes TRUE。当一个以上的命令是，把它们括在一个块（大括号）。
-	if (expression)	指定执行命令（S），如果表达式的计算结果为TRUE。
-	If var [not] between	检查变量的内容是数字或字母，两个值之间（含）。
-	If var [not] in/contains MatchList 	检查变量的内容是否匹配列表中的项目之一。
-	If var is [not] type	检查变量的内容是否是数字，大写等。
-	If Clipboard	检查如果剪贴板文本配指定的字符串。
-	If ErrorLevel	如果指定的图像或像素的检查，发现在屏幕上。
-	If A_Index	的检查，如果在当前循环的迭代配指定了一些。
-	IfEqual/IfNotEqual	比较变量的值相等。代名词：如果var =价值瓦尔省<>价值。
-	IfExist / IfNotExist / FileExist	检查文件或文件夹的存在。
-	IfGreater / IfGreaterOrEqual	比较变数的值。代名词：如果瓦尔省>价值|如果瓦尔省> =价值。
-	IfInString / IfNotInString / InStr	检查一个变量是否包含指定的字符串。
-	IfLess / IfLessOrEqual	比较变数的值。代名词：如果var <价值|瓦尔省<=价值。
-	IfMsgBox	在最近的MsgBox命令时，检查由用户按压了哪个按钮。
-	IfWinActive / IfWinNotActive	检查是否存在指定的窗口，是目前活跃（最重要的）。
-	IfWinExist / IfWinNotExist	检查是否存在指定的窗口。
-	ImageSearch	搜索用于图像的屏幕的区域。
-	IniDelete	删除标准格式。ini文件中的值。
-	IniRead	读取标准格式。ini文件中的值。
-	IniWrite	值写入到标准格式。ini文件。
-	Input	等待用户输入一个字符串（不支持Windows 9x上：它什么也不做）。
-	InputBox	显示一个输入框，要求用户输入一个字符串。
-	InStr	检索数据对于一个给定的字符串的发生，从左侧或右侧。
+	FileRemoveDir	删除文件夹。
+	FileSelectFile	显示可以让用户打开或保存文件的标准对话框。
+	FileSelectFolder	显示可以让用户选择文件夹的标准对话框。
+	FileSetAttrib	改变一个或多个文件或文件夹的属性。支持通配符。
+	FileSetTime	改变一个或多个文件或文件夹的时间戳。支持通配符。
+	Floor	返回由Number向下取整到最近的整数（不带任何.00后缀）。
+	For	对对象中的每对键值对重复执行一系列命令。
+	FormatTime	转换YYYYMMDDHH24MISS时间戳到指定的日期/时间格式。
+	Func	获取函数的引用。
+	GetKeyName / GetKeyVK / GetKeySC	获取按键的名称、文本、虚拟按键码或扫描码。
+	GetKeyState	检查键盘按键或鼠标/操纵杆按钮是处于按下或弹起状态。也可以获取操纵杆的状态。
+	Gosub	跳转到指定的标签继续执行，直到遇到Return。
+	Goto	跳转到指定的标签并继续执行。
+	GroupActivate	激活由GroupAdd定义的窗口组中的下一个窗口。
+	GroupAdd	增加窗口规格到窗口组，必要时创建组。
+	GroupClose	关闭刚刚由GroupActivate或GroupDeactivate激活的活动窗口。接着激活系列中的下一个窗口。它还可以关闭组中所有窗口。
+	GroupDeactivate	类似于GroupActivate，不同的是它激活不在组中的下一个窗口。
+	if	指定在变量与值比较结果为TRUE时执行的命令。包含多个命令时，需要把它们括在区块（大括号）中。
+	if (expression)	指定在表达式计算结果为TRUE时执行的命令。
+	If var [not] between	根据数值或字母顺序检查变量的内容是否在两个值之间（包含边界）。
+	If var [not] in/contains MatchList 	检查变量的内容是否匹配列表中的某项。
+	If var is [not] type	检查变量的内容是否为数值、大写字母或其他。
+	If Clipboard	检查剪贴板文本是否匹配指定的字符串。
+	If ErrorLevel	检查是否在屏幕中找到指定的图片或像素。
+	If A_Index	检查当前循环重复数是否匹配指定的数字。
+	IfEqual/IfNotEqual	比较变量和值判断它们是否相等。同义于：if var = value | if var <> value
+	IfExist / IfNotExist / FileExist	检查文件或文件夹是否存在。
+	IfGreater / IfGreaterOrEqual	比较变量和某个值。同义于：if var > value | if var >= value
+	IfInString / IfNotInString / InStr	检查变量是否包含指定的字符串。
+	IfLess / IfLessOrEqual	比较变量和某个值。同义于：if var < value | if var <= value
+	IfMsgBox	检查用户在最近的MsgBox命令中点击了哪个按钮。
+	IfWinActive / IfWinNotActive	检查指定的窗口是否存在且当前是否活动（在最前面）。
+	IfWinExist / IfWinNotExist	检查指定的窗口是否存在。
+	ImageSearch	在屏幕的某个区域中搜索图像。
+	IniDelete	删除标准格式的.ini文件中的值。
+	IniRead	读取标准格式的.ini文件中的值。
+	IniWrite	写入值到标准格式的.ini文件。
+	Input	等待用户输入字符串（不支持Windows 9x：在那里它什么都不做）。
+	InputBox	显示输入框让用户输入字符串。
+	InStr	搜索字符串的出现位置，从左边或右边开始。
 	)	
 	Ahk_Cmd_Index = %Ahk_Cmd_Index%`n	
 	(LTrim	
-	KeyHistory	显示脚本信息和最近期的键盘和鼠标操作的历史。
-	KeyWait	等待被释放或按下一个键或鼠标/操纵杆按钮。
-	Labels	一个标签标识的代码行，并可以用作转到目标或形成一个子程序。
-	Log	返回数的对数（基数为10）。
-	Ln	返回自然对数（以e为底）数目。
-	Loop (normal) 	反复执行的一系列命令：要么指定次数或休息，直到遇到。
-	Loop (files & folders)	检索指定的文件或文件夹，一次一个。
-	Loop (parse a string)	检索子字符串（字段）从一个字符串，一次一个。
-	Loop (read file contents)	检索在一个文本文件，一个（执行优于FileReadLine）时间线。
-	Loop (registry)	检索指定的注册表子项，一个项目的内容在同一时间。
-	Menu	创建，删除，修改和显示菜单和菜单项。更改托盘图标和工具提示。控制编译脚本的主窗口是否可以打开。
-	Mod	模。返回剩余股利除以除数时。
-	MouseClickDrag	点击次数，并持有指定的鼠标按钮，将鼠标移动到目的地的坐标，然后释放按钮。
-	MouseGetPos	检索当前鼠标光标位置，以及可选的窗口和控件悬停。
+	KeyHistory	显示脚本信息和最近键击和鼠标点击的历史。
+	KeyWait	等待按键或鼠标/操纵杆按钮被松开或按下。
+	Labels	标签用来标识代码行，可以作为Goto目标或组成子程序。
+	Log	返回Number的对数（底数为10）。
+	Ln	返回Number的自然对数（底数为e）。
+	Loop (normal) 	重复执行一系列命令：可以指定表示重复次数的数字或直到遇到break。
+	Loop (files & folders)	获取指定的文件或文件夹，每次一个。
+	Loop (parse a string)	从一个字符串中获取子字符串（片段），每次一个。
+	Loop (read file contents)	逐行读取文本文件的内容，每次一行（比FileReadLine执行的更好）。
+	Loop (registry)	获取指定的注册表子键的内容，每次一个项目。
+	Menu	创建、删除、修改和显示菜单和菜单项。改变托盘图标和它的提示。控制是否可以打开已编译脚本的主窗口。
+	Mod	求模。返回被除数Dividend除以除数Divisor后得到的余数。
+	MouseClickDrag	点击并按住指定的鼠标按钮，接着移动鼠标到目标坐标，然后松开按钮。
+	MouseGetPos	获取鼠标光标的当前位置以及鼠标当前悬停的窗口和控件（可选的）。
 	MouseMove	移动鼠标光标。
-	MsgBox	显示在一个小窗口，其中包含一个或多个按钮（如“是”和“否”）指定的文本。
-	NumGet	返回+偏移量存储在指定的地址的二进制数。
-	NumPut	商店数量以二进制格式在指定的地址+偏移量的地址，并返回刚刚写入的项目的右侧。
-	OnExit	指定一个子程序时自动运行的脚本退出。
-	OnMessage	指定一个函数调用脚本时自动接收到指定的消息。
-	OutputDebug	将字符串发送到显示调试器（如果有的话）。
-	Pause	暂停脚本的电流线程。
-	PixelGetColor	检索处的像素的颜色指定的x，y坐标。
-	PixelSearch	搜索指定的颜色的像素的屏幕的一个区域。
-	PostMessage	将消息放入消息队列中的一个窗口或控制。
-	Process	执行过程下列操作之一：检查是否存在改变其优先关闭它等待它关闭。
-	Progress	创建或更新窗口，其中包含一个进度条。
-	Random	产生一个伪随机数。
-	RegExMatch	确定一个字符串是否包含一个模式（正则表达式）。
-	RegExReplace	出现替换字符串内的模式（正则表达式）。
-	RegDelete	删除注册表子项或值。
-	RegRead	从注册表中读取一个值。
-	RegWrite	写入到注册表的值。
-	RegisterCallback	创建一个机器代码地址，调用时，将呼叫重定向到一个脚本中的函数。
-	Return	返回从子程序执行此前通过函数调用，GOSUB，热键激活，GroupActivate，或其他手段跳下。
-	Round	如果省略N或0，四舍五入到最接近的整数。如果N为正数，数到N小数点后四舍五入。如果N是负号是由N位四舍五入到小数点左边的。
+	MsgBox	在含有一个或多个按钮（例如“是”和“否”）的小窗口中显示指定的文本 。
+	NumGet	返回在指定地址+偏移的位置存储的二进制数。
+	NumPut	以二进制格式把Number存储到指定地址+偏移的位置并返回刚写入项右边的地址。
+	OnExit	指定在脚本退出时自动运行的子程序。
+	OnMessage	指定当脚本接收到特定消息时自动调用的函数。
+	OutputDebug	发送字符串到调试器（如果有的话）显示出来。
+	Pause	暂停脚本的当前线程。
+	PixelGetColor	获取指定的x, y坐标处像素的颜色。
+	PixelSearch	在屏幕某个区域中搜索指定颜色所在的像素。
+	PostMessage	放置消息到窗口或控件的消息队列。
+	Process	对进程执行下列的其中一个操作：检查进程是否存在；改变进程的优先级；关闭进程；等待进程关闭。
+	Progress	创建或更新包含进度条的窗口。
+	Random	生成伪随机数。
+	RegExMatch	判断字符串是否包含某个匹配模式（正则表达式）。
+	RegExReplace	替换字符串中匹配模式（正则表达式）出现的地方。
+	RegDelete	从注册表中删除子键或值。
+	RegRead	从注册表读取值。
+	RegWrite	写入值到注册表。
+	RegisterCallback	创建机器码地址，当它被调用时会重定向到脚本中的函数。
+	Return	从子程序返回到之前通过函数调用、Gosub、激活 Hotkey、GroupActivate 或其他方式执行跳转的地方。
+	Round	如果N省略或为0，则Number被取整到最近的整数。如果N为正数，则Number被取整到N个小数位。如果N为负数，则Number被取整到十进制小数点左边N位。
 	Run	运行外部程序。
-	RunAs	指定一组用户凭据用于所有后续的运行和RunWait用途。需要Windows 2000/XP或更高版本。
-	RunWait	运行一个外部程序和等待，直到它完成。
-	Screenshot	创建一个PNG截图的指定区域。
-	Send / SendRaw / SendInput / SendPlay	模拟键盘和鼠标操作发送到活动窗口。
-	SendLevel	控制热键和热字串人工键盘和鼠标事件被忽略。
-	SendMessage	一个窗口或控制发送消息，并等待确认。
-	SendMode	使得与SendInput或SendPlay模式的代名词，而不是默认的SendEvent发送。也使得MOUSEMOVE /点击/拖动使用指定的方法。
-	SetCapslockState	设置CapsLock键的状态。也可以强制钥匙留在或关闭。
-	SetEnv (Var = Value)	将指定值分配给一个变量。
-	SetFormat	数学运算所产生的整数和浮点数的格式设置。
-	SetKeyDelay	设置发送或至于ControlSend发送每个按键后会发生延迟。
-	SetMouseDelay	设定每个鼠标移动或点击后会发生延迟。
-	SetNumlockState	设置的NumLock键的状态。也可以强制钥匙留在或关闭。
-	SetScrollLockState	设置ScrollLock键键的状态。也可以强制钥匙留在或关闭。
-	SetRegView	允许一个32位注册表中的命令脚本访问64位注册表视图，反之亦然。
-	SetTimer	导致一个子程序自动启动，并在指定的时间间隔重复。
-	Shutdown	关机，重启或注销系统。
-	Sin	返回数的三角正弦。
-	Sleep	等待指定的时间，然后再继续。
-	Sort	排列变量的内容，字母，数字，或按随机顺序（任选去除重复）。
-	SoundBeep	从PC扬声器发出声音。
-	SoundGet	检索各种声音设备（主静音，主音量等设置）
-	SoundGetWaveVolume	从声音装置撷取波形输出音量。
-	SoundPlay	播放声音，视频或其他支持的文件类型。
-	SoundSet	更改各种设置声音设备（主静音，主音量等）
-	SoundSetWaveVolume	更改波形输出音量的声音设备。
-	SplashImage	创建或更新窗口，其中包含一个JPG，GIF，或BMP图像。
-	SplashTextOn	创建一个自定义的文本弹出式窗口。
+	RunAs	指定在后续所有的Run和RunWait中使用的一组用户凭据。需要Windows 2000/XP或更高版本。
+	RunWait	运行外部程序并等待其结束。
+	Screenshot	截取指定区域图片并保存为PNG文件。
+	Send / SendRaw / SendInput / SendPlay	发送模拟键击和鼠标点击到活动窗口。
+	SendLevel	控制热键和热字串是否忽略模拟的键盘和鼠标事件。
+	SendMessage	发送消息到窗口或控件并等待确认。
+	SendMode	让Send和SendInput或SendPlay具有相同的功能而不是默认的（SendEvent）。也使Click和MouseMove/Click/Drag使用指定的方法。
+	SetCapslockState	设置Capslock键的状态。还可以强制此键保持打开或关闭状态。
+	SetEnv (Var = Value)	把指定的值赋给变量。
+	SetFormat	设置数学运算得到的整数和浮点数的格式。
+	SetKeyDelay	设置每次Send或ControlSend发送键击后自动的延时。
+	SetMouseDelay	设置每次鼠标移动或点击后自动的延时。
+	SetNumlockState	设置Numlock键的状态。还可以强制此键保持打开或关闭状态。
+	SetScrollLockState	设置Scrolllock键的状态。还可以强制此键保持打开或关闭状态。
+	SetRegView	允许32位脚本中的注册表命令访问64位注册表视图，反之亦然。
+	SetTimer	以指定的时间间隔自动并重复运行子程序。
+	Shutdown	关闭、重启或注销系统。
+	Sin	返回Number的正弦三角函数值。
+	Sleep	在继续前等待指定的时间量。
+	Sort	以字母、数字或随机顺序排列变量的内容（可以选择是否移除重复项）。
+	SoundBeep	让PC扬声器发出蜂鸣音。
+	SoundGet	从音频设备中获取各种设置（主静音、主音量等）。
+	SoundGetWaveVolume	获取音频设备的波形输出音量。
+	SoundPlay	播放音频、视频或其他支持的文件类型。
+	SoundSet	改变音频设备的各种设置（主静音、主音量等）。
+	SoundSetWaveVolume	改变音频设备的波形输出音量。
+	SplashImage	创建或更新含JPG、GIF或BMP图像的窗口。
+	SplashTextOn	创建自定义文本的弹出窗口。
 	SplashTextOff	关闭上面的窗口。
-	SplitPath	分离文件名或URL，其名称，目录，扩展和驱动。
-	Sqrt	返回的平方根数目。
-	StatusBarGetText	检索文本，从一个标准的状态栏控制。
-	StatusBarWait	等待，直到窗口的状态栏包含指定的字符串。
-	StrPut / StrGet	一个字符串复制或从一个内存地址，可选的代码页之间转换。
-	StringCaseSense	确定字符串比较是否区分大小写（默认是“不区分大小写”）。
-	StringGetPos / InStr	检索的指定子字符串内的位置。
-	StringLeft	检索一个从左手侧的一个字符串的字符数。
-	StringLen / StrLen	检索在一个字符串中有多少个字符的计数。
-	StringLower	将字符串转换为小写。
-	StringMid / SubStr	检索一个或多个字符在一个字符串中的指定位置。
-	StringReplace	一个新的字符串替换指定的子串。
-	StringRight	检索从右侧的字符串的字符数。
-	StringSplit / StrSplit	分离到一个数组中使用指定的分隔符的子串。
-	StringTrimLeft	删除一些从左侧的字符串的字符。
-	StringTrimRight	从右侧的字符串中删除的字符数。
-	StringUpper	将字符串转换为大写。
-	Suspend	禁用或启用所有或选定的热键和热字串。
-	SysGet	检索屏幕分辨率，多显示器的信息，系统对象的尺寸，和其他系统的性能。
-	Tan	返回数的三角正切。
-	ToolTip	创建一个始终保持接通顶窗口在屏幕上的任何地方。
-	Transform	执行杂的数学函数，按位运算，如ASCII / Unicode转换任务。
-	TrayTip	创建一个气球消息窗口附近的托盘图标。需要Windows 2000/XP或更高版本。
-	Trim / LTrim / RTrim	修剪某些字符从一个字符串的开头和/或结尾。
-	Try	卫队的一个或多个语句（命令或表达式）对运行时错误和异常抛出由throw命令。
-	Until	适用条件回路或For循环的延续。
-	UrlDownloadToFile	从互联网上下载一个文件。
-	VarSetCapacity	放大一个变量的控股能力，或释放其内存。通常，这是必要的，只有不寻常的情况下，如DllCall。
-	WinActivate	激活指定的窗口（使得它最重要的）。
-	WinActivateBottom	同WinActivate，除非它激活最底部（最近最少活跃）匹配窗口，而不是最顶层。
-	WinActive	返回活动窗口的唯一ID（HWND），如果它符合指定的条件。
+	SplitPath	把文件名或URL分解成它的名称、目录、扩展名和驱动器。
+	Sqrt	返回Number的平方根。
+	StatusBarGetText	获取标准状态栏控件的文本。
+	StatusBarWait	等待窗口的状态栏包含指定的字符串。
+	StrPut / StrGet	复制字符串到内存地址或来自内存地址，并可选地对其在不同代码页间进行转换。
+	StringCaseSense	设置在字符串比较中是否区分大小写（默认为“不区分大小写”）。
+	StringGetPos / InStr	获取指定的子字符串在某个字符串中的位置。
+	StringLeft	从字符串的左边提取一些字符。
+	StringLen / StrLen	获取字符串中包含的字符数量。
+	StringLower	把字符串中的英文字母转换成小写。
+	StringMid / SubStr	从字符串的指定位置提取一个或多个字符。
+	StringReplace	用新字符串替换指定的子字符串。
+	StringRight	从字符串的右边提取一些字符。
+	StringSplit / StrSplit	使用指定的分隔符把一个字符串分解成多个子字符串并保存到数组中。
+	StringTrimLeft	从字符串的左边移除一些字符。
+	StringTrimRight	从字符串的右边移除一些字符。
+	StringUpper	把字符串中的英文字母转换成大写。
+	Suspend	禁用或启用所有的或选择的热键和热字串。
+	SysGet	获取屏幕分辨率、多显示器信息、系统对象的尺寸和其他系统属性。
+	Tan	返回Number的正切三角函数值。
+	ToolTip	在屏幕的任意位置创建总是置顶的窗口。
+	Transform	执行各种数学计算、按位运算以及类似ASCII/Unicode转换的任务。
+	TrayTip	在托盘图标附近创建气球提示窗口。需要Windows 2000/XP或更高版本。
+	Trim / LTrim / RTrim	移除字符串的开始和/或末尾的某些字符。
+	Try	守护一个或多个语句（命令或表达式）以防备由throw命令抛出的运行时错误和异常。
+	Until	根据条件判断是否继续执行Loop或For循环。
+	UrlDownloadToFile	从互联网下载文件。
+	VarSetCapacity	增加或清空变量占用的内存。通常只有在特殊情况下才需要，例如DllCall。
+	WinActivate	激活指定的窗口（让它置于最前面）。
+	WinActivateBottom	和WinActivate一样，只是此命令激活最下面的（最早激活的）匹配窗口而不是最上面的。
+	WinActive	返回匹配指定条件的活动窗口的 唯一 ID（HWND）。
 	WinClose	关闭指定的窗口。
-	WinExist	检查是否存在指定的窗口。
-	WinGetActiveStats	结合到一个命令中的职能WinGetActiveTitle WinGetPos。
-	WinGetActiveTitle	检索活动窗口的标题。
-	WinGetClass	检索指定窗口的类名。
-	WinGet	检索指定窗口的唯一ID，进程ID，进程名称，或者其控制清单。它也可以检索符合指定条件的所有窗口的列表。
-	WinGetPos	检索指定窗口的位置和大小。
-	WinGetText	检索文本从指定的窗口。
-	WinGetTitle	检索指定窗口的标题。
+	WinExist	检查指定的窗口是否存在。
+	WinGetActiveStats	组合了WinGetActiveTitle和WinGetPos两个命令的功能。
+	WinGetActiveTitle	获取活动窗口的标题。
+	WinGetClass	获取指定窗口的类名。
+	WinGet	获取指定窗口的唯一 ID、进程 ID、进程名或控件列表。它还可以获取匹配指定条件的所有窗口的列表。
+	WinGetPos	获取指定窗口的位置和大小。
+	WinGetText	获取指定窗口的文本。
+	WinGetTitle	获取指定窗口的标题。
 	WinHide	隐藏指定的窗口。
 	WinKill	强制关闭指定的窗口。
-	WinMaximize	指定的窗口放大为最大尺寸。
-	WinMenuSelectItem	从菜单栏中指定的窗口调用菜单项。
-	WinMinimize	折叠指定的窗口到任务栏上的一个按钮。
-	WinMinimizeAll	将所有窗口最小化。
-	WinMinimizeAllUndo	反转以前WinMinimizeAll效果。
-	WinMove	变更位置和/或指定窗口的尺寸。
-	WinRestore	Unminimizes，或unmaximizes指定的窗口，如果它最小化或最大化。
-	WinSet	使得各种改变到指定的窗口，如“总在最前面”和透明度。
-	WinSetTitle	更改指定的窗口的标题。
-	WinShow	取消隐藏指定的窗口。
-	WinWait	等待，直到指定的窗口是否存在。
-	WinWaitActive	等待，直到指定的窗口处于活动状态。
-	WinWaitClose	等待，直到指定的窗口不存在。
+	WinMaximize	最大化指定的窗口。
+	WinMenuSelectItem	调用指定窗口菜单栏中的菜单项。
+	WinMinimize	缩小指定窗口为任务栏上的按钮。
+	WinMinimizeAll	最小化所有窗口。
+	WinMinimizeAllUndo	反转前面WinMinimizeAll的效果。
+	WinMove	改变指定窗口的位置和/或大小。
+	WinRestore	如果指定的窗口处于最小化或最大化状态，则还原它。
+	WinSet	对指定的窗口进行各种设置，例如“总在最前面”和透明度。
+	WinSetTitle	改变指定窗口的标题。
+	WinShow	显示指定的窗口。
+	WinWait	等到指定的窗口出现。
+	WinWaitActive	等到指定的窗口处于活动状态。
+	WinWaitClose	等到指定的窗口消失。
 	WinWaitNotActive	等待，直到指定的窗口不活跃。
 	)	
 return		

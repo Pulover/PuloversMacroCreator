@@ -22,7 +22,7 @@ Any single word enclosed in percent signs (e.g. *%MyVar%*) inside a string in th
 > Today is %A_DDDD% and it's %A_Hour%:%A_Min%.
 > Clipboard's contents are: %Clipboard%
 
-Download Example: [Using Variables inside Command Parameters](Examples\Variables.pmc).
+Download Example: [Using Variables inside Command Parameters](Examples/Variables.pmc).
 
 ## Assigning And Comparing Variables
 
@@ -46,7 +46,7 @@ The operators accepted are:
 
 > = == <> != > < >= <=
 
-Download Example: [Comparing Variables in Playback](Examples\CompareVars.pmc).
+Download Example: [Comparing Variables in Playback](Examples/CompareVars.pmc).
 
 *Note*: The *Compare Variables* options is limited to two arguments, *Evaluate Expression* uses the *Eval()* function so is more flexible. For *Evaluate Expression* all variables must be enclosed in percent signs.
 
@@ -74,7 +74,7 @@ To switch a variable's value True <> False use an exclamation in from of the val
 Although **Macro Creator doesn't actually supports Expressions** in the same way it uses this method to reference a Dynamic Variable (or a Function Call) and access arrays (such as the ones created by StringSplit) in command's parameters as well.  
 *Note*: Field must start with "% " and must contain only ONE reference.
 
-Download Example: [Accessing a Pseudo-Array inside Command Parameters](Examples\DynamicVars.pmc).
+Download Example: [Accessing a Pseudo-Array inside Command Parameters](Examples/DynamicVars.pmc).
 
 ## Assigning And Retrieving Arrays
 
@@ -85,7 +85,7 @@ To retrieve an array inside a command use the same method as *Dynamic Variable R
 > % MyArray[X]    ; For arrays it's not necessary to enclose variables in percent signs.
 > % MyArray[Var]  ; Any non-number parameter will be treated as a variable.
 
-Download Example: [Assigning and retrieving an Array inside Command Parameters](Examples\Arrays.pmc).
+Download Example: [Assigning and retrieving an Array inside Command Parameters](Examples/Arrays.pmc).
 
 ## Using Functions In Playback
 
@@ -102,7 +102,7 @@ Similarly to Variables it's also possible to use built-In Function results in Pl
 * It's not necessary to use "quotes" for string parameters EXCEPT for blank parameters.  
 * Omitted parameters will use their default values just like a normal Function Call.  
 
-Download Example: [Using Functions inside Command Parameters](Examples\Functions.pmc).
+Download Example: [Using Functions inside Command Parameters](Examples/Functions.pmc).
 
 ### Remarks
 
@@ -134,6 +134,6 @@ If you check the *Use Eval()* option you can use the following directly in the f
 > NewVarX := %FoundX% + 100
 > NewVarX := %FoundY% + 100
 
-The [Variables Example](Examples\Variables.pmc) has a demonstration of this usage.
+The [Variables Example](Examples/Variables.pmc) has a demonstration of this usage.
 
 **Eval()** can also be used inside command parameters as described in Functions.

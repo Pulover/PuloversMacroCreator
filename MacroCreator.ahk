@@ -65,7 +65,7 @@ http://www.autohotkey.com/board/topic/17984-html-help-utils
 
 Thiago Talma for some improvements to the code, debugging and many suggestions.
 
-Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jörg Schmalenberger (German).
+Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jörg Schmalenberger (German), amnesiac (Chinese Simplified).
 */
 
 ; Compiler Settings
@@ -2956,7 +2956,7 @@ PhiLho and skwire for the function to Get/Set the order of columns.
 fincs for GenDocs and SciLexer.dll custom builds.
 T800 for Html Help utils.
 Thiago Talma for some improvements to the code, debugging and many suggestions.
-Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jörg Schmalenberger (German).
+Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jörg Schmalenberger (German), amnesiac (Chinese Simplified).
 )
 Gui, 34:Add, Groupbox, Section xm+58 W360 H130 Center, GNU General Public License
 Gui, 34:Add, Edit, ys+20 xs+10 W340 H100 ReadOnly -E0x200,
