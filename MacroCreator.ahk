@@ -4025,6 +4025,11 @@ CoordMode, Mouse, %CoordPixel%
 MouseGetPos, iX, iY
 CoordMode, Mouse, Screen
 MouseGetPos, OriginX, OriginY
+If (CoordPixel = "Window")
+{
+	CoordMode, Mouse, Window
+	MouseGetPos, xPos, yPos
+}
 SetTimer, DrawRectangle, 0
 KeyWait, %DrawButton%
 GoSub, DrawEnd
@@ -4068,7 +4073,8 @@ If SS = 1
 }
 If ((iX = eX) || (iY = eY)) && (control <> "")
 	GuiControl, 19:ChooseString, CoordPixel, Window
-iX := wX, iY := wY, eX := wX + wW, eY := wY + wH
+Else If (CoordPixel = "Screen")
+	iX := wX, iY := wY, eX := wX + wW, eY := wY + wH
 WinActivate, ahk_id %CmdWin%
 GuiControl, 19:, iPosX, %iX%
 GuiControl, 19:, iPosY, %iY%
@@ -4218,10 +4224,22 @@ If (FirstCall) {
   FirstCall := False
 }
 WinMove, , , X1, Y1, W1, H1
-If ((X2 > OriginX) || (Y2 > OriginY))
-	ToolTip, X%X1% Y%Y1%`nX%X2% Y%Y2%`n%d_Lang034%
+If (CoordPixel = "Window")
+{
+	CoordMode, Mouse, Window
+	MouseGetPos, xPos2, yPos2
+	If ((X2 > OriginX) || (Y2 > OriginY))
+		ToolTip, X%xPos% Y%yPos%`nX%xPos2% Y%yPos2%`n%d_Lang034%
+	Else
+		ToolTip, X%xPos% Y%yPos%`nX%xPos2% Y%yPos2%`n%d_Lang034%, % OriginX +8, % OriginY +8
+}
 Else
-	ToolTip, X%X1% Y%Y1%`nX%X2% Y%Y2%`n%d_Lang034%, % OriginX +8, % OriginY +8
+{
+	If ((X2 > OriginX) || (Y2 > OriginY))
+		ToolTip, X%X1% Y%Y1%`nX%X2% Y%Y2%`n%d_Lang034%
+	Else
+		ToolTip, X%X1% Y%Y1%`nX%X2% Y%Y2%`n%d_Lang034%, % OriginX +8, % OriginY +8
+}
 Return
 
 ShowAreaTip:

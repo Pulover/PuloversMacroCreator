@@ -815,7 +815,7 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC)
 					StringReplace, Step, Step, ``n, `n, All
 				If InStr(Step, "``t")
 					StringReplace, Step, Step, ``t, `t, All
-				If InStr(Step "```,")
+				If InStr(Step, "```,")
 					StringReplace, Step, Step, ```,, `,, All
 				If (Type = "Return")
 					return "_return"
