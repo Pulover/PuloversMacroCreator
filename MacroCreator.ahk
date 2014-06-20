@@ -8746,7 +8746,7 @@ Else
 		LV_GetTexts(RowNumber, Action, Details, TimesX, DelayX, Type, Target, Window, Comment, Color)
 		ckd := (LV_GetNext(RowNumber-1, "Checked")=RowNumber) ? 1 : 0
 		Gui, chMacro:ListView, InputList%d_List%
-		LV_Add("Check" ckd, ListCount%d_List%+1, Action, Details, TimesX, DelayX, Type, Target, Window)
+		LV_Add("Check" ckd, ListCount%d_List%+1, Action, Details, TimesX, DelayX, Type, Target, Window, Comment, Color)
 	}
 }
 Gui, chMacro:ListView, InputList%d_List%
