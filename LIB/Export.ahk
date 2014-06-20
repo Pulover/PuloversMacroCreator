@@ -140,13 +140,14 @@
 				StringReplace, Step, Step, ``n, `n, All
 				Step := "`n(LTrim`n" Step "`n)"
 			}
-			RowData := "`nSavedClip := ClipboardAll`nClipboard =`nClipboard = " Step "`nSleep, 333"
-			If (Target <> "")
+			RowData := "`n" ((Step <> "") ? "SavedClip := ClipboardAll`nClipboard =`nClipboard = " Step "`nSleep, 333" : "")
+			If ((Target <> "") && (Step <> ""))
 				RowData .= "`nControlSend, " Target ", ^v, " Window
 			Else
 				RowData .= "`nSend, ^v"
 			GoSub, Add_CD
-			RowData .= "`nClipboard := SavedClip`nSavedClip ="
+			If (Step <> "")
+				RowData .= "`nClipboard := SavedClip`nSavedClip ="
 			If ((TimesX > 1) || InStr(TimesX, "%"))
 				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
 		}
