@@ -39,6 +39,7 @@ Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jör
 ## Version 4.1.2
 
 * Added Options toolbar items to Options Menu.
+* Fixed bug with *Pause* button of Controls Toolbar.
 * Fixed bug with *Gosub* command inside loops.
 * Fixed bug with A_Loop variables in *Compare Variables* statement.
 * Fixed escaped comma bug in *Assign Variable* command.

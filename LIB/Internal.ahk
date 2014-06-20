@@ -671,16 +671,26 @@ WinCheck(wParam, lParam, Msg)
 	WPHKC := wParam
 }
 
-ToggleIcon()
+ToggleIcon(Custom="")
 {
 	global
 	static IconFile, IconNumber, BarColor
 	Color := (BarColor := !BarColor) ? "Red" : "20D000"
 	ChangeProgBarColor(Color, "OSCProg", 28)
-	If !A_IsPaused
-		IconFile := A_IconFile, IconNumber := A_IconNumber
-	Menu, Tray, Icon, % (A_IsPaused = 0) ? ResDllPath : IconFile, % (A_IsPaused = 0) ? 55 : IconNumber
-	return A_IsPaused
+	If (Custom <> "")
+	{
+		If !Custom
+			IconFile := A_IconFile, IconNumber := A_IconNumber
+		Menu, Tray, Icon, % (Custom = 0) ? ResDllPath : IconFile, % (Custom = 0) ? 55 : IconNumber
+		return Custom
+	}
+	Else
+	{
+		If !A_IsPaused
+			IconFile := A_IconFile, IconNumber := A_IconNumber
+		Menu, Tray, Icon, % (A_IsPaused = 0) ? ResDllPath : IconFile, % (A_IsPaused = 0) ? 55 : IconNumber
+		return A_IsPaused
+	}
 }
 
 ToggleButtonIcon(Button, Icon)

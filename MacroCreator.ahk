@@ -8488,11 +8488,42 @@ If !(PlayOSOn)
 	Tooltip
 	SetTimer, OSPlayOn, -1
 }
+Else If (IsPauseCheck)
+{
+	If ((!CurrentRange) && (!Record))
+		return
+	If (ToggleIcon(IsPauseCheck) && (!Record))
+		tbOSC.ModifyButtonInfo(1, "Image", 55)
+	Else
+		tbOSC.ModifyButtonInfo(1, "Image", 48)
+	Pause, Off, 1
+	IsPauseCheck := False
+}
 Else
-	GoSub, f_PauseKey
+{
+	If ((!CurrentRange) && (!Record))
+		return
+	If (ToggleIcon(IsPauseCheck) && (!Record))
+		tbOSC.ModifyButtonInfo(1, "Image", 55)
+	Else
+		tbOSC.ModifyButtonInfo(1, "Image", 48)
+	Pause,, 1
+	IsPauseCheck := True
+}
 return
 
 OSStop:
+If (IsPauseCheck)
+{
+	If ((!CurrentRange) && (!Record))
+		return
+	If (ToggleIcon(IsPauseCheck) && (!Record))
+		tbOSC.ModifyButtonInfo(1, "Image", 55)
+	Else
+		tbOSC.ModifyButtonInfo(1, "Image", 48)
+	Pause, Off, 1
+	IsPauseCheck := False
+}
 If (Record)
 	GoSub, RecStart
 Else
@@ -10583,12 +10614,13 @@ Gui, 1:Submit, NoHide
 return
 
 f_PauseKey:
-If !(CurrentRange) && !(Record)
+If ((!CurrentRange) && (!Record))
 	return
-If ToggleIcon() && !(Record)
+If (ToggleIcon() && (!Record))
 	tbOSC.ModifyButtonInfo(1, "Image", 55)
 Else
 	tbOSC.ModifyButtonInfo(1, "Image", 48)
+IsPauseCheck := !A_IsPaused
 Pause,, 1
 return
 
