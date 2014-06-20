@@ -6,10 +6,10 @@
 ; pulover@macrocreator.com
 ; Home: http://www.macrocreator.com
 ; Forum: http://ahkscript.org/boards/viewtopic.php?f=6&t=143
-; Version: 4.1.1
-; Release Date: September, 2013
-; AutoHotkey Version: 1.1.13.00
-; Copyright © 2012-2013 Rodolfo U. Batista
+; Version: 4.1.2
+; Release Date: June, 2014
+; AutoHotkey Version: 1.1.15.00
+; Copyright © 2012-2014 Rodolfo U. Batista
 ; GNU General Public License 3.0 or higher
 ; <http://www.gnu.org/licenses/gpl-3.0.txt>
 
@@ -71,8 +71,8 @@ Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jör
 ; Compiler Settings
 ;@Ahk2Exe-SetName Pulover's Macro Creator
 ;@Ahk2Exe-SetDescription Pulover's Macro Creator
-;@Ahk2Exe-SetVersion 4.1.1
-;@Ahk2Exe-SetCopyright Copyright © 2012-2013 Rodolfo U. Batista
+;@Ahk2Exe-SetVersion 4.1.2
+;@Ahk2Exe-SetCopyright Copyright © 2012-2014 Rodolfo U. Batista
 ;@Ahk2Exe-SetOrigFilename MacroCreator.exe
 
 If A_OSVersion in WIN_NT4,WIN_95,WIN_98,WIN_ME
@@ -129,7 +129,7 @@ Loop
 		break
 }
 
-CurrentVersion := "4.1.1", ReleaseDate := "September, 2013"
+CurrentVersion := "4.1.2", ReleaseDate := "June, 2014"
 
 ;##### Ini File Read #####
 
@@ -2880,12 +2880,14 @@ return
 CheckNow:
 CheckUpdates:
 Gui, 1:+OwnDialogs
-IfExist, %A_Temp%\PMCIndex.html
-	FileDelete, %A_Temp%\PMCIndex.html
-UrlDownloadToFile, http://www.macrocreator.com/docs/, %A_Temp%\PMCIndex.html
-FileRead, VerChk, %A_Temp%\PMCIndex.html
-VerChk := RegExReplace(VerChk, "s).*Version: ([\d\.]+).*", "$1", vFound)
-FileDelete, %A_Temp%\PMCIndex.html
+url := "http://www.macrocreator.com/docs"
+http := ComObjCreate("WinHttp.WinHttpRequest.5.1")
+http.open("GET", url, false)
+http.SetRequestHeader("User-Agent", "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0)")
+http.SetRequestHeader("Referer", url)
+http.SetRequestHeader("Content-Type", "application/x-www-form-urlencoded")
+http.Send()
+VerChk := RegExReplace(http.ResponseText, "s).*Version: ([\d\.]+).*", "$1", vFound)
 If (vFound)
 {
 	If (VerChk <> CurrentVersion)
@@ -2928,7 +2930,7 @@ Gui, 34:Add, Text,, Author: Pulover [Rodolfo U. Batista]
 Gui, 34:Add, Link, y+0, <a href="mailto:pulover@macrocreator.com">pulover@macrocreator.com</a>
 Gui, 34:Add, Text, y+0,
 (
-Copyright © 2012-2013 Rodolfo U. Batista
+Copyright © 2012-2014 Rodolfo U. Batista
 
 Version: %CurrentVersion% (%OsBit%)
 Release Date: %ReleaseDate%

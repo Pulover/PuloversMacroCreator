@@ -6,11 +6,11 @@
 
 Author: Pulover \[Rodolfo U. Batista\]  
 [pulover@macrocreator.com](mailto:pulover@macrocreator.com)  
-Copyright © 2012-2013 Rodolfo U. Batista  
+Copyright © 2012-2014 Rodolfo U. Batista  
 
-Version: 4.1.1  
-Release Date: September, 2013  
-AutoHotkey Version: 1.1.13.00  
+Version: 4.1.2  
+Release Date: June, 2014  
+AutoHotkey Version: 1.1.15.00  
 
 Software License: [GNU General Public License](License.html)  
 
@@ -31,10 +31,20 @@ PhiLho and skwire for the [function](http://www.autohotkey.com/board/topic/11926
 fincs for [GenDocs](http://www.autohotkey.com/board/topic/71751-gendocs-v30-alpha002) and [SciLexer.dll custom builds](http://www.autohotkey.com/board/topic/54431-scite4autohotkey-v3004-updated-aug-14-2013/page-58#entry566139).  
 T800 for [Html Help utils](http://www.autohotkey.com/board/topic/17984-html-help-utils).  
 Thiago Talma for some improvements to the code, debugging and many suggestions.  
-Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jörg Schmalenberger (German).  
+Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jörg Schmalenberger (German), amnesiac (Chinese Simplified).  
 
 
 # Change Log
+
+## Version 4.1.2
+
+* Added Options toolbar items to Options Menu.
+* Fixed bug with *Gosub* command inside loops.
+* Fixed bug with A_Loop variables in *Compare Variables* statement.
+* Fixed escaped comma bug in *Assign Variable* command.
+* Fixed *Get Coordinates* tool in *Image/Pixel Search* window not getting correct values in Window Coord mode.
+* Fixed *Copy to* command not copying Comment and Color fields.
+* Fixed some minor bugs.
 
 ## Version 4.1.1
 
