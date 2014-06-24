@@ -11901,7 +11901,7 @@ return
 BasicLayout:
 Loop, 3
 	RbMain.SetLayout(Default_Layout)
-ShowBands := "0,1,1,0,0,1,0,0,0"
+ShowBands := "0,1,1,0,0,1,0,1,0"
 Loop, Parse, ShowBands, `,
 	ShowBand%A_Index% := A_LoopField
 RbMain.ShowBand(RbMain.IDToIndex(1), ShowBand1), RbMain.ShowBand(RbMain.IDToIndex(2), ShowBand2)
