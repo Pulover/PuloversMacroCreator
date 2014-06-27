@@ -787,6 +787,8 @@
 	d_Lang082 =	Plik nie został znaleziony!
 	d_Lang083 =	Plik kopii zapasowej został znaleziony. Czy chcesz go otworzyć?
 	d_Lang084 =	Proszę zapisać zmiany przed planowania zadania.
+	d_Lang085 =	Brakuje "End Loop" oświadczenie w Makro 
+	d_Lang086 =	Brakuje "End If" oświadczenie w Makro
 		
 ; Start-up Tips		
 	Start_Tips =	

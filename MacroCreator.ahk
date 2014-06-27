@@ -12124,8 +12124,27 @@ b_Enable:
 Gui, chMacro:Default
 Gui, chMacro:ListView, InputList%A_List%
 ListCount%A_List% := LV_GetCount(), ListCount := 0
+ActiveA_List := A_List
 Loop, %TabCount%
+{
 	ListCount += ListCount%A_Index%
+	A_List := A_Index
+	GoSub, RowCheck
+	If (DebugCheckLoop)
+	{
+		MsgBox, 16, %d_Lang007%, %d_Lang085%%A_Index%
+		return
+	}
+	Else If (DebugCheckIf)
+	{
+		MsgBox, 16, %d_Lang007%, %d_Lang086%%A_Index%
+		return
+	}
+}
+A_List := ActiveA_List
+Gui, chMacro:Default
+Gui, chMacro:ListView, InputList%A_List%
+GuiControl, chMacro:-Redraw, InputList%A_List%
 return
 
 WinCheck:
@@ -12185,14 +12204,14 @@ Loop, % LV_GetCount()
 	LV_GetText(Type, A_Index, 6)
 	LV_GetText(Color, A_Index, 10)
 	LV_Modify(A_Index, "Col2", Action)
-	If ShowLoopIfMark = 1
+	If (ShowLoopIfMark = 1)
 	{
 		OnMessage(WM_NOTIFY, "LV_ColorsMessage")
 	,	LV_Colors.Row(ListID%A_List%, A_Index, "", "")
 	,	LV_Colors.Attach(ListID%A_List%, False, False)
-		If (Action = "[LoopEnd]")
+		If ((Action = "[LoopEnd]") && (RowColorLoop > 0))
 			RowColorLoop--, IdxLv := SubStr(IdxLv, 1, StrLen(IdxLv)-1)
-		Else If (Action = "[End If]")
+		Else If ((Action = "[End If]") && (RowColorIf > 0))
 			RowColorIf--, IdxLv := SubStr(IdxLv, 1, StrLen(IdxLv)-1)
 		Else If (Action = "[LoopStart]")
 			RowColorLoop++, IdxLv .= "{"
@@ -12205,7 +12224,7 @@ Loop, % LV_GetCount()
 	}
 	Else
 		OnMessage(WM_NOTIFY, ""), LV_Colors.Detach(ListID%A_List%)
-	If ShowActIdent = 1
+	If (ShowActIdent = 1)
 	{
 		LV_Modify(A_Index, "Col2", ActLv Action)
 		If (Action = "[LoopEnd]")
@@ -12269,6 +12288,8 @@ Loop, % LV_GetCount()
 Critical, Off
 GuiControl, chMacro:+Redraw, InputList%A_List%
 FreeMemory()
+DebugCheckLoop := RowColorLoop
+DebugCheckIf := RowColorIf
 return
 
 RecKeyUp:

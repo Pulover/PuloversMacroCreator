@@ -787,6 +787,8 @@
 	d_Lang082 =	The file was not found!
 	d_Lang083 =	A backup file has been found. Would you like to open it?
 	d_Lang084 =	Please save your changes before scheduling a task.
+	d_Lang085 =	Missing "End Loop" statement in Macro
+	d_Lang086 =	Missing "End If" statement in Macro
 		
 ; Start-up Tips		
 	Start_Tips =	

@@ -787,6 +787,8 @@
 	d_Lang082 =	El archivo no se ha encontrado!
 	d_Lang083 =	Se ha encontrado un archivo de copia de seguridad. ¿Quieres abrirlo?
 	d_Lang084 =	Guarde sus cambios antes de programar una tarea.
+	d_Lang085 =	Falta "End Loop" declaración en la Macro 
+	d_Lang086 =	Falta "End If" declaración en la Macro
 		
 ; Start-up Tips		
 	Start_Tips =	

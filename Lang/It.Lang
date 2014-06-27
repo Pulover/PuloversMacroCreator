@@ -787,6 +787,8 @@
 	d_Lang082 =	Il file non è stato trovato!
 	d_Lang083 =	È stato trovato un file di backup. Ti piacerebbe aprirlo?
 	d_Lang084 =	Si prega di salvare le modifiche prima di pianificare un compito.
+	d_Lang085 =	Mancante "End Loop" economico Macro 
+	d_Lang086 =	Mancante "End If" economico Macro
 		
 ; Start-up Tips		
 	Start_Tips =	

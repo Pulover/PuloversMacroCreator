@@ -787,6 +787,8 @@
 	d_Lang082 =	該文件未找到！
 	d_Lang083 =	備份文件已經被發現。你想打開它？
 	d_Lang084 =	調度任務之前，請保存更改。
+	d_Lang085 =	缺少'結束循環'在宏語句 
+	d_Lang086 =	缺少'結束if語句中宏
 		
 ; Start-up Tips		
 	Start_Tips =	

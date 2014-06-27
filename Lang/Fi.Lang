@@ -787,6 +787,8 @@
 	d_Lang082 =	Tiedostoa ei löydy!
 	d_Lang083 =	Varmuuskopio on löytynyt. Haluatko avata sen?
 	d_Lang084 =	Ole hyvä ja tallentaa muutokset ennen aikataulujen tehtävä.
+	d_Lang085 =	Puuttuu "End Loop" lausuma Makro 
+	d_Lang086 =	Puuttuvat "End If 'lausuma Makro
 		
 ; Start-up Tips		
 	Start_Tips =	

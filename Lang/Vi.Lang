@@ -787,6 +787,8 @@
 	d_Lang082 =	Các tập tin không tìm thấy!
 	d_Lang083 =	Một tập tin sao lưu đã được tìm thấy. Bạn có muốn mở nó?
 	d_Lang084 =	Xin lưu các thay đổi của bạn trước khi lập kế hoạch một nhiệm vụ.
+	d_Lang085 =	Mất tích "End Loop" tuyên bố trong Macro 
+	d_Lang086 =	Mất tích "End If" tuyên bố trong Macro
 		
 ; Start-up Tips		
 	Start_Tips =	

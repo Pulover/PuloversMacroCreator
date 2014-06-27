@@ -787,6 +787,8 @@
 	d_Lang082 =	Die Datei wurde nicht gefunden!
 	d_Lang083 =	Ein Backup-Datei gefunden wurde. Möchten Sie es zu öffnen?
 	d_Lang084 =	Bitte speichern Sie die Änderungen vor dem Planen einer Aufgabe.
+	d_Lang085 =	Fehlende 'Loop End' Anweisung in Makro
+	d_Lang086 =	Fehlende "End If" Anweisung in Makro
 		
 ; Start-up Tips		
 	Start_Tips =	

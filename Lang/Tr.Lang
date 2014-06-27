@@ -787,6 +787,8 @@
 	d_Lang082 =	Dosya bulunamadı!
 	d_Lang083 =	Bir yedekleme dosyası tespit edilmiştir. Bunu açmak ister misiniz?
 	d_Lang084 =	Bir görev zamanlama önce değişiklikleri kaydedin.
+	d_Lang085 =	Makro deyimi 'Loop End' Eksik 
+	d_Lang086 =	Makro ifadesi "End If" Eksik
 		
 ; Start-up Tips		
 	Start_Tips =	

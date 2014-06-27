@@ -787,6 +787,8 @@
 	d_Lang082 =	文件未找到！
 	d_Lang083 =	找到了备份文件。打开它吗？
 	d_Lang084 =	请在设置计划任务前保存更改。
+	d_Lang085 =	缺少'结束循环'在宏语句 
+	d_Lang086 =	缺少'结束if语句中宏
 		
 ; Start-up Tips		
 	Start_Tips =	

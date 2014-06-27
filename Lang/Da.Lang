@@ -787,6 +787,8 @@
 	d_Lang082 =	Filen blev ikke fundet!
 	d_Lang083 =	En backup-fil er fundet. Kunne du tænke dig at åbne den?
 	d_Lang084 =	Gem dine ændringer før du planlægger en opgave.
+	d_Lang085 =	Mangler "End Loop" erklæring i Makro 
+	d_Lang086 =	Mangler "End If" erklæring i Makro
 		
 ; Start-up Tips		
 	Start_Tips =	

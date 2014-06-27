@@ -787,6 +787,8 @@
 	d_Lang082 =	Súbor nebol nájdený!
 	d_Lang083 =	Záložný súbor nebol nájdený. Chceli by ste ho otvoriť?
 	d_Lang084 =	Prosím uložte zmeny pred plánovanie úlohy.
+	d_Lang085 =	Chýbajúce "End Loop" vyhlásenie v Makro 
+	d_Lang086 =	Chýbajúce "End If" vyhlásenie v Makro
 		
 ; Start-up Tips		
 	Start_Tips =	

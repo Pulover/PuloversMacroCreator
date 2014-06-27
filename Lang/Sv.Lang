@@ -787,6 +787,8 @@
 	d_Lang082 =	Filen hittades inte!
 	d_Lang083 =	En backup-fil har hittats. Vill du öppna den?
 	d_Lang084 =	Vänligen spara dina ändringar innan du schemalägger aktiviteter.
+	d_Lang085 =	Saknas "End Loop" uttalande i Macro 
+	d_Lang086 =	Saknas "End If 'uttalande i Macro
 		
 ; Start-up Tips		
 	Start_Tips =	

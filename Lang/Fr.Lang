@@ -787,6 +787,8 @@
 	d_Lang082 =	Le fichier n'a pas été trouvé!
 	d_Lang083 =	Un fichier de sauvegarde a été trouvé. Voulez-vous ouvrir?
 	d_Lang084 =	S'il vous plaît enregistrer vos modifications avant de planifier une tâche.
+	d_Lang085 =	Manquant "End Loop" déclaration Macro 
+	d_Lang086 =	Manquant "End If" déclaration Macro
 		
 ; Start-up Tips		
 	Start_Tips =	

@@ -787,6 +787,8 @@
 	d_Lang082 =	Fail tidak dijumpai!
 	d_Lang083 =	Satu fail sandaran yang telah dijumpai. Adakah anda ingin membukanya?
 	d_Lang084 =	Sila simpan perubahan anda sebelum penjadualan tugas.
+	d_Lang085 =	Hilang "End Loop" kenyataan dalam Makro 
+	d_Lang086 =	Hilang "End If" kenyataan dalam Makro
 		
 ; Start-up Tips		
 	Start_Tips =	

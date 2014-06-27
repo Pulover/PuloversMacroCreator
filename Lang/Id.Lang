@@ -787,6 +787,8 @@
 	d_Lang082 =	Berkas tidak ditemukan!
 	d_Lang083 =	Sebuah file cadangan telah ditemukan. Apakah Anda ingin membukanya?
 	d_Lang084 =	Harap menyimpan perubahan sebelum penjadwalan tugas.
+	d_Lang085 =	Hilang "End Loop" pernyataan dalam Makro 
+	d_Lang086 =	Hilang "End If" pernyataan dalam Makro
 		
 ; Start-up Tips		
 	Start_Tips =	

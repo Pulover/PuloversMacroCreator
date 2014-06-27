@@ -787,6 +787,8 @@
 	d_Lang082 =	Datoteka nije pronađena!
 	d_Lang083 =	Kopija je pronađena. Želite li ga otvoriti?
 	d_Lang084 =	Molimo spremite promjene prije zakazivanja zadatak.
+	d_Lang085 =	Nedostaje "End Loop" izjavu u Macro 
+	d_Lang086 =	Nedostaje '"End If" iskaz u Macro
 		
 ; Start-up Tips		
 	Start_Tips =	

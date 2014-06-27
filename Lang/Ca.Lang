@@ -787,6 +787,8 @@
 	d_Lang082 =	El fitxer no s'ha trobat!
 	d_Lang083 =	S'ha trobat un fitxer de còpia de seguretat. Vols obrir-lo?
 	d_Lang084 =	Deseu els canvis abans de programar una tasca.
+	d_Lang085 =	Falta "End Loop" declaració en la Macro 
+	d_Lang086 =	Falta "End If" declaració en la Macro
 		
 ; Start-up Tips		
 	Start_Tips =	
