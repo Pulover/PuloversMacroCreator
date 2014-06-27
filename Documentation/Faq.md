@@ -61,7 +61,7 @@ Yes, use the [Timer](p1-Main.html#buttons-&-menus).
 
 ### Can I run a Macro in a background window?
 
-If the window is a Win32 application with exposed controls you might be able to use Control commands to interact with it without needing to have it active in the foreground. For more info check the [video tutorial for control commands[(http://www.macrocreator.com/new-tutorial-control-commands/).
+If the window is a Win32 application with exposed controls you might be able to use Control commands to interact with it without needing to have it active in the foreground. For more info check the [video tutorial for control commands](http://www.macrocreator.com/new-tutorial-control-commands/).
 
 ### Can I schedule a Macro to run when I want?
 
