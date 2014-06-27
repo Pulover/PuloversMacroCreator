@@ -7,7 +7,7 @@
 * [Can I make playback go faster/slower?](#can-i-make-playback-go-faster/slower)
 * [Can I execute a custom action based on Pixel/Image search result?](#can-i-execute-a-custom-action-based-on-pixel/image-search-result)
 * [Can I run a Macro in a timed interval?](#can-i-run-a-macro-in-a-timed-interval)
-* [Can I run a Macro in a window in a background window?](#can-i-run-a-macro-in-a-background-window)
+* [Can I run a Macro in a background window?](#can-i-run-a-macro-in-a-background-window)
 * [Can I schedule a Macro to run when I want?](#can-i-schedule-a-macro-to-run-when-i-want)
 * [How do I increment/add a value in a variable on every loop iteration?](#how-do-i-increment/add-a-value-in-a-variable-on-every-loop-iteration?)
 * [Is Macro Creator Portable?](#is-macro-creator-portable)
@@ -59,7 +59,7 @@ Follow these steps to execute an action for Pixel/Image search based on a condit
 
 Yes, use the [Timer](p1-Main.html#buttons-&-menus).  
 
-### Can I run a Macro in a window in a background window?
+### Can I run a Macro in a background window?
 
 If the window is a Win32 application with exposed controls you might be able to use Control commands to interact with it without needing to have it active in the foreground. For more info check the [video tutorial for control commands[(http://www.macrocreator.com/new-tutorial-control-commands/).
 
