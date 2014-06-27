@@ -2,14 +2,14 @@
 	Library: Pulover's Macro Creator
 		*The Complete Automation Tool*
 		
-		Version: 4.1.1  
+		Version: 4.1.2  
 		
 		[www.macrocreator.com](http://www.macrocreator.com)  
 		[Forum Thread](http://ahkscript.org/boards/viewtopic.php?f=6&t=143)  
 		
 		Author: Pulover \[Rodolfo U. Batista\]  
 		[pulover@macrocreator.com](mailto:pulover@macrocreator.com)  
-		Copyright © 2012-2013 Rodolfo U. Batista  
+		Copyright © 2012-2014 Rodolfo U. Batista  
 		
 		Software License: [GNU General Public License](License.html)  
 		
