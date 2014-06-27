@@ -40,6 +40,7 @@ Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jör
 
 * Added Options toolbar items to Options Menu.
 * Added support for *WinHttp.WinHttpRequest.5.1* object methods in *COM Interface*.
+* Added debugging messages for missing "End Loop" and "End If" statements (highlighting must be enabled).
 * Changed commands, except Send and Click, to not stop playback when main window is active.
 * Fixed bug with *Pause* button of Controls Toolbar.
 * Fixed bug with *Gosub* command inside loops.
