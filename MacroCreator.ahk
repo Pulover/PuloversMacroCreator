@@ -10709,6 +10709,11 @@ return
 ;##### Playback Commands #####
 
 pb_Send:
+	If WinActive("ahk_id " PMCWinID)
+	{
+		StopIt := 1
+		return
+	}
 	Send, %Step%
 return
 pb_ControlSend:
@@ -10716,11 +10721,26 @@ pb_ControlSend:
 	ControlSend, %Target%, %Step%, % Win[1], % Win[2], % Win[3], % Win[4]
 return
 pb_Click:
+	If WinActive("ahk_id " PMCWinID)
+	{
+		StopIt := 1
+		return
+	}
 	Click, %Step%
 return
 pb_ControlClick:
 	Win := SplitWin(Window)
 	ControlClick, %Target%, % Win[1], % Win[2], %Par1%, %Par2%, %Par3%, % Win[3], % Win[4]
+return
+pb_SendEvent:
+	If WinActive("ahk_id " PMCWinID)
+	{
+		StopIt := 1
+		return
+	}
+	If (Action = "[Text]")
+		SetKeyDelay, %DelayX%
+	SendEvent, %Step%
 return
 pb_Sleep:
 	If (Step = "Random")
@@ -10747,6 +10767,11 @@ pb_MsgBox:
 	ChangeProgBarColor("20D000", "OSCProg", 28)
 return
 pb_SendRaw:
+	If WinActive("ahk_id " PMCWinID)
+	{
+		StopIt := 1
+		return
+	}
 	SendRaw, %Step%
 return
 pb_ControlSendRaw:
@@ -11075,11 +11100,6 @@ pb_Clipboard:
 		Send, {Control Down}{v}{Control Up}
 	Clipboard := SavedClip
 	SavedClip =
-return
-pb_SendEvent:
-	If (Action = "[Text]")
-		SetKeyDelay, %DelayX%
-	SendEvent, %Step%
 return
 pb_Control:
 	Win := SplitWin(Window)
@@ -12120,15 +12140,15 @@ If ((WPHKC = 1) || (WPHKC = 2))
 {
 	Input
 	ToolTip
-	If Record = 1
+	If (Record = 1)
 		GoSub, RowCheck
 	If WinActive("ahk_id " PMCWinID)
 	{
 		GuiControl, chMacro:+Redraw, InputList%A_List%
-		Record := 0, StopIt := 1
+		Record := 0 ;, StopIt := 1
 		Sleep, 100
 		GoSub, RecStop
-		GoSub, ResetHotkeys
+		; GoSub, ResetHotkeys
 	}
 	IfWinExist, ahk_id %PMCOSC%
 		Gui, 28:+AlwaysOntop

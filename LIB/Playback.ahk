@@ -302,7 +302,7 @@
 							SkipIt--
 						End%PointMarker% := A_Index, aHK_Or := Macro_On
 						GoToLab := LoopSection(Start%PointMarker%, End%PointMarker%, LoopCount[PointMarker], Macro_On
-						, PointMarker, mLoopIndex, o_TimesG[Macro_On])
+						, PointMarker, mLoopIndex, o_TimesG[Macro_On], LoopCount)
 						o_Loop%PointMarker% := ""
 						If IsObject(GoToLab)
 							return GoToLab
@@ -504,7 +504,7 @@
 		GoSub, OnFinishAction
 }
 
-LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC)
+LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC, ByRef LoopCount)
 {
 	local lCount, lIdx, L_Index, mLoopIndex, _Label, IfError := 0
 
@@ -731,7 +731,7 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC)
 							SkipIt--
 						End%PointMarker% := Start + A_Index
 					,	GoToLab := LoopSection(Start%PointMarker%, End%PointMarker%, LoopCount[PointMarker], lcL
-						, PointMarker, mainL, mainC)
+						, PointMarker, mainL, mainC, LoopCount)
 					,	o_Loop%PointMarker% := ""
 						If (GoToLab = "_return")
 							return GoToLab
