@@ -5523,6 +5523,30 @@ If (WinCom = "WinSet")
 }
 Else If (WinCom = "WinMove")
 	Details := PosX ", " PosY ", " SizeX ", " SizeY
+Else If (WinCom = "WinSetTitle")
+{
+	GoSub, ClearPars
+	EscCom("Value")
+	StringReplace, Title, Title, ```,, ¢, All
+	StringSplit, Par, Title, `,, %A_Space%
+	If ((Par0 <= 1) && (Value <> ""))
+	{
+		Title .= ", , " Value
+	}
+	Else
+	{
+		If (Value <> "")
+			Par3 := Value
+		Title := ""
+		Loop, % Par0 + 1
+		{
+			StringReplace, Par%A_Index%,  Par%A_Index%, ¢, ```,, All
+			Title .= Par%A_Index% ", "
+		}
+		Title := RTrim(Title, ", ")
+	}
+	Value := ""
+}
 Else
 	Details := Value
 If InStr(WinCom, "MinimizeAll")
@@ -5635,7 +5659,12 @@ GoSub, WCmd
 If WinCom contains Close,Kill,Wait
 {
 	GuiControl, 11:Enable, Value
-	GuiControl, 11:, ValueT, %c_Lang019%
+	GuiControl, 11:, ValueT, %c_Lang019%:
+}
+Else If WinCom contains SetTitle
+{
+	GuiControl, 11:Enable, Value
+	GuiControl, 11:, ValueT, %c_Lang056%:
 }
 Else
 {
@@ -11531,6 +11560,7 @@ If (Type = cType34)
 return
 
 ClearPars:
+Par0 := ""
 Loop, 7
 	Par%A_Index% := ""
 ,	Det%A_Index% := ""
