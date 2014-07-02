@@ -268,6 +268,7 @@ IniRead, CustomColors, %IniFilePath%, WindowOptions, CustomColors, 0
 IniRead, OSCPos, %IniFilePath%, WindowOptions, OSCPos, X0 Y0
 IniRead, OSTrans, %IniFilePath%, WindowOptions, OSTrans, 255
 IniRead, OSCaption, %IniFilePath%, WindowOptions, OSCaption, 0
+IniRead, AutoRefresh, %IniFilePath%, WindowOptions, AutoRefresh, 0
 IniRead, UserLayout, %IniFilePath%, ToolbarOptions, UserLayout
 IniRead, MainLayout, %IniFilePath%, ToolbarOptions, MainLayout
 IniRead, MacroLayout, %IniFilePath%, ToolbarOptions, MacroLayout
@@ -897,6 +898,8 @@ If (EditLayout <> "ERROR")
 	TB_Layout(TbEdit, EditLayout, TbEdit_ID)
 If (SettingsLayout <> "ERROR")
 	TB_Layout(TbSettings, SettingsLayout, TbSettings_ID)
+TB_Edit(tbPrev, "PrevRefreshButton", AutoRefresh)
+,	TB_Edit(tbPrevF, "PrevRefreshButton", AutoRefresh)
 return
 
 TbFile:
@@ -12092,6 +12095,7 @@ IniWrite, %CustomColors%, %IniFilePath%, WindowOptions, CustomColors
 IniWrite, %OSCPos%, %IniFilePath%, WindowOptions, OSCPos
 IniWrite, %OSTrans%, %IniFilePath%, WindowOptions, OSTrans
 IniWrite, %OSCaption%, %IniFilePath%, WindowOptions, OSCaption
+IniWrite, %AutoRefresh%, %IniFilePath%, WindowOptions, AutoRefresh
 IniWrite, %UserLayout%, %IniFilePath%, ToolbarOptions, UserLayout
 IniWrite, %MainLayout%, %IniFilePath%, ToolbarOptions, MainLayout
 IniWrite, %MacroLayout%, %IniFilePath%, ToolbarOptions, MacroLayout
