@@ -32,16 +32,17 @@
 	r_lang002 =	&Aktifkan Makro
 	r_lang003 =	Ma&in Makro Semasa
 	r_lang004 =	&Pemasa
-	r_lang005 =	Mai&n dari Row Terpilih
-	r_lang006 =	&Bermain sehingga Row Terpilih
-	r_lang007 =	Main Ba&ris Terpilih
-	r_lang008 =	&Konteks hotkeys Sensitif
-	r_lang009 =	&Tambah Makro
-	r_lang010 =	T&utup Makro
-	r_lang011 =	&Gandakan Makro
-	r_lang012 =	&Edit Makro
-	r_lang013 =	Imp&ort Makro
-	r_lang014 =	&Simpan Makro Semasa
+	r_lang005 =	&Nyahaktifkan Makro
+	r_lang006 =	Main &dari Row Terpilih
+	r_lang007 =	&Bermain sehingga Row Terpilih
+	r_lang008 =	Main Ba&ris Terpilih
+	r_lang009 =	&Konteks hotkeys Sensitif
+	r_lang010 =	&Tambah Makro
+	r_lang011 =	T&utup Makro
+	r_lang012 =	&Gandakan Makro
+	r_lang013 =	&Edit Makro
+	r_lang014 =	Imp&ort Makro
+	r_lang015 =	&Simpan Makro Semasa
 		
 ; Commands Sub Menu		
 	i_Lang001 =	&Mouse

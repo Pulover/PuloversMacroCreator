@@ -32,16 +32,17 @@
 	r_lang002 =	&Kích hoạt Macro
 	r_lang003 =	&Chơi vĩ mô hiện tại
 	r_lang004 =	&Hẹn giờ
-	r_lang005 =	Ch&ơi từ Row chọn
-	r_lang006 =	Chơ&i cho đến khi hàng được chọn
-	r_lang007 =	Chơi &dòng chọn
-	r_lang008 =	H&otkeys bối cảnh nhạy cảm
-	r_lang009 =	&Thêm vĩ mô
-	r_lang010 =	&Gần vĩ mô
-	r_lang011 =	&Bản sao vĩ mô
-	r_lang012 =	Ch&ỉnh Sửa Macro
-	r_lang013 =	&Nhập khẩu vĩ mô
-	r_lang014 =	&Lưu vĩ mô hiện tại
+	r_lang005 =	&Tắt Macros
+	r_lang006 =	Ch&ơi từ Row chọn
+	r_lang007 =	Chơ&i cho đến khi hàng được chọn
+	r_lang008 =	Chơi &dòng chọn
+	r_lang009 =	H&otkeys bối cảnh nhạy cảm
+	r_lang010 =	Th&êm vĩ mô
+	r_lang011 =	&Gần vĩ mô
+	r_lang012 =	&Bản sao vĩ mô
+	r_lang013 =	Ch&ỉnh Sửa Macro
+	r_lang014 =	&Nhập khẩu vĩ mô
+	r_lang015 =	&Lưu vĩ mô hiện tại
 		
 ; Commands Sub Menu		
 	i_Lang001 =	&Chuột

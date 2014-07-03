@@ -8361,33 +8361,33 @@ return
 PlayFrom:
 pb_From := !pb_From
 If !(pb_From)
-	Menu, MacroMenu, Uncheck, %r_Lang005%`t%_s%Alt+1
+	Menu, MacroMenu, Uncheck, %r_Lang006%`t%_s%Alt+1
 Else
-	Menu, MacroMenu, Check, %r_Lang005%`t%_s%Alt+1
-Menu, MacroMenu, Uncheck, %r_Lang006%`t%_s%Alt+2
-Menu, MacroMenu, Uncheck, %r_Lang007%`t%_s%Alt+3
+	Menu, MacroMenu, Check, %r_Lang006%`t%_s%Alt+1
+Menu, MacroMenu, Uncheck, %r_Lang007%`t%_s%Alt+2
+Menu, MacroMenu, Uncheck, %r_Lang008%`t%_s%Alt+3
 pb_To := "", pb_Sel := ""
 return
 
 PlayTo:
 pb_To := !pb_To
 If !(pb_To)
-	Menu, MacroMenu, Uncheck, %r_Lang006%`t%_s%Alt+2
+	Menu, MacroMenu, Uncheck, %r_Lang007%`t%_s%Alt+2
 Else
-	Menu, MacroMenu, Check, %r_Lang006%`t%_s%Alt+2
-Menu, MacroMenu, Uncheck, %r_Lang005%`t%_s%Alt+1
-Menu, MacroMenu, Uncheck, %r_Lang007%`t%_s%Alt+3
+	Menu, MacroMenu, Check, %r_Lang007%`t%_s%Alt+2
+Menu, MacroMenu, Uncheck, %r_Lang006%`t%_s%Alt+1
+Menu, MacroMenu, Uncheck, %r_Lang008%`t%_s%Alt+3
 pb_From := "", pb_Sel := ""
 return
 
 PlaySel:
 pb_Sel := !pb_Sel
 If !(pb_Sel)
-	Menu, MacroMenu, Uncheck, %r_Lang007%`t%_s%Alt+3
+	Menu, MacroMenu, Uncheck, %r_Lang008%`t%_s%Alt+3
 Else
-	Menu, MacroMenu, Check, %r_Lang007%`t%_s%Alt+3
-Menu, MacroMenu, Uncheck, %r_Lang005%`t%_s%Alt+1
-Menu, MacroMenu, Uncheck, %r_Lang006%`t%_s%Alt+2
+	Menu, MacroMenu, Check, %r_Lang008%`t%_s%Alt+3
+Menu, MacroMenu, Uncheck, %r_Lang006%`t%_s%Alt+1
+Menu, MacroMenu, Uncheck, %r_Lang007%`t%_s%Alt+2
 pb_To := "", pb_From := ""
 return
 
@@ -8794,6 +8794,7 @@ GoSub, CopySelection
 HistoryMacro%A_List% := new LV_Rows()
 GuiControl, chTimes:, TimesG, %c_Time%
 GoSub, b_Start
+GuiControl, chMacro:+Redraw, InputList%A_List%
 return
 
 CopyList:
@@ -12572,19 +12573,21 @@ Menu, MacroMenu, Add, %r_Lang002%`t%_s%Ctrl+Enter, PlayStart
 Menu, MacroMenu, Add, %r_Lang003%`t%_s%Ctrl+Shift+Enter, TestRun
 Menu, MacroMenu, Add, %r_Lang004%`t%_s%Ctrl+Shift+T, RunTimer
 Menu, MacroMenu, Add
-Menu, MacroMenu, Add, %r_Lang005%`t%_s%Alt+1, PlayFrom
-Menu, MacroMenu, Add, %r_Lang006%`t%_s%Alt+2, PlayTo
-Menu, MacroMenu, Add, %r_Lang007%`t%_s%Alt+3, PlaySel
+Menu, MacroMenu, Add, %r_Lang005%`t%_s%Ctrl+Shift+R, ResetHotkeys
 Menu, MacroMenu, Add
-Menu, MacroMenu, Add, %r_Lang008%`t%_s%Ctrl+H, SetWin
+Menu, MacroMenu, Add, %r_Lang006%`t%_s%Alt+1, PlayFrom
+Menu, MacroMenu, Add, %r_Lang007%`t%_s%Alt+2, PlayTo
+Menu, MacroMenu, Add, %r_Lang008%`t%_s%Alt+3, PlaySel
 Menu, MacroMenu, Add
-Menu, MacroMenu, Add, %r_Lang009%`t%_s%Ctrl+T, TabPlus
-Menu, MacroMenu, Add, %r_Lang010%`t%_s%Ctrl+W, TabClose
-Menu, MacroMenu, Add, %r_Lang011%`t%_s%Ctrl+Shift+D, DuplicateList
-Menu, MacroMenu, Add, %r_Lang012%`t%_s%Ctrl+Shift+M, EditMacros
+Menu, MacroMenu, Add, %r_Lang009%`t%_s%Ctrl+H, SetWin
 Menu, MacroMenu, Add
-Menu, MacroMenu, Add, %r_Lang013%`t%_s%Ctrl+I, Import
-Menu, MacroMenu, Add, %r_Lang014%`t%_s%Ctrl+Alt+S, SaveCurrentList
+Menu, MacroMenu, Add, %r_Lang010%`t%_s%Ctrl+T, TabPlus
+Menu, MacroMenu, Add, %r_Lang011%`t%_s%Ctrl+W, TabClose
+Menu, MacroMenu, Add, %r_Lang012%`t%_s%Ctrl+Shift+D, DuplicateList
+Menu, MacroMenu, Add, %r_Lang013%`t%_s%Ctrl+Shift+M, EditMacros
+Menu, MacroMenu, Add
+Menu, MacroMenu, Add, %r_Lang014%`t%_s%Ctrl+I, Import
+Menu, MacroMenu, Add, %r_Lang015%`t%_s%Ctrl+Alt+S, SaveCurrentList
 
 Menu, CustomMenu, Add, %v_lang010%, TbCustomize
 Menu, CustomMenu, Add, %v_lang011%, TbCustomize
@@ -12701,6 +12704,8 @@ Menu, Tray, Add, %w_Lang008%, f_AbortKey
 Menu, Tray, Add, %w_Lang004%, Record
 Menu, Tray, Add, %r_Lang004%, RunTimer
 Menu, Tray, Add
+Menu, Tray, Add, %r_Lang005%, ResetHotkeys
+Menu, Tray, Add
 Menu, Tray, Add, %w_Lang002%, Preview
 Menu, Tray, Add, %f_Lang010%, ListVars
 Menu, Tray, Add, %y_Lang003%, OnScControls
@@ -12811,13 +12816,13 @@ Menu, MacroMenu, Icon, %r_Lang001%`t%_s%Ctrl+R, %ResDllPath%, 54
 Menu, MacroMenu, Icon, %r_Lang002%`t%_s%Ctrl+Enter, %ResDllPath%, 46
 Menu, MacroMenu, Icon, %r_Lang003%`t%_s%Ctrl+Shift+Enter, %ResDllPath%, 48
 Menu, MacroMenu, Icon, %r_Lang004%`t%_s%Ctrl+Shift+T, %ResDllPath%, 71
-Menu, MacroMenu, Icon, %r_lang008%`t%_s%Ctrl+H, %ResDllPath%, 47
-Menu, MacroMenu, Icon, %r_Lang009%`t%_s%Ctrl+T, %ResDllPath%, 66
-Menu, MacroMenu, Icon, %r_Lang010%`t%_s%Ctrl+W, %ResDllPath%, 68
-Menu, MacroMenu, Icon, %r_Lang011%`t%_s%Ctrl+Shift+D, %ResDllPath%, 69
-Menu, MacroMenu, Icon, %r_Lang012%`t%_s%Ctrl+Shift+M, %ResDllPath%, 97
-Menu, MacroMenu, Icon, %r_Lang013%`t%_s%Ctrl+I, %ResDllPath%, 28
-Menu, MacroMenu, Icon, %r_Lang014%`t%_s%Ctrl+Alt+S, %ResDllPath%, 67
+Menu, MacroMenu, Icon, %r_Lang009%`t%_s%Ctrl+H, %ResDllPath%, 47
+Menu, MacroMenu, Icon, %r_Lang010%`t%_s%Ctrl+T, %ResDllPath%, 66
+Menu, MacroMenu, Icon, %r_Lang011%`t%_s%Ctrl+W, %ResDllPath%, 68
+Menu, MacroMenu, Icon, %r_Lang012%`t%_s%Ctrl+Shift+D, %ResDllPath%, 69
+Menu, MacroMenu, Icon, %r_Lang013%`t%_s%Ctrl+Shift+M, %ResDllPath%, 97
+Menu, MacroMenu, Icon, %r_Lang014%`t%_s%Ctrl+I, %ResDllPath%, 28
+Menu, MacroMenu, Icon, %r_Lang015%`t%_s%Ctrl+Alt+S, %ResDllPath%, 67
 Menu, OptionsMenu, Icon, %o_Lang001%`t%_s%Ctrl+G, %ResDllPath%, 43
 Menu, HelpMenu, Icon, %h_Lang001%`t%_s%F1, %ResDllPath%, 24
 Menu, DonationMenu, Icon, %p_Lang001%, %ResDllPath%, 12
@@ -12908,9 +12913,11 @@ Menu, SpeedDnMenu, Add, 4x, SpeedOpt
 Menu, SpeedDnMenu, Add, 8x, SpeedOpt
 Menu, SpeedDnMenu, Add, 16x, SpeedOpt
 Menu, SpeedDnMenu, Add, 32x, SpeedOpt
-Menu, PlayOptMenu, Add, %r_Lang005%, PlayFrom
-Menu, PlayOptMenu, Add, %r_Lang006%, PlayTo
-Menu, PlayOptMenu, Add, %r_Lang007%, PlaySel
+Menu, PlayOptMenu, Add, %r_Lang005%, ResetHotkeys
+Menu, PlayOptMenu, Add
+Menu, PlayOptMenu, Add, %r_Lang006%, PlayFrom
+Menu, PlayOptMenu, Add, %r_Lang007%, PlayTo
+Menu, PlayOptMenu, Add, %r_Lang008%, PlaySel
 Menu, PlayOptMenu, Add
 Menu, PlayOptMenu, Add, %t_Lang036%, :SpeedUpMenu
 Menu, PlayOptMenu, Add, %t_Lang037%, :SpeedDnMenu
@@ -12922,11 +12929,11 @@ Menu, PlayOptMenu, Add, %t_Lang143%, PlayOpt
 Menu, PlayOptMenu, Add, %t_Lang107%, PlayOpt
 
 If (pb_From)
-	Menu, PlayOptMenu, Check, %r_Lang005%
-If (pb_To)
 	Menu, PlayOptMenu, Check, %r_Lang006%
-If (pb_Sel)
+If (pb_To)
 	Menu, PlayOptMenu, Check, %r_Lang007%
+If (pb_Sel)
+	Menu, PlayOptMenu, Check, %r_Lang008%
 
 If (ShowStep)
 	Menu, PlayOptMenu, Check, %t_Lang100%

@@ -32,16 +32,17 @@
 	r_lang002 =	&Aktiválása Makrók
 	r_lang003 =	&Játssz Current Macro
 	r_lang004 =	&Időzítő
-	r_lang005 =	&Lejátszás kiválasztott sor
-	r_lang006 =	J&átssz, amíg a kijelölt sor
-	r_lang007 =	L&ejátszás kijelölt sorok
-	r_lang008 =	&Context Sensitive gyorsbillentyűk
-	r_lang009 =	&Kedvencek Macro
-	r_lang010 =	&Bezárás Macro
-	r_lang011 =	I&smétlődő Macro
-	r_lang012 =	S&zerkeszteni Makrók
-	r_lang013 =	Im&port Macro
-	r_lang014 =	Me&ntse el az aktuális makró
+	r_lang005 =	&Kikapcsolása Makrók
+	r_lang006 =	&Lejátszás kiválasztott sor
+	r_lang007 =	J&átssz, amíg a kijelölt sor
+	r_lang008 =	L&ejátszás kijelölt sorok
+	r_lang009 =	&Context Sensitive gyorsbillentyűk
+	r_lang010 =	Ke&dvencek Macro
+	r_lang011 =	&Bezárás Macro
+	r_lang012 =	I&smétlődő Macro
+	r_lang013 =	S&zerkeszteni Makrók
+	r_lang014 =	Im&port Macro
+	r_lang015 =	Me&ntse el az aktuális makró
 		
 ; Commands Sub Menu		
 	i_Lang001 =	&Egér

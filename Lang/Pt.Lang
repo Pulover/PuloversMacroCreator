@@ -32,16 +32,17 @@
 	r_lang002 =	&Ativar Macros
 	r_lang003 =	&Executar Macro Atual
 	r_lang004 =	&Temporizador
-	r_lang005 =	Executar a Partir da Linha Selecionada
-	r_lang006 =	Executar Até a Linha Selecionada
-	r_lang007 =	Executar Linhas Selecionadas
-	r_lang008 =	Ata&lhos Condicionais
-	r_lang009 =	A&dicionar Macro
-	r_lang010 =	&Fechar Macro
-	r_lang011 =	D&uplicar Macro
-	r_lang012 =	Ed&itar Macros
-	r_lang013 =	I&mportar Macro
-	r_lang014 =	&Salvar Macro Atual
+	r_lang005 =	&Desativar Macros
+	r_lang006 =	E&xecutar a Partir da Linha Selecionada
+	r_lang007 =	Exe&cutar Até a Linha Selecionada
+	r_lang008 =	Exec&utar Linhas Selecionadas
+	r_lang009 =	Ata&lhos Condicionais
+	r_lang010 =	Ad&icionar Macro
+	r_lang011 =	&Fechar Macro
+	r_lang012 =	Du&plicar Macro
+	r_lang013 =	Edita&r Macros
+	r_lang014 =	I&mportar Macro
+	r_lang015 =	&Salvar Macro Atual
 		
 ; Commands Sub Menu		
 	i_Lang001 =	&Mouse
