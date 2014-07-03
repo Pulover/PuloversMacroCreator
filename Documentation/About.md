@@ -45,6 +45,7 @@ Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jör
 * Fixed bug with *Pause* button of Controls Toolbar.
 * Fixed bug with *Gosub* command inside loops.
 * Fixed bug with A_Loop variables in *Compare Variables* statement.
+* Fixed bug with A_Space variable in Functions.
 * Fixed escaped comma bug in *Assign Variable* command.
 * Fixed *Get Coordinates* tool in *Image/Pixel Search* window not getting correct values in Window Coord mode.
 * Fixed *Copy to* command not copying Comment and Color fields.
