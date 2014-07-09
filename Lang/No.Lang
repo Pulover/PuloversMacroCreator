@@ -32,16 +32,17 @@
 	r_lang002 =	&Aktivere makroer
 	r_lang003 =	&Spille Gjeldende Macro
 	r_lang004 =	&Timer
-	r_lang005 =	S&pille fra utvalgte rad
-	r_lang006 =	Sp&ille til valgt rad
-	r_lang007 =	Spi&lle valgte rader
-	r_lang008 =	&Kontekstsensitiv Hurtigtaster
-	r_lang009 =	L&egg Makro
-	r_lang010 =	L&ukk Makro
-	r_lang011 =	&Duplisere Makro
-	r_lang012 =	Redi&gere Makroer
-	r_lang013 =	I&mport Macro
-	r_lang014 =	Lagre g&jeldende Macro
+	r_lang005 =	&Deaktiver Makroer
+	r_lang006 =	S&pille fra utvalgte rad
+	r_lang007 =	Sp&ille til valgt rad
+	r_lang008 =	Spi&lle valgte rader
+	r_lang009 =	&Kontekstsensitiv Hurtigtaster
+	r_lang010 =	L&egg Makro
+	r_lang011 =	L&ukk Makro
+	r_lang012 =	Duplisere &Makro
+	r_lang013 =	Redi&gere Makroer
+	r_lang014 =	Imp&ort Macro
+	r_lang015 =	Lagre g&jeldende Macro
 		
 ; Commands Sub Menu		
 	i_Lang001 =	&Mus

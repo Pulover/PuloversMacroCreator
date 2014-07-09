@@ -32,16 +32,17 @@
 	r_lang002 =	&Aktivoi Makrot
 	r_lang003 =	&Pelaa Nyt Macro
 	r_lang004 =	A&jastin
-	r_lang005 =	&Toista valitun rivin
-	r_lang006 =	P&elaa kunnes valittu rivi
-	r_lang007 =	Pe&laa valitut rivit
-	r_lang008 =	T&ilannekohtaisia ​​pikanäppäimet
-	r_lang009 =	Li&sää Makro
-	r_lang010 =	S&ulje Makro
-	r_lang011 =	&Monista Makro
-	r_lang012 =	Mu&okkaa Makrot
-	r_lang013 =	Tuo Ma&cro
-	r_lang014 =	Tallenna N&ykyinen Macro
+	r_lang005 =	&Deaktivoida Makrot
+	r_lang006 =	&Toista valitun rivin
+	r_lang007 =	P&elaa kunnes valittu rivi
+	r_lang008 =	Pe&laa valitut rivit
+	r_lang009 =	T&ilannekohtaisia ​​pikanäppäimet
+	r_lang010 =	Li&sää Makro
+	r_lang011 =	S&ulje Makro
+	r_lang012 =	&Monista Makro
+	r_lang013 =	Mu&okkaa Makrot
+	r_lang014 =	Tuo Ma&cro
+	r_lang015 =	Tallenna N&ykyinen Macro
 		
 ; Commands Sub Menu		
 	i_Lang001 =	&Hiiri

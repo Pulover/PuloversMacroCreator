@@ -32,16 +32,17 @@
 	r_lang002 =	&Vključite Makri
 	r_lang003 =	&Igraj trenutni makro
 	r_lang004 =	&Timer
-	r_lang005 =	&Predvajaj izbrano vrstico
-	r_lang006 =	I&grajo dokler izbrano vrstico
-	r_lang007 =	P&redvajanje izbrane vrstice
-	r_lang008 =	&Konteksta Bližnjice
-	r_lang009 =	&Dodaj makro
-	r_lang010 =	&Zapri Makro
-	r_lang011 =	Dv&ojnik makro
-	r_lang012 =	&Uredi Makri
-	r_lang013 =	Uvoz &Makro
-	r_lang014 =	S&hrani trenutni makro
+	r_lang005 =	&Deaktivovať Makrá
+	r_lang006 =	&Predvajaj izbrano vrstico
+	r_lang007 =	I&grajo dokler izbrano vrstico
+	r_lang008 =	P&redvajanje izbrane vrstice
+	r_lang009 =	&Konteksta Bližnjice
+	r_lang010 =	D&odaj makro
+	r_lang011 =	&Zapri Makro
+	r_lang012 =	Dvo&jnik makro
+	r_lang013 =	&Uredi Makri
+	r_lang014 =	Uvoz &Makro
+	r_lang015 =	S&hrani trenutni makro
 		
 ; Commands Sub Menu		
 	i_Lang001 =	&Miška

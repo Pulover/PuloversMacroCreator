@@ -32,16 +32,17 @@
 	r_lang002 =	&Activeer Macro's
 	r_lang003 =	&Speel huidige macro
 	r_lang004 =	&Timer
-	r_lang005 =	A&fspelen vanaf geselecteerde rij
-	r_lang006 =	S&peel tot geselecteerde rij
-	r_lang007 =	Sp&elen Geselecteerde Rijen
-	r_lang008 =	&Context gevoelige sneltoetsen
-	r_lang009 =	&Voeg Macro
-	r_lang010 =	S&luiten Macro
-	r_lang011 =	&Dubbele Macro
-	r_lang012 =	Mac&ro's Bewerken
-	r_lang013 =	&Import Macro
-	r_lang014 =	Save &huidige Macro
+	r_lang005 =	&Deactiveren Macro's
+	r_lang006 =	A&fspelen vanaf geselecteerde rij
+	r_lang007 =	S&peel tot geselecteerde rij
+	r_lang008 =	Sp&elen Geselecteerde Rijen
+	r_lang009 =	&Context gevoelige sneltoetsen
+	r_lang010 =	&Voeg Macro
+	r_lang011 =	S&luiten Macro
+	r_lang012 =	D&ubbele Macro
+	r_lang013 =	Mac&ro's Bewerken
+	r_lang014 =	&Import Macro
+	r_lang015 =	Save &huidige Macro
 		
 ; Commands Sub Menu		
 	i_Lang001 =	&Muis

@@ -357,6 +357,7 @@
 						{
 							LoopField := DerefVars(A_LoopField)
 							StringReplace, LoopField, LoopField, ¢, `,, All
+							StringReplace, LoopField, LoopField, ¥Space, %A_Space%, All
 							Params.Insert(LoopField)
 						}
 						Try
@@ -382,6 +383,7 @@
 							StringReplace, LoopField, LoopField, `r`n, ``n, All
 							StringReplace, LoopField, LoopField, `n, ``n, All
 							StringReplace, LoopField, LoopField, ¢, `,, All
+							StringReplace, LoopField, LoopField, ¥Space, %A_Space%, All
 							Params.Insert(LoopField)
 						}
 						If (A_AhkPath)
@@ -774,6 +776,7 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC, ByRef LoopCount)
 						{
 							LoopField := DerefVars(A_LoopField)
 							StringReplace, LoopField, LoopField, ¢, `,, All
+							StringReplace, LoopField, LoopField, ¥Space, %A_Space%, All
 							Params.Insert(LoopField)
 						}
 						Try
@@ -799,6 +802,7 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC, ByRef LoopCount)
 							StringReplace, LoopField, LoopField, `r`n, ``n, All
 							StringReplace, LoopField, LoopField, `n, ``n, All
 							StringReplace, LoopField, LoopField, ¢, `,, All
+							StringReplace, LoopField, LoopField, ¥Space, %A_Space%, All
 							Params.Insert(LoopField)
 						}
 						If (A_AhkPath)
@@ -985,6 +989,9 @@ IfStatement(ThisError, l_Point)
 		Tooltip
 		CheckVars("Step|Target|Window", PointMarker)
 		EscCom("Step|TimesX|DelayX|Target|Window", 1)
+		StringReplace, Step, Step, ¥Space, %A_Space%, All
+		StringReplace, Target, Target, ¥Space, %A_Space%, All
+		StringReplace, Window, Window, ¥Space, %A_Space%, All
 		If (ThisError > 0)
 		{
 			ThisError++
@@ -1245,6 +1252,8 @@ AssignVar(Name, Operator, Value)
 {
 	global
 	local TempVar
+	
+	StringReplace, Value, Value, ¥Space, %A_Space%, All
 	If InStr(Value, "!")=1
 		Value := !SubStr(Value, 2)
 	If (Operator = ":=")
@@ -1290,6 +1299,7 @@ CheckVars(Match_List, l_Point="")
 						LoopField := DerefVars(A_LoopField)
 						StringReplace, LoopField, LoopField, ```,, `,, All
 						StringReplace, LoopField, LoopField, ¢, `,, All
+						StringReplace, LoopField, LoopField, ¥Space, %A_Space%, All
 						Params.Insert(LoopField)
 					}
 					FuncResult := %Funct1%(Params*)
@@ -1337,6 +1347,7 @@ DerefVars(v_String)
 {
 	global
 	
+	StringReplace, v_String, v_String, `%A_Space`%, ¥Space, All
 	StringReplace, v_String, v_String, ```%, ¤, All
 	While, RegExMatch(v_String, "%(\w+)%", rMatch)
 	{

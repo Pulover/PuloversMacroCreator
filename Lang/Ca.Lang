@@ -32,16 +32,17 @@
 	r_lang002 =	&Activar Macros
 	r_lang003 =	&Jugar Macro actual
 	r_lang004 =	&Timer
-	r_lang005 =	J&uga de fila seleccionada
-	r_lang006 =	Juga &fins que la Columna seleccionat
-	r_lang007 =	Juga f&iles seleccionades
-	r_lang008 =	T&ecles d'accés directe sensibles al context
-	r_lang009 =	Afegi&r Macro
-	r_lang010 =	Ta&ncar Macro
-	r_lang011 =	&Duplicar macro
-	r_lang012 =	Edita &Macros
-	r_lang013 =	Im&portació Macro
-	r_lang014 =	Guardar Ma&cro actual
+	r_lang005 =	&Desactivar Macros
+	r_lang006 =	J&uga de fila seleccionada
+	r_lang007 =	Juga &fins que la Columna seleccionat
+	r_lang008 =	Juga f&iles seleccionades
+	r_lang009 =	T&ecles d'accés directe sensibles al context
+	r_lang010 =	Afegi&r Macro
+	r_lang011 =	Ta&ncar Macro
+	r_lang012 =	Du&plicar macro
+	r_lang013 =	Edita &Macros
+	r_lang014 =	Imp&ortació Macro
+	r_lang015 =	Guardar Ma&cro actual
 		
 ; Commands Sub Menu		
 	i_Lang001 =	&Ratolí

@@ -32,16 +32,17 @@
 	r_lang002 =	&Activer les macros
 	r_lang003 =	&Jouer Macro actuelle
 	r_lang004 =	&Minuteur
-	r_lang005 =	J&ouez à partir de la ligne sélectionnée
-	r_lang006 =	Jo&uez jusqu'à ce que la ligne sélectionnée
-	r_lang007 =	Joue&z Lignes sélectionnées
-	r_lang008 =	&Touches sensibles au contexte
-	r_lang009 =	Ajoute&r une macro
-	r_lang010 =	&Fermer Macro
-	r_lang011 =	&Dupliquer Macro
-	r_lang012 =	Mod&ifier Macros
-	r_lang013 =	Im&porter Macro
-	r_lang014 =	E&nregistrer la macro actuelle
+	r_lang005 =	&Désactiver Les Macros
+	r_lang006 =	J&ouez à partir de la ligne sélectionnée
+	r_lang007 =	Jo&uez jusqu'à ce que la ligne sélectionnée
+	r_lang008 =	Joue&z Lignes sélectionnées
+	r_lang009 =	&Touches sensibles au contexte
+	r_lang010 =	Ajoute&r une macro
+	r_lang011 =	&Fermer Macro
+	r_lang012 =	Du&pliquer Macro
+	r_lang013 =	Mod&ifier Macros
+	r_lang014 =	Importer Ma&cro
+	r_lang015 =	E&nregistrer la macro actuelle
 		
 ; Commands Sub Menu		
 	i_Lang001 =	&Souris

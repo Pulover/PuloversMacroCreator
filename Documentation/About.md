@@ -41,10 +41,12 @@ Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jör
 * Added Options toolbar items to Options Menu.
 * Added support for *WinHttp.WinHttpRequest.5.1* object methods in *COM Interface*.
 * Added debugging messages for missing "End Loop" and "End If" statements (highlighting must be enabled).
+* Added *Deactivate Macros* command to Macro, Play Button and Tray Icon menus.
 * Changed commands, except Send and Click, to not stop playback when main window is active.
 * Fixed bug with *Pause* button of Controls Toolbar.
 * Fixed bug with *Gosub* command inside loops.
 * Fixed bug with A_Loop variables in *Compare Variables* statement.
+* Fixed bug with A_Space variable in Functions.
 * Fixed escaped comma bug in *Assign Variable* command.
 * Fixed *Get Coordinates* tool in *Image/Pixel Search* window not getting correct values in Window Coord mode.
 * Fixed *Copy to* command not copying Comment and Color fields.

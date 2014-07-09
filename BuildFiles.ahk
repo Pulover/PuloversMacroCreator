@@ -19,7 +19,7 @@ Script =
 #define PmcVersion "%PMCVer%"
 #define PmcCompany "Rodolfo U. Batista"
 #define PmcURL "http://www.macrocreator.com"
-#define PmcCopyright "Copyright (C) 2012-2013 Rodolfo U. Batista"
+#define PmcCopyright "Copyright (C) 2012-2014 Rodolfo U. Batista"
 #define PmcExeName "MacroCreator.exe"
 #define PmcExt "pmc"
 #define WorkDir "%A_ScriptDir%"
