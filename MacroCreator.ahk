@@ -6,8 +6,8 @@
 ; pulover@macrocreator.com
 ; Home: http://www.macrocreator.com
 ; Forum: http://ahkscript.org/boards/viewtopic.php?f=6&t=143
-; Version: 4.1.2
-; Release Date: June, 2014
+; Version: 4.1.3
+; Release Date: July, 2014
 ; AutoHotkey Version: 1.1.15.00
 ; Copyright © 2012-2014 Rodolfo U. Batista
 ; GNU General Public License 3.0 or higher
@@ -12179,7 +12179,7 @@ Loop, %TabCount%
 A_List := ActiveA_List
 Gui, chMacro:Default
 Gui, chMacro:ListView, InputList%A_List%
-GuiControl, chMacro:-Redraw, InputList%A_List%
+GuiControl, chMacro:+Redraw, InputList%A_List%
 return
 
 WinCheck:

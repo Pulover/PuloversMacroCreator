@@ -8,8 +8,8 @@ Author: Pulover \[Rodolfo U. Batista\]
 [pulover@macrocreator.com](mailto:pulover@macrocreator.com)  
 Copyright © 2012-2014 Rodolfo U. Batista  
 
-Version: 4.1.2  
-Release Date: June, 2014  
+Version: 4.1.3  
+Release Date: July, 2014  
 AutoHotkey Version: 1.1.15.00  
 
 Software License: [GNU General Public License](License.html)  
@@ -35,6 +35,10 @@ Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jör
 
 
 # Change Log
+
+## Version 4.1.3
+
+* Fixed Macro List redrawing issue.
 
 ## Version 4.1.2
 
