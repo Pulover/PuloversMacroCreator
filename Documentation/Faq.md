@@ -4,6 +4,8 @@
 
 * [Syntax differences from AutoHotkey.](#syntax-differences-from-autohotkey.)
 * [How do I start Recording / Playback?](#how-do-i-start-recording-/-playback)
+* [Can I import AHK scripts to Macro Creator and edit them?](#can-i-import-ahk-scripts-to-macro-creator-and-edit-them)
+* [Can Macro Creator automate Firefox or Chrome as it does with Internet Explorer?](#can-macro-creator-automate-firefox-or-chrome-as-it-does-with-internet-explorer)
 * [Can I make playback go faster/slower?](#can-i-make-playback-go-faster/slower)
 * [Can I execute a custom action based on Pixel/Image search result?](#can-i-execute-a-custom-action-based-on-pixel/image-search-result)
 * [Can I run a Macro in a timed interval?](#can-i-run-a-macro-in-a-timed-interval)
@@ -39,6 +41,14 @@
 
 * To start recording you need to press the Record button and then press the recording hotkey (default is F9). For more details see [Record](p2-Record.html).  
 * To play a Macro you have to press the Play Button to activate the Hotkeys and use them to play each Macro. For more details see [Playback](p3-Playback.html).  
+
+### Can I import AHK scripts to Macro Creator and edit them?
+
+No. AHK scripts are too complex to be parsed and the conversion would never be perfect. You can, however, include the original PMC code into the exported scripts by checking this option in the [Export Window](p5-Export.html).
+
+### Can Macro Creator automate Firefox or Chrome as it does with Internet Explorer?
+
+No. Macro Creator can connect to IE because its controls are exposed via [COM](Commands/COM_Interface.html), but that type of interaction is not possible with other browsers. Control Commands won't work either, so you might have more luck with mouse, keystrokes and Image Search.
 
 ### Can I make playback go faster/slower?
 

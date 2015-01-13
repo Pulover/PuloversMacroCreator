@@ -2311,6 +2311,7 @@ return
 ExpButton:
 Gui, 14:+OwnDialogs
 Gui, 14:Submit, NoHide
+OutputDebug, % ExpFile
 If (ExpFile = "")
 	return
 If (Ex_AbortKey = 1)
@@ -2330,10 +2331,10 @@ If (Ex_PauseKey = 1)
 	}
 }
 SelectedFileName := ExpFile
-SplitPath, SelectedFileName,,, ext
+SplitPath, SelectedFileName,,, ext,, driv
 If (ext <> "ahk")
 	SelectedFileName .= ".ahk"
-If drive = 
+If (driv = "")
 {
 	MsgBox, 16, %d_Lang007%, %d_Lang010%
 	return

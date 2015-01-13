@@ -39,6 +39,7 @@ Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jör
 ## Version 4.1.3
 
 * Fixed Macro List redrawing issue.
+* Fixed wrong *Invalid address* message on export.
 
 ## Version 4.1.2
 
