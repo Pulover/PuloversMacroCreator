@@ -9,7 +9,7 @@
 		
 		Author: Pulover \[Rodolfo U. Batista\]  
 		[pulover@macrocreator.com](mailto:pulover@macrocreator.com)  
-		Copyright © 2012-2014 Rodolfo U. Batista  
+		Copyright © 2012-2015 Rodolfo U. Batista  
 		
 		Software License: [GNU General Public License](License.html)  
 		

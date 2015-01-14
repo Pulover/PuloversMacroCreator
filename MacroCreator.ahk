@@ -7,9 +7,9 @@
 ; Home: http://www.macrocreator.com
 ; Forum: http://ahkscript.org/boards/viewtopic.php?f=6&t=143
 ; Version: 4.1.3
-; Release Date: July, 2014
-; AutoHotkey Version: 1.1.15.00
-; Copyright © 2012-2014 Rodolfo U. Batista
+; Release Date: January, 2015
+; AutoHotkey Version: 1.1.19.01
+; Copyright © 2012-2015 Rodolfo U. Batista
 ; GNU General Public License 3.0 or higher
 ; <http://www.gnu.org/licenses/gpl-3.0.txt>
 
@@ -71,8 +71,8 @@ Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jör
 ; Compiler Settings
 ;@Ahk2Exe-SetName Pulover's Macro Creator
 ;@Ahk2Exe-SetDescription Pulover's Macro Creator
-;@Ahk2Exe-SetVersion 4.1.2
-;@Ahk2Exe-SetCopyright Copyright © 2012-2014 Rodolfo U. Batista
+;@Ahk2Exe-SetVersion 4.1.3
+;@Ahk2Exe-SetCopyright Copyright © 2012-2015 Rodolfo U. Batista
 ;@Ahk2Exe-SetOrigFilename MacroCreator.exe
 
 If A_OSVersion in WIN_NT4,WIN_95,WIN_98,WIN_ME
@@ -129,7 +129,7 @@ Loop
 		break
 }
 
-CurrentVersion := "4.1.2", ReleaseDate := "June, 2014"
+CurrentVersion := "4.1.3", ReleaseDate := "January, 2015"
 
 ;##### Ini File Read #####
 
@@ -2934,7 +2934,7 @@ Gui, 34:Add, Text,, Author: Pulover [Rodolfo U. Batista]
 Gui, 34:Add, Link, y+0, <a href="mailto:pulover@macrocreator.com">pulover@macrocreator.com</a>
 Gui, 34:Add, Text, y+0,
 (
-Copyright © 2012-2014 Rodolfo U. Batista
+Copyright © 2012-2015 Rodolfo U. Batista
 
 Version: %CurrentVersion% (%OsBit%)
 Release Date: %ReleaseDate%
