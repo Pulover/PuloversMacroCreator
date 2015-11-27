@@ -126,8 +126,11 @@
 		Loop, % LV_GetCount()
 		{
 			LV_GetTexts(A_Index, Action, Details, TimesX, DelayX, Type, Target, Window, Comment, Color)
-			ckd := (LV_GetNext(A_Index-1, "Checked")=A_Index) ? "" : 0
+		,	ckd := (LV_GetNext(A_Index-1, "Checked")=A_Index) ? "" : 0
 		,	Row[A_Index] := [ckd A_Index, Action, Details, TimesX, DelayX, Type, Target, Window, Comment, Color]
+		}
+		Loop, % LV_GetCount()
+		{
 			For each, Col in Row[A_Index]
 			{
 				Col := RegExReplace(Col, "\|", "¢")

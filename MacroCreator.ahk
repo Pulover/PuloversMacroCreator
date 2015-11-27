@@ -6,9 +6,9 @@
 ; pulover@macrocreator.com
 ; Home: http://www.macrocreator.com
 ; Forum: http://ahkscript.org/boards/viewtopic.php?f=6&t=143
-; Version: 4.1.3
-; Release Date: January, 2015
-; AutoHotkey Version: 1.1.19.01
+; Version: 4.1.4
+; Release Date: November, 2015
+; AutoHotkey Version: 1.1.22.07
 ; Copyright © 2012-2015 Rodolfo U. Batista
 ; GNU General Public License 3.0 or higher
 ; <http://www.gnu.org/licenses/gpl-3.0.txt>
@@ -71,7 +71,7 @@ Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jör
 ; Compiler Settings
 ;@Ahk2Exe-SetName Pulover's Macro Creator
 ;@Ahk2Exe-SetDescription Pulover's Macro Creator
-;@Ahk2Exe-SetVersion 4.1.3
+;@Ahk2Exe-SetVersion 4.1.4
 ;@Ahk2Exe-SetCopyright Copyright © 2012-2015 Rodolfo U. Batista
 ;@Ahk2Exe-SetOrigFilename MacroCreator.exe
 
@@ -129,7 +129,7 @@ Loop
 		break
 }
 
-CurrentVersion := "4.1.3", ReleaseDate := "January, 2015"
+CurrentVersion := "4.1.4", ReleaseDate := "November, 2015"
 
 ;##### Ini File Read #####
 
@@ -11635,7 +11635,7 @@ If OnFinishCode =  9
 ExitApp
 
 GuiClose:
-If !CloseAction
+If (!CloseAction)
 {
 	Gui, 1:+Disabled
 	Gui, 35:-SysMenu hwndCloseSel +owner1
@@ -11665,10 +11665,23 @@ Gui, chMacro:Default
 Gui, chMacro:ListView, InputList%A_List%
 If ((ListCount > 0) && (SavePrompt))
 {
+	GoSub, ProjBackup
 	MsgBox, 35, %d_Lang005%, % d_Lang002 "`n" (CurrentFileName ? """" CurrentFileName """" : "")
 	IfMsgBox, Yes
 	{
-		GoSub, Save
+		ActiveFileName := CurrentFileName
+		If (CurrentFileName = "")
+			GoSub, SelectFile
+		IfExist %CurrentFileName%
+		{
+			FileDelete %CurrentFileName%
+			If ErrorLevel
+			{
+				MsgBox, 16, %d_Lang007%, %d_Lang006% "%CurrentFileName%".
+				return
+			}
+		}
+		FileCopy, %SettingsFolder%\~ActiveProject.pmc, %CurrentFileName%, 1
 		IfMsgBox, Cancel
 			return
 	}
@@ -11679,16 +11692,16 @@ DetectHiddenWindows, On
 WinGet, WindowState, MinMax, ahk_id %PMCWinID%
 If (WindowState <> -1)
 	WinState := WindowState
-If WindowState = 0
+If (WindowState = 0)
 {
 	GuiGetSize(mGuiWidth, mGuiHeight), MainWinSize := "W" mGuiWidth " H" mGuiHeight
 	WinGetPos, mGuiX, mGuiY,,, ahk_id %PMCWinID%
 	MainWinPos := "X" mGuiX " Y" mGuiY
 }
-If WinExist("ahk_id " PrevID)
+If (WinExist("ahk_id " PrevID))
 {
 	WinGet, WindowState, MinMax, ahk_id %PrevID%
-	If WindowState = 0
+	If (WindowState = 0)
 		GuiGetSize(pGuiWidth, pGuiHeight, 2), PrevWinSize := "W" pGuiWidth " H" pGuiHeight
 }
 ColSizes := ""

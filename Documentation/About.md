@@ -8,9 +8,9 @@ Author: Pulover \[Rodolfo U. Batista\]
 [pulover@macrocreator.com](mailto:pulover@macrocreator.com)  
 Copyright © 2012-2015 Rodolfo U. Batista  
 
-Version: 4.1.3  
-Release Date: January, 2015  
-AutoHotkey Version: 1.1.19.01  
+Version: 4.1.4  
+Release Date: November, 2015  
+AutoHotkey Version: 1.1.22.07  
 
 Software License: [GNU General Public License](License.html)  
 
@@ -35,6 +35,10 @@ Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jör
 
 
 # Change Log
+
+## Version 4.1.3
+
+* Fixed corrupted pmc files saved on exit.
 
 ## Version 4.1.3
 
