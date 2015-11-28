@@ -32,14 +32,14 @@ FileCopy, Resources.dll, Compiled\Resources.dll, 1
 FileCopy, SciLexer-x64.dll, Compiled\SciLexer-x64.dll, 1
 FileCopy, SciLexer-x86.dll, Compiled\SciLexer-x86.dll, 1
 
-RunWait, %AhkDir%\Compiler\Ahk2Exe.exe /in MacroCreator.ahk /out Compiled\MacroCreator.exe /icon Resources\PMC4_Mult.ico /bin "%AhkDir%\Compiler\Unicode 32-bit.bin" /mpress 1,, UseErrorLevel
+RunWait, %AhkDir%\Compiler\Ahk2Exe.exe /in MacroCreator.ahk /out Compiled\MacroCreator.exe /icon Resources\PMC4_Mult.ico /bin "%AhkDir%\Compiler\Unicode 32-bit.bin",, UseErrorLevel
 If ErrorLevel = ERROR
 {
 	MsgBox, 0x40000, Error, % "Error code: " A_LastError " at line " A_LineNumber - 3
 	ExitApp
 }
 
-RunWait, %AhkDir%\Compiler\Ahk2Exe.exe /in MacroCreator.ahk /out Compiled\MacroCreator-x64.exe /icon Resources\PMC4_Mult.ico /bin "%AhkDir%\Compiler\Unicode 64-bit.bin" /mpress 1,, UseErrorLevel
+RunWait, %AhkDir%\Compiler\Ahk2Exe.exe /in MacroCreator.ahk /out Compiled\MacroCreator-x64.exe /icon Resources\PMC4_Mult.ico /bin "%AhkDir%\Compiler\Unicode 64-bit.bin",, UseErrorLevel
 If ErrorLevel = ERROR
 {
 	MsgBox, 0x40000, Error, % "Error code: " A_LastError " at line " A_LineNumber - 3
