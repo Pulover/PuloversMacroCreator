@@ -99,7 +99,6 @@ SetBatchLines, -1
 FileEncoding, UTF-8
 Process, Priority,, High
 #NoTrayIcon
-RunAs
 
 Menu, Tray, Tip, Pulovers's Macro Creator
 DefaultIcon := (A_IsCompiled) ? A_ScriptFullPath
