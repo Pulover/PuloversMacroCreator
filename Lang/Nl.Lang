@@ -790,6 +790,11 @@
 	d_Lang084 =	Bewaar je veranderingen voordat een taak plannen.
 	d_Lang085 =	Ontbrekende "End Loop" verklaring in Macro 
 	d_Lang086 =	Ontbrekende "End If" verklaring in Macro
+	d_Lang087 =	
+	(LTrim	
+		Merk op dat wijzigingen in het script buiten het programma NIET uw macro zal invloed hebben op geen enkele manier.
+		 Deze functie is alleen bedoeld als een snelle exportfunctie. PMC is niet bedoeld om een AHK-script editor.
+	)	
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -822,6 +827,7 @@
 		U kunt uw eigen globale variabelen ingesteld bij het opstarten en uit te voeren om te worden geladen. Ga naar Opties > Instellingen > Gebruiker globale variabelen om ze toe te voegen.
 		U kunt geavanceerde functies zoals substr en RegExReplace uit het raam Functions (Invoegen > Als Verklaringen / variabelen / functies) draaien. Of draai je eigen functies van externe AutoHotkey scripts.
 	)	
+		
 ; Tooltips		
 	AutoKey_TT =	Sneltoets om Macro te spelen
 	ManKey_TT =	Sneltoets naar macro "stap-voor-stap" play

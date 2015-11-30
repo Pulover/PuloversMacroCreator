@@ -790,6 +790,11 @@
 	d_Lang084 =	Harap menyimpan perubahan sebelum penjadwalan tugas.
 	d_Lang085 =	Hilang "End Loop" pernyataan dalam Makro 
 	d_Lang086 =	Hilang "End If" pernyataan dalam Makro
+	d_Lang087 =	
+	(LTrim	
+		Perhatikan bahwa perubahan yang dibuat untuk script luar program TIDAK AKAN MEMPENGARUHI macro ANDA dengan cara apapun.
+		 Fitur ini hanya dimaksudkan sebagai fungsi ekspor cepat. PMC tidak dimaksudkan untuk menjadi editor naskah AHK.
+	)	
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -822,6 +827,7 @@
 		Anda dapat mengatur Variabel global Anda sendiri yang akan dimuat pada start up dan diekspor. Pergi ke Pilihan> Pengaturan> User global Variabel untuk menambahkannya.
 		Anda dapat menjalankan fungsi-fungsi lanjutan seperti substr dan RegExReplace dari jendela Fungsi (Insert> Jika Laporan / Variabel / Fungsi). Atau menjalankan fungsi-fungsi anda sendiri dari script Autohotkey eksternal.
 	)	
+		
 ; Tooltips		
 	AutoKey_TT =	Hotkey untuk bermain Makro
 	ManKey_TT =	Hotkey untuk bermain Makro "langkah-demi-langkah"

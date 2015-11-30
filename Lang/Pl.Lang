@@ -790,6 +790,11 @@
 	d_Lang084 =	Proszę zapisać zmiany przed planowania zadania.
 	d_Lang085 =	Brakuje "End Loop" oświadczenie w Makro 
 	d_Lang086 =	Brakuje "End If" oświadczenie w Makro
+	d_Lang087 =	
+	(LTrim	
+		Zauważ, że zmiany wprowadzone w skrypcie poza programem nie ma wpływu makr w żaden sposób.
+		 Ta opcja jest przeznaczona tylko jako szybki funkcji eksportu. PMC nie ma być edytor skryptów AHK.
+	)	
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -822,6 +827,7 @@
 		Możesz ustawić własne zmiennych globalnych, które mają być załadowane na początku i na wywóz. Przejdź do Opcje > Ustawienia > użytkownika zmiennych globalnych, aby je dodać.
 		Możesz uruchomić zaawansowane funkcje, takie jak substr i RegExReplace w oknie funkcji (Wstaw > if / zmienne / funkcje). Albo uruchomić własnych funkcji z zewnętrznych skryptów AutoHotkey.
 	)	
+		
 ; Tooltips		
 	AutoKey_TT =	Skrót grać makro
 	ManKey_TT =	Skrót grać makro "krok po kroku"

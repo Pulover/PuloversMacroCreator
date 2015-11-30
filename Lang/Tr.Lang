@@ -790,6 +790,11 @@
 	d_Lang084 =	Bir görev zamanlama önce değişiklikleri kaydedin.
 	d_Lang085 =	Makro deyimi 'Loop End' Eksik 
 	d_Lang086 =	Makro ifadesi "End If" Eksik
+	d_Lang087 =	
+	(LTrim	
+		Programın dışında komut yapılan değişiklikler hiçbir şekilde Makrolarınızı etkilemez dikkat edin.
+		 Bu özellik sadece hızlı bir ihracat fonksiyonu olarak ifade edilir. PMC bir AHK komut editörü olmak anlamına gelmez.
+	)	
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -822,6 +827,7 @@
 		Bu başlangıç ve ihraç edilecek yüklenecek kendi Global değişkenler ayarlayabilirsiniz. Eklemek için Seçenek > Ayarlar > Kullanıcı Global Değişkenler git.
 		Sen Fonksiyonlar pencere (Eğer Tablolar / Değişkenler / İşlevleri > Ekle) bu tür substr ve RegExReplace gibi gelişmiş fonksiyonları çalıştırabilirsiniz. Veya harici AutoHotkey komut, kendi fonksiyonları çalıştırmak.
 	)	
+		
 ; Tooltips		
 	AutoKey_TT =	Kısayol Makro oynamak
 	ManKey_TT =	Kısayol Makro "adım adım" oynamak

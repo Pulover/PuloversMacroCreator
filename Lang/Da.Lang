@@ -790,6 +790,11 @@
 	d_Lang084 =	Gem dine ændringer før du planlægger en opgave.
 	d_Lang085 =	Mangler "End Loop" erklæring i Makro 
 	d_Lang086 =	Mangler "End If" erklæring i Makro
+	d_Lang087 =	
+	(LTrim	
+		Bemærk at ændringer i scriptet uden for programmet ikke vil påvirke din MAKROER på nogen måde.
+		 Denne funktion er kun ment som en hurtig eksport funktion. PMC er ikke ment som en AHK script editor.
+	)	
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -822,6 +827,7 @@
 		Du kan indstille dine egne globale variable, der skal lastes på opstart og skal eksporteres. Gå til Valg > Indstillinger > Brugerindstillinger globale variabler til at tilføje dem.
 		Du kan køre avancerede funktioner såsom SUBSTR og RegExReplace fra Funktioner vindue (Indsæt > Hvis Statements / variable / funktioner). Eller køre dine egne funktioner fra eksterne AutoHotkey scripts.
 	)	
+		
 ; Tooltips		
 	AutoKey_TT =	Genvejstast for at spille Macro
 	ManKey_TT =	Genvejstast for at spille Macro "step-by-step"

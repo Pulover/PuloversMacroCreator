@@ -158,6 +158,7 @@ IniRead, HideMainWin, %IniFilePath%, Options, HideMainWin, 1
 IniRead, DontShowPb, %IniFilePath%, Options, DontShowPb, 0
 IniRead, DontShowRec, %IniFilePath%, Options, DontShowRec, 0
 IniRead, DontShowAdm, %IniFilePath%, Options, DontShowAdm, 0
+IniRead, DontShowEdt, %IniFilePath%, Options, DontShowEdt, 0
 IniRead, ConfirmDelete, %IniFilePath%, Options, ConfirmDelete, 1
 IniRead, ShowTips, %IniFilePath%, Options, ShowTips, 1
 IniRead, NextTip, %IniFilePath%, Options, NextTip, 1
@@ -339,8 +340,18 @@ If (DefaultEditor = "ERROR")
 	StringReplace, DefaultEditor, DefaultEditor, ",, All ; "
 	StringReplace, DefaultEditor, DefaultEditor, `%1
 }
-If (DefaultEdit = "")
-	DefaultEdit := "notepad.exe"
+If (DefaultEditor = "")
+{
+	ProgramsFolder := (A_PtrSize = 8) ? ProgramFiles " (x86)" : ProgramFiles
+	If (FileExist(ProgramsFolder "\Notepad++\notepad++.exe"))
+		DefaultEditor := ProgramsFolder "\Notepad++\notepad++.exe"
+	Else If (FileExist(ProgramFiles "\Sublime Text 2\sublime_text.exe"))
+		DefaultEditor := ProgramFiles "\Sublime Text 2\sublime_text.exe"
+	Else If (FileExist(ProgramFiles " (x86)\Sublime Text 2\sublime_text.exe"))
+		DefaultEditor := ProgramFiles " (x86)\Sublime Text 2\sublime_text.exe"
+	Else
+		DefaultEditor := "notepad.exe"
+}
 
 GoSub, WriteSettings
 
@@ -1155,6 +1166,19 @@ Gui, 2:Hide
 return
 
 EditScript:
+If (!DontShowEdt)
+{
+	Gui, 1:+Disabled
+	Gui, 35:-SysMenu +HwndTipScrID +owner1
+	Gui, 35:Color, FFFFFF
+	Gui, 35:Add, Pic, y+20 Icon78 W48 H48, %ResDllPath%
+	Gui, 35:Add, Text, yp x+10, %d_Lang087%`n
+	Gui, 35:Add, Checkbox, -Wrap W300 vDontShowEdt R1, %d_Lang053%
+	Gui, 35:Add, Button, -Wrap Default y+10 W90 H23 gTipClose2, %c_Lang020%
+	Gui, 35:Show,, %AppName%
+	WinWaitClose, ahk_id %TipScrID%
+	Gui, 1:-Disabled
+}
 EdPreview := LV_Export(A_List)
 If (EdPreview = "")
 	return
@@ -11749,6 +11773,7 @@ AbortKey := "F8"
 ,	DontShowPb := 0
 ,	DontShowRec := 0
 ,	DontShowAdm := 0
+,	DontShowEdt := 0
 ,	ConfirmDelete := 1
 ,	IfDirectContext := "None"
 ,	IfDirectWindow := ""
@@ -11849,8 +11874,8 @@ AbortKey := "F8"
 RegRead, DefaultEditor, HKEY_CLASSES_ROOT, AutoHotkeyScript\Shell\Edit\Command
 StringReplace, DefaultEditor, DefaultEditor, ",, All ; "
 StringReplace, DefaultEditor, DefaultEditor, `%1
-If (DefaultEdit = "")
-	DefaultEdit := "notepad.exe"
+If (DefaultEditor = "")
+	DefaultEditor := "notepad.exe"
 WinSet, Transparent, %OSTrans%, ahk_id %PMCOSC%
 GuiControl, 28:, OSTrans, 255
 Gui, 28:-Caption
@@ -12012,6 +12037,7 @@ IniWrite, %HideMainWin%, %IniFilePath%, Options, HideMainWin
 IniWrite, %DontShowPb%, %IniFilePath%, Options, DontShowPb
 IniWrite, %DontShowRec%, %IniFilePath%, Options, DontShowRec
 IniWrite, %DontShowAdm%, %IniFilePath%, Options, DontShowAdm
+IniWrite, %DontShowEdt%, %IniFilePath%, Options, DontShowEdt
 IniWrite, %ConfirmDelete%, %IniFilePath%, Options, ConfirmDelete
 IniWrite, %ShowTips%, %IniFilePath%, Options, ShowTips
 IniWrite, %NextTip%, %IniFilePath%, Options, NextTip

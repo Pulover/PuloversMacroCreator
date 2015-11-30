@@ -790,6 +790,11 @@
 	d_Lang084 =	Molimo spremite promjene prije zakazivanja zadatak.
 	d_Lang085 =	Nedostaje "End Loop" izjavu u Macro 
 	d_Lang086 =	Nedostaje '"End If" iskaz u Macro
+	d_Lang087 =	
+	(LTrim	
+		Obavijest da su promjene koje su napravljene na skriptu izvan programa NEĆE utjecati na vaše makronaredbe na bilo koji način.
+		 Ova značajka je namijenjena samo kao brzi izvoza funkciju. PMC nije značilo da se urednik AHK skripta.
+	)	
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -822,6 +827,7 @@
 		Podeu definir les seves pròpies variables globals per ser carregat en l'arrencada i per a l'exportació. Aneu a Opcions > Configuració > Usuari Variables globals per afegir.
 		Podeu executar funcions avançades com ara substr i RegExReplace de la finestra Funcions (Inserir > Si Declaracions / variables / funcions). O executar les seves pròpies funcions de seqüència AutoHotkey externs.
 	)	
+		
 ; Tooltips		
 	AutoKey_TT =	Hotkey igrati Macro
 	ManKey_TT =	Hotkey igrati Makro "korak po korak"

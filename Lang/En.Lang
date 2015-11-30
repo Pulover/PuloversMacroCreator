@@ -790,6 +790,11 @@
 	d_Lang084 =	Please save your changes before scheduling a task.
 	d_Lang085 =	Missing "End Loop" statement in Macro
 	d_Lang086 =	Missing "End If" statement in Macro
+	d_Lang087 =	
+	(LTrim	
+		Notice that changes made to the script outside the program WILL NOT AFFECT YOUR MACROS in any way.
+		This feature is only meant as a quick export function. PMC is not meant to be an AHK script editor.
+	)	
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -822,6 +827,7 @@
 		You can set your own Global Variables to be loaded on startup and to be exported. Go to Options > Settings > User Global Variables to add them.
 		You can run advanced functions such as SubStr and RegExReplace from the Functions window (Insert > If Statements / Variables / Functions). Or run your own functions from external AutoHotkey scripts.
 	)	
+		
 ; Tooltips		
 	AutoKey_TT =	Hotkey to play Macro
 	ManKey_TT =	Hotkey to play Macro "step-by-step"

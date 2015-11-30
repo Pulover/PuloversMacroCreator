@@ -790,6 +790,11 @@
 	d_Lang084 =	Deseu els canvis abans de programar una tasca.
 	d_Lang085 =	Falta "End Loop" declaració en la Macro 
 	d_Lang086 =	Falta "End If" declaració en la Macro
+	d_Lang087 =	
+	(LTrim	
+		Recordeu que els canvis realitzats en el guió fora del programa no afectarà la seva MACROS de cap manera.
+		 Aquesta característica només està pensada com una funció d'exportació ràpida. PMC no està destinat a ser un editor de scripts AHK.
+	)	
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -822,6 +827,7 @@
 		Podeu definir les seves pròpies variables globals per ser carregat en l'arrencada i per a l'exportació. Aneu a Opcions> Configuració> Usuari Variables globals per afegir.
 		Podeu executar funcions avançades com ara substr i RegExReplace de la finestra Funcions (Inserir> Si Declaracions / variables / funcions). O executar les seves pròpies funcions de seqüència AutoHotkey externs.
 	)	
+		
 ; Tooltips		
 	AutoKey_TT =	Tecla d'accés directe per jugar Macro
 	ManKey_TT =	Tecla d'accés directe per jugar Macro "pas a pas"

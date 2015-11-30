@@ -790,6 +790,11 @@
 	d_Lang084 =	Ole hyvä ja tallentaa muutokset ennen aikataulujen tehtävä.
 	d_Lang085 =	Puuttuu "End Loop" lausuma Makro 
 	d_Lang086 =	Puuttuvat "End If 'lausuma Makro
+	d_Lang087 =	
+	(LTrim	
+		Huomaa, että tehdyt muutokset käsikirjoituksen ulkopuolella ohjelma ei vaikuta MACROS millään tavalla.
+		 Tämä ominaisuus on vain tarkoitettu nopea vientitoiminto. PMC ei ole tarkoitus olla AHK script editor.
+	)	
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -822,6 +827,7 @@
 		Voit asettaa oman Global muuttujat ladataan käynnistettäessä ja viedä. Valitse Valinnat > Asetukset > Käyttäjän yleismuuttujat lisätä ne.
 		Voit käyttää kehittyneitä toimintoja, kuten substr ja RegExReplace päässä toiminnot ikkunan (Lisää > Jos Lausunnot / muuttujat / toiminnot). Tai ajaa omia toimintoja ulkopuolisilta AutoHotkey skriptejä.
 	)	
+		
 ; Tooltips		
 	AutoKey_TT =	Pikanäppäin pelata Macro
 	ManKey_TT =	Pikanäppäin pelata Macro "askel-askeleelta"

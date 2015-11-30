@@ -790,6 +790,11 @@
 	d_Lang084 =	Bitte speichern Sie die Änderungen vor dem Planen einer Aufgabe.
 	d_Lang085 =	Fehlende 'Loop End' Anweisung in Makro
 	d_Lang086 =	Fehlende "End If" Anweisung in Makro
+	d_Lang087 =	
+	(LTrim	
+		Beachten Sie, dass Änderungen am Skript außerhalb des Programms machte keinen Einfluss auf Ihre Makros in keiner Weise.
+		 Diese Funktion wird nur als eine schnelle Exportfunktion gedacht. PMC ist nicht dazu gedacht, ein AHK Script-Editor sein.
+	)	
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -822,6 +827,7 @@
 		Sie können einstellen, dass Ihre eigenen globalen Variablen beim Start geladen bzw. exportiert werden. Wählen Sie Optionen > Einstellungen > Globale Benutzer-Variablen, um Variablen hinzuzufügen.
 		Sie können erweiterte Funktionen wie SubStr und RegExReplace aus dem Funktionen-Fenster ausführen (Einfügen > If-Anweisungen/Variablen/Funktionen). Oder führen Sie eigene Funktionen aus externen AutoHotkey-Skripten aus.
 	)	
+		
 ; Tooltips		
 	AutoKey_TT =	Hotkey auf Makro spielen
 	ManKey_TT =	Hotkey zu spielen Macro "Schritt-für-Schritt"

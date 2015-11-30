@@ -790,6 +790,11 @@
 	d_Lang084 =	S'il vous plaît enregistrer vos modifications avant de planifier une tâche.
 	d_Lang085 =	Manquant "End Loop" déclaration Macro 
 	d_Lang086 =	Manquant "End If" déclaration Macro
+	d_Lang087 =	
+	(LTrim	
+		Notez que les modifications apportées au script en dehors du programme ne sera pas affecter vos macros en aucune façon.
+		 Cette fonction est uniquement destinée en fonction rapide de l'exportation. PMC est pas destiné à être un éditeur de script AHK.
+	)	
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -822,6 +827,7 @@
 		Vous pouvez définir vos propres variables globales à charger au démarrage et à l'exportation. Allez dans Options > Paramètres > User variables globales pour les ajouter.
 		Vous pouvez exécuter des fonctions avancées telles que SUBSTR et RegExReplace de la fenêtre des fonctions (Insertion > Si Déclarations / variables / fonctions). Ou d'exécuter vos propres fonctions de scripts AutoHotkey externes.
 	)	
+		
 ; Tooltips		
 	AutoKey_TT =	Hotkey à jouer Macro
 	ManKey_TT =	Hotkey à jouer Macro "par étape par étape"

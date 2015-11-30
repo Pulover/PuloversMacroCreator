@@ -790,6 +790,11 @@
 	d_Lang084 =	Kérjük, mentse el a módosításokat, mielőtt ütemezése a feladat.
 	d_Lang085 =	Hiányzó "End Loop" kijelentés Macro 
 	d_Lang086 =	Hiányzó "End If" kijelentés Macro
+	d_Lang087 =	
+	(LTrim	
+		Figyeljük meg, hogy a módosítások a script kívül a program nem fogja befolyásolni a makrókat semmilyen módon.
+		 Ez a funkció csak azt jelentette, mint egy gyors export funkció. PMC nem azt jelentette, hogy egy AHK script editor.
+	)	
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -822,6 +827,7 @@
 		Beállíthatjuk, hogy a saját globális változók kell betölteni az induló, és az exportot. Válassza az Opciók > Beállítások > Felhasználó globális változók, hogy adjunk nekik.
 		Futtathat speciális funkciókat, mint a substr és RegExReplace a funkciók ablakban (Beszúrás > IF / változók / függvények). Vagy futtatni a saját funkciók külső AutoHotkey szkripteket.
 	)	
+		
 ; Tooltips		
 	AutoKey_TT =	Gyorsgomb játszani Macro
 	ManKey_TT =	Gyorsgomb játszani Macro "lépésről-lépésre"

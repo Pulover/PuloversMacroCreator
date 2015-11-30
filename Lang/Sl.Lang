@@ -790,6 +790,11 @@
 	d_Lang084 =	Prosimo, shranite spremembe, preden načrtujete opravilo.
 	d_Lang085 =	Chýbajúce "End Loop" vyhlásenie v Makro 
 	d_Lang086 =	Chýbajúce "End If" vyhlásenie v Makro
+	d_Lang087 =	
+	(LTrim	
+		Obvestilo, da bodo spremembe v pisavi izven programa ne vpliva makre na kakršen koli način.
+		 Ta funkcija je mišljen zgolj kot funkcijo hitrega izvoza. PMC ni mišljeno, da bi urednik AHK scenarij.
+	)	
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -822,6 +827,7 @@
 		Lahko nastavite svoje globalne spremenljivke, ki se naložijo ob zagonu in se izvozijo. Pojdi na Možnosti> Nastavitve> Uporabniške globalnih spremenljivk, da jih dodate.
 		Lahko zaženete napredne funkcije, kot so substr in RegExReplace iz okna Funkcije (Insert> Če Izjave / spremenljivke / funkcije). Ali teči svoje funkcije iz zunanjih AutoHotkey skripte.
 	)	
+		
 ; Tooltips		
 	AutoKey_TT =	Bližnjica za igranje makro
 	ManKey_TT =	Bližnjica za predvajanje makrov "korak za korakom"

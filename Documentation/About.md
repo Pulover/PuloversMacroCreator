@@ -39,6 +39,7 @@ Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jör
 ## Version 4.1.4
 
 * Fixed corrupted pmc files saved on exit.
+* Fixed default editor not set correctly on first run.
 * Removed Launcher.exe from Portable version due to false virus warnings.
 
 ## Version 4.1.3

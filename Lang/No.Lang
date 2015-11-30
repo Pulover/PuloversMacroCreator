@@ -790,6 +790,11 @@
 	d_Lang084 =	Vennligst lagre endringene før planleggingen av en oppgave.
 	d_Lang085 =	Mangler "End Loop" uttalelse i Makro 
 	d_Lang086 =	Mangler "End If" uttalelse i Makro
+	d_Lang087 =	
+	(LTrim	
+		Legg merke til at endringer i scriptet utenfor programmet vil ikke påvirke makroene på noen måte.
+		 Denne funksjonen er bare ment som en rask eksportfunksjonen. PMC er ikke ment å være en AHK script editor.
+	)	
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -822,6 +827,7 @@
 		Du kan sette dine egne globale variabler som skal lastes på oppstart og som skal eksporteres. Gå til Valg > Innstillinger > Bruker globale variabler å legge dem.
 		Du kan kjøre avanserte funksjoner som substr og RegExReplace fra Funksjoner vinduet (Sett inn > Hvis Uttalelser / variabler / funksjoner). Eller kjøre dine egne funksjoner fra eksterne autohotkey skript.
 	)	
+		
 ; Tooltips		
 	AutoKey_TT =	Løsningen å spille Makro
 	ManKey_TT =	Løsningen å spille Macro "step-by-step"

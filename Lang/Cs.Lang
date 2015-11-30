@@ -790,6 +790,11 @@
 	d_Lang084 =	Prosím uložte změny před plánování úkolu.
 	d_Lang085 =	Chybějící "End Loop" prohlášení v Makro 
 	d_Lang086 =	Chybějící "End If" prohlášení v Makro
+	d_Lang087 =	
+	(LTrim	
+		Všimněte si, že změny provedené v skriptu mimo program nebude mít vliv na vaše makra v žádném případě.
+		 Tato funkce je určena pouze k rychlému exportní funkce. PMC není chtěl být editor AHK skript.
+	)	
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -822,6 +827,7 @@
 		Můžete si nastavit vlastní Globální proměnné má být naloženo na spuštění a které má být vyvezeno. Přejít na Možnosti > Nastavení > Uživatelská globální proměnné přidat.
 		Můžete spustit pokročilé funkce jako substr a RegExReplace z funkcí okna (Vložit > if / proměnné / funkce). Nebo spustit vlastní funkce z externích AutoHotKey skriptů.
 	)	
+		
 ; Tooltips		
 	AutoKey_TT =	Klávesová zkratka pro přehrávání makra
 	ManKey_TT =	Klávesová zkratka pro přehrávání makra "krok-za-krokem"
