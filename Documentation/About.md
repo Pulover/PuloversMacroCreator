@@ -23,7 +23,7 @@ just me for [LV_Colors Class](http://www.autohotkey.com/board/topic/88699-class-
 Micahs for the [base code](http://www.autohotkey.com/board/topic/30486-listview-tooltip-on-mouse-hover/?p=280843) of the Drag-Rows function.  
 jaco0646 for the [function](http://www.autohotkey.com/board/topic/47439-user-defined-dynamic-hotkeys) to make hotkey controls detect other keys.  
 Laszlo for the [Monster function](http://www.autohotkey.com/board/topic/15675-monster) to solve expressions.  
-Jethrow for the [IEGet Function](http://www.autohotkey.com/board/topic/47052-basic-webpage-controls).  
+Jethrow for the [IEGet & WBGet Functions](http://www.autohotkey.com/board/topic/47052-basic-webpage-controls).  
 RaptorX for the [Scintilla Wrapper for AHK](http://www.autohotkey.com/board/topic/85928-wrapper-scintilla-wrapper).  
 majkinetor for the [Dlg_Color](http://www.autohotkey.com/board/topic/49214-ahk-ahk-l-forms-framework-08/) function.  
 rbrtryn for the [ChooseColor](http://www.autohotkey.com/board/topic/91229-windows-color-picker-plus/) function.  
@@ -38,6 +38,7 @@ Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jör
 
 ## Version 4.1.4
 
+* Added support for array assignment in Variables window.
 * Fixed corrupted pmc files saved on exit.
 * Fixed default editor not set correctly on first run.
 * Removed Launcher.exe from Portable version due to false virus warnings.

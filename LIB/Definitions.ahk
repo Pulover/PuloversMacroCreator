@@ -53,6 +53,7 @@ ListCount1 := 0
 ,	cType42 := "VBScript"
 ,	cType43 := "JScript"
 ,	cType44 := "Function"
+,	cType45 := "ForLoop"
 
 Action1 := "Click"
 ,	Action2 := "Move"

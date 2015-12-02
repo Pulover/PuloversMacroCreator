@@ -41,7 +41,7 @@ http://www.autohotkey.com/board/topic/47439-user-defined-dynamic-hotkeys
 Laszlo for the Monster function to solve expressions.
 http://www.autohotkey.com/board/topic/15675-monster
 
-Jethrow for the IEGet Function.
+Jethrow for the IEGet & WBGet Functions.
 http://www.autohotkey.com/board/topic/47052-basic-webpage-controls
 
 RaptorX for the Scintilla Wrapper for AHK
@@ -2978,7 +2978,7 @@ just me for LV_Colors Class, GuiCtrlAddTab and for updating ILButton to 64bit.
 Micahs for the base code of the Drag-Rows function.
 jaco0646 for the function to make hotkey controls detect other keys.
 Laszlo for the Monster function to solve expressions.
-Jethrow for the IEGet Function.
+Jethrow for the WBGet & WBGet Functions.
 RaptorX for the Scintilla Wrapper for AHK.
 majkinetor for the Dlg_Color function.
 rbrtryn for the ChooseColor function.
@@ -3838,7 +3838,7 @@ Else
 		o_ie := ""
 	Else
 	{
-		o_ie := IEGet(RegExReplace(SelIEWinName, "§", "|"))
+		o_ie := WBGet(RegExReplace(SelIEWinName, "§", "|"))
 		DetectHiddenWindows, On
 		WinActivate, %SelIEWinName%
 		DetectHiddenWindows, Off
@@ -5022,12 +5022,13 @@ Gui, 12:Add, Tab2, W450 H0 vTabControl AltSubmit, %c_Lang073%|%c_Lang077%|%c_Lan
 ; Loop
 Gui, 12:Add, Groupbox, Section ym xm W450 H200
 Gui, 12:Add, Radio, -Wrap Checked ys+15 xs+10 W80 vLoop gLoopType R1, %c_Lang132%
-Gui, 12:Add, Radio, -Wrap x+5 W80 vLFilePattern gLoopType R1, %c_Lang133%
-Gui, 12:Add, Radio, -Wrap x+5 W80 vLParse gLoopType R1, %c_Lang134%
-Gui, 12:Add, Radio, -Wrap x+5 W80 vLRead gLoopType R1, %c_Lang135%
-Gui, 12:Add, Radio, -Wrap x+5 W80 R1 vLRegistry gLoopType R1, %c_Lang136%
-Gui, 12:Add, Text, y+10 xs+10 W160 R1 Right, %w_Lang015% (%t_Lang004%):
-Gui, 12:Add, Edit, yp x+10 W120 R1 vEdRept
+Gui, 12:Add, Radio, -Wrap y+10 xp W80 vLFilePattern gLoopType R1, %c_Lang133%
+Gui, 12:Add, Radio, -Wrap ys+15 x+5 W80 vLParse gLoopType R1, %c_Lang134%
+Gui, 12:Add, Radio, -Wrap y+10 xp W80 vLFor gLoopType R1, For-Loop
+Gui, 12:Add, Radio, -Wrap ys+15 x+5 W80 vLRead gLoopType R1, %c_Lang135%
+Gui, 12:Add, Radio, -Wrap y+10 xp W80 R1 vLRegistry gLoopType R1, %c_Lang136%
+Gui, 12:Add, Text, ys+15 x+10 W160 R1, %w_Lang015% (%t_Lang004%):
+Gui, 12:Add, Edit, y+10 xp W120 R1 vEdRept
 Gui, 12:Add, UpDown, vTimesL 0x80 Range0-999999999, 2
 Gui, 12:Add, Text, y+10 xs+10 W160 vField1, %c_Lang137%
 Gui, 12:Add, CheckBox, -Wrap Check3 yp x+10 W120 vIncFolders Disabled R1, %c_Lang138%
@@ -7595,7 +7596,7 @@ SelIEWin := IEWindows
 If (SelIEWinName = "[blank]")
 	o_ie := ""
 Else
-	o_ie := IEGet(RegExReplace(SelIEWinName, "§", "|"))
+	o_ie := WBGet(RegExReplace(SelIEWinName, "§", "|"))
 If (A_ThisLabel <> "IEComApply")
 {
 	Gui, 1:-Disabled
@@ -7860,7 +7861,7 @@ If (ComCLSID = "InternetExplorer.Application")
 	If (StopIt)
 		Exit
 	Try
-		%ComHwnd% := IEGet()
+		%ComHwnd% := WBGet()
 	If IsObject(%ComHwnd%)
 	{
 		Title := %ComHwnd%["Document"]["Title"]
@@ -11354,7 +11355,7 @@ pb_IECOM_Set:
 	Catch
 	{
 		If (ComAc)
-			o_ie := IEGet()
+			o_ie := WBGet()
 		Else
 		{
 			o_ie := ComObjCreate("InternetExplorer.Application")
@@ -11411,7 +11412,7 @@ pb_IECOM_Get:
 	Catch
 	{
 		If (ComAc)
-			o_ie := IEGet()
+			o_ie := WBGet()
 		Else
 		{
 			o_ie := ComObjCreate("InternetExplorer.Application")

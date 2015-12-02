@@ -26,7 +26,7 @@ Eval(x, l_Point) { ; non-recursive PRE/POST PROCESSING: I/O forms, numbers, ops,
 		}
 	}
 	
-	While RegExMatch(x, "(\S+)\[(\S+?)\]", Found) ; Arrays
+	While RegExMatch(x, "(\S+)\[(\S+?)\]", Found) ; Read Arrays
 	{
 		Found := RegExReplace(Found, "[\[|\]]", "\$0")
 		If Found2 is not Number
@@ -49,6 +49,33 @@ Eval(x, l_Point) { ; non-recursive PRE/POST PROCESSING: I/O forms, numbers, ops,
 			return y
 		Else
 			x := RegExReplace(x, Found, y)
+	}
+
+	If RegExMatch(x, "^\[(.+)\]$", Found) ; Assign Arrays
+	{
+		y := []
+		Loop, Parse, Found1, `,, %A_Space%%A_Tab%
+		{
+			LoopField := A_LoopField
+			If LoopField is not Number
+			{
+				If (LoopField = "A_Index")
+					LoopField := LoopIndex
+				Else If (LoopField = "ErrorLevel")
+					LoopField := LastError
+				Else If RegExMatch(LoopField, "^""(.*)""", lMatch)
+					LoopField := lMatch1
+				Else If RegExMatch(LoopField, "i)(A_Loop\w+)", lMatch)
+				{
+					I := DerefVars(LoopIndex), L := SubStr(lMatch1, 3)
+				,	LoopField := RegExReplace(LoopField, "U)" lMatch, o_Loop%l_Point%[I][L])
+				}
+				Else
+					LoopField := DerefVars("%" LoopField "%")
+			}
+			y.Insert(LoopField)
+		}
+		return y
 	}
 	If (y <> "")
 	{
