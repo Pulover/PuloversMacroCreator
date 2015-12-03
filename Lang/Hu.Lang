@@ -469,6 +469,7 @@
 	c_Lang203 =	Hasonlítsa össze a változókat
 	c_Lang204 =	Értékelje kifejezés
 	c_Lang205 =	Vidék
+	c_Lang206 =	(A [] létrehozni tömbök, pl .: [10, 20, aVariable, "aString"])
 		
 ; Other Windows		
 	t_Lang001 =	Exportálás AutoHotkey

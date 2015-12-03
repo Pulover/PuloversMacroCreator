@@ -469,6 +469,7 @@
 	c_Lang203 =	Comparació de les variables
 	c_Lang204 =	Avaluar expressió
 	c_Lang205 =	Regió
+	c_Lang206 =	(Utilitzeu [] per crear matrius, per exemple.: [10, 20, aVariable, "aString"])
 		
 ; Other Windows		
 	t_Lang001 =	Exporta a AutoHotkey

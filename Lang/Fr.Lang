@@ -469,6 +469,7 @@
 	c_Lang203 =	Comparer les variables
 	c_Lang204 =	Évaluer expression
 	c_Lang205 =	Région
+	c_Lang206 =	(Utilisez [] pour créer des tableaux, e.g .: [10, 20, aVariable, "aString"])
 		
 ; Other Windows		
 	t_Lang001 =	Exporter vers AutoHotkey

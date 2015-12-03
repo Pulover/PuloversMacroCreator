@@ -469,6 +469,7 @@
 	c_Lang203 =	Jämför variabler
 	c_Lang204 =	Utvärdera uttryck
 	c_Lang205 =	Region
+	c_Lang206 =	(Använd [] för att skapa matriser, t.ex .: [10, 20, aVariable, "aString"])
 		
 ; Other Windows		
 	t_Lang001 =	Exportera till AutoHotkey

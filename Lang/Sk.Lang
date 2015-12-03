@@ -469,6 +469,7 @@
 	c_Lang203 =	Porovnanie premenné
 	c_Lang204 =	Vyhodnotiť výraz
 	c_Lang205 =	Kraj
+	c_Lang206 =	(Použite [] pre vytvorenie poľa, napr.: [10, 20, aVariable, "aString"])
 		
 ; Other Windows		
 	t_Lang001 =	Export do AutoHotkey

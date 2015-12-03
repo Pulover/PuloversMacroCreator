@@ -469,6 +469,7 @@
 	c_Lang203 =	比较变量
 	c_Lang204 =	计算表达式
 	c_Lang205 =	区域
+	c_Lang206 =	（使用[]创建数组，例如：[10, 20, aVariable, "aString"]）
 		
 ; Other Windows		
 	t_Lang001 =	导出为AutoHotkey

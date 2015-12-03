@@ -74,19 +74,24 @@ COMInterface(String, Ptr="", ByRef OutputVar="", CLSID="InternetExplorer.Applica
 						}
 						Params.Insert(Array)
 					}
-					Else If RegExMatch(LoopField, "^\w+\.(.*)", NestStr)
+					Else If RegExMatch(LoopField, "^\w+\.(.*)", NestStr) ; Search for nested strings.
 					{
 						If (Loopfield = "")
 							LoopField := ComObjMissing()
 						Var := LoopField
-						Try
-							Params.Insert(COMInterface(NestStr1, ComSet, "", CLSID))
-						Catch
+						If (NestStr = _Parent11)
+							Params.Insert((!Var) ? (IsObject(Var) ? Var : 0) : Var)
+						Else
 						{
 							Try
-								Params.Insert(COMInterface(NestStr1, Ptr, "", CLSID))
+								Params.Insert(COMInterface(NestStr1, ComSet, "", CLSID))
 							Catch
-								Params.Insert((!Var) ? (IsObject(Var) ? Var : 0) : Var)
+							{
+								Try
+									Params.Insert(COMInterface(NestStr1, Ptr, "", CLSID))
+								Catch
+									Params.Insert((!Var) ? (IsObject(Var) ? Var : 0) : Var)
+							}
 						}
 					}
 					Else

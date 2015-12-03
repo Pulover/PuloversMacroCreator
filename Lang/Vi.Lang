@@ -469,6 +469,7 @@
 	c_Lang203 =	So sánh các biến
 	c_Lang204 =	Đánh giá biểu thức
 	c_Lang205 =	Khu
+	c_Lang206 =	(Sử dụng [] để tạo ra các mảng, ví dụ: .: [10, 20, aVariable, "aString"])
 		
 ; Other Windows		
 	t_Lang001 =	Xuất khẩu sang AutoHotkey

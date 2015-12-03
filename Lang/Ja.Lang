@@ -469,6 +469,7 @@
 	c_Lang203 =	Порівняйте змінних
 	c_Lang204 =	Обчислення виразу...
 	c_Lang205 =	地域
+	c_Lang206 =	（[▲]は、配列を作成するには、e.g：[10, 20, aVariable, "aString"]）
 		
 ; Other Windows		
 	t_Lang001 =	AutoHotkeyにエクスポート

@@ -469,6 +469,7 @@
 	c_Lang203 =	Vergelijk variabelen
 	c_Lang204 =	Evalueer meningsuiting
 	c_Lang205 =	Regio
+	c_Lang206 =	(Gebruik [] om arrays te maken, bijv .: [10, 20, aVariable, "aString"])
 		
 ; Other Windows		
 	t_Lang001 =	Exporteren naar AutoHotkey

@@ -469,6 +469,7 @@
 	c_Lang203 =	Porównaj zmienne
 	c_Lang204 =	Oceny ekspresji
 	c_Lang205 =	Region
+	c_Lang206 =	(Użyj [], aby utworzyć tablice, np .: [10, 20, aVariable, "aString"])
 		
 ; Other Windows		
 	t_Lang001 =	Eksport do AutoHotkey

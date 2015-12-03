@@ -469,6 +469,7 @@
 	c_Lang203 =	Bandingkan variabel
 	c_Lang204 =	Evaluasi ekspresi
 	c_Lang205 =	Wilayah
+	c_Lang206 =	(Gunakan [] untuk membuat array, mis .: [10, 20, aVariable, "aString"])
 		
 ; Other Windows		
 	t_Lang001 =	Ekspor ke AutoHotkey

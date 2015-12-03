@@ -469,6 +469,7 @@
 	c_Lang203 =	Сравни променливи
 	c_Lang204 =	Оценете израз
 	c_Lang205 =	Област
+	c_Lang206 =	(Използвайте [], за да се създаде масиви, напр .: [10, 20, aVariable, "aString"])
 		
 ; Other Windows		
 	t_Lang001 =	Износ за AutoHotkey

@@ -469,6 +469,7 @@
 	c_Lang203 =	Sammenlign variabler
 	c_Lang204 =	Evaluer udtryk
 	c_Lang205 =	Region
+	c_Lang206 =	(Brug [] for at oprette arrays, f.eks .: [10, 20, aVariable, "aString"])
 		
 ; Other Windows		
 	t_Lang001 =	Eksporter til AutoHotkey

@@ -469,6 +469,7 @@
 	c_Lang203 =	Usporedi varijable
 	c_Lang204 =	Procijenite izraz
 	c_Lang205 =	Regija
+	c_Lang206 =	(Koristite [] za stvaranje polja, npr .: [10, 20, aVariable, "aString"])
 		
 ; Other Windows		
 	t_Lang001 =	Izvoz u AutoHotkey

@@ -469,6 +469,7 @@
 	c_Lang203 =	Порівняйте змінних
 	c_Lang204 =	Обчислення виразу
 	c_Lang205 =	Регіон
+	c_Lang206 =	(Використовуйте [], щоб створити масиви і т.д.: [10, 20, aVariable, "aString"])
 		
 ; Other Windows		
 	t_Lang001 =	Експорт до AutoHotkey

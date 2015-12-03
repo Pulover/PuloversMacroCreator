@@ -469,6 +469,7 @@
 	c_Lang203 =	변수를 비교
 	c_Lang204 =	식을 계산
 	c_Lang205 =	지방
+	c_Lang206 =	(사용 []는 배열을 만들려면 예컨대 : [10, 20, aVariable, "aString"])
 		
 ; Other Windows		
 	t_Lang001 =	AutoHotkey로 내보내기

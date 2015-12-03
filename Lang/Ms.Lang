@@ -469,6 +469,7 @@
 	c_Lang203 =	Bandingkan pembolehubah
 	c_Lang204 =	Menilai ungkapan
 	c_Lang205 =	Wilayah
+	c_Lang206 =	(Gunakan [] untuk mencipta tatasusunan, mis .: [10, 20, aVariable, "aString"])
 		
 ; Other Windows		
 	t_Lang001 =	Eksport ke AutoHotkey

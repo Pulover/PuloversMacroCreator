@@ -469,6 +469,7 @@
 	c_Lang203 =	比較變量
 	c_Lang204 =	計算表達式
 	c_Lang205 =	地區
+	c_Lang206 =	（使用[]創建數組，例如：[10, 20, aVariable, "aString"]）
 		
 ; Other Windows		
 	t_Lang001 =	導出到華民航空

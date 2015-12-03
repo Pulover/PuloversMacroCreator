@@ -469,6 +469,7 @@
 	c_Lang203 =	Primerjajte spremenljivk
 	c_Lang204 =	Ovrednoti izraz
 	c_Lang205 =	Regija
+	c_Lang206 =	(Uporabite [], da ustvarite nizi, npr .: [10, 20, aVariable, "aString"])
 		
 ; Other Windows		
 	t_Lang001 =	Izvoz v AutoHotkey
