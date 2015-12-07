@@ -799,6 +799,7 @@
 		Všimněte si, že změny provedené v skriptu mimo program nebude mít vliv na vaše makra v žádném případě.
 		 Tato funkce je určena pouze k rychlému exportní funkce. PMC není chtěl být editor AHK skript.
 	)	
+	d_Lang088 =	Zkuste spustit jako běžné uživatele (ne správce).
 		
 ; Start-up Tips		
 	Start_Tips =	

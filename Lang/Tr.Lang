@@ -799,6 +799,7 @@
 		Programın dışında komut yapılan değişiklikler hiçbir şekilde Makrolarınızı etkilemez dikkat edin.
 		 Bu özellik sadece hızlı bir ihracat fonksiyonu olarak ifade edilir. PMC bir AHK komut editörü olmak anlamına gelmez.
 	)	
+	d_Lang088 =	Ortak kullanıcı (değil yönetici) çalıştırmayı deneyin.
 		
 ; Start-up Tips		
 	Start_Tips =	

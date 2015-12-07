@@ -799,6 +799,7 @@
 		Figyeljük meg, hogy a módosítások a script kívül a program nem fogja befolyásolni a makrókat semmilyen módon.
 		 Ez a funkció csak azt jelentette, mint egy gyors export funkció. PMC nem azt jelentette, hogy egy AHK script editor.
 	)	
+	d_Lang088 =	Próbáld futtatni, közös felhasználói (nem rendszergazda).
 		
 ; Start-up Tips		
 	Start_Tips =	

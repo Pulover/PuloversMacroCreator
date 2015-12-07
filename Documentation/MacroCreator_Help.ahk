@@ -414,7 +414,7 @@
 			[Loop Read File](http://ahkscript.org/docs/commands/LoopReadFile.htm)
 		
 		### Download Example
-			[Loop through folders, parse and read file's contents](Examples/LoopTypes.pmc).
+			[Loop through folders, parse and read file's contents](Examples/LoopTypes.pmc)
 */
 
 /*!
@@ -444,6 +444,26 @@
 	Extra:
 		### Related
 			[Loop Registry](http://ahkscript.org/docs/commands/LoopReg.htm)
+*/
+
+/*!
+	Function: For_Loop()
+		Repeats a series of commands once for each key-value pair in an object.
+
+	Parameters:
+		Key - Name of the variable in which to store the key at the beginning of each iteration.  
+		Value - Name of the variable in which to store the value associated with the current key.  
+		Array Object - An object which contains an array.  
+
+	Remarks:
+		The Key and Value variables can be named to any others. Both variables will exist inside the loop (and inner loops), showing each of the values on every iteration.  
+
+	Extra:
+		### Related
+			[For Loop](http://ahkscript.org/docs/commands/For.htm)
+			
+		### Download example
+			[Assigning and retrieving an Array inside Command Parameters](Examples/Arrays.pmc)
 */
 
 /*!

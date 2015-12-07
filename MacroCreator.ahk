@@ -157,7 +157,6 @@ IniRead, ShowStep, %IniFilePath%, Options, ShowStep, 1
 IniRead, HideMainWin, %IniFilePath%, Options, HideMainWin, 1
 IniRead, DontShowPb, %IniFilePath%, Options, DontShowPb, 0
 IniRead, DontShowRec, %IniFilePath%, Options, DontShowRec, 0
-IniRead, DontShowAdm, %IniFilePath%, Options, DontShowAdm, 0
 IniRead, DontShowEdt, %IniFilePath%, Options, DontShowEdt, 0
 IniRead, ConfirmDelete, %IniFilePath%, Options, ConfirmDelete, 1
 IniRead, ShowTips, %IniFilePath%, Options, ShowTips, 1
@@ -822,19 +821,19 @@ If ((AutoPlay) || (TimerPlay))
 }
 Else
 {
-	If (!DontShowAdm && !A_IsAdmin)
-	{
-		Gui, 1:+Disabled
-		Gui, 35:-SysMenu +HwndTipScrID +owner1
-		Gui, 35:Color, FFFFFF
-		Gui, 35:Add, Pic, y+20 Icon78 W48 H48, %ResDllPath%
-		Gui, 35:Add, Text, yp x+10, %d_Lang058%`n
-		Gui, 35:Add, Checkbox, -Wrap W300 vDontShowAdm R1, %d_Lang053%
-		Gui, 35:Add, Button, -Wrap Default y+10 W90 H23 gTipClose2, %c_Lang020%
-		Gui, 35:Show,, %AppName%
-		WinWaitClose, ahk_id %TipScrID%
-		Gui, 1:-Disabled
-	}
+	; If (!DontShowAdm && !A_IsAdmin)
+	; {
+		; Gui, 1:+Disabled
+		; Gui, 35:-SysMenu +HwndTipScrID +owner1
+		; Gui, 35:Color, FFFFFF
+		; Gui, 35:Add, Pic, y+20 Icon78 W48 H48, %ResDllPath%
+		; Gui, 35:Add, Text, yp x+10, %d_Lang058%`n
+		; Gui, 35:Add, Checkbox, -Wrap W300 vDontShowAdm R1, %d_Lang053%
+		; Gui, 35:Add, Button, -Wrap Default y+10 W90 H23 gTipClose2, %c_Lang020%
+		; Gui, 35:Show,, %AppName%
+		; WinWaitClose, ahk_id %TipScrID%
+		; Gui, 1:-Disabled
+	; }
 	If (ShowBarOnStart)
 		GoSub, ShowControls
 	If (UserLayout = "Error")
@@ -6514,8 +6513,8 @@ Gui, 21:Add, Text, yp+5 x+5 W150 vAsOper cGray, %As_Oper_1%
 Gui, 21:Add, Text, y+9 xs+10 W200, %c_Lang056%:
 Gui, 21:Add, Checkbox, -Wrap Checked%EvalDefault% yp x+5 W220 vUseEval gUseEval R1, %c_Lang087%
 Gui, 21:Add, Edit, y+10 xs+10 W430 H110 vVarValue
-Gui, 21:Add, Text, W300 r1 cGray, %c_Lang025%
-Gui, 21:Add, Text, y+5 W300 r1 cGray vArrayTip Hidden, %c_Lang206%
+Gui, 21:Add, Text, W430 r1 cGray, %c_Lang025%
+Gui, 21:Add, Text, y+5 W430 r1 cGray vArrayTip Hidden, %c_Lang206%
 Gui, 21:Add, Groupbox, Section xs y+15 W450 H50, %c_Lang010%:
 Gui, 21:Add, Button, -Wrap ys+18 xs+85 W75 H23 vVarCopyA gVarCopy, %c_Lang023%
 Gui, 21:Add, Button, -Wrap x+10 yp W75 H23 gReset, %c_Lang088%
@@ -11416,7 +11415,7 @@ pb_IECOM_Set:
 	Catch e
 	{
 		MsgBox, 20, %d_Lang007%, % d_Lang064 " Macro" mMacroOn ", " d_Lang065 " " mListRow
-			.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" e.Extra "`n`n" d_Lang035
+			.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" (InStr(e.Message, "0x800401E3") ? d_Lang088 : e.Extra) "`n`n" d_Lang035
 		IfMsgBox, No
 		{
 			StopIt := 1
@@ -11473,7 +11472,7 @@ pb_IECOM_Get:
 	Catch e
 	{
 		MsgBox, 20, %d_Lang007%, % d_Lang064 " Macro" mMacroOn ", " d_Lang065 " " mListRow
-			.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" e.Extra "`n`n" d_Lang035
+			.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" (InStr(e.Message, "0x800401E3") ? d_Lang088 : e.Extra) "`n`n" d_Lang035
 		IfMsgBox, No
 		{
 			StopIt := 1
@@ -11524,7 +11523,7 @@ pb_COMInterface:
 		Catch e
 		{
 			MsgBox, 20, %d_Lang007%, % d_Lang064 " Macro" mMacroOn ", " d_Lang065 " " mListRow
-				.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" e.Extra "`n`n" d_Lang035
+				.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" (InStr(e.Message, "0x800401E3") ? d_Lang088 : e.Extra) "`n`n" d_Lang035
 			IfMsgBox, No
 			{
 				StopIt := 1
@@ -11816,7 +11815,6 @@ AbortKey := "F8"
 ,	HideMainWin := 1
 ,	DontShowPb := 0
 ,	DontShowRec := 0
-,	DontShowAdm := 0
 ,	DontShowEdt := 0
 ,	ConfirmDelete := 1
 ,	IfDirectContext := "None"
@@ -12080,7 +12078,6 @@ IniWrite, %ShowStep%, %IniFilePath%, Options, ShowStep
 IniWrite, %HideMainWin%, %IniFilePath%, Options, HideMainWin
 IniWrite, %DontShowPb%, %IniFilePath%, Options, DontShowPb
 IniWrite, %DontShowRec%, %IniFilePath%, Options, DontShowRec
-IniWrite, %DontShowAdm%, %IniFilePath%, Options, DontShowAdm
 IniWrite, %DontShowEdt%, %IniFilePath%, Options, DontShowEdt
 IniWrite, %ConfirmDelete%, %IniFilePath%, Options, ConfirmDelete
 IniWrite, %ShowTips%, %IniFilePath%, Options, ShowTips

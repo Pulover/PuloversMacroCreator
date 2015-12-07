@@ -799,6 +799,7 @@
 		Perhatikan bahwa perubahan yang dibuat untuk script luar program TIDAK AKAN MEMPENGARUHI macro ANDA dengan cara apapun.
 		 Fitur ini hanya dimaksudkan sebagai fungsi ekspor cepat. PMC tidak dimaksudkan untuk menjadi editor naskah AHK.
 	)	
+	d_Lang088 =	Cobalah untuk menjalankan pengguna yang biasa (tidak administrator).
 		
 ; Start-up Tips		
 	Start_Tips =	

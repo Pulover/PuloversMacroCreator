@@ -799,6 +799,7 @@
 		Obvestilo, da bodo spremembe v pisavi izven programa ne vpliva makre na kakršen koli način.
 		 Ta funkcija je mišljen zgolj kot funkcijo hitrega izvoza. PMC ni mišljeno, da bi urednik AHK scenarij.
 	)	
+	d_Lang088 =	Poskusite zagnati kot skupni uporabniku (ne administratorja).
 		
 ; Start-up Tips		
 	Start_Tips =	

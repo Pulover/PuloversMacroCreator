@@ -799,6 +799,7 @@
 		Beachten Sie, dass Änderungen am Skript außerhalb des Programms machte keinen Einfluss auf Ihre Makros in keiner Weise.
 		 Diese Funktion wird nur als eine schnelle Exportfunktion gedacht. PMC ist nicht dazu gedacht, ein AHK Script-Editor sein.
 	)	
+	d_Lang088 =	Versuchen Sie, so gemeinsame Benutzeroberfläche (nicht Administrator) ausgeführt werden.
 		
 ; Start-up Tips		
 	Start_Tips =	

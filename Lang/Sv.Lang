@@ -799,6 +799,7 @@
 		Lägg märke till att ändringar som gjorts i skriptet utanför programmet inte kommer att påverka din MAKRON på något sätt.
 		 Den här funktionen är endast avsedd som en snabb exportfunktionen. PMC är inte avsett att vara en AHK script editor.
 	)	
+	d_Lang088 =	Försök att köra som vanlig användare (inte administratör).
 		
 ; Start-up Tips		
 	Start_Tips =	

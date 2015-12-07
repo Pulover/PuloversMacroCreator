@@ -377,7 +377,7 @@
 						Catch e
 						{
 							MsgBox, 20, %d_Lang007%, % "Macro" mMacroOn ", " d_Lang065 " " mListRow
-								.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" e.Extra "`n`n" d_Lang035
+								.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" (InStr(e.Message, "0x800401E3") ? d_Lang088 : e.Extra) "`n`n" d_Lang035
 							IfMsgBox, No
 							{
 								StopIt := 1
@@ -807,7 +807,7 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC, ByRef LoopCount)
 						Catch e
 						{
 							MsgBox, 20, %d_Lang007%, % "Macro" mMacroOn ", " d_Lang065 " " mListRow
-								.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" e.Extra "`n`n" d_Lang035
+								.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" (InStr(e.Message, "0x800401E3") ? d_Lang088 : e.Extra) "`n`n" d_Lang035
 							IfMsgBox, No
 							{
 								StopIt := 1
@@ -1312,6 +1312,8 @@ CheckVars(Match_List, l_Point="")
 		}
 		If ($_value%l_Point% <> "")
 		{
+			_thisEach := $_each%l_Point%, %_thisEach% := o_Loop%l_Point%[I][$_each%l_Point%]
+		,	_thisValue := $_value%l_Point%, %_thisValue% := o_Loop%l_Point%[I][$_value%l_Point%]
 			While, RegExMatch(%A_LoopField%, "i)%" $_each%l_Point% "%", lMatch)
 				%A_LoopField% := RegExReplace(%A_LoopField%, "U)" lMatch, o_Loop%l_Point%[I][$_each%l_Point%])
 			While, RegExMatch(%A_LoopField%, "i)%(" $_value%l_Point% ")%", lMatch)

@@ -799,6 +799,7 @@
 		Perhatikan bahawa perubahan yang dibuat kepada tulisan di luar program ini TIDAK AKAN MENJEJASKAN MAKRO ANDA dalam apa jua cara.
 		 Ciri ini hanya bertujuan sebagai fungsi eksport mudah. PMC bukan bermaksud untuk menjadi editor skrip AHK.
 	)	
+	d_Lang088 =	Cuba untuk menjalankan sebagai pengguna biasa (bukan pentadbir).
 		
 ; Start-up Tips		
 	Start_Tips =	

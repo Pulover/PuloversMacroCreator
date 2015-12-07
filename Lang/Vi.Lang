@@ -799,6 +799,7 @@
 		Chú ý rằng các thay đổi được thực hiện cho các script ngoài chương trình SẼ KHÔNG ẢNH HƯỞNG macro của bạn trong bất kỳ cách nào.
 		 Tính năng này chỉ có nghĩa như là một chức năng xuất khẩu nhanh chóng. PMC này không có nghĩa là một biên tập viên AHK kịch bản.
 	)	
+	d_Lang088 =	Cố gắng chạy người sử dụng thông thường (không phải quản trị viên).
 		
 ; Start-up Tips		
 	Start_Tips =	

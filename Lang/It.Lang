@@ -799,6 +799,7 @@
 		Si noti che le modifiche apportate allo script di fuori del programma non influisce in alcun modo MACRO.
 		 Questa caratteristica è intesa solo come una funzione di esportazione rapido. PMC non è destinata ad essere un editor di script AHK.
 	)	
+	d_Lang088 =	Provare a eseguire come utente comune (non amministratore).
 		
 ; Start-up Tips		
 	Start_Tips =	

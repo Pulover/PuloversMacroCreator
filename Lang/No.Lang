@@ -799,6 +799,7 @@
 		Legg merke til at endringer i scriptet utenfor programmet vil ikke påvirke makroene på noen måte.
 		 Denne funksjonen er bare ment som en rask eksportfunksjonen. PMC er ikke ment å være en AHK script editor.
 	)	
+	d_Lang088 =	Prøv å kjøre som vanlig bruker (ikke administrator).
 		
 ; Start-up Tips		
 	Start_Tips =	

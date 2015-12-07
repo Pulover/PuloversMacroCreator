@@ -21,6 +21,7 @@
 * [Loop Parse](Commands/Loop_Parse.html)
 * [Loop Read](Commands/Loop_Read.html)
 * [Loop Registry](Commands/Loop_Registry.html)
+* [For Loop](Commands/For_Loop.html)
 * [Goto / GoSub](Commands/Goto_and_GoSub.html)
 * [Label](Commands/Label.html)
 * [If Statements](Commands/If_Statements.html)

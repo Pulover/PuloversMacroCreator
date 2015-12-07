@@ -78,14 +78,17 @@ Download Example: [Accessing a Pseudo-Array inside Command Parameters](Examples/
 
 ## Assigning And Retrieving Arrays
 
-**Pulover's Macro Creator** supports basic arrays usage. To assign an array you can use the *Array* function in the *Functions* window.  
+**Pulover's Macro Creator** supports basic arrays usage. To assign an array you either go the Variables window, check "Expression" option and add comma separated values inside brackets (e.g. [10,20,aVariable,"aString"]) or use the *Array* function in the *Functions* window.  
+Notice that using the Variables window with the expression option, variables MUST NOT BE ESCAPED and literal strings must be inside quotes, while when using the Array function, normal rules apply.  
 To retrieve an array inside a command use the same method as *Dynamic Variable Reference* by preceding the parameter with a percent sign and the following syntax:
 
 > % MyArray[1]
 > % MyArray[X]    ; For arrays it's not necessary to enclose variables in percent signs.
 > % MyArray[Var]  ; Any non-number parameter will be treated as a variable.
 
-Download Example: [Assigning and retrieving an Array inside Command Parameters](Examples/Arrays.pmc).
+Download Example: [Assigning and retrieving an Array inside Command Parameters](Examples/Arrays.pmc).  
+
+You can also retrieve the values using a [For-Loop](Commands/For_Loop.html) (an example is included in the link above).
 
 ## Using Functions In Playback
 

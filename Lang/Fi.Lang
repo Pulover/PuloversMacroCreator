@@ -799,6 +799,7 @@
 		Huomaa, että tehdyt muutokset käsikirjoituksen ulkopuolella ohjelma ei vaikuta MACROS millään tavalla.
 		 Tämä ominaisuus on vain tarkoitettu nopea vientitoiminto. PMC ei ole tarkoitus olla AHK script editor.
 	)	
+	d_Lang088 =	Yritä juosta yhteisinä käyttäjä (ei pääkäyttäjä).
 		
 ; Start-up Tips		
 	Start_Tips =	

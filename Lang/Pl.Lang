@@ -799,6 +799,7 @@
 		Zauważ, że zmiany wprowadzone w skrypcie poza programem nie ma wpływu makr w żaden sposób.
 		 Ta opcja jest przeznaczona tylko jako szybki funkcji eksportu. PMC nie ma być edytor skryptów AHK.
 	)	
+	d_Lang088 =	Spróbuj uruchomić jako wspólny użytkownika (nie administratora).
 		
 ; Start-up Tips		
 	Start_Tips =	

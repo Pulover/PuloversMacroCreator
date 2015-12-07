@@ -799,6 +799,7 @@
 		Obavijest da su promjene koje su napravljene na skriptu izvan programa NEĆE utjecati na vaše makronaredbe na bilo koji način.
 		 Ova značajka je namijenjena samo kao brzi izvoza funkciju. PMC nije značilo da se urednik AHK skripta.
 	)	
+	d_Lang088 =	Pokušajte izvoditi kao zajednički korisnik (ne administrator).
 		
 ; Start-up Tips		
 	Start_Tips =	

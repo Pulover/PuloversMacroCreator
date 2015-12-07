@@ -799,6 +799,7 @@
 		Recordeu que els canvis realitzats en el guió fora del programa no afectarà la seva MACROS de cap manera.
 		 Aquesta característica només està pensada com una funció d'exportació ràpida. PMC no està destinat a ser un editor de scripts AHK.
 	)	
+	d_Lang088 =	Intenteu executar l'usuari tan comú (no administrador).
 		
 ; Start-up Tips		
 	Start_Tips =	
