@@ -6,8 +6,8 @@
 ; pulover@macrocreator.com
 ; Home: http://www.macrocreator.com
 ; Forum: http://ahkscript.org/boards/viewtopic.php?f=6&t=143
-; Version: 4.1.4
-; Release Date: November, 2015
+; Version: 4.2.0
+; Release Date: December, 2015
 ; AutoHotkey Version: 1.1.22.07
 ; Copyright © 2012-2015 Rodolfo U. Batista
 ; GNU General Public License 3.0 or higher
@@ -71,7 +71,7 @@ Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jör
 ; Compiler Settings
 ;@Ahk2Exe-SetName Pulover's Macro Creator
 ;@Ahk2Exe-SetDescription Pulover's Macro Creator
-;@Ahk2Exe-SetVersion 4.1.4
+;@Ahk2Exe-SetVersion 4.2.0
 ;@Ahk2Exe-SetCopyright Copyright © 2012-2015 Rodolfo U. Batista
 ;@Ahk2Exe-SetOrigFilename MacroCreator.exe
 
@@ -129,7 +129,7 @@ Loop
 		break
 }
 
-CurrentVersion := "4.1.4", ReleaseDate := "November, 2015"
+CurrentVersion := "4.2.0", ReleaseDate := "December, 2015"
 
 ;##### Ini File Read #####
 

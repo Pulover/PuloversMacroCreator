@@ -8,8 +8,8 @@ Author: Pulover \[Rodolfo U. Batista\]
 [pulover@macrocreator.com](mailto:pulover@macrocreator.com)  
 Copyright © 2012-2015 Rodolfo U. Batista  
 
-Version: 4.1.4  
-Release Date: November, 2015  
+Version: 4.2.0  
+Release Date: December, 2015  
 AutoHotkey Version: 1.1.22.07  
 
 Software License: [GNU General Public License](License.html)  
@@ -36,7 +36,7 @@ Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jör
 
 # Change Log
 
-## Version 4.1.4
+## Version 4.2.0
 
 * Added support for array assignment in Variables window.
 * Added support for For-Loops.
