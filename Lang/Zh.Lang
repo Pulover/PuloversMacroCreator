@@ -351,7 +351,7 @@
 	c_Lang084 =	变量赋值
 	c_Lang085 =	内容
 	c_Lang086 =	运算符
-	c_Lang087 =	表达式
+	c_Lang087 =	数学表达式
 	c_Lang088 =	复位
 	c_Lang089 =	函数名
 	c_Lang090 =	逗号分隔的参数（不含括号）
@@ -467,7 +467,7 @@
 	c_Lang201 =	如果字符串不包含
 	c_Lang202 =	如果消息框
 	c_Lang203 =	比较变量
-	c_Lang204 =	计算表达式
+	c_Lang204 =	计算数学表达式
 	c_Lang205 =	区域
 	c_Lang206 =	（使用[]创建数组，例如：[10, 20, aVariable, "aString"]）
 	c_Lang207 =	数组对象

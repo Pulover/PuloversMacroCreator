@@ -351,7 +351,7 @@
 	c_Lang084 =	Variable zuweisen
 	c_Lang085 =	Inhalt
 	c_Lang086 =	Operator
-	c_Lang087 =	Expression
+	c_Lang087 =	Mathematischen Ausdruck
 	c_Lang088 =	Zurücksetzen
 	c_Lang089 =	Name der Funktion
 	c_Lang090 =	Kommagetrennte Parameter (ohne Klammern)
@@ -467,12 +467,12 @@
 	c_Lang201 =	Wenn String nicht enthält
 	c_Lang202 =	Wenn Meldungsfeld
 	c_Lang203 =	Vergleichen Variablen
-	c_Lang204 =	Bewerten Ausdruck
+	c_Lang204 =	Evaluieren Mathematischen Ausdruck
 	c_Lang205 =	Region
 	c_Lang206 =	(Verwenden Sie [], um Arrays zu erstellen, z.B .: [10, 20, aVariable, "aString"])
 	c_Lang207 =	Array-Objekt
-	c_Lang208 =	 Schlüsselnamen
-	c_Lang209 =	 Wertname
+	c_Lang208 =	Schlüsselnamen
+	c_Lang209 =	Wertname
 		
 ; Other Windows		
 	t_Lang001 =	Export nach AutoHotkey

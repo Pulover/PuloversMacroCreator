@@ -351,7 +351,7 @@
 	c_Lang084 =	Menetapkan Variabel
 	c_Lang085 =	Kadar
 	c_Lang086 =	Operator
-	c_Lang087 =	Ekspresi
+	c_Lang087 =	Ekspresi Matematika
 	c_Lang088 =	Ulang
 	c_Lang089 =	Fungsi Nama
 	c_Lang090 =	Dipisahkan koma parameter (tanpa kurung)
@@ -467,12 +467,12 @@
 	c_Lang201 =	Jika string yang tidak mengandung
 	c_Lang202 =	Jika kotak pesan
 	c_Lang203 =	Bandingkan variabel
-	c_Lang204 =	Evaluasi ekspresi
+	c_Lang204 =	Mengevaluasi Ekspresi Matematika
 	c_Lang205 =	Wilayah
 	c_Lang206 =	(Gunakan [] untuk membuat array, mis .: [10, 20, aVariable, "aString"])
 	c_Lang207 =	array objek
-	c_Lang208 =	 nama kunci
-	c_Lang209 =	 nama nilai
+	c_Lang208 =	Nama kunci
+	c_Lang209 =	Nama nilai
 		
 ; Other Windows		
 	t_Lang001 =	Ekspor ke AutoHotkey

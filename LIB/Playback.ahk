@@ -1280,6 +1280,8 @@ AssignVar(Name, Operator, Value)
 	local TempVar
 	
 	StringReplace, Value, Value, ¥Space, %A_Space%, All
+	If (Name = "Clipboard")
+		StringReplace, Value, Value, `````,, `,, All
 	If (InStr(Value, "!") = 1)
 		Value := !SubStr(Value, 2)
 	If (Operator = ":=")

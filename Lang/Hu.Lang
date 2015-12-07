@@ -351,7 +351,7 @@
 	c_Lang084 =	Hozzárendelése Változó
 	c_Lang085 =	Tartalom
 	c_Lang086 =	Operátor
-	c_Lang087 =	Kifejezés
+	c_Lang087 =	Matematikai Kifejezés
 	c_Lang088 =	Visszaállítás
 	c_Lang089 =	Funkció neve
 	c_Lang090 =	Vesszővel elválasztott paraméterek (zárójel nélkül)
@@ -467,12 +467,12 @@
 	c_Lang201 =	Ha szöveg nem tartalmaz
 	c_Lang202 =	Ha az üzenet box
 	c_Lang203 =	Hasonlítsa össze a változókat
-	c_Lang204 =	Értékelje kifejezés
+	c_Lang204 =	Értékeli Matematikai Kifejezés
 	c_Lang205 =	Vidék
 	c_Lang206 =	(A [] létrehozni tömbök, pl .: [10, 20, aVariable, "aString"])
 	c_Lang207 =	tömbobjektumok
-	c_Lang208 =	 kulcs neve
-	c_Lang209 =	 érték neve
+	c_Lang208 =	Kulcs neve
+	c_Lang209 =	érték neve
 		
 ; Other Windows		
 	t_Lang001 =	Exportálás AutoHotkey

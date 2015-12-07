@@ -351,7 +351,7 @@
 	c_Lang084 =	Gán biến
 	c_Lang085 =	Nội dung
 	c_Lang086 =	Điều hành
-	c_Lang087 =	Biểu
+	c_Lang087 =	Biểu Thức Toán Học
 	c_Lang088 =	Thiết lập lại
 	c_Lang089 =	Tên chức năng
 	c_Lang090 =	Dấu phẩy tách ra các thông số (không có dấu ngoặc đơn)
@@ -467,12 +467,12 @@
 	c_Lang201 =	Nếu chuỗi không chứa
 	c_Lang202 =	Nếu hộp thông báo
 	c_Lang203 =	So sánh các biến
-	c_Lang204 =	Đánh giá biểu thức
+	c_Lang204 =	Đánh Giá Biểu Thức Toán Học
 	c_Lang205 =	Khu
 	c_Lang206 =	(Sử dụng [] để tạo ra các mảng, ví dụ: .: [10, 20, aVariable, "aString"])
 	c_Lang207 =	đối tượng mảng
-	c_Lang208 =	 tên chính
-	c_Lang209 =	 tên giá trị
+	c_Lang208 =	Tên chính
+	c_Lang209 =	Tên giá trị
 		
 ; Other Windows		
 	t_Lang001 =	Xuất khẩu sang AutoHotkey

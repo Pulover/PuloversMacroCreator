@@ -351,7 +351,7 @@
 	c_Lang084 =	Přiřazení proměnné
 	c_Lang085 =	Obsah
 	c_Lang086 =	Provozovatel
-	c_Lang087 =	Výraz
+	c_Lang087 =	Matematický Výraz
 	c_Lang088 =	Obnovit
 	c_Lang089 =	Funkce Jméno
 	c_Lang090 =	Oddělené čárkami parametry (bez závorek)
@@ -467,12 +467,12 @@
 	c_Lang201 =	Pokud není řetězec obsahuje
 	c_Lang202 =	Pokud se zobrazí okno
 	c_Lang203 =	Porovnání proměnné
-	c_Lang204 =	Vyhodnotit výraz
+	c_Lang204 =	Vyhodnotit Matematický Výraz
 	c_Lang205 =	Kraj
 	c_Lang206 =	(Použijte [] pro vytvoření pole, např .: [10, 20, aVariable, "aString"])
 	c_Lang207 =	objekt Array
-	c_Lang208 =	 název klíče
-	c_Lang209 =	 název hodnota
+	c_Lang208 =	Název klíče
+	c_Lang209 =	Název hodnota
 		
 ; Other Windows		
 	t_Lang001 =	Export do AutoHotkey

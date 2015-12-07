@@ -351,7 +351,7 @@
 	c_Lang084 =	Przypisanie zmiennej
 	c_Lang085 =	Zawartość
 	c_Lang086 =	Operator
-	c_Lang087 =	Wyrażenie
+	c_Lang087 =	Wyrażenie Matematyczne
 	c_Lang088 =	Resetuj
 	c_Lang089 =	Nazwa funkcji
 	c_Lang090 =	Oddzielonych przecinkami parametrów (bez nawiasów)
@@ -467,12 +467,12 @@
 	c_Lang201 =	Jeśli nie ciąg zawiera
 	c_Lang202 =	Jeżeli okno komunikatu
 	c_Lang203 =	Porównaj zmienne
-	c_Lang204 =	Oceny ekspresji
+	c_Lang204 =	Oceny Wyrażenie Matematyczne
 	c_Lang205 =	Region
 	c_Lang206 =	(Użyj [], aby utworzyć tablice, np .: [10, 20, aVariable, "aString"])
 	c_Lang207 =	obiekt Array
-	c_Lang208 =	 Nazwa klucza
-	c_Lang209 =	 Nazwa wartości
+	c_Lang208 =	Nazwa klucza
+	c_Lang209 =	Nazwa wartości
 		
 ; Other Windows		
 	t_Lang001 =	Eksport do AutoHotkey

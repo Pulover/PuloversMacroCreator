@@ -351,7 +351,7 @@
 	c_Lang084 =	Tilldela variabel
 	c_Lang085 =	Innehåll
 	c_Lang086 =	Operatör
-	c_Lang087 =	Expression
+	c_Lang087 =	Matematiskt Uttryck
 	c_Lang088 =	Återställ
 	c_Lang089 =	Funktion Namn
 	c_Lang090 =	Kommaseparerad parametrar (utan parentes)
@@ -467,12 +467,12 @@
 	c_Lang201 =	Om strängen innehåller inte
 	c_Lang202 =	Om meddelandet box
 	c_Lang203 =	Jämför variabler
-	c_Lang204 =	Utvärdera uttryck
+	c_Lang204 =	Utvärdera Matematiskt Uttryck
 	c_Lang205 =	Region
 	c_Lang206 =	(Använd [] för att skapa matriser, t.ex .: [10, 20, aVariable, "aString"])
 	c_Lang207 =	array-objekt
-	c_Lang208 =	 nyckelnamn
-	c_Lang209 =	 värdenamn
+	c_Lang208 =	Nyckelnamn
+	c_Lang209 =	Värdenamn
 		
 ; Other Windows		
 	t_Lang001 =	Exportera till AutoHotkey

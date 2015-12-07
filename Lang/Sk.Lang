@@ -351,7 +351,7 @@
 	c_Lang084 =	Priradenie premennej
 	c_Lang085 =	Obsah
 	c_Lang086 =	Operátor
-	c_Lang087 =	Výraz
+	c_Lang087 =	Matematický Výraz
 	c_Lang088 =	Obnoviť
 	c_Lang089 =	Funkcia Meno
 	c_Lang090 =	Hodnôt oddelených čiarkami (bez zátvoriek)
@@ -467,12 +467,12 @@
 	c_Lang201 =	Pokiaľ nie je reťazec obsahuje
 	c_Lang202 =	Ak sa zobrazí okno
 	c_Lang203 =	Porovnanie premenné
-	c_Lang204 =	Vyhodnotiť výraz
+	c_Lang204 =	Vyhodnotiť Matematický Výraz
 	c_Lang205 =	Kraj
 	c_Lang206 =	(Použite [] pre vytvorenie poľa, napr.: [10, 20, aVariable, "aString"])
 	c_Lang207 =	objekt Array
-	c_Lang208 =	 názov kľúča
-	c_Lang209 =	 Názov Hodnota
+	c_Lang208 =	Názov kľúča
+	c_Lang209 =	Názov Hodnota
 		
 ; Other Windows		
 	t_Lang001 =	Export do AutoHotkey

@@ -351,7 +351,7 @@
 	c_Lang084 =	Atribuir Variável
 	c_Lang085 =	Conteúdo
 	c_Lang086 =	Operador
-	c_Lang087 =	Expressão
+	c_Lang087 =	Expressão Matemática
 	c_Lang088 =	Apagar
 	c_Lang089 =	Nome da Função
 	c_Lang090 =	Parametros separados por vírgula (sem parenteses)
@@ -467,7 +467,7 @@
 	c_Lang201 =	Se texto não contém
 	c_Lang202 =	Se mensagem
 	c_Lang203 =	Comparar variáveis
-	c_Lang204 =	Avaliar expressão
+	c_Lang204 =	Avaliar expressão matemática
 	c_Lang205 =	Região
 	c_Lang206 =	(Utilize [] para criar matrizes, por exemplo: [10, 20, aVariable, "aString"])
 	c_Lang207 =	Objeto Matriz

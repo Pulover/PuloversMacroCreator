@@ -351,7 +351,7 @@
 	c_Lang084 =	변수를 할당
 	c_Lang085 =	내용
 	c_Lang086 =	연산자
-	c_Lang087 =	표현
+	c_Lang087 =	수학 식
 	c_Lang088 =	재설정
 	c_Lang089 =	기능 이름
 	c_Lang090 =	쉼표 (괄호없이) 매개 변수를 구분합니다
@@ -467,12 +467,12 @@
 	c_Lang201 =	문자열을 포함하지 않는 경우
 	c_Lang202 =	경우 메시지 상자
 	c_Lang203 =	변수를 비교
-	c_Lang204 =	식을 계산
+	c_Lang204 =	수학 식을 평가
 	c_Lang205 =	지방
 	c_Lang206 =	(사용 []는 배열을 만들려면 예컨대 : [10, 20, aVariable, "aString"])
 	c_Lang207 =	배열 객체
-	c_Lang208 =	 키 이름
-	c_Lang209 =	 값 이름
+	c_Lang208 =	키 이름
+	c_Lang209 =	값 이름
 		
 ; Other Windows		
 	t_Lang001 =	AutoHotkey로 내보내기
