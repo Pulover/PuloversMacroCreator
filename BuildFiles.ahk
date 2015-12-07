@@ -13,6 +13,9 @@ If PMCVer = Error
 FileDelete, Compiled\MacroCreator.ini
 IniWrite, %PMCVer%, Compiled\MacroCreator.ini, Application, Version
 
+IfExist, Compiled\MacroCreator_Help_CN.chm
+	CNHelp := "Source: ""{#WorkDir}\Compiled\MacroCreator_Help_CN.chm""`; DestDir: ""{app}""`; Flags: ignoreversion"
+
 Script =
 (
 #define PmcName "Pulover's Macro Creator"
@@ -98,6 +101,7 @@ Source: "{#WorkDir}\Compiled\SciLexer-x86.dll"; DestDir: "{app}"; DestName: "Sci
 Source: "{#WorkDir}\Compiled\MacroCreator.ini"; DestDir: "{app}"; DestName: "MacroCreator.ini"; Flags: ignoreversion; Tasks: portableinstall
 Source: "{#WorkDir}\Compiled\Resources.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#WorkDir}\Compiled\MacroCreator_Help.chm"; DestDir: "{app}"; Flags: ignoreversion
+%CNHelp%
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]

@@ -70,11 +70,13 @@ FileCopy, License.txt, Compiled\MacroCreatorPortable\, 1
 FileCopy, Compiled\MacroCreator.exe, Compiled\MacroCreatorPortable\x86\MacroCreator\, 1
 FileCopy, Compiled\MacroCreator.ini, Compiled\MacroCreatorPortable\x86\MacroCreator\, 1
 FileCopy, Compiled\MacroCreator_Help.chm, Compiled\MacroCreatorPortable\x86\MacroCreator\, 1
+FileCopy, Compiled\MacroCreator_Help_CN.chm, Compiled\MacroCreatorPortable\x86\MacroCreator\, 1
 FileCopy, Compiled\Resources.dll, Compiled\MacroCreatorPortable\x86\MacroCreator\, 1
 FileCopy, Compiled\SciLexer-x86.dll, Compiled\MacroCreatorPortable\x86\MacroCreator\SciLexer.dll, 1
 FileCopy, Compiled\MacroCreator-x64.exe, Compiled\MacroCreatorPortable\x64\MacroCreator\MacroCreator.exe, 1
 FileCopy, Compiled\MacroCreator.ini, Compiled\MacroCreatorPortable\x64\MacroCreator\, 1
 FileCopy, Compiled\MacroCreator_Help.chm, Compiled\MacroCreatorPortable\x64\MacroCreator\, 1
+FileCopy, Compiled\MacroCreator_Help_CN.chm, Compiled\MacroCreatorPortable\x64\MacroCreator\, 1
 FileCopy, Compiled\Resources.dll, Compiled\MacroCreatorPortable\x64\MacroCreator\, 1
 FileCopy, Compiled\SciLexer-x64.dll, Compiled\MacroCreatorPortable\x64\MacroCreator\SciLexer.dll, 1
 FileCopy, Compiled\MacroCreatorPortable.exe, Compiled\MacroCreatorPortable\, 1

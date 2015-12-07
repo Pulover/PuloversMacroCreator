@@ -7,6 +7,12 @@ Eval(x, l_Point) { ; non-recursive PRE/POST PROCESSING: I/O forms, numbers, ops,
    Local FORM, FormF, FormI, i, W, y, y1, y2, y3, y4
    FormI := A_FormatInteger, FormF := A_FormatFloat
 
+	While RegExMatch(x, "iU)\b([\w\d_]+)\b(\.MaxIndex\(\))", lMatch)  ; MaxIndex()
+	{
+		x := RegExReplace(x, lMatch1, %lMatch1%.MaxIndex())
+	,	x := RegExReplace(x, lMatch2 "\(\)")
+	}
+	
 	While RegExMatch(x, "([\w_]+)\((.*?)\)", Funct)  ; Functions
 	{
 		If IsFunc(Funct1)

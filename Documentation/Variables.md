@@ -78,17 +78,32 @@ Download Example: [Accessing a Pseudo-Array inside Command Parameters](Examples/
 
 ## Assigning And Retrieving Arrays
 
-**Pulover's Macro Creator** supports basic arrays usage. To assign an array you either go the Variables window, check "Expression" option and add comma separated values inside brackets (e.g. [10,20,aVariable,"aString"]) or use the *Array* function in the *Functions* window.  
+**Pulover's Macro Creator** supports basic arrays usage. To assign an array you either go the Variables window, check "Expression" option and add comma separated values inside brackets:
+
+> MyArray := [10,20,aVariable,"aString"])  ; Inside the Variables Assignment window
+
+Or use the *Array* function in the *Functions* window.  
 Notice that using the Variables window with the expression option, variables MUST NOT BE ESCAPED and literal strings must be inside quotes, while when using the Array function, normal rules apply.  
+
 To retrieve an array inside a command use the same method as *Dynamic Variable Reference* by preceding the parameter with a percent sign and the following syntax:
 
 > % MyArray[1]
 > % MyArray[X]    ; For arrays it's not necessary to enclose variables in percent signs.
 > % MyArray[Var]  ; Any non-number parameter will be treated as a variable.
 
-Download Example: [Assigning and retrieving an Array inside Command Parameters](Examples/Arrays.pmc).  
+You can access the number of items inside the array using the MaxIndex() method in the Variables Assignment window when the "Expression" option is checked:
 
-You can also retrieve the values using a [For-Loop](Commands/For_Loop.html) (an example is included in the link above).
+> MyArray := [10,20,30]                 ; Assign an array inside
+> ArrayCount := MyArray.MaxIndex()      ; Returns 3
+> ArrayCount := MyArray.MaxIndex() + 1  ; Returns 4
+
+You can also get a reference to MaxIndex inside a Dynamic References, but you cannot combine it with other expressions such as Array.MaxIndex + 1.
+
+> % MyArray.MaxIndex()  ; Inside any command, but without math operations.
+
+A [For-Loop](Commands/For_Loop.html) can be used to retrieve the values one by one (an example is included in the link below).
+
+Download Example: [Assigning and retrieving an Array inside Command Parameters](Examples/Arrays.pmc).  
 
 ## Using Functions In Playback
 

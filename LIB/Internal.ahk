@@ -211,10 +211,22 @@ CmdHelp()
 	Title := ContHTitle[Gui][Pag ? Pag : 1]
 	If (WinActive("A") <> StartTipID) && ((!Title) || (WinActive("A") <> CmdWin))
 		Title := "index.html"
-	IfExist, %A_ScriptDir%\MacroCreator_Help.chm
-		Run, hh.exe mk:@MSITStore:%A_ScriptDir%\MacroCreator_Help.chm::/%Title%
+	If ((Lang = "Zh") || (Lange = "Zt"))
+	{
+		IfExist, %A_ScriptDir%\MacroCreator_Help_Cn.chm
+			Run, hh.exe mk:@MSITStore:%A_ScriptDir%\MacroCreator_Help_Cn.chm::/%Title%
+		Else IfExist, %A_ScriptDir%\MacroCreator_Help.chm
+			Run, hh.exe mk:@MSITStore:%A_ScriptDir%\MacroCreator_Help.chm::/%Title%
+		Else
+			Run, http://www.macrocreator.com/docs/%Title%
+	}
 	Else
-		Run, http://www.macrocreator.com/docs/%Title%
+	{
+		IfExist, %A_ScriptDir%\MacroCreator_Help.chm
+			Run, hh.exe mk:@MSITStore:%A_ScriptDir%\MacroCreator_Help.chm::/%Title%
+		Else
+			Run, http://www.macrocreator.com/docs/%Title%
+	}
 	return 0
 }
 

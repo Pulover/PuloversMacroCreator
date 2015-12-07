@@ -2884,10 +2884,22 @@ If A_ThisMenuItem = Microsoft MSDN
 return
 
 Help:
-IfExist, %A_ScriptDir%\MacroCreator_Help.chm
-	Run, %A_ScriptDir%\MacroCreator_Help.chm
+If ((Lang = "Zh") || (Lange = "Zt"))
+{
+	IfExist, %A_ScriptDir%\MacroCreator_Help_Cn.chm
+		Run, %A_ScriptDir%\MacroCreator_Help_Cn.chm
+	Else IfExist, %A_ScriptDir%\MacroCreator_Help.chm
+		Run, %A_ScriptDir%\MacroCreator_Help.chm
+	Else
+		Run, http://www.macrocreator.com/docs
+}
 Else
-	Run, http://www.macrocreator.com/docs
+{
+	IfExist, %A_ScriptDir%\MacroCreator_Help.chm
+		Run, %A_ScriptDir%\MacroCreator_Help.chm
+	Else
+		Run, http://www.macrocreator.com/docs
+}
 return
 
 Homepage:
@@ -2899,7 +2911,10 @@ Run, http://www.macrocreator.com/help
 return
 
 Forum:
-Run, http://ahkscript.org/boards/viewtopic.php?f=6&t=143
+If ((Lang = "Zh") || (Lange = "Zt"))
+	Run, http://autohotkey.com/boards/viewtopic.php?f=28&t=1175
+Else
+	Run, http://ahkscript.org/boards/viewtopic.php?f=6&t=143
 return
 
 HelpAHK:

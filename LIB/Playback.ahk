@@ -1348,7 +1348,7 @@ CheckVars(Match_List, l_Point="")
 			}
 		}
 		%A_LoopField% := DerefVars(%A_LoopField%)
-		While, RegExMatch(%A_LoopField%, "iU)^%\s+([\w\d_]+)\.MaxIndex\(\)$", lMatch)
+		While, RegExMatch(%A_LoopField%, "iU)^%\s+\b([\w\d_]+)\b\.MaxIndex\(\)$", lMatch)
 		{
 			If (!IsObject(%lMatch1%))
 				break
