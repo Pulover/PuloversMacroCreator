@@ -2822,25 +2822,25 @@ HelpB:
 ThisMenuItem := RegExReplace(A_ThisMenuItem, "\s/.*")
 StringReplace, ThisMenuItem, ThisMenuItem, #, _
 If ThisMenuItem = Clipboard
-	Run, http://ahkscript.org/docs/misc/Clipboard.htm
+	Run, %HelpDocsUrl%/misc/Clipboard.htm
 Else If ThisMenuItem = If Statements
-	Run, http://ahkscript.org/docs/commands/IfEqual.htm
+	Run, %HelpDocsUrl%/commands/IfEqual.htm
 Else If ThisMenuItem = Labels
-	Run, http://ahkscript.org/docs/misc/Labels.htm
+	Run, %HelpDocsUrl%/misc/Labels.htm
 Else If ThisMenuItem = SplashImage
-	Run, http://ahkscript.org/docs/commands/Progress.htm
+	Run, %HelpDocsUrl%/commands/Progress.htm
 Else If ThisMenuItem = SplashTextOff
-	Run, http://ahkscript.org/docs/commands/SplashTextOn.htm
+	Run, %HelpDocsUrl%/commands/SplashTextOn.htm
 Else If InStr(ThisMenuItem, "LockState")
-	Run, http://ahkscript.org/docs/commands/SetNumScrollCapsLockState.htm
+	Run, %HelpDocsUrl%/commands/SetNumScrollCapsLockState.htm
 Else If ThisMenuItem = Variables
-	Run, http://ahkscript.org/docs/Variables.htm
+	Run, %HelpDocsUrl%/Variables.htm
 Else If ThisMenuItem = Functions
-	Run, http://ahkscript.org/docs/Functions.htm
+	Run, %HelpDocsUrl%/Functions.htm
 Else If ThisMenuItem = Built-in Variables
-	Run, http://ahkscript.org/docs/Variables.htm#BuiltIn
+	Run, %HelpDocsUrl%/Variables.htm#BuiltIn
 Else
-	Run, http://ahkscript.org/docs/commands/%ThisMenuItem%.htm
+	Run, %HelpDocsUrl%/commands/%ThisMenuItem%.htm
 return
 
 LoopB:
@@ -2849,24 +2849,24 @@ StringReplace, ThisMenuItem, ThisMenuItem, `,
 StringReplace, ThisMenuItem, ThisMenuItem, %A_Space%,, All
 StringReplace, ThisMenuItem, ThisMenuItem, Pattern
 StringReplace, ThisMenuItem, ThisMenuItem, istry
-Run, http://ahkscript.org/docs/commands/%ThisMenuItem%.htm
+Run, %HelpDocsUrl%/commands/%ThisMenuItem%.htm
 return
 
 ExportG:
 SpecialB:
 If A_ThisMenuItem = List of Keys
-	Run, http://ahkscript.org/docs/KeyList.htm
+	Run, %HelpDocsUrl%/KeyList.htm
 Else If A_ThisMenuItem = Auto-execute Section
-	Run, http://ahkscript.org/docs/Scripts.htm#auto
+	Run, %HelpDocsUrl%/Scripts.htm#auto
 Else If InStr(A_ThisMenuItem, "ComObj")
-	Run, http://ahkscript.org/docs/commands/%A_ThisMenuItem%.htm
+	Run, %HelpDocsUrl%/commands/%A_ThisMenuItem%.htm
 Else
-	Run, http://ahkscript.org/docs/%A_ThisMenuItem%.htm
+	Run, %HelpDocsUrl%/%A_ThisMenuItem%.htm
 return
 
 IEComB:
 If A_ThisMenuItem = COM
-	Run, http://ahkscript.org/docs/commands/ComObjCreate.htm
+	Run, %HelpDocsUrl%/commands/ComObjCreate.htm
 If A_ThisMenuItem = Basic Webpage COM Tutorial
 	Run, http://www.autohotkey.com/board/topic/47052-basic-webpage-controls
 If A_ThisMenuItem = IWebBrowser2 Interface (MSDN)
@@ -2875,7 +2875,7 @@ return
 
 SendMsgB:
 If A_ThisMenuItem = Message List
-	Run, http://ahkscript.org/docs/misc/SendMessageList.htm
+	Run, %HelpDocsUrl%/misc/SendMessageList.htm
 If A_ThisMenuItem = Microsoft MSDN
 	Run, http://msdn.microsoft.com
 return
@@ -2896,11 +2896,11 @@ Run, http://www.macrocreator.com/help
 return
 
 Forum:
-Run, http://www.autohotkey.com/board/topic/79763-macro-creator
+Run, http://ahkscript.org/boards/viewtopic.php?f=6&t=143
 return
 
 HelpAHK:
-Run, http://ahkscript.org/docs
+Run, %HelpDocsUrl%
 return
 
 CheckNow:
@@ -6977,13 +6977,13 @@ If FuncName in Abs,ACos,Asc,ASin,ATan,Ceil,Chr,Exp,FileExist,Floor,Func
 ,GetKeyName,GetKeySC,GetKeyState,GetKeyVK,InStr,IsByRef,IsFunc,IsLabel
 ,IsObject,Ln,Log,LTrim,Mod,NumGet,NumPut,Round,RTrim,Sin,Sqrt,StrGet
 ,StrLen,StrPut,SubStr,Tan,Trim,WinActive,WinExist
-	Run, http://ahkscript.org/docs/Functions.htm#%FuncName%
+	Run, %HelpDocsUrl%/Functions.htm#%FuncName%
 Else If (FuncName = "Array")
-	Run, http://ahkscript.org/docs/misc/Arrays.htm
+	Run, %HelpDocsUrl%/misc/Arrays.htm
 Else If (FuncName = "StrSplit")
-	Run, http://ahkscript.org/docs/commands/StringSplit.htm
+	Run, %HelpDocsUrl%/commands/StringSplit.htm
 Else
-	Run, http://ahkscript.org/docs/commands/%FuncName%.htm
+	Run, %HelpDocsUrl%/commands/%FuncName%.htm
 return
 
 Statement:
@@ -13229,9 +13229,10 @@ If IsLabel("LoadLang_" Lang)
 	GoSub, LoadLang_%Lang%
 Else
 {
-	Lang = En
+	Lang := "En"
 	GoSub, LoadLang_En
 }
+HelpDocsUrl := ((Lang = "Zh") || (Lang = "Zt")) ?  "http://ahkcn.github.io/docs" : "http://ahkscript.org/docs"
 Cmd_Tips := {}
 Loop, Parse, Ahk_Cmd_Index, `n
 {

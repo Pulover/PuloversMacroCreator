@@ -42,6 +42,7 @@ Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jör
 * Added support for For-Loops.
 * Added support for Array.MaxIndex() method inside Dynamic Variables (e.g.: % MyArray.MaxIndex()).
 * Fixed corrupted pmc files saved on exit.
+* Fixed bug with WinWait timeout.
 * Fixed bug with IE/COM Interface.
 * Fixed default editor not set correctly on first run.
 * Removed Launcher.exe from Portable version due to false virus warnings.

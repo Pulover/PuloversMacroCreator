@@ -1207,7 +1207,10 @@ class WaitFor
 		Seconds *= 1000
 		ini_Time := A_TickCount
 		Loop
+		{
+			pass_time := A_TickCount - ini_Time
 			Sleep, 10
+		}
 		Until (((WinExist(Window*)) || (StopIt))
 			|| ((Seconds > 0) && (pass_Time > Seconds)))
 	}
