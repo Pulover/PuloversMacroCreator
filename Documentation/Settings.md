@@ -47,7 +47,9 @@ See [Playback Page](p3-Playback.html#playback-options).
 
 **Draw Button**: Selects the Draw Button to be used for Screenshots tool and Get Area in Image Search.
 
-**Line Width (Px)**: Defines the pixel width of the rectangle when using the Screenshots tool.
+**Line Width (Px)**: Defines the pixel width of the rectangle when using the Image/Pixel Search are and Screenshots tool.
+
+**Color**: Allows to change the color the rectangle used to define Image/Pixel Search area and Screenshots.
 
 **Capture on release**: Captures Screenshots when the Draw button is released.
 

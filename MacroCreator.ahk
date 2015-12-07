@@ -205,6 +205,7 @@ IniRead, EvalDefault, %IniFilePath%, Options, EvalDefault, 0
 IniRead, CloseAction, %IniFilePath%, Options, CloseAction, %A_Space%
 IniRead, ShowLoopIfMark, %IniFilePath%, Options, ShowLoopIfMark, 1
 IniRead, ShowActIdent, %IniFilePath%, Options, ShowActIdent, 1
+IniRead, SearchAreaColor, %IniFilePath%, Options, SearchAreaColor, 0xFF0000
 IniRead, LoopLVColor, %IniFilePath%, Options, LoopLVColor, 0xFFFF80
 IniRead, IfLVColor, %IniFilePath%, Options, IfLVColor, 0x0080FF
 IniRead, VirtualKeys, %IniFilePath%, Options, VirtualKeys, % "
@@ -2501,7 +2502,7 @@ Gui, 1:+Disabled
 GoSub, SaveData
 GoSub, GetHotkeys
 GoSub, ResetHotkeys
-OldLoopColor := LoopLVColor, OldIfColor := IfLVColor
+OldAreaColor := SearchAreaColor, OldLoopColor := LoopLVColor, OldIfColor := IfLVColor
 , OldMoves := Moves, OldTimed := TimedI, OldRandM := RandomSleeps, OldRandP := RandPercent
 FileRead, UserVarsList, %UserVarsPath%
 Gui, 4:Add, Listbox, W160 H400 vAltTab gAltTabControl AltSubmit, %t_Lang022%||%t_Lang035%|%t_Lang090%|%t_Lang046%|%t_Lang018%|%t_Lang096%
@@ -2588,12 +2589,14 @@ Gui, 4:Add, Edit, yp x+0 W100 R1 -Multi ReadOnly, %ManKey%
 Gui, 4:Add, Checkbox, -Wrap Checked%KeepDefKeys% y+5 xs+10 vKeepDefKeys W380 R1, %t_Lang054%.
 Gui, 4:Tab, 4
 ; Screenshots
-Gui, 4:Add, GroupBox, Section ym xm+170 W400 H150, %t_Lang046%:
+Gui, 4:Add, GroupBox, Section ym xm+170 W400 H175, %t_Lang046%:
 Gui, 4:Add, Text, ys+20 xs+10, %t_Lang047%:
 Gui, 4:Add, DDL, yp-5 xs+100 vDrawButton W75, RButton||LButton|MButton
 Gui, 4:Add, Text, y+10 xs+10 W200, %t_Lang048%:
 Gui, 4:Add, Edit, Limit Number yp-2 x+0 W40 R1 vLineT
 Gui, 4:Add, UpDown, yp xp+60 vLineW 0x80 Range1-5, %LineW%
+Gui, 4:Add, Text, y+10 xs+10 W200, %w_Lang039%:
+Gui, 4:Add, Text, yp x+0 W40 vSearchAreaColor gEditColor c%SearchAreaColor%, ██████
 Gui, 4:Add, Radio, -Wrap y+10 xs+10 W180 vOnRelease R1, %t_Lang049%
 Gui, 4:Add, Radio, -Wrap yp x+5 W180 vOnEnter R1, %t_Lang050%
 Gui, 4:Add, Text, y+10 xs+10, %t_Lang051%:
@@ -2694,7 +2697,7 @@ return
 ConfigCancel:
 4GuiClose:
 4GuiEscape:
-VirtualKeys := OldMods, LoopLVColor := OldLoopColor, IfLVColor := OldIfColor
+VirtualKeys := OldMods, SearchAreaColor := OldAreaColor, LoopLVColor := OldLoopColor, IfLVColor := OldIfColor
 , Moves := OldMoves, TimedI := OldTimed, RandomSleeps := OldRandM, RandPercent := OldRandP
 Gui, 1:-Disabled
 Gui, 4:Destroy
@@ -4043,7 +4046,7 @@ WinMinimize, ahk_id %CmdWin%
 FirstCall := True
 CoordMode, Mouse, Screen
 Gui, 20:-Caption +ToolWindow +LastFound +AlwaysOnTop
-Gui, 20:Color, Red
+Gui, 20:Color, %SearchAreaColor%
 SetTimer, WatchCursor, 100
 Return
 
@@ -6143,12 +6146,14 @@ ImageOpt:
 Gui, 25:+owner19 +ToolWindow
 Gui, 19:Default
 Gui, 19:+Disabled
-Gui, 25:Add, GroupBox, Section W400 H120, %t_Lang046%
+OldAreaColor := SearchAreaColor
+Gui, 25:Add, GroupBox, Section W400 H145, %t_Lang046%
 Gui, 25:Add, Text, ys+20 xs+10, %t_Lang047%:
 Gui, 25:Add, DDL, yp-5 xs+100 vDrawButton W75, RButton||LButton|MButton
-Gui, 25:Add, Text, yp+3 xs+210, %t_Lang048%:
+Gui, 25:Add, Text, yp+3 xs+205, %t_Lang048%:
 Gui, 25:Add, Edit, Limit Number yp-2 x+5 W40 R1 vLineT
 Gui, 25:Add, UpDown, yp xp+60 vLineW 0x80 Range1-5, %LineW%
+Gui, 25:Add, Text, yp+5 x+5 W40 vSearchAreaColor gEditColor c%SearchAreaColor%, ██████
 Gui, 25:Add, Radio, -Wrap ys+45 xs+10 W180 vOnRelease R1, %t_Lang049%
 Gui, 25:Add, Radio, -Wrap ys+45 xs+210 W180 vOnEnter R1, %t_Lang050%
 Gui, 25:Add, Text, ys+70 xs+10, %t_Lang051%:
@@ -6184,6 +6189,7 @@ return
 ImgConfigCancel:
 25GuiClose:
 25GuiEscape:
+SearchAreaColor := OldAreaColor
 Gui, 19:-Disabled
 Gui, 25:Destroy
 return
@@ -10251,7 +10257,7 @@ Gui, 19:Submit, NoHide
 rColor := ""
 If (A_GuiControl = "SearchImg")
 	rColor := ImgFile, OwnerID := CmdWin
-Else If InStr(A_GuiControl, "LVColor")
+Else If (InStr(A_GuiControl, "LVColor") || (A_GuiControl = "SearchAreaColor"))
 	rColor := %A_GuiControl%, OwnerID := CmdWin
 Else
 {
@@ -10271,11 +10277,13 @@ If Dlg_Color(rColor, OwnerID, CustomColors)
 		GuiControl,, ImgFile, %rColor%
 		GuiControl, +Background%rColor%, ColorPrev
 	}
-	Else If InStr(A_GuiControl, "LVColor")
+	Else If (InStr(A_GuiControl, "LVColor") || (A_GuiControl = "SearchAreaColor"))
 	{
 		%A_GuiControl% := rColor
 		Gui, 4:Font, c%rColor%
 		GuiControl, 4:Font, %A_GuiControl%
+		Gui, 25:Font, c%rColor%
+		GuiControl, 25:Font, %A_GuiControl%
 	}
 	Else
 		GoSub, PaintRows
@@ -11898,6 +11906,7 @@ AbortKey := "F8"
 ,	CloseAction := ""
 ,	ShowLoopIfMark := 1
 ,	ShowActIdent := 1
+,	SearchAreaColor := 0xFF0000
 ,	LoopLVColor := 0xFFFF80
 ,	IfLVColor := 0x0080FF
 ,	OSCPos := "X0 Y0"
@@ -12126,6 +12135,7 @@ IniWrite, %EvalDefault%, %IniFilePath%, Options, EvalDefault
 IniWrite, %CloseAction%, %IniFilePath%, Options, CloseAction
 IniWrite, %ShowLoopIfMark%, %IniFilePath%, Options, ShowLoopIfMark
 IniWrite, %ShowActIdent%, %IniFilePath%, Options, ShowActIdent
+IniWrite, %SearchAreaColor%, %IniFilePath%, Options, SearchAreaColor
 IniWrite, %LoopLVColor%, %IniFilePath%, Options, LoopLVColor
 IniWrite, %IfLVColor%, %IniFilePath%, Options, IfLVColor
 IniWrite, %VirtualKeys%, %IniFilePath%, Options, VirtualKeys
