@@ -289,7 +289,7 @@
 	c_Lang022 =	Yakın
 	c_Lang023 =	Kopyala
 	c_Lang024 =	Silmek
-	c_Lang025 =	(Ör., Değişkenler için `% kullanın: `%Clipboard`%)
+	c_Lang025 =	Ör., Değişkenler için `% kullanın: `%Clipboard`% (iç diziler hariç)
 	c_Lang026 =	Eylem
 	c_Lang027 =	Tıklayın
 	c_Lang028 =	Hareket
@@ -470,6 +470,9 @@
 	c_Lang204 =	Ifade değerlendirmek
 	c_Lang205 =	Bölge
 	c_Lang206 =	(Kullan [] diziler oluşturmak için, ör .: [10, 20, aVariable, "aString"])
+	c_Lang207 =	dizi nesnesi
+	c_Lang208 =	 anahtar adı
+	c_Lang209 =	 değer adı
 		
 ; Other Windows		
 	t_Lang001 =	AutoHotkey Aktar

@@ -289,7 +289,7 @@
 	c_Lang022 =	Tancar
 	c_Lang023 =	Copieu
 	c_Lang024 =	Esborrar
-	c_Lang025 =	(Utilitza `% per a variables, per exemple: `%Clipboard`%)
+	c_Lang025 =	Utilitza `% per a variables, per exemple: `%Clipboard`% (excepte arrays dins)
 	c_Lang026 =	Acció
 	c_Lang027 =	Clic
 	c_Lang028 =	Moure
@@ -470,6 +470,9 @@
 	c_Lang204 =	Avaluar expressió
 	c_Lang205 =	Regió
 	c_Lang206 =	(Utilitzeu [] per crear matrius, per exemple.: [10, 20, aVariable, "aString"])
+	c_Lang207 =	objecte de matriu
+	c_Lang208 =	 nom de la clau
+	c_Lang209 =	 nom de valor
 		
 ; Other Windows		
 	t_Lang001 =	Exporta a AutoHotkey

@@ -289,7 +289,7 @@
 	c_Lang022 =	Zavrieť
 	c_Lang023 =	Kopírovať
 	c_Lang024 =	Vymazať
-	c_Lang025 =	(Použite `% pre premenné, napríklad: `%Clipboard`%)
+	c_Lang025 =	Použite `% pre premenné, napríklad: `%Clipboard`% (s výnimkou vnútorné pole)
 	c_Lang026 =	Akcie
 	c_Lang027 =	Kliknite na tlačidlo
 	c_Lang028 =	Pohyb
@@ -470,6 +470,9 @@
 	c_Lang204 =	Vyhodnotiť výraz
 	c_Lang205 =	Kraj
 	c_Lang206 =	(Použite [] pre vytvorenie poľa, napr.: [10, 20, aVariable, "aString"])
+	c_Lang207 =	objekt Array
+	c_Lang208 =	 názov kľúča
+	c_Lang209 =	 Názov Hodnota
 		
 ; Other Windows		
 	t_Lang001 =	Export do AutoHotkey

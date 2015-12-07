@@ -289,7 +289,7 @@
 	c_Lang022 =	Tutup
 	c_Lang023 =	Menyalin
 	c_Lang024 =	Padam
-	c_Lang025 =	(Gunakan `% utk pembolehubah, contohnya: `%Clipboard`%)
+	c_Lang025 =	Gunakan `% utk pembolehubah, contohnya: `%Clipboard`% (kecuali dalam tatasusunan)
 	c_Lang026 =	Tindakan
 	c_Lang027 =	Klik
 	c_Lang028 =	Pindah
@@ -470,6 +470,9 @@
 	c_Lang204 =	Menilai ungkapan
 	c_Lang205 =	Wilayah
 	c_Lang206 =	(Gunakan [] untuk mencipta tatasusunan, mis .: [10, 20, aVariable, "aString"])
+	c_Lang207 =	objek pelbagai
+	c_Lang208 =	 nama utama
+	c_Lang209 =	 nama nilai
 		
 ; Other Windows		
 	t_Lang001 =	Eksport ke AutoHotkey

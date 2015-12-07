@@ -289,7 +289,7 @@
 	c_Lang022 =	Menutup
 	c_Lang023 =	Kopi
 	c_Lang024 =	Hapus
-	c_Lang025 =	(Gunakan `% untuk Variabel, misalnya: `%Clipboard`%)
+	c_Lang025 =	Gunakan `% untuk Variabel, misalnya: `%Clipboard`% (kecuali dalam array)
 	c_Lang026 =	Tindakan
 	c_Lang027 =	Klik
 	c_Lang028 =	Bergerak
@@ -470,6 +470,9 @@
 	c_Lang204 =	Evaluasi ekspresi
 	c_Lang205 =	Wilayah
 	c_Lang206 =	(Gunakan [] untuk membuat array, mis .: [10, 20, aVariable, "aString"])
+	c_Lang207 =	array objek
+	c_Lang208 =	 nama kunci
+	c_Lang209 =	 nama nilai
 		
 ; Other Windows		
 	t_Lang001 =	Ekspor ke AutoHotkey

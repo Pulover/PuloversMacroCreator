@@ -289,7 +289,7 @@
 	c_Lang022 =	Zamknąć
 	c_Lang023 =	Skopiuj
 	c_Lang024 =	Usunąć
-	c_Lang025 =	(Użyj `% dla zmiennych, np.: `%Clipboard`%)
+	c_Lang025 =	Użyj `% dla zmiennych, np.: `%Clipboard`% (z wyjątkiem wewnętrznych tablic)
 	c_Lang026 =	Akcja
 	c_Lang027 =	Kliknij
 	c_Lang028 =	Przenieść
@@ -470,6 +470,9 @@
 	c_Lang204 =	Oceny ekspresji
 	c_Lang205 =	Region
 	c_Lang206 =	(Użyj [], aby utworzyć tablice, np .: [10, 20, aVariable, "aString"])
+	c_Lang207 =	obiekt Array
+	c_Lang208 =	 Nazwa klucza
+	c_Lang209 =	 Nazwa wartości
 		
 ; Other Windows		
 	t_Lang001 =	Eksport do AutoHotkey

@@ -289,7 +289,7 @@
 	c_Lang022 =	Zatvoriti
 	c_Lang023 =	Kopirajte
 	c_Lang024 =	Izbrisati
-	c_Lang025 =	(Koristite `% za varijable, npr.:`%Clipboard`%)
+	c_Lang025 =	Koristite `% za varijable, npr.:`%Clipboard`% (osim unutar polja)
 	c_Lang026 =	Akcija
 	c_Lang027 =	Klik
 	c_Lang028 =	Premjestiti
@@ -470,6 +470,9 @@
 	c_Lang204 =	Procijenite izraz
 	c_Lang205 =	Regija
 	c_Lang206 =	(Koristite [] za stvaranje polja, npr .: [10, 20, aVariable, "aString"])
+	c_Lang207 =	niz objekt
+	c_Lang208 =	 ključ ime
+	c_Lang209 =	 naziv vrijednosti
 		
 ; Other Windows		
 	t_Lang001 =	Izvoz u AutoHotkey

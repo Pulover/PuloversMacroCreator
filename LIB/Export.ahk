@@ -110,12 +110,17 @@
 				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
 		}
 		Else If ((Type = cType7) || (Type = cType38) || (Type = cType39)
-		|| (Type = cType40) || (Type = cType41))
+		|| (Type = cType40) || (Type = cType41) || (Type = cType45))
 		{
 			If (Action = "[LoopStart]")
 			{
 				If (Type = cType7)
 					RowData := "`n" Type ((TimesX = 0) ? "" : ", " TimesX)
+				Else If (Type = cType45)
+				{
+					StringSplit, Stp, Step, `,, %A_Space%``
+					RowData := "`nFor " Stp2 ", " Stp3 " in " Stp1
+				}
 				Else
 				{
 					StringReplace, Type, Type, FilePattern

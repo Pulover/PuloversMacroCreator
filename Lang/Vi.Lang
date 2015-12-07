@@ -289,7 +289,7 @@
 	c_Lang022 =	Đóng
 	c_Lang023 =	Sao chép
 	c_Lang024 =	Xóa
-	c_Lang025 =	(Sử dụng `% cho biến, ví dụ: `%Clipboard`%)
+	c_Lang025 =	Sử dụng `% cho biến, ví dụ: `%Clipboard`% (ngoại trừ các mảng bên trong)
 	c_Lang026 =	Hành động
 	c_Lang027 =	Nhấp
 	c_Lang028 =	Di chuyển
@@ -470,6 +470,9 @@
 	c_Lang204 =	Đánh giá biểu thức
 	c_Lang205 =	Khu
 	c_Lang206 =	(Sử dụng [] để tạo ra các mảng, ví dụ: .: [10, 20, aVariable, "aString"])
+	c_Lang207 =	đối tượng mảng
+	c_Lang208 =	 tên chính
+	c_Lang209 =	 tên giá trị
 		
 ; Other Windows		
 	t_Lang001 =	Xuất khẩu sang AutoHotkey

@@ -289,7 +289,7 @@
 	c_Lang022 =	閉じる
 	c_Lang023 =	コピー
 	c_Lang024 =	削除
-	c_Lang025 =	（例えば、変数に`%を使用します： `%Clipboard`%）
+	c_Lang025 =	例えば、変数に`%を使用します： `%Clipboard`% （内部の配列を除きます）
 	c_Lang026 =	アクション
 	c_Lang027 =	クリック
 	c_Lang028 =	移動
@@ -470,6 +470,9 @@
 	c_Lang204 =	Обчислення виразу...
 	c_Lang205 =	地域
 	c_Lang206 =	（[▲]は、配列を作成するには、e.g：[10, 20, aVariable, "aString"]）
+	c_Lang207 =	配列オブジェクト
+	c_Lang208 =	キー名
+	c_Lang209 =	値の名前
 		
 ; Other Windows		
 	t_Lang001 =	AutoHotkeyにエクスポート

@@ -289,7 +289,7 @@
 	c_Lang022 =	Luk
 	c_Lang023 =	Kopiér
 	c_Lang024 =	Slet
-	c_Lang025 =	(Brug `% for Variables, fx: `%Clipboard`%)
+	c_Lang025 =	Brug `% for Variables, fx: `%Clipboard`% (undtagen inde arrays)
 	c_Lang026 =	Aktion
 	c_Lang027 =	Klik
 	c_Lang028 =	Flyt
@@ -470,6 +470,9 @@
 	c_Lang204 =	Evaluer udtryk
 	c_Lang205 =	Region
 	c_Lang206 =	(Brug [] for at oprette arrays, f.eks .: [10, 20, aVariable, "aString"])
+	c_Lang207 =	matrix objekt
+	c_Lang208 =	 nøgle navn
+	c_Lang209 =	 værdi navn
 		
 ; Other Windows		
 	t_Lang001 =	Eksporter til AutoHotkey

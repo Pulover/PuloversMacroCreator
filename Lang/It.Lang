@@ -289,7 +289,7 @@
 	c_Lang022 =	Chiudere
 	c_Lang023 =	Copiare
 	c_Lang024 =	Cancellare
-	c_Lang025 =	(Usare `% per le variabili, ad esempio: `%Clipboard`%)
+	c_Lang025 =	Usare `% per le variabili, ad esempio: `%Clipboard`% (ad eccezione di matrici all'interno)
 	c_Lang026 =	Azione
 	c_Lang027 =	Fare clic
 	c_Lang028 =	Spostare
@@ -470,6 +470,9 @@
 	c_Lang204 =	Valutare l'espressione
 	c_Lang205 =	Regione
 	c_Lang206 =	(Usare [] per creare array, es .: [10, 20, aVariable, "aString"])
+	c_Lang207 =	oggetto array
+	c_Lang208 =	 nome della chiave
+	c_Lang209 =	 nome di valore
 		
 ; Other Windows		
 	t_Lang001 =	Esporta in AutoHotkey

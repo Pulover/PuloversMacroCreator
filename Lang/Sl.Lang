@@ -289,7 +289,7 @@
 	c_Lang022 =	Zapri
 	c_Lang023 =	Kopirajte
 	c_Lang024 =	Izbriši
-	c_Lang025 =	(Uporabite `% za spremenljivke, npr: `%Clipboard`%)
+	c_Lang025 =	Uporabite `% za spremenljivke, npr: `%Clipboard`% (razen znotraj nizi)
 	c_Lang026 =	Akcija
 	c_Lang027 =	Kliknite
 	c_Lang028 =	Premikanje
@@ -470,6 +470,9 @@
 	c_Lang204 =	Ovrednoti izraz
 	c_Lang205 =	Regija
 	c_Lang206 =	(Uporabite [], da ustvarite nizi, npr .: [10, 20, aVariable, "aString"])
+	c_Lang207 =	matrika objekt
+	c_Lang208 =	 ključ ime
+	c_Lang209 =	 ime vrednosti
 		
 ; Other Windows		
 	t_Lang001 =	Izvoz v AutoHotkey

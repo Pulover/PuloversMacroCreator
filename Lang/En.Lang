@@ -289,7 +289,7 @@
 	c_Lang022 =	Close
 	c_Lang023 =	Copy
 	c_Lang024 =	Delete
-	c_Lang025 =	(Use `% for Variables, e.g.: `%Clipboard`%)
+	c_Lang025 =	Use `% for Variables, e.g.: `%Clipboard`% (except inside arrays)
 	c_Lang026 =	Action
 	c_Lang027 =	Click
 	c_Lang028 =	Move
@@ -470,6 +470,9 @@
 	c_Lang204 =	Evaluate expression
 	c_Lang205 =	Region
 	c_Lang206 =	(Use [] to create arrays, e.g.: [10, 20, aVariable, "aString"])
+	c_Lang207 =	Array Object
+	c_Lang208 =	Key Name
+	c_Lang209 =	Value Name
 		
 ; Other Windows		
 	t_Lang001 =	Export to AutoHotkey

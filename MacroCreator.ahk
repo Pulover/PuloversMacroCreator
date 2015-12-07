@@ -2335,7 +2335,6 @@ return
 ExpButton:
 Gui, 14:+OwnDialogs
 Gui, 14:Submit, NoHide
-OutputDebug, % ExpFile
 If (ExpFile = "")
 	return
 If (Ex_AbortKey = 1)
@@ -2978,7 +2977,7 @@ just me for LV_Colors Class, GuiCtrlAddTab and for updating ILButton to 64bit.
 Micahs for the base code of the Drag-Rows function.
 jaco0646 for the function to make hotkey controls detect other keys.
 Laszlo for the Monster function to solve expressions.
-Jethrow for the WBGet & WBGet Functions.
+Jethrow for the IEGet & WBGet Functions.
 RaptorX for the Scintilla Wrapper for AHK.
 majkinetor for the Dlg_Color function.
 rbrtryn for the ChooseColor function.
@@ -5123,8 +5122,16 @@ If (s_Caller = "Edit")
 			GuiControl, 12:, Recurse, %Par4%
 			GuiControl, 12:, LRegistry, 1
 		}
+		If (Type = cType45)
+		{
+			GuiControl, 12:, LParamsFile, %Par1%
+			GuiControl, 12:, Delim, %Par2%
+			GuiControl, 12:, Omit, %Par3%
+			GuiControl, 12:, LFor, 1
+		}
 		GuiControl, 12:, TabControl, |%c_Lang073%
 		GoSub, LoopType
+		GoSub, ClearPars
 	}
 	GuiControl, 12:Enable, LoopApply
 	GuiControl, 12:Enable, GotoApply
@@ -5184,6 +5191,13 @@ Else If (LParse = 1)
 	}
 	Details := LParamsFile ", " Delim ", " Omit
 ,	TimesL := 1, Type := cType39
+}
+Else If (LFor = 1)
+{
+	If ((LParamsFile = "") || (Delim == "") || (Omit == ""))
+		return
+	Details := LParamsFile ", " Delim ", " Omit
+,	TimesL := 1, Type := cType45
 }
 Else If (LFilePattern = 1)
 {
@@ -5386,7 +5400,7 @@ Else
 	GuiControl, 12:Disable, IncFolders
 	GuiControl, 12:Disable, Recurse
 }
-If (LParse || LRegistry)
+If (LParse || LRegistry || LFor)
 	GuiControl, 12:Enable, Delim
 Else
 	GuiControl, 12:Disable, Delim
@@ -5397,12 +5411,32 @@ Else
 GuiControl, 12:, Field1, % (LParse ? c_Lang140 : (LRead ? c_Lang143 : (LRegistry ? c_Lang144 : c_Lang137)))
 GuiControl, 12:, Field2, % (LRegistry ? c_Lang145 : c_Lang141)
 GuiControl, 12:Text, IncFolders, % (LRegistry ? c_Lang146 : c_Lang138)
+If (LFor)
+{
+	GuiControl, 12:Enable, Omit
+	GuiControl, 12:, Field1, %c_Lang207%
+	GuiControl, 12:, Field2, %c_Lang208%
+	GuiControl, 12:, Field3, %c_Lang209%
+	GuiControl, 12:, Delim, % Par2 ? Par2 : "each"
+	GuiControl, 12:, Omit, % Par3 ? Par3 : "value"
+}
+Else
+{
+	GuiControl, 12:, Field1, %c_Lang137%
+	GuiControl, 12:, Field2, %c_Lang141%
+	GuiControl, 12:, Field3, %c_Lang142%
+	GuiControl, 12:, Delim
+	GuiControl, 12:, Omit
+}
+GuiControl, 12:, LParamsFile, % Par1 ? Par1 : ""
 If (Loop)
 	SBShowTip("Loop (normal)")
 Else If (LFilePattern)
 	SBShowTip("Loop (files & folders)")
 Else If (LParse)
 	SBShowTip("Loop (parse a string)")
+Else If (LFor)
+	SBShowTip("For")
 Else If (LRead)
 	SBShowTip("Loop (read file contents)")
 Else If (LRegistry)
@@ -6479,8 +6513,9 @@ Gui, 21:Add, DDL, y+7 W60 vOper gAsOper, :=$$+=$-=$*=$/=$//=$.=
 Gui, 21:Add, Text, yp+5 x+5 W150 vAsOper cGray, %As_Oper_1%
 Gui, 21:Add, Text, y+9 xs+10 W200, %c_Lang056%:
 Gui, 21:Add, Checkbox, -Wrap Checked%EvalDefault% yp x+5 W220 vUseEval gUseEval R1, %c_Lang087%
-Gui, 21:Add, Edit, y+10 xs+10 W430 H125 vVarValue
+Gui, 21:Add, Edit, y+10 xs+10 W430 H110 vVarValue
 Gui, 21:Add, Text, W300 r1 cGray, %c_Lang025%
+Gui, 21:Add, Text, y+5 W300 r1 cGray vArrayTip Hidden, %c_Lang206%
 Gui, 21:Add, Groupbox, Section xs y+15 W450 H50, %c_Lang010%:
 Gui, 21:Add, Button, -Wrap ys+18 xs+85 W75 H23 vVarCopyA gVarCopy, %c_Lang023%
 Gui, 21:Add, Button, -Wrap x+10 yp W75 H23 gReset, %c_Lang088%
@@ -6564,7 +6599,10 @@ If (s_Caller = "Edit")
 		GuiControl, 21:ChooseString, Oper, %Oper%
 		GuiControl, 21:, VarValue, %VarValue%
 		If (Target = "Expression")
+		{
 			GuiControl, 21:, UseEval, 1
+			GuiControl, 21:Show, ArrayTip
+		}
 		SBShowTip("SetEnv (Var = Value)")
 		GoSub, AsOper
 	}
@@ -6872,6 +6910,11 @@ If !IsFunc("Eval")
 		Run, http://www.autohotkey.com/board/topic/15675-monster
 	return
 }
+Gui, 21:Submit, NoHide
+If (UseEval)
+	GuiControl, 21:Show, ArrayTip
+Else
+	GuiControl, 21:Hide, ArrayTip
 return
 
 IfCancel:
@@ -9647,7 +9690,7 @@ GoSub, ClearPars
 LV_GetTexts(RowNumber, Action, Details, TimesX, DelayX, Type, Target, Window, Comment)
 If (Action = "[LoopEnd]")
 	return
-If Type in %cType7%,%cType38%,%cType39%,%cType40%,%cType41%
+If Type in %cType7%,%cType38%,%cType39%,%cType40%,%cType41%,%cType45%
 	Goto, EditLoop
 If Type in %cType15%,%cType16%
 	Goto, EditImage
@@ -12320,7 +12363,7 @@ Loop, % LV_GetCount()
 :	(Type = cType5) ? LV_Modify(A_Index, "Icon" 45)
 :	(Type = cType6) ? LV_Modify(A_Index, "Icon" 11)
 :	(Type = cType14) ? LV_Modify(A_Index, "Icon" 77)
-:	RegExMatch(Type, cType7 "|" cType38 "|" cType39 "|" cType40 "|" cType41) ? LV_Modify(A_Index, "Icon" 36)
+:	RegExMatch(Type, cType7 "|" cType38 "|" cType39 "|" cType40 "|" cType41 "|" cType45) ? LV_Modify(A_Index, "Icon" 36)
 :	(Type = cType29) ? LV_Modify(A_Index, "Icon" 2)
 :	(Type = cType30) ? LV_Modify(A_Index, "Icon" 6)
 :	(Type = cType21) ? LV_Modify(A_Index, "Icon" 75)
@@ -13229,6 +13272,7 @@ Type_Keywords := "
 " cType42 "
 " cType43 "
 " cType44 "
+" cType45 "
 InternetExplorer
 COMInterface
 )"

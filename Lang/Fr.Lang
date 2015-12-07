@@ -289,7 +289,7 @@
 	c_Lang022 =	Fermer
 	c_Lang023 =	Copier
 	c_Lang024 =	Effacer
-	c_Lang025 =	(Utilisez `% pour les variables, par exemple: `%Clipboard`%)
+	c_Lang025 =	Utilisez `% pour les variables, par exemple: `%Clipboard`% (à l'exception des tableaux à l'intérieur)
 	c_Lang026 =	Action
 	c_Lang027 =	Cliquez sur
 	c_Lang028 =	Déplacer
@@ -470,6 +470,9 @@
 	c_Lang204 =	Évaluer expression
 	c_Lang205 =	Région
 	c_Lang206 =	(Utilisez [] pour créer des tableaux, e.g .: [10, 20, aVariable, "aString"])
+	c_Lang207 =	objet de tableau
+	c_Lang208 =	 nom de la clé
+	c_Lang209 =	 nom de la valeur
 		
 ; Other Windows		
 	t_Lang001 =	Exporter vers AutoHotkey

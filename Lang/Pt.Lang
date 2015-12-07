@@ -289,7 +289,7 @@
 	c_Lang022 =	Fechar
 	c_Lang023 =	Copiar
 	c_Lang024 =	Excluir
-	c_Lang025 =	(Use `% para variáveis, ex.: `%Clipboard`%)
+	c_Lang025 =	Use `% para variáveis, ex.: `%Clipboard`% (exceto dentro de matrizes)
 	c_Lang026 =	Ação
 	c_Lang027 =	Clicar
 	c_Lang028 =	Mover
@@ -470,6 +470,9 @@
 	c_Lang204 =	Avaliar expressão
 	c_Lang205 =	Região
 	c_Lang206 =	(Utilize [] para criar matrizes, por exemplo: [10, 20, aVariable, "aString"])
+	c_Lang207 =	Objeto Matriz
+	c_Lang208 =	Nome da Chave
+	c_Lang209 =	Nome do Valor
 		
 ; Other Windows		
 	t_Lang001 =	Exportar para AutoHotkey

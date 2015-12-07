@@ -289,7 +289,7 @@
 	c_Lang022 =	Lähellä
 	c_Lang023 =	Kopioi
 	c_Lang024 =	Poistaa
-	c_Lang025 =	(Käytä `% muuttujia, esimerkiksi: `%Clipboard`%)
+	c_Lang025 =	Käytä `% muuttujia, esimerkiksi: `%Clipboard`% (paitsi sisällä paneelit)
 	c_Lang026 =	Toiminta
 	c_Lang027 =	Napsauttaa
 	c_Lang028 =	Liikkua
@@ -470,6 +470,9 @@
 	c_Lang204 =	Arvioi ilme
 	c_Lang205 =	Alue
 	c_Lang206 =	(Käytä [] luoda taulukoita, esim .: [10, 20, aVariable, "aString"])
+	c_Lang207 =	array esine
+	c_Lang208 =	 avaimen nimi
+	c_Lang209 =	 arvo nimi
 		
 ; Other Windows		
 	t_Lang001 =	Vie AutoHotkey

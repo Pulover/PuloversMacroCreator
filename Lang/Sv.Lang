@@ -289,7 +289,7 @@
 	c_Lang022 =	Stäng
 	c_Lang023 =	Kopiera
 	c_Lang024 =	Ta bort
-	c_Lang025 =	(Använd `% för variabler, t.e.x.: `%Clipboard`%)
+	c_Lang025 =	Använd `% för variabler, t.e.x.: `%Clipboard`% (utom inne arrayer)
 	c_Lang026 =	Åtgärd
 	c_Lang027 =	Klicka
 	c_Lang028 =	Flytta
@@ -470,6 +470,9 @@
 	c_Lang204 =	Utvärdera uttryck
 	c_Lang205 =	Region
 	c_Lang206 =	(Använd [] för att skapa matriser, t.ex .: [10, 20, aVariable, "aString"])
+	c_Lang207 =	array-objekt
+	c_Lang208 =	 nyckelnamn
+	c_Lang209 =	 värdenamn
 		
 ; Other Windows		
 	t_Lang001 =	Exportera till AutoHotkey

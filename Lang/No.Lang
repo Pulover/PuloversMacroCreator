@@ -289,7 +289,7 @@
 	c_Lang022 =	Lukk
 	c_Lang023 =	Kopier
 	c_Lang024 =	Slett
-	c_Lang025 =	(Bruk `% for variabler, f.eks: `%Clipboard`%)
+	c_Lang025 =	Bruk `% for variabler, f.eks: `%Clipboard`% (unntatt inne arrays)
 	c_Lang026 =	Handling
 	c_Lang027 =	Klikk
 	c_Lang028 =	Flytt
@@ -470,6 +470,9 @@
 	c_Lang204 =	Evaluer uttrykk
 	c_Lang205 =	Region
 	c_Lang206 =	(Bruk [] for å lage matriser, f.eks .: [10, 20, aVariable, "aString"])
+	c_Lang207 =	matrise objekt
+	c_Lang208 =	 nøkkelnavn
+	c_Lang209 =	 verdinavn
 		
 ; Other Windows		
 	t_Lang001 =	Eksportere til AutoHotkey

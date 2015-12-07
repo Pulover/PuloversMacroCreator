@@ -289,7 +289,7 @@
 	c_Lang022 =	가까운
 	c_Lang023 =	복사
 	c_Lang024 =	삭제
-	c_Lang025 =	(예를 들어, 변수 `% 를 사용: `%Clipboard`%)
+	c_Lang025 =	예를 들어, 변수 `% 를 사용: `%Clipboard`% (내부 배열 제외)
 	c_Lang026 =	행동
 	c_Lang027 =	를 클릭하십시오
 	c_Lang028 =	움직임
@@ -470,6 +470,9 @@
 	c_Lang204 =	식을 계산
 	c_Lang205 =	지방
 	c_Lang206 =	(사용 []는 배열을 만들려면 예컨대 : [10, 20, aVariable, "aString"])
+	c_Lang207 =	배열 객체
+	c_Lang208 =	 키 이름
+	c_Lang209 =	 값 이름
 		
 ; Other Windows		
 	t_Lang001 =	AutoHotkey로 내보내기

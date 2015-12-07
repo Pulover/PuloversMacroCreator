@@ -289,7 +289,7 @@
 	c_Lang022 =	Zavřít
 	c_Lang023 =	Kopírovat
 	c_Lang024 =	Vymazat
-	c_Lang025 =	(Použijte `% pro proměnné, např.: `%Clipboard`%)
+	c_Lang025 =	Použijte `% pro proměnné, např.: `%Clipboard`% (s výjimkou vnitřní pole)
 	c_Lang026 =	Akce
 	c_Lang027 =	Klepněte na tlačítko
 	c_Lang028 =	Pohyb
@@ -470,6 +470,9 @@
 	c_Lang204 =	Vyhodnotit výraz
 	c_Lang205 =	Kraj
 	c_Lang206 =	(Použijte [] pro vytvoření pole, např .: [10, 20, aVariable, "aString"])
+	c_Lang207 =	objekt Array
+	c_Lang208 =	 název klíče
+	c_Lang209 =	 název hodnota
 		
 ; Other Windows		
 	t_Lang001 =	Export do AutoHotkey

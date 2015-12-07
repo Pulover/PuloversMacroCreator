@@ -289,7 +289,7 @@
 	c_Lang022 =	關閉
 	c_Lang023 =	複製
 	c_Lang024 =	刪除
-	c_Lang025 =	（使用`%變量，例如：`%Clipboard`%））
+	c_Lang025 =	使用`%變量，例如：`%Clipboard`% （內部數組除外）
 	c_Lang026 =	行動
 	c_Lang027 =	點擊
 	c_Lang028 =	移動
@@ -470,6 +470,9 @@
 	c_Lang204 =	計算表達式
 	c_Lang205 =	地區
 	c_Lang206 =	（使用[]創建數組，例如：[10, 20, aVariable, "aString"]）
+	c_Lang207 =	數組對象
+	c_Lang208 =	鍵名
+	c_Lang209 =	值名稱
 		
 ; Other Windows		
 	t_Lang001 =	導出到華民航空

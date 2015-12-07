@@ -289,7 +289,7 @@
 	c_Lang022 =	Sluiten
 	c_Lang023 =	Kopieer
 	c_Lang024 =	Verwijder
-	c_Lang025 =	(Gebruik `% voor variabelen, bijvoorbeeld: `%Clipboard`%)
+	c_Lang025 =	Gebruik `% voor variabelen, bijvoorbeeld: `%Clipboard`% (behalve in arrays)
 	c_Lang026 =	Actie
 	c_Lang027 =	Klikken
 	c_Lang028 =	Bewegen
@@ -470,6 +470,9 @@
 	c_Lang204 =	Evalueer meningsuiting
 	c_Lang205 =	Regio
 	c_Lang206 =	(Gebruik [] om arrays te maken, bijv .: [10, 20, aVariable, "aString"])
+	c_Lang207 =	arrayobject
+	c_Lang208 =	 key naam
+	c_Lang209 =	 waarde naam
 		
 ; Other Windows		
 	t_Lang001 =	Exporteren naar AutoHotkey

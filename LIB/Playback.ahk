@@ -179,11 +179,11 @@
 					continue
 				If (Manual)
 				{
-					If Type in %cType5%,%cType7%,%cType38%,%cType39%,%cType40%,%cType41%
+					If Type in %cType5%,%cType7%,%cType38%,%cType39%,%cType40%,%cType41%,%cType45%
 						continue
 				}
 				If ((Type = cType7) || (Type = cType38) || (Type = cType39)
-				|| (Type = cType40) || (Type = cType41))
+				|| (Type = cType40) || (Type = cType41) || (Type = cType45))
 				{
 					If (Action = "[LoopStart]")
 					{
@@ -276,6 +276,17 @@
 							}
 							LoopCount[PointMarker] := o_Loop%PointMarker%.MaxIndex()
 						}
+						Else If (Type = cType45)
+						{
+							$_each%PointMarker% := Par2, $_value%PointMarker% := Par3
+							o_Loop%PointMarker% := []
+							For _each, _value in % %Par1%
+							{
+								o_Loop%PointMarker%[A_Index, Par2] := _each
+							,	o_Loop%PointMarker%[A_Index, Par3] := _value
+							}
+							LoopCount[PointMarker] := %Par1%.MaxIndex()
+						}
 						Else
 							LoopCount[PointMarker] := TimesX
 						If (LoopCount[PointMarker] = "")
@@ -304,6 +315,7 @@
 						GoToLab := LoopSection(Start%PointMarker%, End%PointMarker%, LoopCount[PointMarker], Macro_On
 						, PointMarker, mLoopIndex, o_TimesG[Macro_On], LoopCount)
 						o_Loop%PointMarker% := ""
+						, $_each := "", $_value := ""
 						If IsObject(GoToLab)
 							return GoToLab
 						Else If (GoToLab = "_return")
@@ -614,7 +626,7 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC, ByRef LoopCount)
 				If (Type = cType35)
 					continue
 				If ((Type = cType7) || (Type = cType38) || (Type = cType39)
-				|| (Type = cType40) || (Type = cType41))
+				|| (Type = cType40) || (Type = cType41) || (Type = cType45))
 				{
 					If (Action = "[LoopStart]")
 					{
@@ -706,6 +718,17 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC, ByRef LoopCount)
 							,	o_Loop%PointMarker%[A_Index, "LoopRegTimeModified"] := A_LoopRegTimeModified
 							}
 							LoopCount[PointMarker] := o_Loop%PointMarker%.MaxIndex()
+						}
+						Else If (Type = cType45)
+						{
+							$_each%PointMarker% := Par2, $_value%PointMarker% := Par3
+							o_Loop%PointMarker% := []
+							For _each, _value in % %Par1%
+							{
+								o_Loop%PointMarker%[A_Index, Par2] := _each
+							,	o_Loop%PointMarker%[A_Index, Par3] := _value
+							}
+							LoopCount[PointMarker] := %Par1%.MaxIndex()
 						}
 						Else
 							LoopCount[PointMarker] := TimesX
@@ -1281,10 +1304,18 @@ CheckVars(Match_List, l_Point="")
 			StringReplace, %A_LoopField%, %A_LoopField%, `%A_Index`%, `%LoopIndex`%, All
 		If InStr(%A_LoopField%, "%ErrorLevel%")
 			StringReplace, %A_LoopField%, %A_LoopField%, `%ErrorLevel`%, `%LastError`%, All
+		I := DerefVars(LoopIndex)
 		While, RegExMatch(%A_LoopField%, "i)%(A_Loop\w+)%", lMatch)
 		{
-			I := DerefVars(LoopIndex), L := SubStr(lMatch1, 3)
+			L := SubStr(lMatch1, 3)
 		,	%A_LoopField% := RegExReplace(%A_LoopField%, "U)" lMatch, o_Loop%l_Point%[I][L])
+		}
+		If ($_value%l_Point% <> "")
+		{
+			While, RegExMatch(%A_LoopField%, "i)%" $_each%l_Point% "%", lMatch)
+				%A_LoopField% := RegExReplace(%A_LoopField%, "U)" lMatch, o_Loop%l_Point%[I][$_each%l_Point%])
+			While, RegExMatch(%A_LoopField%, "i)%(" $_value%l_Point% ")%", lMatch)
+				%A_LoopField% := RegExReplace(%A_LoopField%, "U)" lMatch, o_Loop%l_Point%[I][$_value%l_Point%])
 		}
 		If RegExMatch(%A_LoopField%, "sU)%\s([\w%]+)\((.*)\)")  ; Functions
 		{
@@ -1312,6 +1343,13 @@ CheckVars(Match_List, l_Point="")
 			}
 		}
 		%A_LoopField% := DerefVars(%A_LoopField%)
+		While, RegExMatch(%A_LoopField%, "iU)^%\s+([\w\d_]+)\.MaxIndex\(\)$", lMatch)
+		{
+			If (!IsObject(%lMatch1%))
+				break
+			%A_LoopField% := RegExReplace(%A_LoopField%, ".+", %lMatch1%.MaxIndex())
+		}
+
 		If RegExMatch(%A_LoopField%, "U)^%\s+[\w\d_\[\]\(\)]+$")  ; DynamicVars
 		{
 			While, RegExMatch(%A_LoopField%, "mU)%\s+([\w%]*)(``,|$)", Found)
