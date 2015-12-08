@@ -401,15 +401,15 @@
 	c_Lang135 =	Preberite
 	c_Lang136 =	Registracija
 	c_Lang137 =	Datoteka Vzorec:
-	c_Lang138 =	Mape?
-	c_Lang139 =	Recurse?
+	c_Lang138 =	Imeniki
+	c_Lang139 =	Rekurzivna
 	c_Lang140 =	Vhodna spremenljivka:
 	c_Lang141 =	Ločila:
 	c_Lang142 =	Izpustiti znakov:
 	c_Lang143 =	Vhodna datoteka:
-	c_Lang144 =	Legenda:
-	c_Lang145 =	Root Key:
-	c_Lang146 =	Podključi?
+	c_Lang144 =	Root Key\Legenda:
+	c_Lang145 =	Datoteke
+	c_Lang146 =	Ključi
 	c_Lang147 =	Ikona
 	c_Lang148 =	Ne ikona
 	c_Lang149 =	Napaka
@@ -473,6 +473,7 @@
 	c_Lang207 =	matrika objekt
 	c_Lang208 =	Ključ ime
 	c_Lang209 =	Ime vrednosti
+	c_Lang210 =	Vrednosti
 		
 ; Other Windows		
 	t_Lang001 =	Izvoz v AutoHotkey
@@ -915,17 +916,9 @@
 	ToggleC_TT =	Vključite Relativna snemanja, ko je ključ država je na.
 	Relative_TT =	Koordinate glede na aktivnem oknu.
 	Screen_TT =	Koordinate so relativne na namizje (celoten zaslon).
-	IncFolders_TT =	
-	(LTrim	
-		0 - le datoteke / ključe
-		1 - Mape / podključi in datoteke / ključe
-		2 - samo mape / podključi
-	)	
-	Recurse_TT =	
-	(LTrim	
-		0 - Ne recurse v mape / podključe
-		1 - Recurse v mape / podključe
-	)	
+	IncFiles_TT =	Vključi datoteke / Values
+	IncFolders_TT =	Vključite imenikov (mape) / Keys
+	Recurse_TT =	Rekurzivne v podimenike (podmape) / podključi
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	Dvakrat kliknite za urejanje

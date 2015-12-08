@@ -39,10 +39,11 @@ Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jör
 ## Version 4.2.0
 
 * Added support for array assignment in Variables window.
-* Added support for For-Loops.
+* Added For-Loops.
 * Added support for Array.MaxIndex() inside Dynamic Variables (e.g.: % MyArray.MaxIndex()).
 * Added support for Array.MaxIndex() inside Variable Assignment when "Expression" is checked.
 * Added option to change color of the rectangle of Image/Pixel Search area and Screenshots tool.
+* Updated "Loop, File" and "Loop, Reg" to new format with "Mode" parameter.
 * Fixed corrupted pmc files saved on exit.
 * Fixed bug with WinWait timeout.
 * Fixed bug with IE/COM Interface.

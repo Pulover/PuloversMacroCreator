@@ -401,15 +401,15 @@
 	c_Lang135 =	閱讀
 	c_Lang136 =	註冊處
 	c_Lang137 =	文件模式：
-	c_Lang138 =	文件夾？
-	c_Lang139 =	遞歸？
+	c_Lang138 =	目錄
+	c_Lang139 =	遞歸
 	c_Lang140 =	輸入變量：
 	c_Lang141 =	分隔符：
 	c_Lang142 =	省略字符：
 	c_Lang143 =	輸入文件：
-	c_Lang144 =	重點：
-	c_Lang145 =	根密鑰：
-	c_Lang146 =	子項嗎？
+	c_Lang144 =	重點\根密鑰：
+	c_Lang145 =	檔
+	c_Lang146 =	鑰匙
 	c_Lang147 =	圖標
 	c_Lang148 =	沒有圖標
 	c_Lang149 =	錯誤
@@ -473,6 +473,7 @@
 	c_Lang207 =	數組對象
 	c_Lang208 =	鍵名
 	c_Lang209 =	值名稱
+	c_Lang210 =	值
 		
 ; Other Windows		
 	t_Lang001 =	導出到華民航空
@@ -915,17 +916,9 @@
 	ToggleC_TT =	國家重點時，激活相對錄製。
 	Relative_TT =	坐標是相對的活動窗口。
 	Screen_TT =	坐標是相對於桌面（整個畫面）。
-	IncFolders_TT =	
-	(LTrim	
-		0 - 只有文件/密鑰
-		1 - 子項和文件夾/文件/密鑰
-		2 - 只有文件夾/子項
-	)	
-	Recurse_TT =	
-	(LTrim	
-		0 - 不遞歸到文件夾/子項
-		1 - 遞歸到文件夾/子項
-	)	
+	IncFiles_TT =	包括文件/價值觀
+	IncFolders_TT =	包括目錄（文件夾）/鍵
+	Recurse_TT =	遞歸到子目錄（子文件夾）/子項
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	雙擊編輯

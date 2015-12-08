@@ -401,15 +401,15 @@
 	c_Lang135 =	读取
 	c_Lang136 =	注册表
 	c_Lang137 =	文件名模式：
-	c_Lang138 =	含文件夹？
-	c_Lang139 =	递归？
+	c_Lang138 =	目录
+	c_Lang139 =	递归
 	c_Lang140 =	输入变量：
 	c_Lang141 =	分隔符：
 	c_Lang142 =	忽略字符：
 	c_Lang143 =	输入文件：
-	c_Lang144 =	键：
-	c_Lang145 =	根键：
-	c_Lang146 =	含子键？
+	c_Lang144 =	键\根键：
+	c_Lang145 =	档
+	c_Lang146 =	钥匙
 	c_Lang147 =	图标
 	c_Lang148 =	无图标
 	c_Lang149 =	错误
@@ -473,6 +473,7 @@
 	c_Lang207 =	数组对象
 	c_Lang208 =	键名
 	c_Lang209 =	值名称
+	c_Lang210 =	值
 		
 ; Other Windows		
 	t_Lang001 =	导出为AutoHotkey
@@ -915,17 +916,9 @@
 	ToggleC_TT =	当按键状态弹起时激活相对录制。
 	Relative_TT =	坐标相对于活动窗口。
 	Screen_TT =	坐标相对于桌面（整个屏幕）。
-	IncFolders_TT =	
-	(LTrim	
-		0 - 仅文件/按键
-		1 - 文件夹/子键和文件/按键
-		2 - 仅文件夹/子键
-	)	
-	Recurse_TT =	
-	(LTrim	
-		0 - 不对文件夹/子键进行递归
-		1 - 对文件夹/子键进行递归
-	)	
+	IncFiles_TT =	包括文件/价值观
+	IncFolders_TT =	包括目录（文件夹）/键
+	Recurse_TT =	递归到子目录（子文件夹）/子项
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	双击进行编辑

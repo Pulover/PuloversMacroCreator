@@ -401,15 +401,15 @@
 	c_Lang135 =	Czytać
 	c_Lang136 =	Rejestr
 	c_Lang137 =	Plik Wzór:
-	c_Lang138 =	Foldery?
-	c_Lang139 =	Recurse?
+	c_Lang138 =	Katalogi
+	c_Lang139 =	Rekurencyjne
 	c_Lang140 =	Zmienna Input:
 	c_Lang141 =	Ograniczniki:
 	c_Lang142 =	Pominąć Znaków:
 	c_Lang143 =	Plik Wejściowy:
-	c_Lang144 =	Klucz:
-	c_Lang145 =	Klucz Główny:
-	c_Lang146 =	Podklucze?
+	c_Lang144 =	Klucz Główny\Klucz:
+	c_Lang145 =	Akta
+	c_Lang146 =	Klawiatura
 	c_Lang147 =	Ikona
 	c_Lang148 =	No icon
 	c_Lang149 =	Błąd
@@ -473,6 +473,7 @@
 	c_Lang207 =	obiekt Array
 	c_Lang208 =	Nazwa klucza
 	c_Lang209 =	Nazwa wartości
+	c_Lang210 =	Wartości
 		
 ; Other Windows		
 	t_Lang001 =	Eksport do AutoHotkey
@@ -915,17 +916,9 @@
 	ToggleC_TT =	Aktywuj krewny klawisz nagrywania, gdy stan jest włączony.
 	Relative_TT =	Współrzędne są w stosunku do aktywnego okna.
 	Screen_TT =	Współrzędne są w stosunku do pulpitu (ekranu cały).
-	IncFolders_TT =	
-	(LTrim	
-		0 - Tylko pliki / klucze
-		1 - Podklucze i foldery / pliki / klucze
-		2 - Podklucze tylko foldery /
-	)	
-	Recurse_TT =	
-	(LTrim	
-		0 - Nie rekursywnie folderów / podklucze
-		1 - Recurse do folderów / podklucze
-	)	
+	IncFiles_TT =	Dołącz pliki / wartości
+	IncFolders_TT =	Dołącz katalogi (foldery) / Keys
+	Recurse_TT =	Rekurencyjne do podkatalogów (podfoldery) / podklucze
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	Kliknij dwukrotnie, aby edytować

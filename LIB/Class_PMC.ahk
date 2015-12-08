@@ -62,7 +62,7 @@
 				LoadedFileName := SelectedFile%A_Index%
 			Else
 				LoadedFileName := ""
-			FoundC := PMC.Load(SelectedFile%A_Index%)
+			FoundC := this.Load(SelectedFile%A_Index%)
 			Loop, %FoundC%
 			{
 				TabCount++
@@ -70,7 +70,7 @@
 				GuiCtrlAddTab(TabSel, "Macro" TabCount)
 			,	GuiAddLV(TabCount), CopyMenuLabels[TabCount] := "Macro" TabCount
 				Menu, CopyTo, Add, % CopyMenuLabels[TabCount], CopyList
-				PMC.LVLoad("InputList" TabCount, PmcCode[A_Index])
+				this.LVLoad("InputList" TabCount, PmcCode[A_Index])
 				Gui, chMacro:ListView, InputList%TabCount%
 				ListCount%TabCount% := LV_GetCount()
 			,	Opt := PmcCode[A_Index].Opt
@@ -110,6 +110,8 @@
 				Col[A_Index] := RegExReplace(Col[A_Index], "¢", "|")
 			chk := SubStr(Col[1], 1, 1)
 		,	((Col[2] = "[Pause]") && (Col[6] <> "Sleep")) ? (Col[2] := "[" Col[6] "]") : ""
+		,	((Col[6] = "LoopFilePattern") && (RegExMatch(Col[3], "```, \d```, \d"))) ? (Col[3] := this.FormatCmd(Col[3], "Files")) : ""
+		,	((Col[6] = "LoopRegistry") && (RegExMatch(Col[3], "```, \d```, \d"))) ? (Col[3] := this.FormatCmd(Col[3], "Reg")) : ""
 		,	((Col[6] = "Variable") && (Col[2] <> "[Assign Variable]")) ? (Col[6] := "Function") : ""
 		,	Col[6] := RegExReplace(Col[6], "\s", "_")
 		,	LV_Add("Check" chk, Col*)
@@ -141,5 +143,35 @@
 		StringReplace, Text, Text, `r,, All
 		Data := {Row: Row, Text: Text}
 		return Data
+	}
+	
+	FormatCmd(ColTxt, Type)
+	{
+		StringSplit, Col, ColTxt, `,, ``
+		If (Type = "Files")
+		{
+			NewText := Col1 "`, "
+			If (Col2 = 0)
+				NewText .= "F"
+			Else If (Col2 = 1)
+				NewText .= "FD"
+			Else If (Col2 = 2)
+				NewText .= "D"
+			If (Col3 = 1)
+				NewText .= "R"
+		}
+		Else If (Type = "Reg")
+		{
+			NewText := Col1 "\" Col2 "`, "
+			If (Col3 = 0)
+				NewText .= "V"
+			Else If (Col3 = 1)
+				NewText .= "VK"
+			Else If (Col3 = 2)
+				NewText .= "K"
+			If (Col4 = 1)
+				NewText .= "R"
+		}
+		return NewText
 	}
 }

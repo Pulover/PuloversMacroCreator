@@ -401,15 +401,15 @@
 	c_Lang135 =	Olvas
 	c_Lang136 =	Iktató Hivatal
 	c_Lang137 =	Fájl Típus:
-	c_Lang138 =	Mappákat?
-	c_Lang139 =	Recurse?
+	c_Lang138 =	Könyvtárak
+	c_Lang139 =	Rekurzív
 	c_Lang140 =	Bemeneti Változó:
 	c_Lang141 =	Határoló:
 	c_Lang142 =	Kihagyja Karakter:
 	c_Lang143 =	Bemeneti Fájl:
-	c_Lang144 =	Kulcs:
-	c_Lang145 =	Gyökér Kulcs:
-	c_Lang146 =	Alkulcsok?
+	c_Lang144 =	Gyökér Kulcs\Kulcs:
+	c_Lang145 =	Fájlok
+	c_Lang146 =	Kulcsok
 	c_Lang147 =	Ikon
 	c_Lang148 =	Nincs ikon
 	c_Lang149 =	Hiba
@@ -473,6 +473,7 @@
 	c_Lang207 =	tömbobjektumok
 	c_Lang208 =	Kulcs neve
 	c_Lang209 =	érték neve
+	c_Lang210 =	értékek
 		
 ; Other Windows		
 	t_Lang001 =	Exportálás AutoHotkey
@@ -915,17 +916,9 @@
 	ToggleC_TT =	Aktiválja Relatív felvételt, ha kulcsfontosságú állami be van kapcsolva.
 	Relative_TT =	Koordináták relatív az aktív ablak.
 	Screen_TT =	Koordináták relatív az asztalra (teljes képernyő).
-	IncFolders_TT =	
-	(LTrim	
-		0 - Csak azokat a fájlokat / gombok
-		1 - Mappák / alkulcsok és fájlok / gombok
-		2 - Csak mappák / alkulcsaihoz
-	)	
-	Recurse_TT =	
-	(LTrim	
-		0 - Nem recurse mappákba / alkulcsaihoz
-		1 - Recurse mappákba / alkulcsaihoz
-	)	
+	IncFiles_TT =	Tartalmazzák kép / Értékek
+	IncFolders_TT =	Tartalmazzák (mappákban) / Keys
+	Recurse_TT =	Rekurzív alkönyvtárakra (almappák) / Alkulcsok
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	Kattintson duplán a szerkeszteni

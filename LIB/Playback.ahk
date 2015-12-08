@@ -234,7 +234,7 @@
 						Else If (Type = cType40)
 						{
 							o_Loop%PointMarker% := []
-							Loop, %Par1%, %Par2%, %Par3%
+							Loop, Files, %Par1%, %Par2%
 							{
 								If StopIt
 								{
@@ -261,7 +261,7 @@
 						Else If (Type = cType41)
 						{
 							o_Loop%PointMarker% := []
-							Loop, %Par1%, %Par2%, %Par3%, %Par4%
+							Loop, Reg, %Par1%, %Par2%
 							{
 								If StopIt
 								{
@@ -677,7 +677,7 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC, ByRef LoopCount)
 						Else If (Type = cType40)
 						{
 							o_Loop%PointMarker% := []
-							Loop, %Par1%, %Par2%, %Par3%
+							Loop, Files, %Par1%, %Par2%
 							{
 								If StopIt
 								{
@@ -704,7 +704,7 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC, ByRef LoopCount)
 						Else If (Type = cType41)
 						{
 							o_Loop%PointMarker% := []
-							Loop, %Par1%, %Par2%, %Par3%, %Par4%
+							Loop, Reg, %Par1%, %Par2%
 							{
 								If StopIt
 								{

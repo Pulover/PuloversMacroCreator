@@ -401,15 +401,15 @@
 	c_Lang135 =	Lezen
 	c_Lang136 =	Register
 	c_Lang137 =	Bestandspatroon:
-	c_Lang138 =	Mappen?
-	c_Lang139 =	Recurse?
+	c_Lang138 =	Directories
+	c_Lang139 =	Recursieve
 	c_Lang140 =	Inputvariabele:
 	c_Lang141 =	Scheidingstekens:
 	c_Lang142 =	Weglaten Tekens:
 	c_Lang143 =	Invoerbestand:
-	c_Lang144 =	Sleutel:
-	c_Lang145 =	Grondtoontoets:
-	c_Lang146 =	Subsleutels?
+	c_Lang144 =	Grondtoontoets\Sleutel:
+	c_Lang145 =	Bestanden
+	c_Lang146 =	Sleutels
 	c_Lang147 =	Icon
 	c_Lang148 =	Geen pictogram
 	c_Lang149 =	Fout
@@ -473,6 +473,7 @@
 	c_Lang207 =	arrayobject
 	c_Lang208 =	Key naam
 	c_Lang209 =	Waarde naam
+	c_Lang210 =	Waarden
 		
 ; Other Windows		
 	t_Lang001 =	Exporteren naar AutoHotkey
@@ -915,17 +916,9 @@
 	ToggleC_TT =	Activeer Relatieve opnemen wanneer belangrijke staat is op.
 	Relative_TT =	Coördinaten zijn ten opzichte van het actieve venster.
 	Screen_TT =	Coördinaten zijn ten opzichte van het bureaublad (hele scherm).
-	IncFolders_TT =	
-	(LTrim	
-		0 - Alleen bestanden / toetsen
-		1 - Mappen / subsleutels en bestanden / toetsen
-		2 - Alleen mappen / subsleutels
-	)	
-	Recurse_TT =	
-	(LTrim	
-		0 - Niet recurse in mappen / subsleutels
-		1 - Recurse in mappen / subsleutels
-	)	
+	IncFiles_TT =	Include bestanden / Waarden
+	IncFolders_TT =	Omvatten directories (mappen) / Keys
+	Recurse_TT =	Recursieve in submappen (submappen) / Subsleutels
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	Dubbelklik op om te bewerken

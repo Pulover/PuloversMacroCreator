@@ -401,15 +401,15 @@
 	c_Lang135 =	Đọc
 	c_Lang136 =	Đăng ký
 	c_Lang137 =	Tập tin mẫu:
-	c_Lang138 =	Thư mục?
-	c_Lang139 =	Đệ quy?
+	c_Lang138 =	Thư mục
+	c_Lang139 =	Đệ quy
 	c_Lang140 =	Đầu vào khác:
 	c_Lang141 =	Ký tự phân cách:
 	c_Lang142 =	Bỏ qua nhân vật:
 	c_Lang143 =	Input File:
-	c_Lang144 =	Chính:
-	c_Lang145 =	Gốc chính:
-	c_Lang146 =	Khóa?
+	c_Lang144 =	Gốc chính\Chính:
+	c_Lang145 =	Các tập tin
+	c_Lang146 =	Phím
 	c_Lang147 =	Biểu tượng
 	c_Lang148 =	Không có biểu tượng
 	c_Lang149 =	Lôi
@@ -473,6 +473,7 @@
 	c_Lang207 =	đối tượng mảng
 	c_Lang208 =	Tên chính
 	c_Lang209 =	Tên giá trị
+	c_Lang210 =	Giá trị
 		
 ; Other Windows		
 	t_Lang001 =	Xuất khẩu sang AutoHotkey
@@ -915,17 +916,9 @@
 	ToggleC_TT =	Kích hoạt ghi âm tương đối khi nhà nước chính là trên.
 	Relative_TT =	Tọa độ có liên quan đến cửa sổ hoạt động.
 	Screen_TT =	Tọa độ tương đối so với máy tính để bàn (toàn màn hình).
-	IncFolders_TT =	
-	(LTrim	
-		0 - Chỉ có các tập tin / phím
-		1 - thư mục / khóa con và các tập tin / phím
-		2 - Chỉ có các thư mục / khóa
-	)	
-	Recurse_TT =	
-	(LTrim	
-		0 - Không recurse vào thư mục / khóa
-		1 - Đệ quy vào thư mục / khóa
-	)	
+	IncFiles_TT =	Bao gồm các file / Giá trị
+	IncFolders_TT =	Bao gồm các thư mục (folder) / Keys
+	Recurse_TT =	Đệ quy vào thư mục con (thư mục con) / Subkeys
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	Đúp Nhấn vào đây để chỉnh sửa

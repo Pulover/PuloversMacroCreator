@@ -401,15 +401,15 @@
 	c_Lang135 =	Läsa
 	c_Lang136 =	Register
 	c_Lang137 =	Fil Mönster:
-	c_Lang138 =	Mappar?
-	c_Lang139 =	Recurse?
+	c_Lang138 =	Kataloger
+	c_Lang139 =	Rekursiv
 	c_Lang140 =	Ingångsvariabel:
 	c_Lang141 =	Avgränsare:
 	c_Lang142 =	Utelämna Tecken:
 	c_Lang143 =	Indatafil:
-	c_Lang144 =	Nyckel:
-	c_Lang145 =	Rotnyckel:
-	c_Lang146 =	Undernycklar?
+	c_Lang144 =	Rotnyckel\Nyckel:
+	c_Lang145 =	Filer
+	c_Lang146 =	Nycklar
 	c_Lang147 =	Ikon
 	c_Lang148 =	Ingen ikon
 	c_Lang149 =	Fel
@@ -473,6 +473,7 @@
 	c_Lang207 =	array-objekt
 	c_Lang208 =	Nyckelnamn
 	c_Lang209 =	Värdenamn
+	c_Lang210 =	Värden
 		
 ; Other Windows		
 	t_Lang001 =	Exportera till AutoHotkey
@@ -915,17 +916,9 @@
 	ToggleC_TT =	Aktivera Relativ inspelning när nyckeln staten är på.
 	Relative_TT =	Koordinater är i förhållande till den aktiva fönstret.
 	Screen_TT =	Koordinater i förhållande till skrivbordet (hela skärmen).
-	IncFolders_TT =	
-	(LTrim	
-		0 - Vain tiedostot / avaimet
-		1 - Kansiot / aliavainten ja tiedostoja / avaimet
-		2 - Vain kansiot / aliavaimista
-	)	
-	Recurse_TT =	
-	(LTrim	
-		0 - Eivät recurse kansioihin / aliavaimista
-		1 - Recurse kansioihin / aliavaimista
-	)	
+	IncFiles_TT =	Inkludera filer / Värderingar
+	IncFolders_TT =	Inkludera kataloger (mappar) / Nycklar
+	Recurse_TT =	Rekursiva i underkataloger (undermappar) / nycklar
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	Dubbelklicka för att redigera

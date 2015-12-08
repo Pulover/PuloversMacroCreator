@@ -123,10 +123,10 @@
 				}
 				Else
 				{
-					StringReplace, Type, Type, FilePattern
-					StringReplace, Type, Type, LoopParse, Loop`, Parse
-					StringReplace, Type, Type, LoopRead, Loop`, Read
-					StringReplace, Type, Type, Registry
+					StringReplace, Type, Type, FilePattern, `, Files
+					StringReplace, Type, Type, Parse, `, Parse
+					StringReplace, Type, Type, Read, `, Read
+					StringReplace, Type, Type, Registry, `, Reg
 					RowData := "`n" Type ", " RTrim(Step, ", ")
 					If SubStr(RowData, 0) = "``"
 						RowData := SubStr(RowData, 1, StrLen(RowData)-1)

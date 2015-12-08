@@ -401,15 +401,15 @@
 	c_Lang135 =	読む
 	c_Lang136 =	レジストリ
 	c_Lang137 =	ファイルパターン：
-	c_Lang138 =	フォルダ？
-	c_Lang139 =	再帰？
+	c_Lang138 =	ディレクトリ
+	c_Lang139 =	再帰的な
 	c_Lang140 =	入力変数：
 	c_Lang141 =	デリミタ：
 	c_Lang142 =	文字を省略：
 	c_Lang143 =	入力ファイル：
-	c_Lang144 =	キー：
-	c_Lang145 =	ルートキー：
-	c_Lang146 =	サブキー？
+	c_Lang144 =	ルートキー：
+	c_Lang145 =	ファイル
+	c_Lang146 =	キー
 	c_Lang147 =	アイコン
 	c_Lang148 =	アイコンなしません
 	c_Lang149 =	エラー
@@ -473,6 +473,7 @@
 	c_Lang207 =	配列オブジェクト
 	c_Lang208 =	キー名
 	c_Lang209 =	値の名前
+	c_Lang210 =	価値観
 		
 ; Other Windows		
 	t_Lang001 =	AutoHotkeyにエクスポート
@@ -915,17 +916,9 @@
 	ToggleC_TT =	キーの状態がオンのときに相対録音を有効にします。
 	Relative_TT =	座標はアクティブウィンドウを基準にしています。
 	Screen_TT =	座標はデスクトップ（画面全体）からの相対パスです。
-	IncFolders_TT =	
-	(LTrim	
-		0 - ファイルのみ/キー
-		1 - フォルダ/サブキーおよびファイル/キー
-		2 - フォルダのみ/サブキー
-	)	
-	Recurse_TT =	
-	(LTrim	
-		0 - 再帰は、フォルダ/サブキーにしないでください
-		1 - フォルダ/サブキーに再帰
-	)	
+	IncFiles_TT =	ファイル/値を含みます
+	IncFolders_TT =	ディレクトリ（フォルダ）/キーを含めます
+	Recurse_TT =	サブディレクトリへの再帰（サブフォルダ）/サブキー
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	ダブルクリックして編集する

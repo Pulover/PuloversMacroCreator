@@ -401,15 +401,15 @@
 	c_Lang135 =	Leggere
 	c_Lang136 =	Registro Di Sistema
 	c_Lang137 =	File Di Pattern:
-	c_Lang138 =	Cartelle?
-	c_Lang139 =	Ricorsione?
+	c_Lang138 =	Elenchi
+	c_Lang139 =	Ricorsiva
 	c_Lang140 =	Variabile Di Ingresso:
 	c_Lang141 =	Delimitatori:
 	c_Lang142 =	Omettere Personaggi:
 	c_Lang143 =	File Di Input:
-	c_Lang144 =	Chiave:
-	c_Lang145 =	Chiave Principale:
-	c_Lang146 =	Sottochiavi?
+	c_Lang144 =	Chiave Principale\Chiave:
+	c_Lang145 =	File
+	c_Lang146 =	Chiavi
 	c_Lang147 =	Icona
 	c_Lang148 =	Nessuna icona
 	c_Lang149 =	Errore di
@@ -473,6 +473,7 @@
 	c_Lang207 =	oggetto array
 	c_Lang208 =	Nome della chiave
 	c_Lang209 =	Nome di valore
+	c_Lang210 =	I valori
 		
 ; Other Windows		
 	t_Lang001 =	Esporta in AutoHotkey
@@ -915,17 +916,9 @@
 	ToggleC_TT =	Attivare la registrazione relativo quando la chiave è stato acceso.
 	Relative_TT =	Le coordinate sono relative alla finestra attiva.
 	Screen_TT =	Le coordinate sono relative al desktop (schermo intero).
-	IncFolders_TT =	
-	(LTrim	
-		0 - Solo i file / chiavi
-		1 - Cartelle / sottochiavi e file / chiavi
-		2 - Solo le cartelle / sottochiavi
-	)	
-	Recurse_TT =	
-	(LTrim	
-		0 - Non fare ricorsione in cartelle / sottochiavi
-		1 - Ricorsivamente in cartelle / sottochiavi
-	)	
+	IncFiles_TT =	Includere file / Valori
+	IncFolders_TT =	Includi directory (cartelle) / tasti
+	Recurse_TT =	Ricorsivi in sottodirectory (sottocartelle) / sottochiavi
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	Fare doppio clic per modificare

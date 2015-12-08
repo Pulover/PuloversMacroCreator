@@ -401,15 +401,15 @@
 	c_Lang135 =	Baca
 	c_Lang136 =	Pendaftaran
 	c_Lang137 =	Fail Corak:
-	c_Lang138 =	Folder?
-	c_Lang139 =	Recurse?
+	c_Lang138 =	Direktori
+	c_Lang139 =	Rekursi
 	c_Lang140 =	Input ubah:
 	c_Lang141 =	Pembatas:
 	c_Lang142 =	Meninggalkan Watak:
 	c_Lang143 =	Fail input:
-	c_Lang144 =	Utama:
-	c_Lang145 =	Akar Utama:
-	c_Lang146 =	Subkeys?
+	c_Lang144 =	Akar Utama\Utama:
+	c_Lang145 =	Fail
+	c_Lang146 =	Kunci
 	c_Lang147 =	Icon
 	c_Lang148 =	Tiada ikon
 	c_Lang149 =	Ralat
@@ -473,6 +473,7 @@
 	c_Lang207 =	objek pelbagai
 	c_Lang208 =	Nama utama
 	c_Lang209 =	Nama nilai
+	c_Lang210 =	Nilai-nilai
 		
 ; Other Windows		
 	t_Lang001 =	Eksport ke AutoHotkey
@@ -915,17 +916,9 @@
 	ToggleC_TT =	Aktifkan Rakaman relatif apabila negeri utama dihidupkan.
 	Relative_TT =	Koordinat adalah relatif tetingkap aktif.
 	Screen_TT =	Koordinat adalah relatif desktop (keseluruhan skrin).
-	IncFolders_TT =	
-	(LTrim	
-		0 - Hanya fail / kunci
-		1 - Folder / subkeys dan fail / kunci
-		2 - Hanya folder / subkeys
-	)	
-	Recurse_TT =	
-	(LTrim	
-		0 - Jangan recurse ke dalam folder / subkeys
-		1 - Recurse ke dalam folder / subkeys
-	)	
+	IncFiles_TT =	Termasuk fail / Nilai
+	IncFolders_TT =	Termasuk direktori (folder) / Keys
+	Recurse_TT =	Rekursi ke dalam subdirektori (subfolder) / subkunci
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	Klik dua kali untuk mengedit

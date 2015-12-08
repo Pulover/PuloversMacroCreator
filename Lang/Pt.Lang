@@ -401,15 +401,15 @@
 	c_Lang135 =	Ler
 	c_Lang136 =	Registro
 	c_Lang137 =	Padrão De Arquivo:
-	c_Lang138 =	Pastas?
-	c_Lang139 =	Recursivo?
+	c_Lang138 =	Diretórios
+	c_Lang139 =	Recursivo
 	c_Lang140 =	Variável De Entrada:
 	c_Lang141 =	Delimitadores:
 	c_Lang142 =	Omitir Caractéres:
 	c_Lang143 =	Arquivo De Entrada:
-	c_Lang144 =	Chave:
-	c_Lang145 =	Chave Raiz:
-	c_Lang146 =	Subchaves?
+	c_Lang144 =	Chave Raiz\Chave:
+	c_Lang145 =	Arquivos
+	c_Lang146 =	Chaves
 	c_Lang147 =	Ícone
 	c_Lang148 =	Sem ícone
 	c_Lang149 =	Erro
@@ -473,6 +473,7 @@
 	c_Lang207 =	Objeto Matriz
 	c_Lang208 =	Nome da Chave
 	c_Lang209 =	Nome do Valor
+	c_Lang210 =	Valores
 		
 ; Other Windows		
 	t_Lang001 =	Exportar para AutoHotkey
@@ -915,17 +916,9 @@
 	ToggleC_TT =	Ativa Gravação Relativa quando a tecla estiver acionada.
 	Relative_TT =	Coordenadas relativas à janela ativa.
 	Screen_TT =	Coordenadas relativas à área de trabalho (tela inteira).
-	IncFolders_TT =	
-	(LTrim	
-		0 - Apenas os arquivos / chaves
-		1 - Pastas / subchaves e arquivos / chaves
-		2 - Apenas as pastas / subchaves
-	)	
-	Recurse_TT =	
-	(LTrim	
-		0 - Não redirecionar pastas / subchaves
-		1 - Redirecionar pastas / subchaves
-	)	
+	IncFiles_TT =	Incluir arquivos / Valores
+	IncFolders_TT =	Incluir diretórios (pastas) / Chaves
+	Recurse_TT =	Redirecionar para subdiretórios (subpastas) / Sub-Chaves
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	Duplo-Clique para editar

@@ -1910,6 +1910,7 @@ return
 ProjBackup:
 If !(SavePrompt)
 	return
+FileDelete, %SettingsFolder%\~ActiveProject.pmc
 Loop, %TabCount%
 {
 	PMCSet := "[PMC Code]|" o_AutoKey[A_Index]
@@ -5047,16 +5048,17 @@ Gui, 12:Add, Text, ys+15 x+10 W160 R1, %w_Lang015% (%t_Lang004%):
 Gui, 12:Add, Edit, y+10 xp W120 R1 vEdRept
 Gui, 12:Add, UpDown, vTimesL 0x80 Range0-999999999, 2
 Gui, 12:Add, Text, y+10 xs+10 W160 vField1, %c_Lang137%
-Gui, 12:Add, CheckBox, -Wrap Check3 yp x+10 W120 vIncFolders Disabled R1, %c_Lang138%
-Gui, 12:Add, CheckBox, -Wrap yp x+10 W120 vRecurse Disabled R1, %c_Lang139%
+Gui, 12:Add, CheckBox, -Wrap yp x+10 W80 vIncFiles Disabled R1 Checked, %c_Lang145%
+Gui, 12:Add, CheckBox, -Wrap yp x+10 W80 vIncFolders Disabled R1, %c_Lang138%
+Gui, 12:Add, CheckBox, -Wrap yp x+10 W80 vRecurse Disabled R1, %c_Lang139%
 Gui, 12:Add, Edit, y+5 xs+10 W400 R1 vLParamsFile Disabled
 Gui, 12:Add, Button, -Wrap yp-1 x+0 W30 H23 vSearchLParams gSearch Disabled, ...
 Gui, 12:Add, Text, y+5 xs+10 W210 vField2, %c_Lang141%
 Gui, 12:Add, Text, yp x+10 W210 vField3, %c_Lang142%
 Gui, 12:Add, Edit, y+5 xs+10 W210 R1 vDelim Disabled
 Gui, 12:Add, Edit, yp x+10 W210 R1 vOmit Disabled
-Gui, 12:Add, Text, y+5 xs+15 r1 cGray, %c_Lang074%
-Gui, 12:Add, Text, y+5 r1 cGray, %c_Lang025%
+Gui, 12:Add, Text, y+5 xs+15 W430 r1 cGray, %c_Lang074%
+Gui, 12:Add, Text, y+5 r1 W430 cGray, %c_Lang025%
 Gui, 12:Add, Groupbox, Section xs y+18 W450 H50, %c_Lang123%:
 Gui, 12:Add, Button, -Wrap ys+18 xs+85 W75 H23 gAddBreak, %c_Lang075%
 Gui, 12:Add, Button, -Wrap yp x+10 W75 H23 gAddContinue, %c_Lang076%
@@ -5127,16 +5129,17 @@ If (s_Caller = "Edit")
 		If (Type = cType40)
 		{
 			GuiControl, 12:, LParamsFile, %Par1%
-			GuiControl, 12:, IncFolders, % ((Par2 = 2) ? -1 : Par2)
-			GuiControl, 12:, Recurse, %Par3%
+			GuiControl, 12:, IncFiles, % InStr(Par2, "F") ? 1 : 0
+			GuiControl, 12:, IncFolders, % InStr(Par2, "D") ? 1 : 0
+			GuiControl, 12:, Recurse, % InStr(Par2, "R") ? 1 : 0
 			GuiControl, 12:, LFilePattern, 1
 		}
 		If (Type = cType41)
 		{
-			GuiControl, 12:, Delim, %Par1%
-			GuiControl, 12:, LParamsFile, %Par2%
-			GuiControl, 12:, IncFolders, % ((Par3 = 2) ? -1 : Par3)
-			GuiControl, 12:, Recurse, %Par4%
+			GuiControl, 12:, LParamsFile, %Par1%
+			GuiControl, 12:, IncFiles, % InStr(Par2, "V") ? 1 : 0
+			GuiControl, 12:, IncFolders, % InStr(Par2, "K") ? 1 : 0
+			GuiControl, 12:, Recurse, % InStr(Par2, "R") ? 1 : 0
 			GuiControl, 12:, LRegistry, 1
 		}
 		If (Type = cType45)
@@ -5220,14 +5223,12 @@ Else If (LFilePattern = 1)
 {
 	If (LParamsFile = "")
 		return
-	Details := LParamsFile ", " ((IncFolders = -1) ? 2 : IncFolders) ", " Recurse
+	Details := LParamsFile ", " (IncFiles ? "F" : "") (IncFolders ? "D" : "") (Recurse ? "R" : "")
 ,	TimesL := 1, Type := cType40
 }
 Else If (LRegistry = 1)
 {
-	If (Delim = "")
-		return
-	Details := Delim ", " LParamsFile ", " ((IncFolders = -1) ? 2 : IncFolders) ", " Recurse
+	Details := LParamsFile ", " (IncFiles ? "V" : "") (IncFolders ? "K" : "") (Recurse ? "R" : "")
 ,	TimesL := 1, Type := cType41
 }
 Else
@@ -5409,15 +5410,17 @@ GuiControl, 12:Disable%Loop%, LParamsFile
 GuiControl, 12:Enable%LParse%, Omit
 If (LFilePattern || LRegistry)
 {
+	GuiControl, 12:Enable, IncFiles
 	GuiControl, 12:Enable, IncFolders
 	GuiControl, 12:Enable, Recurse
 }
 Else
 {
+	GuiControl, 12:Disable, IncFiles
 	GuiControl, 12:Disable, IncFolders
 	GuiControl, 12:Disable, Recurse
 }
-If (LParse || LRegistry || LFor)
+If (LParse || LFor)
 	GuiControl, 12:Enable, Delim
 Else
 	GuiControl, 12:Disable, Delim
@@ -5425,9 +5428,6 @@ If (LRead || LFilePattern)
 	GuiControl, 12:Enable, SearchLParams
 Else
 	GuiControl, 12:Disable, SearchLParams
-GuiControl, 12:, Field1, % (LParse ? c_Lang140 : (LRead ? c_Lang143 : (LRegistry ? c_Lang144 : c_Lang137)))
-GuiControl, 12:, Field2, % (LRegistry ? c_Lang145 : c_Lang141)
-GuiControl, 12:Text, IncFolders, % (LRegistry ? c_Lang146 : c_Lang138)
 If (LFor)
 {
 	GuiControl, 12:Enable, Omit
@@ -5439,12 +5439,14 @@ If (LFor)
 }
 Else
 {
-	GuiControl, 12:, Field1, %c_Lang137%
+	GuiControl, 12:, Field1, % (LParse ? c_Lang140 : (LRead ? c_Lang143 : (LRegistry ? c_Lang144 : c_Lang137)))
 	GuiControl, 12:, Field2, %c_Lang141%
 	GuiControl, 12:, Field3, %c_Lang142%
 	GuiControl, 12:, Delim
 	GuiControl, 12:, Omit
 }
+GuiControl, 12:Text, IncFiles, % (LRegistry ? c_Lang210 : c_Lang145)
+GuiControl, 12:Text, IncFolders, % (LRegistry ? c_Lang146 : c_Lang138)
 GuiControl, 12:, LParamsFile, % Par1 ? Par1 : ""
 If (Loop)
 	SBShowTip("Loop (normal)")

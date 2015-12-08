@@ -401,15 +401,15 @@
 	c_Lang135 =	Čítať
 	c_Lang136 =	Protokol
 	c_Lang137 =	Súbor Pattern:
-	c_Lang138 =	Zložky?
-	c_Lang139 =	Recurse?
+	c_Lang138 =	Adresára
+	c_Lang139 =	Rekurzívne
 	c_Lang140 =	Vstupné premenné:
 	c_Lang141 =	Oddeľovače:
 	c_Lang142 =	Vynechajte znaky:
 	c_Lang143 =	Vstupný súbor:
-	c_Lang144 =	Legenda:
-	c_Lang145 =	Root Key:
-	c_Lang146 =	Podkľúča?
+	c_Lang144 =	Root Key\Legenda:
+	c_Lang145 =	Súbory
+	c_Lang146 =	Kľúče
 	c_Lang147 =	Ikona
 	c_Lang148 =	Žiadna ikona
 	c_Lang149 =	Chyba
@@ -473,6 +473,7 @@
 	c_Lang207 =	objekt Array
 	c_Lang208 =	Názov kľúča
 	c_Lang209 =	Názov Hodnota
+	c_Lang210 =	Hodnoty
 		
 ; Other Windows		
 	t_Lang001 =	Export do AutoHotkey
@@ -915,17 +916,9 @@
 	ToggleC_TT =	Aktivácia Relatívna nahrávania pri stlačení stav je ďalej.
 	Relative_TT =	Poloha je vzhľadom k aktívne okná.
 	Screen_TT =	Súradnice sú relatívna k ploche (celá obrazovka).
-	IncFolders_TT =	
-	(LTrim	
-		0 - Iba súbory / kľúče
-		1 - Zložky / podkľúče a súbory / kľúče
-		2 - iba zložky / podkľúča
-	)	
-	Recurse_TT =	
-	(LTrim	
-		0 - Nie recurse do priečinkov / podklíčům
-		1 - rekurzívne do adresárov / podklíčům
-	)	
+	IncFiles_TT =	Zahrnúť súbory / hodnoty
+	IncFolders_TT =	Zahrnúť adresára (zložky) / Keys
+	Recurse_TT =	Rekurzívne do podadresárov (podpriečinkov) / podkľúčov
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	Poklepaním editovať

@@ -401,15 +401,15 @@
 	c_Lang135 =	Lukea
 	c_Lang136 =	Arkisto
 	c_Lang137 =	Tiedosto Kuvio:
-	c_Lang138 =	Kansiot?
-	c_Lang139 =	Recurse?
+	c_Lang138 =	Hakemistoja
+	c_Lang139 =	Rekursiivinen
 	c_Lang140 =	Tulosuure:
 	c_Lang141 =	Delimiters:
 	c_Lang142 =	Jättää Merkkejä:
 	c_Lang143 =	Syötetiedostosta:
-	c_Lang144 =	Avain:
-	c_Lang145 =	Juuriavain:
-	c_Lang146 =	Aliavaimet?
+	c_Lang144 =	Juuriavain\Avain:
+	c_Lang145 =	Tiedostot
+	c_Lang146 =	Avaimet
 	c_Lang147 =	Ikoni
 	c_Lang148 =	Ei kuvaketta
 	c_Lang149 =	Virhe
@@ -473,6 +473,7 @@
 	c_Lang207 =	array esine
 	c_Lang208 =	Avaimen nimi
 	c_Lang209 =	Arvo nimi
+	c_Lang210 =	Arvot
 		
 ; Other Windows		
 	t_Lang001 =	Vie AutoHotkey
@@ -915,17 +916,9 @@
 	ToggleC_TT =	Aktivoi Suhteellinen äänitystä kun avain tila on.
 	Relative_TT =	Koordinaatit ovat suhteessa aktiivisen ikkunan.
 	Screen_TT =	Koordinaatit ovat suhteessa työpöydälle (koko näyttö).
-	IncFolders_TT =	
-	(LTrim	
-		0 - Vain tiedostot / avaimet
-		1 - Kansiot / aliavainten ja tiedostoja / avaimet
-		2 - Vain kansiot / aliavaimista
-	)	
-	Recurse_TT =	
-	(LTrim	
-		0 - Eivät recurse kansioihin / aliavaimista
-		1 - Recurse kansioihin / aliavaimista
-	)	
+	IncFiles_TT =	Sisältää tiedostot / Arvot
+	IncFolders_TT =	Sisällytä hakemistot (kansiot) / Avaimet
+	Recurse_TT =	Rekursiivinen osaksi alihakemistot (alikansiot) / Aliavainten
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	Kaksoisnapsauta muokata

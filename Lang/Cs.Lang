@@ -401,15 +401,15 @@
 	c_Lang135 =	Číst
 	c_Lang136 =	Protokol
 	c_Lang137 =	Soubor Vzor:
-	c_Lang138 =	Složky?
-	c_Lang139 =	Recurse?
+	c_Lang138 =	Adresáře
+	c_Lang139 =	Rekurzivní
 	c_Lang140 =	Vstupní Proměnná:
 	c_Lang141 =	Oddělovače:
 	c_Lang142 =	Vynechat Znaky:
 	c_Lang143 =	Vstupní Soubor:
-	c_Lang144 =	Klíč:
-	c_Lang145 =	Kořenový Klíč:
-	c_Lang146 =	Podklíče?
+	c_Lang144 =	Kořenový Klíč\Klíč:
+	c_Lang145 =	Soubory
+	c_Lang146 =	Klíče
 	c_Lang147 =	Ikona
 	c_Lang148 =	Žádná ikona
 	c_Lang149 =	Chyba
@@ -473,6 +473,7 @@
 	c_Lang207 =	objekt Array
 	c_Lang208 =	Název klíče
 	c_Lang209 =	Název hodnota
+	c_Lang210 =	Hodnoty
 		
 ; Other Windows		
 	t_Lang001 =	Export do AutoHotkey
@@ -915,17 +916,9 @@
 	ToggleC_TT =	Aktivace Relativní nahrávání při stisku stav je dál.
 	Relative_TT =	Polohu jsou vztaženy k aktivním okně.
 	Screen_TT =	Souřadnice jsou relativní k ploše (celá obrazovka).
-	IncFolders_TT =	
-	(LTrim	
-		0 - Pouze soubory / klíče
-		1 - Složky / podklíče a soubory / klíče
-		2 - Pouze složky / podklíče
-	)	
-	Recurse_TT =	
-	(LTrim	
-		0 - Ne recurse do složek / podklíčům
-		1 - Recurse do složek / podklíčům
-	)	
+	IncFiles_TT =	Zahrnout soubory / hodnoty
+	IncFolders_TT =	Zahrnout adresáře (složky) / Keys
+	Recurse_TT =	Rekurzivní do podadresářů (podsložek) / podklíčů
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	Dvakrát klikněte na upravit

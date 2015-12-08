@@ -401,15 +401,15 @@
 	c_Lang135 =	Lire
 	c_Lang136 =	Registre
 	c_Lang137 =	Motif De Fichier:
-	c_Lang138 =	Dossiers?
-	c_Lang139 =	Récursion?
+	c_Lang138 =	Répertoires
+	c_Lang139 =	Récursif
 	c_Lang140 =	Grandeur D'entrée:
 	c_Lang141 =	Séparateurs:
 	c_Lang142 =	Omettre Caractères:
 	c_Lang143 =	Fichier D'entrée:
-	c_Lang144 =	Clé:
-	c_Lang145 =	Clé Racine:
-	c_Lang146 =	Sous-Clés?
+	c_Lang144 =	Clé Racine\Clé:
+	c_Lang145 =	Des dossiers
+	c_Lang146 =	Clés
 	c_Lang147 =	Icône
 	c_Lang148 =	Aucune icône
 	c_Lang149 =	Erreur
@@ -473,6 +473,7 @@
 	c_Lang207 =	objet de tableau
 	c_Lang208 =	Nom de la clé
 	c_Lang209 =	Nom de la valeur
+	c_Lang210 =	Valeurs
 		
 ; Other Windows		
 	t_Lang001 =	Exporter vers AutoHotkey
@@ -915,17 +916,9 @@
 	ToggleC_TT =	Activez l'enregistrement relative lorsque l'état touche est activée.
 	Relative_TT =	Les coordonnées sont relatives à la fenêtre active.
 	Screen_TT =	Les coordonnées sont relatives au poste de travail (écran).
-	IncFolders_TT =	
-	(LTrim	
-		0 - Seuls les fichiers / clés
-		1 - Dossiers / sous-clés et les fichiers / clés
-		2 - Seuls les dossiers / sous-clés
-	)	
-	Recurse_TT =	
-	(LTrim	
-		0 - Ne le font pas de façon récursive dans des dossiers / sous-clés
-		1 - Récursivité dans des dossiers / sous-clés
-	)	
+	IncFiles_TT =	Inclure les fichiers / Valeurs
+	IncFolders_TT =	Inclure les répertoires (dossiers) Touches /
+	Recurse_TT =	Récursifs dans les sous-répertoires (sous-dossiers) / subkeys
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	Double-cliquez dessus pour modifier

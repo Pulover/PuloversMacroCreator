@@ -401,15 +401,15 @@
 	c_Lang135 =	Leer
 	c_Lang136 =	Registro
 	c_Lang137 =	Patrón De Archivo:
-	c_Lang138 =	Carpetas?
-	c_Lang139 =	Recurse?
+	c_Lang138 =	Directorios
+	c_Lang139 =	Recursiva
 	c_Lang140 =	Variable De Entrada:
 	c_Lang141 =	Delimitadores:
 	c_Lang142 =	Omitir Caracteres:
 	c_Lang143 =	Archivo De Entrada:
-	c_Lang144 =	Clave:
-	c_Lang145 =	Llave De La Raíz:
-	c_Lang146 =	Subclaves?
+	c_Lang144 =	Llave De La Raíz\Clave:
+	c_Lang145 =	Archivos
+	c_Lang146 =	Llaves
 	c_Lang147 =	Icono
 	c_Lang148 =	Ningún icono
 	c_Lang149 =	Error
@@ -473,6 +473,7 @@
 	c_Lang207 =	objeto de matriz
 	c_Lang208 =	Nombre de la clave
 	c_Lang209 =	Nombre de valor
+	c_Lang210 =	Valores
 		
 ; Other Windows		
 	t_Lang001 =	Exportar a AutoHotkey
@@ -915,17 +916,9 @@
 	ToggleC_TT =	Activar grabación relativa al estado de la tecla.
 	Relative_TT =	Las coordenadas son relativas a la ventana activa.
 	Screen_TT =	Las coordenadas son relativas al escritorio (pantalla completa).
-	IncFolders_TT =	
-	(LTrim	
-		0 - Sólo los archivos / claves
-		1 - Carpetas / subclaves y los archivos / claves
-		2 - Sólo las carpetas / subclaves
-	)	
-	Recurse_TT =	
-	(LTrim	
-		0 - ¿no recurse en carpetas / subclaves
-		1 - Recurse en carpetas / subclaves
-	)	
+	IncFiles_TT =	Incluir archivos / Valores
+	IncFolders_TT =	Incluir directorios (carpetas) / Keys
+	Recurse_TT =	Recursivas en subdirectorios (subcarpetas) / subclaves
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	Haga doble clic para editar

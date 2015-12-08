@@ -401,15 +401,15 @@
 	c_Lang135 =	읽기
 	c_Lang136 =	레지스트리
 	c_Lang137 =	파일 패턴:
-	c_Lang138 =	폴더?
-	c_Lang139 =	재귀?
+	c_Lang138 =	디렉토리
+	c_Lang139 =	재귀
 	c_Lang140 =	입력 변수:
 	c_Lang141 =	구분:
 	c_Lang142 =	문자를 생략:
 	c_Lang143 =	입력 파일:
-	c_Lang144 =	키:
-	c_Lang145 =	루트 키:
-	c_Lang146 =	하위?
+	c_Lang144 =	키\루트 키\キー:
+	c_Lang145 =	파일
+	c_Lang146 =	키
 	c_Lang147 =	아이콘
 	c_Lang148 =	아무 아이콘 없음
 	c_Lang149 =	오류
@@ -473,6 +473,7 @@
 	c_Lang207 =	배열 객체
 	c_Lang208 =	키 이름
 	c_Lang209 =	값 이름
+	c_Lang210 =	값
 		
 ; Other Windows		
 	t_Lang001 =	AutoHotkey로 내보내기
@@ -915,17 +916,9 @@
 	ToggleC_TT =	키 상태에있을 때 상대 기록을 활성화합니다.
 	Relative_TT =	좌표가 활성화 된 창을 기준으로합니다.
 	Screen_TT =	좌표가 바탕 화면 (전체 화면)을 기준으로합니다.
-	IncFolders_TT =	
-	(LTrim	
-		0 - 전용 파일 / 키
-		1 - 폴더 / 하위 및 파일 / 키
-		2 - 전용 폴더 / 하위
-	)	
-	Recurse_TT =	
-	(LTrim	
-		0 - 재귀 폴더 / 하위로하지 않습니다
-		1 - 폴더 / 하위에 재귀
-	)	
+	IncFiles_TT =	파일 / 값을 포함
+	IncFolders_TT =	디렉토리 (폴더) / 키 포함
+	Recurse_TT =	하위 디렉토리로 재귀 (하위) / 하위 키
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	편집하려면 더블 클릭

@@ -401,15 +401,15 @@
 	c_Lang135 =	Okumak
 	c_Lang136 =	Kayıt
 	c_Lang137 =	Dosya Desen:
-	c_Lang138 =	Klasörler?
-	c_Lang139 =	Recurse?
+	c_Lang138 =	Rehberler
+	c_Lang139 =	Özyinelemeli
 	c_Lang140 =	Giriş Değişkeni:
 	c_Lang141 =	Sınırlayıcı:
 	c_Lang142 =	Karakterleri Ihmal:
 	c_Lang143 =	Giriş Dosyası:
-	c_Lang144 =	Anahtar:
-	c_Lang145 =	Kök Anahtar:
-	c_Lang146 =	Alt?
+	c_Lang144 =	Kök Anahtar\Anahtar:
+	c_Lang145 =	Dosyaları
+	c_Lang146 =	Tuşları
 	c_Lang147 =	Ikon
 	c_Lang148 =	Simge yok
 	c_Lang149 =	Hata
@@ -473,6 +473,7 @@
 	c_Lang207 =	dizi nesnesi
 	c_Lang208 =	Anahtar adı
 	c_Lang209 =	Değer adı
+	c_Lang210 =	Değerler
 		
 ; Other Windows		
 	t_Lang001 =	AutoHotkey Aktar
@@ -915,17 +916,9 @@
 	ToggleC_TT =	Önemli devlet açıkken Bağıl Kayıt etkinleştirin.
 	Relative_TT =	Koordinatlar etkin pencere göredir.
 	Screen_TT =	Koordinatlar masaüstü (tüm ekranı) göredir.
-	IncFolders_TT =	
-	(LTrim	
-		0 - Sadece dosya / tuşları
-		1 - Klasörler / alt anahtarları ve dosyaları / tuşları
-		2 - Sadece klasör / alt
-	)	
-	Recurse_TT =	
-	(LTrim	
-		0 - Recurse klasör / alt içine yok
-		1 - Klasörler / alt anahtarları içine recurse
-	)	
+	IncFiles_TT =	Dosyaları / Değerler Dahil
+	IncFolders_TT =	Dizin (klasör) / Keys Dahil
+	Recurse_TT =	Alt dizinleri içine recursive (alt klasörler) / Alt anahtarları
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	Düzenlemek için çift tıklayın

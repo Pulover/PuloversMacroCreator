@@ -401,15 +401,15 @@
 	c_Lang135 =	Llegir
 	c_Lang136 =	Registre
 	c_Lang137 =	Patró D'arxiu:
-	c_Lang138 =	Carpetes?
-	c_Lang139 =	Recurse?
+	c_Lang138 =	Directoris
+	c_Lang139 =	Recursiva
 	c_Lang140 =	Variable D'entrada:
 	c_Lang141 =	Delimitadors:
 	c_Lang142 =	Ometre Caràcters:
 	c_Lang143 =	Fitxer D'entrada:
-	c_Lang144 =	Clau:
-	c_Lang145 =	Clau De L'arrel:
-	c_Lang146 =	Subclaus?
+	c_Lang144 =	Clau De L'arrel\Clau:
+	c_Lang145 =	Arxius
+	c_Lang146 =	Claus
 	c_Lang147 =	Icona
 	c_Lang148 =	Cap icona
 	c_Lang149 =	Error
@@ -473,6 +473,7 @@
 	c_Lang207 =	objecte de matriu
 	c_Lang208 =	Nom de la clau
 	c_Lang209 =	Nom de valor
+	c_Lang210 =	Valors
 		
 ; Other Windows		
 	t_Lang001 =	Exporta a AutoHotkey
@@ -915,17 +916,9 @@
 	ToggleC_TT =	Activa gravació relativa a l'estat de la tecla.
 	Relative_TT =	Les coordenades són relatives a la finestra activa.
 	Screen_TT =	Les coordenades són relatives a l'escriptori (pantalla completa).
-	IncFolders_TT =	
-	(LTrim	
-		0 - Només els arxius / claus
-		1 - Carpetes / subclaus i els arxius / claus
-		2 - Només les carpetes / subclaus
-	)	
-	Recurse_TT =	
-	(LTrim	
-		0 - ¿no recurse en carpetes / subclaus
-		1 - Recurse en carpetes / subclaus
-	)	
+	IncFiles_TT =	Inclou els fitxers / Valors
+	IncFolders_TT =	Incloure directoris (carpetes) / Keys
+	Recurse_TT =	Recursives en subdirectoris (subcarpetes) / subclaus
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	Feu doble clic per editar

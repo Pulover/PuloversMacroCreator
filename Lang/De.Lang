@@ -401,15 +401,15 @@
 	c_Lang135 =	Lesen
 	c_Lang136 =	Registry
 	c_Lang137 =	Dateimuster:
-	c_Lang138 =	Ordner?
-	c_Lang139 =	Rekursiv?
+	c_Lang138 =	Verzeichnisse
+	c_Lang139 =	Rekursive
 	c_Lang140 =	Eingabevariable:
 	c_Lang141 =	Trennzeichen:
 	c_Lang142 =	Zeichen auslassen:
 	c_Lang143 =	Eingabedatei:
-	c_Lang144 =	Taste:
-	c_Lang145 =	Haupttaste:
-	c_Lang146 =	Untertaste?
+	c_Lang144 =	Haupttaste\Taste:
+	c_Lang145 =	Dateien
+	c_Lang146 =	Schlüssel
 	c_Lang147 =	Symbol
 	c_Lang148 =	Kein Symbol
 	c_Lang149 =	Fehler
@@ -473,6 +473,7 @@
 	c_Lang207 =	Array-Objekt
 	c_Lang208 =	Schlüsselnamen
 	c_Lang209 =	Wertname
+	c_Lang210 =	Werte
 		
 ; Other Windows		
 	t_Lang001 =	Export nach AutoHotkey
@@ -915,17 +916,9 @@
 	ToggleC_TT =	Relative Aufzeichnung aktivieren, wenn Taste gedrückt ist.
 	Relative_TT =	Koordinaten sind relativ zum aktiven Fenster.
 	Screen_TT =	Koordinaten sind relativ zum Desktop (gesamter Bildschirm).
-	IncFolders_TT =	
-	(LTrim	
-		0 - Nur Dateien/Tasten
-		1 - Ordner/Unterschlüssel und Dateien/Schlüssel
-		2 - Nur Ordner/Unterschlüssel
-	)	
-	Recurse_TT =	
-	(LTrim	
-		0 - Nicht rekursiv in Ordnern/Unterschlüsseln
-		1 - Rekursiv in Ordnern/Unterschlüsseln
-	)	
+	IncFiles_TT =	Include-Dateien / Werte
+	IncFolders_TT =	Fügen Sie Verzeichnisse (Ordner) / Tasten
+	Recurse_TT =	Rekursive Unterverzeichnisse (Unterordner) / Unterschlüssel
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	Zum Bearbeiten doppelklicken

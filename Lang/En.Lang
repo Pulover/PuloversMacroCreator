@@ -401,15 +401,15 @@
 	c_Lang135 =	Read
 	c_Lang136 =	Registry
 	c_Lang137 =	File Pattern:
-	c_Lang138 =	Folders?
-	c_Lang139 =	Recurse?
+	c_Lang138 =	Directories
+	c_Lang139 =	Recursive
 	c_Lang140 =	Input Variable:
 	c_Lang141 =	Delimiters:
 	c_Lang142 =	Omit Characters:
 	c_Lang143 =	Input File:
-	c_Lang144 =	Key:
-	c_Lang145 =	Root Key:
-	c_Lang146 =	Subkeys?
+	c_Lang144 =	Root Key\Key:
+	c_Lang145 =	Files
+	c_Lang146 =	Keys
 	c_Lang147 =	Icon
 	c_Lang148 =	No icon
 	c_Lang149 =	Error
@@ -473,6 +473,7 @@
 	c_Lang207 =	Array Object
 	c_Lang208 =	Key Name
 	c_Lang209 =	Value Name
+	c_Lang210 =	Values
 		
 ; Other Windows		
 	t_Lang001 =	Export to AutoHotkey
@@ -915,17 +916,9 @@
 	ToggleC_TT =	Activate Relative Recording when key state is on.
 	Relative_TT =	Coordinates are relative to the active window.
 	Screen_TT =	Coordinates are relative to the desktop (entire screen).
-	IncFolders_TT =	
-	(LTrim	
-		0 - Only files / keys
-		1 - Folders / subkeys and files / keys
-		2 - Only folders / subkeys
-	)	
-	Recurse_TT =	
-	(LTrim	
-		0 - Don't recurse into folders / subkeys
-		1 - Recurse into folders / subkeys
-	)	
+	IncFiles_TT =	Include files / Values
+	IncFolders_TT =	Include directories (folders) / Keys
+	Recurse_TT =	Recurse into subdirectories (subfolders) / Subkeys
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	Double-Click to edit

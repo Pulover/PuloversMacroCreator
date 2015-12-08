@@ -45,7 +45,7 @@ minindex mod newenum next numget numput objaddref objclone object objgetaddress 
 objinsert objmaxindex objminindex objnewenum objrelease objremove objsetcapacity onmessage
 pop processpath push rawread rawwrite readline regexmatch regexreplace registercallback remove removeat
 round rtrim sb_seticon sb_setparts sb_settext seek setcapacity sin sqrt strget strlen strput strsplit substr
-tan tell trim tv_add tv_delete tv_get tv_getchild tv_getcount tv_getnext tv_getparent tv_getprev
+tan tell this trim tv_add tv_delete tv_get tv_getchild tv_getcount tv_getnext tv_getparent tv_getprev
 tv_getselection tv_gettext tv_modify varsetcapacity varsetcapcity winactive winexist write writeline
 )
 
@@ -58,7 +58,7 @@ border bottom bottom button buttons byref cancel cancel capacity caption caret c
 charp check check3 checkbox checked checkedgray choice choose choosestring class clone close color combobox
 contains controllist controllisthwnd count currentcol currentline custom date datetime days ddl default delete
 deleteall delimiter deref destroy digit disable disabled double doublep dropdownlist edit editpaste eject
-enable enabled encoding error exist exit expand exstyle filesystem findstring first flash float float floatp
+enable enabled encoding error exist exit expand exstyle files filesystem findstring first flash float float floatp
 focus focusv font force fromcodepage global grid group groupbox guiclose guicontextmenu guidropfiles
 guiescape guisize hdr hidden hide hidedropdown high hkcc hkcr hkcu hkey_classes_root hkey_current_config
 hkey_current_user hkey_local_machine hkey_users hklm hku horz hotkey hours hscroll hwnd icon iconsmall
@@ -71,7 +71,7 @@ nomainwindow norm normal nosort nosorthdr nostandard not notab notimers number n
 owndialogs owner parse password password pic picture pid pixel pos pow priority processname
 progress ptr radio range read readonly realtime redraw reg_binary reg_dword reg_dword_big_endian
 reg_expand_sz reg_full_resource_descriptor reg_link reg_multi_sz reg_qword reg_resource_list
-reg_resource_requirements_list reg_sz regex region relative reload rename report resize restore
+reg_resource_requirements_list reg reg_sz regex region relative reload rename report resize restore
 retry rgb right rtrim screen seconds selected section section send sendandmouse serial setlabel shiftalttab
 short shortp show showdropdown shutdown single slider sortdesc standard static status statusbar statuscd str
 strike style submit sysmenu tab tab2 tableft tabright tabstop text text theme tile time tip tocodepage togglecheck

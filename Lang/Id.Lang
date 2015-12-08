@@ -401,15 +401,15 @@
 	c_Lang135 =	Membaca
 	c_Lang136 =	Pendaftaran
 	c_Lang137 =	Pola File:
-	c_Lang138 =	Folder?
-	c_Lang139 =	Recurse?
+	c_Lang138 =	Direktori
+	c_Lang139 =	Rekursif
 	c_Lang140 =	Variabel masukan:
 	c_Lang141 =	Pembatas:
 	c_Lang142 =	Abaikan Karakter:
 	c_Lang143 =	Masukan file:
-	c_Lang144 =	Key:
-	c_Lang145 =	Akar kunci:
-	c_Lang146 =	Subkunci?
+	c_Lang144 =	Akar kunci\Key:
+	c_Lang145 =	Arsip
+	c_Lang146 =	Kunci-kunci
 	c_Lang147 =	Icon
 	c_Lang148 =	Tidak ada ikon
 	c_Lang149 =	Kesalahan
@@ -473,6 +473,7 @@
 	c_Lang207 =	array objek
 	c_Lang208 =	Nama kunci
 	c_Lang209 =	Nama nilai
+	c_Lang210 =	Nilai-nilai
 		
 ; Other Windows		
 	t_Lang001 =	Ekspor ke AutoHotkey
@@ -915,17 +916,9 @@
 	ToggleC_TT =	Aktifkan Recording Relatif ketika negara kunci di.
 	Relative_TT =	Koordinat relatif terhadap jendela aktif.
 	Screen_TT =	Koordinat relatif terhadap desktop (seluruh layar).
-	IncFolders_TT =	
-	(LTrim	
-		0 - Hanya berkas / kunci
-		1 - Folder / subkunci dan file / kunci
-		2 - Hanya folder / subkunci
-	)	
-	Recurse_TT =	
-	(LTrim	
-		0 - Jangan recurse ke dalam folder / subkunci
-		1 - Rekursif ke dalam folder / subkunci
-	)	
+	IncFiles_TT =	Termasuk file / Nilai
+	IncFolders_TT =	Termasuk direktori (folder) / Keys
+	Recurse_TT =	Rekursif ke dalam subdirektori (subfolder) / Subkunci
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	Double-Klik untuk mengedit

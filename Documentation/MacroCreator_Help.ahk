@@ -344,11 +344,9 @@
 
 	Parameters:
 		File Pattern - The name of a single file or folder, or a wildcard pattern such as C:\Temp\*.tmp.
-		Folders? - *Unchecked*: Folders are not retrieved (only files).  
-			*First Check*: All files and folders that match the wildcard pattern are retrieved.  
-			*Second Check*: Only folders are retrieved (no files).
-		Recurse? - *Unchecked*: Subfolders are not recursed into.  
-			*Checked*: Subfolders are recursed into so that files and folders contained therein are retrieved if they match FilePattern. All subfolders will be recursed into, not just those whose names match FilePattern. 
+		Files - If checked will include files.  
+		Directories - If checked will include directories (folders).  
+		Recurse - If checked will recurse into subdirectories (subfolders).  
 
 	Remarks:
 		The following variables exist within any file-loop. If an inner file-loop is enclosed by an outer file-loop, the innermost loop's file will take precedence:
@@ -419,17 +417,16 @@
 
 /*!
 	Function: Loop_Registry()
-		Retrieves the contents of the specified registry subkey, one item at a time.
+		Retrieves the contents of the specified registry subkey, one item at a time.  
+		Key must be separated from RootKey by a slash instead of a comma, and both can be contained within a single variable. For example, Loop, Reg, HKLM\Software or Loop, Reg, %FullPathOfKey%.
 
 	Parameters:
-		Key - The name of the key (e.g. Software\SomeApplication). If blank or omitted, the contents of RootKey will be retrieved.
 		Root Key - Must be either HKEY_LOCAL_MACHINE (or HKLM), HKEY_USERS (or HKU), HKEY_CURRENT_USER (or HKCU), HKEY_CLASSES_ROOT (or HKCR), or HKEY_CURRENT_CONFIG (or HKCC).  
 			To access a remote registry, prepend the computer name and a colon, as in this example: \\workstation01:HKEY_LOCAL_MACHINE
-		Subkeys? - *Unchecked*: Subkeys contained within Key are not retrieved (only the values).  
-			*First Check*: All values and subkeys are retrieved.  
-			*Second Check*: Only the subkeys are retrieved (not the values).
-		Recurse - *Unchecked*: Subkeys are not recursed into.  
-			*Checked*: Subkeys are recursed into, so that all values and subkeys contained therein are retrieved.
+		Key - The name of the key (e.g. Software\SomeApplication). If blank or omitted, the contents of RootKey will be retrieved.
+		Values - If checked will include Values.  
+		Keys - If checked will include keys.  
+		Recurse - If checked will recurse into subkeys.  
 
 	Remarks:
 		The following variables exist within any registry-loop. If an inner registry-loop is enclosed by an outer registry-loop, the innermost loop's registry item will take precedence:

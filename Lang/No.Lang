@@ -401,15 +401,15 @@
 	c_Lang135 =	Lese
 	c_Lang136 =	Register
 	c_Lang137 =	Filmønsteret:
-	c_Lang138 =	Mapper?
-	c_Lang139 =	Recurse?
+	c_Lang138 =	Kataloger
+	c_Lang139 =	Rekursive
 	c_Lang140 =	Inngangsstorrelsen:
 	c_Lang141 =	Skilletegn:
 	c_Lang142 =	Utelate Tegn:
 	c_Lang143 =	Innfil:
-	c_Lang144 =	Nøkkel:
-	c_Lang145 =	Root Nøkkelen:
-	c_Lang146 =	Undernøkler?
+	c_Lang144 =	Root Nøkkelen\Nøkkel:
+	c_Lang145 =	Filer
+	c_Lang146 =	Nøkler
 	c_Lang147 =	Icon
 	c_Lang148 =	Ingen ikon
 	c_Lang149 =	Feil
@@ -473,6 +473,7 @@
 	c_Lang207 =	matrise objekt
 	c_Lang208 =	Nøkkelnavn
 	c_Lang209 =	Verdinavn
+	c_Lang210 =	Verdier
 		
 ; Other Windows		
 	t_Lang001 =	Eksportere til AutoHotkey
@@ -915,17 +916,9 @@
 	ToggleC_TT =	Aktiver Relativ opptak når nøkkelen staten er på.
 	Relative_TT =	Koordinatene er relative til det aktive vinduet.
 	Screen_TT =	Koordinatene er relative til skrivebordet (hele skjermen).
-	IncFolders_TT =	
-	(LTrim	
-		0 - Bare filer / nøkler
-		1 - Mapper / undernøklene og filer / nøkler
-		2 - Bare mapper / undernøkler
-	)	
-	Recurse_TT =	
-	(LTrim	
-		0 - Ikke recurse i mapper / undernøkler
-		1 - Recurse i mapper / undernøkler
-	)	
+	IncFiles_TT =	Inkluder filer / Verdier
+	IncFolders_TT =	Inkluder kataloger (mapper) / Keys
+	Recurse_TT =	Rekursive inn i underkataloger (undermapper) / undernøkler
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	Dobbeltklikk for å redigere
