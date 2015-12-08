@@ -88,16 +88,16 @@ Pulover's Macro Creator v%Ver% Portable Edition
 ===============================================
 
 Thank you for downloading Pulover's Macro Creator.
-Supported platforms: Windows XP SP3+, Vista, 7, 8
+Supported platforms: Windows XP SP3+, Vista, 7, 8, 8.1, 10
 
 This file contains both x86 and x64 builds.
 
 ), Compiled\MacroCreatorPortable\ReadMe.txt
 FileDelete, Compiled\MacroCreator-Portable.zip
 Try
-	RunWait, %ProgramFiles%\7-Zip\7z.exe a -tzip Compiled\MacroCreator-Portable.zip Compiled\MacroCreatorPortable
+	RunWait, %ProgramFiles%\7-Zip\7z.exe a -tzip MacroCreator-Portable.zip MacroCreatorPortable\*, Compiled
 Catch
-	RunWait, C:\Program Files\7-Zip\7z.exe a -tzip Compiled\MacroCreator-Portable.zip Compiled\MacroCreatorPortable
+	RunWait, C:\Program Files\7-Zip\7z.exe a -tzip MacroCreator-Portable.zip MacroCreatorPortable\*, Compiled
 
 TrayTip,, Finished compiling files.
 Sleep, 2000
