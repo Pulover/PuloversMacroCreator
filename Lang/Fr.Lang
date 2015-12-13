@@ -83,6 +83,13 @@
 	e_Lang013 =	&Insérez de la case
 	e_Lang014 =	I&nsérer Frappe
 	e_Lang015 =	Modifier mar&que de couleur
+	e_Lang016 =	Groupes
+	e_Lang017 =	Permettre aux groupes
+	e_Lang018 =	Ajouter un groupe
+	e_Lang019 =	Retirer groupe
+	e_Lang020 =	Retirez tous les groupes
+	e_Lang021 =	Modifier les groupes
+		
 		
 ; Select Sub Menu		
 	s_Lang001 =	&Sélectionner tout
@@ -263,6 +270,13 @@
 	w_Lang093 =	Cacher
 	w_Lang094 =	Déplacer ici
 	w_Lang095 =	Copier ici
+	w_Lang096 =	Groupes
+	w_Lang097 =	Permettre aux groupes (Ctrl + Maj + G)
+	w_Lang098 =	Ajouter un groupe (Ctrl + Maj + Y)
+	w_Lang099 =	Retirer groupe (Ctrl + Maj + R)
+	w_Lang100 =	Retirez tous les groupes
+	w_Lang101 =	Modifier les groupes
+	w_Lang102 =	Nom de groupe
 		
 ; Command Windows		
 	c_Lang001 =	Souris
@@ -535,7 +549,7 @@
 	t_Lang057 =	Fichier de macro par défaut
 	t_Lang058 =	Fichier bibliothèque standard
 	t_Lang059 =	Utilisez Expression par défaut pour les variables Affectation
-	t_Lang060 =	Afficher les couleurs et les marques d'aide pour les boucles et les états
+	t_Lang060 =	Mettez en surbrillance boucles et instructions
 	t_Lang061 =	(Cliquez sur l'entête de la colonne Index pour activer / désactiver)
 	t_Lang062 =	Les touches virtuelles
 	t_Lang063 =	Par défaut
@@ -801,6 +815,8 @@
 		 Cette fonction est uniquement destinée en fonction rapide de l'exportation. PMC est pas destiné à être un éditeur de script AHK.
 	)	
 	d_Lang088 =	Essayez de courir utilisateur comme commun (non administrateur).
+	d_Lang089 =	Aucune ligne sélectionnée!
+	d_Lang090 =	S'il vous plaît, sélectionner une ligne pour insérer ou retirer le groupe.
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -1277,7 +1293,7 @@
 	StringLen / StrLen	Récupère le décompte du nombre de caractères dans une chaîne.
 	StringLower	Convertit une chaîne en minuscules.
 	StringMid / SubStr	Extrait des un ou plusieurs caractères de la position spécifiée dans une chaîne.
-	StringReplace	Remplace la chaîne spécifiée par une nouvelle chaîne.
+	StringReplace / StrReplace	Remplace la chaîne spécifiée par une nouvelle chaîne.
 	StringRight	Extrait un nombre de caractères à partir de la partie droite d'une chaîne.
 	StringSplit / StrSplit	Sépare une chaîne en un tableau de sous-chaînes à l'aide des séparateurs spécifiés.
 	StringTrimLeft	Supprime un certain nombre de caractères à partir du côté gauche d'une chaîne.

@@ -83,6 +83,13 @@
 	e_Lang013 =	Ku&tusundan Ekle
 	e_Lang014 =	Tuş Ek&lemek
 	e_Lang015 =	&Düzen renk işareti
+	e_Lang016 =	Gruplar
+	e_Lang017 =	Grupları etkinleştirme
+	e_Lang018 =	Grup ekle
+	e_Lang019 =	Grup kaldır
+	e_Lang020 =	Tüm grupları kaldırın
+	e_Lang021 =	Düzenleme grupları
+		
 		
 ; Select Sub Menu		
 	s_Lang001 =	&Tümünü Seç
@@ -263,6 +270,13 @@
 	w_Lang093 =	Gizlemek
 	w_Lang094 =	Buraya taşımak
 	w_Lang095 =	Buraya kopyala
+	w_Lang096 =	Gruplar
+	w_Lang097 =	Grupları etkinleştirme (Ctrl + Shift + G)
+	w_Lang098 =	Grup ekle (Ctrl + Shift + Y)
+	w_Lang099 =	Grup kaldır (Ctrl + Shift + R)
+	w_Lang100 =	Tüm grupları kaldırın
+	w_Lang101 =	Düzenleme grupları
+	w_Lang102 =	Grup ismi
 		
 ; Command Windows		
 	c_Lang001 =	Fare
@@ -535,7 +549,7 @@
 	t_Lang057 =	Varsayılan Makro Dosyası
 	t_Lang058 =	Standart Kütüphanesi Dosya
 	t_Lang059 =	Değişkenler Atama için varsayılan olarak İfade kullanın
-	t_Lang060 =	Döngüler ve Tablolar için Renkler ve Yardım Marks göster
+	t_Lang060 =	Döngüler ve deyimleri vurgulayın
 	t_Lang061 =	(Etkinleştirmek / devre dışı bırakmak için Dizin sütun başlığını tıklayın)
 	t_Lang062 =	Sanal tuşlar
 	t_Lang063 =	Standart
@@ -801,6 +815,8 @@
 		 Bu özellik sadece hızlı bir ihracat fonksiyonu olarak ifade edilir. PMC bir AHK komut editörü olmak anlamına gelmez.
 	)	
 	d_Lang088 =	Ortak kullanıcı (değil yönetici) çalıştırmayı deneyin.
+	d_Lang089 =	Hiçbir satır seçili!
+	d_Lang090 =	Eklemek veya grubu kaldırmak için bir satır seçiniz.
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -1277,7 +1293,7 @@
 	StringLen / StrLen	Bir dize ne kadar çok karakter sayısını alır.
 	StringLower	Küçük harfe bir dize dönüştürür.
 	StringMid / SubStr	Bir dizesinde belirtilen konumdan bir veya daha fazla karakter alır.
-	StringReplace	Yeni bir dize ile belirtilen alt değiştirir.
+	StringReplace / StrReplace	Yeni bir dize ile belirtilen alt değiştirir.
 	StringRight	Bir dize sağ taraftan karakter sayısını alır.
 	StringSplit / StrSplit	Belirtilen sınırlayıcı kullanarak alt dizeleri bir diziye bir dize ayırır.
 	StringTrimLeft	Bir dize sol taraftan karakter bir dizi kaldırır.

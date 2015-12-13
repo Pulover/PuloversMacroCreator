@@ -68,7 +68,7 @@ Class LV_Colors {
             NumPut(ClrTX, L + ClrTxP, 0, "UInt")
          If (ClrBk <> "")
             NumPut(ClrBk, L + ClrTxBkP, 0, "UInt"), NumPut(ClrBk, L + ClrBkP, 0, "UInt")
-         If (Col > This[H].Cells[Row].MaxIndex()) && !This[H].HasKey(Row)
+         If (Col > This[H].Cells[Row].Length()) && !This[H].HasKey(Row)
             Return CDRF_DODEFAULT
          Return CDRF_NOTIFYSUBITEMDRAW
       }
@@ -151,7 +151,7 @@ Class LV_Colors {
       ; Remove the subclass, if any
       If (This[HWND].SC)
          DllCall("Comctl32.dll\RemoveWindowSubclass", "Ptr", HWND, "Ptr", This.SubclassProc, "Ptr", HWND)
-      This.Remove(HWND, "")
+      This.Delete(HWND)
       WinSet, Redraw, , ahk_id %HWND%
       Return True
    }
@@ -170,7 +170,7 @@ Class LV_Colors {
       If !This.HasKey(HWND)
          Return False
       If (BkColor = "") && (TxColor = "") {
-         This[HWND].Rows.Remove(Row, "")
+         This[HWND].Rows.Delete(Row)
          Return True
       }
       BkBGR := TxBGR := ""
@@ -185,9 +185,9 @@ Class LV_Colors {
       If !This[HWND].Rows.HasKey(Row)
          This[HWND].Rows[Row] := {}
       If (BkBGR <> "")
-         This[HWND].Rows[Row].Insert("B", BkBGR)
+         This[HWND].Rows[Row]["B"] := BkBGR
       If (TxBGR <> "")
-         This[HWND].Rows[Row].Insert("T", TxBGR)
+         This[HWND].Rows[Row]["T"] := TxBGR
       Return True
    }
    ; ===================================================================================================================
@@ -206,7 +206,7 @@ Class LV_Colors {
       If !This.HasKey(HWND)
          Return False
       If (BkColor = "") && (TxColor = "") {
-         This[HWND].Cells.Remove(Row, "")
+         This[HWND].Cells.Delete(Row)
          Return True
       }
       BkBGR := TxBGR := ""
@@ -222,9 +222,9 @@ Class LV_Colors {
          This[HWND].Cells[Row] := {}
       This[HWND].Cells[Row, Col] := {}
       If (BkBGR <> "")
-         This[HWND].Cells[Row, Col].Insert("B", BkBGR)
+         This[HWND].Cells[Row, Col]["B"] := BkBGR
       If (TxBGR <> "")
-         This[HWND].Cells[Row, Col].Insert("T", TxBGR)
+         This[HWND].Cells[Row, Col]["T"] := TxBGR
       Return True
    }
    ; ===================================================================================================================
@@ -242,7 +242,7 @@ Class LV_Colors {
       If (DoIt)
          This[HWND].NS := True
       Else
-         This[HWND].Remove("NS")
+         This[HWND].RemoveAt("NS")
       Return True
    }
    ; ===================================================================================================================
@@ -274,7 +274,7 @@ Class LV_Colors {
          If (OSVersion < 6) {
             If (This[HWND].SC) {
                DllCall("Comctl32.dll\RemoveWindowSubclass", "Ptr", HWND, "Ptr", This.SubclassProc, "Ptr", HWND)
-               This[HWND].Remove("SC")
+               This[HWND].RemoveAt("SC")
             } Else {
                Return True
             }

@@ -83,6 +83,13 @@
 	e_Lang013 =	&Inseriu de Caixa
 	e_Lang014 =	Inserir Pu&lsacions
 	e_Lang015 =	Edit&a color
+	e_Lang016 =	grups
+	e_Lang017 =	Habilitar grups
+	e_Lang018 =	Afegir grup
+	e_Lang019 =	Traieu grup
+	e_Lang020 =	Traieu tots els grups
+	e_Lang021 =	Edita grups
+		
 		
 ; Select Sub Menu		
 	s_Lang001 =	&Selecciona tot
@@ -263,6 +270,13 @@
 	w_Lang093 =	Amagar
 	w_Lang094 =	Moure aquí
 	w_Lang095 =	Copieu aquí
+	w_Lang096 =	grups
+	w_Lang097 =	Habilitar grups (Ctrl + Shift + G)
+	w_Lang098 =	Afegir grup (Ctrl + Maj + I)
+	w_Lang099 =	Traieu grup (Ctrl + Shift + R)
+	w_Lang100 =	Traieu tots els grups
+	w_Lang101 =	Edita grups
+	w_Lang102 =	Nom del grup
 		
 ; Command Windows		
 	c_Lang001 =	Ratolí
@@ -535,7 +549,7 @@
 	t_Lang057 =	Arxiu Macro defecte
 	t_Lang058 =	Arxiu Biblioteca estàndard
 	t_Lang059 =	Utilitzeu expressions per defecte per a variables Assignació
-	t_Lang060 =	Mostra colors && Ajuda marques de bucles i sentències
+	t_Lang060 =	Ressaltar Loops i Declaracions
 	t_Lang061 =	(Feu clic a la capçalera de la columna Índex per activar / desactivar)
 	t_Lang062 =	Tecles virtuals
 	t_Lang063 =	Defecte
@@ -801,6 +815,8 @@
 		 Aquesta característica només està pensada com una funció d'exportació ràpida. PMC no està destinat a ser un editor de scripts AHK.
 	)	
 	d_Lang088 =	Intenteu executar l'usuari tan comú (no administrador).
+	d_Lang089 =	No fila seleccionada!
+	d_Lang090 =	Seleccioneu una fila per inserir o extreure el grup.
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -1277,7 +1293,7 @@
 	StringLen / StrLen	Recupera el compte de quants personatges estan en una cadena.
 	StringLower	Converteix una cadena a minúscules.
 	StringMid / SubStr	Recupera un o més caràcters des de la posició especificada en una cadena.
-	StringReplace	Reemplaça la subcadena especificada amb una nova cadena.
+	StringReplace / StrReplace	Reemplaça la subcadena especificada amb una nova cadena.
 	StringRight	Recupera el nombre de caràcters del costat dret d'una cadena.
 	StringSplit / StrSplit	Separa una cadena en una matriu de subcadenes utilitzant els delimitadors especificats.
 	StringTrimLeft	Elimina un nombre de caràcters del costat esquerre d'una cadena.

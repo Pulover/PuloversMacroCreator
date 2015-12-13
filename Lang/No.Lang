@@ -83,6 +83,13 @@
 	e_Lang013 =	S&ett fra boksen
 	e_Lang014 =	Sett Tastetrykk
 	e_Lang015 =	Ed&it fargemerki
+	e_Lang016 =	grupper
+	e_Lang017 =	Aktiver grupper
+	e_Lang018 =	Legg til gruppe
+	e_Lang019 =	Fjern gruppe
+	e_Lang020 =	Fjern alle grupper
+	e_Lang021 =	Rediger grupper
+		
 		
 ; Select Sub Menu		
 	s_Lang001 =	&Velg Alle
@@ -263,6 +270,13 @@
 	w_Lang093 =	Skjule
 	w_Lang094 =	Flytte hit
 	w_Lang095 =	Kopier hit
+	w_Lang096 =	grupper
+	w_Lang097 =	Aktiver grupper (Ctrl + Shift + G)
+	w_Lang098 =	Legg til gruppe (Ctrl + Shift + Y)
+	w_Lang099 =	Fjern gruppe (Ctrl + Shift + R)
+	w_Lang100 =	Fjern alle grupper
+	w_Lang101 =	Rediger grupper
+	w_Lang102 =	Gruppenavn
 		
 ; Command Windows		
 	c_Lang001 =	Mus
@@ -535,7 +549,7 @@
 	t_Lang057 =	Standard Macro File
 	t_Lang058 =	Standard Library File
 	t_Lang059 =	Bruk uttrykk som standard for variabler Assignment
-	t_Lang060 =	Vis Farger og Hjelp Marks for Loops og uttalelser
+	t_Lang060 =	Uthev Loops og uttalelser
 	t_Lang061 =	(Klikk Index kolonneoverskrift for å aktivere / deaktivere)
 	t_Lang062 =	Virtuelle tastene
 	t_Lang063 =	Standard
@@ -801,6 +815,8 @@
 		 Denne funksjonen er bare ment som en rask eksportfunksjonen. PMC er ikke ment å være en AHK script editor.
 	)	
 	d_Lang088 =	Prøv å kjøre som vanlig bruker (ikke administrator).
+	d_Lang089 =	Ingen rad valgt!
+	d_Lang090 =	Vennligst, velg en rad for å sette inn eller ta gruppen.
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -1277,7 +1293,7 @@
 	StringLen / StrLen	Henter telling av hvor mange tegn i en streng.
 	StringLower	Konverterer en streng til små bokstaver.
 	StringMid / SubStr	Henter ett eller flere tegn fra den angitte posisjon i en streng.
-	StringReplace	Erstatter den angitte delstreng med en ny streng.
+	StringReplace / StrReplace	Erstatter den angitte delstreng med en ny streng.
 	StringRight	Henter et antall tegn fra høyre side av en streng.
 	StringSplit / StrSplit	Skiller en streng til en rekke understrenger med de angitte skilletegn.
 	StringTrimLeft	Fjerner et antall tegn fra venstre side av en streng.

@@ -12,6 +12,16 @@ Eval(x, l_Point) { ; non-recursive PRE/POST PROCESSING: I/O forms, numbers, ops,
 		x := RegExReplace(x, lMatch1, %lMatch1%.MaxIndex())
 	,	x := RegExReplace(x, lMatch2 "\(\)")
 	}
+	While RegExMatch(x, "iU)\b([\w\d_]+)\b(\.MinIndex\(\))", lMatch)  ; MinIndex()
+	{
+		x := RegExReplace(x, lMatch1, %lMatch1%.MinIndex())
+	,	x := RegExReplace(x, lMatch2 "\(\)")
+	}
+	While RegExMatch(x, "iU)\b([\w\d_]+)\b(\.Length\(\))", lMatch)  ; Length()
+	{
+		x := RegExReplace(x, lMatch1, %lMatch1%.Length())
+	,	x := RegExReplace(x, lMatch2 "\(\)")
+	}
 	
 	While RegExMatch(x, "([\w_]+)\((.*?)\)", Funct)  ; Functions
 	{
@@ -24,7 +34,7 @@ Eval(x, l_Point) { ; non-recursive PRE/POST PROCESSING: I/O forms, numbers, ops,
 				LoopField := DerefVars(A_LoopField)
 				StringReplace, LoopField, LoopField, ```,, `,, All
 				StringReplace, LoopField, LoopField, ¢, `,, All
-				Params.Insert(LoopField)
+				Params.Push(LoopField)
 			}
 			FuncResult := %Funct1%(Params*)
 			StringReplace, FuncResult, FuncResult, `,, ```, 
@@ -79,7 +89,7 @@ Eval(x, l_Point) { ; non-recursive PRE/POST PROCESSING: I/O forms, numbers, ops,
 				Else
 					LoopField := DerefVars("%" LoopField "%")
 			}
-			y.Insert(LoopField)
+			y.Push(LoopField)
 		}
 		return y
 	}

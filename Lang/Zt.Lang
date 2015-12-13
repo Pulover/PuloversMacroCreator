@@ -83,6 +83,13 @@
 	e_Lang013 =	從盒插入
 	e_Lang014 =	插入擊鍵
 	e_Lang015 =	編輯顏色標誌
+	e_Lang016 =	組
+	e_Lang017 =	啟用組
+	e_Lang018 =	添加組
+	e_Lang019 =	刪除組
+	e_Lang020 =	刪除所有組
+	e_Lang021 =	編輯組
+		
 		
 ; Select Sub Menu		
 	s_Lang001 =	全選
@@ -263,6 +270,13 @@
 	w_Lang093 =	隱藏
 	w_Lang094 =	搬到這裡
 	w_Lang095 =	複製到這裡
+	w_Lang096 =	組
+	w_Lang097 =	啟用組 （Ctrl + Shift+ G）
+	w_Lang098 =	添加組 （Ctrl + Shift+ Y）
+	w_Lang099 =	刪除組 （Ctrl + Shift+ R）
+	w_Lang100 =	刪除所有組
+	w_Lang101 =	編輯組
+	w_Lang102 =	團隊名字
 		
 ; Command Windows		
 	c_Lang001 =	鼠標
@@ -535,7 +549,7 @@
 	t_Lang057 =	默認的宏文件
 	t_Lang058 =	標準庫文件
 	t_Lang059 =	默認情況下，使用Expression變量賦值
-	t_Lang060 =	顯示顏色&&幫助標記為循環和報表
+	t_Lang060 =	突出循環和聲明
 	t_Lang061 =	（單擊索引列標題來啟用/禁用）
 	t_Lang062 =	虛擬按鍵
 	t_Lang063 =	默認
@@ -801,6 +815,8 @@
 		此功能僅作為一個快速的導出功能。 PMC並不意味著是華民腳本編輯器。
 	)	
 	d_Lang088 =	嘗試運行作為普通用戶（非管理員）。
+	d_Lang089 =	沒有行選擇！
+	d_Lang090 =	請選擇一個行插入或刪除組。
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -1277,7 +1293,7 @@
 	StringLen / StrLen	檢索在一個字符串中有多少個字符的計數。
 	StringLower	將字符串轉換為小寫。
 	StringMid / SubStr	檢索一個或多個字符在一個字符串中的指定位置。
-	StringReplace	一個新的字符串替換指定的子串。
+	StringReplace / StrReplace	一個新的字符串替換指定的子串。
 	StringRight	檢索從右側的字符串的字符數。
 	StringSplit / StrSplit	分離到一個數組中使用指定的分隔符的子串。
 	StringTrimLeft	刪除一些從左側的字符串的字符。

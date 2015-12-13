@@ -5,20 +5,20 @@
 	WinGetClass, c_Class, A
 	If ((c_Class = "") && (c_Title = ""))
 		return
-	If WTitle = 1
+	If (WTitle = 1)
 	{
 		Window := c_Title
-		If WClass = 1
+		If (WClass = 1)
 			Window := Window " ahk_class " c_Class
 	}
 	Else
 	{
-		If WClass = 1
+		If (WClass = 1)
 			Window := "ahk_class " c_Class
 	}
 	If (c_Class = p_Class)
 	{
-		If WTitle = 0
+		If (WTitle = 0)
 			return
 		Else
 		{

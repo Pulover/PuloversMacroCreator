@@ -17,11 +17,11 @@ Class ObjIni
 		{
 			If (A_LoopReadLine = "")
 				continue
-			If RegExMatch(A_LoopReadLine, "^\[(.*)\]$", Sect)
+			If (RegExMatch(A_LoopReadLine, "^\[(.*)\]$", Sect))
 			{
 				If (ReadSection <> "")
 				{
-					this.Insert(ReadSection, %ReadSection%)
+					this[ReadSection] := %ReadSection%
 				}
 				ReadSection := Sect1, %Sect1% := []
 				continue
@@ -32,15 +32,15 @@ Class ObjIni
 			{
 				Key1 := RegExReplace(Key1, "[^\w\d#_@$]")
 			,	%Key1% := {Section: ReadSection, Key: Key1, Value: Key2}
-				%ReadSection%.Insert(Key1, %Key1%)
+				%ReadSection%[Key1] := %Key1%
 			}
 		}
-		this.Insert(ReadSection, %ReadSection%)
+		this[ReadSection] := %ReadSection%
 	}
 	
 	__Delete()
 	{
-		this.Remove("", Chr(255))
+		this.RemoveAt(1, this.Length())
 		this.SetCapacity(0)
 		this.base := ""
 	}
@@ -69,8 +69,10 @@ Class ObjIni
 				IniWrite, % Key.Value, %File%, % Key.Section, % Key.Key
 	}
 	
-	Get()
+	Get(AsObject := false)
 	{
+		If (AsObject)
+			return this
 		For each, Section in this
 			For each, Key in Section
 				List .= Key.Key " = " Key.Value "`n"
@@ -79,17 +81,17 @@ Class ObjIni
 	
 	Set(NewList, DefaultSection="UserGlobalVars")
 	{
-		this.Remove("", Chr(255))
+		this.RemoveAt(1, this.Length())
 		this.SetCapacity(0)
 		ReadSection := DefaultSection, %ReadSection% := []
 		Loop, Parse, NewList, `n
 		{
 			If (A_LoopField = "")
 				continue
-			If RegExMatch(A_LoopField, "^\[(.*)\]$", Sect)
+			If (RegExMatch(A_LoopField, "^\[(.*)\]$", Sect))
 			{
 				If (ReadSection <> "")
-					this.Insert(ReadSection, %ReadSection%)
+					this[ReadSection] := %ReadSection%
 				ReadSection := Sect1, %Sect1% := []
 				continue
 			}
@@ -97,10 +99,10 @@ Class ObjIni
 			{
 				Key1 := RegExReplace(Key1, "[^\w\d#_@$]")
 			,	%Key1% := {Section: ReadSection, Key: Key1, Value: Key2}
-				%ReadSection%.Insert(Key1, %Key1%)
+				%ReadSection%[Key1] := %Key1%
 			}
 		}
-		this.Insert(ReadSection, %ReadSection%)
+		this[ReadSection] := %ReadSection%
 	}
 	
 	Tree(Gui)

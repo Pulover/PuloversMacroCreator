@@ -83,6 +83,13 @@
 	e_Lang013 =	Memasu&kkan dari Box
 	e_Lang014 =	Memasukka&n keystroke
 	e_Lang015 =	E&dit Warna Mark
+	e_Lang016 =	kumpulan
+	e_Lang017 =	Membolehkan kumpulan
+	e_Lang018 =	Tambah kumpulan
+	e_Lang019 =	Memadam kumpulan
+	e_Lang020 =	Buang semua kumpulan
+	e_Lang021 =	Edit kumpulan
+		
 		
 ; Select Sub Menu		
 	s_Lang001 =	&Pilih Semua
@@ -263,6 +270,13 @@
 	w_Lang093 =	Menyembunyikan
 	w_Lang094 =	Bergerak di sini
 	w_Lang095 =	Salinan di sini
+	w_Lang096 =	kumpulan
+	w_Lang097 =	Membolehkan kumpulan (Ctrl + Shift + G)
+	w_Lang098 =	Tambah kumpulan (Ctrl + Shift + Y)
+	w_Lang099 =	Memadam kumpulan (Ctrl + Shift + R)
+	w_Lang100 =	Buang semua kumpulan
+	w_Lang101 =	Edit kumpulan
+	w_Lang102 =	Nama kumpulan
 		
 ; Command Windows		
 	c_Lang001 =	Mouse
@@ -535,7 +549,7 @@
 	t_Lang057 =	Fail Macro Default
 	t_Lang058 =	Fail Perpustakaan Standard
 	t_Lang059 =	Gunakan Expression secara lalai untuk Pembolehubah Tugasan
-	t_Lang060 =	Menunjukkan Warna && Marks Bantuan untuk gelung dan Penyata
+	t_Lang060 =	Serlahkan gelung dan Penyata
 	t_Lang061 =	(Klik Indeks kepala lajur untuk membolehkan / melumpuhkan)
 	t_Lang062 =	Kekunci Maya
 	t_Lang063 =	Default
@@ -801,6 +815,8 @@
 		 Ciri ini hanya bertujuan sebagai fungsi eksport mudah. PMC bukan bermaksud untuk menjadi editor skrip AHK.
 	)	
 	d_Lang088 =	Cuba untuk menjalankan sebagai pengguna biasa (bukan pentadbir).
+	d_Lang089 =	Tiada berturut-turut dipilih!
+	d_Lang090 =	Sila, pilih berturut-turut untuk memasukkan atau mengeluarkan kumpulan.
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -1277,7 +1293,7 @@
 	StringLen / StrLen	Mendapatkan semula kiraan berapa banyak aksara dalam rentetan.
 	StringLower	Menukarkan rentetan kepada huruf kecil.
 	StringMid / SubStr	Mendapatkan semula satu atau lebih watak-watak dari kedudukan yang dinyatakan dalam rentetan.
-	StringReplace	Menggantikan subrentetan yang dinyatakan dengan tali yang baru.
+	StringReplace / StrReplace	Menggantikan subrentetan yang dinyatakan dengan tali yang baru.
 	StringRight	Semula beberapa watak-watak dari sebelah kanan rentetan.
 	StringSplit / StrSplit	Memisahkan tali ke dalam pelbagai substrings menggunakan pembatas ditetapkan.
 	StringTrimLeft	Membuang beberapa watak-watak dari sebelah kiri rentetan.

@@ -41,7 +41,7 @@ class scintilla {
     updated         := false    ; SCN_UPDATEUI
 
     __new(hwnd){
-        ; if (params.MaxIndex())
+        ; if (params.Length())
             __SCI(this.hwnd := hwnd, this)
         ; else
             ; return this

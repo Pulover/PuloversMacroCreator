@@ -83,6 +83,13 @@
 	e_Lang013 =	从框中插入(&I)
 	e_Lang014 =	插入键击(&K)
 	e_Lang015 =	编辑颜色标记(&M)
+	e_Lang016 =	组
+	e_Lang017 =	启用组
+	e_Lang018 =	添加组
+	e_Lang019 =	删除组
+	e_Lang020 =	删除所有组
+	e_Lang021 =	编辑组
+		
 		
 ; Select Sub Menu		
 	s_Lang001 =	全选(&A)
@@ -263,6 +270,13 @@
 	w_Lang093 =	隐藏
 	w_Lang094 =	移到这里
 	w_Lang095 =	复制到这里
+	w_Lang096 =	组
+	w_Lang097 =	启用组 （Ctrl + Shift+ G）
+	w_Lang098 =	添加组 （Ctrl + Shift+ Y）
+	w_Lang099 =	删除组 （Ctrl + Shift+ R）
+	w_Lang100 =	删除所有组
+	w_Lang101 =	编辑组
+	w_Lang102 =	团队名字
 		
 ; Command Windows		
 	c_Lang001 =	鼠标
@@ -535,7 +549,7 @@
 	t_Lang057 =	默认宏文件
 	t_Lang058 =	标准库文件
 	t_Lang059 =	默认使用表达式赋值变量
-	t_Lang060 =	为循环和语句显示颜色和帮助标记
+	t_Lang060 =	突出循环和声明
 	t_Lang061 =	（点击索引列标题以启用/禁用）
 	t_Lang062 =	虚拟键
 	t_Lang063 =	默认
@@ -801,6 +815,8 @@
 		此功能仅作为一个快速的导出功能。 PMC并不意味着是华民脚本编辑器。
 	)	
 	d_Lang088 =	尝试运行作为普通用户（非管理员）。
+	d_Lang089 =	没有行选择！
+	d_Lang090 =	请选择一个行插入或删除组。
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -1277,7 +1293,7 @@
 	StringLen / StrLen	获取字符串中包含的字符数量。
 	StringLower	把字符串中的英文字母转换成小写。
 	StringMid / SubStr	从字符串的指定位置提取一个或多个字符。
-	StringReplace	用新字符串替换指定的子字符串。
+	StringReplace / StrReplace	用新字符串替换指定的子字符串。
 	StringRight	从字符串的右边提取一些字符。
 	StringSplit / StrSplit	使用指定的分隔符把一个字符串分解成多个子字符串并保存到数组中。
 	StringTrimLeft	从字符串的左边移除一些字符。

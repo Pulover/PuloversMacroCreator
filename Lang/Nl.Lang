@@ -83,6 +83,13 @@
 	e_Lang013 =	Invo&egen van Box
 	e_Lang014 =	S&teek Toetsaanslag
 	e_Lang015 =	&Bewerken kleurmarkering
+	e_Lang016 =	groepen
+	e_Lang017 =	Groepen inschakelen
+	e_Lang018 =	Groep toevoegen
+	e_Lang019 =	Verwijder groep
+	e_Lang020 =	Verwijder alle groepen
+	e_Lang021 =	Groepen bewerken
+		
 		
 ; Select Sub Menu		
 	s_Lang001 =	&Alles selecteren
@@ -263,6 +270,13 @@
 	w_Lang093 =	Verbergen
 	w_Lang094 =	Bewegen hier
 	w_Lang095 =	Kopieer hier
+	w_Lang096 =	groepen
+	w_Lang097 =	Groepen inschakelen (Ctrl + Shift + G)
+	w_Lang098 =	Groep toevoegen (Ctrl + Shift + Y)
+	w_Lang099 =	Verwijder groep (Ctrl + Shift + R)
+	w_Lang100 =	Verwijder alle groepen
+	w_Lang101 =	Groepen bewerken
+	w_Lang102 =	Groepsnaam
 		
 ; Command Windows		
 	c_Lang001 =	Muis
@@ -535,7 +549,7 @@
 	t_Lang057 =	Standaard Macro File
 	t_Lang058 =	Standard Library File
 	t_Lang059 =	Gebruik Expression standaard voor Variabelen Assignment
-	t_Lang060 =	Toon Kleuren en Help Marks voor Loops en Verklaringen
+	t_Lang060 =	Markeer Loops en verklaringen
 	t_Lang061 =	(Klik op de Index kolomkop te activeren / deactiveren)
 	t_Lang062 =	Virtual Keys
 	t_Lang063 =	Verzuim
@@ -801,6 +815,8 @@
 		 Deze functie is alleen bedoeld als een snelle exportfunctie. PMC is niet bedoeld om een AHK-script editor.
 	)	
 	d_Lang088 =	Probeer zo gewone gebruiker (geen beheerder) draaien.
+	d_Lang089 =	Geen rij geselecteerd!
+	d_Lang090 =	Alstublieft, selecteer een rij te plaatsen of te verwijderen van de groep.
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -1277,7 +1293,7 @@
 	StringLen / StrLen	Haalt de telling van het aantal karakters in een string.
 	StringLower	Zet een tekenreeks naar kleine letters.
 	StringMid / SubStr	Haalt een of meer tekens uit de opgegeven positie in een string.
-	StringReplace	Vervangt het opgegeven subtekenreeks met een nieuwe string.
+	StringReplace / StrReplace	Vervangt het opgegeven subtekenreeks met een nieuwe string.
 	StringRight	Haalt een aantal personages uit de rechterzijde van een string.
 	StringSplit / StrSplit	Scheidt een string in een array van subtekenreeksen met de opgegeven scheidingstekens.
 	StringTrimLeft	Verwijdert een aantal tekens van de linkerzijde van een string.

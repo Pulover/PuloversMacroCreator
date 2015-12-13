@@ -83,6 +83,13 @@
 	e_Lang013 =	&Inserte de Caja
 	e_Lang014 =	I&nsertar Pulsaciones
 	e_Lang015 =	Edi&tar marca de color
+	e_Lang016 =	Grupos
+	e_Lang017 =	Habilitar grupos
+	e_Lang018 =	Añadir grupo
+	e_Lang019 =	Retire grupo
+	e_Lang020 =	Retire todos los grupos
+	e_Lang021 =	Editar grupos
+		
 		
 ; Select Sub Menu		
 	s_Lang001 =	&Seleccionar todo
@@ -263,6 +270,13 @@
 	w_Lang093 =	Ocultar
 	w_Lang094 =	Mover aquí
 	w_Lang095 =	Copiar aquí
+	w_Lang096 =	Grupos
+	w_Lang097 =	Habilitar grupos (Ctrl + Shift + G)
+	w_Lang098 =	Añadir grupo (Ctrl + Shift + Y)
+	w_Lang099 =	Retire grupo (Ctrl + Shift + R)
+	w_Lang100 =	Retire todos los grupos
+	w_Lang101 =	Editar grupos
+	w_Lang102 =	Nombre del grupo
 		
 ; Command Windows		
 	c_Lang001 =	Ratón
@@ -535,7 +549,7 @@
 	t_Lang057 =	Macro de archivo predeterminado
 	t_Lang058 =	Archivo de biblioteca estándar
 	t_Lang059 =	Use Expression by default for Variables Assignment
-	t_Lang060 =	Mostrar colores y marcas de Ayuda para bucles y sentencias
+	t_Lang060 =	Resaltar Loops y Declaraciones
 	t_Lang061 =	(Haga clic en el encabezado de la columna Índice para activar / desactivar)
 	t_Lang062 =	Teclas virtuales
 	t_Lang063 =	Defecto
@@ -801,6 +815,8 @@
 		 Esta característica sólo está pensada como una función de exportación rápida. PMC no está destinado a ser un editor de scripts AHK.
 	)	
 	d_Lang088 =	Intente ejecutar el como usuario común (no administrador).
+	d_Lang089 =	No fila seleccionada!
+	d_Lang090 =	Por favor, seleccione una fila para insertar o extraer el grupo.
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -1277,7 +1293,7 @@
 	StringLen / StrLen	Recupera la cuenta de cuántos personajes están en una cadena.
 	StringLower	Convierte una cadena a minúsculas.
 	StringMid / SubStr	Recupera uno o más caracteres desde la posición especificada en una cadena.
-	StringReplace	Reemplaza la subcadena especificada con una nueva cadena.
+	StringReplace / StrReplace	Reemplaza la subcadena especificada con una nueva cadena.
 	StringRight	Recupera el número de caracteres del lado derecho de una cadena.
 	StringSplit / StrSplit	Separa una cadena en una matriz de subcadenas utilizando los delimitadores especificados.
 	StringTrimLeft	Elimina un número de caracteres del lado izquierdo de una cadena.

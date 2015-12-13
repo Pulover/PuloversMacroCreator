@@ -83,6 +83,13 @@
 	e_Lang013 =	S&isipkan dari Box
 	e_Lang014 =	M&asukkan keystroke
 	e_Lang015 =	S&unting Warna Mark
+	e_Lang016 =	Grup
+	e_Lang017 =	Memungkinkan kelompok
+	e_Lang018 =	Menambahkan grup
+	e_Lang019 =	Menghapus grup
+	e_Lang020 =	Hapus semua kelompok
+	e_Lang021 =	Kelompok mengedit
+		
 		
 ; Select Sub Menu		
 	s_Lang001 =	&Pilih Semua
@@ -263,6 +270,13 @@
 	w_Lang093 =	Menyembunyikan
 	w_Lang094 =	Pindah ke sini
 	w_Lang095 =	Kopi di sini
+	w_Lang096 =	Grup
+	w_Lang097 =	Memungkinkan kelompok (Ctrl + Shift + G)
+	w_Lang098 =	Menambahkan grup (Ctrl + Shift + Y)
+	w_Lang099 =	Menghapus grup (Ctrl + Shift + R)
+	w_Lang100 =	Hapus semua kelompok
+	w_Lang101 =	Kelompok mengedit
+	w_Lang102 =	Nama grup
 		
 ; Command Windows		
 	c_Lang001 =	Mouse
@@ -535,7 +549,7 @@
 	t_Lang057 =	Standar Makro Berkas
 	t_Lang058 =	Standar Pustaka Berkas
 	t_Lang059 =	Gunakan Ekspresi secara default untuk Variabel Tugas
-	t_Lang060 =	Tampilkan Warna && Bantuan Marks untuk Loops dan Laporan
+	t_Lang060 =	Sorot Loops dan Laporan
 	t_Lang061 =	(Klik header kolom Index untuk mengaktifkan / menonaktifkan)
 	t_Lang062 =	Tombol Virtual
 	t_Lang063 =	Kegagalan
@@ -801,6 +815,8 @@
 		 Fitur ini hanya dimaksudkan sebagai fungsi ekspor cepat. PMC tidak dimaksudkan untuk menjadi editor naskah AHK.
 	)	
 	d_Lang088 =	Cobalah untuk menjalankan pengguna yang biasa (tidak administrator).
+	d_Lang089 =	Tidak ada baris yang dipilih!
+	d_Lang090 =	Silakan, pilih baris untuk memasukkan atau mengeluarkan kelompok.
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -1277,7 +1293,7 @@
 	StringLen / StrLen	Mengambil hitungan berapa banyak karakter dalam string.
 	StringLower	Mengkonversi string menjadi huruf kecil.
 	StringMid / SubStr	Mengambil satu atau lebih karakter dari posisi ditentukan dalam string.
-	StringReplace	Menggantikan substring tertentu dengan string baru.
+	StringReplace / StrReplace	Menggantikan substring tertentu dengan string baru.
 	StringRight	Mengambil sejumlah karakter dari sisi kanan string.
 	StringSplit / StrSplit	Memisahkan string menjadi array substring menggunakan pembatas yang ditentukan.
 	StringTrimLeft	Menghapus sejumlah karakter dari sisi kiri string.

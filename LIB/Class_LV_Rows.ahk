@@ -89,7 +89,7 @@ Class LV_Rows
 
     __Delete()
     {
-        this.Remove("", Chr(255))
+        this.RemoveAt(1, this.Length())
     ,   this.SetCapacity(0)
     ,   this.base := ""
     }
@@ -106,11 +106,11 @@ Class LV_Rows
         Loop
         {
             LV_Row := LV_GetNext(LV_Row)
-            If !LV_Row
+            If (!LV_Row)
                 break
             RowData := this.RowText(LV_Row)
         ,   Row := [RowData*]
-        ,   this.CopyData.Insert(Row)
+        ,   this.CopyData.Push(Row)
         ,   CopiedLines := A_Index
         }
         return CopiedLines
@@ -126,11 +126,11 @@ Class LV_Rows
         Loop
         {
             LV_Row := LV_GetNext(LV_Row)
-            If !LV_Row
+            If (!LV_Row)
                 break
             RowData := this.RowText(LV_Row)
         ,   Row := [RowData*]
-        ,   this.CopyData.Insert(Row)
+        ,   this.CopyData.Push(Row)
         ,   CopiedLines := A_Index
         }
         this.Delete()
@@ -146,10 +146,10 @@ Class LV_Rows
 ;=======================================================================================
     Paste(Row=0, Multiline=False)
     {
-        If !this.CopyData.MaxIndex()
+        If (!this.CopyData.Length())
             return False
         TargetRow := Row ? Row : LV_GetNext()
-        If !TargetRow
+        If (!TargetRow)
         {
             For each, Row in this.CopyData
                 LV_Add(Row*)
@@ -162,7 +162,7 @@ Class LV_Rows
                 Loop
                 {
                     LV_Row := LV_GetNext(LV_Row - 1)
-                    If !LV_Row
+                    If (!LV_Row)
                         break
                     For each, Row in this.CopyData
                         LV_Insert(LV_Row, Row*), LV_Row += 1
@@ -204,7 +204,7 @@ Class LV_Rows
         Loop
         {
             LV_Row := LV_GetNext(LV_Row - 1)
-            If !LV_Row
+            If (!LV_Row)
                 break
             LV_Delete(LV_Row)
         ,   DeletedLines := A_Index
@@ -222,16 +222,16 @@ Class LV_Rows
     {
         Selections := [], LV_Row := 0
         Critical
-        If Up
+        If (Up)
         {
             Loop
             {
                 LV_Row := LV_GetNext(LV_Row)
-                If !LV_Row
+                If (!LV_Row)
                     break
                 If (LV_Row = 1)
                     return
-                Selections.Insert(LV_Row)
+                Selections.Push(LV_Row)
             }
             For each, Row in Selections
             {
@@ -242,18 +242,18 @@ Class LV_Rows
                 If (A_Index = 1)
                     LV_Modify(Row-1, "Focus Vis")
             }
-            return Selections.MaxIndex()
+            return Selections.Length()
         }
         Else
         {
             Loop
             {
                 LV_Row := LV_GetNext(LV_Row)
-                If !LV_Row
+                If (!LV_Row)
                     break
                 If (LV_Row = LV_GetCount())
                     return
-                Selections.Insert(1, LV_Row)
+                Selections.InsertAt(1, LV_Row)
             }
             For each, Row in Selections
             {
@@ -263,7 +263,7 @@ Class LV_Rows
                 If (A_Index = 1)
                     LV_Modify(Row+1, "Focus Vis")
             }
-            return Selections.MaxIndex()
+            return Selections.Length()
         }
     }
 ;=======================================================================================
@@ -294,7 +294,7 @@ Class LV_Rows
 
         SysGet, SM_CXVSCROLL, 2
 
-        If InStr(DragButton, "d", True)
+        If (InStr(DragButton, "d", True))
             DragButton := "RButton"
         Else
             DragButton := "LButton"
@@ -364,7 +364,7 @@ Class LV_Rows
                 }
             }
 
-            If LV_currRow
+            If (LV_currRow)
             {
                 Gui, MarkLine:Color, %Color%
                 Gui, MarkLine:+LastFound +AlwaysOnTop +Toolwindow -Caption +HwndLineMark
@@ -404,16 +404,16 @@ Class LV_Rows
     Add()
     {
         Row := []
-        If (this.ActiveSlot < this.Slot.MaxIndex())
-            this.Slot.Remove(this.ActiveSlot+1, this.Slot.MaxIndex())
+        If (this.ActiveSlot < this.Slot.Length())
+            this.Slot.RemoveAt(this.ActiveSlot+1, this.Slot.Length())
         Loop, % LV_GetCount()
         {
             RowData := this.RowText(A_Index)
         ,   Row[A_Index] := [RowData*]
         }
-        this.Slot.Insert(Row)
-    ,   this.ActiveSlot := this.Slot.MaxIndex()
-        return this.Slot.MaxIndex()
+        this.Slot.Push(Row)
+    ,   this.ActiveSlot := this.Slot.Length()
+        return this.Slot.Length()
     }
 ;=======================================================================================
 ;    Function:           Handle.Undo()
@@ -435,7 +435,7 @@ Class LV_Rows
 ;=======================================================================================
     Redo()
     {
-        If (this.ActiveSlot = (this.Slot.MaxIndex()))
+        If (this.ActiveSlot = (this.Slot.Length()))
             return this.ActiveSlot
         this.ActiveSlot += 1
     ,   this.Load(this.ActiveSlot)
@@ -453,7 +453,7 @@ Class LV_Rows
 ;=======================================================================================
     Load(Number)
     {
-        If !IsObject(this.Slot[Number])
+        If (!IsObject(this.Slot[Number]))
             return False
 
         LV_Delete()
@@ -473,11 +473,11 @@ Class LV_Rows
         Data := []
     ,   ckd := (LV_GetNext(Index-1, "Checked")=Index) ? 1 : 0
     ,   iIcon := this.GetIconIndex(this.LVHwnd, Index)
-    ,   Data.Insert("Icon" iIcon " Check" ckd)
+    ,   Data.Push("Icon" iIcon " Check" ckd)
         Loop, % LV_GetCount("Col")
         {
             LV_GetText(Cell, Index, A_Index)
-        ,   Data.Insert(Cell)
+        ,   Data.Push(Cell)
         }
         return Data
     }

@@ -83,6 +83,13 @@
 	e_Lang013 =	I&nfoga från rutan
 	e_Lang014 =	Infog&a Tangenttryckning
 	e_Lang015 =	R&edigera färgmarkering
+	e_Lang016 =	grupper
+	e_Lang017 =	Aktivera grupper
+	e_Lang018 =	Lägg till grupp
+	e_Lang019 =	Ta bort grupp
+	e_Lang020 =	Ta bort alla grupper
+	e_Lang021 =	Redigera grupper
+		
 		
 ; Select Sub Menu		
 	s_Lang001 =	&Markera allt
@@ -263,6 +270,13 @@
 	w_Lang093 =	Dölj
 	w_Lang094 =	Flytta hit
 	w_Lang095 =	Kopiera här
+	w_Lang096 =	grupper
+	w_Lang097 =	Aktivera grupper (Ctrl + Shift + G)
+	w_Lang098 =	Lägg till grupp (Ctrl + Skift + Y)
+	w_Lang099 =	Ta bort grupp (Ctrl + Skift + R)
+	w_Lang100 =	Ta bort alla grupper
+	w_Lang101 =	Redigera grupper
+	w_Lang102 =	Gruppnamn
 		
 ; Command Windows		
 	c_Lang001 =	Mus
@@ -535,7 +549,7 @@
 	t_Lang057 =	Default makrofil
 	t_Lang058 =	Standard Library File
 	t_Lang059 =	Använd Expression som standard för variabler Uppdrag
-	t_Lang060 =	Visa Färger och Marks Hjälp för loopar och uttalanden
+	t_Lang060 =	Markera loopar och uttalanden
 	t_Lang061 =	(Klicka på rubriken Index kolumnen för att aktivera / avaktivera)
 	t_Lang062 =	Virtuella knapparna
 	t_Lang063 =	Default
@@ -801,6 +815,8 @@
 		 Den här funktionen är endast avsedd som en snabb exportfunktionen. PMC är inte avsett att vara en AHK script editor.
 	)	
 	d_Lang088 =	Försök att köra som vanlig användare (inte administratör).
+	d_Lang089 =	Ingen rad valts!
+	d_Lang090 =	Vänligen välj rad att sätta in eller ta bort gruppen.
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -1277,7 +1293,7 @@
 	StringLen / StrLen	Hämtar räkningen på hur många tecken som finns i en sträng.
 	StringLower	Konverterar en sträng till gemener.
 	StringMid / SubStr	Hämtar ett eller flera tecken från den angivna positionen i en sträng.
-	StringReplace	Ersätter angiven delsträng med en ny sträng.
+	StringReplace / StrReplace	Ersätter angiven delsträng med en ny sträng.
 	StringRight	Hämtar ett antal tecken från den högra sidan av en sträng.
 	StringSplit / StrSplit	Separerar en sträng till en array med delsträngar med den angivna avgränsare.
 	StringTrimLeft	Tar bort ett antal tecken från den vänstra sidan av en sträng.

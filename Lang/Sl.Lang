@@ -83,6 +83,13 @@
 	e_Lang013 =	&Vstavite okencu
 	e_Lang014 =	V&stavite Keystroke
 	e_Lang015 =	Edi&t Color Mark
+	e_Lang016 =	skupine
+	e_Lang017 =	Omogoči skupine
+	e_Lang018 =	Dodaj skupino
+	e_Lang019 =	Odstrani skupino
+	e_Lang020 =	Odstranite vse skupine
+	e_Lang021 =	Urejanje skupine
+		
 		
 ; Select Sub Menu		
 	s_Lang001 =	&Izberi vse
@@ -263,6 +270,13 @@
 	w_Lang093 =	Skrij
 	w_Lang094 =	Premakniti tukaj
 	w_Lang095 =	Kopiranje tukaj
+	w_Lang096 =	skupine
+	w_Lang097 =	Omogoči skupine (Ctrl + Shift + G)
+	w_Lang098 =	Dodaj skupino (Ctrl + Shift + Y)
+	w_Lang099 =	Odstrani skupino (Ctrl + Shift + R)
+	w_Lang100 =	Odstranite vse skupine
+	w_Lang101 =	Urejanje skupine
+	w_Lang102 =	Ime skupine
 		
 ; Command Windows		
 	c_Lang001 =	Miška
@@ -535,7 +549,7 @@
 	t_Lang057 =	Privzeto makro datoteke
 	t_Lang058 =	Standardna knjižnica datoteke
 	t_Lang059 =	Uporaba Expression privzeto za spremenljivke Naloga
-	t_Lang060 =	Pokaži Barve & Pomoč znamk za Zank in izjav
+	t_Lang060 =	Označite zank in izjave
 	t_Lang061 =	(Kliknite glavo stolpca indeksa za vklop / izklop)
 	t_Lang062 =	Virtualni Keys
 	t_Lang063 =	Privzeto
@@ -801,6 +815,8 @@
 		 Ta funkcija je mišljen zgolj kot funkcijo hitrega izvoza. PMC ni mišljeno, da bi urednik AHK scenarij.
 	)	
 	d_Lang088 =	Poskusite zagnati kot skupni uporabniku (ne administratorja).
+	d_Lang089 =	Ne vrstica izbrana!
+	d_Lang090 =	Prosimo, izberite vrstico za vstavljanje ali odstraniti skupino.
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -1277,7 +1293,7 @@
 	StringLen / StrLen	Pridobi štetje, koliko znakov v nizu.
 	StringLower	Pretvori niz v male črke.
 	StringMid / SubStr	Pridobi eno ali več črk iz določenega položaja v nizu.
-	StringReplace	Nadomešča določen podniz z novim nizom.
+	StringReplace / StrReplace	Nadomešča določen podniz z novim nizom.
 	StringRight	Pridobi število znakov na desni strani niza.
 	StringSplit / StrSplit	Loči niz v niz nukleotidov, ki uporabljajo določene ločila.
 	StringTrimLeft	Odstrani število znakov od leve strani niza.

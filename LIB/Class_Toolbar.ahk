@@ -116,9 +116,9 @@ Class Toolbar extends Toolbar.Private
 ;=======================================================================================
     Add(Options="Enabled", Buttons*)
     {
-        If !Buttons.MaxIndex()
+        If (!Buttons.Length())
         {
-            Struct := this.BtnSep(TBBUTTON, Options), this.DefaultBtnInfo.Insert(Struct)
+            Struct := this.BtnSep(TBBUTTON, Options), this.DefaultBtnInfo.Push(Struct)
             SendMessage, this.TB_ADDBUTTONS, 1, &TBBUTTON,, % "ahk_id " this.tbHwnd
             If (ErrorLevel = "FAIL")
                 return False
@@ -162,7 +162,7 @@ Class Toolbar extends Toolbar.Private
 ;=======================================================================================
     Delete(Button="")
     {
-        If !Button
+        If (!Button)
         {
             Loop, % this.GetCount()
                 this.Delete(1)
@@ -194,14 +194,14 @@ Class Toolbar extends Toolbar.Private
                     .    ":" Icon (Style ? "(" Style ")" : "")) : "") ", "
         ,   BtnString .= cString
             If (ArrayOut)
-                BtnArray.Insert({Icon: Icon-1, ID: ID, State: State
+                BtnArray.Push({Icon: Icon-1, ID: ID, State: State
                                 , Style: Style, Text: Text, Label: Label})
         }
         For i, Button in this.DefaultBtnInfo
         {
-            If !InStr(IncLabels, ":" (Label := this.Labels[Button.ID]) ":")
+            If (!InStr(IncLabels, ":" (Label := this.Labels[Button.ID]) ":"))
             {
-                If !Label
+                If (!Label)
                     continue
                 oString := Label (Button.Text ? "=" Button.Text : "")
                         .    ":" Button.Icon+1 (Button.Style ? "(" Button.Style ")" : "")
@@ -336,7 +336,7 @@ Class Toolbar extends Toolbar.Private
             SendMessage, this.TB_GETITEMRECT, A_Index-1, &RECT,, % "ahk_id " this.tbHwnd
             If (NumGet(&RECT, 8, "Int") > tbWidth)
                 this.GetButton(A_Index, ID, Text, "", "", Icon)
-            ,   HiddenButtons.Insert({ID: ID, Text: Text, Label: this.Labels[ID], Icon: Icon})
+            ,   HiddenButtons.Push({ID: ID, Text: Text, Label: this.Labels[ID], Icon: Icon})
         }
         return HiddenButtons
     }
@@ -352,7 +352,7 @@ Class Toolbar extends Toolbar.Private
 ;=======================================================================================
     Insert(Position, Options="Enabled", Buttons*)
     {
-        If !Buttons.MaxIndex()
+        If (!Buttons.Length())
         {
             this.BtnSep(TBBUTTON, Options)
             SendMessage, this.TB_INSERTBUTTON, Position-1, &TBBUTTON,, % "ahk_id " this.tbHwnd
@@ -525,7 +525,7 @@ Class Toolbar extends Toolbar.Private
         If (nCode = this.TBN_GETBUTTONINFO)
         {
             iItem := NumGet(Param + (A_PtrSize * 3), 0, "Int")
-            If (iItem = this.DefaultBtnInfo.MaxIndex())
+            If (iItem = this.DefaultBtnInfo.Length())
                 return False
             For each, Member in this.DefaultBtnInfo[iItem+1]
                 %each% := Member
@@ -624,8 +624,8 @@ Class Toolbar extends Toolbar.Private
     SetDefault(Options="Enabled", Buttons*)
     {
         this.DefaultBtnInfo := []
-        If !Buttons.MaxIndex()
-            this.DefaultBtnInfo.Insert({Icon: -1, ID: "", State: ""
+        If (!Buttons.Length())
+            this.DefaultBtnInfo.Push({Icon: -1, ID: "", State: ""
                                        , Style: this.BTNS_SEP, Text: "", Label: ""})
         If (Options = "")
             Options := "Enabled"
@@ -808,9 +808,9 @@ Class Toolbar extends Toolbar.Private
 ;=======================================================================================
         Delete(Slot)
         {
-            If IsObject(this[Slot])
+            If (IsObject(this[Slot]))
             {
-                this.Remove(Slot, "")
+                this.Delete(Slot)
                 return True
             }
             Else
@@ -837,7 +837,7 @@ Class Toolbar extends Toolbar.Private
                 BtnString .= (Label ? (Label (Text ? "=" Text : "")
                         .    ":" Icon+1 (Style ? "(" Style ")" : "")) : "") ", "
                 If (ArrayOut)
-                    BtnArray.Insert({Icon: Icon, ID: ID, State: State
+                    BtnArray.Push({Icon: Icon, ID: ID, State: State
                                    , Style: Style, Text: Text, Label: Label})
             }
             return ArrayOut ? BtnArray : RTrim(BtnString, ", ")
@@ -866,10 +866,10 @@ Class Toolbar extends Toolbar.Private
                     idCommand := this.StringToNumber(Key2)
                 ,   iString := Key3, iBitmap := Key4
                 ,   Struct := this.DefineBtnStruct(TBBUTTON, iBitmap, idCommand, iString, Key5 ? Key5 : Options)
-                ,   Struct.Label := Key2, BtnArray.Insert(Struct)
+                ,   Struct.Label := Key2, BtnArray.Push(Struct)
                 }
                 Else
-                    Struct := this.BtnSep(TBBUTTON, Options), BtnArray.Insert(Struct)
+                    Struct := this.BtnSep(TBBUTTON, Options), BtnArray.Push(Struct)
             }
             this[Slot] := BtnArray
             return True
@@ -885,11 +885,11 @@ Class Toolbar extends Toolbar.Private
 ;=======================================================================================
         Load(Slot)
         {
-            If IsObject(Slot)
+            If (IsObject(Slot))
                 Buttons := Slot
             Else
                 Buttons := this[Slot]
-            If !IsObject(Buttons)
+            If (!IsObject(Buttons))
                 return False
             SendMessage, this.TB_GETROWS, 0, 0,, % "ahk_id " this.tbHwnd
                 Rows := ErrorLevel
@@ -933,7 +933,7 @@ Class Toolbar extends Toolbar.Private
 ;=======================================================================================
         Save(Slot, Buttons)
         {
-            If IsObject(Buttons)
+            If (IsObject(Buttons))
             {
                 this[Slot] := Buttons
                 return True
@@ -1100,15 +1100,15 @@ Class Toolbar extends Toolbar.Private
 ;=======================================================================================
         __Delete()
         {
-            this.Remove("", Chr(255))
+            this.RemoveAt(1, this.Length())
         ,   this.SetCapacity(0)
         ,   this.base := ""
         }
 ;=======================================================================================
 ;    Private Methods
 ;=======================================================================================
-;    Method:             SetButton
-;    Description:        Creates buttons and sends specified message to the toolbar.
+;    Method:             SendMessage
+;    Description:        Sends a message to create or modify a button.
 ;=======================================================================================
         SendMessage(Button, Options, Message="", Param="")
         {
@@ -1118,7 +1118,7 @@ Class Toolbar extends Toolbar.Private
             ,   iString := Key3, iBitmap := Key4
             ,   this.Labels[idCommand] := Key2
             ,   Struct := this.DefineBtnStruct(TBBUTTON, iBitmap, idCommand, iString, Key5 ? Key5 : Options)
-            ,   this.DefaultBtnInfo.Insert(Struct)
+            ,   this.DefaultBtnInfo.Push(Struct)
                 If !(Key1) && (Message)
                 {
                     SendMessage, Message, Param, &TBBUTTON,, % "ahk_id " this.tbHwnd
@@ -1128,7 +1128,7 @@ Class Toolbar extends Toolbar.Private
             }
             Else
             {
-                Struct := this.BtnSep(TBBUTTON, Options), this.DefaultBtnInfo.Insert(Struct)
+                Struct := this.BtnSep(TBBUTTON, Options), this.DefaultBtnInfo.Push(Struct)
                 If (Message)
                 {
                     SendMessage, Message, Param, &TBBUTTON,, % "ahk_id " this.tbHwnd

@@ -83,6 +83,13 @@
 	e_Lang013 =	I&ndsæt fra kassen
 	e_Lang014 =	Inds&æt Tastetryk
 	e_Lang015 =	Edit f&arvemærke
+	e_Lang016 =	grupper
+	e_Lang017 =	Aktiver grupper
+	e_Lang018 =	Tilføj gruppe
+	e_Lang019 =	Fjern gruppe
+	e_Lang020 =	Fjern alle grupper
+	e_Lang021 =	Rediger grupper
+		
 		
 ; Select Sub Menu		
 	s_Lang001 =	&Vælg alt
@@ -263,6 +270,13 @@
 	w_Lang093 =	Skjule
 	w_Lang094 =	Flyt her
 	w_Lang095 =	Kopier her
+	w_Lang096 =	grupper
+	w_Lang097 =	Aktiver grupper (Ctrl + Shift + G)
+	w_Lang098 =	Tilføj gruppe (Ctrl + Shift + Y)
+	w_Lang099 =	Fjern gruppe (Ctrl + Shift + R)
+	w_Lang100 =	Fjern alle grupper
+	w_Lang101 =	Rediger grupper
+	w_Lang102 =	Gruppe navn
 		
 ; Command Windows		
 	c_Lang001 =	Mus
@@ -535,7 +549,7 @@
 	t_Lang057 =	Standard Macro File
 	t_Lang058 =	Standard Library File
 	t_Lang059 =	Brug Expression som standard til variable Opgave
-	t_Lang060 =	Vis Farver og Hjælp Marks for-løkker og Udtalelser
+	t_Lang060 =	Fremhæv Loops og Udtalelser
 	t_Lang061 =	(Klik på Index kolonneoverskriften for at aktivere / deaktivere)
 	t_Lang062 =	Virtuelle taster
 	t_Lang063 =	Standard
@@ -801,6 +815,8 @@
 		 Denne funktion er kun ment som en hurtig eksport funktion. PMC er ikke ment som en AHK script editor.
 	)	
 	d_Lang088 =	Prøv at køre som almindelig bruger (ikke administrator).
+	d_Lang089 =	Ingen rækken valgt!
+	d_Lang090 =	Please, skal du vælge en række for at indsætte eller fjerne gruppen.
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -1277,7 +1293,7 @@
 	StringLen / StrLen	Henter optælling af hvor mange tegn i en streng.
 	StringLower	Konverterer en streng til små bogstaver.
 	StringMid / SubStr	Henter et eller flere tegn fra den angivne position i en streng.
-	StringReplace	Erstatter det angivne delstreng med en ny streng.
+	StringReplace / StrReplace	Erstatter det angivne delstreng med en ny streng.
 	StringRight	Henter en række tegn fra højre side af en streng.
 	StringSplit / StrSplit	Adskiller en streng i et array af delstrenge hjælp de angivne delimiters.
 	StringTrimLeft	Fjerner et antal tegn fra venstre side af en streng.

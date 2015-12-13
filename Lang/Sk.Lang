@@ -83,6 +83,13 @@
 	e_Lang013 =	Vlo&žiť z Box
 	e_Lang014 =	Vlož&te úhoz
 	e_Lang015 =	&Edit Color Mark
+	e_Lang016 =	skupiny
+	e_Lang017 =	Povoliť skupiny
+	e_Lang018 =	Pridať skupinu
+	e_Lang019 =	Odstrániť skupinu
+	e_Lang020 =	Odstrániť všetky skupiny
+	e_Lang021 =	Upraviť skupiny
+		
 		
 ; Select Sub Menu		
 	s_Lang001 =	&Vybrať všetko
@@ -263,6 +270,13 @@
 	w_Lang093 =	Schovať
 	w_Lang094 =	Premiestniť sem
 	w_Lang095 =	Kopírovanie tu
+	w_Lang096 =	skupiny
+	w_Lang097 =	Povoliť skupiny (Ctrl + Shift + G)
+	w_Lang098 =	Pridať skupinu (Ctrl + Shift + Y)
+	w_Lang099 =	Odstrániť skupinu (Ctrl + Shift + R)
+	w_Lang100 =	Odstrániť všetky skupiny
+	w_Lang101 =	Upraviť skupiny
+	w_Lang102 =	Názov skupiny
 		
 ; Command Windows		
 	c_Lang001 =	Myš
@@ -535,7 +549,7 @@
 	t_Lang057 =	Predvolený súbor makrá
 	t_Lang058 =	Štandardné súboru knižnice
 	t_Lang059 =	Použitie výrazu ako predvolený pre priradenie premenných
-	t_Lang060 =	Zobraziť Farby & Pomoc známok pre slučky a výkazy
+	t_Lang060 =	Označte slučiek a vyhlásenie
 	t_Lang061 =	(Kliknite na index hlavičku stĺpca pre zapnutie / vypnutie)
 	t_Lang062 =	Virtuálne Keys
 	t_Lang063 =	Štandardné
@@ -801,6 +815,8 @@
 		 Táto funkcia je určená len k rýchlemu exportné funkcie. PMC nie je chcel byť editor AHK skript.
 	)	
 	d_Lang088 =	Skúste spustiť ako bežných užívateľov (nie správca).
+	d_Lang089 =	Nie riadok vybraný!
+	d_Lang090 =	Prosím, vyberte riadok pre vloženie alebo odstránenie skupiny.
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -1277,7 +1293,7 @@
 	StringLen / StrLen	Načíta počet koľko znakov v reťazci.
 	StringLower	Prevedie reťazec na malé písmená.
 	StringMid / SubStr	Načíta jeden alebo viac znakov z určenej pozície v reťazci.
-	StringReplace	Nahradí zadaný podreťazec s novým reťazcom.
+	StringReplace / StrReplace	Nahradí zadaný podreťazec s novým reťazcom.
 	StringRight	Načíta počet znakov z pravej strany reťazca.
 	StringSplit / StrSplit	Rozdelí reťazec na pole podreťazec pomocou zadaného oddeľovača.
 	StringTrimLeft	Odstráni počet znakov z ľavej strany reťazca.

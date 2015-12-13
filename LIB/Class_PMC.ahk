@@ -6,23 +6,23 @@
 		PmcCode := {}, ID := 0
 		Loop, Read, %FileName%
 		{
-			If InStr(A_LoopReadLine, "[PMC Code]")=1
+			If (InStr(A_LoopReadLine, "[PMC Code]")=1)
 			{
 				ID++, Row := [], Opt := []
 				Loop, Parse, A_LoopReadLine, |
-					Opt.Insert(A_LoopField)
+					Opt.Push(A_LoopField)
 			}
-			Else If RegExMatch(A_LoopReadLine, "^\d+\|")
+			Else If (RegExMatch(A_LoopReadLine, "^\d+\|"))
 			{
 				Col := []
 				Loop, Parse, A_LoopReadLine, |
-					Col.Insert(A_LoopField)
-				Row.Insert(Col)
+					Col.Push(A_LoopField)
+				Row.Push(Col)
 			}
 			Else If (A_LoopReadLine = "")
 				PmcCode[ID] := {Opt: Opt, Row: Row}
 		}
-		If !IsObject(PmcCode[ID].opt)
+		If (!IsObject(PmcCode[ID].opt))
 			PmcCode[ID] := {Opt: Opt, Row: Row}
 		If (ID = 0)
 		{
@@ -39,7 +39,7 @@
 
 		Gui, chMacro:Submit, NoHide
 		ColOrder := LVOrder_Get(10, ListID%A_List%)
-		If New
+		If (New)
 		{
 			GoSub, DelLists
 			GuiControl, chMacro:Choose, A_List, 1
@@ -106,7 +106,7 @@
 		LV_Delete()
 		For each, Col in Code.Row
 		{
-			Loop, % Col.MaxIndex()
+			Loop, % Col.Length()
 				Col[A_Index] := RegExReplace(Col[A_Index], "¢", "|")
 			chk := SubStr(Col[1], 1, 1)
 		,	((Col[2] = "[Pause]") && (Col[6] <> "Sleep")) ? (Col[2] := "[" Col[6] "]") : ""

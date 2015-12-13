@@ -100,6 +100,7 @@ RecOptChecks := ["ClearNewList", "", "Strokes", "CaptKDn", "RecKeybdCtrl"
 ,	PlayOptChecks := ["ShowStep", "MouseReturn", "ShowBarOnStart", "AutoHideBar", "RandomSleeps"]
 ,	OnFinishCode := 1
 ,	CopyMenuLabels := []
+,	GroupsArray := []
 ,	Exp_Mult := {1:2, 2:4, 3:8, 4:16, 5:32}
 ,	MsgBoxStyles := [262144, 512, 256]
 KeyNameRep := "
@@ -209,12 +210,12 @@ Loop, Parse, WinList, `n
 {
 	Loop, Parse, A_LoopField, =, %A_Space%
 	{
-		If A_Index = 1
+		If (A_Index = 1)
 			WinCmdList .= A_LoopField "|", Par := A_LoopField
 		Else
 			wcmd_%Par% := A_LoopField
 	}
-	If A_Index = 1
+	If (A_Index = 1)
 		WinCmdList .= "|"
 }
 wcmd_All := "Title, Text, ExclTitle, ExclText"
@@ -273,7 +274,7 @@ Loop, Parse, IfCmd, `n
 	Count := A_index
 	Loop, Parse, A_LoopField, |
 	{
-		If A_Index = 1
+		If (A_Index = 1)
 		{
 			If%Count% := A_LoopField
 			IfList%Count% := A_LoopField
@@ -511,7 +512,7 @@ Loop, Parse, FileCmd, `n
 {
 	Loop, Parse, A_LoopField, `,,%A_Space%
 	{
-		If A_Index = 1
+		If (A_Index = 1)
 			FileCmdList .= A_LoopField "|", fcmd := A_LoopField, Par := 1
 			, FileCmdML .= A_LoopField ","
 		Else
@@ -520,7 +521,7 @@ Loop, Parse, FileCmd, `n
 			Par++
 		}
 	}
-	If A_Index = 1
+	If (A_Index = 1)
 		FileCmdList .= "|"
 }
 
@@ -578,6 +579,7 @@ Sqrt
 StrGet
 StrLen
 StrPut
+StrReplace
 StrSplit
 SubStr
 Tan
@@ -635,9 +637,10 @@ RTrim (String, OmitChars = "" `t"")
 Screenshot (FilePattern, X|Y|Width|Height)
 Sin (Number)
 Sqrt (Number)
-StrGet (Address [, Length] [, Encoding = None ] )
+StrGet (Address [, Length] [, Encoding = None ])
 StrLen (String)
-StrPut (String, Address [, Length] [, Encoding = None ] )
+StrPut (String, Address [, Length] [, Encoding = None ])
+StrReplace (Haystack, SearchText [, ReplaceText, OutputVarCount, Limit := -1])
 StrSplit (String [, Delimiters, OmitChars])
 SubStr (String, StartingPos [, Length])
 Tan (Number)
@@ -871,7 +874,7 @@ WM_APP = 0x8000
 Loop, Parse, MsgList, `n
 {
 	Loop, Parse, A_LoopField, =, %A_Space%
-		If InStr(A_LoopField, "_")
+		If (InStr(A_LoopField, "_"))
 			Msg := A_LoopField, WM_Msgs .= A_LoopField "|"
 		Else
 			%Msg% := A_LoopField
@@ -897,7 +900,8 @@ DefaultBar := {FileOpt: "Enabled AutoSize", File: ["New=" w_Lang040 ":41", "Open
 														, "", "WinKey=" w_Lang070 ":88", "SetJoyButton=" w_Lang071 ":32"]
 			, EditOpt: "Enabled AutoSize", Edit: ["EditButton=" w_Lang092 ":14", "CutRows=" w_Lang080 ":9", "CopyRows=" w_Lang081 ":8", "PasteRows=" w_Lang082 ":44", "Remove=" w_Lang083 ":10"
 														, "", "Duplicate=" w_Lang079 ":13", "SelectMenu=" t_Lang139 ":99(Enabled WholeDropdown)", "CopyTo=" w_Lang086 ":8(Enabled WholeDropdown)"
-														, "" , "MoveUp=" w_Lang077 ":40", "MoveDn=" w_Lang078 ":39"
+														, "", "GroupsMode=" w_Lang096 ":104(Enabled AutoSize Dropdown)"
+														, "", "MoveUp=" w_Lang077 ":40", "MoveDn=" w_Lang078 ":39"
 														, "", "Undo=" w_Lang084 ":74", "Redo=" w_Lang085 ":56"
 														, "", "FindReplace=" w_Lang087 ":19", "EditComm=" w_Lang088 ":5", "EditColor=" w_Lang089 ":3"
 														, "", "TabPlus=" w_Lang072 ":66", "TabClose=" w_Lang073 ":68", "DuplicateList=" w_Lang074 ":69", "EditMacros=" w_Lang052 ":97"

@@ -83,6 +83,13 @@
 	e_Lang013 =	&Beszúrás box
 	e_Lang014 =	Be &Gombnyomás
 	e_Lang015 =	S&zerkesztés színvédjegy
+	e_Lang016 =	csoportok
+	e_Lang017 =	Engedélyezze csoportok
+	e_Lang018 =	Add csoport
+	e_Lang019 =	Csoport eltávolítása
+	e_Lang020 =	Vegye ki az összes csoport
+	e_Lang021 =	Csoportok szerkesztése
+		
 		
 ; Select Sub Menu		
 	s_Lang001 =	&Az összes kijelölése
@@ -263,6 +270,13 @@
 	w_Lang093 =	Elrejt
 	w_Lang094 =	Áthelyezés ide
 	w_Lang095 =	Másolás ide
+	w_Lang096 =	csoportok
+	w_Lang097 =	Engedélyezze csoportok (Ctrl + Shift + G)
+	w_Lang098 =	Add csoport (Ctrl + Shift + Y)
+	w_Lang099 =	Csoport eltávolítása (Ctrl + Shift + R)
+	w_Lang100 =	Vegye ki az összes csoport
+	w_Lang101 =	Csoportok szerkesztése
+	w_Lang102 =	Csoport név
 		
 ; Command Windows		
 	c_Lang001 =	Egér
@@ -535,7 +549,7 @@
 	t_Lang057 =	Alapértelmezett Makró fájl
 	t_Lang058 =	Normál Library fájl
 	t_Lang059 =	Használja Expression alapértelmezés szerint változók kiosztása
-	t_Lang060 =	Megjelenítés Színek és Help Marks a hurkok és nyilatkozatok
+	t_Lang060 =	Jelölje ki hurkok és nyilatkozatok
 	t_Lang061 =	(Kattintson az Index fejlécére engedélyezés / letiltás)
 	t_Lang062 =	Virtuális Keys
 	t_Lang063 =	Alapértelmezett
@@ -801,6 +815,8 @@
 		 Ez a funkció csak azt jelentette, mint egy gyors export funkció. PMC nem azt jelentette, hogy egy AHK script editor.
 	)	
 	d_Lang088 =	Próbáld futtatni, közös felhasználói (nem rendszergazda).
+	d_Lang089 =	Nincs sorban kiválasztva!
+	d_Lang090 =	Kérjük, jelöljön ki egy sort beszúrni, vagy eltávolíthatja a csoport.
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -1277,7 +1293,7 @@
 	StringLen / StrLen	Letölti a gróf, hogy hány karakter van a szövegben.
 	StringLower	Átalakítja a karakterlánc kisbetűs.
 	StringMid / SubStr	Letölti egy vagy több karaktert a megadott pozíciót a húr.
-	StringReplace	Lecseréli a megadott substring egy új string.
+	StringReplace / StrReplace	Lecseréli a megadott substring egy új string.
 	StringRight	Lekéri a karakterek száma a jobb oldali a string.
 	StringSplit / StrSplit	Elválasztja egy string tömb stringek a megadott határoló.
 	StringTrimLeft	Eltávolítja a karakterek száma a bal oldali a string.

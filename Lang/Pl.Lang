@@ -83,6 +83,13 @@
 	e_Lang013 =	&Wstaw z pudełkiem
 	e_Lang014 =	W&łóż Klawiszy
 	e_Lang015 =	Z&mień kolor zapytania
+	e_Lang016 =	grupy
+	e_Lang017 =	Włącz grupy
+	e_Lang018 =	Dodaj grupę
+	e_Lang019 =	Usuń grupę
+	e_Lang020 =	Usuń wszystkie grupy
+	e_Lang021 =	Edytuj grupy
+		
 		
 ; Select Sub Menu		
 	s_Lang001 =	&Zaznacz wszystko
@@ -263,6 +270,13 @@
 	w_Lang093 =	Ukryć
 	w_Lang094 =	Przenieś tutaj
 	w_Lang095 =	Skopiuj tutaj
+	w_Lang096 =	grupy
+	w_Lang097 =	Włącz grupy (Ctrl + Shift + G)
+	w_Lang098 =	Dodaj grupę (Ctrl + Shift + Y)
+	w_Lang099 =	Usuń grupę (Ctrl + Shift + R)
+	w_Lang100 =	Usuń wszystkie grupy
+	w_Lang101 =	Edytuj grupy
+	w_Lang102 =	Nazwa grupy
 		
 ; Command Windows		
 	c_Lang001 =	Mysz
@@ -535,7 +549,7 @@
 	t_Lang057 =	Plik Macro Domyślnie
 	t_Lang058 =	Standardowy plik biblioteki
 	t_Lang059 =	Używaj domyślnie dla wyrażenia zmiennych Przyporządkowanie
-	t_Lang060 =	Pokaż Kolory i znaki Pomoc dla pętli i oświadczenia
+	t_Lang060 =	Zaznacz Loops i oświadczenia
 	t_Lang061 =	(Kliknij na nagłówek kolumny Indeks włączania / wyłączania)
 	t_Lang062 =	Wirtualne Keys
 	t_Lang063 =	Domyślnie
@@ -801,6 +815,8 @@
 		 Ta opcja jest przeznaczona tylko jako szybki funkcji eksportu. PMC nie ma być edytor skryptów AHK.
 	)	
 	d_Lang088 =	Spróbuj uruchomić jako wspólny użytkownika (nie administratora).
+	d_Lang089 =	Nie rząd wybrany!
+	d_Lang090 =	Proszę wybrać wiersz, aby wstawić lub usunąć grupę.
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -1277,7 +1293,7 @@
 	StringLen / StrLen	Pobiera liczbę, ile znaków jest w ciągu znaków.
 	StringLower	Konwertuje ciąg znaków na małe litery.
 	StringMid / SubStr	Pobiera jeden lub więcej znaków z określonej pozycji w ciągu znaków.
-	StringReplace	Zastępuje określony podciąg z nowym tekstem.
+	StringReplace / StrReplace	Zastępuje określony podciąg z nowym tekstem.
 	StringRight	Pobiera liczbę znaków z prawej strony łańcucha.
 	StringSplit / StrSplit	Rozdziela ciąg na tablicę podciągów za pomocą określonych znaczników.
 	StringTrimLeft	Usuwa liczbę znaków z lewej strony łańcucha.

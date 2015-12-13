@@ -70,12 +70,12 @@ Find_Command(SearchWord)
 				Search := "Type" A_Index
 			Else
 				Search := SearchIn
-			If InStr(A_LoopField, FindCmd)
-				Results.Insert({Cmd: A_LoopField, Path: %Search%_Path})
+			If (InStr(A_LoopField, FindCmd))
+				Results.Push({Cmd: A_LoopField, Path: %Search%_Path})
 			Else Try
 			{
-				If InStr(%A_LoopField%_Desc, FindCmd)
-					Results.Insert({Cmd: A_LoopField, Path: %Search%_Path})
+				If (InStr(%A_LoopField%_Desc, FindCmd))
+					Results.Push({Cmd: A_LoopField, Path: %Search%_Path})
 			}
 		}
 	}
@@ -116,18 +116,18 @@ DragToolbar()
 			GuiControl, chMacro:Choose, A_List, % TabGet()
 			GoSub, TabSel
 			NewOrder := TabDrag()
-			If IsObject(NewOrder)
+			If (IsObject(NewOrder))
 			{
 				Project := [], Proj_Opts := [], ActiveList := A_List
 				For each, Index in NewOrder.Order
-					Proj_Opts.Insert({Auto: o_AutoKey[Index], Man: o_ManKey[Index]
+					Proj_Opts.Push({Auto: o_AutoKey[Index], Man: o_ManKey[Index]
 									, Times: o_TimesG[Index], Hist: HistoryMacro%Index%})
 				For each, Index in NewOrder.Order
 				{
 					o_AutoKey[A_Index] := Proj_Opts[A_Index].Auto
 				,	o_ManKey[A_Index] := Proj_Opts[A_Index].Man
 				,	o_TimesG[A_Index] := Proj_Opts[A_Index].Times
-				,	Project.Insert(PMC.LVGet("InputList" Index))
+				,	Project.Push(PMC.LVGet("InputList" Index))
 					If (Index = ActiveList)
 						NewActive := A_Index
 				}
@@ -163,7 +163,7 @@ ShowContextHelp()
 	local Pag,Title
 	
 	MouseGetPos,,,, Control
-	If InStr(Control, "Edit")
+	If (InStr(Control, "Edit"))
 		return
 	If A_Gui in 3,5,7,8,10,11,12,14,16,19,21,22,23,24
 	{
@@ -172,7 +172,7 @@ ShowContextHelp()
 		Menu, %Title%, Show
 		return
 	}
-	Else If A_Gui = 28
+	Else If (A_Gui = 28)
 	{
 		Menu, ToolbarMenu, Show
 		return
@@ -183,7 +183,7 @@ CmdHelp()
 {
 	local Gui,Pag,Title
 
-	If HotkeyCtrlHasFocus()
+	If (HotkeyCtrlHasFocus())
 		return
 	Gui := ActiveGui(WinActive("A"))
 	If (Gui = 0)
@@ -259,7 +259,7 @@ HotkeyCtrlHasFocus()
 {
 	global GuiA := ActiveGui(WinActive("A"))
 	GuiControlGet, ctrl, %GuiA%:Focus
-	If InStr(ctrl,"hotkey")
+	If (InStr(ctrl,"hotkey"))
 	{
 		GuiControlGet, ctrl, %GuiA%:FocusV
 		Return, ctrl
@@ -315,7 +315,7 @@ MarkArea(LineW)
 	Else
 	{
 		WinGet, WMS, MinMax, A
-		If WMS = 1
+		If (WMS = 1)
 		{
 			SysGet, MWA, MonitorWorkArea
 			wX := MWALeft, wY := MWATop, wW := MWARight, wH := MWABottom
@@ -399,7 +399,7 @@ ListIEWindows()
 	Try
 	{
 		For Pwb in ComObjCreate( "Shell.Application" ).Windows
-			If InStr(Pwb.FullName, "iexplore.exe")
+			If (InStr(Pwb.FullName, "iexplore.exe"))
 				Try List .= RegExReplace(Pwb.Document.Title, "\|", "§") "|"
 	}
 	return List
@@ -427,7 +427,7 @@ SelectByType(SelType, Col=6)
 		Loop, % ListCount%A_List%
 		{
 			LV_GetText(Type, A_Index, Col)
-			If InStr(Trim(Type), SelType)
+			If (InStr(Trim(Type), SelType))
 				LV_Modify(A_Index, "Select")
 		}
 	}
@@ -448,15 +448,15 @@ SelectByFilter(Act, Det, Tim, Del, Typ, Tar, Win, Com, Col, Case)
 	Loop, % ListCount%A_List%
 	{
 		LV_GetTexts(A_Index, A, B, C, D, E, F, G, H, I)
-		If InStr(A, Trim(Act), Case)
-		&& InStr(B, Trim(Det), Case)
-		&& InStr(C, Trim(Tim), Case)
-		&& InStr(D, Trim(Del), Case)
-		&& InStr(E, Trim(Typ), Case)
-		&& InStr(F, Trim(Tar), Case)
-		&& InStr(G, Trim(Win), Case)
-		&& InStr(H, Trim(Com), Case)
-		&& InStr(I, Trim(Col), Case)
+		If (InStr(A, Trim(Act), Case))
+		&& (InStr(B, Trim(Det), Case))
+		&& (InStr(C, Trim(Tim), Case))
+		&& (InStr(D, Trim(Del), Case))
+		&& (InStr(E, Trim(Typ), Case))
+		&& (InStr(F, Trim(Tar), Case))
+		&& (InStr(G, Trim(Win), Case))
+		&& (InStr(H, Trim(Com), Case))
+		&& (InStr(I, Trim(Col), Case))
 		{
 			LV_Modify(A_Index, "Select")
 			Found++
@@ -597,7 +597,7 @@ CheckDuplicates(Obj1, Obj2, Obj3*)
 	global TabCount
 	Loop, 3
 	{
-		If IsObject(Obj%A_Index%)
+		If (IsObject(Obj%A_Index%))
 		{
 			For Index, Obj in Obj%A_Index%
 			{
@@ -666,11 +666,9 @@ HistCheck(L)
 
 	If (MaxHistory = 0)
 		return
-	HistoryMacro%L%.Slot.Remove(HistoryMacro%L%.ActiveSlot+1, HistoryMacro%L%.Slot.MaxIndex())
-,	HistoryMacro%L%.Add()
-	If (HistoryMacro%L%.Slot.MaxIndex() > MaxHistory+1)
-		HistoryMacro%L%.Slot.Remove(1)
-	HistoryMacro%L%.ActiveSlot := HistoryMacro%L%.Slot.MaxIndex()
+	HistoryMacro%L%.Add()
+	If (HistoryMacro%L%.Slot.Length() > MaxHistory+1)
+		HistoryMacro%L%.Slot.RemoveAt(1)
 }
 
 WinCheck(wParam, lParam, Msg)
@@ -691,14 +689,14 @@ ToggleIcon(Custom="")
 	ChangeProgBarColor(Color, "OSCProg", 28)
 	If (Custom <> "")
 	{
-		If !Custom
+		If (!Custom)
 			IconFile := A_IconFile, IconNumber := A_IconNumber
 		Menu, Tray, Icon, % (Custom = 0) ? ResDllPath : IconFile, % (Custom = 0) ? 55 : IconNumber
 		return Custom
 	}
 	Else
 	{
-		If !A_IsPaused
+		If (!A_IsPaused)
 			IconFile := A_IconFile, IconNumber := A_IconNumber
 		Menu, Tray, Icon, % (A_IsPaused = 0) ? ResDllPath : IconFile, % (A_IsPaused = 0) ? 55 : IconNumber
 		return A_IsPaused
@@ -788,7 +786,7 @@ LV_ColorsMessage(wParam, lParam)
 	Static NM_CUSTOMDRAW := -12
 	Static LVN_COLUMNCLICK := -108
 	Critical, 1000
-	If LV_Colors.HasKey(H := NumGet(lParam + 0, 0, "UPtr"))
+	If (LV_Colors.HasKey(H := NumGet(lParam + 0, 0, "UPtr")))
 	{
 		M := NumGet(lParam + (A_PtrSize * 2), 0, "Int")
 		; NM_CUSTOMDRAW --------------------------------------------------------------------------------------------------
@@ -803,7 +801,7 @@ LV_ColorsMessage(wParam, lParam)
 ShowMenu(Menu, mX, mY)
 {
 	global
-	
+	OutputDebug, %Menu%
 	If (Menu = "Open")
 		Menu, RecentMenu, Show, %mX%, %mY%
 	Else If (Menu = "Save")
@@ -823,7 +821,7 @@ ShowMenu(Menu, mX, mY)
 		Menu, TbMenu, Show, %mX%, %mY%
 		Menu, TbMenu, DeleteAll
 	}
-	Else If InStr(Menu, "Rec")
+	Else If (InStr(Menu, "Rec"))
 		GoSub, ShowRecMenu
 	Else If (Menu = "ShowPlayMenu")
 		GoSub, ShowPlayMenu
@@ -835,6 +833,8 @@ ShowMenu(Menu, mX, mY)
 		Menu, TbMenu, Show, %mX%, %mY%
 		Menu, TbMenu, DeleteAll
 	}
+	Else If (Menu = "GroupsMode")
+		GoSub, ShowGroupsMenu
 	Else
 		Menu, %Menu%, Show, %mX%, %mY%
 }
@@ -845,12 +845,12 @@ ShowChevronMenu(rbPtr, BandID, X="", Y="")
 	Band := rbPtr.IDToIndex(BandID)
 ,	rbPtr.GetBand(Band, "", "", "", "", "", "", hChild)
 	tbPtr := TB_GetHwnd(hChild)
-	If !IsObject(tbPtr)
+	If (!IsObject(tbPtr))
 		tbPtr := TbEdit
 	If (tbPtr)
 	{
 		HidBtns := tbPtr.GetHiddenButtons()
-		Loop, % HidBtns.MaxIndex()
+		Loop, % HidBtns.Length()
 		{
 			Try
 			{
@@ -861,4 +861,31 @@ ShowChevronMenu(rbPtr, BandID, X="", Y="")
 		Menu, ChevMenu, Show, %X%, %Y%
 		Menu, ChevMenu, DeleteAll
 	}
+}
+
+SavedVars(Var="", ByRef Saved="")
+{
+	Static VarsRecord := {}
+	Local ListOfVars, i, v
+	
+	If (IsByRef(Saved))
+	{
+		For i, v in VarsRecord
+			ListOfVars .= i ": " v "`n"
+		Sort, ListOfVars
+		Saved := ListOfVars
+		return
+	}
+	If (IsObject(%Var%))
+	{
+		For i, v in %Var%
+		{
+			If (IsObject(v))
+				VarsRecord[Var "[Array](" i " of " %Var%.Length() ")"] := "[Object](" v.Length() ")"
+			Else
+				VarsRecord[Var "[Array](" i " of " %Var%.Length() ")"] := v
+		}
+	}
+	Else
+		VarsRecord[Var] := SubStr(%Var%, 1, 60)
 }

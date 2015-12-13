@@ -83,6 +83,13 @@
 	e_Lang013 =	C&hèn từ Box
 	e_Lang014 =	Ch&èn Tổ hợp phím
 	e_Lang015 =	S&ửa Màu Đánh dấu
+	e_Lang016 =	Các nhóm
+	e_Lang017 =	Kích hoạt tính năng nhóm
+	e_Lang018 =	Thêm nhóm
+	e_Lang019 =	Xóa nhóm
+	e_Lang020 =	Hủy bỏ tất cả các nhóm
+	e_Lang021 =	Chỉnh sửa nhóm
+		
 		
 ; Select Sub Menu		
 	s_Lang001 =	&Chọn tất cả
@@ -263,6 +270,13 @@
 	w_Lang093 =	Che
 	w_Lang094 =	Di chuyển đây
 	w_Lang095 =	Sao chép ở đây
+	w_Lang096 =	Các nhóm
+	w_Lang097 =	Kích hoạt tính năng nhóm (Ctrl + Shift + G)
+	w_Lang098 =	Thêm nhóm (Ctrl + Shift + Y)
+	w_Lang099 =	Xóa nhóm (Ctrl + Shift + R)
+	w_Lang100 =	Hủy bỏ tất cả các nhóm
+	w_Lang101 =	Chỉnh sửa nhóm
+	w_Lang102 =	Tên nhóm
 		
 ; Command Windows		
 	c_Lang001 =	Chuột
@@ -535,7 +549,7 @@
 	t_Lang057 =	Mặc định vĩ mô tập tin
 	t_Lang058 =	Thư viện tiêu chuẩn tập tin
 	t_Lang059 =	Sử dụng biểu hiện mặc định cho biến chuyển nhượng
-	t_Lang060 =	Hiển thị Màu sắc && Marks Trợ giúp cho vòng lặp và báo cáo
+	t_Lang060 =	Làm nổi bật Loops và cáo
 	t_Lang061 =	(Nhấp vào tiêu đề cột Index để bật / tắt)
 	t_Lang062 =	Phím ảo
 	t_Lang063 =	Mặc định
@@ -801,6 +815,8 @@
 		 Tính năng này chỉ có nghĩa như là một chức năng xuất khẩu nhanh chóng. PMC này không có nghĩa là một biên tập viên AHK kịch bản.
 	)	
 	d_Lang088 =	Cố gắng chạy người sử dụng thông thường (không phải quản trị viên).
+	d_Lang089 =	Không có hàng lựa chọn!
+	d_Lang090 =	Xin vui lòng, hãy chọn một hàng để chèn hoặc xóa nhóm.
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -1277,7 +1293,7 @@
 	StringLen / StrLen	Lấy số lượng bao nhiêu ký tự trong một chuỗi.
 	StringLower	Chuyển đổi một chuỗi thành chữ thường.
 	StringMid / SubStr	Lấy một hoặc nhiều ký tự từ vị trí quy định trong một chuỗi.
-	StringReplace	Thay thế các chuỗi con được chỉ định với một chuỗi mới.
+	StringReplace / StrReplace	Thay thế các chuỗi con được chỉ định với một chuỗi mới.
 	StringRight	Lấy một số ký tự từ phía bên phải của một chuỗi.
 	StringSplit / StrSplit	Tách một chuỗi thành một mảng các chuỗi con bằng cách sử dụng ký tự phân cách chỉ định.
 	StringTrimLeft	Loại bỏ một số ký tự từ phía bên tay trái của một chuỗi.

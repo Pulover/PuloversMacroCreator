@@ -83,7 +83,10 @@ return
 ^g::GoSub, Options
 ^r::GoSub, Record
 ^+t::GoSub, RunTimer
-^+r::GoSub, ResetHotkeys
+^!d::GoSub, ResetHotkeys
+^+g::GoSub, GroupsMode
+^+y::GoSub, AddGroup
+^+r::GoSub, RemoveGroup
 ^!t::GoSub, Scheduler
 ^t::GoSub, TabPlus
 ^w::GoSub, TabClose

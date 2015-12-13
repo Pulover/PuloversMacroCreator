@@ -83,6 +83,13 @@
 	e_Lang013 =	E&infügen aus Fenster
 	e_Lang014 =	&Tastendruck einfügen
 	e_Lang015 =	&Farbmarkierung bearbeiten 
+	e_Lang016 =	Gruppen
+	e_Lang017 =	Aktivieren Gruppen
+	e_Lang018 =	Gruppe hinzufügen
+	e_Lang019 =	Entfernen Gruppe
+	e_Lang020 =	Alle Gruppen entfernen
+	e_Lang021 =	Gruppen bearbeiten
+		
 		
 ; Select Sub Menu		
 	s_Lang001 =	&Alles auswählen
@@ -263,6 +270,13 @@
 	w_Lang093 =	Verbergen
 	w_Lang094 =	Bewegen hier
 	w_Lang095 =	Kopieren hier
+	w_Lang096 =	Gruppen
+	w_Lang097 =	Aktivieren Gruppen (Strg + Umschalt + G)
+	w_Lang098 =	Gruppe hinzufügen (Strg + Umschalt + Y)
+	w_Lang099 =	Entfernen Gruppe (Strg + Umschalt + R)
+	w_Lang100 =	Alle Gruppen entfernen
+	w_Lang101 =	Gruppen bearbeiten
+	w_Lang102 =	Gruppenname
 		
 ; Command Windows		
 	c_Lang001 =	Maus
@@ -535,7 +549,7 @@
 	t_Lang057 =	Standard Makro-Datei
 	t_Lang058 =	Standard Bibliotheks-Datei
 	t_Lang059 =	Standardmäßig Expression für Variablen-Zuweisung verwenden 
-	t_Lang060 =	Farben- &&und Hilfe-Markierungen für Loops und Anweisungen anzeigen
+	t_Lang060 =	Markieren Sie Loops und Statements
 	t_Lang061 =	(Klick auf die Überschrift der Index-Spalte zum Aktivieren/Deaktivieren)
 	t_Lang062 =	Virtuelle Tasten
 	t_Lang063 =	Standard
@@ -801,6 +815,8 @@
 		 Diese Funktion wird nur als eine schnelle Exportfunktion gedacht. PMC ist nicht dazu gedacht, ein AHK Script-Editor sein.
 	)	
 	d_Lang088 =	Versuchen Sie, so gemeinsame Benutzeroberfläche (nicht Administrator) ausgeführt werden.
+	d_Lang089 =	Keine Zeile ausgewählt!
+	d_Lang090 =	Bitte wählen Sie eine Zeile einfügen oder entfernen Sie die Gruppe.
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -1277,7 +1293,7 @@
 	StringLen / StrLen	Ruft die zu zählen, wie viele Zeichen in einem String.
 	StringLower	Konvertiert einen String in Kleinbuchstaben.
 	StringMid / SubStr	Ruft ein oder mehrere Zeichen aus der angegebenen Position in einer Zeichenfolge.
-	StringReplace	Ersetzt den angegebenen Teilstring mit einer neuen Zeichenfolge.
+	StringReplace / StrReplace	Ersetzt den angegebenen Teilstring mit einer neuen Zeichenfolge.
 	StringRight	Ruft eine Anzahl von Zeichen aus der rechten Seite einer Zeichenfolge.
 	StringSplit / StrSplit	Trennt eine Zeichenfolge in ein Array von Teilstrings mit den angegebenen Begrenzer.
 	StringTrimLeft	Entfernt eine Anzahl von Zeichen aus der linken Seite einer Zeichenfolge.

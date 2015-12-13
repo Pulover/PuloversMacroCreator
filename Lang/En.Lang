@@ -83,6 +83,13 @@
 	e_Lang013 =	&Insert from Box
 	e_Lang014 =	Insert &Keystroke
 	e_Lang015 =	Edit Color &Mark
+	e_Lang016 =	Groups
+	e_Lang017 =	Enable groups
+	e_Lang018 =	Add group
+	e_Lang019 =	Remove group
+	e_Lang020 =	Remove all groups
+	e_Lang021 =	Edit groups
+		
 		
 ; Select Sub Menu		
 	s_Lang001 =	Select &All
@@ -263,6 +270,13 @@
 	w_Lang093 =	Hide
 	w_Lang094 =	Move here
 	w_Lang095 =	Copy here
+	w_Lang096 =	Groups
+	w_Lang097 =	Enable groups (Ctrl + Shift + G)
+	w_Lang098 =	Add group (Ctrl + Shift + Y)
+	w_Lang099 =	Remove group (Ctrl + Shift + R)
+	w_Lang100 =	Remove all groups
+	w_Lang101 =	Edit groups
+	w_Lang102 =	Group name
 		
 ; Command Windows		
 	c_Lang001 =	Mouse
@@ -535,7 +549,7 @@
 	t_Lang057 =	Default Macro File
 	t_Lang058 =	Standard Library File
 	t_Lang059 =	Use Expression by default for Variables Assignment
-	t_Lang060 =	Show Colors && Help Marks for Loops and Statements
+	t_Lang060 =	Highlight Loops and Statements
 	t_Lang061 =	(Click the Index column header to enable / disable)
 	t_Lang062 =	Virtual Keys
 	t_Lang063 =	Default
@@ -801,6 +815,8 @@
 		This feature is only meant as a quick export function. PMC is not meant to be an AHK script editor.
 	)	
 	d_Lang088 =	Try to run as common user (not administrator).
+	d_Lang089 =	No row selected!
+	d_Lang090 =	Please, select a row to insert or remove the group.
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -1277,7 +1293,7 @@
 	StringLen / StrLen	Retrieves the count of how many characters are in a string.
 	StringLower	Converts a string to lowercase.
 	StringMid / SubStr	Retrieves one or more characters from the specified position in a string.
-	StringReplace	Replaces the specified substring with a new string.
+	StringReplace / StrReplace	Replaces the specified substring with a new string.
 	StringRight	Retrieves a number of characters from the right-hand side of a string.
 	StringSplit / StrSplit	Separates a string into an array of substrings using the specified delimiters.
 	StringTrimLeft	Removes a number of characters from the left-hand side of a string.

@@ -12,15 +12,15 @@
 COMInterface(String, Ptr="", ByRef OutputVar="", CLSID="InternetExplorer.Application")
 {
 	; If the Pointer is not an object, create one.
-	If !IsObject(Ptr)
+	If (!IsObject(Ptr))
 	{
-		If !CLSID
+		If (!CLSID)
 			return False
 		Ptr := ComObjCreate(CLSID)
 	}
 
 	; Look for Assignments (:=) and separate Command from Value.
-	If RegExMatch(String, "[\s]?:=(.*)", Assign)
+	If (RegExMatch(String, "[\s]?:=(.*)", Assign))
 	{
 		String := Trim(RegExReplace(String, "[\s]?:=(.*)"))
 	,	Value := Trim(Assign1)
@@ -40,13 +40,13 @@ COMInterface(String, Ptr="", ByRef OutputVar="", CLSID="InternetExplorer.Applica
 	{
 		Pos += StrLen(A_LoopField) + 1
 		Delimiter := SubStr(String, Pos, 1)
-		If RegExMatch(A_LoopField, "^_Parent\d+")
+		If (RegExMatch(A_LoopField, "^_Parent\d+"))
 		{
 			Par := A_LoopField, Parent := SubStr(%A_LoopField%, 2, -1)
 		,	Params := Object()
 			
-			If InStr(CLSID, "Script")
-				Params.Insert(Parent)
+			If (InStr(CLSID, "Script"))
+				Params.Push(Parent)
 			Else
 			{
 				; Look for Blocks and divide arguments.
@@ -63,7 +63,7 @@ COMInterface(String, Ptr="", ByRef OutputVar="", CLSID="InternetExplorer.Applica
 						iPar := RegExReplace(_iParent%inPar1%, "\$", "$$$$")
 					,	LoopField := RegExReplace(LoopField, "&_iParent\d+", iPar, "", 1)
 					}
-					If RegExMatch(LoopField, "^_Arr\d+")
+					If (RegExMatch(LoopField, "^_Arr\d+"))
 					{
 						StringSplit, Arr, %LoopField%1, `,, %A_Space%
 						Array := ComObjArray(0xC, Arr0)
@@ -72,25 +72,25 @@ COMInterface(String, Ptr="", ByRef OutputVar="", CLSID="InternetExplorer.Applica
 							Var := Arr%A_Index%
 						,	Array[A_Index-1] := (!Var) ? 0 : Var
 						}
-						Params.Insert(Array)
+						Params.Push(Array)
 					}
-					Else If RegExMatch(LoopField, "^\w+\.(.*)", NestStr) ; Search for nested strings.
+					Else If (RegExMatch(LoopField, "^\w+\.(.*)", NestStr)) ; Search for nested strings.
 					{
 						If (Loopfield = "")
 							LoopField := ComObjMissing()
 						Var := LoopField
 						If (NestStr = _Parent11)
-							Params.Insert((!Var) ? (IsObject(Var) ? Var : 0) : Var)
+							Params.Push((!Var) ? (IsObject(Var) ? Var : 0) : Var)
 						Else
 						{
 							Try
-								Params.Insert(COMInterface(NestStr1, ComSet, "", CLSID))
+								Params.Push(COMInterface(NestStr1, ComSet, "", CLSID))
 							Catch
 							{
 								Try
-									Params.Insert(COMInterface(NestStr1, Ptr, "", CLSID))
+									Params.Push(COMInterface(NestStr1, Ptr, "", CLSID))
 								Catch
-									Params.Insert((!Var) ? (IsObject(Var) ? Var : 0) : Var)
+									Params.Push((!Var) ? (IsObject(Var) ? Var : 0) : Var)
 							}
 						}
 					}
@@ -99,12 +99,12 @@ COMInterface(String, Ptr="", ByRef OutputVar="", CLSID="InternetExplorer.Applica
 						If (Loopfield = "")
 							LoopField := ComObjMissing()
 						Var := LoopField
-						Params.Insert((!Var) ? (IsObject(Var) ? Var : 0) : Var)
+						Params.Push((!Var) ? (IsObject(Var) ? Var : 0) : Var)
 					}
 				}
 			}
 		}
-		Else If RegExMatch(A_LoopField, "^_Block\d+")
+		Else If (RegExMatch(A_LoopField, "^_Block\d+"))
 			Index := A_LoopField
 		Else
 			Obj := A_LoopField
@@ -128,7 +128,7 @@ COMInterface(String, Ptr="", ByRef OutputVar="", CLSID="InternetExplorer.Applica
 			{
 				If ((Par <> "") && (Index <> ""))
 				{
-					If IsByRef(OutputVar)
+					If (IsByRef(OutputVar))
 						OutputVar := ComSet[Obj](Params*)[%Index%1]
 					Try
 						Result := ComSet[Obj](Params*)[%Index%1]

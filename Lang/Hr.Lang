@@ -83,6 +83,13 @@
 	e_Lang013 =	&Stavite na kutiji
 	e_Lang014 =	Ume&tnite Pritisak Na Tipku
 	e_Lang015 =	Uredi Bo&ja oznaka
+	e_Lang016 =	Grupe
+	e_Lang017 =	Omogućite grupe
+	e_Lang018 =	Dodaj skupinu
+	e_Lang019 =	Izvadite skupinu
+	e_Lang020 =	Ukloni sve skupine
+	e_Lang021 =	Uredi grupe
+		
 		
 ; Select Sub Menu		
 	s_Lang001 =	&Odaberi sve
@@ -263,6 +270,13 @@
 	w_Lang093 =	Sakriti
 	w_Lang094 =	Pomicanje ovdje
 	w_Lang095 =	Kopirajte ovdje
+	w_Lang096 =	Grupe
+	w_Lang097 =	Omogućite grupe (Ctrl + Shift + G)
+	w_Lang098 =	Dodaj skupinu (Ctrl + Shift + Y)
+	w_Lang099 =	Izvadite skupinu (Ctrl + Shift + R)
+	w_Lang100 =	Ukloni sve skupine
+	w_Lang101 =	Uredi grupe
+	w_Lang102 =	Naziv grupe
 		
 ; Command Windows		
 	c_Lang001 =	Miš
@@ -535,7 +549,7 @@
 	t_Lang057 =	Default Makro datoteke
 	t_Lang058 =	Standardni knjižnica datoteke
 	t_Lang059 =	Koristite izraz po defaultu za varijable ustupanju
-	t_Lang060 =	Pokaži Boje && maraka Pomoć za izvještaje i Loops
+	t_Lang060 =	Označite petlje i izvješća
 	t_Lang061 =	(Kliknite zaglavlje stupca indeksa za uključivanje / isključivanje)
 	t_Lang062 =	Virtualni Keys
 	t_Lang063 =	Default
@@ -801,6 +815,8 @@
 		 Ova značajka je namijenjena samo kao brzi izvoza funkciju. PMC nije značilo da se urednik AHK skripta.
 	)	
 	d_Lang088 =	Pokušajte izvoditi kao zajednički korisnik (ne administrator).
+	d_Lang089 =	Ne red bira!
+	d_Lang090 =	Molimo, odaberite redak za umetanje ili uklanjanje skupinu.
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -1277,7 +1293,7 @@
 	StringLen / StrLen	Dohvaća brojati koliko znakova u nizu.
 	StringLower	Pretvara string u mala slova.
 	StringMid / SubStr	Dohvaća jedan ili više znakova od navedenog položaj u nizu.
-	StringReplace	Zamjenjuje navedenu podniz s novim nizom.
+	StringReplace / StrReplace	Zamjenjuje navedenu podniz s novim nizom.
 	StringRight	Dohvaća broj znakova s desne strane niza.
 	StringSplit / StrSplit	Dijeli niz u niz podnizova prema definiranom graničnika.
 	StringTrimLeft	Uklanja niz likova iz lijevoj strani nizu.

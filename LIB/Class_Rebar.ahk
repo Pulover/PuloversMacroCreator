@@ -553,7 +553,7 @@ Class Rebar extends Rebar.Private
 ;=======================================================================================
         __Delete()
         {
-            this.Remove("", Chr(255))
+            this.RemoveAt(1, this.Length())
         ,   this.SetCapacity(0)
         ,   this.base := ""
         }

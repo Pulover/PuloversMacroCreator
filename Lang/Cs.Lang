@@ -83,6 +83,13 @@
 	e_Lang013 =	Vlo&žit z krabice
 	e_Lang014 =	Vlož&it Klávesy
 	e_Lang015 =	&Edit barva označuje
+	e_Lang016 =	Skupiny
+	e_Lang017 =	Povolit skupiny
+	e_Lang018 =	Přidat skupinu
+	e_Lang019 =	Odstranit skupinu
+	e_Lang020 =	Odstranit všechny skupiny
+	e_Lang021 =	Upravit skupiny
+		
 		
 ; Select Sub Menu		
 	s_Lang001 =	&Vybrat vše
@@ -263,6 +270,13 @@
 	w_Lang093 =	Schovat
 	w_Lang094 =	Přesunout sem
 	w_Lang095 =	Kopírování zde
+	w_Lang096 =	Skupiny
+	w_Lang097 =	Povolit skupiny (Ctrl + Shift + G)
+	w_Lang098 =	Přidat skupinu (Ctrl + Shift + Y)
+	w_Lang099 =	Odstranit skupinu (Ctrl + Shift + R)
+	w_Lang100 =	Odstranit všechny skupiny
+	w_Lang101 =	Upravit skupiny
+	w_Lang102 =	Název skupiny
 		
 ; Command Windows		
 	c_Lang001 =	Myš
@@ -535,7 +549,7 @@
 	t_Lang057 =	Výchozí soubor makra
 	t_Lang058 =	Standardní knihovna souboru
 	t_Lang059 =	Použití výrazu jako výchozí pro přiřazení proměnných
-	t_Lang060 =	Zobrazit Barvy a nápovědy ochranných známek pro Loops a výkazy
+	t_Lang060 =	Označte smyček a prohlášení
 	t_Lang061 =	(Klikněte na index záhlaví sloupce pro zapnutí / vypnutí)
 	t_Lang062 =	Virtuální Keys
 	t_Lang063 =	Standardní
@@ -801,6 +815,8 @@
 		 Tato funkce je určena pouze k rychlému exportní funkce. PMC není chtěl být editor AHK skript.
 	)	
 	d_Lang088 =	Zkuste spustit jako běžné uživatele (ne správce).
+	d_Lang089 =	Ne řádek vybrán!
+	d_Lang090 =	Prosím, vyberte řádek pro vložení nebo odstranění skupiny.
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -1277,7 +1293,7 @@
 	StringLen / StrLen	Načte počet kolik znaků v řetězci.
 	StringLower	Převede řetězec na malá písmena.
 	StringMid / SubStr	Načte jeden nebo více znaků z určené pozice v řetězci.
-	StringReplace	Nahradí zadaný podřetězec s novým řetězcem.
+	StringReplace / StrReplace	Nahradí zadaný podřetězec s novým řetězcem.
 	StringRight	Načte počet znaků z pravé strany řetězce.
 	StringSplit / StrSplit	Rozdělí řetězec na pole podřetězec pomocí zadaného oddělovače.
 	StringTrimLeft	Odebere počet znaků z levé strany řetězce.

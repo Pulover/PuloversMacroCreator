@@ -19,7 +19,7 @@ Software License: [GNU General Public License](License.html)
 Chris and Lexikos for [AutoHotkey](http://ahkscript.org/).  
 tic (Tariq Porter) for his [GDI+ Library](http://www.autohotkey.com/board/topic/29449-gdi-standard-library).  
 tkoi & majkinetor for the [ILButton function](http://www.autohotkey.com/board/topic/37147-ilbutton-image-buttons).  
-just me for [LV_Colors Class](http://www.autohotkey.com/board/topic/88699-class-lv-colors), GuiCtrlAddTab and for updating ILButton to 64bit.  
+just me for [LV_Colors Class](http://www.autohotkey.com/board/topic/88699-class-lv-colors), [LV_EX functions](http://autohotkey.com/boards/viewtopic.php?t=1256), GuiCtrlAddTab and for updating ILButton to 64bit.  
 Micahs for the [base code](http://www.autohotkey.com/board/topic/30486-listview-tooltip-on-mouse-hover/?p=280843) of the Drag-Rows function.  
 jaco0646 for the [function](http://www.autohotkey.com/board/topic/47439-user-defined-dynamic-hotkeys) to make hotkey controls detect other keys.  
 Laszlo for the [Monster function](http://www.autohotkey.com/board/topic/15675-monster) to solve expressions.  
@@ -40,10 +40,11 @@ Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jör
 
 * Added support for array assignment in Variables window.
 * Added For-Loops.
-* Added support for Array.MaxIndex() inside Dynamic Variables (e.g.: % MyArray.MaxIndex()).
-* Added support for Array.MaxIndex() inside Variable Assignment when "Expression" is checked.
+* Added support for MaxIndex()/MinIndex()/Length() inside Dynamic Variables (e.g.: % MyArray.Length()).
+* Added support for MaxIndex()/MinIndex()/Length() inside Variable Assignment when "Expression" is checked.
 * Added option to change color of the rectangle of Image/Pixel Search area and Screenshots tool.
 * Updated "Loop, File" and "Loop, Reg" to new format with "Mode" parameter.
+* Changed "List Variables" to display only User-Defined variables.
 * Fixed corrupted pmc files saved on exit.
 * Fixed bug with WinWait timeout.
 * Fixed bug with IE/COM Interface.

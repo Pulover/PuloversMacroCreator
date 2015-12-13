@@ -83,6 +83,13 @@
 	e_Lang013 =	상자 삽입
 	e_Lang014 =	키를 삽입
 	e_Lang015 =	편집 색상 표
+	e_Lang016 =	여러 떼
+	e_Lang017 =	그룹을 사용
+	e_Lang018 =	그룹을 추가
+	e_Lang019 =	그룹을 제거
+	e_Lang020 =	모든 그룹을 제거
+	e_Lang021 =	편집 그룹
+		
 		
 ; Select Sub Menu		
 	s_Lang001 =	모두 선택
@@ -263,6 +270,13 @@
 	w_Lang093 =	숨기기
 	w_Lang094 =	여기에 이동
 	w_Lang095 =	여기에 복사
+	w_Lang096 =	여러 떼
+	w_Lang097 =	그룹을 사용 (Ctrl 키를 + 시프트 + G)
+	w_Lang098 =	그룹을 추가 (Ctrl 키를 + 시프트 + Y)
+	w_Lang099 =	그룹을 제거 (Ctrl 키를 + 시프트 + R)
+	w_Lang100 =	모든 그룹을 제거
+	w_Lang101 =	편집 그룹
+	w_Lang102 =	그룹 이름
 		
 ; Command Windows		
 	c_Lang001 =	마우스
@@ -535,7 +549,7 @@
 	t_Lang057 =	기본 매크로 파일
 	t_Lang058 =	표준 라이브러리 파일
 	t_Lang059 =	변수 할당에 대해 기본적으로 식을 사용하여
-	t_Lang060 =	루프와 성명에 대한 색상 및 도움말 마크 표시
+	t_Lang060 =	루프 및 문 강조
 	t_Lang061 =	(활성화 / 비활성화 할 인덱스 열 머리글을 클릭)
 	t_Lang062 =	가상 키
 	t_Lang063 =	기본
@@ -801,6 +815,8 @@
 		 이 기능은 빠른 내보내기 기능으로 의미한다. PMC는 AHK 스크립트 에디터하는 것은 아닙니다.
 	)	
 	d_Lang088 =	일반적인 사용자 (안 관리자)를 실행 해보십시오.
+	d_Lang089 =	어떤 행을 선택하지!
+	d_Lang090 =	삽입 또는 그룹을 제거하려면 행을 선택하십시오.
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -1277,7 +1293,7 @@
 	StringLen / StrLen	문자열에있는 문자의 수를 검색합니다.
 	StringLower	문자열을 소문자로 변환합니다.
 	StringMid / SubStr	문자열의 지정된 위치에서 하나 이상의 문자를 검색합니다.
-	StringReplace	새로운 문자열로 지정된 문자열을 대체합니다.
+	StringReplace / StrReplace	새로운 문자열로 지정된 문자열을 대체합니다.
 	StringRight	문자열의 오른쪽의 문자 수를 취득합니다.
 	StringSplit / StrSplit	지정된 구분 기호를 사용하여 문자열의 배열로 문자열을 분리합니다.
 	StringTrimLeft	문자열의 왼쪽의 문자 수를 제거합니다.

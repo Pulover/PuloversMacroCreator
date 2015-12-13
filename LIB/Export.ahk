@@ -20,7 +20,7 @@
 	,	Window := CheckForExp(Window)
 		If (Type = cType1)
 		{
-			If InStr(Step, "``n")
+			If (InStr(Step, "``n"))
 			{
 				StringReplace, Step, Step, ``n, `n, All
 				Step := "`n(LTrim`n" Step "`n)"
@@ -29,7 +29,7 @@
 			{
 				If (((TimesX > 1) || InStr(TimesX, "%")) && (Action <> "[Text]"))
 					Step := RegExReplace(Step, "{\w+\K(})", " " TimesX "$1")
-				If DelayX = 0
+				If (DelayX = 0)
 				{
 					LV_GetText(PAction, A_Index-1, 2)
 					LV_GetText(PType, A_Index-1, 6)
@@ -67,7 +67,7 @@
 			continue
 		If ((Type = cType2) || (Type = cType9) || (Type = cType10))
 		{
-			If InStr(Step, "``n")
+			If (InStr(Step, "``n"))
 			{
 				StringReplace, Step, Step, ``n, `n, All
 				Step := "`n(LTrim`n" Step "`n)"
@@ -96,7 +96,7 @@
 		}
 		Else If (Type = cType6)
 		{
-			If InStr(Step, "``n")
+			If (InStr(Step, "``n"))
 			{
 				StringReplace, Step, Step, ``n, `n, All
 				Step := "`n(LTrim`n" Step "`n)"
@@ -128,7 +128,7 @@
 					StringReplace, Type, Type, Read, `, Read
 					StringReplace, Type, Type, Registry, `, Reg
 					RowData := "`n" Type ", " RTrim(Step, ", ")
-					If SubStr(RowData, 0) = "``"
+					If (SubStr(RowData, 0) = "``")
 						RowData := SubStr(RowData, 1, StrLen(RowData)-1)
 				}
 			}
@@ -140,7 +140,7 @@
 		}
 		Else If (Type = cType12)
 		{
-			If InStr(Step, "``n")
+			If (InStr(Step, "``n"))
 			{
 				StringReplace, Step, Step, ``n, `n, All
 				Step := "`n(LTrim`n" Step "`n)"
@@ -171,7 +171,7 @@
 					RowData .= "`n`tReturn"
 				Else If (Act1 = "Move")
 					RowData .= "`n`tClick, %FoundX%, %FoundY%, 0"
-				Else If InStr(Act1, "Click")
+				Else If (InStr(Act1, "Click"))
 				{
 					Loop, Parse, Act1, %A_Space%
 						Action%A_Index% := A_LoopField
@@ -236,9 +236,9 @@
 		{
 			RowData := "`n" Type ", " Step
 			RowData .= "`n" Type ", " Step ", D"
-			If DelayX > 0
+			If (DelayX > 0)
 				RowData .= " T" Round(DelayX/1000, 2) "`nIf ErrorLevel`n`tReturn"
-			Else If InStr(DelayX, "%")
+			Else If (InStr(DelayX, "%"))
 				RowData .= " T" DelayX "`nIf ErrorLevel`n`tReturn"
 			If (Comment <> "")
 				RowData .= "  " "; " Comment
@@ -262,7 +262,7 @@
 			}
 			If (Type = cType21)
 			{
-				If InStr(VarValue, "``n")
+				If (InStr(VarValue, "``n"))
 				{
 					StringReplace, VarValue, VarValue, ``n, `n, All
 					VarValue := "`n(LTrim`n" VarValue "`n)"
@@ -277,7 +277,7 @@
 		}
 		Else If (Type = cType22)
 		{
-			If InStr(Step, "``n")
+			If (InStr(Step, "``n"))
 			{
 				StringReplace, Step, Step, ``n, `n, All
 				Step := "`n(LTrim`n" Step "`n)"
@@ -344,7 +344,7 @@
 			RowData := "`n" IEComExp(Act2, Step, El1, El2, "", Act3, Act1)
 		,	RowData := CheckComExp(RowData)
 			GoSub, Add_CD
-			If !init_ie
+			If (!init_ie)
 				RowData := "`nIf !IsObject(ie)"
 				.			"`n`tie := ComObjCreate(""InternetExplorer.Application"")"
 				.			"`nie.Visible := true" RowData
@@ -369,7 +369,7 @@
 			RowData := "`n" IEComExp(Act2, "", El1, El2, Step, Act3, Act1)
 		,	RowData := CheckComExp(RowData, Step)
 			GoSub, Add_CD
-			If !init_ie
+			If (!init_ie)
 				RowData := "`nIf !IsObject(ie)"
 				.			"`n`tie := ComObjCreate(""InternetExplorer.Application"")"
 				.			"`nie.Visible := true" RowData
@@ -440,7 +440,7 @@
 			}
 			StringReplace, Step, Step, `````,, ```,, All
 			RowData := "`n" Type ", " Step
-			If !RegExMatch(Step, "```,\s*?$")
+			If (!RegExMatch(Step, "```,\s*?$"))
 				RowData := RTrim(RowData, ", ")
 			GoSub, Add_CD
 			If ((TimesX > 1) || InStr(TimesX, "%"))
@@ -457,7 +457,7 @@
 			}
 			StringReplace, Step, Step, `````,, ```,, All
 			RowData := "`n" Type ", " Step
-			If !RegExMatch(Step, "```,\s*?$")
+			If (!RegExMatch(Step, "```,\s*?$"))
 				RowData := RTrim(RowData, ", ")
 			GoSub, Add_CD
 			If ((TimesX > 1) || InStr(TimesX, "%"))
@@ -466,7 +466,7 @@
 		Else If ((Type = cType42) || (Type = cType43))
 		{
 			Act := SubStr(Action, 1, 2)
-			If InStr(Step, "``n")
+			If (InStr(Step, "``n"))
 			{
 				StringReplace, Step, Step, ``n, `n, All
 				Step := "`n(LTrim`n" Step "`n)"
@@ -480,7 +480,7 @@
 			If ((TimesX > 1) || InStr(TimesX, "%"))
 				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
 		}
-		Else If InStr(Type, "Win")
+		Else If (InStr(Type, "Win"))
 		{
 			If (Type = "WinMove")
 				RowData := "`n" Type ", " Window "," ", " Step
@@ -509,11 +509,11 @@
 ,	LVData := RegExReplace(LVData, "i)%(AppData)%", "%A_$1%")
 ,	LVData := RegExReplace(LVData, "i)%(WinDir)%", "%A_$1%")
 ,	LVData := LTrim(LVData, "`n")
-	If TabIndent
+	If (TabIndent)
 	{
 		Loop, Parse, LVData, `n
 		{
-			If RegExMatch(A_LoopField, "^\}(\s `;)?")
+			If (RegExMatch(A_LoopField, "^\}(\s `;)?"))
 				Indent--
 			Loop, %Indent%
 				Id_LVData .= "`t"
@@ -553,33 +553,33 @@ Script_Header()
 {
 	global
 	Header := HeadLine "`n`n#NoEnv`nSetWorkingDir %A_ScriptDir%`nCoordMode, Mouse, " CoordMouse
-	If Ex_SM = 1
+	If (Ex_SM = 1)
 		Header .= "`nSendMode " SM
-	If Ex_SI = 1
+	If (Ex_SI = 1)
 		Header .= "`n#SingleInstance " SI
-	If Ex_ST = 1
+	If (Ex_ST = 1)
 		Header .= "`nSetTitleMatchMode " ST
-	If Ex_DH = 1
+	If (Ex_DH = 1)
 		Header .= "`nDetectHiddenWindows On"
-	If Ex_AF = 1
+	If (Ex_AF = 1)
 		Header .= "`n#WinActivateForce"
-	If Ex_NT = 1
+	If (Ex_NT = 1)
 		Header .= "`n#NoTrayIcon"
-	If Ex_SC = 1
+	If (Ex_SC = 1)
 		Header .= "`nSetControlDelay " SC
-	If Ex_SW = 1
+	If (Ex_SW = 1)
 		Header .= "`nSetWinDelay " SW
-	If Ex_SK = 1
+	If (Ex_SK = 1)
 		Header .= "`nSetKeyDelay " SK
-	If Ex_MD = 1
+	If (Ex_MD = 1)
 		Header .= "`nSetMouseDelay " MD
-	If Ex_SB = 1
+	If (Ex_SB = 1)
 		Header .= "`nSetBatchLines " SB
-	If Ex_HK = 1
+	If (Ex_HK = 1)
 		Header .= "`n#UseHook"
-	If Ex_PT = 1
+	If (Ex_PT = 1)
 		Header .= "`n#Persistent"
-	If Ex_MT = 1
+	If (Ex_MT = 1)
 		Header .= "`n#MaxThreadsPerHotkey " MT
 	Header .= "`n`n"
 	return Header
@@ -633,7 +633,7 @@ CheckExp(String)
 	Loop, Parse, String, `,, %A_Space%``
 	{
 		LoopField := (A_LoopField <> """""") ? RegExReplace(A_LoopField, """", """""") : A_LoopField
-		If InStr(LoopField, "%")
+		If (InStr(LoopField, "%"))
 		{
 			Loop, Parse, LoopField, `%
 			{
@@ -657,7 +657,7 @@ CheckComExp(String, OutVar="", ByRef ArrString="", Ptr="ie")
 {
 	If (OutVar <> "")
 		String := Trim(RegExReplace(String, "(.*):=[\s]?"))
-	Else If RegExMatch(String, "[\s]?:=(.*)", Assign)
+	Else If (RegExMatch(String, "[\s]?:=(.*)", Assign))
 	{
 		Value := Trim(Assign1), String := Trim(RegExReplace(String, "[\s]?:=(.*)"))
 		If Value in True,False
@@ -670,7 +670,7 @@ CheckComExp(String, OutVar="", ByRef ArrString="", Ptr="ie")
 
 	Loop, Parse, String, .&
 	{
-		If RegExMatch(A_LoopField, "^_Parent\d+")
+		If (RegExMatch(A_LoopField, "^_Parent\d+"))
 		{
 			Parent := SubStr(%A_LoopField%, 2, -1)
 			While, RegExMatch(Parent, "U)\[(.*)\]", _Arr%A_Index%)
@@ -678,7 +678,7 @@ CheckComExp(String, OutVar="", ByRef ArrString="", Ptr="ie")
 			While, RegExMatch(Parent, "\(([^()]++|(?R))*\)", _iParent%A_Index%)
 				Parent := RegExReplace(Parent, "\(([^()]++|(?R))*\)", "&_iParent" A_Index, "", 1)
 			Params := ""
-			If InStr(Parent, "`,")
+			If (InStr(Parent, "`,"))
 			{
 				Loop, Parse, Parent, `,, %A_Space%
 				{
@@ -688,7 +688,7 @@ CheckComExp(String, OutVar="", ByRef ArrString="", Ptr="ie")
 						iPar := RegExReplace(_iParent%inPar1%, "\$", "$$$$")
 					,	LoopField := RegExReplace(LoopField, "&_iParent\d+", iPar, "", 1)
 					}
-					If RegExMatch(LoopField, "^_Arr\d+")
+					If (RegExMatch(LoopField, "^_Arr\d+"))
 					{
 						StringSplit, Arr, %LoopField%1, `,, %A_Space%
 						ArrString := "SafeArray := ComObjArray(0xC, " Arr0 ")"
@@ -701,7 +701,7 @@ CheckComExp(String, OutVar="", ByRef ArrString="", Ptr="ie")
 					{
 						If (Loopfield = "")
 							LoopField := "%ComObjMissing()%"
-						If RegExMatch(LoopField, "i)^" Ptr "\..*", NestStr)
+						If (RegExMatch(LoopField, "i)^" Ptr "\..*", NestStr))
 							Params .= (CheckComExp(NestStr, OutVar, "", Ptr)) ", "
 						Else
 							Params .= ((CheckExp(LoopField) = """""") ? "" : CheckExp(LoopField)) ", "
@@ -715,16 +715,16 @@ CheckComExp(String, OutVar="", ByRef ArrString="", Ptr="ie")
 				Params := Parent
 			}
 			Params := RTrim(Params, ", ")
-			If !InStr(Params, "`,")
+			If (!InStr(Params, "`,"))
 			{
-				If RegExMatch(Params, "i)^" Ptr "\..*", NestStr)
+				If (RegExMatch(Params, "i)^" Ptr "\..*", NestStr))
 					Params := (CheckComExp(NestStr, OutVar, "", Ptr))
 				Else
 					Params := (CheckExp(Params) = """""") ? "" : CheckExp(Params)
 			}
 			String := RegExReplace(String, "&" A_LoopField, "(" Params ")")
 		}
-		If RegExMatch(A_LoopField, "^_Block\d+")
+		If (RegExMatch(A_LoopField, "^_Block\d+"))
 			String := RegExReplace(String, "&" A_LoopField, "[" CheckExp(%A_LoopField%1) "]")
 	}
 	If (Value <> "")
@@ -747,9 +747,9 @@ IEComExp(Method, Value="", Element="", ElIndex=0, OutputVar="", GetBy="Name", Ob
 	
 	ElIndex := (ElIndex <> "") ? "[" ElIndex "]" : ""
 	
-	If !Element
+	If (!Element)
 	{
-		If OutputVar
+		If (OutputVar)
 			return OutputVar " := ie." Method
 		Else If (Obj = "Method")
 		{
@@ -763,7 +763,7 @@ IEComExp(Method, Value="", Element="", ElIndex=0, OutputVar="", GetBy="Name", Ob
 	}
 	Else If (GetBy = "ID")
 	{
-		If OutputVar
+		If (OutputVar)
 			return OutputVar " := ie.document." getEl "(" Element ")." Method
 		Else If (Obj = "Method")
 		{
@@ -777,7 +777,7 @@ IEComExp(Method, Value="", Element="", ElIndex=0, OutputVar="", GetBy="Name", Ob
 	}
 	Else If (GetBy = "Links")
 	{
-		If OutputVar
+		If (OutputVar)
 			return OutputVar " := ie.document." Element . ElIndex "." Method
 		Else If (Obj = "Method")
 		{
@@ -791,7 +791,7 @@ IEComExp(Method, Value="", Element="", ElIndex=0, OutputVar="", GetBy="Name", Ob
 	}
 	Else If (GetBy <> "ID")
 	{
-		If OutputVar
+		If (OutputVar)
 			return OutputVar " := ie.document." getEl "(" Element ")" ElIndex "." Method
 		Else If (Obj = "Method")
 		{

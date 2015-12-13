@@ -83,6 +83,13 @@
 	e_Lang013 =	I&nsertin laatikko
 	e_Lang014 =	Aseta N&äppäilyn
 	e_Lang015 =	E&dit värimerkk
+	e_Lang016 =	Ryhmät
+	e_Lang017 =	Ota ryhmät
+	e_Lang018 =	Lisää ryhmä
+	e_Lang019 =	Poista ryhmä
+	e_Lang020 =	Poista kaikki ryhmät
+	e_Lang021 =	Muokkaa ryhmiä
+		
 		
 ; Select Sub Menu		
 	s_Lang001 =	&Valitse kaikki
@@ -263,6 +270,13 @@
 	w_Lang093 =	Piilottaa
 	w_Lang094 =	Pendelöintifoorumi
 	w_Lang095 =	Kopioi täällä
+	w_Lang096 =	Ryhmät
+	w_Lang097 =	Ota ryhmät (Ctrl + Shift + G)
+	w_Lang098 =	Lisää ryhmä (Ctrl + Shift + Y)
+	w_Lang099 =	Poista ryhmä (Ctrl + Shift + R)
+	w_Lang100 =	Poista kaikki ryhmät
+	w_Lang101 =	Muokkaa ryhmiä
+	w_Lang102 =	Ryhmän nimi
 		
 ; Command Windows		
 	c_Lang001 =	Hiiri
@@ -535,7 +549,7 @@
 	t_Lang057 =	Oletusmakro File
 	t_Lang058 =	Standard Library File
 	t_Lang059 =	Käytä Expression oletuksena muuttujat Tehtävä
-	t_Lang060 =	Näytä värit ja ohje Marks silmukoita ja tilinpäätös
+	t_Lang060 =	Korosta silmukat ja tilinpäätös
 	t_Lang061 =	(Klikkaa indeksi sarakeotsikkoa päälle / pois)
 	t_Lang062 =	Virtuaalinäppäimet
 	t_Lang063 =	Oletusarvo
@@ -801,6 +815,8 @@
 		 Tämä ominaisuus on vain tarkoitettu nopea vientitoiminto. PMC ei ole tarkoitus olla AHK script editor.
 	)	
 	d_Lang088 =	Yritä juosta yhteisinä käyttäjä (ei pääkäyttäjä).
+	d_Lang089 =	Ei rivi valittu!
+	d_Lang090 =	Ole hyvä, valitse rivi lisätä tai poistaa ryhmän.
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -1277,7 +1293,7 @@
 	StringLen / StrLen	Hakee laskea, kuinka monta merkkiä ovat merkkijono.
 	StringLower	Muuntaa merkkijonon pieniksi.
 	StringMid / SubStr	Hakee yhden tai useamman merkkejä määritelty asema merkkijono.
-	StringReplace	Korvaa määritetyn merkkijono uudella merkkijonolla.
+	StringReplace / StrReplace	Korvaa määritetyn merkkijono uudella merkkijonolla.
 	StringRight	Hakee määrän merkkejä oikealla puolella merkkijono.
 	StringSplit / StrSplit	Erottaa merkkijonon joukko alimerkkijonoista ilmoituksessa mainittua erottimia.
 	StringTrimLeft	Poistetaan useita merkkejä vasemmalla puolella merkkijono.

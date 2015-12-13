@@ -83,6 +83,13 @@
 	e_Lang013 =	&Inserir da Caixa
 	e_Lang014 =	In&serir Tecla
 	e_Lang015 =	Editar &Marca de Cor
+	e_Lang016 =	Grupos
+	e_Lang017 =	Habilitar grupos
+	e_Lang018 =	Adicionar grupo
+	e_Lang019 =	Remover grupo
+	e_Lang020 =	Remove todos os grupos
+	e_Lang021 =	Editar grupos
+		
 		
 ; Select Sub Menu		
 	s_Lang001 =	Selecionar &Tudo
@@ -263,6 +270,13 @@
 	w_Lang093 =	Ocultar
 	w_Lang094 =	Mover para cá
 	w_Lang095 =	Copiar aqui
+	w_Lang096 =	Grupos
+	w_Lang097 =	Habilitar grupos (Ctrl + Shift + G)
+	w_Lang098 =	Adicionar grupo (Ctrl + Shift + Y)
+	w_Lang099 =	Remover grupo (Ctrl + Shift + R)
+	w_Lang100 =	Remove todos os grupos
+	w_Lang101 =	Editar grupos
+	w_Lang102 =	Nome do grupo
 		
 ; Command Windows		
 	c_Lang001 =	Mouse
@@ -535,7 +549,7 @@
 	t_Lang057 =	Arquivo de Macro Padrão
 	t_Lang058 =	Arquivo de Biblioteca Padrão
 	t_Lang059 =	Usar Expressão por padrão para Atribuir Variáveis
-	t_Lang060 =	Mostrar Cores && Marcas para Loops e Declarações
+	t_Lang060 =	Destacar Loops e Declarações
 	t_Lang061 =	(Clique no cabeçalho da coluna Index para ativar/desativar)
 	t_Lang062 =	Teclas Virtuais
 	t_Lang063 =	Padrão
@@ -801,6 +815,8 @@
 		 Esse recurso serve apenas como uma função de exportação rápida. PMC não se destina a ser um editor de scripts AHK.
 	)	
 	d_Lang088 =	Tente executar como usuário comum (não administrador).
+	d_Lang089 =	Nenhuma linha selecionada!
+	d_Lang090 =	Por favor, selecione uma linha para inserir ou remover o grupo.
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -1277,7 +1293,7 @@
 	StringLen / StrLen	Recupera a contagem de quantos personagens estão em uma sequência de caracteres .
 	StringLower	Converte uma sequência de caracteres  para minúsculas.
 	StringMid / SubStr	Recupera um ou mais caracteres a partir da posição especificada em uma sequência.
-	StringReplace	Substitui o subsequência de caracteres  especificado com uma nova sequência de caracteres .
+	StringReplace / StrReplace	Substitui o subsequência de caracteres  especificado com uma nova sequência de caracteres .
 	StringRight	Recupera um número de caracteres a partir do lado direito de uma sequência de caracteres .
 	StringSplit / StrSplit	Separa uma sequência de caracteres  em uma matriz de subsequência de caracteres s usando os delimitadores especificados.
 	StringTrimLeft	Remove um número de caracteres a partir do lado esquerdo de uma sequência de caracteres .

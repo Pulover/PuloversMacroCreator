@@ -6,7 +6,7 @@
 	CoordMode, Mouse, Screen
 	MouseGetPos, CursorX, CursorY
 	CoordMode, Mouse, %CoordMouse%
-	If Record = 1
+	If (Record = 1)
 	{
 		GoSub, RecStop
 		GoSub, b_Start
@@ -18,7 +18,7 @@
 	Menu, Tray, Default, %w_Lang008%
 	If (AutoHideBar)
 	{
-		If !WinExist("ahk_id " PMCOSC)
+		If (!WinExist("ahk_id " PMCOSC))
 			GoSub, ShowControls
 	}
 	PlayOSOn := 1, tbOSC.ModifyButtonInfo(1, "Image", 55), LastError := ""
@@ -215,7 +215,7 @@
 								}
 								o_Loop%PointMarker%[A_Index, "LoopReadLine"] := A_LoopReadLine
 							}
-							LoopCount[PointMarker] := o_Loop%PointMarker%.MaxIndex()
+							LoopCount[PointMarker] := o_Loop%PointMarker%.Length()
 						}
 						Else If (Type = cType39)
 						{
@@ -229,7 +229,7 @@
 								}
 								o_Loop%PointMarker%[A_Index, "LoopField"] := A_LoopField
 							}
-							LoopCount[PointMarker] := o_Loop%PointMarker%.MaxIndex()
+							LoopCount[PointMarker] := o_Loop%PointMarker%.Length()
 						}
 						Else If (Type = cType40)
 						{
@@ -256,7 +256,7 @@
 							,	o_Loop%PointMarker%[A_Index, "LoopFileSizeKB"] := A_LoopFileSizeKB
 							,	o_Loop%PointMarker%[A_Index, "LoopFileSizeMB"] := A_LoopFileSizeMB
 							}
-							LoopCount[PointMarker] := o_Loop%PointMarker%.MaxIndex()
+							LoopCount[PointMarker] := o_Loop%PointMarker%.Length()
 						}
 						Else If (Type = cType41)
 						{
@@ -274,7 +274,7 @@
 							,	o_Loop%PointMarker%[A_Index, "LoopRegSubKey"] := A_LoopRegSubKey
 							,	o_Loop%PointMarker%[A_Index, "LoopRegTimeModified"] := A_LoopRegTimeModified
 							}
-							LoopCount[PointMarker] := o_Loop%PointMarker%.MaxIndex()
+							LoopCount[PointMarker] := o_Loop%PointMarker%.Length()
 						}
 						Else If (Type = cType45)
 						{
@@ -285,7 +285,7 @@
 								o_Loop%PointMarker%[A_Index, Par2] := _each
 							,	o_Loop%PointMarker%[A_Index, Par3] := _value
 							}
-							LoopCount[PointMarker] := %Par1%.MaxIndex()
+							LoopCount[PointMarker] := %Par1%.Length()
 						}
 						Else
 							LoopCount[PointMarker] := TimesX
@@ -370,7 +370,7 @@
 							LoopField := DerefVars(A_LoopField)
 							StringReplace, LoopField, LoopField, ¢, `,, All
 							StringReplace, LoopField, LoopField, ¥Space, %A_Space%, All
-							Params.Insert(LoopField)
+							Params.Push(LoopField)
 						}
 						Try
 							%VarName% := %Action%(Params*)
@@ -384,6 +384,7 @@
 								return
 							}
 						}
+						Try SavedVars(VarName)
 					}
 					Else If (Target <> "")
 					{
@@ -396,10 +397,13 @@
 							StringReplace, LoopField, LoopField, `n, ``n, All
 							StringReplace, LoopField, LoopField, ¢, `,, All
 							StringReplace, LoopField, LoopField, ¥Space, %A_Space%, All
-							Params.Insert(LoopField)
+							Params.Push(LoopField)
 						}
 						If (A_AhkPath)
+						{
 							%VarName% := RunExtFunc(Target, Action, Params*)
+							Try SavedVars(VarName)
+						}
 					}
 					continue
 				}
@@ -658,7 +662,7 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC, ByRef LoopCount)
 								}
 								o_Loop%PointMarker%[A_Index, "LoopReadLine"] := A_LoopReadLine
 							}
-							LoopCount[PointMarker] := o_Loop%PointMarker%.MaxIndex()
+							LoopCount[PointMarker] := o_Loop%PointMarker%.Length()
 						}
 						Else If (Type = cType39)
 						{
@@ -672,7 +676,7 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC, ByRef LoopCount)
 								}
 								o_Loop%PointMarker%[A_Index, "LoopField"] := A_LoopField
 							}
-							LoopCount[PointMarker] := o_Loop%PointMarker%.MaxIndex()
+							LoopCount[PointMarker] := o_Loop%PointMarker%.Length()
 						}
 						Else If (Type = cType40)
 						{
@@ -699,7 +703,7 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC, ByRef LoopCount)
 							,	o_Loop%PointMarker%[A_Index, "LoopFileSizeKB"] := A_LoopFileSizeKB
 							,	o_Loop%PointMarker%[A_Index, "LoopFileSizeMB"] := A_LoopFileSizeMB
 							}
-							LoopCount[PointMarker] := o_Loop%PointMarker%.MaxIndex()
+							LoopCount[PointMarker] := o_Loop%PointMarker%.Length()
 						}
 						Else If (Type = cType41)
 						{
@@ -717,7 +721,7 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC, ByRef LoopCount)
 							,	o_Loop%PointMarker%[A_Index, "LoopRegSubKey"] := A_LoopRegSubKey
 							,	o_Loop%PointMarker%[A_Index, "LoopRegTimeModified"] := A_LoopRegTimeModified
 							}
-							LoopCount[PointMarker] := o_Loop%PointMarker%.MaxIndex()
+							LoopCount[PointMarker] := o_Loop%PointMarker%.Length()
 						}
 						Else If (Type = cType45)
 						{
@@ -728,7 +732,7 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC, ByRef LoopCount)
 								o_Loop%PointMarker%[A_Index, Par2] := _each
 							,	o_Loop%PointMarker%[A_Index, Par3] := _value
 							}
-							LoopCount[PointMarker] := %Par1%.MaxIndex()
+							LoopCount[PointMarker] := %Par1%.Length()
 						}
 						Else
 							LoopCount[PointMarker] := TimesX
@@ -800,7 +804,7 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC, ByRef LoopCount)
 							LoopField := DerefVars(A_LoopField)
 							StringReplace, LoopField, LoopField, ¢, `,, All
 							StringReplace, LoopField, LoopField, ¥Space, %A_Space%, All
-							Params.Insert(LoopField)
+							Params.Push(LoopField)
 						}
 						Try
 							%VarName% := %Action%(Params*)
@@ -826,7 +830,7 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC, ByRef LoopCount)
 							StringReplace, LoopField, LoopField, `n, ``n, All
 							StringReplace, LoopField, LoopField, ¢, `,, All
 							StringReplace, LoopField, LoopField, ¥Space, %A_Space%, All
-							Params.Insert(LoopField)
+							Params.Push(LoopField)
 						}
 						If (A_AhkPath)
 							%VarName% := RunExtFunc(Target, Action, Params*)
@@ -1269,7 +1273,7 @@ SplitWin(Window)
 	Loop, Parse, Window, `,, %A_Space%
 	{
 		StringReplace, LoopField, A_LoopField, ¢, `,, All
-		WinPars.Insert(LoopField)
+		WinPars.Push(LoopField)
 	}
 	return WinPars
 }
@@ -1298,6 +1302,8 @@ AssignVar(Name, Operator, Value)
 		%Name% //= Value
 	Else If (Operator = ".=")
 		%Name% .= Value
+	
+	Try SavedVars(Name)
 }
 
 CheckVars(Match_List, l_Point="")
@@ -1338,7 +1344,7 @@ CheckVars(Match_List, l_Point="")
 						StringReplace, LoopField, LoopField, ```,, `,, All
 						StringReplace, LoopField, LoopField, ¢, `,, All
 						StringReplace, LoopField, LoopField, ¥Space, %A_Space%, All
-						Params.Insert(LoopField)
+						Params.Push(LoopField)
 					}
 					FuncResult := %Funct1%(Params*)
 					StringReplace, FuncResult, FuncResult, `,, ```, 
@@ -1355,6 +1361,18 @@ CheckVars(Match_List, l_Point="")
 			If (!IsObject(%lMatch1%))
 				break
 			%A_LoopField% := RegExReplace(%A_LoopField%, ".+", %lMatch1%.MaxIndex())
+		}
+		While, RegExMatch(%A_LoopField%, "iU)^%\s+\b([\w\d_]+)\b\.MinIndex\(\)$", lMatch)
+		{
+			If (!IsObject(%lMatch1%))
+				break
+			%A_LoopField% := RegExReplace(%A_LoopField%, ".+", %lMatch1%.MinIndex())
+		}
+		While, RegExMatch(%A_LoopField%, "iU)^%\s+\b([\w\d_]+)\b\.Length\(\)$", lMatch)
+		{
+			If (!IsObject(%lMatch1%))
+				break
+			%A_LoopField% := RegExReplace(%A_LoopField%, ".+", %lMatch1%.Length())
 		}
 
 		If RegExMatch(%A_LoopField%, "U)^%\s+[\w\d_\[\]\(\)]+$")  ; DynamicVars

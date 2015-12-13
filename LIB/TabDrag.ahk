@@ -126,6 +126,6 @@ Swap(From, To, Total)
 	Tabs := []
 	Loop, %Total%
 		Tabs[A_Index] := A_Index
-	Tabs.Remove(From), Tabs.Insert(To, From)
+	Tabs.RemoveAt(From), Tabs.InsertAt(To, From)
 	return Tabs
 }
