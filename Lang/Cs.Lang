@@ -238,8 +238,8 @@
 	w_Lang061 =	Goto (Shift+F9)
 	w_Lang062 =	Label (Ctrl+F9)
 	w_Lang063 =	Pokud výkazy (F10)
-	w_Lang064 =	proměnné (Shift+F10)
-	w_Lang065 =	Funkce (Ctrl+F10)
+	w_Lang064 =	Proměnné (Shift+F10)
+	w_Lang065 =	Funkce / Metody pole (Ctrl+F10)
 	w_Lang066 =	Internet Explorer (F11)
 	w_Lang067 =	COM rozhraní (Shift+F11)
 	w_Lang068 =	Spustit Skripty (Ctrl+F11)
@@ -484,10 +484,11 @@
 	c_Lang204 =	Vyhodnotit Matematický Výraz
 	c_Lang205 =	Kraj
 	c_Lang206 =	(Použijte [] pro vytvoření pole, např .: [10, 20, aVariable, "aString"])
-	c_Lang207 =	objekt Array
+	c_Lang207 =	Objekt Array
 	c_Lang208 =	Název klíče
 	c_Lang209 =	Název hodnota
 	c_Lang210 =	Hodnoty
+	c_Lang211 =	řada
 		
 ; Other Windows		
 	t_Lang001 =	Export do AutoHotkey
@@ -891,7 +892,7 @@
 	ExpView_TT =	Pokročilý Editor
 	ExpView2_TT =	Pokročilý Editor
 	OSProgB_TT =	Zobrazit Progress Bar
-	OSTrans_TT =	neprůhlednost
+	OSTrans_TT =	Neprůhlednost
 	MRel_TT =	
 	(LTrim	
 		Pohyby v poměru k aktuální pozici.
@@ -1135,6 +1136,7 @@
 	CoordMode	Sady koordinovat režim pro různé příkazy, které se ve srovnání s buď aktivní okno nebo na obrazovce .
 	Cos	Vrátí trigonometrický cosinus čísla.
 	Critical	Zabraňuje aktuální vlákno z přerušován jiných podprocesů .
+	Delete	Odstraňuje dvojice klíč-hodnota z objektu.
 	DetectHiddenText	Určuje, zda neviditelný text okně je "vidět" za účelem zjištění okno. To se týká např. příkazy IfWinExist a WinActivate .
 	DetectHiddenWindows	Určuje, zda neviditelné okna jsou "vidět" pomocí skriptu .
 	DllCall	Volánífunkce v DLL , jako je standardní funkce Windows API .
@@ -1180,6 +1182,7 @@
 	FileSetTime	Změní datetime razítko jednoho nebo více souborů nebo složek . Zástupné znaky jsou podporovány.
 	Floor	Vrátí číslo zaokrouhlené dolů na nejbližší celé číslo ( bez přípony 0,00 ) .
 	For	Opakuje řadu příkazů jednou pro každý klíč-hodnota dvojice v objektu.
+	Format	Zformátuje proměnný počet vstupních hodnot podle formátu řetězce.
 	FormatTime	Transformuje YYYYMMDDHH24MISS časové razítko do zadaného data / času ve formátu .
 	Func	Získá odkaz na funkci.
 	GetKeyName / GetKeyVK / GetKeySC	Načte název nebo text, virtuální klávesnice kód nebo kód skenování na klíč .
@@ -1190,6 +1193,7 @@
 	GroupAdd	Přidá okna specifikaci k oknu skupiny , vytvoření skupiny v případě potřeby .
 	GroupClose	Zavře aktivní okno , pokud to byl právě aktivován GroupActivate nebo GroupDeactivate . To aktivuje následující okno v seriálu . To může také zavřít všechna okna ve skupině.
 	GroupDeactivate	Podobně GroupActivate kromě aktivuje následující okno není ve skupině.
+	HasKey	Vrací true, pokud klíč je spojen s hodnotou.
 	if	Určuje příkaz ( y) k provedení , pokud srovnání proměnné na hodnotu evalutes na hodnotu TRUE. Při více než jeden příkaz je k dispozici, je uzavřít do bloku ( rovnátka ) .
 	if (expression)	Určuje příkaz ( y) k provedení , pokudvýraz vyhodnocen jako PRAVDA .
 	If var [not] between	Kontroly , zda proměnná je obsahem jsou číselně nebo abecedně mezi dvěma hodnotami (včetně) .
@@ -1212,6 +1216,7 @@
 	IniWrite	Zapíšehodnotu standardního formátu. INI souboru.
 	Input	Čeká nauživateli zadat řetězec ( není podporována na Windows 9x : nedělá nic ) .
 	InputBox	Zobrazívstupní pole požádat uživatele k zadání řetězce .
+	InsertAt	Vloží jednu nebo více hodnot v dané poloze v lineárním poli.
 	InStr	Vyhledá danou výskyt řetězce , z levé nebo pravé straně.
 	)	
 	Ahk_Cmd_Index = %Ahk_Cmd_Index%`n	
@@ -1219,6 +1224,7 @@
 	KeyHistory	Zobrazuje skript info a historie nejnovějších stisků kláves a myši.
 	KeyWait	Čeká klíčem nebo tlačítka myši / joysticku být propuštěn nebo stisknutá.
 	Labels	Štítek označuje řádek kódu, a může být použit jako cíl Goto nebo vytvořit podprogram.
+	Length	Vrátí délku lineárním poli začínající v poloze 1.
 	Log	Vrátí logaritmus (základ 10) Number.
 	Ln	Vrátí přirozený logaritmus (základ e) Number.
 	Loop (normal) 	Proveďte sérii příkazů opakovaně: buď zadaný počet opakování nebo dokud přestávce se setkal.
@@ -1226,7 +1232,9 @@
 	Loop (parse a string)	Načte dílčí řetězce (pole), z provázku, jeden po druhém.
 	Loop (read file contents)	Načte řádky v textovém souboru, jeden po druhém (lepší než FileReadLine).
 	Loop (registry)	Načte obsah zadaného podklíč registru, jeden kus po druhém.
+	MaxIndex	Vrací nejvyšší celočíselnou klíč.
 	Menu	Vytvoří, odstraní, upraví a zobrazí se menu a položky. Změní ikonu a její Tooltip. Určuje, zda se hlavní okno kompilovaný skript lze otevřít.
+	MinIndex	Vrací nejmenší celočíselnou klíč.
 	Mod	Modulo. Vrátí zbytek, když je dividenda podělil dělitel.
 	MouseClickDrag	Kliknutí a má zadaný tlačítko myši, pohyb myši na cílové souřadnice, a pak uvolnění tlačítka.
 	MouseGetPos	Načte aktuální pozici kurzoru a případně kde je otevřené okno a řízení je vznášející se nad.
@@ -1236,13 +1244,16 @@
 	NumPut	Obchody číslo v binárním formátu na určenou adresu + offset a vrátí adresu vpravo od položky právě napsal.
 	OnExit	Určuje podprogram spustit automaticky, když skript východy.
 	OnMessage	Určuje funkce pro volání automaticky, když skript obdrží zadanou zprávu.
+	Ord	Vrátí pořadové hodnotu (číselný kód znaku) prvního znaku v řetězci.
 	OutputDebug	Odešle řetězec ladicí program (pokud existuje) na displeji.
 	Pause	Pozastavení skriptu aktuální podproces.
 	PixelGetColor	Načte barvu pixelu na zadané souřadnice X, Y.
 	PixelSearch	Prohledá oblast obrazovky pro pixelu určení barvy.
+	Pop	Odstraní a vrátí poslední prvek pole.
 	PostMessage	Umístí zprávu do fronty zpráv okna nebo ovládací prvek.
 	Process	Provede jednu z následujících operací na proces: zkontroluje, zda existuje, změní svou prioritu; zavře, čeká na jeho ukončení.
 	Progress	Vytvoří nebo aktualizuje okno obsahující průběhu.
+	Push	Připojí hodnoty na konec pole.
 	Random	Generuje pseudo-náhodné číslo.
 	RegExMatch	Určuje, zda řetězec obsahuje vzor (regulární výraz).
 	RegExReplace	Nahrazuje výskyty vzoru (regulární výraz) uvnitř řetězce.
@@ -1250,6 +1261,7 @@
 	RegRead	Čte hodnotu z registru.
 	RegWrite	Zapíše hodnotu do registru.
 	RegisterCallback	Vytvoří strojově kód adresy, který při volání, přesměrování hovoru na funkce ve skriptu.
+	RemoveAt	Odstraní položky z dané pozice v lineárním poli.
 	Return	Návrat z podprogramu, které provádění předtím skočil přes funkční pohotovosti, GoSub, horké aktivace, GroupActivate, nebo jinými prostředky.
 	Round	Je-li N vynecháno, nebo 0, je číslo zaokrouhleno na nejbližší celé číslo. Pokud n je kladné číslo, je číslo zaokrouhleno na N desetinných míst. Pokud je n záporné, je číslo zaokrouhleno podle číslic N vlevo od desetinné čárky.
 	Run	Spustí externí program.

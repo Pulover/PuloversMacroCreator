@@ -238,8 +238,8 @@
 	w_Lang061 =	Goto (Shift+F9)
 	w_Lang062 =	oznaka (Ctrl+F9)
 	w_Lang063 =	Ako izvještaji (F10)
-	w_Lang064 =	varijable (Shift+F10)
-	w_Lang065 =	funkcija (Ctrl+F10)
+	w_Lang064 =	Varijable (Shift+F10)
+	w_Lang065 =	funkcija / Metode array (Ctrl+F10)
 	w_Lang066 =	Internet Explorer (F11)
 	w_Lang067 =	COM sučelja (Shift+F11)
 	w_Lang068 =	Trčanje Scriptlet (Ctrl+F11)
@@ -484,10 +484,11 @@
 	c_Lang204 =	Procjenu Matematike Izraz
 	c_Lang205 =	Regija
 	c_Lang206 =	(Koristite [] za stvaranje polja, npr .: [10, 20, aVariable, "aString"])
-	c_Lang207 =	niz objekt
+	c_Lang207 =	Niz Objekt
 	c_Lang208 =	Ključ ime
 	c_Lang209 =	Naziv vrijednosti
 	c_Lang210 =	Vrijednosti
+	c_Lang211 =	Red
 		
 ; Other Windows		
 	t_Lang001 =	Izvoz u AutoHotkey
@@ -891,7 +892,7 @@
 	ExpView_TT =	Napredni Uređivač
 	ExpView2_TT =	Napredni Uređivač
 	OSProgB_TT =	Prikaz Progress Bar
-	OSTrans_TT =	neprozirnost
+	OSTrans_TT =	Neprozirnost
 	MRel_TT =	
 	(LTrim	
 		Promjene u odnosu na trenutnu poziciju.
@@ -1135,6 +1136,7 @@
 	CoordMode	Postavlja koordinirati način za razne naredbe da se u odnosu na bilo aktivnog prozora ili zaslona .
 	Cos	Vraća kosinus broja trigonometrijsku .
 	Critical	Sprječava trenutni lanac od čega je bio prekinut druge teme .
+	Delete	Uklanja parove ključeva i vrijednosti iz objekta.
 	DetectHiddenText	Određuje li nevidljivi tekst u prozor je " vidjeti " u cilju pronalaženja prozor . To utječe na naredbe poput IfWinExist i WinActivate .
 	DetectHiddenWindows	Određuje li nevidljivi prozori su " vidjeli " u skripti .
 	DllCall	Nazivafunkcija unutar DLL, kao što je standardni Windows API funkcija .
@@ -1180,6 +1182,7 @@
 	FileSetTime	Mijenja DATETIME pečat jedne ili više datoteka ili mapa . Zamjenski znakovi su podržani .
 	Floor	Vraća broj zaokružen na najbliži cijeli broj ( bez sufiks 0,00 ) .
 	For	Ponavlja niz naredbi jednom za svaki ključ - vrijednost par u objekt .
+	Format	Formatira varijablu broj ulaznih vrijednosti na osnovu format string.
 	FormatTime	Pretvara se YYYYMMDDHH24MISS oznaku u određenom datumu / vremenu formatu .
 	Func	Dohvaća referencu na funkciji .
 	GetKeyName / GetKeyVK / GetKeySC	Dohvaća ime ili tekst, virtualni kod ključa ili skeniranje koda ključa .
@@ -1190,6 +1193,7 @@
 	GroupAdd	Dodaje prozor specifikaciju na prozor skupine , stvaranje grupu ako je to potrebno .
 	GroupClose	Zatvara aktivni prozor , ako je to samo aktivira GroupActivate ili GroupDeactivate . To onda aktivira sljedeći prozor u seriji . On također može zatvoriti sve prozore u skupini .
 	GroupDeactivate	Slično GroupActivate osim aktivira sljedeći prozor nije u skupini .
+	HasKey	Vraća TRUE ako Ključ je povezana s vrijednošću.
 	if	Određujenaredba ( e ) za izvođenje ako seusporedba varijable na vrijednost evalutes na TRUE . Kada je više od jedan naredbeni je prisutan, ih priložiti u blok ( proteza ) .
 	if (expression)	Određujenaredba ( e ) za izvođenje ako seizraz vrednuje na TRUE .
 	If var [not] between	Provjerava je li varijabla sadržaju su numerički ili po abecednom redu između dvije vrijednosti ( uključivo) .
@@ -1212,6 +1216,7 @@
 	IniWrite	Piševrijednost standardnog formata . Ini datoteci .
 	Input	Čekakorisniku da tip string (nije podržan na Windows 9x : to ne radi ništa ) .
 	InputBox	Prikazujeinput box pitati korisnika da unesete string .
+	InsertAt	Umeće jedan ili više vrijednosti, na određenom položaju unutar linearno.
 	InStr	Pretrage za određenu pojavu niza , s lijeve ili desne strane.
 	)	
 	Ahk_Cmd_Index = %Ahk_Cmd_Index%`n	
@@ -1219,6 +1224,7 @@
 	KeyHistory	Prikazuje skriptu info i povijest najnovijih tipke i klikova mišem.
 	KeyWait	Waits za ključne ili miša / joysticka gumb pustiti na slobodu ili mišu.
 	Labels	Oznaka identificira liniju koda, i može se koristiti kao Goto cilj ili da se formira potprogram.
+	Length	Vraća duljinu linearno početkom na poziciji 1.
 	Log	Vraća logaritam (baza 10) broja.
 	Ln	Vraća prirodni logaritam (baze e) broja.
 	Loop (normal) 	Izvođenje niz naredbi puta: ili određeni broj puta ili do prekida je naišao.
@@ -1226,7 +1232,9 @@
 	Loop (parse a string)	Dohvaća podnizova (polja) iz niza, jedan po jedan.
 	Loop (read file contents)	Dohvaća linije u tekstualnu datoteku, jednu po jednu (i bolji od FileReadLine).
 	Loop (registry)	Dohvaća sadržaj navedenog registra potključem, jedna točka na vrijeme.
+	MaxIndex	Vraća najveću cijeli broj ključa.
 	Menu	Stvara, briše, mijenja i prikazuje izbornike i stavke izbornika. Mijenja ikona i njegov Tooltip. Kontrole li glavni prozor sastaviti skripte mogu otvoriti.
+	MinIndex	Vraća najmanji cijeli broj ključa.
 	Mod	Modulo. Vraća ostatak pri Dividenda je podijeljen djelitelj.
 	MouseClickDrag	Klikovi i drži navedenu tipku miša, premjestiti miš na odredište koordinatama, izvadit tipku.
 	MouseGetPos	Dohvaća trenutni položaj pokazivača miša i izboru koji prozor i kontrola se nadvili nad.
@@ -1236,13 +1244,16 @@
 	NumPut	Prodavaonice broj u binarnom formatu na navedenoj adresi + offset i vraća adresu na desno od stavke samo pismeni.
 	OnExit	Određuje potprogram se automatski pokrenuti kada skriptu izlaze.
 	OnMessage	Određuje funkciju na poziv automatski kada skriptu prima određenu poruku.
+	Ord	Vraća redni vrijednost (numerički znak kod) prvog karaktera u String.
 	OutputDebug	Šalje niz na ispravljanje pogrešaka (ako ih ima) za prikaz.
 	Pause	Pauziranje skriptu trenutnu nit.
 	PixelGetColor	Dohvaća boju piksela na određeno x, y koordinata.
 	PixelSearch	Pretražuje se područje na zaslonu za piksel u određenom bojom.
+	Pop	Uklanja i vraća posljednji element polja.
 	PostMessage	Mjesta poruku u red poruka od prozora ili kontrole.
 	Process	Obavlja jedan od sljedećih operacija na proces: provjerava ako postoji; mijenja njezin prioritet; ga zatvara, čeka ga zatvoriti.
 	Progress	Stvara i ažurira prozor s traku napretka.
+	Push	Dodaje vrijednosti na kraj niza.
 	Random	Ostvaruje se pseudo-slučajni broj.
 	RegExMatch	Određuje li string sadrži uzorak (regularni izraz).
 	RegExReplace	Zamjenjuje pojavljivanja uzorak (regularni izraz) unutar niza.
@@ -1250,6 +1261,7 @@
 	RegRead	Čita vrijednost iz registra.
 	RegWrite	Piše vrijednost u registru.
 	RegisterCallback	Stvara strojno kod adresu da kad zove, preusmjerava poziv na djelovanje u pismu.
+	RemoveAt	Uklanja stavke s određenog položaja u linearno.
 	Return	Povratak iz potprogramu kojoj izvršenja ranije skočio preko funkcija poziva, Gosub, prečac aktivacije, GroupActivate, ili drugim sredstvima.
 	Round	Ako N nije izostavljeno ili 0, broj se zaokružuje na najbliži cijeli broj. Ako je N pozitivan broj, broj se zaokružuje na N decimalnih mjesta. Ako je N negativna, broj se zaokružuje N znamenki s lijeve strane decimalne točke.
 	Run	Pokreće vanjski program.

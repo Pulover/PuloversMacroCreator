@@ -238,8 +238,8 @@
 	w_Lang061 =	Goto (Shift+F9)
 	w_Lang062 =	etichetta (Ctrl+F9)
 	w_Lang063 =	Se Dichiarazioni (F10)
-	w_Lang064 =	variabili (Shift+F10)
-	w_Lang065 =	Funzioni (Ctrl+F10)
+	w_Lang064 =	Variabili (Shift+F10)
+	w_Lang065 =	Funzioni / Metodi di matrice (Ctrl+F10)
 	w_Lang066 =	Internet Explorer (F11)
 	w_Lang067 =	COM Interface (Shift+F11)
 	w_Lang068 =	Esegui Scriptlet (Ctrl+F11)
@@ -484,10 +484,11 @@
 	c_Lang204 =	Valutare L'espressione Matematica
 	c_Lang205 =	Regione
 	c_Lang206 =	(Usare [] per creare array, es .: [10, 20, aVariable, "aString"])
-	c_Lang207 =	oggetto array
+	c_Lang207 =	Oggetto Array
 	c_Lang208 =	Nome della chiave
 	c_Lang209 =	Nome di valore
 	c_Lang210 =	I valori
+	c_Lang211 =	Schieramento
 		
 ; Other Windows		
 	t_Lang001 =	Esporta in AutoHotkey
@@ -891,7 +892,7 @@
 	ExpView_TT =	Editor Avanzato
 	ExpView2_TT =	Editor Avanzato
 	OSProgB_TT =	Mostra barra di avanzamento
-	OSTrans_TT =	opacità
+	OSTrans_TT =	Opacità
 	MRel_TT =	
 	(LTrim	
 		Movimenti relativi alla posizione corrente.
@@ -1135,6 +1136,7 @@
 	CoordMode	Imposta la modalità di coordinate per i vari comandi per essere relativo sia la finestra attiva o lo schermo .
 	Cos	Restituisce il coseno trigonometrico di numero .
 	Critical	Impedisce il thread corrente venga interrotta da altri thread .
+	Delete	Rimuove coppie chiave-valore da un oggetto.
 	DetectHiddenText	Determina se il testo non visibile in una finestra è "visto " ai fini della individuazione della finestra . Questo influisce comandi come IfWinExist e WinActivate .
 	DetectHiddenWindows	Determina se le finestre invisibili vengono " visti " dal copione .
 	DllCall	Chiama una funzione all'interno di una DLL , ad esempio una funzione standard di Windows API .
@@ -1180,6 +1182,7 @@
 	FileSetTime	Modifica il timbro datetime di uno o più file o cartelle . Sono supportati i caratteri jolly.
 	Floor	Restituisce Numero arrotondato per difetto al numero intero più vicino ( senza alcun suffisso .00 ) .
 	For	Ripete una serie di comandi una volta per ogni coppia chiave-valore in un oggetto.
+	Format	Formatta un numero variabile di valori di ingresso secondo una stringa di formato.
 	FormatTime	Trasforma un timestamp YYYYMMDDHH24MISS nel formato di data / ora specificato .
 	Func	Recupera un riferimento a una funzione .
 	GetKeyName / GetKeyVK / GetKeySC	Recupera il nome o il testo , codice tasto virtuale o il codice di scansione di un tasto .
@@ -1190,6 +1193,7 @@
 	GroupAdd	Aggiunge una specifica finestra di un gruppo di finestre , creando il gruppo , se necessario.
 	GroupClose	Chiude la finestra attiva se è stato appena attivato da GroupActivate o GroupDeactivate . Si attiva quindi la finestra successiva della serie . Si può anche chiudere tutte le finestre in un gruppo.
 	GroupDeactivate	Simile a GroupActivate tranne attiva la finestra successiva non nel gruppo .
+	HasKey	Restituisce true se il tasto è associato un valore.
 	if	Specifica il comando ( s ) da eseguire se il confronto di una variabile ad un valore evalutes su TRUE . Quando più di un comando è presente, racchiuderli in un blocco ( parentesi graffe ) .
 	if (expression)	Specifica il comando ( s ) da eseguire se l'espressione restituisce TRUE.
 	If var [not] between	Controlla se il contenuto di una variabile sono numericamente o alfabeticamente tra due valori ( compreso) .
@@ -1212,6 +1216,7 @@
 	IniWrite	Scrive un valore in un file di formato . Ini standard.
 	Input	Attende all'utente di digitare una stringa ( non supportato su Windows 9x : non fa niente ) .
 	InputBox	Consente di visualizzare una casella di input per chiedere all'utente di inserire una stringa .
+	InsertAt	Inserire uno o più valori in una determinata posizione all'interno di un array lineare.
 	InStr	Ricerche per una data occorrenza di una stringa , da sinistra o da destra .
 	)	
 	Ahk_Cmd_Index = %Ahk_Cmd_Index%`n	
@@ -1219,6 +1224,7 @@
 	KeyHistory	Consente di visualizzare informazioni sceneggiatura e una storia delle più recenti sequenze di tasti e click del mouse.
 	KeyWait	Attende un tasto o pulsante del mouse / joystick per essere rilasciato o premuto.
 	Labels	Un'etichetta identifica una riga di codice, e può essere usato come un bersaglio Goto o per formare una subroutine.
+	Length	Restituisce la lunghezza di una schiera lineare che inizia alla posizione 1.
 	Log	Restituisce il logaritmo (base 10) del numero.
 	Ln	Restituisce il logaritmo naturale (in base e) del Codice.
 	Loop (normal) 	Eseguire una serie di comandi più volte: si incontra sia il numero specificato di volte o fino a rottura.
@@ -1226,7 +1232,9 @@
 	Loop (parse a string)	Recupera sottostringhe (campi) da una stringa, uno alla volta.
 	Loop (read file contents)	Recupera le righe in un file di testo, uno per volta (si comporta meglio di FileReadLine).
 	Loop (registry)	Recupera il contenuto della sottochiave del Registro specificato, un elemento alla volta.
+	MaxIndex	Restituisce la chiave intera più alta.
 	Menu	Crea, cancella, modifica e visualizza i menu e voci di menu. Cambia l'icona del vassoio e il suo suggerimento. Controlla se la finestra principale di uno script compilato può essere aperto.
+	MinIndex	Restituisce la chiave intera più basso.
 	Mod	Modulo. Restituisce il resto quando dividendo viene diviso per divisore.
 	MouseClickDrag	Click e detiene il pulsante del mouse specificato, sposta il mouse alle coordinate di destinazione, quindi rilascia il pulsante.
 	MouseGetPos	Recupera la posizione corrente del cursore del mouse e, facoltativamente, il quale finestra e il controllo si passa sopra.
@@ -1236,13 +1244,16 @@
 	NumPut	Negozi numero in formato binario all'indirizzo specificato + offset e restituisce l'indirizzo a destra della voce appena scritto.
 	OnExit	Specifica una subroutine per eseguire automaticamente quando lo script esce.
 	OnMessage	Consente di specificare una funzione da chiamare automaticamente quando lo script riceve il messaggio specificato.
+	Ord	Restituisce il valore ordinale (codice di carattere numerico) del primo carattere di stringa.
 	OutputDebug	Invia una stringa al debugger (se presente) per la visualizzazione.
 	Pause	Sospende thread corrente dello script.
 	PixelGetColor	Recupera il colore del pixel al x specificato, coordinate y.
 	PixelSearch	Ricerche su una regione dello schermo per un pixel del colore specificato.
+	Pop	Rimuove e restituisce l'ultimo elemento dell'array.
 	PostMessage	Inserisce un messaggio nella coda dei messaggi di una finestra o di controllo.
 	Process	Esegue una delle seguenti operazioni su un processo: verifica se esiste; cambia la sua priorità, lo chiude, aspetta a chiudere.
 	Progress	Crea o aggiorna una finestra con una barra di avanzamento.
+	Push	Aggiunge valori alla fine di un array.
 	Random	Genera un numero pseudo-casuale.
 	RegExMatch	Determina se una stringa contiene un modello (espressione regolare).
 	RegExReplace	Sostituisce le occorrenze di un pattern (espressione regolare) all'interno di una stringa.
@@ -1250,6 +1261,7 @@
 	RegRead	Legge un valore del Registro di sistema.
 	RegWrite	Scrive un valore al Registro di sistema.
 	RegisterCallback	Crea un indirizzo di macchina-codice che quando viene chiamato, reindirizza la chiamata a una funzione nello script.
+	RemoveAt	Rimuove elementi dal posizione data in una serie lineare.
 	Return	Resi da una subroutine a cui esecuzione era precedentemente saltato via la chiamata di funzione, Gosub, attivazione del tasto di scelta rapida, GroupActivate, o con altri mezzi.
 	Round	Se N è omesso o 0, numero viene arrotondato al numero intero più vicino. Se N è il numero positivo, numero viene arrotondato a N cifre decimali. Se N è negativo, numero viene arrotondato da N cifre a sinistra del separatore decimale.
 	Run	Esegue un programma esterno.

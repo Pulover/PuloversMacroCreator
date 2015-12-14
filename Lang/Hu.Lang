@@ -238,8 +238,8 @@
 	w_Lang061 =	Goto (Shift+F9)
 	w_Lang062 =	Label (Ctrl+F9)
 	w_Lang063 =	Ha a nyilatkozatok (F10)
-	w_Lang064 =	változók (Shift+F10)
-	w_Lang065 =	Függvények (Ctrl+F10)
+	w_Lang064 =	Változók (Shift+F10)
+	w_Lang065 =	Függvények / Array módszerek (Ctrl+F10)
 	w_Lang066 =	Internet Explorer (F11)
 	w_Lang067 =	COM Interface (Shift+F11)
 	w_Lang068 =	Fuss Scriptlet (Ctrl+F11)
@@ -484,10 +484,11 @@
 	c_Lang204 =	Értékeli Matematikai Kifejezés
 	c_Lang205 =	Vidék
 	c_Lang206 =	(A [] létrehozni tömbök, pl .: [10, 20, aVariable, "aString"])
-	c_Lang207 =	tömbobjektumok
+	c_Lang207 =	Tömbobjektumok
 	c_Lang208 =	Kulcs neve
 	c_Lang209 =	érték neve
 	c_Lang210 =	értékek
+	c_Lang211 =	Sor
 		
 ; Other Windows		
 	t_Lang001 =	Exportálás AutoHotkey
@@ -1135,6 +1136,7 @@
 	CoordMode	Készletek koordinálja mód különböző parancsokat, hogy relatív, hogy vagy az aktív ablak vagy a képernyőn.
 	Cos	Visszaadja a trigonometrikus koszinuszával száma.
 	Critical	Megakadályozza az aktuális téma attól, hogy zavarhatja meg más szálak.
+	Delete	Eltávolítja kulcsértékpárok egy objektum.
 	DetectHiddenText	Meghatározza, hogy a láthatatlan szöveget egy ablakban "látható" abból a célból, hogy megtalálja az ablakon. Ez befolyásolja parancsokat, mint a IfWinExist és WinActivate.
 	DetectHiddenWindows	Meghatározza, hogy a láthatatlan ablak "látható" a szkriptet.
 	DllCall	A függvény belsejében egy DLL, mint egy szabványos Windows API függvény.
@@ -1180,6 +1182,7 @@
 	FileSetTime	Megváltoztatja a datetime bélyegző egy vagy több fájl vagy mappa. Joker karakterek is.
 	Floor	Visszatér szám lefelé kerekítve a legközelebbi egész számra (nélkül 0,00 utótag).
 	For	Megismétli egy sor parancsot egyszer minden kulcs-érték pár egy tárgy.
+	Format	Formátumok változó számú bemeneti értékek szerint format string.
 	FormatTime	Átalakítja a YYYYMMDDHH24MISS időbélyeg a megadott dátum / idő formátum.
 	Func	Lekéri a hivatkozás egy funkciót.
 	GetKeyName / GetKeyVK / GetKeySC	Letölti a nevet vagy szöveget, virtuális belépési kódot vagy beolvasás kódját a kulcs.
@@ -1190,6 +1193,7 @@
 	GroupAdd	Hozzáad egy ablak specifikáció egy ablak csoporthoz, ami a csoport, ha szükséges.
 	GroupClose	Bezárja az aktív ablakot, ha csak aktiválva GroupActivate vagy GroupDeactivate. Ezután aktiválja a következő ablakban a sorozatban. Azt is zárja be az összes ablakot egy csoportban.
 	GroupDeactivate	Hasonló a GroupActivate kivéve aktiválja a következő ablak nincs a csoportban.
+	HasKey	True, ha Key társított értéket.
 	if	Meghatározza a parancs (ek) azon képessége, ha az összehasonlítás egy változó értékre evalutes TRUE. Ha több, mint egy parancs aktív, tegye őket egy blokkban (fogszabályozó).
 	if (expression)	Megadja a parancs (ok), hogy végre, ha a kifejezés értéke TRUE.
 	If var [not] between	Ellenőrzi, hogy a változó tartalmát számszerint vagy ABC két érték között (bezárólag).
@@ -1212,6 +1216,7 @@
 	IniWrite	Ír egy értéket egy szabványos formátumban. Ini fájlt.
 	Input	Várja a felhasználót, hogy írja a string (nem támogatott Windows 9x: nem csinál semmit.)
 	InputBox	Megjelenít egy beviteli mezőbe, hogy kéri a felhasználót, hogy adja meg a string.
+	InsertAt	Beszúr egy vagy több értéket egy adott helyzetben egy lineáris tömbben.
 	InStr	Keres egy adott előfordulása egy string, a bal vagy a jobb.
 	)	
 	Ahk_Cmd_Index = %Ahk_Cmd_Index%`n	
@@ -1219,6 +1224,7 @@
 	KeyHistory	Megjeleníti script info és a történelem, a legutóbbi billentyűleütéseket, és egérkattintással.
 	KeyWait	Várja, hogy a billentyűk, vagy egér / joystick gombot kell szabadítani, vagy nyomva.
 	Labels	A címke azonosít egy sor kódot, és fel lehet használni, mint egy cél, vagy Goto alkotnak egy szubrutint.
+	Length	Visszaadja a hossza egy egyenes sorban kezdődő 1 pozícióban.
 	Log	Visszaadja a logaritmusát (alap 10) Szám.
 	Ln	Természetes logaritmusát (alap e) a szám.
 	Loop (normal) 	Végre egy sor parancsot többször: vagy a megadott számú alkalommal, vagy amíg break találkozott.
@@ -1226,7 +1232,9 @@
 	Loop (parse a string)	Letölti részkarakterláncokat (mezők) egy string, egy olyan időpontban.
 	Loop (read file contents)	Letölti a vonalak egy szöveges fájlt, egy olyan időpontban (jobban teljesít, mint FileReadLine).
 	Loop (registry)	Letölti a tartalmát a megadott alkulcs, egy tétel egy időben.
+	MaxIndex	Visszaadja a legnagyobb egész kulcs.
 	Menu	Hoz létre, töröl, módosít, és megjeleníti menük és a menüpontok. Megváltoztatja a tálca ikon és tooltip. Azt szabályozza, hogy a fő ablakban a lefordított script nyitható.
+	MinIndex	Visszaadja a legalacsonyabb egész kulcsot.
 	Mod	Modulo. Visszaadja a maradékot, ha osztalék osztva osztó.
 	MouseClickDrag	Kattintások és birtokolja a megadott egérgombbal megmozdítja az egeret a cél koordinátákat, majd elengedi a gombot.
 	MouseGetPos	Letölti a jelenlegi helyzetben a kurzort, és esetleg melyik ablak és ellenőrzés lebeg.
@@ -1236,13 +1244,16 @@
 	NumPut	Üzletek száma bináris formában a megadott címre + offset és visszatér a címet, jobbra az elem csak írásban.
 	OnExit	Megadja a szubrutin automatikusan futnak, ha a script kilép.
 	OnMessage	Megadja a funkció hívás automatikusan a szkript megkapja az adott üzenetet.
+	Ord	Visszaadja a sorrendi értéket (számjegyet kód) az első karakter karakterlánc.
 	OutputDebug	Küld egy stringet a debugger (ha van ilyen) a kijelzőn.
 	Pause	Felfüggeszti a szkript aktuális téma.
 	PixelGetColor	Letölti a színe a pixel a megadott x, y koordinátákat.
 	PixelSearch	Keres a régióban a képernyőn egy pixel a megadott szín.
+	Pop	Eltávolítja és visszaadja az utolsó tömbelem.
 	PostMessage	Elhelyez egy üzenetet az üzenet sorban egy ablak vagy ellenőrzés.
 	Process	Elvégzi a következő műveletek a folyamat: ellenőrzi, hogy létezik, megváltoztatja a prioritás, bezárja, várja, hogy közel.
 	Progress	Hoz létre vagy frissíti tartalmazó ablak a folyamatjelző.
+	Push	Hozzáfűzi értékek a végén egy tömb.
 	Random	Létrehoz egy pszeudo-véletlenszám.
 	RegExMatch	Meghatározza, hogy a szöveg tartalmaz egy minta (reguláris kifejezés).
 	RegExReplace	Lecseréli események egy minta (reguláris kifejezés) belül egy string.
@@ -1250,6 +1261,7 @@
 	RegRead	Olvasás egy értéket a rendszerleíró adatbázisban.
 	RegWrite	Ír egy értéket a rendszerleíró adatbázisban.
 	RegisterCallback	Létrehoz egy gépi kódot címet, ha hívják, irányítja a hívást, hogy a funkciót a script.
+	RemoveAt	Eltávolítja az elemeket a megadott pozíció lineáris tömbben.
 	Return	Visszatér egy alprogram, amelynek végrehajtását korábban ugrott keresztül funkció-call, GOSUB, gyorsgombok aktiválás GroupActivate, vagy más módon.
 	Round	Ha n nincs megadva, vagy 0, számra kerekíti a legközelebbi egész számra. Ha N pozitív szám, szám kerekíti N tizedes. Ha N negatív szám kerekítve N számjegyek balra a tizedes pont.
 	Run	Egy külsõ programot futtat.

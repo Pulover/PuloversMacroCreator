@@ -238,8 +238,8 @@
 	w_Lang061 =	Ir (Shift+F9)
 	w_Lang062 =	Label (Ctrl+F9)
 	w_Lang063 =	Si Declaracions (F10)
-	w_Lang064 =	variables (Shift+F10)
-	w_Lang065 =	Funcions (Ctrl+F10)
+	w_Lang064 =	Variables (Shift+F10)
+	w_Lang065 =	Funcions / Mètodes de matriu (Ctrl+F10)
 	w_Lang066 =	Internet Explorer (F11)
 	w_Lang067 =	COM Interface (Shift+F11)
 	w_Lang068 =	Executar Scriptlet (Ctrl+F11)
@@ -484,10 +484,11 @@
 	c_Lang204 =	Avaluar L'expressió Matemàtica
 	c_Lang205 =	Regió
 	c_Lang206 =	(Utilitzeu [] per crear matrius, per exemple.: [10, 20, aVariable, "aString"])
-	c_Lang207 =	objecte de matriu
+	c_Lang207 =	Objecte De Matriu
 	c_Lang208 =	Nom de la clau
 	c_Lang209 =	Nom de valor
 	c_Lang210 =	Valors
+	c_Lang211 =	Array
 		
 ; Other Windows		
 	t_Lang001 =	Exporta a AutoHotkey
@@ -891,7 +892,7 @@
 	ExpView_TT =	Editor Avançat
 	ExpView2_TT =	Editor Avançat
 	OSProgB_TT =	Mostra la barra de progrés
-	OSTrans_TT =	opacitat
+	OSTrans_TT =	Opacitat
 	MRel_TT =	
 	(LTrim	
 		Moviments relatius a la posició actual.
@@ -1135,6 +1136,7 @@
 	CoordMode	Estableix la manera de coordinar a diversos comandaments que és relatiu a qualsevol de la finestra activa o la pantalla .
 	Cos	Retorna el cosinus trigonomètric del Nombre .
 	Critical	Evita que el fil actual de ser interromput per altres threads .
+	Delete	Elimina parells clau-valor d'un objecte.
 	DetectHiddenText	Determina si el text invisible en una finestra és " vista" amb el propòsit de trobar la finestra . Això afecta ordres com IfWinExist i WinActivate .
 	DetectHiddenWindows	Determina si les finestres invisibles són " vistos" per el guió .
 	DllCall	Crida a una funció dins d'una DLL , com una funció de l'API de Windows estàndard.
@@ -1180,6 +1182,7 @@
 	FileSetTime	Canvia el segell de data i hora d'un o més arxius o carpetes . Els comodins són compatibles .
 	Floor	Retorna Nombre arrodonit al nombre enter més pròxim ( sense sufix .00 ) .
 	For	Repeteix una sèrie de comandaments una vegada per a cada parell clau - valor en un objecte .
+	Format	Formats d'un nombre variable de valors d'entrada d'acord amb una cadena de format.
 	FormatTime	Transforma un timestamp YYYYMMDDHH24MISS en el format de data / hora especificada .
 	Func	Recupera una referència a una funció .
 	GetKeyName / GetKeyVK / GetKeySC	Recupera el nom o el text , codi de tecla virtual o codi scan d'una clau .
@@ -1190,6 +1193,7 @@
 	GroupAdd	Afegeix una especificació de finestra a un grup de finestres , creant el grup si cal .
 	GroupClose	Tanca la finestra activa si estava activat per GroupActivate o GroupDeactivate . A continuació , s'activa la següent finestra en la sèrie . També pot tancar totes les finestres d'un grup .
 	GroupDeactivate	Similar a GroupActivate excepte activa la finestra no en el grup .
+	HasKey	Retorna true si Key s'associa amb un valor.
 	if	Especifica la comanda ( s ) per dur a terme si la comparació d'una variable a un valor doni com a resultat VERDADER. Quan més d' un comando està present , tanqui en un bloc ( frens ) .
 	if (expression)	Especifica la comanda ( s ) per dur a terme si una expressió s'avalua com VERDADER.
 	If var [not] between	Comprova si el contingut d'una variable són numèricament o alfabèticament entre dos valors ( inclosos) .
@@ -1212,6 +1216,7 @@
 	IniWrite	Escriu un valor en un arxiu de format . Ini estàndard.
 	Input	Espera que l'usuari escrigui una cadena ( no suportat en Windows 9x : no fa res ) .
 	InputBox	Mostra un quadre d'entrada per demanar a l'usuari que introdueixi una cadena .
+	InsertAt	Insereix un o més valors en una posició donada dins d'un array lineal.
 	InStr	Busca un fet donat d'una cadena , de l'esquerra o la dreta .
 	)	
 	Ahk_Cmd_Index = %Ahk_Cmd_Index%`n	
@@ -1219,6 +1224,7 @@
 	KeyHistory	Mostra informació guió i una història de les pulsacions de teclat més recents i els clics del ratolí.
 	KeyWait	Espera una tecla o botó del ratolí / joystick per ser posat en llibertat o pressionat.
 	Labels	Una etiqueta identifica una línia de codi, i es pot utilitzar com un objectiu Goto o per formar una subrutina.
+	Length	Retorna la longitud d'una matriu lineal començant en la posició 1.
 	Log	Retorna el logaritme (base 10) del nombre.
 	Ln	Retorna el logaritme natural (base e) del número.
 	Loop (normal) 	Realitzeu una sèrie d'ordres en diverses ocasions: es troben ja sigui el nombre especificat de vegades o fins trencament.
@@ -1226,7 +1232,9 @@
 	Loop (parse a string)	Recupera subcadenes (camps) d'una cadena, d'una en una.
 	Loop (read file contents)	Recupera les línies en un arxiu de text, d'una en una (millor rendiment que FileReadLine).
 	Loop (registry)	Recupera el contingut de la subclau especificada, un element a la vegada.
+	MaxIndex	Retorna la tecla més alta sencer.
 	Menu	Crea, elimina, modifica i mostra els menús i elements de menú. Canvia la icona de la safata i la seva descripció. Controla si la finestra principal d'un script compilat es pot obrir.
+	MinIndex	Retorna la clau nombre enter més baix.
 	Mod	Mòdul. Retorna la resta al dividend es divideix per Divisor.
 	MouseClickDrag	Clicks i sosté el botó del ratolí especificat, mou el ratolí a les coordenades de destinació, després deixa anar el botó.
 	MouseGetPos	Recupera la posició actual del cursor del ratolí, i que opcionalment finestra i el control que plana sobre.
@@ -1236,13 +1244,16 @@
 	NumPut	Emmagatzema el número en format binari a l'adreça especificada + offset i retorna l'adreça a la dreta de l'element acabat escrit.
 	OnExit	Especifica una subrutina per executar automàticament quan l'script finalitza.
 	OnMessage	Especifica una funció per cridar automàticament quan l'script rep el missatge especificat.
+	Ord	Retorna el valor ordinal (codi de caràcter numèric) del primer caràcter en la cadena.
 	OutputDebug	Envia una cadena per al depurador (si escau) per a la seva visualització.
 	Pause	Les pauses subprocés actual de l'script.
 	PixelGetColor	Recupera el color del píxel a la x especificat, les coordenades i.
 	PixelSearch	Busca en una regió de la pantalla per un píxel del color especificat.
+	Pop	Elimina i retorna l'últim element de la matriu.
 	PostMessage	Col · loca un missatge a la cua de missatges d'una finestra o control.
 	Process	Realitza una de les següents operacions en un procés: comprova si existeix, canvia la seva prioritat, el tanca, espera que es tanqui.
 	Progress	Crea o actualitza una finestra amb una barra de progrés.
+	Push	Afegeix valors al final d'una matriu.
 	Random	Genera un nombre pseudo-aleatori.
 	RegExMatch	Determina si una cadena conté un patró (expressió regular).
 	RegExReplace	Substitueix les aparicions d'un patró (expressió regular) dins d'una cadena.
@@ -1250,6 +1261,7 @@
 	RegRead	Llegeix un valor del registre.
 	RegWrite	Escriu un valor al registre.
 	RegisterCallback	Crea una adreça de codi màquina que quan se'l crida, es redirigeix la crida a una funció en el guió.
+	RemoveAt	Elimina elements de la posició donada en una sèrie lineal.
 	Return	La rendibilitat d'una subrutina d'execució que havia saltat anteriorment a través de la funció de guàrdia, GOSUB, l'activació de tecles d'accés directe, GroupActivate, o per altres mitjans.
 	Round	Si N és omès o 0, nombre s'arrodoneix a l'enter més proper. Si N és nombre positiu, nombre s'arrodoneix al N decimals. Si N és negatiu, nombre s'arrodoneix per N dígits a l'esquerra del punt decimal.
 	Run	Executa un programa extern.

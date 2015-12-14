@@ -238,8 +238,8 @@
 	w_Lang061 =	Goto (Shift+F9)
 	w_Lang062 =	Label (Ctrl+F9)
 	w_Lang063 =	If (F10)
-	w_Lang064 =	zmiennych (Shift+F10)
-	w_Lang065 =	Funkcje (Ctrl+F10)
+	w_Lang064 =	Zmiennych (Shift+F10)
+	w_Lang065 =	Funkcje / Metody tablicy (Ctrl+F10)
 	w_Lang066 =	Internet Explorer (F11)
 	w_Lang067 =	COM interfejsu (Shift+F11)
 	w_Lang068 =	Uruchom Scriptlet (Ctrl+F11)
@@ -484,10 +484,11 @@
 	c_Lang204 =	Oceny Wyrażenie Matematyczne
 	c_Lang205 =	Region
 	c_Lang206 =	(Użyj [], aby utworzyć tablice, np .: [10, 20, aVariable, "aString"])
-	c_Lang207 =	obiekt Array
+	c_Lang207 =	Obiekt Array
 	c_Lang208 =	Nazwa klucza
 	c_Lang209 =	Nazwa wartości
 	c_Lang210 =	Wartości
+	c_Lang211 =	Szyk
 		
 ; Other Windows		
 	t_Lang001 =	Eksport do AutoHotkey
@@ -891,7 +892,7 @@
 	ExpView_TT =	Zaawansowany Edytor
 	ExpView2_TT =	Zaawansowany Edytor
 	OSProgB_TT =	Wyświetlić pasek postępu
-	OSTrans_TT =	nieprzezroczystość
+	OSTrans_TT =	Nieprzezroczystość
 	MRel_TT =	
 	(LTrim	
 		Zmiany w stosunku do aktualnej pozycji.
@@ -1135,6 +1136,7 @@
 	CoordMode	Zestawy koordynować trybu dla różnych poleceń się w stosunku do obu aktywnego okna lub ekranu .
 	Cos	Zwraca cosinus trygonometryczne numer .
 	Critical	Zapobiega bieżącego wątku z przerywane przez inne wątki .
+	Delete	Usuwa par klucz-wartość z obiektu.
 	DetectHiddenText	Określa, czy niewidoczny tekst w oknie jest "widziany " w celu znalezienia okno. Ma to wpływ na takie polecenia jak IfWinExist i WinActivate .
 	DetectHiddenWindows	Określa, czy niewidzialne okna są "widziane " przez skrypt .
 	DllCall	Wywołuje funkcję wewnątrz DLL , na przykład standardowej funkcji API systemu Windows.
@@ -1180,6 +1182,7 @@
 	FileSetTime	Zmienia datetime pieczęć jednego lub więcej plików lub folderów. Jokery są obsługiwane.
 	Floor	Zwraca Number zaokrąglona w dół do najbliższej liczby całkowitej ( bez 0,00 przyrostek ) .
 	For	Powtarza serię poleceń raz dla każdej pary klucz-wartość w obiekcie .
+	Format	Formatuje zmienną liczbę wartości wejściowych według własnego formatu.
 	FormatTime	Przekształca YYYYMMDDHH24MISS znacznik czasu do określonego formatu daty / czasu .
 	Func	Pobiera odwołanie do funkcji.
 	GetKeyName / GetKeyVK / GetKeySC	Pobiera nazwę lub tekst , wirtualny kod klawisza lub zeskanować kod z kluczyka.
@@ -1190,6 +1193,7 @@
 	GroupAdd	Dodaje specyfikację okien do grupy okien , tworząc grupę, jeśli to konieczne.
 	GroupClose	Zamyka aktywne okno , czy to właśnie aktywowane przez GroupActivate lub GroupDeactivate . Następnie aktywuje się następne okno w serii . Można również zamknąć wszystkie okna w grupie.
 	GroupDeactivate	Podobne do GroupActivate wyjątkiem aktywuje następne okno nie w grupie.
+	HasKey	Zwraca true, jeśli klucz jest związane z wartością.
 	if	Określapolecenie (y) do wykonania , jeśliporównanie zmiennej do wartości evalutes TRUE . Jeżeli więcej niż jedno polecenie jest obecny , należy ująć je w bloku ( szelki ) .
 	if (expression)	Określapolecenie (y) do wykonania , jeśliwyrażenie ma wartość TRUE .
 	If var [not] between	Sprawdza, czy zmienna jest zawartość są numerycznie lub alfabetycznie pomiędzy dwoma wartościami (włącznie) .
@@ -1212,6 +1216,7 @@
 	IniWrite	Zapisujewartość do standardowego formatu . Pliku ini .
 	Input	Czeka naużytkownika wpisz ciąg znaków ( nie są obsługiwane w systemie Windows 9x : nic nie robi ) .
 	InputBox	Wyświetlapole wprowadzania poprosić użytkownika o wprowadzenie ciągu znaków .
+	InsertAt	Wstawienie jednego lub więcej wartości w danej pozycji w liniową matrycę.
 	InStr	Wyszukiwania dla danego wystąpienia łańcucha , z lewej lub z prawej strony.
 	)	
 	Ahk_Cmd_Index = %Ahk_Cmd_Index%`n	
@@ -1219,6 +1224,7 @@
 	KeyHistory	Wyświetlanie informacji skrypt i historia z ostatnich klawiszy i kliknięć myszką.
 	KeyWait	Czeka na przycisku klucza lub mysz / joystick być wydany lub sprasowany.
 	Labels	Etykieta określa linię kodu, i może być stosowany jako cel Goto, lub tworzenia podprogram.
+	Length	Zwraca długość układu liniowego rozpoczynającego się w pozycji 1.
 	Log	Zwraca logarytm (o podstawie 10) z numeru.
 	Ln	Zwraca logarytm naturalny (e baza) z numeru.
 	Loop (normal) 	Wykonaj serię poleceń wielokrotnie: albo określoną liczbę razy lub do momentu napotkania przerwie.
@@ -1226,7 +1232,9 @@
 	Loop (parse a string)	Pobiera podciągi (pola) z ciągiem, jeden na raz.
 	Loop (read file contents)	Pobiera wiersze w pliku tekstowym, po jednym na raz (działa lepiej niż FileReadLine).
 	Loop (registry)	Pobiera zawartość określonego podklucz rejestru, jeden element naraz.
+	MaxIndex	Zwraca największy klucz całkowitą.
 	Menu	Tworzy, usuwa, zmienia i wyświetla menu i ich elementów. Zmienia ikonę w zasobniku i jego tooltip. Określa, czy główne okno skompilowanego skryptu można otworzyć.
+	MinIndex	Zwraca najniższy klucz całkowitą.
 	Mod	Modulo. Zwraca resztę, gdy dywidendy dzieli się przez dzielnik.
 	MouseClickDrag	Kliknięcia i posiada określony przycisk myszy, przesuwa kursor do współrzędnych docelowego, a następnie zwalnia przycisk.
 	MouseGetPos	Pobiera bieżącą pozycję kursora myszy i ewentualnie które okno i kontroli jest aktywując.
@@ -1236,13 +1244,16 @@
 	NumPut	Sklepy Numer w formacie binarnym na wskazany adres + offset i zwraca adres z prawej pozycji tylko w formie pisemnej.
 	OnExit	Określa podprogramu, aby uruchomić się automatycznie po zamknięciu skryptów.
 	OnMessage	Określa funkcję połączenie automatycznie po skrypt otrzymuje określoną wiadomość.
+	Ord	Zwraca wartość porządkową (numeryczny kodu znaków) pierwszego znaku w ciągu znaków.
 	OutputDebug	Wysyła ciąg do debuggera (jeśli w ogóle) na wyświetlaczu.
 	Pause	Wstrzymuje skryptu bieżącego wątku.
 	PixelGetColor	Pobiera kolor piksela w określonym współrzędne x, y.
 	PixelSearch	Przeszukuje obszar ekranu dla piksela określonego koloru.
+	Pop	Usuwa i zwraca ostatni element tablicy.
 	PostMessage	Umieszcza wiadomość w kolejce komunikatów z okna lub kontroli.
 	Process	Wykonuje jeden z następujących operacji na procesie: sprawdza, czy istnieje, zmienia swój priorytet, zamyka go, czeka na to, aby zamknąć.
 	Progress	Tworzy lub aktualizuje okno zawierające pasek postępu.
+	Push	Dołącza wartości koniec tablicy.
 	Random	Generuje pseudo-losową liczbę.
 	RegExMatch	Określa, czy ciąg zawiera wzór (wyrażenie regularne).
 	RegExReplace	Zastępuje wystąpień wzorca (wyrażenie regularne) wewnątrz ciągu.
@@ -1250,6 +1261,7 @@
 	RegRead	Odczytuje wartości z rejestru.
 	RegWrite	Zapisuje wartość do rejestru.
 	RegisterCallback	Tworzy kodu maszynowego adres, że po nazwie, przekierowuje połączenia do funkcji w skrypcie.
+	RemoveAt	Usuwa elementy z danej pozycji w układzie liniowym.
 	Return	Powrót z podprogramu do których wykonanie wcześniej wyskoczył przez funkcyjnego-call, GoSub aktywacji skrótów, GroupActivate, lub w inny sposób.
 	Round	Jeśli brak N lub 0, liczba jest zaokrąglana do najbliższej liczby całkowitej. Jeżeli N jest liczbą dodatnią, liczba jest zaokrąglana do n miejsc po przecinku. Jeśli N jest ujemny, liczba jest zaokrąglana do n cyfr po lewej stronie przecinka dziesiętnego.
 	Run	Uruchamia program zewnętrzny.

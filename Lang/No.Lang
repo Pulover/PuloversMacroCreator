@@ -238,8 +238,8 @@
 	w_Lang061 =	Goto (Shift+F9)
 	w_Lang062 =	Label (Ctrl+F9)
 	w_Lang063 =	Hvis uttalelsene (F10)
-	w_Lang064 =	variabler (Shift+F10)
-	w_Lang065 =	Funksjoner (Ctrl+F10)
+	w_Lang064 =	Variabler (Shift+F10)
+	w_Lang065 =	Funksjoner / Array-metoder (Ctrl+F10)
 	w_Lang066 =	Internet Explorer (F11)
 	w_Lang067 =	COM-grensesnitt (Shift+F11)
 	w_Lang068 =	Kjør Skriptlet (Ctrl+F11)
@@ -484,10 +484,11 @@
 	c_Lang204 =	Evaluere Matematisk Uttrykk
 	c_Lang205 =	Region
 	c_Lang206 =	(Bruk [] for å lage matriser, f.eks .: [10, 20, aVariable, "aString"])
-	c_Lang207 =	matrise objekt
+	c_Lang207 =	Matrise Objekt
 	c_Lang208 =	Nøkkelnavn
 	c_Lang209 =	Verdinavn
 	c_Lang210 =	Verdier
+	c_Lang211 =	Matrise
 		
 ; Other Windows		
 	t_Lang001 =	Eksportere til AutoHotkey
@@ -891,7 +892,7 @@
 	ExpView_TT =	Avansert Redigeringsprogram
 	ExpView2_TT =	Avansert Redigeringsprogram
 	OSProgB_TT =	Vise Progress Bar
-	OSTrans_TT =	opasitet
+	OSTrans_TT =	Opasitet
 	MRel_TT =	
 	(LTrim	
 		Bevegelser i forhold til nåværende posisjon.
@@ -1135,6 +1136,7 @@
 	CoordMode	Stiller koordinere modus for forskjellige kommandoer til å være i forhold til enten den aktive vinduet eller skjermen.
 	Cos	Returnerer trigonometriske cosinus til nummer.
 	Critical	Hindrer aktuelle tråden fra å bli avbrutt av andre tråder .
+	Delete	Fjerner nøkkelverdipar fra et objekt.
 	DetectHiddenText	Bestemmer om usynlig tekst i et vindu blir " sett" for det formål å finne vinduet. Dette påvirker kommandoer som IfWinExist og WinActivate .
 	DetectHiddenWindows	Bestemmer om usynlige vinduer er " sett" av skriptet.
 	DllCall	Kaller en funksjon inne i en DLL, for eksempel en standard Windows API-funksjonen .
@@ -1180,6 +1182,7 @@
 	FileSetTime	Endrer datetime preg av en eller flere filer eller mapper . Jokertegn støttes.
 	Floor	Returnerer tall rundet ned til nærmeste heltall ( uten .00 suffiks ) .
 	For	Gjentar en serie med kommandoer en gang for hver tast - verdi-par i et objekt .
+	Format	Formaterer et variabelt antall inngangsverdier i henhold til et format streng.
 	FormatTime	Forvandler en YYYYMMDDHH24MISS tidsstempel inn aktuell dato / klokkeslett.
 	Func	Henter en referanse til en funksjon.
 	GetKeyName / GetKeyVK / GetKeySC	Henter navnet eller tekst , virtuell nøkkel koden eller skann koden av en nøkkel .
@@ -1190,6 +1193,7 @@
 	GroupAdd	Legger et vindu spesifikasjonen til et vindu gruppe , skaper gruppen hvis det er nødvendig .
 	GroupClose	Lukker det aktive vinduet hvis det bare ble aktivert ved GroupActivate eller GroupDeactivate . Den aktiverer deretter neste vindu i serien. Det kan også lukke alle vinduer i en gruppe.
 	GroupDeactivate	I likhet med GroupActivate bortsett aktiverer det neste vinduet ikke er i gruppen .
+	HasKey	Returnerer sann hvis Key er assosiert med en verdi.
 	if	Angir kommandoen (e ) for å utføre hvis sammenligning av en variabel til en verdi evalutes til TRUE . Når mer enn én kommando er til stede , legge dem i en blokk ( tannregulering ) .
 	if (expression)	Angir kommandoen (e ) for å utføre hvis et uttrykk evalueres til SANN .
 	If var [not] between	Kontrollerer om en innholdet i variabelen er numerisk eller alfabetisk mellom to verdier ( inkludert).
@@ -1212,6 +1216,7 @@
 	IniWrite	Skriver en verdi til et standard format . Ini -fil.
 	Input	Waits for brukeren å skrive inn en streng ( støttes ikke på Windows 9x : det gjør ingenting ) .
 	InputBox	Viser en tekstboks for å be brukeren om å skrive inn en streng .
+	InsertAt	Setter inn en eller flere verdier i en gitt posisjon i en lineær rekke.
 	InStr	Søker etter en gitt forekomst av en streng , fra venstre eller høyre.
 	)	
 	Ahk_Cmd_Index = %Ahk_Cmd_Index%`n	
@@ -1219,6 +1224,7 @@
 	KeyHistory	Viser script info og en historie av de siste tastetrykk og museklikk.
 	KeyWait	Venter på en tast eller mus / joystick knappen for å bli løslatt eller trykkes ned.
 	Labels	En etikett identifiserer en linje med kode, og kan brukes som et mål Goto, eller å danne en subrutine.
+	Length	Returnerer lengden av en lineær oppstilling som begynner ved posisjon 1.
 	Log	Returnerer logaritmen (base 10) av nummer.
 	Ln	Returnerer den naturlige logaritmen (base e) av nummer.
 	Loop (normal) 	Utføre en rekke kommandoer gjentatte ganger: enten spesifisert antall ganger eller til pause er oppstått.
@@ -1226,7 +1232,9 @@
 	Loop (parse a string)	Henter understrenger (felt) fra en streng, ett om gangen.
 	Loop (read file contents)	Henter linjer i en tekstfil, ett om gangen (utfører bedre enn FileReadLine).
 	Loop (registry)	Henter innholdet i den angitte registerundernøkkelen, ett element om gangen.
+	MaxIndex	Returnerer høyeste heltall nøkkelen.
 	Menu	Oppretter, sletter, modifiserer og viser menyer og menyelementer. Endrer ikonet og verktøytips. Kontrollerer om hovedvinduet i en kompilert skript kan åpnes.
+	MinIndex	Returnerer den laveste heltall nøkkelen.
 	Mod	Modulo. Returnerer resten når Utbytte er delt av Divisor.
 	MouseClickDrag	Klikk og holder den angitte museknapp, beveger musen til målet koordinater, så slipper knappen.
 	MouseGetPos	Henter den aktuelle posisjonen til musepekeren, og eventuelt hvilket vindu og kontroll det er hovering over.
@@ -1236,13 +1244,16 @@
 	NumPut	Butikker Antall i binært format på den angitte adressen + offset og returnerer adressen til høyre for elementet nettopp skrevet.
 	OnExit	Angir en subrutine for å kjøre automatisk når skriptet utganger.
 	OnMessage	Angir en funksjon for å ringe automatisk når skriptet mottar den angitte meldingen.
+	Ord	Returnerer ordens verdi (numerisk tegnkode) for det første tegnet i String.
 	OutputDebug	Sender en streng til debugger (hvis noen) for visning.
 	Pause	Pauser skriptet nåværende tråden.
 	PixelGetColor	Henter fargen på piksel ved de angitte x, koordinerer y.
 	PixelSearch	Søker en region av skjermen for en piksel i den angitte fargen.
+	Pop	Fjerner og returnerer den siste array element.
 	PostMessage	Plasserer en melding i sin meldingsboks kø av et vindu eller kontroll.
 	Process	Utfører en av følgende operasjoner på en prosess: sjekker om det finnes, endrer prioritet, lukker den, venter på det å lukke.
 	Progress	Oppretter eller oppdaterer et vindu med en fremgang bar.
+	Push	Legger verdier til enden av en matrise.
 	Random	Genererer en pseudo-tilfeldige tall.
 	RegExMatch	Avgjør om en streng inneholder et mønster (regulært uttrykk).
 	RegExReplace	Erstatter forekomster av et mønster (regulært uttrykk) inne i en streng.
@@ -1250,6 +1261,7 @@
 	RegRead	Leser en verdi fra registret.
 	RegWrite	Skriver en verdi i registret.
 	RegisterCallback	Oppretter en maskin-kode adresse som da kalles, viderekobler anrop til en funksjon i manuset.
+	RemoveAt	Fjerner elementer fra en gitt posisjon i en lineær rekke.
 	Return	Returnerer fra en subrutine som henrettelsen tidligere hadde hoppet via funksjon-call, Gosub, hurtigtast aktivering, GroupActivate, eller på andre måter.
 	Round	Hvis N er utelatt eller 0, er nummer avrundet til nærmeste heltall. Hvis N er positivt tall, er nummer avrundet til N desimaler. Hvis N er negativ, er nummer rundet av N sifre til venstre for desimaltegnet.
 	Run	Kjører et eksternt program.

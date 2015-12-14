@@ -239,7 +239,7 @@
 	w_Lang062 =	Label (Strg+F9)
 	w_Lang063 =	If Anweisungen (F10)
 	w_Lang064 =	Variablen (Umschalt+F10)
-	w_Lang065 =	Funktionen (Strg+F10)
+	w_Lang065 =	Funktionen / Array-Verfahren (Strg+F10)
 	w_Lang066 =	Internet Explorer (F11)
 	w_Lang067 =	COM-Schnittstelle (Umschalt+F11)
 	w_Lang068 =	Scriptlet ausführen (Strg+F11)
@@ -488,6 +488,7 @@
 	c_Lang208 =	Schlüsselnamen
 	c_Lang209 =	Wertname
 	c_Lang210 =	Werte
+	c_Lang211 =	Array
 		
 ; Other Windows		
 	t_Lang001 =	Export nach AutoHotkey
@@ -1135,6 +1136,7 @@
 	CoordMode	Sets koordinieren Modus für verschiedene Befehle zu sein in Bezug auf entweder das aktive Fenster oder den Bildschirm.
 	Cos	Gibt den trigonometrischen Kosinus Nummer .
 	Critical	Verhindert den aktuellen Thread aus, die von anderen Threads unterbrochen.
+	Delete	Entfernt Schlüssel-Wert-Paare von einem Objekt.
 	DetectHiddenText	Bestimmt, ob unsichtbaren Text in einem Fenster "gesehen" wird zum Zweck der Suche nach dem Fenster . Dies wirkt sich auf Befehle wie IfWinExist und WinActivate .
 	DetectHiddenWindows	Legt fest, ob unsichtbare Fenster "gesehen" durch das Skript .
 	DllCall	Ruft eine Funktion in einer DLL , wie ein Standard-Windows- API-Funktion .
@@ -1180,6 +1182,7 @@
 	FileSetTime	Ändert die datetime Stempel der eine oder mehrere Dateien oder Ordner . Wildcards werden unterstützt.
 	Floor	Versandkosten Anzahl abgerundet auf die nächste ganze Zahl ( ohne .00 Suffix) .
 	For	Wiederholt eine Reihe von Befehlen für jeden Schlüssel - Wert-Paar in einem Objekt .
+	Format	Formatiert eine variable Anzahl von Eingangswerten entsprechend einem Formatstring.
 	FormatTime	Verwandelt einen YYYYMMDDHH24MISS Zeitstempel in der angegebenen Datum / Zeit -Format .
 	Func	Ruft einen Verweis auf eine Funktion .
 	GetKeyName / GetKeyVK / GetKeySC	Ruft den Namen oder Text, virtual key code oder Scan-Code einer Taste .
@@ -1190,6 +1193,7 @@
 	GroupAdd	Fügt ein Fenster Spezifikation zu einem Fenster -Gruppe, die Gruppe erstellt , falls erforderlich.
 	GroupClose	Schließt das aktive Fenster, wenn es gerade durch GroupActivate oder GroupDeactivate aktiviert. Dann aktiviert das nächste Fenster in der Reihe. Es können auch alle Fenster in einer Gruppe.
 	GroupDeactivate	Ähnlich GroupActivate außer aktiviert das nächste Fenster nicht in der Gruppe.
+	HasKey	Liefert true, wenn Key wird mit einem Wert verbunden.
 	if	Gibt das Kommando ( s ), um , wenn der Vergleich einer Variablen auf einen Wert evalutes auf TRUE . Wenn mehr als ein Befehl vorhanden ist, schließen Sie sie in einem Block (Zahnspangen ) .
 	if (expression)	Gibt der Befehl (en) durchführen, wenn ein Ausdruck TRUE .
 	If var [not] between	Prüft, ob eine Variable Inhalte sind numerisch oder alphabetisch zwischen zwei Werten (einschließlich) .
@@ -1212,6 +1216,7 @@
 	IniWrite	Schreibt einen Wert in einem standardisierten Format . INI-Datei.
 	Input	Wartet der Benutzer eine Zeichenfolge ( nicht Windows 9x unterstützt: es tut nichts ) eingeben.
 	InputBox	Zeigt ein Eingabefeld , um den Benutzer fragen , um eine Zeichenfolge eingeben .
+	InsertAt	Fügt einen oder mehrere Werte in einer gegebenen Position in einer linearen Anordnung.
 	InStr	Das nach einem bestimmten Auftreten einer Zeichenfolge , von der linken oder der rechten Seite.
 	)	
 	Ahk_Cmd_Index = %Ahk_Cmd_Index%`n	
@@ -1219,6 +1224,7 @@
 	KeyHistory	Zeigt script info und eine Geschichte der jüngsten Tastatureingaben und Mausklicks.
 	KeyWait	Wartet auf eine Taste oder Maus / Joystick-Taste, um freigelassen werden oder nach unten gedrückt.
 	Labels	Ein Label kennzeichnet eine Codezeile, und kann als Goto Ziel oder ein Unterprogramm Form verwendet werden.
+	Length	Gibt die Länge eines linearen Arrays in Position 1 beginnt.
 	Log	Liefert den Logarithmus (Basis 10) der Anzahl.
 	Ln	Gibt den natürlichen Logarithmus (Basis e) der Anzahl.
 	Loop (normal) 	Führen Sie eine Reihe von Befehlen wiederholt: entweder die angegebene Anzahl von Malen oder bis zum Bruch aufgetreten ist.
@@ -1226,7 +1232,9 @@
 	Loop (parse a string)	Ruft Teilstrings (Felder) aus einem String, ein zu einer Zeit.
 	Loop (read file contents)	Ruft die Zeilen in einer Textdatei, einer nach dem anderen (besseren Ergebnissen führt als FileReadLine).
 	Loop (registry)	Ruft den Inhalt des angegebenen Registrierungsunterschlüssel, ein Element zu einem Zeitpunkt.
+	MaxIndex	Gibt die höchste Ganzzahl-Taste.
 	Menu	Erstellt, löscht modifiziert und zeigt Menüs und Menüpunkte. Ändert das Symbol in der Taskleiste und seine Tooltip. Steuert, ob das Hauptfenster einer kompilierten Skript geöffnet werden können.
+	MinIndex	Gibt die kleinste ganze Zahl drücken.
 	Mod	Modulo. Gibt den Rest, wenn Dividend durch Divisor geteilt wird.
 	MouseClickDrag	Klicks und hält den angegebenen Maustaste bewegt sich die Maus an den Zielkoordinaten, löst dann die Taste.
 	MouseGetPos	Ruft die aktuelle Position des Mauszeigers und gegebenenfalls welche Fenster und Kontrolle ist es schwebt über.
@@ -1236,13 +1244,16 @@
 	NumPut	Anzahl Stores im binären Format an die angegebene Adresse + Offset und gibt die Adresse auf der rechten Seite der Artikel gerade geschrieben.
 	OnExit	Gibt eine Subroutine automatisch, wenn das Skript beendet laufen.
 	OnMessage	Gibt eine Funktion, um automatisch anrufen, wenn das Skript erhält die angegebene Nachricht.
+	Ord	Gibt den Ordinalwert (numerisches Zeichen-Code) des ersten Zeichens im String.
 	OutputDebug	Sendet eine Zeichenfolge an den Debugger (falls vorhanden) für die Anzeige.
 	Pause	Pausiert das Skript den aktuellen Thread.
 	PixelGetColor	Ruft die Farbe des Pixels an der angegebenen x, y-Koordinaten.
 	PixelSearch	Durchsucht einen Bereich des Bildschirms für ein Pixel der angegebenen Farbe.
+	Pop	Entfernt und liefert den letzten Array-Element.
 	PostMessage	Platziert eine Nachricht in der Warteschlange eines Fensters oder Kontrolle.
 	Process	Führt eine der folgenden Operationen auf einen Prozess: überprüft, ob es existiert; ändert seine Priorität; schließt; wartet es zu schließen.
 	Progress	Erzeugt oder aktualisiert ein Fenster mit einem Fortschrittsbalken.
+	Push	Fügt Werte an das Ende des Arrays.
 	Random	Erzeugt einen Pseudo-Zufallszahlengenerator.
 	RegExMatch	Bestimmt, ob eine Zeichenfolge ein Muster (reguläre Ausdrücke) enthält.
 	RegExReplace	Ersetzt Vorkommen eines Musters (reguläre Ausdrücke) in einem String.
@@ -1250,6 +1261,7 @@
 	RegRead	Liest einen Wert aus der Registry.
 	RegWrite	Schreibt einen Wert in der Registry.
 	RegisterCallback	Erstellt eine Maschinencode-Adresse, die, wenn sie aufgerufen, leitet den Aufruf einer Funktion in das Skript.
+	RemoveAt	Elemente entfernt von der gegebenen Position in einer linearen Anordnung.
 	Return	Erträge aus einem Unterprogramm, auf die Ausführung zuvor über-Call-Funktion, Gosub, Hotkey-Aktivierung, GroupActivate oder andere Mittel gesprungen.
 	Round	Wenn N weggelassen oder 0, wird Zahl auf die nächste ganze Zahl gerundet. Wenn N ist positive Zahl ist die Nummer auf N Dezimalstellen gerundet. Wenn N negativ ist, wird durch die Anzahl N Stellen links von dem Komma gerundet.
 	Run	Führt ein externes Programm.

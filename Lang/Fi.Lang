@@ -239,7 +239,7 @@
 	w_Lang062 =	Label (Ctrl+F9)
 	w_Lang063 =	Jos lausunnot (F10)
 	w_Lang064 =	Muuttujat (Shift+F10)
-	w_Lang065 =	Funktiot (Ctrl+F10)
+	w_Lang065 =	Funktiot / Array menetelmiä (Ctrl+F10)
 	w_Lang066 =	Internet Explorer (F11)
 	w_Lang067 =	COM liitäntä (Shift+F11)
 	w_Lang068 =	Suorita Komentosarjasovelman (Ctrl+F11)
@@ -484,10 +484,11 @@
 	c_Lang204 =	Arvioida Matemaattinen Lauseke
 	c_Lang205 =	Alue
 	c_Lang206 =	(Käytä [] luoda taulukoita, esim .: [10, 20, aVariable, "aString"])
-	c_Lang207 =	array esine
+	c_Lang207 =	Array Esine
 	c_Lang208 =	Avaimen nimi
 	c_Lang209 =	Arvo nimi
 	c_Lang210 =	Arvot
+	c_Lang211 =	Ryhmä
 		
 ; Other Windows		
 	t_Lang001 =	Vie AutoHotkey
@@ -891,7 +892,7 @@
 	ExpView_TT =	Kehittynyt Editori
 	ExpView2_TT =	Kehittynyt Editori
 	OSProgB_TT =	Näyttö Progress Bar
-	OSTrans_TT =	sameus
+	OSTrans_TT =	Sameus
 	MRel_TT =	
 	(LTrim	
 		Liikkeet suhteessa nykyiseen asentoon.
@@ -1135,6 +1136,7 @@
 	CoordMode	Lavastus koordinoida tilassa eri komennot ovat suhteessa jokoaktiivisen ikkunan tainäytön .
 	Cos	Palauttaatrigonometriset kosinin lukumäärä.
 	Critical	Estäänykyisen lanka on katkaistu muut ketjut .
+	Delete	Poistaa avainarvopareja objektista.
 	DetectHiddenText	Määrittää, näkymätön tekstiikkuna on " nähnyt" varten löytääikkuna . Tämä vaikuttaa komennot kuten IfWinExist ja WinActivate .
 	DetectHiddenWindows	Määrittää, näkymätön ikkunat " näkee"kirjoitus.
 	DllCall	Puheluttoiminnon sisälläDLL , kutenstandardi Windows API-funktiota .
@@ -1180,6 +1182,7 @@
 	FileSetTime	Muuttaapäivämäärä leima yhden tai useampia tiedostoja tai kansioita . Korvausmerkkejä tuettu .
 	Floor	Palauttaa lukumäärä pyöristettynälähimpään kokonaislukuun ( ilman 0,00 pääte ) .
 	For	Toistaa sarjan komentoja kerran kutakin avain-arvo pariesine .
+	Format	Alustaa vaihteleva määrä panos arvojen mukaan muotomerkkijonon.
 	FormatTime	MuuttaaYYYYMMDDHH24MISS aikaleima tuleetietyin päivämäärä / aika.
 	Func	Hakee viittaustoiminto .
 	GetKeyName / GetKeyVK / GetKeySC	Hakeenimi tai tekstiä , virtuaalinen avain koodi tai scan koodinäppäintä.
@@ -1190,6 +1193,7 @@
 	GroupAdd	Lisääikkunan toiveidenikkunan ryhmään , luodaryhmä tarvittaessa .
 	GroupClose	Sulkeeaktiivisen ikkunan , jos se vain aktivoituu GroupActivate tai GroupDeactivate . Se aktivoi sitten seuraavaan ikkunaan sarjassa . Se voi myös sulkea kaikki ikkunatryhmään .
 	GroupDeactivate	Samanlaisia GroupActivate paitsi aktivoiseuraava ikkuna kuulu ryhmään .
+	HasKey	Palauttaa true jos Key liittyy arvo.
 	if	Määrittääkomennon (t ) suorittaa , josvertailumuuttujanarvo evalutes TOSI . Kun useampi kuin yksi komento on läsnä , kirjoita nelohko ( olkaimet ) .
 	if (expression)	Määrittääkomennon ( t) suorittaa , joslauseke on TOSI .
 	If var [not] between	Tarkistaa, onkomuuttujan sisältöä ovat numeerisesti tai aakkosjärjestyksessä kahden arvon välillä (mukaan lukien) .
@@ -1212,6 +1216,7 @@
 	IniWrite	Kirjoittaaarvovakiomalli . Ini-tiedoston .
 	Input	Odottaakäyttäjä kirjoittaamerkkijonon ( ei tueta Windows 9x : se ei tee mitään ) .
 	InputBox	Näyttääkirjoitusruutu pyytääkäyttäjää syöttämäänmerkkijono .
+	InsertAt	Lisää yhden tai useampia arvoja tietyllä asema lineaarista.
 	InStr	Hakeetietyn esiintyminenmerkkijonon , vasemmalta taioikealta .
 	)	
 	Ahk_Cmd_Index = %Ahk_Cmd_Index%`n	
@@ -1219,6 +1224,7 @@
 	KeyHistory	Näyttää script info ja historian viimeisimmän näppäimistön ja hiiren napsautuksella.
 	KeyWait	Odottaa näppäintä tai hiiren / joystick-painiketta vapautetaan tai painetaan alas.
 	Labels	Merkki osoittaa, rivi koodia, ja sitä voidaan käyttää Goto kohde tai muodostaa aliohjelmaan.
+	Length	Palauttaa pituus lineaarisen joka alkaa asemassa 1.
 	Log	Palauttaa logaritmin (base 10) lukumäärä.
 	Ln	Palauttaa luvun luonnollisen logaritmin (base e) ja lukumäärä.
 	Loop (normal) 	Suorita sarja käskyjä toistuvasti: joko annettu määrä kertoja tai kunnes tauko on kohdannut.
@@ -1226,7 +1232,9 @@
 	Loop (parse a string)	Hakee merkkijonoa (kentät) alkaen merkkijonon, yksi kerrallaan.
 	Loop (read file contents)	Hakee rivit tekstitiedosto, yksi kerrallaan (toimii paremmin kuin FileReadLine).
 	Loop (registry)	Hakee sisältö määritelty aliavaimen yhden kohteen kerrallaan.
+	MaxIndex	Palauttaa korkein kokonaisluvun avain.
 	Menu	Luo, poistaa, muuttaa ja näyttää valikot ja valikon. Muuttaa kuvaketta ja sen tooltip. Ohjaa, pääikkuna koottu script voidaan avata.
+	MinIndex	Palauttaa alin kokonaisluvun avain.
 	Mod	Modulo. Palauttaa jakojäännös, kun osinko jaetaan jakaja.
 	MouseClickDrag	Napsauttaa ja pitää määritetyn hiiren painike siirtää hiirtä määränpäähän koordinaatit, vapauttaa sitten painiketta.
 	MouseGetPos	Hakee nykyinen asema hiiren kursori, ja valinnaisesti joka ikkunasta ja valvonnan yhteydessä leijuu.
@@ -1236,13 +1244,16 @@
 	NumPut	Kaupat määrä binäärimuodossa määrättyyn osoitteeseen aikaeron ja palauttaa osoitteen kohteen oikealla puolella juuri kirjoitettu.
 	OnExit	Määrittää aliohjelman toimimaan automaattisesti kun käsikirjoitus poistuu.
 	OnMessage	Määrittää toiminnon soittaa automaattisesti, kun käsikirjoitus vastaanottaa tietyn viestin.
+	Ord	Palauttaa järjestysluku arvo (numeerinen merkki koodi) ensimmäisen merkin merkkijono.
 	OutputDebug	Lähettää merkkijonon debuggeri (mahdolliset) näyttö.
 	Pause	Keskeyttää skriptin nykyisen säikeen.
 	PixelGetColor	Noutaa pikselin väriä määritellyssä x, y-koordinaatit.
 	PixelSearch	Hakee alueen näytön pikseli tietyn värin.
+	Pop	Poistaa ja palauttaa viime taulukkoelementti.
 	PostMessage	Asettaa viestin viestin jonoon ikkunan tai valvontaa.
 	Process	Suorittaa jonkin seuraavista toiminnoista prosessi: tarkistaa jos se on olemassa, muuttuu sen etusijalle, sulkee sen, odottaa sen sulkemaan.
 	Progress	Luo tai päivittää ikkunan, joka sisältää tämänhetkisen tilan.
+	Push	Liittää arvot loppuun jono.
 	Random	Tuottaa pseudo-random numero.
 	RegExMatch	Määrittää, onko merkkijono sisältää kuvio (säännöllinen lauseke).
 	RegExReplace	Korvaa esiintymiä kuvio (säännöllinen lauseke) sisällä merkkijono.
@@ -1250,6 +1261,7 @@
 	RegRead	Lukee arvo rekisteristä.
 	RegWrite	Kirjoittaa arvon rekisteriin.
 	RegisterCallback	Luo kone-koodi osoite, että kun kutsutaan, ohjaa puhelun toiminnon script.
+	RemoveAt	Poistaa kohteita annetaan asema lineaarista.
 	Return	Palataan alirutiinista, jonka tehtäväksi oli aiemmin hypännyt kautta toiminta-puhelun, Gosub, pikanäppäin aktivointi, GroupActivate tai muilla keinoin.
 	Round	Jos N on annettu tai 0, luku pyöristetään lähimpään kokonaislukuun. Jos N on positiivinen luku, luku pyöristetään N desimaalin tarkkuudella. Jos N on negatiivinen, luku pyöristetään N Numeroa vasemmalla puolella desimaalipilkun.
 	Run	Toimii ulkoinen ohjelma.

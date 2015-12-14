@@ -2951,8 +2951,11 @@ http.open("GET", url, false)
 http.SetRequestHeader("User-Agent", "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0)")
 http.SetRequestHeader("Referer", url)
 http.SetRequestHeader("Content-Type", "application/x-www-form-urlencoded")
-http.Send()
-VerChk := RegExReplace(http.ResponseText, "s).*Version: ([\d\.]+).*", "$1", vFound)
+Try
+{
+	http.Send()
+	VerChk := RegExReplace(http.ResponseText, "s).*Version: ([\d\.]+).*", "$1", vFound)
+}
 If (vFound)
 {
 	If (VerChk <> CurrentVersion)
@@ -4782,7 +4785,7 @@ Gui, 3:Add, CheckBox, -Wrap y+5 xs+10 W200 vAddIf, %c_Lang162%
 ; KeyWait
 Gui, 3:Tab, 3
 Gui, 3:Add, GroupBox, Section xm ym W450 H130
-Gui, 3:Add, Text, -Wrap ys+20 xs+10 W180 R1 Right, %c_Lang052%:
+Gui, 3:Add, Text, -Wrap ys+20 xs+10 W180 R1 Right vWaitKeysT, %c_Lang052%:
 Gui, 3:Add, Hotkey, yp x+10 vWaitKeys gWaitKeys W120
 Gui, 3:Add, Checkbox, y+20 xs+10 -Wrap W180 R1 Right vWaitKeyList gWaitKeyList, %c_Lang184%:
 Gui, 3:Add, Combobox, yp-3 x+10 W120 vKeyW Disabled, %KeybdList%
@@ -4944,9 +4947,17 @@ If (TabControl = 2)
 Else If (TabControl = 3)
 {
 	If ((!WaitKeyList) && (WaitKeys = ""))
+	{
+		Gui, 3:Font, cRed
+		GuiControl, 3:Font, WaitKeysT
+		GuiControl, 3:Focus, WaitKeys
 		return
+	}
 	If ((WaitKeyList) && (KeyW = ""))
+	{
+		GuiControl, 3:Focus, KeyW
 		return
+	}
 	Type := cType20, tKey := (WaitKeyList) ? KeyW : WaitKeys
 ,	Details := tKey, Target := "", Title := ""
 ,	DelayX := InStr(TimeoutC, "%") ? TimeoutC : Timeout
@@ -5088,7 +5099,7 @@ Gui, 12:Add, Button, -Wrap ys W75 H23 vLoopApply gLoopApply Disabled, %c_Lang131
 Gui, 12:Tab, 2
 ; Goto
 Gui, 12:Add, Groupbox, Section xm ym W450 H100
-Gui, 12:Add, Text, ys+20 xs+10 W150 R1 Right, %c_Lang078%:
+Gui, 12:Add, Text, ys+20 xs+10 W150 R1 Right vGoLabelT, %c_Lang078%:
 Gui, 12:Add, ComboBox, yp x+10 W150 vGoLabel, %Proj_Labels%
 Gui, 12:Add, Radio, Section Checked vGoto gGoto, Goto
 Gui, 12:Add, Radio, yp x+25 vGosub gGoto, Gosub
@@ -5099,7 +5110,7 @@ Gui, 12:Add, Button, -Wrap ys W75 H23 vGotoApply gGotoApply Disabled, %c_Lang131
 Gui, 12:Tab, 3
 ; Label
 Gui, 12:Add, Groupbox, Section xm ym W450 H100
-Gui, 12:Add, Text, ys+20 xs+10 W150 R1 Right, %c_Lang080%:
+Gui, 12:Add, Text, ys+20 xs+10 W150 R1 Right vNewLabelT, %c_Lang080%:
 Gui, 12:Add, Edit, yp x+10 W150 R1 vNewLabel
 Gui, 12:Add, Button, -Wrap Section xm y+67 W75 H23 gLabelOK, %c_Lang020%
 Gui, 12:Add, Button, -Wrap ys W75 H23 gLoopCancel, %c_Lang021%
@@ -5214,14 +5225,24 @@ Gui, 12:Submit, NoHide
 If (LRead = 1)
 {
 	If (LParamsFile = "")
+	{
+		Gui, 12:Font, cRed
+		GuiControl, 12:Font, Field1
+		GuiControl, 12:Focus, LParamsFile
 		return
+	}
 	Details := RTrim(LParamsFile, ", ")
 ,	TimesL := 1, Type := cType38
 }
 Else If (LParse = 1)
 {
 	If (LParamsFile = "")
+	{
+		Gui, 12:Font, cRed
+		GuiControl, 12:Font, Field1
+		GuiControl, 12:Focus, LParamsFile
 		return
+	}
 	Try
 		z_Check := VarSetCapacity(%LParamsFile%)
 	Catch
@@ -5235,14 +5256,26 @@ Else If (LParse = 1)
 Else If (LFor = 1)
 {
 	If ((LParamsFile = "") || (Delim == "") || (Omit == ""))
+	{
+		Gui, 12:Font, cRed
+		GuiControl, 12:Font, Field1
+		GuiControl, 12:Font, Field2
+		GuiControl, 12:Font, Field3
+		GuiControl, 12:Focus, LParamsFile
 		return
+	}
 	Details := LParamsFile ", " Delim ", " Omit
 ,	TimesL := 1, Type := cType45
 }
 Else If (LFilePattern = 1)
 {
 	If (LParamsFile = "")
+	{
+		Gui, 12:Font, cRed
+		GuiControl, 12:Font, Field1
+		GuiControl, 12:Focus, LParamsFile
 		return
+	}
 	Details := LParamsFile ", " (IncFiles ? "F" : "") (IncFolders ? "D" : "") (Recurse ? "R" : "")
 ,	TimesL := 1, Type := cType40
 }
@@ -5308,7 +5341,12 @@ GotoOK:
 Gui, 12:+OwnDialogs
 Gui, 12:Submit, NoHide
 If (GoLabel = "")
+{
+	Gui, 12:Font, cRed
+	GuiControl, 12:Font, GoLabelT
+	GuiControl, 12:Focus, GoLabel
 	return
+}
 If (RegExMatch(GoLabel, "[\s,``]"))
 {
 	MsgBox, 16, %d_Lang007%, %d_Lang049%
@@ -5345,7 +5383,12 @@ LabelOK:
 Gui, 12:+OwnDialogs
 Gui, 12:Submit, NoHide
 If (NewLabel = "")
+{
+	Gui, 12:Font, cRed
+	GuiControl, 12:Font, NewLabelT
+	GuiControl, 12:Focus, NewLabel
 	return
+}
 If (!RegExMatch(NewLabel, "^\w+$"))
 {
 	MsgBox, 16, %d_Lang007%, %d_Lang049%
@@ -5990,7 +6033,10 @@ ImageApply:
 ImageOK:
 Gui, 19:Submit, NoHide
 If (ImgFile = "")
+{
+	GuiControl, 19:Focus, ImgFile
 	return
+}
 DelayX := InStr(DelayC, "%") ? DelayC : DelayX
 If (Sec = 1)
 	DelayX *= 1000
@@ -6720,7 +6766,10 @@ If (InStr(Statement, "Image") || (Statement = "If Message Box"))
 Else
 {
 	If (TestVar = "")
+	{
+		GuiControl, 21:Focus, TestVar
 		return
+	}
 }
 If (InStr(Statement, "Compare"))
 {
@@ -7101,7 +7150,7 @@ Gui, 1:+Disabled
 Gui, 22:Add, Groupbox, Section W450 H190
 Gui, 22:Add, DDL, ys+15 xs+10 W150 vMsgType gMsgType, PostMessage||SendMessage
 Gui, 22:Add, DDL, yp x+10 W270 vWinMsg gWinMsg, %WM_Msgs%
-Gui, 22:Add, Text, xs+10 y+10 W120, %c_Lang102%:
+Gui, 22:Add, Text, xs+10 y+10 W120 vMsgNumT, %c_Lang102%:
 Gui, 22:Add, Edit, W430 -Multi vMsgNum
 Gui, 22:Add, Text, W430, wParam:
 Gui, 22:Add, Edit, W430 -Multi vwParam
@@ -7149,7 +7198,12 @@ SendMsgOK:
 Gui, 22:+OwnDialogs
 Gui, 22:Submit, NoHide
 If (MsgNum = "")
+{
+	Gui, 22:Font, cRed
+	GuiControl, 22:Font, MsgNumT
+	GuiControl, 22:Focus, MsgNum
 	return
+}
 If (s_Caller <> "Edit")
 	TimesX := 1
 IfInString, wParam, `,
@@ -7497,15 +7551,15 @@ Gui, 24:Add, Button, -Wrap ys xs+170 W75 H23 vIEComApply gIEComApply Disabled, %
 Gui, 24:Tab, 2
 ; COM Interface
 Gui, 24:Add, GroupBox, Section xm ym W450 H265
-Gui, 24:Add, Text, ys+15 xs+10 W60 R1 Right, %c_Lang098%:
+Gui, 24:Add, Text, ys+15 xs+10 W60 R1 Right vComCLSIDT, %c_Lang098%:
 Gui, 24:Add, Combobox, yp x+10 W285 vComCLSID gTabControl, %CLSList%
 GuiControl, 24:ChooseString, ComCLSID, %ComCLSID%
 Gui, 24:Add, Button, -Wrap yp-1 x+0 W75 H23 vActiveObj gActiveObj, %c_Lang099%
-Gui, 24:Add, Text, y+5 xs+10 W60 R1 Right, %c_Lang100%:
+Gui, 24:Add, Text, y+5 xs+10 W60 R1 Right vComHwndT, %c_Lang100%:
 Gui, 24:Add, Edit, yp x+10 W120 vComHwnd, %ComHwnd%
 Gui, 24:Add, Text, yp x+5 W100 R1 Right, %c_Lang057%:
 Gui, 24:Add, Edit, yp x+10 W125 vVarName
-Gui, 24:Add, Text, y+5 xs+10 W200, %c_Lang101%:
+Gui, 24:Add, Text, y+5 xs+10 W200 vComScT, %c_Lang101%:
 Gui, 24:Add, Edit, y+5 xs+10 W430 R5 vComSc gComSc
 Gui, 24:Add, Button, -Wrap y+2 xs+415 W25 H23 hwndExpView vExpView gExpView
 	ILButton(ExpView, ResDllPath ":" 17)
@@ -7514,7 +7568,7 @@ Gui, 24:Add, Button, -Wrap ys xs+170 W75 H23 vComApply gComApply Disabled, %c_La
 Gui, 24:Tab, 3
 ; Run Scriptlet
 Gui, 24:Add, GroupBox, Section xm ym W450 H265
-Gui, 24:Add, Text, ys+15 xs+10 W100, %c_Lang156%:
+Gui, 24:Add, Text, ys+15 xs+10 W100 vScLetT, %c_Lang156%:
 If (A_PtrSize = 8)
 	Gui, 24:Add, Text, ys+15 x+30 W210 cRed, %c_Lang158%
 Gui, 24:Add, Edit, ys+35 xs+10 W430 R13 vScLet
@@ -7722,8 +7776,15 @@ ComOK:
 Gui, 24:+OwnDialogs
 Gui, 24:Submit, NoHide
 StringReplace, ComSc, ComSc, `n, ``n, All
-If ((ComHwnd = "") || (ComSc = ""))
+If ((ComCLSID = "") || (ComHwnd = "") || (ComSc = ""))
+{
+	Gui, 24:Font, cRed
+	GuiControl, 24:Font, ComCLSIDT
+	GuiControl, 24:Font, ComHwndT
+	GuiControl, 24:Font, ComScT
+	GuiControl, 24:Focus, ComSc
 	return
+}
 If (s_Caller <> "Edit")
 	TimesX := 1
 Try
@@ -7789,7 +7850,12 @@ Gui, 24:+OwnDialogs
 Gui, 24:Submit, NoHide
 StringReplace, ScLet, ScLet, `n, ``n, All
 If (ScLet = "")
+{
+	Gui, 24:Font, cRed
+	GuiControl, 24:Font, ScLetT
+	GuiControl, 24:Focus, ScLet
 	return
+}
 If (s_Caller <> "Edit")
 	TimesX := 1
 Action := (RunVB = 1) ? "VB:" : "JS:"
@@ -10970,8 +11036,8 @@ pb_MouseGetPos:
 			Par%A_Index% := "Null"
 	}
 	MouseGetPos, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%
-	Try SavedVars(Par1)
 	Null := ""
+	Try SavedVars(Par1)
 return
 pb_PixelGetColor:
 	PixelGetColor, %Par1%, %Par2%, %Par3%, %Par4%
@@ -11163,9 +11229,9 @@ pb_SplitPath:
 			Par%A_Index% := "Null"
 	}
 	SplitPath, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%, %Par6%
+	Null := ""
 	Loop, 5
 		Try SavedVars(Par%A_Index%)
-	Null := ""
 return
 pb_InputBox:
 	InputBox, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%, %Par6%, %Par7%, %Par8%,, %Par10%, %Par11%

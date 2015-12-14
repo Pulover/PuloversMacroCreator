@@ -239,7 +239,7 @@
 	w_Lang062 =	Label (Ctrl+F9)
 	w_Lang063 =	Jika Laporan (F10)
 	w_Lang064 =	Variabel (Shift+F10)
-	w_Lang065 =	Fungsi (Ctrl+F10)
+	w_Lang065 =	Fungsi / Metode Array (Ctrl+F10)
 	w_Lang066 =	Internet Explorer (F11)
 	w_Lang067 =	COM Interface (Shift+F11)
 	w_Lang068 =	Run Scriptlet (Ctrl+F11)
@@ -484,10 +484,11 @@
 	c_Lang204 =	Mengevaluasi Ekspresi Matematika
 	c_Lang205 =	Wilayah
 	c_Lang206 =	(Gunakan [] untuk membuat array, mis .: [10, 20, aVariable, "aString"])
-	c_Lang207 =	array objek
+	c_Lang207 =	Array Objek
 	c_Lang208 =	Nama kunci
 	c_Lang209 =	Nama nilai
 	c_Lang210 =	Nilai-nilai
+	c_Lang211 =	Susunan
 		
 ; Other Windows		
 	t_Lang001 =	Ekspor ke AutoHotkey
@@ -1135,6 +1136,7 @@
 	CoordMode	Set modus koordinasi untuk berbagai perintah harus relatif baik untuk jendela aktif atau layar.
 	Cos	Mengembalikan cosinus trigonometri Nomor.
 	Critical	Mencegah thread saat dari diganggu oleh benang lain.
+	Delete	Menghapus pasangan kunci-nilai dari suatu objek.
 	DetectHiddenText	Menentukan apakah teks terlihat dalam jendela adalah "terlihat" untuk tujuan menemukan jendela. Hal ini mempengaruhi perintah seperti IfWinExist dan WinActivate.
 	DetectHiddenWindows	Menentukan apakah jendela tak kasat mata "dilihat" oleh script.
 	DllCall	Panggilan fungsi di dalam DLL, seperti fungsi API Windows standar.
@@ -1180,6 +1182,7 @@
 	FileSetTime	Mengubah cap datetime dari satu atau lebih file atau folder. Wildcard didukung.
 	Floor	Pengembalian Nomor dibulatkan ke integer terdekat (tanpa akhiran .00).
 	For	Mengulangi serangkaian perintah sekali untuk setiap pasangan kunci-nilai dalam suatu objek.
+	Format	Format variabel jumlah nilai input sesuai dengan format string.
 	FormatTime	Mentransformasi timestamp YYYYMMDDHH24MISS ke format tanggal / waktu yang ditentukan.
 	Func	Mengambil referensi ke fungsi.
 	GetKeyName / GetKeyVK / GetKeySC	Mengambil nama atau teks, kode tombol virtual atau kode scan tombol.
@@ -1190,6 +1193,7 @@
 	GroupAdd	Menambahkan spesifikasi jendela ke jendela kelompok, menciptakan kelompok jika diperlukan.
 	GroupClose	Menutup jendela aktif jika itu hanya diaktifkan oleh GroupActivate atau GroupDeactivate. Ini kemudian mengaktifkan jendela berikutnya dalam seri. Hal ini juga dapat menutup semua jendela dalam kelompok.
 	GroupDeactivate	Mirip dengan GroupActivate kecuali mengaktifkan jendela berikutnya tidak dalam kelompok.
+	HasKey	Mengembalikan nilai true jika Key dikaitkan dengan nilai.
 	if	Menentukan perintah (s) untuk melakukan jika perbandingan variabel ke nilai evalutes ke TRUE. Bila lebih dari satu perintah hadir, menyertakan mereka dalam blok (kawat gigi).
 	if (expression)	Menentukan perintah (s) untuk melakukan jika ekspresi bernilai TRUE.
 	If var [not] between	Cek apakah isi variabel adalah numerik atau abjad antara dua nilai (inklusif).
@@ -1212,6 +1216,7 @@
 	IniWrite	Menulis nilai ke file format yang inisial. Standar.
 	Input	Menunggu pengguna untuk mengetik string (tidak didukung pada Windows 9x: tidak apa-apa).
 	InputBox	Menampilkan kotak input untuk meminta pengguna untuk memasukkan string.
+	InsertAt	Menyisipkan satu atau lebih nilai pada posisi tertentu dalam array linier.
 	InStr	Pencarian untuk kejadian tertentu string, dari kiri atau kanan.
 	)	
 	Ahk_Cmd_Index = %Ahk_Cmd_Index%`n	
@@ -1219,6 +1224,7 @@
 	KeyHistory	Menampilkan info naskah dan sejarah keystrokes terbaru dan klik mouse.
 	KeyWait	Menunggu kunci atau mouse / joystick tombol akan dilepaskan atau ditekan.
 	Labels	Sebuah label mengidentifikasi baris kode, dan dapat digunakan sebagai target Goto atau membentuk sebuah sub rutin.
+	Length	Mengembalikan panjang array linier dimulai pada posisi 1.
 	Log	Mengembalikan logaritma (basis 10) Nomor.
 	Ln	Mengembalikan logaritma natural (basis e) Nomor.
 	Loop (normal) 	Lakukan serangkaian perintah berulang kali: baik jumlah tertentu kali atau sampai istirahat ditemui.
@@ -1226,7 +1232,9 @@
 	Loop (parse a string)	Mengambil substring (field) dari string, satu per satu.
 	Loop (read file contents)	Mengambil baris dalam sebuah file teks, satu per satu waktu (melakukan lebih baik daripada FileReadLine).
 	Loop (registry)	Mengambil isi dari subkey registry yang ditentukan, satu item pada suatu waktu.
+	MaxIndex	Mengembalikan kunci bilangan bulat tertinggi.
 	Menu	Membuat, menghapus, memodifikasi dan menampilkan menu dan item menu. Mengubah icon tray dan tooltip nya. Mengontrol apakah jendela utama dari naskah disusun dapat dibuka.
+	MinIndex	Mengembalikan kunci bilangan bulat terendah.
 	Mod	Modulo. Mengembalikan sisanya ketika Dividen dibagi oleh pembagi.
 	MouseClickDrag	Klik dan memegang tombol mouse tertentu, menggerakkan mouse ke koordinat tujuan, kemudian melepaskan tombol.
 	MouseGetPos	Mengambil posisi saat kursor mouse, dan secara opsional yang jendela dan kontrol itu melayang di atas.
@@ -1236,13 +1244,16 @@
 	NumPut	Jumlah Toko dalam format biner pada alamat yang ditentukan + offset dan mengembalikan alamat ke sebelah kanan item saja menulis.
 	OnExit	Menentukan subroutine untuk menjalankan secara otomatis ketika keluar skrip.
 	OnMessage	Menentukan fungsi untuk memanggil secara otomatis ketika script menerima pesan tertentu.
+	Ord	Mengembalikan nilai ordinal (kode karakter numerik) dari karakter pertama dalam String.
 	OutputDebug	Mengirim string ke debugger (jika ada) untuk ditampilkan.
 	Pause	Jeda benang naskah saat ini.
 	PixelGetColor	Mengambil warna pixel pada x tertentu, y koordinat.
 	PixelSearch	Mencari sebuah wilayah layar untuk pixel dari warna tertentu.
+	Pop	Menghapus dan mengembalikan elemen array terakhir.
 	PostMessage	Menempatkan pesan dalam antrian pesan dari jendela atau kontrol.
 	Process	Melakukan salah satu operasi berikut pada proses: memeriksa jika ada, perubahan prioritas, menutup itu, menunggu untuk itu untuk menutup.
 	Progress	Menciptakan atau update jendela yang berisi progress bar.
+	Push	Menambahkan nilai ke akhir array.
 	Random	Menghasilkan sejumlah pseudo-acak.
 	RegExMatch	Menentukan apakah string berisi pola (regular expression).
 	RegExReplace	Menggantikan kejadian pola (regular expression) di dalam string.
@@ -1250,6 +1261,7 @@
 	RegRead	Membaca nilai dari registri.
 	RegWrite	Menulis nilai ke registri.
 	RegisterCallback	Membuat alamat mesin-kode yang saat dipanggil, pengalihan panggilan ke fungsi dalam script.
+	RemoveAt	Menghapus item dari posisi tertentu dalam array linier.
 	Return	Pengembalian dari subroutine yang eksekusi sebelumnya melompat melalui fungsi-call, gosub, aktivasi Hotkey, GroupActivate, atau cara lain.
 	Round	Jika N diabaikan atau 0, Nomor dibulatkan ke integer terdekat. Jika N adalah angka positif, Nomor dibulatkan menjadi N desimal. Jika N adalah negatif, Nomor dibulatkan oleh N digit di sebelah kiri titik desimal.
 	Run	Menjalankan program eksternal.

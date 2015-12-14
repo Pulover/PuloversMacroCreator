@@ -238,8 +238,8 @@
 	w_Lang061 =	Git (Shift+F9)
 	w_Lang062 =	Etiket (Ctrl+F9)
 	w_Lang063 =	Eğer Tablolar (F10)
-	w_Lang064 =	Değişkenler
-	w_Lang065 =	İşlevler (Ctrl+F10) (+ F10 Shift)
+	w_Lang064 =	Değişkenler (F10+Shift)
+	w_Lang065 =	İşlevler / Dizi yöntemleri (Ctrl+F10)
 	w_Lang066 =	Internet Explorer (F11)
 	w_Lang067 =	COM Arabirimi (Shift+F11)
 	w_Lang068 =	Komut Dosyası Çalıştırmak (Ctrl+F11)
@@ -484,10 +484,11 @@
 	c_Lang204 =	Matematik Ifade Değerlendirmek
 	c_Lang205 =	Bölge
 	c_Lang206 =	(Kullan [] diziler oluşturmak için, ör .: [10, 20, aVariable, "aString"])
-	c_Lang207 =	dizi nesnesi
+	c_Lang207 =	Dizi Nesnesi
 	c_Lang208 =	Anahtar adı
 	c_Lang209 =	Değer adı
 	c_Lang210 =	Değerler
+	c_Lang211 =	Dizi
 		
 ; Other Windows		
 	t_Lang001 =	AutoHotkey Aktar
@@ -891,7 +892,7 @@
 	ExpView_TT =	Gelişmiş Editörü
 	ExpView2_TT =	Gelişmiş Editörü
 	OSProgB_TT =	İlerleme Çubuğu Ekran
-	OSTrans_TT =	donukluk
+	OSTrans_TT =	Donukluk
 	MRel_TT =	
 	(LTrim	
 		Geçerli konuma göre Hareketleri.
@@ -1135,6 +1136,7 @@
 	CoordMode	Ayarlar etkin pencere veya ekran ya göreli olarak çeşitli komutlar için mod koordine .
 	Cos	Sayısıtrigonometrik kosinüsünü verir .
 	Critical	Diğer konuları kesintiye olmaktan geçerli iş parçacığı engeller .
+	Delete	Bir nesneden anahtar-değer çiftleri kaldırır.
 	DetectHiddenText	Bir pencerede görünmez metin pencerenin bulma amacıyla " görülür " olup olmadığını belirler . Bu, IfWinExist ve WinActivate gibi komutları etkiler.
 	DetectHiddenWindows	Görünmez pencereler komut dosyası tarafından " görülen " olup olmadığını belirler .
 	DllCall	Bu standart bir Windows API işlevi gibi bir DLL içinde bir işlevini çağırır.
@@ -1180,6 +1182,7 @@
 	FileSetTime	Bir veya daha fazla dosya veya klasördatetime damgası değiştirir . Joker desteklenmektedir .
 	Floor	Döndürür Number en yakın tam sayıya ( herhangi bir .00 eki olmadan ) yuvarlanır .
 	For	Bir nesne her anahtar - değer çifti için bir kez komutları bir dizi tekrarlar .
+	Format	Bir dizi biçimine göre giriş değerleri değişken sayıda biçimlendirir.
 	FormatTime	Belirtilen tarih / saat biçimi bir YYYYMMDDHH24MISS zaman damgası dönüştürür.
 	Func	Bir işleve bir başvuru alır .
 	GetKeyName / GetKeyVK / GetKeySC	Adını veya metin , sanal anahtar kodu ya da bir tuşa tarama kodu alır .
@@ -1190,6 +1193,7 @@
 	GroupAdd	Gerekirsegrup oluşturarak , bir pencere grubuna bir pencere özellikleri ekler .
 	GroupClose	Sadece GroupActivate veya GroupDeactivate ile aktive ise aktif pencereyi kapatır . Daha sonra serinin bir sonraki pencere aktif hale getirir. Ayrıca gruptaki tüm pencereleri kapatabilirsiniz .
 	GroupDeactivate	Değilgrupta bir sonraki pencere aktive dışında GroupActivate benzer .
+	HasKey	Key değeri ile ilişkili true döndürür.
 	if	Bir değere bir değişkenin karşılaştırılması TRUE evalutes eğer komut (lar ) gerçekleştirmek için belirtir . Birden fazla komut mevcut olduğunda , bir blok ( parantez ) içine alın .
 	if (expression)	Bir ifade DOĞRU olarak değerlendirirse komut (lar ) gerçekleştirmek için belirtir .
 	If var [not] between	Bir değişkenin içeriği olup olmadığını kontrol eder iki değeri (dahil) arasında sayısal ya da alfabetik olarak bulunmaktadır.
@@ -1212,6 +1216,7 @@
 	IniWrite	Standart bir format . Ini dosyası için bir değer yazar.
 	Input	Kullanıcı bir dize ( : hiçbir şey yapmaz Windows 9 x desteklenmez ) yazmanız için bekler .
 	InputBox	Bir giriş kutusu bir dize girmek için kullanıcı sormak görüntüler .
+	InsertAt	Doğrusal bir dizi içindeki belirli bir pozisyonda bir veya daha fazla değer ekler.
 	InStr	Sol veya sağ taraftan bir dize belirli bir olay arar .
 	)	
 	Ahk_Cmd_Index = %Ahk_Cmd_Index%`n	
@@ -1219,6 +1224,7 @@
 	KeyHistory	Komut bilgi ve en son tuş vuruşlarını ve fare tıklaması öyküsü görüntüler.
 	KeyWait	Serbest veya basılı gereken bir anahtar veya fare / joystick düğmesine bekler.
 	Labels	Bir etiket, bir kod hattı tanımlayan, ve Goto hedef olarak ya da bir alt yordam oluşturmak için de kullanılabilir.
+	Length	1 konumundaki başlayan doğrusal bir dizinin uzunluğunu döndürür.
 	Log	Sayısı logaritma (10 tabanı) döndürür.
 	Ln	Sayısı doğal logaritma (Taban e) döndürür.
 	Loop (normal) 	Tekrar tekrar komutları bir dizi gerçekleştirin: Belirtilen kez numarası veya mola kadar da görülür.
@@ -1226,7 +1232,9 @@
 	Loop (parse a string)	Bir dize alır dizeleri (alanları), her seferinde bir.
 	Loop (read file contents)	Bir metin dosyasına satırları, bir zaman (FileReadLine daha iyi performans) az bir alır.
 	Loop (registry)	Bir anda belirtilen kayıt defteri alt anahtarını, bir öğe içeriğini alır.
+	MaxIndex	En yüksek tamsayı anahtarı döndürür.
 	Menu	,, Siler oluşturur değiştirir ve menüler ve menü öğeleri görüntüler. Tepsi simgesi ve araç ipucu değiştirir. Derlenmiş bir komut dosyası ana penceresi açılır olup olmadığını kontrol eder.
+	MinIndex	En tamsayı anahtarı döndürür.
 	Mod	Modulo. Temettü bölen bölünür kalanı verir.
 	MouseClickDrag	Tıklanma ve, belirtilen fare düğmesini tutan hedef koordinatları için fareyi hareket, sonra düğmeyi serbest bırakır.
 	MouseGetPos	Mevcut fare imleci konumu ve isteğe bağlı olarak hangi pencere ve kontrol üzerine asılı olan alır.
@@ -1236,13 +1244,16 @@
 	NumPut	Belirtilen adresteki ikili biçimde mağaza sayısı + ofset ve sadece yazılı öğenin sağındaki adresini döndürür.
 	OnExit	Otomatik olarak script çıkmadan çalıştırmak için bir alt yordam belirtir.
 	OnMessage	Script Belirtilen ileti aldığında otomatik olarak aramak için bir işlev belirtir.
+	Ord	Dize ilk karakterin sıra değeri (sayısal karakter kodu) döndürür.
 	OutputDebug	Ekran için hata ayıklayıcı (varsa) için bir dize gönderir.
 	Pause	Script en geçerli iş parçacığı duraklar.
 	PixelGetColor	Belirtilen x de pikselin rengini alır, y koordinatları.
 	PixelSearch	Belirtilen renk bir piksel için ekranın bir bölge arar.
+	Pop	Kaldırır ve son dizi elemanını döndürür.
 	PostMessage	Bir pencere veya kontrol ileti kuyruğu bir ileti yerleştirir.
 	Process	Bir süreç aşağıdaki işlemlerden birini gerçekleştirir: Varsa kontrol eder; değişiklikleri öncelik, o kapatır, kapatmak için bekler.
 	Progress	Oluşturur veya bir ilerleme çubuğu içeren bir pencere günceller.
+	Push	Bir dizinin sonuna değerlerini ekler.
 	Random	Yalancı rasgele bir sayı oluşturur.
 	RegExMatch	Bir dize bir desen (düzenli ifade) içerip içermediğini belirler.
 	RegExReplace	Bir dize içinde bir desen (düzenli ifade) oluşunda değiştirir.
@@ -1250,6 +1261,7 @@
 	RegRead	Kayıt defterinden bir değer okur.
 	RegWrite	Kayıt defterine bir değer yazar.
 	RegisterCallback	Çağrıldığında, komut dosyası bir işlev çağrısı yönlendiren bir makine kodu adres oluşturur.
+	RemoveAt	Doğrusal bir dizide verilen pozisyona öğeleri kaldırır.
 	Return	Yürütme önce fonksiyon çağrısı, Gosub, Hotkey aktivasyon, GroupActivate veya diğer yollarla atladı vardı için bir alt yordam gelen döner.
 	Round	Yok ihmal ya da 0 ise, sayısı en yakın tam sayıya yuvarlanır. N pozitif sayı ise, sayısı N ondalık basamağa yuvarlanır. Yok negatif ise, sayısı ondalık noktasının solunda N basamak yuvarlanır.
 	Run	Harici bir program çalıştırır.

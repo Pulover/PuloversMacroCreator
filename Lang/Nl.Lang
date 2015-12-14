@@ -239,7 +239,7 @@
 	w_Lang062 =	Label (Ctrl+F9)
 	w_Lang063 =	Als Verklaringen (F10)
 	w_Lang064 =	Variabelen (Shift+F10)
-	w_Lang065 =	Functies (Ctrl+F10)
+	w_Lang065 =	Functies / Scala methoden (Ctrl+F10)
 	w_Lang066 =	Internet Explorer (F11)
 	w_Lang067 =	COM-interface (Shift+F11)
 	w_Lang068 =	Run Scriptlet (Ctrl+F11)
@@ -484,10 +484,11 @@
 	c_Lang204 =	Wiskundige Uitdrukking Te Evalueren
 	c_Lang205 =	Regio
 	c_Lang206 =	(Gebruik [] om arrays te maken, bijv .: [10, 20, aVariable, "aString"])
-	c_Lang207 =	arrayobject
+	c_Lang207 =	Arrayobject
 	c_Lang208 =	Key naam
 	c_Lang209 =	Waarde naam
 	c_Lang210 =	Waarden
+	c_Lang211 =	Reeks
 		
 ; Other Windows		
 	t_Lang001 =	Exporteren naar AutoHotkey
@@ -891,7 +892,7 @@
 	ExpView_TT =	Geavanceerde Editor
 	ExpView2_TT =	Geavanceerde Editor
 	OSProgB_TT =	Weergave Progress Bar
-	OSTrans_TT =	ondoorzichtigheid
+	OSTrans_TT =	Ondoorzichtigheid
 	MRel_TT =	
 	(LTrim	
 		Bewegingen ten opzichte van de huidige positie.
@@ -1135,6 +1136,7 @@
 	CoordMode	Sets coördineren modus voor verschillende opdrachten te zijn ten opzichte van zowel het actieve venster of het scherm .
 	Cos	Geeft de trigonometrische cosinus van nummer .
 	Critical	Voorkomt dat de huidige thread van wordt onderbroken door andere threads .
+	Delete	Verwijdert key-waarde paren van een object.
 	DetectHiddenText	Bepaalt of onzichtbare tekst in een venster wordt " gezien" voor het doel van het vinden van het venster . Dit heeft invloed op commando's zoals IfWinExist en WinActivate .
 	DetectHiddenWindows	Bepaalt of onzichtbare vensters worden 'gezien' door het script .
 	DllCall	Roept een functie in een DLL , zoals een standaard Windows API functie .
@@ -1180,6 +1182,7 @@
 	FileSetTime	Verandert de datetime stempel van een of meer bestanden of mappen . Wildcards zijn ondersteund .
 	Floor	Retourneren nummer naar beneden afgerond naar het dichtstbijzijnde gehele getal ( zonder 0,00 achtervoegsel ) .
 	For	Herhaalt een reeks opdrachten een keer voor elke key -value pair in een object .
+	Format	Formatteert een variabel aantal van de input waarden volgens een format string.
 	FormatTime	Transformeert een YYYYMMDDHH24MISS timestamp in de opgegeven datum / tijd -formaat .
 	Func	Haalt een verwijzing naar een functie .
 	GetKeyName / GetKeyVK / GetKeySC	Haalt de naam of tekst , virtuele toets code of scan code van een sleutel .
@@ -1190,6 +1193,7 @@
 	GroupAdd	Voegt een venster specificatie een raam groep , het creëren van de groep indien nodig.
 	GroupClose	Sluit het actieve venster als het alleen werd geactiveerd door GroupActivate of GroupDeactivate . Het activeert vervolgens het volgende venster in de reeks . Het kan ook alle ramen te sluiten in een groep .
 	GroupDeactivate	Vergelijkbaar met GroupActivate behalve activeert het volgende venster niet in de groep .
+	HasKey	Geeft true als Key wordt geassocieerd met een waarde.
 	if	Specificeert het commando ( s ) uit te voeren als een vergelijking van een variabele een waarde evalutes WAAR . Wanneer meer dan een commando aanwezig is , omsluiten ze in een blok ( beugels ) .
 	if (expression)	Geeft het commando ( s ) uit te voeren als een expressie evalueert tot TRUE .
 	If var [not] between	Controleert of de inhoud van een variabele zijn numeriek of alfabetisch tussen twee waarden ( inclusief) .
@@ -1212,6 +1216,7 @@
 	IniWrite	Schrijft een waarde naar een standaard formaat . Ini-bestand .
 	Input	Wacht tot de gebruiker een string ( niet ondersteund op Windows 9x : het doet niets ) typen .
 	InputBox	Geeft een invoerveld aan de gebruiker vragen om een string in te voeren .
+	InsertAt	Voegt een of meer waarden op een gegeven positie in een lineaire array.
 	InStr	Zoekt een bepaalde optreden van een string van links of rechts .
 	)	
 	Ahk_Cmd_Index = %Ahk_Cmd_Index%`n	
@@ -1219,6 +1224,7 @@
 	KeyHistory	Geeft script info en een geschiedenis van de meest recente toetsaanslagen en muisklikken.
 	KeyWait	Wacht op een toets of muis / joystick knop worden vrijgegeven of ingedrukt.
 	Labels	Een label identificeert een regel code, en kan worden gebruikt als een doelwit Goto of een subroutine vormen.
+	Length	Geeft de lengte van een lineaire array beginnend op positie 1.
 	Log	Geeft de logaritme (grondtal 10) van het nummer.
 	Ln	Geeft de natuurlijke logaritme (basis e) van Number.
 	Loop (normal) 	Voer een reeks opdrachten herhaaldelijk: ofwel het opgegeven aantal malen of tot breuk wordt aangetroffen.
@@ -1226,7 +1232,9 @@
 	Loop (parse a string)	Haalt substrings (velden) uit een tekenreeks, een voor een.
 	Loop (read file contents)	Haalt de lijnen in een tekstbestand, een voor een (beter presteert dan FileReadLine).
 	Loop (registry)	Haalt de inhoud van de opgegeven registersubsleutel, een item tegelijk.
+	MaxIndex	Geeft de hoogste integer sleutel.
 	Menu	Creëert, verwijdert, wijzigt en toont menu's en menu-items. Verandert het pictogram in het systeemvak en de tooltip. Bepaalt of het hoofdvenster van een gecompileerd script kan worden geopend.
+	MinIndex	Geeft het laagste getal sleutel.
 	Mod	Modulo. Geeft de rest wanneer dividend wordt gedeeld door deler.
 	MouseClickDrag	Klikken en houdt de opgegeven muisknop, beweegt de muis naar de bestemming coördinaten, geeft vervolgens de knop.
 	MouseGetPos	Haalt de huidige positie van de muiscursor, en eventueel welk venster en controle wordt zweefde over.
@@ -1236,13 +1244,16 @@
 	NumPut	Winkels Nummer in binair formaat op het opgegeven adres + offset en het adres terug naar de rechterkant van de punt enkel geschreven.
 	OnExit	Hiermee geeft u een subroutine om automatisch wanneer het script eindigt draaien.
 	OnMessage	Geeft een functie om automatisch te bellen wanneer het script ontvangt de opgegeven boodschap.
+	Ord	Geeft de ordinale waarde (numeriek karakter code) van het eerste teken in string.
 	OutputDebug	Stuurt een string naar de debugger (indien aanwezig) voor weergave.
 	Pause	Pauzeert huidige thread van het script.
 	PixelGetColor	Haalt de kleur van de pixel op de aangegeven x, y coördinaten.
 	PixelSearch	Zoekt een gebied van het scherm een pixel van de opgegeven kleur.
+	Pop	Verwijdert en geeft het laatste array-element.
 	PostMessage	Plaatst een bericht in de wachtrij van een raam of controle.
 	Process	Voert een van de volgende bewerkingen op een proces: controleert of het bestaat, verandert haar prioriteit, sluit het, wacht tot het sluiten.
 	Progress	Creëert of updates van een venster met een voortgangsbalk.
+	Push	Voegt waarden het einde van een array.
 	Random	Genereert een pseudo-willekeurig getal.
 	RegExMatch	Bepaalt of een string bevat een patroon (reguliere expressie).
 	RegExReplace	Vervangt voorkomens van een patroon (reguliere expressie) in een string.
@@ -1250,6 +1261,7 @@
 	RegRead	Leest een waarde uit het register.
 	RegWrite	Schrijft een waarde in het register.
 	RegisterCallback	Maakt een machine-code-adres dat als ze worden opgeroepen, leidt de oproep naar een functie in het script.
+	RemoveAt	Verwijdert items uit de gegeven positie in een lineaire array.
 	Return	Keert terug van een subroutine waaraan uitvoering eerder had gesprongen via de functie-oproep, Gosub, Sneltoets activering, GroupActivate, of andere middelen.
 	Round	Als N wordt weggelaten of 0, wordt getal afgerond op het dichtstbijzijnde gehele getal. Als N is positief getal is, wordt nummer afgerond op N decimalen. Als N negatief is, wordt getal afgerond door N cijfers links van de decimale punt.
 	Run	Loopt een extern programma.

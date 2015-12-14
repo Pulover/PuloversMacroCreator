@@ -238,8 +238,8 @@
 	w_Lang061 =	Goto (Shift+F9)
 	w_Lang062 =	Label (Ctrl+F9)
 	w_Lang063 =	Če izjave (F10)
-	w_Lang064 =	spremenljivke (Shift+F10)
-	w_Lang065 =	Funkcije (Ctrl+F10)
+	w_Lang064 =	Spremenljivke (Shift+F10)
+	w_Lang065 =	Funkcije / Metode zaporedji (Ctrl+F10)
 	w_Lang066 =	Internet Explorer (F11)
 	w_Lang067 =	COM vmesnik (Shift+F11)
 	w_Lang068 =	Run skriptov (Ctrl+F11)
@@ -484,10 +484,11 @@
 	c_Lang204 =	Ovrednotenje Matematičnih Izrazov
 	c_Lang205 =	Regija
 	c_Lang206 =	(Uporabite [], da ustvarite nizi, npr .: [10, 20, aVariable, "aString"])
-	c_Lang207 =	matrika objekt
+	c_Lang207 =	Matrika Objekt
 	c_Lang208 =	Ključ ime
 	c_Lang209 =	Ime vrednosti
 	c_Lang210 =	Vrednosti
+	c_Lang211 =	Matrika
 		
 ; Other Windows		
 	t_Lang001 =	Izvoz v AutoHotkey
@@ -1135,6 +1136,7 @@
 	CoordMode	Kompleti način koordinato različnih ukazov, relativno glede bodisi aktivno okno ali zaslon.
 	Cos	Vrne trigonometrične kosinus številko.
 	Critical	Preprečuje trenutno nit od prekinja z druge teme.
+	Delete	Odstrani parov ključ-vrednost iz objekta.
 	DetectHiddenText	Določa, ali je nevidna besedilo v oknu "videl" za iskanje okno. To vpliva na ukaze, kot IfWinExist in WinActivate.
 	DetectHiddenWindows	Ugotovi, ali so nevidni okna "videl", ki jih scenarija.
 	DllCall	Klici funkcije znotraj DLL, kot je standardni Windows API funkcijo.
@@ -1180,6 +1182,7 @@
 	FileSetTime	Spremeni datetime žig ene ali več datotek ali map. Nadomestni znaki so podprte.
 	Floor	Vrne število, zaokroženo navzdol na najbližje celo število (brez končnice 0,00).
 	For	Ponovi niz ukazov, ko za vsak par vrednosti ključa v predmet.
+	Format	Oblikuje spremenljivo število vhodnih vrednosti in sicer v obliki niza.
 	FormatTime	Transformira YYYYMMDDHH24MISS žig v določen format datuma / časa.
 	Func	Pridobi sklic na funkcijo.
 	GetKeyName / GetKeyVK / GetKeySC	Pridobi ime ali besedila, virtualni ključa ali optičnega kodo ključa.
@@ -1190,6 +1193,7 @@
 	GroupAdd	Dodaja specifikacije v skupino okno okno, ki je ustvarila skupino, če je to potrebno.
 	GroupClose	Zapre aktivno okno, če je le aktivirati z GroupActivate ali GroupDeactivate. Nato se aktivira naslednjo okno v seriji. Prav tako lahko zapre vsa okna v skupini.
 	GroupDeactivate	Podobno kot GroupActivate razen aktivira naslednjo okno ni v skupini.
+	HasKey	Vrne true, če je Key povezana z vrednostjo.
 	if	Določa ukaz (s) izvaja, če primerjava spremenljivko na vrednost evalutes na TRUE. Če je prisoten več kot en ukaz, jih priloži v bloku (oporniki).
 	if (expression)	Določa ukaz (s) izvaja, če je vrednost izraza TRUE.
 	If var [not] between	Preverièe vsebine s spremenljivo so številčno ali abecedno med dvema vrednostma (vključno).
@@ -1212,6 +1216,7 @@
 	IniWrite	Piše vrednost standardnega formata. Ini datoteki.
 	Input	Počaka, da uporabnik vnesti niz (ne podpira Windows 9x: pa nič).
 	InputBox	Prikaže vnosno polje, da od uporabnika zahteva, da vnesete niz.
+	InsertAt	Vstavi enega ali več vrednosti v določenem položaju znotraj linearni niz.
 	InStr	Išče danem pojavljanja niza, z leve ali desne.
 	)	
 	Ahk_Cmd_Index = %Ahk_Cmd_Index%`n	
@@ -1219,6 +1224,7 @@
 	KeyHistory	Prikaže scenarij info in zgodovina zadnjih tipkanja in klikov z miško.
 	KeyWait	Počaka na gumb na ključ ali miška / igralno palico, ki se sprosti ali potlačen.
 	Labels	Oznaka opredeljuje kode in se lahko uporablja kot Goto cilj ali da bodo podprogram.
+	Length	Vrne dolžino linearni niz, ki se začne pri položaju 1.
 	Log	Vrne logaritem (z osnovo 10) številke.
 	Ln	Vrne naravni logaritem (z osnovo e) na številki.
 	Loop (normal) 	Opravila vrsto ukazov večkrat: bodisi določeno število krat ali dokler premoru se srečujejo.
@@ -1226,7 +1232,9 @@
 	Loop (parse a string)	Prenese nukleotidov (polja) iz niza, enega naenkrat.
 	Loop (read file contents)	Pridobi vrstico v besedilno datoteko, enega naenkrat (opravlja bolje kot FileReadLine).
 	Loop (registry)	Pridobi vsebino, ki registrski ključ, en predmet naenkrat.
+	MaxIndex	Vrne največjo ključ celi.
 	Menu	Ustvarja, briše, spreminja in prikazuje menije in menijske postavke. Spremeni ikono pladenj in njegovo tooltip. Določa, ali se glavno okno prevedenim scenarij lahko odpre.
+	MinIndex	Vrne najmanjšo celi ključ.
 	Mod	Modula. Vrne ostanek, ko je dividenda deljeno z delitelj.
 	MouseClickDrag	Klikov in ima določeno tipko miške, premakne miško v ciljni koordinate, nato sprosti na gumb.
 	MouseGetPos	Pridobi trenutni položaj kurzorja miške in opcijsko ki okno in nadzor je lebdi nad.
@@ -1236,13 +1244,16 @@
 	NumPut	Število trgovin v binarni obliki na določen naslov zamika in vrne naslov na desni strani predmeta samo pisno.
 	OnExit	Določa podprogram za samodejni zagon, ko se skript izhode.
 	OnMessage	Določa funkcijo za samodejno pokliče, ko scenarij prejme določeno sporočilo.
+	Ord	Vrne ordinalni vrednost (številčna oznaka znak) za prvi znak v nizu.
 	OutputDebug	Pošlje niz za iskanje in odpravljanje napak (če obstaja) za zaslon.
 	Pause	Premori trenutno nit, skript je.
 	PixelGetColor	Pridobi barvo pike na določenem x, y koordinate.
 	PixelSearch	Išče regijo na zaslonu za piko na določeno barvo.
+	Pop	Odstrani in vrne zadnji array element.
 	PostMessage	Postavi sporočila v čakalne vrste sporočil za okna ali nadzora.
 	Process	Opravlja eno od naslednjih operacij na proces: preveri, če obstaja, spremembe njena prednostna naloga, jo zapre, čaka ga zapreti.
 	Progress	Ustvari ali osveži okno z vrstico napredka.
+	Push	Doda vrednosti do konca matrike.
 	Random	Generira psevdo-naključno število.
 	RegExMatch	Določa, ali niz vsebuje vzorec (regularni izraz).
 	RegExReplace	Nadomešča pojavitve vzorec (regularni izraz) znotraj niza.
@@ -1250,6 +1261,7 @@
 	RegRead	Prebere vrednost iz registra.
 	RegWrite	Zapiše vrednost registra.
 	RegisterCallback	Ustvari strojno kodo naslov, ko je klical, preusmeri klic na funkciji v scenariju.
+	RemoveAt	Odstrani predmete iz danega položaja v linearni niz.
 	Return	Dobički iz podprograma, za katere izvedba je prej skočil s funkcijsko dežurstva, Gosub, aktiviranje bližnjice GroupActivate, ali z drugimi sredstvi.
 	Round	Če je N izpustijo ali 0, Število zaokroži na najbližje celo število. Če N je pozitivno število, se število zaokroži na N decimalnih mest. Če N je negativen, se število zaokroži z N cifer na levi strani decimalne vejice.
 	Run	Zažene zunanji program.

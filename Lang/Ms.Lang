@@ -239,7 +239,7 @@
 	w_Lang062 =	Label (Ctrl+F9)
 	w_Lang063 =	Jika Penyata (F10)
 	w_Lang064 =	Pembolehubah (Shift+F10)
-	w_Lang065 =	Fungsi (Ctrl+F10)
+	w_Lang065 =	Fungsi / Kaedah mudah (Ctrl+F10)
 	w_Lang066 =	Internet Explorer (F11)
 	w_Lang067 =	COM Muka (Shift+F11)
 	w_Lang068 =	Run Scriptlet (Ctrl+F11)
@@ -484,10 +484,11 @@
 	c_Lang204 =	Menilai Ungkapan Matematik
 	c_Lang205 =	Wilayah
 	c_Lang206 =	(Gunakan [] untuk mencipta tatasusunan, mis .: [10, 20, aVariable, "aString"])
-	c_Lang207 =	objek pelbagai
+	c_Lang207 =	Objek Pelbagai
 	c_Lang208 =	Nama utama
 	c_Lang209 =	Nama nilai
 	c_Lang210 =	Nilai-nilai
+	c_Lang211 =	Pelbagai
 		
 ; Other Windows		
 	t_Lang001 =	Eksport ke AutoHotkey
@@ -1135,6 +1136,7 @@
 	CoordMode	Set menyelaras mod untuk pelbagai arahan untuk menjadi relatif kepada sama ada tingkap aktif atau skrin.
 	Cos	Mengembalikan kosinus trigonometri nombor.
 	Critical	Menghalang thread semasa dari diganggu oleh benang lain.
+	Delete	Membuang pasangan kunci-nilai daripada objek.
 	DetectHiddenText	Menentukan sama ada teks tidak dapat dilihat dalam tetingkap adalah "melihat" bagi maksud mencari tingkap. Ini memberi kesan kepada arahan seperti IfWinExist dan WinActivate.
 	DetectHiddenWindows	Menentukan sama ada tingkap kelihatan adalah "dilihat" oleh skrip.
 	DllCall	Panggilan fungsi di dalam DLL, seperti fungsi Windows API standard.
@@ -1180,6 +1182,7 @@
 	FileSetTime	Perubahan setem datetime satu atau lebih fail atau folder. Wildcard yang disokong.
 	Floor	Pulangan Bilangan bulat ke integer terdekat (tanpa akhiran .00).
 	For	Mengulangi siri arahan sekali untuk setiap pasangan key-nilai dalam objek.
+	Format	Format beberapa pembolehubah nilai-nilai input mengikut rentetan format.
 	FormatTime	Mengubah a timestamp YYYYMMDDHH24MISS ke format tarikh / masa yang dinyatakan.
 	Func	Mendapatkan semula merujuk kepada fungsi.
 	GetKeyName / GetKeyVK / GetKeySC	Mendapatkan semula nama atau teks, kod kunci maya atau kod imbasan kunci.
@@ -1190,6 +1193,7 @@
 	GroupAdd	Menambah spesifikasi tingkap kepada sekumpulan tingkap, mewujudkan kumpulan jika perlu.
 	GroupClose	Menutup tetingkap aktif jika ia hanya diaktifkan oleh GroupActivate atau GroupDeactivate. Ia kemudian mengaktifkan tetingkap berikutnya dalam siri ini. Ia juga boleh menutup semua tingkap dalam kumpulan.
 	GroupDeactivate	Sama seperti GroupActivate kecuali mengaktifkan tetingkap berikutnya tidak dalam kumpulan.
+	HasKey	Pulangan benar jika Key dikaitkan dengan nilai.
 	if	Menyatakan arahan (s) untuk melaksanakan jika perbandingan pembolehubah kepada nilai evalutes ke TRUE. Apabila lebih daripada satu arahan hadir, letakkan mereka dalam satu blok (penyokong).
 	if (expression)	Menyatakan arahan (s) untuk melaksanakan jika ungkapan untuk menilai BENAR.
 	If var [not] between	Cek sama ada kandungan yang berubah-ubah adalah berangka atau abjad antara dua nilai (termasuk).
@@ -1212,6 +1216,7 @@
 	IniWrite	Tulis nilai kepada fail format. Jogja standard.
 	Input	Menunggu pengguna menaip rentetan (tidak disokong pada Windows 9x: ia tidak apa-apa).
 	InputBox	Memaparkan kotak input untuk meminta pengguna untuk memasukkan rentetan.
+	InsertAt	Memasukkan satu atau lebih nilai pada kedudukan yang diberikan dalam pelbagai linear.
 	InStr	Searches untuk kejadian yang diberikan tali, dari sebelah kiri atau kanan.
 	)	
 	Ahk_Cmd_Index = %Ahk_Cmd_Index%`n	
@@ -1219,6 +1224,7 @@
 	KeyHistory	Memaparkan info skrip dan sejarah ketukan kekunci yang paling baru-baru ini dan klik tetikus.
 	KeyWait	Menunggu kekunci atau tetikus / kayu bedik butang untuk dilepaskan atau ditekan ke bawah.
 	Labels	Label mengenal pasti baris kod, dan boleh digunakan sebagai sasaran Goto atau untuk membentuk subrutin.
+	Length	Mengembalikan panjang pelbagai linear bermula pada kedudukan 1.
 	Log	Kembali logaritma (asas 10) nombor.
 	Ln	Mengembalikan logaritma asli (asas e) Bilangan.
 	Loop (normal) 	Melaksanakan satu siri arahan berkali-kali: sama ada bilangan yang ditentukan masa atau sehingga rehat yang dihadapi.
@@ -1226,7 +1232,9 @@
 	Loop (parse a string)	Mendapatkan semula substrings (bidang) daripada rentetan, satu pada satu masa.
 	Loop (read file contents)	Mendapatkan semula baris dalam fail teks, satu pada satu masa (melakukan lebih baik daripada FileReadLine).
 	Loop (registry)	Mendapatkan semula kandungan subkey pendaftaran yang dinyatakan, satu perkara pada satu masa.
+	MaxIndex	Pulangan utama integer tertinggi.
 	Menu	Mencipta, memadam, mengubah dan memaparkan menu dan item menu. Perubahan ikon dulang dan tooltip itu. Mengawal sama ada tetingkap utama skrip disusun boleh dibuka.
+	MinIndex	Pulangan utama integer yang paling rendah.
 	Mod	Modulo. Kembali baki apabila dividen dibahagikan dengan Pembahagi.
 	MouseClickDrag	Klik dan memegang butang tetikus tertentu, menggerakkan tetikus untuk Koordinat destinasi, kemudian melepaskan butang.
 	MouseGetPos	Mendapatkan semula kedudukan semasa kursor tetikus, dan pilihan yang tingkap dan kawalan ia berlegar.
@@ -1236,13 +1244,16 @@
 	NumPut	Bilangan kedai di format binari di alamat yang dinyatakan + mengimbangi dan mengembalikan alamat di sebelah kanan item hanya bertulis.
 	OnExit	Menetapkan satu subrutin untuk berjalan secara automatik apabila keluar skrip.
 	OnMessage	Menetapkan fungsi untuk memanggil secara automatik apabila skrip menerima mesej yang ditentukan.
+	Ord	Mengembalikan nilai ordinal (kod aksara angka) bagi aksara pertama dalam rentetan.
 	OutputDebug	Menghantar rentetan kepada penyahpepijat (jika ada) untuk paparan.
 	Pause	Berhenti thread semasa skrip itu.
 	PixelGetColor	Semula warna pixel pada x yang ditetapkan, y menyelaras.
 	PixelSearch	Carian satu rantau skrin untuk piksel warna yang ditetapkan.
+	Pop	Membuang dan mengembalikan elemen array lepas.
 	PostMessage	Meletakkan mesej dalam barisan mesej daripada tingkap atau kawalan.
 	Process	Melakukan salah satu operasi berikut pada proses: memeriksa jika ia wujud, perubahan keutamaan; menutup ia; menunggu ia untuk menutup.
 	Progress	Mencipta atau mengemaskini tingkap yang mengandungi bar kemajuan.
+	Push	Melampirkan nilai-nilai ke akhir array.
 	Random	Menjana nombor pseudo-rawak.
 	RegExMatch	Menentukan sama ada rentetan mengandungi corak (ungkapan biasa).
 	RegExReplace	Menggantikan kejadian corak (ungkapan biasa) di dalam rentetan.
@@ -1250,6 +1261,7 @@
 	RegRead	Membaca nilai dari Registry.
 	RegWrite	Menulis nilai kepada Registry.
 	RegisterCallback	Mencipta alamat mesin kod yang apabila dipanggil, pelencongan panggilan kepada fungsi dalam skrip.
+	RemoveAt	Membuang barang-barang dari kedudukan yang diberikan dalam pelbagai linear.
 	Return	Pulangan daripada satu subrutin yang pelaksanaan sebelum ini telah melonjak melalui fungsi-panggilan, Gosub, pengaktifan Hotkey, GroupActivate, atau cara lain.
 	Round	Jika N ditinggalkan atau 0, Nombor bulat kepada integer terhampir. Jika N adalah nombor positif, Nombor bulat kepada N tempat perpuluhan. Jika N adalah negatif, Nombor bulat oleh N digit di sebelah kiri titik perpuluhan.
 	Run	Menjalankan program luar.

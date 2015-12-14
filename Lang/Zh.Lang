@@ -239,7 +239,7 @@
 	w_Lang062 =	标签(Ctrl+F9)
 	w_Lang063 =	If语句(F10)
 	w_Lang064 =	变量(Shift+F10)
-	w_Lang065 =	函数(Ctrl+F10)
+	w_Lang065 =	函数 / 阵列方法 (Ctrl+F10)
 	w_Lang066 =	IE浏览器(F11)
 	w_Lang067 =	COM接口(Shift+F11)
 	w_Lang068 =	运行小脚本(Ctrl+F11)
@@ -488,6 +488,7 @@
 	c_Lang208 =	键名
 	c_Lang209 =	值名称
 	c_Lang210 =	值
+	c_Lang211 =	排列
 		
 ; Other Windows		
 	t_Lang001 =	导出为AutoHotkey
@@ -1135,6 +1136,7 @@
 	CoordMode	为多个命令设置坐标模式，相对于活动窗口还是屏幕。
 	Cos	返回Number的余弦三角函数值。
 	Critical	防止当前线程被其他线程中断。
+	Delete	移除对象键 - 值对。
 	DetectHiddenText	设置在探测窗口时窗口中隐藏的文本是否“可见”。此设置影响例如IfWinExist和WinActivate的这些命令。
 	DetectHiddenWindows	设置脚本是否可以“看见”隐藏的窗口。
 	DllCall	调用DLL文件中的函数，例如标准的Windows API函数。
@@ -1180,6 +1182,7 @@
 	FileSetTime	改变一个或多个文件或文件夹的时间戳。支持通配符。
 	Floor	返回由Number向下取整到最近的整数（不带任何.00后缀）。
 	For	对对象中的每对键值对重复执行一系列命令。
+	Format	格式输入值根据格式字符串的变量数目。
 	FormatTime	转换YYYYMMDDHH24MISS时间戳到指定的日期/时间格式。
 	Func	获取函数的引用。
 	GetKeyName / GetKeyVK / GetKeySC	获取按键的名称、文本、虚拟按键码或扫描码。
@@ -1190,6 +1193,7 @@
 	GroupAdd	增加窗口规格到窗口组，必要时创建组。
 	GroupClose	关闭刚刚由GroupActivate或GroupDeactivate激活的活动窗口。接着激活系列中的下一个窗口。它还可以关闭组中所有窗口。
 	GroupDeactivate	类似于GroupActivate，不同的是它激活不在组中的下一个窗口。
+	HasKey	返回true如果密钥与一个值相关联。
 	if	指定在变量与值比较结果为TRUE时执行的命令。包含多个命令时，需要把它们括在区块（大括号）中。
 	if (expression)	指定在表达式计算结果为TRUE时执行的命令。
 	If var [not] between	根据数值或字母顺序检查变量的内容是否在两个值之间（包含边界）。
@@ -1212,6 +1216,7 @@
 	IniWrite	写入值到标准格式的.ini文件。
 	Input	等待用户输入字符串（不支持Windows 9x：在那里它什么都不做）。
 	InputBox	显示输入框让用户输入字符串。
+	InsertAt	插入一个或多个值，在一个线性阵列内的给定位置。
 	InStr	搜索字符串的出现位置，从左边或右边开始。
 	)	
 	Ahk_Cmd_Index = %Ahk_Cmd_Index%`n	
@@ -1219,6 +1224,7 @@
 	KeyHistory	显示脚本信息和最近键击和鼠标点击的历史。
 	KeyWait	等待按键或鼠标/操纵杆按钮被松开或按下。
 	Labels	标签用来标识代码行，可以作为Goto目标或组成子程序。
+	Length	返回开始位置1处的线性阵列的长度。
 	Log	返回Number的对数（底数为10）。
 	Ln	返回Number的自然对数（底数为e）。
 	Loop (normal) 	重复执行一系列命令：可以指定表示重复次数的数字或直到遇到break。
@@ -1226,7 +1232,9 @@
 	Loop (parse a string)	从一个字符串中获取子字符串（片段），每次一个。
 	Loop (read file contents)	逐行读取文本文件的内容，每次一行（比FileReadLine执行的更好）。
 	Loop (registry)	获取指定的注册表子键的内容，每次一个项目。
+	MaxIndex	返回的最大整数键。
 	Menu	创建、删除、修改和显示菜单和菜单项。改变托盘图标和它的提示。控制是否可以打开已编译脚本的主窗口。
+	MinIndex	返回最低整数键。
 	Mod	求模。返回被除数Dividend除以除数Divisor后得到的余数。
 	MouseClickDrag	点击并按住指定的鼠标按钮，接着移动鼠标到目标坐标，然后松开按钮。
 	MouseGetPos	获取鼠标光标的当前位置以及鼠标当前悬停的窗口和控件（可选的）。
@@ -1236,13 +1244,16 @@
 	NumPut	以二进制格式把Number存储到指定地址+偏移的位置并返回刚写入项右边的地址。
 	OnExit	指定在脚本退出时自动运行的子程序。
 	OnMessage	指定当脚本接收到特定消息时自动调用的函数。
+	Ord	返回字符串的第一个字符的顺序值（数字字符代码）。
 	OutputDebug	发送字符串到调试器（如果有的话）显示出来。
 	Pause	暂停脚本的当前线程。
 	PixelGetColor	获取指定的x, y坐标处像素的颜色。
 	PixelSearch	在屏幕某个区域中搜索指定颜色所在的像素。
+	Pop	移除并返回最后一个数组元素。
 	PostMessage	放置消息到窗口或控件的消息队列。
 	Process	对进程执行下列的其中一个操作：检查进程是否存在；改变进程的优先级；关闭进程；等待进程关闭。
 	Progress	创建或更新包含进度条的窗口。
+	Push	值追加到一个数组的结尾。
 	Random	生成伪随机数。
 	RegExMatch	判断字符串是否包含某个匹配模式（正则表达式）。
 	RegExReplace	替换字符串中匹配模式（正则表达式）出现的地方。
@@ -1250,6 +1261,7 @@
 	RegRead	从注册表读取值。
 	RegWrite	写入值到注册表。
 	RegisterCallback	创建机器码地址，当它被调用时会重定向到脚本中的函数。
+	RemoveAt	移除成线性阵列的给定的位置的项目。
 	Return	从子程序返回到之前通过函数调用、Gosub、激活 Hotkey、GroupActivate 或其他方式执行跳转的地方。
 	Round	如果N省略或为0，则Number被取整到最近的整数。如果N为正数，则Number被取整到N个小数位。如果N为负数，则Number被取整到十进制小数点左边N位。
 	Run	运行外部程序。

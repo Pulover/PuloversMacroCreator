@@ -239,7 +239,7 @@
 	w_Lang062 =	標籤（按Ctrl+F9）
 	w_Lang063 =	如果報表附註（F10）
 	w_Lang064 =	變量（按Shift+F10）
-	w_Lang065 =	功能（按Ctrl+F10）
+	w_Lang065 =	功能 / 陣列方法 （按Ctrl+F10）
 	w_Lang066 =	IE瀏覽器（F11）
 	w_Lang067 =	 COM接口（SHIFT+F11）
 	w_Lang068 =	運行的scriptlet（按Ctrl+ F11）
@@ -488,6 +488,7 @@
 	c_Lang208 =	鍵名
 	c_Lang209 =	值名稱
 	c_Lang210 =	值
+	c_Lang211 =	排列
 		
 ; Other Windows		
 	t_Lang001 =	導出到華民航空
@@ -1135,6 +1136,7 @@
 	CoordMode	集協調各種命令模式是相對的活動窗口或屏幕。
 	Cos	返回三角餘弦數。
 	Critical	防止當前線程的其他線程被打斷。
+	Delete	移除對象鍵 - 值對。
 	DetectHiddenText	確定是否有隱形文字在一個窗口“看到”的目的找到窗口。這種影響如IfWinExist WinActivate的命令。
 	DetectHiddenWindows	確定無形窗口“看到”的腳本。
 	DllCall	DLL內部調用一個函數，比如一個標準的Windows API函數。
@@ -1180,6 +1182,7 @@
 	FileSetTime	更改一個或多個文件或文件夾的日期時間戳。支持通配符。
 	Floor	返回Number向下調整至最接近的整數（不帶任何.00後綴）。
 	For	再次重複一系列命令在一個對象中的每個鍵 - 值對。
+	Format	格式輸入值根據格式字符串的變量數目。
 	FormatTime	到指定的日期/時間格式轉換一個YYYYMMDDHH24MISS時間戳。
 	Func	檢索功能。
 	GetKeyName / GetKeyVK / GetKeySC	檢索的名稱或文字，虛擬鍵碼或掃描代碼的一個關鍵。
@@ -1190,6 +1193,7 @@
 	GroupAdd	添加一個窗口規範窗口組，創建組，如果必要的。
 	GroupClose	關閉活動窗口，如果它只是激活，GroupActivate或GroupDeactivate的。然後激活該系列中的下一個窗口。它也可以關閉所有的窗口，在一組。
 	GroupDeactivate	類似GroupActivate不在組中除了激活下一個窗口。
+	HasKey	返回true如果密鑰與一個值相關聯。
 	if	指定命令（S）來執行，如果一個變量的值比較evalutes TRUE。當一個以上的命令是，把它們括在一個塊（大括號）。
 	if (expression)	指定執行命令（S），如果表達式的計算結果為TRUE。
 	If var [not] between	檢查變量的內容是數字或字母，兩個值之間（含）。
@@ -1212,6 +1216,7 @@
 	IniWrite	值寫入到標準格式。ini文件。
 	Input	等待用戶輸入一個字符串（不支持Windows 9x上：它什麼也不做）。
 	InputBox	顯示一個輸入框，要求用戶輸入一個字符串。
+	InsertAt	插入一個或多個值，在一個線性陣列內的給定位置。
 	InStr	檢索數據對於一個給定的字符串的發生，從左側或右側。
 	)	
 	Ahk_Cmd_Index = %Ahk_Cmd_Index%`n	
@@ -1219,6 +1224,7 @@
 	KeyHistory	顯示腳本信息和最近期的鍵盤和鼠標操作的歷史。
 	KeyWait	等待被釋放或按下一個鍵或鼠標/操縱桿按鈕。
 	Labels	一個標籤標識的代碼行，並可以用作轉到目標或形成一個子程序。
+	Length	返回開始位置1處的線性陣列的長度。
 	Log	返回數的對數（基數為10）。
 	Ln	返回自然對數（以e為底）數目。
 	Loop (normal) 	反复執行的一系列命令：要么指定次數或休息，直到遇到。
@@ -1226,7 +1232,9 @@
 	Loop (parse a string)	檢索子字符串（字段）從一個字符串，一次一個。
 	Loop (read file contents)	檢索在一個文本文件，一個（執行優於FileReadLine）時間線。
 	Loop (registry)	檢索指定的註冊表子項，一個項目的內容在同一時間。
+	MaxIndex	返回的最大整數鍵。
 	Menu	創建，刪除，修改和顯示菜單和菜單項。更改托盤圖標和工具提示。控制編譯腳本的主窗口是否可以打開。
+	MinIndex	返回最低整數鍵。
 	Mod	模。返回剩餘股利除以除數時。
 	MouseClickDrag	點擊次數，並持有指定的鼠標按鈕，將鼠標移動到目的地的坐標，然後釋放按鈕。
 	MouseGetPos	檢索當前鼠標光標位置，以及可選的窗口和控件懸停。
@@ -1236,13 +1244,16 @@
 	NumPut	商店數量以二進制格式在指定的地址+偏移量的地址，並返回剛剛寫入的項目的右側。
 	OnExit	指定一個子程序時自動運行的腳本退出。
 	OnMessage	指定一個函數調用腳本時自動接收到指定的消息。
+	Ord	返回字符串的第一個字符的順序值（數字字符代碼）。
 	OutputDebug	將字符串發送到顯示調試器（如果有的話）。
 	Pause	暫停腳本的電流線程。
 	PixelGetColor	檢索處的像素的顏色指定的x，y坐標。
 	PixelSearch	搜索指定的顏色的像素的屏幕的一個區域。
+	Pop	移除並返回最後一個數組元素。
 	PostMessage	將消息放入消息隊列中的一個窗口或控制。
 	Process	執行過程下列操作之一：檢查是否存在改變其優先關閉它等待它關閉。
 	Progress	創建或更新窗口，其中包含一個進度條。
+	Push	值追加到一個數組的結尾。
 	Random	產生一個偽隨機數。
 	RegExMatch	確定一個字符串是否包含一個模式（正則表達式）。
 	RegExReplace	出現替換字符串內的模式（正則表達式）。
@@ -1250,6 +1261,7 @@
 	RegRead	從註冊表中讀取一個值。
 	RegWrite	寫入到註冊表的值。
 	RegisterCallback	創建一個機器代碼地址，調用時，將呼叫重定向到一個腳本中的函數。
+	RemoveAt	移除成線性陣列的給定的位置的項目。
 	Return	返回從子程序執行此前通過函數調用，GOSUB，熱鍵激活，GroupActivate，或其他手段跳下。
 	Round	如果省略N或0，四捨五入到最接近的整數。如果N為正數，數到N小數點後四捨五入。如果N是負號是由N位四捨五入到小數點左邊的。
 	Run	運行外部程序。

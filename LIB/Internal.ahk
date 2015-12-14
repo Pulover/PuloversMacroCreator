@@ -878,13 +878,12 @@ SavedVars(Var="", ByRef Saved="")
 	}
 	If (IsObject(%Var%))
 	{
+		ListOfVars := "["
 		For i, v in %Var%
 		{
-			If (IsObject(v))
-				VarsRecord[Var "[Array](" i " of " %Var%.Length() ")"] := "[Object](" v.Length() ")"
-			Else
-				VarsRecord[Var "[Array](" i " of " %Var%.Length() ")"] := v
+			ListOfVars .= IsObject(v) ? "[Array](" v.Length() "), " : v ", "
 		}
+		VarsRecord[Var] := "[Array](" %Var%.Length() ") " SubStr(RTrim(ListOfVars, ", "), 1, 60) "]"
 	}
 	Else
 		VarsRecord[Var] := SubStr(%Var%, 1, 60)

@@ -238,8 +238,8 @@
 	w_Lang061 =	Goto (Shift+F9)
 	w_Lang062 =	Label (Ctrl+F9)
 	w_Lang063 =	Pokiaľ závierka (F10)
-	w_Lang064 =	premenné (Shift+F10)
-	w_Lang065 =	Funkcia (Ctrl+F10)
+	w_Lang064 =	Premenné (Shift+F10)
+	w_Lang065 =	Funkcia / Metódy poľa (Ctrl+F10)
 	w_Lang066 =	Internet Explorer (F11)
 	w_Lang067 =	COM rozhranie (Shift+F11)
 	w_Lang068 =	Spustiť skripty (Ctrl+F11)
@@ -484,10 +484,11 @@
 	c_Lang204 =	Vyhodnotiť Matematický Výraz
 	c_Lang205 =	Kraj
 	c_Lang206 =	(Použite [] pre vytvorenie poľa, napr.: [10, 20, aVariable, "aString"])
-	c_Lang207 =	objekt Array
+	c_Lang207 =	Objekt Array
 	c_Lang208 =	Názov kľúča
 	c_Lang209 =	Názov Hodnota
 	c_Lang210 =	Hodnoty
+	c_Lang211 =	Rad
 		
 ; Other Windows		
 	t_Lang001 =	Export do AutoHotkey
@@ -1135,6 +1136,7 @@
 	CoordMode	Sady koordinovať režim pre rôzne príkazy, ktoré sa v porovnaní s buď aktívne okno alebo na obrazovke.
 	Cos	Vráti trigonometrický COSINUS čísla.
 	Critical	Zabraňuje aktuálne vlákno z prerušovaný iných podprocesov.
+	Delete	Odstraňuje dvojica kľúč-hodnota z objektu.
 	DetectHiddenText	Určuje, či neviditeľný text okne je "vidieť" za účelom zistenia okno. To sa týka napr príkazy IfWinExist a WinActivate.
 	DetectHiddenWindows	Určuje, či neviditeľné okná sú "vidieť" pomocou skriptu.
 	DllCall	Volanie funkcie v DLL, ako je štandardné funkcie Windows API.
@@ -1180,6 +1182,7 @@
 	FileSetTime	Zmení datetime pečiatka jedného alebo viacerých súborov alebo priečinkov. Zástupné znaky sú podporované.
 	Floor	Vráti číslo zaokrúhlené nadol na najbližšie celé číslo (bez prípony 0,00).
 	For	Opakuje rad príkazov raz pre každý kľúč-hodnota dvojica v objekte.
+	Format	Sformátuje premenný počet vstupných hodnôt podľa formátu reťazca.
 	FormatTime	Transformuje YYYYMMDDHH24MISS časovú pečiatku do zadaného dátumu / času vo formáte.
 	Func	Získa odkaz na funkciu.
 	GetKeyName / GetKeyVK / GetKeySC	Načíta názov alebo text, virtuálna klávesnica kód alebo kód skenovanie na kľúč.
@@ -1190,6 +1193,7 @@
 	GroupAdd	Pridá okná špecifikáciu k oknu skupiny, vytvorenie skupiny v prípade potreby.
 	GroupClose	Zatvorí aktívne okno, ak to bol práve aktivovaný GroupActivate alebo GroupDeactivate. To aktivuje nasledujúce okno v seriáli. To môže tiež zatvoriť všetky okná v skupine.
 	GroupDeactivate	Podobne GroupActivate okrem aktivuje nasledujúce okno nie je v skupine.
+	HasKey	Vracia true, ak kľúč je spojený s hodnotou.
 	if	Určuje príkaz (y) na vykonanie, ak porovnanie premennej na hodnotu evalutes na TRUE. Pri viac ako jeden príkaz je k dispozícii, je uzavrieť do bloku (rovnátka).
 	if (expression)	Určuje príkaz (y) na vykonanie, pokiaľ výraz vyhodnotený ako PRAVDA.
 	If var [not] between	Kontroly, či premenná je obsahom sú číselne alebo abecedne medzi dvoma hodnotami (vrátane).
@@ -1212,6 +1216,7 @@
 	IniWrite	Zapíše hodnotu štandardného formátu. INI súboru.
 	Input	Čaká na užívateľovi zadať reťazec (nie je podporovaná na Windows 9x: nerobí nič).
 	InputBox	Zobrazí vstupné pole požiadať užívateľa na zadanie reťazca.
+	InsertAt	Vloží jednu alebo viac hodnôt v danej polohe v lineárnom poli.
 	InStr	Vyhľadá danú výskyt reťazca, z ľavej alebo pravej strane.
 	)	
 	Ahk_Cmd_Index = %Ahk_Cmd_Index%`n	
@@ -1219,6 +1224,7 @@
 	KeyHistory	Zobrazuje skript info a história najnovších stlačení klávesov a myši.
 	KeyWait	Čaká kľúčom alebo tlačidla myši / joysticku byť prepustený alebo stlačená.
 	Labels	Štítok označuje riadok kódu, a môže byť použitý ako cieľ Goto alebo vytvoriť podprogram.
+	Length	Vráti dĺžku lineárnym poli začínajúce v polohe 1.
 	Log	Vráti logaritmus (základ 10) Number.
 	Ln	Vráti prirodzený logaritmus (základ e) Number.
 	Loop (normal) 	Vykonajte sériu príkazov opakovane: buď zadaný počet opakovaní alebo kým prestávke sa stretol.
@@ -1226,7 +1232,9 @@
 	Loop (parse a string)	Načíta čiastkové reťazca (pole), z povrázku, jeden po druhom.
 	Loop (read file contents)	Načíta riadky v textovom súbore, jeden po druhom (lepšie ako FileReadLine).
 	Loop (registry)	Načíta obsah zadaného podkľúč databázy Registry, jeden kus po druhom.
+	MaxIndex	Vracia najvyššej celočíselnú kľúč.
 	Menu	Vytvorí, odstráni, upraví a zobrazí sa menu a položky. Zmení ikonu a jej Tooltip. Určuje, či sa hlavné okno kompilovaný skript možno otvoriť.
+	MinIndex	Vracia najmenší celočíselnú kľúč.
 	Mod	Modulo. Vráti zvyšok, keď je dividenda podelil deliteľ.
 	MouseClickDrag	Kliknutie a má zadaný tlačidlo myši, pohyb myši na cieľové súradnice, a potom uvoľnenie tlačidla.
 	MouseGetPos	Načíta aktuálnu pozíciu kurzora a prípadne kde je otvorené okno a riadenie je vznášajúce sa nad.
@@ -1236,13 +1244,16 @@
 	NumPut	Obchody číslo v binárnom formáte na určenú adresu + offset a vráti adresu vpravo od položky práve napísal.
 	OnExit	Určuje podprogram spustiť automaticky, keď skript východy.
 	OnMessage	Určuje funkcie pre volanie automaticky, keď skript dostane zadanú správu.
+	Ord	Vráti poradové hodnotu (číselný kód znaku) prvého znaku v reťazci.
 	OutputDebug	Odošle reťazec ladiaci program (ak existuje) na displeji.
 	Pause	Pozastavenie skriptu aktuálne vlákno.
 	PixelGetColor	Načíta farbu pixelu na zadané súradnice X, Y.
 	PixelSearch	Prehľadá oblasť obrazovky pre pixelu určenie farby.
+	Pop	Odstráni a vráti posledný prvok poľa.
 	PostMessage	Umiestni správu do fronty správ okna alebo ovládací prvok.
 	Process	Vykoná jednu z nasledujúcich operácií na proces: skontroluje, či existuje, zmení svoju prioritu; zavrie, čaká na jeho ukončenie.
 	Progress	Vytvorí alebo aktualizuje okno obsahujúce priebehu.
+	Push	Pripojí hodnoty na koniec poľa.
 	Random	Generuje pseudo-náhodné číslo.
 	RegExMatch	Určuje, či reťazec obsahuje vzor (regulárny výraz).
 	RegExReplace	Nahrádza výskyty vzoru (regulárny výraz) vnútri reťazca.
@@ -1250,6 +1261,7 @@
 	RegRead	Číta hodnotu z registra.
 	RegWrite	Zapíše hodnotu do registra.
 	RegisterCallback	Vytvorí strojovo kód adresy, ktorý pri volaní, presmerovanie hovoru na funkcie v skripte.
+	RemoveAt	Odstráni položky z danej pozície v lineárnom poli.
 	Return	Návrat z podprogramu, ktoré vykonávanie predtým skočil cez funkčné pohotovosti, GoSub, horúce aktivácia, GroupActivate, alebo inými prostriedkami.
 	Round	Je-li N vynechané, alebo 0, je číslo zaokrúhlené na najbližšie celé číslo. Ak n je kladné číslo, je číslo zaokrúhlené na N desatinných miest. Pokiaľ je n záporné, je číslo zaokrúhlené podľa číslic N vľavo od desatinnej čiarky.
 	Run	Spustí externý program.

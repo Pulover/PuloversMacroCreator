@@ -239,7 +239,7 @@
 	w_Lang062 =	Label (Ctrl+F9)
 	w_Lang063 =	If Statements (F10)
 	w_Lang064 =	Variables (Shift+F10)
-	w_Lang065 =	Functions (Ctrl+F10)
+	w_Lang065 =	Functions / Array Methods (Ctrl+F10)
 	w_Lang066 =	Internet Explorer (F11)
 	w_Lang067 =	COM Interface (Shift+F11)
 	w_Lang068 =	Run Scriptlet (Ctrl+F11)
@@ -488,6 +488,7 @@
 	c_Lang208 =	Key Name
 	c_Lang209 =	Value Name
 	c_Lang210 =	Values
+	c_Lang211 =	Array
 		
 ; Other Windows		
 	t_Lang001 =	Export to AutoHotkey
@@ -1135,6 +1136,7 @@
 	CoordMode	Sets coordinate mode for various commands to be relative to either the active window or the screen.
 	Cos	Returns the trigonometric cosine of Number.
 	Critical	Prevents the current thread from being interrupted by other threads.
+	Delete	Removes key-value pairs from an object.
 	DetectHiddenText	Determines whether invisible text in a window is "seen" for the purpose of finding the window. This affects commands such as IfWinExist and WinActivate.
 	DetectHiddenWindows	Determines whether invisible windows are "seen" by the script.
 	DllCall	Calls a function inside a DLL, such as a standard Windows API function.
@@ -1180,6 +1182,7 @@
 	FileSetTime	Changes the datetime stamp of one or more files or folders. Wildcards are supported.
 	Floor	Returns Number rounded down to the nearest integer (without any .00 suffix).
 	For	Repeats a series of commands once for each key-value pair in an object.
+	Format	Formats a variable number of input values according to a format string.
 	FormatTime	Transforms a YYYYMMDDHH24MISS timestamp into the specified date/time format.
 	Func	Retrieves a reference to a function.
 	GetKeyName / GetKeyVK / GetKeySC	Retrieves the name or text, virtual key code or scan code of a key.
@@ -1190,6 +1193,7 @@
 	GroupAdd	Adds a window specification to a window group, creating the group if necessary.
 	GroupClose	Closes the active window if it was just activated by GroupActivate or GroupDeactivate. It then activates the next window in the series. It can also close all windows in a group.
 	GroupDeactivate	Similar to GroupActivate except activates the next window not in the group.
+	HasKey	Returns true if Key is associated with a value.
 	if	Specifies the command(s) to perform if the comparison of a variable to a value evalutes to TRUE. When more than one command is present, enclose them in a block (braces).
 	if (expression)	Specifies the command(s) to perform if an expression evaluates to TRUE.
 	If var [not] between	Checks whether a variable's contents are numerically or alphabetically between two values (inclusive).
@@ -1212,6 +1216,7 @@
 	IniWrite	Writes a value to a standard format .ini file.
 	Input	Waits for the user to type a string (not supported on Windows 9x: it does nothing).
 	InputBox	Displays an input box to ask the user to enter a string.
+	InsertAt	Inserts one or more values at a given position within a linear array.
 	InStr	Searches for a given occurrence of a string, from the left or the right.
 	)	
 	Ahk_Cmd_Index = %Ahk_Cmd_Index%`n	
@@ -1219,6 +1224,7 @@
 	KeyHistory	Displays script info and a history of the most recent keystrokes and mouse clicks.
 	KeyWait	Waits for a key or mouse/joystick button to be released or pressed down.
 	Labels	A label identifies a line of code, and can be used as a Goto target or to form a subroutine.
+	Length	Returns the length of a linear array beginning at position 1.
 	Log	Returns the logarithm (base 10) of Number.
 	Ln	Returns the natural logarithm (base e) of Number.
 	Loop (normal) 	Perform a series of commands repeatedly: either the specified number of times or until break is encountered.
@@ -1226,7 +1232,9 @@
 	Loop (parse a string)	Retrieves substrings (fields) from a string, one at a time.
 	Loop (read file contents)	Retrieves the lines in a text file, one at a time (performs better than FileReadLine).
 	Loop (registry)	Retrieves the contents of the specified registry subkey, one item at a time.
+	MaxIndex	Returns the highest integer key.
 	Menu	Creates, deletes, modifies and displays menus and menu items. Changes the tray icon and its tooltip. Controls whether the main window of a compiled script can be opened.
+	MinIndex	Returns the lowest integer key.
 	Mod	Modulo. Returns the remainder when Dividend is divided by Divisor.
 	MouseClickDrag	Clicks and holds the specified mouse button, moves the mouse to the destination coordinates, then releases the button.
 	MouseGetPos	Retrieves the current position of the mouse cursor, and optionally which window and control it is hovering over.
@@ -1236,13 +1244,16 @@
 	NumPut	Stores Number in binary format at the specified address+offset and returns the address to the right of the item just written.
 	OnExit	Specifies a subroutine to run automatically when the script exits.
 	OnMessage	Specifies a function to call automatically when the script receives the specified message.
+	Ord	Returns the ordinal value (numeric character code) of the first character in String.
 	OutputDebug	Sends a string to the debugger (if any) for display.
 	Pause	Pauses the script's current thread.
 	PixelGetColor	Retrieves the color of the pixel at the specified x,y coordinates.
 	PixelSearch	Searches a region of the screen for a pixel of the specified color.
+	Pop	Removes and returns the last array element.
 	PostMessage	Places a message in the message queue of a window or control.
 	Process	Performs one of the following operations on a process: checks if it exists; changes its priority; closes it; waits for it to close.
 	Progress	Creates or updates a window containing a progress bar.
+	Push	Appends values to the end of an array.
 	Random	Generates a pseudo-random number.
 	RegExMatch	Determines whether a string contains a pattern (regular expression).
 	RegExReplace	Replaces occurrences of a pattern (regular expression) inside a string.
@@ -1250,6 +1261,7 @@
 	RegRead	Reads a value from the registry.
 	RegWrite	Writes a value to the registry.
 	RegisterCallback	Creates a machine-code address that when called, redirects the call to a function in the script.
+	RemoveAt	Removes items from the given position in a linear array.
 	Return	Returns from a subroutine to which execution had previously jumped via function-call, Gosub, Hotkey activation, GroupActivate, or other means.
 	Round	If N is omitted or 0, Number is rounded to the nearest integer. If N is positive number, Number is rounded to N decimal places. If N is negative, Number is rounded by N digits to the left of the decimal point.
 	Run	Runs an external program.

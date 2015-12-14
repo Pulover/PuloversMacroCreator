@@ -637,9 +637,9 @@ RTrim (String, OmitChars = "" `t"")
 Screenshot (FilePattern, X|Y|Width|Height)
 Sin (Number)
 Sqrt (Number)
-StrGet (Address [, Length] [, Encoding = None ])
+StrGet (Address [, Length] [, Encoding = None])
 StrLen (String)
-StrPut (String, Address [, Length] [, Encoding = None ])
+StrPut (String, Address [, Length] [, Encoding = None])
 StrReplace (Haystack, SearchText [, ReplaceText, OutputVarCount, Limit := -1])
 StrSplit (String [, Delimiters, OmitChars])
 SubStr (String, StartingPos [, Length])
@@ -647,6 +647,28 @@ Tan (Number)
 Trim (String, OmitChars = "" `t"")
 WinActive ([WinTitle, WinText, ExcludeTitle, ExcludeText])
 WinExist ([WinTitle, WinText, ExcludeTitle, ExcludeText])
+Delete (Key / FirstKey, LastKey)
+HasKey (Key)
+InsertAt (Pos, Value1 [, Value2, ... ValueN])
+Length ()
+MaxIndex ()
+MinIndex ()
+RemoveAt (Pos [, Length])
+Pop ()
+Push ([Value, Value2, ..., ValueN])
+)"
+
+ArrayMethodsList := "
+(Join$
+Delete
+HasKey
+InsertAt
+Length
+MaxIndex
+MinIndex
+RemoveAt
+Pop
+Push
 )"
 
 Loop, Parse, BuiltinFuncParams, `n
