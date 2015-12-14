@@ -289,7 +289,7 @@
 	c_Lang008 =	Exécuter / fichier / String / Misc.
 	c_Lang009 =	Si états
 	c_Lang010 =	Variables
-	c_Lang011 =	Fonctions
+	c_Lang011 =	Fonctions / Modes de matrice
 	c_Lang012 =	Internet Explorer
 	c_Lang013 =	Interface COM
 	c_Lang014 =	Sélectionnez Application (Avancé)
@@ -818,6 +818,7 @@
 	d_Lang088 =	Essayez de courir utilisateur comme commun (non administrateur).
 	d_Lang089 =	Aucune ligne sélectionnée!
 	d_Lang090 =	S'il vous plaît, sélectionner une ligne pour insérer ou retirer le groupe.
+	d_Lang091 =	Méthode invalide
 		
 ; Start-up Tips		
 	Start_Tips =	

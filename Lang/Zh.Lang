@@ -289,7 +289,7 @@
 	c_Lang008 =	运行/文件/字符串/其他
 	c_Lang009 =	If语句
 	c_Lang010 =	变量
-	c_Lang011 =	函数
+	c_Lang011 =	函数 / 阵列方法
 	c_Lang012 =	IE浏览器
 	c_Lang013 =	COM接口
 	c_Lang014 =	选择程序（高级）
@@ -818,6 +818,7 @@
 	d_Lang088 =	尝试运行作为普通用户（非管理员）。
 	d_Lang089 =	没有行选择！
 	d_Lang090 =	请选择一个行插入或删除组。
+	d_Lang091 =	无效的方法
 		
 ; Start-up Tips		
 	Start_Tips =	

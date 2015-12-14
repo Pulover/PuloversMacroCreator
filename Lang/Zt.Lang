@@ -289,7 +289,7 @@
 	c_Lang008 =	運行/文件/串/ MISC。
 	c_Lang009 =	如果報表
 	c_Lang010 =	變量
-	c_Lang011 =	功能
+	c_Lang011 =	功能 / 陣列方法
 	c_Lang012 =	IE瀏覽器
 	c_Lang013 =	COM接口
 	c_Lang014 =	選擇應用（高級）
@@ -818,6 +818,7 @@
 	d_Lang088 =	嘗試運行作為普通用戶（非管理員）。
 	d_Lang089 =	沒有行選擇！
 	d_Lang090 =	請選擇一個行插入或刪除組。
+	d_Lang091 =	無效的方法
 		
 ; Start-up Tips		
 	Start_Tips =	

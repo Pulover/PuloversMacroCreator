@@ -289,7 +289,7 @@
 	c_Lang008 =	Run / File / String / Misc.
 	c_Lang009 =	Jos lausunnot
 	c_Lang010 =	Muuttujat
-	c_Lang011 =	Tehtävät
+	c_Lang011 =	Funktiot / Array menetelmiä
 	c_Lang012 =	Internet Explorer
 	c_Lang013 =	COM-rajapinta
 	c_Lang014 =	Valitse Application (Advanced)
@@ -818,6 +818,7 @@
 	d_Lang088 =	Yritä juosta yhteisinä käyttäjä (ei pääkäyttäjä).
 	d_Lang089 =	Ei rivi valittu!
 	d_Lang090 =	Ole hyvä, valitse rivi lisätä tai poistaa ryhmän.
+	d_Lang091 =	Virheellinen menetelmä
 		
 ; Start-up Tips		
 	Start_Tips =	

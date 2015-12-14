@@ -289,7 +289,7 @@
 	c_Lang008 =	Spustiť / Súbor / String / Misc.
 	c_Lang009 =	Ak vyhlásenie
 	c_Lang010 =	Premenné
-	c_Lang011 =	Funkcie
+	c_Lang011 =	Funkcia / Metódy poľa
 	c_Lang012 =	Internet Explorer
 	c_Lang013 =	COM rozhranie
 	c_Lang014 =	Výber aplikácie (pokročilé)
@@ -818,6 +818,7 @@
 	d_Lang088 =	Skúste spustiť ako bežných užívateľov (nie správca).
 	d_Lang089 =	Nie riadok vybraný!
 	d_Lang090 =	Prosím, vyberte riadok pre vloženie alebo odstránenie skupiny.
+	d_Lang091 =	Neplatná metóda
 		
 ; Start-up Tips		
 	Start_Tips =	

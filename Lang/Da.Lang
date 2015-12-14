@@ -289,7 +289,7 @@
 	c_Lang008 =	Run / File / String / Misc.
 	c_Lang009 =	Hvis Erklæringer
 	c_Lang010 =	Variabler
-	c_Lang011 =	Funktioner
+	c_Lang011 =	Funktioner / Array-metoder
 	c_Lang012 =	Internet Explorer
 	c_Lang013 =	COM interface
 	c_Lang014 =	Vælg program (Avanceret)
@@ -818,6 +818,7 @@
 	d_Lang088 =	Prøv at køre som almindelig bruger (ikke administrator).
 	d_Lang089 =	Ingen rækken valgt!
 	d_Lang090 =	Please, skal du vælge en række for at indsætte eller fjerne gruppen.
+	d_Lang091 =	Ugyldig metode
 		
 ; Start-up Tips		
 	Start_Tips =	

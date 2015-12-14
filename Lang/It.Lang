@@ -289,7 +289,7 @@
 	c_Lang008 =	Eseguire / File / String / Misc.
 	c_Lang009 =	Se Dichiarazioni
 	c_Lang010 =	Variabili
-	c_Lang011 =	Funzioni
+	c_Lang011 =	Funzioni / Metodi di matrice
 	c_Lang012 =	Internet Explorer
 	c_Lang013 =	Interfaccia COM
 	c_Lang014 =	Seleziona applicazione (Advanced)
@@ -818,6 +818,7 @@
 	d_Lang088 =	Provare a eseguire come utente comune (non amministratore).
 	d_Lang089 =	Nessuna riga selezionato!
 	d_Lang090 =	Per favore, selezionare una riga per inserire o rimuovere il gruppo.
+	d_Lang091 =	Metodo non valido
 		
 ; Start-up Tips		
 	Start_Tips =	

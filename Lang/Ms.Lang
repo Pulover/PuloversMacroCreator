@@ -289,7 +289,7 @@
 	c_Lang008 =	Run / File / String / Misc.
 	c_Lang009 =	Jika Penyata
 	c_Lang010 =	Pembolehubah
-	c_Lang011 =	Fungsi
+	c_Lang011 =	Fungsi / Kaedah mudah
 	c_Lang012 =	Internet Explorer
 	c_Lang013 =	COM Muka
 	c_Lang014 =	Pilih Permohonan (Advanced)
@@ -818,6 +818,7 @@
 	d_Lang088 =	Cuba untuk menjalankan sebagai pengguna biasa (bukan pentadbir).
 	d_Lang089 =	Tiada berturut-turut dipilih!
 	d_Lang090 =	Sila, pilih berturut-turut untuk memasukkan atau mengeluarkan kumpulan.
+	d_Lang091 =	Kaedah tidak sah
 		
 ; Start-up Tips		
 	Start_Tips =	

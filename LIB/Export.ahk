@@ -245,7 +245,7 @@
 			If ((TimesX > 1) || InStr(TimesX, "%"))
 				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
 		}
-		Else If ((Type = cType21) || (Type = cType44))
+		Else If ((Type = cType21) || (Type = cType44) || (Type = cType46))
 		{
 			AssignReplace(Step)
 			If (VarValue = "")
@@ -268,6 +268,10 @@
 					VarValue := "`n(LTrim`n" VarValue "`n)"
 				}
 				Step := VarName " " Oper " " VarValue
+			}
+			Else If (Type = cType46)
+			{
+				Step := ((VarName = "_null") ? "" : VarName " " Oper " ") Target "." Action "(" ((VarValue = """""") ? "" : VarValue) ")"
 			}
 			Else
 				Step := ((VarName = "_null") ? "" : VarName " " Oper " ") Action "(" ((VarValue = """""") ? "" : VarValue) ")"

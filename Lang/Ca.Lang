@@ -289,7 +289,7 @@
 	c_Lang008 =	Executar / Arxiu / cadena / Misc.
 	c_Lang009 =	Si els estats
 	c_Lang010 =	Variables
-	c_Lang011 =	Funcions
+	c_Lang011 =	Funcions / Mètodes de matriu
 	c_Lang012 =	Internet Explorer
 	c_Lang013 =	COM Interface
 	c_Lang014 =	Seleccionar aplicació (Avançat)
@@ -818,6 +818,7 @@
 	d_Lang088 =	Intenteu executar l'usuari tan comú (no administrador).
 	d_Lang089 =	No fila seleccionada!
 	d_Lang090 =	Seleccioneu una fila per inserir o extreure el grup.
+	d_Lang091 =	Mètode vàlid
 		
 ; Start-up Tips		
 	Start_Tips =	

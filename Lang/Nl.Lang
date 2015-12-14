@@ -289,7 +289,7 @@
 	c_Lang008 =	Run / Bestand / String / Misc.
 	c_Lang009 =	Als Verklaringen
 	c_Lang010 =	Variabelen
-	c_Lang011 =	Functies
+	c_Lang011 =	Functies / Scala methoden
 	c_Lang012 =	Internet Explorer
 	c_Lang013 =	COM-interface
 	c_Lang014 =	Select Application (Geavanceerd)
@@ -818,6 +818,7 @@
 	d_Lang088 =	Probeer zo gewone gebruiker (geen beheerder) draaien.
 	d_Lang089 =	Geen rij geselecteerd!
 	d_Lang090 =	Alstublieft, selecteer een rij te plaatsen of te verwijderen van de groep.
+	d_Lang091 =	Ongeldige methode
 		
 ; Start-up Tips		
 	Start_Tips =	

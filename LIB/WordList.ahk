@@ -42,7 +42,7 @@ getaddress getcapacity getkeyname getkeysc getkeystate getkeyvk haskey il_add il
 insert insertat instr isbyref isfunc islabel isobject ln log ltrim lv_add lv_delete lv_deletecol lv_getcount
 lv_getnext lv_gettext lv_insert lv_insertcol lv_modify lv_modifycol lv_setimagelist maxindex
 minindex mod newenum next numget numput objaddref objclone object objgetaddress objgetcapacity
-objinsert objmaxindex objminindex objnewenum objrelease objremove objsetcapacity onmessage
+objinsert objmaxindex objminindex objnewenum objrelease objremove objsetcapacity onmessage ord
 pop processpath push rawread rawwrite readline regexmatch regexreplace registercallback remove removeat
 round rtrim sb_seticon sb_setparts sb_settext seek setcapacity sin sqrt strget strlen strput strsplit substr
 tan tell this trim tv_add tv_delete tv_get tv_getchild tv_getcount tv_getnext tv_getparent tv_getprev

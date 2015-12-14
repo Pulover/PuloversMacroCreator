@@ -339,7 +339,7 @@
 				}
 				If ((BreakIt > 0) || (SkipIt > 0))
 					continue
-				If ((Type = cType21) || (Type = cType44))
+				If ((Type = cType21) || (Type = cType44) || (Type = cType46))
 				{
 					StringReplace, Step, Step, ``n, `n, All
 					StringReplace, Step, Step, ``t, `t, All
@@ -348,7 +348,7 @@
 					CheckVars("Step|Target|Window|VarName|VarValue", PointMarker)
 					If (Type = cType21)
 					{
-						If RegExMatch(VarValue, "U)%\s([\w%]+)\((.*)\)")  ; Functions
+						If RegExMatch(VarValue, "sU)%\s([\w.%]+)\((.*)\)")  ; Functions & Methods
 							StringReplace, VarValue, VarValue, `,, ```,, All
 						CheckVars("VarValue", PointMarker)
 						If (Target = "Expression")
@@ -360,6 +360,31 @@
 							}
 						}
 						AssignVar(VarName, Oper, VarValue)
+					}
+					Else If (IsObject(%Target%))
+					{
+						Params := Object()
+						StringReplace, VarValue, VarValue, ```,, ¢, All
+						Loop, Parse, VarValue, `,, %A_Space%""
+						{
+							LoopField := DerefVars(A_LoopField)
+							StringReplace, LoopField, LoopField, ¢, `,, All
+							StringReplace, LoopField, LoopField, ¥Space, %A_Space%, All
+							Params.Push(LoopField)
+						}
+						Try
+							%VarName% := %Target%[Action](Params*)
+						Catch e
+						{
+							MsgBox, 20, %d_Lang007%, % "Macro" mMacroOn ", " d_Lang065 " " mListRow
+								.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" (InStr(e.Message, "0x800401E3") ? d_Lang088 : e.Extra) "`n`n" d_Lang035
+							IfMsgBox, No
+							{
+								StopIt := 1
+								return
+							}
+						}
+						Try SavedVars(VarName)
 					}
 					Else If IsFunc(Action)
 					{
@@ -782,7 +807,7 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC, ByRef LoopCount)
 					CheckVars("Step|Target|Window|VarName|VarValue", PointMarker)
 					If (Type = cType21)
 					{
-						If RegExMatch(VarValue, "U)%\s([\w%]+)\((.*)\)")  ; Functions
+						If RegExMatch(VarValue, "U)%\s([\w\.%]+)\((.*)\)")  ; Functions & Methods
 							StringReplace, VarValue, VarValue, `,, ```,, All
 						CheckVars("VarValue", PointMarker)
 						If (Target = "Expression")
@@ -794,6 +819,31 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC, ByRef LoopCount)
 							}
 						}
 						AssignVar(VarName, Oper, VarValue)
+					}
+					Else If (IsObject(%Target%))
+					{
+						Params := Object()
+						StringReplace, VarValue, VarValue, ```,, ¢, All
+						Loop, Parse, VarValue, `,, %A_Space%""
+						{
+							LoopField := DerefVars(A_LoopField)
+							StringReplace, LoopField, LoopField, ¢, `,, All
+							StringReplace, LoopField, LoopField, ¥Space, %A_Space%, All
+							Params.Push(LoopField)
+						}
+						Try
+							%VarName% := %Target%[Action](Params*)
+						Catch e
+						{
+							MsgBox, 20, %d_Lang007%, % "Macro" mMacroOn ", " d_Lang065 " " mListRow
+								.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" (InStr(e.Message, "0x800401E3") ? d_Lang088 : e.Extra) "`n`n" d_Lang035
+							IfMsgBox, No
+							{
+								StopIt := 1
+								return
+							}
+						}
+						Try SavedVars(VarName)
 					}
 					Else If IsFunc(Action)
 					{
@@ -1330,9 +1380,9 @@ CheckVars(Match_List, l_Point="")
 			While, RegExMatch(%A_LoopField%, "i)%(" $_value%l_Point% ")%", lMatch)
 				%A_LoopField% := RegExReplace(%A_LoopField%, "U)" lMatch, o_Loop%l_Point%[I][$_value%l_Point%])
 		}
-		If RegExMatch(%A_LoopField%, "sU)%\s([\w%]+)\((.*)\)")  ; Functions
+		If RegExMatch(%A_LoopField%, "sU)%\s([\w.%]+)\((.*)\)")  ; Functions & Methods
 		{
-			While, RegExMatch(%A_LoopField%, "sU)%\s([\w%]+)\((.*)\)", Funct)
+			While, RegExMatch(%A_LoopField%, "sU)%\s([\w%]+)\((.*?)\)", Funct) ; Functions
 			{
 				If IsFunc(Funct1)
 				{
@@ -1354,26 +1404,48 @@ CheckVars(Match_List, l_Point="")
 				Else
 					break
 			}
+			While, RegExMatch(%A_LoopField%, "sU)%\s\b([\w\d_]+)\b\.([\w%]+)\((.*?)\)", Funct) ; Methods
+			{
+				If IsObject(%Funct1%)
+				{
+					Params := Object()
+					StringReplace, Funct3, Funct3, ```,, ¢, All
+					Loop, Parse, Funct3, `,, %A_Space%``""
+					{
+						LoopField := DerefVars(A_LoopField)
+						StringReplace, LoopField, LoopField, ```,, `,, All
+						StringReplace, LoopField, LoopField, ¢, `,, All
+						StringReplace, LoopField, LoopField, ¥Space, %A_Space%, All
+						Params.Push(LoopField)
+					}
+					FuncResult := %Funct1%[Funct2](Params*)
+					StringReplace, FuncResult, FuncResult, `,, ```, 
+					StringReplace, %A_LoopField%, %A_LoopField%, %Funct%, %FuncResult%
+					FuncResult := ""
+				}
+				Else
+					break
+			}
 		}
 		%A_LoopField% := DerefVars(%A_LoopField%)
-		While, RegExMatch(%A_LoopField%, "iU)^%\s+\b([\w\d_]+)\b\.MaxIndex\(\)$", lMatch)
-		{
-			If (!IsObject(%lMatch1%))
-				break
-			%A_LoopField% := RegExReplace(%A_LoopField%, ".+", %lMatch1%.MaxIndex())
-		}
-		While, RegExMatch(%A_LoopField%, "iU)^%\s+\b([\w\d_]+)\b\.MinIndex\(\)$", lMatch)
-		{
-			If (!IsObject(%lMatch1%))
-				break
-			%A_LoopField% := RegExReplace(%A_LoopField%, ".+", %lMatch1%.MinIndex())
-		}
-		While, RegExMatch(%A_LoopField%, "iU)^%\s+\b([\w\d_]+)\b\.Length\(\)$", lMatch)
-		{
-			If (!IsObject(%lMatch1%))
-				break
-			%A_LoopField% := RegExReplace(%A_LoopField%, ".+", %lMatch1%.Length())
-		}
+		; While, RegExMatch(%A_LoopField%, "iU)^%\s+\b([\w\d_]+)\b\.MaxIndex\(\)$", lMatch)
+		; {
+			; If (!IsObject(%lMatch1%))
+				; break
+			; %A_LoopField% := RegExReplace(%A_LoopField%, ".+", %lMatch1%.MaxIndex())
+		; }
+		; While, RegExMatch(%A_LoopField%, "iU)^%\s+\b([\w\d_]+)\b\.MinIndex\(\)$", lMatch)
+		; {
+			; If (!IsObject(%lMatch1%))
+				; break
+			; %A_LoopField% := RegExReplace(%A_LoopField%, ".+", %lMatch1%.MinIndex())
+		; }
+		; While, RegExMatch(%A_LoopField%, "iU)^%\s+\b([\w\d_]+)\b\.Length\(\)$", lMatch)
+		; {
+			; If (!IsObject(%lMatch1%))
+				; break
+			; %A_LoopField% := RegExReplace(%A_LoopField%, ".+", %lMatch1%.Length())
+		; }
 
 		If RegExMatch(%A_LoopField%, "U)^%\s+[\w\d_\[\]\(\)]+$")  ; DynamicVars
 		{

@@ -7,22 +7,6 @@ Eval(x, l_Point) { ; non-recursive PRE/POST PROCESSING: I/O forms, numbers, ops,
    Local FORM, FormF, FormI, i, W, y, y1, y2, y3, y4
    FormI := A_FormatInteger, FormF := A_FormatFloat
 
-	While RegExMatch(x, "iU)\b([\w\d_]+)\b(\.MaxIndex\(\))", lMatch)  ; MaxIndex()
-	{
-		x := RegExReplace(x, lMatch1, %lMatch1%.MaxIndex())
-	,	x := RegExReplace(x, lMatch2 "\(\)")
-	}
-	While RegExMatch(x, "iU)\b([\w\d_]+)\b(\.MinIndex\(\))", lMatch)  ; MinIndex()
-	{
-		x := RegExReplace(x, lMatch1, %lMatch1%.MinIndex())
-	,	x := RegExReplace(x, lMatch2 "\(\)")
-	}
-	While RegExMatch(x, "iU)\b([\w\d_]+)\b(\.Length\(\))", lMatch)  ; Length()
-	{
-		x := RegExReplace(x, lMatch1, %lMatch1%.Length())
-	,	x := RegExReplace(x, lMatch2 "\(\)")
-	}
-	
 	While RegExMatch(x, "([\w_]+)\((.*?)\)", Funct)  ; Functions
 	{
 		If IsFunc(Funct1)
@@ -37,6 +21,25 @@ Eval(x, l_Point) { ; non-recursive PRE/POST PROCESSING: I/O forms, numbers, ops,
 				Params.Push(LoopField)
 			}
 			FuncResult := %Funct1%(Params*)
+			StringReplace, FuncResult, FuncResult, `,, ```, 
+			StringReplace, x, x, %Funct%, %FuncResult%
+		}
+	}
+	
+	While RegExMatch(x, "\b([\w\d_]+)\b\.([\w%]+)\((.*?)\)", Funct)  ; Methods()
+	{
+		If IsObject(%Funct1%)
+		{
+			Params := Object()
+			StringReplace, Funct3, Funct3, ```,, `,, All
+			Loop, Parse, Funct3, `,, %A_Space%``""
+			{
+				LoopField := DerefVars(A_LoopField)
+				StringReplace, LoopField, LoopField, ```,, `,, All
+				StringReplace, LoopField, LoopField, ¢, `,, All
+				Params.Push(LoopField)
+			}
+			FuncResult := %Funct1%[Funct2](Params*)
 			StringReplace, FuncResult, FuncResult, `,, ```, 
 			StringReplace, x, x, %Funct%, %FuncResult%
 		}

@@ -289,7 +289,7 @@
 	c_Lang008 =	Jalankan / file / String / Misc.
 	c_Lang009 =	Jika Laporan
 	c_Lang010 =	Variabel
-	c_Lang011 =	Fungsi
+	c_Lang011 =	Fungsi / Metode Array
 	c_Lang012 =	Internet Explorer
 	c_Lang013 =	COM Antarmuka
 	c_Lang014 =	Pilih Application (Lanjutan)
@@ -818,6 +818,7 @@
 	d_Lang088 =	Cobalah untuk menjalankan pengguna yang biasa (tidak administrator).
 	d_Lang089 =	Tidak ada baris yang dipilih!
 	d_Lang090 =	Silakan, pilih baris untuk memasukkan atau mengeluarkan kelompok.
+	d_Lang091 =	Metode valid
 		
 ; Start-up Tips		
 	Start_Tips =	

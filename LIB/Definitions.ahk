@@ -54,6 +54,7 @@ ListCount1 := 0
 ,	cType43 := "JScript"
 ,	cType44 := "Function"
 ,	cType45 := "ForLoop"
+,	cType46 := "Method"
 
 Action1 := "Click"
 ,	Action2 := "Move"
@@ -569,6 +570,7 @@ LTrim
 Mod
 NumGet
 NumPut
+Ord
 RegExMatch
 RegExReplace
 Round
@@ -630,6 +632,7 @@ LTrim (String, OmitChars = "" `t"")
 Mod (Dividend, Divisor)
 NumGet (VarOrAddress [, Offset = 0][, Type = ""UPtr""])
 NumPut (Number, VarOrAddress [, Offset = 0][, Type = ""UPtr""])
+Ord (String)
 RegExMatch (Haystack, NeedleRegEx [, UnquotedOutputVar = "", StartingPos = 1])
 RegExReplace (Haystack, NeedleRegEx [, Replacement = """", OutputVarCount = """", Limit = -1, StartingPos = 1])
 Round (Number [, N])
@@ -677,7 +680,7 @@ Loop, Parse, BuiltinFuncParams, `n
 ,	%FuncT1%_Hint := FuncT2
 }
 
-KeywordsList := "Type|Text|Mouse|Ctrl|Win|Misc|If|IE|Com|Func"
+KeywordsList := "Type|Text|Mouse|Ctrl|Win|Misc|If|IE|Com|Func|Meth"
 GoSub, SetFindCmd
 
 ;##### Messages: #####

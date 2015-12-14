@@ -6594,7 +6594,7 @@ Gui, 21:Add, Button, -Wrap ys W75 H23 vIfApply gIfApply Disabled, %c_Lang131%
 Gui, 21:Tab, 2
 ; Variables
 Gui, 21:Add, GroupBox, Section xm ym W450 H240
-Gui, 21:Add, Text, ys+15 xs+10, %c_Lang057%:
+Gui, 21:Add, Text, ys+15 xs+10 vVarNameT, %c_Lang057%:
 Gui, 21:Add, Edit, W200 R1 -Multi vVarName
 Gui, 21:Add, Text, yp-20 x+5 W120, %c_Lang086%:
 Gui, 21:Add, DDL, y+7 W60 vOper gAsOper, :=$$+=$-=$*=$/=$//=$.=
@@ -6613,9 +6613,11 @@ Gui, 21:Add, Button, -Wrap ys W75 H23 vVarApplyA gVarApply Disabled, %c_Lang131%
 Gui, 21:Tab, 3
 ; Functions
 Gui, 21:Add, GroupBox, Section xm ym W450 H240
-Gui, 21:Add, Text, ys+15 xs+10, %c_Lang057%:
+Gui, 21:Add, Text, ys+15 xs+10 W200, %c_Lang057%:
 Gui, 21:Add, Edit, W200 R1 -Multi vVarNameF
-Gui, 21:Add, Checkbox, W430 vUseExtFunc gUseExtFunc, %c_Lang128%
+Gui, 21:Add, Checkbox, ys+15 x+5 W200 vIsArray gIsArray, %c_Lang211%:
+Gui, 21:Add, Edit, W200 R1 -Multi vArrayName Disabled
+Gui, 21:Add, Checkbox, y+5 xs+10 W430 vUseExtFunc gUseExtFunc, %c_Lang128%
 Gui, 21:Add, Edit, W400 R1 -Multi vFileNameEx Disabled, %StdLibFile%
 Gui, 21:Add, Button, -Wrap yp-1 x+0 W30 H23 vSearchFEX gSearchAHK Disabled, ...
 Gui, 21:Add, Text, y+6 xs+10 W130, %c_Lang089%:
@@ -6696,23 +6698,37 @@ If (s_Caller = "Edit")
 	}
 	Else If (A_ThisLabel = "EditFunc")
 	{
-		AssignReplace(Details), FuncName := Action, GuiTitle := c_Lang011
+		AssignReplace(Details), FuncName := Action, ArrayName := Target, GuiTitle := c_Lang011
 		GuiControl, 21:Choose, TabControl, 3
 		If (VarName <> "_null")
 			GuiControl, 21:, VarNameF, %VarName%
-		If (IsBuiltIn)
+		If (Type = cType46)
+		{
+			GuiControl, 21:, IsArray, 1
+			GuiControl, 21:, UseExtFunc, 0
+			GuiControl, 21:Disable, UseExtFunc
+			GuiControl, 21:Enable, ArrayName
+			GuiControl, 21:, FuncName, $%ArrayMethodsList%
+			GuiControl, 21:, ArrayName, %ArrayName%
 			GuiControl, 21:ChooseString, FuncName, %FuncName%
+		}
 		Else
-			GuiControl, 21:, FuncName, %FuncName%$$
+		{
+			Try IsBuiltIn := Func(FuncName).IsBuiltIn ? 1 : 0
+			If (IsBuiltIn)
+				GuiControl, 21:ChooseString, FuncName, %FuncName%
+			Else
+				GuiControl, 21:, FuncName, %FuncName%$$
+		}
 		GuiControl, 21:, VarValueF, %VarValue%
-		If (Target <> "")
+		If ((Type = cType44) && (Target <> ""))
 		{
 			UseExtFunc := 1, FileNameEx := Target
 			GuiControl, 21:, UseExtFunc, 1
 			GuiControl, 21:, FileNameEx, %Target%
 			GuiControl, 21:Enable, SearchAHK
 			GoSub, UseExtFunc
-			GuiControl, 21:ChooseString, FuncName, %FuncName%
+			GuiControl, 21:, FuncName, %FuncName%$$
 		}
 		GoSub, FuncName
 	}
@@ -6863,6 +6879,15 @@ If (TabControl = 3)
 		}
 		Target := FileNameEx
 	}
+	Else If (IsArray)
+	{
+		If FuncName not in Delete,HasKey,InsertAt,Length,MaxIndex,MinIndex,RemoveAt,Pop,Push
+		{
+			MsgBox, 16, %d_Lang007%, %d_Lang091%: "%FuncName%"
+			return
+		}
+		Target := ArrayName
+	}
 	Else If (!IsFunc(FuncName))
 	{
 		MsgBox, 16, %d_Lang007%, "%FuncName%" %d_Lang031%
@@ -6876,7 +6901,15 @@ If (TabControl = 3)
 }
 If (VarName = "")
 {
+	Gui, 21:Font, cRed
+	GuiControl, 21:Font, VarNameT
+	GuiControl, 21:Focus, VarName
 	Tooltip, %c_Lang127%, 25, 65
+	return
+}
+If ((IsArray) && (ArrayName = ""))
+{
+	GuiControl, 21:Focus, ArrayName
 	return
 }
 Try
@@ -6890,7 +6923,7 @@ StringReplace, VarValue, VarValue, `n, ``n, All
 If (s_Caller <> "Edit")
 	TimesX := 1
 If (TabControl = 3)
-	Action := FuncName, Details := VarName " := " VarValueF, Type := cType44
+	Action := FuncName, Details := VarName " := " VarValueF, Type := IsArray ? cType46 : cType44
 Else
 {
 	Action := "[Assign Variable]", Details := VarName " " Oper " " VarValue, Type := cType21
@@ -7018,10 +7051,25 @@ return
 
 FuncName:
 Gui, 21:Submit, NoHide
-Try IsBuiltIn := Func(FuncName).IsBuiltIn ? 1 : 0
+If FuncName in Delete,HasKey,InsertAt,Length,MaxIndex,MinIndex,RemoveAt,Pop,Push
+	IsBuiltIn := 1
+Else
+	Try IsBuiltIn := Func(FuncName).IsBuiltIn ? 1 : 0
 GuiControl, 21:Enable%IsBuiltIn%, FuncHelp
 GuiControl, 21:, FuncTip, % %FuncName%_Hint
 SBShowTip(FuncName)
+return
+
+IsArray:
+Gui, 21:Submit, NoHide
+If (IsArray)
+{
+	GuiControl, 21:, UseExtFunc, 0
+	GoSub, UseExtFunc
+}
+GuiControl, 21:Disable%IsArray%, UseExtFunc
+GuiControl, 21:Enable%IsArray%, ArrayName
+GuiControl, 21:, FuncName, % "$" (IsArray ? ArrayMethodsList : BuiltinFuncList)
 return
 
 UseExtFunc:
@@ -7067,13 +7115,17 @@ FuncHelp:
 Gui, Submit, NoHide
 If FuncName in Abs,ACos,Asc,ASin,ATan,Ceil,Chr,Exp,FileExist,Floor,Func
 ,GetKeyName,GetKeySC,GetKeyState,GetKeyVK,InStr,IsByRef,IsFunc,IsLabel
-,IsObject,Ln,Log,LTrim,Mod,NumGet,NumPut,Round,RTrim,Sin,Sqrt,StrGet
+,IsObject,Ln,Log,LTrim,Mod,NumGet,NumPut,Ord,Round,RTrim,Sin,Sqrt,StrGet
 ,StrLen,StrPut,SubStr,Tan,Trim,WinActive,WinExist
 	Run, %HelpDocsUrl%/Functions.htm#%FuncName%
 Else If (FuncName = "Array")
 	Run, %HelpDocsUrl%/misc/Arrays.htm
 Else If (FuncName = "StrSplit")
 	Run, %HelpDocsUrl%/commands/StringSplit.htm
+Else If (FuncName = "StrReplace")
+	Run, %HelpDocsUrl%/commands/StringReplace.htm
+Else If FuncName in Delete,HasKey,InsertAt,Length,MaxIndex,MinIndex,RemoveAt,Pop,Push
+	Run, %HelpDocsUrl%/objects/Object.htm#%FuncName%
 Else
 	Run, %HelpDocsUrl%/commands/%FuncName%.htm
 return
@@ -9804,7 +9856,7 @@ If Type in %cType15%,%cType16%
 	Goto, EditImage
 If (Type = cType21)
 	Goto, EditVar
-If (Type = cType44)
+If ((Type = cType44) || (Type = cType46))
 	Goto, EditFunc
 If (Action = "[Control]")
 	Goto, EditControl
@@ -12550,7 +12602,7 @@ Loop, % LV_GetCount()
 :	(Type = cType29) ? LV_Modify(A_Index, "Icon" 2)
 :	(Type = cType30) ? LV_Modify(A_Index, "Icon" 6)
 :	(Type = cType21) ? LV_Modify(A_Index, "Icon" 75)
-:	(Type = cType44) ? LV_Modify(A_Index, "Icon" 21)
+:	((Type = cType44) || (Type = cType46)) ? LV_Modify(A_Index, "Icon" 21)
 :	(Type = cType17) ? LV_Modify(A_Index, "Icon" 26)
 :	RegExMatch(Type, cType18 "|" cType19) ? LV_Modify(A_Index, "Icon" 61)
 :	(Type = cType15) ? LV_Modify(A_Index, "Icon" 3)
@@ -13534,6 +13586,7 @@ Type_Keywords := "
 " cType43 "
 " cType44 "
 " cType45 "
+" cType46 "
 InternetExplorer
 COMInterface
 )"
@@ -13641,6 +13694,9 @@ Com_Keywords := RegExReplace(CLSList, "\|", ",")
 
 Func_Keywords := RegExReplace(BuiltinFuncList, "\$", ",")
 ,	Func_Path := w_Lang065, Func_Goto := "AsFunc"
+
+Meth_Keywords := RegExReplace(ArrayMethodsList, "\$", ",")
+,	Meth_Path := w_Lang065, Meth_Goto := "AsFunc"
 
 Loop, Parse, KeywordsList, |
 	Loop, Parse, %A_LoopField%_Keywords, `,

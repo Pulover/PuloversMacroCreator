@@ -289,7 +289,7 @@
 	c_Lang008 =	Kör / Arkiv / String / Misc.
 	c_Lang009 =	Om Uttalanden
 	c_Lang010 =	Variabler
-	c_Lang011 =	Funktioner
+	c_Lang011 =	Funktioner / Array metoder
 	c_Lang012 =	Internet Explorer
 	c_Lang013 =	COM-gränssnitt
 	c_Lang014 =	Välj program (Avancerad)
@@ -818,6 +818,7 @@
 	d_Lang088 =	Försök att köra som vanlig användare (inte administratör).
 	d_Lang089 =	Ingen rad valts!
 	d_Lang090 =	Vänligen välj rad att sätta in eller ta bort gruppen.
+	d_Lang091 =	Ogiltig metod
 		
 ; Start-up Tips		
 	Start_Tips =	

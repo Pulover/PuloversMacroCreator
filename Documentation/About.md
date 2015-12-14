@@ -39,9 +39,10 @@ Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jör
 ## Version 4.2.0
 
 * Added support for array assignment in Variables window.
+* Added support for array methods in Functions window.
 * Added For-Loops.
-* Added support for MaxIndex()/MinIndex()/Length() inside Dynamic Variables (e.g.: % MyArray.Length()).
-* Added support for MaxIndex()/MinIndex()/Length() inside Variable Assignment when "Expression" is checked.
+* Added support for array methods inside commands (e.g.: % MyArray.Length()).
+* Added support for array methods inside Variable Assignment when "Expression" is checked or "Value" is starts with "% ".
 * Added option to change color of the rectangle of Image/Pixel Search area and Screenshots tool.
 * Updated "Loop, File" and "Loop, Reg" to new format with "Mode" parameter.
 * Changed "List Variables" to display only User-Defined variables.
