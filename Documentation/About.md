@@ -43,6 +43,7 @@ Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jör
 * Added For-Loops.
 * Added support for Multi-Dimensional Arrays assignment (e.g.: MyArray[1][2] := Value).
 * Added support for Multi-Dimensional Arrays inside function parameters and commands.
+* Added support for Arrays inside IECom and COMInterface parameters.
 * Added support for array methods inside commands (e.g.: % MyArray.Length()).
 * Added support for array methods inside Variable Assignment when "Expression" is checked or "Value" is starts with "% ".
 * Added option to change color of the rectangle of Image/Pixel Search area and Screenshots tool.

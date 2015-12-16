@@ -679,8 +679,8 @@ CheckComExp(String, OutVar := "", ByRef ArrString := "", Ptr := "ie")
 		If (RegExMatch(A_LoopField, "^_Parent\d+"))
 		{
 			Parent := SubStr(%A_LoopField%, 2, -1)
-			While, RegExMatch(Parent, "U)\[(.*)\]", _Arr%A_Index%)
-				Parent := RegExReplace(Parent, "U)\[(.*)\]", "_Arr" A_Index, "", 1)
+			While, RegExMatch(Parent, "U)[^\w\]]\[(.*)\]", _Arr%A_Index%)
+				Parent := RegExReplace(Parent, "U)[^\w\]]\[(.*)\]", "_Arr" A_Index, "", 1)
 			While, RegExMatch(Parent, "\(([^()]++|(?R))*\)", _iParent%A_Index%)
 				Parent := RegExReplace(Parent, "\(([^()]++|(?R))*\)", "&_iParent" A_Index, "", 1)
 			Params := ""

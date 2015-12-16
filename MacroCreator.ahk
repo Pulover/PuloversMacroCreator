@@ -6592,7 +6592,7 @@ Gui, 21:Add, Text, yp-20 x+5 W120, %c_Lang086%:
 Gui, 21:Add, DDL, y+7 W60 vOper gAsOper, :=$$+=$-=$*=$/=$//=$.=
 Gui, 21:Add, Text, yp+5 x+5 W150 vAsOper cGray, %As_Oper_1%
 Gui, 21:Add, Text, y+9 xs+10 W200, %c_Lang056%:
-Gui, 21:Add, Checkbox, -Wrap Checked%EvalDefault% yp x+5 W220 vUseEval gUseEval R1, %c_Lang087%
+Gui, 21:Add, Checkbox, -Wrap Checked%EvalDefault% yp x+5 W220 vUseEval gUseEval R1, %c_Lang087% / %c_Lang211%
 Gui, 21:Add, Edit, y+10 xs+10 W430 H110 vVarValue
 Gui, 21:Add, Text, W430 r1 cGray, %c_Lang025%
 Gui, 21:Add, Text, y+5 W430 r1 cGray vArrayTip Hidden, %c_Lang206%
@@ -6909,7 +6909,7 @@ If ((IsArray) && (ArrayName = ""))
 	GuiControl, 21:Focus, ArrayName
 	return
 }
-If (RegExMatch(VarName, "([\w\d_]+)\[(\S+?)\]", lMatch))
+If (RegExMatch(VarName, "^(\w+)\[(\S+?)\]", lMatch))
 {
 	If (Oper <> ":=")
 	{

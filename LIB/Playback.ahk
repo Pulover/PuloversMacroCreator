@@ -177,6 +177,16 @@
 				}
 				If (Type = cType35)
 					continue
+				If ((Type = cType32) || (Type = cType33) || (Type = cType34))
+				{
+					While (RegExMatch(Step, "\w+\[[\w\d_\[\]]*\]", lFound))
+					{
+						lFound := RegExReplace(lFound, "\s")
+					,	lResult := ExtractArrays(lFound, l_Point)
+					,	lFound := RegExReplace(lFound, "[\[|\]]", "\$0")
+					,	Step := RegExReplace(Step, lFound, lResult)
+					}
+				}
 				If (Manual)
 				{
 					If Type in %cType5%,%cType7%,%cType38%,%cType39%,%cType40%,%cType41%,%cType45%
@@ -685,6 +695,16 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC, ByRef LoopCount)
 				}
 				If (Type = cType35)
 					continue
+				If ((Type = cType32) || (Type = cType33) || (Type = cType34))
+				{
+					While (RegExMatch(Step, "\w+\[[\w\d_\[\]]*\]", lFound))
+					{
+						lFound := RegExReplace(lFound, "\s")
+					,	lResult := ExtractArrays(lFound, l_Point)
+					,	lFound := RegExReplace(lFound, "[\[|\]]", "\$0")
+					,	Step := RegExReplace(Step, lFound, lResult)
+					}
+				}
 				If ((Type = cType7) || (Type = cType38) || (Type = cType39)
 				|| (Type = cType40) || (Type = cType41) || (Type = cType45))
 				{
@@ -1406,7 +1426,7 @@ AssignVar(Name, Operator, Value, l_Point)
 	
 	Try _content := %Name%
 	
-	While (RegExMatch(Name, "([\w\d_%]+)\[.+\]", lFound))
+	While (RegExMatch(Name, "([\w%]+)\[.+\]", lFound))
 	{
 		_content := ExtractArrays(Name, l_Point, _ObjItems)
 	,	Name := lFound1
@@ -1491,7 +1511,7 @@ CheckVars(Match_List, l_Point := "")
 				Else
 					break
 			}
-			While (RegExMatch(%A_LoopField%, "sU)%\s\b([\w\d_%]+)\b\.([\w\d_%]+)\((.*?)\)", Funct)) ; Methods
+			While (RegExMatch(%A_LoopField%, "sU)%\s\b([\w%]+)\b\.([\w\d_%]+)\((.*?)\)", Funct)) ; Methods
 			{
 				If (IsObject(%Funct1%))
 				{
@@ -1544,7 +1564,7 @@ ExtractArrays(v_String, l_Point, ByRef v_levels := "")
 	v_levels := []
 	While (RegExMatch(v_String, "([\w\d_%]+)\[(\S+?)\]", l_Found))
 	{
-		v_levels.Push(l_Found2), l_Found := RegExReplace(l_Found, "[\[|\]]", "\$0")
+		l_Found := RegExReplace(l_Found, "[\[|\]]", "\$0")
 		If l_Found2 is not Number
 		{
 			If (InStr(l_Found2, "A_")=1)
@@ -1560,7 +1580,8 @@ ExtractArrays(v_String, l_Point, ByRef v_levels := "")
 			Else
 				l_Found2 := DerefVars("%" l_Found2 "%")
 		}
-		_ArrayObject := %l_Found1%[l_Found2]
+		v_levels.Push(l_Found2)
+	,	_ArrayObject := %l_Found1%[l_Found2]
 		If (IsObject(_ArrayObject))
 			v_String := RegExReplace(v_String, l_Found, "_ArrayObject")
 		Else
