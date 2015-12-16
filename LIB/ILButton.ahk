@@ -5,7 +5,7 @@
 ; www.autohotkey.com/community/viewtopic.php?f=2&t=40468
 ; Additional thanks to just me for adapting it to AHK_L 64bit
 ;##################################################
-ILButton(HBtn, Images, Large=0, Align="center", Margin="1 1 1 1") {
+ILButton(HBtn, Images, Large := 0, Align := "center", Margin := "1 1 1 1") {
 	static BCM_SETIMAGELIST=0x1602, a_right=1, a_top=2, a_bottom=3, a_center=4
 
 	if Images is not integer

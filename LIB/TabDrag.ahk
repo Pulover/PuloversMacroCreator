@@ -8,7 +8,7 @@
 ; Credits:       TabGetText() adapted from GuiTabEx by just me
 ;
 ;=======================================================================================
-TabDrag(DragButton="LButton", LineThick=2, Color="Black", ShowUnder=False)
+TabDrag(DragButton := "LButton", LineThick := 2, Color := "Black", ShowUnder := False)
 {
 	Static TCM_GETITEMCOUNT := 0x1304
 	

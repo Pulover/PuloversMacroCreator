@@ -64,7 +64,7 @@
 ; notes						If x or y omitted, then layered window will use its current coordinates
 ;							If w or h omitted then current width and height will be used
 
-UpdateLayeredWindow(hwnd, hdc, x="", y="", w="", h="", Alpha=255)
+UpdateLayeredWindow(hwnd, hdc, x := "", y := "", w := "", h := "", Alpha := 255)
 {
 	if ((x != "") && (y != ""))
 		VarSetCapacity(pt, 8), NumPut(x, pt, 0, "uint"), NumPut(y, pt, 4, "uint")
@@ -114,7 +114,7 @@ UpdateLayeredWindow(hwnd, hdc, x="", y="", w="", h="", Alpha=255)
 ; CAPTUREBLT			= 0x40000000
 ; NOMIRRORBITMAP		= 0x80000000
 
-BitBlt(ddc, dx, dy, dw, dh, sdc, sx, sy, Raster="")
+BitBlt(ddc, dx, dy, dw, dh, sdc, sx, sy, Raster := "")
 {
 	return DllCall("gdi32\BitBlt", "ptr", dDC, "int", dx, "int", dy, "int", dw, "int", dh
 	, "ptr", sDC, "int", sx, "int", sy, "uint", Raster ? Raster : 0x00CC0020)
@@ -143,7 +143,7 @@ BitBlt(ddc, dx, dy, dw, dh, sdc, sx, sy, Raster="")
 ;
 ; notes					If no raster operation is specified, then SRCCOPY is used. It uses the same raster operations as BitBlt		
 
-StretchBlt(ddc, dx, dy, dw, dh, sdc, sx, sy, sw, sh, Raster="")
+StretchBlt(ddc, dx, dy, dw, dh, sdc, sx, sy, sw, sh, Raster := "")
 {
 	return DllCall("gdi32\StretchBlt", "ptr", ddc, "int", dx, "int", dy, "int", dw, "int", dh
 	, "ptr", sdc, "int", sx, "int", sy, "int", sw, "int", sh, "uint", Raster ? Raster : 0x00CC0020)
@@ -164,7 +164,7 @@ StretchBlt(ddc, dx, dy, dw, dh, sdc, sx, sy, sw, sh, Raster="")
 ; STRETCH_DELETESCANS 	= 0x03
 ; STRETCH_HALFTONE 		= 0x04
 
-SetStretchBltMode(hdc, iStretchMode=4)
+SetStretchBltMode(hdc, iStretchMode := 4)
 {
 	return DllCall("gdi32\SetStretchBltMode", "ptr", hdc, "int", iStretchMode)
 }
@@ -237,7 +237,7 @@ SetImage(hwnd, hBitmap)
 ; COLOR_WINDOWFRAME				= 6
 ; COLOR_WINDOWTEXT				= 8
 
-SetSysColorToControl(hwnd, SysColor=15)
+SetSysColorToControl(hwnd, SysColor := 15)
 {
    WinGetPos,,, w, h, ahk_id %hwnd%
    bc := DllCall("GetSysColor", "Int", SysColor, "uint")
@@ -266,7 +266,7 @@ SetSysColorToControl(hwnd, SysColor=15)
 ;
 ; notes					If no raster operation is specified, then SRCCOPY is used to the returned bitmap
 
-Gdip_BitmapFromScreen(Screen=0, Raster="")
+Gdip_BitmapFromScreen(Screen := 0, Raster := "")
 {
 	if (Screen = 0)
 	{
@@ -412,7 +412,7 @@ CreatePointF(ByRef PointF, x, y)
 ;
 ; notes					ppvBits will receive the location of the pixels in the DIB
 
-CreateDIBSection(w, h, hdc="", bpp=32, ByRef ppvBits=0)
+CreateDIBSection(w, h, hdc := "", bpp := 32, ByRef ppvBits := 0)
 {
 	hdc2 := hdc ? hdc : GetDC()
 	VarSetCapacity(bi, 40, 0)
@@ -437,7 +437,7 @@ CreateDIBSection(w, h, hdc="", bpp=32, ByRef ppvBits=0)
 ;
 ; PW_CLIENTONLY			= 1
 
-PrintWindow(hwnd, hdc, Flags=0)
+PrintWindow(hwnd, hdc, Flags := 0)
 {
 	return DllCall("PrintWindow", "ptr", hwnd, "ptr", hdc, "uint", Flags)
 }
@@ -481,7 +481,7 @@ CreateCompatibleBitmap(hdc, w, h)
 ;
 ; notes					If this handle is 0 (by default), the function creates a memory device context compatible with the application's current screen
 
-CreateCompatibleDC(hdc=0)
+CreateCompatibleDC(hdc := 0)
 {
    return DllCall("CreateCompatibleDC", "ptr", hdc, "ptr")
 }
@@ -539,7 +539,7 @@ DeleteObject(hObject)
 ;
 ; return				The handle the device context for the specified window's client area indicates success. NULL indicates failure
 
-GetDC(hwnd=0)
+GetDC(hwnd := 0)
 {
 	return DllCall("GetDC", "ptr", hwnd, "ptr")
 }
@@ -560,7 +560,7 @@ GetDC(hwnd=0)
 ; DCX_VALIDATE = 0x200000
 ; DCX_WINDOW = 0x1
 
-GetDCEx(hwnd, flags=0, hrgnClip=0)
+GetDCEx(hwnd, flags := 0, hrgnClip := 0)
 {
     return DllCall("GetDCEx", "ptr", hwnd, "ptr", hrgnClip, "int", flags, "ptr")
 }
@@ -579,7 +579,7 @@ GetDCEx(hwnd, flags=0, hrgnClip=0)
 ; notes					The application must call the ReleaseDC function for each call to the GetWindowDC function and for each call to the GetDC function that retrieves a common device context
 ;						An application cannot use the ReleaseDC function to release a device context that was created by calling the CreateDC function; instead, it must use the DeleteDC function. 
 
-ReleaseDC(hdc, hwnd=0)
+ReleaseDC(hdc, hwnd := 0)
 {
    return DllCall("ReleaseDC", "ptr", hwnd, "ptr", hdc)
 }
@@ -628,7 +628,7 @@ Gdip_LibraryVersion()
 ;						-3 = The BRA has information missing
 ;						-4 = Could not find file inside the BRA
 
-Gdip_BitmapFromBRA(ByRef BRAFromMemIn, File, Alternate=0)
+Gdip_BitmapFromBRA(ByRef BRAFromMemIn, File, Alternate := 0)
 {
 	if !BRAFromMemIn
 		return -1
@@ -929,7 +929,7 @@ Gdip_FillRoundedRectangle(pGraphics, pBrush, x, y, w, h, r)
 ; Alternate 			= 0
 ; Winding 				= 1
 
-Gdip_FillPolygon(pGraphics, pBrush, Points, FillMode=0)
+Gdip_FillPolygon(pGraphics, pBrush, Points, FillMode := 0)
 {
    StringSplit, Points, Points, |
    VarSetCapacity(PointF, 8*Points0)   
@@ -1037,7 +1037,7 @@ Gdip_FillPath(pGraphics, pBrush, Path)
 ;						Matrix may be passed as a digit from 0 - 1 to change just transparency
 ;						Matrix can be passed as a matrix with any delimiter
 
-Gdip_DrawImagePointsRect(pGraphics, pBitmap, Points, sx="", sy="", sw="", sh="", Matrix=1)
+Gdip_DrawImagePointsRect(pGraphics, pBitmap, Points, sx := "", sy := "", sw := "", sh := "", Matrix := 1)
 {
 	StringSplit, Points, Points, |
 	VarSetCapacity(PointF, 8*Points0)   
@@ -1104,7 +1104,7 @@ Gdip_DrawImagePointsRect(pGraphics, pBitmap, Points, sx="", sy="", sw="", sh="",
 ;						MatrixGreyScale = 0.299|0.299|0.299|0|0|0.587|0.587|0.587|0|0|0.114|0.114|0.114|0|0|0|0|0|1|0|0|0|0|0|1
 ;						MatrixNegative = -1|0|0|0|0|0|-1|0|0|0|0|0|-1|0|0|0|0|0|1|0|0|0|0|0|1
 
-Gdip_DrawImage(pGraphics, pBitmap, dx="", dy="", dw="", dh="", sx="", sy="", sw="", sh="", Matrix=1)
+Gdip_DrawImage(pGraphics, pBitmap, dx := "", dy := "", dw := "", dh := "", sx := "", sy := "", sw := "", sh := "", Matrix := 1)
 {
 	if (Matrix&1 = "")
 		ImageAttr := Gdip_SetImageAttributesColorMatrix(Matrix)
@@ -1242,7 +1242,7 @@ Gdip_ReleaseDC(pGraphics, hdc)
 ; notes					By default this will make the background invisible
 ;						Using clipping regions you can clear a particular area on the graphics rather than clearing the entire graphics
 
-Gdip_GraphicsClear(pGraphics, ARGB=0x00ffffff)
+Gdip_GraphicsClear(pGraphics, ARGB := 0x00ffffff)
 {
     return DllCall("gdiplus\GdipGraphicsClear", "ptr", pGraphics, "uint", ARGB)
 }
@@ -1303,7 +1303,7 @@ Gdip_BlurBitmap(pBitmap, Blur)
 ;
 ; notes					This function will use the extension supplied from the sOutput parameter to determine the output format
 
-Gdip_SaveBitmapToFile(pBitmap, sOutput, Quality=75)
+Gdip_SaveBitmapToFile(pBitmap, sOutput, Quality := 75)
 {
 	SplitPath, sOutput,,, Extension
 	if Extension not in BMP,DIB,RLE,JPG,JPEG,JPE,JFIF,GIF,TIF,TIFF,PNG
@@ -1500,7 +1500,7 @@ Gdip_BitmapSetResolution(pBitmap, dpix, dpiy)
 
 ;#####################################################################################
 
-Gdip_CreateBitmapFromFile(sFile, IconNumber=1, IconSize="")
+Gdip_CreateBitmapFromFile(sFile, IconNumber := 1, IconSize := "")
 {
 	SplitPath, sFile,,, ext
 	if ext in exe,dll
@@ -1558,7 +1558,7 @@ Gdip_CreateBitmapFromFile(sFile, IconNumber=1, IconSize="")
 
 ;#####################################################################################
 
-Gdip_CreateBitmapFromHBITMAP(hBitmap, Palette=0)
+Gdip_CreateBitmapFromHBITMAP(hBitmap, Palette := 0)
 {
 	DllCall("gdiplus\GdipCreateBitmapFromHBITMAP", "ptr", hBitmap, "ptr", Palette, "ptr*", pBitmap)
 	return pBitmap
@@ -1566,7 +1566,7 @@ Gdip_CreateBitmapFromHBITMAP(hBitmap, Palette=0)
 
 ;#####################################################################################
 
-Gdip_CreateHBITMAPFromBitmap(pBitmap, Background=0xffffffff)
+Gdip_CreateHBITMAPFromBitmap(pBitmap, Background := 0xffffffff)
 {
 	DllCall("gdiplus\GdipCreateHBITMAPFromBitmap", "ptr", pBitmap, "ptr*", hbm, "uint", Background)
 	return hbm
@@ -1590,7 +1590,7 @@ Gdip_CreateHICONFromBitmap(pBitmap)
 
 ;#####################################################################################
 
-Gdip_CreateBitmap(Width, Height, Format=0x26200A)
+Gdip_CreateBitmap(Width, Height, Format := 0x26200A)
 {
     DllCall("gdiplus\GdipCreateBitmapFromScan0", "int", Width, "int", Height, "int", 0, "int", Format, "ptr", 0, "ptr*", pBitmap)
     Return pBitmap
@@ -1635,7 +1635,7 @@ Gdip_SetBitmapToClipboard(pBitmap)
 
 ;#####################################################################################
 
-Gdip_CloneBitmapArea(pBitmap, x, y, w, h, Format=0x26200A)
+Gdip_CloneBitmapArea(pBitmap, x, y, w, h, Format := 0x26200A)
 {
 	DllCall("gdiplus\GdipCloneBitmapArea", "float", x, "float", y, "float", w, "float", h
 	, "int", Format, "ptr", pBitmap, "ptr*", pBitmapDest)
@@ -1662,7 +1662,7 @@ Gdip_CreatePenFromBrush(pBrush, w)
 
 ;#####################################################################################
 
-Gdip_BrushCreateSolid(ARGB=0xff000000)
+Gdip_BrushCreateSolid(ARGB := 0xff000000)
 {
 	DllCall("gdiplus\GdipCreateSolidFill", "uint", ARGB, "ptr*", pBrush)
 	return pBrush
@@ -1724,7 +1724,7 @@ Gdip_BrushCreateSolid(ARGB=0xff000000)
 ; HatchStyleOutlinedDiamond = 51
 ; HatchStyleSolidDiamond = 52
 ; HatchStyleTotal = 53
-Gdip_BrushCreateHatch(ARGBfront, ARGBback, HatchStyle=0)
+Gdip_BrushCreateHatch(ARGBfront, ARGBback, HatchStyle := 0)
 {
 	DllCall("gdiplus\GdipCreateHatchBrush", "int", HatchStyle, "uint", ARGBfront, "uint", ARGBback, "ptr*", pBrush)
 	return pBrush
@@ -1732,7 +1732,7 @@ Gdip_BrushCreateHatch(ARGBfront, ARGBback, HatchStyle=0)
 
 ;#####################################################################################
 
-Gdip_CreateTextureBrush(pBitmap, WrapMode=1, x=0, y=0, w="", h="")
+Gdip_CreateTextureBrush(pBitmap, WrapMode := 1, x := 0, y := 0, w := "", h := "")
 {
 	if !(w && h)
 		DllCall("gdiplus\GdipCreateTexture", "ptr", pBitmap, "int", WrapMode, "ptr*", pBrush)
@@ -1748,7 +1748,7 @@ Gdip_CreateTextureBrush(pBitmap, WrapMode=1, x=0, y=0, w="", h="")
 ; WrapModeTileFlipY = 2
 ; WrapModeTileFlipXY = 3
 ; WrapModeClamp = 4
-Gdip_CreateLineBrush(x1, y1, x2, y2, ARGB1, ARGB2, WrapMode=1)
+Gdip_CreateLineBrush(x1, y1, x2, y2, ARGB1, ARGB2, WrapMode := 1)
 {
 	CreatePointF(PointF1, x1, y1), CreatePointF(PointF2, x2, y2)
 	DllCall("gdiplus\GdipCreateLineBrush", "ptr", &PointF1, "ptr", &PointF2, "uint", ARGB1, "uint", ARGB2, "int", WrapMode, "ptr*", LGpBrush)
@@ -1761,7 +1761,7 @@ Gdip_CreateLineBrush(x1, y1, x2, y2, ARGB1, ARGB2, WrapMode=1)
 ; LinearGradientModeVertical = 1
 ; LinearGradientModeForwardDiagonal = 2
 ; LinearGradientModeBackwardDiagonal = 3
-Gdip_CreateLineBrushFromRect(x, y, w, h, ARGB1, ARGB2, LinearGradientMode=1, WrapMode=1)
+Gdip_CreateLineBrushFromRect(x, y, w, h, ARGB1, ARGB2, LinearGradientMode := 1, WrapMode := 1)
 {
 	CreateRectF(RectF, x, y, w, h)
 	DllCall("gdiplus\GdipCreateLineBrushFromRect", "ptr", &RectF, "uint", ARGB1, "uint", ARGB2, "int", LinearGradientMode, "int", WrapMode, "ptr*", LGpBrush)
@@ -1845,7 +1845,7 @@ Gdip_DeleteMatrix(Matrix)
 ; Text functions
 ;#####################################################################################
 
-Gdip_TextToGraphics(pGraphics, Text, Options, Font="Arial", Width="", Height="", Measure=0)
+Gdip_TextToGraphics(pGraphics, Text, Options, Font := "Arial", Width := "", Height := "", Measure := 0)
 {
 	IWidth := Width, IHeight:= Height
 	
@@ -1962,7 +1962,7 @@ Gdip_SetStringFormatAlign(hFormat, Align)
 ; StringFormatFlagsNoWrap                  = 0x00001000
 ; StringFormatFlagsLineLimit               = 0x00002000
 ; StringFormatFlagsNoClip                  = 0x00004000 
-Gdip_StringFormatCreate(Format=0, Lang=0)
+Gdip_StringFormatCreate(Format := 0, Lang := 0)
 {
    DllCall("gdiplus\GdipCreateStringFormat", "int", Format, "int", Lang, "ptr*", hFormat)
    return hFormat
@@ -1974,7 +1974,7 @@ Gdip_StringFormatCreate(Format=0, Lang=0)
 ; BoldItalic = 3
 ; Underline = 4
 ; Strikeout = 8
-Gdip_FontCreate(hFamily, Size, Style=0)
+Gdip_FontCreate(hFamily, Size, Style := 0)
 {
    DllCall("gdiplus\GdipCreateFont", "ptr", hFamily, "float", Size, "int", Style, "int", 0, "ptr*", hFont)
    return hFont
@@ -2008,7 +2008,7 @@ Gdip_CreateMatrix()
 
 ; Alternate = 0
 ; Winding = 1
-Gdip_CreatePath(BrushMode=0)
+Gdip_CreatePath(BrushMode := 0)
 {
 	DllCall("gdiplus\GdipCreatePath", "int", BrushMode, "ptr*", Path)
 	return Path
@@ -2076,7 +2076,7 @@ Gdip_SetSmoothingMode(pGraphics, SmoothingMode)
 
 ; CompositingModeSourceOver = 0 (blended)
 ; CompositingModeSourceCopy = 1 (overwrite)
-Gdip_SetCompositingMode(pGraphics, CompositingMode=0)
+Gdip_SetCompositingMode(pGraphics, CompositingMode := 0)
 {
    return DllCall("gdiplus\GdipSetCompositingMode", "ptr", pGraphics, "int", CompositingMode)
 }
@@ -2104,17 +2104,17 @@ Gdip_Shutdown(pToken)
 
 ; Prepend = 0; The new operation is applied before the old operation.
 ; Append = 1; The new operation is applied after the old operation.
-Gdip_RotateWorldTransform(pGraphics, Angle, MatrixOrder=0)
+Gdip_RotateWorldTransform(pGraphics, Angle, MatrixOrder := 0)
 {
 	return DllCall("gdiplus\GdipRotateWorldTransform", "ptr", pGraphics, "float", Angle, "int", MatrixOrder)
 }
 
-Gdip_ScaleWorldTransform(pGraphics, x, y, MatrixOrder=0)
+Gdip_ScaleWorldTransform(pGraphics, x, y, MatrixOrder := 0)
 {
 	return DllCall("gdiplus\GdipScaleWorldTransform", "ptr", pGraphics, "float", x, "float", y, "int", MatrixOrder)
 }
 
-Gdip_TranslateWorldTransform(pGraphics, x, y, MatrixOrder=0)
+Gdip_TranslateWorldTransform(pGraphics, x, y, MatrixOrder := 0)
 {
 	return DllCall("gdiplus\GdipTranslateWorldTransform", "ptr", pGraphics, "float", x, "float", y, "int", MatrixOrder)
 }
@@ -2154,12 +2154,12 @@ Gdip_GetRotatedDimensions(Width, Height, Angle, ByRef RWidth, ByRef RHeight)
 ; Xor = 3
 ; Exclude = 4
 ; Complement = 5
-Gdip_SetClipRect(pGraphics, x, y, w, h, CombineMode=0)
+Gdip_SetClipRect(pGraphics, x, y, w, h, CombineMode := 0)
 {
    return DllCall("gdiplus\GdipSetClipRect", "ptr", pGraphics, "float", x, "float", y, "float", w, "float", h, "int", CombineMode)
 }
 
-Gdip_SetClipPath(pGraphics, Path, CombineMode=0)
+Gdip_SetClipPath(pGraphics, Path, CombineMode := 0)
 {
    return DllCall("gdiplus\GdipSetClipPath", "ptr", pGraphics, "ptr", Path, "int", CombineMode)
 }
@@ -2176,7 +2176,7 @@ Gdip_GetClipRegion(pGraphics)
 	return Region
 }
 
-Gdip_SetClipRegion(pGraphics, Region, CombineMode=0)
+Gdip_SetClipRegion(pGraphics, Region, CombineMode := 0)
 {
 	return DllCall("gdiplus\GdipSetClipRegion", "ptr", pGraphics, "ptr", Region, "int", CombineMode)
 }

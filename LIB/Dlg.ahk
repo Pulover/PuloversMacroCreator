@@ -4,7 +4,7 @@
 ; With parts and adjustments based on rbrtryn's ChooseColor function
 ; http://www.autohotkey.com/board/topic/91229-windows-color-picker-plus/
 ;###########################################################
-Dlg_Color(ByRef Color, hGui=0, ByRef Palette="")
+Dlg_Color(ByRef Color, hGui := 0, ByRef Palette := "")
 { 
 	static StructSize := VarSetCapacity(ChooseColor, 9 * A_PtrSize, 0)
 	static CustomSize := VarSetCapacity(Custom, 64, 0)

@@ -33,7 +33,7 @@
 		return ID
 	}
 
-	Import(SelectedFile, DL="`n", New="1")
+	Import(SelectedFile, DL := "`n", New := "1")
 	{
 		local FoundC, Labels, TabText
 
@@ -120,7 +120,7 @@
 		Critical, Off
 	}
 
-	LVGet(List, DL="|")
+	LVGet(List, DL := "|")
 	{
 		Gui, chMacro:Default
 		Gui, chMacro:ListView, %List%

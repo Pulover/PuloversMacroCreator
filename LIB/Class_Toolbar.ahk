@@ -114,7 +114,7 @@ Class Toolbar extends Toolbar.Private
 ;                        To add a separator between buttons specify "" or equivalent.
 ;    Return:             TRUE if successful, FALSE if there was a problem.
 ;=======================================================================================
-    Add(Options="Enabled", Buttons*)
+    Add(Options := "Enabled", Buttons*)
     {
         If (!Buttons.Length())
         {
@@ -160,7 +160,7 @@ Class Toolbar extends Toolbar.Private
 ;        Button:         1-based index of the button. If omitted deletes all buttons.
 ;    Return:             TRUE if successful, FALSE if there was a problem.
 ;=======================================================================================
-    Delete(Button="")
+    Delete(Button := "")
     {
         If (!Button)
         {
@@ -183,7 +183,7 @@ Class Toolbar extends Toolbar.Private
 ;    HidMark:            Changes the default symbol to prepend to hidden buttons.
 ;    Return:             A text string with current buttons information to be exported.
 ;=======================================================================================
-    Export(ArrayOut=False, HidMark="-")
+    Export(ArrayOut := False, HidMark := "-")
     {
         BtnArray := [], IncLabels := ":"
         Loop, % this.GetCount()
@@ -223,8 +223,8 @@ Class Toolbar extends Toolbar.Private
 ;        ExStyle:        OutputVar to store the current extended styles numeric value.
 ;    Return:             TRUE if successful, FALSE if there was a problem.
 ;=======================================================================================
-    Get(ByRef HotItem="", ByRef TextRows="", ByRef Rows=""
-    ,   ByRef BtnWidth="", ByRef BtnHeight="", ByRef Style="", ByRef ExStyle="")
+    Get(ByRef HotItem := "", ByRef TextRows := "", ByRef Rows := ""
+    ,   ByRef BtnWidth := "", ByRef BtnHeight := "", ByRef Style := "", ByRef ExStyle := "")
     {
         SendMessage, this.TB_GETHOTITEM, 0, 0,, % "ahk_id " this.tbHwnd
             HotItem := (ErrorLevel = 4294967295) ? 0 : ErrorLevel+1
@@ -254,8 +254,8 @@ Class Toolbar extends Toolbar.Private
 ;        Index:          OutputVar to store the button's text string index.
 ;    Return:             TRUE if successful, FALSE if there was a problem.
 ;=======================================================================================
-    GetButton(Button, ByRef ID="", ByRef Text="", ByRef State="", ByRef Style=""
-    ,   ByRef Icon="", ByRef Label="", ByRef Index="")
+    GetButton(Button, ByRef ID := "", ByRef Text := "", ByRef State := "", ByRef Style := ""
+    ,   ByRef Icon := "", ByRef Label := "", ByRef Index := "")
     {
         VarSetCapacity(BtnVar, 8 + (A_PtrSize * 3), 0)
         SendMessage, this.TB_GETBUTTON, Button-1, &BtnVar,, % "ahk_id " this.tbHwnd
@@ -283,7 +283,7 @@ Class Toolbar extends Toolbar.Private
 ;        OutH:           OutputVar to store the button's height.
 ;    Return:             TRUE if successful, FALSE if there was a problem.
 ;=======================================================================================
-    GetButtonPos(Button, ByRef OutX="", ByRef OutY="", ByRef OutW="", ByRef OutH="")
+    GetButtonPos(Button, ByRef OutX := "", ByRef OutY := "", ByRef OutW := "", ByRef OutH := "")
     {
         this.GetButton(Button, BtnID), VarSetCapacity(RECT, 16, 0)
         SendMessage, this.TB_GETRECT, BtnID, &RECT,, % "ahk_id " this.tbHwnd
@@ -350,7 +350,7 @@ Class Toolbar extends Toolbar.Private
 ;        Buttons:        Same as Add().
 ;    Return:             TRUE if successful, FALSE if there was a problem.
 ;=======================================================================================
-    Insert(Position, Options="Enabled", Buttons*)
+    Insert(Position, Options := "Enabled", Buttons*)
     {
         If (!Buttons.Length())
         {
@@ -397,7 +397,7 @@ Class Toolbar extends Toolbar.Private
 ;        Set:            Enter TRUE or FALSE to set the state on/off.
 ;    Return:             TRUE if successful, FALSE if there was a problem.
 ;=======================================================================================
-    ModifyButton(Button, State, Set=True)
+    ModifyButton(Button, State, Set := True)
     {
         If State not in CHECK,ENABLE,HIDE,MARK,PRESS
             return False
@@ -501,8 +501,8 @@ Class Toolbar extends Toolbar.Private
 ;    Return:             The required return value for the function monitoring
 ;                            the the WM_NOTIFY message.
 ;=======================================================================================
-    OnNotify(ByRef Param, ByRef MenuXPos="", ByRef MenuYPos="", ByRef BtnLabel="", ByRef ID=""
-    ,   AllowCustom=True, AllowReset=True, HideHelp=True)
+    OnNotify(ByRef Param, ByRef MenuXPos := "", ByRef MenuYPos := "", ByRef BtnLabel := "", ByRef ID := ""
+    ,   AllowCustom := True, AllowReset := True, HideHelp := True)
     {
         nCode  := NumGet(Param + (A_PtrSize * 2), 0, "Int"), tbHwnd := NumGet(Param + 0, 0, "UPtr")
         If (tbHwnd <> this.tbHwnd)
@@ -621,7 +621,7 @@ Class Toolbar extends Toolbar.Private
 ;        Buttons:        Same as Add().
 ;    Return:             Always TRUE.
 ;=======================================================================================
-    SetDefault(Options="Enabled", Buttons*)
+    SetDefault(Options := "Enabled", Buttons*)
     {
         this.DefaultBtnInfo := []
         If (!Buttons.Length())
@@ -680,7 +680,7 @@ Class Toolbar extends Toolbar.Private
 ;        IL_Disabled:    ImageList ID of Disabled ImageList.
 ;    Return:             TRUE if successful, FALSE if there was a problem.
 ;=======================================================================================
-    SetImageList(IL_Default, IL_Hot="", IL_Pressed="", IL_Disabled="")
+    SetImageList(IL_Default, IL_Hot := "", IL_Pressed := "", IL_Disabled := "")
     {
         SendMessage, this.TB_SETIMAGELIST, 0, IL_Default,, % "ahk_id " this.tbHwnd
         If (IL_Hot)
@@ -722,7 +722,7 @@ Class Toolbar extends Toolbar.Private
 ;        MaxRows:        Maximum number of text rows. If omitted defaults to 0.
 ;    Return:             TRUE if successful, FALSE if there was a problem.
 ;=======================================================================================
-    SetMaxTextRows(MaxRows=0)
+    SetMaxTextRows(MaxRows := 0)
     {
         SendMessage, this.TB_SETMAXTEXTROWS, MaxRows, 0,, % "ahk_id " this.tbHwnd
         return (ErrorLevel = "FAIL") ? False : True
@@ -752,7 +752,7 @@ Class Toolbar extends Toolbar.Private
 ;                            creates fewer rows.
 ;    Return:             TRUE if successful, FALSE if there was a problem.
 ;=======================================================================================
-    SetRows(Rows=0, AddMore=False)
+    SetRows(Rows := 0, AddMore := False)
     {
         Long := this.MakeLong(Rows, AddMore)
         SendMessage, this.TB_SETROWS, Long,,, % "ahk_id " this.tbHwnd
@@ -827,7 +827,7 @@ Class Toolbar extends Toolbar.Private
 ;                            methods, which can be used to save and load layout presets.
 ;    Return:             A text string with buttons information to be exported.
 ;=======================================================================================
-        Export(Slot, ArrayOut=False)
+        Export(Slot, ArrayOut := False)
         {
             BtnArray := []
             For i, Button in this[Slot]
@@ -852,7 +852,7 @@ Class Toolbar extends Toolbar.Private
 ;        Buttons:        Same as Add().
 ;    Return:             Always TRUE.
 ;=======================================================================================
-        Import(Slot, Options="Enabled", Buttons*)
+        Import(Slot, Options := "Enabled", Buttons*)
         {
             BtnArray := []
             If (Options = "")
@@ -1110,7 +1110,7 @@ Class Toolbar extends Toolbar.Private
 ;    Method:             SendMessage
 ;    Description:        Sends a message to create or modify a button.
 ;=======================================================================================
-        SendMessage(Button, Options, Message="", Param="")
+        SendMessage(Button, Options, Message := "", Param := "")
         {
             If (RegExMatch(Button, "^(\W?)(\w+)[=\s]?(.*)?:(\d+)\(?(.*?)?\)?$", Key))
             {
@@ -1143,7 +1143,7 @@ Class Toolbar extends Toolbar.Private
 ;    Description:        Creates a TBBUTTON structure.
 ;    Return:             An array with the button structure values.
 ;=======================================================================================
-        DefineBtnStruct(ByRef BtnVar, iBitmap=0, idCommand=0, iString="", Options="")
+        DefineBtnStruct(ByRef BtnVar, iBitmap := 0, idCommand := 0, iString := "", Options := "")
         {
             If Options is Integer
                 tbStyle := Options, tbState := this.TBSTATE_ENABLED
@@ -1214,7 +1214,7 @@ Class Toolbar extends Toolbar.Private
 ;    Description:        Creates a TBBUTTON structure for a separator.
 ;    Return:             An array with the button structure values.
 ;=======================================================================================
-        BtnSep(ByRef BtnVar, Options="")
+        BtnSep(ByRef BtnVar, Options := "")
         {
             tbStyle := this.BTNS_SEP
             Loop, Parse, Options, %A_Space%%A_Tab%

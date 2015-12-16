@@ -75,7 +75,7 @@ ReplaceIcon(re, IcoFile, iconID)
     return thisID + 1, DllCall("UpdateResource", "ptr", re, "ptr", 14, "ptr", iconID, "ushort", 0x409, "ptr", &rsrcIconGroup, "uint", rsrcIconGroupSize, "uint")
 }
 
-DllCreateEmpty(F="empty.dll") { ; www.autohotkey.com/forum/viewtopic.php?p=381161#381161       
+DllCreateEmpty(F := "empty.dll") { ; www.autohotkey.com/forum/viewtopic.php?p=381161#381161       
 ;Creates Empty Resource-Only DLL (1536 bytes)  / CD:05-Sep-2010 | LM:25-Oct-2010 - by SKAN
  IfNotEqual,A_Tab, % TS:=A_NowUTC, EnvSub,TS,1970,S  ;
  Src := "0X5A4DY3CXB8YB8X4550YBCX2014CYCCX210E00E0YD0X7010BYD8X400YE4X1000YE8X1000YECX78A"

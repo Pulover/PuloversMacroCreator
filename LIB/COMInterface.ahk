@@ -9,7 +9,7 @@
 ;
 ;========================================================================
 
-COMInterface(String, Ptr="", ByRef OutputVar="", CLSID="InternetExplorer.Application")
+COMInterface(String, Ptr := "", ByRef OutputVar := "", CLSID := "InternetExplorer.Application")
 {
 	; If the Pointer is not an object, create one.
 	If (!IsObject(Ptr))

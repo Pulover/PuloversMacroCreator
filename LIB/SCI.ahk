@@ -50,7 +50,7 @@ class scintilla {
 		__sendEditor(this.hwnd)               ; initialize sendEditor function
     }
 
-    __call(msg, wParam=0, lParam=0, params*){
+    __call(msg, wParam := 0, lParam := 0, params*){
 
         if (msg = "Add")
             __SCI(this.hwnd := __Add(wParam, lParam, params*), this)
@@ -97,7 +97,7 @@ class scintilla {
 
 class sciCharRange {
 
-    __new(_cMin=0, _cMax=0){
+    __new(_cMin := 0, _cMax := 0){
 
         this.cMin := _cMin
         this.cMax := _cMax
@@ -105,7 +105,7 @@ class sciCharRange {
 }
 class sciTextRange {
 
-    __new(_chrg=0, _pStr=0){
+    __new(_chrg := 0, _pStr := 0){
 
         if (!isObject(_chrg)){
             Msgbox % 0x0
@@ -120,7 +120,7 @@ class sciTextRange {
 }
 class sciTextToFind {
 
-    __new(_chrg=0, _text="", _found=0){
+    __new(_chrg := 0, _text := "", _found := 0){
 
         if (!isObject(_chrg) || !isObject(_found)) {
             Msgbox % 0x0
@@ -136,7 +136,7 @@ class sciTextToFind {
 }
 class sciRectangle {
 
-    __new(_left=0, _top=0, _right=0, _bottom=0){
+    __new(_left := 0, _top := 0, _right := 0, _bottom := 0){
 
         this.left    := _left
         this.top     := _top
@@ -146,7 +146,7 @@ class sciRectangle {
 }
 class sciRangeToFormat {
 
-    __new(_hdc=0, _hdcTarget=0, _rc=0, _rcPage=0, _chrg=0){
+    __new(_hdc := 0, _hdcTarget := 0, _rc := 0, _rcPage := 0, _chrg := 0){
         this.hdc         := _hdc                                        ; The Surface ID we print to
         this.hdcTarget   := _hdcTarget                                  ; The Surface ID we use for measuring (may be same as hdc)
         this.rc          := _rc ? _rc : new sciRectangle                ; Rectangle in which to print
@@ -249,7 +249,7 @@ class sciRangeToFormat {
         exitapp
     (end)
 */
-__Add(hParent=0, x=5, y=5, w=590, h=390, DllPath="", Styles=""){
+__Add(hParent := 0, x := 5, y := 5, w := 590, h := 390, DllPath := "", Styles := ""){
     static WS_OVERLAPPED:=0x00000000,WS_POPUP:=0x80000000,WS_CHILD:=0x40000000,WS_MINIMIZE:=0x20000000
     ,WS_VISIBLE:=0x10000000,WS_DISABLED:=0x08000000,WS_CLIPSIBLINGS:=0x04000000,WS_CLIPCHILDREN:=0x02000000
     ,WS_MAXIMIZE:=0x01000000,WS_CAPTION:=0x00C00000,WS_BORDER:=0x00800000,WS_DLGFRAME:=0x00400000
@@ -321,7 +321,7 @@ __Add(hParent=0, x=5, y=5, w=590, h=390, DllPath="", Styles=""){
     __sendEditor(hSci2, "SCI_SETMARGINWIDTHN",0,50)  ; Set the margin 0 to 50px on the second component.
     (End)
 */
-__sendEditor(hwnd, msg=0, wParam=0, lParam=0){
+__sendEditor(hwnd, msg := 0, wParam := 0, lParam := 0){
 	; Scintilla variables (made static for this modified version)
 	static INVALID_POSITION := -1, unused := 0 ; Some messages dont use one of their parameters. You can use this variable for them.
 
@@ -581,7 +581,7 @@ __isHexColor(hex, msg){
         return false
 }
 
-__SCI(var, val=""){
+__SCI(var, val := ""){
     static
 
     if (RegExMatch(var,"i)[ `n-\.%,(\\\/=&^]")) ; Check if it is a valid variable name

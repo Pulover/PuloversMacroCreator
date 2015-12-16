@@ -82,8 +82,8 @@ Class Rebar extends Rebar.Private
 ;        Child:          OutputVar to store a handle to the band's child control.
 ;    Return:             TRUE if successful, FALSE if there was a problem.
 ;=======================================================================================
-    GetBand(Band, ByRef ID="", ByRef Text="", ByRef Size="", ByRef Image=""
-    ,   ByRef Background="", ByRef Style="", ByRef Child="")
+    GetBand(Band, ByRef ID := "", ByRef Text := "", ByRef Size := "", ByRef Image := ""
+    ,   ByRef Background := "", ByRef Style := "", ByRef Child := "")
     {
         Static cbSize := 48 + (8 * A_PtrSize)
         fMask := (IsByRef(Style) ? this.RBBIM_STYLE : 0)
@@ -205,8 +205,8 @@ Class Rebar extends Rebar.Private
 ;                            will attempt to make the band this width.
 ;    Return:             TRUE if successful, FALSE if there was a problem.
 ;=======================================================================================
-    InsertBand(hChild, Position=0, Options="", ID="", Text="", Size="", Image=0, Background=""
-        , MinHeight=23, MinWidth=25, IdealSize="")
+    InsertBand(hChild, Position := 0, Options := "", ID := "", Text := "", Size := "", Image := 0, Background := ""
+        , MinHeight := 23, MinWidth := 25, IdealSize := "")
     {
         Options := "ChildEdge GripperAlways UseChevron " Options
     ,   this.DefineBandStruct(rbBand, Options, ID, Text, Size, Image, Background
@@ -222,7 +222,7 @@ Class Rebar extends Rebar.Private
 ;        IdealWidth:     If TRUE the ideal width of the band will be used to maximize
 ;    Return:             TRUE if successful, FALSE if there was a problem.
 ;=======================================================================================
-    MaximizeBand(Band, IdealWidth=False)
+    MaximizeBand(Band, IdealWidth := False)
     {
         SendMessage, this.RB_MAXIMIZEBAND, Band-1, IdealWidth,, % "ahk_id " this.rbHwnd
         return (ErrorLevel = "FAIL") ? False : True
@@ -254,7 +254,7 @@ Class Rebar extends Rebar.Private
 ;                            remove the styles.
 ;    Return:             TRUE if successful, FALSE if there was a problem.
 ;=======================================================================================
-    ModifyBand(Band, Property, Value, SetStyle=True)
+    ModifyBand(Band, Property, Value, SetStyle := True)
     {
         If (Property = "Style")
         {
@@ -314,7 +314,7 @@ Class Rebar extends Rebar.Private
 ;    Return:             If the ChevronPushed notification is passed returns the index
 ;                            of the band it is from.
 ;=======================================================================================
-    OnNotify(ByRef Param, ByRef MenuXPos="", ByRef MenuYPos="", ByRef ID="")
+    OnNotify(ByRef Param, ByRef MenuXPos := "", ByRef MenuYPos := "", ByRef ID := "")
     {
         nCode  := NumGet(Param + (A_PtrSize * 2), 0, "Int"), rbHwnd := NumGet(Param + 0, 0, "UPtr")
         If (rbHwnd <> this.rbHwnd)
@@ -407,7 +407,7 @@ Class Rebar extends Rebar.Private
 ;        Rows:           Number of maximum rows allowed. Set it to 0 to disable limit.
 ;    Return:             The number of rows previously allowed.
 ;=======================================================================================
-    SetMaxRows(Rows=0)
+    SetMaxRows(Rows := 0)
     {
         LastValue := this.MaxRows, this.MaxRows := Rows
         return LastValue
@@ -420,7 +420,7 @@ Class Rebar extends Rebar.Private
 ;        Show:           Set to TRUE to show the band or FALSE to hide it.
 ;    Return:             TRUE if successful, FALSE if there was a problem.
 ;=======================================================================================
-    ShowBand(Band, Show=True)
+    ShowBand(Band, Show := True)
     {
         SendMessage, this.RB_SHOWBAND, Band-1, %Show%,, % "ahk_id " this.rbHwnd
         return (ErrorLevel = "FAIL") ? False : True
@@ -563,8 +563,8 @@ Class Rebar extends Rebar.Private
 ;    Method:             DefineBandStruct
 ;    Description:        Creates a REBARBANDINFO structure.
 ;=======================================================================================
-        DefineBandStruct(ByRef BandVar, Options="", wID="", ByRef lpText="", cx="", iImage="", hbmBack=""
-        , cxMinChild="", cyMinChild="", cxIdeal="", hwndChild="")
+        DefineBandStruct(ByRef BandVar, Options := "", wID := "", ByRef lpText := "", cx := "", iImage := "", hbmBack := ""
+        , cxMinChild := "", cyMinChild := "", cxIdeal := "", hwndChild := "")
         {
             Static cbSize := 48 + (8 * A_PtrSize)
             

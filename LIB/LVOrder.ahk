@@ -3,7 +3,7 @@
 ; Modified by skwire
 ; http://www.autohotkey.com/board/topic/11926-can-you-move-a-listview-column-programmatically/#entry237340
 ;###########################################################
-LVOrder_Set(_Num_Of_Columns, _New_Column_Order, _lvID, Delim=",")
+LVOrder_Set(_Num_Of_Columns, _New_Column_Order, _lvID, Delim := ",")
 {
 	Static LVM_FIRST               := 0x1000
 	Static LVM_REDRAWITEMS         := 21
@@ -27,7 +27,7 @@ LVOrder_Set(_Num_Of_Columns, _New_Column_Order, _lvID, Delim=",")
 }
 
 
-LVOrder_Get( _Num_Of_Columns, _lvID, Delim="," )
+LVOrder_Get( _Num_Of_Columns, _lvID, Delim := "," )
 {
 	Static LVM_FIRST               := 0x1000
 	Static LVM_GETCOLUMNORDERARRAY := 59

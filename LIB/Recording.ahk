@@ -33,7 +33,7 @@
 	p_Class := c_Class, p_Title := c_Title
 }
 
-ClickOn(xPos, yPos, Button, Click="")
+ClickOn(xPos, yPos, Button, Click := "")
 {
 	global RelHold, LastPos, RelKey, Toggle
 	If RelHold = 1

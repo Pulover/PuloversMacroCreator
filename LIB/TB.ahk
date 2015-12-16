@@ -1,11 +1,11 @@
-﻿TB_Define(ByRef TbPtr, hCtrl, hIL, ButtonsArray, Options="", Rows=0)
+﻿TB_Define(ByRef TbPtr, hCtrl, hIL, ButtonsArray, Options := "", Rows := 0)
 {
 	TbPtr := New Toolbar(hCtrl), TbPtr.SetImageList(hIL)
 ,	TbPtr.Add(Options, ButtonsArray*), TbPtr.SetMaxTextRows(Rows)
 ,	TbPtr.SetExStyle("DrawDDArrows HideClippedButtons")
 }
 
-TB_Rebar(RbPtr, BandID, tbChild, Options="", Text="")
+TB_Rebar(RbPtr, BandID, tbChild, Options := "", Text := "")
 {
 	tbWidth := TB_GetSize(tbChild)
 	tbChild.Get(,,, tbBtnWidth, tbBtnHeight)
@@ -25,7 +25,7 @@ TB_GetSize(tbPtr)
 	return tbWidth
 }
 
-TB_Edit(tbPtr, tbButton, Check="", Enable="", Capt="", Icon="")
+TB_Edit(tbPtr, tbButton, Check := "", Enable := "", Capt := "", Icon := "")
 {
 	Index := tbPtr.LabelToIndex(tbButton)
 	If (Check <> "")

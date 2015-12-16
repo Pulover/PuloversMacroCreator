@@ -80,13 +80,13 @@ GenerateDocs(file, docs)
 	SetWorkingDir, %oldw%
 }
 
-Generate_Function(item, prefix="")
+Generate_Function(item, prefix := "")
 {
 	Util_Status("Generating documentation for function " prefix item.name "...")
 	return Generate_Common(item, prefix)
 }
 
-Generate_Method(item, prefix="")
+Generate_Method(item, prefix := "")
 {
 	if !prefix
 		throw Exception("Methods must be inside classes!")
@@ -158,7 +158,7 @@ Parse_Common(item, prefix, ByRef type, ByRef syntax, ByRef name, ByRef isConstr,
 	}
 }
 
-Generate_Common(item, prefix="")
+Generate_Common(item, prefix := "")
 {
 	type := item.type
 	Parse_Common(item, prefix, type, syntax, name, isConstr, HasParamTableAndRetVal, isGet, isSet)
@@ -222,7 +222,7 @@ Generate_Common(item, prefix="")
 	return name
 }
 
-Generate_Page(item, prefix="")
+Generate_Page(item, prefix := "")
 {
 	Util_Status("Generating page " item.name "...")
 	
@@ -251,7 +251,7 @@ Generate_Page(item, prefix="")
 	FileAppend, % filetext, %filename%.html
 }
 
-Generate_Class(item, prefix="")
+Generate_Class(item, prefix := "")
 {
 	Util_Status("Generating documentation for class " prefix item.name "...")
 	

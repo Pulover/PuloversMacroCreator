@@ -646,6 +646,8 @@ CheckExp(String)
 			}
 			NewStr := RTrim(NewStr) ", "
 		}
+		Else If (RegExMatch(LoopField, "[\w\d_%]+\[\S+?\]"))
+			NewStr .= LoopField ", "
 		Else
 			NewStr .= """" LoopField """, "
 	}
@@ -657,7 +659,7 @@ CheckExp(String)
 	return NewStr
 }
 
-CheckComExp(String, OutVar="", ByRef ArrString="", Ptr="ie")
+CheckComExp(String, OutVar := "", ByRef ArrString := "", Ptr := "ie")
 {
 	If (OutVar <> "")
 		String := Trim(RegExReplace(String, "(.*):=[\s]?"))
@@ -742,7 +744,7 @@ CheckComExp(String, OutVar="", ByRef ArrString="", Ptr="ie")
 	return String
 }
 
-IEComExp(Method, Value="", Element="", ElIndex=0, OutputVar="", GetBy="Name", Obj="Method")
+IEComExp(Method, Value := "", Element := "", ElIndex := 0, OutputVar := "", GetBy := "Name", Obj := "Method")
 {
 	If (GetBy = "ID")
 		getEl := "getElementByID"

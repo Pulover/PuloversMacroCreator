@@ -11,7 +11,7 @@ MD_IsMultiP(ByRef htmQ)
 	return !!ErrorLevel
 }
 
-Markdown2HTML(ByRef text, simplify=0)
+Markdown2HTML(ByRef text, simplify := 0)
 {
 	if !simplify
 		return Markdown2HTML_(text)

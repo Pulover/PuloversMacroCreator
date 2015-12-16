@@ -1,4 +1,4 @@
-﻿LV_GetTexts(Index, ByRef Act="", ByRef Det="", ByRef Tim="", ByRef Del="", ByRef Typ="", ByRef Tar="", ByRef Win="", ByRef Com="", ByRef Col="")
+﻿LV_GetTexts(Index, ByRef Act := "", ByRef Det := "", ByRef Tim := "", ByRef Del := "", ByRef Typ := "", ByRef Tar := "", ByRef Win := "", ByRef Com := "", ByRef Col := "")
 {
 	LV_GetText(Act, Index, 2)
 ,	Act := LTrim(Act)
@@ -82,7 +82,7 @@ Find_Command(SearchWord)
 	return Results
 }
 
-RebarLock(rbPtr, Lock=True)
+RebarLock(rbPtr, Lock := True)
 {
 	Loop, % rbPtr.GetBandCount()
 		rbPtr.ModifyBand(A_Index, "Style", "NoGripper", Lock)
@@ -143,7 +143,7 @@ DragToolbar()
 				GoSub, LoadData
 				GoSub, RowCheck
 				GoSub, UpdateCopyTo
-				Project := "", Proj_Opts := "", SavePrompt := 1
+				Project := "", Proj_Opts := "", SavePrompt := true
 				SetTimer, HitFix, -10
 			}
 			Else
@@ -241,7 +241,7 @@ ActiveGui(Hwnd)
 	return 0
 }
 
-GuiGetSize(ByRef W, ByRef H, GuiID=1)
+GuiGetSize(ByRef W, ByRef H, GuiID := 1)
 {
 	DetectHiddenWindows, On
 	Gui %GuiID%:+LastFoundExist
@@ -266,7 +266,7 @@ HotkeyCtrlHasFocus()
 	}
 }
 
-SleepRandom(Delay=0, Min="", Max="", Percent="")
+SleepRandom(Delay := 0, Min := "", Max := "", Percent := "")
 {
 	If (Percent)
 	{
@@ -374,13 +374,13 @@ AdjustCoords(ByRef x1, ByRef y1, ByRef x2, ByRef y2)
 ,	x1 := Xa, x2 := Xb, y1 := Ya, y2 := Yb
 }
 
-ReadFunctions(LibFile, Msg="")
+ReadFunctions(LibFile, Msg := "")
 {
 	IfNotExist, %LibFile%
 		return "$"
 	Pos := 1
 	FileRead, Content, *t %LibFile%
-	While, RegExMatch(Content, "OU)([\w\._]+)\(.*\)[\n\r\s]*?\{", Found, Pos)
+	While (RegExMatch(Content, "OU)([\w\._]+)\(.*\)[\n\r\s]*?\{", Found, Pos))
 	{
 		Pos := Found.Pos(1) + Found.Len(1)
 		If (Func(Found.Value(1)).IsBuiltIn)
@@ -418,7 +418,7 @@ GuiAddLV(ident)
 	LVOrder_Set(10, ColOrder, ListID%ident%)
 }
 
-SelectByType(SelType, Col=6)
+SelectByType(SelType, Col := 6)
 {
 	SelType := Trim(SelType)
 	LV_Modify(0, "-Select")
@@ -489,7 +489,7 @@ class IfWin
 	}
 }
 
-ActivateHotkeys(Rec="", Play="", Speed="", Stop="", Pause="", Joy="")
+ActivateHotkeys(Rec := "", Play := "", Speed := "", Stop := "", Pause := "", Joy := "")
 {
 	local ActiveKeys
 	
@@ -644,7 +644,7 @@ AssignReplace(String)
 	VarName := Out1, Oper := Out2, VarValue := Out3
 }
 
-EscCom(MatchList, Reverse=0)
+EscCom(MatchList, Reverse := 0)
 {
 	global
 	
@@ -681,7 +681,7 @@ WinCheck(wParam, lParam, Msg)
 	WPHKC := wParam
 }
 
-ToggleIcon(Custom="")
+ToggleIcon(Custom := "")
 {
 	global
 	static IconFile, IconNumber, BarColor
@@ -708,7 +708,7 @@ ToggleButtonIcon(Button, Icon)
 	ILButton(Button, Icon[1] ":" Icon[2], 0)
 }
 
-ChangeProgBarColor(Color, Control, Gui=1)
+ChangeProgBarColor(Color, Control, Gui := 1)
 {
 	GuiControl, %Gui%:+c%Color%, %Control%
 }
@@ -801,7 +801,6 @@ LV_ColorsMessage(wParam, lParam)
 ShowMenu(Menu, mX, mY)
 {
 	global
-	OutputDebug, %Menu%
 	If (Menu = "Open")
 		Menu, RecentMenu, Show, %mX%, %mY%
 	Else If (Menu = "Save")
@@ -839,7 +838,7 @@ ShowMenu(Menu, mX, mY)
 		Menu, %Menu%, Show, %mX%, %mY%
 }
 
-ShowChevronMenu(rbPtr, BandID, X="", Y="")
+ShowChevronMenu(rbPtr, BandID, X := "", Y := "")
 {
 	Global TbEdit, ResDllPath
 	Band := rbPtr.IDToIndex(BandID)
@@ -863,7 +862,7 @@ ShowChevronMenu(rbPtr, BandID, X="", Y="")
 	}
 }
 
-SavedVars(Var="", ByRef Saved="")
+SavedVars(Var := "", ByRef Saved := "")
 {
 	Static VarsRecord := {}
 	Local ListOfVars, i, v

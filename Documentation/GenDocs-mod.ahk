@@ -94,7 +94,7 @@ if !CUI
 	SoundPlay, *64
 return
 
-Util_Status(ByRef t, err=0)
+Util_Status(ByRef t, err := 0)
 {
 	global CUI
 	if !CUI

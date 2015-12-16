@@ -59,7 +59,7 @@
 	i_Lang012 =	标签(&A)
 	i_Lang013 =	If语句(&F)
 	i_Lang014 =	变量(&V)
-	i_Lang015 =	函数(&U)
+	i_Lang015 =	函数(&U) / 阵列方法
 	i_Lang016 =	IE浏览器(&N)
 	i_Lang017 =	COM接口(&O)
 	i_Lang018 =	运行小脚本(&S)

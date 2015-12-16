@@ -109,7 +109,7 @@ Class LV_Colors {
    ;                                Default: True
    ; Return Values:  True on success, otherwise false.
    ; ===================================================================================================================
-   Attach(HWND, NoSort = True, NoSizing = True) {
+   Attach(HWND, NoSort := True, NoSizing := True) {
       Static LVM_GETBKCOLOR     := 0x1000
       Static LVM_GETHEADER      := 0x101F
       Static LVM_GETTEXTBKCOLOR := 0x1025
@@ -166,7 +166,7 @@ Class LV_Colors {
    ;                                Default: Empty -> default text color
    ; Return Value:   True on success, otherwise false.
    ; ===================================================================================================================
-   Row(HWND, Row, BkColor = "", TxColor = "") {
+   Row(HWND, Row, BkColor := "", TxColor := "") {
       If !This.HasKey(HWND)
          Return False
       If (BkColor = "") && (TxColor = "") {
@@ -202,7 +202,7 @@ Class LV_Colors {
    ;                                Default: Empty -> default text color
    ; Return Value:   True on success, otherwise false.
    ; ===================================================================================================================
-   Cell(HWND, Row, Col, BkColor = "", TxColor = "") {
+   Cell(HWND, Row, Col, BkColor := "", TxColor := "") {
       If !This.HasKey(HWND)
          Return False
       If (BkColor = "") && (TxColor = "") {
@@ -235,7 +235,7 @@ Class LV_Colors {
    ;                                Default: True
    ; Return Value:   True on success, otherwise false.
    ; ===================================================================================================================
-   NoSort(HWND, DoIt = True) {
+   NoSort(HWND, DoIt := True) {
       Static HDM_GETITEMCOUNT := 0x1200
       If !This.HasKey(HWND)
          Return False
@@ -253,7 +253,7 @@ Class LV_Colors {
    ;                                Default: True
    ; Return Value:   True on success, otherwise false.
    ; ===================================================================================================================
-   NoSizing(HWND, DoIt = True) {
+   NoSizing(HWND, DoIt := True) {
       Static OSVersion := DllCall("Kernel32.dll\GetVersion", "UChar")
       Static HDS_NOSIZING := 0x0800
       If !This.HasKey(HWND)
@@ -290,7 +290,7 @@ Class LV_Colors {
    ;                                Default: True
    ; Return Value:   Always True
    ; ===================================================================================================================
-   OnMessage(DoIt = True) {
+   OnMessage(DoIt := True) {
       If (DoIt)
          OnMessage(This.WM_NOTIFY, This.MessageHandler)
       Else If (This.MessageHandler = OnMessage(This.WM_NOTIFY))

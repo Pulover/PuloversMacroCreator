@@ -341,19 +341,11 @@ If (Lang = "ERROR")
 
 If (DefaultEditor = "ERROR")
 {
-	RegRead, DefaultEditor, HKEY_CLASSES_ROOT, AutoHotkeyScript\Shell\Edit\Command
-	StringReplace, DefaultEditor, DefaultEditor, ",, All ; "
-	StringReplace, DefaultEditor, DefaultEditor, `%1
-}
-If (DefaultEditor = "")
-{
 	ProgramsFolder := (A_PtrSize = 8) ? ProgramFiles " (x86)" : ProgramFiles
 	If (FileExist(ProgramsFolder "\Notepad++\notepad++.exe"))
 		DefaultEditor := ProgramsFolder "\Notepad++\notepad++.exe"
 	Else If (FileExist(ProgramFiles "\Sublime Text 2\sublime_text.exe"))
 		DefaultEditor := ProgramFiles "\Sublime Text 2\sublime_text.exe"
-	Else If (FileExist(ProgramFiles " (x86)\Sublime Text 2\sublime_text.exe"))
-		DefaultEditor := ProgramFiles " (x86)\Sublime Text 2\sublime_text.exe"
 	Else
 		DefaultEditor := "notepad.exe"
 }
@@ -6763,6 +6755,11 @@ Else If (A_ThisLabel = "AsFunc")
 	GuiTitle := c_Lang011
 	If (s_Caller = "Find")
 	{
+		If (!IsFunc(GotoRes1))
+		{
+			GuiControl, 21:, IsArray, 1
+			GoSub, IsArray
+		}
 		GuiControl, 21:ChooseString, FuncName, %GotoRes1%
 		GoSub, FuncName
 	}
@@ -6912,12 +6909,30 @@ If ((IsArray) && (ArrayName = ""))
 	GuiControl, 21:Focus, ArrayName
 	return
 }
-Try
-	z_Check := VarSetCapacity(%VarName%)
-Catch
+If (RegExMatch(VarName, "([\w\d_]+)\[(\S+?)\]", lMatch))
 {
-	MsgBox, 16, %d_Lang007%, %d_Lang041%
-	return
+	If (Oper <> ":=")
+	{
+		MsgBox, 16, %d_Lang007%, %d_Lang041%
+		return
+	}
+	Try
+		z_Check := VarSetCapacity(%lMatch1%)
+	Catch
+	{
+		MsgBox, 16, %d_Lang007%, %d_Lang041%
+		return
+	}
+}
+Else
+{
+	Try
+		z_Check := VarSetCapacity(%VarName%)
+	Catch
+	{
+		MsgBox, 16, %d_Lang007%, %d_Lang041%
+		return
+	}
 }
 StringReplace, VarValue, VarValue, `n, ``n, All
 If (s_Caller <> "Edit")
@@ -9173,7 +9188,7 @@ Gui, chMacro:Submit, NoHide
 ColOrder := LVOrder_Get(10, ListID%A_List%), AllTabs := "", TabName := ""
 Loop, %TabCount%
 	AllTabs .= TabGetText(TabSel, A_Index) ","
-While, InStr(AllTabs, TabName ",")
+While (InStr(AllTabs, TabName ","))
 	TabName := "Macro" TabCount+A_Index
 TabCount++
 GuiCtrlAddTab(TabSel, TabName)
@@ -11875,7 +11890,7 @@ ListVars:
 SavedVars(, UserVars)
 FileDelete, %SettingsFolder%\ListOfVars.txt
 FileAppend, User-Defined Variables (alphabetical)`n--------------------------------------------------`n%UserVars%, %SettingsFolder%\ListOfVars.txt
-Run, notepad %SettingsFolder%\ListOfVars.txt
+Run, %DefaultEditor% %SettingsFolder%\ListOfVars.txt
 return
 
 ;##### Hide / Close: #####
@@ -12150,10 +12165,12 @@ AbortKey := "F8"
 ,	TB_Edit(tbPrev, "TabIndent", 1)
 ,	TB_Edit(tbPrevF, "TabIndent", 1)
 
-RegRead, DefaultEditor, HKEY_CLASSES_ROOT, AutoHotkeyScript\Shell\Edit\Command
-StringReplace, DefaultEditor, DefaultEditor, ",, All ; "
-StringReplace, DefaultEditor, DefaultEditor, `%1
-If (DefaultEditor = "")
+ProgramsFolder := (A_PtrSize = 8) ? ProgramFiles " (x86)" : ProgramFiles
+If (FileExist(ProgramsFolder "\Notepad++\notepad++.exe"))
+	DefaultEditor := ProgramsFolder "\Notepad++\notepad++.exe"
+Else If (FileExist(ProgramFiles "\Sublime Text 2\sublime_text.exe"))
+	DefaultEditor := ProgramFiles "\Sublime Text 2\sublime_text.exe"
+Else
 	DefaultEditor := "notepad.exe"
 WinSet, Transparent, %OSTrans%, ahk_id %PMCOSC%
 GuiControl, 28:, OSTrans, 255
@@ -13666,7 +13683,7 @@ Text_Keywords := "
 Mouse_Keywords := "
 (Join`,
 )"
-While, Action%A_Index%
+While (Action%A_Index%)
 	Mouse_Keywords .= Action%A_Index% ","
 Mouse_Path := w_Lang050, Mouse_Goto := "Mouse"
 

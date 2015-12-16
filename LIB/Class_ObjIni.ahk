@@ -11,7 +11,7 @@
 
 Class ObjIni
 {
-	__New(File, Section="")
+	__New(File, Section := "")
 	{
 		Loop, Read, %File%
 		{
@@ -79,7 +79,7 @@ Class ObjIni
 		return List
 	}
 	
-	Set(NewList, DefaultSection="UserGlobalVars")
+	Set(NewList, DefaultSection := "UserGlobalVars")
 	{
 		this.RemoveAt(1, this.Length())
 		this.SetCapacity(0)

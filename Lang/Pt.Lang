@@ -59,7 +59,7 @@
 	i_Lang012 =	Rótul&o
 	i_Lang013 =	&Declaração Se
 	i_Lang014 =	&Variáveis
-	i_Lang015 =	&Funções
+	i_Lang015 =	&Funções / Métodos de Matriz
 	i_Lang016 =	&Internet Explorer
 	i_Lang017 =	I&nterface COM
 	i_Lang018 =	Executar &Scriptlet
@@ -239,7 +239,7 @@
 	w_Lang062 =	Rótulo (Ctrl+F9)
 	w_Lang063 =	Declaração Se (F10)
 	w_Lang064 =	Variáveis (Shift+F10)
-	w_Lang065 =	Funções / Métodos de Matrizes (Ctrl+F10)
+	w_Lang065 =	Funções / Métodos de Matriz (Ctrl+F10)
 	w_Lang066 =	Internet Explorer (F11)
 	w_Lang067 =	Interface COM (Shift+F11)
 	w_Lang068 =	Executar Scriptlet (Ctrl+F11)
@@ -289,7 +289,7 @@
 	c_Lang008 =	Executar / Arquivos / Texto / Misc.
 	c_Lang009 =	Declaração Se
 	c_Lang010 =	Variáveis
-	c_Lang011 =	Funções / Métodos de Matrizes
+	c_Lang011 =	Funções / Métodos de Matriz
 	c_Lang012 =	Internet Explorer
 	c_Lang013 =	Interface COM
 	c_Lang014 =	Selecionar Aplicativo (Avançado)

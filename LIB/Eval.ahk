@@ -7,9 +7,9 @@ Eval(x, l_Point) { ; non-recursive PRE/POST PROCESSING: I/O forms, numbers, ops,
    Local FORM, FormF, FormI, i, W, y, y1, y2, y3, y4
    FormI := A_FormatInteger, FormF := A_FormatFloat
 
-	While RegExMatch(x, "([\w_]+)\((.*?)\)", Funct)  ; Functions
+	While (RegExMatch(x, "([\w_]+)\((.*?)\)", Funct))  ; Functions
 	{
-		If IsFunc(Funct1)
+		If (IsFunc(Funct1))
 		{
 			Params := Object()
 			StringReplace, Funct2, Funct2, ```,, `,, All
@@ -26,9 +26,9 @@ Eval(x, l_Point) { ; non-recursive PRE/POST PROCESSING: I/O forms, numbers, ops,
 		}
 	}
 	
-	While RegExMatch(x, "\b([\w\d_]+)\b\.([\w%]+)\((.*?)\)", Funct)  ; Methods()
+	While (RegExMatch(x, "\b([\w\d_]+)\b\.([\w%]+)\((.*?)\)", Funct))  ; Methods
 	{
-		If IsObject(%Funct1%)
+		If (IsObject(%Funct1%))
 		{
 			Params := Object()
 			StringReplace, Funct3, Funct3, ```,, `,, All
@@ -45,32 +45,17 @@ Eval(x, l_Point) { ; non-recursive PRE/POST PROCESSING: I/O forms, numbers, ops,
 		}
 	}
 	
-	While RegExMatch(x, "(\S+)\[(\S+?)\]", Found) ; Read Arrays
+	If (RegExMatch(x, "[\w\d_]+\[\S+?\]")) ; Read Arrays
 	{
-		Found := RegExReplace(Found, "[\[|\]]", "\$0")
-		If Found2 is not Number
-		{
-			If (Found2 = "A_Index")
-				Found2 := LoopIndex
-			Else If (Found2 = "ErrorLevel")
-				Found2 := LastError
-			Else If RegExMatch(Found2, "i)(A_Loop\w+)", lMatch)
-			{
-				I := DerefVars(LoopIndex), L := SubStr(lMatch1, 3)
-			,	Found2 := RegExReplace(Found2, "U)" lMatch, o_Loop%l_Point%[I][L])
-			}
-			Else
-				Found2 := DerefVars("%" Found2 "%")
-		}
-		y := %Found1%[Found2]
-		Try _isObj := IsObject(y)
-		If _isObj
-			return y
-		Else
-			x := RegExReplace(x, Found, y)
+		y := ExtractArrays(x, l_Point)
+		return y
 	}
-
-	If RegExMatch(x, "^\[(.+)\]$", Found) ; Assign Arrays
+	Try
+	{
+		z := %x%
+		return z
+	}
+	If (RegExMatch(x, "^\[(.*)\]$", Found)) ; Assign Arrays
 	{
 		y := []
 		Loop, Parse, Found1, `,, %A_Space%%A_Tab%
@@ -82,9 +67,9 @@ Eval(x, l_Point) { ; non-recursive PRE/POST PROCESSING: I/O forms, numbers, ops,
 					LoopField := LoopIndex
 				Else If (LoopField = "ErrorLevel")
 					LoopField := LastError
-				Else If RegExMatch(LoopField, "^""(.*)""", lMatch)
+				Else If (RegExMatch(LoopField, "^""(.*)""", lMatch))
 					LoopField := lMatch1
-				Else If RegExMatch(LoopField, "i)(A_Loop\w+)", lMatch)
+				Else If (RegExMatch(LoopField, "i)(A_Loop\w+)", lMatch))
 				{
 					I := DerefVars(LoopIndex), L := SubStr(lMatch1, 3)
 				,	LoopField := RegExReplace(LoopField, "U)" lMatch, o_Loop%l_Point%[I][L])
@@ -107,11 +92,11 @@ Eval(x, l_Point) { ; non-recursive PRE/POST PROCESSING: I/O forms, numbers, ops,
    SetFormat FLOAT, 0.16e              ; Full intermediate float precision
    StringReplace x, x, %y%             ; remove $..
    Loop
-      If RegExMatch(x, "i)(.*)(0x[a-f\d]*)(.*)", y)
+      If (RegExMatch(x, "i)(.*)(0x[a-f\d]*)(.*)", y))
          x := y1 . y2+0 . y3           ; convert hex numbers to decimal
       Else Break
    Loop
-      If RegExMatch(x, "(.*)'([01]*)(.*)", y)
+      If (RegExMatch(x, "(.*)'([01]*)(.*)", y))
          x := y1 . FromBin(y2) . y3    ; convert binary numbers to decimal: sign = first bit
       Else Break
    x := RegExReplace(x,"(^|[^.\d])(\d+)(e|E)","$1$2.$3") ; add missing '.' before E (1e3 -> 1.e3)
@@ -128,7 +113,7 @@ Eval(x, l_Point) { ; non-recursive PRE/POST PROCESSING: I/O forms, numbers, ops,
    Loop Parse, x, `;
       y := Eval1(A_LoopField)          ; work on pre-processed sub expressions
                                        ; return result of last sub-expression (numeric)
-   If FORM = b                         ; convert output to binary
+   If (FORM = b)                         ; convert output to binary
       y := W ? ToBinW(Round(y),W) : ToBin(Round(y))
    Else If (FORM="h" or FORM="x") {
       SetFormat Integer, Hex           ; convert output to hex
@@ -147,12 +132,12 @@ Eval(x, l_Point) { ; non-recursive PRE/POST PROCESSING: I/O forms, numbers, ops,
 Eval1(x) {                             ; recursive PREPROCESSING of :=, vars, (..) [decimal, no ";"]
    Local i, y, y1, y2, y3
                                        ; save function definition: f(x) := expr
-   If RegExMatch(x, "(\S*?)\((.*?)\)\s*:=\s*(.*)", y) {
+   If (RegExMatch(x, "(\S*?)\((.*?)\)\s*:=\s*(.*)", y)) {
       f%y1%__X := y2, f%y1%__F := y3
       Return
    }
                                        ; execute leftmost ":=" operator of a := b := ...
-   If RegExMatch(x, "(\S*?)\s*:=\s*(.*)", y) {
+   If (RegExMatch(x, "(\S*?)\s*:=\s*(.*)", y)) {
       y := "x" . y1                    ; user vars internally start with x to avoid name conflicts
       Return %y% := Eval1(y2)
    }
@@ -169,7 +154,7 @@ Eval1(x) {                             ; recursive PREPROCESSING of :=, vars, (.
    Transform x, Deref, %x%             ; dereference all right-hand-side %var%-s
 
    Loop {                              ; find last innermost (..)
-      If RegExMatch(x, "(.*)\(([^\(\)]*)\)(.*)", y)
+      If (RegExMatch(x, "(.*)\(([^\(\)]*)\)(.*)", y))
          x := y1 . Eval@(y2) . y3      ; replace (x) with value of x
       Else Break
    }
@@ -202,7 +187,7 @@ Eval@(x) {                             ; EVALUATE PRE-PROCESSED EXPRESSIONS [dec
    IfEqual y2,>=, Return Eval@(y1) >= Eval@(y3)
                                        ; execute rightmost user operator (low precedence)
    RegExMatch(x, "i)(.*)«(.*?)»(.*)", y)
-   If IsFunc(y2)
+   If (IsFunc(y2))
       Return %y2%(Eval@(y1),Eval@(y3)) ; predefined relational ops
 
    StringGetPos i, x, |, R             ; execute rightmost | operator
@@ -234,7 +219,7 @@ Eval@(x) {                             ; EVALUATE PRE-PROCESSED EXPRESSIONS [dec
    IfEqual y2,±,Return Eval@(y1 .  y4) ; unary +
    IfEqual y2,¬,Return Eval@(y1 . -y4) ; unary - (they behave like functions)
    IfEqual y2,~,Return Eval@(y1 . ~y4) ; unary ~
-   If IsFunc(y3)
+   If (IsFunc(y3))
       Return Eval@(y1 . %y3%(y4))      ; built-in and predefined functions(y4)
    Return Eval@(y1 . Eval1(RegExReplace(f%y3%__F, f%y3%__X, y4))) ; LAST: user defined functions
 }

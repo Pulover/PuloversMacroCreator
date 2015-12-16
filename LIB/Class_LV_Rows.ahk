@@ -72,7 +72,7 @@ Class LV_Rows
 ;                            to True. The user may consult Handle.HasChanged to show
 ;                            a save dialog and set it to False after saving.
 ;=======================================================================================
-    __New(Hwnd="")
+    __New(Hwnd := "")
     {
         If (Hwnd)
             this.LVHwnd := Hwnd
@@ -83,8 +83,8 @@ Class LV_Rows
     {
         global
         
-        If Func not in Copy,RowText,GetIconIndex
-            SavePrompt := True
+        If Func not in Copy,RowText,GetIconIndex,Length,RemoveAt,SetCapacity
+			SavePrompt := True
     }
 
     __Delete()
@@ -144,7 +144,7 @@ Class LV_Rows
 ;        Multiline:      If True pastes the contents at every selected row.
 ;    Return:             True if memory contains data or False if not.
 ;=======================================================================================
-    Paste(Row=0, Multiline=False)
+    Paste(Row := 0, Multiline := False)
     {
         If (!this.CopyData.Length())
             return False
@@ -218,7 +218,7 @@ Class LV_Rows
 ;        Up:             If False or omitted moves rows down. If True moves rows up.
 ;    Return:             Number of rows moved.
 ;=======================================================================================
-    Move(Up=False)
+    Move(Up := False)
     {
         Selections := [], LV_Row := 0
         Critical
@@ -282,7 +282,7 @@ Class LV_Rows
 ;        Color:          Color of destination bar. Defalt is "Black".
 ;    Return:             The destination row number.
 ;=======================================================================================
-    Drag(DragButton="D", AutoScroll=True, ScrollDelay=100, LineThick=2, Color="Black")
+    Drag(DragButton := "D", AutoScroll := True, ScrollDelay := 100, LineThick := 2, Color := "Black")
     {
         Static LVIR_LABEL          := 0x0002
         Static LVM_GETITEMCOUNT    := 0x1004
@@ -349,7 +349,7 @@ Class LV_Rows
                 LV_RowY := NumGet(LV_XYstruct, 4, "UInt")
             ,   LV_RowY2 := NumGet(LV_XYstruct, 12, "UInt")
             ,   LV_currColHeight := LV_RowY2 - LV_RowY
-                If(LV_my <= LV_RowY + LV_currColHeight)
+                If (LV_my <= LV_RowY + LV_currColHeight)
                 {    
                     LV_currRow  := LV_which + 1
                 ,   LV_currRow0 := LV_which
