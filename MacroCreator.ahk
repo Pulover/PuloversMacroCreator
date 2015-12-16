@@ -7771,12 +7771,25 @@ If (Get)
 		Tooltip, %c_Lang127%, 25, 145
 		return
 	}
-	Try
-		z_Check := VarSetCapacity(%Value%)
-	Catch
+	If (RegExMatch(Value, "^(\w+)\[(\S+?)\]", lMatch))
 	{
-		MsgBox, 16, %d_Lang007%, %d_Lang041%
-		return
+		Try
+			z_Check := VarSetCapacity(%lMatch1%)
+		Catch
+		{
+			MsgBox, 16, %d_Lang007%, %d_Lang041%
+			return
+		}
+	}
+	Else
+	{
+		Try
+			z_Check := VarSetCapacity(%Value%)
+		Catch
+		{
+			MsgBox, 16, %d_Lang007%, %d_Lang041%
+			return
+		}
 	}
 	Type := cType33
 }
@@ -7863,12 +7876,25 @@ Catch
 }
 If (VarName <> "")
 {
-	Try
-		z_Check := VarSetCapacity(%VarName%)
-	Catch
+	If (RegExMatch(VarName, "^(\w+)\[(\S+?)\]", lMatch))
 	{
-		MsgBox, 16, %d_Lang007%, %d_Lang041%
-		return
+		Try
+			z_Check := VarSetCapacity(%lMatch1%)
+		Catch
+		{
+			MsgBox, 16, %d_Lang007%, %d_Lang041%
+			return
+		}
+	}
+	Else
+	{
+		Try
+			z_Check := VarSetCapacity(%VarName%)
+		Catch
+		{
+			MsgBox, 16, %d_Lang007%, %d_Lang041%
+			return
+		}
 	}
 }
 If ((ComCLSID = "InternetExplorer.Application") && LoadWait)
@@ -11639,6 +11665,7 @@ pb_IECOM_Set:
 	IeIntStr := IEComExp(Act2, Step, El1, El2, "", Act3, Act1)
 ,	IeIntStr := SubStr(IeIntStr, 4)
 
+	OutputDebug, >>%__PointMarker%
 	Try
 		o_ie.readyState
 	Catch
@@ -11682,13 +11709,26 @@ pb_IECOM_Set:
 return
 
 pb_IECOM_Get:
-	Try
-		z_Check := VarSetCapacity(%Step%)
-	Catch
+	If (RegExMatch(Step, "^(\w+)\[(\S+?)\]", lMatch))
 	{
-		MsgBox, 16, %d_Lang007%, %d_Lang041%
-		StopIt := 1
-		return
+		Try
+			z_Check := VarSetCapacity(%lMatch1%)
+		Catch
+		{
+			MsgBox, 16, %d_Lang007%, %d_Lang041%
+			return
+		}
+	}
+	Else
+	{
+		Try
+			z_Check := VarSetCapacity(%Step%)
+		Catch
+		{
+			MsgBox, 16, %d_Lang007%, %d_Lang041%
+			StopIt := 1
+			return
+		}
 	}
 	
 	StringSplit, Act, Action, :
@@ -11715,7 +11755,10 @@ pb_IECOM_Get:
 	}
 	
 	Try
-		COMInterface(IeIntStr, o_ie, %Step%)
+	{
+		COMInterface(IeIntStr, o_ie, lResult)
+	,	AssignVar(Step, ":=", lResult, __PointMarker)
+	}
 	Catch e
 	{
 		MsgBox, 20, %d_Lang007%, % d_Lang064 " Macro" mMacroOn ", " d_Lang065 " " mListRow
@@ -11749,13 +11792,26 @@ pb_COMInterface:
 	StringReplace, Step, Step, ø, `n, All
 	StringSplit, Act, Action, :
 
-	Try
-		z_Check := VarSetCapacity(%Act2%)
-	Catch
+	If (RegExMatch(Act2, "^(\w+)\[(\S+?)\]", lMatch))
 	{
-		MsgBox, 16, %d_Lang007%, %d_Lang041%
-		StopIt := 1
-		return
+		Try
+			z_Check := VarSetCapacity(%lMatch1%)
+		Catch
+		{
+			MsgBox, 16, %d_Lang007%, %d_Lang041%
+			return
+		}
+	}
+	Else
+	{
+		Try
+			z_Check := VarSetCapacity(%Act2%)
+		Catch
+		{
+			MsgBox, 16, %d_Lang007%, %d_Lang041%
+			StopIt := 1
+			return
+		}
 	}
 	
 	Loop, Parse, Step, `n, %A_Space%%A_Tab%`r
@@ -11764,9 +11820,11 @@ pb_COMInterface:
 		Try
 		{
 			If (!IsObject(%Act1%))
-				%Act1% := COMInterface(LoopField, %Act1%, %Act2%, Target)
+				%Act1% := COMInterface(LoopField, %Act1%, lResult, Target)
 			Else
-				COMInterface(LoopField, %Act1%, %Act2%, Target)
+				COMInterface(LoopField, %Act1%, lResult, Target)
+			If (lResult <> "")
+				AssignVar(Act2, ":=", lResult, __PointMarker)
 		}
 		Catch e
 		{

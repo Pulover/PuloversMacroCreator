@@ -38,11 +38,11 @@ Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jör
 
 ## Version 4.2.0
 
-* Added support for array assignment in Variables window.
+* Added support for array assignment in Variables window and IECOM/COMInterface.
 * Added support for array methods in Functions window.
 * Added For-Loops.
-* Added support for Multi-Dimensional Arrays assignment (e.g.: MyArray[1][2] := Value).
 * Added support for Multi-Dimensional Arrays inside function parameters and commands.
+* Added support for Multi-Dimensional Arrays assignment (e.g.: MyArray[1][2] := Value).
 * Added support for Arrays inside IECom and COMInterface parameters.
 * Added support for array methods inside commands (e.g.: % MyArray.Length()).
 * Added support for array methods inside Variable Assignment when "Expression" is checked or "Value" is starts with "% ".

@@ -528,6 +528,7 @@
 						Menu, Tray, Default, %w_Lang005%
 						break 3
 					}
+					__PointMarker := PointMarker
 					GoSub, pb_%Type%
 					LastError := ErrorLevel
 					If ((Type = cType15) || (Type = cType16))
@@ -1013,6 +1014,7 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC, ByRef LoopCount)
 				{
 					If (StopIt)
 						break 3
+					__PointMarker := PointMarker
 					GoSub, pb_%Type%
 					LastError := ErrorLevel, TimesX--
 					If Type in Sleep,KeyWait
