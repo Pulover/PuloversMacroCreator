@@ -6950,11 +6950,6 @@ If ((IsArray) && (ArrayName = ""))
 }
 If (RegExMatch(VarName, "^(\w+)\[(\S+?)\]", lMatch))
 {
-	If (Oper != ":=")
-	{
-		MsgBox, 16, %d_Lang007%, %d_Lang041%
-		return
-	}
 	Try
 		z_Check := VarSetCapacity(%lMatch1%)
 	Catch

@@ -62,8 +62,9 @@ Groups=
 2|[Assign Variable]|N["keyA"] := Value of KeyA|1|0|Variable|||||
 3|[MsgBox]|% N["keyA"]|1|0|MsgBox|0||||
 4|[Assign Variable]|N["keyB"] := Value of KeyB|1|0|Variable|||||
-5|[Assign Variable]|N["keyC"] := N["keyA"]|1|0|Variable|Expression||||
-6|[LoopStart]|N`, each`, value|1|0|ForLoop|||||
-7|[MsgBox]|%each%: %value%|1|0|MsgBox|262144||||
-8|[LoopEnd]|LoopEnd|1|0|Loop|||||
+5|[Assign Variable]|N["keyC"] := Value of keyC|1|0|Variable|||||
+6|[Assign Variable]|N["keyC"] .= N["keyA"]|1|0|Variable|Expression||||
+7|[LoopStart]|N`, each`, value|1|0|ForLoop|||||
+8|[MsgBox]|%each%: %value%|1|0|MsgBox|262144||||
+9|[LoopEnd]|LoopEnd|1|0|Loop|||||
 

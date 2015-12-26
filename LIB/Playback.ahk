@@ -1,7 +1,7 @@
 ﻿Playback(Macro_On, Skip_Line := 0, Manual := "")
 {
 	local IfError := 0, PointMarker := 0, LoopCount := [0]
-	, m_ListCount := ListCount%Macro_On%, mLoopIndex, _Label
+	, m_ListCount := ListCount%Macro_On%, mLoopIndex, _Label, _i
 
 	CoordMode, Mouse, Screen
 	MouseGetPos, CursorX, CursorY
@@ -289,13 +289,14 @@
 						Else If (Type = cType45)
 						{
 							$_each%PointMarker% := Par2, $_value%PointMarker% := Par3
-							o_Loop%PointMarker% := []
+							o_Loop%PointMarker% := [], _l := ""
 							For _each, _value in % %Par1%
 							{
 								o_Loop%PointMarker%[A_Index, Par2] := _each
 							,	o_Loop%PointMarker%[A_Index, Par3] := _value
+							,	_l := A_Index
 							}
-							LoopCount[PointMarker] := %Par1%.Length()
+							LoopCount[PointMarker] := _l
 						}
 						Else
 							LoopCount[PointMarker] := TimesX
@@ -591,7 +592,7 @@
 
 LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC, ByRef LoopCount)
 {
-	local lCount, lIdx, L_Index, mLoopIndex, _Label, IfError := 0
+	local lCount, lIdx, L_Index, mLoopIndex, _Label, IfError := 0, _l
 
 	f_Loop:
 	CoordMode, Mouse, %CoordMouse%
@@ -803,13 +804,14 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC, ByRef LoopCount)
 						Else If (Type = cType45)
 						{
 							$_each%PointMarker% := Par2, $_value%PointMarker% := Par3
-							o_Loop%PointMarker% := []
+							o_Loop%PointMarker% := [], _l := ""
 							For _each, _value in % %Par1%
 							{
 								o_Loop%PointMarker%[A_Index, Par2] := _each
 							,	o_Loop%PointMarker%[A_Index, Par3] := _value
+							,	_l := A_Index
 							}
-							LoopCount[PointMarker] := %Par1%.Length()
+							LoopCount[PointMarker] := _l
 						}
 						Else
 							LoopCount[PointMarker] := TimesX
@@ -1544,7 +1546,7 @@ CheckVars(Match_List, l_Point := "")
 		}
 		%A_LoopField% := DerefVars(%A_LoopField%)
 
-		If (RegExMatch(%A_LoopField%, "U)^%\s+[\w\d_\[\]\(\)]+$"))  ; DynamicVars
+		If (RegExMatch(%A_LoopField%, "U)^%\s+[\w\d_\[\]\(\)""]+$"))  ; DynamicVars
 		{
 			While (RegExMatch(%A_LoopField%, "mU)%\s+([\w%]*)(``,|$)", lFound))
 				%A_LoopField% := RegExReplace(%A_LoopField%, lFound, %lFound1%)
@@ -1579,6 +1581,8 @@ ExtractArrays(v_String, l_Point, ByRef v_levels := "")
 				,	l_Found2 := RegExReplace(l_Found2, "U)" lMatch, o_Loop%l_Point%[I][L])
 				}
 			}
+			Else If (RegExMatch(l_Found2, "^""(.*)""", lMatch))
+				l_Found2 := lMatch1
 			Else
 				l_Found2 := DerefVars("%" l_Found2 "%")
 		}
