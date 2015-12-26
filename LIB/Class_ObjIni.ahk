@@ -19,14 +19,14 @@ Class ObjIni
 				continue
 			If (RegExMatch(A_LoopReadLine, "^\[(.*)\]$", Sect))
 			{
-				If (ReadSection <> "")
+				If (ReadSection != "")
 				{
 					this[ReadSection] := %ReadSection%
 				}
 				ReadSection := Sect1, %Sect1% := []
 				continue
 			}
-			If ((Section <> "") && (Section <> ReadSection))
+			If ((Section != "") && (Section != ReadSection))
 				continue
 			If (RegExMatch(A_LoopReadLine, "U)^(.*)=(.*)$", Key))
 			{
@@ -90,7 +90,7 @@ Class ObjIni
 				continue
 			If (RegExMatch(A_LoopField, "^\[(.*)\]$", Sect))
 			{
-				If (ReadSection <> "")
+				If (ReadSection != "")
 					this[ReadSection] := %ReadSection%
 				ReadSection := Sect1, %Sect1% := []
 				continue

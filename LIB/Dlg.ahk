@@ -30,7 +30,7 @@ Dlg_Color(ByRef Color, hGui := 0, ByRef Palette := "")
 	Loop, 16
 		Palette .= ColorRGB(NumGet(Custom, (A_Index - 1) * 4, "UInt")) ","
 	
-	If (ann <> 0) || (nRC = 0) 
+	If (ann != 0) || (nRC = 0) 
 		return false 
 
 	clr := NumGet(ChooseColor, 3 * A_PtrSize) 

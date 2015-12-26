@@ -16,7 +16,7 @@ ShowTooltip()
 {
 	static CurrControl, PrevControl, _TT, TT_A
 	CurrControl := A_GuiControl
-	If (CurrControl <> PrevControl && !RegExMatch(CurrControl, "\W"))
+	If (CurrControl != PrevControl && !RegExMatch(CurrControl, "\W"))
 	{
 		TT_A := WinExist("A")
 		ToolTip
@@ -26,7 +26,7 @@ ShowTooltip()
 	return
 
 	DisplayToolTip:
-	If (TT_A <> WinExist("A"))
+	If (TT_A != WinExist("A"))
 		return
 	Try
 		ToolTip, % %CurrControl%_TT
@@ -82,7 +82,7 @@ Find_Command(SearchWord)
 	return Results
 }
 
-RebarLock(rbPtr, Lock := True)
+RebarLock(rbPtr, Lock := true)
 {
 	Loop, % rbPtr.GetBandCount()
 		rbPtr.ModifyBand(A_Index, "Style", "NoGripper", Lock)
@@ -101,7 +101,7 @@ CloseTab()
 	}
 }
 
-DragToolbar()
+DragTab()
 {
 	global
 	
@@ -110,6 +110,7 @@ DragToolbar()
 		PostMessage, 0xA1, 2,,, ahk_id %PMCOSC%
 	Else If (A_Gui = "chMacro")
 	{
+		Gui, chMacro:Default
 		MouseGetPos, HitX, HitY,, cHwnd, 2
 		If (cHwnd = TabSel)
 		{
@@ -118,32 +119,32 @@ DragToolbar()
 			NewOrder := TabDrag()
 			If (IsObject(NewOrder))
 			{
-				Project := [], Proj_Opts := [], ActiveList := A_List
+				Proj_Opts := [], ActiveList := A_List
 				For each, Index in NewOrder.Order
 					Proj_Opts.Push({Auto: o_AutoKey[Index], Man: o_ManKey[Index]
-									, Times: o_TimesG[Index], Hist: HistoryMacro%Index%})
+									, Times: o_TimesG[Index], Hist: LVManager.GetData(ListID%Index%)})
 				For each, Index in NewOrder.Order
 				{
 					o_AutoKey[A_Index] := Proj_Opts[A_Index].Auto
 				,	o_ManKey[A_Index] := Proj_Opts[A_Index].Man
 				,	o_TimesG[A_Index] := Proj_Opts[A_Index].Times
-				,	Project.Push(PMC.LVGet("InputList" Index))
 					If (Index = ActiveList)
 						NewActive := A_Index
 				}
 				ActiveList := NewActive
 				Loop, %TabCount%
-					PMC.LVLoad("InputList" A_Index, Project[A_Index])
-				,	HistoryMacro%A_Index% := Proj_Opts[A_Index].Hist
+					LVManager.SetHwnd(ListID%A_Index%, Proj_Opts[A_Index].Hist)
+				,	LVManager.Load()
 				GuiControl, chMacro:, A_List, |
 				GuiControl, chMacro:, A_List, % NewOrder.Tabs
 				GuiControl, chMacro:Choose, A_List, %ActiveList%
 				Gui, chMacro:Submit, NoHide
+				LVManager.SetHwnd(ListID%A_List%)
 				GoSub, chMacroGuiSize
 				GoSub, LoadData
 				GoSub, RowCheck
 				GoSub, UpdateCopyTo
-				Project := "", Proj_Opts := "", SavePrompt := true
+				Proj_Opts := "", SavePrompt := true
 				SetTimer, HitFix, -10
 			}
 			Else
@@ -209,7 +210,7 @@ CmdHelp()
 	Else
 		GuiControlGet, Pag,, TabControl
 	Title := ContHTitle[Gui][Pag ? Pag : 1]
-	If (WinActive("A") <> StartTipID) && ((!Title) || (WinActive("A") <> CmdWin))
+	If (WinActive("A") != StartTipID) && ((!Title) || (WinActive("A") != CmdWin))
 		Title := "index.html"
 	If ((Lang = "Zh") || (Lange = "Zt"))
 	{
@@ -299,7 +300,7 @@ MarkArea(LineW)
 	MouseGetPos,,, id, control
 	ControlGetPos, cX, cY, cW, cH, %control%, ahk_id %id%
 	WinGetPos, wX, wY, wW, wH, ahk_id %id%
-	If (control <> "")
+	If (control != "")
 	{
 		cX += wX, cY += wY
 	,	X1 := cX, Y1 := cY
@@ -390,7 +391,7 @@ ReadFunctions(LibFile, Msg := "")
 	}
 	Tooltip
 	Sort, ExtList, D$ U
-	return (ExtList <> "") ? ExtList : "$"
+	return (ExtList != "") ? ExtList : "$"
 }
 
 ListIEWindows()
@@ -493,35 +494,35 @@ ActivateHotkeys(Rec := "", Play := "", Speed := "", Stop := "", Pause := "", Joy
 {
 	local ActiveKeys
 	
-	If (Speed <> "")
+	If (Speed != "")
 	{
-		If (FastKey <>  "None")
+		If (FastKey !=  "None")
 			Hotkey, %FastKey%, FastKeyToggle, % (Speed) ? "On" : "Off"
-		If (SlowKey <>  "None")
+		If (SlowKey !=  "None")
 			Hotkey, %SlowKey%, SlowKeyToggle, % (Speed) ? "On" : "Off"
 	}
 	
-	If (Pause <> "")
+	If (Pause != "")
 	{
 		Try Hotkey, %PauseKey%, f_PauseKey, Off
-		If ((PauseKey <> "") && (Pause = 1))
+		If ((PauseKey != "") && (Pause = 1))
 			Hotkey, %PauseKey%, f_PauseKey, On
 	}
 	
-	If (Stop <> "")
+	If (Stop != "")
 	{
 		Try Hotkey, %AbortKey%, f_AbortKey, Off
-		If ((AbortKey <> "") && (Stop = 1))
+		If ((AbortKey != "") && (Stop = 1))
 			Hotkey, %AbortKey%, f_AbortKey, On
 	}
 	
-	If (Rec <> "")
+	If (Rec != "")
 	{
 		Try Hotkey, %RecKey%, RecStart, % (Rec) ? "On" : "Off"
 		Try Hotkey, %RecNewKey%, RecStartNew, % (Rec) ? "On" : "Off"
 	}
 	
-	If (Play <> "")
+	If (Play != "")
 	{
 		Loop, %TabCount%
 		{
@@ -529,19 +530,19 @@ ActivateHotkeys(Rec := "", Play := "", Speed := "", Stop := "", Pause := "", Joy
 			Hotkey, If, !WinActive("ahk_id" PMCWinID) && IfWin[IfDirectContext](IfDirectWindow)
 			If (ListCount%A_Index% = 0)
 				continue
-			If (o_AutoKey[A_Index] <> "")
+			If (o_AutoKey[A_Index] != "")
 			{
 				Hotkey, % o_AutoKey[A_Index], f_AutoKey, % (Play) ? "On" : "Off"
 				ActiveKeys++
 			}
-			If (o_ManKey[A_Index] <> "")
+			If (o_ManKey[A_Index] != "")
 				Hotkey, % o_ManKey[A_Index], f_ManKey, % (Play) ? "On" : "Off"
 			Hotkey, If
 			#If
 		}
 	}
 	
-	If (Joy <> "")
+	If (Joy != "")
 	{
 		Loop, 16
 		{
@@ -601,11 +602,11 @@ CheckDuplicates(Obj1, Obj2, Obj3*)
 		{
 			For Index, Obj in Obj%A_Index%
 			{
-				If ((Obj <> "") && (Index <= TabCount))
+				If ((Obj != "") && (Index <= TabCount))
 					Keys .= Obj "`n"
 			}
 		}
-		Else If (Obj%A_Index% <> "")
+		Else If (Obj%A_Index% != "")
 			Keys .= Obj%A_Index% "`n"
 	}
 	Sort, Keys, U
@@ -666,9 +667,9 @@ HistCheck(L)
 
 	If (MaxHistory = 0)
 		return
-	HistoryMacro%L%.Add()
-	If (HistoryMacro%L%.Slot.Length() > MaxHistory+1)
-		HistoryMacro%L%.Slot.RemoveAt(1)
+	LVManager.Add()
+	If (LVManager.Handle.Slot.Length() > MaxHistory+1)
+		LVManager.Handle.Slot.RemoveAt(1)
 }
 
 WinCheck(wParam, lParam, Msg)
@@ -687,7 +688,7 @@ ToggleIcon(Custom := "")
 	static IconFile, IconNumber, BarColor
 	Color := (BarColor := !BarColor) ? "Red" : "20D000"
 	ChangeProgBarColor(Color, "OSCProg", 28)
-	If (Custom <> "")
+	If (Custom != "")
 	{
 		If (!Custom)
 			IconFile := A_IconFile, IconNumber := A_IconNumber

@@ -82,12 +82,12 @@
 					)
 				}
 				IsChecked := LV_GetNext(A_Index-1, "Checked")
-				If (IsChecked <> A_Index)
+				If (IsChecked != A_Index)
 					continue
 				If (pb_Sel)
 				{
 					IsSelected := LV_GetNext(A_Index-1)
-					If (IsSelected <> A_Index)
+					If (IsSelected != A_Index)
 						continue
 				}
 				If (WinExist("ahk_id " PMCOSC))
@@ -441,7 +441,7 @@
 						}
 						Try SavedVars(VarName)
 					}
-					Else If ((Type = cType44) && (Target <> ""))
+					Else If ((Type = cType44) && (Target != ""))
 					{
 						Params := Object()
 						StringReplace, VarValue, VarValue, ```,, ¢, All
@@ -626,12 +626,12 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC, ByRef LoopCount)
 				lIdx := Start + A_Index
 			,	LV_GetTexts(lIdx, Action, Step, TimesX, DelayX, Type, Target, Window)
 			,	IsChecked := LV_GetNext(lIdx-1, "Checked")
-				If (IsChecked <> lIdx)
+				If (IsChecked != lIdx)
 					continue
 				If (pb_Sel)
 				{
 					IsSelected := LV_GetNext(lIdx-1)
-					If (IsSelected <> lIdx)
+					If (IsSelected != lIdx)
 						continue
 				}
 				If (WinExist("ahk_id " PMCOSC))
@@ -942,7 +942,7 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC, ByRef LoopCount)
 						}
 						Try SavedVars(VarName)
 					}
-					Else If ((Type = cType44) && (Target <> ""))
+					Else If ((Type = cType44) && (Target != ""))
 					{
 						Params := Object()
 						StringReplace, VarValue, VarValue, ```,, ¢, All
@@ -1051,8 +1051,8 @@ IfEval(Name, Operator, Value)
 		result := (%Name% = Value) ? true : false
 	Else If (Operator = "==")
 		result := (%Name% == Value) ? true : false
-	Else If (Operator = "<>")
-		result := (%Name% <> Value) ? true : false
+	Else If (Operator = "!=")
+		result := (%Name% != Value) ? true : false
 	Else If (Operator = ">")
 		result := (%Name% > Value) ? true : false
 	Else If (Operator = "<")
@@ -1228,7 +1228,7 @@ IfStatement(ThisError, l_Point)
 		}
 		Else If (Action = If10)
 		{
-			If (SearchResult <> 0)
+			If (SearchResult != 0)
 				ThisError := 0
 			Else
 				ThisError++
@@ -1474,7 +1474,7 @@ CheckVars(Match_List, l_Point := "")
 			L := SubStr(lMatch1, 3)
 		,	%A_LoopField% := RegExReplace(%A_LoopField%, "U)" lMatch, o_Loop%l_Point%[I][L])
 		}
-		If ($_value%l_Point% <> "")
+		If ($_value%l_Point% != "")
 		{
 			_thisEach := $_each%l_Point%, %_thisEach% := o_Loop%l_Point%[I][$_each%l_Point%]
 		,	_thisValue := $_value%l_Point%, %_thisValue% := o_Loop%l_Point%[I][$_value%l_Point%]

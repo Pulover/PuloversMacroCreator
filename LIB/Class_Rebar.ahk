@@ -66,7 +66,7 @@ Class Rebar extends Rebar.Private
     DeleteBand(Band)
     {
         SendMessage, this.RB_DELETEBAND, Band-1, 0,, % "ahk_id " this.rbHwnd
-        return (ErrorLevel = "FAIL") ? False : True
+        return (ErrorLevel = "FAIL") ? false : true
     }
 ;=======================================================================================
 ;    Method:             GetBand
@@ -91,7 +91,7 @@ Class Rebar extends Rebar.Private
                | (IsByRef(Image) ? this.RBBIM_IMAGE : 0)
                | (IsByRef(Child) ? this.RBBIM_CHILD : 0)
                | (IsByRef(Size) ? this.RBBIM_SIZE : 0)
-               | (IsByRef(Background) <> "" ? this.RBBIM_BACKGROUND : 0)
+               | (IsByRef(Background) != "" ? this.RBBIM_BACKGROUND : 0)
                | (IsByRef(ID) ? this.RBBIM_ID : 0)
     ,   VarSetCapacity(rbBand, cbSize, 0)
     ,   NumPut(cbSize, rbBand, 0, "UInt"), NumPut(fMask, rbBand, 4, "UInt")
@@ -105,7 +105,7 @@ Class Rebar extends Rebar.Private
     ,   Size := NumGet(&rbBand, 32 + (A_PtrSize * 3), "UInt")
     ,   Background := NumGet(&rbBand, 32 + (A_PtrSize * 4), "UPtr")
     ,   ID := NumGet(&rbBand, 32 + (A_PtrSize * 5), "UInt")
-        return (ErrorLevel = "FAIL") ? False : True
+        return (ErrorLevel = "FAIL") ? false : true
     }
 ;=======================================================================================
 ;    Method:             GetBandCount
@@ -212,7 +212,7 @@ Class Rebar extends Rebar.Private
     ,   this.DefineBandStruct(rbBand, Options, ID, Text, Size, Image, Background
             , MinWidth, MinHeight, IdealSize, hChild)
         SendMessage, this.RB_INSERTBAND, Position-1, &rbBand,, % "ahk_id " this.rbHwnd
-        return (ErrorLevel = "FAIL") ? False : True
+        return (ErrorLevel = "FAIL") ? false : true
     }
 ;=======================================================================================
 ;    Method:             MaximizeBand
@@ -222,10 +222,10 @@ Class Rebar extends Rebar.Private
 ;        IdealWidth:     If TRUE the ideal width of the band will be used to maximize
 ;    Return:             TRUE if successful, FALSE if there was a problem.
 ;=======================================================================================
-    MaximizeBand(Band, IdealWidth := False)
+    MaximizeBand(Band, IdealWidth := false)
     {
         SendMessage, this.RB_MAXIMIZEBAND, Band-1, IdealWidth,, % "ahk_id " this.rbHwnd
-        return (ErrorLevel = "FAIL") ? False : True
+        return (ErrorLevel = "FAIL") ? false : true
     }
 ;=======================================================================================
 ;    Method:             MinimizeBand
@@ -237,7 +237,7 @@ Class Rebar extends Rebar.Private
     MinimizeBand(Band)
     {
         SendMessage, this.RB_MINIMIZEBAND, Band-1, 0,, % "ahk_id " this.rbHwnd
-        return (ErrorLevel = "FAIL") ? False : True
+        return (ErrorLevel = "FAIL") ? false : true
     }
 ;=======================================================================================
 ;    Method:             ModifyBand
@@ -254,7 +254,7 @@ Class Rebar extends Rebar.Private
 ;                            remove the styles.
 ;    Return:             TRUE if successful, FALSE if there was a problem.
 ;=======================================================================================
-    ModifyBand(Band, Property, Value, SetStyle := True)
+    ModifyBand(Band, Property, Value, SetStyle := true)
     {
         If (Property = "Style")
         {
@@ -280,7 +280,7 @@ Class Rebar extends Rebar.Private
         this.DefineBandStruct(rbBand, Style, ID, Text, Size, Image, Background
                             , MinWidth, MinHeight, IdealSize, Child)
         SendMessage, this.RB_SETBANDINFO, Band-1, &rbBand,, % "ahk_id " this.rbHwnd
-        return (ErrorLevel = "FAIL") ? False : True
+        return (ErrorLevel = "FAIL") ? false : true
     }
 ;=======================================================================================
 ;    Method:             MoveBand
@@ -294,7 +294,7 @@ Class Rebar extends Rebar.Private
     {
         SendMessage, this.RB_MOVEBAND, Band-1, Target-1,, % "ahk_id " this.rbHwnd
         this.ShowBand(Band)
-        return (ErrorLevel = "FAIL") ? False : True
+        return (ErrorLevel = "FAIL") ? false : true
     }
 ;=======================================================================================
 ;    Method:             OnNotify
@@ -317,7 +317,7 @@ Class Rebar extends Rebar.Private
     OnNotify(ByRef Param, ByRef MenuXPos := "", ByRef MenuYPos := "", ByRef ID := "")
     {
         nCode  := NumGet(Param + (A_PtrSize * 2), 0, "Int"), rbHwnd := NumGet(Param + 0, 0, "UPtr")
-        If (rbHwnd <> this.rbHwnd)
+        If (rbHwnd != this.rbHwnd)
             return ""
         If (nCode = this.RBN_CHEVRONPUSHED)
         {
@@ -336,7 +336,7 @@ Class Rebar extends Rebar.Private
                     LastBrkBand := A_Index
             }
             If (this.GetRowCount() > this.MaxRows)
-                this.ModifyBand(LastBrkBand, "Style", "Break", False)
+                this.ModifyBand(LastBrkBand, "Style", "Break", false)
         }
         return ""
     }
@@ -352,7 +352,7 @@ Class Rebar extends Rebar.Private
     {
         this.DefineBandStruct(rbBand, Value)
         SendMessage, this.RB_SETBANDINFO, Band-1, &rbBand,, % "ahk_id " this.rbHwnd
-        return (ErrorLevel = "FAIL") ? False : True
+        return (ErrorLevel = "FAIL") ? false : true
     }
 ;=======================================================================================
 ;    Method:             SetBandWidth
@@ -366,7 +366,7 @@ Class Rebar extends Rebar.Private
     {
         this.DefineBandStruct(rbBand, "", "", "", Width)
         SendMessage, this.RB_SETBANDINFO, Band-1, &rbBand,, % "ahk_id " this.rbHwnd
-        return (ErrorLevel = "FAIL") ? False : True
+        return (ErrorLevel = "FAIL") ? false : true
     }
 ;=======================================================================================
 ;    Method:             SetImageList
@@ -379,7 +379,7 @@ Class Rebar extends Rebar.Private
     {
         this.DefineBarStruct(rBarInfo, ImageList)
         SendMessage, this.RB_SETBARINFO, 0, &rBarInfo,, % "ahk_id " this.rbHwnd
-        return (ErrorLevel = "FAIL") ? False : True
+        return (ErrorLevel = "FAIL") ? false : true
     }
 ;=======================================================================================
 ;    Method:             SetLayout
@@ -397,7 +397,7 @@ Class Rebar extends Rebar.Private
             Index := this.IDToIndex(Par1), this.SetBandStyle(Index, Par3)
         ,   this.SetBandWidth(Index, Par2), this.MoveBand(Index, A_Index)
         }
-        return Par0 ? True : False
+        return Par0 ? true : false
     }
 ;=======================================================================================
 ;    Method:             SetMaxRows
@@ -420,10 +420,10 @@ Class Rebar extends Rebar.Private
 ;        Show:           Set to TRUE to show the band or FALSE to hide it.
 ;    Return:             TRUE if successful, FALSE if there was a problem.
 ;=======================================================================================
-    ShowBand(Band, Show := True)
+    ShowBand(Band, Show := true)
     {
         SendMessage, this.RB_SHOWBAND, Band-1, %Show%,, % "ahk_id " this.rbHwnd
-        return (ErrorLevel = "FAIL") ? False : True
+        return (ErrorLevel = "FAIL") ? false : true
     }
 ;=======================================================================================
 ;    Method:             ToggleStyle
@@ -448,13 +448,13 @@ Class Rebar extends Rebar.Private
                     rbStyle += this[ "RBS_" A_LoopField ]
             }
         }
-        If (rbStyle <> "")
+        If (rbStyle != "")
         {
             WinSet, Style, ^%rbStyle%, % "ahk_id " this.rbHwnd
-            return True
+            return true
         }
         Else
-            return False
+            return false
     }
 ;=======================================================================================
 ;    Private Class       This class is used internally.
@@ -581,12 +581,12 @@ Class Rebar extends Rebar.Private
             If (hbmBack)
                 hbmBack := DllCall("LoadImage", "UPtr", 0, "Str", hbmBack, "UInt", 0, "UInt", 0, "UInt", 0, "UInt", 0x10)
             
-            fMask := (Options <> "" ? this.RBBIM_STYLE : 0)
-                    | (lpText <> "" ? this.RBBIM_TEXT : 0)
+            fMask := (Options != "" ? this.RBBIM_STYLE : 0)
+                    | (lpText != "" ? this.RBBIM_TEXT : 0)
                     | (iImage ? this.RBBIM_IMAGE : 0)
                     | (hwndChild ? this.RBBIM_CHILD | this.RBBIM_SIZE | this.RBBIM_IDEALSIZE : 0)
                     | (cx ? this.RBBIM_SIZE : 0)
-                    | (hbmBack <> "" ? this.RBBIM_BACKGROUND : 0)
+                    | (hbmBack != "" ? this.RBBIM_BACKGROUND : 0)
                     | (wID ? this.RBBIM_ID : 0)
                     | (cxMinChild || cyMinChild ? this.RBBIM_CHILDSIZE : 0)
                     | (cxIdeal ? this.RBBIM_IDEALSIZE : 0)

@@ -15,7 +15,7 @@ COMInterface(String, Ptr := "", ByRef OutputVar := "", CLSID := "InternetExplore
 	If (!IsObject(Ptr))
 	{
 		If (!CLSID)
-			return False
+			return false
 		Ptr := ComObjCreate(CLSID)
 	}
 
@@ -110,11 +110,11 @@ COMInterface(String, Ptr := "", ByRef OutputVar := "", CLSID := "InternetExplore
 			Obj := A_LoopField
 		If (Delimiter = ".")
 		{
-			If ((Par <> "") && (Index <> ""))
+			If ((Par != "") && (Index != ""))
 				ComSet := ComSet[Obj](Params*)[%Index%1]
-			Else If (Par <> "")
+			Else If (Par != "")
 				ComSet := ComSet[Obj](Params*)
-			Else If (Index <> "")
+			Else If (Index != "")
 				ComSet := ComSet[Obj][%Index%1]
 			Else
 				ComSet := ComSet[Obj]
@@ -122,11 +122,11 @@ COMInterface(String, Ptr := "", ByRef OutputVar := "", CLSID := "InternetExplore
 		}
 		Else If (Delimiter = "")
 		{
-			If (Value <> "")
-				ComSet[Obj] := (Value = """""") ? "" : ((Value = "True") ? True : ((Value = "False") ? False : Value))
+			If (Value != "")
+				ComSet[Obj] := (Value = """""") ? "" : ((Value = "true") ? true : ((Value = "false") ? false : Value))
 			Else
 			{
-				If ((Par <> "") && (Index <> ""))
+				If ((Par != "") && (Index != ""))
 				{
 					If (IsByRef(OutputVar))
 						OutputVar := ComSet[Obj](Params*)[%Index%1]
@@ -144,7 +144,7 @@ COMInterface(String, Ptr := "", ByRef OutputVar := "", CLSID := "InternetExplore
 						return Result
 					return ComSet
 				}
-				Else If (Par <> "")
+				Else If (Par != "")
 				{
 					If IsByRef(OutputVar)
 						OutputVar := ComSet[Obj](Params*)
@@ -158,7 +158,7 @@ COMInterface(String, Ptr := "", ByRef OutputVar := "", CLSID := "InternetExplore
 						return Result
 					return ComSet
 				}
-				Else If (Index <> "")
+				Else If (Index != "")
 				{
 					If IsByRef(OutputVar)
 						OutputVar := ComSet[Obj][%Index%1]

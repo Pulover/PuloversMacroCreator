@@ -17,11 +17,11 @@
 ; Edit Functions:
 ;    Copy()
 ;    Cut()
-;    Paste(Row=0, Multiline=True)
+;    Paste(Row=0, Multiline=true)
 ;    Duplicate()
 ;    Delete()
 ;    Move(Up=False)
-;    Drag(DragButton="D", AutoScroll=True, ScrollDelay=100, LineThick=2, Color="Black")
+;    Drag(DragButton="D", AutoScroll=true, ScrollDelay=100, LineThick=2, Color="Black")
 ;
 ; History Functions:
 ;    Add()
@@ -55,7 +55,7 @@
 ;
 ;=======================================================================================
 
-Class LV_Rows
+Class LV_Rows extends LV_Rows.LV_EX
 {
 ;=======================================================================================
 ;    Meta-Functions     By creating a new instance of the class via
@@ -69,22 +69,42 @@ Class LV_Rows
 ;                            ListView has been changed. For this you must use a handle
 ;                            for all functions.
 ;                        Every time a function (except Copy) is called it will be set
-;                            to True. The user may consult Handle.HasChanged to show
+;                            to true. The user may consult Handle.HasChanged to show
 ;                            a save dialog and set it to False after saving.
 ;=======================================================================================
-    __New(Hwnd := "")
+    __New(Hwnd*)
     {
-        If (Hwnd)
-            this.LVHwnd := Hwnd
-        this.Slot := [], this.ActiveSlot := 1
+        this.hArray := {}
+        If (Hwnd.Length())
+        {
+            For e, h in Hwnd
+            {
+                this.hArray[h] := { Hwnd: h
+                                  , GroupsArray: []
+                                  , Slot: []
+                                  , ActiveSlot: 1}
+            ,   this.hArray[h].GroupsArray.Push({Name: "Start", Row: 1})
+            }
+            this.LVHwnd := this.hArray[Hwnd[1]].Hwnd
+        ,   this.Handle := this.hArray[Hwnd[1]]
+        }
+        Else
+        {
+            this.hArray["default"] := { Hwnd: ""
+                                      , GroupsArray: []
+                                      , Slot: []
+                                      , ActiveSlot: 1}
+        ,   this.Handle := this.hArray["default"]
+        ,   this.Handle.GroupsArray.Push({Name: "Start", Row: 1})
+        }
     }
 
     __Call(Func)
     {
-        global
+        global SavePrompt
         
-        If Func not in Copy,RowText,GetIconIndex,Length,RemoveAt,SetCapacity
-			SavePrompt := True
+        If Func in Cut,Paste,Duplicate,Delete,Move,Drag,Undo,Redo
+            SavePrompt := true
     }
 
     __Delete()
@@ -92,6 +112,133 @@ Class LV_Rows
         this.RemoveAt(1, this.Length())
     ,   this.SetCapacity(0)
     ,   this.base := ""
+    }
+    
+    SetHwnd(Hwnd, NewData := "")
+    {
+        If (this.hArray.HasKey(Hwnd))
+        {
+            this.LVHwnd := this.hArray[Hwnd].Hwnd
+        ,   this.Handle := this.hArray[Hwnd]
+            Gui, Listview, % this.LVHwnd
+        
+            If (NewData != "")
+            {
+                If (IsObject(NewData))
+                {
+                    this.hArray[Hwnd].GroupsArray := NewData.GroupsArray
+                ,   this.hArray[Hwnd].Slot := NewData.Slot
+                ,   this.hArray[Hwnd].ActiveSlot := NewData.ActiveSlot
+                }
+                Else If (this.hArray.HasKey(NewData))
+                {
+                    this.hArray[Hwnd].GroupsArray := []
+                    For e, g in this.hArray[NewData].GroupsArray
+                        this.hArray[Hwnd].GroupsArray[e] := {Name: g.Name, Row: g.Row}
+                    this.hArray[Hwnd].Slot := []
+                    For e, s in this.hArray[NewData].Slot
+                    {
+                        NewRows := [], NewGroups := []
+                        For i, r in s.Rows
+                            NewRows[i] := [r*]
+                        For i, g in s.Groups
+                            NewGroups[i] := {Name: g.Name, Row: g.Row}
+                        this.hArray[Hwnd].Slot[e] := {Rows: NewRows, Groups: NewGroups}
+                    }
+                    this.hArray[Hwnd].ActiveSlot := this.hArray[NewData].ActiveSlot
+                }
+            }
+            return
+        }
+        
+        this.hArray[Hwnd] := { Hwnd: Hwnd
+                             , GroupsArray: []
+                             , Slot: []
+                             , ActiveSlot: 1}
+        this.LVHwnd := Hwnd
+    ,   this.Handle := this.hArray[Hwnd]
+    ,   this.Handle.GroupsArray.Push({Name: "Start", Row: 1})
+        Gui, Listview, % this.LVHwnd
+        
+        If (NewData != "")
+        {
+            If (IsObject(NewData))
+            {
+                this.hArray[Hwnd].GroupsArray := NewData.GroupsArray
+            ,   this.hArray[Hwnd].Slot := NewData.Slot
+            ,   this.hArray[Hwnd].ActiveSlot := NewData.ActiveSlot
+            }
+            Else If (this.hArray.HasKey(NewData))
+            {
+                this.hArray[Hwnd].GroupsArray := []
+                For e, g in this.hArray[NewData].GroupsArray
+                    this.hArray[Hwnd].GroupsArray[e] := {Name: g.Name, Row: g.Row}
+                this.hArray[Hwnd].Slot := []
+                For e, s in this.hArray[NewData].Slot
+                {
+                    NewRows := [], NewGroups := []
+                    For i, r in s.Rows
+                        NewRows[i] := [r*]
+                    For i, g in s.Groups
+                        NewGroups[i] := {Name: g.Name, Row: g.Row}
+                    this.hArray[Hwnd].Slot[e] := {Rows: NewRows, Groups: NewGroups}
+                }
+                this.hArray[Hwnd].ActiveSlot := this.hArray[NewData].ActiveSlot
+            }
+        }
+    }
+    
+    GetData(Hwnd := "")
+    {
+        If (Hwnd = "")
+            Hwnd := this.LVHwnd
+        If (this.hArray.HasKey(Hwnd))
+        {
+            ObjCopy := {}, GroupsCopy := [], SlotCopy := []
+            For e, g in this.hArray[Hwnd].GroupsArray
+                GroupsCopy[e] := {Name: g.Name, Row: g.Row}
+            For e, s in this.hArray[Hwnd].Slot
+            {
+                Rows := [], Groups := []
+                For i, r in s.Rows
+                    Rows[i] := [r*]
+                For i, g in s.Groups
+                    Groups[i] := {Name: g.Name, Row: g.Row}
+                SlotCopy[e] := {Rows: Rows, Groups: Groups}
+            }
+            ObjCopy := { GroupsArray: Groups
+                       , Slot: SlotCopy
+                       , ActiveSlot: this.hArray[Hwnd].ActiveSlot}
+            
+            return ObjCopy
+        }
+    }
+    
+    InsertHwnd(Hwnd*)
+    {
+        If (Hwnd.Length())
+        {
+            For e, h in Hwnd
+            {
+                If (this.hArray.HasKey(h))
+                    continue
+                this.hArray[h] := { Hwnd: h
+                                  , GroupsArray: []
+                                  , Slot: []
+                                  , ActiveSlot: 1}
+            ,   this.hArray[h].GroupsArray.Push({Name: "Start", Row: 1})
+            }
+        }
+    }
+    
+    RemoveHwnd(Hwnd)
+    {
+        If (this.hArray.HasKey(Hwnd))
+        {
+            this.hArray[Hwnd].RemoveAt(1, this.Length())
+        ,   this.hArray[Hwnd].SetCapacity(0)
+        ,   this.hArray[Hwnd].base := ""
+        }
     }
 ;=======================================================================================
 ;    Edit Functions:     Edit ListView rows.
@@ -102,7 +249,7 @@ Class LV_Rows
 ;=======================================================================================
     Copy()
     {
-        this.CopyData := {}, LV_Row := 0
+        this.CopyData := [], LV_Row := 0
         Loop
         {
             LV_Row := LV_GetNext(LV_Row)
@@ -122,7 +269,7 @@ Class LV_Rows
 ;=======================================================================================
     Cut()
     {
-        this.CopyData := {}, LV_Row := 0
+        this.CopyData := [], LV_Row := 0
         Loop
         {
             LV_Row := LV_GetNext(LV_Row)
@@ -134,6 +281,7 @@ Class LV_Rows
         ,   CopiedLines := A_Index
         }
         this.Delete()
+        this.RefreshGroups()
         return CopiedLines
     }
 ;=======================================================================================
@@ -141,13 +289,13 @@ Class LV_Rows
 ;    Description:        Paste copied rows at selected position.
 ;    Parameters:
 ;        Row:            If non-zero pastes memory contents at the specified row.
-;        Multiline:      If True pastes the contents at every selected row.
-;    Return:             True if memory contains data or False if not.
+;        Multiline:      If true pastes the contents at every selected row.
+;    Return:             false if memory contains data or false if not.
 ;=======================================================================================
-    Paste(Row := 0, Multiline := False)
+    Paste(Row := 0, Multiline := false)
     {
         If (!this.CopyData.Length())
-            return False
+            return false
         TargetRow := Row ? Row : LV_GetNext()
         If (!TargetRow)
         {
@@ -156,7 +304,7 @@ Class LV_Rows
         }
         Else
         {
-            If (!Row && Multiline)
+            If ((!Row) && (Multiline))
             {
                 LV_Row := 0
                 Loop
@@ -164,6 +312,11 @@ Class LV_Rows
                     LV_Row := LV_GetNext(LV_Row - 1)
                     If (!LV_Row)
                         break
+                    For e, g in this.Handle.GroupsArray
+                    {
+                        If ((g.Row > 1) && (LV_Row < g.Row))
+                            g.Row += this.CopyData.Length()
+                    }
                     For each, Row in this.CopyData
                         LV_Insert(LV_Row, Row*), LV_Row += 1
                     LV_Row += 1
@@ -172,11 +325,17 @@ Class LV_Rows
             Else
             {
                 LV_Row := TargetRow - 1
+                For e, g in this.Handle.GroupsArray
+                {
+                    If ((g.Row > 1) && ((LV_Row+1) < g.Row))
+                        g.Row += this.CopyData.Length()
+                }
                 For each, Row in this.CopyData
                     LV_Insert(LV_Row+A_Index, Row*)
             }
         }
-        return True
+        this.RefreshGroups()
+        return true
     }
 ;=======================================================================================
 ;    Function:           LV_Rows.Duplicate()
@@ -185,10 +344,13 @@ Class LV_Rows
 ;=======================================================================================
     Duplicate()
     {
-        DupRows := new LV_Rows()
-    ,   DupLines := DupRows.Copy()
-    ,   DupRows.Paste(, False)
-    ,   DupRows := ""
+        CopyData := []
+        For each, Row in this.CopyData
+            CopyData.Push(Row)
+        DupLines := this.Copy()
+    ,   this.Paste()
+    ,   this.CopyData := CopyData
+    ,   this.RefreshGroups()
         return DupLines
     }
 ;=======================================================================================
@@ -199,7 +361,7 @@ Class LV_Rows
     Delete()
     {
         If (LV_GetCount("Selected") = 0)
-            return False
+            return false
         LV_Row := 0
         Loop
         {
@@ -208,17 +370,23 @@ Class LV_Rows
                 break
             LV_Delete(LV_Row)
         ,   DeletedLines := A_Index
+            For e, g in this.Handle.GroupsArray
+            {
+                If ((g.Row > 1) && (LV_Row < g.Row))
+                    g.Row--
+            }
         }
+        this.RefreshGroups()
         return DeletedLines
     }
 ;=======================================================================================
 ;    Function:           LV_Rows.Move()
 ;    Description:        Move selected rows down or up.
 ;    Parameters:
-;        Up:             If False or omitted moves rows down. If True moves rows up.
+;        Up:             If false or omitted moves rows down. If true moves rows up.
 ;    Return:             Number of rows moved.
 ;=======================================================================================
-    Move(Up := False)
+    Move(Up := false)
     {
         Selections := [], LV_Row := 0
         Critical
@@ -242,6 +410,7 @@ Class LV_Rows
                 If (A_Index = 1)
                     LV_Modify(Row-1, "Focus Vis")
             }
+            this.RefreshGroups()
             return Selections.Length()
         }
         Else
@@ -263,6 +432,7 @@ Class LV_Rows
                 If (A_Index = 1)
                     LV_Modify(Row+1, "Focus Vis")
             }
+            this.RefreshGroups()
             return Selections.Length()
         }
     }
@@ -272,17 +442,18 @@ Class LV_Rows
 ;                            Must be called in the ListView G-Label subroutine when
 ;                            A_GuiEvent returns "D" or "d".
 ;    Parameters:
-;        DragButton:     If it is a lower case "d" it will be recognized as a
-;                            Right-Click drag, otherwise will be recognized as a
-;                            Left-Click drag. You may pass A_GuiEvent as the parameter.
-;        AutoScroll:     If True or omitted the ListView will automatically scroll
+;        DragButton:     If it is a lower case "d" it will be recognized as a Right-Click
+;                            drag and won't actually move any row, only return the
+;                            destination, otherwise it will be recognized as a Left-Click
+;                            drag. You may pass A_GuiEvent as the parameter.
+;        AutoScroll:     If true or omitted the ListView will automatically scroll
 ;                            up or down when the cursor is above or below the control.
 ;        ScrollDelay:    Delay in miliseconds for AutoScroll. Default is 100ms.
 ;        LineThick:      Thickness of the destination bar in pixels. Default is 2px.
-;        Color:          Color of destination bar. Defalt is "Black".
+;        Color:          Color of destination bar. Default is "Black".
 ;    Return:             The destination row number.
 ;=======================================================================================
-    Drag(DragButton := "D", AutoScroll := True, ScrollDelay := 100, LineThick := 2, Color := "Black")
+    Drag(DragButton := "D", AutoScroll := true, ScrollDelay := 100, LineThick := 2, Color := "Black")
     {
         Static LVIR_LABEL          := 0x0002
         Static LVM_GETITEMCOUNT    := 0x1004
@@ -291,10 +462,17 @@ Class LV_Rows
         Static LVM_GETCOUNTPERPAGE := 0x1028
         Static LVM_GETSUBITEMRECT  := 0x1038
         Static LV_currColHeight    := 0
+        RestoreGroups := false
 
+        If (this.IsGroupViewEnabled())
+        {
+            RestoreGroups := true
+        ,   this.EnableGroupView(false)
+        }
+        
         SysGet, SM_CXVSCROLL, 2
 
-        If (InStr(DragButton, "d", True))
+        If (InStr(DragButton, "d", true))
             DragButton := "RButton"
         Else
             DragButton := "LButton"
@@ -306,7 +484,7 @@ Class LV_Rows
         LV_lw := LV_lw * 96 / A_ScreenDPI
     ,   VarSetCapacity(LV_XYstruct, 16, 0)
 
-        While, GetKeyState(DragButton, "P")
+        While (GetKeyState(DragButton, "P"))
         {
             MouseGetPos, LV_mx, LV_my,, CurrCtrl, 2
             LV_mx -= LV_lx, LV_my -= LV_ly
@@ -325,7 +503,7 @@ Class LV_Rows
                 }
             }
 
-            If (CurrCtrl <> LV_LView)
+            If (CurrCtrl != LV_LView)
             {
                 LV_currRow := ""
                 Gui, MarkLine:Cancel
@@ -374,23 +552,29 @@ Class LV_Rows
 
         If (DragButton = "LButton" && LV_currRow)
         {
-			Gui, MarkLine:Cancel
-            DragRows := new LV_Rows(this.LVHwnd)
-        ,   Lines := DragRows.Copy()
-            DragRows.Paste(LV_currRow)
+            Gui, MarkLine:Cancel
+            CopyData := []
+            For each, Row in this.CopyData
+                CopyData.Push(Row)
+            Lines := this.Copy()
+        ,   this.Paste(LV_currRow)
             If (LV_GetNext() < LV_currRow)
                 o := Lines+1, FocusedRow := LV_currRow-1
             Else
                 o := 1, FocusedRow := LV_currRow
-            DragRows.Delete()
-        ,   DragRows := ""
+            this.Delete()
             Loop, %Lines%
             {
                 i := A_Index-o
-                LV_Modify(LV_currRow+i, "Select")
+            ,   LV_Modify(LV_currRow+i, "Select")
             }
             LV_Modify(FocusedRow, "Focus")
+        ,   this.CopyData := CopyData
         }
+        
+        If (RestoreGroups)
+            this.EnableGroupView()
+        
         return LV_currRow
     }
 ;=======================================================================================
@@ -403,43 +587,210 @@ Class LV_Rows
 ;=======================================================================================
     Add()
     {
-        Row := []
-        If (this.ActiveSlot < this.Slot.Length())
-            this.Slot.RemoveAt(this.ActiveSlot+1, this.Slot.Length())
+        Rows := []
+        If (this.Handle.ActiveSlot < this.Handle.Slot.Length())
+            this.Handle.Slot.RemoveAt(this.Handle.ActiveSlot+1, this.Handle.Slot.Length())
         Loop, % LV_GetCount()
         {
             RowData := this.RowText(A_Index)
-        ,   Row[A_Index] := [RowData*]
+        ,   Rows[A_Index] := [RowData*]
         }
-        this.Slot.Push(Row)
-    ,   this.ActiveSlot := this.Slot.Length()
-        return this.Slot.Length()
+        
+        Groups := []
+        For e, g in this.Handle.GroupsArray
+            Groups[e] := {Name: g.Name, Row: g.Row}
+        
+        this.Handle.Slot.Push({Rows: Rows, Groups: Groups})
+        this.Handle.ActiveSlot := this.Handle.Slot.Length()
+        return this.Handle.Slot.Length()
     }
 ;=======================================================================================
 ;    Function:           Handle.Undo()
 ;    Description:        Replaces ListView contents with previous entry state, if any.
-;    Return:             Current entry position.
+;    Return:             New entry position or false if it's already the first entry.
 ;=======================================================================================
     Undo()
     {
-        If (this.ActiveSlot = 1)
-            return this.ActiveSlot
-        this.ActiveSlot -= 1
-    ,   this.Load(this.ActiveSlot)
-        return this.ActiveSlot
+        If (this.Handle.ActiveSlot = 1)
+            return false
+        this.Handle.ActiveSlot -= 1
+    ,   this.Load()
+        return this.Handle.ActiveSlot
     }
 ;=======================================================================================
 ;    Function:           Handle.Redo()
 ;    Description:        Replaces ListView contents with next entry state, if any.
-;    Return:             Current entry position.
+;    Return:             New entry position or false if it's already the last entry.
 ;=======================================================================================
     Redo()
     {
-        If (this.ActiveSlot = (this.Slot.Length()))
-            return this.ActiveSlot
-        this.ActiveSlot += 1
-    ,   this.Load(this.ActiveSlot)
-        return this.ActiveSlot
+        If (this.Handle.ActiveSlot = (this.Handle.Slot.Length()))
+            return false
+        this.Handle.ActiveSlot += 1
+    ,   this.Load()
+        return this.Handle.ActiveSlot
+    }
+    
+    ClearHistory()
+    {
+        this.Handle.Slot := []
+    ,   this.Handle.ActiveSlot := 1
+    }
+    
+    SetGroups(Groups)
+    {
+        this.Handle.GroupsArray := []
+        If (!Groups.Length())
+        {
+            Loop, Parse, Groups, `,, %A_Space%
+            {
+                Pars := StrSplit(A_LoopField, ":", A_Space)
+            ,   this.Handle.GroupsArray.Push({Name: Pars[1], Row: Pars[2]})
+            }
+        }
+        Else
+            this.Handle.GroupsArray := Groups
+        this.RefreshGroups()
+    }
+    
+    GetGroups(AsObject := false)
+    {
+        If (AsObject)
+            return this.Handle.GroupsArray
+        For e, g in this.Handle.GroupsArray
+            GroupsString .= g.Name ":" g.Row ","
+        return RTrim(GroupsString, ",")
+    }
+    
+    EnableGroups(Enable := true, FirstName := "New Group", StartCollapsed := false)
+    {
+        Gui, Listview, % this.LVHwnd
+        ListCount := LV_GetCount()
+        this.EnableGroupView(Enable)
+        If (Enable)
+        {
+            If (!this.Handle.GroupsArray.Length())
+                this.Handle.GroupsArray := [{Name: FirstName, Row: 1}]
+            this.RefreshGroups(StartCollapsed)
+        }
+    }
+    
+    AddGroup(Row, GroupName := "New Group")
+    {
+        If (Row =< 0)
+            return
+        
+        For e, g in this.Handle.GroupsArray
+        {
+            If (Row = g.Row)
+            {
+                this.Handle.GroupsArray[e] := {Name: GroupName, Row: Row}
+                break
+            }
+            If (Row < g.Row)
+            {
+                this.Handle.GroupsArray.InsertAt(e, {Name: GroupName, Row: Row})
+                break
+            }
+            If (e = this.Handle.GroupsArray.Length())
+            {
+                this.Handle.GroupsArray.Push({Name: GroupName, Row: Row})
+                break
+            }
+        }
+        If (!this.Handle.GroupsArray.Length())
+        {
+            this.Handle.GroupsArray.Push({Name: "New Group", Row: 1})
+            If (Row > 1)
+                this.Handle.GroupsArray.Push({Name: GroupName, Row: Row})
+        }
+        this.RefreshGroups()
+    }
+    
+    RemoveGroup(Row)
+    {
+        If (Row =< 0)
+            return
+        
+        For e, g in this.Handle.GroupsArray
+        {
+            If (Row = g.Row)
+            {
+                If (g.Row = 1)
+                    return
+                this.Handle.GroupsArray.RemoveAt(e)
+                break
+            }
+            If (Row < g.Row)
+            {
+                If (e = 2)
+                    return
+                this.Handle.GroupsArray.RemoveAt(e - 1)
+                break
+            }
+            If (e = this.Handle.GroupsArray.Length())
+            {
+                If (g.Row = 1)
+                    return
+                this.Handle.GroupsArray.RemoveAt(e)
+                break
+            }
+        }
+        this.RefreshGroups()
+    }
+    
+    RemoveAllGroups()
+    {
+        If (!this.Handle.GroupsArray.Length())
+            this.Handle.GroupsArray.Push({Name: "New Group", Row: 1})
+        Else
+            this.Handle.GroupsArray.RemoveAt(2, this.Handle.GroupsArray.Length())
+        this.RefreshGroups()
+    }
+    
+    InsertAtGroup(Count := 1, Rows*)
+    {
+        For each, LV_Row in Rows
+        {
+            For e, g in this.Handle.GroupsArray
+            {
+                If ((LV_Row > 0) && (LV_Row < g.Row))
+                    g.Row += Count
+            }
+        }
+    }
+    
+    RemoveAtGroup(Count := 1, Rows*)
+    {
+        For each, LV_Row in Rows
+        {
+            For e, g in this.Handle.GroupsArray
+            {
+                If ((LV_Row > 0) && (LV_Row < g.Row))
+                    g.Row--
+            }
+        }
+    }
+    
+    RefreshGroups(Collapsed := false)
+    {
+        Gui, Listview, % this.LVHwnd
+        ListCount := LV_GetCount()
+    ,   this.GroupRemoveAll()
+        For e, g in this.Handle.GroupsArray
+        {
+            GrNum := 10 + (e - 1)
+        ,   this.GroupInsert(GrNum, g.Name)
+            Loop, %ListCount%
+            {
+                Row := g.Row + (A_Index - 1)
+                If (Row > ListCount)
+                    break
+                this.SetGroup(Row, GrNum)
+            }
+            Styles := Collapsed ? ["Collapsible", "Collapsed"] : ["Collapsible"]
+            this.GroupSetState(GrNum, Styles*)
+        }
     }
 ;=======================================================================================
 ;    Internal Functions: These functions are meant for internal use but can also
@@ -448,18 +799,24 @@ Class LV_Rows
 ;    Function:           Handle.Load()
 ;    Description:        Loads a specified entry in History into ListView.
 ;    Parameters:
-;        Number:         Number of entry position to be loaded.
-;    Return:             True if entry exists, False otherwise.
+;        Position:       Number of entry position to be loaded.
+;    Return:             false if entry exists, false otherwise.
 ;=======================================================================================
-    Load(Number)
+    Load(Position := "")
     {
-        If (!IsObject(this.Slot[Number]))
-            return False
+        If (Position = "")
+            Position := this.Handle.ActiveSlot
+        If (!IsObject(this.Handle.Slot[Position]))
+            return false
 
         LV_Delete()
-        For each, Row in this.Slot[Number]
+        For each, Row in this.Handle.Slot[Position].Rows
             LV_Add(Row*)
-        return True
+        this.Handle.GroupsArray := []
+        For e, g in this.Handle.Slot[Position].Groups
+            this.Handle.GroupsArray.Push(g)
+        this.RefreshGroups()
+        return true
     }
 ;=======================================================================================
 ;    Function:           LV_Rows.RowText()
@@ -501,5 +858,175 @@ Class LV_Rows
     ,   NumPut(Row-1, LVITEM, 4, "Int") ; iItem
         SendMessage, LVM_GETITEM, 0, &LVITEM,, ahk_id %Hwnd%
         return NumGet(LVITEM, 5 * 4 + (A_PtrSize * 2), "Int") + 1 ; iImage
+    }
+; ======================================================================================================================
+; Namespace:      LV_EX
+; Function:       Some additional functions to use with AHK ListView controls.
+; Tested with:    AHK 1.1.20.03 (A32/U32/U64)
+; Tested on:      Win 8.1 (x64)
+; Note:           This version has been modified to include only Group related functions, the complete
+;                 library can be found at https://autohotkey.com/boards/viewtopic.php?t=1256
+; Changelog:
+;     1.1.00.00/2015-03-13/just me     -  added basic tile view support (suggested by toralf),
+;                                         added basic (XP compatible) group view support,
+;                                         revised code and made some minor changes.
+;     1.0.00.00/2013-12-30/just me     -  initial release.
+; Notes:
+;     In terms of Microsoft
+;        Item     stands for the whole row or the first column of the row
+;        SubItem  stands for the second to last column of a row
+;     All functions require the handle of the ListView (HWND). You get this handle using the 'Hwnd' option when
+;     creating the control per 'Gui, Add, HwndHwndOfLV ...' or using 'GuiControlGet, HwndOfLV, Hwnd, MyListViewVar'
+;     after control creation.
+; Credits:
+;     LV_EX tile view functions:
+;        Initial idea by segalion (old forum: /board/topic/80754-listview-with-multiline-in-report-mode-help/)
+;        based on code from Fabio Lucarelli (http://users.skynet.be/oleole/ListView_Tiles.htm).
+; ======================================================================================================================
+; This software is provided 'as-is', without any express or implied warranty.
+; In no event will the authors be held liable for any damages arising from the use of this software.
+; ======================================================================================================================
+    Class LV_EX
+    {
+; ======================================================================================================================
+; LV_EX_EnableGroupView - Enables or disables whether the items in a list-view control display as a group.
+; ======================================================================================================================
+        EnableGroupView(Enable := true)
+        {
+           ; LVM_ENABLEGROUPVIEW = 0x109D -> msdn.microsoft.com/en-us/library/bb774900(v=vs.85).aspx
+           SendMessage, 0x109D, % (!!Enable), 0, , % "ahk_id " . this.LVHwnd
+           Return (ErrorLevel >> 31) ? 0 : 1
+        }
+; ======================================================================================================================
+; LV_EX_GetGroup - Gets the ID of the group the list-view item belongs to.
+; ======================================================================================================================
+        GetGroup(Row)
+        {
+           ; LVM_GETITEMA = 0x1005 -> http://msdn.microsoft.com/en-us/library/bb774953(v=vs.85).aspx
+           Static OffGroupID := 28 + (A_PtrSize * 3)
+           this.LVITEM(LVITEM, 0x00000100, Row) ; LVIF_GROUPID
+           SendMessage, 0x1005, 0, % &LVITEM, , % "ahk_id " . this.LVHwnd
+           Return NumGet(LVITEM, OffGroupID, "UPtr")
+        }
+; ======================================================================================================================
+; LV_EX_GroupInsert - Inserts a group into a list-view control.
+; ======================================================================================================================
+        GroupInsert(GroupID, Header, Align := "", Index := -1)
+        {
+           ; LVM_INSERTGROUP = 0x1091 -> msdn.microsoft.com/en-us/library/bb761103(v=vs.85).aspx
+           Static Alignment := {1: 1, 2: 2, 4: 4, C: 2, L: 1, R: 4}
+           Static SizeOfLVGROUP := (4 * 6) + (A_PtrSize * 4)
+           Static OffHeader := 8
+           Static OffGroupID := OffHeader + (A_PtrSize * 3) + 4
+           Static OffAlign := OffGroupID + 12
+           Static LVGF := 0x11 ; LVGF_GROUPID | LVGF_HEADER | LVGF_STATE
+           Static LVGF_ALIGN := 0x00000008
+           Align := (A := Alignment[SubStr(Align, 1, 1)]) ? A : 0
+           Mask := LVGF | (Align ? LVGF_ALIGN : 0)
+           PHeader := A_IsUnicode ? &Header : this.PWSTR(Header, WHeader)
+           VarSetCapacity(LVGROUP, SizeOfLVGROUP, 0)
+           NumPut(SizeOfLVGROUP, LVGROUP, 0, "UInt")
+           NumPut(Mask, LVGROUP, 4, "UInt")
+           NumPut(PHeader, LVGROUP, OffHeader, "Ptr")
+           NumPut(GroupID, LVGROUP, OffGroupID, "Int")
+           NumPut(Align, LVGROUP, OffAlign, "UInt")
+           SendMessage, 0x1091, %Index%, % &LVGROUP, , % "ahk_id " . this.LVHwnd
+           Return ErrorLevel
+        }
+; ======================================================================================================================
+; LV_EX_GroupRemove - Removes a group from a list-view control.
+; ======================================================================================================================
+        GroupRemove(GroupID)
+        {
+           ; LVM_REMOVEGROUP = 0x1096 -> msdn.microsoft.com/en-us/library/bb761149(v=vs.85).aspx
+           SendMessage, 0x10A0, %GroupID%, 0, , % "ahk_id " . this.LVHwnd
+           Return ErrorLevel
+        }
+; ======================================================================================================================
+; LV_EX_GroupRemoveAll - Removes all groups from a list-view control.
+; ======================================================================================================================
+        GroupRemoveAll()
+        {
+           ; LVM_REMOVEALLGROUPS = 0x10A0 -> msdn.microsoft.com/en-us/library/bb761147(v=vs.85).aspx
+           SendMessage, 0x10A0, 0, 0, , % "ahk_id " . this.LVHwnd
+           Return ErrorLevel
+        }
+; ======================================================================================================================
+; LV_EX_GroupSetState - Sets the state of the specified group (requires Win Vista+ for most states).
+; ======================================================================================================================
+        GroupSetState(GroupID, States*)
+        {
+           ; LVM_SETGROUPINFO = 0x1093 -> msdn.microsoft.com/en-us/library/bb761167(v=vs.85).aspx
+           Static OS := DllCall("GetVersion", "UChar")
+           Static LVGS5 := {Collapsed: 0x01, Hidden: 0x02, Normal: 0x00, 0: 0, 1: 1, 2: 2}
+           Static LVGS6 := {Collapsed: 0x01, Collapsible: 0x08, Focused: 0x10, Hidden: 0x02, NoHeader: 0x04, Normal: 0x00
+                         , Selected: 0x20, 0: 0, 1: 1, 2: 2, 4: 4, 8: 8, 16: 16, 32: 32}
+           Static LVGF := 0x04 ; LVGF_STATE
+           Static SizeOfLVGROUP := (4 * 6) + (A_PtrSize * 4)
+           Static OffStateMask := 8 + (A_PtrSize * 3) + 8
+           Static OffState := OffStateMask + 4
+           SetStates := 0
+           LVGS := OS > 5 ? LVGS6 : LVGS5
+           For Each, State In States {
+              If !LVGS.HasKey(State)
+                 Return false
+              SetStates |= LVGS[State]
+           }
+           VarSetCapacity(LVGROUP, SizeOfLVGROUP, 0)
+           NumPut(SizeOfLVGROUP, LVGROUP, 0, "UInt")
+           NumPut(LVGF, LVGROUP, 4, "UInt")
+           NumPut(SetStates, LVGROUP, OffStateMask, "UInt")
+           NumPut(SetStates, LVGROUP, OffState, "UInt")
+           SendMessage, 0x1093, %GroupID%, % &LVGROUP, , % "ahk_id " . this.LVHwnd
+           Return ErrorLevel
+        }
+; ======================================================================================================================
+; LV_EX_HasGroup - Determines whether the list-view control has a specified group.
+; ======================================================================================================================
+        HasGroup(GroupID)
+        {
+           ; LVM_HASGROUP = 0x10A1 -> msdn.microsoft.com/en-us/library/bb761097(v=vs.85).aspx
+           SendMessage, 0x10A1, %GroupID%, 0, , % "ahk_id " . this.LVHwnd
+           Return ErrorLevel
+        }
+; ======================================================================================================================
+; LV_EX_IsGroupViewEnabled - Checks whether the list-view control has group view enabled.
+; ======================================================================================================================
+        IsGroupViewEnabled()
+        {
+           ; LVM_ISGROUPVIEWENABLED = 0x10AF -> msdn.microsoft.com/en-us/library/bb761133(v=vs.85).aspx
+           SendMessage, 0x10AF, 0, 0, , % "ahk_id " . this.LVHwnd
+           Return ErrorLevel
+        }
+; ======================================================================================================================
+; LV_EX_SetGroup - Assigns a list-view item to an existing group.
+; ======================================================================================================================
+        SetGroup(Row, GroupID)
+        {
+           ; LVM_SETITEMA = 0x1006 -> http://msdn.microsoft.com/en-us/library/bb761186(v=vs.85).aspx
+           Static OffGroupID := 28 + (A_PtrSize * 3)
+           this.LVITEM(LVITEM, 0x00000100, Row) ; LVIF_GROUPID
+           NumPut(GroupID, LVITEM, OffGroupID, "UPtr")
+           SendMessage, 0x1006, 0, % &LVITEM, , % "ahk_id " . this.LVHwnd
+           Return ErrorLevel
+        }
+; ======================================================================================================================
+; ======================================================================================================================
+; Function for internal use ============================================================================================
+; ======================================================================================================================
+; ======================================================================================================================
+        LVITEM(ByRef LVITEM, Mask := 0, Row := 1, Col := 1)
+        {
+           Static LVITEMSize := 48 + (A_PtrSize * 3)
+           VarSetCapacity(LVITEM, LVITEMSize, 0)
+           NumPut(Mask, LVITEM, 0, "UInt"), NumPut(Row - 1, LVITEM, 4, "Int"), NumPut(Col - 1, LVITEM, 8, "Int")
+        }
+; ----------------------------------------------------------------------------------------------------------------------
+        PWSTR(Str, ByRef WSTR)
+        { ; ANSI to Unicode
+           VarSetCapacity(WSTR, StrPut(Str, "UTF-16") * 2, 0)
+           StrPut(Str, &WSTR, "UTF-16")
+           Return &WSTR
+        }
     }
 }

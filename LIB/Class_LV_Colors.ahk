@@ -64,9 +64,9 @@ Class LV_Colors {
          NumPut(This[H].CurTX, L + ClrTxP, 0, "UInt"), NumPut(This[H].CurTB, L + ClrTxBkP, 0, "UInt")
          , NumPut(This[H].CurBK, L + ClrBkP, 0, "UInt")
          ClrTx := This[H].Cells[Row][Col].T, ClrBk := This[H].Cells[Row][Col].B
-         If (ClrTx <> "")
+         If (ClrTx != "")
             NumPut(ClrTX, L + ClrTxP, 0, "UInt")
-         If (ClrBk <> "")
+         If (ClrBk != "")
             NumPut(ClrBk, L + ClrTxBkP, 0, "UInt"), NumPut(ClrBk, L + ClrBkP, 0, "UInt")
          If (Col > This[H].Cells[Row].Length()) && !This[H].HasKey(Row)
             Return CDRF_DODEFAULT
@@ -78,9 +78,9 @@ Class LV_Colors {
          ClrTx := ClrBk := ""
          If This[H].Rows.HasKey(Row)
             ClrTx := This[H].Rows[Row].T, ClrBk := This[H].Rows[Row].B
-         If (ClrTx <> "")
+         If (ClrTx != "")
             NumPut(ClrTx, L + ClrTxP, 0, "UInt"), This[H].CurTX := ClrTx
-         If (ClrBk <> "")
+         If (ClrBk != "")
             NumPut(ClrBk, L + ClrTxBkP, 0, "UInt") , NumPut(ClrBk, L + ClrBkP, 0, "UInt")
             , This[H].CurTB := ClrBk, This[H].CurBk := ClrBk
          If This[H].Cells.HasKey(Row)
@@ -184,9 +184,9 @@ Class LV_Colors {
          This[HWND].Rows := {}
       If !This[HWND].Rows.HasKey(Row)
          This[HWND].Rows[Row] := {}
-      If (BkBGR <> "")
+      If (BkBGR != "")
          This[HWND].Rows[Row]["B"] := BkBGR
-      If (TxBGR <> "")
+      If (TxBGR != "")
          This[HWND].Rows[Row]["T"] := TxBGR
       Return True
    }
@@ -221,9 +221,9 @@ Class LV_Colors {
       If !This[HWND].Cells.HasKey(Row)
          This[HWND].Cells[Row] := {}
       This[HWND].Cells[Row, Col] := {}
-      If (BkBGR <> "")
+      If (BkBGR != "")
          This[HWND].Cells[Row, Col]["B"] := BkBGR
-      If (TxBGR <> "")
+      If (TxBGR != "")
          This[HWND].Cells[Row, Col]["T"] := TxBGR
       Return True
    }

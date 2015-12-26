@@ -27,7 +27,7 @@
 			}
 			If !(Send_Loop)
 			{
-				If (((TimesX > 1) || InStr(TimesX, "%")) && (Action <> "[Text]"))
+				If (((TimesX > 1) || InStr(TimesX, "%")) && (Action != "[Text]"))
 					Step := RegExReplace(Step, "{\w+\K(})", " " TimesX "$1")
 				If (DelayX = 0)
 				{
@@ -35,15 +35,15 @@
 					LV_GetText(PType, A_Index-1, 6)
 					LV_GetText(PDelayX, A_Index-1, 5)
 					LV_GetText(PComment, A_Index-1, 9)
-					If (PType <> Type)
+					If (PType != Type)
 						f_SendRow := A_Index
 					IsPChecked := LV_GetNext(f_SendRow-1, "Checked")
 					LV_GetText(NChecked, IsPChecked, 6)
-					If ((f_SendRow <> IsPChecked) && (PType <> Type)
+					If ((f_SendRow != IsPChecked) && (PType != Type)
 					&& (NChecked = Type))
 						LVData .= "`n" Type ", "
 					If ((Type = PType) && (PDelayX = 0) && (PComment = "")
-					&& !InStr(Action, "[Text]") && (PAction <> "[Text]"))
+					&& !InStr(Action, "[Text]") && (PAction != "[Text]"))
 						RowData := Step
 					Else
 						RowData := "`n" Type ", " Step
@@ -63,7 +63,7 @@
 					RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
 			}
 		}
-		If (IsChecked <> A_Index)
+		If (IsChecked != A_Index)
 			continue
 		If ((Type = cType2) || (Type = cType9) || (Type = cType10))
 		{
@@ -72,7 +72,7 @@
 				StringReplace, Step, Step, ``n, `n, All
 				Step := "`n(LTrim`n" Step "`n)"
 			}
-			If (((TimesX > 1) || InStr(TimesX, "%")) && (Action <> "[Text]"))
+			If (((TimesX > 1) || InStr(TimesX, "%")) && (Action != "[Text]"))
 				Step := RegExReplace(Step, "{\w+\K(})", " " TimesX "$1")
 			RowData := "`n" Type ", " Target ", " Step ", " Window
 			GoSub, Add_CD
@@ -89,7 +89,7 @@
 		Else If (Type = cType5)
 		{
 			RowData := "`n" Type ", " DelayX
-			If (Comment <> "")
+			If (Comment != "")
 				RowData .= "  " "; " Comment
 			If ((TimesX > 1) || InStr(TimesX, "%"))
 				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
@@ -104,7 +104,7 @@
 			StringReplace, Step, Step, ```,, `````,, All
 			StringReplace, Window, Window, ```,, `````,, All
 			RowData := "`n" Type ", " Target ", " Window ", " Step ((DelayX > 0) ? ", " DelayX : "")
-			If (Comment <> "")
+			If (Comment != "")
 				RowData .= "  " "; " Comment
 			If ((TimesX > 1) || InStr(TimesX, "%"))
 				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
@@ -132,7 +132,7 @@
 						RowData := SubStr(RowData, 1, StrLen(RowData)-1)
 				}
 			}
-			If (Comment <> "")
+			If (Comment != "")
 				RowData .= "  " "; " Comment
 			RowData .= "`n{"
 			If (Action = "[LoopEnd]")
@@ -145,13 +145,13 @@
 				StringReplace, Step, Step, ``n, `n, All
 				Step := "`n(LTrim`n" Step "`n)"
 			}
-			RowData := "`n" ((Step <> "") ? "SavedClip := ClipboardAll`nClipboard =`nClipboard = " Step "`nSleep, 333" : "")
-			If ((Target <> "") && (Step <> ""))
+			RowData := "`n" ((Step != "") ? "SavedClip := ClipboardAll`nClipboard =`nClipboard = " Step "`nSleep, 333" : "")
+			If ((Target != "") && (Step != ""))
 				RowData .= "`nControlSend, " Target ", ^v, " Window
 			Else
 				RowData .= "`nSend, ^v"
 			GoSub, Add_CD
-			If (Step <> "")
+			If (Step != "")
 				RowData .= "`nClipboard := SavedClip`nSavedClip ="
 			If ((TimesX > 1) || InStr(TimesX, "%"))
 				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
@@ -162,7 +162,7 @@
 			RowData .= "`n" Type ", FoundX, FoundY, " Step
 			Loop, Parse, Action, `,,%A_Space%
 				Act%A_Index% := A_LoopField
-			If (Act1 <> "Continue")
+			If (Act1 != "Continue")
 			{
 				RowData .= "`nIf ErrorLevel = 0"
 				If (Act1 = "Break")
@@ -182,7 +182,7 @@
 				Else If (Act1 = "Play Sound")
 					RowData .= "`n`tSoundBeep"
 			}
-			If (Act2 <> "Continue")
+			If (Act2 != "Continue")
 			{
 				RowData .= "`nIf ErrorLevel"
 				If (Act2 = "Break")
@@ -207,7 +207,7 @@
 			If (Step = "Else")
 			{
 				RowData := "`n}`nElse"
-				If (Comment <> "")
+				If (Comment != "")
 					RowData .= "  " "; " Comment
 				RowData .= "`n{"
 			}
@@ -218,7 +218,7 @@
 				GoSub, IfStReplace
 				RowData := "`n" Action " " Step
 			,	RowData := RTrim(RowData)
-				If (Comment <> "")
+				If (Comment != "")
 					RowData .= "  " "; " Comment
 				RowData .= "`n{"
 			}
@@ -240,7 +240,7 @@
 				RowData .= " T" Round(DelayX/1000, 2) "`nIf ErrorLevel`n`tReturn"
 			Else If (InStr(DelayX, "%"))
 				RowData .= " T" DelayX "`nIf ErrorLevel`n`tReturn"
-			If (Comment <> "")
+			If (Comment != "")
 				RowData .= "  " "; " Comment
 			If ((TimesX > 1) || InStr(TimesX, "%"))
 				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
@@ -276,7 +276,7 @@
 			Else
 				Step := ((VarName = "_null") ? "" : VarName " " Oper " ") Action "(" ((VarValue = """""") ? "" : VarValue) ")"
 			RowData := "`n" Step
-			If (Comment <> "")
+			If (Comment != "")
 				RowData .= "  " "; " Comment
 		}
 		Else If (Type = cType22)
@@ -395,7 +395,7 @@
 		{
 			StringSplit, Act, Action, :
 			RowData := ""
-			If (Act2 <> "")
+			If (Act2 != "")
 				RowData .= "`n" Act2 " := " Act1 "." CheckComExp(Step, "", "", Act1)
 			Else
 			{
@@ -409,7 +409,7 @@
 				}
 			}
 			GoSub, Add_CD
-			If ((Target <> "") && (!InStr(LVData, Act1 " := " ComType "(")))
+			If ((Target != "") && (!InStr(LVData, Act1 " := " ComType "(")))
 				RowData := "`nIf !IsObject(" Act1 ")`n`t" Act1 " := " ComType "(""" Target """)" RowData
 			If (Window = "LoadWait")
 				RowData .=
@@ -545,7 +545,7 @@
 	return
 	
 	Add_CD:
-	If (Comment <> "")
+	If (Comment != "")
 		RowData .= "  " "; " Comment
 	If ((DelayX > 0) || InStr(DelayX, "%"))
 		RowData .= "`n" "Sleep, " DelayX
@@ -597,13 +597,13 @@ IncludeFiles(L, N)
 	Gui, chMacro:ListView, InputList%L%
 	Loop, %N%
 	{
-		If (LV_GetNext(A_Index-1, "Checked") <> A_Index)
+		If (LV_GetNext(A_Index-1, "Checked") != A_Index)
 			continue
 		LV_GetText(Row_Type, A_Index, 6)
-		If (Row_Type <> cType44)
+		If (Row_Type != cType44)
 			continue
 		LV_GetText(IncFile, A_Index, 7)
-		If ((IncFile <> "") && (IncFile <> "Expression"))
+		If ((IncFile != "") && (IncFile != "Expression"))
 			IncList .= "`#`Include " IncFile "`n"
 	}
 	Sort, IncList, U
@@ -636,12 +636,12 @@ CheckExp(String)
 	StringReplace, String, String, `````, , ¢, All
 	Loop, Parse, String, `,, %A_Space%``
 	{
-		LoopField := (A_LoopField <> """""") ? RegExReplace(A_LoopField, """", """""") : A_LoopField
+		LoopField := (A_LoopField != """""") ? RegExReplace(A_LoopField, """", """""") : A_LoopField
 		If (InStr(LoopField, "%"))
 		{
 			Loop, Parse, LoopField, `%
 			{
-				If (A_LoopField <> "")
+				If (A_LoopField != "")
 					NewStr .=  Mod(A_Index, 2) ? " """ RegExReplace(A_LoopField, "%") """ " : RegExReplace(A_LoopField, "%")
 			}
 			NewStr := RTrim(NewStr) ", "
@@ -661,12 +661,12 @@ CheckExp(String)
 
 CheckComExp(String, OutVar := "", ByRef ArrString := "", Ptr := "ie")
 {
-	If (OutVar <> "")
+	If (OutVar != "")
 		String := Trim(RegExReplace(String, "(.*):=[\s]?"))
 	Else If (RegExMatch(String, "[\s]?:=(.*)", Assign))
 	{
 		Value := Trim(Assign1), String := Trim(RegExReplace(String, "[\s]?:=(.*)"))
-		If Value in True,False
+		If Value in true,false
 			Value := "%" Value "%"
 	}
 	While, RegExMatch(String, "\(([^()]++|(?R))*\)", _Parent%A_Index%)
@@ -733,12 +733,12 @@ CheckComExp(String, OutVar := "", ByRef ArrString := "", Ptr := "ie")
 		If (RegExMatch(A_LoopField, "^_Block\d+"))
 			String := RegExReplace(String, "&" A_LoopField, "[" CheckExp(%A_LoopField%1) "]")
 	}
-	If (Value <> "")
+	If (Value != "")
 	{
 		StringReplace, Value, Value, `,, `````,, All
 		String .= (Value = """""") ? " := """"" : " := " CheckExp(Value)
 	}
-	Else If (OutVar <> "")
+	Else If (OutVar != "")
 		String := "`n" OutVar " := " String
 	
 	return String
@@ -751,7 +751,7 @@ IEComExp(Method, Value := "", Element := "", ElIndex := 0, OutputVar := "", GetB
 	Else
 		getEl := "getElementsBy" GetBy
 	
-	ElIndex := (ElIndex <> "") ? "[" ElIndex "]" : ""
+	ElIndex := (ElIndex != "") ? "[" ElIndex "]" : ""
 	
 	If (!Element)
 	{
@@ -759,7 +759,7 @@ IEComExp(Method, Value := "", Element := "", ElIndex := 0, OutputVar := "", GetB
 			return OutputVar " := ie." Method
 		Else If (Obj = "Method")
 		{
-			If (Value <> "")
+			If (Value != "")
 				return "ie." Method "(" Value ")"
 			Else
 				return "ie." Method "()"
@@ -773,7 +773,7 @@ IEComExp(Method, Value := "", Element := "", ElIndex := 0, OutputVar := "", GetB
 			return OutputVar " := ie.document." getEl "(" Element ")." Method
 		Else If (Obj = "Method")
 		{
-			If (Value <> "")
+			If (Value != "")
 				return "ie.document." getEl "(" Element ")." Method "(" Value ") := " Value
 			Else
 				return "ie.document." getEl "(" Element ")." Method "()"
@@ -787,7 +787,7 @@ IEComExp(Method, Value := "", Element := "", ElIndex := 0, OutputVar := "", GetB
 			return OutputVar " := ie.document." Element . ElIndex "." Method
 		Else If (Obj = "Method")
 		{
-			If (Value <> "")
+			If (Value != "")
 				return "ie.document." Element . ElIndex "." Method "(" Value ")"
 			Else
 				return "ie.document." Element . ElIndex "." Method "()"
@@ -795,13 +795,13 @@ IEComExp(Method, Value := "", Element := "", ElIndex := 0, OutputVar := "", GetB
 		Else If (Obj = "Property")
 			return "ie.document." Element . ElIndex "." Method " := " Value
 	}
-	Else If (GetBy <> "ID")
+	Else If (GetBy != "ID")
 	{
 		If (OutputVar)
 			return OutputVar " := ie.document." getEl "(" Element ")" ElIndex "." Method
 		Else If (Obj = "Method")
 		{
-			If (Value <> "")
+			If (Value != "")
 				return "ie.document." getEl "(" Element ")" ElIndex "." Method "(" Value ")"
 			Else
 				return "ie.document." getEl "(" Element ")" ElIndex "." Method "()"

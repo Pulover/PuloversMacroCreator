@@ -49,7 +49,7 @@ ClickOn(xPos, yPos, Button, Click := "")
 		yPos = 0
 		RelHold = 1
 	}
-	If Relative <> 
+	If (Relative != "")
 		Details := Relative " " Button ", " Click
 	Else
 		Details := xPos ", " yPos " " Button ", " Click

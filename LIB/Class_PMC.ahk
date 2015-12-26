@@ -3,7 +3,7 @@
 	Load(FileName)
 	{
 		local ID, Col, Row := [], Opt := []
-		PmcCode := {}, ID := 0
+		PmcCode := [], PmcGroups := [], P, ID := 0
 		Loop, Read, %FileName%
 		{
 			If (InStr(A_LoopReadLine, "[PMC Code]")=1)
@@ -12,6 +12,8 @@
 				Loop, Parse, A_LoopReadLine, |
 					Opt.Push(A_LoopField)
 			}
+			Else If (InStr(A_LoopReadLine, "Groups=")=1)
+				PmcGroups[ID] := SubStr(A_LoopReadLine, 8)
 			Else If (RegExMatch(A_LoopReadLine, "^\d+\|"))
 			{
 				Col := []
@@ -29,6 +31,7 @@
 			If (PmcCode[0] = "")
 				return 0
 			PmcCode[1] := PmcCode[0], PmcCode[0] := "", ID := 1
+		,	PmcGroups[1] := PmcGroups[0], PmcGroups[0] := ""
 		}
 		return ID
 	}
@@ -74,14 +77,14 @@
 				Gui, chMacro:ListView, InputList%TabCount%
 				ListCount%TabCount% := LV_GetCount()
 			,	Opt := PmcCode[A_Index].Opt
-			,	o_AutoKey[TabCount] := (Opt[2] <> "") ? Opt[2] : ""
-			,	o_ManKey[TabCount] := (Opt[3] <> "") ? Opt[3] : ""
-			,	o_TimesG[TabCount] := (Opt[4] <> "") ? Opt[4] : 1
-			,	CoordMouse := (Opt[5] <> "") ? Opt[5] : CoordMouse
-			,	OnFinishCode := (Opt[6] <> "") ? Opt[6] : 1
-			,	Labels .= ((Opt[7] <> "") ? Opt[7] : "Macro" TabCount) "|"
-			,	HistoryMacro%TabCount% := new LV_Rows()
-			,	HistoryMacro%TabCount%.Add()
+			,	o_AutoKey[TabCount] := (Opt[2] != "") ? Opt[2] : ""
+			,	o_ManKey[TabCount] := (Opt[3] != "") ? Opt[3] : ""
+			,	o_TimesG[TabCount] := (Opt[4] != "") ? Opt[4] : 1
+			,	CoordMouse := (Opt[5] != "") ? Opt[5] : CoordMouse
+			,	OnFinishCode := (Opt[6] != "") ? Opt[6] : 1
+			,	Labels .= ((Opt[7] != "") ? Opt[7] : "Macro" TabCount) "|"
+			,	LVManager.SetHwnd(ListID%TabCount%), LVManager.ClearHistory()
+			,	LVManager.SetGroups(PmcGroups[A_Index]), LVManager.Add()
 			}
 		}
 		If (TabCount = 0)
@@ -109,10 +112,10 @@
 			Loop, % Col.Length()
 				Col[A_Index] := RegExReplace(Col[A_Index], "¢", "|")
 			chk := SubStr(Col[1], 1, 1)
-		,	((Col[2] = "[Pause]") && (Col[6] <> "Sleep")) ? (Col[2] := "[" Col[6] "]") : ""
+		,	((Col[2] = "[Pause]") && (Col[6] != "Sleep")) ? (Col[2] := "[" Col[6] "]") : ""
 		,	((Col[6] = "LoopFilePattern") && (RegExMatch(Col[3], "```, \d```, \d"))) ? (Col[3] := this.FormatCmd(Col[3], "Files")) : ""
 		,	((Col[6] = "LoopRegistry") && (RegExMatch(Col[3], "```, \d```, \d"))) ? (Col[3] := this.FormatCmd(Col[3], "Reg")) : ""
-		,	((Col[6] = "Variable") && (Col[2] <> "[Assign Variable]")) ? (Col[6] := "Function") : ""
+		,	((Col[6] = "Variable") && (Col[2] != "[Assign Variable]")) ? (Col[6] := "Function") : ""
 		,	Col[6] := RegExReplace(Col[6], "\s", "_")
 		,	LV_Add("Check" chk, Col*)
 		}

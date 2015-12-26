@@ -8,7 +8,7 @@ Author: Pulover \[Rodolfo U. Batista\]
 [pulover@macrocreator.com](mailto:pulover@macrocreator.com)  
 Copyright © 2012-2015 Rodolfo U. Batista  
 
-Version: 4.2.0  
+Version: 5.0.0  
 Release Date: December, 2015  
 AutoHotkey Version: 1.1.22.07  
 
@@ -36,7 +36,7 @@ Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jör
 
 # Change Log
 
-## Version 4.2.0
+## Version 5.0.0
 
 * Added support for array assignment in Variables window and IECOM/COMInterface.
 * Added support for array methods in Functions window.
@@ -47,6 +47,7 @@ Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jör
 * Added support for array methods inside commands (e.g.: % MyArray.Length()).
 * Added support for array methods inside Variable Assignment when "Expression" is checked or "Value" is starts with "% ".
 * Added option to change color of the rectangle of Image/Pixel Search area and Screenshots tool.
+* New feature: Listview Groups.
 * Updated "Loop, File" and "Loop, Reg" to new format with "Mode" parameter.
 * Changed "List Variables" to display only User-Defined variables.
 * Fixed corrupted pmc files saved on exit.

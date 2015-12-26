@@ -1,4 +1,5 @@
 ﻿[PMC Code]|F1||1|Window|1|ForLoops
+Groups=Start:1
 1|[Assign Variable]|MyVar := This is a variable!|1|0|Variable|||||
 2|[Assign Variable]|MyArray := ["a"`,"b"`,"c"`,"d"`,"e"`, MyVar]|1|0|Variable|Expression||||
 3|[LoopStart]|MyArray`, each`, value|1|0|ForLoop|||||
@@ -6,6 +7,7 @@
 5|[LoopEnd]|LoopEnd|1|0|Loop|||||
 
 [PMC Code]|F2||1|Window|1|Arrays1
+Groups=
 1|[Assign Variable]|N := [10`, 20`, 30]|1|0|Variable|Expression||||
 02|Array|N := 10, 20, 30|1|0|Function|||Alternative way to assign arrays||
 3|[LoopStart]|LoopStart|% N.Length()|0|Loop|||||
@@ -13,8 +15,11 @@
 5|[LoopEnd]|LoopEnd|1|0|Loop|||||
 6|[Assign Variable]|N[4] := New value|1|0|Variable|||||
 7|[MsgBox]|% N[4]|1|0|MsgBox|262208||||
+8|Sqrt|FuncOut := N[1]|1|0|Function|||||
+9|[MsgBox]|Sqr Function with Array parameter: %FuncOut%|1|0|MsgBox|262208||||
 
 [PMC Code]|F3||1|Window|1|Arrays2
+Groups=
 1|[Assign Variable]|String := A¢B¢C¢D¢E|1|0|Variable|||||
 2|StrSplit|MyArray := %String%, ¢|1|0|Function|||||
 3|[LoopStart]|LoopStart|% MyArray.MaxIndex()|0|Loop|||||
@@ -23,6 +28,7 @@
 6|[LoopEnd]|LoopEnd|1|0|Loop|||||
 
 [PMC Code]|F4||1|Window|1|MultiDim
+Groups=
 1|[Assign Variable]|N := ["Item 1"]|1|0|Variable|Expression||||
 2|[MsgBox]|% N[1]|1|0|MsgBox|262208||||
 3|[Assign Variable]|N[2] := []|1|0|Variable|Expression||||
@@ -33,10 +39,9 @@
 8|[MsgBox]|Item 2.2: %ItemCopy%|1|0|MsgBox|262208||||
 9|Push|_null := Item 2.3|1|0|Method|N[2]||||
 10|[MsgBox]|% N[2][3]|1|0|MsgBox|262208||||
-11|SubStr|FuncOut := N[1], 6|1|0|Function|||||
-12|[MsgBox]|SubString Function with Array parameter: %FuncOut%|1|0|MsgBox|262208||||
 
 [PMC Code]|F5||1|Window|1|Methods
+Groups=
 1|[Assign Variable]|Values := |1|0|Variable|||||
 2|[Assign Variable]|N := []|1|0|Variable|Expression||||
 3|Push|_null := A, B, D|1|0|Method|N||||
@@ -50,4 +55,15 @@
 11|[Assign Variable]|Values .= %value%`, |1|0|Variable|||||
 12|[LoopEnd]|LoopEnd|1|0|Loop|||||
 13|[MsgBox]|%Values%|1|0|MsgBox|262144||||
+
+[PMC Code]|F6||1|Window|1|NamedKeys
+Groups=
+1|[Assign Variable]|N := []|1|0|Variable|Expression||||
+2|[Assign Variable]|N["keyA"] := Value of KeyA|1|0|Variable|||||
+3|[MsgBox]|% N["keyA"]|1|0|MsgBox|0||||
+4|[Assign Variable]|N["keyB"] := Value of KeyB|1|0|Variable|||||
+5|[Assign Variable]|N["keyC"] := N["keyA"]|1|0|Variable|Expression||||
+6|[LoopStart]|N`, each`, value|1|0|ForLoop|||||
+7|[MsgBox]|%each%: %value%|1|0|MsgBox|262144||||
+8|[LoopEnd]|LoopEnd|1|0|Loop|||||
 

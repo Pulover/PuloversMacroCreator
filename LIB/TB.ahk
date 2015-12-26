@@ -28,13 +28,13 @@ TB_GetSize(tbPtr)
 TB_Edit(tbPtr, tbButton, Check := "", Enable := "", Capt := "", Icon := "")
 {
 	Index := tbPtr.LabelToIndex(tbButton)
-	If (Check <> "")
+	If (Check != "")
 		tbPtr.ModifyButton(Index, "Check", Check)
-	If (Enable <> "")
+	If (Enable != "")
 		tbPtr.ModifyButton(Index, "Enable", Enable)
-	If (Capt <> "")
+	If (Capt != "")
 		tbPtr.ModifyButtonInfo(Index, "Text", Capt)
-	If (Icon <> "")
+	If (Icon != "")
 		tbPtr.ModifyButtonInfo(Index, "Image", Icon)
 }
 
@@ -69,5 +69,5 @@ TB_GetHwnd(Hwnd)
 		If (Ptr.tbHwnd = Hwnd)
 			return Ptr
 	}
-	return False
+	return false
 }

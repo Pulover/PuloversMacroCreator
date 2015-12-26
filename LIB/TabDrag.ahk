@@ -8,7 +8,7 @@
 ; Credits:       TabGetText() adapted from GuiTabEx by just me
 ;
 ;=======================================================================================
-TabDrag(DragButton := "LButton", LineThick := 2, Color := "Black", ShowUnder := False)
+TabDrag(DragButton := "LButton", LineThick := 2, Color := "Black", ShowUnder := false)
 {
 	Static TCM_GETITEMCOUNT := 0x1304
 	
@@ -31,7 +31,7 @@ TabDrag(DragButton := "LButton", LineThick := 2, Color := "Black", ShowUnder := 
 	While, GetKeyState(DragButton, "P")
 	{
 		MouseGetPos, Tab_mx,,, CurrCtrl, 2
-		If (ShowUnder) && (Tab_mx <> iTabX)
+		If (ShowUnder) && (Tab_mx != iTabX)
 			Gui, MarkLineH:Show, NoActivate
 		CurrTab := TabGet()
 		If (CurrTab = HitTab)
@@ -49,7 +49,7 @@ TabDrag(DragButton := "LButton", LineThick := 2, Color := "Black", ShowUnder := 
 			Line_Y := Win_Y + Tab_ly + Tab_Y
 		,   Line_X := Win_X + Tab_lx + Tab_X2 + 3
 		}
-		If ((CurrCtrl <> TabCtrl) || (CurrTab = 0))
+		If ((CurrCtrl != TabCtrl) || (CurrTab = 0))
 		{
 			CurrTab := ""
 			Gui, MarkLineV:Cancel
@@ -64,7 +64,7 @@ TabDrag(DragButton := "LButton", LineThick := 2, Color := "Black", ShowUnder := 
 	}
 	Gui, MarkLineV:Cancel
 	Gui, MarkLineH:Cancel
-	If ((CurrTab) && (CurrTab <> HitTab))
+	If ((CurrTab) && (CurrTab != HitTab))
 	{
 		SendMessage, TCM_GETITEMCOUNT, 0, 0,, ahk_id %TabCtrl%
 		TotalTabs := ErrorLevel, TabInfo := []

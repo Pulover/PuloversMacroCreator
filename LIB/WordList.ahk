@@ -25,7 +25,7 @@ settimer settitlematchmode setwindelay setworkingdir shutdown sleep sort soundbe
 soundgetwavevolume soundplay soundset soundsetwavevolume splashimage splashtextoff splashtexton
 splitpath statusbargettext statusbarwait stringcasesense stringgetpos stringleft stringlen
 stringlower stringmid stringreplace stringright stringsplit stringtrimleft stringtrimright
-stringupper suspend sysget thread throw tooltip transform traytip try until urldownloadtofile while
+stringupper suspend sysget this thread throw tooltip transform traytip try until urldownloadtofile while
 winactivate winactivatebottom winclose winget wingetactivestats wingetactivetitle wingetclass
 wingetpos wingettext wingettitle winhide winkill winmaximize winmenuselectitem winminimize
 winminimizeall winminimizeallundo winmove winrestore winset winsettitle winshow winwait
@@ -45,7 +45,7 @@ minindex mod newenum next numget numput objaddref objclone object objgetaddress 
 objinsert objmaxindex objminindex objnewenum objrelease objremove objsetcapacity onmessage ord
 pop processpath push rawread rawwrite readline regexmatch regexreplace registercallback remove removeat
 round rtrim sb_seticon sb_setparts sb_settext seek setcapacity sin sqrt strget strlen strput strsplit substr
-tan tell this trim tv_add tv_delete tv_get tv_getchild tv_getcount tv_getnext tv_getparent tv_getprev
+tan tell trim tv_add tv_delete tv_get tv_getchild tv_getcount tv_getnext tv_getparent tv_getprev
 tv_getselection tv_gettext tv_modify varsetcapacity varsetcapcity winactive winexist write writeline
 )
 
