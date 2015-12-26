@@ -6,10 +6,10 @@
 
 Author: Pulover \[Rodolfo U. Batista\]  
 [pulover@macrocreator.com](mailto:pulover@macrocreator.com)  
-Copyright © 2012-2015 Rodolfo U. Batista  
+Copyright © 2012-2016 Rodolfo U. Batista  
 
 Version: 5.0.0  
-Release Date: December, 2015  
+Release Date: January, 2016  
 AutoHotkey Version: 1.1.22.07  
 
 Software License: [GNU General Public License](License.html)  

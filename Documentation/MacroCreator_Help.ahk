@@ -3,13 +3,14 @@
 		*The Complete Automation Tool*
 		
 		Version: 5.0.0  
-		
+		Release Date: January, 2016  
+
 		[www.macrocreator.com](http://www.macrocreator.com)  
 		[Forum Thread](http://ahkscript.org/boards/viewtopic.php?f=6&t=143)  
 		
 		Author: Pulover \[Rodolfo U. Batista\]  
 		[pulover@macrocreator.com](mailto:pulover@macrocreator.com)  
-		Copyright © 2012-2015 Rodolfo U. Batista  
+		Copyright © 2012-2016 Rodolfo U. Batista  
 		
 		Software License: [GNU General Public License](License.html)  
 		
