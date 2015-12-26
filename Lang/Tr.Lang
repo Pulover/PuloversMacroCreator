@@ -667,13 +667,14 @@
 	t_Lang174 =	DeğIşKenler
 	t_Lang175 =	ÇEşItli.
 	t_Lang176 =	Grup ekle
+	t_Lang177 =	Yeni grup
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Açık
-	d_Lang002 =	Geçerli Makro kaydetmek istiyor musunuz?
+	d_Lang002 =	Mevcut projeyi kaydet?
 	d_Lang003 =	Varsayılan Ayarlar
 	d_Lang004 =	Macro Creator Dosyalar
-	d_Lang005 =	Makro Kaydet
+	d_Lang005 =	Kaydet Projesi
 	d_Lang006 =	Dosyayı kaydetmek / overwrite Başarısız
 	d_Lang007 =	Hata
 	d_Lang008 =	Hata: Hayır Makro Seçilmiş.`nListesinde en az bir makro kontrol ediniz.

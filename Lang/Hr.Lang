@@ -667,13 +667,14 @@
 	t_Lang174 =	Varijable
 	t_Lang175 =	Razno.
 	t_Lang176 =	Dodaj skupinu
+	t_Lang177 =	Nova grupa
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Otvoreno
-	d_Lang002 =	Želite li spremiti trenutnu makro?
+	d_Lang002 =	Spremi trenutni projekt?
 	d_Lang003 =	Tvorničke postavke
 	d_Lang004 =	Makro Creator Files
-	d_Lang005 =	Spremi makronaredbu
+	d_Lang005 =	Spremi Projekt
 	d_Lang006 =	Neuspjelo spremanje / prebrisati datoteku
 	d_Lang007 =	Pogreška
 	d_Lang008 =	Pogreška: Makro U Izabrani `nImajte provjeriti barem jednu makronaredbu na popisu..

@@ -1698,7 +1698,7 @@ New:
 Gui, 1:+OwnDialogs
 If (SavePrompt)
 {
-	MsgBox, 35, %d_Lang005%, % d_Lang002 "`n" (CurrentFileName ? """" CurrentFileName """" : "")
+	MsgBox, 35, %d_Lang005%, % d_Lang002 "`n`n" (CurrentFileName ? """" CurrentFileName """" : "")
 	IfMsgBox, Yes
 		GoSub, Save
 	IfMsgBox, Cancel
@@ -1742,7 +1742,7 @@ Gui, 1:Submit, NoHide
 GoSub, SaveData
 If (SavePrompt)
 {
-	MsgBox, 35, %d_Lang005%, % d_Lang002 "`n" (CurrentFileName ? """" CurrentFileName """" : "")
+	MsgBox, 35, %d_Lang005%, % d_Lang002 "`n`n" (CurrentFileName ? """" CurrentFileName """" : "")
 	IfMsgBox, Yes
 	{
 		GoSub, Save
@@ -1762,7 +1762,7 @@ Open:
 Gui, 1:+OwnDialogs
 If (SavePrompt)
 {
-	MsgBox, 35, %d_Lang005%, % d_Lang002 "`n" (CurrentFileName ? """" CurrentFileName """" : "")
+	MsgBox, 35, %d_Lang005%, % d_Lang002 "`n`n" (CurrentFileName ? """" CurrentFileName """" : "")
 	IfMsgBox, Yes
 		GoSub, Save
 	IfMsgBox, Cancel
@@ -1875,7 +1875,7 @@ IfExist %CurrentFileName%
     FileDelete %CurrentFileName%
     If (ErrorLevel)
     {
-        MsgBox, 16, %d_Lang007%, %d_Lang006% "%CurrentFileName%".
+        MsgBox, 16, %d_Lang007%, %d_Lang006%`n`n"%CurrentFileName%".
         return
     }
 }
@@ -1967,7 +1967,7 @@ OpenRecent:
 Gui, 1:+OwnDialogs
 If (SavePrompt)
 {
-	MsgBox, 35, %d_Lang005%, % d_Lang002 "`n" (CurrentFileName ? """" CurrentFileName """" : "")
+	MsgBox, 35, %d_Lang005%, % d_Lang002 "`n`n" (CurrentFileName ? """" CurrentFileName """" : "")
 	IfMsgBox, Yes
 		GoSub, Save
 	IfMsgBox, Cancel
@@ -2778,7 +2778,7 @@ return
 DefaultMacro:
 If (CurrentFileName = "")
 {
-	MsgBox, 33, %d_Lang005%, % d_Lang002 "`n" (CurrentFileName ? """" CurrentFileName """" : "")
+	MsgBox, 33, %d_Lang005%, % d_Lang002 "`n`n" (CurrentFileName ? """" CurrentFileName """" : "")
 	IfMsgBox, OK
 		GoSub, Save
 	IfMsgBox, Cancel
@@ -12094,7 +12094,7 @@ Gui, chMacro:ListView, InputList%A_List%
 If (SavePrompt)
 {
 	GoSub, ProjBackup
-	MsgBox, 35, %d_Lang005%, % d_Lang002 "`n" (CurrentFileName ? """" CurrentFileName """" : "")
+	MsgBox, 35, %d_Lang005%, % d_Lang002 "`n`n" (CurrentFileName ? """" CurrentFileName """" : "")
 	IfMsgBox, Yes
 	{
 		ActiveFileName := CurrentFileName
@@ -12105,7 +12105,7 @@ If (SavePrompt)
 			FileDelete %CurrentFileName%
 			If (ErrorLevel)
 			{
-				MsgBox, 16, %d_Lang007%, %d_Lang006% "%CurrentFileName%".
+				MsgBox, 16, %d_Lang007%, %d_Lang006%`n`n"%CurrentFileName%".
 				return
 			}
 		}
@@ -13177,6 +13177,8 @@ Menu, Tray, Add, %y_Lang001%, ShowHide
 Menu, Tray, Add, %f_Lang011%, Exit
 Menu, Tray, Default, %w_Lang005%
 
+If (ShowGroups)
+	Menu, GroupMenu, Check, %e_Lang017%`t%_s%Ctrl+Shift+G
 If (KeepDefKeys)
 	Menu, OptionsMenu, Check, %o_Lang011%
 If (OnScCtrl)
@@ -13492,7 +13494,7 @@ Gui, 37:+owner1 -MinimizeBox
 Gui, chMacro:Default
 Gui, 1:+Disabled
 Gui, 37:Add, GroupBox, Section xm W450 H50, %w_Lang102%:
-Gui, 37:Add, Edit, ys+20 xs+10 vGrName W430 r1, New Group
+Gui, 37:Add, Edit, ys+20 xs+10 vGrName W430 r1, %t_Lang177%
 Gui, 37:Add, Button, -Wrap Section Default xm W75 H23 gGrOK, %c_Lang020%
 Gui, 37:Add, Button, -Wrap ys W75 H23 gGrCancel, %c_Lang021%
 Gui, 37:Show,, %t_Lang176%
@@ -13506,7 +13508,7 @@ Gui, 37:Destroy
 Gui, chMacro:Default
 Gui, chMacro:Listview, InputList%A_List%
 If (GrName = "")
-	GrName := "New Group"
+	GrName := t_Lang177
 If (!ShowGroups)
 	GoSub, GroupsMode
 LVManager.AddGroup(LV_GetNext(), GrName)
@@ -13535,6 +13537,10 @@ Loop, %TabCount%
 	LVManager.EnableGroups(ShowGroups, c_Lang061)
 }
 LVManager.SetHwnd(ListID%A_List%)
+If (ShowGroups)
+	Menu, GroupMenu, Check, %e_Lang017%`t%_s%Ctrl+Shift+G
+Else
+	Menu, GroupMenu, Uncheck, %e_Lang017%`t%_s%Ctrl+Shift+G
 return
 
 RemoveGroup:
@@ -13578,6 +13584,7 @@ Menu, CommandMenu, DeleteAll
 Menu, SelectMenu, DeleteAll
 Menu, SelCmdMenu, DeleteAll
 Menu, EditMenu, DeleteAll
+Menu, GroupMenu, DeleteAll
 Menu, MacroMenu, DeleteAll
 Menu, CustomMenu, DeleteAll
 Menu, ToolbarsMenu, DeleteAll

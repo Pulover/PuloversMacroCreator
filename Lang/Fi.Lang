@@ -667,13 +667,14 @@
 	t_Lang174 =	Muuttujat
 	t_Lang175 =	Muut.
 	t_Lang176 =	Lisää ryhmä
+	t_Lang177 =	Uusi ryhmä
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Avata
-	d_Lang002 =	Haluatko tallentaa nykyisen Makro?
+	d_Lang002 =	Tallenna nykyinen projekti?
 	d_Lang003 =	Oletusasetukset
 	d_Lang004 =	Macro Creator tiedostot
-	d_Lang005 =	Tallenna makro
+	d_Lang005 =	Tallenna Projekti
 	d_Lang006 =	Tallennus epäonnistui / korvata tiedosto
 	d_Lang007 =	Virhe
 	d_Lang008 =	Virhe: Ei Macro Valittu.`nTarkista ainakin yksi makro luettelosta.

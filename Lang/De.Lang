@@ -667,13 +667,14 @@
 	t_Lang174 =	Variablen
 	t_Lang175 =	Misc.
 	t_Lang176 =	Gruppe hinzufügen
+	t_Lang177 =	Neue Gruppe
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Öffnen
-	d_Lang002 =	Wollen Sie das aktuelle Makro speichern?
+	d_Lang002 =	Aktuelles Projekt speichern?
 	d_Lang003 =	Standard-Einstellungen
 	d_Lang004 =	Makro Creator Dateien
-	d_Lang005 =	Makro speichern
+	d_Lang005 =	Projekt Speichern
 	d_Lang006 =	Fehler beim Speichern / Datei überschreiben
 	d_Lang007 =	Fehler
 	d_Lang008 =	Fehler: Kein Makro gewählt.`nBitte wählen Sie mindestens ein Makro in der Liste.

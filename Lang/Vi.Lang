@@ -667,13 +667,14 @@
 	t_Lang174 =	BiếN
 	t_Lang175 =	Misc.
 	t_Lang176 =	Thêm nhóm
+	t_Lang177 =	Nhóm mới
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Mở
-	d_Lang002 =	Bạn có muốn lưu các vĩ mô hiện tại?
+	d_Lang002 =	Lưu dự án hiện tại?
 	d_Lang003 =	Cài đặt mặc định
 	d_Lang004 =	Người tạo tập tin vĩ mô
-	d_Lang005 =	Lưu vĩ mô
+	d_Lang005 =	LưU Dự áN
 	d_Lang006 =	Không thể lưu / ghi đè lên tập tin
 	d_Lang007 =	Lôi
 	d_Lang008 =	Lỗi: Không có Macro chọn.`nVui lòng kiểm tra ít nhất một Macro trong danh sách.

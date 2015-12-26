@@ -1,6 +1,6 @@
 ﻿LoadLang_Zt:
 		
-		; Chinese （Traditional）
+		; Chinese Traditional
 		
 ; Main Menu		
 	m_Lang001 =	文件
@@ -667,13 +667,14 @@
 	t_Lang174 =	變量
 	t_Lang175 =	雜項。
 	t_Lang176 =	添加組
+	t_Lang177 =	新組
 		
 ; Messages & Dialogs		
 	d_Lang001 =	打開
-	d_Lang002 =	你想保存當前的宏？
+	d_Lang002 =	保存當前的項目？
 	d_Lang003 =	默認設置
 	d_Lang004 =	宏造物主文件
-	d_Lang005 =	保存宏
+	d_Lang005 =	保存項目
 	d_Lang006 =	保存/覆蓋文件失敗
 	d_Lang007 =	錯誤
 	d_Lang008 =	錯誤：沒有宏的選擇。`n請檢查列表中的至少一個宏。

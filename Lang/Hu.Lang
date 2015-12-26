@@ -667,13 +667,14 @@
 	t_Lang174 =	VáLtozóK
 	t_Lang175 =	Misc.
 	t_Lang176 =	Add csoport
+	t_Lang177 =	új csoport
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Nyitva
-	d_Lang002 =	Szeretné menteni az aktuális makró?
+	d_Lang002 =	Mentsd aktuális projektet?
 	d_Lang003 =	Alapértelmezett beállítások
 	d_Lang004 =	Macro Creator Fájlok
-	d_Lang005 =	Mentés Macro
+	d_Lang005 =	Projekt MentéS
 	d_Lang006 =	Nem sikerült menteni / felülírni a fájlt
 	d_Lang007 =	Hiba
 	d_Lang008 =	Hiba: Nincs Makró Kiválasztott.`nKérjük, legalább egy makró a listán.

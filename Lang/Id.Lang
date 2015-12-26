@@ -667,13 +667,14 @@
 	t_Lang174 =	Variabel
 	t_Lang175 =	Lain-Lain.
 	t_Lang176 =	Menambahkan grup
+	t_Lang177 =	Kelompok baru
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Buka
-	d_Lang002 =	Apakah Anda ingin menyimpan Makro saat ini?
+	d_Lang002 =	Simpan proyek saat ini?
 	d_Lang003 =	Pengaturan Default
 	d_Lang004 =	Makro File Pencipta
-	d_Lang005 =	Simpan Makro
+	d_Lang005 =	Simpan Proyek
 	d_Lang006 =	Gagal menyimpan / menimpa file
 	d_Lang007 =	Kesalahan
 	d_Lang008 =	Kesalahan: Tidak Makro Dipilih`nHarap periksa setidaknya satu Makro dalam daftar..

@@ -667,13 +667,14 @@
 	t_Lang174 =	Zmienne
 	t_Lang175 =	Inne.
 	t_Lang176 =	Dodaj grupę
+	t_Lang177 =	Nowa grupa
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Otwarte
-	d_Lang002 =	Czy chcesz, aby zapisać bieżący makro?
+	d_Lang002 =	Zapisz bieżący projekt?
 	d_Lang003 =	Ustawienia domyślne
 	d_Lang004 =	Pliki Macro Creator
-	d_Lang005 =	Zapisz makro
+	d_Lang005 =	Zapisz Projekt
 	d_Lang006 =	Nie udało się zapisać / nadpisać plik
 	d_Lang007 =	Błąd
 	d_Lang008 =	Błąd: Makro wybrane.`nProszę sprawdzić co najmniej jedno makro na liście.

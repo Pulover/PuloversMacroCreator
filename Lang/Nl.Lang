@@ -667,13 +667,14 @@
 	t_Lang174 =	Variabelen
 	t_Lang175 =	Misc.
 	t_Lang176 =	Groep toevoegen
+	t_Lang177 =	Nieuwe groep
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Open
-	d_Lang002 =	Wilt u de huidige macro op te slaan?
+	d_Lang002 =	Besparen huidige project?
 	d_Lang003 =	Standaardinstellingen
 	d_Lang004 =	Macro Creator-bestanden
-	d_Lang005 =	Save Macro
+	d_Lang005 =	Project Opslaan
 	d_Lang006 =	Mislukt opslaan / overschrijven bestand
 	d_Lang007 =	Fout
 	d_Lang008 =	Fout: Geen Macro geselecteerd.`nControleer ten minste een macro in de lijst.

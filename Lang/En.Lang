@@ -667,13 +667,14 @@
 	t_Lang174 =	Variables
 	t_Lang175 =	Misc.
 	t_Lang176 =	Add group
+	t_Lang177 =	New group
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Open
-	d_Lang002 =	Do you want to save the current Macro?
+	d_Lang002 =	Save current project?
 	d_Lang003 =	Default Settings
 	d_Lang004 =	Macro Creator Files
-	d_Lang005 =	Save Macro
+	d_Lang005 =	Save Project
 	d_Lang006 =	Failed to save/overwrite file
 	d_Lang007 =	Error
 	d_Lang008 =	Error: No Macro Selected.`nPlease check at least one Macro in the list.

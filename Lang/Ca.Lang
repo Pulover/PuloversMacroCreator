@@ -667,13 +667,14 @@
 	t_Lang174 =	Variables
 	t_Lang175 =	Misc.
 	t_Lang176 =	Afegir grup
+	t_Lang177 =	Nou grup
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Obert
-	d_Lang002 =	¿Vols guardar la macro actual?
+	d_Lang002 =	Guardar projecte actual?
 	d_Lang003 =	Configuració per defecte
 	d_Lang004 =	Arxius Creador Macro
-	d_Lang005 =	Guardar Macro
+	d_Lang005 =	Desar Projecte
 	d_Lang006 =	Error en desar / sobreescriure l'arxiu
 	d_Lang007 =	Error
 	d_Lang008 =	Error: No macro seleccionada `nComproveu almenys una macro a la llista ..

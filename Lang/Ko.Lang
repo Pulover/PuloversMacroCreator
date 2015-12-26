@@ -667,13 +667,14 @@
 	t_Lang174 =	변수
 	t_Lang175 =	기타.
 	t_Lang176 =	그룹을 추가
+	t_Lang177 =	새 그룹
 		
 ; Messages & Dialogs		
 	d_Lang001 =	열기
-	d_Lang002 =	당신은 현재 매크로를 저장 하시겠습니까?
+	d_Lang002 =	현재 프로젝트를 저장?
 	d_Lang003 =	기본 설정
 	d_Lang004 =	Macro Creator 파일
-	d_Lang005 =	매크로 저장
+	d_Lang005 =	프로젝트 저장
 	d_Lang006 =	파일을 저장 / 덮어 쓰기하지 못했습니다
 	d_Lang007 =	오류
 	d_Lang008 =	오류: 매크로를 선택하지 않았습니다.`n목록에서 하나 이상의 매크로를 확인하시기 바랍니다.

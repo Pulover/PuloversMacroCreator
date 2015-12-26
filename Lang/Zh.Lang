@@ -667,13 +667,14 @@
 	t_Lang174 =	变量
 	t_Lang175 =	杂项
 	t_Lang176 =	添加组
+	t_Lang177 =	新组
 		
 ; Messages & Dialogs		
 	d_Lang001 =	打开
-	d_Lang002 =	保存当前宏吗？
+	d_Lang002 =	保存当前项目吗？
 	d_Lang003 =	默认设置
 	d_Lang004 =	Macro Creator文件
-	d_Lang005 =	保存宏
+	d_Lang005 =	保存项目
 	d_Lang006 =	无法保存/覆盖文件
 	d_Lang007 =	错误
 	d_Lang008 =	错误：未选择宏。`n请至少选中列表中的一个宏。

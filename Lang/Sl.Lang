@@ -667,13 +667,14 @@
 	t_Lang174 =	Spremenljivke
 	t_Lang175 =	Razno.
 	t_Lang176 =	Dodaj skupino
+	t_Lang177 =	Nova skupina
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Odprite
-	d_Lang002 =	Ali želite shraniti trenutno makro?
+	d_Lang002 =	Shranite trenutni projekt?
 	d_Lang003 =	Privzete nastavitve
 	d_Lang004 =	Makro Creator Datoteke
-	d_Lang005 =	Prihranite makro
+	d_Lang005 =	Shrani Projekt
 	d_Lang006 =	Ni uspelo rešiti / prepisati datoteko
 	d_Lang007 =	Napaka
 	d_Lang008 =	Napaka: Ne Makro Izbrano`nMolimo preveriti vsaj en makro na seznamu.

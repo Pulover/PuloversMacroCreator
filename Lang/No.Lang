@@ -667,13 +667,14 @@
 	t_Lang174 =	Variabler
 	t_Lang175 =	Div.
 	t_Lang176 =	Legg til gruppe
+	t_Lang177 =	Ny gruppe
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Åpent
-	d_Lang002 =	Ønsker du å lagre gjeldende makro?
+	d_Lang002 =	Lagre nåværende prosjekt?
 	d_Lang003 =	Standardinnstillinger
 	d_Lang004 =	Macro Creator-filer
-	d_Lang005 =	Lagre Makro
+	d_Lang005 =	Lagre Prosjekt
 	d_Lang006 =	Kunne ikke lagre / overskrive filen
 	d_Lang007 =	Feil
 	d_Lang008 =	Feil: Ingen Macro valgt.`nVennligst sjekk minst en makro i listen.

@@ -667,13 +667,14 @@
 	t_Lang174 =	Variable
 	t_Lang175 =	Misc.
 	t_Lang176 =	Tilføj gruppe
+	t_Lang177 =	Ny gruppe
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Åbent
-	d_Lang002 =	Ønsker du at gemme den aktuelle Macro?
+	d_Lang002 =	Gem nuværende projekt?
 	d_Lang003 =	Standardindstillinger
 	d_Lang004 =	Macro Creator-filer
-	d_Lang005 =	Gem Macro
+	d_Lang005 =	Gem Projekt
 	d_Lang006 =	Kunne ikke gemme / overskrive filen
 	d_Lang007 =	Fejl
 	d_Lang008 =	Fejl: Ingen Makro Valgt.`nTjek venligst mindst ét ​​Makro på listen.

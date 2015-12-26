@@ -667,13 +667,14 @@
 	t_Lang174 =	Variabler
 	t_Lang175 =	Misc.
 	t_Lang176 =	Lägg till grupp
+	t_Lang177 =	Ny grupp
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Öppet
-	d_Lang002 =	Vill du spara den aktuella Makro?
+	d_Lang002 =	Spara aktuella projekt?
 	d_Lang003 =	Standardinställningar
 	d_Lang004 =	Macro Creator filer
-	d_Lang005 =	Spara Makro
+	d_Lang005 =	Spara Projekt
 	d_Lang006 =	Det gick inte att spara / skriva filen
 	d_Lang007 =	Fel
 	d_Lang008 =	Fel: Ingen Makro Vald.`nKontrollera minst en makro i listan.

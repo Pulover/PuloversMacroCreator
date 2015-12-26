@@ -667,13 +667,14 @@
 	t_Lang174 =	Pembolehubah
 	t_Lang175 =	Misc.
 	t_Lang176 =	Tambah kumpulan
+	t_Lang177 =	Kumpulan baru
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Buka
-	d_Lang002 =	Adakah anda ingin untuk menyelamatkan makro semasa?
+	d_Lang002 =	Menyimpan projek semasa?
 	d_Lang003 =	Tetapan lalai
 	d_Lang004 =	Makro Pencipta Files
-	d_Lang005 =	Simpan Makro
+	d_Lang005 =	Simpan Projek
 	d_Lang006 =	Gagal menyimpan / menulis ganti fail
 	d_Lang007 =	Ralat
 	d_Lang008 =	Ralat: Tiada Macro Terpilih.`nSila pastikan sekurang-kurangnya satu makro dalam senarai.

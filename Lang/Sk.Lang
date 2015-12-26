@@ -667,13 +667,14 @@
 	t_Lang174 =	Premenné
 	t_Lang175 =	Misc.
 	t_Lang176 =	Pridať skupinu
+	t_Lang177 =	Nová skupina
 		
 ; Messages & Dialogs		
 	d_Lang001 =	Otvorené
-	d_Lang002 =	Prajete si uložiť aktuálne makro?
+	d_Lang002 =	Uložiť aktuálny projekt?
 	d_Lang003 =	Predvolené nastavenie
 	d_Lang004 =	Makro Creator súbory
-	d_Lang005 =	Uložiť makro
+	d_Lang005 =	UložIť Projekt
 	d_Lang006 =	Nepodarilo sa uložiť / prepísať súbor
 	d_Lang007 =	Chyba
 	d_Lang008 =	Chyba: Nie Makro`nSkontrolujte aspoň jeden makro v zozname.

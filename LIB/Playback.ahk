@@ -1453,10 +1453,13 @@ AssignVar(Name, Operator, Value, l_Point)
 	Else If (Operator = ".=")
 		_content .= Value
 
-	If (IsObject(_ObjItems))
-		%Name%[_ObjItems*] := _content
-	Else
-		%Name% := _content
+	Try
+	{
+		If (IsObject(_ObjItems))
+			%Name%[_ObjItems*] := _content
+		Else
+			%Name% := _content
+	}
 	
 	Try SavedVars(Name)
 }
