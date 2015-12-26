@@ -143,6 +143,7 @@ DragTab()
 				GoSub, chMacroGuiSize
 				GoSub, LoadData
 				GoSub, RowCheck
+				GoSub, b_Enable
 				GoSub, UpdateCopyTo
 				Proj_Opts := "", SavePrompt := true
 				SetTimer, HitFix, -10

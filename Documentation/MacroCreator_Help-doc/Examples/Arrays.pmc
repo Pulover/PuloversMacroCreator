@@ -1,11 +1,5 @@
-﻿[PMC Code]|F1||1|Window|1|ForLoops
-1|[Assign Variable]|MyVar := This is a variable!|1|0|Variable|||||
-2|[Assign Variable]|MyArray := ["a"`,"b"`,"c"`,"d"`,"e"`, MyVar]|1|0|Variable|Expression||||
-3|[LoopStart]|MyArray`, each`, value|1|0|ForLoop|||||
-4|[MsgBox]|%each% : %value%|1|0|MsgBox|0||||
-5|[LoopEnd]|LoopEnd|1|0|Loop|||||
-
-[PMC Code]|F2||1|Window|1|Arrays1
+﻿[PMC Code]|F2||1|Window|1|Arrays1
+Groups=Start:1
 1|[Assign Variable]|N := [10`, 20`, 30]|1|0|Variable|Expression||||
 02|Array|N := 10, 20, 30|1|0|Function|||Alternative way to assign arrays||
 3|[LoopStart]|LoopStart|% N.Length()|0|Loop|||||
@@ -17,6 +11,7 @@
 9|[MsgBox]|Sqr Function with Array parameter: %FuncOut%|1|0|MsgBox|262208||||
 
 [PMC Code]|F3||1|Window|1|Arrays2
+Groups=Start:1
 1|[Assign Variable]|String := A¢B¢C¢D¢E|1|0|Variable|||||
 2|StrSplit|MyArray := %String%, ¢|1|0|Function|||||
 3|[LoopStart]|LoopStart|% MyArray.MaxIndex()|0|Loop|||||
@@ -24,7 +19,16 @@
 5|[MsgBox]|Loop: %A_Index%`nMyArray[%A_Index%]: %ArO%|1|0|MsgBox|262208||||
 6|[LoopEnd]|LoopEnd|1|0|Loop|||||
 
+[PMC Code]|F1||1|Window|1|ForLoops
+Groups=Start:1
+1|[Assign Variable]|MyVar := This is a variable!|1|0|Variable|||||
+2|[Assign Variable]|MyArray := ["a"`,"b"`,"c"`,"d"`,"e"`, MyVar]|1|0|Variable|Expression||||
+3|[LoopStart]|MyArray`, each`, value|1|0|ForLoop|||||
+4|[MsgBox]|%each% : %value%|1|0|MsgBox|0||||
+5|[LoopEnd]|LoopEnd|1|0|Loop|||||
+
 [PMC Code]|F4||1|Window|1|MultiDim
+Groups=Start:1
 1|[Assign Variable]|N := ["Item 1"]|1|0|Variable|Expression||||
 2|[MsgBox]|% N[1]|1|0|MsgBox|262208||||
 3|[Assign Variable]|N[2] := []|1|0|Variable|Expression||||
@@ -37,6 +41,7 @@
 10|[MsgBox]|% N[2][3]|1|0|MsgBox|262208||||
 
 [PMC Code]|F5||1|Window|1|Methods
+Groups=Start:1
 1|[Assign Variable]|Values := |1|0|Variable|||||
 2|[Assign Variable]|N := []|1|0|Variable|Expression||||
 3|Push|_null := A, B, D|1|0|Method|N||||
@@ -52,6 +57,7 @@
 13|[MsgBox]|%Values%|1|0|MsgBox|262144||||
 
 [PMC Code]|F6||1|Window|1|NamedKeys
+Groups=Start:1
 1|[Assign Variable]|N := []|1|0|Variable|Expression||||
 2|[Assign Variable]|N["keyA"] := Value of KeyA|1|0|Variable|||||
 3|[MsgBox]|% N["keyA"]|1|0|MsgBox|0||||
