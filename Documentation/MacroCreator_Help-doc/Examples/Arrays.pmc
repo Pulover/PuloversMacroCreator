@@ -1,4 +1,4 @@
-﻿[PMC Code]|F2||1|Window|1|Arrays1
+﻿[PMC Code]|F1||1|Window|1|Arrays1
 Groups=Start:1
 1|[Assign Variable]|N := [10`, 20`, 30]|1|0|Variable|Expression||||
 02|Array|N := 10, 20, 30|1|0|Function|||Alternative way to assign arrays||
@@ -10,7 +10,7 @@ Groups=Start:1
 8|Sqrt|FuncOut := N[1]|1|0|Function|||||
 9|[MsgBox]|Sqr Function with Array parameter: %FuncOut%|1|0|MsgBox|262208||||
 
-[PMC Code]|F3||1|Window|1|Arrays2
+[PMC Code]|F2||1|Window|1|Arrays2
 Groups=Start:1
 1|[Assign Variable]|String := A¢B¢C¢D¢E|1|0|Variable|||||
 2|StrSplit|MyArray := %String%, ¢|1|0|Function|||||
@@ -19,7 +19,7 @@ Groups=Start:1
 5|[MsgBox]|Loop: %A_Index%`nMyArray[%A_Index%]: %ArO%|1|0|MsgBox|262208||||
 6|[LoopEnd]|LoopEnd|1|0|Loop|||||
 
-[PMC Code]|F1||1|Window|1|ForLoops
+[PMC Code]|F3||1|Window|1|ForLoops
 Groups=Start:1
 1|[Assign Variable]|MyVar := This is a variable!|1|0|Variable|||||
 2|[Assign Variable]|MyArray := ["a"`,"b"`,"c"`,"d"`,"e"`, MyVar]|1|0|Variable|Expression||||

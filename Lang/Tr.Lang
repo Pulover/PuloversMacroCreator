@@ -111,23 +111,27 @@
 	v_lang005 =	&Önizleme
 	v_lang006 =	&Araç Çubukları
 	v_lang007 =	K&ısayol Tuşları
-	v_lang008 =	&Sütunlar Boyutu Sıfırla
-	v_lang009 =	&Düzen Sıfırla
+	v_lang008 =	S&ütunlar Boyutu Sıfırla
+	v_lang009 =	&Simgeler Boyutu
+	v_lang010 =	&Düzen Sıfırla
 		
-	v_lang010 =	&Dosya
-	v_lang011 =	&Kaydedin ve oyna
-	v_lang012 =	K&omutları
-	v_lang013 =	D&üzenleme
-	v_lang014 =	&Seçenekleri
-	v_lang015 =	&Özelleştirme
+	v_lang011 =	&Dosya
+	v_lang012 =	&Kaydedin ve oyna
+	v_lang013 =	K&omutları
+	v_lang014 =	D&üzenleme
+	v_lang015 =	&Seçenekleri
+	v_lang016 =	&Özelleştirme
 		
-	v_lang016 =	&Otomatik
-	v_lang017 =	&Manuel
-	v_lang018 =	&Dur
-	v_lang019 =	D&urma
+	v_lang017 =	&Otomatik
+	v_lang018 =	&Manuel
+	v_lang019 =	&Dur
+	v_lang020 =	D&urma
 		
-	v_lang020 =	&Kompakt
-	v_lang021 =	&Varsayılan
+	v_lang021 =	&Kompakt
+	v_lang022 =	&Varsayılan
+		
+	v_lang023 =	&Küçük
+	v_lang024 =	&Büyük
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Ayarlar
@@ -628,7 +632,7 @@
 	t_Lang135 =	Diğer
 	t_Lang136 =	Vurgulamak Satır
 	t_Lang137 =	Varsayılan Script Editörü
-	t_Lang138 =	Komut Dosyasını Düzenleyin (Ctrl+Shift+E)
+	t_Lang138 =	Harici düzenleyicide açın (Ctrl+Shift+E)
 	t_Lang139 =	Seçmek
 	t_Lang140 =	Sütuna Göre
 	t_Lang141 =	Tüm Sütunları
@@ -821,6 +825,9 @@
 	d_Lang089 =	Hiçbir satır seçili!
 	d_Lang090 =	Eklemek veya grubu kaldırmak için bir satır seçiniz.
 	d_Lang091 =	Geçersiz bir yöntem
+	d_Lang092 =	Küçük simgeler
+	d_Lang093 =	Büyük ikonlar
+	d_Lang094 =	Bu özellik, Windows Vista veya üstü gerektirir.
 		
 ; Start-up Tips		
 	Start_Tips =	

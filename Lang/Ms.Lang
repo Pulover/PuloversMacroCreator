@@ -112,22 +112,26 @@
 	v_lang006 =	&Toolbars
 	v_lang007 =	&Hotkeys
 	v_lang008 =	&Reset Saiz Lajur
-	v_lang009 =	R&eset Layout
+	v_lang009 =	S&aiz Ikon
+	v_lang010 =	R&eset Layout
 		
-	v_lang010 =	&Fail
-	v_lang011 =	&Rakam dan Main
-	v_lang012 =	&Arahan
-	v_lang013 =	&Edit
-	v_lang014 =	&Pilihan
-	v_lang015 =	&Menyesuaikan
+	v_lang011 =	&Fail
+	v_lang012 =	&Rakam dan Main
+	v_lang013 =	&Arahan
+	v_lang014 =	&Edit
+	v_lang015 =	&Pilihan
+	v_lang016 =	&Menyesuaikan
 		
-	v_lang016 =	&Automatik
-	v_lang017 =	&Manual
-	v_lang018 =	&Hentikan
-	v_lang019 =	&Jeda
+	v_lang017 =	&Automatik
+	v_lang018 =	&Manual
+	v_lang019 =	&Hentikan
+	v_lang020 =	&Jeda
 		
-	v_lang020 =	&Padat
-	v_lang021 =	&Default
+	v_lang021 =	&Padat
+	v_lang022 =	&Default
+		
+	v_lang023 =	&Kecil
+	v_lang024 =	&Besar
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Tetapan
@@ -628,7 +632,7 @@
 	t_Lang135 =	Lain-lain
 	t_Lang136 =	Baris Terkini
 	t_Lang137 =	Editor Skrip Default
-	t_Lang138 =	Edit Script (Ctrl+Shift+E)
+	t_Lang138 =	Buka dalam editor luaran (Ctrl+Shift+E)
 	t_Lang139 =	Pilih
 	t_Lang140 =	By Column
 	t_Lang141 =	Semua Lajur
@@ -821,6 +825,9 @@
 	d_Lang089 =	Tiada berturut-turut dipilih!
 	d_Lang090 =	Sila, pilih berturut-turut untuk memasukkan atau mengeluarkan kumpulan.
 	d_Lang091 =	Kaedah tidak sah
+	d_Lang092 =	Ikon kecil
+	d_Lang093 =	Ikon besar
+	d_Lang094 =	Ciri ini memerlukan Windows Vista atau lebih tinggi.
 		
 ; Start-up Tips		
 	Start_Tips =	

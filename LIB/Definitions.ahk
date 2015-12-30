@@ -104,6 +104,117 @@ RecOptChecks := ["ClearNewList", "", "Strokes", "CaptKDn", "RecKeybdCtrl"
 ,	LVManager := new LV_Rows()
 ,	Exp_Mult := {1:2, 2:4, 3:8, 4:16, 5:32}
 ,	MsgBoxStyles := [262144, 512, 256]
+
+IconsNames := { "apply": 1
+			,	"break": 2
+			,	"color": 3
+			,	"com": 4
+			,	"comment": 5
+			,	"continue": 6
+			,	"control": 7
+			,	"copy": 8
+			,	"cut": 9
+			,	"delete": 10
+			,	"dialogs": 11
+			,	"donate": 12
+			,	"duplicate": 13
+			,	"edit": 14
+			,	"exit": 15
+			,	"export": 16
+			,	"expview": 17
+			,	"files": 18
+			,	"find": 19
+			,	"finish": 20
+			,	"functions": 21
+			,	"goto": 22
+			,	"group": 23
+			,	"help": 24
+			,	"ie": 25
+			,	"ifstatements": 26
+			,	"image": 27
+			,	"import": 28
+			,	"info": 29
+			,	"ini": 30
+			,	"insert": 31
+			,	"joy": 32
+			,	"jscript": 33
+			,	"labels": 34
+			,	"userfunc": 35
+			,	"loop": 36
+			,	"misc": 37
+			,	"mouse": 38
+			,	"movedn": 39
+			,	"moveup": 40
+			,	"new": 41
+			,	"open": 42
+			,	"options": 43
+			,	"paste": 44
+			,	"pause": 45
+			,	"play": 46
+			,	"playopt": 47
+			,	"playtest": 48
+			,	"preview": 49
+			,	"process": 50
+			,	"progbar": 51
+			,	"recent": 52
+			,	"recopt": 53
+			,	"record": 54
+			,	"recpause": 55
+			,	"redo": 56
+			,	"registry": 57
+			,	"run": 58
+			,	"save": 59
+			,	"screenshot": 60
+			,	"sendmsg": 61
+			,	"shutdown": 62
+			,	"slowdown": 63
+			,	"sound": 64
+			,	"stop": 65
+			,	"tabadd": 66
+			,	"tabsave": 67
+			,	"tabclose": 68
+			,	"tabdup": 69
+			,	"text": 70
+			,	"timer": 71
+			,	"tip_hi": 72
+			,	"treeview": 73
+			,	"undo": 74
+			,	"variables": 75
+			,	"vbscript": 76
+			,	"wait": 77
+			,	"warn": 78
+			,	"window": 79
+			,	"mintotray": 80
+			,	"pin": 81
+			,	"alwaysactive": 82
+			,	"capt": 83
+			,	"fastforward": 84
+			,	"indent": 85
+			,	"saveas": 86
+			,	"toolbar": 87
+			,	"winkey": 88
+			,	"recordnew": 89
+			,	"refresh": 90
+			,	"keystroke": 91
+			,	"findcmd": 92
+			,	"dock": 93
+			,	"string": 94
+			,	"download": 95
+			,	"wrap": 96
+			,	"tabedit": 97
+			,	"border": 98
+			,	"select": 99
+			,	"eyedropper": 100
+			,	"context": 101
+			,	"filter": 102
+			,	"scheduler": 103
+			,	"groups": 104
+			,	"return": 105
+			,	"undock": 106
+			,	"parameter": 107
+			,	"close": 108
+			,	"extedit": 109 }
+
 KeyNameRep := "
 (Join,
 LControl|Left Control
@@ -931,10 +1042,10 @@ DefaultBar := {FileOpt: "Enabled AutoSize", File: ["New=" w_Lang040 ":41", "Open
 														, "", "FindReplace=" w_Lang087 ":19", "EditComm=" w_Lang088 ":5", "EditColor=" w_Lang089 ":3"
 														, "", "TabPlus=" w_Lang072 ":66", "TabClose=" w_Lang073 ":68", "DuplicateList=" w_Lang074 ":69", "EditMacros=" w_Lang052 ":97"
 														, "", "Import=" w_Lang075 ":28", "SaveCurrentList=" w_Lang076 ":67"]}
-FixedBar :=	{PrevOpt: "Enabled AutoSize", Preview: ["PrevDock=" t_Lang124 ":17"
+FixedBar :=	{PrevOpt: "Enabled AutoSize", Preview: ["PrevDock=" t_Lang124 ":106"
 														, "", "PrevCopy=" c_Lang023 ":8", "PrevRefreshButton=" t_Lang014 ":90(Enabled Dropdown)"
 														, "", "TabIndent=" t_Lang011 ":85", "TextWrap=" t_Lang052 ":96", "OnTop=" t_Lang016 ":81"
-														, "", "EditScript=" t_Lang138 ":14", "Preview=" c_Lang022 ":15"]
+														, "", "EditScript=" t_Lang138 ":109", "Preview=" c_Lang022 ":108"]
 			, TextOpt: "Enabled AutoSize", Text: ["OpenT=" t_Lang126 ":42", "SaveT=" t_Lang127 ":59"
 														, "", "CutT=" t_Lang128 ":9", "CopyT=" t_Lang129 ":8", "PasteT=" t_Lang130 ":44"
 														, "", "RemoveT=" t_Lang132 ":10", "SelAllT=" t_Lang131 ":99"]
@@ -942,7 +1053,7 @@ FixedBar :=	{PrevOpt: "Enabled AutoSize", Preview: ["PrevDock=" t_Lang124 ":17"
 														, "", "RecStart=" t_Lang115 ":54", "RecStartNew=" t_Lang116 ":89", "ShowRecMenu=" t_Lang117 ":53"
 														, "", "OSClear=" t_Lang118 ":10"
 														, "", "ProgBarToggle=" t_Lang119 ":51"
-														, "", "SlowKeyToggle=" t_Lang120 ":63", "FastKeyToggle=" t_Lang121 ":84"
+														, "", "SlowKeyToggle=" t_Lang121 ":63", "FastKeyToggle=" t_Lang120 ":84"
 														, "", "ToggleTB=" t_Lang122 ":98", "ShowHideTB=" t_Lang123 ":80"]}
 
 TbFile_ID := 1, TbRecPlay_ID := 2, TbCommand_ID := 3, TbEdit_ID := 4, TbSettings_ID := 5

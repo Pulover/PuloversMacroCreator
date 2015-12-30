@@ -112,22 +112,26 @@
 	v_lang006 =	Ba&rres D'eines
 	v_lang007 =	&Tecles D'accés Ràpid
 	v_lang008 =	R&establir mida de les columnes
-	v_lang009 =	Restab&lir Disseny
+	v_lang009 =	&Mida De Les Icones
+	v_lang010 =	Restab&lir Disseny
 		
-	v_lang010 =	&Expedient
-	v_lang011 =	&Gravar i reproduir
-	v_lang012 =	&Ordres
-	v_lang013 =	&Modifica
-	v_lang014 =	O&pcions
-	v_lang015 =	Pe&rsonalitzar
+	v_lang011 =	&Expedient
+	v_lang012 =	&Gravar i reproduir
+	v_lang013 =	&Ordres
+	v_lang014 =	&Modifica
+	v_lang015 =	O&pcions
+	v_lang016 =	Pe&rsonalitzar
 		
-	v_lang016 =	&Automàtic
-	v_lang017 =	&Manual
-	v_lang018 =	A&turi
-	v_lang019 =	&Pausa
+	v_lang017 =	&Automàtic
+	v_lang018 =	&Manual
+	v_lang019 =	A&turi
+	v_lang020 =	&Pausa
 		
-	v_lang020 =	&Compacte
-	v_lang021 =	&Defecte
+	v_lang021 =	&Compacte
+	v_lang022 =	&Defecte
+		
+	v_lang023 =	&Menor
+	v_lang024 =	&Gran
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Configuració
@@ -628,7 +632,7 @@
 	t_Lang135 =	Altres
 	t_Lang136 =	Files Destaquen
 	t_Lang137 =	Editor De Scripts Per Defecte
-	t_Lang138 =	Edita Guió (Ctrl+Shift+E)
+	t_Lang138 =	Avaa ulkoisen editorin (Ctrl+Shift+E)
 	t_Lang139 =	Seleccionar
 	t_Lang140 =	Per La Columna
 	t_Lang141 =	Totes Les Columnes
@@ -821,6 +825,9 @@
 	d_Lang089 =	No fila seleccionada!
 	d_Lang090 =	Seleccioneu una fila per inserir o extreure el grup.
 	d_Lang091 =	Mètode vàlid
+	d_Lang092 =	Icones petits
+	d_Lang093 =	Icones grans
+	d_Lang094 =	Aquesta característica requereix Windows Vista o superior.
 		
 ; Start-up Tips		
 	Start_Tips =	

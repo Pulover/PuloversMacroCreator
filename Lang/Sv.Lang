@@ -112,22 +112,26 @@
 	v_lang006 =	&Verktygsfält
 	v_lang007 =	&Snabbtangenter
 	v_lang008 =	&Återställ kolumner Storlek
-	v_lang009 =	Å&terställ Layout
+	v_lang009 =	Ik&oner Storlek
+	v_lang010 =	Å&terställ Layout
 		
-	v_lang010 =	&Fil
-	v_lang011 =	&Spela in och spela
-	v_lang012 =	&Kommandon
-	v_lang013 =	&Redigera
-	v_lang014 =	&Alternativ
-	v_lang015 =	A&npassa
+	v_lang011 =	&Fil
+	v_lang012 =	&Spela in och spela
+	v_lang013 =	&Kommandon
+	v_lang014 =	&Redigera
+	v_lang015 =	&Alternativ
+	v_lang016 =	A&npassa
 		
-	v_lang016 =	&Automatisk
-	v_lang017 =	&Manuell
-	v_lang018 =	&Stopp
-	v_lang019 =	&Paus
+	v_lang017 =	&Automatisk
+	v_lang018 =	&Manuell
+	v_lang019 =	&Stopp
+	v_lang020 =	&Paus
 		
-	v_lang020 =	&Kompakt
-	v_lang021 =	&Default
+	v_lang021 =	&Kompakt
+	v_lang022 =	&Default
+		
+	v_lang023 =	&Små
+	v_lang024 =	S&tor
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Inställningar
@@ -628,7 +632,7 @@
 	t_Lang135 =	Andra
 	t_Lang136 =	Markera Rader
 	t_Lang137 =	Default Manusförläggare
-	t_Lang138 =	Redigera Skript (Ctrl+Shift+E)
+	t_Lang138 =	Avaa ulkoisen editorin (Ctrl+Shift+E)
 	t_Lang139 =	Välj
 	t_Lang140 =	Genom Kolumn
 	t_Lang141 =	Alla Kolumner
@@ -821,6 +825,9 @@
 	d_Lang089 =	Ingen rad valts!
 	d_Lang090 =	Vänligen välj rad att sätta in eller ta bort gruppen.
 	d_Lang091 =	Ogiltig metod
+	d_Lang092 =	Små ikoner
+	d_Lang093 =	Stora ikoner
+	d_Lang094 =	Den här funktionen kräver Windows Vista eller senare.
 		
 ; Start-up Tips		
 	Start_Tips =	

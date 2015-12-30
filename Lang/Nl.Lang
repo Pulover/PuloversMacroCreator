@@ -112,22 +112,26 @@
 	v_lang006 =	&Werkbalken
 	v_lang007 =	H&otkeys
 	v_lang008 =	&Reset Kolommen Grootte
-	v_lang009 =	R&eset Layout
+	v_lang009 =	Ico&nen Grootte
+	v_lang010 =	R&eset Layout
 		
-	v_lang010 =	&Bestand
-	v_lang011 =	&Opnemen en afspelen
-	v_lang012 =	&Commando's
-	v_lang013 =	&Uitgeven
-	v_lang014 =	O&pties
-	v_lang015 =	&Aanpassen
+	v_lang011 =	&Bestand
+	v_lang012 =	&Opnemen en afspelen
+	v_lang013 =	&Commando's
+	v_lang014 =	&Uitgeven
+	v_lang015 =	O&pties
+	v_lang016 =	&Aanpassen
 		
-	v_lang016 =	&Automatisch
-	v_lang017 =	&Handboek
-	v_lang018 =	&Stoppen
-	v_lang019 =	&Pauze
+	v_lang017 =	&Automatisch
+	v_lang018 =	&Handboek
+	v_lang019 =	&Stoppen
+	v_lang020 =	&Pauze
 		
-	v_lang020 =	&Compact
-	v_lang021 =	&Verzuim
+	v_lang021 =	&Compact
+	v_lang022 =	&Verzuim
+		
+	v_lang023 =	&Klein
+	v_lang024 =	&Groot
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Instellingen
@@ -628,7 +632,7 @@
 	t_Lang135 =	Anderen
 	t_Lang136 =	Hoogtepunt Rijen
 	t_Lang137 =	Standaard Script Editor
-	t_Lang138 =	Script Bewerken (Ctrl+Shift+E)
+	t_Lang138 =	Open in externe editor (Ctrl+Shift+E)
 	t_Lang139 =	Kiezen
 	t_Lang140 =	Door Column
 	t_Lang141 =	Alle Columns
@@ -821,6 +825,9 @@
 	d_Lang089 =	Geen rij geselecteerd!
 	d_Lang090 =	Alstublieft, selecteer een rij te plaatsen of te verwijderen van de groep.
 	d_Lang091 =	Ongeldige methode
+	d_Lang092 =	Kleine pictogrammen
+	d_Lang093 =	Grote pictogrammen
+	d_Lang094 =	Deze functie vereist Windows Vista of hoger.
 		
 ; Start-up Tips		
 	Start_Tips =	

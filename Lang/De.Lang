@@ -112,22 +112,26 @@
 	v_lang006 =	S&ymbolleisten
 	v_lang007 =	&Hotkeys
 	v_lang008 =	S&paltengröße zurücksetzen 
-	v_lang009 =	&Layout zurücksetzen
+	v_lang009 =	&Icons Größe
+	v_lang010 =	&Layout zurücksetzen
 		
-	v_lang010 =	&Datei
-	v_lang011 =	&Aufnahme und Wiedergabe
-	v_lang012 =	&Befehle
-	v_lang013 =	B&earbeiten
-	v_lang014 =	&Optionen
-	v_lang015 =	A&npassen
+	v_lang011 =	&Datei
+	v_lang012 =	&Aufnahme und Wiedergabe
+	v_lang013 =	&Befehle
+	v_lang014 =	B&earbeiten
+	v_lang015 =	&Optionen
+	v_lang016 =	A&npassen
 		
-	v_lang016 =	&Automatische
-	v_lang017 =	&Handbuch
-	v_lang018 =	&Stopp
-	v_lang019 =	&Pause
+	v_lang017 =	&Automatische
+	v_lang018 =	&Handbuch
+	v_lang019 =	&Stopp
+	v_lang020 =	&Pause
 		
-	v_lang020 =	&Compact
-	v_lang021 =	&Standard
+	v_lang021 =	&Compact
+	v_lang022 =	&Standard
+		
+	v_lang023 =	Klein
+	v_lang024 =	Große
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Einstellungen
@@ -628,7 +632,7 @@
 	t_Lang135 =	Sonstiges
 	t_Lang136 =	Zeilen markieren
 	t_Lang137 =	Standard-Skript-Editor
-	t_Lang138 =	Skript Bearbeiten (Strg+Umschalt+E)
+	t_Lang138 =	Im externen Editor öffnen (Strg+Umschalt+E)
 	t_Lang139 =	Auswahl
 	t_Lang140 =	Nach Spalte
 	t_Lang141 =	Alle Spalten
@@ -821,6 +825,9 @@
 	d_Lang089 =	Keine Zeile ausgewählt!
 	d_Lang090 =	Bitte wählen Sie eine Zeile einfügen oder entfernen Sie die Gruppe.
 	d_Lang091 =	Ungültige Methode
+	d_Lang092 =	Kleine Symbole
+	d_Lang093 =	Große Icons
+	d_Lang094 =	Dieses Feature erfordert Windows Vista oder höher.
 		
 ; Start-up Tips		
 	Start_Tips =	

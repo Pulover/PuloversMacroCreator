@@ -112,22 +112,26 @@
 	v_lang006 =	&Työkalurivit
 	v_lang007 =	P&ikanäppäimet
 	v_lang008 =	Pa&lauta sarakkeet Koko
-	v_lang009 =	Pala&uta Layout
+	v_lang009 =	K&uvakkeet Koko
+	v_lang010 =	Palauta La&yout
 		
-	v_lang010 =	&Tiedosto
-	v_lang011 =	T&allentaa ja toistaa
-	v_lang012 =	&Komennot
-	v_lang013 =	&Muokata
-	v_lang014 =	&Vaihtoehtoja
-	v_lang015 =	M&uokkaa
+	v_lang011 =	&Tiedosto
+	v_lang012 =	T&allentaa ja toistaa
+	v_lang013 =	&Komennot
+	v_lang014 =	&Muokata
+	v_lang015 =	&Vaihtoehtoja
+	v_lang016 =	M&uokkaa
 		
-	v_lang016 =	&Automaattinen
-	v_lang017 =	&Manuaalinen
-	v_lang018 =	&Lopettaa
-	v_lang019 =	&Tauko
+	v_lang017 =	&Automaattinen
+	v_lang018 =	&Manuaalinen
+	v_lang019 =	&Lopettaa
+	v_lang020 =	&Tauko
 		
-	v_lang020 =	&Kompakti
-	v_lang021 =	&Oletusarvo
+	v_lang021 =	&Kompakti
+	v_lang022 =	&Oletusarvo
+		
+	v_lang023 =	&Pieni
+	v_lang024 =	&Suuri
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Asetukset
@@ -628,7 +632,7 @@
 	t_Lang135 =	Muut
 	t_Lang136 =	Korosta Rivejä
 	t_Lang137 =	Default Script Editor
-	t_Lang138 =	Muokkaa Script (Ctrl+Shift+E)
+	t_Lang138 =	Avaa ulkoisen editorin (Ctrl+Shift+E)
 	t_Lang139 =	Valita
 	t_Lang140 =	Pylväs-
 	t_Lang141 =	Kaikki Sarakkeet
@@ -821,6 +825,9 @@
 	d_Lang089 =	Ei rivi valittu!
 	d_Lang090 =	Ole hyvä, valitse rivi lisätä tai poistaa ryhmän.
 	d_Lang091 =	Virheellinen menetelmä
+	d_Lang092 =	Pienet kuvakkeet
+	d_Lang093 =	Suuret kuvakkeet
+	d_Lang094 =	Tämä ominaisuus vaatii Windows Vistan tai uudemman.
 		
 ; Start-up Tips		
 	Start_Tips =	

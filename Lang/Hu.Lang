@@ -112,22 +112,26 @@
 	v_lang006 =	E&szköztárak
 	v_lang007 =	&Gyorsbillentyűk
 	v_lang008 =	&Visszaállítás oszlopok méret
-	v_lang009 =	&Törlés Layout
+	v_lang009 =	&Ikonok MéRete
+	v_lang010 =	&Törlés Layout
 		
-	v_lang010 =	&Reszelő
-	v_lang011 =	R&ögzítése és lejátszása
-	v_lang012 =	&Parancsok
-	v_lang013 =	&Szerkeszt
-	v_lang014 =	&Lehetőségek
-	v_lang015 =	&Testreszabása
+	v_lang011 =	&Reszelő
+	v_lang012 =	R&ögzítése és lejátszása
+	v_lang013 =	&Parancsok
+	v_lang014 =	&Szerkeszt
+	v_lang015 =	&Lehetőségek
+	v_lang016 =	&Testreszabása
 		
-	v_lang016 =	&Automatikus
-	v_lang017 =	&Kézi
-	v_lang018 =	&Megáll
-	v_lang019 =	&Szünet
+	v_lang017 =	&Automatikus
+	v_lang018 =	&Kézi
+	v_lang019 =	&Megáll
+	v_lang020 =	&Szünet
 		
-	v_lang020 =	&Kompakt
-	v_lang021 =	&Alapértelmezett
+	v_lang021 =	&Kompakt
+	v_lang022 =	&Alapértelmezett
+		
+	v_lang023 =	&Kicsi
+	v_lang024 =	&Nagy
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Beállítások
@@ -628,7 +632,7 @@
 	t_Lang135 =	Egyéb
 	t_Lang136 =	Kiemelés Sorok
 	t_Lang137 =	Alapértelmezett Script Editor
-	t_Lang138 =	Szerkeszteni Script (Ctrl+Shift+E)
+	t_Lang138 =	Nyílt külső szerkesztőben (Ctrl+Shift+E)
 	t_Lang139 =	Választ
 	t_Lang140 =	Oszlop
 	t_Lang141 =	Minden Oszlop
@@ -821,6 +825,9 @@
 	d_Lang089 =	Nincs sorban kiválasztva!
 	d_Lang090 =	Kérjük, jelöljön ki egy sort beszúrni, vagy eltávolíthatja a csoport.
 	d_Lang091 =	Érvénytelen módszer
+	d_Lang092 =	Kis ikonok
+	d_Lang093 =	Nagy ikonok
+	d_Lang094 =	Ez a funkció csak Windows Vista vagy újabb.
 		
 ; Start-up Tips		
 	Start_Tips =	

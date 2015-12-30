@@ -112,22 +112,26 @@
 	v_lang006 =	Ba&rras De Herramientas
 	v_lang007 =	&Teclas De Acceso Rápido
 	v_lang008 =	&Cambiar Tamaño Columnas
-	v_lang009 =	R&establecer Diseño
+	v_lang009 =	Tamaño de Los &Iconos
+	v_lang010 =	R&establecer Diseño
 		
-	v_lang010 =	&Expediente
-	v_lang011 =	&Grabar y reproducir
-	v_lang012 =	&Comandos
-	v_lang013 =	E&ditar
-	v_lang014 =	&Opciones
-	v_lang015 =	&Personalizar
+	v_lang011 =	&Expediente
+	v_lang012 =	&Grabar y reproducir
+	v_lang013 =	&Comandos
+	v_lang014 =	E&ditar
+	v_lang015 =	&Opciones
+	v_lang016 =	&Personalizar
 		
-	v_lang016 =	&Automático
-	v_lang017 =	&Manual
-	v_lang018 =	&Detener
-	v_lang019 =	&Pausa
+	v_lang017 =	&Automático
+	v_lang018 =	&Manual
+	v_lang019 =	&Detener
+	v_lang020 =	&Pausa
 		
-	v_lang020 =	&Compacto
-	v_lang021 =	&Defecto
+	v_lang021 =	&Compacto
+	v_lang022 =	&Defecto
+		
+	v_lang023 =	&Pequeño
+	v_lang024 =	&Grande
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Configuración
@@ -527,7 +531,7 @@
 	t_Lang034 =	Palanca
 	t_Lang035 =	Reproducción
 	t_Lang036 =	Acelerar
-	t_Lang037 =	Reducir la velocidad de
+	t_Lang037 =	Reducir
 	t_Lang038 =	Volver ratón después de la reproducción
 	t_Lang039 =	Coordenadas del ratón
 	t_Lang040 =	Ventana
@@ -611,7 +615,7 @@
 	t_Lang118 =	Borrar lista
 	t_Lang119 =	Mostrar barra de progreso
 	t_Lang120 =	Acelerar
-	t_Lang121 =	Reducir la velocidad de
+	t_Lang121 =	Reducir
 	t_Lang122 =	Mostrar / Ocultar barra de título
 	t_Lang123 =	Mostrar / ocultar la ventana principal
 	t_Lang124 =	Dock
@@ -628,7 +632,7 @@
 	t_Lang135 =	Otros
 	t_Lang136 =	Destacar Filas
 	t_Lang137 =	Editor de Scripts Por Defecto
-	t_Lang138 =	Editar guión (Ctrl+Shift+E)
+	t_Lang138 =	Abrir en editor externo (Ctrl+Shift+E)
 	t_Lang139 =	Seleccionar
 	t_Lang140 =	Por La Columna
 	t_Lang141 =	Todas Las Columnas
@@ -821,6 +825,9 @@
 	d_Lang089 =	No fila seleccionada!
 	d_Lang090 =	Por favor, seleccione una fila para insertar o extraer el grupo.
 	d_Lang091 =	Método válido
+	d_Lang092 =	Iconos pequeños
+	d_Lang093 =	Iconos grandes
+	d_Lang094 =	Esta característica requiere Windows Vista o superior.
 		
 ; Start-up Tips		
 	Start_Tips =	

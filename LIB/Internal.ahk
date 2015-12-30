@@ -134,7 +134,8 @@ DragTab()
 				ActiveList := NewActive
 				Loop, %TabCount%
 					LVManager.SetHwnd(ListID%A_Index%, Proj_Opts[A_Index].Hist)
-				,	LVManager.Load()
+				Loop, %TabCount%
+					LVManager.SetHwnd(ListID%A_Index%),	LVManager.Load()
 				GuiControl, chMacro:, A_List, |
 				GuiControl, chMacro:, A_List, % NewOrder.Tabs
 				GuiControl, chMacro:Choose, A_List, %ActiveList%
@@ -717,10 +718,11 @@ ChangeProgBarColor(Color, Control, Gui := 1)
 
 ChangeIcon(hInst, ID, Icon)
 {
-	hIcon := DllCall("LoadImage", "Uint", hInst, "Uint", Icon, "Uint", 1, "int", 96, "int", 96, "Uint", 0x8000)
-
+	; hIcon := DllCall("LoadImage", "Uint", hInst, "Uint", Icon, "Uint", 1, "int", 96, "int", 96, "Uint", 0x8000)
+	hIcon := IL_EX_GetHICON(hInst, Icon)
+	
 	SendMessage, 0x80, 0, hIcon,, ahk_id %ID% ;set the window's small icon (0x80 is WM_SETICON).
-	SendMessage, 0x80, 1, hIcon,, ahk_id %ID% ;set the window's big icon to the same one.
+	; SendMessage, 0x80, 1, hIcon,, ahk_id %ID% ;set the window's big icon to the same one.
 }
 
 AHK_NOTIFYICON(wParam, lParam)

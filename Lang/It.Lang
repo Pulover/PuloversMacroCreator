@@ -111,23 +111,27 @@
 	v_lang005 =	&Anteprima
 	v_lang006 =	&Barre Degli Strumenti
 	v_lang007 =	&Tasti Di Scelta Rapida
-	v_lang008 =	R&ipristina dimensioni Colonne
-	v_lang009 =	Ri&pristina Layout
+	v_lang008 =	Ri&pristina dimensioni Colonne
+	v_lang009 =	Dimensioni &Icone
+	v_lang010 =	Ri&pristina Layout
 		
-	v_lang010 =	&File
-	v_lang011 =	&Registrare e riprodurre
-	v_lang012 =	&Comandi
-	v_lang013 =	&Modificare
-	v_lang014 =	&Opzioni
-	v_lang015 =	&Personalizzare
+	v_lang011 =	&File
+	v_lang012 =	&Registrare e riprodurre
+	v_lang013 =	&Comandi
+	v_lang014 =	&Modificare
+	v_lang015 =	&Opzioni
+	v_lang016 =	&Personalizzare
 		
-	v_lang016 =	&Automatica
-	v_lang017 =	&Manuale
-	v_lang018 =	A&rresto
-	v_lang019 =	&Pausa
+	v_lang017 =	&Automatica
+	v_lang018 =	&Manuale
+	v_lang019 =	A&rresto
+	v_lang020 =	&Pausa
 		
-	v_lang020 =	&Compatta
-	v_lang021 =	&Predefinito
+	v_lang021 =	&Compatta
+	v_lang022 =	&Predefinito
+		
+	v_lang023 =	&Piccolo
+	v_lang024 =	&Grande
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Impostazioni
@@ -628,7 +632,7 @@
 	t_Lang135 =	Altri
 	t_Lang136 =	Righe Evidenziare
 	t_Lang137 =	Editor Di Script Predefinito
-	t_Lang138 =	Modifica Script (Ctrl+Shift+E)
+	t_Lang138 =	Apri in editor esterno (Ctrl+Shift+E)
 	t_Lang139 =	Selezionare
 	t_Lang140 =	Con Colonna
 	t_Lang141 =	Tutte Le Colonne
@@ -821,6 +825,9 @@
 	d_Lang089 =	Nessuna riga selezionato!
 	d_Lang090 =	Per favore, selezionare una riga per inserire o rimuovere il gruppo.
 	d_Lang091 =	Metodo non valido
+	d_Lang092 =	Icone piccole
+	d_Lang093 =	Icone grandi
+	d_Lang094 =	Questa funzionalità richiede Windows Vista o versioni successive.
 		
 ; Start-up Tips		
 	Start_Tips =	

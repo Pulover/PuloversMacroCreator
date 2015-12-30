@@ -19,7 +19,7 @@ Software License: [GNU General Public License](License.html)
 Chris and Lexikos for [AutoHotkey](http://ahkscript.org/).  
 tic (Tariq Porter) for his [GDI+ Library](http://www.autohotkey.com/board/topic/29449-gdi-standard-library).  
 tkoi & majkinetor for the [ILButton function](http://www.autohotkey.com/board/topic/37147-ilbutton-image-buttons).  
-just me for [LV_Colors Class](http://www.autohotkey.com/board/topic/88699-class-lv-colors), [LV_EX functions](http://autohotkey.com/boards/viewtopic.php?t=1256), GuiCtrlAddTab and for updating ILButton to 64bit.  
+just me for [LV_Colors Class](http://autohotkey.com/boards/viewtopic.php?f=6&t=1081), [LV_EX](http://autohotkey.com/boards/viewtopic.php?t=1256)/[IL_EX](http://autohotkey.com/boards/viewtopic.php?f=6&t=1273) functions, GuiCtrlAddTab and for updating ILButton to 64bit.  
 Micahs for the [base code](http://www.autohotkey.com/board/topic/30486-listview-tooltip-on-mouse-hover/?p=280843) of the Drag-Rows function.  
 jaco0646 for the [function](http://www.autohotkey.com/board/topic/47439-user-defined-dynamic-hotkeys) to make hotkey controls detect other keys.  
 Laszlo for the [Monster function](http://www.autohotkey.com/board/topic/15675-monster) to solve expressions.  

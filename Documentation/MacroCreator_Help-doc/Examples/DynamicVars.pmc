@@ -1,4 +1,5 @@
 ﻿[PMC Code]|F1||1|Window|1|DynamicVars
+Groups=
 1|[Assign Variable]|TextVar := One-Two-Three|1|0|Variable|||||
 2|StringSplit|OutVar, TextVar, -|1|0|StringSplit|||||
 3|[LoopStart]|LoopStart|%OutVar0%|0|Loop|||||
@@ -7,6 +8,7 @@
 6|[MsgBox]|Finished!|1|0|MsgBox|0||||
 
 [PMC Code]|F2||1|Window|1|Arrays
+Groups=
 1|[Assign Variable]|N := ["Item 1"]|1|0|Variable|Expression||||
 2|[MsgBox]|% N[1]|1|0|MsgBox|262208||||
 3|[Assign Variable]|N[2] := []|1|0|Variable|Expression||||

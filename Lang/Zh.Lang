@@ -112,22 +112,26 @@
 	v_lang006 =	工具栏(&T)
 	v_lang007 =	热键(&O)
 	v_lang008 =	复位列宽(&R)
-	v_lang009 =	复位布局(&E)
+	v_lang009 =	图标尺寸(&S)
+	v_lang010 =	复位布局(&E)
 		
-	v_lang010 =	文件(&F)
-	v_lang011 =	录制回放(&R)
-	v_lang012 =	命令(&C)
-	v_lang013 =	编辑(&E)
-	v_lang014 =	选项(&O)
-	v_lang015 =	定制(&U)
+	v_lang011 =	文件(&F)
+	v_lang012 =	录制回放(&R)
+	v_lang013 =	命令(&C)
+	v_lang014 =	编辑(&E)
+	v_lang015 =	选项(&O)
+	v_lang016 =	定制(&U)
 		
-	v_lang016 =	自动(&A)
-	v_lang017 =	手动(&M)
-	v_lang018 =	停止(&S)
-	v_lang019 =	暂停(&P)
+	v_lang017 =	自动(&A)
+	v_lang018 =	手动(&M)
+	v_lang019 =	停止(&S)
+	v_lang020 =	暂停(&P)
 		
-	v_lang020 =	简洁(&C)
-	v_lang021 =	默认(&D)
+	v_lang021 =	简洁(&C)
+	v_lang022 =	默认(&D)
+		
+	v_lang023 =	小(&S)
+	v_lang024 =	大(&L)
 		
 ; Options Sub Menu		
 	o_Lang001 =	设置(&S)
@@ -628,7 +632,7 @@
 	t_Lang135 =	其他
 	t_Lang136 =	高亮行
 	t_Lang137 =	默认脚本编辑器
-	t_Lang138 =	编辑脚本(Ctrl+Shift+E)
+	t_Lang138 =	打开外部编辑器(Ctrl+Shift+E)
 	t_Lang139 =	选择
 	t_Lang140 =	按列
 	t_Lang141 =	所有列
@@ -821,6 +825,9 @@
 	d_Lang089 =	没有行选择！
 	d_Lang090 =	请选择一个行插入或删除组。
 	d_Lang091 =	无效的方法
+	d_Lang092 =	小图标
+	d_Lang093 =	大图标
+	d_Lang094 =	此功能需要Windows Vista或更高。
 		
 ; Start-up Tips		
 	Start_Tips =	

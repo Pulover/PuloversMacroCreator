@@ -112,22 +112,26 @@
 	v_lang006 =	&Verktøylinjer
 	v_lang007 =	&Hurtigtaster
 	v_lang008 =	&Tilbakestille kolonner størrelse
-	v_lang009 =	Ti&lbakestille Layout
+	v_lang009 =	Ik&oner StøRrelse
+	v_lang010 =	Ti&lbakestille Layout
 		
-	v_lang010 =	&Fil
-	v_lang011 =	&Ta opp og spille
-	v_lang012 =	&Kommandoer
-	v_lang013 =	&Redigere
-	v_lang014 =	&Alternativer
-	v_lang015 =	T&ilpass
+	v_lang011 =	&Fil
+	v_lang012 =	&Ta opp og spille
+	v_lang013 =	&Kommandoer
+	v_lang014 =	&Redigere
+	v_lang015 =	&Alternativer
+	v_lang016 =	T&ilpass
 		
-	v_lang016 =	&Automatisk
-	v_lang017 =	&Manuell
-	v_lang018 =	&Stopp
-	v_lang019 =	&Pause
+	v_lang017 =	&Automatisk
+	v_lang018 =	&Manuell
+	v_lang019 =	&Stopp
+	v_lang020 =	&Pause
 		
-	v_lang020 =	&Kompakt
-	v_lang021 =	&Standard
+	v_lang021 =	&Kompakt
+	v_lang022 =	&Standard
+		
+	v_lang023 =	&Liten
+	v_lang024 =	&Stor
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Innstillinger
@@ -628,7 +632,7 @@
 	t_Lang135 =	Annet
 	t_Lang136 =	Markere Rader
 	t_Lang137 =	Standard Script Editor
-	t_Lang138 =	Rediger Skript (Ctrl+Shift+E)
+	t_Lang138 =	Open in externe editor (Ctrl+Shift+E)
 	t_Lang139 =	Velg
 	t_Lang140 =	Av Kolonne
 	t_Lang141 =	Alle Kolonner
@@ -821,6 +825,9 @@
 	d_Lang089 =	Ingen rad valgt!
 	d_Lang090 =	Vennligst, velg en rad for å sette inn eller ta gruppen.
 	d_Lang091 =	Ugyldig metode
+	d_Lang092 =	Små ikoner
+	d_Lang093 =	Store ikoner
+	d_Lang094 =	Denne funksjonen krever Windows Vista eller høyere.
 		
 ; Start-up Tips		
 	Start_Tips =	

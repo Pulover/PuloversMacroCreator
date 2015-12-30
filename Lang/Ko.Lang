@@ -112,22 +112,26 @@
 	v_lang006 =	도구 모음
 	v_lang007 =	단축키
 	v_lang008 =	열 크기를 재설정
-	v_lang009 =	레이아웃 재설정
+	v_lang009 =	아이콘 크기
+	v_lang010 =	레이아웃 재설정
 		
-	v_lang010 =	파일
-	v_lang011 =	기록 및 재생
-	v_lang012 =	명령
-	v_lang013 =	편집
-	v_lang014 =	옵션
-	v_lang015 =	사용자 지정
+	v_lang011 =	파일
+	v_lang012 =	기록 및 재생
+	v_lang013 =	명령
+	v_lang014 =	편집
+	v_lang015 =	옵션
+	v_lang016 =	사용자 지정
 		
-	v_lang016 =	자동적 인
-	v_lang017 =	사용 설명서
-	v_lang018 =	정지
-	v_lang019 =	중지
+	v_lang017 =	자동적 인
+	v_lang018 =	사용 설명서
+	v_lang019 =	정지
+	v_lang020 =	중지
 		
-	v_lang020 =	콤팩트
-	v_lang021 =	디폴트 값
+	v_lang021 =	콤팩트
+	v_lang022 =	디폴트 값
+		
+	v_lang023 =	작은
+	v_lang024 =	큰
 		
 ; Options Sub Menu		
 	o_Lang001 =	설정
@@ -628,7 +632,7 @@
 	t_Lang135 =	기타
 	t_Lang136 =	하이라이트 행
 	t_Lang137 =	기본 스크립트 편집기
-	t_Lang138 =	스크립트를 편집 (Ctrl+Shift+E)
+	t_Lang138 =	외부 편집기에서 열기 (Ctrl+Shift+E)
 	t_Lang139 =	선택
 	t_Lang140 =	열을 기준으로
 	t_Lang141 =	모든 열
@@ -821,6 +825,9 @@
 	d_Lang089 =	어떤 행을 선택하지!
 	d_Lang090 =	삽입 또는 그룹을 제거하려면 행을 선택하십시오.
 	d_Lang091 =	잘못된 방법
+	d_Lang092 =	작은 아이콘
+	d_Lang093 =	큰 아이콘
+	d_Lang094 =	이 기능은 Windows Vista 또는 이상이 필요합니다.
 		
 ; Start-up Tips		
 	Start_Tips =	

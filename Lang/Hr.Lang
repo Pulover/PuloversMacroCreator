@@ -112,22 +112,26 @@
 	v_lang006 =	&Alatne Trake
 	v_lang007 =	&Hotkeys
 	v_lang008 =	V&eličina Reset Kolumne
-	v_lang009 =	&Reset Raspored
+	v_lang009 =	Ik&one VeličIna
+	v_lang010 =	&Reset Raspored
 		
-	v_lang010 =	&File
-	v_lang011 =	&Snimanje i reprodukciju
-	v_lang012 =	&Naredbe
-	v_lang013 =	&Uredi
-	v_lang014 =	&Mogućnosti
-	v_lang015 =	&Prilagodite
+	v_lang011 =	&File
+	v_lang012 =	&Snimanje i reprodukciju
+	v_lang013 =	&Naredbe
+	v_lang014 =	&Uredi
+	v_lang015 =	&Mogućnosti
+	v_lang016 =	&Prilagodite
 		
-	v_lang016 =	&Automatski
-	v_lang017 =	&Priručnik
-	v_lang018 =	&Stop
-	v_lang019 =	Pa&uza
+	v_lang017 =	&Automatski
+	v_lang018 =	&Priručnik
+	v_lang019 =	&Stop
+	v_lang020 =	Pa&uza
 		
-	v_lang020 =	&Kompaktan
-	v_lang021 =	&Default
+	v_lang021 =	&Kompaktan
+	v_lang022 =	&Default
+		
+	v_lang023 =	&Mali
+	v_lang024 =	&Veliki
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Postavke
@@ -628,7 +632,7 @@
 	t_Lang135 =	Drugi
 	t_Lang136 =	Istaknuto Redovi
 	t_Lang137 =	Zadana Skripta Urednik
-	t_Lang138 =	Uredi Skriptu (Ctrl+Shift+E)
+	t_Lang138 =	Otvori u vanjskom uređivaču (Ctrl+Shift+E)
 	t_Lang139 =	Odabrati
 	t_Lang140 =	Do Stupcu
 	t_Lang141 =	Svi Stupovi
@@ -821,6 +825,9 @@
 	d_Lang089 =	Ne red bira!
 	d_Lang090 =	Molimo, odaberite redak za umetanje ili uklanjanje skupinu.
 	d_Lang091 =	Pogrešna metoda
+	d_Lang092 =	Male ikone
+	d_Lang093 =	Velike ikone
+	d_Lang094 =	Ova značajka zahtijeva sustav Windows Vista ili noviji.
 		
 ; Start-up Tips		
 	Start_Tips =	

@@ -25,7 +25,7 @@ CreateIconsDll(File, Folder)
     Loop, %Folder%\*.ico
     {
         Counter++, Index := ReplaceIcon(module, A_LoopFileLongPath, Index)
-        If Counter = 40
+        If Counter = 20
         {
             DllCall("EndUpdateResource", "ptr", module, "uint", 0)
         ,   module := DllCall("BeginUpdateResource", "str", File, "uint", 0, "ptr")

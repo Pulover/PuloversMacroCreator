@@ -112,22 +112,26 @@
 	v_lang006 =	&Toolbar
 	v_lang007 =	&Hotkeys
 	v_lang008 =	O&bnoviť stĺpce veľkosť
-	v_lang009 =	Obnov&iť Rozloženie
+	v_lang009 =	&Ikony VeľKosť
+	v_lang010 =	Obnovi&ť Rozloženie
 		
-	v_lang010 =	&Berkas
-	v_lang011 =	&Nahrávať a prehrávať
-	v_lang012 =	&Perintah
-	v_lang013 =	&Mengedit
-	v_lang014 =	P&ilihan
-	v_lang015 =	&Vlastné
+	v_lang011 =	&Berkas
+	v_lang012 =	&Nahrávať a prehrávať
+	v_lang013 =	&Perintah
+	v_lang014 =	&Mengedit
+	v_lang015 =	P&ilihan
+	v_lang016 =	&Vlastné
 		
-	v_lang016 =	&Automatický
-	v_lang017 =	&Manuál
-	v_lang018 =	&Stop
-	v_lang019 =	&Pauza
+	v_lang017 =	&Automatický
+	v_lang018 =	&Manuál
+	v_lang019 =	&Stop
+	v_lang020 =	&Pauza
 		
-	v_lang020 =	&Kompaktné
-	v_lang021 =	&Štandardné
+	v_lang021 =	&Kompaktné
+	v_lang022 =	&Štandardné
+		
+	v_lang023 =	&Malý
+	v_lang024 =	&Rozsiahly
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Nastavenie
@@ -628,7 +632,7 @@
 	t_Lang135 =	Ostatné
 	t_Lang136 =	Zvýraznenie Riadkov
 	t_Lang137 =	Predvolený Editor Skriptov
-	t_Lang138 =	Upraviť Skript (Ctrl+Shift+E)
+	t_Lang138 =	Otvoriť v externom editore (Ctrl+Shift+E)
 	t_Lang139 =	Vybrať
 	t_Lang140 =	Podľa Stĺpca
 	t_Lang141 =	Všetky Stĺpce
@@ -821,6 +825,9 @@
 	d_Lang089 =	Nie riadok vybraný!
 	d_Lang090 =	Prosím, vyberte riadok pre vloženie alebo odstránenie skupiny.
 	d_Lang091 =	Neplatná metóda
+	d_Lang092 =	Malé ikony
+	d_Lang093 =	Veľké ikony
+	d_Lang094 =	Táto funkcia vyžaduje systém Windows Vista alebo vyšší.
 		
 ; Start-up Tips		
 	Start_Tips =	

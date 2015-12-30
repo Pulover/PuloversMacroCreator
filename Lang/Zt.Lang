@@ -112,22 +112,26 @@
 	v_lang006 =	工具欄
 	v_lang007 =	熱鍵
 	v_lang008 =	重列大小
-	v_lang009 =	重佈局
+	v_lang009 =	圖標尺寸
+	v_lang010 =	重佈局
 		
-	v_lang010 =	文件
-	v_lang011 =	錄製和播放
-	v_lang012 =	命令
-	v_lang013 =	編輯
-	v_lang014 =	選項
-	v_lang015 =	定制
+	v_lang011 =	文件
+	v_lang012 =	錄製和播放
+	v_lang013 =	命令
+	v_lang014 =	編輯
+	v_lang015 =	選項
+	v_lang016 =	定制
 		
-	v_lang016 =	自動
-	v_lang017 =	手冊
-	v_lang018 =	停止
-	v_lang019 =	暫停
+	v_lang017 =	自動
+	v_lang018 =	手冊
+	v_lang019 =	停止
+	v_lang020 =	暫停
 		
-	v_lang020 =	緊湊
-	v_lang021 =	默認
+	v_lang021 =	緊湊
+	v_lang022 =	默認
+		
+	v_lang023 =	小
+	v_lang024 =	大
 		
 ; Options Sub Menu		
 	o_Lang001 =	設置
@@ -628,7 +632,7 @@
 	t_Lang135 =	他人
 	t_Lang136 =	亮點行
 	t_Lang137 =	默認的腳本編輯器
-	t_Lang138 =	編輯腳本（按Ctrl+Shift+E）
+	t_Lang138 =	打开外部编辑器（Ctrl+Shift+E）
 	t_Lang139 =	選擇
 	t_Lang140 =	通過列
 	t_Lang141 =	所有列
@@ -821,6 +825,9 @@
 	d_Lang089 =	沒有行選擇！
 	d_Lang090 =	請選擇一個行插入或刪除組。
 	d_Lang091 =	無效的方法
+	d_Lang092 =	小圖標
+	d_Lang093 =	大圖標
+	d_Lang094 =	此功能需要Windows Vista或更高。
 		
 ; Start-up Tips		
 	Start_Tips =	

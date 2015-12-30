@@ -112,22 +112,26 @@
 	v_lang006 =	Thanh &công cụ
 	v_lang007 =	&Phím nóng
 	v_lang008 =	Th&iết lập lại Cột Kích
-	v_lang009 =	&Giao Diện Thiết Lập Lại
+	v_lang009 =	&BiểU TượNg KíCh ThướC
+	v_lang010 =	&Giao Diện Thiết Lập Lại
 		
-	v_lang010 =	&Tập tin
-	v_lang011 =	&Ghi lại và chơi
-	v_lang012 =	&Lệnh
-	v_lang013 =	&Chỉnh sửa
-	v_lang014 =	T&ùy chọn
-	v_lang015 =	Tù&y chỉnh
+	v_lang011 =	&Tập tin
+	v_lang012 =	&Ghi lại và chơi
+	v_lang013 =	&Lệnh
+	v_lang014 =	&Chỉnh sửa
+	v_lang015 =	T&ùy chọn
+	v_lang016 =	Tù&y chỉnh
 		
-	v_lang016 =	&Tự động
-	v_lang017 =	&Hướng dẫn sử dụng
-	v_lang018 =	Th&ôi
-	v_lang019 =	T&ạm dừng
+	v_lang017 =	&Tự động
+	v_lang018 =	&Hướng dẫn sử dụng
+	v_lang019 =	Th&ôi
+	v_lang020 =	T&ạm dừng
 		
-	v_lang020 =	&Nhỏ gọn
-	v_lang021 =	&Mặc Định
+	v_lang021 =	&Nhỏ gọn
+	v_lang022 =	&Mặc Định
+		
+	v_lang023 =	&Nhỏ
+	v_lang024 =	&Lớn
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Cài đặt
@@ -628,7 +632,7 @@
 	t_Lang135 =	Những người khác
 	t_Lang136 =	Hàng nổi bật
 	t_Lang137 =	Mặc định Script Editor
-	t_Lang138 =	Sửa Script (Ctrl+Shift+E)
+	t_Lang138 =	Mở trong trình soạn thảo bên ngoài (Ctrl+Shift+E)
 	t_Lang139 =	Chọn
 	t_Lang140 =	Bởi Cột
 	t_Lang141 =	Tất cả các cột
@@ -821,6 +825,9 @@
 	d_Lang089 =	Không có hàng lựa chọn!
 	d_Lang090 =	Xin vui lòng, hãy chọn một hàng để chèn hoặc xóa nhóm.
 	d_Lang091 =	Phương pháp không hợp lệ
+	d_Lang092 =	Small icons
+	d_Lang093 =	Các biểu tượng lớn
+	d_Lang094 =	Tính năng này yêu cầu Windows Vista hoặc cao hơn.
 		
 ; Start-up Tips		
 	Start_Tips =	

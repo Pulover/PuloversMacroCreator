@@ -112,22 +112,26 @@
 	v_lang006 =	B&arras de Ferramentas
 	v_lang007 =	A&talhos
 	v_lang008 =	&Restaurar Colunas
-	v_lang009 =	R&estaurar Layout
+	v_lang009 =	Tamanho dos &Ícones
+	v_lang010 =	R&estaurar Layout
 		
-	v_lang010 =	&Arquivo
-	v_lang011 =	&Gravar e Executar
-	v_lang012 =	&Comandos
-	v_lang013 =	&Editar
-	v_lang014 =	&Opções
-	v_lang015 =	&Personalizar
+	v_lang011 =	&Arquivo
+	v_lang012 =	&Gravar e Executar
+	v_lang013 =	&Comandos
+	v_lang014 =	&Editar
+	v_lang015 =	&Opções
+	v_lang016 =	&Personalizar
 		
-	v_lang016 =	&Automatico
-	v_lang017 =	&Manual
-	v_lang018 =	&Parar
-	v_lang019 =	Pa&usa
+	v_lang017 =	&Automatico
+	v_lang018 =	&Manual
+	v_lang019 =	&Parar
+	v_lang020 =	Pa&usa
 		
-	v_lang020 =	&Compacto
-	v_lang021 =	&Padrão
+	v_lang021 =	&Compacto
+	v_lang022 =	&Padrão
+		
+	v_lang023 =	&Pequeno
+	v_lang024 =	&Grande
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Configurações
@@ -628,7 +632,7 @@
 	t_Lang135 =	Outros
 	t_Lang136 =	Destacar Linhas
 	t_Lang137 =	Editor de Script Padrão
-	t_Lang138 =	Editar Script (Ctrl+Shift+E)
+	t_Lang138 =	Abrir em editor externo (Ctrl+Shift+E)
 	t_Lang139 =	Selecionar
 	t_Lang140 =	Por Coluna
 	t_Lang141 =	Todas as Colunas
@@ -821,6 +825,9 @@
 	d_Lang089 =	Nenhuma linha selecionada!
 	d_Lang090 =	Por favor, selecione uma linha para inserir ou remover o grupo.
 	d_Lang091 =	Método inválido
+	d_Lang092 =	Ícones pequenos
+	d_Lang093 =	Ícones grandes
+	d_Lang094 =	Este recurso requer Windows Vista ou superior.
 		
 ; Start-up Tips		
 	Start_Tips =	

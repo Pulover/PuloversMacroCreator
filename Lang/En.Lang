@@ -112,22 +112,26 @@
 	v_lang006 =	&Toolbars
 	v_lang007 =	H&otkeys
 	v_lang008 =	&Reset Columns Size
-	v_lang009 =	R&eset Layout
+	v_lang009 =	&Icons Size
+	v_lang010 =	R&eset Layout
 		
-	v_lang010 =	&File
-	v_lang011 =	&Record  Play
-	v_lang012 =	&Commands
-	v_lang013 =	&Edit
-	v_lang014 =	&Options
-	v_lang015 =	C&ustomize
+	v_lang011 =	&File
+	v_lang012 =	&Record  Play
+	v_lang013 =	&Commands
+	v_lang014 =	&Edit
+	v_lang015 =	&Options
+	v_lang016 =	C&ustomize
 		
-	v_lang016 =	&Automatic
-	v_lang017 =	&Manual
-	v_lang018 =	&Stop
-	v_lang019 =	&Pause
+	v_lang017 =	&Automatic
+	v_lang018 =	&Manual
+	v_lang019 =	&Stop
+	v_lang020 =	&Pause
 		
-	v_lang020 =	&Compact
-	v_lang021 =	&Default
+	v_lang021 =	&Compact
+	v_lang022 =	&Default
+		
+	v_lang023 =	&Small
+	v_lang024 =	&Large
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Settings
@@ -628,7 +632,7 @@
 	t_Lang135 =	Others
 	t_Lang136 =	Highlight Rows
 	t_Lang137 =	Default Script Editor
-	t_Lang138 =	Edit Script (Ctrl+Shift+E)
+	t_Lang138 =	Open in external editor (Ctrl+Shift+E)
 	t_Lang139 =	Select
 	t_Lang140 =	By Column
 	t_Lang141 =	All Columns
@@ -821,6 +825,9 @@
 	d_Lang089 =	No row selected!
 	d_Lang090 =	Please, select a row to insert or remove the group.
 	d_Lang091 =	Invalid method
+	d_Lang092 =	Small icons
+	d_Lang093 =	Large icons
+	d_Lang094 =	This feature requires Windows Vista or higher.
 		
 ; Start-up Tips		
 	Start_Tips =	

@@ -111,23 +111,27 @@
 	v_lang005 =	&Preview
 	v_lang006 =	&Toolbar
 	v_lang007 =	&Hotkeys
-	v_lang008 =	&Ulang Kolom Ukuran
-	v_lang009 =	Atu&r Ulang Tata Letak
+	v_lang008 =	Ula&ng Kolom Ukuran
+	v_lang009 =	&Ukuran Ikon
+	v_lang010 =	Atu&r Ulang Tata Letak
 		
-	v_lang010 =	&Berkas
-	v_lang011 =	&Rekam dan Putar
-	v_lang012 =	&Perintah
-	v_lang013 =	&Mengedit
-	v_lang014 =	P&ilihan
-	v_lang015 =	&Sesuaikan
+	v_lang011 =	&Berkas
+	v_lang012 =	&Rekam dan Putar
+	v_lang013 =	&Perintah
+	v_lang014 =	&Mengedit
+	v_lang015 =	P&ilihan
+	v_lang016 =	&Sesuaikan
 		
-	v_lang016 =	&Otomatis
-	v_lang017 =	&Pedoman
-	v_lang018 =	&Berhenti
-	v_lang019 =	B&erhenti sebentar
+	v_lang017 =	&Otomatis
+	v_lang018 =	&Pedoman
+	v_lang019 =	&Berhenti
+	v_lang020 =	B&erhenti sebentar
 		
-	v_lang020 =	&Padat
-	v_lang021 =	&Kegagalan
+	v_lang021 =	&Padat
+	v_lang022 =	&Kegagalan
+		
+	v_lang023 =	&Kecil
+	v_lang024 =	&Besar
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Pengaturan
@@ -628,7 +632,7 @@
 	t_Lang135 =	Lainnya
 	t_Lang136 =	Baris Sorot
 	t_Lang137 =	Editor Default Skrip
-	t_Lang138 =	Mengedit Skrip (Ctrl+Shift+E)
+	t_Lang138 =	Nyílt külső szerkesztőben (Ctrl+Shift+E)
 	t_Lang139 =	Memilih
 	t_Lang140 =	Dengan Kolom
 	t_Lang141 =	Semua Kolom
@@ -821,6 +825,9 @@
 	d_Lang089 =	Tidak ada baris yang dipilih!
 	d_Lang090 =	Silakan, pilih baris untuk memasukkan atau mengeluarkan kelompok.
 	d_Lang091 =	Metode valid
+	d_Lang092 =	Ikon kecil
+	d_Lang093 =	Ikon besar
+	d_Lang094 =	Fitur ini memerlukan Windows Vista atau yang lebih tinggi.
 		
 ; Start-up Tips		
 	Start_Tips =	

@@ -112,22 +112,26 @@
 	v_lang006 =	&Værktøjslinjer
 	v_lang007 =	&Genvejstaster
 	v_lang008 =	&Nulstil Kolonner Size
-	v_lang009 =	&Reset Layout
+	v_lang009 =	Ik&oner StøRrelse
+	v_lang010 =	&Reset Layout
 		
-	v_lang010 =	&Fil
-	v_lang011 =	&Optage og afspille
-	v_lang012 =	&Kommandoer
-	v_lang013 =	&Redigere
-	v_lang014 =	O&ptioner
-	v_lang015 =	&Tilpas
+	v_lang011 =	&Fil
+	v_lang012 =	&Optage og afspille
+	v_lang013 =	&Kommandoer
+	v_lang014 =	&Redigere
+	v_lang015 =	O&ptioner
+	v_lang016 =	&Tilpas
 		
-	v_lang016 =	&Automatisk
-	v_lang017 =	&Manual
-	v_lang018 =	&Stands
-	v_lang019 =	&Pause
+	v_lang017 =	&Automatisk
+	v_lang018 =	&Manual
+	v_lang019 =	&Stands
+	v_lang020 =	&Pause
 		
-	v_lang020 =	&Compact
-	v_lang021 =	&Standard
+	v_lang021 =	&Compact
+	v_lang022 =	&Standard
+		
+	v_lang023 =	&Lille
+	v_lang024 =	&Stor
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Indstillinger
@@ -628,7 +632,7 @@
 	t_Lang135 =	Andre
 	t_Lang136 =	Fremhæve Rækker
 	t_Lang137 =	Standard Script Editor
-	t_Lang138 =	Rediger Script (Ctrl+Shift+E)
+	t_Lang138 =	Open in externe editor (Ctrl+Shift+E)
 	t_Lang139 =	Vælg
 	t_Lang140 =	Ved Kolonne
 	t_Lang141 =	Alle Kolonner
@@ -821,6 +825,9 @@
 	d_Lang089 =	Ingen rækken valgt!
 	d_Lang090 =	Please, skal du vælge en række for at indsætte eller fjerne gruppen.
 	d_Lang091 =	Ugyldig metode
+	d_Lang092 =	Små ikoner
+	d_Lang093 =	Store ikoner
+	d_Lang094 =	Denne funktion kræver Windows Vista eller højere.
 		
 ; Start-up Tips		
 	Start_Tips =	

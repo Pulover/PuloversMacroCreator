@@ -112,22 +112,26 @@
 	v_lang006 =	Pan&ely Nástrojov
 	v_lang007 =	&Klávesové Skratky
 	v_lang008 =	Pona&stavi stolpce Velikost
-	v_lang009 =	&Reset Postavitev
+	v_lang009 =	Ve&likost Ikone
+	v_lang010 =	&Reset Postavitev
 		
-	v_lang010 =	&Súbor
-	v_lang011 =	S&nemanje in predvajanje
-	v_lang012 =	&Príkazy
-	v_lang013 =	&Editovať
-	v_lang014 =	&Možnosti
-	v_lang015 =	P&rilagajanje
+	v_lang011 =	&Súbor
+	v_lang012 =	S&nemanje in predvajanje
+	v_lang013 =	&Príkazy
+	v_lang014 =	&Editovať
+	v_lang015 =	&Možnosti
+	v_lang016 =	P&rilagajanje
 		
-	v_lang016 =	&Avtomatski
-	v_lang017 =	&Ročni
-	v_lang018 =	&Stop
-	v_lang019 =	&Premor
+	v_lang017 =	&Avtomatski
+	v_lang018 =	&Ročni
+	v_lang019 =	&Stop
+	v_lang020 =	&Premor
 		
-	v_lang020 =	&Kompaktna
-	v_lang021 =	&Privzeto
+	v_lang021 =	&Kompaktna
+	v_lang022 =	&Privzeto
+		
+	v_lang023 =	&Majhno
+	v_lang024 =	&Velika
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Nastavitve
@@ -628,7 +632,7 @@
 	t_Lang135 =	Drugi
 	t_Lang136 =	Vrhunec Vrstic
 	t_Lang137 =	Privzeti Urejevalnik Skript
-	t_Lang138 =	Uredi Skript (Ctrl+Shift+E)
+	t_Lang138 =	Odpri v zunanjem urejevalniku (Ctrl+Shift+E)
 	t_Lang139 =	Izberite
 	t_Lang140 =	S Kolone
 	t_Lang141 =	Vsi Stolpci
@@ -821,6 +825,9 @@
 	d_Lang089 =	Ne vrstica izbrana!
 	d_Lang090 =	Prosimo, izberite vrstico za vstavljanje ali odstraniti skupino.
 	d_Lang091 =	Neveljavna metoda
+	d_Lang092 =	Majhne ikone
+	d_Lang093 =	Velike ikone
+	d_Lang094 =	Ta funkcija zahteva Windows Vista ali višje.
 		
 ; Start-up Tips		
 	Start_Tips =	

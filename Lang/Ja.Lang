@@ -112,22 +112,26 @@
 	v_lang006 =	ツールバー
 	v_lang007 =	ホットキー
 	v_lang008 =	列のサイズをリセット
-	v_lang009 =	レイアウトをリセット
+	v_lang009 =	アイコンのサイズ
+	v_lang010 =	レイアウトをリセット
 		
-	v_lang010 =	ファイル
-	v_lang011 =	記録と再生
-	v_lang012 =	コマンド
-	v_lang013 =	編集
-	v_lang014 =	オプション
-	v_lang015 =	カスタマイズ
+	v_lang011 =	ファイル
+	v_lang012 =	記録と再生
+	v_lang013 =	コマンド
+	v_lang014 =	編集
+	v_lang015 =	オプション
+	v_lang016 =	カスタマイズ
 		
-	v_lang016 =	自動
-	v_lang017 =	マニュアル
-	v_lang018 =	停止
-	v_lang019 =	休止
+	v_lang017 =	自動
+	v_lang018 =	マニュアル
+	v_lang019 =	停止
+	v_lang020 =	休止
 		
-	v_lang020 =	コンパクト
-	v_lang021 =	デフォルト
+	v_lang021 =	コンパクト
+	v_lang022 =	デフォルト
+		
+	v_lang023 =	小さい
+	v_lang024 =	大
 		
 ; Options Sub Menu		
 	o_Lang001 =	設定
@@ -628,7 +632,7 @@
 	t_Lang135 =	他人
 	t_Lang136 =	ハイライトの行
 	t_Lang137 =	デフォルトのスクリプトエディタ
-	t_Lang138 =	スクリプトを編集（Ctrl+Shiftキー+ E）
+	t_Lang138 =	外部エディタで開きます（Ctrl+Shiftキー+E）
 	t_Lang139 =	選択する
 	t_Lang140 =	列で
 	t_Lang141 =	すべての列
@@ -821,6 +825,9 @@
 	d_Lang089 =	いいえ行が選択されていません！
 	d_Lang090 =	、挿入またはグループを削除する行を選択してください。
 	d_Lang091 =	無効なメソッド
+	d_Lang092 =	小さいアイコン
+	d_Lang093 =	大きいアイコン
+	d_Lang094 =	この機能は、Windows Vista以降が必要です。
 		
 ; Start-up Tips		
 	Start_Tips =	

@@ -112,22 +112,26 @@
 	v_lang006 =	Barr&es D'outils
 	v_lang007 =	Ra&ccourcis Clavier
 	v_lang008 =	R&éinitialiser Taille colonnes
-	v_lang009 =	Rétabl&ir La Disposition
+	v_lang009 =	&Icônes Taille
+	v_lang010 =	Rétablir &La Disposition
 		
-	v_lang010 =	&Fichier
-	v_lang011 =	&Enregistrement et lecture
-	v_lang012 =	&Commandes
-	v_lang013 =	&Éditer
-	v_lang014 =	&Les Options
-	v_lang015 =	&Personnaliser
+	v_lang011 =	&Fichier
+	v_lang012 =	&Enregistrement et lecture
+	v_lang013 =	&Commandes
+	v_lang014 =	&Éditer
+	v_lang015 =	&Les Options
+	v_lang016 =	&Personnaliser
 		
-	v_lang016 =	&Automatique
-	v_lang017 =	&Manuel
-	v_lang018 =	A&rrêter
-	v_lang019 =	&Pause
+	v_lang017 =	&Automatique
+	v_lang018 =	&Manuel
+	v_lang019 =	A&rrêter
+	v_lang020 =	&Pause
 		
-	v_lang020 =	&Compact
-	v_lang021 =	&Par Défaut
+	v_lang021 =	&Compact
+	v_lang022 =	&Par Défaut
+		
+	v_lang023 =	&Petit
+	v_lang024 =	&Grand
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Réglages
@@ -628,7 +632,7 @@
 	t_Lang135 =	Autres
 	t_Lang136 =	Les Lignes En Surbrillance
 	t_Lang137 =	Éditeur De Script Par Défaut
-	t_Lang138 =	Modifier Le Script (Ctrl+Maj+E)
+	t_Lang138 =	Ouvrir dans l'éditeur externe (Ctrl+Maj+E)
 	t_Lang139 =	Sélectionner
 	t_Lang140 =	Par Colonne
 	t_Lang141 =	Tous Les Colonnes
@@ -821,6 +825,9 @@
 	d_Lang089 =	Aucune ligne sélectionnée!
 	d_Lang090 =	S'il vous plaît, sélectionner une ligne pour insérer ou retirer le groupe.
 	d_Lang091 =	Méthode invalide
+	d_Lang092 =	Petites icônes
+	d_Lang093 =	Grandes icônes
+	d_Lang094 =	Cette fonction nécessite Windows Vista ou supérieur.
 		
 ; Start-up Tips		
 	Start_Tips =	

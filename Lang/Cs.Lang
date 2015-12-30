@@ -112,22 +112,26 @@
 	v_lang006 =	&Panely Nástrojů
 	v_lang007 =	&Klávesové Zkratky
 	v_lang008 =	O&bnovit sloupce Velikost
-	v_lang009 =	Obnov&it Rozložení
+	v_lang009 =	&Ikony Velikost
+	v_lang010 =	Obnovi&t Rozložení
 		
-	v_lang010 =	&Soubor
-	v_lang011 =	&Nahrávat a přehrávat
-	v_lang012 =	&Příkazy
-	v_lang013 =	&Editovat
-	v_lang014 =	&Možnosti
-	v_lang015 =	&Vlastní
+	v_lang011 =	&Soubor
+	v_lang012 =	&Nahrávat a přehrávat
+	v_lang013 =	&Příkazy
+	v_lang014 =	&Editovat
+	v_lang015 =	&Možnosti
+	v_lang016 =	&Vlastní
 		
-	v_lang016 =	&Automatický
-	v_lang017 =	&Manuál
-	v_lang018 =	&Zastavit
-	v_lang019 =	&Pauza
+	v_lang017 =	&Automatický
+	v_lang018 =	&Manuál
+	v_lang019 =	&Zastavit
+	v_lang020 =	&Pauza
 		
-	v_lang020 =	&Kompaktní
-	v_lang021 =	&Standardní
+	v_lang021 =	&Kompaktní
+	v_lang022 =	&Standardní
+		
+	v_lang023 =	&Malý
+	v_lang024 =	&Velký
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Nastavení
@@ -628,7 +632,7 @@
 	t_Lang135 =	Ostatní
 	t_Lang136 =	Zvýraznění Řádků
 	t_Lang137 =	Výchozí Editor Skriptů
-	t_Lang138 =	Upravit Skript (Ctrl+Shift+E)
+	t_Lang138 =	Otvori u vanjskom uređivaču (Ctrl+Shift+E)
 	t_Lang139 =	Vybrat
 	t_Lang140 =	Podle Sloupce
 	t_Lang141 =	Všechny Sloupce
@@ -821,6 +825,9 @@
 	d_Lang089 =	Ne řádek vybrán!
 	d_Lang090 =	Prosím, vyberte řádek pro vložení nebo odstranění skupiny.
 	d_Lang091 =	Neplatná metoda
+	d_Lang092 =	Malé ikony
+	d_Lang093 =	Velké ikony
+	d_Lang094 =	Tato funkce vyžaduje systém Windows Vista nebo vyšší.
 		
 ; Start-up Tips		
 	Start_Tips =	

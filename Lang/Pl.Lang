@@ -112,22 +112,26 @@
 	v_lang006 =	P&aski Narzędzi
 	v_lang007 =	&Hotkeys
 	v_lang008 =	&Resetuj rozmiar kolumny
-	v_lang009 =	W&yzeruj
+	v_lang009 =	&Ikony Rozmiar
+	v_lang010 =	W&yzeruj
 		
-	v_lang010 =	&Plik
-	v_lang011 =	&Nagrywanie i odtwarzanie
-	v_lang012 =	P&olecenia
-	v_lang013 =	&Edytować
-	v_lang014 =	Op&cje
-	v_lang015 =	&Настроить...
+	v_lang011 =	&Plik
+	v_lang012 =	&Nagrywanie i odtwarzanie
+	v_lang013 =	P&olecenia
+	v_lang014 =	&Edytować
+	v_lang015 =	Op&cje
+	v_lang016 =	&Настроить...
 		
-	v_lang016 =	&Automatyczny
-	v_lang017 =	&Ręczny
-	v_lang018 =	&Zatrzymać
-	v_lang019 =	&Pauza
+	v_lang017 =	&Automatyczny
+	v_lang018 =	&Ręczny
+	v_lang019 =	&Zatrzymać
+	v_lang020 =	&Pauza
 		
-	v_lang020 =	&Zwarty
-	v_lang021 =	&Domyślnie
+	v_lang021 =	&Zwarty
+	v_lang022 =	&Domyślnie
+		
+	v_lang023 =	&Mały
+	v_lang024 =	&Duże
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Ustawienia
@@ -628,7 +632,7 @@
 	t_Lang135 =	Inne
 	t_Lang136 =	Wiersze Highlight
 	t_Lang137 =	Domyślny Edytor Skryptów
-	t_Lang138 =	Edycja Skryptu (Ctrl+Shift+E)
+	t_Lang138 =	Otwórz w edytorze zewnętrznym (Ctrl+Shift+E)
 	t_Lang139 =	Wybierać
 	t_Lang140 =	By Kolumnie
 	t_Lang141 =	Wszystkie Kolumny
@@ -821,6 +825,9 @@
 	d_Lang089 =	Nie rząd wybrany!
 	d_Lang090 =	Proszę wybrać wiersz, aby wstawić lub usunąć grupę.
 	d_Lang091 =	Nieprawidłowy sposób
+	d_Lang092 =	Małe ikony
+	d_Lang093 =	Duże ikony
+	d_Lang094 =	Ta funkcja wymaga systemu Windows Vista lub nowszego.
 		
 ; Start-up Tips		
 	Start_Tips =	
