@@ -946,6 +946,7 @@
 	IncFiles_TT =	Bao gồm các file / Giá trị
 	IncFolders_TT =	Bao gồm các thư mục (folder) / Keys
 	Recurse_TT =	Đệ quy vào thư mục con (thư mục con) / Subkeys
+	CmdSort_TT =	Xếp theo vần
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	Đúp Nhấn vào đây để chỉnh sửa

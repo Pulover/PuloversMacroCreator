@@ -946,6 +946,7 @@
 	IncFiles_TT =	Inkluder filer / Verdier
 	IncFolders_TT =	Inkluder kataloger (mapper) / Keys
 	Recurse_TT =	Rekursive inn i underkataloger (undermapper) / undernøkler
+	CmdSort_TT =	Sorter alfabetisk
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	Dobbeltklikk for å redigere

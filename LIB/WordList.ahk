@@ -44,8 +44,8 @@ lv_getnext lv_gettext lv_insert lv_insertcol lv_modify lv_modifycol lv_setimagel
 minindex mod newenum next numget numput objaddref objclone object objgetaddress objgetcapacity
 objinsert objmaxindex objminindex objnewenum objrelease objremove objsetcapacity onmessage ord
 pop processpath push rawread rawwrite readline regexmatch regexreplace registercallback remove removeat
-round rtrim sb_seticon sb_setparts sb_settext seek setcapacity sin sqrt strget strlen strput strsplit substr
-tan tell trim tv_add tv_delete tv_get tv_getchild tv_getcount tv_getnext tv_getparent tv_getprev
+round rtrim sb_seticon sb_setparts sb_settext seek setcapacity sin sqrt strget strlen strput strreplace strsplit
+substr tan tell trim tv_add tv_delete tv_get tv_getchild tv_getcount tv_getnext tv_getparent tv_getprev
 tv_getselection tv_gettext tv_modify varsetcapacity varsetcapcity winactive winexist write writeline
 )
 

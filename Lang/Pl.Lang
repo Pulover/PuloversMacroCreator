@@ -946,6 +946,7 @@
 	IncFiles_TT =	Dołącz pliki / wartości
 	IncFolders_TT =	Dołącz katalogi (foldery) / Keys
 	Recurse_TT =	Rekurencyjne do podkatalogów (podfoldery) / podklucze
+	CmdSort_TT =	Sortuj alfabetycznie
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	Kliknij dwukrotnie, aby edytować

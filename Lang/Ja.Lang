@@ -946,6 +946,7 @@
 	IncFiles_TT =	ファイル/値を含みます
 	IncFolders_TT =	ディレクトリ（フォルダ）/キーを含めます
 	Recurse_TT =	サブディレクトリへの再帰（サブフォルダ）/サブキー
+	CmdSort_TT =	アルファベット順にソート
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	ダブルクリックして編集する

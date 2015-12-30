@@ -946,6 +946,7 @@
 	IncFiles_TT =	Medtag filer / Værdier
 	IncFolders_TT =	Medtag vejvisere (mapper) / Nøgler
 	Recurse_TT =	Rekursive i undermapper (undermapper) / undernøgler
+	CmdSort_TT =	Sorter alfabetisk
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	Dobbeltklik for at redigere

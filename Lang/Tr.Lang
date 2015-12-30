@@ -946,6 +946,7 @@
 	IncFiles_TT =	Dosyaları / Değerler Dahil
 	IncFolders_TT =	Dizin (klasör) / Keys Dahil
 	Recurse_TT =	Alt dizinleri içine recursive (alt klasörler) / Alt anahtarları
+	CmdSort_TT =	Alfabetik sıralama
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	Düzenlemek için çift tıklayın

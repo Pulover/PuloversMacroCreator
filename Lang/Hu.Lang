@@ -946,6 +946,7 @@
 	IncFiles_TT =	Tartalmazzák kép / Értékek
 	IncFolders_TT =	Tartalmazzák (mappákban) / Keys
 	Recurse_TT =	Rekurzív alkönyvtárakra (almappák) / Alkulcsok
+	CmdSort_TT =	Rendezés ABC sorrendbe
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	Kattintson duplán a szerkeszteni

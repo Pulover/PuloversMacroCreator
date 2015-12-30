@@ -946,6 +946,7 @@
 	IncFiles_TT =	Include-Dateien / Werte
 	IncFolders_TT =	Fügen Sie Verzeichnisse (Ordner) / Tasten
 	Recurse_TT =	Rekursive Unterverzeichnisse (Unterordner) / Unterschlüssel
+	CmdSort_TT =	Alphabetisch
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	Zum Bearbeiten doppelklicken

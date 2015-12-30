@@ -946,6 +946,7 @@
 	IncFiles_TT =	Zahrnout soubory / hodnoty
 	IncFolders_TT =	Zahrnout adresáře (složky) / Keys
 	Recurse_TT =	Rekurzivní do podadresářů (podsložek) / podklíčů
+	CmdSort_TT =	Řadit abecedně
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	Dvakrát klikněte na upravit

@@ -946,6 +946,7 @@
 	IncFiles_TT =	Include files / Values
 	IncFolders_TT =	Include directories (folders) / Keys
 	Recurse_TT =	Recurse into subdirectories (subfolders) / Subkeys
+	CmdSort_TT =	Sort alphabetically
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	Double-Click to edit

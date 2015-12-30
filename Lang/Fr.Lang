@@ -946,6 +946,7 @@
 	IncFiles_TT =	Inclure les fichiers / Valeurs
 	IncFolders_TT =	Inclure les répertoires (dossiers) Touches /
 	Recurse_TT =	Récursifs dans les sous-répertoires (sous-dossiers) / subkeys
+	CmdSort_TT =	Classer par ordre alphabétique
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	Double-cliquez dessus pour modifier

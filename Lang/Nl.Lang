@@ -946,6 +946,7 @@
 	IncFiles_TT =	Include bestanden / Waarden
 	IncFolders_TT =	Omvatten directories (mappen) / Keys
 	Recurse_TT =	Recursieve in submappen (submappen) / Subsleutels
+	CmdSort_TT =	Alfabetisch sorteren
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	Dubbelklik op om te bewerken

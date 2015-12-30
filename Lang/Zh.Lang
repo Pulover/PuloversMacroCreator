@@ -946,6 +946,7 @@
 	IncFiles_TT =	包括文件/价值观
 	IncFolders_TT =	包括目录（文件夹）/键
 	Recurse_TT =	递归到子目录（子文件夹）/子项
+	CmdSort_TT =	按字母顺序排序
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	双击进行编辑

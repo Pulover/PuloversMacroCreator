@@ -946,6 +946,7 @@
 	IncFiles_TT =	Sisältää tiedostot / Arvot
 	IncFolders_TT =	Sisällytä hakemistot (kansiot) / Avaimet
 	Recurse_TT =	Rekursiivinen osaksi alihakemistot (alikansiot) / Aliavainten
+	CmdSort_TT =	Lajittele aakkosjärjestyksessä
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	Kaksoisnapsauta muokata

@@ -946,6 +946,7 @@
 	IncFiles_TT =	Termasuk file / Nilai
 	IncFolders_TT =	Termasuk direktori (folder) / Keys
 	Recurse_TT =	Rekursif ke dalam subdirektori (subfolder) / Subkunci
+	CmdSort_TT =	Urutkan berdasarkan abjad
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	Double-Klik untuk mengedit

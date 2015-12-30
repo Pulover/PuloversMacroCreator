@@ -946,6 +946,7 @@
 	IncFiles_TT =	파일 / 값을 포함
 	IncFolders_TT =	디렉토리 (폴더) / 키 포함
 	Recurse_TT =	하위 디렉토리로 재귀 (하위) / 하위 키
+	CmdSort_TT =	알파벳순으로 정렬
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	편집하려면 더블 클릭

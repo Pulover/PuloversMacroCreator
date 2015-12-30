@@ -213,7 +213,8 @@ IconsNames := { "apply": 1
 			,	"undock": 106
 			,	"parameter": 107
 			,	"close": 108
-			,	"extedit": 109 }
+			,	"extedit": 109
+			,	"sort": 110 }
 
 KeyNameRep := "
 (Join,

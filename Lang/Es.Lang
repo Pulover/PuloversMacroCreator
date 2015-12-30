@@ -946,6 +946,7 @@
 	IncFiles_TT =	Incluir archivos / Valores
 	IncFolders_TT =	Incluir directorios (carpetas) / Keys
 	Recurse_TT =	Recursivas en subdirectorios (subcarpetas) / subclaves
+	CmdSort_TT =	Ordenar alfabéticamente
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	Haga doble clic para editar

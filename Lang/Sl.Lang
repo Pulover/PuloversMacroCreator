@@ -946,6 +946,7 @@
 	IncFiles_TT =	Vključi datoteke / Values
 	IncFolders_TT =	Vključite imenikov (mape) / Keys
 	Recurse_TT =	Rekurzivne v podimenike (podmape) / podključi
+	CmdSort_TT =	Razvrsti po abecedi
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	Dvakrat kliknite za urejanje
