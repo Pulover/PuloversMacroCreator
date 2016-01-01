@@ -17,19 +17,19 @@ Software License: [GNU General Public License](License.html)
 ## Thanks to
 
 Chris and Lexikos for [AutoHotkey](http://ahkscript.org/).  
-tic (Tariq Porter) for his [GDI+ Library](http://www.autohotkey.com/board/topic/29449-gdi-standard-library).  
-tkoi & majkinetor for the [ILButton function](http://www.autohotkey.com/board/topic/37147-ilbutton-image-buttons).  
-just me for [LV_Colors Class](http://autohotkey.com/boards/viewtopic.php?f=6&t=1081), [LV_EX](http://autohotkey.com/boards/viewtopic.php?t=1256)/[IL_EX](http://autohotkey.com/boards/viewtopic.php?f=6&t=1273) functions, GuiCtrlAddTab and for updating ILButton to 64bit.  
-Micahs for the [base code](http://www.autohotkey.com/board/topic/30486-listview-tooltip-on-mouse-hover/?p=280843) of the Drag-Rows function.  
-jaco0646 for the [function](http://www.autohotkey.com/board/topic/47439-user-defined-dynamic-hotkeys) to make hotkey controls detect other keys.  
-Laszlo for the [Monster function](http://www.autohotkey.com/board/topic/15675-monster) to solve expressions.  
-Jethrow for the [IEGet & WBGet Functions](http://www.autohotkey.com/board/topic/47052-basic-webpage-controls).  
-RaptorX for the [Scintilla Wrapper for AHK](http://www.autohotkey.com/board/topic/85928-wrapper-scintilla-wrapper).  
-majkinetor for the [Dlg_Color](http://www.autohotkey.com/board/topic/49214-ahk-ahk-l-forms-framework-08/) function.  
-rbrtryn for the [ChooseColor](http://www.autohotkey.com/board/topic/91229-windows-color-picker-plus/) function.  
-PhiLho and skwire for the [function](http://www.autohotkey.com/board/topic/11926-can-you-move-a-listview-column-programmatically/#entry237340) to Get/Set the order of columns.  
-fincs for [GenDocs](http://www.autohotkey.com/board/topic/71751-gendocs-v30-alpha002) and [SciLexer.dll custom builds](http://www.autohotkey.com/board/topic/54431-scite4autohotkey-v3004-updated-aug-14-2013/page-58#entry566139).  
-T800 for [Html Help utils](http://www.autohotkey.com/board/topic/17984-html-help-utils).  
+tic (Tariq Porter) for his [GDI+ Library](http://autohotkey.com/board/topic/29449-gdi-standard-library).  
+tkoi & majkinetor for the [ILButton function](http://autohotkey.com/board/topic/37147-ilbutton-image-buttons).  
+just me for [LV_Colors Class](http://autohotkey.com/boards/viewtopic.php?f=6&t=1081), [LV_EX](http://autohotkey.com/boards/viewtopic.php?t=1256)/[IL_EX](http://autohotkey.com/boards/viewtopic.php?f=6&t=1273) functions and for updating ILButton to 64bit.  
+Micahs for the [base code](http://autohotkey.com/board/topic/30486-listview-tooltip-on-mouse-hover/?p=280843) of the Drag-Rows function.  
+jaco0646 for the [function](http://autohotkey.com/board/topic/47439-user-defined-dynamic-hotkeys) to make hotkey controls detect other keys.  
+Uberi for the [ExprEval function](http://autohotkey.com/board/topic/64167-expreval-evaluate-expressions) to solve expressions.  
+Jethrow for the [IEGet & WBGet Functions](http://autohotkey.com/board/topic/47052-basic-webpage-controls).  
+RaptorX for the [Scintilla Wrapper for AHK](http://autohotkey.com/board/topic/85928-wrapper-scintilla-wrapper).  
+majkinetor for the [Dlg_Color](http://autohotkey.com/board/topic/49214-ahk-ahk-l-forms-framework-08/) function.  
+rbrtryn for the [ChooseColor](http://autohotkey.com/board/topic/91229-windows-color-picker-plus/) function.  
+PhiLho and skwire for the [function](http://autohotkey.com/board/topic/11926-can-you-move-a-listview-column-programmatically/#entry237340) to Get/Set the order of columns.  
+fincs for [GenDocs](http://autohotkey.com/board/topic/71751-gendocs-v30-alpha002) and [SciLexer.dll custom builds](http://autohotkey.com/board/topic/54431-scite4autohotkey-v3004-updated-aug-14-2013/page-58#entry566139).  
+T800 for [Html Help utils](http://autohotkey.com/board/topic/17984-html-help-utils).  
 Thiago Talma for some improvements to the code, debugging and many suggestions.  
 Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jörg Schmalenberger (German), amnesiac (Chinese Simplified).  
 
@@ -38,9 +38,13 @@ Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jör
 
 ## Version 5.0.0
 
-* Added support for array assignment in Variables window and IECOM/COMInterface.
+* New feature: User Defined Functions.
+* New feature: Listview Groups (+WinVista).
+* Extended support for expressions (AHK standard format, see help for details) in Variable Assignment, Evaluate Expression and command parameters started with % .
+* Multiple If Statements are now supported in 'Evaluate Expression' (e.g.: var = 5 || var = "a").
+* Added support for array assignment in Variables, Functions and IECOM/COMInterface.
 * Added support for array methods in Functions window.
-* Added For-Loops.
+* Added For-Loops in Loop Command window.
 * Added support for Multi-Dimensional Arrays inside function parameters and commands.
 * Added support for Multi-Dimensional Arrays assignment (e.g.: MyArray[1][2] := Value).
 * Added support for named keys in arrays (e.g.: N["key"]).
@@ -48,7 +52,6 @@ Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jör
 * Added support for array methods inside commands (e.g.: % MyArray.Length()).
 * Added support for array methods inside Variable Assignment when "Expression" is checked or "Value" is starts with "% ".
 * Added option to change color of the rectangle of Image/Pixel Search area and Screenshots tool.
-* New feature: Listview Groups.
 * Updated "Loop, File" and "Loop, Reg" to new format with "Mode" parameter.
 * Changed "List Variables" to display only User-Defined variables.
 * Fixed corrupted pmc files saved on exit.

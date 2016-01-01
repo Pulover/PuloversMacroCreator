@@ -70,8 +70,8 @@
 			{
 				TabCount++
 				Gui, chMacro:ListView, InputList%TabCount%
-				GuiCtrlAddTab(TabSel, "Macro" TabCount)
-			,	GuiAddLV(TabCount), CopyMenuLabels[TabCount] := "Macro" TabCount
+				GuiControl, chMacro:, %TabSel%, Macro%TabCount%
+				GuiAddLV(TabCount), CopyMenuLabels[TabCount] := "Macro" TabCount
 				Menu, CopyTo, Add, % CopyMenuLabels[TabCount], CopyList
 				this.LVLoad("InputList" TabCount, PmcCode[A_Index])
 				Gui, chMacro:ListView, InputList%TabCount%

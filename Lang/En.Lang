@@ -850,15 +850,29 @@
 	d_Lang092 =	Small icons
 	d_Lang093 =	Large icons
 	d_Lang094 =	This feature requires Windows Vista or higher.
-	d_Lang095 =	The use of ByRef causes a parameter to become an alias for the variable passed in from the caller. In other words, the parameter and the caller's variable both refer to the same contents in memory
+	d_Lang095 =	The use of ByRef causes a parameter to become an alias for the variable passed in from the caller. In other words, the parameter and the caller's variable both refer to the same contents in memory.
 	d_Lang096 =	
 	(LTrim	
-		- In PMC the return value may be a string, variable, array, function or math expression.
-		- You can return only 1 value. Do not mix different value types, unless it's a valid math expression.
-		- Enclose variables in percent signs (except inside arrays).
+		- DO NOT ENCLOSE VARIABLES IN PERCENT SIGNS HERE.
+		- Return value must be an expression.
+		- You may use strings, variables, arrays and functions. You may also combine any of those.
+		- To use strings, enclose them in quotes, e.g.: "Result is: " a + b.
 		- If you want to return extra results, you may also use ByRef in parameters.
 		- Arrays can be used to return multiple values or even named values.
 	)	
+	d_Lang097 =	
+	(LTrim	
+		- DO NOT ENCLOSE VARIABLES IN PERCENT SIGNS HERE.
+		- Most of AHK expressions are supported.
+		- You may use strings, variables, arrays and functions.
+		- To use strings, enclose them in quotes, e.g.: var = "a".
+	)	
+	d_Lang098 =	
+	(LTrim	
+		If one parameter has a default value, the following parameters are required to have too.
+		You might want to move this parameter to the end of the list.
+	)	
+	d_Lang099 =	The function name contains an illegal character.
 		
 ; Start-up Tips		
 	Start_Tips =	

@@ -56,8 +56,8 @@ ListCount1 := 0
 ,	cType45 := "ForLoop"
 ,	cType46 := "Method"
 ,	cType47 := "UserFunction"
-,	cType48 := "FunctionParameter"
-,	cType49 := "FunctionReturn"
+,	cType48 := "FuncParameter"
+,	cType49 := "FuncReturn"
 
 Action1 := "Click"
 ,	Action2 := "Move"

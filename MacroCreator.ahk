@@ -22,7 +22,7 @@ http://www.autohotkey.com/board/topic/29449-gdi-standard-library
 tkoi & majkinetor for the Graphic Buttons function.
 http://www.autohotkey.com/board/topic/37147-ilbutton-image-buttons
 
-just me for LV_Colors Class, LV_EX/IL_EX functions, GuiCtrlAddTab and for updating ILButton to 64bit.
+just me for LV_Colors Class, LV_EX/IL_EX functions and for updating ILButton to 64bit.
 http://autohotkey.com/boards/viewtopic.php?f=6&t=1081
 http://autohotkey.com/boards/viewtopic.php?t=1256
 http://autohotkey.com/boards/viewtopic.php?f=6&t=1273
@@ -40,8 +40,8 @@ http://www.autohotkey.com/board/topic/39392-fairly-elaborate-csv-functions
 jaco0646 for the function to make hotkey controls detect other keys.
 http://www.autohotkey.com/board/topic/47439-user-defined-dynamic-hotkeys
 
-Laszlo for the Monster function to solve expressions.
-http://www.autohotkey.com/board/topic/15675-monster
+Uberi for the ExprEval function to solve expressions.
+https://autohotkey.com/board/topic/64167-expreval-evaluate-expressions
 
 Jethrow for the IEGet & WBGet Functions.
 http://www.autohotkey.com/board/topic/47052-basic-webpage-controls
@@ -3048,10 +3048,10 @@ Gui, 34:Add, Edit, ys+20 xs+10 W340 H100 ReadOnly -E0x200,
 Chris and Lexikos for AutoHotkey.
 tic (Tariq Porter) for his GDI+ Library.
 tkoi && majkinetor for the ILButton function.
-just me for LV_Colors Class, LV_EX/IL_EX functions, GuiCtrlAddTab and for updating ILButton to 64bit.
+just me for LV_Colors Class, LV_EX/IL_EX functions and for updating ILButton to 64bit.
 Micahs for the base code of the Drag-Rows function.
 jaco0646 for the function to make hotkey controls detect other keys.
-Laszlo for the Monster function to solve expressions.
+Uberi for the ExprEval function to solve expressions.
 Jethrow for the IEGet & WBGet Functions.
 RaptorX for the Scintilla Wrapper for AHK.
 majkinetor for the Dlg_Color function.
@@ -6811,8 +6811,6 @@ If (s_Caller = "Edit")
 }
 Else
 	ExtList := ReadFunctions(StdLibFile)
-If (!IsFunc("Eval"))
-	GuiControl, 21:, UseEval, 0
 If (A_ThisLabel = "IfSt")
 {
 	GuiTitle := c_Lang009
@@ -6889,16 +6887,6 @@ Else If (InStr(Statement, "String"))
 		return
 	}
 	TestVar := TestVar ", " TestVar2
-}
-Else If (Statement = "Evaluate Expression")
-{
-	If (!IsFunc("Eval"))
-	{
-		MsgBox, 17, %d_Lang007%, %d_Lang044%
-		IfMsgBox, OK
-			Run, http://www.autohotkey.com/board/topic/15675-monster
-		return
-	}
 }
 Else If (Statement = "If Message Box")
 	TestVar := IfMsg%IfMsgB%
@@ -7126,15 +7114,6 @@ Else
 return
 
 UseEval:
-Gui, 21:+OwnDialogs
-If (!IsFunc("Eval"))
-{
-	GuiControl, 21:, UseEval, 0
-	MsgBox, 17, %d_Lang007%, %d_Lang044%
-	IfMsgBox, OK
-		Run, http://www.autohotkey.com/board/topic/15675-monster
-	return
-}
 Gui, 21:Submit, NoHide
 If (UseEval)
 	GuiControl, 21:Show, ArrayTip
@@ -8353,7 +8332,7 @@ Gui, 1:+Disabled
 Gui, 38:Add, Tab2, W450 H0 vTabControl AltSubmit, CmdTab1|CmdTab2|CmdTab3
 ; Function
 Gui, 38:Add, GroupBox, Section xm ym W450 H280
-Gui, 38:Add, Text, ys+15 xs+10 W330, %c_Lang089%:
+Gui, 38:Add, Text, ys+15 xs+10 W330 vFuncNameT, %c_Lang089%:
 Gui, 38:Add, Text, yp x+5 W80, %c_Lang218%:
 Gui, 38:Add, Edit, y+5 xs+10 W330 vFuncName, MyFunc
 Gui, 38:Add, DDL, yp x+5 W89 vFuncScope, %c_Lang219%||%c_Lang220%
@@ -8386,6 +8365,9 @@ Gui, 38:Add, Edit, yp-5 xs+25 W210 vParam6
 Gui, 38:Add, ComboBox, yp x+5 W150 vValue6, true|false|_blank
 Gui, 38:Add, CheckBox, yp+5 x+15 W30 vByRef6
 Gui, 38:Add, Text, y+10 xs+25 W400 cGray, %c_Lang222%
+; Gui, 38:Add, Button, -Wrap Section Default xm y+14 W75 H23 gUDFOK, %c_Lang020%
+; Gui, 38:Add, Button, -Wrap ys W75 H23 gUDFCancel, %c_Lang021%
+; Gui, 38:Add, Button, -Wrap ys W75 H23 vUDFApply gUDFApply Disabled, %c_Lang131%
 Gui, 38:Tab, 2
 ; Parameters
 Gui, 38:Add, GroupBox, Section xm ym W450 H280
@@ -8394,14 +8376,25 @@ Gui, 38:Add, Edit, y+5 xs+10 W430 vParamName
 Gui, 38:Add, Text, y+15 xs+10 W430, %c_Lang217%
 Gui, 38:Add, Edit, y+5 xs+10 W430 vDefaultValue
 Gui, 38:Add, CheckBox, y+15 xs+10 W100, ByRef
-Gui, 38:Add, Text, y+15 xs+10 W430 R10, %d_Lang095%
+Gui, 38:Add, Text, y+15 xs+10 W430 H120, %d_Lang095%
+; Gui, 38:Add, Button, -Wrap Section Default xm y+14 W75 H23 gUDFOK, %c_Lang020%
+; Gui, 38:Add, Button, -Wrap ys W75 H23 gUDFCancel, %c_Lang021%
+; Gui, 38:Add, Button, -Wrap ys W75 H23 vUDFApply gUDFApply Disabled, %c_Lang131%
 Gui, 38:Tab, 3
 ; Return
 Gui, 38:Add, GroupBox, Section xm ym W450 H280
 Gui, 38:Add, Text, ys+15 xs+10 W430, %c_Lang216%:
 Gui, 38:Add, Edit, y+5 xs+10 W430
-Gui, 38:Add, Text, y+15 xs+10 W430 R10, %d_Lang096%
-
+Gui, 38:Add, Text, y+15 xs+10 W430 H202, %d_Lang096%
+Gui, 38:Tab
+Gui, 38:Add, Button, -Wrap Section Default xm y+14 W75 H23 gUDFOK, %c_Lang020%
+Gui, 38:Add, Button, -Wrap ys W75 H23 gUDFCancel, %c_Lang021%
+Gui, 38:Add, Button, -Wrap ys W75 H23 vUDFApply gUDFApply Disabled, %c_Lang131%
+Gui, 38:Add, StatusBar
+Gui, 38:Default
+If (s_Caller = "Edit")
+{
+}
 If (A_ThisLabel = "UserFunction")
 {
 	GuiTitle := c_Lang212
@@ -8417,6 +8410,101 @@ Else If (A_ThisLabel = "FuncReturn")
 	GuiTitle := c_Lang214
 }
 Gui, 38:Show,, %GuiTitle%
+ChangeIcon(hIL_Icons, CmdWin, InStr(A_ThisLabel, "UserFunction") ? IconsNames["userfunc"] : InStr(A_ThisLabel, "FuncParameter") ? IconsNames["parameter"] : IconsNames["return"])
+Tooltip
+return
+
+UDFApply:
+UDFOK:
+Gui, 38:+OwnDialogs
+Gui, 38:Submit, NoHide
+If (TabControl = 1)
+{
+	If (FuncName = "")
+	{
+		Gui, 38:Font, cRed
+		GuiControl, 38:Font, FuncNameT
+		GuiControl, 38:Focus, FuncName
+		return
+	}
+	Try
+		z_Check := VarSetCapacity(%FuncName%)
+	Catch
+	{
+		MsgBox, 16, %d_Lang007%, %d_Lang099%
+		return
+	}
+	MustDefault := false
+	Loop, 6
+	{
+		If (Param%A_Index% = "")
+			continue
+		Param := Param%A_Index%
+		If (!RegExMatch(FuncName, "^\w+$"))
+		{
+			MsgBox, 16, %d_Lang007%, %d_Lang041%`n`n%Param%
+			return
+		}
+		If ((MustDefault) && (Value%A_Index% == ""))
+		{
+			MsgBox, 16, %d_Lang007%, %d_Lang098%
+			Return
+		}
+		If (Value%A_Index% != "")
+			MustDefault := true
+	}
+	CurrentTabs := ""
+	Loop, % TabCount
+	{
+		TabName := TabGetText(TabSel, A_Index)
+		If (TabName = FuncName)
+		{
+			MsgBox, 16, %d_Lang007%, %d_Lang050%
+			return
+		}
+		CurrentTabs .= TabName "|"
+	}
+	GoSub, TabPlus
+	CurrentTabs .= FuncName
+	GuiControl, chMacro:, %TabSel%, |%CurrentTabs%
+	GuiControl, chMacro:Choose, A_List, %A_List%
+	If (A_ThisLabel != "UDFApply")
+	{
+		Gui, 1:-Disabled
+		Gui, 38:Destroy
+	}
+	Gui, chMacro:Default
+	Loop, 6
+	{
+		DefaultDet := ""
+		If (Param%A_Index% = "")
+			continue
+		If (Value%A_Index% != "")
+		{
+			DefaultDet := (Value%A_Index% = "_blank" ? "" : Value%A_Index%)
+			If DefaultDet not in true,false
+			{
+				If DefaultDet is not Number
+					DefaultDet := """" DefaultDet """"
+			}
+			DefaultDet := " := " DefaultDet
+		}
+		Action := "[FuncParameter]", Details := Param%A_Index% . DefaultDet, Type := cType48
+	,	Target := ByRef%A_Index% ? "ByRef" : ""
+	,	LV_Add("Check", ListCount%A_List%+1, Action, Details, 1, 0, Type, Target, "")
+	}
+	LV_Add("Check", ListCount%A_List%+1, "[FunctionStart]", FuncName, 1, 0, cType47, FuncScope, "")
+,	LV_Add("Check", ListCount%A_List%+1, "[FuncReturn]", "", 1, 0, cType49, "", "")
+}
+GoSub, RowCheck
+GoSub, b_Start
+If (A_ThisLabel = "UDFApply")
+	Gui, 38:Default
+Else
+{
+	s_Caller := ""
+	GuiControl, Focus, InputList%A_List%
+}
 return
 
 UDFCancel:
@@ -9405,7 +9493,7 @@ Loop, %TabCount%
 While (InStr(AllTabs, TabName ","))
 	TabName := "Macro" TabCount+A_Index
 TabCount++
-GuiCtrlAddTab(TabSel, TabName)
+GuiControl, chMacro:, %TabSel%, %TabName%
 Gui, chMacro:ListView, InputList%TabCount%
 LVManager.SetHwnd(ListID%A_List%), LVManager.Add()
 If (ShowGroups)
