@@ -667,6 +667,7 @@ HistCheck(L)
 {
 	global
 
+	SavePrompt := true
 	If (MaxHistory = 0)
 		return
 	LVManager.Add()

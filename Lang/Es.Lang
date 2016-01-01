@@ -4,14 +4,15 @@
 		
 ; Main Menu		
 	m_Lang001 =	&Archivo
-	m_Lang002 =	&Comandos
-	m_Lang003 =	&Seleccionar
-	m_Lang004 =	&Editar
-	m_Lang005 =	&Macro
-	m_Lang006 =	&Ver
-	m_Lang007 =	&Opciones
-	m_Lang008 =	&Donar
-	m_Lang009 =	A&yuda
+	m_Lang002 =	&Macro
+	m_Lang003 =	
+	m_Lang004 =	&Comandos
+	m_Lang005 =	&Editar
+	m_Lang006 =	&Seleccionar
+	m_Lang007 =	&Ver
+	m_Lang008 =	&Opciones
+	m_Lang009 =	&Donar
+	m_Lang010 =	A&yuda
 		
 ; File Sub Menu		
 	f_Lang001 =	&Nuevo
@@ -28,21 +29,27 @@
 	f_Lang012 =	N&o hay archivos
 		
 ; Macro Sub Menu		
-	r_lang001 =	&Grabar macro
-	r_lang002 =	&Activar Macros
-	r_lang003 =	&Reproducir macro actual
-	r_lang004 =	&Timer
-	r_lang005 =	&Desactivar Macros
-	r_lang006 =	R&eproducir desde la fila seleccionada
-	r_lang007 =	Re&producir hasta la fila seleccionada
-	r_lang008 =	Repr&oducir las filas seleccionadas
-	r_lang009 =	Te&clas de acceso directo sensibles al contexto
-	r_lang010 =	A&ñadir Macro
-	r_lang011 =	Cerrar &Macro
-	r_lang012 =	D&uplicar macro
-	r_lang013 =	Ed&itar Macros
-	r_lang014 =	Importar Macro
-	r_lang015 =	Guardar macro actua&l
+	r_Lang001 =	&Grabar macro
+	r_Lang002 =	&Activar Macros
+	r_Lang003 =	&Reproducir macro actual
+	r_Lang004 =	&Timer
+	r_Lang005 =	&Desactivar Macros
+	r_Lang006 =	R&eproducir desde la fila seleccionada
+	r_Lang007 =	Re&producir hasta la fila seleccionada
+	r_Lang008 =	Repr&oducir las filas seleccionadas
+	r_Lang009 =	Te&clas de acceso directo sensibles al contexto
+	r_Lang010 =	A&ñadir Macro
+	r_Lang011 =	Cerrar &Macro
+	r_Lang012 =	D&uplicar macro
+	r_Lang013 =	Ed&itar Macros
+	r_Lang014 =	Importar Macro
+	r_Lang015 =	Guardar macro actua&l
+		
+; UDF Sub Menu		
+	u_Lang001 =	
+	u_Lang002 =	
+	u_Lang003 =	
+	u_Lang004 =	
 		
 ; Commands Sub Menu		
 	i_Lang001 =	&Ratón
@@ -104,34 +111,34 @@
 	s_Lang010 =	Tipo de comando
 		
 ; View Sub Menu		
-	v_lang001 =	&Siempre visible
-	v_lang002 =	&Destacar Filas
-	v_lang003 =	S&angría
-	v_lang004 =	&Barra de Controles
-	v_lang005 =	&Previa
-	v_lang006 =	Ba&rras De Herramientas
-	v_lang007 =	&Teclas De Acceso Rápido
-	v_lang008 =	&Cambiar Tamaño Columnas
-	v_lang009 =	Tamaño de Los &Iconos
-	v_lang010 =	R&establecer Diseño
+	v_Lang001 =	&Siempre visible
+	v_Lang002 =	&Destacar Filas
+	v_Lang003 =	S&angría
+	v_Lang004 =	&Barra de Controles
+	v_Lang005 =	&Previa
+	v_Lang006 =	Ba&rras De Herramientas
+	v_Lang007 =	&Teclas De Acceso Rápido
+	v_Lang008 =	&Cambiar Tamaño Columnas
+	v_Lang009 =	Tamaño de Los &Iconos
+	v_Lang010 =	R&establecer Diseño
 		
-	v_lang011 =	&Expediente
-	v_lang012 =	&Grabar y reproducir
-	v_lang013 =	&Comandos
-	v_lang014 =	E&ditar
-	v_lang015 =	&Opciones
-	v_lang016 =	&Personalizar
+	v_Lang011 =	&Expediente
+	v_Lang012 =	&Grabar y reproducir
+	v_Lang013 =	&Comandos
+	v_Lang014 =	E&ditar
+	v_Lang015 =	&Opciones
+	v_Lang016 =	&Personalizar
 		
-	v_lang017 =	&Automático
-	v_lang018 =	&Manual
-	v_lang019 =	&Detener
-	v_lang020 =	&Pausa
+	v_Lang017 =	&Automático
+	v_Lang018 =	&Manual
+	v_Lang019 =	&Detener
+	v_Lang020 =	&Pausa
 		
-	v_lang021 =	&Compacto
-	v_lang022 =	&Defecto
+	v_Lang021 =	&Compacto
+	v_Lang022 =	&Defecto
 		
-	v_lang023 =	&Pequeño
-	v_lang024 =	&Grande
+	v_Lang023 =	&Pequeño
+	v_Lang024 =	&Grande
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Configuración
@@ -281,6 +288,10 @@
 	w_Lang100 =	Retire todos los grupos
 	w_Lang101 =	Editar grupos
 	w_Lang102 =	Nombre del grupo
+	w_Lang103 =	
+	w_Lang104 =	
+	w_Lang105 =	
+	w_Lang106 =	
 		
 ; Command Windows		
 	c_Lang001 =	Ratón
@@ -493,6 +504,17 @@
 	c_Lang209 =	Nombre de valor
 	c_Lang210 =	Valores
 	c_Lang211 =	Matriz
+	c_Lang212 =	
+	c_Lang213 =	
+	c_Lang214 =	
+	c_Lang215 =	
+	c_Lang216 =	
+	c_Lang217 =	
+	c_Lang218 =	
+	c_Lang219 =	
+	c_Lang220 =	
+	c_Lang221 =	
+	c_Lang222 =	
 		
 ; Other Windows		
 	t_Lang001 =	Exportar a AutoHotkey
@@ -828,6 +850,15 @@
 	d_Lang092 =	Iconos pequeños
 	d_Lang093 =	Iconos grandes
 	d_Lang094 =	Esta característica requiere Windows Vista o superior.
+	d_Lang095 =	
+	d_Lang096 =	
+	(LTrim	
+		
+		
+		
+		
+		
+	)	
 		
 ; Start-up Tips		
 	Start_Tips =	

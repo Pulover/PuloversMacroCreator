@@ -367,10 +367,7 @@
 						If (Target = "Expression")
 						{
 							If (IsFunc("Eval"))
-							{
-								Monster := "Eval"
-							,	VarValue := %Monster%(VarValue, PointMarker)
-							}
+								VarValue := Eval(VarValue, PointMarker)
 						}
 						AssignVar(VarName, Oper, VarValue, PointMarker)
 					}
@@ -386,8 +383,8 @@
 								LoopField := %LoopField%
 							Else
 							{
-								StringReplace, LoopField, LoopField, ¢, `,, All
-								StringReplace, LoopField, LoopField, ¥Space, %A_Space%, All
+								LoopField := StrReplace(LoopField, "¢", "`,")
+							,	LoopField := StrReplace(LoopField, "¥Space", A_Space)
 							}
 							Params.Push(LoopField)
 						}
@@ -420,8 +417,8 @@
 								LoopField := %LoopField%
 							Else
 							{
-								StringReplace, LoopField, LoopField, ¢, `,, All
-								StringReplace, LoopField, LoopField, ¥Space, %A_Space%, All
+								LoopField := StrReplace(LoopField, "¢", "`,")
+							,	LoopField := StrReplace(LoopField, "¥Space", A_Space)
 							}
 							Params.Push(LoopField)
 						}
@@ -869,10 +866,7 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC, ByRef LoopCount)
 						If (Target = "Expression")
 						{
 							If (IsFunc("Eval"))
-							{
-								Monster := "Eval"
-							,	VarValue := %Monster%(VarValue, PointMarker)
-							}
+								VarValue := Eval(VarValue, PointMarker)
 						}
 						AssignVar(VarName, Oper, VarValue, PointMarker)
 					}
@@ -1299,21 +1293,10 @@ IfStatement(ThisError, l_Point)
 		}
 		Else If (Action = If15)
 		{
-			If (IsFunc("Eval"))
-			{
-				Monster := "Eval"
-				If %Monster%(Step, PointMarker)
-					ThisError := 0
-				Else
-					ThisError++
-			}
+			If Eval(Step, PointMarker)
+				ThisError := 0
 			Else
-			{
-				MsgBox, 17, %d_Lang007%, %d_Lang044%
-				IfMsgBox, OK
-					Run, http://www.autohotkey.com/board/topic/15675-monster
-				return 0
-			}
+				ThisError++
 		}
 	}
 	return ThisError
@@ -1488,78 +1471,79 @@ CheckVars(Match_List, l_Point := "")
 			While (RegExMatch(%A_LoopField%, "i)%(" $_value%l_Point% ")%", lMatch))
 				%A_LoopField% := RegExReplace(%A_LoopField%, "U)" lMatch, o_Loop%l_Point%[I][$_value%l_Point%])
 		}
-		If (RegExMatch(%A_LoopField%, "sU)%\s([\w.%]+)\((.*)\)"))  ; Functions & Methods
-		{
-			While (RegExMatch(%A_LoopField%, "sU)%\s([\w%]+)\((.*?)\)", Funct)) ; Functions
-			{
-				If (IsFunc(Funct1))
-				{
-					Params := Object()
-					StringReplace, Funct2, Funct2, ```,, ¢, All
-					Loop, Parse, Funct2, `,, %A_Space%``""
-					{
-						LoopField := DerefVars(A_LoopField)
-					,	LoopField := ExtractArrays(LoopField, PointMarker)
-						If (LoopField = "_ArrayObject")
-							LoopField := %LoopField%
-						Else
-						{
-							StringReplace, LoopField, LoopField, ```,, `,, All
-							StringReplace, LoopField, LoopField, ¢, `,, All
-							StringReplace, LoopField, LoopField, ¥Space, %A_Space%, All
-						}
-						Params.Push(LoopField)
-					}
-					FuncResult := %Funct1%(Params*)
-					StringReplace, FuncResult, FuncResult, `,, ```, 
-					StringReplace, %A_LoopField%, %A_LoopField%, %Funct%, %FuncResult%
-					FuncResult := ""
-				}
-				Else
-					break
-			}
-			While (RegExMatch(%A_LoopField%, "sU)%\s\b([\w%]+)\b\.([\w\d_%]+)\((.*?)\)", Funct)) ; Methods
-			{
-				If (IsObject(%Funct1%))
-				{
-					Params := Object()
-					StringReplace, Funct3, Funct3, ```,, ¢, All
-					Loop, Parse, Funct3, `,, %A_Space%``""
-					{
-						LoopField := DerefVars(A_LoopField)
-					,	LoopField := ExtractArrays(LoopField, PointMarker)
-						If (LoopField = "_ArrayObject")
-							LoopField := %LoopField%
-						Else
-						{
-							StringReplace, LoopField, LoopField, ```,, `,, All
-							StringReplace, LoopField, LoopField, ¢, `,, All
-							StringReplace, LoopField, LoopField, ¥Space, %A_Space%, All
-						}
-						Params.Push(LoopField)
-					}
-					FuncResult := %Funct1%[Funct2](Params*)
-					StringReplace, FuncResult, FuncResult, `,, ```, 
-					StringReplace, %A_LoopField%, %A_LoopField%, %Funct%, %FuncResult%
-					FuncResult := ""
-				}
-				Else
-					break
-			}
-		}
+		; If (RegExMatch(%A_LoopField%, "sU)%\s+([\w.%]+)\((.*)\)"))  ; Functions & Methods
+		; {
+			; While (RegExMatch(%A_LoopField%, "sU)%\s+([\w%]+)\((.*?)\)", Funct)) ; Functions
+			; {
+				; If (IsFunc(Funct1))
+				; {
+					; Params := Object()
+					; StringReplace, Funct2, Funct2, ```,, ¢, All
+					; Loop, Parse, Funct2, `,, %A_Space%``""
+					; {
+						; LoopField := DerefVars(A_LoopField)
+					; ,	LoopField := ExtractArrays(LoopField, PointMarker)
+						; If (LoopField = "_ArrayObject")
+							; LoopField := %LoopField%
+						; Else
+						; {
+							; StringReplace, LoopField, LoopField, ```,, `,, All
+							; StringReplace, LoopField, LoopField, ¢, `,, All
+							; StringReplace, LoopField, LoopField, ¥Space, %A_Space%, All
+						; }
+						; Params.Push(LoopField)
+					; }
+					; FuncResult := %Funct1%(Params*)
+					; StringReplace, FuncResult, FuncResult, `,, ```, 
+					; StringReplace, %A_LoopField%, %A_LoopField%, %Funct%, %FuncResult%
+					; FuncResult := ""
+				; }
+				; Else
+					; break
+			; }
+			; While (RegExMatch(%A_LoopField%, "sU)%\s+\b([\w%]+)\b\.([\w\d_%]+)\((.*?)\)", Funct)) ; Methods
+			; {
+				; If (IsObject(%Funct1%))
+				; {
+					; Params := Object()
+					; StringReplace, Funct3, Funct3, ```,, ¢, All
+					; Loop, Parse, Funct3, `,, %A_Space%``""
+					; {
+						; LoopField := DerefVars(A_LoopField)
+					; ,	LoopField := ExtractArrays(LoopField, PointMarker)
+						; If (LoopField = "_ArrayObject")
+							; LoopField := %LoopField%
+						; Else
+						; {
+							; StringReplace, LoopField, LoopField, ```,, `,, All
+							; StringReplace, LoopField, LoopField, ¢, `,, All
+							; StringReplace, LoopField, LoopField, ¥Space, %A_Space%, All
+						; }
+						; Params.Push(LoopField)
+					; }
+					; FuncResult := %Funct1%[Funct2](Params*)
+					; StringReplace, FuncResult, FuncResult, `,, ```, 
+					; StringReplace, %A_LoopField%, %A_LoopField%, %Funct%, %FuncResult%
+					; FuncResult := ""
+				; }
+				; Else
+					; break
+			; }
+		; }
 		%A_LoopField% := DerefVars(%A_LoopField%)
-
-		If (RegExMatch(%A_LoopField%, "U)^%\s+[\w\d_\[\]\(\)""]+$"))  ; DynamicVars
+		
+		If (RegExMatch(%A_LoopField%, "U)^%\s+(.+)$", lMatch))  ; DynamicVars
 		{
 			While (RegExMatch(%A_LoopField%, "mU)%\s+([\w%]*)(``,|$)", lFound))
 				%A_LoopField% := RegExReplace(%A_LoopField%, lFound, %lFound1%)
-			If (RegExMatch(%A_LoopField%, "mU)%\s+([\w\d_%]+\[.+?\])", lFound)) ; Arrays
-			{
-				lFound := RegExReplace(lFound, "[\[|\]]", "\$0")
-			,	lFound1 := RegExReplace(lFound1, "\s")
-			,	lResult := ExtractArrays(lFound1, l_Point)
-			,	%A_LoopField% := RegExReplace(%A_LoopField%, lFound, lResult)
-			}
+			%A_LoopField% := Eval(lMatch1, l_Point)
+			; If (RegExMatch(%A_LoopField%, "mU)%\s+([\w\d_%]+\[.+?\])", lFound)) ; Arrays
+			; {
+				; lFound1 := RegExReplace(lFound1, "\s")
+			; ,	lResult := ExtractArrays(lFound1, l_Point)
+			; ,	lResult := Eval(lResult, l_Point)
+			; ,	%A_LoopField% := StrReplace(%A_LoopField%, lFound, lResult)
+			; }
 		}
 	}
 }

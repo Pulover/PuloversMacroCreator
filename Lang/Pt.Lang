@@ -4,14 +4,15 @@
 		
 ; Main Menu		
 	m_Lang001 =	&Arquivo
-	m_Lang002 =	&Comandos
-	m_Lang003 =	&Selecionar
-	m_Lang004 =	&Editar
-	m_Lang005 =	&Macro
-	m_Lang006 =	E&xibir
-	m_Lang007 =	&Opções
-	m_Lang008 =	&Doar
-	m_Lang009 =	Aj&uda
+	m_Lang002 =	&Macro
+	m_Lang003 =	
+	m_Lang004 =	&Comandos
+	m_Lang005 =	&Editar
+	m_Lang006 =	&Selecionar
+	m_Lang007 =	E&xibir
+	m_Lang008 =	&Opções
+	m_Lang009 =	&Doar
+	m_Lang010 =	Aj&uda
 		
 ; File Sub Menu		
 	f_Lang001 =	&Novo
@@ -28,21 +29,27 @@
 	f_Lang012 =	Nenhum arquivo
 		
 ; Macro Sub Menu		
-	r_lang001 =	&Gravar Macro
-	r_lang002 =	&Ativar Macros
-	r_lang003 =	&Executar Macro Atual
-	r_lang004 =	&Temporizador
-	r_lang005 =	&Desativar Macros
-	r_lang006 =	E&xecutar a Partir da Linha Selecionada
-	r_lang007 =	Exe&cutar Até a Linha Selecionada
-	r_lang008 =	Exec&utar Linhas Selecionadas
-	r_lang009 =	Ata&lhos Condicionais
-	r_lang010 =	Ad&icionar Macro
-	r_lang011 =	&Fechar Macro
-	r_lang012 =	Du&plicar Macro
-	r_lang013 =	Edita&r Macros
-	r_lang014 =	I&mportar Macro
-	r_lang015 =	&Salvar Macro Atual
+	r_Lang001 =	&Gravar Macro
+	r_Lang002 =	&Ativar Macros
+	r_Lang003 =	&Executar Macro Atual
+	r_Lang004 =	&Temporizador
+	r_Lang005 =	&Desativar Macros
+	r_Lang006 =	E&xecutar a Partir da Linha Selecionada
+	r_Lang007 =	Exe&cutar Até a Linha Selecionada
+	r_Lang008 =	Exec&utar Linhas Selecionadas
+	r_Lang009 =	Ata&lhos Condicionais
+	r_Lang010 =	Ad&icionar Macro
+	r_Lang011 =	&Fechar Macro
+	r_Lang012 =	Du&plicar Macro
+	r_Lang013 =	Edita&r Macros
+	r_Lang014 =	I&mportar Macro
+	r_Lang015 =	&Salvar Macro Atual
+		
+; UDF Sub Menu		
+	u_Lang001 =	
+	u_Lang002 =	
+	u_Lang003 =	
+	u_Lang004 =	
 		
 ; Commands Sub Menu		
 	i_Lang001 =	&Mouse
@@ -104,34 +111,34 @@
 	s_Lang010 =	Tipo de comando
 		
 ; View Sub Menu		
-	v_lang001 =	&Sempre Visível
-	v_lang002 =	&Destacar Linhas
-	v_lang003 =	&Margem
-	v_lang004 =	&Barra de Controles
-	v_lang005 =	S&cript
-	v_lang006 =	B&arras de Ferramentas
-	v_lang007 =	A&talhos
-	v_lang008 =	&Restaurar Colunas
-	v_lang009 =	Tamanho dos &Ícones
-	v_lang010 =	R&estaurar Layout
+	v_Lang001 =	&Sempre Visível
+	v_Lang002 =	&Destacar Linhas
+	v_Lang003 =	&Margem
+	v_Lang004 =	&Barra de Controles
+	v_Lang005 =	S&cript
+	v_Lang006 =	B&arras de Ferramentas
+	v_Lang007 =	A&talhos
+	v_Lang008 =	&Restaurar Colunas
+	v_Lang009 =	Tamanho dos &Ícones
+	v_Lang010 =	R&estaurar Layout
 		
-	v_lang011 =	&Arquivo
-	v_lang012 =	&Gravar e Executar
-	v_lang013 =	&Comandos
-	v_lang014 =	&Editar
-	v_lang015 =	&Opções
-	v_lang016 =	&Personalizar
+	v_Lang011 =	&Arquivo
+	v_Lang012 =	&Gravar e Executar
+	v_Lang013 =	&Comandos
+	v_Lang014 =	&Editar
+	v_Lang015 =	&Opções
+	v_Lang016 =	&Personalizar
 		
-	v_lang017 =	&Automatico
-	v_lang018 =	&Manual
-	v_lang019 =	&Parar
-	v_lang020 =	Pa&usa
+	v_Lang017 =	&Automatico
+	v_Lang018 =	&Manual
+	v_Lang019 =	&Parar
+	v_Lang020 =	Pa&usa
 		
-	v_lang021 =	&Compacto
-	v_lang022 =	&Padrão
+	v_Lang021 =	&Compacto
+	v_Lang022 =	&Padrão
 		
-	v_lang023 =	&Pequeno
-	v_lang024 =	&Grande
+	v_Lang023 =	&Pequeno
+	v_Lang024 =	&Grande
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Configurações
@@ -281,6 +288,10 @@
 	w_Lang100 =	Remove todos os grupos
 	w_Lang101 =	Editar grupos
 	w_Lang102 =	Nome do grupo
+	w_Lang103 =	
+	w_Lang104 =	
+	w_Lang105 =	
+	w_Lang106 =	
 		
 ; Command Windows		
 	c_Lang001 =	Mouse
@@ -493,6 +504,17 @@
 	c_Lang209 =	Nome do Valor
 	c_Lang210 =	Valores
 	c_Lang211 =	Matriz
+	c_Lang212 =	
+	c_Lang213 =	
+	c_Lang214 =	
+	c_Lang215 =	
+	c_Lang216 =	
+	c_Lang217 =	
+	c_Lang218 =	
+	c_Lang219 =	
+	c_Lang220 =	
+	c_Lang221 =	
+	c_Lang222 =	
 		
 ; Other Windows		
 	t_Lang001 =	Exportar para AutoHotkey
@@ -828,6 +850,15 @@
 	d_Lang092 =	Ícones pequenos
 	d_Lang093 =	Ícones grandes
 	d_Lang094 =	Este recurso requer Windows Vista ou superior.
+	d_Lang095 =	
+	d_Lang096 =	
+	(LTrim	
+		
+		
+		
+		
+		
+	)	
 		
 ; Start-up Tips		
 	Start_Tips =	

@@ -4,14 +4,15 @@
 		
 ; Main Menu		
 	m_Lang001 =	&File
-	m_Lang002 =	&Kommandoer
-	m_Lang003 =	&Vælg
-	m_Lang004 =	&Rediger
-	m_Lang005 =	&Makro
-	m_Lang006 =	&Se
-	m_Lang007 =	&Indstillinger
-	m_Lang008 =	&Donere
-	m_Lang009 =	&Hjælp
+	m_Lang002 =	&Makro
+	m_Lang003 =	
+	m_Lang004 =	&Kommandoer
+	m_Lang005 =	&Rediger
+	m_Lang006 =	&Vælg
+	m_Lang007 =	&Se
+	m_Lang008 =	&Indstillinger
+	m_Lang009 =	&Donere
+	m_Lang010 =	&Hjælp
 		
 ; File Sub Menu		
 	f_Lang001 =	&Nyt
@@ -28,21 +29,27 @@
 	f_Lang012 =	&Ingen filer
 		
 ; Macro Sub Menu		
-	r_lang001 =	&Indspil makro
-	r_lang002 =	&Aktiver makroer
-	r_lang003 =	A&fspil aktuelle Macro
-	r_lang004 =	&Timer
-	r_lang005 =	&Deaktiver Makroer
-	r_lang006 =	Af&spil fra valgte række
-	r_lang007 =	S&pille, indtil valgte række
-	r_lang008 =	Spi&l valgte rækker
-	r_lang009 =	&Kontekstafhængig genvejstaster
-	r_lang010 =	Tilf&øj Makro
-	r_lang011 =	L&uk Makro
-	r_lang012 =	Du&blet Makro
-	r_lang013 =	&Rediger Makroer
-	r_lang014 =	I&mport Macro
-	r_lang015 =	&Gem nuværende Macro
+	r_Lang001 =	&Indspil makro
+	r_Lang002 =	&Aktiver makroer
+	r_Lang003 =	A&fspil aktuelle Macro
+	r_Lang004 =	&Timer
+	r_Lang005 =	&Deaktiver Makroer
+	r_Lang006 =	Af&spil fra valgte række
+	r_Lang007 =	S&pille, indtil valgte række
+	r_Lang008 =	Spi&l valgte rækker
+	r_Lang009 =	&Kontekstafhængig genvejstaster
+	r_Lang010 =	Tilf&øj Makro
+	r_Lang011 =	L&uk Makro
+	r_Lang012 =	Du&blet Makro
+	r_Lang013 =	&Rediger Makroer
+	r_Lang014 =	I&mport Macro
+	r_Lang015 =	&Gem nuværende Macro
+		
+; UDF Sub Menu		
+	u_Lang001 =	
+	u_Lang002 =	
+	u_Lang003 =	
+	u_Lang004 =	
 		
 ; Commands Sub Menu		
 	i_Lang001 =	&Mus
@@ -104,34 +111,34 @@
 	s_Lang010 =	Command typen
 		
 ; View Sub Menu		
-	v_lang001 =	&Altid på toppen
-	v_lang002 =	&Fremhæve Rækker
-	v_lang003 =	&Indrykning
-	v_lang004 =	&Kontrol Værktøjslinje
-	v_lang005 =	&Eksempel
-	v_lang006 =	&Værktøjslinjer
-	v_lang007 =	&Genvejstaster
-	v_lang008 =	&Nulstil Kolonner Size
-	v_lang009 =	Ik&oner StøRrelse
-	v_lang010 =	&Reset Layout
+	v_Lang001 =	&Altid på toppen
+	v_Lang002 =	&Fremhæve Rækker
+	v_Lang003 =	&Indrykning
+	v_Lang004 =	&Kontrol Værktøjslinje
+	v_Lang005 =	&Eksempel
+	v_Lang006 =	&Værktøjslinjer
+	v_Lang007 =	&Genvejstaster
+	v_Lang008 =	&Nulstil Kolonner Size
+	v_Lang009 =	Ik&oner StøRrelse
+	v_Lang010 =	&Reset Layout
 		
-	v_lang011 =	&Fil
-	v_lang012 =	&Optage og afspille
-	v_lang013 =	&Kommandoer
-	v_lang014 =	&Redigere
-	v_lang015 =	O&ptioner
-	v_lang016 =	&Tilpas
+	v_Lang011 =	&Fil
+	v_Lang012 =	&Optage og afspille
+	v_Lang013 =	&Kommandoer
+	v_Lang014 =	&Redigere
+	v_Lang015 =	O&ptioner
+	v_Lang016 =	&Tilpas
 		
-	v_lang017 =	&Automatisk
-	v_lang018 =	&Manual
-	v_lang019 =	&Stands
-	v_lang020 =	&Pause
+	v_Lang017 =	&Automatisk
+	v_Lang018 =	&Manual
+	v_Lang019 =	&Stands
+	v_Lang020 =	&Pause
 		
-	v_lang021 =	&Compact
-	v_lang022 =	&Standard
+	v_Lang021 =	&Compact
+	v_Lang022 =	&Standard
 		
-	v_lang023 =	&Lille
-	v_lang024 =	&Stor
+	v_Lang023 =	&Lille
+	v_Lang024 =	&Stor
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Indstillinger
@@ -281,6 +288,10 @@
 	w_Lang100 =	Fjern alle grupper
 	w_Lang101 =	Rediger grupper
 	w_Lang102 =	Gruppe navn
+	w_Lang103 =	
+	w_Lang104 =	
+	w_Lang105 =	
+	w_Lang106 =	
 		
 ; Command Windows		
 	c_Lang001 =	Mus
@@ -493,6 +504,17 @@
 	c_Lang209 =	Værdi navn
 	c_Lang210 =	Værdier
 	c_Lang211 =	Matrix
+	c_Lang212 =	
+	c_Lang213 =	
+	c_Lang214 =	
+	c_Lang215 =	
+	c_Lang216 =	
+	c_Lang217 =	
+	c_Lang218 =	
+	c_Lang219 =	
+	c_Lang220 =	
+	c_Lang221 =	
+	c_Lang222 =	
 		
 ; Other Windows		
 	t_Lang001 =	Eksporter til AutoHotkey
@@ -828,6 +850,15 @@
 	d_Lang092 =	Små ikoner
 	d_Lang093 =	Store ikoner
 	d_Lang094 =	Denne funktion kræver Windows Vista eller højere.
+	d_Lang095 =	
+	d_Lang096 =	
+	(LTrim	
+		
+		
+		
+		
+		
+	)	
 		
 ; Start-up Tips		
 	Start_Tips =	

@@ -4,14 +4,15 @@
 		
 ; Main Menu		
 	m_Lang001 =	&Tập tin
-	m_Lang002 =	&Lệnh
-	m_Lang003 =	&Chọn
-	m_Lang004 =	C&hỉnh sửa
-	m_Lang005 =	&Vĩ mô
-	m_Lang006 =	&Xem
-	m_Lang007 =	T&ùy chọn
-	m_Lang008 =	T&ặng
-	m_Lang009 =	&Giúp
+	m_Lang002 =	&Vĩ mô
+	m_Lang003 =	
+	m_Lang004 =	&Lệnh
+	m_Lang005 =	C&hỉnh sửa
+	m_Lang006 =	&Chọn
+	m_Lang007 =	&Xem
+	m_Lang008 =	T&ùy chọn
+	m_Lang009 =	T&ặng
+	m_Lang010 =	&Giúp
 		
 ; File Sub Menu		
 	f_Lang001 =	&Mới
@@ -28,21 +29,27 @@
 	f_Lang012 =	&Không có tập tin
 		
 ; Macro Sub Menu		
-	r_lang001 =	&Record Macro
-	r_lang002 =	&Kích hoạt Macro
-	r_lang003 =	&Chơi vĩ mô hiện tại
-	r_lang004 =	&Hẹn giờ
-	r_lang005 =	&Tắt Macros
-	r_lang006 =	Ch&ơi từ Row chọn
-	r_lang007 =	Chơ&i cho đến khi hàng được chọn
-	r_lang008 =	Chơi &dòng chọn
-	r_lang009 =	H&otkeys bối cảnh nhạy cảm
-	r_lang010 =	Th&êm vĩ mô
-	r_lang011 =	&Gần vĩ mô
-	r_lang012 =	&Bản sao vĩ mô
-	r_lang013 =	Ch&ỉnh Sửa Macro
-	r_lang014 =	&Nhập khẩu vĩ mô
-	r_lang015 =	&Lưu vĩ mô hiện tại
+	r_Lang001 =	&Record Macro
+	r_Lang002 =	&Kích hoạt Macro
+	r_Lang003 =	&Chơi vĩ mô hiện tại
+	r_Lang004 =	&Hẹn giờ
+	r_Lang005 =	&Tắt Macros
+	r_Lang006 =	Ch&ơi từ Row chọn
+	r_Lang007 =	Chơ&i cho đến khi hàng được chọn
+	r_Lang008 =	Chơi &dòng chọn
+	r_Lang009 =	H&otkeys bối cảnh nhạy cảm
+	r_Lang010 =	Th&êm vĩ mô
+	r_Lang011 =	&Gần vĩ mô
+	r_Lang012 =	&Bản sao vĩ mô
+	r_Lang013 =	Ch&ỉnh Sửa Macro
+	r_Lang014 =	&Nhập khẩu vĩ mô
+	r_Lang015 =	&Lưu vĩ mô hiện tại
+		
+; UDF Sub Menu		
+	u_Lang001 =	
+	u_Lang002 =	
+	u_Lang003 =	
+	u_Lang004 =	
 		
 ; Commands Sub Menu		
 	i_Lang001 =	&Chuột
@@ -104,34 +111,34 @@
 	s_Lang010 =	Loại lệnh
 		
 ; View Sub Menu		
-	v_lang001 =	&Always On Top
-	v_lang002 =	&Hàng nổi bật
-	v_lang003 =	&Thụt đầu dòng
-	v_lang004 =	Tha&nh công cụ điều khiển
-	v_lang005 =	&Xem trước
-	v_lang006 =	Thanh &công cụ
-	v_lang007 =	&Phím nóng
-	v_lang008 =	Th&iết lập lại Cột Kích
-	v_lang009 =	&BiểU TượNg KíCh ThướC
-	v_lang010 =	&Giao Diện Thiết Lập Lại
+	v_Lang001 =	&Always On Top
+	v_Lang002 =	&Hàng nổi bật
+	v_Lang003 =	&Thụt đầu dòng
+	v_Lang004 =	Tha&nh công cụ điều khiển
+	v_Lang005 =	&Xem trước
+	v_Lang006 =	Thanh &công cụ
+	v_Lang007 =	&Phím nóng
+	v_Lang008 =	Th&iết lập lại Cột Kích
+	v_Lang009 =	&BiểU TượNg KíCh ThướC
+	v_Lang010 =	&Giao Diện Thiết Lập Lại
 		
-	v_lang011 =	&Tập tin
-	v_lang012 =	&Ghi lại và chơi
-	v_lang013 =	&Lệnh
-	v_lang014 =	&Chỉnh sửa
-	v_lang015 =	T&ùy chọn
-	v_lang016 =	Tù&y chỉnh
+	v_Lang011 =	&Tập tin
+	v_Lang012 =	&Ghi lại và chơi
+	v_Lang013 =	&Lệnh
+	v_Lang014 =	&Chỉnh sửa
+	v_Lang015 =	T&ùy chọn
+	v_Lang016 =	Tù&y chỉnh
 		
-	v_lang017 =	&Tự động
-	v_lang018 =	&Hướng dẫn sử dụng
-	v_lang019 =	Th&ôi
-	v_lang020 =	T&ạm dừng
+	v_Lang017 =	&Tự động
+	v_Lang018 =	&Hướng dẫn sử dụng
+	v_Lang019 =	Th&ôi
+	v_Lang020 =	T&ạm dừng
 		
-	v_lang021 =	&Nhỏ gọn
-	v_lang022 =	&Mặc Định
+	v_Lang021 =	&Nhỏ gọn
+	v_Lang022 =	&Mặc Định
 		
-	v_lang023 =	&Nhỏ
-	v_lang024 =	&Lớn
+	v_Lang023 =	&Nhỏ
+	v_Lang024 =	&Lớn
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Cài đặt
@@ -281,6 +288,10 @@
 	w_Lang100 =	Hủy bỏ tất cả các nhóm
 	w_Lang101 =	Chỉnh sửa nhóm
 	w_Lang102 =	Tên nhóm
+	w_Lang103 =	
+	w_Lang104 =	
+	w_Lang105 =	
+	w_Lang106 =	
 		
 ; Command Windows		
 	c_Lang001 =	Chuột
@@ -493,6 +504,17 @@
 	c_Lang209 =	Tên giá trị
 	c_Lang210 =	Giá trị
 	c_Lang211 =	Mảng
+	c_Lang212 =	
+	c_Lang213 =	
+	c_Lang214 =	
+	c_Lang215 =	
+	c_Lang216 =	
+	c_Lang217 =	
+	c_Lang218 =	
+	c_Lang219 =	
+	c_Lang220 =	
+	c_Lang221 =	
+	c_Lang222 =	
 		
 ; Other Windows		
 	t_Lang001 =	Xuất khẩu sang AutoHotkey
@@ -828,6 +850,15 @@
 	d_Lang092 =	Small icons
 	d_Lang093 =	Các biểu tượng lớn
 	d_Lang094 =	Tính năng này yêu cầu Windows Vista hoặc cao hơn.
+	d_Lang095 =	
+	d_Lang096 =	
+	(LTrim	
+		
+		
+		
+		
+		
+	)	
 		
 ; Start-up Tips		
 	Start_Tips =	

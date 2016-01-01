@@ -4,14 +4,15 @@
 		
 ; Main Menu		
 	m_Lang001 =	&Dossier
-	m_Lang002 =	&Commandes
-	m_Lang003 =	&Sélectionner
-	m_Lang004 =	&Éditer
-	m_Lang005 =	&Macro
-	m_Lang006 =	&Voir
-	m_Lang007 =	&Options de
-	m_Lang008 =	&Faire Un Don
-	m_Lang009 =	&Aider
+	m_Lang002 =	&Macro
+	m_Lang003 =	
+	m_Lang004 =	&Commandes
+	m_Lang005 =	&Éditer
+	m_Lang006 =	&Sélectionner
+	m_Lang007 =	&Voir
+	m_Lang008 =	&Options de
+	m_Lang009 =	&Faire Un Don
+	m_Lang010 =	&Aider
 		
 ; File Sub Menu		
 	f_Lang001 =	&Nouveau
@@ -28,21 +29,27 @@
 	f_Lang012 =	A&ucun
 		
 ; Macro Sub Menu		
-	r_lang001 =	&Enregistrer une macro
-	r_lang002 =	&Activer les macros
-	r_lang003 =	&Jouer Macro actuelle
-	r_lang004 =	&Minuteur
-	r_lang005 =	&Désactiver Les Macros
-	r_lang006 =	J&ouez à partir de la ligne sélectionnée
-	r_lang007 =	Jo&uez jusqu'à ce que la ligne sélectionnée
-	r_lang008 =	Joue&z Lignes sélectionnées
-	r_lang009 =	&Touches sensibles au contexte
-	r_lang010 =	Ajoute&r une macro
-	r_lang011 =	&Fermer Macro
-	r_lang012 =	Du&pliquer Macro
-	r_lang013 =	Mod&ifier Macros
-	r_lang014 =	Importer Ma&cro
-	r_lang015 =	E&nregistrer la macro actuelle
+	r_Lang001 =	&Enregistrer une macro
+	r_Lang002 =	&Activer les macros
+	r_Lang003 =	&Jouer Macro actuelle
+	r_Lang004 =	&Minuteur
+	r_Lang005 =	&Désactiver Les Macros
+	r_Lang006 =	J&ouez à partir de la ligne sélectionnée
+	r_Lang007 =	Jo&uez jusqu'à ce que la ligne sélectionnée
+	r_Lang008 =	Joue&z Lignes sélectionnées
+	r_Lang009 =	&Touches sensibles au contexte
+	r_Lang010 =	Ajoute&r une macro
+	r_Lang011 =	&Fermer Macro
+	r_Lang012 =	Du&pliquer Macro
+	r_Lang013 =	Mod&ifier Macros
+	r_Lang014 =	Importer Ma&cro
+	r_Lang015 =	E&nregistrer la macro actuelle
+		
+; UDF Sub Menu		
+	u_Lang001 =	
+	u_Lang002 =	
+	u_Lang003 =	
+	u_Lang004 =	
 		
 ; Commands Sub Menu		
 	i_Lang001 =	&Souris
@@ -104,34 +111,34 @@
 	s_Lang010 =	Type de commande
 		
 ; View Sub Menu		
-	v_lang001 =	&Toujours à la pointe
-	v_lang002 =	&Les Lignes En Surbrillance
-	v_lang003 =	&Renfoncement
-	v_lang004 =	&Barre D'outils Des Contrôles
-	v_lang005 =	&Avant-première
-	v_lang006 =	Barr&es D'outils
-	v_lang007 =	Ra&ccourcis Clavier
-	v_lang008 =	R&éinitialiser Taille colonnes
-	v_lang009 =	&Icônes Taille
-	v_lang010 =	Rétablir &La Disposition
+	v_Lang001 =	&Toujours à la pointe
+	v_Lang002 =	&Les Lignes En Surbrillance
+	v_Lang003 =	&Renfoncement
+	v_Lang004 =	&Barre D'outils Des Contrôles
+	v_Lang005 =	&Avant-première
+	v_Lang006 =	Barr&es D'outils
+	v_Lang007 =	Ra&ccourcis Clavier
+	v_Lang008 =	R&éinitialiser Taille colonnes
+	v_Lang009 =	&Icônes Taille
+	v_Lang010 =	Rétablir &La Disposition
 		
-	v_lang011 =	&Fichier
-	v_lang012 =	&Enregistrement et lecture
-	v_lang013 =	&Commandes
-	v_lang014 =	&Éditer
-	v_lang015 =	&Les Options
-	v_lang016 =	&Personnaliser
+	v_Lang011 =	&Fichier
+	v_Lang012 =	&Enregistrement et lecture
+	v_Lang013 =	&Commandes
+	v_Lang014 =	&Éditer
+	v_Lang015 =	&Les Options
+	v_Lang016 =	&Personnaliser
 		
-	v_lang017 =	&Automatique
-	v_lang018 =	&Manuel
-	v_lang019 =	A&rrêter
-	v_lang020 =	&Pause
+	v_Lang017 =	&Automatique
+	v_Lang018 =	&Manuel
+	v_Lang019 =	A&rrêter
+	v_Lang020 =	&Pause
 		
-	v_lang021 =	&Compact
-	v_lang022 =	&Par Défaut
+	v_Lang021 =	&Compact
+	v_Lang022 =	&Par Défaut
 		
-	v_lang023 =	&Petit
-	v_lang024 =	&Grand
+	v_Lang023 =	&Petit
+	v_Lang024 =	&Grand
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Réglages
@@ -281,6 +288,10 @@
 	w_Lang100 =	Retirez tous les groupes
 	w_Lang101 =	Modifier les groupes
 	w_Lang102 =	Nom de groupe
+	w_Lang103 =	
+	w_Lang104 =	
+	w_Lang105 =	
+	w_Lang106 =	
 		
 ; Command Windows		
 	c_Lang001 =	Souris
@@ -493,6 +504,17 @@
 	c_Lang209 =	Nom de la valeur
 	c_Lang210 =	Valeurs
 	c_Lang211 =	Tableau
+	c_Lang212 =	
+	c_Lang213 =	
+	c_Lang214 =	
+	c_Lang215 =	
+	c_Lang216 =	
+	c_Lang217 =	
+	c_Lang218 =	
+	c_Lang219 =	
+	c_Lang220 =	
+	c_Lang221 =	
+	c_Lang222 =	
 		
 ; Other Windows		
 	t_Lang001 =	Exporter vers AutoHotkey
@@ -828,6 +850,15 @@
 	d_Lang092 =	Petites icônes
 	d_Lang093 =	Grandes icônes
 	d_Lang094 =	Cette fonction nécessite Windows Vista ou supérieur.
+	d_Lang095 =	
+	d_Lang096 =	
+	(LTrim	
+		
+		
+		
+		
+		
+	)	
 		
 ; Start-up Tips		
 	Start_Tips =	

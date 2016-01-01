@@ -3074,10 +3074,10 @@ You should have received a copy of the GNU General Public License along with thi
 Gui, 34:Font
 Gui, 34:Add, Button, -Wrap Default y+20 xp-10 W80 H23 gTipsClose, %c_Lang020%
 Gui, 34:Font, Bold, Tahoma
-Gui, 34:Add, Text, yp-3 xm+380 H25 Center Hidden vHolderStatic, %m_Lang008%
+Gui, 34:Add, Text, yp-3 xm+380 H25 Center Hidden vHolderStatic, %m_Lang009%
 GuiControlGet, Hold, 34:Pos, HolderStatic
 Gui, 34:Add, Progress, % "x" 410 - HoldW " yp wp+20 hp BackgroundF68C06 vProgStatic Disabled"
-Gui, 34:Add, Text, xp yp wp hp Border cWhite Center 0x200 BackgroundTrans hwndhStatic vDonateStatic gDonatePayPal, %m_Lang008%
+Gui, 34:Add, Text, xp yp wp hp Border cWhite Center 0x200 BackgroundTrans hwndhStatic vDonateStatic gDonatePayPal, %m_Lang009%
 Gui, 34:Font
 GuiControl, 34:Focus, %c_Lang020%
 Gui, 34:Show, W460, %t_Lang076%
@@ -4772,7 +4772,7 @@ MsgBox:
 Sleep:
 Gui, 3:+owner1 -MinimizeBox +Delimiter¢ +E0x00000400 +HwndCmdWin
 Gui, 1:+Disabled
-Gui, 3:Add, Tab2, W450 H0 vTabControl AltSubmit, %c_Lang003%¢%c_Lang015%¢%c_Lang066%
+Gui, 3:Add, Tab2, W450 H0 vTabControl AltSubmit, CmdTab1¢CmdTab2¢CmdTab3
 ; Sleep
 Gui, 3:Add, GroupBox, Section xm ym W450 H115
 Gui, 3:Add, Text, ys+20 xs+10 W180 Right, %c_Lang050%:
@@ -5104,7 +5104,7 @@ Loop, %TabCount%
 	Proj_Labels .= TabGetText(TabSel, A_Index) "|"
 Gui, 12:+owner1 -MinimizeBox +E0x00000400 +HwndCmdWin
 Gui, 1:+Disabled
-Gui, 12:Add, Tab2, W450 H0 vTabControl AltSubmit, %c_Lang073%|%c_Lang077%|%c_Lang079%
+Gui, 12:Add, Tab2, W450 H0 vTabControl AltSubmit, CmdTab1|CmdTab2|CmdTab3
 ; Loop
 Gui, 12:Add, Groupbox, Section ym xm W450 H200
 Gui, 12:Add, Radio, -Wrap Checked ys+15 xs+10 W80 vLoop gLoopType R1, %c_Lang132%
@@ -6626,7 +6626,7 @@ AsVar:
 IfSt:
 Gui, 21:+owner1 -MinimizeBox +E0x00000400 +HwndCmdWin +Delimiter$
 Gui, 1:+Disabled
-Gui, 21:Add, Tab2, W450 H0 vTabControl AltSubmit, %c_Lang009%$%c_Lang084%$%c_Lang011%
+Gui, 21:Add, Tab2, W450 H0 vTabControl AltSubmit, CmdTab1$CmdTab2$CmdTab3
 ; Statements
 Gui, 21:Add, GroupBox, Section xm ym W450 H240
 Gui, 21:Add, DDL, ys+15 xs+10 W190 vStatement gStatement AltSubmit,
@@ -7688,7 +7688,7 @@ IECom:
 IEWindows := ListIEWindows()
 Gui, 24:+owner1 -MinimizeBox +E0x00000400 +hwndCmdWin
 Gui, 1:+Disabled
-Gui, 24:Add, Tab2, W410 H0 vTabControl gTabControl AltSubmit, %c_Lang012%|%c_Lang014%|%c_Lang155%
+Gui, 24:Add, Tab2, W410 H0 vTabControl gTabControl AltSubmit, CmdTab1|CmdTab2|CmdTab3
 Gui, 24:Add, GroupBox, Section xm ym W450 H265
 Gui, 24:Add, Combobox, ys+15 xs+10 W160 vIECmd gIECmd, %IECmdList%
 Gui, 24:Add, Radio, Section -Wrap Checked ys+20 x+20 W90 vSet gIECmd R1, %c_Lang093%
@@ -8341,6 +8341,95 @@ Gui, 24:-Disabled
 Gui, 30:Destroy
 return
 
+EditUserFunc:
+EditParam:
+EditReturn:
+s_Caller := "Edit"
+UserFunction:
+FuncParameter:
+FuncReturn:
+Gui, 38:+owner1 -MinimizeBox +E0x00000400 +HwndCmdWin
+Gui, 1:+Disabled
+Gui, 38:Add, Tab2, W450 H0 vTabControl AltSubmit, CmdTab1|CmdTab2|CmdTab3
+; Function
+Gui, 38:Add, GroupBox, Section xm ym W450 H280
+Gui, 38:Add, Text, ys+15 xs+10 W330, %c_Lang089%:
+Gui, 38:Add, Text, yp x+5 W80, %c_Lang218%:
+Gui, 38:Add, Edit, y+5 xs+10 W330 vFuncName, MyFunc
+Gui, 38:Add, DDL, yp x+5 W89 vFuncScope, %c_Lang219%||%c_Lang220%
+Gui, 38:Add, Text, y+15 xs+10, %c_Lang215%:
+Gui, 38:Add, Text, y+15 xs+25 W210, %c_Lang221%:
+Gui, 38:Add, Text, yp x+5 W150, %c_Lang217%:
+Gui, 38:Add, Text, yp x+5 W30, ByRef
+Gui, 38:Add, Text, y+10 xs+5 W10, #1
+Gui, 38:Add, Edit, yp-5 xs+25 W210 vParam1
+Gui, 38:Add, ComboBox, yp x+5 W150 vValue1, true|false|_blank
+Gui, 38:Add, CheckBox, yp+5 x+15 W30 vByRef1
+Gui, 38:Add, Text, y+10 xs+5 W10, #2
+Gui, 38:Add, Edit, yp-5 xs+25 W210 vParam2
+Gui, 38:Add, ComboBox, yp x+5 W150 vValue2, true|false|_blank
+Gui, 38:Add, CheckBox, yp+5 x+15 W30 vByRef2
+Gui, 38:Add, Text, y+10 xs+5 W10, #3
+Gui, 38:Add, Edit, yp-5 xs+25 W210 vParam3
+Gui, 38:Add, ComboBox, yp x+5 W150 vValue3, true|false|_blank
+Gui, 38:Add, CheckBox, yp+5 x+15 W30 vByRef3
+Gui, 38:Add, Text, y+10 xs+5 W10, #4
+Gui, 38:Add, Edit, yp-5 xs+25 W210 vParam4
+Gui, 38:Add, ComboBox, yp x+5 W150 vValue4, true|false|_blank
+Gui, 38:Add, CheckBox, yp+5 x+15 W30 vByRef4
+Gui, 38:Add, Text, y+10 xs+5 W10, #5
+Gui, 38:Add, Edit, yp-5 xs+25 W210 vParam5
+Gui, 38:Add, ComboBox, yp x+5 W150 vValue5, true|false|_blank
+Gui, 38:Add, CheckBox, yp+5 x+15 W30 vByRef5
+Gui, 38:Add, Text, y+10 xs+5 W10, #6
+Gui, 38:Add, Edit, yp-5 xs+25 W210 vParam6
+Gui, 38:Add, ComboBox, yp x+5 W150 vValue6, true|false|_blank
+Gui, 38:Add, CheckBox, yp+5 x+15 W30 vByRef6
+Gui, 38:Add, Text, y+10 xs+25 W400 cGray, %c_Lang222%
+Gui, 38:Tab, 2
+; Parameters
+Gui, 38:Add, GroupBox, Section xm ym W450 H280
+Gui, 38:Add, Text, ys+15 xs+10 W430, %c_Lang221%
+Gui, 38:Add, Edit, y+5 xs+10 W430 vParamName
+Gui, 38:Add, Text, y+15 xs+10 W430, %c_Lang217%
+Gui, 38:Add, Edit, y+5 xs+10 W430 vDefaultValue
+Gui, 38:Add, CheckBox, y+15 xs+10 W100, ByRef
+Gui, 38:Add, Text, y+15 xs+10 W430 R10, %d_Lang095%
+Gui, 38:Tab, 3
+; Return
+Gui, 38:Add, GroupBox, Section xm ym W450 H280
+Gui, 38:Add, Text, ys+15 xs+10 W430, %c_Lang216%:
+Gui, 38:Add, Edit, y+5 xs+10 W430
+Gui, 38:Add, Text, y+15 xs+10 W430 R10, %d_Lang096%
+
+If (A_ThisLabel = "UserFunction")
+{
+	GuiTitle := c_Lang212
+}
+Else If (A_ThisLabel = "FuncParameter")
+{
+	GuiControl, 38:Choose, TabControl, 2
+	GuiTitle := c_Lang213
+}
+Else If (A_ThisLabel = "FuncReturn")
+{
+	GuiControl, 38:Choose, TabControl, 3
+	GuiTitle := c_Lang214
+}
+Gui, 38:Show,, %GuiTitle%
+return
+
+UDFCancel:
+38GuiEscape:
+38GuiClose:
+Gui, 1:-Disabled
+Gui, 38:Destroy
+s_Caller := ""
+return
+
+ConvertToFunc:
+return
+
 DonatePayPal:
 If (Lang = "Pt")
 	Run, "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=rodolfoub`%40gmail`%2ecom&lc=BR&item_name=Pulover`%27s`%20Macro`%20Creator&item_number=App`%2ePMC`%2eBr&currency_code=BRL&bn=PP`%2dDonationsBF`%3abtn_donateCC_LG`%2egif`%3aNonHosted"
@@ -8807,7 +8896,10 @@ If (!DontShowPb)
 If (!(PlayHK) && !(HideWin) && (HideMainWin))
 	GoSub, ShowHide
 Else
+{
 	WinMinimize, ahk_id %PMCWinID%
+	Send, !{Tab}
+}
 If (OnScCtrl)
 	GoSub, ShowControls
 Gui, chMacro:Default
@@ -12797,7 +12889,10 @@ Loop, % LV_GetCount()
 :	(Type = cType43) ? LV_Modify(A_Index, "Icon" IconsNames["jscript"])
 :	(Type = cType35) ? LV_Modify(A_Index, "Icon" IconsNames["labels"])
 :	LV_Modify(A_Index, "Icon" IconsNames["keystroke"])
-	RegExMatch(Type, cType36 "|" cType37) ? LV_Modify(A_Index, "Icon" IconsNames["goto"])
+	(Type = cType47) ? LV_Modify(A_Index, "Icon" IconsNames["userfunc"])
+:	(Type = cType48) ? LV_Modify(A_Index, "Icon" IconsNames["parameter"])
+:	(Type = cType49) ? LV_Modify(A_Index, "Icon" IconsNames["return"])
+:	RegExMatch(Type, cType36 "|" cType37) ? LV_Modify(A_Index, "Icon" IconsNames["goto"])
 :	RegExMatch(Type, cType32 "|" cType33) ? LV_Modify(A_Index, "Icon" IconsNames["ie"])
 :	RegExMatch(Type, cType11 "|" cType14 "|Run|RunWait|RunAs") ? LV_Modify(A_Index, "Icon" IconsNames["run"])
 :	RegExMatch(Type, "Process") ? LV_Modify(A_Index, "Icon" IconsNames["process"])
@@ -12990,6 +13085,34 @@ Menu, FileMenu, Add, %f_Lang010%`t%_s%Alt+F3, ListVars
 Menu, FileMenu, Add
 Menu, FileMenu, Add, %f_Lang011%`t%_s%Alt+F4, Exit
 
+Menu, MacroMenu, Add, %r_Lang001%`t%_s%Ctrl+R, Record
+Menu, MacroMenu, Add
+Menu, MacroMenu, Add, %r_Lang002%`t%_s%Ctrl+Enter, PlayStart
+Menu, MacroMenu, Add, %r_Lang003%`t%_s%Ctrl+Shift+Enter, TestRun
+Menu, MacroMenu, Add, %r_Lang004%`t%_s%Ctrl+Shift+T, RunTimer
+Menu, MacroMenu, Add
+Menu, MacroMenu, Add, %r_Lang005%`t%_s%Ctrl+Alt+D, ResetHotkeys
+Menu, MacroMenu, Add
+Menu, MacroMenu, Add, %r_Lang006%`t%_s%Alt+1, PlayFrom
+Menu, MacroMenu, Add, %r_Lang007%`t%_s%Alt+2, PlayTo
+Menu, MacroMenu, Add, %r_Lang008%`t%_s%Alt+3, PlaySel
+Menu, MacroMenu, Add
+Menu, MacroMenu, Add, %r_Lang009%`t%_s%Ctrl+H, SetWin
+Menu, MacroMenu, Add
+Menu, MacroMenu, Add, %r_Lang010%`t%_s%Ctrl+T, TabPlus
+Menu, MacroMenu, Add, %r_Lang011%`t%_s%Ctrl+W, TabClose
+Menu, MacroMenu, Add, %r_Lang012%`t%_s%Ctrl+Shift+D, DuplicateList
+Menu, MacroMenu, Add, %r_Lang013%`t%_s%Ctrl+Shift+M, EditMacros
+Menu, MacroMenu, Add
+Menu, MacroMenu, Add, %r_Lang014%`t%_s%Ctrl+I, Import
+Menu, MacroMenu, Add, %r_Lang015%`t%_s%Ctrl+Alt+S, SaveCurrentList
+
+Menu, FuncMenu, Add, %u_Lang001%`t%_s%Ctrl+Shift+U, UserFunction
+Menu, FuncMenu, Add, %u_Lang002%`t%_s%Ctrl+Shift+P, FuncParameter
+Menu, FuncMenu, Add, %u_Lang003%`t%_s%Ctrl+Shift+N, FuncReturn
+Menu, FuncMenu, Add
+Menu, FuncMenu, Add, %u_Lang004%`t%_s%Ctrl+Shift+C, ConvertToFunc
+
 Menu, CommandMenu, Add, %i_Lang001%`t%_s%F2, Mouse
 Menu, CommandMenu, Add, %i_Lang002%`t%_s%F3, Text
 Menu, CommandMenu, Add, %i_Lang003%`t%_s%F4, ControlCmd
@@ -13079,28 +13202,6 @@ Menu, EditMenu, Add, %e_Lang013%`t%_s%Insert, ApplyL
 Menu, EditMenu, Add, %e_Lang014%`t%_s%Ctrl+Insert, InsertKey
 Menu, EditMenu, Default, %m_Lang004%`t%_s%Enter
 
-Menu, MacroMenu, Add, %r_Lang001%`t%_s%Ctrl+R, Record
-Menu, MacroMenu, Add
-Menu, MacroMenu, Add, %r_Lang002%`t%_s%Ctrl+Enter, PlayStart
-Menu, MacroMenu, Add, %r_Lang003%`t%_s%Ctrl+Shift+Enter, TestRun
-Menu, MacroMenu, Add, %r_Lang004%`t%_s%Ctrl+Shift+T, RunTimer
-Menu, MacroMenu, Add
-Menu, MacroMenu, Add, %r_Lang005%`t%_s%Ctrl+Alt+D, ResetHotkeys
-Menu, MacroMenu, Add
-Menu, MacroMenu, Add, %r_Lang006%`t%_s%Alt+1, PlayFrom
-Menu, MacroMenu, Add, %r_Lang007%`t%_s%Alt+2, PlayTo
-Menu, MacroMenu, Add, %r_Lang008%`t%_s%Alt+3, PlaySel
-Menu, MacroMenu, Add
-Menu, MacroMenu, Add, %r_Lang009%`t%_s%Ctrl+H, SetWin
-Menu, MacroMenu, Add
-Menu, MacroMenu, Add, %r_Lang010%`t%_s%Ctrl+T, TabPlus
-Menu, MacroMenu, Add, %r_Lang011%`t%_s%Ctrl+W, TabClose
-Menu, MacroMenu, Add, %r_Lang012%`t%_s%Ctrl+Shift+D, DuplicateList
-Menu, MacroMenu, Add, %r_Lang013%`t%_s%Ctrl+Shift+M, EditMacros
-Menu, MacroMenu, Add
-Menu, MacroMenu, Add, %r_Lang014%`t%_s%Ctrl+I, Import
-Menu, MacroMenu, Add, %r_Lang015%`t%_s%Ctrl+Alt+S, SaveCurrentList
-
 Menu, CustomMenu, Add, %v_Lang011%, TbCustomize
 Menu, CustomMenu, Add, %v_Lang012%, TbCustomize
 Menu, CustomMenu, Add, %v_Lang013%, TbCustomize
@@ -13188,14 +13289,15 @@ Loop, Parse, Start_Tips, `n
 Menu, DonationMenu, Add, %p_Lang001%, DonatePayPal
 
 Menu, MenuBar, Add, %m_Lang001%, :FileMenu
-Menu, MenuBar, Add, %m_Lang005%, :MacroMenu
-Menu, MenuBar, Add, %m_Lang002%, :CommandMenu
-Menu, MenuBar, Add, %m_Lang004%, :EditMenu
-Menu, MenuBar, Add, %m_Lang003%, :SelectMenu
-Menu, MenuBar, Add, %m_Lang006%, :ViewMenu
-Menu, MenuBar, Add, %m_Lang007%, :OptionsMenu
-Menu, MenuBar, Add, %m_Lang008%, :DonationMenu
-Menu, MenuBar, Add, %m_Lang009%, :HelpMenu
+Menu, MenuBar, Add, %m_Lang002%, :MacroMenu
+Menu, MenuBar, Add, %m_Lang003%, :FuncMenu
+Menu, MenuBar, Add, %m_Lang004%, :CommandMenu
+Menu, MenuBar, Add, %m_Lang005%, :EditMenu
+Menu, MenuBar, Add, %m_Lang006%, :SelectMenu
+Menu, MenuBar, Add, %m_Lang007%, :ViewMenu
+Menu, MenuBar, Add, %m_Lang008%, :OptionsMenu
+Menu, MenuBar, Add, %m_Lang009%, :DonationMenu
+Menu, MenuBar, Add, %m_Lang010%, :HelpMenu
 
 Gui, Menu, MenuBar
 
@@ -13297,6 +13399,20 @@ Menu, FileMenu, Icon, %f_Lang007%`t%_s%Ctrl+P, %ResDllPath%, % IconsNames["previ
 Menu, FileMenu, Icon, %f_Lang008%`t%_s%Ctrl+Shift+E, %ResDllPath%, % IconsNames["extedit"]
 Menu, FileMenu, Icon, %f_Lang009%`t%_s%Ctrl+Alt+T, %ResDllPath%, % IconsNames["scheduler"]
 Menu, FileMenu, Icon, %f_Lang011%`t%_s%Alt+F4, %ResDllPath%, % IconsNames["exit"]
+Menu, MacroMenu, Icon, %r_Lang001%`t%_s%Ctrl+R, %ResDllPath%, % IconsNames["record"]
+Menu, MacroMenu, Icon, %r_Lang002%`t%_s%Ctrl+Enter, %ResDllPath%, % IconsNames["play"]
+Menu, MacroMenu, Icon, %r_Lang003%`t%_s%Ctrl+Shift+Enter, %ResDllPath%, % IconsNames["playtest"]
+Menu, MacroMenu, Icon, %r_Lang004%`t%_s%Ctrl+Shift+T, %ResDllPath%, % IconsNames["timer"]
+Menu, MacroMenu, Icon, %r_Lang009%`t%_s%Ctrl+H, %ResDllPath%, % IconsNames["context"]
+Menu, MacroMenu, Icon, %r_Lang010%`t%_s%Ctrl+T, %ResDllPath%, % IconsNames["tabadd"]
+Menu, MacroMenu, Icon, %r_Lang011%`t%_s%Ctrl+W, %ResDllPath%, % IconsNames["tabclose"]
+Menu, MacroMenu, Icon, %r_Lang012%`t%_s%Ctrl+Shift+D, %ResDllPath%, % IconsNames["tabdup"]
+Menu, MacroMenu, Icon, %r_Lang013%`t%_s%Ctrl+Shift+M, %ResDllPath%, % IconsNames["tabedit"]
+Menu, MacroMenu, Icon, %r_Lang014%`t%_s%Ctrl+I, %ResDllPath%, % IconsNames["import"]
+Menu, MacroMenu, Icon, %r_Lang015%`t%_s%Ctrl+Alt+S, %ResDllPath%, % IconsNames["tabsave"]
+Menu, FuncMenu, Icon, %u_Lang001%`t%_s%Ctrl+Shift+U, %ResDllPath%, % IconsNames["userfunc"]
+Menu, FuncMenu, Icon, %u_Lang002%`t%_s%Ctrl+Shift+P, %ResDllPath%, % IconsNames["parameter"]
+Menu, FuncMenu, Icon, %u_Lang003%`t%_s%Ctrl+Shift+N, %ResDllPath%, % IconsNames["return"]
 Menu, CommandMenu, Icon, %i_Lang001%`t%_s%F2, %ResDllPath%, % IconsNames["mouse"]
 Menu, CommandMenu, Icon, %i_Lang002%`t%_s%F3, %ResDllPath%, % IconsNames["text"]
 Menu, CommandMenu, Icon, %i_Lang003%`t%_s%F4, %ResDllPath%, % IconsNames["control"]
@@ -13333,17 +13449,6 @@ Menu, EditMenu, Icon, %e_Lang002%`t%_s%Ctrl+L, %ResDllPath%, % IconsNames["comme
 Menu, EditMenu, Icon, %e_Lang015%`t%_s%Ctrl+M, %ResDllPath%, % IconsNames["color"]
 Menu, EditMenu, Icon, %e_Lang013%`t%_s%Insert, %ResDllPath%, % IconsNames["insert"]
 Menu, EditMenu, Icon, %e_Lang014%`t%_s%Ctrl+Insert, %ResDllPath%, % IconsNames["keystroke"]
-Menu, MacroMenu, Icon, %r_Lang001%`t%_s%Ctrl+R, %ResDllPath%, % IconsNames["record"]
-Menu, MacroMenu, Icon, %r_Lang002%`t%_s%Ctrl+Enter, %ResDllPath%, % IconsNames["play"]
-Menu, MacroMenu, Icon, %r_Lang003%`t%_s%Ctrl+Shift+Enter, %ResDllPath%, % IconsNames["playtest"]
-Menu, MacroMenu, Icon, %r_Lang004%`t%_s%Ctrl+Shift+T, %ResDllPath%, % IconsNames["timer"]
-Menu, MacroMenu, Icon, %r_Lang009%`t%_s%Ctrl+H, %ResDllPath%, % IconsNames["context"]
-Menu, MacroMenu, Icon, %r_Lang010%`t%_s%Ctrl+T, %ResDllPath%, % IconsNames["tabadd"]
-Menu, MacroMenu, Icon, %r_Lang011%`t%_s%Ctrl+W, %ResDllPath%, % IconsNames["tabclose"]
-Menu, MacroMenu, Icon, %r_Lang012%`t%_s%Ctrl+Shift+D, %ResDllPath%, % IconsNames["tabdup"]
-Menu, MacroMenu, Icon, %r_Lang013%`t%_s%Ctrl+Shift+M, %ResDllPath%, % IconsNames["tabedit"]
-Menu, MacroMenu, Icon, %r_Lang014%`t%_s%Ctrl+I, %ResDllPath%, % IconsNames["import"]
-Menu, MacroMenu, Icon, %r_Lang015%`t%_s%Ctrl+Alt+S, %ResDllPath%, % IconsNames["tabsave"]
 Menu, OptionsMenu, Icon, %o_Lang001%`t%_s%Ctrl+G, %ResDllPath%, % IconsNames["options"]
 Menu, HelpMenu, Icon, %h_Lang001%`t%_s%F1, %ResDllPath%, % IconsNames["help"]
 Menu, DonationMenu, Icon, %p_Lang001%, %ResDllPath%, % IconsNames["donate"]
@@ -13730,6 +13835,7 @@ TB_Edit(tbEdit, "EditButton", "", "", w_Lang092), TB_Edit(tbEdit, "CutRows", "",
 , TB_Edit(tbEdit, "FindReplace", "", "", w_Lang087), TB_Edit(tbEdit, "EditComm", "", "", w_Lang088), TB_Edit(tbEdit, "EditColor", "", "", w_Lang089)
 , TB_Edit(tbEdit, "TabPlus", "", "", w_Lang072), TB_Edit(tbEdit, "TabClose", "", "", w_Lang073), TB_Edit(tbEdit, "DuplicateList", "", "", w_Lang074), TB_Edit(tbEdit, "EditMacros", "", "", w_Lang052)
 , TB_Edit(tbEdit, "Import", "", "", w_Lang075), TB_Edit(tbEdit, "SaveCurrentList", "", "", w_Lang076)
+, TB_Edit(tbEdit, "UserFunction", "", "", w_Lang103), TB_Edit(tbEdit, "FuncParameter", "", "", w_Lang104), TB_Edit(tbEdit, "FuncReturn", "", "", w_Lang105)
 ; Preview
 TB_Edit(tbPrev, "PrevDock", "", "", t_Lang124)
 , TB_Edit(tbPrev, "PrevCopy", "", "", c_Lang023), TB_Edit(tbPrev, "PrevRefreshButton", "", "", t_Lang014)

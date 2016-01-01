@@ -4,14 +4,15 @@
 		
 ; Main Menu		
 	m_Lang001 =	파일
-	m_Lang002 =	명령
-	m_Lang003 =	선택
-	m_Lang004 =	수정
-	m_Lang005 =	매크로
-	m_Lang006 =	전망
-	m_Lang007 =	옵션
-	m_Lang008 =	기부
-	m_Lang009 =	도움
+	m_Lang002 =	매크로
+	m_Lang003 =	
+	m_Lang004 =	명령
+	m_Lang005 =	수정
+	m_Lang006 =	선택
+	m_Lang007 =	전망
+	m_Lang008 =	옵션
+	m_Lang009 =	기부
+	m_Lang010 =	도움
 		
 ; File Sub Menu		
 	f_Lang001 =	새로운
@@ -28,21 +29,27 @@
 	f_Lang012 =	없음
 		
 ; Macro Sub Menu		
-	r_lang001 =	기록 매크로
-	r_lang002 =	매크로 활성화
-	r_lang003 =	현재 매크로를 재생
-	r_lang004 =	타이머
-	r_lang005 =	매크로를 비활성화
-	r_lang006 =	선택한 행에서 재생
-	r_lang007 =	선택한 행까지 재생
-	r_lang008 =	선택한 행을 재생
-	r_lang009 =	문맥을 인식 단축키
-	r_lang010 =	매크로를 추가합니다
-	r_lang011 =	닫기 매크로
-	r_lang012 =	매크로를 복사
-	r_lang013 =	매크로 편집
-	r_lang014 =	가져 오기 매크로
-	r_lang015 =	현재 매크로를 저장
+	r_Lang001 =	기록 매크로
+	r_Lang002 =	매크로 활성화
+	r_Lang003 =	현재 매크로를 재생
+	r_Lang004 =	타이머
+	r_Lang005 =	매크로를 비활성화
+	r_Lang006 =	선택한 행에서 재생
+	r_Lang007 =	선택한 행까지 재생
+	r_Lang008 =	선택한 행을 재생
+	r_Lang009 =	문맥을 인식 단축키
+	r_Lang010 =	매크로를 추가합니다
+	r_Lang011 =	닫기 매크로
+	r_Lang012 =	매크로를 복사
+	r_Lang013 =	매크로 편집
+	r_Lang014 =	가져 오기 매크로
+	r_Lang015 =	현재 매크로를 저장
+		
+; UDF Sub Menu		
+	u_Lang001 =	
+	u_Lang002 =	
+	u_Lang003 =	
+	u_Lang004 =	
 		
 ; Commands Sub Menu		
 	i_Lang001 =	마우스
@@ -104,34 +111,34 @@
 	s_Lang010 =	명령 유형
 		
 ; View Sub Menu		
-	v_lang001 =	항상 상단에
-	v_lang002 =	하이라이트 행
-	v_lang003 =	톱니 모양
-	v_lang004 =	컨트롤 도구 모음
-	v_lang005 =	시사
-	v_lang006 =	도구 모음
-	v_lang007 =	단축키
-	v_lang008 =	열 크기를 재설정
-	v_lang009 =	아이콘 크기
-	v_lang010 =	레이아웃 재설정
+	v_Lang001 =	항상 상단에
+	v_Lang002 =	하이라이트 행
+	v_Lang003 =	톱니 모양
+	v_Lang004 =	컨트롤 도구 모음
+	v_Lang005 =	시사
+	v_Lang006 =	도구 모음
+	v_Lang007 =	단축키
+	v_Lang008 =	열 크기를 재설정
+	v_Lang009 =	아이콘 크기
+	v_Lang010 =	레이아웃 재설정
 		
-	v_lang011 =	파일
-	v_lang012 =	기록 및 재생
-	v_lang013 =	명령
-	v_lang014 =	편집
-	v_lang015 =	옵션
-	v_lang016 =	사용자 지정
+	v_Lang011 =	파일
+	v_Lang012 =	기록 및 재생
+	v_Lang013 =	명령
+	v_Lang014 =	편집
+	v_Lang015 =	옵션
+	v_Lang016 =	사용자 지정
 		
-	v_lang017 =	자동적 인
-	v_lang018 =	사용 설명서
-	v_lang019 =	정지
-	v_lang020 =	중지
+	v_Lang017 =	자동적 인
+	v_Lang018 =	사용 설명서
+	v_Lang019 =	정지
+	v_Lang020 =	중지
 		
-	v_lang021 =	콤팩트
-	v_lang022 =	디폴트 값
+	v_Lang021 =	콤팩트
+	v_Lang022 =	디폴트 값
 		
-	v_lang023 =	작은
-	v_lang024 =	큰
+	v_Lang023 =	작은
+	v_Lang024 =	큰
 		
 ; Options Sub Menu		
 	o_Lang001 =	설정
@@ -281,6 +288,10 @@
 	w_Lang100 =	모든 그룹을 제거
 	w_Lang101 =	편집 그룹
 	w_Lang102 =	그룹 이름
+	w_Lang103 =	
+	w_Lang104 =	
+	w_Lang105 =	
+	w_Lang106 =	
 		
 ; Command Windows		
 	c_Lang001 =	마우스
@@ -493,6 +504,17 @@
 	c_Lang209 =	값 이름
 	c_Lang210 =	값
 	c_Lang211 =	정렬
+	c_Lang212 =	
+	c_Lang213 =	
+	c_Lang214 =	
+	c_Lang215 =	
+	c_Lang216 =	
+	c_Lang217 =	
+	c_Lang218 =	
+	c_Lang219 =	
+	c_Lang220 =	
+	c_Lang221 =	
+	c_Lang222 =	
 		
 ; Other Windows		
 	t_Lang001 =	AutoHotkey로 내보내기
@@ -828,6 +850,15 @@
 	d_Lang092 =	작은 아이콘
 	d_Lang093 =	큰 아이콘
 	d_Lang094 =	이 기능은 Windows Vista 또는 이상이 필요합니다.
+	d_Lang095 =	
+	d_Lang096 =	
+	(LTrim	
+		
+		
+		
+		
+		
+	)	
 		
 ; Start-up Tips		
 	Start_Tips =	

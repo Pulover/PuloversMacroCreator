@@ -4,14 +4,15 @@
 		
 ; Main Menu		
 	m_Lang001 =	&Bestand
-	m_Lang002 =	&Commando's
-	m_Lang003 =	&Kiezen
-	m_Lang004 =	&Redigeren
-	m_Lang005 =	&Macro
-	m_Lang006 =	&Zien
-	m_Lang007 =	&Opties
-	m_Lang008 =	&Schenken
-	m_Lang009 =	&Help
+	m_Lang002 =	&Macro
+	m_Lang003 =	
+	m_Lang004 =	&Commando's
+	m_Lang005 =	&Redigeren
+	m_Lang006 =	&Kiezen
+	m_Lang007 =	&Zien
+	m_Lang008 =	&Opties
+	m_Lang009 =	&Schenken
+	m_Lang010 =	&Help
 		
 ; File Sub Menu		
 	f_Lang001 =	&Nieuw
@@ -28,21 +29,27 @@
 	f_Lang012 =	&Geen files
 		
 ; Macro Sub Menu		
-	r_lang001 =	&Macro opnemen
-	r_lang002 =	&Activeer Macro's
-	r_lang003 =	&Speel huidige macro
-	r_lang004 =	&Timer
-	r_lang005 =	&Deactiveren Macro's
-	r_lang006 =	A&fspelen vanaf geselecteerde rij
-	r_lang007 =	S&peel tot geselecteerde rij
-	r_lang008 =	Sp&elen Geselecteerde Rijen
-	r_lang009 =	&Context gevoelige sneltoetsen
-	r_lang010 =	&Voeg Macro
-	r_lang011 =	S&luiten Macro
-	r_lang012 =	D&ubbele Macro
-	r_lang013 =	Mac&ro's Bewerken
-	r_lang014 =	&Import Macro
-	r_lang015 =	Save &huidige Macro
+	r_Lang001 =	&Macro opnemen
+	r_Lang002 =	&Activeer Macro's
+	r_Lang003 =	&Speel huidige macro
+	r_Lang004 =	&Timer
+	r_Lang005 =	&Deactiveren Macro's
+	r_Lang006 =	A&fspelen vanaf geselecteerde rij
+	r_Lang007 =	S&peel tot geselecteerde rij
+	r_Lang008 =	Sp&elen Geselecteerde Rijen
+	r_Lang009 =	&Context gevoelige sneltoetsen
+	r_Lang010 =	&Voeg Macro
+	r_Lang011 =	S&luiten Macro
+	r_Lang012 =	D&ubbele Macro
+	r_Lang013 =	Mac&ro's Bewerken
+	r_Lang014 =	&Import Macro
+	r_Lang015 =	Save &huidige Macro
+		
+; UDF Sub Menu		
+	u_Lang001 =	
+	u_Lang002 =	
+	u_Lang003 =	
+	u_Lang004 =	
 		
 ; Commands Sub Menu		
 	i_Lang001 =	&Muis
@@ -104,34 +111,34 @@
 	s_Lang010 =	Opdracht type
 		
 ; View Sub Menu		
-	v_lang001 =	&Altijd op voorgrond
-	v_lang002 =	&Hoogtepunt Rijen
-	v_lang003 =	&Inspringing
-	v_lang004 =	&Controles Werkbalk
-	v_lang005 =	&Voorbeeld
-	v_lang006 =	&Werkbalken
-	v_lang007 =	H&otkeys
-	v_lang008 =	&Reset Kolommen Grootte
-	v_lang009 =	Ico&nen Grootte
-	v_lang010 =	R&eset Layout
+	v_Lang001 =	&Altijd op voorgrond
+	v_Lang002 =	&Hoogtepunt Rijen
+	v_Lang003 =	&Inspringing
+	v_Lang004 =	&Controles Werkbalk
+	v_Lang005 =	&Voorbeeld
+	v_Lang006 =	&Werkbalken
+	v_Lang007 =	H&otkeys
+	v_Lang008 =	&Reset Kolommen Grootte
+	v_Lang009 =	Ico&nen Grootte
+	v_Lang010 =	R&eset Layout
 		
-	v_lang011 =	&Bestand
-	v_lang012 =	&Opnemen en afspelen
-	v_lang013 =	&Commando's
-	v_lang014 =	&Uitgeven
-	v_lang015 =	O&pties
-	v_lang016 =	&Aanpassen
+	v_Lang011 =	&Bestand
+	v_Lang012 =	&Opnemen en afspelen
+	v_Lang013 =	&Commando's
+	v_Lang014 =	&Uitgeven
+	v_Lang015 =	O&pties
+	v_Lang016 =	&Aanpassen
 		
-	v_lang017 =	&Automatisch
-	v_lang018 =	&Handboek
-	v_lang019 =	&Stoppen
-	v_lang020 =	&Pauze
+	v_Lang017 =	&Automatisch
+	v_Lang018 =	&Handboek
+	v_Lang019 =	&Stoppen
+	v_Lang020 =	&Pauze
 		
-	v_lang021 =	&Compact
-	v_lang022 =	&Verzuim
+	v_Lang021 =	&Compact
+	v_Lang022 =	&Verzuim
 		
-	v_lang023 =	&Klein
-	v_lang024 =	&Groot
+	v_Lang023 =	&Klein
+	v_Lang024 =	&Groot
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Instellingen
@@ -281,6 +288,10 @@
 	w_Lang100 =	Verwijder alle groepen
 	w_Lang101 =	Groepen bewerken
 	w_Lang102 =	Groepsnaam
+	w_Lang103 =	
+	w_Lang104 =	
+	w_Lang105 =	
+	w_Lang106 =	
 		
 ; Command Windows		
 	c_Lang001 =	Muis
@@ -493,6 +504,17 @@
 	c_Lang209 =	Waarde naam
 	c_Lang210 =	Waarden
 	c_Lang211 =	Reeks
+	c_Lang212 =	
+	c_Lang213 =	
+	c_Lang214 =	
+	c_Lang215 =	
+	c_Lang216 =	
+	c_Lang217 =	
+	c_Lang218 =	
+	c_Lang219 =	
+	c_Lang220 =	
+	c_Lang221 =	
+	c_Lang222 =	
 		
 ; Other Windows		
 	t_Lang001 =	Exporteren naar AutoHotkey
@@ -828,6 +850,15 @@
 	d_Lang092 =	Kleine pictogrammen
 	d_Lang093 =	Grote pictogrammen
 	d_Lang094 =	Deze functie vereist Windows Vista of hoger.
+	d_Lang095 =	
+	d_Lang096 =	
+	(LTrim	
+		
+		
+		
+		
+		
+	)	
 		
 ; Start-up Tips		
 	Start_Tips =	

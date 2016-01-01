@@ -4,14 +4,15 @@
 		
 ; Main Menu		
 	m_Lang001 =	&Dosya
-	m_Lang002 =	&Komutları
-	m_Lang003 =	&Seçmek
-	m_Lang004 =	D&üzenle
-	m_Lang005 =	&Makro
-	m_Lang006 =	&Görmek
-	m_Lang007 =	S&eçenekler
-	m_Lang008 =	&Bağışlamak
-	m_Lang009 =	&Yardım
+	m_Lang002 =	&Makro
+	m_Lang003 =	
+	m_Lang004 =	&Komutları
+	m_Lang005 =	D&üzenle
+	m_Lang006 =	&Seçmek
+	m_Lang007 =	&Görmek
+	m_Lang008 =	S&eçenekler
+	m_Lang009 =	&Bağışlamak
+	m_Lang010 =	&Yardım
 		
 ; File Sub Menu		
 	f_Lang001 =	&Yeni
@@ -28,21 +29,27 @@
 	f_Lang012 =	H&içbir içerik
 		
 ; Macro Sub Menu		
-	r_lang001 =	&Makro Kaydet
-	r_lang002 =	M&akrolar etkinleştirin
-	r_lang003 =	&Güncel Makro oyna
-	r_lang004 =	&Kronometre
-	r_lang005 =	Mak&roları Devre Dışı Bırakmak
-	r_lang006 =	&Seçilen satırdaki oyna
-	r_lang007 =	S&eçili satır kadar oyna
-	r_lang008 =	Se&çilen Satırlar oyna
-	r_lang009 =	&Bağlam Duyarlı Hotkeys
-	r_lang010 =	Makr&o Ekle
-	r_lang011 =	Ka&pat Makro
-	r_lang012 =	Makro ço&ğaltın
-	r_lang013 =	Makro&lar Düzenle
-	r_lang014 =	&İthalat Makro
-	r_lang015 =	G&üncel Makro Kaydet
+	r_Lang001 =	&Makro Kaydet
+	r_Lang002 =	M&akrolar etkinleştirin
+	r_Lang003 =	&Güncel Makro oyna
+	r_Lang004 =	&Kronometre
+	r_Lang005 =	Mak&roları Devre Dışı Bırakmak
+	r_Lang006 =	&Seçilen satırdaki oyna
+	r_Lang007 =	S&eçili satır kadar oyna
+	r_Lang008 =	Se&çilen Satırlar oyna
+	r_Lang009 =	&Bağlam Duyarlı Hotkeys
+	r_Lang010 =	Makr&o Ekle
+	r_Lang011 =	Ka&pat Makro
+	r_Lang012 =	Makro ço&ğaltın
+	r_Lang013 =	Makro&lar Düzenle
+	r_Lang014 =	&İthalat Makro
+	r_Lang015 =	G&üncel Makro Kaydet
+		
+; UDF Sub Menu		
+	u_Lang001 =	
+	u_Lang002 =	
+	u_Lang003 =	
+	u_Lang004 =	
 		
 ; Commands Sub Menu		
 	i_Lang001 =	&Fare
@@ -104,34 +111,34 @@
 	s_Lang010 =	Komut türü
 		
 ; View Sub Menu		
-	v_lang001 =	&Her zaman üstte
-	v_lang002 =	&Vurgulamak Satır
-	v_lang003 =	&Girinti
-	v_lang004 =	&Kontroller Araç Çubuğu
-	v_lang005 =	&Önizleme
-	v_lang006 =	&Araç Çubukları
-	v_lang007 =	K&ısayol Tuşları
-	v_lang008 =	S&ütunlar Boyutu Sıfırla
-	v_lang009 =	&Simgeler Boyutu
-	v_lang010 =	&Düzen Sıfırla
+	v_Lang001 =	&Her zaman üstte
+	v_Lang002 =	&Vurgulamak Satır
+	v_Lang003 =	&Girinti
+	v_Lang004 =	&Kontroller Araç Çubuğu
+	v_Lang005 =	&Önizleme
+	v_Lang006 =	&Araç Çubukları
+	v_Lang007 =	K&ısayol Tuşları
+	v_Lang008 =	S&ütunlar Boyutu Sıfırla
+	v_Lang009 =	&Simgeler Boyutu
+	v_Lang010 =	&Düzen Sıfırla
 		
-	v_lang011 =	&Dosya
-	v_lang012 =	&Kaydedin ve oyna
-	v_lang013 =	K&omutları
-	v_lang014 =	D&üzenleme
-	v_lang015 =	&Seçenekleri
-	v_lang016 =	&Özelleştirme
+	v_Lang011 =	&Dosya
+	v_Lang012 =	&Kaydedin ve oyna
+	v_Lang013 =	K&omutları
+	v_Lang014 =	D&üzenleme
+	v_Lang015 =	&Seçenekleri
+	v_Lang016 =	&Özelleştirme
 		
-	v_lang017 =	&Otomatik
-	v_lang018 =	&Manuel
-	v_lang019 =	&Dur
-	v_lang020 =	D&urma
+	v_Lang017 =	&Otomatik
+	v_Lang018 =	&Manuel
+	v_Lang019 =	&Dur
+	v_Lang020 =	D&urma
 		
-	v_lang021 =	&Kompakt
-	v_lang022 =	&Varsayılan
+	v_Lang021 =	&Kompakt
+	v_Lang022 =	&Varsayılan
 		
-	v_lang023 =	&Küçük
-	v_lang024 =	&Büyük
+	v_Lang023 =	&Küçük
+	v_Lang024 =	&Büyük
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Ayarlar
@@ -281,6 +288,10 @@
 	w_Lang100 =	Tüm grupları kaldırın
 	w_Lang101 =	Düzenleme grupları
 	w_Lang102 =	Grup ismi
+	w_Lang103 =	
+	w_Lang104 =	
+	w_Lang105 =	
+	w_Lang106 =	
 		
 ; Command Windows		
 	c_Lang001 =	Fare
@@ -493,6 +504,17 @@
 	c_Lang209 =	Değer adı
 	c_Lang210 =	Değerler
 	c_Lang211 =	Dizi
+	c_Lang212 =	
+	c_Lang213 =	
+	c_Lang214 =	
+	c_Lang215 =	
+	c_Lang216 =	
+	c_Lang217 =	
+	c_Lang218 =	
+	c_Lang219 =	
+	c_Lang220 =	
+	c_Lang221 =	
+	c_Lang222 =	
 		
 ; Other Windows		
 	t_Lang001 =	AutoHotkey Aktar
@@ -828,6 +850,15 @@
 	d_Lang092 =	Küçük simgeler
 	d_Lang093 =	Büyük ikonlar
 	d_Lang094 =	Bu özellik, Windows Vista veya üstü gerektirir.
+	d_Lang095 =	
+	d_Lang096 =	
+	(LTrim	
+		
+		
+		
+		
+		
+	)	
 		
 ; Start-up Tips		
 	Start_Tips =	

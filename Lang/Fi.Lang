@@ -4,14 +4,15 @@
 		
 ; Main Menu		
 	m_Lang001 =	&Tiedosto
-	m_Lang002 =	&Komennot
-	m_Lang003 =	&Valita
-	m_Lang004 =	&Muokata
-	m_Lang005 =	M&akro
-	m_Lang006 =	Kat&sella
-	m_Lang007 =	Va&linnat
-	m_Lang008 =	La&hjoittaa
-	m_Lang009 =	A&pua
+	m_Lang002 =	M&akro
+	m_Lang003 =	
+	m_Lang004 =	&Komennot
+	m_Lang005 =	&Muokata
+	m_Lang006 =	&Valita
+	m_Lang007 =	Kat&sella
+	m_Lang008 =	Va&linnat
+	m_Lang009 =	La&hjoittaa
+	m_Lang010 =	A&pua
 		
 ; File Sub Menu		
 	f_Lang001 =	&Uusi
@@ -28,21 +29,27 @@
 	f_Lang012 =	Ei tie&dostoja
 		
 ; Macro Sub Menu		
-	r_lang001 =	&Nauhoita makro
-	r_lang002 =	&Aktivoi Makrot
-	r_lang003 =	&Pelaa Nyt Macro
-	r_lang004 =	A&jastin
-	r_lang005 =	&Deaktivoida Makrot
-	r_lang006 =	&Toista valitun rivin
-	r_lang007 =	P&elaa kunnes valittu rivi
-	r_lang008 =	Pe&laa valitut rivit
-	r_lang009 =	T&ilannekohtaisia ​​pikanäppäimet
-	r_lang010 =	Li&sää Makro
-	r_lang011 =	S&ulje Makro
-	r_lang012 =	&Monista Makro
-	r_lang013 =	Mu&okkaa Makrot
-	r_lang014 =	Tuo Ma&cro
-	r_lang015 =	Tallenna N&ykyinen Macro
+	r_Lang001 =	&Nauhoita makro
+	r_Lang002 =	&Aktivoi Makrot
+	r_Lang003 =	&Pelaa Nyt Macro
+	r_Lang004 =	A&jastin
+	r_Lang005 =	&Deaktivoida Makrot
+	r_Lang006 =	&Toista valitun rivin
+	r_Lang007 =	P&elaa kunnes valittu rivi
+	r_Lang008 =	Pe&laa valitut rivit
+	r_Lang009 =	T&ilannekohtaisia ​​pikanäppäimet
+	r_Lang010 =	Li&sää Makro
+	r_Lang011 =	S&ulje Makro
+	r_Lang012 =	&Monista Makro
+	r_Lang013 =	Mu&okkaa Makrot
+	r_Lang014 =	Tuo Ma&cro
+	r_Lang015 =	Tallenna N&ykyinen Macro
+		
+; UDF Sub Menu		
+	u_Lang001 =	
+	u_Lang002 =	
+	u_Lang003 =	
+	u_Lang004 =	
 		
 ; Commands Sub Menu		
 	i_Lang001 =	&Hiiri
@@ -104,34 +111,34 @@
 	s_Lang010 =	Pakkokäyttöisiä
 		
 ; View Sub Menu		
-	v_lang001 =	&Aina päällimmäisenä
-	v_lang002 =	&Korosta Rivejä
-	v_lang003 =	&Sisennys
-	v_lang004 =	&Hallinnan Työkalupalkki
-	v_lang005 =	&Preview
-	v_lang006 =	&Työkalurivit
-	v_lang007 =	P&ikanäppäimet
-	v_lang008 =	Pa&lauta sarakkeet Koko
-	v_lang009 =	K&uvakkeet Koko
-	v_lang010 =	Palauta La&yout
+	v_Lang001 =	&Aina päällimmäisenä
+	v_Lang002 =	&Korosta Rivejä
+	v_Lang003 =	&Sisennys
+	v_Lang004 =	&Hallinnan Työkalupalkki
+	v_Lang005 =	&Preview
+	v_Lang006 =	&Työkalurivit
+	v_Lang007 =	P&ikanäppäimet
+	v_Lang008 =	Pa&lauta sarakkeet Koko
+	v_Lang009 =	K&uvakkeet Koko
+	v_Lang010 =	Palauta La&yout
 		
-	v_lang011 =	&Tiedosto
-	v_lang012 =	T&allentaa ja toistaa
-	v_lang013 =	&Komennot
-	v_lang014 =	&Muokata
-	v_lang015 =	&Vaihtoehtoja
-	v_lang016 =	M&uokkaa
+	v_Lang011 =	&Tiedosto
+	v_Lang012 =	T&allentaa ja toistaa
+	v_Lang013 =	&Komennot
+	v_Lang014 =	&Muokata
+	v_Lang015 =	&Vaihtoehtoja
+	v_Lang016 =	M&uokkaa
 		
-	v_lang017 =	&Automaattinen
-	v_lang018 =	&Manuaalinen
-	v_lang019 =	&Lopettaa
-	v_lang020 =	&Tauko
+	v_Lang017 =	&Automaattinen
+	v_Lang018 =	&Manuaalinen
+	v_Lang019 =	&Lopettaa
+	v_Lang020 =	&Tauko
 		
-	v_lang021 =	&Kompakti
-	v_lang022 =	&Oletusarvo
+	v_Lang021 =	&Kompakti
+	v_Lang022 =	&Oletusarvo
 		
-	v_lang023 =	&Pieni
-	v_lang024 =	&Suuri
+	v_Lang023 =	&Pieni
+	v_Lang024 =	&Suuri
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Asetukset
@@ -281,6 +288,10 @@
 	w_Lang100 =	Poista kaikki ryhmät
 	w_Lang101 =	Muokkaa ryhmiä
 	w_Lang102 =	Ryhmän nimi
+	w_Lang103 =	
+	w_Lang104 =	
+	w_Lang105 =	
+	w_Lang106 =	
 		
 ; Command Windows		
 	c_Lang001 =	Hiiri
@@ -493,6 +504,17 @@
 	c_Lang209 =	Arvo nimi
 	c_Lang210 =	Arvot
 	c_Lang211 =	Ryhmä
+	c_Lang212 =	
+	c_Lang213 =	
+	c_Lang214 =	
+	c_Lang215 =	
+	c_Lang216 =	
+	c_Lang217 =	
+	c_Lang218 =	
+	c_Lang219 =	
+	c_Lang220 =	
+	c_Lang221 =	
+	c_Lang222 =	
 		
 ; Other Windows		
 	t_Lang001 =	Vie AutoHotkey
@@ -828,6 +850,15 @@
 	d_Lang092 =	Pienet kuvakkeet
 	d_Lang093 =	Suuret kuvakkeet
 	d_Lang094 =	Tämä ominaisuus vaatii Windows Vistan tai uudemman.
+	d_Lang095 =	
+	d_Lang096 =	
+	(LTrim	
+		
+		
+		
+		
+		
+	)	
 		
 ; Start-up Tips		
 	Start_Tips =	

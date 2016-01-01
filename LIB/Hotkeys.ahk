@@ -77,6 +77,10 @@ return
 ^i::GoSub, Import
 ^+d::GoSub, DuplicateList
 ^+m::GoSub, EditMacros
+^+u::GoSub, UserFunction
+^+p::GoSub, FuncParameter
+^+n::GoSub, FuncReturn
+^+c::GoSub, ConvertToFunc
 ^e::GoSub, Export
 ^p::GoSub, Preview
 ^+e::GoSub, EditScript
@@ -259,3 +263,9 @@ Exit
 Up::GoSub, PrevResult
 Down::GoSub, NextResult
 Enter::GoSub, GoResult
+
+#If WinActive("ahk_id " CmdWin)
+
+^Tab::
+^+Tab::
+return

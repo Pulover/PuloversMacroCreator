@@ -4,14 +4,15 @@
 		
 ; Main Menu		
 	m_Lang001 =	&Fájl
-	m_Lang002 =	&Parancsok
-	m_Lang003 =	&Választ
-	m_Lang004 =	&Szerkeszt
-	m_Lang005 =	&Macro
-	m_Lang006 =	&Kilátás
-	m_Lang007 =	&Opciók
-	m_Lang008 =	&Adományoz
-	m_Lang009 =	S&egítség
+	m_Lang002 =	&Macro
+	m_Lang003 =	
+	m_Lang004 =	&Parancsok
+	m_Lang005 =	&Szerkeszt
+	m_Lang006 =	&Választ
+	m_Lang007 =	&Kilátás
+	m_Lang008 =	&Opciók
+	m_Lang009 =	&Adományoz
+	m_Lang010 =	S&egítség
 		
 ; File Sub Menu		
 	f_Lang001 =	&Új
@@ -28,21 +29,27 @@
 	f_Lang012 =	Nin&cs kép
 		
 ; Macro Sub Menu		
-	r_lang001 =	&Makró rögzítése
-	r_lang002 =	&Aktiválása Makrók
-	r_lang003 =	&Játssz Current Macro
-	r_lang004 =	&Időzítő
-	r_lang005 =	&Kikapcsolása Makrók
-	r_lang006 =	&Lejátszás kiválasztott sor
-	r_lang007 =	J&átssz, amíg a kijelölt sor
-	r_lang008 =	L&ejátszás kijelölt sorok
-	r_lang009 =	&Context Sensitive gyorsbillentyűk
-	r_lang010 =	Ke&dvencek Macro
-	r_lang011 =	&Bezárás Macro
-	r_lang012 =	I&smétlődő Macro
-	r_lang013 =	S&zerkeszteni Makrók
-	r_lang014 =	Im&port Macro
-	r_lang015 =	Me&ntse el az aktuális makró
+	r_Lang001 =	&Makró rögzítése
+	r_Lang002 =	&Aktiválása Makrók
+	r_Lang003 =	&Játssz Current Macro
+	r_Lang004 =	&Időzítő
+	r_Lang005 =	&Kikapcsolása Makrók
+	r_Lang006 =	&Lejátszás kiválasztott sor
+	r_Lang007 =	J&átssz, amíg a kijelölt sor
+	r_Lang008 =	L&ejátszás kijelölt sorok
+	r_Lang009 =	&Context Sensitive gyorsbillentyűk
+	r_Lang010 =	Ke&dvencek Macro
+	r_Lang011 =	&Bezárás Macro
+	r_Lang012 =	I&smétlődő Macro
+	r_Lang013 =	S&zerkeszteni Makrók
+	r_Lang014 =	Im&port Macro
+	r_Lang015 =	Me&ntse el az aktuális makró
+		
+; UDF Sub Menu		
+	u_Lang001 =	
+	u_Lang002 =	
+	u_Lang003 =	
+	u_Lang004 =	
 		
 ; Commands Sub Menu		
 	i_Lang001 =	&Egér
@@ -104,34 +111,34 @@
 	s_Lang010 =	Command típus
 		
 ; View Sub Menu		
-	v_lang001 =	&Mindig a tetején
-	v_lang002 =	&Kiemelés Sorok
-	v_lang003 =	&Behúzás
-	v_lang004 =	&Ellenőrzés Eszköztár
-	v_lang005 =	E&lőnézet
-	v_lang006 =	E&szköztárak
-	v_lang007 =	&Gyorsbillentyűk
-	v_lang008 =	&Visszaállítás oszlopok méret
-	v_lang009 =	&Ikonok MéRete
-	v_lang010 =	&Törlés Layout
+	v_Lang001 =	&Mindig a tetején
+	v_Lang002 =	&Kiemelés Sorok
+	v_Lang003 =	&Behúzás
+	v_Lang004 =	&Ellenőrzés Eszköztár
+	v_Lang005 =	E&lőnézet
+	v_Lang006 =	E&szköztárak
+	v_Lang007 =	&Gyorsbillentyűk
+	v_Lang008 =	&Visszaállítás oszlopok méret
+	v_Lang009 =	&Ikonok MéRete
+	v_Lang010 =	&Törlés Layout
 		
-	v_lang011 =	&Reszelő
-	v_lang012 =	R&ögzítése és lejátszása
-	v_lang013 =	&Parancsok
-	v_lang014 =	&Szerkeszt
-	v_lang015 =	&Lehetőségek
-	v_lang016 =	&Testreszabása
+	v_Lang011 =	&Reszelő
+	v_Lang012 =	R&ögzítése és lejátszása
+	v_Lang013 =	&Parancsok
+	v_Lang014 =	&Szerkeszt
+	v_Lang015 =	&Lehetőségek
+	v_Lang016 =	&Testreszabása
 		
-	v_lang017 =	&Automatikus
-	v_lang018 =	&Kézi
-	v_lang019 =	&Megáll
-	v_lang020 =	&Szünet
+	v_Lang017 =	&Automatikus
+	v_Lang018 =	&Kézi
+	v_Lang019 =	&Megáll
+	v_Lang020 =	&Szünet
 		
-	v_lang021 =	&Kompakt
-	v_lang022 =	&Alapértelmezett
+	v_Lang021 =	&Kompakt
+	v_Lang022 =	&Alapértelmezett
 		
-	v_lang023 =	&Kicsi
-	v_lang024 =	&Nagy
+	v_Lang023 =	&Kicsi
+	v_Lang024 =	&Nagy
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Beállítások
@@ -281,6 +288,10 @@
 	w_Lang100 =	Vegye ki az összes csoport
 	w_Lang101 =	Csoportok szerkesztése
 	w_Lang102 =	Csoport név
+	w_Lang103 =	
+	w_Lang104 =	
+	w_Lang105 =	
+	w_Lang106 =	
 		
 ; Command Windows		
 	c_Lang001 =	Egér
@@ -493,6 +504,17 @@
 	c_Lang209 =	érték neve
 	c_Lang210 =	értékek
 	c_Lang211 =	Sor
+	c_Lang212 =	
+	c_Lang213 =	
+	c_Lang214 =	
+	c_Lang215 =	
+	c_Lang216 =	
+	c_Lang217 =	
+	c_Lang218 =	
+	c_Lang219 =	
+	c_Lang220 =	
+	c_Lang221 =	
+	c_Lang222 =	
 		
 ; Other Windows		
 	t_Lang001 =	Exportálás AutoHotkey
@@ -828,6 +850,15 @@
 	d_Lang092 =	Kis ikonok
 	d_Lang093 =	Nagy ikonok
 	d_Lang094 =	Ez a funkció csak Windows Vista vagy újabb.
+	d_Lang095 =	
+	d_Lang096 =	
+	(LTrim	
+		
+		
+		
+		
+		
+	)	
 		
 ; Start-up Tips		
 	Start_Tips =	

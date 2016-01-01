@@ -4,14 +4,15 @@
 		
 ; Main Menu		
 	m_Lang001 =	&Plik
-	m_Lang002 =	P&olecenia
-	m_Lang003 =	&Wybierać
-	m_Lang004 =	&Edytuj
-	m_Lang005 =	&Macro
-	m_Lang006 =	W&idok
-	m_Lang007 =	Op&cje
-	m_Lang008 =	&Darować
-	m_Lang009 =	Pomoc&y
+	m_Lang002 =	&Macro
+	m_Lang003 =	
+	m_Lang004 =	P&olecenia
+	m_Lang005 =	&Edytuj
+	m_Lang006 =	&Wybierać
+	m_Lang007 =	W&idok
+	m_Lang008 =	Op&cje
+	m_Lang009 =	&Darować
+	m_Lang010 =	Pomoc&y
 		
 ; File Sub Menu		
 	f_Lang001 =	&Nowy
@@ -28,21 +29,27 @@
 	f_Lang012 =	&Brak plików
 		
 ; Macro Sub Menu		
-	r_lang001 =	&Macro Record
-	r_lang002 =	&Aktywuj Makra
-	r_lang003 =	&Zagraj w bieżącym makrze
-	r_lang004 =	&Regulator czasowy
-	r_lang005 =	&Wyłączyć Makra
-	r_lang006 =	Za&graj z wybranego wiersza
-	r_lang007 =	Gra&ć do wybranego wiersza
-	r_lang008 =	&Odtwórz wybrane wiersze
-	r_lang009 =	&Kontekstowa Hotkeys
-	r_lang010 =	&Dodaj Macro
-	r_lang011 =	Zamk&nij makro
-	r_lang012 =	&Powiel makro
-	r_lang013 =	&Edytowanie Makra
-	r_lang014 =	&Import Makro
-	r_lang015 =	Zapi&sz bieżące makro
+	r_Lang001 =	&Macro Record
+	r_Lang002 =	&Aktywuj Makra
+	r_Lang003 =	&Zagraj w bieżącym makrze
+	r_Lang004 =	&Regulator czasowy
+	r_Lang005 =	&Wyłączyć Makra
+	r_Lang006 =	Za&graj z wybranego wiersza
+	r_Lang007 =	Gra&ć do wybranego wiersza
+	r_Lang008 =	&Odtwórz wybrane wiersze
+	r_Lang009 =	&Kontekstowa Hotkeys
+	r_Lang010 =	&Dodaj Macro
+	r_Lang011 =	Zamk&nij makro
+	r_Lang012 =	&Powiel makro
+	r_Lang013 =	&Edytowanie Makra
+	r_Lang014 =	&Import Makro
+	r_Lang015 =	Zapi&sz bieżące makro
+		
+; UDF Sub Menu		
+	u_Lang001 =	
+	u_Lang002 =	
+	u_Lang003 =	
+	u_Lang004 =	
 		
 ; Commands Sub Menu		
 	i_Lang001 =	&Mysz
@@ -104,34 +111,34 @@
 	s_Lang010 =	Typ polecenia
 		
 ; View Sub Menu		
-	v_lang001 =	&Zawsze na wierzchu
-	v_lang002 =	&Wiersze Highlight
-	v_lang003 =	W&cięcie
-	v_lang004 =	&Pasek Narzędzi Kontroli
-	v_lang005 =	P&odgląd
-	v_lang006 =	P&aski Narzędzi
-	v_lang007 =	&Hotkeys
-	v_lang008 =	&Resetuj rozmiar kolumny
-	v_lang009 =	&Ikony Rozmiar
-	v_lang010 =	W&yzeruj
+	v_Lang001 =	&Zawsze na wierzchu
+	v_Lang002 =	&Wiersze Highlight
+	v_Lang003 =	W&cięcie
+	v_Lang004 =	&Pasek Narzędzi Kontroli
+	v_Lang005 =	P&odgląd
+	v_Lang006 =	P&aski Narzędzi
+	v_Lang007 =	&Hotkeys
+	v_Lang008 =	&Resetuj rozmiar kolumny
+	v_Lang009 =	&Ikony Rozmiar
+	v_Lang010 =	W&yzeruj
 		
-	v_lang011 =	&Plik
-	v_lang012 =	&Nagrywanie i odtwarzanie
-	v_lang013 =	P&olecenia
-	v_lang014 =	&Edytować
-	v_lang015 =	Op&cje
-	v_lang016 =	&Настроить...
+	v_Lang011 =	&Plik
+	v_Lang012 =	&Nagrywanie i odtwarzanie
+	v_Lang013 =	P&olecenia
+	v_Lang014 =	&Edytować
+	v_Lang015 =	Op&cje
+	v_Lang016 =	&Настроить...
 		
-	v_lang017 =	&Automatyczny
-	v_lang018 =	&Ręczny
-	v_lang019 =	&Zatrzymać
-	v_lang020 =	&Pauza
+	v_Lang017 =	&Automatyczny
+	v_Lang018 =	&Ręczny
+	v_Lang019 =	&Zatrzymać
+	v_Lang020 =	&Pauza
 		
-	v_lang021 =	&Zwarty
-	v_lang022 =	&Domyślnie
+	v_Lang021 =	&Zwarty
+	v_Lang022 =	&Domyślnie
 		
-	v_lang023 =	&Mały
-	v_lang024 =	&Duże
+	v_Lang023 =	&Mały
+	v_Lang024 =	&Duże
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Ustawienia
@@ -281,6 +288,10 @@
 	w_Lang100 =	Usuń wszystkie grupy
 	w_Lang101 =	Edytuj grupy
 	w_Lang102 =	Nazwa grupy
+	w_Lang103 =	
+	w_Lang104 =	
+	w_Lang105 =	
+	w_Lang106 =	
 		
 ; Command Windows		
 	c_Lang001 =	Mysz
@@ -493,6 +504,17 @@
 	c_Lang209 =	Nazwa wartości
 	c_Lang210 =	Wartości
 	c_Lang211 =	Szyk
+	c_Lang212 =	
+	c_Lang213 =	
+	c_Lang214 =	
+	c_Lang215 =	
+	c_Lang216 =	
+	c_Lang217 =	
+	c_Lang218 =	
+	c_Lang219 =	
+	c_Lang220 =	
+	c_Lang221 =	
+	c_Lang222 =	
 		
 ; Other Windows		
 	t_Lang001 =	Eksport do AutoHotkey
@@ -828,6 +850,15 @@
 	d_Lang092 =	Małe ikony
 	d_Lang093 =	Duże ikony
 	d_Lang094 =	Ta funkcja wymaga systemu Windows Vista lub nowszego.
+	d_Lang095 =	
+	d_Lang096 =	
+	(LTrim	
+		
+		
+		
+		
+		
+	)	
 		
 ; Start-up Tips		
 	Start_Tips =	

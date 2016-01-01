@@ -4,14 +4,15 @@
 		
 ; Main Menu		
 	m_Lang001 =	&File
-	m_Lang002 =	&Comandi
-	m_Lang003 =	&Selezionare
-	m_Lang004 =	&Modifica
-	m_Lang005 =	M&acro
-	m_Lang006 =	&Visualizza
-	m_Lang007 =	&Opzioni
-	m_Lang008 =	&Donare
-	m_Lang009 =	A&iuto
+	m_Lang002 =	M&acro
+	m_Lang003 =	
+	m_Lang004 =	&Comandi
+	m_Lang005 =	&Modifica
+	m_Lang006 =	&Selezionare
+	m_Lang007 =	&Visualizza
+	m_Lang008 =	&Opzioni
+	m_Lang009 =	&Donare
+	m_Lang010 =	A&iuto
 		
 ; File Sub Menu		
 	f_Lang001 =	&Nuovo
@@ -28,21 +29,27 @@
 	f_Lang012 =	Nessun f&ile
 		
 ; Macro Sub Menu		
-	r_lang001 =	&Registra macro
-	r_lang002 =	&Attiva macro
-	r_lang003 =	&Gioca Macro corrente
-	r_lang004 =	&Timer
-	r_lang005 =	&Disattivare Macro
-	r_lang006 =	G&ioca da riga selezionata
-	r_lang007 =	Gi&oca fino a riga selezionata
-	r_lang008 =	Gio&ca righe selezionate
-	r_lang009 =	Ta&sti di scelta rapida sensibili al contesto
-	r_lang010 =	Aggi&ungi Macro
-	r_lang011 =	C&hiudere Macro
-	r_lang012 =	Du&plica macro
-	r_lang013 =	&Modifica Macro
-	r_lang014 =	Importa Macro
-	r_lang015 =	Sa&lva Macro corrente
+	r_Lang001 =	&Registra macro
+	r_Lang002 =	&Attiva macro
+	r_Lang003 =	&Gioca Macro corrente
+	r_Lang004 =	&Timer
+	r_Lang005 =	&Disattivare Macro
+	r_Lang006 =	G&ioca da riga selezionata
+	r_Lang007 =	Gi&oca fino a riga selezionata
+	r_Lang008 =	Gio&ca righe selezionate
+	r_Lang009 =	Ta&sti di scelta rapida sensibili al contesto
+	r_Lang010 =	Aggi&ungi Macro
+	r_Lang011 =	C&hiudere Macro
+	r_Lang012 =	Du&plica macro
+	r_Lang013 =	&Modifica Macro
+	r_Lang014 =	Importa Macro
+	r_Lang015 =	Sa&lva Macro corrente
+		
+; UDF Sub Menu		
+	u_Lang001 =	
+	u_Lang002 =	
+	u_Lang003 =	
+	u_Lang004 =	
 		
 ; Commands Sub Menu		
 	i_Lang001 =	&Mouse
@@ -104,34 +111,34 @@
 	s_Lang010 =	Tipo di comando
 		
 ; View Sub Menu		
-	v_lang001 =	&Sempre in primo piano
-	v_lang002 =	&Righe Evidenziare
-	v_lang003 =	&Dentellatura
-	v_lang004 =	&Controlli Di Barra Degli Strumenti Di
-	v_lang005 =	&Anteprima
-	v_lang006 =	&Barre Degli Strumenti
-	v_lang007 =	&Tasti Di Scelta Rapida
-	v_lang008 =	Ri&pristina dimensioni Colonne
-	v_lang009 =	Dimensioni &Icone
-	v_lang010 =	Ri&pristina Layout
+	v_Lang001 =	&Sempre in primo piano
+	v_Lang002 =	&Righe Evidenziare
+	v_Lang003 =	&Dentellatura
+	v_Lang004 =	&Controlli Di Barra Degli Strumenti Di
+	v_Lang005 =	&Anteprima
+	v_Lang006 =	&Barre Degli Strumenti
+	v_Lang007 =	&Tasti Di Scelta Rapida
+	v_Lang008 =	Ri&pristina dimensioni Colonne
+	v_Lang009 =	Dimensioni &Icone
+	v_Lang010 =	Ri&pristina Layout
 		
-	v_lang011 =	&File
-	v_lang012 =	&Registrare e riprodurre
-	v_lang013 =	&Comandi
-	v_lang014 =	&Modificare
-	v_lang015 =	&Opzioni
-	v_lang016 =	&Personalizzare
+	v_Lang011 =	&File
+	v_Lang012 =	&Registrare e riprodurre
+	v_Lang013 =	&Comandi
+	v_Lang014 =	&Modificare
+	v_Lang015 =	&Opzioni
+	v_Lang016 =	&Personalizzare
 		
-	v_lang017 =	&Automatica
-	v_lang018 =	&Manuale
-	v_lang019 =	A&rresto
-	v_lang020 =	&Pausa
+	v_Lang017 =	&Automatica
+	v_Lang018 =	&Manuale
+	v_Lang019 =	A&rresto
+	v_Lang020 =	&Pausa
 		
-	v_lang021 =	&Compatta
-	v_lang022 =	&Predefinito
+	v_Lang021 =	&Compatta
+	v_Lang022 =	&Predefinito
 		
-	v_lang023 =	&Piccolo
-	v_lang024 =	&Grande
+	v_Lang023 =	&Piccolo
+	v_Lang024 =	&Grande
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Impostazioni
@@ -281,6 +288,10 @@
 	w_Lang100 =	Rimuovere tutti i gruppi
 	w_Lang101 =	Modifica gruppi
 	w_Lang102 =	Nome del gruppo
+	w_Lang103 =	
+	w_Lang104 =	
+	w_Lang105 =	
+	w_Lang106 =	
 		
 ; Command Windows		
 	c_Lang001 =	Mouse
@@ -493,6 +504,17 @@
 	c_Lang209 =	Nome di valore
 	c_Lang210 =	I valori
 	c_Lang211 =	Schieramento
+	c_Lang212 =	
+	c_Lang213 =	
+	c_Lang214 =	
+	c_Lang215 =	
+	c_Lang216 =	
+	c_Lang217 =	
+	c_Lang218 =	
+	c_Lang219 =	
+	c_Lang220 =	
+	c_Lang221 =	
+	c_Lang222 =	
 		
 ; Other Windows		
 	t_Lang001 =	Esporta in AutoHotkey
@@ -828,6 +850,15 @@
 	d_Lang092 =	Icone piccole
 	d_Lang093 =	Icone grandi
 	d_Lang094 =	Questa funzionalità richiede Windows Vista o versioni successive.
+	d_Lang095 =	
+	d_Lang096 =	
+	(LTrim	
+		
+		
+		
+		
+		
+	)	
 		
 ; Start-up Tips		
 	Start_Tips =	

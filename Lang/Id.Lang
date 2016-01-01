@@ -4,14 +4,15 @@
 		
 ; Main Menu		
 	m_Lang001 =	&Berkas
-	m_Lang002 =	&Perintah
-	m_Lang003 =	&Memilih
-	m_Lang004 =	M&engedit
-	m_Lang005 =	M&akro
-	m_Lang006 =	Me&lihat
-	m_Lang007 =	P&ilihan
-	m_Lang008 =	Me&nyumbangkan
-	m_Lang009 =	Memban&tu
+	m_Lang002 =	M&akro
+	m_Lang003 =	
+	m_Lang004 =	&Perintah
+	m_Lang005 =	M&engedit
+	m_Lang006 =	&Memilih
+	m_Lang007 =	Me&lihat
+	m_Lang008 =	P&ilihan
+	m_Lang009 =	Me&nyumbangkan
+	m_Lang010 =	Memban&tu
 		
 ; File Sub Menu		
 	f_Lang001 =	&Baru
@@ -28,21 +29,27 @@
 	f_Lang012 =	&Tidak ada file
 		
 ; Macro Sub Menu		
-	r_lang001 =	&Rekam Makro
-	r_lang002 =	&Aktifkan Macro
-	r_lang003 =	&Bermain Makro sekarang
-	r_lang004 =	&Timer
-	r_lang005 =	&Nonaktifkan Macro
-	r_lang006 =	B&ermain dari Dipilih Row
-	r_lang007 =	Ber&main sampai Dipilih Row
-	r_lang008 =	Berma&in Baris Terpilih
-	r_lang009 =	&Konteks Hotkeys Sensitif
-	r_lang010 =	Tamba&hkan Makro
-	r_lang011 =	T&utup Makro
-	r_lang012 =	&Gandakan Makro
-	r_lang013 =	Menge&dit Macro
-	r_lang014 =	Im&por Makro
-	r_lang015 =	&Simpan Makro sekarang
+	r_Lang001 =	&Rekam Makro
+	r_Lang002 =	&Aktifkan Macro
+	r_Lang003 =	&Bermain Makro sekarang
+	r_Lang004 =	&Timer
+	r_Lang005 =	&Nonaktifkan Macro
+	r_Lang006 =	B&ermain dari Dipilih Row
+	r_Lang007 =	Ber&main sampai Dipilih Row
+	r_Lang008 =	Berma&in Baris Terpilih
+	r_Lang009 =	&Konteks Hotkeys Sensitif
+	r_Lang010 =	Tamba&hkan Makro
+	r_Lang011 =	T&utup Makro
+	r_Lang012 =	&Gandakan Makro
+	r_Lang013 =	Menge&dit Macro
+	r_Lang014 =	Im&por Makro
+	r_Lang015 =	&Simpan Makro sekarang
+		
+; UDF Sub Menu		
+	u_Lang001 =	
+	u_Lang002 =	
+	u_Lang003 =	
+	u_Lang004 =	
 		
 ; Commands Sub Menu		
 	i_Lang001 =	&Mouse
@@ -104,34 +111,34 @@
 	s_Lang010 =	Ketik perintah
 		
 ; View Sub Menu		
-	v_lang001 =	&Always On Top
-	v_lang002 =	&Baris Sorot
-	v_lang003 =	&Lekukan
-	v_lang004 =	&Kontrol Toolbar
-	v_lang005 =	&Preview
-	v_lang006 =	&Toolbar
-	v_lang007 =	&Hotkeys
-	v_lang008 =	Ula&ng Kolom Ukuran
-	v_lang009 =	&Ukuran Ikon
-	v_lang010 =	Atu&r Ulang Tata Letak
+	v_Lang001 =	&Always On Top
+	v_Lang002 =	&Baris Sorot
+	v_Lang003 =	&Lekukan
+	v_Lang004 =	&Kontrol Toolbar
+	v_Lang005 =	&Preview
+	v_Lang006 =	&Toolbar
+	v_Lang007 =	&Hotkeys
+	v_Lang008 =	Ula&ng Kolom Ukuran
+	v_Lang009 =	&Ukuran Ikon
+	v_Lang010 =	Atu&r Ulang Tata Letak
 		
-	v_lang011 =	&Berkas
-	v_lang012 =	&Rekam dan Putar
-	v_lang013 =	&Perintah
-	v_lang014 =	&Mengedit
-	v_lang015 =	P&ilihan
-	v_lang016 =	&Sesuaikan
+	v_Lang011 =	&Berkas
+	v_Lang012 =	&Rekam dan Putar
+	v_Lang013 =	&Perintah
+	v_Lang014 =	&Mengedit
+	v_Lang015 =	P&ilihan
+	v_Lang016 =	&Sesuaikan
 		
-	v_lang017 =	&Otomatis
-	v_lang018 =	&Pedoman
-	v_lang019 =	&Berhenti
-	v_lang020 =	B&erhenti sebentar
+	v_Lang017 =	&Otomatis
+	v_Lang018 =	&Pedoman
+	v_Lang019 =	&Berhenti
+	v_Lang020 =	B&erhenti sebentar
 		
-	v_lang021 =	&Padat
-	v_lang022 =	&Kegagalan
+	v_Lang021 =	&Padat
+	v_Lang022 =	&Kegagalan
 		
-	v_lang023 =	&Kecil
-	v_lang024 =	&Besar
+	v_Lang023 =	&Kecil
+	v_Lang024 =	&Besar
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Pengaturan
@@ -281,6 +288,10 @@
 	w_Lang100 =	Hapus semua kelompok
 	w_Lang101 =	Kelompok mengedit
 	w_Lang102 =	Nama grup
+	w_Lang103 =	
+	w_Lang104 =	
+	w_Lang105 =	
+	w_Lang106 =	
 		
 ; Command Windows		
 	c_Lang001 =	Mouse
@@ -493,6 +504,17 @@
 	c_Lang209 =	Nama nilai
 	c_Lang210 =	Nilai-nilai
 	c_Lang211 =	Susunan
+	c_Lang212 =	
+	c_Lang213 =	
+	c_Lang214 =	
+	c_Lang215 =	
+	c_Lang216 =	
+	c_Lang217 =	
+	c_Lang218 =	
+	c_Lang219 =	
+	c_Lang220 =	
+	c_Lang221 =	
+	c_Lang222 =	
 		
 ; Other Windows		
 	t_Lang001 =	Ekspor ke AutoHotkey
@@ -828,6 +850,15 @@
 	d_Lang092 =	Ikon kecil
 	d_Lang093 =	Ikon besar
 	d_Lang094 =	Fitur ini memerlukan Windows Vista atau yang lebih tinggi.
+	d_Lang095 =	
+	d_Lang096 =	
+	(LTrim	
+		
+		
+		
+		
+		
+	)	
 		
 ; Start-up Tips		
 	Start_Tips =	

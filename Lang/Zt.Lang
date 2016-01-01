@@ -4,14 +4,15 @@
 		
 ; Main Menu		
 	m_Lang001 =	文件
-	m_Lang002 =	命令
-	m_Lang003 =	選擇
-	m_Lang004 =	編輯
-	m_Lang005 =	宏
-	m_Lang006 =	視圖
-	m_Lang007 =	選項
-	m_Lang008 =	捐贈
-	m_Lang009 =	幫助
+	m_Lang002 =	宏
+	m_Lang003 =	
+	m_Lang004 =	命令
+	m_Lang005 =	編輯
+	m_Lang006 =	選擇
+	m_Lang007 =	視圖
+	m_Lang008 =	選項
+	m_Lang009 =	捐贈
+	m_Lang010 =	幫助
 		
 ; File Sub Menu		
 	f_Lang001 =	新
@@ -28,21 +29,27 @@
 	f_Lang012 =	沒有文件
 		
 ; Macro Sub Menu		
-	r_lang001 =	錄製宏
-	r_lang002 =	激活宏
-	r_lang003 =	播放當前宏觀經濟
-	r_lang004 =	定時器
-	r_lang005 =	禁用宏
-	r_lang006 =	播放選中的行
-	r_lang007 =	玩直到選中的行
-	r_lang008 =	播放選定的行
-	r_lang009 =	上下文敏感的熱鍵
-	r_lang010 =	添加宏
-	r_lang011 =	關閉宏
-	r_lang012 =	重複宏
-	r_lang013 =	編輯宏
-	r_lang014 =	進口宏
-	r_lang015 =	保存當前宏觀經濟
+	r_Lang001 =	錄製宏
+	r_Lang002 =	激活宏
+	r_Lang003 =	播放當前宏觀經濟
+	r_Lang004 =	定時器
+	r_Lang005 =	禁用宏
+	r_Lang006 =	播放選中的行
+	r_Lang007 =	玩直到選中的行
+	r_Lang008 =	播放選定的行
+	r_Lang009 =	上下文敏感的熱鍵
+	r_Lang010 =	添加宏
+	r_Lang011 =	關閉宏
+	r_Lang012 =	重複宏
+	r_Lang013 =	編輯宏
+	r_Lang014 =	進口宏
+	r_Lang015 =	保存當前宏觀經濟
+		
+; UDF Sub Menu		
+	u_Lang001 =	
+	u_Lang002 =	
+	u_Lang003 =	
+	u_Lang004 =	
 		
 ; Commands Sub Menu		
 	i_Lang001 =	鼠標
@@ -104,34 +111,34 @@
 	s_Lang010 =	命令類型
 		
 ; View Sub Menu		
-	v_lang001 =	總在最前
-	v_lang002 =	亮點行
-	v_lang003 =	縮進
-	v_lang004 =	控制工具欄
-	v_lang005 =	預覽
-	v_lang006 =	工具欄
-	v_lang007 =	熱鍵
-	v_lang008 =	重列大小
-	v_lang009 =	圖標尺寸
-	v_lang010 =	重佈局
+	v_Lang001 =	總在最前
+	v_Lang002 =	亮點行
+	v_Lang003 =	縮進
+	v_Lang004 =	控制工具欄
+	v_Lang005 =	預覽
+	v_Lang006 =	工具欄
+	v_Lang007 =	熱鍵
+	v_Lang008 =	重列大小
+	v_Lang009 =	圖標尺寸
+	v_Lang010 =	重佈局
 		
-	v_lang011 =	文件
-	v_lang012 =	錄製和播放
-	v_lang013 =	命令
-	v_lang014 =	編輯
-	v_lang015 =	選項
-	v_lang016 =	定制
+	v_Lang011 =	文件
+	v_Lang012 =	錄製和播放
+	v_Lang013 =	命令
+	v_Lang014 =	編輯
+	v_Lang015 =	選項
+	v_Lang016 =	定制
 		
-	v_lang017 =	自動
-	v_lang018 =	手冊
-	v_lang019 =	停止
-	v_lang020 =	暫停
+	v_Lang017 =	自動
+	v_Lang018 =	手冊
+	v_Lang019 =	停止
+	v_Lang020 =	暫停
 		
-	v_lang021 =	緊湊
-	v_lang022 =	默認
+	v_Lang021 =	緊湊
+	v_Lang022 =	默認
 		
-	v_lang023 =	小
-	v_lang024 =	大
+	v_Lang023 =	小
+	v_Lang024 =	大
 		
 ; Options Sub Menu		
 	o_Lang001 =	設置
@@ -281,6 +288,10 @@
 	w_Lang100 =	刪除所有組
 	w_Lang101 =	編輯組
 	w_Lang102 =	團隊名字
+	w_Lang103 =	
+	w_Lang104 =	
+	w_Lang105 =	
+	w_Lang106 =	
 		
 ; Command Windows		
 	c_Lang001 =	鼠標
@@ -493,6 +504,17 @@
 	c_Lang209 =	值名稱
 	c_Lang210 =	值
 	c_Lang211 =	排列
+	c_Lang212 =	
+	c_Lang213 =	
+	c_Lang214 =	
+	c_Lang215 =	
+	c_Lang216 =	
+	c_Lang217 =	
+	c_Lang218 =	
+	c_Lang219 =	
+	c_Lang220 =	
+	c_Lang221 =	
+	c_Lang222 =	
 		
 ; Other Windows		
 	t_Lang001 =	導出到華民航空
@@ -828,6 +850,15 @@
 	d_Lang092 =	小圖標
 	d_Lang093 =	大圖標
 	d_Lang094 =	此功能需要Windows Vista或更高。
+	d_Lang095 =	
+	d_Lang096 =	
+	(LTrim	
+		
+		
+		
+		
+		
+	)	
 		
 ; Start-up Tips		
 	Start_Tips =	

@@ -3,12 +3,12 @@ Groups=Start:1
 1|[Assign Variable]|N := [10`, 20`, 30]|1|0|Variable|Expression||||
 02|Array|N := 10, 20, 30|1|0|Function|||Alternative way to assign arrays||
 3|[LoopStart]|LoopStart|% N.Length()|0|Loop|||||
-4|[MsgBox]|% N[A_Index]|1|0|MsgBox|262208||||
+4|[MsgBox]|% N[A_Index]|1|0|MsgBox|262144||||
 5|[LoopEnd]|LoopEnd|1|0|Loop|||||
 6|[Assign Variable]|N[4] := New value|1|0|Variable|||||
-7|[MsgBox]|% N[4]|1|0|MsgBox|262208||||
+7|[MsgBox]|% N[4]|1|0|MsgBox|262144||||
 8|Sqrt|FuncOut := N[1]|1|0|Function|||||
-9|[MsgBox]|Sqr Function with Array parameter: %FuncOut%|1|0|MsgBox|262208||||
+9|[MsgBox]|Sqr Function with Array parameter: %FuncOut%|1|0|MsgBox|262144||||
 
 [PMC Code]|F2||1|Window|1|Arrays2
 Groups=Start:1
@@ -16,7 +16,7 @@ Groups=Start:1
 2|StrSplit|MyArray := %String%, ¢|1|0|Function|||||
 3|[LoopStart]|LoopStart|% MyArray.MaxIndex()|0|Loop|||||
 4|[Assign Variable]|ArO := MyArray[A_Index]|1|0|Variable|Expression||||
-5|[MsgBox]|Loop: %A_Index%`nMyArray[%A_Index%]: %ArO%|1|0|MsgBox|262208||||
+5|[MsgBox]|Loop: %A_Index%`nMyArray[%A_Index%]: %ArO%|1|0|MsgBox|262144||||
 6|[LoopEnd]|LoopEnd|1|0|Loop|||||
 
 [PMC Code]|F3||1|Window|1|ForLoops
@@ -30,15 +30,15 @@ Groups=Start:1
 [PMC Code]|F4||1|Window|1|MultiDim
 Groups=Start:1
 1|[Assign Variable]|N := ["Item 1"]|1|0|Variable|Expression||||
-2|[MsgBox]|% N[1]|1|0|MsgBox|262208||||
+2|[MsgBox]|% N[1]|1|0|MsgBox|262144||||
 3|[Assign Variable]|N[2] := []|1|0|Variable|Expression||||
 4|[Assign Variable]|N[2][1] := Item 2.1: Multi dimensional array value.|1|0|Variable|||||
-5|[MsgBox]|% N[2][1]|1|0|MsgBox|262208||||
+5|[MsgBox]|% N[2][1]|1|0|MsgBox|262144||||
 6|Asc|N[2][2] := A|1|0|Function|||||
 7|[Assign Variable]|ItemCopy := N[2][2]|1|0|Variable|Expression||||
-8|[MsgBox]|Item 2.2: %ItemCopy%|1|0|MsgBox|262208||||
+8|[MsgBox]|Item 2.2: %ItemCopy%|1|0|MsgBox|262144||||
 9|Push|_null := Item 2.3|1|0|Method|N[2]||||
-10|[MsgBox]|% N[2][3]|1|0|MsgBox|262208||||
+10|[MsgBox]|% N[2][3]|1|0|MsgBox|262144||||
 
 [PMC Code]|F5||1|Window|1|Methods
 Groups=Start:1

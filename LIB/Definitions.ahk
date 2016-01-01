@@ -55,6 +55,9 @@ ListCount1 := 0
 ,	cType44 := "Function"
 ,	cType45 := "ForLoop"
 ,	cType46 := "Method"
+,	cType47 := "UserFunction"
+,	cType48 := "FunctionParameter"
+,	cType49 := "FunctionReturn"
 
 Action1 := "Click"
 ,	Action2 := "Move"
@@ -1042,7 +1045,8 @@ DefaultBar := {FileOpt: "Enabled AutoSize", File: ["New=" w_Lang040 ":41", "Open
 														, "", "Undo=" w_Lang084 ":74", "Redo=" w_Lang085 ":56"
 														, "", "FindReplace=" w_Lang087 ":19", "EditComm=" w_Lang088 ":5", "EditColor=" w_Lang089 ":3"
 														, "", "TabPlus=" w_Lang072 ":66", "TabClose=" w_Lang073 ":68", "DuplicateList=" w_Lang074 ":69", "EditMacros=" w_Lang052 ":97"
-														, "", "Import=" w_Lang075 ":28", "SaveCurrentList=" w_Lang076 ":67"]}
+														, "", "Import=" w_Lang075 ":28", "SaveCurrentList=" w_Lang076 ":67"
+														, "", "UserFunction=" w_Lang103 ":35", "FuncParameter=" w_Lang104 ":107", "FuncReturn=" w_Lang105 ":105"]}
 FixedBar :=	{PrevOpt: "Enabled AutoSize", Preview: ["PrevDock=" t_Lang124 ":106"
 														, "", "PrevCopy=" c_Lang023 ":8", "PrevRefreshButton=" t_Lang014 ":90(Enabled Dropdown)"
 														, "", "TabIndent=" t_Lang011 ":85", "TextWrap=" t_Lang052 ":96", "OnTop=" t_Lang016 ":81"

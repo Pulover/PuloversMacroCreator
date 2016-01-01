@@ -4,14 +4,15 @@
 		
 ; Main Menu		
 	m_Lang001 =	&File
-	m_Lang002 =	&Naredbe
-	m_Lang003 =	&Odabrati
-	m_Lang004 =	&Uredi
-	m_Lang005 =	&Makro
-	m_Lang006 =	&Pogled
-	m_Lang007 =	Mo&gućnosti
-	m_Lang008 =	&Darovati
-	m_Lang009 =	Pomo&ći
+	m_Lang002 =	&Makro
+	m_Lang003 =	
+	m_Lang004 =	&Naredbe
+	m_Lang005 =	&Uredi
+	m_Lang006 =	&Odabrati
+	m_Lang007 =	&Pogled
+	m_Lang008 =	Mo&gućnosti
+	m_Lang009 =	&Darovati
+	m_Lang010 =	Pomo&ći
 		
 ; File Sub Menu		
 	f_Lang001 =	&Novi
@@ -28,21 +29,27 @@
 	f_Lang012 =	U &datotekama
 		
 ; Macro Sub Menu		
-	r_lang001 =	&Snimanje makro
-	r_lang002 =	&Aktivirajte Makronaredbe
-	r_lang003 =	&Igrajte Trenutna Macro
-	r_lang004 =	&Timer
-	r_lang005 =	&Deaktivacija Makronaredbe
-	r_lang006 =	I&grati na odabrani redak
-	r_lang007 =	Ig&raj dok odabrani redak
-	r_lang008 =	Igra&jte odabrane retke
-	r_lang009 =	&Kontekstna Hotkeys
-	r_lang010 =	D&odaj Macro
-	r_lang011 =	&Makro Zatvori
-	r_lang012 =	D&vostruki Macro
-	r_lang013 =	&Uredi Makronaredbe
-	r_lang014 =	Uvo&z Makro
-	r_lang015 =	S&premi Trenutni Macro
+	r_Lang001 =	&Snimanje makro
+	r_Lang002 =	&Aktivirajte Makronaredbe
+	r_Lang003 =	&Igrajte Trenutna Macro
+	r_Lang004 =	&Timer
+	r_Lang005 =	&Deaktivacija Makronaredbe
+	r_Lang006 =	I&grati na odabrani redak
+	r_Lang007 =	Ig&raj dok odabrani redak
+	r_Lang008 =	Igra&jte odabrane retke
+	r_Lang009 =	&Kontekstna Hotkeys
+	r_Lang010 =	D&odaj Macro
+	r_Lang011 =	&Makro Zatvori
+	r_Lang012 =	D&vostruki Macro
+	r_Lang013 =	&Uredi Makronaredbe
+	r_Lang014 =	Uvo&z Makro
+	r_Lang015 =	S&premi Trenutni Macro
+		
+; UDF Sub Menu		
+	u_Lang001 =	
+	u_Lang002 =	
+	u_Lang003 =	
+	u_Lang004 =	
 		
 ; Commands Sub Menu		
 	i_Lang001 =	&Miš
@@ -104,34 +111,34 @@
 	s_Lang010 =	Naredba putovanja
 		
 ; View Sub Menu		
-	v_lang001 =	&Uvijek na vrhu
-	v_lang002 =	&Istaknuto Redovi
-	v_lang003 =	U&vlačenje
-	v_lang004 =	&Kontrole Traci
-	v_lang005 =	&Pregled
-	v_lang006 =	&Alatne Trake
-	v_lang007 =	&Hotkeys
-	v_lang008 =	V&eličina Reset Kolumne
-	v_lang009 =	Ik&one VeličIna
-	v_lang010 =	&Reset Raspored
+	v_Lang001 =	&Uvijek na vrhu
+	v_Lang002 =	&Istaknuto Redovi
+	v_Lang003 =	U&vlačenje
+	v_Lang004 =	&Kontrole Traci
+	v_Lang005 =	&Pregled
+	v_Lang006 =	&Alatne Trake
+	v_Lang007 =	&Hotkeys
+	v_Lang008 =	V&eličina Reset Kolumne
+	v_Lang009 =	Ik&one VeličIna
+	v_Lang010 =	&Reset Raspored
 		
-	v_lang011 =	&File
-	v_lang012 =	&Snimanje i reprodukciju
-	v_lang013 =	&Naredbe
-	v_lang014 =	&Uredi
-	v_lang015 =	&Mogućnosti
-	v_lang016 =	&Prilagodite
+	v_Lang011 =	&File
+	v_Lang012 =	&Snimanje i reprodukciju
+	v_Lang013 =	&Naredbe
+	v_Lang014 =	&Uredi
+	v_Lang015 =	&Mogućnosti
+	v_Lang016 =	&Prilagodite
 		
-	v_lang017 =	&Automatski
-	v_lang018 =	&Priručnik
-	v_lang019 =	&Stop
-	v_lang020 =	Pa&uza
+	v_Lang017 =	&Automatski
+	v_Lang018 =	&Priručnik
+	v_Lang019 =	&Stop
+	v_Lang020 =	Pa&uza
 		
-	v_lang021 =	&Kompaktan
-	v_lang022 =	&Default
+	v_Lang021 =	&Kompaktan
+	v_Lang022 =	&Default
 		
-	v_lang023 =	&Mali
-	v_lang024 =	&Veliki
+	v_Lang023 =	&Mali
+	v_Lang024 =	&Veliki
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Postavke
@@ -281,6 +288,10 @@
 	w_Lang100 =	Ukloni sve skupine
 	w_Lang101 =	Uredi grupe
 	w_Lang102 =	Naziv grupe
+	w_Lang103 =	
+	w_Lang104 =	
+	w_Lang105 =	
+	w_Lang106 =	
 		
 ; Command Windows		
 	c_Lang001 =	Miš
@@ -493,6 +504,17 @@
 	c_Lang209 =	Naziv vrijednosti
 	c_Lang210 =	Vrijednosti
 	c_Lang211 =	Red
+	c_Lang212 =	
+	c_Lang213 =	
+	c_Lang214 =	
+	c_Lang215 =	
+	c_Lang216 =	
+	c_Lang217 =	
+	c_Lang218 =	
+	c_Lang219 =	
+	c_Lang220 =	
+	c_Lang221 =	
+	c_Lang222 =	
 		
 ; Other Windows		
 	t_Lang001 =	Izvoz u AutoHotkey
@@ -828,6 +850,15 @@
 	d_Lang092 =	Male ikone
 	d_Lang093 =	Velike ikone
 	d_Lang094 =	Ova značajka zahtijeva sustav Windows Vista ili noviji.
+	d_Lang095 =	
+	d_Lang096 =	
+	(LTrim	
+		
+		
+		
+		
+		
+	)	
 		
 ; Start-up Tips		
 	Start_Tips =	

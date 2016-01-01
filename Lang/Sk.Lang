@@ -4,14 +4,15 @@
 		
 ; Main Menu		
 	m_Lang001 =	&Súbor
-	m_Lang002 =	&Perintah
-	m_Lang003 =	&Vybrať
-	m_Lang004 =	&Upraviť
-	m_Lang005 =	&Makro
-	m_Lang006 =	P&ohľad
-	m_Lang007 =	Vo&ľby
-	m_Lang008 =	&Darovať
-	m_Lang009 =	Pomo&c
+	m_Lang002 =	&Makro
+	m_Lang003 =	
+	m_Lang004 =	&Perintah
+	m_Lang005 =	&Upraviť
+	m_Lang006 =	&Vybrať
+	m_Lang007 =	P&ohľad
+	m_Lang008 =	Vo&ľby
+	m_Lang009 =	&Darovať
+	m_Lang010 =	Pomo&c
 		
 ; File Sub Menu		
 	f_Lang001 =	&Nový
@@ -28,21 +29,27 @@
 	f_Lang012 =	&Žiadne súbory
 		
 ; Macro Sub Menu		
-	r_lang001 =	&Záznam makra
-	r_lang002 =	&Aktivácia makrá
-	r_lang003 =	&Prehrať aktuálne makro
-	r_lang004 =	&Časový spínač
-	r_lang005 =	&Deaktivovať Makrá
-	r_lang006 =	P&rehrávanie z vybraného riadku
-	r_lang007 =	&Hrať, kým vybraný riadok
-	r_lang008 =	Pr&ehrať vybrané riadky
-	r_lang009 =	&Kontextová Klávesové skratky
-	r_lang010 =	Pr&idať makro
-	r_lang011 =	Za&vrieť Makro
-	r_lang012 =	D&uplicitné makro
-	r_lang013 =	&Úprava Makra
-	r_lang014 =	D&ovoz Makro
-	r_lang015 =	U&ložiť aktuálne makro
+	r_Lang001 =	&Záznam makra
+	r_Lang002 =	&Aktivácia makrá
+	r_Lang003 =	&Prehrať aktuálne makro
+	r_Lang004 =	&Časový spínač
+	r_Lang005 =	&Deaktivovať Makrá
+	r_Lang006 =	P&rehrávanie z vybraného riadku
+	r_Lang007 =	&Hrať, kým vybraný riadok
+	r_Lang008 =	Pr&ehrať vybrané riadky
+	r_Lang009 =	&Kontextová Klávesové skratky
+	r_Lang010 =	Pr&idať makro
+	r_Lang011 =	Za&vrieť Makro
+	r_Lang012 =	D&uplicitné makro
+	r_Lang013 =	&Úprava Makra
+	r_Lang014 =	D&ovoz Makro
+	r_Lang015 =	U&ložiť aktuálne makro
+		
+; UDF Sub Menu		
+	u_Lang001 =	
+	u_Lang002 =	
+	u_Lang003 =	
+	u_Lang004 =	
 		
 ; Commands Sub Menu		
 	i_Lang001 =	&Myš
@@ -104,34 +111,34 @@
 	s_Lang010 =	Typ príkazu
 		
 ; View Sub Menu		
-	v_lang001 =	&Always On Top
-	v_lang002 =	&Zvýraznenie Riadkov
-	v_lang003 =	&Odsadenie
-	v_lang004 =	O&vládacie Prvky Panela Nástrojov
-	v_lang005 =	&Náhľad
-	v_lang006 =	&Toolbar
-	v_lang007 =	&Hotkeys
-	v_lang008 =	O&bnoviť stĺpce veľkosť
-	v_lang009 =	&Ikony VeľKosť
-	v_lang010 =	Obnovi&ť Rozloženie
+	v_Lang001 =	&Always On Top
+	v_Lang002 =	&Zvýraznenie Riadkov
+	v_Lang003 =	&Odsadenie
+	v_Lang004 =	O&vládacie Prvky Panela Nástrojov
+	v_Lang005 =	&Náhľad
+	v_Lang006 =	&Toolbar
+	v_Lang007 =	&Hotkeys
+	v_Lang008 =	O&bnoviť stĺpce veľkosť
+	v_Lang009 =	&Ikony VeľKosť
+	v_Lang010 =	Obnovi&ť Rozloženie
 		
-	v_lang011 =	&Berkas
-	v_lang012 =	&Nahrávať a prehrávať
-	v_lang013 =	&Perintah
-	v_lang014 =	&Mengedit
-	v_lang015 =	P&ilihan
-	v_lang016 =	&Vlastné
+	v_Lang011 =	&Berkas
+	v_Lang012 =	&Nahrávať a prehrávať
+	v_Lang013 =	&Perintah
+	v_Lang014 =	&Mengedit
+	v_Lang015 =	P&ilihan
+	v_Lang016 =	&Vlastné
 		
-	v_lang017 =	&Automatický
-	v_lang018 =	&Manuál
-	v_lang019 =	&Stop
-	v_lang020 =	&Pauza
+	v_Lang017 =	&Automatický
+	v_Lang018 =	&Manuál
+	v_Lang019 =	&Stop
+	v_Lang020 =	&Pauza
 		
-	v_lang021 =	&Kompaktné
-	v_lang022 =	&Štandardné
+	v_Lang021 =	&Kompaktné
+	v_Lang022 =	&Štandardné
 		
-	v_lang023 =	&Malý
-	v_lang024 =	&Rozsiahly
+	v_Lang023 =	&Malý
+	v_Lang024 =	&Rozsiahly
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Nastavenie
@@ -281,6 +288,10 @@
 	w_Lang100 =	Odstrániť všetky skupiny
 	w_Lang101 =	Upraviť skupiny
 	w_Lang102 =	Názov skupiny
+	w_Lang103 =	
+	w_Lang104 =	
+	w_Lang105 =	
+	w_Lang106 =	
 		
 ; Command Windows		
 	c_Lang001 =	Myš
@@ -493,6 +504,17 @@
 	c_Lang209 =	Názov Hodnota
 	c_Lang210 =	Hodnoty
 	c_Lang211 =	Rad
+	c_Lang212 =	
+	c_Lang213 =	
+	c_Lang214 =	
+	c_Lang215 =	
+	c_Lang216 =	
+	c_Lang217 =	
+	c_Lang218 =	
+	c_Lang219 =	
+	c_Lang220 =	
+	c_Lang221 =	
+	c_Lang222 =	
 		
 ; Other Windows		
 	t_Lang001 =	Export do AutoHotkey
@@ -828,6 +850,15 @@
 	d_Lang092 =	Malé ikony
 	d_Lang093 =	Veľké ikony
 	d_Lang094 =	Táto funkcia vyžaduje systém Windows Vista alebo vyšší.
+	d_Lang095 =	
+	d_Lang096 =	
+	(LTrim	
+		
+		
+		
+		
+		
+	)	
 		
 ; Start-up Tips		
 	Start_Tips =	

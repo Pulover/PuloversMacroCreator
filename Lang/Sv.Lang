@@ -4,14 +4,15 @@
 		
 ; Main Menu		
 	m_Lang001 =	&Arkiv
-	m_Lang002 =	&Kommandon
-	m_Lang003 =	&Välj
-	m_Lang004 =	&Redigera
-	m_Lang005 =	&Makro
-	m_Lang006 =	V&isa
-	m_Lang007 =	A&lternativ
-	m_Lang008 =	&Donera
-	m_Lang009 =	&Hjälp
+	m_Lang002 =	&Makro
+	m_Lang003 =	
+	m_Lang004 =	&Kommandon
+	m_Lang005 =	&Redigera
+	m_Lang006 =	&Välj
+	m_Lang007 =	V&isa
+	m_Lang008 =	A&lternativ
+	m_Lang009 =	&Donera
+	m_Lang010 =	&Hjälp
 		
 ; File Sub Menu		
 	f_Lang001 =	&Nytt
@@ -28,21 +29,27 @@
 	f_Lang012 =	&Inga filer
 		
 ; Macro Sub Menu		
-	r_lang001 =	&Spela in makro
-	r_lang002 =	&Aktivera makron
-	r_lang003 =	S&pela Aktuell Makro
-	r_lang004 =	&Timer
-	r_lang005 =	&Inaktivera Makron
-	r_lang006 =	Sp&ela upp från vald rad
-	r_lang007 =	Spe&la tills utvalda raden
-	r_lang008 =	Spela &markerade rader
-	r_lang009 =	Samma&nhangsberoende Snabbtangenter
-	r_lang010 =	L&ägg Makro
-	r_lang011 =	Stän&g Makro
-	r_lang012 =	&Duplicera makro
-	r_lang013 =	&Redigera Makron
-	r_lang014 =	Imp&ortera Makro
-	r_lang015 =	Spara a&ktuell Makro
+	r_Lang001 =	&Spela in makro
+	r_Lang002 =	&Aktivera makron
+	r_Lang003 =	S&pela Aktuell Makro
+	r_Lang004 =	&Timer
+	r_Lang005 =	&Inaktivera Makron
+	r_Lang006 =	Sp&ela upp från vald rad
+	r_Lang007 =	Spe&la tills utvalda raden
+	r_Lang008 =	Spela &markerade rader
+	r_Lang009 =	Samma&nhangsberoende Snabbtangenter
+	r_Lang010 =	L&ägg Makro
+	r_Lang011 =	Stän&g Makro
+	r_Lang012 =	&Duplicera makro
+	r_Lang013 =	&Redigera Makron
+	r_Lang014 =	Imp&ortera Makro
+	r_Lang015 =	Spara a&ktuell Makro
+		
+; UDF Sub Menu		
+	u_Lang001 =	
+	u_Lang002 =	
+	u_Lang003 =	
+	u_Lang004 =	
 		
 ; Commands Sub Menu		
 	i_Lang001 =	&Mus
@@ -104,34 +111,34 @@
 	s_Lang010 =	Kommando typ
 		
 ; View Sub Menu		
-	v_lang001 =	&Alltid överst
-	v_lang002 =	&Markera Rader
-	v_lang003 =	&Indrag
-	v_lang004 =	&Kontroller Verktygsfältet
-	v_lang005 =	&Förhandsgranska
-	v_lang006 =	&Verktygsfält
-	v_lang007 =	&Snabbtangenter
-	v_lang008 =	&Återställ kolumner Storlek
-	v_lang009 =	Ik&oner Storlek
-	v_lang010 =	Å&terställ Layout
+	v_Lang001 =	&Alltid överst
+	v_Lang002 =	&Markera Rader
+	v_Lang003 =	&Indrag
+	v_Lang004 =	&Kontroller Verktygsfältet
+	v_Lang005 =	&Förhandsgranska
+	v_Lang006 =	&Verktygsfält
+	v_Lang007 =	&Snabbtangenter
+	v_Lang008 =	&Återställ kolumner Storlek
+	v_Lang009 =	Ik&oner Storlek
+	v_Lang010 =	Å&terställ Layout
 		
-	v_lang011 =	&Fil
-	v_lang012 =	&Spela in och spela
-	v_lang013 =	&Kommandon
-	v_lang014 =	&Redigera
-	v_lang015 =	&Alternativ
-	v_lang016 =	A&npassa
+	v_Lang011 =	&Fil
+	v_Lang012 =	&Spela in och spela
+	v_Lang013 =	&Kommandon
+	v_Lang014 =	&Redigera
+	v_Lang015 =	&Alternativ
+	v_Lang016 =	A&npassa
 		
-	v_lang017 =	&Automatisk
-	v_lang018 =	&Manuell
-	v_lang019 =	&Stopp
-	v_lang020 =	&Paus
+	v_Lang017 =	&Automatisk
+	v_Lang018 =	&Manuell
+	v_Lang019 =	&Stopp
+	v_Lang020 =	&Paus
 		
-	v_lang021 =	&Kompakt
-	v_lang022 =	&Default
+	v_Lang021 =	&Kompakt
+	v_Lang022 =	&Default
 		
-	v_lang023 =	&Små
-	v_lang024 =	S&tor
+	v_Lang023 =	&Små
+	v_Lang024 =	S&tor
 		
 ; Options Sub Menu		
 	o_Lang001 =	&Inställningar
@@ -281,6 +288,10 @@
 	w_Lang100 =	Ta bort alla grupper
 	w_Lang101 =	Redigera grupper
 	w_Lang102 =	Gruppnamn
+	w_Lang103 =	
+	w_Lang104 =	
+	w_Lang105 =	
+	w_Lang106 =	
 		
 ; Command Windows		
 	c_Lang001 =	Mus
@@ -493,6 +504,17 @@
 	c_Lang209 =	Värdenamn
 	c_Lang210 =	Värden
 	c_Lang211 =	Matris
+	c_Lang212 =	
+	c_Lang213 =	
+	c_Lang214 =	
+	c_Lang215 =	
+	c_Lang216 =	
+	c_Lang217 =	
+	c_Lang218 =	
+	c_Lang219 =	
+	c_Lang220 =	
+	c_Lang221 =	
+	c_Lang222 =	
 		
 ; Other Windows		
 	t_Lang001 =	Exportera till AutoHotkey
@@ -828,6 +850,15 @@
 	d_Lang092 =	Små ikoner
 	d_Lang093 =	Stora ikoner
 	d_Lang094 =	Den här funktionen kräver Windows Vista eller senare.
+	d_Lang095 =	
+	d_Lang096 =	
+	(LTrim	
+		
+		
+		
+		
+		
+	)	
 		
 ; Start-up Tips		
 	Start_Tips =	
