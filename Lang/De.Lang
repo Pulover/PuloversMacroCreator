@@ -380,7 +380,7 @@
 	c_Lang084 =	Variable zuweisen
 	c_Lang085 =	Inhalt
 	c_Lang086 =	Operator
-	c_Lang087 =	Mathematischen Ausdruck
+	c_Lang087 =	Expression
 	c_Lang088 =	Zurücksetzen
 	c_Lang089 =	Name der Funktion
 	c_Lang090 =	Kommagetrennte Parameter (ohne Klammern)
@@ -496,7 +496,7 @@
 	c_Lang201 =	Wenn String nicht enthält
 	c_Lang202 =	Wenn Meldungsfeld
 	c_Lang203 =	Vergleichen Variablen
-	c_Lang204 =	Evaluieren Mathematischen Ausdruck
+	c_Lang204 =	Bewerten Ausdruck
 	c_Lang205 =	Region
 	c_Lang206 =	(Verwenden Sie [], um Arrays zu erstellen, z.B .: [10, 20, aVariable, "aString"])
 	c_Lang207 =	Array-Objekt
@@ -1281,6 +1281,7 @@
 	KeyWait	Wartet auf eine Taste oder Maus / Joystick-Taste, um freigelassen werden oder nach unten gedrückt.
 	Labels	Ein Label kennzeichnet eine Codezeile, und kann als Goto Ziel oder ein Unterprogramm Form verwendet werden.
 	Length	Gibt die Länge eines linearen Arrays in Position 1 beginnt.
+	ListVars	
 	Log	Liefert den Logarithmus (Basis 10) der Anzahl.
 	Ln	Gibt den natürlichen Logarithmus (Basis e) der Anzahl.
 	Loop (normal) 	Führen Sie eine Reihe von Befehlen wiederholt: entweder die angegebene Anzahl von Malen oder bis zum Bruch aufgetreten ist.

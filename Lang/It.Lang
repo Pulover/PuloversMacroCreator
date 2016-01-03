@@ -380,7 +380,7 @@
 	c_Lang084 =	Assegnare variabile
 	c_Lang085 =	Contenuto
 	c_Lang086 =	Operatore
-	c_Lang087 =	Espressione Matematica
+	c_Lang087 =	Espressione
 	c_Lang088 =	Reset
 	c_Lang089 =	Nome Funzione
 	c_Lang090 =	Separati da virgola parametri (senza parentesi)
@@ -496,7 +496,7 @@
 	c_Lang201 =	Se stringa non contiene
 	c_Lang202 =	Se la casella di messaggio
 	c_Lang203 =	Confronta le variabili
-	c_Lang204 =	Valutare L'espressione Matematica
+	c_Lang204 =	Valutare l'espressione
 	c_Lang205 =	Regione
 	c_Lang206 =	(Usare [] per creare array, es .: [10, 20, aVariable, "aString"])
 	c_Lang207 =	Oggetto Array
@@ -1281,6 +1281,7 @@
 	KeyWait	Attende un tasto o pulsante del mouse / joystick per essere rilasciato o premuto.
 	Labels	Un'etichetta identifica una riga di codice, e può essere usato come un bersaglio Goto o per formare una subroutine.
 	Length	Restituisce la lunghezza di una schiera lineare che inizia alla posizione 1.
+	ListVars	
 	Log	Restituisce il logaritmo (base 10) del numero.
 	Ln	Restituisce il logaritmo naturale (in base e) del Codice.
 	Loop (normal) 	Eseguire una serie di comandi più volte: si incontra sia il numero specificato di volte o fino a rottura.

@@ -380,7 +380,7 @@
 	c_Lang084 =	Değişken atama
 	c_Lang085 =	Içerik
 	c_Lang086 =	Operatör
-	c_Lang087 =	Matematik Ifadesi
+	c_Lang087 =	Ifade
 	c_Lang088 =	Ayarlamak
 	c_Lang089 =	Fonksiyon Adı
 	c_Lang090 =	Virgül (parantez olmadan) parametreleri ayrılmış
@@ -496,7 +496,7 @@
 	c_Lang201 =	Dize içerir değilse
 	c_Lang202 =	Eğer mesaj kutusu
 	c_Lang203 =	Değişkenleri karşılaştırın
-	c_Lang204 =	Matematik Ifade Değerlendirmek
+	c_Lang204 =	Ifade değerlendirmek
 	c_Lang205 =	Bölge
 	c_Lang206 =	(Kullan [] diziler oluşturmak için, ör .: [10, 20, aVariable, "aString"])
 	c_Lang207 =	Dizi Nesnesi
@@ -1281,6 +1281,7 @@
 	KeyWait	Serbest veya basılı gereken bir anahtar veya fare / joystick düğmesine bekler.
 	Labels	Bir etiket, bir kod hattı tanımlayan, ve Goto hedef olarak ya da bir alt yordam oluşturmak için de kullanılabilir.
 	Length	1 konumundaki başlayan doğrusal bir dizinin uzunluğunu döndürür.
+	ListVars	
 	Log	Sayısı logaritma (10 tabanı) döndürür.
 	Ln	Sayısı doğal logaritma (Taban e) döndürür.
 	Loop (normal) 	Tekrar tekrar komutları bir dizi gerçekleştirin: Belirtilen kez numarası veya mola kadar da görülür.

@@ -443,6 +443,7 @@ SelectByType(SelType, Col := 6)
 				LV_Modify(A_Index, "Select")
 		}
 	}
+	LV_Modify(LV_GetNext(), "Vis")
 }
 
 SelectByFilter(Act, Det, Tim, Del, Typ, Tar, Win, Com, Col, Case)
@@ -663,7 +664,7 @@ EscCom(MatchList, Reverse := 0)
 	}
 }
 
-HistCheck(L)
+HistCheck()
 {
 	global
 
@@ -867,28 +868,111 @@ ShowChevronMenu(rbPtr, BandID, X := "", Y := "")
 	}
 }
 
-SavedVars(Var := "", ByRef Saved := "")
+LVCallback(Func, Hwnd)
 {
-	Static VarsRecord := {}
+	global
+	
+	If Func in Copy,Cut,Paste,Duplicate,Delete,Move,Drag
+	{
+		LV_Row := 0
+        Loop
+        {
+            LV_Row := LV_GetNext(LV_Row)
+            If (!LV_Row)
+                break
+			LV_GetText(Type, LV_Row, 6)
+			If (Type = cType47)
+				return false
+		}
+	}
+	If Func in Cut,Paste,Duplicate,Delete,Move,Drag,Undo,Redo
+		SavePrompt := true
+		
+	return true
+}
+
+SavedVars(_Var := "", ByRef _Saved := "", AsArray := false)
+{
+	Static VarsRecord := {}, LocalRecord := {}
+	Static BuiltinVars := StrReplace(BIV_Characters, "`n", "`,")
+						. StrReplace(BIV_Properties, "`n", "`,")
+						. StrReplace(BIV_Date, "`n", "`,")
+						. StrReplace(BIV_Idle, "`n", "`,")
+						. StrReplace(BIV_System, "`n", "`,")
+						. StrReplace(BIV_Misc, "`n", "`,")
+						. StrReplace(BIV_Loop, "`n", "`,")
 	Local ListOfVars, i, v
 	
-	If (IsByRef(Saved))
+	If (IsByRef(_Saved))
 	{
-		For i, v in VarsRecord
-			ListOfVars .= i ": " v "`n"
-		Sort, ListOfVars
-		Saved := ListOfVars
+		If (AsArray)
+		{
+			ListOfVars := []
+			For i, v in VarsRecord
+				ListOfVars.Push(i)
+			_Saved := ListOfVars
+		}
+		Else
+		{
+			For i, v in VarsRecord
+				ListOfVars .= i ": " v "`n"
+			Sort, ListOfVars
+			ListOfVars := "Global Variables (alphabetical)`n--------------------------------------------------`n" ListOfVars
+			_Saved := ListOfVars
+		}
+		If (RunningFunction != "")
+		{
+			If (AsArray)
+			{
+				ListOfVars.Push("##_Locals:")
+				For i, v in LocalRecord[RunningFunction]
+					ListOfVars.Push(i)
+				_Saved := ListOfVars
+			}
+			Else
+			{
+				ListOfVars := ""
+				For i, v in LocalRecord[RunningFunction]
+					ListOfVars .= i ": " v "`n"
+				Sort, ListOfVars
+				ListOfVars := "Local Variables for " RunningFunction "()`n--------------------------------------------------`n" ListOfVars
+				_Saved := ListOfVars "`n" _Saved
+			}
+		}
 		return
 	}
-	If (IsObject(%Var%))
+	
+	If _Var in %BuiltinVars%
+		return
+	
+	If (RunningFunction != "")
 	{
-		ListOfVars := "["
-		For i, v in %Var%
+		If (!IsObject(LocalRecord[RunningFunction]))
+			LocalRecord[RunningFunction] := {}
+		If (IsObject(%_Var%))
 		{
-			ListOfVars .= IsObject(v) ? "[Array](" v.Length() "), " : v ", "
+			ListOfVars := "["
+			For i, v in %_Var%
+			{
+				ListOfVars .= IsObject(v) ? "[Array](" v.Length() "), " : v ", "
+			}
+			LocalRecord[RunningFunction][_Var] := "[Array](" %_Var%.Length() ") " SubStr(RTrim(ListOfVars, ", "), 1, 60) "]"
 		}
-		VarsRecord[Var] := "[Array](" %Var%.Length() ") " SubStr(RTrim(ListOfVars, ", "), 1, 60) "]"
+		Else
+			LocalRecord[RunningFunction][_Var] := SubStr(%_Var%, 1, 60)
 	}
 	Else
-		VarsRecord[Var] := SubStr(%Var%, 1, 60)
+	{
+		If (IsObject(%_Var%))
+		{
+			ListOfVars := "["
+			For i, v in %_Var%
+			{
+				ListOfVars .= IsObject(v) ? "[Array](" v.Length() "), " : v ", "
+			}
+			VarsRecord[_Var] := "[Array](" %_Var%.Length() ") " SubStr(RTrim(ListOfVars, ", "), 1, 60) "]"
+		}
+		Else
+			VarsRecord[_Var] := SubStr(%_Var%, 1, 60)
+	}
 }

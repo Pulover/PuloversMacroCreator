@@ -5,7 +5,7 @@
 ; Author: Pulover [Rodolfo U. Batista]
 ; pulover@macrocreator.com
 ; Home: http://www.macrocreator.com
-; Forum: http://ahkscript.org/boards/viewtopic.php?f=6&t=143
+; Forum: http://autohotkey.com/boards/viewtopic.php?f=6&t=143
 ; Version: 5.0.0
 ; Release Date: January, 2016
 ; AutoHotkey Version: 1.1.22.07
@@ -1297,7 +1297,7 @@ ActivateHotkeys(1)
 Pause, Off
 GoSub, RecStop
 If (ClearNewList)
-	LV_Delete()
+	LV_Delete(), LVManager.RemoveAllGroups()
 Else
 {
 	GoSub, RowCheck
@@ -2352,7 +2352,7 @@ If (!A_AhkPath)
 	GuiControl, 14:, Exe_Exp, 0
 	MsgBox, 17, %d_Lang007%, %d_Lang056%
 	IfMsgBox, OK
-		Run, http://ahkscript.org/
+		Run, http://autohotkey.com/
 	return
 }
 return
@@ -2407,7 +2407,7 @@ return
 ExportFile:
 Header := Script_Header()
 If (Ex_UV = 1)
-	Header .= UserVarsList "`n"
+	Header .= RegExReplace(UserVarsList, "`am)(\w+)\s*=\s*(.*)", "global $1 := ""$2""") "`n"
 RowNumber := 0, AutoKey := "", IncList := "", ProgRatio := 100 / LV_GetCount()
 Loop, % LV_GetCount()
 {
@@ -2969,7 +2969,7 @@ Forum:
 If ((Lang = "Zh") || (Lange = "Zt"))
 	Run, http://autohotkey.com/boards/viewtopic.php?f=28&t=1175
 Else
-	Run, http://ahkscript.org/boards/viewtopic.php?f=6&t=143
+	Run, http://autohotkey.com/boards/viewtopic.php?f=6&t=143
 return
 
 HelpAHK:
@@ -6624,6 +6624,36 @@ s_Caller := "Edit"
 AsFunc:
 AsVar:
 IfSt:
+Proj_Funcs := ""
+Gui, chMacro:Default
+Loop, %TabCount%
+{
+	Gui, chMacro:ListView, InputList%A_Index%
+	Loop, % ListCount%A_Index%
+	{
+		LV_GetText(Row_Type, A_Index, 6)
+		If (Row_Type = cType47)
+		{
+			LV_GetText(Row_Func, A_Index, 3)
+		,	Proj_Funcs .= Row_Func "$"
+		,	%Row_Func%_Hint := "(", HasDefault := false
+			Loop, % A_Index - 1
+			{
+				LV_GetText(Row_Param, A_Index, 3)
+				HasDefault := InStr(Row_Param, " :=")
+				If (HasDefault)
+				{
+					If (!InStr(%Row_Func%_Hint, "["))
+						%Row_Func%_Hint := Trim(%Row_Func%_Hint, ", ") " [, "
+					%Row_Func%_Hint .= SubStr(Row_Param, 1, HasDefault-1) ", "
+				}
+				Else
+					%Row_Func%_Hint .= Row_Param ", "
+			}
+			%Row_Func%_Hint := Trim(%Row_Func%_Hint, ", ") . (HasDefault ? "])" : ")")
+		}
+	}
+}
 Gui, 21:+owner1 -MinimizeBox +E0x00000400 +HwndCmdWin +Delimiter$
 Gui, 1:+Disabled
 Gui, 21:Add, Tab2, W450 H0 vTabControl AltSubmit, CmdTab1$CmdTab2$CmdTab3
@@ -6658,7 +6688,8 @@ Gui, 21:Add, Text, y+11 xs+10 W135 vFormatTip2
 Gui, 21:Add, DDL, yp-5 x+0 W55 vIfOper gCoOper Disabled, =$$==$!=$>$<$>=$<=
 Gui, 21:Add, Text, yp+5 x+5 W150 vCoOper cGray, %Co_Oper_1%
 Gui, 21:Add, Edit, y+5 xs+10 W430 R4 -vScroll vTestVar2 Disabled
-Gui, 21:Add, Text, W430 r1 cGray, %c_Lang025%
+Gui, 21:Add, Text, yp xs+10 W430 R6 vExpTxt Hidden, %d_Lang097%
+Gui, 21:Add, Text, W430 r1 cGray vVarTxt, %c_Lang025%
 Gui, 21:Add, Groupbox, Section xs y+15 W450 H50, %c_Lang123%:
 Gui, 21:Add, Button, -Wrap ys+18 xs+85 W75 H23 vAddElse gAddElse, %c_Lang083%
 Gui, 21:Add, Button, -Wrap Section Default xm y+14 W75 H23 gIfOK, %c_Lang020%
@@ -6694,7 +6725,7 @@ Gui, 21:Add, Checkbox, y+5 xs+10 W430 vUseExtFunc gUseExtFunc, %c_Lang128%
 Gui, 21:Add, Edit, W400 R1 -Multi vFileNameEx Disabled, %StdLibFile%
 Gui, 21:Add, Button, -Wrap yp-1 x+0 W30 H23 vSearchFEX gSearchAHK Disabled, ...
 Gui, 21:Add, Text, y+6 xs+10 W130, %c_Lang089%:
-Gui, 21:Add, Combobox, W400 -Multi vFuncName gFuncName, %BuiltinFuncList%
+Gui, 21:Add, Combobox, W400 -Multi vFuncName gFuncName, %Proj_Funcs%%BuiltinFuncList%
 Gui, 21:Add, Button, -Wrap W25 yp-1 x+5 hwndFuncHelp vFuncHelp gFuncHelp Disabled
 	ILButton(FuncHelp, ResDllPath ":" 24)
 Gui, 21:Add, Text, W430 yp+25 xs+10, %c_Lang090%:
@@ -6960,8 +6991,13 @@ If (TabControl = 3)
 	}
 	Else If (!IsFunc(FuncName))
 	{
-		MsgBox, 16, %d_Lang007%, "%FuncName%" %d_Lang031%
-		return
+		UserFuncs := StrReplace(Proj_Funcs, "$", "`,")
+		If FuncName not in %UserFuncs%
+		{
+			MsgBox, 16, %d_Lang007%, "%FuncName%" %d_Lang031%
+			return
+		}
+		Target := ""
 	}
 	Else
 		Target := ""
@@ -7149,7 +7185,7 @@ If (IsArray)
 }
 GuiControl, 21:Disable%IsArray%, UseExtFunc
 GuiControl, 21:Enable%IsArray%, ArrayName
-GuiControl, 21:, FuncName, % "$" (IsArray ? ArrayMethodsList : BuiltinFuncList)
+GuiControl, 21:, FuncName, % "$" (IsArray ? ArrayMethodsList : Proj_Funcs . BuiltinFuncList)
 return
 
 UseExtFunc:
@@ -7160,7 +7196,7 @@ If (!A_AhkPath)
 	GuiControl, 21:, UseExtFunc, 0
 	MsgBox, 17, %d_Lang007%, %d_Lang056%
 	IfMsgBox, OK
-		Run, http://ahkscript.org/
+		Run, http://autohotkey.com/
 	return
 }
 GuiControl, 21:Enable%UseExtFunc%, FileNameEx
@@ -7169,7 +7205,7 @@ GuiControl, 21:Disable, FuncHelp
 GuiControl, 21:, FuncName, $
 If (UseExtFunc = 1)
 	ExtList := ReadFunctions(FileNameEx, t_lang086)
-GuiControl, 21:, FuncName, % (UseExtFunc) ? "$" ExtList : "$" BuiltinFuncList
+GuiControl, 21:, FuncName, % (UseExtFunc) ? "$" ExtList : "$" Proj_Funcs . BuiltinFuncList
 SB_SetText("")
 return
 
@@ -7252,7 +7288,21 @@ If (Statement = If13)
 	GuiControl, 21:Disable, TestVar
 }
 Else
+{
 	GuiControl, 21:Disable, IfMsgB
+}
+If (Statement = If15)
+{
+	GuiControl, 21:Hide, TestVar2
+	GuiControl, 21:Hide, VarTxt
+	GuiControl, 21:Show, ExpTxt
+}
+Else
+{
+	GuiControl, 21:Hide, ExpTxt
+	GuiControl, 21:Show, TestVar2
+	GuiControl, 21:Show, VarTxt
+}
 return
 
 IfGet:
@@ -8371,10 +8421,10 @@ Gui, 38:Add, Text, y+10 xs+25 W400 cGray, %c_Lang222%
 Gui, 38:Tab, 2
 ; Parameters
 Gui, 38:Add, GroupBox, Section xm ym W450 H280
-Gui, 38:Add, Text, ys+15 xs+10 W430, %c_Lang221%
+Gui, 38:Add, Text, ys+15 xs+10 W430 vParamNameT, %c_Lang221%
 Gui, 38:Add, Edit, y+5 xs+10 W430 vParamName
 Gui, 38:Add, Text, y+15 xs+10 W430, %c_Lang217%
-Gui, 38:Add, Edit, y+5 xs+10 W430 vDefaultValue
+Gui, 38:Add, ComboBox, y+5 xs+10 W430 vDefaultValue, true|false|_blank
 Gui, 38:Add, CheckBox, y+15 xs+10 W100, ByRef
 Gui, 38:Add, Text, y+15 xs+10 W430 H120, %d_Lang095%
 ; Gui, 38:Add, Button, -Wrap Section Default xm y+14 W75 H23 gUDFOK, %c_Lang020%
@@ -8384,7 +8434,7 @@ Gui, 38:Tab, 3
 ; Return
 Gui, 38:Add, GroupBox, Section xm ym W450 H280
 Gui, 38:Add, Text, ys+15 xs+10 W430, %c_Lang216%:
-Gui, 38:Add, Edit, y+5 xs+10 W430
+Gui, 38:Add, Edit, y+5 xs+10 W430 vRetExpr
 Gui, 38:Add, Text, y+15 xs+10 W430 H202, %d_Lang096%
 Gui, 38:Tab
 Gui, 38:Add, Button, -Wrap Section Default xm y+14 W75 H23 gUDFOK, %c_Lang020%
@@ -8427,11 +8477,9 @@ If (TabControl = 1)
 		GuiControl, 38:Focus, FuncName
 		return
 	}
-	Try
-		z_Check := VarSetCapacity(%FuncName%)
-	Catch
+	If (!RegExMatch(FuncName, "^\w+$"))
 	{
-		MsgBox, 16, %d_Lang007%, %d_Lang099%
+		MsgBox, 16, %d_Lang007%, %d_Lang041%
 		return
 	}
 	MustDefault := false
@@ -8440,7 +8488,9 @@ If (TabControl = 1)
 		If (Param%A_Index% = "")
 			continue
 		Param := Param%A_Index%
-		If (!RegExMatch(FuncName, "^\w+$"))
+		Try
+			z_Check := VarSetCapacity(%Param%)
+		Catch
 		{
 			MsgBox, 16, %d_Lang007%, %d_Lang041%`n`n%Param%
 			return
@@ -8495,6 +8545,75 @@ If (TabControl = 1)
 	}
 	LV_Add("Check", ListCount%A_List%+1, "[FunctionStart]", FuncName, 1, 0, cType47, FuncScope, "")
 ,	LV_Add("Check", ListCount%A_List%+1, "[FuncReturn]", "", 1, 0, cType49, "", "")
+}
+If (TabControl = 2)
+{
+	If (ParamName = "")
+	{
+		Gui, 38:Font, cRed
+		GuiControl, 38:Font, ParamNameT
+		GuiControl, 38:Focus, ParamName
+		return
+	}
+	Try
+		z_Check := VarSetCapacity(%ParamName%)
+	Catch
+	{
+		MsgBox, 16, %d_Lang007%, %d_Lang041%
+		return
+	}
+	If (DefaultValue != "")
+	{
+		DefaultDet := (DefaultValue = "_blank" ? "" : DefaultValue)
+		If DefaultDet not in true,false
+		{
+			If DefaultDet is not Number
+				DefaultDet := """" DefaultDet """"
+		}
+		DefaultDet := " := " DefaultDet
+	}
+	Action := "[FuncParameter]", Details := ParamName . DefaultDet, Type := cType48
+	,	Target := ByRef ? "ByRef" : ""
+	Gui, chMacro:Default
+	RowSelection := LV_GetCount("Selected")
+	If (RowSelection = 0)
+	{
+		RowNumber := 1
+		Loop, % ListCount%A_List%
+		{
+			LV_GetText(RowType, RowNumber, 6)
+			If (RowType = cType47)
+				break
+			RowNumber++
+		}
+		LV_Insert(RowNumber, "Check", "", Action, Details, 1, 0, Type, Target, "")
+	,	LVManager.InsertAtGroup(1, RowNumber)
+	}
+	Else
+	{
+		LV_Insert(LV_GetNext(), "Check", "", Action, Details, 1, 0, Type, Target, "")
+	,	LVManager.InsertAtGroup(1, LV_GetNext())
+	}
+}
+If (TabControl = 3)
+{
+	Gui, chMacro:Default
+	RowSelection := LV_GetCount("Selected")
+	If (RowSelection = 0)
+	{
+		LV_Add("Check", ListCount%A_List%+1, "[FuncReturn]", RetExpr, 1, 0, cType49, "", "")
+		LV_Modify(ListCount%A_List%+1, "Vis")
+	}
+	Else
+	{
+		LV_Insert(LV_GetNext(), "Check", "", "[FuncReturn]", RetExpr, 1, 0, cType49, "", "")
+	,	LVManager.InsertAtGroup(1, LV_GetNext())
+	}
+}
+If (A_ThisLabel != "UDFApply")
+{
+	Gui, 1:-Disabled
+	Gui, 38:Destroy
 }
 GoSub, RowCheck
 GoSub, b_Start
@@ -9116,7 +9235,7 @@ Gui, chMacro:Default
 Gui, chMacro:Listview, %OSHK%
 MsgBox, 1, %d_Lang019%, %d_Lang020%
 IfMsgBox, OK
-	LV_Delete()
+	LV_Delete(), LVManager.RemoveAllGroups()
 GoSub, RowCheck
 GoSub, b_Start
 return
@@ -9333,9 +9452,8 @@ Gui, chMacro:Submit, NoHide
 s_List := A_List
 GuiControlGet, c_Time, chTimes:, TimesG
 GoSub, TabPlus
-d_List := TabCount, RowSelection := 0
-GoSub, CopySelection
-LVManager.SetHwnd(ListID%A_List%)
+LVManager.SetHwnd(ListID%TabCount%, ListID%s_List%)
+,	LVManager.ClearHistory()
 GuiControl, chTimes:, TimesG, %c_Time%
 GoSub, b_Start
 GuiControl, chMacro:+Redraw, InputList%A_List%
@@ -9344,42 +9462,9 @@ return
 CopyList:
 Gui, chMacro:Default
 Gui, chMacro:ListView, InputList%A_List%
-s_List := A_List, d_List := A_ThisMenuItemPos, RowSelection := LV_GetCount("Selected")
-GoSub, CopySelection
-return
-
-CopySelection:
-Gui, chMacro:Default
-RowNumber := 0
-If (RowSelection = 0)
-{
-	Loop, % ListCount%s_List%
-	{
-		RowNumber++
-		Gui, chMacro:ListView, InputList%s_List%
-		LV_GetTexts(RowNumber, Action, Details, TimesX, DelayX, Type, Target, Window, Comment, Color)
-		ckd := (LV_GetNext(RowNumber-1, "Checked")=RowNumber) ? 1 : 0
-		Gui, chMacro:ListView, InputList%d_List%
-		LV_Add("Check" ckd, ListCount%d_List%+1, Action, Details, TimesX, DelayX, Type, Target, Window, Comment, Color)
-	}
-}
-Else
-{
-	Loop, %RowSelection%
-	{
-		Gui, chMacro:ListView, InputList%s_List%
-		RowNumber := LV_GetNext(RowNumber)
-		LV_GetTexts(RowNumber, Action, Details, TimesX, DelayX, Type, Target, Window, Comment, Color)
-		ckd := (LV_GetNext(RowNumber-1, "Checked")=RowNumber) ? 1 : 0
-		Gui, chMacro:ListView, InputList%d_List%
-		LV_Add("Check" ckd, ListCount%d_List%+1, Action, Details, TimesX, DelayX, Type, Target, Window, Comment, Color)
-	}
-}
-Gui, chMacro:ListView, InputList%d_List%
-ListCount%d_List% := LV_GetCount()
-HistCheck(d_List)
-GoSub, RowCheck
-Gui, chMacro:ListView, InputList%s_List%
+Copies := LVManager.CopyTo(ListID%A_ThisMenuItemPos%)
+,	ListCount%A_ThisMenuItemPos% := ListCount%A_ThisMenuItemPos% + Copies
+GoSub, b_Start
 GuiControl, Focus, InputList%A_List%
 return
 
@@ -9423,7 +9508,12 @@ Remove:
 Gui, chMacro:Default
 RowSelection := LV_GetCount("Selected")
 If (RowSelection = 0)
-	LV_Delete()
+{
+	LV_GetText(Type, 1, 6)
+	If ((Type = cType47) || (Type = cType48))
+		return
+	LV_Delete(), LVManager.RemoveAllGroups()
+}
 Else
 {
 	PrevState := AutoRefresh
@@ -9565,11 +9655,11 @@ Loop, % TabCount - c_List
 {
 	n_Tab := s_Tab+1
 	LVManager.SetHwnd(ListID%s_Tab%, ListID%n_Tab%)
-,	LVManager.Load()
 ,	Labels .= TabGetText(TabSel, s_Tab) "|"
 ,	s_Tab++
 }
-LVManager.RemoveHwnd(ListID%TabCount%), LVManager.SetHwnd(ListID%A_List%)
+LVManager.SetHwnd(ListID%TabCount%), LV_Delete(), LVManager.RemoveAllGroups()
+,	LVManager.RemoveHwnd(ListID%TabCount%), LVManager.SetHwnd(ListID%A_List%)
 If (c_List != TabCount)
 {
 	o_AutoKey.RemoveAt(c_List)
@@ -9647,7 +9737,7 @@ GuiControl, chMacro:-Redraw, InputList%A_List%
 LVManager.Move(1)
 GoSub, RowCheck
 GoSub, b_Enable
-HistCheck(A_List)
+HistCheck()
 GuiControl, chMacro:+Redraw, InputList%A_List%
 return
 
@@ -9657,7 +9747,7 @@ GuiControl, chMacro:-Redraw, InputList%A_List%
 LVManager.Move()
 GoSub, RowCheck
 GoSub, b_Enable
-HistCheck(A_List)
+HistCheck()
 GuiControl, chMacro:+Redraw, InputList%A_List%
 return
 
@@ -9667,10 +9757,12 @@ Gui, chMacro:Default
 Loop, %TabCount%
 {
 	Gui, chMacro:ListView, InputList%A_Index%
-	LV_Delete()
+	LVManager.SetHwnd(ListID%A_Index%)
+,	LV_Delete(), LVManager.RemoveAllGroups()
 	GuiControl, chMacro:+Redraw, InputList%A_Index%
 	Menu, CopyTo, Delete, % CopyMenuLabels[A_Index]
 }
+LVManager.SetHwnd(ListID%A_List%)
 CopyMenuLabels[1] := "Macro1"
 Menu, CopyTo, Add, % CopyMenuLabels[1], CopyList
 Menu, CopyTo, Check, % CopyMenuLabels[1]
@@ -9806,7 +9898,7 @@ Else
 		LV_Modify(RowNumber, "Col4", (InStr(Rept, "%") ? Rept : TimesM))
 	}
 }
-HistCheck(A_List)
+HistCheck()
 return
 
 ApplyI:
@@ -9825,7 +9917,7 @@ Else
 		LV_Modify(RowNumber, "Col5", (InStr(Delay, "%") ? Delay : DelayG))
 	}
 }
-HistCheck(A_List)
+HistCheck()
 return
 
 ApplyL:
@@ -10005,7 +10097,6 @@ ActiveList := NewActive
 Gui, chMacro:Default
 Loop, %TabCount%
 	LVManager.SetHwnd(ListID%A_Index%, Project[A_Index])
-,	LVManager.Load()
 GuiControl, chMacro:, A_List, |%Labels%
 GuiControl, chMacro:Choose, A_List, %ActiveList%
 Gui, chMacro:Submit, NoHide
@@ -10577,7 +10668,7 @@ If (A_ThisLabel = "MultiApply")
 	Gui, 6:Default
 Else
 	GuiControl, Focus, InputList%A_List%
-HistCheck(A_List)
+HistCheck()
 return
 
 MultiCancel:
@@ -10948,7 +11039,7 @@ If (RepAllRows = 1)
 		}
 	}
 	If (Replaces > 0)
-		HistCheck(A_List)
+		HistCheck()
 }
 Else If (RepAllMacros = 1)
 {
@@ -10994,7 +11085,7 @@ Else If (RepAllMacros = 1)
 			}
 		}
 		If (Replaces > 0)
-			HistCheck(A_Index)
+			HistCheck()
 	}
 	Gui, chMacro:Listview, InputList%A_List%
 }
@@ -11042,7 +11133,7 @@ Else
 		}
 	}
 	If (Replaces > 0)
-		HistCheck(A_List)
+		HistCheck()
 }
 GuiControl, 18:, Replaced, %t_Lang072%: %Replaces%
 return
@@ -11707,6 +11798,9 @@ return
 pb_ExitApp:
 	ExitApp
 return
+pb_ListVars:
+	GoSub, ListVars
+return
 pb_StatusBarGetText:
 	StatusBarGetText, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%, %Par6%
 	Try SavedVars(Par1)
@@ -12227,7 +12321,7 @@ return
 ListVars:
 SavedVars(, UserVars)
 FileDelete, %SettingsFolder%\ListOfVars.txt
-FileAppend, User-Defined Variables (alphabetical)`n--------------------------------------------------`n%UserVars%, %SettingsFolder%\ListOfVars.txt
+FileAppend, %UserVars%, %SettingsFolder%\ListOfVars.txt
 Run, %DefaultEditor% %SettingsFolder%\ListOfVars.txt
 return
 
@@ -12841,7 +12935,7 @@ b_Start:
 Gui, 1:Submit, NoHide
 GoSub, b_Enable
 If (!Record)
-	HistCheck(A_List)
+	HistCheck()
 GuiControl, 28:+Range1-%TabCount%, OSHK
 GuiControl, 28:, OSHK, %A_List%
 return
@@ -13002,7 +13096,7 @@ Loop, % LV_GetCount()
 :	(Type = "Return") ? LV_Modify(A_Index, "Icon" IconsNames["stop"])
 :	(Type = "ExitApp") ? LV_Modify(A_Index, "Icon" IconsNames["exit"])
 :	(InStr(Type, "Url")) ? LV_Modify(A_Index, "Icon" IconsNames["download"])
-:	(InStr(Type, "LockState") || InStr(Type, "Time") || InStr(Type, "Transform")
+:	(InStr(Type, "LockState") || InStr(Type, "Time") || InStr(Type, "Transform") || InStr(Type, "ListVars")
 	|| InStr(Type, "Random") || InStr(Type, "ClipWait") || InStr(Type, "Block") || InStr(Type, "Debug")
 	|| InStr(Type, "Status") || InStr(Type, "SendLevel") || InStr(Type, "CoordMode")) ?  LV_Modify(A_Index, "Icon" IconsNames["misc"])
 :	""
@@ -13772,7 +13866,7 @@ If (GrName = "")
 	GrName := t_Lang177
 If (!ShowGroups)
 	GoSub, GroupsMode
-LVManager.AddGroup(LV_GetNext(), GrName)
+LVManager.AddGroup(, GrName)
 LVManager.Add()
 return
 
@@ -13818,7 +13912,7 @@ If (!LV_GetNext())
 	MsgBox, 16, %d_Lang089%, %d_Lang090%
 	return
 }
-LVManager.RemoveGroup(LV_GetNext())
+LVManager.RemoveGroup()
 LVManager.Add()
 return
 
@@ -13966,7 +14060,7 @@ Else
 	Lang := "En"
 	GoSub, LoadLang_En
 }
-HelpDocsUrl := ((Lang = "Zh") || (Lang = "Zt")) ?  "http://ahkcn.github.io/docs" : "http://ahkscript.org/docs"
+HelpDocsUrl := ((Lang = "Zh") || (Lang = "Zt")) ?  "http://ahkcn.github.io/docs" : "http://autohotkey.com/docs"
 Cmd_Tips := {}
 Loop, Parse, Ahk_Cmd_Index, `n
 {

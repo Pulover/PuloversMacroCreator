@@ -380,7 +380,7 @@
 	c_Lang084 =	Affecter variable
 	c_Lang085 =	Teneur
 	c_Lang086 =	Opérateur
-	c_Lang087 =	Expression Mathématique
+	c_Lang087 =	Expression
 	c_Lang088 =	Remettre
 	c_Lang089 =	Nom de la fonction
 	c_Lang090 =	Paramètres séparés par des virgules (sans parenthèses)
@@ -496,7 +496,7 @@
 	c_Lang201 =	Si la chaîne ne contient pas
 	c_Lang202 =	Si la boîte de message
 	c_Lang203 =	Comparer les variables
-	c_Lang204 =	Évaluer L'expression Mathématique
+	c_Lang204 =	Évaluer expression
 	c_Lang205 =	Région
 	c_Lang206 =	(Utilisez [] pour créer des tableaux, e.g .: [10, 20, aVariable, "aString"])
 	c_Lang207 =	Objet De Tableau
@@ -1281,6 +1281,7 @@
 	KeyWait	Temps d'attente pour un bouton de clé ou de la souris / joystick pour être libéré ou enfoncé.
 	Labels	Une étiquette identifie une ligne de code, et peut être utilisé comme une cible Goto ou pour former une sous-routine.
 	Length	Retourne la longueur d'un réseau linéaire à partir de la position 1.
+	ListVars	
 	Log	Renvoie le logarithme (base 10) de Number.
 	Ln	Renvoie le logarithme naturel (base e) du nombre.
 	Loop (normal) 	Effectuer une série de commandes à plusieurs reprises: soit le nombre de fois spécifié ou jusqu'à ce que la rupture se produit.

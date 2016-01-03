@@ -72,7 +72,7 @@ Class ObjIni
 	Get(AsObject := false)
 	{
 		If (AsObject)
-			return this
+			return this.Clone()
 		For each, Section in this
 			For each, Key in Section
 				List .= Key.Key " = " Key.Value "`n"

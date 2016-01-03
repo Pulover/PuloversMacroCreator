@@ -380,7 +380,7 @@
 	c_Lang084 =	Przypisanie zmiennej
 	c_Lang085 =	Zawartość
 	c_Lang086 =	Operator
-	c_Lang087 =	Wyrażenie Matematyczne
+	c_Lang087 =	Wyrażenie
 	c_Lang088 =	Resetuj
 	c_Lang089 =	Nazwa funkcji
 	c_Lang090 =	Oddzielonych przecinkami parametrów (bez nawiasów)
@@ -496,7 +496,7 @@
 	c_Lang201 =	Jeśli nie ciąg zawiera
 	c_Lang202 =	Jeżeli okno komunikatu
 	c_Lang203 =	Porównaj zmienne
-	c_Lang204 =	Oceny Wyrażenie Matematyczne
+	c_Lang204 =	Oceny ekspresji
 	c_Lang205 =	Region
 	c_Lang206 =	(Użyj [], aby utworzyć tablice, np .: [10, 20, aVariable, "aString"])
 	c_Lang207 =	Obiekt Array
@@ -1281,6 +1281,7 @@
 	KeyWait	Czeka na przycisku klucza lub mysz / joystick być wydany lub sprasowany.
 	Labels	Etykieta określa linię kodu, i może być stosowany jako cel Goto, lub tworzenia podprogram.
 	Length	Zwraca długość układu liniowego rozpoczynającego się w pozycji 1.
+	ListVars	
 	Log	Zwraca logarytm (o podstawie 10) z numeru.
 	Ln	Zwraca logarytm naturalny (e baza) z numeru.
 	Loop (normal) 	Wykonaj serię poleceń wielokrotnie: albo określoną liczbę razy lub do momentu napotkania przerwie.

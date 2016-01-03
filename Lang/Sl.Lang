@@ -380,7 +380,7 @@
 	c_Lang084 =	Določite spremenljivko
 	c_Lang085 =	Vsebina
 	c_Lang086 =	Operater
-	c_Lang087 =	Math Izraz
+	c_Lang087 =	Izraz
 	c_Lang088 =	Ponastavi
 	c_Lang089 =	Funkcija Ime
 	c_Lang090 =	Ločene z vejico parametre (brez oklepajev)
@@ -496,7 +496,7 @@
 	c_Lang201 =	Če niz ne vsebuje
 	c_Lang202 =	Če je v polju sporočilo
 	c_Lang203 =	Primerjajte spremenljivk
-	c_Lang204 =	Ovrednotenje Matematičnih Izrazov
+	c_Lang204 =	Ovrednoti izraz
 	c_Lang205 =	Regija
 	c_Lang206 =	(Uporabite [], da ustvarite nizi, npr .: [10, 20, aVariable, "aString"])
 	c_Lang207 =	Matrika Objekt
@@ -1281,6 +1281,7 @@
 	KeyWait	Počaka na gumb na ključ ali miška / igralno palico, ki se sprosti ali potlačen.
 	Labels	Oznaka opredeljuje kode in se lahko uporablja kot Goto cilj ali da bodo podprogram.
 	Length	Vrne dolžino linearni niz, ki se začne pri položaju 1.
+	ListVars	
 	Log	Vrne logaritem (z osnovo 10) številke.
 	Ln	Vrne naravni logaritem (z osnovo e) na številki.
 	Loop (normal) 	Opravila vrsto ukazov večkrat: bodisi določeno število krat ali dokler premoru se srečujejo.

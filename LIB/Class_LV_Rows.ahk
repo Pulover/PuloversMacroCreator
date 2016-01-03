@@ -100,11 +100,16 @@ Class LV_Rows extends LV_Rows.LV_EX
     }
 
     __Call(Func)
-    {
-        global SavePrompt
-        
-        If Func in Cut,Paste,Duplicate,Delete,Move,Drag,Undo,Redo
-            SavePrompt := true
+    {        
+        Callback := this.Callback
+		If (IsFunc(Callback))
+		{
+			If (!%Callback%(Func, this.LVHwnd))
+				return
+		}
+		
+		If Func in Cut,Paste,Duplicate,Delete,Move,Drag,Undo,Redo
+            this.HasChanged := true
     }
 
     __Delete()
@@ -114,6 +119,11 @@ Class LV_Rows extends LV_Rows.LV_EX
     ,   this.base := ""
     }
     
+	SetCallback(Func)
+	{
+		this.Callback := Func
+	}
+	
     SetHwnd(Hwnd, NewData := "")
     {
         If (this.hArray.HasKey(Hwnd))
@@ -129,23 +139,14 @@ Class LV_Rows extends LV_Rows.LV_EX
                     this.hArray[Hwnd].GroupsArray := NewData.GroupsArray
                 ,   this.hArray[Hwnd].Slot := NewData.Slot
                 ,   this.hArray[Hwnd].ActiveSlot := NewData.ActiveSlot
+				,	this.Load()
                 }
                 Else If (this.hArray.HasKey(NewData))
                 {
-                    this.hArray[Hwnd].GroupsArray := []
-                    For e, g in this.hArray[NewData].GroupsArray
-                        this.hArray[Hwnd].GroupsArray[e] := {Name: g.Name, Row: g.Row}
-                    this.hArray[Hwnd].Slot := []
-                    For e, s in this.hArray[NewData].Slot
-                    {
-                        NewRows := [], NewGroups := []
-                        For i, r in s.Rows
-                            NewRows[i] := [r*]
-                        For i, g in s.Groups
-                            NewGroups[i] := {Name: g.Name, Row: g.Row}
-                        this.hArray[Hwnd].Slot[e] := {Rows: NewRows, Groups: NewGroups}
-                    }
+					this.hArray[Hwnd].GroupsArray := this.hArray[NewData].GroupsArray.Clone()
+                    this.hArray[Hwnd].Slot := this.hArray[NewData].Slot.Clone()
                     this.hArray[Hwnd].ActiveSlot := this.hArray[NewData].ActiveSlot
+				,	this.Load()
                 }
             }
             return
@@ -167,23 +168,14 @@ Class LV_Rows extends LV_Rows.LV_EX
                 this.hArray[Hwnd].GroupsArray := NewData.GroupsArray
             ,   this.hArray[Hwnd].Slot := NewData.Slot
             ,   this.hArray[Hwnd].ActiveSlot := NewData.ActiveSlot
+			,	this.Load()
             }
             Else If (this.hArray.HasKey(NewData))
             {
-                this.hArray[Hwnd].GroupsArray := []
-                For e, g in this.hArray[NewData].GroupsArray
-                    this.hArray[Hwnd].GroupsArray[e] := {Name: g.Name, Row: g.Row}
-                this.hArray[Hwnd].Slot := []
-                For e, s in this.hArray[NewData].Slot
-                {
-                    NewRows := [], NewGroups := []
-                    For i, r in s.Rows
-                        NewRows[i] := [r*]
-                    For i, g in s.Groups
-                        NewGroups[i] := {Name: g.Name, Row: g.Row}
-                    this.hArray[Hwnd].Slot[e] := {Rows: NewRows, Groups: NewGroups}
-                }
+                this.hArray[Hwnd].GroupsArray := this.hArray[NewData].GroupsArray.Clone()
+                this.hArray[Hwnd].Slot := this.hArray[NewData].Slot.Clone()
                 this.hArray[Hwnd].ActiveSlot := this.hArray[NewData].ActiveSlot
+			,	this.Load()
             }
         }
     }
@@ -193,25 +185,7 @@ Class LV_Rows extends LV_Rows.LV_EX
         If (Hwnd = "")
             Hwnd := this.LVHwnd
         If (this.hArray.HasKey(Hwnd))
-        {
-            ObjCopy := {}, GroupsCopy := [], SlotCopy := []
-            For e, g in this.hArray[Hwnd].GroupsArray
-                GroupsCopy[e] := {Name: g.Name, Row: g.Row}
-            For e, s in this.hArray[Hwnd].Slot
-            {
-                Rows := [], Groups := []
-                For i, r in s.Rows
-                    Rows[i] := [r*]
-                For i, g in s.Groups
-                    Groups[i] := {Name: g.Name, Row: g.Row}
-                SlotCopy[e] := {Rows: Rows, Groups: Groups}
-            }
-            ObjCopy := { GroupsArray: Groups
-                       , Slot: SlotCopy
-                       , ActiveSlot: this.hArray[Hwnd].ActiveSlot}
-            
-            return ObjCopy
-        }
+            return this.hArray[Hwnd].Clone()
     }
     
     InsertHwnd(Hwnd*)
@@ -344,15 +318,33 @@ Class LV_Rows extends LV_Rows.LV_EX
 ;=======================================================================================
     Duplicate()
     {
-        CopyData := []
-        For each, Row in this.CopyData
-            CopyData.Push(Row)
-        DupLines := this.Copy()
+        CopyData := this.CopyData.Clone()
+    ,   DupLines := this.Copy()
     ,   this.Paste()
-    ,   this.CopyData := CopyData
+    ,   this.CopyData := CopyData.Clone()
+	,	CopyData.RemoveAt(1, CopyData.Length())
+	,	CopyData := ""
     ,   this.RefreshGroups()
         return DupLines
     }
+	
+    CopyTo(Hwnd)
+    {
+        If (!this.hArray.HasKey(Hwnd))
+			return false
+		CurrentHwnd := this.LVHwnd
+		CopyData := this.CopyData.Clone()
+        CopiedLines := this.Copy()
+	,	this.SetHwnd(Hwnd)
+    ,   this.Paste()
+    ,   this.CopyData := CopyData.Clone()
+	,	CopyData.RemoveAt(1, CopyData.Length())
+	,	CopyData := ""
+    ,   this.RefreshGroups()
+	,	this.SetHwnd(CurrentHwnd)
+        return CopiedLines
+    }
+	
 ;=======================================================================================
 ;    Function:           LV_Rows.Delete()
 ;    Description:        Delete selected rows.
@@ -553,9 +545,7 @@ Class LV_Rows extends LV_Rows.LV_EX
         If (DragButton = "LButton" && LV_currRow)
         {
             Gui, MarkLine:Cancel
-            CopyData := []
-            For each, Row in this.CopyData
-                CopyData.Push(Row)
+            CopyData := this.CopyData.Clone()
             Lines := this.Copy()
         ,   this.Paste(LV_currRow)
             If (LV_GetNext() < LV_currRow)
@@ -569,7 +559,9 @@ Class LV_Rows extends LV_Rows.LV_EX
             ,   LV_Modify(LV_currRow+i, "Select")
             }
             LV_Modify(FocusedRow, "Focus")
-        ,   this.CopyData := CopyData
+        ,   this.CopyData := CopyData.Clone()
+		,	CopyData.RemoveAt(1, CopyData.Length())
+		,	CopyData := ""
         }
         
         If (RestoreGroups)
@@ -675,9 +667,11 @@ Class LV_Rows extends LV_Rows.LV_EX
         }
     }
     
-    AddGroup(Row, GroupName := "New Group")
+    AddGroup(Row := "", GroupName := "New Group")
     {
-        If (Row =< 0)
+        If (Row = "")
+			Row := LV_GetNext()
+		If (Row =< 0)
             return
         
         For e, g in this.Handle.GroupsArray
@@ -707,8 +701,10 @@ Class LV_Rows extends LV_Rows.LV_EX
         this.RefreshGroups()
     }
     
-    RemoveGroup(Row)
+    RemoveGroup(Row := "")
     {
+        If (Row = "")
+			Row := LV_GetNext()
         If (Row =< 0)
             return
         

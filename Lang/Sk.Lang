@@ -380,7 +380,7 @@
 	c_Lang084 =	Priradenie premennej
 	c_Lang085 =	Obsah
 	c_Lang086 =	Operátor
-	c_Lang087 =	Matematický Výraz
+	c_Lang087 =	Výraz
 	c_Lang088 =	Obnoviť
 	c_Lang089 =	Funkcia Meno
 	c_Lang090 =	Hodnôt oddelených čiarkami (bez zátvoriek)
@@ -496,7 +496,7 @@
 	c_Lang201 =	Pokiaľ nie je reťazec obsahuje
 	c_Lang202 =	Ak sa zobrazí okno
 	c_Lang203 =	Porovnanie premenné
-	c_Lang204 =	Vyhodnotiť Matematický Výraz
+	c_Lang204 =	Vyhodnotiť výraz
 	c_Lang205 =	Kraj
 	c_Lang206 =	(Použite [] pre vytvorenie poľa, napr.: [10, 20, aVariable, "aString"])
 	c_Lang207 =	Objekt Array
@@ -1281,6 +1281,7 @@
 	KeyWait	Čaká kľúčom alebo tlačidla myši / joysticku byť prepustený alebo stlačená.
 	Labels	Štítok označuje riadok kódu, a môže byť použitý ako cieľ Goto alebo vytvoriť podprogram.
 	Length	Vráti dĺžku lineárnym poli začínajúce v polohe 1.
+	ListVars	
 	Log	Vráti logaritmus (základ 10) Number.
 	Ln	Vráti prirodzený logaritmus (základ e) Number.
 	Loop (normal) 	Vykonajte sériu príkazov opakovane: buď zadaný počet opakovaní alebo kým prestávke sa stretol.

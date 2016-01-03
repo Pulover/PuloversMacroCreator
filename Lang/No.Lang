@@ -380,7 +380,7 @@
 	c_Lang084 =	Tildele variabel
 	c_Lang085 =	Innhold
 	c_Lang086 =	Operatør
-	c_Lang087 =	Matematisk Uttrykk
+	c_Lang087 =	Expression
 	c_Lang088 =	Tilbakestille
 	c_Lang089 =	Funksjon Navn
 	c_Lang090 =	Kommaseparert parametre (uten parentes)
@@ -496,7 +496,7 @@
 	c_Lang201 =	Hvis strengen inneholder ikke
 	c_Lang202 =	Hvis meldingsboks
 	c_Lang203 =	Sammenligne variabler
-	c_Lang204 =	Evaluere Matematisk Uttrykk
+	c_Lang204 =	Evaluer uttrykk
 	c_Lang205 =	Region
 	c_Lang206 =	(Bruk [] for å lage matriser, f.eks .: [10, 20, aVariable, "aString"])
 	c_Lang207 =	Matrise Objekt
@@ -1281,6 +1281,7 @@
 	KeyWait	Venter på en tast eller mus / joystick knappen for å bli løslatt eller trykkes ned.
 	Labels	En etikett identifiserer en linje med kode, og kan brukes som et mål Goto, eller å danne en subrutine.
 	Length	Returnerer lengden av en lineær oppstilling som begynner ved posisjon 1.
+	ListVars	
 	Log	Returnerer logaritmen (base 10) av nummer.
 	Ln	Returnerer den naturlige logaritmen (base e) av nummer.
 	Loop (normal) 	Utføre en rekke kommandoer gjentatte ganger: enten spesifisert antall ganger eller til pause er oppstått.

@@ -380,7 +380,7 @@
 	c_Lang084 =	Assign Variable
 	c_Lang085 =	Content
 	c_Lang086 =	Operator
-	c_Lang087 =	Math Expression
+	c_Lang087 =	Expression
 	c_Lang088 =	Reset
 	c_Lang089 =	Function Name
 	c_Lang090 =	Comma separated parameters (without parenthesis)
@@ -496,7 +496,7 @@
 	c_Lang201 =	If string not contains
 	c_Lang202 =	If message box
 	c_Lang203 =	Compare variables
-	c_Lang204 =	Evaluate math expression
+	c_Lang204 =	Evaluate expression
 	c_Lang205 =	Region
 	c_Lang206 =	(Use [] to create arrays, e.g.: [10, 20, aVariable, "aString"])
 	c_Lang207 =	Array Object
@@ -1281,6 +1281,7 @@
 	KeyWait	Waits for a key or mouse/joystick button to be released or pressed down.
 	Labels	A label identifies a line of code, and can be used as a Goto target or to form a subroutine.
 	Length	Returns the length of a linear array beginning at position 1.
+	ListVars	Displays the script's variables: their names and current contents.
 	Log	Returns the logarithm (base 10) of Number.
 	Ln	Returns the natural logarithm (base e) of Number.
 	Loop (normal) 	Perform a series of commands repeatedly: either the specified number of times or until break is encountered.

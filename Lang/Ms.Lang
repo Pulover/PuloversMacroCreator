@@ -380,7 +380,7 @@
 	c_Lang084 =	Berikan ubah
 	c_Lang085 =	Kandungan
 	c_Lang086 =	Operator
-	c_Lang087 =	Ungkapan Matematik
+	c_Lang087 =	Ungkapan
 	c_Lang088 =	Reset
 	c_Lang089 =	Nama Fungsi
 	c_Lang090 =	Dipisahkan koma parameter (tanpa kurungan)
@@ -496,7 +496,7 @@
 	c_Lang201 =	Jika rentetan tidak mengandungi
 	c_Lang202 =	Jika kotak mesej
 	c_Lang203 =	Bandingkan pembolehubah
-	c_Lang204 =	Menilai Ungkapan Matematik
+	c_Lang204 =	Menilai ungkapan
 	c_Lang205 =	Wilayah
 	c_Lang206 =	(Gunakan [] untuk mencipta tatasusunan, mis .: [10, 20, aVariable, "aString"])
 	c_Lang207 =	Objek Pelbagai
@@ -1281,6 +1281,7 @@
 	KeyWait	Menunggu kekunci atau tetikus / kayu bedik butang untuk dilepaskan atau ditekan ke bawah.
 	Labels	Label mengenal pasti baris kod, dan boleh digunakan sebagai sasaran Goto atau untuk membentuk subrutin.
 	Length	Mengembalikan panjang pelbagai linear bermula pada kedudukan 1.
+	ListVars	
 	Log	Kembali logaritma (asas 10) nombor.
 	Ln	Mengembalikan logaritma asli (asas e) Bilangan.
 	Loop (normal) 	Melaksanakan satu siri arahan berkali-kali: sama ada bilangan yang ditentukan masa atau sehingga rehat yang dihadapi.

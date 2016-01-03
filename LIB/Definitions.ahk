@@ -104,7 +104,10 @@ RecOptChecks := ["ClearNewList", "", "Strokes", "CaptKDn", "RecKeybdCtrl"
 ,	PlayOptChecks := ["ShowStep", "MouseReturn", "ShowBarOnStart", "AutoHideBar", "RandomSleeps"]
 ,	OnFinishCode := 1
 ,	CopyMenuLabels := []
+,	ScopedVars := {}
+,	RunningFunction := ""
 ,	LVManager := new LV_Rows()
+,	LVManager.SetCallback("LVCallback")
 ,	Exp_Mult := {1:2, 2:4, 3:8, 4:16, 5:32}
 ,	MsgBoxStyles := [262144, 512, 256]
 
@@ -622,6 +625,7 @@ Break, LoopNumber
 Continue, LoopNumber
 Pause
 Return
+ListVars
 ExitApp
 )"
 Loop, Parse, FileCmd, `n

@@ -380,7 +380,7 @@
 	c_Lang084 =	Määritä Variable
 	c_Lang085 =	Pitoisuus
 	c_Lang086 =	Operaattori
-	c_Lang087 =	Matemaattinen Lauseke
+	c_Lang087 =	Lauseke
 	c_Lang088 =	Nollaa
 	c_Lang089 =	Toiminto Nimi
 	c_Lang090 =	Pilkulla erotettu parametreja (ilman suluissa)
@@ -496,7 +496,7 @@
 	c_Lang201 =	Jos merkkijono ei sisältää
 	c_Lang202 =	Jos postilaatikko
 	c_Lang203 =	Vertaa muuttujat
-	c_Lang204 =	Arvioida Matemaattinen Lauseke
+	c_Lang204 =	Arvioi ilme
 	c_Lang205 =	Alue
 	c_Lang206 =	(Käytä [] luoda taulukoita, esim .: [10, 20, aVariable, "aString"])
 	c_Lang207 =	Array Esine
@@ -1281,6 +1281,7 @@
 	KeyWait	Odottaa näppäintä tai hiiren / joystick-painiketta vapautetaan tai painetaan alas.
 	Labels	Merkki osoittaa, rivi koodia, ja sitä voidaan käyttää Goto kohde tai muodostaa aliohjelmaan.
 	Length	Palauttaa pituus lineaarisen joka alkaa asemassa 1.
+	ListVars	
 	Log	Palauttaa logaritmin (base 10) lukumäärä.
 	Ln	Palauttaa luvun luonnollisen logaritmin (base e) ja lukumäärä.
 	Loop (normal) 	Suorita sarja käskyjä toistuvasti: joko annettu määrä kertoja tai kunnes tauko on kohdannut.

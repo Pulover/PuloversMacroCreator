@@ -380,7 +380,7 @@
 	c_Lang084 =	Dodjela Variable
 	c_Lang085 =	Sadržaj
 	c_Lang086 =	Operator
-	c_Lang087 =	Matematike Izraz
+	c_Lang087 =	Izraz
 	c_Lang088 =	Ponovno
 	c_Lang089 =	Funkcija Ime
 	c_Lang090 =	Odvojenih zarezom parametre (bez zagrada)
@@ -496,7 +496,7 @@
 	c_Lang201 =	Ako string ne sadrži
 	c_Lang202 =	Ako porukom
 	c_Lang203 =	Usporedi varijable
-	c_Lang204 =	Procjenu Matematike Izraz
+	c_Lang204 =	Procijenite izraz
 	c_Lang205 =	Regija
 	c_Lang206 =	(Koristite [] za stvaranje polja, npr .: [10, 20, aVariable, "aString"])
 	c_Lang207 =	Niz Objekt
@@ -1281,6 +1281,7 @@
 	KeyWait	Waits za ključne ili miša / joysticka gumb pustiti na slobodu ili mišu.
 	Labels	Oznaka identificira liniju koda, i može se koristiti kao Goto cilj ili da se formira potprogram.
 	Length	Vraća duljinu linearno početkom na poziciji 1.
+	ListVars	
 	Log	Vraća logaritam (baza 10) broja.
 	Ln	Vraća prirodni logaritam (baze e) broja.
 	Loop (normal) 	Izvođenje niz naredbi puta: ili određeni broj puta ili do prekida je naišao.

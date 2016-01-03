@@ -380,7 +380,7 @@
 	c_Lang084 =	Menetapkan Variabel
 	c_Lang085 =	Kadar
 	c_Lang086 =	Operator
-	c_Lang087 =	Ekspresi Matematika
+	c_Lang087 =	Ekspresi
 	c_Lang088 =	Ulang
 	c_Lang089 =	Fungsi Nama
 	c_Lang090 =	Dipisahkan koma parameter (tanpa kurung)
@@ -496,7 +496,7 @@
 	c_Lang201 =	Jika string yang tidak mengandung
 	c_Lang202 =	Jika kotak pesan
 	c_Lang203 =	Bandingkan variabel
-	c_Lang204 =	Mengevaluasi Ekspresi Matematika
+	c_Lang204 =	Evaluasi ekspresi
 	c_Lang205 =	Wilayah
 	c_Lang206 =	(Gunakan [] untuk membuat array, mis .: [10, 20, aVariable, "aString"])
 	c_Lang207 =	Array Objek
@@ -1281,6 +1281,7 @@
 	KeyWait	Menunggu kunci atau mouse / joystick tombol akan dilepaskan atau ditekan.
 	Labels	Sebuah label mengidentifikasi baris kode, dan dapat digunakan sebagai target Goto atau membentuk sebuah sub rutin.
 	Length	Mengembalikan panjang array linier dimulai pada posisi 1.
+	ListVars	
 	Log	Mengembalikan logaritma (basis 10) Nomor.
 	Ln	Mengembalikan logaritma natural (basis e) Nomor.
 	Loop (normal) 	Lakukan serangkaian perintah berulang kali: baik jumlah tertentu kali atau sampai istirahat ditemui.

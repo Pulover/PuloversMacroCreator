@@ -29,6 +29,8 @@ Eval(x, l_Point)
 	{
 		If (IsFunc(Funct1))
 		{
+			If ((!IsFunc(Funct1).IsBuiltIn) && (Funct1 != "Screenshot"))
+				continue
 			Params := Object()
 		,	Funct2 := StrReplace(Funct2, "```,", "`,")
 			Loop, Parse, Funct2, `,, %A_Space%``

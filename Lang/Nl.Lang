@@ -380,7 +380,7 @@
 	c_Lang084 =	Wijs Variabele
 	c_Lang085 =	Inhoud
 	c_Lang086 =	Operator
-	c_Lang087 =	Wiskundige Uitdrukking
+	c_Lang087 =	Uitdrukking
 	c_Lang088 =	Reset
 	c_Lang089 =	Functie Naam
 	c_Lang090 =	Komma gescheiden parameters (zonder haakjes)
@@ -496,7 +496,7 @@
 	c_Lang201 =	Als tekenreeks bevat
 	c_Lang202 =	Als message box
 	c_Lang203 =	Vergelijk variabelen
-	c_Lang204 =	Wiskundige Uitdrukking Te Evalueren
+	c_Lang204 =	Evalueer meningsuiting
 	c_Lang205 =	Regio
 	c_Lang206 =	(Gebruik [] om arrays te maken, bijv .: [10, 20, aVariable, "aString"])
 	c_Lang207 =	Arrayobject
@@ -1281,6 +1281,7 @@
 	KeyWait	Wacht op een toets of muis / joystick knop worden vrijgegeven of ingedrukt.
 	Labels	Een label identificeert een regel code, en kan worden gebruikt als een doelwit Goto of een subroutine vormen.
 	Length	Geeft de lengte van een lineaire array beginnend op positie 1.
+	ListVars	
 	Log	Geeft de logaritme (grondtal 10) van het nummer.
 	Ln	Geeft de natuurlijke logaritme (basis e) van Number.
 	Loop (normal) 	Voer een reeks opdrachten herhaaldelijk: ofwel het opgegeven aantal malen of tot breuk wordt aangetroffen.

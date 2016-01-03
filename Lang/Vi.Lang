@@ -380,7 +380,7 @@
 	c_Lang084 =	Gán biến
 	c_Lang085 =	Nội dung
 	c_Lang086 =	Điều hành
-	c_Lang087 =	Biểu Thức Toán Học
+	c_Lang087 =	Biểu
 	c_Lang088 =	Thiết lập lại
 	c_Lang089 =	Tên chức năng
 	c_Lang090 =	Dấu phẩy tách ra các thông số (không có dấu ngoặc đơn)
@@ -496,7 +496,7 @@
 	c_Lang201 =	Nếu chuỗi không chứa
 	c_Lang202 =	Nếu hộp thông báo
 	c_Lang203 =	So sánh các biến
-	c_Lang204 =	Đánh Giá Biểu Thức Toán Học
+	c_Lang204 =	Đánh giá biểu thức
 	c_Lang205 =	Khu
 	c_Lang206 =	(Sử dụng [] để tạo ra các mảng, ví dụ: .: [10, 20, aVariable, "aString"])
 	c_Lang207 =	đốI TượNg MảNg
@@ -1281,6 +1281,7 @@
 	KeyWait	Chờ đợi cho một phím hoặc chuột / phím điều khiển nút sẽ được phát hành hoặc ép xuống.
 	Labels	Một nhãn xác định một dòng mã, và có thể được sử dụng như là một mục tiêu Chuyển đến hoặc để tạo thành một chương trình con.
 	Length	Trả về độ dài của một mảng tuyến tính bắt đầu ở vị trí 1.
+	ListVars	
 	Log	Trả về logarit (cơ số 10) của số.
 	Ln	Trả về logarit tự nhiên (cơ số e) của số.
 	Loop (normal) 	Thực hiện một loạt các lệnh liên tục: hoặc số quy định của lần hoặc cho đến khi nghỉ là gặp phải.

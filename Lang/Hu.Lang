@@ -380,7 +380,7 @@
 	c_Lang084 =	Hozzárendelése Változó
 	c_Lang085 =	Tartalom
 	c_Lang086 =	Operátor
-	c_Lang087 =	Matematikai Kifejezés
+	c_Lang087 =	Kifejezés
 	c_Lang088 =	Visszaállítás
 	c_Lang089 =	Funkció neve
 	c_Lang090 =	Vesszővel elválasztott paraméterek (zárójel nélkül)
@@ -496,7 +496,7 @@
 	c_Lang201 =	Ha szöveg nem tartalmaz
 	c_Lang202 =	Ha az üzenet box
 	c_Lang203 =	Hasonlítsa össze a változókat
-	c_Lang204 =	Értékeli Matematikai Kifejezés
+	c_Lang204 =	Értékelje kifejezés
 	c_Lang205 =	Vidék
 	c_Lang206 =	(A [] létrehozni tömbök, pl .: [10, 20, aVariable, "aString"])
 	c_Lang207 =	Tömbobjektumok
@@ -1281,6 +1281,7 @@
 	KeyWait	Várja, hogy a billentyűk, vagy egér / joystick gombot kell szabadítani, vagy nyomva.
 	Labels	A címke azonosít egy sor kódot, és fel lehet használni, mint egy cél, vagy Goto alkotnak egy szubrutint.
 	Length	Visszaadja a hossza egy egyenes sorban kezdődő 1 pozícióban.
+	ListVars	
 	Log	Visszaadja a logaritmusát (alap 10) Szám.
 	Ln	Természetes logaritmusát (alap e) a szám.
 	Loop (normal) 	Végre egy sor parancsot többször: vagy a megadott számú alkalommal, vagy amíg break találkozott.

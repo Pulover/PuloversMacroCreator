@@ -380,7 +380,7 @@
 	c_Lang084 =	Assignació Variable
 	c_Lang085 =	Contingut
 	c_Lang086 =	Operador
-	c_Lang087 =	Expressió Matemàtica
+	c_Lang087 =	Expressió
 	c_Lang088 =	Reajustar
 	c_Lang089 =	Nom de la funció
 	c_Lang090 =	Paràmetres separats per comes (sense parèntesis)
@@ -496,7 +496,7 @@
 	c_Lang201 =	Si la cadena no conté
 	c_Lang202 =	Si el quadre de missatge
 	c_Lang203 =	Comparació de les variables
-	c_Lang204 =	Avaluar L'expressió Matemàtica
+	c_Lang204 =	Avaluar expressió
 	c_Lang205 =	Regió
 	c_Lang206 =	(Utilitzeu [] per crear matrius, per exemple.: [10, 20, aVariable, "aString"])
 	c_Lang207 =	Objecte De Matriu
@@ -1281,6 +1281,7 @@
 	KeyWait	Espera una tecla o botó del ratolí / joystick per ser posat en llibertat o pressionat.
 	Labels	Una etiqueta identifica una línia de codi, i es pot utilitzar com un objectiu Goto o per formar una subrutina.
 	Length	Retorna la longitud d'una matriu lineal començant en la posició 1.
+	ListVars	
 	Log	Retorna el logaritme (base 10) del nombre.
 	Ln	Retorna el logaritme natural (base e) del número.
 	Loop (normal) 	Realitzeu una sèrie d'ordres en diverses ocasions: es troben ja sigui el nombre especificat de vegades o fins trencament.

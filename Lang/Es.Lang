@@ -380,7 +380,7 @@
 	c_Lang084 =	Asignar variable
 	c_Lang085 =	Contenido
 	c_Lang086 =	Operador
-	c_Lang087 =	Expresión Matemática
+	c_Lang087 =	Expresión
 	c_Lang088 =	Borrar
 	c_Lang089 =	Nombre de la función
 	c_Lang090 =	Parámetros separados por comas (sin paréntesis)
@@ -496,7 +496,7 @@
 	c_Lang201 =	Si la cadena no contiene
 	c_Lang202 =	Si el cuadro de mensaje
 	c_Lang203 =	Comparación de las variables
-	c_Lang204 =	Evaluar Expresión Matemática
+	c_Lang204 =	Evaluar expresión
 	c_Lang205 =	Región
 	c_Lang206 =	(Utilice [] para crear matrices, por ejemplo: [10, 20, aVariable, "aString"])
 	c_Lang207 =	Objeto De Matriz
@@ -1281,6 +1281,7 @@
 	KeyWait	Espera a una tecla o botón del ratón / joystick para ser puesto en libertad o presionado.
 	Labels	Una etiqueta identifica una línea de código, y se puede utilizar como un objetivo Goto o para formar una subrutina.
 	Length	Devuelve la longitud de una matriz lineal comenzando en la posición 1.
+	ListVars	
 	Log	Devuelve el logaritmo (base 10) del número.
 	Ln	Devuelve el logaritmo natural (base e) del número.
 	Loop (normal) 	Lleve a cabo una serie de comandos en varias ocasiones: se encuentran ya sea el número especificado de veces o hasta rotura.
