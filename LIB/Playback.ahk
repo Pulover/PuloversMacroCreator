@@ -2,7 +2,7 @@
 {
 	local IfError := 0, PointMarker := 0, LoopCount := [0]
 	, m_ListCount := ListCount%Macro_On%, mLoopIndex, _Label, _i
-	, pbParams, pbVarName, pbVarValue, pbType
+	, pbParams, pbVarName, pbVarValue, pbType, pbAction
 	, ScopedParams := [], LastFuncRun, UserGlobals, GlobalList
 	, Func_Result, SVRef, Return_Values
 
@@ -353,9 +353,9 @@
 						Start%PointMarker% := A_Index
 						CheckVars("TimesX", PointMarker)
 						This_Point := PointMarker - 1
-						pbType := Type
+						pbType := Type, pbAction := Action
 						GoSub, SplitStep
-						Type := pbType
+						Type := pbType, Action := pbAction
 						LoopIndex := 1
 						If (Type = cType38)
 						{
@@ -548,6 +548,7 @@
 					{
 						pbParams := Object()
 						StringReplace, VarValue, VarValue, ```,, ¢, All
+						pbVarName := VarName, pbVarValue := VarValue
 						Loop, Parse, VarValue, `,, %A_Space%""
 						{
 							LoopField := DerefVars(A_LoopField)
@@ -582,23 +583,21 @@
 					{
 						pbParams := Object()
 						StringReplace, VarValue, VarValue, ```,, ¢, All
+						pbVarName := VarName, pbVarValue := VarValue
 						Loop, Parse, VarValue, `,, %A_Space%""
 						{
-							LoopField := DerefVars(A_LoopField)
-						,	LoopField := ExtractArrays(LoopField, PointMarker)
-							If (LoopField = "_ArrayObject")
-								LoopField := %LoopField%
-							Else
-							{
-								LoopField := StrReplace(LoopField, "¢", "`,")
-							,	LoopField := StrReplace(LoopField, "¥Space", A_Space)
-							}
-							pbParams.Push(LoopField)
+							pbType := Type, pbAction := Action
+						,	LoopField := DerefVars(A_LoopField)
+						,	LoopField := StrReplace(LoopField, "¢", "`,")
+						,	LoopField := StrReplace(LoopField, "¥Space", A_Space)
+						,	LoopField := Eval(LoopField, PointMarker)
+						,	pbParams.Push(LoopField)
+						,	Type := pbType, Action := pbAction
 						}
 						Try
 						{
-							VarValue := %Action%(pbParams*)
-						,	AssignVar(VarName, ":=", VarValue, PointMarker)
+							pbVarValue := %Action%(pbParams*)
+						,	AssignVar(pbVarName, ":=", pbVarValue, PointMarker)
 						}
 						Catch e
 						{
@@ -742,9 +741,9 @@
 					continue
 				}
 				This_Point := PointMarker
-				pbType := Type
+				pbType := Type, pbAction := Action
 				GoSub, SplitStep
-				Type := pbType
+				Type := pbType, Action := pbAction
 				While (TimesX)
 				{
 					If (StopIt)
@@ -851,7 +850,8 @@
 LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC, ByRef LoopCount, ScopedParams)
 {
 	local lCount, lIdx, L_Index, mLoopIndex, _Label, IfError := 0, _l
-	, pbParams, pbVarName, pbVarValue, pbType, Func_Result, Return_Values, LastFuncRun
+	, pbParams, pbVarName, pbVarValue, pbType, pbAction
+	, Func_Result, Return_Values, LastFuncRun
 
 	f_Loop:
 	CoordMode, Mouse, %CoordMouse%
@@ -1003,9 +1003,9 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC, ByRef LoopCount, ScopedP
 						Start%PointMarker% := Start + A_Index
 						CheckVars("TimesX", PointMarker)
 						This_Point := PointMarker - 1
-						pbType := Type
+						pbType := Type, pbAction := Action
 						GoSub, SplitStep
-						Type := pbType
+						Type := pbType, Action := pbAction
 						LoopIndex := 1
 						If (Type = cType38)
 						{
@@ -1194,23 +1194,21 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC, ByRef LoopCount, ScopedP
 					{
 						pbParams := Object()
 						StringReplace, VarValue, VarValue, ```,, ¢, All
+						pbVarName := VarName, pbVarValue := VarValue
+					,	pbType := Type, pbAction := Action
 						Loop, Parse, VarValue, `,, %A_Space%""
 						{
-							LoopField := DerefVars(A_LoopField)
-						,	LoopField := ExtractArrays(LoopField, PointMarker)
-							If (LoopField = "_ArrayObject")
-								LoopField := %LoopField%
-							Else
-							{
-								StringReplace, LoopField, LoopField, ¢, `,, All
-								StringReplace, LoopField, LoopField, ¥Space, %A_Space%, All
-							}
-							pbParams.Push(LoopField)
+						,	LoopField := DerefVars(A_LoopField)
+						,	LoopField := StrReplace(LoopField, "¢", "`,")
+						,	LoopField := StrReplace(LoopField, "¥Space", A_Space)
+						,	LoopField := Eval(LoopField, PointMarker)
+						,	pbParams.Push(LoopField)
 						}
+						Type := pbType, Action := pbAction
 						Try
 						{
-							VarValue := %Action%(pbParams*)
-						,	AssignVar(VarName, ":=", VarValue, PointMarker)
+							pbVarValue := %Action%(pbParams*)
+						,	AssignVar(pbVarName, ":=", pbVarValue, PointMarker)
 						}
 						Catch e
 						{
@@ -1219,7 +1217,7 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC, ByRef LoopCount, ScopedP
 							IfMsgBox, No
 							{
 								StopIt := 1
-								return
+								continue
 							}
 						}
 						Try SavedVars(VarName)
@@ -1343,9 +1341,9 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC, ByRef LoopCount, ScopedP
 					continue
 				}
 				This_Point := PointMarker
-				pbType := Type
+				pbType := Type, pbAction := Action
 				GoSub, SplitStep
-				Type := pbType
+				Type := pbType, Action := pbAction
 				While (TimesX)
 				{
 					If (StopIt)
@@ -1460,7 +1458,7 @@ RunExtFunc(File, FuncName, Params*)
 
 IfStatement(ThisError, l_Point)
 {
-	local pbType
+	local pbType, pbAction
 	
 	If (Step = "EndIf")
 	{
@@ -1572,9 +1570,9 @@ IfStatement(ThisError, l_Point)
 		Else If (Action = If11)
 		{
 			This_Point := l_Point
-			pbType := Type
+			pbType := Type, pbAction := Action
 			GoSub, SplitStep
-			Type := pbType
+			Type := pbType, Action := pbAction
 			If (RegExMatch(Par1, "i)A_Loop\w+"))
 			{
 				I := DerefVars(LoopIndex), L := SubStr(Par1, 3)
@@ -1589,9 +1587,9 @@ IfStatement(ThisError, l_Point)
 		Else If (Action = If12)
 		{
 			This_Point := l_Point
-			pbType := Type
+			pbType := Type, pbAction := Action
 			GoSub, SplitStep
-			Type := pbType
+			Type := pbType, Action := pbAction
 			If (RegExMatch(Par1, "i)A_Loop\w+"))
 			{
 				I := DerefVars(LoopIndex), L := SubStr(Par1, 3)

@@ -136,7 +136,7 @@ Class LV_Rows extends LV_Rows.LV_EX
             {
                 If (IsObject(NewData))
                 {
-                    this.hArray[Hwnd].GroupsArray := NewData.GroupsArray
+					this.hArray[Hwnd].GroupsArray := NewData.GroupsArray
                 ,   this.hArray[Hwnd].Slot := NewData.Slot
                 ,   this.hArray[Hwnd].ActiveSlot := NewData.ActiveSlot
                 ,   this.Load()
@@ -144,8 +144,8 @@ Class LV_Rows extends LV_Rows.LV_EX
                 Else If (this.hArray.HasKey(NewData))
                 {
                     this.hArray[Hwnd].GroupsArray := this.hArray[NewData].GroupsArray.Clone()
-                    this.hArray[Hwnd].Slot := this.hArray[NewData].Slot.Clone()
-                    this.hArray[Hwnd].ActiveSlot := this.hArray[NewData].ActiveSlot
+                ,   this.hArray[Hwnd].Slot := this.hArray[NewData].Slot.Clone()
+                ,   this.hArray[Hwnd].ActiveSlot := this.hArray[NewData].ActiveSlot
                 ,   this.Load()
                 }
             }
@@ -173,8 +173,8 @@ Class LV_Rows extends LV_Rows.LV_EX
             Else If (this.hArray.HasKey(NewData))
             {
                 this.hArray[Hwnd].GroupsArray := this.hArray[NewData].GroupsArray.Clone()
-                this.hArray[Hwnd].Slot := this.hArray[NewData].Slot.Clone()
-                this.hArray[Hwnd].ActiveSlot := this.hArray[NewData].ActiveSlot
+            ,   this.hArray[Hwnd].Slot := this.hArray[NewData].Slot.Clone()
+            ,   this.hArray[Hwnd].ActiveSlot := this.hArray[NewData].ActiveSlot
             ,   this.Load()
             }
         }
@@ -817,11 +817,10 @@ Class LV_Rows extends LV_Rows.LV_EX
 ;=======================================================================================
     Load(Position := "")
     {
-        If (Position = "")
+		If (Position = "")
             Position := this.Handle.ActiveSlot
         If (!IsObject(this.Handle.Slot[Position]))
             return false
-
         LV_Delete()
         For each, Row in this.Handle.Slot[Position].Rows
             LV_Add(Row*)

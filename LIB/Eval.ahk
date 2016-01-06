@@ -31,13 +31,13 @@ Eval(x, l_Point)
 	}
 	While (RegExMatch(x, "([\w_]+)\((.*?)\)", Funct))  ; Functions
 	{
-		If ((IsFunc(Funct1)) && (Func(Funct1).IsBuiltIn))
+		If ((IsFunc(Funct1)) && ((Func(Funct1).IsBuiltIn) || (Func1 = "Screenshot")))
 			break
 		y := x
 		Loop, %TabCount%
 		{
 			TabIdx := A_Index
-			If (Funct1 = TabGetText(TabSel, A_Index))
+			If ((Funct1 "()") = TabGetText(TabSel, A_Index))
 			{
 				Gui, chMacro:ListView, InputList%TabIdx%
 				Loop, % ListCount%TabIdx%
@@ -84,7 +84,9 @@ Eval(x, l_Point)
 		y := ExtractArrays(x, l_Point)
 		If (IsObject(y))
 			return y
-		If y is not Number
+		If (y = "_ArrayObject")
+			y := %LoopField%
+		Else If y is not Number
 			y := """" y """"
 		Func_Result := StrReplace(Func_Result, "`,", "```,") 
 		x := StrReplace(x, _Match, y)
@@ -125,7 +127,7 @@ Eval(x, l_Point)
 	
 	ExprInit()
 	CompiledExpression := ExprCompile(x)
-	Result := ExprEval(CompiledExpression)
+	Result := ExprEval(CompiledExpression, l_Point)
 
 	Result := StrReplace(Result, Chr(1), A_Space) ;format output list for viewing
 	return Result
@@ -153,13 +155,14 @@ CheckParam(Param, l_Point)
 	{
 		ExprInit()
 	,	CompiledExpression := ExprCompile(Param)
-	,	Param := ExprEval(CompiledExpression)
+	,	Param := ExprEval(CompiledExpression, l_Point)
 	,	Param := StrReplace(Param, Chr(1), A_Space)
 	}
 	return Param
 }
 ;##################################################
 ; Author: Uberi
+; Modified by: Pulover
 ; https://autohotkey.com/board/topic/64167-expreval-evaluate-expressions/
 ;##################################################
 ExprInit()
@@ -201,8 +204,15 @@ Return
 Exprp1(ou,t1)
 }Return,ou
 }
-ExprEval(e){
+ExprEval(e,lp)
+{global __lv
 c1:=Chr(1)
+Loop,Parse,e,%c1%
+{lf:=A_LoopField,tt:=SubStr(lf,1,1),t:=SubStr(lf,2)
+If tt=v
+__lv:="%" . SubStr(lf, 2) . "%",CheckVars("__lv",lp),n .= "v__lv" . c1
+Else n .= A_LoopField . c1
+}e := RTrim(n, c1)
 Loop,Parse,e,%c1%
 {lf:=A_LoopField,tt:=SubStr(lf,1,1),t:=SubStr(lf,2)
 If tt In l,v

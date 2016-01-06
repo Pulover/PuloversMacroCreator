@@ -9789,7 +9789,6 @@ If (LVManager.Redo())
 return
 
 TabPlus:
-L_List := A_List
 Gui, 1:Submit, NoHide
 Gui, chMacro:Default
 Gui, chMacro:Submit, NoHide
@@ -9800,21 +9799,19 @@ While (InStr(AllTabs, TabName ","))
 	TabName := "Macro" TabCount+A_Index
 TabCount++
 GuiControl, chMacro:, %TabSel%, %TabName%
-Gui, chMacro:ListView, InputList%TabCount%
+GuiControl, chMacro:Choose, A_List, %TabCount%
+Gui, chMacro:Submit, NoHide
+GuiAddLV(TabCount)
+Gui, chMacro:ListView, InputList%A_List%
 LVManager.SetHwnd(ListID%A_List%), LVManager.Add()
 If (ShowGroups)
 	GoSub, EnableGroups
-Gui, chMacro:ListView, InputList%A_List%
-GuiAddLV(TabCount)
 Try Menu, CopyTo, Uncheck, % CopyMenuLabels[A_List]
-GuiControl, chMacro:Choose, A_List, %TabCount%
-Gui, chMacro:Submit, NoHide
 GoSub, chMacroGuiSize
 CopyMenuLabels[TabCount] := TabName
 Menu, CopyTo, Add, % CopyMenuLabels[TabCount], CopyList
 Try Menu, CopyTo, Check, % CopyMenuLabels[A_List]
 GuiControl, 28:+Range1-%TabCount%, OSHK
-A_List := L_List
 
 TabSel:
 GoSub, SaveData
@@ -9998,7 +9995,7 @@ Loop, %TabCount%
 {
 	Gui, chMacro:ListView, InputList%A_Index%
 	LVManager.SetHwnd(ListID%A_Index%)
-,	LV_Delete(), LVManager.RemoveAllGroups()
+,	LV_Delete(), LVManager.RemoveAllGroups(), LVManager.ClearHistory()
 	GuiControl, chMacro:+Redraw, InputList%A_Index%
 	Menu, CopyTo, Delete, % CopyMenuLabels[A_Index]
 }

@@ -121,7 +121,7 @@ DragTab()
 			{
 				Proj_Opts := [], ActiveList := A_List
 				For each, Index in NewOrder.Order
-					Proj_Opts.Push({Auto: o_AutoKey[Index], Man: o_ManKey[Index]
+					Proj_Opts.Push({Auto: o_AutoKey[Index], Man: o_ManKey[Index], ID: ListID%Index%
 									, Times: o_TimesG[Index], Hist: LVManager.GetData(ListID%Index%)})
 				For each, Index in NewOrder.Order
 				{
@@ -133,9 +133,8 @@ DragTab()
 				}
 				ActiveList := NewActive
 				Loop, %TabCount%
-					LVManager.SetHwnd(ListID%A_Index%, Proj_Opts[A_Index].Hist)
-				Loop, %TabCount%
-					LVManager.SetHwnd(ListID%A_Index%),	LVManager.Load()
+					If (Proj_Opts[A_Index].ID != ListID%A_Index%)
+						LVManager.SetHwnd(ListID%A_Index%, Proj_Opts[A_Index].Hist)
 				GuiControl, chMacro:, A_List, |
 				GuiControl, chMacro:, A_List, % NewOrder.Tabs
 				GuiControl, chMacro:Choose, A_List, %ActiveList%
