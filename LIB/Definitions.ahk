@@ -105,6 +105,7 @@ RecOptChecks := ["ClearNewList", "", "Strokes", "CaptKDn", "RecKeybdCtrl"
 ,	OnFinishCode := 1
 ,	CopyMenuLabels := []
 ,	ScopedVars := {}
+,	Static_Vars := {}
 ,	RunningFunction := ""
 ,	LVManager := new LV_Rows()
 ,	LVManager.SetCallback("LVCallback")

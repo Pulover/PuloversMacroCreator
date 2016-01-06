@@ -515,6 +515,9 @@
 	c_Lang220 =	
 	c_Lang221 =	
 	c_Lang222 =	
+	c_Lang223 =	
+	c_Lang224 =	
+	c_Lang225 =	
 		
 ; Other Windows		
 	t_Lang001 =	Exportar para AutoHotkey
@@ -773,7 +776,7 @@
 	d_Lang047 =	Falha ao Conectar!
 	d_Lang048 =	Insira um Handle e um CLSID.
 	d_Lang049 =	Nome de Rótulo Inválido.
-	d_Lang050 =	Rótulo Duplicado.
+	d_Lang050 =	Rótulo duplicado.
 	d_Lang051 =	Para executar uma Macro pressione o Atalho correspondente (Auto/Man).
 	d_Lang052 =	Para iniciar a gravação pressione uma Tecla de Gravação.
 	d_Lang053 =	Não exibir esta mensagem novamente.
@@ -868,11 +871,11 @@
 		
 	)	
 	d_Lang098 =	
-	(LTrim	
-		
-		
-	)	
 	d_Lang099 =	
+	d_Lang100 =	
+	d_Lang101 =	
+	d_Lang102 =	
+	d_Lang103 =	
 		
 ; Start-up Tips		
 	Start_Tips =	

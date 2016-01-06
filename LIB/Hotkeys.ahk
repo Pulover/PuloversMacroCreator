@@ -51,14 +51,14 @@ Insert::GoSub, ApplyL
 +9::
 +0::
 RowSelection := LV_GetCount("Selected"), OwnerID := PMCWinID
-If RowSelection = 1
+If (RowSelection = 1)
 {
 	RowNumber := LV_GetNext()
 	LV_GetText(rColor, RowNumber, 10)
 }
 clr := SubStr(A_ThisHotkey, 2)
-If clr = 0
-	clr = 10
+If (clr = 0)
+	clr := 10
 StringSplit, Palette, CustomColors, `,, %A_Space%
 rColor := Palette%clr%
 GoSub, PaintRows
@@ -118,8 +118,8 @@ return
 ^9::
 ^0::
 mSel := SubStr(A_ThisHotkey, 2)
-If mSel = 0
-	mSel = 10
+If (mSel = 0)
+	mSel := 10
 GuiControl, chMacro:Choose, A_List, %mSel%
 GoSub, TabSel
 return

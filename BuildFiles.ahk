@@ -5,7 +5,7 @@ SetWorkingDir %A_ScriptDir%
 
 AutoTrim, Off
 IniRead, PMCVer, MacroCreator.ini, Application, Version
-If PMCVer = Error
+If (PMCVer = "Error")
 {
 	MsgBox, 0, Error!, INI file is missing!
 	ExitApp, 2

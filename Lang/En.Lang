@@ -515,6 +515,9 @@
 	c_Lang220 =	Global
 	c_Lang221 =	Name
 	c_Lang222 =	You can add more parameters from the Function menu.
+	c_Lang223 =	Global Variables (VarName1, VarName2, VarName3...)
+	c_Lang224 =	Local Variables (VarName1 [:= VarValue1], VarName2 [:= VarValue2]...)
+	c_Lang225 =	Static Variables (VarName1 [:= VarValue1], VarName2 [:= VarValue2]...)
 		
 ; Other Windows		
 	t_Lang001 =	Export to AutoHotkey
@@ -773,7 +776,7 @@
 	d_Lang047 =	Failed to Connect!
 	d_Lang048 =	Insert a Handle and a CLSID.
 	d_Lang049 =	Invalid Label Name.
-	d_Lang050 =	Duplicate Label.
+	d_Lang050 =	Duplicate label.
 	d_Lang051 =	To play a Macro press the corresponding Hotkey (Auto/Man).
 	d_Lang052 =	To start recording press a Record Hotkey.
 	d_Lang053 =	Do not show this message again.
@@ -867,12 +870,12 @@
 		- You may use strings, variables, arrays and functions.
 		- To use strings, enclose them in quotes, e.g.: var = "a".
 	)	
-	d_Lang098 =	
-	(LTrim	
-		If one parameter has a default value, the following parameters are required to have too.
-		You might want to move this parameter to the end of the list.
-	)	
+	d_Lang098 =	If one parameter has a default value, the following parameters are required to have one too.
 	d_Lang099 =	The function name contains an illegal character.
+	d_Lang100 =	Goto, Gosub and Label are not allowed in functions.
+	d_Lang101 =	Use the 'Add Function' to create a function before adding parameters or return.
+	d_Lang102 =	You cannot insert this com.and here.
+	d_Lang103 =	Duplicate function.
 		
 ; Start-up Tips		
 	Start_Tips =	

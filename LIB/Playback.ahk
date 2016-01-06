@@ -2,8 +2,9 @@
 {
 	local IfError := 0, PointMarker := 0, LoopCount := [0]
 	, m_ListCount := ListCount%Macro_On%, mLoopIndex, _Label, _i
-	, pbParams, pbVarName, pbVarValue, ScopedParams := []
-	, LastFuncRun, UserGlobals, Func_Result, SVRef, Return_Values
+	, pbParams, pbVarName, pbVarValue, pbType
+	, ScopedParams := [], LastFuncRun, UserGlobals, GlobalList
+	, Func_Result, SVRef, Return_Values
 
 	CoordMode, Mouse, Screen
 	MouseGetPos, CursorX, CursorY
@@ -33,7 +34,7 @@
 	Loop
 	{
 		mLoopIndex := A_Index, LoopIndex := A_Index
-		Loop, % (Manual) ? 1 : ((o_TimesG[Macro_On] = 0) ? 1 : o_TimesG[Macro_On])
+		Loop, % (Manual) ? 1 : ((o_TimesG[Macro_On] = 0) ? 1 : ((RunningFunction != "") ? 1 : o_TimesG[Macro_On]))
 		{
 			If (StopIt)
 			{
@@ -113,13 +114,59 @@
 				}
 				If (Type = cType47)
 				{
-					LastFuncRun := RunningFunction, RunningFunction := Step
 					If (!IsObject(ScopedVars[RunningFunction]))
 						ScopedVars[RunningFunction] := []
+					If (!IsObject(Static_Vars[RunningFunction]))
+						Static_Vars[RunningFunction] := {}
 					ScopedVars[RunningFunction].Push([])
 				,	SVRef := ScopedVars[RunningFunction][ScopedVars[RunningFunction].MaxIndex()]
-					If (Target = "Local")
+					Loop, Parse, Window, /, %A_Space%
 					{
+						If (A_Index = 2)
+						{
+							Loop, Parse, A_LoopField, `,, %A_Space%
+							{
+								AssignReplace(A_LoopField)
+								If (VarName = "")
+								{
+									If (!Static_Vars[RunningFunction].HasKey(A_LoopField))
+										Static_Vars[RunningFunction][A_LoopField] := ""
+								}
+								Else
+								{
+									If (!Static_Vars[RunningFunction].HasKey(VarName))
+										Static_Vars[RunningFunction][VarName] := VarValue
+								}
+							}
+						}
+					}
+					If (Target = "Global")
+					{
+						GlobalList := ""
+						Loop, Parse, Window, /, %A_Space%
+						{
+							If (A_Index = 1)
+							{
+								Loop, Parse, A_LoopField, `,, %A_Space%
+								{
+									AssignReplace(A_LoopField)
+									If (VarName = "")
+										SVRef[A_LoopField] := %A_LoopField%, %A_LoopField% := ""
+									Else
+										SVRef[VarName] := %VarName%, %VarName% := VarValue
+								}
+							}
+						}
+					}
+					Else If (Target = "Local")
+					{
+						GlobalList := ""
+						Loop, Parse, Window, /, %A_Space%
+						{
+							If (A_Index = 1)
+								Loop, Parse, A_LoopField, `,, %A_Space%
+									GlobalList .= A_LoopField ","
+						}
 						UserGlobals := User_Vars.Get(true)
 						For each, Section in UserGlobals
 							For each, Key in Section
@@ -131,12 +178,15 @@
 						{
 							If (v = "##_Locals:")
 								break
-							If v in GlobalList
+							If v in %GlobalList%
 								continue
-							SVRef[v] := %v%
-						,	%v% := ""
+							SVRef[v] := %v%, %v% := ""
 						}
 					}
+					For i, v in Static_Vars[RunningFunction]
+						SVRef[i] := %v%
+					,	%i% := v
+					
 					For i, v in ScopedParams
 						SVRef[v.ParamName] := v.Value
 					,	VarName := v.ParamName
@@ -149,7 +199,7 @@
 						Func_Result := Eval(Step, PointMarker)
 					Catch e
 					{
-						MsgBox, 16, %d_Lang007%, % "Function: " RunningFunctiom
+						MsgBox, 16, %d_Lang007%, % "Function: " RunningFunction
 							.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" (InStr(e.Message, "0x800401E3") ? d_Lang088 : e.Extra)
 					}
 					
@@ -166,7 +216,11 @@
 					}
 					
 					For i, v in SVRef
+					{
+						If (Static_Vars[RunningFunction].HasKey(i))
+							Static_Vars[RunningFunction][i] := %i%
 						%i% := v
+					}
 					
 					For i, v in ScopedParams
 					{
@@ -176,10 +230,8 @@
 						,	%VarName% := v.NewValue
 						}
 					}
-
-					RunningFunction := LastFuncRun
-				,	ScopedVars[RunningFunction].Pop()
 					
+					ScopedVars[RunningFunction].Pop()
 					return Return_Values
 				}
 				If ((Type = cType3) || (Type = cType13))
@@ -301,7 +353,9 @@
 						Start%PointMarker% := A_Index
 						CheckVars("TimesX", PointMarker)
 						This_Point := PointMarker - 1
+						pbType := Type
 						GoSub, SplitStep
+						Type := pbType
 						LoopIndex := 1
 						If (Type = cType38)
 						{
@@ -429,7 +483,11 @@
 							}
 							
 							For i, v in SVRef
+							{
+								If (Static_Vars[RunningFunction].HasKey(i))
+									Static_Vars[RunningFunction][i] := %i%
 								%i% := v
+							}
 							
 							For i, v in ScopedParams
 							{
@@ -439,8 +497,6 @@
 								,	%VarName% := v.NewValue
 								}
 							}
-							
-							RunningFunction := LastFuncRun
 							
 							return GoToLab
 						}
@@ -469,7 +525,7 @@
 				{
 					StringReplace, Step, Step, ``n, `n, All
 					StringReplace, Step, Step, ``t, `t, All
-					StringReplace, Step, Step, ```,, `,, All
+					; StringReplace, Step, Step, ```,, `,, All
 					AssignReplace(Step)
 				,	pbVarValue := VarValue
 				,	pbParams := Object()
@@ -522,7 +578,7 @@
 						}
 						Try SavedVars(VarName)
 					}
-					Else If (((Type = cType44) && (IsFunc(Action))) && ((IsFunc(Action).IsBuiltIn) || (Action = "Screenshot")))
+					Else If (((Type = cType44) && (IsFunc(Action))) && ((Func(Action).IsBuiltIn) || (Action = "Screenshot")))
 					{
 						pbParams := Object()
 						StringReplace, VarValue, VarValue, ```,, ¢, All
@@ -591,7 +647,7 @@
 						Loop, %TabCount%
 						{
 							TabIdx := A_Index
-							If (Action = TabGetText(TabSel, A_Index))
+							If ((Action "()") = TabGetText(TabSel, A_Index))
 							{
 								Gui, chMacro:ListView, InputList%TabIdx%
 								Loop, % ListCount%TabIdx%
@@ -614,9 +670,11 @@
 											}
 											pbParams[A_Index].Value := LoopField
 										}
-										pbVarName := VarName, pbVarValue := VarValue
+										LastFuncRun := RunningFunction, RunningFunction := Action
+									,	pbVarName := VarName, pbVarValue := VarValue
 									,	Func_Result := Playback(TabIdx,,, pbParams)
 									,	pbVarValue := Func_Result[1]
+									,	RunningFunction := LastFuncRun
 										Try
 											AssignVar(pbVarName, ":=", pbVarValue, PointMarker)
 										Catch e
@@ -630,7 +688,7 @@
 											}
 										}
 										Try SavedVars(pbVarName)
-										break
+										break 2
 									}
 								}
 							}
@@ -684,7 +742,9 @@
 					continue
 				}
 				This_Point := PointMarker
+				pbType := Type
 				GoSub, SplitStep
+				Type := pbType
 				While (TimesX)
 				{
 					If (StopIt)
@@ -737,7 +797,11 @@
 		}
 		
 		For i, v in SVRef
+		{
+			If (Static_Vars[RunningFunction].HasKey(i))
+				Static_Vars[RunningFunction][i] := %i%
 			%i% := v
+		}
 		
 		For i, v in ScopedParams
 		{
@@ -748,8 +812,7 @@
 			}
 		}
 
-		RunningFunction := LastFuncRun
-	,	ScopedVars[RunningFunction].Pop()
+		ScopedVars[RunningFunction].Pop()
 		
 		return Return_Values
 	}
@@ -788,7 +851,7 @@
 LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC, ByRef LoopCount, ScopedParams)
 {
 	local lCount, lIdx, L_Index, mLoopIndex, _Label, IfError := 0, _l
-	, pbParams, pbVarName, pbVarValue, Func_Result, Return_Values
+	, pbParams, pbVarName, pbVarValue, pbType, Func_Result, Return_Values, LastFuncRun
 
 	f_Loop:
 	CoordMode, Mouse, %CoordMouse%
@@ -843,7 +906,7 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC, ByRef LoopCount, ScopedP
 						Func_Result := Eval(Step, PointMarker)
 					Catch e
 					{
-						MsgBox, 16, %d_Lang007%, % "Function: " RunningFunctiom
+						MsgBox, 16, %d_Lang007%, % "Function: " RunningFunction
 							.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" (InStr(e.Message, "0x800401E3") ? d_Lang088 : e.Extra)
 					}
 					
@@ -940,7 +1003,9 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC, ByRef LoopCount, ScopedP
 						Start%PointMarker% := Start + A_Index
 						CheckVars("TimesX", PointMarker)
 						This_Point := PointMarker - 1
+						pbType := Type
 						GoSub, SplitStep
+						Type := pbType
 						LoopIndex := 1
 						If (Type = cType38)
 						{
@@ -1072,7 +1137,7 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC, ByRef LoopCount, ScopedP
 				{
 					StringReplace, Step, Step, ``n, `n, All
 					StringReplace, Step, Step, ``t, `t, All
-					StringReplace, Step, Step, ```,, `,, All
+					; StringReplace, Step, Step, ```,, `,, All
 					AssignReplace(Step)
 				,	pbVarValue := VarValue
 				,	pbParams := Object()
@@ -1125,10 +1190,8 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC, ByRef LoopCount, ScopedP
 						}
 						Try SavedVars(VarName)
 					}
-					Else If ((Type = cType44) && (IsFunc(Action)))
+					Else If (((Type = cType44) && (IsFunc(Action))) && ((Func(Action).IsBuiltIn) || (Action = "Screenshot")))
 					{
-						If ((!IsFunc(Action).IsBuiltIn) && (Action != "Screenshot"))
-							continue
 						pbParams := Object()
 						StringReplace, VarValue, VarValue, ```,, ¢, All
 						Loop, Parse, VarValue, `,, %A_Space%""
@@ -1196,7 +1259,7 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC, ByRef LoopCount, ScopedP
 						Loop, %TabCount%
 						{
 							TabIdx := A_Index
-							If (Action = TabGetText(TabSel, A_Index))
+							If ((Action "()") = TabGetText(TabSel, A_Index))
 							{
 								Gui, chMacro:ListView, InputList%TabIdx%
 								Loop, % ListCount%TabIdx%
@@ -1219,9 +1282,11 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC, ByRef LoopCount, ScopedP
 											}
 											pbParams[A_Index].Value := LoopField
 										}
-										pbVarName := VarName, pbVarValue := VarValue
+										LastFuncRun := RunningFunction, RunningFunction := Action
+									,	pbVarName := VarName, pbVarValue := VarValue
 									,	Func_Result := Playback(TabIdx,,, pbParams)
 									,	pbVarValue := Func_Result[1]
+									,	RunningFunction := LastFuncRun
 										Try
 											AssignVar(pbVarName, ":=", pbVarValue, PointMarker)
 										Catch e
@@ -1235,7 +1300,7 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC, ByRef LoopCount, ScopedP
 											}
 										}
 										Try SavedVars(pbVarName)
-										break
+										break 2
 									}
 								}
 							}
@@ -1278,7 +1343,9 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC, ByRef LoopCount, ScopedP
 					continue
 				}
 				This_Point := PointMarker
+				pbType := Type
 				GoSub, SplitStep
+				Type := pbType
 				While (TimesX)
 				{
 					If (StopIt)
@@ -1393,7 +1460,7 @@ RunExtFunc(File, FuncName, Params*)
 
 IfStatement(ThisError, l_Point)
 {
-	global
+	local pbType
 	
 	If (Step = "EndIf")
 	{
@@ -1505,7 +1572,9 @@ IfStatement(ThisError, l_Point)
 		Else If (Action = If11)
 		{
 			This_Point := l_Point
+			pbType := Type
 			GoSub, SplitStep
+			Type := pbType
 			If (RegExMatch(Par1, "i)A_Loop\w+"))
 			{
 				I := DerefVars(LoopIndex), L := SubStr(Par1, 3)
@@ -1520,7 +1589,9 @@ IfStatement(ThisError, l_Point)
 		Else If (Action = If12)
 		{
 			This_Point := l_Point
+			pbType := Type
 			GoSub, SplitStep
+			Type := pbType
 			If (RegExMatch(Par1, "i)A_Loop\w+"))
 			{
 				I := DerefVars(LoopIndex), L := SubStr(Par1, 3)
@@ -1744,80 +1815,10 @@ CheckVars(Match_List, l_Point := "")
 			While (RegExMatch(%A_LoopField%, "i)%(" $_value%l_Point% ")%", lMatch))
 				%A_LoopField% := RegExReplace(%A_LoopField%, "U)" lMatch, o_Loop%l_Point%[I][$_value%l_Point%])
 		}
-		; If (RegExMatch(%A_LoopField%, "sU)%\s+([\w.%]+)\((.*)\)"))  ; Functions & Methods
-		; {
-			; While (RegExMatch(%A_LoopField%, "sU)%\s+([\w%]+)\((.*?)\)", Funct)) ; Functions
-			; {
-				; If (IsFunc(Funct1))
-				; {
-					; Params := Object()
-					; StringReplace, Funct2, Funct2, ```,, ¢, All
-					; Loop, Parse, Funct2, `,, %A_Space%``""
-					; {
-						; LoopField := DerefVars(A_LoopField)
-					; ,	LoopField := ExtractArrays(LoopField, PointMarker)
-						; If (LoopField = "_ArrayObject")
-							; LoopField := %LoopField%
-						; Else
-						; {
-							; StringReplace, LoopField, LoopField, ```,, `,, All
-							; StringReplace, LoopField, LoopField, ¢, `,, All
-							; StringReplace, LoopField, LoopField, ¥Space, %A_Space%, All
-						; }
-						; Params.Push(LoopField)
-					; }
-					; FuncResult := %Funct1%(Params*)
-					; StringReplace, FuncResult, FuncResult, `,, ```, 
-					; StringReplace, %A_LoopField%, %A_LoopField%, %Funct%, %FuncResult%
-					; FuncResult := ""
-				; }
-				; Else
-					; break
-			; }
-			; While (RegExMatch(%A_LoopField%, "sU)%\s+\b([\w%]+)\b\.([\w\d_%]+)\((.*?)\)", Funct)) ; Methods
-			; {
-				; If (IsObject(%Funct1%))
-				; {
-					; Params := Object()
-					; StringReplace, Funct3, Funct3, ```,, ¢, All
-					; Loop, Parse, Funct3, `,, %A_Space%``""
-					; {
-						; LoopField := DerefVars(A_LoopField)
-					; ,	LoopField := ExtractArrays(LoopField, PointMarker)
-						; If (LoopField = "_ArrayObject")
-							; LoopField := %LoopField%
-						; Else
-						; {
-							; StringReplace, LoopField, LoopField, ```,, `,, All
-							; StringReplace, LoopField, LoopField, ¢, `,, All
-							; StringReplace, LoopField, LoopField, ¥Space, %A_Space%, All
-						; }
-						; Params.Push(LoopField)
-					; }
-					; FuncResult := %Funct1%[Funct2](Params*)
-					; StringReplace, FuncResult, FuncResult, `,, ```, 
-					; StringReplace, %A_LoopField%, %A_LoopField%, %Funct%, %FuncResult%
-					; FuncResult := ""
-				; }
-				; Else
-					; break
-			; }
-		; }
 		%A_LoopField% := DerefVars(%A_LoopField%)
 		
-		If (RegExMatch(%A_LoopField%, "U)^%\s+(.+)$", lMatch))  ; DynamicVars
-		{
-			While (RegExMatch(%A_LoopField%, "mU)%\s+([\w%]*)(``,|$)", lFound))
-				%A_LoopField% := RegExReplace(%A_LoopField%, lFound, %lFound1%)
+		If (RegExMatch(%A_LoopField%, "sU)^%\s+(.+)$", lMatch))  ; Expressions
 			%A_LoopField% := Eval(lMatch1, l_Point)
-			; If (RegExMatch(%A_LoopField%, "mU)%\s+([\w\d_%]+\[.+?\])", lFound)) ; Arrays
-			; {
-				; lFound1 := RegExReplace(lFound1, "\s")
-			; ,	lResult := ExtractArrays(lFound1, l_Point)
-			; ,	lResult := Eval(lResult, l_Point)
-			; ,	%A_LoopField% := StrReplace(%A_LoopField%, lFound, lResult)
-			; }
-		}
 	}
 }
 

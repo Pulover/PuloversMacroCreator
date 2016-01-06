@@ -1,52 +1,81 @@
 Eval(x, l_Point)
 {
-   Local y, Result, CompiledExpression, Pos, Parsed, ExpOn := true
+   Local y, Result, CompiledExpression, LastFuncRun, Func_Result
+		, Funct, Funct1, Funct2, Funct3
 
 	While (RegExMatch(x, "\b([\w\d_]+)\b\.([\w%]+)\((.*?)\)", Funct))  ; Methods
 	{
+		y := x
 		If (IsObject(%Funct1%))
 		{
 			Params := Object()
-			StrReplace(Funct3, Funct3, "```,", "`,")
+		,	Funct3 := StrReplace(Funct3, Funct3, "```,", "`,")
+		,	Funct3 := RegExReplace(Funct3, "U)""(.*),(.*)""", """$1¢$2""")
 			Loop, Parse, Funct3, `,, %A_Space%``""
 			{
-				LoopField := CheckParam(A_LoopField)
+				LoopField := CheckParam(A_LoopField, l_Point)
+			,	LoopField := StrReplace(LoopField, "¢", "`,")
 			,	Params.Push(LoopField)
 			}
-			FuncResult := %Funct1%[Funct2](Params*)
-			If (!IsObject(FuncResult))
+			Func_Result := %Funct1%[Funct2](Params*)
+			If (!IsObject(Func_Result))
 			{
-				If FuncResult is not Number
-					FuncResult := """" FuncResult """"
+				If Func_Result is not Number
+					Func_Result := """" Func_Result """"
 			}
-			FuncResult := StrReplace(FuncResult, "`,", "```,")
-		,	x := StrReplace(x, Funct, FuncResult)
-		,	FuncResult := ""
+			Func_Result := StrReplace(Func_Result, "`,", "```,")
+		,	x := StrReplace(x, Funct, Func_Result)
 		}
+		If (y = x)
+			break
 	}
-	
 	While (RegExMatch(x, "([\w_]+)\((.*?)\)", Funct))  ; Functions
 	{
-		If (IsFunc(Funct1))
+		If ((IsFunc(Funct1)) && (Func(Funct1).IsBuiltIn))
+			break
+		y := x
+		Loop, %TabCount%
 		{
-			If ((!IsFunc(Funct1).IsBuiltIn) && (Funct1 != "Screenshot"))
-				continue
-			Params := Object()
-		,	Funct2 := StrReplace(Funct2, "```,", "`,")
-			Loop, Parse, Funct2, `,, %A_Space%``
+			TabIdx := A_Index
+			If (Funct1 = TabGetText(TabSel, A_Index))
 			{
-				LoopField := CheckParam(A_LoopField)
-			,	Params.Push(LoopField)
+				Gui, chMacro:ListView, InputList%TabIdx%
+				Loop, % ListCount%TabIdx%
+				{
+					LV_GetText(Row_Type, A_Index, 6)
+					LV_GetText(TargetFunc, A_Index, 3)
+					If ((Row_Type = cType47) && (TargetFunc = Funct1))
+					{
+						Params := Object()
+					,	Funct2 := StrReplace(Funct2, "```,", "`,")
+					,	Funct2 := RegExReplace(Funct2, "U)""(.*),(.*)""", """$1¢$2""")
+						Loop, Parse, Funct2, `,, %A_Space%``
+						{
+							VarName := LoopField
+						,	LoopField := CheckParam(A_LoopField, l_Point)
+						,	Params.Push({Name: VarName, Value: LoopField})
+						}
+						LastFuncRun := RunningFunction, RunningFunction := Funct1
+					,	Func_Result := Playback(TabIdx,,, Params)
+					,	Func_Result := Func_Result[1]
+					,	RunningFunction := LastFuncRun
+						If (!IsObject(Func_Result))
+						{
+							If Func_Result is not Number
+								Func_Result := """" Func_Result """"
+						}
+						Func_Result := StrReplace(Func_Result, "`,", "```,")
+					,	x := StrReplace(x, Funct, Func_Result)
+						break 2
+					}
+				}
 			}
-			FuncResult := %Funct1%(Params*)
-			If (!IsObject(FuncResult))
-			{
-				If FuncResult is not Number
-					FuncResult := """" FuncResult """"
-			}
-			FuncResult := StrReplace(FuncResult, "`,", "```,")
-		,	x := StrReplace(x, Funct, FuncResult)
-		,	FuncResult := "" 
+		}
+		If (x = y)
+		{
+			If ((IsFunc(Funct1)) && (!Func(Funct1).IsBuiltIn))
+				return ""
+			break
 		}
 	}
 	
@@ -57,13 +86,13 @@ Eval(x, l_Point)
 			return y
 		If y is not Number
 			y := """" y """"
-		FuncResult := StrReplace(FuncResult, "`,", "```,") 
+		Func_Result := StrReplace(Func_Result, "`,", "```,") 
 		x := StrReplace(x, _Match, y)
 	}
 	
 	If (RegExMatch(x, "^\s*\[(.*)\]\s*$", Found)) ; Assign Arrays
 	{
-		y := []
+		y := [], Found1 := StrReplace(Found1, "```,", "`,")
 		Loop, Parse, Found1, `,, %A_Space%%A_Tab%
 		{
 			LoopField := A_LoopField
@@ -88,6 +117,12 @@ Eval(x, l_Point)
 		return y
 	}
 
+	Try
+	{
+		If (IsObject(%x%))
+			return %x%.Clone()
+	}
+	
 	ExprInit()
 	CompiledExpression := ExprCompile(x)
 	Result := ExprEval(CompiledExpression)
@@ -96,7 +131,7 @@ Eval(x, l_Point)
 	return Result
 }
 
-CheckParam(Param)
+CheckParam(Param, l_Point)
 {
 	global
 	

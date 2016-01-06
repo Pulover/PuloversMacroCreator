@@ -1,7 +1,7 @@
 ﻿#NoEnv
 SetWorkingDir %A_ScriptDir%
 
-xlLastCell = 11
+xlLastCell := 11
 
 XL := ComObjCreate("Excel.Application")
 XL.Workbooks.Open(A_ScriptDir "\Languages.xls")

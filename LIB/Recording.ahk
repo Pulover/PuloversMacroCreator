@@ -36,7 +36,7 @@
 ClickOn(xPos, yPos, Button, Click := "")
 {
 	global RelHold, LastPos, RelKey, Toggle
-	If RelHold = 1
+	If (RelHold = 1)
 	{
 		Loop, Parse, LastPos, /
 			iPar%A_Index% := A_LoopField
@@ -45,9 +45,9 @@ ClickOn(xPos, yPos, Button, Click := "")
 	LastPos := xPos "/" yPos
 	If GetKeyState(RelKey, Toggle)
 	{
-		xPos = Rel 0
-		yPos = 0
-		RelHold = 1
+		xPos := "Rel 0"
+		yPos := 0
+		RelHold := 1
 	}
 	If (Relative != "")
 		Details := Relative " " Button ", " Click
@@ -70,7 +70,7 @@ MoveCheck()
 	MouseGetPos, xPos, yPos
 	If (LastPos = xPos "/" yPos)
 		return
-	If A_TimeIdle < %MDelay%
+	If (A_TimeIdle < MDelay)
 		return
 	If GetKeyState(RelKey, Toggle)
 	{

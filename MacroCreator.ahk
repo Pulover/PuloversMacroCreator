@@ -1430,7 +1430,7 @@ If (Record = 1)
 			If (WClass = 1)
 				Window := Window " ahk_class " c_Class
 			If ((WTitle = 0) && (WClass = 0))
-				Window = A
+				Window := "A"
 		}
 	}
 }
@@ -1445,7 +1445,7 @@ If (Record = 1)
 			If (Interval > TDelay)
 			GoSub, SleepInput
 		}
-		InputDelay := 0, WinDelay = 0
+		InputDelay := 0, WinDelay := 0
 	}
 	Else
 		InputDelay := DelayG, WinDelay := DelayW
@@ -1751,6 +1751,7 @@ GoSub, RecentFiles
 GoSub, PrevRefresh
 SetTimer, FinishIcon, -1
 SavePrompt := false
+GoSub, MacroTab
 return
 
 GuiDropFiles:
@@ -1829,6 +1830,10 @@ Gui, chMacro:Default
 Gui, chMacro:Listview, InputList%A_List%
 GuiControl, chMacro:Focus, InputList%A_List%
 SavePrompt := false
+If (InStr(TabGetText(TabSel, A_List), "()"))
+	GoSub, FuncTab
+Else
+	GoSub, MacroTab
 return
 
 Import:
@@ -1859,6 +1864,10 @@ GoSub, PrevRefresh
 GoSub, b_Start
 GoSub, RecentFiles
 GoSub, chMacroGuiSize
+If (InStr(TabGetText(TabSel, A_List), "()"))
+	GoSub, FuncTab
+Else
+	GoSub, MacroTab
 return
 
 SaveAs:
@@ -2009,6 +2018,11 @@ return
 
 Export:
 Input
+If (DebugCheckError)
+{
+	GoSub, b_Enable
+	return
+}
 Gui, 1:Submit, NoHide
 GoSub, SaveData
 SplitPath, CurrentFileName, name, dir, ext, name_no_ext, drive
@@ -2710,9 +2724,9 @@ ConfigOK:
 Gui, 4:Submit, NoHide
 Gui, 4:+OwnDialogs
 If (Relative = 1)
-	CoordMouse = Window
+	CoordMouse := "Window"
 Else If (Screen = 1)
-	CoordMouse = Screen
+	CoordMouse := "Screen"
 SSMode := OnRelease ? "OnRelease" : "OnEnter"
 CloseAction := MinToTray ? "Minimize" : (CloseApp ? "Close" : "")
 VirtualKeys := EditMod, UserVarsList := RegExReplace(UserVarsList, "U)\s+=\s+", "=")
@@ -3396,15 +3410,15 @@ TimesX := InStr(EdRept, "%") ? EdRept : TimesX
 If (TimesX = 0)
 	TimesX := 1
 If (LB = 1)
-	Button = Left
+	Button := "Left"
 If (RB = 1)
-	Button = Right
+	Button := "Right"
 If (MB = 1)
-	Button = Middle
+	Button := "Middle"
 If (X1 = 1)
-	Button = X1
+	Button := "X1"
 If (X2 = 1)
-	Button = X2
+	Button := "X2"
 If (Click = 1)
 	GoSub, f_Click
 If (Point = 1)
@@ -3483,17 +3497,17 @@ If (A_ThisLabel != "MouseApply")
 	Gui, 5:Destroy
 }
 Gui, chMacro:Default
-RowSelection := LV_GetCount("Selected")
+RowSelection := LV_GetCount("Selected"), LV_GetText(RowType, LV_GetNext(), 6)
 If (s_Caller = "Edit")
 	LV_Modify(RowNumber, "Col2", Action, Details, TimesX, DelayX, Type, Target, Window)
-Else If (RowSelection = 0)
+Else If ((RowSelection = 0) || ((RowType = cType47) || RowType = cType48))
 {
 	LV_Add("Check", ListCount%A_List%+1, Action, Details, TimesX, DelayX, Type, Target, Window)
 ,	LV_Modify(ListCount%A_List%+1, "Vis")
 }
 Else
 {
-	RowNumber = 0
+	RowNumber := 0
 	Loop, %RowSelection%
 	{
 		RowNumber := LV_GetNext(RowNumber)
@@ -4571,17 +4585,17 @@ If (A_ThisLabel != "TextApply")
 	Gui, 8:Destroy
 }
 Gui, chMacro:Default
-RowSelection := LV_GetCount("Selected")
+RowSelection := LV_GetCount("Selected"), LV_GetText(RowType, LV_GetNext(), 6)
 If (s_Caller = "Edit")
 	LV_Modify(RowNumber, "Col2", Action, TextEdit, TimesX, DelayX, Type, Target, Window)
-Else If (RowSelection = 0)
+Else If ((RowSelection = 0) || ((RowType = cType47) || RowType = cType48))
 {
 	LV_Add("Check", ListCount%A_List%+1, Action, TextEdit, TimesX, DelayX, Type, Target, Window)
 ,	LV_Modify(ListCount%A_List%+1, "Vis")
 }
 Else
 {
-	RowNumber = 0
+	RowNumber := 0
 	Loop, %RowSelection%
 	{
 		RowNumber := LV_GetNext(RowNumber)
@@ -5008,17 +5022,17 @@ If (A_ThisLabel != "PauseApply")
 }
 Action := (Type = cType5) ? "[Pause]" : "[" Type "]"
 Gui, chMacro:Default
-RowSelection := LV_GetCount("Selected")
+RowSelection := LV_GetCount("Selected"), LV_GetText(RowType, LV_GetNext(), 6)
 If (s_Caller = "Edit")
 	LV_Modify(RowNumber, "Col2", Action, Details, TimesX, DelayX, Type, Target, Title)
-Else If (RowSelection = 0)
+Else If ((RowSelection = 0) || ((RowType = cType47) || RowType = cType48))
 {
 	LV_Add("Check", ListCount%A_List%+1, Action, Details, 1, DelayX, Type, Target, Title)
 ,	LV_Modify(ListCount%A_List%+1, "Vis")
 }
 Else
 {
-	RowNumber = 0
+	RowNumber := 0
 	Loop, %RowSelection%
 	{
 		RowNumber := LV_GetNext(RowNumber)
@@ -5035,7 +5049,7 @@ If (AddIf = 1)
 {
 	IfMsg := (Buttons < 3) ? IfMsg3 : (Buttons = 3) ? IfMsg5
 			: ((Buttons > 3) && (Buttons < 6)) ? IfMsg1 : (Buttons > 5) ? IfMsg4
-	If (RowSelection = 0)
+	If ((RowSelection = 0) || ((RowType = cType47) || RowType = cType48))
 	{
 		LV_Add("Check", ListCount%A_List%+1, If13, IfMsg, 1, 0, cType17)
 		LV_Add("Check", ListCount%A_List%+2, "[End If]", "EndIf", 1, 0, cType17)
@@ -5084,6 +5098,15 @@ s_Caller := "Edit"
 AddLabel:
 ComGoto:
 ComLoop:
+If (InStr(TabGetText(TabSel, A_List), "()"))
+{
+	If A_ThisLabel in ComGoto,AddLabel
+	{
+		Gui, 1:+OwnDialogs
+		MsgBox, 16, %d_Lang007%, %d_Lang100%
+		return
+	}
+}
 Proj_Labels := ""
 Gui, chMacro:Default
 Loop, %TabCount%
@@ -5101,7 +5124,10 @@ Loop, %TabCount%
 }
 Gui, chMacro:ListView, InputList%A_List%
 Loop, %TabCount%
-	Proj_Labels .= TabGetText(TabSel, A_Index) "|"
+{
+	Lab := TabGetText(TabSel, A_Index)
+	Proj_Labels .= InStr(Lab, "()") ? "" : Lab "|"
+}
 Gui, 12:+owner1 -MinimizeBox +E0x00000400 +HwndCmdWin
 Gui, 1:+Disabled
 Gui, 12:Add, Tab2, W450 H0 vTabControl AltSubmit, CmdTab1|CmdTab2|CmdTab3
@@ -5155,6 +5181,7 @@ Gui, 12:Add, Button, -Wrap ys W75 H23 gLoopCancel, %c_Lang021%
 Gui, 12:Add, Button, -Wrap ys W75 H23 vLabelApply gLabelApply Disabled, %c_Lang131%
 Gui, 12:Add, StatusBar
 Gui, 12:Default
+GoSub, ClearPars
 If (s_Caller = "Edit")
 {
 	If (Type = cType35)
@@ -5334,10 +5361,10 @@ If (A_ThisLabel != "LoopApply")
 	Gui, 12:Destroy
 }
 Gui, chMacro:Default
-RowSelection := LV_GetCount("Selected")
+RowSelection := LV_GetCount("Selected"), LV_GetText(RowType, LV_GetNext(), 6)
 If (s_Caller = "Edit")
 	LV_Modify(RowNumber, "Col3", Details, TimesL, DelayX, Type)
-Else If (RowSelection = 0)
+Else If ((RowSelection = 0) || ((RowType = cType47) || RowType = cType48))
 {
 	LV_Add("Check", ListCount%A_List%+1, "[LoopStart]", Details, TimesL, 0, Type)
 	LV_Add("Check", ListCount%A_List%+2, "[LoopEnd]", "LoopEnd", 1, 0, "Loop")
@@ -5386,7 +5413,7 @@ If (GoLabel = "")
 	GuiControl, 12:Focus, GoLabel
 	return
 }
-If (RegExMatch(GoLabel, "[\s,``]"))
+If (!RegExMatch(GoLabel, "^\w+$"))
 {
 	MsgBox, 16, %d_Lang007%, %d_Lang049%
 	return
@@ -5498,8 +5525,9 @@ Gui, 12:Submit, NoHide
 Gui, 1:-Disabled
 Gui, 12:Destroy
 Gui, chMacro:Default
-Type := LTrim(A_ThisLabel, "Add"), RowSelection := LV_GetCount("Selected")
-If (RowSelection = 0)
+Type := LTrim(A_ThisLabel, "Add")
+RowSelection := LV_GetCount("Selected"), LV_GetText(RowType, LV_GetNext(), 6)
+If ((RowSelection = 0) || ((RowType = cType47) || RowType = cType48))
 {
 	LV_Add("Check", ListCount%A_List%+1, Type, "", 1, 0, Type)
 	LV_Modify(ListCount%A_List%+1, "Vis")
@@ -5773,17 +5801,17 @@ If (A_ThisLabel != "WinApply")
 	Gui, 11:Destroy
 }
 Gui, chMacro:Default
-RowSelection := LV_GetCount("Selected")
+RowSelection := LV_GetCount("Selected"), LV_GetText(RowType, LV_GetNext(), 6)
 If (s_Caller = "Edit")
 	LV_Modify(RowNumber, "Col2", WinCom, Details, TimesX, DelayX, WinCom, "", Title)
-Else If (RowSelection = 0)
+Else If ((RowSelection = 0) || ((RowType = cType47) || RowType = cType48))
 {
 	LV_Add("Check", ListCount%A_List%+1, WinCom, Details, TimesX, DelayWX, WinCom, "", Title)
 ,	LV_Modify(ListCount%A_List%+1, "Vis")
 }
 Else
 {
-	RowNumber = 0
+	RowNumber := 0
 	Loop, %RowSelection%
 	{
 		RowNumber := LV_GetNext(RowNumber)
@@ -6129,10 +6157,10 @@ If (A_ThisLabel != "ImageApply")
 	Gui, 19:Destroy
 }
 Gui, chMacro:Default
-RowSelection := LV_GetCount("Selected")
+RowSelection := LV_GetCount("Selected"), LV_GetText(RowType, LV_GetNext(), 6)
 If (s_Caller = "Edit")
 	LV_Modify(RowNumber, "Col2", Action, Details, TimesX, DelayX, Type, Target, CoordPixel)
-Else If (RowSelection = 0)
+Else If ((RowSelection = 0) || ((RowType = cType47) || RowType = cType48))
 {
 	LV_Add("Check", ListCount%A_List%+1, Action, Details, TimesX, DelayX, Type, Target, CoordPixel)
 	LV_Modify(ListCount%A_List%+1, "Vis")
@@ -6146,7 +6174,7 @@ GoSub, RowCheck
 GoSub, b_Start
 If (AddIf = 1)
 {
-	If (RowSelection = 0)
+	If ((RowSelection = 0) || ((RowType = cType47) || RowType = cType48))
 	{
 		LV_Add("Check", ListCount%A_List%+1, If9, "", 1, 0, cType17)
 		LV_Add("Check", ListCount%A_List%+2, "[End If]", "EndIf", 1, 0, cType17)
@@ -6211,8 +6239,8 @@ If (InStr(file, "%"))
 Gui, 9:Add, Pic, vLoadedPic, %file% 
 GuiControlGet, LoadedPic, 9:Pos
 Gui, 9:Destroy
-Width = 255
-Height = 200
+Width := 255
+Height := 200
 PropH := LoadedPicH * Width // LoadedPicW, PropW := LoadedPicW * Height // LoadedPicH
 If ((LoadedPicW <= Width) && (LoadedPicH <= Height))
 	GuiControl, 19:, PicPrev, *W0 *H0 %file%
@@ -6312,9 +6340,9 @@ return
 ImgConfigOK:
 Gui, 25:Submit, NoHide
 If (OnRelease = 1)
-	SSMode = OnRelease
+	SSMode := "OnRelease"
 Else If (OnEnter = 1)
-	SSMode = OnEnter
+	SSMode := "OnEnter"
 Gui, 19:-Disabled
 Gui, 25:Destroy
 Gui, 19:Default
@@ -6482,10 +6510,10 @@ If (A_ThisLabel != "RunApply")
 	Gui, 10:Destroy
 }
 Gui, chMacro:Default
-RowSelection := LV_GetCount("Selected")
+RowSelection := LV_GetCount("Selected"), LV_GetText(RowType, LV_GetNext(), 6)
 If (s_Caller = "Edit")
 	LV_Modify(RowNumber, "Col2", FileCmdL, Details, TimesX, DelayX, FileCmdL)
-Else If (RowSelection = 0)
+Else If ((RowSelection = 0) || ((RowType = cType47) || RowType = cType48))
 {
 	LV_Add("Check", ListCount%A_List%+1, FileCmdL, Details, 1, DelayG, FileCmdL)
 ,	LV_Modify(ListCount%A_List%+1, "Vis")
@@ -6928,10 +6956,10 @@ If (A_ThisLabel != "IfApply")
 	Gui, 21:Destroy
 }
 Gui, chMacro:Default
-RowSelection := LV_GetCount("Selected")
+RowSelection := LV_GetCount("Selected"), LV_GetText(RowType, LV_GetNext(), 6)
 If (s_Caller = "Edit")
 	LV_Modify(RowNumber, "Col2", Statement, TestVar, 1, 0, cType17)
-Else If (RowSelection = 0)
+Else If ((RowSelection = 0) || ((RowType = cType47) || RowType = cType48))
 {
 	LV_Add("Check", ListCount%A_List%+1, Statement, TestVar, 1, 0, cType17)
 	LV_Add("Check", ListCount%A_List%+2, "[End If]", "EndIf", 1, 0, cType17)
@@ -7058,10 +7086,10 @@ If (A_ThisLabel != "VarApply")
 	Gui, 21:Destroy
 }
 Gui, chMacro:Default
-RowSelection := LV_GetCount("Selected")
+RowSelection := LV_GetCount("Selected"), LV_GetText(RowType, LV_GetNext(), 6)
 If (s_Caller = "Edit")
 	LV_Modify(RowNumber, "Col2", Action, Details, TimesX, DelayX, Type, Target, "")
-Else If (RowSelection = 0)
+Else If ((RowSelection = 0) || ((RowType = cType47) || RowType = cType48))
 {
 	LV_Add("Check", ListCount%A_List%+1, Action, Details, 1, 0, Type, Target, "")
 	LV_Modify(ListCount%A_List%+1, "Vis")
@@ -7101,8 +7129,8 @@ Gui, 21:Submit, NoHide
 Gui, 1:-Disabled
 Gui, 21:Destroy
 Gui, chMacro:Default
-RowSelection := LV_GetCount("Selected")
-If (RowSelection = 0)
+RowSelection := LV_GetCount("Selected"), LV_GetText(RowType, LV_GetNext(), 6)
+If ((RowSelection = 0) || ((RowType = cType47) || RowType = cType48))
 {
 	LV_Add("Check", ListCount%A_List%+1, "[Else]", "Else", 1, 0, cType17)
 	LV_Modify(ListCount%A_List%+1, "Vis")
@@ -7310,9 +7338,9 @@ Gui, 21:Submit, NoHide
 Statement := IfList%Statement%
 If (InStr(Statement, "Window"))
 {
-	Label = IfGet
+	Label := "IfGet"
 	GoSub, GetWin
-	Label =
+	Label := ""
 	GuiControl, 21:, TestVar, %FoundTitle%
 	return
 }
@@ -7400,17 +7428,17 @@ If (A_ThisLabel != "SendMsgApply")
 	Gui, 22:Destroy
 }
 Gui, chMacro:Default
-RowSelection := LV_GetCount("Selected")
+RowSelection := LV_GetCount("Selected"), LV_GetText(RowType, LV_GetNext(), 6)
 If (s_Caller = "Edit")
 	LV_Modify(RowNumber, "Col2", "[Windows Message]", Details, TimesX, DelayX, MsgType, DefCt, Title)
-Else If (RowSelection = 0)
+Else If ((RowSelection = 0) || ((RowType = cType47) || RowType = cType48))
 {
 	LV_Add("Check", ListCount%A_List%+1, "[Windows Message]", Details, TimesX, DelayG, MsgType, DefCt, Title)
 ,	LV_Modify(ListCount%A_List%+1, "Vis")
 }
 Else
 {
-	RowNumber = 0
+	RowNumber := 0
 	Loop, %RowSelection%
 	{
 		RowNumber := LV_GetNext(RowNumber)
@@ -7608,17 +7636,17 @@ If (A_ThisLabel != "ControlApply")
 	Gui, 23:Destroy
 }
 Gui, chMacro:Default
-RowSelection := LV_GetCount("Selected")
+RowSelection := LV_GetCount("Selected"), LV_GetText(RowType, LV_GetNext(), 6)
 If (s_Caller = "Edit")
 	LV_Modify(RowNumber, "Col2", "[Control]", Details, TimesX, DelayX, ControlCmd, DefCt, Title)
-Else If (RowSelection = 0)
+Else If ((RowSelection = 0) || ((RowType = cType47) || RowType = cType48))
 {
 	LV_Add("Check", ListCount%A_List%+1, "[Control]", Details, TimesX, DelayG, ControlCmd, DefCt, Title)
 ,	LV_Modify(ListCount%A_List%+1, "Vis")
 }
 Else
 {
-	RowNumber = 0
+	RowNumber := 0
 	Loop, %RowSelection%
 	{
 		RowNumber := LV_GetNext(RowNumber)
@@ -7939,17 +7967,17 @@ If (A_ThisLabel != "IEComApply")
 	Gui, 24:Destroy
 }
 Gui, chMacro:Default
-RowSelection := LV_GetCount("Selected")
+RowSelection := LV_GetCount("Selected"), LV_GetText(RowType, LV_GetNext(), 6)
 If (s_Caller = "Edit")
 	LV_Modify(RowNumber, "Col2", Action, Details, TimesX, DelayX, Type, Target, Load)
-Else If (RowSelection = 0)
+Else If ((RowSelection = 0) || ((RowType = cType47) || RowType = cType48))
 {
 	LV_Add("Check", ListCount%A_List%+1, Action , Details, TimesX, DelayG, Type, Target, Load)
 ,	LV_Modify(ListCount%A_List%+1, "Vis")
 }
 Else
 {
-	RowNumber = 0
+	RowNumber := 0
 	Loop, %RowSelection%
 	{
 		RowNumber := LV_GetNext(RowNumber)
@@ -8026,17 +8054,17 @@ If (A_ThisLabel != "ComApply")
 	Gui, 24:Destroy
 }
 Gui, chMacro:Default
-RowSelection := LV_GetCount("Selected")
+RowSelection := LV_GetCount("Selected"), LV_GetText(RowType, LV_GetNext(), 6)
 If (s_Caller = "Edit")
 	LV_Modify(RowNumber, "Col2", Action, ComSc, TimesX, DelayX, cType34, ComCLSID, Load)
-Else If (RowSelection = 0)
+Else If ((RowSelection = 0) || ((RowType = cType47) || RowType = cType48))
 {
 	LV_Add("Check", ListCount%A_List%+1, Action, ComSc, TimesX, DelayG, cType34, ComCLSID, Load)
 ,	LV_Modify(ListCount%A_List%+1, "Vis")
 }
 Else
 {
-	RowNumber = 0
+	RowNumber := 0
 	Loop, %RowSelection%
 	{
 		RowNumber := LV_GetNext(RowNumber)
@@ -8078,17 +8106,17 @@ If (A_ThisLabel != "ScLetApply")
 	Gui, 24:Destroy
 }
 Gui, chMacro:Default
-RowSelection := LV_GetCount("Selected")
+RowSelection := LV_GetCount("Selected"), LV_GetText(RowType, LV_GetNext(), 6)
 If (s_Caller = "Edit")
 	LV_Modify(RowNumber, "Col2", Action, ScLet, TimesX, DelayX, Type, "ScriptControl")
-Else If (RowSelection = 0)
+Else If ((RowSelection = 0) || ((RowType = cType47) || RowType = cType48))
 {
 	LV_Add("Check", ListCount%A_List%+1, Action, ScLet, TimesX, DelayG, Type, "ScriptControl")
 ,	LV_Modify(ListCount%A_List%+1, "Vis")
 }
 Else
 {
-	RowNumber = 0
+	RowNumber := 0
 	Loop, %RowSelection%
 	{
 		RowNumber := LV_GetNext(RowNumber)
@@ -8374,20 +8402,27 @@ EditUserFunc:
 EditParam:
 EditReturn:
 s_Caller := "Edit"
-UserFunction:
-FuncParameter:
 FuncReturn:
+FuncParameter:
+If (!InStr(TabGetText(TabSel, A_List), "()"))
+{
+	Gui, 1:+OwnDialogs
+	MsgBox, 64, %AppName%, %d_Lang101%
+	s_Caller := ""
+	return
+}
+UserFunction:
 Gui, 38:+owner1 -MinimizeBox +E0x00000400 +HwndCmdWin
 Gui, 1:+Disabled
 Gui, 38:Add, Tab2, W450 H0 vTabControl AltSubmit, CmdTab1|CmdTab2|CmdTab3
 ; Function
-Gui, 38:Add, GroupBox, Section xm ym W450 H280
+Gui, 38:Add, GroupBox, Section xm ym W450 H70
 Gui, 38:Add, Text, ys+15 xs+10 W330 vFuncNameT, %c_Lang089%:
 Gui, 38:Add, Text, yp x+5 W80, %c_Lang218%:
 Gui, 38:Add, Edit, y+5 xs+10 W330 vFuncName, MyFunc
-Gui, 38:Add, DDL, yp x+5 W89 vFuncScope, %c_Lang219%||%c_Lang220%
-Gui, 38:Add, Text, y+15 xs+10, %c_Lang215%:
-Gui, 38:Add, Text, y+15 xs+25 W210, %c_Lang221%:
+Gui, 38:Add, DDL, yp x+5 W89 vFuncScope gFuncScope, %c_Lang219%||%c_Lang220%
+Gui, 38:Add, GroupBox, Section xm ys+75 W450 H155, %c_Lang215%:
+Gui, 38:Add, Text, ys+20 xs+25 W210, %c_Lang221%:
 Gui, 38:Add, Text, yp x+5 W150, %c_Lang217%:
 Gui, 38:Add, Text, yp x+5 W30, ByRef
 Gui, 38:Add, Text, y+10 xs+5 W10, #1
@@ -8406,44 +8441,100 @@ Gui, 38:Add, Text, y+10 xs+5 W10, #4
 Gui, 38:Add, Edit, yp-5 xs+25 W210 vParam4
 Gui, 38:Add, ComboBox, yp x+5 W150 vValue4, true|false|_blank
 Gui, 38:Add, CheckBox, yp+5 x+15 W30 vByRef4
-Gui, 38:Add, Text, y+10 xs+5 W10, #5
-Gui, 38:Add, Edit, yp-5 xs+25 W210 vParam5
-Gui, 38:Add, ComboBox, yp x+5 W150 vValue5, true|false|_blank
-Gui, 38:Add, CheckBox, yp+5 x+15 W30 vByRef5
-Gui, 38:Add, Text, y+10 xs+5 W10, #6
-Gui, 38:Add, Edit, yp-5 xs+25 W210 vParam6
-Gui, 38:Add, ComboBox, yp x+5 W150 vValue6, true|false|_blank
-Gui, 38:Add, CheckBox, yp+5 x+15 W30 vByRef6
 Gui, 38:Add, Text, y+10 xs+25 W400 cGray, %c_Lang222%
-; Gui, 38:Add, Button, -Wrap Section Default xm y+14 W75 H23 gUDFOK, %c_Lang020%
-; Gui, 38:Add, Button, -Wrap ys W75 H23 gUDFCancel, %c_Lang021%
-; Gui, 38:Add, Button, -Wrap ys W75 H23 vUDFApply gUDFApply Disabled, %c_Lang131%
+Gui, 38:Add, GroupBox, Section xm ys+160 W450 H55 vVarsGroup, %c_Lang223%:
+Gui, 38:Add, Edit, ys+20 xs+10 W400 vFuncScoped
+Gui, 38:Add, GroupBox, Section xm ys+60 W450 H55, %c_Lang225%:
+Gui, 38:Add, Edit, ys+20 xs+10 W400 vFuncStatic
 Gui, 38:Tab, 2
 ; Parameters
-Gui, 38:Add, GroupBox, Section xm ym W450 H280
+Gui, 38:Add, GroupBox, Section xm ym W450 H350
 Gui, 38:Add, Text, ys+15 xs+10 W430 vParamNameT, %c_Lang221%
 Gui, 38:Add, Edit, y+5 xs+10 W430 vParamName
 Gui, 38:Add, Text, y+15 xs+10 W430, %c_Lang217%
 Gui, 38:Add, ComboBox, y+5 xs+10 W430 vDefaultValue, true|false|_blank
-Gui, 38:Add, CheckBox, y+15 xs+10 W100, ByRef
+Gui, 38:Add, CheckBox, y+15 xs+10 W100 vByRef, ByRef
 Gui, 38:Add, Text, y+15 xs+10 W430 H120, %d_Lang095%
-; Gui, 38:Add, Button, -Wrap Section Default xm y+14 W75 H23 gUDFOK, %c_Lang020%
-; Gui, 38:Add, Button, -Wrap ys W75 H23 gUDFCancel, %c_Lang021%
-; Gui, 38:Add, Button, -Wrap ys W75 H23 vUDFApply gUDFApply Disabled, %c_Lang131%
 Gui, 38:Tab, 3
 ; Return
-Gui, 38:Add, GroupBox, Section xm ym W450 H280
+Gui, 38:Add, GroupBox, Section xm ym W450 H350
 Gui, 38:Add, Text, ys+15 xs+10 W430, %c_Lang216%:
 Gui, 38:Add, Edit, y+5 xs+10 W430 vRetExpr
 Gui, 38:Add, Text, y+15 xs+10 W430 H202, %d_Lang096%
 Gui, 38:Tab
-Gui, 38:Add, Button, -Wrap Section Default xm y+14 W75 H23 gUDFOK, %c_Lang020%
+Gui, 38:Add, Button, -Wrap Section Default xm ys+360 W75 H23 gUDFOK, %c_Lang020%
 Gui, 38:Add, Button, -Wrap ys W75 H23 gUDFCancel, %c_Lang021%
 Gui, 38:Add, Button, -Wrap ys W75 H23 vUDFApply gUDFApply Disabled, %c_Lang131%
 Gui, 38:Add, StatusBar
 Gui, 38:Default
 If (s_Caller = "Edit")
 {
+	If (A_ThisLabel = "EditUserFunc")
+	{
+		GuiControl, 38:, FuncName, %Details%
+		GuiControl, 38:ChooseString, FuncScope, %Target%
+		ScopedVariables := "", StaticVariables := ""
+		Loop, Parse, Window, /, %A_Space%
+		{
+			If (A_Index = 1)
+			{
+				Loop, Parse, A_LoopField, `,, %A_Space%
+				{
+					AssignReplace(A_LoopField)
+					If (VarName = "")
+						ScopedVariables .= A_LoopField ","
+					Else
+						ScopedVariables .= VarName " := " Trim(VarValue, """") ","
+				}
+			}
+			If (A_Index = 2)
+			{
+				Loop, Parse, A_LoopField, `,, %A_Space%
+				{
+					AssignReplace(A_LoopField)
+					If (VarName = "")
+						StaticVariables .= A_LoopField ","
+					Else
+						StaticVariables .= VarName " := " Trim(VarValue, """") ","
+				}
+			}
+		}
+		ScopedVariables := Trim(ScopedVariables, ", ")
+	,	StaticVariables := Trim(StaticVariables, ", ")
+		GuiControl, 38:, FuncScoped, %ScopedVariables%
+		GuiControl, 38:, FuncStatic, %StaticVariables%
+		Loop, 4
+		{
+			GuiControl, 38:Disable, Param%A_Index%
+			GuiControl, 38:Disable, Value%A_Index%
+			GuiControl, 38:Disable, ByRef%A_Index%
+		}
+		GoSub, FuncScope
+	}
+	Else If (A_ThisLabel = "EditParam")
+	{
+		AssignReplace(Details)
+		If (VarName = "")
+			GuiControl, 38:, ParamName, %Details%
+		Else
+		{
+			GuiControl, 38:, ParamName, %VarName%
+			If (VarValue = """""")
+				GuiControl, 38:ChooseString, DefaultValue, _blank
+			Else If ((VarValue = "true") || (VarValue = "false"))
+				GuiControl, 38:ChooseString, DefaultValue, %VarValue%
+			Else
+				GuiControl, 38:, DefaultValue, % Trim(VarValue, """") "||"
+		}
+		GuiControl, 38:, ByRef, % Target = "ByRef"
+		GuiControl, 38:Choose, TabControl, 2
+	}
+	Else If (A_ThisLabel = "EditReturn")
+	{
+		GuiControl, 38:, RetExpr, %Details%
+		GuiControl, 38:Choose, TabControl, 3
+	}
+	GuiControl, 38:Enable, UDFApply
 }
 If (A_ThisLabel = "UserFunction")
 {
@@ -8483,7 +8574,7 @@ If (TabControl = 1)
 		return
 	}
 	MustDefault := false
-	Loop, 6
+	Loop, 4
 	{
 		If (Param%A_Index% = "")
 			continue
@@ -8503,28 +8594,110 @@ If (TabControl = 1)
 		If (Value%A_Index% != "")
 			MustDefault := true
 	}
+	FuncVariables := ""
+	Loop, Parse, FuncScoped, `,, %A_Space%
+	{
+		If (FuncScope = "Local")
+		{
+			Try
+				z_Check := VarSetCapacity(%A_LoopField%)
+			Catch
+			{
+				MsgBox, 16, %d_Lang007%, %d_Lang041%`n`n%A_LoopField%
+				return
+			}
+			FuncVariables .= A_LoopField ", "
+		}
+		Else
+		{
+			AssignReplace(A_LoopField)
+			If (VarName = "")
+			{
+				Try
+					z_Check := VarSetCapacity(%A_LoopField%)
+				Catch
+				{
+					MsgBox, 16, %d_Lang007%, %d_Lang041%`n`n%A_LoopField%
+					return
+				}
+				FuncVariables .= A_LoopField ", "
+			}
+			Else
+			{
+				Try
+					z_Check := VarSetCapacity(%VarName%)
+				Catch
+				{
+					MsgBox, 16, %d_Lang007%, %d_Lang041%`n`n%VarName%
+					return
+				}
+				FuncVariables .= VarName " := " VarValue ", "
+			}
+		}
+	}
+	FuncVariables := Trim(FuncVariables, ", ") " / "
+	Loop, Parse, FuncStatic, `,, %A_Space%
+	{
+		AssignReplace(A_LoopField)
+		If (VarName = "")
+		{
+			Try
+				z_Check := VarSetCapacity(%A_LoopField%)
+			Catch
+			{
+				MsgBox, 16, %d_Lang007%, %d_Lang041%`n`n%A_LoopField%
+				return
+			}
+			FuncVariables .= A_LoopField ", "
+		}
+		Else
+		{
+			Try
+				z_Check := VarSetCapacity(%VarName%)
+			Catch
+			{
+				MsgBox, 16, %d_Lang007%, %d_Lang041%`n`n%VarName%
+				return
+			}
+			FuncVariables .= VarName " := " VarValue ", "
+		}
+	}
+	FuncVariables := RegExReplace(FuncVariables, ":=\s(\D+?),", ":= ""$1"",")
+,	FuncVariables := StrReplace(FuncVariables, """true""", "true")
+,	FuncVariables := StrReplace(FuncVariables, """false""", "false")
+,	FuncVariables := Trim(FuncVariables, ", ")
 	CurrentTabs := ""
 	Loop, % TabCount
 	{
-		TabName := TabGetText(TabSel, A_Index)
-		If (TabName = FuncName)
+		If ((s_Caller != "") && (A_List = A_Index))
 		{
-			MsgBox, 16, %d_Lang007%, %d_Lang050%
+			CurrentTabs .= FuncName "()|"
+			continue
+		}
+		TabName := TabGetText(TabSel, A_Index)
+		If (TabName = (FuncName "()"))
+		{
+			MsgBox, 16, %d_Lang007%, %d_Lang103%
 			return
 		}
 		CurrentTabs .= TabName "|"
 	}
-	GoSub, TabPlus
-	CurrentTabs .= FuncName
+	If (s_Caller = "")
+	{
+		GoSub, TabPlus
+		CurrentTabs .= FuncName "()"
+	}
 	GuiControl, chMacro:, %TabSel%, |%CurrentTabs%
 	GuiControl, chMacro:Choose, A_List, %A_List%
+	GoSub, FuncTab
 	If (A_ThisLabel != "UDFApply")
 	{
 		Gui, 1:-Disabled
 		Gui, 38:Destroy
 	}
 	Gui, chMacro:Default
-	Loop, 6
+	RowIdx := 1
+	Loop, 4
 	{
 		DefaultDet := ""
 		If (Param%A_Index% = "")
@@ -8539,12 +8712,22 @@ If (TabControl = 1)
 			}
 			DefaultDet := " := " DefaultDet
 		}
+		Else
+			DefaultDet := ""
 		Action := "[FuncParameter]", Details := Param%A_Index% . DefaultDet, Type := cType48
 	,	Target := ByRef%A_Index% ? "ByRef" : ""
-	,	LV_Add("Check", ListCount%A_List%+1, Action, Details, 1, 0, Type, Target, "")
+		If (s_Caller = "Conv")
+			LV_Insert(RowIdx, "Check", ListCount%A_List%+1, Action, Details, 1, 0, Type, Target, "")
+		Else
+			LV_Add("Check", ListCount%A_List%+1, Action, Details, 1, 0, Type, Target, "")
+		RowIdx++
 	}
-	LV_Add("Check", ListCount%A_List%+1, "[FunctionStart]", FuncName, 1, 0, cType47, FuncScope, "")
-,	LV_Add("Check", ListCount%A_List%+1, "[FuncReturn]", "", 1, 0, cType49, "", "")
+	If (s_Caller = "Conv")
+		LV_Insert(RowIdx, "Check", ListCount%A_List%+1, "[FunctionStart]", FuncName, 1, 0, cType47, FuncScope, FuncVariables)
+	Else If (s_Caller = "Edit")
+		LV_Modify(RowNumber, "Col2", "[FunctionStart]", FuncName, 1, 0, cType47, FuncScope, FuncVariables)
+	Else
+		LV_Add("Check", ListCount%A_List%+1, "[FunctionStart]", FuncName, 1, 0, cType47, FuncScope, FuncVariables)
 }
 If (TabControl = 2)
 {
@@ -8572,16 +8755,20 @@ If (TabControl = 2)
 		}
 		DefaultDet := " := " DefaultDet
 	}
+	Else
+		DefaultDet := ""
 	Action := "[FuncParameter]", Details := ParamName . DefaultDet, Type := cType48
 	,	Target := ByRef ? "ByRef" : ""
 	Gui, chMacro:Default
 	RowSelection := LV_GetCount("Selected")
-	If (RowSelection = 0)
+	If (s_Caller = "Edit")
+		LV_Modify(RowNumber, "Col2", Action, Details, 1, 0, Type, Target, "")
+	Else If (RowSelection = 0)
 	{
 		RowNumber := 1
 		Loop, % ListCount%A_List%
 		{
-			LV_GetText(RowType, RowNumber, 6)
+			LV_GetText(RowType, LV_GetNext(), 6)
 			If (RowType = cType47)
 				break
 			RowNumber++
@@ -8598,8 +8785,10 @@ If (TabControl = 2)
 If (TabControl = 3)
 {
 	Gui, chMacro:Default
-	RowSelection := LV_GetCount("Selected")
-	If (RowSelection = 0)
+	RowSelection := LV_GetCount("Selected"), LV_GetText(RowType, LV_GetNext(), 6)
+	If (s_Caller = "Edit")
+		LV_Modify(RowNumber, "Col2", "[FuncReturn]", RetExpr, 1, 0, cType49, "", "")
+	Else If ((RowSelection = 0) || ((RowType = cType47) || RowType = cType48))
 	{
 		LV_Add("Check", ListCount%A_List%+1, "[FuncReturn]", RetExpr, 1, 0, cType49, "", "")
 		LV_Modify(ListCount%A_List%+1, "Vis")
@@ -8635,6 +8824,18 @@ s_Caller := ""
 return
 
 ConvertToFunc:
+If (InStr(TabGetText(TabSel, A_List), "()"))
+	return
+s_Caller := "Conv"
+GoSub, UserFunction
+return
+
+FuncScope:
+Gui, 38:Submit, NoHide
+If (FuncScope = "Global")
+	GuiControl, 38:, VarsGroup, %c_Lang224%
+Else
+	GuiControl, 38:, VarsGroup, %c_Lang223%
 return
 
 DonatePayPal:
@@ -8999,6 +9200,8 @@ If (TimedRun) && (RunFirst)
 return
 
 RunTimerOn:
+If (InStr(TabGetText(TabSel, aHK_Timer), "()"))
+	return
 If (StopIt)
 {
 	SetTimer, RunTimerOn, Off
@@ -9054,6 +9257,8 @@ TestRun:
 GoSub, b_Enable
 If (ListCount%A_List% = 0)
 	return
+If (DebugCheckError)
+	return
 Gui, 1:Submit, NoHide
 Gui, chMacro:Submit, NoHide
 GoSub, SaveData
@@ -9084,6 +9289,8 @@ Else If (!ListCount)
 Gui, chMacro:Submit, NoHide
 If (AutoBackup)
 	GoSub, ProjBackup
+If (DebugCheckError)
+	return
 GoSub, PlayActive
 If (ActiveKeys = "Error")
 	return
@@ -9172,6 +9379,8 @@ OSPlay:
 GoSub, OSHK
 GoSub, b_Enable
 If (ListCount%OSHK% = 0)
+	return
+If (DebugCheckError)
 	return
 If (WinActive("ahk_id " PMCWinID))
 	WinActivate,,, ahk_id %PMCWinID%
@@ -9370,7 +9579,7 @@ If (A_GuiEvent = "D")
 }
 If (A_GuiEvent == "RightClick")
 {
-	RowNumber = 0
+	RowNumber := 0
 ,	RowSelection := LV_GetCount("Selected")
 ,	RowNumber := LV_GetNext(RowNumber - 1)
 }
@@ -9462,9 +9671,16 @@ return
 CopyList:
 Gui, chMacro:Default
 Gui, chMacro:ListView, InputList%A_List%
-Copies := LVManager.CopyTo(ListID%A_ThisMenuItemPos%)
-,	ListCount%A_ThisMenuItemPos% := ListCount%A_ThisMenuItemPos% + Copies
-GoSub, b_Start
+LVManager.CopyTo(ListID%A_ThisMenuItemPos%)
+Gui, chMacro:ListView, InputList%A_ThisMenuItemPos%
+LVManager.SetHwnd(ListID%A_ThisMenuItemPos%)
+c_List := A_List, A_List := A_ThisMenuItemPos
+GoSub, RowCheck
+HistCheck()
+GoSub, b_Enable
+A_List := c_List
+Gui, chMacro:ListView, InputList%A_List%
+LVManager.SetHwnd(ListID%A_List%)
 GuiControl, Focus, InputList%A_List%
 return
 
@@ -9615,6 +9831,10 @@ GuiControl, 28:, OSHK, %A_List%
 GoSub, PrevRefresh
 Try Menu, CopyTo, Check, % CopyMenuLabels[A_List]
 GuiControl, chMacro:Focus, InputList%A_List%
+If (InStr(TabGetText(TabSel, A_List), "()"))
+	GoSub, FuncTab
+Else
+	GoSub, MacroTab
 return
 
 TabClose:
@@ -9673,14 +9893,34 @@ TabCount--
 Gui, chMacro:ListView, InputList%A_List%
 GuiControl, chMacro:, A_List, %s_List%
 GuiControl, chMacro:Choose, A_List, % (A_List < TabCount) ? A_List : TabCount
-Gui, 1:Submit, NoHide
-Gui, chMacro:Submit, NoHide
-GoSub, chMacroGuiSize
-GoSub, LoadData
-GoSub, RowCheck
-GoSub, PrevRefresh
-Menu, CopyTo, Check, % CopyMenuLabels[A_List]
+GoSub, TabSel
 SavePrompt := true
+return
+
+FuncTab:
+GuiControl, 1:, AutoKey
+GuiControl, 1:, ManKey
+GuiControl, 1:, JoyKey
+GuiControl, chTimes:, TimesG, 1
+GuiControl, 1:Disable, AutoKey
+GuiControl, 1:Disable, ManKey
+GuiControl, 1:Disable, JoyKey
+GuiControl, chTimes:Disable, TimesG
+GuiControl, chTimes:Disable, ReptC
+Menu, FuncMenu, Enable, %u_Lang002%`t%_s%Ctrl+Shift+P
+Menu, FuncMenu, Enable, %u_Lang003%`t%_s%Ctrl+Shift+N
+Menu, FuncMenu, Disable, %u_Lang004%`t%_s%Ctrl+Shift+C
+return
+
+MacroTab:
+GuiControl, 1:Enable, AutoKey
+GuiControl, 1:Enable, ManKey
+GuiControl, 1:Enable, JoyKey
+GuiControl, chTimes:Enable, TimesG
+GuiControl, chTimes:Enable, ReptC
+Menu, FuncMenu, Disable, %u_Lang002%`t%_s%Ctrl+Shift+P
+Menu, FuncMenu, Disable, %u_Lang003%`t%_s%Ctrl+Shift+N
+Menu, FuncMenu, Enable, %u_Lang004%`t%_s%Ctrl+Shift+C
 return
 
 SaveData:
@@ -9780,36 +10020,18 @@ return
 
 MoveSelDn:
 Gui, chMacro:Default
-RowSelection := LV_GetCount("Selected")
-If (RowSelection = 0)
-	return
-RowNumber := 0, SelectedRows := ""
-Loop, % RowSelection
-{
-	RowNumber := LV_GetNext(RowNumber)
-,	SelectedRows := RowNumber "|" SelectedRows
-}
-SelectedRows := RTrim(SelectedRows, "|")
-Loop, Parse, SelectedRows, |
-{
-	LV_Modify(A_LoopField+1, "Select")
-,	LV_Modify(A_LoopField, "-Select")
-}
+LVManager.Move()
+GoSub, RowCheck
+GoSub, b_Start
+GuiControl, Focus, InputList%A_List%
 return
 
 MoveSelUp:
 Gui, chMacro:Default
-RowSelection := LV_GetCount("Selected")
-If (RowSelection = 0)
-	return
-RowNumber := 0
-Loop, % RowSelection
-{
-	RowNumber := LV_GetNext(RowNumber)
-,	LV_Modify(RowNumber, "-Select")
-	If (RowNumber > 1)
-		LV_Modify(RowNumber-1, "Select")
-}
+LVManager.Move(true)
+GoSub, RowCheck
+GoSub, b_Start
+GuiControl, Focus, InputList%A_List%
 return
 
 InvertSel:
@@ -9830,7 +10052,7 @@ return
 
 CheckSel:
 Gui, chMacro:Default
-RowNumber = 0
+RowNumber := 0
 Loop
 {
 	RowNumber := LV_GetNext(RowNumber)
@@ -9843,7 +10065,7 @@ return
 
 UnCheckSel:
 Gui, chMacro:Default
-RowNumber = 0
+RowNumber := 0
 Loop
 {
 	RowNumber := LV_GetNext(RowNumber)
@@ -9856,7 +10078,7 @@ return
 
 InvertCheck:
 Gui, chMacro:Default
-RowNumber = 0
+RowNumber := 0
 Loop
 {
 	RowNumber := LV_GetNext(RowNumber)
@@ -9891,7 +10113,7 @@ If (RowSelection = 0)
 	LV_Modify(0, "Col4", (InStr(Rept, "%") ? Rept : TimesM))
 Else
 {
-	RowNumber = 0
+	RowNumber := 0
 	Loop, %RowSelection%
 	{
 		RowNumber := LV_GetNext(RowNumber)
@@ -9910,7 +10132,7 @@ If (RowSelection = 0)
 	LV_Modify(0, "Col5", (InStr(Delay, "%") ? Delay : DelayG))
 Else
 {
-	RowNumber = 0
+	RowNumber := 0
 	Loop, %RowSelection%
 	{
 		RowNumber := LV_GetNext(RowNumber)
@@ -9930,8 +10152,8 @@ If (sInput = "")
 	return
 sKey := RegExReplace(sInput, "(.$)", "$l1"), tKey := sKey
 GoSub, Replace
-sKey := "{" sKey "}", RowSelection := LV_GetCount("Selected")
-If (RowSelection = 0)
+sKey := "{" sKey "}", RowSelection := LV_GetCount("Selected"), LV_GetText(RowType, LV_GetNext(), 6)
+If ((RowSelection = 0) || ((RowType = cType47) || RowType = cType48))
 {
 	LV_Add("Check", ListCount%A_List%+1, tKey, sKey, 1, DelayG, cType1)
 	GoSub, b_Start
@@ -9939,7 +10161,7 @@ If (RowSelection = 0)
 }
 Else
 {
-	RowNumber = 0
+	RowNumber := 0
 	Loop, %RowSelection%
 	{
 		RowNumber := LV_GetNext(RowNumber)
@@ -10012,8 +10234,8 @@ Else
 	If (TimesX = 0)
 		TimesX := 1
 	Gui, chMacro:Default
-	RowSelection := LV_GetCount("Selected")
-	If (RowSelection = 0)
+	RowSelection := LV_GetCount("Selected"), LV_GetText(RowType, LV_GetNext(), 6)
+	If ((RowSelection = 0) || ((RowType = cType47) || RowType = cType48))
 	{
 		LV_Add("Check", ListCount%A_List%+1, tKey, sKey, TimesX, DelayX, cType1)
 		GoSub, b_Start
@@ -10108,7 +10330,7 @@ GoSub, b_Enable
 GoSub, UpdateCopyTo
 Gui, 1:-Disabled
 Gui, 32:Destroy
-Project := ""
+Project := "", SavePrompt := true
 return
 
 EditMacrosCancel:
@@ -10131,7 +10353,12 @@ If (A_GuiEvent == "E")
 If (A_GuiEvent == "e")
 {
 	InEdit := 0
-,	LV_GetText(AfterEdit, EditRow, 1)
+	If (InStr(BeforeEdit, "()"))
+	{
+		LV_Modify(EditRow, "", BeforeEdit)
+		return
+	}
+	LV_GetText(AfterEdit, EditRow, 1)
 	If (!RegExMatch(AfterEdit, "^\w+$"))
 	{
 		LV_Modify(EditRow, "", BeforeEdit)
@@ -10182,6 +10409,14 @@ Gui, 33:Add, Text, -Wrap yp+3 x+10 W100, %t_Lang004%
 Gui, 33:Add, Button, Section Default -Wrap xm W75 H23 gEditMacroOK, %c_Lang020%
 Gui, 33:Add, Button, Wrap ys W75 H23 gEditMacroCancel, %c_Lang021%
 Gui, 33:Add, Updown, ys x+90 W50 H20 Horz vEditSel gSelList Range0-1
+If (InStr(Macro, "()"))
+{
+	GuiControl, 33:Disable, Macro
+	GuiControl, 33:Disable, AutoKey
+	GuiControl, 33:Disable, ManKey
+	GuiControl, 33:Disable, TE
+	GuiControl, 33:Disable, TimesX
+}
 Gui, 33:Show,, %w_Lang019%
 return
 
@@ -10197,12 +10432,12 @@ EditMacroOK:
 Gui, 33:+OwnDialogs
 Gui, 33:Submit, NoHide
 Gui, 32:Default
-If (!RegExMatch(Macro, "^\w+$"))
+If ((!InStr(Macro, "()")) && (!RegExMatch(Macro, "^\w+$")))
 {
 	MsgBox, 16, %d_Lang007%, %d_Lang049%
 	return
 }
-Else
+Else If (!InStr(Macro, "()"))
 {
 	Loop, % LV_GetCount()
 	{
@@ -10224,12 +10459,12 @@ NewRow := EditSel ? (RowNumber + 1) : (RowNumber - 1)
 Gui, 33:+OwnDialogs
 Gui, 33:Submit, NoHide
 Gui, 32:Default
-If (!RegExMatch(Macro, "^\w+$"))
+If ((!InStr(Macro, "()")) && (!RegExMatch(Macro, "^\w+$")))
 {
 	MsgBox, 16, %d_Lang007%, %d_Lang049%
 	return
 }
-Else
+Else If (!InStr(Macro, "()"))
 {
 	Loop, % LV_GetCount()
 	{
@@ -10256,6 +10491,22 @@ GuiControl, 33:, Macro, %Macro%
 GuiControl, 33:, AutoKey, %AutoKey%
 GuiControl, 33:, ManKey, %ManKey%
 GuiControl, 33:, TimesX, %TimesX%
+If (InStr(Macro, "()"))
+{
+	GuiControl, 33:Disable, Macro
+	GuiControl, 33:Disable, AutoKey
+	GuiControl, 33:Disable, ManKey
+	GuiControl, 33:Disable, TE
+	GuiControl, 33:Disable, TimesX
+}
+Else
+{
+	GuiControl, 33:Enable, Macro
+	GuiControl, 33:Enable, AutoKey
+	GuiControl, 33:Enable, ManKey
+	GuiControl, 33:Enable, TE
+	GuiControl, 33:Enable, TimesX
+}
 return
 
 Edit:
@@ -10271,6 +10522,12 @@ If (Type = cType21)
 	Goto, EditVar
 If ((Type = cType44) || (Type = cType46))
 	Goto, EditFunc
+If (Type = cType47)
+	Goto, EditUserFunc
+If (Type = cType48)
+	Goto, EditParam
+If (Type = cType49)
+	Goto, EditReturn
 If (Action = "[Control]")
 	Goto, EditControl
 If ((Details = "EndIf") || (Details = "Else") || (Action = "[LoopEnd]"))
@@ -10350,7 +10607,7 @@ If Type in %cType1%,%cType2%,%cType3%,%cType4%,%cType8%,%cType9%,%cType13%
 }
 Gui, 15:Show,, %w_Lang019%: %Type%
 If (Window = "")
-	Window = A
+	Window := "A"
 Input
 Tooltip
 return
@@ -10626,7 +10883,7 @@ If (RowSelection = 0)
 }
 Else
 {
-	RowNumber = 0
+	RowNumber := 0
 	Loop, %RowSelection%
 	{
 		RowNumber := LV_GetNext(RowNumber)
@@ -10791,7 +11048,7 @@ If (RowSelection = 1)
 	LV_Modify(RowNumber, "Col9", Comment)
 Else If (RowSelection = 0)
 {
-	RowNumber = 0
+	RowNumber := 0
 	Loop
 	{
 		RowNumber := A_Index
@@ -10802,7 +11059,7 @@ Else If (RowSelection = 0)
 }
 Else
 {
-	RowNumber = 0
+	RowNumber := 0
 	Loop, %RowSelection%
 	{
 		RowNumber := LV_GetNext(RowNumber)
@@ -10865,7 +11122,7 @@ If (RowSelection = 1)
 	LV_Modify(RowNumber, "Col10", rColor)
 Else If (RowSelection = 0)
 {
-	RowNumber = 0
+	RowNumber := 0
 	Loop
 	{
 		RowNumber := A_Index
@@ -10876,7 +11133,7 @@ Else If (RowSelection = 0)
 }
 Else
 {
-	RowNumber = 0
+	RowNumber := 0
 	Loop, %RowSelection%
 	{
 		RowNumber := LV_GetNext(RowNumber)
@@ -10946,7 +11203,7 @@ return
 
 SearchCol:
 Gui, 18:Submit, NoHide
-SeIsType := ((SearchCol = 1) || (SearchCol = 5)) ? 1 : 0
+SeIsType := ((SearchCol = 1) || (SearchCol = 5))
 GuiControl, 18:Disable%SeIsType%, Replace
 GuiControl, 18:Disable%SeIsType%, ReplaceOK
 GuiControl, 18:Disable%SeIsType%, RepSelRows
@@ -11247,6 +11504,8 @@ Loop, %TabCount%
 		aHK_On := [A_Index]
 StopIt := 0
 f_RunMacro:
+If (InStr(TabGetText(TabSel, aHK_On[1]), "()"))
+	return
 If (CheckDuplicateLabels())
 {
 	MsgBox, 16, %d_Lang007%, %d_Lang050%
@@ -11261,6 +11520,8 @@ f_ManKey:
 Loop, %TabCount%
 	If (o_ManKey[A_Index] = A_ThisHotkey)
 		mHK_On := A_Index
+If (InStr(TabGetText(TabSel, mHK_On), "()"))
+	return
 StopIt := 0
 Playback(mHK_On, 0, mHK_On)
 return
@@ -12941,16 +13202,29 @@ GuiControl, 28:, OSHK, %A_List%
 return
 
 b_Enable:
+Gui, 1:+OwnDialogs
 Gui, chMacro:Default
 Gui, chMacro:ListView, InputList%A_List%
 ListCount%A_List% := LV_GetCount(), ListCount := 0
+DebugCheckError := false
 Loop, %TabCount%
 {
 	ListCount += ListCount%A_Index%
 	If (DebugCheckLoop%A_Index%)
-		MsgBox, 16, %d_Lang007%, %d_Lang085%%A_Index%
+	{
+		DebugCheckError := true
+		MsgBox, 16, %d_Lang007%, % d_Lang085 A_Index " (" TabGetText(TabSel, A_Index) ")"
+	}
 	Else If (DebugCheckIf%A_Index%)
-		MsgBox, 16, %d_Lang007%, %d_Lang086%%A_Index%
+	{
+		DebugCheckError := true
+		MsgBox, 16, %d_Lang007%, % d_Lang086 A_Index " (" TabGetText(TabSel, A_Index) ")"
+	}
+	If (DebugDefault%A_Index%)
+	{
+		DebugCheckError := true
+		MsgBox, 16, %d_Lang007%, % TabGetText(TabSel, A_Index) "`n`n" d_Lang098
+	}
 }
 Gui, chMacro:Default
 Gui, chMacro:ListView, InputList%A_List%
@@ -13008,14 +13282,19 @@ Gui, chMacro:ListView, InputList%A_List%
 GuiControl, chMacro:-Redraw, InputList%A_List%
 ListCount%A_List% := LV_GetCount()
 ,	IdxLv := "", ActLv := "", IsInIf := 0, IsInLoop := 0, RowColorLoop := 0, RowColorIf := 0
+,	IsUserFunc := InStr(TabGetText(TabSel, A_List), "()")
+,	BadCmd := false, BadPos := false, FuncLn := false, MustDefault := false, DebugDefault%A_List% := false
 Critical
 Loop, % LV_GetCount()
 {
 	LV_GetText(Action, A_Index, 2)
-	Action := LTrim(Action)
-	LV_GetText(Type, A_Index, 6)
-	LV_GetText(Color, A_Index, 10)
-	LV_Modify(A_Index, "Col2", Action)
+,	Action := LTrim(Action)
+,	LV_GetText(Details, A_Index, 3)
+,	LV_GetText(Type, A_Index, 6)
+,	LV_GetText(Color, A_Index, 10)
+,	LV_Modify(A_Index, "Col2", Action)
+	If (Type = "")
+		break
 	If (ShowLoopIfMark = 1)
 	{
 		OnMessage(WM_NOTIFY, "LV_ColorsMessage")
@@ -13049,6 +13328,30 @@ Loop, % LV_GetCount()
 			ActLv .= (ShowActIdent) ? "   " : ""
 		Else If ((Type = cType17) && (Action != "[Else]"))
 			ActLv .= (ShowActIdent) ? "   " : ""
+	}
+	If (IsUserFunc)
+	{
+		If (Type = cType47)
+			FuncLn := true
+		If Type in %cType35%,%cType36%,%cType37%
+		{
+			LV_Delete(A_Index), BadCmd := true
+			break
+		}
+		If ((FuncLn) && (Type = cType48))
+		{
+			LV_Delete(A_Index), BadPos := true
+			break
+		}
+		Else If ((!FuncLn) && (Type != cType48))
+		{
+			LV_Delete(A_Index), BadPos := true
+			break
+		}
+		If ((MustDefault) && (Type = cType48) && (!InStr(Details, " := ")))
+			DebugDefault%A_List% := true
+		If ((Type = cType48) && (InStr(Details, " := ")))
+			MustDefault := true
 	}
 	LV_Modify(A_Index, "", A_Index " " IdxLv)
 ,	(Action = "[Text]") ? LV_Modify(A_Index, "Icon" IconsNames["text"])
@@ -13106,6 +13409,14 @@ GuiControl, chMacro:+Redraw, InputList%A_List%
 FreeMemory()
 DebugCheckLoop%A_List% := RowColorLoop
 DebugCheckIf%A_List% := RowColorIf
+If (BadPos)
+	GoSub, RowCheck
+If (BadCmd)
+{
+	GoSub, RowCheck
+	Gui, 1:+OwnDialogs
+	MsgBox, 16, %d_Lang007%, %d_Lang100%
+}
 return
 
 RecKeyUp:
@@ -13883,7 +14194,7 @@ Gui, chMacro:Listview, InputList%A_List%
 If A_OSVersion in WIN_2003,WIN_XP,WIN_2000
 {
 	Gui, 1:+OwnDialogs
-	MsgBox, 16, %d_Lang007%, %d_Lang094%
+	MsgBox, 64, %AppName%, %d_Lang094%
 	return
 }
 TB_Edit(TbEdit, "GroupsMode", ShowGroups := !ShowGroups)
@@ -13969,6 +14280,10 @@ GoSub, LoadLang
 GoSub, CreateMenuBar
 Menu, LangMenu, Uncheck, % Lang_%CurrentLang%
 Menu, LangMenu, Check, % Lang_%Lang%
+If (InStr(TabGetText(TabSel, A_List), "()"))
+	GoSub, FuncTab
+Else
+	GoSub, MacroTab
 CurrentLang := Lang
 
 Gui, chMacro:Default

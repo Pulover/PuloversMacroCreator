@@ -515,6 +515,9 @@
 	c_Lang220 =	
 	c_Lang221 =	
 	c_Lang222 =	
+	c_Lang223 =	
+	c_Lang224 =	
+	c_Lang225 =	
 		
 ; Other Windows		
 	t_Lang001 =	Export do AutoHotkey
@@ -868,11 +871,11 @@
 		
 	)	
 	d_Lang098 =	
-	(LTrim	
-		
-		
-	)	
 	d_Lang099 =	
+	d_Lang100 =	
+	d_Lang101 =	
+	d_Lang102 =	
+	d_Lang103 =	
 		
 ; Start-up Tips		
 	Start_Tips =	
