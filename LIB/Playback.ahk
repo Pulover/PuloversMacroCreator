@@ -532,6 +532,7 @@
 				,	pbVarName := VarName
 				,	pbVarValue := VarValue
 				,	pbParams := Object()
+					OutputDebug, % Eval(pbVarValue, PointMarker)
 					Loop, Parse, pbVarValue, `,, %A_Space%
 						pbParams.Push({Name: A_LoopField})
 					tlResult := ExtractArrays(Target, PointMarker)
@@ -1138,7 +1139,7 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC, ByRef LoopCount, ScopedP
 				,	pbVarName := VarName
 				,	pbVarValue := VarValue
 				,	pbParams := Object()
-					Loop, Parse, pbVarValue, `,, %A_Space%""
+					Loop, Parse, pbVarValue, `,, %A_Space%
 						pbParams.Push({Name: A_LoopField})
 					tlResult := ExtractArrays(Target, PointMarker)
 				,	Target := IsObject(tlResult) ? "tlResult" : tlResult

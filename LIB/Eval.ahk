@@ -1,11 +1,11 @@
-Eval(x, l_Point)
+Eval($x, l_Point)
 {
-   Local y, Result, CompiledExpression, LastFuncRun, Func_Result
+   Local $y, $Result, CompiledExpression, LastFuncRun, Func_Result
 		, Funct, Funct1, Funct2, Funct3
 
-	While (RegExMatch(x, "\b([\w\d_]+)\b\.([\w%]+)\((.*?)\)", Funct))  ; Methods
+	While (RegExMatch($x, "\b([\w\d_]+)\b\.([\w%]+)\((.*?)\)", Funct))  ; Methods
 	{
-		y := x
+		$y := $x
 		If (IsObject(%Funct1%))
 		{
 			Params := Object()
@@ -24,16 +24,16 @@ Eval(x, l_Point)
 					Func_Result := """" Func_Result """"
 			}
 			Func_Result := StrReplace(Func_Result, "`,", "```,")
-		,	x := StrReplace(x, Funct, Func_Result)
+		,	$x := StrReplace($x, Funct, Func_Result)
 		}
-		If (y = x)
+		If ($y = $x)
 			break
 	}
-	While (RegExMatch(x, "([\w_]+)\((.*?)\)", Funct))  ; Functions
+	While (RegExMatch($x, "([\w_]+)\((.*?)\)", Funct))  ; Functions
 	{
 		If ((IsFunc(Funct1)) && ((Func(Funct1).IsBuiltIn) || (Func1 = "Screenshot")))
 			break
-		y := x
+		$y := $x
 		Loop, %TabCount%
 		{
 			TabIdx := A_Index
@@ -65,13 +65,13 @@ Eval(x, l_Point)
 								Func_Result := """" Func_Result """"
 						}
 						Func_Result := StrReplace(Func_Result, "`,", "```,")
-					,	x := StrReplace(x, Funct, Func_Result)
+					,	$x := StrReplace($x, Funct, Func_Result)
 						break 2
 					}
 				}
 			}
 		}
-		If (x = y)
+		If ($x = $y)
 		{
 			If ((IsFunc(Funct1)) && (!Func(Funct1).IsBuiltIn))
 				return ""
@@ -79,22 +79,22 @@ Eval(x, l_Point)
 		}
 	}
 	
-	If (RegExMatch(x, "[\w\d_]+\[\S+\]", _Match)) ; Read Arrays
+	If (RegExMatch($x, "[\w\d_]+\[\S+\]", _Match)) ; Read Arrays
 	{
-		y := ExtractArrays(x, l_Point)
-		If (IsObject(y))
-			return y
-		If (y = "_ArrayObject")
-			y := %LoopField%
-		Else If y is not Number
-			y := """" y """"
+		$y := ExtractArrays($x, l_Point)
+		If (IsObject($y))
+			return $y
+		If ($y = "_ArrayObject")
+			$y := %LoopField%
+		Else If $y is not Number
+			$y := """" $y """"
 		Func_Result := StrReplace(Func_Result, "`,", "```,") 
-		x := StrReplace(x, _Match, y)
+		$x := StrReplace($x, _Match, $y)
 	}
 	
-	If (RegExMatch(x, "^\s*\[(.*)\]\s*$", Found)) ; Assign Arrays
+	If (RegExMatch($x, "^\s*\[(.*)\]\s*$", Found)) ; Assign Arrays
 	{
-		y := [], Found1 := StrReplace(Found1, "```,", "`,")
+		$y := [], Found1 := StrReplace(Found1, "```,", "`,")
 		Loop, Parse, Found1, `,, %A_Space%%A_Tab%
 		{
 			LoopField := A_LoopField
@@ -114,23 +114,23 @@ Eval(x, l_Point)
 				Else
 					LoopField := DerefVars("%" LoopField "%")
 			}
-			y.Push(LoopField)
+			$y.Push(LoopField)
 		}
-		return y
+		return $y
 	}
 
 	Try
 	{
-		If (IsObject(%x%))
-			return %x%.Clone()
+		If (IsObject(%$x%))
+			return %$x%.Clone()
 	}
 	
 	ExprInit()
-	CompiledExpression := ExprCompile(x)
-	Result := ExprEval(CompiledExpression, l_Point)
+	CompiledExpression := ExprCompile($x)
+	$Result := ExprEval(CompiledExpression, l_Point)
 
-	Result := StrReplace(Result, Chr(1), A_Space) ;format output list for viewing
-	return Result
+	Result := StrReplace(Result, Chr(1), "`n") ;format output list for viewing
+	return $Result
 }
 
 CheckParam(Param, l_Point)
@@ -205,18 +205,12 @@ Exprp1(ou,t1)
 }Return,ou
 }
 ExprEval(e,lp)
-{global __lv
+{global __lv ; Lined modified for PMC
 c1:=Chr(1)
 Loop,Parse,e,%c1%
 {lf:=A_LoopField,tt:=SubStr(lf,1,1),t:=SubStr(lf,2)
-If tt=v
-__lv:="%" . SubStr(lf, 2) . "%",CheckVars("__lv",lp),n .= "v__lv" . c1
-Else n .= A_LoopField . c1
-}e := RTrim(n, c1)
-Loop,Parse,e,%c1%
-{lf:=A_LoopField,tt:=SubStr(lf,1,1),t:=SubStr(lf,2)
 If tt In l,v
-Exprp1(s,lf)
+lf:=Exprp1(s,lf)
 Else{
 If tt=f
 t1:=InStr(t," "),a:=SubStr(t,1,t1-1),t:=SubStr(t,t1+1)
@@ -226,7 +220,7 @@ Exprp1(s,Exprap(t,s,a))
 Loop,Parse,s,%c1%
 {lf:=A_LoopField
 If (SubStr(lf,1,1)="v")
-t1:=SubStr(lf,2),r.=%t1% . c1
+t1:=SubStr(lf,2),__lv:="%" . t1 . "%",CheckVars("__lv",lp),r.=__lv . c1 ; Lined modified for PMC
 Else r.=SubStr(lf,2) . c1
 }Return,SubStr(r,1,-1)
 }
