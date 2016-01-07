@@ -1912,7 +1912,7 @@ Gui, chMacro:Default
 Loop, %TabCount%
 {
 	LVManager.SetHwnd(ListID%A_Index%)
-,	PMCSet := "[PMC Code]|" o_AutoKey[A_Index]
+,	PMCSet := "[PMC Code v" CurrentVersion "]|" o_AutoKey[A_Index]
 	. "|" o_ManKey[A_Index] "|" o_TimesG[A_Index]
 	. "|" CoordMouse "|" OnFinishCode "|" TabGetText(TabSel, A_Index) "`n"
 ,	TabGroups := "Groups=" LVManager.GetGroups() "`n"
@@ -1942,7 +1942,7 @@ IfExist %ThisListFile%
         return
     }
 }
-PMCSet := "[PMC Code]|" o_AutoKey[A_List]
+PMCSet := "[PMC Code v" CurrentVersion "]|" o_AutoKey[A_List]
 . "|" o_ManKey[A_List] "|" o_TimesG[A_List]
 . "|" CoordMouse "|" OnFinishCode "|" TabGetText(TabSel, A_List) "`n"
 ,	TabGroups := "Groups=" LVManager.GetGroups() "`n"
@@ -1958,7 +1958,7 @@ FileDelete, %SettingsFolder%\~ActiveProject.pmc
 Loop, %TabCount%
 {
 	LVManager.SetHwnd(ListID%A_Index%)
-,	PMCSet := "[PMC Code]|" o_AutoKey[A_Index]
+,	PMCSet := "[PMC Code v" CurrentVersion "]|" o_AutoKey[A_Index]
 	. "|" o_ManKey[A_Index] "|" o_TimesG[A_Index]
 	. "|" CoordMouse "|" OnFinishCode "|" TabGetText(TabSel, A_Index) "`n"
 ,	TabGroups := "Groups=" LVManager.GetGroups() "`n"
@@ -2029,12 +2029,12 @@ SplitPath, CurrentFileName, name, dir, ext, name_no_ext, drive
 If (!A_AhkPath)
 	Exe_Exp := 0
 UserVarsList := User_Vars.Get()
-Gui, 14:+owner1 -MinimizeBox +E0x00000400 +Delimiter¢ +HwndCmdWin
+Gui, 14:+owner1 -MinimizeBox +E0x00000400 +Delimiter%_x% +HwndCmdWin
 Gui, 14:Default
 Gui, 1:+Disabled
 ; Macros
 Gui, 14:Add, GroupBox, Section W450 H190, %t_Lang002%:
-Gui, 14:Add, ListView, ys+20 xs+10 AltSubmit Checked W430 r5 vExpList gExpEdit NoSort -ReadOnly, %t_Lang147%¢%w_Lang005%¢%t_Lang003%¢%t_Lang006%
+Gui, 14:Add, ListView, ys+20 xs+10 AltSubmit Checked W430 r5 vExpList gExpEdit NoSort -ReadOnly, %t_Lang147%%_x%%w_Lang005%%_x%%t_Lang003%%_x%%t_Lang006%
 Gui, 14:Add, Text, -Wrap W430, %t_Lang144%
 Gui, 14:Add, Button, -Wrap W75 H23 gCheckAll, %t_Lang007%
 Gui, 14:Add, Button, -Wrap yp x+5 W75 H23 gUnCheckAll, %t_Lang008%
@@ -2058,18 +2058,18 @@ Gui, 14:Add, Progress, ys W175 H20 vExpProgress
 ; Context
 Gui, 14:Add, GroupBox, Section y+25 xm W450 H80
 Gui, 14:Add, Checkbox, -Wrap Section ys xs vEx_IfDir gEx_Checks R1, %t_Lang009%:
-Gui, 14:Add, DDL, xs+10 W105 vEx_IfDirType Disabled, #IfWinActive¢¢#IfWinNotActive¢#IfWinExist¢#IfNotWinExist
-Gui, 14:Add, DDL, yp x+250 W75 vIdent Disabled, Title¢¢Class¢Process¢ID¢PID
+Gui, 14:Add, DDL, xs+10 W105 vEx_IfDirType Disabled, #IfWinActive%_x%%_x%#IfWinNotActive%_x%#IfWinExist%_x%#IfNotWinExist
+Gui, 14:Add, DDL, yp x+250 W75 vIdent Disabled, Title%_x%%_x%Class%_x%Process%_x%ID%_x%PID
 Gui, 14:Add, Edit, xs+10 W400 vTitle Disabled
 Gui, 14:Add, Button, -Wrap yp-1 x+0 W30 H23 vGetWin gGetWin Disabled, ...
 ; Options
 Gui, 14:Add, GroupBox, Section xm W450 H270, %w_Lang003%:
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_SM% ys+20 xs+10 W140 vEx_SM R1, SendMode
-Gui, 14:Add, DDL, yp-3 x+5 vSM w75, Input¢¢Play¢Event¢InputThenPlay
+Gui, 14:Add, DDL, yp-3 x+5 vSM w75, Input%_x%%_x%Play%_x%Event%_x%InputThenPlay
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_SI% y+5 xs+10 W140 vEx_SI R1, #SingleInstance
-Gui, 14:Add, DDL, yp-3 x+5 vSI w75, Force¢Ignore¢¢Off
+Gui, 14:Add, DDL, yp-3 x+5 vSI w75, Force%_x%Ignore%_x%%_x%Off
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_ST% y+5 xs+10 W140 vEx_ST R1, SetTitleMatchMode
-Gui, 14:Add, DDL, yp-3 x+5 vST w75, 1¢2¢¢3¢RegEx
+Gui, 14:Add, DDL, yp-3 x+5 vST w75, 1%_x%2%_x%%_x%3%_x%RegEx
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_DH% y+5 xs+10 W220 vEx_DH R1, DetectHiddenWindows
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_AF% y+8 W220 vEx_AF R1, #WinActivateForce
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_PT% y+8 W220 vEx_PT R1, #Persistent
@@ -2175,7 +2175,7 @@ RowNumber := LV_GetNext()
 ,	LV_GetText(Ex_AutoKey, RowNumber, 2)
 ,	LV_GetText(Ex_TimesX, RowNumber, 3)
 ,	LV_GetText(Ex_BM, RowNumber, 4)
-Gui, 13:+owner14 +ToolWindow +Delimiter¢ +HwndExLVEdit
+Gui, 13:+owner14 +ToolWindow +Delimiter%_x% +HwndExLVEdit
 Gui, 14:Default
 Gui, 14:+Disabled
 Gui, 13:Add, GroupBox, Section xm W270 H105
@@ -2189,10 +2189,10 @@ Gui, 13:Add, Text, yp+3 x+10 , %t_Lang004%
 Gui, 13:Add, Button, Section Default -Wrap xm W75 H23 gExpEditOK, %c_Lang020%
 Gui, 13:Add, Button, -Wrap ys W75 H23 gExpEditCancel, %c_Lang021%
 Gui, 13:Add, Updown, ys x+60 W50 H20 Horz vExpSel gExpSelList Range0-1
-If (InStr(KeybdList, Ex_AutoKey "¢"))
+If (InStr(KeybdList, Ex_AutoKey _x))
 	GuiControl, 13:ChooseString, Ex_AutoKey, %Ex_AutoKey%
 Else
-	GuiControl, 13:, Ex_AutoKey, %Ex_AutoKey%¢¢
+	GuiControl, 13:, Ex_AutoKey, %Ex_AutoKey%%_x%%_x%
 Gui, 13:Show,, %w_Lang019%
 return
 
@@ -2446,7 +2446,7 @@ Loop, % LV_GetCount()
 	Body := LV_Export(RowNumber), AutoKey .= Ex_AutoKey "`n"
 	GoSub, ExportOpt
 	AllScripts .= Body "`n"
-	PMCSet := "[PMC Code]|" Ex_AutoKey
+	PMCSet := "[PMC Code v" CurrentVersion "]|" Ex_AutoKey
 	. "|" o_ManKey[RowNumber] "|" Ex_TimesX
 	. "|" CoordMouse "|" OnFinishCode "|" TabGetText(TabSel, RowNumber) "`n"
 	PmcCode .= PMCSet . PMC.LVGet("InputList" RowNumber).Text . "`n"
@@ -4784,9 +4784,9 @@ s_Caller := "Edit"
 KeyWait:
 MsgBox:
 Sleep:
-Gui, 3:+owner1 -MinimizeBox +Delimiter¢ +E0x00000400 +HwndCmdWin
+Gui, 3:+owner1 -MinimizeBox +Delimiter%_x% +E0x00000400 +HwndCmdWin
 Gui, 1:+Disabled
-Gui, 3:Add, Tab2, W450 H0 vTabControl AltSubmit, CmdTab1¢CmdTab2¢CmdTab3
+Gui, 3:Add, Tab2, W450 H0 vTabControl AltSubmit, CmdTab1%_x%CmdTab2%_x%CmdTab3
 ; Sleep
 Gui, 3:Add, GroupBox, Section xm ym W450 H115
 Gui, 3:Add, Text, ys+20 xs+10 W180 Right, %c_Lang050%:
@@ -4816,12 +4816,12 @@ Gui, 3:Add, Groupbox, Section y+12 xs W220 H98, %w_Lang003%:
 Gui, 3:Add, Text, -Wrap ys+20 xs+10 W50 R1 Right, %c_Lang189%:
 Gui, 3:Add, Edit, -Wrap yp x+10 W140 R1 vTitle
 Gui, 3:Add, Text, -Wrap y+10 xs+10 W50 R1 Right, %c_Lang147%:
-Gui, 3:Add, DDL, yp-2 x+10 W115 AltSubmit vIcon, %c_Lang148%¢¢%c_Lang149%¢%c_Lang150%¢%c_Lang151%¢%c_Lang152%
+Gui, 3:Add, DDL, yp-2 x+10 W115 AltSubmit vIcon, %c_Lang148%%_x%%_x%%c_Lang149%%_x%%c_Lang150%%_x%%c_Lang151%%_x%%c_Lang152%
 Gui, 3:Add, Checkbox, -Wrap W200 y+5 xs+10 vAot R1, %c_Lang153%
 Gui, 3:Add, Groupbox, Section ys x+20 W220 H98, %c_Lang185%:
 Gui, 3:Add, DDL, ys+20 xs+10 W200 AltSubmit vButtons,
-(Join¢
-%c_Lang170%¢
+(Join%_x%
+%c_Lang170%%_x%
 %c_Lang170%/%c_Lang171%
 %c_Lang172%/%c_Lang173%/%c_Lang174%
 %c_Lang168%/%c_Lang169%/%c_Lang171%
@@ -4830,7 +4830,7 @@ Gui, 3:Add, DDL, ys+20 xs+10 W200 AltSubmit vButtons,
 %c_Lang171%/%c_Lang176%/%c_Lang175%
 )
 Gui, 3:Add, Text, y+10 xs+10 W75 R1 Right, %t_Lang063%:
-Gui, 3:Add, DDL, yp-2 x+10 W115 AltSubmit vDefault, %c_Lang186%¢¢%c_Lang187%¢%c_Lang188%
+Gui, 3:Add, DDL, yp-2 x+10 W115 AltSubmit vDefault, %c_Lang186%%_x%%_x%%c_Lang187%%_x%%c_Lang188%
 Gui, 3:Add, CheckBox, -Wrap y+5 xs+10 W200 vAddIf, %c_Lang162%
 ; KeyWait
 Gui, 3:Tab, 3
@@ -5197,11 +5197,11 @@ If (s_Caller = "Edit")
 	Else
 	{
 		EscCom("Details|TimesX|DelayX", 1)
-		StringReplace, Details, Details, ```,, ¢, All
+		StringReplace, Details, Details, ```,, %_x%, All
 		Loop, Parse, Details, `,, %A_Space%
 		{
 			Par%A_Index% := A_LoopField
-			StringReplace, Par%A_Index%,  Par%A_Index%, ¢, ```,, All
+			StringReplace, Par%A_Index%,  Par%A_Index%, %_x%, ```,, All
 		}
 		If (Type = cType7)
 		{
@@ -5748,7 +5748,7 @@ Else If (WinCom = "WinSetTitle")
 {
 	GoSub, ClearPars
 	EscCom("Value")
-	StringReplace, Title, Title, ```,, ¢, All
+	StringReplace, Title, Title, ```,, %_x%, All
 	StringSplit, Par, Title, `,, %A_Space%
 	If ((Par0 <= 1) && (Value != ""))
 	{
@@ -5761,7 +5761,7 @@ Else If (WinCom = "WinSetTitle")
 		Title := ""
 		Loop, % Par0 + 1
 		{
-			StringReplace, Par%A_Index%,  Par%A_Index%, ¢, ```,, All
+			StringReplace, Par%A_Index%,  Par%A_Index%, %_x%, ```,, All
 			Title .= Par%A_Index% ", "
 		}
 		Title := RTrim(Title, ", ")
@@ -6411,10 +6411,10 @@ Gui, 10:Default
 If (s_Caller = "Edit")
 {
 	GuiControl, 10:ChooseString, FileCmdL, %Type%
-	StringReplace, Details, Details, `````,, ¢, All
+	StringReplace, Details, Details, `````,, %_x%, All
 	Loop, Parse, Details, `,, %A_Space%
 	{
-		StringReplace, LoopField, A_LoopField, ¢, `,, All
+		StringReplace, LoopField, A_LoopField, %_x%, `,, All
 		GuiControl, 10:, Par%A_Index%File, %LoopField%
 	}
 	GuiControl, 10:Enable, RunApply
@@ -6501,9 +6501,9 @@ Loop, 11
 		Details .= Par%A_Index%File "`, "
 	}
 }
-StringReplace, Details, Details, ```,, ¢, All
+StringReplace, Details, Details, ```,, %_x%, All
 Details := RTrim(Details, ", ")
-StringReplace, Details, Details, ¢, ```,, All
+StringReplace, Details, Details, %_x%, ```,, All
 If (A_ThisLabel != "RunApply")
 {
 	Gui, 1:-Disabled
@@ -7384,7 +7384,7 @@ If (s_Caller = "Edit")
 	EscCom("Details|TimesX|DelayX|Target|Window", 1)
 	Loop, Parse, Details, `,,%A_Space%
 	{
-		StringReplace, LoopField, A_LoopField, ¢, `,, All
+		StringReplace, LoopField, A_LoopField, %_x%, `,, All
 		Par%A_Index% := LoopField
 	}
 	GuiControl, 22:ChooseString, MsgType, %Type%
@@ -10179,12 +10179,12 @@ Gui, 1:Submit, NoHide
 Gui, chMacro:Default
 If (A_GuiControl = "InsertKeyT")
 {
-	Gui, 7:+owner8 +ToolWindow +Delimiter¢
+	Gui, 7:+owner8 +ToolWindow +Delimiter%_x%
 	InsertToText := true
 }
 Else
 {
-	Gui, 7:+owner1 +ToolWindow +Delimiter¢
+	Gui, 7:+owner1 +ToolWindow +Delimiter%_x%
 	InsertToText := false
 }
 Gui, 7:Add, Groupbox, Section W360 H240
@@ -10390,7 +10390,7 @@ RowNumber := LV_GetNext()
 ,	LV_GetText(AutoKey, RowNumber, 2)
 ,	LV_GetText(ManKey, RowNumber, 3)
 ,	LV_GetText(TimesX, RowNumber, 4)
-Gui, 33:+owner32 +ToolWindow +Delimiter¢ +HwndLVEdit
+Gui, 33:+owner32 +ToolWindow +Delimiter%_x% +HwndLVEdit
 Gui, 32:Default
 Gui, 32:+Disabled
 Gui, 33:Add, Groupbox, Section xm W300 H130
@@ -12526,13 +12526,13 @@ If (InStr(FileCmdList, Type "|"))
 	{
 		LoopField := A_LoopField
 	,	CheckVars("LoopField", This_Point)
-		StringReplace, LoopField, LoopField, `,, ¢, All
+		StringReplace, LoopField, LoopField, `,, %_x%, All
 		_Step .= LoopField ", "
 	}
 	Step := RTrim(_Step, ", ")
 }
 CheckVars("Step|TimesX|DelayX|Target|Window", This_Point)
-StringReplace, Step, Step, ```,, ¢, All
+StringReplace, Step, Step, ```,, %_x%, All
 StringReplace, Step, Step, ``n, `n, All
 StringReplace, Step, Step, ``r, `r, All
 StringReplace, Step, Step, ``t, `t, All
@@ -12555,11 +12555,11 @@ Loop, Parse, Step, `,, %A_Space%
 		Par%A_Index% := LoopField
 	StringReplace, Par%A_Index%, Par%A_Index%, ``n, `n, All
 	StringReplace, Par%A_Index%, Par%A_Index%, ``r, `r, All
-	StringReplace, Par%A_Index%, Par%A_Index%, ¢, `,, All
+	StringReplace, Par%A_Index%, Par%A_Index%, %_x%, `,, All
 	StringReplace, Par%A_Index%, Par%A_Index%, ⱥ, %A_Space%, All
 	StringReplace, Par%A_Index%, Par%A_Index%, ``,, All
 }
-StringReplace, Step, Step, ¢, `,, All
+StringReplace, Step, Step, %_x%, `,, All
 StringReplace, Step, Step, ⱥ, %A_Space%, All
 StringReplace, Step, Step, ``,, All
 If (Type = cType34)

@@ -630,10 +630,12 @@ CheckForExp(Field)
 
 CheckExp(String)
 {
+	Static _x := Chr(2), _y := Chr(3), _z := Chr(4)
+	
 	If (String = "")
 		return """"""
-	StringReplace, String, String, ```%, ¤, All
-	StringReplace, String, String, `````, , ¢, All
+	StringReplace, String, String, ```%, %_y%, All
+	StringReplace, String, String, `````, , %_x%, All
 	Loop, Parse, String, `,, %A_Space%``
 	{
 		LoopField := (A_LoopField != """""") ? RegExReplace(A_LoopField, """", """""") : A_LoopField
@@ -651,8 +653,8 @@ CheckExp(String)
 		Else
 			NewStr .= """" LoopField """, "
 	}
-	StringReplace, NewStr, NewStr, ¢, `,, All
-	StringReplace, NewStr, NewStr, ¤, `%, All
+	StringReplace, NewStr, NewStr, %_x%, `,, All
+	StringReplace, NewStr, NewStr, %_y%, `%, All
 	NewStr := Trim(RegExReplace(NewStr, " """" "), ", ")
 ,	NewStr := RegExReplace(NewStr, """{4}", """""")
 ,	NewStr := RegExReplace(NewStr, "U)""(-?\d+)""", "$1")

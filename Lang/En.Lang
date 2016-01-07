@@ -876,6 +876,7 @@
 	d_Lang101 =	Use the 'Add Function' to create a function before adding parameters or return.
 	d_Lang102 =	You cannot insert this com.and here.
 	d_Lang103 =	Duplicate function.
+	d_Lang104 =	is a reserved word.
 		
 ; Start-up Tips		
 	Start_Tips =	

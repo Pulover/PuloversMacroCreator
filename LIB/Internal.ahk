@@ -902,6 +902,8 @@ SavedVars(_Var := "", ByRef _Saved := "", AsArray := false)
 						. StrReplace(BIV_Loop, "`n", "`,")
 	Local ListOfVars, i, v
 	
+	If _Var in Action,Step,TimesX,DelayX,Type,Target,Window,VarName,VarValue,Oper
+		TrayTip, %d_Lang011%!, %_Var% %d_Lang104%,, 18
 	If (IsByRef(_Saved))
 	{
 		If (AsArray)

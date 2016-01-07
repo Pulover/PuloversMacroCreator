@@ -13,7 +13,7 @@ Groups=Start:1
 [PMC Code]|F2||1|Window|1|Arrays2
 Groups=Start:1
 1|[Assign Variable]|String := A¢B¢C¢D¢E|1|0|Variable|||||
-2|StrSplit|MyArray := %String%, ¢|1|0|Function|||||
+2|StrSplit|MyArray := String, "¢"|1|0|Function|||||
 3|[LoopStart]|LoopStart|% MyArray.MaxIndex()|0|Loop|||||
 4|[Assign Variable]|ArO := MyArray[A_Index]|1|0|Variable|Expression||||
 5|[MsgBox]|Loop: %A_Index%`nMyArray[%A_Index%]: %ArO%|1|0|MsgBox|262144||||
@@ -34,22 +34,22 @@ Groups=Start:1
 3|[Assign Variable]|N[2] := []|1|0|Variable|Expression||||
 4|[Assign Variable]|N[2][1] := Item 2.1: Multi dimensional array value.|1|0|Variable|||||
 5|[MsgBox]|% N[2][1]|1|0|MsgBox|262144||||
-6|Asc|N[2][2] := A|1|0|Function|||||
+6|Asc|N[2][2] := "A"|1|0|Function|||||
 7|[Assign Variable]|ItemCopy := N[2][2]|1|0|Variable|Expression||||
 8|[MsgBox]|Item 2.2: %ItemCopy%|1|0|MsgBox|262144||||
-9|Push|_null := Item 2.3|1|0|Method|N[2]||||
+9|Push|_null := "Item 2.3"|1|0|Method|N[2]||||
 10|[MsgBox]|% N[2][3]|1|0|MsgBox|262144||||
 
 [PMC Code]|F5||1|Window|1|Methods
 Groups=Start:1
 1|[Assign Variable]|Values := |1|0|Variable|||||
 2|[Assign Variable]|N := []|1|0|Variable|Expression||||
-3|Push|_null := A, B, D|1|0|Method|N||||
+3|Push|_null := "A", "B", "D"|1|0|Method|N||||
 4|[LoopStart]|N`, each`, value|1|0|ForLoop|||||
 5|[Assign Variable]|Values .= %value%`, |1|0|Variable|||||
 6|[LoopEnd]|LoopEnd|1|0|Loop|||||
 7|[MsgBox]|%Values%|1|0|MsgBox|262144||||
-8|InsertAt|_null := 3, C|1|0|Method|N||||
+8|InsertAt|_null := 3, "C"|1|0|Method|N||||
 9|[Assign Variable]|Values := |1|0|Variable|||||
 10|[LoopStart]|N`, each`, value|1|0|ForLoop|||||
 11|[Assign Variable]|Values .= %value%`, |1|0|Variable|||||

@@ -10,11 +10,11 @@ Eval(x, l_Point)
 		{
 			Params := Object()
 		,	Funct3 := StrReplace(Funct3, Funct3, "```,", "`,")
-		,	Funct3 := RegExReplace(Funct3, "U)""(.*),(.*)""", """$1¢$2""")
+		,	Funct3 := RegExReplace(Funct3, "U)""(.*),(.*)""", """$1" _x "$2""")
 			Loop, Parse, Funct3, `,, %A_Space%``""
 			{
 				LoopField := CheckParam(A_LoopField, l_Point)
-			,	LoopField := StrReplace(LoopField, "¢", "`,")
+			,	LoopField := StrReplace(LoopField, _x, "`,")
 			,	Params.Push(LoopField)
 			}
 			Func_Result := %Funct1%[Funct2](Params*)
@@ -48,7 +48,7 @@ Eval(x, l_Point)
 					{
 						Params := Object()
 					,	Funct2 := StrReplace(Funct2, "```,", "`,")
-					,	Funct2 := RegExReplace(Funct2, "U)""(.*),(.*)""", """$1¢$2""")
+					,	Funct2 := RegExReplace(Funct2, "U)""(.*),(.*)""", """$1" _x "$2""")
 						Loop, Parse, Funct2, `,, %A_Space%``
 						{
 							VarName := LoopField
@@ -139,7 +139,7 @@ CheckParam(Param, l_Point)
 	
 	Param := DerefVars(Param)
 ,	Param := StrReplace(Param, "```,", "`,")
-,	Param := StrReplace(Param, "¢", "`,")
+,	Param := StrReplace(Param, _x, "`,")
 	If (RegExMatch(Param, "[\w\d_]+\[\S+\]"))
 	{
 		Param := ExtractArrays(Param, l_Point)
@@ -147,8 +147,8 @@ CheckParam(Param, l_Point)
 			Param := %Param%
 		Else
 		{
-			Param := StrReplace(Param, "¢", "`,")
-		,	Param := StrReplace(Param, "¥Space", A_Space)
+			Param := StrReplace(Param, _x, "`,")
+		,	Param := StrReplace(Param, _z, A_Space)
 		}
 	}
 	Else

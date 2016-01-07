@@ -2,13 +2,13 @@
 {
 	Load(FileName)
 	{
-		local ID, Col, Row := [], Opt := []
-		PmcCode := [], PmcGroups := [], P, ID := 0
+		local ID := 0, Col, Row := [], Opt := []
+		PmcCode := [], PmcGroups := [], P
 		Loop, Read, %FileName%
 		{
-			If (InStr(A_LoopReadLine, "[PMC Code]")=1)
+			If (RegExMatch(A_LoopReadLine, "\[PMC Code(\sv)*(.*)\]", v)=1)
 			{
-				ID++, Row := [], Opt := []
+				ID++, Row := [], Opt := [], Version := v2
 				Loop, Parse, A_LoopReadLine, |
 					Opt.Push(A_LoopField)
 			}
@@ -22,10 +22,10 @@
 				Row.Push(Col)
 			}
 			Else If (A_LoopReadLine = "")
-				PmcCode[ID] := {Opt: Opt, Row: Row}
+				PmcCode[ID] := {Opt: Opt, Row: Row, Version: Version}
 		}
 		If (!IsObject(PmcCode[ID].opt))
-			PmcCode[ID] := {Opt: Opt, Row: Row}
+			PmcCode[ID] := {Opt: Opt, Row: Row, Version: Version}
 		If (ID = 0)
 		{
 			If (PmcCode[0] = "")
@@ -102,6 +102,8 @@
 
 	LVLoad(List, Code)
 	{
+		Static _x := Chr(2), _y := Chr(3), _z := Chr(4)
+		
 		Critical
 		Gui, chMacro:Default
 		Gui, chMacro:ListView, %List%
@@ -110,7 +112,7 @@
 		For each, Col in Code.Row
 		{
 			Loop, % Col.Length()
-				Col[A_Index] := RegExReplace(Col[A_Index], "¢", "|")
+				Col[A_Index] := RegExReplace(Col[A_Index], (Code.Version = "") ? "¢" : _x, "|")
 			chk := SubStr(Col[1], 1, 1)
 		,	((Col[2] = "[Pause]") && (Col[6] != "Sleep")) ? (Col[2] := "[" Col[6] "]") : ""
 		,	((Col[6] = "LoopFilePattern") && (RegExMatch(Col[3], "```, \d```, \d"))) ? (Col[3] := this.FormatCmd(Col[3], "Files")) : ""
@@ -125,6 +127,8 @@
 
 	LVGet(List, DL := "|")
 	{
+		Static _x := Chr(2), _y := Chr(3), _z := Chr(4)
+		
 		Gui, chMacro:Default
 		Gui, chMacro:ListView, %List%
 		Row := []
@@ -138,7 +142,7 @@
 		{
 			For each, Col in Row[A_Index]
 			{
-				Col := RegExReplace(Col, "\|", "¢")
+				Col := RegExReplace(Col, "\|", _x)
 				Text .= Col "|"
 			}
 			Text .= "`n"
