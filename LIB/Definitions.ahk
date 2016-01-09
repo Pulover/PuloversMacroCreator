@@ -1075,21 +1075,18 @@ Loop, 26
 	KeybdList .= Chr(A_Index+64) _x
 Loop, 10
 	KeybdList .= Chr(A_Index+47) _x
-KeybdList .= "
-(Join%_x%
-Control%_x%LControl%_x%RControl%_x%Alt%_x%LAlt%_x%RAlt%_x%Shift%_x%LShift%_x%RShift%_x%LWin%_x%RWin
-F1%_x%F2%_x%F3%_x%F4%_x%F5%_x%F6%_x%F7%_x%F8%_x%F9%_x%F10%_x%F11%_x%F12%_x%F13%_x%F14%_x%F15%_x%F16%_x%F17%_x%F18%_x%F19%_x%F20%_x%F21%_x%F22%_x%F23%_x%F24
-'%_x%""%_x%!%_x%@%_x%#%_x%$%_x%%%_x%¨%_x%&%_x%*%_x%(%_x%)%_x%-%_x%_%_x%=%_x%+%_x%´%_x%``%_x%[%_x%]%_x%{%_x%}%_x%<%_x%>%_x%~%_x%^%_x%.%_x%,%_x%;%_x%:%_x%?%_x%/%_x%\%_x%|
-Left%_x%Right%_x%Up%_x%Down%_x%Home%_x%End%_x%PgUp%_x%PgDn%_x%AppsKey%_x%PrintScreen%_x%Pause
-Delete%_x%Insert%_x%Backspace%_x%Escape%_x%Enter%_x%Tab%_x%Space%_x%CapsLock%_x%ScrollLock%_x%NumLock
-Numpad0%_x%Numpad1%_x%Numpad2%_x%Numpad3%_x%Numpad4%_x%Numpad5%_x%Numpad6%_x%Numpad7%_x%Numpad8%_x%Numpad9
-NumpadDot%_x%NumpadDiv%_x%NumpadMult%_x%NumpadAdd%_x%NumpadSub%_x%NumpadIns%_x%NumpadEnd%_x%NumpadDown
-NumpadPgDn%_x%NumpadLeft%_x%NumpadClear%_x%NumpadRight%_x%NumpadHome%_x%NumpadUp%_x%NumpadPgUp%_x%NumpadDel
-NumpadEnter%_x%Browser_Back%_x%Browser_Forward%_x%Browser_Refresh%_x%Browser_Stop%_x%Browser_Search
-Browser_Favorites%_x%Browser_Home%_x%Volume_Mute%_x%Volume_Down%_x%Volume_Up%_x%Media_Next%_x%Media_Prev
-Media_Stop%_x%Media_Play_Pause%_x%Launch_Mail%_x%Launch_Media%_x%Launch_App1%_x%Launch_App2
-LButton%_x%RButton%_x%MButton%_x%XButton1%_x%XButton2%_x%WheelDown%_x%WheelUp%_x%WheelLeft%_x%WheelRight
-)"
+KeybdList .= "Control" _x "LControl" _x "RControl" _x "Alt" _x "LAlt" _x "RAlt" _x "Shift" _x "LShift" _x "RShift" _x "LWin" _x "RWin"
+. _x "F1" _x "F2" _x "F3" _x "F4" _x "F5" _x "F6" _x "F7" _x "F8" _x "F9" _x "F10" _x "F11" _x "F12" _x "F13" _x "F14" _x "F15" _x "F16" _x "F17" _x "F18" _x "F19" _x "F20" _x "F21" _x "F22" _x "F23" _x "F24"
+. _x "'" _x """" _x "!" _x "@" _x "#" _x "$" _x "%" _x "¨" _x "&" _x "*" _x "(" _x ")" _x "-" _x "_" _x "=" _x "+" _x "´" _x "``" _x "[" _x "]" _x "{" _x "}" _x "<" _x ">" _x "~" _x "^" _x "." _x "," _x ";" _x ":" _x "?" _x "/" _x "\" _x "|"
+. _x "Left" _x "Right" _x "Up" _x "Down" _x "Home" _x "End" _x "PgUp" _x "PgDn" _x "AppsKey" _x "PrintScreen" _x "Pause"
+. _x "Delete" _x "Insert" _x "Backspace" _x "Escape" _x "Enter" _x "Tab" _x "Space" _x "CapsLock" _x "ScrollLock" _x "NumLock"
+KeybdList .= _x "Numpad0" _x "Numpad1" _x "Numpad2" _x "Numpad3" _x "Numpad4" _x "Numpad5" _x "Numpad6" _x "Numpad7" _x "Numpad8" _x "Numpad9"
+. _x "NumpadDot" _x "NumpadDiv" _x "NumpadMult" _x "NumpadAdd" _x "NumpadSub" _x "NumpadIns" _x "NumpadEnd" _x "NumpadDown"
+. _x "NumpadPgDn" _x "NumpadLeft" _x "NumpadClear" _x "NumpadRight" _x "NumpadHome" _x "NumpadUp" _x "NumpadPgUp" _x "NumpadDel"
+. _x "NumpadEnter" _x "Browser_Back" _x "Browser_Forward" _x "Browser_Refresh" _x "Browser_Stop" _x "Browser_Search"
+. _x "Browser_Favorites" _x "Browser_Home" _x "Volume_Mute" _x "Volume_Down" _x "Volume_Up" _x "Media_Next" _x "Media_Prev"
+. _x "Media_Stop" _x "Media_Play_Pause" _x "Launch_Mail" _x "Launch_Media" _x "Launch_App1" _x "Launch_App2"
+. _x "LButton" _x "RButton" _x "MButton" _x "XButton1" _x "XButton2" _x "WheelDown" _x "WheelUp" _x "WheelLeft" _x "WheelRight"
 
 Run_Filters := "All|File|String|Get|Wait|Group|Dialogs|Registry|Sound|Vars|Misc"
 Loop, Parse, Run_Filters, |

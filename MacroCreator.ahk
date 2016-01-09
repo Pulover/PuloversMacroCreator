@@ -2140,7 +2140,12 @@ If (A_GuiEvent == "E")
 If (A_GuiEvent == "e")
 {
 	InEdit := 0
-,	LV_GetText(AfterEdit, EditRow, 1)
+	If (InStr(BeforeEdit, "()"))
+	{
+		LV_Modify(EditRow, "", BeforeEdit)
+		return
+	}
+	LV_GetText(AfterEdit, EditRow, 1)
 	If (AfterEdit = "")
 		return
 	Else If (!RegExMatch(AfterEdit, "^\w+$"))
@@ -2193,6 +2198,14 @@ If (InStr(KeybdList, Ex_AutoKey _x))
 	GuiControl, 13:ChooseString, Ex_AutoKey, %Ex_AutoKey%
 Else
 	GuiControl, 13:, Ex_AutoKey, %Ex_AutoKey%%_x%%_x%
+If (InStr(Ex_Macro, "()"))
+{
+	GuiControl, 13:Disable, Ex_Macro
+	GuiControl, 13:Disable, Ex_AutoKey
+	GuiControl, 13:Disable, Ex_BM
+	GuiControl, 13:Disable, Ex_TE
+	GuiControl, 13:Disable, Ex_TimesX
+}
 Gui, 13:Show,, %w_Lang019%
 return
 
@@ -2210,12 +2223,12 @@ Gui, 13:Submit, NoHide
 Gui, 14:Default
 If (Ex_Macro != "")
 {
-	If (!RegExMatch(Ex_Macro, "^\w+$"))
+	If ((!InStr(Ex_Macro, "()")) && (!RegExMatch(Ex_Macro, "^\w+$")))
 	{
 		MsgBox, 16, %d_Lang007%, %d_Lang049%
 		return
 	}
-	Else
+	Else If (!InStr(Ex_Macro, "()"))
 	{
 		Loop, % LV_GetCount()
 		{
@@ -2240,12 +2253,12 @@ Gui, 13:Submit, NoHide
 Gui, 14:Default
 If (Ex_Macro != "")
 {
-	If (!RegExMatch(Ex_Macro, "^\w+$"))
+	If ((!InStr(Ex_Macro, "()")) && (!RegExMatch(Ex_Macro, "^\w+$")))
 	{
 		MsgBox, 16, %d_Lang007%, %d_Lang049%
 		return
 	}
-	Else
+	Else If (!InStr(Ex_Macro, "()"))
 	{
 		Loop, % LV_GetCount()
 		{
@@ -2276,6 +2289,22 @@ If (InStr(KeybdList, Ex_AutoKey))
 	GuiControl, 13:ChooseString, Ex_AutoKey, %Ex_AutoKey%
 Else
 	GuiControl, 13:, Ex_AutoKey, %Ex_AutoKey%||
+If (InStr(Ex_Macro, "()"))
+{
+	GuiControl, 13:Disable, Ex_Macro
+	GuiControl, 13:Disable, Ex_AutoKey
+	GuiControl, 13:Disable, Ex_BM
+	GuiControl, 13:Disable, Ex_TE
+	GuiControl, 13:Disable, Ex_TimesX
+}
+Else
+{
+	GuiControl, 13:Enable, Ex_Macro
+	GuiControl, 13:Enable, Ex_AutoKey
+	GuiControl, 13:Enable, Ex_BM
+	GuiControl, 13:Enable, Ex_TE
+	GuiControl, 13:Enable, Ex_TimesX
+}
 return
 
 VarsTree:
@@ -2542,7 +2571,8 @@ Else If (Ex_TimesX > 1)
 	Body := "Loop, " Ex_TimesX "`n{`n" Body "}`n"
 If (Ex_BM = 1)
 	Body := "BlockInput, MouseMove`n" Body "BlockInput, MouseMoveOff`n"
-Body := ((Ex_Macro != "") ? Ex_Macro ":`n" : "") Body "Return`n"
+If (!InStr(Ex_Macro, "()"))
+	Body := ((Ex_Macro != "") ? Ex_Macro ":`n" : "") Body "Return`n"
 If (Ex_AutoKey != "")
 	Body := Ex_AutoKey "::`n" Body
 return
@@ -8482,36 +8512,9 @@ If (s_Caller = "Edit")
 	{
 		GuiControl, 38:, FuncName, %Details%
 		GuiControl, 38:ChooseString, FuncScope, %Target%
-		ScopedVariables := "", StaticVariables := ""
-		Loop, Parse, Window, /, %A_Space%
-		{
-			If (A_Index = 1)
-			{
-				Loop, Parse, A_LoopField, `,, %A_Space%
-				{
-					AssignReplace(A_LoopField)
-					If (VarName = "")
-						ScopedVariables .= A_LoopField ","
-					Else
-						ScopedVariables .= VarName " := " Trim(VarValue, """") ","
-				}
-			}
-			If (A_Index = 2)
-			{
-				Loop, Parse, A_LoopField, `,, %A_Space%
-				{
-					AssignReplace(A_LoopField)
-					If (VarName = "")
-						StaticVariables .= A_LoopField ","
-					Else
-						StaticVariables .= VarName " := " Trim(VarValue, """") ","
-				}
-			}
-		}
-		ScopedVariables := Trim(ScopedVariables, ", ")
-	,	StaticVariables := Trim(StaticVariables, ", ")
-		GuiControl, 38:, FuncScoped, %ScopedVariables%
-		GuiControl, 38:, FuncStatic, %StaticVariables%
+		StringSplit, FuncVariables, Window, /, %A_Space%
+		GuiControl, 38:, FuncScoped, % StrReplace(FuncVariables1, """")
+		GuiControl, 38:, FuncStatic, % StrReplace(FuncVariables2, """")
 		Loop, 4
 		{
 			GuiControl, 38:Disable, Param%A_Index%
@@ -8644,7 +8647,7 @@ If (TabControl = 1)
 			}
 		}
 	}
-	FuncVariables := Trim(FuncVariables, ", ") " / "
+	StaticVariables := ""
 	Loop, Parse, FuncStatic, `,, %A_Space%
 	{
 		AssignReplace(A_LoopField)
@@ -8657,7 +8660,7 @@ If (TabControl = 1)
 				MsgBox, 16, %d_Lang007%, %d_Lang041%`n`n%A_LoopField%
 				return
 			}
-			FuncVariables .= A_LoopField ", "
+			StaticVariables .= A_LoopField ", "
 		}
 		Else
 		{
@@ -8668,14 +8671,17 @@ If (TabControl = 1)
 				MsgBox, 16, %d_Lang007%, %d_Lang041%`n`n%VarName%
 				return
 			}
-			FuncVariables .= VarName " := " VarValue ", "
+			StaticVariables .= VarName " := " VarValue ", "
 		}
 	}
-	FuncVariables := RegExReplace(FuncVariables, ":=\s(\D+?),", ":= ""$1"",")
+	StaticVariables := RegExReplace(StaticVariables, ":=\s(\D+?),", ":= ""$1"",")
+,	StaticVariables := StrReplace(StaticVariables, """true""", "true")
+,	StaticVariables := StrReplace(StaticVariables, """false""", "false")
+,	FuncVariables := RegExReplace(FuncVariables, ":=\s(\D+?),", ":= ""$1"",")
 ,	FuncVariables := StrReplace(FuncVariables, """true""", "true")
 ,	FuncVariables := StrReplace(FuncVariables, """false""", "false")
-,	FuncVariables := Trim(FuncVariables, ", ")
-	CurrentTabs := ""
+,	FuncVariables := Trim(FuncVariables, ", ") " / " Trim(StaticVariables, ", ")
+,	CurrentTabs := ""
 	Loop, % TabCount
 	{
 		If ((s_Caller != "") && (A_List = A_Index))

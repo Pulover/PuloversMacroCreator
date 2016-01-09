@@ -4,6 +4,7 @@
 	local LVData, Id_LVData, Indent, RowData, Action, Match, ExpValue
 	, Step, TimesX, DelayX, Type, Target, Window, Comment, sArray
 	, PAction, PType, PDelayX, PComment, Act, iCount, init_ie, ComExp
+	, VarsScope, FuncParams, IsFunction := false
 	Gui, chMacro:Default
 	Gui, chMacro:ListView, InputList%ListID%
 	ComType := ComCr ? "ComObjCreate" : "ComObjActive"
@@ -65,7 +66,22 @@
 		}
 		If (IsChecked != A_Index)
 			continue
-		If ((Type = cType2) || (Type = cType9) || (Type = cType10))
+		If (Type = cType48)
+			FuncParams .= LTrim(Target " " Step ", ")
+		Else If (Type = cType47)
+		{
+			IsFunction := true
+			RowData := "`n" Step "(" RTrim(FuncParams, ", ") ")`n{"
+			StringSplit, FuncVariables, Window, /, %A_Space%
+			If (FuncVariables1 != "")
+				RowData .= "`n" ((Target = "Local") ? "Global " : "Local ") . StrReplace(FuncVariables1, """")
+			If (FuncVariables2 != "")
+				RowData .= "`n" "Static " . StrReplace(FuncVariables2, """")
+			GoSub, Add_CD
+		}
+		Else If (Type = cType49)
+			RowData := "`nReturn " Step
+		Else If ((Type = cType2) || (Type = cType9) || (Type = cType10))
 		{
 			If (InStr(Step, "``n"))
 			{
@@ -505,10 +521,9 @@
 			RowData := StrReplace(RowData, "```,", "`,")
 		LVData .= RowData
 	}
-	LVData := RegExReplace(LVData, "i)%(Temp)%", "%A_$1%")
-,	LVData := RegExReplace(LVData, "i)%(AppData)%", "%A_$1%")
-,	LVData := RegExReplace(LVData, "i)%(WinDir)%", "%A_$1%")
-,	LVData := LTrim(LVData, "`n")
+	If (IsFunction)
+		LVData .= "`n}"
+	LVData := LTrim(LVData, "`n")
 	If (TabIndent)
 	{
 		Loop, Parse, LVData, `n

@@ -2,7 +2,7 @@
 *The Complete Automation Tool*
 
 [www.macrocreator.com](http://www.macrocreator.com)  
-[Forum Thread](http://ahkscript.org/boards/viewtopic.php?f=6&t=143)  
+[Forum Thread](http://autohotkey.com/boards/viewtopic.php?f=6&t=143)  
 
 Author: Pulover \[Rodolfo U. Batista\]  
 [pulover@macrocreator.com](mailto:pulover@macrocreator.com)  
@@ -16,7 +16,7 @@ Software License: [GNU General Public License](License.html)
 
 ## Thanks to
 
-Chris and Lexikos for [AutoHotkey](http://ahkscript.org/).  
+Chris and Lexikos for [AutoHotkey](http://autohotkey.com/).  
 tic (Tariq Porter) for his [GDI+ Library](http://autohotkey.com/board/topic/29449-gdi-standard-library).  
 tkoi & majkinetor for the [ILButton function](http://autohotkey.com/board/topic/37147-ilbutton-image-buttons).  
 just me for [LV_Colors Class](http://autohotkey.com/boards/viewtopic.php?f=6&t=1081), [LV_EX](http://autohotkey.com/boards/viewtopic.php?t=1256)/[IL_EX](http://autohotkey.com/boards/viewtopic.php?f=6&t=1273) functions and for updating ILButton to 64bit.  
@@ -38,10 +38,11 @@ Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jör
 
 ## Version 5.0.0
 
-* New feature: User Defined Functions.
-* New feature: Listview Groups (+WinVista).
+* New feature: *User Defined Functions*.
+* New feature: *Listview Groups* (+WinVista).
 * Implemented real Auto-Hotkey format expressions in Functions, Methods, Variable Assignment, Evaluate Expression and command parameters started with % .
 * Multiple If Statements are now supported in 'Evaluate Expression' (e.g.: var = 5 || var = "a").
+* Function parameter can now be another function, array or expression
 * Added support for array assignment in Variables, Functions and IECOM/COMInterface.
 * Added support for array methods in Functions window.
 * Added For-Loops in Loop Command window.
