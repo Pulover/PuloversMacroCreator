@@ -40,7 +40,7 @@ Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jör
 
 * New feature: User Defined Functions.
 * New feature: Listview Groups (+WinVista).
-* Extended support for expressions (AHK standard format, see help for details) in Variable Assignment, Evaluate Expression and command parameters started with % .
+* Implemented real Auto-Hotkey format expressions in Functions, Methods, Variable Assignment, Evaluate Expression and command parameters started with % .
 * Multiple If Statements are now supported in 'Evaluate Expression' (e.g.: var = 5 || var = "a").
 * Added support for array assignment in Variables, Functions and IECOM/COMInterface.
 * Added support for array methods in Functions window.
@@ -48,12 +48,12 @@ Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jör
 * Added support for Multi-Dimensional Arrays inside function parameters and commands.
 * Added support for Multi-Dimensional Arrays assignment (e.g.: MyArray[1][2] := Value).
 * Added support for named keys in arrays (e.g.: N["key"]).
-* Added support for arrays inside IECom and COMInterface parameters.
 * Added support for array methods inside commands (e.g.: % MyArray.Length()).
-* Added support for array methods inside Variable Assignment when "Expression" is checked or "Value" is starts with "% ".
+* Added support for array methods inside Variable Assignment when "Expression" is checked.
+* Added support for arrays inside IECom and COMInterface parameters.
 * Added option to change color of the rectangle of Image/Pixel Search area and Screenshots tool.
 * Updated "Loop, File" and "Loop, Reg" to new format with "Mode" parameter.
-* Changed "List Variables" to display only User-Defined variables.
+* Changed "List Variables" to display User-Defined variables only.
 * Fixed corrupted pmc files saved on exit.
 * Fixed bug with WinWait timeout.
 * Fixed bug with IE/COM Interface.

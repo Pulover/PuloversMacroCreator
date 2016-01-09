@@ -2421,7 +2421,11 @@ return
 ExportFile:
 Header := Script_Header()
 If (Ex_UV = 1)
-	Header .= RegExReplace(UserVarsList, "`am)(\w+)\s*=\s*(.*)", "global $1 := ""$2""") "`n"
+{
+	UVL := RegExReplace(UserVarsList, "`am)(\w+)\s*=\s*(.*)", "global $1 := ""$2""")
+,	UVL := RegExReplace(UVL, "`am):= ""(\d+)""", ":= $1")
+,	Header .= UVL "`n"
+}
 RowNumber := 0, AutoKey := "", IncList := "", ProgRatio := 100 / LV_GetCount()
 Loop, % LV_GetCount()
 {
@@ -6815,16 +6819,18 @@ If (s_Caller = "Edit")
 	Else If (A_ThisLabel = "EditVar")
 	{
 		StringReplace, Details, Details, ``n, `n, All
-		AssignReplace(Details), EscCom("VarValue", 1), GuiTitle := c_Lang010
+		AssignReplace(Details), GuiTitle := c_Lang010
 		GuiControl, 21:Choose, TabControl, 2
 		GuiControl, 21:, VarName, %VarName%
 		GuiControl, 21:ChooseString, Oper, %Oper%
-		GuiControl, 21:, VarValue, %VarValue%
 		If (Target = "Expression")
 		{
 			GuiControl, 21:, UseEval, 1
 			GuiControl, 21:Show, ArrayTip
 		}
+		Else
+			EscCom("VarValue", 1)
+		GuiControl, 21:, VarValue, %VarValue%
 		SBShowTip("SetEnv (Var = Value)")
 		GoSub, AsOper
 	}
@@ -7019,7 +7025,7 @@ If (TabControl = 3)
 	}
 	Else If (!IsFunc(FuncName))
 	{
-		UserFuncs := StrReplace(Proj_Funcs, "$", "`,")
+		UserFuncs := StrReplace(Proj_Funcs, "$", ",")
 		If FuncName not in %UserFuncs%
 		{
 			MsgBox, 16, %d_Lang007%, "%FuncName%" %d_Lang031%
@@ -7074,11 +7080,14 @@ If (TabControl = 3)
 Else
 {
 	Action := "[Assign Variable]", Details := VarName " " Oper " " VarValue, Type := cType21
+,	EscCom("TimesX|DelayX|Target|Window")
 	If (UseEval = 1)
 		Target := "Expression"
 	Else
+	{
 		Target := ""
-	EscCom("Details|TimesX|DelayX|Target|Window")
+		EscCom("Details")
+	}
 }
 If (A_ThisLabel != "VarApply")
 {
@@ -11273,21 +11282,21 @@ If (RepAllRows = 1)
 			{
 				If (CellText == Find)
 				{
-					StringReplace, CellText, CellText, %Find%, %Replace%, All
+					CellText := StrReplace(CellText, Find, Replace)
 					LV_Modify(A_Index, "Col" t_Col, CellText)
 					Replaces += 1
 				}
 			}
 			Else If (CellText = Find)
 			{
-				StringReplace, CellText, CellText, %Find%, %Replace%, All
+				CellText := StrReplace(CellText, Find, Replace)
 				LV_Modify(A_Index, "Col" t_Col, CellText)
 				Replaces += 1
 			}
 		}
 		Else If (InStr(CellText, Find, MCase))
 		{
-			StringReplace, CellText, CellText, %Find%, %Replace%, All
+			CellText := StrReplace(CellText, Find, Replace)
 			LV_Modify(A_Index, "Col" t_Col, CellText)
 			Replaces += 1
 		}
@@ -11319,21 +11328,21 @@ Else If (RepAllMacros = 1)
 				{
 					If (CellText == Find)
 					{
-						StringReplace, CellText, CellText, %Find%, %Replace%, All
+						CellText := StrReplace(CellText, Find, Replace)
 						LV_Modify(A_Index, "Col" t_Col, CellText)
 						Replaces += 1
 					}
 				}
 				Else If (CellText = Find)
 				{
-					StringReplace, CellText, CellText, %Find%, %Replace%, All
+					CellText := StrReplace(CellText, Find, Replace)
 					LV_Modify(A_Index, "Col" t_Col, CellText)
 					Replaces += 1
 				}
 			}
 			Else If (InStr(CellText, Find, MCase))
 			{
-				StringReplace, CellText, CellText, %Find%, %Replace%, All
+				CellText := StrReplace(CellText, Find, Replace)
 				LV_Modify(A_Index, "Col" t_Col, CellText)
 				Replaces += 1
 			}
@@ -11367,21 +11376,21 @@ Else
 			{
 				If (CellText == Find)
 				{
-					StringReplace, CellText, CellText, %Find%, %Replace%, All
+					CellText := StrReplace(CellText, Find, Replace)
 					LV_Modify(RowNumber, "Col" t_Col, CellText)
 					Replaces += 1
 				}
 			}
 			Else If (CellText = Find)
 			{
-				StringReplace, CellText, CellText, %Find%, %Replace%, All
+				CellText := StrReplace(CellText, Find, Replace)
 				LV_Modify(RowNumber, "Col" t_Col, CellText)
 				Replaces += 1
 			}
 		}
 		Else If (InStr(CellText, Find, MCase))
 		{
-			StringReplace, CellText, CellText, %Find%, %Replace%, All
+			CellText := StrReplace(CellText, Find, Replace)
 			LV_Modify(RowNumber, "Col" t_Col, CellText)
 			Replaces += 1
 		}
@@ -11693,8 +11702,8 @@ pb_Sleep:
 	}
 return
 pb_MsgBox:
-	StringReplace, Step, Step, ``n, `n, All
-	StringReplace, Step, Step, ```,, `,, All
+	Step := StrReplace(Step, "``n", "`n")
+	Step := StrReplace(Step, "``,", ",")
 	Try Menu, Tray, Icon, %ResDllPath%, 77
 	ChangeProgBarColor("Blue", "OSCProg", 28)
 	MsgBox, % Target, % (Window != "") ? Window : AppName, %Step%, %DelayX%
@@ -12417,11 +12426,11 @@ return
 pb_VBScript:
 pb_JScript:
 VB := "", JS := ""
-StringReplace, Step, Step, `n, ``n, All
+Step := StrReplace(Step, "`n", "``n")
 Step := "Language := " Type "`nExecuteStatement(" Step ")"
 
 pb_COMInterface:
-	StringReplace, Step, Step, ø, `n, All
+	Step := StrReplace(Step, "ø", "`n")
 	StringSplit, Act, Action, :
 
 	If (RegExMatch(Act2, "^(\w+)\[(\S+?)\]", lMatch))
@@ -12448,7 +12457,7 @@ pb_COMInterface:
 	
 	Loop, Parse, Step, `n, %A_Space%%A_Tab%`r
 	{
-		StringReplace, LoopField, A_LoopField, ``n, `n, All
+		LoopField := StrReplace(A_LoopField, "``n", "`n")
 		Try
 		{
 			If (!IsObject(%Act1%))
@@ -12512,11 +12521,11 @@ return
 SplitStep:
 GoSub, ClearPars
 If (Type = cType34)
-	StringReplace, Step, Step, `n, ø, All
+	Step := StrReplace(Step, "`n", "ø")
 If (Type = cType39)
 	Step := RegExReplace(Step, "\w+", "%$0%", "", 1)
 EscCom("Step|TimesX|DelayX|Target|Window", 1)
-StringReplace, Step, Step, `%A_Space`%, ⱥ, All
+Step := StrReplace(Step, "%A_Space%", "ⱥ")
 If (InStr(FileCmdList, Type "|"))
 {
 	If (RegExMatch(Step, "sU)%\s([\w%]+)\((.*)\)"))
@@ -12526,16 +12535,16 @@ If (InStr(FileCmdList, Type "|"))
 	{
 		LoopField := A_LoopField
 	,	CheckVars("LoopField", This_Point)
-		StringReplace, LoopField, LoopField, `,, %_x%, All
+		LoopField := StrReplace(LoopField, ",", _x)
 		_Step .= LoopField ", "
 	}
 	Step := RTrim(_Step, ", ")
 }
 CheckVars("Step|TimesX|DelayX|Target|Window", This_Point)
-StringReplace, Step, Step, ```,, %_x%, All
-StringReplace, Step, Step, ``n, `n, All
-StringReplace, Step, Step, ``r, `r, All
-StringReplace, Step, Step, ``t, `t, All
+Step := StrReplace(Step, "``,", _x)
+Step := StrReplace(Step, "``n", "`n")
+Step := StrReplace(Step, "``r", "`r")
+Step := StrReplace(Step, "``t", "`t")
 Loop, Parse, Step, `,, %A_Space%
 {
 	LoopField := A_LoopField
@@ -12553,19 +12562,19 @@ Loop, Parse, Step, `,, %A_Space%
 	}
 	Else
 		Par%A_Index% := LoopField
-	StringReplace, Par%A_Index%, Par%A_Index%, ``n, `n, All
-	StringReplace, Par%A_Index%, Par%A_Index%, ``r, `r, All
-	StringReplace, Par%A_Index%, Par%A_Index%, %_x%, `,, All
-	StringReplace, Par%A_Index%, Par%A_Index%, ⱥ, %A_Space%, All
-	StringReplace, Par%A_Index%, Par%A_Index%, ``,, All
+	Par%A_Index% := StrReplace(Par%A_Index%, "``n", "`n")
+	Par%A_Index% := StrReplace(Par%A_Index%, "``r", "`r")
+	Par%A_Index% := StrReplace(Par%A_Index%, _x, ",")
+	Par%A_Index% := StrReplace(Par%A_Index%, "ⱥ", A_Space)
+	Par%A_Index% := StrReplace(Par%A_Index%, "``")
 }
-StringReplace, Step, Step, %_x%, `,, All
-StringReplace, Step, Step, ⱥ, %A_Space%, All
-StringReplace, Step, Step, ``,, All
+Step := StrReplace(Step, _x, ",")
+Step := StrReplace(Step, "ⱥ", A_Space)
+Step := StrReplace(Step, "``")
 If (Type = cType34)
 {
-	StringReplace, Step, Step, `n, ``n, All
-	StringReplace, Step, Step, ø, `n, All
+	Step := StrReplace(Step, "`n", "``n")
+	Step := StrReplace(Step, "ø", "`n")
 }
 return
 

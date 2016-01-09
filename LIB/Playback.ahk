@@ -4,7 +4,7 @@
 	, m_ListCount := ListCount%Macro_On%, mLoopIndex, _Label, _i
 	, pbParams, pbVarName, pbVarValue, pbType, pbAction
 	, ScopedParams := [], LastFuncRun, UserGlobals, GlobalList
-	, Func_Result, SVRef, Return_Values
+	, Func_Result, SVRef, FuncPars
 
 	CoordMode, Mouse, Screen
 	MouseGetPos, CursorX, CursorY
@@ -203,9 +203,6 @@
 							.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" (InStr(e.Message, "0x800401E3") ? d_Lang088 : e.Extra)
 					}
 					
-					Return_Values := []
-				,	Return_Values.Push(Func_Result)
-				
 					For i, v in ScopedParams
 					{
 						If (v.Type = "ByRef")
@@ -232,7 +229,7 @@
 					}
 					
 					ScopedVars[RunningFunction].Pop()
-					return Return_Values
+					return Func_Result
 				}
 				If ((Type = cType3) || (Type = cType13))
 					MouseReset := 1
@@ -525,25 +522,26 @@
 					continue
 				If ((Type = cType21) || (Type = cType44) || (Type = cType46))
 				{
-					Step := StrReplace(Step, "``n", "`n")
-				,	Step := StrReplace(Step, "``t", "`t")
-				,	AssignReplace(Step)
+					AssignReplace(Step)
 				,	CheckVars("Step|Target|Window|VarName|VarValue", PointMarker)
 				,	pbVarName := VarName
 				,	pbVarValue := VarValue
-				,	pbParams := Object()
-					OutputDebug, % Eval(pbVarValue, PointMarker)
-					Loop, Parse, pbVarValue, `,, %A_Space%
-						pbParams.Push({Name: A_LoopField})
-					tlResult := ExtractArrays(Target, PointMarker)
+				,	tlResult := ExtractArrays(Target, PointMarker)
 				,	Target := IsObject(tlResult) ? "tlResult" : tlResult
 					If (Type = cType21)
 					{
 						If (Target = "Expression")
 						{
 							pbType := Type, pbAction := Action
-						,	pbVarValue := Eval(pbVarValue, PointMarker)
+						,	EvalResult := Eval(pbVarValue, PointMarker)
+						,	pbVarValue := EvalResult[1]
 						,	Type := pbType, Action := pbAction
+						}
+						Else
+						{
+							Step := StrReplace(Step, "``n", "`n")
+						,	Step := StrReplace(Step, "``t", "`t")
+						,	Step := StrReplace(Step, "``,", ",")
 						}
 						Try
 							AssignVar(pbVarName, Oper, pbVarValue, PointMarker)
@@ -561,16 +559,9 @@
 					}
 					Else If (IsObject(%Target%))
 					{
-						pbParams := Object()
-					,	pbType := Type, pbAction := Action
-						Loop, Parse, pbVarValue, `,, %A_Space%
-						{
-							LoopField := DerefVars(A_LoopField)
-						,	LoopField := StrReplace(LoopField, _z, A_Space)
-						,	LoopField := Eval(LoopField, PointMarker)
-						,	pbParams.Push(LoopField)
-						}
-						Type := pbType, Action := pbAction
+						pbType := Type, pbAction := Action
+					,	pbParams := Eval(pbVarValue, PointMarker)
+					,	Type := pbType, Action := pbAction
 						Try
 						{
 							pbVarValue := %Target%[Action](pbParams*)
@@ -588,49 +579,11 @@
 						}
 						Try SavedVars(pbVarName)
 					}
-					Else If (((Type = cType44) && (IsFunc(Action))) && ((Func(Action).IsBuiltIn) || (Action = "Screenshot")))
-					{
-						pbParams := Object()
-					,	pbType := Type, pbAction := Action
-						Loop, Parse, pbVarValue, `,, %A_Space%
-						{
-							LoopField := DerefVars(A_LoopField)
-						,	LoopField := StrReplace(LoopField, _z, A_Space)
-						,	LoopField := Eval(LoopField, PointMarker)
-						,	pbParams.Push(LoopField)
-						}
-						Type := pbType, Action := pbAction
-						Try
-						{
-							pbVarValue := %Action%(pbParams*)
-						,	AssignVar(pbVarName, ":=", pbVarValue, PointMarker)
-						}
-						Catch e
-						{
-							MsgBox, 20, %d_Lang007%, % "Macro" mMacroOn ", " d_Lang065 " " mListRow
-								.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" (InStr(e.Message, "0x800401E3") ? d_Lang088 : e.Extra) "`n`n" d_Lang035
-							IfMsgBox, No
-							{
-								StopIt := 1
-								continue
-							}
-						}
-						Try SavedVars(pbVarName)
-					}
 					Else If ((Type = cType44) && (Target != ""))
 					{
-						pbParams := Object()
-					,	pbType := Type, pbAction := Action
-						Loop, Parse, pbVarValue, `,, %A_Space%
-						{
-							LoopField := DerefVars(A_LoopField)
-						,	LoopField := StrReplace(LoopField, "`r`n", "``n")
-						,	LoopField := StrReplace(LoopField, "`n", "``n")
-						,	LoopField := StrReplace(LoopField, _z, A_Space)
-						,	LoopField := Eval(LoopField, PointMarker)
-						,	pbParams.Push(LoopField)
-						}
-						Type := pbType, Action := pbAction
+						pbType := Type, pbAction := Action
+					,	pbParams := Eval(pbVarValue, PointMarker)
+					,	Type := pbType, Action := pbAction
 						If (A_AhkPath)
 						{
 							Try
@@ -656,14 +609,12 @@
 									LV_GetText(TargetFunc, A_Index, 3)
 									If ((Row_Type = cType47) && (TargetFunc = Action))
 									{
-										pbType := Type, pbAction := Action
-										Loop, Parse, pbVarValue, `,, %A_Space%
-										{
-											LoopField := DerefVars(A_LoopField)
-										,	LoopField := StrReplace(LoopField, _z, A_Space)
-										,	LoopField := Eval(LoopField, PointMarker)
-											pbParams[A_Index].Value := LoopField
-										}
+										pbParams := {}
+									,	pbType := Type, pbAction := Action
+									,	FuncPars := ExprGetPars(pbVarValue)
+									,	EvalResult := Eval(pbVarValue, PointMarker)
+										For i, v in EvalResult
+											pbParams[i] := {Name: FuncPars[i], Value: v}
 										Type := pbType, Action := pbAction
 									,	LastFuncRun := RunningFunction, RunningFunction := Action
 									,	Func_Result := Playback(TabIdx,,, pbParams)
@@ -678,14 +629,36 @@
 											IfMsgBox, No
 											{
 												StopIt := 1
-												continue
+												continue 3
 											}
 										}
 										Try SavedVars(pbVarName)
-										break 2
+										continue 3
 									}
 								}
 							}
+						}
+						If ((IsFunc(Action)) && ((Func(Action).IsBuiltIn) || (Action = "Screenshot")))
+						{
+							pbType := Type, pbAction := Action
+						,	pbParams := Eval(pbVarValue, PointMarker)
+						,	Type := pbType, Action := pbAction
+							Try
+							{
+								pbVarValue := %Action%(pbParams*)
+							,	AssignVar(pbVarName, ":=", pbVarValue, PointMarker)
+							}
+							Catch e
+							{
+								MsgBox, 20, %d_Lang007%, % "Macro" mMacroOn ", " d_Lang065 " " mListRow
+									.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" (InStr(e.Message, "0x800401E3") ? d_Lang088 : e.Extra) "`n`n" d_Lang035
+								IfMsgBox, No
+								{
+									StopIt := 1
+									continue
+								}
+							}
+							Try SavedVars(pbVarName)
 						}
 					}
 					continue
@@ -698,11 +671,11 @@
 				Else
 				{
 					If (InStr(Step, "``n"))
-						StringReplace, Step, Step, ``n, `n, All
+						Step := StrReplace(Step, "``n", "`n")
 					If (InStr(Step, "``t"))
-						StringReplace, Step, Step, ``t, `t, All
-					If (InStr(Step, "```,"))
-						StringReplace, Step, Step, ```,, `,, All
+						Step := StrReplace(Step, "``t", "`t")
+					If (InStr(Step, "``,"))
+						Step := StrReplace(Step, "``,", ",")
 				}
 				If (Type = "Return")
 					break 2
@@ -778,8 +751,7 @@
 	}
 	If (RunningFunction != "")
 	{
-		Return_Values := []
-	,	Return_Values.Push("")
+		Func_Result := [""]
 	
 		For i, v in ScopedParams
 		{
@@ -808,7 +780,7 @@
 
 		ScopedVars[RunningFunction].Pop()
 		
-		return Return_Values
+		return Func_Result
 	}
 	If ((MouseReturn = 1) && (MouseReset = 1))
 	{
@@ -1132,24 +1104,26 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC, ByRef LoopCount, ScopedP
 					continue
 				If ((Type = cType21) || (Type = cType44) || (Type = cType46))
 				{
-					Step := StrReplace(Step, "``n", "`n")
-				,	Step := StrReplace(Step, "``t", "`t")
-				,	AssignReplace(Step)
+					AssignReplace(Step)
 				,	CheckVars("Step|Target|Window|VarName|VarValue", PointMarker)
 				,	pbVarName := VarName
 				,	pbVarValue := VarValue
-				,	pbParams := Object()
-					Loop, Parse, pbVarValue, `,, %A_Space%
-						pbParams.Push({Name: A_LoopField})
-					tlResult := ExtractArrays(Target, PointMarker)
+				,	tlResult := ExtractArrays(Target, PointMarker)
 				,	Target := IsObject(tlResult) ? "tlResult" : tlResult
 					If (Type = cType21)
 					{
 						If (Target = "Expression")
 						{
 							pbType := Type, pbAction := Action
-						,	pbVarValue := Eval(pbVarValue, PointMarker)
+						,	EvalResult := Eval(pbVarValue, PointMarker)
+						,	pbVarValue := EvalResult[1]
 						,	Type := pbType, Action := pbAction
+						}
+						Else
+						{
+							Step := StrReplace(Step, "``n", "`n")
+						,	Step := StrReplace(Step, "``t", "`t")
+						,	Step := StrReplace(Step, "``,", ",")
 						}
 						Try
 							AssignVar(pbVarName, Oper, pbVarValue, PointMarker)
@@ -1167,16 +1141,9 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC, ByRef LoopCount, ScopedP
 					}
 					Else If (IsObject(%Target%))
 					{
-						pbParams := Object()
-					,	pbType := Type, pbAction := Action
-						Loop, Parse, pbVarValue, `,, %A_Space%
-						{
-							LoopField := DerefVars(A_LoopField)
-						,	LoopField := StrReplace(LoopField, _z, A_Space)
-						,	LoopField := Eval(LoopField, PointMarker)
-						,	pbParams.Push(LoopField)
-						}
-						Type := pbType, Action := pbAction
+						pbType := Type, pbAction := Action
+					,	pbParams := Eval(pbVarValue, PointMarker)
+					,	Type := pbType, Action := pbAction
 						Try
 						{
 							pbVarValue := %Target%[Action](pbParams*)
@@ -1194,49 +1161,11 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC, ByRef LoopCount, ScopedP
 						}
 						Try SavedVars(pbVarName)
 					}
-					Else If (((Type = cType44) && (IsFunc(Action))) && ((Func(Action).IsBuiltIn) || (Action = "Screenshot")))
-					{
-						pbParams := Object()
-					,	pbType := Type, pbAction := Action
-						Loop, Parse, pbVarValue, `,, %A_Space%
-						{
-							LoopField := DerefVars(A_LoopField)
-						,	LoopField := StrReplace(LoopField, _z, A_Space)
-						,	LoopField := Eval(LoopField, PointMarker)
-						,	pbParams.Push(LoopField)
-						}
-						Type := pbType, Action := pbAction
-						Try
-						{
-							pbVarValue := %Action%(pbParams*)
-						,	AssignVar(pbVarName, ":=", pbVarValue, PointMarker)
-						}
-						Catch e
-						{
-							MsgBox, 20, %d_Lang007%, % "Macro" mMacroOn ", " d_Lang065 " " mListRow
-								.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" (InStr(e.Message, "0x800401E3") ? d_Lang088 : e.Extra) "`n`n" d_Lang035
-							IfMsgBox, No
-							{
-								StopIt := 1
-								continue
-							}
-						}
-						Try SavedVars(pbVarName)
-					}
 					Else If ((Type = cType44) && (Target != ""))
 					{
-						pbParams := Object()
-					,	pbType := Type, pbAction := Action
-						Loop, Parse, pbVarValue, `,, %A_Space%
-						{
-							LoopField := DerefVars(A_LoopField)
-						,	LoopField := StrReplace(LoopField, "`r`n", "``n")
-						,	LoopField := StrReplace(LoopField, "`n", "``n")
-						,	LoopField := StrReplace(LoopField, _z, A_Space)
-						,	LoopField := Eval(LoopField, PointMarker)
-						,	pbParams.Push(LoopField)
-						}
-						Type := pbType, Action := pbAction
+						pbType := Type, pbAction := Action
+					,	pbParams := Eval(pbVarValue, PointMarker)
+					,	Type := pbType, Action := pbAction
 						If (A_AhkPath)
 						{
 							Try
@@ -1262,14 +1191,12 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC, ByRef LoopCount, ScopedP
 									LV_GetText(TargetFunc, A_Index, 3)
 									If ((Row_Type = cType47) && (TargetFunc = Action))
 									{
-										pbType := Type, pbAction := Action
-										Loop, Parse, pbVarValue, `,, %A_Space%
-										{
-											LoopField := DerefVars(A_LoopField)
-										,	LoopField := StrReplace(LoopField, _z, A_Space)
-										,	LoopField := Eval(LoopField, PointMarker)
-											pbParams[A_Index].Value := LoopField
-										}
+										pbParams := {}
+									,	pbType := Type, pbAction := Action
+									,	FuncPars := ExprGetPars(pbVarValue)
+									,	EvalResult := Eval(pbVarValue, PointMarker)
+										For i, v in EvalResult
+											pbParams[i] := {Name: FuncPars[i], Value: v}
 										Type := pbType, Action := pbAction
 									,	LastFuncRun := RunningFunction, RunningFunction := Action
 									,	Func_Result := Playback(TabIdx,,, pbParams)
@@ -1284,14 +1211,36 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC, ByRef LoopCount, ScopedP
 											IfMsgBox, No
 											{
 												StopIt := 1
-												continue
+												continue 3
 											}
 										}
 										Try SavedVars(pbVarName)
-										break 2
+										continue 3
 									}
 								}
 							}
+						}
+						If ((IsFunc(Action)) && ((Func(Action).IsBuiltIn) || (Action = "Screenshot")))
+						{
+							pbType := Type, pbAction := Action
+						,	pbParams := Eval(pbVarValue, PointMarker)
+						,	Type := pbType, Action := pbAction
+							Try
+							{
+								pbVarValue := %Action%(pbParams*)
+							,	AssignVar(pbVarName, ":=", pbVarValue, PointMarker)
+							}
+							Catch e
+							{
+								MsgBox, 20, %d_Lang007%, % "Macro" mMacroOn ", " d_Lang065 " " mListRow
+									.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" (InStr(e.Message, "0x800401E3") ? d_Lang088 : e.Extra) "`n`n" d_Lang035
+								IfMsgBox, No
+								{
+									StopIt := 1
+									continue
+								}
+							}
+							Try SavedVars(pbVarName)
 						}
 					}
 					continue
@@ -1302,11 +1251,11 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC, ByRef LoopCount, ScopedP
 						Act%A_Index% := A_LoopField
 				}
 				If (InStr(Step, "``n"))
-					StringReplace, Step, Step, ``n, `n, All
+					Step := StrReplace(Step, "``n", "`n")
 				If (InStr(Step, "``t"))
-					StringReplace, Step, Step, ``t, `t, All
-				If (InStr(Step, "```,"))
-					StringReplace, Step, Step, ```,, `,, All
+					Step := StrReplace(Step, "``t", "`t")
+				If (InStr(Step, "``,"))
+					Step := StrReplace(Step, "``,", ",")
 				If (Type = "Return")
 					return "_return"
 				If (Type = cType29)
@@ -1478,9 +1427,9 @@ IfStatement(ThisError, l_Point)
 		Tooltip
 		CheckVars("Step|Target|Window", PointMarker)
 		EscCom("Step|TimesX|DelayX|Target|Window", 1)
-		StringReplace, Step, Step, %_z%, %A_Space%, All
-		StringReplace, Target, Target, %_z%, %A_Space%, All
-		StringReplace, Window, Window, %_z%, %A_Space%, All
+		Step := StrReplace(Step, _z, A_Space)
+		Target := StrReplace(Target, _z, A_Space)
+		Window := StrReplace(Window, _z, A_Space)
 		If (ThisError > 0)
 		{
 			ThisError++
@@ -1625,7 +1574,8 @@ IfStatement(ThisError, l_Point)
 		}
 		Else If (Action = If15)
 		{
-			If Eval(Step, PointMarker)
+			EvalResult := Eval(Step, PointMarker)
+			If (EvalResult[1])
 				ThisError := 0
 			Else
 				ThisError++
@@ -1726,10 +1676,10 @@ SplitWin(Window)
 	Static _x := Chr(2), _y := Chr(3), _z := Chr(4)
 	
 	WinPars := []
-	StringReplace, Window, Window, ```,, %_x%, All
+	Window := StrReplace(Window, "``,", _x)
 	Loop, Parse, Window, `,, %A_Space%
 	{
-		StringReplace, LoopField, A_LoopField, %_x%, `,, All
+		LoopField := StrReplace(A_LoopField, _x, ",")
 		WinPars.Push(LoopField)
 	}
 	return WinPars
@@ -1739,11 +1689,14 @@ AssignVar(Name, Operator, Value, l_Point)
 {
 	local _content, _ObjItems
 	
-	StringReplace, Value, Value, %_z%, %A_Space%, All
-	If (Name = "Clipboard")
-		StringReplace, Value, Value, `````,, `,, All
-	If (InStr(Value, "!") = 1)
-		Value := !SubStr(Value, 2)
+	If (!IsObject(Value))
+	{
+		Value := StrReplace(Value, _z, A_Space)
+		If (Name = "Clipboard")
+			Value := StrReplace(Value, "````,", ",")
+		If (InStr(Value, "!") = 1)
+			Value := !SubStr(Value, 2)
+	}
 	
 	Try _content := %Name%
 	
@@ -1783,13 +1736,13 @@ AssignVar(Name, Operator, Value, l_Point)
 
 CheckVars(Match_List, l_Point := "")
 {
-	global
+	local I, lMatch, lMatch1, EvalResult
 	Loop, Parse, Match_List, |
 	{
 		If (InStr(%A_LoopField%, "%A_Index%"))
-			StringReplace, %A_LoopField%, %A_LoopField%, `%A_Index`%, `%LoopIndex`%, All
+			%A_LoopField% := StrReplace(%A_LoopField%, "%A_Index%", "%LoopIndex%")
 		If (InStr(%A_LoopField%, "%ErrorLevel%"))
-			StringReplace, %A_LoopField%, %A_LoopField%, `%ErrorLevel`%, `%LastError`%, All
+			%A_LoopField% := StrReplace(%A_LoopField%, "%ErrorLevel%", "%LastError%")
 		I := DerefVars(LoopIndex)
 		While (RegExMatch(%A_LoopField%, "i)%(A_Loop\w+)%", lMatch))
 		{
@@ -1808,41 +1761,31 @@ CheckVars(Match_List, l_Point := "")
 		%A_LoopField% := DerefVars(%A_LoopField%)
 		
 		If (RegExMatch(%A_LoopField%, "sU)^%\s+(.+)$", lMatch))  ; Expressions
-			%A_LoopField% := Eval(lMatch1, l_Point)
+			EvalResult := Eval(lMatch1, l_Point), %A_LoopField% := EvalResult[1]
 	}
 }
 
-ExtractArrays(v_String, l_Point, ByRef v_levels := "")
+ExtractArrays(v_String, l_Point, ByRef v_levels := "", QuoteStrings := false)
 {
-	global
+	local EvalResult, l_Found, l_Found1, l_Found2
 
 	v_levels := []
 	While (RegExMatch(v_String, "([\w\d_%]+)\[(\S+?)\]", l_Found))
 	{
 		l_Found := RegExReplace(l_Found, "[\[|\]]", "\$0")
-		If l_Found2 is not Number
-		{
-			If (InStr(l_Found2, "A_")=1)
-			{
-				If (l_Found2 = "A_Index")
-					l_Found2 := LoopIndex
-				While (RegExMatch(l_Found2, "i)(A_Loop\w+)", lMatch))
-				{
-					I := DerefVars(LoopIndex), L := SubStr(lMatch1, 3)
-				,	l_Found2 := RegExReplace(l_Found2, "U)" lMatch, o_Loop%l_Point%[I][L])
-				}
-			}
-			Else If (RegExMatch(l_Found2, "^""(.*)""", lMatch))
-				l_Found2 := lMatch1
-			Else
-				l_Found2 := DerefVars("%" l_Found2 "%")
-		}
-		v_levels.Push(l_Found2)
+	,	EvalResult := Eval(l_Found2, l_Point)
+	,	l_Found2 := EvalResult[1]
+	,	v_levels.Push(l_Found2)
 	,	_ArrayObject := %l_Found1%[l_Found2]
 		If (IsObject(_ArrayObject))
 			v_String := RegExReplace(v_String, l_Found, "_ArrayObject")
 		Else
+		{
+			If (QuoteStrings)
+				If _ArrayObject is not Number
+					_ArrayObject := """" _ArrayObject """"
 			v_String := RegExReplace(v_String, l_Found, _ArrayObject)
+		}
 	}
 	
 	return v_String
@@ -1852,15 +1795,22 @@ DerefVars(v_String)
 {
 	global
 	
-	StringReplace, v_String, v_String, `%A_Space`%, %_z%, All
-	StringReplace, v_String, v_String, ```%, %_y%, All
+	v_String := StrReplace(v_String, "%A_Space%", "%_z%")
+	v_String := StrReplace(v_String, "``%", _y)
 	While (RegExMatch(v_String, "%(\w+)%", rMatch))
 	{
-		FoundVar := RegExReplace(%rMatch1%, "%", _y)
-	,	FoundVar := RegExReplace(FoundVar, "\$", "$$$$")
-	,	FoundVar := RegExReplace(FoundVar, ",", "``,")
-	,	v_String := RegExReplace(v_String, rMatch, FoundVar)
+		FoundVar := StrReplace(%rMatch1%, "%", _y)
+	,	FoundVar := StrReplace(FoundVar, ",", "``,")
+	,	v_String := StrReplace(v_String, rMatch, FoundVar)
 	}
-	return RegExReplace(v_String, _y, "%")
+	return StrReplace(v_String, _y, "%")
 }
 
+ExprGetPars(Expr)
+{
+	Expr := RegExReplace(Expr, "\(.*?\)", "[P]")
+,	Expr := RegExReplace(Expr, "\[.*?\]", "[A]")
+,	Expr := RegExReplace(Expr, """.*?""", "[T]")
+,	ExprPars := StrSplit(Expr, ",", A_Space)
+	return ExprPars
+}

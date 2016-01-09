@@ -12,17 +12,17 @@
 		LV_GetTexts(A_Index, Action, Step, TimesX, DelayX, Type, Target, Window, Comment)
 	,	IsChecked := LV_GetNext(A_Index-1, "Checked")
 		If (InStr(FileCmdList, Type "|"))
-			StringReplace, Step, Step, ```,, `,, All
-		Step := CheckForExp(Step)
-	,	TimesX := CheckForExp(TimesX)
-	,	DelayX := CheckForExp(DelayX)
-	,	Target := CheckForExp(Target)
-	,	Window := CheckForExp(Window)
+			Step := StrReplace(Step, "```,", "`,")
+		; Step := CheckForExp(Step)
+	; ,	TimesX := CheckForExp(TimesX)
+	; ,	DelayX := CheckForExp(DelayX)
+	; ,	Target := CheckForExp(Target)
+	; ,	Window := CheckForExp(Window)
 		If (Type = cType1)
 		{
 			If (InStr(Step, "``n"))
 			{
-				StringReplace, Step, Step, ``n, `n, All
+				Step := StrReplace(Step, "``n", "`n")
 				Step := "`n(LTrim`n" Step "`n)"
 			}
 			If !(Send_Loop)
@@ -69,7 +69,7 @@
 		{
 			If (InStr(Step, "``n"))
 			{
-				StringReplace, Step, Step, ``n, `n, All
+				Step := StrReplace(Step, "``n", "`n")
 				Step := "`n(LTrim`n" Step "`n)"
 			}
 			If (((TimesX > 1) || InStr(TimesX, "%")) && (Action != "[Text]"))
@@ -98,11 +98,11 @@
 		{
 			If (InStr(Step, "``n"))
 			{
-				StringReplace, Step, Step, ``n, `n, All
+				Step := StrReplace(Step, "``n", "`n")
 				Step := "`n(LTrim`n" Step "`n)"
 			}
-			StringReplace, Step, Step, ```,, `````,, All
-			StringReplace, Window, Window, ```,, `````,, All
+			Step := StrReplace(Step, "```,", "`````,")
+			Window := StrReplace(Window, "```,", "`````,")
 			RowData := "`n" Type ", " Target ", " Window ", " Step ((DelayX > 0) ? ", " DelayX : "")
 			If (Comment != "")
 				RowData .= "  " "; " Comment
@@ -142,7 +142,7 @@
 		{
 			If (InStr(Step, "``n"))
 			{
-				StringReplace, Step, Step, ``n, `n, All
+				Step := StrReplace(Step, "``n", "`n")
 				Step := "`n(LTrim`n" Step "`n)"
 			}
 			RowData := "`n" ((Step != "") ? "SavedClip := ClipboardAll`nClipboard =`nClipboard = " Step "`nSleep, 333" : "")
@@ -250,31 +250,27 @@
 			AssignReplace(Step)
 			If (VarValue = "")
 				VarValue := """"""
-			If VarValue is not number
-			{
-				If (Target = "Expression")
-					StringReplace, VarValue, VarValue, `%,, All
-				Else
-				{
-					StringReplace, VarValue, VarValue, `,, ```,, All
-					VarValue := CheckExp(VarValue)
-				}
-			}
 			If (Type = cType21)
 			{
+				If VarValue is not number
+				{
+					If (Target != "Expression")
+					{
+						VarValue := StrReplace(VarValue, ",", "``,")
+					,	VarValue := CheckExp(VarValue)
+					}
+				}
 				If (InStr(VarValue, "``n"))
 				{
-					StringReplace, VarValue, VarValue, ``n, `n, All
-					VarValue := "`n(LTrim`n" VarValue "`n)"
+					VarValue := StrReplace(VarValue, "``n", "`n")
+				,	VarValue := "`n(LTrim`n" VarValue "`n)"
 				}
 				Step := VarName " " Oper " " VarValue
 			}
 			Else If (Type = cType46)
-			{
-				Step := ((VarName = "_null") ? "" : VarName " " Oper " ") Target "." Action "(" ((VarValue = """""") ? "" : VarValue) ")"
-			}
+				Step := ((VarName = "_null") ? "" : VarName " " Oper " ") Target "." Action "(" ((VarValue = """") ? "" : VarValue) ")"
 			Else
-				Step := ((VarName = "_null") ? "" : VarName " " Oper " ") Action "(" ((VarValue = """""") ? "" : VarValue) ")"
+				Step := ((VarName = "_null") ? "" : VarName " " Oper " ") Action "(" ((VarValue = """") ? "" : VarValue) ")"
 			RowData := "`n" Step
 			If (Comment != "")
 				RowData .= "  " "; " Comment
@@ -283,7 +279,7 @@
 		{
 			If (InStr(Step, "``n"))
 			{
-				StringReplace, Step, Step, ``n, `n, All
+				Step := StrReplace(Step, "``n", "`n")
 				Step := "`n(LTrim`n" Step "`n)"
 			}
 			RowData := "`nControl, EditPaste, " Step ", " Target ", " Window
@@ -399,7 +395,7 @@
 				RowData .= "`n" Act2 " := " Act1 "." CheckComExp(Step, "", "", Act1)
 			Else
 			{
-				StringReplace, Step, Step, ``n, `n, All
+				Step := StrReplace(Step, "``n", "`n")
 				Loop, Parse, Step, `n, %A_Space%%A_Tab%
 				{
 					If (A_LoopField = "")
@@ -439,10 +435,10 @@
 		{
 			If (InStr(Step, "``n") && ((Type = cType8) || (Type = cType13)))
 			{
-				StringReplace, Step, Step, ``n, `n, All
+				Step := StrReplace(Step, "``n", "`n")
 				Step := "`n(LTrim`n" Step "`n)"
 			}
-			StringReplace, Step, Step, `````,, ```,, All
+			Step := StrReplace(Step, "`````,", "```,")
 			RowData := "`n" Type ", " Step
 			If (!RegExMatch(Step, "```,\s*?$"))
 				RowData := RTrim(RowData, ", ")
@@ -456,10 +452,10 @@
 		{
 			If (InStr(Step, "``n") && (Type = cType8))
 			{
-				StringReplace, Step, Step, ``n, `n, All
+				Step := StrReplace(Step, "``n", "`n")
 				Step := "`n(LTrim`n" Step "`n)"
 			}
-			StringReplace, Step, Step, `````,, ```,, All
+			Step := StrReplace(Step, "`````,", "```,")
 			RowData := "`n" Type ", " Step
 			If (!RegExMatch(Step, "```,\s*?$"))
 				RowData := RTrim(RowData, ", ")
@@ -472,7 +468,7 @@
 			Act := SubStr(Action, 1, 2)
 			If (InStr(Step, "``n"))
 			{
-				StringReplace, Step, Step, ``n, `n, All
+				Step := StrReplace(Step, "``n", "`n")
 				Step := "`n(LTrim`n" Step "`n)"
 			}
 			RowData := ""
@@ -506,7 +502,7 @@
 				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
 		}
 		If (!InStr(FileCmdList, Type "|"))
-			StringReplace, RowData, RowData, ```,, `,, All
+			RowData := StrReplace(RowData, "```,", "`,")
 		LVData .= RowData
 	}
 	LVData := RegExReplace(LVData, "i)%(Temp)%", "%A_$1%")

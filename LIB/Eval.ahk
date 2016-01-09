@@ -1,165 +1,106 @@
 Eval($x, l_Point)
 {
-   Local $y, $Result, CompiledExpression, LastFuncRun, Func_Result
-		, Funct, Funct1, Funct2, Funct3
+   Local $y, $Result, CompiledExpression, LastFuncRun, Params
+		, _Match, _Match1, _Match2, _Match3, ObjArray := {}, Pos := 1
 
-	While (RegExMatch($x, "\b([\w\d_]+)\b\.([\w%]+)\((.*?)\)", Funct))  ; Methods
+	While (RegExMatch($x, "\b([\w\d_]+)\b\.([\w%]+)\((.*?)\)", _Match))  ; Methods
 	{
 		$y := $x
-		If (IsObject(%Funct1%))
+		If (IsObject(%_Match1%))
 		{
-			Params := Object()
-		,	Funct3 := StrReplace(Funct3, Funct3, "```,", "`,")
-		,	Funct3 := RegExReplace(Funct3, "U)""(.*),(.*)""", """$1" _x "$2""")
-			Loop, Parse, Funct3, `,, %A_Space%``""
+			Params := Eval(_Match3, l_Point)
+		,	$y := %_Match1%[_Match2](Params*)
+			If (IsObject($y))
+				ObjArray[_Match] := $y
+			Else
 			{
-				LoopField := CheckParam(A_LoopField, l_Point)
-			,	LoopField := StrReplace(LoopField, _x, "`,")
-			,	Params.Push(LoopField)
+				If $y is not Number
+					$y := """" $y """"
 			}
-			Func_Result := %Funct1%[Funct2](Params*)
-			If (!IsObject(Func_Result))
-			{
-				If Func_Result is not Number
-					Func_Result := """" Func_Result """"
-			}
-			Func_Result := StrReplace(Func_Result, "`,", "```,")
-		,	$x := StrReplace($x, Funct, Func_Result)
+			$x := StrReplace($x, _Match, IsObject($y) ? """:{" _Match "}:""" : $y)
 		}
 		If ($y = $x)
 			break
 	}
-	While (RegExMatch($x, "([\w_]+)\((.*?)\)", Funct))  ; Functions
+	
+	While (Pos := RegExMatch($x, "([\w_]+)\((.*?)\)", _Match, Pos))  ; Functions
 	{
-		If ((IsFunc(Funct1)) && ((Func(Funct1).IsBuiltIn) || (Func1 = "Screenshot")))
-			break
-		$y := $x
 		Loop, %TabCount%
 		{
 			TabIdx := A_Index
-			If ((Funct1 "()") = TabGetText(TabSel, A_Index))
+			If ((_Match1 "()") = TabGetText(TabSel, A_Index))
 			{
 				Gui, chMacro:ListView, InputList%TabIdx%
 				Loop, % ListCount%TabIdx%
 				{
 					LV_GetText(Row_Type, A_Index, 6)
 					LV_GetText(TargetFunc, A_Index, 3)
-					If ((Row_Type = cType47) && (TargetFunc = Funct1))
+					If ((Row_Type = cType47) && (TargetFunc = _Match1))
 					{
-						Params := Object()
-					,	Funct2 := StrReplace(Funct2, "```,", "`,")
-					,	Funct2 := RegExReplace(Funct2, "U)""(.*),(.*)""", """$1" _x "$2""")
-						Loop, Parse, Funct2, `,, %A_Space%``
-						{
-							VarName := LoopField
-						,	LoopField := CheckParam(A_LoopField, l_Point)
-						,	Params.Push({Name: VarName, Value: LoopField})
-						}
-						LastFuncRun := RunningFunction, RunningFunction := Funct1
-					,	Func_Result := Playback(TabIdx,,, Params)
-					,	Func_Result := Func_Result[1]
+						Params := {}
+					,	FuncPars := ExprGetPars(_Match2)
+					,	EvalResult := Eval(_Match2, l_Point)
+						For i, v in EvalResult
+							Params[i] := {Name: FuncPars[i], Value: v}
+						LastFuncRun := RunningFunction, RunningFunction := _Match1
+					,	$y := Playback(TabIdx,,, Params)
+					,	$y := $y[1]
 					,	RunningFunction := LastFuncRun
-						If (!IsObject(Func_Result))
+						If (IsObject($y))
+							ObjArray[_Match] := $y
+						Else
 						{
-							If Func_Result is not Number
-								Func_Result := """" Func_Result """"
+							If $y is not Number
+								$y := """" $y """"
 						}
-						Func_Result := StrReplace(Func_Result, "`,", "```,")
-					,	$x := StrReplace($x, Funct, Func_Result)
-						break 2
+						$x := StrReplace($x, _Match, IsObject($y) ? """:{" _Match "}:""" : $y)
+						continue 3
 					}
 				}
 			}
 		}
-		If ($x = $y)
+		If ((IsFunc(_Match1)) && ((Func(_Match1).IsBuiltIn) || (_Match1 = "Screenshot")))
 		{
-			If ((IsFunc(Funct1)) && (!Func(Funct1).IsBuiltIn))
-				return ""
-			break
+			Pos++
+			continue
 		}
+		If ((IsFunc(_Match1)) && (!Func(_Match1).IsBuiltIn))
+			$x := StrReplace($x, _Match, "ERROR: NOT ALLOWED")
 	}
 	
-	If (RegExMatch($x, "[\w\d_]+\[\S+\]", _Match)) ; Read Arrays
+	While (RegExMatch($x, "[\w\d_]+\[\S+\]", _Match)) ; Read Arrays
 	{
-		$y := ExtractArrays($x, l_Point)
-		If (IsObject($y))
-			return $y
+		$y := ExtractArrays(_Match, l_Point,, true)
 		If ($y = "_ArrayObject")
 			$y := %LoopField%
-		Else If $y is not Number
-			$y := """" $y """"
-		Func_Result := StrReplace(Func_Result, "`,", "```,") 
-		$x := StrReplace($x, _Match, $y)
+		If (IsObject($y))
+			ObjArray[_Match] := $y
+		$x := StrReplace($x, _Match, IsObject($y) ? """:{" _Match "}:""" : $y)
 	}
 	
-	If (RegExMatch($x, "^\s*\[(.*)\]\s*$", Found)) ; Assign Arrays
+	If (RegExMatch($x, "^\s*\[(.*)\]\s*$", _Match)) ; Assign Arrays
 	{
-		$y := [], Found1 := StrReplace(Found1, "```,", "`,")
-		Loop, Parse, Found1, `,, %A_Space%%A_Tab%
-		{
-			LoopField := A_LoopField
-			If LoopField is not Number
-			{
-				If (LoopField = "A_Index")
-					LoopField := LoopIndex
-				Else If (LoopField = "ErrorLevel")
-					LoopField := LastError
-				Else If (RegExMatch(LoopField, "^""(.*)""", lMatch))
-					LoopField := lMatch1
-				Else If (RegExMatch(LoopField, "i)(A_Loop\w+)", lMatch))
-				{
-					I := DerefVars(LoopIndex), L := SubStr(lMatch1, 3)
-				,	LoopField := RegExReplace(LoopField, "U)" lMatch, o_Loop%l_Point%[I][L])
-				}
-				Else
-					LoopField := DerefVars("%" LoopField "%")
-			}
-			$y.Push(LoopField)
-		}
-		return $y
+		$y := Eval(_Match1, l_Point)
+		return [$y]
 	}
 
 	Try
 	{
 		If (IsObject(%$x%))
-			return %$x%.Clone()
+			return [%$x%.Clone()]
 	}
 	
 	ExprInit()
 	CompiledExpression := ExprCompile($x)
 	$Result := ExprEval(CompiledExpression, l_Point)
 
-	Result := StrReplace(Result, Chr(1), "`n") ;format output list for viewing
+	$Result := StrSplit($Result, Chr(1))
+	For i, v in $Result
+		If (RegExMatch(v, "^"":\{(.*)\}:""$", _Match))
+			v := ObjArray[_Match1]
 	return $Result
 }
 
-CheckParam(Param, l_Point)
-{
-	global
-	
-	Param := DerefVars(Param)
-,	Param := StrReplace(Param, "```,", "`,")
-,	Param := StrReplace(Param, _x, "`,")
-	If (RegExMatch(Param, "[\w\d_]+\[\S+\]"))
-	{
-		Param := ExtractArrays(Param, l_Point)
-		If (Param = "_ArrayObject")
-			Param := %Param%
-		Else
-		{
-			Param := StrReplace(Param, _x, "`,")
-		,	Param := StrReplace(Param, _z, A_Space)
-		}
-	}
-	Else
-	{
-		ExprInit()
-	,	CompiledExpression := ExprCompile(Param)
-	,	Param := ExprEval(CompiledExpression, l_Point)
-	,	Param := StrReplace(Param, Chr(1), A_Space)
-	}
-	return Param
-}
 ;##################################################
 ; Author: Uberi
 ; Modified by: Pulover
