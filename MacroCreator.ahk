@@ -654,12 +654,12 @@ Menu, AsVarB, Add, Variables, HelpB
 Menu, AsVarB, Add
 Menu, AsVarB, Add, Built-in Variables, :BuiltInMenu
 Menu, AsVarB, Icon, Variables, %ResDllPath%, 24
-Menu, AsFuncB, Add, Functions, HelpB
+Menu, AsFuncB, Add, Built-in Functions, HelpB
 Menu, AsFuncB, Add, Arrays, HelpB
 Menu, AsFuncB, Add, Array Methods, HelpB
 Menu, AsFuncB, Add
 Menu, AsFuncB, Add, Built-in Variables, :BuiltInMenu
-Menu, AsFuncB, Icon, Functions, %ResDllPath%, 24
+Menu, AsFuncB, Icon, Built-in Functions, %ResDllPath%, 24
 Menu, IEComB, Add, COM, IEComB
 Menu, IEComB, Add, Basic Webpage COM Tutorial, IEComB
 Menu, IEComB, Add, IWebBrowser2 Interface (MSDN), IEComB
@@ -672,6 +672,10 @@ Menu, SendMsgB, Add, Microsoft MSDN, SendMsgB
 Menu, SendMsgB, Add
 Menu, SendMsgB, Add, Built-in Variables, :BuiltInMenu
 Menu, SendMsgB, Icon, PostMessage / SendMessage, %ResDllPath%, 24
+Menu, UserFuncB, Add, Functions, HelpB
+Menu, UserFuncB, Add
+Menu, UserFuncB, Add, Built-in Variables, :BuiltInMenu
+Menu, UserFuncB, Icon, Functions, %ResDllPath%, 24
 Menu, IfDirB, Add, #IfWinActive / #IfWinExist, HelpB
 Menu, IfDirB, Icon, #IfWinActive / #IfWinExist, %ResDllPath%, 24
 Menu, ExportG, Add, Hotkeys, ExportG
@@ -2966,6 +2970,8 @@ Else If (InStr(ThisMenuItem, "LockState"))
 	Run, %HelpDocsUrl%/commands/SetNumScrollCapsLockState.htm
 Else If (ThisMenuItem = "Variables")
 	Run, %HelpDocsUrl%/Variables.htm
+Else If (ThisMenuItem = "Built-in Functions")
+	Run, %HelpDocsUrl%/Functions.htm#BuiltIn
 Else If (ThisMenuItem = "Functions")
 	Run, %HelpDocsUrl%/Functions.htm
 Else If (ThisMenuItem = "Arrays")
@@ -8474,8 +8480,6 @@ FuncReturn:
 FuncParameter:
 If (!InStr(TabGetText(TabSel, A_List), "()"))
 {
-	Gui, 1:+OwnDialogs
-	MsgBox, 64, %AppName%, %d_Lang101%
 	s_Caller := ""
 	return
 }
@@ -8721,7 +8725,7 @@ If (TabControl = 1)
 		TabName := TabGetText(TabSel, A_Index)
 		If (TabName = (FuncName "()"))
 		{
-			MsgBox, 16, %d_Lang007%, %d_Lang103%
+			MsgBox, 16, %d_Lang007%, %d_Lang101%
 			return
 		}
 		CurrentTabs .= TabName "|"
@@ -9960,6 +9964,7 @@ GuiControl, chTimes:Disable, ReptC
 Menu, FuncMenu, Enable, %u_Lang002%`t%_s%Ctrl+Shift+P
 Menu, FuncMenu, Enable, %u_Lang003%`t%_s%Ctrl+Shift+N
 Menu, FuncMenu, Disable, %u_Lang004%`t%_s%Ctrl+Shift+C
+TB_Edit(TbEdit, "FuncParameter",, 1), TB_Edit(TbEdit, "FuncReturn",, 1)
 return
 
 MacroTab:
@@ -9971,6 +9976,7 @@ GuiControl, chTimes:Enable, ReptC
 Menu, FuncMenu, Disable, %u_Lang002%`t%_s%Ctrl+Shift+P
 Menu, FuncMenu, Disable, %u_Lang003%`t%_s%Ctrl+Shift+N
 Menu, FuncMenu, Enable, %u_Lang004%`t%_s%Ctrl+Shift+C
+TB_Edit(TbEdit, "FuncParameter",, 0), TB_Edit(TbEdit, "FuncReturn",, 0)
 return
 
 SaveData:

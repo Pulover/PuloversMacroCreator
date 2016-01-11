@@ -167,7 +167,7 @@ ShowContextHelp()
 	MouseGetPos,,,, Control
 	If (InStr(Control, "Edit"))
 		return
-	If A_Gui in 3,5,7,8,10,11,12,14,16,19,21,22,23,24
+	If A_Gui in 3,5,7,8,10,11,12,14,16,19,21,22,23,24,38
 	{
 		GuiControlGet, Pag,, TabControl
 		Title := ContHelp[A_Gui][Pag ? Pag : 1]
@@ -644,7 +644,7 @@ AssignReplace(String)
 {
 	global
 	RegExMatch(String, "sU)(.+)\s(\W?\W\W?)(?-U)\s(.*)", Out)
-	VarName := Out1, Oper := Out2, VarValue := Out3
+,	VarName := Out1, Oper := Out2, VarValue := Out3
 }
 
 EscCom(MatchList, Reverse := 0)
@@ -895,17 +895,10 @@ LVCallback(Func, Hwnd)
 SavedVars(_Var := "", ByRef _Saved := "", AsArray := false)
 {
 	Static VarsRecord := {}, LocalRecord := {}
-	Static BuiltinVars := StrReplace(BIV_Characters, "`n", "`,")
-						. StrReplace(BIV_Properties, "`n", "`,")
-						. StrReplace(BIV_Date, "`n", "`,")
-						. StrReplace(BIV_Idle, "`n", "`,")
-						. StrReplace(BIV_System, "`n", "`,")
-						. StrReplace(BIV_Misc, "`n", "`,")
-						. StrReplace(BIV_Loop, "`n", "`,")
 	Local ListOfVars, i, v
 	
-	If _Var in Action,Step,TimesX,DelayX,Type,Target,Window,VarName,VarValue,Oper
-		TrayTip, %d_Lang011%!, %_Var% %d_Lang104%,, 18
+	If _Var in %BuiltinVars%,Action,Step,Details,TimesX,DelayX,Type,Target,Window,VarName,VarValue,Oper,Par,Param
+		TrayTip, %d_Lang011%!, %_Var% %d_Lang102%,, 18
 	If (IsByRef(_Saved))
 	{
 		If (AsArray)

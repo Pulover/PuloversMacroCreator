@@ -61,7 +61,7 @@ Eval($x, l_Point)
 		}
 		If ((IsFunc(_Match1)) && ((Func(_Match1).IsBuiltIn) || (_Match1 = "Screenshot")))
 		{
-			Pos++
+			Pos  += StrLen(_Match1)
 			continue
 		}
 		If ((IsFunc(_Match1)) && (!Func(_Match1).IsBuiltIn))
@@ -83,7 +83,7 @@ Eval($x, l_Point)
 		$y := Eval(_Match1, l_Point)
 		return [$y]
 	}
-
+	
 	Try
 	{
 		If (IsObject(%$x%))
@@ -337,9 +337,12 @@ StringReplace,fa,fa,`,,`,,UseErrorLevel
 ac:=ErrorLevel+1
 }e1.=SubStr(e,f1,f-f1) . m1 . c1 . "f" . ac . "'20" . m2 . c1,f+=StrLen(m),f1:=f
 }e:=e1 . SubStr(e,f1),e1:=""
-StringReplace,e,e,%c1%vNot%c1%,\!,All
-StringReplace,e,e,%c1%vAnd%c1%,&&,All
-StringReplace,e,e,%c1%vOr%c1%,||,All
+StringReplace,e,e,\.%c1%vNot%c1%\.,!,All
+StringReplace,e,e,\.%c1%vAnd%c1%\.,&&,All
+StringReplace,e,e,\.%c1%vOr%c1%\.,||,All
+StringReplace,e,e,%c1%vNot%c1%\.,!,All
+StringReplace,e,e,%c1%vAnd%c1%\.,&&,All
+StringReplace,e,e,%c1%vOr%c1%\.,||,All
 e:=RegExReplace(e,"S)(^|[^" . c1 . "\)-])-" . c1 . "(?=[lvf])","$1\-" . c1)
 e:=RegExReplace(e,"S)(^|[^" . c1 . "\)&])&" . c1 . "(?=[lvf])","$1\&" . c1)
 e:=RegExReplace(e,"S)(^|[^" . c1 . "\)\*])\*" . c1 . "(?=[lvf])","$1\*" . c1)

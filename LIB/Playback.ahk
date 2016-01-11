@@ -523,7 +523,10 @@
 					continue
 				If ((Type = cType21) || (Type = cType44) || (Type = cType46))
 				{
-					AssignReplace(Step)
+					Step := StrReplace(Step, "``n", "`n")
+				,	Step := StrReplace(Step, "``t", "`t")
+				,	Step := StrReplace(Step, "``,", ",")
+				,	AssignReplace(Step)
 				,	CheckVars("Step|Target|Window|VarName|VarValue", PointMarker)
 				,	pbVarName := VarName
 				,	pbVarValue := VarValue
@@ -537,12 +540,6 @@
 						,	EvalResult := Eval(pbVarValue, PointMarker)
 						,	pbVarValue := EvalResult[1]
 						,	Type := pbType, Action := pbAction
-						}
-						Else
-						{
-							Step := StrReplace(Step, "``n", "`n")
-						,	Step := StrReplace(Step, "``t", "`t")
-						,	Step := StrReplace(Step, "``,", ",")
 						}
 						Try
 							AssignVar(pbVarName, Oper, pbVarValue, PointMarker)
@@ -1105,7 +1102,10 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC, ByRef LoopCount, ScopedP
 					continue
 				If ((Type = cType21) || (Type = cType44) || (Type = cType46))
 				{
-					AssignReplace(Step)
+					Step := StrReplace(Step, "``n", "`n")
+				,	Step := StrReplace(Step, "``t", "`t")
+				,	Step := StrReplace(Step, "``,", ",")
+				,	AssignReplace(Step)
 				,	CheckVars("Step|Target|Window|VarName|VarValue", PointMarker)
 				,	pbVarName := VarName
 				,	pbVarValue := VarValue
@@ -1119,12 +1119,6 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC, ByRef LoopCount, ScopedP
 						,	EvalResult := Eval(pbVarValue, PointMarker)
 						,	pbVarValue := EvalResult[1]
 						,	Type := pbType, Action := pbAction
-						}
-						Else
-						{
-							Step := StrReplace(Step, "``n", "`n")
-						,	Step := StrReplace(Step, "``t", "`t")
-						,	Step := StrReplace(Step, "``,", ",")
 						}
 						Try
 							AssignVar(pbVarName, Oper, pbVarValue, PointMarker)

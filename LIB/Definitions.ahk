@@ -80,7 +80,8 @@ Action1 := "Click"
 			,	21: ["IfStB", "AsVarB", "AsFuncB"]
 			,	22: ["SendMsgB"]
 			,	23: ["ControlB"]
-			,	24: ["IEComB", "IEComB", "IEComB"]}
+			,	24: ["IEComB", "IEComB", "IEComB"]
+			,	38: ["UserFuncB", "UserFuncB", "UserFuncB"]}
 ,	ContHTitle := {	2: ["p6-Preview.html"]
 			,	3: ["Commands/Pause.html", "Commands/Message_Box.html", "Commands/KeyWait.html"]
 			,	4: ["p7-Settings.html", "p7-Settings.html#misc.", "p7-Settings.html#user-global-variables"]
@@ -98,7 +99,8 @@ Action1 := "Click"
 			,	24: ["Commands/Internet_Explorer.html", "Commands/COM_Interface.html", "Commands/Run_Scriptlet.html"]
 			,	26: ["Commands/Find_a_Command.html"]
 			,	30: ["Commands/COM_Interface.html"]
-			,	34: ["Commands/Find_a_Command.html"] }
+			,	34: ["Commands/Find_a_Command.html"]
+			,	38: ["p9-UserFunctions", "p9-UserFunctions", "p9-UserFunctions"] }
 
 RecOptChecks := ["ClearNewList", "", "Strokes", "CaptKDn", "RecKeybdCtrl"
 					, "", "Mouse", "MScroll", "Moves", "RecMouseCtrl"
@@ -1214,3 +1216,11 @@ A_LoopRegTimeModified
 A_LoopReadLine
 A_LoopField
 )"
+
+BuiltinVars := StrReplace(BIV_Characters, "`n", ",")
+			. StrReplace(BIV_Properties, "`n", ",")
+			. StrReplace(BIV_Date, "`n", ",")
+			. StrReplace(BIV_Idle, "`n", ",")
+			. StrReplace(BIV_System, "`n", ",")
+			. StrReplace(BIV_Misc, "`n", ",")
+			. StrReplace(BIV_Loop, "`n", ",")

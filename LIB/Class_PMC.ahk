@@ -119,7 +119,20 @@
 		,	((Col[6] = "LoopRegistry") && (RegExMatch(Col[3], "```, \d```, \d"))) ? (Col[3] := this.FormatCmd(Col[3], "Reg")) : ""
 		,	((Col[6] = "Variable") && (Col[2] != "[Assign Variable]")) ? (Col[6] := "Function") : ""
 		,	Col[6] := RegExReplace(Col[6], "\s", "_")
-		,	LV_Add("Check" chk, Col*)
+			If (Code.Version = "")
+			{
+				Col[3] := CheckForExp(Col[3])
+			,	Col[4] := CheckForExp(Col[4])
+			,	Col[5] := CheckForExp(Col[5])
+			,	Col[7] := CheckForExp(Col[7])
+			,	Col[8] := CheckForExp(Col[8])
+				If (Col[6] = "Function")
+				{
+					RegExMatch(Col[3], "sU)(.+)\s(\W?\W\W?)(?-U)\s(.*)", Out)
+				,	Col[3] := Out1 " " Out2 " " CheckExp(Out3)
+				}
+			}
+			LV_Add("Check" chk, Col*)
 		}
 		GuiControl, chMacro:+Redraw, %List%
 		Critical, Off

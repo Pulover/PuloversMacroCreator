@@ -875,10 +875,8 @@
 	d_Lang098 =	If one parameter has a default value, the following parameters are required to have one too.
 	d_Lang099 =	The function name contains an illegal character.
 	d_Lang100 =	Goto, Gosub and Label are not allowed in functions.
-	d_Lang101 =	Use the 'Add Function' to create a function before adding parameters or return.
-	d_Lang102 =	You cannot insert this com.and here.
-	d_Lang103 =	Duplicate function.
-	d_Lang104 =	is a reserved word.
+	d_Lang101 =	Duplicate function.
+	d_Lang102 =	is a reserved word.
 		
 ; Start-up Tips		
 	Start_Tips =	
