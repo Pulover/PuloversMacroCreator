@@ -273,7 +273,7 @@
 	w_Lang085 =	Gör om (Ctrl+Y)
 	w_Lang086 =	Kopiera till...
 	w_Lang087 =	Sök / Ersätt (Ctrl+F)
-	w_Lang088 =	Redigera kommentar (Ctrl+L)
+	w_Lang088 =	Infoga / Redigera kommentar (Ctrl+L)
 	w_Lang089 =	Redigera färgmarkering (Ctrl+M)
 	w_Lang090 =	Anpassa
 	w_Lang091 =	Hitta ett kommando (Ctrl+Skift+F)
@@ -292,6 +292,7 @@
 	w_Lang104 =	
 	w_Lang105 =	
 	w_Lang106 =	
+	w_Lang107 =	
 		
 ; Command Windows		
 	c_Lang001 =	Mus
@@ -865,6 +866,7 @@
 	)	
 	d_Lang097 =	
 	(LTrim	
+		
 		
 		
 		

@@ -673,6 +673,8 @@ HistCheck()
 	LVManager.Add()
 	If (LVManager.Handle.Slot.Length() > MaxHistory+1)
 		LVManager.Handle.Slot.RemoveAt(1)
+	If (AutoRefresh = 1)
+		GoSub, PrevRefresh
 }
 
 WinCheck(wParam, lParam, Msg)

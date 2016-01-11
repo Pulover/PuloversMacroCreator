@@ -4,7 +4,7 @@
 	, m_ListCount := ListCount%Macro_On%, mLoopIndex, _Label, _i
 	, pbParams, pbVarName, pbVarValue, pbType, pbAction
 	, ScopedParams := [], LastFuncRun, UserGlobals, GlobalList
-	, Func_Result, SVRef, FuncPars
+	, Func_Result, SVRef, FuncPars, ParamIdx := 1
 
 	CoordMode, Mouse, Screen
 	MouseGetPos, CursorX, CursorY
@@ -99,17 +99,18 @@
 				{
 					AssignReplace(Step)
 					If (VarName = "")
-						VarName := Step, VarValue := UDFParams[A_Index].Value
+						VarName := Step, VarValue := UDFParams[ParamIdx].Value
 					Else
-						VarValue := (UDFParams[A_Index].Value = "") ? VarValue : UDFParams[A_Index].Value
+						VarValue := (UDFParams[ParamIdx].Value = "") ? VarValue : UDFParams[ParamIdx].Value
 					VarValue := (VarValue = "true") ? 1
 							: (VarValue = "false") ? 0
 							: Trim(VarValue, """")
-				,	ScopedParams[A_Index] := {ParamName: VarName
-											, VarName: UDFParams[A_Index].Name
+				,	ScopedParams[ParamIdx] := {ParamName: VarName
+											, VarName: UDFParams[ParamIdx].Name
 											, Value: %VarName%
 											, NewValue: VarValue
 											, Type: (Target = "ByRef") ? "ByRef" : "Param"}
+					ParamIdx++
 					continue
 				}
 				If (Type = cType47)
@@ -708,6 +709,8 @@
 						SkipIt++
 					continue
 				}
+				If (Type = cType50)
+					continue
 				This_Point := PointMarker
 				pbType := Type, pbAction := Action
 				GoSub, SplitStep
@@ -818,7 +821,7 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC, ByRef LoopCount, ScopedP
 {
 	local lCount, lIdx, L_Index, mLoopIndex, _Label, IfError := 0, _l
 	, pbParams, pbVarName, pbVarValue, pbType, pbAction
-	, Func_Result, Return_Values, LastFuncRun
+	, Func_Result, LastFuncRun
 
 	f_Loop:
 	CoordMode, Mouse, %CoordMouse%
@@ -877,9 +880,7 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC, ByRef LoopCount, ScopedP
 							.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" (InStr(e.Message, "0x800401E3") ? d_Lang088 : e.Extra)
 					}
 					
-					Return_Values := []
-				,	Return_Values.Push(Func_Result)
-					return Return_Values
+					return Func_Result
 				}
 				If (Type = cType17)
 				{
@@ -1279,6 +1280,8 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC, ByRef LoopCount, ScopedP
 						SkipIt++
 					continue
 				}
+				If (Type = cType50)
+					continue
 				This_Point := PointMarker
 				pbType := Type, pbAction := Action
 				GoSub, SplitStep

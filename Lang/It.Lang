@@ -273,7 +273,7 @@
 	w_Lang085 =	Ripeti (Ctrl+Y)
 	w_Lang086 =	Copia...
 	w_Lang087 =	Trova / Sostituisci (Ctrl+F)
-	w_Lang088 =	Modifica commento (Ctrl+L)
+	w_Lang088 =	Inserire / Modifica commento (Ctrl+L)
 	w_Lang089 =	Modifica marchio di colore (Ctrl+M)
 	w_Lang090 =	Personalizzare
 	w_Lang091 =	Trova un comando (Ctrl+Shift+F)
@@ -292,6 +292,7 @@
 	w_Lang104 =	
 	w_Lang105 =	
 	w_Lang106 =	
+	w_Lang107 =	
 		
 ; Command Windows		
 	c_Lang001 =	Mouse
@@ -865,6 +866,7 @@
 	)	
 	d_Lang097 =	
 	(LTrim	
+		
 		
 		
 		

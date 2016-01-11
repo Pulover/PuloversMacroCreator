@@ -273,7 +273,7 @@
 	w_Lang085 =	Yinele (Ctrl+Y)
 	w_Lang086 =	Kopyala...
 	w_Lang087 =	Bul / Değiştir (Ctrl+F)
-	w_Lang088 =	Yorum düzenle (Ctrl+L)
+	w_Lang088 =	Eklemek / Yorum düzenle (Ctrl+L)
 	w_Lang089 =	Düzen renk işareti (Ctrl+M)
 	w_Lang090 =	Özelleştirme
 	w_Lang091 =	(Ctrl+Shift+F) bir komut bul
@@ -292,6 +292,7 @@
 	w_Lang104 =	
 	w_Lang105 =	
 	w_Lang106 =	
+	w_Lang107 =	
 		
 ; Command Windows		
 	c_Lang001 =	Fare
@@ -865,6 +866,7 @@
 	)	
 	d_Lang097 =	
 	(LTrim	
+		
 		
 		
 		

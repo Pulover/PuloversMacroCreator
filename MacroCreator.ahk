@@ -269,6 +269,7 @@ IniRead, ColOrder, %IniFilePath%, WindowOptions, ColOrder, 1,2,3,4,5,6,7,8,9,10
 IniRead, PrevWinSize, %IniFilePath%, WindowOptions, PrevWinSize, W450 H500
 IniRead, ShowPrev, %IniFilePath%, WindowOptions, ShowPrev, 0
 IniRead, TextWrap, %IniFilePath%, WindowOptions, TextWrap, 0
+IniRead, CommentUnchecked, %IniFilePath%, WindowOptions, CommentUnchecked, 1
 IniRead, CustomColors, %IniFilePath%, WindowOptions, CustomColors, 0
 IniRead, OSCPos, %IniFilePath%, WindowOptions, OSCPos, X0 Y0
 IniRead, OSTrans, %IniFilePath%, WindowOptions, OSTrans, 255
@@ -1072,7 +1073,7 @@ Gui, chPrev:Add, Custom, ClassToolbarWindow32 y+0 hwndhtbPrev gtbPrev 0x0800 0x0
 Gui, chPrev:Add, Custom, ClassScintilla x0 y25 hwndhSciPrev vLVPrev
 Gui, chPrev:Show, W450 H600 Hide
 TB_Define(tbPrev, htbPrev, hIL_Icons, FixedBar.Preview, FixedBar.PrevOpt)
-,	tbPrev.ModifyButton(8, "Hide")
+,	tbPrev.ModifyButton(9, "Hide") ; Hide AlwaysOnTop button
 ,	sciPrev := new scintilla(hSciPrev)
 ,	sciPrev.SetMarginWidthN(0x0, 0xA)
 ,	sciPrev.SetMarginWidthN(0x1, 0x5)
@@ -1080,12 +1081,22 @@ TB_Define(tbPrev, htbPrev, hIL_Icons, FixedBar.Preview, FixedBar.PrevOpt)
 ,	sciPrev.SetWrapMode(TextWrap ? 0x1 : 0x0)
 ,	sciPrev.SetLexer(0xC8)
 ,	sciPrev.StyleClearAll()
-,	sciPrev.StyleSetFore(0xB, 0x0086B3)
-,	sciPrev.StyleSetFore(0xC, 0x990000), sciPrev.StyleSetBold(0xC, 0x1)
-,	sciPrev.StyleSetFore(0xD, 0x009B4E), sciPrev.StyleSetBold(0xD, 0x1)
-,	sciPrev.StyleSetFore(0x10, 0x008080)
-,	sciPrev.StyleSetFore(0xF, 0xDD1144)
-,	sciPrev.StyleSetFore(0x21, 0x808080), sciPrev.StyleSetSize(0x21, 0x7)
+
+,	sciPrev.StyleSetFore(0xB, 0x0086B3) ; Commands
+,	sciPrev.StyleSetFore(0xC, 0xBB5046), sciPrev.StyleSetBold(0xC, 0x1) ; Functions
+,	sciPrev.StyleSetFore(0xD, 0x009B4E), sciPrev.StyleSetBold(0xD, 0x1) ; Keys
+,	sciPrev.StyleSetFore(0x10, 0xCF00CF) ; Built-In Variables
+,	sciPrev.StyleSetFore(0x9, 0x008080) ; Variables
+,	sciPrev.StyleSetFore(0xF, 0xDD1144) ; Parameters
+,	sciPrev.StyleSetFore(0x1, 0x008040) ; Line comment
+,	sciPrev.StyleSetFore(0x2, 0x008040) ; Block comment
+,	sciPrev.StyleSetFore(0x6, 0x626262) ; Strings
+,	sciPrev.StyleSetFore(0x7, 0x009999) ; Numbers
+,	sciPrev.StyleSetFore(0x4, 0xA71D5D) ; Operators
+,	sciPrev.StyleSetFore(0x5, 0xA71D5D) ; Parenthesis
+,	sciPrev.StyleSetFore(0xA, 0x8066A8), sciPrev.StyleSetBold(0xA, 0x1) ; Labels
+,	sciPrev.StyleSetFore(0x21, 0x808080), sciPrev.StyleSetSize(0x21, 0x7) ; Line number
+
 ,	sciPrev.SetKeywords(0x0, SyHi_Com)
 ,	sciPrev.SetKeywords(0x1, SyHi_Fun)
 ,	sciPrev.SetKeywords(0x2, SyHi_Keys)
@@ -1108,12 +1119,22 @@ TB_Define(tbPrevF, htbPrevF, hIL_Icons, FixedBar.Preview, FixedBar.PrevOpt)
 ,	sciPrevF.SetWrapMode(TextWrap ? 0x1 : 0x0)
 ,	sciPrevF.SetLexer(0xC8)
 ,	sciPrevF.StyleClearAll()
-,	sciPrevF.StyleSetFore(0xB, 0x0086B3)
-,	sciPrevF.StyleSetFore(0xC, 0x990000), sciPrevF.StyleSetBold(0x12, 0x1)
-,	sciPrevF.StyleSetFore(0xD, 0x009B4E), sciPrevF.StyleSetBold(0x13, 0x1)
-,	sciPrevF.StyleSetFore(0x10, 0x008080)
-,	sciPrevF.StyleSetFore(0xF, 0xDD1144)
-,	sciPrevF.StyleSetFore(0x21, 0x808080), sciPrevF.StyleSetSize(0x21, 0x7)
+
+,	sciPrevF.StyleSetFore(0xB, 0x0086B3) ; Commands
+,	sciPrevF.StyleSetFore(0xC, 0x990000), sciPrevF.StyleSetBold(0xC, 0x1) ; Functions
+,	sciPrevF.StyleSetFore(0xD, 0x009B4E), sciPrevF.StyleSetBold(0xD, 0x1) ; Keys
+,	sciPrevF.StyleSetFore(0x10, 0xCF00CF) ; Built-In Variables
+,	sciPrevF.StyleSetFore(0x9, 0x008080) ; Variables
+,	sciPrevF.StyleSetFore(0xF, 0xDD1144) ; Parameters
+,	sciPrevF.StyleSetFore(0x1, 0x008040) ; Line comment
+,	sciPrevF.StyleSetFore(0x2, 0x008040) ; Block comment
+,	sciPrevF.StyleSetFore(0x6, 0x626262) ; Strings
+,	sciPrevF.StyleSetFore(0x7, 0x009999) ; Numbers
+,	sciPrevF.StyleSetFore(0x4, 0xA71D5D) ; Operators
+,	sciPrevF.StyleSetFore(0x5, 0xA71D5D) ; Parenthesis
+,	sciPrevF.StyleSetFore(0xA, 0x8066A8), sciPrevF.StyleSetBold(0xA, 0x1) ; Labels
+,	sciPrevF.StyleSetFore(0x21, 0x808080), sciPrevF.StyleSetSize(0x21, 0x7) ; Line number
+
 ,	sciPrevF.SetKeywords(0x0, SyHi_Com)
 ,	sciPrevF.SetKeywords(0x1, SyHi_Fun)
 ,	sciPrevF.SetKeywords(0x2, SyHi_Keys)
@@ -1130,6 +1151,8 @@ SB_SetParts(150, 150)
 ,	TB_Edit(tbPrevF, "TextWrap", TextWrap)
 ,	TB_Edit(tbPrev, "TabIndent", TabIndent)
 ,	TB_Edit(tbPrevF, "TabIndent", TabIndent)
+,	TB_Edit(tbPrev, "CommentUnchecked", CommentUnchecked)
+,	TB_Edit(tbPrevF, "CommentUnchecked", CommentUnchecked)
 Gui, chMacro:Default
 return
 
@@ -1171,6 +1194,7 @@ return
 
 TextWrap:
 TabIndent:
+CommentUnchecked:
 TB_Edit(tbPrev, A_ThisLabel, %A_ThisLabel% := !%A_ThisLabel%)
 ,	TB_Edit(tbPrevF, A_ThisLabel, %A_ThisLabel%)
 ,	sciPrev.SetWrapMode(TextWrap ? 0x1 : 0x0), sciPrevF.SetWrapMode(TextWrap ? 0x1 : 0x0)
@@ -2044,26 +2068,27 @@ Gui, 14:Add, Combobox, yp-5 x+0 W60 vAbortKey, %KeybdList%
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_PauseKey% yp+5 x+10 W65 vEx_PauseKey R1, %t_Lang081%:
 Gui, 14:Add, Combobox, yp-5 x+0 W60 vPauseKey, %KeybdList%
 ; Export
-Gui, 14:Add, GroupBox, Section xm W450 H115, %t_Lang010%:
+Gui, 14:Add, GroupBox, Section ys+195 xm W450 H145, %t_Lang010%:
 Gui, 14:Add, Edit, ys+20 xs+10 W400 R1 vExpFile -Multi, %dir%\%name_no_ext%.ahk
 Gui, 14:Add, Button, -Wrap W30 H23 yp-1 x+0 gExpSearch, ...
-Gui, 14:Add, Checkbox, -Wrap Checked%TabIndent% y+5 xs+10 W230 vTabIndent R1, %t_Lang011%
-Gui, 14:Add, Checkbox, -Wrap Checked%IncPmc% yp x+5 W190 vIncPmc R1, %t_Lang012%
+Gui, 14:Add, Checkbox, -Wrap Checked%TabIndent% ys+50 xs+10 W230 vTabIndent R1, %t_Lang011%
+Gui, 14:Add, Checkbox, -Wrap Checked%CommentUnchecked% y+5 xs+10 W230 vCommentUnchecked R1, %w_Lang107%
 Gui, 14:Add, Checkbox, -Wrap Checked%Send_Loop% y+5 xs+10 W230 vSend_Loop R1, %t_Lang013%
-Gui, 14:Add, Checkbox, -Wrap Checked%Exe_Exp% yp x+5 W190 vExe_Exp gExe_Exp R1,%t_Lang088% 
-Gui, 14:Add, Button, -Wrap Section Default y+5 xs+10 W75 H23 gExpButton, %w_Lang001%
+Gui, 14:Add, Checkbox, -Wrap Checked%IncPmc% ys+50 x+5 W190 vIncPmc R1, %t_Lang012%
+Gui, 14:Add, Checkbox, -Wrap Checked%Exe_Exp% y+5 xp W190 vExe_Exp gExe_Exp R1,%t_Lang088% 
+Gui, 14:Add, Button, -Wrap Section Default ys+110 xs+10 W75 H23 gExpButton, %w_Lang001%
 Gui, 14:Add, Button, -Wrap ys W75 H23 gExpClose, %c_Lang022%
 Gui, 14:Add, Button, -Wrap ys W75 H23 vShowMore gShowMore, % (ShowExpOpt) ? w_Lang003 " <<" : w_Lang003 ">> "
 Gui, 14:Add, Progress, ys W175 H20 vExpProgress
 ; Context
-Gui, 14:Add, GroupBox, Section y+25 xm W450 H80
+Gui, 14:Add, GroupBox, Section ys+40 xm W450 H80
 Gui, 14:Add, Checkbox, -Wrap Section ys xs vEx_IfDir gEx_Checks R1, %t_Lang009%:
 Gui, 14:Add, DDL, xs+10 W105 vEx_IfDirType Disabled, #IfWinActive%_x%%_x%#IfWinNotActive%_x%#IfWinExist%_x%#IfNotWinExist
 Gui, 14:Add, DDL, yp x+250 W75 vIdent Disabled, Title%_x%%_x%Class%_x%Process%_x%ID%_x%PID
 Gui, 14:Add, Edit, xs+10 W400 vTitle Disabled
 Gui, 14:Add, Button, -Wrap yp-1 x+0 W30 H23 vGetWin gGetWin Disabled, ...
 ; Options
-Gui, 14:Add, GroupBox, Section xm W450 H270, %w_Lang003%:
+Gui, 14:Add, GroupBox, Section ys+85 xm W450 H270, %w_Lang003%:
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_SM% ys+20 xs+10 W140 vEx_SM R1, SendMode
 Gui, 14:Add, DDL, yp-3 x+5 vSM w75, Input%_x%%_x%Play%_x%Event%_x%InputThenPlay
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_SI% y+5 xs+10 W140 vEx_SI R1, #SingleInstance
@@ -2123,7 +2148,7 @@ Loop, %TabCount%
 ,	LV_Modify(0, "Check")
 If (CurrentFileName = "")
 	GuiControl, 14:, ExpFile, %A_MyDocuments%\MyScript.ahk
-Gui, 14:Show, % (ShowExpOpt) ? "H695" : "H325", %t_Lang001%
+Gui, 14:Show, % (ShowExpOpt) ? "H720" : "H350", %t_Lang001%
 ChangeIcon(hIL_Icons, CmdWin, IconsNames["export"])
 Tooltip
 return
@@ -2371,7 +2396,7 @@ GuiControl, 14:Enable%Ex_UV%, Ex_EdVars
 return
 
 ShowMore:
-Gui, 14:Show, % (ShowExpOpt := !ShowExpOpt) ? "H695" : "H325", %t_Lang001%
+Gui, 14:Show, % (ShowExpOpt := !ShowExpOpt) ? "H720" : "H350", %t_Lang001%
 GuiControl, 14:, ShowMore, % (ShowExpOpt) ? w_Lang003 " <<" : w_Lang003 " >>"
 return
 
@@ -2386,6 +2411,10 @@ Gui, 14:Destroy
 Gui, chMacro:Default
 	TB_Edit(tbPrev, "TabIndent", TabIndent)
 ,	TB_Edit(tbPrevF, "TabIndent", TabIndent)
+	TB_Edit(tbPrev, "CommentUnchecked", CommentUnchecked)
+,	TB_Edit(tbPrevF, "CommentUnchecked", CommentUnchecked)
+If (AutoRefresh = 1)
+	GoSub, PrevRefresh
 return
 
 Exe_Exp:
@@ -9524,10 +9553,14 @@ return
 
 InputList:
 Gui, chMacro:ListView, InputList%A_List%
-If ((A_GuiEvent == "I") || (A_GuiEvent == "Normal") || (A_GuiEvent == "A")
-|| (A_GuiEvent == "C") || (A_GuiEvent == "K") || (A_GuiEvent == "F")
-|| (A_GuiEvent == "f"))
+If ((A_GuiEvent == "I") || (A_GuiEvent == "K"))
 {
+	If ((ErrorLevel == "c") || (Chr(A_EventInfo) = " "))
+	{
+		LV_GetText(RowType, A_EventInfo, 6)
+		If (RowType = cType47)
+			LV_Modify(A_EventInfo, "Check")
+	}
 	If (AutoRefresh = 1)
 		GoSub, PrevRefresh
 }
@@ -9543,6 +9576,8 @@ If (A_GuiEvent == "f")
 	Input
 	ListFocus := 0
 	SetTimer, MainLoop, Off
+	If (Capt)
+		GoSub, Capt
 }
 If (A_GuiEvent == "ColClick")
 {
@@ -9600,7 +9635,10 @@ If (A_GuiEvent == "RightClick")
 }
 If (A_GuiEvent != "DoubleClick")
 	return
-RowNumber := LV_GetNext()
+LV_GetText(RowType, A_EventInfo, 6)
+If (RowType = cType47)
+	LV_Modify(A_EventInfo, "Check")
+RowNumber := A_EventInfo
 If (!RowNumber)
 	return
 GoSub, Edit
@@ -10572,6 +10610,8 @@ If (Type = cType20)
 	Goto, EditKeyWait
 If (Type = cType35)
 	Goto, EditLabel
+If (Type = cType50)
+	Goto, EditComm
 If Type in %cType35%,%cType36%,%cType37%
 	Goto, EditGoto
 Gui, 15:+owner1 -MinimizeBox +HwndCmdWin
@@ -11030,7 +11070,6 @@ return
 EditComm:
 Gui, chMacro:Default
 Gui, chMacro:Listview, InputList%A_List%
-RowSelection := LV_GetCount("Selected")
 Gui, 17:+owner1 -MinimizeBox
 Gui, chMacro:Default
 Gui, 1:+Disabled
@@ -11038,10 +11077,18 @@ Gui, 17:Add, GroupBox, Section xm W450 H105, %t_Lang064%:
 Gui, 17:Add, Edit, ys+20 xs+10 vComm W430 r5
 Gui, 17:Add, Button, -Wrap Section Default xm W75 H23 gCommOK, %c_Lang020%
 Gui, 17:Add, Button, -Wrap ys W75 H23 gCommCancel, %c_Lang021%
+Gui, 17:Add, Button, -Wrap ys W75 H23 vCommBlock gCommBlock, %w_Lang018%
+GoSub, ClearPars
+RowNumber := LV_GetNext()
+LV_GetTexts(RowNumber, Action, Details, TimesX, DelayX, Type, Target, Window, Comment)
+RowSelection := LV_GetCount("Selected")
 If (RowSelection = 1)
 {
-	RowNumber := LV_GetNext()
-	LV_GetText(Comment, RowNumber, 9)
+	If (Type = cType50)
+	{
+		Comment := Details
+		GuiControl, 17:Disable, CommBlock
+	}
 	StringReplace, Comment, Comment, `n, %A_Space%, All
 	GuiControl, 17:, Comm, %Comment%
 }
@@ -11051,13 +11098,24 @@ return
 
 CommOK:
 Gui, 17:Submit, NoHide
-StringReplace, Comm, Comm, `n, %A_Space%, All
+If (RowSelection = 1)
+{
+	If (Type != cType50)
+		StringReplace, Comm, Comm, `n, %A_Space%, All
+}
+Else
+	StringReplace, Comm, Comm, `n, %A_Space%, All
 Comment := Comm
 Gui, 1:-Disabled
 Gui, 17:Destroy
 Gui, chMacro:Default
 If (RowSelection = 1)
-	LV_Modify(RowNumber, "Col9", Comment)
+{
+	If (Type = cType50)
+		LV_Modify(RowNumber, "Col3", Comment, 0, 1, cType50, "", "")
+	Else
+		LV_Modify(RowNumber, "Col9", Comment)
+}
 Else If (RowSelection = 0)
 {
 	RowNumber := 0
@@ -11078,6 +11136,31 @@ Else
 		LV_Modify(RowNumber, "Col9", Comment)
 	}
 }
+GoSub, RowCheck
+GoSub, b_Start
+GuiControl, Focus, InputList%A_List%
+s_Caller := ""
+return
+
+CommBlock:
+Gui, 17:Submit, NoHide
+StringReplace, Comm, Comm, `n, %A_Space%, All
+Comment := Comm
+Gui, 1:-Disabled
+Gui, 17:Destroy
+Gui, chMacro:Default
+If (RowSelection = 0)
+{
+	LV_Add("Check", ListCount%A_List%+1, "[CommentBlock]", Comment, 0, 1, cType50, "", "")
+	LV_Modify(ListCount%A_List%+1, "Vis")
+}
+Else
+{
+	LV_Insert(RowNumber, "Check", LV_GetNext(), "[CommentBlock]", Comment, 0, 1, cType50, "", "")
+,	LVManager.InsertAtGroup(1, LV_GetNext())
+}
+GoSub, RowCheck
+GoSub, b_Start
 GuiControl, Focus, InputList%A_List%
 return
 
@@ -11693,7 +11776,7 @@ pb_SendEvent:
 	SendEvent, %Step%
 return
 pb_Sleep:
-	If (Step = "Random")
+	If ((Type = cType5) && (Step = "Random"))
 		SleepRandom(, DelayX, Target)
 	Else
 	{
@@ -11703,6 +11786,8 @@ pb_Sleep:
 			Sleep, (DelayX*SpeedDn)
 		Else If (FastKeyOn)
 			Sleep, (DelayX/SpeedUp)
+		Else If ((Type = cType13) && (Action = "[Text]"))
+			return
 		Else
 			Sleep, %DelayX%
 	}
@@ -12844,6 +12929,7 @@ AbortKey := "F8"
 ,	Send_Loop := 0
 ,	TabIndent := 1
 ,	TextWrap := 0
+,	CommentUnchecked := 1
 ,	IncPmc := 0
 ,	Exe_Exp := 0
 ,	ShowExpOpt := 0
@@ -12869,6 +12955,8 @@ AbortKey := "F8"
 ,	TB_Edit(tbPrevF, "TextWrap", 0)
 ,	TB_Edit(tbPrev, "TabIndent", 1)
 ,	TB_Edit(tbPrevF, "TabIndent", 1)
+,	TB_Edit(tbPrev, "CommentUnchecked", 1)
+,	TB_Edit(tbPrevF, "CommentUnchecked", 1)
 
 ProgramsFolder := (A_PtrSize = 8) ? ProgramFiles " (x86)" : ProgramFiles
 If (FileExist(ProgramsFolder "\Notepad++\notepad++.exe"))
@@ -13148,6 +13236,7 @@ IniWrite, %ColOrder%, %IniFilePath%, WindowOptions, ColOrder
 IniWrite, %PrevWinSize%, %IniFilePath%, WindowOptions, PrevWinSize
 IniWrite, %ShowPrev%, %IniFilePath%, WindowOptions, ShowPrev
 IniWrite, %TextWrap%, %IniFilePath%, WindowOptions, TextWrap
+IniWrite, %CommentUnchecked%, %IniFilePath%, WindowOptions, CommentUnchecked
 IniWrite, %CustomColors%, %IniFilePath%, WindowOptions, CustomColors
 IniWrite, %OSCPos%, %IniFilePath%, WindowOptions, OSCPos
 IniWrite, %OSTrans%, %IniFilePath%, WindowOptions, OSTrans
@@ -13323,6 +13412,8 @@ Loop, % LV_GetCount()
 		LV_Colors.Row(ListID%A_List%, A_Index
 		, (RowColorLoop > 0) ? LoopLVColor : ((Action = "[LoopEnd]") ? LoopLVColor : "")
 		, (RowColorIf > 0 ) ? IfLVColor : ((Action = "[End If]") ? IfLVColor : ""))
+		If (Type = cType47)
+			LV_Colors.Row(ListID%A_List%, A_Index, 0xBB5046)
 		LV_Colors.Cell(ListID%A_List%, A_Index, 1, Color ? Color : "")
 	}
 	Else
@@ -13355,7 +13446,7 @@ Loop, % LV_GetCount()
 			LV_Delete(A_Index), BadPos := true
 			break
 		}
-		Else If ((!FuncLn) && (Type != cType48))
+		Else If ((!FuncLn) && ((Type != cType48) && (Type != cType50)))
 		{
 			LV_Delete(A_Index), BadPos := true
 			break
@@ -13395,7 +13486,8 @@ Loop, % LV_GetCount()
 :	RegExMatch(Type, "Process") ? LV_Modify(A_Index, "Icon" IconsNames["process"])
 :	RegExMatch(Type, "Shutdown") ? LV_Modify(A_Index, "Icon" IconsNames["shutdown"])
 :	""
-	(InStr(Type, "Sort") || InStr(Type, "String") || InStr(Type, "Split")) ? LV_Modify(A_Index, "Icon" IconsNames["string"])
+	(Type = cType50) ? LV_Modify(A_Index, "Icon" IconsNames["comment"])
+:	(InStr(Type, "Sort") || InStr(Type, "String") || InStr(Type, "Split")) ? LV_Modify(A_Index, "Icon" IconsNames["string"])
 :	(InStr(Type, "InputBox") || InStr(Type, "Msg") || InStr(Type, "Tip")
 	|| InStr(Type, "Progress") || InStr(Type, "Splash")) ? LV_Modify(A_Index, "Icon" IconsNames["dialogs"])
 :	InStr(Type, "Win") ? LV_Modify(A_Index, "Icon" IconsNames["window"])
@@ -14348,11 +14440,11 @@ TB_Edit(tbEdit, "EditButton", "", "", w_Lang092), TB_Edit(tbEdit, "CutRows", "",
 ; Preview
 TB_Edit(tbPrev, "PrevDock", "", "", t_Lang124)
 , TB_Edit(tbPrev, "PrevCopy", "", "", c_Lang023), TB_Edit(tbPrev, "PrevRefreshButton", "", "", t_Lang014)
-, TB_Edit(tbPrev, "AutoRefresh", "", "", t_Lang015), TB_Edit(tbPrev, "TabIndent", "", "", t_Lang011), TB_Edit(tbPrev, "TextWrap", "", "", t_Lang052), TB_Edit(tbPrev, "OnTop", "", "", t_Lang016)
+, TB_Edit(tbPrev, "AutoRefresh", "", "", t_Lang015), TB_Edit(tbPrev, "TabIndent", "", "", t_Lang011), TB_Edit(tbPrev, "TextWrap", "", "", t_Lang052), TB_Edit(tbPrev, "CommentUnchecked", "", "", w_Lang107), TB_Edit(tbPrev, "OnTop", "", "", t_Lang016)
 , TB_Edit(tbPrev, "EditScript", "", "", t_Lang138)
 , TB_Edit(tbPrevF, "PrevDock", "", "", t_Lang125)
 , TB_Edit(tbPrevF, "PrevCopy", "", "", c_Lang023), TB_Edit(tbPrevF, "PrevRefreshButton", "", "", t_Lang014)
-, TB_Edit(tbPrevF, "AutoRefresh", "", "", t_Lang015), TB_Edit(tbPrevF, "TextWrap", "", "", t_Lang052), TB_Edit(tbPrevF, "TabIndent", "", "", t_Lang011), TB_Edit(tbPrevF, "OnTop", "", "", t_Lang016)
+, TB_Edit(tbPrevF, "AutoRefresh", "", "", t_Lang015), TB_Edit(tbPrevF, "TabIndent", "", "", t_Lang011), TB_Edit(tbPrevF, "TextWrap", "", "", t_Lang052), TB_Edit(tbPrevF, "CommentUnchecked", "", "", w_Lang107), TB_Edit(tbPrevF, "OnTop", "", "", t_Lang016)
 , TB_Edit(tbPrevF, "EditScript", "", "", t_Lang138), TB_Edit(tbPrevF, "Preview", "", "", c_Lang022)
 ; OSC
 TB_Edit(tbOSC, "OSPlay", "", "", t_Lang112), TB_Edit(tbOSC, "OSStop", "", "", t_Lang113), TB_Edit(tbOSC, "ShowPlayMenu", "", "", t_Lang114)

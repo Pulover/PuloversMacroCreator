@@ -273,7 +273,7 @@
 	w_Lang085 =	Redo (Ctrl+Y)
 	w_Lang086 =	Копировать в...
 	w_Lang087 =	Найти / Заменить (Ctrl+F)
-	w_Lang088 =	Редактировать комментарий (Ctrl+L)
+	w_Lang088 =	Вставить / Редактировать комментарий (Ctrl+L)
 	w_Lang089 =	Редактировать метку цвета (Ctrl+M)
 	w_Lang090 =	Настроить
 	w_Lang091 =	Найти команду (Ctrl+Shift+F)
@@ -292,6 +292,7 @@
 	w_Lang104 =	
 	w_Lang105 =	
 	w_Lang106 =	
+	w_Lang107 =	
 		
 ; Command Windows		
 	c_Lang001 =	Мышь
@@ -865,6 +866,7 @@
 	)	
 	d_Lang097 =	
 	(LTrim	
+		
 		
 		
 		

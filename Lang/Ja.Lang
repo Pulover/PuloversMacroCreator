@@ -273,7 +273,7 @@
 	w_Lang085 =	やり直し（Ctrl+Y）
 	w_Lang086 =	にコピーして...
 	w_Lang087 =	検索/置換（Ctrl+F）を
-	w_Lang088 =	コメントを編集（Ctrl+L）を
+	w_Lang088 =	挿入 / コメントを編集（Ctrl+L）を
 	w_Lang089 =	編集色マーク（Ctrl+M）を
 	w_Lang090 =	カスタマイズ
 	w_Lang091 =	コマンドを見つける（Ctrlキー+ Shiftキー+ F）
@@ -292,6 +292,7 @@
 	w_Lang104 =	
 	w_Lang105 =	
 	w_Lang106 =	
+	w_Lang107 =	
 		
 ; Command Windows		
 	c_Lang001 =	マウス
@@ -865,6 +866,7 @@
 	)	
 	d_Lang097 =	
 	(LTrim	
+		
 		
 		
 		

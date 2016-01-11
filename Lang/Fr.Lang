@@ -273,7 +273,7 @@
 	w_Lang085 =	Rétablir (Ctrl+Y)
 	w_Lang086 =	Copier sur...
 	w_Lang087 =	Rechercher / Remplacer (Ctrl+F)
-	w_Lang088 =	Modifier le commentaire (Ctrl+L)
+	w_Lang088 =	Insérer / Modifier le commentaire (Ctrl+L)
 	w_Lang089 =	Modifier marque de couleur (Ctrl+M)
 	w_Lang090 =	Personnaliser
 	w_Lang091 =	Trouvez une commande (Ctrl+Maj+F)
@@ -292,6 +292,7 @@
 	w_Lang104 =	
 	w_Lang105 =	
 	w_Lang106 =	
+	w_Lang107 =	
 		
 ; Command Windows		
 	c_Lang001 =	Souris
@@ -865,6 +866,7 @@
 	)	
 	d_Lang097 =	
 	(LTrim	
+		
 		
 		
 		

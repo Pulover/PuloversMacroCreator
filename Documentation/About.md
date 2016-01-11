@@ -53,6 +53,8 @@ Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jör
 * Added support for array methods inside Variable Assignment when "Expression" is checked.
 * Added support for arrays inside IECom and COMInterface parameters.
 * Added option to change color of the rectangle of Image/Pixel Search area and Screenshots tool.
+* Added *Insert Comment Block* to "Edit Comment" window.
+* Added option to comment out unchecked rows in Preview/Exported scripts.
 * Updated "Loop, File" and "Loop, Reg" to new format with "Mode" parameter.
 * Changed "List Variables" to display User-Defined variables only.
 * Fixed corrupted pmc files saved on exit.

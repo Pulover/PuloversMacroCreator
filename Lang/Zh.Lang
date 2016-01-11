@@ -273,7 +273,7 @@
 	w_Lang085 =	重做(Ctrl+Y)
 	w_Lang086 =	复制到...
 	w_Lang087 =	查找/替换(Ctrl+F)
-	w_Lang088 =	编辑注释(Ctrl+L)
+	w_Lang088 =	插入 / 编辑注释(Ctrl+L)
 	w_Lang089 =	编辑颜色标记(Ctrl+M)
 	w_Lang090 =	定制
 	w_Lang091 =	查找命令(Ctrl+Shift+F)
@@ -292,6 +292,7 @@
 	w_Lang104 =	
 	w_Lang105 =	
 	w_Lang106 =	
+	w_Lang107 =	
 		
 ; Command Windows		
 	c_Lang001 =	鼠标
@@ -865,6 +866,7 @@
 	)	
 	d_Lang097 =	
 	(LTrim	
+		
 		
 		
 		

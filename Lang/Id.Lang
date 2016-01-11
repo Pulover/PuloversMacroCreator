@@ -273,7 +273,7 @@
 	w_Lang085 =	Redo (Ctrl+Y)
 	w_Lang086 =	Salin ke...
 	w_Lang087 =	Cari / Ganti (Ctrl+F)
-	w_Lang088 =	Mengedit Komentar (Ctrl+L)
+	w_Lang088 =	Menyisipkan / Mengedit Komentar (Ctrl+L)
 	w_Lang089 =	Sunting Color Mark (Ctrl+M)
 	w_Lang090 =	Sesuaikan
 	w_Lang091 =	Cari perintah (Ctrl+Shift+F)
@@ -292,6 +292,7 @@
 	w_Lang104 =	
 	w_Lang105 =	
 	w_Lang106 =	
+	w_Lang107 =	
 		
 ; Command Windows		
 	c_Lang001 =	Mouse
@@ -865,6 +866,7 @@
 	)	
 	d_Lang097 =	
 	(LTrim	
+		
 		
 		
 		

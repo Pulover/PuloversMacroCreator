@@ -273,7 +273,7 @@
 	w_Lang085 =	Redo (Ctrl+Y)
 	w_Lang086 =	Kopioida...
 	w_Lang087 =	Etsi / Korvaa (Ctrl+F)
-	w_Lang088 =	Edit Kommentti (Ctrl+L)
+	w_Lang088 =	Lisätä / Edit Kommentti (Ctrl+L)
 	w_Lang089 =	Edit värimerkk (Ctrl+M)
 	w_Lang090 =	Muokkaa
 	w_Lang091 =	Etsi komento (Ctrl+Shift+F)
@@ -292,6 +292,7 @@
 	w_Lang104 =	
 	w_Lang105 =	
 	w_Lang106 =	
+	w_Lang107 =	
 		
 ; Command Windows		
 	c_Lang001 =	Hiiri
@@ -865,6 +866,7 @@
 	)	
 	d_Lang097 =	
 	(LTrim	
+		
 		
 		
 		

@@ -273,7 +273,7 @@
 	w_Lang085 =	다시 실행 (Ctrl 키를+Y)
 	w_Lang086 =	에 복사...
 	w_Lang087 =	찾기 / 바꾸기 (Ctrl 키+F)
-	w_Lang088 =	댓글 수정 (Ctrl 키+L)
+	w_Lang088 =	삽입하다 / 댓글 수정 (Ctrl 키+L)
 	w_Lang089 =	편집 색상 표 (Ctrl 키+M)
 	w_Lang090 =	사용자 지정
 	w_Lang091 =	명령 찾기 (Ctrl+Shift+F)
@@ -292,6 +292,7 @@
 	w_Lang104 =	
 	w_Lang105 =	
 	w_Lang106 =	
+	w_Lang107 =	
 		
 ; Command Windows		
 	c_Lang001 =	마우스
@@ -865,6 +866,7 @@
 	)	
 	d_Lang097 =	
 	(LTrim	
+		
 		
 		
 		

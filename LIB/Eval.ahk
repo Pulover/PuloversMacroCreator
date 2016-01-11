@@ -93,7 +93,7 @@ Eval($x, l_Point)
 	ExprInit()
 	CompiledExpression := ExprCompile($x)
 	$Result := ExprEval(CompiledExpression, l_Point)
-
+	
 	$Result := StrSplit($Result, Chr(1))
 	For i, v in $Result
 		If (RegExMatch(v, "^"":\{(.*)\}:""$", _Match))

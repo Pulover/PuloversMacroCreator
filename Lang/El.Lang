@@ -273,7 +273,7 @@
 	w_Lang085 =	Επανάληψη (Ctrl+Y)
 	w_Lang086 =	Αντιγραφή σε...
 	w_Lang087 =	Εύρεση / Αντικατάσταση (Ctrl+F)
-	w_Lang088 =	Επεξεργασία Σχόλιο (Ctrl+L)
+	w_Lang088 =	Εισαγωγή / Επεξεργασία Σχόλιο (Ctrl+L)
 	w_Lang089 =	Επεξεργασία χρωματικό σήμα (Ctrl+M)
 	w_Lang090 =	Προσαρμογή
 	w_Lang091 =	Βρείτε μια εντολή (Ctrl+Shift+F)
@@ -292,6 +292,7 @@
 	w_Lang104 =	
 	w_Lang105 =	
 	w_Lang106 =	
+	w_Lang107 =	
 		
 ; Command Windows		
 	c_Lang001 =	Ποντίκι
@@ -865,6 +866,7 @@
 	)	
 	d_Lang097 =	
 	(LTrim	
+		
 		
 		
 		

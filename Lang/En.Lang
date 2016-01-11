@@ -273,7 +273,7 @@
 	w_Lang085 =	Redo (Ctrl+Y)
 	w_Lang086 =	Copy to...
 	w_Lang087 =	Find / Replace (Ctrl+F)
-	w_Lang088 =	Edit Comment (Ctrl+L)
+	w_Lang088 =	Insert / Edit Comment (Ctrl+L)
 	w_Lang089 =	Edit Color Mark (Ctrl+M)
 	w_Lang090 =	Customize
 	w_Lang091 =	Find a command (Ctrl+Shift+F)
@@ -292,6 +292,7 @@
 	w_Lang104 =	Add Parameter (Ctrl+Shift+P)
 	w_Lang105 =	Add Return (Ctrl+Shift+N)
 	w_Lang106 =	Convert Macro To Function (Ctrl+Shift+C)
+	w_Lang107 =	Comment out unchecked rows
 		
 ; Command Windows		
 	c_Lang001 =	Mouse
@@ -869,6 +870,7 @@
 		- Most of AHK expressions are supported.
 		- You may use strings, variables, arrays and functions.
 		- To use strings, enclose them in quotes, e.g.: var = "a".
+		- Multiple Statements are supported, e.g.: var = "a" || InStr(var, "b").
 	)	
 	d_Lang098 =	If one parameter has a default value, the following parameters are required to have one too.
 	d_Lang099 =	The function name contains an illegal character.

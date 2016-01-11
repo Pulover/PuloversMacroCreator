@@ -273,7 +273,7 @@
 	w_Lang085 =	Ismét (Ctrl+Y)
 	w_Lang086 =	Másolás...
 	w_Lang087 =	Keresés / Csere (Ctrl+F)
-	w_Lang088 =	Megjegyzés szerkesztése (Ctrl+L)
+	w_Lang088 =	Beszúrása / Megjegyzés szerkesztése (Ctrl+L)
 	w_Lang089 =	Szerkesztés színvédjegy (Ctrl+M)
 	w_Lang090 =	Testreszabása
 	w_Lang091 =	Keresse meg a parancsot (Ctrl+Shift+F)
@@ -292,6 +292,7 @@
 	w_Lang104 =	
 	w_Lang105 =	
 	w_Lang106 =	
+	w_Lang107 =	
 		
 ; Command Windows		
 	c_Lang001 =	Egér
@@ -865,6 +866,7 @@
 	)	
 	d_Lang097 =	
 	(LTrim	
+		
 		
 		
 		

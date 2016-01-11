@@ -273,7 +273,7 @@
 	w_Lang085 =	Redo (Ctrl+Y)
 	w_Lang086 =	Kopier til...
 	w_Lang087 =	Find / Erstat (Ctrl+F)
-	w_Lang088 =	Rediger kommentar (Ctrl+L)
+	w_Lang088 =	Indsæt / Rediger kommentar (Ctrl+L)
 	w_Lang089 =	Edit farvemærke (Ctrl+M)
 	w_Lang090 =	Tilpas
 	w_Lang091 =	Find en kommando (Ctrl+Shift+F)
@@ -292,6 +292,7 @@
 	w_Lang104 =	
 	w_Lang105 =	
 	w_Lang106 =	
+	w_Lang107 =	
 		
 ; Command Windows		
 	c_Lang001 =	Mus
@@ -865,6 +866,7 @@
 	)	
 	d_Lang097 =	
 	(LTrim	
+		
 		
 		
 		

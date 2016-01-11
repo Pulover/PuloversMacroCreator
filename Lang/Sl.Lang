@@ -273,7 +273,7 @@
 	w_Lang085 =	Ponovi (Ctrl+Y)
 	w_Lang086 =	Kopiraj v.
 	w_Lang087 =	Najdi / Zamenjaj (Ctrl+F)
-	w_Lang088 =	Uredi komentar (Ctrl+L)
+	w_Lang088 =	Vstavite / Uredi komentar (Ctrl+L)
 	w_Lang089 =	Edit Color Mark (Ctrl+M)
 	w_Lang090 =	Prilagajanje
 	w_Lang091 =	Najdi ukaz (Ctrl+Shift+F)
@@ -292,6 +292,7 @@
 	w_Lang104 =	
 	w_Lang105 =	
 	w_Lang106 =	
+	w_Lang107 =	
 		
 ; Command Windows		
 	c_Lang001 =	Miška
@@ -865,6 +866,7 @@
 	)	
 	d_Lang097 =	
 	(LTrim	
+		
 		
 		
 		

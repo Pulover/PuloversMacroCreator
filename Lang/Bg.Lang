@@ -273,7 +273,7 @@
 	w_Lang085 =	Възстановяване (Ctrl+Y)
 	w_Lang086 =	Копирайте...
 	w_Lang087 =	Търсене / замяна (Ctrl+F)
-	w_Lang088 =	Редактиране Коментар (Ctrl+L)
+	w_Lang088 =	Поставете / Редактиране Коментар (Ctrl+L)
 	w_Lang089 =	Edit цвят марка (Ctrl+M)
 	w_Lang090 =	Персонализиране
 	w_Lang091 =	Намерете командата (Ctrl+Shift+F)
@@ -292,6 +292,7 @@
 	w_Lang104 =	
 	w_Lang105 =	
 	w_Lang106 =	
+	w_Lang107 =	
 		
 ; Command Windows		
 	c_Lang001 =	Мишка
@@ -865,6 +866,7 @@
 	)	
 	d_Lang097 =	
 	(LTrim	
+		
 		
 		
 		

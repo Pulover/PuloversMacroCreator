@@ -273,7 +273,7 @@
 	w_Lang085 =	Wiederholen (Strg+Y)
 	w_Lang086 =	Kopieren...
 	w_Lang087 =	Suchen/Ersetzen (Strg+F)
-	w_Lang088 =	Kommentar bearbeiten
+	w_Lang088 =	Einfügen / Kommentar bearbeiten
 	w_Lang089 =	Farbmarkierung bearbeiten
 	w_Lang090 =	Anpassen
 	w_Lang091 =	Finden Sie einen Befehl (Strg+Umschalt+F)
@@ -292,6 +292,7 @@
 	w_Lang104 =	
 	w_Lang105 =	
 	w_Lang106 =	
+	w_Lang107 =	
 		
 ; Command Windows		
 	c_Lang001 =	Maus
@@ -865,6 +866,7 @@
 	)	
 	d_Lang097 =	
 	(LTrim	
+		
 		
 		
 		
