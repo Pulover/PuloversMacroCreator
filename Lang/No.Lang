@@ -1158,7 +1158,7 @@
 	Abs	Returnerer den absolutte verdien av nummer.
 	ASin	Gir arcsinus (tallet som sinus er Number) i radianer .
 	ACos	Returnerer arccosinus ( antall som har cosinus er Number) i radianer .
-	Array	Oppretter en Array Object .
+	Array	
 	Asc	Returnerer tegnet (et tall mellom 1 og 255 ( i ANSI versjonene) eller 65535 ( i Unicode versjonene) ) for det første tegnet i String.
 	ATan	Returnerer arctangens (tallet som tangent er Number) i radianer .
 	BlockInput	Deaktiverer eller gir brukeren mulighet til å samhandle med datamaskinen via tastatur og mus .
@@ -1303,6 +1303,7 @@
 	MsgBox	Viser spesifisert tekst i et lite vindu som inneholder en eller flere knapper (for eksempel ja og nei).
 	NumGet	Returnerer binære nummer lagret på den angitte adressen + offset.
 	NumPut	Butikker Antall i binært format på den angitte adressen + offset og returnerer adressen til høyre for elementet nettopp skrevet.
+	Object	
 	OnExit	Angir en subrutine for å kjøre automatisk når skriptet utganger.
 	OnMessage	Angir en funksjon for å ringe automatisk når skriptet mottar den angitte meldingen.
 	Ord	Returnerer ordens verdi (numerisk tegnkode) for det første tegnet i String.

@@ -1158,7 +1158,7 @@
 	Abs	Zwraca wartość bezwzględną liczbę.
 	ASin	Zwraca arcus sinus (numer , którego sinus jest Number) w radianach .
 	ACos	Zwraca arcus cosinus (liczba , którego cosinus jest Number) w radianach .
-	Array	Tworzy obiekt Array .
+	Array	
 	Asc	Zwraca kod znaku (liczba od 1 do 255 ( w konstrukcjach ANSI ) lub 65535 ( w Unicode buildów ) ) do pierwszego znaku w string .
 	ATan	Zwraca arcus tangens (liczba , której styczna jest Number) w radianach .
 	BlockInput	Wyłącza lub włącza zdolność użytkownika do interakcji z komputerem za pośrednictwem klawiatury i myszy.
@@ -1303,6 +1303,7 @@
 	MsgBox	Wyświetla określony tekst w małym okienku zawierającego jeden lub więcej przycisków (np. Tak i Nie).
 	NumGet	Zwraca liczbę binarną przechowywane na wskazany adres + offsetu.
 	NumPut	Sklepy Numer w formacie binarnym na wskazany adres + offset i zwraca adres z prawej pozycji tylko w formie pisemnej.
+	Object	
 	OnExit	Określa podprogramu, aby uruchomić się automatycznie po zamknięciu skryptów.
 	OnMessage	Określa funkcję połączenie automatycznie po skrypt otrzymuje określoną wiadomość.
 	Ord	Zwraca wartość porządkową (numeryczny kodu znaków) pierwszego znaku w ciągu znaków.

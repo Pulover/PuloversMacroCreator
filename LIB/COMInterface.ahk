@@ -27,11 +27,11 @@ COMInterface(String, Ptr := "", ByRef OutputVar := "", CLSID := "InternetExplore
 	}
 	
 	; Look for Parameters and replace with a pattern.
-	While, RegExMatch(String, "\(([^()]++|(?R))*\)", _Parent%A_Index%)
+	While (RegExMatch(String, "\(([^()]++|(?R))*\)", _Parent%A_Index%))
 		String := RegExReplace(String, "\(([^()]++|(?R))*\)", "&_Parent" A_Index, "", 1)
 	
 	; Look foor Blocks that will be used to create SafeArrays and replace with a pattern.
-	While, RegExMatch(String, "U)\[(.*)\]", _Block%A_Index%)
+	While (RegExMatch(String, "U)\[(.*)\]", _Block%A_Index%))
 		String := RegExReplace(String, "U)\[(.*)\]", "&_Block" A_Index, "", 1)
 
 	ComSet := Ptr
@@ -50,15 +50,15 @@ COMInterface(String, Ptr := "", ByRef OutputVar := "", CLSID := "InternetExplore
 			Else
 			{
 				; Look for Blocks and divide arguments.
-				While, RegExMatch(Parent, "U)\[(.*)\]", _Arr%A_Index%)
+				While (RegExMatch(Parent, "U)\[(.*)\]", _Arr%A_Index%))
 					Parent := RegExReplace(Parent, "U)\[(.*)\]", "_Arr" A_Index, "", 1)
 				; Look for Parameters inside Parameters.
-				While, RegExMatch(Parent, "\(([^()]++|(?R))*\)", _iParent%A_Index%)
+				While (RegExMatch(Parent, "\(([^()]++|(?R))*\)", _iParent%A_Index%))
 					Parent := RegExReplace(Parent, "\(([^()]++|(?R))*\)", "&_iParent" A_Index, "", 1)
 				Loop, Parse, Parent, `,, %A_Space%
 				{
 					LoopField := A_LoopField
-					While, RegExMatch(LoopField, "&_iParent(\d+)", inPar)
+					While (RegExMatch(LoopField, "&_iParent(\d+)", inPar))
 					{
 						iPar := RegExReplace(_iParent%inPar1%, "\$", "$$$$")
 					,	LoopField := RegExReplace(LoopField, "&_iParent\d+", iPar, "", 1)

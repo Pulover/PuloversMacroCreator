@@ -4,7 +4,7 @@
 	, m_ListCount := ListCount%Macro_On%, mLoopIndex, _Label, _i
 	, pbParams, pbVarName, pbVarValue, pbType, pbAction
 	, ScopedParams := [], LastFuncRun, UserGlobals, GlobalList
-	, Func_Result, SVRef, FuncPars, ParamIdx := 1
+	, Func_Result, SVRef, FuncPars, ParamIdx := 1, EvalResult
 
 	CoordMode, Mouse, Screen
 	MouseGetPos, CursorX, CursorY
@@ -319,7 +319,7 @@
 					continue
 				If ((Type = cType32) || (Type = cType33) || (Type = cType34))
 				{
-					While (RegExMatch(Step, "\w+\[[\w\d_\[\]]*\]", lFound))
+					While (RegExMatch(Step, "\w+\[[\w\[\]]*\]", lFound))
 					{
 						lFound := RegExReplace(lFound, "\s")
 					,	lResult := ExtractArrays(lFound, l_Point)
@@ -538,7 +538,7 @@
 						{
 							pbType := Type, pbAction := Action
 						,	EvalResult := Eval(pbVarValue, PointMarker)
-						,	pbVarValue := EvalResult[1]
+						,	pbVarValue := StrJoin(EvalResult)
 						,	Type := pbType, Action := pbAction
 						}
 						Try
@@ -818,7 +818,7 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC, ByRef LoopCount, ScopedP
 {
 	local lCount, lIdx, L_Index, mLoopIndex, _Label, IfError := 0, _l
 	, pbParams, pbVarName, pbVarValue, pbType, pbAction
-	, Func_Result, LastFuncRun
+	, Func_Result, LastFuncRun, EvalResult
 
 	f_Loop:
 	CoordMode, Mouse, %CoordMouse%
@@ -941,7 +941,7 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC, ByRef LoopCount, ScopedP
 					continue
 				If ((Type = cType32) || (Type = cType33) || (Type = cType34))
 				{
-					While (RegExMatch(Step, "\w+\[[\w\d_\[\]]*\]", lFound))
+					While (RegExMatch(Step, "\w+\[[\w\[\]]*\]", lFound))
 					{
 						lFound := RegExReplace(lFound, "\s")
 					,	lResult := ExtractArrays(lFound, l_Point)
@@ -1117,7 +1117,7 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC, ByRef LoopCount, ScopedP
 						{
 							pbType := Type, pbAction := Action
 						,	EvalResult := Eval(pbVarValue, PointMarker)
-						,	pbVarValue := EvalResult[1]
+						,	pbVarValue := StrJoin(EvalResult)
 						,	Type := pbType, Action := pbAction
 						}
 						Try
@@ -1697,8 +1697,10 @@ AssignVar(Name, Operator, Value, l_Point)
 	
 	Try _content := %Name%
 	
-	While (RegExMatch(Name, "([\w%]+)\[.+\]", lFound))
+	While (RegExMatch(Name, "(\w+)(\[\S+\]|\.\w+)+", lFound))
 	{
+		If (RegExMatch(lFound1, "^\d+$"))
+			break
 		_content := ExtractArrays(Name, l_Point, _ObjItems)
 	,	Name := lFound1
 	}
@@ -1758,7 +1760,7 @@ CheckVars(Match_List, l_Point := "")
 		%A_LoopField% := DerefVars(%A_LoopField%)
 		
 		If (RegExMatch(%A_LoopField%, "sU)^%\s+(.+)$", lMatch))  ; Expressions
-			EvalResult := Eval(lMatch1, l_Point), %A_LoopField% := EvalResult[1]
+			EvalResult := Eval(lMatch1, l_Point), %A_LoopField% := StrJoin(EvalResult)
 	}
 }
 
@@ -1767,11 +1769,17 @@ ExtractArrays(v_String, l_Point, ByRef v_levels := "", QuoteStrings := false)
 	local EvalResult, l_Found, l_Found1, l_Found2
 
 	v_levels := []
-	While (RegExMatch(v_String, "([\w\d_%]+)\[(\S+?)\]", l_Found))
+	While (RegExMatch(v_String, "(\w+)(\[\S+?\]|\.\w+)", l_Found))
 	{
+		If (RegExMatch(l_Found1, "^\d+$"))
+			break
 		l_Found := RegExReplace(l_Found, "[\[|\]]", "\$0")
-	,	EvalResult := Eval(l_Found2, l_Point)
-	,	l_Found2 := EvalResult[1]
+		If (InStr(l_Found2, ".")=1)
+			l_Found2 := SubStr(l_Found2, 2), l_Found2 := RegExMatch(l_Found2, "^\d+$") ? l_Found2 : """" l_Found2 """"
+		Else
+			l_Found2 :=  RegExReplace(l_Found2, "[\[\]]")
+		EvalResult := Eval(l_Found2, l_Point)
+	,	l_Found2 := StrJoin(EvalResult)
 	,	v_levels.Push(l_Found2)
 	,	_ArrayObject := %l_Found1%[l_Found2]
 		If (IsObject(_ArrayObject))
@@ -1779,12 +1787,12 @@ ExtractArrays(v_String, l_Point, ByRef v_levels := "", QuoteStrings := false)
 		Else
 		{
 			If (QuoteStrings)
-				If _ArrayObject is not Number
+				If (!RegExMatch(_ArrayObject, "^\d+$"))
 					_ArrayObject := """" _ArrayObject """"
 			v_String := RegExReplace(v_String, l_Found, _ArrayObject)
+			break
 		}
 	}
-	
 	return v_String
 }
 
@@ -1805,9 +1813,20 @@ DerefVars(v_String)
 
 ExprGetPars(Expr)
 {
-	Expr := RegExReplace(Expr, "\(.*?\)", "[P]")
-,	Expr := RegExReplace(Expr, "\[.*?\]", "[A]")
+	Expr := RegExReplace(Expr, "\[.*?\]", "[A]")
+,	Expr := RegExReplace(Expr, "\(([^()]++|(?R))*\)", "[P]")
 ,	Expr := RegExReplace(Expr, """.*?""", "[T]")
 ,	ExprPars := StrSplit(Expr, ",", A_Space)
 	return ExprPars
+}
+
+StrJoin(InputArray, JChr := " ")
+{
+	For i, v in InputArray
+	{
+		If (IsObject(v))
+			return v
+		JoinedStr .= v . JChr
+	}
+	return RTrim(JoinedStr, JChr)
 }

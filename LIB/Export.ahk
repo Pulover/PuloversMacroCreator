@@ -266,8 +266,6 @@
 		Else If ((Type = cType21) || (Type = cType44) || (Type = cType46))
 		{
 			AssignReplace(Step)
-			If (VarValue = "")
-				VarValue := """"""
 			If (Type = cType21)
 			{
 				If VarValue is not number
@@ -674,7 +672,7 @@ CheckExp(String)
 			}
 			NewStr := RTrim(NewStr) ", "
 		}
-		Else If (RegExMatch(LoopField, "[\w\d_%]+\[\S+?\]"))
+		Else If (RegExMatch(LoopField, "[\w%]+\[\S+?\]"))
 			NewStr .= LoopField ", "
 		Else
 			NewStr .= """" LoopField """, "

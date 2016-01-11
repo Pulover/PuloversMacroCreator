@@ -1158,7 +1158,7 @@
 	Abs	Returnerer den absolutte værdi af nummer.
 	ASin	Returnerer arcus sinus (antallet , hvis sinus er Tal ) i radianer .
 	ACos	Returnerer arccosinus (antallet hvis cosinus er Tal ) i radianer .
-	Array	Opretter et Array objekt.
+	Array	
 	Asc	Giver tegnkoden ( et tal mellem 1 og 255 ( i ANSI builds ) eller 65535 ( i Unicode builds ) ) for det første tegn i String .
 	ATan	Returnerer arcus (antallet , hvis tangens er Number) i radianer .
 	BlockInput	Deaktiverer eller muliggør brugerens evne til at interagere med computeren via tastatur og mus .
@@ -1303,6 +1303,7 @@
 	MsgBox	Viser den angivne tekst i et lille vindue, der indeholder en eller flere knapper (såsom Ja og Nej).
 	NumGet	Returnerer det binære tal er gemt på den angivne adresse + offset.
 	NumPut	Butikker Antal i binært format på den angivne adresse + offset og returnerer adressen til højre for elementet lige skrevet.
+	Object	
 	OnExit	Angiver en subrutine til at køre automatisk, når scriptet afslutter.
 	OnMessage	Angiver en funktion til at kalde automatisk, når scriptet modtager den angivne meddelelse.
 	Ord	Returnerer ordinal værdi (numerisk tegn kode) det første tegn i String.

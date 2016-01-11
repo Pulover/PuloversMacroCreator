@@ -1158,7 +1158,7 @@
 	Abs	Abszolút értékét a számot.
 	ASin	Arkusz szinuszát (a szám, amelynek szinusz is Number) radiánban.
 	ACos	Arkusz koszinuszát adja (a szám, amelynek koszinusz is Number) radiánban.
-	Array	Létrehoz egy Array objektum.
+	Array	
 	Asc	Visszaadja a karakter kódja (egy számot 1 és 255 között (az ANSI épít), illetve 65.535 (Unicode épít)) az első karakter a string.
 	ATan	Visszaadja a cotanges (a szám, amelynek tangense a szám) radiánban.
 	BlockInput	Tiltja le vagy engedélyezi a felhasználó képes kölcsönhatásba a számítógéphez billentyűzet és egér.
@@ -1303,6 +1303,7 @@
 	MsgBox	Megjeleníti a megadott szöveget egy kis ablak, amely egy vagy több gomb (például Igen és Nem).
 	NumGet	Visszaadja a bináris számot tárolt a megadott címre eltolva.
 	NumPut	Üzletek száma bináris formában a megadott címre + offset és visszatér a címet, jobbra az elem csak írásban.
+	Object	
 	OnExit	Megadja a szubrutin automatikusan futnak, ha a script kilép.
 	OnMessage	Megadja a funkció hívás automatikusan a szkript megkapja az adott üzenetet.
 	Ord	Visszaadja a sorrendi értéket (számjegyet kód) az első karakter karakterlánc.

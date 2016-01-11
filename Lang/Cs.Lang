@@ -1158,7 +1158,7 @@
 	Abs	Vrátí absolutní hodnotu čísla.
 	ASin	Vrací arkussinus (číslo, jehož sinus je číslo) v radiánech .
 	ACos	Vrací arkuskosinus (číslo, jehož kosinus je číslo) v radiánech .
-	Array	Vytvoří objekt Array .
+	Array	
 	Asc	Vrátí kód znaku (číslo mezi 1 a 255 (v sestavení ANSI ) nebo 65535 ( v Unicode sestavení ) ) pro první znak v řetězci .
 	ATan	Vrací arkustangens (číslo, jehož tangens je číslo) v radiánech .
 	BlockInput	Zamknutí nebo odemknutí uživatele schopnost komunikovat s počítačem pomocí klávesnice a myši.
@@ -1303,6 +1303,7 @@
 	MsgBox	Zobrazení textu uvedeno v malém okně, které obsahuje jedno nebo více tlačítek (například Ano a Ne).
 	NumGet	Vrací binární číslo uložené na zadanou adresu + offset.
 	NumPut	Obchody číslo v binárním formátu na určenou adresu + offset a vrátí adresu vpravo od položky právě napsal.
+	Object	
 	OnExit	Určuje podprogram spustit automaticky, když skript východy.
 	OnMessage	Určuje funkce pro volání automaticky, když skript obdrží zadanou zprávu.
 	Ord	Vrátí pořadové hodnotu (číselný kód znaku) prvního znaku v řetězci.

@@ -694,6 +694,7 @@ LTrim
 Mod
 NumGet
 NumPut
+Object
 Ord
 RegExMatch
 RegExReplace
@@ -756,6 +757,7 @@ LTrim (String, OmitChars = "" `t"")
 Mod (Dividend, Divisor)
 NumGet (VarOrAddress [, Offset = 0][, Type = ""UPtr""])
 NumPut (Number, VarOrAddress [, Offset = 0][, Type = ""UPtr""])
+Object ()
 Ord (String)
 RegExMatch (Haystack, NeedleRegEx [, UnquotedOutputVar = "", StartingPos = 1])
 RegExReplace (Haystack, NeedleRegEx [, Replacement = """", OutputVarCount = """", Limit = -1, StartingPos = 1])

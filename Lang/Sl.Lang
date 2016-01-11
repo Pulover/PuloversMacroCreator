@@ -1158,7 +1158,7 @@
 	Abs	Vrne absolutno vrednost številke.
 	ASin	Vrne arkus sinus (število, katerega sinus je število) v radianih.
 	ACos	Vrne arkus kosinus (število, katerega kosinus je število) v radianih.
-	Array	Ustvarja Array Object.
+	Array	
 	Asc	Vrne kodo znakov (število med 1 in 255 (v ANSI gradi) ali 65.535 (v gradi Unicode)) za prvi znak v nizu.
 	ATan	Vrne arkus (število, katerega tangens je število) v radianih.
 	BlockInput	Onemogoči ali omogoči uporabnikovo sposobnost, da komunicirajo z računalnikom preko tipkovnice in miške.
@@ -1303,6 +1303,7 @@
 	MsgBox	Prikaže določeno besedilo v majhnem oknu, ki vsebujejo eno ali več tipk (na primer Da in Ne).
 	NumGet	Vrne binarno število shranjeno na določenem naslovu zamika.
 	NumPut	Število trgovin v binarni obliki na določen naslov zamika in vrne naslov na desni strani predmeta samo pisno.
+	Object	
 	OnExit	Določa podprogram za samodejni zagon, ko se skript izhode.
 	OnMessage	Določa funkcijo za samodejno pokliče, ko scenarij prejme določeno sporočilo.
 	Ord	Vrne ordinalni vrednost (številčna oznaka znak) za prvi znak v nizu.

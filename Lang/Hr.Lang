@@ -1158,7 +1158,7 @@
 	Abs	Vraća apsolutnu vrijednost broja .
 	ASin	Vraća arkus sinus (čiji broj je broj sine ) u radijanima .
 	ACos	Vraća arkus kosinus (broj čiji kosinus je broj ) u radijanima .
-	Array	Stvara niz objekt .
+	Array	
 	Asc	Vraća kod znaka (broj između 1 i 255 ( u ANSI gradi ) ili 65535 ( u Unicode gradi ) ) po prvi lik u String .
 	ATan	Vraća arkus tangens (čiji broj je tangente broj ) u radijanima .
 	BlockInput	Onemogućuje ili omogućuje korisniku sposobnost za interakciju s računalom putem tipkovnice i miša .
@@ -1303,6 +1303,7 @@
 	MsgBox	Prikazuje naveden tekst u malom prozoru koji sadrži jedan ili više tipki (kao da i ne).
 	NumGet	Vraća binarni broj pohranjen na navedenoj adresi + prebijanje.
 	NumPut	Prodavaonice broj u binarnom formatu na navedenoj adresi + offset i vraća adresu na desno od stavke samo pismeni.
+	Object	
 	OnExit	Određuje potprogram se automatski pokrenuti kada skriptu izlaze.
 	OnMessage	Određuje funkciju na poziv automatski kada skriptu prima određenu poruku.
 	Ord	Vraća redni vrijednost (numerički znak kod) prvog karaktera u String.

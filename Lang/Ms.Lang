@@ -1158,7 +1158,7 @@
 	Abs	Mengembalikan nilai mutlak bagi nombor.
 	ASin	Kembali arcsine itu (bilangan yang sine adalah Bilangan) dalam radian.
 	ACos	Kembali arccosine itu (bilangan yang kosinus adalah Bilangan) dalam radian.
-	Array	Cipta Objek Array.
+	Array	
 	Asc	Kembali kod aksara (nombor antara 1 dan 255 (dalam membina ANSI) atau 65535 (dalam membina Unicode)) bagi aksara pertama dalam rentetan.
 	ATan	Kembali arctangent itu (bilangan yang tangen adalah Bilangan) dalam radian.
 	BlockInput	Menyahboleh atau membolehkan keupayaan pengguna untuk berinteraksi dengan komputer melalui papan kekunci dan tetikus.
@@ -1303,6 +1303,7 @@
 	MsgBox	Memaparkan teks yang dinyatakan dalam tetingkap kecil yang mengandungi satu atau lebih butang (seperti Ya dan Tidak).
 	NumGet	Kembali nombor perduaan yang disimpan di alamat yang dinyatakan + mengimbangi.
 	NumPut	Bilangan kedai di format binari di alamat yang dinyatakan + mengimbangi dan mengembalikan alamat di sebelah kanan item hanya bertulis.
+	Object	
 	OnExit	Menetapkan satu subrutin untuk berjalan secara automatik apabila keluar skrip.
 	OnMessage	Menetapkan fungsi untuk memanggil secara automatik apabila skrip menerima mesej yang ditentukan.
 	Ord	Mengembalikan nilai ordinal (kod aksara angka) bagi aksara pertama dalam rentetan.

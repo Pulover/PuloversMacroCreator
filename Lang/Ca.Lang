@@ -1158,7 +1158,7 @@
 	Abs	Retorna el valor absolut del nombre .
 	ASin	Retorna l'arc si ( el nombre el si és Number ) en radians .
 	ACos	Retorna l'arc cosinus ( el nombre el cosinus és número ) en radians .
-	Array	Crea un objecte Array .
+	Array	
 	Asc	Retorna el codi de caràcters (un nombre entre 1 i 255 ( en ANSI compilacions ) o 65.535 (en les versions Unicode ) ) per al primer caràcter en cadena .
 	ATan	Retorna l'arc tangent ( el nombre la tangent és número ) en radians .
 	BlockInput	Activa o desactiva la capacitat de l'usuari per interactuar amb l'ordinador a través del teclat i el ratolí .
@@ -1303,6 +1303,7 @@
 	MsgBox	Mostra el text especificat en una petita finestra que conté un o més botons (com sí i no).
 	NumGet	Retorna el nombre binari emmagatzemat a l'adreça especificada + offset.
 	NumPut	Emmagatzema el número en format binari a l'adreça especificada + offset i retorna l'adreça a la dreta de l'element acabat escrit.
+	Object	
 	OnExit	Especifica una subrutina per executar automàticament quan l'script finalitza.
 	OnMessage	Especifica una funció per cridar automàticament quan l'script rep el missatge especificat.
 	Ord	Retorna el valor ordinal (codi de caràcter numèric) del primer caràcter en la cadena.

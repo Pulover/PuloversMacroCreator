@@ -1158,7 +1158,7 @@
 	Abs	Returns the absolute value of Number.
 	ASin	Returns the arcsine (the number whose sine is Number) in radians.
 	ACos	Returns the arccosine (the number whose cosine is Number) in radians.
-	Array	Creates an Array Object.
+	Array	Creates a scriptable associative array with integer keys.
 	Asc	Returns the character code (a number between 1 and 255 (in ANSI builds) or 65535 (in Unicode builds)) for the first character in String.
 	ATan	Returns the arctangent (the number whose tangent is Number) in radians.
 	BlockInput	Disables or enables the user's ability to interact with the computer via keyboard and mouse.
@@ -1303,6 +1303,7 @@
 	MsgBox	Displays the specified text in a small window containing one or more buttons (such as Yes and No).
 	NumGet	Returns the binary number stored at the specified address+offset.
 	NumPut	Stores Number in binary format at the specified address+offset and returns the address to the right of the item just written.
+	Object	Creates a scriptable associative array.
 	OnExit	Specifies a subroutine to run automatically when the script exits.
 	OnMessage	Specifies a function to call automatically when the script receives the specified message.
 	Ord	Returns the ordinal value (numeric character code) of the first character in String.

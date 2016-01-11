@@ -1,9 +1,21 @@
 Eval($x, l_Point)
 {
-   Local $y, $Result, CompiledExpression, LastFuncRun, Params
-		, _Match, _Match1, _Match2, _Match3, ObjArray := {}, Pos := 1
+   Local $y, $Result, CompiledExpression, LastFuncRun, Params, EvalResult
+		, _Match, _Match1, _Match2, _Match3, Elements := {}, ObjArray := {}, Pos := 1
 
-	While (RegExMatch($x, "\b([\w\d_]+)\b\.([\w%]+)\((.*?)\)", _Match))  ; Methods
+	; Save and remove isolated strings
+	While (RegExMatch($x, "U)\[(.*)\]", _Block%A_Index%))
+		Elements["&_Block" A_Index "_&"] := _Block%A_Index%, $x := RegExReplace($x, "U)\[(.*)\]", "&_Block" A_Index "_&", "", 1)
+	While (RegExMatch($x, "\(([^()]++|(?R))*\)", _Parent%A_Index%))
+		Elements["&_Parent" A_Index "_&"] := _Parent%A_Index%, $x := RegExReplace($x, "\(([^()]++|(?R))*\)", "&_Parent" A_Index "_&", "", 1)
+	While (RegExMatch($x, "U)""(.*)""", _String%A_Index%))
+		Elements["&_String" A_Index "_&"] := _String%A_Index%, $x := RegExReplace($x, "U)""(.*)""", "&_String" A_Index "_&", "", 1)
+	While (RegExMatch($x, "&_Parent(\d+)_&", pd))
+		$x := RegExReplace($x, pd, _Parent%pd1%)
+	While (RegExMatch($x, "&_Block(\d+)_&", pd))
+		$x := RegExReplace($x, pd, _Block%pd1%)
+
+	While (RegExMatch($x, "\b(\w+)\b\.(\w+)\((.*?)\)", _Match))  ; Methods
 	{
 		$y := $x
 		If (IsObject(%_Match1%))
@@ -12,11 +24,8 @@ Eval($x, l_Point)
 		,	$y := %_Match1%[_Match2](Params*)
 			If (IsObject($y))
 				ObjArray[_Match] := $y
-			Else
-			{
-				If $y is not Number
-					$y := """" $y """"
-			}
+			Else If (!RegExMatch($y, "^\d+$"))
+				$y := """" $y """"
 			$x := StrReplace($x, _Match, IsObject($y) ? """:{" _Match "}:""" : $y)
 		}
 		If ($y = $x)
@@ -68,8 +77,10 @@ Eval($x, l_Point)
 			$x := StrReplace($x, _Match, "ERROR: NOT ALLOWED")
 	}
 	
-	While (RegExMatch($x, "[\w\d_]+\[\S+\]", _Match)) ; Read Arrays
+	While (RegExMatch($x, "(\w+)(\[\S+\]|\.\w+)+", _Match)) ; Read Arrays
 	{
+		If (RegExMatch(_Match1, "^\d+$"))
+			break
 		$y := ExtractArrays(_Match, l_Point,, true)
 		If ($y = "_ArrayObject")
 			$y := %LoopField%
@@ -90,6 +101,10 @@ Eval($x, l_Point)
 			return [%$x%.Clone()]
 	}
 	
+	; Restore strings
+	While (RegExMatch($x, "&_\w+_&", pd))
+		$x := RegExReplace($x, pd, Elements[pd])
+
 	ExprInit()
 	CompiledExpression := ExprCompile($x)
 	$Result := ExprEval(CompiledExpression, l_Point)

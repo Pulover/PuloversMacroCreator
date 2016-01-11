@@ -1158,7 +1158,7 @@
 	Abs	Trả về giá trị tuyệt đối của số.
 	ASin	Trả về arcsine (số có sin là số) trong radian.
 	ACos	Trả về arccosine (số có cosin là số) trong radian.
-	Array	Tạo ra một đối tượng Array.
+	Array	
 	Asc	Trả về mã ký tự (một số từ 1 đến 255 (trong ANSI xây dựng) hoặc 65535 (Unicode trong xây dựng)) cho ký tự đầu tiên trong chuỗi.
 	ATan	Trả về arctangent (số có tiếp tuyến là số) trong radian.
 	BlockInput	Vô hiệu hóa hoặc cho phép khả năng của người sử dụng tương tác với máy tính thông qua bàn phím và chuột.
@@ -1303,6 +1303,7 @@
 	MsgBox	Hiển thị các văn bản quy định trong một cửa sổ nhỏ chứa một hay nhiều nút (như Yes và No).
 	NumGet	Trả về số nhị phân được lưu trữ tại địa chỉ cụ thể + bù đắp.
 	NumPut	Số cửa hàng trong định dạng nhị phân theo địa chỉ cho trước + bù đắp và trả về địa chỉ ở bên phải của mục chỉ bằng văn bản.
+	Object	
 	OnExit	Quy định cụ thể một chương trình con để chạy tự động khi thoát khỏi kịch bản.
 	OnMessage	Quy định cụ thể chức năng gọi tự động khi kịch bản nhận được thông báo cụ thể.
 	Ord	Trả về giá trị thứ tự (mã ký tự số) của các nhân vật đầu tiên trong String.

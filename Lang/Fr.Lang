@@ -1158,7 +1158,7 @@
 	Abs	Retourne la valeur absolue d'un nombre .
 	ASin	Renvoie l' arc sinus ( le nombre dont le sinus est Number) en radians.
 	ACos	Retourne le cosinus ( le nombre dont le cosinus est Number) en radians.
-	Array	Crée un objet Array.
+	Array	
 	Asc	Retourne le code de caractères ( un nombre entre 1 et 255 ( ANSI builds ) ou 65535 ( dans les versions Unicode) ) pour le premier caractère de la chaîne .
 	ATan	Renvoie l'arctangente ( le nombre dont la tangente est Number) en radians.
 	BlockInput	Active ou désactive la capacité de l' utilisateur d'interagir avec l'ordinateur via le clavier et la souris.
@@ -1303,6 +1303,7 @@
 	MsgBox	Affiche le texte spécifié dans une petite fenêtre contenant un ou plusieurs boutons (comme Oui et Non).
 	NumGet	Renvoie le nombre binaire stocké à l'adresse spécifiée + offset.
 	NumPut	Magasins numéro en format binaire à l'adresse spécifiée + offset et retourne l'adresse à droite de l'article juste écrit.
+	Object	
 	OnExit	Indique un sous-programme pour s'exécuter automatiquement lorsque le script se termine.
 	OnMessage	Indique une fonction à appeler automatiquement lorsque le script reçoit le message spécifié.
 	Ord	Renvoie la valeur ordinale (code de caractère numérique) du premier caractère de la chaîne.

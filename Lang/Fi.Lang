@@ -1158,7 +1158,7 @@
 	Abs	Palauttaa absoluuttinen arvo lukumäärä.
 	ASin	Palauttaakaarisinin (numero , jonka sini on Number) radiaaneina .
 	ACos	Palauttaakaarikosinin (numero , jonka kosini on Number) radiaaneina .
-	Array	LuoArray Object .
+	Array	
 	Asc	Palauttaamerkin koodi (numero 1 ja 255 ( ANSI rakentaa ) tai 65535 ( Unicode- versioita ) ) ensimmäisen merkin String .
 	ATan	Palauttaakaaritangentin (numero , jonka tangentti on Number) radiaaneina .
 	BlockInput	Käytöstä tai ottaa käyttöön käyttäjän kykyä olla vuorovaikutuksessatietokoneen kautta, näppäimistö ja hiiri .
@@ -1303,6 +1303,7 @@
 	MsgBox	Näyttää määritetyn tekstin pienessä ikkunassa, joka sisältää yhden tai useampia painikkeita (kuten kyllä ja ei).
 	NumGet	Palauttaa binääriluku tallennettu määrättyyn osoitteeseen aikaeron.
 	NumPut	Kaupat määrä binäärimuodossa määrättyyn osoitteeseen aikaeron ja palauttaa osoitteen kohteen oikealla puolella juuri kirjoitettu.
+	Object	
 	OnExit	Määrittää aliohjelman toimimaan automaattisesti kun käsikirjoitus poistuu.
 	OnMessage	Määrittää toiminnon soittaa automaattisesti, kun käsikirjoitus vastaanottaa tietyn viestin.
 	Ord	Palauttaa järjestysluku arvo (numeerinen merkki koodi) ensimmäisen merkin merkkijono.

@@ -6,8 +6,8 @@ Groups=Start:1
 4|[MsgBox]|% N[A_Index]|1|0|MsgBox|262144||||
 5|[LoopEnd]|LoopEnd|1|0|Loop|||||
 6|[Assign Variable]|N[4] := New value|1|0|Variable|||||
-7|[MsgBox]|% N[4]|1|0|MsgBox|262144||||
-8|Sqrt|FuncOut := N[1]|1|0|Function|||||
+7|[MsgBox]|% "N[4]: " N[4]|1|0|MsgBox|262144||||
+8|Sqrt|FuncOut := N.1|1|0|Function|||||
 9|[MsgBox]|Sqr Function with Array parameter: %FuncOut%|1|0|MsgBox|262144||||
 
 [PMC Code v5.0.0]|F2||1|Window|1|Arrays2
@@ -38,7 +38,7 @@ Groups=Start:1
 7|[Assign Variable]|ItemCopy := N[2][2]|1|0|Variable|Expression||||
 8|[MsgBox]|Item 2.2: %ItemCopy%|1|0|MsgBox|262144||||
 9|Push|_null := "Item 2.3"|1|0|Method|N[2]||||
-10|[MsgBox]|% N[2][3]|1|0|MsgBox|262144||||
+10|[MsgBox]|% N.2.3|1|0|MsgBox|262144||||
 
 [PMC Code v5.0.0]|F5||1|Window|1|Methods
 Groups=Start:1
@@ -58,9 +58,9 @@ Groups=Start:1
 
 [PMC Code v5.0.0]|F6||1|Window|1|NamedKeys
 Groups=Start:1
-1|[Assign Variable]|N := []|1|0|Variable|Expression||||
-2|[Assign Variable]|N["keyA"] := Value of KeyA|1|0|Variable|||||
-3|[MsgBox]|% N["keyA"]|1|0|MsgBox|0||||
+1|Object|N := |1|0|Function|||||
+2|[Assign Variable]|N.keyA := Value of KeyA|1|0|Variable|||||
+3|[MsgBox]|% N.keyA|1|0|MsgBox|0||||
 4|[Assign Variable]|N["keyB"] := Value of KeyB|1|0|Variable|||||
 5|[Assign Variable]|N["keyC"] := Value of keyC|1|0|Variable|||||
 6|[Assign Variable]|N["keyC"] .= N["keyA"]|1|0|Variable|Expression||||

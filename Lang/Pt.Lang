@@ -1158,7 +1158,7 @@
 	Abs	Retorna o valor absoluto do número.
 	ASin	Retorna o arco seno (o número cujo seno é Número) em radianos.
 	ACos	Retorna o arco cosseno (o número cujo cosseno é Número) em radianos.
-	Array	Cria um objeto Array.
+	Array	
 	Asc	Retorna o código de caracteres (um número entre 1 e 255 (em compilações ANSI) ou 65535 (em Unicode compilações)) para o primeiro caractere na sequência.
 	ATan	Retorna o arco tangente (o número cuja tangente é Número) em radianos.
 	BlockInput	Desativa ou ativa a capacidade do usuário para interagir com o computador via teclado e mouse.
@@ -1303,6 +1303,7 @@
 	MsgBox	Mostra o texto especificado em uma pequena janela contendo um ou mais botões (como Sim e Não).
 	NumGet	Retorna o número binário armazenado no endereço especificado + offset.
 	NumPut	Lojas Número em formato binário no endereço especificado + offset e retorna o endereço para a direita do item acabado de escrever.
+	Object	
 	OnExit	Especifica uma sub-rotina para executar automaticamente quando as saídas de script.
 	OnMessage	Especifica uma função a ser chamada automaticamente quando o script recebe a mensagem especificada.
 	Ord	Retorna o valor ordinal (código numérico de caractére) do primeiro caractére no texto.

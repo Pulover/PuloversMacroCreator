@@ -1158,7 +1158,7 @@
 	Abs	Geeft de absolute waarde van het nummer .
 	ASin	Geeft de boogsinus ( het getal waarvan de sinus is Number ) in radialen .
 	ACos	Geeft de boogcosinus ( het getal waarvan de cosinus is Number ) in radialen .
-	Array	Maakt een Array- object .
+	Array	
 	Asc	Geeft het teken code ( een getal tussen 1 en 255 ( in ANSI builds ) of 65.535 ( in Unicode builds ) ) voor het eerste teken in string .
 	ATan	Geeft de boogtangens ( het nummer waarvan de tangens Number ) in radialen .
 	BlockInput	Schakelt het vermogen van de gebruiker om te interageren met de computer via het toetsenbord en de muis .
@@ -1303,6 +1303,7 @@
 	MsgBox	Toont de opgegeven tekst in een klein venster met een of meer knoppen (zoals ja en nee).
 	NumGet	Retourneert het binaire getal opgeslagen bij het opgegeven adres + offset.
 	NumPut	Winkels Nummer in binair formaat op het opgegeven adres + offset en het adres terug naar de rechterkant van de punt enkel geschreven.
+	Object	
 	OnExit	Hiermee geeft u een subroutine om automatisch wanneer het script eindigt draaien.
 	OnMessage	Geeft een functie om automatisch te bellen wanneer het script ontvangt de opgegeven boodschap.
 	Ord	Geeft de ordinale waarde (numeriek karakter code) van het eerste teken in string.

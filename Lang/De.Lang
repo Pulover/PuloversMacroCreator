@@ -1158,7 +1158,7 @@
 	Abs	Gibt den absoluten Wert von Number .
 	ASin	Gibt die Arcussinus (die Zahl , dessen Sinus Number) im Bogenmaß.
 	ACos	Gibt die Arkuskosinus (die Zahl , dessen Cosinus Number) im Bogenmaß.
-	Array	Erstellt ein Array-Objekt .
+	Array	
 	Asc	Gibt das Zeichen -Code ( eine Zahl zwischen 1 und 255 ( in ANSI -Builds ) oder 65535 ( in Unicode-Versionen ) ) für das erste Zeichen in String .
 	ATan	Liefert den Arcustangens (die Zahl , dessen Tangens Number) im Bogenmaß.
 	BlockInput	Aktiviert oder deaktiviert die Fähigkeit des Benutzers mit dem Computer über Tastatur und Maus zu interagieren.
@@ -1303,6 +1303,7 @@
 	MsgBox	Zeigt den angegebenen Text in einem kleinen Fenster, die eine oder mehrere Tasten (wie Yes oder No).
 	NumGet	Gibt die binäre Zahl an der angegebenen Adresse + Offset gespeichert.
 	NumPut	Anzahl Stores im binären Format an die angegebene Adresse + Offset und gibt die Adresse auf der rechten Seite der Artikel gerade geschrieben.
+	Object	
 	OnExit	Gibt eine Subroutine automatisch, wenn das Skript beendet laufen.
 	OnMessage	Gibt eine Funktion, um automatisch anrufen, wenn das Skript erhält die angegebene Nachricht.
 	Ord	Gibt den Ordinalwert (numerisches Zeichen-Code) des ersten Zeichens im String.

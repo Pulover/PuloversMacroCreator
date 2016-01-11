@@ -1158,7 +1158,7 @@
 	Abs	Restituisce il valore assoluto di un numero .
 	ASin	Restituisce l'arcoseno ( il numero il cui seno è Number) in radianti .
 	ACos	Restituisce l' arcocoseno ( il numero il cui coseno è Number) in radianti .
-	Array	Crea un oggetto Array.
+	Array	
 	Asc	Restituisce il codice di carattere ( un numero compreso tra 1 e 255 ( in ANSI build ) o 65535 ( in build Unicode) ) per il primo carattere della stringa .
 	ATan	Restituisce l'arcotangente ( il numero la cui tangente è il numero ) in radianti .
 	BlockInput	Di attivare o disattivare la capacità dell'utente di interagire con il computer tramite tastiera e mouse.
@@ -1303,6 +1303,7 @@
 	MsgBox	Visualizza il testo specificato in una piccola finestra che contiene uno o più pulsanti (come Sì e No).
 	NumGet	Restituisce il numero binario memorizzato all'indirizzo specificato + offset.
 	NumPut	Negozi numero in formato binario all'indirizzo specificato + offset e restituisce l'indirizzo a destra della voce appena scritto.
+	Object	
 	OnExit	Specifica una subroutine per eseguire automaticamente quando lo script esce.
 	OnMessage	Consente di specificare una funzione da chiamare automaticamente quando lo script riceve il messaggio specificato.
 	Ord	Restituisce il valore ordinale (codice di carattere numerico) del primo carattere di stringa.

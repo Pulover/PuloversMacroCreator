@@ -1158,7 +1158,7 @@
 	Abs	Mengembalikan nilai absolut Nomor.
 	ASin	Mengembalikan arcsine (jumlah yang sinus adalah Number) dalam radian.
 	ACos	Mengembalikan arccosine (jumlah yang kosinus Number) dalam radian.
-	Array	Membuat Array Object.
+	Array	
 	Asc	Mengembalikan kode karakter (angka antara 1 dan 255 (dalam ANSI membangun) atau 65535 (dalam Unicode membangun)) untuk karakter pertama dalam String.
 	ATan	Mengembalikan arctangent (jumlah yang tangen adalah Number) dalam radian.
 	BlockInput	Menonaktifkan atau memungkinkan kemampuan pengguna untuk berinteraksi dengan komputer melalui keyboard dan mouse.
@@ -1303,6 +1303,7 @@
 	MsgBox	Menampilkan teks ditentukan dalam jendela kecil yang berisi satu atau lebih tombol (seperti Ya dan Tidak).
 	NumGet	Mengembalikan bilangan biner disimpan di alamat yang ditentukan + offset.
 	NumPut	Jumlah Toko dalam format biner pada alamat yang ditentukan + offset dan mengembalikan alamat ke sebelah kanan item saja menulis.
+	Object	
 	OnExit	Menentukan subroutine untuk menjalankan secara otomatis ketika keluar skrip.
 	OnMessage	Menentukan fungsi untuk memanggil secara otomatis ketika script menerima pesan tertentu.
 	Ord	Mengembalikan nilai ordinal (kode karakter numerik) dari karakter pertama dalam String.

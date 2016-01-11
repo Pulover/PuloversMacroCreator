@@ -1158,7 +1158,7 @@
 	Abs	Sayısı mutlak değerini döndürür.
 	ASin	Radyan cinsinden ark sinüsünü ( sinüs Numarasısayı ) döndürür.
 	ACos	Radyan Arkkosinüs ( kosinüs Numarasısayı ) döndürür.
-	Array	Bir Array nesnesi oluşturur .
+	Array	
 	Asc	Dize ilk karakter için karakter kodu ( 1 ve 255 ( ANSI yapılar ) veya 65535 arasında bir sayı ( Unicode yapılarında ) ) döndürür.
 	ATan	Radyan arktanjant ( teğet Numarasısayı ) döndürür.
 	BlockInput	Devre dışı bırakır ya da klavye ve fare ile bilgisayar ile etkileşim kullanıcı yeteneğini sağlar .
@@ -1303,6 +1303,7 @@
 	MsgBox	Bir veya daha fazla düğme (örneğin, Evet ve Hayır olarak) içeren küçük bir pencerede belirtilen metni görüntüler.
 	NumGet	Belirtilen adres + ofset saklanan ikili sayı döndürür.
 	NumPut	Belirtilen adresteki ikili biçimde mağaza sayısı + ofset ve sadece yazılı öğenin sağındaki adresini döndürür.
+	Object	
 	OnExit	Otomatik olarak script çıkmadan çalıştırmak için bir alt yordam belirtir.
 	OnMessage	Script Belirtilen ileti aldığında otomatik olarak aramak için bir işlev belirtir.
 	Ord	Dize ilk karakterin sıra değeri (sayısal karakter kodu) döndürür.

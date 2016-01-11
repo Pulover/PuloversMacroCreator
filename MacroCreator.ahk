@@ -7117,7 +7117,7 @@ If ((IsArray) && (ArrayName = ""))
 	GuiControl, 21:Focus, ArrayName
 	return
 }
-If (RegExMatch(VarName, "^(\w+)\[(\S+?)\]", lMatch))
+If (RegExMatch(VarName, "^(\w+)(\[\S+\]|\.\w+)+", lMatch))
 {
 	Try
 		z_Check := VarSetCapacity(%lMatch1%)
@@ -7990,7 +7990,7 @@ If (Get)
 		Tooltip, %c_Lang127%, 25, 145
 		return
 	}
-	If (RegExMatch(Value, "^(\w+)\[(\S+?)\]", lMatch))
+	If (RegExMatch(Value, "^(\w+)(\[\S+\]|\.\w+)+", lMatch))
 	{
 		Try
 			z_Check := VarSetCapacity(%lMatch1%)
@@ -8096,7 +8096,7 @@ Catch
 }
 If (VarName != "")
 {
-	If (RegExMatch(VarName, "^(\w+)\[(\S+?)\]", lMatch))
+	If (RegExMatch(VarName, "^(\w+)(\[\S+\]|\.\w+)+", lMatch))
 	{
 		Try
 			z_Check := VarSetCapacity(%lMatch1%)
@@ -12447,7 +12447,7 @@ pb_IECOM_Set:
 return
 
 pb_IECOM_Get:
-	If (RegExMatch(Step, "^(\w+)\[(\S+?)\]", lMatch))
+	If (RegExMatch(Step, "^(\w+)(\[\S+\]|\.\w+)+", lMatch))
 	{
 		Try
 			z_Check := VarSetCapacity(%lMatch1%)
@@ -12530,7 +12530,7 @@ pb_COMInterface:
 	Step := StrReplace(Step, "ø", "`n")
 	StringSplit, Act, Action, :
 
-	If (RegExMatch(Act2, "^(\w+)\[(\S+?)\]", lMatch))
+	If (RegExMatch(Act2, "^(\w+)(\[\S+\]|\.\w+)+", lMatch))
 	{
 		Try
 			z_Check := VarSetCapacity(%lMatch1%)
