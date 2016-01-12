@@ -56,6 +56,7 @@ Thiago Talma for some improvements to the code, debugging and many suggestions.
 * Added option to change color of the rectangle of Image/Pixel Search area and Screenshots tool.
 * Added *Insert Comment Block* to "Edit Comment" window.
 * Added option to comment out unchecked rows in Preview/Exported scripts.
+* Added translations to Arabic and Thai.
 * Added Language editor in *Settings* window.
 * Languages files are now kept in the Lang folder and can be added or removed.
 * Updated "Loop, File" and "Loop, Reg" to new format with "Mode" parameter.
