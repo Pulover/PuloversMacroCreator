@@ -11,9 +11,9 @@ Eval($x, l_Point)
 	While (RegExMatch($x, "U)""(.*)""", _String%A_Index%))
 		Elements["&_String" A_Index "_&"] := _String%A_Index%, $x := RegExReplace($x, "U)""(.*)""", "&_String" A_Index "_&", "", 1)
 	While (RegExMatch($x, "&_Parent(\d+)_&", pd))
-		$x := RegExReplace($x, pd, _Parent%pd1%)
+		$x := StrReplace($x, pd, _Parent%pd1%)
 	While (RegExMatch($x, "&_Block(\d+)_&", pd))
-		$x := RegExReplace($x, pd, _Block%pd1%)
+		$x := StrReplace($x, pd, _Block%pd1%)
 
 	While (RegExMatch($x, "\b(\w+)\b\.(\w+)\((.*?)\)", _Match))  ; Methods
 	{
@@ -103,7 +103,7 @@ Eval($x, l_Point)
 	
 	; Restore strings
 	While (RegExMatch($x, "&_\w+_&", pd))
-		$x := RegExReplace($x, pd, Elements[pd])
+		$x := StrReplace($x, pd, Elements[pd])
 
 	ExprInit()
 	CompiledExpression := ExprCompile($x)

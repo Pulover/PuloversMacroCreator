@@ -5,7 +5,7 @@
 ; Main Menu		
 	m_Lang001 =	&Expedient
 	m_Lang002 =	&Macro
-	m_Lang003 =	
+	m_Lang003 =	&funció
 	m_Lang004 =	&Ordres
 	m_Lang005 =	E&dita
 	m_Lang006 =	&Seleccionar
@@ -46,10 +46,10 @@
 	r_Lang015 =	Guardar Ma&cro actual
 		
 ; UDF Sub Menu		
-	u_Lang001 =	
-	u_Lang002 =	
-	u_Lang003 =	
-	u_Lang004 =	
+	u_Lang001 =	&Crear Funció
+	u_Lang002 =	&Afegir Paràmetre
+	u_Lang003 =	A&fegir Tornar
+	u_Lang004 =	C&onverteix Macro per funcionar
 		
 ; Commands Sub Menu		
 	i_Lang001 =	&Ratolí
@@ -288,11 +288,11 @@
 	w_Lang100 =	Traieu tots els grups
 	w_Lang101 =	Edita grups
 	w_Lang102 =	Nom del grup
-	w_Lang103 =	
-	w_Lang104 =	
-	w_Lang105 =	
-	w_Lang106 =	
-	w_Lang107 =	
+	w_Lang103 =	Crear funcions (Ctrl + Shift + O)
+	w_Lang104 =	Afegir paràmetre (Ctrl + Shift + P)
+	w_Lang105 =	Afegir Retorn (Ctrl + Shift + N)
+	w_Lang106 =	Converteix Macro per funcionar (Ctrl + Shift + C)
+	w_Lang107 =	Comenteu files sense marcar
 		
 ; Command Windows		
 	c_Lang001 =	Ratolí
@@ -385,7 +385,7 @@
 	c_Lang088 =	Reajustar
 	c_Lang089 =	Nom de la funció
 	c_Lang090 =	Paràmetres separats per comes (sense parèntesis)
-	c_Lang091 =	(Utilitza `% per a variables. Han escapar comes literals [ ```, ])
+	c_Lang091 =	Format Utilitza expressions
 	c_Lang092 =	Element de pàgina / Índex
 	c_Lang093 =	Establir
 	c_Lang094 =	Aconseguir
@@ -505,20 +505,20 @@
 	c_Lang209 =	Nom de valor
 	c_Lang210 =	Valors
 	c_Lang211 =	Array
-	c_Lang212 =	
-	c_Lang213 =	
-	c_Lang214 =	
-	c_Lang215 =	
-	c_Lang216 =	
-	c_Lang217 =	
-	c_Lang218 =	
-	c_Lang219 =	
-	c_Lang220 =	
-	c_Lang221 =	
-	c_Lang222 =	
-	c_Lang223 =	
-	c_Lang224 =	
-	c_Lang225 =	
+	c_Lang212 =	Usuari funció definida
+	c_Lang213 =	Paràmetre Funció
+	c_Lang214 =	Retorn de la Funció
+	c_Lang215 =	Paràmetres
+	c_Lang216 =	Valor de retorn
+	c_Lang217 =	Valor per defecte
+	c_Lang218 =	Abast
+	c_Lang219 =	Local
+	c_Lang220 =	Global
+	c_Lang221 =	Nom
+	c_Lang222 =	Vostè pot afegir més paràmetres al menú de funcions.
+	c_Lang223 =	Variables globals
+	c_Lang224 =	Variables locals
+	c_Lang225 =	Variables estàtiques
 		
 ; Other Windows		
 	t_Lang001 =	Exporta a AutoHotkey
@@ -854,29 +854,29 @@
 	d_Lang092 =	Icones petits
 	d_Lang093 =	Icones grans
 	d_Lang094 =	Aquesta característica requereix Windows Vista o superior.
-	d_Lang095 =	
+	d_Lang095 =	L'ús d'ByRef provoca un paràmetre a ser un àlies de la variable passada per la persona que truca. En altres paraules, el paràmetre de la variable i de la persona que truca tant es refereixen als mateixos continguts en la memòria.
 	d_Lang096 =	
 	(LTrim	
-		
-		
-		
-		
-		
-		
+		- NO INCLOURE LES VARIABLES A SIGNES DE PERCENTATGE AQUÍ.
+		- Valor de retorn ha de ser una expressió.
+		- Vostè pot usar cadenes, variables, matrius i funcions. També pot combinar qualsevol d'aquests.
+		- Per utilitzar cordes, tancar-los entre cometes, per exemple: "El resultat és:" a + b.
+		- Si voleu tornar resultats addicionals, també es pot usar en els paràmetres ByRef.
+		- Les matrius es poden utilitzar per retornar múltiples valors o valors fins i tot amb nom.
 	)	
 	d_Lang097 =	
 	(LTrim	
-		
-		
-		
-		
-		
+		- NO INCLOURE LES VARIABLES A SIGNES DE PERCENTATGE AQUÍ.
+		- La major part de les expressions AHK són compatibles.
+		- Vostè pot usar cadenes, variables, matrius i funcions.
+		- Per utilitzar cordes, tancar-los entre cometes, per exemple: var = "a".
+		- Són compatibles Diverses sentències, per exemple: var = "a" || Instr (var, "b").
 	)	
-	d_Lang098 =	
-	d_Lang099 =	
-	d_Lang100 =	
-	d_Lang101 =	
-	d_Lang102 =	
+	d_Lang098 =	Si un paràmetre té un valor predeterminat, es requereixen els següents paràmetres a tenir un també.
+	d_Lang099 =	El nom de la funció conté un caràcter il·legal.
+	d_Lang100 =	Goto, GOSUB i Etiqueta no estan permesos en funcions.
+	d_Lang101 =	Funció Duplicar.
+	d_Lang102 =	és una paraula reservada.
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -996,6 +996,23 @@
 	IncFolders_TT =	Incloure directoris (carpetes) / Keys
 	Recurse_TT =	Recursives en subdirectoris (subcarpetes) / subclaus
 	CmdSort_TT =	Ordenar alfabèticament
+	Ex_EdScript_TT =	Avaa ulkoisen editorin
+	ExprLink2_TT =	
+	(LTrim	
+		- NO INCLOURE LES VARIABLES A SIGNES DE PERCENTATGE AQUÍ.
+		- La major part de les expressions AHK són compatibles.
+		- Vostè pot usar cadenes, variables, matrius i funcions.
+		- Per utilitzar cordes, tancar-los entre cometes, per exemple: var = "a".
+		- Són compatibles Diverses sentències, per exemple: var = "a" || Instr (var, "b").
+	)	
+	ExprLink3_TT =	
+	(LTrim	
+		- NO INCLOURE LES VARIABLES A SIGNES DE PERCENTATGE AQUÍ.
+		- La major part de les expressions AHK són compatibles.
+		- Vostè pot usar cadenes, variables, matrius i funcions.
+		- Per utilitzar cordes, tancar-los entre cometes, per exemple: var = "a".
+		- Són compatibles Diverses sentències, per exemple: var = "a" || Instr (var, "b").
+	)	
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	Feu doble clic per editar
@@ -1158,7 +1175,7 @@
 	Abs	Retorna el valor absolut del nombre .
 	ASin	Retorna l'arc si ( el nombre el si és Number ) en radians .
 	ACos	Retorna l'arc cosinus ( el nombre el cosinus és número ) en radians .
-	Array	
+	Array	Crea una matriu associativa de seqüència amb tecles de nombres enters.
 	Asc	Retorna el codi de caràcters (un nombre entre 1 i 255 ( en ANSI compilacions ) o 65.535 (en les versions Unicode ) ) per al primer caràcter en cadena .
 	ATan	Retorna l'arc tangent ( el nombre la tangent és número ) en radians .
 	BlockInput	Activa o desactiva la capacitat de l'usuari per interactuar amb l'ordinador a través del teclat i el ratolí .
@@ -1285,7 +1302,7 @@
 	KeyWait	Espera una tecla o botó del ratolí / joystick per ser posat en llibertat o pressionat.
 	Labels	Una etiqueta identifica una línia de codi, i es pot utilitzar com un objectiu Goto o per formar una subrutina.
 	Length	Retorna la longitud d'una matriu lineal començant en la posició 1.
-	ListVars	
+	ListVars	Mostra les variables del script: els seus noms i continguts actuals.
 	Log	Retorna el logaritme (base 10) del nombre.
 	Ln	Retorna el logaritme natural (base e) del número.
 	Loop (normal) 	Realitzeu una sèrie d'ordres en diverses ocasions: es troben ja sigui el nombre especificat de vegades o fins trencament.
@@ -1303,7 +1320,7 @@
 	MsgBox	Mostra el text especificat en una petita finestra que conté un o més botons (com sí i no).
 	NumGet	Retorna el nombre binari emmagatzemat a l'adreça especificada + offset.
 	NumPut	Emmagatzema el número en format binari a l'adreça especificada + offset i retorna l'adreça a la dreta de l'element acabat escrit.
-	Object	
+	Object	Crea una matriu associativa scripts.
 	OnExit	Especifica una subrutina per executar automàticament quan l'script finalitza.
 	OnMessage	Especifica una funció per cridar automàticament quan l'script rep el missatge especificat.
 	Ord	Retorna el valor ordinal (codi de caràcter numèric) del primer caràcter en la cadena.

@@ -4,15 +4,15 @@
 		
 ; Main Menu		
 	m_Lang001 =	&Berkas
-	m_Lang002 =	M&akro
-	m_Lang003 =	
+	m_Lang002 =	&Makro
+	m_Lang003 =	&Fungsi
 	m_Lang004 =	&Perintah
 	m_Lang005 =	M&engedit
-	m_Lang006 =	&Memilih
+	m_Lang006 =	Mem&ilih
 	m_Lang007 =	Me&lihat
-	m_Lang008 =	P&ilihan
+	m_Lang008 =	Pili&han
 	m_Lang009 =	Me&nyumbangkan
-	m_Lang010 =	Memban&tu
+	m_Lang010 =	Memb&antu
 		
 ; File Sub Menu		
 	f_Lang001 =	&Baru
@@ -46,10 +46,10 @@
 	r_Lang015 =	&Simpan Makro sekarang
 		
 ; UDF Sub Menu		
-	u_Lang001 =	
-	u_Lang002 =	
-	u_Lang003 =	
-	u_Lang004 =	
+	u_Lang001 =	&Buat Fungsi
+	u_Lang002 =	&Tambahkan Parameter
+	u_Lang003 =	T&ambahkan Kembali
+	u_Lang004 =	&Mengkonversi Makro Untuk Fungsi
 		
 ; Commands Sub Menu		
 	i_Lang001 =	&Mouse
@@ -288,11 +288,11 @@
 	w_Lang100 =	Hapus semua kelompok
 	w_Lang101 =	Kelompok mengedit
 	w_Lang102 =	Nama grup
-	w_Lang103 =	
-	w_Lang104 =	
-	w_Lang105 =	
-	w_Lang106 =	
-	w_Lang107 =	
+	w_Lang103 =	Buat Fungsi (Ctrl + Shift + U)
+	w_Lang104 =	Tambahkan Parameter (Ctrl + Shift + P)
+	w_Lang105 =	Tambahkan Return (Ctrl + Shift + N)
+	w_Lang106 =	Mengkonversi Makro Untuk Fungsi (Ctrl + Shift + C)
+	w_Lang107 =	Komentar dari baris dicentang
 		
 ; Command Windows		
 	c_Lang001 =	Mouse
@@ -385,7 +385,7 @@
 	c_Lang088 =	Ulang
 	c_Lang089 =	Fungsi Nama
 	c_Lang090 =	Dipisahkan koma parameter (tanpa kurung)
-	c_Lang091 =	(Gunakan `% untuk Variabel. Koma Literal harus melarikan diri [ ```, ])
+	c_Lang091 =	Format penggunaan ekspresi
 	c_Lang092 =	Elemen Halaman / Index
 	c_Lang093 =	Mengatur
 	c_Lang094 =	Mendapatkan
@@ -505,20 +505,20 @@
 	c_Lang209 =	Nama nilai
 	c_Lang210 =	Nilai-nilai
 	c_Lang211 =	Susunan
-	c_Lang212 =	
-	c_Lang213 =	
-	c_Lang214 =	
-	c_Lang215 =	
-	c_Lang216 =	
-	c_Lang217 =	
-	c_Lang218 =	
-	c_Lang219 =	
-	c_Lang220 =	
-	c_Lang221 =	
-	c_Lang222 =	
-	c_Lang223 =	
-	c_Lang224 =	
-	c_Lang225 =	
+	c_Lang212 =	Ditetapkan Pengguna Fungsi
+	c_Lang213 =	Parameter fungsi
+	c_Lang214 =	Fungsi Kembali
+	c_Lang215 =	Parameter
+	c_Lang216 =	Kembali Nilai
+	c_Lang217 =	Nilai Default
+	c_Lang218 =	Cakupan
+	c_Lang219 =	Lokal
+	c_Lang220 =	Global
+	c_Lang221 =	Nama
+	c_Lang222 =	Anda dapat menambahkan lebih banyak parameter dari menu Fungsi.
+	c_Lang223 =	Variabel global
+	c_Lang224 =	Variabel lokal
+	c_Lang225 =	Variabel statis
 		
 ; Other Windows		
 	t_Lang001 =	Ekspor ke AutoHotkey
@@ -854,29 +854,29 @@
 	d_Lang092 =	Ikon kecil
 	d_Lang093 =	Ikon besar
 	d_Lang094 =	Fitur ini memerlukan Windows Vista atau yang lebih tinggi.
-	d_Lang095 =	
+	d_Lang095 =	Penggunaan ByRef menyebabkan parameter untuk menjadi sebuah alias untuk variabel berlalu dalam dari penelepon. Dengan kata lain, parameter dan variabel pemanggil keduanya merujuk pada isi yang sama di memori.
 	d_Lang096 =	
 	(LTrim	
-		
-		
-		
-		
-		
-		
+		- JANGAN MELAMPIRKAN VARIABEL DI TANDA PERSEN DI SINI.
+		- Mengembalikan nilai harus menjadi ekspresi.
+		- Anda dapat menggunakan string, variabel, array dan fungsi. Anda juga dapat menggabungkan salah satu dari mereka.
+		- Untuk menggunakan string, menyertakan mereka dalam tanda kutip, misalnya: "Hasil adalah:" a + b.
+		- Jika Anda ingin kembali hasil tambahan, Anda juga dapat menggunakan ByRef dalam parameter.
+		- Array dapat digunakan untuk mengembalikan beberapa nilai atau nilai-nilai bahkan bernama.
 	)	
 	d_Lang097 =	
 	(LTrim	
-		
-		
-		
-		
-		
+		- JANGAN MELAMPIRKAN VARIABEL DI TANDA PERSEN DI SINI.
+		- Sebagian besar dari ekspresi AHK didukung.
+		- Anda dapat menggunakan string, variabel, array dan fungsi.
+		- Untuk menggunakan string, menyertakan mereka dalam tanda kutip, misalnya: var = "a".
+		- Beberapa Laporan yang didukung, misalnya: var = "a" || InStr (var, "b").
 	)	
-	d_Lang098 =	
-	d_Lang099 =	
-	d_Lang100 =	
-	d_Lang101 =	
-	d_Lang102 =	
+	d_Lang098 =	Jika satu parameter memiliki nilai default, parameter berikut wajib memiliki satu juga.
+	d_Lang099 =	Nama fungsi mengandung karakter ilegal.
+	d_Lang100 =	Goto, gosub dan Label tidak diperbolehkan dalam fungsi.
+	d_Lang101 =	Fungsi duplikat.
+	d_Lang102 =	adalah kata reserved.
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -996,6 +996,23 @@
 	IncFolders_TT =	Termasuk direktori (folder) / Keys
 	Recurse_TT =	Rekursif ke dalam subdirektori (subfolder) / Subkunci
 	CmdSort_TT =	Urutkan berdasarkan abjad
+	Ex_EdScript_TT =	Nyílt külső szerkesztőben
+	ExprLink2_TT =	
+	(LTrim	
+		- JANGAN MELAMPIRKAN VARIABEL DI TANDA PERSEN DI SINI.
+		- Sebagian besar dari ekspresi AHK didukung.
+		- Anda dapat menggunakan string, variabel, array dan fungsi.
+		- Untuk menggunakan string, menyertakan mereka dalam tanda kutip, misalnya: var = "a".
+		- Beberapa Laporan yang didukung, misalnya: var = "a" || InStr (var, "b").
+	)	
+	ExprLink3_TT =	
+	(LTrim	
+		- JANGAN MELAMPIRKAN VARIABEL DI TANDA PERSEN DI SINI.
+		- Sebagian besar dari ekspresi AHK didukung.
+		- Anda dapat menggunakan string, variabel, array dan fungsi.
+		- Untuk menggunakan string, menyertakan mereka dalam tanda kutip, misalnya: var = "a".
+		- Beberapa Laporan yang didukung, misalnya: var = "a" || InStr (var, "b").
+	)	
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	Double-Klik untuk mengedit
@@ -1158,7 +1175,7 @@
 	Abs	Mengembalikan nilai absolut Nomor.
 	ASin	Mengembalikan arcsine (jumlah yang sinus adalah Number) dalam radian.
 	ACos	Mengembalikan arccosine (jumlah yang kosinus Number) dalam radian.
-	Array	
+	Array	Menciptakan array asosiatif scriptable dengan kunci integer.
 	Asc	Mengembalikan kode karakter (angka antara 1 dan 255 (dalam ANSI membangun) atau 65535 (dalam Unicode membangun)) untuk karakter pertama dalam String.
 	ATan	Mengembalikan arctangent (jumlah yang tangen adalah Number) dalam radian.
 	BlockInput	Menonaktifkan atau memungkinkan kemampuan pengguna untuk berinteraksi dengan komputer melalui keyboard dan mouse.
@@ -1285,7 +1302,7 @@
 	KeyWait	Menunggu kunci atau mouse / joystick tombol akan dilepaskan atau ditekan.
 	Labels	Sebuah label mengidentifikasi baris kode, dan dapat digunakan sebagai target Goto atau membentuk sebuah sub rutin.
 	Length	Mengembalikan panjang array linier dimulai pada posisi 1.
-	ListVars	
+	ListVars	Menampilkan variabel script ini: nama mereka dan isi saat.
 	Log	Mengembalikan logaritma (basis 10) Nomor.
 	Ln	Mengembalikan logaritma natural (basis e) Nomor.
 	Loop (normal) 	Lakukan serangkaian perintah berulang kali: baik jumlah tertentu kali atau sampai istirahat ditemui.
@@ -1303,7 +1320,7 @@
 	MsgBox	Menampilkan teks ditentukan dalam jendela kecil yang berisi satu atau lebih tombol (seperti Ya dan Tidak).
 	NumGet	Mengembalikan bilangan biner disimpan di alamat yang ditentukan + offset.
 	NumPut	Jumlah Toko dalam format biner pada alamat yang ditentukan + offset dan mengembalikan alamat ke sebelah kanan item saja menulis.
-	Object	
+	Object	Menciptakan array asosiatif scriptable.
 	OnExit	Menentukan subroutine untuk menjalankan secara otomatis ketika keluar skrip.
 	OnMessage	Menentukan fungsi untuk memanggil secara otomatis ketika script menerima pesan tertentu.
 	Ord	Mengembalikan nilai ordinal (kode karakter numerik) dari karakter pertama dalam String.

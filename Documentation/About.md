@@ -31,7 +31,7 @@ PhiLho and skwire for the [function](http://autohotkey.com/board/topic/11926-can
 fincs for [GenDocs](http://autohotkey.com/board/topic/71751-gendocs-v30-alpha002) and [SciLexer.dll custom builds](http://autohotkey.com/board/topic/54431-scite4autohotkey-v3004-updated-aug-14-2013/page-58#entry566139).  
 T800 for [Html Help utils](http://autohotkey.com/board/topic/17984-html-help-utils).  
 Thiago Talma for some improvements to the code, debugging and many suggestions.  
-Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jörg Schmalenberger (German), amnesiac (Chinese Simplified).  
+[Translation revisions](http://www.macrocreator.com/project/).  
 
 
 # Change Log

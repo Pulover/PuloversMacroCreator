@@ -5,7 +5,7 @@
 ; Main Menu		
 	m_Lang001 =	&Arkiv
 	m_Lang002 =	&Makro
-	m_Lang003 =	
+	m_Lang003 =	&Fungera
 	m_Lang004 =	&Kommandon
 	m_Lang005 =	&Redigera
 	m_Lang006 =	&Välj
@@ -46,10 +46,10 @@
 	r_Lang015 =	Spara a&ktuell Makro
 		
 ; UDF Sub Menu		
-	u_Lang001 =	
-	u_Lang002 =	
-	u_Lang003 =	
-	u_Lang004 =	
+	u_Lang001 =	&Skapa Funktion
+	u_Lang002 =	&Lägg Parameter
+	u_Lang003 =	L&ägg Avkastning
+	u_Lang004 =	&Konvertera Macro att fungera
 		
 ; Commands Sub Menu		
 	i_Lang001 =	&Mus
@@ -288,11 +288,11 @@
 	w_Lang100 =	Ta bort alla grupper
 	w_Lang101 =	Redigera grupper
 	w_Lang102 =	Gruppnamn
-	w_Lang103 =	
-	w_Lang104 =	
-	w_Lang105 =	
-	w_Lang106 =	
-	w_Lang107 =	
+	w_Lang103 =	Skapa Funktion (Ctrl + Skift + U)
+	w_Lang104 =	Lägg Parameter (Ctrl + Skift + P)
+	w_Lang105 =	Lägg Return (Ctrl + Skift + N)
+	w_Lang106 =	Konvertera Macro att fungera (Ctrl + Skift + C)
+	w_Lang107 =	Kommentera ut okontrollerade rader
 		
 ; Command Windows		
 	c_Lang001 =	Mus
@@ -385,7 +385,7 @@
 	c_Lang088 =	Återställ
 	c_Lang089 =	Funktion Namn
 	c_Lang090 =	Kommaseparerad parametrar (utan parentes)
-	c_Lang091 =	(Använd `% för variabler. Bokstavliga Kommatecken måste flydde [ ```, ])
+	c_Lang091 =	Använda uttryck format
 	c_Lang092 =	Sidelement / Index
 	c_Lang093 =	Ställ
 	c_Lang094 =	Få
@@ -505,20 +505,20 @@
 	c_Lang209 =	Värdenamn
 	c_Lang210 =	Värden
 	c_Lang211 =	Matris
-	c_Lang212 =	
-	c_Lang213 =	
-	c_Lang214 =	
-	c_Lang215 =	
-	c_Lang216 =	
-	c_Lang217 =	
-	c_Lang218 =	
-	c_Lang219 =	
-	c_Lang220 =	
-	c_Lang221 =	
-	c_Lang222 =	
-	c_Lang223 =	
-	c_Lang224 =	
-	c_Lang225 =	
+	c_Lang212 =	User Defined Function
+	c_Lang213 =	Funktion Parameter
+	c_Lang214 =	Funktion Return
+	c_Lang215 =	Parametrar
+	c_Lang216 =	Returvärde
+	c_Lang217 =	Standardvärde
+	c_Lang218 =	Omfattning
+	c_Lang219 =	Lokal
+	c_Lang220 =	Global
+	c_Lang221 =	Namn
+	c_Lang222 =	Du kan lägga till fler parametrar från funktionsmenyn.
+	c_Lang223 =	Globala variabler
+	c_Lang224 =	Lokala variabler
+	c_Lang225 =	Statiska variabler
 		
 ; Other Windows		
 	t_Lang001 =	Exportera till AutoHotkey
@@ -854,29 +854,29 @@
 	d_Lang092 =	Små ikoner
 	d_Lang093 =	Stora ikoner
 	d_Lang094 =	Den här funktionen kräver Windows Vista eller senare.
-	d_Lang095 =	
+	d_Lang095 =	Användningen av ByRef orsakar en parameter för att bli ett alias för variabeln passerade in från den som ringer. Med andra ord, parametern och uppringarens variabel avser båda samma innehåll i minnet.
 	d_Lang096 =	
 	(LTrim	
-		
-		
-		
-		
-		
-		
+		- INTE BIFOGA VARIABLER I PROCENT TECKEN HÄR.
+		- Returvärdet måste vara ett uttryck.
+		- Du kan använda strängar, variabler, arrayer och funktioner. Du kan också kombinera någon av dessa.
+		- Om du vill använda strängar, bifoga dem i citationstecken, till exempel: "Resultatet är:" a + b.
+		- Om du vill återgå extra resultat, kan du också använda ByRef i parametrar.
+		- Arrays kan användas för att returnera flera värden eller ens namngivna värden.
 	)	
 	d_Lang097 =	
 	(LTrim	
-		
-		
-		
-		
-		
+		- INTE BIFOGA VARIABLER I PROCENT TECKEN HÄR.
+		- De flesta av AHK uttryck stöds.
+		- Du kan använda strängar, variabler, arrayer och funktioner.
+		- Om du vill använda strängar, bifoga dem i citationstecken, till exempel: var = "a".
+		- Flera rapporter stöds, t.ex. var = "a" || InStr (var, "b").
 	)	
-	d_Lang098 =	
-	d_Lang099 =	
-	d_Lang100 =	
-	d_Lang101 =	
-	d_Lang102 =	
+	d_Lang098 =	Om en parameter har ett standardvärde, är följande parametrar som krävs för att ha en alltför.
+	d_Lang099 =	Funktionsnamnet innehåller ett ogiltigt tecken.
+	d_Lang100 =	Goto, Gosub och etikett är inte tillåtna funktioner.
+	d_Lang101 =	Dupliceringsfunktionen.
+	d_Lang102 =	är ett reserverat ord.
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -996,6 +996,23 @@
 	IncFolders_TT =	Inkludera kataloger (mappar) / Nycklar
 	Recurse_TT =	Rekursiva i underkataloger (undermappar) / nycklar
 	CmdSort_TT =	Sortera alfabetiskt
+	Ex_EdScript_TT =	Avaa ulkoisen editorin
+	ExprLink2_TT =	
+	(LTrim	
+		- INTE BIFOGA VARIABLER I PROCENT TECKEN HÄR.
+		- De flesta av AHK uttryck stöds.
+		- Du kan använda strängar, variabler, arrayer och funktioner.
+		- Om du vill använda strängar, bifoga dem i citationstecken, till exempel: var = "a".
+		- Flera rapporter stöds, t.ex. var = "a" || InStr (var, "b").
+	)	
+	ExprLink3_TT =	
+	(LTrim	
+		- INTE BIFOGA VARIABLER I PROCENT TECKEN HÄR.
+		- De flesta av AHK uttryck stöds.
+		- Du kan använda strängar, variabler, arrayer och funktioner.
+		- Om du vill använda strängar, bifoga dem i citationstecken, till exempel: var = "a".
+		- Flera rapporter stöds, t.ex. var = "a" || InStr (var, "b").
+	)	
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	Dubbelklicka för att redigera
@@ -1158,7 +1175,7 @@
 	Abs	Returnerar det absoluta värdet för Antal .
 	ASin	Returnerar arcus sinus ( antalet vars sinus är Number ) i radianer .
 	ACos	Returnerar arcus ( det tal vars cosinus är Tal ) i radianer .
-	Array	
+	Array	Skapar ett skript associativ array med heltal nycklar.
 	Asc	Returnerar tecknet koden ( ett tal mellan 1 och 255 ( i ANSI byggen ) eller 65535 ( i Unicode byggen ) ) för det första tecknet i Sträng .
 	ATan	Returnerar arcus ( antalet vars tangent är Number ) i radianer .
 	BlockInput	Avaktiverar eller gör det möjligt för användarens förmåga att interagera med datorn via tangentbord och mus.
@@ -1285,7 +1302,7 @@
 	KeyWait	Väntar på en knapp eller mus / joystick för att släppas eller intryckt.
 	Labels	En etikett identifierar en rad kod, och kan användas som ett Goto mål eller för att bilda en subrutin.
 	Length	Returnerar längden på en linjär grupp som börjar vid position 1.
-	ListVars	
+	ListVars	Visar script variabler: deras namn och aktuella innehållet.
 	Log	Returnerar logaritmen (bas 10) av Number.
 	Ln	Returnerar den naturliga logaritmen (basen e) av Number.
 	Loop (normal) 	Utför en serie kommandon flera gånger: antingen det angivna antalet gånger eller tills brott uppstår.
@@ -1303,7 +1320,7 @@
 	MsgBox	Visar den angivna texten i ett litet fönster som innehåller en eller flera knappar (t.ex. Ja och Nej).
 	NumGet	Returnerar binära talet lagras vid den specificerade adressen + förskjutning.
 	NumPut	Butiker Antal i binärt format på den angivna adressen + offset och returnerar adressen till höger om objektet just skrivit.
-	Object	
+	Object	Skapar ett skript associativ array.
 	OnExit	Anger en subrutin för att köras automatiskt när skriptet avslutats.
 	OnMessage	Anger en funktion som ska anropas automatiskt när skriptet emot den angivna meddelandet.
 	Ord	Returnerar ordnings värde (siffra kod) för det första tecknet i sträng.

@@ -5,7 +5,7 @@
 ; Main Menu		
 	m_Lang001 =	&Bestand
 	m_Lang002 =	&Macro
-	m_Lang003 =	
+	m_Lang003 =	&Functie
 	m_Lang004 =	&Commando's
 	m_Lang005 =	&Redigeren
 	m_Lang006 =	&Kiezen
@@ -46,10 +46,10 @@
 	r_Lang015 =	Save &huidige Macro
 		
 ; UDF Sub Menu		
-	u_Lang001 =	
-	u_Lang002 =	
-	u_Lang003 =	
-	u_Lang004 =	
+	u_Lang001 =	&Maak Functie
+	u_Lang002 =	&Voeg Parameter
+	u_Lang003 =	&Toevoegen Terug
+	u_Lang004 =	&Omzetten Macro om te functioneren
 		
 ; Commands Sub Menu		
 	i_Lang001 =	&Muis
@@ -288,11 +288,11 @@
 	w_Lang100 =	Verwijder alle groepen
 	w_Lang101 =	Groepen bewerken
 	w_Lang102 =	Groepsnaam
-	w_Lang103 =	
-	w_Lang104 =	
-	w_Lang105 =	
-	w_Lang106 =	
-	w_Lang107 =	
+	w_Lang103 =	Maak Function (Ctrl + Shift + U)
+	w_Lang104 =	Voeg Parameter (Ctrl + Shift + P)
+	w_Lang105 =	Voeg Return (Ctrl + Shift + N)
+	w_Lang106 =	Omzetten Macro Aan (Ctrl + Shift + C) Functie
+	w_Lang107 =	Commentaar uit ongecontroleerd rijen
 		
 ; Command Windows		
 	c_Lang001 =	Muis
@@ -385,7 +385,7 @@
 	c_Lang088 =	Reset
 	c_Lang089 =	Functie Naam
 	c_Lang090 =	Komma gescheiden parameters (zonder haakjes)
-	c_Lang091 =	(Gebruik `% voor Variabelen. Letterlijke Komma's moet worden ontsnapt [ ```, ])
+	c_Lang091 =	Gebruik uitdrukkingen formaat
 	c_Lang092 =	Pagina-element / Index
 	c_Lang093 =	Ingesteld
 	c_Lang094 =	Krijgen
@@ -505,20 +505,20 @@
 	c_Lang209 =	Waarde naam
 	c_Lang210 =	Waarden
 	c_Lang211 =	Reeks
-	c_Lang212 =	
-	c_Lang213 =	
-	c_Lang214 =	
-	c_Lang215 =	
-	c_Lang216 =	
-	c_Lang217 =	
-	c_Lang218 =	
-	c_Lang219 =	
-	c_Lang220 =	
-	c_Lang221 =	
-	c_Lang222 =	
-	c_Lang223 =	
-	c_Lang224 =	
-	c_Lang225 =	
+	c_Lang212 =	User Defined Function
+	c_Lang213 =	Functie Parameter
+	c_Lang214 =	Functie Return
+	c_Lang215 =	Parameters
+	c_Lang216 =	Return Waarde
+	c_Lang217 =	Standaardwaarde
+	c_Lang218 =	Reikwijdte
+	c_Lang219 =	Lokaal
+	c_Lang220 =	Global
+	c_Lang221 =	Naam
+	c_Lang222 =	U kunt meer parameters toevoegen vanuit het menu Functie.
+	c_Lang223 =	Global Variabelen
+	c_Lang224 =	Lokale variabelen
+	c_Lang225 =	Statische variabelen
 		
 ; Other Windows		
 	t_Lang001 =	Exporteren naar AutoHotkey
@@ -854,29 +854,29 @@
 	d_Lang092 =	Kleine pictogrammen
 	d_Lang093 =	Grote pictogrammen
 	d_Lang094 =	Deze functie vereist Windows Vista of hoger.
-	d_Lang095 =	
+	d_Lang095 =	Het gebruik van ByRef veroorzaakt een parameter een alias voor de variabele doorgegeven aan de oproeper worden. Met andere woorden, de variabele parameter en de beller beide naar dezelfde inhoud in het geheugen.
 	d_Lang096 =	
 	(LTrim	
-		
-		
-		
-		
-		
-		
+		- NIET BIJGAAND VARIABELEN IN PROCENTTEKENS HIER.
+		- Return waarde moet een uitdrukking zijn.
+		- U kunt gebruik maken van snaren, variabelen, arrays en functies. U kunt ook een van deze te combineren.
+		- Om strings gebruiken, omsluiten ze tussen aanhalingstekens, bijvoorbeeld: "Resultaat is:" a + b.
+		- Als u wilt extra resultaten, kunt u ook ByRef gebruiken parameters.
+		- Arrays kunnen worden gebruikt om meerdere waarden of zelfs noemde waarden retourneren.
 	)	
 	d_Lang097 =	
 	(LTrim	
-		
-		
-		
-		
-		
+		- NIET BIJGAAND VARIABELEN IN PROCENTTEKENS HIER.
+		- De meeste van de AHK uitdrukkingen worden ondersteund.
+		- U kunt gebruik maken van snaren, variabelen, arrays en functies.
+		- Om strings gebruiken, omsluiten ze tussen aanhalingstekens, bijvoorbeeld: var = "a".
+		- Meerdere verklaringen worden ondersteund, bijvoorbeeld: var = "a" || InStr (var, "b").
 	)	
-	d_Lang098 =	
-	d_Lang099 =	
-	d_Lang100 =	
-	d_Lang101 =	
-	d_Lang102 =	
+	d_Lang098 =	Als een parameter een standaardwaarde, worden de volgende parameters vereist om een te hebben.
+	d_Lang099 =	De naam van de functie bevat een ongeldig teken.
+	d_Lang100 =	Goto, Gosub en Label zijn niet toegestaan in functies.
+	d_Lang101 =	Duplicate-functie.
+	d_Lang102 =	is een gereserveerd woord.
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -996,6 +996,23 @@
 	IncFolders_TT =	Omvatten directories (mappen) / Keys
 	Recurse_TT =	Recursieve in submappen (submappen) / Subsleutels
 	CmdSort_TT =	Alfabetisch sorteren
+	Ex_EdScript_TT =	Open in externe editor
+	ExprLink2_TT =	
+	(LTrim	
+		- NIET BIJGAAND VARIABELEN IN PROCENTTEKENS HIER.
+		- De meeste van de AHK uitdrukkingen worden ondersteund.
+		- U kunt gebruik maken van snaren, variabelen, arrays en functies.
+		- Om strings gebruiken, omsluiten ze tussen aanhalingstekens, bijvoorbeeld: var = "a".
+		- Meerdere verklaringen worden ondersteund, bijvoorbeeld: var = "a" || InStr (var, "b").
+	)	
+	ExprLink3_TT =	
+	(LTrim	
+		- NIET BIJGAAND VARIABELEN IN PROCENTTEKENS HIER.
+		- De meeste van de AHK uitdrukkingen worden ondersteund.
+		- U kunt gebruik maken van snaren, variabelen, arrays en functies.
+		- Om strings gebruiken, omsluiten ze tussen aanhalingstekens, bijvoorbeeld: var = "a".
+		- Meerdere verklaringen worden ondersteund, bijvoorbeeld: var = "a" || InStr (var, "b").
+	)	
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	Dubbelklik op om te bewerken
@@ -1158,7 +1175,7 @@
 	Abs	Geeft de absolute waarde van het nummer .
 	ASin	Geeft de boogsinus ( het getal waarvan de sinus is Number ) in radialen .
 	ACos	Geeft de boogcosinus ( het getal waarvan de cosinus is Number ) in radialen .
-	Array	
+	Array	Maakt een scriptable associatieve array met integer toetsen.
 	Asc	Geeft het teken code ( een getal tussen 1 en 255 ( in ANSI builds ) of 65.535 ( in Unicode builds ) ) voor het eerste teken in string .
 	ATan	Geeft de boogtangens ( het nummer waarvan de tangens Number ) in radialen .
 	BlockInput	Schakelt het vermogen van de gebruiker om te interageren met de computer via het toetsenbord en de muis .
@@ -1285,7 +1302,7 @@
 	KeyWait	Wacht op een toets of muis / joystick knop worden vrijgegeven of ingedrukt.
 	Labels	Een label identificeert een regel code, en kan worden gebruikt als een doelwit Goto of een subroutine vormen.
 	Length	Geeft de lengte van een lineaire array beginnend op positie 1.
-	ListVars	
+	ListVars	Geeft het script variabelen: hun namen en de huidige inhoud.
 	Log	Geeft de logaritme (grondtal 10) van het nummer.
 	Ln	Geeft de natuurlijke logaritme (basis e) van Number.
 	Loop (normal) 	Voer een reeks opdrachten herhaaldelijk: ofwel het opgegeven aantal malen of tot breuk wordt aangetroffen.
@@ -1303,7 +1320,7 @@
 	MsgBox	Toont de opgegeven tekst in een klein venster met een of meer knoppen (zoals ja en nee).
 	NumGet	Retourneert het binaire getal opgeslagen bij het opgegeven adres + offset.
 	NumPut	Winkels Nummer in binair formaat op het opgegeven adres + offset en het adres terug naar de rechterkant van de punt enkel geschreven.
-	Object	
+	Object	Maakt een scripts associatieve array.
 	OnExit	Hiermee geeft u een subroutine om automatisch wanneer het script eindigt draaien.
 	OnMessage	Geeft een functie om automatisch te bellen wanneer het script ontvangt de opgegeven boodschap.
 	Ord	Geeft de ordinale waarde (numeriek karakter code) van het eerste teken in string.

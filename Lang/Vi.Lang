@@ -5,10 +5,10 @@
 ; Main Menu		
 	m_Lang001 =	&Tập tin
 	m_Lang002 =	&Vĩ mô
-	m_Lang003 =	
+	m_Lang003 =	&Chức năng
 	m_Lang004 =	&Lệnh
 	m_Lang005 =	C&hỉnh sửa
-	m_Lang006 =	&Chọn
+	m_Lang006 =	Ch&ọn
 	m_Lang007 =	&Xem
 	m_Lang008 =	T&ùy chọn
 	m_Lang009 =	T&ặng
@@ -46,10 +46,10 @@
 	r_Lang015 =	&Lưu vĩ mô hiện tại
 		
 ; UDF Sub Menu		
-	u_Lang001 =	
-	u_Lang002 =	
-	u_Lang003 =	
-	u_Lang004 =	
+	u_Lang001 =	&Tạo Chức năng
+	u_Lang002 =	T&hêm Parameter
+	u_Lang003 =	Th&êm Return
+	u_Lang004 =	&Chuyển đổi Macro Để Chức năng
 		
 ; Commands Sub Menu		
 	i_Lang001 =	&Chuột
@@ -288,11 +288,11 @@
 	w_Lang100 =	Hủy bỏ tất cả các nhóm
 	w_Lang101 =	Chỉnh sửa nhóm
 	w_Lang102 =	Tên nhóm
-	w_Lang103 =	
-	w_Lang104 =	
-	w_Lang105 =	
-	w_Lang106 =	
-	w_Lang107 =	
+	w_Lang103 =	Tạo Function (Ctrl + Shift + U)
+	w_Lang104 =	Thêm Parameter (Ctrl + Shift + P)
+	w_Lang105 =	Thêm Return (Ctrl + Shift + N)
+	w_Lang106 =	Chuyển đổi Macro Để Function (Ctrl + Shift + C)
+	w_Lang107 =	Thảo luận ra các hàng không được kiểm soát
 		
 ; Command Windows		
 	c_Lang001 =	Chuột
@@ -385,7 +385,7 @@
 	c_Lang088 =	Thiết lập lại
 	c_Lang089 =	Tên chức năng
 	c_Lang090 =	Dấu phẩy tách ra các thông số (không có dấu ngoặc đơn)
-	c_Lang091 =	(Sử dụng `% cho biến. Dấu phẩy Nghĩa chữ phải được thoát [ ```, ])
+	c_Lang091 =	Định dạng sử dụng các biểu thức
 	c_Lang092 =	Trang Element / Index
 	c_Lang093 =	Đặt
 	c_Lang094 =	Được
@@ -505,20 +505,20 @@
 	c_Lang209 =	Tên giá trị
 	c_Lang210 =	Giá trị
 	c_Lang211 =	Mảng
-	c_Lang212 =	
-	c_Lang213 =	
-	c_Lang214 =	
-	c_Lang215 =	
-	c_Lang216 =	
-	c_Lang217 =	
-	c_Lang218 =	
-	c_Lang219 =	
-	c_Lang220 =	
-	c_Lang221 =	
-	c_Lang222 =	
-	c_Lang223 =	
-	c_Lang224 =	
-	c_Lang225 =	
+	c_Lang212 =	Chức năng người dùng định nghĩa
+	c_Lang213 =	Chức năng Thông số
+	c_Lang214 =	Chức năng Quay trở lại
+	c_Lang215 =	Thông số
+	c_Lang216 =	Return Value
+	c_Lang217 =	Giá trị mặc định
+	c_Lang218 =	Phạm vi
+	c_Lang219 =	Địa phương
+	c_Lang220 =	Toàn cầu
+	c_Lang221 =	Tên
+	c_Lang222 =	Bạn có thể thêm các thông số hơn từ menu Function.
+	c_Lang223 =	Các biến toàn cầu
+	c_Lang224 =	Các biến địa phương
+	c_Lang225 =	Các biến tĩnh
 		
 ; Other Windows		
 	t_Lang001 =	Xuất khẩu sang AutoHotkey
@@ -854,29 +854,29 @@
 	d_Lang092 =	Small icons
 	d_Lang093 =	Các biểu tượng lớn
 	d_Lang094 =	Tính năng này yêu cầu Windows Vista hoặc cao hơn.
-	d_Lang095 =	
+	d_Lang095 =	Việc sử dụng ByRef gây ra một tham số để trở thành một bí danh cho các biến được truyền từ người gọi. Nói cách khác, các tham số và biến của người gọi cả tham khảo các nội dung tương tự trong bộ nhớ.
 	d_Lang096 =	
 	(LTrim	
-		
-		
-		
-		
-		
-		
+		- KHÔNG GỬI KÈM BIẾN TRONG DẤU HIỆU PERCENT ĐÂY.
+		- Giá trị Return phải là một biểu.
+		- Bạn có thể sử dụng các chuỗi, các biến, mảng và chức năng. Bạn cũng có thể kết hợp bất kỳ của những người.
+		- Để sử dụng dây, đặt chúng trong dấu ngoặc kép, ví dụ như: "Kết quả là:" a + b.
+		- Nếu bạn muốn trả lại kết quả hơn, bạn cũng có thể sử dụng các thông số ByRef trong.
+		- Mảng có thể được sử dụng để trả lại nhiều giá trị hoặc giá trị thậm chí còn được đặt tên.
 	)	
 	d_Lang097 =	
 	(LTrim	
-		
-		
-		
-		
-		
+		- KHÔNG GỬI KÈM BIẾN TRONG DẤU HIỆU PERCENT ĐÂY.
+		- Hầu hết các biểu AHK được hỗ trợ.
+		- Bạn có thể sử dụng các chuỗi, các biến, mảng và chức năng.
+		- Để sử dụng dây, đặt chúng trong dấu ngoặc kép, ví dụ: var = "a".
+		- Nhiều báo cáo được hỗ trợ, ví dụ như: var = "a" || InStr (var, "b").
 	)	
-	d_Lang098 =	
-	d_Lang099 =	
-	d_Lang100 =	
-	d_Lang101 =	
-	d_Lang102 =	
+	d_Lang098 =	Nếu một tham số có giá trị mặc định, các thông số sau đây được yêu cầu phải có một quá.
+	d_Lang099 =	Tên hàm chứa một nhân vật bất hợp pháp.
+	d_Lang100 =	Goto, Gosub và Label không được phép vào các chức năng.
+	d_Lang101 =	Chức năng trùng lặp.
+	d_Lang102 =	là một từ dành riêng.
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -996,6 +996,23 @@
 	IncFolders_TT =	Bao gồm các thư mục (folder) / Keys
 	Recurse_TT =	Đệ quy vào thư mục con (thư mục con) / Subkeys
 	CmdSort_TT =	Xếp theo vần
+	Ex_EdScript_TT =	Mở trong trình soạn thảo bên ngoài
+	ExprLink2_TT =	
+	(LTrim	
+		- KHÔNG GỬI KÈM BIẾN TRONG DẤU HIỆU PERCENT ĐÂY.
+		- Hầu hết các biểu AHK được hỗ trợ.
+		- Bạn có thể sử dụng các chuỗi, các biến, mảng và chức năng.
+		- Để sử dụng dây, đặt chúng trong dấu ngoặc kép, ví dụ: var = "a".
+		- Nhiều báo cáo được hỗ trợ, ví dụ như: var = "a" || InStr (var, "b").
+	)	
+	ExprLink3_TT =	
+	(LTrim	
+		- KHÔNG GỬI KÈM BIẾN TRONG DẤU HIỆU PERCENT ĐÂY.
+		- Hầu hết các biểu AHK được hỗ trợ.
+		- Bạn có thể sử dụng các chuỗi, các biến, mảng và chức năng.
+		- Để sử dụng dây, đặt chúng trong dấu ngoặc kép, ví dụ: var = "a".
+		- Nhiều báo cáo được hỗ trợ, ví dụ như: var = "a" || InStr (var, "b").
+	)	
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	Đúp Nhấn vào đây để chỉnh sửa
@@ -1158,7 +1175,7 @@
 	Abs	Trả về giá trị tuyệt đối của số.
 	ASin	Trả về arcsine (số có sin là số) trong radian.
 	ACos	Trả về arccosine (số có cosin là số) trong radian.
-	Array	
+	Array	Tạo ra một mảng kết hợp kịch bản với các phím số nguyên.
 	Asc	Trả về mã ký tự (một số từ 1 đến 255 (trong ANSI xây dựng) hoặc 65535 (Unicode trong xây dựng)) cho ký tự đầu tiên trong chuỗi.
 	ATan	Trả về arctangent (số có tiếp tuyến là số) trong radian.
 	BlockInput	Vô hiệu hóa hoặc cho phép khả năng của người sử dụng tương tác với máy tính thông qua bàn phím và chuột.
@@ -1285,7 +1302,7 @@
 	KeyWait	Chờ đợi cho một phím hoặc chuột / phím điều khiển nút sẽ được phát hành hoặc ép xuống.
 	Labels	Một nhãn xác định một dòng mã, và có thể được sử dụng như là một mục tiêu Chuyển đến hoặc để tạo thành một chương trình con.
 	Length	Trả về độ dài của một mảng tuyến tính bắt đầu ở vị trí 1.
-	ListVars	
+	ListVars	Hiển thị các biến của kịch bản: tên và nội dung hiện tại.
 	Log	Trả về logarit (cơ số 10) của số.
 	Ln	Trả về logarit tự nhiên (cơ số e) của số.
 	Loop (normal) 	Thực hiện một loạt các lệnh liên tục: hoặc số quy định của lần hoặc cho đến khi nghỉ là gặp phải.
@@ -1303,7 +1320,7 @@
 	MsgBox	Hiển thị các văn bản quy định trong một cửa sổ nhỏ chứa một hay nhiều nút (như Yes và No).
 	NumGet	Trả về số nhị phân được lưu trữ tại địa chỉ cụ thể + bù đắp.
 	NumPut	Số cửa hàng trong định dạng nhị phân theo địa chỉ cho trước + bù đắp và trả về địa chỉ ở bên phải của mục chỉ bằng văn bản.
-	Object	
+	Object	Tạo ra một mảng kết hợp kịch bản.
 	OnExit	Quy định cụ thể một chương trình con để chạy tự động khi thoát khỏi kịch bản.
 	OnMessage	Quy định cụ thể chức năng gọi tự động khi kịch bản nhận được thông báo cụ thể.
 	Ord	Trả về giá trị thứ tự (mã ký tự số) của các nhân vật đầu tiên trong String.

@@ -531,6 +531,8 @@
 		Else
 			LVData .= RowData
 	}
+	If (CommentOut)
+		LVData .= "`n*/"
 	If (IsFunction)
 		LVData .= "`n}"
 	LVData := LTrim(LVData, "`n")

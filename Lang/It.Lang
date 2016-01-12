@@ -4,15 +4,15 @@
 		
 ; Main Menu		
 	m_Lang001 =	&File
-	m_Lang002 =	M&acro
-	m_Lang003 =	
+	m_Lang002 =	&Macro
+	m_Lang003 =	F&unzione
 	m_Lang004 =	&Comandi
-	m_Lang005 =	&Modifica
+	m_Lang005 =	M&odifica
 	m_Lang006 =	&Selezionare
 	m_Lang007 =	&Visualizza
-	m_Lang008 =	&Opzioni
+	m_Lang008 =	O&pzioni
 	m_Lang009 =	&Donare
-	m_Lang010 =	A&iuto
+	m_Lang010 =	&Aiuto
 		
 ; File Sub Menu		
 	f_Lang001 =	&Nuovo
@@ -46,10 +46,10 @@
 	r_Lang015 =	Sa&lva Macro corrente
 		
 ; UDF Sub Menu		
-	u_Lang001 =	
-	u_Lang002 =	
-	u_Lang003 =	
-	u_Lang004 =	
+	u_Lang001 =	&Creare Funzione
+	u_Lang002 =	&Aggiungi parametro
+	u_Lang003 =	A&ggiungi ritorno
+	u_Lang004 =	C&onvertire macro Per Funzione
 		
 ; Commands Sub Menu		
 	i_Lang001 =	&Mouse
@@ -288,11 +288,11 @@
 	w_Lang100 =	Rimuovere tutti i gruppi
 	w_Lang101 =	Modifica gruppi
 	w_Lang102 =	Nome del gruppo
-	w_Lang103 =	
-	w_Lang104 =	
-	w_Lang105 =	
-	w_Lang106 =	
-	w_Lang107 =	
+	w_Lang103 =	Creare Function (Ctrl + Shift + U)
+	w_Lang104 =	Aggiungi parametro (Ctrl + Shift + P)
+	w_Lang105 =	Aggiungere Return (Ctrl + Shift + N)
+	w_Lang106 =	Convertire Macro alla funzione (Ctrl + Shift + C)
+	w_Lang107 =	Commentare le righe non controllati
 		
 ; Command Windows		
 	c_Lang001 =	Mouse
@@ -385,7 +385,7 @@
 	c_Lang088 =	Reset
 	c_Lang089 =	Nome Funzione
 	c_Lang090 =	Separati da virgola parametri (senza parentesi)
-	c_Lang091 =	(Usare `% per le variabili. Virgole letterali devono essere protette [ ```, ])
+	c_Lang091 =	Formato Usare espressioni
 	c_Lang092 =	Pagina Elemento / Indice
 	c_Lang093 =	Set
 	c_Lang094 =	Ottenere
@@ -505,20 +505,20 @@
 	c_Lang209 =	Nome di valore
 	c_Lang210 =	I valori
 	c_Lang211 =	Schieramento
-	c_Lang212 =	
-	c_Lang213 =	
-	c_Lang214 =	
-	c_Lang215 =	
-	c_Lang216 =	
-	c_Lang217 =	
-	c_Lang218 =	
-	c_Lang219 =	
-	c_Lang220 =	
-	c_Lang221 =	
-	c_Lang222 =	
-	c_Lang223 =	
-	c_Lang224 =	
-	c_Lang225 =	
+	c_Lang212 =	Funzione definita dall'utente
+	c_Lang213 =	Funzione Parametro
+	c_Lang214 =	Funzione di ritorno
+	c_Lang215 =	Parametri
+	c_Lang216 =	Valore restituito
+	c_Lang217 =	Valore di default
+	c_Lang218 =	Portata
+	c_Lang219 =	Del posto
+	c_Lang220 =	Globale
+	c_Lang221 =	Nome
+	c_Lang222 =	Puoi aggiungere più parametri dal menu delle funzioni.
+	c_Lang223 =	Variabili globali
+	c_Lang224 =	Variabili locali
+	c_Lang225 =	Variabili statiche
 		
 ; Other Windows		
 	t_Lang001 =	Esporta in AutoHotkey
@@ -854,29 +854,29 @@
 	d_Lang092 =	Icone piccole
 	d_Lang093 =	Icone grandi
 	d_Lang094 =	Questa funzionalità richiede Windows Vista o versioni successive.
-	d_Lang095 =	
+	d_Lang095 =	L'uso di un parametro ByRef provoca a diventare un alias per la variabile passata dal chiamante. In altre parole, il parametro e variabile del chiamante sia riferiscono agli stessi contenuti nella memoria.
 	d_Lang096 =	
 	(LTrim	
-		
-		
-		
-		
-		
-		
+		- NON ALLEGARE VARIABILI IN SEGNI DI PERCENTUALE QUI.
+		- Il valore di ritorno deve essere un'espressione.
+		- È possibile utilizzare stringhe, le variabili, array e funzioni. Si può anche combinare una di queste.
+		- Per utilizzare stringhe, racchiuderli tra virgolette, ad esempio: "Il risultato è:" a + b.
+		- Se si desidera restituire i risultati in più, si può anche utilizzare ByRef nei parametri.
+		- Array possono essere utilizzati per restituire più valori o valori anche denominati.
 	)	
 	d_Lang097 =	
 	(LTrim	
-		
-		
-		
-		
-		
+		- NON ALLEGARE VARIABILI IN SEGNI DI PERCENTUALE QUI.
+		- La maggior parte delle espressioni AHK sono supportati.
+		- È possibile utilizzare stringhe, le variabili, array e funzioni.
+		- Per utilizzare stringhe, racchiuderli tra virgolette, ad esempio: var = "a".
+		- Più istruzioni sono supportati, ad esempio: var = "a" || InStr (var, "b").
 	)	
-	d_Lang098 =	
-	d_Lang099 =	
-	d_Lang100 =	
-	d_Lang101 =	
-	d_Lang102 =	
+	d_Lang098 =	Se un parametro ha un valore predefinito, i seguenti parametri sono tenuti ad avere uno troppo.
+	d_Lang099 =	Il nome della funzione contiene un carattere non valido.
+	d_Lang100 =	Goto, Gosub e Label non sono ammessi nelle funzioni.
+	d_Lang101 =	Funzione di duplicazione.
+	d_Lang102 =	è una parola riservata.
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -996,6 +996,23 @@
 	IncFolders_TT =	Includi directory (cartelle) / tasti
 	Recurse_TT =	Ricorsivi in sottodirectory (sottocartelle) / sottochiavi
 	CmdSort_TT =	Ordine alfabetico
+	Ex_EdScript_TT =	Apri in editor esterno
+	ExprLink2_TT =	
+	(LTrim	
+		- NON ALLEGARE VARIABILI IN SEGNI DI PERCENTUALE QUI.
+		- La maggior parte delle espressioni AHK sono supportati.
+		- È possibile utilizzare stringhe, le variabili, array e funzioni.
+		- Per utilizzare stringhe, racchiuderli tra virgolette, ad esempio: var = "a".
+		- Più istruzioni sono supportati, ad esempio: var = "a" || InStr (var, "b").
+	)	
+	ExprLink3_TT =	
+	(LTrim	
+		- NON ALLEGARE VARIABILI IN SEGNI DI PERCENTUALE QUI.
+		- La maggior parte delle espressioni AHK sono supportati.
+		- È possibile utilizzare stringhe, le variabili, array e funzioni.
+		- Per utilizzare stringhe, racchiuderli tra virgolette, ad esempio: var = "a".
+		- Più istruzioni sono supportati, ad esempio: var = "a" || InStr (var, "b").
+	)	
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	Fare doppio clic per modificare
@@ -1158,7 +1175,7 @@
 	Abs	Restituisce il valore assoluto di un numero .
 	ASin	Restituisce l'arcoseno ( il numero il cui seno è Number) in radianti .
 	ACos	Restituisce l' arcocoseno ( il numero il cui coseno è Number) in radianti .
-	Array	
+	Array	Crea un array associativo script con chiavi intere.
 	Asc	Restituisce il codice di carattere ( un numero compreso tra 1 e 255 ( in ANSI build ) o 65535 ( in build Unicode) ) per il primo carattere della stringa .
 	ATan	Restituisce l'arcotangente ( il numero la cui tangente è il numero ) in radianti .
 	BlockInput	Di attivare o disattivare la capacità dell'utente di interagire con il computer tramite tastiera e mouse.
@@ -1285,7 +1302,7 @@
 	KeyWait	Attende un tasto o pulsante del mouse / joystick per essere rilasciato o premuto.
 	Labels	Un'etichetta identifica una riga di codice, e può essere usato come un bersaglio Goto o per formare una subroutine.
 	Length	Restituisce la lunghezza di una schiera lineare che inizia alla posizione 1.
-	ListVars	
+	ListVars	Consente di visualizzare le variabili dello script: i loro nomi e contenuto corrente.
 	Log	Restituisce il logaritmo (base 10) del numero.
 	Ln	Restituisce il logaritmo naturale (in base e) del Codice.
 	Loop (normal) 	Eseguire una serie di comandi più volte: si incontra sia il numero specificato di volte o fino a rottura.
@@ -1303,7 +1320,7 @@
 	MsgBox	Visualizza il testo specificato in una piccola finestra che contiene uno o più pulsanti (come Sì e No).
 	NumGet	Restituisce il numero binario memorizzato all'indirizzo specificato + offset.
 	NumPut	Negozi numero in formato binario all'indirizzo specificato + offset e restituisce l'indirizzo a destra della voce appena scritto.
-	Object	
+	Object	Crea un array associativo script.
 	OnExit	Specifica una subroutine per eseguire automaticamente quando lo script esce.
 	OnMessage	Consente di specificare una funzione da chiamare automaticamente quando lo script riceve il messaggio specificato.
 	Ord	Restituisce il valore ordinale (codice di carattere numerico) del primo carattere di stringa.

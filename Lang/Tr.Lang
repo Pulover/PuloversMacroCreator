@@ -5,7 +5,7 @@
 ; Main Menu		
 	m_Lang001 =	&Dosya
 	m_Lang002 =	&Makro
-	m_Lang003 =	
+	m_Lang003 =	&fonksiyon
 	m_Lang004 =	&Komutları
 	m_Lang005 =	D&üzenle
 	m_Lang006 =	&Seçmek
@@ -46,10 +46,10 @@
 	r_Lang015 =	G&üncel Makro Kaydet
 		
 ; UDF Sub Menu		
-	u_Lang001 =	
-	u_Lang002 =	
-	u_Lang003 =	
-	u_Lang004 =	
+	u_Lang001 =	&Fonksiyon oluşturma
+	u_Lang002 =	&Parametre ekle
+	u_Lang003 =	&Dönüş ekle
+	u_Lang004 =	F&onksiyonu için makro dönüştürme
 		
 ; Commands Sub Menu		
 	i_Lang001 =	&Fare
@@ -288,11 +288,11 @@
 	w_Lang100 =	Tüm grupları kaldırın
 	w_Lang101 =	Düzenleme grupları
 	w_Lang102 =	Grup ismi
-	w_Lang103 =	
-	w_Lang104 =	
-	w_Lang105 =	
-	w_Lang106 =	
-	w_Lang107 =	
+	w_Lang103 =	Fonksiyon oluşturun (Ctrl + Shift + U)
+	w_Lang104 =	Parametre (Ctrl + Shift + P) ekleyin
+	w_Lang105 =	Dönüş (Ctrl + Shift + N) ekleyin
+	w_Lang106 =	(Ctrl + Shift + C) Fonksiyonu için makro dönüştürme
+	w_Lang107 =	Denetlenmeyen satırları açıklama
 		
 ; Command Windows		
 	c_Lang001 =	Fare
@@ -385,7 +385,7 @@
 	c_Lang088 =	Ayarlamak
 	c_Lang089 =	Fonksiyon Adı
 	c_Lang090 =	Virgül (parantez olmadan) parametreleri ayrılmış
-	c_Lang091 =	(Değişkenler için `% kullanın. Birebir Virgüller öncelenmesi gerekir [ ```, ])
+	c_Lang091 =	Kullanım ifadeleri biçimi
 	c_Lang092 =	Sayfa Öğesi / Endeks
 	c_Lang093 =	Ayarlamak
 	c_Lang094 =	Almak
@@ -505,20 +505,20 @@
 	c_Lang209 =	Değer adı
 	c_Lang210 =	Değerler
 	c_Lang211 =	Dizi
-	c_Lang212 =	
-	c_Lang213 =	
-	c_Lang214 =	
-	c_Lang215 =	
-	c_Lang216 =	
-	c_Lang217 =	
-	c_Lang218 =	
-	c_Lang219 =	
-	c_Lang220 =	
-	c_Lang221 =	
-	c_Lang222 =	
-	c_Lang223 =	
-	c_Lang224 =	
-	c_Lang225 =	
+	c_Lang212 =	Kullanıcı Tanımlı Fonksiyon
+	c_Lang213 =	Fonksiyon Parametre
+	c_Lang214 =	Fonksiyon Dönüş
+	c_Lang215 =	Parametreler
+	c_Lang216 =	Dönüş Değeri
+	c_Lang217 =	Varsayılan değer
+	c_Lang218 =	Faaliyet alanı
+	c_Lang219 =	Yerel
+	c_Lang220 =	Global
+	c_Lang221 =	Isim
+	c_Lang222 =	Fonksiyon menüsünden daha fazla parametre ekleyebilirsiniz.
+	c_Lang223 =	Küresel Değişkenler
+	c_Lang224 =	Yerel Değişkenler
+	c_Lang225 =	Statik Değişkenler
 		
 ; Other Windows		
 	t_Lang001 =	AutoHotkey Aktar
@@ -854,29 +854,29 @@
 	d_Lang092 =	Küçük simgeler
 	d_Lang093 =	Büyük ikonlar
 	d_Lang094 =	Bu özellik, Windows Vista veya üstü gerektirir.
-	d_Lang095 =	
+	d_Lang095 =	ByRef kullanımı arayanın geçirilen değişken için bir takma ad haline bir parametre neden olur. Bir başka deyişle, parametre ve arayanın değişken hem bellekte aynı içeriği bakın.
 	d_Lang096 =	
 	(LTrim	
-		
-		
-		
-		
-		
-		
+		- BURAYA YÜZDE IŞARETLERI DEĞİŞKENLER IÇINE ALMAYıN.
+		- Dönüş değeri bir ifade olmalıdır.
+		- Sen dizeleri, değişkenler, diziler ve işlevlerini kullanabilirsiniz. Ayrıca, bu herhangi bir birleştirebiliriz.
+		Sonuç ise: a + b - örneğin tırnak işareti içine, dizeleri kullanın.
+		- Eğer fazladan sonuçları döndürmek istiyorsanız, siz de parametrelerinde ByRef kullanabilirsiniz.
+		- Diziler birden çok değer ya da değerleri adlı döndürmek için kullanılabilir.
 	)	
 	d_Lang097 =	
 	(LTrim	
-		
-		
-		
-		
-		
+		- BURAYA YÜZDE IŞARETLERI DEĞİŞKENLER IÇINE ALMAYıN.
+		- AHK ifadelerin çoğu desteklenmektedir.
+		- Sen dizeleri, değişkenler, diziler ve işlevlerini kullanabilirsiniz.
+		- Örneğin, tırnak işareti içine, dizeleri kullanmak için: var = "a".
+		- Çoklu Tablolar desteklenir, örneğin: var = "a" || InStr (var "b").
 	)	
-	d_Lang098 =	
-	d_Lang099 =	
-	d_Lang100 =	
-	d_Lang101 =	
-	d_Lang102 =	
+	d_Lang098 =	Tek parametre varsayılan değeri varsa, aşağıdaki parametreler de bir tane olması gerekmektedir.
+	d_Lang099 =	Fonksiyon adı geçersiz bir karakter içeriyor.
+	d_Lang100 =	Goto, GOSUB ve Etiket fonksiyonları izin verilmez.
+	d_Lang101 =	Yinelenen işlev.
+	d_Lang102 =	ayrılmış bir sözcüktür.
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -996,6 +996,23 @@
 	IncFolders_TT =	Dizin (klasör) / Keys Dahil
 	Recurse_TT =	Alt dizinleri içine recursive (alt klasörler) / Alt anahtarları
 	CmdSort_TT =	Alfabetik sıralama
+	Ex_EdScript_TT =	Harici düzenleyicide açın
+	ExprLink2_TT =	
+	(LTrim	
+		- BURAYA YÜZDE IŞARETLERI DEĞİŞKENLER IÇINE ALMAYıN.
+		- AHK ifadelerin çoğu desteklenmektedir.
+		- Sen dizeleri, değişkenler, diziler ve işlevlerini kullanabilirsiniz.
+		- Örneğin, tırnak işareti içine, dizeleri kullanmak için: var = "a".
+		- Çoklu Tablolar desteklenir, örneğin: var = "a" || InStr (var "b").
+	)	
+	ExprLink3_TT =	
+	(LTrim	
+		- BURAYA YÜZDE IŞARETLERI DEĞİŞKENLER IÇINE ALMAYıN.
+		- AHK ifadelerin çoğu desteklenmektedir.
+		- Sen dizeleri, değişkenler, diziler ve işlevlerini kullanabilirsiniz.
+		- Örneğin, tırnak işareti içine, dizeleri kullanmak için: var = "a".
+		- Çoklu Tablolar desteklenir, örneğin: var = "a" || InStr (var "b").
+	)	
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	Düzenlemek için çift tıklayın
@@ -1158,7 +1175,7 @@
 	Abs	Sayısı mutlak değerini döndürür.
 	ASin	Radyan cinsinden ark sinüsünü ( sinüs Numarasısayı ) döndürür.
 	ACos	Radyan Arkkosinüs ( kosinüs Numarasısayı ) döndürür.
-	Array	
+	Array	Tamsayı tuşları ile bir script ilişkisel dizi oluşturur.
 	Asc	Dize ilk karakter için karakter kodu ( 1 ve 255 ( ANSI yapılar ) veya 65535 arasında bir sayı ( Unicode yapılarında ) ) döndürür.
 	ATan	Radyan arktanjant ( teğet Numarasısayı ) döndürür.
 	BlockInput	Devre dışı bırakır ya da klavye ve fare ile bilgisayar ile etkileşim kullanıcı yeteneğini sağlar .
@@ -1285,7 +1302,7 @@
 	KeyWait	Serbest veya basılı gereken bir anahtar veya fare / joystick düğmesine bekler.
 	Labels	Bir etiket, bir kod hattı tanımlayan, ve Goto hedef olarak ya da bir alt yordam oluşturmak için de kullanılabilir.
 	Length	1 konumundaki başlayan doğrusal bir dizinin uzunluğunu döndürür.
-	ListVars	
+	ListVars	İsimlerini ve geçerli içeriğini: betiğin değişkenleri görüntüler.
 	Log	Sayısı logaritma (10 tabanı) döndürür.
 	Ln	Sayısı doğal logaritma (Taban e) döndürür.
 	Loop (normal) 	Tekrar tekrar komutları bir dizi gerçekleştirin: Belirtilen kez numarası veya mola kadar da görülür.
@@ -1303,7 +1320,7 @@
 	MsgBox	Bir veya daha fazla düğme (örneğin, Evet ve Hayır olarak) içeren küçük bir pencerede belirtilen metni görüntüler.
 	NumGet	Belirtilen adres + ofset saklanan ikili sayı döndürür.
 	NumPut	Belirtilen adresteki ikili biçimde mağaza sayısı + ofset ve sadece yazılı öğenin sağındaki adresini döndürür.
-	Object	
+	Object	Bir script ilişkisel dizi oluşturur.
 	OnExit	Otomatik olarak script çıkmadan çalıştırmak için bir alt yordam belirtir.
 	OnMessage	Script Belirtilen ileti aldığında otomatik olarak aramak için bir işlev belirtir.
 	Ord	Dize ilk karakterin sıra değeri (sayısal karakter kodu) döndürür.

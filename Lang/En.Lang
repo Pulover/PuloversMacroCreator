@@ -46,7 +46,7 @@
 	r_Lang015 =	Sa&ve Current Macro
 		
 ; UDF Sub Menu		
-	u_Lang001 =	Add &Function
+	u_Lang001 =	Create &Function
 	u_Lang002 =	Add &Parameter
 	u_Lang003 =	Add &Return
 	u_Lang004 =	&Convert Macro To Function
@@ -288,7 +288,7 @@
 	w_Lang100 =	Remove all groups
 	w_Lang101 =	Edit groups
 	w_Lang102 =	Group name
-	w_Lang103 =	Add Function (Ctrl+Shift+U)
+	w_Lang103 =	Create Function (Ctrl+Shift+U)
 	w_Lang104 =	Add Parameter (Ctrl+Shift+P)
 	w_Lang105 =	Add Return (Ctrl+Shift+N)
 	w_Lang106 =	Convert Macro To Function (Ctrl+Shift+C)
@@ -385,7 +385,7 @@
 	c_Lang088 =	Reset
 	c_Lang089 =	Function Name
 	c_Lang090 =	Comma separated parameters (without parenthesis)
-	c_Lang091 =	(Use `% for Variables. Literal Commas must be escaped [ ```, ])
+	c_Lang091 =	Use expressions format
 	c_Lang092 =	Page Element / Index
 	c_Lang093 =	Set
 	c_Lang094 =	Get
@@ -516,9 +516,9 @@
 	c_Lang220 =	Global
 	c_Lang221 =	Name
 	c_Lang222 =	You can add more parameters from the Function menu.
-	c_Lang223 =	Global Variables (VarName1, VarName2, VarName3...)
-	c_Lang224 =	Local Variables (VarName1 [:= VarValue1], VarName2 [:= VarValue2]...)
-	c_Lang225 =	Static Variables (VarName1 [:= VarValue1], VarName2 [:= VarValue2]...)
+	c_Lang223 =	Global Variables
+	c_Lang224 =	Local Variables
+	c_Lang225 =	Static Variables
 		
 ; Other Windows		
 	t_Lang001 =	Export to AutoHotkey
@@ -996,6 +996,23 @@
 	IncFolders_TT =	Include directories (folders) / Keys
 	Recurse_TT =	Recurse into subdirectories (subfolders) / Subkeys
 	CmdSort_TT =	Sort alphabetically
+	Ex_EdScript_TT =	Open in external editor
+	ExprLink2_TT =	
+	(LTrim	
+		- DO NOT ENCLOSE VARIABLES IN PERCENT SIGNS HERE.
+		- Most of AHK expressions are supported.
+		- You may use strings, variables, arrays and functions.
+		- To use strings, enclose them in quotes, e.g.: var = "a".
+		- Multiple Statements are supported, e.g.: var = "a" || InStr(var, "b").
+	)	
+	ExprLink3_TT =	
+	(LTrim	
+		- DO NOT ENCLOSE VARIABLES IN PERCENT SIGNS HERE.
+		- Most of AHK expressions are supported.
+		- You may use strings, variables, arrays and functions.
+		- To use strings, enclose them in quotes, e.g.: var = "a".
+		- Multiple Statements are supported, e.g.: var = "a" || InStr(var, "b").
+	)	
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	Double-Click to edit

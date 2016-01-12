@@ -67,7 +67,8 @@ http://www.autohotkey.com/board/topic/17984-html-help-utils
 
 Thiago Talma for some improvements to the code, debugging and many suggestions.
 
-Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jörg Schmalenberger (German), amnesiac (Chinese Simplified).
+Translation revisions:
+http://www.macrocreator.com/project/
 */
 
 ; Compiler Settings
@@ -353,11 +354,16 @@ If (Lang = "ERROR")
 
 If (DefaultEditor = "ERROR")
 {
+	SplitPath, A_AhkPath,, AhkDir
 	ProgramsFolder := (A_PtrSize = 8) ? ProgramFiles " (x86)" : ProgramFiles
-	If (FileExist(ProgramsFolder "\Notepad++\notepad++.exe"))
+	If (FileExist(AhkDir "\SciTE\SciTE.exe"))
+		DefaultEditor := AhkDir "\SciTE\SciTE.exe"
+	Else If (FileExist(ProgramsFolder "\Notepad++\notepad++.exe"))
 		DefaultEditor := ProgramsFolder "\Notepad++\notepad++.exe"
 	Else If (FileExist(ProgramFiles "\Sublime Text 2\sublime_text.exe"))
 		DefaultEditor := ProgramFiles "\Sublime Text 2\sublime_text.exe"
+	Else If (FileExist(ProgramsFolder "\Notepad2\Notepad2.exe"))
+		DefaultEditor := ProgramsFolder "\Notepad2\Notepad2.exe"
 	Else
 		DefaultEditor := "notepad.exe"
 }
@@ -477,6 +483,7 @@ Menu, MouseB, Add, Click, HelpB
 Menu, MouseB, Add, ControlClick, HelpB
 Menu, MouseB, Add, MouseClickDrag, HelpB
 Menu, MouseB, Add
+Menu, MouseB, Add, Variables and Expressions, HelpB
 Menu, MouseB, Add, Built-in Variables, :BuiltInMenu
 Menu, MouseB, Icon, Click, %ResDllPath%, 24
 Menu, TextB, Add, Send / SendRaw, HelpB
@@ -484,6 +491,7 @@ Menu, TextB, Add, ControlSend, HelpB
 Menu, TextB, Add, ControlSetText, HelpB
 Menu, TextB, Add, Clipboard, HelpB
 Menu, TextB, Add
+Menu, TextB, Add, Variables and Expressions, HelpB
 Menu, TextB, Add, Built-in Variables, :BuiltInMenu
 Menu, TextB, Icon, Send / SendRaw, %ResDllPath%, 24
 Menu, ControlB, Add, Control, HelpB
@@ -495,20 +503,24 @@ Menu, ControlB, Add, ControlGetText, HelpB
 Menu, ControlB, Add, ControlMove, HelpB
 Menu, ControlB, Add, ControlSetText, HelpB
 Menu, ControlB, Add
+Menu, ControlB, Add, Variables and Expressions, HelpB
 Menu, ControlB, Add, Built-in Variables, :BuiltInMenu
 Menu, ControlB, Icon, Control, %ResDllPath%, 24
 Menu, SpecialB, Add, List of Keys, SpecialB
 Menu, SpecialB, Icon, List of Keys, %ResDllPath%, 24
 Menu, PauseB, Add, Sleep, HelpB
 Menu, PauseB, Add
+Menu, PauseB, Add, Variables and Expressions, HelpB
 Menu, PauseB, Add, Built-in Variables, :BuiltInMenu
 Menu, PauseB, Icon, Sleep, %ResDllPath%, 24
 Menu, MsgboxB, Add, MsgBox, HelpB
 Menu, MsgboxB, Add
+Menu, MsgboxB, Add, Variables and Expressions, HelpB
 Menu, MsgboxB, Add, Built-in Variables, :BuiltInMenu
 Menu, MsgboxB, Icon, MsgBox, %ResDllPath%, 24
 Menu, KeyWaitB, Add, KeyWait, HelpB
 Menu, KeyWaitB, Add
+Menu, KeyWaitB, Add, Variables and Expressions, HelpB
 Menu, KeyWaitB, Add, Built-in Variables, :BuiltInMenu
 Menu, KeyWaitB, Icon, KeyWait, %ResDllPath%, 24
 Menu, WindowB, Add, WinActivate, HelpB
@@ -532,11 +544,13 @@ Menu, WindowB, Add, WinWait, HelpB
 Menu, WindowB, Add, WinWaitActive / WinWaitNotActive, HelpB
 Menu, WindowB, Add, WinWaitClose, HelpB
 Menu, WindowB, Add
+Menu, WindowB, Add, Variables and Expressions, HelpB
 Menu, WindowB, Add, Built-in Variables, :BuiltInMenu
 Menu, WindowB, Icon, WinActivate, %ResDllPath%, 24
 Menu, ImageB, Add, ImageSearch, HelpB
 Menu, ImageB, Add, PixelSearch, HelpB
 Menu, ImageB, Add
+Menu, ImageB, Add, Variables and Expressions, HelpB
 Menu, ImageB, Add, Built-in Variables, :BuiltInMenu
 Menu, ImageB, Icon, ImageSearch, %ResDllPath%, 24
 Loop, Parse, FileCmdList, |
@@ -620,6 +634,7 @@ Menu, RunB, Add, Sound, :m_Sound
 Menu, RunB, Add, Variables, :m_Vars
 Menu, RunB, Add, Misc., :m_Misc
 Menu, RunB, Add
+Menu, RunB, Add, Variables and Expressions, HelpB
 Menu, RunB, Add, Built-in Variables, :BuiltInMenu
 Menu, RunB, Icon, Run / RunWait, %ResDllPath%, 24
 Menu, ComLoopB, Add, Loop, LoopB
@@ -630,15 +645,18 @@ Menu, ComLoopB, Add, Loop`, Registry, LoopB
 Menu, ComLoopB, Add, Break, HelpB
 Menu, ComLoopB, Add, Continue, HelpB
 Menu, ComLoopB, Add
+Menu, ComLoopB, Add, Variables and Expressions, HelpB
 Menu, ComLoopB, Add, Built-in Variables, :BuiltInMenu
 Menu, ComLoopB, Icon, Loop, %ResDllPath%, 24
 Menu, ComGotoB, Add, Goto, HelpB
 Menu, ComGotoB, Add, Gosub, HelpB
 Menu, ComGotoB, Add
+Menu, ComGotoB, Add, Variables and Expressions, HelpB
 Menu, ComGotoB, Add, Built-in Variables, :BuiltInMenu
 Menu, ComGotoB, Icon, Goto, %ResDllPath%, 24
 Menu, AddLabelB, Add, Labels, HelpB
 Menu, AddLabelB, Add
+Menu, AddLabelB, Add, Variables and Expressions, HelpB
 Menu, AddLabelB, Add, Built-in Variables, :BuiltInMenu
 Menu, AddLabelB, Icon, Labels, %ResDllPath%, 24
 Menu, IfStB, Add, IfWinActive / IfWinNotActive, HelpB
@@ -648,32 +666,38 @@ Menu, IfStB, Add, IfInString / IfNotInString, HelpB
 Menu, IfStB, Add, IfMsgBox, HelpB
 Menu, IfStB, Add, If Statements, HelpB
 Menu, IfStB, Add
+Menu, IfStB, Add, Variables and Expressions, HelpB
 Menu, IfStB, Add, Built-in Variables, :BuiltInMenu
 Menu, IfStB, Icon, IfWinActive / IfWinNotActive, %ResDllPath%, 24
-Menu, AsVarB, Add, Variables, HelpB
+Menu, AsVarB, Add, Variables and Expressions, HelpB
+Menu, AsVarB, Add, Arrays, HelpB
 Menu, AsVarB, Add
 Menu, AsVarB, Add, Built-in Variables, :BuiltInMenu
-Menu, AsVarB, Icon, Variables, %ResDllPath%, 24
+Menu, AsVarB, Icon, Variables and Expressions, %ResDllPath%, 24
 Menu, AsFuncB, Add, Built-in Functions, HelpB
 Menu, AsFuncB, Add, Arrays, HelpB
 Menu, AsFuncB, Add, Array Methods, HelpB
 Menu, AsFuncB, Add
+Menu, AsFuncB, Add, Variables and Expressions, HelpB
 Menu, AsFuncB, Add, Built-in Variables, :BuiltInMenu
 Menu, AsFuncB, Icon, Built-in Functions, %ResDllPath%, 24
 Menu, IEComB, Add, COM, IEComB
 Menu, IEComB, Add, Basic Webpage COM Tutorial, IEComB
 Menu, IEComB, Add, IWebBrowser2 Interface (MSDN), IEComB
 Menu, IEComB, Add
+Menu, IEComB, Add, Variables and Expressions, HelpB
 Menu, IEComB, Add, Built-in Variables, :BuiltInMenu
 Menu, IEComB, Icon, COM, %ResDllPath%, 24
 Menu, SendMsgB, Add, PostMessage / SendMessage, HelpB
 Menu, SendMsgB, Add, Message List, SendMsgB
 Menu, SendMsgB, Add, Microsoft MSDN, SendMsgB
 Menu, SendMsgB, Add
+Menu, SendMsgB, Add, Variables and Expressions, HelpB
 Menu, SendMsgB, Add, Built-in Variables, :BuiltInMenu
 Menu, SendMsgB, Icon, PostMessage / SendMessage, %ResDllPath%, 24
 Menu, UserFuncB, Add, Functions, HelpB
 Menu, UserFuncB, Add
+Menu, UserFuncB, Add, Variables and Expressions, HelpB
 Menu, UserFuncB, Add, Built-in Variables, :BuiltInMenu
 Menu, UserFuncB, Icon, Functions, %ResDllPath%, 24
 Menu, IfDirB, Add, #IfWinActive / #IfWinExist, HelpB
@@ -750,6 +774,7 @@ Else If (MainWinPos != "Center")
 }
 Gui, Show, %MainWinSize% %MainWinPos% Hide
 GoSub, b_Start
+SavePrompt := false
 GoSub, DefineControls
 GoSub, DefineToolbars
 OnMessage(WM_COMMAND, "TB_Messages")
@@ -815,6 +840,7 @@ Else
 	Gui, chMacro:Submit, NoHide
 	LVManager.SetHwnd(ListID%A_List%)
 	LVManager.Add()
+	GoSub, MacroTab
 	If (ShowGroups)
 		GoSub, EnableGroups
 }
@@ -2073,8 +2099,10 @@ Gui, 14:Add, Checkbox, -Wrap Checked%Ex_PauseKey% yp+5 x+10 W65 vEx_PauseKey R1,
 Gui, 14:Add, Combobox, yp-5 x+0 W60 vPauseKey, %KeybdList%
 ; Export
 Gui, 14:Add, GroupBox, Section ys+195 xm W450 H145, %t_Lang010%:
-Gui, 14:Add, Edit, ys+20 xs+10 W400 R1 vExpFile -Multi, %dir%\%name_no_ext%.ahk
+Gui, 14:Add, Edit, ys+20 xs+10 W370 R1 vExpFile -Multi, %dir%\%name_no_ext%.ahk
 Gui, 14:Add, Button, -Wrap W30 H23 yp-1 x+0 gExpSearch, ...
+Gui, 14:Add, Button, yp x+5 H23 W25 hwndEx_EdScript vEx_EdScript gExEditScript
+	ILButton(Ex_EdScript, ResDllPath ":" 109)
 Gui, 14:Add, Checkbox, -Wrap Checked%TabIndent% ys+50 xs+10 W230 vTabIndent R1, %t_Lang011%
 Gui, 14:Add, Checkbox, -Wrap Checked%CommentUnchecked% y+5 xs+10 W230 vCommentUnchecked R1, %w_Lang107%
 Gui, 14:Add, Checkbox, -Wrap Checked%Send_Loop% y+5 xs+10 W230 vSend_Loop R1, %t_Lang013%
@@ -2397,6 +2425,11 @@ GuiControl, 14:Enable%Ex_IfDir%, Ident
 GuiControl, 14:Enable%Ex_IfDir%, Title
 GuiControl, 14:Enable%Ex_IfDir%, GetWin
 GuiControl, 14:Enable%Ex_UV%, Ex_EdVars
+return
+
+ExEditScript:
+Gui, 14:Submit, NoHide
+Run, %DefaultEditor% %ExpFile%
 return
 
 ShowMore:
@@ -2968,7 +3001,7 @@ Else If (ThisMenuItem = "SplashTextOff")
 	Run, %HelpDocsUrl%/commands/SplashTextOn.htm
 Else If (InStr(ThisMenuItem, "LockState"))
 	Run, %HelpDocsUrl%/commands/SetNumScrollCapsLockState.htm
-Else If (ThisMenuItem = "Variables")
+Else If (ThisMenuItem = "Variables and Expressions")
 	Run, %HelpDocsUrl%/Variables.htm
 Else If (ThisMenuItem = "Built-in Functions")
 	Run, %HelpDocsUrl%/Functions.htm#BuiltIn
@@ -3059,6 +3092,10 @@ HelpAHK:
 Run, %HelpDocsUrl%
 return
 
+ExprLink:
+Run, %HelpDocsUrl%/Variables.htm#Expressions
+return
+
 CheckNow:
 CheckUpdates:
 Gui, 1:+OwnDialogs
@@ -3143,8 +3180,8 @@ PhiLho and skwire for the function to Get/Set the order of columns.
 fincs for GenDocs and SciLexer.dll custom builds.
 T800 for Html Help utils.
 Thiago Talma for some improvements to the code, debugging and many suggestions.
-Translation revisions: Snow Flake (Swedish), huyaowen (Chinese Simplified), Jörg Schmalenberger (German), amnesiac (Chinese Simplified).
 )
+Gui, 34:Add, Link, y+10 W340 r1, <a href="http://www.macrocreator.com/project/">Translation revisions.</a>
 Gui, 34:Add, Groupbox, Section xm+58 W360 H130 Center, GNU General Public License
 Gui, 34:Add, Edit, ys+20 xs+10 W340 H100 ReadOnly -E0x200,
 (
@@ -6787,6 +6824,7 @@ Gui, 21:Add, Text, yp+5 x+5 W150 vCoOper cGray, %Co_Oper_1%
 Gui, 21:Add, Edit, y+5 xs+10 W430 R4 -vScroll vTestVar2 Disabled
 Gui, 21:Add, Text, yp xs+10 W430 R6 vExpTxt Hidden, %d_Lang097%
 Gui, 21:Add, Text, W430 r1 cGray vVarTxt, %c_Lang025%
+Gui, 21:Add, Link, xp yp W430 r1 vExprLink1 gExprLink Hidden, <a>%c_Lang091%</a>
 Gui, 21:Add, Groupbox, Section xs y+15 W450 H50, %c_Lang123%:
 Gui, 21:Add, Button, -Wrap ys+18 xs+85 W75 H23 vAddElse gAddElse, %c_Lang083%
 Gui, 21:Add, Button, -Wrap Section Default xm y+14 W75 H23 gIfOK, %c_Lang020%
@@ -6803,7 +6841,8 @@ Gui, 21:Add, Text, yp+5 x+5 W150 vAsOper cGray, %As_Oper_1%
 Gui, 21:Add, Text, y+9 xs+10 W200, %c_Lang056%:
 Gui, 21:Add, Checkbox, -Wrap Checked%EvalDefault% yp x+5 W220 vUseEval gUseEval R1, %c_Lang087% / %c_Lang211%
 Gui, 21:Add, Edit, y+10 xs+10 W430 H110 vVarValue
-Gui, 21:Add, Text, W430 r1 cGray, %c_Lang025%
+Gui, 21:Add, Text, W430 r1 cGray vVarTip, %c_Lang025%
+Gui, 21:Add, Link, xp yp W430 r1 vExprLink2 gExprLink Hidden, <a>%c_Lang091%</a>
 Gui, 21:Add, Text, y+5 W430 r1 cGray vArrayTip Hidden, %c_Lang206%
 Gui, 21:Add, Groupbox, Section xs y+15 W450 H50, %c_Lang010%:
 Gui, 21:Add, Button, -Wrap ys+18 xs+85 W75 H23 vVarCopyA gVarCopy, %c_Lang023%
@@ -6828,7 +6867,7 @@ Gui, 21:Add, Button, -Wrap W25 yp-1 x+5 hwndFuncHelp vFuncHelp gFuncHelp Disable
 Gui, 21:Add, Text, W430 yp+25 xs+10, %c_Lang090%:
 Gui, 21:Add, Edit, W430 R1 -Multi vVarValueF
 Gui, 21:Add, Text, W430 R1 vFuncTip
-Gui, 21:Add, Text, y+10 W430 R1 cGray, %c_Lang091%
+Gui, 21:Add, Link, y+10 W430 r1 vExprLink3 gExprLink, <a>%c_Lang091%</a>
 Gui, 21:Add, Groupbox, Section xs y+10 W450 H50, %c_Lang010%:
 Gui, 21:Add, Button, -Wrap ys+18 xs+85 W75 H23 vVarCopyB gVarCopy, %c_Lang023%
 Gui, 21:Add, Button, -Wrap x+10 yp W75 H23 gReset, %c_Lang088%
@@ -7254,9 +7293,17 @@ return
 UseEval:
 Gui, 21:Submit, NoHide
 If (UseEval)
+{
+	GuiControl, 21:Hide, VarTip
 	GuiControl, 21:Show, ArrayTip
+	GuiControl, 21:Show, ExprLink2
+}
 Else
+{
 	GuiControl, 21:Hide, ArrayTip
+	GuiControl, 21:Hide, ExprLink2
+	GuiControl, 21:Show, VarTip
+}
 return
 
 IfCancel:
@@ -7398,10 +7445,12 @@ If (Statement = If15)
 	GuiControl, 21:Hide, TestVar2
 	GuiControl, 21:Hide, VarTxt
 	GuiControl, 21:Show, ExpTxt
+	GuiControl, 21:Show, ExprLink1
 }
 Else
 {
 	GuiControl, 21:Hide, ExpTxt
+	GuiControl, 21:Hide, ExprLink1
 	GuiControl, 21:Show, TestVar2
 	GuiControl, 21:Show, VarTxt
 }
@@ -8489,10 +8538,10 @@ Gui, 1:+Disabled
 Gui, 38:Add, Tab2, W450 H0 vTabControl AltSubmit, CmdTab1|CmdTab2|CmdTab3
 ; Function
 Gui, 38:Add, GroupBox, Section xm ym W450 H70
-Gui, 38:Add, Text, ys+15 xs+10 W330 vFuncNameT, %c_Lang089%:
-Gui, 38:Add, Text, yp x+5 W80, %c_Lang218%:
-Gui, 38:Add, Edit, y+5 xs+10 W330 vFuncName, MyFunc
-Gui, 38:Add, DDL, yp x+5 W89 vFuncScope gFuncScope, %c_Lang219%||%c_Lang220%
+Gui, 38:Add, Text, ys+15 xs+10 W320 vFuncNameT, %c_Lang089%:
+Gui, 38:Add, Text, yp x+5 W105, %c_Lang218%:
+Gui, 38:Add, Edit, y+5 xs+10 W320 vFuncName, MyFunc
+Gui, 38:Add, DDL, yp x+5 W105 vFuncScope gFuncScope AltSubmit, %c_Lang219%||%c_Lang220%
 Gui, 38:Add, GroupBox, Section xm ys+75 W450 H155, %c_Lang215%:
 Gui, 38:Add, Text, ys+20 xs+25 W210, %c_Lang221%:
 Gui, 38:Add, Text, yp x+5 W150, %c_Lang217%:
@@ -8514,9 +8563,9 @@ Gui, 38:Add, Edit, yp-5 xs+25 W210 vParam4
 Gui, 38:Add, ComboBox, yp x+5 W150 vValue4, true|false|_blank
 Gui, 38:Add, CheckBox, yp+5 x+15 W30 vByRef4
 Gui, 38:Add, Text, y+10 xs+25 W400 cGray, %c_Lang222%
-Gui, 38:Add, GroupBox, Section xm ys+160 W450 H55 vVarsGroup, %c_Lang223%:
+Gui, 38:Add, GroupBox, Section xm ys+160 W450 H55 vVarsGroup, %c_Lang223% (VarName1, VarName2, VarName3...):
 Gui, 38:Add, Edit, ys+20 xs+10 W400 vFuncScoped
-Gui, 38:Add, GroupBox, Section xm ys+60 W450 H55, %c_Lang225%:
+Gui, 38:Add, GroupBox, Section xm ys+60 W450 H55, %c_Lang225% (VarName1 [:= VarValue1], VarName2 [:= VarValue2]...):
 Gui, 38:Add, Edit, ys+20 xs+10 W400 vFuncStatic
 Gui, 38:Tab, 2
 ; Parameters
@@ -8532,7 +8581,8 @@ Gui, 38:Tab, 3
 Gui, 38:Add, GroupBox, Section xm ym W450 H350
 Gui, 38:Add, Text, ys+15 xs+10 W430, %c_Lang216%:
 Gui, 38:Add, Edit, y+5 xs+10 W430 vRetExpr
-Gui, 38:Add, Text, y+15 xs+10 W430 H202, %d_Lang096%
+Gui, 38:Add, Text, y+15 xs+10 W430 H250, %d_Lang096%
+Gui, 38:Add, Link, y+10 W430 r1 vExprLink gExprLink, <a>%c_Lang091%</a>
 Gui, 38:Tab
 Gui, 38:Add, Button, -Wrap Section Default xm ys+360 W75 H23 gUDFOK, %c_Lang020%
 Gui, 38:Add, Button, -Wrap ys W75 H23 gUDFCancel, %c_Lang021%
@@ -8544,7 +8594,7 @@ If (s_Caller = "Edit")
 	If (A_ThisLabel = "EditUserFunc")
 	{
 		GuiControl, 38:, FuncName, %Details%
-		GuiControl, 38:ChooseString, FuncScope, %Target%
+		GuiControl, 38:Choose, FuncScope, % (Target = "Global") ? 2 : 1
 		StringSplit, FuncVariables, Window, /, %A_Space%
 		GuiControl, 38:, FuncScoped, % StrReplace(FuncVariables1, """")
 		GuiControl, 38:, FuncStatic, % StrReplace(FuncVariables2, """")
@@ -8642,7 +8692,7 @@ If (TabControl = 1)
 	FuncVariables := ""
 	Loop, Parse, FuncScoped, `,, %A_Space%
 	{
-		If (FuncScope = "Local")
+		If (FuncScope = 1)
 		{
 			Try
 				z_Check := VarSetCapacity(%A_LoopField%)
@@ -8770,6 +8820,7 @@ If (TabControl = 1)
 			LV_Add("Check", ListCount%A_List%+1, Action, Details, 1, 0, Type, Target, "")
 		RowIdx++
 	}
+	FuncScope := (FuncScope = 2) ? "Global" : "Local"
 	If (s_Caller = "Conv")
 		LV_Insert(RowIdx, "Check", ListCount%A_List%+1, "[FunctionStart]", FuncName, 1, 0, cType47, FuncScope, FuncVariables)
 	Else If (s_Caller = "Edit")
@@ -8880,10 +8931,10 @@ return
 
 FuncScope:
 Gui, 38:Submit, NoHide
-If (FuncScope = "Global")
-	GuiControl, 38:, VarsGroup, %c_Lang224%
+If (FuncScope = 2)
+	GuiControl, 38:, VarsGroup, %c_Lang224% (VarName1 [:= VarValue1], VarName2 [:= VarValue2]...):
 Else
-	GuiControl, 38:, VarsGroup, %c_Lang223%
+	GuiControl, 38:, VarsGroup, %c_Lang223% (VarName1, VarName2, VarName3...):
 return
 
 DonatePayPal:
@@ -9849,6 +9900,7 @@ TabPlus:
 Gui, 1:Submit, NoHide
 Gui, chMacro:Default
 Gui, chMacro:Submit, NoHide
+Try Menu, CopyTo, Uncheck, % CopyMenuLabels[A_List]
 ColOrder := LVOrder_Get(10, ListID%A_List%), AllTabs := "", TabName := ""
 Loop, %TabCount%
 	AllTabs .= TabGetText(TabSel, A_Index) ","
@@ -9863,7 +9915,6 @@ Gui, chMacro:ListView, InputList%A_List%
 LVManager.SetHwnd(ListID%A_List%), LVManager.Add()
 If (ShowGroups)
 	GoSub, EnableGroups
-Try Menu, CopyTo, Uncheck, % CopyMenuLabels[A_List]
 GoSub, chMacroGuiSize
 CopyMenuLabels[TabCount] := TabName
 Menu, CopyTo, Add, % CopyMenuLabels[TabCount], CopyList
@@ -12964,11 +13015,16 @@ AbortKey := "F8"
 ,	TB_Edit(tbPrev, "CommentUnchecked", 1)
 ,	TB_Edit(tbPrevF, "CommentUnchecked", 1)
 
+SplitPath, A_AhkPath,, AhkDir
 ProgramsFolder := (A_PtrSize = 8) ? ProgramFiles " (x86)" : ProgramFiles
-If (FileExist(ProgramsFolder "\Notepad++\notepad++.exe"))
+If (FileExist(AhkDir "\SciTE\SciTE.exe"))
+	DefaultEditor := AhkDir "\SciTE\SciTE.exe"
+Else If (FileExist(ProgramsFolder "\Notepad++\notepad++.exe"))
 	DefaultEditor := ProgramsFolder "\Notepad++\notepad++.exe"
 Else If (FileExist(ProgramFiles "\Sublime Text 2\sublime_text.exe"))
 	DefaultEditor := ProgramFiles "\Sublime Text 2\sublime_text.exe"
+Else If (FileExist(ProgramsFolder "\Notepad2\Notepad2.exe"))
+	DefaultEditor := ProgramsFolder "\Notepad2\Notepad2.exe"
 Else
 	DefaultEditor := "notepad.exe"
 WinSet, Transparent, %OSTrans%, ahk_id %PMCOSC%
@@ -14485,7 +14541,8 @@ Else
 	Lang := "En"
 	GoSub, LoadLang_En
 }
-HelpDocsUrl := ((Lang = "Zh") || (Lang = "Zt")) ?  "http://ahkcn.github.io/docs" : "http://autohotkey.com/docs"
+HelpDocsUrl := ((Lang = "Zh") || (Lang = "Zt")) ?  "http://ahkcn.github.io/docs"
+			: (Lang = "De") ? "http://ragnar-f.github.io/docs" : "http://autohotkey.com/docs"
 Cmd_Tips := {}
 Loop, Parse, Ahk_Cmd_Index, `n
 {

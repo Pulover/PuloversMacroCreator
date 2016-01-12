@@ -5,7 +5,7 @@
 ; Main Menu		
 	m_Lang001 =	&Arquivo
 	m_Lang002 =	&Macro
-	m_Lang003 =	
+	m_Lang003 =	&Função
 	m_Lang004 =	&Comandos
 	m_Lang005 =	&Editar
 	m_Lang006 =	&Selecionar
@@ -46,10 +46,10 @@
 	r_Lang015 =	&Salvar Macro Atual
 		
 ; UDF Sub Menu		
-	u_Lang001 =	
-	u_Lang002 =	
-	u_Lang003 =	
-	u_Lang004 =	
+	u_Lang001 =	Criar &Função
+	u_Lang002 =	Adicionar &Parâmetro
+	u_Lang003 =	Adicionar &Retorno
+	u_Lang004 =	&Converter Macro em Função
 		
 ; Commands Sub Menu		
 	i_Lang001 =	&Mouse
@@ -288,11 +288,11 @@
 	w_Lang100 =	Remove todos os grupos
 	w_Lang101 =	Editar grupos
 	w_Lang102 =	Nome do grupo
-	w_Lang103 =	
-	w_Lang104 =	
-	w_Lang105 =	
-	w_Lang106 =	
-	w_Lang107 =	
+	w_Lang103 =	Criar Função (Ctrl+Shift+U)
+	w_Lang104 =	Adicionar Parâmetro (Ctrl+Shift+P)
+	w_Lang105 =	Adicionar Retorno (Ctrl+Shift+N)
+	w_Lang106 =	Converter Macro em Função (Ctrl+Shift+C)
+	w_Lang107 =	Comentar linhas desmarcadas
 		
 ; Command Windows		
 	c_Lang001 =	Mouse
@@ -385,7 +385,7 @@
 	c_Lang088 =	Apagar
 	c_Lang089 =	Nome da Função
 	c_Lang090 =	Parametros separados por vírgula (sem parenteses)
-	c_Lang091 =	(Use `% para variáveis. Vírgulas literais devem ser escapadas [ ```, ])
+	c_Lang091 =	Use formato de Expressões
 	c_Lang092 =	Elemento da Página / Índice
 	c_Lang093 =	Definir
 	c_Lang094 =	Copiar
@@ -505,20 +505,20 @@
 	c_Lang209 =	Nome do Valor
 	c_Lang210 =	Valores
 	c_Lang211 =	Matriz
-	c_Lang212 =	
-	c_Lang213 =	
-	c_Lang214 =	
-	c_Lang215 =	
-	c_Lang216 =	
-	c_Lang217 =	
-	c_Lang218 =	
-	c_Lang219 =	
-	c_Lang220 =	
-	c_Lang221 =	
-	c_Lang222 =	
-	c_Lang223 =	
-	c_Lang224 =	
-	c_Lang225 =	
+	c_Lang212 =	Função Definida pelo Usuário
+	c_Lang213 =	Parâmetro de Função
+	c_Lang214 =	Retorno de Função
+	c_Lang215 =	Parâmetros
+	c_Lang216 =	Valor de Retorno
+	c_Lang217 =	Valor Padrão
+	c_Lang218 =	Escopo
+	c_Lang219 =	Local
+	c_Lang220 =	Global
+	c_Lang221 =	Nome
+	c_Lang222 =	Você pode adicionar mais parâmetros pelo menu Função.
+	c_Lang223 =	Variáveis Globais
+	c_Lang224 =	Variáveis Locais
+	c_Lang225 =	Variáveis Estáticas
 		
 ; Other Windows		
 	t_Lang001 =	Exportar para AutoHotkey
@@ -854,29 +854,29 @@
 	d_Lang092 =	Ícones pequenos
 	d_Lang093 =	Ícones grandes
 	d_Lang094 =	Este recurso requer Windows Vista ou superior.
-	d_Lang095 =	
+	d_Lang095 =	O uso de ByRef faz um parâmetro se tornar uma referência à variável passada para a função. Em outras palavras, o parâmetro e a variável se referem ao mesmo conteúdo na memória.
 	d_Lang096 =	
 	(LTrim	
-		
-		
-		
-		
-		
-		
+		- NÃO COLOQUE VARIÁVEIS ENTRE SINAIS DE PORCENTAGEM AQUI.
+		- O valor de retorno deve ser uma expressão.
+		- Pode usar textos, variáveis, matrizes e funções. Pode combinar qualquer uma dessas.
+		- Para usar textos, coloque-os entre aspas, ex.: "Resultado é: " a + b.
+		- Se quiser retornar resultados extras, pode usar parâmetros ByRef também.
+		- Matrizes podem ser usadas para retornar multiplos valores, ou mesmo valores com nomes.
 	)	
 	d_Lang097 =	
 	(LTrim	
-		
-		
-		
-		
-		
+		- NÃO COLOQUE VARIÁVEIS ENTRE SINAIS DE PORCENTAGEM AQUI.
+		- A maioria das expressões AHK são suportadas.
+		- Pode usar textos, variáveis, matrizes e funções.
+		- Para usar textos, coloque-os entre aspas, ex.: var = "a".
+		- Condições multiplas são suportadas, ex.: var = "a" || InStr(var, "b").
 	)	
-	d_Lang098 =	
-	d_Lang099 =	
-	d_Lang100 =	
-	d_Lang101 =	
-	d_Lang102 =	
+	d_Lang098 =	Se um parâmetro tem um valor padrão, os parâmetros seguintes também precisam ter.
+	d_Lang099 =	O nome da função contém um caractére ilegal.
+	d_Lang100 =	Goto, Gosub e Rótulo não são permitidos em funções.
+	d_Lang101 =	Função duplicada.
+	d_Lang102 =	é uma palavra reservada.
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -996,6 +996,23 @@
 	IncFolders_TT =	Incluir diretórios (pastas) / Chaves
 	Recurse_TT =	Redirecionar para subdiretórios (subpastas) / Sub-Chaves
 	CmdSort_TT =	Organizar em ordem alfabética
+	Ex_EdScript_TT =	Abrir em editor externo
+	ExprLink2_TT =	
+	(LTrim	
+		- NÃO COLOQUE VARIÁVEIS ENTRE SINAIS DE PORCENTAGEM AQUI.
+		- A maioria das expressões AHK são suportadas.
+		- Pode usar textos, variáveis, matrizes e funções.
+		- Para usar textos, coloque-os entre aspas, ex.: var = "a".
+		- Condições multiplas são suportadas, ex.: var = "a" || InStr(var, "b").
+	)	
+	ExprLink3_TT =	
+	(LTrim	
+		- NÃO COLOQUE VARIÁVEIS ENTRE SINAIS DE PORCENTAGEM AQUI.
+		- A maioria das expressões AHK são suportadas.
+		- Pode usar textos, variáveis, matrizes e funções.
+		- Para usar textos, coloque-os entre aspas, ex.: var = "a".
+		- Condições multiplas são suportadas, ex.: var = "a" || InStr(var, "b").
+	)	
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	Duplo-Clique para editar
@@ -1158,7 +1175,7 @@
 	Abs	Retorna o valor absoluto do número.
 	ASin	Retorna o arco seno (o número cujo seno é Número) em radianos.
 	ACos	Retorna o arco cosseno (o número cujo cosseno é Número) em radianos.
-	Array	
+	Array	Cria uma matriz associativa com chaves numéricas.
 	Asc	Retorna o código de caracteres (um número entre 1 e 255 (em compilações ANSI) ou 65535 (em Unicode compilações)) para o primeiro caractere na sequência.
 	ATan	Retorna o arco tangente (o número cuja tangente é Número) em radianos.
 	BlockInput	Desativa ou ativa a capacidade do usuário para interagir com o computador via teclado e mouse.
@@ -1285,7 +1302,7 @@
 	KeyWait	Espera por uma tecla ou botão do mouse / joystick para ser liberado ou pressionado.
 	Labels	Uma etiqueta identifica uma linha de código, e podem ser utilizados como um alvo Goto ou para formar uma sub-rotina.
 	Length	Retorna o tamanho de uma matriz linear começando na posição 1.
-	ListVars	
+	ListVars	Exibe as variáveis do script: seus nomes e conteúdos atuais.
 	Log	Retorna o logaritmo (base 10) de número.
 	Ln	Retorna o logaritmo natural (base e) do n.
 	Loop (normal) 	Realizar uma série de comandos repetidamente: ou o número especificado de vezes ou até ruptura for encontrado.
@@ -1303,7 +1320,7 @@
 	MsgBox	Mostra o texto especificado em uma pequena janela contendo um ou mais botões (como Sim e Não).
 	NumGet	Retorna o número binário armazenado no endereço especificado + offset.
 	NumPut	Lojas Número em formato binário no endereço especificado + offset e retorna o endereço para a direita do item acabado de escrever.
-	Object	
+	Object	Cria uma matriz associativa.
 	OnExit	Especifica uma sub-rotina para executar automaticamente quando as saídas de script.
 	OnMessage	Especifica uma função a ser chamada automaticamente quando o script recebe a mensagem especificada.
 	Ord	Retorna o valor ordinal (código numérico de caractére) do primeiro caractére no texto.

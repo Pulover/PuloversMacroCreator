@@ -5,7 +5,7 @@
 ; Main Menu		
 	m_Lang001 =	文件
 	m_Lang002 =	宏
-	m_Lang003 =	
+	m_Lang003 =	功能
 	m_Lang004 =	命令
 	m_Lang005 =	編輯
 	m_Lang006 =	選擇
@@ -46,10 +46,10 @@
 	r_Lang015 =	保存當前宏觀經濟
 		
 ; UDF Sub Menu		
-	u_Lang001 =	
-	u_Lang002 =	
-	u_Lang003 =	
-	u_Lang004 =	
+	u_Lang001 =	創建函數
+	u_Lang002 =	添加參數
+	u_Lang003 =	添加返回
+	u_Lang004 =	宏轉換功能
 		
 ; Commands Sub Menu		
 	i_Lang001 =	鼠標
@@ -288,11 +288,11 @@
 	w_Lang100 =	刪除所有組
 	w_Lang101 =	編輯組
 	w_Lang102 =	團隊名字
-	w_Lang103 =	
-	w_Lang104 =	
-	w_Lang105 =	
-	w_Lang106 =	
-	w_Lang107 =	
+	w_Lang103 =	創建函數（Ctrl + Shift+ U）
+	w_Lang104 =	添加參數（Ctrl + Shift+ P）
+	w_Lang105 =	加入返程（Ctrl + Shift+ N）
+	w_Lang106 =	轉換宏功能（Ctrl + Shift+ C）
+	w_Lang107 =	註釋掉選中的行
 		
 ; Command Windows		
 	c_Lang001 =	鼠標
@@ -385,7 +385,7 @@
 	c_Lang088 =	復位
 	c_Lang089 =	功能名稱
 	c_Lang090 =	以逗號分隔的參數（不包括括號）
-	c_Lang091 =	（使用`％作為變量。文字的逗號必須進行轉義[ ```]）
+	c_Lang091 =	使用表達式格式
 	c_Lang092 =	頁面元素/指數
 	c_Lang093 =	集
 	c_Lang094 =	得到
@@ -505,20 +505,20 @@
 	c_Lang209 =	值名稱
 	c_Lang210 =	值
 	c_Lang211 =	排列
-	c_Lang212 =	
-	c_Lang213 =	
-	c_Lang214 =	
-	c_Lang215 =	
-	c_Lang216 =	
-	c_Lang217 =	
-	c_Lang218 =	
-	c_Lang219 =	
-	c_Lang220 =	
-	c_Lang221 =	
-	c_Lang222 =	
-	c_Lang223 =	
-	c_Lang224 =	
-	c_Lang225 =	
+	c_Lang212 =	用戶定義函數
+	c_Lang213 =	功能參數
+	c_Lang214 =	函數返回
+	c_Lang215 =	參數
+	c_Lang216 =	返回值
+	c_Lang217 =	默認值
+	c_Lang218 =	範圍
+	c_Lang219 =	本地
+	c_Lang220 =	全球
+	c_Lang221 =	名稱
+	c_Lang222 =	您可以從功能菜單中添加更多的參數。
+	c_Lang223 =	全局變量
+	c_Lang224 =	局部變量
+	c_Lang225 =	靜態變量
 		
 ; Other Windows		
 	t_Lang001 =	導出到華民航空
@@ -854,29 +854,29 @@
 	d_Lang092 =	小圖標
 	d_Lang093 =	大圖標
 	d_Lang094 =	此功能需要Windows Vista或更高。
-	d_Lang095 =	
+	d_Lang095 =	使用的ByRef會導致一個參數成為一個別名從呼叫者傳遞的變量。換言之，參數和調用者的變量都指的是同一內容在存儲器中。
 	d_Lang096 =	
 	(LTrim	
-		
-		
-		
-		
-		
-		
+		- 不要用百分號這裡的變量。
+		- 返回值必須是一個表達式。
+		- 您可以使用字符串，變量，數組和函數。您也可以結合任何這些。
+		- 要使用字符串，它們括在引號，如：“結果是：”A + B。
+		- 如果你想返回額外的結果，你也可以使用的ByRef的參數。
+		- 陣列可用於返回多個值，甚至命名值。
 	)	
 	d_Lang097 =	
 	(LTrim	
-		
-		
-		
-		
-		
+		- 不要用百分號這裡的變量。
+		- 大多數AHK表達式的支持。
+		- 您可以使用字符串，變量，數組和函數。
+		- 要使用字符串，它們括在引號，例如：VAR=“A”。
+		- 多個語句的支持，例如：VAR=“一個”|| INSTR（變種，“B”）。
 	)	
-	d_Lang098 =	
-	d_Lang099 =	
-	d_Lang100 =	
-	d_Lang101 =	
-	d_Lang102 =	
+	d_Lang098 =	如果一個參數具有缺省值，下面的參數是必需有一個太。
+	d_Lang099 =	函數名稱包含非法字符。
+	d_Lang100 =	後藤，GOSUB和標籤都沒有的功能允許的。
+	d_Lang101 =	複製功能。
+	d_Lang102 =	是一個保留字。
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -996,6 +996,23 @@
 	IncFolders_TT =	包括目錄（文件夾）/鍵
 	Recurse_TT =	遞歸到子目錄（子文件夾）/子項
 	CmdSort_TT =	按字母順序排序
+	Ex_EdScript_TT =	打开外部编辑器
+	ExprLink2_TT =	
+	(LTrim	
+		- 不要用百分號這裡的變量。
+		- 大多數AHK表達式的支持。
+		- 您可以使用字符串，變量，數組和函數。
+		- 要使用字符串，它們括在引號，例如：VAR=“A”。
+		- 多個語句的支持，例如：VAR=“一個”|| INSTR（變種，“B”）。
+	)	
+	ExprLink3_TT =	
+	(LTrim	
+		- 不要用百分號這裡的變量。
+		- 大多數AHK表達式的支持。
+		- 您可以使用字符串，變量，數組和函數。
+		- 要使用字符串，它們括在引號，例如：VAR=“A”。
+		- 多個語句的支持，例如：VAR=“一個”|| INSTR（變種，“B”）。
+	)	
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	雙擊編輯
@@ -1158,7 +1175,7 @@
 	Abs	返回數字的絕對值。
 	ASin	返回的反正弦弧度（其正弦是Number）。
 	ACos	返回弧度反餘弦（餘弦數）。
-	Array	
+	Array	創建一個腳本化的關聯數組整數鍵。
 	Asc	返回字符串的第一個字符的字符代碼（1和255（ANSI版本）或65535（Unicode版本）之間的數字）。
 	ATan	返回弧度的反正切值（正切數）。
 	BlockInput	禁止或允許用戶通過鍵盤和鼠標與電腦互動的能力。
@@ -1285,7 +1302,7 @@
 	KeyWait	等待被釋放或按下一個鍵或鼠標/操縱桿按鈕。
 	Labels	一個標籤標識的代碼行，並可以用作轉到目標或形成一個子程序。
 	Length	返回開始位置1處的線性陣列的長度。
-	ListVars	
+	ListVars	顯示腳本的變量：他們的名字和當前內容。
 	Log	返回數的對數（基數為10）。
 	Ln	返回自然對數（以e為底）數目。
 	Loop (normal) 	反复執行的一系列命令：要么指定次數或休息，直到遇到。
@@ -1303,7 +1320,7 @@
 	MsgBox	顯示在一個小窗口，其中包含一個或多個按鈕（如“是”和“否”）指定的文本。
 	NumGet	返回+偏移量存儲在指定的地址的二進制數。
 	NumPut	商店數量以二進制格式在指定的地址+偏移量的地址，並返回剛剛寫入的項目的右側。
-	Object	
+	Object	創建一個腳本化的關聯數組。
 	OnExit	指定一個子程序時自動運行的腳本退出。
 	OnMessage	指定一個函數調用腳本時自動接收到指定的消息。
 	Ord	返回字符串的第一個字符的順序值（數字字符代碼）。

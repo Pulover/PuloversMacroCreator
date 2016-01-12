@@ -5,7 +5,7 @@
 ; Main Menu		
 	m_Lang001 =	&Datei
 	m_Lang002 =	&Makro
-	m_Lang003 =	
+	m_Lang003 =	&Funktion
 	m_Lang004 =	&Befehle
 	m_Lang005 =	B&earbeiten
 	m_Lang006 =	&Auswahl
@@ -46,10 +46,10 @@
 	r_Lang015 =	Aktue&lles Makro speichern
 		
 ; UDF Sub Menu		
-	u_Lang001 =	
-	u_Lang002 =	
-	u_Lang003 =	
-	u_Lang004 =	
+	u_Lang001 =	&Erstellen Funktion
+	u_Lang002 =	&Parameter hinzufügen
+	u_Lang003 =	&Hinzufügen Zurück
+	u_Lang004 =	&Convert Macro zu funktionieren
 		
 ; Commands Sub Menu		
 	i_Lang001 =	&Maus
@@ -288,11 +288,11 @@
 	w_Lang100 =	Alle Gruppen entfernen
 	w_Lang101 =	Gruppen bearbeiten
 	w_Lang102 =	Gruppenname
-	w_Lang103 =	
-	w_Lang104 =	
-	w_Lang105 =	
-	w_Lang106 =	
-	w_Lang107 =	
+	w_Lang103 =	Erstellen Sie Funktion (Ctrl + Shift + U)
+	w_Lang104 =	Parameter hinzufügen (Ctrl + Shift + P)
+	w_Lang105 =	In Return (Strg + Umschalt + N)
+	w_Lang106 =	Convert Macro To (Strg + Umschalt + C) Funktion
+	w_Lang107 =	Nicht markiert Zeilen kommentieren
 		
 ; Command Windows		
 	c_Lang001 =	Maus
@@ -385,7 +385,7 @@
 	c_Lang088 =	Zurücksetzen
 	c_Lang089 =	Name der Funktion
 	c_Lang090 =	Kommagetrennte Parameter (ohne Klammern)
-	c_Lang091 =	(`% für Variablen verwenden. Literale Kommas müssen escaped werden [ ```, ])
+	c_Lang091 =	Verwenden Sie Ausdrücke Format
 	c_Lang092 =	Seite Element/Index
 	c_Lang093 =	Set
 	c_Lang094 =	Get
@@ -505,20 +505,20 @@
 	c_Lang209 =	Wertname
 	c_Lang210 =	Werte
 	c_Lang211 =	Array
-	c_Lang212 =	
-	c_Lang213 =	
-	c_Lang214 =	
-	c_Lang215 =	
-	c_Lang216 =	
-	c_Lang217 =	
-	c_Lang218 =	
-	c_Lang219 =	
-	c_Lang220 =	
-	c_Lang221 =	
-	c_Lang222 =	
-	c_Lang223 =	
-	c_Lang224 =	
-	c_Lang225 =	
+	c_Lang212 =	Benutzerdefinierte Funktion
+	c_Lang213 =	Funktion Parameter
+	c_Lang214 =	Funktion Zurück
+	c_Lang215 =	Parameter
+	c_Lang216 =	Rückgabewert
+	c_Lang217 =	Standardwert
+	c_Lang218 =	Umfang
+	c_Lang219 =	Lokale
+	c_Lang220 =	Globale
+	c_Lang221 =	Name
+	c_Lang222 =	Sie können weitere Parameter aus dem Funktionsmenü hinzufügen.
+	c_Lang223 =	Globale Variablen
+	c_Lang224 =	Lokale Variablen
+	c_Lang225 =	Statische Variablen
 		
 ; Other Windows		
 	t_Lang001 =	Export nach AutoHotkey
@@ -854,29 +854,29 @@
 	d_Lang092 =	Kleine Symbole
 	d_Lang093 =	Große Icons
 	d_Lang094 =	Dieses Feature erfordert Windows Vista oder höher.
-	d_Lang095 =	
+	d_Lang095 =	Die Verwendung von ByRef bewirkt einen Parameter, um ein Alias für die Variable in der Aufrufer übergeben zu werden. Mit anderen Worten, der Parameter und Variable des Aufrufers beziehen sich beide auf dem gleichen Inhalt in Speicher.
 	d_Lang096 =	
 	(LTrim	
-		
-		
-		
-		
-		
-		
+		- NICHT BEILEGEN VARIABLEN IN PROZENTZEICHEN HIER.
+		- Rückgabewert muss ein Ausdruck sein.
+		- Sie können Strings, Variablen, Arrays und Funktionen zu nutzen. Sie können auch kombinieren, irgendwelche von denen.
+		- Zur Zeichenfolgen verwenden, schließen Sie sie in Anführungszeichen, zum Beispiel: "Das Ergebnis ist:" a + b.
+		- Wenn Sie zusätzliche Ergebnisse zurückgeben möchten, haben Sie die ByRef verwenden in Parameter.
+		- Arrays kann verwendet werden, um mehrere Werte oder sogar benannten Werte zurück.
 	)	
 	d_Lang097 =	
 	(LTrim	
-		
-		
-		
-		
-		
+		- NICHT BEILEGEN VARIABLEN IN PROZENTZEICHEN HIER.
+		- Die meisten der AHK Ausdrücke werden unterstützt.
+		- Sie können Strings, Variablen, Arrays und Funktionen zu nutzen.
+		- Zur Zeichenfolgen verwenden, schließen Sie sie in Anführungszeichen, zum Beispiel: var = "a".
+		- Multiple Statements werden unterstützt, zB: var = "a" || InStr (var, "b").
 	)	
-	d_Lang098 =	
-	d_Lang099 =	
-	d_Lang100 =	
-	d_Lang101 =	
-	d_Lang102 =	
+	d_Lang098 =	Wenn ein Parameter einen Standardwert hat, werden die folgenden Parameter erforderlich ist, um ein zu haben.
+	d_Lang099 =	Der Funktionsname enthält ein unzulässiges Zeichen.
+	d_Lang100 =	Goto, Gosub und Etikett in Funktionen sind nicht zulässig.
+	d_Lang101 =	Doppelte Funktion.
+	d_Lang102 =	ist ein reserviertes Wort.
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -996,6 +996,23 @@
 	IncFolders_TT =	Fügen Sie Verzeichnisse (Ordner) / Tasten
 	Recurse_TT =	Rekursive Unterverzeichnisse (Unterordner) / Unterschlüssel
 	CmdSort_TT =	Alphabetisch
+	Ex_EdScript_TT =	Im externen Editor öffnen
+	ExprLink2_TT =	
+	(LTrim	
+		- NICHT BEILEGEN VARIABLEN IN PROZENTZEICHEN HIER.
+		- Die meisten der AHK Ausdrücke werden unterstützt.
+		- Sie können Strings, Variablen, Arrays und Funktionen zu nutzen.
+		- Zur Zeichenfolgen verwenden, schließen Sie sie in Anführungszeichen, zum Beispiel: var = "a".
+		- Multiple Statements werden unterstützt, zB: var = "a" || InStr (var, "b").
+	)	
+	ExprLink3_TT =	
+	(LTrim	
+		- NICHT BEILEGEN VARIABLEN IN PROZENTZEICHEN HIER.
+		- Die meisten der AHK Ausdrücke werden unterstützt.
+		- Sie können Strings, Variablen, Arrays und Funktionen zu nutzen.
+		- Zur Zeichenfolgen verwenden, schließen Sie sie in Anführungszeichen, zum Beispiel: var = "a".
+		- Multiple Statements werden unterstützt, zB: var = "a" || InStr (var, "b").
+	)	
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	Zum Bearbeiten doppelklicken
@@ -1158,7 +1175,7 @@
 	Abs	Gibt den absoluten Wert von Number .
 	ASin	Gibt die Arcussinus (die Zahl , dessen Sinus Number) im Bogenmaß.
 	ACos	Gibt die Arkuskosinus (die Zahl , dessen Cosinus Number) im Bogenmaß.
-	Array	
+	Array	Erstellt eine skript assoziatives Array mit Integer-Schlüssel.
 	Asc	Gibt das Zeichen -Code ( eine Zahl zwischen 1 und 255 ( in ANSI -Builds ) oder 65535 ( in Unicode-Versionen ) ) für das erste Zeichen in String .
 	ATan	Liefert den Arcustangens (die Zahl , dessen Tangens Number) im Bogenmaß.
 	BlockInput	Aktiviert oder deaktiviert die Fähigkeit des Benutzers mit dem Computer über Tastatur und Maus zu interagieren.
@@ -1285,7 +1302,7 @@
 	KeyWait	Wartet auf eine Taste oder Maus / Joystick-Taste, um freigelassen werden oder nach unten gedrückt.
 	Labels	Ein Label kennzeichnet eine Codezeile, und kann als Goto Ziel oder ein Unterprogramm Form verwendet werden.
 	Length	Gibt die Länge eines linearen Arrays in Position 1 beginnt.
-	ListVars	
+	ListVars	Zeigt die Skriptvariablen : ihre Namen und aktuellen Inhalt.
 	Log	Liefert den Logarithmus (Basis 10) der Anzahl.
 	Ln	Gibt den natürlichen Logarithmus (Basis e) der Anzahl.
 	Loop (normal) 	Führen Sie eine Reihe von Befehlen wiederholt: entweder die angegebene Anzahl von Malen oder bis zum Bruch aufgetreten ist.
@@ -1303,7 +1320,7 @@
 	MsgBox	Zeigt den angegebenen Text in einem kleinen Fenster, die eine oder mehrere Tasten (wie Yes oder No).
 	NumGet	Gibt die binäre Zahl an der angegebenen Adresse + Offset gespeichert.
 	NumPut	Anzahl Stores im binären Format an die angegebene Adresse + Offset und gibt die Adresse auf der rechten Seite der Artikel gerade geschrieben.
-	Object	
+	Object	Erstellt eine skript assoziatives Array.
 	OnExit	Gibt eine Subroutine automatisch, wenn das Skript beendet laufen.
 	OnMessage	Gibt eine Funktion, um automatisch anrufen, wenn das Skript erhält die angegebene Nachricht.
 	Ord	Gibt den Ordinalwert (numerisches Zeichen-Code) des ersten Zeichens im String.

@@ -5,7 +5,7 @@
 ; Main Menu		
 	m_Lang001 =	&Datoteka
 	m_Lang002 =	&Makro
-	m_Lang003 =	
+	m_Lang003 =	&funkcija
 	m_Lang004 =	&Príkazy
 	m_Lang005 =	&Urejanje
 	m_Lang006 =	&Izberite
@@ -46,10 +46,10 @@
 	r_Lang015 =	S&hrani trenutni makro
 		
 ; UDF Sub Menu		
-	u_Lang001 =	
-	u_Lang002 =	
-	u_Lang003 =	
-	u_Lang004 =	
+	u_Lang001 =	&Ustvarite Funkcija
+	u_Lang002 =	&Dodaj Parameter
+	u_Lang003 =	D&odaj Return
+	u_Lang004 =	&Pretvarjanje Macro za delovanje
 		
 ; Commands Sub Menu		
 	i_Lang001 =	&Miška
@@ -288,11 +288,11 @@
 	w_Lang100 =	Odstranite vse skupine
 	w_Lang101 =	Urejanje skupine
 	w_Lang102 =	Ime skupine
-	w_Lang103 =	
-	w_Lang104 =	
-	w_Lang105 =	
-	w_Lang106 =	
-	w_Lang107 =	
+	w_Lang103 =	Ustvarite Funkcija (Ctrl + Shift + U)
+	w_Lang104 =	Dodaj Parameter (Ctrl + Shift + P)
+	w_Lang105 =	Dodaj za vračanje (Ctrl + Shift + N)
+	w_Lang106 =	Pretvarjanje makro funkcijo (Ctrl + Shift + C)
+	w_Lang107 =	Zakomentirajte nepreverjene vrstice
 		
 ; Command Windows		
 	c_Lang001 =	Miška
@@ -385,7 +385,7 @@
 	c_Lang088 =	Ponastavi
 	c_Lang089 =	Funkcija Ime
 	c_Lang090 =	Ločene z vejico parametre (brez oklepajev)
-	c_Lang091 =	(Uporabite `% za spremenljivke. Je dobesedna Vejice je pobegnil [ ```, ])
+	c_Lang091 =	Format uporaba izrazov
 	c_Lang092 =	Element stran / Index
 	c_Lang093 =	Set
 	c_Lang094 =	Get
@@ -505,20 +505,20 @@
 	c_Lang209 =	Ime vrednosti
 	c_Lang210 =	Vrednosti
 	c_Lang211 =	Matrika
-	c_Lang212 =	
-	c_Lang213 =	
-	c_Lang214 =	
-	c_Lang215 =	
-	c_Lang216 =	
-	c_Lang217 =	
-	c_Lang218 =	
-	c_Lang219 =	
-	c_Lang220 =	
-	c_Lang221 =	
-	c_Lang222 =	
-	c_Lang223 =	
-	c_Lang224 =	
-	c_Lang225 =	
+	c_Lang212 =	User Defined Function
+	c_Lang213 =	Funkcija Parameter
+	c_Lang214 =	Funkcija Return
+	c_Lang215 =	Parametri
+	c_Lang216 =	Return Value
+	c_Lang217 =	Privzeta vrednost
+	c_Lang218 =	Področje
+	c_Lang219 =	Lokalno
+	c_Lang220 =	Globalno
+	c_Lang221 =	Name
+	c_Lang222 =	Dodate lahko več parametrov v meniju Function.
+	c_Lang223 =	Globalne spremenljivke
+	c_Lang224 =	Lokalne spremenljivke
+	c_Lang225 =	Statične spremenljivke
 		
 ; Other Windows		
 	t_Lang001 =	Izvoz v AutoHotkey
@@ -854,29 +854,29 @@
 	d_Lang092 =	Majhne ikone
 	d_Lang093 =	Velike ikone
 	d_Lang094 =	Ta funkcija zahteva Windows Vista ali višje.
-	d_Lang095 =	
+	d_Lang095 =	Uporaba ByRef povzroči parameter, da postane ime za spremenljivko sprejet leta od klicatelja. Z drugimi besedami, parameter in spremenljiva kličočega se oba nanašata na enako vsebino v pomnilniku.
 	d_Lang096 =	
 	(LTrim	
-		
-		
-		
-		
-		
-		
+		- NE PRILOŽITI SPREMENLJIVK ZNAKI ZA ODSTOTEK TUKAJ.
+		- Vrnjena vrednost mora biti izraz.
+		- Lahko uporabite strune, spremenljivke, polja in funkcije. Prav tako lahko kombinirate katerega koli od teh.
+		- Za uporabo nizov, jih priložite v narekovajih, na primer: "Rezultat je:" a + b.
+		- Če se želite vrniti dodatne rezultate, lahko uporabite tudi ByRef v parametrih.
+		- Polja lahko uporabimo za vrnitev več vrednosti ali celo imenovanih vrednosti.
 	)	
 	d_Lang097 =	
 	(LTrim	
-		
-		
-		
-		
-		
+		- NE PRILOŽITI SPREMENLJIVK ZNAKI ZA ODSTOTEK TUKAJ.
+		- Večina AHK izrazov so podprte.
+		- Lahko uporabite strune, spremenljivke, polja in funkcije.
+		- Za uporabo nizov, jih priložite v narekovajih, na primer: var = "A".
+		- Več Izjave so podprti, na primer: var = "a" || Instr (var, "b").
 	)	
-	d_Lang098 =	
-	d_Lang099 =	
-	d_Lang100 =	
-	d_Lang101 =	
-	d_Lang102 =	
+	d_Lang098 =	Če ima en parameter privzeto vrednost, so potrebni naslednji parametri, da imajo eno preveč.
+	d_Lang099 =	Ime Funkcija vsebuje neveljaven znak.
+	d_Lang100 =	Goto, Gosub in Label niso dovoljeni funkcij.
+	d_Lang101 =	Dvojnik funkcija.
+	d_Lang102 =	je rezervirana beseda.
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -996,6 +996,23 @@
 	IncFolders_TT =	Vključite imenikov (mape) / Keys
 	Recurse_TT =	Rekurzivne v podimenike (podmape) / podključi
 	CmdSort_TT =	Razvrsti po abecedi
+	Ex_EdScript_TT =	Odpri v zunanjem urejevalniku
+	ExprLink2_TT =	
+	(LTrim	
+		- NE PRILOŽITI SPREMENLJIVK ZNAKI ZA ODSTOTEK TUKAJ.
+		- Večina AHK izrazov so podprte.
+		- Lahko uporabite strune, spremenljivke, polja in funkcije.
+		- Za uporabo nizov, jih priložite v narekovajih, na primer: var = "A".
+		- Več Izjave so podprti, na primer: var = "a" || Instr (var, "b").
+	)	
+	ExprLink3_TT =	
+	(LTrim	
+		- NE PRILOŽITI SPREMENLJIVK ZNAKI ZA ODSTOTEK TUKAJ.
+		- Večina AHK izrazov so podprte.
+		- Lahko uporabite strune, spremenljivke, polja in funkcije.
+		- Za uporabo nizov, jih priložite v narekovajih, na primer: var = "A".
+		- Več Izjave so podprti, na primer: var = "a" || Instr (var, "b").
+	)	
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	Dvakrat kliknite za urejanje
@@ -1158,7 +1175,7 @@
 	Abs	Vrne absolutno vrednost številke.
 	ASin	Vrne arkus sinus (število, katerega sinus je število) v radianih.
 	ACos	Vrne arkus kosinus (število, katerega kosinus je število) v radianih.
-	Array	
+	Array	Ustvari scriptable asociativno paleto s celo število tipk.
 	Asc	Vrne kodo znakov (število med 1 in 255 (v ANSI gradi) ali 65.535 (v gradi Unicode)) za prvi znak v nizu.
 	ATan	Vrne arkus (število, katerega tangens je število) v radianih.
 	BlockInput	Onemogoči ali omogoči uporabnikovo sposobnost, da komunicirajo z računalnikom preko tipkovnice in miške.
@@ -1285,7 +1302,7 @@
 	KeyWait	Počaka na gumb na ključ ali miška / igralno palico, ki se sprosti ali potlačen.
 	Labels	Oznaka opredeljuje kode in se lahko uporablja kot Goto cilj ali da bodo podprogram.
 	Length	Vrne dolžino linearni niz, ki se začne pri položaju 1.
-	ListVars	
+	ListVars	Prikaže spremenljivk skripta: njihova imena in trenutne vsebine.
 	Log	Vrne logaritem (z osnovo 10) številke.
 	Ln	Vrne naravni logaritem (z osnovo e) na številki.
 	Loop (normal) 	Opravila vrsto ukazov večkrat: bodisi določeno število krat ali dokler premoru se srečujejo.
@@ -1303,7 +1320,7 @@
 	MsgBox	Prikaže določeno besedilo v majhnem oknu, ki vsebujejo eno ali več tipk (na primer Da in Ne).
 	NumGet	Vrne binarno število shranjeno na določenem naslovu zamika.
 	NumPut	Število trgovin v binarni obliki na določen naslov zamika in vrne naslov na desni strani predmeta samo pisno.
-	Object	
+	Object	Ustvari scriptable asociativno paleto.
 	OnExit	Določa podprogram za samodejni zagon, ko se skript izhode.
 	OnMessage	Določa funkcijo za samodejno pokliče, ko scenarij prejme določeno sporočilo.
 	Ord	Vrne ordinalni vrednost (številčna oznaka znak) za prvi znak v nizu.

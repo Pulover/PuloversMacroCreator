@@ -5,7 +5,7 @@
 ; Main Menu		
 	m_Lang001 =	&Soubor
 	m_Lang002 =	&Makro
-	m_Lang003 =	
+	m_Lang003 =	&Funkce
 	m_Lang004 =	&Příkazy
 	m_Lang005 =	&Upravit
 	m_Lang006 =	&Vybrat
@@ -46,10 +46,10 @@
 	r_Lang015 =	U&ložit aktuální makro
 		
 ; UDF Sub Menu		
-	u_Lang001 =	
-	u_Lang002 =	
-	u_Lang003 =	
-	u_Lang004 =	
+	u_Lang001 =	&Vytvoření funkce
+	u_Lang002 =	&Přidat parametr
+	u_Lang003 =	P&řidat návrat
+	u_Lang004 =	Př&evést makra fungovat
 		
 ; Commands Sub Menu		
 	i_Lang001 =	&Myš
@@ -288,11 +288,11 @@
 	w_Lang100 =	Odstranit všechny skupiny
 	w_Lang101 =	Upravit skupiny
 	w_Lang102 =	Název skupiny
-	w_Lang103 =	
-	w_Lang104 =	
-	w_Lang105 =	
-	w_Lang106 =	
-	w_Lang107 =	
+	w_Lang103 =	Vytvoření funkce (Ctrl + Shift + U)
+	w_Lang104 =	Přidat parametr (Ctrl + Shift + P)
+	w_Lang105 =	Přidat Return (Ctrl + Shift + N)
+	w_Lang106 =	Převést makra fungovat (Ctrl + Shift + C)
+	w_Lang107 =	Komentář mimo nezkontrolované řádků
 		
 ; Command Windows		
 	c_Lang001 =	Myš
@@ -385,7 +385,7 @@
 	c_Lang088 =	Obnovit
 	c_Lang089 =	Funkce Jméno
 	c_Lang090 =	Oddělené čárkami parametry (bez závorek)
-	c_Lang091 =	(Použijte `% pro proměnné. Doslovné Čárky musí být uvozeny [ ```, ])
+	c_Lang091 =	Formát Používejte výrazy
 	c_Lang092 =	Page Element / Rejstřík
 	c_Lang093 =	Sada
 	c_Lang094 =	Dostat
@@ -505,20 +505,20 @@
 	c_Lang209 =	Název hodnota
 	c_Lang210 =	Hodnoty
 	c_Lang211 =	řada
-	c_Lang212 =	
-	c_Lang213 =	
-	c_Lang214 =	
-	c_Lang215 =	
-	c_Lang216 =	
-	c_Lang217 =	
-	c_Lang218 =	
-	c_Lang219 =	
-	c_Lang220 =	
-	c_Lang221 =	
-	c_Lang222 =	
-	c_Lang223 =	
-	c_Lang224 =	
-	c_Lang225 =	
+	c_Lang212 =	Uživatelem definované funkce
+	c_Lang213 =	Funkce Parametr
+	c_Lang214 =	Funkce Návrat
+	c_Lang215 =	Parametry
+	c_Lang216 =	Return Value
+	c_Lang217 =	Výchozí hodnota
+	c_Lang218 =	Rozsah
+	c_Lang219 =	Místní
+	c_Lang220 =	Globální
+	c_Lang221 =	Jméno
+	c_Lang222 =	Můžete přidat další parametry z nabídky Funkce.
+	c_Lang223 =	Globální proměnné
+	c_Lang224 =	Lokální proměnné
+	c_Lang225 =	Statické proměnné
 		
 ; Other Windows		
 	t_Lang001 =	Export do AutoHotkey
@@ -854,29 +854,29 @@
 	d_Lang092 =	Malé ikony
 	d_Lang093 =	Velké ikony
 	d_Lang094 =	Tato funkce vyžaduje systém Windows Vista nebo vyšší.
-	d_Lang095 =	
+	d_Lang095 =	Použití ByRef způsobí parametr, aby se stal alias na proměnnou předaný od volajícího. Jinými slovy, je parametr a variabilní volajícího jak se vztahují na stejné obsahu v paměti.
 	d_Lang096 =	
 	(LTrim	
-		
-		
-		
-		
-		
-		
+		- NEPOUŽÍVEJTE UZAVŘETE PROMĚNNÉ V ZNAKY PROCENTA ZDE.
+		- Návrat hodnota musí být výraz.
+		- Můžete použít řetězce, proměnné, pole a funkce. Můžete také kombinovat některé z nich.
+		- Chcete-li použít řetězce, uzavřete do uvozovek, například: "Výsledek je:" a + b.
+		- Pokud se chcete vrátit další výsledky, můžete také použít ByRef v parametrech.
+		- Pole může být použit k vrátit více hodnot, nebo dokonce pojmenované hodnoty.
 	)	
 	d_Lang097 =	
 	(LTrim	
-		
-		
-		
-		
-		
+		- NEPOUŽÍVEJTE UZAVŘETE PROMĚNNÉ V ZNAKY PROCENTA ZDE.
+		- Většina AHK výrazy jsou podporovány.
+		- Můžete použít řetězce, proměnné, pole a funkce.
+		- Chcete-li použít řetězce, uzavřete do uvozovek, například: var = "A".
+		- Více příkazů jsou podporovány, např: var = "a" || InStr (var, "b").
 	)	
-	d_Lang098 =	
-	d_Lang099 =	
-	d_Lang100 =	
-	d_Lang101 =	
-	d_Lang102 =	
+	d_Lang098 =	Jestliže jeden parametr má výchozí hodnotu, jsou požadovány následující parametry mají taky.
+	d_Lang099 =	Název funkce obsahuje neplatný znak.
+	d_Lang100 =	Goto, Gosub a Label nejsou povoleny ve funkcích.
+	d_Lang101 =	Duplicitní funkce.
+	d_Lang102 =	je vyhrazené slovo.
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -996,6 +996,23 @@
 	IncFolders_TT =	Zahrnout adresáře (složky) / Keys
 	Recurse_TT =	Rekurzivní do podadresářů (podsložek) / podklíčů
 	CmdSort_TT =	Řadit abecedně
+	Ex_EdScript_TT =	Otvori u vanjskom uređivaču
+	ExprLink2_TT =	
+	(LTrim	
+		- NEPOUŽÍVEJTE UZAVŘETE PROMĚNNÉ V ZNAKY PROCENTA ZDE.
+		- Většina AHK výrazy jsou podporovány.
+		- Můžete použít řetězce, proměnné, pole a funkce.
+		- Chcete-li použít řetězce, uzavřete do uvozovek, například: var = "A".
+		- Více příkazů jsou podporovány, např: var = "a" || InStr (var, "b").
+	)	
+	ExprLink3_TT =	
+	(LTrim	
+		- NEPOUŽÍVEJTE UZAVŘETE PROMĚNNÉ V ZNAKY PROCENTA ZDE.
+		- Většina AHK výrazy jsou podporovány.
+		- Můžete použít řetězce, proměnné, pole a funkce.
+		- Chcete-li použít řetězce, uzavřete do uvozovek, například: var = "A".
+		- Více příkazů jsou podporovány, např: var = "a" || InStr (var, "b").
+	)	
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	Dvakrát klikněte na upravit
@@ -1158,7 +1175,7 @@
 	Abs	Vrátí absolutní hodnotu čísla.
 	ASin	Vrací arkussinus (číslo, jehož sinus je číslo) v radiánech .
 	ACos	Vrací arkuskosinus (číslo, jehož kosinus je číslo) v radiánech .
-	Array	
+	Array	Vytváří skriptovatelné asociativní pole s celočíselnými klíči.
 	Asc	Vrátí kód znaku (číslo mezi 1 a 255 (v sestavení ANSI ) nebo 65535 ( v Unicode sestavení ) ) pro první znak v řetězci .
 	ATan	Vrací arkustangens (číslo, jehož tangens je číslo) v radiánech .
 	BlockInput	Zamknutí nebo odemknutí uživatele schopnost komunikovat s počítačem pomocí klávesnice a myši.
@@ -1285,7 +1302,7 @@
 	KeyWait	Čeká klíčem nebo tlačítka myši / joysticku být propuštěn nebo stisknutá.
 	Labels	Štítek označuje řádek kódu, a může být použit jako cíl Goto nebo vytvořit podprogram.
 	Length	Vrátí délku lineárním poli začínající v poloze 1.
-	ListVars	
+	ListVars	Zobrazí proměnných skriptu: jejich jména a aktuální obsah.
 	Log	Vrátí logaritmus (základ 10) Number.
 	Ln	Vrátí přirozený logaritmus (základ e) Number.
 	Loop (normal) 	Proveďte sérii příkazů opakovaně: buď zadaný počet opakování nebo dokud přestávce se setkal.
@@ -1303,7 +1320,7 @@
 	MsgBox	Zobrazení textu uvedeno v malém okně, které obsahuje jedno nebo více tlačítek (například Ano a Ne).
 	NumGet	Vrací binární číslo uložené na zadanou adresu + offset.
 	NumPut	Obchody číslo v binárním formátu na určenou adresu + offset a vrátí adresu vpravo od položky právě napsal.
-	Object	
+	Object	Vytváří skriptovatelné asociativní pole.
 	OnExit	Určuje podprogram spustit automaticky, když skript východy.
 	OnMessage	Určuje funkce pro volání automaticky, když skript obdrží zadanou zprávu.
 	Ord	Vrátí pořadové hodnotu (číselný kód znaku) prvního znaku v řetězci.

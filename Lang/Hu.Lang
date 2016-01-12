@@ -5,7 +5,7 @@
 ; Main Menu		
 	m_Lang001 =	&Fájl
 	m_Lang002 =	&Macro
-	m_Lang003 =	
+	m_Lang003 =	F&unkció
 	m_Lang004 =	&Parancsok
 	m_Lang005 =	&Szerkeszt
 	m_Lang006 =	&Választ
@@ -46,10 +46,10 @@
 	r_Lang015 =	Me&ntse el az aktuális makró
 		
 ; UDF Sub Menu		
-	u_Lang001 =	
-	u_Lang002 =	
-	u_Lang003 =	
-	u_Lang004 =	
+	u_Lang001 =	&Hozzon létre Funkció
+	u_Lang002 =	&Add Paraméter
+	u_Lang003 =	A&dd vissza
+	u_Lang004 =	&Convert Makró működéséhez
 		
 ; Commands Sub Menu		
 	i_Lang001 =	&Egér
@@ -288,11 +288,11 @@
 	w_Lang100 =	Vegye ki az összes csoport
 	w_Lang101 =	Csoportok szerkesztése
 	w_Lang102 =	Csoport név
-	w_Lang103 =	
-	w_Lang104 =	
-	w_Lang105 =	
-	w_Lang106 =	
-	w_Lang107 =	
+	w_Lang103 =	Hozzon funkció (Ctrl + Shift + U)
+	w_Lang104 =	Add Paraméter (Ctrl + Shift + P)
+	w_Lang105 =	Add Return (Ctrl + Shift + N)
+	w_Lang106 =	Convert Makró Function (Ctrl + Shift + C)
+	w_Lang107 =	Hozzászólás ki ellenőrizetlenül sorok
 		
 ; Command Windows		
 	c_Lang001 =	Egér
@@ -385,7 +385,7 @@
 	c_Lang088 =	Visszaállítás
 	c_Lang089 =	Funkció neve
 	c_Lang090 =	Vesszővel elválasztott paraméterek (zárójel nélkül)
-	c_Lang091 =	(Használja a `% változók. Literal vesszők kell megszökött [ ```, ])
+	c_Lang091 =	A kifejezések formátumban
 	c_Lang092 =	Oldalelem / Index
 	c_Lang093 =	Készlet
 	c_Lang094 =	Kap
@@ -505,20 +505,20 @@
 	c_Lang209 =	érték neve
 	c_Lang210 =	értékek
 	c_Lang211 =	Sor
-	c_Lang212 =	
-	c_Lang213 =	
-	c_Lang214 =	
-	c_Lang215 =	
-	c_Lang216 =	
-	c_Lang217 =	
-	c_Lang218 =	
-	c_Lang219 =	
-	c_Lang220 =	
-	c_Lang221 =	
-	c_Lang222 =	
-	c_Lang223 =	
-	c_Lang224 =	
-	c_Lang225 =	
+	c_Lang212 =	Felhasználó által definiált függvény
+	c_Lang213 =	Funkció Paraméter
+	c_Lang214 =	Függvény visszatérési
+	c_Lang215 =	Paraméterek
+	c_Lang216 =	Visszatérési érték
+	c_Lang217 =	Alapértelmezett érték
+	c_Lang218 =	Scope
+	c_Lang219 =	Helyi
+	c_Lang220 =	Globális
+	c_Lang221 =	Név
+	c_Lang222 =	Akkor még több paramétert a Funkció menüből.
+	c_Lang223 =	Globális változók
+	c_Lang224 =	Lokális változók
+	c_Lang225 =	Statikus változók
 		
 ; Other Windows		
 	t_Lang001 =	Exportálás AutoHotkey
@@ -854,29 +854,29 @@
 	d_Lang092 =	Kis ikonok
 	d_Lang093 =	Nagy ikonok
 	d_Lang094 =	Ez a funkció csak Windows Vista vagy újabb.
-	d_Lang095 =	
+	d_Lang095 =	Használata ByRef okoz paramétert, hogy legyen egy álnevet a változó telt el a hívó fél. Más szavakkal, a paraméter, és a hívó változó mind ugyanarra a tartalmát a memóriába.
 	d_Lang096 =	
 	(LTrim	
-		
-		
-		
-		
-		
-		
+		- NE CSATOLNI VARIABLES SZÁZALÉKOS JELEK ITT.
+		- Vissza értéknek kell lennie egy kifejezés.
+		- Használhatja vonósok, változók, tömbök és függvények. Ön is kombinálhatja azokat.
+		- Ahhoz, hogy használni húrok, csatolja őket idézetek, pl: "Az eredmény:" a + b.
+		- Ha vissza kíván térni extra eredményeket, akkor is használhatja ByRef a paramétereket.
+		- Arrays lehet használni, hogy visszatérjen több értéket, vagy akár elemzi értékeket.
 	)	
 	d_Lang097 =	
 	(LTrim	
-		
-		
-		
-		
-		
+		- NE CSATOLNI VARIABLES SZÁZALÉKOS JELEK ITT.
+		- A legtöbb AHK kifejezések támogatottak.
+		- Használhatja vonósok, változók, tömbök és függvények.
+		- Ahhoz, hogy használni húrok, csatolja őket idézetek, pl: var = "a".
+		- Több utasítást támogat, például: var = "a" || InStr (var, "b").
 	)	
-	d_Lang098 =	
-	d_Lang099 =	
-	d_Lang100 =	
-	d_Lang101 =	
-	d_Lang102 =	
+	d_Lang098 =	Ha egy paraméter alapértéke, a következő paramétereket kell is van egy.
+	d_Lang099 =	A függvény neve engedélyezett karaktert tartalmaz.
+	d_Lang100 =	Goto GOSUB és címke nem engedélyezett funkciókat.
+	d_Lang101 =	Duplikált funkció.
+	d_Lang102 =	foglalt szó.
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -996,6 +996,23 @@
 	IncFolders_TT =	Tartalmazzák (mappákban) / Keys
 	Recurse_TT =	Rekurzív alkönyvtárakra (almappák) / Alkulcsok
 	CmdSort_TT =	Rendezés ABC sorrendbe
+	Ex_EdScript_TT =	Nyílt külső szerkesztőben
+	ExprLink2_TT =	
+	(LTrim	
+		- NE CSATOLNI VARIABLES SZÁZALÉKOS JELEK ITT.
+		- A legtöbb AHK kifejezések támogatottak.
+		- Használhatja vonósok, változók, tömbök és függvények.
+		- Ahhoz, hogy használni húrok, csatolja őket idézetek, pl: var = "a".
+		- Több utasítást támogat, például: var = "a" || InStr (var, "b").
+	)	
+	ExprLink3_TT =	
+	(LTrim	
+		- NE CSATOLNI VARIABLES SZÁZALÉKOS JELEK ITT.
+		- A legtöbb AHK kifejezések támogatottak.
+		- Használhatja vonósok, változók, tömbök és függvények.
+		- Ahhoz, hogy használni húrok, csatolja őket idézetek, pl: var = "a".
+		- Több utasítást támogat, például: var = "a" || InStr (var, "b").
+	)	
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	Kattintson duplán a szerkeszteni
@@ -1158,7 +1175,7 @@
 	Abs	Abszolút értékét a számot.
 	ASin	Arkusz szinuszát (a szám, amelynek szinusz is Number) radiánban.
 	ACos	Arkusz koszinuszát adja (a szám, amelynek koszinusz is Number) radiánban.
-	Array	
+	Array	Létrehoz egy scriptable asszociatív tömböt egész kulcsokat.
 	Asc	Visszaadja a karakter kódja (egy számot 1 és 255 között (az ANSI épít), illetve 65.535 (Unicode épít)) az első karakter a string.
 	ATan	Visszaadja a cotanges (a szám, amelynek tangense a szám) radiánban.
 	BlockInput	Tiltja le vagy engedélyezi a felhasználó képes kölcsönhatásba a számítógéphez billentyűzet és egér.
@@ -1285,7 +1302,7 @@
 	KeyWait	Várja, hogy a billentyűk, vagy egér / joystick gombot kell szabadítani, vagy nyomva.
 	Labels	A címke azonosít egy sor kódot, és fel lehet használni, mint egy cél, vagy Goto alkotnak egy szubrutint.
 	Length	Visszaadja a hossza egy egyenes sorban kezdődő 1 pozícióban.
-	ListVars	
+	ListVars	Jeleníti meg a szkript változó: a nevüket és a jelenlegi tartalmát.
 	Log	Visszaadja a logaritmusát (alap 10) Szám.
 	Ln	Természetes logaritmusát (alap e) a szám.
 	Loop (normal) 	Végre egy sor parancsot többször: vagy a megadott számú alkalommal, vagy amíg break találkozott.
@@ -1303,7 +1320,7 @@
 	MsgBox	Megjeleníti a megadott szöveget egy kis ablak, amely egy vagy több gomb (például Igen és Nem).
 	NumGet	Visszaadja a bináris számot tárolt a megadott címre eltolva.
 	NumPut	Üzletek száma bináris formában a megadott címre + offset és visszatér a címet, jobbra az elem csak írásban.
-	Object	
+	Object	Létrehoz egy scriptable asszociatív tömb.
 	OnExit	Megadja a szubrutin automatikusan futnak, ha a script kilép.
 	OnMessage	Megadja a funkció hívás automatikusan a szkript megkapja az adott üzenetet.
 	Ord	Visszaadja a sorrendi értéket (számjegyet kód) az első karakter karakterlánc.

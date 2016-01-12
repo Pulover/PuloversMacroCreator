@@ -5,7 +5,7 @@
 ; Main Menu		
 	m_Lang001 =	&Súbor
 	m_Lang002 =	&Makro
-	m_Lang003 =	
+	m_Lang003 =	&fungovať
 	m_Lang004 =	&Perintah
 	m_Lang005 =	&Upraviť
 	m_Lang006 =	&Vybrať
@@ -46,10 +46,10 @@
 	r_Lang015 =	U&ložiť aktuálne makro
 		
 ; UDF Sub Menu		
-	u_Lang001 =	
-	u_Lang002 =	
-	u_Lang003 =	
-	u_Lang004 =	
+	u_Lang001 =	&Vytvorenie funkcie
+	u_Lang002 =	&Pridať parameter
+	u_Lang003 =	P&ridať Návrat
+	u_Lang004 =	Pr&eviesť makra fungovať
 		
 ; Commands Sub Menu		
 	i_Lang001 =	&Myš
@@ -288,11 +288,11 @@
 	w_Lang100 =	Odstrániť všetky skupiny
 	w_Lang101 =	Upraviť skupiny
 	w_Lang102 =	Názov skupiny
-	w_Lang103 =	
-	w_Lang104 =	
-	w_Lang105 =	
-	w_Lang106 =	
-	w_Lang107 =	
+	w_Lang103 =	Vytvorenie funkcie (Ctrl + Shift + U)
+	w_Lang104 =	Pridať parameter (Ctrl + Shift + P)
+	w_Lang105 =	Pridať Return (Ctrl + Shift + N)
+	w_Lang106 =	Previesť makra fungovať (Ctrl + Shift + C)
+	w_Lang107 =	Komentár mimo neskontrolované riadkov
 		
 ; Command Windows		
 	c_Lang001 =	Myš
@@ -385,7 +385,7 @@
 	c_Lang088 =	Obnoviť
 	c_Lang089 =	Funkcia Meno
 	c_Lang090 =	Hodnôt oddelených čiarkami (bez zátvoriek)
-	c_Lang091 =	(Použite `% libier za premenné. Doslovné Čiarky musia byť sprevádzané [ ```, ])
+	c_Lang091 =	Formát Používajte výrazy
 	c_Lang092 =	Page Element / Index
 	c_Lang093 =	Sada
 	c_Lang094 =	Dostať
@@ -505,20 +505,20 @@
 	c_Lang209 =	Názov Hodnota
 	c_Lang210 =	Hodnoty
 	c_Lang211 =	Rad
-	c_Lang212 =	
-	c_Lang213 =	
-	c_Lang214 =	
-	c_Lang215 =	
-	c_Lang216 =	
-	c_Lang217 =	
-	c_Lang218 =	
-	c_Lang219 =	
-	c_Lang220 =	
-	c_Lang221 =	
-	c_Lang222 =	
-	c_Lang223 =	
-	c_Lang224 =	
-	c_Lang225 =	
+	c_Lang212 =	Užívateľom definované funkcie
+	c_Lang213 =	Funkcie Parameter
+	c_Lang214 =	Funkcia Návrat
+	c_Lang215 =	Parametre
+	c_Lang216 =	Return Value
+	c_Lang217 =	Predvolená hodnota
+	c_Lang218 =	Rozsah pôsobnosti
+	c_Lang219 =	Lokálne
+	c_Lang220 =	Celosvetový
+	c_Lang221 =	Názov
+	c_Lang222 =	Môžete pridať ďalšie parametre z ponuky Funkcie.
+	c_Lang223 =	Globálne premenné
+	c_Lang224 =	Lokálne premenné
+	c_Lang225 =	Statické premenné
 		
 ; Other Windows		
 	t_Lang001 =	Export do AutoHotkey
@@ -854,29 +854,29 @@
 	d_Lang092 =	Malé ikony
 	d_Lang093 =	Veľké ikony
 	d_Lang094 =	Táto funkcia vyžaduje systém Windows Vista alebo vyšší.
-	d_Lang095 =	
+	d_Lang095 =	Použitie ByRef spôsobí parameter, aby sa stal alias na premennú odovzdaný od volajúceho. Inými slovami, je parameter a variabilné volajúceho ako sa vzťahujú na rovnaké obsahu v pamäti.
 	d_Lang096 =	
 	(LTrim	
-		
-		
-		
-		
-		
-		
+		- NEPOUŽÍVAJTE UZAVRITE PREMENNÉ V ZNAKY PERCENTA TU.
+		- Návrat hodnota musí byť výraz.
+		- Môžete použiť reťazca, premenné, pole a funkcia. Môžete tiež kombinovať niektoré z nich.
+		- Ak chcete použiť reťazca, uzavrite do úvodzoviek, napríklad: "Výsledok je:" a + b.
+		- Ak sa chcete vrátiť ďalšie výsledky, môžete tiež použiť ByRef v parametroch.
+		- Pole môže byť použitý k vrátiť viac hodnôt, alebo dokonca pomenované hodnoty.
 	)	
 	d_Lang097 =	
 	(LTrim	
-		
-		
-		
-		
-		
+		- NEPOUŽÍVAJTE UZAVRITE PREMENNÉ V ZNAKY PERCENTA TU.
+		- Väčšina AHK výrazy sú podporované.
+		- Môžete použiť reťazca, premenné, pole a funkcia.
+		- Ak chcete použiť reťazca, uzavrite do úvodzoviek, napríklad: var = "A".
+		- Viac príkazov sú podporované, napr: var = "a" || Instru (var, "b").
 	)	
-	d_Lang098 =	
-	d_Lang099 =	
-	d_Lang100 =	
-	d_Lang101 =	
-	d_Lang102 =	
+	d_Lang098 =	Ak jeden parameter má predvolenú hodnotu, sú požadované nasledujúce parametre majú taky.
+	d_Lang099 =	Názov funkcie obsahuje neplatný znak.
+	d_Lang100 =	Goto, GoSub a Label nie sú povolené vo funkciách.
+	d_Lang101 =	Duplicitné funkcie.
+	d_Lang102 =	je vyhradené slovo.
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -996,6 +996,23 @@
 	IncFolders_TT =	Zahrnúť adresára (zložky) / Keys
 	Recurse_TT =	Rekurzívne do podadresárov (podpriečinkov) / podkľúčov
 	CmdSort_TT =	Radiť abecedne
+	Ex_EdScript_TT =	Otvoriť v externom editore
+	ExprLink2_TT =	
+	(LTrim	
+		- NEPOUŽÍVAJTE UZAVRITE PREMENNÉ V ZNAKY PERCENTA TU.
+		- Väčšina AHK výrazy sú podporované.
+		- Môžete použiť reťazca, premenné, pole a funkcia.
+		- Ak chcete použiť reťazca, uzavrite do úvodzoviek, napríklad: var = "A".
+		- Viac príkazov sú podporované, napr: var = "a" || Instru (var, "b").
+	)	
+	ExprLink3_TT =	
+	(LTrim	
+		- NEPOUŽÍVAJTE UZAVRITE PREMENNÉ V ZNAKY PERCENTA TU.
+		- Väčšina AHK výrazy sú podporované.
+		- Môžete použiť reťazca, premenné, pole a funkcia.
+		- Ak chcete použiť reťazca, uzavrite do úvodzoviek, napríklad: var = "A".
+		- Viac príkazov sú podporované, napr: var = "a" || Instru (var, "b").
+	)	
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	Poklepaním editovať
@@ -1158,7 +1175,7 @@
 	Abs	Vráti absolútnu hodnotu čísla.
 	ASin	Vracia arkussínus (číslo, ktorého sínus je číslo) v radiánoch.
 	ACos	Vracia arkuskosínus (číslo, ktorého kosínus je číslo) v radiánoch.
-	Array	
+	Array	Vytvára skriptovateľné asociatívne pole s celočíselnými kľúčmi.
 	Asc	Vráti kód znaku (číslo medzi 1 a 255 (v zostavení ANSI) alebo 65535 (v Unicode zostavenie)) pre prvý znak v reťazci.
 	ATan	Vracia arkustangens (číslo, ktorého tangens je číslo) v radiánoch.
 	BlockInput	Zamknutie alebo odomknutie užívateľa schopnosť komunikovať s počítačom pomocou klávesnice a myši.
@@ -1285,7 +1302,7 @@
 	KeyWait	Čaká kľúčom alebo tlačidla myši / joysticku byť prepustený alebo stlačená.
 	Labels	Štítok označuje riadok kódu, a môže byť použitý ako cieľ Goto alebo vytvoriť podprogram.
 	Length	Vráti dĺžku lineárnym poli začínajúce v polohe 1.
-	ListVars	
+	ListVars	Zobrazí premenných skriptu: ich mená a aktuálny obsah.
 	Log	Vráti logaritmus (základ 10) Number.
 	Ln	Vráti prirodzený logaritmus (základ e) Number.
 	Loop (normal) 	Vykonajte sériu príkazov opakovane: buď zadaný počet opakovaní alebo kým prestávke sa stretol.
@@ -1303,7 +1320,7 @@
 	MsgBox	Zobrazenie textu uvedené v malom okne, ktoré obsahuje jedno alebo viac tlačidiel (napríklad Áno a Nie).
 	NumGet	Vracia binárne číslo uložené na zadanú adresu + offset.
 	NumPut	Obchody číslo v binárnom formáte na určenú adresu + offset a vráti adresu vpravo od položky práve napísal.
-	Object	
+	Object	Vytvára skriptovateľné asociatívne polia.
 	OnExit	Určuje podprogram spustiť automaticky, keď skript východy.
 	OnMessage	Určuje funkcie pre volanie automaticky, keď skript dostane zadanú správu.
 	Ord	Vráti poradové hodnotu (číselný kód znaku) prvého znaku v reťazci.

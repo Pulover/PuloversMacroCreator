@@ -4,12 +4,12 @@
 		
 ; Main Menu		
 	m_Lang001 =	&Tiedosto
-	m_Lang002 =	M&akro
-	m_Lang003 =	
+	m_Lang002 =	&Makro
+	m_Lang003 =	t&oiminto
 	m_Lang004 =	&Komennot
-	m_Lang005 =	&Muokata
+	m_Lang005 =	M&uokata
 	m_Lang006 =	&Valita
-	m_Lang007 =	Kat&sella
+	m_Lang007 =	K&atsella
 	m_Lang008 =	Va&linnat
 	m_Lang009 =	La&hjoittaa
 	m_Lang010 =	A&pua
@@ -46,10 +46,10 @@
 	r_Lang015 =	Tallenna N&ykyinen Macro
 		
 ; UDF Sub Menu		
-	u_Lang001 =	
-	u_Lang002 =	
-	u_Lang003 =	
-	u_Lang004 =	
+	u_Lang001 =	&Luo Toiminto
+	u_Lang002 =	L&isää Parametri
+	u_Lang003 =	Li&sää Palaa
+	u_Lang004 =	&Makron muunto Toimiakseen
 		
 ; Commands Sub Menu		
 	i_Lang001 =	&Hiiri
@@ -288,11 +288,11 @@
 	w_Lang100 =	Poista kaikki ryhmät
 	w_Lang101 =	Muokkaa ryhmiä
 	w_Lang102 =	Ryhmän nimi
-	w_Lang103 =	
-	w_Lang104 =	
-	w_Lang105 =	
-	w_Lang106 =	
-	w_Lang107 =	
+	w_Lang103 =	Luo Toiminto (Ctrl + Shift + U)
+	w_Lang104 =	Lisää Parametri (Ctrl + Shift + P)
+	w_Lang105 =	Lisää Paluulennot (Ctrl + Shift + N)
+	w_Lang106 =	Makron muunto Toimiakseen (Ctrl + Shift + C)
+	w_Lang107 =	Kommentoi pois valitsematta riviä
 		
 ; Command Windows		
 	c_Lang001 =	Hiiri
@@ -385,7 +385,7 @@
 	c_Lang088 =	Nollaa
 	c_Lang089 =	Toiminto Nimi
 	c_Lang090 =	Pilkulla erotettu parametreja (ilman suluissa)
-	c_Lang091 =	(Käytä `% muuttujia. Kirjaimellinen Pilkut on karannut [ ```, ])
+	c_Lang091 =	Käytä ilmaisuja muodossa
 	c_Lang092 =	Sivuelementti / Indeksi
 	c_Lang093 =	Asettaa
 	c_Lang094 =	Saada
@@ -505,20 +505,20 @@
 	c_Lang209 =	Arvo nimi
 	c_Lang210 =	Arvot
 	c_Lang211 =	Ryhmä
-	c_Lang212 =	
-	c_Lang213 =	
-	c_Lang214 =	
-	c_Lang215 =	
-	c_Lang216 =	
-	c_Lang217 =	
-	c_Lang218 =	
-	c_Lang219 =	
-	c_Lang220 =	
-	c_Lang221 =	
-	c_Lang222 =	
-	c_Lang223 =	
-	c_Lang224 =	
-	c_Lang225 =	
+	c_Lang212 =	Käyttäjän määrittämä toiminto
+	c_Lang213 =	Toiminto Parametri
+	c_Lang214 =	Toiminto Palaa
+	c_Lang215 =	Parametrit
+	c_Lang216 =	Paluuarvo
+	c_Lang217 =	Oletusarvo
+	c_Lang218 =	Laajuus
+	c_Lang219 =	Paikallinen
+	c_Lang220 =	Maailmanlaajuinen
+	c_Lang221 =	Nimi
+	c_Lang222 =	Voit lisätä enemmän parametreja Toimintovalikko.
+	c_Lang223 =	Global muuttujat
+	c_Lang224 =	Paikalliset muuttujat
+	c_Lang225 =	Staattinen muuttujat
 		
 ; Other Windows		
 	t_Lang001 =	Vie AutoHotkey
@@ -854,29 +854,29 @@
 	d_Lang092 =	Pienet kuvakkeet
 	d_Lang093 =	Suuret kuvakkeet
 	d_Lang094 =	Tämä ominaisuus vaatii Windows Vistan tai uudemman.
-	d_Lang095 =	
+	d_Lang095 =	Käyttö ByRef aiheuttaa parametri tulla alias välitetyn sisään soittajan. Toisin sanoen, parametri ja soittajan muuttuva sekä viittaavat samaan sisällön muistiin.
 	d_Lang096 =	
 	(LTrim	
-		
-		
-		
-		
-		
-		
+		- ÄLÄ LIITTÄÄ MUUTTUJAT PROSENTTIA SIGNS TÄSTÄ.
+		- Paluu arvon on oltava lauseke.
+		- Voit käyttää jouset, muuttujat, taulukot ja toimintoja. Voit myös yhdistää mitään näistä.
+		- Jos haluat käyttää jouset, liittää ne lainausmerkkeihin, esimerkiksi: "Tulos on:" + b.
+		- Jos haluat palauttaa ylimääräisiä tuloksia, voit käyttää myös ByRef parametreissa.
+		- Arrays voidaan palauttaa useita arvoja tai jopa nimesi arvoja.
 	)	
 	d_Lang097 =	
 	(LTrim	
-		
-		
-		
-		
-		
+		- ÄLÄ LIITTÄÄ MUUTTUJAT PROSENTTIA SIGNS TÄSTÄ.
+		- Useimmat AHK ilmaisuja tuetaan.
+		- Voit käyttää jouset, muuttujat, taulukot ja toimintoja.
+		- Jos haluat käyttää jouset, liittää ne lainausmerkkeihin, esimerkiksi: var = "".
+		- Useita ilmoituksia tukevat, esimerkiksi: var = "" || InStr (var, "b").
 	)	
-	d_Lang098 =	
-	d_Lang099 =	
-	d_Lang100 =	
-	d_Lang101 =	
-	d_Lang102 =	
+	d_Lang098 =	Jos jokin parametri on oletusarvo, seuraavat parametrit vaaditaan yksi liikaa.
+	d_Lang099 =	Funktion nimi sisältää epäkelvon merkin.
+	d_Lang100 =	Goto, GOSUB ja Label eivät ole sallittuja toimintoja.
+	d_Lang101 =	Monista toiminto.
+	d_Lang102 =	on varattu sana.
 		
 ; Start-up Tips		
 	Start_Tips =	
@@ -996,6 +996,23 @@
 	IncFolders_TT =	Sisällytä hakemistot (kansiot) / Avaimet
 	Recurse_TT =	Rekursiivinen osaksi alihakemistot (alikansiot) / Aliavainten
 	CmdSort_TT =	Lajittele aakkosjärjestyksessä
+	Ex_EdScript_TT =	Avaa ulkoisen editorin
+	ExprLink2_TT =	
+	(LTrim	
+		- ÄLÄ LIITTÄÄ MUUTTUJAT PROSENTTIA SIGNS TÄSTÄ.
+		- Useimmat AHK ilmaisuja tuetaan.
+		- Voit käyttää jouset, muuttujat, taulukot ja toimintoja.
+		- Jos haluat käyttää jouset, liittää ne lainausmerkkeihin, esimerkiksi: var = "".
+		- Useita ilmoituksia tukevat, esimerkiksi: var = "" || InStr (var, "b").
+	)	
+	ExprLink3_TT =	
+	(LTrim	
+		- ÄLÄ LIITTÄÄ MUUTTUJAT PROSENTTIA SIGNS TÄSTÄ.
+		- Useimmat AHK ilmaisuja tuetaan.
+		- Voit käyttää jouset, muuttujat, taulukot ja toimintoja.
+		- Jos haluat käyttää jouset, liittää ne lainausmerkkeihin, esimerkiksi: var = "".
+		- Useita ilmoituksia tukevat, esimerkiksi: var = "" || InStr (var, "b").
+	)	
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	Kaksoisnapsauta muokata
@@ -1158,7 +1175,7 @@
 	Abs	Palauttaa absoluuttinen arvo lukumäärä.
 	ASin	Palauttaakaarisinin (numero , jonka sini on Number) radiaaneina .
 	ACos	Palauttaakaarikosinin (numero , jonka kosini on Number) radiaaneina .
-	Array	
+	Array	Luo koodattavissa assosiatiivinen array kokonaisluku avaimet.
 	Asc	Palauttaamerkin koodi (numero 1 ja 255 ( ANSI rakentaa ) tai 65535 ( Unicode- versioita ) ) ensimmäisen merkin String .
 	ATan	Palauttaakaaritangentin (numero , jonka tangentti on Number) radiaaneina .
 	BlockInput	Käytöstä tai ottaa käyttöön käyttäjän kykyä olla vuorovaikutuksessatietokoneen kautta, näppäimistö ja hiiri .
@@ -1285,7 +1302,7 @@
 	KeyWait	Odottaa näppäintä tai hiiren / joystick-painiketta vapautetaan tai painetaan alas.
 	Labels	Merkki osoittaa, rivi koodia, ja sitä voidaan käyttää Goto kohde tai muodostaa aliohjelmaan.
 	Length	Palauttaa pituus lineaarisen joka alkaa asemassa 1.
-	ListVars	
+	ListVars	Näyttää skriptin muuttujat: heidän nimensä ja nykyisen sisällön.
 	Log	Palauttaa logaritmin (base 10) lukumäärä.
 	Ln	Palauttaa luvun luonnollisen logaritmin (base e) ja lukumäärä.
 	Loop (normal) 	Suorita sarja käskyjä toistuvasti: joko annettu määrä kertoja tai kunnes tauko on kohdannut.
@@ -1303,7 +1320,7 @@
 	MsgBox	Näyttää määritetyn tekstin pienessä ikkunassa, joka sisältää yhden tai useampia painikkeita (kuten kyllä ja ei).
 	NumGet	Palauttaa binääriluku tallennettu määrättyyn osoitteeseen aikaeron.
 	NumPut	Kaupat määrä binäärimuodossa määrättyyn osoitteeseen aikaeron ja palauttaa osoitteen kohteen oikealla puolella juuri kirjoitettu.
-	Object	
+	Object	Luo koodattavissa assosiatiivisia array.
 	OnExit	Määrittää aliohjelman toimimaan automaattisesti kun käsikirjoitus poistuu.
 	OnMessage	Määrittää toiminnon soittaa automaattisesti, kun käsikirjoitus vastaanottaa tietyn viestin.
 	Ord	Palauttaa järjestysluku arvo (numeerinen merkki koodi) ensimmäisen merkin merkkijono.
