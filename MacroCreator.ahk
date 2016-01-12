@@ -906,12 +906,14 @@ Menu, IfStB, Add, Built-in Variables, :BuiltInMenu
 Menu, IfStB, Icon, IfWinActive / IfWinNotActive, %ResDllPath%, 24
 Menu, AsVarB, Add, Variables and Expressions, HelpB
 Menu, AsVarB, Add, Arrays, HelpB
+Menu, AsVarB, Add, Objects, HelpB
 Menu, AsVarB, Add
 Menu, AsVarB, Add, Built-in Variables, :BuiltInMenu
 Menu, AsVarB, Icon, Variables and Expressions, %ResDllPath%, 24
 Menu, AsFuncB, Add, Built-in Functions, HelpB
 Menu, AsFuncB, Add, Arrays, HelpB
-Menu, AsFuncB, Add, Array Methods, HelpB
+Menu, AsFuncB, Add, Objects, HelpB
+Menu, AsFuncB, Add, Object Methods, HelpB
 Menu, AsFuncB, Add
 Menu, AsFuncB, Add, Variables and Expressions, HelpB
 Menu, AsFuncB, Add, Built-in Variables, :BuiltInMenu
@@ -3241,7 +3243,9 @@ Else If (ThisMenuItem = "Functions")
 	Run, %HelpDocsUrl%/Functions.htm
 Else If (ThisMenuItem = "Arrays")
 	Run, %HelpDocsUrl%/misc/Arrays.htm
-Else If (ThisMenuItem = "Array Methods")
+Else If (ThisMenuItem = "Objects")
+	Run, %HelpDocsUrl%/Objects.htm
+Else If (ThisMenuItem = "Object Methods")
 	Run, %HelpDocsUrl%/objects/Object.htm
 Else If (ThisMenuItem = "Built-in Variables")
 	Run, %HelpDocsUrl%/Variables.htm#BuiltIn
