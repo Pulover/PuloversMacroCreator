@@ -49,12 +49,15 @@ Thiago Talma for some improvements to the code, debugging and many suggestions.
 * Added support for Multi-Dimensional Arrays inside function parameters and commands.
 * Added support for Multi-Dimensional Arrays assignment (e.g.: MyArray[1][2] := Value).
 * Added support for named keys in arrays (e.g.: N["key"]).
+* Added support for accessing Array Objects using "." operator (e.g.: MyArray.1 := OtherArray.2.3).
 * Added support for array methods inside commands (e.g.: % MyArray.Length()).
 * Added support for array methods inside Variable Assignment when "Expression" is checked.
 * Added support for arrays inside IECom and COMInterface parameters.
 * Added option to change color of the rectangle of Image/Pixel Search area and Screenshots tool.
 * Added *Insert Comment Block* to "Edit Comment" window.
 * Added option to comment out unchecked rows in Preview/Exported scripts.
+* Added Language editor in *Settings* window.
+* Languages files are now kept in the Lang folder and can be added or removed.
 * Updated "Loop, File" and "Loop, Reg" to new format with "Mode" parameter.
 * Changed "List Variables" to display User-Defined variables only.
 * Fixed corrupted pmc files saved on exit.

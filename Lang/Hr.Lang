@@ -45,7 +45,7 @@
 	r_Lang014 =	Uvo&z Makro
 	r_Lang015 =	S&premi Trenutni Macro
 		
-; UDF Sub Menu		
+; Function Sub Menu		
 	u_Lang001 =	&Napravite Function
 	u_Lang002 =	&Dodaj parametar
 	u_Lang003 =	D&odaj Povratak
@@ -716,12 +716,9 @@
 	d_Lang014 =	Izvoze Script
 	d_Lang015 =	Datoteka je uspješno izvoze!
 	d_Lang016 =	Kliknite na "Get 'označiti poziciju.
-	d_Lang017 =	
-	(LTrim	
-		- Odaberite prozor.
+	d_Lang017 =	- Odaberite prozor.
 		- Pokažite na željenu poziciju.
 		- Pritisnite tipku Desno.
-	)	
 	d_Lang018 =	Pixel Color
 	d_Lang019 =	Jasno Popis
 	d_Lang020 =	Makro Close?
@@ -738,26 +735,18 @@
 	d_Lang031 =	nije valjana ime funkcije.
 	d_Lang032 =	Pogreška: Duple prečace.
 	d_Lang033 =	Aktivirajte Makronaredbe
-	d_Lang034 =	
-	(LTrim	
-		- Kliknite i povucite s %DrawButton% za odabir područja.
+	d_Lang034 =	- Kliknite i povucite s %DrawButton% za odabir područja.
 		- Kliknite i pustite bez da povučete za odabir kontrole područje.
 		- Kliknite na području bez kontrole za odabir područja na prozoru.
-	)	
 	d_Lang035 =	Nastaviti?
 	d_Lang036 =	Slika / Pixel Pronađeno u
 	d_Lang037 =	Slika / Pixel nije pronađena.
 	d_Lang038 =	Pritisnite OK za nastavak.
 	d_Lang039 =	Timeout!
-	d_Lang040 =	
-	(LTrim	
-		Ova značajka zahtijeva knjižnicu GDI +.
+	d_Lang040 =	Ova značajka zahtijeva knjižnicu GDI +.
 		Kliknite OK za odlazak na stranicu za preuzimanje.
-	)	
 	d_Lang041 =	Naziv varijable sadrži nedopušteni znak.
-	d_Lang042 =	
-	(LTrim	
-		Nepoznat operator.
+	d_Lang042 =	Nepoznat operator.
 		Sljedeće operateri su prihvaćeni:
 		=, ==, <>,! =,>, <,> =, <=
 		
@@ -765,13 +754,9 @@
 		MyVar > 1
 		MyVar = `%A_DDDD`%
 		Clipboard == `%MyVar`%
-	)	
 	d_Lang043 =	Ili koristiti kontrole alatne trake
-	d_Lang044 =	
-	(LTrim	
-		Ova značajka zahtijeva eval () funkcija.
+	d_Lang044 =	Ova značajka zahtijeva eval () funkcija.
 		Kliknite OK za odlazak na stranicu za preuzimanje.
-	)	
 	d_Lang045 =	Molimo odaberite Internet Explorer prozor!
 	d_Lang046 =	Priključak Uspješna!
 	d_Lang047 =	Nije uspio spojiti!
@@ -783,35 +768,19 @@
 	d_Lang053 =	Ne prikazuj više ovu poruku.
 	d_Lang054 =	Molimo odaberite Excel prozor!
 	d_Lang055 =	Molimo odaberite datoteku AutoHotKey skripte (. AHK), a za ulazak u ime funkcije.
-	d_Lang056 =	
-	(LTrim	
-		Ova značajka zahtijeva AutoHotkey instalirana.
+	d_Lang056 =	Ova značajka zahtijeva AutoHotkey instalirana.
 		Kliknite OK za odlazak na stranicu za preuzimanje.
-	)	
-	d_Lang057 =	
-	(LTrim	
-		- Pritisnite CTRL+tipke sa strelicama za pomicanje odabranog područja.
+	d_Lang057 =	- Pritisnite CTRL+tipke sa strelicama za pomicanje odabranog područja.
 		- Pritisnite Shift+tipke sa strelicama za promjenu veličine odabranog područja.
 		- Pritisnite Enter završiti.
-	)	
-	d_Lang058 =	
-	(LTrim	
-		Neke značajke zahtijevaju admnistrator privilages kako bi pravilno funkcionirao.
+	d_Lang058 =	Neke značajke zahtijevaju admnistrator privilages kako bi pravilno funkcionirao.
 		Preporuča se ponovno pokrenuti program kao administrator.
-	)	
-	d_Lang059 =	
-	(LTrim	
-		Ova naredba ne podržava izraze ili funkcije.
+	d_Lang059 =	Ova naredba ne podržava izraze ili funkcije.
 		Molimo dodijeliti varijablu i koristiti ga u parametar.
-	)	
 	d_Lang060 =	Nova verzija dostupna
-	d_Lang061 =	
-	(LTrim	
-		Želite li ga skinuti sada?
+	d_Lang061 =	Želite li ga skinuti sada?
 		
 		Kako onemogućiti automatske provjere odabir Pomoć > Provjerite na startup
-	)	
-		
 	d_Lang062 =	Vi već imate najnoviju verziju.
 	d_Lang063 =	Došlo je do pogreške tijekom provjere.
 	d_Lang064 =	COM objekt pogreška u
@@ -819,12 +788,9 @@
 	d_Lang066 =	Posebno
 	d_Lang067 =	Pokažite ovaj prozor na startup
 	d_Lang068 =	Savjet:
-	d_Lang069 =	
-	(LTrim	
-		Puno vremena i truda je otišao u razvoju Pulover's Macro Creator. Ako vam je koristan, molimo vas da razmislite pokazuje svoju zahvalnost s donacijom.
+	d_Lang069 =	Puno vremena i truda je otišao u razvoju Pulover's Macro Creator. Ako vam je koristan, molimo vas da razmislite pokazuje svoju zahvalnost s donacijom.
 		
 		Doniranje ili ne, tu će biti razlike u njegovim značajkama i funkcionalnosti.
-	)	
 	d_Lang070 =	Donirajte...
 	d_Lang071 =	Ne, hvala
 	d_Lang072 =	Podrška open source softvera
@@ -842,11 +808,8 @@
 	d_Lang084 =	Molimo spremite promjene prije zakazivanja zadatak.
 	d_Lang085 =	Nedostaje "End Loop" izjavu u Macro 
 	d_Lang086 =	Nedostaje '"End If" iskaz u Macro
-	d_Lang087 =	
-	(LTrim	
-		Obavijest da su promjene koje su napravljene na skriptu izvan programa NEĆE utjecati na vaše makronaredbe na bilo koji način.
+	d_Lang087 =	Obavijest da su promjene koje su napravljene na skriptu izvan programa NEĆE utjecati na vaše makronaredbe na bilo koji način.
 		 Ova značajka je namijenjena samo kao brzi izvoza funkciju. PMC nije značilo da se urednik AHK skripta.
-	)	
 	d_Lang088 =	Pokušajte izvoditi kao zajednički korisnik (ne administrator).
 	d_Lang089 =	Ne red bira!
 	d_Lang090 =	Molimo, odaberite redak za umetanje ili uklanjanje skupinu.
@@ -855,23 +818,17 @@
 	d_Lang093 =	Velike ikone
 	d_Lang094 =	Ova značajka zahtijeva sustav Windows Vista ili noviji.
 	d_Lang095 =	Korištenje ByRef uzrokuje parametar postati pseudonim za varijable prošao s pozivateljem. Drugim riječima, parametar a pozivatelja varijabilni i odnose se na istog sadržaja u memoriju.
-	d_Lang096 =	
-	(LTrim	
-		- NE PRILAŽETE VARIJABLI U POSTOCIMA ZNAKOVA OVDJE.
+	d_Lang096 =	- NE PRILAŽETE VARIJABLI U POSTOCIMA ZNAKOVA OVDJE.
 		- Povratak vrijednost mora biti izraz.
 		- Možete koristiti žice, varijabli, polja i funkcije. Vi svibanj također kombinirati bilo koje od njih.
 		- Za korištenje žice, priložiti ih u navodnike, npr: "Rezultat je:" A + B.
 		- Ako želite vratiti dodatne rezultate, vi svibanj također koristiti ByRef u parametrima.
 		- Nizovi se može koristiti za povratak više vrijednosti ili čak pod nazivom vrijednosti.
-	)	
-	d_Lang097 =	
-	(LTrim	
-		- NE PRILAŽETE VARIJABLI U POSTOCIMA ZNAKOVA OVDJE.
+	d_Lang097 =	- NE PRILAŽETE VARIJABLI U POSTOCIMA ZNAKOVA OVDJE.
 		- Većina AHK izraza su podržani.
 		- Možete koristiti žice, varijabli, polja i funkcije.
 		- Za korištenje žice, priložiti ih u navodnike, npr: var = "A".
 		- Više Izjave su podržani, npr: var = "a" || Instr (var, "b").
-	)	
 	d_Lang098 =	Ako jedan parametar ima zadanu vrijednost, sljedeći parametri moraju imati jedan previše.
 	d_Lang099 =	Naziv Funkcija sadrži nedopušteni znak.
 	d_Lang100 =	Goto, Gosub i oznake nisu dopušteni u funkcijama.
@@ -879,9 +836,7 @@
 	d_Lang102 =	je rezervirana riječ.
 		
 ; Start-up Tips		
-	Start_Tips =	
-	(LTrim	
-		Možete stvoriti makronaredbe pomoću naredbenog gumba u glavnom prozoru ili pomoću snimača kopirati svoje radnje. Idi na Opcije > Postavke > Snimanje odabrati ono što ulazi će biti zabilježen.
+	Start_Tips =	Možete stvoriti makronaredbe pomoću naredbenog gumba u glavnom prozoru ili pomoću snimača kopirati svoje radnje. Idi na Opcije > Postavke > Snimanje odabrati ono što ulazi će biti zabilježen.
 		Za korištenje rekorder brze zadatke ići na Opcije > Postavke > Snimanje i provjeriti "Clear List" opciju. Zatim pritisnite gumb rekord u glavnom prozoru i F10 izbiti trenutni makro i započeti novu s istim hotkey. Također možete provjeriti "Uvijek aktivan" opciju u glavnom prozoru da bi se snimanje i reprodukcija hotkeys aktivna.
 		Da biste dobili pomoć za određene naredbe desnom tipkom miša bilo gdje na naredbeni prozor pokazati linkove na AutoHotKey online pomoći.
 		Provjerite "Hvatanje Keys" opciju za ulazak i kombinacije tipki na Macro izravno iz glavnog prozora.
@@ -908,7 +863,6 @@
 		Per fer les seves macros només funcionen en una determinada finestra anar a Macro > Tecles d'accés directe sensibles al context.
 		Podeu definir les seves pròpies variables globals per ser carregat en l'arrencada i per a l'exportació. Aneu a Opcions > Configuració > Usuari Variables globals per afegir.
 		Podeu executar funcions avançades com ara substr i RegExReplace de la finestra Funcions (Inserir > Si Declaracions / variables / funcions). O executar les seves pròpies funcions de seqüència AutoHotkey externs.
-	)	
 		
 ; Tooltips		
 	AutoKey_TT =	Hotkey igrati Macro
@@ -952,43 +906,25 @@
 	ExpView2_TT =	Napredni Uređivač
 	OSProgB_TT =	Prikaz Progress Bar
 	OSTrans_TT =	Neprozirnost
-	MRel_TT =	
-	(LTrim	
-		Promjene u odnosu na trenutnu poziciju.
+	MRel_TT =	Promjene u odnosu na trenutnu poziciju.
 		Ili, ako se koristi s kontrola: Položaj u odnosu na kontrolu.
-	)	
-	Raw_TT =	
-	(LTrim	
-		SendRaw Naredba tumači sve znakove doslovno
+	Raw_TT =	SendRaw Naredba tumači sve znakove doslovno
 		umjesto prevođenje {} Upišite se na ENTER pritiska,
 		C ^ na Control-C, itd..
-	)	
-	ComText_TT =	
-	(LTrim	
-		Kad nije u RAW formatu, znakova Slijedeće
+	ComText_TT =	Kad nije u RAW formatu, znakova Slijedeće
 		su liječeni su modifikatori (ovi parametri utjecati
 		Samo vrlo sljedeći ključ)!, +, ^, #
-	)	
 	ComEvent_TT =	Stopa po kojoj tipke su poslani određuje ključne zakašnjenjem.
-	Clip_TT =	
-	(LTrim	
-		Privremeno koristi međuspremnik poslati tekst.
+	Clip_TT =	Privremeno koristi međuspremnik poslati tekst.
 		Kad je postupak završen, skripta
 		vraća izvorne sadržaja odlagališta.
 		(Ostavite prazno tekst zalijepiti trenutni sadržaj)
-	)	
-	EditPaste_TT =	
-	(LTrim	
-		Lijepi string na znak za umetanje / insert položaju
+	EditPaste_TT =	Lijepi string na znak za umetanje / insert položaju
 		u uređivanje kontrole (to ne utječe
 		sadržaj na prijenosnik).
-	)	
 	SetText_TT =	Mijenja tekst kontrole.
-	RelKey_TT =	
-	(LTrim	
-		Podaci miš pokreti i klikovi kao offseta
+	RelKey_TT =	Podaci miš pokreti i klikovi kao offseta
 		iz prethodne pozicije kada je održana.
-	)	
 	ToggleC_TT =	Aktivirajte Relativna snimanja kad Ključni državni uključen.
 	Relative_TT =	Koordinate u odnosu na aktivni prozor.
 	Screen_TT =	Koordinate se u odnosu na desktop (cijeli ekran).
@@ -997,132 +933,65 @@
 	Recurse_TT =	Ponavljajući u poddirektorijima (podmape) / potključevima
 	CmdSort_TT =	Poredaj po abecedi
 	Ex_EdScript_TT =	Otvori u vanjskom uređivaču
-	ExprLink2_TT =	
-	(LTrim	
-		- NE PRILAŽETE VARIJABLI U POSTOCIMA ZNAKOVA OVDJE.
+	ExprLink2_TT =	- NE PRILAŽETE VARIJABLI U POSTOCIMA ZNAKOVA OVDJE.
 		- Većina AHK izraza su podržani.
 		- Možete koristiti žice, varijabli, polja i funkcije.
 		- Za korištenje žice, priložiti ih u navodnike, npr: var = "A".
 		- Više Izjave su podržani, npr: var = "a" || Instr (var, "b").
-	)	
-	ExprLink3_TT =	
-	(LTrim	
-		- NE PRILAŽETE VARIJABLI U POSTOCIMA ZNAKOVA OVDJE.
+	ExprLink3_TT =	- NE PRILAŽETE VARIJABLI U POSTOCIMA ZNAKOVA OVDJE.
 		- Većina AHK izraza su podržani.
 		- Možete koristiti žice, varijabli, polja i funkcije.
 		- Za korištenje žice, priložiti ih u navodnike, npr: var = "A".
 		- Više Izjave su podržani, npr: var = "a" || Instr (var, "b").
-	)	
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	Dvaput kliknite za uređivanje
-	Ex_IfDir_TT =	
-	(LTrim	
-		Stvara kontekst osjetljive hotkeys i ovisno hotstrings
+	Ex_IfDir_TT =	Stvara kontekst osjetljive hotkeys i ovisno hotstrings
 		o vrsti prozora koji je aktivan ili ne postoji.
-	)	
-	Ex_IfDirType_TT =	
-	(LTrim	
-		Stvara kontekst osjetljive hotkeys i ovisno hotstrings
+	Ex_IfDirType_TT =	Stvara kontekst osjetljive hotkeys i ovisno hotstrings
 		o vrsti prozora koji je aktivan ili ne postoji.
-	)	
-	Ex_SM_TT =	
-	(LTrim	
-		Stvara Pošalji sinonim SendInput ili SendPlay umjesto
+	Ex_SM_TT =	Stvara Pošalji sinonim SendInput ili SendPlay umjesto
 		default (SendEvent). Također čini Kliknite i MouseMove / Kliknite / Povucite
 		koristiti navedenu metodu.
-	)	
-	SM_TT =	
-	(LTrim	
-		Događaj: Ovo je početna postavka koristi sve skripte.
+	SM_TT =	Događaj: Ovo je početna postavka koristi sve skripte.
 		Ona koristi metodu za slanje SendEvent, SendRaw, Kliknite i MouseMove / klikni / Povucite.
 		Ulaz: Prijelaz na SendInput metode za Pošalji, SendRaw, kliknite i MouseMove / klikni / Povucite.
 		InputThenPlay: Isto kao gore, osim que umjesto da padnu natrag na Event modu
 		Kad SendInput nije dostupna, ona se vraća na Play (u nastavku). Također ovaj uzroci
 		SendInput naredba sama vratiti na SendInput Kad Play nije dostupna.
 		Igra: Prijelaz na SendPlay metode za Pošalji, SendRaw, kliknite i MouseMove / Kliknite / Povucite.
-	)	
-	Ex_SI_TT =	
-	(LTrim	
-		Određuje li skripta je dozvoljeno ponovno pokrenuti Kad je već pokrenut.
-	)	
-	SI_TT =	
-	(LTrim	
-		Riječ FORCE preskače dijaloški okvir i automatski zamjenjuje stari primjerak,
+	Ex_SI_TT =	Određuje li skripta je dozvoljeno ponovno pokrenuti Kad je već pokrenut.
+	SI_TT =	Riječ FORCE preskače dijaloški okvir i automatski zamjenjuje stari primjerak,
 		Koji je sličan na snazi ​​do reload naredbe.
 		Riječ ignorirati preskoka dijaloški okvir i ostavlja stari primjerak koji je pokrenut.
 		Drugim riječima, pokušaji da se pokrene već prikazuju skripte se ignoriraju.
 		Riječ OFF Omogućuje više instance skripte voditi paralelno.
-	)	
-	Ex_ST_TT =	
-	(LTrim	
-		Postavlja odgovarajući ponašanje WinTitle parametar naredbe poput WinWait.
-	)	
-	ST_TT =	
-	(LTrim	
-		1: Prozor naslov mora početi s navedenom WinTitle da se utakmica.
+	Ex_ST_TT =	Postavlja odgovarajući ponašanje WinTitle parametar naredbe poput WinWait.
+	ST_TT =	1: Prozor naslov mora početi s navedenom WinTitle da se utakmica.
 		2: Prozor naslov može sadržavati bilo gdje unutar WinTitle da bude utakmica.
 		3: Prozor naslov mora biti jednak WinTitle da se utakmica.
 		RegEx: Promjene WinTitle, WinText, ExcludeTitle i ExcludeText biti regularni izrazi.
-	)	
-	Ex_DH_TT =	
-	(LTrim	
-		Određuje li nevidljivi prozori se 'vidi' u skripti.
-	)	
-	Ex_AF_TT =	
-	(LTrim	
-		Preskače nježan način aktiviranja prozor
+	Ex_DH_TT =	Određuje li nevidljivi prozori se 'vidi' u skripti.
+	Ex_AF_TT =	Preskače nježan način aktiviranja prozor
 		i ide ravno u nasilnom metodom.
-	)	
-	Ex_HK_TT =	
-	(LTrim	
-		Prisiljava korištenje kuka za provedbu svih
+	Ex_HK_TT =	Prisiljava korištenje kuka za provedbu svih
 		ili neki tipkovnica hotkeys.
-	)	
-	Ex_SK_TT =	
-	(LTrim	
-		Postavlja odgode nakon svakog que će se pojaviti
+	Ex_SK_TT =	Postavlja odgode nakon svakog que će se pojaviti
 		Pošalji pritiska poslao ili ControlSend.
-	)	
-	Ex_MD_TT =	
-	(LTrim	
-		Postavlja odgode nakon que će se pojaviti
+	Ex_MD_TT =	Postavlja odgode nakon que će se pojaviti
 		svaki klik miša ili pokret.
-	)	
-	Ex_SC_TT =	
-	(LTrim	
-		Postavlja odgode nakon que će se pojaviti
+	Ex_SC_TT =	Postavlja odgode nakon que će se pojaviti
 		Svaka kontrola-modificiranje naredbu.
-	)	
-	Ex_SW_TT =	
-	(LTrim	
-		Postavlja odgode nakon que će se pojaviti
+	Ex_SW_TT =	Postavlja odgode nakon que će se pojaviti
 		windowing svake naredbe, kao što su WinActivate.
-	)	
-	Ex_SB_TT =	
-	(LTrim	
-		Određuje koliko brzo će pokrenuti skriptu (utječe na korištenje procesora).
-	)	
-	Ex_NT_TT =	
-	(LTrim	
-		Onemogućuje prikazivanje ikona.
-	)	
-		
-	Ex_IN_TT =	
-	(LTrim	
-		Uzroci skriptu ponaša kao da je navedeno
+	Ex_SB_TT =	Određuje koliko brzo će pokrenuti skriptu (utječe na korištenje procesora).
+	Ex_NT_TT =	Onemogućuje prikazivanje ikona.
+	Ex_IN_TT =	Uzroci skriptu ponaša kao da je navedeno
 		File je sadržaji su prisutni na ovom točan položaj.
-	)	
-	Ex_PT_TT =	
-	(LTrim	
-		Održava skriptu trajno prikazivati
+	Ex_PT_TT =	Održava skriptu trajno prikazivati
 		(koji je, dok ga korisnik ne zatvori ili ExitApp je naišao).
-	)	
-	Ex_MT_TT =	
-	(LTrim	
-		Postavlja maksimalan broj istovremenih
+	Ex_MT_TT =	Postavlja maksimalan broj istovremenih
 		teme po hotkey ili hotstring.
-	)	
 	Ex_UV_TT =	Izvoz globalne varijable.
 	Ex_EdVars_TT =	Odaberite globalne varijable se izvozi.
 		
@@ -1171,7 +1040,6 @@
 		
 ; AHK Commands Tips		
 	Ahk_Cmd_Index =	
-	(LTrim	
 	Abs	Vraća apsolutnu vrijednost broja .
 	ASin	Vraća arkus sinus (čiji broj je broj sine ) u radijanima .
 	ACos	Vraća arkus kosinus (broj čiji kosinus je broj ) u radijanima .
@@ -1295,9 +1163,6 @@
 	InputBox	Prikazujeinput box pitati korisnika da unesete string .
 	InsertAt	Umeće jedan ili više vrijednosti, na određenom položaju unutar linearno.
 	InStr	Pretrage za određenu pojavu niza , s lijeve ili desne strane.
-	)	
-	Ahk_Cmd_Index = %Ahk_Cmd_Index%`n	
-	(LTrim	
 	KeyHistory	Prikazuje skriptu info i povijest najnovijih tipke i klikova mišem.
 	KeyWait	Waits za ključne ili miša / joysticka gumb pustiti na slobodu ili mišu.
 	Labels	Oznaka identificira liniju koda, i može se koristiti kao Goto cilj ili da se formira potprogram.
@@ -1429,5 +1294,3 @@
 	WinWaitActive	Waits sve navedeno prozor aktivan.
 	WinWaitClose	Waits sve navedeno prozor ne postoji.
 	WinWaitNotActive	Waits sve navedeno prozor nije aktivna.
-	)	
-return		

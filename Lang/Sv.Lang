@@ -45,7 +45,7 @@
 	r_Lang014 =	Imp&ortera Makro
 	r_Lang015 =	Spara a&ktuell Makro
 		
-; UDF Sub Menu		
+; Function Sub Menu		
 	u_Lang001 =	&Skapa Funktion
 	u_Lang002 =	&Lägg Parameter
 	u_Lang003 =	L&ägg Avkastning
@@ -716,12 +716,9 @@
 	d_Lang014 =	Scriptet Exporterades
 	d_Lang015 =	Filen har framgångsrikt exporterats!
 	d_Lang016 =	Klicka på "Hämta" för att markera positionen.
-	d_Lang017 =	
-	(LTrim	
-		- Välj fönstret.
+	d_Lang017 =	- Välj fönstret.
 		- Peka på önskat läge.
 		- Tryck på den högra knappen.
-	)	
 	d_Lang018 =	Pixelfärgen
 	d_Lang019 =	Rensa lista
 	d_Lang020 =	Stäng Makro?
@@ -738,26 +735,18 @@
 	d_Lang031 =	är inte ett giltigt funktionsnamn.
 	d_Lang032 =	Fel: Dubbla snabbtangenter.
 	d_Lang033 =	Aktivera makron
-	d_Lang034 =	
-	(LTrim	
-		- Klicka och dra med %DrawButton% för att välja område.
+	d_Lang034 =	- Klicka och dra med %DrawButton% för att välja område.
 		- Klicka och släpp utan att dra för att välja kontrollområde.
 		- Klicka på ett område utan en för att välja område i fönstret.
-	)	
 	d_Lang035 =	Fortsätta?
 	d_Lang036 =	Bild / Pixel hittad på
 	d_Lang037 =	Bild / Pixel hittades inte.
 	d_Lang038 =	Tryck på OK för att fortsätta.
 	d_Lang039 =	Tidsgräns!
-	d_Lang040 =	
-	(LTrim	
-		Den här funktionen kräver GDI+ bibliotek.
+	d_Lang040 =	Den här funktionen kräver GDI+ bibliotek.
 		Klicka på OK för att gå att ladda ner sidan.
-	)	
 	d_Lang041 =	Variabelnamnet innehåller ett ogiltigt tecken.
-	d_Lang042 =	
-	(LTrim	
-		Ogiltig operatör.
+	d_Lang042 =	Ogiltig operatör.
 		Följande aktörer accepteras:
 		=, ==, <>,! =,>, <,> =, <=
 		
@@ -765,13 +754,9 @@
 		MyVar > 1
 		MyVar = `%A_DDDD`%
 		Clipboard == `%MyVar`%
-	)	
 	d_Lang043 =	Eller använda kontrollerna verktygsfältet
-	d_Lang044 =	
-	(LTrim	
-		Den här funktionen kräver att funktionen Eval().
+	d_Lang044 =	Den här funktionen kräver att funktionen Eval().
 		Klicka på OK för att gå att ladda ner sidan.
-	)	
 	d_Lang045 =	Välj ett fönster i Internet Explorer!
 	d_Lang046 =	Anslutning lyckades!
 	d_Lang047 =	Det gick inte att ansluta!
@@ -783,35 +768,19 @@
 	d_Lang053 =	Visa inte det här meddelandet igen.
 	d_Lang054 =	Välj en Excel fönster!
 	d_Lang055 =	Välj ett AutoHotkey skript fil (. AHK) och en anger ett funktionsnamn.
-	d_Lang056 =	
-	(LTrim	
-		Den här funktionen kräver att AutoHotkey är installerad.
+	d_Lang056 =	Den här funktionen kräver att AutoHotkey är installerad.
 		Klicka på OK för att gå att ladda ner sidan.
-	)	
-	d_Lang057 =	
-	(LTrim	
-		- Tryck på Ctrl+piltangenterna för att flytta på det markerade området.
+	d_Lang057 =	- Tryck på Ctrl+piltangenterna för att flytta på det markerade området.
 		- Tryck på Skift+piltangenterna för att ändra storlek på markerade området.
 		- Tryck på Enter för att avsluta.
-	)	
-	d_Lang058 =	
-	(LTrim	
-		Vissa funktioner kräver admnistrator privilages för att kunna fungera korrekt.
+	d_Lang058 =	Vissa funktioner kräver admnistrator privilages för att kunna fungera korrekt.
 		Det rekommenderas att du starta programmet som administratör.
-	)	
-	d_Lang059 =	
-	(LTrim	
-		Detta kommando stöder inte uttryck eller funktioner.
+	d_Lang059 =	Detta kommando stöder inte uttryck eller funktioner.
 		Vänligen tilldela en variabel och använda den i parametern.
-	)	
 	d_Lang060 =	En ny version tillgänglig
-	d_Lang061 =	
-	(LTrim	
-		Vill du ladda ner den nu?
+	d_Lang061 =	Vill du ladda ner den nu?
 		
 		Vill du avaktivera automatiska Updatering  väljer du Hjälp > Kontrollera updatering vid uppstart
-	)	
-		
 	d_Lang062 =	Du har redan den senaste versionen.
 	d_Lang063 =	Ett fel inträffade vid kontrollen.
 	d_Lang064 =	COM-objekt fel i
@@ -819,12 +788,9 @@
 	d_Lang066 =	Specifikt
 	d_Lang067 =	Visa det här fönstret vid start
 	d_Lang068 =	Tips:
-	d_Lang069 =	
-	(LTrim	
-		Mycket tid och ansträngning har gått till utveckling av Pulover's Macro Creator. Om du tycker det är bra, kan du överväga att visa din uppskattning med en donation.
+	d_Lang069 =	Mycket tid och ansträngning har gått till utveckling av Pulover's Macro Creator. Om du tycker det är bra, kan du överväga att visa din uppskattning med en donation.
 		
 		Donera eller inte, kommer det inte vara någon skillnad i sina funktioner och funktionalitet.
-	)	
 	d_Lang070 =	Donate...
 	d_Lang071 =	NEJ TACK
 	d_Lang072 =	Stöd Open Source
@@ -842,11 +808,8 @@
 	d_Lang084 =	Vänligen spara dina ändringar innan du schemalägger aktiviteter.
 	d_Lang085 =	Saknas "End Loop" uttalande i Macro 
 	d_Lang086 =	Saknas "End If 'uttalande i Macro
-	d_Lang087 =	
-	(LTrim	
-		Lägg märke till att ändringar som gjorts i skriptet utanför programmet inte kommer att påverka din MAKRON på något sätt.
+	d_Lang087 =	Lägg märke till att ändringar som gjorts i skriptet utanför programmet inte kommer att påverka din MAKRON på något sätt.
 		 Den här funktionen är endast avsedd som en snabb exportfunktionen. PMC är inte avsett att vara en AHK script editor.
-	)	
 	d_Lang088 =	Försök att köra som vanlig användare (inte administratör).
 	d_Lang089 =	Ingen rad valts!
 	d_Lang090 =	Vänligen välj rad att sätta in eller ta bort gruppen.
@@ -855,23 +818,17 @@
 	d_Lang093 =	Stora ikoner
 	d_Lang094 =	Den här funktionen kräver Windows Vista eller senare.
 	d_Lang095 =	Användningen av ByRef orsakar en parameter för att bli ett alias för variabeln passerade in från den som ringer. Med andra ord, parametern och uppringarens variabel avser båda samma innehåll i minnet.
-	d_Lang096 =	
-	(LTrim	
-		- INTE BIFOGA VARIABLER I PROCENT TECKEN HÄR.
+	d_Lang096 =	- INTE BIFOGA VARIABLER I PROCENT TECKEN HÄR.
 		- Returvärdet måste vara ett uttryck.
 		- Du kan använda strängar, variabler, arrayer och funktioner. Du kan också kombinera någon av dessa.
 		- Om du vill använda strängar, bifoga dem i citationstecken, till exempel: "Resultatet är:" a + b.
 		- Om du vill återgå extra resultat, kan du också använda ByRef i parametrar.
 		- Arrays kan användas för att returnera flera värden eller ens namngivna värden.
-	)	
-	d_Lang097 =	
-	(LTrim	
-		- INTE BIFOGA VARIABLER I PROCENT TECKEN HÄR.
+	d_Lang097 =	- INTE BIFOGA VARIABLER I PROCENT TECKEN HÄR.
 		- De flesta av AHK uttryck stöds.
 		- Du kan använda strängar, variabler, arrayer och funktioner.
 		- Om du vill använda strängar, bifoga dem i citationstecken, till exempel: var = "a".
 		- Flera rapporter stöds, t.ex. var = "a" || InStr (var, "b").
-	)	
 	d_Lang098 =	Om en parameter har ett standardvärde, är följande parametrar som krävs för att ha en alltför.
 	d_Lang099 =	Funktionsnamnet innehåller ett ogiltigt tecken.
 	d_Lang100 =	Goto, Gosub och etikett är inte tillåtna funktioner.
@@ -879,9 +836,7 @@
 	d_Lang102 =	är ett reserverat ord.
 		
 ; Start-up Tips		
-	Start_Tips =	
-	(LTrim	
-		Du kan skapa makron med hjälp av kommandoknapparna i huvudfönstret eller använda inspelaren för att kopiera dina handlingar. Gå till Alternativ> Inställningar> Inspelning för att välja vilka ingångar kommer att registreras.
+	Start_Tips =	Du kan skapa makron med hjälp av kommandoknapparna i huvudfönstret eller använda inspelaren för att kopiera dina handlingar. Gå till Alternativ> Inställningar> Inspelning för att välja vilka ingångar kommer att registreras.
 		Om du vill använda brännaren för snabbuppgifter gå till Alternativ> Inställningar> Inspelning och kontrollera "Rensa lista" alternativet. Sedan klickar du på knappen Spela in i huvudfönstret och använd F10 för att rensa den aktuella Makro och starta en ny med samma kortkommando. Du kan också kolla "alltid aktiv" i huvudfönstret för att hålla Inspelning och uppspelning snabbtangenter aktiv.
 		För att få hjälp för ett visst kommando högerklicka någonstans på ett kommando fönster för att visa länkar till AutoHotkey onlinehjälpen.
 		Kontrollera "Capture Keys" alternativ för att ange nycklar och kombinationer till ditt makro direkt från huvudfönstret.
@@ -908,7 +863,6 @@
 		För att göra dina makron fungerar bara på ett visst fönster gå till Macro> sammanhangsberoende snabbtangenter.
 		Du kan ställa dina egna globala variabler som skall laddas vid start och som ska exporteras. Gå till Alternativ> Inställningar> Användarinställningar globala variabler för att lägga till dem.
 		Du kan köra avancerade funktioner såsom SUBSTR och RegExReplace från funktionsfönstret (Sätt> Om Uttalanden / variabler / funktioner). Eller köra egna funktioner från externa AutoHotkey skript.
-	)	
 		
 ; Tooltips		
 	AutoKey_TT =	Snabbknappen till spela Makro
@@ -952,43 +906,25 @@
 	ExpView2_TT =	Avancerad Redigerare
 	OSProgB_TT =	Visa framstegs Takt
 	OSTrans_TT =	Opacitet
-	MRel_TT =	
-	(LTrim	
-		Rörelser i förhållande till nuvarande position.
+	MRel_TT =	Rörelser i förhållande till nuvarande position.
 		Eller om de används med Kontroll: position i förhållande till Control.
-	)	
-	Raw_TT =	
-	(LTrim	
-		Den SendRaw Kommandot tolkar alla tecken bokstavligen
+	Raw_TT =	Den SendRaw Kommandot tolkar alla tecken bokstavligen
 		snarare än att översätta {Enter} till ENTER tangenttryckning,
 		^ C till Control-C, etc.
-	)	
-	ComText_TT =	
-	(LTrim	
-		När den inte rå läge följande tecken
+	ComText_TT =	När den inte rå läge följande tecken
 		behandlas som modifierare (dessa modifierare påverkar
 		endast mycket nästa tangent):, +, ^, #
-	)	
 	ComEvent_TT =	Den hastighet med vilken tangenttryckningar sänds bestäms av nyckel fördröjning.
-	Clip_TT =	
-	(LTrim	
-		Tillfälligt använder Urklipp för att skicka texten.
+	Clip_TT =	Tillfälligt använder Urklipp för att skicka texten.
 		När operationen är klar, skriptet
 		återställer de ursprungliga innehållet i Urklipp.
 		(Lämna text tom att klistra aktuellt innehåll)
-	)	
-	EditPaste_TT =	
-	(LTrim	
-		Klistrar sträng vid cirkumflex / insättningspunkten
+	EditPaste_TT =	Klistrar sträng vid cirkumflex / insättningspunkten
 		i en Edit-kontroll (detta påverkar inte
 		innehållet i Urklipp).
-	)	
 	SetText_TT =	Ändrar texten till en kontroll.
-	RelKey_TT =	
-	(LTrim	
-		Records musrörelser och klick som offset
+	RelKey_TT =	Records musrörelser och klick som offset
 		från tidigare ståndpunkt när den hålls.
-	)	
 	ToggleC_TT =	Aktivera Relativ inspelning när nyckeln staten är på.
 	Relative_TT =	Koordinater är i förhållande till den aktiva fönstret.
 	Screen_TT =	Koordinater i förhållande till skrivbordet (hela skärmen).
@@ -997,132 +933,65 @@
 	Recurse_TT =	Rekursiva i underkataloger (undermappar) / nycklar
 	CmdSort_TT =	Sortera alfabetiskt
 	Ex_EdScript_TT =	Avaa ulkoisen editorin
-	ExprLink2_TT =	
-	(LTrim	
-		- INTE BIFOGA VARIABLER I PROCENT TECKEN HÄR.
+	ExprLink2_TT =	- INTE BIFOGA VARIABLER I PROCENT TECKEN HÄR.
 		- De flesta av AHK uttryck stöds.
 		- Du kan använda strängar, variabler, arrayer och funktioner.
 		- Om du vill använda strängar, bifoga dem i citationstecken, till exempel: var = "a".
 		- Flera rapporter stöds, t.ex. var = "a" || InStr (var, "b").
-	)	
-	ExprLink3_TT =	
-	(LTrim	
-		- INTE BIFOGA VARIABLER I PROCENT TECKEN HÄR.
+	ExprLink3_TT =	- INTE BIFOGA VARIABLER I PROCENT TECKEN HÄR.
 		- De flesta av AHK uttryck stöds.
 		- Du kan använda strängar, variabler, arrayer och funktioner.
 		- Om du vill använda strängar, bifoga dem i citationstecken, till exempel: var = "a".
 		- Flera rapporter stöds, t.ex. var = "a" || InStr (var, "b").
-	)	
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	Dubbelklicka för att redigera
-	Ex_IfDir_TT =	
-	(LTrim	
-		Skapar sammanhangsberoende snabbtangenter och hotstrings beroende
+	Ex_IfDir_TT =	Skapar sammanhangsberoende snabbtangenter och hotstrings beroende
 		på vilken typ av fönster som är aktiv eller existerar.
-	)	
-	Ex_IfDirType_TT =	
-	(LTrim	
-		Skapar sammanhangsberoende snabbtangenter och hotstrings beroende
+	Ex_IfDirType_TT =	Skapar sammanhangsberoende snabbtangenter och hotstrings beroende
 		på vilken typ av fönster som är aktiv eller existerar.
-	)	
-	Ex_SM_TT =	
-	(LTrim	
-		Skicka synonymt med SendInput eller SendPlay snarare än
+	Ex_SM_TT =	Skicka synonymt med SendInput eller SendPlay snarare än
 		standard (sendEvent). Gör också Klicka och mouseMove / Klicka / dra
 		Använd den angivna metoden.
-	)	
-	SM_TT =	
-	(LTrim	
-		Händelse: Detta är utgångspunkten standard som används av alla skript.
+	SM_TT =	Händelse: Detta är utgångspunkten standard som används av alla skript.
 		Den använder sendEvent metoden för Send, SendRaw, klicka och mouseMove / Klicka / dra.
 		Ingång: Växlar till SendInput metoden för Send, SendRaw, klicka och mouseMove / Klicka / dra.
 		InputThenPlay: Samma som ovan, förutom att istället för att falla tillbaka till Event läge
 		när SendInput är tillgänglig återgår det till spelläge (nedan). Detta orsakar också
 		den SendInput kommandot själv att återgå till Play-läge när SendInput är tillgänglig.
 		Spela: Växlar till SendPlay metoden för Send, SendRaw, klicka och mouseMove / Klicka / dra.
-	)	
-	Ex_SI_TT =	
-	(LTrim	
-		Avgör om ett skript får köras igen när det redan är igång.
-	)	
-	SI_TT =	
-	(LTrim	
-		Ordet FORCE hoppar dialogrutan och ersätter den gamla instans automatiskt,
+	Ex_SI_TT =	Avgör om ett skript får köras igen när det redan är igång.
+	SI_TT =	Ordet FORCE hoppar dialogrutan och ersätter den gamla instans automatiskt,
 		som liknar verkan som Reload kommandot.
 		Ordet IGNORERA hoppar dialogrutan och lämnar den gamla instans som körs.
 		Med andra ord försöker lansera en redan fungerande script ignoreras.
 		Ordet OFF tillåter flera instanser av skriptet ska köras samtidigt.
-	)	
-	Ex_ST_TT =	
-	(LTrim	
-		Anger motsvarande beteende WinTitle parameter i kommandon som WinWait.
-	)	
-	ST_TT =	
-	(LTrim	
-		1: Ett fönster titel måste börja med den angivna WinTitle att vara en match.
+	Ex_ST_TT =	Anger motsvarande beteende WinTitle parameter i kommandon som WinWait.
+	ST_TT =	1: Ett fönster titel måste börja med den angivna WinTitle att vara en match.
 		2: Ett fönster titel kan innehålla WinTitle var som helst i att det är en match.
 		3: Ett fönster titel måste exakt matcha WinTitle vara en match.
 		RegEx: Ändringar WinTitle, WinText, ExcludeTitle och ExcludeText att vara reguljära uttryck.
-	)	
-	Ex_DH_TT =	
-	(LTrim	
-		Avgör om osynliga fönster "ses" av skriptet.
-	)	
-	Ex_AF_TT =	
-	(LTrim	
-		Hoppar den milda metoden för att aktivera en fönster
+	Ex_DH_TT =	Avgör om osynliga fönster "ses" av skriptet.
+	Ex_AF_TT =	Hoppar den milda metoden för att aktivera en fönster
 		och går direkt till kraftfulla metoden.
-	)	
-	Ex_HK_TT =	
-	(LTrim	
-		Tvingar att använda kroken för att genomföra alla
+	Ex_HK_TT =	Tvingar att använda kroken för att genomföra alla
 		eller vissa tangentbordets snabbknappar.
-	)	
-	Ex_SK_TT =	
-	(LTrim	
-		Ställer in fördröjningen som sker efter varje
+	Ex_SK_TT =	Ställer in fördröjningen som sker efter varje
 		tangenttryckning skickas med skicka eller ControlSend.
-	)	
-	Ex_MD_TT =	
-	(LTrim	
-		Ställer in fördröjningen som sker efter
+	Ex_MD_TT =	Ställer in fördröjningen som sker efter
 		varje mus rörelse eller klicka på.
-	)	
-	Ex_SC_TT =	
-	(LTrim	
-		Ställer in fördröjningen som sker efter
+	Ex_SC_TT =	Ställer in fördröjningen som sker efter
 		varje kontroll-ändra kommandot.
-	)	
-	Ex_SW_TT =	
-	(LTrim	
-		Ställer in fördröjningen som sker efter
+	Ex_SW_TT =	Ställer in fördröjningen som sker efter
 		varje fönsterfunktion kommando, såsom WinActivate.
-	)	
-	Ex_SB_TT =	
-	(LTrim	
-		Bestämmer hur snabbt ett skript körs (påverkar CPU-användning).
-	)	
-	Ex_NT_TT =	
-	(LTrim	
-		Inaktiverar visning av en ikon.
-	)	
-		
-	Ex_IN_TT =	
-	(LTrim	
-		Orsakar skriptet att agera som om den angivna
+	Ex_SB_TT =	Bestämmer hur snabbt ett skript körs (påverkar CPU-användning).
+	Ex_NT_TT =	Inaktiverar visning av en ikon.
+	Ex_IN_TT =	Orsakar skriptet att agera som om den angivna
 		filens innehåll är närvarande vid denna exakta positionen.
-	)	
-	Ex_PT_TT =	
-	(LTrim	
-		Håller ett skript permanent går
+	Ex_PT_TT =	Håller ett skript permanent går
 		(det vill säga, tills användaren stänger det eller ExitApp påträffas).
-	)	
-	Ex_MT_TT =	
-	(LTrim	
-		Anger det maximala antalet samtidiga
+	Ex_MT_TT =	Anger det maximala antalet samtidiga
 		trådar per hotkey eller hotstring.
-	)	
 	Ex_UV_TT =	Exportera globala variabler.
 	Ex_EdVars_TT =	Välj globala variabler som skall exporteras.
 		
@@ -1171,7 +1040,6 @@
 		
 ; AHK Commands Tips		
 	Ahk_Cmd_Index =	
-	(LTrim	
 	Abs	Returnerar det absoluta värdet för Antal .
 	ASin	Returnerar arcus sinus ( antalet vars sinus är Number ) i radianer .
 	ACos	Returnerar arcus ( det tal vars cosinus är Tal ) i radianer .
@@ -1295,9 +1163,6 @@
 	InputBox	Visar en ingång rutan för att uppmana användaren att ange en sträng .
 	InsertAt	Infogar ett eller flera värden vid en given position inom en linjär grupp.
 	InStr	Söker efter en viss förekomst av en sträng , från vänster eller höger.
-	)	
-	Ahk_Cmd_Index = %Ahk_Cmd_Index%`n	
-	(LTrim	
 	KeyHistory	Visar script info och en historia av de senaste tangenttryckningar och musklick.
 	KeyWait	Väntar på en knapp eller mus / joystick för att släppas eller intryckt.
 	Labels	En etikett identifierar en rad kod, och kan användas som ett Goto mål eller för att bilda en subrutin.
@@ -1429,5 +1294,3 @@
 	WinWaitActive	Väntar tills det angivna fönstret är aktivt.
 	WinWaitClose	Väntar tills det angivna fönstret inte existerar.
 	WinWaitNotActive	Väntar tills det angivna fönstret inte är aktivt.
-	)	
-return		

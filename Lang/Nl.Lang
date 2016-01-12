@@ -45,7 +45,7 @@
 	r_Lang014 =	&Import Macro
 	r_Lang015 =	Save &huidige Macro
 		
-; UDF Sub Menu		
+; Function Sub Menu		
 	u_Lang001 =	&Maak Functie
 	u_Lang002 =	&Voeg Parameter
 	u_Lang003 =	&Toevoegen Terug
@@ -716,12 +716,9 @@
 	d_Lang014 =	Script Geëxporteerde
 	d_Lang015 =	Het bestand is succesvol geëxporteerd!
 	d_Lang016 =	Klik op 'Get' om positie te markeren.
-	d_Lang017 =	
-	(LTrim	
-		- Selecteer in het venster.
+	d_Lang017 =	- Selecteer in het venster.
 		- Wijs de gewenste positie.
 		- Druk op de knop Rechts.
-	)	
 	d_Lang018 =	Pixel Kleur
 	d_Lang019 =	Lijst wissen
 	d_Lang020 =	Sluiten Macro?
@@ -738,26 +735,18 @@
 	d_Lang031 =	is geen geldige functienaam.
 	d_Lang032 =	Fout: Dubbele Hotkeys.
 	d_Lang033 =	Activeer Macro's
-	d_Lang034 =	
-	(LTrim	
-		- Klik en sleep met %DrawButton% naar gebied te selecteren.
+	d_Lang034 =	- Klik en sleep met %DrawButton% naar gebied te selecteren.
 		- Klik en laat los zonder te slepen om de controle te selecteren.
 		- Klik in een gebied zonder controle aan de oppervlakte van het venster te selecteren.
-	)	
 	d_Lang035 =	Doorgaan?
 	d_Lang036 =	Afbeelding / Pixel Gevonden op
 	d_Lang037 =	Afbeelding / Pixel niet gevonden.
 	d_Lang038 =	Druk op OK om verder te gaan.
 	d_Lang039 =	Time-out!
-	d_Lang040 =	
-	(LTrim	
-		Voor deze functie moet de GDI+ bibliotheek.
+	d_Lang040 =	Voor deze functie moet de GDI+ bibliotheek.
 		Klik op OK om naar de pagina te downloaden.
-	)	
 	d_Lang041 =	De naam van de variabele bevat een ongeldig teken.
-	d_Lang042 =	
-	(LTrim	
-		Ongeldige operator.
+	d_Lang042 =	Ongeldige operator.
 		De volgende operatoren worden geaccepteerd:
 		=, ==, <>,! =,>, <,> =, <=
 		
@@ -765,13 +754,9 @@
 		MyVar > 1
 		MyVar = `%A_DDDD`%
 		Clipboard == `%MyVar`%
-	)	
 	d_Lang043 =	Of gebruik de werkbalk besturingselementen
-	d_Lang044 =	
-	(LTrim	
-		Voor deze functie is de functie Eval().
+	d_Lang044 =	Voor deze functie is de functie Eval().
 		Klik op OK om naar de pagina te downloaden.
-	)	
 	d_Lang045 =	Selecteer een Internet Explorer-venster!
 	d_Lang046 =	Verbinding tot stand!
 	d_Lang047 =	Verbinden mislukt!
@@ -783,35 +768,19 @@
 	d_Lang053 =	Stel Toon dit bericht niet opnieuw.
 	d_Lang054 =	Selecteer een Microsoft Excel-venster!
 	d_Lang055 =	Selecteer een AutoHotkey script-bestand (. AHK) en een voer een functienaam.
-	d_Lang056 =	
-	(LTrim	
-		Voor deze functie is AutoHotkey geïnstalleerd.
+	d_Lang056 =	Voor deze functie is AutoHotkey geïnstalleerd.
 		Klik op OK om naar de pagina te downloaden.
-	)	
-	d_Lang057 =	
-	(LTrim	
-		- Druk op Ctrl+Pijl-toetsen om het geselecteerde gebied te verplaatsen.
+	d_Lang057 =	- Druk op Ctrl+Pijl-toetsen om het geselecteerde gebied te verplaatsen.
 		- Druk op Shift+pijltjestoetsen om geselecteerde gebied wijzigen.
 		- Druk op Enter om te voltooien.
-	)	
-	d_Lang058 =	
-	(LTrim	
-		Voor sommige functies is admnistrator privileges om goed te functioneren.
+	d_Lang058 =	Voor sommige functies is admnistrator privileges om goed te functioneren.
 		Het is aan te raden om de toepassing als Administrator opnieuw te starten.
-	)	
-	d_Lang059 =	
-	(LTrim	
-		Dit commando ondersteunt geen uitdrukkingen of functies.
+	d_Lang059 =	Dit commando ondersteunt geen uitdrukkingen of functies.
 		Gelieve toekennen van een variabele en gebruik het in de parameter.
-	)	
 	d_Lang060 =	Nieuwe versie beschikbaar
-	d_Lang061 =	
-	(LTrim	
-		Wilt u deze nu downloaden?
+	d_Lang061 =	Wilt u deze nu downloaden?
 		
 		Om automatische controles uit te schakelen selecteert u Help > Controleer bij opstarten
-	)	
-		
 	d_Lang062 =	Je hebt al de meest recente versie.
 	d_Lang063 =	Er is een fout opgetreden tijdens het controleren.
 	d_Lang064 =	COM-object fout in
@@ -819,12 +788,9 @@
 	d_Lang066 =	Specifiek
 	d_Lang067 =	Laat dit venster bij het opstarten
 	d_Lang068 =	tips:
-	d_Lang069 =	
-	(LTrim	
-		Er is veel tijd en moeite gestoken in de ontwikkeling van Pulover's Macro Creator. Als je het nuttig vinden, kunt u overwegen tonen van uw waardering met een donatie.
+	d_Lang069 =	Er is veel tijd en moeite gestoken in de ontwikkeling van Pulover's Macro Creator. Als je het nuttig vinden, kunt u overwegen tonen van uw waardering met een donatie.
 		
 		Doneren of niet, zal er geen verschil in de functies en functionaliteit.
-	)	
 	d_Lang070 =	Doneren...
 	d_Lang071 =	Nee, bedankt
 	d_Lang072 =	Ondersteuning van Open Source software
@@ -842,11 +808,8 @@
 	d_Lang084 =	Bewaar je veranderingen voordat een taak plannen.
 	d_Lang085 =	Ontbrekende "End Loop" verklaring in Macro 
 	d_Lang086 =	Ontbrekende "End If" verklaring in Macro
-	d_Lang087 =	
-	(LTrim	
-		Merk op dat wijzigingen in het script buiten het programma NIET uw macro zal invloed hebben op geen enkele manier.
+	d_Lang087 =	Merk op dat wijzigingen in het script buiten het programma NIET uw macro zal invloed hebben op geen enkele manier.
 		 Deze functie is alleen bedoeld als een snelle exportfunctie. PMC is niet bedoeld om een AHK-script editor.
-	)	
 	d_Lang088 =	Probeer zo gewone gebruiker (geen beheerder) draaien.
 	d_Lang089 =	Geen rij geselecteerd!
 	d_Lang090 =	Alstublieft, selecteer een rij te plaatsen of te verwijderen van de groep.
@@ -855,23 +818,17 @@
 	d_Lang093 =	Grote pictogrammen
 	d_Lang094 =	Deze functie vereist Windows Vista of hoger.
 	d_Lang095 =	Het gebruik van ByRef veroorzaakt een parameter een alias voor de variabele doorgegeven aan de oproeper worden. Met andere woorden, de variabele parameter en de beller beide naar dezelfde inhoud in het geheugen.
-	d_Lang096 =	
-	(LTrim	
-		- NIET BIJGAAND VARIABELEN IN PROCENTTEKENS HIER.
+	d_Lang096 =	- NIET BIJGAAND VARIABELEN IN PROCENTTEKENS HIER.
 		- Return waarde moet een uitdrukking zijn.
 		- U kunt gebruik maken van snaren, variabelen, arrays en functies. U kunt ook een van deze te combineren.
 		- Om strings gebruiken, omsluiten ze tussen aanhalingstekens, bijvoorbeeld: "Resultaat is:" a + b.
 		- Als u wilt extra resultaten, kunt u ook ByRef gebruiken parameters.
 		- Arrays kunnen worden gebruikt om meerdere waarden of zelfs noemde waarden retourneren.
-	)	
-	d_Lang097 =	
-	(LTrim	
-		- NIET BIJGAAND VARIABELEN IN PROCENTTEKENS HIER.
+	d_Lang097 =	- NIET BIJGAAND VARIABELEN IN PROCENTTEKENS HIER.
 		- De meeste van de AHK uitdrukkingen worden ondersteund.
 		- U kunt gebruik maken van snaren, variabelen, arrays en functies.
 		- Om strings gebruiken, omsluiten ze tussen aanhalingstekens, bijvoorbeeld: var = "a".
 		- Meerdere verklaringen worden ondersteund, bijvoorbeeld: var = "a" || InStr (var, "b").
-	)	
 	d_Lang098 =	Als een parameter een standaardwaarde, worden de volgende parameters vereist om een te hebben.
 	d_Lang099 =	De naam van de functie bevat een ongeldig teken.
 	d_Lang100 =	Goto, Gosub en Label zijn niet toegestaan in functies.
@@ -879,9 +836,7 @@
 	d_Lang102 =	is een gereserveerd woord.
 		
 ; Start-up Tips		
-	Start_Tips =	
-	(LTrim	
-		U kunt macro's met behulp van de Command Knoppen in het hoofdvenster of het gebruik van de recorder om uw acties te kopiëren creëren. Ga naar Opties > Instellingen > Opname te selecteren wat input wordt opgenomen.
+	Start_Tips =	U kunt macro's met behulp van de Command Knoppen in het hoofdvenster of het gebruik van de recorder om uw acties te kopiëren creëren. Ga naar Opties > Instellingen > Opname te selecteren wat input wordt opgenomen.
 		Om de recorder te gebruiken voor snelle taken ga naar Opties > Instellingen > Opname en controleer de "Lijst wissen" optie. Klik vervolgens op de knop Opnemen in het hoofdvenster en gebruik F10 om de huidige macro wissen en een nieuwe te beginnen met dezelfde sneltoets. U kunt ook de "Always Active"-optie in het hoofdvenster naar Opnemen en afspelen sneltoetsen actief te houden.
 		Om hulp voor een specifieke opdracht krijgen klik met de rechtermuisknop ergens op een commando venster om links naar AutoHotkey online Help te tonen.
 		Controleer de "Capture Sleutels" optie om sleutels en combinaties direct in te voeren om uw Macro vanuit het hoofdvenster.
@@ -908,7 +863,6 @@
 		Om uw macro's werken alleen op een bepaald venster ga naar Macro > Context Sensitive Sneltoetsen.
 		U kunt uw eigen globale variabelen ingesteld bij het opstarten en uit te voeren om te worden geladen. Ga naar Opties > Instellingen > Gebruiker globale variabelen om ze toe te voegen.
 		U kunt geavanceerde functies zoals substr en RegExReplace uit het raam Functions (Invoegen > Als Verklaringen / variabelen / functies) draaien. Of draai je eigen functies van externe AutoHotkey scripts.
-	)	
 		
 ; Tooltips		
 	AutoKey_TT =	Sneltoets om Macro te spelen
@@ -952,43 +906,25 @@
 	ExpView2_TT =	Geavanceerde Editor
 	OSProgB_TT =	Weergave Progress Bar
 	OSTrans_TT =	Ondoorzichtigheid
-	MRel_TT =	
-	(LTrim	
-		Bewegingen ten opzichte van de huidige positie.
+	MRel_TT =	Bewegingen ten opzichte van de huidige positie.
 		Of samen met Control: Positie tov de controlegroep.
-	)	
-	Raw_TT =	
-	(LTrim	
-		De SendRaw opdracht interpreteert alle tekens letterlijk
+	Raw_TT =	De SendRaw opdracht interpreteert alle tekens letterlijk
 		in plaats van het vertalen van {Enter} om een ​​ENTER toetsaanslag,
 		^ C om Control-C, enz.
-	)	
-	ComText_TT =	
-	(LTrim	
-		Wanneer niet in raw modus, de volgende tekens
+	ComText_TT =	Wanneer niet in raw modus, de volgende tekens
 		worden behandeld als modifiers (deze bepalingen van invloed zijn
 		alleen de volgende toets):, +, ^, #
-	)	
 	ComEvent_TT =	De snelheid waarmee toetsaanslagen worden verzonden, wordt bepaald door de belangrijkste vertraging.
-	Clip_TT =	
-	(LTrim	
-		Tijdelijk gebruik van het klembord te sturen van de tekst.
+	Clip_TT =	Tijdelijk gebruik van het klembord te sturen van de tekst.
 		Als de handeling is afgerond, het script
 		herstelt de oorspronkelijke inhoud van het klembord.
 		(Laat tekst leeg om de huidige inhoud plakken)
-	)	
-	EditPaste_TT =	
-	(LTrim	
-		Pasta's String op het dakje / invoegpositie
+	EditPaste_TT =	Pasta's String op het dakje / invoegpositie
 		in een Edit-besturingselement (dit heeft geen invloed
 		de inhoud van het klembord).
-	)	
 	SetText_TT =	Hiermee wijzigt u de tekst van een controle.
-	RelKey_TT =	
-	(LTrim	
-		Records muis bewegingen en klikken als offsets
+	RelKey_TT =	Records muis bewegingen en klikken als offsets
 		van de vorige positie bij gehouden.
-	)	
 	ToggleC_TT =	Activeer Relatieve opnemen wanneer belangrijke staat is op.
 	Relative_TT =	Coördinaten zijn ten opzichte van het actieve venster.
 	Screen_TT =	Coördinaten zijn ten opzichte van het bureaublad (hele scherm).
@@ -997,132 +933,65 @@
 	Recurse_TT =	Recursieve in submappen (submappen) / Subsleutels
 	CmdSort_TT =	Alfabetisch sorteren
 	Ex_EdScript_TT =	Open in externe editor
-	ExprLink2_TT =	
-	(LTrim	
-		- NIET BIJGAAND VARIABELEN IN PROCENTTEKENS HIER.
+	ExprLink2_TT =	- NIET BIJGAAND VARIABELEN IN PROCENTTEKENS HIER.
 		- De meeste van de AHK uitdrukkingen worden ondersteund.
 		- U kunt gebruik maken van snaren, variabelen, arrays en functies.
 		- Om strings gebruiken, omsluiten ze tussen aanhalingstekens, bijvoorbeeld: var = "a".
 		- Meerdere verklaringen worden ondersteund, bijvoorbeeld: var = "a" || InStr (var, "b").
-	)	
-	ExprLink3_TT =	
-	(LTrim	
-		- NIET BIJGAAND VARIABELEN IN PROCENTTEKENS HIER.
+	ExprLink3_TT =	- NIET BIJGAAND VARIABELEN IN PROCENTTEKENS HIER.
 		- De meeste van de AHK uitdrukkingen worden ondersteund.
 		- U kunt gebruik maken van snaren, variabelen, arrays en functies.
 		- Om strings gebruiken, omsluiten ze tussen aanhalingstekens, bijvoorbeeld: var = "a".
 		- Meerdere verklaringen worden ondersteund, bijvoorbeeld: var = "a" || InStr (var, "b").
-	)	
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	Dubbelklik op om te bewerken
-	Ex_IfDir_TT =	
-	(LTrim	
-		Maakt contextgevoelige sneltoetsen en hotstrings afhankelijk
+	Ex_IfDir_TT =	Maakt contextgevoelige sneltoetsen en hotstrings afhankelijk
 		van het type venster dat actief is of bestaat.
-	)	
-	Ex_IfDirType_TT =	
-	(LTrim	
-		Maakt contextgevoelige sneltoetsen en hotstrings afhankelijk
+	Ex_IfDirType_TT =	Maakt contextgevoelige sneltoetsen en hotstrings afhankelijk
 		van het type venster dat actief is of bestaat.
-	)	
-	Ex_SM_TT =	
-	(LTrim	
-		Maakt Stuur synoniem met SendInput of SendPlay in plaats van
+	Ex_SM_TT =	Maakt Stuur synoniem met SendInput of SendPlay in plaats van
 		de standaard (sendEvent). Maakt ook Klik en mouseMove / Klik / Sleep
 		gebruik maken van de voorgeschreven methode.
-	)	
-	SM_TT =	
-	(LTrim	
-		Evenement: Dit is het startpunt standaard gebruikt door alle scripts.
+	SM_TT =	Evenement: Dit is het startpunt standaard gebruikt door alle scripts.
 		Het maakt gebruik van de sendEvent methode voor het verzenden, SendRaw, Klik, en mouseMove / Klik / slepen.
 		Input: Schakelt naar de SendInput methode voor het verzenden, SendRaw, Klik, en mouseMove / Klik / slepen.
 		InputThenPlay: Hetzelfde als hierboven, behalve dat in plaats van terug te vallen tot Event modus
 		wanneer SendInput niet beschikbaar is, keert het terug naar Play mode (zie hieronder). Dit veroorzaakt ook
 		de SendInput opdracht zelf om terug te keren naar de afspeelmodus wanneer SendInput niet beschikbaar is.
 		Speel: Schakelt naar de SendPlay methode voor het verzenden, SendRaw, Klik, en mouseMove / Klik / slepen.
-	)	
-	Ex_SI_TT =	
-	(LTrim	
-		Bepaalt of een script mag opnieuw uit te voeren wanneer deze al wordt uitgevoerd.
-	)	
-	SI_TT =	
-	(LTrim	
-		Het woord FORCE slaat het dialoogvenster en vervangt de oude instantie automatisch,
+	Ex_SI_TT =	Bepaalt of een script mag opnieuw uit te voeren wanneer deze al wordt uitgevoerd.
+	SI_TT =	Het woord FORCE slaat het dialoogvenster en vervangt de oude instantie automatisch,
 		die vergelijkbaar in effect op de Reload commando.
 		Het woord IGNORE slaat het dialoogvenster en laat de oude instance die wordt uitgevoerd.
 		Met andere woorden, zijn pogingen om een ​​reeds lopend script te starten genegeerd.
 		Het woord OFF kunnen meerdere exemplaren van het script gelijktijdig te gebruiken.
-	)	
-	Ex_ST_TT =	
-	(LTrim	
-		Hiermee stelt u de bijpassende gedrag van de WinTitle parameter in commando's zoals WinWait.
-	)	
-	ST_TT =	
-	(LTrim	
-		1: Er wordt een venster de titel moet beginnen met de opgegeven WinTitle om een ​​wedstrijd te zijn.
+	Ex_ST_TT =	Hiermee stelt u de bijpassende gedrag van de WinTitle parameter in commando's zoals WinWait.
+	ST_TT =	1: Er wordt een venster de titel moet beginnen met de opgegeven WinTitle om een ​​wedstrijd te zijn.
 		2: een venster van de titel kan bevatten WinTitle ergens in dat het een match.
 		3: een venster van de titel moet exact overeenkomen WinTitle om een ​​wedstrijd te zijn.
 		RegEx: Veranderingen WinTitle, WinText, ExcludeTitle, en ExcludeText te zijn reguliere expressies.
-	)	
-	Ex_DH_TT =	
-	(LTrim	
-		Bepaalt of onzichtbare ramen zijn 'gezien' door het script.
-	)	
-	Ex_AF_TT =	
-	(LTrim	
-		Slaat de zachte methode voor het activeren van een venster
+	Ex_DH_TT =	Bepaalt of onzichtbare ramen zijn 'gezien' door het script.
+	Ex_AF_TT =	Slaat de zachte methode voor het activeren van een venster
 		en gaat rechtstreeks naar de krachtige methode.
-	)	
-	Ex_HK_TT =	
-	(LTrim	
-		Legt het gebruik van de haak genoeg implementeren
+	Ex_HK_TT =	Legt het gebruik van de haak genoeg implementeren
 		of een toetsenbord sneltoetsen.
-	)	
-	Ex_SK_TT =	
-	(LTrim	
-		Hiermee stelt u de vertraging die zal plaatsvinden na elke
+	Ex_SK_TT =	Hiermee stelt u de vertraging die zal plaatsvinden na elke
 		toetsaanslag per verzenden of ControlSend.
-	)	
-	Ex_MD_TT =	
-	(LTrim	
-		Hiermee stelt u de vertraging die zal plaatsvinden na
+	Ex_MD_TT =	Hiermee stelt u de vertraging die zal plaatsvinden na
 		elke muisbeweging of klik op.
-	)	
-	Ex_SC_TT =	
-	(LTrim	
-		Hiermee stelt u de vertraging die zal plaatsvinden na
+	Ex_SC_TT =	Hiermee stelt u de vertraging die zal plaatsvinden na
 		elke controle-modificerende commando.
-	)	
-	Ex_SW_TT =	
-	(LTrim	
-		Hiermee stelt u de vertraging die zal plaatsvinden na
+	Ex_SW_TT =	Hiermee stelt u de vertraging die zal plaatsvinden na
 		elke windowing commando, zoals WinActivate.
-	)	
-	Ex_SB_TT =	
-	(LTrim	
-		Bepaalt hoe snel een script wordt uitgevoerd (bij gebruik van de CPU).
-	)	
-	Ex_NT_TT =	
-	(LTrim	
-		Schakelt de weergave van een pictogram in het systeemvak.
-	)	
-		
-	Ex_IN_TT =	
-	(LTrim	
-		Veroorzaakt het script te gedragen alsof de opgegeven
+	Ex_SB_TT =	Bepaalt hoe snel een script wordt uitgevoerd (bij gebruik van de CPU).
+	Ex_NT_TT =	Schakelt de weergave van een pictogram in het systeemvak.
+	Ex_IN_TT =	Veroorzaakt het script te gedragen alsof de opgegeven
 		bestand de inhoud van zijn aanwezig op deze exacte positie.
-	)	
-	Ex_PT_TT =	
-	(LTrim	
-		Houdt een script dat zich permanent langs
+	Ex_PT_TT =	Houdt een script dat zich permanent langs
 		(dat is, totdat de gebruiker sluit het of ExitApp wordt aangetroffen).
-	)	
-	Ex_MT_TT =	
-	(LTrim	
-		Stelt het maximum aantal gelijktijdige
+	Ex_MT_TT =	Stelt het maximum aantal gelijktijdige
 		draden per sneltoets of hotstring.
-	)	
 	Ex_UV_TT =	Exporteren globale variabelen.
 	Ex_EdVars_TT =	Selecteer globale variabelen te exporteren.
 		
@@ -1171,7 +1040,6 @@
 		
 ; AHK Commands Tips		
 	Ahk_Cmd_Index =	
-	(LTrim	
 	Abs	Geeft de absolute waarde van het nummer .
 	ASin	Geeft de boogsinus ( het getal waarvan de sinus is Number ) in radialen .
 	ACos	Geeft de boogcosinus ( het getal waarvan de cosinus is Number ) in radialen .
@@ -1295,9 +1163,6 @@
 	InputBox	Geeft een invoerveld aan de gebruiker vragen om een string in te voeren .
 	InsertAt	Voegt een of meer waarden op een gegeven positie in een lineaire array.
 	InStr	Zoekt een bepaalde optreden van een string van links of rechts .
-	)	
-	Ahk_Cmd_Index = %Ahk_Cmd_Index%`n	
-	(LTrim	
 	KeyHistory	Geeft script info en een geschiedenis van de meest recente toetsaanslagen en muisklikken.
 	KeyWait	Wacht op een toets of muis / joystick knop worden vrijgegeven of ingedrukt.
 	Labels	Een label identificeert een regel code, en kan worden gebruikt als een doelwit Goto of een subroutine vormen.
@@ -1429,5 +1294,3 @@
 	WinWaitActive	Wacht tot het opgegeven venster actief is.
 	WinWaitClose	Wacht tot de opgegeven venster niet bestaat.
 	WinWaitNotActive	Wacht tot het opgegeven venster niet actief is.
-	)	
-return		

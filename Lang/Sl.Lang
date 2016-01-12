@@ -45,7 +45,7 @@
 	r_Lang014 =	Uvoz &Makro
 	r_Lang015 =	S&hrani trenutni makro
 		
-; UDF Sub Menu		
+; Function Sub Menu		
 	u_Lang001 =	&Ustvarite Funkcija
 	u_Lang002 =	&Dodaj Parameter
 	u_Lang003 =	D&odaj Return
@@ -716,12 +716,9 @@
 	d_Lang014 =	Scenarij Izvozni
 	d_Lang015 =	Datoteka je bila uspešno izvažajo!
 	d_Lang016 =	Kliknite na "Prijava", da označite položaj.
-	d_Lang017 =	
-	(LTrim	
-		- Izberite okno.
+	d_Lang017 =	- Izberite okno.
 		- Pokažite na želeni položaj.
 		- Pritisnite gumb desno.
-	)	
 	d_Lang018 =	Barva pixel
 	d_Lang019 =	Jasno Seznam
 	d_Lang020 =	Zapri Macro?
@@ -738,26 +735,18 @@
 	d_Lang031 =	ni veljavno ime funkcije.
 	d_Lang032 =	Napaka: Podvojeni Bližnjice.
 	d_Lang033 =	Vključite Makri
-	d_Lang034 =	
-	(LTrim	
-		- Kliknite in povlecite z %DrawButton% izberite področje.
+	d_Lang034 =	- Kliknite in povlecite z %DrawButton% izberite področje.
 		- Kliknite in sprostiti brez vlečenjem izberite območje nadzora.
 		- Klikni na območju brez nadzora na izbrano površino okna.
-	)	
 	d_Lang035 =	Nadaljevati?
 	d_Lang036 =	Image / Pixel Najdeno na
 	d_Lang037 =	Image / Pixel ni bilo mogoče najti.
 	d_Lang038 =	Za nadaljevanje pritisnite OK.
 	d_Lang039 =	Timeout!
-	d_Lang040 =	
-	(LTrim	
-		Ta funkcija zahteva GDI+knjižnice.
+	d_Lang040 =	Ta funkcija zahteva GDI+knjižnice.
 		Kliknite V redu, da gredo na stran za prenos.
-	)	
 	d_Lang041 =	Ime spremenljivke vsebuje neveljaven znak.
-	d_Lang042 =	
-	(LTrim	
-		Neveljavna operaterja.
+	d_Lang042 =	Neveljavna operaterja.
 		Naslednji subjekti se sprejmejo:
 		=, ==, <>,! =,>, <,> =, <=
 		
@@ -765,13 +754,9 @@
 		MyVar > 1
 		MyVar = `%A_DDDD`%
 		Clipboard == `%MyVar`%
-	)	
 	d_Lang043 =	Ali pa uporabite orodno vrstico Kontrolniki.
-	d_Lang044 =	
-	(LTrim	
-		Ta funkcija zahteva Eval () funkcijo.
+	d_Lang044 =	Ta funkcija zahteva Eval () funkcijo.
 		Kliknite V redu, da gredo na stran za prenos.
-	)	
 	d_Lang045 =	Prosimo, izberite okno Internet Explorerja!
 	d_Lang046 =	Povezava uspešno!
 	d_Lang047 =	Povezava ni uspela!
@@ -783,35 +768,19 @@
 	d_Lang053 =	Ne kaži tega sporočila.
 	d_Lang054 =	Izberite okno za Excel!
 	d_Lang055 =	Prosimo, izberite datoteko skripta AutoHotkey (. AHK) in vnesti Ime funkcije.
-	d_Lang056 =	
-	(LTrim	
-		Ta funkcija zahteva AutoHotkey nameščen.
+	d_Lang056 =	Ta funkcija zahteva AutoHotkey nameščen.
 		Kliknite V redu, da gredo na stran za prenos.
-	)	
-	d_Lang057 =	
-	(LTrim	
-		- Pritisnite Ctrl+smerne tipke za premikanje izbrano območje.
+	d_Lang057 =	- Pritisnite Ctrl+smerne tipke za premikanje izbrano območje.
 		- Pritisnite tipko Shift+smerne tipke, da spremenite velikost izbranega območja.
 		- Pritisnite Enter, da končate.
-	)	
-	d_Lang058 =	
-	(LTrim	
-		Nekatere funkcije zahtevajo admnistrator privilages, da bi deloval pravilno.
+	d_Lang058 =	Nekatere funkcije zahtevajo admnistrator privilages, da bi deloval pravilno.
 		Zato je priporočljivo, da ponovno vlogo kot skrbnik.
-	)	
-	d_Lang059 =	
-	(LTrim	
-		Ta ukaz ne podpira izrazov ali funkcij.
+	d_Lang059 =	Ta ukaz ne podpira izrazov ali funkcij.
 		Prosimo, določite spremenljivko in jo uporabite v parametru.
-	)	
 	d_Lang060 =	Nova različica je na voljo
-	d_Lang061 =	
-	(LTrim	
-		Želite prenesti sedaj?
+	d_Lang061 =	Želite prenesti sedaj?
 		
 		Če želite onemogočiti samodejne preglede izberite Pomoč> Preveri na start-up. > Preveri ob zagonu
-	)	
-		
 	d_Lang062 =	Že imate najnovejšo različico.
 	d_Lang063 =	Napaka pri preverjanju do napake.
 	d_Lang064 =	COM objekt napaka
@@ -819,12 +788,9 @@
 	d_Lang066 =	Posebej
 	d_Lang067 =	Prikaži to okno ob zagonu
 	d_Lang068 =	Nasveti:
-	d_Lang069 =	
-	(LTrim	
-		Veliko časa in truda je šlo v razvoju Pulover's Macro Creator. Če se vam zdi, da je koristno, vas prosimo, menijo, ki prikazuje vaše zadovoljstvo z darovanjem.
+	d_Lang069 =	Veliko časa in truda je šlo v razvoju Pulover's Macro Creator. Če se vam zdi, da je koristno, vas prosimo, menijo, ki prikazuje vaše zadovoljstvo z darovanjem.
 		
 		Donacijo ali ne, ne bo nobene razlike v svojih funkcij in funkcionalnosti.
-	)	
 	d_Lang070 =	Donate...
 	d_Lang071 =	Ne, hvala
 	d_Lang072 =	Podpira odprtokodne programske opreme
@@ -842,11 +808,8 @@
 	d_Lang084 =	Prosimo, shranite spremembe, preden načrtujete opravilo.
 	d_Lang085 =	Chýbajúce "End Loop" vyhlásenie v Makro 
 	d_Lang086 =	Chýbajúce "End If" vyhlásenie v Makro
-	d_Lang087 =	
-	(LTrim	
-		Obvestilo, da bodo spremembe v pisavi izven programa ne vpliva makre na kakršen koli način.
+	d_Lang087 =	Obvestilo, da bodo spremembe v pisavi izven programa ne vpliva makre na kakršen koli način.
 		 Ta funkcija je mišljen zgolj kot funkcijo hitrega izvoza. PMC ni mišljeno, da bi urednik AHK scenarij.
-	)	
 	d_Lang088 =	Poskusite zagnati kot skupni uporabniku (ne administratorja).
 	d_Lang089 =	Ne vrstica izbrana!
 	d_Lang090 =	Prosimo, izberite vrstico za vstavljanje ali odstraniti skupino.
@@ -855,23 +818,17 @@
 	d_Lang093 =	Velike ikone
 	d_Lang094 =	Ta funkcija zahteva Windows Vista ali višje.
 	d_Lang095 =	Uporaba ByRef povzroči parameter, da postane ime za spremenljivko sprejet leta od klicatelja. Z drugimi besedami, parameter in spremenljiva kličočega se oba nanašata na enako vsebino v pomnilniku.
-	d_Lang096 =	
-	(LTrim	
-		- NE PRILOŽITI SPREMENLJIVK ZNAKI ZA ODSTOTEK TUKAJ.
+	d_Lang096 =	- NE PRILOŽITI SPREMENLJIVK ZNAKI ZA ODSTOTEK TUKAJ.
 		- Vrnjena vrednost mora biti izraz.
 		- Lahko uporabite strune, spremenljivke, polja in funkcije. Prav tako lahko kombinirate katerega koli od teh.
 		- Za uporabo nizov, jih priložite v narekovajih, na primer: "Rezultat je:" a + b.
 		- Če se želite vrniti dodatne rezultate, lahko uporabite tudi ByRef v parametrih.
 		- Polja lahko uporabimo za vrnitev več vrednosti ali celo imenovanih vrednosti.
-	)	
-	d_Lang097 =	
-	(LTrim	
-		- NE PRILOŽITI SPREMENLJIVK ZNAKI ZA ODSTOTEK TUKAJ.
+	d_Lang097 =	- NE PRILOŽITI SPREMENLJIVK ZNAKI ZA ODSTOTEK TUKAJ.
 		- Večina AHK izrazov so podprte.
 		- Lahko uporabite strune, spremenljivke, polja in funkcije.
 		- Za uporabo nizov, jih priložite v narekovajih, na primer: var = "A".
 		- Več Izjave so podprti, na primer: var = "a" || Instr (var, "b").
-	)	
 	d_Lang098 =	Če ima en parameter privzeto vrednost, so potrebni naslednji parametri, da imajo eno preveč.
 	d_Lang099 =	Ime Funkcija vsebuje neveljaven znak.
 	d_Lang100 =	Goto, Gosub in Label niso dovoljeni funkcij.
@@ -879,9 +836,7 @@
 	d_Lang102 =	je rezervirana beseda.
 		
 ; Start-up Tips		
-	Start_Tips =	
-	(LTrim	
-		Lahko ustvarite makre z uporabo ukaznih gumbov v glavnem oknu ali z uporabo snemalnika kopirati dejanja. Pojdi na Možnosti> Nastavitve> Snemanje izbrati tisto vhodi bo posnet.
+	Start_Tips =	Lahko ustvarite makre z uporabo ukaznih gumbov v glavnem oknu ali z uporabo snemalnika kopirati dejanja. Pojdi na Možnosti> Nastavitve> Snemanje izbrati tisto vhodi bo posnet.
 		Za uporabo snemalnika za hitre naloge, pojdite na Možnosti> Nastavitve> Snemanje in preverite "Počisti seznam" možnost. Nato kliknite na gumb Snemaj v glavnem oknu in uporabite F10, da počistite trenutni makro in začeti novega z isto hotkey. Si lahko ogledate tudi "Vedno Active" možnost v glavnem oknu za ohranitev snemanje in predvajanje Bližnjice aktiven.
 		Da bi dobili pomoč za določen ukaz desno tipko miške kliknite kjer koli na ukazno okno za prikaz povezave na AutoHotkey spletni pomoči.
 		Preverite "Capture Keys" možnost, da vstopijo tipke in kombinacije s svojim Macro neposredno iz glavnega okna.
@@ -908,7 +863,6 @@
 		Če želite, da vaše Makri deluje le na določenem oknu pojdite na Makro> konteksta bližnjic.
 		Lahko nastavite svoje globalne spremenljivke, ki se naložijo ob zagonu in se izvozijo. Pojdi na Možnosti> Nastavitve> Uporabniške globalnih spremenljivk, da jih dodate.
 		Lahko zaženete napredne funkcije, kot so substr in RegExReplace iz okna Funkcije (Insert> Če Izjave / spremenljivke / funkcije). Ali teči svoje funkcije iz zunanjih AutoHotkey skripte.
-	)	
 		
 ; Tooltips		
 	AutoKey_TT =	Bližnjica za igranje makro
@@ -952,43 +906,25 @@
 	ExpView2_TT =	Napredno Editor
 	OSProgB_TT =	Prikaže vrstica napredka
 	OSTrans_TT =	Motnost
-	MRel_TT =	
-	(LTrim	
-		Premikanje glede na trenutni položaj.
+	MRel_TT =	Premikanje glede na trenutni položaj.
 		Ali pa, če se uporablja z regulacijo: lega glede na kontrolo.
-	)	
-	Raw_TT =	
-	(LTrim	
-		Ukaz SendRaw interpretira vse znake dobesedno
+	Raw_TT =	Ukaz SendRaw interpretira vse znake dobesedno
 		namesto prevajanje {Enter} na ENTER pritisku,
 		^ C za Control-C, itd
-	)	
-	ComText_TT =	
-	(LTrim	
-		Ko ni v surovem načinu naslednje znake
+	ComText_TT =	Ko ni v surovem načinu naslednje znake
 		se obravnavajo kot modifikatorji (ti modifikatorji vplivajo
 		samo že naslednji ključ)!, +, ^ #
-	)	
 	ComEvent_TT =	Hitrost, s katero se pošljejo tipkanja je določena s ključnimi zamudo.
-	Clip_TT =	
-	(LTrim	
-		Začasno uporablja odložišče poslati besedilo.
+	Clip_TT =	Začasno uporablja odložišče poslati besedilo.
 		Ko je operacija končana, skript
 		obnovi izvirne vsebine odložišča.
 		(Pustite prazno besedilo prilepiti trenutno vsebino)
-	)	
-	EditPaste_TT =	
-	(LTrim	
-		Paste String na položaju strešica / vstaviti
+	EditPaste_TT =	Paste String na položaju strešica / vstaviti
 		v nadzor Edit (to ne vpliva na
 		Vsebino odložišča).
-	)	
 	SetText_TT =	Spremeni besedilo na kontroli.
-	RelKey_TT =	
-	(LTrim	
-		Evidence premiki miške in kliki kot pobotih
+	RelKey_TT =	Evidence premiki miške in kliki kot pobotih
 		od prejšnjega položaja, ko je potekala.
-	)	
 	ToggleC_TT =	Vključite Relativna snemanja, ko je ključ država je na.
 	Relative_TT =	Koordinate glede na aktivnem oknu.
 	Screen_TT =	Koordinate so relativne na namizje (celoten zaslon).
@@ -997,132 +933,65 @@
 	Recurse_TT =	Rekurzivne v podimenike (podmape) / podključi
 	CmdSort_TT =	Razvrsti po abecedi
 	Ex_EdScript_TT =	Odpri v zunanjem urejevalniku
-	ExprLink2_TT =	
-	(LTrim	
-		- NE PRILOŽITI SPREMENLJIVK ZNAKI ZA ODSTOTEK TUKAJ.
+	ExprLink2_TT =	- NE PRILOŽITI SPREMENLJIVK ZNAKI ZA ODSTOTEK TUKAJ.
 		- Večina AHK izrazov so podprte.
 		- Lahko uporabite strune, spremenljivke, polja in funkcije.
 		- Za uporabo nizov, jih priložite v narekovajih, na primer: var = "A".
 		- Več Izjave so podprti, na primer: var = "a" || Instr (var, "b").
-	)	
-	ExprLink3_TT =	
-	(LTrim	
-		- NE PRILOŽITI SPREMENLJIVK ZNAKI ZA ODSTOTEK TUKAJ.
+	ExprLink3_TT =	- NE PRILOŽITI SPREMENLJIVK ZNAKI ZA ODSTOTEK TUKAJ.
 		- Večina AHK izrazov so podprte.
 		- Lahko uporabite strune, spremenljivke, polja in funkcije.
 		- Za uporabo nizov, jih priložite v narekovajih, na primer: var = "A".
 		- Več Izjave so podprti, na primer: var = "a" || Instr (var, "b").
-	)	
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	Dvakrat kliknite za urejanje
-	Ex_IfDir_TT =	
-	(LTrim	
-		Ustvarja kontekst občutljive bližnjic in hotstrings odvisno
+	Ex_IfDir_TT =	Ustvarja kontekst občutljive bližnjic in hotstrings odvisno
 		na vrsto oknu, ki je aktiven ali obstaja.
-	)	
-	Ex_IfDirType_TT =	
-	(LTrim	
-		Ustvarja kontekst občutljive bližnjic in hotstrings odvisno
+	Ex_IfDirType_TT =	Ustvarja kontekst občutljive bližnjic in hotstrings odvisno
 		na vrsto oknu, ki je aktiven ali obstaja.
-	)	
-	Ex_SM_TT =	
-	(LTrim	
-		Naredi Pošlji sinonim SendInput ali SendPlay namesto
+	Ex_SM_TT =	Naredi Pošlji sinonim SendInput ali SendPlay namesto
 		default (SendEvent). Prav tako Klikni in MouseMove / Kliknite / Drag
 		uporabljajte predpisano metodo.
-	)	
-	SM_TT =	
-	(LTrim	
-		Dogodek: To je začetek privzeta vse skripte uporabljajo.
+	SM_TT =	Dogodek: To je začetek privzeta vse skripte uporabljajo.
 		Uporablja SendEvent metodo Pošlji, SendRaw, kliknite in MouseMove / Kliknite / Drag.
 		Vhod: Preklopi na metodi SendInput za lji, SendRaw, kliknite in MouseMove / Kliknite / Drag.
 		InputThenPlay: Enako kot zgoraj, le da namesto padla nazaj na način Event
 		ko SendInput ni na voljo, se preklopi v način (spodaj) Predvajaj. To povzroča tudi
 		Ukaz SendInput sam da se vrne na način igrati, ko SendInput ni na voljo.
 		Igrajo: Preklopi na metodi SendPlay za lji, SendRaw, kliknite in MouseMove / Kliknite / Drag.
-	)	
-	Ex_SI_TT =	
-	(LTrim	
-		Določa, ali je scenarij lahko ponovno teči, ko že teče.
-	)	
-	SI_TT =	
-	(LTrim	
-		Beseda FORCE preskoči pogovorno okno in nadomešča stari primerek samodejno
+	Ex_SI_TT =	Določa, ali je scenarij lahko ponovno teči, ko že teče.
+	SI_TT =	Beseda FORCE preskoči pogovorno okno in nadomešča stari primerek samodejno
 		, ki je podoben učinek na ukaz Reload.
 		Beseda IGNORE preskoči pogovorno okno in pusti star primerek prikazovati.
 		Z drugimi besedami, se poskuša sprožiti že tekom scenarij ne upošteva.
 		Beseda OFF omogoča več primerkov scenarij teči hkrati.
-	)	
-	Ex_ST_TT =	
-	(LTrim	
-		Nastavi ujemanje obnašanje WinTitle parameter pri ukazih, kot WinWait.
-	)	
-	ST_TT =	
-	(LTrim	
-		1: Naslov Okno mora začeti z določeno WinTitle za tekmo.
+	Ex_ST_TT =	Nastavi ujemanje obnašanje WinTitle parameter pri ukazih, kot WinWait.
+	ST_TT =	1: Naslov Okno mora začeti z določeno WinTitle za tekmo.
 		2: Naslov Okno lahko vsebuje WinTitle kjerkoli v notranjosti, da je tekma.
 		3: Naslov Okno mora popolnoma ujemati WinTitle za tekmo.
 		Regex: Spremembe WinTitle, WinText, ExcludeTitle in ExcludeText biti regularne izraze.
-	)	
-	Ex_DH_TT =	
-	(LTrim	
-		Ugotovi, ali so nevidni okna "videli", ki ga scenarij.
-	)	
-	Ex_AF_TT =	
-	(LTrim	
-		Preskoči na nežen način aktiviranja okno
+	Ex_DH_TT =	Ugotovi, ali so nevidni okna "videli", ki ga scenarij.
+	Ex_AF_TT =	Preskoči na nežen način aktiviranja okno
 		in gre naravnost do nasilne metode.
-	)	
-	Ex_HK_TT =	
-	(LTrim	
-		Prisili uporabo kavelj za izvajanje vseh
+	Ex_HK_TT =	Prisili uporabo kavelj za izvajanje vseh
 		ali nekatere tipke bližnjice.
-	)	
-	Ex_SK_TT =	
-	(LTrim	
-		Nastavi zakasnitev, da se bo zgodilo po vsaki
+	Ex_SK_TT =	Nastavi zakasnitev, da se bo zgodilo po vsaki
 		pritisk na tipko poslala pošiljati ali ControlSend.
-	)	
-	Ex_MD_TT =	
-	(LTrim	
-		Nastavi zakasnitev, da se bo zgodilo po
+	Ex_MD_TT =	Nastavi zakasnitev, da se bo zgodilo po
 		vsako gibanje miške ali klik.
-	)	
-	Ex_SC_TT =	
-	(LTrim	
-		Nastavi zakasnitev, da se bo zgodilo po
+	Ex_SC_TT =	Nastavi zakasnitev, da se bo zgodilo po
 		vsak nadzorni spreminjanje ukaz.
-	)	
-	Ex_SW_TT =	
-	(LTrim	
-		Nastavi zakasnitev, da se bo zgodilo po
+	Ex_SW_TT =	Nastavi zakasnitev, da se bo zgodilo po
 		Okenski vsak ukaz, kot WinActivate.
-	)	
-	Ex_SB_TT =	
-	(LTrim	
-		Določa, kako hitro se bo pognal (pojavijo CPU).
-	)	
-	Ex_NT_TT =	
-	(LTrim	
-		Onemogoči prikazovanje ikono pladenj.
-	)	
-		
-	Ex_IN_TT =	
-	(LTrim	
-		Povzroča scenarij, da se obnašajo, kot da je določeno
+	Ex_SB_TT =	Določa, kako hitro se bo pognal (pojavijo CPU).
+	Ex_NT_TT =	Onemogoči prikazovanje ikono pladenj.
+	Ex_IN_TT =	Povzroča scenarij, da se obnašajo, kot da je določeno
 		Vsebina dokumenta, ki so prisotni na tem točno določenem položaju.
-	)	
-	Ex_PT_TT =	
-	(LTrim	
-		Drži scenarij stalno teče
+	Ex_PT_TT =	Drži scenarij stalno teče
 		(To je do uporabnik zapre ali ExitApp srečamo).
-	)	
-	Ex_MT_TT =	
-	(LTrim	
-		Določa največje število hkratnih
+	Ex_MT_TT =	Določa največje število hkratnih
 		niti na hotkey ali hotstring.
-	)	
 	Ex_UV_TT =	Izvoz globalne spremenljivke.
 	Ex_EdVars_TT =	Izberite globalne spremenljivke, ki se izvaža.
 		
@@ -1171,7 +1040,6 @@
 		
 ; AHK Commands Tips		
 	Ahk_Cmd_Index =	
-	(LTrim	
 	Abs	Vrne absolutno vrednost številke.
 	ASin	Vrne arkus sinus (število, katerega sinus je število) v radianih.
 	ACos	Vrne arkus kosinus (število, katerega kosinus je število) v radianih.
@@ -1295,9 +1163,6 @@
 	InputBox	Prikaže vnosno polje, da od uporabnika zahteva, da vnesete niz.
 	InsertAt	Vstavi enega ali več vrednosti v določenem položaju znotraj linearni niz.
 	InStr	Išče danem pojavljanja niza, z leve ali desne.
-	)	
-	Ahk_Cmd_Index = %Ahk_Cmd_Index%`n	
-	(LTrim	
 	KeyHistory	Prikaže scenarij info in zgodovina zadnjih tipkanja in klikov z miško.
 	KeyWait	Počaka na gumb na ključ ali miška / igralno palico, ki se sprosti ali potlačen.
 	Labels	Oznaka opredeljuje kode in se lahko uporablja kot Goto cilj ali da bodo podprogram.
@@ -1429,5 +1294,3 @@
 	WinWaitActive	Počaka, da je določeno okno aktivno.
 	WinWaitClose	Počaka določen okno ne obstaja.
 	WinWaitNotActive	Počaka določen okno ni aktivna.
-	)	
-return		

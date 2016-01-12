@@ -45,7 +45,7 @@
 	r_Lang014 =	Im&port Macro
 	r_Lang015 =	Me&ntse el az aktuális makró
 		
-; UDF Sub Menu		
+; Function Sub Menu		
 	u_Lang001 =	&Hozzon létre Funkció
 	u_Lang002 =	&Add Paraméter
 	u_Lang003 =	A&dd vissza
@@ -716,12 +716,9 @@
 	d_Lang014 =	Script Exportált
 	d_Lang015 =	A fájl sikeresen exportálták!
 	d_Lang016 =	Kattintson a "Get" megjelölni helyzetbe.
-	d_Lang017 =	
-	(LTrim	
-		- Válasszuk ki az ablakot.
+	d_Lang017 =	- Válasszuk ki az ablakot.
 		- Mutasson a kívánt pozícióba.
 		- Nyomja meg a Jobbra gombot.
-	)	
 	d_Lang018 =	Pixel Color
 	d_Lang019 =	Kódolatlan List
 	d_Lang020 =	Bezárás Macro?
@@ -738,26 +735,18 @@
 	d_Lang031 =	nem érvényes függvény neve.
 	d_Lang032 =	Hiba: Duplicate Hotkeys.
 	d_Lang033 =	Aktiválása Makrók
-	d_Lang034 =	
-	(LTrim	
-		- Kattintson és húzza vele: %DrawButton% válassza területen.
+	d_Lang034 =	- Kattintson és húzza vele: %DrawButton% válassza területen.
 		- Kattintson, és engedje húzás nélkül válassza ellenőrzés területén.
 		- Kattintson a területen anélkül, hogy kiválassza az ablak.
-	)	
 	d_Lang035 =	Folytatás?
 	d_Lang036 =	Image / Pixel Found at
 	d_Lang037 =	Image / Pixel Not Found.
 	d_Lang038 =	Nyomja meg az OK gombot a folytatáshoz.
 	d_Lang039 =	Timeout!
-	d_Lang040 =	
-	(LTrim	
-		Ez a funkció csak a GDI+ Library.
+	d_Lang040 =	Ez a funkció csak a GDI+ Library.
 		Kattintson az OK gombra, hogy menjen le az oldalt.
-	)	
 	d_Lang041 =	A változó neve szabálytalan karaktert tartalmaz.
-	d_Lang042 =	
-	(LTrim	
-		Érvénytelen operátor.
+	d_Lang042 =	Érvénytelen operátor.
 		A következő operátorok fogadjuk el:
 		=, ==, <>,! =,>, <,> =, <=
 		
@@ -765,13 +754,9 @@
 		MyVar > 1
 		MyVar = `%A_DDDD`%
 		Clipboard == `%MyVar`%
-	)	
 	d_Lang043 =	Vagy használja az ellenőrzések eszköztár
-	d_Lang044 =	
-	(LTrim	
-		Ez a funkció megköveteli a Eval() függvény.
+	d_Lang044 =	Ez a funkció megköveteli a Eval() függvény.
 		Kattintson az OK gombra, hogy menjen le az oldalt.
-	)	
 	d_Lang045 =	Kérjük, válasszon egy Internet Explorer ablakot!
 	d_Lang046 =	Csatlakozás sikeres!
 	d_Lang047 =	Nem sikerült csatlakozni!
@@ -783,35 +768,19 @@
 	d_Lang053 =	Ne jelenjen meg többé ez az üzenet.
 	d_Lang054 =	Kérjük, válasszon egy Excel ablakot!
 	d_Lang055 =	Kérjük, válasszon egy AutoHotkey script fájlt (. AHK) és adja meg a függvény neve.
-	d_Lang056 =	
-	(LTrim	
-		Ehhez a funkcióhoz AutoHotkey telepítve.
+	d_Lang056 =	Ehhez a funkcióhoz AutoHotkey telepítve.
 		Kattintson az OK gombra, hogy menjen le az oldalt.
-	)	
-	d_Lang057 =	
-	(LTrim	
-		- Nyomja meg a Ctrl+nyilakkal mozgatni a kijelölt területen.
+	d_Lang057 =	- Nyomja meg a Ctrl+nyilakkal mozgatni a kijelölt területen.
 		- Nyomja meg a Shift+nyíl billentyűk átméretezésére kijelölt terület.
 		- Nyomja meg az Entert, hogy befejezze.
-	)	
-	d_Lang058 =	
-	(LTrim	
-		Egyes funkciók megkövetelik admnistrator privilages ahhoz, hogy megfelelően működjön.
+	d_Lang058 =	Egyes funkciók megkövetelik admnistrator privilages ahhoz, hogy megfelelően működjön.
 		Ez ajánlott, hogy indítsa újra az alkalmazást rendszergazdaként.
-	)	
-	d_Lang059 =	
-	(LTrim	
-		Ez a parancs nem támogatja a kifejezéseket vagy funkciókat.
+	d_Lang059 =	Ez a parancs nem támogatja a kifejezéseket vagy funkciókat.
 		Kérjük, hozzá egy változó, és használja azt a paramétert.
-	)	
 	d_Lang060 =	Az új verzió
-	d_Lang061 =	
-	(LTrim	
-		Szeretne letölteni most?
+	d_Lang061 =	Szeretne letölteni most?
 		
 		Ha ki szeretné kapcsolni az automatikus ellenőrzés válassza a Help > Ellenőrizze indításkor
-	)	
-		
 	d_Lang062 =	Már így is a legújabb verzióra.
 	d_Lang063 =	Hiba történt ellenőrzés.
 	d_Lang064 =	COM objektum hiba
@@ -819,12 +788,9 @@
 	d_Lang066 =	Konkrétan
 	d_Lang067 =	Mutasd az ablakban indításkor
 	d_Lang068 =	tippek:
-	d_Lang069 =	
-	(LTrim	
-		Rengeteg időt és energiát ment a fejlesztés Pulover's Macro Creator. Ha úgy találja, hogy hasznos, kérjük, fontolja mutatja meg elismerését egy adomány.
+	d_Lang069 =	Rengeteg időt és energiát ment a fejlesztés Pulover's Macro Creator. Ha úgy találja, hogy hasznos, kérjük, fontolja mutatja meg elismerését egy adomány.
 		
 		Ajándékozó, akár nem, nem lesz különbség a szolgáltatásokat és funkciókat.
-	)	
 	d_Lang070 =	Adományoz...
 	d_Lang071 =	Nem, kösz
 	d_Lang072 =	Támogatja a nyílt forráskódú szoftverek
@@ -842,11 +808,8 @@
 	d_Lang084 =	Kérjük, mentse el a módosításokat, mielőtt ütemezése a feladat.
 	d_Lang085 =	Hiányzó "End Loop" kijelentés Macro 
 	d_Lang086 =	Hiányzó "End If" kijelentés Macro
-	d_Lang087 =	
-	(LTrim	
-		Figyeljük meg, hogy a módosítások a script kívül a program nem fogja befolyásolni a makrókat semmilyen módon.
+	d_Lang087 =	Figyeljük meg, hogy a módosítások a script kívül a program nem fogja befolyásolni a makrókat semmilyen módon.
 		 Ez a funkció csak azt jelentette, mint egy gyors export funkció. PMC nem azt jelentette, hogy egy AHK script editor.
-	)	
 	d_Lang088 =	Próbáld futtatni, közös felhasználói (nem rendszergazda).
 	d_Lang089 =	Nincs sorban kiválasztva!
 	d_Lang090 =	Kérjük, jelöljön ki egy sort beszúrni, vagy eltávolíthatja a csoport.
@@ -855,23 +818,17 @@
 	d_Lang093 =	Nagy ikonok
 	d_Lang094 =	Ez a funkció csak Windows Vista vagy újabb.
 	d_Lang095 =	Használata ByRef okoz paramétert, hogy legyen egy álnevet a változó telt el a hívó fél. Más szavakkal, a paraméter, és a hívó változó mind ugyanarra a tartalmát a memóriába.
-	d_Lang096 =	
-	(LTrim	
-		- NE CSATOLNI VARIABLES SZÁZALÉKOS JELEK ITT.
+	d_Lang096 =	- NE CSATOLNI VARIABLES SZÁZALÉKOS JELEK ITT.
 		- Vissza értéknek kell lennie egy kifejezés.
 		- Használhatja vonósok, változók, tömbök és függvények. Ön is kombinálhatja azokat.
 		- Ahhoz, hogy használni húrok, csatolja őket idézetek, pl: "Az eredmény:" a + b.
 		- Ha vissza kíván térni extra eredményeket, akkor is használhatja ByRef a paramétereket.
 		- Arrays lehet használni, hogy visszatérjen több értéket, vagy akár elemzi értékeket.
-	)	
-	d_Lang097 =	
-	(LTrim	
-		- NE CSATOLNI VARIABLES SZÁZALÉKOS JELEK ITT.
+	d_Lang097 =	- NE CSATOLNI VARIABLES SZÁZALÉKOS JELEK ITT.
 		- A legtöbb AHK kifejezések támogatottak.
 		- Használhatja vonósok, változók, tömbök és függvények.
 		- Ahhoz, hogy használni húrok, csatolja őket idézetek, pl: var = "a".
 		- Több utasítást támogat, például: var = "a" || InStr (var, "b").
-	)	
 	d_Lang098 =	Ha egy paraméter alapértéke, a következő paramétereket kell is van egy.
 	d_Lang099 =	A függvény neve engedélyezett karaktert tartalmaz.
 	d_Lang100 =	Goto GOSUB és címke nem engedélyezett funkciókat.
@@ -879,9 +836,7 @@
 	d_Lang102 =	foglalt szó.
 		
 ; Start-up Tips		
-	Start_Tips =	
-	(LTrim	
-		Hozhat létre makrók a Command gombok a fő ablakban, vagy a felvevő másolni a tevékenységét. Válassza az Opciók > Beállítások > Felvétel kiválasztható, hogy milyen bemeneteket kerülnek rögzítésre.
+	Start_Tips =	Hozhat létre makrók a Command gombok a fő ablakban, vagy a felvevő másolni a tevékenységét. Válassza az Opciók > Beállítások > Felvétel kiválasztható, hogy milyen bemeneteket kerülnek rögzítésre.
 		Ahhoz, hogy a felvevő gyors feladatok válasszuk az Opciók > Beállítások > Felvétel és ellenőrizze a "Lista törlése" opciót. Majd kattintson a Felvétel gombra a fő ablakot, majd F10 gombbal törölheti az aktuális makro-és újat azonos gyorsbillentyűket. Ön is ellenőrizheti a "Mindig aktív" opciót a fő ablakban, hogy felvétel és lejátszás gyorsbillentyűk aktív.
 		A súgó egy adott parancs a jobb gombbal bárhol egy parancssori ablakot mutatni linkek AutoHotkey súgójában.
 		Ellenőrizze, hogy a "Capture Keys" opciót be kulcsok és kombinációk a Macro közvetlenül a fő ablakban.
@@ -908,7 +863,6 @@
 		Ahhoz, hogy a makrók csak egy bizonyos ablakban a Macro > Context Sensitive gyorsbillentyűk.
 		Beállíthatjuk, hogy a saját globális változók kell betölteni az induló, és az exportot. Válassza az Opciók > Beállítások > Felhasználó globális változók, hogy adjunk nekik.
 		Futtathat speciális funkciókat, mint a substr és RegExReplace a funkciók ablakban (Beszúrás > IF / változók / függvények). Vagy futtatni a saját funkciók külső AutoHotkey szkripteket.
-	)	
 		
 ; Tooltips		
 	AutoKey_TT =	Gyorsgomb játszani Macro
@@ -952,43 +906,25 @@
 	ExpView2_TT =	Fejlett Szerkesztő
 	OSProgB_TT =	Kijelző Progress Bar
 	OSTrans_TT =	átlátszatlanság
-	MRel_TT =	
-	(LTrim	
-		Mozgásokat képest aktuális pozícióját.
+	MRel_TT =	Mozgásokat képest aktuális pozícióját.
 		Vagy ha használt Control: Pozíció a kontrollhoz képest.
-	)	
-	Raw_TT =	
-	(LTrim	
-		A SendRaw parancs értelmezi az összes karaktert a szó szoros értelmében
+	Raw_TT =	A SendRaw parancs értelmezi az összes karaktert a szó szoros értelmében
 		ahelyett fordítására {Enter} egy ENTER gombnyomás,
 		^ C Control-C, stb
-	)	
-	ComText_TT =	
-	(LTrim	
-		Ha nem nyers módban, a következő karakterek
+	ComText_TT =	Ha nem nyers módban, a következő karakterek
 		kezelni módosítók (ezek a módosítók befolyásolhatják
 		Csak a nagyon következő gomb):!, +, ^, #
-	)	
 	ComEvent_TT =	Tuş vuruşlarını gönderilen hızını önemli gecikme ile belirlenir.
-	Clip_TT =	
-	(LTrim	
-		Ideiglenesen használ vágólap küldje el a szöveget.
+	Clip_TT =	Ideiglenesen használ vágólap küldje el a szöveget.
 		Amikor a művelet befejeződött, a script
 		visszaállítja az eredeti vágólap tartalmát.
 		(Text hagyja üresen be aktuális tartalom)
-	)	
-	EditPaste_TT =	
-	(LTrim	
-		Paszták karakterlánc a kalap / betét pozíció
+	EditPaste_TT =	Paszták karakterlánc a kalap / betét pozíció
 		egy Szerkesztés-ellenőrzés (ez nem érinti
 		az a vágólap tartalmát.)
-	)	
 	SetText_TT =	Megváltoztatja a szöveg egy ellenőrzés.
-	RelKey_TT =	
-	(LTrim	
-		Records egér mozgását és kattintással
+	RelKey_TT =	Records egér mozgását és kattintással
 		való eltérést a korábbi pozícióba.
-	)	
 	ToggleC_TT =	Aktiválja Relatív felvételt, ha kulcsfontosságú állami be van kapcsolva.
 	Relative_TT =	Koordináták relatív az aktív ablak.
 	Screen_TT =	Koordináták relatív az asztalra (teljes képernyő).
@@ -997,132 +933,65 @@
 	Recurse_TT =	Rekurzív alkönyvtárakra (almappák) / Alkulcsok
 	CmdSort_TT =	Rendezés ABC sorrendbe
 	Ex_EdScript_TT =	Nyílt külső szerkesztőben
-	ExprLink2_TT =	
-	(LTrim	
-		- NE CSATOLNI VARIABLES SZÁZALÉKOS JELEK ITT.
+	ExprLink2_TT =	- NE CSATOLNI VARIABLES SZÁZALÉKOS JELEK ITT.
 		- A legtöbb AHK kifejezések támogatottak.
 		- Használhatja vonósok, változók, tömbök és függvények.
 		- Ahhoz, hogy használni húrok, csatolja őket idézetek, pl: var = "a".
 		- Több utasítást támogat, például: var = "a" || InStr (var, "b").
-	)	
-	ExprLink3_TT =	
-	(LTrim	
-		- NE CSATOLNI VARIABLES SZÁZALÉKOS JELEK ITT.
+	ExprLink3_TT =	- NE CSATOLNI VARIABLES SZÁZALÉKOS JELEK ITT.
 		- A legtöbb AHK kifejezések támogatottak.
 		- Használhatja vonósok, változók, tömbök és függvények.
 		- Ahhoz, hogy használni húrok, csatolja őket idézetek, pl: var = "a".
 		- Több utasítást támogat, például: var = "a" || InStr (var, "b").
-	)	
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	Kattintson duplán a szerkeszteni
-	Ex_IfDir_TT =	
-	(LTrim	
-		Létrehoz környezetfüggő gyorsbillentyűk és hotstrings függően
+	Ex_IfDir_TT =	Létrehoz környezetfüggő gyorsbillentyűk és hotstrings függően
 		típusától ablak, amely aktív vagy létezik.
-	)	
-	Ex_IfDirType_TT =	
-	(LTrim	
-		Létrehoz környezetfüggő gyorsbillentyűk és hotstrings függően
+	Ex_IfDirType_TT =	Létrehoz környezetfüggő gyorsbillentyűk és hotstrings függően
 		típusától ablak, amely aktív vagy létezik.
-	)	
-	Ex_SM_TT =	
-	(LTrim	
-		Teszi Küldés szinonimájává SendInput vagy SendPlay helyett
+	Ex_SM_TT =	Teszi Küldés szinonimájává SendInput vagy SendPlay helyett
 		Az alapértelmezett (SendEvent). Teszi Kattintson és MouseMove / Kattints / Drag
 		a megadott módszer.
-	)	
-	SM_TT =	
-	(LTrim	
-		Esemény: Ez a kiindulási alap által használt összes szkriptet.
+	SM_TT =	Esemény: Ez a kiindulási alap által használt összes szkriptet.
 		Használja a SendEvent módszer Küldés, SendRaw, kattintson, és MouseMove / Kattints / Drag.
 		Input: Váltás a SendInput módszer Küldés, SendRaw, kattintson, és MouseMove / Kattints / Drag.
 		InputThenPlay: Ugyanaz, mint fent, kivéve, hogy ahelyett esett vissza Esemény módban
 		amikor SendInput nem érhető el, akkor visszatér a Lejátszás módba (lent). Ez is okoz
 		A SendInput parancsot magát, hogy visszatérjen a Lejátszás módba, amikor SendInput nem áll rendelkezésre.
 		Lejátszás: Váltás a SendPlay módszer Küldés, SendRaw, kattintson, és MouseMove / Kattints / Drag.
-	)	
-	Ex_SI_TT =	
-	(LTrim	
-		Meghatározza, hogy a szkript futhat újra, ha már fut.
-	)	
-	SI_TT =	
-	(LTrim	
-		A szó FORCE kihagyja a párbeszédpanelt, és felváltja a régi példány automatikusan
+	Ex_SI_TT =	Meghatározza, hogy a szkript futhat újra, ha már fut.
+	SI_TT =	A szó FORCE kihagyja a párbeszédpanelt, és felváltja a régi példány automatikusan
 		ami hasonló hatással van a Reload parancsot.
 		A szó IGNORE átugorja a párbeszédpanelt, és elhagyja a régi példány fut.
 		Más szóval, a kísérlet, hogy indítson egy már futó script figyelmen kívül hagyja.
 		A szó OFF lehetővé teszi több példányban a szkript futtatásához egyidejűleg.
-	)	
-	Ex_ST_TT =	
-	(LTrim	
-		Beállítja a megfelelő viselkedését WinTitle paraméter parancsokat, mint például WinWait.
-	)	
-	ST_TT =	
-	(LTrim	
-		1: Egy ablak címét kell kezdeni a megadott WinTitle, hogy egy meccs.
+	Ex_ST_TT =	Beállítja a megfelelő viselkedését WinTitle paraméter parancsokat, mint például WinWait.
+	ST_TT =	1: Egy ablak címét kell kezdeni a megadott WinTitle, hogy egy meccs.
 		2: Egy ablak címét is tartalmazhat WinTitle bárhol benne, hogy a mérkőzés.
 		3: Egy ablak címét pontosan meg kell egyeznie WinTitle hogy egy meccs.
 		RegEx: Változások WinTitle, WinText, ExcludeTitle és ExcludeText legyen reguláris kifejezések.
-	)	
-	Ex_DH_TT =	
-	(LTrim	
-		Meghatározza, hogy a láthatatlan ablakok 'látott' a script.
-	)	
-	Ex_AF_TT =	
-	(LTrim	
-		Kihagyja a szelíd eljárás aktiválására ablak
+	Ex_DH_TT =	Meghatározza, hogy a láthatatlan ablakok 'látott' a script.
+	Ex_AF_TT =	Kihagyja a szelíd eljárás aktiválására ablak
 		és megy egyenesen az erőszakos módszer.
-	)	
-	Ex_HK_TT =	
-	(LTrim	
-		Kényszerű használata a horog, hogy hajtsák végre
+	Ex_HK_TT =	Kényszerű használata a horog, hogy hajtsák végre
 		vagy egy billentyűzet gyorsbillentyűk.
-	)	
-	Ex_SK_TT =	
-	(LTrim	
-		Megadja a késleltetést követően alakul ki az egyes
+	Ex_SK_TT =	Megadja a késleltetést követően alakul ki az egyes
 		gombnyomás által küldött Send vagy ControlSend.
-	)	
-	Ex_MD_TT =	
-	(LTrim	
-		Megadja a késleltetést követően alakul ki
+	Ex_MD_TT =	Megadja a késleltetést követően alakul ki
 		Minden egér mozgását és kattintson.
-	)	
-	Ex_SC_TT =	
-	(LTrim	
-		Megadja a késleltetést követően alakul ki
+	Ex_SC_TT =	Megadja a késleltetést követően alakul ki
 		Minden kontroll módosító parancsot.
-	)	
-	Ex_SW_TT =	
-	(LTrim	
-		Megadja a késleltetést követően alakul ki
+	Ex_SW_TT =	Megadja a késleltetést követően alakul ki
 		Minden ablakozás parancsot, például WinActivate.
-	)	
-	Ex_SB_TT =	
-	(LTrim	
-		Meghatározza, hogy milyen gyorsan egy szkript fut (hat CPU kihasználtsága.)
-	)	
-	Ex_NT_TT =	
-	(LTrim	
-		Kikapcsolja a megjelenítését a tálca ikon.
-	)	
-		
-	Ex_IN_TT =	
-	(LTrim	
-		Eszmék a szkript úgy viselkedni, mintha a megadott
+	Ex_SB_TT =	Meghatározza, hogy milyen gyorsan egy szkript fut (hat CPU kihasználtsága.)
+	Ex_NT_TT =	Kikapcsolja a megjelenítését a tálca ikon.
+	Ex_IN_TT =	Eszmék a szkript úgy viselkedni, mintha a megadott
 		fájl tartalmát jelen vannak ebben a pontos pozícióját.
-	)	
-	Ex_PT_TT =	
-	(LTrim	
-		Megtartja a szkript fut állandóan
+	Ex_PT_TT =	Megtartja a szkript fut állandóan
 		(azaz, amíg a felhasználó bezárja, vagy ExitApp találkozik).
-	)	
-	Ex_MT_TT =	
-	(LTrim	
-		Beállítja a maximális számú egyidejű
+	Ex_MT_TT =	Beállítja a maximális számú egyidejű
 		szálak egy gyorsbillentyűvel vagy hotstring.
-	)	
 	Ex_UV_TT =	Export globális változók.
 	Ex_EdVars_TT =	Válassza globális változók exportálni.
 		
@@ -1171,7 +1040,6 @@
 		
 ; AHK Commands Tips		
 	Ahk_Cmd_Index =	
-	(LTrim	
 	Abs	Abszolút értékét a számot.
 	ASin	Arkusz szinuszát (a szám, amelynek szinusz is Number) radiánban.
 	ACos	Arkusz koszinuszát adja (a szám, amelynek koszinusz is Number) radiánban.
@@ -1295,9 +1163,6 @@
 	InputBox	Megjelenít egy beviteli mezőbe, hogy kéri a felhasználót, hogy adja meg a string.
 	InsertAt	Beszúr egy vagy több értéket egy adott helyzetben egy lineáris tömbben.
 	InStr	Keres egy adott előfordulása egy string, a bal vagy a jobb.
-	)	
-	Ahk_Cmd_Index = %Ahk_Cmd_Index%`n	
-	(LTrim	
 	KeyHistory	Megjeleníti script info és a történelem, a legutóbbi billentyűleütéseket, és egérkattintással.
 	KeyWait	Várja, hogy a billentyűk, vagy egér / joystick gombot kell szabadítani, vagy nyomva.
 	Labels	A címke azonosít egy sor kódot, és fel lehet használni, mint egy cél, vagy Goto alkotnak egy szubrutint.
@@ -1429,5 +1294,3 @@
 	WinWaitActive	Megvárja, amíg a megadott ablak aktív.
 	WinWaitClose	Megvárja, amíg a meghatározott ablak nem létezik.
 	WinWaitNotActive	Megvárja, amíg a meghatározott ablak nem aktív.
-	)	
-return		

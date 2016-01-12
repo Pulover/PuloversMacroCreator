@@ -1,4 +1,4 @@
-﻿LoadLang_Zt:
+﻿LoadLang_Zh-Hant:
 		
 		; Chinese Traditional
 		
@@ -45,7 +45,7 @@
 	r_Lang014 =	進口宏
 	r_Lang015 =	保存當前宏觀經濟
 		
-; UDF Sub Menu		
+; Function Sub Menu		
 	u_Lang001 =	創建函數
 	u_Lang002 =	添加參數
 	u_Lang003 =	添加返回
@@ -716,12 +716,9 @@
 	d_Lang014 =	腳本導出
 	d_Lang015 =	該文件被成功地出口了！
 	d_Lang016 =	點擊“獲取”標記的位置。
-	d_Lang017 =	
-	(LTrim	
-		- 選擇窗口。
+	d_Lang017 =	- 選擇窗口。
 		- 指向所需的位置。
 		- 按右邊的按鈕。
-	)	
 	d_Lang018 =	像素的顏色
 	d_Lang019 =	清除列表
 	d_Lang020 =	關閉宏？
@@ -738,26 +735,18 @@
 	d_Lang031 =	是不是有效的函數名稱。
 	d_Lang032 =	錯誤：重複的熱鍵。
 	d_Lang033 =	激活宏
-	d_Lang034 =	
-	(LTrim	
-		- 點擊並拖動選擇區域%DrawButton%。
+	d_Lang034 =	- 點擊並拖動選擇區域%DrawButton%。
 		- 點擊並拖動選擇控制區釋放。
 		- 點擊在一​​個區域選擇窗口區域沒有控制。
-	)	
 	d_Lang035 =	要繼續嗎？
 	d_Lang036 =	發現在圖像/像素
 	d_Lang037 =	圖片/像素找不到。
 	d_Lang038 =	按“確定”繼續。
 	d_Lang039 =	超時！
-	d_Lang040 =	
-	(LTrim	
-		此功能需要GDI +庫。
+	d_Lang040 =	此功能需要GDI +庫。
 		單擊OK轉到下載頁面。
-	)	
 	d_Lang041 =	變量名包含非法字符。
-	d_Lang042 =	
-	(LTrim	
-		無效的運營商。
+	d_Lang042 =	無效的運營商。
 		下面的運營商所接受：
 		=，==，<>，=，>，<，> =，<=！
 		
@@ -765,13 +754,9 @@
 		MyVar > 1
 		MyVar = `%A_DDDD`%
 		Clipboard == `%MyVar`%
-	)	
 	d_Lang043 =	或使用該控件工具欄
-	d_Lang044 =	
-	(LTrim	
-		此功能需要eval（）函數。
+	d_Lang044 =	此功能需要eval（）函數。
 		單擊OK轉到下載頁面。
-	)	
 	d_Lang045 =	請選擇一個Internet Explorer窗口！
 	d_Lang046 =	連接成功！
 	d_Lang047 =	連接失敗！
@@ -783,35 +768,19 @@
 	d_Lang053 =	不要再次顯示此消息。
 	d_Lang054 =	請選擇一個Excel窗口！
 	d_Lang055 =	請選擇一個AutoHotkey腳本文件（AHK）和輸入函數名。
-	d_Lang056 =	
-	(LTrim	
-		此功能需要安裝AutoHotkey。
+	d_Lang056 =	此功能需要安裝AutoHotkey。
 		單擊OK轉到下載頁面。
-	)	
-	d_Lang057 =	
-	(LTrim	
-		- 按Ctrl +箭頭鍵移動選定的區域。
+	d_Lang057 =	- 按Ctrl +箭頭鍵移動選定的區域。
 		- 按Shift +箭頭鍵調整所選區域的大小。
 		- 按下Enter完成。
-	)	
-	d_Lang058 =	
-	(LTrim	
-		某些功能需要admnistrator privilages才能正常工作。
+	d_Lang058 =	某些功能需要admnistrator privilages才能正常工作。
 		建議重新啟動應用程序作為管理員。
-	)	
-	d_Lang059 =	
-	(LTrim	
-		此命令不支持表達式或函數。
+	d_Lang059 =	此命令不支持表達式或函數。
 		請指定一個變量，並用它在參數。
-	)	
 	d_Lang060 =	新版本
-	d_Lang061 =	
-	(LTrim	
-		你想現在就下載嗎？
+	d_Lang061 =	你想現在就下載嗎？
 		
 		要禁用自動檢查，選擇“啟動”幫助“>”檢查。 > 檢查啟動
-	)	
-		
 	d_Lang062 =	您已經有最新的版本。
 	d_Lang063 =	檢查時發生錯誤。
 	d_Lang064 =	COM對象錯誤
@@ -819,12 +788,9 @@
 	d_Lang066 =	特別是
 	d_Lang067 =	顯示這個窗口啟動
 	d_Lang068 =	溫馨提示：
-	d_Lang069 =	
-	(LTrim	
-		Pulover's Macro Creator的發展已經進入了很多的時間和精力。如果你覺得它有用，請考慮捐贈升值。
+	d_Lang069 =	Pulover's Macro Creator的發展已經進入了很多的時間和精力。如果你覺得它有用，請考慮捐贈升值。
 		
 		捐贈與否，將不會有差異的特點和功能。
-	)	
 	d_Lang070 =	捐贈...
 	d_Lang071 =	不用了，謝謝
 	d_Lang072 =	支持開源軟件
@@ -842,11 +808,8 @@
 	d_Lang084 =	調度任務之前，請保存更改。
 	d_Lang085 =	缺少'結束循環'在宏語句 
 	d_Lang086 =	缺少'結束if語句中宏
-	d_Lang087 =	
-	(LTrim	
-		請注意，該腳本所做的計劃外變化不會影響您的宏以任何方式。
+	d_Lang087 =	請注意，該腳本所做的計劃外變化不會影響您的宏以任何方式。
 		此功能僅作為一個快速的導出功能。 PMC並不意味著是華民腳本編輯器。
-	)	
 	d_Lang088 =	嘗試運行作為普通用戶（非管理員）。
 	d_Lang089 =	沒有行選擇！
 	d_Lang090 =	請選擇一個行插入或刪除組。
@@ -855,23 +818,17 @@
 	d_Lang093 =	大圖標
 	d_Lang094 =	此功能需要Windows Vista或更高。
 	d_Lang095 =	使用的ByRef會導致一個參數成為一個別名從呼叫者傳遞的變量。換言之，參數和調用者的變量都指的是同一內容在存儲器中。
-	d_Lang096 =	
-	(LTrim	
-		- 不要用百分號這裡的變量。
+	d_Lang096 =	- 不要用百分號這裡的變量。
 		- 返回值必須是一個表達式。
 		- 您可以使用字符串，變量，數組和函數。您也可以結合任何這些。
 		- 要使用字符串，它們括在引號，如：“結果是：”A + B。
 		- 如果你想返回額外的結果，你也可以使用的ByRef的參數。
 		- 陣列可用於返回多個值，甚至命名值。
-	)	
-	d_Lang097 =	
-	(LTrim	
-		- 不要用百分號這裡的變量。
+	d_Lang097 =	- 不要用百分號這裡的變量。
 		- 大多數AHK表達式的支持。
 		- 您可以使用字符串，變量，數組和函數。
 		- 要使用字符串，它們括在引號，例如：VAR=“A”。
 		- 多個語句的支持，例如：VAR=“一個”|| INSTR（變種，“B”）。
-	)	
 	d_Lang098 =	如果一個參數具有缺省值，下面的參數是必需有一個太。
 	d_Lang099 =	函數名稱包含非法字符。
 	d_Lang100 =	後藤，GOSUB和標籤都沒有的功能允許的。
@@ -879,9 +836,7 @@
 	d_Lang102 =	是一個保留字。
 		
 ; Start-up Tips		
-	Start_Tips =	
-	(LTrim	
-		您可以創建宏命令按鈕在主窗口中，或者使用記錄，複製你的行動。轉到“選項”>“設置”>“錄製到選擇什麼樣的輸入將被記錄。
+	Start_Tips =	您可以創建宏命令按鈕在主窗口中，或者使用記錄，複製你的行動。轉到“選項”>“設置”>“錄製到選擇什麼樣的輸入將被記錄。
 		要使用錄音機，快速任務選項 >設置 >錄音，並勾選“清除列表”選項。然後在主窗口中單擊“錄製”按鈕，使用F10鍵來清除當前的宏，並開始一個新的相同的熱鍵。 您也可以勾選“始終活躍在主窗口中保持激活錄製和播放熱鍵”選項。
 		要获得一个特定命令的帮助权的任意位置单击命令窗口中显示链接到AutoHotkey的在线帮助。
 		檢查“拍攝鍵”選項，從主窗口直接進入到您的宏按鍵和組合。
@@ -908,7 +863,6 @@
 		為了讓你的宏只在某個窗口的工作去宏 >上下文相關的熱鍵。
 		你可以設置你自己的全局變量，要加載的啟動和出口。轉到選項 >設置 >用戶全局變量添加它們。
 		您可以運行先進的功能，如SUBSTR和RegExReplace從“功能”窗口（“插入”> if語句/變量/函數）。或來自外部的AutoHotkey腳本運行自己的職能。
-	)	
 		
 ; Tooltips		
 	AutoKey_TT =	熱鍵玩宏
@@ -952,43 +906,25 @@
 	ExpView2_TT =	高級編輯
 	OSProgB_TT =	顯示進度條
 	OSTrans_TT =	透明度
-	MRel_TT =	
-	(LTrim	
-		相對於當前位置的變動。
+	MRel_TT =	相對於當前位置的變動。
 		或者，如果使用控制：相對位置的控制。
-	)	
-	Raw_TT =	
-	(LTrim	
-		SendRaw命令命令從字面上解釋所有字符
+	Raw_TT =	SendRaw命令命令從字面上解釋所有字符
 		而不是將{輸入} ENTER按鍵，
 		^ C控制-C等。
-	)	
-	ComText_TT =	
-	(LTrim	
-		而不是在原始模式時，下列字符
+	ComText_TT =	而不是在原始模式時，下列字符
 		被視為修飾符（這些修飾符影響
 		只有在第二天的關鍵）：！+ ^，＃
-	)	
 	ComEvent_TT =	發送擊鍵的速度，是由按鍵延遲。
-	Clip_TT =	
-	(LTrim	
-		暫時使用剪貼板發送文本。
+	Clip_TT =	暫時使用剪貼板發送文本。
 		當操作完成時，該腳本
 		恢復原來的剪貼板中的內容。
 		（留下空的文本粘貼當前內容）
-	)	
-	EditPaste_TT =	
-	(LTrim	
-		免燒磚字符串在插入符號/插入位置
+	EditPaste_TT =	免燒磚字符串在插入符號/插入位置
 		在編輯控制（這並不影響
 		剪貼板中的內容）。
-	)	
 	SetText_TT =	更改文本的控制。
-	RelKey_TT =	
-	(LTrim	
-		記錄鼠標移動和點擊，
+	RelKey_TT =	記錄鼠標移動和點擊，
 		從以前的位置偏移時舉行。
-	)	
 	ToggleC_TT =	國家重點時，激活相對錄製。
 	Relative_TT =	坐標是相對的活動窗口。
 	Screen_TT =	坐標是相對於桌面（整個畫面）。
@@ -997,132 +933,65 @@
 	Recurse_TT =	遞歸到子目錄（子文件夾）/子項
 	CmdSort_TT =	按字母順序排序
 	Ex_EdScript_TT =	打开外部编辑器
-	ExprLink2_TT =	
-	(LTrim	
-		- 不要用百分號這裡的變量。
+	ExprLink2_TT =	- 不要用百分號這裡的變量。
 		- 大多數AHK表達式的支持。
 		- 您可以使用字符串，變量，數組和函數。
 		- 要使用字符串，它們括在引號，例如：VAR=“A”。
 		- 多個語句的支持，例如：VAR=“一個”|| INSTR（變種，“B”）。
-	)	
-	ExprLink3_TT =	
-	(LTrim	
-		- 不要用百分號這裡的變量。
+	ExprLink3_TT =	- 不要用百分號這裡的變量。
 		- 大多數AHK表達式的支持。
 		- 您可以使用字符串，變量，數組和函數。
 		- 要使用字符串，它們括在引號，例如：VAR=“A”。
 		- 多個語句的支持，例如：VAR=“一個”|| INSTR（變種，“B”）。
-	)	
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	雙擊編輯
-	Ex_IfDir_TT =	
-	(LTrim	
-		創建上下文敏感的熱鍵和熱字串取決於
+	Ex_IfDir_TT =	創建上下文敏感的熱鍵和熱字串取決於
 		不同的窗口，該窗口是活動的還是存在。
-	)	
-	Ex_IfDirType_TT =	
-	(LTrim	
-		創建上下文敏感的熱鍵和熱字串取決於
+	Ex_IfDirType_TT =	創建上下文敏感的熱鍵和熱字串取決於
 		不同的窗口，該窗口是活動的還是存在。
-	)	
-	Ex_SM_TT =	
-	(LTrim	
-		使發送與Send​​Input或SendPlay模式的代名詞，而不是
+	Ex_SM_TT =	使發送與Send​​Input或SendPlay模式的代名詞，而不是
 		的默認的SendEvent。也使得MOUSEMOVE /點擊/拖動
 		使用指定的方法。
-	)	
-	SM_TT =	
-	(LTrim	
-		事件：這是默認情況下所有的腳本使用的。
+	SM_TT =	事件：這是默認情況下所有的腳本使用的。
 		它使用的SendEvent方法的發送，SendRaw，點擊，和MOUSEMOVE /點擊/拖動。
 		輸入：SendInput方法發送，SendRaw的開關，點擊，MOUSEMOVE /點擊/拖動。
 		：同InputThenPlay的的，除了上述而非回落至事件模式
 		SendInput不可用時，它會恢復到播放模式（如下圖）。這也導致
 		SendInput命令本身恢復到播放模式SendInput不可用時。
 		播放：SendPlay模式方法發送，SendRaw的開關，點擊，MOUSEMOVE /點擊/拖動。
-	)	
-	Ex_SI_TT =	
-	(LTrim	
-		確定腳本是否允許再次運行時，它已經在運行。
-	)	
-	SI_TT =	
-	(LTrim	
-		字力跳過對話框，並自動替換舊的實例，
+	Ex_SI_TT =	確定腳本是否允許再次運行時，它已經在運行。
+	SI_TT =	字力跳過對話框，並自動替換舊的實例，
 		這是類似效果reload命令。
 		這個詞忽略跳過對話框，並留下舊的實例運行。
 		換句話說，嘗試推出一個已經運行的腳本將被忽略。
 		“關”這個詞，允許多個實例同時運行的腳本。
-	)	
-	Ex_ST_TT =	
-	(LTrim	
-		設置WinWait命令，如在WinTitle參數的匹配行為。
-	)	
-	ST_TT =	
-	(LTrim	
-		1：一個窗口的標題必須從指定WinTitle是一個比賽。
+	Ex_ST_TT =	設置WinWait命令，如在WinTitle參數的匹配行為。
+	ST_TT =	1：一個窗口的標題必須從指定WinTitle是一個比賽。
 		2：一個窗口的標題，可以包含WinTitle內的任何地方它是一個比賽。
 		3：一個窗口的標題必須完全匹配WinTitle匹配。
 		正則表達式：更改的的WinTitle，WinText，ExcludeTitle，ExcludeText是正則表達式。
-	)	
-	Ex_DH_TT =	
-	(LTrim	
-		確定是否有無形的窗戶“看到”的腳本。
-	)	
-	Ex_AF_TT =	
-	(LTrim	
-		跳過溫和的方法激活一個窗口
+	Ex_DH_TT =	確定是否有無形的窗戶“看到”的腳本。
+	Ex_AF_TT =	跳過溫和的方法激活一個窗口
 		徑直強而有力的方法。
-	)	
-	Ex_HK_TT =	
-	(LTrim	
-		強制利用鉤子實現所有
+	Ex_HK_TT =	強制利用鉤子實現所有
 		或一些鍵盤熱鍵。
-	)	
-	Ex_SK_TT =	
-	(LTrim	
-		設置的延遲會發生在每個
+	Ex_SK_TT =	設置的延遲會發生在每個
 		發送或至於ControlSend發送按鍵。
-	)	
-	Ex_MD_TT =	
-	(LTrim	
-		設置延遲後會發生
+	Ex_MD_TT =	設置延遲後會發生
 		每一次鼠標移動或點擊。
-	)	
-	Ex_SC_TT =	
-	(LTrim	
-		設置延遲後會發生
+	Ex_SC_TT =	設置延遲後會發生
 		每個控件修改命令。
-	)	
-	Ex_SW_TT =	
-	(LTrim	
-		設置延遲後會發生
+	Ex_SW_TT =	設置延遲後會發生
 		每個窗口的命令，如WinActivate。
-	)	
-	Ex_SB_TT =	
-	(LTrim	
-		確定腳本將運行多快的速度（影響CPU利用率）。
-	)	
-	Ex_NT_TT =	
-	(LTrim	
-		禁止放映的托盤圖標。
-	)	
-		
-	Ex_IN_TT =	
-	(LTrim	
-		導致腳本彷彿指定的行為
+	Ex_SB_TT =	確定腳本將運行多快的速度（影響CPU利用率）。
+	Ex_NT_TT =	禁止放映的托盤圖標。
+	Ex_IN_TT =	導致腳本彷彿指定的行為
 		文件的內容是目前在這個確切位置。
-	)	
-	Ex_PT_TT =	
-	(LTrim	
-		永久保持一個腳本運行
+	Ex_PT_TT =	永久保持一個腳本運行
 		（即，直到用戶關閉或ExitApp命令遇到）。
-	)	
-	Ex_MT_TT =	
-	(LTrim	
-		設置最大數量的同時
+	Ex_MT_TT =	設置最大數量的同時
 		線程，每個熱鍵或熱字串。
-	)	
 	Ex_UV_TT =	導出全局變量。
 	Ex_EdVars_TT =	選擇要導出的全局變量。
 		
@@ -1171,7 +1040,6 @@
 		
 ; AHK Commands Tips		
 	Ahk_Cmd_Index =	
-	(LTrim	
 	Abs	返回數字的絕對值。
 	ASin	返回的反正弦弧度（其正弦是Number）。
 	ACos	返回弧度反餘弦（餘弦數）。
@@ -1295,9 +1163,6 @@
 	InputBox	顯示一個輸入框，要求用戶輸入一個字符串。
 	InsertAt	插入一個或多個值，在一個線性陣列內的給定位置。
 	InStr	檢索數據對於一個給定的字符串的發生，從左側或右側。
-	)	
-	Ahk_Cmd_Index = %Ahk_Cmd_Index%`n	
-	(LTrim	
 	KeyHistory	顯示腳本信息和最近期的鍵盤和鼠標操作的歷史。
 	KeyWait	等待被釋放或按下一個鍵或鼠標/操縱桿按鈕。
 	Labels	一個標籤標識的代碼行，並可以用作轉到目標或形成一個子程序。
@@ -1429,5 +1294,3 @@
 	WinWaitActive	等待，直到指定的窗口處於活動狀態。
 	WinWaitClose	等待，直到指定的窗口不存在。
 	WinWaitNotActive	等待，直到指定的窗口不活躍。
-	)	
-return		

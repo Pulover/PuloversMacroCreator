@@ -45,7 +45,7 @@
 	r_Lang014 =	Importer Ma&cro
 	r_Lang015 =	E&nregistrer la macro actuelle
 		
-; UDF Sub Menu		
+; Function Sub Menu		
 	u_Lang001 =	&Créer Fonction
 	u_Lang002 =	&Ajouter un paramètre
 	u_Lang003 =	A&jouter Retour
@@ -716,12 +716,9 @@
 	d_Lang014 =	Script exportés
 	d_Lang015 =	Le fichier a été exporté avec succès!
 	d_Lang016 =	Cliquez sur 'Get' pour marquer la position.
-	d_Lang017 =	
-	(LTrim	
-		- Sélectionnez la fenêtre.
+	d_Lang017 =	- Sélectionnez la fenêtre.
 		- Pointez sur la position désirée.
 		- Appuyez sur le bouton de droite.
-	)	
 	d_Lang018 =	Couleur du pixel
 	d_Lang019 =	Supprimer la liste
 	d_Lang020 =	Fermer Macro?
@@ -738,26 +735,18 @@
 	d_Lang031 =	n'est pas un nom de fonction valide.
 	d_Lang032 =	Erreur: Touches en double.
 	d_Lang033 =	Activer les macros
-	d_Lang034 =	
-	(LTrim	
-		- Cliquer et faire glisser avec %DrawButton% pour sélectionner la zone.
+	d_Lang034 =	- Cliquer et faire glisser avec %DrawButton% pour sélectionner la zone.
 		- Cliquez et relâchez sans glisser pour sélectionner la zone de contrôle.
 		- Cliquez dans une zone sans contrôle pour sélectionner la zone de la fenêtre.
-	)	
 	d_Lang035 =	Continuer?
 	d_Lang036 =	Image / pas de pixel Trouvé à
 	d_Lang037 =	Image / pas de pixel non trouvé.
 	d_Lang038 =	Appuyez sur OK pour continuer.
 	d_Lang039 =	Délai d'attente!
-	d_Lang040 =	
-	(LTrim	
-		Cette fonction requiert la bibliothèque GDI+.
+	d_Lang040 =	Cette fonction requiert la bibliothèque GDI+.
 		Cliquez sur OK pour passer à la page de téléchargement.
-	)	
 	d_Lang041 =	Le nom de la variable contient un caractère illégal.
-	d_Lang042 =	
-	(LTrim	
-		Opérateur non valide.
+	d_Lang042 =	Opérateur non valide.
 		Les opérateurs suivants sont acceptés:
 		=, ==, <>,! =,>, <,> =, <=
 		
@@ -765,13 +754,9 @@
 		MyVar > 1
 		MyVar = `%A_DDDD`%
 		Clipboard == `%MyVar`%
-	)	
 	d_Lang043 =	Ou utilisez la barre d'outils de contrôle
-	d_Lang044 =	
-	(LTrim	
-		Cette fonction nécessite la fonction Eval().
+	d_Lang044 =	Cette fonction nécessite la fonction Eval().
 		Cliquez sur OK pour passer à la page de téléchargement.
-	)	
 	d_Lang045 =	S'il vous plaît sélectionner une fenêtre Internet Explorer!
 	d_Lang046 =	Connexion réussie!
 	d_Lang047 =	Impossible de se connecter!
@@ -783,35 +768,19 @@
 	d_Lang053 =	Ne plus afficher ce message.
 	d_Lang054 =	S'il vous plaît sélectionner une fenêtre Excel!
 	d_Lang055 =	S'il vous plaît sélectionner un fichier de script AutoHotkey (. Ahk) et une saisissez un nom de fonction.
-	d_Lang056 =	
-	(LTrim	
-		Cette fonction nécessite AutoHotkey installé.
+	d_Lang056 =	Cette fonction nécessite AutoHotkey installé.
 		Cliquez sur OK pour passer à la page de téléchargement.
-	)	
-	d_Lang057 =	
-	(LTrim	
-		- Appuyez sur Ctrl+touches fléchées pour déplacer la zone sélectionnée.
+	d_Lang057 =	- Appuyez sur Ctrl+touches fléchées pour déplacer la zone sélectionnée.
 		- Appuyez sur Maj+touches fléchées pour redimensionner la zone sélectionnée.
 		- Appuyez sur Entrée pour terminer.
-	)	
-	d_Lang058 =	
-	(LTrim	
-		Certaines fonctionnalités nécessitent privilages admnistrator Pour fonctionner correctement.
+	d_Lang058 =	Certaines fonctionnalités nécessitent privilages admnistrator Pour fonctionner correctement.
 		Il est recommandé de redémarrer l'application en tant qu'administrateur.
-	)	
-	d_Lang059 =	
-	(LTrim	
-		Cette commande ne supporte pas les expressions ou des fonctions.
+	d_Lang059 =	Cette commande ne supporte pas les expressions ou des fonctions.
 		S'il vous plaît affecter une variable et l'utiliser dans le paramètre.
-	)	
 	d_Lang060 =	Nouvelle version disponible
-	d_Lang061 =	
-	(LTrim	
-		Voulez-vous la télécharger maintenant?
+	d_Lang061 =	Voulez-vous la télécharger maintenant?
 		
 		Pour désactiver la vérification automatique Sélectionnez Aide > Vérifier au démarrage
-	)	
-		
 	d_Lang062 =	Vous avez déjà la version la plus récente.
 	d_Lang063 =	Une erreur s'est produite lors de la vérification.
 	d_Lang064 =	Erreur d'objet COM dans
@@ -819,12 +788,9 @@
 	d_Lang066 =	Spécifiquement
 	d_Lang067 =	Afficher cette fenêtre au démarrage
 	d_Lang068 =	Conseils:
-	d_Lang069 =	
-	(LTrim	
-		Beaucoup de temps et d'efforts ont été consacrés à l'élaboration de Pulover's Macro Creator. Si vous le trouvez utile, s'il vous plaît pensez à montrer votre appréciation avec un don.
+	d_Lang069 =	Beaucoup de temps et d'efforts ont été consacrés à l'élaboration de Pulover's Macro Creator. Si vous le trouvez utile, s'il vous plaît pensez à montrer votre appréciation avec un don.
 		
 		Donner ou non, il n'y aura pas de différence dans ses fonctions et fonctionnalités.
-	)	
 	d_Lang070 =	Faites un don...
 	d_Lang071 =	Non, merci
 	d_Lang072 =	Soutenez le logiciel Open Source
@@ -842,11 +808,8 @@
 	d_Lang084 =	S'il vous plaît enregistrer vos modifications avant de planifier une tâche.
 	d_Lang085 =	Manquant "End Loop" déclaration Macro 
 	d_Lang086 =	Manquant "End If" déclaration Macro
-	d_Lang087 =	
-	(LTrim	
-		Notez que les modifications apportées au script en dehors du programme ne sera pas affecter vos macros en aucune façon.
+	d_Lang087 =	Notez que les modifications apportées au script en dehors du programme ne sera pas affecter vos macros en aucune façon.
 		 Cette fonction est uniquement destinée en fonction rapide de l'exportation. PMC est pas destiné à être un éditeur de script AHK.
-	)	
 	d_Lang088 =	Essayez de courir utilisateur comme commun (non administrateur).
 	d_Lang089 =	Aucune ligne sélectionnée!
 	d_Lang090 =	S'il vous plaît, sélectionner une ligne pour insérer ou retirer le groupe.
@@ -855,23 +818,17 @@
 	d_Lang093 =	Grandes icônes
 	d_Lang094 =	Cette fonction nécessite Windows Vista ou supérieur.
 	d_Lang095 =	L'utilisation de ByRef provoque un paramètre pour devenir un alias pour la variable passée à partir de l'appelant. En d'autres termes, le paramètre et la variable à la fois de l'appelant se réfèrent aux mêmes teneurs en mémoire.
-	d_Lang096 =	
-	(LTrim	
-		- NE JOIGNEZ PAS VARIABLES SIGNES DE POURCENTAGE ICI.
+	d_Lang096 =	- NE JOIGNEZ PAS VARIABLES SIGNES DE POURCENTAGE ICI.
 		- Valeur de retour doit être une expression.
 		- Vous pouvez utiliser chaînes, variables, des tableaux et des fonctions. Vous pouvez aussi combiner un de ceux-là.
 		- Pour utiliser des chaînes, le placer entre guillemets, par exemple: "Le résultat est:" a + b.
 		- Si vous voulez obtenir des résultats supplémentaires, vous pouvez également utiliser des paramètres ByRef.
 		- Les tableaux peuvent être utilisés pour renvoyer plusieurs valeurs ou des valeurs encore nommés.
-	)	
-	d_Lang097 =	
-	(LTrim	
-		- NE JOIGNEZ PAS VARIABLES SIGNES DE POURCENTAGE ICI.
+	d_Lang097 =	- NE JOIGNEZ PAS VARIABLES SIGNES DE POURCENTAGE ICI.
 		- La plupart des expressions de AHK sont pris en charge.
 		- Vous pouvez utiliser chaînes, variables, des tableaux et des fonctions.
 		- Pour utiliser des chaînes, le placer entre guillemets, par exemple: var = "a".
 		- Déclarations multiples sont pris en charge, par exemple: var = "a" || InStr (var, "b").
-	)	
 	d_Lang098 =	Si un paramètre a une valeur par défaut, les paramètres suivants sont tenus d'avoir un aussi.
 	d_Lang099 =	Le nom de la fonction contient un caractère illégal.
 	d_Lang100 =	Goto, Gosub et de l'étiquette ne sont pas autorisés dans les fonctions.
@@ -879,9 +836,7 @@
 	d_Lang102 =	est un mot réservé.
 		
 ; Start-up Tips		
-	Start_Tips =	
-	(LTrim	
-		Vous pouvez créer des macros à l'aide des boutons de commande dans la fenêtre principale ou en utilisant l'enregistreur de copier vos actions. Allez dans Options > Paramètres > Enregistrer pour sélectionner les entrées seront enregistrées.
+	Start_Tips =	Vous pouvez créer des macros à l'aide des boutons de commande dans la fenêtre principale ou en utilisant l'enregistreur de copier vos actions. Allez dans Options > Paramètres > Enregistrer pour sélectionner les entrées seront enregistrées.
 		Pour utiliser l'enregistreur pour des tâches rapides allez dans Options > Paramètres > Enregistrement et cochez l'option "Effacer la liste". Puis cliquez sur le bouton Enregistrer dans la fenêtre principale et utiliser F10 pour effacer la macro en cours et en commencer une nouvelle avec le même raccourci clavier. Vous pouvez également cocher l'option "Toujours actif" dans la fenêtre principale de maintenir enregistrement et de lecture raccourcis clavier active.
 		Pour obtenir de l'aide pour une commande spécifique clic droit n'importe où sur une fenêtre de commande pour afficher des liens vers AutoHotkey aide en ligne.
 		Cochez l'option "Capture Keys" pour saisir les clés et les combinaisons de votre macro directement à partir de la fenêtre principale.
@@ -908,7 +863,6 @@
 		Pour rendre vos macros ne fonctionnent que sur une certaine fenêtre aller à Macro > Contexte des touches rapides sensibles.
 		Vous pouvez définir vos propres variables globales à charger au démarrage et à l'exportation. Allez dans Options > Paramètres > User variables globales pour les ajouter.
 		Vous pouvez exécuter des fonctions avancées telles que SUBSTR et RegExReplace de la fenêtre des fonctions (Insertion > Si Déclarations / variables / fonctions). Ou d'exécuter vos propres fonctions de scripts AutoHotkey externes.
-	)	
 		
 ; Tooltips		
 	AutoKey_TT =	Hotkey à jouer Macro
@@ -952,43 +906,25 @@
 	ExpView2_TT =	Éditeur Avancé
 	OSProgB_TT =	Afficher la barre de progression
 	OSTrans_TT =	Opacité
-	MRel_TT =	
-	(LTrim	
-		Mouvements relatifs à la position actuelle.
+	MRel_TT =	Mouvements relatifs à la position actuelle.
 		Ou si elle est utilisée avec la commande: position par rapport au témoin.
-	)	
-	Raw_TT =	
-	(LTrim	
-		La commande SendRaw interprète littéralement tous les caractères
+	Raw_TT =	La commande SendRaw interprète littéralement tous les caractères
 		plutôt que de traduire {Enter} à une touche ENTER,
 		^ C pour Control-C, etc
-	)	
-	ComText_TT =	
-	(LTrim	
-		Quand il n'est pas en mode brut, les caractères suivants
+	ComText_TT =	Quand il n'est pas en mode brut, les caractères suivants
 		sont traités comme des modificateurs (ces modificateurs agissent
 		seule la clé très prochaine):, +, ^, #
-	)	
 	ComEvent_TT =	La vitesse à laquelle les frappes sont envoyés est déterminé par le retard clé.
-	Clip_TT =	
-	(LTrim	
-		Utilise temporairement le Presse-papiers pour envoyer le texte.
+	Clip_TT =	Utilise temporairement le Presse-papiers pour envoyer le texte.
 		Lorsque l'opération est terminée, le script
 		restaure le contenu du presse-papiers d'origine.
 		(Laisser vide pour coller du texte contenu actuel)
-	)	
-	EditPaste_TT =	
-	(LTrim	
-		Chaîne pâtes à la position du curseur / insert
+	EditPaste_TT =	Chaîne pâtes à la position du curseur / insert
 		dans un contrôle Edit (cela n'affecte pas
 		le contenu du presse-papiers).
-	)	
 	SetText_TT =	Modifie le texte d'un contrôle.
-	RelKey_TT =	
-	(LTrim	
-		Enregistre les mouvements de souris et de clics que les
+	RelKey_TT =	Enregistre les mouvements de souris et de clics que les
 		compensations de la position précédente tenu.
-	)	
 	ToggleC_TT =	Activez l'enregistrement relative lorsque l'état touche est activée.
 	Relative_TT =	Les coordonnées sont relatives à la fenêtre active.
 	Screen_TT =	Les coordonnées sont relatives au poste de travail (écran).
@@ -997,132 +933,65 @@
 	Recurse_TT =	Récursifs dans les sous-répertoires (sous-dossiers) / subkeys
 	CmdSort_TT =	Classer par ordre alphabétique
 	Ex_EdScript_TT =	Ouvrir dans l'éditeur externe
-	ExprLink2_TT =	
-	(LTrim	
-		- NE JOIGNEZ PAS VARIABLES SIGNES DE POURCENTAGE ICI.
+	ExprLink2_TT =	- NE JOIGNEZ PAS VARIABLES SIGNES DE POURCENTAGE ICI.
 		- La plupart des expressions de AHK sont pris en charge.
 		- Vous pouvez utiliser chaînes, variables, des tableaux et des fonctions.
 		- Pour utiliser des chaînes, le placer entre guillemets, par exemple: var = "a".
 		- Déclarations multiples sont pris en charge, par exemple: var = "a" || InStr (var, "b").
-	)	
-	ExprLink3_TT =	
-	(LTrim	
-		- NE JOIGNEZ PAS VARIABLES SIGNES DE POURCENTAGE ICI.
+	ExprLink3_TT =	- NE JOIGNEZ PAS VARIABLES SIGNES DE POURCENTAGE ICI.
 		- La plupart des expressions de AHK sont pris en charge.
 		- Vous pouvez utiliser chaînes, variables, des tableaux et des fonctions.
 		- Pour utiliser des chaînes, le placer entre guillemets, par exemple: var = "a".
 		- Déclarations multiples sont pris en charge, par exemple: var = "a" || InStr (var, "b").
-	)	
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	Double-cliquez dessus pour modifier
-	Ex_IfDir_TT =	
-	(LTrim	
-		Crée contextuels et raccourcis en fonction des substitutions de chaînes
+	Ex_IfDir_TT =	Crée contextuels et raccourcis en fonction des substitutions de chaînes
 		le type de fenêtre qui est active ou existe.
-	)	
-	Ex_IfDirType_TT =	
-	(LTrim	
-		Crée contextuels et raccourcis en fonction des substitutions de chaînes
+	Ex_IfDirType_TT =	Crée contextuels et raccourcis en fonction des substitutions de chaînes
 		le type de fenêtre qui est active ou existe.
-	)	
-	Ex_SM_TT =	
-	(LTrim	
-		Envoyer rend synonyme de SendInput ou SendPlay plutôt que
+	Ex_SM_TT =	Envoyer rend synonyme de SendInput ou SendPlay plutôt que
 		la valeur par défaut (SendEvent). Cliquez rend également et MouseMove / cliquer / glisser
 		utiliser la méthode spécifiée.
-	)	
-	SM_TT =	
-	(LTrim	
-		Événement: C'est la sélection par défaut utilisé par tous les scripts.
+	SM_TT =	Événement: C'est la sélection par défaut utilisé par tous les scripts.
 		Il utilise la méthode de SendEvent Envoyer, SendRaw, Cliquez, et MouseMove / cliquer / glisser.
 		Entrée: Passe à la méthode de SendInput Envoyer, SendRaw, Cliquez, et MouseMove / cliquer / glisser.
 		InputThenPlay: Idem que ci-dessus sauf que plutôt que de retomber sur le mode de l'événement
 		quand SendInput n'est pas disponible, il revient au mode de lecture (ci-dessous). Cela provoque également
 		la commande SendInput lui-même pour revenir en mode Lecture lorsque SendInput n'est pas disponible.
 		Jouer: Passe à la méthode de SendPlay Envoyer, SendRaw, Cliquez, et MouseMove / cliquer / glisser.
-	)	
-	Ex_SI_TT =	
-	(LTrim	
-		Détermine si un script est autorisé à courir quand il est déjà en cours d'exécution.
-	)	
-	SI_TT =	
-	(LTrim	
-		Le mot force saute la boîte de dialogue et remplace automatiquement l'ancienne instance,
+	Ex_SI_TT =	Détermine si un script est autorisé à courir quand il est déjà en cours d'exécution.
+	SI_TT =	Le mot force saute la boîte de dialogue et remplace automatiquement l'ancienne instance,
 		qui est similaire à l'effet de la commande Recharger.
 		Le mot IGNORE saute la boîte de dialogue et laisse l'ancienne instance en cours d'exécution.
 		En d'autres termes, les tentatives de lancer un script déjà la marche à sont ignorés.
 		Le mot OFF permet à plusieurs instances du script à exécuter simultanément.
-	)	
-	Ex_ST_TT =	
-	(LTrim	
-		Définit le comportement de correspondance du paramètre WinTitle à des commandes telles que WinWait.
-	)	
-	ST_TT =	
-	(LTrim	
-		1: titre d'une fenêtre doit commencer par la WinTitle spécifiée comme une allumette.
+	Ex_ST_TT =	Définit le comportement de correspondance du paramètre WinTitle à des commandes telles que WinWait.
+	ST_TT =	1: titre d'une fenêtre doit commencer par la WinTitle spécifiée comme une allumette.
 		2: titre d'une fenêtre peut contenir n'importe où dans WinTitle qu'il s'agit d'un match.
 		3: titre d'une fenêtre doit correspondre exactement à WinTitle être un match.
 		RegEx: Changements WinTitle, WinText, ExcludeTitle et ExcludeText comme des expressions régulières.
-	)	
-	Ex_DH_TT =	
-	(LTrim	
-		Détermine si des fenêtres invisibles sont «vus» par le script.
-	)	
-	Ex_AF_TT =	
-	(LTrim	
-		Ignore la méthode douce de l'activation d'une fenêtre
+	Ex_DH_TT =	Détermine si des fenêtres invisibles sont «vus» par le script.
+	Ex_AF_TT =	Ignore la méthode douce de l'activation d'une fenêtre
 		et va directement à la méthode énergique.
-	)	
-	Ex_HK_TT =	
-	(LTrim	
-		Force l'utilisation du crochet pour mettre en œuvre tous
+	Ex_HK_TT =	Force l'utilisation du crochet pour mettre en œuvre tous
 		ou des raccourcis clavier.
-	)	
-	Ex_SK_TT =	
-	(LTrim	
-		Définit le délai qui aura lieu après chaque
+	Ex_SK_TT =	Définit le délai qui aura lieu après chaque
 		frappe envoyée par envoi ou ControlSend.
-	)	
-	Ex_MD_TT =	
-	(LTrim	
-		Définit le retard qui se produira après
+	Ex_MD_TT =	Définit le retard qui se produira après
 		chaque mouvement de souris ou cliquez sur.
-	)	
-	Ex_SC_TT =	
-	(LTrim	
-		Définit le retard qui se produira après
+	Ex_SC_TT =	Définit le retard qui se produira après
 		chaque contrôle-commande modifier.
-	)	
-	Ex_SW_TT =	
-	(LTrim	
-		Définit le retard qui se produira après
+	Ex_SW_TT =	Définit le retard qui se produira après
 		chaque commande de fenêtrage, comme WinActivate.
-	)	
-	Ex_SB_TT =	
-	(LTrim	
-		Détermine la vitesse à laquelle un script sera exécuté (affecte l'utilisation du processeur).
-	)	
-	Ex_NT_TT =	
-	(LTrim	
-		Désactive la projection d'une icône de la barre.
-	)	
-		
-	Ex_IN_TT =	
-	(LTrim	
-		Fait que le script se comporter comme si l'précisée
+	Ex_SB_TT =	Détermine la vitesse à laquelle un script sera exécuté (affecte l'utilisation du processeur).
+	Ex_NT_TT =	Désactive la projection d'une icône de la barre.
+	Ex_IN_TT =	Fait que le script se comporter comme si l'précisée
 		le contenu des fichiers sont présents à cette position exacte.
-	)	
-	Ex_PT_TT =	
-	(LTrim	
-		Conserve un script qui s'exécute en permanence
+	Ex_PT_TT =	Conserve un script qui s'exécute en permanence
 		(c'est-à-dire, jusqu'à ce que l'utilisateur ferme le ou ExitApp est rencontrée).
-	)	
-	Ex_MT_TT =	
-	(LTrim	
-		Définit le nombre maximum d'simultané
+	Ex_MT_TT =	Définit le nombre maximum d'simultané
 		threads par raccourci clavier ou hotstring.
-	)	
 	Ex_UV_TT =	Exporter des variables globales.
 	Ex_EdVars_TT =	Sélectionner des variables globales pour être exportés.
 		
@@ -1171,7 +1040,6 @@
 		
 ; AHK Commands Tips		
 	Ahk_Cmd_Index =	
-	(LTrim	
 	Abs	Retourne la valeur absolue d'un nombre .
 	ASin	Renvoie l' arc sinus ( le nombre dont le sinus est Number) en radians.
 	ACos	Retourne le cosinus ( le nombre dont le cosinus est Number) en radians.
@@ -1295,9 +1163,6 @@
 	InputBox	Affiche une boîte de saisie pour demander à l'utilisateur de saisir une chaîne .
 	InsertAt	Insère une ou plusieurs valeurs à une position donnée dans un réseau linéaire.
 	InStr	Recherche d'une occurrence donnée d'une chaîne , à partir de la gauche ou la droite.
-	)	
-	Ahk_Cmd_Index = %Ahk_Cmd_Index%`n	
-	(LTrim	
 	KeyHistory	Affiche des informations de script et une histoire des frappes les plus récentes et les clics de souris.
 	KeyWait	Temps d'attente pour un bouton de clé ou de la souris / joystick pour être libéré ou enfoncé.
 	Labels	Une étiquette identifie une ligne de code, et peut être utilisé comme une cible Goto ou pour former une sous-routine.
@@ -1429,5 +1294,3 @@
 	WinWaitActive	Attend que la fenêtre spécifiée est active.
 	WinWaitClose	Attend que la fenêtre spécifiée n'existe pas.
 	WinWaitNotActive	Attend que la fenêtre spécifiée n'est pas active.
-	)	
-return		

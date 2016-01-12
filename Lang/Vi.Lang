@@ -45,7 +45,7 @@
 	r_Lang014 =	&Nhập khẩu vĩ mô
 	r_Lang015 =	&Lưu vĩ mô hiện tại
 		
-; UDF Sub Menu		
+; Function Sub Menu		
 	u_Lang001 =	&Tạo Chức năng
 	u_Lang002 =	T&hêm Parameter
 	u_Lang003 =	Th&êm Return
@@ -716,12 +716,9 @@
 	d_Lang014 =	Kịch bản xuất khẩu
 	d_Lang015 =	Tập tin đã thành công xuất khẩu!
 	d_Lang016 =	Nhấp vào 'Nhận' để đánh dấu vị trí.
-	d_Lang017 =	
-	(LTrim	
-		- Chọn cửa sổ.
+	d_Lang017 =	- Chọn cửa sổ.
 		- Chỉ vào vị trí mong muốn.
 		- Bấm vào nút ngay.
-	)	
 	d_Lang018 =	Điểm ảnh màu
 	d_Lang019 =	Danh sách rõ ràng
 	d_Lang020 =	Gần vĩ mô?
@@ -738,26 +735,18 @@
 	d_Lang031 =	không phải là một tên hàm hợp lệ.
 	d_Lang032 =	Lỗi: Hotkeys trùng lặp.
 	d_Lang033 =	Kích hoạt Macro
-	d_Lang034 =	
-	(LTrim	
-		- Click và kéo với %DrawButton% để chọn khu vực.
+	d_Lang034 =	- Click và kéo với %DrawButton% để chọn khu vực.
 		- Click và phát hành mà không kéo để chọn khu vực kiểm soát.
 		- Click vào trong một khu vực mà không có một điều khiển để chọn khu vực của cửa sổ.
-	)	
 	d_Lang035 =	Tiếp tục không?
 	d_Lang036 =	Hình ảnh / Pixel tìm thấy tại
 	d_Lang037 =	Hình ảnh / Pixel Không tìm thấy.
 	d_Lang038 =	Bấm OK để tiếp tục.
 	d_Lang039 =	Thời gian chờ!
-	d_Lang040 =	
-	(LTrim	
-		Tính năng này đòi hỏi các thư viện GDI +.
+	d_Lang040 =	Tính năng này đòi hỏi các thư viện GDI +.
 		Nhấn OK để đi tải trang.
-	)	
 	d_Lang041 =	Tên biến có chứa một nhân vật bất hợp pháp.
-	d_Lang042 =	
-	(LTrim	
-		Nhà điều hành không hợp lệ.
+	d_Lang042 =	Nhà điều hành không hợp lệ.
 		Các nhà khai thác sau đây được chấp nhận:
 		=, ==, <>,! =,>, <,> =, <=
 		
@@ -765,13 +754,9 @@
 		MyVar > 1
 		MyVar = `%A_DDDD`%
 		Clipboard == `%MyVar`%
-	)	
 	d_Lang043 =	Hoặc sử dụng điều khiển thanh công cụ.
-	d_Lang044 =	
-	(LTrim	
-		Tính năng này đòi hỏi phải có các chức năng eval ().
+	d_Lang044 =	Tính năng này đòi hỏi phải có các chức năng eval ().
 		Nhấn OK để đi tải trang.
-	)	
 	d_Lang045 =	Hãy chọn một cửa sổ Internet Explorer!
 	d_Lang046 =	Kết nối thành công!
 	d_Lang047 =	Không thể kết nối!
@@ -783,35 +768,19 @@
 	d_Lang053 =	Không hiển thị thông báo này một lần nữa.
 	d_Lang054 =	Hãy chọn một cửa sổ Excel!
 	d_Lang055 =	Vui lòng chọn một tập tin kịch bản AutoHotkey (AHK.) Và nhập Tên Chức năng.
-	d_Lang056 =	
-	(LTrim	
-		Tính năng này đòi hỏi phải cài đặt AutoHotkey.
+	d_Lang056 =	Tính năng này đòi hỏi phải cài đặt AutoHotkey.
 		Nhấn OK để đi tải trang.
-	)	
-	d_Lang057 =	
-	(LTrim	
-		- Nhấn Ctrl + phím mũi tên để di chuyển vùng chọn.
+	d_Lang057 =	- Nhấn Ctrl + phím mũi tên để di chuyển vùng chọn.
 		- Nhấn Shift + phím mũi tên để thay đổi kích thước vùng chọn.
 		- Nhấn Enter để kết thúc.
-	)	
-	d_Lang058 =	
-	(LTrim	
-		Một số tính năng đòi hỏi privilages admnistrator để hoạt động đúng.
+	d_Lang058 =	Một số tính năng đòi hỏi privilages admnistrator để hoạt động đúng.
 		Bạn nên khởi động lại ứng dụng như là Administrator.
-	)	
-	d_Lang059 =	
-	(LTrim	
-		Lệnh này không hỗ trợ các biểu thức hoặc chức năng.
+	d_Lang059 =	Lệnh này không hỗ trợ các biểu thức hoặc chức năng.
 		Hãy chỉ định một biến và sử dụng nó trong các tham số.
-	)	
 	d_Lang060 =	Phiên bản mới có sẵn
-	d_Lang061 =	
-	(LTrim	
-		Bạn có muốn tải về ngay bây giờ?
+	d_Lang061 =	Bạn có muốn tải về ngay bây giờ?
 		
 		Để vô hiệu hóa tự động kiểm tra chọn Help> Check khi khởi động
-	)	
-		
 	d_Lang062 =	Bạn đã có phiên bản mới nhất.
 	d_Lang063 =	Một lỗi xảy ra trong khi kiểm tra.
 	d_Lang064 =	Lỗi đối tượng COM trong
@@ -819,12 +788,9 @@
 	d_Lang066 =	Đặc biệt
 	d_Lang067 =	Hiển thị cửa sổ này khi khởi động
 	d_Lang068 =	Lời khuyên:
-	d_Lang069 =	
-	(LTrim	
-		Rất nhiều thời gian và công sức đã đi vào sự phát triển của Đấng Tạo Hóa vĩ mô Pulover của. Nếu bạn tìm thấy nó hữu ích, xin vui lòng xem xét cho thấy sự đánh giá cao của bạn với một hiến.
+	d_Lang069 =	Rất nhiều thời gian và công sức đã đi vào sự phát triển của Đấng Tạo Hóa vĩ mô Pulover của. Nếu bạn tìm thấy nó hữu ích, xin vui lòng xem xét cho thấy sự đánh giá cao của bạn với một hiến.
 		
 		Tặng hay không, sẽ không có sự khác biệt về tính năng và chức năng của nó.
-	)	
 	d_Lang070 =	Tặng...
 	d_Lang071 =	Không, cảm ơn
 	d_Lang072 =	Hỗ trợ phần mềm nguồn mở
@@ -842,11 +808,8 @@
 	d_Lang084 =	Xin lưu các thay đổi của bạn trước khi lập kế hoạch một nhiệm vụ.
 	d_Lang085 =	Mất tích "End Loop" tuyên bố trong Macro 
 	d_Lang086 =	Mất tích "End If" tuyên bố trong Macro
-	d_Lang087 =	
-	(LTrim	
-		Chú ý rằng các thay đổi được thực hiện cho các script ngoài chương trình SẼ KHÔNG ẢNH HƯỞNG macro của bạn trong bất kỳ cách nào.
+	d_Lang087 =	Chú ý rằng các thay đổi được thực hiện cho các script ngoài chương trình SẼ KHÔNG ẢNH HƯỞNG macro của bạn trong bất kỳ cách nào.
 		 Tính năng này chỉ có nghĩa như là một chức năng xuất khẩu nhanh chóng. PMC này không có nghĩa là một biên tập viên AHK kịch bản.
-	)	
 	d_Lang088 =	Cố gắng chạy người sử dụng thông thường (không phải quản trị viên).
 	d_Lang089 =	Không có hàng lựa chọn!
 	d_Lang090 =	Xin vui lòng, hãy chọn một hàng để chèn hoặc xóa nhóm.
@@ -855,23 +818,17 @@
 	d_Lang093 =	Các biểu tượng lớn
 	d_Lang094 =	Tính năng này yêu cầu Windows Vista hoặc cao hơn.
 	d_Lang095 =	Việc sử dụng ByRef gây ra một tham số để trở thành một bí danh cho các biến được truyền từ người gọi. Nói cách khác, các tham số và biến của người gọi cả tham khảo các nội dung tương tự trong bộ nhớ.
-	d_Lang096 =	
-	(LTrim	
-		- KHÔNG GỬI KÈM BIẾN TRONG DẤU HIỆU PERCENT ĐÂY.
+	d_Lang096 =	- KHÔNG GỬI KÈM BIẾN TRONG DẤU HIỆU PERCENT ĐÂY.
 		- Giá trị Return phải là một biểu.
 		- Bạn có thể sử dụng các chuỗi, các biến, mảng và chức năng. Bạn cũng có thể kết hợp bất kỳ của những người.
 		- Để sử dụng dây, đặt chúng trong dấu ngoặc kép, ví dụ như: "Kết quả là:" a + b.
 		- Nếu bạn muốn trả lại kết quả hơn, bạn cũng có thể sử dụng các thông số ByRef trong.
 		- Mảng có thể được sử dụng để trả lại nhiều giá trị hoặc giá trị thậm chí còn được đặt tên.
-	)	
-	d_Lang097 =	
-	(LTrim	
-		- KHÔNG GỬI KÈM BIẾN TRONG DẤU HIỆU PERCENT ĐÂY.
+	d_Lang097 =	- KHÔNG GỬI KÈM BIẾN TRONG DẤU HIỆU PERCENT ĐÂY.
 		- Hầu hết các biểu AHK được hỗ trợ.
 		- Bạn có thể sử dụng các chuỗi, các biến, mảng và chức năng.
 		- Để sử dụng dây, đặt chúng trong dấu ngoặc kép, ví dụ: var = "a".
 		- Nhiều báo cáo được hỗ trợ, ví dụ như: var = "a" || InStr (var, "b").
-	)	
 	d_Lang098 =	Nếu một tham số có giá trị mặc định, các thông số sau đây được yêu cầu phải có một quá.
 	d_Lang099 =	Tên hàm chứa một nhân vật bất hợp pháp.
 	d_Lang100 =	Goto, Gosub và Label không được phép vào các chức năng.
@@ -879,9 +836,7 @@
 	d_Lang102 =	là một từ dành riêng.
 		
 ; Start-up Tips		
-	Start_Tips =	
-	(LTrim	
-		Bạn có thể tạo macro bằng cách sử dụng nút lệnh trong cửa sổ chính hoặc sử dụng máy ghi âm để sao chép các hành động của bạn. Vào Tùy chọn> Cài đặt> Ghi chọn những đầu vào sẽ được ghi lại.
+	Start_Tips =	Bạn có thể tạo macro bằng cách sử dụng nút lệnh trong cửa sổ chính hoặc sử dụng máy ghi âm để sao chép các hành động của bạn. Vào Tùy chọn> Cài đặt> Ghi chọn những đầu vào sẽ được ghi lại.
 		Sử dụng máy ghi âm cho các nhiệm vụ nhanh chóng vào Tùy chọn> Cài đặt> Ghi âm và kiểm tra các "Clear List" tùy chọn. Sau đó nhấn vào nút Record trong cửa sổ chính và sử dụng F10 để xóa vĩ mô hiện tại và bắt đầu một cái mới với các hotkey. Bạn cũng có thể kiểm tra "Luôn đăng nhập" tùy chọn trong cửa sổ chính để tiếp tục ghi âm và phát lại các phím nóng hoạt động.
 		Để có được sự giúp đỡ cho một lệnh cụ thể kích chuột phải vào bất cứ nơi nào trên một cửa sổ lệnh để hiển thị các liên kết đến AutoHotkey trợ giúp trực tuyến.
 		Kiểm tra "Capture phím" tùy chọn để nhập phím và kết hợp để vĩ mô của bạn trực tiếp từ cửa sổ chính.
@@ -908,7 +863,6 @@
 		Để làm cho Macro của bạn chỉ làm việc trên một cửa sổ nào đó đi để Macro> Hotkeys bối cảnh nhạy cảm.
 		Bạn có thể đặt biến toàn cầu của riêng bạn để được nạp vào khởi động và sẽ được xuất khẩu. Vào Tùy chọn> Cài đặt> Người dùng biến toàn cầu để thêm chúng.
 		Bạn có thể chạy các chức năng tiên tiến như SUBSTR và RegExReplace từ cửa sổ chức năng (Insert> Nếu cáo / biến / chức năng). Hoặc chạy các chức năng của riêng bạn từ các kịch bản AutoHotkey bên ngoài.
-	)	
 		
 ; Tooltips		
 	AutoKey_TT =	Phím nóng để chơi vĩ mô
@@ -952,43 +906,25 @@
 	ExpView2_TT =	Biên tập viên cao cấp
 	OSProgB_TT =	Hiển thị Progress Bar
 	OSTrans_TT =	Opacity
-	MRel_TT =	
-	(LTrim	
-		Chuyển động tương đối so với vị trí hiện tại.
+	MRel_TT =	Chuyển động tương đối so với vị trí hiện tại.
 		Hoặc nếu được sử dụng với điều khiển: Vị trí tương đối vào Control.
-	)	
-	Raw_TT =	
-	(LTrim	
-		Lệnh SendRaw giải thích tất cả các nhân vật theo nghĩa đen
+	Raw_TT =	Lệnh SendRaw giải thích tất cả các nhân vật theo nghĩa đen
 		chứ không phải là dịch {} Nhập một tổ hợp phím ENTER,
 		^ C vào Control-C, vv
-	)	
-	ComText_TT =	
-	(LTrim	
-		Khi không trong chế độ thô, các ký tự sau
+	ComText_TT =	Khi không trong chế độ thô, các ký tự sau
 		được đối xử như một biến (những thứ sau ảnh hưởng đến
 		chỉ có chìa khóa tiếp theo):, +, ^, #
-	)	
 	ComEvent_TT =	Tốc độ mà tổ hợp phím được gửi được xác định do sự chậm trễ chính.
-	Clip_TT =	
-	(LTrim	
-		Tạm thời sử dụng Clipboard để gửi văn bản.
+	Clip_TT =	Tạm thời sử dụng Clipboard để gửi văn bản.
 		Khi hoạt động được hoàn tất, kịch bản
 		khôi phục nội dung clipboard ban đầu.
 		(Để lại Tiêu trống để dán nội dung hiện tại)
-	)	
-	EditPaste_TT =	
-	(LTrim	
-		Bột nhão dây ở vị trí dấu nháy / chèn
+	EditPaste_TT =	Bột nhão dây ở vị trí dấu nháy / chèn
 		trong một điều khiển Edit (điều này không ảnh hưởng đến
 		các nội dung của clipboard).
-	)	
 	SetText_TT =	Thay đổi nội dung của một điều khiển.
-	RelKey_TT =	
-	(LTrim	
-		Hồ sơ di chuyển chuột và nhấp chuột như hiệu số
+	RelKey_TT =	Hồ sơ di chuyển chuột và nhấp chuột như hiệu số
 		từ vị trí trước khi tổ chức.
-	)	
 	ToggleC_TT =	Kích hoạt ghi âm tương đối khi nhà nước chính là trên.
 	Relative_TT =	Tọa độ có liên quan đến cửa sổ hoạt động.
 	Screen_TT =	Tọa độ tương đối so với máy tính để bàn (toàn màn hình).
@@ -997,132 +933,65 @@
 	Recurse_TT =	Đệ quy vào thư mục con (thư mục con) / Subkeys
 	CmdSort_TT =	Xếp theo vần
 	Ex_EdScript_TT =	Mở trong trình soạn thảo bên ngoài
-	ExprLink2_TT =	
-	(LTrim	
-		- KHÔNG GỬI KÈM BIẾN TRONG DẤU HIỆU PERCENT ĐÂY.
+	ExprLink2_TT =	- KHÔNG GỬI KÈM BIẾN TRONG DẤU HIỆU PERCENT ĐÂY.
 		- Hầu hết các biểu AHK được hỗ trợ.
 		- Bạn có thể sử dụng các chuỗi, các biến, mảng và chức năng.
 		- Để sử dụng dây, đặt chúng trong dấu ngoặc kép, ví dụ: var = "a".
 		- Nhiều báo cáo được hỗ trợ, ví dụ như: var = "a" || InStr (var, "b").
-	)	
-	ExprLink3_TT =	
-	(LTrim	
-		- KHÔNG GỬI KÈM BIẾN TRONG DẤU HIỆU PERCENT ĐÂY.
+	ExprLink3_TT =	- KHÔNG GỬI KÈM BIẾN TRONG DẤU HIỆU PERCENT ĐÂY.
 		- Hầu hết các biểu AHK được hỗ trợ.
 		- Bạn có thể sử dụng các chuỗi, các biến, mảng và chức năng.
 		- Để sử dụng dây, đặt chúng trong dấu ngoặc kép, ví dụ: var = "a".
 		- Nhiều báo cáo được hỗ trợ, ví dụ như: var = "a" || InStr (var, "b").
-	)	
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	Đúp Nhấn vào đây để chỉnh sửa
-	Ex_IfDir_TT =	
-	(LTrim	
-		Tạo phím nóng và hotstrings tùy thuộc bối cảnh nhạy cảm
+	Ex_IfDir_TT =	Tạo phím nóng và hotstrings tùy thuộc bối cảnh nhạy cảm
 		vào loại cửa sổ đang hoạt động hay tồn tại.
-	)	
-	Ex_IfDirType_TT =	
-	(LTrim	
-		Tạo phím nóng và hotstrings tùy thuộc bối cảnh nhạy cảm
+	Ex_IfDirType_TT =	Tạo phím nóng và hotstrings tùy thuộc bối cảnh nhạy cảm
 		vào loại cửa sổ đang hoạt động hay tồn tại.
-	)	
-	Ex_SM_TT =	
-	(LTrim	
-		Gửi làm đồng nghĩa với SendInput hoặc SendPlay hơn
+	Ex_SM_TT =	Gửi làm đồng nghĩa với SendInput hoặc SendPlay hơn
 		mặc định (SendEvent). Cũng làm cho Click và MouseMove / Click / Kéo
 		sử dụng phương pháp xác định.
-	)	
-	SM_TT =	
-	(LTrim	
-		Sự kiện: Đây là mặc định bắt đầu được sử dụng bởi tất cả các kịch bản.
+	SM_TT =	Sự kiện: Đây là mặc định bắt đầu được sử dụng bởi tất cả các kịch bản.
 		Nó sử dụng các phương pháp SendEvent cho Send, SendRaw, Click, và MouseMove / Click / Kéo.
 		Đầu vào: Công tắc phương pháp SendInput để gửi, SendRaw, Click, và MouseMove / Click / Kéo.
 		InputThenPlay: Tương tự như trên, ngoại trừ thay vì rơi trở lại chế độ tổ chức sự kiện
 		khi SendInput không có sẵn, nó trở về với chế độ chơi (bên dưới). Điều này cũng gây
 		lệnh SendInput bản thân để trở lại để chơi chế độ khi SendInput là không có.
 		Chơi: Thiết bị chuyển mạch với phương pháp SendPlay cho Send, SendRaw, Click, và MouseMove / Click / Kéo.
-	)	
-	Ex_SI_TT =	
-	(LTrim	
-		Xác định liệu một kịch bản được phép chạy một lần nữa khi nó đang chạy.
-	)	
-	SI_TT =	
-	(LTrim	
-		Các FORCE từ bỏ qua các hộp thoại và thay thế các ví dụ cũ sẽ tự động,
+	Ex_SI_TT =	Xác định liệu một kịch bản được phép chạy một lần nữa khi nó đang chạy.
+	SI_TT =	Các FORCE từ bỏ qua các hộp thoại và thay thế các ví dụ cũ sẽ tự động,
 		tương tự như trong thực thi các lệnh lại.
 		Từ bỏ qua bỏ qua hộp thoại và lá dụ cũ chạy.
 		Nói cách khác, cố gắng để khởi động một kịch bản đã chạy được bỏ qua.
 		OFF từ cho phép nhiều trường hợp của các kịch bản để chạy đồng thời.
-	)	
-	Ex_ST_TT =	
-	(LTrim	
-		Thiết lập các hành vi phù hợp với các tham số WinTitle trong lệnh như WinWait.
-	)	
-	ST_TT =	
-	(LTrim	
-		1: Một tiêu đề của cửa sổ phải bắt đầu với WinTitle quy định là một trận đấu.
+	Ex_ST_TT =	Thiết lập các hành vi phù hợp với các tham số WinTitle trong lệnh như WinWait.
+	ST_TT =	1: Một tiêu đề của cửa sổ phải bắt đầu với WinTitle quy định là một trận đấu.
 		2: tiêu đề của một cửa sổ có thể chứa WinTitle bất cứ nơi nào bên trong nó là một trận đấu.
 		3: Một tiêu đề của cửa sổ phải phù hợp chính xác WinTitle là một trận đấu.
 		Regex: Thay đổi WinTitle, WinText, ExcludeTitle, và ExcludeText được biểu thức thông thường.
-	)	
-	Ex_DH_TT =	
-	(LTrim	
-		Xác định liệu các cửa sổ vô hình được "nhìn thấy" bởi kịch bản.
-	)	
-	Ex_AF_TT =	
-	(LTrim	
-		Bỏ qua các phương pháp nhẹ nhàng kích hoạt một cửa sổ
+	Ex_DH_TT =	Xác định liệu các cửa sổ vô hình được "nhìn thấy" bởi kịch bản.
+	Ex_AF_TT =	Bỏ qua các phương pháp nhẹ nhàng kích hoạt một cửa sổ
 		và đi thẳng vào các phương pháp mạnh mẽ.
-	)	
-	Ex_HK_TT =	
-	(LTrim	
-		Buộc việc sử dụng các móc để thực hiện tất cả
+	Ex_HK_TT =	Buộc việc sử dụng các móc để thực hiện tất cả
 		hoặc một số phím tắt bàn phím.
-	)	
-	Ex_SK_TT =	
-	(LTrim	
-		Thiết lập sự chậm trễ đó sẽ xảy ra sau mỗi
+	Ex_SK_TT =	Thiết lập sự chậm trễ đó sẽ xảy ra sau mỗi
 		tổ hợp phím gửi Gửi hoặc ControlSend.
-	)	
-	Ex_MD_TT =	
-	(LTrim	
-		Thiết lập sự chậm trễ đó sẽ xảy ra sau khi
+	Ex_MD_TT =	Thiết lập sự chậm trễ đó sẽ xảy ra sau khi
 		mỗi di chuyển chuột hoặc nhấp chuột.
-	)	
-	Ex_SC_TT =	
-	(LTrim	
-		Thiết lập sự chậm trễ đó sẽ xảy ra sau khi
+	Ex_SC_TT =	Thiết lập sự chậm trễ đó sẽ xảy ra sau khi
 		mỗi kiểm soát sửa đổi lệnh.
-	)	
-	Ex_SW_TT =	
-	(LTrim	
-		Thiết lập sự chậm trễ đó sẽ xảy ra sau khi
+	Ex_SW_TT =	Thiết lập sự chậm trễ đó sẽ xảy ra sau khi
 		mỗi lệnh cửa sổ, chẳng hạn như WinActivate.
-	)	
-	Ex_SB_TT =	
-	(LTrim	
-		Xác định nhanh như thế nào một kịch bản sẽ chạy (ảnh hưởng đến việc sử dụng CPU).
-	)	
-	Ex_NT_TT =	
-	(LTrim	
-		Vô hiệu hóa hiển thị một biểu tượng trên khay.
-	)	
-		
-	Ex_IN_TT =	
-	(LTrim	
-		Gây ra các kịch bản để hành xử như thể các quy định
+	Ex_SB_TT =	Xác định nhanh như thế nào một kịch bản sẽ chạy (ảnh hưởng đến việc sử dụng CPU).
+	Ex_NT_TT =	Vô hiệu hóa hiển thị một biểu tượng trên khay.
+	Ex_IN_TT =	Gây ra các kịch bản để hành xử như thể các quy định
 		nội dung của tập tin có mặt tại vị trí này chính xác.
-	)	
-	Ex_PT_TT =	
-	(LTrim	
-		Giữ một kịch bản vĩnh viễn chạy
+	Ex_PT_TT =	Giữ một kịch bản vĩnh viễn chạy
 		(Có nghĩa là, cho đến khi người dùng đóng nó hoặc ExitApp là gặp phải).
-	)	
-	Ex_MT_TT =	
-	(LTrim	
-		Thiết lập số lượng tối đa đồng thời
+	Ex_MT_TT =	Thiết lập số lượng tối đa đồng thời
 		chủ đề cho mỗi phím nóng hoặc hotstring.
-	)	
 	Ex_UV_TT =	Xuất khẩu các biến toàn cầu.
 	Ex_EdVars_TT =	Chọn các biến toàn cầu được xuất khẩu.
 		
@@ -1171,7 +1040,6 @@
 		
 ; AHK Commands Tips		
 	Ahk_Cmd_Index =	
-	(LTrim	
 	Abs	Trả về giá trị tuyệt đối của số.
 	ASin	Trả về arcsine (số có sin là số) trong radian.
 	ACos	Trả về arccosine (số có cosin là số) trong radian.
@@ -1295,9 +1163,6 @@
 	InputBox	Hiển thị một hộp đầu vào để yêu cầu người dùng nhập vào một chuỗi.
 	InsertAt	Chèn một hoặc nhiều giá trị tại một vị trí nhất định trong một mảng tuyến tính.
 	InStr	Tìm kiếm cho một sự xuất hiện được một chuỗi, từ bên trái hoặc bên phải.
-	)	
-	Ahk_Cmd_Index = %Ahk_Cmd_Index%`n	
-	(LTrim	
 	KeyHistory	Hiển thị thông tin kịch bản và lịch sử của các tổ hợp phím gần đây nhất và cú click chuột.
 	KeyWait	Chờ đợi cho một phím hoặc chuột / phím điều khiển nút sẽ được phát hành hoặc ép xuống.
 	Labels	Một nhãn xác định một dòng mã, và có thể được sử dụng như là một mục tiêu Chuyển đến hoặc để tạo thành một chương trình con.
@@ -1429,5 +1294,3 @@
 	WinWaitActive	Đợi cho đến khi cửa sổ chỉ định đang hoạt động.
 	WinWaitClose	Đợi cho đến khi cửa sổ chỉ định không tồn tại.
 	WinWaitNotActive	Đợi cho đến khi cửa sổ chỉ định là không hoạt động.
-	)	
-return		

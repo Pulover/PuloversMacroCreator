@@ -26,7 +26,7 @@ Loop, Parse, Clipboard, `n, `r
 		i := A_Index + 2
 		PMC.Lang[A_Index] .= Label . Line%i% "`n"
 		If InStr(Label, "LoadLang_")
-			nLang[A_Index] := SubStr(Line%i%, 1, 2)
+			nLang[A_Index] := StrReplace(Line%i%, ":")
 	}
 }
 

@@ -45,7 +45,7 @@
 	r_Lang014 =	Im&por Makro
 	r_Lang015 =	&Simpan Makro sekarang
 		
-; UDF Sub Menu		
+; Function Sub Menu		
 	u_Lang001 =	&Buat Fungsi
 	u_Lang002 =	&Tambahkan Parameter
 	u_Lang003 =	T&ambahkan Kembali
@@ -716,12 +716,9 @@
 	d_Lang014 =	Script Diekspor
 	d_Lang015 =	File tersebut berhasil diekspor!
 	d_Lang016 =	Klik 'Get' untuk menandai posisi.
-	d_Lang017 =	
-	(LTrim	
-		- Pilih jendela.
+	d_Lang017 =	- Pilih jendela.
 		- Arahkan ke posisi yang diinginkan.
 		- Tekan Tombol Kanan.
-	)	
 	d_Lang018 =	Pixel Warna
 	d_Lang019 =	Hapus Daftar
 	d_Lang020 =	Tutup Makro?
@@ -738,26 +735,18 @@
 	d_Lang031 =	bukan nama fungsi valid.
 	d_Lang032 =	Kesalahan: Hotkeys Duplikat.
 	d_Lang033 =	Aktifkan Macro
-	d_Lang034 =	
-	(LTrim	
-		- Klik dan Drag dengan %DrawButton% untuk memilih area.
+	d_Lang034 =	- Klik dan Drag dengan %DrawButton% untuk memilih area.
 		- Klik dan lepaskan tanpa menyeret untuk memilih area kontrol.
 		- Klik di daerah tanpa kontrol untuk memilih area jendela.
-	)	
 	d_Lang035 =	Lanjutkan?
 	d_Lang036 =	Image / Pixel Ditemukan di
 	d_Lang037 =	Image / Pixel Tidak Ditemukan.
 	d_Lang038 =	Tekan OK untuk melanjutkan.
 	d_Lang039 =	Timeout!
-	d_Lang040 =	
-	(LTrim	
-		Fitur ini memerlukan+Library GDI.
+	d_Lang040 =	Fitur ini memerlukan+Library GDI.
 		Klik OK untuk pergi ke halaman download.
-	)	
 	d_Lang041 =	Nama variabel mengandung karakter ilegal.
-	d_Lang042 =	
-	(LTrim	
-		Operator tidak valid.
+	d_Lang042 =	Operator tidak valid.
 		Operator berikut yang diterima:
 		=, ==, <>,! =,>, <,> =, <=
 		
@@ -765,13 +754,9 @@
 		MyVar > 1
 		MyVar = `%A_DDDD`%
 		Clipboard == `%MyVar`%
-	)	
 	d_Lang043 =	Atau gunakan Kontrol Toolbar.
-	d_Lang044 =	
-	(LTrim	
-		Fitur ini memerlukan Eval () Fungsi.
+	d_Lang044 =	Fitur ini memerlukan Eval () Fungsi.
 		Klik OK untuk pergi ke halaman download.
-	)	
 	d_Lang045 =	Silakan pilih jendela Internet Explorer!
 	d_Lang046 =	Koneksi Sukses!
 	d_Lang047 =	Gagal Connect!
@@ -783,35 +768,19 @@
 	d_Lang053 =	Jangan tampilkan pesan ini lagi.
 	d_Lang054 =	Silakan pilih jendela Excel!
 	d_Lang055 =	Silakan pilih file script AutoHotKey (AHK.) Dan memasukkan Nama Fungsi.
-	d_Lang056 =	
-	(LTrim	
-		Fitur ini memerlukan Autohotkey diinstal.
+	d_Lang056 =	Fitur ini memerlukan Autohotkey diinstal.
 		Klik OK untuk pergi ke halaman download.
-	)	
-	d_Lang057 =	
-	(LTrim	
-		- Tekan Ctrl+Arrow tombol untuk memindahkan area yang dipilih.
+	d_Lang057 =	- Tekan Ctrl+Arrow tombol untuk memindahkan area yang dipilih.
 		- Tekan Shift+tombol panah untuk mengubah ukuran area yang dipilih.
 		- Tekan Enter untuk menyelesaikan.
-	)	
-	d_Lang058 =	
-	(LTrim	
-		Beberapa fitur memerlukan hak istimewa admnistrator untuk berfungsi dengan baik.
+	d_Lang058 =	Beberapa fitur memerlukan hak istimewa admnistrator untuk berfungsi dengan baik.
 		Ini dianjurkan untuk restart aplikasi sebagai Administrator.
-	)	
-	d_Lang059 =	
-	(LTrim	
-		Perintah ini tidak mendukung ekspresi atau fungsi.
+	d_Lang059 =	Perintah ini tidak mendukung ekspresi atau fungsi.
 		Silahkan menetapkan variabel dan menggunakannya dalam parameter.
-	)	
 	d_Lang060 =	Versi baru tersedia
-	d_Lang061 =	
-	(LTrim	
-		Apakah Anda ingin men-download sekarang?
+	d_Lang061 =	Apakah Anda ingin men-download sekarang?
 		
 		Untuk menonaktifkan pemeriksaan otomatis pilih Bantuan> Periksa pada start-up. > Periksa pada startup
-	)	
-		
 	d_Lang062 =	Anda sudah memiliki versi terbaru.
 	d_Lang063 =	Terjadi galat saat memeriksa.
 	d_Lang064 =	COM objek kesalahan dalam
@@ -819,12 +788,9 @@
 	d_Lang066 =	Secara khusus
 	d_Lang067 =	Tampilkan jendela ini pada startup
 	d_Lang068 =	Tips:
-	d_Lang069 =	
-	(LTrim	
-		Banyak waktu dan usaha telah pergi ke dalam pengembangan Pulover's Macro Creator. Jika Anda merasa berguna, silakan mempertimbangkan menunjukkan penghargaan Anda dengan sumbangan.
+	d_Lang069 =	Banyak waktu dan usaha telah pergi ke dalam pengembangan Pulover's Macro Creator. Jika Anda merasa berguna, silakan mempertimbangkan menunjukkan penghargaan Anda dengan sumbangan.
 		
 		Menyumbangkan atau tidak, tidak akan ada perbedaan dalam fitur dan fungsionalitas.
-	)	
 	d_Lang070 =	Donasi...
 	d_Lang071 =	Tidak, terima kasih
 	d_Lang072 =	Mendukung perangkat lunak Open Source
@@ -842,11 +808,8 @@
 	d_Lang084 =	Harap menyimpan perubahan sebelum penjadwalan tugas.
 	d_Lang085 =	Hilang "End Loop" pernyataan dalam Makro 
 	d_Lang086 =	Hilang "End If" pernyataan dalam Makro
-	d_Lang087 =	
-	(LTrim	
-		Perhatikan bahwa perubahan yang dibuat untuk script luar program TIDAK AKAN MEMPENGARUHI macro ANDA dengan cara apapun.
+	d_Lang087 =	Perhatikan bahwa perubahan yang dibuat untuk script luar program TIDAK AKAN MEMPENGARUHI macro ANDA dengan cara apapun.
 		 Fitur ini hanya dimaksudkan sebagai fungsi ekspor cepat. PMC tidak dimaksudkan untuk menjadi editor naskah AHK.
-	)	
 	d_Lang088 =	Cobalah untuk menjalankan pengguna yang biasa (tidak administrator).
 	d_Lang089 =	Tidak ada baris yang dipilih!
 	d_Lang090 =	Silakan, pilih baris untuk memasukkan atau mengeluarkan kelompok.
@@ -855,23 +818,17 @@
 	d_Lang093 =	Ikon besar
 	d_Lang094 =	Fitur ini memerlukan Windows Vista atau yang lebih tinggi.
 	d_Lang095 =	Penggunaan ByRef menyebabkan parameter untuk menjadi sebuah alias untuk variabel berlalu dalam dari penelepon. Dengan kata lain, parameter dan variabel pemanggil keduanya merujuk pada isi yang sama di memori.
-	d_Lang096 =	
-	(LTrim	
-		- JANGAN MELAMPIRKAN VARIABEL DI TANDA PERSEN DI SINI.
+	d_Lang096 =	- JANGAN MELAMPIRKAN VARIABEL DI TANDA PERSEN DI SINI.
 		- Mengembalikan nilai harus menjadi ekspresi.
 		- Anda dapat menggunakan string, variabel, array dan fungsi. Anda juga dapat menggabungkan salah satu dari mereka.
 		- Untuk menggunakan string, menyertakan mereka dalam tanda kutip, misalnya: "Hasil adalah:" a + b.
 		- Jika Anda ingin kembali hasil tambahan, Anda juga dapat menggunakan ByRef dalam parameter.
 		- Array dapat digunakan untuk mengembalikan beberapa nilai atau nilai-nilai bahkan bernama.
-	)	
-	d_Lang097 =	
-	(LTrim	
-		- JANGAN MELAMPIRKAN VARIABEL DI TANDA PERSEN DI SINI.
+	d_Lang097 =	- JANGAN MELAMPIRKAN VARIABEL DI TANDA PERSEN DI SINI.
 		- Sebagian besar dari ekspresi AHK didukung.
 		- Anda dapat menggunakan string, variabel, array dan fungsi.
 		- Untuk menggunakan string, menyertakan mereka dalam tanda kutip, misalnya: var = "a".
 		- Beberapa Laporan yang didukung, misalnya: var = "a" || InStr (var, "b").
-	)	
 	d_Lang098 =	Jika satu parameter memiliki nilai default, parameter berikut wajib memiliki satu juga.
 	d_Lang099 =	Nama fungsi mengandung karakter ilegal.
 	d_Lang100 =	Goto, gosub dan Label tidak diperbolehkan dalam fungsi.
@@ -879,9 +836,7 @@
 	d_Lang102 =	adalah kata reserved.
 		
 ; Start-up Tips		
-	Start_Tips =	
-	(LTrim	
-		Anda dapat membuat Macro dengan menggunakan Tombol Perintah di jendela utama atau menggunakan Recorder untuk menyalin tindakan Anda. Buka Opsi> Pengaturan> Merekam untuk memilih apa yang input akan disimpan.
+	Start_Tips =	Anda dapat membuat Macro dengan menggunakan Tombol Perintah di jendela utama atau menggunakan Recorder untuk menyalin tindakan Anda. Buka Opsi> Pengaturan> Merekam untuk memilih apa yang input akan disimpan.
 		Untuk menggunakan perekam untuk tugas-tugas cepat masuk ke Pilihan> Pengaturan> Recording dan periksa "Clear List" pilihan. Kemudian klik tombol Record di jendela utama dan menggunakan F10 untuk menghapus Makro saat ini dan memulai yang baru dengan hotkey yang sama. Anda juga dapat memeriksa "Selalu Aktif" pilihan di jendela utama untuk menjaga Recording dan Playback hotkeys aktif.
 		Untuk mendapatkan bantuan untuk perintah tertentu klik kanan di mana saja di jendela perintah untuk menampilkan link ke Autohotkey Bantuan online.
 		Periksa "Capture Tombol" pilihan untuk memasukkan kunci dan kombinasi Makro Anda langsung dari jendela utama.
@@ -908,7 +863,6 @@
 		Untuk membuat Macro Anda bekerja hanya pada jendela tertentu pergi ke Makro> Konteks Hotkeys Sensitif.
 		Anda dapat mengatur Variabel global Anda sendiri yang akan dimuat pada start up dan diekspor. Pergi ke Pilihan> Pengaturan> User global Variabel untuk menambahkannya.
 		Anda dapat menjalankan fungsi-fungsi lanjutan seperti substr dan RegExReplace dari jendela Fungsi (Insert> Jika Laporan / Variabel / Fungsi). Atau menjalankan fungsi-fungsi anda sendiri dari script Autohotkey eksternal.
-	)	
 		
 ; Tooltips		
 	AutoKey_TT =	Hotkey untuk bermain Makro
@@ -952,43 +906,25 @@
 	ExpView2_TT =	Editor canggih
 	OSProgB_TT =	Tampilan Progress Bar
 	OSTrans_TT =	Kegelapan
-	MRel_TT =	
-	(LTrim	
-		Gerakan relatif terhadap posisi saat ini.
+	MRel_TT =	Gerakan relatif terhadap posisi saat ini.
 		Atau jika digunakan dengan Control: Posisi relatif ke Control.
-	)	
-	Raw_TT =	
-	(LTrim	
-		Perintah SendRaw menafsirkan semua karakter harfiah
+	Raw_TT =	Perintah SendRaw menafsirkan semua karakter harfiah
 		daripada menerjemahkan {Enter} ke keystroke ENTER,
 		^ C untuk Control-C, dll
-	)	
-	ComText_TT =	
-	(LTrim	
-		Bila tidak dalam modus baku, karakter berikut
+	ComText_TT =	Bila tidak dalam modus baku, karakter berikut
 		diperlakukan sebagai pengubah (pengubah ini mempengaruhi
 		hanya kunci berikutnya):!, +, ^, #
-	)	
 	ComEvent_TT =	Tingkat di mana keystrokes dikirim ditentukan oleh penundaan kunci.
-	Clip_TT =	
-	(LTrim	
-		Sementara menggunakan Clipboard untuk mengirim teks.
+	Clip_TT =	Sementara menggunakan Clipboard untuk mengirim teks.
 		Ketika operasi selesai, script
 		mengembalikan isi clipboard asli.
 		(Biarkan kosong Teks untuk menyisipkan konten saat ini)
-	)	
-	EditPaste_TT =	
-	(LTrim	
-		Pasta String pada posisi tanda sisipan / insert
+	EditPaste_TT =	Pasta String pada posisi tanda sisipan / insert
 		dalam kontrol Edit (ini tidak mempengaruhi
 		isi clipboard).
-	)	
 	SetText_TT =	Mengubah teks kontrol.
-	RelKey_TT =	
-	(LTrim	
-		Rekaman gerakan Mouse dan klik sebagai offset
+	RelKey_TT =	Rekaman gerakan Mouse dan klik sebagai offset
 		dari posisi sebelumnya saat dipegang.
-	)	
 	ToggleC_TT =	Aktifkan Recording Relatif ketika negara kunci di.
 	Relative_TT =	Koordinat relatif terhadap jendela aktif.
 	Screen_TT =	Koordinat relatif terhadap desktop (seluruh layar).
@@ -997,132 +933,65 @@
 	Recurse_TT =	Rekursif ke dalam subdirektori (subfolder) / Subkunci
 	CmdSort_TT =	Urutkan berdasarkan abjad
 	Ex_EdScript_TT =	Nyílt külső szerkesztőben
-	ExprLink2_TT =	
-	(LTrim	
-		- JANGAN MELAMPIRKAN VARIABEL DI TANDA PERSEN DI SINI.
+	ExprLink2_TT =	- JANGAN MELAMPIRKAN VARIABEL DI TANDA PERSEN DI SINI.
 		- Sebagian besar dari ekspresi AHK didukung.
 		- Anda dapat menggunakan string, variabel, array dan fungsi.
 		- Untuk menggunakan string, menyertakan mereka dalam tanda kutip, misalnya: var = "a".
 		- Beberapa Laporan yang didukung, misalnya: var = "a" || InStr (var, "b").
-	)	
-	ExprLink3_TT =	
-	(LTrim	
-		- JANGAN MELAMPIRKAN VARIABEL DI TANDA PERSEN DI SINI.
+	ExprLink3_TT =	- JANGAN MELAMPIRKAN VARIABEL DI TANDA PERSEN DI SINI.
 		- Sebagian besar dari ekspresi AHK didukung.
 		- Anda dapat menggunakan string, variabel, array dan fungsi.
 		- Untuk menggunakan string, menyertakan mereka dalam tanda kutip, misalnya: var = "a".
 		- Beberapa Laporan yang didukung, misalnya: var = "a" || InStr (var, "b").
-	)	
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	Double-Klik untuk mengedit
-	Ex_IfDir_TT =	
-	(LTrim	
-		Menciptakan konteks-sensitif hotkeys dan hotstrings tergantung
+	Ex_IfDir_TT =	Menciptakan konteks-sensitif hotkeys dan hotstrings tergantung
 		pada jenis jendela yang aktif atau ada.
-	)	
-	Ex_IfDirType_TT =	
-	(LTrim	
-		Menciptakan konteks-sensitif hotkeys dan hotstrings tergantung
+	Ex_IfDirType_TT =	Menciptakan konteks-sensitif hotkeys dan hotstrings tergantung
 		pada jenis jendela yang aktif atau ada.
-	)	
-	Ex_SM_TT =	
-	(LTrim	
-		Membuat Kirim identik dengan SendInput atau SendPlay daripada
+	Ex_SM_TT =	Membuat Kirim identik dengan SendInput atau SendPlay daripada
 		default (SendEvent). Juga membuat Klik dan mousemove / Klik / Drag
 		menggunakan metode tertentu.
-	)	
-	SM_TT =	
-	(LTrim	
-		Kegiatan: Ini adalah default awal yang digunakan oleh semua skrip.
+	SM_TT =	Kegiatan: Ini adalah default awal yang digunakan oleh semua skrip.
 		Ia menggunakan metode SendEvent untuk Kirim, SendRaw, Klik, dan mousemove / Klik / Drag.
 		Masukan: Beralih ke metode SendInput untuk Kirim, SendRaw, Klik, dan mousemove / Klik / Drag.
 		InputThenPlay: Sama seperti di atas kecuali bahwa daripada jatuh kembali ke modus Acara
 		ketika SendInput tidak tersedia, itu akan beralih ke modus (bawah) Play. Hal ini juga menyebabkan
 		perintah SendInput sendiri untuk kembali ke mode Putar ketika SendInput tidak tersedia.
 		Play: Beralih ke metode SendPlay untuk Kirim, SendRaw, Klik, dan mousemove / Klik / Drag.
-	)	
-	Ex_SI_TT =	
-	(LTrim	
-		Menentukan apakah script yang diperbolehkan untuk berjalan lagi ketika sudah berjalan.
-	)	
-	SI_TT =	
-	(LTrim	
-		Kata FORCE melompati kotak dialog dan menggantikan contoh lama secara otomatis,
+	Ex_SI_TT =	Menentukan apakah script yang diperbolehkan untuk berjalan lagi ketika sudah berjalan.
+	SI_TT =	Kata FORCE melompati kotak dialog dan menggantikan contoh lama secara otomatis,
 		yang mirip dalam efek perintah Reload.
 		Kata ABAIKAN melompat kotak dialog dan meninggalkan contoh lama berjalan.
 		Dengan kata lain, upaya untuk memulai script sudah berjalan diabaikan.
 		Kata OFF memungkinkan beberapa contoh dari script untuk menjalankan secara bersamaan.
-	)	
-	Ex_ST_TT =	
-	(LTrim	
-		Mengatur perilaku pencocokan parameter WinTitle dalam perintah seperti WinWait.
-	)	
-	ST_TT =	
-	(LTrim	
-		1: Judul Sebuah jendela harus dimulai dengan WinTitle ditentukan untuk menjadi sebuah pertandingan.
+	Ex_ST_TT =	Mengatur perilaku pencocokan parameter WinTitle dalam perintah seperti WinWait.
+	ST_TT =	1: Judul Sebuah jendela harus dimulai dengan WinTitle ditentukan untuk menjadi sebuah pertandingan.
 		2: Judul window dapat berisi WinTitle mana saja di dalamnya menjadi pertandingan.
 		3: Judul window harus sama persis WinTitle menjadi pertandingan.
 		Regex: Perubahan WinTitle, WinText, ExcludeTitle, dan ExcludeText menjadi ekspresi reguler.
-	)	
-	Ex_DH_TT =	
-	(LTrim	
-		Menentukan apakah jendela tak kasat mata 'dilihat' oleh script.
-	)	
-	Ex_AF_TT =	
-	(LTrim	
-		Melompat metode lembut mengaktifkan jendela
+	Ex_DH_TT =	Menentukan apakah jendela tak kasat mata 'dilihat' oleh script.
+	Ex_AF_TT =	Melompat metode lembut mengaktifkan jendela
 		dan langsung menuju ke metode kuat.
-	)	
-	Ex_HK_TT =	
-	(LTrim	
-		Memaksa penggunaan hook untuk melaksanakan semua
+	Ex_HK_TT =	Memaksa penggunaan hook untuk melaksanakan semua
 		atau hotkeys keyboard yang.
-	)	
-	Ex_SK_TT =	
-	(LTrim	
-		Mengatur penundaan yang akan terjadi setelah setiap
+	Ex_SK_TT =	Mengatur penundaan yang akan terjadi setelah setiap
 		keystroke dikirim oleh Kirim atau ControlSend.
-	)	
-	Ex_MD_TT =	
-	(LTrim	
-		Mengatur penundaan yang akan terjadi setelah
+	Ex_MD_TT =	Mengatur penundaan yang akan terjadi setelah
 		setiap gerakan mouse atau klik.
-	)	
-	Ex_SC_TT =	
-	(LTrim	
-		Mengatur penundaan yang akan terjadi setelah
+	Ex_SC_TT =	Mengatur penundaan yang akan terjadi setelah
 		setiap kontrol-memodifikasi perintah.
-	)	
-	Ex_SW_TT =	
-	(LTrim	
-		Mengatur penundaan yang akan terjadi setelah
+	Ex_SW_TT =	Mengatur penundaan yang akan terjadi setelah
 		setiap perintah windowing, seperti WinActivate.
-	)	
-	Ex_SB_TT =	
-	(LTrim	
-		Menentukan seberapa cepat script akan berjalan (mempengaruhi utilisasi CPU).
-	)	
-	Ex_NT_TT =	
-	(LTrim	
-		Menonaktifkan pertunjukan tray icon.
-	)	
-		
-	Ex_IN_TT =	
-	(LTrim	
-		Penyebab script untuk berperilaku seolah-olah ditentukan
+	Ex_SB_TT =	Menentukan seberapa cepat script akan berjalan (mempengaruhi utilisasi CPU).
+	Ex_NT_TT =	Menonaktifkan pertunjukan tray icon.
+	Ex_IN_TT =	Penyebab script untuk berperilaku seolah-olah ditentukan
 		isi file yang hadir pada posisi yang tepat.
-	)	
-	Ex_PT_TT =	
-	(LTrim	
-		Menyimpan script permanen berjalan
+	Ex_PT_TT =	Menyimpan script permanen berjalan
 		(Yaitu, sampai pengguna menutup atau ExitApp ditemui).
-	)	
-	Ex_MT_TT =	
-	(LTrim	
-		Menetapkan jumlah maksimum simultan
+	Ex_MT_TT =	Menetapkan jumlah maksimum simultan
 		benang per hotkey atau hotstring.
-	)	
 	Ex_UV_TT =	Ekspor variabel global.
 	Ex_EdVars_TT =	Pilih variabel global yang akan diekspor.
 		
@@ -1171,7 +1040,6 @@
 		
 ; AHK Commands Tips		
 	Ahk_Cmd_Index =	
-	(LTrim	
 	Abs	Mengembalikan nilai absolut Nomor.
 	ASin	Mengembalikan arcsine (jumlah yang sinus adalah Number) dalam radian.
 	ACos	Mengembalikan arccosine (jumlah yang kosinus Number) dalam radian.
@@ -1295,9 +1163,6 @@
 	InputBox	Menampilkan kotak input untuk meminta pengguna untuk memasukkan string.
 	InsertAt	Menyisipkan satu atau lebih nilai pada posisi tertentu dalam array linier.
 	InStr	Pencarian untuk kejadian tertentu string, dari kiri atau kanan.
-	)	
-	Ahk_Cmd_Index = %Ahk_Cmd_Index%`n	
-	(LTrim	
 	KeyHistory	Menampilkan info naskah dan sejarah keystrokes terbaru dan klik mouse.
 	KeyWait	Menunggu kunci atau mouse / joystick tombol akan dilepaskan atau ditekan.
 	Labels	Sebuah label mengidentifikasi baris kode, dan dapat digunakan sebagai target Goto atau membentuk sebuah sub rutin.
@@ -1429,5 +1294,3 @@
 	WinWaitActive	Menunggu sampai jendela yang ditentukan aktif.
 	WinWaitClose	Menunggu sampai jendela yang ditentukan tidak ada.
 	WinWaitNotActive	Menunggu sampai jendela yang ditentukan tidak aktif.
-	)	
-return		

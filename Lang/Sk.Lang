@@ -45,7 +45,7 @@
 	r_Lang014 =	D&ovoz Makro
 	r_Lang015 =	U&ložiť aktuálne makro
 		
-; UDF Sub Menu		
+; Function Sub Menu		
 	u_Lang001 =	&Vytvorenie funkcie
 	u_Lang002 =	&Pridať parameter
 	u_Lang003 =	P&ridať Návrat
@@ -716,12 +716,9 @@
 	d_Lang014 =	Script exportovaný
 	d_Lang015 =	Súbor bol úspešne exportovaný!
 	d_Lang016 =	Kliknite na tlačidlo "" na označenie polohy.
-	d_Lang017 =	
-	(LTrim	
-		- Vyberte okno.
+	d_Lang017 =	- Vyberte okno.
 		- Prejdite na požadovanú pozíciu.
 		- Stlačte pravé tlačidlo.
-	)	
 	d_Lang018 =	Farba obrazového bodu
 	d_Lang019 =	Vymazať zoznam
 	d_Lang020 =	Zavrieť Makro?
@@ -738,26 +735,18 @@
 	d_Lang031 =	nie je platný názov funkcie.
 	d_Lang032 =	Chyba: Duplicitné klávesové skratky.
 	d_Lang033 =	Aktivácia makrá
-	d_Lang034 =	
-	(LTrim	
-		- Kliknite a ťahajte %DrawButton% vyberte oblasť.
+	d_Lang034 =	- Kliknite a ťahajte %DrawButton% vyberte oblasť.
 		- Kliknite a uvoľnite bez ťahaním vyberte kontrolnú oblasť.
 		- Kliknutím na mieste bez ovládači vyberte oblasť okna.
-	)	
 	d_Lang035 =	Pokračovať?
 	d_Lang036 =	Obrázok / Pixel Nájdené v
 	d_Lang037 =	Obrázok / Pixel nebol nájdený.
 	d_Lang038 =	Stlačte OK pre pokračovanie.
 	d_Lang039 =	Časový limit!
-	d_Lang040 =	
-	(LTrim	
-		Táto funkcia vyžaduje rozhrania GDI+knižnice.
+	d_Lang040 =	Táto funkcia vyžaduje rozhrania GDI+knižnice.
 		Kliknite na tlačidlo OK prejdite na stránku pre stiahnutie.
-	)	
 	d_Lang041 =	Názov premennej obsahuje nepovolený znak.
-	d_Lang042 =	
-	(LTrim	
-		Neplatný operátor.
+	d_Lang042 =	Neplatný operátor.
 		Tieto operátory sú prijímané:
 		=, ==, <>,! =,>, <,> =, <=
 		
@@ -765,13 +754,9 @@
 		MyVar > 1
 		MyVar = `%A_DDDD`%
 		Clipboard == `%MyVar`%
-	)	
 	d_Lang043 =	Alebo použite paneli Ovládacie prvky.
-	d_Lang044 =	
-	(LTrim	
-		Táto funkcia vyžaduje funkcia eval ().
+	d_Lang044 =	Táto funkcia vyžaduje funkcia eval ().
 		Kliknite na tlačidlo OK prejdite na stránku pre stiahnutie.
-	)	
 	d_Lang045 =	Prosím vyberte okno prehliadača Internet Explorer!
 	d_Lang046 =	Pripojenie úspešné!
 	d_Lang047 =	Pripojenie zlyhalo!
@@ -783,35 +768,19 @@
 	d_Lang053 =	Nezobrazovať túto správu znovu.
 	d_Lang054 =	Prosím vyberte okno programu Excel!
 	d_Lang055 =	Prosím vyberte skriptu AutoHotkey súbor (. AHK) a zadať názov funkcie.
-	d_Lang056 =	
-	(LTrim	
-		Táto funkcia vyžaduje AutoHotkey nainštalovaný.
+	d_Lang056 =	Táto funkcia vyžaduje AutoHotkey nainštalovaný.
 		Kliknite na tlačidlo OK prejdite na stránku pre stiahnutie.
-	)	
-	d_Lang057 =	
-	(LTrim	
-		- Stlačte Ctrl+klávesov so šípkami pohybovať vybranú oblasť.
+	d_Lang057 =	- Stlačte Ctrl+klávesov so šípkami pohybovať vybranú oblasť.
 		- Stlačením tlačidla Shift+klávesy so šípkami zmeňte veľkosť vybranej oblasti.
 		- Stlačte Enter pre dokončenie.
-	)	
-	d_Lang058 =	
-	(LTrim	
-		Niektoré funkcie vyžadujú admnistrátorovi privilages, aby správne fungovali.
+	d_Lang058 =	Niektoré funkcie vyžadujú admnistrátorovi privilages, aby správne fungovali.
 		Je odporúčané reštartovať aplikáciu ako správca.
-	)	
-	d_Lang059 =	
-	(LTrim	
-		Tento príkaz nepodporuje výrazy alebo funkcie.
+	d_Lang059 =	Tento príkaz nepodporuje výrazy alebo funkcie.
 		Prosím priradiť premennú a použiť ho v parametri.
-	)	
 	d_Lang060 =	Nová verzia je k dispozícii
-	d_Lang061 =	
-	(LTrim	
-		Chcete ju hneď stiahnuť?
+	d_Lang061 =	Chcete ju hneď stiahnuť?
 		
 		Ak chcete zakázať automatickú kontrolu vyberte Pomocník> Skontrolovať pri spustení. > Pozrite sa na štarte
-	)	
-		
 	d_Lang062 =	Už máte najnovšiu verziu.
 	d_Lang063 =	Nastala chyba pri kontrole.
 	d_Lang064 =	COM objekt chyba
@@ -819,12 +788,9 @@
 	d_Lang066 =	Konkrétne
 	d_Lang067 =	Zobraziť toto okno pri spustení
 	d_Lang068 =	Tipy:
-	d_Lang069 =	
-	(LTrim	
-		Veľa času a úsilia, čo sa týka vývoja Pulover's Macro Creator. Ak zistíte, že je užitočné, zvážte prosím ukazovať svoje uznanie s darovaním.
+	d_Lang069 =	Veľa času a úsilia, čo sa týka vývoja Pulover's Macro Creator. Ak zistíte, že je užitočné, zvážte prosím ukazovať svoje uznanie s darovaním.
 		
 		Darovanie, alebo nie, tam bude žiadny rozdiel v jeho vlastnosti a funkcie.
-	)	
 	d_Lang070 =	Podporte nás...
 	d_Lang071 =	Nie, vďaka
 	d_Lang072 =	Podporu open source softvér
@@ -842,11 +808,8 @@
 	d_Lang084 =	Prosím uložte zmeny pred plánovanie úlohy.
 	d_Lang085 =	Chýbajúce "End Loop" vyhlásenie v Makro 
 	d_Lang086 =	Chýbajúce "End If" vyhlásenie v Makro
-	d_Lang087 =	
-	(LTrim	
-		Všimnite si, že zmeny vykonané v skriptu mimo program nebude mať vplyv na vaše makrá v žiadnom prípade.
+	d_Lang087 =	Všimnite si, že zmeny vykonané v skriptu mimo program nebude mať vplyv na vaše makrá v žiadnom prípade.
 		 Táto funkcia je určená len k rýchlemu exportné funkcie. PMC nie je chcel byť editor AHK skript.
-	)	
 	d_Lang088 =	Skúste spustiť ako bežných užívateľov (nie správca).
 	d_Lang089 =	Nie riadok vybraný!
 	d_Lang090 =	Prosím, vyberte riadok pre vloženie alebo odstránenie skupiny.
@@ -855,23 +818,17 @@
 	d_Lang093 =	Veľké ikony
 	d_Lang094 =	Táto funkcia vyžaduje systém Windows Vista alebo vyšší.
 	d_Lang095 =	Použitie ByRef spôsobí parameter, aby sa stal alias na premennú odovzdaný od volajúceho. Inými slovami, je parameter a variabilné volajúceho ako sa vzťahujú na rovnaké obsahu v pamäti.
-	d_Lang096 =	
-	(LTrim	
-		- NEPOUŽÍVAJTE UZAVRITE PREMENNÉ V ZNAKY PERCENTA TU.
+	d_Lang096 =	- NEPOUŽÍVAJTE UZAVRITE PREMENNÉ V ZNAKY PERCENTA TU.
 		- Návrat hodnota musí byť výraz.
 		- Môžete použiť reťazca, premenné, pole a funkcia. Môžete tiež kombinovať niektoré z nich.
 		- Ak chcete použiť reťazca, uzavrite do úvodzoviek, napríklad: "Výsledok je:" a + b.
 		- Ak sa chcete vrátiť ďalšie výsledky, môžete tiež použiť ByRef v parametroch.
 		- Pole môže byť použitý k vrátiť viac hodnôt, alebo dokonca pomenované hodnoty.
-	)	
-	d_Lang097 =	
-	(LTrim	
-		- NEPOUŽÍVAJTE UZAVRITE PREMENNÉ V ZNAKY PERCENTA TU.
+	d_Lang097 =	- NEPOUŽÍVAJTE UZAVRITE PREMENNÉ V ZNAKY PERCENTA TU.
 		- Väčšina AHK výrazy sú podporované.
 		- Môžete použiť reťazca, premenné, pole a funkcia.
 		- Ak chcete použiť reťazca, uzavrite do úvodzoviek, napríklad: var = "A".
 		- Viac príkazov sú podporované, napr: var = "a" || Instru (var, "b").
-	)	
 	d_Lang098 =	Ak jeden parameter má predvolenú hodnotu, sú požadované nasledujúce parametre majú taky.
 	d_Lang099 =	Názov funkcie obsahuje neplatný znak.
 	d_Lang100 =	Goto, GoSub a Label nie sú povolené vo funkciách.
@@ -879,9 +836,7 @@
 	d_Lang102 =	je vyhradené slovo.
 		
 ; Start-up Tips		
-	Start_Tips =	
-	(LTrim	
-		Môžete vytvárať makrá pomocou príkazových tlačidiel v hlavnom okne, alebo pomocou rekordéra kopírovať svoje akcie. Prejsť na Možnosti> Nastavenie> Nahrávanie na vstupy vybrať, čo budú zaznamenané.
+	Start_Tips =	Môžete vytvárať makrá pomocou príkazových tlačidiel v hlavnom okne, alebo pomocou rekordéra kopírovať svoje akcie. Prejsť na Možnosti> Nastavenie> Nahrávanie na vstupy vybrať, čo budú zaznamenané.
 		Ak chcete použiť rekordér pre rýchle úlohy, ísť do Voľby> Nastavenia> Nahrávanie a zaškrtnite "Vymazať zoznam" možnosť voľby. Potom kliknite na tlačidlo Record v hlavnom okne a pomocou F10 pre vymazanie aktuálneho makra a začať novú s rovnakou klávesovú skratku. Môžete tiež zaškrtnúť voľbu "vždy aktívny" v hlavnom okne udržať nahrávanie a prehrávanie klávesy aktívne.
 		Ak chcete získať nápovedu pre konkrétny príkaz kliknite pravým tlačidlom myši na okne príkazového riadku sa zobrazí odkazy na AutoHotkey pomocníkovi.
 		Pozrite sa na "Capture" Keys možnosť zadať kľúče a kombinácie do makra priamo z hlavného okna.
@@ -908,7 +863,6 @@
 		Ak chcete, aby vaše makrá fungujú iba na určitom okne ukážte na položku Makro> kontextovú klávesovým skratkám.
 		Môžete si nastaviť vlastné Globálne premenné má naložiť na spustenie a ktorý sa má vyviezť. Prejsť na Možnosti> Nastavenie> Užívateľská globálne premenné pridať.
 		Môžete spustiť pokročilé funkcie ako substr a RegExReplace z funkcií okna (Vložiť> if / premennej / funkcie). Alebo spustiť vlastné funkcie z externých AutoHotkey skriptov.
-	)	
 		
 ; Tooltips		
 	AutoKey_TT =	Klávesová skratka pre prehrávanie makra
@@ -952,43 +906,25 @@
 	ExpView2_TT =	Rozšírené Editor
 	OSProgB_TT =	Zobraziť Progress Bar
 	OSTrans_TT =	Nepriehľadnosť
-	MRel_TT =	
-	(LTrim	
-		Pohyby vzhľadom k aktuálnej pozícii.
+	MRel_TT =	Pohyby vzhľadom k aktuálnej pozícii.
 		Alebo, ak sú použité s ovládaním: Pozícia v porovnaní s kontrolou.
-	)	
-	Raw_TT =	
-	(LTrim	
-		Príkaz SendRaw interpretuje všetky postavy doslova
+	Raw_TT =	Príkaz SendRaw interpretuje všetky postavy doslova
 		skôr než prekladanie {Enter} na stlačenie klávesy ENTER,
 		^ C Control-C, atď
-	)	
-	ComText_TT =	
-	(LTrim	
-		Ak nie je v režime RAW, nasledujúce znaky
+	ComText_TT =	Ak nie je v režime RAW, nasledujúce znaky
 		sa zaobchádza ako modifikátory (tieto modifikátory ovplyvňujú
 		len to ďalší kľúč):!, +, ^ #
-	)	
 	ComEvent_TT =	Sadzba, za ktorú sú zasielané klávesov je určené kľúčové oneskorením.
-	Clip_TT =	
-	(LTrim	
-		Dočasne používa schránku odoslať text.
+	Clip_TT =	Dočasne používa schránku odoslať text.
 		Po dokončení operácie sa skript
 		obnoví pôvodný obsah schránky.
 		(Ponechať prázdne text vložiť aktuálne obsah)
-	)	
-	EditPaste_TT =	
-	(LTrim	
-		Pasty String na striešky / vlož pozície
+	EditPaste_TT =	Pasty String na striešky / vlož pozície
 		v konaní Edit (to neovplyvní
 		obsah schránky).
-	)	
 	SetText_TT =	Zmení text ovládacieho prvku.
-	RelKey_TT =	
-	(LTrim	
-		Records pohyby myši a kliknutí ako kompenzácia
+	RelKey_TT =	Records pohyby myši a kliknutí ako kompenzácia
 		z predchádzajúcej pozície, kedy držal v ruke.
-	)	
 	ToggleC_TT =	Aktivácia Relatívna nahrávania pri stlačení stav je ďalej.
 	Relative_TT =	Poloha je vzhľadom k aktívne okná.
 	Screen_TT =	Súradnice sú relatívna k ploche (celá obrazovka).
@@ -997,132 +933,65 @@
 	Recurse_TT =	Rekurzívne do podadresárov (podpriečinkov) / podkľúčov
 	CmdSort_TT =	Radiť abecedne
 	Ex_EdScript_TT =	Otvoriť v externom editore
-	ExprLink2_TT =	
-	(LTrim	
-		- NEPOUŽÍVAJTE UZAVRITE PREMENNÉ V ZNAKY PERCENTA TU.
+	ExprLink2_TT =	- NEPOUŽÍVAJTE UZAVRITE PREMENNÉ V ZNAKY PERCENTA TU.
 		- Väčšina AHK výrazy sú podporované.
 		- Môžete použiť reťazca, premenné, pole a funkcia.
 		- Ak chcete použiť reťazca, uzavrite do úvodzoviek, napríklad: var = "A".
 		- Viac príkazov sú podporované, napr: var = "a" || Instru (var, "b").
-	)	
-	ExprLink3_TT =	
-	(LTrim	
-		- NEPOUŽÍVAJTE UZAVRITE PREMENNÉ V ZNAKY PERCENTA TU.
+	ExprLink3_TT =	- NEPOUŽÍVAJTE UZAVRITE PREMENNÉ V ZNAKY PERCENTA TU.
 		- Väčšina AHK výrazy sú podporované.
 		- Môžete použiť reťazca, premenné, pole a funkcia.
 		- Ak chcete použiť reťazca, uzavrite do úvodzoviek, napríklad: var = "A".
 		- Viac príkazov sú podporované, napr: var = "a" || Instru (var, "b").
-	)	
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	Poklepaním editovať
-	Ex_IfDir_TT =	
-	(LTrim	
-		Vytvorí kontextovo citlivé klávesy a hotstrings závislosti
+	Ex_IfDir_TT =	Vytvorí kontextovo citlivé klávesy a hotstrings závislosti
 		na type okna, ktoré je aktívne, alebo neexistuje.
-	)	
-	Ex_IfDirType_TT =	
-	(LTrim	
-		Vytvorí kontextovo citlivé klávesy a hotstrings závislosti
+	Ex_IfDirType_TT =	Vytvorí kontextovo citlivé klávesy a hotstrings závislosti
 		na type okna, ktoré je aktívne, alebo neexistuje.
-	)	
-	Ex_SM_TT =	
-	(LTrim	
-		Robí Poslať synonymom SendInput alebo SendPlay skôr než
+	Ex_SM_TT =	Robí Poslať synonymom SendInput alebo SendPlay skôr než
 		Východisková hodnota (SendEvent). Tiež robí Kliknite a MouseMove / Kliknite / Drag
 		použiť špecifikovanú metódu.
-	)	
-	SM_TT =	
-	(LTrim	
-		Udalosť: To je východiskový východiskový používaný všetkými skripty.
+	SM_TT =	Udalosť: To je východiskový východiskový používaný všetkými skripty.
 		Používa SendEvent metódu Odoslať SendRaw, kliknite na tlačidlo a MouseMove / Kliknite / Drag.
 		Vstup: Prepína na spôsobe SendInput pre odosielanie, SendRaw, kliknite na tlačidlo a MouseMove / Kliknite / Drag.
 		InputThenPlay: Rovnaké ako vyššie, s výnimkou, že skôr než spadne späť na párty režime
 		keď SendInput nie je k dispozícii, vráti sa do režimu prehrávania (pozri nižšie). To tiež spôsobuje
 		Príkaz SendInput sám vrátiť do režimu prehrávania, keď SendInput nie je k dispozícii.
 		Prehrať: Prepína na SendPlay metódy Odoslať, SendRaw, kliknite na tlačidlo a MouseMove / Kliknite / Drag.
-	)	
-	Ex_SI_TT =	
-	(LTrim	
-		Určuje, či je povolené skript spustiť znovu, keď je už spustená.
-	)	
-	SI_TT =	
-	(LTrim	
-		Slovo FORCE preskočí dialóg a nahrádza pôvodný inštancie automaticky,
+	Ex_SI_TT =	Určuje, či je povolené skript spustiť znovu, keď je už spustená.
+	SI_TT =	Slovo FORCE preskočí dialóg a nahrádza pôvodný inštancie automaticky,
 		ktorý je podobný v skutočnosti na Reload príkazu.
 		Slovo ignorovať preskočí dialógové okno a nechá starej inštancie spustená.
 		Inými slovami, sú ignorované pokusy začať už bežiaci skript.
 		Slovo OFF umožňuje viac inštancií skript plynúť súbežne.
-	)	
-	Ex_ST_TT =	
-	(LTrim	
-		Nastaví zodpovedajúce správanie WinTitle parametrov v príkazoch ako WinWait.
-	)	
-	ST_TT =	
-	(LTrim	
-		1: názov okna musí začínať s uvedeným WinTitle byť zhoda.
+	Ex_ST_TT =	Nastaví zodpovedajúce správanie WinTitle parametrov v príkazoch ako WinWait.
+	ST_TT =	1: názov okna musí začínať s uvedeným WinTitle byť zhoda.
 		2: názov okna môže obsahovať WinTitle kdekoľvek vo vnútri, že je to zápas.
 		3: názov okna sa musí presne zhodovať WinTitle byť zhoda.
 		Regex: Zmeny WinTitle, WinText, ExcludeTitle a ExcludeText byť regulárne výrazy.
-	)	
-	Ex_DH_TT =	
-	(LTrim	
-		Určuje, či neviditeľné okná sú "vidieť" pomocou skriptu.
-	)	
-	Ex_AF_TT =	
-	(LTrim	
-		Preskočí jemný spôsob aktivovanie okna
+	Ex_DH_TT =	Určuje, či neviditeľné okná sú "vidieť" pomocou skriptu.
+	Ex_AF_TT =	Preskočí jemný spôsob aktivovanie okna
 		a ide rovno do násilnej metódy.
-	)	
-	Ex_HK_TT =	
-	(LTrim	
-		Vynúti použitie háku pre vykonávanie všetkých
+	Ex_HK_TT =	Vynúti použitie háku pre vykonávanie všetkých
 		alebo niektoré klávesové klávesové skratky.
-	)	
-	Ex_SK_TT =	
-	(LTrim	
-		Nastavuje oneskorenie, dôjde po každom
+	Ex_SK_TT =	Nastavuje oneskorenie, dôjde po každom
 		klávesy poslal Odoslať alebo ControlSend.
-	)	
-	Ex_MD_TT =	
-	(LTrim	
-		Nastavuje oneskorenie, dôjde po
+	Ex_MD_TT =	Nastavuje oneskorenie, dôjde po
 		Každý pohyb myši alebo tlačidlom.
-	)	
-	Ex_SC_TT =	
-	(LTrim	
-		Nastavuje oneskorenie, dôjde po
+	Ex_SC_TT =	Nastavuje oneskorenie, dôjde po
 		Každý ovládací prvok modifikujúce príkaz.
-	)	
-	Ex_SW_TT =	
-	(LTrim	
-		Nastavuje oneskorenie, dôjde po
+	Ex_SW_TT =	Nastavuje oneskorenie, dôjde po
 		každý Windowing príkaz, napríklad WinActivate.
-	)	
-	Ex_SB_TT =	
-	(LTrim	
-		Určuje, ako rýchlo sa skript spustí (ovplyvňuje využitie procesora).
-	)	
-	Ex_NT_TT =	
-	(LTrim	
-		Zakáže predvádzanie tray ikonou.
-	)	
-		
-	Ex_IN_TT =	
-	(LTrim	
-		Spôsobí, že skript sa správať, ako by špecifikované
+	Ex_SB_TT =	Určuje, ako rýchlo sa skript spustí (ovplyvňuje využitie procesora).
+	Ex_NT_TT =	Zakáže predvádzanie tray ikonou.
+	Ex_IN_TT =	Spôsobí, že skript sa správať, ako by špecifikované
 		obsah súboru sú prítomné práve v tomto mieste.
-	)	
-	Ex_PT_TT =	
-	(LTrim	
-		Udržuje skript beží trvale
+	Ex_PT_TT =	Udržuje skript beží trvale
 		(To je, kým používateľ zavrie alebo ExitApp je zistená).
-	)	
-	Ex_MT_TT =	
-	(LTrim	
-		Nastaví maximálny počet súčasne
+	Ex_MT_TT =	Nastaví maximálny počet súčasne
 		závitov na klávesy alebo hotstring.
-	)	
 	Ex_UV_TT =	Export globálne premenné.
 	Ex_EdVars_TT =	Vyberte globálne premenné, ktoré chcete exportovať.
 		
@@ -1171,7 +1040,6 @@
 		
 ; AHK Commands Tips		
 	Ahk_Cmd_Index =	
-	(LTrim	
 	Abs	Vráti absolútnu hodnotu čísla.
 	ASin	Vracia arkussínus (číslo, ktorého sínus je číslo) v radiánoch.
 	ACos	Vracia arkuskosínus (číslo, ktorého kosínus je číslo) v radiánoch.
@@ -1295,9 +1163,6 @@
 	InputBox	Zobrazí vstupné pole požiadať užívateľa na zadanie reťazca.
 	InsertAt	Vloží jednu alebo viac hodnôt v danej polohe v lineárnom poli.
 	InStr	Vyhľadá danú výskyt reťazca, z ľavej alebo pravej strane.
-	)	
-	Ahk_Cmd_Index = %Ahk_Cmd_Index%`n	
-	(LTrim	
 	KeyHistory	Zobrazuje skript info a história najnovších stlačení klávesov a myši.
 	KeyWait	Čaká kľúčom alebo tlačidla myši / joysticku byť prepustený alebo stlačená.
 	Labels	Štítok označuje riadok kódu, a môže byť použitý ako cieľ Goto alebo vytvoriť podprogram.
@@ -1429,5 +1294,3 @@
 	WinWaitActive	Čaká zadaný okno je aktívny.
 	WinWaitClose	Čaká zadaný okno neexistuje.
 	WinWaitNotActive	Čaká zadaný okno nie je aktívne.
-	)	
-return		

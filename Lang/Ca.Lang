@@ -45,7 +45,7 @@
 	r_Lang014 =	Imp&ortació Macro
 	r_Lang015 =	Guardar Ma&cro actual
 		
-; UDF Sub Menu		
+; Function Sub Menu		
 	u_Lang001 =	&Crear Funció
 	u_Lang002 =	&Afegir Paràmetre
 	u_Lang003 =	A&fegir Tornar
@@ -716,12 +716,9 @@
 	d_Lang014 =	Guió Exportats
 	d_Lang015 =	L'arxiu s'ha exportat amb èxit!
 	d_Lang016 =	Feu clic a "Get 'per marcar la posició.
-	d_Lang017 =	
-	(LTrim	
-		- Seleccioneu la finestra.
+	d_Lang017 =	- Seleccioneu la finestra.
 		- Apunt a la posició desitjada.
 		- Premeu el botó de la dreta.
-	)	
 	d_Lang018 =	Color del píxel
 	d_Lang019 =	Esborrar llista
 	d_Lang020 =	Tancar Macro?
@@ -738,26 +735,18 @@
 	d_Lang031 =	no és un nom de funció vàlid.
 	d_Lang032 =	Error: Tecles duplicades.
 	d_Lang033 =	Activar Macros
-	d_Lang034 =	
-	(LTrim	
-		- Feu clic i arrossegueu amb %DrawButton% per seleccionar l'àrea.
+	d_Lang034 =	- Feu clic i arrossegueu amb %DrawButton% per seleccionar l'àrea.
 		- Feu clic i deixeu anar sense arrossegar per seleccionar l'àrea de control.
 		- Feu clic a una àrea sense un control per seleccionar l'àrea de la finestra.
-	)	
 	d_Lang035 =	Continuar?
 	d_Lang036 =	Imatge / píxel Trobat a
 	d_Lang037 =	Imatge / píxel no trobada.
 	d_Lang038 =	Premeu D'acord per continuar.
 	d_Lang039 =	Temps d'espera!
-	d_Lang040 =	
-	(LTrim	
-		Aquesta funció requereix la biblioteca GDI +.
+	d_Lang040 =	Aquesta funció requereix la biblioteca GDI +.
 		Premeu D'acord per anar a la pàgina de descàrrega.
-	)	
 	d_Lang041 =	El nom de la variable conté un caràcter il · legal.
-	d_Lang042 =	
-	(LTrim	
-		Operador no vàlid.
+	d_Lang042 =	Operador no vàlid.
 		Els següents operadors s'accepten:
 		=, ==, <>,! =,>, <,> =, <=
 		
@@ -765,13 +754,9 @@
 		MyVar > 1
 		MyVar = `%A_DDDD`%
 		Clipboard == `%MyVar`%
-	)	
 	d_Lang043 =	O utilitzeu la barra d'eines de controls
-	d_Lang044 =	
-	(LTrim	
-		Aquesta funció requereix la funció eval ().
+	d_Lang044 =	Aquesta funció requereix la funció eval ().
 		Premeu D'acord per anar a la pàgina de descàrrega.
-	)	
 	d_Lang045 =	Si us plau seleccioni una finestra d'Internet Explorer!
 	d_Lang046 =	Connexió correcta!
 	d_Lang047 =	Error al connectar!
@@ -783,35 +768,19 @@
 	d_Lang053 =	No tornar a mostrar aquest missatge de nou.
 	d_Lang054 =	Si us plau seleccioni una finestra d'Excel!
 	d_Lang055 =	Si us plau, seleccioneu un fitxer d'script de AutoHotkey (. AHK) i escriviu el nom de funció.
-	d_Lang056 =	
-	(LTrim	
-		Aquesta funció requereix AutoHotkey instal · lat.
+	d_Lang056 =	Aquesta funció requereix AutoHotkey instal · lat.
 		Premeu D'acord per anar a la pàgina de descàrrega.
-	)	
-	d_Lang057 =	
-	(LTrim	
-		- Premeu Ctrl+Tecles de cursor per moure l'àrea seleccionada.
+	d_Lang057 =	- Premeu Ctrl+Tecles de cursor per moure l'àrea seleccionada.
 		- Premeu les tecles Maj+tecles de fletxa per canviar la mida d'àrea seleccionada.
 		- Premeu D'acord per finalitzar.
-	)	
-	d_Lang058 =	
-	(LTrim	
-		Algunes característiques requereixen privilegis que admnistrator per poder funcionar.
+	d_Lang058 =	Algunes característiques requereixen privilegis que admnistrator per poder funcionar.
 		Es recomana reiniciar l'aplicació com a administrador.
-	)	
-	d_Lang059 =	
-	(LTrim	
-		Aquesta comanda no admet expressions o funcions.
+	d_Lang059 =	Aquesta comanda no admet expressions o funcions.
 		Assigneu una variable i utilitzar-lo en el paràmetre.
-	)	
 	d_Lang060 =	Nova versió disponible
-	d_Lang061 =	
-	(LTrim	
-		Voleu descarregar-ho ara?
+	d_Lang061 =	Voleu descarregar-ho ara?
 		
 		Per desactivar les comprovacions automàtiques seleccioneu Ajuda > Comproveu en l'arrencada
-	)	
-		
 	d_Lang062 =	Vostè ja té la versió més recent.
 	d_Lang063 =	S'ha produït un error durant la comprovació.
 	d_Lang064 =	Error d'objecte COM en
@@ -819,12 +788,9 @@
 	d_Lang066 =	Específicament
 	d_Lang067 =	Mostra aquesta finestra en iniciar
 	d_Lang068 =	Consells:
-	d_Lang069 =	
-	(LTrim	
-		Una gran quantitat de temps i esforços es van centrar en el desenvolupament de Pulover's Macro Creator. Si li resulta útil, si us plau consideri mostrar el seu agraïment amb una donació.
+	d_Lang069 =	Una gran quantitat de temps i esforços es van centrar en el desenvolupament de Pulover's Macro Creator. Si li resulta útil, si us plau consideri mostrar el seu agraïment amb una donació.
 		
 		Donar o no, no hi haurà diferència en les seves característiques i funcionalitat.
-	)	
 	d_Lang070 =	Donar...
 	d_Lang071 =	No, gràcies
 	d_Lang072 =	Doni suport el programari de codi obert
@@ -842,11 +808,8 @@
 	d_Lang084 =	Deseu els canvis abans de programar una tasca.
 	d_Lang085 =	Falta "End Loop" declaració en la Macro 
 	d_Lang086 =	Falta "End If" declaració en la Macro
-	d_Lang087 =	
-	(LTrim	
-		Recordeu que els canvis realitzats en el guió fora del programa no afectarà la seva MACROS de cap manera.
+	d_Lang087 =	Recordeu que els canvis realitzats en el guió fora del programa no afectarà la seva MACROS de cap manera.
 		 Aquesta característica només està pensada com una funció d'exportació ràpida. PMC no està destinat a ser un editor de scripts AHK.
-	)	
 	d_Lang088 =	Intenteu executar l'usuari tan comú (no administrador).
 	d_Lang089 =	No fila seleccionada!
 	d_Lang090 =	Seleccioneu una fila per inserir o extreure el grup.
@@ -855,23 +818,17 @@
 	d_Lang093 =	Icones grans
 	d_Lang094 =	Aquesta característica requereix Windows Vista o superior.
 	d_Lang095 =	L'ús d'ByRef provoca un paràmetre a ser un àlies de la variable passada per la persona que truca. En altres paraules, el paràmetre de la variable i de la persona que truca tant es refereixen als mateixos continguts en la memòria.
-	d_Lang096 =	
-	(LTrim	
-		- NO INCLOURE LES VARIABLES A SIGNES DE PERCENTATGE AQUÍ.
+	d_Lang096 =	- NO INCLOURE LES VARIABLES A SIGNES DE PERCENTATGE AQUÍ.
 		- Valor de retorn ha de ser una expressió.
 		- Vostè pot usar cadenes, variables, matrius i funcions. També pot combinar qualsevol d'aquests.
 		- Per utilitzar cordes, tancar-los entre cometes, per exemple: "El resultat és:" a + b.
 		- Si voleu tornar resultats addicionals, també es pot usar en els paràmetres ByRef.
 		- Les matrius es poden utilitzar per retornar múltiples valors o valors fins i tot amb nom.
-	)	
-	d_Lang097 =	
-	(LTrim	
-		- NO INCLOURE LES VARIABLES A SIGNES DE PERCENTATGE AQUÍ.
+	d_Lang097 =	- NO INCLOURE LES VARIABLES A SIGNES DE PERCENTATGE AQUÍ.
 		- La major part de les expressions AHK són compatibles.
 		- Vostè pot usar cadenes, variables, matrius i funcions.
 		- Per utilitzar cordes, tancar-los entre cometes, per exemple: var = "a".
 		- Són compatibles Diverses sentències, per exemple: var = "a" || Instr (var, "b").
-	)	
 	d_Lang098 =	Si un paràmetre té un valor predeterminat, es requereixen els següents paràmetres a tenir un també.
 	d_Lang099 =	El nom de la funció conté un caràcter il·legal.
 	d_Lang100 =	Goto, GOSUB i Etiqueta no estan permesos en funcions.
@@ -879,9 +836,7 @@
 	d_Lang102 =	és una paraula reservada.
 		
 ; Start-up Tips		
-	Start_Tips =	
-	(LTrim	
-		Podeu crear macros utilitzant els botons de comandament a la finestra principal o l'ús de la gravadora per copiar les seves accions. Aneu a Opcions> Configuració> Gravació per seleccionar el que es registren les entrades.
+	Start_Tips =	Podeu crear macros utilitzant els botons de comandament a la finestra principal o l'ús de la gravadora per copiar les seves accions. Aneu a Opcions> Configuració> Gravació per seleccionar el que es registren les entrades.
 		Per utilitzar la gravadora per a tasques ràpides aneu a Opcions> Configuració> Gravació i marqui l'opció "Esborrar llista". A continuació, feu clic al botó de gravació a la finestra principal i utilitzar F10 per esborrar la macro actual i iniciar un de nou amb la mateixa combinació de tecles. També podeu consultar l'opció "Sempre actiu" en la finestra principal a tenir enregistrament i reproducció hotkeys actiu.
 		Per obtenir ajuda per a una ordre específic feu clic dret en qualsevol part de la finestra de comandaments per mostrar enllaços a AutoHotkey ajuda en línia.
 		Marqueu l'opció "Claus Capture" per entrar tecles i combinacions a la macro directament de la finestra principal.
@@ -908,7 +863,6 @@
 		Per fer les seves macros només funcionen en una determinada finestra anar a Macro> Tecles d'accés directe sensibles al context.
 		Podeu definir les seves pròpies variables globals per ser carregat en l'arrencada i per a l'exportació. Aneu a Opcions> Configuració> Usuari Variables globals per afegir.
 		Podeu executar funcions avançades com ara substr i RegExReplace de la finestra Funcions (Inserir> Si Declaracions / variables / funcions). O executar les seves pròpies funcions de seqüència AutoHotkey externs.
-	)	
 		
 ; Tooltips		
 	AutoKey_TT =	Tecla d'accés directe per jugar Macro
@@ -952,43 +906,25 @@
 	ExpView2_TT =	Editor Avançat
 	OSProgB_TT =	Mostra la barra de progrés
 	OSTrans_TT =	Opacitat
-	MRel_TT =	
-	(LTrim	
-		Moviments relatius a la posició actual.
+	MRel_TT =	Moviments relatius a la posició actual.
 		O si s'utilitza amb control: Posició amb relació al control.
-	)	
-	Raw_TT =	
-	(LTrim	
-		La comanda SendRaw interpreta tots els personatges literalment
+	Raw_TT =	La comanda SendRaw interpreta tots els personatges literalment
 		en lloc de traduir {Intro} a una pulsació de tecla ENTER,
 		^ C del control-C, etc
-	)	
-	ComText_TT =	
-	(LTrim	
-		Quan no està en mode sense processar, els següents caràcters
+	ComText_TT =	Quan no està en mode sense processar, els següents caràcters
 		es tracten com a modificadors (aquests modificadors afecten
 		solament la següent clau):, +, ^, #
-	)	
 	ComEvent_TT =	La velocitat a la qual s'envien les pulsacions de teclat es determina pel retard clau.
-	Clip_TT =	
-	(LTrim	
-		Temporalment utilitza portapapers per enviar el text.
+	Clip_TT =	Temporalment utilitza portapapers per enviar el text.
 		Quan es completa l'operació, la seqüència de comandaments
 		restaura el contingut del porta-retalls originals.
 		(Deixeu de text buit per enganxar el contingut actual)
-	)	
-	EditPaste_TT =	
-	(LTrim	
-		Pastes cadena en la posició de cursor / insert
+	EditPaste_TT =	Pastes cadena en la posició de cursor / insert
 		en un control d'edició (això no afecta
 		el contingut del porta-retalls).
-	)	
 	SetText_TT =	Canvia el text d'un control.
-	RelKey_TT =	
-	(LTrim	
-		Registres Els moviments del ratolí i els clics com
+	RelKey_TT =	Registres Els moviments del ratolí i els clics com
 		compensacions de posició anterior quan es manté.
-	)	
 	ToggleC_TT =	Activa gravació relativa a l'estat de la tecla.
 	Relative_TT =	Les coordenades són relatives a la finestra activa.
 	Screen_TT =	Les coordenades són relatives a l'escriptori (pantalla completa).
@@ -997,132 +933,65 @@
 	Recurse_TT =	Recursives en subdirectoris (subcarpetes) / subclaus
 	CmdSort_TT =	Ordenar alfabèticament
 	Ex_EdScript_TT =	Avaa ulkoisen editorin
-	ExprLink2_TT =	
-	(LTrim	
-		- NO INCLOURE LES VARIABLES A SIGNES DE PERCENTATGE AQUÍ.
+	ExprLink2_TT =	- NO INCLOURE LES VARIABLES A SIGNES DE PERCENTATGE AQUÍ.
 		- La major part de les expressions AHK són compatibles.
 		- Vostè pot usar cadenes, variables, matrius i funcions.
 		- Per utilitzar cordes, tancar-los entre cometes, per exemple: var = "a".
 		- Són compatibles Diverses sentències, per exemple: var = "a" || Instr (var, "b").
-	)	
-	ExprLink3_TT =	
-	(LTrim	
-		- NO INCLOURE LES VARIABLES A SIGNES DE PERCENTATGE AQUÍ.
+	ExprLink3_TT =	- NO INCLOURE LES VARIABLES A SIGNES DE PERCENTATGE AQUÍ.
 		- La major part de les expressions AHK són compatibles.
 		- Vostè pot usar cadenes, variables, matrius i funcions.
 		- Per utilitzar cordes, tancar-los entre cometes, per exemple: var = "a".
 		- Són compatibles Diverses sentències, per exemple: var = "a" || Instr (var, "b").
-	)	
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	Feu doble clic per editar
-	Ex_IfDir_TT =	
-	(LTrim	
-		Crea dreceres de teclat i hotstrings depenent contextuals
+	Ex_IfDir_TT =	Crea dreceres de teclat i hotstrings depenent contextuals
 		en el tipus de finestra que és actiu o no existeix.
-	)	
-	Ex_IfDirType_TT =	
-	(LTrim	
-		Crea dreceres de teclat i hotstrings depenent contextuals
+	Ex_IfDirType_TT =	Crea dreceres de teclat i hotstrings depenent contextuals
 		en el tipus de finestra que és actiu o no existeix.
-	)	
-	Ex_SM_TT =	
-	(LTrim	
-		Fa Enviar sinònim SendInput o SendPlay en lloc de
+	Ex_SM_TT =	Fa Enviar sinònim SendInput o SendPlay en lloc de
 		el valor per defecte (SendEvent). També fa clic i mousemove / clic / Arrossegueu
 		utilitzar el mètode especificat.
-	)	
-	SM_TT =	
-	(LTrim	
-		Esdeveniment: Aquest és el valor predeterminat de partida utilitzat per tots els scripts.
+	SM_TT =	Esdeveniment: Aquest és el valor predeterminat de partida utilitzat per tots els scripts.
 		S'utilitza el mètode SendEvent per enviar, SendRaw, Click, i mousemove / clic / arrossegar.
 		Entrada: Canvia al mètode SendInput per enviar, SendRaw, clic, i mousemove / clic / Arrossegament.
 		InputThenPlay: Igual que l'anterior, excepte que en lloc de caure de nou a la manera Esdeveniment
 		quan SendInput no està disponible, es torna a la manera (baix) Reproduir. Això també provoca
 		la comanda SendInput si per tornar al mode Reproducció quan SendInput no està disponible.
 		Reproduir: Canvia al mètode SendPlay per enviar, SendRaw, clic, i mousemove / clic / Arrossegament.
-	)	
-	Ex_SI_TT =	
-	(LTrim	
-		Determina si un script es pot executar de nou quan ja s'està executant.
-	)	
-	SI_TT =	
-	(LTrim	
-		La paraula FORCE salta el quadre de diàleg i substitueix l'antiga instància de forma automàtica,
+	Ex_SI_TT =	Determina si un script es pot executar de nou quan ja s'està executant.
+	SI_TT =	La paraula FORCE salta el quadre de diàleg i substitueix l'antiga instància de forma automàtica,
 		que és un efecte similar al de la comanda reload.
 		La paraula IGNORE salta el quadre de diàleg i surt de l'antiga instància en execució.
 		En altres paraules, s'ignoren els intents d'establir un guió ja de marxa.
 		El missatge OFF permet múltiples instàncies de la seqüència de comandaments perquè s'executin al mateix temps.
-	)	
-	Ex_ST_TT =	
-	(LTrim	
-		Estableix el comportament d'igualar el paràmetre WinTitle a ordres com WinWait.
-	)	
-	ST_TT =	
-	(LTrim	
-		1: el títol d'una finestra de començar amb la WinTitle especificada a ser un partit.
+	Ex_ST_TT =	Estableix el comportament d'igualar el paràmetre WinTitle a ordres com WinWait.
+	ST_TT =	1: el títol d'una finestra de començar amb la WinTitle especificada a ser un partit.
 		2: el títol d'una finestra pot contenir WinTitle qualsevol lloc dins que fos una coincidència.
 		3: el títol d'una finestra ha de coincidir exactament amb WinTitle un partit.
 		Regex: Canvis WinTitle, WinText, ExcludeTitle i ExcludeText com expressions regulars.
-	)	
-	Ex_DH_TT =	
-	(LTrim	
-		Determina si les finestres invisibles són "vistos" per el guió.
-	)	
-	Ex_AF_TT =	
-	(LTrim	
-		Omet el mètode suau d'activar una finestra
+	Ex_DH_TT =	Determina si les finestres invisibles són "vistos" per el guió.
+	Ex_AF_TT =	Omet el mètode suau d'activar una finestra
 		i va directament al mètode contundent.
-	)	
-	Ex_HK_TT =	
-	(LTrim	
-		Força l'ús del ganxo per posar en pràctica totes les
+	Ex_HK_TT =	Força l'ús del ganxo per posar en pràctica totes les
 		o algunes tecles d'accés ràpid del teclat.
-	)	
-	Ex_SK_TT =	
-	(LTrim	
-		Estableix la demora que es produirà després de cada
+	Ex_SK_TT =	Estableix la demora que es produirà després de cada
 		pulsació enviat per enviament o ControlSend.
-	)	
-	Ex_MD_TT =	
-	(LTrim	
-		Estableix la demora que es produirà després
+	Ex_MD_TT =	Estableix la demora que es produirà després
 		cada moviment del ratolí o feu clic.
-	)	
-	Ex_SC_TT =	
-	(LTrim	
-		Estableix la demora que es produirà després
+	Ex_SC_TT =	Estableix la demora que es produirà després
 		comandament de cada control de modificació.
-	)	
-	Ex_SW_TT =	
-	(LTrim	
-		Estableix la demora que es produirà després
+	Ex_SW_TT =	Estableix la demora que es produirà després
 		cada comanda finestres, com el WinActivate.
-	)	
-	Ex_SB_TT =	
-	(LTrim	
-		Determina la rapidesa amb què executar un script (que afecta la utilització de CPU).
-	)	
-	Ex_NT_TT =	
-	(LTrim	
-		Desactiva la projecció d'una icona de la safata.
-	)	
-		
-	Ex_IN_TT =	
-	(LTrim	
-		Fa que el guió es comporti com si l'especificada
+	Ex_SB_TT =	Determina la rapidesa amb què executar un script (que afecta la utilització de CPU).
+	Ex_NT_TT =	Desactiva la projecció d'una icona de la safata.
+	Ex_IN_TT =	Fa que el guió es comporti com si l'especificada
 		contingut de l'arxiu es presenti en aquesta posició exacta.
-	)	
-	Ex_PT_TT =	
-	(LTrim	
-		Manté un script que s'executa permanentment
+	Ex_PT_TT =	Manté un script que s'executa permanentment
 		(És a dir, fins que l'usuari tanca o es troba ExitApp).
-	)	
-	Ex_MT_TT =	
-	(LTrim	
-		Estableix el nombre màxim de connexions simultànies
+	Ex_MT_TT =	Estableix el nombre màxim de connexions simultànies
 		fils per tecla d'accés directe o cadena d'accés ràpid.
-	)	
 	Ex_UV_TT =	Exportar variables globals.
 	Ex_EdVars_TT =	Seleccionar variables globals destinats a l'exportació.
 		
@@ -1171,7 +1040,6 @@
 		
 ; AHK Commands Tips		
 	Ahk_Cmd_Index =	
-	(LTrim	
 	Abs	Retorna el valor absolut del nombre .
 	ASin	Retorna l'arc si ( el nombre el si és Number ) en radians .
 	ACos	Retorna l'arc cosinus ( el nombre el cosinus és número ) en radians .
@@ -1295,9 +1163,6 @@
 	InputBox	Mostra un quadre d'entrada per demanar a l'usuari que introdueixi una cadena .
 	InsertAt	Insereix un o més valors en una posició donada dins d'un array lineal.
 	InStr	Busca un fet donat d'una cadena , de l'esquerra o la dreta .
-	)	
-	Ahk_Cmd_Index = %Ahk_Cmd_Index%`n	
-	(LTrim	
 	KeyHistory	Mostra informació guió i una història de les pulsacions de teclat més recents i els clics del ratolí.
 	KeyWait	Espera una tecla o botó del ratolí / joystick per ser posat en llibertat o pressionat.
 	Labels	Una etiqueta identifica una línia de codi, i es pot utilitzar com un objectiu Goto o per formar una subrutina.
@@ -1429,5 +1294,3 @@
 	WinWaitActive	Espera que la finestra especificada està activa.
 	WinWaitClose	Espera que no existeix la finestra especificada.
 	WinWaitNotActive	Espera fins que la finestra especificada no està actiu.
-	)	
-return		

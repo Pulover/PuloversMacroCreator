@@ -1,4 +1,4 @@
-﻿LoadLang_Zh:
+﻿LoadLang_Zh-Hans:
 		
 		; Chinese Simplified [Revised by huyaowen and amnesiac]
 		
@@ -45,7 +45,7 @@
 	r_Lang014 =	导入宏(&I)
 	r_Lang015 =	保存当前宏(&V)
 		
-; UDF Sub Menu		
+; Function Sub Menu		
 	u_Lang001 =	创建函数(&F)
 	u_Lang002 =	添加参数(&P)
 	u_Lang003 =	添加返回(&R)
@@ -716,12 +716,9 @@
 	d_Lang014 =	要导出的脚本
 	d_Lang015 =	文件已成功导出！
 	d_Lang016 =	点击“获取”以标记位置。
-	d_Lang017 =	
-	(LTrim	
-		- 选择窗口。
+	d_Lang017 =	- 选择窗口。
 		- 指向期望的位置。
 		- 按下鼠标右键。
-	)	
 	d_Lang018 =	像素颜色
 	d_Lang019 =	清除列表
 	d_Lang020 =	关闭宏？
@@ -738,26 +735,18 @@
 	d_Lang031 =	不是有效的函数名。
 	d_Lang032 =	错误：热键重复。
 	d_Lang033 =	激活宏
-	d_Lang034 =	
-	(LTrim	
-		- 通过%DrawButton%单击并拖动来选择区域。
+	d_Lang034 =	- 通过%DrawButton%单击并拖动来选择区域。
 		- 单击并释放（无需拖动）来选择控件区域。
 		- 在控件外区域点击来选择窗口区域。
-	)	
 	d_Lang035 =	继续吗？
 	d_Lang036 =	找到的图片/像素位于
 	d_Lang037 =	图片/像素未找到。
 	d_Lang038 =	点击确定继续。
 	d_Lang039 =	超时！
-	d_Lang040 =	
-	(LTrim	
-		此功能需要GDI+库。
+	d_Lang040 =	此功能需要GDI+库。
 		请点击确定打开下载页。
-	)	
 	d_Lang041 =	此变量名包含非法字符。
-	d_Lang042 =	
-	(LTrim	
-		运算符无效。
+	d_Lang042 =	运算符无效。
 		接受下列运算符。
 		=、==、<>、!=、>、<、>=、<=
 		
@@ -765,13 +754,9 @@
 		MyVar > 1
 		MyVar = `%A_DDDD`%
 		Clipboard == `%MyVar`%
-	)	
 	d_Lang043 =	或使用控制工具栏。
-	d_Lang044 =	
-	(LTrim	
-		此功能需要Eval()函数。
+	d_Lang044 =	此功能需要Eval()函数。
 		请点击确定打开下载页。
-	)	
 	d_Lang045 =	请选择IE窗口！
 	d_Lang046 =	连接成功！
 	d_Lang047 =	连接失败！
@@ -783,35 +768,19 @@
 	d_Lang053 =	不要再次显示此消息。
 	d_Lang054 =	请选择Excel窗口！
 	d_Lang055 =	请选择AutoHotkey脚本（.ahk）并输入函数名。
-	d_Lang056 =	
-	(LTrim	
-		此功能需要安装好的AutoHotkey。
+	d_Lang056 =	此功能需要安装好的AutoHotkey。
 		请点击确定打开下载页。
-	)	
-	d_Lang057 =	
-	(LTrim	
-		- 按下Ctrl+箭头键来移动选区。
+	d_Lang057 =	- 按下Ctrl+箭头键来移动选区。
 		- 按下Shift+箭头键来调整选区大小。
 		- 按回车结束。
-	)	
-	d_Lang058 =	
-	(LTrim	
-		某些功能需要管理员权限才能正常执行。
+	d_Lang058 =	某些功能需要管理员权限才能正常执行。
 		建议以管理员权限重新打开程序。
-	)	
-	d_Lang059 =	
-	(LTrim	
-		此命令不支持表达式或函数。
+	d_Lang059 =	此命令不支持表达式或函数。
 		请赋值变量并将其用于参数中。
-	)	
 	d_Lang060 =	有新版本
-	d_Lang061 =	
-	(LTrim	
-		现在下载吗？
+	d_Lang061 =	现在下载吗？
 		
 		要禁用自动检查请取消选择帮助>启动时检查
-	)	
-		
 	d_Lang062 =	您使用的已经是最新版本。
 	d_Lang063 =	检查时出错。
 	d_Lang064 =	COM对象错误出现在
@@ -819,12 +788,9 @@
 	d_Lang066 =	具体地：
 	d_Lang067 =	启动时显示此窗口
 	d_Lang068 =	提示：
-	d_Lang069 =	
-	(LTrim	
-		Pulover's Macro Creator的开发花费了大量时间和精力。如果您觉得它有用并想表示感激，请考虑捐赠。
+	d_Lang069 =	Pulover's Macro Creator的开发花费了大量时间和精力。如果您觉得它有用并想表示感激，请考虑捐赠。
 		
 		不过捐赠与否不会影响程序功能的完整性。
-	)	
 	d_Lang070 =	捐赠…
 	d_Lang071 =	不了，谢谢
 	d_Lang072 =	支持开源软件
@@ -842,11 +808,8 @@
 	d_Lang084 =	请在安排计划任务前保存更改。
 	d_Lang085 =	宏内缺少“结束循环”语句
 	d_Lang086 =	宏内缺少“结束If”语句
-	d_Lang087 =	
-	(LTrim	
-		请注意，该脚本所做的计划外变化不会影响您的宏以任何方式。
+	d_Lang087 =	请注意，该脚本所做的计划外变化不会影响您的宏以任何方式。
 		此功能仅作为一个快速的导出功能。 PMC并不意味着是华民脚本编辑器。
-	)	
 	d_Lang088 =	尝试运行作为普通用户（非管理员）。
 	d_Lang089 =	没有行选择！
 	d_Lang090 =	请选择一个行插入或删除组。
@@ -855,23 +818,17 @@
 	d_Lang093 =	大图标
 	d_Lang094 =	此功能需要Windows Vista或更高。
 	d_Lang095 =	使用的ByRef会导致一个参数成为一个别名从呼叫者传递的变量。换言之，参数和调用者的变量都指的是同一内容在存储器中。
-	d_Lang096 =	
-	(LTrim	
-		- 不要用百分号这里的变量。
+	d_Lang096 =	- 不要用百分号这里的变量。
 		- 返回值必须是一个表达式。
 		- 您可以使用字符串，变量，数组和函数。您也可以结合任何这些。
 		- 要使用字符串，它们括在引号，如：“结果是：”A + B。
 		- 如果你想返回额外的结果，你也可以使用的ByRef的参数。
 		- 阵列可用于返回多个值，甚至命名值。
-	)	
-	d_Lang097 =	
-	(LTrim	
-		- 不要用百分号这里的变量。
+	d_Lang097 =	- 不要用百分号这里的变量。
 		- 大多数AHK表达式的支持。
 		- 您可以使用字符串，变量，数组和函数。
 		- 要使用字符串，它们括在引号，例如：VAR=“A”。
 		- 多个语句的支持，例如：VAR=“一个”|| INSTR（变种，“B”）。
-	)	
 	d_Lang098 =	如果一个参数具有缺省值，下面的参数是必需有一个太。
 	d_Lang099 =	函数名称包含非法字符。
 	d_Lang100 =	后藤，GOSUB和标签都没有的功能允许的。
@@ -879,9 +836,7 @@
 	d_Lang102 =	是一个保留字。
 		
 ; Start-up Tips		
-	Start_Tips =	
-	(LTrim	
-		您可以用主窗口中的命令按钮创建宏或使用录制器录制您的操作。打开选项>设置>录制来选择录制哪些类型。
+	Start_Tips =	您可以用主窗口中的命令按钮创建宏或使用录制器录制您的操作。打开选项>设置>录制来选择录制哪些类型。
 		要用录制器快速创建任务请打开选项>设置>录制并选中“清除列表”选项。接着点击主窗口中的录制按钮并用F10清除当前宏，然后用相同的热键开始新录制。您还可以选中主窗口中的“总是活动”选项以让录制和回放热键保持活动。
 		要获取某个命令的帮助，请在命令窗口任意位置点击右键以显示到AutoHotkey在线帮助的链接。
 		选中“捕获键”选项后直接输入按键组合到主窗口的宏。
@@ -908,7 +863,6 @@
 		要让宏仅工作于特定窗口，请打开宏>上下文热键。
 		您可以设置在启动时加载且可导出的自己的全局变量。打开选项>设置>用户全局变量来添加它们。
 		您可以在功能窗口（插入>If语句/变量/函数）中执行高级函数，例如SubStr和RegExReplace。或运行外部AutoHotkey脚本中的函数。
-	)	
 		
 ; Tooltips		
 	AutoKey_TT =	回放宏的热键
@@ -952,43 +906,25 @@
 	ExpView2_TT =	高级编辑器
 	OSProgB_TT =	显示进度条
 	OSTrans_TT =	不透明
-	MRel_TT =	
-	(LTrim	
-		相对当前位置移动。
+	MRel_TT =	相对当前位置移动。
 		当用于控件时则相对于当前控件的位置。
-	)	
-	Raw_TT =	
-	(LTrim	
-		SendRaw命令按原义解释所有字符
+	Raw_TT =	SendRaw命令按原义解释所有字符
 		而不把{Enter}转换成ENTER键击，
 		把^c转换成Control-C，等等。
-	)	
-	ComText_TT =	
-	(LTrim	
-		不处于原始模式时，下列字符
+	ComText_TT =	不处于原始模式时，下列字符
 		被看成是修饰键（这些修饰键
 		仅影响紧跟着的下一个键：!、+、^、#
-	)	
 	ComEvent_TT =	键击发送的频率由按键延时决定。
-	Clip_TT =	
-	(LTrim	
-		临时使用剪贴板发送文本。
+	Clip_TT =	临时使用剪贴板发送文本。
 		操作结束时，脚本会
 		恢复剪贴板原来的内容。
 		（留空Text则粘贴当前内容）
-	)	
-	EditPaste_TT =	
-	(LTrim	
-		在编辑控件的光标处/插入位置
+	EditPaste_TT =	在编辑控件的光标处/插入位置
 		粘贴String（此操作不会影响
 		剪贴板的内容）。
-	)	
 	SetText_TT =	改变控件的文本。
-	RelKey_TT =	
-	(LTrim	
-		把鼠标的移动和点击记录为相对于
+	RelKey_TT =	把鼠标的移动和点击记录为相对于
 		之前按住位置处的位移。
-	)	
 	ToggleC_TT =	当按键状态弹起时激活相对录制。
 	Relative_TT =	坐标相对于活动窗口。
 	Screen_TT =	坐标相对于桌面（整个屏幕）。
@@ -997,132 +933,65 @@
 	Recurse_TT =	递归到子目录（子文件夹）/子项
 	CmdSort_TT =	按字母顺序排序
 	Ex_EdScript_TT =	打开外部编辑器
-	ExprLink2_TT =	
-	(LTrim	
-		- 不要用百分号这里的变量。
+	ExprLink2_TT =	- 不要用百分号这里的变量。
 		- 大多数AHK表达式的支持。
 		- 您可以使用字符串，变量，数组和函数。
 		- 要使用字符串，它们括在引号，例如：VAR=“A”。
 		- 多个语句的支持，例如：VAR=“一个”|| INSTR（变种，“B”）。
-	)	
-	ExprLink3_TT =	
-	(LTrim	
-		- 不要用百分号这里的变量。
+	ExprLink3_TT =	- 不要用百分号这里的变量。
 		- 大多数AHK表达式的支持。
 		- 您可以使用字符串，变量，数组和函数。
 		- 要使用字符串，它们括在引号，例如：VAR=“A”。
 		- 多个语句的支持，例如：VAR=“一个”|| INSTR（变种，“B”）。
-	)	
 		
 ; Tooltips from AHK Docs		
 	ExpList_TT =	双击进行编辑
-	Ex_IfDir_TT =	
-	(LTrim	
-		创建根据创建活动或存在的不同状态
+	Ex_IfDir_TT =	创建根据创建活动或存在的不同状态
 		执行的上下文热键。
-	)	
-	Ex_IfDirType_TT =	
-	(LTrim	
-		创建根据创建活动或存在的不同状态
+	Ex_IfDirType_TT =	创建根据创建活动或存在的不同状态
 		执行的上下文热键。
-	)	
-	Ex_SM_TT =	
-	(LTrim	
-		让Send和SendInput或SendPlay执行相同的功能
+	Ex_SM_TT =	让Send和SendInput或SendPlay执行相同的功能
 		而非默认模式（SendEvent）。同时也会让Click和MouseMove/Click/Drag
 		使用指定的方法。
-	)	
-	SM_TT =	
-	(LTrim	
-		Event：这是用于所有脚本的初始默认设置。
+	SM_TT =	Event：这是用于所有脚本的初始默认设置。
 		它让Send、SendRaw、Click和MouseMove/Click/Drag使用SendEvent模式。
 		Input：让Send、SendRaw、Click和MouseMove/Click/Drag切换到SendInput方法。
 		InputThenPlay：与上面相同，不过当SendInput不可用时恢复为下面的Play模式
 		而不是退回到Event模式。这同时会让
 		SendInput命令自身在SendInput不可用时恢复到Play模式。
 		Play：让Send、SendRaw、Click和MouseMove/Click/Drag切换到SendPlay方法。
-	)	
-	Ex_SI_TT =	
-	(LTrim	
-		决定当脚本已经运行时是否允许它再次运行。
-	)	
-	SI_TT =	
-	(LTrim	
-		单词FORCE会跳过对话框并自动替换旧实例。
+	Ex_SI_TT =	决定当脚本已经运行时是否允许它再次运行。
+	SI_TT =	单词FORCE会跳过对话框并自动替换旧实例。
 		效果类似于Reload命令。
 		单词IGNORE会跳过对话框并让旧实例继续运行。
 		换句话说，试图启动已经运行的脚本会被忽略。
 		单词OFF允许一个脚本同时运行多个实例。
-	)	
-	Ex_ST_TT =	
-	(LTrim	
-		设置在类似WinWait命令中WinTitle参数的匹配模式。
-	)	
-	ST_TT =	
-	(LTrim	
-		1：窗口标题必须以指定的WinTitle开头。
+	Ex_ST_TT =	设置在类似WinWait命令中WinTitle参数的匹配模式。
+	ST_TT =	1：窗口标题必须以指定的WinTitle开头。
 		2：窗口标题的某个位置必须包含WinTitle。
 		3：窗口标题必须准确匹配WinTitle。
 		RegEx：改变WinTitle、WinText、ExcludeTitle和ExcludeText为正则表达式。
-	)	
-	Ex_DH_TT =	
-	(LTrim	
-		设置脚本是否可以“看见”隐藏的窗口。
-	)	
-	Ex_AF_TT =	
-	(LTrim	
-		跳过温和的方法而
+	Ex_DH_TT =	设置脚本是否可以“看见”隐藏的窗口。
+	Ex_AF_TT =	跳过温和的方法而
 		直接使用强制的方法激活窗口。
-	)	
-	Ex_HK_TT =	
-	(LTrim	
-		强制使用钩子实现全部
+	Ex_HK_TT =	强制使用钩子实现全部
 		或部分键盘热键。
-	)	
-	Ex_SK_TT =	
-	(LTrim	
-		设置在每次Send或ControlSend发送
+	Ex_SK_TT =	设置在每次Send或ControlSend发送
 		键击后自动的延时。
-	)	
-	Ex_MD_TT =	
-	(LTrim	
-		设置自动的延时在
+	Ex_MD_TT =	设置自动的延时在
 		每次鼠标移动或点击后。
-	)	
-	Ex_SC_TT =	
-	(LTrim	
-		设置自动的延时在
+	Ex_SC_TT =	设置自动的延时在
 		每次控件修改命令后。
-	)	
-	Ex_SW_TT =	
-	(LTrim	
-		设置自动的延时在
+	Ex_SW_TT =	设置自动的延时在
 		每次执行窗口命令（例如WinActivate）后。
-	)	
-	Ex_SB_TT =	
-	(LTrim	
-		设置脚本的执行速度（影响 CPU 使用率）。
-	)	
-	Ex_NT_TT =	
-	(LTrim	
-		不显示托盘图标。
-	)	
-		
-	Ex_IN_TT =	
-	(LTrim	
-		让脚本认为指定文件的内容
+	Ex_SB_TT =	设置脚本的执行速度（影响 CPU 使用率）。
+	Ex_NT_TT =	不显示托盘图标。
+	Ex_IN_TT =	让脚本认为指定文件的内容
 		会出现在这个准确的位置。
-	)	
-	Ex_PT_TT =	
-	(LTrim	
-		让脚本持续运行
+	Ex_PT_TT =	让脚本持续运行
 		（即直到用户关闭或遇到ExitApp）。
-	)	
-	Ex_MT_TT =	
-	(LTrim	
-		设置每个热键或热字串
+	Ex_MT_TT =	设置每个热键或热字串
 		可同时存在的最大线程数。
-	)	
 	Ex_UV_TT =	导出全局变量。
 	Ex_EdVars_TT =	选择要导出的全局变量。
 		
@@ -1171,7 +1040,6 @@
 		
 ; AHK Commands Tips		
 	Ahk_Cmd_Index =	
-	(LTrim	
 	Abs	返回数字的绝对值。
 	ASin	返回弧度表示的反正弦值（其正弦是Number）。
 	ACos	返回弧度表示的反余弦值（其余弦值为Number）。
@@ -1295,9 +1163,6 @@
 	InputBox	显示输入框让用户输入字符串。
 	InsertAt	插入一个或多个值，在一个线性阵列内的给定位置。
 	InStr	搜索字符串的出现位置，从左边或右边开始。
-	)	
-	Ahk_Cmd_Index = %Ahk_Cmd_Index%`n	
-	(LTrim	
 	KeyHistory	显示脚本信息和最近键击和鼠标点击的历史。
 	KeyWait	等待按键或鼠标/操纵杆按钮被松开或按下。
 	Labels	标签用来标识代码行，可以作为Goto目标或组成子程序。
@@ -1429,5 +1294,3 @@
 	WinWaitActive	等到指定的窗口处于活动状态。
 	WinWaitClose	等到指定的窗口消失。
 	WinWaitNotActive	等待，直到指定的窗口不活跃。
-	)	
-return		
