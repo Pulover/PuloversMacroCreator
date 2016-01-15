@@ -1,8 +1,8 @@
-﻿LoadLang_En:
+﻿Lang_en
 		
 		; English
 		
-; Main Menu		
+; 01. Main Menu		
 	m_Lang001 =	&File
 	m_Lang002 =	&Macro
 	m_Lang003 =	F&unction
@@ -14,7 +14,7 @@
 	m_Lang009 =	&Donate
 	m_Lang010 =	&Help
 		
-; File Sub Menu		
+; 02. File Sub Menu		
 	f_Lang001 =	&New
 	f_Lang002 =	&Open
 	f_Lang003 =	&Save
@@ -28,7 +28,7 @@
 	f_Lang011 =	E&xit
 	f_Lang012 =	No files
 		
-; Macro Sub Menu		
+; 03. Macro Sub Menu		
 	r_Lang001 =	&Record Macro
 	r_Lang002 =	&Activate Macros
 	r_Lang003 =	&Play Current Macro
@@ -45,13 +45,13 @@
 	r_Lang014 =	&Import Macro
 	r_Lang015 =	Sa&ve Current Macro
 		
-; Function Sub Menu		
+; 04. Function Sub Menu		
 	u_Lang001 =	Create &Function
 	u_Lang002 =	Add &Parameter
 	u_Lang003 =	Add &Return
 	u_Lang004 =	&Convert Macro To Function
 		
-; Commands Sub Menu		
+; 05. Commands Sub Menu		
 	i_Lang001 =	&Mouse
 	i_Lang002 =	&Text
 	i_Lang003 =	&Control
@@ -74,7 +74,7 @@
 	i_Lang020 =	Find a command
 		
 		
-; Edit Sub Menu		
+; 06. Edit Sub Menu		
 	e_Lang001 =	Dup&licate
 	e_Lang002 =	Edit C&omment
 	e_Lang003 =	&Find / Replace
@@ -90,15 +90,16 @@
 	e_Lang013 =	&Insert from Box
 	e_Lang014 =	Insert &Keystroke
 	e_Lang015 =	Edit Color &Mark
-	e_Lang016 =	Groups
-	e_Lang017 =	Enable groups
-	e_Lang018 =	Add group
-	e_Lang019 =	Remove group
-	e_Lang020 =	Remove all groups
-	e_Lang021 =	Edit groups
+	e_Lang016 =	&Groups
+	e_Lang017 =	&Enable groups
+	e_Lang018 =	&Add group
+	e_Lang019 =	&Remove group
+	e_Lang020 =	Re&move all groups
+	e_Lang021 =	&Collapse all
+	e_Lang022 =	E&xpand all
 		
 		
-; Select Sub Menu		
+; 07. Select Sub Menu		
 	s_Lang001 =	Select &All
 	s_Lang002 =	Select &None
 	s_Lang003 =	&Invert Selection
@@ -110,7 +111,7 @@
 	s_Lang009 =	Selected &Type
 	s_Lang010 =	Command type
 		
-; View Sub Menu		
+; 08. View Sub Menu		
 	v_Lang001 =	&Always On Top
 	v_Lang002 =	&Highlight Rows
 	v_Lang003 =	&Indentation
@@ -121,26 +122,22 @@
 	v_Lang008 =	&Reset Columns Size
 	v_Lang009 =	&Icons Size
 	v_Lang010 =	R&eset Layout
-		
 	v_Lang011 =	&File
 	v_Lang012 =	&Record  Play
 	v_Lang013 =	&Commands
 	v_Lang014 =	&Edit
 	v_Lang015 =	&Options
 	v_Lang016 =	C&ustomize
-		
 	v_Lang017 =	&Automatic
 	v_Lang018 =	&Manual
 	v_Lang019 =	&Stop
 	v_Lang020 =	&Pause
-		
 	v_Lang021 =	&Compact
 	v_Lang022 =	&Default
-		
 	v_Lang023 =	&Small
 	v_Lang024 =	&Large
 		
-; Options Sub Menu		
+; 09. Options Sub Menu		
 	o_Lang001 =	&Settings
 	o_Lang002 =	&Language
 	o_Lang003 =	&Minimize to tray
@@ -157,10 +154,10 @@
 	o_Lang014 =	Default Hot&keys
 	o_Lang015 =	Default Sett&ings
 		
-; Donate Sub Menu		
+; 10. Donate Sub Menu		
 	p_Lang001 =	&PayPal Donation
 		
-; Help Sub Menu		
+; 11. Help Sub Menu		
 	h_Lang001 =	&Help
 	h_Lang002 =	&Tutorials
 	h_Lang003 =	T&ips
@@ -171,12 +168,12 @@
 	h_Lang008 =	Ch&eck on startup
 	h_Lang009 =	A&bout
 		
-; Tray Menu		
+; 12. Tray Menu		
 	y_Lang001 =	Hide Window
 	y_Lang002 =	Show Window
 	y_Lang003 =	Controls Toolbar
 		
-; Built-in Vars Menu		
+; 13. Built-in Vars Menu		
 	b_Lang001 =	Special Characters
 	b_Lang002 =	Properties
 	b_Lang003 =	Date and Time
@@ -185,7 +182,7 @@
 	b_Lang006 =	Misc.
 	b_Lang007 =	Loop
 		
-; Main Window		
+; 14. Main Window		
 	w_Lang001 =	Export
 	w_Lang002 =	Preview
 	w_Lang003 =	Options
@@ -294,7 +291,7 @@
 	w_Lang106 =	Convert Macro To Function (Ctrl+Shift+C)
 	w_Lang107 =	Comment out unchecked rows
 		
-; Command Windows		
+; 15. Command Windows		
 	c_Lang001 =	Mouse
 	c_Lang002 =	Text
 	c_Lang003 =	Pause
@@ -520,7 +517,7 @@
 	c_Lang224 =	Local Variables
 	c_Lang225 =	Static Variables
 		
-; Other Windows		
+; 16. Other Windows		
 	t_Lang001 =	Export to AutoHotkey
 	t_Lang002 =	Macros
 	t_Lang003 =	Loops
@@ -698,8 +695,23 @@
 	t_Lang175 =	Misc.
 	t_Lang176 =	Add group
 	t_Lang177 =	New group
+	t_Lang178 =	Language Editor
+	t_Lang179 =	Create New
+	t_Lang180 =	Use Enter, PgDn and PgUp to navigate.
+	t_Lang181 =	Submit
+	t_Lang182 =	From
+	t_Lang183 =	Name
+	t_Lang184 =	Email
+	t_Lang185 =	Subject
+	t_Lang186 =	Message
+	t_Lang187 =	Save changes?
+	t_Lang188 =	Language File
+	t_Lang189 =	Reference File
+	t_Lang190 =	Submit revision or new translation
+	t_Lang191 =	Collapse all
+	t_Lang192 =	Expand all
 		
-; Messages & Dialogs		
+; 17. Messages & Dialogs		
 	d_Lang001 =	Open
 	d_Lang002 =	Save current project?
 	d_Lang003 =	Default Settings
@@ -835,7 +847,7 @@
 	d_Lang101 =	Duplicate function.
 	d_Lang102 =	is a reserved word.
 		
-; Start-up Tips		
+; 18. Start-up Tips		
 	Start_Tips =	You can create Macros using the Command Buttons in the main window or using the Recorder to copy your actions. Go to Options > Settings > Recording to select what inputs will be recorded.
 		To use the recorder for quick tasks go to Options > Settings > Recording and check the "Clear List" option. Then click the Record button in the main window and use F10 to clear the current Macro and start a new one with the same hotkey. You can also check the "Always Active" option in the main window to keep Recording and Playback hotkeys active.
 		To get help for an specific command right-click anywhere on a command window to show links to AutoHotkey online Help.
@@ -864,7 +876,7 @@
 		You can set your own Global Variables to be loaded on startup and to be exported. Go to Options > Settings > User Global Variables to add them.
 		You can run advanced functions such as SubStr and RegExReplace from the Functions window (Insert > If Statements / Variables / Functions). Or run your own functions from external AutoHotkey scripts.
 		
-; Tooltips		
+; 19. Tooltips		
 	AutoKey_TT =	Hotkey to play Macro
 	ManKey_TT =	Hotkey to play Macro "step-by-step"
 	AbortKey_TT =	Hotkey to stop playback
@@ -944,7 +956,7 @@
 		- To use strings, enclose them in quotes, e.g.: var = "a".
 		- Multiple Statements are supported, e.g.: var = "a" || InStr(var, "b").
 		
-; Tooltips from AHK Docs		
+; 20. Tooltips from AHK Docs		
 	ExpList_TT =	Double-Click to edit
 	Ex_IfDir_TT =	Creates context-sensitive hotkeys and hotstrings depending
 		on the type of window that is active or exists.
@@ -995,7 +1007,7 @@
 	Ex_UV_TT =	Export global variables.
 	Ex_EdVars_TT =	Select global variables to be exported.
 		
-; Operators		
+; 21. Operators		
 	As_Oper_1 =	Assign
 	As_Oper_2 =	Add
 	As_Oper_3 =	Subtract
@@ -1011,7 +1023,7 @@
 	Co_Oper_6 =	Greater or equal
 	Co_Oper_7 =	Less or equal
 		
-; IE Commands Tips		
+; 22. IE Commands Tips		
 	Tip_Navigate =	Navigates to a URL or path.
 	Tip_Value =	Gets or sets the value of the object.
 	Tip_Focus =	Sets focus to the object.
@@ -1038,7 +1050,7 @@
 	Tip_Height =	Sets or retrieves the height of the object.
 	Tip_Length =	Sets or retrieves the number of objects in a collection.
 		
-; AHK Commands Tips		
+; 23. AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	Abs	Returns the absolute value of Number.
 	ASin	Returns the arcsine (the number whose sine is Number) in radians.
@@ -1190,6 +1202,7 @@
 	OnMessage	Specifies a function to call automatically when the script receives the specified message.
 	Ord	Returns the ordinal value (numeric character code) of the first character in String.
 	OutputDebug	Sends a string to the debugger (if any) for display.
+	Parameter	Adds a parameter to the function.
 	Pause	Pauses the script's current thread.
 	PixelGetColor	Retrieves the color of the pixel at the specified x,y coordinates.
 	PixelSearch	Searches a region of the screen for a pixel of the specified color.
@@ -1265,6 +1278,7 @@
 	Try	Guards one or more statements (commands or expressions) against runtime errors and exceptions thrown by the throw command.
 	Until	Applies a condition to the continuation of a Loop or For-loop.
 	UrlDownloadToFile	Downloads a file from the Internet.
+	UserFunction	Creates a Function structure.
 	VarSetCapacity	Enlarges a variable's holding capacity or frees its memory. Normally, this is necessary only for unusual circumstances such as DllCall.
 	WinActivate	Activates the specified window (makes it foremost).
 	WinActivateBottom	Same as WinActivate except that it activates the bottommost (least recently active) matching window rather than the topmost.

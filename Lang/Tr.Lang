@@ -1,8 +1,8 @@
-﻿LoadLang_Tr:
+﻿Lang_tr
 		
 		; Turkish
 		
-; Main Menu		
+; 01. Main Menu		
 	m_Lang001 =	&Dosya
 	m_Lang002 =	&Makro
 	m_Lang003 =	&fonksiyon
@@ -14,7 +14,7 @@
 	m_Lang009 =	&Bağışlamak
 	m_Lang010 =	&Yardım
 		
-; File Sub Menu		
+; 02. File Sub Menu		
 	f_Lang001 =	&Yeni
 	f_Lang002 =	&Açık
 	f_Lang003 =	&Kurtarmak
@@ -28,7 +28,7 @@
 	f_Lang011 =	&Çıkış
 	f_Lang012 =	H&içbir içerik
 		
-; Macro Sub Menu		
+; 03. Macro Sub Menu		
 	r_Lang001 =	&Makro Kaydet
 	r_Lang002 =	M&akrolar etkinleştirin
 	r_Lang003 =	&Güncel Makro oyna
@@ -45,13 +45,13 @@
 	r_Lang014 =	&İthalat Makro
 	r_Lang015 =	G&üncel Makro Kaydet
 		
-; Function Sub Menu		
+; 04. Function Sub Menu		
 	u_Lang001 =	&Fonksiyon oluşturma
 	u_Lang002 =	&Parametre ekle
 	u_Lang003 =	&Dönüş ekle
 	u_Lang004 =	F&onksiyonu için makro dönüştürme
 		
-; Commands Sub Menu		
+; 05. Commands Sub Menu		
 	i_Lang001 =	&Fare
 	i_Lang002 =	&Metin
 	i_Lang003 =	&Kontrol
@@ -74,7 +74,7 @@
 	i_Lang020 =	&(Ctrl+Shift+F) bir komut bul
 		
 		
-; Edit Sub Menu		
+; 06. Edit Sub Menu		
 	e_Lang001 =	&Çift
 	e_Lang002 =	&Yorum düzenle
 	e_Lang003 =	&Bul / Değiştir
@@ -90,15 +90,16 @@
 	e_Lang013 =	Ku&tusundan Ekle
 	e_Lang014 =	Tuş Ek&lemek
 	e_Lang015 =	&Düzen renk işareti
-	e_Lang016 =	Gruplar
-	e_Lang017 =	Grupları etkinleştirme
-	e_Lang018 =	Grup ekle
-	e_Lang019 =	Grup kaldır
-	e_Lang020 =	Tüm grupları kaldırın
-	e_Lang021 =	Düzenleme grupları
+	e_Lang016 =	&Gruplar
+	e_Lang017 =	&Grupları etkinleştirme
+	e_Lang018 =	G&rup ekle
+	e_Lang019 =	Gr&up kaldır
+	e_Lang020 =	&Tüm grupları kaldırın
+	e_Lang021 =	T&üm daraltmak
+	e_Lang022 =	&Hepsini genişlet
 		
 		
-; Select Sub Menu		
+; 07. Select Sub Menu		
 	s_Lang001 =	&Tümünü Seç
 	s_Lang002 =	&Yok seçeneğini
 	s_Lang003 =	&Seçim Invert
@@ -110,7 +111,7 @@
 	s_Lang009 =	Seçi&len Tip
 	s_Lang010 =	Komut türü
 		
-; View Sub Menu		
+; 08. View Sub Menu		
 	v_Lang001 =	&Her zaman üstte
 	v_Lang002 =	&Vurgulamak Satır
 	v_Lang003 =	&Girinti
@@ -121,26 +122,22 @@
 	v_Lang008 =	S&ütunlar Boyutu Sıfırla
 	v_Lang009 =	&Simgeler Boyutu
 	v_Lang010 =	&Düzen Sıfırla
-		
 	v_Lang011 =	&Dosya
 	v_Lang012 =	&Kaydedin ve oyna
 	v_Lang013 =	K&omutları
 	v_Lang014 =	D&üzenleme
 	v_Lang015 =	&Seçenekleri
 	v_Lang016 =	&Özelleştirme
-		
 	v_Lang017 =	&Otomatik
 	v_Lang018 =	&Manuel
 	v_Lang019 =	&Dur
 	v_Lang020 =	D&urma
-		
 	v_Lang021 =	&Kompakt
 	v_Lang022 =	&Varsayılan
-		
 	v_Lang023 =	&Küçük
 	v_Lang024 =	&Büyük
 		
-; Options Sub Menu		
+; 09. Options Sub Menu		
 	o_Lang001 =	&Ayarlar
 	o_Lang002 =	&Dil
 	o_Lang003 =	&Tepsisine küçült
@@ -157,10 +154,10 @@
 	o_Lang014 =	Varsayıla&n Hotkeys
 	o_Lang015 =	Varsayılan Ayarlar
 		
-; Donate Sub Menu		
+; 10. Donate Sub Menu		
 	p_Lang001 =	&PayPal Bağış
 		
-; Help Sub Menu		
+; 11. Help Sub Menu		
 	h_Lang001 =	&Yardım
 	h_Lang002 =	&Öğreticiler
 	h_Lang003 =	&İpuçları
@@ -171,12 +168,12 @@
 	h_Lang008 =	&Başlangıçta kontrol edin
 	h_Lang009 =	&Hakkında
 		
-; Tray Menu		
+; 12. Tray Menu		
 	y_Lang001 =	Pencere gizle
 	y_Lang002 =	Pencere göster
 	y_Lang003 =	Kontroller Araç Çubuğu
 		
-; Built-in Vars Menu		
+; 13. Built-in Vars Menu		
 	b_Lang001 =	özel Karakterler
 	b_Lang002 =	özellikleri
 	b_Lang003 =	Tarih ve Saat
@@ -185,7 +182,7 @@
 	b_Lang006 =	Çeşitli.
 	b_Lang007 =	Döngü
 		
-; Main Window		
+; 14. Main Window		
 	w_Lang001 =	Ihracat
 	w_Lang002 =	Önizleme
 	w_Lang003 =	Seçenekler
@@ -294,7 +291,7 @@
 	w_Lang106 =	(Ctrl + Shift + C) Fonksiyonu için makro dönüştürme
 	w_Lang107 =	Denetlenmeyen satırları açıklama
 		
-; Command Windows		
+; 15. Command Windows		
 	c_Lang001 =	Fare
 	c_Lang002 =	Metin
 	c_Lang003 =	Durma
@@ -520,7 +517,7 @@
 	c_Lang224 =	Yerel Değişkenler
 	c_Lang225 =	Statik Değişkenler
 		
-; Other Windows		
+; 16. Other Windows		
 	t_Lang001 =	AutoHotkey Aktar
 	t_Lang002 =	Makrolar
 	t_Lang003 =	Döngüler
@@ -698,8 +695,23 @@
 	t_Lang175 =	ÇEşItli.
 	t_Lang176 =	Grup ekle
 	t_Lang177 =	Yeni grup
+	t_Lang178 =	Dil Editörü
+	t_Lang179 =	Yeni oluştur
+	t_Lang180 =	Enter kullanın, PgDn ve PgUp gezinmek için.
+	t_Lang181 =	Gönder
+	t_Lang182 =	Gönderen
+	t_Lang183 =	Isim
+	t_Lang184 =	E-posta
+	t_Lang185 =	Tabi
+	t_Lang186 =	Mesaj
+	t_Lang187 =	Değişiklikleri Kaydet?
+	t_Lang188 =	Dil Dosyası
+	t_Lang189 =	Referans Dosyası
+	t_Lang190 =	Revizyon ya da yeni çeviri Gönder
+	t_Lang191 =	Tüm daraltmak
+	t_Lang192 =	Hepsini genişlet
 		
-; Messages & Dialogs		
+; 17. Messages & Dialogs		
 	d_Lang001 =	Açık
 	d_Lang002 =	Mevcut projeyi kaydet?
 	d_Lang003 =	Varsayılan Ayarlar
@@ -835,7 +847,7 @@
 	d_Lang101 =	Yinelenen işlev.
 	d_Lang102 =	ayrılmış bir sözcüktür.
 		
-; Start-up Tips		
+; 18. Start-up Tips		
 	Start_Tips =	Bu ana pencerede komut düğmeleri kullanarak ya da eylemleri kopyalamak için Kayıt kullanarak Makrolar oluşturabilirsiniz. Seçenekler > Ayarlar > giriş kaydedilecektir ne seçmek için kayıt.
 		Hızlı görevleri Seçenek > Ayarlar > Kayıt gidin ve "Listeyi Temizle" seçeneğini işaretleyin için kayıt kullanmak için. Daha sonra ana pencerede Record düğmesine tıklayın ve mevcut makro temizlemek için F10 kullanın ve aynı kısayol tuşu ile yeni bir başlangıç. Ayrıca Kayıt ve Oynatma kısayol tuşları aktif tutmak için ana pencerede "Her zaman Aktif" seçeneğini kontrol edebilirsiniz.
 		Bir özel komut için yardım almak için AutoHotkey çevrimiçi Yardım'a bağlantıları göstermek için bir komut penceresi üzerinde herhangi bir yere sağ tıklayın.
@@ -864,7 +876,7 @@
 		Bu başlangıç ve ihraç edilecek yüklenecek kendi Global değişkenler ayarlayabilirsiniz. Eklemek için Seçenek > Ayarlar > Kullanıcı Global Değişkenler git.
 		Sen Fonksiyonlar pencere (Eğer Tablolar / Değişkenler / İşlevleri > Ekle) bu tür substr ve RegExReplace gibi gelişmiş fonksiyonları çalıştırabilirsiniz. Veya harici AutoHotkey komut, kendi fonksiyonları çalıştırmak.
 		
-; Tooltips		
+; 19. Tooltips		
 	AutoKey_TT =	Kısayol Makro oynamak
 	ManKey_TT =	Kısayol Makro "adım adım" oynamak
 	AbortKey_TT =	Kısayol çalma durdurmak için
@@ -944,7 +956,7 @@
 		- Örneğin, tırnak işareti içine, dizeleri kullanmak için: var = "a".
 		- Çoklu Tablolar desteklenir, örneğin: var = "a" || InStr (var "b").
 		
-; Tooltips from AHK Docs		
+; 20. Tooltips from AHK Docs		
 	ExpList_TT =	Düzenlemek için çift tıklayın
 	Ex_IfDir_TT =	Bağlam-duyarlı hotkeys ve bağlı hotstrings oluşturur
 		aktif veya bulunduğu pencerenin türüne bağlıdır.
@@ -995,7 +1007,7 @@
 	Ex_UV_TT =	Global değişkenler ihracat.
 	Ex_EdVars_TT =	Ihraç edilecek genel değişkenleri seçin.
 		
-; Operators		
+; 21. Operators		
 	As_Oper_1 =	Atamak
 	As_Oper_2 =	Eklemek
 	As_Oper_3 =	Çıkarmak
@@ -1011,7 +1023,7 @@
 	Co_Oper_6 =	Büyük veya eşit
 	Co_Oper_7 =	Daha az ya da eşit
 		
-; IE Commands Tips		
+; 22. IE Commands Tips		
 	Tip_Navigate =	Bir URL veya yol gider.
 	Tip_Value =	Alır veya nesnesinin değerini belirler.
 	Tip_Focus =	Nesnesi odağı ayarlar.
@@ -1038,7 +1050,7 @@
 	Tip_Height =	Ayarlar ya da nesne yüksekliğinin alır.
 	Tip_Length =	Ayarlar veya bir koleksiyon nesne sayısını alır.
 		
-; AHK Commands Tips		
+; 23. AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	Abs	Sayısı mutlak değerini döndürür.
 	ASin	Radyan cinsinden ark sinüsünü ( sinüs Numarasısayı ) döndürür.
@@ -1190,6 +1202,7 @@
 	OnMessage	Script Belirtilen ileti aldığında otomatik olarak aramak için bir işlev belirtir.
 	Ord	Dize ilk karakterin sıra değeri (sayısal karakter kodu) döndürür.
 	OutputDebug	Ekran için hata ayıklayıcı (varsa) için bir dize gönderir.
+	Parameter	Işleve bir parametre ekler.
 	Pause	Script en geçerli iş parçacığı duraklar.
 	PixelGetColor	Belirtilen x de pikselin rengini alır, y koordinatları.
 	PixelSearch	Belirtilen renk bir piksel için ekranın bir bölge arar.
@@ -1265,6 +1278,7 @@
 	Try	Çalışma zamanı hataları ve atış komutu tarafından atılan istisnalar karşı koruma sağlar bir veya daha fazla tablo (komut veya ifadeler).
 	Until	Bir döngü ya da için-döngünün devamı için bir koşul geçerlidir.
 	UrlDownloadToFile	Internetten bir dosya indirir.
+	UserFunction	Bir işlev yapısı oluşturur.
 	VarSetCapacity	Bir değişkenin tutma kapasitesi büyütür ya da belleği serbest bırakır. Normal olarak, bu sadece bu DllCall gibi olağan dışı durumlarda gereklidir.
 	WinActivate	Belirtilen penceresi (bu her şeyden yapar) etkinleştirir.
 	WinActivateBottom	Bu en alttaki (en son aktif) eşleştirme pencere yerine üstteki aktive dışında WinActivate aynı.

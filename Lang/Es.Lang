@@ -1,8 +1,8 @@
-﻿LoadLang_Es:
+﻿Lang_es
 		
 		; Spanish
 		
-; Main Menu		
+; 01. Main Menu		
 	m_Lang001 =	&Archivo
 	m_Lang002 =	&Macro
 	m_Lang003 =	&Función
@@ -14,7 +14,7 @@
 	m_Lang009 =	&Donar
 	m_Lang010 =	A&yuda
 		
-; File Sub Menu		
+; 02. File Sub Menu		
 	f_Lang001 =	&Nuevo
 	f_Lang002 =	&Abierto
 	f_Lang003 =	&Guardar
@@ -28,7 +28,7 @@
 	f_Lang011 =	&Salida
 	f_Lang012 =	N&o hay archivos
 		
-; Macro Sub Menu		
+; 03. Macro Sub Menu		
 	r_Lang001 =	&Grabar macro
 	r_Lang002 =	&Activar Macros
 	r_Lang003 =	&Reproducir macro actual
@@ -45,13 +45,13 @@
 	r_Lang014 =	Importar Macro
 	r_Lang015 =	Guardar macro actua&l
 		
-; Function Sub Menu		
+; 04. Function Sub Menu		
 	u_Lang001 =	&Crear Función
 	u_Lang002 =	&Añadir Parámetro
 	u_Lang003 =	A&ñadir Volver
 	u_Lang004 =	C&onvertir Macro para funcionar
 		
-; Commands Sub Menu		
+; 05. Commands Sub Menu		
 	i_Lang001 =	&Ratón
 	i_Lang002 =	&Texto
 	i_Lang003 =	&Controle
@@ -74,7 +74,7 @@
 	i_Lang020 =	Encontrar &un comando
 		
 		
-; Edit Sub Menu		
+; 06. Edit Sub Menu		
 	e_Lang001 =	&Duplicar
 	e_Lang002 =	&Editar comentario
 	e_Lang003 =	&Buscar / Reemplazar
@@ -82,23 +82,24 @@
 	e_Lang005 =	De&shacer
 	e_Lang006 =	&Rehacer
 	e_Lang007 =	C&ortar
-	e_Lang008 =	Co&piar
-	e_Lang009 =	Pe&gar
+	e_Lang008 =	Cop&iar
+	e_Lang009 =	&Pegar
 	e_Lang010 =	Borr&ar
 	e_Lang011 =	S&ubir
 	e_Lang012 =	Ba&jar
-	e_Lang013 =	&Inserte de Caja
-	e_Lang014 =	I&nsertar Pulsaciones
+	e_Lang013 =	I&nserte de Caja
+	e_Lang014 =	Insertar P&ulsaciones
 	e_Lang015 =	Edi&tar marca de color
-	e_Lang016 =	Grupos
-	e_Lang017 =	Habilitar grupos
-	e_Lang018 =	Añadir grupo
-	e_Lang019 =	Retire grupo
-	e_Lang020 =	Retire todos los grupos
-	e_Lang021 =	Editar grupos
+	e_Lang016 =	&Grupos
+	e_Lang017 =	&Habilitar grupos
+	e_Lang018 =	&Añadir grupo
+	e_Lang019 =	&Retire grupo
+	e_Lang020 =	R&etire todos los grupos
+	e_Lang021 =	&Desplegar todo
+	e_Lang022 =	E&xpandir todo
 		
 		
-; Select Sub Menu		
+; 07. Select Sub Menu		
 	s_Lang001 =	&Seleccionar todo
 	s_Lang002 =	S&eleccione Ninguno
 	s_Lang003 =	&Invertir selección
@@ -110,7 +111,7 @@
 	s_Lang009 =	&Tipo seleccionado
 	s_Lang010 =	Tipo de comando
 		
-; View Sub Menu		
+; 08. View Sub Menu		
 	v_Lang001 =	&Siempre visible
 	v_Lang002 =	&Destacar Filas
 	v_Lang003 =	S&angría
@@ -121,26 +122,22 @@
 	v_Lang008 =	&Cambiar Tamaño Columnas
 	v_Lang009 =	Tamaño de Los &Iconos
 	v_Lang010 =	R&establecer Diseño
-		
 	v_Lang011 =	&Expediente
 	v_Lang012 =	&Grabar y reproducir
 	v_Lang013 =	&Comandos
 	v_Lang014 =	E&ditar
 	v_Lang015 =	&Opciones
 	v_Lang016 =	&Personalizar
-		
 	v_Lang017 =	&Automático
 	v_Lang018 =	&Manual
 	v_Lang019 =	&Detener
 	v_Lang020 =	&Pausa
-		
 	v_Lang021 =	&Compacto
 	v_Lang022 =	&Defecto
-		
 	v_Lang023 =	&Pequeño
 	v_Lang024 =	&Grande
 		
-; Options Sub Menu		
+; 09. Options Sub Menu		
 	o_Lang001 =	&Configuración
 	o_Lang002 =	&Idioma
 	o_Lang003 =	&Minimizar a la bandeja
@@ -157,10 +154,10 @@
 	o_Lang014 =	Tecla&s de acceso directo predeterminadas
 	o_Lang015 =	Co&nfiguración predeterminada
 		
-; Donate Sub Menu		
+; 10. Donate Sub Menu		
 	p_Lang001 =	&Donación PayPal
 		
-; Help Sub Menu		
+; 11. Help Sub Menu		
 	h_Lang001 =	&Ayuda
 	h_Lang002 =	&Tutoriales
 	h_Lang003 =	&Consejos
@@ -171,12 +168,12 @@
 	h_Lang008 =	C&ompruebe en el arranque
 	h_Lang009 =	Ac&erca
 		
-; Tray Menu		
+; 12. Tray Menu		
 	y_Lang001 =	Ocultar ventana
 	y_Lang002 =	Mostrar ventana
 	y_Lang003 =	Barra de Controles
 		
-; Built-in Vars Menu		
+; 13. Built-in Vars Menu		
 	b_Lang001 =	Caracteres especiales
 	b_Lang002 =	Propiedades
 	b_Lang003 =	Fecha y Hora
@@ -185,7 +182,7 @@
 	b_Lang006 =	Misc.
 	b_Lang007 =	Bucle
 		
-; Main Window		
+; 14. Main Window		
 	w_Lang001 =	Exportar
 	w_Lang002 =	Previa
 	w_Lang003 =	Opciones
@@ -294,7 +291,7 @@
 	w_Lang106 =	Convertir Macro para funcionar (Ctrl + Shift + C)
 	w_Lang107 =	Comente filas sin marcar
 		
-; Command Windows		
+; 15. Command Windows		
 	c_Lang001 =	Ratón
 	c_Lang002 =	Texto
 	c_Lang003 =	Pausa
@@ -520,7 +517,7 @@
 	c_Lang224 =	Variables Locales
 	c_Lang225 =	Variables estáticas
 		
-; Other Windows		
+; 16. Other Windows		
 	t_Lang001 =	Exportar a AutoHotkey
 	t_Lang002 =	Macros
 	t_Lang003 =	Loops
@@ -698,8 +695,23 @@
 	t_Lang175 =	Misc.
 	t_Lang176 =	Añadir grupo
 	t_Lang177 =	Nuevo grupo
+	t_Lang178 =	Editor de idiomas
+	t_Lang179 =	Crear nuevo
+	t_Lang180 =	Utilice Intro, Av Pág y Re Pág para navegar.
+	t_Lang181 =	Enviar
+	t_Lang182 =	De
+	t_Lang183 =	Nombre
+	t_Lang184 =	Email
+	t_Lang185 =	Sujeto
+	t_Lang186 =	Mensaje
+	t_Lang187 =	¿Guardar cambios?
+	t_Lang188 =	Idioma del archivo
+	t_Lang189 =	Referencia del expediente
+	t_Lang190 =	Presentar revisión o nueva traducción
+	t_Lang191 =	Desplegar todo
+	t_Lang192 =	Expandir todo
 		
-; Messages & Dialogs		
+; 17. Messages & Dialogs		
 	d_Lang001 =	Abierto
 	d_Lang002 =	¿Guardar proyecto actual?
 	d_Lang003 =	Configuración predeterminada
@@ -835,7 +847,7 @@
 	d_Lang101 =	Función Duplicar.
 	d_Lang102 =	es una palabra reservada.
 		
-; Start-up Tips		
+; 18. Start-up Tips		
 	Start_Tips =	Puede crear macros utilizando los botones de comando en la ventana principal o el uso de la grabadora para copiar sus acciones. Vaya a Opciones > Configuración > Grabación para seleccionar lo que se registran las entradas.
 		Para utilizar la grabadora para tareas rápidas vaya a Opciones > Configuración > Grabación y marque la opción "Borrar lista". A continuación, haga clic en el botón de grabación en la ventana principal y utilizar F10 para borrar la macro actual e iniciar uno nuevo con la misma combinación de teclas. También puede consultar la opción "Siempre activo" en la ventana principal a tener grabación y reproducción hotkeys activo.
 		Para obtener ayuda para un comando específico haga clic derecho en cualquier parte de la ventana de comandos para mostrar enlaces a AutoHotkey ayuda en línea.
@@ -864,7 +876,7 @@
 		Puede definir sus propias variables globales para ser cargado en el arranque y para la exportación. Vaya a Opciones > Configuración > Usuario Variables globales para agregarlos.
 		Puede ejecutar funciones avanzadas tales como SUBSTR y RegExReplace de la ventana Funciones (Insertar > Si Declaraciones / variables / funciones). O ejecutar sus propias funciones de secuencias de comandos AutoHotkey externos.
 		
-; Tooltips		
+; 19. Tooltips		
 	AutoKey_TT =	Tecla de acceso directo para jugar Macro
 	ManKey_TT =	Tecla de acceso directo para jugar Macro "paso a paso"
 	AbortKey_TT =	Hotkey para detener la reproducción
@@ -944,7 +956,7 @@
 		- Para utilizar cuerdas, encerrarlos entre comillas, por ejemplo: var = "a".
 		- Son compatibles Varias sentencias, por ejemplo: var = "a" || InStr (var, "b").
 		
-; Tooltips from AHK Docs		
+; 20. Tooltips from AHK Docs		
 	ExpList_TT =	Haga doble clic para editar
 	Ex_IfDir_TT =	Crea sensibles al contexto y teclas de acceso rápido en función hotstrings
 		el tipo de ventana que está activa o existe.
@@ -995,7 +1007,7 @@
 	Ex_UV_TT =	Exportar variables globales.
 	Ex_EdVars_TT =	Seleccionar variables globales destinados a la exportación.
 		
-; Operators		
+; 21. Operators		
 	As_Oper_1 =	Asignar
 	As_Oper_2 =	Añadir
 	As_Oper_3 =	Sustraer
@@ -1011,7 +1023,7 @@
 	Co_Oper_6 =	Mayor o igual
 	Co_Oper_7 =	Menor o igual
 		
-; IE Commands Tips		
+; 22. IE Commands Tips		
 	Tip_Navigate =	Se desplaza a una dirección URL o ruta.
 	Tip_Value =	Obtiene o establece el valor del objeto.
 	Tip_Focus =	Establece el foco al objeto.
@@ -1038,7 +1050,7 @@
 	Tip_Height =	Establece o recupera la altura del objeto.
 	Tip_Length =	Establece o recupera el número de objetos en una colección.
 		
-; AHK Commands Tips		
+; 23. AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	Abs	Devuelve el valor absoluto del número .
 	ASin	Devuelve el arco seno (el número cuyo seno es Number) en radianes.
@@ -1190,6 +1202,7 @@
 	OnMessage	Especifica una función para llamar automáticamente cuando el script recibe el mensaje especificado.
 	Ord	Devuelve el valor ordinal (código de carácter numérico) del primer carácter en la cadena.
 	OutputDebug	Envía una cadena para el depurador (en su caso) para su visualización.
+	Parameter	Añade un parámetro a la función.
 	Pause	Las pausas subproceso actual del script.
 	PixelGetColor	Recupera el color del píxel en la x especificado, las coordenadas y.
 	PixelSearch	Busca en una región de la pantalla para un pixel del color especificado.
@@ -1265,6 +1278,7 @@
 	Try	Guardias de una o más instrucciones (comandos o expresiones) contra los errores de ejecución y excepciones lanzadas por el comando de tiro.
 	Until	Aplica una condición para la continuación de un ciclo o bucle for.
 	UrlDownloadToFile	Descarga un archivo desde Internet.
+	UserFunction	Crea una estructura de funciones.
 	VarSetCapacity	Amplía la capacidad de retención de una variable o libera su memoria. Normalmente, esto es necesario sólo para circunstancias inusuales tales como DllCall.
 	WinActivate	Activa la ventana especificada (lo hace ante todo).
 	WinActivateBottom	Igual que WinActivate excepto que activa el situado más abajo (menos activo recientemente) Ventana a juego en lugar de la más alta.

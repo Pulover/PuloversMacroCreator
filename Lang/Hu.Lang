@@ -1,8 +1,8 @@
-﻿LoadLang_Hu:
+﻿Lang_hu
 		
 		; Hungarian
 		
-; Main Menu		
+; 01. Main Menu		
 	m_Lang001 =	&Fájl
 	m_Lang002 =	&Macro
 	m_Lang003 =	F&unkció
@@ -14,7 +14,7 @@
 	m_Lang009 =	&Adományoz
 	m_Lang010 =	S&egítség
 		
-; File Sub Menu		
+; 02. File Sub Menu		
 	f_Lang001 =	&Új
 	f_Lang002 =	&Nyitva
 	f_Lang003 =	&Kivéve
@@ -28,7 +28,7 @@
 	f_Lang011 =	K&ijárat
 	f_Lang012 =	Nin&cs kép
 		
-; Macro Sub Menu		
+; 03. Macro Sub Menu		
 	r_Lang001 =	&Makró rögzítése
 	r_Lang002 =	&Aktiválása Makrók
 	r_Lang003 =	&Játssz Current Macro
@@ -45,13 +45,13 @@
 	r_Lang014 =	Im&port Macro
 	r_Lang015 =	Me&ntse el az aktuális makró
 		
-; Function Sub Menu		
+; 04. Function Sub Menu		
 	u_Lang001 =	&Hozzon létre Funkció
 	u_Lang002 =	&Add Paraméter
 	u_Lang003 =	A&dd vissza
 	u_Lang004 =	&Convert Makró működéséhez
 		
-; Commands Sub Menu		
+; 05. Commands Sub Menu		
 	i_Lang001 =	&Egér
 	i_Lang002 =	&Szöveg
 	i_Lang003 =	&Irányítsd
@@ -74,7 +74,7 @@
 	i_Lang020 =	Keresse meg a &parancsot
 		
 		
-; Edit Sub Menu		
+; 06. Edit Sub Menu		
 	e_Lang001 =	&Másolat
 	e_Lang002 =	M&egjegyzés szerkesztése
 	e_Lang003 =	&Keresés / Csere
@@ -90,15 +90,16 @@
 	e_Lang013 =	&Beszúrás box
 	e_Lang014 =	Be &Gombnyomás
 	e_Lang015 =	S&zerkesztés színvédjegy
-	e_Lang016 =	csoportok
-	e_Lang017 =	Engedélyezze csoportok
-	e_Lang018 =	Add csoport
-	e_Lang019 =	Csoport eltávolítása
-	e_Lang020 =	Vegye ki az összes csoport
-	e_Lang021 =	Csoportok szerkesztése
+	e_Lang016 =	&Csoportok
+	e_Lang017 =	&Engedélyezze csoportok
+	e_Lang018 =	&Add csoport
+	e_Lang019 =	&Csoport eltávolítása
+	e_Lang020 =	&Vegye ki az összes csoport
+	e_Lang021 =	&Mindet összecsuk
+	e_Lang022 =	A&z összes kibontása
 		
 		
-; Select Sub Menu		
+; 07. Select Sub Menu		
 	s_Lang001 =	&Az összes kijelölése
 	s_Lang002 =	&Válassza a None
 	s_Lang003 =	&Invert Selection
@@ -110,7 +111,7 @@
 	s_Lang009 =	&Kiválasztott típus
 	s_Lang010 =	Command típus
 		
-; View Sub Menu		
+; 08. View Sub Menu		
 	v_Lang001 =	&Mindig a tetején
 	v_Lang002 =	&Kiemelés Sorok
 	v_Lang003 =	&Behúzás
@@ -121,26 +122,22 @@
 	v_Lang008 =	&Visszaállítás oszlopok méret
 	v_Lang009 =	&Ikonok MéRete
 	v_Lang010 =	&Törlés Layout
-		
 	v_Lang011 =	&Reszelő
 	v_Lang012 =	R&ögzítése és lejátszása
 	v_Lang013 =	&Parancsok
 	v_Lang014 =	&Szerkeszt
 	v_Lang015 =	&Lehetőségek
 	v_Lang016 =	&Testreszabása
-		
 	v_Lang017 =	&Automatikus
 	v_Lang018 =	&Kézi
 	v_Lang019 =	&Megáll
 	v_Lang020 =	&Szünet
-		
 	v_Lang021 =	&Kompakt
 	v_Lang022 =	&Alapértelmezett
-		
 	v_Lang023 =	&Kicsi
 	v_Lang024 =	&Nagy
 		
-; Options Sub Menu		
+; 09. Options Sub Menu		
 	o_Lang001 =	&Beállítások
 	o_Lang002 =	&Nyelv
 	o_Lang003 =	&Tálcára
@@ -157,10 +154,10 @@
 	o_Lang014 =	Ala&pértelmezett gyorsbillentyűk
 	o_Lang015 =	Alap&értelmezett beállítások
 		
-; Donate Sub Menu		
+; 10. Donate Sub Menu		
 	p_Lang001 =	&PayPal adomány
 		
-; Help Sub Menu		
+; 11. Help Sub Menu		
 	h_Lang001 =	&Segítség
 	h_Lang002 =	&Oktatóanyagok
 	h_Lang003 =	&Tippek
@@ -171,12 +168,12 @@
 	h_Lang008 =	E&llenőrizze indításkor
 	h_Lang009 =	&Ról
 		
-; Tray Menu		
+; 12. Tray Menu		
 	y_Lang001 =	Ablak elrejtése
 	y_Lang002 =	Ablak megjelenítése
 	y_Lang003 =	Ellenőrzés Eszköztár
 		
-; Built-in Vars Menu		
+; 13. Built-in Vars Menu		
 	b_Lang001 =	speciális karakterek
 	b_Lang002 =	Tulajdonságok
 	b_Lang003 =	Dátum és idő
@@ -185,7 +182,7 @@
 	b_Lang006 =	Misc.
 	b_Lang007 =	Hurok
 		
-; Main Window		
+; 14. Main Window		
 	w_Lang001 =	Export
 	w_Lang002 =	Előnézet
 	w_Lang003 =	Opciók
@@ -294,7 +291,7 @@
 	w_Lang106 =	Convert Makró Function (Ctrl + Shift + C)
 	w_Lang107 =	Hozzászólás ki ellenőrizetlenül sorok
 		
-; Command Windows		
+; 15. Command Windows		
 	c_Lang001 =	Egér
 	c_Lang002 =	Szöveg
 	c_Lang003 =	Szünet
@@ -520,7 +517,7 @@
 	c_Lang224 =	Lokális változók
 	c_Lang225 =	Statikus változók
 		
-; Other Windows		
+; 16. Other Windows		
 	t_Lang001 =	Exportálás AutoHotkey
 	t_Lang002 =	Makrók
 	t_Lang003 =	Loops
@@ -698,8 +695,23 @@
 	t_Lang175 =	Misc.
 	t_Lang176 =	Add csoport
 	t_Lang177 =	új csoport
+	t_Lang178 =	Nyelvszerkesztõ
+	t_Lang179 =	Újat készíteni
+	t_Lang180 =	Az Enter, PgDn és PgUp navigálni.
+	t_Lang181 =	Submit
+	t_Lang182 =	Ból ből
+	t_Lang183 =	Név
+	t_Lang184 =	Email
+	t_Lang185 =	Tantárgy
+	t_Lang186 =	Üzenet
+	t_Lang187 =	Változtatások mentése?
+	t_Lang188 =	Nyelvi fájl
+	t_Lang189 =	Referencia Fájl
+	t_Lang190 =	Küldje el felülvizsgálatát vagy új fordítás
+	t_Lang191 =	Mindet összecsuk
+	t_Lang192 =	Az összes kibontása
 		
-; Messages & Dialogs		
+; 17. Messages & Dialogs		
 	d_Lang001 =	Nyitva
 	d_Lang002 =	Mentsd aktuális projektet?
 	d_Lang003 =	Alapértelmezett beállítások
@@ -835,7 +847,7 @@
 	d_Lang101 =	Duplikált funkció.
 	d_Lang102 =	foglalt szó.
 		
-; Start-up Tips		
+; 18. Start-up Tips		
 	Start_Tips =	Hozhat létre makrók a Command gombok a fő ablakban, vagy a felvevő másolni a tevékenységét. Válassza az Opciók > Beállítások > Felvétel kiválasztható, hogy milyen bemeneteket kerülnek rögzítésre.
 		Ahhoz, hogy a felvevő gyors feladatok válasszuk az Opciók > Beállítások > Felvétel és ellenőrizze a "Lista törlése" opciót. Majd kattintson a Felvétel gombra a fő ablakot, majd F10 gombbal törölheti az aktuális makro-és újat azonos gyorsbillentyűket. Ön is ellenőrizheti a "Mindig aktív" opciót a fő ablakban, hogy felvétel és lejátszás gyorsbillentyűk aktív.
 		A súgó egy adott parancs a jobb gombbal bárhol egy parancssori ablakot mutatni linkek AutoHotkey súgójában.
@@ -864,7 +876,7 @@
 		Beállíthatjuk, hogy a saját globális változók kell betölteni az induló, és az exportot. Válassza az Opciók > Beállítások > Felhasználó globális változók, hogy adjunk nekik.
 		Futtathat speciális funkciókat, mint a substr és RegExReplace a funkciók ablakban (Beszúrás > IF / változók / függvények). Vagy futtatni a saját funkciók külső AutoHotkey szkripteket.
 		
-; Tooltips		
+; 19. Tooltips		
 	AutoKey_TT =	Gyorsgomb játszani Macro
 	ManKey_TT =	Gyorsgomb játszani Macro "lépésről-lépésre"
 	AbortKey_TT =	Gyorsgomb a lejátszás megállításához
@@ -944,7 +956,7 @@
 		- Ahhoz, hogy használni húrok, csatolja őket idézetek, pl: var = "a".
 		- Több utasítást támogat, például: var = "a" || InStr (var, "b").
 		
-; Tooltips from AHK Docs		
+; 20. Tooltips from AHK Docs		
 	ExpList_TT =	Kattintson duplán a szerkeszteni
 	Ex_IfDir_TT =	Létrehoz környezetfüggő gyorsbillentyűk és hotstrings függően
 		típusától ablak, amely aktív vagy létezik.
@@ -995,7 +1007,7 @@
 	Ex_UV_TT =	Export globális változók.
 	Ex_EdVars_TT =	Válassza globális változók exportálni.
 		
-; Operators		
+; 21. Operators		
 	As_Oper_1 =	Hozzárendelése
 	As_Oper_2 =	Hozzáad
 	As_Oper_3 =	Levon
@@ -1011,7 +1023,7 @@
 	Co_Oper_6 =	Nagyobb vagy egyenlő
 	Co_Oper_7 =	Kisebb vagy egyenlő
 		
-; IE Commands Tips		
+; 22. IE Commands Tips		
 	Tip_Navigate =	Navigál egy URL-t vagy elérési utat.
 	Tip_Value =	Gets vagy beállítja az értékét a tárgy.
 	Tip_Focus =	Beállítja fókuszt az objektumot.
@@ -1038,7 +1050,7 @@
 	Tip_Height =	Beállítja vagy visszaadja a magasságát az objektum.
 	Tip_Length =	Beállítja vagy beolvassa az objektumok száma a gyűjtemény.
 		
-; AHK Commands Tips		
+; 23. AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	Abs	Abszolút értékét a számot.
 	ASin	Arkusz szinuszát (a szám, amelynek szinusz is Number) radiánban.
@@ -1190,6 +1202,7 @@
 	OnMessage	Megadja a funkció hívás automatikusan a szkript megkapja az adott üzenetet.
 	Ord	Visszaadja a sorrendi értéket (számjegyet kód) az első karakter karakterlánc.
 	OutputDebug	Küld egy stringet a debugger (ha van ilyen) a kijelzőn.
+	Parameter	Hozzáad egy paramétert a funkciót.
 	Pause	Felfüggeszti a szkript aktuális téma.
 	PixelGetColor	Letölti a színe a pixel a megadott x, y koordinátákat.
 	PixelSearch	Keres a régióban a képernyőn egy pixel a megadott szín.
@@ -1265,6 +1278,7 @@
 	Try	Guards egy vagy több utasítások (parancsok vagy kifejezések) ellen futásidejű hibák és kivételek dobott a dobás parancsot.
 	Until	Alkalmaz feltétele a folytatása a hurok vagy-loop.
 	UrlDownloadToFile	Letölt egy fájlt az interneten.
+	UserFunction	Létrehoz egy függvény szerkezete.
 	VarSetCapacity	Nagyítja változó tárolókapacitás vagy felszabadítja a memóriát. Általában ez csak akkor szükséges, a szokatlan körülmények között, mint DllCall.
 	WinActivate	Aktiválja a megadott ablak (teszi elsősorban).
 	WinActivateBottom	Ugyanaz, mint a WinActivate, kivéve, hogy aktiválja a legalsó (legrégebben aktív) egyező ablak helyett a legmagasabb.

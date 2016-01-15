@@ -1,8 +1,8 @@
-﻿LoadLang_Sv:
+﻿Lang_sv
 		
 		; Swedish [Revised by Snow Flake]
 		
-; Main Menu		
+; 01. Main Menu		
 	m_Lang001 =	&Arkiv
 	m_Lang002 =	&Makro
 	m_Lang003 =	&Fungera
@@ -14,7 +14,7 @@
 	m_Lang009 =	&Donera
 	m_Lang010 =	&Hjälp
 		
-; File Sub Menu		
+; 02. File Sub Menu		
 	f_Lang001 =	&Nytt
 	f_Lang002 =	&Öppna
 	f_Lang003 =	&Spara
@@ -28,7 +28,7 @@
 	f_Lang011 =	&Avsluta
 	f_Lang012 =	&Inga filer
 		
-; Macro Sub Menu		
+; 03. Macro Sub Menu		
 	r_Lang001 =	&Spela in makro
 	r_Lang002 =	&Aktivera makron
 	r_Lang003 =	S&pela Aktuell Makro
@@ -45,13 +45,13 @@
 	r_Lang014 =	Imp&ortera Makro
 	r_Lang015 =	Spara a&ktuell Makro
 		
-; Function Sub Menu		
+; 04. Function Sub Menu		
 	u_Lang001 =	&Skapa Funktion
 	u_Lang002 =	&Lägg Parameter
 	u_Lang003 =	L&ägg Avkastning
 	u_Lang004 =	&Konvertera Macro att fungera
 		
-; Commands Sub Menu		
+; 05. Commands Sub Menu		
 	i_Lang001 =	&Mus
 	i_Lang002 =	&Text
 	i_Lang003 =	&Kontroll
@@ -74,7 +74,7 @@
 	i_Lang020 =	&Hitta ett kommando
 		
 		
-; Edit Sub Menu		
+; 06. Edit Sub Menu		
 	e_Lang001 =	&Duplicera
 	e_Lang002 =	&Redigera kommentar
 	e_Lang003 =	&Sök / Ersätt
@@ -90,15 +90,16 @@
 	e_Lang013 =	I&nfoga från rutan
 	e_Lang014 =	Infog&a Tangenttryckning
 	e_Lang015 =	R&edigera färgmarkering
-	e_Lang016 =	grupper
-	e_Lang017 =	Aktivera grupper
-	e_Lang018 =	Lägg till grupp
-	e_Lang019 =	Ta bort grupp
-	e_Lang020 =	Ta bort alla grupper
-	e_Lang021 =	Redigera grupper
+	e_Lang016 =	Gr&upper
+	e_Lang017 =	&Aktivera grupper
+	e_Lang018 =	&Lägg till grupp
+	e_Lang019 =	&Ta bort grupp
+	e_Lang020 =	Ta &bort alla grupper
+	e_Lang021 =	&Kollapsa alla
+	e_Lang022 =	&Expandera alla
 		
 		
-; Select Sub Menu		
+; 07. Select Sub Menu		
 	s_Lang001 =	&Markera allt
 	s_Lang002 =	&Väljer Ingen
 	s_Lang003 =	&Invertera markering
@@ -110,7 +111,7 @@
 	s_Lang009 =	Val&d typ
 	s_Lang010 =	Kommando typ
 		
-; View Sub Menu		
+; 08. View Sub Menu		
 	v_Lang001 =	&Alltid överst
 	v_Lang002 =	&Markera Rader
 	v_Lang003 =	&Indrag
@@ -121,26 +122,22 @@
 	v_Lang008 =	&Återställ kolumner Storlek
 	v_Lang009 =	Ik&oner Storlek
 	v_Lang010 =	Å&terställ Layout
-		
 	v_Lang011 =	&Fil
 	v_Lang012 =	&Spela in och spela
 	v_Lang013 =	&Kommandon
 	v_Lang014 =	&Redigera
 	v_Lang015 =	&Alternativ
 	v_Lang016 =	A&npassa
-		
 	v_Lang017 =	&Automatisk
 	v_Lang018 =	&Manuell
 	v_Lang019 =	&Stopp
 	v_Lang020 =	&Paus
-		
 	v_Lang021 =	&Kompakt
 	v_Lang022 =	&Default
-		
 	v_Lang023 =	&Små
 	v_Lang024 =	S&tor
 		
-; Options Sub Menu		
+; 09. Options Sub Menu		
 	o_Lang001 =	&Inställningar
 	o_Lang002 =	&Språk
 	o_Lang003 =	&Minimera till aktivitetsfältet
@@ -157,10 +154,10 @@
 	o_Lang014 =	Standa&rd Snabbtangenter
 	o_Lang015 =	Standardinst&ällningar
 		
-; Donate Sub Menu		
+; 10. Donate Sub Menu		
 	p_Lang001 =	&PayPal donation
 		
-; Help Sub Menu		
+; 11. Help Sub Menu		
 	h_Lang001 =	&Hjälp
 	h_Lang002 =	&Tutorials
 	h_Lang003 =	T&ips
@@ -171,12 +168,12 @@
 	h_Lang008 =	&Kontrollera vid uppstart
 	h_Lang009 =	&Om
 		
-; Tray Menu		
+; 12. Tray Menu		
 	y_Lang001 =	Dölj fönster
 	y_Lang002 =	Visa fönster
 	y_Lang003 =	Kontroller Verktygsfältet
 		
-; Built-in Vars Menu		
+; 13. Built-in Vars Menu		
 	b_Lang001 =	SPECIALTECKEN
 	b_Lang002 =	Egenskaper
 	b_Lang003 =	Datum och tid
@@ -185,7 +182,7 @@
 	b_Lang006 =	Misc.
 	b_Lang007 =	Loop
 		
-; Main Window		
+; 14. Main Window		
 	w_Lang001 =	Exportera
 	w_Lang002 =	Förhandsgranska
 	w_Lang003 =	Alternativ
@@ -294,7 +291,7 @@
 	w_Lang106 =	Konvertera Macro att fungera (Ctrl + Skift + C)
 	w_Lang107 =	Kommentera ut okontrollerade rader
 		
-; Command Windows		
+; 15. Command Windows		
 	c_Lang001 =	Mus
 	c_Lang002 =	Text
 	c_Lang003 =	Paus
@@ -520,7 +517,7 @@
 	c_Lang224 =	Lokala variabler
 	c_Lang225 =	Statiska variabler
 		
-; Other Windows		
+; 16. Other Windows		
 	t_Lang001 =	Exportera till AutoHotkey
 	t_Lang002 =	Makron
 	t_Lang003 =	Loopar
@@ -698,8 +695,23 @@
 	t_Lang175 =	Misc.
 	t_Lang176 =	Lägg till grupp
 	t_Lang177 =	Ny grupp
+	t_Lang178 =	Språkredigerare
+	t_Lang179 =	Skapa ny
+	t_Lang180 =	Använd Enter, PgDn och PgUp att navigera.
+	t_Lang181 =	Överlämna
+	t_Lang182 =	Från
+	t_Lang183 =	Namn
+	t_Lang184 =	E-post
+	t_Lang185 =	Ämne
+	t_Lang186 =	Meddelande
+	t_Lang187 =	Spara ändringar?
+	t_Lang188 =	Språkfil
+	t_Lang189 =	Referens Arkiv
+	t_Lang190 =	Skicka in revision eller nyöversättning
+	t_Lang191 =	Kollapsa alla
+	t_Lang192 =	Expandera alla
 		
-; Messages & Dialogs		
+; 17. Messages & Dialogs		
 	d_Lang001 =	Öppet
 	d_Lang002 =	Spara aktuella projekt?
 	d_Lang003 =	Standardinställningar
@@ -835,7 +847,7 @@
 	d_Lang101 =	Dupliceringsfunktionen.
 	d_Lang102 =	är ett reserverat ord.
 		
-; Start-up Tips		
+; 18. Start-up Tips		
 	Start_Tips =	Du kan skapa makron med hjälp av kommandoknapparna i huvudfönstret eller använda inspelaren för att kopiera dina handlingar. Gå till Alternativ> Inställningar> Inspelning för att välja vilka ingångar kommer att registreras.
 		Om du vill använda brännaren för snabbuppgifter gå till Alternativ> Inställningar> Inspelning och kontrollera "Rensa lista" alternativet. Sedan klickar du på knappen Spela in i huvudfönstret och använd F10 för att rensa den aktuella Makro och starta en ny med samma kortkommando. Du kan också kolla "alltid aktiv" i huvudfönstret för att hålla Inspelning och uppspelning snabbtangenter aktiv.
 		För att få hjälp för ett visst kommando högerklicka någonstans på ett kommando fönster för att visa länkar till AutoHotkey onlinehjälpen.
@@ -864,7 +876,7 @@
 		Du kan ställa dina egna globala variabler som skall laddas vid start och som ska exporteras. Gå till Alternativ> Inställningar> Användarinställningar globala variabler för att lägga till dem.
 		Du kan köra avancerade funktioner såsom SUBSTR och RegExReplace från funktionsfönstret (Sätt> Om Uttalanden / variabler / funktioner). Eller köra egna funktioner från externa AutoHotkey skript.
 		
-; Tooltips		
+; 19. Tooltips		
 	AutoKey_TT =	Snabbknappen till spela Makro
 	ManKey_TT =	Snabbknappen till spela Macro "steg-för-steg"
 	AbortKey_TT =	Hotkey för att stoppa uppspelningen
@@ -944,7 +956,7 @@
 		- Om du vill använda strängar, bifoga dem i citationstecken, till exempel: var = "a".
 		- Flera rapporter stöds, t.ex. var = "a" || InStr (var, "b").
 		
-; Tooltips from AHK Docs		
+; 20. Tooltips from AHK Docs		
 	ExpList_TT =	Dubbelklicka för att redigera
 	Ex_IfDir_TT =	Skapar sammanhangsberoende snabbtangenter och hotstrings beroende
 		på vilken typ av fönster som är aktiv eller existerar.
@@ -995,7 +1007,7 @@
 	Ex_UV_TT =	Exportera globala variabler.
 	Ex_EdVars_TT =	Välj globala variabler som skall exporteras.
 		
-; Operators		
+; 21. Operators		
 	As_Oper_1 =	Tilldela
 	As_Oper_2 =	Lägg
 	As_Oper_3 =	Subtrahera
@@ -1011,7 +1023,7 @@
 	Co_Oper_6 =	Större än eller lika
 	Co_Oper_7 =	Mindre eller lika
 		
-; IE Commands Tips		
+; 22. IE Commands Tips		
 	Tip_Navigate =	Navigerar till en webbadress eller sökväg.
 	Tip_Value =	Hämtar eller ställer in värdet för objektet.
 	Tip_Focus =	Ställer fokus på objektet.
@@ -1038,7 +1050,7 @@
 	Tip_Height =	Ställer eller hämtar objektets höjd.
 	Tip_Length =	Ställer eller hämtar antalet objekt i en samling.
 		
-; AHK Commands Tips		
+; 23. AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	Abs	Returnerar det absoluta värdet för Antal .
 	ASin	Returnerar arcus sinus ( antalet vars sinus är Number ) i radianer .
@@ -1190,6 +1202,7 @@
 	OnMessage	Anger en funktion som ska anropas automatiskt när skriptet emot den angivna meddelandet.
 	Ord	Returnerar ordnings värde (siffra kod) för det första tecknet i sträng.
 	OutputDebug	Sänder en sträng till detta program (om någon) för visning.
+	Parameter	Lisää parametrin funktio.
 	Pause	Pausar manuset aktuella tråden.
 	PixelGetColor	Hämtar färgen på bildpunkt vid de angivna x, y koordinater.
 	PixelSearch	Söker en region av skärmen för en pixel i den angivna färgen.
@@ -1265,6 +1278,7 @@
 	Try	Guards ett eller flera uttalanden (kommandon eller uttryck) mot runtime fel och undantag kastas av kast kommandot.
 	Until	Gäller ett tillstånd till en fortsättning av en slinga eller for-loop.
 	UrlDownloadToFile	Hämtar en fil från Internet.
+	UserFunction	Luo Tehtävä rakenne.
 	VarSetCapacity	Förstorar en variabel innehav kapacitet eller frigör minnet. Normalt är detta nödvändigt endast för ovanliga omständigheter såsom DllCall.
 	WinActivate	Aktiverar angivna fönstret (gör det främst).
 	WinActivateBottom	Samma som WinActivate förutom att den aktiverar den nedersta (åtminstone nyligen aktiv) matchande fönster snarare än det översta.

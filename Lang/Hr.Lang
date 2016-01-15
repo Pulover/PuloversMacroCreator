@@ -1,8 +1,8 @@
-﻿LoadLang_Hr:
+﻿Lang_hr
 		
 		; Croatian
 		
-; Main Menu		
+; 01. Main Menu		
 	m_Lang001 =	&File
 	m_Lang002 =	&Makro
 	m_Lang003 =	F&unkcija
@@ -14,7 +14,7 @@
 	m_Lang009 =	&Darovati
 	m_Lang010 =	Pomo&ći
 		
-; File Sub Menu		
+; 02. File Sub Menu		
 	f_Lang001 =	&Novi
 	f_Lang002 =	&Otvoreno
 	f_Lang003 =	&Spasiti
@@ -28,7 +28,7 @@
 	f_Lang011 =	I&zlaz
 	f_Lang012 =	U &datotekama
 		
-; Macro Sub Menu		
+; 03. Macro Sub Menu		
 	r_Lang001 =	&Snimanje makro
 	r_Lang002 =	&Aktivirajte Makronaredbe
 	r_Lang003 =	&Igrajte Trenutna Macro
@@ -45,13 +45,13 @@
 	r_Lang014 =	Uvo&z Makro
 	r_Lang015 =	S&premi Trenutni Macro
 		
-; Function Sub Menu		
+; 04. Function Sub Menu		
 	u_Lang001 =	&Napravite Function
 	u_Lang002 =	&Dodaj parametar
 	u_Lang003 =	D&odaj Povratak
 	u_Lang004 =	&Pretvori Makro funkcionirati
 		
-; Commands Sub Menu		
+; 05. Commands Sub Menu		
 	i_Lang001 =	&Miš
 	i_Lang002 =	&Tekst
 	i_Lang003 =	&Kontrolirajte
@@ -74,7 +74,7 @@
 	i_Lang020 =	Prona&đite naredbu
 		
 		
-; Edit Sub Menu		
+; 06. Edit Sub Menu		
 	e_Lang001 =	&Duplikat
 	e_Lang002 =	&Uredi komentar
 	e_Lang003 =	&Pronađi / Zamijeni
@@ -90,15 +90,16 @@
 	e_Lang013 =	&Stavite na kutiji
 	e_Lang014 =	Ume&tnite Pritisak Na Tipku
 	e_Lang015 =	Uredi Bo&ja oznaka
-	e_Lang016 =	Grupe
-	e_Lang017 =	Omogućite grupe
-	e_Lang018 =	Dodaj skupinu
-	e_Lang019 =	Izvadite skupinu
-	e_Lang020 =	Ukloni sve skupine
-	e_Lang021 =	Uredi grupe
+	e_Lang016 =	&Grupe
+	e_Lang017 =	&Omogućite grupe
+	e_Lang018 =	&Dodaj skupinu
+	e_Lang019 =	&Izvadite skupinu
+	e_Lang020 =	&Ukloni sve skupine
+	e_Lang021 =	&Sažmi sve
+	e_Lang022 =	&Proširi sve
 		
 		
-; Select Sub Menu		
+; 07. Select Sub Menu		
 	s_Lang001 =	&Odaberi sve
 	s_Lang002 =	O&daberite None
 	s_Lang003 =	&Sve osim odabranog
@@ -110,7 +111,7 @@
 	s_Lang009 =	I&zabrani Tip
 	s_Lang010 =	Naredba putovanja
 		
-; View Sub Menu		
+; 08. View Sub Menu		
 	v_Lang001 =	&Uvijek na vrhu
 	v_Lang002 =	&Istaknuto Redovi
 	v_Lang003 =	U&vlačenje
@@ -121,26 +122,22 @@
 	v_Lang008 =	V&eličina Reset Kolumne
 	v_Lang009 =	Ik&one VeličIna
 	v_Lang010 =	&Reset Raspored
-		
 	v_Lang011 =	&File
 	v_Lang012 =	&Snimanje i reprodukciju
 	v_Lang013 =	&Naredbe
 	v_Lang014 =	&Uredi
 	v_Lang015 =	&Mogućnosti
 	v_Lang016 =	&Prilagodite
-		
 	v_Lang017 =	&Automatski
 	v_Lang018 =	&Priručnik
 	v_Lang019 =	&Stop
 	v_Lang020 =	Pa&uza
-		
 	v_Lang021 =	&Kompaktan
 	v_Lang022 =	&Default
-		
 	v_Lang023 =	&Mali
 	v_Lang024 =	&Veliki
 		
-; Options Sub Menu		
+; 09. Options Sub Menu		
 	o_Lang001 =	&Postavke
 	o_Lang002 =	&Jezik
 	o_Lang003 =	&Smanji u ladicu
@@ -157,10 +154,10 @@
 	o_Lang014 =	&Zadane Hotkeys
 	o_Lang015 =	T&vorničke postavke
 		
-; Donate Sub Menu		
+; 10. Donate Sub Menu		
 	p_Lang001 =	&PayPal donacija
 		
-; Help Sub Menu		
+; 11. Help Sub Menu		
 	h_Lang001 =	&Pomoći
 	h_Lang002 =	&Tutoriali
 	h_Lang003 =	&Savjet
@@ -171,12 +168,12 @@
 	h_Lang008 =	Pr&ovjerite na startup
 	h_Lang009 =	O&ko
 		
-; Tray Menu		
+; 12. Tray Menu		
 	y_Lang001 =	Sakrij Prozor
 	y_Lang002 =	Pokaži prozor
 	y_Lang003 =	Kontrole Traci
 		
-; Built-in Vars Menu		
+; 13. Built-in Vars Menu		
 	b_Lang001 =	Posebni Likovi
 	b_Lang002 =	Svojstva
 	b_Lang003 =	Datum i vrijeme
@@ -185,7 +182,7 @@
 	b_Lang006 =	Razno.
 	b_Lang007 =	Petlja
 		
-; Main Window		
+; 14. Main Window		
 	w_Lang001 =	Izvoz
 	w_Lang002 =	Pregled
 	w_Lang003 =	Mogućnosti
@@ -294,7 +291,7 @@
 	w_Lang106 =	Pretvori Makro funkcionirati (Ctrl + Shift + C)
 	w_Lang107 =	Komentar iz označenim redaka
 		
-; Command Windows		
+; 15. Command Windows		
 	c_Lang001 =	Miš
 	c_Lang002 =	Tekst
 	c_Lang003 =	Pauza
@@ -520,7 +517,7 @@
 	c_Lang224 =	Lokalni varijable
 	c_Lang225 =	Statičke varijable
 		
-; Other Windows		
+; 16. Other Windows		
 	t_Lang001 =	Izvoz u AutoHotkey
 	t_Lang002 =	Makro
 	t_Lang003 =	Loops
@@ -698,8 +695,23 @@
 	t_Lang175 =	Razno.
 	t_Lang176 =	Dodaj skupinu
 	t_Lang177 =	Nova grupa
+	t_Lang178 =	Jezik Editor
+	t_Lang179 =	Napravite novo
+	t_Lang180 =	Koristite Enter, PgDn i PgUp za navigaciju.
+	t_Lang181 =	Pošalji
+	t_Lang182 =	Iz
+	t_Lang183 =	Ime
+	t_Lang184 =	E-mail
+	t_Lang185 =	Predmet
+	t_Lang186 =	Poruka
+	t_Lang187 =	Spremi promjene?
+	t_Lang188 =	Jezik datoteke
+	t_Lang189 =	Referentni datoteke
+	t_Lang190 =	Pošaljite reviziju ili novi prijevod
+	t_Lang191 =	Sažmi sve
+	t_Lang192 =	Proširi sve
 		
-; Messages & Dialogs		
+; 17. Messages & Dialogs		
 	d_Lang001 =	Otvoreno
 	d_Lang002 =	Spremi trenutni projekt?
 	d_Lang003 =	Tvorničke postavke
@@ -835,7 +847,7 @@
 	d_Lang101 =	Dvostruki Funkcija.
 	d_Lang102 =	je rezervirana riječ.
 		
-; Start-up Tips		
+; 18. Start-up Tips		
 	Start_Tips =	Možete stvoriti makronaredbe pomoću naredbenog gumba u glavnom prozoru ili pomoću snimača kopirati svoje radnje. Idi na Opcije > Postavke > Snimanje odabrati ono što ulazi će biti zabilježen.
 		Za korištenje rekorder brze zadatke ići na Opcije > Postavke > Snimanje i provjeriti "Clear List" opciju. Zatim pritisnite gumb rekord u glavnom prozoru i F10 izbiti trenutni makro i započeti novu s istim hotkey. Također možete provjeriti "Uvijek aktivan" opciju u glavnom prozoru da bi se snimanje i reprodukcija hotkeys aktivna.
 		Da biste dobili pomoć za određene naredbe desnom tipkom miša bilo gdje na naredbeni prozor pokazati linkove na AutoHotKey online pomoći.
@@ -864,7 +876,7 @@
 		Podeu definir les seves pròpies variables globals per ser carregat en l'arrencada i per a l'exportació. Aneu a Opcions > Configuració > Usuari Variables globals per afegir.
 		Podeu executar funcions avançades com ara substr i RegExReplace de la finestra Funcions (Inserir > Si Declaracions / variables / funcions). O executar les seves pròpies funcions de seqüència AutoHotkey externs.
 		
-; Tooltips		
+; 19. Tooltips		
 	AutoKey_TT =	Hotkey igrati Macro
 	ManKey_TT =	Hotkey igrati Makro "korak po korak"
 	AbortKey_TT =	Prečac za zaustavljanje
@@ -944,7 +956,7 @@
 		- Za korištenje žice, priložiti ih u navodnike, npr: var = "A".
 		- Više Izjave su podržani, npr: var = "a" || Instr (var, "b").
 		
-; Tooltips from AHK Docs		
+; 20. Tooltips from AHK Docs		
 	ExpList_TT =	Dvaput kliknite za uređivanje
 	Ex_IfDir_TT =	Stvara kontekst osjetljive hotkeys i ovisno hotstrings
 		o vrsti prozora koji je aktivan ili ne postoji.
@@ -995,7 +1007,7 @@
 	Ex_UV_TT =	Izvoz globalne varijable.
 	Ex_EdVars_TT =	Odaberite globalne varijable se izvozi.
 		
-; Operators		
+; 21. Operators		
 	As_Oper_1 =	Dodijeliti
 	As_Oper_2 =	Dodati
 	As_Oper_3 =	Oduzeti
@@ -1011,7 +1023,7 @@
 	Co_Oper_6 =	Veće ili jednako
 	Co_Oper_7 =	Manje ili jednako
 		
-; IE Commands Tips		
+; 22. IE Commands Tips		
 	Tip_Navigate =	Kreće na URL ili put.
 	Tip_Value =	Dobiva ili postavlja vrijednost objekta.
 	Tip_Focus =	Postavlja fokus na objekt.
@@ -1038,7 +1050,7 @@
 	Tip_Height =	Postavlja ili vraća visinu objekta.
 	Tip_Length =	Postavlja ili vraća broj predmeta u zbirci.
 		
-; AHK Commands Tips		
+; 23. AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	Abs	Vraća apsolutnu vrijednost broja .
 	ASin	Vraća arkus sinus (čiji broj je broj sine ) u radijanima .
@@ -1190,6 +1202,7 @@
 	OnMessage	Određuje funkciju na poziv automatski kada skriptu prima određenu poruku.
 	Ord	Vraća redni vrijednost (numerički znak kod) prvog karaktera u String.
 	OutputDebug	Šalje niz na ispravljanje pogrešaka (ako ih ima) za prikaz.
+	Parameter	Afegeix un paràmetre a la funció.
 	Pause	Pauziranje skriptu trenutnu nit.
 	PixelGetColor	Dohvaća boju piksela na određeno x, y koordinata.
 	PixelSearch	Pretražuje se područje na zaslonu za piksel u određenom bojom.
@@ -1265,6 +1278,7 @@
 	Try	Štitnici jedan ili više izvještaji (naredbe ili izrazi) protiv runtime pogreške i iznimke bačen od bacanja naredbe.
 	Until	Odnosi uvjet za nastavak petlje ili for-petlje.
 	UrlDownloadToFile	Preuzimanja datoteku s Interneta.
+	UserFunction	Stvara funkciju strukturu.
 	VarSetCapacity	Povećava varijabla je sposobnost zadržavanja ili oslobađa svoju memoriju. Inače, ovo je neophodno samo za neobičnim okolnostima kao što su DllCall.
 	WinActivate	Aktivira navedene prozor (čini najvažnije).
 	WinActivateBottom	Isto kao WinActivate osim da aktivira najniži (najmanje zadnje aktivne) isti prozor umjesto najviši.

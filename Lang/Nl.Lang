@@ -1,8 +1,8 @@
-﻿LoadLang_Nl:
+﻿Lang_nl
 		
 		; Dutch
 		
-; Main Menu		
+; 01. Main Menu		
 	m_Lang001 =	&Bestand
 	m_Lang002 =	&Macro
 	m_Lang003 =	&Functie
@@ -14,7 +14,7 @@
 	m_Lang009 =	&Schenken
 	m_Lang010 =	&Help
 		
-; File Sub Menu		
+; 02. File Sub Menu		
 	f_Lang001 =	&Nieuw
 	f_Lang002 =	&Open
 	f_Lang003 =	&Besparen
@@ -28,7 +28,7 @@
 	f_Lang011 =	&Uitgang
 	f_Lang012 =	&Geen files
 		
-; Macro Sub Menu		
+; 03. Macro Sub Menu		
 	r_Lang001 =	&Macro opnemen
 	r_Lang002 =	&Activeer Macro's
 	r_Lang003 =	&Speel huidige macro
@@ -45,13 +45,13 @@
 	r_Lang014 =	&Import Macro
 	r_Lang015 =	Save &huidige Macro
 		
-; Function Sub Menu		
+; 04. Function Sub Menu		
 	u_Lang001 =	&Maak Functie
 	u_Lang002 =	&Voeg Parameter
 	u_Lang003 =	&Toevoegen Terug
 	u_Lang004 =	&Omzetten Macro om te functioneren
 		
-; Commands Sub Menu		
+; 05. Commands Sub Menu		
 	i_Lang001 =	&Muis
 	i_Lang002 =	&Tekst
 	i_Lang003 =	&Controle
@@ -74,7 +74,7 @@
 	i_Lang020 =	&Zoek een commando
 		
 		
-; Edit Sub Menu		
+; 06. Edit Sub Menu		
 	e_Lang001 =	&Duplicaat
 	e_Lang002 =	&Opmerking bewerken
 	e_Lang003 =	&Zoeken / vervangen
@@ -90,15 +90,16 @@
 	e_Lang013 =	Invo&egen van Box
 	e_Lang014 =	S&teek Toetsaanslag
 	e_Lang015 =	&Bewerken kleurmarkering
-	e_Lang016 =	groepen
-	e_Lang017 =	Groepen inschakelen
-	e_Lang018 =	Groep toevoegen
-	e_Lang019 =	Verwijder groep
-	e_Lang020 =	Verwijder alle groepen
-	e_Lang021 =	Groepen bewerken
+	e_Lang016 =	&Groepen
+	e_Lang017 =	&Groepen inschakelen
+	e_Lang018 =	G&roep toevoegen
+	e_Lang019 =	&Verwijder groep
+	e_Lang020 =	V&erwijder alle groepen
+	e_Lang021 =	&Alles inklappen
+	e_Lang022 =	A&lles uitklappen
 		
 		
-; Select Sub Menu		
+; 07. Select Sub Menu		
 	s_Lang001 =	&Alles selecteren
 	s_Lang002 =	&Selecteer Geen
 	s_Lang003 =	S&electie omkeren
@@ -110,7 +111,7 @@
 	s_Lang009 =	&Geselecteerde Type
 	s_Lang010 =	Opdracht type
 		
-; View Sub Menu		
+; 08. View Sub Menu		
 	v_Lang001 =	&Altijd op voorgrond
 	v_Lang002 =	&Hoogtepunt Rijen
 	v_Lang003 =	&Inspringing
@@ -121,26 +122,22 @@
 	v_Lang008 =	&Reset Kolommen Grootte
 	v_Lang009 =	Ico&nen Grootte
 	v_Lang010 =	R&eset Layout
-		
 	v_Lang011 =	&Bestand
 	v_Lang012 =	&Opnemen en afspelen
 	v_Lang013 =	&Commando's
 	v_Lang014 =	&Uitgeven
 	v_Lang015 =	O&pties
 	v_Lang016 =	&Aanpassen
-		
 	v_Lang017 =	&Automatisch
 	v_Lang018 =	&Handboek
 	v_Lang019 =	&Stoppen
 	v_Lang020 =	&Pauze
-		
 	v_Lang021 =	&Compact
 	v_Lang022 =	&Verzuim
-		
 	v_Lang023 =	&Klein
 	v_Lang024 =	&Groot
 		
-; Options Sub Menu		
+; 09. Options Sub Menu		
 	o_Lang001 =	&Instellingen
 	o_Lang002 =	&Taal
 	o_Lang003 =	&Minimaliseren naar tray
@@ -157,10 +154,10 @@
 	o_Lang014 =	Sta&ndaard Sneltoetsen
 	o_Lang015 =	Stan&daardinstellingen
 		
-; Donate Sub Menu		
+; 10. Donate Sub Menu		
 	p_Lang001 =	&PayPal Donatie
 		
-; Help Sub Menu		
+; 11. Help Sub Menu		
 	h_Lang001 =	&Help
 	h_Lang002 =	&Tutorials
 	h_Lang003 =	T&ips
@@ -171,12 +168,12 @@
 	h_Lang008 =	C&ontroleer bij opstarten
 	h_Lang009 =	O&ver
 		
-; Tray Menu		
+; 12. Tray Menu		
 	y_Lang001 =	Venster te verbergen
 	y_Lang002 =	Toon venster
 	y_Lang003 =	Controles Werkbalk
 		
-; Built-in Vars Menu		
+; 13. Built-in Vars Menu		
 	b_Lang001 =	speciale tekens
 	b_Lang002 =	eigenschappen
 	b_Lang003 =	Datum en tijd
@@ -185,7 +182,7 @@
 	b_Lang006 =	Misc.
 	b_Lang007 =	Lus
 		
-; Main Window		
+; 14. Main Window		
 	w_Lang001 =	Exporteren
 	w_Lang002 =	Voorbeeld
 	w_Lang003 =	Opties
@@ -294,7 +291,7 @@
 	w_Lang106 =	Omzetten Macro Aan (Ctrl + Shift + C) Functie
 	w_Lang107 =	Commentaar uit ongecontroleerd rijen
 		
-; Command Windows		
+; 15. Command Windows		
 	c_Lang001 =	Muis
 	c_Lang002 =	Tekst
 	c_Lang003 =	Pauzeren
@@ -520,7 +517,7 @@
 	c_Lang224 =	Lokale variabelen
 	c_Lang225 =	Statische variabelen
 		
-; Other Windows		
+; 16. Other Windows		
 	t_Lang001 =	Exporteren naar AutoHotkey
 	t_Lang002 =	Macro's
 	t_Lang003 =	Loops
@@ -698,8 +695,23 @@
 	t_Lang175 =	Misc.
 	t_Lang176 =	Groep toevoegen
 	t_Lang177 =	Nieuwe groep
+	t_Lang178 =	Taal Editor
+	t_Lang179 =	Maak nieuw
+	t_Lang180 =	Gebruik Enter, PgDn en PgUp om te navigeren.
+	t_Lang181 =	Voorleggen
+	t_Lang182 =	Van
+	t_Lang183 =	Naam
+	t_Lang184 =	E-mail
+	t_Lang185 =	Onderwerpen
+	t_Lang186 =	Bericht
+	t_Lang187 =	Wijzigingen opslaan?
+	t_Lang188 =	Taalbestand
+	t_Lang189 =	Referentie Bestand
+	t_Lang190 =	Submit herziening of nieuwe vertaling
+	t_Lang191 =	Alles inklappen
+	t_Lang192 =	Alles uitklappen
 		
-; Messages & Dialogs		
+; 17. Messages & Dialogs		
 	d_Lang001 =	Open
 	d_Lang002 =	Besparen huidige project?
 	d_Lang003 =	Standaardinstellingen
@@ -835,7 +847,7 @@
 	d_Lang101 =	Duplicate-functie.
 	d_Lang102 =	is een gereserveerd woord.
 		
-; Start-up Tips		
+; 18. Start-up Tips		
 	Start_Tips =	U kunt macro's met behulp van de Command Knoppen in het hoofdvenster of het gebruik van de recorder om uw acties te kopiëren creëren. Ga naar Opties > Instellingen > Opname te selecteren wat input wordt opgenomen.
 		Om de recorder te gebruiken voor snelle taken ga naar Opties > Instellingen > Opname en controleer de "Lijst wissen" optie. Klik vervolgens op de knop Opnemen in het hoofdvenster en gebruik F10 om de huidige macro wissen en een nieuwe te beginnen met dezelfde sneltoets. U kunt ook de "Always Active"-optie in het hoofdvenster naar Opnemen en afspelen sneltoetsen actief te houden.
 		Om hulp voor een specifieke opdracht krijgen klik met de rechtermuisknop ergens op een commando venster om links naar AutoHotkey online Help te tonen.
@@ -864,7 +876,7 @@
 		U kunt uw eigen globale variabelen ingesteld bij het opstarten en uit te voeren om te worden geladen. Ga naar Opties > Instellingen > Gebruiker globale variabelen om ze toe te voegen.
 		U kunt geavanceerde functies zoals substr en RegExReplace uit het raam Functions (Invoegen > Als Verklaringen / variabelen / functies) draaien. Of draai je eigen functies van externe AutoHotkey scripts.
 		
-; Tooltips		
+; 19. Tooltips		
 	AutoKey_TT =	Sneltoets om Macro te spelen
 	ManKey_TT =	Sneltoets naar macro "stap-voor-stap" play
 	AbortKey_TT =	Sneltoets om het afspelen te stoppen
@@ -944,7 +956,7 @@
 		- Om strings gebruiken, omsluiten ze tussen aanhalingstekens, bijvoorbeeld: var = "a".
 		- Meerdere verklaringen worden ondersteund, bijvoorbeeld: var = "a" || InStr (var, "b").
 		
-; Tooltips from AHK Docs		
+; 20. Tooltips from AHK Docs		
 	ExpList_TT =	Dubbelklik op om te bewerken
 	Ex_IfDir_TT =	Maakt contextgevoelige sneltoetsen en hotstrings afhankelijk
 		van het type venster dat actief is of bestaat.
@@ -995,7 +1007,7 @@
 	Ex_UV_TT =	Exporteren globale variabelen.
 	Ex_EdVars_TT =	Selecteer globale variabelen te exporteren.
 		
-; Operators		
+; 21. Operators		
 	As_Oper_1 =	Toewijzen
 	As_Oper_2 =	Toevoegen
 	As_Oper_3 =	Aftrekken
@@ -1011,7 +1023,7 @@
 	Co_Oper_6 =	Groter dan of gelijk
 	Co_Oper_7 =	Minder of gelijk
 		
-; IE Commands Tips		
+; 22. IE Commands Tips		
 	Tip_Navigate =	Hiermee navigeert u naar een URL of pad.
 	Tip_Value =	Hiermee wordt de waarde van het object.
 	Tip_Focus =	Stelt focus op het object.
@@ -1038,7 +1050,7 @@
 	Tip_Height =	Bepaalt of haalt de hoogte van het object.
 	Tip_Length =	Stelt of haalt het aantal objecten in een verzameling.
 		
-; AHK Commands Tips		
+; 23. AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	Abs	Geeft de absolute waarde van het nummer .
 	ASin	Geeft de boogsinus ( het getal waarvan de sinus is Number ) in radialen .
@@ -1190,6 +1202,7 @@
 	OnMessage	Geeft een functie om automatisch te bellen wanneer het script ontvangt de opgegeven boodschap.
 	Ord	Geeft de ordinale waarde (numeriek karakter code) van het eerste teken in string.
 	OutputDebug	Stuurt een string naar de debugger (indien aanwezig) voor weergave.
+	Parameter	Dodaje parametr do funkcji.
 	Pause	Pauzeert huidige thread van het script.
 	PixelGetColor	Haalt de kleur van de pixel op de aangegeven x, y coördinaten.
 	PixelSearch	Zoekt een gebied van het scherm een pixel van de opgegeven kleur.
@@ -1265,6 +1278,7 @@
 	Try	Bewakers een of meer verklaringen (opdrachten of uitdrukkingen) tegen runtime fouten en uitzonderingen door de worp commando gegooid.
 	Until	Geldt als voorwaarde voor de voortzetting van een Loop-of Voor-loop.
 	UrlDownloadToFile	Downloadt een bestand van het internet.
+	UserFunction	Maakt een functie structuur.
 	VarSetCapacity	Vergroot houden capaciteit van een variabele of bevrijdt het geheugen. Normaal, dat is alleen voor de ongewone omstandigheden, zoals DllCall.
 	WinActivate	Activeert het gespecificeerde venster (maakt het belangrijkste).
 	WinActivateBottom	Zelfde als WinActivate behalve dat het activeert de onderste (minst recent actieve) matching venster in plaats van de bovenste.

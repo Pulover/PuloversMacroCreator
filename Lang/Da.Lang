@@ -1,8 +1,8 @@
-﻿LoadLang_Da:
+﻿Lang_da
 		
 		; Danish
 		
-; Main Menu		
+; 01. Main Menu		
 	m_Lang001 =	&File
 	m_Lang002 =	&Makro
 	m_Lang003 =	F&ungere
@@ -14,7 +14,7 @@
 	m_Lang009 =	&Donere
 	m_Lang010 =	&Hjælp
 		
-; File Sub Menu		
+; 02. File Sub Menu		
 	f_Lang001 =	&Nyt
 	f_Lang002 =	&Åbent
 	f_Lang003 =	&Gem
@@ -28,7 +28,7 @@
 	f_Lang011 =	&Udgang
 	f_Lang012 =	&Ingen filer
 		
-; Macro Sub Menu		
+; 03. Macro Sub Menu		
 	r_Lang001 =	&Indspil makro
 	r_Lang002 =	&Aktiver makroer
 	r_Lang003 =	A&fspil aktuelle Macro
@@ -45,13 +45,13 @@
 	r_Lang014 =	I&mport Macro
 	r_Lang015 =	&Gem nuværende Macro
 		
-; Function Sub Menu		
+; 04. Function Sub Menu		
 	u_Lang001 =	&Opret Funktion
 	u_Lang002 =	&Tilføj Parameter
 	u_Lang003 =	T&ilføj Retur
 	u_Lang004 =	&Konverter Makro til at fungere
 		
-; Commands Sub Menu		
+; 05. Commands Sub Menu		
 	i_Lang001 =	&Mus
 	i_Lang002 =	&Tekst
 	i_Lang003 =	&Kontrol
@@ -74,7 +74,7 @@
 	i_Lang020 =	Fin&d en kommando
 		
 		
-; Edit Sub Menu		
+; 06. Edit Sub Menu		
 	e_Lang001 =	&Dupliker
 	e_Lang002 =	&Rediger kommentar
 	e_Lang003 =	&Find / Erstat
@@ -90,15 +90,16 @@
 	e_Lang013 =	I&ndsæt fra kassen
 	e_Lang014 =	Inds&æt Tastetryk
 	e_Lang015 =	Edit f&arvemærke
-	e_Lang016 =	grupper
-	e_Lang017 =	Aktiver grupper
-	e_Lang018 =	Tilføj gruppe
-	e_Lang019 =	Fjern gruppe
-	e_Lang020 =	Fjern alle grupper
-	e_Lang021 =	Rediger grupper
+	e_Lang016 =	&Grupper
+	e_Lang017 =	&Aktiver grupper
+	e_Lang018 =	&Tilføj gruppe
+	e_Lang019 =	&Fjern gruppe
+	e_Lang020 =	F&jern alle grupper
+	e_Lang021 =	&Skjul alle
+	e_Lang022 =	&Udvid alle
 		
 		
-; Select Sub Menu		
+; 07. Select Sub Menu		
 	s_Lang001 =	&Vælg alt
 	s_Lang002 =	V&ælg Ingen
 	s_Lang003 =	&Invert Selection
@@ -110,7 +111,7 @@
 	s_Lang009 =	V&algt Type
 	s_Lang010 =	Command typen
 		
-; View Sub Menu		
+; 08. View Sub Menu		
 	v_Lang001 =	&Altid på toppen
 	v_Lang002 =	&Fremhæve Rækker
 	v_Lang003 =	&Indrykning
@@ -121,26 +122,22 @@
 	v_Lang008 =	&Nulstil Kolonner Size
 	v_Lang009 =	Ik&oner StøRrelse
 	v_Lang010 =	&Reset Layout
-		
 	v_Lang011 =	&Fil
 	v_Lang012 =	&Optage og afspille
 	v_Lang013 =	&Kommandoer
 	v_Lang014 =	&Redigere
 	v_Lang015 =	O&ptioner
 	v_Lang016 =	&Tilpas
-		
 	v_Lang017 =	&Automatisk
 	v_Lang018 =	&Manual
 	v_Lang019 =	&Stands
 	v_Lang020 =	&Pause
-		
 	v_Lang021 =	&Compact
 	v_Lang022 =	&Standard
-		
 	v_Lang023 =	&Lille
 	v_Lang024 =	&Stor
 		
-; Options Sub Menu		
+; 09. Options Sub Menu		
 	o_Lang001 =	&Indstillinger
 	o_Lang002 =	&Sprog
 	o_Lang003 =	&Minimaliseren naar tray...
@@ -157,10 +154,10 @@
 	o_Lang014 =	Standa&rd Genvejstaster
 	o_Lang015 =	Standardindsti&llinger
 		
-; Donate Sub Menu		
+; 10. Donate Sub Menu		
 	p_Lang001 =	&PayPal Donation
 		
-; Help Sub Menu		
+; 11. Help Sub Menu		
 	h_Lang001 =	&Hjælp
 	h_Lang002 =	&Tutorials
 	h_Lang003 =	T&ips
@@ -171,12 +168,12 @@
 	h_Lang008 =	T&jek på opstart
 	h_Lang009 =	&Om
 		
-; Tray Menu		
+; 12. Tray Menu		
 	y_Lang001 =	Skjul vindue
 	y_Lang002 =	Vis vindue
 	y_Lang003 =	Kontrol Værktøjslinje
 		
-; Built-in Vars Menu		
+; 13. Built-in Vars Menu		
 	b_Lang001 =	Specialtegn
 	b_Lang002 =	egenskaber
 	b_Lang003 =	Dato og tid
@@ -185,7 +182,7 @@
 	b_Lang006 =	Misc.
 	b_Lang007 =	Loop
 		
-; Main Window		
+; 14. Main Window		
 	w_Lang001 =	Eksport
 	w_Lang002 =	Eksempel
 	w_Lang003 =	Indstillinger
@@ -294,7 +291,7 @@
 	w_Lang106 =	Konverter Makro til at fungere (Ctrl + Shift + C)
 	w_Lang107 =	Udkommentere ukontrolleret rækker
 		
-; Command Windows		
+; 15. Command Windows		
 	c_Lang001 =	Mus
 	c_Lang002 =	Tekst
 	c_Lang003 =	Pause
@@ -520,7 +517,7 @@
 	c_Lang224 =	Lokale variabler
 	c_Lang225 =	Statiske variabler
 		
-; Other Windows		
+; 16. Other Windows		
 	t_Lang001 =	Eksporter til AutoHotkey
 	t_Lang002 =	Makroer
 	t_Lang003 =	Loops
@@ -698,8 +695,23 @@
 	t_Lang175 =	Misc.
 	t_Lang176 =	Tilføj gruppe
 	t_Lang177 =	Ny gruppe
+	t_Lang178 =	Sprog Editor
+	t_Lang179 =	Opret ny
+	t_Lang180 =	Brug Enter, at PgDn og PgUp navigere.
+	t_Lang181 =	Indsend
+	t_Lang182 =	Fra
+	t_Lang183 =	Navn
+	t_Lang184 =	E-mail
+	t_Lang185 =	Emne
+	t_Lang186 =	Besked
+	t_Lang187 =	Gem ændringer?
+	t_Lang188 =	Sprog fil
+	t_Lang189 =	Henvisning fil
+	t_Lang190 =	Indsend revision eller ny oversættelse
+	t_Lang191 =	Skjul alle
+	t_Lang192 =	Udvid alle
 		
-; Messages & Dialogs		
+; 17. Messages & Dialogs		
 	d_Lang001 =	Åbent
 	d_Lang002 =	Gem nuværende projekt?
 	d_Lang003 =	Standardindstillinger
@@ -835,7 +847,7 @@
 	d_Lang101 =	Duplicate funktion.
 	d_Lang102 =	er et reserveret ord.
 		
-; Start-up Tips		
+; 18. Start-up Tips		
 	Start_Tips =	Du kan oprette makroer ved hjælp af kommandoen knapper i hovedvinduet eller ved hjælp af optageren til at kopiere dine handlinger. Gå til Valg > Indstillinger > Optagelse at vælge, hvad input vil blive registreret.
 		Hvis du vil bruge optageren i hurtige opgaver gå til Valg > Indstillinger > Optagelse og tjek "Clear List" valgmulighed. Klik derefter på knappen Optag i hovedvinduet og bruge F10 til at rydde den aktuelle Makro og starte en ny med samme genvejstast. Du kan også tjekke "altid aktiv" i hovedvinduet til at holde Optagelse og afspilning genvejstaster aktive.
 		For at få hjælp til en specifik kommando højreklikke et vilkårligt sted på et kommandovindue til at vise links til AutoHotkey online Hjælp.
@@ -864,7 +876,7 @@
 		Du kan indstille dine egne globale variable, der skal lastes på opstart og skal eksporteres. Gå til Valg > Indstillinger > Brugerindstillinger globale variabler til at tilføje dem.
 		Du kan køre avancerede funktioner såsom SUBSTR og RegExReplace fra Funktioner vindue (Indsæt > Hvis Statements / variable / funktioner). Eller køre dine egne funktioner fra eksterne AutoHotkey scripts.
 		
-; Tooltips		
+; 19. Tooltips		
 	AutoKey_TT =	Genvejstast for at spille Macro
 	ManKey_TT =	Genvejstast for at spille Macro "step-by-step"
 	AbortKey_TT =	Genvejstast for at stoppe afspilningen
@@ -944,7 +956,7 @@
 		- For at bruge strenge, vedlægge dem i anførselstegn, f.eks: var = "a".
 		- Flere Udtalelser understøttes, fx: var = "a" || InStr (var, "b").
 		
-; Tooltips from AHK Docs		
+; 20. Tooltips from AHK Docs		
 	ExpList_TT =	Dobbeltklik for at redigere
 	Ex_IfDir_TT =	Opretter kontekstafhængige hotkeys og hotstrings afhængigt
 		af den type vindue, der er aktiveret eller eksisterer.
@@ -995,7 +1007,7 @@
 	Ex_UV_TT =	Eksportere globale variabler.
 	Ex_EdVars_TT =	Vælg globale variabler, der skal eksporteres.
 		
-; Operators		
+; 21. Operators		
 	As_Oper_1 =	Tildel
 	As_Oper_2 =	Tilføj
 	As_Oper_3 =	Trække
@@ -1011,7 +1023,7 @@
 	Co_Oper_6 =	Større end eller lig
 	Co_Oper_7 =	Mindre end eller lig
 		
-; IE Commands Tips		
+; 22. IE Commands Tips		
 	Tip_Navigate =	Navigerer til en webadresse eller sti.
 	Tip_Value =	Får eller indstiller værdien af ​​genstanden.
 	Tip_Focus =	Sætter fokus på objektet.
@@ -1038,7 +1050,7 @@
 	Tip_Height =	Indstiller eller henter højden af ​​objektet.
 	Tip_Length =	Indstiller eller henter antallet af objekter i en samling.
 		
-; AHK Commands Tips		
+; 23. AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	Abs	Returnerer den absolutte værdi af nummer.
 	ASin	Returnerer arcus sinus (antallet , hvis sinus er Tal ) i radianer .
@@ -1190,6 +1202,7 @@
 	OnMessage	Angiver en funktion til at kalde automatisk, når scriptet modtager den angivne meddelelse.
 	Ord	Returnerer ordinal værdi (numerisk tegn kode) det første tegn i String.
 	OutputDebug	Sender en streng til debugger (hvis nogen) til visning.
+	Parameter	Tilføjer en parameter til funktionen.
 	Pause	Pauser scriptet aktuelle tråd.
 	PixelGetColor	Henter farven af pixel på den angivne x, y-koordinater.
 	PixelSearch	Søger en region af skærmen i en pixel af den angivne farve.
@@ -1265,6 +1278,7 @@
 	Try	Guards én eller flere udsagn (kommandoer eller udtryk) mod runtime fejl og undtagelser kastet af kast kommando.
 	Until	Anvender en betingelse for videreførelse af en Loop eller For-løkke.
 	UrlDownloadToFile	Downloader en fil fra internettet.
+	UserFunction	Opretter en funktion struktur.
 	VarSetCapacity	Forstørrer en variabels bedrift kapacitet eller frigør sin hukommelse. Normalt er dette kun nødvendigt for usædvanlige omstændigheder, såsom DllCall.
 	WinActivate	Aktiverer den angivne vindue (gør det forreste).
 	WinActivateBottom	Samme som WinActivate bortset fra at det aktiverer den nederste (mindst nylig aktiv) matchende vindue snarere end den øverste.

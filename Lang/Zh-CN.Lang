@@ -1,8 +1,8 @@
-﻿LoadLang_Zh-Hans:
+﻿Lang_zh-CN
 		
 		; Chinese Simplified [Revised by huyaowen and amnesiac]
 		
-; Main Menu		
+; 01. Main Menu		
 	m_Lang001 =	文件(&F)
 	m_Lang002 =	宏(&M)
 	m_Lang003 =	功能(&U)
@@ -14,7 +14,7 @@
 	m_Lang009 =	捐赠(&D)
 	m_Lang010 =	帮助(&H)
 		
-; File Sub Menu		
+; 02. File Sub Menu		
 	f_Lang001 =	新建(&N)
 	f_Lang002 =	打开(&O)
 	f_Lang003 =	保存(&S)
@@ -28,7 +28,7 @@
 	f_Lang011 =	退出(&X)
 	f_Lang012 =	没有文件
 		
-; Macro Sub Menu		
+; 03. Macro Sub Menu		
 	r_Lang001 =	录制宏(&R)
 	r_Lang002 =	激活宏(&A)
 	r_Lang003 =	播放当前宏(&P)
@@ -45,13 +45,13 @@
 	r_Lang014 =	导入宏(&I)
 	r_Lang015 =	保存当前宏(&V)
 		
-; Function Sub Menu		
+; 04. Function Sub Menu		
 	u_Lang001 =	创建函数(&F)
 	u_Lang002 =	添加参数(&P)
 	u_Lang003 =	添加返回(&R)
 	u_Lang004 =	宏转换功能(&C)
 		
-; Commands Sub Menu		
+; 05. Commands Sub Menu		
 	i_Lang001 =	鼠标(&M)
 	i_Lang002 =	文本(&T)
 	i_Lang003 =	控件(&C)
@@ -74,7 +74,7 @@
 	i_Lang020 =	查找命令
 		
 		
-; Edit Sub Menu		
+; 06. Edit Sub Menu		
 	e_Lang001 =	复写(&L)
 	e_Lang002 =	编辑注释(&O)
 	e_Lang003 =	查找/替换(&F)
@@ -89,16 +89,17 @@
 	e_Lang012 =	下移(&N)
 	e_Lang013 =	从框中插入(&I)
 	e_Lang014 =	插入键击(&K)
-	e_Lang015 =	编辑颜色标记(&M)
-	e_Lang016 =	组
-	e_Lang017 =	启用组
-	e_Lang018 =	添加组
-	e_Lang019 =	删除组
-	e_Lang020 =	删除所有组
-	e_Lang021 =	编辑组
+	e_Lang015 =	编辑颜色标记(¨&M)
+	e_Lang016 =	组(&G)
+	e_Lang017 =	启用组(&E)
+	e_Lang018 =	添加组(&A)
+	e_Lang019 =	删除组(&R)
+	e_Lang020 =	删除所有组(&M)
+	e_Lang021 =	全部收缩(&C)
+	e_Lang022 =	展开全部(&X)
 		
 		
-; Select Sub Menu		
+; 07. Select Sub Menu		
 	s_Lang001 =	全选(&A)
 	s_Lang002 =	全不选(&N)
 	s_Lang003 =	反选(&I)
@@ -110,7 +111,7 @@
 	s_Lang009 =	已选类型(&T)
 	s_Lang010 =	命令类型
 		
-; View Sub Menu		
+; 08. View Sub Menu		
 	v_Lang001 =	总在最前(&A)
 	v_Lang002 =	高亮行(&H)
 	v_Lang003 =	缩进(&I)
@@ -121,26 +122,22 @@
 	v_Lang008 =	复位列宽(&R)
 	v_Lang009 =	图标尺寸(&S)
 	v_Lang010 =	复位布局(&E)
-		
 	v_Lang011 =	文件(&F)
 	v_Lang012 =	录制回放(&R)
 	v_Lang013 =	命令(&C)
 	v_Lang014 =	编辑(&E)
 	v_Lang015 =	选项(&O)
 	v_Lang016 =	定制(&U)
-		
 	v_Lang017 =	自动(&A)
 	v_Lang018 =	手动(&M)
 	v_Lang019 =	停止(&S)
 	v_Lang020 =	暂停(&P)
-		
 	v_Lang021 =	简洁(&C)
 	v_Lang022 =	默认(&D)
-		
 	v_Lang023 =	小(&S)
 	v_Lang024 =	大(&L)
 		
-; Options Sub Menu		
+; 09. Options Sub Menu		
 	o_Lang001 =	设置(&S)
 	o_Lang002 =	语言(&L)
 	o_Lang003 =	最小化到托盘(&M)
@@ -157,10 +154,10 @@
 	o_Lang014 =	默认热键(&K)
 	o_Lang015 =	默认设置(&I)
 		
-; Donate Sub Menu		
+; 10. Donate Sub Menu		
 	p_Lang001 =	用PayPal捐赠(&P)
 		
-; Help Sub Menu		
+; 11. Help Sub Menu		
 	h_Lang001 =	帮助(&H)
 	h_Lang002 =	教程(&T)
 	h_Lang003 =	提示(&I)
@@ -171,12 +168,12 @@
 	h_Lang008 =	启动时检查(&E)
 	h_Lang009 =	关于(&B)
 		
-; Tray Menu		
+; 12. Tray Menu		
 	y_Lang001 =	隐藏窗口
 	y_Lang002 =	显示窗口
 	y_Lang003 =	控制工具栏
 		
-; Built-in Vars Menu		
+; 13. Built-in Vars Menu		
 	b_Lang001 =	特殊字符
 	b_Lang002 =	属性
 	b_Lang003 =	日期和时间
@@ -185,7 +182,7 @@
 	b_Lang006 =	杂项
 	b_Lang007 =	循环
 		
-; Main Window		
+; 14. Main Window		
 	w_Lang001 =	导出
 	w_Lang002 =	预览
 	w_Lang003 =	选项
@@ -294,7 +291,7 @@
 	w_Lang106 =	转换宏功能（Ctrl + Shift+ C）
 	w_Lang107 =	注释掉选中的行
 		
-; Command Windows		
+; 15. Command Windows		
 	c_Lang001 =	鼠标
 	c_Lang002 =	文本
 	c_Lang003 =	暂停
@@ -520,7 +517,7 @@
 	c_Lang224 =	局部变量
 	c_Lang225 =	静态变量
 		
-; Other Windows		
+; 16. Other Windows		
 	t_Lang001 =	导出为AutoHotkey
 	t_Lang002 =	宏
 	t_Lang003 =	循环
@@ -698,8 +695,23 @@
 	t_Lang175 =	杂项
 	t_Lang176 =	添加组
 	t_Lang177 =	新组
+	t_Lang178 =	语言编辑器
+	t_Lang179 =	创建新的
+	t_Lang180 =	使用输入，PgDn键和PgUp键进行导航。
+	t_Lang181 =	提交
+	t_Lang182 =	从
+	t_Lang183 =	名称
+	t_Lang184 =	电子邮件
+	t_Lang185 =	学科
+	t_Lang186 =	信息
+	t_Lang187 =	保存更改？
+	t_Lang188 =	语言文件
+	t_Lang189 =	参考文件
+	t_Lang190 =	提交修订或新的翻译
+	t_Lang191 =	全部收缩(C)
+	t_Lang192 =	展开全部(X)
 		
-; Messages & Dialogs		
+; 17. Messages & Dialogs		
 	d_Lang001 =	打开
 	d_Lang002 =	保存当前项目吗？
 	d_Lang003 =	默认设置
@@ -835,7 +847,7 @@
 	d_Lang101 =	复制功能。
 	d_Lang102 =	是一个保留字。
 		
-; Start-up Tips		
+; 18. Start-up Tips		
 	Start_Tips =	您可以用主窗口中的命令按钮创建宏或使用录制器录制您的操作。打开选项>设置>录制来选择录制哪些类型。
 		要用录制器快速创建任务请打开选项>设置>录制并选中“清除列表”选项。接着点击主窗口中的录制按钮并用F10清除当前宏，然后用相同的热键开始新录制。您还可以选中主窗口中的“总是活动”选项以让录制和回放热键保持活动。
 		要获取某个命令的帮助，请在命令窗口任意位置点击右键以显示到AutoHotkey在线帮助的链接。
@@ -864,7 +876,7 @@
 		您可以设置在启动时加载且可导出的自己的全局变量。打开选项>设置>用户全局变量来添加它们。
 		您可以在功能窗口（插入>If语句/变量/函数）中执行高级函数，例如SubStr和RegExReplace。或运行外部AutoHotkey脚本中的函数。
 		
-; Tooltips		
+; 19. Tooltips		
 	AutoKey_TT =	回放宏的热键
 	ManKey_TT =	步进回放宏的热键
 	AbortKey_TT =	停止回放热键
@@ -944,7 +956,7 @@
 		- 要使用字符串，它们括在引号，例如：VAR=“A”。
 		- 多个语句的支持，例如：VAR=“一个”|| INSTR（变种，“B”）。
 		
-; Tooltips from AHK Docs		
+; 20. Tooltips from AHK Docs		
 	ExpList_TT =	双击进行编辑
 	Ex_IfDir_TT =	创建根据创建活动或存在的不同状态
 		执行的上下文热键。
@@ -995,7 +1007,7 @@
 	Ex_UV_TT =	导出全局变量。
 	Ex_EdVars_TT =	选择要导出的全局变量。
 		
-; Operators		
+; 21. Operators		
 	As_Oper_1 =	赋值
 	As_Oper_2 =	加
 	As_Oper_3 =	减
@@ -1011,7 +1023,7 @@
 	Co_Oper_6 =	大于或等于
 	Co_Oper_7 =	小于或等于
 		
-; IE Commands Tips		
+; 22. IE Commands Tips		
 	Tip_Navigate =	导航到网址或路径。
 	Tip_Value =	获取或设置对象的值。
 	Tip_Focus =	设置焦点到对象。
@@ -1038,7 +1050,7 @@
 	Tip_Height =	设置或获取对象的高度。
 	Tip_Length =	设置或检索容器中对象的数目。
 		
-; AHK Commands Tips		
+; 23. AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	Abs	返回数字的绝对值。
 	ASin	返回弧度表示的反正弦值（其正弦是Number）。
@@ -1190,6 +1202,7 @@
 	OnMessage	指定当脚本接收到特定消息时自动调用的函数。
 	Ord	返回字符串的第一个字符的顺序值（数字字符代码）。
 	OutputDebug	发送字符串到调试器（如果有的话）显示出来。
+	Parameter	添加一个参数的函数。
 	Pause	暂停脚本的当前线程。
 	PixelGetColor	获取指定的x, y坐标处像素的颜色。
 	PixelSearch	在屏幕某个区域中搜索指定颜色所在的像素。
@@ -1265,6 +1278,7 @@
 	Try	守护一个或多个语句（命令或表达式）以防备由throw命令抛出的运行时错误和异常。
 	Until	根据条件判断是否继续执行Loop或For循环。
 	UrlDownloadToFile	从互联网下载文件。
+	UserFunction	创建一个功能结构。
 	VarSetCapacity	增加或清空变量占用的内存。通常只有在特殊情况下才需要，例如DllCall。
 	WinActivate	激活指定的窗口（让它置于最前面）。
 	WinActivateBottom	和WinActivate一样，只是此命令激活最下面的（最早激活的）匹配窗口而不是最上面的。

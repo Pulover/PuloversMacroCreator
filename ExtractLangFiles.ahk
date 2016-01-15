@@ -9,7 +9,7 @@ XL.Sheets("Lang_Files").Activate
 Xl.Range(Xl.Range("A1"), Xl.Range("A1").SpecialCells(xlLastCell)).Copy
 
 ClipWait
-If !InStr(Clipboard, "LoadLang_")=1
+If !InStr(Clipboard, "Lang_")=1
 {
 	MsgBox Error
 	return
@@ -25,14 +25,14 @@ Loop, Parse, Clipboard, `n, `r
 	{
 		i := A_Index + 2
 		PMC.Lang[A_Index] .= Label . Line%i% "`n"
-		If InStr(Label, "LoadLang_")
-			nLang[A_Index] := StrReplace(Line%i%, ":")
+		If InStr(Label, "Lang_")
+			nLang[A_Index] := Line%i%
 	}
 }
 
 FileDelete, %A_ScriptDir%\Lang\*.Lang
 For each, Lan in PMC.Lang
-	FileAppend, % Lan, % A_ScriptDir "\Lang\" nLang[A_Index] ".Lang", UTF-8
+	FileAppend, % Lan, % A_ScriptDir "\Lang\" nLang[A_Index] ".lang", UTF-8
 
 XL.Application.CutCopyMode := False
 XL.Workbooks(1).Close(0)

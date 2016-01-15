@@ -213,22 +213,15 @@ CmdHelp()
 	Title := ContHTitle[Gui][Pag ? Pag : 1]
 	If (WinActive("A") != StartTipID) && ((!Title) || (WinActive("A") != CmdWin))
 		Title := "index.html"
-	If ((Lang = "Zh") || (Lange = "Zt"))
-	{
-		IfExist, %A_ScriptDir%\MacroCreator_Help_Cn.chm
-			Run, hh.exe mk:@MSITStore:%A_ScriptDir%\MacroCreator_Help_Cn.chm::/%Title%
-		Else IfExist, %A_ScriptDir%\MacroCreator_Help.chm
-			Run, hh.exe mk:@MSITStore:%A_ScriptDir%\MacroCreator_Help.chm::/%Title%
-		Else
-			Run, http://www.macrocreator.com/docs/%Title%
-	}
+	ShortLang := RegExReplace(Lang, "(\w+).*", "$1")
+	IfExist, %A_ScriptDir%\MacroCreator_Help_%Lang%.chm
+		Run, hh.exe mk:@MSITStore:%A_ScriptDir%\MacroCreator_Help_%Lang%.chm::/%Title%
+	Else IfExist, %A_ScriptDir%\MacroCreator_Help_%ShortLang%.chm
+		Run, hh.exe mk:@MSITStore:%A_ScriptDir%\MacroCreator_Help_%ShortLang%.chm::/%Title%
+	Else IfExist, %A_ScriptDir%\MacroCreator_Help.chm
+		Run, hh.exe mk:@MSITStore:%A_ScriptDir%\MacroCreator_Help.chm::/%Title%
 	Else
-	{
-		IfExist, %A_ScriptDir%\MacroCreator_Help.chm
-			Run, hh.exe mk:@MSITStore:%A_ScriptDir%\MacroCreator_Help.chm::/%Title%
-		Else
-			Run, http://www.macrocreator.com/docs/%Title%
-	}
+		Run, http://www.macrocreator.com/docs/%Title%
 	return 0
 }
 
@@ -264,8 +257,21 @@ HotkeyCtrlHasFocus()
 	If (InStr(ctrl,"hotkey"))
 	{
 		GuiControlGet, ctrl, %GuiA%:FocusV
-		Return, ctrl
+		return ctrl
 	}
+}
+
+ControlXHasFocus()
+{
+	global GuiA := ActiveGui(WinActive("A"))
+	GuiControlGet, ctrl, %GuiA%:Focus
+	If (InStr(ctrl,"edit"))
+	{
+		GuiControlGet, ctrl, %GuiA%:FocusV
+		If (ctrl = "RowLang")
+			return true
+	}
+	return false
 }
 
 SleepRandom(Delay := 0, Min := "", Max := "", Percent := "")
@@ -897,7 +903,7 @@ SavedVars(_Var := "", ByRef _Saved := "", AsArray := false)
 	Static VarsRecord := {}, LocalRecord := {}
 	Local ListOfVars, i, v
 	
-	If _Var in %BuiltinVars%,Action,Step,Details,TimesX,DelayX,Type,Target,Window,VarName,VarValue,Oper,Par,Param
+	If _Var in %BuiltinVars%,Action,Step,Details,TimesX,DelayX,Type,Target,Window,VarName,VarValue,Oper,Par,Param,Version,Lang,AutoKey,ManKey,AbortKey,PauseKey,RecKey,RecNewKey,RelKey,FastKey,SlowKey,ClearNewList,DelayG,OnScCtrl,ShowStep,HideMainWin,DontShowPb,DontShowRec,DontShowEdt,ConfirmDelete,ShowTips,NextTip,IfDirectContext,IfDirectWindow,KeepHkOn,Mouse,Moves,TimedI,Strokes,CaptKDn,MScroll,WClass,WTitle,MDelay,DelayM,DelayW,MaxHistory,TDelay,ToggleC,RecKeybdCtrl,RecMouseCtrl,CoordMouse,SpeedUp,SpeedDn,MouseReturn,ShowProgBar,ShowBarOnStart,AutoHideBar,RandomSleeps,RandPercent,DrawButton,OnRelease,OnEnter,LineW,ScreenDir,DefaultEditor,DefaultMacro,StdLibFile,KeepDefKeys,TbNoTheme,AutoBackup,MultInst,EvalDefault,CloseAction,ShowLoopIfMark,ShowActIdent,SearchAreaColor,LoopLVColor,IfLVColor,VirtualKeys,AutoUpdate,Ex_AbortKey,Ex_PauseKey,Ex_SM,SM,Ex_SI,SI,Ex_ST,ST,Ex_DH,Ex_AF,Ex_HK,Ex_PT,Ex_NT,Ex_SC,SC,Ex_SW,SW,Ex_SK,SK,Ex_MD,MD,Ex_SB,SB,Ex_MT,MT,Ex_IN,Ex_UV,Ex_Speed,ComCr,ComAc,Send_Loop,TabIndent,IncPmc,Exe_Exp,ShowExpOpt,MainWinSize,MainWinPos,WinState,ColSizes,ColOrder,PrevWinSize,ShowPrev,TextWrap,CommentUnchecked,CustomColors,OSCPos,OSTrans,OSCaption,AutoRefresh,ShowGroups,IconSize,UserLayout,MainLayout,MacroLayout,FileLayout,RecPlayLayout,SettingsLayout,CommandLayout,EditLayout,ShowBands
 		TrayTip, %d_Lang011%!, %_Var% %d_Lang102%,, 18
 	If (IsByRef(_Saved))
 	{

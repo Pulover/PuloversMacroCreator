@@ -1,8 +1,8 @@
-﻿LoadLang_Ja:
+﻿Lang_ja
 		
 		; Japanese
 		
-; Main Menu		
+; 01. Main Menu		
 	m_Lang001 =	ファイル
 	m_Lang002 =	マクロ
 	m_Lang003 =	機能
@@ -14,7 +14,7 @@
 	m_Lang009 =	寄付する
 	m_Lang010 =	助ける
 		
-; File Sub Menu		
+; 02. File Sub Menu		
 	f_Lang001 =	新しい
 	f_Lang002 =	開く
 	f_Lang003 =	保存
@@ -28,7 +28,7 @@
 	f_Lang011 =	終了する
 	f_Lang012 =	いいえファイルん
 		
-; Macro Sub Menu		
+; 03. Macro Sub Menu		
 	r_Lang001 =	マクロの記録
 	r_Lang002 =	マクロをアクティブにする
 	r_Lang003 =	現在のマクロを再生する
@@ -45,13 +45,13 @@
 	r_Lang014 =	インポートマクロ
 	r_Lang015 =	現在のマクロを保存
 		
-; Function Sub Menu		
+; 04. Function Sub Menu		
 	u_Lang001 =	関数を作成します。
 	u_Lang002 =	パラメータの追加
 	u_Lang003 =	リターンを追加
 	u_Lang004 =	関数へのマクロの変換
 		
-; Commands Sub Menu		
+; 05. Commands Sub Menu		
 	i_Lang001 =	マウス
 	i_Lang002 =	テキスト
 	i_Lang003 =	コントロール
@@ -74,7 +74,7 @@
 	i_Lang020 =	コマンドを見つける
 		
 		
-; Edit Sub Menu		
+; 06. Edit Sub Menu		
 	e_Lang001 =	複製
 	e_Lang002 =	コメントを編集
 	e_Lang003 =	検索/置換
@@ -95,10 +95,11 @@
 	e_Lang018 =	グループを追加
 	e_Lang019 =	グループを削除
 	e_Lang020 =	すべてのグループを削除します
-	e_Lang021 =	編集グループ
+	e_Lang021 =	すべて折りたたみます
+	e_Lang022 =	すべて展開
 		
 		
-; Select Sub Menu		
+; 07. Select Sub Menu		
 	s_Lang001 =	[すべて]を選択します
 	s_Lang002 =	[なし]を選択します
 	s_Lang003 =	選択範囲を反転
@@ -110,7 +111,7 @@
 	s_Lang009 =	選択されたタイプ
 	s_Lang010 =	コマンドの種類
 		
-; View Sub Menu		
+; 08. View Sub Menu		
 	v_Lang001 =	常に手前に表示
 	v_Lang002 =	ハイライトの行
 	v_Lang003 =	インデント
@@ -121,26 +122,22 @@
 	v_Lang008 =	列のサイズをリセット
 	v_Lang009 =	アイコンのサイズ
 	v_Lang010 =	レイアウトをリセット
-		
 	v_Lang011 =	ファイル
 	v_Lang012 =	記録と再生
 	v_Lang013 =	コマンド
 	v_Lang014 =	編集
 	v_Lang015 =	オプション
 	v_Lang016 =	カスタマイズ
-		
 	v_Lang017 =	自動
 	v_Lang018 =	マニュアル
 	v_Lang019 =	停止
 	v_Lang020 =	休止
-		
 	v_Lang021 =	コンパクト
 	v_Lang022 =	デフォルト
-		
 	v_Lang023 =	小さい
 	v_Lang024 =	大
 		
-; Options Sub Menu		
+; 09. Options Sub Menu		
 	o_Lang001 =	設定
 	o_Lang002 =	言語
 	o_Lang003 =	トレイに最小化
@@ -157,10 +154,10 @@
 	o_Lang014 =	デフォルトのホットキー
 	o_Lang015 =	デフォルト設定
 		
-; Donate Sub Menu		
+; 10. Donate Sub Menu		
 	p_Lang001 =	PayPalの寄付
 		
-; Help Sub Menu		
+; 11. Help Sub Menu		
 	h_Lang001 =	助ける
 	h_Lang002 =	チュートリアル
 	h_Lang003 =	ヒント
@@ -171,12 +168,12 @@
 	h_Lang008 =	起動時にチェック
 	h_Lang009 =	約
 		
-; Tray Menu		
+; 12. Tray Menu		
 	y_Lang001 =	ウィンドウを非表示
 	y_Lang002 =	ウィンドウを表示する
 	y_Lang003 =	コントロールツールバー
 		
-; Built-in Vars Menu		
+; 13. Built-in Vars Menu		
 	b_Lang001 =	特殊文字
 	b_Lang002 =	プロパティ
 	b_Lang003 =	日時
@@ -185,7 +182,7 @@
 	b_Lang006 =	その他。
 	b_Lang007 =	ループ
 		
-; Main Window		
+; 14. Main Window		
 	w_Lang001 =	エクスポート
 	w_Lang002 =	プレビュー
 	w_Lang003 =	オプション
@@ -294,7 +291,7 @@
 	w_Lang106 =	（Ctrl + Shiftキー+ C）を関数にマクロの変換
 	w_Lang107 =	未チェックの行をコメントアウト
 		
-; Command Windows		
+; 15. Command Windows		
 	c_Lang001 =	マウス
 	c_Lang002 =	テキスト
 	c_Lang003 =	一時停止
@@ -520,7 +517,7 @@
 	c_Lang224 =	ローカル変数
 	c_Lang225 =	静的変数
 		
-; Other Windows		
+; 16. Other Windows		
 	t_Lang001 =	AutoHotkeyにエクスポート
 	t_Lang002 =	マクロ
 	t_Lang003 =	ループ
@@ -698,8 +695,23 @@
 	t_Lang175 =	その他。
 	t_Lang176 =	グループを追加
 	t_Lang177 =	新しいグループ
+	t_Lang178 =	言語エディタ
+	t_Lang179 =	新しく作る
+	t_Lang180 =	入力して、使用、PgDnキーとPgUpキーが移動します。
+	t_Lang181 =	提出します
+	t_Lang182 =	から
+	t_Lang183 =	名
+	t_Lang184 =	Eメール
+	t_Lang185 =	件名
+	t_Lang186 =	メッセージ
+	t_Lang187 =	変更内容を保存？
+	t_Lang188 =	言語ファイル
+	t_Lang189 =	参照ファイル
+	t_Lang190 =	改正や新しい翻訳を提出
+	t_Lang191 =	すべて折りたたみます
+	t_Lang192 =	すべて展開
 		
-; Messages & Dialogs		
+; 17. Messages & Dialogs		
 	d_Lang001 =	開く
 	d_Lang002 =	現在のプロジェクトを保存しますか？
 	d_Lang003 =	デフォルト設定
@@ -835,7 +847,7 @@
 	d_Lang101 =	重複する機能。
 	d_Lang102 =	予約語です。
 		
-; Start-up Tips		
+; 18. Start-up Tips		
 	Start_Tips =	あなたは、メインウィンドウのコマンドボタンを使用するか、あなたの行動をコピーするためにレコーダーを使用してマクロを作成することができます。入力が記録されるかを選択するには、[オプション]> [設定]> [録音]に移動します。
 		迅速なタスクのためにレコーダーを使用するには、[オプション]> [設定]> [レコーディングに行くと "一覧をクリアする"オプションをチェックします。次に、メインウィンドウで[録音]ボタンをクリックして、現在のマクロをクリアするためにF10キーを使用し、同じホットキーで新しいものを開始します。 また、録音と再生のホットキーをアクティブにしておくためのメインウィンドウで"常にアクティブ"オプションをチェックすることができます。
 		特定のコマンドのヘルプを表示するにはAutoHotkeyをオンラインヘルプへのリンクを表示するには、コマンドウィンドウ上の任意の場所を右クリックします。
@@ -864,7 +876,7 @@
 		あなたが起動してエクスポートするにロードするために、独自のグローバル変数を設定することができます。それらを追加するには、[オプション]> [設定]> [ユーザーのグローバル変数に移動します。
 		このような機能ウィンドウ（文/変数/関数場合 >を挿入します）からは、SUBSTRとRegExReplaceなどの高度な機能を実行することができます。または外部AutoHotkeyをスクリプトから独自の関数を実行します。
 		
-; Tooltips		
+; 19. Tooltips		
 	AutoKey_TT =	ホットキーマクロを再生する
 	ManKey_TT =	ホットキーは、マクロの"ステップバイステップ"を再生する
 	AbortKey_TT =	ホットキーは、再生を停止する
@@ -944,7 +956,7 @@
 		- 例えば、引用符で囲み、文字列を使用するには：VAR="a"を。
 		- 複数のステートメントがサポートされています、例えば：VAR=""|| InStr関数（VAR、"B"）。
 		
-; Tooltips from AHK Docs		
+; 20. Tooltips from AHK Docs		
 	ExpList_TT =	ダブルクリックして編集する
 	Ex_IfDir_TT =	文脈依存のホットキーと応じhotstringsを作成
 		アクティブであるか、または存在しているウィンドウのタイプによって異なります。
@@ -995,7 +1007,7 @@
 	Ex_UV_TT =	グローバル変数をエクスポートします。
 	Ex_EdVars_TT =	エクスポートするグローバル変数を選択します。
 		
-; Operators		
+; 21. Operators		
 	As_Oper_1 =	割り当てる
 	As_Oper_2 =	加える
 	As_Oper_3 =	引く
@@ -1011,7 +1023,7 @@
 	Co_Oper_6 =	大きいか等しい
 	Co_Oper_7 =	小さいか等しい
 		
-; IE Commands Tips		
+; 22. IE Commands Tips		
 	Tip_Navigate =	URLまたはパスに移動します。
 	Tip_Value =	オブジェクトの値を取得または設定します。
 	Tip_Focus =	オブジェクトにフォーカスを設定します。
@@ -1038,7 +1050,7 @@
 	Tip_Height =	設定するか、またはオブジェクトの高さを取得します。
 	Tip_Length =	設定またはコレクション内のオブジェクトの数を取得します。
 		
-; AHK Commands Tips		
+; 23. AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	Abs	数値の絶対値を返します。
 	ASin	アークサイン（正弦数ある数値）ラジアンで返します。
@@ -1190,6 +1202,7 @@
 	OnMessage	スクリプトが指定されたメッセージを受信したときに自動的に呼び出す関数を指定します。
 	Ord	文字列の最初の文字の序数値（数値文字コード）を返します。
 	OutputDebug	ディスプレイ用のデバッガ（もしあれば）に文字列を送信します。
+	Parameter	関数にパラメータを追加します。
 	Pause	スクリプトの現在のスレッドを一時停止します。
 	PixelGetColor	指定されたxのピクセルの色を取得し、yは座標。
 	PixelSearch	指定された色のピクセルのための画面領域を検索します。
@@ -1265,6 +1278,7 @@
 	Try	ランタイムエラーと投げコマンドによってスローされた例外に対するガードは、1つ以上の文（コマンドまたは式）。
 	Until	ループまたはforループの継続に条件を適用します。
 	UrlDownloadToFile	インターネットからファイルをダウンロードします。
+	UserFunction	Створює структуру функцій.
 	VarSetCapacity	変数の保持容量を拡大したり、メモリを解放します。通常、これは唯一のそのようなDllCallなど、異常な状況のために必要である。
 	WinActivate	指定されたウィンドウは、（それが一番になる）アクティブにします。
 	WinActivateBottom	それはむしろ最上位よりも一番下の（少なくとも最近アクティブ）マッチングウィンドウをアクティブにしますことを除いWinActivateと同じ。

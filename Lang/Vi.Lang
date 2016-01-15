@@ -1,8 +1,8 @@
-﻿LoadLang_Vi:
+﻿Lang_vi
 		
 		; Vietnamese
 		
-; Main Menu		
+; 01. Main Menu		
 	m_Lang001 =	&Tập tin
 	m_Lang002 =	&Vĩ mô
 	m_Lang003 =	&Chức năng
@@ -14,7 +14,7 @@
 	m_Lang009 =	T&ặng
 	m_Lang010 =	&Giúp
 		
-; File Sub Menu		
+; 02. File Sub Menu		
 	f_Lang001 =	&Mới
 	f_Lang002 =	M&ở
 	f_Lang003 =	&Tiết kiệm
@@ -28,7 +28,7 @@
 	f_Lang011 =	&Ra
 	f_Lang012 =	&Không có tập tin
 		
-; Macro Sub Menu		
+; 03. Macro Sub Menu		
 	r_Lang001 =	&Record Macro
 	r_Lang002 =	&Kích hoạt Macro
 	r_Lang003 =	&Chơi vĩ mô hiện tại
@@ -45,13 +45,13 @@
 	r_Lang014 =	&Nhập khẩu vĩ mô
 	r_Lang015 =	&Lưu vĩ mô hiện tại
 		
-; Function Sub Menu		
+; 04. Function Sub Menu		
 	u_Lang001 =	&Tạo Chức năng
 	u_Lang002 =	T&hêm Parameter
 	u_Lang003 =	Th&êm Return
 	u_Lang004 =	&Chuyển đổi Macro Để Chức năng
 		
-; Commands Sub Menu		
+; 05. Commands Sub Menu		
 	i_Lang001 =	&Chuột
 	i_Lang002 =	&Văn bản
 	i_Lang003 =	&Kiểm soát
@@ -74,7 +74,7 @@
 	i_Lang020 =	Tì&m một lệnh
 		
 		
-; Edit Sub Menu		
+; 06. Edit Sub Menu		
 	e_Lang001 =	&Bản sao
 	e_Lang002 =	&Sửa Bình luận
 	e_Lang003 =	&Tìm / Thay thế
@@ -90,15 +90,16 @@
 	e_Lang013 =	C&hèn từ Box
 	e_Lang014 =	Ch&èn Tổ hợp phím
 	e_Lang015 =	S&ửa Màu Đánh dấu
-	e_Lang016 =	Các nhóm
-	e_Lang017 =	Kích hoạt tính năng nhóm
-	e_Lang018 =	Thêm nhóm
-	e_Lang019 =	Xóa nhóm
-	e_Lang020 =	Hủy bỏ tất cả các nhóm
-	e_Lang021 =	Chỉnh sửa nhóm
+	e_Lang016 =	C&ác nhóm
+	e_Lang017 =	&Kích hoạt tính năng nhóm
+	e_Lang018 =	&Thêm nhóm
+	e_Lang019 =	&Xóa nhóm
+	e_Lang020 =	&Hủy bỏ tất cả các nhóm
+	e_Lang021 =	Th&u gọn tất cả
+	e_Lang022 =	&Mở rộng tất cả
 		
 		
-; Select Sub Menu		
+; 07. Select Sub Menu		
 	s_Lang001 =	&Chọn tất cả
 	s_Lang002 =	C&họn None
 	s_Lang003 =	&Đảo ngược lựa chọn
@@ -110,7 +111,7 @@
 	s_Lang009 =	&Loại lựa chọn
 	s_Lang010 =	Loại lệnh
 		
-; View Sub Menu		
+; 08. View Sub Menu		
 	v_Lang001 =	&Always On Top
 	v_Lang002 =	&Hàng nổi bật
 	v_Lang003 =	&Thụt đầu dòng
@@ -121,26 +122,22 @@
 	v_Lang008 =	Th&iết lập lại Cột Kích
 	v_Lang009 =	&BiểU TượNg KíCh ThướC
 	v_Lang010 =	&Giao Diện Thiết Lập Lại
-		
 	v_Lang011 =	&Tập tin
 	v_Lang012 =	&Ghi lại và chơi
 	v_Lang013 =	&Lệnh
 	v_Lang014 =	&Chỉnh sửa
 	v_Lang015 =	T&ùy chọn
 	v_Lang016 =	Tù&y chỉnh
-		
 	v_Lang017 =	&Tự động
 	v_Lang018 =	&Hướng dẫn sử dụng
 	v_Lang019 =	Th&ôi
 	v_Lang020 =	T&ạm dừng
-		
 	v_Lang021 =	&Nhỏ gọn
 	v_Lang022 =	&Mặc Định
-		
 	v_Lang023 =	&Nhỏ
 	v_Lang024 =	&Lớn
 		
-; Options Sub Menu		
+; 09. Options Sub Menu		
 	o_Lang001 =	&Cài đặt
 	o_Lang002 =	&Ngôn ngư
 	o_Lang003 =	&Giảm thiểu để khay
@@ -157,10 +154,10 @@
 	o_Lang014 =	C&ác phím tắt mặc định
 	o_Lang015 =	C&ài đặt mặc định
 		
-; Donate Sub Menu		
+; 10. Donate Sub Menu		
 	p_Lang001 =	Hiến PayPal
 		
-; Help Sub Menu		
+; 11. Help Sub Menu		
 	h_Lang001 =	&Giúp
 	h_Lang002 =	&Hướng dẫn
 	h_Lang003 =	&Mẹo
@@ -171,12 +168,12 @@
 	h_Lang008 =	K&iểm tra khi khởi động
 	h_Lang009 =	V&ề
 		
-; Tray Menu		
+; 12. Tray Menu		
 	y_Lang001 =	Hide Window
 	y_Lang002 =	Hiển thị cửa sổ
 	y_Lang003 =	Thanh công cụ điều khiển
 		
-; Built-in Vars Menu		
+; 13. Built-in Vars Menu		
 	b_Lang001 =	Nhân vật đặc biệt
 	b_Lang002 =	bất động sản
 	b_Lang003 =	Thời gian
@@ -185,7 +182,7 @@
 	b_Lang006 =	Misc.
 	b_Lang007 =	Vòng lặp
 		
-; Main Window		
+; 14. Main Window		
 	w_Lang001 =	Xuất khẩu
 	w_Lang002 =	Xem trước
 	w_Lang003 =	Tùy chọn
@@ -294,7 +291,7 @@
 	w_Lang106 =	Chuyển đổi Macro Để Function (Ctrl + Shift + C)
 	w_Lang107 =	Thảo luận ra các hàng không được kiểm soát
 		
-; Command Windows		
+; 15. Command Windows		
 	c_Lang001 =	Chuột
 	c_Lang002 =	Văn bản
 	c_Lang003 =	Tạm dừng
@@ -520,7 +517,7 @@
 	c_Lang224 =	Các biến địa phương
 	c_Lang225 =	Các biến tĩnh
 		
-; Other Windows		
+; 16. Other Windows		
 	t_Lang001 =	Xuất khẩu sang AutoHotkey
 	t_Lang002 =	Macro
 	t_Lang003 =	Vòng
@@ -698,8 +695,23 @@
 	t_Lang175 =	Misc.
 	t_Lang176 =	Thêm nhóm
 	t_Lang177 =	Nhóm mới
+	t_Lang178 =	Ngôn ngữ biên tập
+	t_Lang179 =	Tạo mới
+	t_Lang180 =	Sử dụng Enter, PgDn và PgUp để điều hướng.
+	t_Lang181 =	Đệ trình
+	t_Lang182 =	Từ
+	t_Lang183 =	Tên
+	t_Lang184 =	E-mail
+	t_Lang185 =	Bộ môn
+	t_Lang186 =	Lời nhắn
+	t_Lang187 =	Lưu thay đổi?
+	t_Lang188 =	Ngôn ngữ tập
+	t_Lang189 =	Tài liệu tham khảo tập tin
+	t_Lang190 =	Gửi sửa đổi hoặc dịch mới
+	t_Lang191 =	Thu gọn tất cả
+	t_Lang192 =	Mở rộng tất cả
 		
-; Messages & Dialogs		
+; 17. Messages & Dialogs		
 	d_Lang001 =	Mở
 	d_Lang002 =	Lưu dự án hiện tại?
 	d_Lang003 =	Cài đặt mặc định
@@ -835,7 +847,7 @@
 	d_Lang101 =	Chức năng trùng lặp.
 	d_Lang102 =	là một từ dành riêng.
 		
-; Start-up Tips		
+; 18. Start-up Tips		
 	Start_Tips =	Bạn có thể tạo macro bằng cách sử dụng nút lệnh trong cửa sổ chính hoặc sử dụng máy ghi âm để sao chép các hành động của bạn. Vào Tùy chọn> Cài đặt> Ghi chọn những đầu vào sẽ được ghi lại.
 		Sử dụng máy ghi âm cho các nhiệm vụ nhanh chóng vào Tùy chọn> Cài đặt> Ghi âm và kiểm tra các "Clear List" tùy chọn. Sau đó nhấn vào nút Record trong cửa sổ chính và sử dụng F10 để xóa vĩ mô hiện tại và bắt đầu một cái mới với các hotkey. Bạn cũng có thể kiểm tra "Luôn đăng nhập" tùy chọn trong cửa sổ chính để tiếp tục ghi âm và phát lại các phím nóng hoạt động.
 		Để có được sự giúp đỡ cho một lệnh cụ thể kích chuột phải vào bất cứ nơi nào trên một cửa sổ lệnh để hiển thị các liên kết đến AutoHotkey trợ giúp trực tuyến.
@@ -864,7 +876,7 @@
 		Bạn có thể đặt biến toàn cầu của riêng bạn để được nạp vào khởi động và sẽ được xuất khẩu. Vào Tùy chọn> Cài đặt> Người dùng biến toàn cầu để thêm chúng.
 		Bạn có thể chạy các chức năng tiên tiến như SUBSTR và RegExReplace từ cửa sổ chức năng (Insert> Nếu cáo / biến / chức năng). Hoặc chạy các chức năng của riêng bạn từ các kịch bản AutoHotkey bên ngoài.
 		
-; Tooltips		
+; 19. Tooltips		
 	AutoKey_TT =	Phím nóng để chơi vĩ mô
 	ManKey_TT =	Phím nóng để chơi vĩ mô "từng bước"
 	AbortKey_TT =	Phím nóng để ngăn chặn phát lại
@@ -944,7 +956,7 @@
 		- Để sử dụng dây, đặt chúng trong dấu ngoặc kép, ví dụ: var = "a".
 		- Nhiều báo cáo được hỗ trợ, ví dụ như: var = "a" || InStr (var, "b").
 		
-; Tooltips from AHK Docs		
+; 20. Tooltips from AHK Docs		
 	ExpList_TT =	Đúp Nhấn vào đây để chỉnh sửa
 	Ex_IfDir_TT =	Tạo phím nóng và hotstrings tùy thuộc bối cảnh nhạy cảm
 		vào loại cửa sổ đang hoạt động hay tồn tại.
@@ -995,7 +1007,7 @@
 	Ex_UV_TT =	Xuất khẩu các biến toàn cầu.
 	Ex_EdVars_TT =	Chọn các biến toàn cầu được xuất khẩu.
 		
-; Operators		
+; 21. Operators		
 	As_Oper_1 =	Gán
 	As_Oper_2 =	Thêm
 	As_Oper_3 =	Trừ
@@ -1011,7 +1023,7 @@
 	Co_Oper_6 =	Lớn hơn hoặc bằng
 	Co_Oper_7 =	Ít hơn hoặc bằng
 		
-; IE Commands Tips		
+; 22. IE Commands Tips		
 	Tip_Navigate =	Điều hướng tới một URL hoặc đường dẫn.
 	Tip_Value =	Được hoặc đặt giá trị của đối tượng.
 	Tip_Focus =	Đặt trọng tâm vào đối tượng.
@@ -1038,7 +1050,7 @@
 	Tip_Height =	Thiết lập hoặc lấy chiều cao của đối tượng.
 	Tip_Length =	Thiết lập hoặc lấy số lượng các đối tượng trong một bộ sưu tập.
 		
-; AHK Commands Tips		
+; 23. AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	Abs	Trả về giá trị tuyệt đối của số.
 	ASin	Trả về arcsine (số có sin là số) trong radian.
@@ -1190,6 +1202,7 @@
 	OnMessage	Quy định cụ thể chức năng gọi tự động khi kịch bản nhận được thông báo cụ thể.
 	Ord	Trả về giá trị thứ tự (mã ký tự số) của các nhân vật đầu tiên trong String.
 	OutputDebug	Gửi một chuỗi các trình sửa lỗi (nếu có) để hiển thị.
+	Parameter	Thêm một tham số cho hàm.
 	Pause	Tạm dừng chủ đề hiện tại của kịch bản.
 	PixelGetColor	Lấy màu sắc của các điểm ảnh ở định x, y tọa độ.
 	PixelSearch	Tìm kiếm một khu vực của màn hình cho một điểm ảnh của các màu sắc quy định.
@@ -1265,6 +1278,7 @@
 	Try	Bảo vệ một hoặc nhiều câu lệnh (lệnh hoặc biểu thức) chống lại các lỗi thời gian chạy và hợp ngoại lệ ném bởi lệnh ném.
 	Until	Áp dụng một điều kiện để việc tiếp tục một vòng hoặc Đối với vòng lặp.
 	UrlDownloadToFile	Tải về một tập tin từ Internet.
+	UserFunction	Tạo ra một cấu trúc chức năng.
 	VarSetCapacity	Phóng to khả năng giữ một biến hoặc giải phóng bộ nhớ của nó. Thông thường, điều này chỉ cần thiết cho trường hợp bất thường như DllCall.
 	WinActivate	Kích hoạt các cửa sổ chỉ định (làm cho nó quan trọng nhất).
 	WinActivateBottom	Giống như WinActivate ngoại trừ việc nó kích hoạt dưới cùng (ít nhất là gần đây hoạt động) cửa sổ phù hợp chứ không phải là trên cùng.

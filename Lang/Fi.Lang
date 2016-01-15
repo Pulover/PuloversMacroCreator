@@ -1,8 +1,8 @@
-﻿LoadLang_Fi:
+﻿Lang_fi
 		
 		; Finnish
 		
-; Main Menu		
+; 01. Main Menu		
 	m_Lang001 =	&Tiedosto
 	m_Lang002 =	&Makro
 	m_Lang003 =	t&oiminto
@@ -14,7 +14,7 @@
 	m_Lang009 =	La&hjoittaa
 	m_Lang010 =	A&pua
 		
-; File Sub Menu		
+; 02. File Sub Menu		
 	f_Lang001 =	&Uusi
 	f_Lang002 =	&Avata
 	f_Lang003 =	&Tallentaa
@@ -28,7 +28,7 @@
 	f_Lang011 =	&Poistua
 	f_Lang012 =	Ei tie&dostoja
 		
-; Macro Sub Menu		
+; 03. Macro Sub Menu		
 	r_Lang001 =	&Nauhoita makro
 	r_Lang002 =	&Aktivoi Makrot
 	r_Lang003 =	&Pelaa Nyt Macro
@@ -45,13 +45,13 @@
 	r_Lang014 =	Tuo Ma&cro
 	r_Lang015 =	Tallenna N&ykyinen Macro
 		
-; Function Sub Menu		
+; 04. Function Sub Menu		
 	u_Lang001 =	&Luo Toiminto
 	u_Lang002 =	L&isää Parametri
 	u_Lang003 =	Li&sää Palaa
 	u_Lang004 =	&Makron muunto Toimiakseen
 		
-; Commands Sub Menu		
+; 05. Commands Sub Menu		
 	i_Lang001 =	&Hiiri
 	i_Lang002 =	&Teksti
 	i_Lang003 =	&Ohjaa
@@ -74,7 +74,7 @@
 	i_Lang020 =	Etsi komento
 		
 		
-; Edit Sub Menu		
+; 06. Edit Sub Menu		
 	e_Lang001 =	&Monistaa
 	e_Lang002 =	&Edit Kommentti
 	e_Lang003 =	E&tsi / korvaa
@@ -90,15 +90,16 @@
 	e_Lang013 =	I&nsertin laatikko
 	e_Lang014 =	Aseta N&äppäilyn
 	e_Lang015 =	E&dit värimerkk
-	e_Lang016 =	Ryhmät
-	e_Lang017 =	Ota ryhmät
-	e_Lang018 =	Lisää ryhmä
-	e_Lang019 =	Poista ryhmä
-	e_Lang020 =	Poista kaikki ryhmät
-	e_Lang021 =	Muokkaa ryhmiä
+	e_Lang016 =	R&yhmät
+	e_Lang017 =	&Ota ryhmät
+	e_Lang018 =	&Lisää ryhmä
+	e_Lang019 =	&Poista ryhmä
+	e_Lang020 =	Po&ista kaikki ryhmät
+	e_Lang021 =	Pi&enennä kaikki
+	e_Lang022 =	L&aajenna kaikki
 		
 		
-; Select Sub Menu		
+; 07. Select Sub Menu		
 	s_Lang001 =	&Valitse kaikki
 	s_Lang002 =	V&alitse Ei
 	s_Lang003 =	&Käänteinen valinta
@@ -110,7 +111,7 @@
 	s_Lang009 =	Va&littu tyyppi
 	s_Lang010 =	Pakkokäyttöisiä
 		
-; View Sub Menu		
+; 08. View Sub Menu		
 	v_Lang001 =	&Aina päällimmäisenä
 	v_Lang002 =	&Korosta Rivejä
 	v_Lang003 =	&Sisennys
@@ -121,26 +122,22 @@
 	v_Lang008 =	Pa&lauta sarakkeet Koko
 	v_Lang009 =	K&uvakkeet Koko
 	v_Lang010 =	Palauta La&yout
-		
 	v_Lang011 =	&Tiedosto
 	v_Lang012 =	T&allentaa ja toistaa
 	v_Lang013 =	&Komennot
 	v_Lang014 =	&Muokata
 	v_Lang015 =	&Vaihtoehtoja
 	v_Lang016 =	M&uokkaa
-		
 	v_Lang017 =	&Automaattinen
 	v_Lang018 =	&Manuaalinen
 	v_Lang019 =	&Lopettaa
 	v_Lang020 =	&Tauko
-		
 	v_Lang021 =	&Kompakti
 	v_Lang022 =	&Oletusarvo
-		
 	v_Lang023 =	&Pieni
 	v_Lang024 =	&Suuri
 		
-; Options Sub Menu		
+; 09. Options Sub Menu		
 	o_Lang001 =	&Asetukset
 	o_Lang002 =	&Kieli
 	o_Lang003 =	&Pienennä Tray
@@ -157,10 +154,10 @@
 	o_Lang014 =	Olet&us Pikanäppäimet
 	o_Lang015 =	Oletusasetukset
 		
-; Donate Sub Menu		
+; 10. Donate Sub Menu		
 	p_Lang001 =	&PayPal lahjoituksen
 		
-; Help Sub Menu		
+; 11. Help Sub Menu		
 	h_Lang001 =	&Apua
 	h_Lang002 =	&Oppaat
 	h_Lang003 =	&Vinkkejä
@@ -171,12 +168,12 @@
 	h_Lang008 =	Ta&rkista käynnistettäessä
 	h_Lang009 =	&Noin
 		
-; Tray Menu		
+; 12. Tray Menu		
 	y_Lang001 =	Piilota ikkuna
 	y_Lang002 =	Näytä ikkuna
 	y_Lang003 =	Hallinnan Työkalupalkki
 		
-; Built-in Vars Menu		
+; 13. Built-in Vars Menu		
 	b_Lang001 =	erikoismerkit
 	b_Lang002 =	ominaisuudet
 	b_Lang003 =	Päivämäärä ja aika
@@ -185,7 +182,7 @@
 	b_Lang006 =	Muut.
 	b_Lang007 =	Silmukka
 		
-; Main Window		
+; 14. Main Window		
 	w_Lang001 =	Vienti
 	w_Lang002 =	Preview
 	w_Lang003 =	Valinnat
@@ -294,7 +291,7 @@
 	w_Lang106 =	Makron muunto Toimiakseen (Ctrl + Shift + C)
 	w_Lang107 =	Kommentoi pois valitsematta riviä
 		
-; Command Windows		
+; 15. Command Windows		
 	c_Lang001 =	Hiiri
 	c_Lang002 =	Teksti
 	c_Lang003 =	Tauko
@@ -520,7 +517,7 @@
 	c_Lang224 =	Paikalliset muuttujat
 	c_Lang225 =	Staattinen muuttujat
 		
-; Other Windows		
+; 16. Other Windows		
 	t_Lang001 =	Vie AutoHotkey
 	t_Lang002 =	Makrot
 	t_Lang003 =	Silmukat
@@ -698,8 +695,23 @@
 	t_Lang175 =	Muut.
 	t_Lang176 =	Lisää ryhmä
 	t_Lang177 =	Uusi ryhmä
+	t_Lang178 =	Kielieditori
+	t_Lang179 =	Luo uusi
+	t_Lang180 =	Käytä Anna, PgDn ja PgUp navigoida.
+	t_Lang181 =	Esittää
+	t_Lang182 =	Alkaen
+	t_Lang183 =	Nimi
+	t_Lang184 =	Sähköposti
+	t_Lang185 =	Aihe
+	t_Lang186 =	Viesti
+	t_Lang187 =	Tallenna muutokset?
+	t_Lang188 =	Kieli Tiedoston
+	t_Lang189 =	Viitetiedoston
+	t_Lang190 =	Lähetä tarkistaminen tai uuden käännöksen
+	t_Lang191 =	Pienennä kaikki
+	t_Lang192 =	Laajenna kaikki
 		
-; Messages & Dialogs		
+; 17. Messages & Dialogs		
 	d_Lang001 =	Avata
 	d_Lang002 =	Tallenna nykyinen projekti?
 	d_Lang003 =	Oletusasetukset
@@ -835,7 +847,7 @@
 	d_Lang101 =	Monista toiminto.
 	d_Lang102 =	on varattu sana.
 		
-; Start-up Tips		
+; 18. Start-up Tips		
 	Start_Tips =	Voit luoda makroja käyttäen Command painikkeet pääikkunassa tai käyttämällä Recorder kopioida toimia. Valitse Valinnat > Asetukset > Tallennus valita mitä panoksia tallennetaan.
 		Voit käyttää tallenninta nopeasti tehtäviä mene Valinnat > Asetukset > Tallennus ja tarkista "Clear List" vaihtoehto. Napsauta sitten Tallenna-painiketta pääikkunassa ja käyttää F10 tyhjentää nykyisen Macro ja aloittaa uuden samalla pikanäppäin. Voit myös tarkistaa "Aina aktiivinen" vaihtoehto pääikkunassa pitää Tallennus ja toisto pikanäppäimiä aktiivinen.
 		Saada apua tietyn komennon hiiren kakkospainikkeella missä tahansa komento ikkuna näyttää linkkejä AutoHotkey ohjeessa.
@@ -864,7 +876,7 @@
 		Voit asettaa oman Global muuttujat ladataan käynnistettäessä ja viedä. Valitse Valinnat > Asetukset > Käyttäjän yleismuuttujat lisätä ne.
 		Voit käyttää kehittyneitä toimintoja, kuten substr ja RegExReplace päässä toiminnot ikkunan (Lisää > Jos Lausunnot / muuttujat / toiminnot). Tai ajaa omia toimintoja ulkopuolisilta AutoHotkey skriptejä.
 		
-; Tooltips		
+; 19. Tooltips		
 	AutoKey_TT =	Pikanäppäin pelata Macro
 	ManKey_TT =	Pikanäppäin pelata Macro "askel-askeleelta"
 	AbortKey_TT =	Pikanäppäin lopettaa toiston
@@ -944,7 +956,7 @@
 		- Jos haluat käyttää jouset, liittää ne lainausmerkkeihin, esimerkiksi: var = "".
 		- Useita ilmoituksia tukevat, esimerkiksi: var = "" || InStr (var, "b").
 		
-; Tooltips from AHK Docs		
+; 20. Tooltips from AHK Docs		
 	ExpList_TT =	Kaksoisnapsauta muokata
 	Ex_IfDir_TT =	Luo tilannekohtaisia ​​pikanäppäimiä ja hotstrings riippuen
 		tyypistä ikkuna, joka on aktiivinen tai on olemassa.
@@ -995,7 +1007,7 @@
 	Ex_UV_TT =	Viedä globaalien muuttujien.
 	Ex_EdVars_TT =	Valitse globaalien muuttujien viedään.
 		
-; Operators		
+; 21. Operators		
 	As_Oper_1 =	Antaa
 	As_Oper_2 =	Lisätä
 	As_Oper_3 =	Vähentää
@@ -1011,7 +1023,7 @@
 	Co_Oper_6 =	Suurempi tai yhtä suuri
 	Co_Oper_7 =	Pienempi tai yhtä suuri
 		
-; IE Commands Tips		
+; 22. IE Commands Tips		
 	Tip_Navigate =	Siirtyy URL tai polku.
 	Tip_Value =	Saa tai asettaa kohteen arvo.
 	Tip_Focus =	Asettaa tarkennuksen kohteeseen.
@@ -1038,7 +1050,7 @@
 	Tip_Height =	Asettaa tai noutaa korkeus esineen.
 	Tip_Length =	Asettaa tai noutaa objektien määrää kokoelma.
 		
-; AHK Commands Tips		
+; 23. AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	Abs	Palauttaa absoluuttinen arvo lukumäärä.
 	ASin	Palauttaakaarisinin (numero , jonka sini on Number) radiaaneina .
@@ -1190,6 +1202,7 @@
 	OnMessage	Määrittää toiminnon soittaa automaattisesti, kun käsikirjoitus vastaanottaa tietyn viestin.
 	Ord	Palauttaa järjestysluku arvo (numeerinen merkki koodi) ensimmäisen merkin merkkijono.
 	OutputDebug	Lähettää merkkijonon debuggeri (mahdolliset) näyttö.
+	Parameter	Lisää parametrin funktio.
 	Pause	Keskeyttää skriptin nykyisen säikeen.
 	PixelGetColor	Noutaa pikselin väriä määritellyssä x, y-koordinaatit.
 	PixelSearch	Hakee alueen näytön pikseli tietyn värin.
@@ -1265,6 +1278,7 @@
 	Try	Vartijat yhden tai useamman lausuntoja (komennot ja ilmaisut) vastaan runtime virheitä ja poikkeuksia heittänyt heittää komennon.
 	Until	Koskee kunnossa jatkoa Loop tai silmukan.
 	UrlDownloadToFile	Lataa tiedoston Internetistä.
+	UserFunction	Luo Tehtävä rakenne.
 	VarSetCapacity	Suurentaa muuttujan vetoisuudeltaan tai vapauttaa sen muistiin. Normaalisti tämä on tarpeen vain syiden vuoksi kuin DllCall.
 	WinActivate	Aktivoi määritetty ikkunan (tekee kaikkea).
 	WinActivateBottom	Sama kuin WinActivate paitsi että se aktivoi alimmainen (ainakin viime aikoina aktiivinen) matching ikkunan sijasta päällimmäinen.

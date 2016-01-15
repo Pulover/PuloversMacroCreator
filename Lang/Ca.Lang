@@ -1,8 +1,8 @@
-﻿LoadLang_Ca:
+﻿Lang_ca
 		
 		; Catalan
 		
-; Main Menu		
+; 01. Main Menu		
 	m_Lang001 =	&Expedient
 	m_Lang002 =	&Macro
 	m_Lang003 =	&funció
@@ -14,7 +14,7 @@
 	m_Lang009 =	Do&nar
 	m_Lang010 =	&Ajudar
 		
-; File Sub Menu		
+; 02. File Sub Menu		
 	f_Lang001 =	&Nou
 	f_Lang002 =	&Obert
 	f_Lang003 =	&Desa
@@ -28,7 +28,7 @@
 	f_Lang011 =	&Sortida
 	f_Lang012 =	No &hi ha arxius
 		
-; Macro Sub Menu		
+; 03. Macro Sub Menu		
 	r_Lang001 =	&Gravar macro
 	r_Lang002 =	&Activar Macros
 	r_Lang003 =	&Jugar Macro actual
@@ -45,13 +45,13 @@
 	r_Lang014 =	Imp&ortació Macro
 	r_Lang015 =	Guardar Ma&cro actual
 		
-; Function Sub Menu		
+; 04. Function Sub Menu		
 	u_Lang001 =	&Crear Funció
 	u_Lang002 =	&Afegir Paràmetre
 	u_Lang003 =	A&fegir Tornar
 	u_Lang004 =	C&onverteix Macro per funcionar
 		
-; Commands Sub Menu		
+; 05. Commands Sub Menu		
 	i_Lang001 =	&Ratolí
 	i_Lang002 =	&Text
 	i_Lang003 =	&Controlar
@@ -74,7 +74,7 @@
 	i_Lang020 =	Trobar una or&dre
 		
 		
-; Edit Sub Menu		
+; 06. Edit Sub Menu		
 	e_Lang001 =	&Duplicar
 	e_Lang002 =	&Redactar comentari
 	e_Lang003 =	&Cercar / Reemplaçar
@@ -90,15 +90,16 @@
 	e_Lang013 =	&Inseriu de Caixa
 	e_Lang014 =	Inserir Pu&lsacions
 	e_Lang015 =	Edit&a color
-	e_Lang016 =	grups
-	e_Lang017 =	Habilitar grups
-	e_Lang018 =	Afegir grup
-	e_Lang019 =	Traieu grup
-	e_Lang020 =	Traieu tots els grups
-	e_Lang021 =	Edita grups
+	e_Lang016 =	&Grups
+	e_Lang017 =	&Habilitar grups
+	e_Lang018 =	&Afegir grup
+	e_Lang019 =	&Traieu grup
+	e_Lang020 =	T&raieu tots els grups
+	e_Lang021 =	&Col · lapsar tot
+	e_Lang022 =	&Expandir tot
 		
 		
-; Select Sub Menu		
+; 07. Select Sub Menu		
 	s_Lang001 =	&Selecciona tot
 	s_Lang002 =	S&eleccioneu Cap
 	s_Lang003 =	&Inverteix la selecció
@@ -110,7 +111,7 @@
 	s_Lang009 =	&Tipus Seleccionat
 	s_Lang010 =	Tipus comando
 		
-; View Sub Menu		
+; 08. View Sub Menu		
 	v_Lang001 =	&Sempre visible
 	v_Lang002 =	&Files Destaquen
 	v_Lang003 =	S&angria
@@ -121,26 +122,22 @@
 	v_Lang008 =	R&establir mida de les columnes
 	v_Lang009 =	&Mida De Les Icones
 	v_Lang010 =	Restab&lir Disseny
-		
 	v_Lang011 =	&Expedient
 	v_Lang012 =	&Gravar i reproduir
 	v_Lang013 =	&Ordres
 	v_Lang014 =	&Modifica
 	v_Lang015 =	O&pcions
 	v_Lang016 =	Pe&rsonalitzar
-		
 	v_Lang017 =	&Automàtic
 	v_Lang018 =	&Manual
 	v_Lang019 =	A&turi
 	v_Lang020 =	&Pausa
-		
 	v_Lang021 =	&Compacte
 	v_Lang022 =	&Defecte
-		
 	v_Lang023 =	&Menor
 	v_Lang024 =	&Gran
 		
-; Options Sub Menu		
+; 09. Options Sub Menu		
 	o_Lang001 =	&Configuració
 	o_Lang002 =	&Idioma
 	o_Lang003 =	&Minimitza a la safata
@@ -157,10 +154,10 @@
 	o_Lang014 =	Tecles &d'accés ràpid predeterminades
 	o_Lang015 =	Confi&guració per defecte
 		
-; Donate Sub Menu		
+; 10. Donate Sub Menu		
 	p_Lang001 =	&PayPal Donació
 		
-; Help Sub Menu		
+; 11. Help Sub Menu		
 	h_Lang001 =	&Ajudar
 	h_Lang002 =	&Tutorials
 	h_Lang003 =	&Consells
@@ -171,12 +168,12 @@
 	h_Lang008 =	C&omproveu en l'arrencada
 	h_Lang009 =	&Sobre
 		
-; Tray Menu		
+; 12. Tray Menu		
 	y_Lang001 =	Hide Window
 	y_Lang002 =	Mostrar finestra
 	y_Lang003 =	Barra D'eines De Controls
 		
-; Built-in Vars Menu		
+; 13. Built-in Vars Menu		
 	b_Lang001 =	Caràcters especials
 	b_Lang002 =	Propietats
 	b_Lang003 =	Data i Hora
@@ -185,7 +182,7 @@
 	b_Lang006 =	Misc.
 	b_Lang007 =	Bucle
 		
-; Main Window		
+; 14. Main Window		
 	w_Lang001 =	Exportar
 	w_Lang002 =	Avanç
 	w_Lang003 =	Opcions
@@ -294,7 +291,7 @@
 	w_Lang106 =	Converteix Macro per funcionar (Ctrl + Shift + C)
 	w_Lang107 =	Comenteu files sense marcar
 		
-; Command Windows		
+; 15. Command Windows		
 	c_Lang001 =	Ratolí
 	c_Lang002 =	Text
 	c_Lang003 =	Pausa
@@ -520,7 +517,7 @@
 	c_Lang224 =	Variables locals
 	c_Lang225 =	Variables estàtiques
 		
-; Other Windows		
+; 16. Other Windows		
 	t_Lang001 =	Exporta a AutoHotkey
 	t_Lang002 =	Macros
 	t_Lang003 =	Loops
@@ -698,8 +695,23 @@
 	t_Lang175 =	Misc.
 	t_Lang176 =	Afegir grup
 	t_Lang177 =	Nou grup
+	t_Lang178 =	Editor d'idiomes
+	t_Lang179 =	Crear nou
+	t_Lang180 =	Utilitzeu Intro, Av Pàg i Re Pàg per navegar.
+	t_Lang181 =	Presentar
+	t_Lang182 =	Des
+	t_Lang183 =	Nom
+	t_Lang184 =	Correu
+	t_Lang185 =	Assignatura
+	t_Lang186 =	Missatge
+	t_Lang187 =	Guardar canvis?
+	t_Lang188 =	Idioma del fitxer
+	t_Lang189 =	Referència de l'expedient
+	t_Lang190 =	Presentar revisió o nova traducció
+	t_Lang191 =	Col · lapsar tot
+	t_Lang192 =	Expandir tot
 		
-; Messages & Dialogs		
+; 17. Messages & Dialogs		
 	d_Lang001 =	Obert
 	d_Lang002 =	Guardar projecte actual?
 	d_Lang003 =	Configuració per defecte
@@ -835,7 +847,7 @@
 	d_Lang101 =	Funció Duplicar.
 	d_Lang102 =	és una paraula reservada.
 		
-; Start-up Tips		
+; 18. Start-up Tips		
 	Start_Tips =	Podeu crear macros utilitzant els botons de comandament a la finestra principal o l'ús de la gravadora per copiar les seves accions. Aneu a Opcions> Configuració> Gravació per seleccionar el que es registren les entrades.
 		Per utilitzar la gravadora per a tasques ràpides aneu a Opcions> Configuració> Gravació i marqui l'opció "Esborrar llista". A continuació, feu clic al botó de gravació a la finestra principal i utilitzar F10 per esborrar la macro actual i iniciar un de nou amb la mateixa combinació de tecles. També podeu consultar l'opció "Sempre actiu" en la finestra principal a tenir enregistrament i reproducció hotkeys actiu.
 		Per obtenir ajuda per a una ordre específic feu clic dret en qualsevol part de la finestra de comandaments per mostrar enllaços a AutoHotkey ajuda en línia.
@@ -864,7 +876,7 @@
 		Podeu definir les seves pròpies variables globals per ser carregat en l'arrencada i per a l'exportació. Aneu a Opcions> Configuració> Usuari Variables globals per afegir.
 		Podeu executar funcions avançades com ara substr i RegExReplace de la finestra Funcions (Inserir> Si Declaracions / variables / funcions). O executar les seves pròpies funcions de seqüència AutoHotkey externs.
 		
-; Tooltips		
+; 19. Tooltips		
 	AutoKey_TT =	Tecla d'accés directe per jugar Macro
 	ManKey_TT =	Tecla d'accés directe per jugar Macro "pas a pas"
 	AbortKey_TT =	Hotkey per aturar la reproducció
@@ -944,7 +956,7 @@
 		- Per utilitzar cordes, tancar-los entre cometes, per exemple: var = "a".
 		- Són compatibles Diverses sentències, per exemple: var = "a" || Instr (var, "b").
 		
-; Tooltips from AHK Docs		
+; 20. Tooltips from AHK Docs		
 	ExpList_TT =	Feu doble clic per editar
 	Ex_IfDir_TT =	Crea dreceres de teclat i hotstrings depenent contextuals
 		en el tipus de finestra que és actiu o no existeix.
@@ -995,7 +1007,7 @@
 	Ex_UV_TT =	Exportar variables globals.
 	Ex_EdVars_TT =	Seleccionar variables globals destinats a l'exportació.
 		
-; Operators		
+; 21. Operators		
 	As_Oper_1 =	Assignar
 	As_Oper_2 =	Afegir
 	As_Oper_3 =	Sostreure
@@ -1011,7 +1023,7 @@
 	Co_Oper_6 =	Major o igual
 	Co_Oper_7 =	Menor o igual
 		
-; IE Commands Tips		
+; 22. IE Commands Tips		
 	Tip_Navigate =	Es desplaça a una adreça URL o la ruta.
 	Tip_Value =	Obté o estableix el valor de l'objecte.
 	Tip_Focus =	Estableix el focus a l'objecte.
@@ -1038,7 +1050,7 @@
 	Tip_Height =	Estableix o recupera l'alçada de l'objecte.
 	Tip_Length =	Estableix o recupera el nombre d'objectes en una col · lecció.
 		
-; AHK Commands Tips		
+; 23. AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	Abs	Retorna el valor absolut del nombre .
 	ASin	Retorna l'arc si ( el nombre el si és Number ) en radians .
@@ -1190,6 +1202,7 @@
 	OnMessage	Especifica una funció per cridar automàticament quan l'script rep el missatge especificat.
 	Ord	Retorna el valor ordinal (codi de caràcter numèric) del primer caràcter en la cadena.
 	OutputDebug	Envia una cadena per al depurador (si escau) per a la seva visualització.
+	Parameter	Afegeix un paràmetre a la funció.
 	Pause	Les pauses subprocés actual de l'script.
 	PixelGetColor	Recupera el color del píxel a la x especificat, les coordenades i.
 	PixelSearch	Busca en una regió de la pantalla per un píxel del color especificat.
@@ -1265,6 +1278,7 @@
 	Try	Guàrdies d'una o més instruccions (ordres o expressions) contra els errors d'execució i excepcions llançades pel comando de tir.
 	Until	Aplica una condició per a la continuació d'un cicle o bucle for.
 	UrlDownloadToFile	Descarrega un arxiu des d'Internet.
+	UserFunction	Crea una estructura de funcions.
 	VarSetCapacity	Amplia la capacitat de retenció d'una variable o allibera la seva memòria. Normalment, això és necessari només per circumstàncies inusuals com ara DllCall.
 	WinActivate	Activa la finestra especificada (ho fa sobretot).
 	WinActivateBottom	Igual que WinActivate excepte que activa el situat més avall (menys actiu recentment) Finestra a joc en lloc de la més alta.

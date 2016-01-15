@@ -1,8 +1,8 @@
-﻿LoadLang_Id:
+﻿Lang_id
 		
 		; Indonesian
 		
-; Main Menu		
+; 01. Main Menu		
 	m_Lang001 =	&Berkas
 	m_Lang002 =	&Makro
 	m_Lang003 =	&Fungsi
@@ -14,7 +14,7 @@
 	m_Lang009 =	Me&nyumbangkan
 	m_Lang010 =	Memb&antu
 		
-; File Sub Menu		
+; 02. File Sub Menu		
 	f_Lang001 =	&Baru
 	f_Lang002 =	B&uka
 	f_Lang003 =	&Menyimpan
@@ -28,7 +28,7 @@
 	f_Lang011 =	&Keluar
 	f_Lang012 =	&Tidak ada file
 		
-; Macro Sub Menu		
+; 03. Macro Sub Menu		
 	r_Lang001 =	&Rekam Makro
 	r_Lang002 =	&Aktifkan Macro
 	r_Lang003 =	&Bermain Makro sekarang
@@ -45,13 +45,13 @@
 	r_Lang014 =	Im&por Makro
 	r_Lang015 =	&Simpan Makro sekarang
 		
-; Function Sub Menu		
+; 04. Function Sub Menu		
 	u_Lang001 =	&Buat Fungsi
 	u_Lang002 =	&Tambahkan Parameter
 	u_Lang003 =	T&ambahkan Kembali
 	u_Lang004 =	&Mengkonversi Makro Untuk Fungsi
 		
-; Commands Sub Menu		
+; 05. Commands Sub Menu		
 	i_Lang001 =	&Mouse
 	i_Lang002 =	&Teks
 	i_Lang003 =	&Kontrol
@@ -74,7 +74,7 @@
 	i_Lang020 =	Ca&ri perintah
 		
 		
-; Edit Sub Menu		
+; 06. Edit Sub Menu		
 	e_Lang001 =	&Duplikat
 	e_Lang002 =	&Mengedit Komentar
 	e_Lang003 =	&Cari / Ganti
@@ -90,15 +90,16 @@
 	e_Lang013 =	S&isipkan dari Box
 	e_Lang014 =	M&asukkan keystroke
 	e_Lang015 =	S&unting Warna Mark
-	e_Lang016 =	Grup
-	e_Lang017 =	Memungkinkan kelompok
-	e_Lang018 =	Menambahkan grup
-	e_Lang019 =	Menghapus grup
-	e_Lang020 =	Hapus semua kelompok
-	e_Lang021 =	Kelompok mengedit
+	e_Lang016 =	&Grup
+	e_Lang017 =	&Memungkinkan kelompok
+	e_Lang018 =	M&enambahkan grup
+	e_Lang019 =	Me&nghapus grup
+	e_Lang020 =	&Hapus semua kelompok
+	e_Lang021 =	&Tutup semua
+	e_Lang022 =	Me&lebarkan semua
 		
 		
-; Select Sub Menu		
+; 07. Select Sub Menu		
 	s_Lang001 =	&Pilih Semua
 	s_Lang002 =	P&ilih Kosong
 	s_Lang003 =	I&nvert Selection
@@ -110,7 +111,7 @@
 	s_Lang009 =	Dipi&lih Type
 	s_Lang010 =	Ketik perintah
 		
-; View Sub Menu		
+; 08. View Sub Menu		
 	v_Lang001 =	&Always On Top
 	v_Lang002 =	&Baris Sorot
 	v_Lang003 =	&Lekukan
@@ -121,26 +122,22 @@
 	v_Lang008 =	Ula&ng Kolom Ukuran
 	v_Lang009 =	&Ukuran Ikon
 	v_Lang010 =	Atu&r Ulang Tata Letak
-		
 	v_Lang011 =	&Berkas
 	v_Lang012 =	&Rekam dan Putar
 	v_Lang013 =	&Perintah
 	v_Lang014 =	&Mengedit
 	v_Lang015 =	P&ilihan
 	v_Lang016 =	&Sesuaikan
-		
 	v_Lang017 =	&Otomatis
 	v_Lang018 =	&Pedoman
 	v_Lang019 =	&Berhenti
 	v_Lang020 =	B&erhenti sebentar
-		
 	v_Lang021 =	&Padat
 	v_Lang022 =	&Kegagalan
-		
 	v_Lang023 =	&Kecil
 	v_Lang024 =	&Besar
 		
-; Options Sub Menu		
+; 09. Options Sub Menu		
 	o_Lang001 =	&Pengaturan
 	o_Lang002 =	&Bahasa
 	o_Lang003 =	&Minimalkan ke tray
@@ -157,10 +154,10 @@
 	o_Lang014 =	H&otkeys standar
 	o_Lang015 =	Pengat&uran Default
 		
-; Donate Sub Menu		
+; 10. Donate Sub Menu		
 	p_Lang001 =	&Donasi PayPal
 		
-; Help Sub Menu		
+; 11. Help Sub Menu		
 	h_Lang001 =	&Membantu
 	h_Lang002 =	&Tutorial
 	h_Lang003 =	T&ips
@@ -171,12 +168,12 @@
 	h_Lang008 =	P&eriksa pada startup
 	h_Lang009 =	Te&ntang
 		
-; Tray Menu		
+; 12. Tray Menu		
 	y_Lang001 =	Sembunyikan Jendela
 	y_Lang002 =	Tampilkan Jendela
 	y_Lang003 =	Kontrol Toolbar
 		
-; Built-in Vars Menu		
+; 13. Built-in Vars Menu		
 	b_Lang001 =	Karakter Khusus
 	b_Lang002 =	properti
 	b_Lang003 =	Tanggal dan Waktu
@@ -185,7 +182,7 @@
 	b_Lang006 =	Lain-lain.
 	b_Lang007 =	Putaran
 		
-; Main Window		
+; 14. Main Window		
 	w_Lang001 =	Ekspor
 	w_Lang002 =	Preview
 	w_Lang003 =	Pilihan
@@ -294,7 +291,7 @@
 	w_Lang106 =	Mengkonversi Makro Untuk Fungsi (Ctrl + Shift + C)
 	w_Lang107 =	Komentar dari baris dicentang
 		
-; Command Windows		
+; 15. Command Windows		
 	c_Lang001 =	Mouse
 	c_Lang002 =	Teks
 	c_Lang003 =	Berhenti sebentar
@@ -520,7 +517,7 @@
 	c_Lang224 =	Variabel lokal
 	c_Lang225 =	Variabel statis
 		
-; Other Windows		
+; 16. Other Windows		
 	t_Lang001 =	Ekspor ke AutoHotkey
 	t_Lang002 =	Macro
 	t_Lang003 =	Loops
@@ -698,8 +695,23 @@
 	t_Lang175 =	Lain-Lain.
 	t_Lang176 =	Menambahkan grup
 	t_Lang177 =	Kelompok baru
+	t_Lang178 =	Bahasa Editor
+	t_Lang179 =	Buat yang baru
+	t_Lang180 =	Gunakan Masukkan, PgDn dan PgUp untuk menavigasi.
+	t_Lang181 =	Menyerahkan
+	t_Lang182 =	Dari
+	t_Lang183 =	Nama
+	t_Lang184 =	E-mail
+	t_Lang185 =	Subyek
+	t_Lang186 =	Pesan
+	t_Lang187 =	Simpan perubahan?
+	t_Lang188 =	Bahasa Berkas
+	t_Lang189 =	Referensi Berkas
+	t_Lang190 =	Kirim revisi atau terjemahan baru
+	t_Lang191 =	Tutup semua
+	t_Lang192 =	Melebarkan semua
 		
-; Messages & Dialogs		
+; 17. Messages & Dialogs		
 	d_Lang001 =	Buka
 	d_Lang002 =	Simpan proyek saat ini?
 	d_Lang003 =	Pengaturan Default
@@ -835,7 +847,7 @@
 	d_Lang101 =	Fungsi duplikat.
 	d_Lang102 =	adalah kata reserved.
 		
-; Start-up Tips		
+; 18. Start-up Tips		
 	Start_Tips =	Anda dapat membuat Macro dengan menggunakan Tombol Perintah di jendela utama atau menggunakan Recorder untuk menyalin tindakan Anda. Buka Opsi> Pengaturan> Merekam untuk memilih apa yang input akan disimpan.
 		Untuk menggunakan perekam untuk tugas-tugas cepat masuk ke Pilihan> Pengaturan> Recording dan periksa "Clear List" pilihan. Kemudian klik tombol Record di jendela utama dan menggunakan F10 untuk menghapus Makro saat ini dan memulai yang baru dengan hotkey yang sama. Anda juga dapat memeriksa "Selalu Aktif" pilihan di jendela utama untuk menjaga Recording dan Playback hotkeys aktif.
 		Untuk mendapatkan bantuan untuk perintah tertentu klik kanan di mana saja di jendela perintah untuk menampilkan link ke Autohotkey Bantuan online.
@@ -864,7 +876,7 @@
 		Anda dapat mengatur Variabel global Anda sendiri yang akan dimuat pada start up dan diekspor. Pergi ke Pilihan> Pengaturan> User global Variabel untuk menambahkannya.
 		Anda dapat menjalankan fungsi-fungsi lanjutan seperti substr dan RegExReplace dari jendela Fungsi (Insert> Jika Laporan / Variabel / Fungsi). Atau menjalankan fungsi-fungsi anda sendiri dari script Autohotkey eksternal.
 		
-; Tooltips		
+; 19. Tooltips		
 	AutoKey_TT =	Hotkey untuk bermain Makro
 	ManKey_TT =	Hotkey untuk bermain Makro "langkah-demi-langkah"
 	AbortKey_TT =	Hotkey untuk menghentikan pemutaran
@@ -944,7 +956,7 @@
 		- Untuk menggunakan string, menyertakan mereka dalam tanda kutip, misalnya: var = "a".
 		- Beberapa Laporan yang didukung, misalnya: var = "a" || InStr (var, "b").
 		
-; Tooltips from AHK Docs		
+; 20. Tooltips from AHK Docs		
 	ExpList_TT =	Double-Klik untuk mengedit
 	Ex_IfDir_TT =	Menciptakan konteks-sensitif hotkeys dan hotstrings tergantung
 		pada jenis jendela yang aktif atau ada.
@@ -995,7 +1007,7 @@
 	Ex_UV_TT =	Ekspor variabel global.
 	Ex_EdVars_TT =	Pilih variabel global yang akan diekspor.
 		
-; Operators		
+; 21. Operators		
 	As_Oper_1 =	Menetapkan
 	As_Oper_2 =	Menambahkan
 	As_Oper_3 =	Mengurangi
@@ -1011,7 +1023,7 @@
 	Co_Oper_6 =	Lebih besar atau sama
 	Co_Oper_7 =	Kurang atau sama
 		
-; IE Commands Tips		
+; 22. IE Commands Tips		
 	Tip_Navigate =	Menavigasi ke URL atau path.
 	Tip_Value =	Mendapatkan atau menetapkan nilai objek.
 	Tip_Focus =	Mengatur fokus ke objek.
@@ -1038,7 +1050,7 @@
 	Tip_Height =	Mengatur atau mengambil ketinggian objek.
 	Tip_Length =	Mengatur atau mengambil jumlah objek dalam koleksi.
 		
-; AHK Commands Tips		
+; 23. AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	Abs	Mengembalikan nilai absolut Nomor.
 	ASin	Mengembalikan arcsine (jumlah yang sinus adalah Number) dalam radian.
@@ -1190,6 +1202,7 @@
 	OnMessage	Menentukan fungsi untuk memanggil secara otomatis ketika script menerima pesan tertentu.
 	Ord	Mengembalikan nilai ordinal (kode karakter numerik) dari karakter pertama dalam String.
 	OutputDebug	Mengirim string ke debugger (jika ada) untuk ditampilkan.
+	Parameter	Menambahkan parameter ke fungsi.
 	Pause	Jeda benang naskah saat ini.
 	PixelGetColor	Mengambil warna pixel pada x tertentu, y koordinat.
 	PixelSearch	Mencari sebuah wilayah layar untuk pixel dari warna tertentu.
@@ -1265,6 +1278,7 @@
 	Try	Pengawal satu atau lebih pernyataan (perintah atau ekspresi) terhadap kesalahan runtime dan pengecualian dilemparkan oleh perintah throw.
 	Until	Berlaku kondisi untuk kelanjutan Loop atau Untuk loop.
 	UrlDownloadToFile	Mendownload file dari Internet.
+	UserFunction	Menciptakan struktur Fungsi.
 	VarSetCapacity	Memperbesar kapasitas memegang variabel atau membebaskan memori. Biasanya, ini diperlukan hanya untuk kondisi yang tidak biasa seperti DllCall.
 	WinActivate	Mengaktifkan jendela yang ditentukan (membuatnya utama).
 	WinActivateBottom	Sama seperti WinActivate kecuali bahwa ia mengaktifkan paling bawah (paling baru ini aktif) jendela pencocokan daripada teratas.

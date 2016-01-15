@@ -58,7 +58,7 @@ Thiago Talma for some improvements to the code, debugging and many suggestions.
 * Added option to comment out unchecked rows in Preview/Exported scripts.
 * Added translations to Arabic and Thai.
 * Added Language editor in *Settings* window.
-* Languages files are now kept in the Lang folder and can be added or removed.
+* Languages files are now kept in the Lang folder and can be added, modified or removed.
 * Updated "Loop, File" and "Loop, Reg" to new format with "Mode" parameter.
 * Changed "List Variables" to display User-Defined variables only.
 * Fixed corrupted pmc files saved on exit.

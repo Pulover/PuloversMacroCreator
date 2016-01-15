@@ -1,8 +1,8 @@
-﻿LoadLang_Cs:
+﻿Lang_cs
 		
 		; Czech
 		
-; Main Menu		
+; 01. Main Menu		
 	m_Lang001 =	&Soubor
 	m_Lang002 =	&Makro
 	m_Lang003 =	&Funkce
@@ -14,7 +14,7 @@
 	m_Lang009 =	&Darovat
 	m_Lang010 =	Pomo&c
 		
-; File Sub Menu		
+; 02. File Sub Menu		
 	f_Lang001 =	&Nový
 	f_Lang002 =	&Otevřít
 	f_Lang003 =	&Uložit
@@ -28,7 +28,7 @@
 	f_Lang011 =	O&dchod
 	f_Lang012 =	&Žádné soubory
 		
-; Macro Sub Menu		
+; 03. Macro Sub Menu		
 	r_Lang001 =	&Záznam makra
 	r_Lang002 =	&Aktivace makra
 	r_Lang003 =	&Hrát Aktuální makro
@@ -45,13 +45,13 @@
 	r_Lang014 =	D&ovoz Makro
 	r_Lang015 =	U&ložit aktuální makro
 		
-; Function Sub Menu		
+; 04. Function Sub Menu		
 	u_Lang001 =	&Vytvoření funkce
 	u_Lang002 =	&Přidat parametr
 	u_Lang003 =	P&řidat návrat
 	u_Lang004 =	Př&evést makra fungovat
 		
-; Commands Sub Menu		
+; 05. Commands Sub Menu		
 	i_Lang001 =	&Myš
 	i_Lang002 =	&Text
 	i_Lang003 =	&Ovládání
@@ -74,7 +74,7 @@
 	i_Lang020 =	Na&jít příkaz
 		
 		
-; Edit Sub Menu		
+; 06. Edit Sub Menu		
 	e_Lang001 =	&Duplikát
 	e_Lang002 =	&Upravit komentář
 	e_Lang003 =	&Najít / Nahradit
@@ -90,15 +90,16 @@
 	e_Lang013 =	Vlo&žit z krabice
 	e_Lang014 =	Vlož&it Klávesy
 	e_Lang015 =	&Edit barva označuje
-	e_Lang016 =	Skupiny
-	e_Lang017 =	Povolit skupiny
-	e_Lang018 =	Přidat skupinu
-	e_Lang019 =	Odstranit skupinu
-	e_Lang020 =	Odstranit všechny skupiny
-	e_Lang021 =	Upravit skupiny
+	e_Lang016 =	Skupin&y
+	e_Lang017 =	&Povolit skupiny
+	e_Lang018 =	P&řidat skupinu
+	e_Lang019 =	&Odstranit skupinu
+	e_Lang020 =	O&dstranit všechny skupiny
+	e_Lang021 =	&Sbalit vše
+	e_Lang022 =	&Rozšířit vše
 		
 		
-; Select Sub Menu		
+; 07. Select Sub Menu		
 	s_Lang001 =	&Vybrat vše
 	s_Lang002 =	V&yberte None
 	s_Lang003 =	&Invertovat výběr
@@ -110,7 +111,7 @@
 	s_Lang009 =	Vy&brané Type
 	s_Lang010 =	Typ příkazu
 		
-; View Sub Menu		
+; 08. View Sub Menu		
 	v_Lang001 =	&Vždy navrchu
 	v_Lang002 =	&Zvýraznění Řádků
 	v_Lang003 =	&Odsazení
@@ -121,26 +122,22 @@
 	v_Lang008 =	O&bnovit sloupce Velikost
 	v_Lang009 =	&Ikony Velikost
 	v_Lang010 =	Obnovi&t Rozložení
-		
 	v_Lang011 =	&Soubor
 	v_Lang012 =	&Nahrávat a přehrávat
 	v_Lang013 =	&Příkazy
 	v_Lang014 =	&Editovat
 	v_Lang015 =	&Možnosti
 	v_Lang016 =	&Vlastní
-		
 	v_Lang017 =	&Automatický
 	v_Lang018 =	&Manuál
 	v_Lang019 =	&Zastavit
 	v_Lang020 =	&Pauza
-		
 	v_Lang021 =	&Kompaktní
 	v_Lang022 =	&Standardní
-		
 	v_Lang023 =	&Malý
 	v_Lang024 =	&Velký
 		
-; Options Sub Menu		
+; 09. Options Sub Menu		
 	o_Lang001 =	&Nastavení
 	o_Lang002 =	&Jazyk
 	o_Lang003 =	&Minimalizovat do tray
@@ -157,10 +154,10 @@
 	o_Lang014 =	V&ýchozí Klávesové zkratky
 	o_Lang015 =	Vý&chozí nastavení
 		
-; Donate Sub Menu		
+; 10. Donate Sub Menu		
 	p_Lang001 =	&PayPal Donation
 		
-; Help Sub Menu		
+; 11. Help Sub Menu		
 	h_Lang001 =	&Pomoc
 	h_Lang002 =	&Návody
 	h_Lang003 =	&Tipy
@@ -171,12 +168,12 @@
 	h_Lang008 =	P&odívejte se na startu
 	h_Lang009 =	O
 		
-; Tray Menu		
+; 12. Tray Menu		
 	y_Lang001 =	Skrýt okno
 	y_Lang002 =	Zobrazit okno
 	y_Lang003 =	Ovládací Prvky Panelu Nástrojů
 		
-; Built-in Vars Menu		
+; 13. Built-in Vars Menu		
 	b_Lang001 =	Speciální znaky
 	b_Lang002 =	Nemovitosti
 	b_Lang003 =	Datum a čas
@@ -185,7 +182,7 @@
 	b_Lang006 =	Misc.
 	b_Lang007 =	Smyčka
 		
-; Main Window		
+; 14. Main Window		
 	w_Lang001 =	Export
 	w_Lang002 =	Náhled
 	w_Lang003 =	Možnosti
@@ -294,7 +291,7 @@
 	w_Lang106 =	Převést makra fungovat (Ctrl + Shift + C)
 	w_Lang107 =	Komentář mimo nezkontrolované řádků
 		
-; Command Windows		
+; 15. Command Windows		
 	c_Lang001 =	Myš
 	c_Lang002 =	Text
 	c_Lang003 =	Pauza
@@ -520,7 +517,7 @@
 	c_Lang224 =	Lokální proměnné
 	c_Lang225 =	Statické proměnné
 		
-; Other Windows		
+; 16. Other Windows		
 	t_Lang001 =	Export do AutoHotkey
 	t_Lang002 =	Makra
 	t_Lang003 =	Smyčky
@@ -698,8 +695,23 @@
 	t_Lang175 =	Misc.
 	t_Lang176 =	Přidat skupinu
 	t_Lang177 =	Nová skupina
+	t_Lang178 =	Editor jazyka
+	t_Lang179 =	Vytvořit nový
+	t_Lang180 =	Používejte Enter, PgDn a PgUp pro navigaci.
+	t_Lang181 =	Předložit
+	t_Lang182 =	Z
+	t_Lang183 =	Jméno
+	t_Lang184 =	E-mail
+	t_Lang185 =	Předmět
+	t_Lang186 =	Zpráva
+	t_Lang187 =	Uložit změny?
+	t_Lang188 =	Jazyk Soubor
+	t_Lang189 =	Referenční soubor
+	t_Lang190 =	Odeslat revizi nebo nový překlad
+	t_Lang191 =	Sbalit vše
+	t_Lang192 =	Rozšířit vše
 		
-; Messages & Dialogs		
+; 17. Messages & Dialogs		
 	d_Lang001 =	Otevřít
 	d_Lang002 =	Uložit aktuální projekt?
 	d_Lang003 =	Výchozí nastavení
@@ -835,7 +847,7 @@
 	d_Lang101 =	Duplicitní funkce.
 	d_Lang102 =	je vyhrazené slovo.
 		
-; Start-up Tips		
+; 18. Start-up Tips		
 	Start_Tips =	Můžete vytvářet makra pomocí příkazových tlačítek v hlavním okně, nebo pomocí rekordéru kopírovat své akce. Přejít na Možnosti > Nastavení > Nahrávání na vstupy vybrat, co budou zaznamenány.
 		Chcete-li použít rekordér pro rychlé úkoly, jít do Volby > Nastavení > Nahrávání a zaškrtněte "Vymazat seznam" možnost volby. Poté klikněte na tlačítko Record v hlavním okně a pomocí F10 pro vymazání aktuálního makra a začít novou se stejnou klávesovou zkratku. Můžete také zaškrtnout volbu "vždy aktivní" v hlavním okně udržet nahrávání a přehrávání klávesy aktivní.
 		Chcete-li získat nápovědu pro konkrétní příkaz klepněte pravým tlačítkem myši na okně příkazového řádku se zobrazí odkazy na AutoHotkey nápovědě.
@@ -864,7 +876,7 @@
 		Můžete si nastavit vlastní Globální proměnné má být naloženo na spuštění a které má být vyvezeno. Přejít na Možnosti > Nastavení > Uživatelská globální proměnné přidat.
 		Můžete spustit pokročilé funkce jako substr a RegExReplace z funkcí okna (Vložit > if / proměnné / funkce). Nebo spustit vlastní funkce z externích AutoHotKey skriptů.
 		
-; Tooltips		
+; 19. Tooltips		
 	AutoKey_TT =	Klávesová zkratka pro přehrávání makra
 	ManKey_TT =	Klávesová zkratka pro přehrávání makra "krok-za-krokem"
 	AbortKey_TT =	Klávesová zkratka pro zastavení přehrávání
@@ -944,7 +956,7 @@
 		- Chcete-li použít řetězce, uzavřete do uvozovek, například: var = "A".
 		- Více příkazů jsou podporovány, např: var = "a" || InStr (var, "b").
 		
-; Tooltips from AHK Docs		
+; 20. Tooltips from AHK Docs		
 	ExpList_TT =	Dvakrát klikněte na upravit
 	Ex_IfDir_TT =	Vytvoří Kontextová klávesové zkratky a hotstrings závislosti
 		na typu okna, který je aktivní, nebo existuje.
@@ -995,7 +1007,7 @@
 	Ex_UV_TT =	Export globální proměnné.
 	Ex_EdVars_TT =	Vyberte globální proměnné, které chcete exportovat.
 		
-; Operators		
+; 21. Operators		
 	As_Oper_1 =	Přiřadit
 	As_Oper_2 =	Přidat
 	As_Oper_3 =	Odčítat
@@ -1011,7 +1023,7 @@
 	Co_Oper_6 =	Větší nebo rovno
 	Co_Oper_7 =	Menší nebo roven
 		
-; IE Commands Tips		
+; 22. IE Commands Tips		
 	Tip_Navigate =	Přejde na adresu URL nebo cesty.
 	Tip_Value =	Získá nebo nastaví hodnotu objektu.
 	Tip_Focus =	Nastaví fokus na objekt.
@@ -1038,7 +1050,7 @@
 	Tip_Height =	Nastaví nebo získá výšku objektu.
 	Tip_Length =	Nastaví nebo získá počet objektů v kolekci.
 		
-; AHK Commands Tips		
+; 23. AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	Abs	Vrátí absolutní hodnotu čísla.
 	ASin	Vrací arkussinus (číslo, jehož sinus je číslo) v radiánech .
@@ -1190,6 +1202,7 @@
 	OnMessage	Určuje funkce pro volání automaticky, když skript obdrží zadanou zprávu.
 	Ord	Vrátí pořadové hodnotu (číselný kód znaku) prvního znaku v řetězci.
 	OutputDebug	Odešle řetězec ladicí program (pokud existuje) na displeji.
+	Parameter	Přidá parametr do funkce.
 	Pause	Pozastavení skriptu aktuální podproces.
 	PixelGetColor	Načte barvu pixelu na zadané souřadnice X, Y.
 	PixelSearch	Prohledá oblast obrazovky pro pixelu určení barvy.
@@ -1265,6 +1278,7 @@
 	Try	Chrániče jeden nebo více příkazů (příkazy nebo výrazy) proti runtime chyby a výjimky vyvolané příkazem throw.
 	Until	Platí podmínku pro pokračování Loop nebo cyklus for.
 	UrlDownloadToFile	Stáhne soubor z internetu.
+	UserFunction	Stvara funkciju strukturu.
 	VarSetCapacity	Zvětšení proměnné kapacitu ustájení nebo uvolní jeho paměť. Normálně, je to nutné jen pro mimořádných okolností, jako jsou DllCall.
 	WinActivate	Aktivuje uvedené okno (dělá to především).
 	WinActivateBottom	Stejné jako WinActivate kromě toho, že se aktivuje nejspodnější (alespoň v poslední době aktivní) odpovídající okno, spíše než nejvyšší.

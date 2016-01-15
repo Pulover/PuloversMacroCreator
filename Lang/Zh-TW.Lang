@@ -1,8 +1,8 @@
-﻿LoadLang_Zh-Hant:
+﻿Lang_zh-TW
 		
 		; Chinese Traditional
 		
-; Main Menu		
+; 01. Main Menu		
 	m_Lang001 =	文件
 	m_Lang002 =	宏
 	m_Lang003 =	功能
@@ -14,7 +14,7 @@
 	m_Lang009 =	捐贈
 	m_Lang010 =	幫助
 		
-; File Sub Menu		
+; 02. File Sub Menu		
 	f_Lang001 =	新
 	f_Lang002 =	打開
 	f_Lang003 =	節省
@@ -28,7 +28,7 @@
 	f_Lang011 =	出口
 	f_Lang012 =	沒有文件
 		
-; Macro Sub Menu		
+; 03. Macro Sub Menu		
 	r_Lang001 =	錄製宏
 	r_Lang002 =	激活宏
 	r_Lang003 =	播放當前宏觀經濟
@@ -45,13 +45,13 @@
 	r_Lang014 =	進口宏
 	r_Lang015 =	保存當前宏觀經濟
 		
-; Function Sub Menu		
+; 04. Function Sub Menu		
 	u_Lang001 =	創建函數
 	u_Lang002 =	添加參數
 	u_Lang003 =	添加返回
 	u_Lang004 =	宏轉換功能
 		
-; Commands Sub Menu		
+; 05. Commands Sub Menu		
 	i_Lang001 =	鼠標
 	i_Lang002 =	文本
 	i_Lang003 =	控制
@@ -74,7 +74,7 @@
 	i_Lang020 =	查找命令
 		
 		
-; Edit Sub Menu		
+; 06. Edit Sub Menu		
 	e_Lang001 =	複製
 	e_Lang002 =	編輯點評
 	e_Lang003 =	查找/替換
@@ -95,10 +95,11 @@
 	e_Lang018 =	添加組
 	e_Lang019 =	刪除組
 	e_Lang020 =	刪除所有組
-	e_Lang021 =	編輯組
+	e_Lang021 =	全部收縮
+	e_Lang022 =	展開全部
 		
 		
-; Select Sub Menu		
+; 07. Select Sub Menu		
 	s_Lang001 =	全選
 	s_Lang002 =	選擇“無”
 	s_Lang003 =	反向選擇
@@ -110,7 +111,7 @@
 	s_Lang009 =	所選類型
 	s_Lang010 =	命令類型
 		
-; View Sub Menu		
+; 08. View Sub Menu		
 	v_Lang001 =	總在最前
 	v_Lang002 =	亮點行
 	v_Lang003 =	縮進
@@ -121,26 +122,22 @@
 	v_Lang008 =	重列大小
 	v_Lang009 =	圖標尺寸
 	v_Lang010 =	重佈局
-		
 	v_Lang011 =	文件
 	v_Lang012 =	錄製和播放
 	v_Lang013 =	命令
 	v_Lang014 =	編輯
 	v_Lang015 =	選項
 	v_Lang016 =	定制
-		
 	v_Lang017 =	自動
 	v_Lang018 =	手冊
 	v_Lang019 =	停止
 	v_Lang020 =	暫停
-		
 	v_Lang021 =	緊湊
 	v_Lang022 =	默認
-		
 	v_Lang023 =	小
 	v_Lang024 =	大
 		
-; Options Sub Menu		
+; 09. Options Sub Menu		
 	o_Lang001 =	設置
 	o_Lang002 =	語
 	o_Lang003 =	最小化到托盤
@@ -157,10 +154,10 @@
 	o_Lang014 =	默認熱鍵
 	o_Lang015 =	默認設置
 		
-; Donate Sub Menu		
+; 10. Donate Sub Menu		
 	p_Lang001 =	PayPal捐贈
 		
-; Help Sub Menu		
+; 11. Help Sub Menu		
 	h_Lang001 =	幫助
 	h_Lang002 =	教程
 	h_Lang003 =	溫馨提示
@@ -171,12 +168,12 @@
 	h_Lang008 =	檢查啟動
 	h_Lang009 =	關於
 		
-; Tray Menu		
+; 12. Tray Menu		
 	y_Lang001 =	隱藏窗口
 	y_Lang002 =	櫥窗
 	y_Lang003 =	控制工具欄
 		
-; Built-in Vars Menu		
+; 13. Built-in Vars Menu		
 	b_Lang001 =	特殊字符
 	b_Lang002 =	屬性
 	b_Lang003 =	日期和時間
@@ -185,7 +182,7 @@
 	b_Lang006 =	雜項。
 	b_Lang007 =	循環
 		
-; Main Window		
+; 14. Main Window		
 	w_Lang001 =	出口
 	w_Lang002 =	預覽
 	w_Lang003 =	選項
@@ -294,7 +291,7 @@
 	w_Lang106 =	轉換宏功能（Ctrl + Shift+ C）
 	w_Lang107 =	註釋掉選中的行
 		
-; Command Windows		
+; 15. Command Windows		
 	c_Lang001 =	鼠標
 	c_Lang002 =	文本
 	c_Lang003 =	暫停
@@ -520,7 +517,7 @@
 	c_Lang224 =	局部變量
 	c_Lang225 =	靜態變量
 		
-; Other Windows		
+; 16. Other Windows		
 	t_Lang001 =	導出到華民航空
 	t_Lang002 =	宏
 	t_Lang003 =	循環
@@ -698,8 +695,23 @@
 	t_Lang175 =	雜項。
 	t_Lang176 =	添加組
 	t_Lang177 =	新組
+	t_Lang178 =	語言編輯器
+	t_Lang179 =	創建新的
+	t_Lang180 =	使用輸入，PgDn鍵和PgUp鍵進行導航。
+	t_Lang181 =	提交
+	t_Lang182 =	從
+	t_Lang183 =	名稱
+	t_Lang184 =	電子郵件
+	t_Lang185 =	學科
+	t_Lang186 =	信息
+	t_Lang187 =	保存更改？
+	t_Lang188 =	語言文件
+	t_Lang189 =	參考文件
+	t_Lang190 =	提交修訂或新的翻譯
+	t_Lang191 =	全部收縮
+	t_Lang192 =	展開全部
 		
-; Messages & Dialogs		
+; 17. Messages & Dialogs		
 	d_Lang001 =	打開
 	d_Lang002 =	保存當前的項目？
 	d_Lang003 =	默認設置
@@ -835,7 +847,7 @@
 	d_Lang101 =	複製功能。
 	d_Lang102 =	是一個保留字。
 		
-; Start-up Tips		
+; 18. Start-up Tips		
 	Start_Tips =	您可以創建宏命令按鈕在主窗口中，或者使用記錄，複製你的行動。轉到“選項”>“設置”>“錄製到選擇什麼樣的輸入將被記錄。
 		要使用錄音機，快速任務選項 >設置 >錄音，並勾選“清除列表”選項。然後在主窗口中單擊“錄製”按鈕，使用F10鍵來清除當前的宏，並開始一個新的相同的熱鍵。 您也可以勾選“始終活躍在主窗口中保持激活錄製和播放熱鍵”選項。
 		要获得一个特定命令的帮助权的任意位置单击命令窗口中显示链接到AutoHotkey的在线帮助。
@@ -864,7 +876,7 @@
 		你可以設置你自己的全局變量，要加載的啟動和出口。轉到選項 >設置 >用戶全局變量添加它們。
 		您可以運行先進的功能，如SUBSTR和RegExReplace從“功能”窗口（“插入”> if語句/變量/函數）。或來自外部的AutoHotkey腳本運行自己的職能。
 		
-; Tooltips		
+; 19. Tooltips		
 	AutoKey_TT =	熱鍵玩宏
 	ManKey_TT =	熱鍵玩宏“一步一步”
 	AbortKey_TT =	熱鍵停止播放
@@ -944,7 +956,7 @@
 		- 要使用字符串，它們括在引號，例如：VAR=“A”。
 		- 多個語句的支持，例如：VAR=“一個”|| INSTR（變種，“B”）。
 		
-; Tooltips from AHK Docs		
+; 20. Tooltips from AHK Docs		
 	ExpList_TT =	雙擊編輯
 	Ex_IfDir_TT =	創建上下文敏感的熱鍵和熱字串取決於
 		不同的窗口，該窗口是活動的還是存在。
@@ -995,7 +1007,7 @@
 	Ex_UV_TT =	導出全局變量。
 	Ex_EdVars_TT =	選擇要導出的全局變量。
 		
-; Operators		
+; 21. Operators		
 	As_Oper_1 =	分配
 	As_Oper_2 =	加
 	As_Oper_3 =	減去
@@ -1011,7 +1023,7 @@
 	Co_Oper_6 =	大於或等於
 	Co_Oper_7 =	小於或等於
 		
-; IE Commands Tips		
+; 22. IE Commands Tips		
 	Tip_Navigate =	導航到URL或路徑。
 	Tip_Value =	獲取或設置對象的值。
 	Tip_Focus =	設置焦點的對象。
@@ -1038,7 +1050,7 @@
 	Tip_Height =	設置或獲取對象的高度。
 	Tip_Length =	設置或檢索一個集合中的對象的數目。
 		
-; AHK Commands Tips		
+; 23. AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	Abs	返回數字的絕對值。
 	ASin	返回的反正弦弧度（其正弦是Number）。
@@ -1190,6 +1202,7 @@
 	OnMessage	指定一個函數調用腳本時自動接收到指定的消息。
 	Ord	返回字符串的第一個字符的順序值（數字字符代碼）。
 	OutputDebug	將字符串發送到顯示調試器（如果有的話）。
+	Parameter	添加一個參數的函數。
 	Pause	暫停腳本的電流線程。
 	PixelGetColor	檢索處的像素的顏色指定的x，y坐標。
 	PixelSearch	搜索指定的顏色的像素的屏幕的一個區域。
@@ -1265,6 +1278,7 @@
 	Try	衛隊的一個或多個語句（命令或表達式）對運行時錯誤和異常拋出由throw命令。
 	Until	適用條件迴路或For循環的延續。
 	UrlDownloadToFile	從互聯網上下載一個文件。
+	UserFunction	創建一個功能結構。
 	VarSetCapacity	放大一個變量的控股能力，或釋放其內存。通常，這是必要的，只有不尋常的情況下，如DllCall。
 	WinActivate	激活指定的窗口（使得它最重要的）。
 	WinActivateBottom	同WinActivate，除非它激活最底部（最近最少活躍）匹配窗口，而不是最頂層。

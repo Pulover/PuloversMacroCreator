@@ -1,8 +1,8 @@
-﻿LoadLang_Sl:
+﻿Lang_sl
 		
 		; Slovenian
 		
-; Main Menu		
+; 01. Main Menu		
 	m_Lang001 =	&Datoteka
 	m_Lang002 =	&Makro
 	m_Lang003 =	&funkcija
@@ -14,7 +14,7 @@
 	m_Lang009 =	D&arujte
 	m_Lang010 =	&Help
 		
-; File Sub Menu		
+; 02. File Sub Menu		
 	f_Lang001 =	&New
 	f_Lang002 =	&Odprite
 	f_Lang003 =	&Šparajte
@@ -28,7 +28,7 @@
 	f_Lang011 =	E&xit
 	f_Lang012 =	Ni s&lik
 		
-; Macro Sub Menu		
+; 03. Macro Sub Menu		
 	r_Lang001 =	&Snemaj makro
 	r_Lang002 =	&Vključite Makri
 	r_Lang003 =	&Igraj trenutni makro
@@ -45,13 +45,13 @@
 	r_Lang014 =	Uvoz &Makro
 	r_Lang015 =	S&hrani trenutni makro
 		
-; Function Sub Menu		
+; 04. Function Sub Menu		
 	u_Lang001 =	&Ustvarite Funkcija
 	u_Lang002 =	&Dodaj Parameter
 	u_Lang003 =	D&odaj Return
 	u_Lang004 =	&Pretvarjanje Macro za delovanje
 		
-; Commands Sub Menu		
+; 05. Commands Sub Menu		
 	i_Lang001 =	&Miška
 	i_Lang002 =	&Besedilo
 	i_Lang003 =	&Nadzor
@@ -74,7 +74,7 @@
 	i_Lang020 =	Na&jdi ukaz
 		
 		
-; Edit Sub Menu		
+; 06. Edit Sub Menu		
 	e_Lang001 =	&Dvojnik
 	e_Lang002 =	&Urejanje komentarja
 	e_Lang003 =	&Najdi / zamenjaj
@@ -90,15 +90,16 @@
 	e_Lang013 =	&Vstavite okencu
 	e_Lang014 =	V&stavite Keystroke
 	e_Lang015 =	Edi&t Color Mark
-	e_Lang016 =	skupine
-	e_Lang017 =	Omogoči skupine
-	e_Lang018 =	Dodaj skupino
-	e_Lang019 =	Odstrani skupino
-	e_Lang020 =	Odstranite vse skupine
-	e_Lang021 =	Urejanje skupine
+	e_Lang016 =	Skupine
+	e_Lang017 =	&Omogoči skupine
+	e_Lang018 =	&Dodaj skupino
+	e_Lang019 =	Od&strani skupino
+	e_Lang020 =	Ods&tranite vse skupine
+	e_Lang021 =	St&rniti vse
+	e_Lang022 =	R&azširi vse
 		
 		
-; Select Sub Menu		
+; 07. Select Sub Menu		
 	s_Lang001 =	&Izberi vse
 	s_Lang002 =	I&zberete Brez
 	s_Lang003 =	&Obrni izbor
@@ -110,7 +111,7 @@
 	s_Lang009 =	Iz&brana vrsta
 	s_Lang010 =	Tip ukaz
 		
-; View Sub Menu		
+; 08. View Sub Menu		
 	v_Lang001 =	&Always On Top
 	v_Lang002 =	&Vrhunec Vrstic
 	v_Lang003 =	&Nazobčanost
@@ -121,26 +122,22 @@
 	v_Lang008 =	Pona&stavi stolpce Velikost
 	v_Lang009 =	Ve&likost Ikone
 	v_Lang010 =	&Reset Postavitev
-		
 	v_Lang011 =	&Súbor
 	v_Lang012 =	S&nemanje in predvajanje
 	v_Lang013 =	&Príkazy
 	v_Lang014 =	&Editovať
 	v_Lang015 =	&Možnosti
 	v_Lang016 =	P&rilagajanje
-		
 	v_Lang017 =	&Avtomatski
 	v_Lang018 =	&Ročni
 	v_Lang019 =	&Stop
 	v_Lang020 =	&Premor
-		
 	v_Lang021 =	&Kompaktna
 	v_Lang022 =	&Privzeto
-		
 	v_Lang023 =	&Majhno
 	v_Lang024 =	&Velika
 		
-; Options Sub Menu		
+; 09. Options Sub Menu		
 	o_Lang001 =	&Nastavitve
 	o_Lang002 =	&Jezik
 	o_Lang003 =	&Zmanjšati v pladenj
@@ -157,10 +154,10 @@
 	o_Lang014 =	P&rivzete Bližnjice
 	o_Lang015 =	Pr&ivzete nastavitve
 		
-; Donate Sub Menu		
+; 10. Donate Sub Menu		
 	p_Lang001 =	&PayPal Donacija
 		
-; Help Sub Menu		
+; 11. Help Sub Menu		
 	h_Lang001 =	&Help
 	h_Lang002 =	&Vaje
 	h_Lang003 =	&Nasveti
@@ -171,12 +168,12 @@
 	h_Lang008 =	P&reveri ob zagonu
 	h_Lang009 =	&O
 		
-; Tray Menu		
+; 12. Tray Menu		
 	y_Lang001 =	Skrij okno
 	y_Lang002 =	Pokaži okno
 	y_Lang003 =	Orodna Vrstica Nadzor
 		
-; Built-in Vars Menu		
+; 13. Built-in Vars Menu		
 	b_Lang001 =	Posebni znaki
 	b_Lang002 =	Nepremičnine
 	b_Lang003 =	Datum in čas
@@ -185,7 +182,7 @@
 	b_Lang006 =	Razno.
 	b_Lang007 =	Zanka
 		
-; Main Window		
+; 14. Main Window		
 	w_Lang001 =	Izvozi
 	w_Lang002 =	Predogled
 	w_Lang003 =	Možnosti
@@ -294,7 +291,7 @@
 	w_Lang106 =	Pretvarjanje makro funkcijo (Ctrl + Shift + C)
 	w_Lang107 =	Zakomentirajte nepreverjene vrstice
 		
-; Command Windows		
+; 15. Command Windows		
 	c_Lang001 =	Miška
 	c_Lang002 =	Besedilo
 	c_Lang003 =	Premor
@@ -520,7 +517,7 @@
 	c_Lang224 =	Lokalne spremenljivke
 	c_Lang225 =	Statične spremenljivke
 		
-; Other Windows		
+; 16. Other Windows		
 	t_Lang001 =	Izvoz v AutoHotkey
 	t_Lang002 =	Makri
 	t_Lang003 =	Loops
@@ -698,8 +695,23 @@
 	t_Lang175 =	Razno.
 	t_Lang176 =	Dodaj skupino
 	t_Lang177 =	Nova skupina
+	t_Lang178 =	Jezik Editor
+	t_Lang179 =	Ustvari novo
+	t_Lang180 =	Uporaba Enter, PgDn in PgUp za navigacijo.
+	t_Lang181 =	Submit
+	t_Lang182 =	Od
+	t_Lang183 =	Name
+	t_Lang184 =	E-naslov
+	t_Lang185 =	Predmet
+	t_Lang186 =	Sporočilo
+	t_Lang187 =	Shrani spremembe?
+	t_Lang188 =	Jezik datoteke
+	t_Lang189 =	Referenčna datoteke
+	t_Lang190 =	Predloži spremembo ali nov prevod
+	t_Lang191 =	Strniti vse
+	t_Lang192 =	Razširi vse
 		
-; Messages & Dialogs		
+; 17. Messages & Dialogs		
 	d_Lang001 =	Odprite
 	d_Lang002 =	Shranite trenutni projekt?
 	d_Lang003 =	Privzete nastavitve
@@ -835,7 +847,7 @@
 	d_Lang101 =	Dvojnik funkcija.
 	d_Lang102 =	je rezervirana beseda.
 		
-; Start-up Tips		
+; 18. Start-up Tips		
 	Start_Tips =	Lahko ustvarite makre z uporabo ukaznih gumbov v glavnem oknu ali z uporabo snemalnika kopirati dejanja. Pojdi na Možnosti> Nastavitve> Snemanje izbrati tisto vhodi bo posnet.
 		Za uporabo snemalnika za hitre naloge, pojdite na Možnosti> Nastavitve> Snemanje in preverite "Počisti seznam" možnost. Nato kliknite na gumb Snemaj v glavnem oknu in uporabite F10, da počistite trenutni makro in začeti novega z isto hotkey. Si lahko ogledate tudi "Vedno Active" možnost v glavnem oknu za ohranitev snemanje in predvajanje Bližnjice aktiven.
 		Da bi dobili pomoč za določen ukaz desno tipko miške kliknite kjer koli na ukazno okno za prikaz povezave na AutoHotkey spletni pomoči.
@@ -864,7 +876,7 @@
 		Lahko nastavite svoje globalne spremenljivke, ki se naložijo ob zagonu in se izvozijo. Pojdi na Možnosti> Nastavitve> Uporabniške globalnih spremenljivk, da jih dodate.
 		Lahko zaženete napredne funkcije, kot so substr in RegExReplace iz okna Funkcije (Insert> Če Izjave / spremenljivke / funkcije). Ali teči svoje funkcije iz zunanjih AutoHotkey skripte.
 		
-; Tooltips		
+; 19. Tooltips		
 	AutoKey_TT =	Bližnjica za igranje makro
 	ManKey_TT =	Bližnjica za predvajanje makrov "korak za korakom"
 	AbortKey_TT =	Bližnjica za zaustavitev predvajanja
@@ -944,7 +956,7 @@
 		- Za uporabo nizov, jih priložite v narekovajih, na primer: var = "A".
 		- Več Izjave so podprti, na primer: var = "a" || Instr (var, "b").
 		
-; Tooltips from AHK Docs		
+; 20. Tooltips from AHK Docs		
 	ExpList_TT =	Dvakrat kliknite za urejanje
 	Ex_IfDir_TT =	Ustvarja kontekst občutljive bližnjic in hotstrings odvisno
 		na vrsto oknu, ki je aktiven ali obstaja.
@@ -995,7 +1007,7 @@
 	Ex_UV_TT =	Izvoz globalne spremenljivke.
 	Ex_EdVars_TT =	Izberite globalne spremenljivke, ki se izvaža.
 		
-; Operators		
+; 21. Operators		
 	As_Oper_1 =	Dodeli
 	As_Oper_2 =	Dodaj
 	As_Oper_3 =	Odštevanje
@@ -1011,7 +1023,7 @@
 	Co_Oper_6 =	Večja ali enaka
 	Co_Oper_7 =	Manjša ali enaka
 		
-; IE Commands Tips		
+; 22. IE Commands Tips		
 	Tip_Navigate =	Krmari na URL ali pot.
 	Tip_Value =	Dobi ali določa vrednost predmeta.
 	Tip_Focus =	Nastavi fokus na objektu.
@@ -1038,7 +1050,7 @@
 	Tip_Height =	Komplet ali pridobi višino predmeta.
 	Tip_Length =	Nastavi ali pridobi število predmetov v zbirki.
 		
-; AHK Commands Tips		
+; 23. AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	Abs	Vrne absolutno vrednost številke.
 	ASin	Vrne arkus sinus (število, katerega sinus je število) v radianih.
@@ -1190,6 +1202,7 @@
 	OnMessage	Določa funkcijo za samodejno pokliče, ko scenarij prejme določeno sporočilo.
 	Ord	Vrne ordinalni vrednost (številčna oznaka znak) za prvi znak v nizu.
 	OutputDebug	Pošlje niz za iskanje in odpravljanje napak (če obstaja) za zaslon.
+	Parameter	Dodaja parameter funkcije.
 	Pause	Premori trenutno nit, skript je.
 	PixelGetColor	Pridobi barvo pike na določenem x, y koordinate.
 	PixelSearch	Išče regijo na zaslonu za piko na določeno barvo.
@@ -1265,6 +1278,7 @@
 	Try	Varovala ena ali več izjav (ukazi ali besedne zveze) proti runtime napake in izjeme vrgli z ukazom metov.
 	Until	Velja pogoj za nadaljevanje Loop ali za-loop.
 	UrlDownloadToFile	Prenese datoteko iz interneta.
+	UserFunction	Ustvarja strukturo funkcij.
 	VarSetCapacity	Poveča razpoložljivih zmogljivosti spremenljivka, ali pa osvobodi svoj spomin. Običajno je to potrebno, samo za neobičajnih dogodkov, kot DllCall.
 	WinActivate	Aktivira določeno okno (zaradi česar je predvsem).
 	WinActivateBottom	Enako kot WinActivate razen tega, da aktivira: Spodnja (vsaj v zadnjem času aktivno) ujemanje okno namesto vrhunska.

@@ -136,7 +136,7 @@ Class LV_Rows extends LV_Rows.LV_EX
             {
                 If (IsObject(NewData))
                 {
-					this.hArray[Hwnd].GroupsArray := NewData.GroupsArray
+                    this.hArray[Hwnd].GroupsArray := NewData.GroupsArray
                 ,   this.hArray[Hwnd].Slot := NewData.Slot
                 ,   this.hArray[Hwnd].ActiveSlot := NewData.ActiveSlot
                 ,   this.Load()
@@ -671,17 +671,24 @@ Class LV_Rows extends LV_Rows.LV_EX
         return RTrim(GroupsString, ",")
     }
     
-    EnableGroups(Enable := true, FirstName := "New Group", StartCollapsed := false)
+    EnableGroups(Enable := true, FirstName := "New Group", Collapsible := true, StartCollapsed := false)
     {
         Gui, Listview, % this.LVHwnd
         ListCount := LV_GetCount()
-        this.EnableGroupView(Enable)
+     ,  this.Collapsible := Collapsible
+     ,  this.EnableGroupView(Enable)
         If (Enable)
         {
             If (!this.Handle.GroupsArray.Length())
                 this.Handle.GroupsArray := [{Name: FirstName, Row: 1}]
             this.RefreshGroups(StartCollapsed)
         }
+    }
+    
+    SetGroupCollapisable(Collapsible := true)
+    {
+        this.Collapsible := Collapsible
+    ,   this.RefreshGroups()
     }
     
     AddGroup(Row := "", GroupName := "New Group")
@@ -785,24 +792,26 @@ Class LV_Rows extends LV_Rows.LV_EX
         }
     }
     
+    CollapseAll(Collapse := true)
+    {
+        this.RefreshGroups(Collapse)
+    }
+    
     RefreshGroups(Collapsed := false)
     {
         Gui, Listview, % this.LVHwnd
         ListCount := LV_GetCount()
-    ,   this.GroupRemoveAll()
-        For e, g in this.Handle.GroupsArray
+    ,   this.GroupRemoveAll(), GrNum := 1
+        Loop, %ListCount%
         {
-            GrNum := 10 + (e - 1)
-        ,   this.GroupInsert(GrNum, g.Name)
-            Loop, %ListCount%
+            If (this.Handle.GroupsArray[GrNum].Row = A_Index)
             {
-                Row := g.Row + (A_Index - 1)
-                If (Row > ListCount)
-                    break
-                this.SetGroup(Row, GrNum)
+                this.GroupInsert(GrNum + 9, this.Handle.GroupsArray[GrNum].Name)
+            ,   Styles := Collapsed ? ["Collapsible", "Collapsed"] : [this.Collapsible ? "Collapsible" : ""]
+            ,   this.GroupSetState(GrNum + 9, Styles*)
+            ,   GrNum++
             }
-            Styles := Collapsed ? ["Collapsible", "Collapsed"] : ["Collapsible"]
-            this.GroupSetState(GrNum, Styles*)
+            this.SetGroup(A_Index, GrNum + 8)
         }
     }
 ;=======================================================================================
@@ -817,7 +826,7 @@ Class LV_Rows extends LV_Rows.LV_EX
 ;=======================================================================================
     Load(Position := "")
     {
-		If (Position = "")
+        If (Position = "")
             Position := this.Handle.ActiveSlot
         If (!IsObject(this.Handle.Slot[Position]))
             return false

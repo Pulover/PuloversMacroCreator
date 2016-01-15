@@ -1,8 +1,8 @@
-﻿LoadLang_Pt-BR:
+﻿Lang_pt
 		
 		; Portuguese (Brazil)
 		
-; Main Menu		
+; 01. Main Menu		
 	m_Lang001 =	&Arquivo
 	m_Lang002 =	&Macro
 	m_Lang003 =	&Função
@@ -14,7 +14,7 @@
 	m_Lang009 =	&Doar
 	m_Lang010 =	Aj&uda
 		
-; File Sub Menu		
+; 02. File Sub Menu		
 	f_Lang001 =	&Novo
 	f_Lang002 =	&Abrir
 	f_Lang003 =	&Salvar
@@ -28,7 +28,7 @@
 	f_Lang011 =	Sai&r
 	f_Lang012 =	Nenhum arquivo
 		
-; Macro Sub Menu		
+; 03. Macro Sub Menu		
 	r_Lang001 =	&Gravar Macro
 	r_Lang002 =	&Ativar Macros
 	r_Lang003 =	&Executar Macro Atual
@@ -45,13 +45,13 @@
 	r_Lang014 =	I&mportar Macro
 	r_Lang015 =	&Salvar Macro Atual
 		
-; Function Sub Menu		
+; 04. Function Sub Menu		
 	u_Lang001 =	Criar &Função
 	u_Lang002 =	Adicionar &Parâmetro
 	u_Lang003 =	Adicionar &Retorno
 	u_Lang004 =	&Converter Macro em Função
 		
-; Commands Sub Menu		
+; 05. Commands Sub Menu		
 	i_Lang001 =	&Mouse
 	i_Lang002 =	&Texto
 	i_Lang003 =	&Controle
@@ -74,7 +74,7 @@
 	i_Lang020 =	Locali&zar um comando
 		
 		
-; Edit Sub Menu		
+; 06. Edit Sub Menu		
 	e_Lang001 =	D&uplicar
 	e_Lang002 =	Editar Come&ntário
 	e_Lang003 =	&Localizar / Substituir
@@ -90,15 +90,16 @@
 	e_Lang013 =	&Inserir da Caixa
 	e_Lang014 =	In&serir Tecla
 	e_Lang015 =	Editar &Marca de Cor
-	e_Lang016 =	Grupos
-	e_Lang017 =	Habilitar grupos
-	e_Lang018 =	Adicionar grupo
-	e_Lang019 =	Remover grupo
-	e_Lang020 =	Remove todos os grupos
-	e_Lang021 =	Editar grupos
+	e_Lang016 =	&Grupos
+	e_Lang017 =	&Habilitar grupos
+	e_Lang018 =	&Adicionar grupo
+	e_Lang019 =	&Remover grupo
+	e_Lang020 =	R&emove todos os grupos
+	e_Lang021 =	Re&colher todos
+	e_Lang022 =	E&xpandir todos
 		
 		
-; Select Sub Menu		
+; 07. Select Sub Menu		
 	s_Lang001 =	Selecionar &Tudo
 	s_Lang002 =	Selecionar &Nenhum
 	s_Lang003 =	&Inverter Seleção
@@ -110,7 +111,7 @@
 	s_Lang009 =	Ti&po Selecionado
 	s_Lang010 =	Tipo de comando
 		
-; View Sub Menu		
+; 08. View Sub Menu		
 	v_Lang001 =	&Sempre Visível
 	v_Lang002 =	&Destacar Linhas
 	v_Lang003 =	&Margem
@@ -121,26 +122,22 @@
 	v_Lang008 =	&Restaurar Colunas
 	v_Lang009 =	Tamanho dos &Ícones
 	v_Lang010 =	R&estaurar Layout
-		
 	v_Lang011 =	&Arquivo
 	v_Lang012 =	&Gravar e Executar
 	v_Lang013 =	&Comandos
 	v_Lang014 =	&Editar
 	v_Lang015 =	&Opções
 	v_Lang016 =	&Personalizar
-		
 	v_Lang017 =	&Automatico
 	v_Lang018 =	&Manual
 	v_Lang019 =	&Parar
 	v_Lang020 =	Pa&usa
-		
 	v_Lang021 =	&Compacto
 	v_Lang022 =	&Padrão
-		
 	v_Lang023 =	&Pequeno
 	v_Lang024 =	&Grande
 		
-; Options Sub Menu		
+; 09. Options Sub Menu		
 	o_Lang001 =	&Configurações
 	o_Lang002 =	&Idioma
 	o_Lang003 =	&Minimizar para  a bandeja
@@ -157,10 +154,10 @@
 	o_Lang014 =	Atal&hos Padrão
 	o_Lang015 =	Confi&guração Padrão
 		
-; Donate Sub Menu		
+; 10. Donate Sub Menu		
 	p_Lang001 =	&Doação via PayPal
 		
-; Help Sub Menu		
+; 11. Help Sub Menu		
 	h_Lang001 =	&Ajuda
 	h_Lang002 =	&Tutoriais
 	h_Lang003 =	&Dicas
@@ -171,12 +168,12 @@
 	h_Lang008 =	V&erificar ao iniciar
 	h_Lang009 =	So&bre
 		
-; Tray Menu		
+; 12. Tray Menu		
 	y_Lang001 =	Ocultar Janela
 	y_Lang002 =	Mostrar Janela
 	y_Lang003 =	Barra de Controles
 		
-; Built-in Vars Menu		
+; 13. Built-in Vars Menu		
 	b_Lang001 =	Caracteres Especiais
 	b_Lang002 =	Propriedades
 	b_Lang003 =	Data e Hora
@@ -185,7 +182,7 @@
 	b_Lang006 =	Variado
 	b_Lang007 =	Loop
 		
-; Main Window		
+; 14. Main Window		
 	w_Lang001 =	Exportar
 	w_Lang002 =	Script
 	w_Lang003 =	Opções
@@ -294,7 +291,7 @@
 	w_Lang106 =	Converter Macro em Função (Ctrl+Shift+C)
 	w_Lang107 =	Comentar linhas desmarcadas
 		
-; Command Windows		
+; 15. Command Windows		
 	c_Lang001 =	Mouse
 	c_Lang002 =	Texto
 	c_Lang003 =	Pausa
@@ -520,7 +517,7 @@
 	c_Lang224 =	Variáveis Locais
 	c_Lang225 =	Variáveis Estáticas
 		
-; Other Windows		
+; 16. Other Windows		
 	t_Lang001 =	Exportar para AutoHotkey
 	t_Lang002 =	Macros
 	t_Lang003 =	Repetir
@@ -698,8 +695,23 @@
 	t_Lang175 =	Misc.
 	t_Lang176 =	Adicionar grupo
 	t_Lang177 =	Novo grupo
+	t_Lang178 =	Editor de Idiomas
+	t_Lang179 =	Criar Novo
+	t_Lang180 =	Use Enter, PgDn e PgUp para navegar.
+	t_Lang181 =	Enviar
+	t_Lang182 =	De
+	t_Lang183 =	Nome = Valor
+	t_Lang184 =	E-mail
+	t_Lang185 =	Assunto
+	t_Lang186 =	Mensagem
+	t_Lang187 =	Salvar alterações?
+	t_Lang188 =	Arquivo de Idioma
+	t_Lang189 =	Arquivo de Referência
+	t_Lang190 =	Enviar revisão ou nova tradução
+	t_Lang191 =	Recolher todos
+	t_Lang192 =	Expandir todos
 		
-; Messages & Dialogs		
+; 17. Messages & Dialogs		
 	d_Lang001 =	Abrir
 	d_Lang002 =	Salvar projeto atual?
 	d_Lang003 =	Configuração Padrão
@@ -835,7 +847,7 @@
 	d_Lang101 =	Função duplicada.
 	d_Lang102 =	é uma palavra reservada.
 		
-; Start-up Tips		
+; 18. Start-up Tips		
 	Start_Tips =	Você pode criar Macros utilizando os botões de comando na janela principal ou usar o gravador para copiar suas ações. Vá até Opções > Configurações > Gravar para selecionar quais entradas serão gravadas.
 		Para utilizar o gravador para tarefas rápidas vá em Opções > Configurações > Gravação e marque a opção "Limpar Lista". Em seguida, clique no botão Gravar na janela principal e use F10 para limpar a Macro atual e iniciar uma nova com a mesma hotkey. Você também pode marcar a opção "Sempre Ativo" na janela principal para manter as teclas de gravação e execução ativas.
 		Para obter ajuda para um comando específico clique com o botão direito do mouse em qualquer lugar em uma janela de comando para mostrar links para a Ajuda online AutoHotkey.
@@ -864,7 +876,7 @@
 		Você pode definir suas próprias variáveis globais para serem carregadas ao iniciar e para serem exportadas. Vá em Opções > Configurações > Variáveis Globais do Usuário para adicioná-las.
 		Você pode executar funções avançadas como SubStr e RegExReplace da janela Funções (Inserir > Declaração Se / Variáveis / Funções). Ou executar suas próprias funções a partir de scripts AutoHotkey externos.
 		
-; Tooltips		
+; 19. Tooltips		
 	AutoKey_TT =	Atalho para executar a Macro
 	ManKey_TT =	Atalho para executar uma Macro "passo-a-passo"
 	AbortKey_TT =	Atalho para parar execução
@@ -944,7 +956,7 @@
 		- Para usar textos, coloque-os entre aspas, ex.: var = "a".
 		- Condições multiplas são suportadas, ex.: var = "a" || InStr(var, "b").
 		
-; Tooltips from AHK Docs		
+; 20. Tooltips from AHK Docs		
 	ExpList_TT =	Duplo-Clique para editar
 	Ex_IfDir_TT =	Faz os Atalhos funcionarem dependendo
 		do tipo de janela ativa ou existente.
@@ -995,7 +1007,7 @@
 	Ex_UV_TT =	Exportar variáveis globais.
 	Ex_EdVars_TT =	Selecionar variáveis globais a serem exportadas.
 		
-; Operators		
+; 21. Operators		
 	As_Oper_1 =	Atribuir
 	As_Oper_2 =	Adicionar
 	As_Oper_3 =	Subtrair
@@ -1011,7 +1023,7 @@
 	Co_Oper_6 =	Maior ou igual
 	Co_Oper_7 =	Menor ou igual
 		
-; IE Commands Tips		
+; 22. IE Commands Tips		
 	Tip_Navigate =	Navega para uma URL ou caminho.
 	Tip_Value =	Copia ou define o valor de um objeto.
 	Tip_Focus =	Define o foco para um objeto.
@@ -1038,7 +1050,7 @@
 	Tip_Height =	Define ou copia a altura de conteúdo do objeto.
 	Tip_Length =	Define ou copia o número de objetos em uma coleção.
 		
-; AHK Commands Tips		
+; 23. AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	Abs	Retorna o valor absoluto do número.
 	ASin	Retorna o arco seno (o número cujo seno é Número) em radianos.
@@ -1190,6 +1202,7 @@
 	OnMessage	Especifica uma função a ser chamada automaticamente quando o script recebe a mensagem especificada.
 	Ord	Retorna o valor ordinal (código numérico de caractére) do primeiro caractére no texto.
 	OutputDebug	Envia uma sequência de caracteres para o depurador (se houver) para exibição.
+	Parameter	Adiciona um parâmetro à função.
 	Pause	Pausa thread atual do script.
 	PixelGetColor	Recupera a cor do pixel na especificado x, y as coordenadas.
 	PixelSearch	Procura uma região da tela para um pixel da cor especificada.
@@ -1265,6 +1278,7 @@
 	Try	Guardas de uma ou mais instruções (comandos ou expressões) contra erros e exceções lançadas pelo comando lance de tempo de execução.
 	Until	Aplica-se uma condição para a continuação de um loop ou For-loop.
 	UrlDownloadToFile	Download de um arquivo da Internet.
+	UserFunction	Cria uma estrutura de Função.
 	VarSetCapacity	Aumenta a capacidade de retenção de uma variável ou libera sua memória. Normalmente, isso é necessário apenas para circunstâncias incomuns, como DllCall.
 	WinActivate	Ativa a janela especificada (faz tudo).
 	WinActivateBottom	Mesmo que WinActivate exceto que ele ativa o mais inferior (menos recentemente ativo) janela correspondente ao invés do superior.

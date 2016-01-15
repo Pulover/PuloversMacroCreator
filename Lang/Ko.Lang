@@ -1,8 +1,8 @@
-﻿LoadLang_Ko:
+﻿Lang_ko
 		
 		; Korean
 		
-; Main Menu		
+; 01. Main Menu		
 	m_Lang001 =	파일
 	m_Lang002 =	매크로
 	m_Lang003 =	기능
@@ -14,7 +14,7 @@
 	m_Lang009 =	기부
 	m_Lang010 =	도움
 		
-; File Sub Menu		
+; 02. File Sub Menu		
 	f_Lang001 =	새로운
 	f_Lang002 =	열기
 	f_Lang003 =	저장
@@ -28,7 +28,7 @@
 	f_Lang011 =	출구
 	f_Lang012 =	없음
 		
-; Macro Sub Menu		
+; 03. Macro Sub Menu		
 	r_Lang001 =	기록 매크로
 	r_Lang002 =	매크로 활성화
 	r_Lang003 =	현재 매크로를 재생
@@ -45,13 +45,13 @@
 	r_Lang014 =	가져 오기 매크로
 	r_Lang015 =	현재 매크로를 저장
 		
-; Function Sub Menu		
+; 04. Function Sub Menu		
 	u_Lang001 =	기능 만들기
 	u_Lang002 =	매개 변수 추가
 	u_Lang003 =	반환 추가
 	u_Lang004 =	함수에 대한 매크로 변환
 		
-; Commands Sub Menu		
+; 05. Commands Sub Menu		
 	i_Lang001 =	마우스
 	i_Lang002 =	본문
 	i_Lang003 =	제어
@@ -74,7 +74,7 @@
 	i_Lang020 =	명령 찾기
 		
 		
-; Edit Sub Menu		
+; 06. Edit Sub Menu		
 	e_Lang001 =	복제
 	e_Lang002 =	댓글 수정
 	e_Lang003 =	찾기 / 바꾸기
@@ -95,10 +95,11 @@
 	e_Lang018 =	그룹을 추가
 	e_Lang019 =	그룹을 제거
 	e_Lang020 =	모든 그룹을 제거
-	e_Lang021 =	편집 그룹
+	e_Lang021 =	모든 축소
+	e_Lang022 =	모두 확대
 		
 		
-; Select Sub Menu		
+; 07. Select Sub Menu		
 	s_Lang001 =	모두 선택
 	s_Lang002 =	없음을 선택
 	s_Lang003 =	선택 반전
@@ -110,7 +111,7 @@
 	s_Lang009 =	선택한 유형
 	s_Lang010 =	명령 유형
 		
-; View Sub Menu		
+; 08. View Sub Menu		
 	v_Lang001 =	항상 상단에
 	v_Lang002 =	하이라이트 행
 	v_Lang003 =	톱니 모양
@@ -121,26 +122,22 @@
 	v_Lang008 =	열 크기를 재설정
 	v_Lang009 =	아이콘 크기
 	v_Lang010 =	레이아웃 재설정
-		
 	v_Lang011 =	파일
 	v_Lang012 =	기록 및 재생
 	v_Lang013 =	명령
 	v_Lang014 =	편집
 	v_Lang015 =	옵션
 	v_Lang016 =	사용자 지정
-		
 	v_Lang017 =	자동적 인
 	v_Lang018 =	사용 설명서
 	v_Lang019 =	정지
 	v_Lang020 =	중지
-		
 	v_Lang021 =	콤팩트
 	v_Lang022 =	디폴트 값
-		
 	v_Lang023 =	작은
 	v_Lang024 =	큰
 		
-; Options Sub Menu		
+; 09. Options Sub Menu		
 	o_Lang001 =	설정
 	o_Lang002 =	언어
 	o_Lang003 =	트레이로 최소화
@@ -157,10 +154,10 @@
 	o_Lang014 =	기본 단축키
 	o_Lang015 =	기본 설정
 		
-; Donate Sub Menu		
+; 10. Donate Sub Menu		
 	p_Lang001 =	페이팔 기부
 		
-; Help Sub Menu		
+; 11. Help Sub Menu		
 	h_Lang001 =	도움
 	h_Lang002 =	자습서
 	h_Lang003 =	팁 
@@ -171,12 +168,12 @@
 	h_Lang008 =	시작을 확인
 	h_Lang009 =	약
 		
-; Tray Menu		
+; 12. Tray Menu		
 	y_Lang001 =	창 숨기기
 	y_Lang002 =	창 표시
 	y_Lang003 =	컨트롤 도구 모음
 		
-; Built-in Vars Menu		
+; 13. Built-in Vars Menu		
 	b_Lang001 =	특수 문자
 	b_Lang002 =	등록
 	b_Lang003 =	날짜 및 시간
@@ -185,7 +182,7 @@
 	b_Lang006 =	기타.
 	b_Lang007 =	고리
 		
-; Main Window		
+; 14. Main Window		
 	w_Lang001 =	수출
 	w_Lang002 =	시사
 	w_Lang003 =	옵션
@@ -294,7 +291,7 @@
 	w_Lang106 =	(Ctrl 키를 + 시프트 + C를) 함수 매크로 변환
 	w_Lang107 =	선택하지 않은 행을 주석
 		
-; Command Windows		
+; 15. Command Windows		
 	c_Lang001 =	마우스
 	c_Lang002 =	본문
 	c_Lang003 =	중지
@@ -520,7 +517,7 @@
 	c_Lang224 =	지역 변수
 	c_Lang225 =	정적 변수
 		
-; Other Windows		
+; 16. Other Windows		
 	t_Lang001 =	AutoHotkey로 내보내기
 	t_Lang002 =	매크로
 	t_Lang003 =	루프
@@ -698,8 +695,23 @@
 	t_Lang175 =	기타.
 	t_Lang176 =	그룹을 추가
 	t_Lang177 =	새 그룹
+	t_Lang178 =	언어 편집기
+	t_Lang179 =	새로 만들기
+	t_Lang180 =	입력 사용, PgDn 키와 PgUp을 탐색합니다.
+	t_Lang181 =	제출
+	t_Lang182 =	에서
+	t_Lang183 =	이름
+	t_Lang184 =	이메일
+	t_Lang185 =	제목
+	t_Lang186 =	전언
+	t_Lang187 =	변경 사항을 저장하다?
+	t_Lang188 =	언어 파일
+	t_Lang189 =	참조 파일
+	t_Lang190 =	개정 또는 새로운 번역 제출
+	t_Lang191 =	모든 축소
+	t_Lang192 =	모두 확대
 		
-; Messages & Dialogs		
+; 17. Messages & Dialogs		
 	d_Lang001 =	열기
 	d_Lang002 =	현재 프로젝트를 저장?
 	d_Lang003 =	기본 설정
@@ -835,7 +847,7 @@
 	d_Lang101 =	중복 기능.
 	d_Lang102 =	예약어이다.
 		
-; Start-up Tips		
+; 18. Start-up Tips		
 	Start_Tips =	당신은 메인 창에 명령 단추를 사용하거나 작업을 복사 할 레코더를 사용하여 매크로를 만들 수 있습니다. 옵션으로 이동 > 설정 > 입력이 기록 될 것인지를 선택하는 기록.
 		빠른 작업 옵션 > 설정 > 녹화에 가서 "목록 지우기"옵션 체크를위한 레코더를 사용합니다. 그런 다음 메인 창에서 녹음 버튼을 클릭하여 현재 매크로를 지우려면 F10을 사용하고 동일한 단축키를 가진 새로운 하나를 시작합니다. 당신은 또한 녹음 및 재생 단축키가 활성 상태로 유지하기 위해 메인 윈도우에서 "항상 활성화"옵션을 확인할 수 있습니다.
 		특정 명령에 대한 도움말을 얻으려면 오토 핫키 온라인 도움말에 대한 링크를 표시하려면 명령 창에서 아무 곳이나 마우스 오른쪽 단추로 클릭합니다.
@@ -864,7 +876,7 @@
 		당신은 시작하고 내보낼 수에로드하기 위해 자신의 전역 변수를 설정할 수 있습니다. 에 추가 할 옵션 > 설정 > 사용자 전역 변수로 이동합니다.
 		당신은 기능 창 (IF 문 / 변수 / 함수 삽입 >)에서 같은 SUBSTR 및 RegExReplace 같은 고급 기능을 실행할 수 있습니다. 또는 외부 오토 핫키 스크립트에서 자신의 함수를 실행합니다.
 		
-; Tooltips		
+; 19. Tooltips		
 	AutoKey_TT =	핫키 매크로를 재생할 수
 	ManKey_TT =	단축키 매크로 "단계별"를 재생
 	AbortKey_TT =	단축키 재생을 중지하려면
@@ -944,7 +956,7 @@
 		- 예를 들어, 따옴표로 묶어, 문자열을 사용하려면, VAR = "를".
 		- 여러 개의 문이 지원됩니다, 예를 들면 : VAR = ""|| InStr이 (VAR, "B").
 		
-; Tooltips from AHK Docs		
+; 20. Tooltips from AHK Docs		
 	ExpList_TT =	편집하려면 더블 클릭
 	Ex_IfDir_TT =	상황에 맞는 키와 따라 hotstrings을 만듭니다
 		활성화 또는 존재 창 유형에.
@@ -995,7 +1007,7 @@
 	Ex_UV_TT =	전역 변수를 내 보냅니다.
 	Ex_EdVars_TT =	내보낼 전역 변수를 선택합니다.
 		
-; Operators		
+; 21. Operators		
 	As_Oper_1 =	지정
 	As_Oper_2 =	추가
 	As_Oper_3 =	덜다
@@ -1011,7 +1023,7 @@
 	Co_Oper_6 =	크거나 같음
 	Co_Oper_7 =	작거나 같은
 		
-; IE Commands Tips		
+; 22. IE Commands Tips		
 	Tip_Navigate =	URL 또는 경로를 탐색합니다.
 	Tip_Value =	옵니다 또는 개체의 값을 설정합니다.
 	Tip_Focus =	객체에 포커스를 설정합니다.
@@ -1038,7 +1050,7 @@
 	Tip_Height =	설정하거나 객체의 높이를 검색합니다.
 	Tip_Length =	설정하거나 컬렉션에 개체의 수를 검색합니다.
 		
-; AHK Commands Tips		
+; 23. AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	Abs	숫자의 절대 값을 반환합니다.
 	ASin	라디안 아크를 (사인 수있는 수)를 반환합니다.
@@ -1190,6 +1202,7 @@
 	OnMessage	스크립트가 지정된 메시지를받을 때 자동으로 호출하는 함수를 지정합니다.
 	Ord	문자열의 첫 번째 문자의 순서 값 (숫자 문자 코드)를 돌려줍니다.
 	OutputDebug	표시 디버거 (있는 경우)에 문자열을 보냅니다.
+	Parameter	함수에 매개 변수를 추가합니다.
 	Pause	스크립트의 현재 스레드를 일시 중지합니다.
 	PixelGetColor	지정된 X에서 픽셀의 색상을 검색, Y 좌표.
 	PixelSearch	지정된 색상의 픽셀의 화면의 영역을 검색합니다.
@@ -1265,6 +1278,7 @@
 	Try	런타임 오류 던져 명령에 의해 throw 된 예외에 대한 감시는 하나 이상의 문 (명령 또는 식).
 	Until	루프 또는 루프의 지속에 조건을 적용합니다.
 	UrlDownloadToFile	인터넷에서 파일을 다운로드합니다.
+	UserFunction	기능 구조를 작성합니다.
 	VarSetCapacity	변수의 보유 용량을 확대하거나 메모리를 해제합니다. 일반적으로, 이것은 단지 등 DllCall 같은 특별한 상황을 위해 필요합니다.
 	WinActivate	지정된 창 (그것이 최초한다) 활성화합니다.
 	WinActivateBottom	그것은 맨 아래 (가장 최근에 활성화) 매칭 창이 아닌 최상위를 활성화하는 것을 제외 WinActivate과 동일합니다.

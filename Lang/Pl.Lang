@@ -1,8 +1,8 @@
-﻿LoadLang_Pl:
+﻿Lang_pl
 		
 		; Polish
 		
-; Main Menu		
+; 01. Main Menu		
 	m_Lang001 =	&Plik
 	m_Lang002 =	&Macro
 	m_Lang003 =	&Funkcjonować
@@ -14,7 +14,7 @@
 	m_Lang009 =	&Darować
 	m_Lang010 =	Pomoc&y
 		
-; File Sub Menu		
+; 02. File Sub Menu		
 	f_Lang001 =	&Nowy
 	f_Lang002 =	&Otwarte
 	f_Lang003 =	&Uratować
@@ -28,7 +28,7 @@
 	f_Lang011 =	&Wyjście
 	f_Lang012 =	&Brak plików
 		
-; Macro Sub Menu		
+; 03. Macro Sub Menu		
 	r_Lang001 =	&Macro Record
 	r_Lang002 =	&Aktywuj Makra
 	r_Lang003 =	&Zagraj w bieżącym makrze
@@ -45,13 +45,13 @@
 	r_Lang014 =	&Import Makro
 	r_Lang015 =	Zapi&sz bieżące makro
 		
-; Function Sub Menu		
+; 04. Function Sub Menu		
 	u_Lang001 =	&Tworzenie funkcji
 	u_Lang002 =	&Dodaj parametr
 	u_Lang003 =	D&odaj Powrót
 	u_Lang004 =	&Konwersja Makro funkcjonować
 		
-; Commands Sub Menu		
+; 05. Commands Sub Menu		
 	i_Lang001 =	&Mysz
 	i_Lang002 =	&Tekst
 	i_Lang003 =	&Sterowanie
@@ -74,7 +74,7 @@
 	i_Lang020 =	Zna&jdź polecenia
 		
 		
-; Edit Sub Menu		
+; 06. Edit Sub Menu		
 	e_Lang001 =	&Duplikat
 	e_Lang002 =	&Edytuj komentarz
 	e_Lang003 =	&Znajdź / Zastąp
@@ -90,15 +90,16 @@
 	e_Lang013 =	&Wstaw z pudełkiem
 	e_Lang014 =	W&łóż Klawiszy
 	e_Lang015 =	Z&mień kolor zapytania
-	e_Lang016 =	grupy
-	e_Lang017 =	Włącz grupy
-	e_Lang018 =	Dodaj grupę
-	e_Lang019 =	Usuń grupę
-	e_Lang020 =	Usuń wszystkie grupy
-	e_Lang021 =	Edytuj grupy
+	e_Lang016 =	&Grupy
+	e_Lang017 =	&Włącz grupy
+	e_Lang018 =	&Dodaj grupę
+	e_Lang019 =	&Usuń grupę
+	e_Lang020 =	U&suń wszystkie grupy
+	e_Lang021 =	&Zwinąć wszystkie
+	e_Lang022 =	&Rozwiń wszystkie
 		
 		
-; Select Sub Menu		
+; 07. Select Sub Menu		
 	s_Lang001 =	&Zaznacz wszystko
 	s_Lang002 =	&Wybierz None
 	s_Lang003 =	&Odwróć zaznaczenie
@@ -110,7 +111,7 @@
 	s_Lang009 =	W&ybranego typu
 	s_Lang010 =	Typ polecenia
 		
-; View Sub Menu		
+; 08. View Sub Menu		
 	v_Lang001 =	&Zawsze na wierzchu
 	v_Lang002 =	&Wiersze Highlight
 	v_Lang003 =	W&cięcie
@@ -121,26 +122,22 @@
 	v_Lang008 =	&Resetuj rozmiar kolumny
 	v_Lang009 =	&Ikony Rozmiar
 	v_Lang010 =	W&yzeruj
-		
 	v_Lang011 =	&Plik
 	v_Lang012 =	&Nagrywanie i odtwarzanie
 	v_Lang013 =	P&olecenia
 	v_Lang014 =	&Edytować
 	v_Lang015 =	Op&cje
 	v_Lang016 =	&Настроить...
-		
 	v_Lang017 =	&Automatyczny
 	v_Lang018 =	&Ręczny
 	v_Lang019 =	&Zatrzymać
 	v_Lang020 =	&Pauza
-		
 	v_Lang021 =	&Zwarty
 	v_Lang022 =	&Domyślnie
-		
 	v_Lang023 =	&Mały
 	v_Lang024 =	&Duże
 		
-; Options Sub Menu		
+; 09. Options Sub Menu		
 	o_Lang001 =	&Ustawienia
 	o_Lang002 =	&Język
 	o_Lang003 =	&Zminimalizować do zasobnika
@@ -157,10 +154,10 @@
 	o_Lang014 =	Hotk&eys Domyślnie
 	o_Lang015 =	Ust&awienia domyślne
 		
-; Donate Sub Menu		
+; 10. Donate Sub Menu		
 	p_Lang001 =	&PayPal Darowizna
 		
-; Help Sub Menu		
+; 11. Help Sub Menu		
 	h_Lang001 =	&Pomocy
 	h_Lang002 =	P&oradniki
 	h_Lang003 =	Po&rady
@@ -171,12 +168,12 @@
 	h_Lang008 =	Spra&wdź na starcie
 	h_Lang009 =	O
 		
-; Tray Menu		
+; 12. Tray Menu		
 	y_Lang001 =	Ukryj okno
 	y_Lang002 =	Pokaż okno
 	y_Lang003 =	Pasek Narzędzi Kontroli
 		
-; Built-in Vars Menu		
+; 13. Built-in Vars Menu		
 	b_Lang001 =	Znaki specjalne
 	b_Lang002 =	właściwości
 	b_Lang003 =	Data i godzina
@@ -185,7 +182,7 @@
 	b_Lang006 =	Inne.
 	b_Lang007 =	Pętla
 		
-; Main Window		
+; 14. Main Window		
 	w_Lang001 =	Eksportować
 	w_Lang002 =	Podgląd
 	w_Lang003 =	Opcje
@@ -294,7 +291,7 @@
 	w_Lang106 =	Konwersja Makro Function (Ctrl + Shift + C)
 	w_Lang107 =	Komentarz się nie zaznaczonych wierszy
 		
-; Command Windows		
+; 15. Command Windows		
 	c_Lang001 =	Mysz
 	c_Lang002 =	Tekst
 	c_Lang003 =	Pauza
@@ -520,7 +517,7 @@
 	c_Lang224 =	Zmienne lokalne
 	c_Lang225 =	Zmienne statyczne
 		
-; Other Windows		
+; 16. Other Windows		
 	t_Lang001 =	Eksport do AutoHotkey
 	t_Lang002 =	Makra
 	t_Lang003 =	Pętle
@@ -698,8 +695,23 @@
 	t_Lang175 =	Inne.
 	t_Lang176 =	Dodaj grupę
 	t_Lang177 =	Nowa grupa
+	t_Lang178 =	Edytor języków
+	t_Lang179 =	Tworzyć nowe
+	t_Lang180 =	Użyj Enter, PgDn i PgUp, aby poruszać.
+	t_Lang181 =	Wyślij
+	t_Lang182 =	Od
+	t_Lang183 =	Imię
+	t_Lang184 =	E-mail
+	t_Lang185 =	Przedmiot
+	t_Lang186 =	Wiadomość
+	t_Lang187 =	Zapisz zmiany?
+	t_Lang188 =	Język pliku
+	t_Lang189 =	Referencyjny nadany
+	t_Lang190 =	Zatwierdź zmiany lub nowe tłumaczenie
+	t_Lang191 =	Zwinąć wszystkie
+	t_Lang192 =	Rozwiń wszystkie
 		
-; Messages & Dialogs		
+; 17. Messages & Dialogs		
 	d_Lang001 =	Otwarte
 	d_Lang002 =	Zapisz bieżący projekt?
 	d_Lang003 =	Ustawienia domyślne
@@ -835,7 +847,7 @@
 	d_Lang101 =	Duplikat funkcji.
 	d_Lang102 =	Jest to słowo zarezerwowane.
 		
-; Start-up Tips		
+; 18. Start-up Tips		
 	Start_Tips =	Makra można tworzyć za pomocą przycisków poleceń w oknie głównym lub za pomocą dyktafonu skopiować swoje działania. Przejdź do Opcje > Ustawienia > Nagrywanie, aby wybrać to, co wejścia zostaną zapisane.
 		Aby korzystać z rejestratora do szybkiego zadania przejdź do Opcje > Ustawienia > Nagrywanie i zaznacz opcję "Wyczyść listę" opcji. Następnie kliknij przycisk Record w głównym oknie i użyć F10, aby usunąć bieżące makro i rozpocząć nową z tym samym skrótu. Możesz także zaznaczyć opcję "Zawsze Aktywny" opcji w oknie głównym, aby zachować zapis i odtwarzanie skrótów aktywne.
 		Aby uzyskać pomoc dla konkretnej komendy kliknij prawym przyciskiem myszy w dowolnym miejscu na oknie polecenia, aby wyświetlić linki do AutoHotkey Pomocy online.
@@ -864,7 +876,7 @@
 		Możesz ustawić własne zmiennych globalnych, które mają być załadowane na początku i na wywóz. Przejdź do Opcje > Ustawienia > użytkownika zmiennych globalnych, aby je dodać.
 		Możesz uruchomić zaawansowane funkcje, takie jak substr i RegExReplace w oknie funkcji (Wstaw > if / zmienne / funkcje). Albo uruchomić własnych funkcji z zewnętrznych skryptów AutoHotkey.
 		
-; Tooltips		
+; 19. Tooltips		
 	AutoKey_TT =	Skrót grać makro
 	ManKey_TT =	Skrót grać makro "krok po kroku"
 	AbortKey_TT =	Skrót, aby zatrzymać odtwarzanie
@@ -944,7 +956,7 @@
 		- Aby używać łańcuchów, ująć w cudzysłów, np: var = "A".
 		- Wiele Oświadczenia są obsługiwane, na przykład: var = "a" || InStr (var, "b").
 		
-; Tooltips from AHK Docs		
+; 20. Tooltips from AHK Docs		
 	ExpList_TT =	Kliknij dwukrotnie, aby edytować
 	Ex_IfDir_TT =	Tworzy kontekstowa skrótów i hotstrings zależności
 		w rodzaju okna, które jest aktywne istnieje.
@@ -995,7 +1007,7 @@
 	Ex_UV_TT =	Wyeksportować zmienne globalne.
 	Ex_EdVars_TT =	Wybierz zmienne globalne być wyeksportowane.
 		
-; Operators		
+; 21. Operators		
 	As_Oper_1 =	Przydzielać
 	As_Oper_2 =	Dodać
 	As_Oper_3 =	Odejmować
@@ -1011,7 +1023,7 @@
 	Co_Oper_6 =	Większe lub równe
 	Co_Oper_7 =	Mniejszy lub równy
 		
-; IE Commands Tips		
+; 22. IE Commands Tips		
 	Tip_Navigate =	Nawigacja do adresu URL lub ścieżki.
 	Tip_Value =	Pobiera lub ustawia wartość obiektu.
 	Tip_Focus =	Ustawia ostrość na obiekcie.
@@ -1038,7 +1050,7 @@
 	Tip_Height =	Ustawia lub pobiera wysokość przedmiotu.
 	Tip_Length =	Ustawia lub pobiera liczbę obiektów w kolekcji.
 		
-; AHK Commands Tips		
+; 23. AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	Abs	Zwraca wartość bezwzględną liczbę.
 	ASin	Zwraca arcus sinus (numer , którego sinus jest Number) w radianach .
@@ -1190,6 +1202,7 @@
 	OnMessage	Określa funkcję połączenie automatycznie po skrypt otrzymuje określoną wiadomość.
 	Ord	Zwraca wartość porządkową (numeryczny kodu znaków) pierwszego znaku w ciągu znaków.
 	OutputDebug	Wysyła ciąg do debuggera (jeśli w ogóle) na wyświetlaczu.
+	Parameter	Dodaje parametr do funkcji.
 	Pause	Wstrzymuje skryptu bieżącego wątku.
 	PixelGetColor	Pobiera kolor piksela w określonym współrzędne x, y.
 	PixelSearch	Przeszukuje obszar ekranu dla piksela określonego koloru.
@@ -1265,6 +1278,7 @@
 	Try	Straż jedno lub więcej oświadczeń (komendy lub wyrażenia) przed błędami runtime i wyjątki rzucane przez rzutów polecenia.
 	Until	Obowiązuje warunek do kontynuacji pętli lub pętli for.
 	UrlDownloadToFile	Pobiera plik z Internetu.
+	UserFunction	Tworzy strukturę funkcji.
 	VarSetCapacity	Zwiększa zdolność zatrzymywania zmiennej lub uwalnia swoją pamięć. Zwykle jest to konieczne tylko w przypadku zaistnienia nadzwyczajnych okoliczności, takich jak DllCall.
 	WinActivate	Uaktywnia określone okno (czyni to przede wszystkim).
 	WinActivateBottom	Tak samo jak WinActivate wyjątkiem tego, że aktywuje najniżej (najmniej ostatnio aktywne) pasujące okno niż najwyższa.

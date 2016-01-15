@@ -1,8 +1,8 @@
-﻿LoadLang_Sk:
+﻿Lang_sk
 		
 		; Slovak
 		
-; Main Menu		
+; 01. Main Menu		
 	m_Lang001 =	&Súbor
 	m_Lang002 =	&Makro
 	m_Lang003 =	&fungovať
@@ -14,7 +14,7 @@
 	m_Lang009 =	&Darovať
 	m_Lang010 =	Pomo&c
 		
-; File Sub Menu		
+; 02. File Sub Menu		
 	f_Lang001 =	&Nový
 	f_Lang002 =	&Otvorené
 	f_Lang003 =	&Uložiť
@@ -28,7 +28,7 @@
 	f_Lang011 =	V&ýstup
 	f_Lang012 =	&Žiadne súbory
 		
-; Macro Sub Menu		
+; 03. Macro Sub Menu		
 	r_Lang001 =	&Záznam makra
 	r_Lang002 =	&Aktivácia makrá
 	r_Lang003 =	&Prehrať aktuálne makro
@@ -45,13 +45,13 @@
 	r_Lang014 =	D&ovoz Makro
 	r_Lang015 =	U&ložiť aktuálne makro
 		
-; Function Sub Menu		
+; 04. Function Sub Menu		
 	u_Lang001 =	&Vytvorenie funkcie
 	u_Lang002 =	&Pridať parameter
 	u_Lang003 =	P&ridať Návrat
 	u_Lang004 =	Pr&eviesť makra fungovať
 		
-; Commands Sub Menu		
+; 05. Commands Sub Menu		
 	i_Lang001 =	&Myš
 	i_Lang002 =	&Text
 	i_Lang003 =	&Ovládanie
@@ -74,7 +74,7 @@
 	i_Lang020 =	N&ájsť príkaz
 		
 		
-; Edit Sub Menu		
+; 06. Edit Sub Menu		
 	e_Lang001 =	&Duplikát
 	e_Lang002 =	&Upraviť komentár
 	e_Lang003 =	&Nájsť / Nahradiť
@@ -90,15 +90,16 @@
 	e_Lang013 =	Vlo&žiť z Box
 	e_Lang014 =	Vlož&te úhoz
 	e_Lang015 =	&Edit Color Mark
-	e_Lang016 =	skupiny
-	e_Lang017 =	Povoliť skupiny
-	e_Lang018 =	Pridať skupinu
-	e_Lang019 =	Odstrániť skupinu
-	e_Lang020 =	Odstrániť všetky skupiny
-	e_Lang021 =	Upraviť skupiny
+	e_Lang016 =	&Skupiny
+	e_Lang017 =	&Povoliť skupiny
+	e_Lang018 =	P&ridať skupinu
+	e_Lang019 =	&Odstrániť skupinu
+	e_Lang020 =	O&dstrániť všetky skupiny
+	e_Lang021 =	&Zbaliť všetko
+	e_Lang022 =	Roz&baliť všetko
 		
 		
-; Select Sub Menu		
+; 07. Select Sub Menu		
 	s_Lang001 =	&Vybrať všetko
 	s_Lang002 =	&Zvoľte None
 	s_Lang003 =	&Obrátiť výber
@@ -110,7 +111,7 @@
 	s_Lang009 =	Zvo&lený typ
 	s_Lang010 =	Typ príkazu
 		
-; View Sub Menu		
+; 08. View Sub Menu		
 	v_Lang001 =	&Always On Top
 	v_Lang002 =	&Zvýraznenie Riadkov
 	v_Lang003 =	&Odsadenie
@@ -121,26 +122,22 @@
 	v_Lang008 =	O&bnoviť stĺpce veľkosť
 	v_Lang009 =	&Ikony VeľKosť
 	v_Lang010 =	Obnovi&ť Rozloženie
-		
 	v_Lang011 =	&Berkas
 	v_Lang012 =	&Nahrávať a prehrávať
 	v_Lang013 =	&Perintah
 	v_Lang014 =	&Mengedit
 	v_Lang015 =	P&ilihan
 	v_Lang016 =	&Vlastné
-		
 	v_Lang017 =	&Automatický
 	v_Lang018 =	&Manuál
 	v_Lang019 =	&Stop
 	v_Lang020 =	&Pauza
-		
 	v_Lang021 =	&Kompaktné
 	v_Lang022 =	&Štandardné
-		
 	v_Lang023 =	&Malý
 	v_Lang024 =	&Rozsiahly
 		
-; Options Sub Menu		
+; 09. Options Sub Menu		
 	o_Lang001 =	&Nastavenie
 	o_Lang002 =	&Jazyk
 	o_Lang003 =	&Minimalizovať do tray
@@ -157,10 +154,10 @@
 	o_Lang014 =	P&redvolené Klávesové skratky
 	o_Lang015 =	Pr&edvolené nastavenie
 		
-; Donate Sub Menu		
+; 10. Donate Sub Menu		
 	p_Lang001 =	&PayPal Dar
 		
-; Help Sub Menu		
+; 11. Help Sub Menu		
 	h_Lang001 =	&Pomoc
 	h_Lang002 =	&Návody
 	h_Lang003 =	&Tipy
@@ -171,12 +168,12 @@
 	h_Lang008 =	P&ozrite sa na štarte
 	h_Lang009 =	O
 		
-; Tray Menu		
+; 12. Tray Menu		
 	y_Lang001 =	Hide Window
 	y_Lang002 =	Zobraziť okno
 	y_Lang003 =	Ovládacie Prvky Panela Nástrojov
 		
-; Built-in Vars Menu		
+; 13. Built-in Vars Menu		
 	b_Lang001 =	špeciálne znaky
 	b_Lang002 =	nehnuteľnosti
 	b_Lang003 =	Dátum a čas
@@ -185,7 +182,7 @@
 	b_Lang006 =	Misc.
 	b_Lang007 =	Slučka
 		
-; Main Window		
+; 14. Main Window		
 	w_Lang001 =	Export
 	w_Lang002 =	Náhľad
 	w_Lang003 =	Voľby
@@ -294,7 +291,7 @@
 	w_Lang106 =	Previesť makra fungovať (Ctrl + Shift + C)
 	w_Lang107 =	Komentár mimo neskontrolované riadkov
 		
-; Command Windows		
+; 15. Command Windows		
 	c_Lang001 =	Myš
 	c_Lang002 =	Text
 	c_Lang003 =	Pauza
@@ -520,7 +517,7 @@
 	c_Lang224 =	Lokálne premenné
 	c_Lang225 =	Statické premenné
 		
-; Other Windows		
+; 16. Other Windows		
 	t_Lang001 =	Export do AutoHotkey
 	t_Lang002 =	Makrá
 	t_Lang003 =	Slučky
@@ -698,8 +695,23 @@
 	t_Lang175 =	Misc.
 	t_Lang176 =	Pridať skupinu
 	t_Lang177 =	Nová skupina
+	t_Lang178 =	Editor jazyka
+	t_Lang179 =	Vytvoriť nový
+	t_Lang180 =	Používajte Enter, PgDn a PgUp pre navigáciu.
+	t_Lang181 =	Predložiť
+	t_Lang182 =	Z
+	t_Lang183 =	Názov
+	t_Lang184 =	Email
+	t_Lang185 =	Predmet
+	t_Lang186 =	Správa
+	t_Lang187 =	Uložiť zmeny?
+	t_Lang188 =	Jazyk Súbor
+	t_Lang189 =	Referenčný súbor
+	t_Lang190 =	Odoslať revíziu alebo nový preklad
+	t_Lang191 =	Zbaliť všetko
+	t_Lang192 =	Rozbaliť všetko
 		
-; Messages & Dialogs		
+; 17. Messages & Dialogs		
 	d_Lang001 =	Otvorené
 	d_Lang002 =	Uložiť aktuálny projekt?
 	d_Lang003 =	Predvolené nastavenie
@@ -835,7 +847,7 @@
 	d_Lang101 =	Duplicitné funkcie.
 	d_Lang102 =	je vyhradené slovo.
 		
-; Start-up Tips		
+; 18. Start-up Tips		
 	Start_Tips =	Môžete vytvárať makrá pomocou príkazových tlačidiel v hlavnom okne, alebo pomocou rekordéra kopírovať svoje akcie. Prejsť na Možnosti> Nastavenie> Nahrávanie na vstupy vybrať, čo budú zaznamenané.
 		Ak chcete použiť rekordér pre rýchle úlohy, ísť do Voľby> Nastavenia> Nahrávanie a zaškrtnite "Vymazať zoznam" možnosť voľby. Potom kliknite na tlačidlo Record v hlavnom okne a pomocou F10 pre vymazanie aktuálneho makra a začať novú s rovnakou klávesovú skratku. Môžete tiež zaškrtnúť voľbu "vždy aktívny" v hlavnom okne udržať nahrávanie a prehrávanie klávesy aktívne.
 		Ak chcete získať nápovedu pre konkrétny príkaz kliknite pravým tlačidlom myši na okne príkazového riadku sa zobrazí odkazy na AutoHotkey pomocníkovi.
@@ -864,7 +876,7 @@
 		Môžete si nastaviť vlastné Globálne premenné má naložiť na spustenie a ktorý sa má vyviezť. Prejsť na Možnosti> Nastavenie> Užívateľská globálne premenné pridať.
 		Môžete spustiť pokročilé funkcie ako substr a RegExReplace z funkcií okna (Vložiť> if / premennej / funkcie). Alebo spustiť vlastné funkcie z externých AutoHotkey skriptov.
 		
-; Tooltips		
+; 19. Tooltips		
 	AutoKey_TT =	Klávesová skratka pre prehrávanie makra
 	ManKey_TT =	Klávesová skratka pre prehrávanie makra "krok-za-krokom"
 	AbortKey_TT =	Klávesová skratka pre zastavenie prehrávania
@@ -944,7 +956,7 @@
 		- Ak chcete použiť reťazca, uzavrite do úvodzoviek, napríklad: var = "A".
 		- Viac príkazov sú podporované, napr: var = "a" || Instru (var, "b").
 		
-; Tooltips from AHK Docs		
+; 20. Tooltips from AHK Docs		
 	ExpList_TT =	Poklepaním editovať
 	Ex_IfDir_TT =	Vytvorí kontextovo citlivé klávesy a hotstrings závislosti
 		na type okna, ktoré je aktívne, alebo neexistuje.
@@ -995,7 +1007,7 @@
 	Ex_UV_TT =	Export globálne premenné.
 	Ex_EdVars_TT =	Vyberte globálne premenné, ktoré chcete exportovať.
 		
-; Operators		
+; 21. Operators		
 	As_Oper_1 =	Priradiť
 	As_Oper_2 =	Pridať
 	As_Oper_3 =	Odčítať
@@ -1011,7 +1023,7 @@
 	Co_Oper_6 =	Väčšie alebo rovné
 	Co_Oper_7 =	Menší alebo rovný
 		
-; IE Commands Tips		
+; 22. IE Commands Tips		
 	Tip_Navigate =	Prejde na adresu URL alebo cestu.
 	Tip_Value =	Získa alebo nastaví hodnotu objektu.
 	Tip_Focus =	Nastaví fokus na objekt.
@@ -1038,7 +1050,7 @@
 	Tip_Height =	Nastaví alebo získa výšku objektu.
 	Tip_Length =	Nastavuje alebo načítava počet objektov v kolekcii.
 		
-; AHK Commands Tips		
+; 23. AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	Abs	Vráti absolútnu hodnotu čísla.
 	ASin	Vracia arkussínus (číslo, ktorého sínus je číslo) v radiánoch.
@@ -1190,6 +1202,7 @@
 	OnMessage	Určuje funkcie pre volanie automaticky, keď skript dostane zadanú správu.
 	Ord	Vráti poradové hodnotu (číselný kód znaku) prvého znaku v reťazci.
 	OutputDebug	Odošle reťazec ladiaci program (ak existuje) na displeji.
+	Parameter	Pridá parameter do funkcie.
 	Pause	Pozastavenie skriptu aktuálne vlákno.
 	PixelGetColor	Načíta farbu pixelu na zadané súradnice X, Y.
 	PixelSearch	Prehľadá oblasť obrazovky pre pixelu určenie farby.
@@ -1265,6 +1278,7 @@
 	Try	Chrániče jeden alebo viac príkazov (príkazy alebo výrazy) proti runtime chyby a výnimky vyvolané príkazom throw.
 	Until	Platí podmienku pre pokračovanie Loop alebo cyklus for.
 	UrlDownloadToFile	Stiahne súbor z internetu.
+	UserFunction	Vytvára štruktúru funkcie.
 	VarSetCapacity	Zväčšenie premenné kapacitu ustajnenia alebo uvoľní jeho pamäť. Normálne, je to nutné len pre mimoriadnych okolností, ako sú DllCall.
 	WinActivate	Aktivuje uvedené okno (robí to predovšetkým).
 	WinActivateBottom	Rovnaké ako WinActivate okrem toho, že sa aktivuje najspodnejšej (aspoň v poslednej dobe aktívne) zodpovedajúce okno, skôr než najvyššia.

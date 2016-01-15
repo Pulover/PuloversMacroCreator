@@ -1,8 +1,8 @@
-﻿LoadLang_No:
+﻿Lang_no
 		
 		; Norwegian
 		
-; Main Menu		
+; 01. Main Menu		
 	m_Lang001 =	&Fil
 	m_Lang002 =	&Makro
 	m_Lang003 =	F&unksjon
@@ -14,7 +14,7 @@
 	m_Lang009 =	&Donere
 	m_Lang010 =	&Hjelp
 		
-; File Sub Menu		
+; 02. File Sub Menu		
 	f_Lang001 =	&Ny
 	f_Lang002 =	&Åpent
 	f_Lang003 =	&Lagre
@@ -28,7 +28,7 @@
 	f_Lang011 =	&Utgang
 	f_Lang012 =	In&gen filer
 		
-; Macro Sub Menu		
+; 03. Macro Sub Menu		
 	r_Lang001 =	&Registrer makro
 	r_Lang002 =	&Aktivere makroer
 	r_Lang003 =	&Spille Gjeldende Macro
@@ -45,13 +45,13 @@
 	r_Lang014 =	Imp&ort Macro
 	r_Lang015 =	Lagre g&jeldende Macro
 		
-; Function Sub Menu		
+; 04. Function Sub Menu		
 	u_Lang001 =	&Opprett Funksjon
 	u_Lang002 =	&Legg Parameter
 	u_Lang003 =	L&egg Return
 	u_Lang004 =	&Konverter Macro å fungere
 		
-; Commands Sub Menu		
+; 05. Commands Sub Menu		
 	i_Lang001 =	&Mus
 	i_Lang002 =	&Tekst
 	i_Lang003 =	&Kontroll
@@ -74,7 +74,7 @@
 	i_Lang020 =	Finn en k&ommando
 		
 		
-; Edit Sub Menu		
+; 06. Edit Sub Menu		
 	e_Lang001 =	&Duplisere
 	e_Lang002 =	&Rediger Kommentar
 	e_Lang003 =	&Finn / Erstatt
@@ -90,15 +90,16 @@
 	e_Lang013 =	S&ett fra boksen
 	e_Lang014 =	Sett Tastetrykk
 	e_Lang015 =	Ed&it fargemerki
-	e_Lang016 =	grupper
-	e_Lang017 =	Aktiver grupper
-	e_Lang018 =	Legg til gruppe
-	e_Lang019 =	Fjern gruppe
-	e_Lang020 =	Fjern alle grupper
-	e_Lang021 =	Rediger grupper
+	e_Lang016 =	Gru&pper
+	e_Lang017 =	&Aktiver grupper
+	e_Lang018 =	&Legg til gruppe
+	e_Lang019 =	&Fjern gruppe
+	e_Lang020 =	F&jern alle grupper
+	e_Lang021 =	&Skjul alle
+	e_Lang022 =	&Utvid alle
 		
 		
-; Select Sub Menu		
+; 07. Select Sub Menu		
 	s_Lang001 =	&Velg Alle
 	s_Lang002 =	V&elg Ingen
 	s_Lang003 =	&Inverter
@@ -110,7 +111,7 @@
 	s_Lang009 =	V&algt type
 	s_Lang010 =	Kommandotypen
 		
-; View Sub Menu		
+; 08. View Sub Menu		
 	v_Lang001 =	&Alltid på topp
 	v_Lang002 =	&Markere Rader
 	v_Lang003 =	&Innrykk
@@ -121,26 +122,22 @@
 	v_Lang008 =	&Tilbakestille kolonner størrelse
 	v_Lang009 =	Ik&oner StøRrelse
 	v_Lang010 =	Ti&lbakestille Layout
-		
 	v_Lang011 =	&Fil
 	v_Lang012 =	&Ta opp og spille
 	v_Lang013 =	&Kommandoer
 	v_Lang014 =	&Redigere
 	v_Lang015 =	&Alternativer
 	v_Lang016 =	T&ilpass
-		
 	v_Lang017 =	&Automatisk
 	v_Lang018 =	&Manuell
 	v_Lang019 =	&Stopp
 	v_Lang020 =	&Pause
-		
 	v_Lang021 =	&Kompakt
 	v_Lang022 =	&Standard
-		
 	v_Lang023 =	&Liten
 	v_Lang024 =	&Stor
 		
-; Options Sub Menu		
+; 09. Options Sub Menu		
 	o_Lang001 =	&Innstillinger
 	o_Lang002 =	&Språk
 	o_Lang003 =	&Minimere å brett
@@ -157,10 +154,10 @@
 	o_Lang014 =	S&tandard Hurtigtaster
 	o_Lang015 =	Stan&dardinnstillinger
 		
-; Donate Sub Menu		
+; 10. Donate Sub Menu		
 	p_Lang001 =	&PayPal donasjon
 		
-; Help Sub Menu		
+; 11. Help Sub Menu		
 	h_Lang001 =	&Hjelp
 	h_Lang002 =	&Tutorials
 	h_Lang003 =	T&ips
@@ -171,12 +168,12 @@
 	h_Lang008 =	S&jekk ved oppstart
 	h_Lang009 =	&Om
 		
-; Tray Menu		
+; 12. Tray Menu		
 	y_Lang001 =	Skjul vindu
 	y_Lang002 =	Vis Window
 	y_Lang003 =	Kontroller Verktøylinjen
 		
-; Built-in Vars Menu		
+; 13. Built-in Vars Menu		
 	b_Lang001 =	spesialtegn
 	b_Lang002 =	egenskaper
 	b_Lang003 =	Dato og tid
@@ -185,7 +182,7 @@
 	b_Lang006 =	Div.
 	b_Lang007 =	Loop
 		
-; Main Window		
+; 14. Main Window		
 	w_Lang001 =	Eksportere
 	w_Lang002 =	Forhåndsvisning
 	w_Lang003 =	Alternativer
@@ -294,7 +291,7 @@
 	w_Lang106 =	Konverter Macro å fungere (Ctrl + Shift + C)
 	w_Lang107 =	Kommentar ut ukontrollert rader
 		
-; Command Windows		
+; 15. Command Windows		
 	c_Lang001 =	Mus
 	c_Lang002 =	Tekst
 	c_Lang003 =	Pause
@@ -520,7 +517,7 @@
 	c_Lang224 =	Lokale variabler
 	c_Lang225 =	Statiske variabler
 		
-; Other Windows		
+; 16. Other Windows		
 	t_Lang001 =	Eksportere til AutoHotkey
 	t_Lang002 =	Makroer
 	t_Lang003 =	Loops
@@ -698,8 +695,23 @@
 	t_Lang175 =	Div.
 	t_Lang176 =	Legg til gruppe
 	t_Lang177 =	Ny gruppe
+	t_Lang178 =	Språk Editor
+	t_Lang179 =	Lag ny
+	t_Lang180 =	Bruk Enter, PgDn og PgUp å navigere.
+	t_Lang181 =	Send inn
+	t_Lang182 =	Fra
+	t_Lang183 =	Navn
+	t_Lang184 =	E-post
+	t_Lang185 =	Emne
+	t_Lang186 =	Beskjed
+	t_Lang187 =	Lagre endringer?
+	t_Lang188 =	Språkfil
+	t_Lang189 =	Referanse File
+	t_Lang190 =	Send revisjon eller ny oversettelse
+	t_Lang191 =	Skjul alle
+	t_Lang192 =	Utvid alle
 		
-; Messages & Dialogs		
+; 17. Messages & Dialogs		
 	d_Lang001 =	Åpent
 	d_Lang002 =	Lagre nåværende prosjekt?
 	d_Lang003 =	Standardinnstillinger
@@ -835,7 +847,7 @@
 	d_Lang101 =	Duplicate funksjon.
 	d_Lang102 =	er et reservert ord.
 		
-; Start-up Tips		
+; 18. Start-up Tips		
 	Start_Tips =	Du kan lage makroer ved hjelp av kommandoen Knapper i hovedvinduet eller bruke opptaker til å kopiere dine handlinger. Gå til Valg > Innstillinger > Opptak til å velge hvilke innganger vil bli registrert.
 		For å bruke opptakeren for raske oppgaver gå til Valg > Innstillinger > Recording og sjekke "Clear List" alternativet. Deretter klikker du på Record-knappen i hovedvinduet og bruke F10 for å slette gjeldende Makro og starte en ny en med samme hurtigtast. Du kan også sjekke "Alltid aktiv" i hovedvinduet for å holde Opptak og avspilling hurtigtaster aktiv.
 		For å få hjelp til en bestemt kommando høyreklikke hvor som helst på en kommando vinduet for å vise lenker til AutoHotkey elektroniske hjelpen.
@@ -864,7 +876,7 @@
 		Du kan sette dine egne globale variabler som skal lastes på oppstart og som skal eksporteres. Gå til Valg > Innstillinger > Bruker globale variabler å legge dem.
 		Du kan kjøre avanserte funksjoner som substr og RegExReplace fra Funksjoner vinduet (Sett inn > Hvis Uttalelser / variabler / funksjoner). Eller kjøre dine egne funksjoner fra eksterne autohotkey skript.
 		
-; Tooltips		
+; 19. Tooltips		
 	AutoKey_TT =	Løsningen å spille Makro
 	ManKey_TT =	Løsningen å spille Macro "step-by-step"
 	AbortKey_TT =	Løsningen å stoppe avspillingen
@@ -944,7 +956,7 @@
 		- For å bruke strenger, legge dem i anførselstegn, for eksempel: var = "a".
 		- Flere uttalelser støttes, for eksempel: var = "a" || InStr (var, "b").
 		
-; Tooltips from AHK Docs		
+; 20. Tooltips from AHK Docs		
 	ExpList_TT =	Dobbeltklikk for å redigere
 	Ex_IfDir_TT =	Oppretter kontekstavhengige hurtigtaster og hotstrings avhengig
 		av type vindu som er aktiv eller eksisterer.
@@ -995,7 +1007,7 @@
 	Ex_UV_TT =	Eksportere globale variabler.
 	Ex_EdVars_TT =	Velg globale variabler som skal eksporteres.
 		
-; Operators		
+; 21. Operators		
 	As_Oper_1 =	Tildele
 	As_Oper_2 =	Legg
 	As_Oper_3 =	Trekk fra
@@ -1011,7 +1023,7 @@
 	Co_Oper_6 =	Større eller lik
 	Co_Oper_7 =	Mindre eller lik
 		
-; IE Commands Tips		
+; 22. IE Commands Tips		
 	Tip_Navigate =	Navigerer til en URL eller bane.
 	Tip_Value =	Får eller setter verdien av objektet.
 	Tip_Focus =	Fokuserer på objektet.
@@ -1038,7 +1050,7 @@
 	Tip_Height =	Stiller eller henter høyden av objektet.
 	Tip_Length =	Stiller eller henter antallet objekter i en samling.
 		
-; AHK Commands Tips		
+; 23. AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	Abs	Returnerer den absolutte verdien av nummer.
 	ASin	Gir arcsinus (tallet som sinus er Number) i radianer .
@@ -1190,6 +1202,7 @@
 	OnMessage	Angir en funksjon for å ringe automatisk når skriptet mottar den angitte meldingen.
 	Ord	Returnerer ordens verdi (numerisk tegnkode) for det første tegnet i String.
 	OutputDebug	Sender en streng til debugger (hvis noen) for visning.
+	Parameter	Legger en parameter til funksjonen.
 	Pause	Pauser skriptet nåværende tråden.
 	PixelGetColor	Henter fargen på piksel ved de angitte x, koordinerer y.
 	PixelSearch	Søker en region av skjermen for en piksel i den angitte fargen.
@@ -1265,6 +1278,7 @@
 	Try	Vakter ett eller flere utsagn (kommandoer eller uttrykk) mot runtime feil og unntak kastet av innkastet kommandoen.
 	Until	Legger en betingelse til videreføring av en Loop eller For-løkke.
 	UrlDownloadToFile	Laster ned en fil fra Internett.
+	UserFunction	Oppretter en funksjon struktur.
 	VarSetCapacity	Forstørrer en variabel holder kapasitet eller frigjør minnet. Normalt er dette nødvendig bare for uvanlige omstendigheter som DllCall.
 	WinActivate	Aktiverer den angitte vinduet (gjør det fremste).
 	WinActivateBottom	Samme som WinActivate bortsett fra at den aktiverer nederste (minst sist) matching vinduet i stedet for den øverste.
