@@ -73,7 +73,6 @@
 	i_Lang019 =	&Windows Iletileri
 	i_Lang020 =	&(Ctrl+Shift+F) bir komut bul
 		
-		
 ; 06. Edit Sub Menu		
 	e_Lang001 =	&Çift
 	e_Lang002 =	&Yorum düzenle
@@ -97,7 +96,6 @@
 	e_Lang020 =	&Tüm grupları kaldırın
 	e_Lang021 =	T&üm daraltmak
 	e_Lang022 =	&Hepsini genişlet
-		
 		
 ; 07. Select Sub Menu		
 	s_Lang001 =	&Tümünü Seç
@@ -153,6 +151,7 @@
 	o_Lang013 =	Varsayı&lan Dosya kaldır
 	o_Lang014 =	Varsayıla&n Hotkeys
 	o_Lang015 =	Varsayılan Ayarlar
+	o_Lang016 =	&Dil Editörü
 		
 ; 10. Donate Sub Menu		
 	p_Lang001 =	&PayPal Bağış
@@ -761,7 +760,6 @@
 	d_Lang042 =	Geçersiz operatör.
 		Aşağıdaki operatörler kabul edilmektedir:
 		=, ==, <>,! =,>, <,> =, <=
-		
 		Örnekler:
 		MyVar > 1
 		MyVar = `%A_DDDD`%
@@ -791,7 +789,6 @@
 		Bir değişken atamak ve parametre içinde kullanın.
 	d_Lang060 =	Kullanılabilir yeni versiyonu
 	d_Lang061 =	Şimdi yüklemek ister misiniz?
-		
 		Otomatik kontrol devre dışı bırakmak için Yardım'ı seçin > Başlangıçta kontrol edin
 	d_Lang062 =	Zaten en son sürümü var.
 	d_Lang063 =	Kontrol sırasında bir hata oluştu.
@@ -801,7 +798,6 @@
 	d_Lang067 =	Başlangıçta bu pencere göster
 	d_Lang068 =	İpuçları:
 	d_Lang069 =	Zaman ve çaba bir çok Pulover's Macro Creator geliştirilmesine gitti. Eğer yararlı bulursanız, bir bağış ile takdir gösteren düşünün lütfen.
-		
 		Bağış ya da değil, özellikleri ve işlevsellik açısından bir fark olacak.
 	d_Lang070 =	Bağış...
 	d_Lang071 =	Hayır, teşekkürler
@@ -877,73 +873,29 @@
 		Sen Fonksiyonlar pencere (Eğer Tablolar / Değişkenler / İşlevleri > Ekle) bu tür substr ve RegExReplace gibi gelişmiş fonksiyonları çalıştırabilirsiniz. Veya harici AutoHotkey komut, kendi fonksiyonları çalıştırmak.
 		
 ; 19. Tooltips		
-	AutoKey_TT =	Kısayol Makro oynamak
-	ManKey_TT =	Kısayol Makro "adım adım" oynamak
-	AbortKey_TT =	Kısayol çalma durdurmak için
-	PauseKey_TT =	Duraklatmak için kısayol tuşu
-	RecKey_TT =	Temizlemek için Backspace
-	RecNewKey_TT =	Temizlemek için Backspace
-	JoyKey_TT =	Joystick üzerindeki bir düğmeye basın
-	ReptC_TT =	0 = sonsuz
 	A_List_TT =	Makro Seçin (Ctrl+1~0)
-	OSHK_TT =	Makro Seçin
-	OSHKEd_TT =	Makro Seçin
-	ApplyT_TT =	Uygulamak
+	AbortKey_TT =	Kısayol çalma durdurmak için
+	ActiveObj_TT =	Active COM Nesne bağlanmaya çalışır
 	ApplyI_TT =	Uygulamak
 	ApplyL_TT =	Kutusundan Ekle (Insert)
-	CmdFilter_TT =	Türleri filtresi
-	InsertKey_TT =	Tuş Eklemek (Ctrl+Insert)
-	InsertKeyT_TT =	Tuş Eklemek
-	DefaultMacro_TT =	Program başlangıçta yüklemek için dosyayı seçin
-	VarCopyA_TT =	Akım değişken içeriğini kopyalama
-	VarCopyB_TT =	Akım değişken içeriğini kopyalama
-	Reset_TT =	Temizle değişken içeriği
-	Screenshot_TT =	Ekran Yap
-	ColorPick_TT =	Ekranda piksel olsun
-	PicPrev_TT =	Görüntü açmak için çift tıklayın
-	CoordPixel_TT =	Modu Koordinat
-	VariatT_TT =	Varyasyon Shades
-	IconN_TT =	Simge grubu sayısı
-	TransC_TT =	Şeffaf renk
-	WScale_TT =	Genişlik ölçekli
-	HScale_TT =	Yükseklik ölçekli
-	Fast_TT =	Daha hızlı bir arama yöntemi (önerilir) kullanır
-	RGB_TT =	Yerine BGR bir RGB değeri olarak yorumlanabilir renk neden olur
-	LoopLVColor_TT =	Bir renk seçmek için tıklayınız
-	IfLVColor_TT =	Bir renk seçmek için tıklayınız
-	RefreshIEW_TT =	Yenile Listesi
-	ActiveObj_TT =	Active COM Nesne bağlanmaya çalışır
-	TimeoutM_TT =	0 = sonsuz
-	ExpView_TT =	Gelişmiş Editörü
-	ExpView2_TT =	Gelişmiş Editörü
-	OSProgB_TT =	İlerleme Çubuğu Ekran
-	OSTrans_TT =	Donukluk
-	MRel_TT =	Geçerli konuma göre Hareketleri.
-		Yoksa Kontrol kullanılırsa: Denetim göreli konumu.
-	Raw_TT =	SendRaw komutu anlamıyla tüm karakterler yorumluyor
-		yerine çevirmek yerine, bir ENTER tuş etmek {Enter}
-		^ C Control-C, vb
-	ComText_TT =	Değilken raw modunda, aşağıdaki karakterleri
-		düzenleyiciler (bu değiştiricileri etkiler olarak kabul edilir
-		Sadece çok sonraki anahtar):!, +, ^, #
-	ComEvent_TT =	Tuş vuruşlarını gönderilen hızını önemli gecikme ile belirlenir.
+	ApplyT_TT =	Uygulamak
+	AutoKey_TT =	Kısayol Makro oynamak
 	Clip_TT =	Geçici metni göndermek için Pano kullanır.
 		işlemi tamamlandığında, komut
 		Orijinal pano içeriği geri yükler.
 		(Güncel içeriği yapıştırmak için boş metin bırakın)
+	CmdFilter_TT =	Türleri filtresi
+	CmdSort_TT =	Alfabetik sıralama
+	ColorPick_TT =	Ekranda piksel olsun
+	ComEvent_TT =	Tuş vuruşlarını gönderilen hızını önemli gecikme ile belirlenir.
+	ComText_TT =	Değilken raw modunda, aşağıdaki karakterleri
+		düzenleyiciler (bu değiştiricileri etkiler olarak kabul edilir
+		Sadece çok sonraki anahtar):!, +, ^, #
+	CoordPixel_TT =	Modu Koordinat
+	DefaultMacro_TT =	Program başlangıçta yüklemek için dosyayı seçin
 	EditPaste_TT =	Şapka / insert pozisyonunda Pastalar Dize
 		Bir düzenleme denetimi (bu etkilemez
 		Pano içeriği).
-	SetText_TT =	Bir denetimin metni değiştirir.
-	RelKey_TT =	Düzenlenen önceki pozisyondan uzaklıklar
-		gibi kayıtları Fare hareketleri ve tıklamaları.
-	ToggleC_TT =	Önemli devlet açıkken Bağıl Kayıt etkinleştirin.
-	Relative_TT =	Koordinatlar etkin pencere göredir.
-	Screen_TT =	Koordinatlar masaüstü (tüm ekranı) göredir.
-	IncFiles_TT =	Dosyaları / Değerler Dahil
-	IncFolders_TT =	Dizin (klasör) / Keys Dahil
-	Recurse_TT =	Alt dizinleri içine recursive (alt klasörler) / Alt anahtarları
-	CmdSort_TT =	Alfabetik sıralama
 	Ex_EdScript_TT =	Harici düzenleyicide açın
 	ExprLink2_TT =	- BURAYA YÜZDE IŞARETLERI DEĞİŞKENLER IÇINE ALMAYıN.
 		- AHK ifadelerin çoğu desteklenmektedir.
@@ -955,16 +907,90 @@
 		- Sen dizeleri, değişkenler, diziler ve işlevlerini kullanabilirsiniz.
 		- Örneğin, tırnak işareti içine, dizeleri kullanmak için: var = "a".
 		- Çoklu Tablolar desteklenir, örneğin: var = "a" || InStr (var "b").
+	ExpView_TT =	Gelişmiş Editörü
+	ExpView2_TT =	Gelişmiş Editörü
+	Fast_TT =	Daha hızlı bir arama yöntemi (önerilir) kullanır
+	HScale_TT =	Yükseklik ölçekli
+	IconN_TT =	Simge grubu sayısı
+	IfLVColor_TT =	Bir renk seçmek için tıklayınız
+	IncFiles_TT =	Dosyaları / Değerler Dahil
+	IncFolders_TT =	Dizin (klasör) / Keys Dahil
+	InsertKey_TT =	Tuş Eklemek (Ctrl+Insert)
+	InsertKeyT_TT =	Tuş Eklemek
+	JoyKey_TT =	Joystick üzerindeki bir düğmeye basın
+	LoopLVColor_TT =	Bir renk seçmek için tıklayınız
+	ManKey_TT =	Kısayol Makro "adım adım" oynamak
+	MRel_TT =	Geçerli konuma göre Hareketleri.
+		Yoksa Kontrol kullanılırsa: Denetim göreli konumu.
+	OSHK_TT =	Makro Seçin
+	OSHKEd_TT =	Makro Seçin
+	OSProgB_TT =	İlerleme Çubuğu Ekran
+	OSTrans_TT =	Donukluk
+	PauseKey_TT =	Duraklatmak için kısayol tuşu
+	PicPrev_TT =	Görüntü açmak için çift tıklayın
+	Raw_TT =	SendRaw komutu anlamıyla tüm karakterler yorumluyor
+		yerine çevirmek yerine, bir ENTER tuş etmek {Enter}
+		^ C Control-C, vb
+	RecKey_TT =	Temizlemek için Backspace
+	RecNewKey_TT =	Temizlemek için Backspace
+	Recurse_TT =	Alt dizinleri içine recursive (alt klasörler) / Alt anahtarları
+	RefreshIEW_TT =	Yenile Listesi
+	Relative_TT =	Koordinatlar etkin pencere göredir.
+	RelKey_TT =	Düzenlenen önceki pozisyondan uzaklıklar
+		gibi kayıtları Fare hareketleri ve tıklamaları.
+	ReptC_TT =	0 = sonsuz
+	Reset_TT =	Temizle değişken içeriği
+	RGB_TT =	Yerine BGR bir RGB değeri olarak yorumlanabilir renk neden olur
+	Screen_TT =	Koordinatlar masaüstü (tüm ekranı) göredir.
+	Screenshot_TT =	Ekran Yap
+	SetText_TT =	Bir denetimin metni değiştirir.
+	TimeoutM_TT =	0 = sonsuz
+	ToggleC_TT =	Önemli devlet açıkken Bağıl Kayıt etkinleştirin.
+	TransC_TT =	Şeffaf renk
+	VarCopyA_TT =	Akım değişken içeriğini kopyalama
+	VarCopyB_TT =	Akım değişken içeriğini kopyalama
+	VariatT_TT =	Varyasyon Shades
+	WScale_TT =	Genişlik ölçekli
 		
 ; 20. Tooltips from AHK Docs		
-	ExpList_TT =	Düzenlemek için çift tıklayın
+	Ex_AF_TT =	Bir pencere aktive nazik yöntemi atlar
+		ve güçlü yöntemi düz gider.
+	Ex_DH_TT =	Görünmez pencereleri script tarafından 'görülen' belirler.
+	Ex_EdVars_TT =	Ihraç edilecek genel değişkenleri seçin.
+	Ex_HK_TT =	Tüm uygulamak için kanca kullanılmasını zorlar
+		ya da klavye kısayol tuşları.
 	Ex_IfDir_TT =	Bağlam-duyarlı hotkeys ve bağlı hotstrings oluşturur
 		aktif veya bulunduğu pencerenin türüne bağlıdır.
 	Ex_IfDirType_TT =	Bağlam-duyarlı hotkeys ve bağlı hotstrings oluşturur
 		aktif veya bulunduğu pencerenin türüne bağlıdır.
+	Ex_IN_TT =	Belirtilen sanki komut davranmasına neden olur
+		Dosyanın içeriğini tam bu konumda bulunmaktadır.
+	Ex_MD_TT =	Sonra gerçekleşecek gecikmesini ayarlar
+		Her fare hareketi veya tıklama.
+	Ex_MT_TT =	Aynı anda en fazla sayısını belirler
+		kısayol tuşu veya hotstring başına konuları.
+	Ex_NT_TT =	Bir tepsi simgesini gösteren devre dışı bırakır.
+	Ex_PT_TT =	Bir komut dosyası sürekli çalışmasını sağlar
+		(kullanıcı kapatır veya ExitApp karşılaşıldığında kadar olmasıdır).
+	Ex_SB_TT =	Bir komut dosyası (CPU kullanımını etkiler) çalıştırmak ne kadar hızlı belirler.
+	Ex_SC_TT =	Sonra gerçekleşecek gecikmesini ayarlar
+		Her komuta kontrol-değiştirme.
+	Ex_SI_TT =	Bir komut dosyası zaten çalışırken tekrar çalıştırmak için izin verilip verilmeyeceğini belirler.
+	Ex_SK_TT =	Her sonra gerçekleşecek gecikmesini ayarlar
+		tuş Gönder veya ControlSend tarafından gönderilen.
 	Ex_SM_TT =	SendInput veya SendPlay ile eşanlamlı gönder ziyade yapar
 		Varsayılan (SendEvent). Ayrıca yapar tıklayın ve MouseMove / tıklayın / sürükleyin
 		Belirtilen yöntemi kullanın.
+	Ex_ST_TT =	Böyle WinWait gibi komutları WinTitle parametre eşleşen davranışını ayarlar.
+	Ex_SW_TT =	Sonra gerçekleşecek gecikmesini ayarlar
+		Bu tür WinActivate gibi her bir pencere bir komut.
+	Ex_UV_TT =	Global değişkenler ihracat.
+	ExpList_TT =	Düzenlemek için çift tıklayın
+	SI_TT =	Kelime FORCE, iletişim kutusunu atlar ve otomatik eski örneği yerine
+		bu etki de Yeniden komutuna benzer.
+		Kelime atlar iletişim kutusunu IGNORE ve eski örneğini çalıştıran bırakır.
+		Diğer bir deyişle, zaten çalışan komut dosyası başlatmak için girişimleri göz ardı edilir.
+		Kelime OFF komut birden çok örneğini aynı anda çalıştırmak için izin verir.
 	SM_TT =	Olay: Bu, tüm komut dosyaları tarafından kullanılan başlangıç ​​varsayılan değerdir.
 		Bu, Gönder SendRaw, tıklayın ve MouseMove / Drag / tıklayın için SendEvent yöntemi kullanır.
 		Girdi: SendRaw, Gönder için SendInput yöntemi Anahtarlar, tıklayın ve MouseMove / tıklayın / sürükleyin.
@@ -972,40 +998,10 @@
 		SendInput kullanılamaz olduğunda, bu modu (aşağıda) Play döner. Bu, aynı zamanda neden
 		SendInput komut kendini SendInput kullanılamaz olduğunda Oynatma modu dönmek.
 		Play: SendRaw, Gönder için SendPlay yöntemi Anahtarlar, tıklayın ve MouseMove / tıklayın / sürükleyin.
-	Ex_SI_TT =	Bir komut dosyası zaten çalışırken tekrar çalıştırmak için izin verilip verilmeyeceğini belirler.
-	SI_TT =	Kelime FORCE, iletişim kutusunu atlar ve otomatik eski örneği yerine
-		bu etki de Yeniden komutuna benzer.
-		Kelime atlar iletişim kutusunu IGNORE ve eski örneğini çalıştıran bırakır.
-		Diğer bir deyişle, zaten çalışan komut dosyası başlatmak için girişimleri göz ardı edilir.
-		Kelime OFF komut birden çok örneğini aynı anda çalıştırmak için izin verir.
-	Ex_ST_TT =	Böyle WinWait gibi komutları WinTitle parametre eşleşen davranışını ayarlar.
 	ST_TT =	1: Bir pencerenin başlık bir maç olduğu belirtilen WinTitle ile başlamalıdır.
 		2: bir maç olmasını içindeki bir pencerenin başlık yerde WinTitle içerebilir.
 		3: Bir pencerenin başlık tam bir maç olmasını WinTitle eşleşmelidir.
 		RegEx: Değişiklikler, WinText, ExcludeTitle ve düzenli ifadeler olarak ExcludeText WinTitle.
-	Ex_DH_TT =	Görünmez pencereleri script tarafından 'görülen' belirler.
-	Ex_AF_TT =	Bir pencere aktive nazik yöntemi atlar
-		ve güçlü yöntemi düz gider.
-	Ex_HK_TT =	Tüm uygulamak için kanca kullanılmasını zorlar
-		ya da klavye kısayol tuşları.
-	Ex_SK_TT =	Her sonra gerçekleşecek gecikmesini ayarlar
-		tuş Gönder veya ControlSend tarafından gönderilen.
-	Ex_MD_TT =	Sonra gerçekleşecek gecikmesini ayarlar
-		Her fare hareketi veya tıklama.
-	Ex_SC_TT =	Sonra gerçekleşecek gecikmesini ayarlar
-		Her komuta kontrol-değiştirme.
-	Ex_SW_TT =	Sonra gerçekleşecek gecikmesini ayarlar
-		Bu tür WinActivate gibi her bir pencere bir komut.
-	Ex_SB_TT =	Bir komut dosyası (CPU kullanımını etkiler) çalıştırmak ne kadar hızlı belirler.
-	Ex_NT_TT =	Bir tepsi simgesini gösteren devre dışı bırakır.
-	Ex_IN_TT =	Belirtilen sanki komut davranmasına neden olur
-		Dosyanın içeriğini tam bu konumda bulunmaktadır.
-	Ex_PT_TT =	Bir komut dosyası sürekli çalışmasını sağlar
-		(kullanıcı kapatır veya ExitApp karşılaşıldığında kadar olmasıdır).
-	Ex_MT_TT =	Aynı anda en fazla sayısını belirler
-		kısayol tuşu veya hotstring başına konuları.
-	Ex_UV_TT =	Global değişkenler ihracat.
-	Ex_EdVars_TT =	Ihraç edilecek genel değişkenleri seçin.
 		
 ; 21. Operators		
 	As_Oper_1 =	Atamak
@@ -1024,47 +1020,47 @@
 	Co_Oper_7 =	Daha az ya da eşit
 		
 ; 22. IE Commands Tips		
-	Tip_Navigate =	Bir URL veya yol gider.
-	Tip_Value =	Alır veya nesnesinin değerini belirler.
-	Tip_Focus =	Nesnesi odağı ayarlar.
+	Tip_Checked =	Ayarlar veya onay kutusunu veya radyo düğmesini durumunu alır.
 	Tip_Click =	Nesne üzerinde bir tıklama simüle eder.
-	Tip_Submit =	Formu gönderir.
-	Tip_GoHome =	Geçerli ev veya başlangıç ​​sayfasına gider.
+	Tip_Focus =	Nesnesi odağı ayarlar.
 	Tip_GoBack =	Geçmiş listesindeki bir öğeyi geriye doğru gider.
 	Tip_GoForward =	Geçmiş listesindeki bir öğeyi ileri gider.
+	Tip_GoHome =	Geçerli ev veya başlangıç ​​sayfasına gider.
 	Tip_GoSearch =	Geçerli arama sayfasına gider.
-	Tip_Refresh =	Çoğul anda görüntülenen sayfa.
-	Tip_Stop =	Bekleyen bir gezinti veya indirme iptal eder.
-	Tip_Quit =	Sayfa kapatır.
+	Tip_Height =	Ayarlar ya da nesne yüksekliğinin alır.
+	Tip_Href =	Ayarlar veya hedef URL veya bir çapa noktası alır.
+	Tip_InnerHTML =	Ayarlar ya da nesnenin HTML alır.
+	Tip_InnerText =	Ayarlar ya da nesnenin metin alır.
+	Tip_Length =	Ayarlar veya bir koleksiyon nesne sayısını alır.
 	Tip_LocationName =	Yolu veya başlığı Geçerli sayfayı alır.
 	Tip_LocationURL =	Geçerli sayfanın URL'sini alır.
-	Tip_InnerText =	Ayarlar ya da nesnenin metin alır.
-	Tip_InnerHTML =	Ayarlar ya da nesnenin HTML alır.
+	Tip_Navigate =	Bir URL veya yol gider.
 	Tip_OuterHTML =	Ayarlar veya HTML nesne ve içeriği alır.
-	Tip_Href =	Ayarlar veya hedef URL veya bir çapa noktası alır.
-	Tip_Src =	Ayarlar ya da nesnesi tarafından yüklenecek bir URL alır.
+	Tip_Quit =	Sayfa kapatır.
+	Tip_Refresh =	Çoğul anda görüntülenen sayfa.
 	Tip_SelectedIndex =	Ayarlar veya bir select nesnesi seçili seçeneği dizin alır.
-	Tip_Checked =	Ayarlar veya onay kutusunu veya radyo düğmesini durumunu alır.
+	Tip_Src =	Ayarlar ya da nesnesi tarafından yüklenecek bir URL alır.
+	Tip_Stop =	Bekleyen bir gezinti veya indirme iptal eder.
+	Tip_Submit =	Formu gönderir.
 	Tip_Type =	Ayarlar ya da nesnesi içeriğinin tip alır.
+	Tip_Value =	Alır veya nesnesinin değerini belirler.
 	Tip_Width =	Ayarlar ya da nesnenin genişliğini alır.
-	Tip_Height =	Ayarlar ya da nesne yüksekliğinin alır.
-	Tip_Length =	Ayarlar veya bir koleksiyon nesne sayısını alır.
 		
 ; 23. AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	Abs	Sayısı mutlak değerini döndürür.
-	ASin	Radyan cinsinden ark sinüsünü ( sinüs Numarasısayı ) döndürür.
-	ACos	Radyan Arkkosinüs ( kosinüs Numarasısayı ) döndürür.
+	ACos	Radyan Arkkosinüs (kosinüs Numarasısayı) döndürür.
 	Array	Tamsayı tuşları ile bir script ilişkisel dizi oluşturur.
-	Asc	Dize ilk karakter için karakter kodu ( 1 ve 255 ( ANSI yapılar ) veya 65535 arasında bir sayı ( Unicode yapılarında ) ) döndürür.
-	ATan	Radyan arktanjant ( teğet Numarasısayı ) döndürür.
+	Asc	Dize ilk karakter için karakter kodu (1 ve 255 (ANSI yapılar) veya 65535 arasında bir sayı (Unicode yapılarında)) döndürür.
+	ASin	Radyan cinsinden ark sinüsünü (sinüs Numarasısayı) döndürür.
+	ATan	Radyan arktanjant (teğet Numarasısayı) döndürür.
 	BlockInput	Devre dışı bırakır ya da klavye ve fare ile bilgisayar ile etkileşim kullanıcı yeteneğini sağlar .
-	Break	Çıkar ( sona erer ) bir döngü . Döngü her türlü iç geçerlidir.
-	Ceil	Döndürür Number en yakın tam sayıya ( herhangi bir .00 eki olmadan ) kadar yuvarlanır .
+	Break	Çıkar (sona erer) bir döngü . Döngü her türlü iç geçerlidir.
+	Ceil	Döndürür Number en yakın tam sayıya (herhangi bir .00 eki olmadan) kadar yuvarlanır .
 	Chr	Sayısı ile gösterilen karakter koduna karşılık gelentek bir karakter döndürür.
 	Click	Belirtilen koordinatlarda bir fare düğmesini tıklar. Ayrıca , bir düğmesini basılı tutuntekerleği çevirmek , ya da taşıyabilirsiniz .
-	ClipWait	Panoya verileri içeren kadar bekler .
 	Clipboard	Panodan metin macunlar.
+	ClipWait	Panoya verileri içeren kadar bekler .
 	ComObjActive	Kayıtlı bir COM nesnesi alır .
 	ComObjArray	COM ile kullanmak için bir SAFEARRAY oluşturur .
 	ComObjConnect	Belirli bir önek ile işlevlerine bir COM nesnesinin olay kaynaklarını bağlar.
@@ -1081,7 +1077,7 @@
 	Continue	Mevcut döngü tekrarında geri kalanı atlar ve yeni bir başlar . Döngü her türlü iç geçerlidir.
 	Control	Bir kontrol değişiklik çeşitli yapar .
 	ControlClick	Bir fare düğmesi veya bir kontrol için fare tekerleği olayı gönderir .
-	ControlEditPaste	Bir Düzen kontrolşapka / insert pozisyonunda macunlar String ( buPano içeriğini etkilemez ) .
+	ControlEditPaste	Bir Düzen kontrolşapka / insert pozisyonunda macunlar String (buPano içeriğini etkilemez) .
 	ControlFocus	Bir pencere üzerinde belirli bir denetime giriş odağı ayarlar.
 	ControlGet	Bir kontrol hakkında çeşitli bilgi türleri alır .
 	ControlGetFocus	Varsa hedef pencerenin kontrol alır , giriş odak vardır.
@@ -1098,33 +1094,33 @@
 	DetectHiddenWindows	Görünmez pencereler komut dosyası tarafından " görülen " olup olmadığını belirler .
 	DllCall	Bu standart bir Windows API işlevi gibi bir DLL içinde bir işlevini çağırır.
 	Drive	/ Geri çeker bir CD veya DVD sürücüsünetepsisini çıkarır , ya da bir sürücünün birim etiketini ayarlar .
-	DriveGet	Bilgisayarın disk (ler ) hakkında çeşitli bilgi türleri alır .
+	DriveGet	Bilgisayarın disk (ler) hakkında çeşitli bilgi türleri alır .
 	DriveSpaceFree	Megabyte , bir sürücünün boş disk alanı alır .
 	Edit	Ilgili düzenleyici düzenleme için geçerli komut dosyası açar .
-	Else	Bir IF -ifadesi YANLIŞ olarak değerlendirirse komut (lar ) gerçekleştirmek için belirtir . Birden fazla komut mevcut olduğunda , bir blok ( parantez ) içine alın .
-	EnvAdd	Kendisi toplamı artı Verilen değer ( ekleyin ya da tarih-saat değeri zaman çıkarabilirsiniz ) bir değişken ayarlar. Ile eşanlamlı : Var + = Değer .
+	Else	Bir IF -ifadesi YANLIŞ olarak değerlendirirse komut (lar) gerçekleştirmek için belirtir . Birden fazla komut mevcut olduğunda , bir blok (parantez) içine alın .
+	EnvAdd	Kendisi toplamı artı Verilen değer (ekleyin ya da tarih-saat değeri zaman çıkarabilirsiniz) bir değişken ayarlar. Ile eşanlamlı : Var + = Değer .
 	EnvDiv	Verilen değer bölünmesiyle kendisine bir değişken ayarlar. Ile eşanlamlı : Var / = Değer .
 	EnvGet	Bir ortam değişkeni alır .
 	EnvMult	Kendisine bir değişken kez Verilen değer ayarlar . Ile eşanlamlı : Var * = Değer .
 	EnvSet	Ortamda bulunan bir değişkene bir değer yazar.
-	EnvSub	Verilen değer (ayrıca tarih-saat değerleri karşılaştırabilirsiniz ) eksi kendisine bir değişken ayarlar. Ile eş anlamlıdır : Var - = Değer .
-	EnvUpdate	OS ve ortam değişkeni ( ler) değişti tüm çalışan uygulamaları bildirir .
-	Exit	Çıkar Geçerli iş parçacığı veya (komut kalıcı değildir ve hiçbir kısayol tuşları varsa ) tüm komut dosyası .
+	EnvSub	Verilen değer (ayrıca tarih-saat değerleri karşılaştırabilirsiniz) eksi kendisine bir değişken ayarlar. Ile eş anlamlıdır : Var - = Değer .
+	EnvUpdate	OS ve ortam değişkeni (ler) değişti tüm çalışan uygulamaları bildirir .
+	Exit	Çıkar Geçerli iş parçacığı veya (komut kalıcı değildir ve hiçbir kısayol tuşları varsa) tüm komut dosyası .
 	ExitApp	Koşulsuz script sonlandırır .
-	Exp	İade e ( yaklaşık 2.71828182845905 olan)N. gücüne yükseltilmiş .
-	FileAppend	Bir dosyanın sonuna (gerekirse önce ,dosya oluşturma ) metin yazar.
+	Exp	İade e (yaklaşık 2.71828182845905 olan)N. gücüne yükseltilmiş .
+	FileAppend	Bir dosyanın sonuna (gerekirse önce ,dosya oluşturma) metin yazar.
 	FileCopy	Kopya bir veya daha fazla dosya .
-	FileCopyDir	Alt klasör ve dosyaları ( xcopy benzer ) ile birlikte tüm bir klasör kopyalar .
+	FileCopyDir	Alt klasör ve dosyaları (xcopy benzer) ile birlikte tüm bir klasör kopyalar .
 	FileCreateDir	Bir klasör oluşturur .
-	FileCreateShortcut	Bir kısayol ( . Lnk ) dosyası oluşturur .
+	FileCreateShortcut	Bir kısayol (. Lnk) dosyası oluşturur .
 	FileDelete	Siler bir veya daha fazla dosya .
 	FileEncoding	FILEREAD , FileReadLine , Döngü Oku , FileAppend ve FileOpen için varsayılan kodlama ayarlar .
-	FileInstall	Script derlenmiş versiyonu içinde belirtilen dosyayı içerir .
 	FileGetAttrib	Bir dosya veya klasör salt okunur olup olmadığını raporlar , gizli , vb
-	FileGetShortcut	Bu hedef dosyası olarak bir kısayol ( . Lnk ) dosyası , hakkında bilgi alır .
+	FileGetShortcut	Bu hedef dosyası olarak bir kısayol (. Lnk) dosyası , hakkında bilgi alır .
 	FileGetSize	Bir dosyanın boyutunu alır .
 	FileGetTime	Bir dosya veya klasörün datetime damgası alır .
 	FileGetVersion	Bir dosyanın sürümünü alır .
+	FileInstall	Script derlenmiş versiyonu içinde belirtilen dosyayı içerir .
 	FileMove	Taşır veya yeniden adlandırır bir veya daha fazla dosya .
 	FileMoveDir	Alt klasör ve dosyaları ile birlikte tüm bir klasör taşır . Ayrıca bir klasör yeniden adlandırabilirsiniz.
 	FileOpen	Sağlar nesne yönelimli dosya I / O
@@ -1133,11 +1129,11 @@
 	FileRecycle	Mümkünse , geri dönüşüm kutusuna bir dosya veya dizin gönderir .
 	FileRecycleEmpty	Geri dönüşüm kutusu boşaltır .
 	FileRemoveDir	Siler bir klasör .
-	FileSelectFile	Kullanıcı açmak veya kaydetmek dosya (lar ) sağlayan standart bir iletişim kutusunu görüntüler.
+	FileSelectFile	Kullanıcı açmak veya kaydetmek dosya (lar) sağlayan standart bir iletişim kutusunu görüntüler.
 	FileSelectFolder	Kullanıcının bir klasörü seçmek için izin veren bir standart iletişim görüntüler .
 	FileSetAttrib	Bir veya daha fazla dosya veya klasör özelliklerini değiştirir . Joker desteklenmektedir .
 	FileSetTime	Bir veya daha fazla dosya veya klasördatetime damgası değiştirir . Joker desteklenmektedir .
-	Floor	Döndürür Number en yakın tam sayıya ( herhangi bir .00 eki olmadan ) yuvarlanır .
+	Floor	Döndürür Number en yakın tam sayıya (herhangi bir .00 eki olmadan) yuvarlanır .
 	For	Bir nesne her anahtar - değer çifti için bir kez komutları bir dizi tekrarlar .
 	Format	Bir dizi biçimine göre giriş değerleri değişken sayıda biçimlendirir.
 	FormatTime	Belirtilen tarih / saat biçimi bir YYYYMMDDHH24MISS zaman damgası dönüştürür.
@@ -1151,27 +1147,27 @@
 	GroupClose	Sadece GroupActivate veya GroupDeactivate ile aktive ise aktif pencereyi kapatır . Daha sonra serinin bir sonraki pencere aktif hale getirir. Ayrıca gruptaki tüm pencereleri kapatabilirsiniz .
 	GroupDeactivate	Değilgrupta bir sonraki pencere aktive dışında GroupActivate benzer .
 	HasKey	Key değeri ile ilişkili true döndürür.
-	if	Bir değere bir değişkenin karşılaştırılması TRUE evalutes eğer komut (lar ) gerçekleştirmek için belirtir . Birden fazla komut mevcut olduğunda , bir blok ( parantez ) içine alın .
-	if (expression)	Bir ifade DOĞRU olarak değerlendirirse komut (lar ) gerçekleştirmek için belirtir .
+	if	Bir değere bir değişkenin karşılaştırılması TRUE evalutes eğer komut (lar) gerçekleştirmek için belirtir . Birden fazla komut mevcut olduğunda , bir blok (parantez) içine alın .
+	if (expression)	Bir ifade DOĞRU olarak değerlendirirse komut (lar) gerçekleştirmek için belirtir .
+	If A_Index	Mevcut döngü tekrarında diye bakar bir belirtilen bir numarayla matchs .
+	If Clipboard	Pano metin ise Çekler belirtilen bir dize matchs .
+	If ErrorLevel	Belirli bir görüntü veya piksel diye bakarekranında bulundu .
 	If var [not] between	Bir değişkenin içeriği olup olmadığını kontrol eder iki değeri (dahil) arasında sayısal ya da alfabetik olarak bulunmaktadır.
 	If var [not] in/contains MatchList 	Bir değişkenin içeriğini kontrol eder bir listede öğelerin bir maç .
 	If var is [not] type	Bir değişkenin içeriğini sayısal olup olmadığını kontrol eder , büyük harf, vb
-	If Clipboard	Pano metin ise Çekler belirtilen bir dize matchs .
-	If ErrorLevel	Belirli bir görüntü veya piksel diye bakarekranında bulundu .
-	If A_Index	Mevcut döngü tekrarında diye bakar bir belirtilen bir numarayla matchs .
 	IfEqual/IfNotEqual	Eşitlik için bir değere bir değişken karşılaştırır . Ile eşanlamlı : Eğer Var = Değer | Var < > Değer eğer .
 	IfExist / IfNotExist / FileExist	Bir dosya veya klasörün varlığını kontrol eder.
 	IfGreater / IfGreaterOrEqual	Bir değere bir değişken karşılaştırır . Ile eşanlamlı : if Var > Değer | Eğer Var > = Değer .
 	IfInString / IfNotInString / InStr	Bir değişken diye bakar belirtilen dize içerir .
 	IfLess / IfLessOrEqual	Bir değere bir değişken karşılaştırır . Ile eşanlamlı : eğer Var < Değer | Var < = Değer eğer .
 	IfMsgBox	Hangi düğme Çekler En son MsgBox komut sırasında kullanıcı tarafından itildi .
-	IfWinActive / IfWinNotActive	Çekler belirtilen pencere var ve ( en önemlisi ) etkin olup olmadığını .
+	IfWinActive / IfWinNotActive	Çekler belirtilen pencere var ve (en önemlisi) etkin olup olmadığını .
 	IfWinExist / IfWinNotExist	Çekler belirtilen pencere varsa .
 	ImageSearch	Bir görüntü için ekran bir bölge arar .
 	IniDelete	Standart bir format . Ini dosyası siler bir değer .
 	IniRead	Standart bir format . Ini dosyası bir değer okur .
 	IniWrite	Standart bir format . Ini dosyası için bir değer yazar.
-	Input	Kullanıcı bir dize ( : hiçbir şey yapmaz Windows 9 x desteklenmez ) yazmanız için bekler .
+	Input	Kullanıcı bir dize (: hiçbir şey yapmaz Windows 9 x desteklenmez) yazmanız için bekler .
 	InputBox	Bir giriş kutusu bir dize girmek için kullanıcı sormak görüntüler .
 	InsertAt	Doğrusal bir dizi içindeki belirli bir pozisyonda bir veya daha fazla değer ekler.
 	InStr	Sol veya sağ taraftan bir dize belirli bir olay arar .
@@ -1180,10 +1176,10 @@
 	Labels	Bir etiket, bir kod hattı tanımlayan, ve Goto hedef olarak ya da bir alt yordam oluşturmak için de kullanılabilir.
 	Length	1 konumundaki başlayan doğrusal bir dizinin uzunluğunu döndürür.
 	ListVars	İsimlerini ve geçerli içeriğini: betiğin değişkenleri görüntüler.
-	Log	Sayısı logaritma (10 tabanı) döndürür.
 	Ln	Sayısı doğal logaritma (Taban e) döndürür.
-	Loop (normal) 	Tekrar tekrar komutları bir dizi gerçekleştirin: Belirtilen kez numarası veya mola kadar da görülür.
+	Log	Sayısı logaritma (10 tabanı) döndürür.
 	Loop (files & folders)	Belirtilen dosya veya klasörleri, her seferinde bir alır.
+	Loop (normal) 	Tekrar tekrar komutları bir dizi gerçekleştirin: Belirtilen kez numarası veya mola kadar da görülür.
 	Loop (parse a string)	Bir dize alır dizeleri (alanları), her seferinde bir.
 	Loop (read file contents)	Bir metin dosyasına satırları, bir zaman (FileReadLine daha iyi performans) az bir alır.
 	Loop (registry)	Bir anda belirtilen kayıt defteri alt anahtarını, bir öğe içeriğini alır.
@@ -1212,12 +1208,12 @@
 	Progress	Oluşturur veya bir ilerleme çubuğu içeren bir pencere günceller.
 	Push	Bir dizinin sonuna değerlerini ekler.
 	Random	Yalancı rasgele bir sayı oluşturur.
+	RegDelete	Siler kayıt defterinden bir alt anahtarı veya değeri.
 	RegExMatch	Bir dize bir desen (düzenli ifade) içerip içermediğini belirler.
 	RegExReplace	Bir dize içinde bir desen (düzenli ifade) oluşunda değiştirir.
-	RegDelete	Siler kayıt defterinden bir alt anahtarı veya değeri.
+	RegisterCallback	Çağrıldığında, komut dosyası bir işlev çağrısı yönlendiren bir makine kodu adres oluşturur.
 	RegRead	Kayıt defterinden bir değer okur.
 	RegWrite	Kayıt defterine bir değer yazar.
-	RegisterCallback	Çağrıldığında, komut dosyası bir işlev çağrısı yönlendiren bir makine kodu adres oluşturur.
 	RemoveAt	Doğrusal bir dizide verilen pozisyona öğeleri kaldırır.
 	Return	Yürütme önce fonksiyon çağrısı, Gosub, Hotkey aktivasyon, GroupActivate veya diğer yollarla atladı vardı için bir alt yordam gelen döner.
 	Round	Yok ihmal ya da 0 ise, sayısı en yakın tam sayıya yuvarlanır. N pozitif sayı ise, sayısı N ondalık basamağa yuvarlanır. Yok negatif ise, sayısı ondalık noktasının solunda N basamak yuvarlanır.
@@ -1235,8 +1231,8 @@
 	SetKeyDelay	Gönder veya ControlSend tarafından gönderilen her tuş sonra oluşacak gecikme ayarlar.
 	SetMouseDelay	Her fare hareketi veya tıklama sonra oluşacak gecikme ayarlar.
 	SetNumlockState	Numlock tuşunun durumunu ayarlar. Ayrıca anahtar açık veya kapalı kalmak zorlayabilir.
-	SetScrollLockState	ScrollLock anahtarın durumunu ayarlar. Ayrıca anahtar açık veya kapalı kalmak zorlayabilir.
 	SetRegView	32-bit komut kayıt komutları 64-bit kayıt defteri görünümü ve tersi erişmenizi sağlar.
+	SetScrollLockState	ScrollLock anahtarın durumunu ayarlar. Ayrıca anahtar açık veya kapalı kalmak zorlayabilir.
 	SetTimer	Belirli bir zaman aralığında otomatik olarak ve tekrar tekrar açılacak bir alt yordam neden olur.
 	Shutdown	, Kapanır yeniden veya sistem kapattığında.
 	Sin	Sayısı trigonometrik sinüsünü verir.
@@ -1249,13 +1245,12 @@
 	SoundSet	Değişiklikler bir ses aygıtı çeşitli ayarları (ana sessiz, ana ses, vb)
 	SoundSetWaveVolume	Bir ses aygıtı için dalga çıkış ses değiştirir.
 	SplashImage	Oluşturur veya bir JPG, GIF veya BMP resim içeren bir pencere günceller.
-	SplashTextOn	Özelleştirilebilir bir metin açılır pencere oluşturur.
 	SplashTextOff	Yukarıdaki penceresini kapatır.
+	SplashTextOn	Özelleştirilebilir bir metin açılır pencere oluşturur.
 	SplitPath	Adını, dizin, uzatma, ve sürücüye bir dosya adı veya URL ayırır.
 	Sqrt	Sayısı kare kökünü verir.
 	StatusBarGetText	Standart bir durum çubuğu kontrolünden metni alır.
 	StatusBarWait	Bir pencerenin durum çubuğu belirtilen dize içerir kadar bekler.
-	StrPut / StrGet	Kod sayfaları arasında dönüştürerek isteğe bağlı bir bellek adresi, veya bir dize kopyalar.
 	StringCaseSense	Dize karşılaştırmaları olup olmadığını küçük harf duyarlı (varsayılan "değil küçük harf duyarlı" olduğu). Belirler
 	StringGetPos / InStr	Bir dize içinde belirtilen alt yerini alır.
 	StringLeft	Bir dize sol taraftan karakter sayısını alır.
@@ -1268,6 +1263,7 @@
 	StringTrimLeft	Bir dize sol taraftan karakter bir dizi kaldırır.
 	StringTrimRight	Bir dize sağ taraftan karakter bir dizi kaldırır.
 	StringUpper	Büyük harfe bir dize dönüştürür.
+	StrPut / StrGet	Kod sayfaları arasında dönüştürerek isteğe bağlı bir bellek adresi, veya bir dize kopyalar.
 	Suspend	Devre dışı bırakır veya tüm veya seçilen kısayol tuşları ve hotstrings sağlar.
 	SysGet	Ekran çözünürlüğü, çoklu monitör bilgi, sistem nesneleri boyutları ve diğer sistem özellikleri alır.
 	Tan	Sayısı trigonometrik tanjantını verir.
@@ -1285,10 +1281,10 @@
 	WinActive	, Belirtilen ölçütlerle eşleşen eğer etkin pencerenin Benzersiz Kimlik (HWND) döndürür.
 	WinClose	Belirtilen penceresini kapatır.
 	WinExist	Çekler belirtilen pencere varsa.
+	WinGet	Belirtilen pencerenin benzersiz kimlik, süreç kimliği, işlem adı veya denetimlerinin listesini alır. Ayrıca belirtilen kriterlere uyan bütün pencerelerin listesini alabilirsiniz.
 	WinGetActiveStats	Tek bir komutta WinGetActiveTitle ve WinGetPos fonksiyonlarını birleştirir.
 	WinGetActiveTitle	Etkin pencerenin başlık alır.
 	WinGetClass	Belirtilen pencere sınıf adı alır.
-	WinGet	Belirtilen pencerenin benzersiz kimlik, süreç kimliği, işlem adı veya denetimlerinin listesini alır. Ayrıca belirtilen kriterlere uyan bütün pencerelerin listesini alabilirsiniz.
 	WinGetPos	Belirtilen pencerenin konumunu ve boyutunu alır.
 	WinGetText	Belirtilen penceresinden metin alır.
 	WinGetTitle	Belirtilen pencerenin başlık alır.

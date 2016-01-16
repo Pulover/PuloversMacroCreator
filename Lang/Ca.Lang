@@ -73,7 +73,6 @@
 	i_Lang019 =	&Missatges De Windows
 	i_Lang020 =	Trobar una or&dre
 		
-		
 ; 06. Edit Sub Menu		
 	e_Lang001 =	&Duplicar
 	e_Lang002 =	&Redactar comentari
@@ -97,7 +96,6 @@
 	e_Lang020 =	T&raieu tots els grups
 	e_Lang021 =	&Col · lapsar tot
 	e_Lang022 =	&Expandir tot
-		
 		
 ; 07. Select Sub Menu		
 	s_Lang001 =	&Selecciona tot
@@ -153,6 +151,7 @@
 	o_Lang013 =	Elimi&nar fitxer per defecte
 	o_Lang014 =	Tecles &d'accés ràpid predeterminades
 	o_Lang015 =	Confi&guració per defecte
+	o_Lang016 =	&Editor d'idiomes
 		
 ; 10. Donate Sub Menu		
 	p_Lang001 =	&PayPal Donació
@@ -761,7 +760,6 @@
 	d_Lang042 =	Operador no vàlid.
 		Els següents operadors s'accepten:
 		=, ==, <>,! =,>, <,> =, <=
-		
 		Exemples:
 		MyVar > 1
 		MyVar = `%A_DDDD`%
@@ -791,7 +789,6 @@
 		Assigneu una variable i utilitzar-lo en el paràmetre.
 	d_Lang060 =	Nova versió disponible
 	d_Lang061 =	Voleu descarregar-ho ara?
-		
 		Per desactivar les comprovacions automàtiques seleccioneu Ajuda > Comproveu en l'arrencada
 	d_Lang062 =	Vostè ja té la versió més recent.
 	d_Lang063 =	S'ha produït un error durant la comprovació.
@@ -801,7 +798,6 @@
 	d_Lang067 =	Mostra aquesta finestra en iniciar
 	d_Lang068 =	Consells:
 	d_Lang069 =	Una gran quantitat de temps i esforços es van centrar en el desenvolupament de Pulover's Macro Creator. Si li resulta útil, si us plau consideri mostrar el seu agraïment amb una donació.
-		
 		Donar o no, no hi haurà diferència en les seves característiques i funcionalitat.
 	d_Lang070 =	Donar...
 	d_Lang071 =	No, gràcies
@@ -877,73 +873,29 @@
 		Podeu executar funcions avançades com ara substr i RegExReplace de la finestra Funcions (Inserir> Si Declaracions / variables / funcions). O executar les seves pròpies funcions de seqüència AutoHotkey externs.
 		
 ; 19. Tooltips		
-	AutoKey_TT =	Tecla d'accés directe per jugar Macro
-	ManKey_TT =	Tecla d'accés directe per jugar Macro "pas a pas"
-	AbortKey_TT =	Hotkey per aturar la reproducció
-	PauseKey_TT =	Hotkey per pausar la reproducció
-	RecKey_TT =	Retrocés per esborrar
-	RecNewKey_TT =	Retrocés per esborrar
-	JoyKey_TT =	Premeu un botó a la palanca de comandament
-	ReptC_TT =	0 = infinit
 	A_List_TT =	Seleccioneu Macro (Ctrl+1~0)
-	OSHK_TT =	Seleccioneu Macro
-	OSHKEd_TT =	Seleccioneu Macro
-	ApplyT_TT =	Aplicar
+	AbortKey_TT =	Hotkey per aturar la reproducció
+	ActiveObj_TT =	Intenta connectar-se a un objecte COM actiu
 	ApplyI_TT =	Aplicar
 	ApplyL_TT =	Inseriu de Caixa (Insert)
-	CmdFilter_TT =	Filtrar per tipus
-	InsertKey_TT =	Inserir Pulsacions (Ctrl+Insert)
-	InsertKeyT_TT =	Inserir Pulsacions
-	DefaultMacro_TT =	Selecciona arxiu a carregar en l'arrencada del programa
-	VarCopyA_TT =	Copia contingut actual de variables
-	VarCopyB_TT =	Copia contingut actual de variables
-	Reset_TT =	Esborrar el contingut de variables
-	Screenshot_TT =	Fer Screenshot
-	ColorPick_TT =	Aconseguir píxel a la pantalla
-	PicPrev_TT =	Feu doble clic per ampliar imatge
-	CoordPixel_TT =	Mode de coordenades
-	VariatT_TT =	Les ombres de variació
-	IconN_TT =	Número del grup d'icones
-	TransC_TT =	Color Transparent
-	WScale_TT =	Escala Ample
-	HScale_TT =	Escala d'altura
-	Fast_TT =	Utilitza un mètode de cerca més ràpid (recomanat)
-	RGB_TT =	Fa que el color s'ha d'interpretar com un valor en lloc de BGR RGB
-	LoopLVColor_TT =	Feu clic per seleccionar un color
-	IfLVColor_TT =	Feu clic per seleccionar un color
-	RefreshIEW_TT =	Actualitzar llista
-	ActiveObj_TT =	Intenta connectar-se a un objecte COM actiu
-	TimeoutM_TT =	0 = infinit
-	ExpView_TT =	Editor Avançat
-	ExpView2_TT =	Editor Avançat
-	OSProgB_TT =	Mostra la barra de progrés
-	OSTrans_TT =	Opacitat
-	MRel_TT =	Moviments relatius a la posició actual.
-		O si s'utilitza amb control: Posició amb relació al control.
-	Raw_TT =	La comanda SendRaw interpreta tots els personatges literalment
-		en lloc de traduir {Intro} a una pulsació de tecla ENTER,
-		^ C del control-C, etc
-	ComText_TT =	Quan no està en mode sense processar, els següents caràcters
-		es tracten com a modificadors (aquests modificadors afecten
-		solament la següent clau):, +, ^, #
-	ComEvent_TT =	La velocitat a la qual s'envien les pulsacions de teclat es determina pel retard clau.
+	ApplyT_TT =	Aplicar
+	AutoKey_TT =	Tecla d'accés directe per jugar Macro
 	Clip_TT =	Temporalment utilitza portapapers per enviar el text.
 		Quan es completa l'operació, la seqüència de comandaments
 		restaura el contingut del porta-retalls originals.
 		(Deixeu de text buit per enganxar el contingut actual)
+	CmdFilter_TT =	Filtrar per tipus
+	CmdSort_TT =	Ordenar alfabèticament
+	ColorPick_TT =	Aconseguir píxel a la pantalla
+	ComEvent_TT =	La velocitat a la qual s'envien les pulsacions de teclat es determina pel retard clau.
+	ComText_TT =	Quan no està en mode sense processar, els següents caràcters
+		es tracten com a modificadors (aquests modificadors afecten
+		solament la següent clau):, +, ^, #
+	CoordPixel_TT =	Mode de coordenades
+	DefaultMacro_TT =	Selecciona arxiu a carregar en l'arrencada del programa
 	EditPaste_TT =	Pastes cadena en la posició de cursor / insert
 		en un control d'edició (això no afecta
 		el contingut del porta-retalls).
-	SetText_TT =	Canvia el text d'un control.
-	RelKey_TT =	Registres Els moviments del ratolí i els clics com
-		compensacions de posició anterior quan es manté.
-	ToggleC_TT =	Activa gravació relativa a l'estat de la tecla.
-	Relative_TT =	Les coordenades són relatives a la finestra activa.
-	Screen_TT =	Les coordenades són relatives a l'escriptori (pantalla completa).
-	IncFiles_TT =	Inclou els fitxers / Valors
-	IncFolders_TT =	Incloure directoris (carpetes) / Keys
-	Recurse_TT =	Recursives en subdirectoris (subcarpetes) / subclaus
-	CmdSort_TT =	Ordenar alfabèticament
 	Ex_EdScript_TT =	Avaa ulkoisen editorin
 	ExprLink2_TT =	- NO INCLOURE LES VARIABLES A SIGNES DE PERCENTATGE AQUÍ.
 		- La major part de les expressions AHK són compatibles.
@@ -955,16 +907,90 @@
 		- Vostè pot usar cadenes, variables, matrius i funcions.
 		- Per utilitzar cordes, tancar-los entre cometes, per exemple: var = "a".
 		- Són compatibles Diverses sentències, per exemple: var = "a" || Instr (var, "b").
+	ExpView_TT =	Editor Avançat
+	ExpView2_TT =	Editor Avançat
+	Fast_TT =	Utilitza un mètode de cerca més ràpid (recomanat)
+	HScale_TT =	Escala d'altura
+	IconN_TT =	Número del grup d'icones
+	IfLVColor_TT =	Feu clic per seleccionar un color
+	IncFiles_TT =	Inclou els fitxers / Valors
+	IncFolders_TT =	Incloure directoris (carpetes) / Keys
+	InsertKey_TT =	Inserir Pulsacions (Ctrl+Insert)
+	InsertKeyT_TT =	Inserir Pulsacions
+	JoyKey_TT =	Premeu un botó a la palanca de comandament
+	LoopLVColor_TT =	Feu clic per seleccionar un color
+	ManKey_TT =	Tecla d'accés directe per jugar Macro "pas a pas"
+	MRel_TT =	Moviments relatius a la posició actual.
+		O si s'utilitza amb control: Posició amb relació al control.
+	OSHK_TT =	Seleccioneu Macro
+	OSHKEd_TT =	Seleccioneu Macro
+	OSProgB_TT =	Mostra la barra de progrés
+	OSTrans_TT =	Opacitat
+	PauseKey_TT =	Hotkey per pausar la reproducció
+	PicPrev_TT =	Feu doble clic per ampliar imatge
+	Raw_TT =	La comanda SendRaw interpreta tots els personatges literalment
+		en lloc de traduir {Intro} a una pulsació de tecla ENTER,
+		^ C del control-C, etc
+	RecKey_TT =	Retrocés per esborrar
+	RecNewKey_TT =	Retrocés per esborrar
+	Recurse_TT =	Recursives en subdirectoris (subcarpetes) / subclaus
+	RefreshIEW_TT =	Actualitzar llista
+	Relative_TT =	Les coordenades són relatives a la finestra activa.
+	RelKey_TT =	Registres Els moviments del ratolí i els clics com
+		compensacions de posició anterior quan es manté.
+	ReptC_TT =	0 = infinit
+	Reset_TT =	Esborrar el contingut de variables
+	RGB_TT =	Fa que el color s'ha d'interpretar com un valor en lloc de BGR RGB
+	Screen_TT =	Les coordenades són relatives a l'escriptori (pantalla completa).
+	Screenshot_TT =	Fer Screenshot
+	SetText_TT =	Canvia el text d'un control.
+	TimeoutM_TT =	0 = infinit
+	ToggleC_TT =	Activa gravació relativa a l'estat de la tecla.
+	TransC_TT =	Color Transparent
+	VarCopyA_TT =	Copia contingut actual de variables
+	VarCopyB_TT =	Copia contingut actual de variables
+	VariatT_TT =	Les ombres de variació
+	WScale_TT =	Escala Ample
 		
 ; 20. Tooltips from AHK Docs		
-	ExpList_TT =	Feu doble clic per editar
+	Ex_AF_TT =	Omet el mètode suau d'activar una finestra
+		i va directament al mètode contundent.
+	Ex_DH_TT =	Determina si les finestres invisibles són "vistos" per el guió.
+	Ex_EdVars_TT =	Seleccionar variables globals destinats a l'exportació.
+	Ex_HK_TT =	Força l'ús del ganxo per posar en pràctica totes les
+		o algunes tecles d'accés ràpid del teclat.
 	Ex_IfDir_TT =	Crea dreceres de teclat i hotstrings depenent contextuals
 		en el tipus de finestra que és actiu o no existeix.
 	Ex_IfDirType_TT =	Crea dreceres de teclat i hotstrings depenent contextuals
 		en el tipus de finestra que és actiu o no existeix.
+	Ex_IN_TT =	Fa que el guió es comporti com si l'especificada
+		contingut de l'arxiu es presenti en aquesta posició exacta.
+	Ex_MD_TT =	Estableix la demora que es produirà després
+		cada moviment del ratolí o feu clic.
+	Ex_MT_TT =	Estableix el nombre màxim de connexions simultànies
+		fils per tecla d'accés directe o cadena d'accés ràpid.
+	Ex_NT_TT =	Desactiva la projecció d'una icona de la safata.
+	Ex_PT_TT =	Manté un script que s'executa permanentment
+		(És a dir, fins que l'usuari tanca o es troba ExitApp).
+	Ex_SB_TT =	Determina la rapidesa amb què executar un script (que afecta la utilització de CPU).
+	Ex_SC_TT =	Estableix la demora que es produirà després
+		comandament de cada control de modificació.
+	Ex_SI_TT =	Determina si un script es pot executar de nou quan ja s'està executant.
+	Ex_SK_TT =	Estableix la demora que es produirà després de cada
+		pulsació enviat per enviament o ControlSend.
 	Ex_SM_TT =	Fa Enviar sinònim SendInput o SendPlay en lloc de
 		el valor per defecte (SendEvent). També fa clic i mousemove / clic / Arrossegueu
 		utilitzar el mètode especificat.
+	Ex_ST_TT =	Estableix el comportament d'igualar el paràmetre WinTitle a ordres com WinWait.
+	Ex_SW_TT =	Estableix la demora que es produirà després
+		cada comanda finestres, com el WinActivate.
+	Ex_UV_TT =	Exportar variables globals.
+	ExpList_TT =	Feu doble clic per editar
+	SI_TT =	La paraula FORCE salta el quadre de diàleg i substitueix l'antiga instància de forma automàtica,
+		que és un efecte similar al de la comanda reload.
+		La paraula IGNORE salta el quadre de diàleg i surt de l'antiga instància en execució.
+		En altres paraules, s'ignoren els intents d'establir un guió ja de marxa.
+		El missatge OFF permet múltiples instàncies de la seqüència de comandaments perquè s'executin al mateix temps.
 	SM_TT =	Esdeveniment: Aquest és el valor predeterminat de partida utilitzat per tots els scripts.
 		S'utilitza el mètode SendEvent per enviar, SendRaw, Click, i mousemove / clic / arrossegar.
 		Entrada: Canvia al mètode SendInput per enviar, SendRaw, clic, i mousemove / clic / Arrossegament.
@@ -972,40 +998,10 @@
 		quan SendInput no està disponible, es torna a la manera (baix) Reproduir. Això també provoca
 		la comanda SendInput si per tornar al mode Reproducció quan SendInput no està disponible.
 		Reproduir: Canvia al mètode SendPlay per enviar, SendRaw, clic, i mousemove / clic / Arrossegament.
-	Ex_SI_TT =	Determina si un script es pot executar de nou quan ja s'està executant.
-	SI_TT =	La paraula FORCE salta el quadre de diàleg i substitueix l'antiga instància de forma automàtica,
-		que és un efecte similar al de la comanda reload.
-		La paraula IGNORE salta el quadre de diàleg i surt de l'antiga instància en execució.
-		En altres paraules, s'ignoren els intents d'establir un guió ja de marxa.
-		El missatge OFF permet múltiples instàncies de la seqüència de comandaments perquè s'executin al mateix temps.
-	Ex_ST_TT =	Estableix el comportament d'igualar el paràmetre WinTitle a ordres com WinWait.
 	ST_TT =	1: el títol d'una finestra de començar amb la WinTitle especificada a ser un partit.
 		2: el títol d'una finestra pot contenir WinTitle qualsevol lloc dins que fos una coincidència.
 		3: el títol d'una finestra ha de coincidir exactament amb WinTitle un partit.
 		Regex: Canvis WinTitle, WinText, ExcludeTitle i ExcludeText com expressions regulars.
-	Ex_DH_TT =	Determina si les finestres invisibles són "vistos" per el guió.
-	Ex_AF_TT =	Omet el mètode suau d'activar una finestra
-		i va directament al mètode contundent.
-	Ex_HK_TT =	Força l'ús del ganxo per posar en pràctica totes les
-		o algunes tecles d'accés ràpid del teclat.
-	Ex_SK_TT =	Estableix la demora que es produirà després de cada
-		pulsació enviat per enviament o ControlSend.
-	Ex_MD_TT =	Estableix la demora que es produirà després
-		cada moviment del ratolí o feu clic.
-	Ex_SC_TT =	Estableix la demora que es produirà després
-		comandament de cada control de modificació.
-	Ex_SW_TT =	Estableix la demora que es produirà després
-		cada comanda finestres, com el WinActivate.
-	Ex_SB_TT =	Determina la rapidesa amb què executar un script (que afecta la utilització de CPU).
-	Ex_NT_TT =	Desactiva la projecció d'una icona de la safata.
-	Ex_IN_TT =	Fa que el guió es comporti com si l'especificada
-		contingut de l'arxiu es presenti en aquesta posició exacta.
-	Ex_PT_TT =	Manté un script que s'executa permanentment
-		(És a dir, fins que l'usuari tanca o es troba ExitApp).
-	Ex_MT_TT =	Estableix el nombre màxim de connexions simultànies
-		fils per tecla d'accés directe o cadena d'accés ràpid.
-	Ex_UV_TT =	Exportar variables globals.
-	Ex_EdVars_TT =	Seleccionar variables globals destinats a l'exportació.
 		
 ; 21. Operators		
 	As_Oper_1 =	Assignar
@@ -1024,47 +1020,47 @@
 	Co_Oper_7 =	Menor o igual
 		
 ; 22. IE Commands Tips		
-	Tip_Navigate =	Es desplaça a una adreça URL o la ruta.
-	Tip_Value =	Obté o estableix el valor de l'objecte.
-	Tip_Focus =	Estableix el focus a l'objecte.
+	Tip_Checked =	Estableix o indica l'estat de la casella de verificació o botó de ràdio.
 	Tip_Click =	Simula un clic sobre l'objecte.
-	Tip_Submit =	Envia el formulari.
-	Tip_GoHome =	Es desplaça a la casa actual o la pàgina d'inici.
+	Tip_Focus =	Estableix el focus a l'objecte.
 	Tip_GoBack =	Retrocedeix un element a la llista d'historial.
 	Tip_GoForward =	Avança un element a la llista d'historial.
+	Tip_GoHome =	Es desplaça a la casa actual o la pàgina d'inici.
 	Tip_GoSearch =	Es desplaça a la pàgina de cerca.
-	Tip_Refresh =	Torna a carregar la pàgina actual.
-	Tip_Stop =	Cancel una navegació o descàrrega pendents.
-	Tip_Quit =	Tanca la pàgina.
+	Tip_Height =	Estableix o recupera l'alçada de l'objecte.
+	Tip_Href =	Estableix o un URL de destinació o un punt d'ancoratge.
+	Tip_InnerHTML =	Estableix o el codi HTML de l'objecte.
+	Tip_InnerText =	Estableix o obté el text de l'objecte.
+	Tip_Length =	Estableix o recupera el nombre d'objectes en una col · lecció.
 	Tip_LocationName =	Obté el títol de la pàgina actual ruta o.
 	Tip_LocationURL =	Obté l'adreça URL de la pàgina actual.
-	Tip_InnerText =	Estableix o obté el text de l'objecte.
-	Tip_InnerHTML =	Estableix o el codi HTML de l'objecte.
+	Tip_Navigate =	Es desplaça a una adreça URL o la ruta.
 	Tip_OuterHTML =	Estableix o recupera l'objecte i el contingut en HTML.
-	Tip_Href =	Estableix o un URL de destinació o un punt d'ancoratge.
-	Tip_Src =	Estableix o un URL a carregar l'objecte.
+	Tip_Quit =	Tanca la pàgina.
+	Tip_Refresh =	Torna a carregar la pàgina actual.
 	Tip_SelectedIndex =	Estableix o l'índex de l'opció seleccionada en un objecte de selecció.
-	Tip_Checked =	Estableix o indica l'estat de la casella de verificació o botó de ràdio.
+	Tip_Src =	Estableix o un URL a carregar l'objecte.
+	Tip_Stop =	Cancel una navegació o descàrrega pendents.
+	Tip_Submit =	Envia el formulari.
 	Tip_Type =	Estableix o el tipus de contingut de l'objecte.
+	Tip_Value =	Obté o estableix el valor de l'objecte.
 	Tip_Width =	Estableix o recupera l'amplada de l'objecte.
-	Tip_Height =	Estableix o recupera l'alçada de l'objecte.
-	Tip_Length =	Estableix o recupera el nombre d'objectes en una col · lecció.
 		
 ; 23. AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	Abs	Retorna el valor absolut del nombre .
-	ASin	Retorna l'arc si ( el nombre el si és Number ) en radians .
-	ACos	Retorna l'arc cosinus ( el nombre el cosinus és número ) en radians .
+	ACos	Retorna l'arc cosinus (el nombre el cosinus és número) en radians .
 	Array	Crea una matriu associativa de seqüència amb tecles de nombres enters.
-	Asc	Retorna el codi de caràcters (un nombre entre 1 i 255 ( en ANSI compilacions ) o 65.535 (en les versions Unicode ) ) per al primer caràcter en cadena .
-	ATan	Retorna l'arc tangent ( el nombre la tangent és número ) en radians .
+	Asc	Retorna el codi de caràcters (un nombre entre 1 i 255 (en ANSI compilacions) o 65.535 (en les versions Unicode)) per al primer caràcter en cadena .
+	ASin	Retorna l'arc si (el nombre el si és Number) en radians .
+	ATan	Retorna l'arc tangent (el nombre la tangent és número) en radians .
 	BlockInput	Activa o desactiva la capacitat de l'usuari per interactuar amb l'ordinador a través del teclat i el ratolí .
-	Break	Surt ( acaba) un bucle . Vàlid dins de qualsevol tipus de bucle .
-	Ceil	Retorna Nombre arrodonit al nombre enter més pròxim ( sense sufix .00 ) .
+	Break	Surt (acaba) un bucle . Vàlid dins de qualsevol tipus de bucle .
+	Ceil	Retorna Nombre arrodonit al nombre enter més pròxim (sense sufix .00) .
 	Chr	Retorna el caràcter únic corresponent al codi de caràcters indicat per Nombre .
 	Click	Fa clic amb el botó del ratolí a les coordenades especificades . També pot mantenir premut un botó , giri la roda , o moure .
-	ClipWait	Espera fins que el portapapers conté dades .
 	Clipboard	Enganxa el text del porta-retalls.
+	ClipWait	Espera fins que el portapapers conté dades .
 	ComObjActive	Recupera un objecte COM registrat .
 	ComObjArray	Crear un SAFEARRAY per al seu ús amb COM .
 	ComObjConnect	Connexions fonts d'esdeveniments d'un objecte COM de funcions amb un prefix donat .
@@ -1081,7 +1077,7 @@
 	Continue	Omet la resta del corrent de bucle d' iteració i comença una nova . Vàlid dins de qualsevol tipus de bucle .
 	Control	Fa una varietat de canvis en un control .
 	ControlClick	Envia un botó de ratolí o de roda del ratolí per a un control .
-	ControlEditPaste	Pastes cadena en la posició de cursor / inserció en un control d' edició (això no afecta els continguts del porta-retalls ) .
+	ControlEditPaste	Pastes cadena en la posició de cursor / inserció en un control d' edició (això no afecta els continguts del porta-retalls) .
 	ControlFocus	Estableix el focus d'entrada en un control determinat en una finestra .
 	ControlGet	Recupera diversos tipus d'informació sobre un control .
 	ControlGetFocus	Recupera el que el control de la finestra de destinació té el focus d'entrada , si escau .
@@ -1098,33 +1094,33 @@
 	DetectHiddenWindows	Determina si les finestres invisibles són " vistos" per el guió .
 	DllCall	Crida a una funció dins d'una DLL , com una funció de l'API de Windows estàndard.
 	Drive	Expulsa / retreu la safata a la unitat de CD o DVD , o estableix l'etiqueta de volum d'una unitat .
-	DriveGet	Recupera diversos tipus d'informació sobre la unitat de l'equip ( s ) .
+	DriveGet	Recupera diversos tipus d'informació sobre la unitat de l'equip (s) .
 	DriveSpaceFree	Recupera l' espai lliure d'un disc , en megabytes .
 	Edit	Obre l'script per a la seva edició en l'editor associat .
-	Else	Especifica la comanda ( s ) per dur a terme si una sentència if s'avalua com FALSE . Quan més d' un comando està present , tanqui en un bloc ( frens ) .
-	EnvAdd	Estableix una variable a la suma de si mateix més el valor donat ( també es pot sumar o restar el temps d'un valor de data i hora ) . Sinònim de : Var + = Valor .
+	Else	Especifica la comanda (s) per dur a terme si una sentència if s'avalua com FALSE . Quan més d' un comando està present , tanqui en un bloc (frens) .
+	EnvAdd	Estableix una variable a la suma de si mateix més el valor donat (també es pot sumar o restar el temps d'un valor de data i hora) . Sinònim de : Var + = Valor .
 	EnvDiv	Estableix una variable a si mateix dividit pel valor donat . Sinònim de : Var / = Valor .
 	EnvGet	Recupera una variable d'entorn .
 	EnvMult	Estableix una variable de vegades el mateix valor donat . Sinònim de : Var * = Valor .
 	EnvSet	Escriu un valor a una variable continguda en el medi ambient.
-	EnvSub	Estableix una variable a si mateix menys el valor donat ( poden comparar els valors de data i hora ) . Sinònim de : Var - = Valor .
-	EnvUpdate	Notifica al sistema operatiu i totes les aplicacions que s'executen aquesta variable d'entorn ( s ) han canviat .
-	Exit	Surt del subprocés actual o ( si el guió no és persistent i no conté tecles d'accés ràpid ) tota la seqüència de comandaments .
+	EnvSub	Estableix una variable a si mateix menys el valor donat (poden comparar els valors de data i hora) . Sinònim de : Var - = Valor .
+	EnvUpdate	Notifica al sistema operatiu i totes les aplicacions que s'executen aquesta variable d'entorn (s) han canviat .
+	Exit	Surt del subprocés actual o (si el guió no és persistent i no conté tecles d'accés ràpid) tota la seqüència de comandaments .
 	ExitApp	Acaba la seqüència de comandaments de manera incondicional .
-	Exp	Retorna i (que és aproximadament 2,71828182845905 ) elevat a la potència N - èsim .
-	FileAppend	Escriu text en el final d'un arxiu ( creant primer l'arxiu , si cal) .
+	Exp	Retorna i (que és aproximadament 2,71828182845905) elevat a la potència N - èsim .
+	FileAppend	Escriu text en el final d'un arxiu (creant primer l'arxiu , si cal) .
 	FileCopy	Copia un o més arxius .
-	FileCopyDir	Còpia una carpeta amb totes les seves subcarpetes i arxius ( similar a xcopy ) .
+	FileCopyDir	Còpia una carpeta amb totes les seves subcarpetes i arxius (similar a xcopy) .
 	FileCreateDir	Crea una carpeta .
-	FileCreateShortcut	Crea un arxiu d'accés directe ( . Lnk ) .
+	FileCreateShortcut	Crea un arxiu d'accés directe (. Lnk) .
 	FileDelete	Elimina un o més arxius .
 	FileEncoding	Estableix la codificació per defecte per FileRead , FileReadLine , Loop Read , FileAppend i FileOpen .
-	FileInstall	Inclou l'arxiu especificat dins de la versió compilada del script .
 	FileGetAttrib	Indica si un arxiu o carpeta és de només lectura , ocult , etc
-	FileGetShortcut	Recupera informació sobre un arxiu d'accés directe ( . Lnk ) , com el seu arxiu de destinació .
+	FileGetShortcut	Recupera informació sobre un arxiu d'accés directe (. Lnk) , com el seu arxiu de destinació .
 	FileGetSize	Recupera la mida d'un arxiu .
 	FileGetTime	Recupera el segell de data i hora d'un arxiu o carpeta .
 	FileGetVersion	Recupera la versió d'un arxiu .
+	FileInstall	Inclou l'arxiu especificat dins de la versió compilada del script .
 	FileMove	Mou o canvia el nom d'un o més arxius .
 	FileMoveDir	Mou una carpeta amb totes les seves subcarpetes i arxius . També podeu canviar el nom d'una carpeta .
 	FileOpen	Proporciona arxiu orientat a objectes I / O.
@@ -1133,11 +1129,11 @@
 	FileRecycle	Envia un fitxer o directori a la paperera de reciclatge , si és possible .
 	FileRecycleEmpty	Buida la paperera de reciclatge .
 	FileRemoveDir	Elimina una carpeta .
-	FileSelectFile	Mostra un quadre de diàleg estàndard que permet a l'usuari obrir o guardar l'arxiu ( s ) .
+	FileSelectFile	Mostra un quadre de diàleg estàndard que permet a l'usuari obrir o guardar l'arxiu (s) .
 	FileSelectFolder	Mostra un quadre de diàleg estàndard que permet a l'usuari seleccionar una carpeta .
 	FileSetAttrib	Canvia els atributs d'un o més arxius o carpetes . Els comodins són compatibles .
 	FileSetTime	Canvia el segell de data i hora d'un o més arxius o carpetes . Els comodins són compatibles .
-	Floor	Retorna Nombre arrodonit al nombre enter més pròxim ( sense sufix .00 ) .
+	Floor	Retorna Nombre arrodonit al nombre enter més pròxim (sense sufix .00) .
 	For	Repeteix una sèrie de comandaments una vegada per a cada parell clau - valor en un objecte .
 	Format	Formats d'un nombre variable de valors d'entrada d'acord amb una cadena de format.
 	FormatTime	Transforma un timestamp YYYYMMDDHH24MISS en el format de data / hora especificada .
@@ -1151,27 +1147,27 @@
 	GroupClose	Tanca la finestra activa si estava activat per GroupActivate o GroupDeactivate . A continuació , s'activa la següent finestra en la sèrie . També pot tancar totes les finestres d'un grup .
 	GroupDeactivate	Similar a GroupActivate excepte activa la finestra no en el grup .
 	HasKey	Retorna true si Key s'associa amb un valor.
-	if	Especifica la comanda ( s ) per dur a terme si la comparació d'una variable a un valor doni com a resultat VERDADER. Quan més d' un comando està present , tanqui en un bloc ( frens ) .
-	if (expression)	Especifica la comanda ( s ) per dur a terme si una expressió s'avalua com VERDADER.
-	If var [not] between	Comprova si el contingut d'una variable són numèricament o alfabèticament entre dos valors ( inclosos) .
-	If var [not] in/contains MatchList 	Comprova si el contingut d'una variable coincideixen amb un dels elements d'una llista .
-	If var is [not] type	Comprova si el contingut d'una variable són numèrics , majúscules , etc
+	if	Especifica la comanda (s) per dur a terme si la comparació d'una variable a un valor doni com a resultat VERDADER. Quan més d' un comando està present , tanqui en un bloc (frens) .
+	if (expression)	Especifica la comanda (s) per dur a terme si una expressió s'avalua com VERDADER.
+	If A_Index	Comprova si la interacció actual del loop matxs 1 especifiqui un nombre .
 	If Clipboard	Comprova si el text del portapapers és matxs una cadena especificada .
 	If ErrorLevel	Comprova si una imatge o píxel especificat es troben a la pantalla .
-	If A_Index	Comprova si la interacció actual del loop matxs 1 especifiqui un nombre .
+	If var [not] between	Comprova si el contingut d'una variable són numèricament o alfabèticament entre dos valors (inclosos) .
+	If var [not] in/contains MatchList 	Comprova si el contingut d'una variable coincideixen amb un dels elements d'una llista .
+	If var is [not] type	Comprova si el contingut d'una variable són numèrics , majúscules , etc
 	IfEqual/IfNotEqual	Compara una variable en un valor de la igualtat . Sinònim : si Var = Valor | si Var < > Value .
 	IfExist / IfNotExist / FileExist	Comprova l'existència d'un fitxer o carpeta .
 	IfGreater / IfGreaterOrEqual	Compara una variable a un valor . Sinònim : si Var > Valor | si Var > = Valor .
 	IfInString / IfNotInString / InStr	Comprova si una variable conté la cadena especificada .
 	IfLess / IfLessOrEqual	Compara una variable a un valor . Sinònim : si Var < Valor | si Var < = Valor .
 	IfMsgBox	Xecs botó que s'hagi premut per l'usuari durant l'últim comando MsgBox .
-	IfWinActive / IfWinNotActive	Comprova si hi ha la finestra especificada i es troba actualment activa ( sobretot) .
+	IfWinActive / IfWinNotActive	Comprova si hi ha la finestra especificada i es troba actualment activa (sobretot) .
 	IfWinExist / IfWinNotExist	Comprova si hi ha la finestra especificada .
 	ImageSearch	Busca en una regió de la pantalla per una imatge .
 	IniDelete	Elimina un valor d'un arxiu de format . Ini estàndard.
 	IniRead	Llegeix un valor d'un arxiu de format . Ini estàndard.
 	IniWrite	Escriu un valor en un arxiu de format . Ini estàndard.
-	Input	Espera que l'usuari escrigui una cadena ( no suportat en Windows 9x : no fa res ) .
+	Input	Espera que l'usuari escrigui una cadena (no suportat en Windows 9x : no fa res) .
 	InputBox	Mostra un quadre d'entrada per demanar a l'usuari que introdueixi una cadena .
 	InsertAt	Insereix un o més valors en una posició donada dins d'un array lineal.
 	InStr	Busca un fet donat d'una cadena , de l'esquerra o la dreta .
@@ -1180,10 +1176,10 @@
 	Labels	Una etiqueta identifica una línia de codi, i es pot utilitzar com un objectiu Goto o per formar una subrutina.
 	Length	Retorna la longitud d'una matriu lineal començant en la posició 1.
 	ListVars	Mostra les variables del script: els seus noms i continguts actuals.
-	Log	Retorna el logaritme (base 10) del nombre.
 	Ln	Retorna el logaritme natural (base e) del número.
-	Loop (normal) 	Realitzeu una sèrie d'ordres en diverses ocasions: es troben ja sigui el nombre especificat de vegades o fins trencament.
+	Log	Retorna el logaritme (base 10) del nombre.
 	Loop (files & folders)	Recupera els arxius o carpetes especificats, un a la vegada.
+	Loop (normal) 	Realitzeu una sèrie d'ordres en diverses ocasions: es troben ja sigui el nombre especificat de vegades o fins trencament.
 	Loop (parse a string)	Recupera subcadenes (camps) d'una cadena, d'una en una.
 	Loop (read file contents)	Recupera les línies en un arxiu de text, d'una en una (millor rendiment que FileReadLine).
 	Loop (registry)	Recupera el contingut de la subclau especificada, un element a la vegada.
@@ -1212,12 +1208,12 @@
 	Progress	Crea o actualitza una finestra amb una barra de progrés.
 	Push	Afegeix valors al final d'una matriu.
 	Random	Genera un nombre pseudo-aleatori.
+	RegDelete	Elimina una subclau o un valor del registre.
 	RegExMatch	Determina si una cadena conté un patró (expressió regular).
 	RegExReplace	Substitueix les aparicions d'un patró (expressió regular) dins d'una cadena.
-	RegDelete	Elimina una subclau o un valor del registre.
+	RegisterCallback	Crea una adreça de codi màquina que quan se'l crida, es redirigeix la crida a una funció en el guió.
 	RegRead	Llegeix un valor del registre.
 	RegWrite	Escriu un valor al registre.
-	RegisterCallback	Crea una adreça de codi màquina que quan se'l crida, es redirigeix la crida a una funció en el guió.
 	RemoveAt	Elimina elements de la posició donada en una sèrie lineal.
 	Return	La rendibilitat d'una subrutina d'execució que havia saltat anteriorment a través de la funció de guàrdia, GOSUB, l'activació de tecles d'accés directe, GroupActivate, o per altres mitjans.
 	Round	Si N és omès o 0, nombre s'arrodoneix a l'enter més proper. Si N és nombre positiu, nombre s'arrodoneix al N decimals. Si N és negatiu, nombre s'arrodoneix per N dígits a l'esquerra del punt decimal.
@@ -1235,8 +1231,8 @@
 	SetKeyDelay	Estableix la demora que es produirà després de cada clic d'tecla Envia o enviat per ControlSend.
 	SetMouseDelay	Estableix la demora que es produirà després de cada moviment del ratolí o feu clic.
 	SetNumlockState	Estableix l'estat de la tecla Bloq Num També es pot forçar la clau per mantenir-se encès o apagat.
-	SetScrollLockState	Estableix l'estat de la tecla Bloq Despl. També es pot forçar la clau per mantenir-se encès o apagat.
 	SetRegView	Permet que les ordres de registre en un script de 32 bits per accedir a la visualització del registre de 64 bits i viceversa.
+	SetScrollLockState	Estableix l'estat de la tecla Bloq Despl. També es pot forçar la clau per mantenir-se encès o apagat.
 	SetTimer	Provoca un subprograma que es llançarà de forma automàtica i repetidament a un interval de temps especificat.
 	Shutdown	Apaga, reinicia o tanca sessió en el sistema.
 	Sin	Retorna el si trigonomètric del Nombre.
@@ -1249,13 +1245,12 @@
 	SoundSet	Canvis diverses configuracions d'un dispositiu de so (mute, volum màster màster, etc)
 	SoundSetWaveVolume	Canvia el volum de sortida d'ona per a un dispositiu de so.
 	SplashImage	Crea o actualitza una finestra amb una imatge JPG, GIF o BMP.
-	SplashTextOn	Crea un text personalitzable finestra emergent.
 	SplashTextOff	Tanca la finestra de dalt.
+	SplashTextOn	Crea un text personalitzable finestra emergent.
 	SplitPath	Separa un nom de fitxer o adreça URL al seu nom, el directori, l'extensió i la unitat.
 	Sqrt	Retorna l'arrel quadrada del nombre.
 	StatusBarGetText	Recupera el text d'un control de la barra d'estat estàndard.
 	StatusBarWait	Espera que la barra d'estat de la finestra conté la cadena especificada.
-	StrPut / StrGet	Còpia una cadena o a partir d'una adreça de memòria, opcional conversió entre pàgines de codis.
 	StringCaseSense	Determina si les comparacions de cadena distingeixen entre majúscules i minúscules (per defecte és "no entre majúscules i minúscules").
 	StringGetPos / InStr	Recupera la posició de la subcadena especificada dins d'una cadena.
 	StringLeft	Recupera el nombre de caràcters del costat esquerre d'una cadena.
@@ -1268,6 +1263,7 @@
 	StringTrimLeft	Elimina un nombre de caràcters del costat esquerre d'una cadena.
 	StringTrimRight	Elimina un nombre de caràcters des del costat dret d'una cadena.
 	StringUpper	Converteix una cadena a majúscules.
+	StrPut / StrGet	Còpia una cadena o a partir d'una adreça de memòria, opcional conversió entre pàgines de codis.
 	Suspend	Desactiva o activa totes o determinades combinacions de tecles i hotstrings.
 	SysGet	Recupera la resolució de pantalla, la informació de diversos monitors, les dimensions dels objectes del sistema, i altres propietats del sistema.
 	Tan	Retorna la tangent trigonomètrica del Nombre.
@@ -1285,10 +1281,10 @@
 	WinActive	Retorna l'ID únic (HWND) de la finestra activa si coincideix amb els criteris especificats.
 	WinClose	Tanca la finestra especificada.
 	WinExist	Comprova si hi ha la finestra especificada.
+	WinGet	Recupera la finestra especificada única ID, ID de procés, nom del procés, o una llista dels seus controls. També pot obtenir una llista de totes les finestres que coincideixen amb els criteris especificats.
 	WinGetActiveStats	Combina les funcions de WinGetActiveTitle i WinGetPos en un mateix comandament.
 	WinGetActiveTitle	Recupera el títol de la finestra activa.
 	WinGetClass	Recupera el nom de classe de finestra especificada.
-	WinGet	Recupera la finestra especificada única ID, ID de procés, nom del procés, o una llista dels seus controls. També pot obtenir una llista de totes les finestres que coincideixen amb els criteris especificats.
 	WinGetPos	Recupera la posició i la mida de la finestra especificada.
 	WinGetText	Recupera el text de la finestra especificada.
 	WinGetTitle	Recupera el títol de la finestra especificada.

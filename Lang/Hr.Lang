@@ -73,7 +73,6 @@
 	i_Lang019 =	&Windows Poruke
 	i_Lang020 =	Prona&đite naredbu
 		
-		
 ; 06. Edit Sub Menu		
 	e_Lang001 =	&Duplikat
 	e_Lang002 =	&Uredi komentar
@@ -97,7 +96,6 @@
 	e_Lang020 =	&Ukloni sve skupine
 	e_Lang021 =	&Sažmi sve
 	e_Lang022 =	&Proširi sve
-		
 		
 ; 07. Select Sub Menu		
 	s_Lang001 =	&Odaberi sve
@@ -153,6 +151,7 @@
 	o_Lang013 =	Uk&lonite propust varalica
 	o_Lang014 =	&Zadane Hotkeys
 	o_Lang015 =	T&vorničke postavke
+	o_Lang016 =	&Jezik Editor
 		
 ; 10. Donate Sub Menu		
 	p_Lang001 =	&PayPal donacija
@@ -761,7 +760,6 @@
 	d_Lang042 =	Nepoznat operator.
 		Sljedeće operateri su prihvaćeni:
 		=, ==, <>,! =,>, <,> =, <=
-		
 		Primjeri:
 		MyVar > 1
 		MyVar = `%A_DDDD`%
@@ -791,7 +789,6 @@
 		Molimo dodijeliti varijablu i koristiti ga u parametar.
 	d_Lang060 =	Nova verzija dostupna
 	d_Lang061 =	Želite li ga skinuti sada?
-		
 		Kako onemogućiti automatske provjere odabir Pomoć > Provjerite na startup
 	d_Lang062 =	Vi već imate najnoviju verziju.
 	d_Lang063 =	Došlo je do pogreške tijekom provjere.
@@ -801,7 +798,6 @@
 	d_Lang067 =	Pokažite ovaj prozor na startup
 	d_Lang068 =	Savjet:
 	d_Lang069 =	Puno vremena i truda je otišao u razvoju Pulover's Macro Creator. Ako vam je koristan, molimo vas da razmislite pokazuje svoju zahvalnost s donacijom.
-		
 		Doniranje ili ne, tu će biti razlike u njegovim značajkama i funkcionalnosti.
 	d_Lang070 =	Donirajte...
 	d_Lang071 =	Ne, hvala
@@ -877,73 +873,29 @@
 		Podeu executar funcions avançades com ara substr i RegExReplace de la finestra Funcions (Inserir > Si Declaracions / variables / funcions). O executar les seves pròpies funcions de seqüència AutoHotkey externs.
 		
 ; 19. Tooltips		
-	AutoKey_TT =	Hotkey igrati Macro
-	ManKey_TT =	Hotkey igrati Makro "korak po korak"
-	AbortKey_TT =	Prečac za zaustavljanje
-	PauseKey_TT =	Brza tipka za pauzu reprodukcije
-	RecKey_TT =	Povratna izbiti
-	RecNewKey_TT =	Povratna izbiti
-	JoyKey_TT =	Pritisnite tipku na palici
-	ReptC_TT =	0 = beskonačno
 	A_List_TT =	Odabir Makro (Ctrl+1~0)
-	OSHK_TT =	Odabir Makro
-	OSHKEd_TT =	Odabir Makro
-	ApplyT_TT =	Primijeniti
+	AbortKey_TT =	Prečac za zaustavljanje
+	ActiveObj_TT =	Pokušava se povezati s Active COM objekt
 	ApplyI_TT =	Primijeniti
 	ApplyL_TT =	Stavite na kutiji (Insert)
-	CmdFilter_TT =	Filtriranje po tipu
-	InsertKey_TT =	Umetnite Pritisak Na Tipku (Ctrl+Insert)
-	InsertKeyT_TT =	Umetnite Pritisak Na Tipku
-	DefaultMacro_TT =	Odaberite datoteku za učitavanje na pokretanju programa
-	VarCopyA_TT =	Kopirajte trenutne varijabilne sadržaj
-	VarCopyB_TT =	Kopirajte trenutne varijabilne sadržaj
-	Reset_TT =	Vedro promjenjivi sadržaj
-	Screenshot_TT =	Provjerite Screenshot
-	ColorPick_TT =	Dobili piksel na ekranu
-	PicPrev_TT =	Dvaput kliknite na sliku otvorite
-	CoordPixel_TT =	Koordinacija rada
-	VariatT_TT =	Nijanse varijacije
-	IconN_TT =	Broj ikona skupine
-	TransC_TT =	Prozirna boja
-	WScale_TT =	Širina razmjera
-	HScale_TT =	Visina razmjera
-	Fast_TT =	Koristi se brže pretraživanje metodu (preporučeno)
-	RGB_TT =	Uzroci boju treba tumačiti kao RGB vrijednosti umjesto BGR
-	LoopLVColor_TT =	Kliknite da odaberete boju
-	IfLVColor_TT =	Kliknite da odaberete boju
-	RefreshIEW_TT =	Osvježi popis
-	ActiveObj_TT =	Pokušava se povezati s Active COM objekt
-	TimeoutM_TT =	0 = beskonačno
-	ExpView_TT =	Napredni Uređivač
-	ExpView2_TT =	Napredni Uređivač
-	OSProgB_TT =	Prikaz Progress Bar
-	OSTrans_TT =	Neprozirnost
-	MRel_TT =	Promjene u odnosu na trenutnu poziciju.
-		Ili, ako se koristi s kontrola: Položaj u odnosu na kontrolu.
-	Raw_TT =	SendRaw Naredba tumači sve znakove doslovno
-		umjesto prevođenje {} Upišite se na ENTER pritiska,
-		C ^ na Control-C, itd..
-	ComText_TT =	Kad nije u RAW formatu, znakova Slijedeće
-		su liječeni su modifikatori (ovi parametri utjecati
-		Samo vrlo sljedeći ključ)!, +, ^, #
-	ComEvent_TT =	Stopa po kojoj tipke su poslani određuje ključne zakašnjenjem.
+	ApplyT_TT =	Primijeniti
+	AutoKey_TT =	Hotkey igrati Macro
 	Clip_TT =	Privremeno koristi međuspremnik poslati tekst.
 		Kad je postupak završen, skripta
 		vraća izvorne sadržaja odlagališta.
 		(Ostavite prazno tekst zalijepiti trenutni sadržaj)
+	CmdFilter_TT =	Filtriranje po tipu
+	CmdSort_TT =	Poredaj po abecedi
+	ColorPick_TT =	Dobili piksel na ekranu
+	ComEvent_TT =	Stopa po kojoj tipke su poslani određuje ključne zakašnjenjem.
+	ComText_TT =	Kad nije u RAW formatu, znakova Slijedeće
+		su liječeni su modifikatori (ovi parametri utjecati
+		Samo vrlo sljedeći ključ)!, +, ^, #
+	CoordPixel_TT =	Koordinacija rada
+	DefaultMacro_TT =	Odaberite datoteku za učitavanje na pokretanju programa
 	EditPaste_TT =	Lijepi string na znak za umetanje / insert položaju
 		u uređivanje kontrole (to ne utječe
 		sadržaj na prijenosnik).
-	SetText_TT =	Mijenja tekst kontrole.
-	RelKey_TT =	Podaci miš pokreti i klikovi kao offseta
-		iz prethodne pozicije kada je održana.
-	ToggleC_TT =	Aktivirajte Relativna snimanja kad Ključni državni uključen.
-	Relative_TT =	Koordinate u odnosu na aktivni prozor.
-	Screen_TT =	Koordinate se u odnosu na desktop (cijeli ekran).
-	IncFiles_TT =	Uključi datoteke / vrijednosti
-	IncFolders_TT =	Uključi Katalozi (mape) / Tipke
-	Recurse_TT =	Ponavljajući u poddirektorijima (podmape) / potključevima
-	CmdSort_TT =	Poredaj po abecedi
 	Ex_EdScript_TT =	Otvori u vanjskom uređivaču
 	ExprLink2_TT =	- NE PRILAŽETE VARIJABLI U POSTOCIMA ZNAKOVA OVDJE.
 		- Većina AHK izraza su podržani.
@@ -955,16 +907,90 @@
 		- Možete koristiti žice, varijabli, polja i funkcije.
 		- Za korištenje žice, priložiti ih u navodnike, npr: var = "A".
 		- Više Izjave su podržani, npr: var = "a" || Instr (var, "b").
+	ExpView_TT =	Napredni Uređivač
+	ExpView2_TT =	Napredni Uređivač
+	Fast_TT =	Koristi se brže pretraživanje metodu (preporučeno)
+	HScale_TT =	Visina razmjera
+	IconN_TT =	Broj ikona skupine
+	IfLVColor_TT =	Kliknite da odaberete boju
+	IncFiles_TT =	Uključi datoteke / vrijednosti
+	IncFolders_TT =	Uključi Katalozi (mape) / Tipke
+	InsertKey_TT =	Umetnite Pritisak Na Tipku (Ctrl+Insert)
+	InsertKeyT_TT =	Umetnite Pritisak Na Tipku
+	JoyKey_TT =	Pritisnite tipku na palici
+	LoopLVColor_TT =	Kliknite da odaberete boju
+	ManKey_TT =	Hotkey igrati Makro "korak po korak"
+	MRel_TT =	Promjene u odnosu na trenutnu poziciju.
+		Ili, ako se koristi s kontrola: Položaj u odnosu na kontrolu.
+	OSHK_TT =	Odabir Makro
+	OSHKEd_TT =	Odabir Makro
+	OSProgB_TT =	Prikaz Progress Bar
+	OSTrans_TT =	Neprozirnost
+	PauseKey_TT =	Brza tipka za pauzu reprodukcije
+	PicPrev_TT =	Dvaput kliknite na sliku otvorite
+	Raw_TT =	SendRaw Naredba tumači sve znakove doslovno
+		umjesto prevođenje {} Upišite se na ENTER pritiska,
+		C ^ na Control-C, itd..
+	RecKey_TT =	Povratna izbiti
+	RecNewKey_TT =	Povratna izbiti
+	Recurse_TT =	Ponavljajući u poddirektorijima (podmape) / potključevima
+	RefreshIEW_TT =	Osvježi popis
+	Relative_TT =	Koordinate u odnosu na aktivni prozor.
+	RelKey_TT =	Podaci miš pokreti i klikovi kao offseta
+		iz prethodne pozicije kada je održana.
+	ReptC_TT =	0 = beskonačno
+	Reset_TT =	Vedro promjenjivi sadržaj
+	RGB_TT =	Uzroci boju treba tumačiti kao RGB vrijednosti umjesto BGR
+	Screen_TT =	Koordinate se u odnosu na desktop (cijeli ekran).
+	Screenshot_TT =	Provjerite Screenshot
+	SetText_TT =	Mijenja tekst kontrole.
+	TimeoutM_TT =	0 = beskonačno
+	ToggleC_TT =	Aktivirajte Relativna snimanja kad Ključni državni uključen.
+	TransC_TT =	Prozirna boja
+	VarCopyA_TT =	Kopirajte trenutne varijabilne sadržaj
+	VarCopyB_TT =	Kopirajte trenutne varijabilne sadržaj
+	VariatT_TT =	Nijanse varijacije
+	WScale_TT =	Širina razmjera
 		
 ; 20. Tooltips from AHK Docs		
-	ExpList_TT =	Dvaput kliknite za uređivanje
+	Ex_AF_TT =	Preskače nježan način aktiviranja prozor
+		i ide ravno u nasilnom metodom.
+	Ex_DH_TT =	Određuje li nevidljivi prozori se 'vidi' u skripti.
+	Ex_EdVars_TT =	Odaberite globalne varijable se izvozi.
+	Ex_HK_TT =	Prisiljava korištenje kuka za provedbu svih
+		ili neki tipkovnica hotkeys.
 	Ex_IfDir_TT =	Stvara kontekst osjetljive hotkeys i ovisno hotstrings
 		o vrsti prozora koji je aktivan ili ne postoji.
 	Ex_IfDirType_TT =	Stvara kontekst osjetljive hotkeys i ovisno hotstrings
 		o vrsti prozora koji je aktivan ili ne postoji.
+	Ex_IN_TT =	Uzroci skriptu ponaša kao da je navedeno
+		File je sadržaji su prisutni na ovom točan položaj.
+	Ex_MD_TT =	Postavlja odgode nakon que će se pojaviti
+		svaki klik miša ili pokret.
+	Ex_MT_TT =	Postavlja maksimalan broj istovremenih
+		teme po hotkey ili hotstring.
+	Ex_NT_TT =	Onemogućuje prikazivanje ikona.
+	Ex_PT_TT =	Održava skriptu trajno prikazivati
+		(koji je, dok ga korisnik ne zatvori ili ExitApp je naišao).
+	Ex_SB_TT =	Određuje koliko brzo će pokrenuti skriptu (utječe na korištenje procesora).
+	Ex_SC_TT =	Postavlja odgode nakon que će se pojaviti
+		Svaka kontrola-modificiranje naredbu.
+	Ex_SI_TT =	Određuje li skripta je dozvoljeno ponovno pokrenuti Kad je već pokrenut.
+	Ex_SK_TT =	Postavlja odgode nakon svakog que će se pojaviti
+		Pošalji pritiska poslao ili ControlSend.
 	Ex_SM_TT =	Stvara Pošalji sinonim SendInput ili SendPlay umjesto
 		default (SendEvent). Također čini Kliknite i MouseMove / Kliknite / Povucite
 		koristiti navedenu metodu.
+	Ex_ST_TT =	Postavlja odgovarajući ponašanje WinTitle parametar naredbe poput WinWait.
+	Ex_SW_TT =	Postavlja odgode nakon que će se pojaviti
+		windowing svake naredbe, kao što su WinActivate.
+	Ex_UV_TT =	Izvoz globalne varijable.
+	ExpList_TT =	Dvaput kliknite za uređivanje
+	SI_TT =	Riječ FORCE preskače dijaloški okvir i automatski zamjenjuje stari primjerak,
+		Koji je sličan na snazi ​​do reload naredbe.
+		Riječ ignorirati preskoka dijaloški okvir i ostavlja stari primjerak koji je pokrenut.
+		Drugim riječima, pokušaji da se pokrene već prikazuju skripte se ignoriraju.
+		Riječ OFF Omogućuje više instance skripte voditi paralelno.
 	SM_TT =	Događaj: Ovo je početna postavka koristi sve skripte.
 		Ona koristi metodu za slanje SendEvent, SendRaw, Kliknite i MouseMove / klikni / Povucite.
 		Ulaz: Prijelaz na SendInput metode za Pošalji, SendRaw, kliknite i MouseMove / klikni / Povucite.
@@ -972,40 +998,10 @@
 		Kad SendInput nije dostupna, ona se vraća na Play (u nastavku). Također ovaj uzroci
 		SendInput naredba sama vratiti na SendInput Kad Play nije dostupna.
 		Igra: Prijelaz na SendPlay metode za Pošalji, SendRaw, kliknite i MouseMove / Kliknite / Povucite.
-	Ex_SI_TT =	Određuje li skripta je dozvoljeno ponovno pokrenuti Kad je već pokrenut.
-	SI_TT =	Riječ FORCE preskače dijaloški okvir i automatski zamjenjuje stari primjerak,
-		Koji je sličan na snazi ​​do reload naredbe.
-		Riječ ignorirati preskoka dijaloški okvir i ostavlja stari primjerak koji je pokrenut.
-		Drugim riječima, pokušaji da se pokrene već prikazuju skripte se ignoriraju.
-		Riječ OFF Omogućuje više instance skripte voditi paralelno.
-	Ex_ST_TT =	Postavlja odgovarajući ponašanje WinTitle parametar naredbe poput WinWait.
 	ST_TT =	1: Prozor naslov mora početi s navedenom WinTitle da se utakmica.
 		2: Prozor naslov može sadržavati bilo gdje unutar WinTitle da bude utakmica.
 		3: Prozor naslov mora biti jednak WinTitle da se utakmica.
 		RegEx: Promjene WinTitle, WinText, ExcludeTitle i ExcludeText biti regularni izrazi.
-	Ex_DH_TT =	Određuje li nevidljivi prozori se 'vidi' u skripti.
-	Ex_AF_TT =	Preskače nježan način aktiviranja prozor
-		i ide ravno u nasilnom metodom.
-	Ex_HK_TT =	Prisiljava korištenje kuka za provedbu svih
-		ili neki tipkovnica hotkeys.
-	Ex_SK_TT =	Postavlja odgode nakon svakog que će se pojaviti
-		Pošalji pritiska poslao ili ControlSend.
-	Ex_MD_TT =	Postavlja odgode nakon que će se pojaviti
-		svaki klik miša ili pokret.
-	Ex_SC_TT =	Postavlja odgode nakon que će se pojaviti
-		Svaka kontrola-modificiranje naredbu.
-	Ex_SW_TT =	Postavlja odgode nakon que će se pojaviti
-		windowing svake naredbe, kao što su WinActivate.
-	Ex_SB_TT =	Određuje koliko brzo će pokrenuti skriptu (utječe na korištenje procesora).
-	Ex_NT_TT =	Onemogućuje prikazivanje ikona.
-	Ex_IN_TT =	Uzroci skriptu ponaša kao da je navedeno
-		File je sadržaji su prisutni na ovom točan položaj.
-	Ex_PT_TT =	Održava skriptu trajno prikazivati
-		(koji je, dok ga korisnik ne zatvori ili ExitApp je naišao).
-	Ex_MT_TT =	Postavlja maksimalan broj istovremenih
-		teme po hotkey ili hotstring.
-	Ex_UV_TT =	Izvoz globalne varijable.
-	Ex_EdVars_TT =	Odaberite globalne varijable se izvozi.
 		
 ; 21. Operators		
 	As_Oper_1 =	Dodijeliti
@@ -1024,47 +1020,47 @@
 	Co_Oper_7 =	Manje ili jednako
 		
 ; 22. IE Commands Tips		
-	Tip_Navigate =	Kreće na URL ili put.
-	Tip_Value =	Dobiva ili postavlja vrijednost objekta.
-	Tip_Focus =	Postavlja fokus na objekt.
+	Tip_Checked =	Postavlja ili vraća u stanje potvrdnog okvira ili gumb.
 	Tip_Click =	Simulira klik na objekt.
-	Tip_Submit =	Podnosi obrazac.
-	Tip_GoHome =	Kreće se na trenutnu kuće ili početnu stranicu.
+	Tip_Focus =	Postavlja fokus na objekt.
 	Tip_GoBack =	Kreće se prema natrag jedna stavka u popisu povijesti.
 	Tip_GoForward =	Kreće se prema naprijed jedna stavka u popisu povijesti.
+	Tip_GoHome =	Kreće se na trenutnu kuće ili početnu stranicu.
 	Tip_GoSearch =	Kreće se u trenutnoj stranici za pretraživanje.
-	Tip_Refresh =	Ponovno učitava trenutno prikazana stranica.
-	Tip_Stop =	Poništava tijeku navigaciju ili preuzimanje.
-	Tip_Quit =	Zatvara stranicu.
+	Tip_Height =	Postavlja ili vraća visinu objekta.
+	Tip_Href =	Postavlja ili vraća odredišni URL ili točka sidrišta.
+	Tip_InnerHTML =	Postavlja ili vraća HTML tog objekta.
+	Tip_InnerText =	Postavlja ili dobiva tekst objekta.
+	Tip_Length =	Postavlja ili vraća broj predmeta u zbirci.
 	Tip_LocationName =	Dobiva put ili naslov trenutne stranice.
 	Tip_LocationURL =	Dobiva URL trenutne stranice.
-	Tip_InnerText =	Postavlja ili dobiva tekst objekta.
-	Tip_InnerHTML =	Postavlja ili vraća HTML tog objekta.
+	Tip_Navigate =	Kreće na URL ili put.
 	Tip_OuterHTML =	Postavlja ili vraća predmet i njegov sadržaj u HTML-u.
-	Tip_Href =	Postavlja ili vraća odredišni URL ili točka sidrišta.
-	Tip_Src =	Postavlja ili vraća URL biti učitan od strane objekta.
+	Tip_Quit =	Zatvara stranicu.
+	Tip_Refresh =	Ponovno učitava trenutno prikazana stranica.
 	Tip_SelectedIndex =	Postavlja ili vraća indeks odabrane opcije u određenom objektu.
-	Tip_Checked =	Postavlja ili vraća u stanje potvrdnog okvira ili gumb.
+	Tip_Src =	Postavlja ili vraća URL biti učitan od strane objekta.
+	Tip_Stop =	Poništava tijeku navigaciju ili preuzimanje.
+	Tip_Submit =	Podnosi obrazac.
 	Tip_Type =	Postavlja ili vraća vrstu sadržaja od objekta.
+	Tip_Value =	Dobiva ili postavlja vrijednost objekta.
 	Tip_Width =	Postavlja ili vraća širinu objekta.
-	Tip_Height =	Postavlja ili vraća visinu objekta.
-	Tip_Length =	Postavlja ili vraća broj predmeta u zbirci.
 		
 ; 23. AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	Abs	Vraća apsolutnu vrijednost broja .
-	ASin	Vraća arkus sinus (čiji broj je broj sine ) u radijanima .
-	ACos	Vraća arkus kosinus (broj čiji kosinus je broj ) u radijanima .
+	ACos	Vraća arkus kosinus (broj čiji kosinus je broj) u radijanima .
 	Array	Stvara scriptable asocijativni niz s cjelobrojnim tipki.
-	Asc	Vraća kod znaka (broj između 1 i 255 ( u ANSI gradi ) ili 65535 ( u Unicode gradi ) ) po prvi lik u String .
-	ATan	Vraća arkus tangens (čiji broj je tangente broj ) u radijanima .
+	Asc	Vraća kod znaka (broj između 1 i 255 (u ANSI gradi) ili 65535 (u Unicode gradi)) po prvi lik u String .
+	ASin	Vraća arkus sinus (čiji broj je broj sine) u radijanima .
+	ATan	Vraća arkus tangens (čiji broj je tangente broj) u radijanima .
 	BlockInput	Onemogućuje ili omogućuje korisniku sposobnost za interakciju s računalom putem tipkovnice i miša .
-	Break	Izlaz ( prestaje )petljom . Vrijedi unutar bilo koje vrste petlji .
-	Ceil	Vraća broj zaokružen na najbliži cijeli broj ( bez sufiks 0,00 ) .
+	Break	Izlaz (prestaje)petljom . Vrijedi unutar bilo koje vrste petlji .
+	Ceil	Vraća broj zaokružen na najbliži cijeli broj (bez sufiks 0,00) .
 	Chr	Vraća jedan lik odgovara znakovni kod označena brojem .
 	Click	Klikne na tipku miša na određenom koordinatama . Također možete držite gumb , okrenuti kotač , ili premjestiti .
-	ClipWait	Waits dokprijenosnik sadrži podatke .
 	Clipboard	Lijepi tekst iz međuspremnika.
+	ClipWait	Waits dokprijenosnik sadrži podatke .
 	ComObjActive	Dohvaća registriranih COM objekt .
 	ComObjArray	Stvara SAFEARRAY za korištenje s COM .
 	ComObjConnect	Povezuje COM objekt je događaj izvora funkcija s obzirom prefiksa .
@@ -1081,7 +1077,7 @@
 	Continue	Preskače ostatak tekuće iteracije petlje i započinje nova . Vrijedi unutar bilo koje vrste petlji .
 	Control	Stvara razne promjene na kontrolu .
 	ControlClick	Šalje tipku miša ili miša kotača događaj na upravljaču .
-	ControlEditPaste	Lijepi Gudački na znak za umetanje / insert poziciju u uređivanje kontrole ( to ne utječe na sadržaj međuspremnika ) .
+	ControlEditPaste	Lijepi Gudački na znak za umetanje / insert poziciju u uređivanje kontrole (to ne utječe na sadržaj međuspremnika) .
 	ControlFocus	Postavlja ulazni fokus na određenu kontrolu na prozoru .
 	ControlGet	Dohvaća različite vrste informacija o kontroli .
 	ControlGetFocus	Dohvaća koji kontroliraju od ciljane prozora ima ulazni fokus , ako ih ima .
@@ -1098,33 +1094,33 @@
 	DetectHiddenWindows	Određuje li nevidljivi prozori su " vidjeli " u skripti .
 	DllCall	Nazivafunkcija unutar DLL, kao što je standardni Windows API funkcija .
 	Drive	Izbacuje ladicu / uvlačiu CD ili DVD pogon , ili postavi pogona oznaku jedinice .
-	DriveGet	Dohvaća različite vrste informacija o računalu vožnje ( s) .
+	DriveGet	Dohvaća različite vrste informacija o računalu vožnje (s) .
 	DriveSpaceFree	Dohvaća slobodnog prostora na disku od pogona , u megabajta .
 	Edit	Otvara trenutnu skriptu za uređivanje u udruženom urednika .
-	Else	Određujenaredba ( e ) za izvođenje akoIF - izjavu procjenjuje na FALSE . Kada je više od jedan naredbeni je prisutan, ih priložiti u blok ( proteza ) .
-	EnvAdd	Postavlja varijablu zbroju sebi plus zadane vrijednosti ( također može dodati ili oduzeti vrijeme od datuma -vremena ) . Sinonim : Var + = vrijednost .
+	Else	Određujenaredba (e) za izvođenje akoIF - izjavu procjenjuje na FALSE . Kada je više od jedan naredbeni je prisutan, ih priložiti u blok (proteza) .
+	EnvAdd	Postavlja varijablu zbroju sebi plus zadane vrijednosti (također može dodati ili oduzeti vrijeme od datuma -vremena) . Sinonim : Var + = vrijednost .
 	EnvDiv	Postavlja varijablu sebi podijeljen na zadanu vrijednost . Sinonim : Var / = vrijednost .
 	EnvGet	Dohvaća je varijabla okruženja.
 	EnvMult	Postavlja varijablu sebi puta na zadanu vrijednost . Sinonim : Var * = vrijednost .
 	EnvSet	Piševrijednosti varijabli sadržane u okoliš.
-	EnvSub	Postavlja varijablu sebi minus zadane vrijednosti ( također može usporediti datum - vrijeme vrijednosti ) . Sinonim : Var - = vrijednost .
-	EnvUpdate	Obavještava OS i sve pokrenute aplikacije koje su varijabla okruženja ( e ) promijenjene .
-	Exit	Izlaztrenutni razgovor ili ( ako jeoriginal nije uporni i ne sadrži HotKeys)cijelu skriptu .
+	EnvSub	Postavlja varijablu sebi minus zadane vrijednosti (također može usporediti datum - vrijeme vrijednosti) . Sinonim : Var - = vrijednost .
+	EnvUpdate	Obavještava OS i sve pokrenute aplikacije koje su varijabla okruženja (e) promijenjene .
+	Exit	Izlaztrenutni razgovor ili (ako jeoriginal nije uporni i ne sadrži HotKeys)cijelu skriptu .
 	ExitApp	Raskine skriptu bezuvjetno .
-	Exp	Vraća e (što je otprilike 2,71828182845905 ) podignuta na n-ti snage .
-	FileAppend	Piše tekst do kraja datoteke ( prva stvaranje datoteke , ako je potrebno ) .
+	Exp	Vraća e (što je otprilike 2,71828182845905) podignuta na n-ti snage .
+	FileAppend	Piše tekst do kraja datoteke (prva stvaranje datoteke , ako je potrebno) .
 	FileCopy	Kopije jednu ili više datoteka .
-	FileCopyDir	Kopira mapu zajedno sa svim svojim pod -mape i datoteke (slično xcopy ) .
+	FileCopyDir	Kopira mapu zajedno sa svim svojim pod -mape i datoteke (slično xcopy) .
 	FileCreateDir	Stvara mapu .
-	FileCreateShortcut	Stvara prečac ( . LNK ) datoteku .
+	FileCreateShortcut	Stvara prečac (. LNK) datoteku .
 	FileDelete	Briše jednu ili više datoteka.
 	FileEncoding	Postavlja zadanu kodiranja FileRead , FileReadLine , Loop čitati, FileAppend , i FileOpen .
-	FileInstall	Uključuje navedenu datoteku unutar sastavio verziji scenarija .
 	FileGetAttrib	Izvješća lidatoteka ili mapa je samo za čitanje , skriven, itd.
-	FileGetShortcut	Dohvaća informacije o prečac ( . LNK ) datoteka , kao što su njegove ciljne datoteke .
+	FileGetShortcut	Dohvaća informacije o prečac (. LNK) datoteka , kao što su njegove ciljne datoteke .
 	FileGetSize	Dohvaća veličinu datoteke .
 	FileGetTime	Dohvaća DATETIME pečat datoteke ili mape .
 	FileGetVersion	Dohvaća verziju datoteke .
+	FileInstall	Uključuje navedenu datoteku unutar sastavio verziji scenarija .
 	FileMove	Prelazak ili promjena jednog ili više datoteka.
 	FileMoveDir	Pomiče mapu zajedno sa svim svojim pod -mape i datoteke . Također možete preimenovati mapu .
 	FileOpen	Pruža objektno - orijentirane file I / O.
@@ -1133,11 +1129,11 @@
 	FileRecycle	Šalje datoteku ili direktorij u koš za smeće , ako je moguće .
 	FileRecycleEmpty	Prazni koš za smeće .
 	FileRemoveDir	Brišemape .
-	FileSelectFile	Prikazuje standardni dijalog koji omogućujekorisniku da otvoriti ili spremiti datoteku ( e ) .
+	FileSelectFile	Prikazuje standardni dijalog koji omogućujekorisniku da otvoriti ili spremiti datoteku (e) .
 	FileSelectFolder	Prikazuje standardni dijalog koji omogućujekorisniku da odaberete mapu .
 	FileSetAttrib	Mijenja atribute jedne ili više datoteka ili mapa . Zamjenski znakovi su podržani .
 	FileSetTime	Mijenja DATETIME pečat jedne ili više datoteka ili mapa . Zamjenski znakovi su podržani .
-	Floor	Vraća broj zaokružen na najbliži cijeli broj ( bez sufiks 0,00 ) .
+	Floor	Vraća broj zaokružen na najbliži cijeli broj (bez sufiks 0,00) .
 	For	Ponavlja niz naredbi jednom za svaki ključ - vrijednost par u objekt .
 	Format	Formatira varijablu broj ulaznih vrijednosti na osnovu format string.
 	FormatTime	Pretvara se YYYYMMDDHH24MISS oznaku u određenom datumu / vremenu formatu .
@@ -1151,27 +1147,27 @@
 	GroupClose	Zatvara aktivni prozor , ako je to samo aktivira GroupActivate ili GroupDeactivate . To onda aktivira sljedeći prozor u seriji . On također može zatvoriti sve prozore u skupini .
 	GroupDeactivate	Slično GroupActivate osim aktivira sljedeći prozor nije u skupini .
 	HasKey	Vraća TRUE ako Ključ je povezana s vrijednošću.
-	if	Određujenaredba ( e ) za izvođenje ako seusporedba varijable na vrijednost evalutes na TRUE . Kada je više od jedan naredbeni je prisutan, ih priložiti u blok ( proteza ) .
-	if (expression)	Određujenaredba ( e ) za izvođenje ako seizraz vrednuje na TRUE .
-	If var [not] between	Provjerava je li varijabla sadržaju su numerički ili po abecednom redu između dvije vrijednosti ( uključivo) .
-	If var [not] in/contains MatchList 	Provjerava je li varijabla sadržaju odgovaraju jednu od stavki na popisu .
-	If var is [not] type	Provjerava je li varijabla je sadržaji su numerički , velikih , itd.
+	if	Određujenaredba (e) za izvođenje ako seusporedba varijable na vrijednost evalutes na TRUE . Kada je više od jedan naredbeni je prisutan, ih priložiti u blok (proteza) .
+	if (expression)	Određujenaredba (e) za izvođenje ako seizraz vrednuje na TRUE .
+	If A_Index	Provjerava ako je trenutni petlje iteraciji matchs je naveden niz .
 	If Clipboard	Provjerava da likorpa tekst matchs zadani niz .
 	If ErrorLevel	Provjerava ako je navedeni slike ili piksela pronađen je na zaslonu .
-	If A_Index	Provjerava ako je trenutni petlje iteraciji matchs je naveden niz .
+	If var [not] between	Provjerava je li varijabla sadržaju su numerički ili po abecednom redu između dvije vrijednosti (uključivo) .
+	If var [not] in/contains MatchList 	Provjerava je li varijabla sadržaju odgovaraju jednu od stavki na popisu .
+	If var is [not] type	Provjerava je li varijabla je sadržaji su numerički , velikih , itd.
 	IfEqual/IfNotEqual	Uspoređuje varijablu na vrijednost za jednakost . Sinonim : ako Var = Vrijednost | ako Var < > vrijednost .
 	IfExist / IfNotExist / FileExist	Provjerava postojanje datoteke ili mape .
 	IfGreater / IfGreaterOrEqual	Uspoređuje varijable na vrijednost . Sinonim : ako Var > Vrijednost | ako Var > = vrijednost .
 	IfInString / IfNotInString / InStr	Provjerava ako varijabla sadrži zadani niz .
 	IfLess / IfLessOrEqual	Uspoređuje varijable na vrijednost . Sinonim : ako Var < Vrijednost | ako Var < = vrijednost .
 	IfMsgBox	Provjerava koji gumb je gurnula od strane korisnika tijekom najnovijeg MsgBox zapovjedništvom .
-	IfWinActive / IfWinNotActive	Provjerava jesu linavedeni prozor postoji i trenutno je aktivan ( prije svega ) .
+	IfWinActive / IfWinNotActive	Provjerava jesu linavedeni prozor postoji i trenutno je aktivan (prije svega) .
 	IfWinExist / IfWinNotExist	Provjerava jesu linavedeni prozor postoji.
 	ImageSearch	Pretražuje se područje na zaslonu za slikom .
 	IniDelete	Briševrijednost od standardnog formata . Ini datoteci .
 	IniRead	Čita vrijednost iz standardnog formata . Ini datoteci .
 	IniWrite	Piševrijednost standardnog formata . Ini datoteci .
-	Input	Čekakorisniku da tip string (nije podržan na Windows 9x : to ne radi ništa ) .
+	Input	Čekakorisniku da tip string (nije podržan na Windows 9x : to ne radi ništa) .
 	InputBox	Prikazujeinput box pitati korisnika da unesete string .
 	InsertAt	Umeće jedan ili više vrijednosti, na određenom položaju unutar linearno.
 	InStr	Pretrage za određenu pojavu niza , s lijeve ili desne strane.
@@ -1180,10 +1176,10 @@
 	Labels	Oznaka identificira liniju koda, i može se koristiti kao Goto cilj ili da se formira potprogram.
 	Length	Vraća duljinu linearno početkom na poziciji 1.
 	ListVars	Prikazuje skripte varijable: njihova imena i trenutni sadržaj.
-	Log	Vraća logaritam (baza 10) broja.
 	Ln	Vraća prirodni logaritam (baze e) broja.
-	Loop (normal) 	Izvođenje niz naredbi puta: ili određeni broj puta ili do prekida je naišao.
+	Log	Vraća logaritam (baza 10) broja.
 	Loop (files & folders)	Dohvaća određene datoteke ili mape, jednu po jednu.
+	Loop (normal) 	Izvođenje niz naredbi puta: ili određeni broj puta ili do prekida je naišao.
 	Loop (parse a string)	Dohvaća podnizova (polja) iz niza, jedan po jedan.
 	Loop (read file contents)	Dohvaća linije u tekstualnu datoteku, jednu po jednu (i bolji od FileReadLine).
 	Loop (registry)	Dohvaća sadržaj navedenog registra potključem, jedna točka na vrijeme.
@@ -1212,12 +1208,12 @@
 	Progress	Stvara i ažurira prozor s traku napretka.
 	Push	Dodaje vrijednosti na kraj niza.
 	Random	Ostvaruje se pseudo-slučajni broj.
+	RegDelete	Briše potključem ili vrijednosti iz registra.
 	RegExMatch	Određuje li string sadrži uzorak (regularni izraz).
 	RegExReplace	Zamjenjuje pojavljivanja uzorak (regularni izraz) unutar niza.
-	RegDelete	Briše potključem ili vrijednosti iz registra.
+	RegisterCallback	Stvara strojno kod adresu da kad zove, preusmjerava poziv na djelovanje u pismu.
 	RegRead	Čita vrijednost iz registra.
 	RegWrite	Piše vrijednost u registru.
-	RegisterCallback	Stvara strojno kod adresu da kad zove, preusmjerava poziv na djelovanje u pismu.
 	RemoveAt	Uklanja stavke s određenog položaja u linearno.
 	Return	Povratak iz potprogramu kojoj izvršenja ranije skočio preko funkcija poziva, Gosub, prečac aktivacije, GroupActivate, ili drugim sredstvima.
 	Round	Ako N nije izostavljeno ili 0, broj se zaokružuje na najbliži cijeli broj. Ako je N pozitivan broj, broj se zaokružuje na N decimalnih mjesta. Ako je N negativna, broj se zaokružuje N znamenki s lijeve strane decimalne točke.
@@ -1235,8 +1231,8 @@
 	SetKeyDelay	Postavlja kašnjenja do kojega će doći nakon svakog pritiska poslao Pošaljite ControlSend.
 	SetMouseDelay	Postavlja kašnjenje koje će doći nakon svakog pokret miša ili kliknite.
 	SetNumlockState	Postavlja stanje NumLock ključ. Može se također prisiliti ključna ostati ili isključiti.
-	SetScrollLockState	Postavlja stanje ScrollLock ključ. Može se također prisiliti ključna ostati ili isključiti.
 	SetRegView	Omogućuje registra naredbe u 32-bitnom skriptu za pristup 64-bitnog registra pogled i obrnuto.
+	SetScrollLockState	Postavlja stanje ScrollLock ključ. Može se također prisiliti ključna ostati ili isključiti.
 	SetTimer	Uzroci potprogram biti pokrenuta automatski i više puta u određenom vremenskom intervalu.
 	Shutdown	Zatvara, ponovo pokrene ili odjavi sustav.
 	Sin	Vraća trigonometrijsku sinus broja.
@@ -1249,13 +1245,12 @@
 	SoundSet	Promjene različite postavke zvuka uređaja (master nijemi, master volume, i sl.)
 	SoundSetWaveVolume	Mijenja glasnoću val izlaz za zvuk uređaja.
 	SplashImage	Stvara i ažurira prozor s JPG, GIF, BMP ili sliku.
-	SplashTextOn	Stvara prilagodljiv tekst popup prozor.
 	SplashTextOff	Zatvara iznad prozora.
+	SplashTextOn	Stvara prilagodljiv tekst popup prozor.
 	SplitPath	Odvaja naziv datoteke ili URL u svoje ime, mape, ekstenzije, a pogon.
 	Sqrt	Vraća drugi korijen broja.
 	StatusBarGetText	Dohvaća tekst iz standardnog status bar kontrole.
 	StatusBarWait	Waits dok Prozor status traka sadrži zadani niz.
-	StrPut / StrGet	Kopira string ili s memorijske adrese, dodatnim ga pretvoriti između kodnih stranica.
 	StringCaseSense	Određuje li string usporedbe su velika i mala slova (default je "nije velika i mala slova").
 	StringGetPos / InStr	Dohvaća položaja određenog podniz u nizu.
 	StringLeft	Dohvaća broj znakova na lijevoj strani niz.
@@ -1268,6 +1263,7 @@
 	StringTrimLeft	Uklanja niz likova iz lijevoj strani nizu.
 	StringTrimRight	Uklanja niz znakova s desne strane niza.
 	StringUpper	Pretvara niz u velika slova.
+	StrPut / StrGet	Kopira string ili s memorijske adrese, dodatnim ga pretvoriti između kodnih stranica.
 	Suspend	Onemogućuje ili omogućuje sve ili odabrane hotkeys i hotstrings.
 	SysGet	Dohvaća razlučivost zaslona, multi-monitor info, dimenzije sustava, objekata i drugih sustava svojstva.
 	Tan	Vraća trigonometrijsku tangens broja.
@@ -1285,10 +1281,10 @@
 	WinActive	Vraća jedinstveni ID (HWND) od aktivnog prozora, ako to odgovara zadanim uvjetima.
 	WinClose	Zatvara odabrani prozor.
 	WinExist	Provjerava jesu li navedeni prozor postoji.
+	WinGet	Dohvaća navedeni prozor je jedinstveni ID, ID procesa, proces ime, ili popis njezinih kontrola. On također može dohvatiti popis svih prozora koji odgovaraju zadanim uvjetima.
 	WinGetActiveStats	Objedinjuje funkcije WinGetActiveTitle i WinGetPos u jednu zapovijed.
 	WinGetActiveTitle	Dohvaća naslov aktivnog prozora.
 	WinGetClass	Dohvaća odabrani prozor u ime klase.
-	WinGet	Dohvaća navedeni prozor je jedinstveni ID, ID procesa, proces ime, ili popis njezinih kontrola. On također može dohvatiti popis svih prozora koji odgovaraju zadanim uvjetima.
 	WinGetPos	Dohvaća položaj i veličinu navedenog prozora.
 	WinGetText	Dohvaća tekst iz određenog prozora.
 	WinGetTitle	Dohvaća titulu navedenog prozora.

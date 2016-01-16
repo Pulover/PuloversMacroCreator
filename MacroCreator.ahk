@@ -510,9 +510,9 @@ LangInfo := "
 1C3B	sma-SE	Sami, Southern (Sweden)	Sami (Southern)	Åarjelsaemiengiele (Sveerje)	
 004F	sa	Sanskrit	Sanskrit	संस्कृत	
 044F	sa-IN	Sanskrit (India)	Sanskrit	संस्कृत (भारतम्)	
-0C1A	sr-Cyrl-SP	Serbian (Cyrillic, Serbia)	Serbian (Cyrillic)	Српски (Србија и Црна Гора)	
-7C1A	sr-Latn	Serbian	Serbian (Latin)	Srpski	
+0C1A	sr	Serbian (Cyrillic, Serbia)	Serbian (Cyrillic)	Српски (Србија и Црна Гора)	
 1C1A	sr-Cyrl-BA	Serbian (Cyrillic, Bosnia and Herzegovina)	Serbian (Cyrillic)	Српски (Босна и Херцеговина)	
+7C1A	sr-Latn	Serbian	Serbian (Latin)	Srpski	
 181A	sr-Latn-BA	Serbian (Latin, Bosnia and Herzegovina)	Serbian (Latin)	Srpski (Bosna i Hercegovina)	
 081A	sr-Latn-SP	Serbian (Latin, Serbia)	Serbian (Latin)	Srpski (Srbija i Crna Gora)	
 046C	nso-ZA	Sesotho sa Leboa (South Africa)	Sesotho sa Leboa	Sesotho sa Leboa (Afrika Borwa)	
@@ -583,11 +583,8 @@ LangInfo := "
 LangData := {}
 Loop, Parse, LangInfo, `n, `r
 {
-	F := StrSplit(A_LoopField, A_Tab, A_Space), C := RegExReplace(F.2, "(\w+).*", "$1")
-	If (!LangData.HasKey(C))
-		LangData[C] := {Code: F.1, Lang: F.3, Idiom: F.4, Local: F.5, Subs: []}
-	Else
-		LangData[C].Subs[F.2] := {Code: F.1, Idiom: F.4, Lang: F.3, Local: F.5}
+	F := StrSplit(A_LoopField, A_Tab, A_Space)
+	LangData[F.2] := {Code: F.1, Lang: F.3, Idiom: F.4, Local: F.5}
 	If (A_Language = F.1)
 		SysLang := F.2
 }
@@ -596,28 +593,7 @@ If (Lang = "ERROR")
 	Lang := SysLang
 _Lang := StrReplace(Lang, "-")
 
-LangFiles := {}
-Loop, Files, %A_ScriptDir%\Lang\*.lang
-{
-	_L := StrReplace(A_LoopFileName, ".lang"), ReadData := {}
-	Loop, Read, %A_LoopFileFullPath%
-	{
-		If (A_Index < 5)
-			continue
-		If (InStr(A_LoopReadLine, "; ")=1)
-		{
-			Section := Trim(SubStr(A_LoopReadLine, 3))
-			ReadData[Section] := []
-			continue
-		}
-		L := StrSplit(A_LoopReadLine, A_Tab)
-		If (RegExMatch(L.2, " =$"))
-			lVar := RTrim(StrReplace(L.2, " =")), ReadData[Section][lVar] := Trim(L.3)
-		Else If (L.3 != "")
-			ReadData[Section][lVar] .= ((ReadData[Section][lVar] != "") ? "`n" : "") Trim(Trim(L.2) . A_Tab . Trim(L.3))
-	}
-	LangFiles[_L] := ReadData
-}
+GoSub, LoadLangFiles
 
 If (DefaultEditor = "ERROR")
 {
@@ -2866,6 +2842,12 @@ If (Ex_AutoKey != "")
 	Body := Ex_AutoKey "::`n" Body
 return
 
+LangEditor:
+GoSub, Options
+GuiControl, 4:Choose, AltTab, 7
+GoSub, AltTabControl
+return
+
 Options:
 Gui 4:+LastFoundExist
 IfWinExist
@@ -3057,7 +3039,7 @@ GuiControl, 4:Enable%RandomSleeps%, RandPer
 GoSub, OptionsSub
 If (A_GuiControl = "CoordTip")
 {
-	GuiControl, 4:Choose, AltTab, 3
+	GuiControl, 4:Choose, AltTab, 4
 	GoSub, AltTabControl
 }
 Gui, 4:Show,, %t_Lang017%
@@ -3069,6 +3051,15 @@ return
 ConfigOK:
 Gui, 4:Submit, NoHide
 Gui, 4:+OwnDialogs
+GuiControlGet, EditOn, 4:Enabled, SaveLang
+If (EditOn)
+{
+	MsgBox, 35, %t_Lang178%, %t_Lang187%
+	IfMsgBox, Yes
+		GoSub, SaveLang
+	IfMsgBox, Cancel
+		return
+}
 If (Relative = 1)
 	CoordMouse := "Window"
 Else If (Screen = 1)
@@ -3101,6 +3092,13 @@ If (WinExist("ahk_id " PMCOSC))
 	GuiControl, 28:, OSProgB, %ShowProgBar%
 GoSub, RowCheck
 LangMan := ""
+If (InEditLang != "")
+{
+	Gui, 1:Default
+	GoSub, LoadLangFiles
+	GoSub, LoadLang
+	GoSub, UpdateLang
+}
 return
 
 ConfigCancel:
@@ -3240,31 +3238,86 @@ GuiControl, 4:Disable, EditLang
 GuiControl, 4:Enable, SaveLang
 return
 
+AddLang:
+Gui, 4:Submit, NoHide
+FilePath := RegExReplace(A_ThisMenuItem, "\s/.*"), SelLang := FilePath
+GoSub, ExportLang
+GoSub, ConfigCancel
+Gui, 1:Default
+GoSub, LoadLangFiles
+GoSub, LoadLang
+GoSub, LangChangeOn
+GoSub, Options
+GuiControl, 4:Choose, AltTab, 7
+GoSub, AltTabControl
+return
+
 SaveLang:
 Gui, 4:Submit, NoHide
+FilePath := RegExReplace(EditLang, "\s/.*"), SelLang := ""
+ExportLang:
+Gui, 4:Default
+RLang := RegExReplace(RefLang, "\s/.*")
+For i, l in LangFiles
+{
+	If (LangData.HasKey(i))
+		lName := (InStr(i, "-")) ? LangData[i].Lang : LangData[i].Idiom, n := i
+	Else
+	{
+		c := RegExReplace(i, "(\w+).*", "$1")
+		For e, l in LangData
+		{
+			If (InStr(e, c))
+			{
+				lName := (InStr(e, "-")) ? l.Lang : l.Idiom, n := e
+				break
+			}
+		}
+	}
+	If (RLang = lName)
+	{
+		RLang := n
+		break
+	}
+}
+For e, l in LangData
+{
+	If (FilePath = l.Lang)
+	{
+		FilePath := SettingsFolder "\Lang\" e ".lang"
+		break
+	}
+	If (FilePath = l.Idiom)
+	{
+		FilePath := SettingsFolder "\Lang\" e ".lang"
+		break
+	}
+}
+LangFile := "Lang_" e "`n`t`t`n`t`t; " (SelLang ? SelLang : lName) "`n`t`t`n", RowIdx := 1
+For i, Section in LangFiles[RLang]
+{
+	LangFile .= "; " i "`t`t`n"
+	For var, value in Section
+	{
+		values := StrSplit(value, "`n")
+		LangFile .= "`t" var " =`t"
+		For e, v in values
+		{
+			LV_GetText(RowText, RowIdx)
+			If (RegExMatch(v, "(.+)\t.*", lMatch))
+				LangFile .= "`n`t" lMatch1 "`t" RowText
+			Else
+				LangFile .= RowText "`n`t`t"
+			RowIdx++
+		}
+		LangFile := RTrim(LangFile, "`t")
+	}
+	LangFile .= "`n"
+}
+FileDelete, %FilePath%
+FileAppend, %LangFile%, %FilePath%, UTF-8
 GuiControl, 4:Enable, EditLang
 GuiControl, 4:Disable, SaveLang
-LngFile := RegExReplace(EditLang, "\s/.*")
-For i, l in LangData
-{
-	OutputDebug, % i ": " l.Lang
-	; If (lName = "")
-	; {
-		; c := RegExReplace(i, "(\w+).*", "$1")
-	; ,	lName := LangData[c].Subs[i].Lang
-		; If (LngFile = lName)
-		; {
-			; LngFile := A_ScriptDir "\Lang\" i ".lang"
-			; break
-		; }
-	; }
-	; If (LngFile = lName)
-	; {
-		; LngFile := A_ScriptDir "\Lang\" i ".lang"
-		; break
-	; }
-}
-
 return
 
 CreateLangFile:
@@ -3273,10 +3326,10 @@ LangsArray := {}
 For i, l in LangData
 {
 	x := RegExReplace(l.Idiom, "\s\(.*")
-,	LangsArray[x] := []
-,	LangsArray[x].Push(l.Lang " / " l.Local)
-	For e, s in l.Subs
-		LangsArray[x].Push(s.Lang " / " s.Local)
+,	y := (InStr(i, "-")) ? l.Lang : l.Idiom
+	If (!LangsArray.HasKey(x))
+		LangsArray[x] := []
+	LangsArray[x].Push(y " / " l.Local)
 }
 For i, l in LangsArray
 {
@@ -3295,9 +3348,6 @@ For i, l in LangsArray
 Menu, NewLangMenu, DeleteAll
 return
 
-AddLang:
-return
-
 UpdateEditList:
 Gui, 4:Submit, NoHide
 SelRow := LV_GetNext()
@@ -3305,20 +3355,24 @@ ELang := RegExReplace(EditLang, "\s/.*")
 RLang := RegExReplace(RefLang, "\s/.*")
 For i, l in LangFiles
 {
-	lName := LangData[i].Lang
-	If (lName = "")
+	If (LangData.HasKey(i))
+		lName := (InStr(i, "-")) ? LangData[i].Lang : LangData[i].Idiom, n := i
+	Else
 	{
 		c := RegExReplace(i, "(\w+).*", "$1")
-	,	lName := LangData[c].Subs[i].Lang
-		If (ELang = lName)
-			ELang := i
-		If (RLang = lName)
-			RLang := i
+		For e, l in LangData
+		{
+			If (InStr(e, c))
+			{
+				lName := (InStr(e, "-")) ? l.Lang : l.Idiom, n := e
+				break
+			}
+		}
 	}
 	If (ELang = lName)
-		ELang := i
+		ELang := n
 	If (RLang = lName)
-		RLang := i
+		RLang := n
 }
 RowDataA := [], RowDataB := []
 LV_Delete(), Groups := [], Idx := 1
@@ -3327,7 +3381,7 @@ For i, Section in LangFiles[ELang]
 	Groups.Push({Name: RegExReplace(i, "\d+\.\s"), Row: Idx})
 	For var, value in Section
 	{
-		values := StrSplit(RegExReplace(value, "\w+\t"), "`n")
+		values := StrSplit(RegExReplace(value, "`am).+\t"), "`n")
 	,	RowDataA.Push(values*), Idx += values.Length()
 	}
 }
@@ -3335,7 +3389,7 @@ For i, Section in LangFiles[RLang]
 {
 	For var, value in Section
 	{
-		values := StrSplit(RegExReplace(value, "\w+\t"), "`n")
+		values := StrSplit(RegExReplace(value, "`am).+\t"), "`n")
 	,	RowDataB.Push(values*)
 	}
 }
@@ -14318,16 +14372,28 @@ Menu, ViewMenu, Add, %v_Lang008%`t%_s%Alt+F5, SetColSizes
 Menu, ViewMenu, Add, %v_Lang009%, :SetIconSizeMenu
 Menu, ViewMenu, Add, %v_Lang010%, :SetLayoutMenu
 
+Menu, LangMenu, Add, %o_Lang016%, LangEditor
+Menu, LangMenu, Add
 Lang_List := ""
-For i, l in LangFiles
+For i, f in LangFiles
 {
-	o := i
-,	lName := LangData[o].Lang, lLocal := LangData[o].Local
-	If (lName = "")
+	If (LangData.HasKey(i))
+	{
+		lName := (InStr(i, "-")) ? LangData[i].Lang : LangData[i].Idiom
+	,	lLocal := LangData[i].Local, o := StrReplace(i, "-")
+	}
+	Else
 	{
 		c := RegExReplace(i, "(\w+).*", "$1")
-	,	lName := LangData[c].Subs[o].Lang, lLocal := LangData[c].Subs[o].Local
-	,	o := StrReplace(o, "-")
+		For e, l in LangData
+		{
+			If (InStr(e, c))
+			{
+				lName := (InStr(e, "-")) ? l.Lang : l.Idiom
+			,	lLocal := l.Local, o := StrReplace(e, "-")
+				break
+			}
+		}
 	}
 	Lang_%o% := lName "`t" lLocal, Lang_List .= lName " / " lLocal "|"
 	Menu, LangMenu, Add, % Lang_%o%, LangChange
@@ -14865,26 +14931,30 @@ SelLang := RegExReplace(A_ThisMenuItem, "\t.*")
 LangChangeOn:
 For i, l in LangFiles
 {
-	lName := LangData[i].Lang
-	If (lName = "")
+	If (LangData.HasKey(i))
+		lName := (InStr(i, "-")) ? LangData[i].Lang : LangData[i].Idiom, n := i
+	Else
 	{
 		c := RegExReplace(i, "(\w+).*", "$1")
-	,	lName := LangData[c].Subs[i].Lang
-		If (SelLang = lName)
+		For e, l in LangData
 		{
-			Lang := i
-			break
+			If (InStr(e, c))
+			{
+				lName := (InStr(e, "-")) ? l.Lang : l.Idiom, n := e
+				break
+			}
 		}
 	}
 	If (SelLang = lName)
 	{
-		Lang := i
+		Lang := n
 		break
 	}
 }
 If (Lang = CurrentLang)
 	return
 _Lang := StrReplace(Lang, "-"), _CurrentLang := StrReplace(CurrentLang, "-")
+UpdateLang:
 Gui, Menu
 Menu, FileMenu, DeleteAll
 Menu, MacroMenu, DeleteAll
@@ -15011,6 +15081,31 @@ IfWinExist
 GoSub, SetFindCmd
 return
 
+LoadLangFiles:
+LangFiles := {}
+Loop, Files, %A_ScriptDir%\Lang\*.lang
+{
+	_L := StrReplace(A_LoopFileName, ".lang"), ReadData := {}
+	Loop, Read, %A_LoopFileFullPath%
+	{
+		If (A_Index < 5)
+			continue
+		If (InStr(A_LoopReadLine, "; ")=1)
+		{
+			Section := Trim(SubStr(A_LoopReadLine, 3))
+			ReadData[Section] := []
+			continue
+		}
+		L := StrSplit(A_LoopReadLine, A_Tab)
+		If (RegExMatch(L.2, " =$"))
+			lVar := RTrim(StrReplace(L.2, " =")), ReadData[Section][lVar] := Trim(L.3)
+		Else If (L.3 != "")
+			ReadData[Section][lVar] .= ((ReadData[Section][lVar] != "") ? "`n" : "") Trim(Trim(L.2) . A_Tab . Trim(L.3))
+	}
+	LangFiles[_L] := ReadData
+}
+return
+
 LoadLang:
 For i, Section in LangFiles[Lang]
 {
@@ -15025,7 +15120,7 @@ Loop, Parse, Ahk_Cmd_Index, `n
 {
 	TipArray := StrSplit(A_LoopField, A_Tab), Command := TipArray[1]
 	Loop, Parse, Command, /, %A_Space%
-		Cmd_Tips.Push({Cmd: A_LoopField, Desc: TipArray[2]})
+		Cmd_Tips[A_LoopField] := TipArray[2]
 }
 TipArray := ""
 return
@@ -15224,3 +15319,4 @@ return
 ; #Include Lang\Zt.lang
 ; #Include Lang\Ja.lang
 ; #Include Lang\Ko.lang
+

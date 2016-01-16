@@ -73,7 +73,6 @@
 	i_Lang019 =	A &Windows Üzenetek
 	i_Lang020 =	Keresse meg a &parancsot
 		
-		
 ; 06. Edit Sub Menu		
 	e_Lang001 =	&Másolat
 	e_Lang002 =	M&egjegyzés szerkesztése
@@ -97,7 +96,6 @@
 	e_Lang020 =	&Vegye ki az összes csoport
 	e_Lang021 =	&Mindet összecsuk
 	e_Lang022 =	A&z összes kibontása
-		
 		
 ; 07. Select Sub Menu		
 	s_Lang001 =	&Az összes kijelölése
@@ -153,6 +151,7 @@
 	o_Lang013 =	E&ltávolítása Alapértelmezett fájl
 	o_Lang014 =	Ala&pértelmezett gyorsbillentyűk
 	o_Lang015 =	Alap&értelmezett beállítások
+	o_Lang016 =	&Nyelvszerkesztõ
 		
 ; 10. Donate Sub Menu		
 	p_Lang001 =	&PayPal adomány
@@ -761,7 +760,6 @@
 	d_Lang042 =	Érvénytelen operátor.
 		A következő operátorok fogadjuk el:
 		=, ==, <>,! =,>, <,> =, <=
-		
 		Példák:
 		MyVar > 1
 		MyVar = `%A_DDDD`%
@@ -791,7 +789,6 @@
 		Kérjük, hozzá egy változó, és használja azt a paramétert.
 	d_Lang060 =	Az új verzió
 	d_Lang061 =	Szeretne letölteni most?
-		
 		Ha ki szeretné kapcsolni az automatikus ellenőrzés válassza a Help > Ellenőrizze indításkor
 	d_Lang062 =	Már így is a legújabb verzióra.
 	d_Lang063 =	Hiba történt ellenőrzés.
@@ -801,7 +798,6 @@
 	d_Lang067 =	Mutasd az ablakban indításkor
 	d_Lang068 =	tippek:
 	d_Lang069 =	Rengeteg időt és energiát ment a fejlesztés Pulover's Macro Creator. Ha úgy találja, hogy hasznos, kérjük, fontolja mutatja meg elismerését egy adomány.
-		
 		Ajándékozó, akár nem, nem lesz különbség a szolgáltatásokat és funkciókat.
 	d_Lang070 =	Adományoz...
 	d_Lang071 =	Nem, kösz
@@ -877,73 +873,29 @@
 		Futtathat speciális funkciókat, mint a substr és RegExReplace a funkciók ablakban (Beszúrás > IF / változók / függvények). Vagy futtatni a saját funkciók külső AutoHotkey szkripteket.
 		
 ; 19. Tooltips		
-	AutoKey_TT =	Gyorsgomb játszani Macro
-	ManKey_TT =	Gyorsgomb játszani Macro "lépésről-lépésre"
-	AbortKey_TT =	Gyorsgomb a lejátszás megállításához
-	PauseKey_TT =	Gyorsgomb a lejátszás
-	RecKey_TT =	Backspace törölni
-	RecNewKey_TT =	Backspace törölni
-	JoyKey_TT =	Nyomja meg a gombot a joystick
-	ReptC_TT =	0 = végtelen
 	A_List_TT =	Makró Kiválasztása (Ctrl+1~0)
-	OSHK_TT =	Makró Kiválasztása
-	OSHKEd_TT =	Makró Kiválasztása
-	ApplyT_TT =	Alkalmaz
+	AbortKey_TT =	Gyorsgomb a lejátszás megállításához
+	ActiveObj_TT =	Próbál csatlakozni egy Active COM objektum
 	ApplyI_TT =	Alkalmaz
 	ApplyL_TT =	Beszúrás box (Insert)
-	CmdFilter_TT =	Szűrés típus
-	InsertKey_TT =	Be Gombnyomás (Ctrl+Insert)
-	InsertKeyT_TT =	Be Gombnyomás
-	DefaultMacro_TT =	Válassza ki a fájlt betölteni a program indításakor
-	VarCopyA_TT =	Másolása a jelenlegi változó tartalmát
-	VarCopyB_TT =	Másolása a jelenlegi változó tartalmát
-	Reset_TT =	Kódolatlan változó tartalma
-	Screenshot_TT =	Gyártó Screenshot
-	ColorPick_TT =	Kap pixel a képernyőn
-	PicPrev_TT =	Kattintson duplán a megnyitni fényképek
-	CoordPixel_TT =	Koordináta mód
-	VariatT_TT =	Shades variációs
-	IconN_TT =	Száma ikon csoport
-	TransC_TT =	Átlátszó szín
-	WScale_TT =	Szélesség skála
-	HScale_TT =	Magasság méret
-	Fast_TT =	Használ egy gyorsabb keresési módot (ajánlott)
-	RGB_TT =	Okok színt kell értelmezni, hogy az RGB érték helyett BGR
-	LoopLVColor_TT =	Kattintson válasszon egy színt
-	IfLVColor_TT =	Kattintson válasszon egy színt
-	RefreshIEW_TT =	Lista frissítése
-	ActiveObj_TT =	Próbál csatlakozni egy Active COM objektum
-	TimeoutM_TT =	0 = végtelen
-	ExpView_TT =	Fejlett Szerkesztő
-	ExpView2_TT =	Fejlett Szerkesztő
-	OSProgB_TT =	Kijelző Progress Bar
-	OSTrans_TT =	átlátszatlanság
-	MRel_TT =	Mozgásokat képest aktuális pozícióját.
-		Vagy ha használt Control: Pozíció a kontrollhoz képest.
-	Raw_TT =	A SendRaw parancs értelmezi az összes karaktert a szó szoros értelmében
-		ahelyett fordítására {Enter} egy ENTER gombnyomás,
-		^ C Control-C, stb
-	ComText_TT =	Ha nem nyers módban, a következő karakterek
-		kezelni módosítók (ezek a módosítók befolyásolhatják
-		Csak a nagyon következő gomb):!, +, ^, #
-	ComEvent_TT =	Tuş vuruşlarını gönderilen hızını önemli gecikme ile belirlenir.
+	ApplyT_TT =	Alkalmaz
+	AutoKey_TT =	Gyorsgomb játszani Macro
 	Clip_TT =	Ideiglenesen használ vágólap küldje el a szöveget.
 		Amikor a művelet befejeződött, a script
 		visszaállítja az eredeti vágólap tartalmát.
 		(Text hagyja üresen be aktuális tartalom)
+	CmdFilter_TT =	Szűrés típus
+	CmdSort_TT =	Rendezés ABC sorrendbe
+	ColorPick_TT =	Kap pixel a képernyőn
+	ComEvent_TT =	Tuş vuruşlarını gönderilen hızını önemli gecikme ile belirlenir.
+	ComText_TT =	Ha nem nyers módban, a következő karakterek
+		kezelni módosítók (ezek a módosítók befolyásolhatják
+		Csak a nagyon következő gomb):!, +, ^, #
+	CoordPixel_TT =	Koordináta mód
+	DefaultMacro_TT =	Válassza ki a fájlt betölteni a program indításakor
 	EditPaste_TT =	Paszták karakterlánc a kalap / betét pozíció
 		egy Szerkesztés-ellenőrzés (ez nem érinti
 		az a vágólap tartalmát.)
-	SetText_TT =	Megváltoztatja a szöveg egy ellenőrzés.
-	RelKey_TT =	Records egér mozgását és kattintással
-		való eltérést a korábbi pozícióba.
-	ToggleC_TT =	Aktiválja Relatív felvételt, ha kulcsfontosságú állami be van kapcsolva.
-	Relative_TT =	Koordináták relatív az aktív ablak.
-	Screen_TT =	Koordináták relatív az asztalra (teljes képernyő).
-	IncFiles_TT =	Tartalmazzák kép / Értékek
-	IncFolders_TT =	Tartalmazzák (mappákban) / Keys
-	Recurse_TT =	Rekurzív alkönyvtárakra (almappák) / Alkulcsok
-	CmdSort_TT =	Rendezés ABC sorrendbe
 	Ex_EdScript_TT =	Nyílt külső szerkesztőben
 	ExprLink2_TT =	- NE CSATOLNI VARIABLES SZÁZALÉKOS JELEK ITT.
 		- A legtöbb AHK kifejezések támogatottak.
@@ -955,16 +907,90 @@
 		- Használhatja vonósok, változók, tömbök és függvények.
 		- Ahhoz, hogy használni húrok, csatolja őket idézetek, pl: var = "a".
 		- Több utasítást támogat, például: var = "a" || InStr (var, "b").
+	ExpView_TT =	Fejlett Szerkesztő
+	ExpView2_TT =	Fejlett Szerkesztő
+	Fast_TT =	Használ egy gyorsabb keresési módot (ajánlott)
+	HScale_TT =	Magasság méret
+	IconN_TT =	Száma ikon csoport
+	IfLVColor_TT =	Kattintson válasszon egy színt
+	IncFiles_TT =	Tartalmazzák kép / Értékek
+	IncFolders_TT =	Tartalmazzák (mappákban) / Keys
+	InsertKey_TT =	Be Gombnyomás (Ctrl+Insert)
+	InsertKeyT_TT =	Be Gombnyomás
+	JoyKey_TT =	Nyomja meg a gombot a joystick
+	LoopLVColor_TT =	Kattintson válasszon egy színt
+	ManKey_TT =	Gyorsgomb játszani Macro "lépésről-lépésre"
+	MRel_TT =	Mozgásokat képest aktuális pozícióját.
+		Vagy ha használt Control: Pozíció a kontrollhoz képest.
+	OSHK_TT =	Makró Kiválasztása
+	OSHKEd_TT =	Makró Kiválasztása
+	OSProgB_TT =	Kijelző Progress Bar
+	OSTrans_TT =	átlátszatlanság
+	PauseKey_TT =	Gyorsgomb a lejátszás
+	PicPrev_TT =	Kattintson duplán a megnyitni fényképek
+	Raw_TT =	A SendRaw parancs értelmezi az összes karaktert a szó szoros értelmében
+		ahelyett fordítására {Enter} egy ENTER gombnyomás,
+		^ C Control-C, stb
+	RecKey_TT =	Backspace törölni
+	RecNewKey_TT =	Backspace törölni
+	Recurse_TT =	Rekurzív alkönyvtárakra (almappák) / Alkulcsok
+	RefreshIEW_TT =	Lista frissítése
+	Relative_TT =	Koordináták relatív az aktív ablak.
+	RelKey_TT =	Records egér mozgását és kattintással
+		való eltérést a korábbi pozícióba.
+	ReptC_TT =	0 = végtelen
+	Reset_TT =	Kódolatlan változó tartalma
+	RGB_TT =	Okok színt kell értelmezni, hogy az RGB érték helyett BGR
+	Screen_TT =	Koordináták relatív az asztalra (teljes képernyő).
+	Screenshot_TT =	Gyártó Screenshot
+	SetText_TT =	Megváltoztatja a szöveg egy ellenőrzés.
+	TimeoutM_TT =	0 = végtelen
+	ToggleC_TT =	Aktiválja Relatív felvételt, ha kulcsfontosságú állami be van kapcsolva.
+	TransC_TT =	Átlátszó szín
+	VarCopyA_TT =	Másolása a jelenlegi változó tartalmát
+	VarCopyB_TT =	Másolása a jelenlegi változó tartalmát
+	VariatT_TT =	Shades variációs
+	WScale_TT =	Szélesség skála
 		
 ; 20. Tooltips from AHK Docs		
-	ExpList_TT =	Kattintson duplán a szerkeszteni
+	Ex_AF_TT =	Kihagyja a szelíd eljárás aktiválására ablak
+		és megy egyenesen az erőszakos módszer.
+	Ex_DH_TT =	Meghatározza, hogy a láthatatlan ablakok 'látott' a script.
+	Ex_EdVars_TT =	Válassza globális változók exportálni.
+	Ex_HK_TT =	Kényszerű használata a horog, hogy hajtsák végre
+		vagy egy billentyűzet gyorsbillentyűk.
 	Ex_IfDir_TT =	Létrehoz környezetfüggő gyorsbillentyűk és hotstrings függően
 		típusától ablak, amely aktív vagy létezik.
 	Ex_IfDirType_TT =	Létrehoz környezetfüggő gyorsbillentyűk és hotstrings függően
 		típusától ablak, amely aktív vagy létezik.
+	Ex_IN_TT =	Eszmék a szkript úgy viselkedni, mintha a megadott
+		fájl tartalmát jelen vannak ebben a pontos pozícióját.
+	Ex_MD_TT =	Megadja a késleltetést követően alakul ki
+		Minden egér mozgását és kattintson.
+	Ex_MT_TT =	Beállítja a maximális számú egyidejű
+		szálak egy gyorsbillentyűvel vagy hotstring.
+	Ex_NT_TT =	Kikapcsolja a megjelenítését a tálca ikon.
+	Ex_PT_TT =	Megtartja a szkript fut állandóan
+		(azaz, amíg a felhasználó bezárja, vagy ExitApp találkozik).
+	Ex_SB_TT =	Meghatározza, hogy milyen gyorsan egy szkript fut (hat CPU kihasználtsága.)
+	Ex_SC_TT =	Megadja a késleltetést követően alakul ki
+		Minden kontroll módosító parancsot.
+	Ex_SI_TT =	Meghatározza, hogy a szkript futhat újra, ha már fut.
+	Ex_SK_TT =	Megadja a késleltetést követően alakul ki az egyes
+		gombnyomás által küldött Send vagy ControlSend.
 	Ex_SM_TT =	Teszi Küldés szinonimájává SendInput vagy SendPlay helyett
 		Az alapértelmezett (SendEvent). Teszi Kattintson és MouseMove / Kattints / Drag
 		a megadott módszer.
+	Ex_ST_TT =	Beállítja a megfelelő viselkedését WinTitle paraméter parancsokat, mint például WinWait.
+	Ex_SW_TT =	Megadja a késleltetést követően alakul ki
+		Minden ablakozás parancsot, például WinActivate.
+	Ex_UV_TT =	Export globális változók.
+	ExpList_TT =	Kattintson duplán a szerkeszteni
+	SI_TT =	A szó FORCE kihagyja a párbeszédpanelt, és felváltja a régi példány automatikusan
+		ami hasonló hatással van a Reload parancsot.
+		A szó IGNORE átugorja a párbeszédpanelt, és elhagyja a régi példány fut.
+		Más szóval, a kísérlet, hogy indítson egy már futó script figyelmen kívül hagyja.
+		A szó OFF lehetővé teszi több példányban a szkript futtatásához egyidejűleg.
 	SM_TT =	Esemény: Ez a kiindulási alap által használt összes szkriptet.
 		Használja a SendEvent módszer Küldés, SendRaw, kattintson, és MouseMove / Kattints / Drag.
 		Input: Váltás a SendInput módszer Küldés, SendRaw, kattintson, és MouseMove / Kattints / Drag.
@@ -972,40 +998,10 @@
 		amikor SendInput nem érhető el, akkor visszatér a Lejátszás módba (lent). Ez is okoz
 		A SendInput parancsot magát, hogy visszatérjen a Lejátszás módba, amikor SendInput nem áll rendelkezésre.
 		Lejátszás: Váltás a SendPlay módszer Küldés, SendRaw, kattintson, és MouseMove / Kattints / Drag.
-	Ex_SI_TT =	Meghatározza, hogy a szkript futhat újra, ha már fut.
-	SI_TT =	A szó FORCE kihagyja a párbeszédpanelt, és felváltja a régi példány automatikusan
-		ami hasonló hatással van a Reload parancsot.
-		A szó IGNORE átugorja a párbeszédpanelt, és elhagyja a régi példány fut.
-		Más szóval, a kísérlet, hogy indítson egy már futó script figyelmen kívül hagyja.
-		A szó OFF lehetővé teszi több példányban a szkript futtatásához egyidejűleg.
-	Ex_ST_TT =	Beállítja a megfelelő viselkedését WinTitle paraméter parancsokat, mint például WinWait.
 	ST_TT =	1: Egy ablak címét kell kezdeni a megadott WinTitle, hogy egy meccs.
 		2: Egy ablak címét is tartalmazhat WinTitle bárhol benne, hogy a mérkőzés.
 		3: Egy ablak címét pontosan meg kell egyeznie WinTitle hogy egy meccs.
 		RegEx: Változások WinTitle, WinText, ExcludeTitle és ExcludeText legyen reguláris kifejezések.
-	Ex_DH_TT =	Meghatározza, hogy a láthatatlan ablakok 'látott' a script.
-	Ex_AF_TT =	Kihagyja a szelíd eljárás aktiválására ablak
-		és megy egyenesen az erőszakos módszer.
-	Ex_HK_TT =	Kényszerű használata a horog, hogy hajtsák végre
-		vagy egy billentyűzet gyorsbillentyűk.
-	Ex_SK_TT =	Megadja a késleltetést követően alakul ki az egyes
-		gombnyomás által küldött Send vagy ControlSend.
-	Ex_MD_TT =	Megadja a késleltetést követően alakul ki
-		Minden egér mozgását és kattintson.
-	Ex_SC_TT =	Megadja a késleltetést követően alakul ki
-		Minden kontroll módosító parancsot.
-	Ex_SW_TT =	Megadja a késleltetést követően alakul ki
-		Minden ablakozás parancsot, például WinActivate.
-	Ex_SB_TT =	Meghatározza, hogy milyen gyorsan egy szkript fut (hat CPU kihasználtsága.)
-	Ex_NT_TT =	Kikapcsolja a megjelenítését a tálca ikon.
-	Ex_IN_TT =	Eszmék a szkript úgy viselkedni, mintha a megadott
-		fájl tartalmát jelen vannak ebben a pontos pozícióját.
-	Ex_PT_TT =	Megtartja a szkript fut állandóan
-		(azaz, amíg a felhasználó bezárja, vagy ExitApp találkozik).
-	Ex_MT_TT =	Beállítja a maximális számú egyidejű
-		szálak egy gyorsbillentyűvel vagy hotstring.
-	Ex_UV_TT =	Export globális változók.
-	Ex_EdVars_TT =	Válassza globális változók exportálni.
 		
 ; 21. Operators		
 	As_Oper_1 =	Hozzárendelése
@@ -1024,47 +1020,47 @@
 	Co_Oper_7 =	Kisebb vagy egyenlő
 		
 ; 22. IE Commands Tips		
-	Tip_Navigate =	Navigál egy URL-t vagy elérési utat.
-	Tip_Value =	Gets vagy beállítja az értékét a tárgy.
-	Tip_Focus =	Beállítja fókuszt az objektumot.
+	Tip_Checked =	Beállítja vagy beolvassa az állam a jelölőnégyzet vagy rádió gombot.
 	Tip_Click =	Szimulál egy kattintás az objektumra.
-	Tip_Submit =	Elküldi az űrlapot.
-	Tip_GoHome =	Navigál a jelenlegi otthoni vagy kezdő oldalon.
+	Tip_Focus =	Beállítja fókuszt az objektumot.
 	Tip_GoBack =	Navigálás hátra egy elem a történelem listán.
 	Tip_GoForward =	Navigálás előre egy elem a történelem listán.
+	Tip_GoHome =	Navigál a jelenlegi otthoni vagy kezdő oldalon.
 	Tip_GoSearch =	Navigálás az aktuális keresés oldalt.
-	Tip_Refresh =	Újratöltés az aktuálisan megjelenített oldalt.
-	Tip_Stop =	Megszakítja a folyamatban lévő navigációs vagy letölthető.
-	Tip_Quit =	Bezárja az oldalt.
+	Tip_Height =	Beállítja vagy visszaadja a magasságát az objektum.
+	Tip_Href =	Beállítja vagy lekéri a cél URL-t vagy egy horgony pontot.
+	Tip_InnerHTML =	Beállítja vagy visszaadja a HTML az objektum.
+	Tip_InnerText =	Beállítja vagy megkapja a szöveget az objektum.
+	Tip_Length =	Beállítja vagy beolvassa az objektumok száma a gyűjtemény.
 	Tip_LocationName =	Gets the útvonal vagy cím aktuális oldalt.
 	Tip_LocationURL =	Gets az URL-t az aktuális oldal.
-	Tip_InnerText =	Beállítja vagy megkapja a szöveget az objektum.
-	Tip_InnerHTML =	Beállítja vagy visszaadja a HTML az objektum.
+	Tip_Navigate =	Navigál egy URL-t vagy elérési utat.
 	Tip_OuterHTML =	Beállítja vagy beolvassa a tárgy és annak tartalmát a HTML.
-	Tip_Href =	Beállítja vagy lekéri a cél URL-t vagy egy horgony pontot.
-	Tip_Src =	Beállítja vagy letölti egy URL betöltését a tárgy.
+	Tip_Quit =	Bezárja az oldalt.
+	Tip_Refresh =	Újratöltés az aktuálisan megjelenített oldalt.
 	Tip_SelectedIndex =	Beállítja vagy beolvassa az index a kiválasztott opció a select objektum.
-	Tip_Checked =	Beállítja vagy beolvassa az állam a jelölőnégyzet vagy rádió gombot.
+	Tip_Src =	Beállítja vagy letölti egy URL betöltését a tárgy.
+	Tip_Stop =	Megszakítja a folyamatban lévő navigációs vagy letölthető.
+	Tip_Submit =	Elküldi az űrlapot.
 	Tip_Type =	Beállítja vagy visszaadja a tartalom típus az objektum.
+	Tip_Value =	Gets vagy beállítja az értékét a tárgy.
 	Tip_Width =	Beállítja vagy visszaadja a szélessége az objektum.
-	Tip_Height =	Beállítja vagy visszaadja a magasságát az objektum.
-	Tip_Length =	Beállítja vagy beolvassa az objektumok száma a gyűjtemény.
 		
 ; 23. AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	Abs	Abszolút értékét a számot.
-	ASin	Arkusz szinuszát (a szám, amelynek szinusz is Number) radiánban.
 	ACos	Arkusz koszinuszát adja (a szám, amelynek koszinusz is Number) radiánban.
 	Array	Létrehoz egy scriptable asszociatív tömböt egész kulcsokat.
 	Asc	Visszaadja a karakter kódja (egy számot 1 és 255 között (az ANSI épít), illetve 65.535 (Unicode épít)) az első karakter a string.
+	ASin	Arkusz szinuszát (a szám, amelynek szinusz is Number) radiánban.
 	ATan	Visszaadja a cotanges (a szám, amelynek tangense a szám) radiánban.
 	BlockInput	Tiltja le vagy engedélyezi a felhasználó képes kölcsönhatásba a számítógéphez billentyűzet és egér.
 	Break	Kilépés (megszűnik) a hurok. Érvényes belül bármilyen hurok.
 	Ceil	Visszatér szám kerekítve a legközelebbi egész (nélkül 0,00 utótag).
 	Chr	Visszaadja az egyetlen karakter megfelelő karaktert kódot jelzett szám.
 	Click	Kattintás az egérrel a megadott koordinátákat. Azt is tartsuk lenyomva a gombot, forgassa a kereket, vagy áthelyezni.
-	ClipWait	Megvárja, amíg a vágólap adatait tartalmazza.
 	Clipboard	Beilleszti szöveget a vágólapról.
+	ClipWait	Megvárja, amíg a vágólap adatait tartalmazza.
 	ComObjActive	Lekéri a regisztrált COM objektumot.
 	ComObjArray	Létrehoz egy SAFEARRAY használható COM.
 	ComObjConnect	Csatlakozik a COM-objektum rendezvény források funkciók egy adott előtaggal.
@@ -1119,12 +1115,12 @@
 	FileCreateShortcut	Létrehoz egy parancsikont (. Lnk) fájlt.
 	FileDelete	Töröl egy vagy több fájlt.
 	FileEncoding	Beállítja az alapértelmezett kódolása FILEREAD, FileReadLine, Loop Read, FileAppend és FileOpen.
-	FileInstall	Tartalmazza a megadott fájl belsejében a lefordított változata a forgatókönyvet.
 	FileGetAttrib	Azt mutatja, hogy a fájl vagy mappa csak olvasható, rejtett, stb
 	FileGetShortcut	Információkat gyűjt a helyi (. Lnk) fájlt, például a cél fájlt.
 	FileGetSize	Letölti a fájl mérete.
 	FileGetTime	Letölti a datetime bélyeg egy fájl vagy mappa.
 	FileGetVersion	Letölti a változat egy fájlt.
+	FileInstall	Tartalmazza a megadott fájl belsejében a lefordított változata a forgatókönyvet.
 	FileMove	Mozog vagy átnevezi egy vagy több fájl.
 	FileMoveDir	Mozgatja a mappa mellett minden al-mappákat és fájlokat. Azt is átnevezni egy mappát.
 	FileOpen	Biztosít az objektum-orientált fájl I / O
@@ -1153,12 +1149,12 @@
 	HasKey	True, ha Key társított értéket.
 	if	Meghatározza a parancs (ek) azon képessége, ha az összehasonlítás egy változó értékre evalutes TRUE. Ha több, mint egy parancs aktív, tegye őket egy blokkban (fogszabályozó).
 	if (expression)	Megadja a parancs (ok), hogy végre, ha a kifejezés értéke TRUE.
+	If A_Index	Ellenőrzi, hogy az aktuális iteráció beleillik a megadott számot.
+	If Clipboard	Ellenőrzi, hogy a vágólapról szöveget beleillik a megadott string.
+	If ErrorLevel	Ellenőrzi, hogy a megadott képet vagy pixel találtak a képernyőn.
 	If var [not] between	Ellenőrzi, hogy a változó tartalmát számszerint vagy ABC két érték között (bezárólag).
 	If var [not] in/contains MatchList 	Ellenőrzi, hogy a változó tartalmát egyezik az egyik elem a listában.
 	If var is [not] type	Ellenőrzi, hogy a változó tartalma numerikus, nagybetűs, stb
-	If Clipboard	Ellenőrzi, hogy a vágólapról szöveget beleillik a megadott string.
-	If ErrorLevel	Ellenőrzi, hogy a megadott képet vagy pixel találtak a képernyőn.
-	If A_Index	Ellenőrzi, hogy az aktuális iteráció beleillik a megadott számot.
 	IfEqual/IfNotEqual	Összehasonlítja a változó értéke az egyenlőség. Egyet jelent: ha a Var = érték | ha Var <> érték.
 	IfExist / IfNotExist / FileExist	Ellenőrzi, hogy létezik egy fájl vagy mappa.
 	IfGreater / IfGreaterOrEqual	Összehasonlítja a változó értéke. Egyet jelent: ha a Var> Érték | ha Var> = érték.
@@ -1180,10 +1176,10 @@
 	Labels	A címke azonosít egy sor kódot, és fel lehet használni, mint egy cél, vagy Goto alkotnak egy szubrutint.
 	Length	Visszaadja a hossza egy egyenes sorban kezdődő 1 pozícióban.
 	ListVars	Jeleníti meg a szkript változó: a nevüket és a jelenlegi tartalmát.
-	Log	Visszaadja a logaritmusát (alap 10) Szám.
 	Ln	Természetes logaritmusát (alap e) a szám.
-	Loop (normal) 	Végre egy sor parancsot többször: vagy a megadott számú alkalommal, vagy amíg break találkozott.
+	Log	Visszaadja a logaritmusát (alap 10) Szám.
 	Loop (files & folders)	Letölti a megadott fájlokat vagy mappákat, egyesével.
+	Loop (normal) 	Végre egy sor parancsot többször: vagy a megadott számú alkalommal, vagy amíg break találkozott.
 	Loop (parse a string)	Letölti részkarakterláncokat (mezők) egy string, egy olyan időpontban.
 	Loop (read file contents)	Letölti a vonalak egy szöveges fájlt, egy olyan időpontban (jobban teljesít, mint FileReadLine).
 	Loop (registry)	Letölti a tartalmát a megadott alkulcs, egy tétel egy időben.
@@ -1212,12 +1208,12 @@
 	Progress	Hoz létre vagy frissíti tartalmazó ablak a folyamatjelző.
 	Push	Hozzáfűzi értékek a végén egy tömb.
 	Random	Létrehoz egy pszeudo-véletlenszám.
+	RegDelete	Törli alkulcsaként vagy értéket a rendszerleíró adatbázisban.
 	RegExMatch	Meghatározza, hogy a szöveg tartalmaz egy minta (reguláris kifejezés).
 	RegExReplace	Lecseréli események egy minta (reguláris kifejezés) belül egy string.
-	RegDelete	Törli alkulcsaként vagy értéket a rendszerleíró adatbázisban.
+	RegisterCallback	Létrehoz egy gépi kódot címet, ha hívják, irányítja a hívást, hogy a funkciót a script.
 	RegRead	Olvasás egy értéket a rendszerleíró adatbázisban.
 	RegWrite	Ír egy értéket a rendszerleíró adatbázisban.
-	RegisterCallback	Létrehoz egy gépi kódot címet, ha hívják, irányítja a hívást, hogy a funkciót a script.
 	RemoveAt	Eltávolítja az elemeket a megadott pozíció lineáris tömbben.
 	Return	Visszatér egy alprogram, amelynek végrehajtását korábban ugrott keresztül funkció-call, GOSUB, gyorsgombok aktiválás GroupActivate, vagy más módon.
 	Round	Ha n nincs megadva, vagy 0, számra kerekíti a legközelebbi egész számra. Ha N pozitív szám, szám kerekíti N tizedes. Ha N negatív szám kerekítve N számjegyek balra a tizedes pont.
@@ -1235,8 +1231,8 @@
 	SetKeyDelay	Megadja a késleltetést, ami történik minden gombnyomás után küldött küldése vagy ControlSend.
 	SetMouseDelay	Megadja a késleltetést követően alakul ki minden egér mozgását vagy kattintással.
 	SetNumlockState	Állítja az állam a NumLock gomb. Is kényszeríti a legfontosabb, hogy maradni vagy ki.
-	SetScrollLockState	Állítja az állam a ScrollLock gombot. Is kényszeríti a legfontosabb, hogy maradni vagy ki.
 	SetRegView	Lehetővé teszi a regisztrációs parancsokat egy 32 bites script eléréséhez a 64 bites adatbázis nézet, és fordítva.
+	SetScrollLockState	Állítja az állam a ScrollLock gombot. Is kényszeríti a legfontosabb, hogy maradni vagy ki.
 	SetTimer	Okoz alprogram automatikusan elindul, és ismételten egy meghatározott időintervallumban.
 	Shutdown	Kikapcsol, újraindul, vagy kilép a rendszerből.
 	Sin	Visszaadja a trigonometrikus szinuszát száma.
@@ -1249,13 +1245,12 @@
 	SoundSet	Változása különböző beállításait a hangeszköz (master némítás, master hangerő, stb)
 	SoundSetWaveVolume	Megváltoztatja a hullám kimeneti hangerőt a hang eszközt.
 	SplashImage	Hoz létre vagy frissíti tartalmazó ablak a JPG, GIF, vagy BMP képet.
-	SplashTextOn	Létrehoz egy testreszabható szöveget felugró ablakban.
 	SplashTextOff	Bezárja a fenti ablakban.
+	SplashTextOn	Létrehoz egy testreszabható szöveget felugró ablakban.
 	SplitPath	Elválasztja a fájl nevét vagy URL-címet a nevét, könyvtár, bővítése, és a hajtás.
 	Sqrt	Visszaadja a négyzetgyöke számát.
 	StatusBarGetText	Beolvassa a szöveget a szabványos állapotsort ellenőrzés.
 	StatusBarWait	Megvárja, amíg az ablak állapotsor tartalmazza a megadott string.
-	StrPut / StrGet	Másolja egy string vagy egy memória cím, az opcionális átalakítása között kódlapot.
 	StringCaseSense	Meghatározza, hogy a szöveg az összehasonlítás kis-és nagybetűket (alapértelmezésben "nem érzékenyek".)
 	StringGetPos / InStr	Letölti a helyzet a megadott substring egy string.
 	StringLeft	Lekéri a karakterek száma a bal oldali a string.
@@ -1268,6 +1263,7 @@
 	StringTrimLeft	Eltávolítja a karakterek száma a bal oldali a string.
 	StringTrimRight	Eltávolítja a karakterek száma a jobb oldali a string.
 	StringUpper	Konvertál egy string nagybetűs.
+	StrPut / StrGet	Másolja egy string vagy egy memória cím, az opcionális átalakítása között kódlapot.
 	Suspend	Tiltja le vagy engedélyezi vagy a kiválasztott gyorsbillentyűk és hotstrings.
 	SysGet	Letölti képernyő felbontás, multi-monitor info, méretei rendszer tárgyak, és a rendszer egyéb tulajdonságait.
 	Tan	Visszaadja a trigonometrikus tangensét száma.
@@ -1285,10 +1281,10 @@
 	WinActive	Visszaadja a Egyedi azonosító (HWND) az aktív ablak, ha az megfelel a kritériumoknak.
 	WinClose	Bezárja a megadott ablak.
 	WinExist	Ellenőrzi, hogy a megadott ablak létezik.
+	WinGet	Letölti a megadott ablak egyedi azonosító, ID folyamat, folyamat neve, vagy egy listát a ellenőrzéseket. Azt is letölteni egy listát az összes ablak megfelelő a kritériumoknak.
 	WinGetActiveStats	Ötvözi a WinGetActiveTitle és WinGetPos egyetlen parancsban.
 	WinGetActiveTitle	Letölti a címet az aktív ablak.
 	WinGetClass	Letölti a megadott ablak osztály nevét.
-	WinGet	Letölti a megadott ablak egyedi azonosító, ID folyamat, folyamat neve, vagy egy listát a ellenőrzéseket. Azt is letölteni egy listát az összes ablak megfelelő a kritériumoknak.
 	WinGetPos	Lekéri a helyzete és mérete a megadott ablakot.
 	WinGetText	Letölti a szöveget a megadott ablak.
 	WinGetTitle	Letölti a címet a megadott ablak.

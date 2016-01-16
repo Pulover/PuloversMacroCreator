@@ -73,7 +73,6 @@
 	i_Lang019 =	Tin nh&ắn cửa sổ
 	i_Lang020 =	Tì&m một lệnh
 		
-		
 ; 06. Edit Sub Menu		
 	e_Lang001 =	&Bản sao
 	e_Lang002 =	&Sửa Bình luận
@@ -97,7 +96,6 @@
 	e_Lang020 =	&Hủy bỏ tất cả các nhóm
 	e_Lang021 =	Th&u gọn tất cả
 	e_Lang022 =	&Mở rộng tất cả
-		
 		
 ; 07. Select Sub Menu		
 	s_Lang001 =	&Chọn tất cả
@@ -153,6 +151,7 @@
 	o_Lang013 =	G&ỡ bỏ mặc định file
 	o_Lang014 =	C&ác phím tắt mặc định
 	o_Lang015 =	C&ài đặt mặc định
+	o_Lang016 =	&Ngôn ngữ biên tập
 		
 ; 10. Donate Sub Menu		
 	p_Lang001 =	Hiến PayPal
@@ -761,7 +760,6 @@
 	d_Lang042 =	Nhà điều hành không hợp lệ.
 		Các nhà khai thác sau đây được chấp nhận:
 		=, ==, <>,! =,>, <,> =, <=
-		
 		Ví dụ:
 		MyVar > 1
 		MyVar = `%A_DDDD`%
@@ -791,7 +789,6 @@
 		Hãy chỉ định một biến và sử dụng nó trong các tham số.
 	d_Lang060 =	Phiên bản mới có sẵn
 	d_Lang061 =	Bạn có muốn tải về ngay bây giờ?
-		
 		Để vô hiệu hóa tự động kiểm tra chọn Help> Check khi khởi động
 	d_Lang062 =	Bạn đã có phiên bản mới nhất.
 	d_Lang063 =	Một lỗi xảy ra trong khi kiểm tra.
@@ -801,7 +798,6 @@
 	d_Lang067 =	Hiển thị cửa sổ này khi khởi động
 	d_Lang068 =	Lời khuyên:
 	d_Lang069 =	Rất nhiều thời gian và công sức đã đi vào sự phát triển của Đấng Tạo Hóa vĩ mô Pulover của. Nếu bạn tìm thấy nó hữu ích, xin vui lòng xem xét cho thấy sự đánh giá cao của bạn với một hiến.
-		
 		Tặng hay không, sẽ không có sự khác biệt về tính năng và chức năng của nó.
 	d_Lang070 =	Tặng...
 	d_Lang071 =	Không, cảm ơn
@@ -877,73 +873,29 @@
 		Bạn có thể chạy các chức năng tiên tiến như SUBSTR và RegExReplace từ cửa sổ chức năng (Insert> Nếu cáo / biến / chức năng). Hoặc chạy các chức năng của riêng bạn từ các kịch bản AutoHotkey bên ngoài.
 		
 ; 19. Tooltips		
-	AutoKey_TT =	Phím nóng để chơi vĩ mô
-	ManKey_TT =	Phím nóng để chơi vĩ mô "từng bước"
-	AbortKey_TT =	Phím nóng để ngăn chặn phát lại
-	PauseKey_TT =	Phím tắt để tạm dừng phát
-	RecKey_TT =	Backspace để xóa
-	RecNewKey_TT =	Backspace để xóa
-	JoyKey_TT =	Nhấn một nút trên điều khiển
-	ReptC_TT =	0 = vô hạn
 	A_List_TT =	Chọn vĩ mô (Ctrl +1 ~ 0)
-	OSHK_TT =	Chọn Macro
-	OSHKEd_TT =	Chọn Macro
-	ApplyT_TT =	Áp dụng
+	AbortKey_TT =	Phím nóng để ngăn chặn phát lại
+	ActiveObj_TT =	Cố gắng để kết nối với một đối tượng COM đăng nhập
 	ApplyI_TT =	Áp dụng
 	ApplyL_TT =	Chèn từ Box (Insert)
-	CmdFilter_TT =	Lọc theo loại
-	InsertKey_TT =	Chèn Tổ hợp phím (Ctrl + Insert)
-	InsertKeyT_TT =	Chèn Tổ hợp phím
-	DefaultMacro_TT =	Chọn tập tin để tải về khởi động chương trình
-	VarCopyA_TT =	Sao chép nội dung biến hiện nay
-	VarCopyB_TT =	Sao chép nội dung biến hiện nay
-	Reset_TT =	Rõ ràng nội dung biến
-	Screenshot_TT =	Hãy Ảnh chụp màn hình
-	ColorPick_TT =	Có được điểm ảnh trên màn hình
-	PicPrev_TT =	Đúp Nhấn vào đây để mở hình ảnh
-	CoordPixel_TT =	Chế độ phối hợp
-	VariatT_TT =	Sắc thái của sự thay đổi
-	IconN_TT =	Số nhóm biểu tượng
-	TransC_TT =	Màu trong suốt
-	WScale_TT =	Quy mô chiều rộng
-	HScale_TT =	Quy mô chiều cao
-	Fast_TT =	Sử dụng một phương pháp tìm kiếm nhanh hơn (đề nghị)
-	RGB_TT =	Gây màu được hiểu như là một giá trị thay vì BGR RGB
-	LoopLVColor_TT =	Nhấn vào đây để chọn một màu
-	IfLVColor_TT =	Nhấn vào đây để chọn một màu
-	RefreshIEW_TT =	Làm mới Danh sách
-	ActiveObj_TT =	Cố gắng để kết nối với một đối tượng COM đăng nhập
-	TimeoutM_TT =	0 = vô hạn
-	ExpView_TT =	Biên tập viên cao cấp
-	ExpView2_TT =	Biên tập viên cao cấp
-	OSProgB_TT =	Hiển thị Progress Bar
-	OSTrans_TT =	Opacity
-	MRel_TT =	Chuyển động tương đối so với vị trí hiện tại.
-		Hoặc nếu được sử dụng với điều khiển: Vị trí tương đối vào Control.
-	Raw_TT =	Lệnh SendRaw giải thích tất cả các nhân vật theo nghĩa đen
-		chứ không phải là dịch {} Nhập một tổ hợp phím ENTER,
-		^ C vào Control-C, vv
-	ComText_TT =	Khi không trong chế độ thô, các ký tự sau
-		được đối xử như một biến (những thứ sau ảnh hưởng đến
-		chỉ có chìa khóa tiếp theo):, +, ^, #
-	ComEvent_TT =	Tốc độ mà tổ hợp phím được gửi được xác định do sự chậm trễ chính.
+	ApplyT_TT =	Áp dụng
+	AutoKey_TT =	Phím nóng để chơi vĩ mô
 	Clip_TT =	Tạm thời sử dụng Clipboard để gửi văn bản.
 		Khi hoạt động được hoàn tất, kịch bản
 		khôi phục nội dung clipboard ban đầu.
 		(Để lại Tiêu trống để dán nội dung hiện tại)
+	CmdFilter_TT =	Lọc theo loại
+	CmdSort_TT =	Xếp theo vần
+	ColorPick_TT =	Có được điểm ảnh trên màn hình
+	ComEvent_TT =	Tốc độ mà tổ hợp phím được gửi được xác định do sự chậm trễ chính.
+	ComText_TT =	Khi không trong chế độ thô, các ký tự sau
+		được đối xử như một biến (những thứ sau ảnh hưởng đến
+		chỉ có chìa khóa tiếp theo):, +, ^, #
+	CoordPixel_TT =	Chế độ phối hợp
+	DefaultMacro_TT =	Chọn tập tin để tải về khởi động chương trình
 	EditPaste_TT =	Bột nhão dây ở vị trí dấu nháy / chèn
 		trong một điều khiển Edit (điều này không ảnh hưởng đến
 		các nội dung của clipboard).
-	SetText_TT =	Thay đổi nội dung của một điều khiển.
-	RelKey_TT =	Hồ sơ di chuyển chuột và nhấp chuột như hiệu số
-		từ vị trí trước khi tổ chức.
-	ToggleC_TT =	Kích hoạt ghi âm tương đối khi nhà nước chính là trên.
-	Relative_TT =	Tọa độ có liên quan đến cửa sổ hoạt động.
-	Screen_TT =	Tọa độ tương đối so với máy tính để bàn (toàn màn hình).
-	IncFiles_TT =	Bao gồm các file / Giá trị
-	IncFolders_TT =	Bao gồm các thư mục (folder) / Keys
-	Recurse_TT =	Đệ quy vào thư mục con (thư mục con) / Subkeys
-	CmdSort_TT =	Xếp theo vần
 	Ex_EdScript_TT =	Mở trong trình soạn thảo bên ngoài
 	ExprLink2_TT =	- KHÔNG GỬI KÈM BIẾN TRONG DẤU HIỆU PERCENT ĐÂY.
 		- Hầu hết các biểu AHK được hỗ trợ.
@@ -955,16 +907,90 @@
 		- Bạn có thể sử dụng các chuỗi, các biến, mảng và chức năng.
 		- Để sử dụng dây, đặt chúng trong dấu ngoặc kép, ví dụ: var = "a".
 		- Nhiều báo cáo được hỗ trợ, ví dụ như: var = "a" || InStr (var, "b").
+	ExpView_TT =	Biên tập viên cao cấp
+	ExpView2_TT =	Biên tập viên cao cấp
+	Fast_TT =	Sử dụng một phương pháp tìm kiếm nhanh hơn (đề nghị)
+	HScale_TT =	Quy mô chiều cao
+	IconN_TT =	Số nhóm biểu tượng
+	IfLVColor_TT =	Nhấn vào đây để chọn một màu
+	IncFiles_TT =	Bao gồm các file / Giá trị
+	IncFolders_TT =	Bao gồm các thư mục (folder) / Keys
+	InsertKey_TT =	Chèn Tổ hợp phím (Ctrl + Insert)
+	InsertKeyT_TT =	Chèn Tổ hợp phím
+	JoyKey_TT =	Nhấn một nút trên điều khiển
+	LoopLVColor_TT =	Nhấn vào đây để chọn một màu
+	ManKey_TT =	Phím nóng để chơi vĩ mô "từng bước"
+	MRel_TT =	Chuyển động tương đối so với vị trí hiện tại.
+		Hoặc nếu được sử dụng với điều khiển: Vị trí tương đối vào Control.
+	OSHK_TT =	Chọn Macro
+	OSHKEd_TT =	Chọn Macro
+	OSProgB_TT =	Hiển thị Progress Bar
+	OSTrans_TT =	Opacity
+	PauseKey_TT =	Phím tắt để tạm dừng phát
+	PicPrev_TT =	Đúp Nhấn vào đây để mở hình ảnh
+	Raw_TT =	Lệnh SendRaw giải thích tất cả các nhân vật theo nghĩa đen
+		chứ không phải là dịch {} Nhập một tổ hợp phím ENTER,
+		^ C vào Control-C, vv
+	RecKey_TT =	Backspace để xóa
+	RecNewKey_TT =	Backspace để xóa
+	Recurse_TT =	Đệ quy vào thư mục con (thư mục con) / Subkeys
+	RefreshIEW_TT =	Làm mới Danh sách
+	Relative_TT =	Tọa độ có liên quan đến cửa sổ hoạt động.
+	RelKey_TT =	Hồ sơ di chuyển chuột và nhấp chuột như hiệu số
+		từ vị trí trước khi tổ chức.
+	ReptC_TT =	0 = vô hạn
+	Reset_TT =	Rõ ràng nội dung biến
+	RGB_TT =	Gây màu được hiểu như là một giá trị thay vì BGR RGB
+	Screen_TT =	Tọa độ tương đối so với máy tính để bàn (toàn màn hình).
+	Screenshot_TT =	Hãy Ảnh chụp màn hình
+	SetText_TT =	Thay đổi nội dung của một điều khiển.
+	TimeoutM_TT =	0 = vô hạn
+	ToggleC_TT =	Kích hoạt ghi âm tương đối khi nhà nước chính là trên.
+	TransC_TT =	Màu trong suốt
+	VarCopyA_TT =	Sao chép nội dung biến hiện nay
+	VarCopyB_TT =	Sao chép nội dung biến hiện nay
+	VariatT_TT =	Sắc thái của sự thay đổi
+	WScale_TT =	Quy mô chiều rộng
 		
 ; 20. Tooltips from AHK Docs		
-	ExpList_TT =	Đúp Nhấn vào đây để chỉnh sửa
+	Ex_AF_TT =	Bỏ qua các phương pháp nhẹ nhàng kích hoạt một cửa sổ
+		và đi thẳng vào các phương pháp mạnh mẽ.
+	Ex_DH_TT =	Xác định liệu các cửa sổ vô hình được "nhìn thấy" bởi kịch bản.
+	Ex_EdVars_TT =	Chọn các biến toàn cầu được xuất khẩu.
+	Ex_HK_TT =	Buộc việc sử dụng các móc để thực hiện tất cả
+		hoặc một số phím tắt bàn phím.
 	Ex_IfDir_TT =	Tạo phím nóng và hotstrings tùy thuộc bối cảnh nhạy cảm
 		vào loại cửa sổ đang hoạt động hay tồn tại.
 	Ex_IfDirType_TT =	Tạo phím nóng và hotstrings tùy thuộc bối cảnh nhạy cảm
 		vào loại cửa sổ đang hoạt động hay tồn tại.
+	Ex_IN_TT =	Gây ra các kịch bản để hành xử như thể các quy định
+		nội dung của tập tin có mặt tại vị trí này chính xác.
+	Ex_MD_TT =	Thiết lập sự chậm trễ đó sẽ xảy ra sau khi
+		mỗi di chuyển chuột hoặc nhấp chuột.
+	Ex_MT_TT =	Thiết lập số lượng tối đa đồng thời
+		chủ đề cho mỗi phím nóng hoặc hotstring.
+	Ex_NT_TT =	Vô hiệu hóa hiển thị một biểu tượng trên khay.
+	Ex_PT_TT =	Giữ một kịch bản vĩnh viễn chạy
+		(Có nghĩa là, cho đến khi người dùng đóng nó hoặc ExitApp là gặp phải).
+	Ex_SB_TT =	Xác định nhanh như thế nào một kịch bản sẽ chạy (ảnh hưởng đến việc sử dụng CPU).
+	Ex_SC_TT =	Thiết lập sự chậm trễ đó sẽ xảy ra sau khi
+		mỗi kiểm soát sửa đổi lệnh.
+	Ex_SI_TT =	Xác định liệu một kịch bản được phép chạy một lần nữa khi nó đang chạy.
+	Ex_SK_TT =	Thiết lập sự chậm trễ đó sẽ xảy ra sau mỗi
+		tổ hợp phím gửi Gửi hoặc ControlSend.
 	Ex_SM_TT =	Gửi làm đồng nghĩa với SendInput hoặc SendPlay hơn
 		mặc định (SendEvent). Cũng làm cho Click và MouseMove / Click / Kéo
 		sử dụng phương pháp xác định.
+	Ex_ST_TT =	Thiết lập các hành vi phù hợp với các tham số WinTitle trong lệnh như WinWait.
+	Ex_SW_TT =	Thiết lập sự chậm trễ đó sẽ xảy ra sau khi
+		mỗi lệnh cửa sổ, chẳng hạn như WinActivate.
+	Ex_UV_TT =	Xuất khẩu các biến toàn cầu.
+	ExpList_TT =	Đúp Nhấn vào đây để chỉnh sửa
+	SI_TT =	Các FORCE từ bỏ qua các hộp thoại và thay thế các ví dụ cũ sẽ tự động,
+		tương tự như trong thực thi các lệnh lại.
+		Từ bỏ qua bỏ qua hộp thoại và lá dụ cũ chạy.
+		Nói cách khác, cố gắng để khởi động một kịch bản đã chạy được bỏ qua.
+		OFF từ cho phép nhiều trường hợp của các kịch bản để chạy đồng thời.
 	SM_TT =	Sự kiện: Đây là mặc định bắt đầu được sử dụng bởi tất cả các kịch bản.
 		Nó sử dụng các phương pháp SendEvent cho Send, SendRaw, Click, và MouseMove / Click / Kéo.
 		Đầu vào: Công tắc phương pháp SendInput để gửi, SendRaw, Click, và MouseMove / Click / Kéo.
@@ -972,40 +998,10 @@
 		khi SendInput không có sẵn, nó trở về với chế độ chơi (bên dưới). Điều này cũng gây
 		lệnh SendInput bản thân để trở lại để chơi chế độ khi SendInput là không có.
 		Chơi: Thiết bị chuyển mạch với phương pháp SendPlay cho Send, SendRaw, Click, và MouseMove / Click / Kéo.
-	Ex_SI_TT =	Xác định liệu một kịch bản được phép chạy một lần nữa khi nó đang chạy.
-	SI_TT =	Các FORCE từ bỏ qua các hộp thoại và thay thế các ví dụ cũ sẽ tự động,
-		tương tự như trong thực thi các lệnh lại.
-		Từ bỏ qua bỏ qua hộp thoại và lá dụ cũ chạy.
-		Nói cách khác, cố gắng để khởi động một kịch bản đã chạy được bỏ qua.
-		OFF từ cho phép nhiều trường hợp của các kịch bản để chạy đồng thời.
-	Ex_ST_TT =	Thiết lập các hành vi phù hợp với các tham số WinTitle trong lệnh như WinWait.
 	ST_TT =	1: Một tiêu đề của cửa sổ phải bắt đầu với WinTitle quy định là một trận đấu.
 		2: tiêu đề của một cửa sổ có thể chứa WinTitle bất cứ nơi nào bên trong nó là một trận đấu.
 		3: Một tiêu đề của cửa sổ phải phù hợp chính xác WinTitle là một trận đấu.
 		Regex: Thay đổi WinTitle, WinText, ExcludeTitle, và ExcludeText được biểu thức thông thường.
-	Ex_DH_TT =	Xác định liệu các cửa sổ vô hình được "nhìn thấy" bởi kịch bản.
-	Ex_AF_TT =	Bỏ qua các phương pháp nhẹ nhàng kích hoạt một cửa sổ
-		và đi thẳng vào các phương pháp mạnh mẽ.
-	Ex_HK_TT =	Buộc việc sử dụng các móc để thực hiện tất cả
-		hoặc một số phím tắt bàn phím.
-	Ex_SK_TT =	Thiết lập sự chậm trễ đó sẽ xảy ra sau mỗi
-		tổ hợp phím gửi Gửi hoặc ControlSend.
-	Ex_MD_TT =	Thiết lập sự chậm trễ đó sẽ xảy ra sau khi
-		mỗi di chuyển chuột hoặc nhấp chuột.
-	Ex_SC_TT =	Thiết lập sự chậm trễ đó sẽ xảy ra sau khi
-		mỗi kiểm soát sửa đổi lệnh.
-	Ex_SW_TT =	Thiết lập sự chậm trễ đó sẽ xảy ra sau khi
-		mỗi lệnh cửa sổ, chẳng hạn như WinActivate.
-	Ex_SB_TT =	Xác định nhanh như thế nào một kịch bản sẽ chạy (ảnh hưởng đến việc sử dụng CPU).
-	Ex_NT_TT =	Vô hiệu hóa hiển thị một biểu tượng trên khay.
-	Ex_IN_TT =	Gây ra các kịch bản để hành xử như thể các quy định
-		nội dung của tập tin có mặt tại vị trí này chính xác.
-	Ex_PT_TT =	Giữ một kịch bản vĩnh viễn chạy
-		(Có nghĩa là, cho đến khi người dùng đóng nó hoặc ExitApp là gặp phải).
-	Ex_MT_TT =	Thiết lập số lượng tối đa đồng thời
-		chủ đề cho mỗi phím nóng hoặc hotstring.
-	Ex_UV_TT =	Xuất khẩu các biến toàn cầu.
-	Ex_EdVars_TT =	Chọn các biến toàn cầu được xuất khẩu.
 		
 ; 21. Operators		
 	As_Oper_1 =	Gán
@@ -1024,47 +1020,47 @@
 	Co_Oper_7 =	Ít hơn hoặc bằng
 		
 ; 22. IE Commands Tips		
-	Tip_Navigate =	Điều hướng tới một URL hoặc đường dẫn.
-	Tip_Value =	Được hoặc đặt giá trị của đối tượng.
-	Tip_Focus =	Đặt trọng tâm vào đối tượng.
+	Tip_Checked =	Thiết lập hoặc lấy trạng thái của hộp kiểm tra hoặc nút radio.
 	Tip_Click =	Mô phỏng một nhấp chuột vào đối tượng.
-	Tip_Submit =	Gửi biểu mẫu.
-	Tip_GoHome =	Điều hướng tới các nhà hiện tại hoặc trang bắt đầu.
+	Tip_Focus =	Đặt trọng tâm vào đối tượng.
 	Tip_GoBack =	Điều hướng ngược một mục trong danh sách lịch sử.
 	Tip_GoForward =	Chuyển tiếp đến một mục trong danh sách lịch sử.
+	Tip_GoHome =	Điều hướng tới các nhà hiện tại hoặc trang bắt đầu.
 	Tip_GoSearch =	Điều hướng đến các trang tìm kiếm hiện tại.
-	Tip_Refresh =	Tải lại trang đang hiển thị.
-	Tip_Stop =	Hủy bỏ một chuyển hướng cấp phát chính thức hoặc tải về.
-	Tip_Quit =	Đóng cửa trang.
+	Tip_Height =	Thiết lập hoặc lấy chiều cao của đối tượng.
+	Tip_Href =	Đặt hoặc nhận một URL đích hoặc một điểm neo.
+	Tip_InnerHTML =	Thiết lập hoặc lấy mã HTML của đối tượng.
+	Tip_InnerText =	Thiết lập hoặc nhận được văn bản của đối tượng.
+	Tip_Length =	Thiết lập hoặc lấy số lượng các đối tượng trong một bộ sưu tập.
 	Tip_LocationName =	Nhận được đường dẫn hoặc trang tiêu đề hiện tại.
 	Tip_LocationURL =	Được URL của trang hiện tại.
-	Tip_InnerText =	Thiết lập hoặc nhận được văn bản của đối tượng.
-	Tip_InnerHTML =	Thiết lập hoặc lấy mã HTML của đối tượng.
+	Tip_Navigate =	Điều hướng tới một URL hoặc đường dẫn.
 	Tip_OuterHTML =	Thiết lập hoặc lấy các đối tượng và nội dung của nó trong HTML.
-	Tip_Href =	Đặt hoặc nhận một URL đích hoặc một điểm neo.
-	Tip_Src =	Đặt hoặc nhận một URL được nạp bởi các đối tượng.
+	Tip_Quit =	Đóng cửa trang.
+	Tip_Refresh =	Tải lại trang đang hiển thị.
 	Tip_SelectedIndex =	Thiết lập hoặc lấy các chỉ số của các tùy chọn được chọn trong một đối tượng chọn.
-	Tip_Checked =	Thiết lập hoặc lấy trạng thái của hộp kiểm tra hoặc nút radio.
+	Tip_Src =	Đặt hoặc nhận một URL được nạp bởi các đối tượng.
+	Tip_Stop =	Hủy bỏ một chuyển hướng cấp phát chính thức hoặc tải về.
+	Tip_Submit =	Gửi biểu mẫu.
 	Tip_Type =	Thiết lập hoặc lấy các loại nội dung của đối tượng.
+	Tip_Value =	Được hoặc đặt giá trị của đối tượng.
 	Tip_Width =	Thiết lập hoặc lấy chiều rộng của đối tượng.
-	Tip_Height =	Thiết lập hoặc lấy chiều cao của đối tượng.
-	Tip_Length =	Thiết lập hoặc lấy số lượng các đối tượng trong một bộ sưu tập.
 		
 ; 23. AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	Abs	Trả về giá trị tuyệt đối của số.
-	ASin	Trả về arcsine (số có sin là số) trong radian.
 	ACos	Trả về arccosine (số có cosin là số) trong radian.
 	Array	Tạo ra một mảng kết hợp kịch bản với các phím số nguyên.
 	Asc	Trả về mã ký tự (một số từ 1 đến 255 (trong ANSI xây dựng) hoặc 65535 (Unicode trong xây dựng)) cho ký tự đầu tiên trong chuỗi.
+	ASin	Trả về arcsine (số có sin là số) trong radian.
 	ATan	Trả về arctangent (số có tiếp tuyến là số) trong radian.
 	BlockInput	Vô hiệu hóa hoặc cho phép khả năng của người sử dụng tương tác với máy tính thông qua bàn phím và chuột.
 	Break	Thoát khỏi môi trường (chấm dứt) một vòng lặp. Hợp lệ trong các vòng lặp.
 	Ceil	Trả lại số làm tròn đến số nguyên gần nhất (không có hậu tố .00).
 	Chr	Trả về nhân vật duy nhất tương ứng với mã ký tự được chỉ định bởi số.
 	Click	Nhấn một nút chuột tại tọa độ quy định. Nó cũng có thể giữ một nút, quay bánh xe, hoặc di chuyển.
-	ClipWait	Đợi cho đến khi bộ nhớ tạm chứa dữ liệu.
 	Clipboard	Dán văn bản từ clipboard.
+	ClipWait	Đợi cho đến khi bộ nhớ tạm chứa dữ liệu.
 	ComObjActive	Lấy một đối tượng COM đăng ký.
 	ComObjArray	Tạo ra một SAFEARRAY để sử dụng với COM.
 	ComObjConnect	Kết nối các nguồn sự kiện một đối tượng COM của chức năng với một tiền tố nhất định.
@@ -1119,12 +1115,12 @@
 	FileCreateShortcut	Tạo ra một (LNK). File shortcut.
 	FileDelete	Xóa một hoặc nhiều tập tin.
 	FileEncoding	Thiết lập mã hóa mặc định cho FileRead, FileReadLine, Loop đã đọc, FileAppend, và FileOpen.
-	FileInstall	Bao gồm các tập tin được chỉ định trong các phiên bản biên dịch của kịch bản.
 	FileGetAttrib	Báo cáo xem một tập tin hoặc thư mục là chỉ đọc, ẩn, vv
 	FileGetShortcut	Lấy thông tin về một phím tắt (LNK.) Tập tin, chẳng hạn như tập tin mục tiêu của nó.
 	FileGetSize	Lấy kích thước của một tập tin.
 	FileGetTime	Lấy dấu datetime của một tập tin hoặc thư mục.
 	FileGetVersion	Lấy phiên bản của một tập tin.
+	FileInstall	Bao gồm các tập tin được chỉ định trong các phiên bản biên dịch của kịch bản.
 	FileMove	Di chuyển hoặc đổi tên một hoặc nhiều tập tin.
 	FileMoveDir	Di chuyển một thư mục cùng với tất cả các tiểu thư mục và tập tin. Nó cũng có thể đổi tên thư mục.
 	FileOpen	Cung cấp tập tin hướng đối tượng I / O.
@@ -1153,12 +1149,12 @@
 	HasKey	Trả về true nếu chính là liên kết với một giá trị.
 	if	Quy định cụ thể các lệnh (s) để thực hiện nếu so sánh của một biến với một giá trị evalutes đúng sự thật. Khi có nhiều hơn một lệnh là hiện tại, đặt chúng trong một khối (niềng răng).
 	if (expression)	Quy định cụ thể các lệnh (s) để thực hiện nếu biểu thức đánh giá này đúng.
+	If A_Index	Kiểm tra nếu vòng lặp hiện tại Đá một quy định một số.
+	If Clipboard	Kiểm tra nếu văn bản Clipboard là Đá chuỗi đã xác định.
+	If ErrorLevel	Kiểm tra nếu một hình ảnh hoặc điểm ảnh quy định đã được tìm thấy trong màn hình.
 	If var [not] between	Kiểm tra xem nội dung của một biến có số lượng hoặc theo bảng chữ cái giữa hai giá trị (bao gồm).
 	If var [not] in/contains MatchList 	Kiểm tra xem nội dung của một biến phù hợp với một trong các mục trong một danh sách.
 	If var is [not] type	Kiểm tra xem nội dung của một biến là số, chữ hoa, vv
-	If Clipboard	Kiểm tra nếu văn bản Clipboard là Đá chuỗi đã xác định.
-	If ErrorLevel	Kiểm tra nếu một hình ảnh hoặc điểm ảnh quy định đã được tìm thấy trong màn hình.
-	If A_Index	Kiểm tra nếu vòng lặp hiện tại Đá một quy định một số.
 	IfEqual/IfNotEqual	So sánh một biến với một giá trị bình đẳng. Đồng nghĩa với: nếu Var = Giá trị | nếu Var <> Giá trị.
 	IfExist / IfNotExist / FileExist	Kiểm tra sự tồn tại của một tập tin hoặc thư mục.
 	IfGreater / IfGreaterOrEqual	So sánh một biến với một giá trị. Đồng nghĩa với: nếu Var> Giá trị | nếu Var> = giá trị gia tăng.
@@ -1180,10 +1176,10 @@
 	Labels	Một nhãn xác định một dòng mã, và có thể được sử dụng như là một mục tiêu Chuyển đến hoặc để tạo thành một chương trình con.
 	Length	Trả về độ dài của một mảng tuyến tính bắt đầu ở vị trí 1.
 	ListVars	Hiển thị các biến của kịch bản: tên và nội dung hiện tại.
-	Log	Trả về logarit (cơ số 10) của số.
 	Ln	Trả về logarit tự nhiên (cơ số e) của số.
-	Loop (normal) 	Thực hiện một loạt các lệnh liên tục: hoặc số quy định của lần hoặc cho đến khi nghỉ là gặp phải.
+	Log	Trả về logarit (cơ số 10) của số.
 	Loop (files & folders)	Lấy các tập tin hoặc thư mục được chỉ định, tại một thời điểm.
+	Loop (normal) 	Thực hiện một loạt các lệnh liên tục: hoặc số quy định của lần hoặc cho đến khi nghỉ là gặp phải.
 	Loop (parse a string)	Truy xuất chuỗi con (lĩnh vực) từ một chuỗi, một tại một thời điểm.
 	Loop (read file contents)	Lấy các dòng trong một tập tin văn bản, một tại một thời điểm (thực hiện tốt hơn so với FileReadLine).
 	Loop (registry)	Lấy nội dung của các khóa registry được chỉ định, một mục tại một thời điểm.
@@ -1212,12 +1208,12 @@
 	Progress	Tạo ra hoặc cập nhật một cửa sổ có chứa một thanh tiến trình.
 	Push	Gắn thêm giá trị vào cuối mảng.
 	Random	Tạo ra một số giả ngẫu nhiên.
+	RegDelete	Xóa một khóa hoặc giá trị từ registry.
 	RegExMatch	Xác định xem một chuỗi có chứa một mô hình (biểu hiện thường xuyên).
 	RegExReplace	Thay thế lần xuất hiện của một mô hình (biểu thức chính quy) trong một chuỗi.
-	RegDelete	Xóa một khóa hoặc giá trị từ registry.
+	RegisterCallback	Tạo ra một địa chỉ máy mã mà khi gọi, chuyển hướng cuộc gọi đến một chức năng trong kịch bản.
 	RegRead	Đọc một giá trị từ registry.
 	RegWrite	Viết một giá trị để đăng ký.
-	RegisterCallback	Tạo ra một địa chỉ máy mã mà khi gọi, chuyển hướng cuộc gọi đến một chức năng trong kịch bản.
 	RemoveAt	Loại bỏ các mục từ vị trí nhất định trong một mảng tuyến tính.
 	Return	Lợi nhuận từ một chương trình con mà thực hiện trước đó đã nhảy qua chức năng cuộc gọi, GOSUB, Hotkey kích hoạt, GroupActivate, hoặc các phương tiện khác.
 	Round	Nếu N được bỏ qua hoặc 0, số được làm tròn đến số nguyên gần nhất. Nếu N là số dương, số được làm tròn đến chữ số thập phân N. Nếu N là số âm, số được làm tròn bởi N chữ số bên trái dấu thập phân.
@@ -1235,8 +1231,8 @@
 	SetKeyDelay	Thiết lập sự chậm trễ đó sẽ xảy ra sau mỗi một phím thường gửi Gửi hoặc ControlSend.
 	SetMouseDelay	Thiết lập sự chậm trễ đó sẽ xảy ra sau mỗi lần di chuyển chuột hoặc nhấp chuột.
 	SetNumlockState	Thiết lập trạng thái của phím NumLock. Cũng có thể buộc chìa khóa để ở trên hoặc tắt.
-	SetScrollLockState	Thiết lập trạng thái của phím ScrollLock. Cũng có thể buộc chìa khóa để ở trên hoặc tắt.
 	SetRegView	Cho phép lệnh đăng ký trong một kịch bản 32-bit để truy cập vào xem đăng ký 64-bit và ngược lại.
+	SetScrollLockState	Thiết lập trạng thái của phím ScrollLock. Cũng có thể buộc chìa khóa để ở trên hoặc tắt.
 	SetTimer	Nguyên nhân một chương trình con sẽ được tung ra tự động và liên tục tại một khoảng thời gian quy định.
 	Shutdown	Tắt, khởi động lại, hoặc log off hệ thống.
 	Sin	Trả về sin lượng giác của số.
@@ -1249,13 +1245,12 @@
 	SoundSet	Thay đổi các thiết lập khác nhau của một thiết bị âm thanh (chủ câm, âm lượng tổng thể, vv)
 	SoundSetWaveVolume	Thay đổi âm lượng đầu ra sóng cho một thiết bị âm thanh.
 	SplashImage	Tạo ra hoặc cập nhật một cửa sổ chứa một JPG, GIF, BMP hoặc hình ảnh.
-	SplashTextOn	Tạo ra một văn bản cửa sổ popup tùy chỉnh.
 	SplashTextOff	Đóng cửa sổ ở trên.
+	SplashTextOn	Tạo ra một văn bản cửa sổ popup tùy chỉnh.
 	SplitPath	Tách một tên file hoặc URL của nó vào tên, thư mục, mở rộng, và ổ đĩa.
 	Sqrt	Trả về căn bậc hai của số.
 	StatusBarGetText	Lấy văn bản từ một điều khiển thanh trạng thái tiêu chuẩn.
 	StatusBarWait	Đợi cho đến khi thanh trạng thái của cửa sổ chứa các chuỗi xác định.
-	StrPut / StrGet	Sao chép một chuỗi hoặc từ một địa chỉ bộ nhớ, tùy chọn chuyển đổi nó giữa các trang mã.
 	StringCaseSense	Quyết định nếu so sánh chuỗi là trường hợp nhạy cảm (mặc định là "không trường hợp nhạy cảm").
 	StringGetPos / InStr	Lấy vị trí của chuỗi xác định trong một chuỗi.
 	StringLeft	Lấy một số ký tự từ phía bên tay trái của một chuỗi.
@@ -1268,6 +1263,7 @@
 	StringTrimLeft	Loại bỏ một số ký tự từ phía bên tay trái của một chuỗi.
 	StringTrimRight	Loại bỏ một số ký tự từ phía bên phải của một chuỗi.
 	StringUpper	Chuyển đổi một chuỗi thành chữ hoa.
+	StrPut / StrGet	Sao chép một chuỗi hoặc từ một địa chỉ bộ nhớ, tùy chọn chuyển đổi nó giữa các trang mã.
 	Suspend	Vô hiệu hóa hoặc cho phép tất cả hoặc chọn phím nóng và hotstrings.
 	SysGet	Lấy độ phân giải màn hình, thông tin đa màn hình, kích thước của các đối tượng hệ thống, và hệ thống tài sản khác.
 	Tan	Trả về tang lượng giác của số.
@@ -1285,10 +1281,10 @@
 	WinActive	Trả về ID duy nhất (HWND) của cửa sổ hoạt động nếu nó phù hợp với tiêu chuẩn quy định.
 	WinClose	Đóng cửa sổ chỉ định.
 	WinExist	Kiểm tra nếu các cửa sổ chỉ định tồn tại.
+	WinGet	Lấy ID của cửa sổ chỉ định của độc đáo, quá trình ID, tên quá trình, hoặc một danh sách các điều khiển của nó. Nó cũng có thể lấy một danh sách của tất cả các cửa sổ phù hợp với tiêu chuẩn quy định.
 	WinGetActiveStats	Kết hợp các chức năng của WinGetActiveTitle và WinGetPos vào một lệnh.
 	WinGetActiveTitle	Lấy tiêu đề của cửa sổ hoạt động.
 	WinGetClass	Lấy tên lớp cửa sổ chỉ định của.
-	WinGet	Lấy ID của cửa sổ chỉ định của độc đáo, quá trình ID, tên quá trình, hoặc một danh sách các điều khiển của nó. Nó cũng có thể lấy một danh sách của tất cả các cửa sổ phù hợp với tiêu chuẩn quy định.
 	WinGetPos	Lấy vị trí và kích thước của cửa sổ chỉ định.
 	WinGetText	Lấy văn bản từ cửa sổ xác định.
 	WinGetTitle	Lấy tiêu đề của cửa sổ chỉ định.

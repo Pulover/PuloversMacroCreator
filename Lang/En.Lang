@@ -73,7 +73,6 @@
 	i_Lang019 =	Win&dows Messages
 	i_Lang020 =	Find a command
 		
-		
 ; 06. Edit Sub Menu		
 	e_Lang001 =	Dup&licate
 	e_Lang002 =	Edit C&omment
@@ -97,7 +96,6 @@
 	e_Lang020 =	Re&move all groups
 	e_Lang021 =	&Collapse all
 	e_Lang022 =	E&xpand all
-		
 		
 ; 07. Select Sub Menu		
 	s_Lang001 =	Select &All
@@ -153,6 +151,7 @@
 	o_Lang013 =	&Remove Default File
 	o_Lang014 =	Default Hot&keys
 	o_Lang015 =	Default Sett&ings
+	o_Lang016 =	&Language Editor
 		
 ; 10. Donate Sub Menu		
 	p_Lang001 =	&PayPal Donation
@@ -761,7 +760,6 @@
 	d_Lang042 =	Invalid operator.
 		The following operators are accepted:
 		=, ==, <>, !=, >, <, >=, <=
-		
 		Examples:
 		MyVar > 1
 		MyVar = `%A_DDDD`%
@@ -791,7 +789,6 @@
 		Please assign a variable and use it in the parameter.
 	d_Lang060 =	New version available
 	d_Lang061 =	Would you like to download it now?
-		
 		To disable automatic checks select Help > Check on startup
 	d_Lang062 =	You already have the most recent version.
 	d_Lang063 =	An error occured while checking.
@@ -801,7 +798,6 @@
 	d_Lang067 =	Show this window on startup
 	d_Lang068 =	Tips:
 	d_Lang069 =	A lot of time and effort has gone into the development of Pulover's Macro Creator. If you find it useful, please consider showing your appreciation with a donation.
-		
 		Donating or not, there will be no difference in its features and functionality.
 	d_Lang070 =	Donate...
 	d_Lang071 =	No, thanks
@@ -877,73 +873,29 @@
 		You can run advanced functions such as SubStr and RegExReplace from the Functions window (Insert > If Statements / Variables / Functions). Or run your own functions from external AutoHotkey scripts.
 		
 ; 19. Tooltips		
-	AutoKey_TT =	Hotkey to play Macro
-	ManKey_TT =	Hotkey to play Macro "step-by-step"
-	AbortKey_TT =	Hotkey to stop playback
-	PauseKey_TT =	Hotkey to pause playback
-	RecKey_TT =	Backspace to clear
-	RecNewKey_TT =	Backspace to clear
-	JoyKey_TT =	Press a button on the joystick
-	ReptC_TT =	0 = infinite
 	A_List_TT =	Select Macro (Ctrl+1~0)
-	OSHK_TT =	Select Macro
-	OSHKEd_TT =	Select Macro
-	ApplyT_TT =	Apply
+	AbortKey_TT =	Hotkey to stop playback
+	ActiveObj_TT =	Tries to connect to an Active COM Object
 	ApplyI_TT =	Apply
 	ApplyL_TT =	Insert from Box (Insert)
-	CmdFilter_TT =	Filter by type
-	InsertKey_TT =	Insert Keystroke (Ctrl+Insert)
-	InsertKeyT_TT =	Insert Keystroke
-	DefaultMacro_TT =	Select file to load on program startup
-	VarCopyA_TT =	Copy current variable contents
-	VarCopyB_TT =	Copy current variable contents
-	Reset_TT =	Clear variable contents
-	Screenshot_TT =	Make Screenshot
-	ColorPick_TT =	Get Pixel on Screen
-	PicPrev_TT =	Double-Click to open Image
-	CoordPixel_TT =	Coordinate mode
-	VariatT_TT =	Shades of variation
-	IconN_TT =	Number of the icon group
-	TransC_TT =	Transparent color
-	WScale_TT =	Width scale
-	HScale_TT =	Height scale
-	Fast_TT =	Uses a faster searching method (recommended)
-	RGB_TT =	Causes color to be interpreted as an RGB value instead of BGR
-	LoopLVColor_TT =	Click to pick a color
-	IfLVColor_TT =	Click to pick a color
-	RefreshIEW_TT =	Refresh List
-	ActiveObj_TT =	Tries to connect to an Active COM Object
-	TimeoutM_TT =	0 = infinite
-	ExpView_TT =	Advanced Editor
-	ExpView2_TT =	Advanced Editor
-	OSProgB_TT =	Display Progress Bar
-	OSTrans_TT =	Opacity
-	MRel_TT =	Movements relative to current position.
-		Or if used with Control: Position relative to Control.
-	Raw_TT =	The SendRaw command interprets all characters literally
-		rather than translating {Enter} to an ENTER keystroke,
-		^c to Control-C, etc.
-	ComText_TT =	When not in raw mode, the following characters
-		are treated as modifiers (these modifiers affect
-		only the very next key): !, +, ^, #
-	ComEvent_TT =	The rate at which keystrokes are sent is determined by key delay.
+	ApplyT_TT =	Apply
+	AutoKey_TT =	Hotkey to play Macro
 	Clip_TT =	Temporarily uses Clipboard to send the text.
 		When the operation is completed, the script
 		restores the original clipboard contents.
 		(leave Text empty to paste current content)
+	CmdFilter_TT =	Filter by type
+	CmdSort_TT =	Sort alphabetically
+	ColorPick_TT =	Get Pixel on Screen
+	ComEvent_TT =	The rate at which keystrokes are sent is determined by key delay.
+	ComText_TT =	When not in raw mode, the following characters
+		are treated as modifiers (these modifiers affect
+		only the very next key): !, +, ^, #
+	CoordPixel_TT =	Coordinate mode
+	DefaultMacro_TT =	Select file to load on program startup
 	EditPaste_TT =	Pastes String at the caret/insert position
 		in an Edit control (this does not affect
 		the contents of the clipboard).
-	SetText_TT =	Changes the text of a control.
-	RelKey_TT =	Records Mouse movements and clicks as offsets
-		from previous position when held.
-	ToggleC_TT =	Activate Relative Recording when key state is on.
-	Relative_TT =	Coordinates are relative to the active window.
-	Screen_TT =	Coordinates are relative to the desktop (entire screen).
-	IncFiles_TT =	Include files / Values
-	IncFolders_TT =	Include directories (folders) / Keys
-	Recurse_TT =	Recurse into subdirectories (subfolders) / Subkeys
-	CmdSort_TT =	Sort alphabetically
 	Ex_EdScript_TT =	Open in external editor
 	ExprLink2_TT =	- DO NOT ENCLOSE VARIABLES IN PERCENT SIGNS HERE.
 		- Most of AHK expressions are supported.
@@ -955,16 +907,90 @@
 		- You may use strings, variables, arrays and functions.
 		- To use strings, enclose them in quotes, e.g.: var = "a".
 		- Multiple Statements are supported, e.g.: var = "a" || InStr(var, "b").
+	ExpView_TT =	Advanced Editor
+	ExpView2_TT =	Advanced Editor
+	Fast_TT =	Uses a faster searching method (recommended)
+	HScale_TT =	Height scale
+	IconN_TT =	Number of the icon group
+	IfLVColor_TT =	Click to pick a color
+	IncFiles_TT =	Include files / Values
+	IncFolders_TT =	Include directories (folders) / Keys
+	InsertKey_TT =	Insert Keystroke (Ctrl+Insert)
+	InsertKeyT_TT =	Insert Keystroke
+	JoyKey_TT =	Press a button on the joystick
+	LoopLVColor_TT =	Click to pick a color
+	ManKey_TT =	Hotkey to play Macro "step-by-step"
+	MRel_TT =	Movements relative to current position.
+		Or if used with Control: Position relative to Control.
+	OSHK_TT =	Select Macro
+	OSHKEd_TT =	Select Macro
+	OSProgB_TT =	Display Progress Bar
+	OSTrans_TT =	Opacity
+	PauseKey_TT =	Hotkey to pause playback
+	PicPrev_TT =	Double-Click to open Image
+	Raw_TT =	The SendRaw command interprets all characters literally
+		rather than translating {Enter} to an ENTER keystroke,
+		^c to Control-C, etc.
+	RecKey_TT =	Backspace to clear
+	RecNewKey_TT =	Backspace to clear
+	Recurse_TT =	Recurse into subdirectories (subfolders) / Subkeys
+	RefreshIEW_TT =	Refresh List
+	Relative_TT =	Coordinates are relative to the active window.
+	RelKey_TT =	Records Mouse movements and clicks as offsets
+		from previous position when held.
+	ReptC_TT =	0 = infinite
+	Reset_TT =	Clear variable contents
+	RGB_TT =	Causes color to be interpreted as an RGB value instead of BGR
+	Screen_TT =	Coordinates are relative to the desktop (entire screen).
+	Screenshot_TT =	Make Screenshot
+	SetText_TT =	Changes the text of a control.
+	TimeoutM_TT =	0 = infinite
+	ToggleC_TT =	Activate Relative Recording when key state is on.
+	TransC_TT =	Transparent color
+	VarCopyA_TT =	Copy current variable contents
+	VarCopyB_TT =	Copy current variable contents
+	VariatT_TT =	Shades of variation
+	WScale_TT =	Width scale
 		
 ; 20. Tooltips from AHK Docs		
-	ExpList_TT =	Double-Click to edit
+	Ex_AF_TT =	Skips the gentle method of activating a window
+		and goes straight to the forceful method.
+	Ex_DH_TT =	Determines whether invisible windows are 'seen' by the script.
+	Ex_EdVars_TT =	Select global variables to be exported.
+	Ex_HK_TT =	Forces the use of the hook to implement all
+		or some keyboard hotkeys.
 	Ex_IfDir_TT =	Creates context-sensitive hotkeys and hotstrings depending
 		on the type of window that is active or exists.
 	Ex_IfDirType_TT =	Creates context-sensitive hotkeys and hotstrings depending
 		on the type of window that is active or exists.
+	Ex_IN_TT =	Causes the script to behave as though the specified
+		file's contents are present at this exact position.
+	Ex_MD_TT =	Sets the delay that will occur after
+		each mouse movement or click.
+	Ex_MT_TT =	Sets the maximum number of simultaneous
+		threads per hotkey or hotstring.
+	Ex_NT_TT =	Disables the showing of a tray icon.
+	Ex_PT_TT =	Keeps a script permanently running
+		(that is, until the user closes it or ExitApp is encountered).
+	Ex_SB_TT =	Determines how fast a script will run (affects CPU utilization).
+	Ex_SC_TT =	Sets the delay that will occur after
+		each control-modifying command.
+	Ex_SI_TT =	Determines whether a script is allowed to run again when it is already running.
+	Ex_SK_TT =	Sets the delay that will occur after each
+		keystroke sent by Send or ControlSend.
 	Ex_SM_TT =	Makes Send synonymous with SendInput or SendPlay rather than
 		the default (SendEvent). Also makes Click and MouseMove/Click/Drag
 		use the specified method.
+	Ex_ST_TT =	Sets the matching behavior of the WinTitle parameter in commands such as WinWait.
+	Ex_SW_TT =	Sets the delay that will occur after
+		each windowing command, such as WinActivate.
+	Ex_UV_TT =	Export global variables.
+	ExpList_TT =	Double-Click to edit
+	SI_TT =	The word FORCE skips the dialog box and replaces the old instance automatically,
+		which is similar in effect to the Reload command.
+		The word IGNORE skips the dialog box and leaves the old instance running.
+		In other words, attempts to launch an already-running script are ignored.
+		The word OFF allows multiple instances of the script to run concurrently.
 	SM_TT =	Event: This is the starting default used by all scripts.
 		It uses the SendEvent method for Send, SendRaw, Click, and MouseMove/Click/Drag.
 		Input: Switches to the SendInput method for Send, SendRaw, Click, and MouseMove/Click/Drag.
@@ -972,40 +998,10 @@
 		when SendInput is unavailable, it reverts to Play mode (below). This also causes
 		the SendInput command itself to revert to Play mode when SendInput is unavailable.
 		Play: Switches to the SendPlay method for Send, SendRaw, Click, and MouseMove/Click/Drag.
-	Ex_SI_TT =	Determines whether a script is allowed to run again when it is already running.
-	SI_TT =	The word FORCE skips the dialog box and replaces the old instance automatically,
-		which is similar in effect to the Reload command.
-		The word IGNORE skips the dialog box and leaves the old instance running.
-		In other words, attempts to launch an already-running script are ignored.
-		The word OFF allows multiple instances of the script to run concurrently.
-	Ex_ST_TT =	Sets the matching behavior of the WinTitle parameter in commands such as WinWait.
 	ST_TT =	1: A window's title must start with the specified WinTitle to be a match.
 		2: A window's title can contain WinTitle anywhere inside it to be a match.
 		3: A window's title must exactly match WinTitle to be a match.
 		RegEx: Changes WinTitle, WinText, ExcludeTitle, and ExcludeText to be regular expressions.
-	Ex_DH_TT =	Determines whether invisible windows are 'seen' by the script.
-	Ex_AF_TT =	Skips the gentle method of activating a window
-		and goes straight to the forceful method.
-	Ex_HK_TT =	Forces the use of the hook to implement all
-		or some keyboard hotkeys.
-	Ex_SK_TT =	Sets the delay that will occur after each
-		keystroke sent by Send or ControlSend.
-	Ex_MD_TT =	Sets the delay that will occur after
-		each mouse movement or click.
-	Ex_SC_TT =	Sets the delay that will occur after
-		each control-modifying command.
-	Ex_SW_TT =	Sets the delay that will occur after
-		each windowing command, such as WinActivate.
-	Ex_SB_TT =	Determines how fast a script will run (affects CPU utilization).
-	Ex_NT_TT =	Disables the showing of a tray icon.
-	Ex_IN_TT =	Causes the script to behave as though the specified
-		file's contents are present at this exact position.
-	Ex_PT_TT =	Keeps a script permanently running
-		(that is, until the user closes it or ExitApp is encountered).
-	Ex_MT_TT =	Sets the maximum number of simultaneous
-		threads per hotkey or hotstring.
-	Ex_UV_TT =	Export global variables.
-	Ex_EdVars_TT =	Select global variables to be exported.
 		
 ; 21. Operators		
 	As_Oper_1 =	Assign
@@ -1024,47 +1020,47 @@
 	Co_Oper_7 =	Less or equal
 		
 ; 22. IE Commands Tips		
-	Tip_Navigate =	Navigates to a URL or path.
-	Tip_Value =	Gets or sets the value of the object.
-	Tip_Focus =	Sets focus to the object.
+	Tip_Checked =	Sets or retrieves the state of the check box or radio button.
 	Tip_Click =	Simulates a click on the object.
-	Tip_Submit =	Submits the form.
-	Tip_GoHome =	Navigates to the current home or start page.
+	Tip_Focus =	Sets focus to the object.
 	Tip_GoBack =	Navigates backward one item in the history list.
 	Tip_GoForward =	Navigates forward one item in the history list.
+	Tip_GoHome =	Navigates to the current home or start page.
 	Tip_GoSearch =	Navigates to the current search page.
-	Tip_Refresh =	Reloads the currently displayed page.
-	Tip_Stop =	Cancels a pending navigation or download.
-	Tip_Quit =	Closes the page.
+	Tip_Height =	Sets or retrieves the height of the object.
+	Tip_Href =	Sets or retrieves a destination URL or an anchor point.
+	Tip_InnerHTML =	Sets or retrieves the HTML of the object.
+	Tip_InnerText =	Sets or gets the text of the object.
+	Tip_Length =	Sets or retrieves the number of objects in a collection.
 	Tip_LocationName =	Gets the path or title current page.
 	Tip_LocationURL =	Gets the URL of the current page.
-	Tip_InnerText =	Sets or gets the text of the object.
-	Tip_InnerHTML =	Sets or retrieves the HTML of the object.
+	Tip_Navigate =	Navigates to a URL or path.
 	Tip_OuterHTML =	Sets or retrieves the object and its content in HTML.
-	Tip_Href =	Sets or retrieves a destination URL or an anchor point.
-	Tip_Src =	Sets or retrieves a URL to be loaded by the object.
+	Tip_Quit =	Closes the page.
+	Tip_Refresh =	Reloads the currently displayed page.
 	Tip_SelectedIndex =	Sets or retrieves the index of the selected option in a select object. 
-	Tip_Checked =	Sets or retrieves the state of the check box or radio button.
+	Tip_Src =	Sets or retrieves a URL to be loaded by the object.
+	Tip_Stop =	Cancels a pending navigation or download.
+	Tip_Submit =	Submits the form.
 	Tip_Type =	Sets or retrieves the content type of the object.
+	Tip_Value =	Gets or sets the value of the object.
 	Tip_Width =	Sets or retrieves the width of the object.
-	Tip_Height =	Sets or retrieves the height of the object.
-	Tip_Length =	Sets or retrieves the number of objects in a collection.
 		
 ; 23. AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	Abs	Returns the absolute value of Number.
-	ASin	Returns the arcsine (the number whose sine is Number) in radians.
 	ACos	Returns the arccosine (the number whose cosine is Number) in radians.
 	Array	Creates a scriptable associative array with integer keys.
 	Asc	Returns the character code (a number between 1 and 255 (in ANSI builds) or 65535 (in Unicode builds)) for the first character in String.
+	ASin	Returns the arcsine (the number whose sine is Number) in radians.
 	ATan	Returns the arctangent (the number whose tangent is Number) in radians.
 	BlockInput	Disables or enables the user's ability to interact with the computer via keyboard and mouse.
 	Break	Exits (terminates) a loop. Valid inside any kind of loop.
 	Ceil	Returns Number rounded up to the nearest integer (without any .00 suffix).
 	Chr	Returns the single character corresponding to the character code indicated by Number.
 	Click	Clicks a mouse button at the specified coordinates. It can also hold down a button, turn the wheel, or move.
-	ClipWait	Waits until the clipboard contains data.
 	Clipboard	Pastes text from clipboard.
+	ClipWait	Waits until the clipboard contains data.
 	ComObjActive	Retrieves a registered COM object.
 	ComObjArray	Creates a SAFEARRAY for use with COM.
 	ComObjConnect	Connects a COM object's event sources to functions with a given prefix.
@@ -1119,12 +1115,12 @@
 	FileCreateShortcut	Creates a shortcut (.lnk) file.
 	FileDelete	Deletes one or more files.
 	FileEncoding	Sets the default encoding for FileRead, FileReadLine, Loop Read, FileAppend, and FileOpen.
-	FileInstall	Includes the specified file inside the compiled version of the script.
 	FileGetAttrib	Reports whether a file or folder is read-only, hidden, etc.
 	FileGetShortcut	Retrieves information about a shortcut (.lnk) file, such as its target file.
 	FileGetSize	Retrieves the size of a file.
 	FileGetTime	Retrieves the datetime stamp of a file or folder.
 	FileGetVersion	Retrieves the version of a file.
+	FileInstall	Includes the specified file inside the compiled version of the script.
 	FileMove	Moves or renames one or more files.
 	FileMoveDir	Moves a folder along with all its sub-folders and files. It can also rename a folder.
 	FileOpen	Provides object-oriented file I/O.
@@ -1153,12 +1149,12 @@
 	HasKey	Returns true if Key is associated with a value.
 	if	Specifies the command(s) to perform if the comparison of a variable to a value evalutes to TRUE. When more than one command is present, enclose them in a block (braces).
 	if (expression)	Specifies the command(s) to perform if an expression evaluates to TRUE.
+	If A_Index	Checks if the current loop iteration matchs a specified a number.
+	If Clipboard	Checks if the Clipboard text is matchs a specified string.
+	If ErrorLevel	Checks if a specified image or pixel was found in the screen.
 	If var [not] between	Checks whether a variable's contents are numerically or alphabetically between two values (inclusive).
 	If var [not] in/contains MatchList 	Checks whether a variable's contents match one of the items in a list.
 	If var is [not] type	Checks whether a variable's contents are numeric, uppercase, etc.
-	If Clipboard	Checks if the Clipboard text is matchs a specified string.
-	If ErrorLevel	Checks if a specified image or pixel was found in the screen.
-	If A_Index	Checks if the current loop iteration matchs a specified a number.
 	IfEqual/IfNotEqual	Compares a variable to a value for equality. Synonymous with: if Var = Value | if Var <> Value.
 	IfExist / IfNotExist / FileExist	Checks for the existence of a file or folder.
 	IfGreater / IfGreaterOrEqual	Compares a variable to a value. Synonymous with: if Var > Value | if Var >= Value.
@@ -1180,10 +1176,10 @@
 	Labels	A label identifies a line of code, and can be used as a Goto target or to form a subroutine.
 	Length	Returns the length of a linear array beginning at position 1.
 	ListVars	Displays the script's variables: their names and current contents.
-	Log	Returns the logarithm (base 10) of Number.
 	Ln	Returns the natural logarithm (base e) of Number.
-	Loop (normal) 	Perform a series of commands repeatedly: either the specified number of times or until break is encountered.
+	Log	Returns the logarithm (base 10) of Number.
 	Loop (files & folders)	Retrieves the specified files or folders, one at a time.
+	Loop (normal) 	Perform a series of commands repeatedly: either the specified number of times or until break is encountered.
 	Loop (parse a string)	Retrieves substrings (fields) from a string, one at a time.
 	Loop (read file contents)	Retrieves the lines in a text file, one at a time (performs better than FileReadLine).
 	Loop (registry)	Retrieves the contents of the specified registry subkey, one item at a time.
@@ -1212,12 +1208,12 @@
 	Progress	Creates or updates a window containing a progress bar.
 	Push	Appends values to the end of an array.
 	Random	Generates a pseudo-random number.
+	RegDelete	Deletes a subkey or value from the registry.
 	RegExMatch	Determines whether a string contains a pattern (regular expression).
 	RegExReplace	Replaces occurrences of a pattern (regular expression) inside a string.
-	RegDelete	Deletes a subkey or value from the registry.
+	RegisterCallback	Creates a machine-code address that when called, redirects the call to a function in the script.
 	RegRead	Reads a value from the registry.
 	RegWrite	Writes a value to the registry.
-	RegisterCallback	Creates a machine-code address that when called, redirects the call to a function in the script.
 	RemoveAt	Removes items from the given position in a linear array.
 	Return	Returns from a subroutine to which execution had previously jumped via function-call, Gosub, Hotkey activation, GroupActivate, or other means.
 	Round	If N is omitted or 0, Number is rounded to the nearest integer. If N is positive number, Number is rounded to N decimal places. If N is negative, Number is rounded by N digits to the left of the decimal point.
@@ -1235,8 +1231,8 @@
 	SetKeyDelay	Sets the delay that will occur after each keystroke sent by Send or ControlSend.
 	SetMouseDelay	Sets the delay that will occur after each mouse movement or click.
 	SetNumlockState	Sets the state of the Numlock key. Can also force the key to stay on or off.
-	SetScrollLockState	Sets the state of the Scrolllock key. Can also force the key to stay on or off.
 	SetRegView	Allows registry commands in a 32-bit script to access the 64-bit registry view and vice versa.
+	SetScrollLockState	Sets the state of the Scrolllock key. Can also force the key to stay on or off.
 	SetTimer	Causes a subroutine to be launched automatically and repeatedly at a specified time interval.
 	Shutdown	Shuts down, restarts, or logs off the system.
 	Sin	Returns the trigonometric sine of Number.
@@ -1249,13 +1245,12 @@
 	SoundSet	Changes various settings of a sound device (master mute, master volume, etc.)
 	SoundSetWaveVolume	Changes the wave output volume for a sound device.
 	SplashImage	Creates or updates a window containing a JPG, GIF, or BMP image.
-	SplashTextOn	Creates a customizable text popup window.
 	SplashTextOff	Closes the above window.
+	SplashTextOn	Creates a customizable text popup window.
 	SplitPath	Separates a file name or URL into its name, directory, extension, and drive.
 	Sqrt	Returns the square root of Number.
 	StatusBarGetText	Retrieves the text from a standard status bar control.
 	StatusBarWait	Waits until a window's status bar contains the specified string.
-	StrPut / StrGet	Copies a string to or from a memory address, optional converting it between code pages.
 	StringCaseSense	Determines whether string comparisons are case sensitive (default is "not case sensitive").
 	StringGetPos / InStr	Retrieves the position of the specified substring within a string.
 	StringLeft	Retrieves a number of characters from the left-hand side of a string.
@@ -1268,6 +1263,7 @@
 	StringTrimLeft	Removes a number of characters from the left-hand side of a string.
 	StringTrimRight	Removes a number of characters from the right-hand side of a string.
 	StringUpper	Converts a string to uppercase.
+	StrPut / StrGet	Copies a string to or from a memory address, optional converting it between code pages.
 	Suspend	Disables or enables all or selected hotkeys and hotstrings.
 	SysGet	Retrieves screen resolution, multi-monitor info, dimensions of system objects, and other system properties.
 	Tan	Returns the trigonometric tangent of Number.
@@ -1285,10 +1281,10 @@
 	WinActive	Returns the Unique ID (HWND) of the active window if it matches the specified criteria.
 	WinClose	Closes the specified window.
 	WinExist	Checks if the specified window exists.
+	WinGet	Retrieves the specified window's unique ID, process ID, process name, or a list of its controls. It can also retrieve a list of all windows matching the specified criteria.
 	WinGetActiveStats	Combines the functions of WinGetActiveTitle and WinGetPos into one command.
 	WinGetActiveTitle	Retrieves the title of the active window.
 	WinGetClass	Retrieves the specified window's class name.
-	WinGet	Retrieves the specified window's unique ID, process ID, process name, or a list of its controls. It can also retrieve a list of all windows matching the specified criteria.
 	WinGetPos	Retrieves the position and size of the specified window.
 	WinGetText	Retrieves the text from the specified window.
 	WinGetTitle	Retrieves the title of the specified window.

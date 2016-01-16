@@ -73,7 +73,6 @@
 	i_Lang019 =	&Windows-Meddelanden
 	i_Lang020 =	&Hitta ett kommando
 		
-		
 ; 06. Edit Sub Menu		
 	e_Lang001 =	&Duplicera
 	e_Lang002 =	&Redigera kommentar
@@ -97,7 +96,6 @@
 	e_Lang020 =	Ta &bort alla grupper
 	e_Lang021 =	&Kollapsa alla
 	e_Lang022 =	&Expandera alla
-		
 		
 ; 07. Select Sub Menu		
 	s_Lang001 =	&Markera allt
@@ -153,6 +151,7 @@
 	o_Lang013 =	&Ta bort standardfilen
 	o_Lang014 =	Standa&rd Snabbtangenter
 	o_Lang015 =	Standardinst&ällningar
+	o_Lang016 =	&Språkredigerare
 		
 ; 10. Donate Sub Menu		
 	p_Lang001 =	&PayPal donation
@@ -761,7 +760,6 @@
 	d_Lang042 =	Ogiltig operatör.
 		Följande aktörer accepteras:
 		=, ==, <>,! =,>, <,> =, <=
-		
 		Exempel:
 		MyVar > 1
 		MyVar = `%A_DDDD`%
@@ -791,7 +789,6 @@
 		Vänligen tilldela en variabel och använda den i parametern.
 	d_Lang060 =	En ny version tillgänglig
 	d_Lang061 =	Vill du ladda ner den nu?
-		
 		Vill du avaktivera automatiska Updatering  väljer du Hjälp > Kontrollera updatering vid uppstart
 	d_Lang062 =	Du har redan den senaste versionen.
 	d_Lang063 =	Ett fel inträffade vid kontrollen.
@@ -801,7 +798,6 @@
 	d_Lang067 =	Visa det här fönstret vid start
 	d_Lang068 =	Tips:
 	d_Lang069 =	Mycket tid och ansträngning har gått till utveckling av Pulover's Macro Creator. Om du tycker det är bra, kan du överväga att visa din uppskattning med en donation.
-		
 		Donera eller inte, kommer det inte vara någon skillnad i sina funktioner och funktionalitet.
 	d_Lang070 =	Donate...
 	d_Lang071 =	NEJ TACK
@@ -877,73 +873,29 @@
 		Du kan köra avancerade funktioner såsom SUBSTR och RegExReplace från funktionsfönstret (Sätt> Om Uttalanden / variabler / funktioner). Eller köra egna funktioner från externa AutoHotkey skript.
 		
 ; 19. Tooltips		
-	AutoKey_TT =	Snabbknappen till spela Makro
-	ManKey_TT =	Snabbknappen till spela Macro "steg-för-steg"
-	AbortKey_TT =	Hotkey för att stoppa uppspelningen
-	PauseKey_TT =	Hotkey för att pausa uppspelningen
-	RecKey_TT =	Backsteg för att radera
-	RecNewKey_TT =	Backsteg för att radera
-	JoyKey_TT =	Tryck på en knapp på joysticken
-	ReptC_TT =	0 = oändlig
 	A_List_TT =	Välj Makro (Ctrl+1~0)
-	OSHK_TT =	Välj Makro
-	OSHKEd_TT =	Välj Makro
-	ApplyT_TT =	Ansök
+	AbortKey_TT =	Hotkey för att stoppa uppspelningen
+	ActiveObj_TT =	Försöker ansluta till en Active COM objekt
 	ApplyI_TT =	Ansök
 	ApplyL_TT =	Infoga från rutan (Insert)
-	CmdFilter_TT =	Filtrera efter typ
-	InsertKey_TT =	Infoga Tangenttryckning (Ctrl+Insert)
-	InsertKeyT_TT =	Infoga Tangenttryckning
-	DefaultMacro_TT =	Välj fil att ladda om programmet startar
-	VarCopyA_TT =	Kopiera befintliga variabla innehåll
-	VarCopyB_TT =	Kopiera befintliga variabla innehåll
-	Reset_TT =	För tydliga varierande innehåll
-	Screenshot_TT =	Gör Skärmdump
-	ColorPick_TT =	Få pixel på skärmen
-	PicPrev_TT =	Dubbelklicka för att öppna bild
-	CoordPixel_TT =	Koordinat-läge
-	VariatT_TT =	Nyanser av variation
-	IconN_TT =	Antal ikonen gruppen
-	TransC_TT =	Transparent färg
-	WScale_TT =	Bredd skala
-	HScale_TT =	Höjd skala
-	Fast_TT =	Använder en snabbare sökning metod (rekommenderas)
-	RGB_TT =	Orsaker färg tolkas som ett RGB-värde istället för BGR
-	LoopLVColor_TT =	Klicka här för att välja en färg
-	IfLVColor_TT =	Klicka här för att välja en färg
-	RefreshIEW_TT =	Uppdatera lista
-	ActiveObj_TT =	Försöker ansluta till en Active COM objekt
-	TimeoutM_TT =	0 = oändlig
-	ExpView_TT =	Avancerad Redigerare
-	ExpView2_TT =	Avancerad Redigerare
-	OSProgB_TT =	Visa framstegs Takt
-	OSTrans_TT =	Opacitet
-	MRel_TT =	Rörelser i förhållande till nuvarande position.
-		Eller om de används med Kontroll: position i förhållande till Control.
-	Raw_TT =	Den SendRaw Kommandot tolkar alla tecken bokstavligen
-		snarare än att översätta {Enter} till ENTER tangenttryckning,
-		^ C till Control-C, etc.
-	ComText_TT =	När den inte rå läge följande tecken
-		behandlas som modifierare (dessa modifierare påverkar
-		endast mycket nästa tangent):, +, ^, #
-	ComEvent_TT =	Den hastighet med vilken tangenttryckningar sänds bestäms av nyckel fördröjning.
+	ApplyT_TT =	Ansök
+	AutoKey_TT =	Snabbknappen till spela Makro
 	Clip_TT =	Tillfälligt använder Urklipp för att skicka texten.
 		När operationen är klar, skriptet
 		återställer de ursprungliga innehållet i Urklipp.
 		(Lämna text tom att klistra aktuellt innehåll)
+	CmdFilter_TT =	Filtrera efter typ
+	CmdSort_TT =	Sortera alfabetiskt
+	ColorPick_TT =	Få pixel på skärmen
+	ComEvent_TT =	Den hastighet med vilken tangenttryckningar sänds bestäms av nyckel fördröjning.
+	ComText_TT =	När den inte rå läge följande tecken
+		behandlas som modifierare (dessa modifierare påverkar
+		endast mycket nästa tangent):, +, ^, #
+	CoordPixel_TT =	Koordinat-läge
+	DefaultMacro_TT =	Välj fil att ladda om programmet startar
 	EditPaste_TT =	Klistrar sträng vid cirkumflex / insättningspunkten
 		i en Edit-kontroll (detta påverkar inte
 		innehållet i Urklipp).
-	SetText_TT =	Ändrar texten till en kontroll.
-	RelKey_TT =	Records musrörelser och klick som offset
-		från tidigare ståndpunkt när den hålls.
-	ToggleC_TT =	Aktivera Relativ inspelning när nyckeln staten är på.
-	Relative_TT =	Koordinater är i förhållande till den aktiva fönstret.
-	Screen_TT =	Koordinater i förhållande till skrivbordet (hela skärmen).
-	IncFiles_TT =	Inkludera filer / Värderingar
-	IncFolders_TT =	Inkludera kataloger (mappar) / Nycklar
-	Recurse_TT =	Rekursiva i underkataloger (undermappar) / nycklar
-	CmdSort_TT =	Sortera alfabetiskt
 	Ex_EdScript_TT =	Avaa ulkoisen editorin
 	ExprLink2_TT =	- INTE BIFOGA VARIABLER I PROCENT TECKEN HÄR.
 		- De flesta av AHK uttryck stöds.
@@ -955,16 +907,90 @@
 		- Du kan använda strängar, variabler, arrayer och funktioner.
 		- Om du vill använda strängar, bifoga dem i citationstecken, till exempel: var = "a".
 		- Flera rapporter stöds, t.ex. var = "a" || InStr (var, "b").
+	ExpView_TT =	Avancerad Redigerare
+	ExpView2_TT =	Avancerad Redigerare
+	Fast_TT =	Använder en snabbare sökning metod (rekommenderas)
+	HScale_TT =	Höjd skala
+	IconN_TT =	Antal ikonen gruppen
+	IfLVColor_TT =	Klicka här för att välja en färg
+	IncFiles_TT =	Inkludera filer / Värderingar
+	IncFolders_TT =	Inkludera kataloger (mappar) / Nycklar
+	InsertKey_TT =	Infoga Tangenttryckning (Ctrl+Insert)
+	InsertKeyT_TT =	Infoga Tangenttryckning
+	JoyKey_TT =	Tryck på en knapp på joysticken
+	LoopLVColor_TT =	Klicka här för att välja en färg
+	ManKey_TT =	Snabbknappen till spela Macro "steg-för-steg"
+	MRel_TT =	Rörelser i förhållande till nuvarande position.
+		Eller om de används med Kontroll: position i förhållande till Control.
+	OSHK_TT =	Välj Makro
+	OSHKEd_TT =	Välj Makro
+	OSProgB_TT =	Visa framstegs Takt
+	OSTrans_TT =	Opacitet
+	PauseKey_TT =	Hotkey för att pausa uppspelningen
+	PicPrev_TT =	Dubbelklicka för att öppna bild
+	Raw_TT =	Den SendRaw Kommandot tolkar alla tecken bokstavligen
+		snarare än att översätta {Enter} till ENTER tangenttryckning,
+		^ C till Control-C, etc.
+	RecKey_TT =	Backsteg för att radera
+	RecNewKey_TT =	Backsteg för att radera
+	Recurse_TT =	Rekursiva i underkataloger (undermappar) / nycklar
+	RefreshIEW_TT =	Uppdatera lista
+	Relative_TT =	Koordinater är i förhållande till den aktiva fönstret.
+	RelKey_TT =	Records musrörelser och klick som offset
+		från tidigare ståndpunkt när den hålls.
+	ReptC_TT =	0 = oändlig
+	Reset_TT =	För tydliga varierande innehåll
+	RGB_TT =	Orsaker färg tolkas som ett RGB-värde istället för BGR
+	Screen_TT =	Koordinater i förhållande till skrivbordet (hela skärmen).
+	Screenshot_TT =	Gör Skärmdump
+	SetText_TT =	Ändrar texten till en kontroll.
+	TimeoutM_TT =	0 = oändlig
+	ToggleC_TT =	Aktivera Relativ inspelning när nyckeln staten är på.
+	TransC_TT =	Transparent färg
+	VarCopyA_TT =	Kopiera befintliga variabla innehåll
+	VarCopyB_TT =	Kopiera befintliga variabla innehåll
+	VariatT_TT =	Nyanser av variation
+	WScale_TT =	Bredd skala
 		
 ; 20. Tooltips from AHK Docs		
-	ExpList_TT =	Dubbelklicka för att redigera
+	Ex_AF_TT =	Hoppar den milda metoden för att aktivera en fönster
+		och går direkt till kraftfulla metoden.
+	Ex_DH_TT =	Avgör om osynliga fönster "ses" av skriptet.
+	Ex_EdVars_TT =	Välj globala variabler som skall exporteras.
+	Ex_HK_TT =	Tvingar att använda kroken för att genomföra alla
+		eller vissa tangentbordets snabbknappar.
 	Ex_IfDir_TT =	Skapar sammanhangsberoende snabbtangenter och hotstrings beroende
 		på vilken typ av fönster som är aktiv eller existerar.
 	Ex_IfDirType_TT =	Skapar sammanhangsberoende snabbtangenter och hotstrings beroende
 		på vilken typ av fönster som är aktiv eller existerar.
+	Ex_IN_TT =	Orsakar skriptet att agera som om den angivna
+		filens innehåll är närvarande vid denna exakta positionen.
+	Ex_MD_TT =	Ställer in fördröjningen som sker efter
+		varje mus rörelse eller klicka på.
+	Ex_MT_TT =	Anger det maximala antalet samtidiga
+		trådar per hotkey eller hotstring.
+	Ex_NT_TT =	Inaktiverar visning av en ikon.
+	Ex_PT_TT =	Håller ett skript permanent går
+		(det vill säga, tills användaren stänger det eller ExitApp påträffas).
+	Ex_SB_TT =	Bestämmer hur snabbt ett skript körs (påverkar CPU-användning).
+	Ex_SC_TT =	Ställer in fördröjningen som sker efter
+		varje kontroll-ändra kommandot.
+	Ex_SI_TT =	Avgör om ett skript får köras igen när det redan är igång.
+	Ex_SK_TT =	Ställer in fördröjningen som sker efter varje
+		tangenttryckning skickas med skicka eller ControlSend.
 	Ex_SM_TT =	Skicka synonymt med SendInput eller SendPlay snarare än
 		standard (sendEvent). Gör också Klicka och mouseMove / Klicka / dra
 		Använd den angivna metoden.
+	Ex_ST_TT =	Anger motsvarande beteende WinTitle parameter i kommandon som WinWait.
+	Ex_SW_TT =	Ställer in fördröjningen som sker efter
+		varje fönsterfunktion kommando, såsom WinActivate.
+	Ex_UV_TT =	Exportera globala variabler.
+	ExpList_TT =	Dubbelklicka för att redigera
+	SI_TT =	Ordet FORCE hoppar dialogrutan och ersätter den gamla instans automatiskt,
+		som liknar verkan som Reload kommandot.
+		Ordet IGNORERA hoppar dialogrutan och lämnar den gamla instans som körs.
+		Med andra ord försöker lansera en redan fungerande script ignoreras.
+		Ordet OFF tillåter flera instanser av skriptet ska köras samtidigt.
 	SM_TT =	Händelse: Detta är utgångspunkten standard som används av alla skript.
 		Den använder sendEvent metoden för Send, SendRaw, klicka och mouseMove / Klicka / dra.
 		Ingång: Växlar till SendInput metoden för Send, SendRaw, klicka och mouseMove / Klicka / dra.
@@ -972,40 +998,10 @@
 		när SendInput är tillgänglig återgår det till spelläge (nedan). Detta orsakar också
 		den SendInput kommandot själv att återgå till Play-läge när SendInput är tillgänglig.
 		Spela: Växlar till SendPlay metoden för Send, SendRaw, klicka och mouseMove / Klicka / dra.
-	Ex_SI_TT =	Avgör om ett skript får köras igen när det redan är igång.
-	SI_TT =	Ordet FORCE hoppar dialogrutan och ersätter den gamla instans automatiskt,
-		som liknar verkan som Reload kommandot.
-		Ordet IGNORERA hoppar dialogrutan och lämnar den gamla instans som körs.
-		Med andra ord försöker lansera en redan fungerande script ignoreras.
-		Ordet OFF tillåter flera instanser av skriptet ska köras samtidigt.
-	Ex_ST_TT =	Anger motsvarande beteende WinTitle parameter i kommandon som WinWait.
 	ST_TT =	1: Ett fönster titel måste börja med den angivna WinTitle att vara en match.
 		2: Ett fönster titel kan innehålla WinTitle var som helst i att det är en match.
 		3: Ett fönster titel måste exakt matcha WinTitle vara en match.
 		RegEx: Ändringar WinTitle, WinText, ExcludeTitle och ExcludeText att vara reguljära uttryck.
-	Ex_DH_TT =	Avgör om osynliga fönster "ses" av skriptet.
-	Ex_AF_TT =	Hoppar den milda metoden för att aktivera en fönster
-		och går direkt till kraftfulla metoden.
-	Ex_HK_TT =	Tvingar att använda kroken för att genomföra alla
-		eller vissa tangentbordets snabbknappar.
-	Ex_SK_TT =	Ställer in fördröjningen som sker efter varje
-		tangenttryckning skickas med skicka eller ControlSend.
-	Ex_MD_TT =	Ställer in fördröjningen som sker efter
-		varje mus rörelse eller klicka på.
-	Ex_SC_TT =	Ställer in fördröjningen som sker efter
-		varje kontroll-ändra kommandot.
-	Ex_SW_TT =	Ställer in fördröjningen som sker efter
-		varje fönsterfunktion kommando, såsom WinActivate.
-	Ex_SB_TT =	Bestämmer hur snabbt ett skript körs (påverkar CPU-användning).
-	Ex_NT_TT =	Inaktiverar visning av en ikon.
-	Ex_IN_TT =	Orsakar skriptet att agera som om den angivna
-		filens innehåll är närvarande vid denna exakta positionen.
-	Ex_PT_TT =	Håller ett skript permanent går
-		(det vill säga, tills användaren stänger det eller ExitApp påträffas).
-	Ex_MT_TT =	Anger det maximala antalet samtidiga
-		trådar per hotkey eller hotstring.
-	Ex_UV_TT =	Exportera globala variabler.
-	Ex_EdVars_TT =	Välj globala variabler som skall exporteras.
 		
 ; 21. Operators		
 	As_Oper_1 =	Tilldela
@@ -1024,47 +1020,47 @@
 	Co_Oper_7 =	Mindre eller lika
 		
 ; 22. IE Commands Tips		
-	Tip_Navigate =	Navigerar till en webbadress eller sökväg.
-	Tip_Value =	Hämtar eller ställer in värdet för objektet.
-	Tip_Focus =	Ställer fokus på objektet.
+	Tip_Checked =	Ställer eller hämtar tillståndet i kryssrutan eller alternativknappen.
 	Tip_Click =	Simulerar ett klick på objektet.
-	Tip_Submit =	Skickar formuläret.
-	Tip_GoHome =	Navigerar till den aktuella hemmet eller startsidan.
+	Tip_Focus =	Ställer fokus på objektet.
 	Tip_GoBack =	Navigerar bakåt en post i historiklistan.
 	Tip_GoForward =	Navigerar framåt en post i historiklistan.
+	Tip_GoHome =	Navigerar till den aktuella hemmet eller startsidan.
 	Tip_GoSearch =	Navigerar till den aktuella söksidan.
-	Tip_Refresh =	Laddar den visade sidan.
-	Tip_Stop =	Avbryter en pågående navigering eller nedladdning.
-	Tip_Quit =	Stänger sidan.
+	Tip_Height =	Ställer eller hämtar objektets höjd.
+	Tip_Href =	Ställer eller hämtar ett destinationsadress eller en fästpunkt.
+	Tip_InnerHTML =	Ställer eller hämtar HTML av objektet.
+	Tip_InnerText =	Ställer eller får texten i objektet.
+	Tip_Length =	Ställer eller hämtar antalet objekt i en samling.
 	Tip_LocationName =	Hämtar sökvägen eller titel aktuella sidan.
 	Tip_LocationURL =	Hämtar URL för den aktuella sidan.
-	Tip_InnerText =	Ställer eller får texten i objektet.
-	Tip_InnerHTML =	Ställer eller hämtar HTML av objektet.
+	Tip_Navigate =	Navigerar till en webbadress eller sökväg.
 	Tip_OuterHTML =	Anger eller hämtar objektet och dess innehåll i HTML.
-	Tip_Href =	Ställer eller hämtar ett destinationsadress eller en fästpunkt.
-	Tip_Src =	Ställer eller hämtar en URL som ska laddas av objektet.
+	Tip_Quit =	Stänger sidan.
+	Tip_Refresh =	Laddar den visade sidan.
 	Tip_SelectedIndex =	Ställer eller hämtar index för valda alternativet i en utvald objekt.
-	Tip_Checked =	Ställer eller hämtar tillståndet i kryssrutan eller alternativknappen.
+	Tip_Src =	Ställer eller hämtar en URL som ska laddas av objektet.
+	Tip_Stop =	Avbryter en pågående navigering eller nedladdning.
+	Tip_Submit =	Skickar formuläret.
 	Tip_Type =	Ställer eller hämtar innehållstypen för objektet.
+	Tip_Value =	Hämtar eller ställer in värdet för objektet.
 	Tip_Width =	Ställer eller hämtar objektets bredd.
-	Tip_Height =	Ställer eller hämtar objektets höjd.
-	Tip_Length =	Ställer eller hämtar antalet objekt i en samling.
 		
 ; 23. AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	Abs	Returnerar det absoluta värdet för Antal .
-	ASin	Returnerar arcus sinus ( antalet vars sinus är Number ) i radianer .
-	ACos	Returnerar arcus ( det tal vars cosinus är Tal ) i radianer .
+	ACos	Returnerar arcus (det tal vars cosinus är Tal) i radianer .
 	Array	Skapar ett skript associativ array med heltal nycklar.
-	Asc	Returnerar tecknet koden ( ett tal mellan 1 och 255 ( i ANSI byggen ) eller 65535 ( i Unicode byggen ) ) för det första tecknet i Sträng .
-	ATan	Returnerar arcus ( antalet vars tangent är Number ) i radianer .
+	Asc	Returnerar tecknet koden (ett tal mellan 1 och 255 (i ANSI byggen) eller 65535 (i Unicode byggen)) för det första tecknet i Sträng .
+	ASin	Returnerar arcus sinus (antalet vars sinus är Number) i radianer .
+	ATan	Returnerar arcus (antalet vars tangent är Number) i radianer .
 	BlockInput	Avaktiverar eller gör det möjligt för användarens förmåga att interagera med datorn via tangentbord och mus.
-	Break	Avslutar ( slutar ) en loop. Gäller inuti någon slags loop .
-	Ceil	Returnerar tal avrundat uppåt till närmaste heltal ( utan .00 suffix ) .
+	Break	Avslutar (slutar) en loop. Gäller inuti någon slags loop .
+	Ceil	Returnerar tal avrundat uppåt till närmaste heltal (utan .00 suffix) .
 	Chr	Returnerar enstaka tecken motsvarar det tecken -nummer efter nummer .
 	Click	Klickar på en musknapp på de angivna koordinaterna . Det kan också hålla ned en knapp , vrid ratten , eller flytta .
-	ClipWait	Väntar tills klippbordet innehåller data .
 	Clipboard	Klistrar text från urklipp.
+	ClipWait	Väntar tills klippbordet innehåller data .
 	ComObjActive	Hämtar ett registrerat COM-objekt .
 	ComObjArray	Skapar en SAFEARRAY för användning med COM .
 	ComObjConnect	Ansluter en COM -objektets händelsekällor till funktioner med ett givet prefix .
@@ -1081,7 +1077,7 @@
 	Continue	Hoppar resten av strömslingan iteration och börjar en ny. Gäller inuti någon slags loop .
 	Control	Gör en mängd olika ändringar i en kontroll.
 	ControlClick	Skickar en musknapp eller mushjulet händelse till en kontroll .
-	ControlEditPaste	Klistrar String vid cirkumflex / insättningspunkt i en Edit -kontroll ( detta påverkar inte innehållet i klippbordet ) .
+	ControlEditPaste	Klistrar String vid cirkumflex / insättningspunkt i en Edit -kontroll (detta påverkar inte innehållet i klippbordet) .
 	ControlFocus	Ställer in fokus på en viss kontroll i ett fönster .
 	ControlGet	Hämtar olika typer av information om en kontroll.
 	ControlGetFocus	Hämtar som styr i målet fönstret har input fokus , om något .
@@ -1098,33 +1094,33 @@
 	DetectHiddenWindows	Avgör om osynliga fönster är " ses " av skriptet .
 	DllCall	Anropar en funktion inuti en DLL , såsom en vanlig Windows API-funktionen .
 	Drive	Matar / drar in facket i en CD-eller DVD-enhet , eller ställer en enhet volym etikett .
-	DriveGet	Hämtar olika typer av information om datorns enhet ( er ) .
+	DriveGet	Hämtar olika typer av information om datorns enhet (er) .
 	DriveSpaceFree	Hämtar ledigt diskutrymme för en enhet , i megabyte .
 	Edit	Öppnar det aktuella skriptet för redigering i den tillhörande editorn .
-	Else	Anger kommando ( s ) att utföra om en IF-satsen utvärderas till false . När mer än ett kommando är närvarande , bifoga dem i ett block ( hängslen ) .
-	EnvAdd	Ställer en variabel till summan av sig själv plus det givna värdet ( kan också lägga till eller dra ifrån tid från ett datum - tidsvärde ) . Synonymt med : Var + = Värde .
+	Else	Anger kommando (s) att utföra om en IF-satsen utvärderas till false . När mer än ett kommando är närvarande , bifoga dem i ett block (hängslen) .
+	EnvAdd	Ställer en variabel till summan av sig själv plus det givna värdet (kan också lägga till eller dra ifrån tid från ett datum - tidsvärde) . Synonymt med : Var + = Värde .
 	EnvDiv	Ställer en variabel för sig själv dividerat med det givna värdet . Synonymt med : Var / = Värde .
 	EnvGet	Hämtar en miljövariabel .
 	EnvMult	Ställer en variabel för sig själv gånger det angivna värdet . Synonymt med : Var * = Värde .
 	EnvSet	Skriver ett värde till en variabel i miljön.
-	EnvSub	Ställer en variabel för sig minus det angivna värdet ( kan även jämföra tids- värden ) . Synonymt med : Var - = Värde .
-	EnvUpdate	Meddelar OS och alla program som körs som miljövariabel ( s ) har ändrats .
-	Exit	Avslutar den aktuella tråden eller ( om skriptet inte är ihållande och innehåller inga snabbtangenter ) hela manuset .
+	EnvSub	Ställer en variabel för sig minus det angivna värdet (kan även jämföra tids- värden) . Synonymt med : Var - = Värde .
+	EnvUpdate	Meddelar OS och alla program som körs som miljövariabel (s) har ändrats .
+	Exit	Avslutar den aktuella tråden eller (om skriptet inte är ihållande och innehåller inga snabbtangenter) hela manuset .
 	ExitApp	Avslutar scriptet villkorslöst .
-	Exp	Returer e ( vilket är ca 2,71828182845905 ) upphöjt till N: te makten .
-	FileAppend	Skriver text till slutet av en fil ( först att skapa filen , om nödvändigt).
+	Exp	Returer e (vilket är ca 2,71828182845905) upphöjt till N: te makten .
+	FileAppend	Skriver text till slutet av en fil (först att skapa filen , om nödvändigt).
 	FileCopy	Kopierar en eller flera filer .
-	FileCopyDir	Kopierar en mapp tillsammans med alla dess undermappar och filer ( liknar xcopy ) .
+	FileCopyDir	Kopierar en mapp tillsammans med alla dess undermappar och filer (liknar xcopy) .
 	FileCreateDir	Skapar en mapp .
-	FileCreateShortcut	Skapar en genväg ( . Lnk ) fil .
+	FileCreateShortcut	Skapar en genväg (. Lnk) fil .
 	FileDelete	Tar bort en eller flera filer .
 	FileEncoding	Anger standard kodning för FileRead , FileReadLine , Loop Read, FileAppend och ArkivÖppna .
-	FileInstall	Innehåller den angivna filen inuti kompilerade versionen av manuset .
 	FileGetAttrib	Rapporter om en fil eller mapp är skrivskyddad , dold , etc.
-	FileGetShortcut	Hämtar information om en genväg ( . Lnk ) filer , såsom dess målfilen .
+	FileGetShortcut	Hämtar information om en genväg (. Lnk) filer , såsom dess målfilen .
 	FileGetSize	Hämtar storleken på en fil .
 	FileGetTime	Hämtar datetime stämpel på en fil eller mapp .
 	FileGetVersion	Hämtar version av en fil .
+	FileInstall	Innehåller den angivna filen inuti kompilerade versionen av manuset .
 	FileMove	Flyttar eller döper om en eller flera filer .
 	FileMoveDir	Flyttar en mapp tillsammans med alla dess undermappar och filer . Det kan också byta namn på en mapp .
 	FileOpen	Ger objektorienterad fil I / O.
@@ -1133,11 +1129,11 @@
 	FileRecycle	Skickar en fil eller katalog till papperskorgen , om möjligt .
 	FileRecycleEmpty	Tömmer papperskorgen .
 	FileRemoveDir	Raderar en mapp .
-	FileSelectFile	Visar en vanlig dialogruta som tillåter användaren att öppna eller spara filen ( er ) .
+	FileSelectFile	Visar en vanlig dialogruta som tillåter användaren att öppna eller spara filen (er) .
 	FileSelectFolder	Visar en vanlig dialogruta som tillåter användaren att välja en mapp .
 	FileSetAttrib	Ändrar attributen för en eller flera filer eller mappar . Jokertecken stöds .
 	FileSetTime	Ändrar datetime stämpel av en eller flera filer eller mappar . Jokertecken stöds .
-	Floor	Returnerar tal avrundat nedåt till närmaste heltal ( utan .00 suffix ) .
+	Floor	Returnerar tal avrundat nedåt till närmaste heltal (utan .00 suffix) .
 	For	Upprepar en serie kommandon en gång för varje nyckel - värde-par i ett objekt .
 	Format	Forma ett variabelt antal ingångsvärden enligt en formatsträng.
 	FormatTime	Förvandlar en YYYYMMDDHH24MISS tidsstämpel i den angivna datum / tid -format .
@@ -1151,27 +1147,27 @@
 	GroupClose	Stänger det aktiva fönstret om det bara aktiveras av GroupActivate eller GroupDeactivate . Den aktiverar sedan nästa fönster i serien. Det kan också stänga alla fönster i en grupp .
 	GroupDeactivate	Liknar GroupActivate utom aktiverar nästa fönster inte i gruppen .
 	HasKey	Returnerar true om Key är förknippad med ett värde.
-	if	Anger kommandot (er ) för att utföra om jämförelsen av en variabel till ett värde utvärderar moduler till TRUE. När mer än ett kommando är närvarande , bifoga dem i ett block ( hängslen ) .
-	if (expression)	Anger kommando ( s ) att utföra om ett uttryck utvärderas till true .
-	If var [not] between	Kontrollerar om en variabel innehåll är numeriskt eller alfabetiskt mellan två värden ( inklusive) .
-	If var [not] in/contains MatchList 	Kontrollerar om en variabel innehåll matchar ett av objekten i en lista .
-	If var is [not] type	Kontrollerar om en variabel innehåll är numeriska , versaler etc.
+	if	Anger kommandot (er) för att utföra om jämförelsen av en variabel till ett värde utvärderar moduler till TRUE. När mer än ett kommando är närvarande , bifoga dem i ett block (hängslen) .
+	if (expression)	Anger kommando (s) att utföra om ett uttryck utvärderas till true .
+	If A_Index	Kontrollerar om det aktuella slingiteration matchs ett specificerat ett antal .
 	If Clipboard	Kontrollerar om Urklipp text är matchs en angiven sträng .
 	If ErrorLevel	Kontrollerar om en angiven bild eller pixel hittades i skärmen .
-	If A_Index	Kontrollerar om det aktuella slingiteration matchs ett specificerat ett antal .
+	If var [not] between	Kontrollerar om en variabel innehåll är numeriskt eller alfabetiskt mellan två värden (inklusive) .
+	If var [not] in/contains MatchList 	Kontrollerar om en variabel innehåll matchar ett av objekten i en lista .
+	If var is [not] type	Kontrollerar om en variabel innehåll är numeriska , versaler etc.
 	IfEqual/IfNotEqual	Jämför en variabel till ett värde för jämställdhet . Synonymt med : om var = värde | om Var < > Value .
 	IfExist / IfNotExist / FileExist	Kontrollerar om det finns en fil eller mapp .
 	IfGreater / IfGreaterOrEqual	Jämför en variabel till ett värde . Synonymt med : om Var> Standard | Om Var> = Värde .
 	IfInString / IfNotInString / InStr	Kontrollerar om en variabel innehåller den angivna strängen .
 	IfLess / IfLessOrEqual	Jämför en variabel till ett värde . Synonymt med : om Var < Value | om Var < = Värde .
 	IfMsgBox	Kontroller som knapptryckning av användaren under de senaste MsgBox kommando .
-	IfWinActive / IfWinNotActive	Kontrollerar om det angivna fönstret finns och är aktiv ( främst ) .
+	IfWinActive / IfWinNotActive	Kontrollerar om det angivna fönstret finns och är aktiv (främst) .
 	IfWinExist / IfWinNotExist	Kontrollerar om det angivna fönstret existerar .
 	ImageSearch	Söker en region av skärmen för en bild .
 	IniDelete	Raderar ett värde från ett standardformat . Ini-fil .
 	IniRead	Läser ett värde från ett standardformat . Ini-fil .
 	IniWrite	Skriver ett värde till ett standardformat . Ini-fil .
-	Input	Väntar på att användaren att skriva en sträng ( stöds inte på Windows 9x : det gör ingenting ) .
+	Input	Väntar på att användaren att skriva en sträng (stöds inte på Windows 9x : det gör ingenting) .
 	InputBox	Visar en ingång rutan för att uppmana användaren att ange en sträng .
 	InsertAt	Infogar ett eller flera värden vid en given position inom en linjär grupp.
 	InStr	Söker efter en viss förekomst av en sträng , från vänster eller höger.
@@ -1180,10 +1176,10 @@
 	Labels	En etikett identifierar en rad kod, och kan användas som ett Goto mål eller för att bilda en subrutin.
 	Length	Returnerar längden på en linjär grupp som börjar vid position 1.
 	ListVars	Visar script variabler: deras namn och aktuella innehållet.
-	Log	Returnerar logaritmen (bas 10) av Number.
 	Ln	Returnerar den naturliga logaritmen (basen e) av Number.
-	Loop (normal) 	Utför en serie kommandon flera gånger: antingen det angivna antalet gånger eller tills brott uppstår.
+	Log	Returnerar logaritmen (bas 10) av Number.
 	Loop (files & folders)	Hämtar de angivna filerna eller mapparna, en i taget.
+	Loop (normal) 	Utför en serie kommandon flera gånger: antingen det angivna antalet gånger eller tills brott uppstår.
 	Loop (parse a string)	Hämtar delsträngar (fält) från en sträng, en i taget.
 	Loop (read file contents)	Hämtar raderna i en textfil, en i taget (presterar bättre än FileReadLine).
 	Loop (registry)	Hämtar innehållet i den angivna registerundernyckeln, ett plagg i taget.
@@ -1212,12 +1208,12 @@
 	Progress	Skapar eller uppdaterar ett fönster med en förloppsindikator.
 	Push	Lägger värden i slutet av en array.
 	Random	Skapar en pseudo-slumptal.
+	RegDelete	Raderar en undernyckel eller värde från registret.
 	RegExMatch	Avgör om en sträng innehåller ett mönster (reguljära uttryck).
 	RegExReplace	Ersätter förekomster av ett mönster (reguljära uttryck) i en sträng.
-	RegDelete	Raderar en undernyckel eller värde från registret.
+	RegisterCallback	Skapar en maskin-kod adress som då kallades, omdirigerar samtalet till en funktion i skriptet.
 	RegRead	Läser ett värde från registret.
 	RegWrite	Skriver ett värde till registret.
-	RegisterCallback	Skapar en maskin-kod adress som då kallades, omdirigerar samtalet till en funktion i skriptet.
 	RemoveAt	Tar bort objekt från den givna plats i en linjär grupp.
 	Return	Returer från en subrutin till vilken verkställighet hade tidigare hoppat via funktion-samtal, GOSUB, Hotkey aktivering, GroupActivate, eller andra medel.
 	Round	Om N utelämnas eller 0, är nummer avrundas till närmaste heltal. Om N är positivt tal, är nummer avrundas till N decimaler. Om N är negativt avrundas med n siffror till vänster om decimalkommat.
@@ -1235,8 +1231,8 @@
 	SetKeyDelay	Ställer in fördröjningen som sker efter varje knapptryckning skickas med Sänd eller ControlSend.
 	SetMouseDelay	Ställer in fördröjningen som sker efter varje musrörelser eller klick.
 	SetNumlockState	Ställer in tillståndet för NumLock. Kan också tvinga nyckeln för att stanna på eller av.
-	SetScrollLockState	Ställer in tillståndet för ScrollLock tangenten. Kan också tvinga nyckeln för att stanna på eller av.
 	SetRegView	Tillåter registret kommandon i en 32-bitars script för att få tillgång till 64-bitars register vy och vice versa.
+	SetScrollLockState	Ställer in tillståndet för ScrollLock tangenten. Kan också tvinga nyckeln för att stanna på eller av.
 	SetTimer	Orsakar en subrutin som ska startas automatiskt och upprepade gånger vid en viss tidsintervall.
 	Shutdown	Stänger, startar, eller loggar ut systemet.
 	Sin	Returnerar trigonometrisk sinus för Number.
@@ -1249,13 +1245,12 @@
 	SoundSet	Förändringar olika inställningar för en ljudenhet (master mute, master volym, etc.)
 	SoundSetWaveVolume	Ändrar volymen wave utgång för en ljudenhet.
 	SplashImage	Skapar eller uppdaterar ett fönster som innehåller en JPG, GIF eller BMP bild.
-	SplashTextOn	Skapar en anpassningsbar text popup-fönster.
 	SplashTextOff	Stänger fönstret ovan.
+	SplashTextOn	Skapar en anpassningsbar text popup-fönster.
 	SplitPath	Separerar ett filnamn eller URL till sitt namn, katalog, förlängning, och kör.
 	Sqrt	Returnerar kvadratroten av Tal.
 	StatusBarGetText	Hämtar texten från en vanlig statusrad kontroll.
 	StatusBarWait	Väntar tills ett fönsters statusrad innehåller den angivna strängen.
-	StrPut / StrGet	Kopierar en sträng till eller från en minnesadress, tillval konvertera den mellan teckentabeller.
 	StringCaseSense	Avgör om strängjämförelser är skiftlägeskänsliga (standard är "inte skiftlägeskänsligt").
 	StringGetPos / InStr	Hämtar positionen för den specificerade delsträng inom en sträng.
 	StringLeft	Hämtar ett antal tecken från den vänstra sidan av en sträng.
@@ -1268,6 +1263,7 @@
 	StringTrimLeft	Tar bort ett antal tecken från den vänstra sidan av en sträng.
 	StringTrimRight	Tar bort ett antal tecken från den högra sidan av en sträng.
 	StringUpper	Konverterar en sträng till versaler.
+	StrPut / StrGet	Kopierar en sträng till eller från en minnesadress, tillval konvertera den mellan teckentabeller.
 	Suspend	Aktiverar eller avaktiverar alla eller valda snabbtangenter och hotstrings.
 	SysGet	Hämtar skärmupplösning, multi-monitor info, dimensioner av systemets objekt, och andra egenskaper systemet.
 	Tan	Returnerar trigonometrisk tangens för Number.
@@ -1285,10 +1281,10 @@
 	WinActive	Returnerar Unikt ID (HWND) av det aktiva fönstret om det matchar de angivna kriterierna.
 	WinClose	Stänger det angivna fönstret.
 	WinExist	Kontrollerar om det angivna fönstret existerar.
+	WinGet	Hämtar det angivna fönstret unika ID, process-ID, process namn, eller en lista på sina kontroller. Det kan också hämta en lista över alla fönster som matchar de angivna kriterierna.
 	WinGetActiveStats	Kombinerar funktionerna hos WinGetActiveTitle och WinGetPos in ett kommando.
 	WinGetActiveTitle	Hämtar titeln på det aktiva fönstret.
 	WinGetClass	Hämtar det angivna fönstrets klassnamn.
-	WinGet	Hämtar det angivna fönstret unika ID, process-ID, process namn, eller en lista på sina kontroller. Det kan också hämta en lista över alla fönster som matchar de angivna kriterierna.
 	WinGetPos	Hämtar position och storlek av det specificerade fönstret.
 	WinGetText	Hämtar text från specificerade fönstret.
 	WinGetTitle	Hämtar titeln på det specificerade fönstret.

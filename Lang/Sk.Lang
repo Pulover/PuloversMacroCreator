@@ -73,7 +73,6 @@
 	i_Lang019 =	&Windows Správy
 	i_Lang020 =	N&ájsť príkaz
 		
-		
 ; 06. Edit Sub Menu		
 	e_Lang001 =	&Duplikát
 	e_Lang002 =	&Upraviť komentár
@@ -97,7 +96,6 @@
 	e_Lang020 =	O&dstrániť všetky skupiny
 	e_Lang021 =	&Zbaliť všetko
 	e_Lang022 =	Roz&baliť všetko
-		
 		
 ; 07. Select Sub Menu		
 	s_Lang001 =	&Vybrať všetko
@@ -153,6 +151,7 @@
 	o_Lang013 =	O&dstrániť predvolený súbor
 	o_Lang014 =	P&redvolené Klávesové skratky
 	o_Lang015 =	Pr&edvolené nastavenie
+	o_Lang016 =	&Editor jazyka
 		
 ; 10. Donate Sub Menu		
 	p_Lang001 =	&PayPal Dar
@@ -761,7 +760,6 @@
 	d_Lang042 =	Neplatný operátor.
 		Tieto operátory sú prijímané:
 		=, ==, <>,! =,>, <,> =, <=
-		
 		Príklady:
 		MyVar > 1
 		MyVar = `%A_DDDD`%
@@ -791,7 +789,6 @@
 		Prosím priradiť premennú a použiť ho v parametri.
 	d_Lang060 =	Nová verzia je k dispozícii
 	d_Lang061 =	Chcete ju hneď stiahnuť?
-		
 		Ak chcete zakázať automatickú kontrolu vyberte Pomocník> Skontrolovať pri spustení. > Pozrite sa na štarte
 	d_Lang062 =	Už máte najnovšiu verziu.
 	d_Lang063 =	Nastala chyba pri kontrole.
@@ -801,7 +798,6 @@
 	d_Lang067 =	Zobraziť toto okno pri spustení
 	d_Lang068 =	Tipy:
 	d_Lang069 =	Veľa času a úsilia, čo sa týka vývoja Pulover's Macro Creator. Ak zistíte, že je užitočné, zvážte prosím ukazovať svoje uznanie s darovaním.
-		
 		Darovanie, alebo nie, tam bude žiadny rozdiel v jeho vlastnosti a funkcie.
 	d_Lang070 =	Podporte nás...
 	d_Lang071 =	Nie, vďaka
@@ -877,73 +873,29 @@
 		Môžete spustiť pokročilé funkcie ako substr a RegExReplace z funkcií okna (Vložiť> if / premennej / funkcie). Alebo spustiť vlastné funkcie z externých AutoHotkey skriptov.
 		
 ; 19. Tooltips		
-	AutoKey_TT =	Klávesová skratka pre prehrávanie makra
-	ManKey_TT =	Klávesová skratka pre prehrávanie makra "krok-za-krokom"
-	AbortKey_TT =	Klávesová skratka pre zastavenie prehrávania
-	PauseKey_TT =	Klávesová skratka pre pozastavenie prehrávania
-	RecKey_TT =	Backspace pre vymazanie
-	RecNewKey_TT =	Backspace pre vymazanie
-	JoyKey_TT =	Stlačte tlačidlo na joysticku
-	ReptC_TT =	0 = nekonečno
 	A_List_TT =	Zvoľte Makro (Ctrl +1 ~ 0)
-	OSHK_TT =	Vyberte makro
-	OSHKEd_TT =	Vyberte makro
-	ApplyT_TT =	Platiť
+	AbortKey_TT =	Klávesová skratka pre zastavenie prehrávania
+	ActiveObj_TT =	Pokúsi pripojiť k Active objektu COM
 	ApplyI_TT =	Platiť
 	ApplyL_TT =	Vložiť z Box (Insert)
-	CmdFilter_TT =	Filtrovať podľa typu
-	InsertKey_TT =	Vložte stlačenie klávesy (Ctrl+Insert)
-	InsertKeyT_TT =	Vložte stlačenie klávesy
-	DefaultMacro_TT =	Vyberte súbor, ktorý chcete nahrať na štarte programu
-	VarCopyA_TT =	Skopírujte bežný variabilný obsah
-	VarCopyB_TT =	Skopírujte bežný variabilný obsah
-	Reset_TT =	Vymazať obsah premennej
-	Screenshot_TT =	Vytvoriť snímku
-	ColorPick_TT =	Dostať pixel na obrazovke
-	PicPrev_TT =	Poklepaním otvoríte obrázok
-	CoordPixel_TT =	Koordinovať režim
-	VariatT_TT =	Odtiene variácie
-	IconN_TT =	Číslo skupiny ikon
-	TransC_TT =	Transparentná farba
-	WScale_TT =	Šírka stupnice
-	HScale_TT =	Výška stupnice
-	Fast_TT =	Používa rýchlejšie vyhľadávanie metódu (odporúčané)
-	RGB_TT =	Príčiny farby interpretovať ako hodnoty RGB BGR miesto
-	LoopLVColor_TT =	Kliknutím vyberte farbu
-	IfLVColor_TT =	Kliknutím vyberte farbu
-	RefreshIEW_TT =	Obnoviť zoznam
-	ActiveObj_TT =	Pokúsi pripojiť k Active objektu COM
-	TimeoutM_TT =	0 = nekonečno
-	ExpView_TT =	Rozšírené Editor
-	ExpView2_TT =	Rozšírené Editor
-	OSProgB_TT =	Zobraziť Progress Bar
-	OSTrans_TT =	Nepriehľadnosť
-	MRel_TT =	Pohyby vzhľadom k aktuálnej pozícii.
-		Alebo, ak sú použité s ovládaním: Pozícia v porovnaní s kontrolou.
-	Raw_TT =	Príkaz SendRaw interpretuje všetky postavy doslova
-		skôr než prekladanie {Enter} na stlačenie klávesy ENTER,
-		^ C Control-C, atď
-	ComText_TT =	Ak nie je v režime RAW, nasledujúce znaky
-		sa zaobchádza ako modifikátory (tieto modifikátory ovplyvňujú
-		len to ďalší kľúč):!, +, ^ #
-	ComEvent_TT =	Sadzba, za ktorú sú zasielané klávesov je určené kľúčové oneskorením.
+	ApplyT_TT =	Platiť
+	AutoKey_TT =	Klávesová skratka pre prehrávanie makra
 	Clip_TT =	Dočasne používa schránku odoslať text.
 		Po dokončení operácie sa skript
 		obnoví pôvodný obsah schránky.
 		(Ponechať prázdne text vložiť aktuálne obsah)
+	CmdFilter_TT =	Filtrovať podľa typu
+	CmdSort_TT =	Radiť abecedne
+	ColorPick_TT =	Dostať pixel na obrazovke
+	ComEvent_TT =	Sadzba, za ktorú sú zasielané klávesov je určené kľúčové oneskorením.
+	ComText_TT =	Ak nie je v režime RAW, nasledujúce znaky
+		sa zaobchádza ako modifikátory (tieto modifikátory ovplyvňujú
+		len to ďalší kľúč):!, +, ^ #
+	CoordPixel_TT =	Koordinovať režim
+	DefaultMacro_TT =	Vyberte súbor, ktorý chcete nahrať na štarte programu
 	EditPaste_TT =	Pasty String na striešky / vlož pozície
 		v konaní Edit (to neovplyvní
 		obsah schránky).
-	SetText_TT =	Zmení text ovládacieho prvku.
-	RelKey_TT =	Records pohyby myši a kliknutí ako kompenzácia
-		z predchádzajúcej pozície, kedy držal v ruke.
-	ToggleC_TT =	Aktivácia Relatívna nahrávania pri stlačení stav je ďalej.
-	Relative_TT =	Poloha je vzhľadom k aktívne okná.
-	Screen_TT =	Súradnice sú relatívna k ploche (celá obrazovka).
-	IncFiles_TT =	Zahrnúť súbory / hodnoty
-	IncFolders_TT =	Zahrnúť adresára (zložky) / Keys
-	Recurse_TT =	Rekurzívne do podadresárov (podpriečinkov) / podkľúčov
-	CmdSort_TT =	Radiť abecedne
 	Ex_EdScript_TT =	Otvoriť v externom editore
 	ExprLink2_TT =	- NEPOUŽÍVAJTE UZAVRITE PREMENNÉ V ZNAKY PERCENTA TU.
 		- Väčšina AHK výrazy sú podporované.
@@ -955,16 +907,90 @@
 		- Môžete použiť reťazca, premenné, pole a funkcia.
 		- Ak chcete použiť reťazca, uzavrite do úvodzoviek, napríklad: var = "A".
 		- Viac príkazov sú podporované, napr: var = "a" || Instru (var, "b").
+	ExpView_TT =	Rozšírené Editor
+	ExpView2_TT =	Rozšírené Editor
+	Fast_TT =	Používa rýchlejšie vyhľadávanie metódu (odporúčané)
+	HScale_TT =	Výška stupnice
+	IconN_TT =	Číslo skupiny ikon
+	IfLVColor_TT =	Kliknutím vyberte farbu
+	IncFiles_TT =	Zahrnúť súbory / hodnoty
+	IncFolders_TT =	Zahrnúť adresára (zložky) / Keys
+	InsertKey_TT =	Vložte stlačenie klávesy (Ctrl+Insert)
+	InsertKeyT_TT =	Vložte stlačenie klávesy
+	JoyKey_TT =	Stlačte tlačidlo na joysticku
+	LoopLVColor_TT =	Kliknutím vyberte farbu
+	ManKey_TT =	Klávesová skratka pre prehrávanie makra "krok-za-krokom"
+	MRel_TT =	Pohyby vzhľadom k aktuálnej pozícii.
+		Alebo, ak sú použité s ovládaním: Pozícia v porovnaní s kontrolou.
+	OSHK_TT =	Vyberte makro
+	OSHKEd_TT =	Vyberte makro
+	OSProgB_TT =	Zobraziť Progress Bar
+	OSTrans_TT =	Nepriehľadnosť
+	PauseKey_TT =	Klávesová skratka pre pozastavenie prehrávania
+	PicPrev_TT =	Poklepaním otvoríte obrázok
+	Raw_TT =	Príkaz SendRaw interpretuje všetky postavy doslova
+		skôr než prekladanie {Enter} na stlačenie klávesy ENTER,
+		^ C Control-C, atď
+	RecKey_TT =	Backspace pre vymazanie
+	RecNewKey_TT =	Backspace pre vymazanie
+	Recurse_TT =	Rekurzívne do podadresárov (podpriečinkov) / podkľúčov
+	RefreshIEW_TT =	Obnoviť zoznam
+	Relative_TT =	Poloha je vzhľadom k aktívne okná.
+	RelKey_TT =	Records pohyby myši a kliknutí ako kompenzácia
+		z predchádzajúcej pozície, kedy držal v ruke.
+	ReptC_TT =	0 = nekonečno
+	Reset_TT =	Vymazať obsah premennej
+	RGB_TT =	Príčiny farby interpretovať ako hodnoty RGB BGR miesto
+	Screen_TT =	Súradnice sú relatívna k ploche (celá obrazovka).
+	Screenshot_TT =	Vytvoriť snímku
+	SetText_TT =	Zmení text ovládacieho prvku.
+	TimeoutM_TT =	0 = nekonečno
+	ToggleC_TT =	Aktivácia Relatívna nahrávania pri stlačení stav je ďalej.
+	TransC_TT =	Transparentná farba
+	VarCopyA_TT =	Skopírujte bežný variabilný obsah
+	VarCopyB_TT =	Skopírujte bežný variabilný obsah
+	VariatT_TT =	Odtiene variácie
+	WScale_TT =	Šírka stupnice
 		
 ; 20. Tooltips from AHK Docs		
-	ExpList_TT =	Poklepaním editovať
+	Ex_AF_TT =	Preskočí jemný spôsob aktivovanie okna
+		a ide rovno do násilnej metódy.
+	Ex_DH_TT =	Určuje, či neviditeľné okná sú "vidieť" pomocou skriptu.
+	Ex_EdVars_TT =	Vyberte globálne premenné, ktoré chcete exportovať.
+	Ex_HK_TT =	Vynúti použitie háku pre vykonávanie všetkých
+		alebo niektoré klávesové klávesové skratky.
 	Ex_IfDir_TT =	Vytvorí kontextovo citlivé klávesy a hotstrings závislosti
 		na type okna, ktoré je aktívne, alebo neexistuje.
 	Ex_IfDirType_TT =	Vytvorí kontextovo citlivé klávesy a hotstrings závislosti
 		na type okna, ktoré je aktívne, alebo neexistuje.
+	Ex_IN_TT =	Spôsobí, že skript sa správať, ako by špecifikované
+		obsah súboru sú prítomné práve v tomto mieste.
+	Ex_MD_TT =	Nastavuje oneskorenie, dôjde po
+		Každý pohyb myši alebo tlačidlom.
+	Ex_MT_TT =	Nastaví maximálny počet súčasne
+		závitov na klávesy alebo hotstring.
+	Ex_NT_TT =	Zakáže predvádzanie tray ikonou.
+	Ex_PT_TT =	Udržuje skript beží trvale
+		(To je, kým používateľ zavrie alebo ExitApp je zistená).
+	Ex_SB_TT =	Určuje, ako rýchlo sa skript spustí (ovplyvňuje využitie procesora).
+	Ex_SC_TT =	Nastavuje oneskorenie, dôjde po
+		Každý ovládací prvok modifikujúce príkaz.
+	Ex_SI_TT =	Určuje, či je povolené skript spustiť znovu, keď je už spustená.
+	Ex_SK_TT =	Nastavuje oneskorenie, dôjde po každom
+		klávesy poslal Odoslať alebo ControlSend.
 	Ex_SM_TT =	Robí Poslať synonymom SendInput alebo SendPlay skôr než
 		Východisková hodnota (SendEvent). Tiež robí Kliknite a MouseMove / Kliknite / Drag
 		použiť špecifikovanú metódu.
+	Ex_ST_TT =	Nastaví zodpovedajúce správanie WinTitle parametrov v príkazoch ako WinWait.
+	Ex_SW_TT =	Nastavuje oneskorenie, dôjde po
+		každý Windowing príkaz, napríklad WinActivate.
+	Ex_UV_TT =	Export globálne premenné.
+	ExpList_TT =	Poklepaním editovať
+	SI_TT =	Slovo FORCE preskočí dialóg a nahrádza pôvodný inštancie automaticky,
+		ktorý je podobný v skutočnosti na Reload príkazu.
+		Slovo ignorovať preskočí dialógové okno a nechá starej inštancie spustená.
+		Inými slovami, sú ignorované pokusy začať už bežiaci skript.
+		Slovo OFF umožňuje viac inštancií skript plynúť súbežne.
 	SM_TT =	Udalosť: To je východiskový východiskový používaný všetkými skripty.
 		Používa SendEvent metódu Odoslať SendRaw, kliknite na tlačidlo a MouseMove / Kliknite / Drag.
 		Vstup: Prepína na spôsobe SendInput pre odosielanie, SendRaw, kliknite na tlačidlo a MouseMove / Kliknite / Drag.
@@ -972,40 +998,10 @@
 		keď SendInput nie je k dispozícii, vráti sa do režimu prehrávania (pozri nižšie). To tiež spôsobuje
 		Príkaz SendInput sám vrátiť do režimu prehrávania, keď SendInput nie je k dispozícii.
 		Prehrať: Prepína na SendPlay metódy Odoslať, SendRaw, kliknite na tlačidlo a MouseMove / Kliknite / Drag.
-	Ex_SI_TT =	Určuje, či je povolené skript spustiť znovu, keď je už spustená.
-	SI_TT =	Slovo FORCE preskočí dialóg a nahrádza pôvodný inštancie automaticky,
-		ktorý je podobný v skutočnosti na Reload príkazu.
-		Slovo ignorovať preskočí dialógové okno a nechá starej inštancie spustená.
-		Inými slovami, sú ignorované pokusy začať už bežiaci skript.
-		Slovo OFF umožňuje viac inštancií skript plynúť súbežne.
-	Ex_ST_TT =	Nastaví zodpovedajúce správanie WinTitle parametrov v príkazoch ako WinWait.
 	ST_TT =	1: názov okna musí začínať s uvedeným WinTitle byť zhoda.
 		2: názov okna môže obsahovať WinTitle kdekoľvek vo vnútri, že je to zápas.
 		3: názov okna sa musí presne zhodovať WinTitle byť zhoda.
 		Regex: Zmeny WinTitle, WinText, ExcludeTitle a ExcludeText byť regulárne výrazy.
-	Ex_DH_TT =	Určuje, či neviditeľné okná sú "vidieť" pomocou skriptu.
-	Ex_AF_TT =	Preskočí jemný spôsob aktivovanie okna
-		a ide rovno do násilnej metódy.
-	Ex_HK_TT =	Vynúti použitie háku pre vykonávanie všetkých
-		alebo niektoré klávesové klávesové skratky.
-	Ex_SK_TT =	Nastavuje oneskorenie, dôjde po každom
-		klávesy poslal Odoslať alebo ControlSend.
-	Ex_MD_TT =	Nastavuje oneskorenie, dôjde po
-		Každý pohyb myši alebo tlačidlom.
-	Ex_SC_TT =	Nastavuje oneskorenie, dôjde po
-		Každý ovládací prvok modifikujúce príkaz.
-	Ex_SW_TT =	Nastavuje oneskorenie, dôjde po
-		každý Windowing príkaz, napríklad WinActivate.
-	Ex_SB_TT =	Určuje, ako rýchlo sa skript spustí (ovplyvňuje využitie procesora).
-	Ex_NT_TT =	Zakáže predvádzanie tray ikonou.
-	Ex_IN_TT =	Spôsobí, že skript sa správať, ako by špecifikované
-		obsah súboru sú prítomné práve v tomto mieste.
-	Ex_PT_TT =	Udržuje skript beží trvale
-		(To je, kým používateľ zavrie alebo ExitApp je zistená).
-	Ex_MT_TT =	Nastaví maximálny počet súčasne
-		závitov na klávesy alebo hotstring.
-	Ex_UV_TT =	Export globálne premenné.
-	Ex_EdVars_TT =	Vyberte globálne premenné, ktoré chcete exportovať.
 		
 ; 21. Operators		
 	As_Oper_1 =	Priradiť
@@ -1024,47 +1020,47 @@
 	Co_Oper_7 =	Menší alebo rovný
 		
 ; 22. IE Commands Tips		
-	Tip_Navigate =	Prejde na adresu URL alebo cestu.
-	Tip_Value =	Získa alebo nastaví hodnotu objektu.
-	Tip_Focus =	Nastaví fokus na objekt.
+	Tip_Checked =	Nastaví alebo získa stav zaškrtávacie políčko alebo prepínač.
 	Tip_Click =	Simuluje kliknite na objekt.
-	Tip_Submit =	Odošle formulár.
-	Tip_GoHome =	Prejde na aktuálnej domácej alebo úvodnej stránky.
+	Tip_Focus =	Nastaví fokus na objekt.
 	Tip_GoBack =	Pohyb späť o jednu položku v zozname histórie.
 	Tip_GoForward =	Prejde dopredu o jednu položku v zozname histórie.
+	Tip_GoHome =	Prejde na aktuálnej domácej alebo úvodnej stránky.
 	Tip_GoSearch =	Prejde na aktuálne vyhľadávania.
-	Tip_Refresh =	Obnovenie aktuálne zobrazenej stránky.
-	Tip_Stop =	Zruší čakajúci navigáciu alebo stiahnuť.
-	Tip_Quit =	Zavrie stránku.
+	Tip_Height =	Nastaví alebo získa výšku objektu.
+	Tip_Href =	Nastaví alebo získa cieľovú adresu URL alebo kotviaci bod.
+	Tip_InnerHTML =	Nastaví alebo získa HTML objektu.
+	Tip_InnerText =	Nastaví alebo získa text objektu.
+	Tip_Length =	Nastavuje alebo načítava počet objektov v kolekcii.
 	Tip_LocationName =	Získa cestu alebo názov aktuálnej stránky.
 	Tip_LocationURL =	Načíta adresu URL aktuálnej stránky.
-	Tip_InnerText =	Nastaví alebo získa text objektu.
-	Tip_InnerHTML =	Nastaví alebo získa HTML objektu.
+	Tip_Navigate =	Prejde na adresu URL alebo cestu.
 	Tip_OuterHTML =	Nastaví alebo získa objekt a jej obsah vo formáte HTML.
-	Tip_Href =	Nastaví alebo získa cieľovú adresu URL alebo kotviaci bod.
-	Tip_Src =	Nastaví alebo získa URL má byť zavedený pri objekte.
+	Tip_Quit =	Zavrie stránku.
+	Tip_Refresh =	Obnovenie aktuálne zobrazenej stránky.
 	Tip_SelectedIndex =	Nastaví alebo získa index vybrané voľby v objekte select.
-	Tip_Checked =	Nastaví alebo získa stav zaškrtávacie políčko alebo prepínač.
+	Tip_Src =	Nastaví alebo získa URL má byť zavedený pri objekte.
+	Tip_Stop =	Zruší čakajúci navigáciu alebo stiahnuť.
+	Tip_Submit =	Odošle formulár.
 	Tip_Type =	Nastaví alebo získa typ obsahu objektu.
+	Tip_Value =	Získa alebo nastaví hodnotu objektu.
 	Tip_Width =	Nastaví alebo získa šírku objektu.
-	Tip_Height =	Nastaví alebo získa výšku objektu.
-	Tip_Length =	Nastavuje alebo načítava počet objektov v kolekcii.
 		
 ; 23. AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	Abs	Vráti absolútnu hodnotu čísla.
-	ASin	Vracia arkussínus (číslo, ktorého sínus je číslo) v radiánoch.
 	ACos	Vracia arkuskosínus (číslo, ktorého kosínus je číslo) v radiánoch.
 	Array	Vytvára skriptovateľné asociatívne pole s celočíselnými kľúčmi.
 	Asc	Vráti kód znaku (číslo medzi 1 a 255 (v zostavení ANSI) alebo 65535 (v Unicode zostavenie)) pre prvý znak v reťazci.
+	ASin	Vracia arkussínus (číslo, ktorého sínus je číslo) v radiánoch.
 	ATan	Vracia arkustangens (číslo, ktorého tangens je číslo) v radiánoch.
 	BlockInput	Zamknutie alebo odomknutie užívateľa schopnosť komunikovať s počítačom pomocou klávesnice a myši.
 	Break	Ukončí (ukončí) slučky. Platí v akejkoľvek slučky.
 	Ceil	Vráti číslo zaokrúhlené nahor na najbližšie celé číslo (bez prípony 0,00).
 	Chr	Vráti znak zodpovedajúci kód znaku označený číslami.
 	Click	Klikne na tlačidlo myši na zadané súradnice. To môže tiež podržať tlačidlo, otočte kolieskom alebo presunúť.
-	ClipWait	Čaká, až sa schránka obsahuje dáta.
 	Clipboard	Vloží text zo schránky.
+	ClipWait	Čaká, až sa schránka obsahuje dáta.
 	ComObjActive	Načíta zaregistrovaný objekt COM.
 	ComObjArray	Vytvorí SAFEARRAY pre použitie s COM.
 	ComObjConnect	Pripojenie objektu COM je udalosťou zdrojov do funkcie s daným prefixom.
@@ -1119,12 +1115,12 @@
 	FileCreateShortcut	Vytvorí zástupcu (. LNK) súbor.
 	FileDelete	Odstráni jeden alebo viac súborov.
 	FileEncoding	Nastaví predvolené kódovanie pre FILEREAD, FileReadLine, Loop čítať, FileAppend a FileOpen.
-	FileInstall	Zahŕňa zadaný súbor vnútri kompilovaný verziu skriptu.
 	FileGetAttrib	Ukazuje, či súbor alebo zložka je iba pre čítanie, skrytý, atď
 	FileGetShortcut	Načíta informácie o zástupcu (. LNK) súboru, ako je jeho cieľového súboru.
 	FileGetSize	Načíta veľkosť súboru.
 	FileGetTime	Načíta datetime pečiatka súboru alebo priečinka.
 	FileGetVersion	Načíta verziu súboru.
+	FileInstall	Zahŕňa zadaný súbor vnútri kompilovaný verziu skriptu.
 	FileMove	Presun alebo zmena jedného alebo viacerých súborov.
 	FileMoveDir	Presunie zložku spolu so všetkými sub-zložky a súbory. To môže tiež premenovať zložku.
 	FileOpen	Poskytuje objektovo orientovaný súbor I / O.
@@ -1153,12 +1149,12 @@
 	HasKey	Vracia true, ak kľúč je spojený s hodnotou.
 	if	Určuje príkaz (y) na vykonanie, ak porovnanie premennej na hodnotu evalutes na TRUE. Pri viac ako jeden príkaz je k dispozícii, je uzavrieť do bloku (rovnátka).
 	if (expression)	Určuje príkaz (y) na vykonanie, pokiaľ výraz vyhodnotený ako PRAVDA.
+	If A_Index	Kontroluje, či aktuálna iterácii slučky matchs na zadané číslo.
+	If Clipboard	Skontroluje, či je schránka text je matchs zadaný reťazec.
+	If ErrorLevel	Skontroluje, či zadané obrázku alebo pixelu bol nájdený na obrazovke.
 	If var [not] between	Kontroly, či premenná je obsahom sú číselne alebo abecedne medzi dvoma hodnotami (vrátane).
 	If var [not] in/contains MatchList 	Kontroly, či premenná je obsahom zodpovedať na jednu z položiek v zozname.
 	If var is [not] type	Skontroluje, či premenná je obsah sú číselné, veľká, atď
-	If Clipboard	Skontroluje, či je schránka text je matchs zadaný reťazec.
-	If ErrorLevel	Skontroluje, či zadané obrázku alebo pixelu bol nájdený na obrazovke.
-	If A_Index	Kontroluje, či aktuálna iterácii slučky matchs na zadané číslo.
 	IfEqual/IfNotEqual	Porovná premennú na hodnotu pre rovnosť. Synonymom: ak Var = hodnota | ak Var <> hodnota.
 	IfExist / IfNotExist / FileExist	Kontroly na existenciu súboru alebo priečinka.
 	IfGreater / IfGreaterOrEqual	Porovná premennú hodnotu. Synonymom: ak Var> hodnota | ak Var> = hodnota.
@@ -1180,10 +1176,10 @@
 	Labels	Štítok označuje riadok kódu, a môže byť použitý ako cieľ Goto alebo vytvoriť podprogram.
 	Length	Vráti dĺžku lineárnym poli začínajúce v polohe 1.
 	ListVars	Zobrazí premenných skriptu: ich mená a aktuálny obsah.
-	Log	Vráti logaritmus (základ 10) Number.
 	Ln	Vráti prirodzený logaritmus (základ e) Number.
-	Loop (normal) 	Vykonajte sériu príkazov opakovane: buď zadaný počet opakovaní alebo kým prestávke sa stretol.
+	Log	Vráti logaritmus (základ 10) Number.
 	Loop (files & folders)	Načíta určité súbory alebo priečinky, jeden po druhom.
+	Loop (normal) 	Vykonajte sériu príkazov opakovane: buď zadaný počet opakovaní alebo kým prestávke sa stretol.
 	Loop (parse a string)	Načíta čiastkové reťazca (pole), z povrázku, jeden po druhom.
 	Loop (read file contents)	Načíta riadky v textovom súbore, jeden po druhom (lepšie ako FileReadLine).
 	Loop (registry)	Načíta obsah zadaného podkľúč databázy Registry, jeden kus po druhom.
@@ -1212,12 +1208,12 @@
 	Progress	Vytvorí alebo aktualizuje okno obsahujúce priebehu.
 	Push	Pripojí hodnoty na koniec poľa.
 	Random	Generuje pseudo-náhodné číslo.
+	RegDelete	Odstráni podkľúč alebo hodnotu z registra.
 	RegExMatch	Určuje, či reťazec obsahuje vzor (regulárny výraz).
 	RegExReplace	Nahrádza výskyty vzoru (regulárny výraz) vnútri reťazca.
-	RegDelete	Odstráni podkľúč alebo hodnotu z registra.
+	RegisterCallback	Vytvorí strojovo kód adresy, ktorý pri volaní, presmerovanie hovoru na funkcie v skripte.
 	RegRead	Číta hodnotu z registra.
 	RegWrite	Zapíše hodnotu do registra.
-	RegisterCallback	Vytvorí strojovo kód adresy, ktorý pri volaní, presmerovanie hovoru na funkcie v skripte.
 	RemoveAt	Odstráni položky z danej pozície v lineárnom poli.
 	Return	Návrat z podprogramu, ktoré vykonávanie predtým skočil cez funkčné pohotovosti, GoSub, horúce aktivácia, GroupActivate, alebo inými prostriedkami.
 	Round	Je-li N vynechané, alebo 0, je číslo zaokrúhlené na najbližšie celé číslo. Ak n je kladné číslo, je číslo zaokrúhlené na N desatinných miest. Pokiaľ je n záporné, je číslo zaokrúhlené podľa číslic N vľavo od desatinnej čiarky.
@@ -1235,8 +1231,8 @@
 	SetKeyDelay	Nastavuje oneskorenie, dôjde po každom stlačení tlačidla Odoslať alebo zaslanej ControlSend.
 	SetMouseDelay	Nastavuje oneskorenie, dôjde po každom pohybe myšou alebo kliknite na tlačidlo.
 	SetNumlockState	Nastaví stav klávesu NumLock. Môžete tiež vynútiť kľúč zostať zapnutý alebo vypnutý.
-	SetScrollLockState	Nastaví stav klávesy ScrollLock. Môžete tiež vynútiť kľúč zostať zapnutý alebo vypnutý.
 	SetRegView	Umožňuje registra príkazy v 32-bitovej skript pre prístup k 64-bit registra názor a naopak.
+	SetScrollLockState	Nastaví stav klávesy ScrollLock. Môžete tiež vynútiť kľúč zostať zapnutý alebo vypnutý.
 	SetTimer	Spôsobuje podprogram spúšťaná automaticky a opakovane v zadanom časovom intervale.
 	Shutdown	Sa vypne, reštartuje alebo sa odhlási systému.
 	Sin	Vráti trigonometrický sínus čísla.
@@ -1249,13 +1245,12 @@
 	SoundSet	Zmeny rôzne nastavenia zvukového zariadenia (master mute, master hlasitosť, atď)
 	SoundSetWaveVolume	Zmení vlny výstupnú hlasitosť pre zvukové zariadenie.
 	SplashImage	Vytvorí alebo aktualizuje okno obsahujúce súbor vo formáte JPG, GIF, BMP alebo obraz.
-	SplashTextOn	Vytvorí upraviteľné textové vyskakovacie okno.
 	SplashTextOff	Zavrie okno nad.
+	SplashTextOn	Vytvorí upraviteľné textové vyskakovacie okno.
 	SplitPath	Oddeľuje názov súboru alebo adresu URL do svojho názvu, adresár rozšírenia, a disk.
 	Sqrt	Vráti druhú odmocninu čísla.
 	StatusBarGetText	Načíta text zo štandardného ovládacieho prvku na stavovom riadku.
 	StatusBarWait	Čaká, až sa okno stavovom riadku obsahuje zadaný reťazec.
-	StrPut / StrGet	Skopíruje reťazec alebo z adresy v pamäti, voliteľné preradením medzi kódovými stránkami.
 	StringCaseSense	Určuje, či porovnávanie reťazcov sú malé a veľké písmená (predvolené nastavenie je "nie je case sensitive").
 	StringGetPos / InStr	Načíta pozíciu zadaného podreťazca v reťazci.
 	StringLeft	Načíta počet znakov z ľavej strany reťazca.
@@ -1268,6 +1263,7 @@
 	StringTrimLeft	Odstráni počet znakov z ľavej strany reťazca.
 	StringTrimRight	Odstráni počet znakov z pravej strany reťazca.
 	StringUpper	Prevedie reťazec na veľké písmená.
+	StrPut / StrGet	Skopíruje reťazec alebo z adresy v pamäti, voliteľné preradením medzi kódovými stránkami.
 	Suspend	Zamknutie alebo odomknutie všetkých alebo vybraných klávesových skratiek a hotstrings.
 	SysGet	Načíta rozlíšenie obrazovky, multi-monitorov Info, rozmery systémové objekty, a iné systémové vlastnosti.
 	Tan	Vráti trigonometrický tangens čísla.
@@ -1285,10 +1281,10 @@
 	WinActive	Vracia jedinečný identifikátor (HWND) aktívneho okna, ak to zodpovedá zadaným kritériám.
 	WinClose	Zatvorí zadané okno.
 	WinExist	Skontroluje, či zadaný okno existuje.
+	WinGet	Vyhľadá zadané okno je jedinečný identifikátor, ID procesu, procesné meno alebo zoznam svojich kontrol. To môže tiež získať zoznam všetkých okien zodpovedajúcich zadaným kritériám.
 	WinGetActiveStats	Kombinuje funkcie WinGetActiveTitle a WinGetPos do jedného príkazu.
 	WinGetActiveTitle	Načíta názov aktívneho okna.
 	WinGetClass	Načíta zadaný názov triedy okna.
-	WinGet	Vyhľadá zadané okno je jedinečný identifikátor, ID procesu, procesné meno alebo zoznam svojich kontrol. To môže tiež získať zoznam všetkých okien zodpovedajúcich zadaným kritériám.
 	WinGetPos	Načíta polohu a veľkosť zadané okno.
 	WinGetText	Načíta text zo zadaného okna.
 	WinGetTitle	Načíta názov zadané okno.

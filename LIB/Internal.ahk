@@ -45,15 +45,8 @@ SBShowTip(Command)
 {
 	global Cmd_Tips
 	
-	For each, Line in Cmd_Tips
-	{
-		If (Line.Cmd = Command)
-		{
-			SB_SetText(Line.Desc)
-			return Line.Desc
-		}
-	}
-	SB_SetText("")
+	SB_SetText(Cmd_Tips[Command])
+	return Cmd_Tips[Command]
 }
 
 Find_Command(SearchWord)

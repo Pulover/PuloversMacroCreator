@@ -73,7 +73,6 @@
 	i_Lang019 =	&Windows Messages
 	i_Lang020 =	Fin&d en kommando
 		
-		
 ; 06. Edit Sub Menu		
 	e_Lang001 =	&Dupliker
 	e_Lang002 =	&Rediger kommentar
@@ -97,7 +96,6 @@
 	e_Lang020 =	F&jern alle grupper
 	e_Lang021 =	&Skjul alle
 	e_Lang022 =	&Udvid alle
-		
 		
 ; 07. Select Sub Menu		
 	s_Lang001 =	&Vælg alt
@@ -153,6 +151,7 @@
 	o_Lang013 =	&Fjern Standard File
 	o_Lang014 =	Standa&rd Genvejstaster
 	o_Lang015 =	Standardindsti&llinger
+	o_Lang016 =	&Sprog Editor
 		
 ; 10. Donate Sub Menu		
 	p_Lang001 =	&PayPal Donation
@@ -761,7 +760,6 @@
 	d_Lang042 =	Ugyldig operatør.
 		Følgende operatorer accepteres:
 		=, ==, <>,! =,>, <,> =, <=
-		
 		Eksempler:
 		MyVar > 1
 		MyVar = `%A_DDDD`%
@@ -791,7 +789,6 @@
 		Venligst tildele en variabel og bruge det i parameter.
 	d_Lang060 =	Ny version tilgængelig
 	d_Lang061 =	Kunne du tænke dig at hente den nu?
-		
 		For at deaktivere automatiske kontroller Vælg Hjælp > Tjek på opstart
 	d_Lang062 =	Du har allerede den nyeste version.
 	d_Lang063 =	Der opstod en fejl under kontrol.
@@ -801,7 +798,6 @@
 	d_Lang067 =	Vis dette vindue ved opstart
 	d_Lang068 =	Tips:
 	d_Lang069 =	En masse tid og kræfter er gået ind i udviklingen af Pulover's Macro Creator. Hvis du finder det nyttigt, kan du overveje at vise din påskønnelse med en donation.
-		
 		Donere eller ej, vil der ikke være nogen forskel i sine funktioner og funktionalitet.
 	d_Lang070 =	Doner...
 	d_Lang071 =	Nej tak
@@ -877,73 +873,29 @@
 		Du kan køre avancerede funktioner såsom SUBSTR og RegExReplace fra Funktioner vindue (Indsæt > Hvis Statements / variable / funktioner). Eller køre dine egne funktioner fra eksterne AutoHotkey scripts.
 		
 ; 19. Tooltips		
-	AutoKey_TT =	Genvejstast for at spille Macro
-	ManKey_TT =	Genvejstast for at spille Macro "step-by-step"
-	AbortKey_TT =	Genvejstast for at stoppe afspilningen
-	PauseKey_TT =	Genvejstast for at pause afspilningen
-	RecKey_TT =	Backspace for at slette
-	RecNewKey_TT =	Backspace for at slette
-	JoyKey_TT =	Tryk på en knap på joysticket
-	ReptC_TT =	0 = uendelig
 	A_List_TT =	Vælge Macro (Ctrl+1~0)
-	OSHK_TT =	Vælge Macro
-	OSHKEd_TT =	Vælge Macro
-	ApplyT_TT =	Anvend
+	AbortKey_TT =	Genvejstast for at stoppe afspilningen
+	ActiveObj_TT =	Forsøger at oprette forbindelse til en Active COM objekt
 	ApplyI_TT =	Anvend
 	ApplyL_TT =	Indsæt fra kassen (Insert)
-	CmdFilter_TT =	Filtrere efter type
-	InsertKey_TT =	Indsæt Tastetryk (Ctrl+Insert)
-	InsertKeyT_TT =	Indsæt Tastetryk
-	DefaultMacro_TT =	Vælg fil at indlæse på programmets opstart
-	VarCopyA_TT =	Kopier nuværende variable indhold
-	VarCopyB_TT =	Kopier nuværende variable indhold
-	Reset_TT =	Ryd variable indhold
-	Screenshot_TT =	Gør Screenshot
-	ColorPick_TT =	Få pixel på skærmen
-	PicPrev_TT =	Dobbeltklik for at åbne billedet
-	CoordPixel_TT =	Koordinere tilstand
-	VariatT_TT =	Shades of variation
-	IconN_TT =	Antallet af ikonet gruppen
-	TransC_TT =	Gennemsigtig farve
-	WScale_TT =	Bredde skala
-	HScale_TT =	Højde skala
-	Fast_TT =	Bruger en hurtigere søgemetode (anbefales)
-	RGB_TT =	Årsager farve, der skal fortolkes som en RGB-værdi i stedet for BGR
-	LoopLVColor_TT =	Klik for at vælge en farve
-	IfLVColor_TT =	Klik for at vælge en farve
-	RefreshIEW_TT =	Refresh List
-	ActiveObj_TT =	Forsøger at oprette forbindelse til en Active COM objekt
-	TimeoutM_TT =	0 = uendelig
-	ExpView_TT =	Avanceret Editor
-	ExpView2_TT =	Avanceret Editor
-	OSProgB_TT =	Display Progress Bar
-	OSTrans_TT =	Opacitet
-	MRel_TT =	Bevægelser i forhold til den aktuelle position.
-		Eller hvis de bruges med Control: Position i forhold til kontrol.
-	Raw_TT =	Den SendRaw Kommandoen fortolker alle tegn bogstaveligt
-		snarere end at omsætte {Enter} til et ENTER tastetryk,
-		^ C til Control-C, osv.
-	ComText_TT =	Når du ikke i rå tilstand, følgende tegn
-		behandles som modifikatorer (disse modifikatorer påvirker
-		kun den meget næste tast):!, +, ^, #
-	ComEvent_TT =	Den hastighed, hvormed tastetryk sendes bestemmes af centrale forsinkelse.
+	ApplyT_TT =	Anvend
+	AutoKey_TT =	Genvejstast for at spille Macro
 	Clip_TT =	Midlertidigt bruger Udklipsholder til at sende teksten.
 		Når operationen er afsluttet, scriptet
 		genskaber de originale clipboard indhold.
 		(Forlade tekst tom at indsætte nuværende indhold)
+	CmdFilter_TT =	Filtrere efter type
+	CmdSort_TT =	Sorter alfabetisk
+	ColorPick_TT =	Få pixel på skærmen
+	ComEvent_TT =	Den hastighed, hvormed tastetryk sendes bestemmes af centrale forsinkelse.
+	ComText_TT =	Når du ikke i rå tilstand, følgende tegn
+		behandles som modifikatorer (disse modifikatorer påvirker
+		kun den meget næste tast):!, +, ^, #
+	CoordPixel_TT =	Koordinere tilstand
+	DefaultMacro_TT =	Vælg fil at indlæse på programmets opstart
 	EditPaste_TT =	Indsætter String på indskudsmærke / indsæt position
 		i en Edit kontrol (dette påvirker ikke
 		indholdet af klippebordet).
-	SetText_TT =	Ændrer teksten til en kontrol.
-	RelKey_TT =	Records musebevægelser og klik, som forskydninger
-		fra tidligere stilling, når det holdes.
-	ToggleC_TT =	Aktiver Relativ optagelse, når nøglen tilstand er tændt.
-	Relative_TT =	Koordinater er relative til det aktive vindue.
-	Screen_TT =	Koordinater er relative til skrivebordet (hele skærmen).
-	IncFiles_TT =	Medtag filer / Værdier
-	IncFolders_TT =	Medtag vejvisere (mapper) / Nøgler
-	Recurse_TT =	Rekursive i undermapper (undermapper) / undernøgler
-	CmdSort_TT =	Sorter alfabetisk
 	Ex_EdScript_TT =	Open in externe editor
 	ExprLink2_TT =	- IKKE VEDLÆG VARIABLER I PROCENTTEGN HER.
 		- De fleste af AHK udtryk understøttes.
@@ -955,16 +907,90 @@
 		- Du må bruge strygere, variabler, arrays og funktioner.
 		- For at bruge strenge, vedlægge dem i anførselstegn, f.eks: var = "a".
 		- Flere Udtalelser understøttes, fx: var = "a" || InStr (var, "b").
+	ExpView_TT =	Avanceret Editor
+	ExpView2_TT =	Avanceret Editor
+	Fast_TT =	Bruger en hurtigere søgemetode (anbefales)
+	HScale_TT =	Højde skala
+	IconN_TT =	Antallet af ikonet gruppen
+	IfLVColor_TT =	Klik for at vælge en farve
+	IncFiles_TT =	Medtag filer / Værdier
+	IncFolders_TT =	Medtag vejvisere (mapper) / Nøgler
+	InsertKey_TT =	Indsæt Tastetryk (Ctrl+Insert)
+	InsertKeyT_TT =	Indsæt Tastetryk
+	JoyKey_TT =	Tryk på en knap på joysticket
+	LoopLVColor_TT =	Klik for at vælge en farve
+	ManKey_TT =	Genvejstast for at spille Macro "step-by-step"
+	MRel_TT =	Bevægelser i forhold til den aktuelle position.
+		Eller hvis de bruges med Control: Position i forhold til kontrol.
+	OSHK_TT =	Vælge Macro
+	OSHKEd_TT =	Vælge Macro
+	OSProgB_TT =	Display Progress Bar
+	OSTrans_TT =	Opacitet
+	PauseKey_TT =	Genvejstast for at pause afspilningen
+	PicPrev_TT =	Dobbeltklik for at åbne billedet
+	Raw_TT =	Den SendRaw Kommandoen fortolker alle tegn bogstaveligt
+		snarere end at omsætte {Enter} til et ENTER tastetryk,
+		^ C til Control-C, osv.
+	RecKey_TT =	Backspace for at slette
+	RecNewKey_TT =	Backspace for at slette
+	Recurse_TT =	Rekursive i undermapper (undermapper) / undernøgler
+	RefreshIEW_TT =	Refresh List
+	Relative_TT =	Koordinater er relative til det aktive vindue.
+	RelKey_TT =	Records musebevægelser og klik, som forskydninger
+		fra tidligere stilling, når det holdes.
+	ReptC_TT =	0 = uendelig
+	Reset_TT =	Ryd variable indhold
+	RGB_TT =	Årsager farve, der skal fortolkes som en RGB-værdi i stedet for BGR
+	Screen_TT =	Koordinater er relative til skrivebordet (hele skærmen).
+	Screenshot_TT =	Gør Screenshot
+	SetText_TT =	Ændrer teksten til en kontrol.
+	TimeoutM_TT =	0 = uendelig
+	ToggleC_TT =	Aktiver Relativ optagelse, når nøglen tilstand er tændt.
+	TransC_TT =	Gennemsigtig farve
+	VarCopyA_TT =	Kopier nuværende variable indhold
+	VarCopyB_TT =	Kopier nuværende variable indhold
+	VariatT_TT =	Shades of variation
+	WScale_TT =	Bredde skala
 		
 ; 20. Tooltips from AHK Docs		
-	ExpList_TT =	Dobbeltklik for at redigere
+	Ex_AF_TT =	Springer den blide fremgangsmåde til aktivering af et vindue
+		og går lige til insisterende metode.
+	Ex_DH_TT =	Bestemmer om usynlige vinduer er "set" af scriptet.
+	Ex_EdVars_TT =	Vælg globale variabler, der skal eksporteres.
+	Ex_HK_TT =	Tvinger brugen af krogen at gennemføre alle
+		eller nogle keyboard genvejstaster.
 	Ex_IfDir_TT =	Opretter kontekstafhængige hotkeys og hotstrings afhængigt
 		af den type vindue, der er aktiveret eller eksisterer.
 	Ex_IfDirType_TT =	Opretter kontekstafhængige hotkeys og hotstrings afhængigt
 		af den type vindue, der er aktiveret eller eksisterer.
+	Ex_IN_TT =	Får script til at opføre sig, som om den angivne
+		filens indhold er til stede ved denne nøjagtige position.
+	Ex_MD_TT =	Indstiller forsinkelse, som vil opstå efter
+		hver mus bevægelse eller klik på.
+	Ex_MT_TT =	Indstiller det maksimale antal samtidige
+		tråde per genvejstast eller hotstring.
+	Ex_NT_TT =	Deaktiverer visning af en bakke ikon.
+	Ex_PT_TT =	Holder et script permanent kørende
+		(det vil sige, indtil brugeren lukker det eller ExitApp er stødt).
+	Ex_SB_TT =	Bestemmer, hvor hurtigt et script vil køre (påvirker CPU forbrug).
+	Ex_SC_TT =	Indstiller forsinkelse, som vil opstå efter
+		hver kontrol-modificerende kommando.
+	Ex_SI_TT =	Bestemmer, om et script er tilladt at køre igen, når det allerede kører.
+	Ex_SK_TT =	Indstiller forsinkelse, som vil opstå efter hver
+		tastetryk sendes med Send eller ControlSend.
 	Ex_SM_TT =	Gør Send synonymt med SendInput eller SendPlay frem
 		standard (sendEvent). Gør også Klik og mouseMove / Klik / Træk
 		bruge den angivne metode.
+	Ex_ST_TT =	Indstiller matchende adfærd WinTitle parameter i kommandoer som f.eks WinWait.
+	Ex_SW_TT =	Indstiller forsinkelse, som vil opstå efter
+		hvert vindues kommando, såsom WinActivate.
+	Ex_UV_TT =	Eksportere globale variabler.
+	ExpList_TT =	Dobbeltklik for at redigere
+	SI_TT =	Ordet FORCE springer dialogboksen og erstatter den gamle instans automatisk,
+		som er ens i effekt til Reload kommandoen.
+		Ordet IGNORE springer dialogboksen og efterlader den gamle instans kører.
+		Med andre ord forsøg på at iværksætte en allerede kørende script ignoreret.
+		Ordet OFF tillader flere forekomster af scriptet til at køre sideløbende.
 	SM_TT =	Event: Dette er udgangspunktet standard anvendes af alle scripts.
 		Det bruger sendEvent metode til Send, SendRaw, Klik, og mouseMove / Klik / Træk.
 		Input: Skifter til SendInput metoden til Send, SendRaw, Klik, og mouseMove / Klik / Træk.
@@ -972,40 +998,10 @@
 		når SendInput er tilgængelig, returnerer den til afspilningstilstand (nedenfor). Dette medfører også
 		Den SendInput kommandoen selv at vende tilbage til Play-tilstand, når SendInput ikke er tilgængelig.
 		Play: Skifter til SendPlay metode til Send, SendRaw, Klik, og mouseMove / Klik / Træk.
-	Ex_SI_TT =	Bestemmer, om et script er tilladt at køre igen, når det allerede kører.
-	SI_TT =	Ordet FORCE springer dialogboksen og erstatter den gamle instans automatisk,
-		som er ens i effekt til Reload kommandoen.
-		Ordet IGNORE springer dialogboksen og efterlader den gamle instans kører.
-		Med andre ord forsøg på at iværksætte en allerede kørende script ignoreret.
-		Ordet OFF tillader flere forekomster af scriptet til at køre sideløbende.
-	Ex_ST_TT =	Indstiller matchende adfærd WinTitle parameter i kommandoer som f.eks WinWait.
 	ST_TT =	1: Et vindue titel skal starte med den angivne WinTitle at være en kamp.
 		2: Et vindue titel kan indeholde WinTitle overalt inde, at det er en kamp.
 		3: Et vindue titel skal svare nøjagtigt WinTitle at være en kamp.
 		RegEx: Ændrer WinTitle, WinText, ExcludeTitle, og ExcludeText at være regulære udtryk.
-	Ex_DH_TT =	Bestemmer om usynlige vinduer er "set" af scriptet.
-	Ex_AF_TT =	Springer den blide fremgangsmåde til aktivering af et vindue
-		og går lige til insisterende metode.
-	Ex_HK_TT =	Tvinger brugen af krogen at gennemføre alle
-		eller nogle keyboard genvejstaster.
-	Ex_SK_TT =	Indstiller forsinkelse, som vil opstå efter hver
-		tastetryk sendes med Send eller ControlSend.
-	Ex_MD_TT =	Indstiller forsinkelse, som vil opstå efter
-		hver mus bevægelse eller klik på.
-	Ex_SC_TT =	Indstiller forsinkelse, som vil opstå efter
-		hver kontrol-modificerende kommando.
-	Ex_SW_TT =	Indstiller forsinkelse, som vil opstå efter
-		hvert vindues kommando, såsom WinActivate.
-	Ex_SB_TT =	Bestemmer, hvor hurtigt et script vil køre (påvirker CPU forbrug).
-	Ex_NT_TT =	Deaktiverer visning af en bakke ikon.
-	Ex_IN_TT =	Får script til at opføre sig, som om den angivne
-		filens indhold er til stede ved denne nøjagtige position.
-	Ex_PT_TT =	Holder et script permanent kørende
-		(det vil sige, indtil brugeren lukker det eller ExitApp er stødt).
-	Ex_MT_TT =	Indstiller det maksimale antal samtidige
-		tråde per genvejstast eller hotstring.
-	Ex_UV_TT =	Eksportere globale variabler.
-	Ex_EdVars_TT =	Vælg globale variabler, der skal eksporteres.
 		
 ; 21. Operators		
 	As_Oper_1 =	Tildel
@@ -1024,47 +1020,47 @@
 	Co_Oper_7 =	Mindre end eller lig
 		
 ; 22. IE Commands Tips		
-	Tip_Navigate =	Navigerer til en webadresse eller sti.
-	Tip_Value =	Får eller indstiller værdien af ​​genstanden.
-	Tip_Focus =	Sætter fokus på objektet.
+	Tip_Checked =	Indstiller eller henter tilstanden for afkrydsningsfeltet eller radioknap.
 	Tip_Click =	Simulerer et klik på objektet.
-	Tip_Submit =	Sender formularen.
-	Tip_GoHome =	Navigerer til den nuværende hjem eller startside.
+	Tip_Focus =	Sætter fokus på objektet.
 	Tip_GoBack =	Navigerer tilbage ét element i historien listen.
 	Tip_GoForward =	Navigerer fremad ét element i historien listen.
+	Tip_GoHome =	Navigerer til den nuværende hjem eller startside.
 	Tip_GoSearch =	Navigerer til den aktuelle søgning.
-	Tip_Refresh =	Genindlæser aktuelt viste side.
-	Tip_Stop =	Annullerer en ventende navigation eller download.
-	Tip_Quit =	Lukker siden.
+	Tip_Height =	Indstiller eller henter højden af ​​objektet.
+	Tip_Href =	Indstiller eller henter en destinationswebadresse eller et ankerpunkt.
+	Tip_InnerHTML =	Indstiller eller henter HTML af objektet.
+	Tip_InnerText =	Indstiller eller får teksten til objektet.
+	Tip_Length =	Indstiller eller henter antallet af objekter i en samling.
 	Tip_LocationName =	Får stien eller titel aktuelle side.
 	Tip_LocationURL =	Gets webadressen for den aktuelle side.
-	Tip_InnerText =	Indstiller eller får teksten til objektet.
-	Tip_InnerHTML =	Indstiller eller henter HTML af objektet.
+	Tip_Navigate =	Navigerer til en webadresse eller sti.
 	Tip_OuterHTML =	Indstiller eller henter objektet og dets indhold i HTML.
-	Tip_Href =	Indstiller eller henter en destinationswebadresse eller et ankerpunkt.
-	Tip_Src =	Indstiller eller henter en webadresse, der skal lastes af objektet.
+	Tip_Quit =	Lukker siden.
+	Tip_Refresh =	Genindlæser aktuelt viste side.
 	Tip_SelectedIndex =	Indstiller eller henter indekset for den valgte indstilling i en udvalgt objekt.
-	Tip_Checked =	Indstiller eller henter tilstanden for afkrydsningsfeltet eller radioknap.
+	Tip_Src =	Indstiller eller henter en webadresse, der skal lastes af objektet.
+	Tip_Stop =	Annullerer en ventende navigation eller download.
+	Tip_Submit =	Sender formularen.
 	Tip_Type =	Indstiller eller henter indhold typen af ​​objektet.
+	Tip_Value =	Får eller indstiller værdien af ​​genstanden.
 	Tip_Width =	Indstiller eller henter bredden af ​​objektet.
-	Tip_Height =	Indstiller eller henter højden af ​​objektet.
-	Tip_Length =	Indstiller eller henter antallet af objekter i en samling.
 		
 ; 23. AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	Abs	Returnerer den absolutte værdi af nummer.
-	ASin	Returnerer arcus sinus (antallet , hvis sinus er Tal ) i radianer .
-	ACos	Returnerer arccosinus (antallet hvis cosinus er Tal ) i radianer .
+	ACos	Returnerer arccosinus (antallet hvis cosinus er Tal) i radianer .
 	Array	Opretter en scriptable associative array med heltal nøgler.
-	Asc	Giver tegnkoden ( et tal mellem 1 og 255 ( i ANSI builds ) eller 65535 ( i Unicode builds ) ) for det første tegn i String .
+	Asc	Giver tegnkoden (et tal mellem 1 og 255 (i ANSI builds) eller 65535 (i Unicode builds)) for det første tegn i String .
+	ASin	Returnerer arcus sinus (antallet , hvis sinus er Tal) i radianer .
 	ATan	Returnerer arcus (antallet , hvis tangens er Number) i radianer .
 	BlockInput	Deaktiverer eller muliggør brugerens evne til at interagere med computeren via tastatur og mus .
-	Break	Udgange ( slutter ) en løkke. Gyldige inden enhver form for løkke .
-	Ceil	Retur nummer rundet op til nærmeste hele tal (uden nogen .00 suffix ) .
+	Break	Udgange (slutter) en løkke. Gyldige inden enhver form for løkke .
+	Ceil	Retur nummer rundet op til nærmeste hele tal (uden nogen .00 suffix) .
 	Chr	Returnerer enkelt tegn , der svarer til karakteren angivet af nummer.
 	Click	Klikker på en museknap på de angivne koordinater. Det kan også holde en knap, og drej rattet , eller flytte .
-	ClipWait	Venter, indtil klippebordet indeholder data.
 	Clipboard	Indsætter tekst fra klippebordet.
+	ClipWait	Venter, indtil klippebordet indeholder data.
 	ComObjActive	Henter en registreret COM objekt.
 	ComObjArray	Opretter en SAFEARRAY til brug med COM.
 	ComObjConnect	Tilslutter et COM objekts event kilder til funktioner med en given præfiks.
@@ -1081,7 +1077,7 @@
 	Continue	Springer resten af strømsløjfen iteration og begynder en ny. Gyldige inden enhver form for løkke .
 	Control	Gør en række ændringer til en kontrol.
 	ControlClick	Sender en museknap eller musehjulet begivenhed til en kontrol.
-	ControlEditPaste	Pastaer String på indsætningstegn / indsæt position i et Edit kontrol ( dette påvirker ikke indholdet af klippebordet ) .
+	ControlEditPaste	Pastaer String på indsætningstegn / indsæt position i et Edit kontrol (dette påvirker ikke indholdet af klippebordet) .
 	ControlFocus	Indstiller input fokus til en given kontrol på et vindue .
 	ControlGet	Henter forskellige typer oplysninger om en kontrol.
 	ControlGetFocus	Henter , der styrer af målet vinduet har input fokus , hvis nogen.
@@ -1098,33 +1094,33 @@
 	DetectHiddenWindows	Bestemmer om usynlige vinduer er " set" af scriptet .
 	DllCall	Kalder en funktion inde en DLL , såsom en standard Windows API-funktionen .
 	Drive	Skubber / trækker bakkens i en cd- eller dvd-drev , eller sætter et drev volumen etiket.
-	DriveGet	Henter forskellige oplysninger om computerens drev ( r) .
+	DriveGet	Henter forskellige oplysninger om computerens drev (r) .
 	DriveSpaceFree	Henter den frie diskplads af et drev , i megabyte .
 	Edit	Åbner det aktuelle script til redigering i den tilhørende editor.
-	Else	Angiver kommandoen ( s) til at udføre, hvis en IF -sætning evalueres til FALSK . Når mere end én kommando er til stede, vedlægge dem i en blok ( seler ) .
-	EnvAdd	Sætter en variabel til summen af sig selv plus given værdi ( kan også tilføje eller trække tid fra en dato - tidsværdi ) . Synonymt med : Var + = Værdi .
+	Else	Angiver kommandoen (s) til at udføre, hvis en IF -sætning evalueres til FALSK . Når mere end én kommando er til stede, vedlægge dem i en blok (seler) .
+	EnvAdd	Sætter en variabel til summen af sig selv plus given værdi (kan også tilføje eller trække tid fra en dato - tidsværdi) . Synonymt med : Var + = Værdi .
 	EnvDiv	Sætter en variabel til sig selv divideret med den givne værdi . Synonymt med : Var / = Værdi .
 	EnvGet	Henter en miljøvariabel .
 	EnvMult	Sætter en variabel til selv gange den givne værdi . Synonymt med : Var * = Værdi .
 	EnvSet	Skriver en værdi til en variabel indeholdt i miljøet .
-	EnvSub	Sætter en variabel til sig selv minus given værdi ( kan også sammenligne date -time værdier). Synonymt med : Var - = Værdi .
+	EnvSub	Sætter en variabel til sig selv minus given værdi (kan også sammenligne date -time værdier). Synonymt med : Var - = Værdi .
 	EnvUpdate	Meddeler OS og alle de kørende programmer, som miljøvariabel (r) er ændret.
-	Exit	Afslutter aktuelle tråd , eller ( hvis scriptet ikke er vedvarende , og indeholder ingen genvejstaster ) hele scriptet .
+	Exit	Afslutter aktuelle tråd , eller (hvis scriptet ikke er vedvarende , og indeholder ingen genvejstaster) hele scriptet .
 	ExitApp	Afslutter scriptet betingelsesløst.
-	Exp	Returnerer e ( der er ca 2,71828182845905 ) opløftet til n'te potens .
-	FileAppend	Skriver tekst til slutningen af en fil (første opretter filen , hvis det er nødvendigt ) .
+	Exp	Returnerer e (der er ca 2,71828182845905) opløftet til n'te potens .
+	FileAppend	Skriver tekst til slutningen af en fil (første opretter filen , hvis det er nødvendigt) .
 	FileCopy	Kopierer en eller flere filer.
-	FileCopyDir	Kopierer en mappe sammen med alle dens undermapper og filer (svarende til xcopy ) .
+	FileCopyDir	Kopierer en mappe sammen med alle dens undermapper og filer (svarende til xcopy) .
 	FileCreateDir	Opretter en mappe.
-	FileCreateShortcut	Opretter en genvej ( . LNK fil) .
+	FileCreateShortcut	Opretter en genvej (. LNK fil) .
 	FileDelete	Sletter en eller flere filer.
 	FileEncoding	Indstiller standard kodning for FileRead , FileReadLine , Loop Læs , FileAppend og FileOpen .
-	FileInstall	Inkluderer den angivne fil inde kompileret version af scriptet .
 	FileGetAttrib	Rapporter om en fil eller mappe er read -only , skjulte , etc.
-	FileGetShortcut	Henter oplysninger om en genvej ( . LNK -fil), som sit mål -fil.
+	FileGetShortcut	Henter oplysninger om en genvej (. LNK -fil), som sit mål -fil.
 	FileGetSize	Henter størrelsen på en fil .
 	FileGetTime	Henter den datetime præg af en fil eller mappe .
 	FileGetVersion	Henter version af en fil.
+	FileInstall	Inkluderer den angivne fil inde kompileret version af scriptet .
 	FileMove	Flytter eller omdøber en eller flere filer.
 	FileMoveDir	Flytter en mappe sammen med alle dens undermapper og filer. Det kan også omdøbe en mappe .
 	FileOpen	Giver objektorienteret fil I / O.
@@ -1137,7 +1133,7 @@
 	FileSelectFolder	Viser en standard dialogboks , der giver brugeren mulighed for at vælge en mappe .
 	FileSetAttrib	Ændrer de attributter af en eller flere filer eller mapper . Wildcards er understøttet.
 	FileSetTime	Ændrer datetime stempel en eller flere filer eller mapper . Wildcards er understøttet.
-	Floor	Retur nummer rundet ned til nærmeste hele tal (uden nogen .00 suffix ) .
+	Floor	Retur nummer rundet ned til nærmeste hele tal (uden nogen .00 suffix) .
 	For	Gentager en række kommandoer én gang for hver nøgleværdi par i et objekt.
 	Format	Formaterer et variabelt antal indgangsværdier ifølge en streng format.
 	FormatTime	Forvandler en YYYYMMDDHH24MISS tidsstempel ind i den angivne dato / tid format.
@@ -1151,27 +1147,27 @@
 	GroupClose	Lukker det aktive vindue, hvis det bare blev aktiveret ved GroupActivate eller GroupDeactivate . Det aktiverer derefter den næste vindue i rækken . Det kan også lukke alle vinduer i en gruppe.
 	GroupDeactivate	Svarende til GroupActivate undtagen aktiverer den næste vinduet ikke i gruppen.
 	HasKey	Returnerer true hvis Key er forbundet med en værdi.
-	if	Angiver kommandoen ( r) at udføre, hvis sammenligningen af en variabel til en værdi evalutes til TRUE . Når mere end én kommando er til stede, vedlægge dem i en blok ( seler ) .
-	if (expression)	Angiver kommandoen ( s) til at udføre, hvis et udtryk evalueres til SAND .
-	If var [not] between	Kontrollerer, om en variabels indhold er numerisk eller alfabetisk mellem to værdier ( inklusive).
-	If var [not] in/contains MatchList 	Kontrollerer, om en variabels indhold matcher et af elementerne på en liste.
-	If var is [not] type	Kontrollerer , om en variabels indhold er numerisk , store osv.
+	if	Angiver kommandoen (r) at udføre, hvis sammenligningen af en variabel til en værdi evalutes til TRUE . Når mere end én kommando er til stede, vedlægge dem i en blok (seler) .
+	if (expression)	Angiver kommandoen (s) til at udføre, hvis et udtryk evalueres til SAND .
+	If A_Index	Kontrollerer om den aktuelle løkke iteration kampe et angivet et nummer.
 	If Clipboard	Kontrollerer om Udklipsholder teksten kampe den angivne streng .
 	If ErrorLevel	Tjekker, om en bestemt billede eller pixel blev fundet i skærmen.
-	If A_Index	Kontrollerer om den aktuelle løkke iteration kampe et angivet et nummer.
+	If var [not] between	Kontrollerer, om en variabels indhold er numerisk eller alfabetisk mellem to værdier (inklusive).
+	If var [not] in/contains MatchList 	Kontrollerer, om en variabels indhold matcher et af elementerne på en liste.
+	If var is [not] type	Kontrollerer , om en variabels indhold er numerisk , store osv.
 	IfEqual/IfNotEqual	Sammenligner en variabel til en værdi for ligestilling . Synonymt med : Hvis Var = Værdi | hvis Var < > Value .
 	IfExist / IfNotExist / FileExist	Kontrollerer eksistensen af en fil eller mappe .
 	IfGreater / IfGreaterOrEqual	Sammenligner en variabel til en værdi . Synonymt med : Hvis Var> Value | hvis Var> = Værdi .
 	IfInString / IfNotInString / InStr	Tjekker, om en variabel indeholder den angivne streng .
 	IfLess / IfLessOrEqual	Sammenligner en variabel til en værdi . Synonymt med : Hvis Var < Value | hvis Var < = Værdi .
 	IfMsgBox	Kontrol, som tastetryk af brugeren under det seneste MsgBox kommando.
-	IfWinActive / IfWinNotActive	Kontrollerer om den angivne vindue eksisterer og er aktiv i øjeblikket (den forreste ) .
+	IfWinActive / IfWinNotActive	Kontrollerer om den angivne vindue eksisterer og er aktiv i øjeblikket (den forreste) .
 	IfWinExist / IfWinNotExist	Kontrollerer om den angivne vindue eksisterer.
 	ImageSearch	Søger en region af skærmen for et billede .
 	IniDelete	Sletter en værdi fra et standardformat . Ini -filen .
 	IniRead	Læser en værdi fra et standardformat . Ini -filen .
 	IniWrite	Skriver en værdi til et standardformat . Ini -filen .
-	Input	Waits for brugeren at indtaste en streng ( understøttes ikke på Windows 9x : det gør ikke noget ) .
+	Input	Waits for brugeren at indtaste en streng (understøttes ikke på Windows 9x : det gør ikke noget) .
 	InputBox	Viser en tekstboks til at bede brugeren om at indtaste en streng.
 	InsertAt	Indsætter en eller flere værdier i en given position inden for et lineært array.
 	InStr	Søger efter en given forekomst af en streng , fra venstre eller højre.
@@ -1180,10 +1176,10 @@
 	Labels	En etiket identificerer en linje kode, og kan bruges som en Goto mål eller til dannelse af en subrutine.
 	Length	Returnerer længden af et lineært array begynder ved position 1.
 	ListVars	Viser script s variabler: deres navne og aktuelle indhold.
-	Log	Returnerer logaritme (basis 10) i nummer.
 	Ln	Returnerer den naturlige logaritme (base e) nummer.
-	Loop (normal) 	Udføre en række kommandoer gentagne gange: enten angivne antal gange, eller indtil pause stødt.
+	Log	Returnerer logaritme (basis 10) i nummer.
 	Loop (files & folders)	Henter de angivne filer eller mapper, en ad gangen.
+	Loop (normal) 	Udføre en række kommandoer gentagne gange: enten angivne antal gange, eller indtil pause stødt.
 	Loop (parse a string)	Henter delstrenge (felter) fra en streng, en ad gangen.
 	Loop (read file contents)	Henter linjerne i en tekstfil, en ad gangen (præsterer bedre end FileReadLine).
 	Loop (registry)	Henter indholdet af den angivne undernøgle i registreringsdatabasen, et element ad gangen.
@@ -1212,12 +1208,12 @@
 	Progress	Opretter eller opdaterer et vindue med en statuslinje.
 	Push	Tilføjer værdier til slutningen af et array.
 	Random	Genererer en pseudo-tilfældigt tal.
+	RegDelete	Sletter en undernøgleindstillingen eller værdi fra registreringsdatabasen.
 	RegExMatch	Afgør, om en streng indeholder et mønster (regulært udtryk).
 	RegExReplace	Erstatter forekomster af et mønster (regulært udtryk) inde i en streng.
-	RegDelete	Sletter en undernøgleindstillingen eller værdi fra registreringsdatabasen.
+	RegisterCallback	Opretter en maskin-kode, adresse, når du kalder, omdirigerer opkaldet til en funktion i scriptet.
 	RegRead	Læser en værdi fra registreringsdatabasen.
 	RegWrite	Skriver en værdi i registreringsdatabasen.
-	RegisterCallback	Opretter en maskin-kode, adresse, når du kalder, omdirigerer opkaldet til en funktion i scriptet.
 	RemoveAt	Fjerner elementer fra den givne position i et lineært array.
 	Return	Returnerer fra en subrutine, som henrettelse tidligere havde sprunget via funktions-opkald, gosub, Genvejstast aktivering, GroupActivate eller andre midler.
 	Round	Hvis N udelades eller 0, Antal afrundes til nærmeste hele tal. Hvis N er positivt tal, Antal afrundes til N decimaler. Hvis N er negativ, Number afrundet med N cifre til venstre for decimaltegnet.
@@ -1235,8 +1231,8 @@
 	SetKeyDelay	Indstiller forsinkelse, som vil opstå efter hvert tastetryk sendes af Send eller ControlSend.
 	SetMouseDelay	Indstiller forsinkelse, som vil opstå efter hver mus bevægelse eller klik på.
 	SetNumlockState	Indstiller tilstand Numlock-tasten. Kan også tvinge nøglen til at blive på eller fra.
-	SetScrollLockState	Indstiller tilstand ScrollLock tasten. Kan også tvinge nøglen til at blive på eller fra.
 	SetRegView	Giver indskrive kommandoer i en 32-bit script at få adgang til 64-bit register visning og vice versa.
+	SetScrollLockState	Indstiller tilstand ScrollLock tasten. Kan også tvinge nøglen til at blive på eller fra.
 	SetTimer	Årsager en subrutine til at blive lanceret automatisk og gentagne gange på et bestemt tidsinterval.
 	Shutdown	Lukker, genstarter eller logger af systemet.
 	Sin	Returnerer den trigonometriske sinus af nummer.
@@ -1249,13 +1245,12 @@
 	SoundSet	Ændringer forskellige indstillinger af en lyd-enhed (master mute, master volume, etc.)
 	SoundSetWaveVolume	Ændrer den bølge lydstyrken for en lyd-enhed.
 	SplashImage	Opretter eller opdaterer et vindue med en JPG, GIF eller BMP billede.
-	SplashTextOn	Opretter en tilpasselig tekst popup-vinduet.
 	SplashTextOff	Lukker vinduet herover.
+	SplashTextOn	Opretter en tilpasselig tekst popup-vinduet.
 	SplitPath	Adskiller et filnavn eller URL ind sit navn, bibliotek, udvidelse og drive.
 	Sqrt	Returnerer kvadratroden af nummer.
 	StatusBarGetText	Henter tekst fra en standard statuslinjen kontrol.
 	StatusBarWait	Venter, indtil et vindue statuslinje indeholder den angivne streng.
-	StrPut / StrGet	Kopierer en streng til eller fra en hukommelse adresse, valgfri konvertere den mellem kode sider.
 	StringCaseSense	Bestemmer, om strengen sammenligninger er små bogstaver (standard er "ikke små bogstaver").
 	StringGetPos / InStr	Henter position angiven streng i en streng.
 	StringLeft	Henter en række tegn fra venstre side af en streng.
@@ -1268,6 +1263,7 @@
 	StringTrimLeft	Fjerner et antal tegn fra venstre side af en streng.
 	StringTrimRight	Fjerner et antal tegn fra højre side af en streng.
 	StringUpper	Konverterer en streng til store bogstaver.
+	StrPut / StrGet	Kopierer en streng til eller fra en hukommelse adresse, valgfri konvertere den mellem kode sider.
 	Suspend	Deaktiverer eller aktiverer alle eller udvalgte genvejstaster og hotstrings.
 	SysGet	Henter skærmopløsning, multi-monitor info, dimensioner systemets objekter og andre system egenskaber.
 	Tan	Returnerer den trigonometriske tangens af nummer.
@@ -1285,10 +1281,10 @@
 	WinActive	Returnerer Unikt ID (HWND) af det aktive vindue, hvis det matcher de angivne kriterier.
 	WinClose	Lukker angivne vindue.
 	WinExist	Kontrollerer om den angivne vindue eksisterer.
+	WinGet	Henter den angivne vindue unikke id, proces-id, proces navn eller en liste over sine kontroller. Det kan også hente en liste over alle vinduer der matcher de angivne kriterier.
 	WinGetActiveStats	Kombinerer funktionerne fra WinGetActiveTitle og WinGetPos i én kommando.
 	WinGetActiveTitle	Henter titlen på den aktive vindue.
 	WinGetClass	Henter den angivne vindue klasse navn.
-	WinGet	Henter den angivne vindue unikke id, proces-id, proces navn eller en liste over sine kontroller. Det kan også hente en liste over alle vinduer der matcher de angivne kriterier.
 	WinGetPos	Henter positionen og størrelsen af den angivne vindue.
 	WinGetText	Henter teksten fra angivne vindue.
 	WinGetTitle	Henter titlen på den angivne vindue.

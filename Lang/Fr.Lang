@@ -73,7 +73,6 @@
 	i_Lang019 =	Messa&ges De Windows
 	i_Lang020 =	Tro&uvez une commande
 		
-		
 ; 06. Edit Sub Menu		
 	e_Lang001 =	&Dupliquer
 	e_Lang002 =	&Modifier le commentaire
@@ -97,7 +96,6 @@
 	e_Lang020 =	R&etirez tous les groupes
 	e_Lang021 =	R&éduire tout
 	e_Lang022 =	&Développer tout
-		
 		
 ; 07. Select Sub Menu		
 	s_Lang001 =	&Sélectionner tout
@@ -153,6 +151,7 @@
 	o_Lang013 =	&Supprimer le fichier par défaut
 	o_Lang014 =	Raccourc&is clavier par défaut
 	o_Lang015 =	Para&mètres par défaut
+	o_Lang016 =	&Editeur de langue
 		
 ; 10. Donate Sub Menu		
 	p_Lang001 =	&Donation PayPal
@@ -761,7 +760,6 @@
 	d_Lang042 =	Opérateur non valide.
 		Les opérateurs suivants sont acceptés:
 		=, ==, <>,! =,>, <,> =, <=
-		
 		Exemples:
 		MyVar > 1
 		MyVar = `%A_DDDD`%
@@ -791,7 +789,6 @@
 		S'il vous plaît affecter une variable et l'utiliser dans le paramètre.
 	d_Lang060 =	Nouvelle version disponible
 	d_Lang061 =	Voulez-vous la télécharger maintenant?
-		
 		Pour désactiver la vérification automatique Sélectionnez Aide > Vérifier au démarrage
 	d_Lang062 =	Vous avez déjà la version la plus récente.
 	d_Lang063 =	Une erreur s'est produite lors de la vérification.
@@ -801,7 +798,6 @@
 	d_Lang067 =	Afficher cette fenêtre au démarrage
 	d_Lang068 =	Conseils:
 	d_Lang069 =	Beaucoup de temps et d'efforts ont été consacrés à l'élaboration de Pulover's Macro Creator. Si vous le trouvez utile, s'il vous plaît pensez à montrer votre appréciation avec un don.
-		
 		Donner ou non, il n'y aura pas de différence dans ses fonctions et fonctionnalités.
 	d_Lang070 =	Faites un don...
 	d_Lang071 =	Non, merci
@@ -877,73 +873,29 @@
 		Vous pouvez exécuter des fonctions avancées telles que SUBSTR et RegExReplace de la fenêtre des fonctions (Insertion > Si Déclarations / variables / fonctions). Ou d'exécuter vos propres fonctions de scripts AutoHotkey externes.
 		
 ; 19. Tooltips		
-	AutoKey_TT =	Hotkey à jouer Macro
-	ManKey_TT =	Hotkey à jouer Macro "par étape par étape"
-	AbortKey_TT =	Raccourci pour arrêter la lecture
-	PauseKey_TT =	Raccourci pour interrompre la lecture
-	RecKey_TT =	Retour arrière pour effacer
-	RecNewKey_TT =	Retour arrière pour effacer
-	JoyKey_TT =	Appuyez sur un bouton sur la manette
-	ReptC_TT =	0 = infini
 	A_List_TT =	Sélectionner Macro (Ctrl+1~0)
-	OSHK_TT =	Sélectionner Macro
-	OSHKEd_TT =	Sélectionner Macro
-	ApplyT_TT =	Appliquer
+	AbortKey_TT =	Raccourci pour arrêter la lecture
+	ActiveObj_TT =	Tente de se connecter à un objet COM active
 	ApplyI_TT =	Appliquer
 	ApplyL_TT =	Insérez de la case (Insert)
-	CmdFilter_TT =	Filtrer par type
-	InsertKey_TT =	Insérer Frappe (Ctrl+Insert)
-	InsertKeyT_TT =	Insérer Frappe
-	DefaultMacro_TT =	Sélectionnez le fichier à charger au démarrage du programme
-	VarCopyA_TT =	Copiez le contenu des variables actuelles
-	VarCopyB_TT =	Copiez le contenu des variables actuelles
-	Reset_TT =	Effacer le contenu des variables
-	Screenshot_TT =	Faire une capture d'écran
-	ColorPick_TT =	Obtenir pixel à l'écran
-	PicPrev_TT =	Double-cliquez sur l'image pour ouvrir
-	CoordPixel_TT =	Mode coordonner
-	VariatT_TT =	Nuances de variation
-	IconN_TT =	Numéro du groupe icône
-	TransC_TT =	Couleur transparente
-	WScale_TT =	Échelle de la largeur
-	HScale_TT =	Échelle de la hauteur
-	Fast_TT =	Utilise une méthode de recherche rapide (recommandé)
-	RGB_TT =	Provoque une couleur à être interprété comme une valeur RVB au lieu de BGR
-	LoopLVColor_TT =	Cliquez pour choisir une couleur
-	IfLVColor_TT =	Cliquez pour choisir une couleur
-	RefreshIEW_TT =	Rafraîchir la liste
-	ActiveObj_TT =	Tente de se connecter à un objet COM active
-	TimeoutM_TT =	0 = infini
-	ExpView_TT =	Éditeur Avancé
-	ExpView2_TT =	Éditeur Avancé
-	OSProgB_TT =	Afficher la barre de progression
-	OSTrans_TT =	Opacité
-	MRel_TT =	Mouvements relatifs à la position actuelle.
-		Ou si elle est utilisée avec la commande: position par rapport au témoin.
-	Raw_TT =	La commande SendRaw interprète littéralement tous les caractères
-		plutôt que de traduire {Enter} à une touche ENTER,
-		^ C pour Control-C, etc
-	ComText_TT =	Quand il n'est pas en mode brut, les caractères suivants
-		sont traités comme des modificateurs (ces modificateurs agissent
-		seule la clé très prochaine):, +, ^, #
-	ComEvent_TT =	La vitesse à laquelle les frappes sont envoyés est déterminé par le retard clé.
+	ApplyT_TT =	Appliquer
+	AutoKey_TT =	Hotkey à jouer Macro
 	Clip_TT =	Utilise temporairement le Presse-papiers pour envoyer le texte.
 		Lorsque l'opération est terminée, le script
 		restaure le contenu du presse-papiers d'origine.
 		(Laisser vide pour coller du texte contenu actuel)
+	CmdFilter_TT =	Filtrer par type
+	CmdSort_TT =	Classer par ordre alphabétique
+	ColorPick_TT =	Obtenir pixel à l'écran
+	ComEvent_TT =	La vitesse à laquelle les frappes sont envoyés est déterminé par le retard clé.
+	ComText_TT =	Quand il n'est pas en mode brut, les caractères suivants
+		sont traités comme des modificateurs (ces modificateurs agissent
+		seule la clé très prochaine):, +, ^, #
+	CoordPixel_TT =	Mode coordonner
+	DefaultMacro_TT =	Sélectionnez le fichier à charger au démarrage du programme
 	EditPaste_TT =	Chaîne pâtes à la position du curseur / insert
 		dans un contrôle Edit (cela n'affecte pas
 		le contenu du presse-papiers).
-	SetText_TT =	Modifie le texte d'un contrôle.
-	RelKey_TT =	Enregistre les mouvements de souris et de clics que les
-		compensations de la position précédente tenu.
-	ToggleC_TT =	Activez l'enregistrement relative lorsque l'état touche est activée.
-	Relative_TT =	Les coordonnées sont relatives à la fenêtre active.
-	Screen_TT =	Les coordonnées sont relatives au poste de travail (écran).
-	IncFiles_TT =	Inclure les fichiers / Valeurs
-	IncFolders_TT =	Inclure les répertoires (dossiers) Touches /
-	Recurse_TT =	Récursifs dans les sous-répertoires (sous-dossiers) / subkeys
-	CmdSort_TT =	Classer par ordre alphabétique
 	Ex_EdScript_TT =	Ouvrir dans l'éditeur externe
 	ExprLink2_TT =	- NE JOIGNEZ PAS VARIABLES SIGNES DE POURCENTAGE ICI.
 		- La plupart des expressions de AHK sont pris en charge.
@@ -955,16 +907,90 @@
 		- Vous pouvez utiliser chaînes, variables, des tableaux et des fonctions.
 		- Pour utiliser des chaînes, le placer entre guillemets, par exemple: var = "a".
 		- Déclarations multiples sont pris en charge, par exemple: var = "a" || InStr (var, "b").
+	ExpView_TT =	Éditeur Avancé
+	ExpView2_TT =	Éditeur Avancé
+	Fast_TT =	Utilise une méthode de recherche rapide (recommandé)
+	HScale_TT =	Échelle de la hauteur
+	IconN_TT =	Numéro du groupe icône
+	IfLVColor_TT =	Cliquez pour choisir une couleur
+	IncFiles_TT =	Inclure les fichiers / Valeurs
+	IncFolders_TT =	Inclure les répertoires (dossiers) Touches /
+	InsertKey_TT =	Insérer Frappe (Ctrl+Insert)
+	InsertKeyT_TT =	Insérer Frappe
+	JoyKey_TT =	Appuyez sur un bouton sur la manette
+	LoopLVColor_TT =	Cliquez pour choisir une couleur
+	ManKey_TT =	Hotkey à jouer Macro "par étape par étape"
+	MRel_TT =	Mouvements relatifs à la position actuelle.
+		Ou si elle est utilisée avec la commande: position par rapport au témoin.
+	OSHK_TT =	Sélectionner Macro
+	OSHKEd_TT =	Sélectionner Macro
+	OSProgB_TT =	Afficher la barre de progression
+	OSTrans_TT =	Opacité
+	PauseKey_TT =	Raccourci pour interrompre la lecture
+	PicPrev_TT =	Double-cliquez sur l'image pour ouvrir
+	Raw_TT =	La commande SendRaw interprète littéralement tous les caractères
+		plutôt que de traduire {Enter} à une touche ENTER,
+		^ C pour Control-C, etc
+	RecKey_TT =	Retour arrière pour effacer
+	RecNewKey_TT =	Retour arrière pour effacer
+	Recurse_TT =	Récursifs dans les sous-répertoires (sous-dossiers) / subkeys
+	RefreshIEW_TT =	Rafraîchir la liste
+	Relative_TT =	Les coordonnées sont relatives à la fenêtre active.
+	RelKey_TT =	Enregistre les mouvements de souris et de clics que les
+		compensations de la position précédente tenu.
+	ReptC_TT =	0 = infini
+	Reset_TT =	Effacer le contenu des variables
+	RGB_TT =	Provoque une couleur à être interprété comme une valeur RVB au lieu de BGR
+	Screen_TT =	Les coordonnées sont relatives au poste de travail (écran).
+	Screenshot_TT =	Faire une capture d'écran
+	SetText_TT =	Modifie le texte d'un contrôle.
+	TimeoutM_TT =	0 = infini
+	ToggleC_TT =	Activez l'enregistrement relative lorsque l'état touche est activée.
+	TransC_TT =	Couleur transparente
+	VarCopyA_TT =	Copiez le contenu des variables actuelles
+	VarCopyB_TT =	Copiez le contenu des variables actuelles
+	VariatT_TT =	Nuances de variation
+	WScale_TT =	Échelle de la largeur
 		
 ; 20. Tooltips from AHK Docs		
-	ExpList_TT =	Double-cliquez dessus pour modifier
+	Ex_AF_TT =	Ignore la méthode douce de l'activation d'une fenêtre
+		et va directement à la méthode énergique.
+	Ex_DH_TT =	Détermine si des fenêtres invisibles sont «vus» par le script.
+	Ex_EdVars_TT =	Sélectionner des variables globales pour être exportés.
+	Ex_HK_TT =	Force l'utilisation du crochet pour mettre en œuvre tous
+		ou des raccourcis clavier.
 	Ex_IfDir_TT =	Crée contextuels et raccourcis en fonction des substitutions de chaînes
 		le type de fenêtre qui est active ou existe.
 	Ex_IfDirType_TT =	Crée contextuels et raccourcis en fonction des substitutions de chaînes
 		le type de fenêtre qui est active ou existe.
+	Ex_IN_TT =	Fait que le script se comporter comme si l'précisée
+		le contenu des fichiers sont présents à cette position exacte.
+	Ex_MD_TT =	Définit le retard qui se produira après
+		chaque mouvement de souris ou cliquez sur.
+	Ex_MT_TT =	Définit le nombre maximum d'simultané
+		threads par raccourci clavier ou hotstring.
+	Ex_NT_TT =	Désactive la projection d'une icône de la barre.
+	Ex_PT_TT =	Conserve un script qui s'exécute en permanence
+		(c'est-à-dire, jusqu'à ce que l'utilisateur ferme le ou ExitApp est rencontrée).
+	Ex_SB_TT =	Détermine la vitesse à laquelle un script sera exécuté (affecte l'utilisation du processeur).
+	Ex_SC_TT =	Définit le retard qui se produira après
+		chaque contrôle-commande modifier.
+	Ex_SI_TT =	Détermine si un script est autorisé à courir quand il est déjà en cours d'exécution.
+	Ex_SK_TT =	Définit le délai qui aura lieu après chaque
+		frappe envoyée par envoi ou ControlSend.
 	Ex_SM_TT =	Envoyer rend synonyme de SendInput ou SendPlay plutôt que
 		la valeur par défaut (SendEvent). Cliquez rend également et MouseMove / cliquer / glisser
 		utiliser la méthode spécifiée.
+	Ex_ST_TT =	Définit le comportement de correspondance du paramètre WinTitle à des commandes telles que WinWait.
+	Ex_SW_TT =	Définit le retard qui se produira après
+		chaque commande de fenêtrage, comme WinActivate.
+	Ex_UV_TT =	Exporter des variables globales.
+	ExpList_TT =	Double-cliquez dessus pour modifier
+	SI_TT =	Le mot force saute la boîte de dialogue et remplace automatiquement l'ancienne instance,
+		qui est similaire à l'effet de la commande Recharger.
+		Le mot IGNORE saute la boîte de dialogue et laisse l'ancienne instance en cours d'exécution.
+		En d'autres termes, les tentatives de lancer un script déjà la marche à sont ignorés.
+		Le mot OFF permet à plusieurs instances du script à exécuter simultanément.
 	SM_TT =	Événement: C'est la sélection par défaut utilisé par tous les scripts.
 		Il utilise la méthode de SendEvent Envoyer, SendRaw, Cliquez, et MouseMove / cliquer / glisser.
 		Entrée: Passe à la méthode de SendInput Envoyer, SendRaw, Cliquez, et MouseMove / cliquer / glisser.
@@ -972,40 +998,10 @@
 		quand SendInput n'est pas disponible, il revient au mode de lecture (ci-dessous). Cela provoque également
 		la commande SendInput lui-même pour revenir en mode Lecture lorsque SendInput n'est pas disponible.
 		Jouer: Passe à la méthode de SendPlay Envoyer, SendRaw, Cliquez, et MouseMove / cliquer / glisser.
-	Ex_SI_TT =	Détermine si un script est autorisé à courir quand il est déjà en cours d'exécution.
-	SI_TT =	Le mot force saute la boîte de dialogue et remplace automatiquement l'ancienne instance,
-		qui est similaire à l'effet de la commande Recharger.
-		Le mot IGNORE saute la boîte de dialogue et laisse l'ancienne instance en cours d'exécution.
-		En d'autres termes, les tentatives de lancer un script déjà la marche à sont ignorés.
-		Le mot OFF permet à plusieurs instances du script à exécuter simultanément.
-	Ex_ST_TT =	Définit le comportement de correspondance du paramètre WinTitle à des commandes telles que WinWait.
 	ST_TT =	1: titre d'une fenêtre doit commencer par la WinTitle spécifiée comme une allumette.
 		2: titre d'une fenêtre peut contenir n'importe où dans WinTitle qu'il s'agit d'un match.
 		3: titre d'une fenêtre doit correspondre exactement à WinTitle être un match.
 		RegEx: Changements WinTitle, WinText, ExcludeTitle et ExcludeText comme des expressions régulières.
-	Ex_DH_TT =	Détermine si des fenêtres invisibles sont «vus» par le script.
-	Ex_AF_TT =	Ignore la méthode douce de l'activation d'une fenêtre
-		et va directement à la méthode énergique.
-	Ex_HK_TT =	Force l'utilisation du crochet pour mettre en œuvre tous
-		ou des raccourcis clavier.
-	Ex_SK_TT =	Définit le délai qui aura lieu après chaque
-		frappe envoyée par envoi ou ControlSend.
-	Ex_MD_TT =	Définit le retard qui se produira après
-		chaque mouvement de souris ou cliquez sur.
-	Ex_SC_TT =	Définit le retard qui se produira après
-		chaque contrôle-commande modifier.
-	Ex_SW_TT =	Définit le retard qui se produira après
-		chaque commande de fenêtrage, comme WinActivate.
-	Ex_SB_TT =	Détermine la vitesse à laquelle un script sera exécuté (affecte l'utilisation du processeur).
-	Ex_NT_TT =	Désactive la projection d'une icône de la barre.
-	Ex_IN_TT =	Fait que le script se comporter comme si l'précisée
-		le contenu des fichiers sont présents à cette position exacte.
-	Ex_PT_TT =	Conserve un script qui s'exécute en permanence
-		(c'est-à-dire, jusqu'à ce que l'utilisateur ferme le ou ExitApp est rencontrée).
-	Ex_MT_TT =	Définit le nombre maximum d'simultané
-		threads par raccourci clavier ou hotstring.
-	Ex_UV_TT =	Exporter des variables globales.
-	Ex_EdVars_TT =	Sélectionner des variables globales pour être exportés.
 		
 ; 21. Operators		
 	As_Oper_1 =	Attribuer
@@ -1024,47 +1020,47 @@
 	Co_Oper_7 =	Inférieur ou égal
 		
 ; 22. IE Commands Tips		
-	Tip_Navigate =	Navigue vers une URL ou un chemin.
-	Tip_Value =	Obtient ou définit la valeur de l'objet.
-	Tip_Focus =	Attribue le focus à l'objet.
+	Tip_Checked =	Définit ou récupère l'état de la case à cocher ou un bouton radio.
 	Tip_Click =	Simule un clic sur l'objet.
-	Tip_Submit =	Envoie le formulaire.
-	Tip_GoHome =	Accède à la maison ou la page de démarrage.
+	Tip_Focus =	Attribue le focus à l'objet.
 	Tip_GoBack =	Navigue en arrière d'un élément dans la liste d'historique.
 	Tip_GoForward =	Navigue en avant un élément dans la liste d'historique.
+	Tip_GoHome =	Accède à la maison ou la page de démarrage.
 	Tip_GoSearch =	Accède à la page de recherche en cours.
-	Tip_Refresh =	Recharge la page actuellement affichée.
-	Tip_Stop =	Annule une navigation en attente ou de téléchargement.
-	Tip_Quit =	Ferme la page.
+	Tip_Height =	Définit ou récupère la hauteur de l'objet.
+	Tip_Href =	Définit ou récupère une URL de destination ou un point d'ancrage.
+	Tip_InnerHTML =	Définit ou récupère le code HTML de l'objet.
+	Tip_InnerText =	Définit ou obtient le texte de l'objet.
+	Tip_Length =	Définit ou récupère le nombre d'objets dans une collection.
 	Tip_LocationName =	Obtient le chemin ou la page de titre actuel.
 	Tip_LocationURL =	Obtient l'URL de la page actuelle.
-	Tip_InnerText =	Définit ou obtient le texte de l'objet.
-	Tip_InnerHTML =	Définit ou récupère le code HTML de l'objet.
+	Tip_Navigate =	Navigue vers une URL ou un chemin.
 	Tip_OuterHTML =	Définit ou récupère l'objet et son contenu en HTML.
-	Tip_Href =	Définit ou récupère une URL de destination ou un point d'ancrage.
-	Tip_Src =	Définit ou récupère une URL à charger par l'objet.
+	Tip_Quit =	Ferme la page.
+	Tip_Refresh =	Recharge la page actuellement affichée.
 	Tip_SelectedIndex =	Définit ou récupère l'index de l'option choisie dans un objet select.
-	Tip_Checked =	Définit ou récupère l'état de la case à cocher ou un bouton radio.
+	Tip_Src =	Définit ou récupère une URL à charger par l'objet.
+	Tip_Stop =	Annule une navigation en attente ou de téléchargement.
+	Tip_Submit =	Envoie le formulaire.
 	Tip_Type =	Définit ou récupère le type de contenu de l'objet.
+	Tip_Value =	Obtient ou définit la valeur de l'objet.
 	Tip_Width =	Définit ou récupère la largeur de l'objet.
-	Tip_Height =	Définit ou récupère la hauteur de l'objet.
-	Tip_Length =	Définit ou récupère le nombre d'objets dans une collection.
 		
 ; 23. AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	Abs	Retourne la valeur absolue d'un nombre .
-	ASin	Renvoie l' arc sinus ( le nombre dont le sinus est Number) en radians.
-	ACos	Retourne le cosinus ( le nombre dont le cosinus est Number) en radians.
+	ACos	Retourne le cosinus (le nombre dont le cosinus est Number) en radians.
 	Array	Crée un tableau associatif scriptable avec des clés entières.
-	Asc	Retourne le code de caractères ( un nombre entre 1 et 255 ( ANSI builds ) ou 65535 ( dans les versions Unicode) ) pour le premier caractère de la chaîne .
-	ATan	Renvoie l'arctangente ( le nombre dont la tangente est Number) en radians.
+	Asc	Retourne le code de caractères (un nombre entre 1 et 255 (ANSI builds) ou 65535 (dans les versions Unicode)) pour le premier caractère de la chaîne .
+	ASin	Renvoie l' arc sinus (le nombre dont le sinus est Number) en radians.
+	ATan	Renvoie l'arctangente (le nombre dont la tangente est Number) en radians.
 	BlockInput	Active ou désactive la capacité de l' utilisateur d'interagir avec l'ordinateur via le clavier et la souris.
-	Break	Quitte ( se termine ) une boucle. Valable dans une sorte de boucle .
-	Ceil	Retours nombre arrondi à l'entier le plus proche ( sans suffixe .00 ) .
+	Break	Quitte (se termine) une boucle. Valable dans une sorte de boucle .
+	Ceil	Retours nombre arrondi à l'entier le plus proche (sans suffixe .00) .
 	Chr	Renvoie le caractère unique correspondant au code de caractère indiqué par le numéro .
 	Click	Clique sur un bouton de la souris aux coordonnées indiquées . Il peut également maintenir enfoncée une touche, tournez la roue, ni bouger.
-	ClipWait	Attend que le presse-papiers contient des données.
 	Clipboard	Colle le texte du presse-papiers.
+	ClipWait	Attend que le presse-papiers contient des données.
 	ComObjActive	Récupère un objet COM enregistré.
 	ComObjArray	Crée un SAFEARRAY pour une utilisation avec COM .
 	ComObjConnect	Connecte les sources d'événements d'un objet COM à des fonctions avec un préfixe donné .
@@ -1081,7 +1077,7 @@
 	Continue	Ignore le reste de l'itération de la boucle de courant et commence un nouveau. Valable dans une sorte de boucle .
 	Control	Fait une variété de changements à un contrôle.
 	ControlClick	Envoie un bouton de la souris ou d'un événement de roulette de la souris à un contrôle.
-	ControlEditPaste	Pâtes chaîne à la position du curseur / d'insertion dans un contrôle Edit ( cela n'affecte pas le contenu du presse-papiers ) .
+	ControlEditPaste	Pâtes chaîne à la position du curseur / d'insertion dans un contrôle Edit (cela n'affecte pas le contenu du presse-papiers) .
 	ControlFocus	Définit le focus d'entrée à un contrôle donné sur une fenêtre.
 	ControlGet	Récupère différents types d'informations sur une commande .
 	ControlGetFocus	Récupère laquelle le contrôle de la fenêtre cible a le focus d'entrée , le cas échéant .
@@ -1101,30 +1097,30 @@
 	DriveGet	Récupère différents types d' informations sur le lecteur de l'ordinateur (s) .
 	DriveSpaceFree	Récupère l'espace libre sur le disque d'un disque , en mégaoctets .
 	Edit	Ouvre le script en cours d'édition dans l'éditeur associé.
-	Else	Indique la commande (s) à exécuter si une instruction if évalue à FALSE . Lorsque plus d'une commande est présente , mettez-les dans un bloc ( accolades) .
-	EnvAdd	Définit une variable à la somme elle-même , plus la valeur donnée (on peut aussi ajouter ou soustraire le temps à partir d'une valeur date-heure ) . Synonyme de : Var + = valeur.
+	Else	Indique la commande (s) à exécuter si une instruction if évalue à FALSE . Lorsque plus d'une commande est présente , mettez-les dans un bloc (accolades) .
+	EnvAdd	Définit une variable à la somme elle-même , plus la valeur donnée (on peut aussi ajouter ou soustraire le temps à partir d'une valeur date-heure) . Synonyme de : Var + = valeur.
 	EnvDiv	Définit une variable d' elle-même divisée par la valeur donnée. Synonyme de : Var / = Valeur .
 	EnvGet	Récupère une variable d'environnement .
 	EnvMult	Définit une variable d' elle-même fois la valeur donnée. Synonyme de : Var * = valeur.
 	EnvSet	Écrit une valeur dans une variable contenu dans l'environnement.
-	EnvSub	Définit une variable d' elle-même diminuée de la valeur donnée (on peut aussi comparer les valeurs date-heure ) . Synonyme de : Var - = valeur.
+	EnvSub	Définit une variable d' elle-même diminuée de la valeur donnée (on peut aussi comparer les valeurs date-heure) . Synonyme de : Var - = valeur.
 	EnvUpdate	Avertit le système d'exploitation et toutes les applications en cours d'exécution que la variable d'environnement (s) ont changé.
-	Exit	Quitte le thread en cours ou ( si le script n'est pas persistant et ne contient pas de raccourcis ) le script entier .
+	Exit	Quitte le thread en cours ou (si le script n'est pas persistant et ne contient pas de raccourcis) le script entier .
 	ExitApp	Termine le script sans condition.
-	Exp	Retours e ( qui est d'environ 2.71828182845905 ) élevé à la puissance n .
-	FileAppend	Ecrit texte à la fin d'un fichier ( première création du fichier, si nécessaire).
+	Exp	Retours e (qui est d'environ 2.71828182845905) élevé à la puissance n .
+	FileAppend	Ecrit texte à la fin d'un fichier (première création du fichier, si nécessaire).
 	FileCopy	Copie un ou plusieurs fichiers.
-	FileCopyDir	Copie d'un dossier avec tous ses sous- dossiers et fichiers ( similaire à xcopy ) .
+	FileCopyDir	Copie d'un dossier avec tous ses sous- dossiers et fichiers (similaire à xcopy) .
 	FileCreateDir	Crée un dossier .
-	FileCreateShortcut	Crée un fichier de raccourci ( . Lnk ) .
+	FileCreateShortcut	Crée un fichier de raccourci (. Lnk) .
 	FileDelete	Supprime un ou plusieurs fichiers.
 	FileEncoding	Définit l'encodage par défaut pour FileRead , FileReadLine , boucle de lecture , FileAppend et FileOpen .
-	FileInstall	Comprend le fichier spécifié dans la version compilée du script.
 	FileGetAttrib	Indique si un fichier ou un dossier est en lecture seule , caché, etc
-	FileGetShortcut	Récupère les informations relatives à un fichier raccourci ( . Lnk ) , tels que le fichier cible.
+	FileGetShortcut	Récupère les informations relatives à un fichier raccourci (. Lnk) , tels que le fichier cible.
 	FileGetSize	Récupère la taille d'un fichier .
 	FileGetTime	Récupère le timbre datetime d'un fichier ou d'un dossier .
 	FileGetVersion	Récupère la version d'un fichier .
+	FileInstall	Comprend le fichier spécifié dans la version compilée du script.
 	FileMove	Déplace ou renomme un ou plusieurs fichiers.
 	FileMoveDir	Déplace un dossier avec tous ses sous- dossiers et fichiers. Il peut aussi renommer un dossier .
 	FileOpen	Fournit fichier orienté objet I / O.
@@ -1137,7 +1133,7 @@
 	FileSelectFolder	Affiche une boîte de dialogue standard qui permet à l'utilisateur de sélectionner un dossier.
 	FileSetAttrib	Modifie les attributs d'un ou plusieurs fichiers ou dossiers. Les caractères génériques sont pris en charge.
 	FileSetTime	Modifie le timbre datetime d'un ou plusieurs fichiers ou dossiers. Les caractères génériques sont pris en charge.
-	Floor	Retours nombre arrondi à l'entier le plus proche ( sans suffixe .00 ) .
+	Floor	Retours nombre arrondi à l'entier le plus proche (sans suffixe .00) .
 	For	Répéter une série de commandes une fois pour chaque paire clé-valeur dans un objet.
 	Format	Formate un nombre variable de valeurs d'entrée selon une chaîne de format.
 	FormatTime	Transforme un horodatage YYYYMMDDHH24MISS dans le format de date / heure spécifiée .
@@ -1151,27 +1147,27 @@
 	GroupClose	Ferme la fenêtre active si elle a été tout simplement activé par GroupActivate ou GroupDeactivate . Il active alors la fenêtre suivante dans la série. Il peut également fermer toutes les fenêtres dans un groupe.
 	GroupDeactivate	Semblable à GroupActivate sauf active la fenêtre suivante pas dans le groupe .
 	HasKey	Retourne vrai si la clé est associée à une valeur.
-	if	Indique la commande (s) à exécuter si la comparaison d'une variable à une valeur s'évalue à TRUE. Lorsque plus d'une commande est présente , mettez-les dans un bloc ( accolades) .
+	if	Indique la commande (s) à exécuter si la comparaison d'une variable à une valeur s'évalue à TRUE. Lorsque plus d'une commande est présente , mettez-les dans un bloc (accolades) .
 	if (expression)	Indique la commande (s) à exécuter si une expression est évaluée à TRUE.
-	If var [not] between	Vérifie si le contenu d'une variable sont numérique ou alphabétique entre deux valeurs ( inclus) .
-	If var [not] in/contains MatchList 	Vérifie si le contenu d'une variable correspond à l'un des éléments d'une liste .
-	If var is [not] type	Vérifie si le contenu d'une variable sont numérique , majuscules , etc
+	If A_Index	Vérifie si l' itération courante de la boucle match a un nombre spécifié .
 	If Clipboard	Vérifie si le texte du presse-papiers est Matchs une chaîne spécifiée.
 	If ErrorLevel	Vérifie si une image ou pixel spécifié a été trouvé dans l'écran.
-	If A_Index	Vérifie si l' itération courante de la boucle match a un nombre spécifié .
+	If var [not] between	Vérifie si le contenu d'une variable sont numérique ou alphabétique entre deux valeurs (inclus) .
+	If var [not] in/contains MatchList 	Vérifie si le contenu d'une variable correspond à l'un des éléments d'une liste .
+	If var is [not] type	Vérifie si le contenu d'une variable sont numérique , majuscules , etc
 	IfEqual/IfNotEqual	Compare une variable à une valeur pour l'égalité. Synonyme de : si Var = Valeur | si Var <> Valeur .
 	IfExist / IfNotExist / FileExist	Vérifie l'existence d'un fichier ou d'un dossier .
 	IfGreater / IfGreaterOrEqual	Compare une variable à une valeur. Synonyme de : si Var> Valeur | si Var> = valeur.
 	IfInString / IfNotInString / InStr	Vérifie si une variable contient la chaîne spécifiée.
 	IfLess / IfLessOrEqual	Compare une variable à une valeur. Synonyme de : si Var < Valeur | si Var < = valeur.
 	IfMsgBox	Contrôles bouton qui a été poussé par l'utilisateur lors de la commande la plus récente MsgBox.
-	IfWinActive / IfWinNotActive	Vérifie si la fenêtre spécifiée existe et est actuellement active ( avant tout ) .
+	IfWinActive / IfWinNotActive	Vérifie si la fenêtre spécifiée existe et est actuellement active (avant tout) .
 	IfWinExist / IfWinNotExist	Vérifie si la fenêtre spécifiée existe.
 	ImageSearch	Une recherche dans une région de l'écran d'une image.
 	IniDelete	Supprime une valeur d'un format de fichier . Ini standard.
 	IniRead	Lit une valeur à partir d'un format de fichier . Ini standard.
 	IniWrite	Écrit une valeur dans un format de fichier . Ini standard.
-	Input	Attend que l'utilisateur tape une chaîne ( non pris en charge sur Windows 9x : il ne fait rien ) .
+	Input	Attend que l'utilisateur tape une chaîne (non pris en charge sur Windows 9x : il ne fait rien) .
 	InputBox	Affiche une boîte de saisie pour demander à l'utilisateur de saisir une chaîne .
 	InsertAt	Insère une ou plusieurs valeurs à une position donnée dans un réseau linéaire.
 	InStr	Recherche d'une occurrence donnée d'une chaîne , à partir de la gauche ou la droite.
@@ -1180,10 +1176,10 @@
 	Labels	Une étiquette identifie une ligne de code, et peut être utilisé comme une cible Goto ou pour former une sous-routine.
 	Length	Retourne la longueur d'un réseau linéaire à partir de la position 1.
 	ListVars	Affiche les variables du scénario: leurs noms et le contenu actuels.
-	Log	Renvoie le logarithme (base 10) de Number.
 	Ln	Renvoie le logarithme naturel (base e) du nombre.
-	Loop (normal) 	Effectuer une série de commandes à plusieurs reprises: soit le nombre de fois spécifié ou jusqu'à ce que la rupture se produit.
+	Log	Renvoie le logarithme (base 10) de Number.
 	Loop (files & folders)	Extrait les fichiers spécifiés ou des dossiers, une à la fois.
+	Loop (normal) 	Effectuer une série de commandes à plusieurs reprises: soit le nombre de fois spécifié ou jusqu'à ce que la rupture se produit.
 	Loop (parse a string)	Récupère les chaînes (champs) d'une chaîne, un à la fois.
 	Loop (read file contents)	Récupère les lignes dans un fichier texte, un à la fois (performant que FileReadLine).
 	Loop (registry)	Récupère le contenu de la clé de Registre spécifiée, un seul élément à la fois.
@@ -1212,12 +1208,12 @@
 	Progress	Crée ou met à jour une fenêtre contenant une barre de progression.
 	Push	Ajoute valeurs à la fin d'un tableau.
 	Random	Génère un nombre pseudo-aléatoire.
+	RegDelete	Supprime une sous-clé ou la valeur du registre.
 	RegExMatch	Détermine si une chaîne contient un motif (expression régulière).
 	RegExReplace	Remplace les occurrences d'un motif (expression régulière) à l'intérieur d'une chaîne.
-	RegDelete	Supprime une sous-clé ou la valeur du registre.
+	RegisterCallback	Création d'une adresse par machine du code qui lorsqu'il est appelé, redirige l'appel d'une fonction dans le script.
 	RegRead	Lit une valeur dans le Registre.
 	RegWrite	Écrit une valeur dans le Registre.
-	RegisterCallback	Création d'une adresse par machine du code qui lorsqu'il est appelé, redirige l'appel d'une fonction dans le script.
 	RemoveAt	Supprime les éléments de la position donnée dans un réseau linéaire.
 	Return	Retours à partir d'un sous-programme dont l'exécution avait déjà sauté par la fonction appel, Gosub, activation Hotkey, GroupActivate, ou d'autres moyens.
 	Round	Si N est omis ou 0, nombre est arrondi à l'entier le plus proche. Si N est le nombre positif, nombre est arrondi à N décimales. Si N est négatif, nombre est arrondi par N chiffres à gauche de la virgule.
@@ -1235,8 +1231,8 @@
 	SetKeyDelay	Définit le délai qui aura lieu après chaque frappe envoyée par envoi ou ControlSend.
 	SetMouseDelay	Définit le délai qui aura lieu après chaque mouvement de la souris ou cliquez sur.
 	SetNumlockState	Définit l'état de la touche Verr Num. Pouvez également forcer la clé pour rester allumé ou éteint.
-	SetScrollLockState	Définit l'état de la touche Arrêt défil. Pouvez également forcer la clé pour rester allumé ou éteint.
 	SetRegView	Permet commandes de registre dans un script 32 bits pour accéder à la vue de Registre 64 bits et vice versa.
+	SetScrollLockState	Définit l'état de la touche Arrêt défil. Pouvez également forcer la clé pour rester allumé ou éteint.
 	SetTimer	Provoque un sous-programme doit être lancé automatiquement et de façon répétée à un intervalle de temps spécifié.
 	Shutdown	Arrête, redémarre ou déconnecte le système.
 	Sin	Renvoie le sinus trigonométrique de Number.
@@ -1249,13 +1245,12 @@
 	SoundSet	Changements divers paramètres d'un périphérique audio (mute, volume maître des maîtres, etc)
 	SoundSetWaveVolume	Change le volume de sortie d'onde pour un dispositif sonore.
 	SplashImage	Crée ou met à jour une fenêtre contenant une image JPG, GIF ou BMP.
-	SplashTextOn	Crée un texte personnalisable fenêtre.
 	SplashTextOff	Ferme la fenêtre ci-dessus.
+	SplashTextOn	Crée un texte personnalisable fenêtre.
 	SplitPath	Sépare un nom de fichier ou une URL dans son nom, le répertoire, la vulgarisation et dur.
 	Sqrt	Renvoie la racine carrée du nombre.
 	StatusBarGetText	Récupère le texte d'un contrôle de la barre d'état standard.
 	StatusBarWait	Attend que la barre d'état de la fenêtre contient la chaîne spécifiée.
-	StrPut / StrGet	Copie d'une chaîne ou d'une adresse mémoire, en option convertir entre les pages de code.
 	StringCaseSense	Détermine si les comparaisons de chaînes sont sensibles à la casse (par défaut "n'est pas sensible à la casse»).
 	StringGetPos / InStr	Extrait la position de la sous-chaîne spécifiée à l'intérieur d'une chaîne.
 	StringLeft	Extrait un nombre de caractères à partir du côté gauche d'une chaîne.
@@ -1268,6 +1263,7 @@
 	StringTrimLeft	Supprime un certain nombre de caractères à partir du côté gauche d'une chaîne.
 	StringTrimRight	Supprime un nombre de caractères à partir de la partie droite d'une chaîne.
 	StringUpper	Convertit une chaîne en majuscules.
+	StrPut / StrGet	Copie d'une chaîne ou d'une adresse mémoire, en option convertir entre les pages de code.
 	Suspend	Active ou désactive tous ou certains raccourcis clavier et les substitutions de chaînes.
 	SysGet	Récupère résolution de l'écran, des infos multi-écran, les dimensions des objets du système, et d'autres propriétés du système.
 	Tan	Renvoie la tangente trigonométrique de Number.
@@ -1285,10 +1281,10 @@
 	WinActive	Retourne l'identifiant unique (HWND) de la fenêtre active si elle correspond aux critères spécifiés.
 	WinClose	Ferme la fenêtre spécifiée.
 	WinExist	Vérifie si la fenêtre spécifiée existe.
+	WinGet	Récupère l'ID unique de la fenêtre spécifiée, ID du processus, le nom de processus ou d'une liste de ses contrôles. Il peut également récupérer une liste de toutes les fenêtres correspondant aux critères spécifiés.
 	WinGetActiveStats	Combine les fonctions d'WinGetActiveTitle et WinGetPos en une seule commande.
 	WinGetActiveTitle	Extrait le titre de la fenêtre active.
 	WinGetClass	Récupère le nom de classe de la fenêtre spécifiée.
-	WinGet	Récupère l'ID unique de la fenêtre spécifiée, ID du processus, le nom de processus ou d'une liste de ses contrôles. Il peut également récupérer une liste de toutes les fenêtres correspondant aux critères spécifiés.
 	WinGetPos	Extrait la position et la taille de la fenêtre spécifiée.
 	WinGetText	Récupère le texte de la fenêtre spécifiée.
 	WinGetTitle	Récupère le titre de la fenêtre spécifiée.

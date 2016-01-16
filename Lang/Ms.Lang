@@ -73,7 +73,6 @@
 	i_Lang019 =	&Windows Mesej
 	i_Lang020 =	Cari perinta&h
 		
-		
 ; 06. Edit Sub Menu		
 	e_Lang001 =	&Gandakan
 	e_Lang002 =	&Edit Komen
@@ -97,7 +96,6 @@
 	e_Lang020 =	&Buang semua kumpulan
 	e_Lang021 =	T&utup semua
 	e_Lang022 =	Bu&ka semua
-		
 		
 ; 07. Select Sub Menu		
 	s_Lang001 =	&Pilih Semua
@@ -153,6 +151,7 @@
 	o_Lang013 =	Bua&ng Fail Default
 	o_Lang014 =	Hotk&eys lalai
 	o_Lang015 =	Tetapan &lalai
+	o_Lang016 =	&Editor Bahasa
 		
 ; 10. Donate Sub Menu		
 	p_Lang001 =	Derma PayPal
@@ -761,7 +760,6 @@
 	d_Lang042 =	Pengendali tidak sah.
 		Pengendali berikut diterima:
 		=, ==, <>,! =,>, <,> = <=
-		
 		Contoh:
 		MyVar > 1
 		MyVar = `%A_DDDD`%
@@ -791,7 +789,6 @@
 		Sila memberikan pembolehubah dan menggunakannya dalam parameter.
 	d_Lang060 =	Versi baru yang tersedia
 	d_Lang061 =	Adakah anda ingin muat turun sekarang?
-		
 		Untuk mematikan cek automatik memilih Bantuan> Semak pada permulaan
 	d_Lang062 =	Anda sudah mempunyai versi yang paling baru-baru ini.
 	d_Lang063 =	Ralat berlaku semasa pemeriksaan.
@@ -801,7 +798,6 @@
 	d_Lang067 =	Menunjukkan tetingkap ini pada permulaan
 	d_Lang068 =	Tips:
 	d_Lang069 =	Banyak masa dan usaha telah masuk ke dalam pembangunan Pencipta Macro Pulover ini. Jika anda mendapati ia berguna, sila pertimbangkan untuk menunjukkan penghargaan anda dengan sumbangan.
-		
 		Menderma atau tidak, tidak akan ada perbezaan dalam ciri-ciri dan fungsinya.
 	d_Lang070 =	Menderma...
 	d_Lang071 =	Tidak, terima kasih
@@ -877,73 +873,29 @@
 		Anda boleh menjalankan fungsi-fungsi canggih seperti SubStr dan RegExReplace dari tingkap Fungsi yang (Masukkan> Jika Penyata / Pembolehubah / Fungsi). Atau menjalankan fungsi-fungsi anda sendiri dari skrip AutoHotkey luar.
 		
 ; 19. Tooltips		
-	AutoKey_TT =	Hotkey bermain Makro
-	ManKey_TT =	Hotkey bermain Macro "langkah demi langkah"
-	AbortKey_TT =	Hotkey untuk menghentikan main balik
-	PauseKey_TT =	Hotkey untuk menjeda main semula
-	RecKey_TT =	Backspace untuk membersihkan
-	RecNewKey_TT =	Backspace untuk membersihkan
-	JoyKey_TT =	Tekan butang pada kayu bedik
-	ReptC_TT =	0 = tidak terhingga
 	A_List_TT =	Pilih Macro (Ctrl +1 ~ 0)
-	OSHK_TT =	Pilih Makro
-	OSHKEd_TT =	Pilih Makro
-	ApplyT_TT =	Memohon
+	AbortKey_TT =	Hotkey untuk menghentikan main balik
+	ActiveObj_TT =	Cuba untuk menyambung ke objek COM Aktif
 	ApplyI_TT =	Memohon
 	ApplyL_TT =	Memasukkan dari Box (Insert)
-	CmdFilter_TT =	Menapis mengikut jenis
-	InsertKey_TT =	Memasukkan keystroke (Ctrl+Sisipan)
-	InsertKeyT_TT =	Memasukkan keystroke
-	DefaultMacro_TT =	Pilih fail untuk memuatkan pada permulaan program
-	VarCopyA_TT =	Menyalin kandungan ubah semasa
-	VarCopyB_TT =	Menyalin kandungan ubah semasa
-	Reset_TT =	Kandungan ubah jelas
-	Screenshot_TT =	Buat Screenshot
-	ColorPick_TT =	Mendapatkan pixel pada skrin
-	PicPrev_TT =	Klik dua kali untuk membuka Image
-	CoordPixel_TT =	Mod menyelaras
-	VariatT_TT =	Warna variasi
-	IconN_TT =	Bilangan kumpulan ikon
-	TransC_TT =	Warna telus
-	WScale_TT =	Skala Lebar
-	HScale_TT =	Skala ketinggian
-	Fast_TT =	Menggunakan kaedah cepat mencari (disyorkan)
-	RGB_TT =	Punca warna ditafsirkan sebagai nilai RGB bukan BGR
-	LoopLVColor_TT =	Klik untuk memilih warna yang
-	IfLVColor_TT =	Klik untuk memilih warna yang
-	RefreshIEW_TT =	Senarai Refresh
-	ActiveObj_TT =	Cuba untuk menyambung ke objek COM Aktif
-	TimeoutM_TT =	0 = tidak terhingga
-	ExpView_TT =	Editor Advanced
-	ExpView2_TT =	Editor Advanced
-	OSProgB_TT =	Paparan Kemajuan Bar
-	OSTrans_TT =	Kelegapan
-	MRel_TT =	Pergerakan relatif kepada kedudukan semasa.
-		Atau jika digunakan dengan kawalan: Kedudukan relatif Kawalan.
-	Raw_TT =	Arahan SendRaw menafsirkan semua watak-watak benar-benar
-		bukannya menterjemah {Masukkan} kepada keystroke masuk,
-		^ C untuk Kawalan-C, dan lain-lain
-	ComText_TT =	Apabila tidak dalam mod mentah, watak-watak berikut
-		dianggap sebagai pengubah (ini pengubah menjejaskan
-		hanya kunci yang akan datang):, +, ^, #
-	ComEvent_TT =	Kadar di mana ketukan kekunci dihantar ditentukan oleh kelewatan utama.
+	ApplyT_TT =	Memohon
+	AutoKey_TT =	Hotkey bermain Makro
 	Clip_TT =	Sementara menggunakan klipbod untuk menghantar teks.
 		Apabila operasi itu selesai, skrip
 		mengembalikan kandungan papan klip asal.
 		(Meninggalkan Text kosong untuk paste kandungan semasa)
+	CmdFilter_TT =	Menapis mengikut jenis
+	CmdSort_TT =	Susun mengikut abjad
+	ColorPick_TT =	Mendapatkan pixel pada skrin
+	ComEvent_TT =	Kadar di mana ketukan kekunci dihantar ditentukan oleh kelewatan utama.
+	ComText_TT =	Apabila tidak dalam mod mentah, watak-watak berikut
+		dianggap sebagai pengubah (ini pengubah menjejaskan
+		hanya kunci yang akan datang):, +, ^, #
+	CoordPixel_TT =	Mod menyelaras
+	DefaultMacro_TT =	Pilih fail untuk memuatkan pada permulaan program
 	EditPaste_TT =	Rentetan Pes pada kedudukan tanda sisipan / memasukkan
 		dalam kawalan Edit (ini tidak menjejaskan
 		kandungan papan klip).
-	SetText_TT =	Perubahan teks kawalan.
-	RelKey_TT =	Pergerakan Mouse Rekod dan klik sebagai ofset
-		dari kedudukan sebelumnya apabila diadakan.
-	ToggleC_TT =	Aktifkan Rakaman relatif apabila negeri utama dihidupkan.
-	Relative_TT =	Koordinat adalah relatif tetingkap aktif.
-	Screen_TT =	Koordinat adalah relatif desktop (keseluruhan skrin).
-	IncFiles_TT =	Termasuk fail / Nilai
-	IncFolders_TT =	Termasuk direktori (folder) / Keys
-	Recurse_TT =	Rekursi ke dalam subdirektori (subfolder) / subkunci
-	CmdSort_TT =	Susun mengikut abjad
 	Ex_EdScript_TT =	Buka dalam editor luaran
 	ExprLink2_TT =	- JANGAN LAMPIRKAN PEMBOLEH UBAH DI SIGNS PERCENT SINI.
 		- Kebanyakan ungkapan AHK disokong.
@@ -955,16 +907,90 @@
 		- Anda boleh menggunakan tali, pembolehubah, tatasusunan dan fungsi.
 		- Untuk menggunakan tali, sertakan mereka dalam sebut harga, contoh: var = "a".
 		- Penyata Pelbagai disokong, contoh: var = "a" || Instr (var, "b").
+	ExpView_TT =	Editor Advanced
+	ExpView2_TT =	Editor Advanced
+	Fast_TT =	Menggunakan kaedah cepat mencari (disyorkan)
+	HScale_TT =	Skala ketinggian
+	IconN_TT =	Bilangan kumpulan ikon
+	IfLVColor_TT =	Klik untuk memilih warna yang
+	IncFiles_TT =	Termasuk fail / Nilai
+	IncFolders_TT =	Termasuk direktori (folder) / Keys
+	InsertKey_TT =	Memasukkan keystroke (Ctrl+Sisipan)
+	InsertKeyT_TT =	Memasukkan keystroke
+	JoyKey_TT =	Tekan butang pada kayu bedik
+	LoopLVColor_TT =	Klik untuk memilih warna yang
+	ManKey_TT =	Hotkey bermain Macro "langkah demi langkah"
+	MRel_TT =	Pergerakan relatif kepada kedudukan semasa.
+		Atau jika digunakan dengan kawalan: Kedudukan relatif Kawalan.
+	OSHK_TT =	Pilih Makro
+	OSHKEd_TT =	Pilih Makro
+	OSProgB_TT =	Paparan Kemajuan Bar
+	OSTrans_TT =	Kelegapan
+	PauseKey_TT =	Hotkey untuk menjeda main semula
+	PicPrev_TT =	Klik dua kali untuk membuka Image
+	Raw_TT =	Arahan SendRaw menafsirkan semua watak-watak benar-benar
+		bukannya menterjemah {Masukkan} kepada keystroke masuk,
+		^ C untuk Kawalan-C, dan lain-lain
+	RecKey_TT =	Backspace untuk membersihkan
+	RecNewKey_TT =	Backspace untuk membersihkan
+	Recurse_TT =	Rekursi ke dalam subdirektori (subfolder) / subkunci
+	RefreshIEW_TT =	Senarai Refresh
+	Relative_TT =	Koordinat adalah relatif tetingkap aktif.
+	RelKey_TT =	Pergerakan Mouse Rekod dan klik sebagai ofset
+		dari kedudukan sebelumnya apabila diadakan.
+	ReptC_TT =	0 = tidak terhingga
+	Reset_TT =	Kandungan ubah jelas
+	RGB_TT =	Punca warna ditafsirkan sebagai nilai RGB bukan BGR
+	Screen_TT =	Koordinat adalah relatif desktop (keseluruhan skrin).
+	Screenshot_TT =	Buat Screenshot
+	SetText_TT =	Perubahan teks kawalan.
+	TimeoutM_TT =	0 = tidak terhingga
+	ToggleC_TT =	Aktifkan Rakaman relatif apabila negeri utama dihidupkan.
+	TransC_TT =	Warna telus
+	VarCopyA_TT =	Menyalin kandungan ubah semasa
+	VarCopyB_TT =	Menyalin kandungan ubah semasa
+	VariatT_TT =	Warna variasi
+	WScale_TT =	Skala Lebar
 		
 ; 20. Tooltips from AHK Docs		
-	ExpList_TT =	Klik dua kali untuk mengedit
+	Ex_AF_TT =	Melangkau kaedah lembut mengaktifkan tingkap
+		dan pergi terus kepada kaedah secara paksa.
+	Ex_DH_TT =	Menentukan sama ada tingkap tidak kelihatan yang 'dilihat' oleh skrip.
+	Ex_EdVars_TT =	Pilih pembolehubah global untuk dieksport.
+	Ex_HK_TT =	Memaksa penggunaan buku itu untuk melaksanakan semua
+		atau beberapa hotkeys keyboard.
 	Ex_IfDir_TT =	Mencipta hotkeys sensitif konteks dan hotstrings bergantung
 		kepada jenis tetingkap yang sedang aktif atau wujud.
 	Ex_IfDirType_TT =	Mencipta hotkeys sensitif konteks dan hotstrings bergantung
 		kepada jenis tetingkap yang sedang aktif atau wujud.
+	Ex_IN_TT =	Punca skrip untuk berkelakuan seolah-olah yang dinyatakan
+		kandungan fail yang hadir pada kedudukan ini tepat.
+	Ex_MD_TT =	Set kelewatan yang akan berlaku selepas
+		setiap pergerakan tetikus atau klik.
+	Ex_MT_TT =	Menetapkan bilangan maksimum serentak
+		benang per hotkey atau hotstring.
+	Ex_NT_TT =	Melumpuhkan tayangan ikon dulang.
+	Ex_PT_TT =	Memastikan skrip tetap berjalan
+		(Iaitu, sehingga pengguna menutup atau ExitApp yang dihadapi).
+	Ex_SB_TT =	Menentukan berapa cepat skrip akan berjalan (memberi kesan kepada penggunaan CPU).
+	Ex_SC_TT =	Set kelewatan yang akan berlaku selepas
+		setiap kawalan mengubah perintah.
+	Ex_SI_TT =	Menentukan sama ada skrip yang dibenarkan untuk menjalankan lagi apabila ia sudah berjalan.
+	Ex_SK_TT =	Set kelewatan yang akan berlaku selepas setiap
+		keystroke dihantar oleh Hantar atau ControlSend.
 	Ex_SM_TT =	Membuat Hantar sinonim dengan SendInput atau SendPlay bukannya
 		lalai (SendEvent). Juga membuat Klik dan MouseMove / Klik / Seret
 		menggunakan kaedah yang ditetapkan.
+	Ex_ST_TT =	Menetapkan tingkah laku yang sepadan parameter WinTitle dalam arahan seperti WinWait.
+	Ex_SW_TT =	Set kelewatan yang akan berlaku selepas
+		setiap perintah tetingkap, seperti WinActivate.
+	Ex_UV_TT =	Eksport pembolehubah global.
+	ExpList_TT =	Klik dua kali untuk mengedit
+	SI_TT =	FORCE perkataan melangkau kotak dialog dan menggantikan contoh lama secara automatik,
+		yang sama dalam melaksanakan perintah Reload.
+		Perkataan mengabaikan melangkau kotak dialog dan meninggalkan contoh yang lama berjalan.
+		Dalam erti kata lain, percubaan untuk melancarkan skrip yang sudah berjalan diabaikan.
+		OFF perkataan membolehkan beberapa contoh skrip untuk berjalan serentak.
 	SM_TT =	Acara: Ini adalah lalai bermula digunakan oleh semua skrip.
 		Ia menggunakan kaedah SendEvent untuk Hantar, SendRaw, Klik, dan MouseMove / Klik / drag.
 		Input: Beralih kepada kaedah SendInput untuk Hantar, SendRaw, Klik, dan MouseMove / Klik / drag.
@@ -972,40 +998,10 @@
 		apabila SendInput tidak ada, ia kembali ke mod (di bawah) Main. Ini juga menyebabkan
 		arahan SendInput itu sendiri untuk kembali ke mod Main apabila SendInput tidak ada.
 		Main: Beralih kepada kaedah SendPlay untuk Hantar, SendRaw, Klik, dan MouseMove / Klik / drag.
-	Ex_SI_TT =	Menentukan sama ada skrip yang dibenarkan untuk menjalankan lagi apabila ia sudah berjalan.
-	SI_TT =	FORCE perkataan melangkau kotak dialog dan menggantikan contoh lama secara automatik,
-		yang sama dalam melaksanakan perintah Reload.
-		Perkataan mengabaikan melangkau kotak dialog dan meninggalkan contoh yang lama berjalan.
-		Dalam erti kata lain, percubaan untuk melancarkan skrip yang sudah berjalan diabaikan.
-		OFF perkataan membolehkan beberapa contoh skrip untuk berjalan serentak.
-	Ex_ST_TT =	Menetapkan tingkah laku yang sepadan parameter WinTitle dalam arahan seperti WinWait.
 	ST_TT =	1: Tajuk tingkap mesti bermula dengan WinTitle yang dinyatakan untuk menjadi perlawanan.
 		2: Tajuk tingkap boleh mengandungi mana-mana sahaja di dalam WinTitle ia menjadi perlawanan.
 		3: Tajuk tingkap betul-betul mesti sepadan WinTitle menjadi perlawanan.
 		Regex: Perubahan WinTitle, WinText, ExcludeTitle, dan ExcludeText menjadi ungkapan biasa.
-	Ex_DH_TT =	Menentukan sama ada tingkap tidak kelihatan yang 'dilihat' oleh skrip.
-	Ex_AF_TT =	Melangkau kaedah lembut mengaktifkan tingkap
-		dan pergi terus kepada kaedah secara paksa.
-	Ex_HK_TT =	Memaksa penggunaan buku itu untuk melaksanakan semua
-		atau beberapa hotkeys keyboard.
-	Ex_SK_TT =	Set kelewatan yang akan berlaku selepas setiap
-		keystroke dihantar oleh Hantar atau ControlSend.
-	Ex_MD_TT =	Set kelewatan yang akan berlaku selepas
-		setiap pergerakan tetikus atau klik.
-	Ex_SC_TT =	Set kelewatan yang akan berlaku selepas
-		setiap kawalan mengubah perintah.
-	Ex_SW_TT =	Set kelewatan yang akan berlaku selepas
-		setiap perintah tetingkap, seperti WinActivate.
-	Ex_SB_TT =	Menentukan berapa cepat skrip akan berjalan (memberi kesan kepada penggunaan CPU).
-	Ex_NT_TT =	Melumpuhkan tayangan ikon dulang.
-	Ex_IN_TT =	Punca skrip untuk berkelakuan seolah-olah yang dinyatakan
-		kandungan fail yang hadir pada kedudukan ini tepat.
-	Ex_PT_TT =	Memastikan skrip tetap berjalan
-		(Iaitu, sehingga pengguna menutup atau ExitApp yang dihadapi).
-	Ex_MT_TT =	Menetapkan bilangan maksimum serentak
-		benang per hotkey atau hotstring.
-	Ex_UV_TT =	Eksport pembolehubah global.
-	Ex_EdVars_TT =	Pilih pembolehubah global untuk dieksport.
 		
 ; 21. Operators		
 	As_Oper_1 =	Berikan
@@ -1024,47 +1020,47 @@
 	Co_Oper_7 =	Kurang atau sama
 		
 ; 22. IE Commands Tips		
-	Tip_Navigate =	Mengemudi ke URL atau laluan.
-	Tip_Value =	Dapat atau menetapkan nilai objek.
-	Tip_Focus =	Set tumpuan kepada objek.
+	Tip_Checked =	Set atau mendapatkan semula negeri kotak semak atau butang radio.
 	Tip_Click =	Menyerupai klik pada objek.
-	Tip_Submit =	Mengemukakan borang.
-	Tip_GoHome =	Mengemudi ke rumah semasa atau halaman permulaan.
+	Tip_Focus =	Set tumpuan kepada objek.
 	Tip_GoBack =	Mengemudi mundur satu item dalam senarai sejarah.
 	Tip_GoForward =	Mengemudi ke hadapan satu item dalam senarai sejarah.
+	Tip_GoHome =	Mengemudi ke rumah semasa atau halaman permulaan.
 	Tip_GoSearch =	Mengemudi ke laman carian semasa.
-	Tip_Refresh =	Tambah nilai halaman yang sedang dipaparkan.
-	Tip_Stop =	Membatalkan navigasi yang belum selesai atau turun.
-	Tip_Quit =	Ditutup halaman.
+	Tip_Height =	Set atau mendapatkan semula ketinggian objek.
+	Tip_Href =	Set atau mendapatkan semula URL destinasi atau tempat berlabuh.
+	Tip_InnerHTML =	Set atau mendapatkan semula HTML objek.
+	Tip_InnerText =	Set atau mendapat teks objek.
+	Tip_Length =	Set atau mendapatkan semula bilangan objek dalam koleksi.
 	Tip_LocationName =	Dapat jalan atau halaman semasa tajuk.
 	Tip_LocationURL =	Dapat URL halaman semasa.
-	Tip_InnerText =	Set atau mendapat teks objek.
-	Tip_InnerHTML =	Set atau mendapatkan semula HTML objek.
+	Tip_Navigate =	Mengemudi ke URL atau laluan.
 	Tip_OuterHTML =	Set atau mendapatkan semula objek dan kandungan dalam HTML.
-	Tip_Href =	Set atau mendapatkan semula URL destinasi atau tempat berlabuh.
-	Tip_Src =	Set atau mendapatkan semula URL yang akan dimuatkan oleh objek.
+	Tip_Quit =	Ditutup halaman.
+	Tip_Refresh =	Tambah nilai halaman yang sedang dipaparkan.
 	Tip_SelectedIndex =	Set atau mendapatkan semula indeks pilihan yang dipilih dalam objek pilih.
-	Tip_Checked =	Set atau mendapatkan semula negeri kotak semak atau butang radio.
+	Tip_Src =	Set atau mendapatkan semula URL yang akan dimuatkan oleh objek.
+	Tip_Stop =	Membatalkan navigasi yang belum selesai atau turun.
+	Tip_Submit =	Mengemukakan borang.
 	Tip_Type =	Set semula atau jenis kandungan objek.
+	Tip_Value =	Dapat atau menetapkan nilai objek.
 	Tip_Width =	Set atau mendapatkan semula lebar objek.
-	Tip_Height =	Set atau mendapatkan semula ketinggian objek.
-	Tip_Length =	Set atau mendapatkan semula bilangan objek dalam koleksi.
 		
 ; 23. AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	Abs	Mengembalikan nilai mutlak bagi nombor.
-	ASin	Kembali arcsine itu (bilangan yang sine adalah Bilangan) dalam radian.
 	ACos	Kembali arccosine itu (bilangan yang kosinus adalah Bilangan) dalam radian.
 	Array	Mencipta pelbagai bersekutu scriptable dengan kekunci integer.
 	Asc	Kembali kod aksara (nombor antara 1 dan 255 (dalam membina ANSI) atau 65535 (dalam membina Unicode)) bagi aksara pertama dalam rentetan.
+	ASin	Kembali arcsine itu (bilangan yang sine adalah Bilangan) dalam radian.
 	ATan	Kembali arctangent itu (bilangan yang tangen adalah Bilangan) dalam radian.
 	BlockInput	Menyahboleh atau membolehkan keupayaan pengguna untuk berinteraksi dengan komputer melalui papan kekunci dan tetikus.
 	Break	Keluar (tamat) gelung. Sah di dalam apa-apa jenis gelung.
 	Ceil	Pulangan Bilangan dinaikkan kepada integer yang terdekat (tanpa apa-apa .00 akhiran).
 	Chr	Kembali watak tunggal yang sepadan dengan kod watak yang ditunjukkan oleh nombor.
 	Click	Klik butang tetikus pada koordinat dinyatakan. Ia juga boleh tahan butang, putarkan roda, atau bergerak.
-	ClipWait	Menunggu sehingga clipboard mengandungi data.
 	Clipboard	Menampal teks dari clipboard.
+	ClipWait	Menunggu sehingga clipboard mengandungi data.
 	ComObjActive	Mendapatkan semula objek COM berdaftar.
 	ComObjArray	Mewujudkan SAFEARRAY untuk digunakan dengan COM.
 	ComObjConnect	Menghubungkan sumber acara objek COM kepada fungsi-fungsi dengan awalan yang diberikan.
@@ -1119,12 +1115,12 @@
 	FileCreateShortcut	Mewujudkan (. Lnk) fail pintas.
 	FileDelete	Memadam satu atau lebih fail.
 	FileEncoding	Menetapkan pengekodan lalai untuk FileRead, FileReadLine, Loop Read, FileAppend, dan FileOpen.
-	FileInstall	Termasuk fail yang ditetapkan dalam versi disusun skrip.
 	FileGetAttrib	Laporan sama ada fail atau folder adalah baca sahaja, tersembunyi, dan lain-lain
 	FileGetShortcut	Mendapatkan semula maklumat mengenai jalan pintas (. Lnk) fail, seperti fail sasaran.
 	FileGetSize	Semula saiz fail.
 	FileGetTime	Semula setem datetime daripada fail atau folder.
 	FileGetVersion	Semula versi fail.
+	FileInstall	Termasuk fail yang ditetapkan dalam versi disusun skrip.
 	FileMove	Bergerak atau menamakan semula satu atau lebih fail.
 	FileMoveDir	Bergerak folder bersama-sama dengan semua sub-folder dan fail itu. Ia juga boleh menamakan semula folder.
 	FileOpen	Menyediakan fail berorientasikan objek I / O.
@@ -1153,12 +1149,12 @@
 	HasKey	Pulangan benar jika Key dikaitkan dengan nilai.
 	if	Menyatakan arahan (s) untuk melaksanakan jika perbandingan pembolehubah kepada nilai evalutes ke TRUE. Apabila lebih daripada satu arahan hadir, letakkan mereka dalam satu blok (penyokong).
 	if (expression)	Menyatakan arahan (s) untuk melaksanakan jika ungkapan untuk menilai BENAR.
+	If A_Index	Pemeriksaan jika lelaran gelung semasa matchs beberapa yang ditetapkan.
+	If Clipboard	Pemeriksaan jika teks klipbod adalah matchs rentetan tertentu.
+	If ErrorLevel	Pemeriksaan jika imej yang dinyatakan atau pixel ditemui di skrin.
 	If var [not] between	Cek sama ada kandungan yang berubah-ubah adalah berangka atau abjad antara dua nilai (termasuk).
 	If var [not] in/contains MatchList 	Cek sama ada kandungan yang berubah-ubah yang sesuai dengan salah satu perkara-perkara dalam senarai.
 	If var is [not] type	Cek sama ada kandungan yang berubah-ubah adalah angka, huruf besar, dan lain-lain
-	If Clipboard	Pemeriksaan jika teks klipbod adalah matchs rentetan tertentu.
-	If ErrorLevel	Pemeriksaan jika imej yang dinyatakan atau pixel ditemui di skrin.
-	If A_Index	Pemeriksaan jika lelaran gelung semasa matchs beberapa yang ditetapkan.
 	IfEqual/IfNotEqual	Membandingkan ubah untuk nilai untuk kesaksamaan. Sinonim dengan: jika Var = Nilai | jika Var <> Nilai.
 	IfExist / IfNotExist / FileExist	Pemeriksaan bagi kewujudan fail atau folder.
 	IfGreater / IfGreaterOrEqual	Membandingkan ubah untuk nilai. Sinonim dengan: jika Var> Nilai | jika Var> = Nilai.
@@ -1180,10 +1176,10 @@
 	Labels	Label mengenal pasti baris kod, dan boleh digunakan sebagai sasaran Goto atau untuk membentuk subrutin.
 	Length	Mengembalikan panjang pelbagai linear bermula pada kedudukan 1.
 	ListVars	Memaparkan pembolehubah skrip, seperti nama-nama mereka dan kandungan semasa.
-	Log	Kembali logaritma (asas 10) nombor.
 	Ln	Mengembalikan logaritma asli (asas e) Bilangan.
-	Loop (normal) 	Melaksanakan satu siri arahan berkali-kali: sama ada bilangan yang ditentukan masa atau sehingga rehat yang dihadapi.
+	Log	Kembali logaritma (asas 10) nombor.
 	Loop (files & folders)	Mendapatkan semula fail-fail tertentu atau folder, satu demi satu.
+	Loop (normal) 	Melaksanakan satu siri arahan berkali-kali: sama ada bilangan yang ditentukan masa atau sehingga rehat yang dihadapi.
 	Loop (parse a string)	Mendapatkan semula substrings (bidang) daripada rentetan, satu pada satu masa.
 	Loop (read file contents)	Mendapatkan semula baris dalam fail teks, satu pada satu masa (melakukan lebih baik daripada FileReadLine).
 	Loop (registry)	Mendapatkan semula kandungan subkey pendaftaran yang dinyatakan, satu perkara pada satu masa.
@@ -1212,12 +1208,12 @@
 	Progress	Mencipta atau mengemaskini tingkap yang mengandungi bar kemajuan.
 	Push	Melampirkan nilai-nilai ke akhir array.
 	Random	Menjana nombor pseudo-rawak.
+	RegDelete	Memadam satu subkey atau nilai dari Registry.
 	RegExMatch	Menentukan sama ada rentetan mengandungi corak (ungkapan biasa).
 	RegExReplace	Menggantikan kejadian corak (ungkapan biasa) di dalam rentetan.
-	RegDelete	Memadam satu subkey atau nilai dari Registry.
+	RegisterCallback	Mencipta alamat mesin kod yang apabila dipanggil, pelencongan panggilan kepada fungsi dalam skrip.
 	RegRead	Membaca nilai dari Registry.
 	RegWrite	Menulis nilai kepada Registry.
-	RegisterCallback	Mencipta alamat mesin kod yang apabila dipanggil, pelencongan panggilan kepada fungsi dalam skrip.
 	RemoveAt	Membuang barang-barang dari kedudukan yang diberikan dalam pelbagai linear.
 	Return	Pulangan daripada satu subrutin yang pelaksanaan sebelum ini telah melonjak melalui fungsi-panggilan, Gosub, pengaktifan Hotkey, GroupActivate, atau cara lain.
 	Round	Jika N ditinggalkan atau 0, Nombor bulat kepada integer terhampir. Jika N adalah nombor positif, Nombor bulat kepada N tempat perpuluhan. Jika N adalah negatif, Nombor bulat oleh N digit di sebelah kiri titik perpuluhan.
@@ -1235,8 +1231,8 @@
 	SetKeyDelay	Set kelewatan yang akan berlaku selepas setiap kali kekunci ditekan dihantar oleh Hantar atau ControlSend.
 	SetMouseDelay	Set kelewatan yang akan berlaku selepas setiap pergerakan tetikus atau klik.
 	SetNumlockState	Menetapkan keadaan NumLock utama itu. Juga boleh memaksa utama untuk kekal hidup atau mati.
-	SetScrollLockState	Set negeri utama ScrollLock itu. Juga boleh memaksa utama untuk kekal hidup atau mati.
 	SetRegView	Membolehkan arahan pendaftaran dalam skrip 32-bit untuk mengakses pandangan pendaftaran 64-bit dan sebaliknya.
+	SetScrollLockState	Set negeri utama ScrollLock itu. Juga boleh memaksa utama untuk kekal hidup atau mati.
 	SetTimer	Menyebabkan satu subrutin yang akan dilancarkan secara automatik dan berkali-kali pada selang masa yang ditetapkan.
 	Shutdown	Menutup, mula semula, atau log off sistem.
 	Sin	Kembali sinus trigonometri nombor.
@@ -1249,13 +1245,12 @@
 	SoundSet	Perubahan pelbagai tetapan peranti bunyi (master bisu, jumlah induk, dan lain-lain)
 	SoundSetWaveVolume	Perubahan jumlah output gelombang untuk peranti bunyi.
 	SplashImage	Mencipta atau mengemaskini tingkap yang mengandungi JPG, GIF, BMP atau imej.
-	SplashTextOn	Mencipta teks disesuaikan timbul tingkap.
 	SplashTextOff	Menutup tingkap di atas.
+	SplashTextOn	Mencipta teks disesuaikan timbul tingkap.
 	SplitPath	Memisahkan nama fail atau URL ke namanya, direktori, penyambungan, dan memandu.
 	Sqrt	Mengembalikan punca kuasa dua nombor.
 	StatusBarGetText	Mendapatkan semula teks dari kawalan bar status standard.
 	StatusBarWait	Menunggu sehingga bar status tingkap mengandungi rentetan tertentu.
-	StrPut / StrGet	Salinan tali ke atau dari alamat ingatan, pilihan menukar di antara laman kod.
 	StringCaseSense	Menentukan sama ada perbandingan rentetan sensitif (lalai adalah "tidak sensitif").
 	StringGetPos / InStr	Mendapatkan semula kedudukan subrentetan yang dinyatakan dalam rentetan.
 	StringLeft	Semula beberapa watak-watak dari sebelah kiri rentetan.
@@ -1268,6 +1263,7 @@
 	StringTrimLeft	Membuang beberapa watak-watak dari sebelah kiri rentetan.
 	StringTrimRight	Membuang beberapa watak-watak dari sebelah kanan rentetan.
 	StringUpper	Menukarkan rentetan kepada huruf besar.
+	StrPut / StrGet	Salinan tali ke atau dari alamat ingatan, pilihan menukar di antara laman kod.
 	Suspend	Menyahboleh atau membolehkan semua atau dipilih hotkeys dan hotstrings.
 	SysGet	Semula resolusi skrin, info multi-monitor, dimensi sistem objek, dan sifat-sifat sistem yang lain.
 	Tan	Kembali tangen trigonometri nombor.
@@ -1285,10 +1281,10 @@
 	WinActive	Kembali ID Unik (HWND) tetingkap aktif jika ia sepadan dengan kriteria yang ditetapkan.
 	WinClose	Menutup tingkap yang ditetapkan.
 	WinExist	Pemeriksaan jika tingkap yang dinyatakan wujud.
+	WinGet	Semula ID tingkap tertentu yang unik, proses ID, nama proses, atau senarai kawalan itu. Ia juga boleh dapatkan senarai semua tetingkap yang sepadan dengan kriteria yang ditetapkan.
 	WinGetActiveStats	Menggabungkan fungsi WinGetActiveTitle dan WinGetPos ke dalam satu arahan.
 	WinGetActiveTitle	Mendapatkan semula tajuk tetingkap aktif.
 	WinGetClass	Mendapatkan semula nama kelas tetingkap yang dinyatakan itu.
-	WinGet	Semula ID tingkap tertentu yang unik, proses ID, nama proses, atau senarai kawalan itu. Ia juga boleh dapatkan senarai semua tetingkap yang sepadan dengan kriteria yang ditetapkan.
 	WinGetPos	Mendapatkan semula kedudukan dan saiz tingkap yang ditetapkan.
 	WinGetText	Mendapatkan semula teks dari tingkap yang ditetapkan.
 	WinGetTitle	Mendapatkan semula gelaran tingkap yang ditetapkan.
