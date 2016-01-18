@@ -137,21 +137,19 @@
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Nastavitve
-	o_Lang002 =	&Jezik
-	o_Lang003 =	&Zmanjšati v pladenj
-	o_Lang004 =	&Prikazati kontrolnike Orodna vrstica
-	o_Lang005 =	Z&ajemanje pritiske na tipke v tem oknu
-	o_Lang006 =	&Bližnjice Vedno Aktivna
-	o_Lang007 =	&Možnosti zaustavitev (Ko se predvajanje konča.)
-	o_Lang008 =	&Konteksta Bližnjice
-	o_Lang009 =	&Dodaj na tipko Windows in »Play" hotkey
-	o_Lang010 =	&Uporabite gumb za igralno palico kot hotkey
-	o_Lang011 =	Na&stavi kot privzeti Bližnjice
-	o_Lang012 =	Nas&tavi kot privzeti datotečni
-	o_Lang013 =	&Odstranite privzeti datotečni
-	o_Lang014 =	P&rivzete Bližnjice
-	o_Lang015 =	Pr&ivzete nastavitve
-	o_Lang016 =	&Jezik Editor
+	o_Lang002 =	&Zmanjšati v pladenj
+	o_Lang003 =	&Prikazati kontrolnike Orodna vrstica
+	o_Lang004 =	Z&ajemanje pritiske na tipke v tem oknu
+	o_Lang005 =	&Bližnjice Vedno Aktivna
+	o_Lang006 =	&Možnosti zaustavitev (Ko se predvajanje konča.)
+	o_Lang007 =	&Konteksta Bližnjice
+	o_Lang008 =	&Dodaj na tipko Windows in »Play" hotkey
+	o_Lang009 =	&Uporabite gumb za igralno palico kot hotkey
+	o_Lang010 =	Na&stavi kot privzeti Bližnjice
+	o_Lang011 =	Nas&tavi kot privzeti datotečni
+	o_Lang012 =	&Odstranite privzeti datotečni
+	o_Lang013 =	P&rivzete Bližnjice
+	o_Lang014 =	Pr&ivzete nastavitve
 		
 ; 10. Donate Sub Menu		
 	p_Lang001 =	&PayPal Donacija
@@ -709,6 +707,8 @@
 	t_Lang190 =	Predloži spremembo ali nov prevod
 	t_Lang191 =	Strniti vse
 	t_Lang192 =	Razširi vse
+	t_Lang193 =	Če želite
+	t_Lang194 =	Jezik
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Odprite
@@ -757,13 +757,7 @@
 	d_Lang040 =	Ta funkcija zahteva GDI+knjižnice.
 		Kliknite V redu, da gredo na stran za prenos.
 	d_Lang041 =	Ime spremenljivke vsebuje neveljaven znak.
-	d_Lang042 =	Neveljavna operaterja.
-		Naslednji subjekti se sprejmejo:
-		=, ==, <>,! =,>, <,> =, <=
-		Primeri:
-		MyVar > 1
-		MyVar = `%A_DDDD`%
-		Clipboard == `%MyVar`%
+	d_Lang042 =	je rezervirana beseda.
 	d_Lang043 =	Ali pa uporabite orodno vrstico Kontrolniki.
 	d_Lang044 =	Ta funkcija zahteva Eval () funkcijo.
 		Kliknite V redu, da gredo na stran za prenos.
@@ -841,7 +835,11 @@
 	d_Lang099 =	Ime Funkcija vsebuje neveljaven znak.
 	d_Lang100 =	Goto, Gosub in Label niso dovoljeni funkcij.
 	d_Lang101 =	Dvojnik funkcija.
-	d_Lang102 =	je rezervirana beseda.
+	d_Lang102 =	Pojavila se je napaka. Lahko pošljete e-pošto na "pulover@macrocreator.com" z datoteko:
+	d_Lang103 =	Novi jeziki datoteko na voljo.
+	d_Lang104 =	To sporočilo se ne bo znova pokazala za isto posodobitev. Lahko ga prenesete v meniju Pomoč > Preveri posodobitve.
+	d_Lang105 =	Datoteka poslana uspešno. Hvala!
+	d_Lang106 =	Jezikovne datoteke uspešno posodobljen.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Lahko ustvarite makre z uporabo ukaznih gumbov v glavnem oknu ali z uporabo snemalnika kopirati dejanja. Pojdi na Možnosti> Nastavitve> Snemanje izbrati tisto vhodi bo posnet.

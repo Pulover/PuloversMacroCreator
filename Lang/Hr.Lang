@@ -137,21 +137,19 @@
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Postavke
-	o_Lang002 =	&Jezik
-	o_Lang003 =	&Smanji u ladicu
-	o_Lang004 =	P&rikaz kontrole traci
-	o_Lang005 =	&Hvatanje pritiskanje tipki u ovom prozoru
-	o_Lang006 =	H&otkeys Uvijek Aktivni
-	o_Lang007 =	sh&utdown opcije (Kad reprodukcija završi...)
-	o_Lang008 =	&Kontekstna Hotkeys
-	o_Lang009 =	&Dodaj Windows tipku "igrati" prečac
-	o_Lang010 =	Kor&istite joystick tipke kao hotkey
-	o_Lang011 =	Pos&tavi kao zadani Hotkeys
-	o_Lang012 =	Post&avljen Kao Zadani Datoteku
-	o_Lang013 =	Uk&lonite propust varalica
-	o_Lang014 =	&Zadane Hotkeys
-	o_Lang015 =	T&vorničke postavke
-	o_Lang016 =	&Jezik Editor
+	o_Lang002 =	&Smanji u ladicu
+	o_Lang003 =	P&rikaz kontrole traci
+	o_Lang004 =	&Hvatanje pritiskanje tipki u ovom prozoru
+	o_Lang005 =	H&otkeys Uvijek Aktivni
+	o_Lang006 =	sh&utdown opcije (Kad reprodukcija završi...)
+	o_Lang007 =	&Kontekstna Hotkeys
+	o_Lang008 =	&Dodaj Windows tipku "igrati" prečac
+	o_Lang009 =	Kor&istite joystick tipke kao hotkey
+	o_Lang010 =	Pos&tavi kao zadani Hotkeys
+	o_Lang011 =	Post&avljen Kao Zadani Datoteku
+	o_Lang012 =	Uk&lonite propust varalica
+	o_Lang013 =	&Zadane Hotkeys
+	o_Lang014 =	T&vorničke postavke
 		
 ; 10. Donate Sub Menu		
 	p_Lang001 =	&PayPal donacija
@@ -709,6 +707,8 @@
 	t_Lang190 =	Pošaljite reviziju ili novi prijevod
 	t_Lang191 =	Sažmi sve
 	t_Lang192 =	Proširi sve
+	t_Lang193 =	Do
+	t_Lang194 =	Jezik
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Otvoreno
@@ -757,13 +757,7 @@
 	d_Lang040 =	Ova značajka zahtijeva knjižnicu GDI +.
 		Kliknite OK za odlazak na stranicu za preuzimanje.
 	d_Lang041 =	Naziv varijable sadrži nedopušteni znak.
-	d_Lang042 =	Nepoznat operator.
-		Sljedeće operateri su prihvaćeni:
-		=, ==, <>,! =,>, <,> =, <=
-		Primjeri:
-		MyVar > 1
-		MyVar = `%A_DDDD`%
-		Clipboard == `%MyVar`%
+	d_Lang042 =	je rezervirana riječ.
 	d_Lang043 =	Ili koristiti kontrole alatne trake
 	d_Lang044 =	Ova značajka zahtijeva eval () funkcija.
 		Kliknite OK za odlazak na stranicu za preuzimanje.
@@ -841,7 +835,11 @@
 	d_Lang099 =	Naziv Funkcija sadrži nedopušteni znak.
 	d_Lang100 =	Goto, Gosub i oznake nisu dopušteni u funkcijama.
 	d_Lang101 =	Dvostruki Funkcija.
-	d_Lang102 =	je rezervirana riječ.
+	d_Lang102 =	Dogodila se pogreška. Možete poslati e-mail "pulover@macrocreator.com 's datoteku:
+	d_Lang103 =	Novi jezici podnijeti raspolaganju.
+	d_Lang104 =	Ova poruka neće biti ponovno prikazana za isti ažuriranja. Možete ga preuzeti na izborniku Pomoć > Provjeri ima li ažuriranja.
+	d_Lang105 =	Datoteka je uspješno poslana. Hvala!
+	d_Lang106 =	Jezična datoteka je uspješno ažuriran.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Možete stvoriti makronaredbe pomoću naredbenog gumba u glavnom prozoru ili pomoću snimača kopirati svoje radnje. Idi na Opcije > Postavke > Snimanje odabrati ono što ulazi će biti zabilježen.

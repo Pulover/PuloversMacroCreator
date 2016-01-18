@@ -1,4 +1,4 @@
-﻿Lang_zh-CN
+﻿Lang_zh_CN
 		
 		; Chinese Simplified [Revised by huyaowen and amnesiac]
 		
@@ -53,7 +53,7 @@
 		
 ; 05. Commands Sub Menu		
 	i_Lang001 =	鼠标(&M)
-	i_Lang002 =	文本(&T)
+	i_Lang002 =	文本(&X)
 	i_Lang003 =	控件(&C)
 	i_Lang004 =	暂停(&P)
 	i_Lang005 =	消息框(&E)
@@ -64,14 +64,14 @@
 	i_Lang010 =	循环(&L)
 	i_Lang011 =	转到(&G)
 	i_Lang012 =	标签(&A)
-	i_Lang013 =	If语句(&F)
+	i_Lang013 =	If语句(&S)
 	i_Lang014 =	变量(&V)
 	i_Lang015 =	函数(&U) / 阵列方法
 	i_Lang016 =	IE浏览器(&N)
 	i_Lang017 =	COM接口(&O)
-	i_Lang018 =	运行小脚本(&S)
+	i_Lang018 =	运行小脚本(&T)
 	i_Lang019 =	Windows消息(&D)
-	i_Lang020 =	查找命令
+	i_Lang020 =	查找命令(&F)
 		
 ; 06. Edit Sub Menu		
 	e_Lang001 =	复写(&L)
@@ -137,21 +137,19 @@
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	设置(&S)
-	o_Lang002 =	语言(&L)
-	o_Lang003 =	最小化到托盘(&M)
-	o_Lang004 =	显示控制工具栏(&D)
-	o_Lang005 =	捕获此窗口中的键击(&C)
-	o_Lang006 =	热键总是激活(&H)
-	o_Lang007 =	关机选项（当回放结束时）(&U)
-	o_Lang008 =	上下文热键(&O)
-	o_Lang009 =	添加Windows键到“回放”热键(&A)
-	o_Lang010 =	使用操作杆作为热键(&E)
-	o_Lang011 =	设为默认热键(&T)
-	o_Lang012 =	设为默认文件(&F)
-	o_Lang013 =	移除默认文件(&R)
-	o_Lang014 =	默认热键(&K)
-	o_Lang015 =	默认设置(&I)
-	o_Lang016 =	语言编辑器(L)
+	o_Lang002 =	最小化到托盘(&M)
+	o_Lang003 =	显示控制工具栏(&D)
+	o_Lang004 =	捕获此窗口中的键击(&C)
+	o_Lang005 =	热键总是激活(&H)
+	o_Lang006 =	关机选项（当回放结束时）(&U)
+	o_Lang007 =	上下文热键(&O)
+	o_Lang008 =	添加Windows键到“回放”热键(&A)
+	o_Lang009 =	使用操作杆作为热键(&E)
+	o_Lang010 =	设为默认热键(&T)
+	o_Lang011 =	设为默认文件(&F)
+	o_Lang012 =	移除默认文件(&R)
+	o_Lang013 =	默认热键(&K)
+	o_Lang014 =	默认设置(&I)
 		
 ; 10. Donate Sub Menu		
 	p_Lang001 =	用PayPal捐赠(&P)
@@ -707,8 +705,10 @@
 	t_Lang188 =	语言文件
 	t_Lang189 =	参考文件
 	t_Lang190 =	提交修订或新的翻译
-	t_Lang191 =	全部收缩(C)
-	t_Lang192 =	展开全部(X)
+	t_Lang191 =	全部收缩
+	t_Lang192 =	展开全部
+	t_Lang193 =	至
+	t_Lang194 =	语言
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	打开
@@ -757,13 +757,7 @@
 	d_Lang040 =	此功能需要GDI+库。
 		请点击确定打开下载页。
 	d_Lang041 =	此变量名包含非法字符。
-	d_Lang042 =	运算符无效。
-		接受下列运算符。
-		=、==、<>、!=、>、<、>=、<=
-		例如：
-		MyVar > 1
-		MyVar = `%A_DDDD`%
-		Clipboard == `%MyVar`%
+	d_Lang042 =	是一个保留字。
 	d_Lang043 =	或使用控制工具栏。
 	d_Lang044 =	此功能需要Eval()函数。
 		请点击确定打开下载页。
@@ -841,7 +835,11 @@
 	d_Lang099 =	函数名称包含非法字符。
 	d_Lang100 =	后藤，GOSUB和标签都没有的功能允许的。
 	d_Lang101 =	复制功能。
-	d_Lang102 =	是一个保留字。
+	d_Lang102 =	에러 발생됨. 당신은 파일 'pulover@macrocreator.com'에 이메일을 보낼 수 있습니다 :
+	d_Lang103 =	새로운 언어 파일을 사용할 수 있습니다.
+	d_Lang104 =	이 메시지는 같은 업데이트를 다시 표시되지 않습니다. 당신은 업데이트 확인 > 도움말 메뉴에서 다운로드 할 수 있습니다.
+	d_Lang105 =	파일이 성공적으로 전송. 고맙습니다!
+	d_Lang106 =	언어 파일이 성공적으로 업데이트되었습니다.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	您可以用主窗口中的命令按钮创建宏或使用录制器录制您的操作。打开选项>设置>录制来选择录制哪些类型。

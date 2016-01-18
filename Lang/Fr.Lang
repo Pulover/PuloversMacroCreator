@@ -137,21 +137,19 @@
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Réglages
-	o_Lang002 =	&Langue
-	o_Lang003 =	R&éduire en icône
-	o_Lang004 =	&Contrôles afficher la barre d'outils
-	o_Lang005 =	C&apturez touches dans cette fenêtre
-	o_Lang006 =	Racc&ourcis Toujours Actifs
-	o_Lang007 =	O&ptions d'arrêt (Quand se termine la lecture...)
-	o_Lang008 =	&Touches sensibles au contexte
-	o_Lang009 =	A&joutez la touche Windows de "jouer" raccourci
-	o_Lang010 =	&Utilisez un bouton de la manette comme raccourci
-	o_Lang011 =	&Définir comme touches de raccourci par défaut
-	o_Lang012 =	Dé&finir comme fichier par défaut
-	o_Lang013 =	&Supprimer le fichier par défaut
-	o_Lang014 =	Raccourc&is clavier par défaut
-	o_Lang015 =	Para&mètres par défaut
-	o_Lang016 =	&Editeur de langue
+	o_Lang002 =	R&éduire en icône
+	o_Lang003 =	&Contrôles afficher la barre d'outils
+	o_Lang004 =	C&apturez touches dans cette fenêtre
+	o_Lang005 =	Racc&ourcis Toujours Actifs
+	o_Lang006 =	O&ptions d'arrêt (Quand se termine la lecture...)
+	o_Lang007 =	&Touches sensibles au contexte
+	o_Lang008 =	A&joutez la touche Windows de "jouer" raccourci
+	o_Lang009 =	&Utilisez un bouton de la manette comme raccourci
+	o_Lang010 =	&Définir comme touches de raccourci par défaut
+	o_Lang011 =	Dé&finir comme fichier par défaut
+	o_Lang012 =	&Supprimer le fichier par défaut
+	o_Lang013 =	Raccourc&is clavier par défaut
+	o_Lang014 =	Para&mètres par défaut
 		
 ; 10. Donate Sub Menu		
 	p_Lang001 =	&Donation PayPal
@@ -709,6 +707,8 @@
 	t_Lang190 =	Proposez une révision ou une nouvelle traduction
 	t_Lang191 =	Réduire tout
 	t_Lang192 =	Développer tout
+	t_Lang193 =	À
+	t_Lang194 =	Langue
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Ouvert
@@ -757,13 +757,7 @@
 	d_Lang040 =	Cette fonction requiert la bibliothèque GDI+.
 		Cliquez sur OK pour passer à la page de téléchargement.
 	d_Lang041 =	Le nom de la variable contient un caractère illégal.
-	d_Lang042 =	Opérateur non valide.
-		Les opérateurs suivants sont acceptés:
-		=, ==, <>,! =,>, <,> =, <=
-		Exemples:
-		MyVar > 1
-		MyVar = `%A_DDDD`%
-		Clipboard == `%MyVar`%
+	d_Lang042 =	est un mot réservé.
 	d_Lang043 =	Ou utilisez la barre d'outils de contrôle
 	d_Lang044 =	Cette fonction nécessite la fonction Eval().
 		Cliquez sur OK pour passer à la page de téléchargement.
@@ -841,7 +835,11 @@
 	d_Lang099 =	Le nom de la fonction contient un caractère illégal.
 	d_Lang100 =	Goto, Gosub et de l'étiquette ne sont pas autorisés dans les fonctions.
 	d_Lang101 =	Fonction Dupliquer.
-	d_Lang102 =	est un mot réservé.
+	d_Lang102 =	Une erreur est survenue. Vous pouvez envoyer un email à 'pulover@macrocreator.com' avec le fichier:
+	d_Lang103 =	Nouvelles langues fichier disponible.
+	d_Lang104 =	Ce message ne sera pas affiché de nouveau pour la même mise à jour. Vous pouvez le télécharger à partir du menu Aide > Vérifier les mises à jour.
+	d_Lang105 =	Fichier envoyé avec succès. Je vous remercie!
+	d_Lang106 =	Les fichiers de langue mis à jour avec succès.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Vous pouvez créer des macros à l'aide des boutons de commande dans la fenêtre principale ou en utilisant l'enregistreur de copier vos actions. Allez dans Options > Paramètres > Enregistrer pour sélectionner les entrées seront enregistrées.

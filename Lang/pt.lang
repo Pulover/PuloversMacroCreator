@@ -137,21 +137,19 @@
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Configurações
-	o_Lang002 =	&Idioma
-	o_Lang003 =	&Minimizar para  a bandeja
-	o_Lang004 =	&Exibir a barra de controles
-	o_Lang005 =	C&apturar teclas pressionadas nesta janela
-	o_Lang006 =	A&talhos Sempre Ativos
-	o_Lang007 =	&Opções de desligamento (Quando a execução terminar...)
-	o_Lang008 =	Ata&lhos Condicionais
-	o_Lang009 =	A&dicionar a tecla Windows ao atalho "Executar"
-	o_Lang010 =	&Usar um botão do joystick como atalho
-	o_Lang011 =	De&finir como Atalhos Padrão
-	o_Lang012 =	Defi&nir como Arquivo Padrão
-	o_Lang013 =	&Remover Arquivo Padrão
-	o_Lang014 =	Atal&hos Padrão
-	o_Lang015 =	Confi&guração Padrão
-	o_Lang016 =	&Editor de Idiomas
+	o_Lang002 =	&Minimizar para  a bandeja
+	o_Lang003 =	&Exibir a barra de controles
+	o_Lang004 =	C&apturar teclas pressionadas nesta janela
+	o_Lang005 =	A&talhos Sempre Ativos
+	o_Lang006 =	&Opções de desligamento (Quando a execução terminar...)
+	o_Lang007 =	Ata&lhos Condicionais
+	o_Lang008 =	A&dicionar a tecla Windows ao atalho "Executar"
+	o_Lang009 =	&Usar um botão do joystick como atalho
+	o_Lang010 =	De&finir como Atalhos Padrão
+	o_Lang011 =	Defi&nir como Arquivo Padrão
+	o_Lang012 =	&Remover Arquivo Padrão
+	o_Lang013 =	Atal&hos Padrão
+	o_Lang014 =	Confi&guração Padrão
 		
 ; 10. Donate Sub Menu		
 	p_Lang001 =	&Doação via PayPal
@@ -699,7 +697,7 @@
 	t_Lang180 =	Use Enter, PgDn e PgUp para navegar.
 	t_Lang181 =	Enviar
 	t_Lang182 =	De
-	t_Lang183 =	Nome = Valor
+	t_Lang183 =	Nome
 	t_Lang184 =	E-mail
 	t_Lang185 =	Assunto
 	t_Lang186 =	Mensagem
@@ -709,6 +707,8 @@
 	t_Lang190 =	Enviar revisão ou nova tradução
 	t_Lang191 =	Recolher todos
 	t_Lang192 =	Expandir todos
+	t_Lang193 =	Para
+	t_Lang194 =	Idioma
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Abrir
@@ -757,13 +757,7 @@
 	d_Lang040 =	Este recurso requer a Biblioteca GDI+.
 		Pressione OK para ir para a página de download.
 	d_Lang041 =	O nome da variável contém um caractere ilegal.
-	d_Lang042 =	Operador inválido.
-		Os seguintes operadores são aceitos:
-		=,==,<>,!=,>,<,>=,<=
-		Exemplos:
-		MyVar > 1
-		MyVar = `%A_DDDD`%
-		Clipboard == `%MyVar`%
+	d_Lang042 =	é uma palavra reservada.
 	d_Lang043 =	Ou utilize a Barra de Controles.
 	d_Lang044 =	Este recurso requer a Função Eval().
 		Pressione OK para ir para a página de download.
@@ -841,7 +835,11 @@
 	d_Lang099 =	O nome da função contém um caractére ilegal.
 	d_Lang100 =	Goto, Gosub e Rótulo não são permitidos em funções.
 	d_Lang101 =	Função duplicada.
-	d_Lang102 =	é uma palavra reservada.
+	d_Lang102 =	Ocorreu um erro. Você pode enviar um email para 'pulover@macrocreator.com' com o arquivo:
+	d_Lang103 =	Novo arquivo de idiomas disponível.
+	d_Lang104 =	Esta mensagem não será exibida novamente para a mesma atualização. Você pode baixá-la pelo menu Ajuda > Procurar atualizações.
+	d_Lang105 =	Arquivo enviado com sucesso. Obrigado!
+	d_Lang106 =	Arquivos de idioma atualizados com sucesso.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Você pode criar Macros utilizando os botões de comando na janela principal ou usar o gravador para copiar suas ações. Vá até Opções > Configurações > Gravar para selecionar quais entradas serão gravadas.

@@ -891,13 +891,57 @@ LVCallback(Func, Hwnd)
 	return true
 }
 
+UnZip(Source, OutDir)
+{
+	objShell := ComObjCreate("Shell.Application")
+	objSource := objShell.NameSpace(Source).Items()
+	objTarget := objShell.NameSpace(OutDir)
+	;~ https://msdn.microsoft.com/en-us/library/windows/desktop/bb787866(v=vs.85).aspx
+	intOptions := 256 + 128
+	objTarget.CopyHere(objSource, intOptions)
+	ObjRelease(objShell)
+}
+
+Zip(FilesToZip, OutFile)
+{
+	If (!FileExist(OutFile))
+		CreateZipFile(OutFile)
+	objShell := ComObjCreate("Shell.Application")
+	objTarget := objShell.Namespace(OutFile)
+	If (InStr(FileExist(FilesToZip), "D"))
+		FilesToZip .= (SubStr(FilesToZip, 0) = "\") ? "*.*" : "\*.*"
+	IntOptions := 4|16
+	Loop, %FilesToZip%, 1
+	{
+		zipped++
+		objTarget.CopyHere(A_LoopFileLongPath, intOptions)
+		Loop
+		{
+			done := objTarget.items().count
+			if (done = zipped)
+				break
+		}
+		done := -1
+	}
+}
+
+CreateZipFile(sZip)
+{
+	Header1 := "PK" . Chr(5) . Chr(6)
+	VarSetCapacity(Header2, 18, 0)
+	file := FileOpen(sZip,"w")
+	file.Write(Header1)
+	file.RawWrite(Header2,18)
+	file.close()
+}
+
 SavedVars(_Var := "", ByRef _Saved := "", AsArray := false)
 {
 	Static VarsRecord := {}, LocalRecord := {}
 	Local ListOfVars, i, v
 	
 	If _Var in %BuiltinVars%,Action,Step,Details,TimesX,DelayX,Type,Target,Window,VarName,VarValue,Oper,Par,Param,Version,Lang,AutoKey,ManKey,AbortKey,PauseKey,RecKey,RecNewKey,RelKey,FastKey,SlowKey,ClearNewList,DelayG,OnScCtrl,ShowStep,HideMainWin,DontShowPb,DontShowRec,DontShowEdt,ConfirmDelete,ShowTips,NextTip,IfDirectContext,IfDirectWindow,KeepHkOn,Mouse,Moves,TimedI,Strokes,CaptKDn,MScroll,WClass,WTitle,MDelay,DelayM,DelayW,MaxHistory,TDelay,ToggleC,RecKeybdCtrl,RecMouseCtrl,CoordMouse,SpeedUp,SpeedDn,MouseReturn,ShowProgBar,ShowBarOnStart,AutoHideBar,RandomSleeps,RandPercent,DrawButton,OnRelease,OnEnter,LineW,ScreenDir,DefaultEditor,DefaultMacro,StdLibFile,KeepDefKeys,TbNoTheme,AutoBackup,MultInst,EvalDefault,CloseAction,ShowLoopIfMark,ShowActIdent,SearchAreaColor,LoopLVColor,IfLVColor,VirtualKeys,AutoUpdate,Ex_AbortKey,Ex_PauseKey,Ex_SM,SM,Ex_SI,SI,Ex_ST,ST,Ex_DH,Ex_AF,Ex_HK,Ex_PT,Ex_NT,Ex_SC,SC,Ex_SW,SW,Ex_SK,SK,Ex_MD,MD,Ex_SB,SB,Ex_MT,MT,Ex_IN,Ex_UV,Ex_Speed,ComCr,ComAc,Send_Loop,TabIndent,IncPmc,Exe_Exp,ShowExpOpt,MainWinSize,MainWinPos,WinState,ColSizes,ColOrder,PrevWinSize,ShowPrev,TextWrap,CommentUnchecked,CustomColors,OSCPos,OSTrans,OSCaption,AutoRefresh,ShowGroups,IconSize,UserLayout,MainLayout,MacroLayout,FileLayout,RecPlayLayout,SettingsLayout,CommandLayout,EditLayout,ShowBands
-		TrayTip, %d_Lang011%!, %_Var% %d_Lang102%,, 18
+		TrayTip, %d_Lang011%!, %_Var% %d_Lang042%,, 18
 	If (IsByRef(_Saved))
 	{
 		If (AsArray)

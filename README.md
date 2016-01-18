@@ -21,5 +21,5 @@ To compile you'll need:
 
 Notes:
 * Execute MacroCreator.ahk at least once to create the .ini file with the current version. You might need to copy it from %AppData% to the script folder.
-* Language files should be edited in Languages.xls. Run ExtractLangFiles.ahk to create the .Lang files in the Lang directory.
+* Language files may be edited in Languages.xls. Run ExtractLangFiles.ahk to create the .lang files in the Lang directory.
 

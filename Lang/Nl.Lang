@@ -137,21 +137,19 @@
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Instellingen
-	o_Lang002 =	&Taal
-	o_Lang003 =	&Minimaliseren naar tray
-	o_Lang004 =	&Weer controles werkbalk
-	o_Lang005 =	&Capture-toets drukt in dit venster
-	o_Lang006 =	&Sneltoetsen Altijd Actief
-	o_Lang007 =	s&hutdown opties (Wanneer het afspelen is voltooid...)
-	o_Lang008 =	C&ontext gevoelige sneltoetsen
-	o_Lang009 =	&Voeg de Windows-toets op "Play" sneltoets
-	o_Lang010 =	&Gebruik een joystick knop als sneltoets
-	o_Lang011 =	&Als standaard instellen Sneltoetsen
-	o_Lang012 =	A&ls standaard instellen File
-	o_Lang013 =	V&erwijder Standaard File
-	o_Lang014 =	Sta&ndaard Sneltoetsen
-	o_Lang015 =	Stan&daardinstellingen
-	o_Lang016 =	&Taal Editor
+	o_Lang002 =	&Minimaliseren naar tray
+	o_Lang003 =	&Weer controles werkbalk
+	o_Lang004 =	&Capture-toets drukt in dit venster
+	o_Lang005 =	&Sneltoetsen Altijd Actief
+	o_Lang006 =	s&hutdown opties (Wanneer het afspelen is voltooid...)
+	o_Lang007 =	C&ontext gevoelige sneltoetsen
+	o_Lang008 =	&Voeg de Windows-toets op "Play" sneltoets
+	o_Lang009 =	&Gebruik een joystick knop als sneltoets
+	o_Lang010 =	&Als standaard instellen Sneltoetsen
+	o_Lang011 =	A&ls standaard instellen File
+	o_Lang012 =	V&erwijder Standaard File
+	o_Lang013 =	Sta&ndaard Sneltoetsen
+	o_Lang014 =	Stan&daardinstellingen
 		
 ; 10. Donate Sub Menu		
 	p_Lang001 =	&PayPal Donatie
@@ -709,6 +707,8 @@
 	t_Lang190 =	Submit herziening of nieuwe vertaling
 	t_Lang191 =	Alles inklappen
 	t_Lang192 =	Alles uitklappen
+	t_Lang193 =	Naar
+	t_Lang194 =	Taal
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Open
@@ -757,13 +757,7 @@
 	d_Lang040 =	Voor deze functie moet de GDI+ bibliotheek.
 		Klik op OK om naar de pagina te downloaden.
 	d_Lang041 =	De naam van de variabele bevat een ongeldig teken.
-	d_Lang042 =	Ongeldige operator.
-		De volgende operatoren worden geaccepteerd:
-		=, ==, <>,! =,>, <,> =, <=
-		Voorbeelden:
-		MyVar > 1
-		MyVar = `%A_DDDD`%
-		Clipboard == `%MyVar`%
+	d_Lang042 =	is een gereserveerd woord.
 	d_Lang043 =	Of gebruik de werkbalk besturingselementen
 	d_Lang044 =	Voor deze functie is de functie Eval().
 		Klik op OK om naar de pagina te downloaden.
@@ -841,7 +835,11 @@
 	d_Lang099 =	De naam van de functie bevat een ongeldig teken.
 	d_Lang100 =	Goto, Gosub en Label zijn niet toegestaan in functies.
 	d_Lang101 =	Duplicate-functie.
-	d_Lang102 =	is een gereserveerd woord.
+	d_Lang102 =	Er is een fout opgetreden. U kunt een email sturen naar 'pulover@macrocreator.com' met het bestand:
+	d_Lang103 =	Nieuwe talen bestand beschikbaar.
+	d_Lang104 =	Dit bericht zal niet opnieuw worden getoond voor dezelfde-update. Je kunt het downloaden via het menu Help > Controleren op updates.
+	d_Lang105 =	Verzonden bestand met succes. Dank je!
+	d_Lang106 =	Taalbestanden bijgewerkt.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	U kunt macro's met behulp van de Command Knoppen in het hoofdvenster of het gebruik van de recorder om uw acties te kopiëren creëren. Ga naar Opties > Instellingen > Opname te selecteren wat input wordt opgenomen.

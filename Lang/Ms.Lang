@@ -137,21 +137,19 @@
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Tetapan
-	o_Lang002 =	&Bahasa
-	o_Lang003 =	&Kurangkan ke dulang
-	o_Lang004 =	&Memaparkan kawalan toolbar
-	o_Lang005 =	T&angkap tekanan kekunci dalam tetingkap ini
-	o_Lang006 =	&Hotkeys Sentiasa Aktif
-	o_Lang007 =	&Pilihan penutupan (Apabila selesai main...)
-	o_Lang008 =	K&onteks hotkeys Sensitif
-	o_Lang009 =	Tambah &utama Windows untuk "Main" hotkey
-	o_Lang010 =	&Gunakan butang joystick sebagai hotkey
-	o_Lang011 =	&Ditetapkan sebagai hotkeys lalai
-	o_Lang012 =	D&itetapkan sebagai fail lalai
-	o_Lang013 =	Bua&ng Fail Default
-	o_Lang014 =	Hotk&eys lalai
-	o_Lang015 =	Tetapan &lalai
-	o_Lang016 =	&Editor Bahasa
+	o_Lang002 =	&Kurangkan ke dulang
+	o_Lang003 =	&Memaparkan kawalan toolbar
+	o_Lang004 =	T&angkap tekanan kekunci dalam tetingkap ini
+	o_Lang005 =	&Hotkeys Sentiasa Aktif
+	o_Lang006 =	&Pilihan penutupan (Apabila selesai main...)
+	o_Lang007 =	K&onteks hotkeys Sensitif
+	o_Lang008 =	Tambah &utama Windows untuk "Main" hotkey
+	o_Lang009 =	&Gunakan butang joystick sebagai hotkey
+	o_Lang010 =	&Ditetapkan sebagai hotkeys lalai
+	o_Lang011 =	D&itetapkan sebagai fail lalai
+	o_Lang012 =	Bua&ng Fail Default
+	o_Lang013 =	Hotk&eys lalai
+	o_Lang014 =	Tetapan &lalai
 		
 ; 10. Donate Sub Menu		
 	p_Lang001 =	Derma PayPal
@@ -709,6 +707,8 @@
 	t_Lang190 =	Hantar penyemakan atau terjemahan baru
 	t_Lang191 =	Tutup semua
 	t_Lang192 =	Buka semua
+	t_Lang193 =	Karşı
+	t_Lang194 =	Bahasa
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Buka
@@ -757,13 +757,7 @@
 	d_Lang040 =	Ciri ini memerlukan+Library GDI.
 		Klik OK untuk pergi ke halaman muat turun.
 	d_Lang041 =	Nama pembolehubah mengandungi aksara tidak sah.
-	d_Lang042 =	Pengendali tidak sah.
-		Pengendali berikut diterima:
-		=, ==, <>,! =,>, <,> = <=
-		Contoh:
-		MyVar > 1
-		MyVar = `%A_DDDD`%
-		Clipboard == `%MyVar`%
+	d_Lang042 =	adalah perkataan reserved.
 	d_Lang043 =	Atau gunakan Toolbar Kawalan itu.
 	d_Lang044 =	Ciri ini memerlukan Fungsi eval ().
 		Klik OK untuk pergi ke halaman muat turun.
@@ -841,7 +835,11 @@
 	d_Lang099 =	Nama fungsi mengandungi aksara tidak sah.
 	d_Lang100 =	Goto, Gosub dan Label tidak dibenarkan masuk ke fungsi.
 	d_Lang101 =	Fungsi salinan.
-	d_Lang102 =	adalah perkataan reserved.
+	d_Lang102 =	Ralat berlaku. Anda boleh menghantar e-mel kepada 'pulover@macrocreator.com' dengan fail:
+	d_Lang103 =	Bahasa baru memfailkan disediakan.
+	d_Lang104 =	Mesej ini tidak akan ditunjukkan sekali lagi untuk maklumat yang sama. Anda boleh memuat turun dari menu Bantuan > Semak kemas kini.
+	d_Lang105 =	Fail berjaya dihantar. Terima kasih!
+	d_Lang106 =	Fail bahasa berjaya dikemas kini.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Anda boleh membuat Makro menggunakan Butang Perintah dalam tetingkap utama atau menggunakan Perakam meniru tindakan anda. Pergi ke Pilihan> Tetapan> Rakaman untuk memilih apa input akan direkodkan.

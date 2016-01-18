@@ -521,13 +521,13 @@ Word.Application
 Outlook.Application
 PowerPoint.Application
 WinHttp.WinHttpRequest.5.1
+Msxml2.XMLHTTP
 SAPI.SpVoice
 Schedule.Service
 ScriptControl
 WScript.Shell
 WMPlayer.OCX
 HTMLfile
-XStandard.Zip
 )"
 
 ,	FileCmd := "
@@ -1108,41 +1108,41 @@ A_Tab
 
 BIV_Properties := "
 (
-A_WorkingDir
+A_AhkPath
+A_AhkVersion
+A_ExitReason
+A_IsCompiled
+A_IsUnicode
+A_LineFile
+A_LineNumber
 A_ScriptDir
-A_ScriptName
 A_ScriptFullPath
 A_ScriptHwnd
-A_LineNumber
-A_LineFile
+A_ScriptName
 A_ThisFunc
 A_ThisLabel
-A_AhkVersion
-A_AhkPath
-A_IsUnicode
-A_IsCompiled
-A_ExitReason
+A_WorkingDir
 )"
 
 BIV_Date := "
 (
-A_YYYY
-A_MM
 A_DD
-A_MMMM
-A_MMM
-A_DDDD
 A_DDD
+A_DDDD
+A_Hour
+A_MM
+A_MMM
+A_MMMM
+A_MSec
+A_Min
+A_Now
+A_NowUTC
+A_Sec
+A_TickCount
 A_WDay
 A_YDay
 A_YWeek
-A_Hour
-A_Min
-A_Sec
-A_MSec
-A_Now
-A_NowUTC
-A_TickCount
+A_YYYY
 )"
 
 BIV_Idle := "
@@ -1153,70 +1153,70 @@ A_TimeIdlePhysical
 
 BIV_System := "
 (
-ComSpec
-A_Temp
-A_OSType
-A_OSVersion
-A_Is64bitOS
-A_PtrSize
-A_Language
-A_ComputerName
-A_UserName
-A_WinDir
-A_ProgramFiles
 A_AppData
 A_AppDataCommon
+A_ComputerName
 A_Desktop
 A_DesktopCommon
-A_StartMenu
-A_StartMenuCommon
+A_IPAddress1
+A_Is64bitOS
+A_IsAdmin
+A_Language
+A_MyDocuments
+A_OSType
+A_OSVersion
+A_ProgramFiles
 A_Programs
 A_ProgramsCommon
+A_PtrSize
+A_ScreenDPI
+A_ScreenHeight
+A_ScreenWidth
+A_StartMenu
+A_StartMenuCommon
 A_Startup
 A_StartupCommon
-A_MyDocuments
-A_IsAdmin
-A_ScreenWidth
-A_ScreenHeight
-A_ScreenDPI
-A_IPAddress1
+A_Temp
+A_UserName
+A_WinDir
+ComSpec
 )"
 
 BIV_Misc := "
 (
-A_Cursor
 A_CaretX
 A_CaretY
+A_Cursor
+A_LastError
 Clipboard
 ClipboardAll
 ErrorLevel
-A_LastError
 )"
 
 BIV_Loop := "
 (
 A_Index
-A_LoopFileName
+A_LoopField
+A_LoopFileAttrib
+A_LoopFileDir
 A_LoopFileExt
 A_LoopFileFullPath
 A_LoopFileLongPath
-A_LoopFileShortPath
+A_LoopFileName
 A_LoopFileShortName
-A_LoopFileDir
-A_LoopFileTimeModified
-A_LoopFileTimeCreated
-A_LoopFileTimeAccessed
-A_LoopFileAttrib
+A_LoopFileShortPath
 A_LoopFileSize
 A_LoopFileSizeKB
 A_LoopFileSizeMB
-A_LoopRegName
-A_LoopRegType
+A_LoopFileTimeAccessed
+A_LoopFileTimeCreated
+A_LoopFileTimeModified
+A_LoopReadLine
 A_LoopRegKey
+A_LoopRegName
 A_LoopRegSubKey
 A_LoopRegTimeModified
-A_LoopReadLine
-A_LoopField
+A_LoopRegType
 )"
 
 BuiltinVars := StrReplace(BIV_Characters, "`n", ",")

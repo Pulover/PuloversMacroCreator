@@ -65,6 +65,9 @@ http://www.autohotkey.com/board/topic/54431-scite4autohotkey-v3004-updated-aug-1
 T800 for Html Help utils.
 http://www.autohotkey.com/board/topic/17984-html-help-utils
 
+tmplinshi for the CreateFormData function.
+http://autohotkey.com/boards/viewtopic.php?f=6&t=7647
+
 Thiago Talma for some improvements to the code, debugging and many suggestions.
 
 Translation revisions:
@@ -146,6 +149,8 @@ SettingsFolder := FileExist(A_ScriptDir "\MacroCreator.ini") ? A_ScriptDir : A_A
 
 IniRead, Version, %IniFilePath%, Application, Version
 IniRead, Lang, %IniFilePath%, Language, Lang
+IniRead, LangVersion, %IniFilePath%, Language, LangVersion, 1
+IniRead, LangLastCheck, %IniFilePath%, Language, LangLastCheck, 1
 IniRead, AutoKey, %IniFilePath%, HotKeys, AutoKey, F3|F4|F5|F6|F7
 IniRead, ManKey, %IniFilePath%, HotKeys, ManKey, |
 IniRead, AbortKey, %IniFilePath%, HotKeys, AbortKey, F8
@@ -305,279 +310,279 @@ For each, Section in UserVars
 
 LangInfo := "
 (Join`n
-0036	af	Afrikaans	Afrikaans	Afrikaans	
-0436	af-ZA	Afrikaans (South Africa)	Afrikaans	Afrikaans (Suid Afrika)	
-001C	sq	Albanian	Albanian	Shqipe	
-041C	sq-AL	Albanian (Albania)	Albanian	Shqipe (Shqipëria)	
-0484	gsw-FR	Alsatian (France)	Alsatian	Elsässisch (Frànkrisch)	
-045E	am-ET	Amharic (Ethiopia)	Amharic	አማርኛ (ኢትዮጵያ)	
-0001	ar	Arabic‎	Arabic	العربية‏	
-1401	ar-DZ	Arabic (Algeria)‎	Arabic	العربية (الجزائر)‏	
-3C01	ar-BH	Arabic (Bahrain)‎	Arabic	العربية (البحرين)‏	
-0C01	ar-EG	Arabic (Egypt)‎	Arabic	العربية (مصر)‏	
-0801	ar-IQ	Arabic (Iraq)‎	Arabic	العربية (العراق)‏	
-2C01	ar-JO	Arabic (Jordan)‎	Arabic	العربية (الأردن)‏	
-3401	ar-KW	Arabic (Kuwait)‎	Arabic	العربية (الكويت)‏	
-3001	ar-LB	Arabic (Lebanon)‎	Arabic	العربية (لبنان)‏	
-1001	ar-LY	Arabic (Libya)‎	Arabic	العربية (ليبيا)‏	
-1801	ar-MA	Arabic (Morocco)‎	Arabic	العربية (المملكة المغربية)‏	
-2001	ar-OM	Arabic (Oman)‎	Arabic	العربية (عمان)‏	
-4001	ar-QA	Arabic (Qatar)‎	Arabic	العربية (قطر)‏	
-0401	ar-SA	Arabic (Saudi Arabia)‎	Arabic	العربية (المملكة العربية السعودية)‏	
-2801	ar-SY	Arabic (Syria)‎	Arabic	العربية (سوريا)‏	
-1C01	ar-TN	Arabic (Tunisia)‎	Arabic	العربية (تونس)‏	
-3801	ar-AE	Arabic (U.A.E.)‎	Arabic	العربية (الإمارات العربية المتحدة)‏	
-2401	ar-YE	Arabic (Yemen)‎	Arabic	العربية (اليمن)‏	
-002B	hy	Armenian	Armenian	Հայերեն	
-042B	hy-AM	Armenian (Armenia)	Armenian	Հայերեն (Հայաստան)	
-044D	as-IN	Assamese (India)	Assamese	অসমীয়া (ভাৰত)	
-002C	az	Azeri	Azeri (Latin)	Azərbaycan­ılı	
-082C	az-Cyrl-AZ	Azeri (Cyrillic, Azerbaijan)	Azeri (Cyrillic)	Азәрбајҹан (Азәрбајҹан)	
-042C	az-Latn-AZ	Azeri (Latin, Azerbaijan)	Azeri (Latin)	Azərbaycan­ılı (Azərbaycanca)	
-046D	ba-RU	Bashkir (Russia)	Bashkir	Башҡорт (Россия)	
-002D	eu	Basque	Basque	Euskara	
-042D	eu-ES	Basque (Basque)	Basque	Euskara (euskara)	
-0023	be	Belarusian	Belarusian	Беларускі	
-0423	be-BY	Belarusian (Belarus)	Belarusian	Беларускі (Беларусь)	
-0845	bn-BD	Bengali (Bangladesh)	Bengali	বাংলা (বাংলা)	
-0445	bn-IN	Bengali (India)	Bengali	বাংলা (ভারত)	
-201A	bs-Cyrl-BA	Bosnian (Cyrillic, Bosnia and Herzegovina)	Bosnian (Cyrillic)	Босански (Босна и Херцеговина)	
-141A	bs-Latn-BA	Bosnian (Latin, Bosnia and Herzegovina)	Bosnian (Latin)	Bosanski (Bosna i Hercegovina)	
-047E	br-FR	Breton (France)	Breton	Brezhoneg (Frañs)	
-0002	bg	Bulgarian	Bulgarian	Български	
-0402	bg-BG	Bulgarian (Bulgaria)	Bulgarian	Български (България)	
-0003	ca	Catalan	Catalan	Català	
-0403	ca-ES	Catalan (Catalan)	Catalan	Català (català)	
-0C04	zh-HK	Chinese (Hong Kong S.A.R.)	Chinese	中文(香港特别行政區)	
-1404	zh-MO	Chinese (Macao S.A.R.)	Chinese	中文(澳門特别行政區)	
-0804	zh-CN	Chinese (Simplified)	Chinese	中文(简体)	
-0004	zh-Hans	Chinese (Simplified)	Chinese	中文(简体)	
-1004	zh-SG	Chinese (Singapore)	Chinese	中文(新加坡)	
-0404	zh-TW	Chinese (Traditional)	Chinese	中文(繁體)	
-7C04	zh-Hant	Chinese (Traditional)	Chinese	中文(繁體)	
-0483	co-FR	Corsican (France)	Corsican	Corsu (France)	
-001A	hr	Croatian	Croatian	Hrvatski	
-041A	hr-HR	Croatian (Croatia)	Croatian	Hrvatski (Hrvatska)	
-101A	hr-BA	Croatian (Latin, Bosnia and Herzegovina)	Croatian (Latin)	Hrvatski (Bosna i Hercegovina)	
-0005	cs	Czech	Czech	Čeština	
-0405	cs-CZ	Czech (Czech Republic)	Czech	Čeština (Česká republika)	
-0006	da	Danish	Danish	Dansk	
-0406	da-DK	Danish (Denmark)	Danish	Dansk (Danmark)	
-048C	prs-AF	Dari (Afghanistan)	Dari	درى (افغانستان)	
-0065	div	Divehi‎	Divehi	ދިވެހިބަސް‏	
-0465	div-MV	Divehi (Maldives)‎	Divehi	ދިވެހިބަސް (ދިވެހި ރާއްޖެ)‏	
-0013	nl	Dutch	Dutch	Nederlands	
-0813	nl-BE	Dutch (Belgium)	Dutch	Nederlands (België)	
-0413	nl-NL	Dutch (Netherlands)	Dutch	Nederlands (Nederland)	
-0009	en	English	English	English	
-0C09	en-AU	English (Australia)	English	English (Australia)	
-2809	en-BZ	English (Belize)	English	English (Belize)	
-1009	en-CA	English (Canada)	English	English (Canada)	
-2409	en-029	English (Caribbean)	English	English (Caribbean)	
-4009	en-IN	English (India)	English	English (India)	
-1809	en-IE	English (Ireland)	English	English (Eire)	
-2009	en-JM	English (Jamaica)	English	English (Jamaica)	
-4409	en-MY	English (Malaysia)	English	English (Malaysia)	
-1409	en-NZ	English (New Zealand)	English	English (New Zealand)	
-3409	en-PH	English (Republic of the Philippines)	English	English (Philippines)	
-4809	en-SG	English (Singapore)	English	English (Singapore)	
-1C09	en-ZA	English (South Africa)	English	English (South Africa)	
-2C09	en-TT	English (Trinidad and Tobago)	English	English (Trinidad y Tobago)	
-0809	en-GB	English (United Kingdom)	English	English (United Kingdom)	
-0409	en-US	English (United States)	English	English (United States)	
-3009	en-ZW	English (Zimbabwe)	English	English (Zimbabwe)	
-0025	et	Estonian	Estonian	Eesti	
-0425	et-EE	Estonian (Estonia)	Estonian	Eesti (Eesti)	
-0038	fo	Faroese	Faroese	Føroyskt	
-0438	fo-FO	Faroese (Faroe Islands)	Faroese	Føroyskt (Føroyar)	
-0464	fil-PH	Filipino (Philippines)	Filipino	Filipino (Pilipinas)	
-000B	fi	Finnish	Finnish	Suomi	
-040B	fi-FI	Finnish (Finland)	Finnish	Suomi (Suomi)	
-000C	fr	French	French	Français	
-080C	fr-BE	French (Belgium)	French	Français (Belgique)	
-0C0C	fr-CA	French (Canada)	French	Français (Canada)	
-040C	fr-FR	French (France)	French	Français (France)	
-140C	fr-LU	French (Luxembourg)	French	Français (Luxembourg)	
-180C	fr-MC	French (Principality of Monaco)	French	Français (Principauté de Monaco)	
-100C	fr-CH	French (Switzerland)	French	Français (Suisse)	
-0462	fy-NL	Frisian (Netherlands)	Frisian	Frysk (Nederlân)	
-0056	gl	Galician	Galician	Galego	
-0456	gl-ES	Galician (Galician)	Galician	Galego (galego)	
-0037	ka	Georgian	Georgian	ქართული	
-0437	ka-GE	Georgian (Georgia)	Georgian	ქართული (საქართველო)	
-0007	de	German	German	Deutsch	
-0C07	de-AT	German (Austria)	German	Deutsch (Österreich)	
-0407	de-DE	German (Germany)	German	Deutsch (Deutschland)	
-1407	de-LI	German (Liechtenstein)	German	Deutsch (Liechtenstein)	
-1007	de-LU	German (Luxembourg)	German	Deutsch (Luxemburg)	
-0807	de-CH	German (Switzerland)	German	Deutsch (Schweiz)	
-0008	el	Greek	Greek	Ελληνικά	
-0408	el-GR	Greek (Greece)	Greek	Ελληνικά (Ελλάδα)	
-046F	kl-GL	Greenlandic (Greenland)	Greenlandic	Kalaallisut (Kalaallit Nunaat)	
-0047	gu	Gujarati	Gujarati	ગુજરાતી	
-0447	gu-IN	Gujarati (India)	Gujarati	ગુજરાતી (ભારત)	
-0468	ha-Latn-NG	Hausa (Latin, Nigeria)	Hausa (Latin)	Hausa (Nigeria)	
-000D	he	Hebrew‎	Hebrew	עברית‏	
-040D	he-IL	Hebrew (Israel)‎	Hebrew	עברית (ישראל)‏	
-0039	hi	Hindi	Hindi	हिंदी	
-0439	hi-IN	Hindi (India)	Hindi	हिंदी (भारत)	
-000E	hu	Hungarian	Hungarian	Magyar	
-040E	hu-HU	Hungarian (Hungary)	Hungarian	Magyar (Magyarország)	
-000F	is	Icelandic	Icelandic	Íslenska	
-040F	is-IS	Icelandic (Iceland)	Icelandic	Íslenska (Ísland)	
-0470	ig-NG	Igbo (Nigeria)	Igbo	Igbo (Nigeria)	
-0021	id	Indonesian	Indonesian	Bahasa Indonesia	
-0421	id-ID	Indonesian (Indonesia)	Indonesian	Bahasa Indonesia (Indonesia)	
-085D	iu-Latn-CA	Inuktitut (Latin, Canada)	Inuktitut (Latin)	Inuktitut (Kanatami) (kanata)	
-045D	iu-Cans-CA	Inuktitut (Syllabics, Canada)	Inuktitut	ᐃᓄᒃᑎᑐᑦ (ᑲᓇᑕ)	
-083C	ga-IE	Irish (Ireland)	Irish	Gaeilge (Éire)	
-0434	xh-ZA	isiXhosa (South Africa)	isiXhosa	IsiXhosa (uMzantsi Afrika)	
-0435	zu-ZA	isiZulu (South Africa)	isiZulu	IsiZulu (iNingizimu Afrika)	
-0010	it	Italian	Italian	Italiano	
-0410	it-IT	Italian (Italy)	Italian	Italiano (Italia)	
-0810	it-CH	Italian (Switzerland)	Italian	Italiano (Svizzera)	
-0011	ja	Japanese	Japanese	日本語	
-0411	ja-JP	Japanese (Japan)	Japanese	日本語 (日本)	
-004B	kn	Kannada	Kannada	ಕನ್ನಡ	
-044B	kn-IN	Kannada (India)	Kannada	ಕನ್ನಡ (ಭಾರತ)	
-003F	kk	Kazakh	Kazakh	Қазащb	
-043F	kk-KZ	Kazakh (Kazakhstan)	Kazakh	Қазақ (Қазақстан)	
-0453	km-KH	Khmer (Cambodia)	Khmer	ខ្មែរ (កម្ពុជា)	
-0486	qut-GT	K'iche (Guatemala)	K'iche	K'iche (Guatemala)	
-0487	rw-RW	Kinyarwanda (Rwanda)	Kinyarwanda	Kinyarwanda (Rwanda)	
-0041	sw	Kiswahili	Kiswahili	Kiswahili	
-0441	sw-KE	Kiswahili (Kenya)	Kiswahili	Kiswahili (Kenya)	
-0057	kok	Konkani	Konkani	कोंकणी	
-0457	kok-IN	Konkani (India)	Konkani	कोंकणी (भारत)	
-0012	ko	Korean	Korean	한국어	
-0412	ko-KR	Korean (Korea)	Korean	한국어 (대한민국)	
-0040	ky	Kyrgyz	Kyrgyz	Кыргыз	
-0440	ky-KG	Kyrgyz (Kyrgyzstan)	Kyrgyz	Кыргыз (Кыргызстан)	
-0454	lo-LA	Lao (Lao P.D.R.)	Lao	ລາວ (ສ.ປ.ປ. ລາວ)	
-0026	lv	Latvian	Latvian	Latviešu	
-0426	lv-LV	Latvian (Latvia)	Latvian	Latviešu (Latvija)	
-0027	lt	Lithuanian	Lithuanian	Lietuvių	
-0427	lt-LT	Lithuanian (Lithuania)	Lithuanian	Lietuvių (Lietuva)	
-082E	wee-DE	Lower Sorbian (Germany)	Lower Sorbian	Dolnoserbšćina (Nimska)	
-046E	lb-LU	Luxembourgish (Luxembourg)	Luxembourgish	Lëtzebuergesch (Luxembourg)	
-002F	mk	Macedonian	Macedonian (FYROM)	Македонски јазик	
-042F	mk-MK	Macedonian (Former Yugoslav Republic of Macedonia)	Macedonian (FYROM)	Македонски јазик (Македонија)	
-003E	ms	Malay	Malay	Bahasa Malaysia	
-083E	ms-BN	Malay (Brunei Darussalam)	Malay	Bahasa Malaysia (Brunei Darussalam)	
-043E	ms-MY	Malay (Malaysia)	Malay	Bahasa Malaysia (Malaysia)	
-044C	ml-IN	Malayalam (India)	Malayalam	മലയാളം (ഭാരതം)	
-043A	mt-MT	Maltese (Malta)	Maltese	Malti (Malta)	
-0481	mi-NZ	Maori (New Zealand)	Maori	Reo Māori (Aotearoa)	
-047A	arn-CL	Mapudungun (Chile)	Mapudungun	Mapudungun (Chile)	
-004E	mr	Marathi	Marathi	मराठी	
-044E	mr-IN	Marathi (India)	Marathi	मराठी (भारत)	
-047C	moh-CA	Mohawk (Mohawk)	Mohawk	Kanien'kéha (Canada)	
-0050	mn	Mongolian	Mongolian (Cyrillic)	Монгол хэл	
-0450	mn-MN	Mongolian (Cyrillic, Mongolia)	Mongolian (Cyrillic)	Монгол хэл (Монгол улс)	
-0850	mn-Mong-CN	Mongolian (Traditional Mongolian, PRC)	Mongolian (Traditional Mongolian)	ᠮᠣᠩᠭᠤᠯ ᠬᠡᠯᠡ (ᠪᠦᠭᠦᠳᠡ ᠨᠠᠢᠷᠠᠮᠳᠠᠬᠤ ᠳᠤᠮᠳᠠᠳᠤ ᠠᠷᠠᠳ ᠣᠯᠣᠰ)	
-0461	ne-NP	Nepali (Nepal)	Nepali	नेपाली (नेपाल)	
-0014	no	Norwegian	Norwegian (Bokmål)	Norsk	
-0414	nb-NO	Norwegian, Bokmål (Norway)	Norwegian (Bokmål)	Norsk, bokmål (Norge)	
-0814	nn-NO	Norwegian, Nynorsk (Norway)	Norwegian (Nynorsk)	Norsk, nynorsk (Noreg)	
-0482	oc-FR	Occitan (France)	Occitan	Occitan (França)	
-0448	or-IN	Oriya (India)	Oriya	ଓଡ଼ିଆ (ଭାରତ)	
-0463	ps-AF	Pashto (Afghanistan)	Pashto	پښتو (افغانستان)	
-0029	fa	Persian‎	Persian	فارسى‏	
-0429	fa-IR	Persian‎	Persian	فارسى (ايران)‏	
-0015	pl	Polish	Polish	Polski	
-0415	pl-PL	Polish (Poland)	Polish	Polski (Polska)	
-0016	pt	Portuguese	Portuguese	Português	
-0416	pt-BR	Portuguese (Brazil)	Portuguese	Português (Brasil)	
-0816	pt-PT	Portuguese (Portugal)	Portuguese	Português (Portugal)	
-0046	pa	Punjabi	Punjabi	ਪੰਜਾਬੀ	
-0446	pa-IN	Punjabi (India)	Punjabi	ਪੰਜਾਬੀ (ਭਾਰਤ)	
-046B	quz-BO	Quechua (Bolivia)	Quechua	Runasimi (Bolivia Suyu)	
-086B	quz-EC	Quechua (Ecuador)	Quechua	Runasimi (Ecuador Suyu)	
-0C6B	quz-PE	Quechua (Peru)	Quechua	Runasimi (Peru Suyu)	
-0018	ro	Romanian	Romanian	Română	
-0418	ro-RO	Romanian (Romania)	Romanian	Română (România)	
-0417	rm-CH	Romansh (Switzerland)	Romansh	Rumantsch (Svizra)	
-0019	ru	Russian	Russian	Русский	
-0419	ru-RU	Russian (Russia)	Russian	Русский (Россия)	
-243B	smn-FI	Sami, Inari (Finland)	Sami (Inari)	Sämikielâ (Suomâ)	
-103B	smj-NO	Sami, Lule (Norway)	Sami (Lule)	Julevusámegiella (Vuodna)	
-143B	smj-SE	Sami, Lule (Sweden)	Sami (Lule)	Julevusámegiella (Svierik)	
-0C3B	se-FI	Sami, Northern (Finland)	Sami (Northern)	Davvisámegiella (Suopma)	
-043B	se-NO	Sami, Northern (Norway)	Sami (Northern)	Davvisámegiella (Norga)	
-083B	se-SE	Sami, Northern (Sweden)	Sami (Northern)	Davvisámegiella (Ruoŧŧa)	
-203B	sms-FI	Sami, Skolt (Finland)	Sami (Skolt)	Sääm´ǩiõll (Lää´ddjânnam)	
-183B	sma-NO	Sami, Southern (Norway)	Sami (Southern)	Åarjelsaemiengiele (Nöörje)	
-1C3B	sma-SE	Sami, Southern (Sweden)	Sami (Southern)	Åarjelsaemiengiele (Sveerje)	
-004F	sa	Sanskrit	Sanskrit	संस्कृत	
-044F	sa-IN	Sanskrit (India)	Sanskrit	संस्कृत (भारतम्)	
-0C1A	sr	Serbian (Cyrillic, Serbia)	Serbian (Cyrillic)	Српски (Србија и Црна Гора)	
-1C1A	sr-Cyrl-BA	Serbian (Cyrillic, Bosnia and Herzegovina)	Serbian (Cyrillic)	Српски (Босна и Херцеговина)	
-7C1A	sr-Latn	Serbian	Serbian (Latin)	Srpski	
-181A	sr-Latn-BA	Serbian (Latin, Bosnia and Herzegovina)	Serbian (Latin)	Srpski (Bosna i Hercegovina)	
-081A	sr-Latn-SP	Serbian (Latin, Serbia)	Serbian (Latin)	Srpski (Srbija i Crna Gora)	
-046C	nso-ZA	Sesotho sa Leboa (South Africa)	Sesotho sa Leboa	Sesotho sa Leboa (Afrika Borwa)	
-0432	tn-ZA	Setswana (South Africa)	Setswana	Setswana (Aforika Borwa)	
-045B	si-LK	Sinhala (Sri Lanka)	Sinhala	සිංහ (ශ්‍රී ලංකා)	
-001B	sk	Slovak	Slovak	Slovenčina	
-041B	sk-SK	Slovak (Slovakia)	Slovak	Slovenčina (Slovenská republika)	
-0024	sl	Slovenian	Slovenian	Slovenski	
-0424	sl-SI	Slovenian (Slovenia)	Slovenian	Slovenski (Slovenija)	
-000A	es	Spanish	Spanish	Español	
-2C0A	es-AR	Spanish (Argentina)	Spanish	Español (Argentina)	
-400A	es-BO	Spanish (Bolivia)	Spanish	Español (Bolivia)	
-340A	es-CL	Spanish (Chile)	Spanish	Español (Chile)	
-240A	es-CO	Spanish (Colombia)	Spanish	Español (Colombia)	
-140A	es-CR	Spanish (Costa Rica)	Spanish	Español (Costa Rica)	
-1C0A	es-DO	Spanish (Dominican Republic)	Spanish	Español (República Dominicana)	
-300A	es-EC	Spanish (Ecuador)	Spanish	Español (Ecuador)	
-440A	es-SV	Spanish (El Salvador)	Spanish	Español (El Salvador)	
-100A	es-GT	Spanish (Guatemala)	Spanish	Español (Guatemala)	
-480A	es-HN	Spanish (Honduras)	Spanish	Español (Honduras)	
-080A	es-MX	Spanish (Mexico)	Spanish	Español (México)	
-4C0A	es-NI	Spanish (Nicaragua)	Spanish	Español (Nicaragua)	
-180A	es-PA	Spanish (Panama)	Spanish	Español (Panamá)	
-3C0A	es-PY	Spanish (Paraguay)	Spanish	Español (Paraguay)	
-280A	es-PE	Spanish (Peru)	Spanish	Español (Perú)	
-500A	es-PR	Spanish (Puerto Rico)	Spanish	Español (Puerto Rico)	
-0C0A	es-ES	Spanish (Spain)	Spanish	Español (España)	
-540A	es-US	Spanish (United States)	Spanish	Español (Estados Unidos)	
-380A	es-UY	Spanish (Uruguay)	Spanish	Español (Uruguay)	
-200A	es-VE	Spanish (Venezuela)	Spanish	Español (Republica Bolivariana de Venezuela)	
-001D	sv	Swedish	Swedish	Svenska	
-081D	sv-FI	Swedish (Finland)	Swedish	Svenska (Finland)	
-041D	sv-SE	Swedish (Sweden)	Swedish	Svenska (Sverige)	
-005A	syr	Syriac‎	Syriac	ܣܘܪܝܝܐ‏	
-045A	syr-SY	Syriac (Syria)‎	Syriac	ܣܘܪܝܝܐ (سوريا)‏	
-0428	tg-Cyrl-TJ	Tajik (Cyrillic, Tajikistan)	Tajik (Cyrillic)	Тоҷикӣ (Тоҷикистон)	
-085F	tzm-Latn-DZ	Tamazight (Latin, Algeria)	Tamazight (Latin)	Tamazight (Djazaïr)	
-0049	ta	Tamil	Tamil	தமிழ்	
-0449	ta-IN	Tamil (India)	Tamil	தமிழ் (இந்தியா)	
-0044	tt	Tatar	Tatar	Татар	
-0444	tt-RU	Tatar (Russia)	Tatar	Татар (Россия)	
-004A	te	Telugu	Telugu	తెలుగు	
-044A	te-IN	Telugu (India)	Telugu	తెలుగు (భారత దేశం)	
-001E	th	Thai	Thai	ไทย	
-041E	th-TH	Thai (Thailand)	Thai	ไทย (ไทย)	
-0451	bo-CN	Tibetan (PRC)	Tibetan	བོད་ཡིག (ཀྲུང་ཧྭ་མི་དམངས་སྤྱི་མཐུན་རྒྱལ་ཁབ།)	
-001F	tr	Turkish	Turkish	Türkçe	
-041F	tr-TR	Turkish (Turkey)	Turkish	Türkçe (Türkiye)	
-0442	tk-TM	Turkmen (Turkmenistan)	Turkmen	Türkmençe (Türkmenistan)	
-0480	ug-CN	Uighur (PRC)	Uighur	ئۇيغۇر يېزىقى (جۇڭخۇا خەلق جۇمھۇرىيىتى)	
-0022	uk	Ukrainian	Ukrainian	Україньска	
-0422	uk-UA	Ukrainian (Ukraine)	Ukrainian	Україньска (Україна)	
-042E	wen-DE	Upper Sorbian (Germany)	Upper Sorbian	Hornjoserbšćina (Němska)	
-0020	ur	Urdu‎	Urdu	اُردو‏	
-0420	ur-PK	Urdu (Islamic Republic of Pakistan)‎	Urdu	اُردو (پاکستان)‏	
-0043	uz	Uzbek	Uzbek (Latin)	U'zbek	
-0843	uz-Cyrl-UZ	Uzbek (Cyrillic, Uzbekistan)	Uzbek (Cyrillic)	Ўзбек (Ўзбекистон)	
-0443	uz-Latn-UZ	Uzbek (Latin, Uzbekistan)	Uzbek (Latin)	U'zbek (U'zbekiston Respublikasi)	
-002A	vi	Vietnamese	Vietnamese	Tiếng Việt	
-042A	vi-VN	Vietnamese (Vietnam)	Vietnamese	Tiếng Việt (Việt Nam)	
-0452	cy-GB	Welsh (United Kingdom)	Welsh	Cymraeg (y Deyrnas Unedig)	
-0488	wo-SN	Wolof (Senegal)	Wolof	Wolof (Sénégal)	
-0485	sah-RU	Yakut (Russia)	Yakut	Саха (Россия)	
-0478	ii-CN	Yi (PRC)	Yi	ꆈꌠꁱꂷ (ꍏꉸꏓꂱꇭꉼꇩ)	
-046A	yo-NG	Yoruba (Nigeria)	Yoruba	Yoruba (Nigeria)	
+0036	af	Afrikaans	Afrikaans	Afrikaans
+0436	af_ZA	Afrikaans (South Africa)	Afrikaans	Afrikaans (Suid Afrika)
+001C	sq	Albanian	Albanian	Shqipe
+041C	sq_AL	Albanian (Albania)	Albanian	Shqipe (Shqipëria)
+0484	gsw_FR	Alsatian (France)	Alsatian	Elsässisch (Frànkrisch)
+045E	am_ET	Amharic (Ethiopia)	Amharic	አማርኛ (ኢትዮጵያ)
+0001	ar	Arabic‎	Arabic	العربية‏
+1401	ar_DZ	Arabic (Algeria)‎	Arabic	العربية (الجزائر)‏
+3C01	ar_BH	Arabic (Bahrain)‎	Arabic	العربية (البحرين)‏
+0C01	ar_EG	Arabic (Egypt)‎	Arabic	العربية (مصر)‏
+0801	ar_IQ	Arabic (Iraq)‎	Arabic	العربية (العراق)‏
+2C01	ar_JO	Arabic (Jordan)‎	Arabic	العربية (الأردن)‏
+3401	ar_KW	Arabic (Kuwait)‎	Arabic	العربية (الكويت)‏
+3001	ar_LB	Arabic (Lebanon)‎	Arabic	العربية (لبنان)‏
+1001	ar_LY	Arabic (Libya)‎	Arabic	العربية (ليبيا)‏
+1801	ar_MA	Arabic (Morocco)‎	Arabic	العربية (المملكة المغربية)‏
+2001	ar_OM	Arabic (Oman)‎	Arabic	العربية (عمان)‏
+4001	ar_QA	Arabic (Qatar)‎	Arabic	العربية (قطر)‏
+0401	ar_SA	Arabic (Saudi Arabia)‎	Arabic	العربية (المملكة العربية السعودية)‏
+2801	ar_SY	Arabic (Syria)‎	Arabic	العربية (سوريا)‏
+1C01	ar_TN	Arabic (Tunisia)‎	Arabic	العربية (تونس)‏
+3801	ar_AE	Arabic (U.A.E.)‎	Arabic	العربية (الإمارات العربية المتحدة)‏
+2401	ar_YE	Arabic (Yemen)‎	Arabic	العربية (اليمن)‏
+002B	hy	Armenian	Armenian	Հայերեն
+042B	hy_AM	Armenian (Armenia)	Armenian	Հայերեն (Հայաստան)
+044D	as_IN	Assamese (India)	Assamese	অসমীয়া (ভাৰত)
+002C	az	Azeri	Azeri (Latin)	Azərbaycan­ılı
+082C	az_Cyrl_AZ	Azeri (Cyrillic, Azerbaijan)	Azeri (Cyrillic)	Азәрбајҹан (Азәрбајҹан)
+042C	az_Latn_AZ	Azeri (Latin, Azerbaijan)	Azeri (Latin)	Azərbaycan­ılı (Azərbaycanca)
+046D	ba_RU	Bashkir (Russia)	Bashkir	Башҡорт (Россия)
+002D	eu	Basque	Basque	Euskara
+042D	eu_ES	Basque (Basque)	Basque	Euskara (euskara)
+0023	be	Belarusian	Belarusian	Беларускі
+0423	be_BY	Belarusian (Belarus)	Belarusian	Беларускі (Беларусь)
+0845	bn_BD	Bengali (Bangladesh)	Bengali	বাংলা (বাংলা)
+0445	bn_IN	Bengali (India)	Bengali	বাংলা (ভারত)
+201A	bs_Cyrl_BA	Bosnian (Cyrillic, Bosnia and Herzegovina)	Bosnian (Cyrillic)	Босански (Босна и Херцеговина)
+141A	bs_Latn_BA	Bosnian (Latin, Bosnia and Herzegovina)	Bosnian (Latin)	Bosanski (Bosna i Hercegovina)
+047E	br_FR	Breton (France)	Breton	Brezhoneg (Frañs)
+0002	bg	Bulgarian	Bulgarian	Български
+0402	bg_BG	Bulgarian (Bulgaria)	Bulgarian	Български (България)
+0003	ca	Catalan	Catalan	Català
+0403	ca_ES	Catalan (Catalan)	Catalan	Català (català)
+0C04	zh_HK	Chinese (Hong Kong S.A.R.)	Chinese	中文(香港特别行政區)
+1404	zh_MO	Chinese (Macao S.A.R.)	Chinese	中文(澳門特别行政區)
+0804	zh_CN	Chinese (Simplified)	Chinese	中文(简体)
+0004	zh_Hans	Chinese (Simplified)	Chinese	中文(简体)
+1004	zh_SG	Chinese (Singapore)	Chinese	中文(新加坡)
+0404	zh_TW	Chinese (Traditional)	Chinese	中文(繁體)
+7C04	zh_Hant	Chinese (Traditional)	Chinese	中文(繁體)
+0483	co_FR	Corsican (France)	Corsican	Corsu (France)
+001A	hr	Croatian	Croatian	Hrvatski
+041A	hr_HR	Croatian (Croatia)	Croatian	Hrvatski (Hrvatska)
+101A	hr_BA	Croatian (Latin, Bosnia and Herzegovina)	Croatian (Latin)	Hrvatski (Bosna i Hercegovina)
+0005	cs	Czech	Czech	Čeština
+0405	cs_CZ	Czech (Czech Republic)	Czech	Čeština (Česká republika)
+0006	da	Danish	Danish	Dansk
+0406	da_DK	Danish (Denmark)	Danish	Dansk (Danmark)
+048C	prs_AF	Dari (Afghanistan)	Dari	درى (افغانستان)
+0065	div	Divehi‎	Divehi	ދިވެހިބަސް‏
+0465	div_MV	Divehi (Maldives)‎	Divehi	ދިވެހިބަސް (ދިވެހި ރާއްޖެ)‏
+0013	nl	Dutch	Dutch	Nederlands
+0813	nl_BE	Dutch (Belgium)	Dutch	Nederlands (België)
+0413	nl_NL	Dutch (Netherlands)	Dutch	Nederlands (Nederland)
+0009	en	English	English	English
+0C09	en_AU	English (Australia)	English	English (Australia)
+2809	en_BZ	English (Belize)	English	English (Belize)
+1009	en_CA	English (Canada)	English	English (Canada)
+2409	en_029	English (Caribbean)	English	English (Caribbean)
+4009	en_IN	English (India)	English	English (India)
+1809	en_IE	English (Ireland)	English	English (Eire)
+2009	en_JM	English (Jamaica)	English	English (Jamaica)
+4409	en_MY	English (Malaysia)	English	English (Malaysia)
+1409	en_NZ	English (New Zealand)	English	English (New Zealand)
+3409	en_PH	English (Republic of the Philippines)	English	English (Philippines)
+4809	en_SG	English (Singapore)	English	English (Singapore)
+1C09	en_ZA	English (South Africa)	English	English (South Africa)
+2C09	en_TT	English (Trinidad and Tobago)	English	English (Trinidad y Tobago)
+0809	en_GB	English (United Kingdom)	English	English (United Kingdom)
+0409	en_US	English (United States)	English	English (United States)
+3009	en_ZW	English (Zimbabwe)	English	English (Zimbabwe)
+0025	et	Estonian	Estonian	Eesti
+0425	et_EE	Estonian (Estonia)	Estonian	Eesti (Eesti)
+0038	fo	Faroese	Faroese	Føroyskt
+0438	fo_FO	Faroese (Faroe Islands)	Faroese	Føroyskt (Føroyar)
+0464	fil_PH	Filipino (Philippines)	Filipino	Filipino (Pilipinas)
+000B	fi	Finnish	Finnish	Suomi
+040B	fi_FI	Finnish (Finland)	Finnish	Suomi (Suomi)
+000C	fr	French	French	Français
+080C	fr_BE	French (Belgium)	French	Français (Belgique)
+0C0C	fr_CA	French (Canada)	French	Français (Canada)
+040C	fr_FR	French (France)	French	Français (France)
+140C	fr_LU	French (Luxembourg)	French	Français (Luxembourg)
+180C	fr_MC	French (Principality of Monaco)	French	Français (Principauté de Monaco)
+100C	fr_CH	French (Switzerland)	French	Français (Suisse)
+0462	fy_NL	Frisian (Netherlands)	Frisian	Frysk (Nederlân)
+0056	gl	Galician	Galician	Galego
+0456	gl_ES	Galician (Galician)	Galician	Galego (galego)
+0037	ka	Georgian	Georgian	ქართული
+0437	ka_GE	Georgian (Georgia)	Georgian	ქართული (საქართველო)
+0007	de	German	German	Deutsch
+0C07	de_AT	German (Austria)	German	Deutsch (Österreich)
+0407	de_DE	German (Germany)	German	Deutsch (Deutschland)
+1407	de_LI	German (Liechtenstein)	German	Deutsch (Liechtenstein)
+1007	de_LU	German (Luxembourg)	German	Deutsch (Luxemburg)
+0807	de_CH	German (Switzerland)	German	Deutsch (Schweiz)
+0008	el	Greek	Greek	Ελληνικά
+0408	el_GR	Greek (Greece)	Greek	Ελληνικά (Ελλάδα)
+046F	kl_GL	Greenlandic (Greenland)	Greenlandic	Kalaallisut (Kalaallit Nunaat)
+0047	gu	Gujarati	Gujarati	ગુજરાતી
+0447	gu_IN	Gujarati (India)	Gujarati	ગુજરાતી (ભારત)
+0468	ha_Latn_NG	Hausa (Latin, Nigeria)	Hausa (Latin)	Hausa (Nigeria)
+000D	he	Hebrew‎	Hebrew	עברית‏
+040D	he_IL	Hebrew (Israel)‎	Hebrew	עברית (ישראל)‏
+0039	hi	Hindi	Hindi	हिंदी
+0439	hi_IN	Hindi (India)	Hindi	हिंदी (भारत)
+000E	hu	Hungarian	Hungarian	Magyar
+040E	hu_HU	Hungarian (Hungary)	Hungarian	Magyar (Magyarország)
+000F	is	Icelandic	Icelandic	Íslenska
+040F	is_IS	Icelandic (Iceland)	Icelandic	Íslenska (Ísland)
+0470	ig_NG	Igbo (Nigeria)	Igbo	Igbo (Nigeria)
+0021	id	Indonesian	Indonesian	Bahasa Indonesia
+0421	id_ID	Indonesian (Indonesia)	Indonesian	Bahasa Indonesia (Indonesia)
+085D	iu_Latn_CA	Inuktitut (Latin, Canada)	Inuktitut (Latin)	Inuktitut (Kanatami) (kanata)
+045D	iu_Cans_CA	Inuktitut (Syllabics, Canada)	Inuktitut	ᐃᓄᒃᑎᑐᑦ (ᑲᓇᑕ)
+083C	ga_IE	Irish (Ireland)	Irish	Gaeilge (Éire)
+0434	xh_ZA	isiXhosa (South Africa)	isiXhosa	IsiXhosa (uMzantsi Afrika)
+0435	zu_ZA	isiZulu (South Africa)	isiZulu	IsiZulu (iNingizimu Afrika)
+0010	it	Italian	Italian	Italiano
+0410	it_IT	Italian (Italy)	Italian	Italiano (Italia)
+0810	it_CH	Italian (Switzerland)	Italian	Italiano (Svizzera)
+0011	ja	Japanese	Japanese	日本語
+0411	ja_JP	Japanese (Japan)	Japanese	日本語 (日本)
+004B	kn	Kannada	Kannada	ಕನ್ನಡ
+044B	kn_IN	Kannada (India)	Kannada	ಕನ್ನಡ (ಭಾರತ)
+003F	kk	Kazakh	Kazakh	Қазащb
+043F	kk_KZ	Kazakh (Kazakhstan)	Kazakh	Қазақ (Қазақстан)
+0453	km_KH	Khmer (Cambodia)	Khmer	ខ្មែរ (កម្ពុជា)
+0486	qut_GT	K'iche (Guatemala)	K'iche	K'iche (Guatemala)
+0487	rw_RW	Kinyarwanda (Rwanda)	Kinyarwanda	Kinyarwanda (Rwanda)
+0041	sw	Kiswahili	Kiswahili	Kiswahili
+0441	sw_KE	Kiswahili (Kenya)	Kiswahili	Kiswahili (Kenya)
+0057	kok	Konkani	Konkani	कोंकणी
+0457	kok_IN	Konkani (India)	Konkani	कोंकणी (भारत)
+0012	ko	Korean	Korean	한국어
+0412	ko_KR	Korean (Korea)	Korean	한국어 (대한민국)
+0040	ky	Kyrgyz	Kyrgyz	Кыргыз
+0440	ky_KG	Kyrgyz (Kyrgyzstan)	Kyrgyz	Кыргыз (Кыргызстан)
+0454	lo_LA	Lao (Lao P.D.R.)	Lao	ລາວ (ສ.ປ.ປ. ລາວ)
+0026	lv	Latvian	Latvian	Latviešu
+0426	lv_LV	Latvian (Latvia)	Latvian	Latviešu (Latvija)
+0027	lt	Lithuanian	Lithuanian	Lietuvių
+0427	lt_LT	Lithuanian (Lithuania)	Lithuanian	Lietuvių (Lietuva)
+082E	wee_DE	Lower Sorbian (Germany)	Lower Sorbian	Dolnoserbšćina (Nimska)
+046E	lb_LU	Luxembourgish (Luxembourg)	Luxembourgish	Lëtzebuergesch (Luxembourg)
+002F	mk	Macedonian	Macedonian (FYROM)	Македонски јазик
+042F	mk_MK	Macedonian (Former Yugoslav Republic of Macedonia)	Macedonian (FYROM)	Македонски јазик (Македонија)
+003E	ms	Malay	Malay	Bahasa Malaysia
+083E	ms_BN	Malay (Brunei Darussalam)	Malay	Bahasa Malaysia (Brunei Darussalam)
+043E	ms_MY	Malay (Malaysia)	Malay	Bahasa Malaysia (Malaysia)
+044C	ml_IN	Malayalam (India)	Malayalam	മലയാളം (ഭാരതം)
+043A	mt_MT	Maltese (Malta)	Maltese	Malti (Malta)
+0481	mi_NZ	Maori (New Zealand)	Maori	Reo Māori (Aotearoa)
+047A	arn_CL	Mapudungun (Chile)	Mapudungun	Mapudungun (Chile)
+004E	mr	Marathi	Marathi	मराठी
+044E	mr_IN	Marathi (India)	Marathi	मराठी (भारत)
+047C	moh_CA	Mohawk (Mohawk)	Mohawk	Kanien'kéha (Canada)
+0050	mn	Mongolian	Mongolian (Cyrillic)	Монгол хэл
+0450	mn_MN	Mongolian (Cyrillic, Mongolia)	Mongolian (Cyrillic)	Монгол хэл (Монгол улс)
+0850	mn_Mong_CN	Mongolian (Traditional Mongolian, PRC)	Mongolian (Traditional Mongolian)	ᠮᠣᠩᠭᠤᠯ ᠬᠡᠯᠡ (ᠪᠦᠭᠦᠳᠡ ᠨᠠᠢᠷᠠᠮᠳᠠᠬᠤ ᠳᠤᠮᠳᠠᠳᠤ ᠠᠷᠠᠳ ᠣᠯᠣᠰ)
+0461	ne_NP	Nepali (Nepal)	Nepali	नेपाली (नेपाल)
+0014	no	Norwegian	Norwegian (Bokmål)	Norsk
+0414	nb_NO	Norwegian, Bokmål (Norway)	Norwegian (Bokmål)	Norsk, bokmål (Norge)
+0814	nn_NO	Norwegian, Nynorsk (Norway)	Norwegian (Nynorsk)	Norsk, nynorsk (Noreg)
+0482	oc_FR	Occitan (France)	Occitan	Occitan (França)
+0448	or_IN	Oriya (India)	Oriya	ଓଡ଼ିଆ (ଭାରତ)
+0463	ps_AF	Pashto (Afghanistan)	Pashto	پښتو (افغانستان)
+0029	fa	Persian‎	Persian	فارسى‏
+0429	fa_IR	Persian‎	Persian	فارسى (ايران)‏
+0015	pl	Polish	Polish	Polski
+0415	pl_PL	Polish (Poland)	Polish	Polski (Polska)
+0016	pt	Portuguese	Portuguese	Português
+0416	pt_BR	Portuguese (Brazil)	Portuguese	Português (Brasil)
+0816	pt_PT	Portuguese (Portugal)	Portuguese	Português (Portugal)
+0046	pa	Punjabi	Punjabi	ਪੰਜਾਬੀ
+0446	pa_IN	Punjabi (India)	Punjabi	ਪੰਜਾਬੀ (ਭਾਰਤ)
+046B	quz_BO	Quechua (Bolivia)	Quechua	Runasimi (Bolivia Suyu)
+086B	quz_EC	Quechua (Ecuador)	Quechua	Runasimi (Ecuador Suyu)
+0C6B	quz_PE	Quechua (Peru)	Quechua	Runasimi (Peru Suyu)
+0018	ro	Romanian	Romanian	Română
+0418	ro_RO	Romanian (Romania)	Romanian	Română (România)
+0417	rm_CH	Romansh (Switzerland)	Romansh	Rumantsch (Svizra)
+0019	ru	Russian	Russian	Русский
+0419	ru_RU	Russian (Russia)	Russian	Русский (Россия)
+243B	smn_FI	Sami, Inari (Finland)	Sami (Inari)	Sämikielâ (Suomâ)
+103B	smj_NO	Sami, Lule (Norway)	Sami (Lule)	Julevusámegiella (Vuodna)
+143B	smj_SE	Sami, Lule (Sweden)	Sami (Lule)	Julevusámegiella (Svierik)
+0C3B	se_FI	Sami, Northern (Finland)	Sami (Northern)	Davvisámegiella (Suopma)
+043B	se_NO	Sami, Northern (Norway)	Sami (Northern)	Davvisámegiella (Norga)
+083B	se_SE	Sami, Northern (Sweden)	Sami (Northern)	Davvisámegiella (Ruoŧŧa)
+203B	sms_FI	Sami, Skolt (Finland)	Sami (Skolt)	Sääm´ǩiõll (Lää´ddjânnam)
+183B	sma_NO	Sami, Southern (Norway)	Sami (Southern)	Åarjelsaemiengiele (Nöörje)
+1C3B	sma_SE	Sami, Southern (Sweden)	Sami (Southern)	Åarjelsaemiengiele (Sveerje)
+004F	sa	Sanskrit	Sanskrit	संस्कृत
+044F	sa_IN	Sanskrit (India)	Sanskrit	संस्कृत (भारतम्)
+0C1A	sr	Serbian (Cyrillic, Serbia)	Serbian (Cyrillic)	Српски (Србија и Црна Гора)
+1C1A	sr_Cyrl_BA	Serbian (Cyrillic, Bosnia and Herzegovina)	Serbian (Cyrillic)	Српски (Босна и Херцеговина)
+7C1A	sr_Latn	Serbian	Serbian (Latin)	Srpski
+181A	sr_Latn_BA	Serbian (Latin, Bosnia and Herzegovina)	Serbian (Latin)	Srpski (Bosna i Hercegovina)
+081A	sr_Latn_SP	Serbian (Latin, Serbia)	Serbian (Latin)	Srpski (Srbija i Crna Gora)
+046C	nso_ZA	Sesotho sa Leboa (South Africa)	Sesotho sa Leboa	Sesotho sa Leboa (Afrika Borwa)
+0432	tn_ZA	Setswana (South Africa)	Setswana	Setswana (Aforika Borwa)
+045B	si_LK	Sinhala (Sri Lanka)	Sinhala	සිංහ (ශ්‍රී ලංකා)
+001B	sk	Slovak	Slovak	Slovenčina
+041B	sk_SK	Slovak (Slovakia)	Slovak	Slovenčina (Slovenská republika)
+0024	sl	Slovenian	Slovenian	Slovenski
+0424	sl_SI	Slovenian (Slovenia)	Slovenian	Slovenski (Slovenija)
+000A	es	Spanish	Spanish	Español
+2C0A	es_AR	Spanish (Argentina)	Spanish	Español (Argentina)
+400A	es_BO	Spanish (Bolivia)	Spanish	Español (Bolivia)
+340A	es_CL	Spanish (Chile)	Spanish	Español (Chile)
+240A	es_CO	Spanish (Colombia)	Spanish	Español (Colombia)
+140A	es_CR	Spanish (Costa Rica)	Spanish	Español (Costa Rica)
+1C0A	es_DO	Spanish (Dominican Republic)	Spanish	Español (República Dominicana)
+300A	es_EC	Spanish (Ecuador)	Spanish	Español (Ecuador)
+440A	es_SV	Spanish (El Salvador)	Spanish	Español (El Salvador)
+100A	es_GT	Spanish (Guatemala)	Spanish	Español (Guatemala)
+480A	es_HN	Spanish (Honduras)	Spanish	Español (Honduras)
+080A	es_MX	Spanish (Mexico)	Spanish	Español (México)
+4C0A	es_NI	Spanish (Nicaragua)	Spanish	Español (Nicaragua)
+180A	es_PA	Spanish (Panama)	Spanish	Español (Panamá)
+3C0A	es_PY	Spanish (Paraguay)	Spanish	Español (Paraguay)
+280A	es_PE	Spanish (Peru)	Spanish	Español (Perú)
+500A	es_PR	Spanish (Puerto Rico)	Spanish	Español (Puerto Rico)
+0C0A	es_ES	Spanish (Spain)	Spanish	Español (España)
+540A	es_US	Spanish (United States)	Spanish	Español (Estados Unidos)
+380A	es_UY	Spanish (Uruguay)	Spanish	Español (Uruguay)
+200A	es_VE	Spanish (Venezuela)	Spanish	Español (Republica Bolivariana de Venezuela)
+001D	sv	Swedish	Swedish	Svenska
+081D	sv_FI	Swedish (Finland)	Swedish	Svenska (Finland)
+041D	sv_SE	Swedish (Sweden)	Swedish	Svenska (Sverige)
+005A	syr	Syriac‎	Syriac	ܣܘܪܝܝܐ‏
+045A	syr_SY	Syriac (Syria)‎	Syriac	ܣܘܪܝܝܐ (سوريا)‏
+0428	tg_Cyrl_TJ	Tajik (Cyrillic, Tajikistan)	Tajik (Cyrillic)	Тоҷикӣ (Тоҷикистон)
+085F	tzm_Latn_DZ	Tamazight (Latin, Algeria)	Tamazight (Latin)	Tamazight (Djazaïr)
+0049	ta	Tamil	Tamil	தமிழ்
+0449	ta_IN	Tamil (India)	Tamil	தமிழ் (இந்தியா)
+0044	tt	Tatar	Tatar	Татар
+0444	tt_RU	Tatar (Russia)	Tatar	Татар (Россия)
+004A	te	Telugu	Telugu	తెలుగు
+044A	te_IN	Telugu (India)	Telugu	తెలుగు (భారత దేశం)
+001E	th	Thai	Thai	ไทย
+041E	th_TH	Thai (Thailand)	Thai	ไทย (ไทย)
+0451	bo_CN	Tibetan (PRC)	Tibetan	བོད་ཡིག (ཀྲུང་ཧྭ་མི་དམངས་སྤྱི་མཐུན་རྒྱལ་ཁབ།)
+001F	tr	Turkish	Turkish	Türkçe
+041F	tr_TR	Turkish (Turkey)	Turkish	Türkçe (Türkiye)
+0442	tk_TM	Turkmen (Turkmenistan)	Turkmen	Türkmençe (Türkmenistan)
+0480	ug_CN	Uighur (PRC)	Uighur	ئۇيغۇر يېزىقى (جۇڭخۇا خەلق جۇمھۇرىيىتى)
+0022	uk	Ukrainian	Ukrainian	Україньска
+0422	uk_UA	Ukrainian (Ukraine)	Ukrainian	Україньска (Україна)
+042E	wen_DE	Upper Sorbian (Germany)	Upper Sorbian	Hornjoserbšćina (Němska)
+0020	ur	Urdu‎	Urdu	اُردو‏
+0420	ur_PK	Urdu (Islamic Republic of Pakistan)‎	Urdu	اُردو (پاکستان)‏
+0043	uz	Uzbek	Uzbek (Latin)	U'zbek
+0843	uz_Cyrl_UZ	Uzbek (Cyrillic, Uzbekistan)	Uzbek (Cyrillic)	Ўзбек (Ўзбекистон)
+0443	uz_Latn_UZ	Uzbek (Latin, Uzbekistan)	Uzbek (Latin)	U'zbek (U'zbekiston Respublikasi)
+002A	vi	Vietnamese	Vietnamese	Tiếng Việt
+042A	vi_VN	Vietnamese (Vietnam)	Vietnamese	Tiếng Việt (Việt Nam)
+0452	cy_GB	Welsh (United Kingdom)	Welsh	Cymraeg (y Deyrnas Unedig)
+0488	wo_SN	Wolof (Senegal)	Wolof	Wolof (Sénégal)
+0485	sah_RU	Yakut (Russia)	Yakut	Саха (Россия)
+0478	ii_CN	Yi (PRC)	Yi	ꆈꌠꁱꂷ (ꍏꉸꏓꂱꇭꉼꇩ)
+046A	yo_NG	Yoruba (Nigeria)	Yoruba	Yoruba (Nigeria)
 )"
 
 LangData := {}
@@ -591,7 +596,6 @@ Loop, Parse, LangInfo, `n, `r
 
 If (Lang = "ERROR")
 	Lang := SysLang
-_Lang := StrReplace(Lang, "-")
 
 GoSub, LoadLangFiles
 
@@ -620,24 +624,46 @@ GoSub, WriteSettings
 
 If (!LangFiles.HasKey(Lang))
 {
-	Lang := RegExReplace(Lang, "(\w+).*", "$1"), _Lang := Lang
+	Lang := RegExReplace(Lang, "_.*")
 	For i, l in LangFiles
 	{
 		If (InStr(i, Lang)=1)
 		{
-			Lang := i, _Lang := StrReplace(Lang, "-")
+			Lang := i
 			break
 		}
 	}
 }
 If (!LangFiles.HasKey(Lang))
-	Lang := "En", _Lang := "En"
+	Lang := "En"
 If (!LangFiles.HasKey(Lang))
 {
-	MsgBox, 64, Error, Missing Language Files.`nWould you like to download them now?
-	ExitApp
+	MsgBox, 64, Error, Missing language files.`n`nWould you like to download them now?
+	IfMsgBox, No
+		ExitApp
+	FileDelete, %A_Temp%\Lang.zip
+	FileDelete, %A_Temp%\Lang\*.*
+	UrlDownloadToFile, http://www.macrocreator.com/lang/Lang.zip, %A_Temp%\Lang.zip
+	If (FileExist(A_Temp "\Lang.zip"))
+	{
+		FileCreateDir, %A_Temp%\Lang_Temp "\Lang\")
+		UnZip(A_Temp "\Lang.zip", A_Temp "\Lang\")
+		FileCopy, %A_Temp%\Lang\*.lang, %SettingsFolder%\Lang\, 1
+		FileDelete, %A_Temp%\Lang.zip
+		Gui, 1:Default
+		GoSub, LoadLangFiles
+		GoSub, LoadLang
+		GoSub, UpdateLang
+		LangVersion := LangChk, LangLastCheck := LangChk
+		MsgBox, 64, %AppName%, %d_lang106%
+	}
+	Else
+	{
+		MsgBox, 16, %d_Lang007%, %d_Lang063%
+		ExitApp
+	}
 }
-CurrentLang := Lang, _CurrentLang := _Lang
+CurrentLang := Lang
 
 AppName := "Pulover's Macro Creator"
 ,	HeadLine := "; This script was created using Pulover's Macro Creator"
@@ -909,8 +935,6 @@ Menu, ExportG, Add, Auto-execute Section, ExportG
 Menu, ExportG, Add, #IfWinActive / #IfWinExist, HelpB
 Menu, ExportG, Icon, Hotkeys, %ResDllPath%, 24
 
-Menu, LangMenu, Check, % Lang_%_Lang%
-
 ;##### Main Window: #####
 
 Gui, +Resize +MinSize310x175 +HwndPMCWinID
@@ -1090,10 +1114,13 @@ Else
 		GoSub, ShowControls
 	If (UserLayout = "Error")
 		GoSub, Welcome
-	Else If (ShowTips)
-		GoSub, ShowTips
-	If (AutoUpdate)
-		SetTimer, CheckUpdates, -1
+	Else
+	{
+		If (ShowTips)
+			GoSub, ShowTips
+		If (AutoUpdate)
+			SetTimer, CheckUpdates, -1
+	}
 	IfExist, %SettingsFolder%\~ActiveProject.pmc
 	{
 		Gui, 1:+OwnDialogs
@@ -2842,12 +2869,6 @@ If (Ex_AutoKey != "")
 	Body := Ex_AutoKey "::`n" Body
 return
 
-LangEditor:
-GoSub, Options
-GuiControl, 4:Choose, AltTab, 7
-GoSub, AltTabControl
-return
-
 Options:
 Gui 4:+LastFoundExist
 IfWinExist
@@ -2863,8 +2884,8 @@ GoSub, ResetHotkeys
 OldAreaColor := SearchAreaColor, OldLoopColor := LoopLVColor, OldIfColor := IfLVColor
 , OldMoves := Moves, OldTimed := TimedI, OldRandM := RandomSleeps, OldRandP := RandPercent
 FileRead, UserVarsList, %UserVarsPath%
-Gui, 4:Add, Listbox, W160 H400 vAltTab gAltTabControl AltSubmit, %t_Lang018%||%t_Lang022%|%t_Lang035%|%t_Lang090%|%t_Lang046%|%t_Lang096%|%t_Lang178%
-Gui, 4:Add, Tab2, yp x+0 W400 H0 vTabControl gAltTabControl AltSubmit, General|Recording|Playback|Defaults|Screenshots|UserVars|LangEditor
+Gui, 4:Add, Listbox, W160 H400 vAltTab gAltTabControl AltSubmit, %t_Lang018%||%t_Lang022%|%t_Lang035%|%t_Lang090%|%t_Lang046%|%t_lang194%|%t_Lang178%|%t_Lang096%
+Gui, 4:Add, Tab2, yp x+0 W400 H0 vTabControl gAltTabControl AltSubmit, General|Recording|Playback|Defaults|Screenshots|Language|LangEditor|UserVars|SubmitRev
 ; General
 Gui, 4:Add, GroupBox, Section ym xm+170 W400 H155, %t_Lang018%:
 Gui, 4:Add, Checkbox, -Wrap Checked%AutoBackup% ys+20 xs+10 vAutoBackup W380 R1, %t_Lang152%
@@ -2985,12 +3006,9 @@ Gui, 4:Add, Text, y+10 xs+10, %t_Lang051%:
 Gui, 4:Add, Edit, vScreenDir W350 R1 -Multi, %ScreenDir%
 Gui, 4:Add, Button, -Wrap yp-1 x+0 W30 H23 vSearchScreen gSearchDir, ...
 Gui, 4:Tab, 6
-; User Variables
-Gui, 4:Add, GroupBox, Section ym xm+170 W400 H395, %t_Lang096%:
-Gui, 4:Add, Text, ys+20 xs+10 -Wrap W150 R1, %t_Lang093%:
-Gui, 4:Add, Text, -Wrap W200 R1 yp xs+155 cRed, %t_Lang094%
-Gui, 4:Add, Text, -Wrap W380 R1 y+5 xs+10, %t_Lang095%
-Gui, 4:Add, Edit, W380 r24 vUserVarsList, %UserVarsList%
+; Language select
+Gui, 4:Add, GroupBox, Section ym xm+170 W400 H395, %t_lang194%:
+Gui, 4:Add, Listbox, ys+20 xs+10 W380 H355 vSelLang, %Lang_List%
 Gui, 4:Tab, 7
 ; Language Editor
 Gui, 4:Add, GroupBox, Section ym xm+170 W400 H395, %t_Lang178%:
@@ -3002,9 +3020,33 @@ Gui, 4:Add, Edit, y+5 xs+10 W380 R3 vRowRef -WantReturn ReadOnly
 Gui, 4:Add, Text, y+5 xs+10 W260 R1, %t_Lang180%
 Gui, 4:Add, Button, -Wrap y+10 xs+10 W75 H23 Disabled vSaveLang gSaveLang, %t_Lang127%
 Gui, 4:Add, Button, -Wrap yp x+10 W75 H23 gCreateLangFile, %t_Lang179%
-Gui, 4:Add, Button, -Wrap yp x+10 W75 H23, %t_Lang181%
+Gui, 4:Add, Button, -Wrap yp x+10 W75 H23 gSubmitTrans, %t_Lang181%
 Gui, 4:Add, Button, -Wrap yp-25 x+20 W115 H23 gColGroups, %t_Lang191%
 Gui, 4:Add, Button, -Wrap yp+25 xp W115 H23 gExpGroups, %t_Lang192%
+Gui, 4:Tab, 8
+; User Variables
+Gui, 4:Add, GroupBox, Section ym xm+170 W400 H395, %t_Lang096%:
+Gui, 4:Add, Text, ys+20 xs+10 -Wrap W150 R1, %t_Lang093%:
+Gui, 4:Add, Text, -Wrap W200 R1 yp xs+155 cRed, %t_Lang094%
+Gui, 4:Add, Text, -Wrap W380 R1 y+5 xs+10, %t_Lang095%
+Gui, 4:Add, Edit, W380 r24 vUserVarsList, %UserVarsList%
+Gui, 4:Tab, 9
+; Send Revision
+Gui, 4:Add, GroupBox, Section ym xm+170 W400 H395, %t_Lang190%
+Gui, 4:Add, Text, ys+30 xs+10 W75 R1, %t_Lang193%:
+Gui, 4:Add, Text, yp x+5 W300 R1, pulover@macrocreator.com
+Gui, 4:Add, Text, y+10 xs+10 W75 R1, %t_Lang182%:
+Gui, 4:Add, Edit, yp x+5 W300 R1 vFromMail Limit100, myemail@domain.com
+Gui, 4:Add, Text, y+10 xs+10 W75 R1, %t_Lang183%:
+Gui, 4:Add, Edit, yp x+5 W300 R1 vName Limit100, %A_UserName%
+Gui, 4:Add, Text, y+10 xs+10 W75 R1, %t_Lang185%:
+Gui, 4:Add, Edit, yp x+5 W300 R1 vSubject Limit100
+Gui, 4:Add, Text, y+10 xs+10 W75 R1, %t_Lang186%:
+Gui, 4:Add, Edit, y+5 xs+10 W380 R10 vMessage Limit2000
+Gui, 4:Add, Text, y+10 xs+10 W180 R1, %t_Lang188%:
+Gui, 4:Add, Edit, y+5 xs+10 W380 R1 vLFile Disabled
+Gui, 4:Add, Button, -Wrap y+10 xs+10 W75 H23 gSendRevision, %t_Lang181%
+Gui, 4:Add, Button, -Wrap yp x+10 W75 H23 gCancelSubmit, %c_Lang021%
 Gui, 4:Tab
 Gui, 4:Add, Button, -Wrap Default Section xm W75 H23 gConfigOK, %c_Lang020%
 Gui, 4:Add, Button, -Wrap ys W75 H23 gConfigCancel, %c_Lang021%
@@ -3016,7 +3058,8 @@ GuiControl, 4:ChooseString, SlowKey, %SlowKey%
 GuiControl, 4:ChooseString, SpeedUp, %SpeedUp%
 GuiControl, 4:ChooseString, SpeedDn, %SpeedDn%
 GuiControl, 4:ChooseString, DrawButton, %DrawButton%
-GuiControl, 4:ChooseString, EditLang, % RegExReplace(Lang_%_CurrentLang%, "\t.*")
+GuiControl, 4:ChooseString, SelLang, % RegExReplace(Lang_%Lang%, "\t.*")
+GuiControl, 4:ChooseString, EditLang, % RegExReplace(Lang_%Lang%, "\t.*")
 GuiControl, 4:ChooseString, RefLang, English
 LV_ModifyCol(1, 185)
 LV_ModifyCol(2, 174)
@@ -3083,8 +3126,6 @@ User_Vars.Write(UserVarsPath)
 Gui, 1:-Disabled
 Gui, 4:Destroy
 Gui, chMacro:Default
-GoSub, KeepMenuCheck
-GoSub, LoadLang
 IniWrite, %MultInst%, %IniFilePath%, Options, MultInst
 GuiControl, 1:, CoordTip, CoordMode: %CoordMouse%
 GoSub, PrevRefresh
@@ -3092,13 +3133,13 @@ If (WinExist("ahk_id " PMCOSC))
 	GuiControl, 28:, OSProgB, %ShowProgBar%
 GoSub, RowCheck
 LangMan := ""
+Gui, 1:Default
+GoSub, KeepMenuCheck
+GoSub, LoadLangFiles
+GoSub, LoadLang
+GoSub, LangChange
 If (InEditLang != "")
-{
-	Gui, 1:Default
-	GoSub, LoadLangFiles
-	GoSub, LoadLang
 	GoSub, UpdateLang
-}
 return
 
 ConfigCancel:
@@ -3189,9 +3230,79 @@ return
 
 KeepMenuCheck:
 If (KeepDefKeys)
-	Menu, OptionsMenu, Check, %o_Lang011%
+	Menu, OptionsMenu, Check, %o_Lang010%
 Else
-	Menu, OptionsMenu, Uncheck, %o_Lang011%
+	Menu, OptionsMenu, Uncheck, %o_Lang010%
+return
+
+SubmitTrans:
+Gui, 4:Submit, NoHide
+Gui, 4:+OwnDialogs
+GuiControlGet, EditOn, 4:Enabled, SaveLang
+If (EditOn)
+{
+	MsgBox, 33, %t_Lang178%, %t_Lang187%
+	IfMsgBox, Cancel
+		return
+	GoSub, SaveLang
+}
+FilePath := RegExReplace(EditLang, "\s/.*")
+GuiControl, 4:, Subject, Translation Revision: %FilePath%
+For e, l in LangData
+{
+	If (FilePath = l.Lang)
+	{
+		FilePath := SettingsFolder "\Lang\" e ".lang"
+		break
+	}
+	If (FilePath = l.Idiom)
+	{
+		FilePath := SettingsFolder "\Lang\" e ".lang"
+		break
+	}
+}
+GuiControl, 4:, LFile, %FilePath%
+GuiControl, 4:Choose, TabControl, 9
+return
+
+CancelSubmit:
+Gui, 4:Submit, NoHide
+GuiControl, 4:Choose, TabControl, 7
+return
+
+SendRevision:
+Gui, 4:Submit, NoHide
+Gui, 4:+OwnDialogs
+url := "http://www.macrocreator.com/sendemail.php"
+whr := ComObjCreate("WinHttp.WinHttpRequest.5.1")
+whr.open("POST", url, true)
+
+objParam := { name		: Name
+            , email		: FromMail
+            , subject	: Subject
+            , message	: Name "\nEmail: " FromMail "\nMessage:\n" Message
+            , file		: [LFile] }
+CreateFormData(PostData, hdr_ContentType, objParam)
+
+whr.SetRequestHeader("Content-Type", hdr_ContentType)
+whr.SetRequestHeader("Referer", url)
+whr.SetRequestHeader("User-Agent", "Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko")
+whr.Option(6) := false ; No auto redirect
+Try
+{
+	whr.Send(PostData)
+	whr.WaitForResponse()
+}
+Catch
+{
+	MsgBox, 16, %d_Lang007%, %d_Lang102%
+	return
+}
+If (InStr(whr.ResponseText, "Email was sent successfully!"))
+	MsgBox, 64, %t_Lang190%, %d_Lang105%
+Else
+	MsgBox, 16, %d_Lang007%, %d_Lang102%
+GuiControl, 4:Choose, TabControl, 7
 return
 
 GoNextLine:
@@ -3246,7 +3357,7 @@ GoSub, ConfigCancel
 Gui, 1:Default
 GoSub, LoadLangFiles
 GoSub, LoadLang
-GoSub, LangChangeOn
+GoSub, LangChange
 GoSub, Options
 GuiControl, 4:Choose, AltTab, 7
 GoSub, AltTabControl
@@ -3261,15 +3372,15 @@ RLang := RegExReplace(RefLang, "\s/.*")
 For i, l in LangFiles
 {
 	If (LangData.HasKey(i))
-		lName := (InStr(i, "-")) ? LangData[i].Lang : LangData[i].Idiom, n := i
+		lName := (InStr(i, "_")) ? LangData[i].Lang : LangData[i].Idiom, n := i
 	Else
 	{
-		c := RegExReplace(i, "(\w+).*", "$1")
+		c := RegExReplace(i, "_.*")
 		For e, l in LangData
 		{
 			If (InStr(e, c))
 			{
-				lName := (InStr(e, "-")) ? l.Lang : l.Idiom, n := e
+				lName := (InStr(e, "_")) ? l.Lang : l.Idiom, n := e
 				break
 			}
 		}
@@ -3326,7 +3437,7 @@ LangsArray := {}
 For i, l in LangData
 {
 	x := RegExReplace(l.Idiom, "\s\(.*")
-,	y := (InStr(i, "-")) ? l.Lang : l.Idiom
+,	y := (InStr(i, "_")) ? l.Lang : l.Idiom
 	If (!LangsArray.HasKey(x))
 		LangsArray[x] := []
 	LangsArray[x].Push(y " / " l.Local)
@@ -3356,15 +3467,15 @@ RLang := RegExReplace(RefLang, "\s/.*")
 For i, l in LangFiles
 {
 	If (LangData.HasKey(i))
-		lName := (InStr(i, "-")) ? LangData[i].Lang : LangData[i].Idiom, n := i
+		lName := (InStr(i, "_")) ? LangData[i].Lang : LangData[i].Idiom, n := i
 	Else
 	{
-		c := RegExReplace(i, "(\w+).*", "$1")
+		c := RegExReplace(i, "_.*")
 		For e, l in LangData
 		{
 			If (InStr(e, c))
 			{
-				lName := (InStr(e, "-")) ? l.Lang : l.Idiom, n := e
+				lName := (InStr(e, "_")) ? l.Lang : l.Idiom, n := c
 				break
 			}
 		}
@@ -3524,7 +3635,7 @@ If (A_ThisMenuItem = "Microsoft MSDN")
 return
 
 Help:
-ShortLang := RegExReplace(Lang, "(\w+).*", "$1")
+ShortLang := RegExReplace(Lang, "_.*")
 IfExist, %A_ScriptDir%\MacroCreator_Help_%Lang%.chm
 	Run, %A_ScriptDir%\MacroCreator_Help_%Lang%.chm
 Else IfExist, %A_ScriptDir%\MacroCreator_Help_%ShortLang%.chm
@@ -3561,16 +3672,17 @@ return
 CheckNow:
 CheckUpdates:
 Gui, 1:+OwnDialogs
-url := "http://www.macrocreator.com/docs"
-http := ComObjCreate("WinHttp.WinHttpRequest.5.1")
-http.open("GET", url, false)
-http.SetRequestHeader("User-Agent", "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0)")
-http.SetRequestHeader("Referer", url)
-http.SetRequestHeader("Content-Type", "application/x-www-form-urlencoded")
+url := "http://www.macrocreator.com/lang"
+whr := ComObjCreate("WinHttp.WinHttpRequest.5.1")
+whr.open("GET", url, false)
+whr.SetRequestHeader("User-Agent", "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0)")
+whr.SetRequestHeader("Referer", url)
+whr.SetRequestHeader("Content-Type", "application/x-www-form-urlencoded")
 Try
 {
-	http.Send()
-	VerChk := RegExReplace(http.ResponseText, "s).*Version: ([\d\.]+).*", "$1", vFound)
+	whr.Send()
+	VerChk := RegExReplace(whr.ResponseText, "s).*AppVersion: ([\d\.]+).*", "$1", vFound)
+	LangChk := RegExReplace(whr.ResponseText, "s).*LangRev: (\d+).*", "$1")
 }
 If (vFound)
 {
@@ -3579,6 +3691,39 @@ If (vFound)
 		MsgBox, 68, %d_Lang060%, %d_Lang060%: %VerChk%`n%d_Lang061%
 		IfMsgBox, Yes
 			Run, http://www.macrocreator.com/download
+	}
+	Else If (LangChk != LangVersion)
+	{
+		If ((LangLastCheck != LangChk) || (A_ThisLabel = "CheckNow"))
+		{
+			MsgBox, 68, %d_Lang060%, %d_Lang103%`n`n%d_Lang061%
+			IfMsgBox, Yes
+			{
+				FileDelete, %A_Temp%\Lang.zip
+				FileDelete, %A_Temp%\Lang\*.*
+				UrlDownloadToFile, http://www.macrocreator.com/lang/Lang.zip, %A_Temp%\Lang.zip
+				If (FileExist(A_Temp "\Lang.zip"))
+				{
+					FileCreateDir, %A_Temp%\Lang
+					UnZip(A_Temp "\Lang.zip", A_Temp "\Lang\")
+					FileCopy, %A_Temp%\Lang\*.lang, %SettingsFolder%\Lang\, 1
+					FileDelete, %A_Temp%\Lang.zip
+					Gui, 1:Default
+					GoSub, LoadLangFiles
+					GoSub, LoadLang
+					GoSub, UpdateLang
+					LangVersion := LangChk, LangLastCheck := LangChk
+					MsgBox, 64, %AppName%, %d_lang106%
+				}
+				Else
+					MsgBox, 16, %d_Lang007%, %d_Lang063%
+			}
+			Else If (A_ThisLabel != "CheckNow")
+			{
+				LangLastCheck := LangChk
+				MsgBox, 64, %AppName%, %d_Lang104%
+			}
+		}
 	}
 	Else If (A_ThisLabel = "CheckNow")
 		MsgBox, 64, %AppName%, %d_Lang062%
@@ -3641,6 +3786,7 @@ rbrtryn for the ChooseColor function.
 PhiLho and skwire for the function to Get/Set the order of columns.
 fincs for GenDocs and SciLexer.dll custom builds.
 T800 for Html Help utils.
+tmplinshi for the CreateFormData function.
 Thiago Talma for some improvements to the code, debugging and many suggestions.
 )
 Gui, 34:Add, Link, y+10 W340 r1, <a href="http://www.macrocreator.com/project/">Translation revisions.</a>
@@ -9447,9 +9593,9 @@ Gui, 31:Add, Radio, yp x+20 W130 vBasic gBasicLayout, %d_Lang077%
 Gui, 31:Add, Radio, Checked Group xs+30 y+20 W130 vLarge gSetLargeIcons, %d_Lang093%
 Gui, 31:Add, Radio, yp x+20 W130 vSmall gSetSmallIcons, %d_Lang092%
 Gui, 31:Add, Text, -Wrap y+5 xs+10 W300 R1 cGray, %d_Lang081%
-Gui, 31:Add, Text, -Wrap y+20 xs W120 R1, %o_Lang002% (Language):
-Gui, 31:Add, DDL, yp x+5 W190 vCurrLang, %Lang_List%
-GuiControl, 31:ChooseString, CurrLang, % RegExReplace(Lang_%_CurrentLang%, "\t.*")
+Gui, 31:Add, Text, -Wrap y+20 xs W120 R1, %t_lang194% (Language):
+Gui, 31:Add, DDL, yp x+5 W190 vSelLang, %Lang_List%
+GuiControl, 31:ChooseString, SelLang, % RegExReplace(Lang_%CurrentLang%, "\t.*")
 Gui, 31:Add, Button, Default xm W75 H23 gWelcClose, %c_Lang020%
 Gui, 31:Add, Checkbox, Checked%AutoUpdate% -Wrap yp+5 x+10 W235 r1 vAutoUpdate, %d_Lang079%
 Gui, 31:Show,, %AppName%
@@ -9469,11 +9615,12 @@ If (Basic = 1)
 	UserLayout := "Basic"
 If (Default = 1)
 	UserLayout := "Default"
-SelLang := RegExReplace(CurrLang, "\s/.*")
-SetTimer, LangChangeOn, -1
+SetTimer, LangChange, -1
 Sleep, 500
 If (ShowTips)
 	GoSub, ShowTips
+If (AutoUpdate)
+	SetTimer, CheckUpdates, -1
 return
 
 CmdFind:
@@ -10057,17 +10204,17 @@ OnScCtrl:
 HideMainWin:
 TB_Edit(TbSettings, A_ThisLabel, %A_ThisLabel% := !%A_ThisLabel%)
 If (OnScCtrl)
-	Menu, OptionsMenu, Check, %o_Lang004%
-Else
-	Menu, OptionsMenu, Uncheck, %o_Lang004%
-If (WinKey)
-	Menu, OptionsMenu, Check, %o_Lang009%
-Else
-	Menu, OptionsMenu, Uncheck, %o_Lang009%
-If (HideMainWin)
 	Menu, OptionsMenu, Check, %o_Lang003%
 Else
 	Menu, OptionsMenu, Uncheck, %o_Lang003%
+If (WinKey)
+	Menu, OptionsMenu, Check, %o_Lang008%
+Else
+	Menu, OptionsMenu, Uncheck, %o_Lang008%
+If (HideMainWin)
+	Menu, OptionsMenu, Check, %o_Lang002%
+Else
+	Menu, OptionsMenu, Uncheck, %o_Lang002%
 return
 
 Capt:
@@ -10075,9 +10222,9 @@ SetTimer, MainLoop, % (Capt := !Capt) ? 100 : "Off"
 Input
 TB_Edit(TbSettings, "Capt", Capt)
 If (Capt)
-	Menu, OptionsMenu, Check, %o_Lang005%
+	Menu, OptionsMenu, Check, %o_Lang004%
 Else
-	Menu, OptionsMenu, Uncheck, %o_Lang005%
+	Menu, OptionsMenu, Uncheck, %o_Lang004%
 return
 
 InputList:
@@ -11527,12 +11674,12 @@ If (JoyHK = 1)
 	If (JoyKey = "")
 		GuiControl, 1:, JoyKey, |%t_Lang097%
 	GuiControl, 1:Focus, JoyKey
-	Menu, OptionsMenu, Check, %o_Lang010%
+	Menu, OptionsMenu, Check, %o_Lang009%
 }
 Else
 {
 	GoSub, SetNoJoy
-	Menu, OptionsMenu, Uncheck, %o_Lang010%
+	Menu, OptionsMenu, Uncheck, %o_Lang009%
 }
 return
 
@@ -12209,13 +12356,13 @@ If (KeepHkOn = 1)
 {
 	GoSub, KeepHkOn
 	Menu, Tray, Check, %w_Lang014%
-	Menu, OptionsMenu, Check, %o_Lang006%
+	Menu, OptionsMenu, Check, %o_Lang005%
 }
 Else
 {
 	GoSub, ResetHotkeys
 	Menu, Tray, Uncheck, %w_Lang014%
-	Menu, OptionsMenu, Uncheck, %o_Lang006%
+	Menu, OptionsMenu, Uncheck, %o_Lang005%
 	Traytip
 }
 return
@@ -13671,6 +13818,8 @@ return
 WriteSettings:
 IniWrite, %CurrentVersion%, %IniFilePath%, Application, Version
 IniWrite, %Lang%, %IniFilePath%, Language, Lang
+IniWrite, %LangVersion%, %IniFilePath%, Language, LangVersion
+IniWrite, %LangLastCheck%, %IniFilePath%, Language, LangLastCheck
 IniWrite, %AutoKey%, %IniFilePath%, HotKeys, AutoKey
 IniWrite, %ManKey%, %IniFilePath%, HotKeys, ManKey
 IniWrite, %AbortKey%, %IniFilePath%, HotKeys, AbortKey
@@ -14372,52 +14521,24 @@ Menu, ViewMenu, Add, %v_Lang008%`t%_s%Alt+F5, SetColSizes
 Menu, ViewMenu, Add, %v_Lang009%, :SetIconSizeMenu
 Menu, ViewMenu, Add, %v_Lang010%, :SetLayoutMenu
 
-Menu, LangMenu, Add, %o_Lang016%, LangEditor
-Menu, LangMenu, Add
-Lang_List := ""
-For i, f in LangFiles
-{
-	If (LangData.HasKey(i))
-	{
-		lName := (InStr(i, "-")) ? LangData[i].Lang : LangData[i].Idiom
-	,	lLocal := LangData[i].Local, o := StrReplace(i, "-")
-	}
-	Else
-	{
-		c := RegExReplace(i, "(\w+).*", "$1")
-		For e, l in LangData
-		{
-			If (InStr(e, c))
-			{
-				lName := (InStr(e, "-")) ? l.Lang : l.Idiom
-			,	lLocal := l.Local, o := StrReplace(e, "-")
-				break
-			}
-		}
-	}
-	Lang_%o% := lName "`t" lLocal, Lang_List .= lName " / " lLocal "|"
-	Menu, LangMenu, Add, % Lang_%o%, LangChange
-}
-
 GoSub, BuildOnFinishMenu
 Menu, OptionsMenu, Add, %o_Lang001%`t%_s%Ctrl+G, Options
-Menu, OptionsMenu, Add, %o_Lang002%, :LangMenu
 Menu, OptionsMenu, Add
-Menu, OptionsMenu, Add, %o_Lang003%, HideMainWin
-Menu, OptionsMenu, Add, %o_Lang004%, OnScCtrl
-Menu, OptionsMenu, Add, %o_Lang005%, Capt
-Menu, OptionsMenu, Add, %o_Lang006%, CheckHkOn
-Menu, OptionsMenu, Add, %o_Lang007%, :OnFinishMenu
-Menu, OptionsMenu, Add, %o_Lang008%, SetWin
-Menu, OptionsMenu, Add, %o_Lang009%, WinKey
-Menu, OptionsMenu, Add, %o_Lang010%, SetJoyButton
+Menu, OptionsMenu, Add, %o_Lang002%, HideMainWin
+Menu, OptionsMenu, Add, %o_Lang003%, OnScCtrl
+Menu, OptionsMenu, Add, %o_Lang004%, Capt
+Menu, OptionsMenu, Add, %o_Lang005%, CheckHkOn
+Menu, OptionsMenu, Add, %o_Lang006%, :OnFinishMenu
+Menu, OptionsMenu, Add, %o_Lang007%, SetWin
+Menu, OptionsMenu, Add, %o_Lang008%, WinKey
+Menu, OptionsMenu, Add, %o_Lang009%, SetJoyButton
 Menu, OptionsMenu, Add
-Menu, OptionsMenu, Add, %o_Lang011%, KeepDefKeys
-Menu, OptionsMenu, Add, %o_Lang012%, DefaultMacro
-Menu, OptionsMenu, Add, %o_Lang013%, RemoveDefault
+Menu, OptionsMenu, Add, %o_Lang010%, KeepDefKeys
+Menu, OptionsMenu, Add, %o_Lang011%, DefaultMacro
+Menu, OptionsMenu, Add, %o_Lang012%, RemoveDefault
 Menu, OptionsMenu, Add
-Menu, OptionsMenu, Add, %o_Lang014%`t%_s%Alt+F6, DefaultHotkeys
-Menu, OptionsMenu, Add, %o_Lang015%`t%_s%Alt+F7, LoadDefaults
+Menu, OptionsMenu, Add, %o_Lang013%`t%_s%Alt+F6, DefaultHotkeys
+Menu, OptionsMenu, Add, %o_Lang014%`t%_s%Alt+F7, LoadDefaults
 
 Menu, HelpMenu, Add, %h_Lang001%`t%_s%F1, Help
 Menu, HelpMenu, Add, %h_Lang002%, Tutorials
@@ -14510,17 +14631,17 @@ Menu, Tray, Default, %w_Lang005%
 If (ShowGroups)
 	Menu, GroupMenu, Check, %e_Lang017%`t%_s%Ctrl+Shift+G
 If (KeepDefKeys)
-	Menu, OptionsMenu, Check, %o_Lang011%
-If (OnScCtrl)
-	Menu, OptionsMenu, Check, %o_Lang004%
-If (WinKey)
-	Menu, OptionsMenu, Check, %o_Lang009%
-If (HideMainWin)
-	Menu, OptionsMenu, Check, %o_Lang003%
-If (KeepHkOn)
-	Menu, OptionsMenu, Check, %o_Lang006%
-If (JoyHK)
 	Menu, OptionsMenu, Check, %o_Lang010%
+If (OnScCtrl)
+	Menu, OptionsMenu, Check, %o_Lang003%
+If (WinKey)
+	Menu, OptionsMenu, Check, %o_Lang008%
+If (HideMainWin)
+	Menu, OptionsMenu, Check, %o_Lang002%
+If (KeepHkOn)
+	Menu, OptionsMenu, Check, %o_Lang005%
+If (JoyHK)
+	Menu, OptionsMenu, Check, %o_Lang009%
 
 If (AutoUpdate)
 	Menu, HelpMenu, Check, %h_Lang008%
@@ -14927,20 +15048,19 @@ return
 ;##### Languages: #####
 
 LangChange:
-SelLang := RegExReplace(A_ThisMenuItem, "\t.*")
-LangChangeOn:
+SelLang := RegExReplace(SelLang, "\s/.*")
 For i, l in LangFiles
 {
 	If (LangData.HasKey(i))
-		lName := (InStr(i, "-")) ? LangData[i].Lang : LangData[i].Idiom, n := i
+		lName := (InStr(i, "_")) ? LangData[i].Lang : LangData[i].Idiom, n := i
 	Else
 	{
-		c := RegExReplace(i, "(\w+).*", "$1")
+		c := RegExReplace(i, "_.*")
 		For e, l in LangData
 		{
 			If (InStr(e, c))
 			{
-				lName := (InStr(e, "-")) ? l.Lang : l.Idiom, n := e
+				lName := (InStr(e, "_")) ? l.Lang : l.Idiom, n := c
 				break
 			}
 		}
@@ -14953,7 +15073,6 @@ For i, l in LangFiles
 }
 If (Lang = CurrentLang)
 	return
-_Lang := StrReplace(Lang, "-"), _CurrentLang := StrReplace(CurrentLang, "-")
 UpdateLang:
 Gui, Menu
 Menu, FileMenu, DeleteAll
@@ -14970,7 +15089,6 @@ Menu, HotkeyMenu, DeleteAll
 Menu, SetIconSizeMenu, DeleteAll
 Menu, SetLayoutMenu, DeleteAll
 Menu, ViewMenu, DeleteAll
-Menu, LangMenu, DeleteAll
 Menu, OnFinishMenu, DeleteAll
 Menu, OptionsMenu, DeleteAll
 Menu, HelpMenu, DeleteAll
@@ -14992,13 +15110,11 @@ PmcRecentFiles := ""
 GoSub, LoadLang
 GoSub, AddRecentFiles
 GoSub, CreateMenuBar
-Menu, LangMenu, Uncheck, % Lang_%_CurrentLang%
-Menu, LangMenu, Check, % Lang_%_Lang%
 If (InStr(TabGetText(TabSel, A_List), "()"))
 	GoSub, FuncTab
 Else
 	GoSub, MacroTab
-CurrentLang := Lang, _CurrentLang := _Lang
+CurrentLang := Lang
 
 Gui, chMacro:Default
 Loop, %TabCount%
@@ -15107,6 +15223,30 @@ Loop, Files, %A_ScriptDir%\Lang\*.lang
 return
 
 LoadLang:
+Lang_List := ""
+For i, f in LangFiles
+{
+	If (LangData.HasKey(i))
+	{
+		lName := (InStr(i, "_")) ? LangData[i].Lang : LangData[i].Idiom
+	,	lLocal := LangData[i].Local
+	}
+	Else
+	{
+		c := RegExReplace(i, "_.*")
+		For e, l in LangData
+		{
+			If (InStr(e, c))
+			{
+				lName := (InStr(e, "_")) ? l.Lang : l.Idiom
+			,	lLocal := l.Local
+				break
+			}
+		}
+	}
+	Lang_%i% := lName "`t" lLocal, Lang_List .= lName " / " lLocal "|"
+}
+
 For i, Section in LangFiles[Lang]
 {
 	For var, value in Section
@@ -15287,36 +15427,4 @@ return
 #Include <Eval>
 #Include <SCI>
 #SingleInstance Off
-
-; #Include Lang\Id.lang
-; #Include Lang\Ms.lang
-; #Include Lang\Ca.lang
-; #Include Lang\Da.lang
-; #Include Lang\De.lang
-; #Include Lang\En.lang
-; #Include Lang\Es.lang
-; #Include Lang\Fr.lang
-; #Include Lang\Hr.lang
-; #Include Lang\It.lang
-; #Include Lang\Hu.lang
-; #Include Lang\Nl.lang
-; #Include Lang\No.lang
-; #Include Lang\Pl.lang
-; #Include Lang\Pt.lang
-; #Include Lang\Sl.lang
-; #Include Lang\Sk.lang
-; #Include Lang\Fi.lang
-; #Include Lang\Sv.lang
-; #Include Lang\Vi.lang
-; #Include Lang\Tr.lang
-; #Include Lang\Cs.lang
-; #Include Lang\El.lang
-; #Include Lang\Bg.lang
-; #Include Lang\Ru.lang
-; #Include Lang\Sr.lang
-; #Include Lang\Uk.lang
-; #Include Lang\Zh.lang
-; #Include Lang\Zt.lang
-; #Include Lang\Ja.lang
-; #Include Lang\Ko.lang
 

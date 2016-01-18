@@ -137,21 +137,19 @@
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Nastavenie
-	o_Lang002 =	&Jazyk
-	o_Lang003 =	&Minimalizovať do tray
-	o_Lang004 =	&Ovládacie prvky panela nástrojov
-	o_Lang005 =	&Zachytiť stlačení klávesov v tomto okne
-	o_Lang006 =	&Klávesové Skratky Vždy Aktívny
-	o_Lang007 =	&Vypnutie možnosti (Ak prehrávanie skončí...)
-	o_Lang008 =	Kon&textová Klávesové skratky
-	o_Lang009 =	&Pridať kláves Windows na "Play" klávesové skratky
-	o_Lang010 =	Po&užite joystick ako klávesovú skratku
-	o_Lang011 =	N&astaviť ako predvolený klávesové skratky
-	o_Lang012 =	Na&staviť ako predvolený súborový
-	o_Lang013 =	O&dstrániť predvolený súbor
-	o_Lang014 =	P&redvolené Klávesové skratky
-	o_Lang015 =	Pr&edvolené nastavenie
-	o_Lang016 =	&Editor jazyka
+	o_Lang002 =	&Minimalizovať do tray
+	o_Lang003 =	&Ovládacie prvky panela nástrojov
+	o_Lang004 =	&Zachytiť stlačení klávesov v tomto okne
+	o_Lang005 =	&Klávesové Skratky Vždy Aktívny
+	o_Lang006 =	&Vypnutie možnosti (Ak prehrávanie skončí...)
+	o_Lang007 =	Kon&textová Klávesové skratky
+	o_Lang008 =	&Pridať kláves Windows na "Play" klávesové skratky
+	o_Lang009 =	Po&užite joystick ako klávesovú skratku
+	o_Lang010 =	N&astaviť ako predvolený klávesové skratky
+	o_Lang011 =	Na&staviť ako predvolený súborový
+	o_Lang012 =	O&dstrániť predvolený súbor
+	o_Lang013 =	P&redvolené Klávesové skratky
+	o_Lang014 =	Pr&edvolené nastavenie
 		
 ; 10. Donate Sub Menu		
 	p_Lang001 =	&PayPal Dar
@@ -709,6 +707,8 @@
 	t_Lang190 =	Odoslať revíziu alebo nový preklad
 	t_Lang191 =	Zbaliť všetko
 	t_Lang192 =	Rozbaliť všetko
+	t_Lang193 =	Karşı
+	t_Lang194 =	Jazyk
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Otvorené
@@ -757,13 +757,7 @@
 	d_Lang040 =	Táto funkcia vyžaduje rozhrania GDI+knižnice.
 		Kliknite na tlačidlo OK prejdite na stránku pre stiahnutie.
 	d_Lang041 =	Názov premennej obsahuje nepovolený znak.
-	d_Lang042 =	Neplatný operátor.
-		Tieto operátory sú prijímané:
-		=, ==, <>,! =,>, <,> =, <=
-		Príklady:
-		MyVar > 1
-		MyVar = `%A_DDDD`%
-		Clipboard == `%MyVar`%
+	d_Lang042 =	je vyhradené slovo.
 	d_Lang043 =	Alebo použite paneli Ovládacie prvky.
 	d_Lang044 =	Táto funkcia vyžaduje funkcia eval ().
 		Kliknite na tlačidlo OK prejdite na stránku pre stiahnutie.
@@ -841,7 +835,11 @@
 	d_Lang099 =	Názov funkcie obsahuje neplatný znak.
 	d_Lang100 =	Goto, GoSub a Label nie sú povolené vo funkciách.
 	d_Lang101 =	Duplicitné funkcie.
-	d_Lang102 =	je vyhradené slovo.
+	d_Lang102 =	Nastala chyba. Môžete poslať e-mail "pulover@macrocreator.com" s súboru:
+	d_Lang103 =	Nové jazyky súbor k dispozícii.
+	d_Lang104 =	Táto správa nebude znovu uvedené pre rovnaké aktualizácie. Môžete si ho stiahnuť z ponuky Pomocník > Preveriť aktualizácie.
+	d_Lang105 =	Súbor bol úspešne odoslaný. Ďakujem!
+	d_Lang106 =	Jazykové súbory úspešne aktualizovaná.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Môžete vytvárať makrá pomocou príkazových tlačidiel v hlavnom okne, alebo pomocou rekordéra kopírovať svoje akcie. Prejsť na Možnosti> Nastavenie> Nahrávanie na vstupy vybrať, čo budú zaznamenané.

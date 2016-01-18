@@ -137,21 +137,19 @@
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Pengaturan
-	o_Lang002 =	&Bahasa
-	o_Lang003 =	&Minimalkan ke tray
-	o_Lang004 =	M&enampilkan kontrol toolbar
-	o_Lang005 =	Me&nangkap penekanan tombol dalam jendela ini
-	o_Lang006 =	&Hotkeys Selalu Aktif
-	o_Lang007 =	P&ilihan Shutdown (Ketika selesai pemutaran...)
-	o_Lang008 =	&Konteks Hotkeys Sensitif
-	o_Lang009 =	&Tambahkan tombol Windows untuk "Play" hotkey
-	o_Lang010 =	&Gunakan tombol joystick sebagai hotkey
-	o_Lang011 =	&Ditetapkan sebagai Hotkeys default
-	o_Lang012 =	&Set sebagai Default Berkas
-	o_Lang013 =	H&apus file default
-	o_Lang014 =	H&otkeys standar
-	o_Lang015 =	Pengat&uran Default
-	o_Lang016 =	&Bahasa Editor
+	o_Lang002 =	&Minimalkan ke tray
+	o_Lang003 =	M&enampilkan kontrol toolbar
+	o_Lang004 =	Me&nangkap penekanan tombol dalam jendela ini
+	o_Lang005 =	&Hotkeys Selalu Aktif
+	o_Lang006 =	P&ilihan Shutdown (Ketika selesai pemutaran...)
+	o_Lang007 =	&Konteks Hotkeys Sensitif
+	o_Lang008 =	&Tambahkan tombol Windows untuk "Play" hotkey
+	o_Lang009 =	&Gunakan tombol joystick sebagai hotkey
+	o_Lang010 =	&Ditetapkan sebagai Hotkeys default
+	o_Lang011 =	&Set sebagai Default Berkas
+	o_Lang012 =	H&apus file default
+	o_Lang013 =	H&otkeys standar
+	o_Lang014 =	Pengat&uran Default
 		
 ; 10. Donate Sub Menu		
 	p_Lang001 =	&Donasi PayPal
@@ -709,6 +707,8 @@
 	t_Lang190 =	Kirim revisi atau terjemahan baru
 	t_Lang191 =	Tutup semua
 	t_Lang192 =	Melebarkan semua
+	t_Lang193 =	Karşı
+	t_Lang194 =	Bahasa
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Buka
@@ -757,13 +757,7 @@
 	d_Lang040 =	Fitur ini memerlukan+Library GDI.
 		Klik OK untuk pergi ke halaman download.
 	d_Lang041 =	Nama variabel mengandung karakter ilegal.
-	d_Lang042 =	Operator tidak valid.
-		Operator berikut yang diterima:
-		=, ==, <>,! =,>, <,> =, <=
-		Contoh:
-		MyVar > 1
-		MyVar = `%A_DDDD`%
-		Clipboard == `%MyVar`%
+	d_Lang042 =	adalah kata reserved.
 	d_Lang043 =	Atau gunakan Kontrol Toolbar.
 	d_Lang044 =	Fitur ini memerlukan Eval () Fungsi.
 		Klik OK untuk pergi ke halaman download.
@@ -841,7 +835,11 @@
 	d_Lang099 =	Nama fungsi mengandung karakter ilegal.
 	d_Lang100 =	Goto, gosub dan Label tidak diperbolehkan dalam fungsi.
 	d_Lang101 =	Fungsi duplikat.
-	d_Lang102 =	adalah kata reserved.
+	d_Lang102 =	Terjadi kesalahan. Anda dapat mengirim email ke 'pulover@macrocreator.com' dengan file:
+	d_Lang103 =	Bahasa baru mengajukan tersedia.
+	d_Lang104 =	Pesan ini tidak akan ditampilkan lagi untuk update yang sama. Anda dapat men-download dari menu Help > Periksa pembaruan.
+	d_Lang105 =	File berhasil dikirim. Terima kasih!
+	d_Lang106 =	File bahasa diperbarui berhasil.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Anda dapat membuat Macro dengan menggunakan Tombol Perintah di jendela utama atau menggunakan Recorder untuk menyalin tindakan Anda. Buka Opsi> Pengaturan> Merekam untuk memilih apa yang input akan disimpan.

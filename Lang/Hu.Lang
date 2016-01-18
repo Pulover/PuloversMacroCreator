@@ -137,21 +137,19 @@
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Beállítások
-	o_Lang002 =	&Nyelv
-	o_Lang003 =	&Tálcára
-	o_Lang004 =	&Kijelző vezérlők eszköztár
-	o_Lang005 =	&Capture gombot megnyomja ebben az ablakban
-	o_Lang006 =	&Gyorsbillentyűk Mindig Aktív
-	o_Lang007 =	&shutdown lehetőségek (Ha a lejátszás befejeződik...)
-	o_Lang008 =	C&ontext Sensitive gyorsbillentyűk
-	o_Lang009 =	&Adja hozzá a Windows billentyű a "Play" gyorsbillentyű
-	o_Lang010 =	&Használjon joystick gombot hotkey
-	o_Lang011 =	S&et As Default gyorsbillentyűk
-	o_Lang012 =	A&z Alapértelmezett Beállítás Fájl
-	o_Lang013 =	E&ltávolítása Alapértelmezett fájl
-	o_Lang014 =	Ala&pértelmezett gyorsbillentyűk
-	o_Lang015 =	Alap&értelmezett beállítások
-	o_Lang016 =	&Nyelvszerkesztõ
+	o_Lang002 =	&Tálcára
+	o_Lang003 =	&Kijelző vezérlők eszköztár
+	o_Lang004 =	&Capture gombot megnyomja ebben az ablakban
+	o_Lang005 =	&Gyorsbillentyűk Mindig Aktív
+	o_Lang006 =	&shutdown lehetőségek (Ha a lejátszás befejeződik...)
+	o_Lang007 =	C&ontext Sensitive gyorsbillentyűk
+	o_Lang008 =	&Adja hozzá a Windows billentyű a "Play" gyorsbillentyű
+	o_Lang009 =	&Használjon joystick gombot hotkey
+	o_Lang010 =	S&et As Default gyorsbillentyűk
+	o_Lang011 =	A&z Alapértelmezett Beállítás Fájl
+	o_Lang012 =	E&ltávolítása Alapértelmezett fájl
+	o_Lang013 =	Ala&pértelmezett gyorsbillentyűk
+	o_Lang014 =	Alap&értelmezett beállítások
 		
 ; 10. Donate Sub Menu		
 	p_Lang001 =	&PayPal adomány
@@ -709,6 +707,8 @@
 	t_Lang190 =	Küldje el felülvizsgálatát vagy új fordítás
 	t_Lang191 =	Mindet összecsuk
 	t_Lang192 =	Az összes kibontása
+	t_Lang193 =	Karşı
+	t_Lang194 =	Nyelv
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Nyitva
@@ -757,13 +757,7 @@
 	d_Lang040 =	Ez a funkció csak a GDI+ Library.
 		Kattintson az OK gombra, hogy menjen le az oldalt.
 	d_Lang041 =	A változó neve szabálytalan karaktert tartalmaz.
-	d_Lang042 =	Érvénytelen operátor.
-		A következő operátorok fogadjuk el:
-		=, ==, <>,! =,>, <,> =, <=
-		Példák:
-		MyVar > 1
-		MyVar = `%A_DDDD`%
-		Clipboard == `%MyVar`%
+	d_Lang042 =	foglalt szó.
 	d_Lang043 =	Vagy használja az ellenőrzések eszköztár
 	d_Lang044 =	Ez a funkció megköveteli a Eval() függvény.
 		Kattintson az OK gombra, hogy menjen le az oldalt.
@@ -841,7 +835,11 @@
 	d_Lang099 =	A függvény neve engedélyezett karaktert tartalmaz.
 	d_Lang100 =	Goto GOSUB és címke nem engedélyezett funkciókat.
 	d_Lang101 =	Duplikált funkció.
-	d_Lang102 =	foglalt szó.
+	d_Lang102 =	Egy hiba történt. Akkor küldjön egy emailt a "pulover@macrocreator.com" a fájlra:
+	d_Lang103 =	Új nyelv fájl elérhető.
+	d_Lang104 =	Ez az üzenet nem jelenik meg újra ugyanazt a frissítést. Itt töltheti le a Súgó menü > Frissítések keresése.
+	d_Lang105 =	Fájl elküldése sikeres. Köszönöm!
+	d_Lang106 =	Nyelvi fájlok frissítése.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Hozhat létre makrók a Command gombok a fő ablakban, vagy a felvevő másolni a tevékenységét. Válassza az Opciók > Beállítások > Felvétel kiválasztható, hogy milyen bemeneteket kerülnek rögzítésre.

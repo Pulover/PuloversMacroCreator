@@ -137,21 +137,19 @@
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Impostazioni
-	o_Lang002 =	&Lingua
-	o_Lang003 =	&Riduci a icona nella tray
-	o_Lang004 =	&Visualizzare i controlli barra degli strumenti
-	o_Lang005 =	&Catturare pressioni di tasti in questa finestra
-	o_Lang006 =	&Tasti Di Scelta Rapida Sempre Attivi
-	o_Lang007 =	&opzioni di spegnimento (Quando termina la riproduzione...)
-	o_Lang008 =	T&asti di scelta rapida sensibili al contesto
-	o_Lang009 =	A&ggiungere la chiave di Windows per "giocare" hotkey
-	o_Lang010 =	&Utilizzare un tasto del joystick come tasto di scelta rapida
-	o_Lang011 =	I&mposta come tasti di scelta rapida predefiniti
-	o_Lang012 =	Im&posta come file predefinito
-	o_Lang013 =	Rimuov&ere file predefinito
-	o_Lang014 =	Ta&sti di scelta rapida di default
-	o_Lang015 =	Imposta&zioni predefinite
-	o_Lang016 =	&Language Editor
+	o_Lang002 =	&Riduci a icona nella tray
+	o_Lang003 =	&Visualizzare i controlli barra degli strumenti
+	o_Lang004 =	&Catturare pressioni di tasti in questa finestra
+	o_Lang005 =	&Tasti Di Scelta Rapida Sempre Attivi
+	o_Lang006 =	&opzioni di spegnimento (Quando termina la riproduzione...)
+	o_Lang007 =	T&asti di scelta rapida sensibili al contesto
+	o_Lang008 =	A&ggiungere la chiave di Windows per "giocare" hotkey
+	o_Lang009 =	&Utilizzare un tasto del joystick come tasto di scelta rapida
+	o_Lang010 =	I&mposta come tasti di scelta rapida predefiniti
+	o_Lang011 =	Im&posta come file predefinito
+	o_Lang012 =	Rimuov&ere file predefinito
+	o_Lang013 =	Ta&sti di scelta rapida di default
+	o_Lang014 =	Imposta&zioni predefinite
 		
 ; 10. Donate Sub Menu		
 	p_Lang001 =	&Donazione PayPal
@@ -709,6 +707,8 @@
 	t_Lang190 =	Invia revisione o nuova traduzione
 	t_Lang191 =	Chiudi tutto
 	t_Lang192 =	Espandere tutto
+	t_Lang193 =	A
+	t_Lang194 =	Lingua
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Aperto
@@ -757,13 +757,7 @@
 	d_Lang040 =	Questa funzione richiede la libreria GDI+.
 		Fare clic su OK per andare alla pagina di download.
 	d_Lang041 =	Il nome della variabile contiene un carattere non valido.
-	d_Lang042 =	Operatore non valido.
-		I seguenti operatori sono accettati:
-		=, ==, <>,! =,>, <,> =, <=
-		Esempi:
-		MyVar > 1
-		MyVar = `%A_DDDD`%
-		Clipboard == `%MyVar`%
+	d_Lang042 =	è una parola riservata.
 	d_Lang043 =	O utilizzare la barra degli strumenti di controllo
 	d_Lang044 =	Questa funzione richiede la funzione Eval().
 		Fare clic su OK per andare alla pagina di download.
@@ -841,7 +835,11 @@
 	d_Lang099 =	Il nome della funzione contiene un carattere non valido.
 	d_Lang100 =	Goto, Gosub e Label non sono ammessi nelle funzioni.
 	d_Lang101 =	Funzione di duplicazione.
-	d_Lang102 =	è una parola riservata.
+	d_Lang102 =	Si è verificato un errore. È possibile inviare una e-mail a 'pulover@macrocreator.com' con il file:
+	d_Lang103 =	File disponibile nuove lingue.
+	d_Lang104 =	Questo messaggio non verrà mostrato di nuovo per lo stesso aggiornamento. Potete scaricarlo dal menu Guida > Controlla aggiornamenti.
+	d_Lang105 =	File inviato con successo. Grazie!
+	d_Lang106 =	File di lingua aggiornati correttamente.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	È possibile creare macro utilizzando i pulsanti di comando nella finestra principale o utilizzando il registratore per copiare le vostre azioni. Andare su Opzioni > Impostazioni > Registrazione per selezionare ciò che verrà registrato ingressi.

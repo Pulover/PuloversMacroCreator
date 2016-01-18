@@ -30,6 +30,7 @@ rbrtryn for the [ChooseColor](http://autohotkey.com/board/topic/91229-windows-co
 PhiLho and skwire for the [function](http://autohotkey.com/board/topic/11926-can-you-move-a-listview-column-programmatically/#entry237340) to Get/Set the order of columns.  
 fincs for [GenDocs](http://autohotkey.com/board/topic/71751-gendocs-v30-alpha002) and [SciLexer.dll custom builds](http://autohotkey.com/board/topic/54431-scite4autohotkey-v3004-updated-aug-14-2013/page-58#entry566139).  
 T800 for [Html Help utils](http://autohotkey.com/board/topic/17984-html-help-utils).  
+tmplinshi for the [CreateFormData](http://autohotkey.com/boards/viewtopic.php?f=6&t=7647) function.
 Thiago Talma for some improvements to the code, debugging and many suggestions.  
 [Translation revisions](http://www.macrocreator.com/project/).  
 
@@ -56,8 +57,8 @@ Thiago Talma for some improvements to the code, debugging and many suggestions.
 * Added option to change color of the rectangle of Image/Pixel Search area and Screenshots tool.
 * Added *Insert Comment Block* to "Edit Comment" window.
 * Added option to comment out unchecked rows in Preview/Exported scripts.
-* Added translations to Arabic and Thai.
-* Added Language editor in *Settings* window.
+* Added new translations.
+* Added Language editor in *Settings* window with submit form.
 * Languages files are now kept in the Lang folder and can be added, modified or removed.
 * Updated "Loop, File" and "Loop, Reg" to new format with "Mode" parameter.
 * Changed "List Variables" to display User-Defined variables only.

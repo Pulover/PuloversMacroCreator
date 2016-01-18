@@ -137,21 +137,19 @@
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Indstillinger
-	o_Lang002 =	&Sprog
-	o_Lang003 =	&Minimaliseren naar tray...
-	o_Lang004 =	&Display kontrol værktøjslinje
-	o_Lang005 =	&Capture tastetryk i dette vindue
-	o_Lang006 =	&Hotkeys Altid Aktive
-	o_Lang007 =	&nedlukningsvalgmulighederne (Når afspilningen er færdig...)
-	o_Lang008 =	&Kontekstafhængig genvejstaster
-	o_Lang009 =	&Tilføj på Windows-tasten på "Play" genvejen
-	o_Lang010 =	&Brug et joystick knap som genvejstast
-	o_Lang011 =	S&æt som standard genvejstaster
-	o_Lang012 =	&Angiv som standard File
-	o_Lang013 =	&Fjern Standard File
-	o_Lang014 =	Standa&rd Genvejstaster
-	o_Lang015 =	Standardindsti&llinger
-	o_Lang016 =	&Sprog Editor
+	o_Lang002 =	&Minimaliseren naar tray...
+	o_Lang003 =	&Display kontrol værktøjslinje
+	o_Lang004 =	&Capture tastetryk i dette vindue
+	o_Lang005 =	&Hotkeys Altid Aktive
+	o_Lang006 =	&nedlukningsvalgmulighederne (Når afspilningen er færdig...)
+	o_Lang007 =	&Kontekstafhængig genvejstaster
+	o_Lang008 =	&Tilføj på Windows-tasten på "Play" genvejen
+	o_Lang009 =	&Brug et joystick knap som genvejstast
+	o_Lang010 =	S&æt som standard genvejstaster
+	o_Lang011 =	&Angiv som standard File
+	o_Lang012 =	&Fjern Standard File
+	o_Lang013 =	Standa&rd Genvejstaster
+	o_Lang014 =	Standardindsti&llinger
 		
 ; 10. Donate Sub Menu		
 	p_Lang001 =	&PayPal Donation
@@ -709,6 +707,8 @@
 	t_Lang190 =	Indsend revision eller ny oversættelse
 	t_Lang191 =	Skjul alle
 	t_Lang192 =	Udvid alle
+	t_Lang193 =	Naar
+	t_Lang194 =	Sprog
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Åbent
@@ -757,13 +757,7 @@
 	d_Lang040 =	Denne funktion kræver GDI+ Bibliotek.
 		Klik på OK for at gå til download siden.
 	d_Lang041 =	Den variable navn indeholder et ulovligt tegn.
-	d_Lang042 =	Ugyldig operatør.
-		Følgende operatorer accepteres:
-		=, ==, <>,! =,>, <,> =, <=
-		Eksempler:
-		MyVar > 1
-		MyVar = `%A_DDDD`%
-		Clipboard == `%MyVar`%
+	d_Lang042 =	er et reserveret ord.
 	d_Lang043 =	Eller bruge kontrolelementer værktøjslinjen
 	d_Lang044 =	Denne funktion kræver Eval() funktion.
 		Klik på OK for at gå til download siden.
@@ -841,7 +835,11 @@
 	d_Lang099 =	Funktionen navn indeholder et ulovligt tegn.
 	d_Lang100 =	Goto, GOSUB og Label er ikke tilladt i funktioner.
 	d_Lang101 =	Duplicate funktion.
-	d_Lang102 =	er et reserveret ord.
+	d_Lang102 =	En fejl opstod. Du kan sende en e-mail til "pulover@macrocreator.com" med filen:
+	d_Lang103 =	Nye sprog fil til rådighed.
+	d_Lang104 =	Denne meddelelse vil ikke blive vist igen til samme opdatering. Du kan downloade det fra menuen Hjælp > Søg efter opdateringer.
+	d_Lang105 =	Fil sendt. Tak!
+	d_Lang106 =	Sprogfiler opdateret.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Du kan oprette makroer ved hjælp af kommandoen knapper i hovedvinduet eller ved hjælp af optageren til at kopiere dine handlinger. Gå til Valg > Indstillinger > Optagelse at vælge, hvad input vil blive registreret.

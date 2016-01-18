@@ -53,7 +53,7 @@
 		
 ; 05. Commands Sub Menu		
 	i_Lang001 =	&Mouse
-	i_Lang002 =	&Text
+	i_Lang002 =	Te&xt
 	i_Lang003 =	&Control
 	i_Lang004 =	&Pause
 	i_Lang005 =	M&essage Box
@@ -64,14 +64,14 @@
 	i_Lang010 =	&Loop
 	i_Lang011 =	&Goto
 	i_Lang012 =	L&abel
-	i_Lang013 =	I&f Statements
+	i_Lang013 =	If &Statements
 	i_Lang014 =	&Variables
 	i_Lang015 =	F&unctions / Array Methods
 	i_Lang016 =	I&nternet Explorer
 	i_Lang017 =	C&OM Interface
-	i_Lang018 =	Run &Scriptlet
+	i_Lang018 =	Run Scrip&tlet
 	i_Lang019 =	Win&dows Messages
-	i_Lang020 =	Find a command
+	i_Lang020 =	&Find a command
 		
 ; 06. Edit Sub Menu		
 	e_Lang001 =	Dup&licate
@@ -137,21 +137,19 @@
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Settings
-	o_Lang002 =	&Language
-	o_Lang003 =	&Minimize to tray
-	o_Lang004 =	&Display controls toolbar
-	o_Lang005 =	&Capture key presses in this window
-	o_Lang006 =	&Hotkeys Always Active
-	o_Lang007 =	Sh&utdown options (When playback finishes...)
-	o_Lang008 =	C&ontext Sensitive Hotkeys
-	o_Lang009 =	&Add the Windows key to "Play" hotkey
-	o_Lang010 =	Us&e a joystick button as hotkey
-	o_Lang011 =	Se&t as Default Hotkeys
-	o_Lang012 =	Set as De&fault File
-	o_Lang013 =	&Remove Default File
-	o_Lang014 =	Default Hot&keys
-	o_Lang015 =	Default Sett&ings
-	o_Lang016 =	&Language Editor
+	o_Lang002 =	&Minimize to tray
+	o_Lang003 =	&Display controls toolbar
+	o_Lang004 =	&Capture key presses in this window
+	o_Lang005 =	&Hotkeys Always Active
+	o_Lang006 =	Sh&utdown options (When playback finishes...)
+	o_Lang007 =	C&ontext Sensitive Hotkeys
+	o_Lang008 =	&Add the Windows key to "Play" hotkey
+	o_Lang009 =	Us&e a joystick button as hotkey
+	o_Lang010 =	Se&t as Default Hotkeys
+	o_Lang011 =	Set as De&fault File
+	o_Lang012 =	&Remove Default File
+	o_Lang013 =	Default Hot&keys
+	o_Lang014 =	Default Sett&ings
 		
 ; 10. Donate Sub Menu		
 	p_Lang001 =	&PayPal Donation
@@ -709,6 +707,8 @@
 	t_Lang190 =	Submit revision or new translation
 	t_Lang191 =	Collapse all
 	t_Lang192 =	Expand all
+	t_Lang193 =	To
+	t_Lang194 =	Language
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Open
@@ -757,13 +757,7 @@
 	d_Lang040 =	This feature requires the GDI+ Library.
 		Click OK to go to download page.
 	d_Lang041 =	The variable name contains an illegal character.
-	d_Lang042 =	Invalid operator.
-		The following operators are accepted:
-		=, ==, <>, !=, >, <, >=, <=
-		Examples:
-		MyVar > 1
-		MyVar = `%A_DDDD`%
-		Clipboard == `%MyVar`%
+	d_Lang042 =	is a reserved word.
 	d_Lang043 =	Or use the Controls Toolbar.
 	d_Lang044 =	This feature requires the Eval() Function.
 		Click OK to go to download page.
@@ -841,7 +835,11 @@
 	d_Lang099 =	The function name contains an illegal character.
 	d_Lang100 =	Goto, Gosub and Label are not allowed in functions.
 	d_Lang101 =	Duplicate function.
-	d_Lang102 =	is a reserved word.
+	d_Lang102 =	An error occurred. You can send an email to 'pulover@macrocreator.com' with the file:
+	d_Lang103 =	New languages file available.
+	d_Lang104 =	This message will not be shown again for the same update. You can download it from the Help menu > Check for updates.
+	d_Lang105 =	File sent successfully. Thank you!
+	d_Lang106 =	Language files updated successfully.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	You can create Macros using the Command Buttons in the main window or using the Recorder to copy your actions. Go to Options > Settings > Recording to select what inputs will be recorded.

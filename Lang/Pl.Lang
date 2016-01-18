@@ -137,21 +137,19 @@
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Ustawienia
-	o_Lang002 =	&Język
-	o_Lang003 =	&Zminimalizować do zasobnika
-	o_Lang004 =	&Pokaż pasek narzędzi kontroli
-	o_Lang005 =	P&rzechwytywanie naciśnięć klawiszy w tym oknie
-	o_Lang006 =	&Hotkeys Zawsze Aktywnych
-	o_Lang007 =	&opcje wyłączania (Po zakończeniu odtwarzania...)
-	o_Lang008 =	&Kontekstowa Hotkeys
-	o_Lang009 =	&Dodaj klawisz Windows na "Zagraj" skrótu
-	o_Lang010 =	U&żyj przycisku joysticka jako skrótu
-	o_Lang011 =	U&staw jako domyślne Hotkeys
-	o_Lang012 =	Us&taw jako domyślny plik
-	o_Lang013 =	Usu&ń plik domyślny
-	o_Lang014 =	Hotk&eys Domyślnie
-	o_Lang015 =	Ust&awienia domyślne
-	o_Lang016 =	&Edytor języków
+	o_Lang002 =	&Zminimalizować do zasobnika
+	o_Lang003 =	&Pokaż pasek narzędzi kontroli
+	o_Lang004 =	P&rzechwytywanie naciśnięć klawiszy w tym oknie
+	o_Lang005 =	&Hotkeys Zawsze Aktywnych
+	o_Lang006 =	&opcje wyłączania (Po zakończeniu odtwarzania...)
+	o_Lang007 =	&Kontekstowa Hotkeys
+	o_Lang008 =	&Dodaj klawisz Windows na "Zagraj" skrótu
+	o_Lang009 =	U&żyj przycisku joysticka jako skrótu
+	o_Lang010 =	U&staw jako domyślne Hotkeys
+	o_Lang011 =	Us&taw jako domyślny plik
+	o_Lang012 =	Usu&ń plik domyślny
+	o_Lang013 =	Hotk&eys Domyślnie
+	o_Lang014 =	Ust&awienia domyślne
 		
 ; 10. Donate Sub Menu		
 	p_Lang001 =	&PayPal Darowizna
@@ -709,6 +707,8 @@
 	t_Lang190 =	Zatwierdź zmiany lub nowe tłumaczenie
 	t_Lang191 =	Zwinąć wszystkie
 	t_Lang192 =	Rozwiń wszystkie
+	t_Lang193 =	Do
+	t_Lang194 =	Język
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Otwarte
@@ -757,13 +757,7 @@
 	d_Lang040 =	Ta funkcja wymaga biblioteki GDI+.
 		Kliknij przycisk OK, aby przejść do strony pobierania.
 	d_Lang041 =	Nazwa zmiennej zawiera niedozwolony znak.
-	d_Lang042 =	Nieprawidłowy operator.
-		Następujące podmioty są akceptowane:
-		=, ==, <>,! =,>, <,> =, <=
-		Przykłady:
-		MyVar > 1
-		MyVar = `%A_DDDD`%
-		Clipboard == `%MyVar`%
+	d_Lang042 =	Jest to słowo zarezerwowane.
 	d_Lang043 =	Lub kontroluje za pomocą paska narzędzi
 	d_Lang044 =	Ta funkcja wymaga funkcja Eval().
 		Kliknij przycisk OK, aby przejść do strony pobierania.
@@ -841,7 +835,11 @@
 	d_Lang099 =	Nazwa funkcji zawiera niedozwolony znak.
 	d_Lang100 =	Goto, GOSUB i Label nie są dozwolone w funkcji.
 	d_Lang101 =	Duplikat funkcji.
-	d_Lang102 =	Jest to słowo zarezerwowane.
+	d_Lang102 =	Wystąpił błąd. Możesz wysłać e-mail do "pulover@macrocreator.com" z pliku:
+	d_Lang103 =	Dostępne złożyć nowe języki.
+	d_Lang104 =	Ta wiadomość nie pojawi się ponownie w tej samej aktualizacji. Można go pobrać z menu Pomoc > Sprawdź aktualizacje.
+	d_Lang105 =	Plik wysłany. Dziękuję!
+	d_Lang106 =	Pliki językowe zaktualizowane pomyślnie.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Makra można tworzyć za pomocą przycisków poleceń w oknie głównym lub za pomocą dyktafonu skopiować swoje działania. Przejdź do Opcje > Ustawienia > Nagrywanie, aby wybrać to, co wejścia zostaną zapisane.
