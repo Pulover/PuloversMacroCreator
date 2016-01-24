@@ -65,7 +65,7 @@
 	i_Lang011 =	後藤(&G)
 	i_Lang012 =	ラベル(&A)
 	i_Lang013 =	If文(&S)
-	i_Lang014 =	変数(&V)
+	i_Lang014 =	変数 / アレイ(&V)
 	i_Lang015 =	関数 / アレイ方式(&U)
 	i_Lang016 =	インターネットエクスプローラ(&N)
 	i_Lang017 =	COMインタフェース(&O)
@@ -243,7 +243,7 @@
 	w_Lang061 =	後藤（+ F9キーをシフト）
 	w_Lang062 =	ラベル（Ctrlキーを押しながらF9キー）
 	w_Lang063 =	Ifステートメント（F10）
-	w_Lang064 =	変数（+ F10キー、Shiftキーを押しながら）
+	w_Lang064 =	変数 / アレイ(&V) （+ F10キー、Shiftキーを押しながら）
 	w_Lang065 =	関数の / アレイ方式 （Ctrl+F10）
 	w_Lang066 =	インターネットエクスプローラ（F11）
 	w_Lang067 =	 COMインタフェース（Shift+F11）を
@@ -1018,33 +1018,57 @@
 	Co_Oper_7 =	小さいか等しい
 		
 ; 22. IE Commands Tips		
-	Tip_Checked =	設定またはチェックボックスやラジオボタンの状態を取得します。
-	Tip_Click =	オブジェクト上でのクリックをシミュレート。
-	Tip_Focus =	オブジェクトにフォーカスを設定します。
-	Tip_GoBack =	履歴リスト内の1つの項目は、逆方向に移動。
-	Tip_GoForward =	履歴リスト内の1つの項目は前方に進みます。
-	Tip_GoHome =	現在のホームまたは開始ページに移動します。
-	Tip_GoSearch =	現在の検索ページに移動します。
-	Tip_Height =	設定するか、またはオブジェクトの高さを取得します。
-	Tip_Href =	設定または宛先URLまたはアンカーポイントを取得します。
-	Tip_InnerHTML =	設定するか、またはオブジェクトのHTMLを取得します。
-	Tip_InnerText =	オブジェクトのテキストを設定または取得します。
-	Tip_Length =	設定またはコレクション内のオブジェクトの数を取得します。
-	Tip_LocationName =	パスやタイトル、現在のページを取得します。
-	Tip_LocationURL =	現在のページのURLを取得します。
-	Tip_Navigate =	URLまたはパスに移動します。
-	Tip_OuterHTML =	設定またはHTML内のオブジェクトとそのコンテンツを取得します。
-	Tip_Quit =	ページを閉じます。
-	Tip_Refresh =	現在表示されているページをリロード。
-	Tip_SelectedIndex =	設定または選択したオブジェクトに、選択したオプションのインデックスを取得します。
-	Tip_Src =	設定するか、またはオブジェクトがロードするURLを取得します。
-	Tip_Stop =	保留中のナビゲーション、またはダウンロードをキャンセルします。
-	Tip_Submit =	フォームを送信します。
-	Tip_Type =	設定するか、またはオブジェクトのコンテンツタイプを取得します。
-	Tip_Value =	オブジェクトの値を取得または設定します。
-	Tip_Width =	オブジェクトの幅を設定または取得します。
+	IE_Cmd_Index =	
+	Checked	設定またはチェックボックスやラジオボタンの状態を取得します。
+	Click	オブジェクト上でのクリックをシミュレート。
+	Focus	オブジェクトにフォーカスを設定します。
+	GoBack	履歴リスト内の1つの項目は、逆方向に移動。
+	GoForward	履歴リスト内の1つの項目は前方に進みます。
+	GoHome	現在のホームまたは開始ページに移動します。
+	GoSearch	現在の検索ページに移動します。
+	Height	設定するか、またはオブジェクトの高さを取得します。
+	Href	設定または宛先URLまたはアンカーポイントを取得します。
+	InnerHTML	設定するか、またはオブジェクトのHTMLを取得します。
+	InnerText	オブジェクトのテキストを設定または取得します。
+	Length	設定またはコレクション内のオブジェクトの数を取得します。
+	LocationName	パスやタイトル、現在のページを取得します。
+	LocationURL	現在のページのURLを取得します。
+	Navigate	URLまたはパスに移動します。
+	OuterHTML	設定またはHTML内のオブジェクトとそのコンテンツを取得します。
+	Quit	ページを閉じます。
+	Refresh	現在表示されているページをリロード。
+	SelectedIndex	設定または選択したオブジェクトに、選択したオプションのインデックスを取得します。
+	Src	設定するか、またはオブジェクトがロードするURLを取得します。
+	Stop	保留中のナビゲーション、またはダウンロードをキャンセルします。
+	Submit	フォームを送信します。
+	Type	設定するか、またはオブジェクトのコンテンツタイプを取得します。
+	Value	オブジェクトの値を取得または設定します。
+	Width	オブジェクトの幅を設定または取得します。
 		
-; 23. AHK Commands Tips		
+; 23. COM Methods Tips		
+	COM_CLSID_Index =	
+	Excel.Application	Excelシートを操作します。
+	HTMLfile	読み取り、書き込み、およびHTMLと対話するために使用することができます。
+	InternetExplorer.Application	ウェブサイトを探検。
+	MSXML2.DOMDocument.6.0	XMLパーサ。
+	MSXML2.XMLHTTP	HTTPを使用してXML要求を表します。
+	Outlook.Application	Outlookのタスクやアイテム操作しました。
+	PowerPoint.Application	操作PowerPointプレゼンテーション。
+	Schedule.Service	スケジュールとWindowsのタスクを編集します。
+	ScriptControl	動的にVBScriptやJScriptのを実行します。
+	Scripting.Dictionary	データキー、項目のペアを格納するオブジェクト。
+	Scripting.FileSystemObject	Accessファイル＆フォルダ
+	Shell.Application	アクセスエクスプローラー＆IEのウィンドウ/タブ。開く＆ウィンドウを操作します。
+	Shell.Explorer	GUI（- トライデントブラウザのInternet Explorer）でエクスプローラ/ブラウザコントロールを埋め込みます。
+	SAPI.SpVoice	音声合成（TTS）。
+	VBScript.RegExp	（グローバルマッチを含む）VBS正規表現。
+	WMPlayer.OCX	メディアファイルを再生します。 GUIの埋め込みWMPlayer制御。
+	WinHttp.WinHttpRequest.5.1	UrlDownloadToFileよりもはるかに多くの制御を可能にする、シンプルなHTTPクライアント機能を提供します。
+	Winmgmt	システム情報を取得します。 Windowsサービスを管理します。
+	WScript.Shell	さまざまな管理タスク（多くのネイティブAHKタスク）。
+	Word.Application	Word文書を操作します。
+		
+; 24. AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	Abs	数値の絶対値を返します。
 	ACos	アークコサイン（余弦数ある数値）ラジアンで返します。

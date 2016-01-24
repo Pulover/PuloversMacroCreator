@@ -65,7 +65,7 @@
 	i_Lang011 =	&Goto
 	i_Lang012 =	&Címke
 	i_Lang013 =	Ha &Nyilatkozatok
-	i_Lang014 =	&Változók
+	i_Lang014 =	&Változók / Tömbök
 	i_Lang015 =	&Funkciók / Array módszerek
 	i_Lang016 =	In&ternet Explorer
 	i_Lang017 =	C&OM Interface
@@ -243,7 +243,7 @@
 	w_Lang061 =	Goto (Shift+F9)
 	w_Lang062 =	Label (Ctrl+F9)
 	w_Lang063 =	Ha a nyilatkozatok (F10)
-	w_Lang064 =	Változók (Shift+F10)
+	w_Lang064 =	Változók / Tömbök (Shift+F10)
 	w_Lang065 =	Függvények / Array módszerek (Ctrl+F10)
 	w_Lang066 =	Internet Explorer (F11)
 	w_Lang067 =	COM Interface (Shift+F11)
@@ -1018,33 +1018,57 @@
 	Co_Oper_7 =	Kisebb vagy egyenlő
 		
 ; 22. IE Commands Tips		
-	Tip_Checked =	Beállítja vagy beolvassa az állam a jelölőnégyzet vagy rádió gombot.
-	Tip_Click =	Szimulál egy kattintás az objektumra.
-	Tip_Focus =	Beállítja fókuszt az objektumot.
-	Tip_GoBack =	Navigálás hátra egy elem a történelem listán.
-	Tip_GoForward =	Navigálás előre egy elem a történelem listán.
-	Tip_GoHome =	Navigál a jelenlegi otthoni vagy kezdő oldalon.
-	Tip_GoSearch =	Navigálás az aktuális keresés oldalt.
-	Tip_Height =	Beállítja vagy visszaadja a magasságát az objektum.
-	Tip_Href =	Beállítja vagy lekéri a cél URL-t vagy egy horgony pontot.
-	Tip_InnerHTML =	Beállítja vagy visszaadja a HTML az objektum.
-	Tip_InnerText =	Beállítja vagy megkapja a szöveget az objektum.
-	Tip_Length =	Beállítja vagy beolvassa az objektumok száma a gyűjtemény.
-	Tip_LocationName =	Gets the útvonal vagy cím aktuális oldalt.
-	Tip_LocationURL =	Gets az URL-t az aktuális oldal.
-	Tip_Navigate =	Navigál egy URL-t vagy elérési utat.
-	Tip_OuterHTML =	Beállítja vagy beolvassa a tárgy és annak tartalmát a HTML.
-	Tip_Quit =	Bezárja az oldalt.
-	Tip_Refresh =	Újratöltés az aktuálisan megjelenített oldalt.
-	Tip_SelectedIndex =	Beállítja vagy beolvassa az index a kiválasztott opció a select objektum.
-	Tip_Src =	Beállítja vagy letölti egy URL betöltését a tárgy.
-	Tip_Stop =	Megszakítja a folyamatban lévő navigációs vagy letölthető.
-	Tip_Submit =	Elküldi az űrlapot.
-	Tip_Type =	Beállítja vagy visszaadja a tartalom típus az objektum.
-	Tip_Value =	Gets vagy beállítja az értékét a tárgy.
-	Tip_Width =	Beállítja vagy visszaadja a szélessége az objektum.
+	IE_Cmd_Index =	
+	Checked	Beállítja vagy beolvassa az állam a jelölőnégyzet vagy rádió gombot.
+	Click	Szimulál egy kattintás az objektumra.
+	Focus	Beállítja fókuszt az objektumot.
+	GoBack	Navigálás hátra egy elem a történelem listán.
+	GoForward	Navigálás előre egy elem a történelem listán.
+	GoHome	Navigál a jelenlegi otthoni vagy kezdő oldalon.
+	GoSearch	Navigálás az aktuális keresés oldalt.
+	Height	Beállítja vagy visszaadja a magasságát az objektum.
+	Href	Beállítja vagy lekéri a cél URL-t vagy egy horgony pontot.
+	InnerHTML	Beállítja vagy visszaadja a HTML az objektum.
+	InnerText	Beállítja vagy megkapja a szöveget az objektum.
+	Length	Beállítja vagy beolvassa az objektumok száma a gyűjtemény.
+	LocationName	Gets the útvonal vagy cím aktuális oldalt.
+	LocationURL	Gets az URL-t az aktuális oldal.
+	Navigate	Navigál egy URL-t vagy elérési utat.
+	OuterHTML	Beállítja vagy beolvassa a tárgy és annak tartalmát a HTML.
+	Quit	Bezárja az oldalt.
+	Refresh	Újratöltés az aktuálisan megjelenített oldalt.
+	SelectedIndex	Beállítja vagy beolvassa az index a kiválasztott opció a select objektum.
+	Src	Beállítja vagy letölti egy URL betöltését a tárgy.
+	Stop	Megszakítja a folyamatban lévő navigációs vagy letölthető.
+	Submit	Elküldi az űrlapot.
+	Type	Beállítja vagy visszaadja a tartalom típus az objektum.
+	Value	Gets vagy beállítja az értékét a tárgy.
+	Width	Beállítja vagy visszaadja a szélessége az objektum.
 		
-; 23. AHK Commands Tips		
+; 23. COM Methods Tips		
+	COM_CLSID_Index =	
+	Excel.Application	Manipulálja Excel táblák.
+	HTMLfile	Lehet használni, hogy írni, olvasni és kölcsönhatásba HTML.
+	InternetExplorer.Application	Fedezze honlapok.
+	MSXML2.DOMDocument.6.0	XML elemző.
+	MSXML2.XMLHTTP	Jelentése XML kérés HTTP-n keresztül.
+	Outlook.Application	Manipulált Outlook feladatok és tételek.
+	PowerPoint.Application	Manipulált PowerPoint bemutatókat.
+	Schedule.Service	Időbeosztás és szerkesztheti a Windows Feladatok.
+	ScriptControl	Dinamikusan végre VBscript vagy JScript.
+	Scripting.Dictionary	Objektum, amely tárolja az adatokat kulcs, elem párokat.
+	Scripting.FileSystemObject	Access fájlok és mappák
+	Shell.Application	Hozzáférés Explorer és IE ablak / fül; Open & manipulálni ablakok.
+	Shell.Explorer	Beágyazása Explorer / böngésző ellenőrzés GUI (Internet Explorer - szigonyt böngésző).
+	SAPI.SpVoice	Text-to-Speech (TTS).
+	VBScript.RegExp	VBS reguláris kifejezések (beleértve a globális mérkőzés).
+	WMPlayer.OCX	Médiafájlok lejátszása; Beágyazása wmplayer kontroll egy GUI.
+	WinHttp.WinHttpRequest.5.1	Egyszerű HTTP kliens funkciót, amely sokkal több ellenőrzés, mint UrlDownloadToFile.
+	Winmgmt	Get rendszer információ; Kezelje ablakok szolgáltatásokat.
+	WScript.Shell	Különböző adminisztrációs feladatokat (sok natív AHK feladatok).
+	Word.Application	Manipulálja a Word dokumentumokat.
+		
+; 24. AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	Abs	Abszolút értékét a számot.
 	ACos	Arkusz koszinuszát adja (a szám, amelynek koszinusz is Number) radiánban.

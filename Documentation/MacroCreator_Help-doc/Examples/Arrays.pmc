@@ -37,7 +37,7 @@ Groups=Start:1
 6|Asc|N[2][2] := "A"|1|0|Function|||||
 7|[Assign Variable]|ItemCopy := N[2][2]|1|0|Variable|Expression||||
 8|[MsgBox]|Item 2.2: %ItemCopy%|1|0|MsgBox|262144||||
-9|Push|_null := "Item 2.3"|1|0|Method|N[2]||||
+9|Push|_null := "Item 2.3"|1|0|Method|N.2||||
 10|[MsgBox]|% N.2.3|1|0|MsgBox|262144||||
 
 [PMC Code v5.0.0]|F5||1|Window|1|Methods

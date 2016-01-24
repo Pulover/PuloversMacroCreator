@@ -65,7 +65,7 @@
 	i_Lang011 =	&Goto
 	i_Lang012 =	L&abel
 	i_Lang013 =	Jika &Penyata
-	i_Lang014 =	Pemb&olehubah
+	i_Lang014 =	Pemb&olehubah / Tatasusunan
 	i_Lang015 =	&Fungsi / Kaedah mudah
 	i_Lang016 =	I&nternet Explorer
 	i_Lang017 =	&COM Muka
@@ -243,7 +243,7 @@
 	w_Lang061 =	Goto (Shift+F9)
 	w_Lang062 =	Label (Ctrl+F9)
 	w_Lang063 =	Jika Penyata (F10)
-	w_Lang064 =	Pembolehubah (Shift+F10)
+	w_Lang064 =	Pembolehubah / Tatasusunan (Shift+F10)
 	w_Lang065 =	Fungsi / Kaedah mudah (Ctrl+F10)
 	w_Lang066 =	Internet Explorer (F11)
 	w_Lang067 =	COM Muka (Shift+F11)
@@ -1018,33 +1018,57 @@
 	Co_Oper_7 =	Kurang atau sama
 		
 ; 22. IE Commands Tips		
-	Tip_Checked =	Set atau mendapatkan semula negeri kotak semak atau butang radio.
-	Tip_Click =	Menyerupai klik pada objek.
-	Tip_Focus =	Set tumpuan kepada objek.
-	Tip_GoBack =	Mengemudi mundur satu item dalam senarai sejarah.
-	Tip_GoForward =	Mengemudi ke hadapan satu item dalam senarai sejarah.
-	Tip_GoHome =	Mengemudi ke rumah semasa atau halaman permulaan.
-	Tip_GoSearch =	Mengemudi ke laman carian semasa.
-	Tip_Height =	Set atau mendapatkan semula ketinggian objek.
-	Tip_Href =	Set atau mendapatkan semula URL destinasi atau tempat berlabuh.
-	Tip_InnerHTML =	Set atau mendapatkan semula HTML objek.
-	Tip_InnerText =	Set atau mendapat teks objek.
-	Tip_Length =	Set atau mendapatkan semula bilangan objek dalam koleksi.
-	Tip_LocationName =	Dapat jalan atau halaman semasa tajuk.
-	Tip_LocationURL =	Dapat URL halaman semasa.
-	Tip_Navigate =	Mengemudi ke URL atau laluan.
-	Tip_OuterHTML =	Set atau mendapatkan semula objek dan kandungan dalam HTML.
-	Tip_Quit =	Ditutup halaman.
-	Tip_Refresh =	Tambah nilai halaman yang sedang dipaparkan.
-	Tip_SelectedIndex =	Set atau mendapatkan semula indeks pilihan yang dipilih dalam objek pilih.
-	Tip_Src =	Set atau mendapatkan semula URL yang akan dimuatkan oleh objek.
-	Tip_Stop =	Membatalkan navigasi yang belum selesai atau turun.
-	Tip_Submit =	Mengemukakan borang.
-	Tip_Type =	Set semula atau jenis kandungan objek.
-	Tip_Value =	Dapat atau menetapkan nilai objek.
-	Tip_Width =	Set atau mendapatkan semula lebar objek.
+	IE_Cmd_Index =	
+	Checked	Set atau mendapatkan semula negeri kotak semak atau butang radio.
+	Click	Menyerupai klik pada objek.
+	Focus	Set tumpuan kepada objek.
+	GoBack	Mengemudi mundur satu item dalam senarai sejarah.
+	GoForward	Mengemudi ke hadapan satu item dalam senarai sejarah.
+	GoHome	Mengemudi ke rumah semasa atau halaman permulaan.
+	GoSearch	Mengemudi ke laman carian semasa.
+	Height	Set atau mendapatkan semula ketinggian objek.
+	Href	Set atau mendapatkan semula URL destinasi atau tempat berlabuh.
+	InnerHTML	Set atau mendapatkan semula HTML objek.
+	InnerText	Set atau mendapat teks objek.
+	Length	Set atau mendapatkan semula bilangan objek dalam koleksi.
+	LocationName	Dapat jalan atau halaman semasa tajuk.
+	LocationURL	Dapat URL halaman semasa.
+	Navigate	Mengemudi ke URL atau laluan.
+	OuterHTML	Set atau mendapatkan semula objek dan kandungan dalam HTML.
+	Quit	Ditutup halaman.
+	Refresh	Tambah nilai halaman yang sedang dipaparkan.
+	SelectedIndex	Set atau mendapatkan semula indeks pilihan yang dipilih dalam objek pilih.
+	Src	Set atau mendapatkan semula URL yang akan dimuatkan oleh objek.
+	Stop	Membatalkan navigasi yang belum selesai atau turun.
+	Submit	Mengemukakan borang.
+	Type	Set semula atau jenis kandungan objek.
+	Value	Dapat atau menetapkan nilai objek.
+	Width	Set atau mendapatkan semula lebar objek.
 		
-; 23. AHK Commands Tips		
+; 23. COM Methods Tips		
+	COM_CLSID_Index =	
+	Excel.Application	Memanipulasi lembaran Excel.
+	HTMLfile	Boleh digunakan untuk membaca, menulis dan berinteraksi dengan HTML.
+	InternetExplorer.Application	Explore laman web.
+	MSXML2.DOMDocument.6.0	XML penghurai.
+	MSXML2.XMLHTTP	Mewakili permintaan XML menggunakan HTTP.
+	Outlook.Application	Dimanipulasi tugas Outlook dan item.
+	PowerPoint.Application	Dimanipulasi persembahan PowerPoint.
+	Schedule.Service	Jadual dan mengedit Tugas Windows.
+	ScriptControl	Dinamik melaksanakan VBScript atau JScript.
+	Scripting.Dictionary	Objek yang menyimpan kunci data, pasang item.
+	Scripting.FileSystemObject	Akses fail & folder
+	Shell.Application	Akses Explorer & IE windows / tab; membuka & memanipulasi tingkap.
+	Shell.Explorer	Embed kawalan Explorer / Browser dalam GUI (Internet Explorer - pelayar trisula).
+	SAPI.SpVoice	Teks-ke-Tutur (TTS).
+	VBScript.RegExp	VBS Ungkapan-ungkapan yang tetap (termasuk perlawanan global).
+	WMPlayer.OCX	Memainkan fail media; Kawalan Benamkan WMPlayer dalam GUI.
+	WinHttp.WinHttpRequest.5.1	Menyediakan fungsi klien HTTP mudah, membolehkan lebih banyak kawalan daripada UrlDownloadToFile.
+	Winmgmt	Dapatkan maklumat sistem; Menguruskan perkhidmatan tingkap.
+	WScript.Shell	Pelbagai tugas pentadbiran (banyak tugas AHK asli).
+	Word.Application	Memanipulasi dokumen Word.
+		
+; 24. AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	Abs	Mengembalikan nilai mutlak bagi nombor.
 	ACos	Kembali arccosine itu (bilangan yang kosinus adalah Bilangan) dalam radian.

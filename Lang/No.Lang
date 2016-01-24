@@ -65,7 +65,7 @@
 	i_Lang011 =	&Goto
 	i_Lang012 =	L&abel
 	i_Lang013 =	&Hvis Uttalelser
-	i_Lang014 =	Va&riabler
+	i_Lang014 =	Va&riabler / Arrays
 	i_Lang015 =	&Funksjoner / Array-metoder
 	i_Lang016 =	Internet E&xplorer
 	i_Lang017 =	&COM-Grensesnitt
@@ -243,7 +243,7 @@
 	w_Lang061 =	Goto (Shift+F9)
 	w_Lang062 =	Label (Ctrl+F9)
 	w_Lang063 =	Hvis uttalelsene (F10)
-	w_Lang064 =	Variabler (Shift+F10)
+	w_Lang064 =	Variabler / Arrays (Shift+F10)
 	w_Lang065 =	Funksjoner / Array-metoder (Ctrl+F10)
 	w_Lang066 =	Internet Explorer (F11)
 	w_Lang067 =	COM-grensesnitt (Shift+F11)
@@ -1018,33 +1018,57 @@
 	Co_Oper_7 =	Mindre eller lik
 		
 ; 22. IE Commands Tips		
-	Tip_Checked =	Stiller eller henter statusen for avmerkingsboks eller knapp.
-	Tip_Click =	Simulerer et klikk på objektet.
-	Tip_Focus =	Fokuserer på objektet.
-	Tip_GoBack =	Navigerer bakover ett element i historien listen.
-	Tip_GoForward =	Navigerer fremover ett element i historien listen.
-	Tip_GoHome =	Navigerer til nåværende hjem eller start side.
-	Tip_GoSearch =	Navigerer til gjeldende søkesiden.
-	Tip_Height =	Stiller eller henter høyden av objektet.
-	Tip_Href =	Stiller eller henter en destinasjonsadresse eller et ankerpunkt.
-	Tip_InnerHTML =	Stiller eller henter HTML av objektet.
-	Tip_InnerText =	Stiller eller får teksten i objektet.
-	Tip_Length =	Stiller eller henter antallet objekter i en samling.
-	Tip_LocationName =	Får banen eller tittel gjeldende side.
-	Tip_LocationURL =	Får nettadressen til den aktuelle siden.
-	Tip_Navigate =	Navigerer til en URL eller bane.
-	Tip_OuterHTML =	Stiller eller henter objektet og dens innhold i HTML.
-	Tip_Quit =	Lukker siden.
-	Tip_Refresh =	Laster siden som vises.
-	Tip_SelectedIndex =	Stiller eller henter indeksen til den valgte alternativet i en utvalgt objekt.
-	Tip_Src =	Stiller eller henter en nettadresse som skal lastes av objektet.
-	Tip_Stop =	Avbryter en ventende navigasjon eller nedlasting.
-	Tip_Submit =	Sender inn skjemaet.
-	Tip_Type =	Stiller eller henter innholdstypen av objektet.
-	Tip_Value =	Får eller setter verdien av objektet.
-	Tip_Width =	Stiller eller henter bredden på objektet.
+	IE_Cmd_Index =	
+	Checked	Stiller eller henter statusen for avmerkingsboks eller knapp.
+	Click	Simulerer et klikk på objektet.
+	Focus	Fokuserer på objektet.
+	GoBack	Navigerer bakover ett element i historien listen.
+	GoForward	Navigerer fremover ett element i historien listen.
+	GoHome	Navigerer til nåværende hjem eller start side.
+	GoSearch	Navigerer til gjeldende søkesiden.
+	Height	Stiller eller henter høyden av objektet.
+	Href	Stiller eller henter en destinasjonsadresse eller et ankerpunkt.
+	InnerHTML	Stiller eller henter HTML av objektet.
+	InnerText	Stiller eller får teksten i objektet.
+	Length	Stiller eller henter antallet objekter i en samling.
+	LocationName	Får banen eller tittel gjeldende side.
+	LocationURL	Får nettadressen til den aktuelle siden.
+	Navigate	Navigerer til en URL eller bane.
+	OuterHTML	Stiller eller henter objektet og dens innhold i HTML.
+	Quit	Lukker siden.
+	Refresh	Laster siden som vises.
+	SelectedIndex	Stiller eller henter indeksen til den valgte alternativet i en utvalgt objekt.
+	Src	Stiller eller henter en nettadresse som skal lastes av objektet.
+	Stop	Avbryter en ventende navigasjon eller nedlasting.
+	Submit	Sender inn skjemaet.
+	Type	Stiller eller henter innholdstypen av objektet.
+	Value	Får eller setter verdien av objektet.
+	Width	Stiller eller henter bredden på objektet.
 		
-; 23. AHK Commands Tips		
+; 23. COM Methods Tips		
+	COM_CLSID_Index =	
+	Excel.Application	Manipulerer Excel ark.
+	HTMLfile	Kan brukes til å lese, skrive og kommunisere med HTML.
+	InternetExplorer.Application	Utforsk nettsteder.
+	MSXML2.DOMDocument.6.0	XML parser.
+	MSXML2.XMLHTTP	Representerer en XML forespørsel ved hjelp av HTTP.
+	Outlook.Application	Manipulert Outlook-oppgaver og elementer.
+	PowerPoint.Application	Manipulerte PowerPoint-presentasjoner.
+	Schedule.Service	Planlegg og redigere Windows Oppgaver.
+	ScriptControl	Dynamisk utføre VBScript eller JScript.
+	Scripting.Dictionary	Objekt som lagrer data nøkkelen, stk parene.
+	Scripting.FileSystemObject	Tilgang til filer og mapper
+	Shell.Application	Tilgang Explorer og IE vinduer / faner; åpne og manipulere vinduer.
+	Shell.Explorer	Bygge inn et Explorer / Browser kontroll i et GUI (Internet Explorer - trefork leseren).
+	SAPI.SpVoice	Tekst-til-tale (TTS).
+	VBScript.RegExp	VBS Regular Expressions (inkludert global kamp).
+	WMPlayer.OCX	Spille av mediefiler; Embed WMPlayer kontroll i et GUI.
+	WinHttp.WinHttpRequest.5.1	Gir enkel HTTP klientfunksjonalitet, slik at mye mer kontroll enn UrlDownloadToFile.
+	Winmgmt	Få system informasjon; Administrere Windows-tjenester.
+	WScript.Shell	Ulike oppgaver administrasjon (mange innfødte AHK oppgaver).
+	Word.Application	Manipulerer Word-dokumenter.
+		
+; 24. AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	Abs	Returnerer den absolutte verdien av nummer.
 	ACos	Returnerer arccosinus (antall som har cosinus er Number) i radianer .

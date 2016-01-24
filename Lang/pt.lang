@@ -65,7 +65,7 @@
 	i_Lang011 =	P&ular
 	i_Lang012 =	Rótul&o
 	i_Lang013 =	&Declaração Se
-	i_Lang014 =	&Variáveis
+	i_Lang014 =	&Variáveis / Matrizes
 	i_Lang015 =	&Funções / Métodos de Matriz
 	i_Lang016 =	&Internet Explorer
 	i_Lang017 =	I&nterface COM
@@ -243,7 +243,7 @@
 	w_Lang061 =	Pular (Shift+F9)
 	w_Lang062 =	Rótulo (Ctrl+F9)
 	w_Lang063 =	Declaração Se (F10)
-	w_Lang064 =	Variáveis (Shift+F10)
+	w_Lang064 =	Variáveis / Matrizes (Shift+F10)
 	w_Lang065 =	Funções / Métodos de Matriz (Ctrl+F10)
 	w_Lang066 =	Internet Explorer (F11)
 	w_Lang067 =	Interface COM (Shift+F11)
@@ -1018,33 +1018,57 @@
 	Co_Oper_7 =	Menor ou igual
 		
 ; 22. IE Commands Tips		
-	Tip_Checked =	Define ou copia o estado de uma check box ou botão de rádio.
-	Tip_Click =	Simula um clique em um objeto.
-	Tip_Focus =	Define o foco para um objeto.
-	Tip_GoBack =	Volta um item no histórico.
-	Tip_GoForward =	Avança um item no histórico.
-	Tip_GoHome =	Navega para a página inicial atual.
-	Tip_GoSearch =	Navega para a página de pesquisa atual.
-	Tip_Height =	Define ou copia a altura de conteúdo do objeto.
-	Tip_Href =	Define ou copia uma URL destino ou ponto de âncora.
-	Tip_InnerHTML =	Define ou copia a HTML do objeto.
-	Tip_InnerText =	Define ou copia o texto do objeto.
-	Tip_Length =	Define ou copia o número de objetos em uma coleção.
-	Tip_LocationName =	Copia o caminho ou título da página atual.
-	Tip_LocationURL =	Copia a URL da página atual.
-	Tip_Navigate =	Navega para uma URL ou caminho.
-	Tip_OuterHTML =	Define ou copia o objeto e seu conteúdo em HTML.
-	Tip_Quit =	Fecha a página.
-	Tip_Refresh =	Atualiza a página atual.
-	Tip_SelectedIndex =	Define ou copia o índice da seleção em um objeto selecionável.
-	Tip_Src =	Define ou copia uma URL para ser carregada pelo objeto.
-	Tip_Stop =	Cancela uma navegação ou download pendente.
-	Tip_Submit =	Envia o formulário.
-	Tip_Type =	Define ou copia o tipo de conteúdo do objeto.
-	Tip_Value =	Copia ou define o valor de um objeto.
-	Tip_Width =	Define ou copia o comprimento de conteúdo do objeto.
+	IE_Cmd_Index =	
+	Checked	Define ou copia o estado de uma check box ou botão de rádio.
+	Click	Simula um clique em um objeto.
+	Focus	Define o foco para um objeto.
+	GoBack	Volta um item no histórico.
+	GoForward	Avança um item no histórico.
+	GoHome	Navega para a página inicial atual.
+	GoSearch	Navega para a página de pesquisa atual.
+	Height	Define ou copia a altura de conteúdo do objeto.
+	Href	Define ou copia uma URL destino ou ponto de âncora.
+	InnerHTML	Define ou copia a HTML do objeto.
+	InnerText	Define ou copia o texto do objeto.
+	Length	Define ou copia o número de objetos em uma coleção.
+	LocationName	Copia o caminho ou título da página atual.
+	LocationURL	Copia a URL da página atual.
+	Navigate	Navega para uma URL ou caminho.
+	OuterHTML	Define ou copia o objeto e seu conteúdo em HTML.
+	Quit	Fecha a página.
+	Refresh	Atualiza a página atual.
+	SelectedIndex	Define ou copia o índice da seleção em um objeto selecionável.
+	Src	Define ou copia uma URL para ser carregada pelo objeto.
+	Stop	Cancela uma navegação ou download pendente.
+	Submit	Envia o formulário.
+	Type	Define ou copia o tipo de conteúdo do objeto.
+	Value	Copia ou define o valor de um objeto.
+	Width	Define ou copia o comprimento de conteúdo do objeto.
 		
-; 23. AHK Commands Tips		
+; 23. COM Methods Tips		
+	COM_CLSID_Index =	
+	Excel.Application	Manipula planilhas de Excel.
+	HTMLfile	Pode ser usado para ler, escrever e interagir com HTML.
+	InternetExplorer.Application	Explora sites.
+	MSXML2.DOMDocument.6.0	Analizador de XML.
+	MSXML2.XMLHTTP	Representa uma requisição XML usando HTTP.
+	Outlook.Application	Manipula tarefas e itens do Outlook.
+	PowerPoint.Application	Manipula apresentações do PowerPoint.
+	Schedule.Service	Agenda e edita tarefas do Windows.
+	ScriptControl	Executa VBScript ou JScript dinamicamente.
+	Scripting.Dictionary	Objeto que armazena pares de dados chave/item.
+	Scripting.FileSystemObject	Acessa arquivos e pastas
+	Shell.Application	Acessa janelas/abas do Explorer e IE; Abre
+	Shell.Explorer	Controle integrado de Explorer/Navegador em uma GUI  (Internet Explorer - trident browser).
+	SAPI.SpVoice	Texto-para-Fala (TTS).
+	VBScript.RegExp	Expressões Relugares VBS (incluindo global match).
+	WMPlayer.OCX	Reproduz arquivos de media; Controle WMPlayer integrado em uma GUI.
+	WinHttp.WinHttpRequest.5.1	Fornece funcionalidade simples de cliente HTTP, permitindo muito mais controle do que o UrlDownloadToFile.
+	Winmgmt	Busca informações do sistema; Manipula serviços de janelas.
+	WScript.Shell	Várias tarefas administrativas (muitas das tarefas nativas do AHK)
+	Word.Application	Manipula documentos do Word.
+		
+; 24. AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	Abs	Retorna o valor absoluto do número.
 	ACos	Retorna o arco cosseno (o número cujo cosseno é Número) em radianos.

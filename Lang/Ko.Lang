@@ -65,7 +65,7 @@
 	i_Lang011 =	고토(&G)
 	i_Lang012 =	라벨(&A)
 	i_Lang013 =	만약 명세서(&S)
-	i_Lang014 =	변수(&V)
+	i_Lang014 =	변수 / 배열(&V)
 	i_Lang015 =	함수 / 배열 방법(&U)
 	i_Lang016 =	인터넷 익스플로러(&N)
 	i_Lang017 =	COM 인터페이스(&O)
@@ -243,7 +243,7 @@
 	w_Lang061 =	고토 (+ F9를 Shift)
 	w_Lang062 =	라벨 (Ctrl 키를+F9)
 	w_Lang063 =	만약 명세서 (F10)
-	w_Lang064 =	변수 (+ F10를 Shift)
+	w_Lang064 =	변수 / 배열(&V) (+ F10를 Shift)
 	w_Lang065 =	함수 / 배열 방법 (Ctrl 키를+F10)
 	w_Lang066 =	인터넷 익스플로러 (F11)
 	w_Lang067 =	COM 인터페이스 (+ F11를 Shift)
@@ -1018,33 +1018,57 @@
 	Co_Oper_7 =	작거나 같은
 		
 ; 22. IE Commands Tips		
-	Tip_Checked =	설정 또는 체크 박스 나 라디오 버튼의 상태를 검색합니다.
-	Tip_Click =	개체를 클릭을 시뮬레이트합니다.
-	Tip_Focus =	객체에 포커스를 설정합니다.
-	Tip_GoBack =	역사 목록에서 한 항목 뒤로 탐색합니다.
-	Tip_GoForward =	역사 목록에 한 항목 앞으로 탐색합니다.
-	Tip_GoHome =	현재 집이나 시작 페이지로 탐색합니다.
-	Tip_GoSearch =	현재 검색 페이지로 이동.
-	Tip_Height =	설정하거나 객체의 높이를 검색합니다.
-	Tip_Href =	설정하거나 대상 URL 또는 앵커 지점을 검색합니다.
-	Tip_InnerHTML =	설정하거나 객체의 HTML을 검색합니다.
-	Tip_InnerText =	설정하거나 객체의 텍스트를 얻을 수 있습니다.
-	Tip_Length =	설정하거나 컬렉션에 개체의 수를 검색합니다.
-	Tip_LocationName =	경로 나 제목 현재 페이지를 가져옵니다.
-	Tip_LocationURL =	현재 페이지의 URL을 가져옵니다.
-	Tip_Navigate =	URL 또는 경로를 탐색합니다.
-	Tip_OuterHTML =	설정하거나 HTML에있는 객체와 그 내용을 검색합니다.
-	Tip_Quit =	페이지를 닫습니다.
-	Tip_Refresh =	다시로드 현재 표시된 페이지입니다.
-	Tip_SelectedIndex =	설정 또는 선택 개체의 선택 옵션의 인덱스를 검색합니다.
-	Tip_Src =	설정하거나 객체에 의해로드 할 URL을 검색합니다.
-	Tip_Stop =	대기중인 탐색 또는 다운로드를 취소합니다.
-	Tip_Submit =	양식을 제출합니다.
-	Tip_Type =	설정하거나 객체의 내용 유형을 검색합니다.
-	Tip_Value =	옵니다 또는 개체의 값을 설정합니다.
-	Tip_Width =	설정하거나 객체의 폭을 검색합니다.
+	IE_Cmd_Index =	
+	Checked	설정 또는 체크 박스 나 라디오 버튼의 상태를 검색합니다.
+	Click	개체를 클릭을 시뮬레이트합니다.
+	Focus	객체에 포커스를 설정합니다.
+	GoBack	역사 목록에서 한 항목 뒤로 탐색합니다.
+	GoForward	역사 목록에 한 항목 앞으로 탐색합니다.
+	GoHome	현재 집이나 시작 페이지로 탐색합니다.
+	GoSearch	현재 검색 페이지로 이동.
+	Height	설정하거나 객체의 높이를 검색합니다.
+	Href	설정하거나 대상 URL 또는 앵커 지점을 검색합니다.
+	InnerHTML	설정하거나 객체의 HTML을 검색합니다.
+	InnerText	설정하거나 객체의 텍스트를 얻을 수 있습니다.
+	Length	설정하거나 컬렉션에 개체의 수를 검색합니다.
+	LocationName	경로 나 제목 현재 페이지를 가져옵니다.
+	LocationURL	현재 페이지의 URL을 가져옵니다.
+	Navigate	URL 또는 경로를 탐색합니다.
+	OuterHTML	설정하거나 HTML에있는 객체와 그 내용을 검색합니다.
+	Quit	페이지를 닫습니다.
+	Refresh	다시로드 현재 표시된 페이지입니다.
+	SelectedIndex	설정 또는 선택 개체의 선택 옵션의 인덱스를 검색합니다.
+	Src	설정하거나 객체에 의해로드 할 URL을 검색합니다.
+	Stop	대기중인 탐색 또는 다운로드를 취소합니다.
+	Submit	양식을 제출합니다.
+	Type	설정하거나 객체의 내용 유형을 검색합니다.
+	Value	옵니다 또는 개체의 값을 설정합니다.
+	Width	설정하거나 객체의 폭을 검색합니다.
 		
-; 23. AHK Commands Tips		
+; 23. COM Methods Tips		
+	COM_CLSID_Index =	
+	Excel.Application	엑셀 시트를 조작합니다.
+	HTMLfile	읽기, 쓰기 및 HTML과 상호 작용하는 데 사용할 수 있습니다.
+	InternetExplorer.Application	웹 사이트 탐색.
+	MSXML2.DOMDocument.6.0	XML 파서.
+	MSXML2.XMLHTTP	HTTP를 사용하여 XML 요청을 나타낸다.
+	Outlook.Application	Outlook 작업 및 항목을 조작 할 수 있습니다.
+	PowerPoint.Application	조작 된 PowerPoint 프레젠테이션.
+	Schedule.Service	예약 및 Windows 작업을 편집 할 수 있습니다.
+	ScriptControl	동적 JScript 또는 VBScript를 실행합니다.
+	Scripting.Dictionary	데이터 키, 항목 쌍을 저장하는 객체.
+	Scripting.FileSystemObject	액세스 파일 및 폴더
+	Shell.Application	액세스 탐색기 및 IE 창 / 탭; 열 및 창을 조작 할 수 있습니다.
+	Shell.Explorer	GUI (- 트라이던트 브라우저 인터넷 익스플로러)에서 탐색기 / 브라우저 컨트롤을 포함.
+	SAPI.SpVoice	TTS (텍스트 음성 변환).
+	VBScript.RegExp	(글로벌 경기 포함) VBS 정규 표현식.
+	WMPlayer.OCX	미디어 파일을 재생합니다;GUI에 포함 wmplayer를 제어 할 수 있습니다.
+	WinHttp.WinHttpRequest.5.1	UrlDownloadToFile보다 더 제어 할 수 있도록 간단한 HTTP 클라이언트 기능을 제공한다.
+	Winmgmt	시스템 정보를 얻으십시오; Windows 서비스를 관리 할 수 있습니다.
+	WScript.Shell	다양한 관리 작업 (많은 네이티브 AHK 작업).
+	Word.Application	Word 문서를 조작합니다.
+		
+; 24. AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	Abs	숫자의 절대 값을 반환합니다.
 	ACos	라디안 단위 아크 코사인 (코사인 수있는 수)를 반환합니다.

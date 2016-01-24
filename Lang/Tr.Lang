@@ -65,7 +65,7 @@
 	i_Lang011 =	Go&to
 	i_Lang012 =	Et&iket
 	i_Lang013 =	E&ğer Tablolar
-	i_Lang014 =	Deği&şkenler
+	i_Lang014 =	Deği&şkenler / Diziler
 	i_Lang015 =	Fo&nksiyonlar / Dizi yöntemleri
 	i_Lang016 =	Inte&rnet Explorer
 	i_Lang017 =	&COM Arabirimi
@@ -243,7 +243,7 @@
 	w_Lang061 =	Git (Shift+F9)
 	w_Lang062 =	Etiket (Ctrl+F9)
 	w_Lang063 =	Eğer Tablolar (F10)
-	w_Lang064 =	Değişkenler (F10+Shift)
+	w_Lang064 =	Değişkenler / Diziler (F10+Shift)
 	w_Lang065 =	İşlevler / Dizi yöntemleri (Ctrl+F10)
 	w_Lang066 =	Internet Explorer (F11)
 	w_Lang067 =	COM Arabirimi (Shift+F11)
@@ -1018,33 +1018,57 @@
 	Co_Oper_7 =	Daha az ya da eşit
 		
 ; 22. IE Commands Tips		
-	Tip_Checked =	Ayarlar veya onay kutusunu veya radyo düğmesini durumunu alır.
-	Tip_Click =	Nesne üzerinde bir tıklama simüle eder.
-	Tip_Focus =	Nesnesi odağı ayarlar.
-	Tip_GoBack =	Geçmiş listesindeki bir öğeyi geriye doğru gider.
-	Tip_GoForward =	Geçmiş listesindeki bir öğeyi ileri gider.
-	Tip_GoHome =	Geçerli ev veya başlangıç ​​sayfasına gider.
-	Tip_GoSearch =	Geçerli arama sayfasına gider.
-	Tip_Height =	Ayarlar ya da nesne yüksekliğinin alır.
-	Tip_Href =	Ayarlar veya hedef URL veya bir çapa noktası alır.
-	Tip_InnerHTML =	Ayarlar ya da nesnenin HTML alır.
-	Tip_InnerText =	Ayarlar ya da nesnenin metin alır.
-	Tip_Length =	Ayarlar veya bir koleksiyon nesne sayısını alır.
-	Tip_LocationName =	Yolu veya başlığı Geçerli sayfayı alır.
-	Tip_LocationURL =	Geçerli sayfanın URL'sini alır.
-	Tip_Navigate =	Bir URL veya yol gider.
-	Tip_OuterHTML =	Ayarlar veya HTML nesne ve içeriği alır.
-	Tip_Quit =	Sayfa kapatır.
-	Tip_Refresh =	Çoğul anda görüntülenen sayfa.
-	Tip_SelectedIndex =	Ayarlar veya bir select nesnesi seçili seçeneği dizin alır.
-	Tip_Src =	Ayarlar ya da nesnesi tarafından yüklenecek bir URL alır.
-	Tip_Stop =	Bekleyen bir gezinti veya indirme iptal eder.
-	Tip_Submit =	Formu gönderir.
-	Tip_Type =	Ayarlar ya da nesnesi içeriğinin tip alır.
-	Tip_Value =	Alır veya nesnesinin değerini belirler.
-	Tip_Width =	Ayarlar ya da nesnenin genişliğini alır.
+	IE_Cmd_Index =	
+	Checked	Ayarlar veya onay kutusunu veya radyo düğmesini durumunu alır.
+	Click	Nesne üzerinde bir tıklama simüle eder.
+	Focus	Nesnesi odağı ayarlar.
+	GoBack	Geçmiş listesindeki bir öğeyi geriye doğru gider.
+	GoForward	Geçmiş listesindeki bir öğeyi ileri gider.
+	GoHome	Geçerli ev veya başlangıç ​​sayfasına gider.
+	GoSearch	Geçerli arama sayfasına gider.
+	Height	Ayarlar ya da nesne yüksekliğinin alır.
+	Href	Ayarlar veya hedef URL veya bir çapa noktası alır.
+	InnerHTML	Ayarlar ya da nesnenin HTML alır.
+	InnerText	Ayarlar ya da nesnenin metin alır.
+	Length	Ayarlar veya bir koleksiyon nesne sayısını alır.
+	LocationName	Yolu veya başlığı Geçerli sayfayı alır.
+	LocationURL	Geçerli sayfanın URL'sini alır.
+	Navigate	Bir URL veya yol gider.
+	OuterHTML	Ayarlar veya HTML nesne ve içeriği alır.
+	Quit	Sayfa kapatır.
+	Refresh	Çoğul anda görüntülenen sayfa.
+	SelectedIndex	Ayarlar veya bir select nesnesi seçili seçeneği dizin alır.
+	Src	Ayarlar ya da nesnesi tarafından yüklenecek bir URL alır.
+	Stop	Bekleyen bir gezinti veya indirme iptal eder.
+	Submit	Formu gönderir.
+	Type	Ayarlar ya da nesnesi içeriğinin tip alır.
+	Value	Alır veya nesnesinin değerini belirler.
+	Width	Ayarlar ya da nesnenin genişliğini alır.
 		
-; 23. AHK Commands Tips		
+; 23. COM Methods Tips		
+	COM_CLSID_Index =	
+	Excel.Application	Excel tabloları manipüle.
+	HTMLfile	Okuma, yazma ve HTML ile etkileşim için kullanılır.
+	InternetExplorer.Application	Web siteleri keşfedin.
+	MSXML2.DOMDocument.6.0	XML ayrıştırıcı.
+	MSXML2.XMLHTTP	HTTP kullanarak bir XML isteği temsil eder.
+	Outlook.Application	Outlook görevleri ve öğeler manipüle.
+	PowerPoint.Application	Manipulated PowerPoint sunumları.
+	Schedule.Service	Zamanlama ve Windows Görevleri düzenleyin.
+	ScriptControl	Dinamik VBScript veya JScript yürütün.
+	Scripting.Dictionary	Veri anahtarı, madde çiftleri saklayan nesne.
+	Scripting.FileSystemObject	Access dosyaları ve klasörleri
+	Shell.Application	Erişim Explorer ve IE pencerelerini / sekmeler; açmak ve pencere işlemek.
+	Shell.Explorer	Bir GUI (- trident tarayıcısı Internet Explorer) bir Explorer / Tarayıcı kontrolünü gömün.
+	SAPI.SpVoice	Text-to-Speech (TTS).
+	VBScript.RegExp	(Global maç dahil) VBS Düzenli İfadeler.
+	WMPlayer.OCX	Medya dosyalarını oynatma; Bir GUI Embed WMPlayer kontrolü.
+	WinHttp.WinHttpRequest.5.1	UrlDownloadToFile çok daha fazla kontrol sağlayan, basit HTTP istemci işlevselliği sağlar.
+	Winmgmt	Sistem bilgi için; Windows hizmetlerini yönetin.
+	WScript.Shell	Çeşitli yönetim görevleri (birçok yerli AHK görevleri).
+	Word.Application	Word belgeleri yönetir.
+		
+; 24. AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	Abs	Sayısı mutlak değerini döndürür.
 	ACos	Radyan Arkkosinüs (kosinüs Numarasısayı) döndürür.

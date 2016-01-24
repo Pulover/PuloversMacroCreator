@@ -65,7 +65,7 @@
 	i_Lang011 =	&Goto
 	i_Lang012 =	&Label
 	i_Lang013 =	I&f
-	i_Lang014 =	&Zmienne
+	i_Lang014 =	&Zmienne / Macierze
 	i_Lang015 =	Fu&nkcje / Metody tablicy
 	i_Lang016 =	Inte&rnet Explorer
 	i_Lang017 =	&COM Interfejs
@@ -243,7 +243,7 @@
 	w_Lang061 =	Goto (Shift+F9)
 	w_Lang062 =	Label (Ctrl+F9)
 	w_Lang063 =	If (F10)
-	w_Lang064 =	Zmiennych (Shift+F10)
+	w_Lang064 =	Zmiennych / Macierze (Shift+F10)
 	w_Lang065 =	Funkcje / Metody tablicy (Ctrl+F10)
 	w_Lang066 =	Internet Explorer (F11)
 	w_Lang067 =	COM interfejsu (Shift+F11)
@@ -1018,33 +1018,57 @@
 	Co_Oper_7 =	Mniejszy lub równy
 		
 ; 22. IE Commands Tips		
-	Tip_Checked =	Ustawia lub pobiera stan pola wyboru lub przycisku radiowego.
-	Tip_Click =	Symuluje kliknięcie na obiekcie.
-	Tip_Focus =	Ustawia ostrość na obiekcie.
-	Tip_GoBack =	Nawiguje do tyłu jedna pozycja na liście historii.
-	Tip_GoForward =	Przejście do przodu o jeden element na liście historii.
-	Tip_GoHome =	Przejście do obecnego domu lub na stronie startowej.
-	Tip_GoSearch =	Przejście do bieżącej strony wyszukiwania.
-	Tip_Height =	Ustawia lub pobiera wysokość przedmiotu.
-	Tip_Href =	Ustawia lub pobiera docelowy adres URL lub punkt kontrolny.
-	Tip_InnerHTML =	Ustawia lub pobiera HTML obiektu.
-	Tip_InnerText =	Ustawia lub pobiera tekst z obiektu.
-	Tip_Length =	Ustawia lub pobiera liczbę obiektów w kolekcji.
-	Tip_LocationName =	Pobiera ścieżkę lub tytuł aktualnej strony.
-	Tip_LocationURL =	Pobiera adres URL bieżącej strony.
-	Tip_Navigate =	Nawigacja do adresu URL lub ścieżki.
-	Tip_OuterHTML =	Ustawia lub pobiera obiekt i jego zawartości w formacie HTML.
-	Tip_Quit =	Zamyka stronę.
-	Tip_Refresh =	Wczytuje aktualnie wyświetlanej strony.
-	Tip_SelectedIndex =	Ustawia lub pobiera indeks wybranej opcji w kameralnym obiekcie.
-	Tip_Src =	Ustawia lub pobiera adres URL do wczytania przez obiekt.
-	Tip_Stop =	Anuluje oczekiwaniu nawigacji lub pobrać.
-	Tip_Submit =	Przesyła formularz.
-	Tip_Type =	Ustawia lub pobiera typ zawartości obiektu.
-	Tip_Value =	Pobiera lub ustawia wartość obiektu.
-	Tip_Width =	Ustawia lub pobiera szerokość obiektu.
+	IE_Cmd_Index =	
+	Checked	Ustawia lub pobiera stan pola wyboru lub przycisku radiowego.
+	Click	Symuluje kliknięcie na obiekcie.
+	Focus	Ustawia ostrość na obiekcie.
+	GoBack	Nawiguje do tyłu jedna pozycja na liście historii.
+	GoForward	Przejście do przodu o jeden element na liście historii.
+	GoHome	Przejście do obecnego domu lub na stronie startowej.
+	GoSearch	Przejście do bieżącej strony wyszukiwania.
+	Height	Ustawia lub pobiera wysokość przedmiotu.
+	Href	Ustawia lub pobiera docelowy adres URL lub punkt kontrolny.
+	InnerHTML	Ustawia lub pobiera HTML obiektu.
+	InnerText	Ustawia lub pobiera tekst z obiektu.
+	Length	Ustawia lub pobiera liczbę obiektów w kolekcji.
+	LocationName	Pobiera ścieżkę lub tytuł aktualnej strony.
+	LocationURL	Pobiera adres URL bieżącej strony.
+	Navigate	Nawigacja do adresu URL lub ścieżki.
+	OuterHTML	Ustawia lub pobiera obiekt i jego zawartości w formacie HTML.
+	Quit	Zamyka stronę.
+	Refresh	Wczytuje aktualnie wyświetlanej strony.
+	SelectedIndex	Ustawia lub pobiera indeks wybranej opcji w kameralnym obiekcie.
+	Src	Ustawia lub pobiera adres URL do wczytania przez obiekt.
+	Stop	Anuluje oczekiwaniu nawigacji lub pobrać.
+	Submit	Przesyła formularz.
+	Type	Ustawia lub pobiera typ zawartości obiektu.
+	Value	Pobiera lub ustawia wartość obiektu.
+	Width	Ustawia lub pobiera szerokość obiektu.
 		
-; 23. AHK Commands Tips		
+; 23. COM Methods Tips		
+	COM_CLSID_Index =	
+	Excel.Application	Manipuluje arkuszy Excel.
+	HTMLfile	Może być używany do odczytu, zapisu i interakcji z HTML.
+	InternetExplorer.Application	Przeglądaj strony internetowe.
+	MSXML2.DOMDocument.6.0	Parser.
+	MSXML2.XMLHTTP	Reprezentuje żądanie XML za pomocą protokołu HTTP.
+	Outlook.Application	Manipulowane zadania programu Outlook i przedmioty.
+	PowerPoint.Application	Manipulowane prezentacje PowerPoint.
+	Schedule.Service	Planować i edytować zadań systemu Windows.
+	ScriptControl	Dynamicznie wykonać VBScript lub JScript.
+	Scripting.Dictionary	Obiekt, który przechowuje klucz danych, par punkt.
+	Scripting.FileSystemObject	Dostęp do plików i folderów
+	Shell.Application	Dostęp Explorer i Windows / IE kartach; otworzyć i manipulowanie oknami.
+	Shell.Explorer	Osadzić kontrolę Explorer / Browser w GUI (Internet Explorer - przeglądarka trójząb).
+	SAPI.SpVoice	Text-to-Speech (TTS).
+	VBScript.RegExp	VBS Wyrażenia regularne (w tym globalnym meczu).
+	WMPlayer.OCX	Odtwarzanie plików multimedialnych; Kontrola Wstaw WMPlayer w GUI.
+	WinHttp.WinHttpRequest.5.1	Zapewnia prostą funkcjonalność klienta HTTP, dzięki czemu o wiele większą kontrolę niż UrlDownloadToFile.
+	Winmgmt	Uzyskać informacje o systemie; Zarządzanie usługami systemu Windows.
+	WScript.Shell	Różne zadania administracyjne (wiele rodzimych zadania AHK).
+	Word.Application	Manipuluje dokumentów Word.
+		
+; 24. AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	Abs	Zwraca wartość bezwzględną liczbę.
 	ACos	Zwraca arcus cosinus (liczba , którego cosinus jest Number) w radianach .

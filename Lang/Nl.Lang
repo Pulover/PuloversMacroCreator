@@ -65,7 +65,7 @@
 	i_Lang011 =	&Ga Naar
 	i_Lang012 =	La&bel
 	i_Lang013 =	Al&s Verklaringen
-	i_Lang014 =	Var&iabelen
+	i_Lang014 =	Var&iabelen / Scala
 	i_Lang015 =	&Functies / Scala methoden
 	i_Lang016 =	I&nternet Explorer
 	i_Lang017 =	C&OM-Interface
@@ -243,7 +243,7 @@
 	w_Lang061 =	Ga naar (Shift+F9)
 	w_Lang062 =	Label (Ctrl+F9)
 	w_Lang063 =	Als Verklaringen (F10)
-	w_Lang064 =	Variabelen (Shift+F10)
+	w_Lang064 =	Variabelen / Scala (Shift+F10)
 	w_Lang065 =	Functies / Scala methoden (Ctrl+F10)
 	w_Lang066 =	Internet Explorer (F11)
 	w_Lang067 =	COM-interface (Shift+F11)
@@ -1018,33 +1018,57 @@
 	Co_Oper_7 =	Minder of gelijk
 		
 ; 22. IE Commands Tips		
-	Tip_Checked =	Stelt of haalt de status van het selectievakje of keuzerondje.
-	Tip_Click =	Simuleert een klik op het object.
-	Tip_Focus =	Stelt focus op het object.
-	Tip_GoBack =	Hiermee kunt u een item in de geschiedenis lijst.
-	Tip_GoForward =	Navigeert vooruit een item in de geschiedenis lijst.
-	Tip_GoHome =	Hiermee navigeert u naar de huidige woning of startpagina.
-	Tip_GoSearch =	Hiermee navigeert u naar de huidige zoekpagina.
-	Tip_Height =	Bepaalt of haalt de hoogte van het object.
-	Tip_Href =	Stelt of haalt een bestemmings-URL of een ankerpunt.
-	Tip_InnerHTML =	Stelt of haalt de HTML van het object.
-	Tip_InnerText =	Stelt of krijgt de tekst van het object.
-	Tip_Length =	Stelt of haalt het aantal objecten in een verzameling.
-	Tip_LocationName =	Krijgt het pad of de titel huidige pagina.
-	Tip_LocationURL =	Haalt de URL van de huidige pagina.
-	Tip_Navigate =	Hiermee navigeert u naar een URL of pad.
-	Tip_OuterHTML =	Bepaalt of haalt het object en de inhoud in HTML.
-	Tip_Quit =	Sluit de pagina.
-	Tip_Refresh =	Laadt de momenteel weergegeven pagina.
-	Tip_SelectedIndex =	Stelt of haalt de index van de geselecteerde optie in een select object.
-	Tip_Src =	Stelt of haalt een URL die moet worden geladen door het object.
-	Tip_Stop =	Annuleert een lopende navigatie-of download.
-	Tip_Submit =	Het formulier indient.
-	Tip_Type =	Stelt of haalt het inhoudstype van het object.
-	Tip_Value =	Hiermee wordt de waarde van het object.
-	Tip_Width =	Bepaalt of haalt de breedte van het object.
+	IE_Cmd_Index =	
+	Checked	Stelt of haalt de status van het selectievakje of keuzerondje.
+	Click	Simuleert een klik op het object.
+	Focus	Stelt focus op het object.
+	GoBack	Hiermee kunt u een item in de geschiedenis lijst.
+	GoForward	Navigeert vooruit een item in de geschiedenis lijst.
+	GoHome	Hiermee navigeert u naar de huidige woning of startpagina.
+	GoSearch	Hiermee navigeert u naar de huidige zoekpagina.
+	Height	Bepaalt of haalt de hoogte van het object.
+	Href	Stelt of haalt een bestemmings-URL of een ankerpunt.
+	InnerHTML	Stelt of haalt de HTML van het object.
+	InnerText	Stelt of krijgt de tekst van het object.
+	Length	Stelt of haalt het aantal objecten in een verzameling.
+	LocationName	Krijgt het pad of de titel huidige pagina.
+	LocationURL	Haalt de URL van de huidige pagina.
+	Navigate	Hiermee navigeert u naar een URL of pad.
+	OuterHTML	Bepaalt of haalt het object en de inhoud in HTML.
+	Quit	Sluit de pagina.
+	Refresh	Laadt de momenteel weergegeven pagina.
+	SelectedIndex	Stelt of haalt de index van de geselecteerde optie in een select object.
+	Src	Stelt of haalt een URL die moet worden geladen door het object.
+	Stop	Annuleert een lopende navigatie-of download.
+	Submit	Het formulier indient.
+	Type	Stelt of haalt het inhoudstype van het object.
+	Value	Hiermee wordt de waarde van het object.
+	Width	Bepaalt of haalt de breedte van het object.
 		
-; 23. AHK Commands Tips		
+; 23. COM Methods Tips		
+	COM_CLSID_Index =	
+	Excel.Application	Manipuleert Excel sheets.
+	HTMLfile	Kan worden gebruikt voor het lezen, schrijven en interageren met HTML.
+	InternetExplorer.Application	Verkennen websites.
+	MSXML2.DOMDocument.6.0	XML-parser.
+	MSXML2.XMLHTTP	Vertegenwoordigt een XML-aanvraag via HTTP.
+	Outlook.Application	Gemanipuleerd Outlook taken en items.
+	PowerPoint.Application	Gemanipuleerd PowerPoint-presentaties.
+	Schedule.Service	Plan en bewerken Windows Taken.
+	ScriptControl	Dynamisch voeren VBScript of JScript.
+	Scripting.Dictionary	Object dat data te drukken punt paren slaat.
+	Scripting.FileSystemObject	Toegang tot bestanden en mappen
+	Shell.Application	Toegang Explorer en IE vensters / tabbladen; openen en te manipuleren ramen.
+	Shell.Explorer	Een Verkenner / Browser controle in een GUI (- drietand browser Internet Explorer) insluiten.
+	SAPI.SpVoice	Text-to-Speech (TTS).
+	VBScript.RegExp	VBS reguliere expressies (inclusief wereldwijde wedstrijd).
+	WMPlayer.OCX	Speel mediabestanden; Embed wmplayer controle in een GUI.
+	WinHttp.WinHttpRequest.5.1	Biedt een eenvoudige HTTP-client-functionaliteit, waardoor veel meer controle dan UrlDownloadToFile.
+	Winmgmt	Krijgen informatie over het systeem; Beheer ramen diensten.
+	WScript.Shell	Diverse administratieve taken (vele inheemse AHK taken).
+	Word.Application	Manipuleert Word-documenten.
+		
+; 24. AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	Abs	Geeft de absolute waarde van het nummer .
 	ACos	Geeft de boogcosinus (het getal waarvan de cosinus is Number) in radialen .

@@ -65,7 +65,7 @@
 	i_Lang011 =	Ir A
 	i_Lang012 =	Eti&quetas
 	i_Lang013 =	&Declaraciones Si
-	i_Lang014 =	Varia&bles
+	i_Lang014 =	Varia&bles / Matrizes
 	i_Lang015 =	&Funciones / Métodos de matriz
 	i_Lang016 =	I&nternet Explorer
 	i_Lang017 =	C&OM Interface
@@ -243,7 +243,7 @@
 	w_Lang061 =	Ir a (Shift+F9)
 	w_Lang062 =	Etiqueta (Ctrl+F9)
 	w_Lang063 =	Si Declaraciones (F10)
-	w_Lang064 =	Variables (Shift+F10)
+	w_Lang064 =	Variables / Matrizes (Shift+F10)
 	w_Lang065 =	Funciones / Métodos de matriz (Ctrl+F10)
 	w_Lang066 =	Internet Explorer (F11)
 	w_Lang067 =	COM Interface (Shift+F11)
@@ -1018,33 +1018,57 @@
 	Co_Oper_7 =	Menor o igual
 		
 ; 22. IE Commands Tips		
-	Tip_Checked =	Establece o recupera el estado de la casilla de verificación o botón de opción.
-	Tip_Click =	Simula un clic en el objeto.
-	Tip_Focus =	Establece el foco al objeto.
-	Tip_GoBack =	Retrocede un elemento de la lista del historial.
-	Tip_GoForward =	Avanza un elemento de la lista del historial.
-	Tip_GoHome =	Se desplaza a la casa actual o la página de inicio.
-	Tip_GoSearch =	Se desplaza a la página de búsqueda.
-	Tip_Height =	Establece o recupera la altura del objeto.
-	Tip_Href =	Establece o recupera una URL de destino o un punto de anclaje.
-	Tip_InnerHTML =	Establece o recupera el código HTML del objeto.
-	Tip_InnerText =	Obtiene o establece el texto del objeto.
-	Tip_Length =	Establece o recupera el número de objetos en una colección.
-	Tip_LocationName =	Obtiene la ruta o en la página del título actual.
-	Tip_LocationURL =	Obtiene la dirección URL de la página actual.
-	Tip_Navigate =	Se desplaza a una dirección URL o ruta.
-	Tip_OuterHTML =	Establece o recupera el objeto y su contenido en HTML.
-	Tip_Quit =	Cierra la página.
-	Tip_Refresh =	Vuelve a cargar la página actual.
-	Tip_SelectedIndex =	Establece o recupera el índice de la opción seleccionada en un objeto de selección.
-	Tip_Src =	Establece o una dirección URL a ser cargado por el objeto.
-	Tip_Stop =	Cancela una navegación pendiente o descarga.
-	Tip_Submit =	Envía el formulario.
-	Tip_Type =	Establece o recupera el tipo de contenido del objeto.
-	Tip_Value =	Obtiene o establece el valor del objeto.
-	Tip_Width =	Establece o recupera la anchura del objeto.
+	IE_Cmd_Index =	
+	Checked	Establece o recupera el estado de la casilla de verificación o botón de opción.
+	Click	Simula un clic en el objeto.
+	Focus	Establece el foco al objeto.
+	GoBack	Retrocede un elemento de la lista del historial.
+	GoForward	Avanza un elemento de la lista del historial.
+	GoHome	Se desplaza a la casa actual o la página de inicio.
+	GoSearch	Se desplaza a la página de búsqueda.
+	Height	Establece o recupera la altura del objeto.
+	Href	Establece o recupera una URL de destino o un punto de anclaje.
+	InnerHTML	Establece o recupera el código HTML del objeto.
+	InnerText	Obtiene o establece el texto del objeto.
+	Length	Establece o recupera el número de objetos en una colección.
+	LocationName	Obtiene la ruta o en la página del título actual.
+	LocationURL	Obtiene la dirección URL de la página actual.
+	Navigate	Se desplaza a una dirección URL o ruta.
+	OuterHTML	Establece o recupera el objeto y su contenido en HTML.
+	Quit	Cierra la página.
+	Refresh	Vuelve a cargar la página actual.
+	SelectedIndex	Establece o recupera el índice de la opción seleccionada en un objeto de selección.
+	Src	Establece o una dirección URL a ser cargado por el objeto.
+	Stop	Cancela una navegación pendiente o descarga.
+	Submit	Envía el formulario.
+	Type	Establece o recupera el tipo de contenido del objeto.
+	Value	Obtiene o establece el valor del objeto.
+	Width	Establece o recupera la anchura del objeto.
 		
-; 23. AHK Commands Tips		
+; 23. COM Methods Tips		
+	COM_CLSID_Index =	
+	Excel.Application	Manipula hojas de Excel.
+	HTMLfile	Se puede utilizar para leer, escribir e interactuar con HTML.
+	InternetExplorer.Application	Explora sitios web.
+	MSXML2.DOMDocument.6.0	Analizador XML.
+	MSXML2.XMLHTTP	Representa una solicitud XML utilizando HTTP.
+	Outlook.Application	Manipula tareas y elementos de Outlook.
+	PowerPoint.Application	Presentaciones de PowerPoint manipulado.
+	Schedule.Service	Programar y editar tareas de Windows.
+	ScriptControl	Dinámicamente ejecutar VBScript o JScript.
+	Scripting.Dictionary	Objeto que almacena clave de datos, los pares de elementos.
+	Scripting.FileSystemObject	Acceder a archivos y carpetas
+	Shell.Application	Acceso y Explorador IE ventanas / pestañas; abrir y manipular ventanas.
+	Shell.Explorer	Insertar un control Explorador / Navegador en una interfaz gráfica de usuario (Internet Explorer - el navegador tridente).
+	SAPI.SpVoice	Text-to-Speech (TTS).
+	VBScript.RegExp	Expresiones regulares VBS (incluyendo partido mundial).
+	WMPlayer.OCX	Reproducir archivos multimedia; Control Insertar WMPlayer en una interfaz gráfica de usuario.
+	WinHttp.WinHttpRequest.5.1	Proporciona funcionalidad de cliente HTTP simple, lo que permite un mayor control de URLDownloadToFile.
+	Winmgmt	Obtener información del sistema; Administrar servicios de Windows.
+	WScript.Shell	Diversas tareas de administración (muchas tareas nativas AHK).
+	Word.Application	Manipula los documentos de Word.
+		
+; 24. AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	Abs	Devuelve el valor absoluto del número .
 	ACos	Devuelve el arco coseno (el número cuyo coseno es número) en radianes.

@@ -65,7 +65,7 @@
 	i_Lang011 =	轉到(&G)
 	i_Lang012 =	標籤(&A)
 	i_Lang013 =	如果報表(&S)
-	i_Lang014 =	變量(&V)
+	i_Lang014 =	變量 / 배열(&V)
 	i_Lang015 =	函數 / 陣列方法(&U)
 	i_Lang016 =	IE瀏覽器(&N)
 	i_Lang017 =	COM接口(&O)
@@ -243,7 +243,7 @@
 	w_Lang061 =	後藤（按Shift+F9）
 	w_Lang062 =	標籤（按Ctrl+F9）
 	w_Lang063 =	如果報表附註（F10）
-	w_Lang064 =	變量（按Shift+F10）
+	w_Lang064 =	變量 / 배열(&V) （按Shift+F10）
 	w_Lang065 =	功能 / 陣列方法 （按Ctrl+F10）
 	w_Lang066 =	IE瀏覽器（F11）
 	w_Lang067 =	 COM接口（SHIFT+F11）
@@ -1018,33 +1018,57 @@
 	Co_Oper_7 =	小於或等於
 		
 ; 22. IE Commands Tips		
-	Tip_Checked =	設置或檢索的複選框或單選按鈕的狀態。
-	Tip_Click =	模擬單擊對象。
-	Tip_Focus =	設置焦點的對象。
-	Tip_GoBack =	向後瀏覽歷史記錄列表中的一個項目。
-	Tip_GoForward =	前進導航歷史記錄列表中的一個項目。
-	Tip_GoHome =	導航到目前在家中或起始頁面。
-	Tip_GoSearch =	導航到當前的搜索頁面。
-	Tip_Height =	設置或獲取對象的高度。
-	Tip_Href =	設置或檢索的目標URL或錨點。
-	Tip_InnerHTML =	設置或檢索對象的HTML。
-	Tip_InnerText =	設置或獲取對象的文本。
-	Tip_Length =	設置或檢索一個集合中的對象的數目。
-	Tip_LocationName =	獲取當前頁面的路徑或標題。
-	Tip_LocationURL =	獲取當前頁面的URL。
-	Tip_Navigate =	導航到URL或路徑。
-	Tip_OuterHTML =	設置或檢索HTML中的對象和它的內容。
-	Tip_Quit =	關閉該頁面。
-	Tip_Refresh =	重新加載當前顯示的頁面。
-	Tip_SelectedIndex =	設置或檢索索引選擇的選項中選擇的對象。
-	Tip_Src =	設置或獲取要由對象裝入的URL。
-	Tip_Stop =	取消掛起導航或下載。
-	Tip_Submit =	提交表單。
-	Tip_Type =	設置或檢索對象的內容類型。
-	Tip_Value =	獲取或設置對象的值。
-	Tip_Width =	設置或獲取對象的寬度。
+	IE_Cmd_Index =	
+	Checked	設置或檢索的複選框或單選按鈕的狀態。
+	Click	模擬單擊對象。
+	Focus	設置焦點的對象。
+	GoBack	向後瀏覽歷史記錄列表中的一個項目。
+	GoForward	前進導航歷史記錄列表中的一個項目。
+	GoHome	導航到目前在家中或起始頁面。
+	GoSearch	導航到當前的搜索頁面。
+	Height	設置或獲取對象的高度。
+	Href	設置或檢索的目標URL或錨點。
+	InnerHTML	設置或檢索對象的HTML。
+	InnerText	設置或獲取對象的文本。
+	Length	設置或檢索一個集合中的對象的數目。
+	LocationName	獲取當前頁面的路徑或標題。
+	LocationURL	獲取當前頁面的URL。
+	Navigate	導航到URL或路徑。
+	OuterHTML	設置或檢索HTML中的對象和它的內容。
+	Quit	關閉該頁面。
+	Refresh	重新加載當前顯示的頁面。
+	SelectedIndex	設置或檢索索引選擇的選項中選擇的對象。
+	Src	設置或獲取要由對象裝入的URL。
+	Stop	取消掛起導航或下載。
+	Submit	提交表單。
+	Type	設置或檢索對象的內容類型。
+	Value	獲取或設置對象的值。
+	Width	設置或獲取對象的寬度。
 		
-; 23. AHK Commands Tips		
+; 23. COM Methods Tips		
+	COM_CLSID_Index =	
+	Excel.Application	엑셀 시트를 조작합니다.
+	HTMLfile	읽기, 쓰기 및 HTML과 상호 작용하는 데 사용할 수 있습니다.
+	InternetExplorer.Application	웹 사이트 탐색.
+	MSXML2.DOMDocument.6.0	XML 파서.
+	MSXML2.XMLHTTP	HTTP를 사용하여 XML 요청을 나타낸다.
+	Outlook.Application	Outlook 작업 및 항목을 조작 할 수 있습니다.
+	PowerPoint.Application	조작 된 PowerPoint 프레젠테이션.
+	Schedule.Service	예약 및 Windows 작업을 편집 할 수 있습니다.
+	ScriptControl	동적 JScript 또는 VBScript를 실행합니다.
+	Scripting.Dictionary	데이터 키, 항목 쌍을 저장하는 객체.
+	Scripting.FileSystemObject	액세스 파일 및 폴더
+	Shell.Application	액세스 탐색기 및 IE 창 / 탭; 열 및 창을 조작 할 수 있습니다.
+	Shell.Explorer	GUI (- 트라이던트 브라우저 인터넷 익스플로러)에서 탐색기 / 브라우저 컨트롤을 포함.
+	SAPI.SpVoice	TTS (텍스트 음성 변환).
+	VBScript.RegExp	(글로벌 경기 포함) VBS 정규 표현식.
+	WMPlayer.OCX	미디어 파일을 재생합니다;GUI에 포함 wmplayer를 제어 할 수 있습니다.
+	WinHttp.WinHttpRequest.5.1	UrlDownloadToFile보다 더 제어 할 수 있도록 간단한 HTTP 클라이언트 기능을 제공한다.
+	Winmgmt	시스템 정보를 얻으십시오; Windows 서비스를 관리 할 수 있습니다.
+	WScript.Shell	다양한 관리 작업 (많은 네이티브 AHK 작업).
+	Word.Application	Word 문서를 조작합니다.
+		
+; 24. AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	Abs	返回數字的絕對值。
 	ACos	返回弧度反餘弦（餘弦數）。

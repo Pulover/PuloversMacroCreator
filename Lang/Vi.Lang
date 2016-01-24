@@ -65,7 +65,7 @@
 	i_Lang011 =	&Goto
 	i_Lang012 =	&Nhãn
 	i_Lang013 =	N&ếu báo cáo
-	i_Lang014 =	&Biến
+	i_Lang014 =	&Biến / Mảng
 	i_Lang015 =	Ch&ức năng / Chức Phương pháp mảng
 	i_Lang016 =	&Internet Explorer
 	i_Lang017 =	C&OM giao diện
@@ -243,7 +243,7 @@
 	w_Lang061 =	Goto (Shift + F9)
 	w_Lang062 =	Nhãn (Ctrl + F9)
 	w_Lang063 =	Nếu báo cáo (F10)
-	w_Lang064 =	Biến (Shift + F10)
+	w_Lang064 =	Biến / Mảng (Shift + F10)
 	w_Lang065 =	Chức năng / Phương pháp mảng (Ctrl + F10)
 	w_Lang066 =	Internet Explorer (F11)
 	w_Lang067 =	COM giao diện (Shift + F11)
@@ -1018,33 +1018,57 @@
 	Co_Oper_7 =	Ít hơn hoặc bằng
 		
 ; 22. IE Commands Tips		
-	Tip_Checked =	Thiết lập hoặc lấy trạng thái của hộp kiểm tra hoặc nút radio.
-	Tip_Click =	Mô phỏng một nhấp chuột vào đối tượng.
-	Tip_Focus =	Đặt trọng tâm vào đối tượng.
-	Tip_GoBack =	Điều hướng ngược một mục trong danh sách lịch sử.
-	Tip_GoForward =	Chuyển tiếp đến một mục trong danh sách lịch sử.
-	Tip_GoHome =	Điều hướng tới các nhà hiện tại hoặc trang bắt đầu.
-	Tip_GoSearch =	Điều hướng đến các trang tìm kiếm hiện tại.
-	Tip_Height =	Thiết lập hoặc lấy chiều cao của đối tượng.
-	Tip_Href =	Đặt hoặc nhận một URL đích hoặc một điểm neo.
-	Tip_InnerHTML =	Thiết lập hoặc lấy mã HTML của đối tượng.
-	Tip_InnerText =	Thiết lập hoặc nhận được văn bản của đối tượng.
-	Tip_Length =	Thiết lập hoặc lấy số lượng các đối tượng trong một bộ sưu tập.
-	Tip_LocationName =	Nhận được đường dẫn hoặc trang tiêu đề hiện tại.
-	Tip_LocationURL =	Được URL của trang hiện tại.
-	Tip_Navigate =	Điều hướng tới một URL hoặc đường dẫn.
-	Tip_OuterHTML =	Thiết lập hoặc lấy các đối tượng và nội dung của nó trong HTML.
-	Tip_Quit =	Đóng cửa trang.
-	Tip_Refresh =	Tải lại trang đang hiển thị.
-	Tip_SelectedIndex =	Thiết lập hoặc lấy các chỉ số của các tùy chọn được chọn trong một đối tượng chọn.
-	Tip_Src =	Đặt hoặc nhận một URL được nạp bởi các đối tượng.
-	Tip_Stop =	Hủy bỏ một chuyển hướng cấp phát chính thức hoặc tải về.
-	Tip_Submit =	Gửi biểu mẫu.
-	Tip_Type =	Thiết lập hoặc lấy các loại nội dung của đối tượng.
-	Tip_Value =	Được hoặc đặt giá trị của đối tượng.
-	Tip_Width =	Thiết lập hoặc lấy chiều rộng của đối tượng.
+	IE_Cmd_Index =	
+	Checked	Thiết lập hoặc lấy trạng thái của hộp kiểm tra hoặc nút radio.
+	Click	Mô phỏng một nhấp chuột vào đối tượng.
+	Focus	Đặt trọng tâm vào đối tượng.
+	GoBack	Điều hướng ngược một mục trong danh sách lịch sử.
+	GoForward	Chuyển tiếp đến một mục trong danh sách lịch sử.
+	GoHome	Điều hướng tới các nhà hiện tại hoặc trang bắt đầu.
+	GoSearch	Điều hướng đến các trang tìm kiếm hiện tại.
+	Height	Thiết lập hoặc lấy chiều cao của đối tượng.
+	Href	Đặt hoặc nhận một URL đích hoặc một điểm neo.
+	InnerHTML	Thiết lập hoặc lấy mã HTML của đối tượng.
+	InnerText	Thiết lập hoặc nhận được văn bản của đối tượng.
+	Length	Thiết lập hoặc lấy số lượng các đối tượng trong một bộ sưu tập.
+	LocationName	Nhận được đường dẫn hoặc trang tiêu đề hiện tại.
+	LocationURL	Được URL của trang hiện tại.
+	Navigate	Điều hướng tới một URL hoặc đường dẫn.
+	OuterHTML	Thiết lập hoặc lấy các đối tượng và nội dung của nó trong HTML.
+	Quit	Đóng cửa trang.
+	Refresh	Tải lại trang đang hiển thị.
+	SelectedIndex	Thiết lập hoặc lấy các chỉ số của các tùy chọn được chọn trong một đối tượng chọn.
+	Src	Đặt hoặc nhận một URL được nạp bởi các đối tượng.
+	Stop	Hủy bỏ một chuyển hướng cấp phát chính thức hoặc tải về.
+	Submit	Gửi biểu mẫu.
+	Type	Thiết lập hoặc lấy các loại nội dung của đối tượng.
+	Value	Được hoặc đặt giá trị của đối tượng.
+	Width	Thiết lập hoặc lấy chiều rộng của đối tượng.
 		
-; 23. AHK Commands Tips		
+; 23. COM Methods Tips		
+	COM_CLSID_Index =	
+	Excel.Application	Thao túng tờ Excel.
+	HTMLfile	Có thể được sử dụng để đọc, viết và tương tác với HTML.
+	InternetExplorer.Application	Khám phá các trang web.
+	MSXML2.DOMDocument.6.0	Phân tích cú pháp XML.
+	MSXML2.XMLHTTP	Đại diện cho một yêu cầu XML sử dụng HTTP.
+	Outlook.Application	Thao tác nhiệm vụ Outlook và các mặt hàng.
+	PowerPoint.Application	Chế tác các bài thuyết trình PowerPoint.
+	Schedule.Service	Lịch trình và chỉnh sửa Tasks Windows.
+	ScriptControl	Tự động thực hiện VBScript hay JScript.
+	Scripting.Dictionary	Đối tượng mà các cửa hàng dữ liệu quan trọng, cặp item.
+	Scripting.FileSystemObject	Truy cập các file và thư mục
+	Shell.Application	Truy cập Explorer & IE cửa sổ / tab; mở và thao tác cửa sổ.
+	Shell.Explorer	Nhúng một điều khiển Explorer / Browser trong một giao diện đồ họa (Internet Explorer - trình duyệt đinh ba).
+	SAPI.SpVoice	Text-to-Speech (TTS).
+	VBScript.RegExp	VBS biểu hiện thường xuyên (bao gồm cả trận đấu toàn cầu).
+	WMPlayer.OCX	Chơi các tập tin phương tiện truyền thông; Kiểm Nhúng wmplayer trong một GUI.
+	WinHttp.WinHttpRequest.5.1	Cung cấp chức năng HTTP client đơn giản, cho phép kiểm soát nhiều hơn UrlDownloadToFile.
+	Winmgmt	Nhận thông tin của hệ thống; Quản lý cửa sổ dịch vụ.
+	WScript.Shell	Nhiệm vụ quản lý khác nhau (nhiều nhiệm vụ AHK bản địa).
+	Word.Application	Thao tác các tài liệu Word.
+		
+; 24. AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	Abs	Trả về giá trị tuyệt đối của số.
 	ACos	Trả về arccosine (số có cosin là số) trong radian.

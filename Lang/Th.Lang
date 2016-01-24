@@ -65,7 +65,7 @@
 	i_Lang011 =	ไปที่(&G)
 	i_Lang012 =	ฉลาก(&A)
 	i_Lang013 =	ถ้างบ(&F)
-	i_Lang014 =	ตัวแปร(&V)
+	i_Lang014 =	ตัวแปร / อาร์เรย์(&V)
 	i_Lang015 =	ฟังก์ชั่น / วิธีการอาร์เรย์(&U)
 	i_Lang016 =	Internet Explorer(&N)
 	i_Lang017 =	COM อินเตอร์เฟซ(&O)
@@ -243,7 +243,7 @@
 	w_Lang061 =	ไปที่ (Shift + F9)
 	w_Lang062 =	ฉลาก (Ctrl + F9)
 	w_Lang063 =	ถ้างบ (F10)
-	w_Lang064 =	ตัวแปร (Shift + F10)
+	w_Lang064 =	ตัวแปร / อาร์เรย์(&V) (Shift + F10)
 	w_Lang065 =	ฟังก์ชั่น / วิธีการอาร์เรย์ (Ctrl + F10)
 	w_Lang066 =	Internet Explorer (F11)
 	w_Lang067 =	COM อินเตอร์เฟซ (Shift + F11)
@@ -1018,33 +1018,57 @@
 	Co_Oper_7 =	น้อยกว่าหรือเท่ากับ
 		
 ; 22. IE Commands Tips		
-	Tip_Checked =	ตั้งหรือเรียกสถานะของกล่องกาเครื่องหมายหรือปุ่ม
-	Tip_Click =	คลิกที่จำลองวัตถุ
-	Tip_Focus =	โฟกัสไปที่วัตถุ
-	Tip_GoBack =	นำทางย้อนหลังหนึ่งรายการในรายการประวัติ
-	Tip_GoForward =	นำทางไปข้างหน้าหนึ่งรายการในรายการประวัติ
-	Tip_GoHome =	นำทางไปยังบ้านในปัจจุบันหรือหน้าเริ่มต้น
-	Tip_GoSearch =	นำทางไปยังหน้าการค้นหาปัจจุบัน
-	Tip_Height =	ชุดหรือดึงความสูงของวัตถุ
-	Tip_Href =	ตั้งหรือเรียก URL ปลายทางหรือจุดยึด
-	Tip_InnerHTML =	ตั้งหรือเรียก HTML ของวัตถุ
-	Tip_InnerText =	ชุดหรือได้รับข้อความของวัตถุ
-	Tip_Length =	ชุดหรือดึงจำนวนของวัตถุในคอลเลกชัน
-	Tip_LocationName =	ได้รับเส้นทางหรือชื่อหน้าปัจจุบัน
-	Tip_LocationURL =	ได้รับ URL ของหน้าปัจจุบัน
-	Tip_Navigate =	นำทางไปยัง URL หรือเส้นทาง
-	Tip_OuterHTML =	ชุดหรือดึงวัตถุและเนื้อหาในรูปแบบ HTML
-	Tip_Quit =	ปิดหน้า
-	Tip_Refresh =	โหลดหน้าแสดงอยู่ในปัจจุบัน
-	Tip_SelectedIndex =	ชุดหรือดึงดัชนีของตัวเลือกที่เลือกในวัตถุที่เลือก
-	Tip_Src =	ชุดหรือรับ URL ที่จะโหลดโดยวัตถุ
-	Tip_Stop =	ยกเลิกการนำที่ค้างอยู่หรือดาวน์โหลด
-	Tip_Submit =	ส่งแบบฟอร์ม
-	Tip_Type =	ตั้งหรือเรียกชนิดเนื้อหาของวัตถุ
-	Tip_Value =	หรือได้รับการตั้งค่าของวัตถุ
-	Tip_Width =	ชุดหรือดึงความกว้างของวัตถุ
+	IE_Cmd_Index =	
+	Checked	ตั้งหรือเรียกสถานะของกล่องกาเครื่องหมายหรือปุ่ม
+	Click	คลิกที่จำลองวัตถุ
+	Focus	โฟกัสไปที่วัตถุ
+	GoBack	นำทางย้อนหลังหนึ่งรายการในรายการประวัติ
+	GoForward	นำทางไปข้างหน้าหนึ่งรายการในรายการประวัติ
+	GoHome	นำทางไปยังบ้านในปัจจุบันหรือหน้าเริ่มต้น
+	GoSearch	นำทางไปยังหน้าการค้นหาปัจจุบัน
+	Height	ชุดหรือดึงความสูงของวัตถุ
+	Href	ตั้งหรือเรียก URL ปลายทางหรือจุดยึด
+	InnerHTML	ตั้งหรือเรียก HTML ของวัตถุ
+	InnerText	ชุดหรือได้รับข้อความของวัตถุ
+	Length	ชุดหรือดึงจำนวนของวัตถุในคอลเลกชัน
+	LocationName	ได้รับเส้นทางหรือชื่อหน้าปัจจุบัน
+	LocationURL	ได้รับ URL ของหน้าปัจจุบัน
+	Navigate	นำทางไปยัง URL หรือเส้นทาง
+	OuterHTML	ชุดหรือดึงวัตถุและเนื้อหาในรูปแบบ HTML
+	Quit	ปิดหน้า
+	Refresh	โหลดหน้าแสดงอยู่ในปัจจุบัน
+	SelectedIndex	ชุดหรือดึงดัชนีของตัวเลือกที่เลือกในวัตถุที่เลือก
+	Src	ชุดหรือรับ URL ที่จะโหลดโดยวัตถุ
+	Stop	ยกเลิกการนำที่ค้างอยู่หรือดาวน์โหลด
+	Submit	ส่งแบบฟอร์ม
+	Type	ตั้งหรือเรียกชนิดเนื้อหาของวัตถุ
+	Value	หรือได้รับการตั้งค่าของวัตถุ
+	Width	ชุดหรือดึงความกว้างของวัตถุ
 		
-; 23. AHK Commands Tips		
+; 23. COM Methods Tips		
+	COM_CLSID_Index =	
+	Excel.Application	ปรุงแต่งแผ่น Excel
+	HTMLfile	สามารถนำมาใช้ในการอ่านเขียนและมีปฏิสัมพันธ์กับ HTML
+	InternetExplorer.Application	สำรวจเว็บไซต์
+	MSXML2.DOMDocument.6.0	ตัวแยกวิเคราะห์ XML
+	MSXML2.XMLHTTP	หมายถึงการร้องขอ XML โดยใช้ HTTP
+	Outlook.Application	จัดการงาน Outlook และรายการ
+	PowerPoint.Application	จัดการนำเสนอ PowerPoint
+	Schedule.Service	กำหนดเวลาและแก้ไขงานของ Windows
+	ScriptControl	แบบไดนามิกดำเนิน VBscript หรือ JScript
+	Scripting.Dictionary	วัตถุที่จัดเก็บข้อมูลที่สำคัญคู่รายการ
+	Scripting.FileSystemObject	เข้าถึงไฟล์และโฟลเดอร์
+	Shell.Application	การเข้าถึง Explorer & หน้าต่าง IE / แท็บ; เปิดและจัดการกับหน้าต่าง
+	Shell.Explorer	ฝังตัวควบคุมการสำรวจ / เบราว์เซอร์ในกุย (Internet Explorer - เบราว์เซอร์ตรีศูล)
+	SAPI.SpVoice	Text-to-Speech (TTS)
+	VBScript.RegExp	VBS นิพจน์ปกติ (รวมถึงการแข่งขันทั่วโลก)
+	WMPlayer.OCX	เล่นไฟล์สื่อ ฝังควบคุม wmplayer ในกุย
+	WinHttp.WinHttpRequest.5.1	ให้การทำงานของลูกค้า HTTP ง่ายช่วยให้การควบคุมมากขึ้นกว่า URLDownloadToFile
+	Winmgmt	ได้รับข้อมูลของระบบ บริการจัดการหน้าต่าง
+	WScript.Shell	การบริหารงานต่าง ๆ (งาน AHK พื้นเมืองอีกมากมาย)
+	Word.Application	ปรุงแต่งเอกสาร Word
+		
+; 24. AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	Abs	ส่งกลับค่าสัมบูรณ์ของจำนวน
 	ACos	ส่งกลับ arccosine (หมายเลขที่มีเป็นจำนวนโคไซน์) เรเดียน

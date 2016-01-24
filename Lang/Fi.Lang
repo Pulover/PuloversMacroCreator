@@ -65,7 +65,7 @@
 	i_Lang011 =	&Goto
 	i_Lang012 =	L&evy
 	i_Lang013 =	&Jos Lausumat
-	i_Lang014 =	M&uuttujat
+	i_Lang014 =	M&uuttujat / Taulukot
 	i_Lang015 =	Toiminnot / Array menetelmiä
 	i_Lang016 =	Internet E&xplorer
 	i_Lang017 =	&COM-Liitäntä
@@ -243,7 +243,7 @@
 	w_Lang061 =	Goto (Shift+F9)
 	w_Lang062 =	Label (Ctrl+F9)
 	w_Lang063 =	Jos lausunnot (F10)
-	w_Lang064 =	Muuttujat (Shift+F10)
+	w_Lang064 =	Muuttujat / Taulukot (Shift+F10)
 	w_Lang065 =	Funktiot / Array menetelmiä (Ctrl+F10)
 	w_Lang066 =	Internet Explorer (F11)
 	w_Lang067 =	COM liitäntä (Shift+F11)
@@ -1018,33 +1018,57 @@
 	Co_Oper_7 =	Pienempi tai yhtä suuri
 		
 ; 22. IE Commands Tips		
-	Tip_Checked =	Asettaa tai noutaa tila-valintaruutu tai valintanappi.
-	Tip_Click =	Simuloi klikkaa objekti.
-	Tip_Focus =	Asettaa tarkennuksen kohteeseen.
-	Tip_GoBack =	Siirtyy taaksepäin yhden kohteen historiassa luettelossa.
-	Tip_GoForward =	Siirtyy eteenpäin yhden kohteen historian luettelossa.
-	Tip_GoHome =	Siirtyy nykyisen kotiin tai aloitussivu.
-	Tip_GoSearch =	Siirtyy nykyisen hakusivulle.
-	Tip_Height =	Asettaa tai noutaa korkeus esineen.
-	Tip_Href =	Asettaa tai noutaa kohde-URL tai ankkuri pisteen.
-	Tip_InnerHTML =	Asettaa tai noutaa HTML kohteen.
-	Tip_InnerText =	Asettaa tai saa tekstin objektin.
-	Tip_Length =	Asettaa tai noutaa objektien määrää kokoelma.
-	Tip_LocationName =	Gets polku tai otsikko nykyisen sivun.
-	Tip_LocationURL =	Gets URL nykyisen sivun.
-	Tip_Navigate =	Siirtyy URL tai polku.
-	Tip_OuterHTML =	Asettaa tai noutaa esineen ja sen sisällön HTML.
-	Tip_Quit =	Sulkee sivun.
-	Tip_Refresh =	Lataa näkyvissä sivun.
-	Tip_SelectedIndex =	Asettaa tai hakee indeksi valitun vaihtoehdon valitsemalla objektin.
-	Tip_Src =	Asettaa tai noutaa URL voidaan ladata objektin.
-	Tip_Stop =	Peruuttaa vireillä navigointi tai ladata.
-	Tip_Submit =	Lähettää lomakkeen.
-	Tip_Type =	Asettaa tai noutaa sisällön tyypin objektin.
-	Tip_Value =	Saa tai asettaa kohteen arvo.
-	Tip_Width =	Asettaa tai noutaa leveys objektin.
+	IE_Cmd_Index =	
+	Checked	Asettaa tai noutaa tila-valintaruutu tai valintanappi.
+	Click	Simuloi klikkaa objekti.
+	Focus	Asettaa tarkennuksen kohteeseen.
+	GoBack	Siirtyy taaksepäin yhden kohteen historiassa luettelossa.
+	GoForward	Siirtyy eteenpäin yhden kohteen historian luettelossa.
+	GoHome	Siirtyy nykyisen kotiin tai aloitussivu.
+	GoSearch	Siirtyy nykyisen hakusivulle.
+	Height	Asettaa tai noutaa korkeus esineen.
+	Href	Asettaa tai noutaa kohde-URL tai ankkuri pisteen.
+	InnerHTML	Asettaa tai noutaa HTML kohteen.
+	InnerText	Asettaa tai saa tekstin objektin.
+	Length	Asettaa tai noutaa objektien määrää kokoelma.
+	LocationName	Gets polku tai otsikko nykyisen sivun.
+	LocationURL	Gets URL nykyisen sivun.
+	Navigate	Siirtyy URL tai polku.
+	OuterHTML	Asettaa tai noutaa esineen ja sen sisällön HTML.
+	Quit	Sulkee sivun.
+	Refresh	Lataa näkyvissä sivun.
+	SelectedIndex	Asettaa tai hakee indeksi valitun vaihtoehdon valitsemalla objektin.
+	Src	Asettaa tai noutaa URL voidaan ladata objektin.
+	Stop	Peruuttaa vireillä navigointi tai ladata.
+	Submit	Lähettää lomakkeen.
+	Type	Asettaa tai noutaa sisällön tyypin objektin.
+	Value	Saa tai asettaa kohteen arvo.
+	Width	Asettaa tai noutaa leveys objektin.
 		
-; 23. AHK Commands Tips		
+; 23. COM Methods Tips		
+	COM_CLSID_Index =	
+	Excel.Application	Manipuloi Excel levyt.
+	HTMLfile	Voidaan käyttää lukea, kirjoittaa ja vuorovaikutuksessa HTML.
+	InternetExplorer.Application	Tutustu verkkosivuilla.
+	MSXML2.DOMDocument.6.0	XML.
+	MSXML2.XMLHTTP	Edustaa XML pyynnön HTTP.
+	Outlook.Application	Manipuloitu Outlook tehtäviä ja kohteita.
+	PowerPoint.Application	Manipuloitu PowerPoint-esityksiä.
+	Schedule.Service	Aikataulu ja muokata Windows tehtävät.
+	ScriptControl	Dynaamisesti suorittaa VBScript tai JScript.
+	Scripting.Dictionary	Kohde, joka tallentaa tietoa avain, kohta paria.
+	Scripting.FileSystemObject	Pääsy tiedostot ja kansiot
+	Shell.Application	Pääsy Explorer ja IE ikkunat / välilehdet; avata ja manipuloida ikkunat.
+	Shell.Explorer	Upota Explorer / Browser valvonta GUI (Internet Explorer - trident selaimella).
+	SAPI.SpVoice	Text-to-Speech (TTS).
+	VBScript.RegExp	VBS Säännölliset lausekkeet (mukaan lukien maailmanlaajuinen ottelu).
+	WMPlayer.OCX	Toistaa mediatiedostoja; Upottaa wmplayer ohjaus GUI.
+	WinHttp.WinHttpRequest.5.1	Tarjoaa yksinkertaisen HTTP asiakasohjelman, jonka avulla paljon enemmän valvontaa kuin UrlDownloadToFile.
+	Winmgmt	Tietoa järjestelmästä; Hallitse Windows Services.
+	WScript.Shell	Eri hallintotehtävät (monien kotoperäisten AHK tehtäviä).
+	Word.Application	Manipuloi Word-asiakirjoja.
+		
+; 24. AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	Abs	Palauttaa absoluuttinen arvo lukumäärä.
 	ACos	Palauttaakaarikosinin (numero , jonka kosini on Number) radiaaneina .

@@ -266,6 +266,10 @@ Enter::GoSub, GoResult
 
 ^Tab::
 ^+Tab::
+^PgUp::
+^PgDn::
+^+PgUp::
+^+PgDn::
 return
 
 #If (WinActive("ahk_id " CmdWin) && (ControlXHasFocus()))

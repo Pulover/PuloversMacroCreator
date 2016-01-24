@@ -65,7 +65,7 @@
 	i_Lang011 =	&Goto
 	i_Lang012 =	L&abel
 	i_Lang013 =	If &Statements
-	i_Lang014 =	&Variables
+	i_Lang014 =	&Variables / Arrays
 	i_Lang015 =	F&unctions / Array Methods
 	i_Lang016 =	I&nternet Explorer
 	i_Lang017 =	C&OM Interface
@@ -243,7 +243,7 @@
 	w_Lang061 =	Goto (Shift+F9)
 	w_Lang062 =	Label (Ctrl+F9)
 	w_Lang063 =	If Statements (F10)
-	w_Lang064 =	Variables (Shift+F10)
+	w_Lang064 =	Variables / Arrays (Shift+F10)
 	w_Lang065 =	Functions / Array Methods (Ctrl+F10)
 	w_Lang066 =	Internet Explorer (F11)
 	w_Lang067 =	COM Interface (Shift+F11)
@@ -1018,33 +1018,57 @@
 	Co_Oper_7 =	Less or equal
 		
 ; 22. IE Commands Tips		
-	Tip_Checked =	Sets or retrieves the state of the check box or radio button.
-	Tip_Click =	Simulates a click on the object.
-	Tip_Focus =	Sets focus to the object.
-	Tip_GoBack =	Navigates backward one item in the history list.
-	Tip_GoForward =	Navigates forward one item in the history list.
-	Tip_GoHome =	Navigates to the current home or start page.
-	Tip_GoSearch =	Navigates to the current search page.
-	Tip_Height =	Sets or retrieves the height of the object.
-	Tip_Href =	Sets or retrieves a destination URL or an anchor point.
-	Tip_InnerHTML =	Sets or retrieves the HTML of the object.
-	Tip_InnerText =	Sets or gets the text of the object.
-	Tip_Length =	Sets or retrieves the number of objects in a collection.
-	Tip_LocationName =	Gets the path or title current page.
-	Tip_LocationURL =	Gets the URL of the current page.
-	Tip_Navigate =	Navigates to a URL or path.
-	Tip_OuterHTML =	Sets or retrieves the object and its content in HTML.
-	Tip_Quit =	Closes the page.
-	Tip_Refresh =	Reloads the currently displayed page.
-	Tip_SelectedIndex =	Sets or retrieves the index of the selected option in a select object. 
-	Tip_Src =	Sets or retrieves a URL to be loaded by the object.
-	Tip_Stop =	Cancels a pending navigation or download.
-	Tip_Submit =	Submits the form.
-	Tip_Type =	Sets or retrieves the content type of the object.
-	Tip_Value =	Gets or sets the value of the object.
-	Tip_Width =	Sets or retrieves the width of the object.
+	IE_Cmd_Index =	
+	Checked	Sets or retrieves the state of the check box or radio button.
+	Click	Simulates a click on the object.
+	Focus	Sets focus to the object.
+	GoBack	Navigates backward one item in the history list.
+	GoForward	Navigates forward one item in the history list.
+	GoHome	Navigates to the current home or start page.
+	GoSearch	Navigates to the current search page.
+	Height	Sets or retrieves the height of the object.
+	Href	Sets or retrieves a destination URL or an anchor point.
+	InnerHTML	Sets or retrieves the HTML of the object.
+	InnerText	Sets or gets the text of the object.
+	Length	Sets or retrieves the number of objects in a collection.
+	LocationName	Gets the path or title current page.
+	LocationURL	Gets the URL of the current page.
+	Navigate	Navigates to a URL or path.
+	OuterHTML	Sets or retrieves the object and its content in HTML.
+	Quit	Closes the page.
+	Refresh	Reloads the currently displayed page.
+	SelectedIndex	Sets or retrieves the index of the selected option in a select object. 
+	Src	Sets or retrieves a URL to be loaded by the object.
+	Stop	Cancels a pending navigation or download.
+	Submit	Submits the form.
+	Type	Sets or retrieves the content type of the object.
+	Value	Gets or sets the value of the object.
+	Width	Sets or retrieves the width of the object.
 		
-; 23. AHK Commands Tips		
+; 23. COM Methods Tips		
+	COM_CLSID_Index =	
+	Excel.Application	Manipulates Excel sheets.
+	HTMLfile	Can be used to read, write and interact with HTML.
+	InternetExplorer.Application	Explore websites.
+	MSXML2.DOMDocument.6.0	XML parser.
+	MSXML2.XMLHTTP	Represents an XML request using HTTP.
+	Outlook.Application	Manipulates Outlook tasks and items.
+	PowerPoint.Application	Manipulates PowerPoint presentations.
+	Schedule.Service	Schedule and edit Windows Tasks.
+	ScriptControl	Dynamically execute VBscript or JScript.
+	Scripting.Dictionary	Object that stores data key, item pairs.
+	Scripting.FileSystemObject	Access files & folders
+	Shell.Application	Access Explorer & IE windows/tabs; open & manipulate windows.
+	Shell.Explorer	Embed an Explorer/Browser control in a GUI (Internet Explorer - trident browser).
+	SAPI.SpVoice	Text-to-Speech (TTS).
+	VBScript.RegExp	VBS Regular Expressions (including global match).
+	WMPlayer.OCX	Play media files; Embed WMPlayer control in a GUI.
+	WinHttp.WinHttpRequest.5.1	Provides simple HTTP client functionality, allowing much more control than UrlDownloadToFile.
+	Winmgmt	Get system information; Manage windows services.
+	WScript.Shell	Various administration tasks (many native AHK tasks).
+	Word.Application	Manipulates Word documents.
+		
+; 24. AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	Abs	Returns the absolute value of Number.
 	ACos	Returns the arccosine (the number whose cosine is Number) in radians.

@@ -65,7 +65,7 @@
 	i_Lang011 =	&Goto
 	i_Lang012 =	L&abel
 	i_Lang013 =	Pok&iaľ Závierka
-	i_Lang014 =	&Ukazovatele
+	i_Lang014 =	&Ukazovatele / Poľa
 	i_Lang015 =	&Funkcia / Metódy poľa
 	i_Lang016 =	Inte&rnet Explorer
 	i_Lang017 =	&COM Rozhranie
@@ -243,7 +243,7 @@
 	w_Lang061 =	Goto (Shift+F9)
 	w_Lang062 =	Label (Ctrl+F9)
 	w_Lang063 =	Pokiaľ závierka (F10)
-	w_Lang064 =	Premenné (Shift+F10)
+	w_Lang064 =	Premenné / Poľa (Shift+F10)
 	w_Lang065 =	Funkcia / Metódy poľa (Ctrl+F10)
 	w_Lang066 =	Internet Explorer (F11)
 	w_Lang067 =	COM rozhranie (Shift+F11)
@@ -1018,33 +1018,57 @@
 	Co_Oper_7 =	Menší alebo rovný
 		
 ; 22. IE Commands Tips		
-	Tip_Checked =	Nastaví alebo získa stav zaškrtávacie políčko alebo prepínač.
-	Tip_Click =	Simuluje kliknite na objekt.
-	Tip_Focus =	Nastaví fokus na objekt.
-	Tip_GoBack =	Pohyb späť o jednu položku v zozname histórie.
-	Tip_GoForward =	Prejde dopredu o jednu položku v zozname histórie.
-	Tip_GoHome =	Prejde na aktuálnej domácej alebo úvodnej stránky.
-	Tip_GoSearch =	Prejde na aktuálne vyhľadávania.
-	Tip_Height =	Nastaví alebo získa výšku objektu.
-	Tip_Href =	Nastaví alebo získa cieľovú adresu URL alebo kotviaci bod.
-	Tip_InnerHTML =	Nastaví alebo získa HTML objektu.
-	Tip_InnerText =	Nastaví alebo získa text objektu.
-	Tip_Length =	Nastavuje alebo načítava počet objektov v kolekcii.
-	Tip_LocationName =	Získa cestu alebo názov aktuálnej stránky.
-	Tip_LocationURL =	Načíta adresu URL aktuálnej stránky.
-	Tip_Navigate =	Prejde na adresu URL alebo cestu.
-	Tip_OuterHTML =	Nastaví alebo získa objekt a jej obsah vo formáte HTML.
-	Tip_Quit =	Zavrie stránku.
-	Tip_Refresh =	Obnovenie aktuálne zobrazenej stránky.
-	Tip_SelectedIndex =	Nastaví alebo získa index vybrané voľby v objekte select.
-	Tip_Src =	Nastaví alebo získa URL má byť zavedený pri objekte.
-	Tip_Stop =	Zruší čakajúci navigáciu alebo stiahnuť.
-	Tip_Submit =	Odošle formulár.
-	Tip_Type =	Nastaví alebo získa typ obsahu objektu.
-	Tip_Value =	Získa alebo nastaví hodnotu objektu.
-	Tip_Width =	Nastaví alebo získa šírku objektu.
+	IE_Cmd_Index =	
+	Checked	Nastaví alebo získa stav zaškrtávacie políčko alebo prepínač.
+	Click	Simuluje kliknite na objekt.
+	Focus	Nastaví fokus na objekt.
+	GoBack	Pohyb späť o jednu položku v zozname histórie.
+	GoForward	Prejde dopredu o jednu položku v zozname histórie.
+	GoHome	Prejde na aktuálnej domácej alebo úvodnej stránky.
+	GoSearch	Prejde na aktuálne vyhľadávania.
+	Height	Nastaví alebo získa výšku objektu.
+	Href	Nastaví alebo získa cieľovú adresu URL alebo kotviaci bod.
+	InnerHTML	Nastaví alebo získa HTML objektu.
+	InnerText	Nastaví alebo získa text objektu.
+	Length	Nastavuje alebo načítava počet objektov v kolekcii.
+	LocationName	Získa cestu alebo názov aktuálnej stránky.
+	LocationURL	Načíta adresu URL aktuálnej stránky.
+	Navigate	Prejde na adresu URL alebo cestu.
+	OuterHTML	Nastaví alebo získa objekt a jej obsah vo formáte HTML.
+	Quit	Zavrie stránku.
+	Refresh	Obnovenie aktuálne zobrazenej stránky.
+	SelectedIndex	Nastaví alebo získa index vybrané voľby v objekte select.
+	Src	Nastaví alebo získa URL má byť zavedený pri objekte.
+	Stop	Zruší čakajúci navigáciu alebo stiahnuť.
+	Submit	Odošle formulár.
+	Type	Nastaví alebo získa typ obsahu objektu.
+	Value	Získa alebo nastaví hodnotu objektu.
+	Width	Nastaví alebo získa šírku objektu.
 		
-; 23. AHK Commands Tips		
+; 23. COM Methods Tips		
+	COM_CLSID_Index =	
+	Excel.Application	Manipuluje listy programu Excel.
+	HTMLfile	Môže byť použitý na čítať, písať a komunikovať s HTML.
+	InternetExplorer.Application	Preskúmať webové stránky.
+	MSXML2.DOMDocument.6.0	XML parser.
+	MSXML2.XMLHTTP	Predstavuje požiadavku XML pomocou protokolu HTTP.
+	Outlook.Application	Manipulovať úloh aplikácie Outlook a položky.
+	PowerPoint.Application	Manipuloval prezentácie PowerPoint.
+	Schedule.Service	Plán a upravovať úlohy Windows.
+	ScriptControl	Dynamicky spustiť VBScript alebo JScript.
+	Scripting.Dictionary	Objekt, ktorý ukladá kľúč dát, položky párov.
+	Scripting.FileSystemObject	Prístup k súborom a priečinky
+	Shell.Application	Prístup Explorer a IE okna / záložky; otvorení a manipulovať s oknami.
+	Shell.Explorer	Vložiť ovládací prvok Explorer / prehliadača v GUI (Internet Explorer - trojzubec prehliadač).
+	SAPI.SpVoice	Text-to-Speech (TTS).
+	VBScript.RegExp	VBS regulárnych výrazov (vrátane globálneho zápas).
+	WMPlayer.OCX	Prehrávanie multimediálnych súborov; Ovládanie Vložiť wmplayer v GUI.
+	WinHttp.WinHttpRequest.5.1	Poskytuje jednoduché funkcie klienta HTTP, čo umožňuje oveľa väčšiu kontrolu než UrlDownloadToFile.
+	Winmgmt	Získať informácie o systéme; Správa okná služby.
+	WScript.Shell	Rôzne administratívne úlohy (veľa prirodzených AHK úlohy).
+	Word.Application	Manipuluje dokumentov aplikácie Word.
+		
+; 24. AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	Abs	Vráti absolútnu hodnotu čísla.
 	ACos	Vracia arkuskosínus (číslo, ktorého kosínus je číslo) v radiánoch.

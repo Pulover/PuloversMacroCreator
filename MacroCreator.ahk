@@ -3013,7 +3013,7 @@ Gui, 4:Tab, 7
 ; Language Editor
 Gui, 4:Add, GroupBox, Section ym xm+170 W400 H395, %t_Lang178%:
 Gui, 4:Add, DDL, ys+20 xs+10 W185 vEditLang gUpdateEditList, %Lang_List%
-Gui, 4:Add, DDL, yp x+10 W185 vRefLang gUpdateEditList, %Lang_List%
+Gui, 4:Add, DDL, yp x+10 W185 vRefLang gUpdateRefList, %Lang_List%
 Gui, 4:Add, ListView, y+10 xs+10 W380 R9 hwndLangListID vLangList gLangList -Multi NoSort AltSubmit, %t_Lang188%|%t_Lang189%
 Gui, 4:Add, Edit, y+5 xs+10 W380 R3 vRowLang gUpdateRowLang -WantReturn
 Gui, 4:Add, Edit, y+5 xs+10 W380 R3 vRowRef -WantReturn ReadOnly
@@ -3066,7 +3066,6 @@ LV_ModifyCol(2, 174)
 InEditLang := ""
 LangMan := new LV_Rows(LangListId)
 LangMan.EnableGroups()
-GoSub, UpdateEditList
 If (CloseAction = "Minimize")
 	GuiControl, 4:, MinToTray, 1
 Else If (CloseAction = "Close")
@@ -3079,6 +3078,7 @@ GuiControl, 4:, OnRelease, %OnRelease%
 GuiControl, 4:, OnEnter, %OnEnter%
 GuiControl, 4:Enable%RandomSleeps%, RandPercent
 GuiControl, 4:Enable%RandomSleeps%, RandPer
+GoSub, UpdateEditList
 GoSub, OptionsSub
 If (A_GuiControl = "CoordTip")
 {
@@ -3463,7 +3463,6 @@ UpdateEditList:
 Gui, 4:Submit, NoHide
 SelRow := LV_GetNext()
 ELang := RegExReplace(EditLang, "\s/.*")
-RLang := RegExReplace(RefLang, "\s/.*")
 For i, l in LangFiles
 {
 	If (LangData.HasKey(i))
@@ -3481,11 +3480,12 @@ For i, l in LangFiles
 		}
 	}
 	If (ELang = lName)
+	{
 		ELang := n
-	If (RLang = lName)
-		RLang := n
+		break
+	}
 }
-RowDataA := [], RowDataB := []
+RowDataA := []
 LV_Delete(), Groups := [], Idx := 1
 For i, Section in LangFiles[ELang]
 {
@@ -3496,6 +3496,34 @@ For i, Section in LangFiles[ELang]
 	,	RowDataA.Push(values*), Idx += values.Length()
 	}
 }
+For i, v in RowDataA
+	LV_Add("", RowDataA[i])
+UpdateRefList:
+Gui, 4:Submit, NoHide
+RLang := RegExReplace(RefLang, "\s/.*")
+For i, l in LangFiles
+{
+	If (LangData.HasKey(i))
+		lName := (InStr(i, "_")) ? LangData[i].Lang : LangData[i].Idiom, n := i
+	Else
+	{
+		c := RegExReplace(i, "_.*")
+		For e, l in LangData
+		{
+			If (InStr(e, c))
+			{
+				lName := (InStr(e, "_")) ? l.Lang : l.Idiom, n := c
+				break
+			}
+		}
+	}
+	If (RLang = lName)
+	{
+		RLang := n
+		break
+	}
+}
+RowDataB := []
 For i, Section in LangFiles[RLang]
 {
 	For var, value in Section
@@ -3504,9 +3532,19 @@ For i, Section in LangFiles[RLang]
 	,	RowDataB.Push(values*)
 	}
 }
-For i, v in RowDataA
-	LV_Add("", RowDataA[i], RowDataB[i])
+For i, v in RowDataB
+	LV_Modify(i, "Col2", RowDataB[i])
 RowDataA := "", RowDataB := ""
+If (A_ThisLabel = "UpdateRefList")
+{
+	SelRow := LV_GetNext()
+	If (SelRow > 0)
+	{
+		LV_GetText(RowText, SelRow, 2)
+		GuiControl, 4:, RowRef, %RowText%
+	}
+	return
+}
 If (SelRow > 0)
 {
 	LV_Modify(SelRow, "Select")
@@ -4833,13 +4871,6 @@ return
 
 Screenshot:
 Gui, +OwnDialogs
-If (!IsFunc("Gdip_Startup"))
-{
-	MsgBox, 17, %d_Lang007%, %d_Lang040%
-	IfMsgBox, OK
-		Run, http://www.autohotkey.com/board/topic/29449-gdi-standard-library
-	return
-}
 SS := 1
 GetArea:
 Gui, Submit, NoHide
@@ -7433,8 +7464,8 @@ Gui, 21:Add, Edit, y+5 xs+10 W430 R4 -vScroll vTestVar
 Gui, 21:Add, Text, y+11 xs+10 W135 vFormatTip2
 Gui, 21:Add, DDL, yp-5 x+0 W55 vIfOper gCoOper Disabled, =$$==$!=$>$<$>=$<=
 Gui, 21:Add, Text, yp+5 x+5 W150 vCoOper cGray, %Co_Oper_1%
-Gui, 21:Add, Edit, y+5 xs+10 W430 R4 -vScroll vTestVar2 Disabled
 Gui, 21:Add, Text, yp xs+10 W430 R6 vExpTxt Hidden, %d_Lang097%
+Gui, 21:Add, Edit, yp+20 xs+10 W430 R4 -vScroll vTestVar2 Disabled
 Gui, 21:Add, Text, W430 r1 cGray vVarTxt, %c_Lang025%
 Gui, 21:Add, Link, xp yp W430 r1 vExprLink1 gExprLink Hidden, <a>%c_Lang091%</a>
 Gui, 21:Add, Groupbox, Section xs y+15 W450 H50, %c_Lang123%:
@@ -7456,7 +7487,7 @@ Gui, 21:Add, Edit, y+10 xs+10 W430 H110 vVarValue
 Gui, 21:Add, Text, W430 r1 cGray vVarTip, %c_Lang025%
 Gui, 21:Add, Link, xp yp W430 r1 vExprLink2 gExprLink Hidden, <a>%c_Lang091%</a>
 Gui, 21:Add, Text, y+5 W430 r1 cGray vArrayTip Hidden, %c_Lang206%
-Gui, 21:Add, Groupbox, Section xs y+15 W450 H50, %c_Lang010%:
+Gui, 21:Add, Groupbox, Section xs y+14 W450 H50, %c_Lang010%:
 Gui, 21:Add, Button, -Wrap ys+18 xs+85 W75 H23 vVarCopyA gVarCopy, %c_Lang023%
 Gui, 21:Add, Button, -Wrap x+10 yp W75 H23 gReset, %c_Lang088%
 Gui, 21:Add, Button, -Wrap Section xm y+14 W75 H23 gVarOK, %c_Lang020%
@@ -7480,7 +7511,7 @@ Gui, 21:Add, Text, W430 yp+25 xs+10, %c_Lang090%:
 Gui, 21:Add, Edit, W430 R1 -Multi vVarValueF
 Gui, 21:Add, Text, W430 R1 vFuncTip
 Gui, 21:Add, Link, y+10 W430 r1 vExprLink3 gExprLink, <a>%c_Lang091%</a>
-Gui, 21:Add, Groupbox, Section xs y+10 W450 H50, %c_Lang010%:
+Gui, 21:Add, Groupbox, Section xs y+13 W450 H50, %c_Lang010%:
 Gui, 21:Add, Button, -Wrap ys+18 xs+85 W75 H23 vVarCopyB gVarCopy, %c_Lang023%
 Gui, 21:Add, Button, -Wrap x+10 yp W75 H23 gReset, %c_Lang088%
 Gui, 21:Add, Button, -Wrap Section xm y+14 W75 H23 gVarOK, %c_Lang020%
@@ -8056,6 +8087,8 @@ Else
 }
 If (Statement = If15)
 {
+	GuiControl, 21:Hide, CoOper
+	GuiControl, 21:Hide, IfOper
 	GuiControl, 21:Hide, TestVar2
 	GuiControl, 21:Hide, VarTxt
 	GuiControl, 21:Show, ExpTxt
@@ -8065,8 +8098,10 @@ Else
 {
 	GuiControl, 21:Hide, ExpTxt
 	GuiControl, 21:Hide, ExprLink1
-	GuiControl, 21:Show, TestVar2
+	GuiControl, 21:Show, CoOper
+	GuiControl, 21:Show, IfOper
 	GuiControl, 21:Show, VarTxt
+	GuiControl, 21:Show, TestVar2
 }
 return
 
@@ -8567,7 +8602,7 @@ If (s_Caller = "Edit")
 		GuiControl, 24:, ScLet, %Details%
 		GuiControl, 24:, % (Type = cType42) ? "RunVB" : "RunJS", 1
 		GoSub, TabControl
-		GuiTitle := c_Lang155, SB_SetText("")
+		GuiTitle := c_Lang155, SB_SetText(Com_Tips["ScriptControl"])
 	}
 	Else
 	{
@@ -8603,7 +8638,7 @@ If (A_ThisLabel = "IECom")
 		GuiControl, 24:ChooseString, IECmd, %GotoRes1%
 		GoSub, IECmd
 	}
-	SB_SetText(Tip_Navigate)
+	SB_SetText(IE_Tips["Navigate"])
 }
 If (A_ThisLabel = "ComInt")
 {
@@ -8612,13 +8647,13 @@ If (A_ThisLabel = "ComInt")
 		GuiControl, 24:ChooseString, ComCLSID, %GotoRes1%
 	GoSub, TabControl
 	GuiTitle := c_Lang013
-	SBShowTip("ComObjCreate")
+	SB_SetText(Com_Tips["InternetExplorer.Application"])
 }
 Else If (A_ThisLabel = "RunScrLet")
 {
 	GuiControl, 24:Choose, TabControl, 3
 	GoSub, TabControl
-	GuiTitle := c_Lang155, SB_SetText("")
+	GuiTitle := c_Lang155, SB_SetText(Com_Tips["ScriptControl"])
 }
 GuiControl, 24:Choose, IEWindows, %SelIEWin%
 Gui, 24:Show, , %GuiTitle%
@@ -8938,7 +8973,7 @@ Else
 	GuiControl, 24:Enable, Property
 }
 Try
-	SB_SetText(Tip_%IECmd%)
+	SB_SetText(IE_Tips[IECmd])
 Catch
 	SB_SetText("")
 return
@@ -9062,6 +9097,7 @@ If (TabControl = 2)
 		GuiControl, 24:Disabled, LoadWait
 	}
 	GuiControl, 24:, LoadWait, 0
+	SB_SetText(Com_Tips[ComCLSID])
 }
 Else
 {
@@ -13228,14 +13264,17 @@ pb_COMInterface:
 	Loop, Parse, Step, `n, %A_Space%%A_Tab%`r
 	{
 		LoopField := StrReplace(A_LoopField, "``n", "`n")
+	,	pbType := Type, pbAction := Action
 		Try
 		{
-			If (!IsObject(%Act1%))
-				%Act1% := COMInterface(LoopField, %Act1%, lResult, Target)
-			Else
-				COMInterface(LoopField, %Act1%, lResult, Target)
-			If (lResult != "")
-				AssignVar(Act2, ":=", lResult, __PointMarker)
+			EvalResult := Eval(LoopField, __PointMarker)
+		; ,	lResult := StrJoin(EvalResult)
+			; If (!IsObject(%Act1%))
+				; %Act1% := COMInterface(LoopField, %Act1%, lResult, Target)
+			; Else
+				; COMInterface(LoopField, %Act1%, lResult, Target)
+			; If (lResult != "")
+				; AssignVar(Act2, ":=", lResult, __PointMarker)
 		}
 		Catch e
 		{
@@ -13247,8 +13286,8 @@ pb_COMInterface:
 				return
 			}
 		}
+		Type := pbType, Action := pbAction
 	}
-	
 	If (Window = "LoadWait")
 	{
 		Try Menu, Tray, Icon, %ResDllPath%, 77
@@ -15255,12 +15294,24 @@ For i, Section in LangFiles[Lang]
 
 HelpDocsUrl := (InStr(Lang, "zh")=1) ?  "http://ahkcn.github.io/docs"
 			: (Lang = "de") ? "http://ragnar-f.github.io/docs" : "http://autohotkey.com/docs"
-Cmd_Tips := {}
+Cmd_Tips := {}, IE_Tips := {}, Com_Tips := {}
 Loop, Parse, Ahk_Cmd_Index, `n
 {
 	TipArray := StrSplit(A_LoopField, A_Tab), Command := TipArray[1]
 	Loop, Parse, Command, /, %A_Space%
 		Cmd_Tips[A_LoopField] := TipArray[2]
+}
+Loop, Parse, IE_Cmd_Index, `n
+{
+	TipArray := StrSplit(A_LoopField, A_Tab), Command := TipArray[1]
+	Loop, Parse, Command, /, %A_Space%
+		IE_Tips[A_LoopField] := TipArray[2]
+}
+Loop, Parse, COM_CLSID_Index, `n
+{
+	TipArray := StrSplit(A_LoopField, A_Tab), Command := TipArray[1]
+	Loop, Parse, Command, /, %A_Space%
+		Com_Tips[A_LoopField] := TipArray[2]
 }
 TipArray := ""
 return

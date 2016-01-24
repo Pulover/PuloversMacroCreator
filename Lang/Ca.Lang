@@ -65,7 +65,7 @@
 	i_Lang011 =	&Anar A
 	i_Lang012 =	Label
 	i_Lang013 =	&Si Els Estats
-	i_Lang014 =	&Variables
+	i_Lang014 =	&Variables / Matriu
 	i_Lang015 =	F&uncions / Mètodes de matriu
 	i_Lang016 =	I&nterfície d'Internet Explorer
 	i_Lang017 =	C&OM
@@ -243,7 +243,7 @@
 	w_Lang061 =	Ir (Shift+F9)
 	w_Lang062 =	Label (Ctrl+F9)
 	w_Lang063 =	Si Declaracions (F10)
-	w_Lang064 =	Variables (Shift+F10)
+	w_Lang064 =	Variables / Matriu (Shift+F10)
 	w_Lang065 =	Funcions / Mètodes de matriu (Ctrl+F10)
 	w_Lang066 =	Internet Explorer (F11)
 	w_Lang067 =	COM Interface (Shift+F11)
@@ -1018,33 +1018,57 @@
 	Co_Oper_7 =	Menor o igual
 		
 ; 22. IE Commands Tips		
-	Tip_Checked =	Estableix o indica l'estat de la casella de verificació o botó de ràdio.
-	Tip_Click =	Simula un clic sobre l'objecte.
-	Tip_Focus =	Estableix el focus a l'objecte.
-	Tip_GoBack =	Retrocedeix un element a la llista d'historial.
-	Tip_GoForward =	Avança un element a la llista d'historial.
-	Tip_GoHome =	Es desplaça a la casa actual o la pàgina d'inici.
-	Tip_GoSearch =	Es desplaça a la pàgina de cerca.
-	Tip_Height =	Estableix o recupera l'alçada de l'objecte.
-	Tip_Href =	Estableix o un URL de destinació o un punt d'ancoratge.
-	Tip_InnerHTML =	Estableix o el codi HTML de l'objecte.
-	Tip_InnerText =	Estableix o obté el text de l'objecte.
-	Tip_Length =	Estableix o recupera el nombre d'objectes en una col · lecció.
-	Tip_LocationName =	Obté el títol de la pàgina actual ruta o.
-	Tip_LocationURL =	Obté l'adreça URL de la pàgina actual.
-	Tip_Navigate =	Es desplaça a una adreça URL o la ruta.
-	Tip_OuterHTML =	Estableix o recupera l'objecte i el contingut en HTML.
-	Tip_Quit =	Tanca la pàgina.
-	Tip_Refresh =	Torna a carregar la pàgina actual.
-	Tip_SelectedIndex =	Estableix o l'índex de l'opció seleccionada en un objecte de selecció.
-	Tip_Src =	Estableix o un URL a carregar l'objecte.
-	Tip_Stop =	Cancel una navegació o descàrrega pendents.
-	Tip_Submit =	Envia el formulari.
-	Tip_Type =	Estableix o el tipus de contingut de l'objecte.
-	Tip_Value =	Obté o estableix el valor de l'objecte.
-	Tip_Width =	Estableix o recupera l'amplada de l'objecte.
+	IE_Cmd_Index =	
+	Checked	Estableix o indica l'estat de la casella de verificació o botó de ràdio.
+	Click	Simula un clic sobre l'objecte.
+	Focus	Estableix el focus a l'objecte.
+	GoBack	Retrocedeix un element a la llista d'historial.
+	GoForward	Avança un element a la llista d'historial.
+	GoHome	Es desplaça a la casa actual o la pàgina d'inici.
+	GoSearch	Es desplaça a la pàgina de cerca.
+	Height	Estableix o recupera l'alçada de l'objecte.
+	Href	Estableix o un URL de destinació o un punt d'ancoratge.
+	InnerHTML	Estableix o el codi HTML de l'objecte.
+	InnerText	Estableix o obté el text de l'objecte.
+	Length	Estableix o recupera el nombre d'objectes en una col · lecció.
+	LocationName	Obté el títol de la pàgina actual ruta o.
+	LocationURL	Obté l'adreça URL de la pàgina actual.
+	Navigate	Es desplaça a una adreça URL o la ruta.
+	OuterHTML	Estableix o recupera l'objecte i el contingut en HTML.
+	Quit	Tanca la pàgina.
+	Refresh	Torna a carregar la pàgina actual.
+	SelectedIndex	Estableix o l'índex de l'opció seleccionada en un objecte de selecció.
+	Src	Estableix o un URL a carregar l'objecte.
+	Stop	Cancel una navegació o descàrrega pendents.
+	Submit	Envia el formulari.
+	Type	Estableix o el tipus de contingut de l'objecte.
+	Value	Obté o estableix el valor de l'objecte.
+	Width	Estableix o recupera l'amplada de l'objecte.
 		
-; 23. AHK Commands Tips		
+; 23. COM Methods Tips		
+	COM_CLSID_Index =	
+	Excel.Application	Manipula fulles d'Excel.
+	HTMLfile	Es pot utilitzar per llegir, escriure i interactuar amb HTML.
+	InternetExplorer.Application	Explora llocs web.
+	MSXML2.DOMDocument.6.0	Analitzador XML.
+	MSXML2.XMLHTTP	Representa una sol·licitud XML utilitzant HTTP.
+	Outlook.Application	Manipulació tasques i elements d'Outlook.
+	PowerPoint.Application	Presentacions de PowerPoint manipulat.
+	Schedule.Service	Programar i editar tasques de Windows.
+	ScriptControl	Dinàmicament executar VBScript o JScript.
+	Scripting.Dictionary	Objecte que emmagatzema clau de dades, els parells d'elements.
+	Scripting.FileSystemObject	Accedir a arxius i carpetes
+	Shell.Application	Accés i Explorador IE finestres / pestanyes; obrir i manipular finestres.
+	Shell.Explorer	Inserir un control Explorador / Navegador en una interfície gràfica d'usuari (Internet Explorer - el navegador trident).
+	SAPI.SpVoice	Text-to-Speech (TTS).
+	VBScript.RegExp	Expressions regulars VBS (incloent partit mundial).
+	WMPlayer.OCX	Reproduir arxius multimèdia; Control Inserir Wmplayer en una interfície gràfica d'usuari.
+	WinHttp.WinHttpRequest.5.1	Proporciona funcionalitat de client HTTP simple, el que permet un major control de URLDownloadToFile.
+	Winmgmt	Obtenir informació del sistema; Administrar serveis de Windows.
+	WScript.Shell	Diverses tasques d'administració (moltes tasques natives AHK).
+	Word.Application	Manipula els documents de Word.
+		
+; 24. AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	Abs	Retorna el valor absolut del nombre .
 	ACos	Retorna l'arc cosinus (el nombre el cosinus és número) en radians .

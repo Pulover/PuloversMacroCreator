@@ -317,18 +317,18 @@
 				}
 				If (Type = cType35)
 					continue
-				If ((Type = cType32) || (Type = cType33) || (Type = cType34))
-				{
-					While (RegExMatch(Step, "\w+\[[\w\[\]]*\]", lFound))
-					{
-						lFound := RegExReplace(lFound, "\s")
-					,	lResult := ExtractArrays(lFound, l_Point)
-						If (lFound = "_ArrayObject")
-							lFound := %lFound%
-						lFound := RegExReplace(lFound, "[\[|\]]", "\$0")
-					,	Step := RegExReplace(Step, lFound, lResult)
-					}
-				}
+				; If ((Type = cType32) || (Type = cType33) || (Type = cType34))
+				; {
+					; While (RegExMatch(Step, "\w+\[[\w\[\]]*\]", lFound))
+					; {
+						; lFound := RegExReplace(lFound, "\s")
+					; ,	lResult := ParseObjects(lFound, l_Point)
+						; If (lFound = "_ArrayObject")
+							; lFound := %lFound%
+						; lFound := RegExReplace(lFound, "[\[|\]]", "\$0")
+					; ,	Step := RegExReplace(Step, lFound, lResult)
+					; }
+				; }
 				If (Manual)
 				{
 					If Type in %cType5%,%cType7%,%cType38%,%cType39%,%cType40%,%cType41%,%cType45%
@@ -530,7 +530,7 @@
 				,	CheckVars("Step|Target|Window|VarName|VarValue", PointMarker)
 				,	pbVarName := VarName
 				,	pbVarValue := VarValue
-				,	tlResult := ExtractArrays(Target, PointMarker)
+				,	tlResult := ParseObjects(Target, PointMarker)
 				,	Target := IsObject(tlResult) ? "tlResult" : tlResult
 					If (Type = cType21)
 					{
@@ -939,18 +939,18 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC, ByRef LoopCount, ScopedP
 				}
 				If (Type = cType35)
 					continue
-				If ((Type = cType32) || (Type = cType33) || (Type = cType34))
-				{
-					While (RegExMatch(Step, "\w+\[[\w\[\]]*\]", lFound))
-					{
-						lFound := RegExReplace(lFound, "\s")
-					,	lResult := ExtractArrays(lFound, l_Point)
-						If (lFound = "_ArrayObject")
-							lFound := %lFound%
-						lFound := RegExReplace(lFound, "[\[|\]]", "\$0")
-					,	Step := RegExReplace(Step, lFound, lResult)
-					}
-				}
+				; If ((Type = cType32) || (Type = cType33) || (Type = cType34))
+				; {
+					; While (RegExMatch(Step, "\w+\[[\w\[\]]*\]", lFound))
+					; {
+						; lFound := RegExReplace(lFound, "\s")
+					; ,	lResult := ParseObjects(lFound, l_Point)
+						; If (lFound = "_ArrayObject")
+							; lFound := %lFound%
+						; lFound := RegExReplace(lFound, "[\[|\]]", "\$0")
+					; ,	Step := RegExReplace(Step, lFound, lResult)
+					; }
+				; }
 				If ((Type = cType7) || (Type = cType38) || (Type = cType39)
 				|| (Type = cType40) || (Type = cType41) || (Type = cType45))
 				{
@@ -1109,7 +1109,7 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC, ByRef LoopCount, ScopedP
 				,	CheckVars("Step|Target|Window|VarName|VarValue", PointMarker)
 				,	pbVarName := VarName
 				,	pbVarValue := VarValue
-				,	tlResult := ExtractArrays(Target, PointMarker)
+				,	tlResult := ParseObjects(Target, PointMarker)
 				,	Target := IsObject(tlResult) ? "tlResult" : tlResult
 					If (Type = cType21)
 					{
@@ -1701,7 +1701,7 @@ AssignVar(Name, Operator, Value, l_Point)
 	{
 		If (RegExMatch(lFound1, "^\d+$"))
 			break
-		_content := ExtractArrays(Name, l_Point, _ObjItems)
+		_content := ParseObjects(Name, l_Point, _ObjItems)
 	,	Name := lFound1
 	}
 	
@@ -1764,35 +1764,78 @@ CheckVars(Match_List, l_Point := "")
 	}
 }
 
-ExtractArrays(v_String, l_Point, ByRef v_levels := "", QuoteStrings := false)
+ParseObjects(v_String, l_Point, ByRef v_levels := "", QuoteStrings := false, o_Oper := "", o_Value := "")
 {
-	local EvalResult, l_Found, l_Found1, l_Found2
+	local po_ArrayObject, EvalResult, l_Matches, o_String, v_Obj, _Pos, l_Found, l_Found1, l_Found2, _Params, _Key, HasMethod := false
+	Static needle := "(\w+\.?|\(([^()]++|(?R))*\)\.?|\[([^\[\]]++|(?R))*\]\.?)"
 
-	v_levels := []
-	While (RegExMatch(v_String, "(\w+)(\[\S+?\]|\.\w+)", l_Found))
+	_Pos := 1, l_Matches := []
+	While (_Pos := RegExMatch(v_String, needle, l_Found, _Pos))
 	{
-		If (RegExMatch(l_Found1, "^\d+$"))
-			break
-		l_Found := RegExReplace(l_Found, "[\[|\]]", "\$0")
-		If (InStr(l_Found2, ".")=1)
-			l_Found2 := SubStr(l_Found2, 2), l_Found2 := RegExMatch(l_Found2, "^\d+$") ? l_Found2 : """" l_Found2 """"
-		Else
-			l_Found2 :=  RegExReplace(l_Found2, "[\[\]]")
-		EvalResult := Eval(l_Found2, l_Point)
-	,	l_Found2 := StrJoin(EvalResult)
-	,	v_levels.Push(l_Found2)
-	,	_ArrayObject := %l_Found1%[l_Found2]
-		If (IsObject(_ArrayObject))
-			v_String := RegExReplace(v_String, l_Found, "_ArrayObject")
-		Else
-		{
-			If (QuoteStrings)
-				If (!RegExMatch(_ArrayObject, "^\d+$"))
-					_ArrayObject := """" _ArrayObject """"
-			v_String := RegExReplace(v_String, l_Found, _ArrayObject)
-			break
-		}
+		l_Matches.Push(RTrim(l_Found, "."))
+	,	_Pos += StrLen(l_Found), o_String .= l_Found
 	}
+
+	v_levels := [], v_Obj := l_Matches[1]
+	Try _ArrayObject := %v_Obj%
+	For i, v in l_Matches
+	{
+		If (i = 1)
+			continue
+		If (RegExMatch(v, "^\((.*)\)$", l_Found))
+			continue
+		If (RegExMatch(v, "^\[(.*)\]$", l_Found))
+		{
+			po_ArrayObject := _ArrayObject
+		,	EvalResult := Eval(l_Found1, l_Point)
+		,	_ArrayObject := po_ArrayObject
+		,	_Key := EvalResult[1]
+		}
+		Else
+			_Key := v
+		n := l_Matches[i + 1], v_levels.Push(_Key)
+		If (RegExMatch(n, "^\((.*)\)$", l_Found))
+		{
+			po_ArrayObject := _ArrayObject
+		,	_Params := Eval(l_Found1, l_Point)
+		,	_ArrayObject := po_ArrayObject
+		,	_ArrayObject := _ArrayObject[_Key](_Params*)
+		,	HasMethod := true
+		}
+		Else If ((i = l_Matches.Length()) && (o_Value != ""))
+		{
+			Try
+			{
+				If (o_Oper = ":=")
+					_ArrayObject := _ArrayObject[_Key] := o_Value
+				Else If (o_Oper = "+=")
+					_ArrayObject := _ArrayObject[_Key] += o_Value
+				Else If (o_Oper = "-=")
+					_ArrayObject := _ArrayObject[_Key] -= o_Value
+				Else If (o_Oper = "*=")
+					_ArrayObject := _ArrayObject[_Key] *= o_Value
+				Else If (o_Oper = "/=")
+					_ArrayObject := _ArrayObject[_Key] /= o_Value
+				Else If (o_Oper = "//=")
+					_ArrayObject := _ArrayObject[_Key] //= o_Value
+				Else If (o_Oper = ".=")
+					_ArrayObject := _ArrayObject[_Key] .= o_Value
+			}
+		}
+		Else
+			_ArrayObject := _ArrayObject[_Key]
+	}
+	If (IsObject(_ArrayObject))
+		v_String := StrReplace(v_String, o_String, "_ArrayObject")
+	Else
+	{
+		If (QuoteStrings)
+			If (!RegExMatch(_ArrayObject, "^\d+$"))
+				_ArrayObject := """" _ArrayObject """"
+		v_String := StrReplace(v_String, o_String, _ArrayObject)
+	}
+	If (HasMethod)
+		v_levels := ""
 	return v_String
 }
 

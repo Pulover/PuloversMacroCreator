@@ -65,7 +65,7 @@
 	i_Lang011 =	&Goto
 	i_Lang012 =	L&abel
 	i_Lang013 =	&Če Izjave
-	i_Lang014 =	&Spremenljivke
+	i_Lang014 =	&Spremenljivke / Nizi
 	i_Lang015 =	&Funkcije / Metode zaporedji
 	i_Lang016 =	In&ternet Explorer
 	i_Lang017 =	&COM Vmesnik
@@ -243,7 +243,7 @@
 	w_Lang061 =	Goto (Shift+F9)
 	w_Lang062 =	Label (Ctrl+F9)
 	w_Lang063 =	Če izjave (F10)
-	w_Lang064 =	Spremenljivke (Shift+F10)
+	w_Lang064 =	Spremenljivke / Nizi (Shift+F10)
 	w_Lang065 =	Funkcije / Metode zaporedji (Ctrl+F10)
 	w_Lang066 =	Internet Explorer (F11)
 	w_Lang067 =	COM vmesnik (Shift+F11)
@@ -1018,33 +1018,57 @@
 	Co_Oper_7 =	Manjša ali enaka
 		
 ; 22. IE Commands Tips		
-	Tip_Checked =	Nastavi ali pridobi stanje potrditvenega polja ali izbirnega gumba.
-	Tip_Click =	Simulira klik na objekt.
-	Tip_Focus =	Nastavi fokus na objektu.
-	Tip_GoBack =	Pomika nazaj en element v seznamu zgodovine.
-	Tip_GoForward =	Pomika naprej za eno točko s seznama zgodovine.
-	Tip_GoHome =	Krmari na trenutno doma ali začetek strani.
-	Tip_GoSearch =	Krmari na trenutno stran iskanje.
-	Tip_Height =	Komplet ali pridobi višino predmeta.
-	Tip_Href =	Določa ali pridobi ciljni URL ali sidro točko.
-	Tip_InnerHTML =	Nastavi ali pridobi HTML predmeta.
-	Tip_InnerText =	Nastavi, ali dobi besedilo predmeta.
-	Tip_Length =	Nastavi ali pridobi število predmetov v zbirki.
-	Tip_LocationName =	Dobi pot ali naslov trenutne strani.
-	Tip_LocationURL =	Dobi URL trenutne strani.
-	Tip_Navigate =	Krmari na URL ali pot.
-	Tip_OuterHTML =	Nastavi ali pridobi predmeta in njeno vsebino v HTML.
-	Tip_Quit =	Zapre stran.
-	Tip_Refresh =	Polnitve trenutno prikazano stran.
-	Tip_SelectedIndex =	Nastavi ali pridobi indeks izbrano možnost v izbrani predmet.
-	Tip_Src =	Določa ali pridobi URL, ki se naloži na cilj.
-	Tip_Stop =	Prekliče čakajoče plovbo ali snemanja.
-	Tip_Submit =	Predloži obrazec.
-	Tip_Type =	Nastavi ali pridobi vrsto vsebine predmeta.
-	Tip_Value =	Dobi ali določa vrednost predmeta.
-	Tip_Width =	Komplet ali pridobi širino predmeta.
+	IE_Cmd_Index =	
+	Checked	Nastavi ali pridobi stanje potrditvenega polja ali izbirnega gumba.
+	Click	Simulira klik na objekt.
+	Focus	Nastavi fokus na objektu.
+	GoBack	Pomika nazaj en element v seznamu zgodovine.
+	GoForward	Pomika naprej za eno točko s seznama zgodovine.
+	GoHome	Krmari na trenutno doma ali začetek strani.
+	GoSearch	Krmari na trenutno stran iskanje.
+	Height	Komplet ali pridobi višino predmeta.
+	Href	Določa ali pridobi ciljni URL ali sidro točko.
+	InnerHTML	Nastavi ali pridobi HTML predmeta.
+	InnerText	Nastavi, ali dobi besedilo predmeta.
+	Length	Nastavi ali pridobi število predmetov v zbirki.
+	LocationName	Dobi pot ali naslov trenutne strani.
+	LocationURL	Dobi URL trenutne strani.
+	Navigate	Krmari na URL ali pot.
+	OuterHTML	Nastavi ali pridobi predmeta in njeno vsebino v HTML.
+	Quit	Zapre stran.
+	Refresh	Polnitve trenutno prikazano stran.
+	SelectedIndex	Nastavi ali pridobi indeks izbrano možnost v izbrani predmet.
+	Src	Določa ali pridobi URL, ki se naloži na cilj.
+	Stop	Prekliče čakajoče plovbo ali snemanja.
+	Submit	Predloži obrazec.
+	Type	Nastavi ali pridobi vrsto vsebine predmeta.
+	Value	Dobi ali določa vrednost predmeta.
+	Width	Komplet ali pridobi širino predmeta.
 		
-; 23. AHK Commands Tips		
+; 23. COM Methods Tips		
+	COM_CLSID_Index =	
+	Excel.Application	Manipulira Excel listov.
+	HTMLfile	Lahko se uporablja za branje, pisanje in interakcijo s HTML.
+	InternetExplorer.Application	Raziščite spletne strani.
+	MSXML2.DOMDocument.6.0	XML parser.
+	MSXML2.XMLHTTP	Predstavlja zahtevek za XML z uporabo HTTP.
+	Outlook.Application	Manipulira Outlook naloge in predmetov.
+	PowerPoint.Application	Spremenjene PowerPoint predstavitve.
+	Schedule.Service	Urnik in urejanje Windows Opravila.
+	ScriptControl	Dinamično izvedbo VBScript ali JScript.
+	Scripting.Dictionary	Objekt, ki shranjuje ključ podatkov, parov točko.
+	Scripting.FileSystemObject	Dostop do datotek in map
+	Shell.Application	Dostop Explorer in IE okna / jezički; odpreti in manipulirati okna.
+	Shell.Explorer	Embed nadzor raziskovalec / Browser v GUI (Internet Explorer - trizob brskalnik).
+	SAPI.SpVoice	Text-to-Speech (TTS).
+	VBScript.RegExp	VBS regularnih izrazov (vključno z globalno tekmo).
+	WMPlayer.OCX	Predvajanje predstavnostnih datotek; Vlagati Wmplayer nadzor v GUI.
+	WinHttp.WinHttpRequest.5.1	Zagotavlja enostavno funkcionalnost HTTP odjemalca, ki omogoča veliko več nadzora kot UrlDownloadToFile.
+	Winmgmt	Pridobite informacije o sistemu; Upravljanje okna storitev.
+	WScript.Shell	Različne upravne naloge (mnogi materni AHK naloge).
+	Word.Application	Manipulira Wordovih dokumentov.
+		
+; 24. AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	Abs	Vrne absolutno vrednost številke.
 	ACos	Vrne arkus kosinus (število, katerega kosinus je število) v radianih.
