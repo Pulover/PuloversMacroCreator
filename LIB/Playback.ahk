@@ -2,7 +2,7 @@
 {
 	local IfError := 0, PointMarker := 0, LoopCount := [0]
 	, m_ListCount := ListCount%Macro_On%, mLoopIndex, _Label, _i
-	, pbParams, pbVarName, pbVarValue, pbType, pbAction
+	, pbParams, pbVarName, pbVarValue, pbOper, pbType, pbAction, pbTarget
 	, ScopedParams := [], LastFuncRun, UserGlobals, GlobalList
 	, Func_Result, SVRef, FuncPars, ParamIdx := 1, EvalResult
 
@@ -170,8 +170,8 @@
 						}
 						UserGlobals := User_Vars.Get(true)
 						For each, Section in UserGlobals
-							For each, Key in Section
-								GlobalList .= Key.Key ","
+							For _each, _Key in Section
+								GlobalList .= _Key.Key ","
 						UserGlobals := ""
 						
 						SavedVars(, VarsList, true)
@@ -317,18 +317,6 @@
 				}
 				If (Type = cType35)
 					continue
-				; If ((Type = cType32) || (Type = cType33) || (Type = cType34))
-				; {
-					; While (RegExMatch(Step, "\w+\[[\w\[\]]*\]", lFound))
-					; {
-						; lFound := RegExReplace(lFound, "\s")
-					; ,	lResult := ParseObjects(lFound, l_Point)
-						; If (lFound = "_ArrayObject")
-							; lFound := %lFound%
-						; lFound := RegExReplace(lFound, "[\[|\]]", "\$0")
-					; ,	Step := RegExReplace(Step, lFound, lResult)
-					; }
-				; }
 				If (Manual)
 				{
 					If Type in %cType5%,%cType7%,%cType38%,%cType39%,%cType40%,%cType41%,%cType45%
@@ -529,9 +517,10 @@
 				,	AssignReplace(Step)
 				,	CheckVars("Step|Target|Window|VarName|VarValue", PointMarker)
 				,	pbVarName := VarName
+				,	pbOper := Oper
 				,	pbVarValue := VarValue
-				,	tlResult := ParseObjects(Target, PointMarker)
-				,	Target := IsObject(tlResult) ? "tlResult" : tlResult
+				,	pbTarget := ParseObjects(Target, PointMarker)
+					Try pbTarget := %pbTarget%
 					If (Type = cType21)
 					{
 						If (Target = "Expression")
@@ -542,7 +531,7 @@
 						,	Type := pbType, Action := pbAction
 						}
 						Try
-							AssignVar(pbVarName, Oper, pbVarValue, PointMarker)
+							AssignVar(pbVarName, pbOper, pbVarValue, PointMarker)
 						Catch e
 						{
 							MsgBox, 20, %d_Lang007%, % "Macro" mMacroOn ", " d_Lang065 " " mListRow
@@ -555,14 +544,14 @@
 						}
 						Try SavedVars(pbVarName)
 					}
-					Else If (IsObject(%Target%))
+					Else If (IsObject(pbTarget))
 					{
 						pbType := Type, pbAction := Action
 					,	pbParams := Eval(pbVarValue, PointMarker)
 					,	Type := pbType, Action := pbAction
 						Try
 						{
-							pbVarValue := %Target%[Action](pbParams*)
+							pbVarValue := pbTarget[Action](pbParams*)
 						,	AssignVar(pbVarName, ":=", pbVarValue, PointMarker)
 						}
 						Catch e
@@ -636,8 +625,12 @@
 								}
 							}
 						}
-						If ((IsFunc(Action)) && ((Func(Action).IsBuiltIn) || (Action = "Screenshot")))
+						If (IsFunc(Action))
 						{
+							If (!Func(Action).IsBuiltIn)
+								If Action not in Screenshot,Zip,UnZip
+									continue
+									
 							pbType := Type, pbAction := Action
 						,	pbParams := Eval(pbVarValue, PointMarker)
 						,	Type := pbType, Action := pbAction
@@ -817,7 +810,7 @@
 LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC, ByRef LoopCount, ScopedParams)
 {
 	local lCount, lIdx, L_Index, mLoopIndex, _Label, IfError := 0, _l
-	, pbParams, pbVarName, pbVarValue, pbType, pbAction
+	, pbParams, pbVarName, pbVarValue, pbOper, pbType, pbAction, pbTarget
 	, Func_Result, LastFuncRun, EvalResult
 
 	f_Loop:
@@ -939,18 +932,6 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC, ByRef LoopCount, ScopedP
 				}
 				If (Type = cType35)
 					continue
-				; If ((Type = cType32) || (Type = cType33) || (Type = cType34))
-				; {
-					; While (RegExMatch(Step, "\w+\[[\w\[\]]*\]", lFound))
-					; {
-						; lFound := RegExReplace(lFound, "\s")
-					; ,	lResult := ParseObjects(lFound, l_Point)
-						; If (lFound = "_ArrayObject")
-							; lFound := %lFound%
-						; lFound := RegExReplace(lFound, "[\[|\]]", "\$0")
-					; ,	Step := RegExReplace(Step, lFound, lResult)
-					; }
-				; }
 				If ((Type = cType7) || (Type = cType38) || (Type = cType39)
 				|| (Type = cType40) || (Type = cType41) || (Type = cType45))
 				{
@@ -1108,9 +1089,10 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC, ByRef LoopCount, ScopedP
 				,	AssignReplace(Step)
 				,	CheckVars("Step|Target|Window|VarName|VarValue", PointMarker)
 				,	pbVarName := VarName
+				,	pbOper := Oper
 				,	pbVarValue := VarValue
-				,	tlResult := ParseObjects(Target, PointMarker)
-				,	Target := IsObject(tlResult) ? "tlResult" : tlResult
+				,	pbTarget := ParseObjects(Target, PointMarker)
+					Try pbTarget := %pbTarget%
 					If (Type = cType21)
 					{
 						If (Target = "Expression")
@@ -1121,7 +1103,7 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC, ByRef LoopCount, ScopedP
 						,	Type := pbType, Action := pbAction
 						}
 						Try
-							AssignVar(pbVarName, Oper, pbVarValue, PointMarker)
+							AssignVar(pbVarName, pbOper, pbVarValue, PointMarker)
 						Catch e
 						{
 							MsgBox, 20, %d_Lang007%, % "Macro" mMacroOn ", " d_Lang065 " " mListRow
@@ -1134,14 +1116,14 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC, ByRef LoopCount, ScopedP
 						}
 						Try SavedVars(pbVarName)
 					}
-					Else If (IsObject(%Target%))
+					Else If (IsObject(pbTarget))
 					{
 						pbType := Type, pbAction := Action
 					,	pbParams := Eval(pbVarValue, PointMarker)
 					,	Type := pbType, Action := pbAction
 						Try
 						{
-							pbVarValue := %Target%[Action](pbParams*)
+							pbVarValue := pbTarget[Action](pbParams*)
 						,	AssignVar(pbVarName, ":=", pbVarValue, PointMarker)
 						}
 						Catch e
@@ -1215,8 +1197,12 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC, ByRef LoopCount, ScopedP
 								}
 							}
 						}
-						If ((IsFunc(Action)) && ((Func(Action).IsBuiltIn) || (Action = "Screenshot")))
+						If (IsFunc(Action))
 						{
+							If (!Func(Action).IsBuiltIn)
+								If Action not in Screenshot,Zip,UnZip
+									continue
+									
 							pbType := Type, pbAction := Action
 						,	pbParams := Eval(pbVarValue, PointMarker)
 						,	Type := pbType, Action := pbAction
@@ -1315,22 +1301,22 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC, ByRef LoopCount, ScopedP
 	return 0
 }
 
-IfEval(Name, Operator, Value)
+IfEval(_Name, _Operator, _Value)
 {
-	If (Operator = "=")
-		result := (%Name% = Value) ? true : false
-	Else If (Operator = "==")
-		result := (%Name% == Value) ? true : false
-	Else If (Operator = "!=")
-		result := (%Name% != Value) ? true : false
-	Else If (Operator = ">")
-		result := (%Name% > Value) ? true : false
-	Else If (Operator = "<")
-		result := (%Name% < Value) ? true : false
-	Else If (Operator = ">=")
-		result := (%Name% >= Value) ? true : false
-	Else If (Operator = "<=")
-		result := (%Name% <= Value) ? true : false
+	If (_Operator = "=")
+		result := (%_Name% = _Value) ? true : false
+	Else If (_Operator = "==")
+		result := (%_Name% == _Value) ? true : false
+	Else If (_Operator = "!=")
+		result := (%_Name% != _Value) ? true : false
+	Else If (_Operator = ">")
+		result := (%_Name% > _Value) ? true : false
+	Else If (_Operator = "<")
+		result := (%_Name% < _Value) ? true : false
+	Else If (_Operator = ">=")
+		result := (%_Name% >= _Value) ? true : false
+	Else If (_Operator = "<=")
+		result := (%_Name% <= _Value) ? true : false
 	return result
 }
 
@@ -1682,55 +1668,55 @@ SplitWin(Window)
 	return WinPars
 }
 
-AssignVar(Name, Operator, Value, l_Point)
+AssignVar(_Name, _Operator, _Value, l_Point)
 {
 	local _content, _ObjItems
 	
-	If (!IsObject(Value))
+	If (!IsObject(_Value))
 	{
-		Value := StrReplace(Value, _z, A_Space)
-		If (Name = "Clipboard")
-			Value := StrReplace(Value, "````,", ",")
-		If (InStr(Value, "!") = 1)
-			Value := !SubStr(Value, 2)
+		_Value := StrReplace(_Value, _z, A_Space)
+		If (_Name = "Clipboard")
+			_Value := StrReplace(_Value, "````,", ",")
+		If (InStr(_Value, "!") = 1)
+			_Value := !SubStr(_Value, 2)
 	}
 	
-	Try _content := %Name%
+	Try _content := %_Name%
 	
-	While (RegExMatch(Name, "(\w+)(\[\S+\]|\.\w+)+", lFound))
+	While (RegExMatch(_Name, "(\w+)(\[\S+\]|\.\w+)+", lFound))
 	{
-		If (RegExMatch(lFound1, "^\d+$"))
+		If (RegExMatch(lFound1, "^-?\d+$"))
 			break
-		_content := ParseObjects(Name, l_Point, _ObjItems)
-	,	Name := lFound1
+		_content := ParseObjects(_Name, l_Point, _ObjItems)
+	,	_Name := lFound1
 	}
 	
 	If (_content = "_ArrayObject")
 		_content := %_content%
-	If (Operator = ":=")
-		_content := Value
-	Else If (Operator = "+=")
-		_content += Value
-	Else If (Operator = "-=")
-		_content -= Value
-	Else If (Operator = "*=")
-		_content *= Value
-	Else If (Operator = "/=")
-		_content /= Value
-	Else If (Operator = "//=")
-		_content //= Value
-	Else If (Operator = ".=")
-		_content .= Value
+	If (_Operator = ":=")
+		_content := _Value
+	Else If (_Operator = "+=")
+		_content += _Value
+	Else If (_Operator = "-=")
+		_content -= _Value
+	Else If (_Operator = "*=")
+		_content *= _Value
+	Else If (_Operator = "/=")
+		_content /= _Value
+	Else If (_Operator = "//=")
+		_content //= _Value
+	Else If (_Operator = ".=")
+		_content .= _Value
 
 	Try
 	{
 		If (IsObject(_ObjItems))
-			%Name%[_ObjItems*] := _content
+			%_Name%[_ObjItems*] := _content
 		Else
-			%Name% := _content
+			%_Name% := _content
 	}
 	
-	Try SavedVars(Name)
+	Try SavedVars(_Name)
 }
 
 CheckVars(Match_List, l_Point := "")
@@ -1762,81 +1748,6 @@ CheckVars(Match_List, l_Point := "")
 		If (RegExMatch(%A_LoopField%, "sU)^%\s+(.+)$", lMatch))  ; Expressions
 			EvalResult := Eval(lMatch1, l_Point), %A_LoopField% := StrJoin(EvalResult)
 	}
-}
-
-ParseObjects(v_String, l_Point, ByRef v_levels := "", QuoteStrings := false, o_Oper := "", o_Value := "")
-{
-	local po_ArrayObject, EvalResult, l_Matches, o_String, v_Obj, _Pos, l_Found, l_Found1, l_Found2, _Params, _Key, HasMethod := false
-	Static needle := "(\w+\.?|\(([^()]++|(?R))*\)\.?|\[([^\[\]]++|(?R))*\]\.?)"
-
-	_Pos := 1, l_Matches := []
-	While (_Pos := RegExMatch(v_String, needle, l_Found, _Pos))
-	{
-		l_Matches.Push(RTrim(l_Found, "."))
-	,	_Pos += StrLen(l_Found), o_String .= l_Found
-	}
-
-	v_levels := [], v_Obj := l_Matches[1]
-	Try _ArrayObject := %v_Obj%
-	For i, v in l_Matches
-	{
-		If (i = 1)
-			continue
-		If (RegExMatch(v, "^\((.*)\)$", l_Found))
-			continue
-		If (RegExMatch(v, "^\[(.*)\]$", l_Found))
-		{
-			po_ArrayObject := _ArrayObject
-		,	EvalResult := Eval(l_Found1, l_Point)
-		,	_ArrayObject := po_ArrayObject
-		,	_Key := EvalResult[1]
-		}
-		Else
-			_Key := v
-		n := l_Matches[i + 1], v_levels.Push(_Key)
-		If (RegExMatch(n, "^\((.*)\)$", l_Found))
-		{
-			po_ArrayObject := _ArrayObject
-		,	_Params := Eval(l_Found1, l_Point)
-		,	_ArrayObject := po_ArrayObject
-		,	_ArrayObject := _ArrayObject[_Key](_Params*)
-		,	HasMethod := true
-		}
-		Else If ((i = l_Matches.Length()) && (o_Value != ""))
-		{
-			Try
-			{
-				If (o_Oper = ":=")
-					_ArrayObject := _ArrayObject[_Key] := o_Value
-				Else If (o_Oper = "+=")
-					_ArrayObject := _ArrayObject[_Key] += o_Value
-				Else If (o_Oper = "-=")
-					_ArrayObject := _ArrayObject[_Key] -= o_Value
-				Else If (o_Oper = "*=")
-					_ArrayObject := _ArrayObject[_Key] *= o_Value
-				Else If (o_Oper = "/=")
-					_ArrayObject := _ArrayObject[_Key] /= o_Value
-				Else If (o_Oper = "//=")
-					_ArrayObject := _ArrayObject[_Key] //= o_Value
-				Else If (o_Oper = ".=")
-					_ArrayObject := _ArrayObject[_Key] .= o_Value
-			}
-		}
-		Else
-			_ArrayObject := _ArrayObject[_Key]
-	}
-	If (IsObject(_ArrayObject))
-		v_String := StrReplace(v_String, o_String, "_ArrayObject")
-	Else
-	{
-		If (QuoteStrings)
-			If (!RegExMatch(_ArrayObject, "^\d+$"))
-				_ArrayObject := """" _ArrayObject """"
-		v_String := StrReplace(v_String, o_String, _ArrayObject)
-	}
-	If (HasMethod)
-		v_levels := ""
-	return v_String
 }
 
 DerefVars(v_String)

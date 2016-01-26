@@ -22,9 +22,9 @@ Groups=Start:1
 [PMC Code v5.0.0]|F3||1|Window|1|ForLoops
 Groups=Start:1
 1|[Assign Variable]|MyVar := This is a variable!|1|0|Variable|||||
-2|[Assign Variable]|MyArray := ["a","b","c","d","e", MyVar]|1|0|Variable|Expression||||
-3|[LoopStart]|MyArray`, each`, value|1|0|ForLoop|||||
-4|[MsgBox]|%each% : %value%|1|0|MsgBox|0||||
+2|[Assign Variable]|MyArray := ["a","b","c",MyVar,"d","e"]|1|0|Variable|Expression||||
+3|[LoopStart]|MyArray`, key`, value|1|0|ForLoop|||||
+4|[MsgBox]|%key% : %value%|1|0|MsgBox|262144||||
 5|[LoopEnd]|LoopEnd|1|0|Loop|||||
 
 [PMC Code v5.0.0]|F4||1|Window|1|MultiDim

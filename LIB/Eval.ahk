@@ -1,144 +1,263 @@
 Eval($x, l_Point)
 {
-	Local $y, $z, $i, $v, $o, $Result, CompiledExpression, LastFuncRun, Params, EvalResult
-		, _Match, _Match1, _Match2, _Match3, Elements := {}, Objects := {}, ObjName, Pos := 1
+	Local $y, $z, $i, $v, $o, _i, _v, $Result, CompiledExpression, LastFuncRun, _Params, EvalResult
+		, _Match, _Match1, _Match2, _Match3, _Elements := {}, _Objects := {}, ObjName, _Pos := 1, $pd, $pd1
 
 	; Save and remove isolated strings
 	While (RegExMatch($x, "\[([^\[\]]++|(?R))*\]", _Block%A_Index%))
-		Elements["&_Block" A_Index "_&"] := _Block%A_Index%, $x := RegExReplace($x, "U)\[(.*)\]", "&_Block" A_Index "_&", "", 1)
+		_Elements["&_Block" A_Index "_&"] := _Block%A_Index%, $x := RegExReplace($x, "\[([^\[\]]++|(?R))*\]", "&_Block" A_Index "_&", "", 1)
 	While (RegExMatch($x, "\(([^()]++|(?R))*\)", _Parent%A_Index%))
-		Elements["&_Parent" A_Index "_&"] := _Parent%A_Index%, $x := RegExReplace($x, "\(([^()]++|(?R))*\)", "&_Parent" A_Index "_&", "", 1)
-	While (RegExMatch($x, """([^""]++|(?R))*""", _String%A_Index%))
-		Elements["&_String" A_Index "_&"] := _String%A_Index%, $x := RegExReplace($x, "U)""(.*)""", "&_String" A_Index "_&", "", 1)
+		_Elements["&_Parent" A_Index "_&"] := _Parent%A_Index%, $x := RegExReplace($x, "\(([^()]++|(?R))*\)", "&_Parent" A_Index "_&", "", 1)
+	While (RegExMatch($x, "U)"".*""", _String%A_Index%))
+		_Elements["&_String" A_Index "_&"] := _String%A_Index%, $x := RegExReplace($x, "U)"".*""", "&_String" A_Index "_&", "", 1)
 	
 	$z := StrSplit($x, ",", " `t")
-	
 	For $i, $v in $z
 	{
-		While (RegExMatch($z[$i], "(\w+)(\.|&_)[\w\.&]+(\s+\W?\W\W?\s+.*)?", _Match)) ; Object calls
+		_Pos := 1
+		While (_Pos := RegExMatch($z[$i], "(\w+)(\.|&_Block)[\w\.&]+(\s+\W?\W\W?\s+.*)?", _Match, _Pos)) ; Object calls
 		{
 			_$v := $z[$i], AssignReplace(_$v)
-			While (RegExMatch($z[$i], "&_Parent(\d+)_&", pd))
-				$z[$i] := StrReplace($z[$i], pd, _Parent%pd1%)
-			While (RegExMatch($z[$i], "&_Block(\d+)_&", pd))
-				$z[$i] := StrReplace($z[$i], pd, _Block%pd1%)
+			While (RegExMatch($z[$i], "&_Parent(\d+)_&", $pd))
+				$z[$i] := StrReplace($z[$i], $pd, _Parent%$pd1%)
+			While (RegExMatch($z[$i], "&_Block(\d+)_&", $pd))
+				$z[$i] := StrReplace($z[$i], $pd, _Block%$pd1%)
 				
-			While (RegExMatch(_Match, "&_Parent(\d+)_&", pd))
-				_Match := StrReplace(_Match, pd, _Parent%pd1%)
-			While (RegExMatch(_Match, "&_Block(\d+)_&", pd))
-				_Match := StrReplace(_Match, pd, _Block%pd1%)
+			While (RegExMatch(_Match, "&_Parent(\d+)_&", $pd))
+				_Match := StrReplace(_Match, $pd, _Parent%$pd1%)
+			While (RegExMatch(_Match, "&_Block(\d+)_&", $pd))
+				_Match := StrReplace(_Match, $pd, _Block%$pd1%)
 				
-			While (RegExMatch(VarName, "&_Parent(\d+)_&", pd))
-				VarName := StrReplace(VarName, pd, _Parent%pd1%)
-			While (RegExMatch(VarName, "&_Block(\d+)_&", pd))
-				VarName := StrReplace(VarName, pd, _Block%pd1%)
+			While (RegExMatch(VarName, "&_Parent(\d+)_&", $pd))
+				VarName := StrReplace(VarName, $pd, _Parent%$pd1%)
+			While (RegExMatch(VarName, "&_Block(\d+)_&", $pd))
+				VarName := StrReplace(VarName, $pd, _Block%$pd1%)
 				
-			While (RegExMatch(VarValue, "&_Parent(\d+)_&", pd))
-				VarValue := StrReplace(VarValue, pd, _Parent%pd1%)
-			While (RegExMatch($x, "&_Block(\d+)_&", pd))
-				VarValue := StrReplace(VarValue, pd, _Block%pd1%)
-				
+			While (RegExMatch(VarValue, "&_Parent(\d+)_&", $pd))
+				VarValue := StrReplace(VarValue, $pd, _Parent%$pd1%)
+			While (RegExMatch(VarValue, "&_Block(\d+)_&", $pd))
+				VarValue := StrReplace(VarValue, $pd, _Block%$pd1%)
+			
 			If (Oper != "")
 			{
-				While (RegExMatch(VarValue, "&_\w+_&", pd))
-					VarValue := StrReplace(VarValue, pd, Elements[pd])
+				While (RegExMatch(VarValue, "&_\w+_&", $pd))
+					VarValue := StrReplace(VarValue, $pd, _Elements[$pd])
 				$o := Oper
 			,	EvalResult := Eval(VarValue, l_Point)
 			,	VarValue := StrJoin(EvalResult)
 			}
 			Else
 				VarName := _Match
-			If (RegExMatch(_Match1, "^\d+$"))
+			If (RegExMatch(_Match1, "^-?\d+$"))
+			{
+				_Pos += StrLen(_Match1)
 				continue
+			}
 			$y := ParseObjects(VarName, l_Point,, true, $o, VarValue)
 			If ($y = "_ArrayObject")
 				Try $y := %$y%
 			ObjName := RegExReplace(_Match, "\W", "_")
 			If (IsObject($y))
-				Objects[ObjName] := $y
+				_Objects[ObjName] := $y
 			$z[$i] := StrReplace($z[$i], _Match, IsObject($y) ? """>:{" ObjName "}:<""" : $y)
 			If (IsObject($y))
-				continue 2
-		}
-	}
-	$x := StrJoin($z, ", ")
-	
-	While (Pos := RegExMatch($x, "([\w_]+)\((.*?)\)", _Match, Pos))  ; Functions
-	{
-		Loop, %TabCount%
-		{
-			TabIdx := A_Index
-			If ((_Match1 "()") = TabGetText(TabSel, A_Index))
 			{
-				Gui, chMacro:ListView, InputList%TabIdx%
-				Loop, % ListCount%TabIdx%
+				_Pos += StrLen(_Match1)
+				continue
+			}
+			Else
+				_Pos += StrLen($y)
+		}
+		
+		If (RegExMatch($z[$i], "^&_Block\d+_&$", _Match)) ; Assign Arrays
+		{
+			While (RegExMatch($z[$i], "&_Block(\d+)_&", $pd))
+				$z[$i] := StrReplace($z[$i], $pd, _Block%$pd1%)
+			_Match := RegExReplace($z[$i], "^\[(.*)\]$", "$1")
+			$y := Eval(_Match, l_Point)
+		,	ObjName := RegExReplace(_Match, "\W", "_")
+		,	_Objects[ObjName] := $y
+		,	$z[$i] := """>:{" ObjName "}:<"""
+		}
+		
+		While (RegExMatch($z[$i], "&_Parent(\d+)_&", $pd))
+			$z[$i] := StrReplace($z[$i], $pd, _Parent%$pd1%)
+		While (RegExMatch($z[$i], "&_Block(\d+)_&", $pd))
+			$z[$i] := StrReplace($z[$i], $pd, _Block%$pd1%)
+		
+		Try
+		{
+			$y := $z[$i]
+			try
+			{
+				If (IsObject(%$y%))
 				{
-					LV_GetText(Row_Type, A_Index, 6)
-					LV_GetText(TargetFunc, A_Index, 3)
-					If ((Row_Type = cType47) && (TargetFunc = _Match1))
-					{
-						Params := {}
-					,	FuncPars := ExprGetPars(_Match2)
-					,	EvalResult := Eval(_Match2, l_Point)
-						For i, v in EvalResult
-							Params[i] := {Name: FuncPars[i], Value: v}
-						LastFuncRun := RunningFunction, RunningFunction := _Match1
-					,	$y := Playback(TabIdx,,, Params)
-					,	$y := $y[1]
-					,	RunningFunction := LastFuncRun
-					,	ObjName := RegExReplace(_Match, "\W", "_")
-						If (IsObject($y))
-							Objects[ObjName] := $y
-						Else
-						{
-							If $y is not Number
-								$y := """" $y """"
-						}
-						$x := StrReplace($x, _Match, IsObject($y) ? """>:{" ObjName "}:<""" : $y)
-						continue 3
-					}
+					ObjName := RegExReplace($y, "\W", "_")
+				,	_Objects[ObjName] := %$y%.Clone()
+				,	$z[$i] := """>:{" ObjName "}:<"""
 				}
 			}
 		}
-		If ((IsFunc(_Match1)) && ((Func(_Match1).IsBuiltIn) || (_Match1 = "Screenshot")))
+		
+		_Pos := 1
+		While (_Pos := RegExMatch($z[$i], "([\w_]+)\((.*?)\)", _Match, _Pos))  ; Functions
 		{
-			Pos  += StrLen(_Match1)
-			continue
+			Loop, %TabCount% ; Check for User-Defined Functions
+			{
+				TabIdx := A_Index
+				If ((_Match1 "()") = TabGetText(TabSel, A_Index))
+				{
+					Gui, chMacro:ListView, InputList%TabIdx%
+					Loop, % ListCount%TabIdx%
+					{
+						LV_GetText(Row_Type, A_Index, 6)
+						LV_GetText(TargetFunc, A_Index, 3)
+						If ((Row_Type = cType47) && (TargetFunc = _Match1))
+						{
+							_Params := {}
+						,	FuncPars := ExprGetPars(_Match2)
+						,	EvalResult := Eval(_Match2, l_Point)
+							For i, v in EvalResult
+								_Params[i] := {Name: FuncPars[i], Value: v}
+							LastFuncRun := RunningFunction, RunningFunction := _Match1
+						,	$y := Playback(TabIdx,,, _Params)
+						,	$y := $y[1]
+						,	RunningFunction := LastFuncRun
+						,	ObjName := RegExReplace(_Match, "\W", "_")
+							If (IsObject($y))
+								_Objects[ObjName] := $y
+							Else
+							{
+								If $y is not Number
+									$y := """" $y """"
+							}
+							$z[$i] := StrReplace($z[$i], _Match, IsObject($y) ? """>:{" ObjName "}:<""" : $y)
+							continue 3
+						}
+					}
+				}
+			}
+			
+			If ((IsFunc(_Match1)) && (!Func(_Match1).IsBuiltIn))
+			{
+				If _Match1 not in Screenshot,Zip,UnZip
+				{
+					$z[$i] := StrReplace($z[$i], _Match, "ERROR: NOT ALLOWED")
+					_Match1 := ""
+				}
+			}
+			
+			If (IsFunc(_Match1))
+			{
+				_Params := Eval(_Match2, l_Point)
+			,	$y := %_Match1%(_Params*)
+			,	ObjName := RegExReplace(_Match, "\W", "_")
+				If (IsObject($y))
+					_Objects[ObjName] := $y
+				Else
+				{
+					If $y is not Number
+						$y := """" $y """"
+				}
+				$z[$i] := StrReplace($z[$i], _Match, IsObject($y) ? """>:{" ObjName "}:<""" : $y)
+			}
+			Else
+				_Pos += StrLen(_Match)
 		}
-		If ((IsFunc(_Match1)) && (!Func(_Match1).IsBuiltIn))
+		
+		While (RegExMatch($z[$i], "&_\w+_&", $pd))
+			$z[$i] := StrReplace($z[$i], $pd, _Elements[$pd])
+		
+		ExprInit()
+	,	CompiledExpression := ExprCompile($z[$i])
+	,	$Result := ExprEval(CompiledExpression, l_Point)
+	,	$Result := StrSplit($Result, Chr(1))
+		For _i, _v in $Result
 		{
-			$x := StrReplace($x, _Match, "ERROR: NOT ALLOWED")
-			continue
+			If (RegExMatch(_v, "^>:\{(.*)\}:<$", _Match))
+				$Result[_i] := _Objects[_Match1]
 		}
-		Pos  += StrLen(_Match1)
+		$z[$i] := StrJoin($Result)
 	}
 	
-	If (RegExMatch($x, "^\s*\[(.*)\]\s*$", _Match)) ; Assign Arrays
+	return $z
+}
+
+ParseObjects(v_String, l_Point, ByRef v_levels := "", QuoteStrings := false, o_Oper := "", o_Value := "")
+{
+	local po_ArrayObject, EvalResult, l_Matches := [], o_String, v_Obj
+	, _Pos := 1, l_Found, l_Found1, l_Found2, _Params, _Key
+	, HasMethod := false, $i, $v, $n
+	Static _needle := "(\w+\.?|\(([^()]++|(?R))*\)\.?|\[([^\[\]]++|(?R))*\]\.?)"
+
+	While (_Pos := RegExMatch(v_String, _needle, l_Found, _Pos))
 	{
-		$y := Eval(_Match1, l_Point)
-		return [$y]
+		l_Matches.Push(RTrim(l_Found, "."))
+	,	_Pos += StrLen(l_Found), o_String .= l_Found
 	}
-	
-	Try
+	_ArrayObject := o_String
+,	v_levels := [], v_Obj := l_Matches[1]
+	Try _ArrayObject := %v_Obj%
+	For $i, $v in l_Matches
 	{
-		If (IsObject(%$x%))
-			return [%$x%.Clone()]
+		If ($i = 1)
+			continue
+		If (RegExMatch($v, "^\((.*)\)$", l_Found))
+			continue
+		If (RegExMatch($v, "^\[(.*)\]$", l_Found))
+		{
+			po_ArrayObject := _ArrayObject
+		,	EvalResult := Eval(l_Found1, l_Point)
+		,	_ArrayObject := po_ArrayObject
+		,	_Key := EvalResult[1]
+		}
+		Else
+			_Key := $v
+		$n := l_Matches[$i + 1], v_levels.Push(_Key)
+		
+		If (RegExMatch($n, "^\((.*)\)$", l_Found))
+		{
+			po_ArrayObject := _ArrayObject
+		,	_Params := Eval(l_Found1, l_Point)
+		,	_ArrayObject := po_ArrayObject
+		,	_ArrayObject := _ArrayObject[_Key](_Params*)
+		,	HasMethod := true
+		}
+		Else If (($i = l_Matches.Length()) && (o_Value != ""))
+		{
+			Try
+			{
+				If (o_Oper = ":=")
+					_ArrayObject := _ArrayObject[_Key] := o_Value
+				Else If (o_Oper = "+=")
+					_ArrayObject := _ArrayObject[_Key] += o_Value
+				Else If (o_Oper = "-=")
+					_ArrayObject := _ArrayObject[_Key] -= o_Value
+				Else If (o_Oper = "*=")
+					_ArrayObject := _ArrayObject[_Key] *= o_Value
+				Else If (o_Oper = "/=")
+					_ArrayObject := _ArrayObject[_Key] /= o_Value
+				Else If (o_Oper = "//=")
+					_ArrayObject := _ArrayObject[_Key] //= o_Value
+				Else If (o_Oper = ".=")
+					_ArrayObject := _ArrayObject[_Key] .= o_Value
+			}
+		}
+		Else
+			_ArrayObject := _ArrayObject[_Key]
 	}
-	
-	; Restore strings
-	While (RegExMatch($x, "&_\w+_&", pd))
-		$x := StrReplace($x, pd, Elements[pd])
-	
-	ExprInit()
-	CompiledExpression := ExprCompile($x)
-	$Result := ExprEval(CompiledExpression, l_Point)
-	
-	$Result := StrSplit($Result, Chr(1))
-	For i, v in $Result
-		If (RegExMatch(v, "^>:\{(.*)\}:<$", _Match))
-			$Result[i] := Objects[_Match1]
-	
-	return $Result
+	If (IsObject(_ArrayObject))
+		v_String := StrReplace(v_String, o_String, "_ArrayObject")
+	Else
+	{
+		If (QuoteStrings)
+			If (!RegExMatch(_ArrayObject, "^-?\d+$"))
+				_ArrayObject := """" _ArrayObject """"
+		v_String := StrReplace(v_String, o_String, _ArrayObject)
+	}
+	If (HasMethod)
+		v_levels := ""
+	return v_String
 }
 
 ;##################################################

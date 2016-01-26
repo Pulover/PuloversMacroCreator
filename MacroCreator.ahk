@@ -7,8 +7,8 @@
 ; Home: http://www.macrocreator.com
 ; Forum: http://autohotkey.com/boards/viewtopic.php?f=6&t=143
 ; Version: 5.0.0
-; Release Date: January, 2016
-; AutoHotkey Version: 1.1.22.07
+; Release Date: February, 2016
+; AutoHotkey Version: 1.1.23.00
 ; Copyright © 2012-2016 Rodolfo U. Batista
 ; GNU General Public License 3.0 or higher
 ; <http://www.gnu.org/licenses/gpl-3.0.txt>
@@ -137,7 +137,7 @@ Loop
 }
 
 
-CurrentVersion := "5.0.0", ReleaseDate := "January, 2016"
+CurrentVersion := "5.0.0", ReleaseDate := "February, 2016"
 
 ;##### Ini File Read #####
 
@@ -6319,7 +6319,7 @@ If (LFor)
 	GuiControl, 12:, Field1, %c_Lang207%
 	GuiControl, 12:, Field2, %c_Lang208%
 	GuiControl, 12:, Field3, %c_Lang209%
-	GuiControl, 12:, Delim, % Par2 ? Par2 : "each"
+	GuiControl, 12:, Delim, % Par2 ? Par2 : "key"
 	GuiControl, 12:, Omit, % Par3 ? Par3 : "value"
 }
 Else

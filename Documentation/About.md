@@ -9,8 +9,8 @@ Author: Pulover \[Rodolfo U. Batista\]
 Copyright © 2012-2016 Rodolfo U. Batista  
 
 Version: 5.0.0  
-Release Date: January, 2016  
-AutoHotkey Version: 1.1.22.07  
+Release Date: February, 2016  
+AutoHotkey Version: 1.1.23.00  
 
 Software License: [GNU General Public License](License.html)  
 
