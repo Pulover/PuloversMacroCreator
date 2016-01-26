@@ -313,7 +313,7 @@
 	c_Lang022 =	Stäng
 	c_Lang023 =	Kopiera
 	c_Lang024 =	Ta bort
-	c_Lang025 =	Använd `% för variabler, t.e.x.: `%Clipboard`% (utom inne arrayer)
+	c_Lang025 =	Använd `% för variabler, t.e.x.: `%Clipboard`%
 	c_Lang026 =	Åtgärd
 	c_Lang027 =	Klicka
 	c_Lang028 =	Flytta
@@ -1009,6 +1009,11 @@
 	As_Oper_5 =	Dividera
 	As_Oper_6 =	Golv klyftan
 	As_Oper_7 =	Hoplänka
+	As_Oper_8 =	Bitwise inclusive OR
+	As_Oper_9 =	Bitwise AND
+	As_Oper_10 =	Bitwise exclusive OR
+	As_Oper_11 =	Right shift AND
+	As_Oper_12 =	Left shift AND
 	Co_Oper_1 =	Lika
 	Co_Oper_2 =	Lika (skiftlägeskänsligt)
 	Co_Oper_3 =	Inte lika

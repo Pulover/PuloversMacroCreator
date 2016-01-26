@@ -313,7 +313,7 @@
 	c_Lang022 =	Zavrieť
 	c_Lang023 =	Kopírovať
 	c_Lang024 =	Vymazať
-	c_Lang025 =	Použite `% pre premenné, napríklad: `%Clipboard`% (s výnimkou vnútorné pole)
+	c_Lang025 =	Použite `% pre premenné, napríklad: `%Clipboard`%
 	c_Lang026 =	Akcie
 	c_Lang027 =	Kliknite na tlačidlo
 	c_Lang028 =	Pohyb
@@ -1009,6 +1009,11 @@
 	As_Oper_5 =	Rozdeliť
 	As_Oper_6 =	Podlahové delenie
 	As_Oper_7 =	Spájať
+	As_Oper_8 =	Bitwise inclusive OR
+	As_Oper_9 =	Bitwise AND
+	As_Oper_10 =	Bitwise exclusive OR
+	As_Oper_11 =	Right shift AND
+	As_Oper_12 =	Left shift AND
 	Co_Oper_1 =	Rovný
 	Co_Oper_2 =	Rovné (case sensitive)
 	Co_Oper_3 =	Nie je rovné

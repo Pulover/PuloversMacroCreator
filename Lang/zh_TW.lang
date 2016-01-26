@@ -313,7 +313,7 @@
 	c_Lang022 =	關閉
 	c_Lang023 =	複製
 	c_Lang024 =	刪除
-	c_Lang025 =	使用`%變量，例如：`%Clipboard`% （內部數組除外）
+	c_Lang025 =	使用`%變量，例如：`%Clipboard`%
 	c_Lang026 =	行動
 	c_Lang027 =	點擊
 	c_Lang028 =	移動
@@ -1009,6 +1009,11 @@
 	As_Oper_5 =	劃分
 	As_Oper_6 =	地板鴻溝
 	As_Oper_7 =	串連
+	As_Oper_8 =	Bitwise inclusive OR
+	As_Oper_9 =	Bitwise AND
+	As_Oper_10 =	Bitwise exclusive OR
+	As_Oper_11 =	Right shift AND
+	As_Oper_12 =	Left shift AND
 	Co_Oper_1 =	等於
 	Co_Oper_2 =	平等（區分大小寫）
 	Co_Oper_3 =	不等於

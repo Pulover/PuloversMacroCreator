@@ -313,7 +313,7 @@
 	c_Lang022 =	Zatvoriti
 	c_Lang023 =	Kopirajte
 	c_Lang024 =	Izbrisati
-	c_Lang025 =	Koristite `% za varijable, npr.:`%Clipboard`% (osim unutar polja)
+	c_Lang025 =	Koristite `% za varijable, npr.:`%Clipboard`%
 	c_Lang026 =	Akcija
 	c_Lang027 =	Klik
 	c_Lang028 =	Premjestiti
@@ -1009,6 +1009,11 @@
 	As_Oper_5 =	Podijeliti
 	As_Oper_6 =	Kat podijeljenost
 	As_Oper_7 =	Povezati u obliku lanca
+	As_Oper_8 =	Bitwise inclusive OR
+	As_Oper_9 =	Bitwise AND
+	As_Oper_10 =	Bitwise exclusive OR
+	As_Oper_11 =	Right shift AND
+	As_Oper_12 =	Left shift AND
 	Co_Oper_1 =	Jednak
 	Co_Oper_2 =	Jednak (mala i velika slova)
 	Co_Oper_3 =	Nije jednako

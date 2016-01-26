@@ -313,7 +313,7 @@
 	c_Lang022 =	Затворити
 	c_Lang023 =	Копирајте
 	c_Lang024 =	Избрисати
-	c_Lang025 =	Користи `% за променљиве, нпр: `%Clipboard`% (осим унутар поља)
+	c_Lang025 =	Користи `% за променљиве, нпр: `%Clipboard`%
 	c_Lang026 =	Акција
 	c_Lang027 =	Клик
 	c_Lang028 =	Померити
@@ -1009,6 +1009,11 @@
 	As_Oper_5 =	Поделити
 	As_Oper_6 =	Спрат подела
 	As_Oper_7 =	Повезати у облику ланца
+	As_Oper_8 =	Bitwise inclusive OR
+	As_Oper_9 =	Bitwise AND
+	As_Oper_10 =	Bitwise exclusive OR
+	As_Oper_11 =	Right shift AND
+	As_Oper_12 =	Left shift AND
 	Co_Oper_1 =	Једнак
 	Co_Oper_2 =	Једнако (велика и мала слова)
 	Co_Oper_3 =	Није једнако

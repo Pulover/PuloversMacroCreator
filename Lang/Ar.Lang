@@ -313,7 +313,7 @@
 	c_Lang022 =	إغلاق
 	c_Lang023 =	نسخ
 	c_Lang024 =	حذف
-	c_Lang025 =	استخدام `٪ للمتغيرات، على سبيل المثال:`٪ Clipboard`٪ (باستثناء صفائف الداخل)
+	c_Lang025 =	استخدام `% للمتغيرات، على سبيل المثال:`% Clipboard`%
 	c_Lang026 =	إجراء
 	c_Lang027 =	انقر
 	c_Lang028 =	خطوة
@@ -1009,6 +1009,11 @@
 	As_Oper_5 =	فرق
 	As_Oper_6 =	الفجوة الكلمة
 	As_Oper_7 =	سلسل
+	As_Oper_8 =	Bitwise inclusive OR
+	As_Oper_9 =	Bitwise AND
+	As_Oper_10 =	Bitwise exclusive OR
+	As_Oper_11 =	Right shift AND
+	As_Oper_12 =	Left shift AND
 	Co_Oper_1 =	متساوي
 	Co_Oper_2 =	يساوي (حالة الأحرف)
 	Co_Oper_3 =	غير متساوي

@@ -10,7 +10,7 @@ Copyright © 2012-2016 Rodolfo U. Batista
 
 Version: 5.0.0  
 Release Date: February, 2016  
-AutoHotkey Version: 1.1.23.00  
+AutoHotkey Version: 1.1.23.01  
 
 Software License: [GNU General Public License](License.html)  
 

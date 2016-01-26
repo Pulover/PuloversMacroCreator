@@ -313,7 +313,7 @@
 	c_Lang022 =	Close
 	c_Lang023 =	Copy
 	c_Lang024 =	Delete
-	c_Lang025 =	Use `% for Variables, e.g.: `%Clipboard`% (except inside arrays)
+	c_Lang025 =	Use `% for Variables, e.g.: `%Clipboard`%
 	c_Lang026 =	Action
 	c_Lang027 =	Click
 	c_Lang028 =	Move
@@ -1009,6 +1009,11 @@
 	As_Oper_5 =	Divide
 	As_Oper_6 =	Floor divide
 	As_Oper_7 =	Concatenate
+	As_Oper_8 =	Bitwise inclusive OR
+	As_Oper_9 =	Bitwise AND
+	As_Oper_10 =	Bitwise exclusive OR
+	As_Oper_11 =	Right shift AND
+	As_Oper_12 =	Left shift AND
 	Co_Oper_1 =	Equal
 	Co_Oper_2 =	Equal (case sensitive)
 	Co_Oper_3 =	Not equal

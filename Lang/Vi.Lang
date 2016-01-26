@@ -313,7 +313,7 @@
 	c_Lang022 =	Đóng
 	c_Lang023 =	Sao chép
 	c_Lang024 =	Xóa
-	c_Lang025 =	Sử dụng `% cho biến, ví dụ: `%Clipboard`% (ngoại trừ các mảng bên trong)
+	c_Lang025 =	Sử dụng `% cho biến, ví dụ: `%Clipboard`%
 	c_Lang026 =	Hành động
 	c_Lang027 =	Nhấp
 	c_Lang028 =	Di chuyển
@@ -1009,6 +1009,11 @@
 	As_Oper_5 =	Chia
 	As_Oper_6 =	Tầng chia
 	As_Oper_7 =	Tiếp nhau
+	As_Oper_8 =	Bitwise inclusive OR
+	As_Oper_9 =	Bitwise AND
+	As_Oper_10 =	Bitwise exclusive OR
+	As_Oper_11 =	Right shift AND
+	As_Oper_12 =	Left shift AND
 	Co_Oper_1 =	Như nhau
 	Co_Oper_2 =	Bằng (chữ hoa)
 	Co_Oper_3 =	Không bình đẳng

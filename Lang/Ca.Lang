@@ -313,7 +313,7 @@
 	c_Lang022 =	Tancar
 	c_Lang023 =	Copieu
 	c_Lang024 =	Esborrar
-	c_Lang025 =	Utilitza `% per a variables, per exemple: `%Clipboard`% (excepte arrays dins)
+	c_Lang025 =	Utilitza `% per a variables, per exemple: `%Clipboard`%
 	c_Lang026 =	Acció
 	c_Lang027 =	Clic
 	c_Lang028 =	Moure
@@ -1009,6 +1009,11 @@
 	As_Oper_5 =	Dividir
 	As_Oper_6 =	Divisió Floor
 	As_Oper_7 =	Concatenar
+	As_Oper_8 =	Bitwise inclusive OR
+	As_Oper_9 =	Bitwise AND
+	As_Oper_10 =	Bitwise exclusive OR
+	As_Oper_11 =	Right shift AND
+	As_Oper_12 =	Left shift AND
 	Co_Oper_1 =	Igual
 	Co_Oper_2 =	Equal (majúscules i minúscules)
 	Co_Oper_3 =	No és igual

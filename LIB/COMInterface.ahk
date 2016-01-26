@@ -7,6 +7,9 @@
 ;
 ; COM Objects interface using dotted syntax in text strings.
 ;
+; NOTE: This function is DEPRECATED from PMC v5+.
+;       It has been replaced by Eval and it's kept in the project files for reference only.
+;
 ;========================================================================
 
 COMInterface(String, Ptr := "", ByRef OutputVar := "", CLSID := "InternetExplorer.Application")

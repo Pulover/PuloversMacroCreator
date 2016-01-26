@@ -526,9 +526,13 @@
 						If (Target = "Expression")
 						{
 							pbType := Type, pbAction := Action
-						,	EvalResult := Eval(pbVarValue, PointMarker)
-						,	pbVarValue := StrJoin(EvalResult)
-						,	Type := pbType, Action := pbAction
+							Loop, Parse, pbVarValue, `n, `,%A_Space%%A_Tab%
+							{
+								EvalResult := Eval(A_LoopField, PointMarker)
+								If (A_Index = 1)
+									pbVarValue := StrJoin(EvalResult)
+							}
+							Type := pbType, Action := pbAction
 						}
 						Try
 							AssignVar(pbVarName, pbOper, pbVarValue, PointMarker)
@@ -1098,9 +1102,13 @@ LoopSection(Start, End, lcX, lcL, PointO, mainL, mainC, ByRef LoopCount, ScopedP
 						If (Target = "Expression")
 						{
 							pbType := Type, pbAction := Action
-						,	EvalResult := Eval(pbVarValue, PointMarker)
-						,	pbVarValue := StrJoin(EvalResult)
-						,	Type := pbType, Action := pbAction
+							Loop, Parse, pbVarValue, `n
+							{
+								EvalResult := Eval(A_LoopField, PointMarker)
+								If (A_Index = 1)
+									pbVarValue := StrJoin(EvalResult)
+							}
+							Type := pbType, Action := pbAction
 						}
 						Try
 							AssignVar(pbVarName, pbOper, pbVarValue, PointMarker)
@@ -1707,6 +1715,16 @@ AssignVar(_Name, _Operator, _Value, l_Point)
 		_content //= _Value
 	Else If (_Operator = ".=")
 		_content .= _Value
+	Else If (_Operator = "|=")
+		_content |= _Value
+	Else If (_Operator = "&=")
+		_content &= _Value
+	Else If (_Operator = "^=")
+		_content ^= _Value
+	Else If (_Operator = ">>=")
+		_content >>= _Value
+	Else If (_Operator = "<<=")
+		_content <<= _Value
 
 	Try
 	{

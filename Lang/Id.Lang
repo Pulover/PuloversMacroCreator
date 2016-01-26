@@ -313,7 +313,7 @@
 	c_Lang022 =	Menutup
 	c_Lang023 =	Kopi
 	c_Lang024 =	Hapus
-	c_Lang025 =	Gunakan `% untuk Variabel, misalnya: `%Clipboard`% (kecuali dalam array)
+	c_Lang025 =	Gunakan `% untuk Variabel, misalnya: `%Clipboard`%
 	c_Lang026 =	Tindakan
 	c_Lang027 =	Klik
 	c_Lang028 =	Bergerak
@@ -1009,6 +1009,11 @@
 	As_Oper_5 =	Membagi
 	As_Oper_6 =	Membagi lantai
 	As_Oper_7 =	Menyatukan
+	As_Oper_8 =	Bitwise inclusive OR
+	As_Oper_9 =	Bitwise AND
+	As_Oper_10 =	Bitwise exclusive OR
+	As_Oper_11 =	Right shift AND
+	As_Oper_12 =	Left shift AND
 	Co_Oper_1 =	Sama
 	Co_Oper_2 =	Sama (case sensitive)
 	Co_Oper_3 =	Tidak sama

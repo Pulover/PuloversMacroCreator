@@ -15,9 +15,9 @@ Eval($x, l_Point)
 	For $i, $v in $z
 	{
 		_Pos := 1
-		While (_Pos := RegExMatch($z[$i], "(\w+)(\.|&_Block)[\w\.&]+(\s+\W?\W\W?\s+.*)?", _Match, _Pos)) ; Object calls
+		While (_Pos := RegExMatch($z[$i], "(\w+)(\.|&_Block|&_Parent\d+_&[\.\[])[\w\.&]+(\s+\W?\W\W?\s+.*)?", _Match, _Pos)) ; Object calls
 		{
-			_$v := $z[$i], AssignReplace(_$v)
+			_$v := _Match, AssignReplace(_$v)
 			While (RegExMatch($z[$i], "&_Parent(\d+)_&", $pd))
 				$z[$i] := StrReplace($z[$i], $pd, _Parent%$pd1%)
 			While (RegExMatch($z[$i], "&_Block(\d+)_&", $pd))
@@ -85,17 +85,14 @@ Eval($x, l_Point)
 		While (RegExMatch($z[$i], "&_Block(\d+)_&", $pd))
 			$z[$i] := StrReplace($z[$i], $pd, _Block%$pd1%)
 		
+		$y := $z[$i]
 		Try
 		{
-			$y := $z[$i]
-			try
+			If (IsObject(%$y%))
 			{
-				If (IsObject(%$y%))
-				{
-					ObjName := RegExReplace($y, "\W", "_")
-				,	_Objects[ObjName] := %$y%.Clone()
-				,	$z[$i] := """>:{" ObjName "}:<"""
-				}
+				ObjName := RegExReplace($y, "\W", "_")
+			,	_Objects[ObjName] := %$y%.Clone()
+			,	$z[$i] := """>:{" ObjName "}:<"""
 			}
 		}
 		
@@ -170,7 +167,7 @@ Eval($x, l_Point)
 		
 		ExprInit()
 	,	CompiledExpression := ExprCompile($z[$i])
-	,	$Result := ExprEval(CompiledExpression, l_Point)
+	,	$Result := ExprEval(CompiledExpression, l_Point, _Objects)
 	,	$Result := StrSplit($Result, Chr(1))
 		For _i, _v in $Result
 		{
@@ -200,8 +197,6 @@ ParseObjects(v_String, l_Point, ByRef v_levels := "", QuoteStrings := false, o_O
 	Try _ArrayObject := %v_Obj%
 	For $i, $v in l_Matches
 	{
-		If ($i = 1)
-			continue
 		If (RegExMatch($v, "^\((.*)\)$", l_Found))
 			continue
 		If (RegExMatch($v, "^\[(.*)\]$", l_Found))
@@ -214,14 +209,22 @@ ParseObjects(v_String, l_Point, ByRef v_levels := "", QuoteStrings := false, o_O
 		Else
 			_Key := $v
 		$n := l_Matches[$i + 1], v_levels.Push(_Key)
-		
 		If (RegExMatch($n, "^\((.*)\)$", l_Found))
 		{
-			po_ArrayObject := _ArrayObject
-		,	_Params := Eval(l_Found1, l_Point)
-		,	_ArrayObject := po_ArrayObject
-		,	_ArrayObject := _ArrayObject[_Key](_Params*)
-		,	HasMethod := true
+			If ($i = 1)
+			{
+				_Params := Eval(l_Found1, l_Point)
+				_ArrayObject := %_Key%(_Params*)
+				HasMethod := true
+			}
+			Else
+			{
+				po_ArrayObject := _ArrayObject
+			,	_Params := Eval(l_Found1, l_Point)
+			,	_ArrayObject := po_ArrayObject
+			,	_ArrayObject := _ArrayObject[_Key](_Params*)
+			,	HasMethod := true
+			}
 		}
 		Else If (($i = l_Matches.Length()) && (o_Value != ""))
 		{
@@ -241,9 +244,19 @@ ParseObjects(v_String, l_Point, ByRef v_levels := "", QuoteStrings := false, o_O
 					_ArrayObject := _ArrayObject[_Key] //= o_Value
 				Else If (o_Oper = ".=")
 					_ArrayObject := _ArrayObject[_Key] .= o_Value
+				Else If (o_Oper = "|=")
+					_ArrayObject := _ArrayObject[_Key] |= o_Value
+				Else If (o_Oper = "&=")
+					_ArrayObject := _ArrayObject[_Key] &= o_Value
+				Else If (o_Oper = "^=")
+					_ArrayObject := _ArrayObject[_Key] ^= o_Value
+				Else If (o_Oper = ">>=")
+					_ArrayObject := _ArrayObject[_Key] >>= o_Value
+				Else If (o_Oper = "<<=")
+					_ArrayObject := _ArrayObject[_Key] <<= o_Value
 			}
 		}
-		Else
+		Else If ($i > 1)
 			_ArrayObject := _ArrayObject[_Key]
 	}
 	If (IsObject(_ArrayObject))
@@ -304,7 +317,7 @@ Return
 Exprp1(ou,t1)
 }Return,ou
 }
-ExprEval(e,lp)
+ExprEval(e,lp,eo)
 {global __lv ; Lined modified for PMC
 c1:=Chr(1)
 Loop,Parse,e,%c1%
@@ -315,7 +328,7 @@ Else{
 If tt=f
 t1:=InStr(t," "),a:=SubStr(t,1,t1-1),t:=SubStr(t,t1+1)
 Else a:=Exprac(t)
-Exprp1(s,Exprap(t,s,a))
+Exprp1(s,Exprap(t,s,a,eo))
 }}
 Loop,Parse,s,%c1%
 {lf:=A_LoopField
@@ -324,7 +337,7 @@ t1:=SubStr(lf,2),__lv:="%" . t1 . "%",CheckVars("__lv",lp),r.=__lv . c1 ; Lined 
 Else r.=SubStr(lf,2) . c1
 }Return,SubStr(r,1,-1)
 }
-Exprap(o,ByRef s,ac)
+Exprap(o,ByRef s,ac,eo)
 {local i,t1,a1,a2,a3,a4,a5,a6,a1v,a2v,a3v,a4v,a5v,a6v,a7v,a8v,a9v
 Loop,%ac%
 i:=ac-(A_Index-1),t1:=Exprp2(s),a%i%:=SubStr(t1,2),(SubStr(t1,1,1)="v")?(a%i%v:=1)
@@ -392,6 +405,8 @@ If o=&&
 Return,"l" . ((a1v ? %a1%:a1)&&(a2v ? %a2%:a2))
 If o=||
 Return,"l" . ((a1v ? %a1%:a1)||(a2v ? %a2%:a2))
+If (RegExMatch(a2,"^>:\{(.*)\}:<$",rm))  ; Lined modified for PMC
+a2:=eo[rm1]  ; Lined modified for PMC
 If o=:=
 {%a1%:=(a2v ? %a2%:a2)
 Return,"v" . a1

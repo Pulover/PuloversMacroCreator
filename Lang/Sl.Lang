@@ -313,7 +313,7 @@
 	c_Lang022 =	Zapri
 	c_Lang023 =	Kopirajte
 	c_Lang024 =	Izbriši
-	c_Lang025 =	Uporabite `% za spremenljivke, npr: `%Clipboard`% (razen znotraj nizi)
+	c_Lang025 =	Uporabite `% za spremenljivke, npr: `%Clipboard`%
 	c_Lang026 =	Akcija
 	c_Lang027 =	Kliknite
 	c_Lang028 =	Premikanje
@@ -1009,6 +1009,11 @@
 	As_Oper_5 =	Razdelite
 	As_Oper_6 =	Nadstropje razkorak
 	As_Oper_7 =	Združite
+	As_Oper_8 =	Bitwise inclusive OR
+	As_Oper_9 =	Bitwise AND
+	As_Oper_10 =	Bitwise exclusive OR
+	As_Oper_11 =	Right shift AND
+	As_Oper_12 =	Left shift AND
 	Co_Oper_1 =	Enako
 	Co_Oper_2 =	Enako (črk)
 	Co_Oper_3 =	Ni enako

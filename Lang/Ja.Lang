@@ -313,7 +313,7 @@
 	c_Lang022 =	閉じる
 	c_Lang023 =	コピー
 	c_Lang024 =	削除
-	c_Lang025 =	例えば、変数に`%を使用します： `%Clipboard`% （内部の配列を除きます）
+	c_Lang025 =	例えば、変数に`%を使用します： `%Clipboard`%
 	c_Lang026 =	アクション
 	c_Lang027 =	クリック
 	c_Lang028 =	移動
@@ -1009,6 +1009,11 @@
 	As_Oper_5 =	分割
 	As_Oper_6 =	フロア除算
 	As_Oper_7 =	連結
+	As_Oper_8 =	Bitwise inclusive OR
+	As_Oper_9 =	Bitwise AND
+	As_Oper_10 =	Bitwise exclusive OR
+	As_Oper_11 =	Right shift AND
+	As_Oper_12 =	Left shift AND
 	Co_Oper_1 =	等しい
 	Co_Oper_2 =	等しい（大文字と小文字を区別）
 	Co_Oper_3 =	等しくない

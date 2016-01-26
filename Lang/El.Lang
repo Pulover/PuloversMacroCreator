@@ -313,7 +313,7 @@
 	c_Lang022 =	Κοντά
 	c_Lang023 =	Αντιγραφή
 	c_Lang024 =	Διαγραφή
-	c_Lang025 =	Χρησιμοποιήστε `% Για τις μεταβλητές, π.χ.: `%Clipboard`% (εκτός από μέσα συστοιχίες)
+	c_Lang025 =	Χρησιμοποιήστε `% Για τις μεταβλητές, π.χ.: `%Clipboard`%
 	c_Lang026 =	Δράση
 	c_Lang027 =	Κλικ
 	c_Lang028 =	Κίνηση
@@ -1009,6 +1009,11 @@
 	As_Oper_5 =	Χωρίστε
 	As_Oper_6 =	Χάσματος Όροφος
 	As_Oper_7 =	Ενώσετε
+	As_Oper_8 =	Bitwise inclusive OR
+	As_Oper_9 =	Bitwise AND
+	As_Oper_10 =	Bitwise exclusive OR
+	As_Oper_11 =	Right shift AND
+	As_Oper_12 =	Left shift AND
 	Co_Oper_1 =	Ίσος
 	Co_Oper_2 =	Ισότητα (με κεφαλαία γράμματα)
 	Co_Oper_3 =	Δεν ισούται

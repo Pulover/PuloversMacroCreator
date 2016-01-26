@@ -313,7 +313,7 @@
 	c_Lang022 =	Близо
 	c_Lang023 =	Копирайте
 	c_Lang024 =	Изтриване
-	c_Lang025 =	Използвайте `% за променливи, например: `%Clipboard`% (с изключение на вътрешните масиви)
+	c_Lang025 =	Използвайте `% за променливи, например: `%Clipboard`%
 	c_Lang026 =	Действие
 	c_Lang027 =	Щракнете
 	c_Lang028 =	Движение
@@ -1009,6 +1009,11 @@
 	As_Oper_5 =	Разделете
 	As_Oper_6 =	Етаж разделение
 	As_Oper_7 =	Свързвам
+	As_Oper_8 =	Bitwise inclusive OR
+	As_Oper_9 =	Bitwise AND
+	As_Oper_10 =	Bitwise exclusive OR
+	As_Oper_11 =	Right shift AND
+	As_Oper_12 =	Left shift AND
 	Co_Oper_1 =	Равен
 	Co_Oper_2 =	Равен (главни и малки букви)
 	Co_Oper_3 =	Не е равно

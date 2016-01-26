@@ -313,7 +313,7 @@
 	c_Lang022 =	Близько
 	c_Lang023 =	Скопіюйте
 	c_Lang024 =	Видаляти
-	c_Lang025 =	Використовуйте `% для змінних, наприклад: `%Clipboard`% (за винятком всередині масивів)
+	c_Lang025 =	Використовуйте `% для змінних, наприклад: `%Clipboard`%
 	c_Lang026 =	Дія
 	c_Lang027 =	Клацання
 	c_Lang028 =	Рухатися
@@ -1009,6 +1009,11 @@
 	As_Oper_5 =	Ділити
 	As_Oper_6 =	Поверх розриву
 	As_Oper_7 =	Зчіплювати
+	As_Oper_8 =	Bitwise inclusive OR
+	As_Oper_9 =	Bitwise AND
+	As_Oper_10 =	Bitwise exclusive OR
+	As_Oper_11 =	Right shift AND
+	As_Oper_12 =	Left shift AND
 	Co_Oper_1 =	Рівний
 	Co_Oper_2 =	Рівно (з урахуванням регістру)
 	Co_Oper_3 =	Не дорівнює

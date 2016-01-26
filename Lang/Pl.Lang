@@ -313,7 +313,7 @@
 	c_Lang022 =	Zamknąć
 	c_Lang023 =	Skopiuj
 	c_Lang024 =	Usunąć
-	c_Lang025 =	Użyj `% dla zmiennych, np.: `%Clipboard`% (z wyjątkiem wewnętrznych tablic)
+	c_Lang025 =	Użyj `% dla zmiennych, np.: `%Clipboard`%
 	c_Lang026 =	Akcja
 	c_Lang027 =	Kliknij
 	c_Lang028 =	Przenieść
@@ -1009,6 +1009,11 @@
 	As_Oper_5 =	Podzielić
 	As_Oper_6 =	Divide Floor
 	As_Oper_7 =	Powiązać
+	As_Oper_8 =	Bitwise inclusive OR
+	As_Oper_9 =	Bitwise AND
+	As_Oper_10 =	Bitwise exclusive OR
+	As_Oper_11 =	Right shift AND
+	As_Oper_12 =	Left shift AND
 	Co_Oper_1 =	Równy
 	Co_Oper_2 =	Równe (liter)
 	Co_Oper_3 =	Nie równe

@@ -8,7 +8,7 @@
 ; Forum: http://autohotkey.com/boards/viewtopic.php?f=6&t=143
 ; Version: 5.0.0
 ; Release Date: February, 2016
-; AutoHotkey Version: 1.1.23.00
+; AutoHotkey Version: 1.1.23.01
 ; Copyright © 2012-2016 Rodolfo U. Batista
 ; GNU General Public License 3.0 or higher
 ; <http://www.gnu.org/licenses/gpl-3.0.txt>
@@ -2325,10 +2325,12 @@ Gui, 14:Add, Checkbox, -Wrap Checked%Ex_PauseKey% yp+5 x+10 W65 vEx_PauseKey R1,
 Gui, 14:Add, Combobox, yp-5 x+0 W60 vPauseKey, %KeybdList%
 ; Export
 Gui, 14:Add, GroupBox, Section ys+195 xm W450 H145, %t_Lang010%:
-Gui, 14:Add, Edit, ys+20 xs+10 W370 R1 vExpFile -Multi, %dir%\%name_no_ext%.ahk
+Gui, 14:Add, Edit, ys+20 xs+10 W340 R1 vExpFile -Multi, %dir%\%name_no_ext%.ahk
 Gui, 14:Add, Button, -Wrap W30 H23 yp-1 x+0 gExpSearch, ...
 Gui, 14:Add, Button, yp x+5 H23 W25 hwndEx_EdScript vEx_EdScript gExEditScript
 	ILButton(Ex_EdScript, ResDllPath ":" 109)
+Gui, 14:Add, Button, yp x+5 H23 W25 hwndEx_ExecScript vEx_ExecScript gExExecScript
+	ILButton(Ex_ExecScript, ResDllPath ":" 58)
 Gui, 14:Add, Checkbox, -Wrap Checked%TabIndent% ys+50 xs+10 W230 vTabIndent R1, %t_Lang011%
 Gui, 14:Add, Checkbox, -Wrap Checked%CommentUnchecked% y+5 xs+10 W230 vCommentUnchecked R1, %w_Lang107%
 Gui, 14:Add, Checkbox, -Wrap Checked%Send_Loop% y+5 xs+10 W230 vSend_Loop R1, %t_Lang013%
@@ -2656,6 +2658,19 @@ return
 ExEditScript:
 Gui, 14:Submit, NoHide
 Run, %DefaultEditor% %ExpFile%
+return
+
+ExExecScript:
+Gui, 14:Submit, NoHide
+If (!A_AhkPath)
+{
+	GuiControl, 21:, UseExtFunc, 0
+	MsgBox, 17, %d_Lang007%, %d_Lang056%
+	IfMsgBox, OK
+		Run, http://autohotkey.com/
+	return
+}
+Run, %ExpFile%
 return
 
 ShowMore:
@@ -3707,6 +3722,17 @@ ExprLink:
 Run, %HelpDocsUrl%/Variables.htm#Expressions
 return
 
+StatusBarHelp:
+If (A_GuiEvent = "DoubleClick")
+	CmdHelp()
+Else If (A_GuiEvent = "Normal")
+{
+	StatusBarGetText, StatusBarText
+	Tooltip, %StatusBarText%
+	SetTimer, RemoveToolTip, -3000
+}
+return
+
 CheckNow:
 CheckUpdates:
 Gui, 1:+OwnDialogs
@@ -3912,8 +3938,9 @@ Gui, 5:Add, Button, -Wrap yp-1 x+0 W30 H23 vGetWin gGetWin Disabled, ...
 Gui, 5:Add, Button, -Wrap Section Default xm W75 H23 gMouseOK, %c_Lang020%
 Gui, 5:Add, Button, -Wrap ys W75 H23 gMouseCancel, %c_Lang021%
 Gui, 5:Add, Button, -Wrap ys W75 H23 vMouseApply gMouseApply Disabled, %c_Lang131%
-Gui, 5:Add, StatusBar
+Gui, 5:Add, StatusBar, gStatusBarHelp
 Gui, 5:Default
+SB_SetIcon(ResDllPath, IconsNames["help"])
 If (s_Caller = "Edit")
 {
 	EscCom("Details|TimesX|DelayX|Target|Window", 1)
@@ -5164,11 +5191,12 @@ Gui, 8:Add, Button, -Wrap ys W75 H23 vTextApply gTextApply Disabled, %c_Lang131%
 Gui, 8:Add, Button, -Wrap ys W25 H23 hwndInsertKeyT vInsertKeyT gInsertKey Disabled
 Gui, 8:Add, Text, -Wrap ys+5 cGray, %c_Lang025%
 	ILButton(InsertKeyT, ResDllPath ":" 91)
-Gui, 8:Add, StatusBar
+Gui, 8:Add, StatusBar, gStatusBarHelp
 Gui, 8:Default
 SB_SetParts(600, 70)
 SB_SetText("length: " 0, 2)
 SB_SetText("lines: " 0, 3)
+SB_SetIcon(ResDllPath, IconsNames["help"])
 If (s_Caller = "Edit")
 {
 	EscCom("Details|TimesX|DelayX|Target|Window", 1)
@@ -5594,8 +5622,9 @@ Gui, 3:Tab
 Gui, 3:Add, Button, -Wrap Section Default xm W75 H23 gPauseOK, %c_Lang020%
 Gui, 3:Add, Button, -Wrap ys W75 H23 gPauseCancel, %c_Lang021%
 Gui, 3:Add, Button, -Wrap ys W75 H23 vPauseApply gPauseApply Disabled, %c_Lang131%
-Gui, 3:Add, StatusBar
+Gui, 3:Add, StatusBar, gStatusBarHelp
 Gui, 3:Default
+SB_SetIcon(ResDllPath, IconsNames["help"])
 If (s_Caller = "Edit")
 {
 	EscCom("Details|TimesX|DelayX|Target|Window", 1)
@@ -5925,8 +5954,9 @@ Gui, 12:Add, Edit, yp x+10 W150 R1 vNewLabel
 Gui, 12:Add, Button, -Wrap Section xm y+67 W75 H23 gLabelOK, %c_Lang020%
 Gui, 12:Add, Button, -Wrap ys W75 H23 gLoopCancel, %c_Lang021%
 Gui, 12:Add, Button, -Wrap ys W75 H23 vLabelApply gLabelApply Disabled, %c_Lang131%
-Gui, 12:Add, StatusBar
+Gui, 12:Add, StatusBar, gStatusBarHelp
 Gui, 12:Default
+SB_SetIcon(ResDllPath, IconsNames["help"])
 GoSub, ClearPars
 If (s_Caller = "Edit")
 {
@@ -6386,8 +6416,9 @@ Gui, 11:Add, Edit, yp-3 x+5 vSizeY W55 Disabled
 Gui, 11:Add, Button, -Wrap Section Default xm W75 H23 gWinOK, %c_Lang020%
 Gui, 11:Add, Button, -Wrap ys W75 H23 gWinCancel, %c_Lang021%
 Gui, 11:Add, Button, -Wrap ys W75 H23 vWinApply gWinApply Disabled, %c_Lang131%
-Gui, 11:Add, StatusBar
+Gui, 11:Add, StatusBar, gStatusBarHelp
 Gui, 11:Default
+SB_SetIcon(ResDllPath, IconsNames["help"])
 If (s_Caller = "Edit")
 {
 	EscCom("Details|TimesX|DelayX|Target|Window", 1)
@@ -6769,8 +6800,9 @@ Gui, 19:Add, Button, -Wrap Section Default xm W75 H23 gImageOK, %c_Lang020%
 Gui, 19:Add, Button, -Wrap ys W75 H23 gImageCancel, %c_Lang021%
 Gui, 19:Add, Button, -Wrap ys W75 H23 vImageApply gImageApply Disabled, %c_Lang131%
 Gui, 19:Add, Button, -Wrap ys W75 H23 gImageOpt, %w_Lang003%
-Gui, 19:Add, StatusBar
+Gui, 19:Add, StatusBar, gStatusBarHelp
 Gui, 19:Default
+SB_SetIcon(ResDllPath, IconsNames["help"])
 If (s_Caller = "Edit")
 {
 	EscCom("Details|TimesX|DelayX|Target|Window", 1)
@@ -7152,8 +7184,9 @@ Gui, 10:Add, Edit, vPar11File W270 R1 -Multi
 Gui, 10:Add, Button, -Wrap Section Default xm W75 H23 vRunOK gRunOK, %c_Lang020%
 Gui, 10:Add, Button, -Wrap ys W75 H23 gRunCancel, %c_Lang021%
 Gui, 10:Add, Button, -Wrap ys W75 H23 vRunApply gRunApply Disabled, %c_Lang131%
-Gui, 10:Add, StatusBar
+Gui, 10:Add, StatusBar, gStatusBarHelp
 Gui, 10:Default
+SB_SetIcon(ResDllPath, IconsNames["help"])
 If (s_Caller = "Edit")
 {
 	GuiControl, 10:ChooseString, FileCmdL, %Type%
@@ -7479,7 +7512,7 @@ Gui, 21:Add, GroupBox, Section xm ym W450 H240
 Gui, 21:Add, Text, ys+15 xs+10 vVarNameT, %c_Lang057%:
 Gui, 21:Add, Edit, W200 R1 -Multi vVarName
 Gui, 21:Add, Text, yp-20 x+5 W120, %c_Lang086%:
-Gui, 21:Add, DDL, y+7 W60 vOper gAsOper, :=$$+=$-=$*=$/=$//=$.=
+Gui, 21:Add, DDL, y+7 W60 vOper gAsOper, %AssignOperators%
 Gui, 21:Add, Text, yp+5 x+5 W150 vAsOper cGray, %As_Oper_1%
 Gui, 21:Add, Text, y+9 xs+10 W200, %c_Lang056%:
 Gui, 21:Add, Checkbox, -Wrap Checked%EvalDefault% yp x+5 W220 vUseEval gUseEval R1, %c_Lang087% / %c_Lang211%
@@ -7517,8 +7550,9 @@ Gui, 21:Add, Button, -Wrap x+10 yp W75 H23 gReset, %c_Lang088%
 Gui, 21:Add, Button, -Wrap Section xm y+14 W75 H23 gVarOK, %c_Lang020%
 Gui, 21:Add, Button, -Wrap ys W75 H23 gIfCancel, %c_Lang021%
 Gui, 21:Add, Button, -Wrap ys W75 H23 vVarApplyB gVarApply Disabled, %c_Lang131%
-Gui, 21:Add, StatusBar
+Gui, 21:Add, StatusBar, gStatusBarHelp
 Gui, 21:Default
+SB_SetIcon(ResDllPath, IconsNames["help"])
 If (s_Caller = "Edit")
 {
 	If (A_ThisLabel = "EditSt")
@@ -8149,8 +8183,9 @@ Gui, 22:Add, Button, -Wrap yp-1 x+0 W30 H23 vGetWin gGetWin, ...
 Gui, 22:Add, Button, -Wrap Section Default xm W75 H23 gSendMsgOK, %c_Lang020%
 Gui, 22:Add, Button, -Wrap ys W75 H23 gSendMsgCancel, %c_Lang021%
 Gui, 22:Add, Button, -Wrap ys W75 H23 vSendMsgApply gSendMsgApply Disabled, %c_Lang131%
-Gui, 22:Add, StatusBar
+Gui, 22:Add, StatusBar, gStatusBarHelp
 Gui, 22:Default
+SB_SetIcon(ResDllPath, IconsNames["help"])
 If (s_Caller = "Edit")
 {
 	EscCom("Details|TimesX|DelayX|Target|Window", 1)
@@ -8285,8 +8320,9 @@ Gui, 23:Add, Edit, yp-3 x+5 vSizeY W55 Disabled
 Gui, 23:Add, Button, -Wrap Section Default xm W75 H23 gControlOK, %c_Lang020%
 Gui, 23:Add, Button, -Wrap ys W75 H23 gControlCancel, %c_Lang021%
 Gui, 23:Add, Button, -Wrap ys W75 H23 vControlApply gControlApply Disabled, %c_Lang131%
-Gui, 23:Add, StatusBar
+Gui, 23:Add, StatusBar, gStatusBarHelp
 Gui, 23:Default
+SB_SetIcon(ResDllPath, IconsNames["help"])
 If (s_Caller = "Edit")
 {
 	EscCom("Details|TimesX|DelayX|Target|Window", 1)
@@ -8573,8 +8609,9 @@ Gui, 24:Add, Button, -Wrap yp-1 x+0 W30 H23 vGetEl gGetEl Disabled, ...
 Gui, 24:Add, Text, y+5 xs vClipTip cGray, %c_Lang025%
 Gui, 24:Add, Checkbox, -Wrap Checked y+10 xs W300 vLoadWait R1, %c_Lang097%
 Gui, 24:Add, Button, -Wrap Section ym+270 xs+72 W75 H23 gIEComCancel, %c_Lang021%
-Gui, 24:Add, StatusBar
+Gui, 24:Add, StatusBar, gStatusBarHelp
 Gui, 24:Default
+SB_SetIcon(ResDllPath, IconsNames["help"])
 If (s_Caller = "Edit")
 {
 	StringReplace, Details, Details, ``n, `n, All
@@ -9142,7 +9179,7 @@ Gui, 30:Add, Edit, Section xm ym+25 vTextEdit gTextEdit WantTab W720 R30, %Scrip
 Gui, 30:Font
 Gui, 30:Add, Button, -Wrap Section Default xm y+15 W75 H23 gExpViewOK, %c_Lang020%
 Gui, 30:Add, Button, -Wrap ys W75 H23 gExpViewCancel, %c_Lang021%
-Gui, 30:Add, StatusBar
+Gui, 30:Add, StatusBar, gStatusBarHelp
 Gui, 30:Default
 SB_SetParts(480, 80)
 SB_SetText(c_Lang025, 1)
@@ -9237,8 +9274,9 @@ Gui, 38:Tab
 Gui, 38:Add, Button, -Wrap Section Default xm ys+360 W75 H23 gUDFOK, %c_Lang020%
 Gui, 38:Add, Button, -Wrap ys W75 H23 gUDFCancel, %c_Lang021%
 Gui, 38:Add, Button, -Wrap ys W75 H23 vUDFApply gUDFApply Disabled, %c_Lang131%
-Gui, 38:Add, StatusBar
+Gui, 38:Add, StatusBar, gStatusBarHelp
 Gui, 38:Default
+SB_SetIcon(ResDllPath, IconsNames["help"])
 If (s_Caller = "Edit")
 {
 	If (A_ThisLabel = "EditUserFunc")
@@ -9699,8 +9737,9 @@ Else
 	Gui, 34:Add, Groupbox, Section yp+5 -Wrap W450 H195, %d_Lang074%:
 	Gui, 34:Add, Edit, -Wrap ys+20 xs+10 W430 r1 vFindCmd gFindCmd
 	Gui, 34:Add, ListView, r8 y+0 W430 hwndhFindRes vFindResult gFindResult AltSubmit -Multi -Hdr, Command|Description
-	Gui, 34:Add, StatusBar
+	Gui, 34:Add, StatusBar, gStatusBarHelp
 	Gui, 34:Default
+	SB_SetIcon(ResDllPath, IconsNames["help"])
 }
 GuiControl, 34:Focus, FindCmd
 Gui, 34:Show,, %AppName%
@@ -9817,8 +9856,9 @@ Gui, 36:Add, Text, xs+10 y+5 W300 cRed vWarning
 Gui, 36:Add, Button, -Wrap Section Default xm W75 H23 gSchedOK, %c_Lang020%
 Gui, 36:Add, Button, -Wrap ys W75 H23 gSchedCancel, %c_Lang021%
 Gui, 36:Add, Link, ys+5 W160, <a href="taskschd.msc">%t_Lang160%</a>
-Gui, 36:Add, StatusBar
+Gui, 36:Add, StatusBar, gStatusBarHelp
 Gui, 36:Default
+SB_SetIcon(ResDllPath, IconsNames["help"])
 SB_SetText(t_Lang153)
 Gui, 36:Show,, %t_Lang164%
 ChangeIcon(hIL_Icons, CmdWin, IconsNames["scheduler"])
@@ -9895,8 +9935,9 @@ Gui, 27:Add, Checkbox, -Wrap Checked%ShowBar% y+8 xs+10 W200 vShowBar R1, %w_Lan
 Gui, 27:Add, Button, -Wrap Section Default xm W75 H23 gTimerOK, %c_Lang020%
 Gui, 27:Add, Button, -Wrap ys W75 H23 gTimerCancel, %c_Lang021%
 Gui, 27:Add, Button, -Wrap ys W75 H23 gScheduler, %t_Lang163%
-Gui, 27:Add, StatusBar
+Gui, 27:Add, StatusBar, gStatusBarHelp
 Gui, 27:Default
+SB_SetIcon(ResDllPath, IconsNames["help"])
 If !(Timer_ran)
 {
 	GuiControl, 27:, TimerDelayX, 250
@@ -10575,7 +10616,7 @@ If (ShowGroups)
 	GoSub, EnableGroups
 GoSub, chMacroGuiSize
 CopyMenuLabels[TabCount] := TabName
-Menu, CopyTo, Add, % CopyMenuLabels[TabCount], CopyList
+Menu, CopyTo, Add, % CopyMenuLabels[TabCount], CopyList, Radio
 Try Menu, CopyTo, Check, % CopyMenuLabels[A_List]
 GuiControl, 28:+Range1-%TabCount%, OSHK
 
@@ -10769,7 +10810,7 @@ Loop, %TabCount%
 }
 LVManager.SetHwnd(ListID%A_List%)
 CopyMenuLabels[1] := "Macro1"
-Menu, CopyTo, Add, % CopyMenuLabels[1], CopyList
+Menu, CopyTo, Add, % CopyMenuLabels[1], CopyList, Radio
 Menu, CopyTo, Check, % CopyMenuLabels[1]
 return
 
@@ -13237,37 +13278,13 @@ Step := "Language := " Type "`nExecuteStatement(" Step ")"
 
 pb_COMInterface:
 	Step := StrReplace(Step, "ø", "`n")
-	StringSplit, Act, Action, :
-
-	If (RegExMatch(Act2, "^(\w+)(\[\S+\]|\.\w+)+", lMatch))
-	{
-		Try
-			z_Check := VarSetCapacity(%lMatch1%)
-		Catch
-		{
-			MsgBox, 16, %d_Lang007%, %d_Lang041%
-			return
-		}
-	}
-	Else
-	{
-		Try
-			z_Check := VarSetCapacity(%Act2%)
-		Catch
-		{
-			MsgBox, 16, %d_Lang007%, %d_Lang041%
-			StopIt := 1
-			return
-		}
-	}
-	
 	Loop, Parse, Step, `n, %A_Space%%A_Tab%`r
 	{
 		LoopField := StrReplace(A_LoopField, "``n", "`n")
 	,	pbType := Type, pbAction := Action
 		Try
 		{
-			EvalResult := Eval(LoopField, __PointMarker)
+			Eval(LoopField, __PointMarker)
 		; ,	lResult := StrJoin(EvalResult)
 			; If (!IsObject(%Act1%))
 				; %Act1% := COMInterface(LoopField, %Act1%, lResult, Target)
@@ -14484,7 +14501,7 @@ Menu, SelectMenu, Add, %s_Lang009%, SelType
 Menu, SelectMenu, Add, %s_Lang010%, :SelCmdMenu
 
 CopyMenuLabels[1] := "Macro1"
-Menu, CopyTo, Add, % CopyMenuLabels[1], CopyList
+Menu, CopyTo, Add, % CopyMenuLabels[1], CopyList, Radio
 Menu, CopyTo, Check, % CopyMenuLabels[1]
 
 Menu, GroupMenu, Add, %e_Lang017%`t%_s%Ctrl+Shift+G, GroupsMode
@@ -14541,8 +14558,8 @@ Menu, HotkeyMenu, Add, %v_Lang018%, ShowHideBandHK
 Menu, HotkeyMenu, Add, %v_Lang019%, ShowHideBandHK
 Menu, HotkeyMenu, Add, %v_Lang020%, ShowHideBandHK
 
-Menu, SetIconSizeMenu, Add, %v_Lang023%, SetSmallIcons
-Menu, SetIconSizeMenu, Add, %v_Lang024%, SetLargeIcons
+Menu, SetIconSizeMenu, Add, %v_Lang023%, SetSmallIcons, Radio
+Menu, SetIconSizeMenu, Add, %v_Lang024%, SetLargeIcons, Radio
 
 Menu, SetLayoutMenu, Add, %v_Lang021%, SetBasicLayout
 Menu, SetLayoutMenu, Add, %v_Lang022%, SetDefaultLayout
@@ -14809,7 +14826,7 @@ Loop, %TabCount%
 {
 	CopyMenuLabels[A_Index] := TabGetText(TabSel, A_Index)
 	Try Menu, CopyTo, Uncheck, % CopyMenuLabels[A_Index]
-	Menu, CopyTo, Add, % CopyMenuLabels[A_Index], CopyList
+	Menu, CopyTo, Add, % CopyMenuLabels[A_Index], CopyList, Radio
 }
 Gui, chMacro:Submit, NoHide
 Try Menu, CopyTo, Check, % CopyMenuLabels[A_List]
@@ -14928,15 +14945,15 @@ ItemVar := SubStr(A_ThisMenu, 1, 7), %ItemVar% := RegExReplace(A_ThisMenuItem, "
 return
 
 OnFinish:
-Menu, OnFinish, Add, %w_Lang021%, FinishOpt
-Menu, OnFinish, Add, %w_Lang022%, FinishOpt
-Menu, OnFinish, Add, %w_Lang023%, FinishOpt
-Menu, OnFinish, Add, %w_Lang024%, FinishOpt
-Menu, OnFinish, Add, %w_Lang025%, FinishOpt
-Menu, OnFinish, Add, %w_Lang026%, FinishOpt
-Menu, OnFinish, Add, %w_Lang027%, FinishOpt
-Menu, OnFinish, Add, %w_Lang028%, FinishOpt
-Menu, OnFinish, Add, %w_Lang029%, FinishOpt
+Menu, OnFinish, Add, %w_Lang021%, FinishOpt, Radio
+Menu, OnFinish, Add, %w_Lang022%, FinishOpt, Radio
+Menu, OnFinish, Add, %w_Lang023%, FinishOpt, Radio
+Menu, OnFinish, Add, %w_Lang024%, FinishOpt, Radio
+Menu, OnFinish, Add, %w_Lang025%, FinishOpt, Radio
+Menu, OnFinish, Add, %w_Lang026%, FinishOpt, Radio
+Menu, OnFinish, Add, %w_Lang027%, FinishOpt, Radio
+Menu, OnFinish, Add, %w_Lang028%, FinishOpt, Radio
+Menu, OnFinish, Add, %w_Lang029%, FinishOpt, Radio
 
 Menu, OnFinish, Check, % w_Lang02%OnFinishCode%
 
@@ -14947,15 +14964,15 @@ GoSub, BuildOnFinishMenu
 return
 
 BuildOnFinishMenu:
-Menu, OnFinishMenu, Add, %w_Lang021%, FinishOpt
-Menu, OnFinishMenu, Add, %w_Lang022%, FinishOpt
-Menu, OnFinishMenu, Add, %w_Lang023%, FinishOpt
-Menu, OnFinishMenu, Add, %w_Lang024%, FinishOpt
-Menu, OnFinishMenu, Add, %w_Lang025%, FinishOpt
-Menu, OnFinishMenu, Add, %w_Lang026%, FinishOpt
-Menu, OnFinishMenu, Add, %w_Lang027%, FinishOpt
-Menu, OnFinishMenu, Add, %w_Lang028%, FinishOpt
-Menu, OnFinishMenu, Add, %w_Lang029%, FinishOpt
+Menu, OnFinishMenu, Add, %w_Lang021%, FinishOpt, Radio
+Menu, OnFinishMenu, Add, %w_Lang022%, FinishOpt, Radio
+Menu, OnFinishMenu, Add, %w_Lang023%, FinishOpt, Radio
+Menu, OnFinishMenu, Add, %w_Lang024%, FinishOpt, Radio
+Menu, OnFinishMenu, Add, %w_Lang025%, FinishOpt, Radio
+Menu, OnFinishMenu, Add, %w_Lang026%, FinishOpt, Radio
+Menu, OnFinishMenu, Add, %w_Lang027%, FinishOpt, Radio
+Menu, OnFinishMenu, Add, %w_Lang028%, FinishOpt, Radio
+Menu, OnFinishMenu, Add, %w_Lang029%, FinishOpt, Radio
 
 Menu, OnFinishMenu, Uncheck, %w_Lang021%
 Menu, OnFinishMenu, Uncheck, %w_Lang022%

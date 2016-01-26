@@ -313,7 +313,7 @@
 	c_Lang022 =	Sluiten
 	c_Lang023 =	Kopieer
 	c_Lang024 =	Verwijder
-	c_Lang025 =	Gebruik `% voor variabelen, bijvoorbeeld: `%Clipboard`% (behalve in arrays)
+	c_Lang025 =	Gebruik `% voor variabelen, bijvoorbeeld: `%Clipboard`%
 	c_Lang026 =	Actie
 	c_Lang027 =	Klikken
 	c_Lang028 =	Bewegen
@@ -1009,6 +1009,11 @@
 	As_Oper_5 =	Verdelen
 	As_Oper_6 =	Vloer kloof
 	As_Oper_7 =	Aaneenschakelen
+	As_Oper_8 =	Bitwise inclusive OR
+	As_Oper_9 =	Bitwise AND
+	As_Oper_10 =	Bitwise exclusive OR
+	As_Oper_11 =	Right shift AND
+	As_Oper_12 =	Left shift AND
 	Co_Oper_1 =	Gelijk
 	Co_Oper_2 =	Equal (hoofdlettergevoelig)
 	Co_Oper_3 =	Niet gelijk

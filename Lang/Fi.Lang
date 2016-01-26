@@ -313,7 +313,7 @@
 	c_Lang022 =	Lähellä
 	c_Lang023 =	Kopioi
 	c_Lang024 =	Poistaa
-	c_Lang025 =	Käytä `% muuttujia, esimerkiksi: `%Clipboard`% (paitsi sisällä paneelit)
+	c_Lang025 =	Käytä `% muuttujia, esimerkiksi: `%Clipboard`%
 	c_Lang026 =	Toiminta
 	c_Lang027 =	Napsauttaa
 	c_Lang028 =	Liikkua
@@ -1009,6 +1009,11 @@
 	As_Oper_5 =	Jakaa
 	As_Oper_6 =	Lattia kahtiajaon
 	As_Oper_7 =	Kytkeä peräkkäin
+	As_Oper_8 =	Bitwise inclusive OR
+	As_Oper_9 =	Bitwise AND
+	As_Oper_10 =	Bitwise exclusive OR
+	As_Oper_11 =	Right shift AND
+	As_Oper_12 =	Left shift AND
 	Co_Oper_1 =	Yhtäläinen
 	Co_Oper_2 =	Equal (isot ja pienet kirjaimet)
 	Co_Oper_3 =	Ei yhtä

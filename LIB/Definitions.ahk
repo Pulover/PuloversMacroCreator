@@ -657,6 +657,8 @@ Loop, Parse, FileCmd, `n
 		FileCmdList .= "|"
 }
 
+AssignOperators := ":=$$+=$-=$*=$/=$//=$.=$|=$&=$^=$>>=$<<="
+
 ;##### Functions: #####
 
 BuiltinFuncList := "

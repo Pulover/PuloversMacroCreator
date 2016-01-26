@@ -72,7 +72,7 @@
 				Gui, chMacro:ListView, InputList%TabCount%
 				GuiControl, chMacro:, %TabSel%, Macro%TabCount%
 				GuiAddLV(TabCount), CopyMenuLabels[TabCount] := "Macro" TabCount
-				Menu, CopyTo, Add, % CopyMenuLabels[TabCount], CopyList
+				Menu, CopyTo, Add, % CopyMenuLabels[TabCount], CopyList, Radio
 				this.LVLoad("InputList" TabCount, PmcCode[A_Index])
 				Gui, chMacro:ListView, InputList%TabCount%
 				ListCount%TabCount% := LV_GetCount()

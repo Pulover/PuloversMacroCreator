@@ -313,7 +313,7 @@
 	c_Lang022 =	Yakın
 	c_Lang023 =	Kopyala
 	c_Lang024 =	Silmek
-	c_Lang025 =	Ör., Değişkenler için `% kullanın: `%Clipboard`% (iç diziler hariç)
+	c_Lang025 =	Ör., Değişkenler için `% kullanın: `%Clipboard`%
 	c_Lang026 =	Eylem
 	c_Lang027 =	Tıklayın
 	c_Lang028 =	Hareket
@@ -1009,6 +1009,11 @@
 	As_Oper_5 =	Bölmek
 	As_Oper_6 =	Kat bölmek
 	As_Oper_7 =	Bağlamak
+	As_Oper_8 =	Bitwise inclusive OR
+	As_Oper_9 =	Bitwise AND
+	As_Oper_10 =	Bitwise exclusive OR
+	As_Oper_11 =	Right shift AND
+	As_Oper_12 =	Left shift AND
 	Co_Oper_1 =	Eşit
 	Co_Oper_2 =	Eşit (küçük harf duyarlı)
 	Co_Oper_3 =	Eşit değil

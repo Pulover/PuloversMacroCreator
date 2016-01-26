@@ -313,7 +313,7 @@
 	c_Lang022 =	Közeli
 	c_Lang023 =	Másolás
 	c_Lang024 =	Töröl
-	c_Lang025 =	Használja a `% változók, például: `%Clipboard`% (kivéve belső tömbök)
+	c_Lang025 =	Használja a `% változók, például: `%Clipboard`%
 	c_Lang026 =	Akció
 	c_Lang027 =	Kattintson a
 	c_Lang028 =	Mozog
@@ -1009,6 +1009,11 @@
 	As_Oper_5 =	Oszt
 	As_Oper_6 =	Floor szakadék
 	As_Oper_7 =	Összekapcsol
+	As_Oper_8 =	Bitwise inclusive OR
+	As_Oper_9 =	Bitwise AND
+	As_Oper_10 =	Bitwise exclusive OR
+	As_Oper_11 =	Right shift AND
+	As_Oper_12 =	Left shift AND
 	Co_Oper_1 =	Egyenlő
 	Co_Oper_2 =	Egyenlő (nagybetűk)
 	Co_Oper_3 =	Nem egyenlő

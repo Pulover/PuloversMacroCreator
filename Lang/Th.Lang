@@ -313,7 +313,7 @@
 	c_Lang022 =	ปิด
 	c_Lang023 =	สำเนา
 	c_Lang024 =	การลบ
-	c_Lang025 =	ใช้ `% สำหรับตัวแปรเช่น:`% Clipboard`% (ยกเว้นภายในอาร์เรย์)
+	c_Lang025 =	ใช้ `% สำหรับตัวแปรเช่น:`% Clipboard`%
 	c_Lang026 =	การดำเนินการ
 	c_Lang027 =	คลิก
 	c_Lang028 =	ย้าย
@@ -1009,6 +1009,11 @@
 	As_Oper_5 =	แบ่ง
 	As_Oper_6 =	แบ่งชั้น
 	As_Oper_7 =	Concatenate
+	As_Oper_8 =	Bitwise inclusive OR
+	As_Oper_9 =	Bitwise AND
+	As_Oper_10 =	Bitwise exclusive OR
+	As_Oper_11 =	Right shift AND
+	As_Oper_12 =	Left shift AND
 	Co_Oper_1 =	เท่ากัน
 	Co_Oper_2 =	ที่เท่าเทียมกัน (กรณีที่สำคัญ)
 	Co_Oper_3 =	ไม่เท่ากับ

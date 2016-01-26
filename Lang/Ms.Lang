@@ -313,7 +313,7 @@
 	c_Lang022 =	Tutup
 	c_Lang023 =	Menyalin
 	c_Lang024 =	Padam
-	c_Lang025 =	Gunakan `% utk pembolehubah, contohnya: `%Clipboard`% (kecuali dalam tatasusunan)
+	c_Lang025 =	Gunakan `% utk pembolehubah, contohnya: `%Clipboard`%
 	c_Lang026 =	Tindakan
 	c_Lang027 =	Klik
 	c_Lang028 =	Pindah
@@ -1009,6 +1009,11 @@
 	As_Oper_5 =	Bahagikan
 	As_Oper_6 =	Jurang Floor
 	As_Oper_7 =	Concatenate
+	As_Oper_8 =	Bitwise inclusive OR
+	As_Oper_9 =	Bitwise AND
+	As_Oper_10 =	Bitwise exclusive OR
+	As_Oper_11 =	Right shift AND
+	As_Oper_12 =	Left shift AND
 	Co_Oper_1 =	Sama
 	Co_Oper_2 =	Sama (kes sensitif)
 	Co_Oper_3 =	Tidak sama

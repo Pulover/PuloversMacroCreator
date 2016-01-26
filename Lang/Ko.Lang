@@ -313,7 +313,7 @@
 	c_Lang022 =	가까운
 	c_Lang023 =	복사
 	c_Lang024 =	삭제
-	c_Lang025 =	예를 들어, 변수 `% 를 사용: `%Clipboard`% (내부 배열 제외)
+	c_Lang025 =	예를 들어, 변수 `% 를 사용: `%Clipboard`%
 	c_Lang026 =	행동
 	c_Lang027 =	를 클릭하십시오
 	c_Lang028 =	움직임
@@ -1009,6 +1009,11 @@
 	As_Oper_5 =	분할
 	As_Oper_6 =	바닥 나누기
 	As_Oper_7 =	CONCATENATE
+	As_Oper_8 =	Bitwise inclusive OR
+	As_Oper_9 =	Bitwise AND
+	As_Oper_10 =	Bitwise exclusive OR
+	As_Oper_11 =	Right shift AND
+	As_Oper_12 =	Left shift AND
 	Co_Oper_1 =	같은
 	Co_Oper_2 =	동일 (대소 문자 구분)
 	Co_Oper_3 =	같지 않음

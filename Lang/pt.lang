@@ -313,7 +313,7 @@
 	c_Lang022 =	Fechar
 	c_Lang023 =	Copiar
 	c_Lang024 =	Excluir
-	c_Lang025 =	Use `% para variáveis, ex.: `%Clipboard`% (exceto dentro de matrizes)
+	c_Lang025 =	Use `% para variáveis, ex.: `%Clipboard`%
 	c_Lang026 =	Ação
 	c_Lang027 =	Clicar
 	c_Lang028 =	Mover
@@ -1009,6 +1009,11 @@
 	As_Oper_5 =	Dividir
 	As_Oper_6 =	Dividir (arrendondar)
 	As_Oper_7 =	Concatenar
+	As_Oper_8 =	Bitwise inclusive OR
+	As_Oper_9 =	Bitwise AND
+	As_Oper_10 =	Bitwise exclusive OR
+	As_Oper_11 =	Right shift AND
+	As_Oper_12 =	Left shift AND
 	Co_Oper_1 =	Igual
 	Co_Oper_2 =	Igual (diferenciar maiúsc./minúsc.)
 	Co_Oper_3 =	Diferente
