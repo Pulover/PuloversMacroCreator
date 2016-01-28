@@ -1,7 +1,7 @@
 ﻿[PMC Code v5.0.0]|F1||1|Window|1|Arrays1
 Groups=Start:1
 1|[Assign Variable]|N := [10, 20, 30]|1|0|Variable|Expression||||
-02|Array|N := 10, 20, 30|1|0|Function|||Alternative way to assign arrays||
+2|Array|N := 10, 20, 30|1|0|Function|||Alternative way to assign arrays||
 3|[LoopStart]|LoopStart|% N.Length()|0|Loop|||||
 4|[MsgBox]|% N[A_Index]|1|0|MsgBox|262144||||
 5|[LoopEnd]|LoopEnd|1|0|Loop|||||

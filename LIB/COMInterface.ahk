@@ -34,8 +34,8 @@ COMInterface(String, Ptr := "", ByRef OutputVar := "", CLSID := "InternetExplore
 		String := RegExReplace(String, "\(([^()]++|(?R))*\)", "&_Parent" A_Index, "", 1)
 	
 	; Look foor Blocks that will be used to create SafeArrays and replace with a pattern.
-	While (RegExMatch(String, "U)\[(.*)\]", _Block%A_Index%))
-		String := RegExReplace(String, "U)\[(.*)\]", "&_Block" A_Index, "", 1)
+	While (RegExMatch(String, "U)\[(.*)\]", _Bracket%A_Index%))
+		String := RegExReplace(String, "U)\[(.*)\]", "&_Bracket" A_Index, "", 1)
 
 	ComSet := Ptr
 
@@ -107,7 +107,7 @@ COMInterface(String, Ptr := "", ByRef OutputVar := "", CLSID := "InternetExplore
 				}
 			}
 		}
-		Else If (RegExMatch(A_LoopField, "^_Block\d+"))
+		Else If (RegExMatch(A_LoopField, "^_Bracket\d+"))
 			Index := A_LoopField
 		Else
 			Obj := A_LoopField

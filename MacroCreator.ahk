@@ -7999,6 +7999,8 @@ If FuncName in Delete,HasKey,InsertAt,Length,MaxIndex,MinIndex,RemoveAt,Pop,Push
 	IsBuiltIn := 1
 Else
 	Try IsBuiltIn := Func(FuncName).IsBuiltIn ? 1 : 0
+	Catch
+		IsBuiltIn := 0
 GuiControl, 21:Enable%IsBuiltIn%, FuncHelp
 Try GuiControl, 21:, FuncTip, % %FuncName%_Hint
 SBShowTip(FuncName)
