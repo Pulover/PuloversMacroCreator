@@ -313,7 +313,7 @@
 	c_Lang022 =	Közeli
 	c_Lang023 =	Másolás
 	c_Lang024 =	Töröl
-	c_Lang025 =	Használja a `% változók, például: `%Clipboard`%
+	c_Lang025 =	Használja a % változók, például: %Clipboard%
 	c_Lang026 =	Akció
 	c_Lang027 =	Kattintson a
 	c_Lang028 =	Mozog
@@ -357,7 +357,7 @@
 	c_Lang066 =	Kulcs Várakozás
 	c_Lang067 =	Ha talált
 	c_Lang068 =	Ha nem talált / Error
-	c_Lang069 =	Koordináták tárolt `%FoundX`%/`%FoundY`%.
+	c_Lang069 =	Koordináták tárolt %FoundX%/%FoundY%.
 	c_Lang070 =	Coord
 	c_Lang071 =	Változatok
 	c_Lang072 =	Előnézet
@@ -848,7 +848,7 @@
 		Ellenőrizze, hogy a "Capture Keys" opciót be kulcsok és kombinációk a Macro közvetlenül a fő ablakban.
 		Adja meg a kulcsok és kombinációk a gyorsbillentyűket doboz alján, és nyomja meg az Insert gombot, hogy vegye fel őket a kiválasztott sorokat.
 		Ha nincs sor van kijelölve a szerkesztés funkció alkalmazni az összes sort a listában.
-		Hozzá lehet rendelni saját változókat a Változók windows (Beszúrás > IF / változók / függvények). Használatához be őket parancsokat csatolnia kell a változó neve százalékban jelek, pl: `%MyVar`%.
+		Hozzá lehet rendelni saját változókat a Változók windows (Beszúrás > IF / változók / függvények). Használatához be őket parancsokat csatolnia kell a változó neve százalékban jelek, pl: %MyVar%.
 		A "hurok" pult tetején beállítja az összes hurkot a kiválasztott Macro.
 		Bármikor módosíthatja a sorban duplán kattintva, vagy válassza ki azt, és kattintson a Szerkesztés gomb alján.
 		Tudod szerkeszteni több kijelölt sorokat a beállításokat a szerkesztő alján.

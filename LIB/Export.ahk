@@ -265,7 +265,7 @@
 		}
 		Else If ((Type = cType21) || (Type = cType44) || (Type = cType46))
 		{
-			AssignReplace(Step)
+			AssignParse(Step, VarName, Oper, VarValue)
 			If (Type = cType21)
 			{
 				If VarValue is not number

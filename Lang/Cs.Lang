@@ -313,7 +313,7 @@
 	c_Lang022 =	Zavřít
 	c_Lang023 =	Kopírovat
 	c_Lang024 =	Vymazat
-	c_Lang025 =	Použijte `% pro proměnné, např.: `%Clipboard`%
+	c_Lang025 =	Použijte % pro proměnné, např.: %Clipboard%
 	c_Lang026 =	Akce
 	c_Lang027 =	Klepněte na tlačítko
 	c_Lang028 =	Pohyb
@@ -357,7 +357,7 @@
 	c_Lang066 =	Klíč Čekání
 	c_Lang067 =	Pokud zjistíme,
 	c_Lang068 =	Pokud není nalezena / Chyba
-	c_Lang069 =	Coords ukládány do `%FoundX`%/`%FoundY`%.
+	c_Lang069 =	Coords ukládány do %FoundX%/%FoundY%.
 	c_Lang070 =	Coord
 	c_Lang071 =	Varianty
 	c_Lang072 =	Náhled
@@ -848,7 +848,7 @@
 		Podívejte se na "Capture" Keys možnost zadat klíče a kombinace do makra přímo z hlavního okna.
 		Enter a jejich kombinace v poli Hotkey dole a stiskněte tlačítko Vložit a přidat je do vybraných řádků.
 		Pokud žádné položky jsou označeny editační tlačítka platí pro všechny řádky v seznamu.
-		Můžete přiřadit své vlastní proměnné v proměnné windows (Vložit > if / proměnné / funkce). Chcete-li používat je uvnitř příkazy název proměnné uzavřete v procentech znaky, např.: `%MyVar`%.
+		Můžete přiřadit své vlastní proměnné v proměnné windows (Vložit > if / proměnné / funkce). Chcete-li používat je uvnitř příkazy název proměnné uzavřete v procentech znaky, např.: %MyVar%.
 		Loop počítadlo v horní části stanovuje celkový počet smyček pro vybrané makro.
 		Můžete upravit řádek poklepáním, nebo jeho výběrem a klepnutím na tlačítko Upravit tlačítka v dolní části.
 		Zde můžete editovat více vybraných řádků pomocí volby v editačním řádku v dolní části.

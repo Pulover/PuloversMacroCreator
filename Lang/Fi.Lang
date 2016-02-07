@@ -313,7 +313,7 @@
 	c_Lang022 =	Lähellä
 	c_Lang023 =	Kopioi
 	c_Lang024 =	Poistaa
-	c_Lang025 =	Käytä `% muuttujia, esimerkiksi: `%Clipboard`%
+	c_Lang025 =	Käytä % muuttujia, esimerkiksi: %Clipboard%
 	c_Lang026 =	Toiminta
 	c_Lang027 =	Napsauttaa
 	c_Lang028 =	Liikkua
@@ -357,7 +357,7 @@
 	c_Lang066 =	Näppäintä Odotus
 	c_Lang067 =	Jos löytyy
 	c_Lang068 =	Jos ei löydy / Error
-	c_Lang069 =	Koordinaatit tallennetaan `%FoundX`%/`%FoundY`%.
+	c_Lang069 =	Koordinaatit tallennetaan %FoundX%/%FoundY%.
 	c_Lang070 =	Coord
 	c_Lang071 =	Muunnelmia
 	c_Lang072 =	Preview
@@ -848,7 +848,7 @@
 		Tarkista "Capture Keys" mahdollisuus tulla Avainten ja yhdistelmien teidän Macro suoraan pääikkunassa.
 		Anna avaimet ja yhdistelmät pikanäppäin alalaidassa ja paina Lisää-painiketta ja lisää ne valita rivejä.
 		Jos rivejä on valittu edit painikkeet koskevat kaikkia rivejä luettelon.
-		Voit määrittää oman muuttujia muuttujat ikkunat (Insert > Jos Lausunnot / muuttujat / toiminnot). Käyttää niitä sisällä komentoja liittää muuttujan nimeä prosenttia merkkejä, esim.: `%MyVar`%.
+		Voit määrittää oman muuttujia muuttujat ikkunat (Insert > Jos Lausunnot / muuttujat / toiminnot). Käyttää niitä sisällä komentoja liittää muuttujan nimeä prosenttia merkkejä, esim.: %MyVar%.
 		Loop counter yläosassa asettaa kokonaismäärä silmukoita valitun Macro.
 		Voit muokata rivi kaksoisnapsauttamalla sitä tai valitsemalla sen ja napsauttamalla Muokkaa painikkeita.
 		Voit muokata useita valitut rivit käyttämällä vaihtoehtoja muokata alareunassa.

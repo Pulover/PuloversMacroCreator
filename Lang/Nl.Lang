@@ -313,7 +313,7 @@
 	c_Lang022 =	Sluiten
 	c_Lang023 =	Kopieer
 	c_Lang024 =	Verwijder
-	c_Lang025 =	Gebruik `% voor variabelen, bijvoorbeeld: `%Clipboard`%
+	c_Lang025 =	Gebruik % voor variabelen, bijvoorbeeld: %Clipboard%
 	c_Lang026 =	Actie
 	c_Lang027 =	Klikken
 	c_Lang028 =	Bewegen
@@ -357,7 +357,7 @@
 	c_Lang066 =	Key Wachten
 	c_Lang067 =	Indien gevonden
 	c_Lang068 =	Indien niet gevonden / fout
-	c_Lang069 =	Coords opgeslagen om `%FoundX`%/`%FoundY`%.
+	c_Lang069 =	Coords opgeslagen om %FoundX%/%FoundY%.
 	c_Lang070 =	Coord
 	c_Lang071 =	Variaties
 	c_Lang072 =	Voorbeeld
@@ -848,7 +848,7 @@
 		Controleer de "Capture Sleutels" optie om sleutels en combinaties direct in te voeren om uw Macro vanuit het hoofdvenster.
 		Enter-toetsen en combinaties in het vak Sneltoets aan de onderkant en druk op de knop Invoegen om ze toe te voegen aan het selecte rijen.
 		Als er geen rijen zijn geselecteerd de bewerking knoppen gelden voor alle rijen in de lijst.
-		U kunt uw eigen variabelen in de Variabelen toewijzen ramen (Invoegen > Als Verklaringen / variabelen / functies). Om ze te gebruiken in opdrachten omsluiten de variabele naam in procent tekens, bijvoorbeeld: `%MyVar`%.
+		U kunt uw eigen variabelen in de Variabelen toewijzen ramen (Invoegen > Als Verklaringen / variabelen / functies). Om ze te gebruiken in opdrachten omsluiten de variabele naam in procent tekens, bijvoorbeeld: %MyVar%.
 		De "Loop" teller boven wordt het aantal lussen van de geselecteerde macro.
 		U kunt een rij bewerken door erop te dubbelklikken of door het te selecteren en op de knop Bewerken knoppen aan de onderkant.
 		U kunt meerdere geselecteerde rijen met behulp van de opties in het bewerken balk onderaan bewerken.

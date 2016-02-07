@@ -313,7 +313,7 @@
 	c_Lang022 =	Zapri
 	c_Lang023 =	Kopirajte
 	c_Lang024 =	Izbriši
-	c_Lang025 =	Uporabite `% za spremenljivke, npr: `%Clipboard`%
+	c_Lang025 =	Uporabite % za spremenljivke, npr: %Clipboard%
 	c_Lang026 =	Akcija
 	c_Lang027 =	Kliknite
 	c_Lang028 =	Premikanje
@@ -357,7 +357,7 @@
 	c_Lang066 =	Ključ Počakaj
 	c_Lang067 =	Če se ugotovi,
 	c_Lang068 =	Če ni mogoče najti / zmota
-	c_Lang069 =	Coords shranjeni v `%FoundX`%/`%FoundY`% funtov.
+	c_Lang069 =	Coords shranjeni v %FoundX%/%FoundY% funtov.
 	c_Lang070 =	Coord
 	c_Lang071 =	Variacije
 	c_Lang072 =	Predogled
@@ -848,7 +848,7 @@
 		Preverite "Capture Keys" možnost, da vstopijo tipke in kombinacije s svojim Macro neposredno iz glavnega okna.
 		Vpišite tipke in kombinacije v polje aktivne tipke na dnu in pritisnite gumb Insert, da jih dodate na izbranih vrstah.
 		Če ni izbran noben vrstic za urejanje gumbov veljajo za vse vrstice v seznamu.
-		Lahko določite svoje spremenljivke v spremenljivkah okna (Insert> Če Izjave / spremenljivke / funkcije). Če jih želite uporabljati v notranjosti ukazi priložiti ime spremenljivke v odstotkih znakov, na primer: `%MyVar`% funtov.
+		Lahko določite svoje spremenljivke v spremenljivkah okna (Insert> Če Izjave / spremenljivke / funkcije). Če jih želite uporabljati v notranjosti ukazi priložiti ime spremenljivke v odstotkih znakov, na primer: %MyVar% funtov.
 		Zanka Števec na vrhu določa skupno število zank za izbrano Macro.
 		Lahko uredite vrstico z dvojnim klikom ali ga izberete in kliknete Uredi gumbe na dnu.
 		Lahko urejate več izbrane vrstice z uporabo možnosti v vnosno vrstico na dnu.

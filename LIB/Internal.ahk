@@ -1,7 +1,6 @@
 ﻿LV_GetTexts(Index, ByRef Act := "", ByRef Det := "", ByRef Tim := "", ByRef Del := "", ByRef Typ := "", ByRef Tar := "", ByRef Win := "", ByRef Com := "", ByRef Col := "")
 {
 	LV_GetText(Act, Index, 2)
-,	Act := LTrim(Act)
 ,	LV_GetText(Det, Index, 3)
 ,	LV_GetText(Tim, Index, 4)
 ,	LV_GetText(Del, Index, 5)
@@ -10,6 +9,43 @@
 ,	LV_GetText(Win, Index, 8)
 ,	LV_GetText(Com, Index, 9)
 ,	LV_GetText(Col, Index, 10)
+,	Act := LTrim(Act)
+}
+
+Data_GetTexts(Data, Index, ByRef Act := "", ByRef Det := "", ByRef Tim := "", ByRef Del := "", ByRef Typ := "", ByRef Tar := "", ByRef Win := "", ByRef Com := "", ByRef Col := "")
+{
+	Act := Data[Index, 3]
+,	Det := Data[Index, 4]
+,	Tim := Data[Index, 5]
+,	Del := Data[Index, 6]
+,	Typ := Data[Index, 7]
+,	Tar := Data[Index, 8]
+,	Win := Data[Index, 9]
+,	Com := Data[Index, 10]
+,	Col := Data[Index, 11]
+,	Act := LTrim(Act)
+}
+
+LV_GetSelCheck()
+{
+	SelectedRows := {Checked: [], Selected: []}, RowNumber := 0
+	Loop, % LV_GetCount()
+	{
+		IsChecked := LV_GetNext(A_Index-1, "Checked")
+		If (IsChecked != A_Index)
+			SelectedRows.Checked.Push(0)
+		Else
+			SelectedRows.Checked.Push(1)
+	}
+	Loop, % LV_GetCount()
+	{
+		IsSelected := LV_GetNext(A_Index-1)
+		If (IsSelected != A_Index)
+			SelectedRows.Selected.Push(0)
+		Else
+			SelectedRows.Selected.Push(1)
+	}
+	return SelectedRows
 }
 
 ShowTooltip()
@@ -639,26 +675,19 @@ GetElIndex(elwb, GetBy)
 	}
 }
 
-AssignReplace(String)
+EscCom(Reverse, ByRef Item1 := "", ByRef Item2 := "", ByRef Item3 := "", ByRef Item4 := "", ByRef Item5 := "")
 {
-	global
-	RegExMatch(String, "sU)(.+)\s+(\W?\W\W?)\s+(?-U)(.*)", Out)
-,	VarName := Out1, Oper := Out2, VarValue := Out3
-}
-
-EscCom(MatchList, Reverse := 0)
-{
-	global
-	
 	If (Reverse)
 	{
-		Loop, Parse, MatchList, |
-			StringReplace, %A_LoopField%, %A_LoopField%, ```,, `,, All
+		Loop, 5
+			If (IsByRef(Item%A_Index%))
+				Item%A_Index% := StrReplace(Item%A_Index%, "``,", ",")
 	}
 	Else
 	{
-		Loop, Parse, MatchList, |
-			StringReplace, %A_LoopField%, %A_LoopField%, `,, ```,, All
+		Loop, 5
+			If (IsByRef(Item%A_Index%))
+				Item%A_Index% := StrReplace(Item%A_Index%, ",", "``,")
 	}
 }
 
@@ -940,7 +969,7 @@ SavedVars(_Var := "", ByRef _Saved := "", AsArray := false)
 	Static VarsRecord := {}, LocalRecord := {}
 	Local ListOfVars, i, v
 	
-	If _Var in %BuiltinVars%,Action,Step,Details,TimesX,DelayX,Type,Target,Window,VarName,VarValue,Oper,Par,Param,Version,Lang,AutoKey,ManKey,AbortKey,PauseKey,RecKey,RecNewKey,RelKey,FastKey,SlowKey,ClearNewList,DelayG,OnScCtrl,ShowStep,HideMainWin,DontShowPb,DontShowRec,DontShowEdt,ConfirmDelete,ShowTips,NextTip,IfDirectContext,IfDirectWindow,KeepHkOn,Mouse,Moves,TimedI,Strokes,CaptKDn,MScroll,WClass,WTitle,MDelay,DelayM,DelayW,MaxHistory,TDelay,ToggleC,RecKeybdCtrl,RecMouseCtrl,CoordMouse,SpeedUp,SpeedDn,MouseReturn,ShowProgBar,ShowBarOnStart,AutoHideBar,RandomSleeps,RandPercent,DrawButton,OnRelease,OnEnter,LineW,ScreenDir,DefaultEditor,DefaultMacro,StdLibFile,KeepDefKeys,TbNoTheme,AutoBackup,MultInst,EvalDefault,CloseAction,ShowLoopIfMark,ShowActIdent,SearchAreaColor,LoopLVColor,IfLVColor,VirtualKeys,AutoUpdate,Ex_AbortKey,Ex_PauseKey,Ex_SM,SM,Ex_SI,SI,Ex_ST,ST,Ex_DH,Ex_AF,Ex_HK,Ex_PT,Ex_NT,Ex_SC,SC,Ex_SW,SW,Ex_SK,SK,Ex_MD,MD,Ex_SB,SB,Ex_MT,MT,Ex_IN,Ex_UV,Ex_Speed,ComCr,ComAc,Send_Loop,TabIndent,IncPmc,Exe_Exp,ShowExpOpt,MainWinSize,MainWinPos,WinState,ColSizes,ColOrder,PrevWinSize,ShowPrev,TextWrap,CommentUnchecked,CustomColors,OSCPos,OSTrans,OSCaption,AutoRefresh,ShowGroups,IconSize,UserLayout,MainLayout,MacroLayout,FileLayout,RecPlayLayout,SettingsLayout,CommandLayout,EditLayout,ShowBands
+	If _Var in %BuiltinVars%,Action,Step,Details,TimesX,DelayX,Type,Target,Window,IfError,VarName,VarValue,Oper,Par,Param,Version,Lang,AutoKey,ManKey,AbortKey,PauseKey,RecKey,RecNewKey,RelKey,FastKey,SlowKey,ClearNewList,DelayG,OnScCtrl,ShowStep,HideMainWin,DontShowPb,DontShowRec,DontShowEdt,ConfirmDelete,ShowTips,NextTip,IfDirectContext,IfDirectWindow,KeepHkOn,Mouse,Moves,TimedI,Strokes,CaptKDn,MScroll,WClass,WTitle,MDelay,DelayM,DelayW,MaxHistory,TDelay,ToggleC,RecKeybdCtrl,RecMouseCtrl,CoordMouse,SpeedUp,SpeedDn,MouseReturn,ShowProgBar,ShowBarOnStart,AutoHideBar,RandomSleeps,RandPercent,DrawButton,OnRelease,OnEnter,LineW,ScreenDir,DefaultEditor,DefaultMacro,StdLibFile,KeepDefKeys,TbNoTheme,AutoBackup,MultInst,EvalDefault,CloseAction,ShowLoopIfMark,ShowActIdent,SearchAreaColor,LoopLVColor,IfLVColor,VirtualKeys,AutoUpdate,Ex_AbortKey,Ex_PauseKey,Ex_SM,SM,Ex_SI,SI,Ex_ST,ST,Ex_DH,Ex_AF,Ex_HK,Ex_PT,Ex_NT,Ex_SC,SC,Ex_SW,SW,Ex_SK,SK,Ex_MD,MD,Ex_SB,SB,Ex_MT,MT,Ex_IN,Ex_UV,Ex_Speed,ComCr,ComAc,Send_Loop,TabIndent,IncPmc,Exe_Exp,ShowExpOpt,MainWinSize,MainWinPos,WinState,ColSizes,ColOrder,PrevWinSize,ShowPrev,TextWrap,CommentUnchecked,CustomColors,OSCPos,OSTrans,OSCaption,AutoRefresh,ShowGroups,IconSize,UserLayout,MainLayout,MacroLayout,FileLayout,RecPlayLayout,SettingsLayout,CommandLayout,EditLayout,ShowBands
 		If (_Var != "Clipboard")
 			TrayTip, %d_Lang011%!, %_Var% %d_Lang042%,, 18
 	If (IsByRef(_Saved))

@@ -68,3 +68,13 @@ Groups=Start:1
 8|[MsgBox]|%each%: %value%|1|0|MsgBox|262144||||
 9|[LoopEnd]|LoopEnd|1|0|Loop|||||
 
+[PMC Code v5.0.0]|F7||1|Window|1|AssociativeArray
+Groups=Start:1
+1|[Assign Variable]|person := {name: "John", surname: "Smith", age: 26, stats: [10,9,8.5,7,9.5,10]}|1|0|Variable|Expression||||
+2|[LoopStart]|person`, key`, value|1|0|ForLoop|||||
+3|[MsgBox]|%key%: %value%|1|0|MsgBox|0||||
+4|[LoopStart]|value`, key`, value|1|0|ForLoop|||||
+5|[MsgBox]|%key%: %value%|1|0|MsgBox|0||||
+6|[LoopEnd]|LoopEnd|1|0|Loop|||||
+7|[LoopEnd]|LoopEnd|1|0|Loop|||||
+

@@ -313,7 +313,7 @@
 	c_Lang022 =	Close
 	c_Lang023 =	Copy
 	c_Lang024 =	Delete
-	c_Lang025 =	Use `% for Variables, e.g.: `%Clipboard`%
+	c_Lang025 =	Use % for Variables, e.g.: %Clipboard%
 	c_Lang026 =	Action
 	c_Lang027 =	Click
 	c_Lang028 =	Move
@@ -357,7 +357,7 @@
 	c_Lang066 =	Key Wait
 	c_Lang067 =	If found
 	c_Lang068 =	If not found / Error
-	c_Lang069 =	Coords stored to `%FoundX`%/`%FoundY`%.
+	c_Lang069 =	Coords stored to %FoundX%/%FoundY%.
 	c_Lang070 =	Coord
 	c_Lang071 =	Variations
 	c_Lang072 =	Preview
@@ -848,7 +848,7 @@
 		Check the "Capture Keys" option to enter keys and combinations to your Macro directly from the main window.
 		Enter keys and combinations in the Hotkey box at the bottom and press the Insert button to add them to the select rows.
 		If no rows are selected the edit buttons apply to all rows in the list.
-		You can assign your own variables in the Variables windows (Insert > If Statements / Variables / Functions). To use them inside commands enclose the variable name in percent signs, e.g.: `%MyVar`%.
+		You can assign your own variables in the Variables windows (Insert > If Statements / Variables / Functions). To use them inside commands enclose the variable name in percent signs, e.g.: %MyVar%.
 		The "Loop" counter at the top sets the total number of loops for the selected Macro.
 		You can edit a row by double-clicking it or by selecting it and clicking the Edit buttons at the bottom.
 		You can edit multiple selected rows using the options in the edit bar at the bottom.

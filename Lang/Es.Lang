@@ -313,7 +313,7 @@
 	c_Lang022 =	Cerrar
 	c_Lang023 =	Copiar
 	c_Lang024 =	Borrar
-	c_Lang025 =	Utilice `% para las variables, por ejemplo: `%Clipboard`%
+	c_Lang025 =	Utilice % para las variables, por ejemplo: %Clipboard%
 	c_Lang026 =	Acción
 	c_Lang027 =	Clic
 	c_Lang028 =	Mover
@@ -357,7 +357,7 @@
 	c_Lang066 =	Espera Clave
 	c_Lang067 =	Si se encuentra
 	c_Lang068 =	Si no se encuentra / Error
-	c_Lang069 =	Coords almacenado `%FoundX`%/`%FoundY`%.
+	c_Lang069 =	Coords almacenado %FoundX%/%FoundY%.
 	c_Lang070 =	Coord
 	c_Lang071 =	Variaciones
 	c_Lang072 =	Previa
@@ -848,7 +848,7 @@
 		Marque la opción "Claves Capture" para entrar teclas y combinaciones a la macro directamente desde la ventana principal.
 		Introduzca teclas y combinaciones de teclas de acceso rápido en la caja en la parte inferior y pulse el botón Insertar para añadir a las filas seleccionadas.
 		Si no se selecciona ninguna fila de los botones de edición se aplican a todas las filas de la lista.
-		Puedes asignar tus propias variables en las variables de ventanas (Insertar > Si Declaraciones / variables / funciones). Para utilizar los comandos en el interior encierran el nombre de la variable entre signos de porcentaje, por ejemplo: `%MyVar`%.
+		Puedes asignar tus propias variables en las variables de ventanas (Insertar > Si Declaraciones / variables / funciones). Para utilizar los comandos en el interior encierran el nombre de la variable entre signos de porcentaje, por ejemplo: %MyVar%.
 		El contador de "Loop" en la parte superior establece el número total de bucles de la macro seleccionada.
 		Puede editar una fila haciendo doble clic en él o seleccionándolo y haciendo clic en los botones de edición en la parte inferior.
 		Puede editar varias filas seleccionadas usando las opciones de la barra de edición en la parte inferior.

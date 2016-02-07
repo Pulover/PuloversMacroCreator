@@ -313,7 +313,7 @@
 	c_Lang022 =	Fermer
 	c_Lang023 =	Copier
 	c_Lang024 =	Effacer
-	c_Lang025 =	Utilisez `% pour les variables, par exemple: `%Clipboard`%
+	c_Lang025 =	Utilisez % pour les variables, par exemple: %Clipboard%
 	c_Lang026 =	Action
 	c_Lang027 =	Cliquez sur
 	c_Lang028 =	Déplacer
@@ -357,7 +357,7 @@
 	c_Lang066 =	Attente Touche
 	c_Lang067 =	S'il est trouvé
 	c_Lang068 =	S'il n'est pas trouvé d'erreur /
-	c_Lang069 =	Coords stockées en `%FoundX`%/`%FoundY`%.
+	c_Lang069 =	Coords stockées en %FoundX%/%FoundY%.
 	c_Lang070 =	Coord
 	c_Lang071 =	Variations
 	c_Lang072 =	Avant-première
@@ -848,7 +848,7 @@
 		Cochez l'option "Capture Keys" pour saisir les clés et les combinaisons de votre macro directement à partir de la fenêtre principale.
 		Entrez touches et combinaisons dans la zone Touche de raccourci vers le bas et appuyez sur le bouton Insérer pour les ajouter aux lignes de sélection.
 		Si aucune ligne n'est sélectionnée les boutons d'édition s'appliquent à toutes les lignes de la liste.
-		Vous pouvez assigner vos propres variables dans les fenêtres de variables (Insertion > Si Déclarations / variables / fonctions). Pour utiliser les commandes à l'intérieur entourent le nom de la variable signes de pourcentage, par exemple: `%MyVar`%.
+		Vous pouvez assigner vos propres variables dans les fenêtres de variables (Insertion > Si Déclarations / variables / fonctions). Pour utiliser les commandes à l'intérieur entourent le nom de la variable signes de pourcentage, par exemple: %MyVar%.
 		Le compteur «Loop» en haut définit le nombre total de boucles pour la macro sélectionnée.
 		Vous pouvez modifier une ligne en double-cliquant dessus ou en le sélectionnant et en cliquant sur les boutons Modifier au bas.
 		Vous pouvez modifier plusieurs lignes sélectionnées en utilisant les options de la barre d'édition en bas.

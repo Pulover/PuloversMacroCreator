@@ -313,7 +313,7 @@
 	c_Lang022 =	Stäng
 	c_Lang023 =	Kopiera
 	c_Lang024 =	Ta bort
-	c_Lang025 =	Använd `% för variabler, t.e.x.: `%Clipboard`%
+	c_Lang025 =	Använd % för variabler, t.e.x.: %Clipboard%
 	c_Lang026 =	Åtgärd
 	c_Lang027 =	Klicka
 	c_Lang028 =	Flytta
@@ -357,7 +357,7 @@
 	c_Lang066 =	Nyckel Vänta
 	c_Lang067 =	Om den finns
 	c_Lang068 =	Om den inte hittas / Fel
-	c_Lang069 =	Coords lagras `%FoundX`%/`%FoundY`%.
+	c_Lang069 =	Coords lagras %FoundX%/%FoundY%.
 	c_Lang070 =	Coord
 	c_Lang071 =	Variationer
 	c_Lang072 =	Förhandsgranska
@@ -848,7 +848,7 @@
 		Kontrollera "Capture Keys" alternativ för att ange nycklar och kombinationer till ditt makro direkt från huvudfönstret.
 		Enter och kombinationer på Hotkey rutan längst ner och tryck på knappen Infoga för att lägga dem till de utvalda raderna.
 		Om inga rader valt redigera knapparna gälla för alla rader i listan.
-		Du kan tilldela dina egna variabler i variablerna windows (Infoga> Om Uttalanden / variabler / funktioner). För att använda dem inne kommandon bifoga variabelnamnet i procent tecken, t.ex.: `% MyVar`%.
+		Du kan tilldela dina egna variabler i variablerna windows (Infoga> Om Uttalanden / variabler / funktioner). För att använda dem inne kommandon bifoga variabelnamnet i procent tecken, t.ex.: % MyVar%.
 		Den "Loop" räknare upptill anger det totala antalet slingor för den valda makro.
 		Du kan redigera en rad genom att dubbelklicka den eller genom att markera den och klicka på Redigera knapparna längst ner.
 		Du kan redigera flera markerade rader med hjälp av alternativen i redigeringsrutan längst ner.

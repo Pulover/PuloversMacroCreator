@@ -3420,14 +3420,14 @@ For e, l in LangData
 	}
 }
 LangFile := "Lang_" e "`n`t`t`n`t`t; " (SelLang ? SelLang : lName) "`n`t`t`n", RowIdx := 1
-For i, Section in LangFiles[RLang]
+For i, _Section in LangFiles[RLang]
 {
 	LangFile .= "; " i "`t`t`n"
-	For var, value in Section
+	For _var, _value in _Section
 	{
-		values := StrSplit(value, "`n")
-		LangFile .= "`t" var " =`t"
-		For e, v in values
+		_values := StrSplit(_value, "`n")
+		LangFile .= "`t" _var " =`t"
+		For e, v in _values
 		{
 			LV_GetText(RowText, RowIdx)
 			If (RegExMatch(v, "(.+)\t.*", lMatch))
@@ -3502,13 +3502,13 @@ For i, l in LangFiles
 }
 RowDataA := []
 LV_Delete(), Groups := [], Idx := 1
-For i, Section in LangFiles[ELang]
+For i, _Section in LangFiles[ELang]
 {
 	Groups.Push({Name: RegExReplace(i, "\d+\.\s"), Row: Idx})
-	For var, value in Section
+	For _var, _value in _Section
 	{
-		values := StrSplit(RegExReplace(value, "`am).+\t"), "`n")
-	,	RowDataA.Push(values*), Idx += values.Length()
+		_values := StrSplit(RegExReplace(_value, "`am).+\t"), "`n")
+	,	RowDataA.Push(_values*), Idx += _values.Length()
 	}
 }
 For i, v in RowDataA
@@ -3539,12 +3539,12 @@ For i, l in LangFiles
 	}
 }
 RowDataB := []
-For i, Section in LangFiles[RLang]
+For i, _Section in LangFiles[RLang]
 {
-	For var, value in Section
+	For _var, _value in _Section
 	{
-		values := StrSplit(RegExReplace(value, "`am).+\t"), "`n")
-	,	RowDataB.Push(values*)
+		_values := StrSplit(RegExReplace(_value, "`am).+\t"), "`n")
+	,	RowDataB.Push(_values*)
 	}
 }
 For i, v in RowDataB
@@ -3943,7 +3943,7 @@ Gui, 5:Default
 SB_SetIcon(ResDllPath, IconsNames["help"])
 If (s_Caller = "Edit")
 {
-	EscCom("Details|TimesX|DelayX|Target|Window", 1)
+	EscCom(true, Details, TimesX, DelayX, Target, Window)
 	GuiControl, 5:, TimesX, %TimesX%
 	GuiControl, 5:, EdRept, %TimesX%
 	GuiControl, 5:, DelayX, %DelayX%
@@ -4269,7 +4269,7 @@ Else
 	Else
 		Target := "", Window := ""
 }
-EscCom("TimesX|DelayX")
+EscCom(false, TimesX, DelayX)
 If (A_ThisLabel != "MouseApply")
 {
 	Gui, 1:-Disabled
@@ -5199,7 +5199,7 @@ SB_SetText("lines: " 0, 3)
 SB_SetIcon(ResDllPath, IconsNames["help"])
 If (s_Caller = "Edit")
 {
-	EscCom("Details|TimesX|DelayX|Target|Window", 1)
+	EscCom(true, Details, TimesX, DelayX, Target, Window)
 	StringReplace, Details, Details, ``n, `n, All
 	GuiControl, 8:, TextEdit, %Details%
 	GuiControl, 8:, TimesX, %TimesX%
@@ -5351,7 +5351,7 @@ If (CtrlState = 1)
 Else
 	Target := "", Window := ""
 Action := "[Text]"
-EscCom("TextEdit|TimesX|DelayX|Target|Window")
+EscCom(false, TextEdit, TimesX, DelayX, Target, Window)
 If (A_ThisLabel != "TextApply")
 {
 	Gui, 1:-Disabled
@@ -5627,7 +5627,7 @@ Gui, 3:Default
 SB_SetIcon(ResDllPath, IconsNames["help"])
 If (s_Caller = "Edit")
 {
-	EscCom("Details|TimesX|DelayX|Target|Window", 1)
+	EscCom(true, Details, TimesX, DelayX, Target, Window)
 	StringReplace, Details, Details, ``n, `n, All
 	If (Type = cType5)
 	{
@@ -5766,7 +5766,7 @@ If (TabControl = 2)
 ,	Target += (Default-1) * 256
 ,	Target += (Icon-1) * 16
 ,	Target += (Buttons-1)
-,	EscCom("Details|Title")
+,	EscCom(false, Details, Title)
 	StringReplace, Details, Details, `n, ``n, All
 }
 Else If (TabControl = 3)
@@ -5972,12 +5972,12 @@ If (s_Caller = "Edit")
 	}
 	Else
 	{
-		EscCom("Details|TimesX|DelayX", 1)
+		EscCom(true, Details, TimesX, DelayX)
 		StringReplace, Details, Details, ```,, %_x%, All
 		Loop, Parse, Details, `,, %A_Space%
 		{
 			Par%A_Index% := A_LoopField
-			StringReplace, Par%A_Index%,  Par%A_Index%, %_x%, ```,, All
+			StringReplace, Par%A_Index%, Par%A_Index%, %_x%, `,, All
 		}
 		If (Type = cType7)
 		{
@@ -6091,7 +6091,8 @@ Else If (LParse = 1)
 		MsgBox, 16, %d_Lang007%, %d_Lang041%
 		return
 	}
-	Details := LParamsFile ", " Delim ", " Omit
+	EscCom(false, Delim), EscCom(false, Omit)
+,	Details := LParamsFile ", " Delim ", " Omit
 ,	TimesL := 1, Type := cType39
 }
 Else If (LFor = 1)
@@ -6130,7 +6131,9 @@ Else
 	Details := "LoopStart", Type := cType7
 ,	TimesL := InStr(EdRept, "%") ? EdRept : TimesL
 }
-EscCom("Details")
+OutputDebug, % Details
+EscCom(false, Details)
+OutputDebug, % Details
 If (A_ThisLabel != "LoopApply")
 {
 	Gui, 1:-Disabled
@@ -6357,8 +6360,8 @@ Else
 	GuiControl, 12:, Field1, % (LParse ? c_Lang140 : (LRead ? c_Lang143 : (LRegistry ? c_Lang144 : c_Lang137)))
 	GuiControl, 12:, Field2, %c_Lang141%
 	GuiControl, 12:, Field3, %c_Lang142%
-	GuiControl, 12:, Delim
-	GuiControl, 12:, Omit
+	GuiControl, 12:, Delim, %Par2%
+	GuiControl, 12:, Omit, %Par3%
 }
 GuiControl, 12:Text, IncFiles, % (LRegistry ? c_Lang210 : c_Lang145)
 GuiControl, 12:Text, IncFolders, % (LRegistry ? c_Lang146 : c_Lang138)
@@ -6421,7 +6424,7 @@ Gui, 11:Default
 SB_SetIcon(ResDllPath, IconsNames["help"])
 If (s_Caller = "Edit")
 {
-	EscCom("Details|TimesX|DelayX|Target|Window", 1)
+	EscCom(true, Details, TimesX, DelayX, Target, Window)
 	WinCom := Type
 	GuiControl, 11:ChooseString, WinCom, %WinCom%
 	GoSub, WinCom
@@ -6524,7 +6527,7 @@ Else If (WinCom = "WinMove")
 Else If (WinCom = "WinSetTitle")
 {
 	GoSub, ClearPars
-	EscCom("Value")
+	EscCom(false, Value)
 	StringReplace, Title, Title, ```,, %_x%, All
 	StringSplit, Par, Title, `,, %A_Space%
 	If ((Par0 <= 1) && (Value != ""))
@@ -6571,7 +6574,7 @@ If (InStr(WinCom, "Get"))
 }
 Else
 	DelayWX := DelayW
-EscCom("Details|WinCom|Title")
+EscCom(false, Details, WinCom, Title)
 If (A_ThisLabel != "WinApply")
 {
 	Gui, 1:-Disabled
@@ -6805,7 +6808,7 @@ Gui, 19:Default
 SB_SetIcon(ResDllPath, IconsNames["help"])
 If (s_Caller = "Edit")
 {
-	EscCom("Details|TimesX|DelayX|Target|Window", 1)
+	EscCom(true, Details, TimesX, DelayX, Target, Window)
 	GuiControl, 19:, TimesX, %TimesX%
 	GuiControl, 19:, EdRept, %TimesX%
 	GuiControl, 19:, DelayX, %DelayX%
@@ -6928,7 +6931,7 @@ If (BreakLoop)
 }
 Else
 	Target := ""
-EscCom("Details|TimesX|DelayX|CoordPixel")
+EscCom(false, Details, TimesX, DelayX, CoordPixel)
 If (A_ThisLabel != "ImageApply")
 {
 	Gui, 1:-Disabled
@@ -7558,7 +7561,7 @@ If (s_Caller = "Edit")
 	If (A_ThisLabel = "EditSt")
 	{
 		StringReplace, Details, Details, ``n, `n, All
-		EscCom("Details|TimesX|DelayX|Target|Window", 1)
+		EscCom(true, Details, TimesX, DelayX, Target, Window)
 		Loop, 15
 		{
 			If (IfList%A_Index% = Action)
@@ -7572,7 +7575,7 @@ If (s_Caller = "Edit")
 		}
 		Else If (InStr(Action, "Compare"))
 		{
-			AssignReplace(Details), Opers := "=$==$<>$>$<$>=$<="
+			AssignParse(Details, VarName, Oper, VarValue), Opers := "=$==$<>$>$<$>=$<="
 			GuiControl, 21:, TestVar, %VarName%
 			GuiControl, 21:, TestVar2, %VarValue%
 			Loop, Parse, Opers, $
@@ -7600,7 +7603,7 @@ If (s_Caller = "Edit")
 	Else If (A_ThisLabel = "EditVar")
 	{
 		StringReplace, Details, Details, ``n, `n, All
-		AssignReplace(Details), GuiTitle := c_Lang010
+		AssignParse(Details, VarName, Oper, VarValue), GuiTitle := c_Lang010
 		GuiControl, 21:Choose, TabControl, 2
 		GuiControl, 21:, VarName, %VarName%
 		GuiControl, 21:ChooseString, Oper, %Oper%
@@ -7610,14 +7613,14 @@ If (s_Caller = "Edit")
 			GuiControl, 21:Show, ArrayTip
 		}
 		Else
-			EscCom("VarValue", 1)
+			EscCom(true, VarValue)
 		GuiControl, 21:, VarValue, %VarValue%
 		SBShowTip("SetEnv (Var = Value)")
 		GoSub, AsOper
 	}
 	Else If (A_ThisLabel = "EditFunc")
 	{
-		AssignReplace(Details), FuncName := Action, ArrayName := Target, GuiTitle := c_Lang011
+		AssignParse(Details, VarName, Oper, VarValue), FuncName := Action, ArrayName := Target, GuiTitle := c_Lang011
 		GuiControl, 21:Choose, TabControl, 3
 		If (VarName != "_null")
 			GuiControl, 21:, VarNameF, %VarName%
@@ -7736,7 +7739,7 @@ Else If (InStr(Statement, "String"))
 }
 Else If (Statement = "If Message Box")
 	TestVar := IfMsg%IfMsgB%
-EscCom("TestVar")
+EscCom(false, TestVar)
 If (A_ThisLabel != "IfApply")
 {
 	Gui, 1:-Disabled
@@ -7861,13 +7864,13 @@ If (TabControl = 3)
 Else
 {
 	Action := "[Assign Variable]", Details := VarName " " Oper " " VarValue, Type := cType21
-,	EscCom("TimesX|DelayX|Target|Window")
+,	EscCom(false, TimesX, DelayX, Target, Window)
 	If (UseEval = 1)
 		Target := "Expression"
 	Else
 	{
 		Target := ""
-		EscCom("Details")
+		EscCom(false, Details)
 	}
 }
 If (A_ThisLabel != "VarApply")
@@ -8190,7 +8193,7 @@ Gui, 22:Default
 SB_SetIcon(ResDllPath, IconsNames["help"])
 If (s_Caller = "Edit")
 {
-	EscCom("Details|TimesX|DelayX|Target|Window", 1)
+	EscCom(true, Details, TimesX, DelayX, Target, Window)
 	Loop, Parse, Details, `,,%A_Space%
 	{
 		StringReplace, LoopField, A_LoopField, %_x%, `,, All
@@ -8230,7 +8233,7 @@ IfInString, wParam, `,
 IfInString, lParam, `,
 	StringReplace, lParam, lParam, `,, ```,, All
 Details := MsgNum ", " wParam ", " lParam
-EscCom("Details|DefCt|Title")
+EscCom(false, Details, DefCt, Title)
 If (A_ThisLabel != "SendMsgApply")
 {
 	Gui, 1:-Disabled
@@ -8327,7 +8330,7 @@ Gui, 23:Default
 SB_SetIcon(ResDllPath, IconsNames["help"])
 If (s_Caller = "Edit")
 {
-	EscCom("Details|TimesX|DelayX|Target|Window", 1)
+	EscCom(true, Details, TimesX, DelayX, Target, Window)
 	ControlCmd := Type
 	GuiControl, 23:ChooseString, ControlCmd, %ControlCmd%
 	If (Type = cType24)
@@ -8439,7 +8442,7 @@ If ((ControlCmd = cType23) || (ControlCmd = cType27)
 	Else
 		Details := VarName
 }
-EscCom("Details|DefCt|Title")
+EscCom(false, Details, DefCt, Title)
 If (A_ThisLabel != "ControlApply")
 {
 	Gui, 1:-Disabled
@@ -9299,7 +9302,7 @@ If (s_Caller = "Edit")
 	}
 	Else If (A_ThisLabel = "EditParam")
 	{
-		AssignReplace(Details)
+		AssignParse(Details, VarName, Oper, VarValue)
 		If (VarName = "")
 			GuiControl, 38:, ParamName, %Details%
 		Else
@@ -9401,7 +9404,7 @@ If (TabControl = 1)
 		}
 		Else
 		{
-			AssignReplace(A_LoopField)
+			AssignParse(A_LoopField, VarName, Oper, VarValue)
 			If (VarName = "")
 			{
 				Try
@@ -9429,7 +9432,7 @@ If (TabControl = 1)
 	StaticVariables := ""
 	Loop, Parse, FuncStatic, `,, %A_Space%
 	{
-		AssignReplace(A_LoopField)
+		AssignParse(A_LoopField, VarName, Oper, VarValue)
 		If (VarName = "")
 		{
 			Try
@@ -12497,827 +12500,6 @@ GoSub, RowCheck
 GoSub, b_Start
 return
 
-;##### Playback Commands #####
-
-pb_Send:
-	If (WinActive("ahk_id " PMCWinID))
-	{
-		StopIt := 1
-		return
-	}
-	Send, %Step%
-return
-pb_ControlSend:
-	Win := SplitWin(Window)
-	ControlSend, %Target%, %Step%, % Win[1], % Win[2], % Win[3], % Win[4]
-return
-pb_Click:
-	If (WinActive("ahk_id " PMCWinID))
-	{
-		StopIt := 1
-		return
-	}
-	Click, %Step%
-return
-pb_ControlClick:
-	Win := SplitWin(Window)
-	ControlClick, %Target%, % Win[1], % Win[2], %Par1%, %Par2%, %Par3%, % Win[3], % Win[4]
-return
-pb_SendEvent:
-	If (WinActive("ahk_id " PMCWinID))
-	{
-		StopIt := 1
-		return
-	}
-	If (Action = "[Text]")
-		SetKeyDelay, %DelayX%
-	SendEvent, %Step%
-return
-pb_Sleep:
-	If ((Type = cType5) && (Step = "Random"))
-		SleepRandom(, DelayX, Target)
-	Else
-	{
-		If ((RandomSleeps) && (Step != "NoRandom"))
-			SleepRandom(DelayX,,, RandPercent)
-		Else If (SlowKeyOn)
-			Sleep, (DelayX*SpeedDn)
-		Else If (FastKeyOn)
-			Sleep, (DelayX/SpeedUp)
-		Else If ((Type = cType13) && (Action = "[Text]"))
-			return
-		Else
-			Sleep, %DelayX%
-	}
-return
-pb_MsgBox:
-	Step := StrReplace(Step, "``n", "`n")
-	Step := StrReplace(Step, "``,", ",")
-	Try Menu, Tray, Icon, %ResDllPath%, 77
-	ChangeProgBarColor("Blue", "OSCProg", 28)
-	MsgBox, % Target, % (Window != "") ? Window : AppName, %Step%, %DelayX%
-	Try Menu, Tray, Icon, %ResDllPath%, 46
-	ChangeProgBarColor("20D000", "OSCProg", 28)
-return
-pb_SendRaw:
-	If (WinActive("ahk_id " PMCWinID))
-	{
-		StopIt := 1
-		return
-	}
-	SendRaw, %Step%
-return
-pb_ControlSendRaw:
-	Win := SplitWin(Window)
-	ControlSendRaw, %Target%, %Step%, % Win[1], % Win[2], % Win[3], % Win[4]
-return
-pb_ControlSetText:
-	Win := SplitWin(Window)
-	ControlSetText, %Target%, %Step%, % Win[1], % Win[2], % Win[3], % Win[4]
-return
-pb_Run:
-	If (Par4 != "")
-	{
-		Run, %Par1%, %Par2%, %Par3%, %Par4%
-		Try SavedVars(Par4)
-	}
-	Else
-		Run, %Par1%, %Par2%, %Par3%
-return
-pb_RunWait:
-	Try Menu, Tray, Icon, %ResDllPath%, 77
-	ChangeProgBarColor("Blue", "OSCProg", 28)
-	If (Par4 != "")
-	{
-		RunWait, %Par1%, %Par2%, %Par3%, %Par4%
-		Try SavedVars(Par4)
-	}
-	Else
-		RunWait, %Par1%, %Par2%, %Par3%
-	Try Menu, Tray, Icon, %ResDllPath%, 46
-	ChangeProgBarColor("20D000", "OSCProg", 28)
-return
-pb_RunAs:
-	RunAs, %Par1%, %Par2%, %Par3%
-return
-pb_Process:
-	Process, %Par1%, %Par2%, %Par3%
-return
-pb_Shutdown:
-	Shutdown, %Step%
-return
-pb_GetKeyState:
-	GetKeyState, %Par1%, %Par2%, %Par3%
-	Try SavedVars(Par1)
-return
-pb_MouseGetPos:
-	Loop, 4
-	{
-		If (Par%A_Index% = "")
-			Par%A_Index% := "Null"
-	}
-	MouseGetPos, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%
-	Null := ""
-	Try SavedVars(Par1)
-return
-pb_PixelGetColor:
-	PixelGetColor, %Par1%, %Par2%, %Par3%, %Par4%
-	Try SavedVars(Par1)
-return
-pb_SysGet:
-	SysGet, %Par1%, %Par2%, %Par3%
-	Try SavedVars(Par1)
-return
-pb_SetCapsLockState:
-	SetCapsLockState, %Par1%
-return
-pb_SetNumLockState:
-	SetNumLockState, %Par1%
-return
-pb_SetScrollLockState:
-	SetScrollLockState, %Par1%
-return
-pb_EnvAdd:
-	EnvAdd, %Par1%, %Par2%, %Par3%
-return
-pb_EnvSub:
-	EnvSub, %Par1%, %Par2%, %Par3%
-return
-pb_EnvDiv:
-	EnvDiv, %Par1%, %Par2%
-return
-pb_EnvMult:
-	EnvMult, %Par1%, %Par2%
-return
-pb_EnvGet:
-	EnvGet, %Par1%, %Par2%
-	Try SavedVars(Par1)
-return
-pb_EnvSet:
-	EnvSet, %Par1%, %Par2%
-return
-pb_EnvUpdate:
-	EnvUpdate
-return
-pb_FormatTime:
-	FormatTime, %Par1%, %Par2%, %Par3%
-	Try SavedVars(Par1)
-return
-pb_Transform:
-	Transform, %Par1%, %Par2%, %Par3%, %Par4%
-	Try SavedVars(Par1)
-return
-pb_Random:
-	Random, %Par1%, %Par2%, %Par3%
-	Try SavedVars(Par1)
-return
-pb_FileAppend:
-	FileAppend, %Par1%, %Par2%, %Par3%
-return
-pb_FileCopy:
-	FileCopy, %Par1%, %Par2%, %Par3%
-return
-pb_FileCopyDir:
-	FileCopyDir, %Par1%, %Par2%, %Par3%
-return
-pb_FileCreateDir:
-	FileCreateDir, %Step%
-return
-pb_FileDelete:
-	FileDelete, %Step%
-return
-pb_FileGetAttrib:
-	FileGetAttrib, %Par1%, %Par2%
-	Try SavedVars(Par1)
-return
-pb_FileGetSize:
-	FileGetSize, %Par1%, %Par2%, %Par3%
-	Try SavedVars(Par1)
-return
-pb_FileGetTime:
-	FileGetTime, %Par1%, %Par2%, %Par3%
-	Try SavedVars(Par1)
-return
-pb_FileGetVersion:
-	FileGetVersion, %Par1%, %Par2%
-	Try SavedVars(Par1)
-return
-pb_FileMove:
-	FileMove, %Par1%, %Par2%, %Par3%
-return
-pb_FileMoveDir:
-	FileMoveDir, %Par1%, %Par2%, %Par3%
-return
-pb_FileRead:
-	FileRead, %Par1%, %Par2%
-	Try SavedVars(Par1)
-return
-pb_FileReadLine:
-	FileReadLine, %Par1%, %Par2%, %Par3%
-	Try SavedVars(Par1)
-return
-pb_FileRecycle:
-	FileRecycle, %Step%
-return
-pb_FileRecycleEmpty:
-	FileRecycleEmpty, %Step%
-return
-pb_FileRemoveDir:
-	FileRemoveDir, %Par1%, %Par2%
-return
-pb_FileSelectFile:
-	FileSelectFile, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%
-	Try SavedVars(Par1)
-return
-pb_FileSelectFolder:
-	FileSelectFolder, %Par1%, %Par2%, %Par3%, %Par4%
-	Try SavedVars(Par1)
-return
-pb_FileSetAttrib:
-	FileSetAttrib, %Par1%, %Par2%, %Par3%, %Par4%
-return
-pb_FileSetTime:
-	FileSetTime, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%
-return
-pb_Drive:
-	Drive, %Par1%, %Par2%, %Par3%
-return
-pb_DriveGet:
-	DriveGet, %Par1%, %Par2%, %Par3%
-	Try SavedVars(Par1)
-return
-pb_DriveSpaceFree:
-	DriveSpaceFree, %Par1%, %Par2%
-	Try SavedVars(Par1)
-return
-pb_Sort:
-	Sort, %Par1%, %Par2%
-	Try SavedVars(Par1)
-return
-pb_StringGetPos:
-	StringGetPos, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%
-	Try SavedVars(Par1)
-return
-pb_StringLeft:
-	StringLeft, %Par1%, %Par2%, %Par3%
-	Try SavedVars(Par1)
-return
-pb_StringRight:
-	StringRight, %Par1%, %Par2%, %Par3%
-	Try SavedVars(Par1)
-return
-pb_StringLen:
-	StringLen, %Par1%, %Par2%
-	Try SavedVars(Par1)
-return
-pb_StringLower:
-	StringLower, %Par1%, %Par2%, %Par3%
-	Try SavedVars(Par1)
-return
-pb_StringUpper:
-	StringUpper, %Par1%, %Par2%, %Par3%
-	Try SavedVars(Par1)
-return
-pb_StringMid:
-	StringMid, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%
-	Try SavedVars(Par1)
-return
-pb_StringReplace:
-	StringReplace, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%
-	Try SavedVars(Par1)
-return
-pb_StringSplit:
-	StringSplit, %Par1%, %Par2%, %Par3%, %Par4%
-	CGN := Par1 . "0"
-	Loop, % %CGN%
-	{
-		CGP := Par1 . A_Index
-		Try SavedVars(CGP)
-	}
-return
-pb_StringTrimLeft:
-	StringTrimLeft, %Par1%, %Par2%, %Par3%
-	Try SavedVars(Par1)
-return
-pb_StringTrimRight:
-	StringTrimRight, %Par1%, %Par2%, %Par3%
-	Try SavedVars(Par1)
-return
-pb_SplitPath:
-	Loop, 6
-	{
-		If (Par%A_Index% = "")
-			Par%A_Index% := "Null"
-	}
-	SplitPath, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%, %Par6%
-	Null := ""
-	Loop, 5
-		Try SavedVars(Par%A_Index%)
-return
-pb_InputBox:
-	InputBox, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%, %Par6%, %Par7%, %Par8%,, %Par10%, %Par11%
-	Try SavedVars(Par1)
-return
-pb_ToolTip:
-	ToolTip, %Par1%, %Par2%, %Par3%, %Par4%
-return
-pb_TrayTip:
-	TrayTip, %Par1%, %Par2%, %Par3%, %Par4%
-return
-pb_Progress:
-	Progress, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%
-return
-pb_SplashImage:
-	SplashImage, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%, %Par6%
-return
-pb_SplashTextOn:
-	SplashTextOn, %Par1%, %Par2%, %Par3%, %Par4%
-return
-pb_SplashTextOff:
-	SplashTextOff
-return
-pb_RegRead:
-	RegRead, %Par1%, %Par2%, %Par3%, %Par4%
-	Try SavedVars(Par1)
-return
-pb_RegWrite:
-	RegWrite, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%
-return
-pb_RegDelete:
-	RegDelete, %Par1%, %Par2%, %Par3%
-return
-pb_SetRegView:
-	SetRegView, %Par1%
-return
-pb_IniRead:
-	IniRead, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%
-	Try SavedVars(Par1)
-return
-pb_IniWrite:
-	IniWrite, %Par1%, %Par2%, %Par3%, %Par4%
-return
-pb_IniDelete:
-	IniDelete, %Par1%, %Par2%, %Par3%
-return
-pb_SoundBeep:
-	SoundBeep, %Par1%, %Par2%
-return
-pb_SoundGet:
-	SoundGet, %Par1%, %Par2%, %Par3%, %Par4%
-	Try SavedVars(Par1)
-return
-pb_SoundGetWaveVolume:
-	SoundGetWaveVolume, %Par1%, %Par2%
-	Try SavedVars(Par1)
-return
-pb_SoundPlay:
-	SoundPlay, %Par1%, %Par2%
-return
-pb_SoundSet:
-	SoundSet, %Par1%, %Par2%, %Par3%, %Par4%
-return
-pb_SoundSetWaveVolume:
-	SoundSetWaveVolume, %Par1%, %Par2%
-return
-pb_ClipWait:
-	Try Menu, Tray, Icon, %ResDllPath%, 77
-	ChangeProgBarColor("Blue", "OSCProg", 28)
-	ClipWait, %Par1%, %Par2%
-	Try Menu, Tray, Icon, %ResDllPath%, 46
-	ChangeProgBarColor("20D000", "OSCProg", 28)
-return
-pb_BlockInput:
-	BlockInput, %Step%
-return
-pb_UrlDownloadToFile:
-	UrlDownloadToFile, %Par1%, %Par2%
-return
-pb_CoordMode:
-	CoordMode, %Par1%, %Par2%
-return
-pb_OutputDebug:
-	OutputDebug, %Step%
-return
-pb_WinMenuSelectItem:
-	WinMenuSelectItem, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%, %Par6%, %Par7%, %Par8%, %Par9%, %Par10%, %Par11%
-return
-pb_SendLevel:
-	SendLevel, %Step%
-return
-pb_SetKeyDelay:
-	SetKeyDelay, %Par1%, %Par2%, %Par3%
-return
-pb_Pause:
-	ToggleIcon()
-	Pause
-return
-pb_ExitApp:
-	ExitApp
-return
-pb_ListVars:
-	GoSub, ListVars
-return
-pb_StatusBarGetText:
-	StatusBarGetText, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%, %Par6%
-	Try SavedVars(Par1)
-return
-pb_StatusBarWait:
-	Try Menu, Tray, Icon, %ResDllPath%, 77
-	ChangeProgBarColor("Blue", "OSCProg", 28)
-	StatusBarWait, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%, %Par6%
-	Try Menu, Tray, Icon, %ResDllPath%, 46
-	ChangeProgBarColor("20D000", "OSCProg", 28)
-return
-pb_Clipboard:
-	SavedClip := ClipboardAll
-	If (Step != "")
-	{
-		Clipboard =
-		Clipboard := Step
-		Sleep, 333
-	}
-	If (Target != "")
-	{
-		Win := SplitWin(Window)
-		ControlSend, %Target%, {Control Down}{v}{Control Up}, % Win[1], % Win[2], % Win[3], % Win[4]
-	}
-	Else
-		Send, {Control Down}{v}{Control Up}
-	Clipboard := SavedClip
-	SavedClip := ""
-return
-pb_Control:
-	Win := SplitWin(Window)
-	Control, % RegExReplace(Step, "(^\w*).*", "$1")
-	, % RegExReplace(Step, "^\w*, ?(.*)", "$1")
-	, %Target%, % Win[1], % Win[2], % Win[3], % Win[4]
-return
-pb_ControlFocus:
-	Win := SplitWin(Window)
-	ControlFocus, %Target%, % Win[1], % Win[2], % Win[3], % Win[4]
-return
-pb_ControlMove:
-	Win := SplitWin(Window)
-	ControlMove, %Target%, %Par1%, %Par2%, %Par3%, %Par4%, % Win[1], % Win[2], % Win[3], % Win[4]
-return
-pb_PixelSearch:
-	CoordMode, Pixel, %Window%
-	PixelSearch, FoundX, FoundY, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%, %Par6%, %Par7%
-	SearchResult := ErrorLevel
-	GoSub, TakeAction
-return
-pb_ImageSearch:
-	CoordMode, Pixel, %Window%
-	ImageSearch, FoundX, FoundY, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%
-	SearchResult := ErrorLevel
-	GoSub, TakeAction
-return
-pb_SendMessage:
-	Win := SplitWin(Window)
-	SendMessage, %Par1%, %Par2%, %Par3%, %Target%, % Win[1], % Win[2], % Win[3], % Win[4]
-return
-pb_PostMessage:
-	Win := SplitWin(Window)
-	PostMessage, %Par1%, %Par2%, %Par3%, %Target%, % Win[1], % Win[2], % Win[3], % Win[4]
-return
-pb_KeyWait:
-	Try Menu, Tray, Icon, %ResDllPath%, 77
-	ChangeProgBarColor("Blue", "OSCProg", 28)
-	If (Action = "KeyWait")
-		KeyWait, %Par1%, %Par2%
-	Else
-		WaitFor.Key(Step, DelayX / 1000)
-	Try Menu, Tray, Icon, %ResDllPath%, 46
-	ChangeProgBarColor("20D000", "OSCProg", 28)
-return
-pb_Input:
-	Input, %Par1%, %Par2%, %Par3%, %Par4%
-	Try SavedVars(Par1)
-return
-pb_ControlEditPaste:
-	Win := SplitWin(Window)
-	Control, EditPaste, %Step%, %Target%, % Win[1], % Win[2], % Win[3], % Win[4]
-return
-pb_ControlGetText:
-	Win := SplitWin(Window)
-	ControlGetText, %Step%, %Target%, % Win[1], % Win[2], % Win[3], % Win[4]
-	Try SavedVars(Step)
-return
-pb_ControlGetFocus:
-	Win := SplitWin(Window)
-	ControlGetFocus, %Step%, % Win[1], % Win[2], % Win[3], % Win[4]
-	Try SavedVars(Step)
-return
-pb_ControlGet:
-	Win := SplitWin(Window)
-	ControlGet, %Par1%, %Par2%, %Par3%, %Target%, % Win[1], % Win[2], % Win[3], % Win[4]
-	Try SavedVars(Par1)
-return
-pb_ControlGetPos:
-	Win := SplitWin(Window)
-	ControlGetPos, %Step%X, %Step%Y, %Step%W, %Step%H, %Target%, % Win[1], % Win[2], % Win[3], % Win[4]
-	CGPPars := "X|Y|W|H"
-	Loop, Parse, CGPPars, |
-	{
-		CGP := Step . A_LoopField
-		Try SavedVars(CGP)
-	}
-return
-pb_WinActivate:
-	Win := SplitWin(Window)
-	WinActivate, % Win[1], % Win[2], % Win[3], % Win[4]
-return
-pb_WinActivateBottom:
-	Win := SplitWin(Window)
-	WinActivateBottom, % Win[1], % Win[2], % Win[3], % Win[4]
-return
-pb_WinClose:
-	Win := SplitWin(Window)
-	WinClose, % Win[1], % Win[2], % Win[3], % Win[4]
-return
-pb_WinHide:
-	Win := SplitWin(Window)
-	WinHide, % Win[1], % Win[2], % Win[3], % Win[4]
-return
-pb_WinKill:
-	Win := SplitWin(Window)
-	WinKill, % Win[1], % Win[2], % Win[3], % Win[4], % Win[5]
-return
-pb_WinMaximize:
-	Win := SplitWin(Window)
-	WinMaximize, % Win[1], % Win[2], % Win[3], % Win[4]
-return
-pb_WinMinimize:
-	Win := SplitWin(Window)
-	WinMinimize, % Win[1], % Win[2], % Win[3], % Win[4]
-return
-pb_WinMinimizeAll:
-	WinMinimizeAll, %Window%
-return
-pb_WinMinimizeAllUndo:
-	WinMinimizeAllUndo, %Window%
-return
-pb_WinMove:
-	Win := SplitWin(Window)
-	WinMove, % Win[1], % Win[2], %Par1%, %Par2%, %Par3%, %Par4%, % Win[3], % Win[4]
-return
-pb_WinRestore:
-	Win := SplitWin(Window)
-	WinRestore, % Win[1], % Win[2], % Win[3], % Win[4]
-return
-pb_WinSet:
-	Win := SplitWin(Window)
-	WinSet, %Par1%, %Par2%, % Win[1], % Win[2], % Win[3], % Win[4]
-return
-pb_WinShow:
-	Win := SplitWin(Window)
-	WinShow, % Win[1], % Win[2], % Win[3], % Win[4]
-return
-pb_WinSetTitle:
-	Win := SplitWin(Window)
-	WinSetTitle, % Win[1], % Win[2], % Win[3], % Win[4], % Win[5]
-return
-pb_WinWait:
-	Try Menu, Tray, Icon, %ResDllPath%, 77
-	ChangeProgBarColor("Blue", "OSCProg", 28)
-,	WaitFor.WinExist(SplitWin(Window), Step)
-	Try Menu, Tray, Icon, %ResDllPath%, 46
-	ChangeProgBarColor("20D000", "OSCProg", 28)
-return
-pb_WinWaitActive:
-	Try Menu, Tray, Icon, %ResDllPath%, 77
-	ChangeProgBarColor("Blue", "OSCProg", 28)
-,	WaitFor.WinActive(SplitWin(Window), Step)
-	Try Menu, Tray, Icon, %ResDllPath%, 46
-	ChangeProgBarColor("20D000", "OSCProg", 28)
-return
-pb_WinWaitNotActive:
-	Try Menu, Tray, Icon, %ResDllPath%, 77
-	ChangeProgBarColor("Blue", "OSCProg", 28)
-,	WaitFor.WinNotActive(SplitWin(Window), Step)
-	Try Menu, Tray, Icon, %ResDllPath%, 46
-	ChangeProgBarColor("20D000", "OSCProg", 28)
-return
-pb_WinWaitClose:
-	Try Menu, Tray, Icon, %ResDllPath%, 77
-	ChangeProgBarColor("Blue", "OSCProg", 28)
-,	WaitFor.WinClose(SplitWin(Window), Step)
-	Try Menu, Tray, Icon, %ResDllPath%, 46
-	ChangeProgBarColor("20D000", "OSCProg", 28)
-return
-pb_WinGet:
-	Win := SplitWin(Window)
-	WinGet, %Par1%, %Par2%, % Win[1], % Win[2], % Win[3], % Win[4]
-	Try SavedVars(Par1)
-return
-pb_WinGetTitle:
-	Win := SplitWin(Window)
-	WinGetTitle, %Step%, % Win[1], % Win[2], % Win[3], % Win[4]
-	Try SavedVars(Step)
-return
-pb_WinGetClass:
-	Win := SplitWin(Window)
-	WinGetClass, %Step%, % Win[1], % Win[2], % Win[3], % Win[4]
-	Try SavedVars(Step)
-return
-pb_WinGetText:
-	Win := SplitWin(Window)
-	WinGetText, %Step%, % Win[1], % Win[2], % Win[3], % Win[4]
-	Try SavedVars(Step)
-return
-pb_WinGetpos:
-	Win := SplitWin(Window)
-	WinGetPos, %Step%X, %Step%Y, %Step%W, %Step%H, % Win[1], % Win[2], % Win[3], % Win[4]
-	CGPPars := "X|Y|W|H"
-	Loop, Parse, CGPPars, |
-	{
-		CGP := Step . A_LoopField
-		Try SavedVars(CGP)
-	}
-return
-pb_GroupAdd:
-	GroupAdd, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%, %Par6%
-return
-pb_GroupActivate:
-	GroupActivate, %Par1%, %Par2%
-return
-pb_GroupDeactivate:
-	GroupDeactivate, %Par1%, %Par2%
-return
-pb_GroupClose:
-	GroupClose, %Par1%, %Par2%
-return
-
-;##### Playback COM Commands #####
-
-pb_IECOM_Set:
-	StringSplit, Act, Action, :
-	StringSplit, El, Target, :
-	IeIntStr := IEComExp(Act2, Step, El1, El2, "", Act3, Act1)
-,	IeIntStr := SubStr(IeIntStr, 4)
-
-	Try
-		o_ie.readyState
-	Catch
-	{
-		If (ComAc)
-			o_ie := WBGet()
-		Else
-		{
-			o_ie := ComObjCreate("InternetExplorer.Application")
-		,	o_ie.Visible := true
-		}
-	}
-	If (!IsObject(o_ie))
-	{
-		o_ie := ComObjCreate("InternetExplorer.Application")
-	,	o_ie.Visible := true
-	}
-	
-	Try
-		COMInterface(IeIntStr, o_ie)
-	Catch e
-	{
-		MsgBox, 20, %d_Lang007%, % d_Lang064 " Macro" mMacroOn ", " d_Lang065 " " mListRow
-			.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" (InStr(e.Message, "0x800401E3") ? d_Lang088 : e.Extra) "`n`n" d_Lang035
-		IfMsgBox, No
-		{
-			StopIt := 1
-			return
-		}
-	}
-	
-	If (Window = "LoadWait")
-	{
-		Try Menu, Tray, Icon, %ResDllPath%, 77
-		ChangeProgBarColor("Blue", "OSCProg", 28)
-		Try
-			IELoad(o_ie)
-		Try Menu, Tray, Icon, %ResDllPath%, 46
-		ChangeProgBarColor("20D000", "OSCProg", 28)
-	}
-return
-
-pb_IECOM_Get:
-	If (RegExMatch(Step, "^(\w+)(\[\S+\]|\.\w+)+", lMatch))
-	{
-		Try
-			z_Check := VarSetCapacity(%lMatch1%)
-		Catch
-		{
-			MsgBox, 16, %d_Lang007%, %d_Lang041%
-			return
-		}
-	}
-	Else
-	{
-		Try
-			z_Check := VarSetCapacity(%Step%)
-		Catch
-		{
-			MsgBox, 16, %d_Lang007%, %d_Lang041%
-			StopIt := 1
-			return
-		}
-	}
-	
-	StringSplit, Act, Action, :
-	StringSplit, El, Target, :
-	IeIntStr := IEComExp(Act2, "", El1, El2, Step, Act3, Act1)
-,	IeIntStr := SubStr(IeIntStr, InStr(IeIntStr, "ie.") + 3)
-	
-	Try
-		o_ie.readyState
-	Catch
-	{
-		If (ComAc)
-			o_ie := WBGet()
-		Else
-		{
-			o_ie := ComObjCreate("InternetExplorer.Application")
-		,	o_ie.Visible := true
-		}
-	}
-	If (!IsObject(o_ie))
-	{
-		o_ie := ComObjCreate("InternetExplorer.Application")
-	,	o_ie.Visible := true
-	}
-	
-	Try
-	{
-		COMInterface(IeIntStr, o_ie, lResult)
-	,	AssignVar(Step, ":=", lResult, __PointMarker)
-	}
-	Catch e
-	{
-		MsgBox, 20, %d_Lang007%, % d_Lang064 " Macro" mMacroOn ", " d_Lang065 " " mListRow
-			.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" (InStr(e.Message, "0x800401E3") ? d_Lang088 : e.Extra) "`n`n" d_Lang035
-		IfMsgBox, No
-		{
-			StopIt := 1
-			return
-		}
-	}
-	Try SavedVars(Step)
-	
-	If (Window = "LoadWait")
-	{
-		Try Menu, Tray, Icon, %ResDllPath%, 77
-		ChangeProgBarColor("Blue", "OSCProg", 28)
-		Try
-			IELoad(o_ie)
-		Try Menu, Tray, Icon, %ResDllPath%, 46
-		ChangeProgBarColor("20D000", "OSCProg", 28)
-	}
-return
-
-pb_VBScript:
-pb_JScript:
-VB := "", JS := ""
-Step := StrReplace(Step, "`n", "``n")
-Step := "Language := " Type "`nExecuteStatement(" Step ")"
-
-pb_COMInterface:
-	Step := StrReplace(Step, "ø", "`n")
-	Loop, Parse, Step, `n, %A_Space%%A_Tab%`r
-	{
-		LoopField := StrReplace(A_LoopField, "``n", "`n")
-	,	pbType := Type, pbAction := Action
-		Try
-		{
-			Eval(LoopField, __PointMarker)
-		; ,	lResult := StrJoin(EvalResult)
-			; If (!IsObject(%Act1%))
-				; %Act1% := COMInterface(LoopField, %Act1%, lResult, Target)
-			; Else
-				; COMInterface(LoopField, %Act1%, lResult, Target)
-			; If (lResult != "")
-				; AssignVar(Act2, ":=", lResult, __PointMarker)
-		}
-		Catch e
-		{
-			MsgBox, 20, %d_Lang007%, % d_Lang064 " Macro" mMacroOn ", " d_Lang065 " " mListRow
-				.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" (InStr(e.Message, "0x800401E3") ? d_Lang088 : e.Extra) "`n`n" d_Lang035
-			IfMsgBox, No
-			{
-				StopIt := 1
-				return
-			}
-		}
-		Type := pbType, Action := pbAction
-	}
-	If (Window = "LoadWait")
-	{
-		Try Menu, Tray, Icon, %ResDllPath%, 77
-		ChangeProgBarColor("Blue", "OSCProg", 28)
-		Try
-			IELoad(%Act1%)
-		Try Menu, Tray, Icon, %ResDllPath%, 46
-		ChangeProgBarColor("20D000", "OSCProg", 28)
-	}
-return
-
 TakeAction:
 TakeAction := DoAction(FoundX, FoundY, Act1, Act2, Window, SearchResult)
 If (TakeAction = "Continue")
@@ -13344,66 +12526,6 @@ Else If (TakeAction = "Play Sound")
 			SoundBeep
 }
 CoordMode, Mouse, %CoordMouse%
-return
-
-SplitStep:
-GoSub, ClearPars
-If (Type = cType34)
-	Step := StrReplace(Step, "`n", "ø")
-If (Type = cType39)
-	Step := RegExReplace(Step, "\w+", "%$0%", "", 1)
-EscCom("Step|TimesX|DelayX|Target|Window", 1)
-Step := StrReplace(Step, "%A_Space%", "ⱥ")
-If (InStr(FileCmdList, Type "|"))
-{
-	If (RegExMatch(Step, "sU)%\s([\w%]+)\((.*)\)"))
-		EscCom("Step", 1)
-	_Step := ""
-	Loop, Parse, Step, `,, %A_Space%
-	{
-		LoopField := A_LoopField
-	,	CheckVars("LoopField", This_Point)
-		LoopField := StrReplace(LoopField, ",", _x)
-		_Step .= LoopField ", "
-	}
-	Step := RTrim(_Step, ", ")
-}
-CheckVars("Step|TimesX|DelayX|Target|Window", This_Point)
-Step := StrReplace(Step, "``,", _x)
-Step := StrReplace(Step, "``n", "`n")
-Step := StrReplace(Step, "``r", "`r")
-Step := StrReplace(Step, "``t", "`t")
-Loop, Parse, Step, `,, %A_Space%
-{
-	LoopField := A_LoopField
-,	CheckVars("LoopField", This_Point)
-	If ((InStr(Type, "String") = 1) || (Type = "SplitPath"))
-	{
-		If (RegExMatch(LoopField, "i)^A_Loop\w+$", lMatch))
-		{
-			I := DerefVars(LoopIndex), L := SubStr(lMatch, 3)
-		,	This_Par := o_Loop%This_Point%[I][L]
-		,	Par%A_Index% := "This_Par"
-		}
-		Else
-			Par%A_Index% := LoopField
-	}
-	Else
-		Par%A_Index% := LoopField
-	Par%A_Index% := StrReplace(Par%A_Index%, "``n", "`n")
-	Par%A_Index% := StrReplace(Par%A_Index%, "``r", "`r")
-	Par%A_Index% := StrReplace(Par%A_Index%, _x, ",")
-	Par%A_Index% := StrReplace(Par%A_Index%, "ⱥ", A_Space)
-	Par%A_Index% := StrReplace(Par%A_Index%, "``")
-}
-Step := StrReplace(Step, _x, ",")
-Step := StrReplace(Step, "ⱥ", A_Space)
-Step := StrReplace(Step, "``")
-If (Type = cType34)
-{
-	Step := StrReplace(Step, "`n", "``n")
-	Step := StrReplace(Step, "ø", "`n")
-}
 return
 
 ClearPars:
@@ -15305,10 +14427,10 @@ For i, f in LangFiles
 	Lang_%i% := lName "`t" lLocal, Lang_List .= lName " / " lLocal "|"
 }
 
-For i, Section in LangFiles[Lang]
+For i, _Section in LangFiles[Lang]
 {
-	For var, value in Section
-		%var% := value
+	For _var, _value in _Section
+		%_var% := _value
 }
 
 HelpDocsUrl := (InStr(Lang, "zh")=1) ?  "http://ahkcn.github.io/docs"

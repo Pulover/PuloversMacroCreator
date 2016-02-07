@@ -313,7 +313,7 @@
 	c_Lang022 =	Chiudere
 	c_Lang023 =	Copiare
 	c_Lang024 =	Cancellare
-	c_Lang025 =	Usare `% per le variabili, ad esempio: `%Clipboard`%
+	c_Lang025 =	Usare % per le variabili, ad esempio: %Clipboard%
 	c_Lang026 =	Azione
 	c_Lang027 =	Fare clic
 	c_Lang028 =	Spostare
@@ -357,7 +357,7 @@
 	c_Lang066 =	Wait Chiave
 	c_Lang067 =	Se trovato
 	c_Lang068 =	Se non trovato / Errore
-	c_Lang069 =	Coordinate memorizzato in`%FoundX`%/`%FoundY`%.
+	c_Lang069 =	Coordinate memorizzato in%FoundX%/%FoundY%.
 	c_Lang070 =	Coord
 	c_Lang071 =	Variazioni
 	c_Lang072 =	Anteprima
@@ -848,7 +848,7 @@
 		Selezionare l'opzione "Capture Keys" per immettere le chiavi e le combinazioni per la macro direttamente dalla finestra principale.
 		Inserisci le chiavi e le combinazioni nella casella Tasti di scelta rapida in basso e premere il pulsante Inserisci per aggiungerli ai selezionare righe.
 		Se non è selezionato alcun file dei tasti di modifica si applicano a tutte le righe della lista.
-		È possibile assegnare le proprie variabili nelle variabili di Windows (Inserisci > Se Dichiarazioni / Variabili / Funzioni). Per utilizzarli all'interno comandi racchiudere il nome della variabile tra segni di percentuale, ad esempio: `%MyVar`%.
+		È possibile assegnare le proprie variabili nelle variabili di Windows (Inserisci > Se Dichiarazioni / Variabili / Funzioni). Per utilizzarli all'interno comandi racchiudere il nome della variabile tra segni di percentuale, ad esempio: %MyVar%.
 		Il contatore "loop" in alto imposta il numero totale di loop per Macro selezionata.
 		È possibile modificare una riga facendo doppio clic su di esso o selezionandolo e cliccando il pulsante Edit in fondo.
 		È possibile modificare più righe selezionate utilizzando le opzioni nella barra di modifica nella parte inferiore.

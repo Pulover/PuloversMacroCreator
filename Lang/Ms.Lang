@@ -313,7 +313,7 @@
 	c_Lang022 =	Tutup
 	c_Lang023 =	Menyalin
 	c_Lang024 =	Padam
-	c_Lang025 =	Gunakan `% utk pembolehubah, contohnya: `%Clipboard`%
+	c_Lang025 =	Gunakan % utk pembolehubah, contohnya: %Clipboard%
 	c_Lang026 =	Tindakan
 	c_Lang027 =	Klik
 	c_Lang028 =	Pindah
@@ -357,7 +357,7 @@
 	c_Lang066 =	Tunggu Utama
 	c_Lang067 =	Jika didapati
 	c_Lang068 =	Jika tidak ditemui / Ralat
-	c_Lang069 =	Coords disimpan untuk `%FoundX`%/`%FoundY`%.
+	c_Lang069 =	Coords disimpan untuk %FoundX%/%FoundY%.
 	c_Lang070 =	Coord
 	c_Lang071 =	Variasi
 	c_Lang072 =	Preview
@@ -848,7 +848,7 @@
 		Menyemak "Tangkap Keys" pilihan untuk memasukkan kunci dan kombinasi untuk Macro anda terus dari tetingkap utama.
 		Masukkan kunci dan kombinasi dalam kotak Hotkey di bahagian bawah dan tekan butang Insert untuk menambah mereka ke pilih baris.
 		Jika tiada baris dipilih butang edit memohon kepada semua baris dalam senarai.
-		Anda boleh menetapkan pembolehubah anda sendiri dalam Pembolehubah tingkap (Insert> Jika Penyata / Pembolehubah / Fungsi). Untuk menggunakan mereka di dalam arahan sertakan nama yang berubah-ubah dalam tanda-tanda peratus, contohnya: `%MyVar`%.
+		Anda boleh menetapkan pembolehubah anda sendiri dalam Pembolehubah tingkap (Insert> Jika Penyata / Pembolehubah / Fungsi). Untuk menggunakan mereka di dalam arahan sertakan nama yang berubah-ubah dalam tanda-tanda peratus, contohnya: %MyVar%.
 		The "Loop" balas di atas menetapkan jumlah gelung untuk Makro yang dipilih.
 		Anda boleh mengedit berturut-turut dengan mengklik dua kali atau dengan memilih dan klik butang Edit di bahagian bawah.
 		Anda boleh mengedit pelbagai baris dipilih menggunakan pilihan di bar sunting di bahagian bawah.

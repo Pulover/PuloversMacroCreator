@@ -313,7 +313,7 @@
 	c_Lang022 =	Fechar
 	c_Lang023 =	Copiar
 	c_Lang024 =	Excluir
-	c_Lang025 =	Use `% para variáveis, ex.: `%Clipboard`%
+	c_Lang025 =	Use % para variáveis, ex.: %Clipboard%
 	c_Lang026 =	Ação
 	c_Lang027 =	Clicar
 	c_Lang028 =	Mover
@@ -357,7 +357,7 @@
 	c_Lang066 =	Esperar Tecla
 	c_Lang067 =	Se encontrada
 	c_Lang068 =	Se não encontrada / Erro
-	c_Lang069 =	Coords gravadas em `%FoundX`%/`%FoundY`%.
+	c_Lang069 =	Coords gravadas em %FoundX%/%FoundY%.
 	c_Lang070 =	Coord
 	c_Lang071 =	Variações
 	c_Lang072 =	Pré-Visualização
@@ -848,7 +848,7 @@
 		Marque a opção "Capturar Teclas" para inserir teclas e combinações à sua Macro diretamente na da janela principal.
 		Digite teclas e combinações na Caixa de Atalhos na parte inferior e pressione o botão Inserir para adicioná-las às linhas selecionadas.
 		Se nenhuma linha estiver selecionada os botões de edição se aplicam a todas as linhas da lista.
-		Você pode atribuir suas próprias variáveis na janela Variáveis (Inserir > Declarações SE / Variáveis / Funções). Para usá-las dentro de comandos coloque o nome da variável entre sinais de porcentagem, por exemplo: `%MyVar`%.
+		Você pode atribuir suas próprias variáveis na janela Variáveis (Inserir > Declarações SE / Variáveis / Funções). Para usá-las dentro de comandos coloque o nome da variável entre sinais de porcentagem, por exemplo: %MyVar%.
 		O contador de "Loop" no topo define o número total de repetições para a Macro selecionada.
 		Você pode editar uma linha clicando duas vezes nela ou selecionando-a e clicando nos botões de edição na parte inferior.
 		Você pode editar várias linhas selecionadas usando as opções na barra de edição na parte inferior.

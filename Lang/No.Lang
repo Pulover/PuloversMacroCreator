@@ -313,7 +313,7 @@
 	c_Lang022 =	Lukk
 	c_Lang023 =	Kopier
 	c_Lang024 =	Slett
-	c_Lang025 =	Bruk `% for variabler, f.eks: `%Clipboard`%
+	c_Lang025 =	Bruk % for variabler, f.eks: %Clipboard%
 	c_Lang026 =	Handling
 	c_Lang027 =	Klikk
 	c_Lang028 =	Flytt
@@ -357,7 +357,7 @@
 	c_Lang066 =	Nøkkelen Vente
 	c_Lang067 =	Hvis det blir funnet
 	c_Lang068 =	Hvis ikke funnet / Feil
-	c_Lang069 =	Coords lagret til `%FoundX`%/`%FoundY`%.
+	c_Lang069 =	Coords lagret til %FoundX%/%FoundY%.
 	c_Lang070 =	Koord
 	c_Lang071 =	Variasjoner
 	c_Lang072 =	Forhåndsvisning
@@ -848,7 +848,7 @@
 		Sjekk "Capture Keys" for å gå inn nøkler og kombinasjoner for å Macro din direkte fra hovedvinduet.
 		Skriv inn nøkler og kombinasjoner i Hurtigtast-boksen nederst og trykk på Insert-knappen for å legge dem til utvalgte rader.
 		Hvis ingen punkter valgt edit knapper gjelder for alle radene i listen.
-		Du kan tilordne dine egne variabler i Variabler vinduer (Insert > Hvis Uttalelser / variabler / funksjoner). Å bruke dem inne kommandoer vedlegge variabelnavnet i prosent skilt, f.eks: `%MyVar`%.
+		Du kan tilordne dine egne variabler i Variabler vinduer (Insert > Hvis Uttalelser / variabler / funksjoner). Å bruke dem inne kommandoer vedlegge variabelnavnet i prosent skilt, f.eks: %MyVar%.
 		Den "loop"-telleren øverst angir det totale antall løkker for den valgte makro.
 		Du kan redigere en rad ved å dobbeltklikke på det eller ved å velge den og klikke på Rediger-knappene nederst.
 		Du kan redigere flere valgte radene med alternativene i redigeringsboksen nederst.

@@ -313,7 +313,7 @@
 	c_Lang022 =	Yakın
 	c_Lang023 =	Kopyala
 	c_Lang024 =	Silmek
-	c_Lang025 =	Ör., Değişkenler için `% kullanın: `%Clipboard`%
+	c_Lang025 =	Ör., Değişkenler için % kullanın: %Clipboard%
 	c_Lang026 =	Eylem
 	c_Lang027 =	Tıklayın
 	c_Lang028 =	Hareket
@@ -357,7 +357,7 @@
 	c_Lang066 =	Anahtar Bekleyin
 	c_Lang067 =	Eğer bulunursa
 	c_Lang068 =	/ Hata bulundu değilse
-	c_Lang069 =	Coords `%FoundX`%/`%FoundY`% saklanır.
+	c_Lang069 =	Coords %FoundX%/%FoundY% saklanır.
 	c_Lang070 =	Koord
 	c_Lang071 =	Varyasyonlar
 	c_Lang072 =	Önizleme
@@ -848,7 +848,7 @@
 		Ana pencerede doğrudan makro tuşları ve kombinasyonları girmek için "Yakalama Keys" seçeneğini işaretleyin.
 		Altındaki Kısayol tuşu kutusuna tuşları ve kombinasyonları girin ve seçin satır eklemek için Ekle düğmesine basın.
 		Hiçbir satır seçilirse Edit Listedeki tüm satırlar için geçerlidir.
-		Bu Değişkenler kendi değişkenleri atayabilirsiniz pencere (Ekle > Eğer Tablolar / Değişkenler / Fonksiyonlar). Komutları yüzde işaretleri değişken adı içine içinde bunları kullanmak için, örneğin: `%MyVar`%.
+		Bu Değişkenler kendi değişkenleri atayabilirsiniz pencere (Ekle > Eğer Tablolar / Değişkenler / Fonksiyonlar). Komutları yüzde işaretleri değişken adı içine içinde bunları kullanmak için, örneğin: %MyVar%.
 		Üstündeki "Döngü" karşı seçilen Makro için döngüler toplam sayısını belirler.
 		Bunu çift tıklayarak veya seçip altındaki Düzen düğmeleri tıklayarak bir satır düzenleyebilirsiniz.
 		Sen altındaki düzenleme çubuğunda seçenekleri kullanarak birden çok seçili satır düzenleyebilirsiniz.

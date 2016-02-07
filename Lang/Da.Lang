@@ -313,7 +313,7 @@
 	c_Lang022 =	Luk
 	c_Lang023 =	Kopiér
 	c_Lang024 =	Slet
-	c_Lang025 =	Brug `% for Variables, fx: `%Clipboard`%
+	c_Lang025 =	Brug % for Variables, fx: %Clipboard%
 	c_Lang026 =	Aktion
 	c_Lang027 =	Klik
 	c_Lang028 =	Flyt
@@ -357,7 +357,7 @@
 	c_Lang066 =	Nøgle Vente
 	c_Lang067 =	Hvis der konstateres
 	c_Lang068 =	Hvis den ikke findes / Error
-	c_Lang069 =	Koordinater gemt på `%FoundX`%/`%FoundY`%.
+	c_Lang069 =	Koordinater gemt på %FoundX%/%FoundY%.
 	c_Lang070 =	Coord
 	c_Lang071 =	Variationer
 	c_Lang072 =	Eksempel
@@ -848,7 +848,7 @@
 		Check "Capture taster" mulighed for at indtaste nøgler og koder til din makro direkte fra hovedvinduet.
 		Indtast nøgler og koder i Genvejstast boksen nederst og tryk på knappen Indsæt for at føje dem til de udvalgte rækker.
 		Hvis der ikke rækker udvalgt de edit knapper gælder for alle rækker i listen.
-		Du kan tildele dine egne variabler i variablerne windows (Indsæt > Hvis Statements / variable / funktioner). For at bruge dem inde kommandoer vedlægge variabelnavnet i procenttegn, fx: `%MyVar`%.
+		Du kan tildele dine egne variabler i variablerne windows (Indsæt > Hvis Statements / variable / funktioner). For at bruge dem inde kommandoer vedlægge variabelnavnet i procenttegn, fx: %MyVar%.
 		Den "Loop" counter øverst indstiller samlede antal loops for den valgte makro.
 		Du kan redigere en række, ved at dobbeltklikke på den eller ved at vælge det og klikke Rediger knapperne nederst.
 		Du kan redigere flere markerede rækker ved hjælp af indstillingerne i redigeringsfeltet nederst.

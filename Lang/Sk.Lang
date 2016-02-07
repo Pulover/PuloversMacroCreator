@@ -313,7 +313,7 @@
 	c_Lang022 =	Zavrieť
 	c_Lang023 =	Kopírovať
 	c_Lang024 =	Vymazať
-	c_Lang025 =	Použite `% pre premenné, napríklad: `%Clipboard`%
+	c_Lang025 =	Použite % pre premenné, napríklad: %Clipboard%
 	c_Lang026 =	Akcie
 	c_Lang027 =	Kliknite na tlačidlo
 	c_Lang028 =	Pohyb
@@ -357,7 +357,7 @@
 	c_Lang066 =	Počkajte Key
 	c_Lang067 =	Ak nájdených
 	c_Lang068 =	Ak nie je nájdený / Chyba
-	c_Lang069 =	Súradnice uložené na `%FoundX`%/`%FoundY`%.
+	c_Lang069 =	Súradnice uložené na %FoundX%/%FoundY%.
 	c_Lang070 =	Coord
 	c_Lang071 =	Variácie
 	c_Lang072 =	Náhľad
@@ -848,7 +848,7 @@
 		Pozrite sa na "Capture" Keys možnosť zadať kľúče a kombinácie do makra priamo z hlavného okna.
 		Enter a ich kombinácie v poli Hotkey dolu a stlačte tlačidlo Vložiť a pridať ich do vybraných riadkov.
 		Ak žiadne položky sú označené editačné tlačidlá platí pre všetky riadky v zozname.
-		Môžete priradiť svoje vlastné premenné v premennej windows (Vložiť> if / premennej / funkcie). Ak chcete používať je vnútri príkazy názov premennej uzavrite v percentách znaky, napr: `%MyVar`%.
+		Môžete priradiť svoje vlastné premenné v premennej windows (Vložiť> if / premennej / funkcie). Ak chcete používať je vnútri príkazy názov premennej uzavrite v percentách znaky, napr: %MyVar%.
 		Loop počítadlo v hornej časti stanovuje celkový počet slučiek pre vybrané makro.
 		Môžete upraviť riadok poklepaním, alebo jeho výberom a kliknutím na tlačidlo Upraviť tlačidlá v dolnej časti.
 		Tu môžete editovať viac vybraných riadkov pomocou voľby v editačnom riadku v dolnej časti.

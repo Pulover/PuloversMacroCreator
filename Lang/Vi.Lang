@@ -313,7 +313,7 @@
 	c_Lang022 =	Đóng
 	c_Lang023 =	Sao chép
 	c_Lang024 =	Xóa
-	c_Lang025 =	Sử dụng `% cho biến, ví dụ: `%Clipboard`%
+	c_Lang025 =	Sử dụng % cho biến, ví dụ: %Clipboard%
 	c_Lang026 =	Hành động
 	c_Lang027 =	Nhấp
 	c_Lang028 =	Di chuyển
@@ -357,7 +357,7 @@
 	c_Lang066 =	Chờ chính
 	c_Lang067 =	Nếu tìm thấy
 	c_Lang068 =	Nếu không tìm thấy / Lỗi
-	c_Lang069 =	Coords lưu trữ để `%FoundX`%/`%FoundY`%.
+	c_Lang069 =	Coords lưu trữ để %FoundX%/%FoundY%.
 	c_Lang070 =	Coord
 	c_Lang071 =	Biến thể
 	c_Lang072 =	Xem trước
@@ -848,7 +848,7 @@
 		Kiểm tra "Capture phím" tùy chọn để nhập phím và kết hợp để vĩ mô của bạn trực tiếp từ cửa sổ chính.
 		Nhập phím và kết hợp trong hộp Hotkey ở phía dưới và nhấn nút Insert để thêm chúng vào các hàng lựa chọn.
 		Nếu không có hàng được lựa chọn các nút chỉnh sửa áp dụng cho tất cả các hàng trong danh sách.
-		Bạn có thể gán biến của riêng bạn trong các biến cửa sổ (Insert> Nếu cáo / biến / chức năng). Để sử dụng chúng trong các lệnh kèm theo tên biến trong dấu phần trăm, ví dụ như: `%MyVar`%.
+		Bạn có thể gán biến của riêng bạn trong các biến cửa sổ (Insert> Nếu cáo / biến / chức năng). Để sử dụng chúng trong các lệnh kèm theo tên biến trong dấu phần trăm, ví dụ như: %MyVar%.
 		Các "vòng" truy cập ở phía trên đặt tổng số vòng cho các vĩ mô được lựa chọn.
 		Bạn có thể chỉnh sửa một hàng bằng cách nhấp đúp nó hoặc bằng cách chọn nó và nhấn vào nút Edit ở phía dưới.
 		Bạn có thể chỉnh sửa nhiều hàng lựa chọn sử dụng các tùy chọn trong thanh chỉnh sửa ở phía dưới.

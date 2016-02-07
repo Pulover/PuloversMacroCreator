@@ -313,7 +313,7 @@
 	c_Lang022 =	Zatvoriti
 	c_Lang023 =	Kopirajte
 	c_Lang024 =	Izbrisati
-	c_Lang025 =	Koristite `% za varijable, npr.:`%Clipboard`%
+	c_Lang025 =	Koristite % za varijable, npr.:%Clipboard%
 	c_Lang026 =	Akcija
 	c_Lang027 =	Klik
 	c_Lang028 =	Premjestiti
@@ -357,7 +357,7 @@
 	c_Lang066 =	Ključ Čekati
 	c_Lang067 =	Ako se utvrdi da
 	c_Lang068 =	Ako nije pronađen Greška /
-	c_Lang069 =	Coords pohranjeni FoundX u `%FoundX`%/`%FoundY`%.
+	c_Lang069 =	Coords pohranjeni FoundX u %FoundX%/%FoundY%.
 	c_Lang070 =	Coord
 	c_Lang071 =	Varijacije
 	c_Lang072 =	Pregled
@@ -848,7 +848,7 @@
 		Provjerite "Hvatanje Keys" opciju za ulazak i kombinacije tipki na Macro izravno iz glavnog prozora.
 		Unesite tipki i kombinacije u hotkey kutiji na dnu i pritisnite tipku Insert bi ih dodali na odabranim redovima.
 		Ako nema reda odabrao edit tipke primjenjuje na sve retke na popisu.
-		Možete dodijeliti svoje varijable u varijablama prozori (Insert > Ako Izjave varijable / / funkcija). Kako ih koristiti unutar naredbe priložiti ime varijable u posto znakove, npr.: `%MyVar`%.
+		Možete dodijeliti svoje varijable u varijablama prozori (Insert > Ako Izjave varijable / / funkcija). Kako ih koristiti unutar naredbe priložiti ime varijable u posto znakove, npr.: %MyVar%.
 		Loop brojač na vrhu postavlja ukupan broj petlji za odabrane Macro.
 		Možete urediti red tako da ga dvostrukim klikom ili ga i pritiskom tipke za uređivanje na dnu.
 		Možete uređivati više odabranih redaka pomoću mogućnosti u uređivanju traci na dnu.

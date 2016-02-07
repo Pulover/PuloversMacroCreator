@@ -313,7 +313,7 @@
 	c_Lang022 =	Schließen
 	c_Lang023 =	Kopieren
 	c_Lang024 =	Löschen
-	c_Lang025 =	`% für Variablen verwenden, z. B.: `%Clipboard`%
+	c_Lang025 =	% für Variablen verwenden, z. B.: %Clipboard%
 	c_Lang026 =	Aktion
 	c_Lang027 =	Klicken
 	c_Lang028 =	Bewegen
@@ -357,7 +357,7 @@
 	c_Lang066 =	Taste erfassen
 	c_Lang067 =	Wenn gefunden
 	c_Lang068 =	Wenn nicht, bzw. Fehler gefunden
-	c_Lang069 =	Coords in `%FoundX`%/`%FoundY`% gespeichert.
+	c_Lang069 =	Coords in %FoundX%/%FoundY% gespeichert.
 	c_Lang070 =	Coord
 	c_Lang071 =	Variationen
 	c_Lang072 =	Vorschau
@@ -848,7 +848,7 @@
 		Aktivieren Sie "Tasten erfassen", um Tasten und Kombinationen direkt aus dem Hauptfenster in Ihr Makro einzufügen.
 		Geben Sie Tasten und Kombinationen unten im Hotkey-Fenster ein und klicken Sie auf die Schaltfläche Einfügen, um sie zu den ausgewählten Zeilen hinzuzufügen.
 		Wenn keine Zeilen ausgewählt sind, werden die Bearbeiten-Schaltflächen auf alle Zeilen in der Liste angewendet.
-		Sie können Ihre eigenen Variablen im Variablen-Fenster zuweisen (Einfügen > If-Anweisungen/Variablen/Funktionen). Um sie innerhalb von Befehlen zu verwenden, schließen Sie den Variablennamen in Prozentzeichen ein, z. B.: `%MyVar`%.
+		Sie können Ihre eigenen Variablen im Variablen-Fenster zuweisen (Einfügen > If-Anweisungen/Variablen/Funktionen). Um sie innerhalb von Befehlen zu verwenden, schließen Sie den Variablennamen in Prozentzeichen ein, z. B.: %MyVar%.
 		Der "Loop"-Zähler oben legt die Gesamtzahl der Schleifen für das ausgewählte Makro fest.
 		Sie können eine Reihe durch Doppelklick oder durch Markieren und Anklicken der Bearbeiten-Schaltflächen am unteren Rand editieren.
 		Sie können mehrere ausgewählte Zeilen mit den Optionen in der Bearbeitungsleiste an der Unterseite bearbeiten.

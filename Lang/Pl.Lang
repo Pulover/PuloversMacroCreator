@@ -313,7 +313,7 @@
 	c_Lang022 =	Zamknąć
 	c_Lang023 =	Skopiuj
 	c_Lang024 =	Usunąć
-	c_Lang025 =	Użyj `% dla zmiennych, np.: `%Clipboard`%
+	c_Lang025 =	Użyj % dla zmiennych, np.: %Clipboard%
 	c_Lang026 =	Akcja
 	c_Lang027 =	Kliknij
 	c_Lang028 =	Przenieść
@@ -357,7 +357,7 @@
 	c_Lang066 =	Key Czekać
 	c_Lang067 =	Jeśli stwierdzono
 	c_Lang068 =	Jeśli nie znaleziono / błąd
-	c_Lang069 =	Coords przechowywane na `%FoundX`%/`%FoundY`%.
+	c_Lang069 =	Coords przechowywane na %FoundX%/%FoundY%.
 	c_Lang070 =	Coord
 	c_Lang071 =	Odmiany
 	c_Lang072 =	Podgląd
@@ -848,7 +848,7 @@
 		Sprawdź "Capture Keys" opcję, aby wprowadzić klucze i kombinacje do makra bezpośrednio z głównego okna.
 		Wprowadź klucze i kombinacje w polu Hotkey na dole i wciśnij przycisk Insert, aby dodać je do wybranych wierszy.
 		Jeśli wiersze nie są wybrane przyciski EDIT zastosowanie do wszystkich wierszy w liście.
-		Można przypisać własne zmienne w zmiennych okna (Wstaw > if / zmienne / funkcje). Aby ich użyć wewnątrz polecenia dołączyć nazwę zmiennej w znakami procentu, np.: `%MyVar`%.
+		Można przypisać własne zmienne w zmiennych okna (Wstaw > if / zmienne / funkcje). Aby ich użyć wewnątrz polecenia dołączyć nazwę zmiennej w znakami procentu, np.: %MyVar%.
 		Loop licznik na górze przedstawia całkowitą liczbę pętli dla wybranego Makro.
 		Można edytować wiersz przez dwukrotne kliknięcie lub wybierając go i klikając przycisk Edycja na dole.
 		Możesz edytować wiele wybranych wierszy przy użyciu opcji w edycji barze na dole.

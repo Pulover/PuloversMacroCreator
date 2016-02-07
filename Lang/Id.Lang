@@ -313,7 +313,7 @@
 	c_Lang022 =	Menutup
 	c_Lang023 =	Kopi
 	c_Lang024 =	Hapus
-	c_Lang025 =	Gunakan `% untuk Variabel, misalnya: `%Clipboard`%
+	c_Lang025 =	Gunakan % untuk Variabel, misalnya: %Clipboard%
 	c_Lang026 =	Tindakan
 	c_Lang027 =	Klik
 	c_Lang028 =	Bergerak
@@ -357,7 +357,7 @@
 	c_Lang066 =	Tunggu Kunci
 	c_Lang067 =	Jika ditemukan
 	c_Lang068 =	Jika tidak ditemukan / Kesalahan
-	c_Lang069 =	Coords disimpan ke `%FoundX`%/`%FoundY`%.
+	c_Lang069 =	Coords disimpan ke %FoundX%/%FoundY%.
 	c_Lang070 =	Coord
 	c_Lang071 =	Variasi
 	c_Lang072 =	Preview
@@ -848,7 +848,7 @@
 		Periksa "Capture Tombol" pilihan untuk memasukkan kunci dan kombinasi Makro Anda langsung dari jendela utama.
 		Masukkan kunci dan kombinasi di kotak Hotkey di bagian bawah dan tekan tombol Insert untuk menambahkan mereka ke pilih baris.
 		Jika tidak ada baris yang dipilih tombol sunting berlaku untuk semua baris dalam daftar.
-		Anda dapat menetapkan variabel Anda sendiri dalam Variabel jendela (Insert> Jika Laporan / Variabel / Fungsi). Untuk menggunakannya dalam perintah memasukkan nama variabel dalam tanda persen, misalnya: `%MyVar`%.
+		Anda dapat menetapkan variabel Anda sendiri dalam Variabel jendela (Insert> Jika Laporan / Variabel / Fungsi). Untuk menggunakannya dalam perintah memasukkan nama variabel dalam tanda persen, misalnya: %MyVar%.
 		Loop counter di atas menetapkan jumlah loop untuk Makro dipilih.
 		Anda dapat mengedit baris dengan mengklik dua kali atau dengan memilih dan mengklik tombol Edit di bagian bawah.
 		Anda dapat mengedit beberapa baris yang dipilih dengan menggunakan opsi di edit bar di bagian bawah.

@@ -313,7 +313,7 @@
 	c_Lang022 =	Tancar
 	c_Lang023 =	Copieu
 	c_Lang024 =	Esborrar
-	c_Lang025 =	Utilitza `% per a variables, per exemple: `%Clipboard`%
+	c_Lang025 =	Utilitza % per a variables, per exemple: %Clipboard%
 	c_Lang026 =	Acció
 	c_Lang027 =	Clic
 	c_Lang028 =	Moure
@@ -357,7 +357,7 @@
 	c_Lang066 =	Espera Clau
 	c_Lang067 =	Si es troba
 	c_Lang068 =	Si no el troba / Error
-	c_Lang069 =	Coordenades emmagatzemat per `%FoundX`%/`%FoundY`%.
+	c_Lang069 =	Coordenades emmagatzemat per %FoundX%/%FoundY%.
 	c_Lang070 =	Coord
 	c_Lang071 =	Variacions
 	c_Lang072 =	Avanç
@@ -848,7 +848,7 @@
 		Marqueu l'opció "Claus Capture" per entrar tecles i combinacions a la macro directament de la finestra principal.
 		Introduïu tecles i combinacions de tecles d'accés ràpid a la caixa a la part inferior i premi el botó Insereix per afegir a les files seleccionades.
 		Si no se selecciona cap fila dels botons d'edició s'apliquen a totes les files de la llista.
-		Pots assignar les teves pròpies variables en les variables de finestres (Inserir> Si Declaracions / variables / funcions). Per utilitzar les ordres a l'interior tanquen el nom de la variable entre signes de percentatge, per exemple: `% MiVar`%.
+		Pots assignar les teves pròpies variables en les variables de finestres (Inserir> Si Declaracions / variables / funcions). Per utilitzar les ordres a l'interior tanquen el nom de la variable entre signes de percentatge, per exemple: % MiVar%.
 		El comptador de "Loop" a la part superior estableix el nombre total de bucles de la macro seleccionada.
 		Podeu editar una fila fent doble clic o seleccionant-lo i fent clic en els botons d'edició a la part inferior.
 		Podeu editar diverses files seleccionades usant les opcions de la barra d'edició a la part inferior.
