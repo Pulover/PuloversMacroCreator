@@ -44,6 +44,7 @@ Thiago Talma for some improvements to the code, debugging and many suggestions.
 * Implemented real Auto-Hotkey format expressions in Functions, Methods, Variable Assignment, Evaluate Expression, COM Interface and command parameters started with % .
 * Multiple If Statements are now supported in 'Evaluate Expression' (e.g.: var = 5 || var = "a").
 * Function parameter can now be another function, array, array element or expression.
+* Loops now work in Manual Playback.
 * Added support for array assignment in Variables, Functions and IECOM/COMInterface.
 * Added support for Associative Arrays assignment in Variables window (e.g.: {name: "John", age: 25}).
 * Added support for array methods in Functions window.

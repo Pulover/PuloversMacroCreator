@@ -24,7 +24,7 @@
 
 Eval($x, _CustomVars := "", _Init := true)
 {
-	global TabSel, chMacro, InputList, InputList0, ListCount, cType47, RunningFunction
+	global TabSel, chMacro, InputList, InputList0, ListCount, cType47
 	Static _Objects
 	_Elements := {}
 	If (_Init)
@@ -162,16 +162,19 @@ Eval($x, _CustomVars := "", _Init := true)
 		$y := $z[$i]
 		Try
 		{
-			If (IsObject(%$y%))
+			If (_CustomVars.HasKey($y))
+			{
+				If (IsObject(_CustomVars[$y]))
+				{
+					ObjName := RegExReplace($y, "\W", "_")
+				,   _Objects[ObjName] := _CustomVars[$y].Clone()
+				,   $z[$i] := """<~#" ObjName "#~>"""
+				}
+			}
+			Else If (IsObject(%$y%))
 			{
 				ObjName := RegExReplace($y, "\W", "_")
 			,   _Objects[ObjName] := %$y%.Clone()
-			,   $z[$i] := """<~#" ObjName "#~>"""
-			}
-			Else If (IsObject(_CustomVars[$y]))
-			{
-				ObjName := RegExReplace($y, "\W", "_")
-			,   _Objects[ObjName] := _CustomVars[$y].Clone()
 			,   $z[$i] := """<~#" ObjName "#~>"""
 			}
 		}
@@ -198,10 +201,8 @@ Eval($x, _CustomVars := "", _Init := true)
 						,	EvalResult := Eval(_Match2, _CustomVars, false)
 							For i, v in EvalResult
 								_Params[i] := {Name: FuncPars[i], Value: v}
-							LastFuncRun := RunningFunction, RunningFunction := _Match1
-						,	$y := Playback(TabIdx,,, _Params)
+							$y := Playback(TabIdx,,, _Params, _Match1)
 						,	$y := $y[1]
-						,	RunningFunction := LastFuncRun
 						,	ObjName := RegExReplace(_Match, "\W", "_")
 							If (IsObject($y))
 								_Objects[ObjName] := $y
@@ -296,7 +297,7 @@ ParseObjects(v_String, _CustomVars  :=  "", ByRef v_levels := "", QuoteStrings :
 	}
 	_ArrayObject := o_String
 ,	v_levels := [], v_Obj := l_Matches[1]
-	If (IsObject(_CustomVars[v_Obj]))
+	If (_CustomVars.HasKey(v_Obj))
 		_ArrayObject := _CustomVars[v_Obj]
 	Else
 		Try _ArrayObject := %v_Obj%

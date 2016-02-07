@@ -299,11 +299,11 @@ If (Version < 5)
 User_Vars := new ObjIni(UserVarsPath)
 User_Vars.Read()
 UserVars := User_Vars.Get(true)
-For each, Section in UserVars
+For _each, Section in UserVars
 {
-	For each, Key in Section
+	For _each, _key in Section
 	{
-		VarName := Key.Key
+		VarName := _key.Key
 		Try SavedVars(VarName)
 	}
 }
@@ -3128,11 +3128,11 @@ VirtualKeys := EditMod, UserVarsList := RegExReplace(UserVarsList, "U)\s+=\s+", 
 User_Vars.Set(UserVarsList)
 User_Vars.Read()
 UserVars := User_Vars.Get(true)
-For each, Section in UserVars
+For _each, Section in UserVars
 {
-	For each, Key in Section
+	For _each, _key in Section
 	{
-		VarName := Key.Key
+		VarName := _key.Key
 		Try SavedVars(VarName)
 	}
 }
@@ -5927,9 +5927,9 @@ Gui, 12:Add, Text, y+5 xs+10 W210 vField2, %c_Lang141%
 Gui, 12:Add, Text, yp x+10 W210 vField3, %c_Lang142%
 Gui, 12:Add, Edit, y+5 xs+10 W210 R1 vDelim Disabled
 Gui, 12:Add, Edit, yp x+10 W210 R1 vOmit Disabled
-Gui, 12:Add, Text, y+5 xs+15 W430 r1 cGray, %c_Lang074%
-Gui, 12:Add, Text, y+5 r1 W430 cGray, %c_Lang025%
-Gui, 12:Add, Groupbox, Section xs y+18 W450 H50, %c_Lang123%:
+Gui, 12:Add, Text, y+5 xs+15 W430 r1 cGray, %c_Lang025%
+; Gui, 12:Add, Text, y+5 r1 W430 cGray, %c_Lang025%
+Gui, 12:Add, Groupbox, Section xs y+33 W450 H50, %c_Lang123%:
 Gui, 12:Add, Button, -Wrap ys+18 xs+85 W75 H23 gAddBreak, %c_Lang075%
 Gui, 12:Add, Button, -Wrap yp x+10 W75 H23 gAddContinue, %c_Lang076%
 Gui, 12:Add, Button, -Wrap Section Default xm W75 H23 gLoopOK, %c_Lang020%
@@ -9794,7 +9794,7 @@ If (FindCmd = "")
 FoundResults := Find_Command(FindCmd)
 Gui, 34:Default
 LV_Delete()
-For each, Line in FoundResults
+For _each, Line in FoundResults
 	LV_Add("", Line.Cmd, Line.Path)
 LV_ModifyCol()
 return
@@ -10456,11 +10456,11 @@ TB_IdealSize(tbRecPlay, TbRecPlay_ID), TB_IdealSize(tbCommand, TbCommand_ID)
 return
 
 TbHide:
-For Index, Ptr in TBHwndAll
+For _each, Ptr in TBHwndAll
 {
 	If (Ptr.tbHwnd = tbPtr.tbHwnd)
 	{
-		bID := RBIndexTB[Index]
+		bID := RBIndexTB[_each]
 		break
 	}
 }
@@ -10775,10 +10775,10 @@ return
 
 GetHotkeys:
 AutoKey := "", ManKey := ""
-For Index, Key in o_AutoKey
-	AutoKey .= Key "|"
-For Index, Key in o_ManKey
-	ManKey .= Key "|"
+For _each, _key in o_AutoKey
+	AutoKey .= _key "|"
+For _each, _key in o_ManKey
+	ManKey .= _key "|"
 AutoKey := RTrim(AutoKey, "|"), ManKey := RTrim(ManKey, "|")
 return
 
@@ -12394,6 +12394,7 @@ If (Record)
 GoSub, RowCheck
 Try Menu, Tray, Icon, %DefaultIcon%, 1
 tbOSC.ModifyButtonInfo(1, "Image", 48)
+Tooltip
 return
 
 NoKey:

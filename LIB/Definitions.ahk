@@ -110,7 +110,6 @@ RecOptChecks := ["ClearNewList", "", "Strokes", "CaptKDn", "RecKeybdCtrl"
 ,	CopyMenuLabels := []
 ,	ScopedVars := {}
 ,	Static_Vars := {}
-,	RunningFunction := ""
 ,	LVManager := new LV_Rows()
 ,	LVManager.SetCallback("LVCallback")
 ,	Exp_Mult := {1:2, 2:4, 3:8, 4:16, 5:32}

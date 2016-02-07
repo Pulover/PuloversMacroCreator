@@ -1,11 +1,11 @@
-﻿Playback(Macro_On, LoopInfo := "", Manual := "", UDFParams := "", ByRef BreakIt := 0, ByRef SkipIt := 0)
+﻿Playback(Macro_On, LoopInfo := "", ManualKey := "", UDFParams := "", RunningFunction := "", LoopFlow := "")
 {
 	local PlaybackVars := [], LVData := [], IfError := 0, LoopDepth := 0, LoopCount := [0], StartMark := []
 	, m_ListCount := ListCount%Macro_On%, mLoopIndex, cLoopIndex, iLoopIndex := 0, mLoopLength, mLoopSize, mListRow
 	, Action, Step, TimesX, DelayX, Type, Target, Window, Loop_Start, Loop_End, _Label, _i, Pars
-	, NextStep, NStep, NTimesX, NType, NTarget, NWindow, _each, _value, _key
+	, NextStep, NStep, NTimesX, NType, NTarget, NWindow, _each, _value, _key, _depth, _pair, _index, _point
 	, pbParams, VarName, VarValue, Oper, RowData, ActiveRows, Increment := 0
-	, ScopedParams := [], LastFuncRun, UserGlobals, GlobalList, CursorX, CursorY
+	, ScopedParams := [], UserGlobals, GlobalList, CursorX, CursorY
 	, Func_Result, SVRef, FuncPars, ParamIdx := 1, EvalResult
 
 	If (LoopInfo.GetCapacity())
@@ -14,8 +14,8 @@
 	,	PlaybackVars := LoopInfo.PlaybackVars
 	,	Loop_Start := LoopInfo.Range.Start
 	,	Loop_End := LoopInfo.Range.End
-	,	Increment := LoopInfo.Increment
 	,	mLoopSize := LoopInfo.Count
+	,	Increment := LoopInfo.Increment
 	}
 	Else
 	{
@@ -44,6 +44,8 @@
 			GuiControl, 28:+Range0-%m_ListCount%, OSCProg
 		mLoopSize := o_TimesG[Macro_On]
 	}
+	If (!LoopFlow.GetCapacity())
+		LoopFlow := {Break: 0, Continue: 0}
 	CurrentRange := m_ListCount, ChangeProgBarColor("20D000", "OSCProg", 28)
 	Gui, chMacro:Default
 	Gui, chMacro:ListView, InputList%Macro_On%
@@ -54,26 +56,25 @@
 	,   LVData[A_Index] := [RowData*]
 	}
 	ActiveRows := LV_GetSelCheck()
-,	mLoopLength := (UDFParams.GetCapacity() || Manual || Increment) ? 1 : o_TimesG[Macro_On]
+,	mLoopLength := (UDFParams.GetCapacity() || ManualKey || Increment) ? 1 : o_TimesG[Macro_On]
 	While (A_Index <= mLoopLength)
 	{
 		If (StopIt)
 			break
-		
 		cLoopIndex := A_Index + Increment
-		; For _each, _value in PlaybackVars[LoopDepth][mLoopIndex]
-			; (InStr(_each, "A_")=1) ? "" : %_each% := _value
 		Loop, %m_ListCount%
 		{
 			mLoopIndex := iLoopIndex ? 1 : cLoopIndex
 		,	PlaybackVars[LoopDepth][mLoopIndex, "A_Index"] := mLoopIndex
 		,	mListRow := A_Index
+			For _each, _value in PlaybackVars[LoopDepth][mLoopIndex]
+				(InStr(_each, "A_")=1) ? "" : %_each% := _value
 			If (StopIt)
 				break 2
 			If (ShowProgBar = 1)
 			{
 				GuiControl, 28:, OSCProg, %A_Index%
-				GuiControl, 28:, OSCProgTip, % "M" Macro_On " [Loop: " (iLoopIndex ? 1 : mLoopIndex) "/" mLoopSize " | Row: " A_Index "/" m_ListCount "]"
+				GuiControl, 28:, OSCProgTip, % "M" Macro_On " [Loop: " (iLoopIndex ? 1 "/" (LoopCount[LoopDepth] + 1) : mLoopIndex "/" mLoopSize) " | Row: " A_Index "/" m_ListCount "]"
 			}
 			If (Loop_Start > 0)
 			{
@@ -87,9 +88,9 @@
 			Else If ((pb_To) && ((ActiveRows["Selected"][0] > 0) && (A_Index > ActiveRows["Selected"][0])))
 				break
 			Data_GetTexts(LVData, A_Index, Action, Step, TimesX, DelayX, Type, Target, Window)
-			If ((Manual) && (ShowStep = 1))
+			If ((ManualKey) && (ShowStep = 1))
 			{
-				NexStep := A_Index + 1
+				NextStep := A_Index + 1
 			,	Data_GetTexts(LVData, NextStep,, NStep, NTimesX,, NType, NTarget, NWindow)
 				ToolTip, 
 				(LTrim
@@ -257,7 +258,7 @@
 				continue
 			If ((Type = cType36) || (Type = cType37))
 			{
-				If ((BreakIt > 0) || (SkipIt > 0))
+				If ((LoopFlow.Break > 0) || (LoopFlow.Continue > 0))
 					continue
 				CheckVars(PlaybackVars[LoopDepth][mLoopIndex], Step)
 				Loop, %TabCount%
@@ -267,18 +268,18 @@
 					{
 						If (Type = cType36)
 						{
-							_Label := [A_Index, 0, Manual]
+							_Label := [A_Index, 0, ManualKey]
 							return _Label
 						}
 						Else
 						{
-							_Label := Playback(A_Index, 0, Manual)
+							_Label := Playback(A_Index,, ManualKey,,, LoopFlow)
 							If (IsObject(_Label))
 								return _Label
 							Else If (_Label)
 							{
 								Lab := _Label, _Label := 0
-								If (_Label := Playback(Lab))
+								If (_Label := Playback(Lab,, ManualKey,,, LoopFlow))
 									return _Label
 							}
 							break
@@ -297,18 +298,23 @@
 							{
 								If (Type = cType36)
 								{
-									_Label := [TabIdx, A_Index, Manual]
+									_Label := [TabIdx, A_Index, ManualKey]
 									return _Label
 								}
 								Else
 								{
-									_Label := Playback(TabIdx, A_Index, Manual)
+									LoopInfo := {LoopDepth: LoopDepth
+											,	PlaybackVars: PlaybackVars
+											,	Range: {Start: A_Index, End: 0}
+											,	Count: o_TimesG[TabIdx]
+											,	LoopInfo.Increment: 0}
+									_Label := Playback(TabIdx, LoopInfo, ManualKey,,, LoopFlow)
 									If (IsObject(_Label))
 										return _Label
 									Else If (_Label)
 									{
 										Lab := _Label, _Label := 0
-										If (_Label := Playback(Lab))
+										If (_Label := Playback(Lab,, ManualKey,,, LoopFlow))
 											return _Label
 									}
 									break
@@ -317,10 +323,10 @@
 						}
 					}
 				}
-				If (BreakIt > 0)
-					BreakIt--
-				If (SkipIt > 0)
-					SkipIt--
+				If (LoopFlow.Break > 0)
+					LoopFlow.Break--
+				If (LoopFlow.Continue > 0)
+					LoopFlow.Continue--
 				; If (ShowProgBar = 1)
 				; {
 					; GuiControl, 28:+Range0-%m_ListCount%, OSCProg
@@ -330,36 +336,39 @@
 			}
 			If (Type = cType35)
 				continue
-			If (Manual)
-			{
-				If Type in %cType5%,%cType7%,%cType38%,%cType39%,%cType40%,%cType41%,%cType45%
+			If ((ManualKey) && (Type = cType5))
 					continue
-			}
 			If ((Type = cType7) || (Type = cType38) || (Type = cType39)
 			|| (Type = cType40) || (Type = cType41) || (Type = cType45))
 			{
 				If (Action = "[LoopStart]")
 				{
-					If (BreakIt > 0)
+					If (LoopFlow.Break > 0)
 					{
-						BreakIt++
+						LoopFlow.Break++
 						continue
 					}
-					If (SkipIt > 0)
+					If (LoopFlow.Continue > 0)
 					{
-						SkipIt++
+						LoopFlow.Continue++
 						continue
 					}
 					Pars := SplitStep(PlaybackVars[LoopDepth][mLoopIndex], Step, TimesX, DelayX, Type, Target, Window)
 				,	CheckVars(PlaybackVars[LoopDepth][mLoopIndex], TimesX)
 				,	LoopDepth++
-					If (!IsObject(PlaybackVars[LoopDepth]))
-						PlaybackVars[LoopDepth] := []
-					iLoopIndex++, StartMark[LoopDepth] := A_Index
+				,	PlaybackVars[LoopDepth] := []
+				,	iLoopIndex++, StartMark[LoopDepth] := A_Index
 				,	PlaybackVars[LoopDepth][mLoopIndex, "A_Index"] := 1
-					For _key, _value in PlaybackVars[LoopDepth - 1]
-						For _each, _value in _value
-							PlaybackVars[LoopDepth][_key, _each] := _value
+				
+					For _depth, _pair in PlaybackVars
+					{
+						If (_depth = LoopDepth)
+							break
+						For _index, _point in _pair[mLoopIndex]
+							For _each, _value in PlaybackVars[LoopDepth - 1]
+								PlaybackVars[LoopDepth][_each, _index] := _point
+					}
+
 					If (Type = cType38)
 					{
 						Loop, Read, % Pars[1], % Pars[2]
@@ -432,10 +441,8 @@
 					If (LoopCount[LoopDepth] = "")
 					{
 						PlaybackVars[LoopDepth][mLoopIndex, "A_Index"] := mLoopIndex
-						BreakIt++
+						LoopFlow.Break++
 					}
-					For _each, _value in PlaybackVars[LoopDepth][mLoopIndex]
-						(InStr(_each, "A_")=1) ? "" : %_each% := _value
 					continue
 				}
 				If (Action = "[LoopEnd]")
@@ -446,22 +453,25 @@
 							,	Count: LoopCount[LoopDepth] + 1}
 					Loop
 					{
-						If (BreakIt > 0)
+						If (LoopFlow.Break > 0)
 						{
-							BreakIt--
-							LoopDepth--
+							LoopFlow.Break--
+						,	LoopDepth--
+						,	iLoopIndex--
 							continue 2
 						}
-						If (SkipIt > 1)
+						If (LoopFlow.Continue > 1)
 						{
-							SkipIt--
+							LoopFlow.Continue--
+						,	LoopDepth--
+						,	iLoopIndex--
 							continue 2
 						}
-						If (SkipIt > 0)
-							SkipIt--
+						If (LoopFlow.Continue > 0)
+							LoopFlow.Continue--
 						
 						LoopInfo.Increment := A_Index
-					,	GoToLab := Playback(Macro_On, LoopInfo, Manual,, BreakIt, SkipIt)
+					,	GoToLab := Playback(Macro_On, LoopInfo, ManualKey,,, LoopFlow)
 						If (IsObject(GoToLab))
 						{
 							For _each, _value in ScopedParams
@@ -492,11 +502,11 @@
 							return GoToLab
 						}
 						Else If (GoToLab = "_return")
-							break 2
+							break 3
 						Else If (GoToLab)
 						{
 							Lab := GoToLab, GoToLab := 0
-							If (_Label := Playback(Lab))
+							If (_Label := Playback(Lab,, ManualKey,,, LoopFlow))
 								return _Label
 							return
 						}
@@ -504,11 +514,10 @@
 							break
 					}
 					LoopDepth--, iLoopIndex--
-				; ,	PlaybackVars[LoopDepth][mLoopIndex, "A_Index"] := mLoopIndex
 					continue
 				}
 			}
-			If ((BreakIt > 0) || (SkipIt > 0))
+			If ((LoopFlow.Break > 0) || (LoopFlow.Continue > 0))
 				continue
 			If ((Type = cType21) || (Type = cType44) || (Type = cType46))
 			{
@@ -529,7 +538,7 @@
 						}
 					}
 					Try
-						AssignVar(VarName, Oper, VarValue, PlaybackVars[LoopDepth][mLoopIndex])
+						AssignVar(VarName, Oper, VarValue, PlaybackVars[LoopDepth][mLoopIndex], RunningFunction)
 					Catch e
 					{
 						MsgBox, 20, %d_Lang007%, % "Macro" Macro_On ", " d_Lang065 " " mListRow
@@ -540,7 +549,7 @@
 							continue
 						}
 					}
-					Try SavedVars(VarName)
+					Try SavedVars(VarName,,, RunningFunction)
 				}
 				Else If ((Target != "") && (!RegExMatch(Target, "\.ahk$")))
 				{
@@ -548,7 +557,7 @@
 					Try
 					{
 						VarValue := Eval(pbParams, PlaybackVars[LoopDepth][mLoopIndex])
-					,	AssignVar(VarName, ":=", VarValue, PlaybackVars[LoopDepth][mLoopIndex])
+					,	AssignVar(VarName, ":=", VarValue, PlaybackVars[LoopDepth][mLoopIndex], RunningFunction)
 					}
 					Catch e
 					{
@@ -560,7 +569,7 @@
 							continue
 						}
 					}
-					Try SavedVars(VarName)
+					Try SavedVars(VarName,,, RunningFunction)
 				}
 				Else If ((Type = cType44) && (Target != ""))
 				{
@@ -570,10 +579,10 @@
 						Try
 						{
 							VarValue := RunExtFunc(Target, Action, pbParams*)
-						,	AssignVar(VarName, ":=", VarValue, PlaybackVars[LoopDepth][mLoopIndex])
+						,	AssignVar(VarName, ":=", VarValue, PlaybackVars[LoopDepth][mLoopIndex], RunningFunction)
 						}
 						
-						Try SavedVars(VarName)
+						Try SavedVars(VarName,,, RunningFunction)
 					}
 				}
 				Else If (Type = cType44)
@@ -595,12 +604,10 @@
 								,	EvalResult := Eval(VarValue, PlaybackVars[LoopDepth][mLoopIndex])
 									For _each, _value in EvalResult
 										pbParams[_each] := {Name: FuncPars[_each], Value: _value}
-									LastFuncRun := RunningFunction, RunningFunction := Action
-								,	Func_Result := Playback(TabIdx,,, pbParams)
+									Func_Result := Playback(TabIdx,,, pbParams, Action)
 								,	VarValue := Func_Result[1]
-								,	RunningFunction := LastFuncRun
 									Try
-										AssignVar(VarName, ":=", VarValue, PlaybackVars[LoopDepth][mLoopIndex])
+										AssignVar(VarName, ":=", VarValue, PlaybackVars[LoopDepth][mLoopIndex], RunningFunction)
 									Catch e
 									{
 										MsgBox, 20, %d_Lang007%, % "Macro" Macro_On ", " d_Lang065 " " mListRow
@@ -611,7 +618,7 @@
 											continue 3
 										}
 									}
-									Try SavedVars(VarName)
+									Try SavedVars(VarName,,, RunningFunction)
 									continue 3
 								}
 							}
@@ -627,7 +634,7 @@
 						Try
 						{
 							VarValue := %Action%(pbParams*)
-						,	AssignVar(VarName, ":=", VarValue, PlaybackVars[LoopDepth][mLoopIndex])
+						,	AssignVar(VarName, ":=", VarValue, PlaybackVars[LoopDepth][mLoopIndex], RunningFunction)
 						}
 						Catch e
 						{
@@ -639,7 +646,7 @@
 								continue
 							}
 						}
-						Try SavedVars(VarName)
+						Try SavedVars(VarName,,, RunningFunction)
 					}
 				}
 				continue
@@ -662,31 +669,23 @@
 				break 2
 			If (Type = cType29)
 			{
-				If (Manual)
-					break 2
 				If (LoopDepth = 0)
-				{
-					If Step is number
-						BreakIt += Step
-					Else
-						BreakIt++
 					break 2
-				}
 				Else
 				{
 					If Step is number
-						BreakIt += Step
+						LoopFlow.Break += Step
 					Else
-						BreakIt++
+						LoopFlow.Break++
 					continue
 				}
 			}
 			If (Type = cType30)
 			{
 				If Step is number
-					SkipIt += Step
+					LoopFlow.Continue += Step
 				Else
-					SkipIt++
+					LoopFlow.Continue++
 				continue
 			}
 			If (Type = cType50)
@@ -700,9 +699,8 @@
 					Menu, Tray, Default, %w_Lang005%
 					break 3
 				}
-				__PointMarker := LoopDepth
-				PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars)
-				PlaybackVars[LoopDepth][mLoopIndex, "ErrorLevel"] := ErrorLevel
+				PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars, RunningFunction)
+			,	PlaybackVars[LoopDepth][mLoopIndex, "ErrorLevel"] := ErrorLevel
 				If ((Type = cType15) || (Type = cType16))
 				{
 					If ((TakeAction = "Break") || ((Target = "Break") && (SearchResult = 0)))
@@ -719,13 +717,13 @@
 					TimesX--
 				If Type in Sleep,KeyWait,MsgBox
 					continue
-				If !(Manual)
-					PlayCommand("Sleep", Action, Step, DelayX, Target, Window, Pars)
+				If !(ManualKey)
+					PlayCommand("Sleep", Action, Step, DelayX, Target, Window, Pars, RunningFunction)
 			}
-			If (Manual)
-				WaitFor.Key(o_ManKey[Manual], 0)
+			If (ManualKey)
+				WaitFor.Key(o_ManKey[ManualKey], 0)
 		}
-		If (StopIt || BreakIt)
+		If (StopIt || LoopFlow.Break)
 			break
 	}
 	If (UDFParams.GetCapacity())
@@ -795,7 +793,7 @@
 
 ;##### Playback Commands #####
 
-PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars)
+PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars, RunningFunction)
 {
 	local Par1, Par2, Par3, Par4, Par5, Par6, Par7, Par8, Par9, Par10, Par11, Win
 	For _each, _value in Pars
@@ -884,7 +882,7 @@ PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars)
 		If (Par4 != "")
 		{
 			Run, %Par1%, %Par2%, %Par3%, %Par4%
-			Try SavedVars(Par4)
+			Try SavedVars(Par4,,, RunningFunction)
 		}
 		Else
 			Run, %Par1%, %Par2%, %Par3%
@@ -895,7 +893,7 @@ PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars)
 		If (Par4 != "")
 		{
 			RunWait, %Par1%, %Par2%, %Par3%, %Par4%
-			Try SavedVars(Par4)
+			Try SavedVars(Par4,,, RunningFunction)
 		}
 		Else
 			RunWait, %Par1%, %Par2%, %Par3%
@@ -913,7 +911,7 @@ PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars)
 	return
 	pb_GetKeyState:
 		GetKeyState, %Par1%, %Par2%, %Par3%
-		Try SavedVars(Par1)
+		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_MouseGetPos:
 		Loop, 4
@@ -923,15 +921,15 @@ PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars)
 		}
 		MouseGetPos, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%
 		Null := ""
-		Try SavedVars(Par1)
+		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_PixelGetColor:
 		PixelGetColor, %Par1%, %Par2%, %Par3%, %Par4%
-		Try SavedVars(Par1)
+		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_SysGet:
 		SysGet, %Par1%, %Par2%, %Par3%
-		Try SavedVars(Par1)
+		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_SetCapsLockState:
 		SetCapsLockState, %Par1%
@@ -956,7 +954,7 @@ PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars)
 	return
 	pb_EnvGet:
 		EnvGet, %Par1%, %Par2%
-		Try SavedVars(Par1)
+		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_EnvSet:
 		EnvSet, %Par1%, %Par2%
@@ -966,15 +964,15 @@ PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars)
 	return
 	pb_FormatTime:
 		FormatTime, %Par1%, %Par2%, %Par3%
-		Try SavedVars(Par1)
+		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_Transform:
 		Transform, %Par1%, %Par2%, %Par3%, %Par4%
-		Try SavedVars(Par1)
+		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_Random:
 		Random, %Par1%, %Par2%, %Par3%
-		Try SavedVars(Par1)
+		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_FileAppend:
 		FileAppend, %Par1%, %Par2%, %Par3%
@@ -993,19 +991,19 @@ PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars)
 	return
 	pb_FileGetAttrib:
 		FileGetAttrib, %Par1%, %Par2%
-		Try SavedVars(Par1)
+		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_FileGetSize:
 		FileGetSize, %Par1%, %Par2%, %Par3%
-		Try SavedVars(Par1)
+		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_FileGetTime:
 		FileGetTime, %Par1%, %Par2%, %Par3%
-		Try SavedVars(Par1)
+		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_FileGetVersion:
 		FileGetVersion, %Par1%, %Par2%
-		Try SavedVars(Par1)
+		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_FileMove:
 		FileMove, %Par1%, %Par2%, %Par3%
@@ -1015,11 +1013,11 @@ PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars)
 	return
 	pb_FileRead:
 		FileRead, %Par1%, %Par2%
-		Try SavedVars(Par1)
+		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_FileReadLine:
 		FileReadLine, %Par1%, %Par2%, %Par3%
-		Try SavedVars(Par1)
+		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_FileRecycle:
 		FileRecycle, %Step%
@@ -1032,11 +1030,11 @@ PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars)
 	return
 	pb_FileSelectFile:
 		FileSelectFile, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%
-		Try SavedVars(Par1)
+		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_FileSelectFolder:
 		FileSelectFolder, %Par1%, %Par2%, %Par3%, %Par4%
-		Try SavedVars(Par1)
+		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_FileSetAttrib:
 		FileSetAttrib, %Par1%, %Par2%, %Par3%, %Par4%
@@ -1049,47 +1047,47 @@ PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars)
 	return
 	pb_DriveGet:
 		DriveGet, %Par1%, %Par2%, %Par3%
-		Try SavedVars(Par1)
+		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_DriveSpaceFree:
 		DriveSpaceFree, %Par1%, %Par2%
-		Try SavedVars(Par1)
+		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_Sort:
 		Sort, %Par1%, %Par2%
-		Try SavedVars(Par1)
+		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_StringGetPos:
 		StringGetPos, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%
-		Try SavedVars(Par1)
+		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_StringLeft:
 		StringLeft, %Par1%, %Par2%, %Par3%
-		Try SavedVars(Par1)
+		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_StringRight:
 		StringRight, %Par1%, %Par2%, %Par3%
-		Try SavedVars(Par1)
+		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_StringLen:
 		StringLen, %Par1%, %Par2%
-		Try SavedVars(Par1)
+		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_StringLower:
 		StringLower, %Par1%, %Par2%, %Par3%
-		Try SavedVars(Par1)
+		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_StringUpper:
 		StringUpper, %Par1%, %Par2%, %Par3%
-		Try SavedVars(Par1)
+		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_StringMid:
 		StringMid, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%
-		Try SavedVars(Par1)
+		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_StringReplace:
 		StringReplace, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%
-		Try SavedVars(Par1)
+		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_StringSplit:
 		StringSplit, %Par1%, %Par2%, %Par3%, %Par4%
@@ -1097,16 +1095,16 @@ PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars)
 		Loop, % %CGN%
 		{
 			CGP := Par1 . A_Index
-			Try SavedVars(CGP)
+			Try SavedVars(CGP,,, RunningFunction)
 		}
 	return
 	pb_StringTrimLeft:
 		StringTrimLeft, %Par1%, %Par2%, %Par3%
-		Try SavedVars(Par1)
+		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_StringTrimRight:
 		StringTrimRight, %Par1%, %Par2%, %Par3%
-		Try SavedVars(Par1)
+		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_SplitPath:
 		Loop, 6
@@ -1121,7 +1119,7 @@ PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars)
 	return
 	pb_InputBox:
 		InputBox, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%, %Par6%, %Par7%, %Par8%,, %Par10%, %Par11%
-		Try SavedVars(Par1)
+		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_ToolTip:
 		ToolTip, %Par1%, %Par2%, %Par3%, %Par4%
@@ -1143,7 +1141,7 @@ PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars)
 	return
 	pb_RegRead:
 		RegRead, %Par1%, %Par2%, %Par3%, %Par4%
-		Try SavedVars(Par1)
+		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_RegWrite:
 		RegWrite, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%
@@ -1156,7 +1154,7 @@ PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars)
 	return
 	pb_IniRead:
 		IniRead, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%
-		Try SavedVars(Par1)
+		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_IniWrite:
 		IniWrite, %Par1%, %Par2%, %Par3%, %Par4%
@@ -1169,11 +1167,11 @@ PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars)
 	return
 	pb_SoundGet:
 		SoundGet, %Par1%, %Par2%, %Par3%, %Par4%
-		Try SavedVars(Par1)
+		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_SoundGetWaveVolume:
 		SoundGetWaveVolume, %Par1%, %Par2%
-		Try SavedVars(Par1)
+		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_SoundPlay:
 		SoundPlay, %Par1%, %Par2%
@@ -1224,7 +1222,7 @@ PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars)
 	return
 	pb_StatusBarGetText:
 		StatusBarGetText, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%, %Par6%
-		Try SavedVars(Par1)
+		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_StatusBarWait:
 		Try Menu, Tray, Icon, %ResDllPath%, 77
@@ -1297,7 +1295,7 @@ PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars)
 	return
 	pb_Input:
 		Input, %Par1%, %Par2%, %Par3%, %Par4%
-		Try SavedVars(Par1)
+		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_ControlEditPaste:
 		Win := SplitWin(Window)
@@ -1306,17 +1304,17 @@ PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars)
 	pb_ControlGetText:
 		Win := SplitWin(Window)
 		ControlGetText, %Step%, %Target%, % Win[1], % Win[2], % Win[3], % Win[4]
-		Try SavedVars(Step)
+		Try SavedVars(Step,,, RunningFunction)
 	return
 	pb_ControlGetFocus:
 		Win := SplitWin(Window)
 		ControlGetFocus, %Step%, % Win[1], % Win[2], % Win[3], % Win[4]
-		Try SavedVars(Step)
+		Try SavedVars(Step,,, RunningFunction)
 	return
 	pb_ControlGet:
 		Win := SplitWin(Window)
 		ControlGet, %Par1%, %Par2%, %Par3%, %Target%, % Win[1], % Win[2], % Win[3], % Win[4]
-		Try SavedVars(Par1)
+		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_ControlGetPos:
 		Win := SplitWin(Window)
@@ -1325,7 +1323,7 @@ PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars)
 		Loop, Parse, CGPPars, |
 		{
 			CGP := Step . A_LoopField
-			Try SavedVars(CGP)
+			Try SavedVars(CGP,,, RunningFunction)
 		}
 	return
 	pb_WinActivate:
@@ -1413,22 +1411,22 @@ PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars)
 	pb_WinGet:
 		Win := SplitWin(Window)
 		WinGet, %Par1%, %Par2%, % Win[1], % Win[2], % Win[3], % Win[4]
-		Try SavedVars(Par1)
+		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_WinGetTitle:
 		Win := SplitWin(Window)
 		WinGetTitle, %Step%, % Win[1], % Win[2], % Win[3], % Win[4]
-		Try SavedVars(Step)
+		Try SavedVars(Step,,, RunningFunction)
 	return
 	pb_WinGetClass:
 		Win := SplitWin(Window)
 		WinGetClass, %Step%, % Win[1], % Win[2], % Win[3], % Win[4]
-		Try SavedVars(Step)
+		Try SavedVars(Step,,, RunningFunction)
 	return
 	pb_WinGetText:
 		Win := SplitWin(Window)
 		WinGetText, %Step%, % Win[1], % Win[2], % Win[3], % Win[4]
-		Try SavedVars(Step)
+		Try SavedVars(Step,,, RunningFunction)
 	return
 	pb_WinGetpos:
 		Win := SplitWin(Window)
@@ -1437,7 +1435,7 @@ PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars)
 		Loop, Parse, CGPPars, |
 		{
 			CGP := Step . A_LoopField
-			Try SavedVars(CGP)
+			Try SavedVars(CGP,,, RunningFunction)
 		}
 	return
 	pb_GroupAdd:
@@ -1552,7 +1550,7 @@ PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars)
 		Try
 		{
 			COMInterface(IeIntStr, o_ie, lResult)
-		,	AssignVar(Step, ":=", lResult, __PointMarker)
+		,	AssignVar(Step, ":=", lResult, __PointMarker, RunningFunction)
 		}
 		Catch e
 		{
@@ -1564,7 +1562,7 @@ PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars)
 				return
 			}
 		}
-		Try SavedVars(Step)
+		Try SavedVars(Step,,, RunningFunction)
 		
 		If (Window = "LoadWait")
 		{
@@ -2024,7 +2022,7 @@ SplitWin(Window)
 	return WinPars
 }
 
-AssignVar(_Name, _Operator, _Value, CustomVars)
+AssignVar(_Name, _Operator, _Value, CustomVars, RunningFunction)
 {
 	local _content, _ObjItems
 	
@@ -2085,7 +2083,7 @@ AssignVar(_Name, _Operator, _Value, CustomVars)
 			%_Name% := _content
 	}
 	
-	Try SavedVars(_Name)
+	Try SavedVars(_Name,,, RunningFunction)
 }
 
 CheckVars(CustomVars, ByRef CheckVar1 := "", ByRef CheckVar2 := "", ByRef CheckVar3 := "", ByRef CheckVar4 := "", ByRef CheckVar5 := "")

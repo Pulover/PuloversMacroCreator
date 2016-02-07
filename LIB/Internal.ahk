@@ -964,7 +964,7 @@ CreateZipFile(sZip)
 	file.close()
 }
 
-SavedVars(_Var := "", ByRef _Saved := "", AsArray := false)
+SavedVars(_Var := "", ByRef _Saved := "", AsArray := false, RunningFunction := "")
 {
 	Static VarsRecord := {}, LocalRecord := {}
 	Local ListOfVars, i, v
