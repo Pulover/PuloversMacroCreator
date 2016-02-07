@@ -43,7 +43,11 @@ LV_GetSelCheck()
 		If (IsSelected != A_Index)
 			SelectedRows.Selected.Push(0)
 		Else
+		{
 			SelectedRows.Selected.Push(1)
+			If (!SelectedRows.FirstSel)
+				SelectedRows.FirstSel := A_Index
+		}
 	}
 	return SelectedRows
 }
@@ -134,6 +138,7 @@ DragTab()
 {
 	global
 	
+	Critical
 	CoordMode, Mouse, Window
 	If (A_Gui = 28)
 		PostMessage, 0xA1, 2,,, ahk_id %PMCOSC%
@@ -188,6 +193,12 @@ ControlClick,, ahk_id %cHwnd%,,,, x%HitX% y%HitY% NA
 SetListFocus:
 GuiControl, chMacro:Focus, InputList%A_List%
 return
+
+CompareParse(String, ByRef VarName, ByRef Oper, ByRef VarValue)
+{
+	RegExMatch(String, "(.*?)([=<>]{1,2})(?=([^""]*""[^""]*"")*[^""]*$)(.*)", Out)
+,   VarName := Trim(Out1), Oper := Out2, VarValue := Trim(Out4)
+}
 
 ShowContextHelp()
 {

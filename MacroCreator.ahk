@@ -2336,7 +2336,8 @@ Gui, 14:Add, Checkbox, -Wrap Checked%CommentUnchecked% y+5 xs+10 W230 vCommentUn
 Gui, 14:Add, Checkbox, -Wrap Checked%Send_Loop% y+5 xs+10 W230 vSend_Loop R1, %t_Lang013%
 Gui, 14:Add, Checkbox, -Wrap Checked%IncPmc% ys+50 x+5 W190 vIncPmc R1, %t_Lang012%
 Gui, 14:Add, Checkbox, -Wrap Checked%Exe_Exp% y+5 xp W190 vExe_Exp gExe_Exp R1,%t_Lang088% 
-Gui, 14:Add, Button, -Wrap Section Default ys+110 xs+10 W75 H23 gExpButton, %w_Lang001%
+Gui, 14:Add, Button, -Wrap Section Default ys+110 xs+10 W75 H23 hwndExpButton gExpButton, %w_Lang001%
+	ILButton(ExpButton, ResDllPath ":" 16,, "left")
 Gui, 14:Add, Button, -Wrap ys W75 H23 gExpClose, %c_Lang022%
 Gui, 14:Add, Button, -Wrap ys W75 H23 vShowMore gShowMore, % (ShowExpOpt) ? w_Lang003 " <<" : w_Lang003 ">> "
 Gui, 14:Add, Progress, ys W175 H20 vExpProgress
@@ -2899,7 +2900,7 @@ GoSub, ResetHotkeys
 OldAreaColor := SearchAreaColor, OldLoopColor := LoopLVColor, OldIfColor := IfLVColor
 , OldMoves := Moves, OldTimed := TimedI, OldRandM := RandomSleeps, OldRandP := RandPercent
 FileRead, UserVarsList, %UserVarsPath%
-Gui, 4:Add, Listbox, W160 H400 vAltTab gAltTabControl AltSubmit, %t_Lang018%||%t_Lang022%|%t_Lang035%|%t_Lang090%|%t_Lang046%|%t_lang194%|%t_Lang178%|%t_Lang096%
+Gui, 4:Add, Listbox, W160 H310 vAltTab gAltTabControl AltSubmit, %t_Lang018%||%t_Lang022%|%t_Lang035%|%t_Lang090%|%t_Lang046%|%t_lang194%|%t_Lang178%|%t_Lang096%
 Gui, 4:Add, Tab2, yp x+0 W400 H0 vTabControl gAltTabControl AltSubmit, General|Recording|Playback|Defaults|Screenshots|Language|LangEditor|UserVars|SubmitRev
 ; General
 Gui, 4:Add, GroupBox, Section ym xm+170 W400 H155, %t_Lang018%:
@@ -3063,9 +3064,9 @@ Gui, 4:Add, Edit, y+5 xs+10 W380 R1 vLFile Disabled
 Gui, 4:Add, Button, -Wrap y+10 xs+10 W75 H23 gSendRevision, %t_Lang181%
 Gui, 4:Add, Button, -Wrap yp x+10 W75 H23 gCancelSubmit, %c_Lang021%
 Gui, 4:Tab
-Gui, 4:Add, Button, -Wrap Default Section xm W75 H23 gConfigOK, %c_Lang020%
-Gui, 4:Add, Button, -Wrap ys W75 H23 gConfigCancel, %c_Lang021%
-Gui, 4:Add, Button, -Wrap ys W75 H23 gLoadDefaults, %t_Lang063%
+Gui, 4:Add, Button, -Wrap Default Section xm ym+315 W160 H23 gConfigOK, %c_Lang020%
+Gui, 4:Add, Button, -Wrap xp y+5 W160 H23 gConfigCancel, %c_Lang021%
+Gui, 4:Add, Button, -Wrap xp y+5 W160 H23 gLoadDefaults, %t_Lang063%
 Gui, 4:Default
 GuiControl, 4:ChooseString, RelKey, %RelKey%
 GuiControl, 4:ChooseString, FastKey, %FastKey%
@@ -6131,9 +6132,7 @@ Else
 	Details := "LoopStart", Type := cType7
 ,	TimesL := InStr(EdRept, "%") ? EdRept : TimesL
 }
-OutputDebug, % Details
 EscCom(false, Details)
-OutputDebug, % Details
 If (A_ThisLabel != "LoopApply")
 {
 	Gui, 1:-Disabled
@@ -7575,7 +7574,7 @@ If (s_Caller = "Edit")
 		}
 		Else If (InStr(Action, "Compare"))
 		{
-			AssignParse(Details, VarName, Oper, VarValue), Opers := "=$==$<>$>$<$>=$<="
+			CompareParse(Details, VarName, Oper, VarValue), Opers := "=$==$<>$>$<$>=$<="
 			GuiControl, 21:, TestVar, %VarName%
 			GuiControl, 21:, TestVar2, %VarValue%
 			Loop, Parse, Opers, $
@@ -9425,7 +9424,7 @@ If (TabControl = 1)
 					MsgBox, 16, %d_Lang007%, %d_Lang041%`n`n%VarName%
 					return
 				}
-				FuncVariables .= VarName " := " VarValue ", "
+				FuncVariables .= VarName " := " Trim(VarValue, """") ", "
 			}
 		}
 	}
@@ -9453,7 +9452,7 @@ If (TabControl = 1)
 				MsgBox, 16, %d_Lang007%, %d_Lang041%`n`n%VarName%
 				return
 			}
-			StaticVariables .= VarName " := " VarValue ", "
+			StaticVariables .= VarName " := " Trim(VarValue, """") ", "
 		}
 	}
 	StaticVariables := RegExReplace(StaticVariables, ":=\s(\D+?),", ":= ""$1"",")

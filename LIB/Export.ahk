@@ -75,11 +75,11 @@
 			RowData .= "`n{"
 			StringSplit, FuncVariables, Window, /, %A_Space%
 			If (FuncVariables1 != "")
-				RowData .= "`n" ((Target = "Local") ? "Global " : "Local ") . StrReplace(FuncVariables1, """")
+				RowData .= "`n" ((Target = "Local") ? "Global " : "Local ") . FuncVariables1
 			Else If (Target = "Global")
 				RowData .= "`nGlobal"
 			If (FuncVariables2 != "")
-				RowData .= "`n" "Static " . StrReplace(FuncVariables2, """")
+				RowData .= "`n" "Static " . FuncVariables2
 		}
 		Else If (Type = cType49)
 			RowData := "`nReturn " Step

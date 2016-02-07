@@ -1,0 +1,65 @@
+﻿[PMC Code v5.0.0]|F1||1|Window|1|UserFunctionCalls
+Groups=Start:1
+1|[Assign Variable]|globalvar := Global value|1|0|Variable|||||
+2|Sum|res := 100, A_Sec|1|0|Function|||||
+3|[MsgBox]|Sum result:`n%res%|1|0|MsgBox|0||||
+4|[Assign Variable]|LVar := left|1|0|Variable|||||
+5|[Assign Variable]|RVar := right|1|0|Variable|||||
+6|[MsgBox]|Before Swap:`nLVar: %LVar%`nRVar: %RVar%|1|0|MsgBox|0||||
+7|Swap|_null := LVar, RVar|1|0|Function|||||
+8|[MsgBox]|Swap result:`nLVar: %LVar%`nRVar: %RVar%|1|0|MsgBox|0||||
+9|GlobalFunc|res := "one, parameter"|1|0|Function|||||
+10|[MsgBox]|GlobalFunc result:`n%res%|1|0|MsgBox|0||||
+11|[MsgBox]|% "Dynamic Function Call:`n" GlobalFunc("some value")|1|0|MsgBox|0||||
+12|CreateArray|myarray := 9, "text param", globalvar, newObj|1|0|Function|||||
+13|[LoopStart]|myarray`, key`, value|1|0|ForLoop|||||
+14|[MsgBox]|myarray from CreateArray():`n%key%: %value%|1|0|MsgBox|0||||
+15|[LoopEnd]|LoopEnd|1|0|Loop|||||
+16|[LoopStart]|newObj`, key`, value|1|0|ForLoop|||||
+17|[MsgBox]|newObj from CreateArray (ByRef parameter):`n%key%: %value%|1|0|MsgBox|0||||
+18|[LoopEnd]|LoopEnd|1|0|Loop|||||
+
+[PMC Code v5.0.0]|||1|Window|1|Sum()
+Groups=Start:1
+1|[FuncParameter]|VarA|1|0|FuncParameter|||||
+2|[FuncParameter]|VarB|1|0|FuncParameter|||||
+3|[FunctionStart]|Sum|1|0|UserFunction|Local|globalvar /|||
+04|[LoopStart]|LoopStart|%VarA%|0|Loop|||||
+05|Compare Variables|A_Index > 95|1|0|If_Statement|||||
+06|Sum|res := 50, A_Sec|1|0|Function|||||
+07|[MsgBox]|Recursive: %res%`nglobalvar: %globalvar%|1|0|MsgBox|0||||
+08|[End If]|EndIf|1|0|If_Statement|||||
+09|[LoopEnd]|LoopEnd|1|0|Loop|||||
+10|[FuncReturn]|VarA + VarB|1|0|FuncReturn|||||
+
+[PMC Code v5.0.0]|||1|Window|1|Swap()
+Groups=Start:1
+1|[FuncParameter]|Left|1|0|FuncParameter|ByRef||||
+2|[FuncParameter]|Right|1|0|FuncParameter|ByRef||||
+3|[FunctionStart]|Swap|1|0|UserFunction|Local| / MyStatic := 1|my function! ha!||
+4|[Assign Variable]|MyStatic += 1|1|0|Variable|||||
+05|[MsgBox]|MyStatic: %MyStatic%|1|0|MsgBox|0||||
+6|[Assign Variable]|temp := %Left%|1|0|Variable|||||
+7|[Assign Variable]|Left := %Right%|1|0|Variable|||||
+8|[Assign Variable]|Right := %temp%|1|0|Variable|||||
+
+[PMC Code v5.0.0]|||1|Window|1|GlobalFunc()
+Groups=Start:1
+1|[FuncParameter]|localparameter := "Parameter value"|1|0|FuncParameter|||||
+2|[FunctionStart]|GlobalFunc|1|0|UserFunction|Global|localvar := "Local value" / |||
+03|[MsgBox]|localvar: %localvar%`nglobalvar: %globalvar%`nlocalparameter: %localparameter%|1|0|MsgBox|0||||
+4|[FuncReturn]|localvar "/" localparameter|1|0|FuncReturn|||||
+
+[PMC Code v5.0.0]|||1|Window|1|CreateArray()
+Groups=Start:1
+1|[FuncParameter]|item1|1|0|FuncParameter|||||
+2|[FuncParameter]|item2|1|0|FuncParameter|||||
+3|[FuncParameter]|item3|1|0|FuncParameter|||||
+4|[FuncParameter]|ref := "none"|1|0|FuncParameter|ByRef||||
+5|[FunctionStart]|CreateArray|1|0|UserFunction|Local|/|||
+6|[Assign Variable]|ref := ["byrefvalue1", "byrevalue2"]|1|0|Variable|Expression||||
+07|[MsgBox]|% ref[1] " x " ref[2]|1|0|MsgBox|0||||
+8|[Assign Variable]|newarray := [item1, item2, item3]|1|0|Variable|Expression||||
+9|[FuncReturn]|newarray|1|0|FuncReturn|||||
+010|[FuncReturn]|[item1, item2, item3]|1|0|FuncReturn|||||
+

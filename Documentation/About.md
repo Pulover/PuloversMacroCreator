@@ -45,16 +45,13 @@ Thiago Talma for some improvements to the code, debugging and many suggestions.
 * Multiple If Statements are now supported in 'Evaluate Expression' (e.g.: var = 5 || var = "a").
 * Function parameter can now be another function, array, array element or expression.
 * Loops now work in Manual Playback.
-* Added support for array assignment in Variables, Functions and IECOM/COMInterface.
-* Added support for Associative Arrays assignment in Variables window (e.g.: {name: "John", age: 25}).
-* Added support for array methods in Functions window.
 * Added For-Loops in Loop Command window.
-* Added support for Multi-Dimensional Arrays inside function parameters and commands.
-* Added support for Multi-Dimensional Arrays assignment (e.g.: MyArray[1][2] := Value).
-* Added support for named keys in arrays (e.g.: N["key"] or N.key).
-* Added support for accessing Array Objects using "." operator (e.g.: MyArray.1 := OtherArray.Name).
-* Added support for array methods inside commands (e.g.: % MyArray.Length()).
-* Added support for array methods inside Variable Assignment when "Expression" is checked.
+* Added support for array assignment.
+* Added support for Associative Arrays assignment.
+* Added support for array methods in Functions window.
+* Added support for Multi-Dimensional Arrays.
+* Added support for named keys in arrays (e.g.: N["key"] or N.key, MyArray.1 := OtherArray.Name).
+* Added support for array methods.
 * Added support for arrays inside IECom and COMInterface parameters.
 * Added option to change color of the rectangle of Image/Pixel Search area and Screenshots tool.
 * Added *Insert Comment Block* to "Edit Comment" window.

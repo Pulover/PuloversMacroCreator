@@ -1,6 +1,6 @@
 ﻿Playback(Macro_On, LoopInfo := "", ManualKey := "", UDFParams := "", RunningFunction := "", LoopFlow := "")
 {
-	local PlaybackVars := [], LVData := [], IfError := 0, LoopDepth := 0, LoopCount := [0], StartMark := []
+	local PlaybackVars := [], LVData := [], LoopDepth := 0, LoopCount := [0], StartMark := []
 	, m_ListCount := ListCount%Macro_On%, mLoopIndex, cLoopIndex, iLoopIndex := 0, mLoopLength, mLoopSize, mListRow
 	, Action, Step, TimesX, DelayX, Type, Target, Window, Loop_Start, Loop_End, _Label, _i, Pars
 	, NextStep, NStep, NTimesX, NType, NTarget, NWindow, _each, _value, _key, _depth, _pair, _index, _point
@@ -45,7 +45,7 @@
 		mLoopSize := o_TimesG[Macro_On]
 	}
 	If (!LoopFlow.GetCapacity())
-		LoopFlow := {Break: 0, Continue: 0}
+		LoopFlow := {Break: 0, Continue: 0, If: 0}
 	CurrentRange := m_ListCount, ChangeProgBarColor("20D000", "OSCProg", 28)
 	Gui, chMacro:Default
 	Gui, chMacro:ListView, InputList%Macro_On%
@@ -57,6 +57,7 @@
 	}
 	ActiveRows := LV_GetSelCheck()
 ,	mLoopLength := (UDFParams.GetCapacity() || ManualKey || Increment) ? 1 : o_TimesG[Macro_On]
+,	FreeMemory()
 	While (A_Index <= mLoopLength)
 	{
 		If (StopIt)
@@ -71,11 +72,6 @@
 				(InStr(_each, "A_")=1) ? "" : %_each% := _value
 			If (StopIt)
 				break 2
-			If (ShowProgBar = 1)
-			{
-				GuiControl, 28:, OSCProg, %A_Index%
-				GuiControl, 28:, OSCProgTip, % "M" Macro_On " [Loop: " (iLoopIndex ? 1 "/" (LoopCount[LoopDepth] + 1) : mLoopIndex "/" mLoopSize) " | Row: " A_Index "/" m_ListCount "]"
-			}
 			If (Loop_Start > 0)
 			{
 				Loop_Start--
@@ -83,15 +79,40 @@
 			}
 			If (Loop_End = A_Index)
 				return
-			If ((pb_From) && (A_Index < ActiveRows["Selected"][0]))
+			If (!ActiveRows.Checked[A_Index])
 				continue
-			Else If ((pb_To) && ((ActiveRows["Selected"][0] > 0) && (A_Index > ActiveRows["Selected"][0])))
+			If ((pb_From) && (A_Index < ActiveRows.FirstSel))
+				continue
+			If ((pb_To) && (A_Index > ActiveRows.FirstSel))
 				break
+			If ((pb_Sel) && (!ActiveRows.Selected[A_Index]))
+				continue
 			Data_GetTexts(LVData, A_Index, Action, Step, TimesX, DelayX, Type, Target, Window)
+			If ((ShowProgBar = 1) && (LoopFlow.Break = 0) && (LoopFlow.Continue = 0) && (LoopFlow.If = 0))
+			{
+				If Type not in %cType7%,%cType17%,%cType21%,%cType35%,%cType38%,%cType39%,%cType40%,%cType41%,%cType44%,%cType45%,%cType46%,%cType47%,%cType48%,%cType49%,%cType50%
+				{
+					GuiControl, 28:, OSCProg, %A_Index%
+					GuiControl, 28:, OSCProgTip, % "M" Macro_On " [Loop: " (iLoopIndex ? 1 "/" (LoopCount[LoopDepth] + 1) : mLoopIndex "/" mLoopSize) " | Row: " A_Index "/" m_ListCount "]"
+				}
+				Else If (ManualKey)
+				{
+					GuiControl, 28:, OSCProg, %A_Index%
+					GuiControl, 28:, OSCProgTip, % "M" Macro_On " [Loop: " (iLoopIndex ? 1 "/" (LoopCount[LoopDepth] + 1) : mLoopIndex "/" mLoopSize) " | Row: " A_Index "/" m_ListCount "]"
+				}
+			}
 			If ((ManualKey) && (ShowStep = 1))
 			{
 				NextStep := A_Index + 1
-			,	Data_GetTexts(LVData, NextStep,, NStep, NTimesX,, NType, NTarget, NWindow)
+				If (NextStep > LVData.Length())
+					NextStep := 1
+				While (!ActiveRows.Checked[NextStep])
+				{
+					NextStep++
+					If (A_Index > m_ListCount)
+						return
+				}
+				Data_GetTexts(LVData, NextStep,, NStep, NTimesX,, NType, NTarget, NWindow)
 				ToolTip, 
 				(LTrim
 				%d_Lang021%: %NextStep%
@@ -101,13 +122,6 @@
 				%Type%, %Step%   [x%TimesX% @ %Window%|%Target%]
 				)
 			}
-			If (!ActiveRows.Checked[A_Index])
-				continue
-			If (pb_Sel)
-			{
-				If (!ActiveRows.Selected[A_Index])
-					continue
-			}
 			If (WinExist("ahk_id " PMCOSC))
 				Gui, 28:+AlwaysOntop
 			If (Type = cType48)
@@ -116,7 +130,8 @@
 				If (VarName = "")
 					VarName := Step, VarValue := UDFParams[ParamIdx].Value
 				Else
-					VarValue := (UDFParams[ParamIdx].Value = "") ? VarValue : UDFParams[ParamIdx].Value
+					VarValue := (IsObject(UDFParams[ParamIdx].Value = "")) ? UDFParams[ParamIdx].Value
+							:	(UDFParams[ParamIdx].Value = "") ? VarValue : UDFParams[ParamIdx].Value
 				VarValue := (VarValue = "true") ? 1
 						: (VarValue = "false") ? 0
 						: Trim(VarValue, """")
@@ -151,7 +166,9 @@
 							Else
 							{
 								If (!Static_Vars[RunningFunction].HasKey(VarName))
-									Static_Vars[RunningFunction][VarName] := VarValue
+									Static_Vars[RunningFunction][VarName] := (VarValue = "true") ? 1
+																			: (VarValue = "false") ? 0
+																			: Trim(VarValue, """")
 							}
 						}
 					}
@@ -169,7 +186,9 @@
 								If (VarName = "")
 									SVRef[A_LoopField] := %A_LoopField%, %A_LoopField% := ""
 								Else
-									SVRef[VarName] := %VarName%, %VarName% := VarValue
+									SVRef[VarName] := %VarName%, %VarName% := (VarValue = "true") ? 1
+																			: (VarValue = "false") ? 0
+																			: Trim(VarValue, """")
 							}
 						}
 					}
@@ -251,10 +270,12 @@
 				MouseReset := 1
 			If (Type = cType17)
 			{
-				IfError := IfStatement(IfError, PlaybackVars[LoopDepth][mLoopIndex], Action, Step, TimesX, DelayX, Type, Target, Window)
+				LoopFlow.If := IfStatement(LoopFlow.If, PlaybackVars[LoopDepth][mLoopIndex], Action, Step, TimesX, DelayX, Type, Target, Window)
+				If (ManualKey)
+					WaitFor.Key(o_ManKey[ManualKey], 0)
 				continue
 			}
-			If (IfError > 0)
+			If (LoopFlow.If > 0)
 				continue
 			If ((Type = cType36) || (Type = cType37))
 			{
@@ -327,6 +348,8 @@
 					LoopFlow.Break--
 				If (LoopFlow.Continue > 0)
 					LoopFlow.Continue--
+				If (ManualKey)
+					WaitFor.Key(o_ManKey[ManualKey], 0)
 				; If (ShowProgBar = 1)
 				; {
 					; GuiControl, 28:+Range0-%m_ListCount%, OSCProg
@@ -359,6 +382,7 @@
 				,	PlaybackVars[LoopDepth] := []
 				,	iLoopIndex++, StartMark[LoopDepth] := A_Index
 				,	PlaybackVars[LoopDepth][mLoopIndex, "A_Index"] := 1
+				,	LoopCount[LoopDepth] := ""
 				
 					For _depth, _pair in PlaybackVars
 					{
@@ -368,7 +392,7 @@
 							For _each, _value in PlaybackVars[LoopDepth - 1]
 								PlaybackVars[LoopDepth][_each, _index] := _point
 					}
-
+					
 					If (Type = cType38)
 					{
 						Loop, Read, % Pars[1], % Pars[2]
@@ -431,6 +455,8 @@
 						VarName := Eval(Pars[1], PlaybackVars[LoopDepth][mLoopIndex])[1]
 						For _each, _value in VarName
 						{
+							If (StopIt)
+								break 3
 							PlaybackVars[LoopDepth][A_Index, Pars[2]] := _each
 						,	PlaybackVars[LoopDepth][A_Index, Pars[3]] := _value
 						,	LoopCount[LoopDepth] := A_Index - 1
@@ -453,9 +479,12 @@
 							,	Count: LoopCount[LoopDepth] + 1}
 					Loop
 					{
+						If (StopIt)
+							break 3
 						If (LoopFlow.Break > 0)
 						{
 							LoopFlow.Break--
+						,	LoopCount[LoopDepth] := ""
 						,	LoopDepth--
 						,	iLoopIndex--
 							continue 2
@@ -463,6 +492,7 @@
 						If (LoopFlow.Continue > 1)
 						{
 							LoopFlow.Continue--
+						,	LoopCount[LoopDepth] := ""
 						,	LoopDepth--
 						,	iLoopIndex--
 							continue 2
@@ -513,7 +543,9 @@
 						If (LoopCount[LoopDepth] = A_Index)
 							break
 					}
-					LoopDepth--, iLoopIndex--
+					LoopCount[LoopDepth] := "", LoopDepth--, iLoopIndex--
+					If (ManualKey)
+						WaitFor.Key(o_ManKey[ManualKey], 0)
 					continue
 				}
 			}
@@ -649,6 +681,8 @@
 						Try SavedVars(VarName,,, RunningFunction)
 					}
 				}
+				If (ManualKey)
+					WaitFor.Key(o_ManKey[ManualKey], 0)
 				continue
 			}
 			If ((Type = cType15) || (Type = cType16))
@@ -1679,19 +1713,19 @@ SplitStep(CustomVars, ByRef Step, ByRef TimesX, ByRef DelayX, ByRef Type, ByRef 
 IfEval(_Name, _Operator, _Value)
 {
 	If (_Operator = "=")
-		result := (%_Name% = _Value) ? true : false
+		result := (_Name = _Value) ? true : false
 	Else If (_Operator = "==")
-		result := (%_Name% == _Value) ? true : false
+		result := (_Name == _Value) ? true : false
 	Else If (_Operator = "!=")
-		result := (%_Name% != _Value) ? true : false
+		result := (_Name != _Value) ? true : false
 	Else If (_Operator = ">")
-		result := (%_Name% > _Value) ? true : false
+		result := (_Name > _Value) ? true : false
 	Else If (_Operator = "<")
-		result := (%_Name% < _Value) ? true : false
+		result := (_Name < _Value) ? true : false
 	Else If (_Operator = ">=")
-		result := (%_Name% >= _Value) ? true : false
+		result := (_Name >= _Value) ? true : false
 	Else If (_Operator = "<=")
-		result := (%_Name% <= _Value) ? true : false
+		result := (_Name <= _Value) ? true : false
 	return result
 }
 
@@ -1895,7 +1929,7 @@ IfStatement(ThisError, CustomVars, Action, Step, TimesX, DelayX, Type, Target, W
 		}
 		Else If (Action = If14)
 		{
-			AssignParse(Step, VarName, Oper, VarValue)
+			CompareParse(Step, VarName, Oper, VarValue)
 		,	CheckVars(CustomVars, VarName, VarValue)
 		,	EscCom(true, VarValue, VarName)
 			For _key, _value in CustomVars

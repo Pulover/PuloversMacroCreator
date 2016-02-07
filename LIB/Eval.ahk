@@ -24,7 +24,8 @@
 
 Eval($x, _CustomVars := "", _Init := true)
 {
-	global TabSel, chMacro, InputList, InputList0, ListCount, cType47
+	local $y, $z, $i, $v, _Elements, $o, _Match, _Match1, _Match2, _Match3, _Match4
+	, $pd, $pd1, EvalResult, ObjName, VarName, Oper, VarValue, _Pos, _i, _v, $Result
 	Static _Objects
 	_Elements := {}
 	If (_Init)
