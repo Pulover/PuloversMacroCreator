@@ -3,7 +3,7 @@ CDO(From := "", To := "", Subject := "", Msg := "", Atts := "", HtmlMsg := "", C
 	pmsg          := ComObjCreate("CDO.Message")
 	pmsg.From     := From
 	pmsg.To       := To
-	pmsg.BCC      := BBC   ; Blind Carbon Copy, Invisable for all, same syntax as CC
+	pmsg.BCC      := BCC   ; Blind Carbon Copy, Invisable for all, same syntax as CC
 	pmsg.CC       := CC
 	pmsg.Subject  := Subject
 

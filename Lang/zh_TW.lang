@@ -246,7 +246,7 @@
 	w_Lang064 =	變量 / 배열(&V) （按Shift+F10）
 	w_Lang065 =	功能 / 陣列方法 （按Ctrl+F10）
 	w_Lang066 =	IE瀏覽器（F11）
-	w_Lang067 =	 COM接口（SHIFT+F11）
+	w_Lang067 =	表達 / COM接口 (Shift + F11)
 	w_Lang068 =	運行的scriptlet（按Ctrl+ F11）
 	w_Lang069 =	Windows消息（F12）
 	w_Lang070 =	Windows鍵“播放”熱鍵
@@ -301,7 +301,7 @@
 	c_Lang010 =	變量
 	c_Lang011 =	功能 / 陣列方法
 	c_Lang012 =	IE瀏覽器
-	c_Lang013 =	COM接口
+	c_Lang013 =	表達 / COM接口
 	c_Lang014 =	選擇應用（高級）
 	c_Lang015 =	信息
 	c_Lang016 =	控制
@@ -362,7 +362,7 @@
 	c_Lang071 =	變奏曲
 	c_Lang072 =	預覽
 	c_Lang073 =	循環
-	c_Lang074 =	*不工作在手動播放。
+	c_Lang074 =	自動的にCOMオブジェクトを作成
 	c_Lang075 =	打破
 	c_Lang076 =	繼續
 	c_Lang077 =	轉到
@@ -513,6 +513,20 @@
 	c_Lang223 =	全局變量
 	c_Lang224 =	局部變量
 	c_Lang225 =	靜態變量
+	c_Lang226 =	從
+	c_Lang227 =	電子郵件
+	c_Lang228 =	學科
+	c_Lang229 =	信息
+	c_Lang230 =	至
+	c_Lang231 =	抄送
+	c_Lang232 =	密件抄送
+	c_Lang233 =	附加文件
+	c_Lang234 =	HTML
+	c_Lang235 =	發電子郵件
+	c_Lang236 =	下載/上傳文件
+	c_Lang237 =	壓縮/解壓縮文件
+	c_Lang238 =	打開
+	c_Lang239 =	關掉
 		
 ; 16. Other Windows		
 	t_Lang001 =	導出到華民航空
@@ -696,19 +710,15 @@
 	t_Lang179 =	創建新的
 	t_Lang180 =	使用輸入，PgDn鍵和PgUp鍵進行導航。
 	t_Lang181 =	提交
-	t_Lang182 =	從
-	t_Lang183 =	名稱
-	t_Lang184 =	電子郵件
-	t_Lang185 =	學科
-	t_Lang186 =	信息
-	t_Lang187 =	保存更改？
-	t_Lang188 =	語言文件
-	t_Lang189 =	參考文件
-	t_Lang190 =	提交修訂或新的翻譯
-	t_Lang191 =	全部收縮
-	t_Lang192 =	展開全部
-	t_Lang193 =	至
-	t_Lang194 =	語
+	t_Lang182 =	名稱
+	t_Lang183 =	保存更改？
+	t_Lang184 =	語言文件
+	t_Lang185 =	參考文件
+	t_Lang186 =	提交修訂或新的翻譯
+	t_Lang187 =	全部收縮
+	t_Lang188 =	展開全部
+	t_Lang189 =	語
+	t_Lang190 =	換行符
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	打開
@@ -840,6 +850,9 @@
 	d_Lang104 =	이 메시지는 같은 업데이트를 다시 표시되지 않습니다. 당신은 업데이트 확인 > 도움말 메뉴에서 다운로드 할 수 있습니다.
 	d_Lang105 =	파일이 성공적으로 전송. 고맙습니다!
 	d_Lang106 =	언어 파일이 성공적으로 업데이트되었습니다.
+	d_Lang107 =	無法啟動計時器
+	d_Lang108 =	所有位置被登記。請刪除其中之一。
+	d_Lang109 =	目標標籤不存在。
 		
 ; 18. Start-up Tips		
 	Start_Tips =	您可以創建宏命令按鈕在主窗口中，或者使用記錄，複製你的行動。轉到“選項”>“設置”>“錄製到選擇什麼樣的輸入將被記錄。
@@ -1135,6 +1148,7 @@
 	Exit	退出當前線程或（如果腳本不是持久的，不包含熱鍵）整個腳本。
 	ExitApp	終止無條件腳本。
 	Exp	返回e（約2.71828182845905）提出的N次方。
+	Expression	在一系列的變量，文字串，和/或文字的數字執行一個或多個操作。
 	FileAppend	將文本寫入到一個文件結束（先創建該文件，如果必要的話）。
 	FileCopy	複製一個或多個文件。
 	FileCopyDir	複製一個文件夾以及其所有子文件夾和文件（類似於XCOPY）。

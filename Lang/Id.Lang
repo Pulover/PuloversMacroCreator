@@ -246,7 +246,7 @@
 	w_Lang064 =	Variabel / Array (Shift+F10)
 	w_Lang065 =	Fungsi / Metode Array (Ctrl+F10)
 	w_Lang066 =	Internet Explorer (F11)
-	w_Lang067 =	COM Interface (Shift+F11)
+	w_Lang067 =	Ekspresi / COM Antarmuka (Shift+F11)
 	w_Lang068 =	Run Scriptlet (Ctrl+F11)
 	w_Lang069 =	Jendela Messages (F12)
 	w_Lang070 =	Tambahkan tombol Windows untuk "Play" hotkey
@@ -301,7 +301,7 @@
 	c_Lang010 =	Variabel
 	c_Lang011 =	Fungsi / Metode Array
 	c_Lang012 =	Internet Explorer
-	c_Lang013 =	COM Antarmuka
+	c_Lang013 =	Ekspresi / COM Antarmuka
 	c_Lang014 =	Pilih Application (Lanjutan)
 	c_Lang015 =	Pesan
 	c_Lang016 =	Kontrol
@@ -362,7 +362,7 @@
 	c_Lang071 =	Variasi
 	c_Lang072 =	Preview
 	c_Lang073 =	Putaran
-	c_Lang074 =	* Apakah tidak bekerja di Putar Manual.
+	c_Lang074 =	Secara otomatis membuat objek COM
 	c_Lang075 =	Istirahat
 	c_Lang076 =	Terus
 	c_Lang077 =	Goto
@@ -513,6 +513,20 @@
 	c_Lang223 =	Variabel global
 	c_Lang224 =	Variabel lokal
 	c_Lang225 =	Variabel statis
+	c_Lang226 =	Dari
+	c_Lang227 =	E-mail
+	c_Lang228 =	Subyek
+	c_Lang229 =	Pesan
+	c_Lang230 =	Karşı
+	c_Lang231 =	CC
+	c_Lang232 =	TITKOS
+	c_Lang233 =	Melampirkan file
+	c_Lang234 =	HTML
+	c_Lang235 =	Mengirim email
+	c_Lang236 =	Download / Upload file
+	c_Lang237 =	Zip / file Unzip
+	c_Lang238 =	Nyalakan
+	c_Lang239 =	Matikan
 		
 ; 16. Other Windows		
 	t_Lang001 =	Ekspor ke AutoHotkey
@@ -696,19 +710,15 @@
 	t_Lang179 =	Buat yang baru
 	t_Lang180 =	Gunakan Masukkan, PgDn dan PgUp untuk menavigasi.
 	t_Lang181 =	Menyerahkan
-	t_Lang182 =	Dari
-	t_Lang183 =	Nama
-	t_Lang184 =	E-mail
-	t_Lang185 =	Subyek
-	t_Lang186 =	Pesan
-	t_Lang187 =	Simpan perubahan?
-	t_Lang188 =	Bahasa Berkas
-	t_Lang189 =	Referensi Berkas
-	t_Lang190 =	Kirim revisi atau terjemahan baru
-	t_Lang191 =	Tutup semua
-	t_Lang192 =	Melebarkan semua
-	t_Lang193 =	Karşı
-	t_Lang194 =	Bahasa
+	t_Lang182 =	Nama
+	t_Lang183 =	Simpan perubahan?
+	t_Lang184 =	Bahasa Berkas
+	t_Lang185 =	Referensi Berkas
+	t_Lang186 =	Kirim revisi atau terjemahan baru
+	t_Lang187 =	Tutup semua
+	t_Lang188 =	Melebarkan semua
+	t_Lang189 =	Bahasa
+	t_Lang190 =	Mengkonversi line break
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Buka
@@ -840,6 +850,9 @@
 	d_Lang104 =	Pesan ini tidak akan ditampilkan lagi untuk update yang sama. Anda dapat men-download dari menu Help > Periksa pembaruan.
 	d_Lang105 =	File berhasil dikirim. Terima kasih!
 	d_Lang106 =	File bahasa diperbarui berhasil.
+	d_Lang107 =	Tidak dapat memulai timer
+	d_Lang108 =	Semua posisi terdaftar. Silakan, menghapus salah satu dari mereka.
+	d_Lang109 =	Label target tidak ada.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Anda dapat membuat Macro dengan menggunakan Tombol Perintah di jendela utama atau menggunakan Recorder untuk menyalin tindakan Anda. Buka Opsi> Pengaturan> Merekam untuk memilih apa yang input akan disimpan.
@@ -1135,6 +1148,7 @@
 	Exit	Keluar dari benang saat ini atau (jika script tidak terus-menerus dan tidak mengandung hotkeys) seluruh script.
 	ExitApp	Berakhir script tanpa syarat.
 	Exp	Pengembalian e (yang kira-kira 2,71828182845905) pangkat-N.
+	Expression	Melakukan satu atau lebih operasi pada serangkaian variabel, string literal, dan / atau nomor literal.
 	FileAppend	Menulis teks ke akhir file (pertama membuat file, jika perlu).
 	FileCopy	Salinan satu atau lebih file.
 	FileCopyDir	Salinan folder bersama dengan semua sub-folder dan file (mirip dengan xcopy).

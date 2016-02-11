@@ -246,7 +246,7 @@
 	w_Lang064 =	Pembolehubah / Tatasusunan (Shift+F10)
 	w_Lang065 =	Fungsi / Kaedah mudah (Ctrl+F10)
 	w_Lang066 =	Internet Explorer (F11)
-	w_Lang067 =	COM Muka (Shift+F11)
+	w_Lang067 =	Ungkapan / COM Muka (Shift+F11)
 	w_Lang068 =	Run Scriptlet (Ctrl+F11)
 	w_Lang069 =	Mesej Windows (F12)
 	w_Lang070 =	Tambah utama Windows untuk "Main" hotkey
@@ -301,7 +301,7 @@
 	c_Lang010 =	Pembolehubah
 	c_Lang011 =	Fungsi / Kaedah mudah
 	c_Lang012 =	Internet Explorer
-	c_Lang013 =	COM Muka
+	c_Lang013 =	Ungkapan / COM Muka
 	c_Lang014 =	Pilih Permohonan (Advanced)
 	c_Lang015 =	Mesej
 	c_Lang016 =	Kawalan
@@ -362,7 +362,7 @@
 	c_Lang071 =	Variasi
 	c_Lang072 =	Preview
 	c_Lang073 =	Loop
-	c_Lang074 =	* Tidak bekerja di Main Manual.
+	c_Lang074 =	Secara automatik mencipta objek COM
 	c_Lang075 =	Cuti
 	c_Lang076 =	Teruskan
 	c_Lang077 =	Goto
@@ -513,6 +513,20 @@
 	c_Lang223 =	Pembolehubah global
 	c_Lang224 =	Pembolehubah tempatan
 	c_Lang225 =	Pembolehubah statik
+	c_Lang226 =	Dari
+	c_Lang227 =	E-mel
+	c_Lang228 =	Subjek
+	c_Lang229 =	Mesej
+	c_Lang230 =	Karşı
+	c_Lang231 =	CC
+	c_Lang232 =	SKT
+	c_Lang233 =	Lampirkan fail
+	c_Lang234 =	HTML
+	c_Lang235 =	Menghantar e-mel
+	c_Lang236 =	Download / Muat naik fail
+	c_Lang237 =	Zip / fail Unzip
+	c_Lang238 =	Hidupkan
+	c_Lang239 =	Tutup
 		
 ; 16. Other Windows		
 	t_Lang001 =	Eksport ke AutoHotkey
@@ -696,19 +710,15 @@
 	t_Lang179 =	Buat baru
 	t_Lang180 =	Gunakan Enter, PgDn dan PgUp untuk mengemudi.
 	t_Lang181 =	Hantar
-	t_Lang182 =	Dari
-	t_Lang183 =	Nama
-	t_Lang184 =	E-mel
-	t_Lang185 =	Subjek
-	t_Lang186 =	Mesej
-	t_Lang187 =	Simpan perubahan?
-	t_Lang188 =	Bahasa Fail
-	t_Lang189 =	Rujukan Fail
-	t_Lang190 =	Hantar penyemakan atau terjemahan baru
-	t_Lang191 =	Tutup semua
-	t_Lang192 =	Buka semua
-	t_Lang193 =	Karşı
-	t_Lang194 =	Bahasa
+	t_Lang182 =	Nama
+	t_Lang183 =	Simpan perubahan?
+	t_Lang184 =	Bahasa Fail
+	t_Lang185 =	Rujukan Fail
+	t_Lang186 =	Hantar penyemakan atau terjemahan baru
+	t_Lang187 =	Tutup semua
+	t_Lang188 =	Buka semua
+	t_Lang189 =	Bahasa
+	t_Lang190 =	Menukar rehat talian
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Buka
@@ -840,6 +850,9 @@
 	d_Lang104 =	Mesej ini tidak akan ditunjukkan sekali lagi untuk maklumat yang sama. Anda boleh memuat turun dari menu Bantuan > Semak kemas kini.
 	d_Lang105 =	Fail berjaya dihantar. Terima kasih!
 	d_Lang106 =	Fail bahasa berjaya dikemas kini.
+	d_Lang107 =	Tidak dapat memulakan pemasa
+	d_Lang108 =	Semua kedudukan didaftarkan. Sila, memadam salah seorang daripada mereka.
+	d_Lang109 =	Label sasaran tidak wujud.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Anda boleh membuat Makro menggunakan Butang Perintah dalam tetingkap utama atau menggunakan Perakam meniru tindakan anda. Pergi ke Pilihan> Tetapan> Rakaman untuk memilih apa input akan direkodkan.
@@ -1135,6 +1148,7 @@
 	Exit	Keluar benang semasa atau (jika skrip tidak berterusan dan tidak mengandungi hotkeys) skrip keseluruhan.
 	ExitApp	Tamat skrip tanpa syarat.
 	Exp	Pulangan e (yang kira-kira 2,71828182845905) dinaikkan kepada kuasa N.
+	Expression	Melakukan satu atau lebih operasi kepada satu siri pembolehubah, tali literal, dan / atau nombor literal.
 	FileAppend	Tulis teks ke akhir fail (pertama mewujudkan fail tersebut, jika perlu).
 	FileCopy	Salinan satu atau lebih fail.
 	FileCopyDir	Salinan folder bersama-sama dengan semua sub-folder dan fail (sama xcopy) itu.

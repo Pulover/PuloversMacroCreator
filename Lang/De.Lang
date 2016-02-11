@@ -246,7 +246,7 @@
 	w_Lang064 =	Variablen / Arrays (Umschalt+F10)
 	w_Lang065 =	Funktionen / Array-Verfahren (Strg+F10)
 	w_Lang066 =	Internet Explorer (F11)
-	w_Lang067 =	COM-Schnittstelle (Umschalt+F11)
+	w_Lang067 =	Expression / COM-Schnittstelle (Umschalt+F11)
 	w_Lang068 =	Scriptlet ausführen (Strg+F11)
 	w_Lang069 =	Windows-Messages (F12)
 	w_Lang070 =	Windows-Taste auf "Wiederg." Hotkey fügen
@@ -301,7 +301,7 @@
 	c_Lang010 =	Variablen
 	c_Lang011 =	Funktionen / Array-Verfahren
 	c_Lang012 =	Internet Explorer
-	c_Lang013 =	COM-Schnittstelle
+	c_Lang013 =	Expression / COM-Schnittstelle
 	c_Lang014 =	Anwendung wählen (Erweitert)
 	c_Lang015 =	Nachricht
 	c_Lang016 =	Steuerelement
@@ -362,7 +362,7 @@
 	c_Lang071 =	Variationen
 	c_Lang072 =	Vorschau
 	c_Lang073 =	Schleife
-	c_Lang074 =	* Funktioniert nicht bei manueller Wiedergabe.
+	c_Lang074 =	Automatische Erstellung von COM-Objekt
 	c_Lang075 =	Unterbr.
 	c_Lang076 =	Fortsetzen
 	c_Lang077 =	Goto
@@ -513,6 +513,20 @@
 	c_Lang223 =	Globale Variablen
 	c_Lang224 =	Lokale Variablen
 	c_Lang225 =	Statische Variablen
+	c_Lang226 =	Von
+	c_Lang227 =	Email
+	c_Lang228 =	Gegenstand
+	c_Lang229 =	Nachricht
+	c_Lang230 =	Zu
+	c_Lang231 =	CC
+	c_Lang232 =	BCC
+	c_Lang233 =	Dateien anhängen
+	c_Lang234 =	HTML
+	c_Lang235 =	E-Mail senden
+	c_Lang236 =	Download / Upload von Dateien
+	c_Lang237 =	Zip / Entpacken von Dateien
+	c_Lang238 =	Anmachen
+	c_Lang239 =	Abschalten
 		
 ; 16. Other Windows		
 	t_Lang001 =	Export nach AutoHotkey
@@ -696,19 +710,15 @@
 	t_Lang179 =	Erstelle neu
 	t_Lang180 =	ENTER, PgDn und PgUp zu navigieren.
 	t_Lang181 =	Einreichen
-	t_Lang182 =	Von
-	t_Lang183 =	Name
-	t_Lang184 =	Email
-	t_Lang185 =	Gegenstand
-	t_Lang186 =	Nachricht
-	t_Lang187 =	Änderungen speichern?
-	t_Lang188 =	Sprache Datei
-	t_Lang189 =	Referenzdatei
-	t_Lang190 =	Revision oder Neue Übersetzung einreichen
-	t_Lang191 =	Alle einklappen
-	t_Lang192 =	Alle erweitern
-	t_Lang193 =	Zu
-	t_Lang194 =	Sprache
+	t_Lang182 =	Name
+	t_Lang183 =	Änderungen speichern?
+	t_Lang184 =	Sprache Datei
+	t_Lang185 =	Referenzdatei
+	t_Lang186 =	Revision oder Neue Übersetzung einreichen
+	t_Lang187 =	Alle einklappen
+	t_Lang188 =	Alle erweitern
+	t_Lang189 =	Sprache
+	t_Lang190 =	Zeilenumbrüche konvertieren
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Öffnen
@@ -840,6 +850,9 @@
 	d_Lang104 =	Diese Meldung wird nicht wieder für das gleiche Update angezeigt. Sie können es über das Hilfemenü herunterladen > Nach Updates suchen.
 	d_Lang105 =	Datei erfolgreich gesendet. Vielen Dank!
 	d_Lang106 =	Sprachdateien erfolgreich aktualisiert.
+	d_Lang107 =	Konnte nicht Timer starten
+	d_Lang108 =	Alle Positionen werden registriert. Bitte löschen Sie einer von ihnen.
+	d_Lang109 =	Zielmarke  ist nicht vorhanden.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Sie können Makros mit den Befehls-Schaltflächen im Hauptfenster erzeugen oder mittels Rekorder Ihre Aktionen kopieren. Klicken Sie auf Optionen > Einstellungen > Aufnahme, um festzulegen welche Eingaben aufgezeichnet werden sollen.
@@ -1135,6 +1148,7 @@
 	Exit	Beendet den aktuellen Thread oder (wenn das Skript nicht persistent und enthält keine Hotkeys) das gesamte Skript .
 	ExitApp	Beendet das Skript bedingungslos.
 	Exp	Liefert e (das ist ungefähr 2.71828182845905) die n-te Potenz .
+	Expression	Führt eine oder mehrere Operationen auf eine Reihe von Variablen, Zeichenketten  und / oder wörtliche Zahlen.
 	FileAppend	Schreibt Text an das Ende einer Datei (erste Erstellen der Datei , falls erforderlich).
 	FileCopy	Kopiert eine oder mehrere Dateien .
 	FileCopyDir	Kopiert einen Ordner mit all seinen Unterordnern und Dateien (ähnlich xcopy) .

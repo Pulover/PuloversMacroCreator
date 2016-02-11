@@ -1,10 +1,10 @@
-﻿Playback(Macro_On, LoopInfo := "", ManualKey := "", UDFParams := "", RunningFunction := "", LoopFlow := "")
+﻿Playback(Macro_On, LoopInfo := "", ManualKey := "", UDFParams := "", RunningFunction := "", FlowControl := "")
 {
 	local PlaybackVars := [], LVData := [], LoopDepth := 0, LoopCount := [0], StartMark := []
 	, m_ListCount := ListCount%Macro_On%, mLoopIndex, cLoopIndex, iLoopIndex := 0, mLoopLength, mLoopSize, mListRow
-	, Action, Step, TimesX, DelayX, Type, Target, Window, Loop_Start, Loop_End, _Label, _i, Pars
+	, Action, Step, TimesX, DelayX, Type, Target, Window, Loop_Start, Loop_End, Lab, _Label, _i, Pars
 	, NextStep, NStep, NTimesX, NType, NTarget, NWindow, _each, _value, _key, _depth, _pair, _index, _point
-	, pbParams, VarName, VarValue, Oper, RowData, ActiveRows, Increment := 0
+	, pbParams, VarName, VarValue, Oper, RowData, ActiveRows, Increment := 0, TabIdx, RowIdx, LabelFound
 	, ScopedParams := [], UserGlobals, GlobalList, CursorX, CursorY
 	, Func_Result, SVRef, FuncPars, ParamIdx := 1, EvalResult
 
@@ -19,6 +19,8 @@
 	}
 	Else
 	{
+		If (LoopInfo > 0)
+			Loop_Start := LoopInfo
 		CoordMode, Mouse, Screen
 		MouseGetPos, CursorX, CursorY
 		CoordMode, Mouse, %CoordMouse%
@@ -40,12 +42,12 @@
 		
 		PlaybackVars[LoopDepth] := []
 	,	PlayOSOn := 1, tbOSC.ModifyButtonInfo(1, "Image", 55)
-		If (ShowProgBar = 1)
+		If ((ShowProgBar = 1) && (RunningFunction = ""))
 			GuiControl, 28:+Range0-%m_ListCount%, OSCProg
 		mLoopSize := o_TimesG[Macro_On]
 	}
-	If (!LoopFlow.GetCapacity())
-		LoopFlow := {Break: 0, Continue: 0, If: 0}
+	If (!FlowControl.GetCapacity())
+		FlowControl := {Break: 0, Continue: 0, If: 0}
 	CurrentRange := m_ListCount, ChangeProgBarColor("20D000", "OSCProg", 28)
 	Gui, chMacro:Default
 	Gui, chMacro:ListView, InputList%Macro_On%
@@ -57,8 +59,7 @@
 	}
 	ActiveRows := LV_GetSelCheck()
 ,	mLoopLength := (UDFParams.GetCapacity() || ManualKey || Increment) ? 1 : o_TimesG[Macro_On]
-,	FreeMemory()
-	While (A_Index <= mLoopLength)
+	While (mLoopLength = 0 || A_Index <= mLoopLength)
 	{
 		If (StopIt)
 			break
@@ -88,7 +89,7 @@
 			If ((pb_Sel) && (!ActiveRows.Selected[A_Index]))
 				continue
 			Data_GetTexts(LVData, A_Index, Action, Step, TimesX, DelayX, Type, Target, Window)
-			If ((ShowProgBar = 1) && (LoopFlow.Break = 0) && (LoopFlow.Continue = 0) && (LoopFlow.If = 0))
+			If ((ShowProgBar = 1) && (RunningFunction = "") && (FlowControl.Break = 0) && (FlowControl.Continue = 0) && (FlowControl.If = 0))
 			{
 				If Type not in %cType7%,%cType17%,%cType21%,%cType35%,%cType38%,%cType39%,%cType40%,%cType41%,%cType44%,%cType45%,%cType46%,%cType47%,%cType48%,%cType49%,%cType50%
 				{
@@ -270,41 +271,27 @@
 				MouseReset := 1
 			If (Type = cType17)
 			{
-				LoopFlow.If := IfStatement(LoopFlow.If, PlaybackVars[LoopDepth][mLoopIndex], Action, Step, TimesX, DelayX, Type, Target, Window)
+				FlowControl.If := IfStatement(FlowControl.If, PlaybackVars[LoopDepth][mLoopIndex]
+							, Action, Step, TimesX, DelayX, Type, Target, Window, FlowControl.Break, FlowControl.Continue)
 				If (ManualKey)
 					WaitFor.Key(o_ManKey[ManualKey], 0)
 				continue
 			}
-			If (LoopFlow.If > 0)
+			If (FlowControl.If > 0)
 				continue
-			If ((Type = cType36) || (Type = cType37))
+			If ((Type = cType36) || (Type = cType37) || (Type = cType50))
 			{
-				If ((LoopFlow.Break > 0) || (LoopFlow.Continue > 0))
+				If ((FlowControl.Break > 0) || (FlowControl.Continue > 0))
 					continue
-				CheckVars(PlaybackVars[LoopDepth][mLoopIndex], Step)
+				CheckVars(PlaybackVars[LoopDepth][mLoopIndex], Step, DelayX)
+			,	TabIdx := 0, RowIdx := 0, LabelFound := false
 				Loop, %TabCount%
 				{
 					TabIdx := A_Index
 					If (Step = TabGetText(TabSel, A_Index))
 					{
-						If (Type = cType36)
-						{
-							_Label := [A_Index, 0, ManualKey]
-							return _Label
-						}
-						Else
-						{
-							_Label := Playback(A_Index,, ManualKey,,, LoopFlow)
-							If (IsObject(_Label))
-								return _Label
-							Else If (_Label)
-							{
-								Lab := _Label, _Label := 0
-								If (_Label := Playback(Lab,, ManualKey,,, LoopFlow))
-									return _Label
-							}
-							break
-						}
+						LabelFound := true
+						break
 					}
 					Else
 					{
@@ -312,49 +299,124 @@
 						Loop, % ListCount%A_Index%
 						{
 							LV_GetText(Row_Type, A_Index, 6)
-							If ((Row_Type = cType36) || (Row_Type = cType37))
+							If ((Row_Type = cType36) || (Row_Type = cType37) || (Row_Type = cType50))
 								continue
 							LV_GetText(TargetLabel, A_Index, 3)
 							If ((Row_Type = cType35) && (TargetLabel = Step))
 							{
-								If (Type = cType36)
-								{
-									_Label := [TabIdx, A_Index, ManualKey]
-									return _Label
-								}
-								Else
-								{
-									LoopInfo := {LoopDepth: LoopDepth
-											,	PlaybackVars: PlaybackVars
-											,	Range: {Start: A_Index, End: 0}
-											,	Count: o_TimesG[TabIdx]
-											,	LoopInfo.Increment: 0}
-									_Label := Playback(TabIdx, LoopInfo, ManualKey,,, LoopFlow)
-									If (IsObject(_Label))
-										return _Label
-									Else If (_Label)
-									{
-										Lab := _Label, _Label := 0
-										If (_Label := Playback(Lab,, ManualKey,,, LoopFlow))
-											return _Label
-									}
-									break
-								}
+								RowIdx := A_Index, LabelFound := true
+								break 2
 							}
 						}
 					}
 				}
-				If (LoopFlow.Break > 0)
-					LoopFlow.Break--
-				If (LoopFlow.Continue > 0)
-					LoopFlow.Continue--
+				If (!LabelFound)
+				{
+					MsgBox, 20, %d_Lang007%, % "Macro" Macro_On ", " d_Lang065 " " mListRow
+						. "`n" d_Lang007 ":`t`t" d_Lang109 "`n" d_Lang066 ":`t" Step
+					IfMsgBox, No
+						StopIt := 1
+					continue
+				}
+				If (Type = cType36)
+				{
+					_Label := [TabIdx, RowIdx, ManualKey]
+					return _Label
+				}
+				If (Type = cType37)
+				{
+					_Label := Playback(TabIdx, RowIdx, ManualKey)
+					If (IsObject(_Label))
+						return _Label
+					Else If (_Label)
+					{
+						Lab := _Label, _Label := 0
+						If (_Label := Playback(Lab,, ManualKey))
+							return _Label
+					}
+				}
+				If (Type = cType50)
+				{
+					Action := RegExReplace(Action, ".*\s")
+					For _each, _key in RegisteredTimers
+					{
+						If (_key = Step)
+						{
+							aHK_Timer%_each% := TabIdx, aHK_Label%_Label% := RowIdx
+							If (Action = "Once")
+							{
+								DelayX := DelayX > 0 ? DelayX * -1 : -1
+								SetTimer, RunTimerOn%_each%, %DelayX%
+							}
+							Else If (Action = "Period")
+								SetTimer, RunTimerOn%_each%, %DelayX%
+							Else If (Action = "Delete")
+							{
+								SetTimer, RunTimerOn%_each%, Delete
+								RegisteredTimers.Delete(_each)
+							}
+							Else
+								SetTimer, RunTimerOn%_each%, %Action%
+							If (ManualKey)
+								WaitFor.Key(o_ManKey[ManualKey], 0)
+							If ((ShowProgBar = 1) && (RunningFunction = ""))
+								GuiControl, 28:+Range0-%m_ListCount%, OSCProg
+							continue 2
+						}
+					}
+					For _each, _key in RegisteredTimers
+					{
+						If (_each != A_Index)
+						{
+							RegisteredTimers[_each] := Step
+						,	aHK_Timer%_each% := TabIdx, aHK_Label%_Label% := RowIdx
+							If (Action = "Once")
+							{
+								DelayX := DelayX > 0 ? DelayX * -1 : -1
+								SetTimer, RunTimerOn%_each%, %DelayX%
+							}
+							Else If (Action = "Period")
+								SetTimer, RunTimerOn%_each%, %DelayX%
+							Else If (Action = "Delete")
+							{
+								SetTimer, RunTimerOn%_each%, Delete
+								RegisteredTimers.Delete(_each)
+							}
+							Else
+								SetTimer, RunTimerOn%_each%, %Action%
+							If (ManualKey)
+								WaitFor.Key(o_ManKey[ManualKey], 0)
+							If ((ShowProgBar = 1) && (RunningFunction = ""))
+								GuiControl, 28:+Range0-%m_ListCount%, OSCProg
+							continue 2
+						}
+					}
+					If (RegisteredTimers.Length() < 10)
+					{
+						_Label := RegisteredTimers.Push(Step)
+					,	aHK_Timer%_Label% := TabIdx, aHK_Label%_Label% := RowIdx
+						If (Action = "Once")
+						{
+							DelayX := DelayX > 0 ? DelayX * -1 : -1
+							SetTimer, RunTimerOn%_Label%, %DelayX%
+						}
+						Else If (Action = "Period")
+							SetTimer, RunTimerOn%_Label%, %DelayX%
+						Else If (Action = "Delete")
+						{
+							SetTimer, RunTimerOn%_Label%, Delete
+							RegisteredTimers.Delete(_Label)
+						}
+						Else
+							SetTimer, RunTimerOn%_Label%, %Action%
+					}
+					Else
+						TrayTip, %d_Lang107% %Step%, %d_Lang108%,, 19
+				}
 				If (ManualKey)
 					WaitFor.Key(o_ManKey[ManualKey], 0)
-				; If (ShowProgBar = 1)
-				; {
-					; GuiControl, 28:+Range0-%m_ListCount%, OSCProg
-					; GuiControl, 28:, OSCProgTip, % "M" Macro_On " [Loop: 0 / " o_TimesG[Macro_On] " | Row: 0 / " m_ListCount "]"
-				; }
+				If ((ShowProgBar = 1) && (RunningFunction = ""))
+					GuiControl, 28:+Range0-%m_ListCount%, OSCProg
 				continue
 			}
 			If (Type = cType35)
@@ -366,14 +428,14 @@
 			{
 				If (Action = "[LoopStart]")
 				{
-					If (LoopFlow.Break > 0)
+					If (FlowControl.Break > 0)
 					{
-						LoopFlow.Break++
+						FlowControl.Break++
 						continue
 					}
-					If (LoopFlow.Continue > 0)
+					If (FlowControl.Continue > 0)
 					{
-						LoopFlow.Continue++
+						FlowControl.Continue++
 						continue
 					}
 					Pars := SplitStep(PlaybackVars[LoopDepth][mLoopIndex], Step, TimesX, DelayX, Type, Target, Window)
@@ -467,7 +529,7 @@
 					If (LoopCount[LoopDepth] = "")
 					{
 						PlaybackVars[LoopDepth][mLoopIndex, "A_Index"] := mLoopIndex
-						LoopFlow.Break++
+						FlowControl.Break++
 					}
 					continue
 				}
@@ -479,29 +541,25 @@
 							,	Count: LoopCount[LoopDepth] + 1}
 					Loop
 					{
+						If (LoopCount[LoopDepth] = 0)
+							break
 						If (StopIt)
 							break 3
-						If (LoopFlow.Break > 0)
+						If (FlowControl.Break > 0)
 						{
-							LoopFlow.Break--
-						,	LoopCount[LoopDepth] := ""
-						,	LoopDepth--
-						,	iLoopIndex--
-							continue 2
+							FlowControl.Break--
+							break
 						}
-						If (LoopFlow.Continue > 1)
+						If (FlowControl.Continue > 1)
 						{
-							LoopFlow.Continue--
-						,	LoopCount[LoopDepth] := ""
-						,	LoopDepth--
-						,	iLoopIndex--
-							continue 2
+							FlowControl.Continue--
+							break
 						}
-						If (LoopFlow.Continue > 0)
-							LoopFlow.Continue--
+						If (FlowControl.Continue > 0)
+							FlowControl.Continue--
 						
 						LoopInfo.Increment := A_Index
-					,	GoToLab := Playback(Macro_On, LoopInfo, ManualKey,,, LoopFlow)
+					,	GoToLab := Playback(Macro_On, LoopInfo, ManualKey,,, FlowControl)
 						If (IsObject(GoToLab))
 						{
 							For _each, _value in ScopedParams
@@ -536,7 +594,7 @@
 						Else If (GoToLab)
 						{
 							Lab := GoToLab, GoToLab := 0
-							If (_Label := Playback(Lab,, ManualKey,,, LoopFlow))
+							If (_Label := Playback(Lab,, ManualKey,,, FlowControl))
 								return _Label
 							return
 						}
@@ -549,7 +607,7 @@
 					continue
 				}
 			}
-			If ((LoopFlow.Break > 0) || (LoopFlow.Continue > 0))
+			If ((FlowControl.Break > 0) || (FlowControl.Continue > 0))
 				continue
 			If ((Type = cType21) || (Type = cType44) || (Type = cType46))
 			{
@@ -708,18 +766,18 @@
 				Else
 				{
 					If Step is number
-						LoopFlow.Break += Step
+						FlowControl.Break += Step
 					Else
-						LoopFlow.Break++
+						FlowControl.Break++
 					continue
 				}
 			}
 			If (Type = cType30)
 			{
 				If Step is number
-					LoopFlow.Continue += Step
+					FlowControl.Continue += Step
 				Else
-					LoopFlow.Continue++
+					FlowControl.Continue++
 				continue
 			}
 			If (Type = cType50)
@@ -733,7 +791,7 @@
 					Menu, Tray, Default, %w_Lang005%
 					break 3
 				}
-				PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars, RunningFunction)
+				PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars, PlaybackVars[LoopDepth][mLoopIndex], RunningFunction, d_Lang064 " Macro" Macro_On ", " d_Lang065 " " mListRow . "`n" d_Lang007 ":`t`t")
 			,	PlaybackVars[LoopDepth][mLoopIndex, "ErrorLevel"] := ErrorLevel
 				If ((Type = cType15) || (Type = cType16))
 				{
@@ -752,12 +810,12 @@
 				If Type in Sleep,KeyWait,MsgBox
 					continue
 				If !(ManualKey)
-					PlayCommand("Sleep", Action, Step, DelayX, Target, Window, Pars, RunningFunction)
+					PlayCommand("Sleep", Action, Step, DelayX, Target, Window, Pars, PlaybackVars[LoopDepth][mLoopIndex], RunningFunction)
 			}
 			If (ManualKey)
 				WaitFor.Key(o_ManKey[ManualKey], 0)
 		}
-		If (StopIt || LoopFlow.Break)
+		If (StopIt || FlowControl.Break)
 			break
 	}
 	If (UDFParams.GetCapacity())
@@ -827,7 +885,7 @@
 
 ;##### Playback Commands #####
 
-PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars, RunningFunction)
+PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars, CustomVars, RunningFunction, ErrorMsg := "")
 {
 	local Par1, Par2, Par3, Par4, Par5, Par6, Par7, Par8, Par9, Par10, Par11, Win
 	For _each, _value in Pars
@@ -1491,28 +1549,27 @@ PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars, RunningFunction)
 		StringSplit, Act, Action, :
 		StringSplit, El, Target, :
 		IeIntStr := IEComExp(Act2, Step, El1, El2, "", Act3, Act1)
-	,	IeIntStr := SubStr(IeIntStr, 4)
 
 		Try
-			o_ie.readyState
+			ie.readyState
 		Catch
 		{
 			If (ComAc)
-				o_ie := WBGet()
+				ie := WBGet()
 			Else
 			{
-				o_ie := ComObjCreate("InternetExplorer.Application")
-			,	o_ie.Visible := true
+				ie := ComObjCreate("InternetExplorer.Application")
+			,	ie.Visible := true
 			}
 		}
-		If (!IsObject(o_ie))
+		If (!IsObject(ie))
 		{
-			o_ie := ComObjCreate("InternetExplorer.Application")
-		,	o_ie.Visible := true
+			ie := ComObjCreate("InternetExplorer.Application")
+		,	ie.Visible := true
 		}
 		
 		Try
-			COMInterface(IeIntStr, o_ie)
+			Eval(IeIntStr, CustomVars)
 		Catch e
 		{
 			MsgBox, 20, %d_Lang007%, % d_Lang064 " Macro" Macro_On ", " d_Lang065 " " mListRow
@@ -1529,7 +1586,7 @@ PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars, RunningFunction)
 			Try Menu, Tray, Icon, %ResDllPath%, 77
 			ChangeProgBarColor("Blue", "OSCProg", 28)
 			Try
-				IELoad(o_ie)
+				IELoad(ie)
 			Try Menu, Tray, Icon, %ResDllPath%, 46
 			ChangeProgBarColor("20D000", "OSCProg", 28)
 		}
@@ -1561,30 +1618,29 @@ PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars, RunningFunction)
 		StringSplit, Act, Action, :
 		StringSplit, El, Target, :
 		IeIntStr := IEComExp(Act2, "", El1, El2, Step, Act3, Act1)
-	,	IeIntStr := SubStr(IeIntStr, InStr(IeIntStr, "ie.") + 3)
 		
 		Try
-			o_ie.readyState
+			ie.readyState
 		Catch
 		{
 			If (ComAc)
-				o_ie := WBGet()
+				ie := WBGet()
 			Else
 			{
-				o_ie := ComObjCreate("InternetExplorer.Application")
-			,	o_ie.Visible := true
+				ie := ComObjCreate("InternetExplorer.Application")
+			,	ie.Visible := true
 			}
 		}
-		If (!IsObject(o_ie))
+		If (!IsObject(ie))
 		{
-			o_ie := ComObjCreate("InternetExplorer.Application")
-		,	o_ie.Visible := true
+			ie := ComObjCreate("InternetExplorer.Application")
+		,	ie.Visible := true
 		}
 		
 		Try
 		{
-			COMInterface(IeIntStr, o_ie, lResult)
-		,	AssignVar(Step, ":=", lResult, __PointMarker, RunningFunction)
+			lResult := Eval(IeIntStr, CustomVars)[1]
+		,	AssignVar(Step, ":=", lResult, CustomVars, RunningFunction)
 		}
 		Catch e
 		{
@@ -1603,43 +1659,29 @@ PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars, RunningFunction)
 			Try Menu, Tray, Icon, %ResDllPath%, 77
 			ChangeProgBarColor("Blue", "OSCProg", 28)
 			Try
-				IELoad(o_ie)
+				IELoad(ie)
 			Try Menu, Tray, Icon, %ResDllPath%, 46
 			ChangeProgBarColor("20D000", "OSCProg", 28)
 		}
 	return
 
-	pb_VBScript:
-	pb_JScript:
-	VB := "", JS := ""
-	Step := StrReplace(Step, "`n", "``n")
-	Step := "Language := " Type "`nExecuteStatement(" Step ")"
-
+	pb_Expression:
 	pb_COMInterface:
-		Step := StrReplace(Step, "ø", "`n")
-		Loop, Parse, Step, `n, %A_Space%%A_Tab%`r
+		If (Target != "")
 		{
-			LoopField := StrReplace(A_LoopField, "``n", "`n")
-			Try
+			If (!IsObject(%Action%))
+				%Action% := ComObjCreate(%Action%, Target)
+		}
+		Step := StrReplace(Step, "`n", ",")
+		Try
+			Eval(Step, CustomVars)
+		Catch e
+		{
+			MsgBox, 20, %d_Lang007%, % ErrorMsg . e.Message "`n" d_Lang066 ":`t" (InStr(e.Message, "0x800401E3") ? d_Lang088 : e.Extra) "`n`n" d_Lang035
+			IfMsgBox, No
 			{
-				Eval(LoopField, __PointMarker)
-			; ,	lResult := StrJoin(EvalResult)
-				; If (!IsObject(%Act1%))
-					; %Act1% := COMInterface(LoopField, %Act1%, lResult, Target)
-				; Else
-					; COMInterface(LoopField, %Act1%, lResult, Target)
-				; If (lResult != "")
-					; AssignVar(Act2, ":=", lResult, __PointMarker)
-			}
-			Catch e
-			{
-				MsgBox, 20, %d_Lang007%, % d_Lang064 " Macro" Macro_On ", " d_Lang065 " " mListRow
-					.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" (InStr(e.Message, "0x800401E3") ? d_Lang088 : e.Extra) "`n`n" d_Lang035
-				IfMsgBox, No
-				{
-					StopIt := 1
-					return
-				}
+				StopIt := 1
+				return
 			}
 		}
 		If (Window = "LoadWait")
@@ -1658,7 +1700,7 @@ SplitStep(CustomVars, ByRef Step, ByRef TimesX, ByRef DelayX, ByRef Type, ByRef 
 {
 	local Pars := [], LoopField, _Step, _key, _value
 	If (Type = cType34)
-		Step := StrReplace(Step, "`n", "ø")
+		_Step := Step
 	If (Type = cType39)
 		Step := RegExReplace(Step, "\w+", "%$0%", "", 1)
 	EscCom(true, Step, TimesX, DelayX, Target, Window)
@@ -1703,10 +1745,7 @@ SplitStep(CustomVars, ByRef Step, ByRef TimesX, ByRef DelayX, ByRef Type, ByRef 
 ,	Step := StrReplace(Step, "ⱥ", A_Space)
 ,	Step := StrReplace(Step, "``")
 	If (Type = cType34)
-	{
-		Step := StrReplace(Step, "`n", "``n")
-	,	Step := StrReplace(Step, "ø", "`n")
-	}
+		Step := _Step
 	return Pars
 }
 
@@ -1787,7 +1826,7 @@ RunExtFunc(File, FuncName, Params*)
 	return SubStr(Result, 1, -1)
 }
 
-IfStatement(ThisError, CustomVars, Action, Step, TimesX, DelayX, Type, Target, Window)
+IfStatement(ThisError, CustomVars, Action, Step, TimesX, DelayX, Type, Target, Window, BreakIt, SkipIt)
 {
 	local Pars, VarName, Oper, VarValue, lMatch
 	
@@ -1901,10 +1940,11 @@ IfStatement(ThisError, CustomVars, Action, Step, TimesX, DelayX, Type, Target, W
 		Else If (Action = If11)
 		{
 			Pars := SplitStep(CustomVars, Step, TimesX, DelayX, Type, Target, Window)
+		,	VarName := Pars[1], VarName := %VarName%
 			For _key, _value in CustomVars
 				If (Pars[1] = _key)
-					Pars[1] := _value
-			If (InStr(Pars[1], Pars[2]))
+					VarName := _value
+			If (InStr(VarName, Pars[2]))
 				ThisError := 0
 			Else
 				ThisError++
@@ -1912,10 +1952,11 @@ IfStatement(ThisError, CustomVars, Action, Step, TimesX, DelayX, Type, Target, W
 		Else If (Action = If12)
 		{
 			Pars := SplitStep(CustomVars, Step, TimesX, DelayX, Type, Target, Window)
+		,	VarName := Pars[1], VarName := %VarName%
 			For _key, _value in CustomVars
 				If (Pars[1] = _key)
-					Pars[1] := _value
-			If (!InStr, Pars[1], Pars[2])
+					VarName := _value
+			If (!InStr(VarName, Pars[2]))
 				ThisError := 0
 			Else
 				ThisError++

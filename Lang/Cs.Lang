@@ -246,7 +246,7 @@
 	w_Lang064 =	Proměnné / Pole (Shift+F10)
 	w_Lang065 =	Funkce / Metody pole (Ctrl+F10)
 	w_Lang066 =	Internet Explorer (F11)
-	w_Lang067 =	COM rozhraní (Shift+F11)
+	w_Lang067 =	Výraz / COM rozhraní (Shift+F11)
 	w_Lang068 =	Spustit Skripty (Ctrl+F11)
 	w_Lang069 =	Windows Zprávy (F12)
 	w_Lang070 =	Přidat klávesu Windows na "Play" klávesové zkratky
@@ -301,7 +301,7 @@
 	c_Lang010 =	Proměnné
 	c_Lang011 =	Funkce / Metody pole
 	c_Lang012 =	Internet Explorer
-	c_Lang013 =	COM rozhraní
+	c_Lang013 =	Výraz / COM rozhraní
 	c_Lang014 =	Vyberte Application (Advanced)
 	c_Lang015 =	Zpráva
 	c_Lang016 =	Ovládání
@@ -362,7 +362,7 @@
 	c_Lang071 =	Varianty
 	c_Lang072 =	Náhled
 	c_Lang073 =	Smyčka
-	c_Lang074 =	* Nefunguje v manuálním režimu přehrávání.
+	c_Lang074 =	Automaticky vytvořit objekt COM
 	c_Lang075 =	Rozbít
 	c_Lang076 =	Pokračovat
 	c_Lang077 =	Goto
@@ -513,6 +513,20 @@
 	c_Lang223 =	Globální proměnné
 	c_Lang224 =	Lokální proměnné
 	c_Lang225 =	Statické proměnné
+	c_Lang226 =	Z
+	c_Lang227 =	E-mail
+	c_Lang228 =	Předmět
+	c_Lang229 =	Zpráva
+	c_Lang230 =	Na
+	c_Lang231 =	CC
+	c_Lang232 =	SKRYTÁ
+	c_Lang233 =	Připojit soubory
+	c_Lang234 =	HTML
+	c_Lang235 =	Poslat e-mailem
+	c_Lang236 =	Download / upload souborů
+	c_Lang237 =	Zip / rozbalení souborů
+	c_Lang238 =	Zapnout
+	c_Lang239 =	Vypnout
 		
 ; 16. Other Windows		
 	t_Lang001 =	Export do AutoHotkey
@@ -696,19 +710,15 @@
 	t_Lang179 =	Vytvořit nový
 	t_Lang180 =	Používejte Enter, PgDn a PgUp pro navigaci.
 	t_Lang181 =	Předložit
-	t_Lang182 =	Z
-	t_Lang183 =	Jméno
-	t_Lang184 =	E-mail
-	t_Lang185 =	Předmět
-	t_Lang186 =	Zpráva
-	t_Lang187 =	Uložit změny?
-	t_Lang188 =	Jazyk Soubor
-	t_Lang189 =	Referenční soubor
-	t_Lang190 =	Odeslat revizi nebo nový překlad
-	t_Lang191 =	Sbalit vše
-	t_Lang192 =	Rozšířit vše
-	t_Lang193 =	Na
-	t_Lang194 =	Jazyk
+	t_Lang182 =	Jméno
+	t_Lang183 =	Uložit změny?
+	t_Lang184 =	Jazyk Soubor
+	t_Lang185 =	Referenční soubor
+	t_Lang186 =	Odeslat revizi nebo nový překlad
+	t_Lang187 =	Sbalit vše
+	t_Lang188 =	Rozšířit vše
+	t_Lang189 =	Jazyk
+	t_Lang190 =	Převod řádků
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Otevřít
@@ -840,6 +850,9 @@
 	d_Lang104 =	Tato zpráva nebude znovu uvedeny pro stejné aktualizace. Můžete si jej stáhnout z nabídky Nápověda > Zjistit aktualizace.
 	d_Lang105 =	Soubor byl úspěšně odeslán. Děkuji!
 	d_Lang106 =	Jazykové soubory úspěšně aktualizována.
+	d_Lang107 =	Nelze spustit časovač
+	d_Lang108 =	Všechny pozice jsou registrovány. Prosím, odstraňte jeden z nich.
+	d_Lang109 =	Cílový štítek neexistuje.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Můžete vytvářet makra pomocí příkazových tlačítek v hlavním okně, nebo pomocí rekordéru kopírovat své akce. Přejít na Možnosti > Nastavení > Nahrávání na vstupy vybrat, co budou zaznamenány.
@@ -1135,6 +1148,7 @@
 	Exit	Ukončí aktuální vlákno , nebo (v případě, že skript není perzistentní a neobsahuje žádné klávesové zkratky) Celý skript .
 	ExitApp	Ukončí skript bezpodmínečně.
 	Exp	Vrátí e (což je přibližně 2.71828182845905) raisnul na tý moci.
+	Expression	Vykonává jednu nebo více operací na řadě proměnných, doslovných řetězců a / nebo doslovné čísel.
 	FileAppend	Píše textu na konec souboru (první vytvoření souboru , je-li to nutné) .
 	FileCopy	Kopie jeden nebo více souborů.
 	FileCopyDir	Zkopíruje složku spolu se všemi podadresáři a soubory (podobně jako xcopy) .

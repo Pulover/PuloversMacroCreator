@@ -246,7 +246,7 @@
 	w_Lang064 =	Muuttujat / Taulukot (Shift+F10)
 	w_Lang065 =	Funktiot / Array menetelmiä (Ctrl+F10)
 	w_Lang066 =	Internet Explorer (F11)
-	w_Lang067 =	COM liitäntä (Shift+F11)
+	w_Lang067 =	Lauseke / COM-rajapinta (Shift+F11)
 	w_Lang068 =	Suorita Komentosarjasovelman (Ctrl+F11)
 	w_Lang069 =	Windows viestit (F12)
 	w_Lang070 =	Lisää Windows-näppäintä "Play" pikanäppäin
@@ -301,7 +301,7 @@
 	c_Lang010 =	Muuttujat
 	c_Lang011 =	Funktiot / Array menetelmiä
 	c_Lang012 =	Internet Explorer
-	c_Lang013 =	COM-rajapinta
+	c_Lang013 =	Lauseke / COM-rajapinta
 	c_Lang014 =	Valitse Application (Advanced)
 	c_Lang015 =	Viesti
 	c_Lang016 =	Ohjaa
@@ -362,7 +362,7 @@
 	c_Lang071 =	Muunnelmia
 	c_Lang072 =	Preview
 	c_Lang073 =	Silmukka
-	c_Lang074 =	* Ei toimi Manual Toisto.
+	c_Lang074 =	Automaattisesti luoda COM-objekti
 	c_Lang075 =	Tauko
 	c_Lang076 =	Jatkaa
 	c_Lang077 =	Siirry
@@ -513,6 +513,20 @@
 	c_Lang223 =	Global muuttujat
 	c_Lang224 =	Paikalliset muuttujat
 	c_Lang225 =	Staattinen muuttujat
+	c_Lang226 =	Alkaen
+	c_Lang227 =	Sähköposti
+	c_Lang228 =	Aihe
+	c_Lang229 =	Viesti
+	c_Lang230 =	Jotta
+	c_Lang231 =	CC
+	c_Lang232 =	BCC
+	c_Lang233 =	Liitä tiedostot
+	c_Lang234 =	HTML
+	c_Lang235 =	Lähetä sähköposti
+	c_Lang236 =	Lataa / Lataa tiedostot
+	c_Lang237 =	Zip / Pura tiedostot
+	c_Lang238 =	Kiihottua
+	c_Lang239 =	Sammuttaa
 		
 ; 16. Other Windows		
 	t_Lang001 =	Vie AutoHotkey
@@ -696,19 +710,15 @@
 	t_Lang179 =	Luo uusi
 	t_Lang180 =	Käytä Anna, PgDn ja PgUp navigoida.
 	t_Lang181 =	Esittää
-	t_Lang182 =	Alkaen
-	t_Lang183 =	Nimi
-	t_Lang184 =	Sähköposti
-	t_Lang185 =	Aihe
-	t_Lang186 =	Viesti
-	t_Lang187 =	Tallenna muutokset?
-	t_Lang188 =	Kieli Tiedoston
-	t_Lang189 =	Viitetiedoston
-	t_Lang190 =	Lähetä tarkistaminen tai uuden käännöksen
-	t_Lang191 =	Pienennä kaikki
-	t_Lang192 =	Laajenna kaikki
-	t_Lang193 =	Jotta
-	t_Lang194 =	Kieli
+	t_Lang182 =	Nimi
+	t_Lang183 =	Tallenna muutokset?
+	t_Lang184 =	Kieli Tiedoston
+	t_Lang185 =	Viitetiedoston
+	t_Lang186 =	Lähetä tarkistaminen tai uuden käännöksen
+	t_Lang187 =	Pienennä kaikki
+	t_Lang188 =	Laajenna kaikki
+	t_Lang189 =	Kieli
+	t_Lang190 =	Muuta rivinvaihdot
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Avata
@@ -840,6 +850,9 @@
 	d_Lang104 =	Tämä viesti ei näytetä uudelleen samassa päivityksen. Voit ladata sen Ohje-valikosta > Tarkista päivitykset.
 	d_Lang105 =	Tiedosto lähetetty. Kiitos!
 	d_Lang106 =	Kielitiedostoja päivitys onnistui.
+	d_Lang107 =	Ei voitu käynnistää ajastimen
+	d_Lang108 =	Kaikki asemat rekisteröidään. Ole hyvä, poista yksi heistä.
+	d_Lang109 =	Target etiketti ei ole olemassa.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Voit luoda makroja käyttäen Command painikkeet pääikkunassa tai käyttämällä Recorder kopioida toimia. Valitse Valinnat > Asetukset > Tallennus valita mitä panoksia tallennetaan.
@@ -1135,6 +1148,7 @@
 	Exit	Poistutaan lanka tai (jos käsikirjoitus ei ole pysyvää eikä sisällä pikanäppäimet)koko käsikirjoituksen .
 	ExitApp	Lopettaascript ehdoitta .
 	Exp	Palauttaa e (joka on noin +2,71828182845905) nostipotenssiin .
+	Expression	Harjoittaa yhtä tai useampaa operaatiota, kun muuttujien sarjaa, kirjaimellinen jouset, ja / tai kirjaimellinen numeroita.
 	FileAppend	Kirjoittaa tekstinloppuuntiedoston (ensimmäinen luodatiedoston , jos tarpeen) .
 	FileCopy	Kopioi yhden tai useampia tiedostoja .
 	FileCopyDir	Kopioikansio sekä kaikki sen osa- kansiot ja tiedostot (samanlainen xcopy) .

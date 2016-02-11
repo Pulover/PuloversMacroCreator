@@ -246,7 +246,7 @@
 	w_Lang064 =	Biến / Mảng (Shift + F10)
 	w_Lang065 =	Chức năng / Phương pháp mảng (Ctrl + F10)
 	w_Lang066 =	Internet Explorer (F11)
-	w_Lang067 =	COM giao diện (Shift + F11)
+	w_Lang067 =	Biểu / COM giao diện (Shift + F11)
 	w_Lang068 =	Chạy Scriptlet (Ctrl + F11)
 	w_Lang069 =	Tin nhắn cửa sổ (F12)
 	w_Lang070 =	Thêm phím Windows để "chơi" phím nóng
@@ -301,7 +301,7 @@
 	c_Lang010 =	Biến
 	c_Lang011 =	Chức năng / Phương pháp mảng
 	c_Lang012 =	Internet Explorer
-	c_Lang013 =	COM giao diện
+	c_Lang013 =	Biểu / COM giao diện
 	c_Lang014 =	Chọn một ứng dụng (nâng cao)
 	c_Lang015 =	Tin nhắn
 	c_Lang016 =	Kiểm soát
@@ -362,7 +362,7 @@
 	c_Lang071 =	Biến thể
 	c_Lang072 =	Xem trước
 	c_Lang073 =	Vòng lặp
-	c_Lang074 =	* Không làm việc trong phát lại bằng tay.
+	c_Lang074 =	Tự động tạo các đối tượng COM
 	c_Lang075 =	Phá vỡ
 	c_Lang076 =	Tiếp tục
 	c_Lang077 =	Goto
@@ -513,6 +513,20 @@
 	c_Lang223 =	Các biến toàn cầu
 	c_Lang224 =	Các biến địa phương
 	c_Lang225 =	Các biến tĩnh
+	c_Lang226 =	Từ
+	c_Lang227 =	E-mail
+	c_Lang228 =	Bộ môn
+	c_Lang229 =	Lời nhắn
+	c_Lang230 =	Če želite
+	c_Lang231 =	CC
+	c_Lang232 =	BCC
+	c_Lang233 =	Đính kèm tập tin
+	c_Lang234 =	HTML
+	c_Lang235 =	Gửi email
+	c_Lang236 =	Tải về / tập tin Tải lên
+	c_Lang237 =	Zip / Giải nén file
+	c_Lang238 =	Bật
+	c_Lang239 =	Tắt
 		
 ; 16. Other Windows		
 	t_Lang001 =	Xuất khẩu sang AutoHotkey
@@ -696,19 +710,15 @@
 	t_Lang179 =	Tạo mới
 	t_Lang180 =	Sử dụng Enter, PgDn và PgUp để điều hướng.
 	t_Lang181 =	Đệ trình
-	t_Lang182 =	Từ
-	t_Lang183 =	Tên
-	t_Lang184 =	E-mail
-	t_Lang185 =	Bộ môn
-	t_Lang186 =	Lời nhắn
-	t_Lang187 =	Lưu thay đổi?
-	t_Lang188 =	Ngôn ngữ tập
-	t_Lang189 =	Tài liệu tham khảo tập tin
-	t_Lang190 =	Gửi sửa đổi hoặc dịch mới
-	t_Lang191 =	Thu gọn tất cả
-	t_Lang192 =	Mở rộng tất cả
-	t_Lang193 =	Če želite
-	t_Lang194 =	Ngôn ngư
+	t_Lang182 =	Tên
+	t_Lang183 =	Lưu thay đổi?
+	t_Lang184 =	Ngôn ngữ tập
+	t_Lang185 =	Tài liệu tham khảo tập tin
+	t_Lang186 =	Gửi sửa đổi hoặc dịch mới
+	t_Lang187 =	Thu gọn tất cả
+	t_Lang188 =	Mở rộng tất cả
+	t_Lang189 =	Ngôn ngư
+	t_Lang190 =	Chuyển đổi ngắt dòng
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Mở
@@ -840,6 +850,9 @@
 	d_Lang104 =	Thông báo này sẽ không được hiển thị lại cho các bản cập nhật tương tự. Bạn có thể tải nó từ menu Help > Check for updates.
 	d_Lang105 =	Tập tin được gửi thành công. Cảm ơn bạn!
 	d_Lang106 =	Tập tin ngôn ngữ được cập nhật thành công.
+	d_Lang107 =	Không thể bắt đầu hẹn giờ
+	d_Lang108 =	Tất cả các vị trí đã được đăng ký. Xin vui lòng, xóa một trong số họ.
+	d_Lang109 =	Nhãn Target không tồn tại.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Bạn có thể tạo macro bằng cách sử dụng nút lệnh trong cửa sổ chính hoặc sử dụng máy ghi âm để sao chép các hành động của bạn. Vào Tùy chọn> Cài đặt> Ghi chọn những đầu vào sẽ được ghi lại.
@@ -1135,6 +1148,7 @@
 	Exit	Thoát ra khỏi chủ đề hiện tại hoặc (nếu kịch bản là không bền vững và không chứa các phím nóng) toàn bộ kịch bản.
 	ExitApp	Kết thúc kịch bản vô điều kiện.
 	Exp	Lợi nhuận điện tử (đó là khoảng 2,71828182845905) nâng lên sức mạnh thứ N.
+	Expression	Thực hiện một hoặc nhiều hoạt động trên một loạt các biến, các chuỗi chữ và / hoặc số chữ.
 	FileAppend	Viết văn bản đến cuối của một tập tin (đầu tiên tạo ra các tập tin, nếu cần thiết).
 	FileCopy	Bản sao một hoặc nhiều tập tin.
 	FileCopyDir	Sao chép một thư mục cùng với tất cả các tiểu thư mục và tập tin (tương tự như xcopy).

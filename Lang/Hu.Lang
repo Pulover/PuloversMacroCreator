@@ -246,7 +246,7 @@
 	w_Lang064 =	Változók / Tömbök (Shift+F10)
 	w_Lang065 =	Függvények / Array módszerek (Ctrl+F10)
 	w_Lang066 =	Internet Explorer (F11)
-	w_Lang067 =	COM Interface (Shift+F11)
+	w_Lang067 =	Kifejezés / COM Interface (Shift+F11)
 	w_Lang068 =	Fuss Scriptlet (Ctrl+F11)
 	w_Lang069 =	A Windows üzenetek (F12)
 	w_Lang070 =	Adja hozzá a Windows billentyű a "Play" gyorsbillentyű
@@ -301,7 +301,7 @@
 	c_Lang010 =	Változók
 	c_Lang011 =	Függvények / Array módszerek
 	c_Lang012 =	Internet Explorer
-	c_Lang013 =	COM Interface
+	c_Lang013 =	Kifejezés / COM Interface
 	c_Lang014 =	Select Application (Advanced)
 	c_Lang015 =	Üzenet
 	c_Lang016 =	Irányítsd
@@ -362,7 +362,7 @@
 	c_Lang071 =	Változatok
 	c_Lang072 =	Előnézet
 	c_Lang073 =	Hurok
-	c_Lang074 =	* Nem működik Manual lejátszás.
+	c_Lang074 =	Automatikusan létrehozhat COM objektum
 	c_Lang075 =	Szünet
 	c_Lang076 =	Folytatódik
 	c_Lang077 =	Goto
@@ -513,6 +513,20 @@
 	c_Lang223 =	Globális változók
 	c_Lang224 =	Lokális változók
 	c_Lang225 =	Statikus változók
+	c_Lang226 =	Ból ből
+	c_Lang227 =	Email
+	c_Lang228 =	Tantárgy
+	c_Lang229 =	Üzenet
+	c_Lang230 =	Karşı
+	c_Lang231 =	CC
+	c_Lang232 =	TITKOS
+	c_Lang233 =	Dosyaları ekle
+	c_Lang234 =	HTML
+	c_Lang235 =	Küldjön e-mailt
+	c_Lang236 =	Letöltés / Feltöltés fájlok
+	c_Lang237 =	Zip / Unzip fájlok
+	c_Lang238 =	Bekapcsol
+	c_Lang239 =	Kikapcsolni
 		
 ; 16. Other Windows		
 	t_Lang001 =	Exportálás AutoHotkey
@@ -696,19 +710,15 @@
 	t_Lang179 =	Újat készíteni
 	t_Lang180 =	Az Enter, PgDn és PgUp navigálni.
 	t_Lang181 =	Submit
-	t_Lang182 =	Ból ből
-	t_Lang183 =	Név
-	t_Lang184 =	Email
-	t_Lang185 =	Tantárgy
-	t_Lang186 =	Üzenet
-	t_Lang187 =	Változtatások mentése?
-	t_Lang188 =	Nyelvi fájl
-	t_Lang189 =	Referencia Fájl
-	t_Lang190 =	Küldje el felülvizsgálatát vagy új fordítás
-	t_Lang191 =	Mindet összecsuk
-	t_Lang192 =	Az összes kibontása
-	t_Lang193 =	Karşı
-	t_Lang194 =	Nyelv
+	t_Lang182 =	Név
+	t_Lang183 =	Változtatások mentése?
+	t_Lang184 =	Nyelvi fájl
+	t_Lang185 =	Referencia Fájl
+	t_Lang186 =	Küldje el felülvizsgálatát vagy új fordítás
+	t_Lang187 =	Mindet összecsuk
+	t_Lang188 =	Az összes kibontása
+	t_Lang189 =	Nyelv
+	t_Lang190 =	Átalakítás sortöréseket
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Nyitva
@@ -840,6 +850,9 @@
 	d_Lang104 =	Ez az üzenet nem jelenik meg újra ugyanazt a frissítést. Itt töltheti le a Súgó menü > Frissítések keresése.
 	d_Lang105 =	Fájl elküldése sikeres. Köszönöm!
 	d_Lang106 =	Nyelvi fájlok frissítése.
+	d_Lang107 =	Nem sikerült elindítani a timer
+	d_Lang108 =	Az összes találat van bejegyezve. Kérjük, törölje az egyiket.
+	d_Lang109 =	Cél címke nem létezik.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Hozhat létre makrók a Command gombok a fő ablakban, vagy a felvevő másolni a tevékenységét. Válassza az Opciók > Beállítások > Felvétel kiválasztható, hogy milyen bemeneteket kerülnek rögzítésre.
@@ -1135,6 +1148,7 @@
 	Exit	Kilép az aktuális téma, vagy (ha a szkript nem tartós, és nem tartalmaz gyorsbillentyűket) az egész forgatókönyvet.
 	ExitApp	Leállítja a forgatókönyvet feltétel nélkül.
 	Exp	Visszatér e (ami megközelítőleg 2,71828182845905) emelte az n-edik hatalom.
+	Expression	Egy vagy több olyan műveleteket, miután egy sor változó, szó húrok, és / vagy a szó szerinti számokat.
 	FileAppend	Írja a szöveget a végén egy fájl (első fájl létrehozásával, ha szükséges).
 	FileCopy	Másolatok egy vagy több fájlt.
 	FileCopyDir	Másolja a mappa mellett minden al-mappák és fájlok (hasonló a xcopy).

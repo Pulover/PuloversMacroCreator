@@ -246,7 +246,7 @@
 	w_Lang064 =	Variables / Matriu (Shift+F10)
 	w_Lang065 =	Funcions / Mètodes de matriu (Ctrl+F10)
 	w_Lang066 =	Internet Explorer (F11)
-	w_Lang067 =	COM Interface (Shift+F11)
+	w_Lang067 =	Expressió / COM Interface (Shift+F11)
 	w_Lang068 =	Executar Scriptlet (Ctrl+F11)
 	w_Lang069 =	Missatges de Windows (F12)
 	w_Lang070 =	Afegiu la clau de Windows per "Play" tecla d'accés ràpid
@@ -301,7 +301,7 @@
 	c_Lang010 =	Variables
 	c_Lang011 =	Funcions / Mètodes de matriu
 	c_Lang012 =	Internet Explorer
-	c_Lang013 =	COM Interface
+	c_Lang013 =	Expressió / COM Interface
 	c_Lang014 =	Seleccionar aplicació (Avançat)
 	c_Lang015 =	Missatge
 	c_Lang016 =	Controlar
@@ -362,7 +362,7 @@
 	c_Lang071 =	Variacions
 	c_Lang072 =	Avanç
 	c_Lang073 =	Bucle
-	c_Lang074 =	* No funciona en la manera Reproducció Manual.
+	c_Lang074 =	Creació automàtica d'objectes COM
 	c_Lang075 =	Trencar
 	c_Lang076 =	Continuar
 	c_Lang077 =	Goto
@@ -513,6 +513,20 @@
 	c_Lang223 =	Variables globals
 	c_Lang224 =	Variables locals
 	c_Lang225 =	Variables estàtiques
+	c_Lang226 =	Des
+	c_Lang227 =	Correu
+	c_Lang228 =	Assignatura
+	c_Lang229 =	Missatge
+	c_Lang230 =	Till
+	c_Lang231 =	CC
+	c_Lang232 =	CCO
+	c_Lang233 =	Adjuntar arxius
+	c_Lang234 =	HTML
+	c_Lang235 =	Envia un correu electrònic
+	c_Lang236 =	Descàrrega de fitxers / Pujar
+	c_Lang237 =	Zip / descomprimir arxius
+	c_Lang238 =	Encendre
+	c_Lang239 =	Tanca
 		
 ; 16. Other Windows		
 	t_Lang001 =	Exporta a AutoHotkey
@@ -696,19 +710,15 @@
 	t_Lang179 =	Crear nou
 	t_Lang180 =	Utilitzeu Intro, Av Pàg i Re Pàg per navegar.
 	t_Lang181 =	Presentar
-	t_Lang182 =	Des
-	t_Lang183 =	Nom
-	t_Lang184 =	Correu
-	t_Lang185 =	Assignatura
-	t_Lang186 =	Missatge
-	t_Lang187 =	Guardar canvis?
-	t_Lang188 =	Idioma del fitxer
-	t_Lang189 =	Referència de l'expedient
-	t_Lang190 =	Presentar revisió o nova traducció
-	t_Lang191 =	Col · lapsar tot
-	t_Lang192 =	Expandir tot
-	t_Lang193 =	Till
-	t_Lang194 =	Idioma
+	t_Lang182 =	Nom
+	t_Lang183 =	Guardar canvis?
+	t_Lang184 =	Idioma del fitxer
+	t_Lang185 =	Referència de l'expedient
+	t_Lang186 =	Presentar revisió o nova traducció
+	t_Lang187 =	Col · lapsar tot
+	t_Lang188 =	Expandir tot
+	t_Lang189 =	Idioma
+	t_Lang190 =	Converteix salts de línia
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Obert
@@ -840,6 +850,9 @@
 	d_Lang104 =	Aquest missatge no es mostra una altra vegada per la mateixa actualització. Es pot descarregar des del menú Ajuda > Cerca actualitzacions.
 	d_Lang105 =	Arxiu enviat amb èxit. Gràcies!
 	d_Lang106 =	Els arxius d'idioma actualitzats amb èxit.
+	d_Lang107 =	No s'ha pogut iniciar el temporitzador
+	d_Lang108 =	Totes les posicions estan registrats. Si us plau, elimini un d'ells.
+	d_Lang109 =	Etiqueta de destinació no existeix.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Podeu crear macros utilitzant els botons de comandament a la finestra principal o l'ús de la gravadora per copiar les seves accions. Aneu a Opcions> Configuració> Gravació per seleccionar el que es registren les entrades.
@@ -1135,6 +1148,7 @@
 	Exit	Surt del subprocés actual o (si el guió no és persistent i no conté tecles d'accés ràpid) tota la seqüència de comandaments .
 	ExitApp	Acaba la seqüència de comandaments de manera incondicional .
 	Exp	Retorna i (que és aproximadament 2,71828182845905) elevat a la potència N - èsim .
+	Expression	Realitza una o més operacions en una sèrie de variables, les cadenes literals, i / o números literals.
 	FileAppend	Escriu text en el final d'un arxiu (creant primer l'arxiu , si cal) .
 	FileCopy	Copia un o més arxius .
 	FileCopyDir	Còpia una carpeta amb totes les seves subcarpetes i arxius (similar a xcopy) .

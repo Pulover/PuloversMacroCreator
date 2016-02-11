@@ -246,7 +246,7 @@
 	w_Lang064 =	变量 / 배열(&V) (Shift+F10)
 	w_Lang065 =	函数 / 阵列方法 (Ctrl+F10)
 	w_Lang066 =	IE浏览器(F11)
-	w_Lang067 =	COM接口(Shift+F11)
+	w_Lang067 =	表达式 / COM接口 (التحول + F11)
 	w_Lang068 =	运行小脚本(Ctrl+F11)
 	w_Lang069 =	Windows消息(F12)
 	w_Lang070 =	添加Windows键到“回放”热键
@@ -301,7 +301,7 @@
 	c_Lang010 =	变量
 	c_Lang011 =	函数 / 阵列方法
 	c_Lang012 =	IE浏览器
-	c_Lang013 =	COM接口
+	c_Lang013 =	表达式 / COM接口
 	c_Lang014 =	选择程序（高级）
 	c_Lang015 =	消息
 	c_Lang016 =	控件
@@ -362,7 +362,7 @@
 	c_Lang071 =	变体
 	c_Lang072 =	预览
 	c_Lang073 =	循环
-	c_Lang074 =	* 手动回放时无效。
+	c_Lang074 =	自動的にCOMオブジェクトを作成
 	c_Lang075 =	中断
 	c_Lang076 =	继续
 	c_Lang077 =	转到
@@ -513,6 +513,20 @@
 	c_Lang223 =	全局变量
 	c_Lang224 =	局部变量
 	c_Lang225 =	静态变量
+	c_Lang226 =	从
+	c_Lang227 =	电子邮件
+	c_Lang228 =	学科
+	c_Lang229 =	信息
+	c_Lang230 =	至
+	c_Lang231 =	抄送
+	c_Lang232 =	密件抄送
+	c_Lang233 =	附加文件
+	c_Lang234 =	HTML
+	c_Lang235 =	发电子邮件
+	c_Lang236 =	下载/上传文件
+	c_Lang237 =	压缩/解压缩文件
+	c_Lang238 =	打开
+	c_Lang239 =	关掉
 		
 ; 16. Other Windows		
 	t_Lang001 =	导出为AutoHotkey
@@ -696,19 +710,15 @@
 	t_Lang179 =	创建新的
 	t_Lang180 =	使用输入，PgDn键和PgUp键进行导航。
 	t_Lang181 =	提交
-	t_Lang182 =	从
-	t_Lang183 =	名称
-	t_Lang184 =	电子邮件
-	t_Lang185 =	学科
-	t_Lang186 =	信息
-	t_Lang187 =	保存更改？
-	t_Lang188 =	语言文件
-	t_Lang189 =	参考文件
-	t_Lang190 =	提交修订或新的翻译
-	t_Lang191 =	全部收缩
-	t_Lang192 =	展开全部
-	t_Lang193 =	至
-	t_Lang194 =	语言
+	t_Lang182 =	名称
+	t_Lang183 =	保存更改？
+	t_Lang184 =	语言文件
+	t_Lang185 =	参考文件
+	t_Lang186 =	提交修订或新的翻译
+	t_Lang187 =	全部收缩
+	t_Lang188 =	展开全部
+	t_Lang189 =	语言
+	t_Lang190 =	换行符
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	打开
@@ -840,6 +850,9 @@
 	d_Lang104 =	이 메시지는 같은 업데이트를 다시 표시되지 않습니다. 당신은 업데이트 확인 > 도움말 메뉴에서 다운로드 할 수 있습니다.
 	d_Lang105 =	파일이 성공적으로 전송. 고맙습니다!
 	d_Lang106 =	언어 파일이 성공적으로 업데이트되었습니다.
+	d_Lang107 =	无法启动计时器
+	d_Lang108 =	所有位置被登记。请删除其中之一。
+	d_Lang109 =	目标标签不存在。
 		
 ; 18. Start-up Tips		
 	Start_Tips =	您可以用主窗口中的命令按钮创建宏或使用录制器录制您的操作。打开选项>设置>录制来选择录制哪些类型。
@@ -1135,6 +1148,7 @@
 	Exit	退出当前线程或（如果脚本不是持续运行的且不包含热键时）整个脚本。
 	ExitApp	无条件终止脚本。
 	Exp	返回e（其近似值为2.71828182845905）的N次幂。
+	Expression	在一系列的变量，文字串，和/或文字的数字执行一个或多个操作。
 	FileAppend	在文件末尾处追加文本（如果有必要，首先创建文本）。
 	FileCopy	复制一个或多个文件。
 	FileCopyDir	复制文件夹及其所有子文件夹和文件（类似于xcopy）。

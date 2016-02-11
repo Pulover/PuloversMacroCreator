@@ -246,7 +246,7 @@
 	w_Lang064 =	Zmiennych / Macierze (Shift+F10)
 	w_Lang065 =	Funkcje / Metody tablicy (Ctrl+F10)
 	w_Lang066 =	Internet Explorer (F11)
-	w_Lang067 =	COM interfejsu (Shift+F11)
+	w_Lang067 =	Wyrażenie / Interfejs COM (Shift+F11)
 	w_Lang068 =	Uruchom Scriptlet (Ctrl+F11)
 	w_Lang069 =	Komunikaty Windows (F12)
 	w_Lang070 =	Dodaj klawisz Windows na "Zagraj" skrótu
@@ -301,7 +301,7 @@
 	c_Lang010 =	Zmienne
 	c_Lang011 =	Funkcje / Metody tablicy
 	c_Lang012 =	Internet Explorer
-	c_Lang013 =	Interfejs COM
+	c_Lang013 =	Wyrażenie / Interfejs COM
 	c_Lang014 =	Wybierz aplikację (Advanced)
 	c_Lang015 =	Wiadomość
 	c_Lang016 =	Sterowanie
@@ -362,7 +362,7 @@
 	c_Lang071 =	Odmiany
 	c_Lang072 =	Podgląd
 	c_Lang073 =	Pętla
-	c_Lang074 =	* Nie działa w ręcznym odtwarzania.
+	c_Lang074 =	Automatyczne tworzenie obiektu COM
 	c_Lang075 =	Złamać
 	c_Lang076 =	Kontynuować
 	c_Lang077 =	Goto
@@ -513,6 +513,20 @@
 	c_Lang223 =	Zmienne globalne
 	c_Lang224 =	Zmienne lokalne
 	c_Lang225 =	Zmienne statyczne
+	c_Lang226 =	Od
+	c_Lang227 =	E-mail
+	c_Lang228 =	Przedmiot
+	c_Lang229 =	Wiadomość
+	c_Lang230 =	Do
+	c_Lang231 =	CC
+	c_Lang232 =	UDW
+	c_Lang233 =	Dołącz pliki
+	c_Lang234 =	HTML
+	c_Lang235 =	Wysłać email
+	c_Lang236 =	Download / upload plików
+	c_Lang237 =	Zip / Rozpakuj pliki
+	c_Lang238 =	Włączyć
+	c_Lang239 =	Wyłączyć
 		
 ; 16. Other Windows		
 	t_Lang001 =	Eksport do AutoHotkey
@@ -696,19 +710,15 @@
 	t_Lang179 =	Tworzyć nowe
 	t_Lang180 =	Użyj Enter, PgDn i PgUp, aby poruszać.
 	t_Lang181 =	Wyślij
-	t_Lang182 =	Od
-	t_Lang183 =	Imię
-	t_Lang184 =	E-mail
-	t_Lang185 =	Przedmiot
-	t_Lang186 =	Wiadomość
-	t_Lang187 =	Zapisz zmiany?
-	t_Lang188 =	Język pliku
-	t_Lang189 =	Referencyjny nadany
-	t_Lang190 =	Zatwierdź zmiany lub nowe tłumaczenie
-	t_Lang191 =	Zwinąć wszystkie
-	t_Lang192 =	Rozwiń wszystkie
-	t_Lang193 =	Do
-	t_Lang194 =	Język
+	t_Lang182 =	Imię
+	t_Lang183 =	Zapisz zmiany?
+	t_Lang184 =	Język pliku
+	t_Lang185 =	Referencyjny nadany
+	t_Lang186 =	Zatwierdź zmiany lub nowe tłumaczenie
+	t_Lang187 =	Zwinąć wszystkie
+	t_Lang188 =	Rozwiń wszystkie
+	t_Lang189 =	Język
+	t_Lang190 =	Konwersja podziały wiersza
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Otwarte
@@ -840,6 +850,9 @@
 	d_Lang104 =	Ta wiadomość nie pojawi się ponownie w tej samej aktualizacji. Można go pobrać z menu Pomoc > Sprawdź aktualizacje.
 	d_Lang105 =	Plik wysłany. Dziękuję!
 	d_Lang106 =	Pliki językowe zaktualizowane pomyślnie.
+	d_Lang107 =	Nie można uruchomić stoper
+	d_Lang108 =	Wszystkie pozycje są rejestrowane. Proszę o usunięcie jednego z nich.
+	d_Lang109 =	Etykieta docelowa nie istnieje.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Makra można tworzyć za pomocą przycisków poleceń w oknie głównym lub za pomocą dyktafonu skopiować swoje działania. Przejdź do Opcje > Ustawienia > Nagrywanie, aby wybrać to, co wejścia zostaną zapisane.
@@ -1135,6 +1148,7 @@
 	Exit	Zamykabieżący wątek lub (jeśli skrypt nie jest trwały i nie zawiera żadnych skrótów)cały skrypt .
 	ExitApp	Kończy skrypt bezwarunkowo.
 	Exp	E Returns (co stanowi około +2,71828182845905) podniesione do potęgi .
+	Expression	Wykonuje jedną lub więcej operacji na serii zmiennych, tekstowymi i / lub numerów dosłownych.
 	FileAppend	Zapisuje tekst na końcu pliku (pierwsze tworzenia pliku , jeśli to konieczne) .
 	FileCopy	Kopiuje jeden lub więcej plików.
 	FileCopyDir	Kopiuje folder wraz ze wszystkimi jego podfolderów i plików (podobny do xcopy) .

@@ -246,7 +246,7 @@
 	w_Lang064 =	Variabler / Arrayer (Shift+F10)
 	w_Lang065 =	Funktioner / Array metoder (Ctrl+F10)
 	w_Lang066 =	Internet Explorer (F11)
-	w_Lang067 =	COM-gränssnitt (Skift+F11)
+	w_Lang067 =	Expression / COM-gränssnitt (Skift+F11)
 	w_Lang068 =	Kör Skriptlet (Ctrl+F11)
 	w_Lang069 =	Windows-meddelanden (F12)
 	w_Lang070 =	Lägg den Windows-tangenten till "Play" hotkey
@@ -301,7 +301,7 @@
 	c_Lang010 =	Variabler
 	c_Lang011 =	Funktioner / Array metoder
 	c_Lang012 =	Internet Explorer
-	c_Lang013 =	COM-gränssnitt
+	c_Lang013 =	Expression / COM-gränssnitt
 	c_Lang014 =	Välj program (Avancerad)
 	c_Lang015 =	Meddelande
 	c_Lang016 =	Kontroll
@@ -362,7 +362,7 @@
 	c_Lang071 =	Variationer
 	c_Lang072 =	Förhandsgranska
 	c_Lang073 =	Loop
-	c_Lang074 =	* Fungerar inte i manuel uppspelning.
+	c_Lang074 =	automatiskt skapa COM-objekt
 	c_Lang075 =	Break
 	c_Lang076 =	Fortsätt
 	c_Lang077 =	Gå
@@ -513,6 +513,20 @@
 	c_Lang223 =	Globala variabler
 	c_Lang224 =	Lokala variabler
 	c_Lang225 =	Statiska variabler
+	c_Lang226 =	Från
+	c_Lang227 =	E-post
+	c_Lang228 =	Ämne
+	c_Lang229 =	Meddelande
+	c_Lang230 =	Till
+	c_Lang231 =	CC
+	c_Lang232 =	BCC
+	c_Lang233 =	Bifoga filer
+	c_Lang234 =	HTML
+	c_Lang235 =	Skicka epost
+	c_Lang236 =	Ladda ner / Ladda upp filer
+	c_Lang237 =	Zip / packa upp filer
+	c_Lang238 =	Sätta på
+	c_Lang239 =	Stäng av
 		
 ; 16. Other Windows		
 	t_Lang001 =	Exportera till AutoHotkey
@@ -696,19 +710,15 @@
 	t_Lang179 =	Skapa ny
 	t_Lang180 =	Använd Enter, PgDn och PgUp att navigera.
 	t_Lang181 =	Överlämna
-	t_Lang182 =	Från
-	t_Lang183 =	Namn
-	t_Lang184 =	E-post
-	t_Lang185 =	Ämne
-	t_Lang186 =	Meddelande
-	t_Lang187 =	Spara ändringar?
-	t_Lang188 =	Språkfil
-	t_Lang189 =	Referens Arkiv
-	t_Lang190 =	Skicka in revision eller nyöversättning
-	t_Lang191 =	Kollapsa alla
-	t_Lang192 =	Expandera alla
-	t_Lang193 =	Till
-	t_Lang194 =	Språk
+	t_Lang182 =	Namn
+	t_Lang183 =	Spara ändringar?
+	t_Lang184 =	Språkfil
+	t_Lang185 =	Referens Arkiv
+	t_Lang186 =	Skicka in revision eller nyöversättning
+	t_Lang187 =	Kollapsa alla
+	t_Lang188 =	Expandera alla
+	t_Lang189 =	Språk
+	t_Lang190 =	Konvertera radbrytningar
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Öppet
@@ -840,6 +850,9 @@
 	d_Lang104 =	Meddelandet kommer inte att visas igen för samma uppdatering. Du kan ladda ner den från Hjälp-menyn > Sök efter uppdateringar.
 	d_Lang105 =	Arkiv skickats. Tack!
 	d_Lang106 =	Språkfiler uppdaterats.
+	d_Lang107 =	Det gick inte att starta timer
+	d_Lang108 =	Alla positioner registreras. Vänligen, ta bort en av dem.
+	d_Lang109 =	Existerar inte måletiketten.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Du kan skapa makron med hjälp av kommandoknapparna i huvudfönstret eller använda inspelaren för att kopiera dina handlingar. Gå till Alternativ> Inställningar> Inspelning för att välja vilka ingångar kommer att registreras.
@@ -1135,6 +1148,7 @@
 	Exit	Avslutar den aktuella tråden eller (om skriptet inte är ihållande och innehåller inga snabbtangenter) hela manuset .
 	ExitApp	Avslutar scriptet villkorslöst .
 	Exp	Returer e (vilket är ca 2,71828182845905) upphöjt till N: te makten .
+	Expression	Utför en eller flera operationer på en rad variabler, bokstav strängar och / eller bokstav siffror.
 	FileAppend	Skriver text till slutet av en fil (först att skapa filen , om nödvändigt).
 	FileCopy	Kopierar en eller flera filer .
 	FileCopyDir	Kopierar en mapp tillsammans med alla dess undermappar och filer (liknar xcopy) .

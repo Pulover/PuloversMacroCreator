@@ -246,7 +246,7 @@
 	w_Lang064 =	Variabler / Arrays (Shift+F10)
 	w_Lang065 =	Funktioner / Array-metoder (Ctrl+F10)
 	w_Lang066 =	Internet Explorer (F11)
-	w_Lang067 =	COM Interface (Shift+F11)
+	w_Lang067 =	Expression / COM interface (Shift+F11)
 	w_Lang068 =	Kør Scriptlet (Ctrl+F11)
 	w_Lang069 =	Windows Messages (F12)
 	w_Lang070 =	Tilføj på Windows-tasten på "Play" genvejen
@@ -301,7 +301,7 @@
 	c_Lang010 =	Variabler
 	c_Lang011 =	Funktioner / Array-metoder
 	c_Lang012 =	Internet Explorer
-	c_Lang013 =	COM interface
+	c_Lang013 =	Expression / COM interface
 	c_Lang014 =	Vælg program (Avanceret)
 	c_Lang015 =	Besked
 	c_Lang016 =	Kontrol
@@ -362,7 +362,7 @@
 	c_Lang071 =	Variationer
 	c_Lang072 =	Eksempel
 	c_Lang073 =	Loop
-	c_Lang074 =	* Fungerer ikke i manuel afspilning.
+	c_Lang074 =	Opret automatisk COM objekt
 	c_Lang075 =	Break
 	c_Lang076 =	Fortsæt
 	c_Lang077 =	Goto
@@ -513,6 +513,20 @@
 	c_Lang223 =	Globale variabler
 	c_Lang224 =	Lokale variabler
 	c_Lang225 =	Statiske variabler
+	c_Lang226 =	Fra
+	c_Lang227 =	E-mail
+	c_Lang228 =	Emne
+	c_Lang229 =	Besked
+	c_Lang230 =	Naar
+	c_Lang231 =	CC
+	c_Lang232 =	BCC
+	c_Lang233 =	Vedhæft filer
+	c_Lang234 =	HTML
+	c_Lang235 =	Send e-mail
+	c_Lang236 =	Download / Upload filer
+	c_Lang237 =	Zip / Unzip filer
+	c_Lang238 =	Tænde for
+	c_Lang239 =	Sluk
 		
 ; 16. Other Windows		
 	t_Lang001 =	Eksporter til AutoHotkey
@@ -696,19 +710,15 @@
 	t_Lang179 =	Opret ny
 	t_Lang180 =	Brug Enter, at PgDn og PgUp navigere.
 	t_Lang181 =	Indsend
-	t_Lang182 =	Fra
-	t_Lang183 =	Navn
-	t_Lang184 =	E-mail
-	t_Lang185 =	Emne
-	t_Lang186 =	Besked
-	t_Lang187 =	Gem ændringer?
-	t_Lang188 =	Sprog fil
-	t_Lang189 =	Henvisning fil
-	t_Lang190 =	Indsend revision eller ny oversættelse
-	t_Lang191 =	Skjul alle
-	t_Lang192 =	Udvid alle
-	t_Lang193 =	Naar
-	t_Lang194 =	Sprog
+	t_Lang182 =	Navn
+	t_Lang183 =	Gem ændringer?
+	t_Lang184 =	Sprog fil
+	t_Lang185 =	Henvisning fil
+	t_Lang186 =	Indsend revision eller ny oversættelse
+	t_Lang187 =	Skjul alle
+	t_Lang188 =	Udvid alle
+	t_Lang189 =	Sprog
+	t_Lang190 =	Konverter linjeskift
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Åbent
@@ -840,6 +850,9 @@
 	d_Lang104 =	Denne meddelelse vil ikke blive vist igen til samme opdatering. Du kan downloade det fra menuen Hjælp > Søg efter opdateringer.
 	d_Lang105 =	Fil sendt. Tak!
 	d_Lang106 =	Sprogfiler opdateret.
+	d_Lang107 =	Kunne ikke starte timeren
+	d_Lang108 =	Alle positioner er registreret. Venligst, slette en af dem.
+	d_Lang109 =	Måletiketten findes ikke.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Du kan oprette makroer ved hjælp af kommandoen knapper i hovedvinduet eller ved hjælp af optageren til at kopiere dine handlinger. Gå til Valg > Indstillinger > Optagelse at vælge, hvad input vil blive registreret.
@@ -1135,6 +1148,7 @@
 	Exit	Afslutter aktuelle tråd , eller (hvis scriptet ikke er vedvarende , og indeholder ingen genvejstaster) hele scriptet .
 	ExitApp	Afslutter scriptet betingelsesløst.
 	Exp	Returnerer e (der er ca 2,71828182845905) opløftet til n'te potens .
+	Expression	Udfører en eller flere operationer på en række variabler, bogstavelige strenge, og / eller bogstavelige numre.
 	FileAppend	Skriver tekst til slutningen af en fil (første opretter filen , hvis det er nødvendigt) .
 	FileCopy	Kopierer en eller flere filer.
 	FileCopyDir	Kopierer en mappe sammen med alle dens undermapper og filer (svarende til xcopy) .

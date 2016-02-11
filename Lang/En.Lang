@@ -246,7 +246,7 @@
 	w_Lang064 =	Variables / Arrays (Shift+F10)
 	w_Lang065 =	Functions / Array Methods (Ctrl+F10)
 	w_Lang066 =	Internet Explorer (F11)
-	w_Lang067 =	COM Interface (Shift+F11)
+	w_Lang067 =	Expression / COM Interface (Shift+F11)
 	w_Lang068 =	Run Scriptlet (Ctrl+F11)
 	w_Lang069 =	Windows Messages (F12)
 	w_Lang070 =	Add the Windows key to "Play" hotkey
@@ -301,7 +301,7 @@
 	c_Lang010 =	Variables
 	c_Lang011 =	Functions / Array Methods
 	c_Lang012 =	Internet Explorer
-	c_Lang013 =	COM Interface
+	c_Lang013 =	Expression / COM Interface
 	c_Lang014 =	Select Application (Advanced)
 	c_Lang015 =	Message
 	c_Lang016 =	Control
@@ -362,7 +362,7 @@
 	c_Lang071 =	Variations
 	c_Lang072 =	Preview
 	c_Lang073 =	Loop
-	c_Lang074 =	* Does not work in Manual Playback.
+	c_Lang074 =	Automatically create COM object
 	c_Lang075 =	Break
 	c_Lang076 =	Continue
 	c_Lang077 =	Goto
@@ -513,6 +513,20 @@
 	c_Lang223 =	Global Variables
 	c_Lang224 =	Local Variables
 	c_Lang225 =	Static Variables
+	c_Lang226 =	From
+	c_Lang227 =	Email
+	c_Lang228 =	Subject
+	c_Lang229 =	Message
+	c_Lang230 =	To
+	c_Lang231 =	CC
+	c_Lang232 =	BCC
+	c_Lang233 =	Attach files
+	c_Lang234 =	HTML
+	c_Lang235 =	Send Email
+	c_Lang236 =	Download / Upload files
+	c_Lang237 =	Zip / Unzip files
+	c_Lang238 =	Turn on
+	c_Lang239 =	Turn off
 		
 ; 16. Other Windows		
 	t_Lang001 =	Export to AutoHotkey
@@ -696,19 +710,15 @@
 	t_Lang179 =	Create New
 	t_Lang180 =	Use Enter, PgDn and PgUp to navigate.
 	t_Lang181 =	Submit
-	t_Lang182 =	From
-	t_Lang183 =	Name
-	t_Lang184 =	Email
-	t_Lang185 =	Subject
-	t_Lang186 =	Message
-	t_Lang187 =	Save changes?
-	t_Lang188 =	Language File
-	t_Lang189 =	Reference File
-	t_Lang190 =	Submit revision or new translation
-	t_Lang191 =	Collapse all
-	t_Lang192 =	Expand all
-	t_Lang193 =	To
-	t_Lang194 =	Language
+	t_Lang182 =	Name
+	t_Lang183 =	Save changes?
+	t_Lang184 =	Language File
+	t_Lang185 =	Reference File
+	t_Lang186 =	Submit revision or new translation
+	t_Lang187 =	Collapse all
+	t_Lang188 =	Expand all
+	t_Lang189 =	Language
+	t_Lang190 =	Convert line breaks
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Open
@@ -840,6 +850,9 @@
 	d_Lang104 =	This message will not be shown again for the same update. You can download it from the Help menu > Check for updates.
 	d_Lang105 =	File sent successfully. Thank you!
 	d_Lang106 =	Language files updated successfully.
+	d_Lang107 =	Could not start timer
+	d_Lang108 =	All positions are registered. Please, delete one of them.
+	d_Lang109 =	Target label does not exist.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	You can create Macros using the Command Buttons in the main window or using the Recorder to copy your actions. Go to Options > Settings > Recording to select what inputs will be recorded.
@@ -1135,6 +1148,7 @@
 	Exit	Exits the current thread or (if the script is not persistent and contains no hotkeys) the entire script.
 	ExitApp	Terminates the script unconditionally.
 	Exp	Returns e (which is approximately 2.71828182845905) raised to the Nth power.
+	Expression	Performs one or more operations upon a series of variables, literal strings, and/or literal numbers.
 	FileAppend	Writes text to the end of a file (first creating the file, if necessary).
 	FileCopy	Copies one or more files.
 	FileCopyDir	Copies a folder along with all its sub-folders and files (similar to xcopy).

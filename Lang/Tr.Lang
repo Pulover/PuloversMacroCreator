@@ -246,7 +246,7 @@
 	w_Lang064 =	Değişkenler / Diziler (F10+Shift)
 	w_Lang065 =	İşlevler / Dizi yöntemleri (Ctrl+F10)
 	w_Lang066 =	Internet Explorer (F11)
-	w_Lang067 =	COM Arabirimi (Shift+F11)
+	w_Lang067 =	Ifade / COM Arabirimi (Shift+F11)
 	w_Lang068 =	Komut Dosyası Çalıştırmak (Ctrl+F11)
 	w_Lang069 =	Windows iletileri (F12)
 	w_Lang070 =	Kısayol tuşu "Play" için Windows tuşu ekle
@@ -301,7 +301,7 @@
 	c_Lang010 =	Değişkenler
 	c_Lang011 =	İşlevler / Dizi yöntemleri
 	c_Lang012 =	Internet Explorer
-	c_Lang013 =	COM Arabirimi
+	c_Lang013 =	Ifade / COM Arabirimi
 	c_Lang014 =	Select Application (Gelişmiş)
 	c_Lang015 =	Mesaj
 	c_Lang016 =	Kontrol
@@ -362,7 +362,7 @@
 	c_Lang071 =	Varyasyonlar
 	c_Lang072 =	Önizleme
 	c_Lang073 =	Döngü
-	c_Lang074 =	* Manuel Oynatma çalışmaz.
+	c_Lang074 =	Otomatik olarak COM nesnesi oluşturmak
 	c_Lang075 =	Kırmak
 	c_Lang076 =	Devam etmek
 	c_Lang077 =	Goto
@@ -513,6 +513,20 @@
 	c_Lang223 =	Küresel Değişkenler
 	c_Lang224 =	Yerel Değişkenler
 	c_Lang225 =	Statik Değişkenler
+	c_Lang226 =	Gönderen
+	c_Lang227 =	E-posta
+	c_Lang228 =	Tabi
+	c_Lang229 =	Mesaj
+	c_Lang230 =	Karşı
+	c_Lang231 =	CC
+	c_Lang232 =	GIZLI
+	c_Lang233 =	Dosyaları ekle
+	c_Lang234 =	HTML
+	c_Lang235 =	Eposta gönder
+	c_Lang236 =	İndirme / Yükleme dosyaları
+	c_Lang237 =	Zip / Sıkıştırılmış dosya
+	c_Lang238 =	Aç
+	c_Lang239 =	Kapat
 		
 ; 16. Other Windows		
 	t_Lang001 =	AutoHotkey Aktar
@@ -696,19 +710,15 @@
 	t_Lang179 =	Yeni oluştur
 	t_Lang180 =	Enter kullanın, PgDn ve PgUp gezinmek için.
 	t_Lang181 =	Gönder
-	t_Lang182 =	Gönderen
-	t_Lang183 =	Isim
-	t_Lang184 =	E-posta
-	t_Lang185 =	Tabi
-	t_Lang186 =	Mesaj
-	t_Lang187 =	Değişiklikleri Kaydet?
-	t_Lang188 =	Dil Dosyası
-	t_Lang189 =	Referans Dosyası
-	t_Lang190 =	Revizyon ya da yeni çeviri Gönder
-	t_Lang191 =	Tüm daraltmak
-	t_Lang192 =	Hepsini genişlet
-	t_Lang193 =	Karşı
-	t_Lang194 =	Dil
+	t_Lang182 =	Isim
+	t_Lang183 =	Değişiklikleri Kaydet?
+	t_Lang184 =	Dil Dosyası
+	t_Lang185 =	Referans Dosyası
+	t_Lang186 =	Revizyon ya da yeni çeviri Gönder
+	t_Lang187 =	Tüm daraltmak
+	t_Lang188 =	Hepsini genişlet
+	t_Lang189 =	Dil
+	t_Lang190 =	Satır aralıklarını dönüştür
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Açık
@@ -840,6 +850,9 @@
 	d_Lang104 =	Bu mesaj aynı güncelleme için tekrar gösterilmeyecektir. Sen güncelleştirmeleri denetleyin > Yardım menüsünden indirebilirsiniz.
 	d_Lang105 =	Dosya başarıyla gönderildi. Teşekkür ederim!
 	d_Lang106 =	Dil dosyaları başarıyla güncellendi.
+	d_Lang107 =	Sayacını başlatmak olamazdı
+	d_Lang108 =	Tüm pozisyonlar kayıtlıdır. Bunlardan birini silin lütfen.
+	d_Lang109 =	Hedef etiket yok.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Bu ana pencerede komut düğmeleri kullanarak ya da eylemleri kopyalamak için Kayıt kullanarak Makrolar oluşturabilirsiniz. Seçenekler > Ayarlar > giriş kaydedilecektir ne seçmek için kayıt.
@@ -1135,6 +1148,7 @@
 	Exit	Çıkar Geçerli iş parçacığı veya (komut kalıcı değildir ve hiçbir kısayol tuşları varsa) tüm komut dosyası .
 	ExitApp	Koşulsuz script sonlandırır .
 	Exp	İade e (yaklaşık 2.71828182845905 olan)N. gücüne yükseltilmiş .
+	Expression	Değişkenler, dizeler ve / veya değişmez bir dizi sayı üzerine bir veya birden fazla işlemlerini gerçekleştirir.
 	FileAppend	Bir dosyanın sonuna (gerekirse önce ,dosya oluşturma) metin yazar.
 	FileCopy	Kopya bir veya daha fazla dosya .
 	FileCopyDir	Alt klasör ve dosyaları (xcopy benzer) ile birlikte tüm bir klasör kopyalar .

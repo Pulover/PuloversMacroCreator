@@ -135,8 +135,8 @@ F6::GoSub, Window
 F7::GoSub, Image
 F8::GoSub, Run
 F9::GoSub, ComLoop
-+F9::GoSub, AddLabel
-^F9::GoSub, ComGoto
++F9::GoSub, ComGoto
+^F9::GoSub, TimedLabel
 F10::GoSub, IfSt
 +F10::GoSub, AsVar
 ^F10::GoSub, AsFunc

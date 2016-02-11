@@ -246,7 +246,7 @@
 	w_Lang064 =	Variables / Tableaux (Maj+F10)
 	w_Lang065 =	Fonctions / Modes de matrice (Ctrl+F10)
 	w_Lang066 =	Internet Explorer (F11)
-	w_Lang067 =	Interface COM (Maj+F11)
+	w_Lang067 =	Expression / Interface COM (Maj+F11)
 	w_Lang068 =	Exécuter Scriplet (Ctrl+F11)
 	w_Lang069 =	Messages de Windows (F12)
 	w_Lang070 =	Ajoutez la touche Windows de "jouer" raccourci
@@ -301,7 +301,7 @@
 	c_Lang010 =	Variables
 	c_Lang011 =	Fonctions / Modes de matrice
 	c_Lang012 =	Internet Explorer
-	c_Lang013 =	Interface COM
+	c_Lang013 =	Expression / Interface COM
 	c_Lang014 =	Sélectionnez Application (Avancé)
 	c_Lang015 =	Un message
 	c_Lang016 =	Contrôler
@@ -362,7 +362,7 @@
 	c_Lang071 =	Variations
 	c_Lang072 =	Avant-première
 	c_Lang073 =	Boucle
-	c_Lang074 =	* Ne fonctionne pas en mode de lecture manuelle.
+	c_Lang074 =	créer automatiquement un objet COM
 	c_Lang075 =	Briser
 	c_Lang076 =	Continuer
 	c_Lang077 =	Aller à
@@ -513,6 +513,20 @@
 	c_Lang223 =	Variables globales
 	c_Lang224 =	Variables locales
 	c_Lang225 =	Variables statiques
+	c_Lang226 =	De
+	c_Lang227 =	Email
+	c_Lang228 =	Assujettir
+	c_Lang229 =	Message
+	c_Lang230 =	À
+	c_Lang231 =	CC
+	c_Lang232 =	CCI
+	c_Lang233 =	Joindre des fichiers
+	c_Lang234 =	HTML
+	c_Lang235 =	Envoyer un message
+	c_Lang236 =	Download / upload de fichiers
+	c_Lang237 =	Zip / dézipper les fichiers
+	c_Lang238 =	Allumer
+	c_Lang239 =	Éteindre
 		
 ; 16. Other Windows		
 	t_Lang001 =	Exporter vers AutoHotkey
@@ -696,19 +710,15 @@
 	t_Lang179 =	Créer nouveau
 	t_Lang180 =	Utilisez Entrez, PgDn et PgUp pour naviguer.
 	t_Lang181 =	Proposer
-	t_Lang182 =	De
-	t_Lang183 =	Prénom
-	t_Lang184 =	Email
-	t_Lang185 =	Assujettir
-	t_Lang186 =	Message
-	t_Lang187 =	Sauvegarder les changements?
-	t_Lang188 =	Fichier de langue
-	t_Lang189 =	Référence fichier
-	t_Lang190 =	Proposez une révision ou une nouvelle traduction
-	t_Lang191 =	Réduire tout
-	t_Lang192 =	Développer tout
-	t_Lang193 =	À
-	t_Lang194 =	Langue
+	t_Lang182 =	Prénom
+	t_Lang183 =	Sauvegarder les changements?
+	t_Lang184 =	Fichier de langue
+	t_Lang185 =	Référence fichier
+	t_Lang186 =	Proposez une révision ou une nouvelle traduction
+	t_Lang187 =	Réduire tout
+	t_Lang188 =	Développer tout
+	t_Lang189 =	Langue
+	t_Lang190 =	Convertir les sauts de ligne
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Ouvert
@@ -840,6 +850,9 @@
 	d_Lang104 =	Ce message ne sera pas affiché de nouveau pour la même mise à jour. Vous pouvez le télécharger à partir du menu Aide > Vérifier les mises à jour.
 	d_Lang105 =	Fichier envoyé avec succès. Je vous remercie!
 	d_Lang106 =	Les fichiers de langue mis à jour avec succès.
+	d_Lang107 =	Impossible de démarrer la minuterie
+	d_Lang108 =	Toutes les positions sont enregistrées. S'il vous plaît, supprimer l'un d'eux.
+	d_Lang109 =	Étiquette n'existe pas de cible.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Vous pouvez créer des macros à l'aide des boutons de commande dans la fenêtre principale ou en utilisant l'enregistreur de copier vos actions. Allez dans Options > Paramètres > Enregistrer pour sélectionner les entrées seront enregistrées.
@@ -1135,6 +1148,7 @@
 	Exit	Quitte le thread en cours ou (si le script n'est pas persistant et ne contient pas de raccourcis) le script entier .
 	ExitApp	Termine le script sans condition.
 	Exp	Retours e (qui est d'environ 2.71828182845905) élevé à la puissance n .
+	Expression	Effectue une ou plusieurs opérations sur une série de variables, les chaînes littérales, et / ou numéros littérales.
 	FileAppend	Ecrit texte à la fin d'un fichier (première création du fichier, si nécessaire).
 	FileCopy	Copie un ou plusieurs fichiers.
 	FileCopyDir	Copie d'un dossier avec tous ses sous- dossiers et fichiers (similaire à xcopy) .

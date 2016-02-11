@@ -246,7 +246,7 @@
 	w_Lang064 =	Variabelen / Scala (Shift+F10)
 	w_Lang065 =	Functies / Scala methoden (Ctrl+F10)
 	w_Lang066 =	Internet Explorer (F11)
-	w_Lang067 =	COM-interface (Shift+F11)
+	w_Lang067 =	Uitdrukking / COM-interface (Shift+F11)
 	w_Lang068 =	Run Scriptlet (Ctrl+F11)
 	w_Lang069 =	Windows Messages (F12)
 	w_Lang070 =	Voeg de Windows-toets op "Play" sneltoets
@@ -301,7 +301,7 @@
 	c_Lang010 =	Variabelen
 	c_Lang011 =	Functies / Scala methoden
 	c_Lang012 =	Internet Explorer
-	c_Lang013 =	COM-interface
+	c_Lang013 =	Uitdrukking / COM-interface
 	c_Lang014 =	Select Application (Geavanceerd)
 	c_Lang015 =	Bericht
 	c_Lang016 =	Controle
@@ -362,7 +362,7 @@
 	c_Lang071 =	Variaties
 	c_Lang072 =	Voorbeeld
 	c_Lang073 =	Lus
-	c_Lang074 =	* Werkt niet in de handmatige afspelen.
+	c_Lang074 =	Maak automatisch COM-object
 	c_Lang075 =	Breken
 	c_Lang076 =	Voortzetten
 	c_Lang077 =	Ga naar
@@ -513,6 +513,20 @@
 	c_Lang223 =	Global Variabelen
 	c_Lang224 =	Lokale variabelen
 	c_Lang225 =	Statische variabelen
+	c_Lang226 =	Van
+	c_Lang227 =	E-mail
+	c_Lang228 =	Onderwerpen
+	c_Lang229 =	Bericht
+	c_Lang230 =	Naar
+	c_Lang231 =	CC
+	c_Lang232 =	BCC
+	c_Lang233 =	Voeg bestanden toe
+	c_Lang234 =	HTML
+	c_Lang235 =	E-mail verzenden
+	c_Lang236 =	Download / Upload bestanden
+	c_Lang237 =	Zip / Unzip bestanden
+	c_Lang238 =	Aanzetten
+	c_Lang239 =	Uitschakelen
 		
 ; 16. Other Windows		
 	t_Lang001 =	Exporteren naar AutoHotkey
@@ -696,19 +710,15 @@
 	t_Lang179 =	Maak nieuw
 	t_Lang180 =	Gebruik Enter, PgDn en PgUp om te navigeren.
 	t_Lang181 =	Voorleggen
-	t_Lang182 =	Van
-	t_Lang183 =	Naam
-	t_Lang184 =	E-mail
-	t_Lang185 =	Onderwerpen
-	t_Lang186 =	Bericht
-	t_Lang187 =	Wijzigingen opslaan?
-	t_Lang188 =	Taalbestand
-	t_Lang189 =	Referentie Bestand
-	t_Lang190 =	Submit herziening of nieuwe vertaling
-	t_Lang191 =	Alles inklappen
-	t_Lang192 =	Alles uitklappen
-	t_Lang193 =	Naar
-	t_Lang194 =	Taal
+	t_Lang182 =	Naam
+	t_Lang183 =	Wijzigingen opslaan?
+	t_Lang184 =	Taalbestand
+	t_Lang185 =	Referentie Bestand
+	t_Lang186 =	Submit herziening of nieuwe vertaling
+	t_Lang187 =	Alles inklappen
+	t_Lang188 =	Alles uitklappen
+	t_Lang189 =	Taal
+	t_Lang190 =	Converteren regeleinden
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Open
@@ -840,6 +850,9 @@
 	d_Lang104 =	Dit bericht zal niet opnieuw worden getoond voor dezelfde-update. Je kunt het downloaden via het menu Help > Controleren op updates.
 	d_Lang105 =	Verzonden bestand met succes. Dank je!
 	d_Lang106 =	Taalbestanden bijgewerkt.
+	d_Lang107 =	Kan niet worden gestart timer
+	d_Lang108 =	Alle posities zijn geregistreerd. Gelieve, verwijder een van hen.
+	d_Lang109 =	LABEL bestaat niet.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	U kunt macro's met behulp van de Command Knoppen in het hoofdvenster of het gebruik van de recorder om uw acties te kopiëren creëren. Ga naar Opties > Instellingen > Opname te selecteren wat input wordt opgenomen.
@@ -1135,6 +1148,7 @@
 	Exit	Verlaat de huidige thread of (als het script is niet persistent en bevat geen hotkeys) het hele script .
 	ExitApp	Beëindigt het script onvoorwaardelijk .
 	Exp	Geeft e (dat is ongeveer 2,71828182845905) verheven tot de macht n .
+	Expression	Voert één of meer malen op een aantal variabelen, letterlijke strings en / of letterlijke getallen.
 	FileAppend	Schrijft tekst aan het einde van een bestand (het bestand eerst maken , indien nodig) .
 	FileCopy	Kopieën van een of meer bestanden .
 	FileCopyDir	Kopieert een folder samen met alle submappen en bestanden (vergelijkbaar met xcopy) .

@@ -264,6 +264,7 @@ IniRead, ComCr, %IniFilePath%, ExportOptions, ComCr, 1
 IniRead, ComAc, %IniFilePath%, ExportOptions, ComAc, 0
 IniRead, Send_Loop, %IniFilePath%, ExportOptions, Send_Loop, 0
 IniRead, TabIndent, %IniFilePath%, ExportOptions, TabIndent, 1
+IniRead, ConvertBreaks, %IniFilePath%, ExportOptions, ConvertBreaks, 1
 IniRead, IncPmc, %IniFilePath%, ExportOptions, IncPmc, 0
 IniRead, Exe_Exp, %IniFilePath%, ExportOptions, Exe_Exp, 0
 IniRead, ShowExpOpt, %IniFilePath%, ExportOptions, ShowExpOpt, 0
@@ -1072,6 +1073,7 @@ GoSub, LoadData
 TB_Edit(tbFile, "Preview", ShowPrev)
 ,	TB_Edit(TbSettings, "HideMainWin", HideMainWin), TB_Edit(TbSettings, "OnScCtrl", OnScCtrl)
 ,	TB_Edit(TbSettings, "CheckHkOn", KeepHkOn), TB_Edit(TbSettings, "SetWin", (IfDirectContext = "None") ? 0 : 1)
+,	TB_Edit(TbEdit, "GroupsMode", ShowGroups)
 Gui, 1:Default
 GoSub, RowCheck
 If (HideWin)
@@ -1187,9 +1189,6 @@ If (EditLayout != "ERROR")
 	TB_Layout(TbEdit, EditLayout, TbEdit_ID)
 If (SettingsLayout != "ERROR")
 	TB_Layout(TbSettings, SettingsLayout, TbSettings_ID)
-TB_Edit(tbPrev, "PrevRefreshButton", AutoRefresh)
-,	TB_Edit(tbPrevF, "PrevRefreshButton", AutoRefresh)
-,	TB_Edit(TbEdit, "GroupsMode", ShowGroups)
 If (Version < "5.0.0")
 	GoSub, %UserLayout%Layout
 return
@@ -1328,7 +1327,7 @@ Gui, chPrev:Add, Custom, ClassToolbarWindow32 y+0 hwndhtbPrev gtbPrev 0x0800 0x0
 Gui, chPrev:Add, Custom, ClassScintilla x0 y25 hwndhSciPrev vLVPrev
 Gui, chPrev:Show, W450 H600 Hide
 TB_Define(tbPrev, htbPrev, hIL_Icons, FixedBar.Preview, FixedBar.PrevOpt)
-,	tbPrev.ModifyButton(9, "Hide") ; Hide AlwaysOnTop button
+,	tbPrev.ModifyButton(8, "Hide") ; Hide AlwaysOnTop button
 ,	sciPrev := new scintilla(hSciPrev)
 ,	sciPrev.SetMarginWidthN(0x0, 0xA)
 ,	sciPrev.SetMarginWidthN(0x1, 0x5)
@@ -1365,8 +1364,8 @@ Gui, 2:Add, Custom, ClassToolbarWindow32 hwndhtbPrevF gtbPrevF 0x0800 0x0100 0x0
 Gui, 2:Add, Custom, ClassScintilla x0 y34 hwndhSciPrevF vLVPrevF
 Gui, 2:Add, StatusBar
 TB_Define(tbPrevF, htbPrevF, hIL_Icons, FixedBar.Preview, FixedBar.PrevOpt)
-,	tbPrevF.ModifyButtonInfo(1, "Text", t_Lang125),	tbPrevF.ModifyButtonInfo(1, "Image", 93)
-,	tbPrevF.ModifyButton(11, "Hide")
+,	tbPrevF.ModifyButtonInfo(11, "Text", t_Lang125),	tbPrevF.ModifyButtonInfo(11, "Image", 93)
+; ,	tbPrevF.ModifyButton(12, "Hide")
 ,	sciPrevF := new scintilla(hSciPrevF)
 ,	sciPrevF.SetMarginWidthN(0x0, 0xA)
 ,	sciPrevF.SetMarginWidthN(0x1, 0x5)
@@ -1402,10 +1401,14 @@ SB_SetParts(150, 150)
 ,	SB_SetText("Macro" A_List ": " o_AutoKey[A_List], 1)
 ,	SB_SetText("Record Keys: " RecKey "/" RecNewKey, 2)
 ,	SB_SetText("CoordMode: " CoordMouse, 3)
+,	TB_Edit(tbPrev, "PrevRefreshButton", AutoRefresh)
+,	TB_Edit(tbPrevF, "PrevRefreshButton", AutoRefresh)
 ,	TB_Edit(tbPrev, "TextWrap", TextWrap)
 ,	TB_Edit(tbPrevF, "TextWrap", TextWrap)
 ,	TB_Edit(tbPrev, "TabIndent", TabIndent)
 ,	TB_Edit(tbPrevF, "TabIndent", TabIndent)
+,	TB_Edit(tbPrev, "ConvertBreaks", ConvertBreaks)
+,	TB_Edit(tbPrevF, "ConvertBreaks", ConvertBreaks)
 ,	TB_Edit(tbPrev, "CommentUnchecked", CommentUnchecked)
 ,	TB_Edit(tbPrevF, "CommentUnchecked", CommentUnchecked)
 Gui, chMacro:Default
@@ -1448,6 +1451,7 @@ Gui, chMacro:Default
 return
 
 TextWrap:
+ConvertBreaks:
 TabIndent:
 CommentUnchecked:
 TB_Edit(tbPrev, A_ThisLabel, %A_ThisLabel% := !%A_ThisLabel%)
@@ -2334,7 +2338,8 @@ Gui, 14:Add, Button, yp x+5 H23 W25 hwndEx_ExecScript vEx_ExecScript gExExecScri
 Gui, 14:Add, Checkbox, -Wrap Checked%TabIndent% ys+50 xs+10 W230 vTabIndent R1, %t_Lang011%
 Gui, 14:Add, Checkbox, -Wrap Checked%CommentUnchecked% y+5 xs+10 W230 vCommentUnchecked R1, %w_Lang107%
 Gui, 14:Add, Checkbox, -Wrap Checked%Send_Loop% y+5 xs+10 W230 vSend_Loop R1, %t_Lang013%
-Gui, 14:Add, Checkbox, -Wrap Checked%IncPmc% ys+50 x+5 W190 vIncPmc R1, %t_Lang012%
+Gui, 14:Add, Checkbox, -Wrap Checked%ConvertBreaks% ys+50 x+5 W190 vConvertBreaks R1, %t_Lang190%
+Gui, 14:Add, Checkbox, -Wrap Checked%IncPmc% y+5 xp W190 vIncPmc R1, %t_Lang012%
 Gui, 14:Add, Checkbox, -Wrap Checked%Exe_Exp% y+5 xp W190 vExe_Exp gExe_Exp R1,%t_Lang088% 
 Gui, 14:Add, Button, -Wrap Section Default ys+110 xs+10 W75 H23 hwndExpButton gExpButton, %w_Lang001%
 	ILButton(ExpButton, ResDllPath ":" 16,, "left")
@@ -2690,7 +2695,9 @@ Gui, 14:Destroy
 Gui, chMacro:Default
 	TB_Edit(tbPrev, "TabIndent", TabIndent)
 ,	TB_Edit(tbPrevF, "TabIndent", TabIndent)
-	TB_Edit(tbPrev, "CommentUnchecked", CommentUnchecked)
+,	TB_Edit(tbPrev, "ConvertBreaks", ConvertBreaks)
+,	TB_Edit(tbPrevF, "ConvertBreaks", ConvertBreaks)
+,	TB_Edit(tbPrev, "CommentUnchecked", CommentUnchecked)
 ,	TB_Edit(tbPrevF, "CommentUnchecked", CommentUnchecked)
 If (AutoRefresh = 1)
 	GoSub, PrevRefresh
@@ -2900,7 +2907,7 @@ GoSub, ResetHotkeys
 OldAreaColor := SearchAreaColor, OldLoopColor := LoopLVColor, OldIfColor := IfLVColor
 , OldMoves := Moves, OldTimed := TimedI, OldRandM := RandomSleeps, OldRandP := RandPercent
 FileRead, UserVarsList, %UserVarsPath%
-Gui, 4:Add, Listbox, W160 H310 vAltTab gAltTabControl AltSubmit, %t_Lang018%||%t_Lang022%|%t_Lang035%|%t_Lang090%|%t_Lang046%|%t_lang194%|%t_Lang178%|%t_Lang096%
+Gui, 4:Add, Listbox, W160 H310 vAltTab gAltTabControl AltSubmit, %t_Lang018%||%t_Lang022%|%t_Lang035%|%t_Lang090%|%t_Lang046%|%t_Lang189%|%t_Lang178%|%t_Lang096%
 Gui, 4:Add, Tab2, yp x+0 W400 H0 vTabControl gAltTabControl AltSubmit, General|Recording|Playback|Defaults|Screenshots|Language|LangEditor|UserVars|SubmitRev
 ; General
 Gui, 4:Add, GroupBox, Section ym xm+170 W400 H155, %t_Lang018%:
@@ -3023,21 +3030,21 @@ Gui, 4:Add, Edit, vScreenDir W350 R1 -Multi, %ScreenDir%
 Gui, 4:Add, Button, -Wrap yp-1 x+0 W30 H23 vSearchScreen gSearchDir, ...
 Gui, 4:Tab, 6
 ; Language select
-Gui, 4:Add, GroupBox, Section ym xm+170 W400 H395, %t_lang194%:
+Gui, 4:Add, GroupBox, Section ym xm+170 W400 H395, %t_Lang189%:
 Gui, 4:Add, Listbox, ys+20 xs+10 W380 H355 vSelLang, %Lang_List%
 Gui, 4:Tab, 7
 ; Language Editor
 Gui, 4:Add, GroupBox, Section ym xm+170 W400 H395, %t_Lang178%:
 Gui, 4:Add, DDL, ys+20 xs+10 W185 vEditLang gUpdateEditList, %Lang_List%
 Gui, 4:Add, DDL, yp x+10 W185 vRefLang gUpdateRefList, %Lang_List%
-Gui, 4:Add, ListView, y+10 xs+10 W380 R9 hwndLangListID vLangList gLangList -Multi NoSort AltSubmit, %t_Lang188%|%t_Lang189%
+Gui, 4:Add, ListView, y+10 xs+10 W380 R9 hwndLangListID vLangList gLangList -Multi NoSort AltSubmit, %t_Lang184%|%t_Lang185%
 Gui, 4:Add, Edit, y+5 xs+10 W380 R3 vRowLang gUpdateRowLang -WantReturn
 Gui, 4:Add, Edit, y+5 xs+10 W380 R3 vRowRef -WantReturn ReadOnly
 Gui, 4:Add, Text, y+5 xs+10 W260 R1, %t_Lang180%
 Gui, 4:Add, Button, -Wrap y+10 xs+10 W75 H23 Disabled vSaveLang gSaveLang, %t_Lang127%
 Gui, 4:Add, Button, -Wrap yp x+10 W75 H23 gCreateLangFile, %t_Lang179%
 Gui, 4:Add, Button, -Wrap yp x+10 W75 H23 gSubmitTrans, %t_Lang181%
-Gui, 4:Add, Button, -Wrap yp-25 x+20 W115 H23 gColGroups, %t_Lang191%
+Gui, 4:Add, Button, -Wrap yp-25 x+20 W115 H23 gColGroups, %t_Lang187%
 Gui, 4:Add, Button, -Wrap yp+25 xp W115 H23 gExpGroups, %t_Lang192%
 Gui, 4:Tab, 8
 ; User Variables
@@ -3048,18 +3055,18 @@ Gui, 4:Add, Text, -Wrap W380 R1 y+5 xs+10, %t_Lang095%
 Gui, 4:Add, Edit, W380 r24 vUserVarsList, %UserVarsList%
 Gui, 4:Tab, 9
 ; Send Revision
-Gui, 4:Add, GroupBox, Section ym xm+170 W400 H395, %t_Lang190%
-Gui, 4:Add, Text, ys+30 xs+10 W75 R1, %t_Lang193%:
+Gui, 4:Add, GroupBox, Section ym xm+170 W400 H395, %t_Lang186%
+Gui, 4:Add, Text, ys+30 xs+10 W75 R1, %c_Lang230%:
 Gui, 4:Add, Text, yp x+5 W300 R1, pulover@macrocreator.com
-Gui, 4:Add, Text, y+10 xs+10 W75 R1, %t_Lang182%:
+Gui, 4:Add, Text, y+10 xs+10 W75 R1, %c_Lang226%:
 Gui, 4:Add, Edit, yp x+5 W300 R1 vFromMail Limit100, myemail@domain.com
-Gui, 4:Add, Text, y+10 xs+10 W75 R1, %t_Lang183%:
+Gui, 4:Add, Text, y+10 xs+10 W75 R1, %t_Lang182%:
 Gui, 4:Add, Edit, yp x+5 W300 R1 vName Limit100, %A_UserName%
-Gui, 4:Add, Text, y+10 xs+10 W75 R1, %t_Lang185%:
+Gui, 4:Add, Text, y+10 xs+10 W75 R1, %c_Lang228%:
 Gui, 4:Add, Edit, yp x+5 W300 R1 vSubject Limit100
-Gui, 4:Add, Text, y+10 xs+10 W75 R1, %t_Lang186%:
+Gui, 4:Add, Text, y+10 xs+10 W75 R1, %c_Lang229%:
 Gui, 4:Add, Edit, y+5 xs+10 W380 R10 vMessage Limit2000
-Gui, 4:Add, Text, y+10 xs+10 W180 R1, %t_Lang188%:
+Gui, 4:Add, Text, y+10 xs+10 W180 R1, %t_Lang184%:
 Gui, 4:Add, Edit, y+5 xs+10 W380 R1 vLFile Disabled
 Gui, 4:Add, Button, -Wrap y+10 xs+10 W75 H23 gSendRevision, %t_Lang181%
 Gui, 4:Add, Button, -Wrap yp x+10 W75 H23 gCancelSubmit, %c_Lang021%
@@ -3113,7 +3120,7 @@ Gui, 4:+OwnDialogs
 GuiControlGet, EditOn, 4:Enabled, SaveLang
 If (EditOn)
 {
-	MsgBox, 35, %t_Lang178%, %t_Lang187%
+	MsgBox, 35, %t_Lang178%, %t_Lang183%
 	IfMsgBox, Yes
 		GoSub, SaveLang
 	IfMsgBox, Cancel
@@ -3257,7 +3264,7 @@ Gui, 4:+OwnDialogs
 GuiControlGet, EditOn, 4:Enabled, SaveLang
 If (EditOn)
 {
-	MsgBox, 33, %t_Lang178%, %t_Lang187%
+	MsgBox, 33, %t_Lang178%, %t_Lang183%
 	IfMsgBox, Cancel
 		return
 	GoSub, SaveLang
@@ -3315,7 +3322,7 @@ Catch
 	return
 }
 If (InStr(whr.ResponseText, "Email was sent successfully!"))
-	MsgBox, 64, %t_Lang190%, %d_Lang105%
+	MsgBox, 64, %t_Lang186%, %d_Lang105%
 Else
 	MsgBox, 16, %d_Lang007%, %d_Lang102%
 GuiControl, 4:Choose, TabControl, 7
@@ -4683,15 +4690,7 @@ return
 GetEl:
 Gui, 24:Submit, NoHide
 Gui, 24:+OwnDialogs
-If (TabControl = 2)
-{
-	If ((ComHwnd = "") || (ComCLSID = ""))
-	{
-		MsgBox, 16, %d_Lang007%, %d_Lang048%
-		return
-	}
-}
-Else
+If (TabControl = 1)
 	ControlGet, SelIEWinName, Choice,, ComboBox2, ahk_id %CmdWin%
 CoordMode, Mouse, Window
 Hotkey, RButton, NoKey, On
@@ -4699,29 +4698,30 @@ Hotkey, Esc, EscNoKey, On
 WinMinimize, ahk_id %CmdWin%
 ComObjError(false)
 If (TabControl = 2)
-	o_ie := %ComHwnd%
+	ie := WBGet()
 Else
 {
 	SelIEWin := IEWindows
 	If (SelIEWinName = "[blank]")
-		o_ie := ""
+		ie := ""
 	Else
 	{
-		o_ie := WBGet(RegExReplace(SelIEWinName, "§", "|"))
+		ie := WBGet(RegExReplace(SelIEWinName, "§", "|"))
 		DetectHiddenWindows, On
 		WinActivate, %SelIEWinName%
 		DetectHiddenWindows, Off
 	}
 }
-If (!IsObject(o_ie))
+If (!IsObject(ie))
 {
-	o_ie := COMInterface("Visible := true")
-	COMInterface("Navigate(about:blank)", o_ie)
+	ie := ComObjCreate("InternetExplorer.Application")
+,	ie.Visible := true
+,	ie.Navigate("about:blank")
 }
 SetTimer, WatchCursorIE, 100
 StopIt := 0
 WaitFor.Key("RButton")
-SetTimer, WatchCursorIE, off
+SetTimer, WatchCursorIE, Off
 ToolTip
 Sleep, 200
 Hotkey, RButton, NoKey, Off
@@ -4770,8 +4770,8 @@ If (TabControl = 2)
 {
 	Gui, 24:Submit, NoHide
 	ComExpSc := IEComExp("", "", oel_%Ident%, ElIndex, "", Ident)
-,	ComExpSc := SubStr(ComExpSc, 4, StrLen(ComExpSc)-6)
-	GuiControl,, ComSc, %ComExpSc%
+,	ComExpSc := SubStr(ComExpSc, 1, StrLen(ComExpSc)-5)
+	GuiControl,, ComSc, %ComSc%`n%ComExpSc%
 }
 ComObjError(true)
 StopIt := 1
@@ -5056,7 +5056,7 @@ If (L_Label = "InternetExplorer.Application")
 Else
 {
 	ControlGetPos, IEFrameX, IEFrameY, IEFrameW, IEFrameH, Internet Explorer_Server1, ahk_class IEFrame
-	Element := o_ie.document.elementFromPoint(xPos-IEFrameX, yPos-IEFrameY)
+	Element := ie.document.elementFromPoint(xPos-IEFrameX, yPos-IEFrameY)
 ,	oel_Name := Element.Name, oel_ID := Element.ID
 ,	oel_TagName := Element.TagName, oel_Value := Element.Value
 ,	oel_InnerText := (StrLen(Element.InnerText) > 50) ? SubStr(Element.InnerText, 1, 50) "..." : Element.InnerText
@@ -5867,16 +5867,16 @@ Gui, 3:Destroy
 s_Caller := ""
 return
 
-EditLabel:
 EditGoto:
 EditLoop:
+EditTimer:
 s_Caller := "Edit"
-AddLabel:
+TimedLabel:
 ComGoto:
 ComLoop:
 If (InStr(TabGetText(TabSel, A_List), "()"))
 {
-	If A_ThisLabel in ComGoto,AddLabel
+	If (A_ThisLabel = "ComGoto")
 	{
 		Gui, 1:+OwnDialogs
 		MsgBox, 16, %d_Lang007%, %d_Lang100%
@@ -5933,28 +5933,43 @@ Gui, 12:Add, Text, y+5 xs+15 W430 r1 cGray, %c_Lang025%
 Gui, 12:Add, Groupbox, Section xs y+33 W450 H50, %c_Lang123%:
 Gui, 12:Add, Button, -Wrap ys+18 xs+85 W75 H23 gAddBreak, %c_Lang075%
 Gui, 12:Add, Button, -Wrap yp x+10 W75 H23 gAddContinue, %c_Lang076%
-Gui, 12:Add, Button, -Wrap Section Default xm W75 H23 gLoopOK, %c_Lang020%
+Gui, 12:Add, Button, -Wrap Section xm Default W75 H23 gLoopOK, %c_Lang020%
 Gui, 12:Add, Button, -Wrap ys W75 H23 gLoopCancel, %c_Lang021%
 Gui, 12:Add, Button, -Wrap ys W75 H23 vLoopApply gLoopApply Disabled, %c_Lang131%
 Gui, 12:Tab, 2
-; Goto
+; Goto / Label
 Gui, 12:Add, Groupbox, Section xm ym W450 H100
-Gui, 12:Add, Text, ys+20 xs+10 W150 R1 Right vGoLabelT, %c_Lang078%:
+Gui, 12:Add, Radio, Checked ys+20 xs+10 W150 R1 vGoLabelT gGoto, %c_Lang078%:
 Gui, 12:Add, ComboBox, yp x+10 W150 vGoLabel, %Proj_Labels%
 Gui, 12:Add, Radio, Section Checked vGoto gGoto, Goto
 Gui, 12:Add, Radio, yp x+25 vGosub gGoto, Gosub
 Gui, 12:Add, Text, y+15 xm+100 R1 cGray, %c_Lang025%
-Gui, 12:Add, Button, -Wrap Section xm y+20 W75 H23 gGotoOK, %c_Lang020%
+Gui, 12:Add, Groupbox, Section xm y+15 W450 H80
+Gui, 12:Add, Radio, ys+20 xs+10 W150 R1 vNewLabelT gGoto, %c_Lang080%:
+Gui, 12:Add, Edit, yp x+10 W150 R1 vNewLabel Disabled
+Gui, 12:Add, Button, -Wrap Section xm y+45 W75 H23 vGotoOK gGotoOK, %c_Lang020%
 Gui, 12:Add, Button, -Wrap ys W75 H23 gLoopCancel, %c_Lang021%
 Gui, 12:Add, Button, -Wrap ys W75 H23 vGotoApply gGotoApply Disabled, %c_Lang131%
 Gui, 12:Tab, 3
-; Label
-Gui, 12:Add, Groupbox, Section xm ym W450 H100
-Gui, 12:Add, Text, ys+20 xs+10 W150 R1 Right vNewLabelT, %c_Lang080%:
-Gui, 12:Add, Edit, yp x+10 W150 R1 vNewLabel
-Gui, 12:Add, Button, -Wrap Section xm y+67 W75 H23 gLabelOK, %c_Lang020%
+; SetTimer
+Gui, 12:Add, Groupbox, Section xm ym W450 H55
+Gui, 12:Add, Text, Checked ys+20 xs+10 W150 R1 Right, %c_Lang079%:
+Gui, 12:Add, ComboBox, yp x+10 W150 vGoTimerLabel, %Proj_Labels%
+Gui, 12:Add, Groupbox, Section xm y+20 W220 H120
+Gui, 12:Add, Edit, ys+15 xs+30 Limit W150 vTimerDelayE
+Gui, 12:Add, UpDown, vTimerDelayX 0x80 Range0-9999999, 250
+Gui, 12:Add, Radio, -Wrap Section Checked yp+25 W150 vTimerMsc R1, %c_Lang018%
+Gui, 12:Add, Radio, -Wrap W150 vTimerSec R1, %c_Lang019%
+Gui, 12:Add, Radio, -Wrap W150 vTimerMin R1, %c_Lang154%
+Gui, 12:Add, Groupbox, Section W220 H120 ys-40 x+50, %w_Lang003%:
+Gui, 12:Add, Radio, -Wrap Group Checked ys+20 xs+10 W200 vRunOnce gTimerOpt R1, %t_Lang078%
+Gui, 12:Add, Radio, -Wrap W200 vPeriod gTimerOpt R1, %t_Lang079%
+Gui, 12:Add, Radio, -Wrap W200 vTurnOn gTimerOpt R1, %c_Lang238%
+Gui, 12:Add, Radio, -Wrap W200 vTurnOff gTimerOpt R1, %c_Lang239%
+Gui, 12:Add, Radio, -Wrap W200 vDelete gTimerOpt R1, %t_Lang132%
+Gui, 12:Add, Button, -Wrap Section xm y+17 W75 H23 vTimedLabelOK gTimedLabelOK, %c_Lang020%
 Gui, 12:Add, Button, -Wrap ys W75 H23 gLoopCancel, %c_Lang021%
-Gui, 12:Add, Button, -Wrap ys W75 H23 vLabelApply gLabelApply Disabled, %c_Lang131%
+Gui, 12:Add, Button, -Wrap ys W75 H23 vTimedLabelApply gTimedLabelApply Disabled, %c_Lang131%
 Gui, 12:Add, StatusBar, gStatusBarHelp
 Gui, 12:Default
 SB_SetIcon(ResDllPath, IconsNames["help"])
@@ -5962,7 +5977,15 @@ GoSub, ClearPars
 If (s_Caller = "Edit")
 {
 	If (Type = cType35)
+	{
 		GuiControl, 12:, NewLabel, %Details%
+		GuiControl, 12:, NewLabelT, 1
+		GuiControl, 12:, GoLabelT, 0
+		GuiControl, 12:Disable, GoLabel
+		GuiControl, 12:Disable, Goto
+		GuiControl, 12:Disable, Gosub
+		GuiControl, 12:Enable, NewLabel
+	}
 	Else If Type in %cType36%,%cType37%
 	{
 		If (InStr(Proj_Labels, Details "|"))
@@ -5970,6 +5993,31 @@ If (s_Caller = "Edit")
 		Else
 			GuiControl, 12:, GoLabel, %Details%||
 		GuiControl, 12:, %Type%, 1
+		GuiControl, 12:Enable, GoLabel
+		GuiControl, 12:Enable, Goto
+		GuiControl, 12:Enable, Gosub
+		GuiControl, 12:Disable, NewLabel
+	}
+	Else If (Type = cType50)
+	{
+		If (InStr(Proj_Labels, Details "|"))
+			GuiControl, 12:ChooseString, GoTimerLabel, %Details%
+		Else
+			GuiControl, 12:, GoTimerLabel, %Details%||
+		Action := StrReplace(Action, " ")
+		GuiControl, 12:, %Action%, 1
+		If Action in TurnOn,TurnOff,Delete
+		{
+			GuiControl, 12:Disable, TimerDelayE
+			GuiControl, 12:Disable, TimerDelayX
+			GuiControl, 12:Disable, TimerMsc
+			GuiControl, 12:Disable, TimerSec
+			GuiControl, 12:Disable, TimerMin
+		}
+		Else If (InStr(DelayX, "%"))
+			GuiControl, 12:, TimerDelayE, %DelayX%
+		Else
+			GuiControl, 12:, TimerDelayX, % StrReplace(DelayX, "-")
 	}
 	Else
 	{
@@ -6028,16 +6076,18 @@ If (s_Caller = "Edit")
 	}
 	GuiControl, 12:Enable, LoopApply
 	GuiControl, 12:Enable, GotoApply
-	GuiControl, 12:Enable, LabelApply
+	GuiControl, 12:Enable, TimedLabelApply
 }
-If (InStr(A_ThisLabel, "Label"))
+If (InStr(A_ThisLabel, "Time"))
 {
 	GuiControl, 12:Choose, TabControl, 3
-	SBShowTip("Labels")
+	GuiControl, 12:+Default, TimedLabelOK
+	SBShowTip("SetTimer")
 }
-Else If (InStr(A_ThisLabel, "Goto"))
+If (InStr(A_ThisLabel, "Goto"))
 {
 	GuiControl, 12:Choose, TabControl, 2
+	GuiControl, 12:+Default, GotoOK
 	If (s_Caller = "Find")
 	{
 		GuiControl, 12:, %GotoRes1%, 1
@@ -6054,8 +6104,8 @@ Else If ((s_Caller = "Find") && (InStr(GotoRes1, "Loop")))
 }
 Else If (s_Caller != "Edit")
 	SBShowTip("Loop (normal)")
-Gui, 12:Show, % InStr(A_ThisLabel, "Loop") ? "" : "H167", % InStr(A_ThisLabel, "Goto") ? c_Lang077 : InStr(A_ThisLabel, "Label") ? c_Lang079 : c_Lang073
-ChangeIcon(hIL_Icons, CmdWin, InStr(A_ThisLabel, "Goto") ? IconsNames["goto"] : InStr(A_ThisLabel, "Label") ? IconsNames["labels"] : IconsNames["loop"])
+Gui, 12:Show, % InStr(A_ThisLabel, "Loop") ? "" : "H247", % InStr(A_ThisLabel, "Goto") ? c_Lang077 : InStr(A_ThisLabel, "Time") ? t_Lang080 : c_Lang073
+ChangeIcon(hIL_Icons, CmdWin, InStr(A_ThisLabel, "Goto") ? IconsNames["goto"] : InStr(A_ThisLabel, "Time") ? IconsNames["timer"] : IconsNames["loop"])
 Input
 Tooltip
 return
@@ -6176,25 +6226,59 @@ Else
 return
 
 Goto:
+If (A_GuiControl = "GoLabelT")
+{
+	GuiControl, 12:, NewLabelT, 0
+	GuiControl, 12:Enable, GoLabel
+	GuiControl, 12:Enable, Goto
+	GuiControl, 12:Enable, Gosub
+	GuiControl, 12:Disable, NewLabel
+}
+Else If (A_GuiControl = "NewLabelT")
+{
+	GuiControl, 12:, GoLabelT, 0
+	GuiControl, 12:Disable, GoLabel
+	GuiControl, 12:Disable, Goto
+	GuiControl, 12:Disable, Gosub
+	GuiControl, 12:Enable, NewLabel
+}
 Gui, 12:Submit, NoHide
-SBShowTip((Goto = 1) ? "Goto" : "Gosub")
+SBShowTip(NewLabelT ? "Labels" : (Goto = 1) ? "Goto" : "Gosub")
 return
 
 GotoApply:
 GotoOK:
 Gui, 12:+OwnDialogs
 Gui, 12:Submit, NoHide
-If (GoLabel = "")
+If (GoLabelT)
 {
-	Gui, 12:Font, cRed
-	GuiControl, 12:Font, GoLabelT
-	GuiControl, 12:Focus, GoLabel
-	return
+	If (GoLabel = "")
+		return
+	If (!RegExMatch(GoLabel, "^[\w%]+$"))
+	{
+		MsgBox, 16, %d_Lang007%, %d_Lang049%
+		return
+	}
+	Details := GoLabel, Type := (Goto = 1) ? "Goto" : "Gosub"
 }
-If (!RegExMatch(GoLabel, "^\w+$"))
+If (NewLabelT)
 {
-	MsgBox, 16, %d_Lang007%, %d_Lang049%
-	return
+	If (NewLabel = "")
+		return
+	If (!RegExMatch(NewLabel, "^\w+$"))
+	{
+		MsgBox, 16, %d_Lang007%, %d_Lang049%
+		return
+	}
+	Loop, Parse, Proj_Labels, |
+	{
+		If (A_LoopField = NewLabel)
+		{
+			MsgBox, 16, %d_Lang007%, %d_Lang050%
+			return
+		}
+	}
+	Details := NewLabel, Type := cType35
 }
 If (A_ThisLabel != "GotoApply")
 {
@@ -6202,17 +6286,17 @@ If (A_ThisLabel != "GotoApply")
 	Gui, 12:Destroy
 }
 Gui, chMacro:Default
-RowSelection := LV_GetCount("Selected"), Type := (Goto = 1) ? "Goto" : "Gosub"
+RowSelection := LV_GetCount("Selected")
 If (s_Caller = "Edit")
-	LV_Modify(RowNumber, "Col2", "[" Type "]", GoLabel, TimesX, DelayX, Type)
+	LV_Modify(RowNumber, "Col2", "[" Type "]", Details, TimesX, DelayX, Type)
 Else If (RowSelection = 0)
 {
-	LV_Add("Check", ListCount%A_List%+1, "[" Type "]", GoLabel, 1, 0, Type)
+	LV_Add("Check", ListCount%A_List%+1, "[" Type "]", Details, 1, 0, Type)
 	LV_Modify(ListCount%A_List%+1, "Vis")
 }
 Else
 {
-	LV_Insert(LV_GetNext(), "Check", "", "[" Type "]", GoLabel, 1, 0, Type)
+	LV_Insert(LV_GetNext(), "Check", "", "[" Type "]", Details, 1, 0, Type)
 ,	LVManager.InsertAtGroup(1, LV_GetNext())
 }
 GoSub, RowCheck
@@ -6223,33 +6307,51 @@ Else
 {
 	s_Caller := ""
 	GuiControl, Focus, InputList%A_List%
-}return
+}
+return
 
-LabelApply:
-LabelOK:
+TimerOpt:
+If A_GuiControl in TurnOn,TurnOff,Delete
+{
+	GuiControl, 12:Disable, TimerDelayE
+	GuiControl, 12:Disable, TimerDelayX
+	GuiControl, 12:Disable, TimerMsc
+	GuiControl, 12:Disable, TimerSec
+	GuiControl, 12:Disable, TimerMin
+}
+Else
+{
+	GuiControl, 12:Enable, TimerDelayE
+	GuiControl, 12:Enable, TimerDelayX
+	GuiControl, 12:Enable, TimerMsc
+	GuiControl, 12:Enable, TimerSec
+	GuiControl, 12:Enable, TimerMin
+}
+return
+
+TimedLabelApply:
+TimedLabelOK:
 Gui, 12:+OwnDialogs
 Gui, 12:Submit, NoHide
-If (NewLabel = "")
-{
-	Gui, 12:Font, cRed
-	GuiControl, 12:Font, NewLabelT
-	GuiControl, 12:Focus, NewLabel
+If (GoTimerLabel = "")
 	return
-}
-If (!RegExMatch(NewLabel, "^\w+$"))
+If (!RegExMatch(GoTimerLabel, "^[\w%]+$"))
 {
 	MsgBox, 16, %d_Lang007%, %d_Lang049%
 	return
 }
-Loop, Parse, Proj_Labels, |
+If ((RunOnce) || (Period))
 {
-	If (A_LoopField = NewLabel)
-	{
-		MsgBox, 16, %d_Lang007%, %d_Lang050%
-		return
-	}
+	DelayX := (InStr(TimerDelayE, "%") ? TimerDelayE : TimerDelayX)
+	If (TimerSec = 1)
+		DelayX := TimerDelayX * 1000
+	Else If (TimerMin = 1)
+		DelayX := TimerDelayX * 60000
+	Action := Period ? "Period" : "Run Once"
 }
-If (A_ThisLabel != "LabelApply")
+Else
+	DelayX := 0, Action := TurnOn ? "Turn On" : TurnOff ? "Turn Off" : "Delete"
+If (A_ThisLabel != "TimedLabelApply")
 {
 	Gui, 1:-Disabled
 	Gui, 12:Destroy
@@ -6257,27 +6359,27 @@ If (A_ThisLabel != "LabelApply")
 Gui, chMacro:Default
 RowSelection := LV_GetCount("Selected")
 If (s_Caller = "Edit")
-	LV_Modify(RowNumber, "Col3", NewLabel, TimesX, DelayX, cType35)
+	LV_Modify(RowNumber, "Col2", Action, GoTimerLabel, 1, DelayX, cType50)
 Else If (RowSelection = 0)
 {
-	LV_Add("Check", ListCount%A_List%+1, "[Label]", NewLabel, 1, 0, cType35)
+	LV_Add("Check", ListCount%A_List%+1, Action, GoTimerLabel, 1, DelayX, cType50)
 	LV_Modify(ListCount%A_List%+1, "Vis")
 }
 Else
 {
-	LV_Insert(LV_GetNext(), "Check", "", "[Label]", NewLabel, 1, 0, cType35)
+	LV_Insert(LV_GetNext(), "Check", "", Action, GoTimerLabel, 1, DelayX, cType50)
 ,	LVManager.InsertAtGroup(1, LV_GetNext())
 }
 GoSub, RowCheck
 GoSub, b_Start
-If (A_ThisLabel = "LabelApply")
+If (A_ThisLabel = "TimedLabelApply")
 	Gui, 12:Default
 Else
 {
 	s_Caller := ""
 	GuiControl, Focus, InputList%A_List%
 }
-return
+Return
 
 LoopCancel:
 12GuiClose:
@@ -6348,7 +6450,7 @@ Else
 If (LFor)
 {
 	GuiControl, 12:Enable, Omit
-	GuiControl, 12:, Field1, %c_Lang207%
+	GuiControl, 12:, Field1, %c_Lang207% / %c_Lang087%
 	GuiControl, 12:, Field2, %c_Lang208%
 	GuiControl, 12:, Field3, %c_Lang209%
 	GuiControl, 12:, Delim, % Par2 ? Par2 : "key"
@@ -7525,7 +7627,7 @@ Gui, 21:Add, Text, y+5 W430 r1 cGray vArrayTip Hidden, %c_Lang206%
 Gui, 21:Add, Groupbox, Section xs y+14 W450 H50, %c_Lang010%:
 Gui, 21:Add, Button, -Wrap ys+18 xs+85 W75 H23 vVarCopyA gVarCopy, %c_Lang023%
 Gui, 21:Add, Button, -Wrap x+10 yp W75 H23 gReset, %c_Lang088%
-Gui, 21:Add, Button, -Wrap Section xm y+14 W75 H23 gVarOK, %c_Lang020%
+Gui, 21:Add, Button, -Wrap Section xm y+14 W75 H23 vVarOK gVarOK, %c_Lang020%
 Gui, 21:Add, Button, -Wrap ys W75 H23 gIfCancel, %c_Lang021%
 Gui, 21:Add, Button, -Wrap ys W75 H23 vVarApplyA gVarApply Disabled, %c_Lang131%
 Gui, 21:Tab, 3
@@ -7549,7 +7651,7 @@ Gui, 21:Add, Link, y+10 W430 r1 vExprLink3 gExprLink, <a>%c_Lang091%</a>
 Gui, 21:Add, Groupbox, Section xs y+13 W450 H50, %c_Lang010%:
 Gui, 21:Add, Button, -Wrap ys+18 xs+85 W75 H23 vVarCopyB gVarCopy, %c_Lang023%
 Gui, 21:Add, Button, -Wrap x+10 yp W75 H23 gReset, %c_Lang088%
-Gui, 21:Add, Button, -Wrap Section xm y+14 W75 H23 gVarOK, %c_Lang020%
+Gui, 21:Add, Button, -Wrap Section xm y+14 W75 H23 vFuncOK gVarOK, %c_Lang020%
 Gui, 21:Add, Button, -Wrap ys W75 H23 gIfCancel, %c_Lang021%
 Gui, 21:Add, Button, -Wrap ys W75 H23 vVarApplyB gVarApply Disabled, %c_Lang131%
 Gui, 21:Add, StatusBar, gStatusBarHelp
@@ -7604,6 +7706,7 @@ If (s_Caller = "Edit")
 		StringReplace, Details, Details, ``n, `n, All
 		AssignParse(Details, VarName, Oper, VarValue), GuiTitle := c_Lang010
 		GuiControl, 21:Choose, TabControl, 2
+		GuiControl, 21:+Default, VarOK
 		GuiControl, 21:, VarName, %VarName%
 		GuiControl, 21:ChooseString, Oper, %Oper%
 		If (Target = "Expression")
@@ -7621,6 +7724,7 @@ If (s_Caller = "Edit")
 	{
 		AssignParse(Details, VarName, Oper, VarValue), FuncName := Action, ArrayName := Target, GuiTitle := c_Lang011
 		GuiControl, 21:Choose, TabControl, 3
+		GuiControl, 21:+Default, FuncOK
 		If (VarName != "_null")
 			GuiControl, 21:, VarNameF, %VarName%
 		If (Type = cType46)
@@ -8570,24 +8674,26 @@ Gui, 24:Add, Text, y+10 W55, %c_Lang005%:
 Gui, 24:Add, DDL, yp-2 xp+60 W340 vIEWindows AltSubmit, %IEWindows%
 Gui, 24:Add, Button, -Wrap yp-1 x+5 W25 H23 hwndRefreshIEW vRefreshIEW gRefreshIEW
 	ILButton(RefreshIEW, ResDllPath ":" 90)
+Gui, 24:Add, Text, y+5 xs vClipTip cGray, %c_Lang025%
 Gui, 24:Add, Button, -Wrap Section Default ym+270 xm W75 H23 gIEComOK, %c_Lang020%
 Gui, 24:Add, Button, -Wrap ys xs+170 W75 H23 vIEComApply gIEComApply Disabled, %c_Lang131%
 Gui, 24:Tab, 2
 ; COM Interface
-Gui, 24:Add, GroupBox, Section xm ym W450 H265
-Gui, 24:Add, Text, ys+15 xs+10 W60 R1 Right vComCLSIDT, %c_Lang098%:
-Gui, 24:Add, Combobox, yp x+10 W285 vComCLSID gTabControl, %CLSList%
+Gui, 24:Add, GroupBox, Section xm ym W450 H75
+Gui, 24:Add, Checkbox, ys+15 xs+10 W400 R1 vCreateComObj gCreateComObj, %c_Lang074%
+Gui, 24:Add, Text, y+10 xs+10 W55 R1 Right vComHwndT, %c_Lang100%:
+Gui, 24:Add, Edit, yp x+10 W80 vComHwnd Disabled, %ComHwnd%
+Gui, 24:Add, Text, yp x+10 W40 R1 Right vComCLSIDT, %c_Lang098%:
+Gui, 24:Add, Combobox, yp x+10 W150 vComCLSID gTabControl Disabled, %CLSList%
 GuiControl, 24:ChooseString, ComCLSID, %ComCLSID%
-Gui, 24:Add, Button, -Wrap yp-1 x+0 W75 H23 vActiveObj gActiveObj, %c_Lang099%
-Gui, 24:Add, Text, y+5 xs+10 W60 R1 Right vComHwndT, %c_Lang100%:
-Gui, 24:Add, Edit, yp x+10 W120 vComHwnd, %ComHwnd%
-Gui, 24:Add, Text, yp x+5 W100 R1 Right, %c_Lang057%:
-Gui, 24:Add, Edit, yp x+10 W125 vVarName
-Gui, 24:Add, Text, y+5 xs+10 W200 vComScT, %c_Lang101%:
-Gui, 24:Add, Edit, y+5 xs+10 W430 R5 vComSc gComSc
-Gui, 24:Add, Button, -Wrap y+2 xs+415 W25 H23 hwndExpView vExpView gExpView
+Gui, 24:Add, Button, -Wrap yp-1 x+0 W75 H23 vActiveObj gActiveObj Disabled, %c_Lang099%
+Gui, 24:Add, GroupBox, Section xm y+20 W450 H185
+Gui, 24:Add, Text, ys+15 xs+10 W300 vComScT, %c_Lang087% / %c_Lang101%:
+Gui, 24:Add, Edit, y+5 xs+10 W430 R5 vComSc
+Gui, 24:Add, Link, y+5 xs+200 r1 vExprLink2 gExprLink, <a>%c_Lang091%</a>
+Gui, 24:Add, Button, -Wrap yp-3 xs+416 W25 H23 hwndExpView vExpView gExpView
 	ILButton(ExpView, ResDllPath ":" 17)
-Gui, 24:Add, Button, -Wrap Section Default ym+270 xm W75 H23 gComOK, %c_Lang020%
+Gui, 24:Add, Button, -Wrap Section ym+270 xm W75 H23 vComOK gComOK, %c_Lang020%
 Gui, 24:Add, Button, -Wrap ys xs+170 W75 H23 vComApply gComApply Disabled, %c_Lang131%
 Gui, 24:Tab, 3
 ; Run Scriptlet
@@ -8602,15 +8708,14 @@ Gui, 24:Add, Radio, -Wrap x+5 W100 vRunJS R1, JScript
 Gui, 24:Add, Button, -Wrap yp-2 xs+415 W25 H23 hwndExpView2 vExpView2 gExpView
 	ILButton(ExpView2, ResDllPath ":" 17)
 Gui, 24:Add, Text, y+5 xs+10 cGray, %c_Lang025%
-Gui, 24:Add, Button, -Wrap Section Default ym+270 xm W75 H23 gScLetOK, %c_Lang020%
+Gui, 24:Add, Button, -Wrap Section ym+270 xm W75 H23 vScLetOK gScLetOK, %c_Lang020%
 Gui, 24:Add, Button, -Wrap ys xs+170 W75 H23 vScLetApply gScLetApply Disabled, %c_Lang131%
 Gui, 24:Tab
-Gui, 24:Add, Text, Section ym+172 xm+12 vPgTxt, %c_Lang092%:
-Gui, 24:Add, DDL, W70 vIdent Disabled, Name||ID|TagName|Links
-Gui, 24:Add, Edit, yp xp+70 vDefEl W245 Disabled
-Gui, 24:Add, Edit, yp x+0 vDefElInd W85 Disabled
-Gui, 24:Add, Button, -Wrap yp-1 x+0 W30 H23 vGetEl gGetEl Disabled, ...
-Gui, 24:Add, Text, y+5 xs vClipTip cGray, %c_Lang025%
+Gui, 24:Add, Text, Section ym+192 xm+12 vPgTxt, %c_Lang092%:
+Gui, 24:Add, DDL, W70 vIdent, Name||ID|TagName|Links
+Gui, 24:Add, Edit, yp xp+70 vDefEl W245
+Gui, 24:Add, Edit, yp x+0 vDefElInd W85
+Gui, 24:Add, Button, -Wrap yp-1 x+0 W30 H23 vGetEl gGetEl, ...
 Gui, 24:Add, Checkbox, -Wrap Checked y+10 xs W300 vLoadWait R1, %c_Lang097%
 Gui, 24:Add, Button, -Wrap Section ym+270 xs+72 W75 H23 gIEComCancel, %c_Lang021%
 Gui, 24:Add, StatusBar, gStatusBarHelp
@@ -8619,31 +8724,24 @@ SB_SetIcon(ResDllPath, IconsNames["help"])
 If (s_Caller = "Edit")
 {
 	StringReplace, Details, Details, ``n, `n, All
-	If (Type = cType34)
+	If ((Type = cType34) || (Type = cType43))
 	{
-		ComCLSID := Target, TabControl := 2, GuiTitle := c_Lang013, SBShowTip("ComObjCreate")
-		StringSplit, Act, Action, :
+		TabControl := 2, GuiTitle := c_Lang013, SBShowTip("ComObjCreate")
 		GuiControl, 24:Choose, TabControl, 2
-		If (Target = "")
-			GuiControl, 24:Choose, ComCLSID, 0
-		Else If (InStr(CLSList, Target))
-			GuiControl, 24:ChooseString, ComCLSID, %ComCLSID%
-		Else
-			GuiControl, 24:, ComCLSID, %ComCLSID%||
-		GuiControl, 24:, ComHwnd, %Act1%
-		GuiControl, 24:, VarName, %Act2%
+		If (Type = cType34)
+		{
+			GuiControl, 24:, CreateComObj, 1
+			Gosub, CreateComObj
+			If (Target = "")
+				GuiControl, 24:Choose, ComCLSID, 0
+			Else If (InStr(CLSList, Target))
+				GuiControl, 24:ChooseString, ComCLSID, %Target%
+			Else
+				GuiControl, 24:, ComCLSID, %ComCLSID%||
+			GuiControl, 24:, ComHwnd, %Action%
+			GoSub, TabControl
+		}
 		GuiControl, 24:, ComSc, %Details%
-		GoSub, TabControl
-		If (InStr(Details, "`n"))
-			GuiControl, 24:Disabled, VarName
-	}
-	Else If ((Type = cType42) || (Type = cType43))
-	{
-		GuiControl, 24:Choose, TabControl, 3
-		GuiControl, 24:, ScLet, %Details%
-		GuiControl, 24:, % (Type = cType42) ? "RunVB" : "RunJS", 1
-		GoSub, TabControl
-		GuiTitle := c_Lang155, SB_SetText(Com_Tips["ScriptControl"])
 	}
 	Else
 	{
@@ -8675,24 +8773,25 @@ If (A_ThisLabel = "IECom")
 {
 	GuiTitle := c_Lang012
 	If (s_Caller = "Find")
-	{
 		GuiControl, 24:ChooseString, IECmd, %GotoRes1%
-		GoSub, IECmd
-	}
+	GoSub, IECmd
 	SB_SetText(IE_Tips["Navigate"])
 }
 If (A_ThisLabel = "ComInt")
 {
 	GuiControl, 24:Choose, TabControl, 2
+	GuiControl, 24:+Default, ComOK
 	If (s_Caller = "Find")
 		GuiControl, 24:ChooseString, ComCLSID, %GotoRes1%
-	GoSub, TabControl
+	Gosub, CreateComObj
+	GuiControl, 24:, LoadWait, 0
 	GuiTitle := c_Lang013
-	SB_SetText(Com_Tips["InternetExplorer.Application"])
+	SB_SetText(Cmd_Tips["Expression"])
 }
 Else If (A_ThisLabel = "RunScrLet")
 {
 	GuiControl, 24:Choose, TabControl, 3
+	GuiControl, 24:+Default, ScLetOK
 	GoSub, TabControl
 	GuiTitle := c_Lang155, SB_SetText(Com_Tips["ScriptControl"])
 }
@@ -8771,9 +8870,9 @@ Else
 ControlGet, SelIEWinName, Choice,, ComboBox2, ahk_id %CmdWin%
 SelIEWin := IEWindows
 If (SelIEWinName = "[blank]")
-	o_ie := ""
+	ie := ""
 Else
-	o_ie := WBGet(RegExReplace(SelIEWinName, "§", "|"))
+	ie := WBGet(RegExReplace(SelIEWinName, "§", "|"))
 If (A_ThisLabel != "IEComApply")
 {
 	Gui, 1:-Disabled
@@ -8815,52 +8914,31 @@ ComOK:
 Gui, 24:+OwnDialogs
 Gui, 24:Submit, NoHide
 StringReplace, ComSc, ComSc, `n, ``n, All
-If ((ComCLSID = "") || (ComHwnd = "") || (ComSc = ""))
-{
-	Gui, 24:Font, cRed
-	GuiControl, 24:Font, ComCLSIDT
-	GuiControl, 24:Font, ComHwndT
-	GuiControl, 24:Font, ComScT
-	GuiControl, 24:Focus, ComSc
-	return
-}
 If (s_Caller != "Edit")
 	TimesX := 1
-Try
-	z_Check := VarSetCapacity(%ComHwnd%)
-Catch
+If (CreateComObj)
 {
-	MsgBox, 16, %d_Lang007%, %d_Lang041%
-	return
-}
-If (VarName != "")
-{
-	If (RegExMatch(VarName, "^(\w+)(\[\S+\]|\.\w+)+", lMatch))
+	If (ComHwnd = "")
 	{
-		Try
-			z_Check := VarSetCapacity(%lMatch1%)
-		Catch
-		{
-			MsgBox, 16, %d_Lang007%, %d_Lang041%
-			return
-		}
+		Gui, 24:Font, cRed
+		GuiControl, 24:Font, ComHwndT
+		return
 	}
-	Else
+	Try
+		z_Check := VarSetCapacity(%ComHwnd%)
+	Catch
 	{
-		Try
-			z_Check := VarSetCapacity(%VarName%)
-		Catch
-		{
-			MsgBox, 16, %d_Lang007%, %d_Lang041%
-			return
-		}
+		MsgBox, 16, %d_Lang007%, %d_Lang041%
+		return
 	}
+	Action := ComHwnd, Type := cType34, Target := ComCLSID
 }
-If ((ComCLSID = "InternetExplorer.Application") && LoadWait)
+Else
+	Action := "[Expression]", Type := cType43, Target := ""
+If (LoadWait)
 	Load := "LoadWait"
 Else
 	Load := ""
-Action := ComHwnd ":" VarName
 If (A_ThisLabel != "ComApply")
 {
 	Gui, 1:-Disabled
@@ -8869,10 +8947,10 @@ If (A_ThisLabel != "ComApply")
 Gui, chMacro:Default
 RowSelection := LV_GetCount("Selected"), LV_GetText(RowType, LV_GetNext(), 6)
 If (s_Caller = "Edit")
-	LV_Modify(RowNumber, "Col2", Action, ComSc, TimesX, DelayX, cType34, ComCLSID, Load)
+	LV_Modify(RowNumber, "Col2", Action, ComSc, TimesX, DelayX, Type, Target, Load)
 Else If ((RowSelection = 0) || ((RowType = cType47) || RowType = cType48))
 {
-	LV_Add("Check", ListCount%A_List%+1, Action, ComSc, TimesX, DelayG, cType34, ComCLSID, Load)
+	LV_Add("Check", ListCount%A_List%+1, Action, ComSc, TimesX, DelayG, Type, Target, Load)
 ,	LV_Modify(ListCount%A_List%+1, "Vis")
 }
 Else
@@ -8881,7 +8959,7 @@ Else
 	Loop, %RowSelection%
 	{
 		RowNumber := LV_GetNext(RowNumber)
-	,	LV_Insert(RowNumber, "Check", RowNumber, Action, ComSc, TimesX, DelayG, cType34, ComCLSID, Load)
+	,	LV_Insert(RowNumber, "Check", RowNumber, Action, ComSc, TimesX, DelayG, Type, Target, Load)
 	,	LVManager.InsertAtGroup(1, RowNumber)
 	,	RowNumber++
 	}
@@ -8911,8 +8989,6 @@ If (ScLet = "")
 }
 If (s_Caller != "Edit")
 	TimesX := 1
-Action := (RunVB = 1) ? "VB:" : "JS:"
-Type := (RunVB = 1) ? cType42 : cType43
 If (A_ThisLabel != "ScLetApply")
 {
 	Gui, 1:-Disabled
@@ -8948,6 +9024,14 @@ Else
 	GuiControl, Focus, InputList%A_List%
 }
 return
+
+CreateComObj:
+Gui, 24:Submit, NoHide
+GuiControl, 24:Enable%CreateComObj%, ComHwnd
+GuiControl, 24:Enable%CreateComObj%, ComCLSID
+GuiControl, 24:Enable%CreateComObj%, ActiveObj
+SB_SetText(CreateComObj ? Com_Tips[ComCLSID] : Cmd_Tips["Expression"])
+Return
 
 IECmd:
 Gui, 24:Submit, NoHide
@@ -9017,17 +9101,6 @@ Try
 	SB_SetText(IE_Tips[IECmd])
 Catch
 	SB_SetText("")
-return
-
-ComSc:
-Gui, 24:Submit, NoHide
-If (InStr(ComSc, "`n"))
-{
-	GuiControl, 24:, VarName
-	GuiControl, 24:Disabled, VarName
-}
-Else
-	GuiControl, 24:Enabled, VarName
 return
 
 ActiveObj:
@@ -9120,26 +9193,7 @@ return
 TabControl:
 Gui, 24:Submit, NoHide
 If (TabControl = 2)
-{
-	If (ComCLSID = "InternetExplorer.Application")
-	{
-		GuiControl, 24:Enable, DefEl
-		GuiControl, 24:Enable, DefElInd
-		GuiControl, 24:Enable, GetEl
-		GuiControl, 24:Enable, Ident
-		GuiControl, 24:Enable, LoadWait
-	}
-	Else
-	{
-		GuiControl, 24:Disabled, DefEl
-		GuiControl, 24:Disabled, DefElInd
-		GuiControl, 24:Disabled, GetEl
-		GuiControl, 24:Disabled, Ident
-		GuiControl, 24:Disabled, LoadWait
-	}
-	GuiControl, 24:, LoadWait, 0
 	SB_SetText(Com_Tips[ComCLSID])
-}
 Else
 {
 	GuiControl, 24:Enable, LoadWait
@@ -9186,7 +9240,7 @@ Gui, 30:Add, Button, -Wrap ys W75 H23 gExpViewCancel, %c_Lang021%
 Gui, 30:Add, StatusBar, gStatusBarHelp
 Gui, 30:Default
 SB_SetParts(480, 80)
-SB_SetText(c_Lang025, 1)
+SB_SetText(c_Lang091, 1)
 SB_SetText("length: " 0, 2)
 SB_SetText("lines: " 0, 3)
 GoSub, TextEdit
@@ -9202,7 +9256,6 @@ Gui, 24:-Disabled
 Gui, 30:Destroy
 Gui, 24:Default
 GuiControl,, % (TabControl = 2) ? "ComSc" : "ScLet", %TextEdit%
-GoSub, ComSc
 return
 
 ExpViewCancel:
@@ -9671,7 +9724,7 @@ Gui, 31:Add, Radio, yp x+20 W130 vBasic gBasicLayout, %d_Lang077%
 Gui, 31:Add, Radio, Checked Group xs+30 y+20 W130 vLarge gSetLargeIcons, %d_Lang093%
 Gui, 31:Add, Radio, yp x+20 W130 vSmall gSetSmallIcons, %d_Lang092%
 Gui, 31:Add, Text, -Wrap y+5 xs+10 W300 R1 cGray, %d_Lang081%
-Gui, 31:Add, Text, -Wrap y+20 xs W120 R1, %t_lang194% (Language):
+Gui, 31:Add, Text, -Wrap y+20 xs W120 R1, %t_Lang189% (Language):
 Gui, 31:Add, DDL, yp x+5 W190 vSelLang, %Lang_List%
 GuiControl, 31:ChooseString, SelLang, % RegExReplace(Lang_%CurrentLang%, "\t.*")
 Gui, 31:Add, Button, Default xm W75 H23 gWelcClose, %c_Lang020%
@@ -9984,9 +10037,9 @@ Else If (TimerMin = 1)
 Else
 	DelayX := TimerDelayX
 If (RunOnce = 1)
-	DelayX := DelayX * -1
+	DelayX := DelayX > 0 ? DelayX * -1 : -1
 ActivateHotkeys(0, 1, 1, 1, 1)
-aHK_Timer := A_List
+aHK_Timer0 := A_List, aHK_Label0 := 0
 If (CheckDuplicateLabels())
 {
 	MsgBox, 16, %d_Lang007%, %d_Lang050%
@@ -9995,21 +10048,34 @@ If (CheckDuplicateLabels())
 }
 If (ShowBar)
 	GoSub, ShowControls
-SetTimer, RunTimerOn, %DelayX%
+SetTimer, RunTimerOn0, %DelayX%
 If (TimedRun) && (RunFirst)
-	GoSub, RunTimerOn
+	GoSub, RunTimerOn0
 return
 
-RunTimerOn:
-If (InStr(TabGetText(TabSel, aHK_Timer), "()"))
-	return
-If (StopIt)
+RunTimerOn0:
+If (InStr(TabGetText(TabSel, aHK_Timer0), "()"))
 {
-	SetTimer, RunTimerOn, Off
-	aHK_Timer := false
+	SetTimer, %A_ThisLabel%, Off
 	return
 }
-If (aHK_On := Playback(aHK_Timer))
+RunTimerOn1:
+RunTimerOn2:
+RunTimerOn3:
+RunTimerOn4:
+RunTimerOn5:
+RunTimerOn6:
+RunTimerOn7:
+RunTimerOn8:
+RunTimerOn9:
+RunTimerOn10:
+RegExMatch(A_ThisLabel, "\d+", nMatch)
+If (StopIt)
+{
+	SetTimer, %A_ThisLabel%, Off
+	return
+}
+If (aHK_On := Playback(aHK_Timer%nMatch%, aHK_Label%nMatch%))
 	GoSub, f_RunMacro
 FreeMemory()
 return
@@ -10113,7 +10179,7 @@ If (!(PlayHK) && !(HideWin) && (HideMainWin))
 Else
 {
 	WinMinimize, ahk_id %PMCWinID%
-	Send, !{Tab}
+	WinActivate,,, ahk_id %PMCWinID%
 }
 If (OnScCtrl)
 	GoSub, ShowControls
@@ -10612,9 +10678,11 @@ While (InStr(AllTabs, TabName ","))
 TabCount++
 GuiControl, chMacro:, %TabSel%, %TabName%
 GuiControl, chMacro:Choose, A_List, %TabCount%
+GoSub, SaveData
 Gui, chMacro:Submit, NoHide
 GuiAddLV(TabCount)
 Gui, chMacro:ListView, InputList%A_List%
+GoSub, LoadData
 LVManager.SetHwnd(ListID%A_List%), LVManager.Add()
 If (ShowGroups)
 	GoSub, EnableGroups
@@ -11352,10 +11420,8 @@ If Type in %cType29%,%cType30%
 	return
 If Type in %cType32%,%cType33%
 	Goto, EditIECom
-If Type in %cType34%
+If Type in %cType34%,%cType43%
 	Goto, EditComInt
-If Type in %cType42%,%cType43%
-	Goto, EditRunScrLet
 If (InStr(Type, "Win"))
 	Goto, EditWindow
 If Action contains %Action1%,%Action2%,%Action3%,%Action4%,%Action5%,%Action6%
@@ -11368,12 +11434,12 @@ If (Type = cType6)
 	Goto, EditMsgBox
 If (Type = cType20)
 	Goto, EditKeyWait
-If (Type = cType35)
-	Goto, EditLabel
-If (Type = cType50)
+If (Type = cType42)
 	Goto, EditComm
 If Type in %cType35%,%cType36%,%cType37%
 	Goto, EditGoto
+If (Type = cType50)
+	Goto, EditTimer
 Gui, 15:+owner1 -MinimizeBox +HwndCmdWin
 Gui, 1:+Disabled
 Gui, 15:Add, GroupBox, vSGroup Section xm W280 H130
@@ -11844,7 +11910,7 @@ LV_GetTexts(RowNumber, Action, Details, TimesX, DelayX, Type, Target, Window, Co
 RowSelection := LV_GetCount("Selected")
 If (RowSelection = 1)
 {
-	If (Type = cType50)
+	If (Type = cType42)
 	{
 		Comment := Details
 		GuiControl, 17:Disable, CommBlock
@@ -11860,7 +11926,7 @@ CommOK:
 Gui, 17:Submit, NoHide
 If (RowSelection = 1)
 {
-	If (Type != cType50)
+	If (Type != cType42)
 		StringReplace, Comm, Comm, `n, %A_Space%, All
 }
 Else
@@ -11871,8 +11937,8 @@ Gui, 17:Destroy
 Gui, chMacro:Default
 If (RowSelection = 1)
 {
-	If (Type = cType50)
-		LV_Modify(RowNumber, "Col3", Comment, 0, 1, cType50, "", "")
+	If (Type = cType42)
+		LV_Modify(RowNumber, "Col3", Comment, 0, 1, cType42, "", "")
 	Else
 		LV_Modify(RowNumber, "Col9", Comment)
 }
@@ -11911,12 +11977,12 @@ Gui, 17:Destroy
 Gui, chMacro:Default
 If (RowSelection = 0)
 {
-	LV_Add("Check", ListCount%A_List%+1, "[CommentBlock]", Comment, 0, 1, cType50, "", "")
+	LV_Add("Check", ListCount%A_List%+1, "[CommentBlock]", Comment, 0, 1, cType42, "", "")
 	LV_Modify(ListCount%A_List%+1, "Vis")
 }
 Else
 {
-	LV_Insert(RowNumber, "Check", LV_GetNext(), "[CommentBlock]", Comment, 0, 1, cType50, "", "")
+	LV_Insert(RowNumber, "Check", LV_GetNext(), "[CommentBlock]", Comment, 0, 1, cType42, "", "")
 ,	LVManager.InsertAtGroup(1, LV_GetNext())
 }
 GoSub, RowCheck
@@ -12383,7 +12449,7 @@ return
 
 f_AbortKey:
 Gui, chMacro:Default
-StopIt := 1, PlayOSOn := 0, aHK_Timer := 0
+StopIt := 1, PlayOSOn := 0
 Pause, Off
 If (Record)
 {
@@ -12787,6 +12853,7 @@ AbortKey := "F8"
 ,	ComAc := 0
 ,	Send_Loop := 0
 ,	TabIndent := 1
+,	ConvertBreaks := 1
 ,	TextWrap := 0
 ,	CommentUnchecked := 1
 ,	IncPmc := 0
@@ -12814,6 +12881,8 @@ AbortKey := "F8"
 ,	TB_Edit(tbPrevF, "TextWrap", 0)
 ,	TB_Edit(tbPrev, "TabIndent", 1)
 ,	TB_Edit(tbPrevF, "TabIndent", 1)
+,	TB_Edit(tbPrev, "ConvertBreaks", 1)
+,	TB_Edit(tbPrevF, "ConvertBreaks", 1)
 ,	TB_Edit(tbPrev, "CommentUnchecked", 1)
 ,	TB_Edit(tbPrevF, "CommentUnchecked", 1)
 
@@ -13101,6 +13170,7 @@ IniWrite, %ComCr%, %IniFilePath%, ExportOptions, ComCr
 IniWrite, %ComAc%, %IniFilePath%, ExportOptions, ComAc
 IniWrite, %Send_Loop%, %IniFilePath%, ExportOptions, Send_Loop
 IniWrite, %TabIndent%, %IniFilePath%, ExportOptions, TabIndent
+IniWrite, %ConvertBreaks%, %IniFilePath%, ExportOptions, ConvertBreaks
 IniWrite, %IncPmc%, %IniFilePath%, ExportOptions, IncPmc
 IniWrite, %Exe_Exp%, %IniFilePath%, ExportOptions, Exe_Exp
 IniWrite, %ShowExpOpt%, %IniFilePath%, ExportOptions, ShowExpOpt
@@ -13322,7 +13392,7 @@ Loop, % LV_GetCount()
 			LV_Delete(A_Index), BadPos := true
 			break
 		}
-		Else If ((!FuncLn) && ((Type != cType48) && (Type != cType50)))
+		Else If ((!FuncLn) && ((Type != cType48) && (Type != cType42)))
 		{
 			LV_Delete(A_Index), BadPos := true
 			break
@@ -13349,20 +13419,20 @@ Loop, % LV_GetCount()
 :	(Type = cType16) ? LV_Modify(A_Index, "Icon" IconsNames["image"])
 :	(Action = "[Control]") ? LV_Modify(A_Index, "Icon" IconsNames["control"])
 :	(Type = cType34) ? LV_Modify(A_Index, "Icon" IconsNames["com"])
-:	(Type = cType42) ? LV_Modify(A_Index, "Icon" IconsNames["vbscript"])
-:	(Type = cType43) ? LV_Modify(A_Index, "Icon" IconsNames["jscript"])
 :	(Type = cType35) ? LV_Modify(A_Index, "Icon" IconsNames["labels"])
 :	LV_Modify(A_Index, "Icon" IconsNames["keystroke"])
 	(Type = cType47) ? LV_Modify(A_Index, "Icon" IconsNames["userfunc"])
 :	(Type = cType48) ? LV_Modify(A_Index, "Icon" IconsNames["parameter"])
 :	(Type = cType49) ? LV_Modify(A_Index, "Icon" IconsNames["return"])
+:	(Type = cType43) ? LV_Modify(A_Index, "Icon" IconsNames["expression"])
 :	RegExMatch(Type, cType36 "|" cType37) ? LV_Modify(A_Index, "Icon" IconsNames["goto"])
-:	RegExMatch(Type, cType32 "|" cType33) ? LV_Modify(A_Index, "Icon" IconsNames["ie"])
 :	RegExMatch(Type, cType11 "|" cType14 "|Run|RunWait|RunAs") ? LV_Modify(A_Index, "Icon" IconsNames["run"])
 :	RegExMatch(Type, "Process") ? LV_Modify(A_Index, "Icon" IconsNames["process"])
 :	RegExMatch(Type, "Shutdown") ? LV_Modify(A_Index, "Icon" IconsNames["shutdown"])
 :	""
-	(Type = cType50) ? LV_Modify(A_Index, "Icon" IconsNames["comment"])
+	(Type = cType42) ? LV_Modify(A_Index, "Icon" IconsNames["comment"])
+	(Type = cType50) ? LV_Modify(A_Index, "Icon" IconsNames["timer"])
+:	RegExMatch(Type, cType32 "|" cType33) ? LV_Modify(A_Index, "Icon" IconsNames["ie"])
 :	(InStr(Type, "Sort") || InStr(Type, "String") || InStr(Type, "Split")) ? LV_Modify(A_Index, "Icon" IconsNames["string"])
 :	(InStr(Type, "InputBox") || InStr(Type, "Msg") || InStr(Type, "Tip")
 	|| InStr(Type, "Progress") || InStr(Type, "Splash")) ? LV_Modify(A_Index, "Icon" IconsNames["dialogs"])
@@ -13370,7 +13440,7 @@ Loop, % LV_GetCount()
 :	(InStr(Type, "File")=1 || InStr(Type, "Drive")=1) ? LV_Modify(A_Index, "Icon" IconsNames["files"])
 :	(InStr(Type, "Wait") || InStr(Type, "Input")=1) ? LV_Modify(A_Index, "Icon" IconsNames["wait"])
 :	InStr(Type, "Ini") ? LV_Modify(A_Index, "Icon" IconsNames["ini"])
-:	InStr(Type, "Reg") ? LV_Modify(A_Index, "Icon" IconsNames["registry"])
+:	InStr(Type, "Reg")=1 ? LV_Modify(A_Index, "Icon" IconsNames["registry"])
 :	InStr(Type, "Sound") ? LV_Modify(A_Index, "Icon" IconsNames["sound"])
 :	InStr(Type, "Group") ? LV_Modify(A_Index, "Icon" IconsNames["group"])
 :	InStr(Type, "Env") ? LV_Modify(A_Index, "Icon" IconsNames["variables"])
@@ -13585,7 +13655,7 @@ Menu, CommandMenu, Add, %i_Lang009%`t%_s%F8, Run
 Menu, CommandMenu, Add
 Menu, CommandMenu, Add, %i_Lang010%`t%_s%F9, ComLoop
 Menu, CommandMenu, Add, %i_Lang011%`t%_s%Shift+F9, ComGoto
-Menu, CommandMenu, Add, %i_Lang012%`t%_s%Ctrl+F9, AddLabel
+Menu, CommandMenu, Add, %i_Lang012%`t%_s%Ctrl+F9, TimedLabel
 Menu, CommandMenu, Add
 Menu, CommandMenu, Add, %i_Lang013%`t%_s%F10, IfSt
 Menu, CommandMenu, Add, %i_Lang014%`t%_s%Shift+F10, AsVar
@@ -13624,9 +13694,12 @@ Menu, SelectMenu, Add
 Menu, SelectMenu, Add, %s_Lang009%, SelType
 Menu, SelectMenu, Add, %s_Lang010%, :SelCmdMenu
 
-CopyMenuLabels[1] := "Macro1"
-Menu, CopyTo, Add, % CopyMenuLabels[1], CopyList, Radio
-Menu, CopyTo, Check, % CopyMenuLabels[1]
+If (CopyMenuLabels[1] = "")
+{
+	CopyMenuLabels[1] := "Macro1"
+	Menu, CopyTo, Add, % CopyMenuLabels[1], CopyList, Radio
+	Menu, CopyTo, Check, % CopyMenuLabels[1]
+}
 
 Menu, GroupMenu, Add, %e_Lang017%`t%_s%Ctrl+Shift+G, GroupsMode
 Menu, GroupMenu, Add
@@ -14323,7 +14396,7 @@ TB_Edit(tbRecPlay, "Record", "", "", w_Lang046)
 TB_Edit(tbCommand, "Mouse", "", "", w_Lang050), TB_Edit(tbCommand, "Text", "", "", w_Lang051), TB_Edit(tbCommand, "ControlCmd", "", "", w_Lang053)
 , TB_Edit(tbCommand, "Sleep", "", "", w_Lang054), TB_Edit(tbCommand, "MsgBox", "", "", w_Lang055), TB_Edit(tbCommand, "KeyWait", "", "", w_Lang056)
 , TB_Edit(tbCommand, "Window", "", "", w_Lang057), TB_Edit(tbCommand, "Image", "", "", w_Lang058), TB_Edit(tbCommand, "Run", "", "", w_Lang059)
-, TB_Edit(tbCommand, "ComLoop", "", "", w_Lang060), TB_Edit(tbCommand, "ComGoto", "", "", w_Lang061), TB_Edit(tbCommand, "AddLabel", "", "", w_Lang062)
+, TB_Edit(tbCommand, "ComLoop", "", "", w_Lang060), TB_Edit(tbCommand, "ComGoto", "", "", w_Lang061), TB_Edit(tbCommand, "TimedLabel", "", "", w_Lang062)
 , TB_Edit(tbCommand, "IfSt", "", "", w_Lang063), TB_Edit(tbCommand, "AsVar", "", "", w_Lang064), TB_Edit(tbCommand, "AsFunc", "", "", w_Lang065)
 , TB_Edit(tbCommand, "IECom", "", "", w_Lang066), TB_Edit(tbCommand, "ComInt", "", "", w_Lang067), TB_Edit(tbCommand, "RunScrLet", "", "", w_Lang068)
 , TB_Edit(tbCommand, "SendMsg", "", "", w_Lang069)
@@ -14344,14 +14417,13 @@ TB_Edit(tbEdit, "EditButton", "", "", w_Lang092), TB_Edit(tbEdit, "CutRows", "",
 , TB_Edit(tbEdit, "Import", "", "", w_Lang075), TB_Edit(tbEdit, "SaveCurrentList", "", "", w_Lang076)
 , TB_Edit(tbEdit, "UserFunction", "", "", w_Lang103), TB_Edit(tbEdit, "FuncParameter", "", "", w_Lang104), TB_Edit(tbEdit, "FuncReturn", "", "", w_Lang105)
 ; Preview
-TB_Edit(tbPrev, "PrevDock", "", "", t_Lang124)
-, TB_Edit(tbPrev, "PrevCopy", "", "", c_Lang023), TB_Edit(tbPrev, "PrevRefreshButton", "", "", t_Lang014)
-, TB_Edit(tbPrev, "AutoRefresh", "", "", t_Lang015), TB_Edit(tbPrev, "TabIndent", "", "", t_Lang011), TB_Edit(tbPrev, "TextWrap", "", "", t_Lang052), TB_Edit(tbPrev, "CommentUnchecked", "", "", w_Lang107), TB_Edit(tbPrev, "OnTop", "", "", t_Lang016)
-, TB_Edit(tbPrev, "EditScript", "", "", t_Lang138)
-, TB_Edit(tbPrevF, "PrevDock", "", "", t_Lang125)
+TB_Edit(tbPrev, "PrevCopy", "", "", c_Lang023), TB_Edit(tbPrev, "PrevRefreshButton", "", "", t_Lang014)
+, TB_Edit(tbPrev, "TabIndent", "", "", t_Lang011), TB_Edit(tbPrev, "ConvertBreaks", "", "", t_Lang190), TB_Edit(tbPrev, "CommentUnchecked", "", "", w_Lang107), TB_Edit(tbPrev, "TextWrap", "", "", t_Lang052), TB_Edit(tbPrev, "OnTop", "", "", t_Lang016)
+, TB_Edit(tbPrev, "EditScript", "", "", t_Lang138), TB_Edit(tbPrev, "PrevDock", "", "", t_Lang124), TB_Edit(tbPrev, "Preview", "", "", c_Lang022)
+
 , TB_Edit(tbPrevF, "PrevCopy", "", "", c_Lang023), TB_Edit(tbPrevF, "PrevRefreshButton", "", "", t_Lang014)
-, TB_Edit(tbPrevF, "AutoRefresh", "", "", t_Lang015), TB_Edit(tbPrevF, "TabIndent", "", "", t_Lang011), TB_Edit(tbPrevF, "TextWrap", "", "", t_Lang052), TB_Edit(tbPrevF, "CommentUnchecked", "", "", w_Lang107), TB_Edit(tbPrevF, "OnTop", "", "", t_Lang016)
-, TB_Edit(tbPrevF, "EditScript", "", "", t_Lang138), TB_Edit(tbPrevF, "Preview", "", "", c_Lang022)
+, TB_Edit(tbPrevF, "TabIndent", "", "", t_Lang011), TB_Edit(tbPrevF, "ConvertBreaks", "", "", t_Lang190), TB_Edit(tbPrevF, "CommentUnchecked", "", "", w_Lang107), TB_Edit(tbPrevF, "TextWrap", "", "", t_Lang052), TB_Edit(tbPrevF, "OnTop", "", "", t_Lang016)
+, TB_Edit(tbPrevF, "EditScript", "", "", t_Lang138), TB_Edit(tbPrevF, "PrevDock", "", "", t_Lang125), TB_Edit(tbPrevF, "Preview", "", "", c_Lang022)
 ; OSC
 TB_Edit(tbOSC, "OSPlay", "", "", t_Lang112), TB_Edit(tbOSC, "OSStop", "", "", t_Lang113), TB_Edit(tbOSC, "ShowPlayMenu", "", "", t_Lang114)
 , TB_Edit(tbOSC, "RecStart", "", "", t_Lang115), TB_Edit(tbOSC, "RecStartNew", "", "", t_Lang116), TB_Edit(tbOSC, "ShowRecMenu", "", "", t_Lang117)
@@ -14481,7 +14553,6 @@ Type_Keywords := "
 " cType39 "
 " cType40 "
 " cType41 "
-" cType42 "
 " cType43 "
 " cType44 "
 " cType45 "
@@ -14532,7 +14603,7 @@ KeyWait
 AsVar
 ComLoop
 ComLoop
-AddLabel
+TimedLabel
 ComGoto
 ComGoto
 ComLoop

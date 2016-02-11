@@ -246,7 +246,7 @@
 	w_Lang064 =	Varijable / Nizovi (Shift+F10)
 	w_Lang065 =	funkcija / Metode array (Ctrl+F10)
 	w_Lang066 =	Internet Explorer (F11)
-	w_Lang067 =	COM sučelja (Shift+F11)
+	w_Lang067 =	Izraz / COM sučelja (Shift+F11)
 	w_Lang068 =	Trčanje Scriptlet (Ctrl+F11)
 	w_Lang069 =	Windows Poruke (F12)
 	w_Lang070 =	Dodaj Windows tipku "igrati" prečac
@@ -301,7 +301,7 @@
 	c_Lang010 =	Varijable
 	c_Lang011 =	funkcija / Metode array
 	c_Lang012 =	Internet Explorer
-	c_Lang013 =	COM sučelja
+	c_Lang013 =	Izraz / COM sučelja
 	c_Lang014 =	Odaberite Zahtjev (Advanced)
 	c_Lang015 =	Poruka
 	c_Lang016 =	Kontrolirajte
@@ -362,7 +362,7 @@
 	c_Lang071 =	Varijacije
 	c_Lang072 =	Pregled
 	c_Lang073 =	Petlja
-	c_Lang074 =	* Ne rade u ručnom reprodukcije.
+	c_Lang074 =	Creació automàtica d'objectes COM
 	c_Lang075 =	Razbiti
 	c_Lang076 =	Nastaviti
 	c_Lang077 =	Goto
@@ -513,6 +513,20 @@
 	c_Lang223 =	Globalne varijable
 	c_Lang224 =	Lokalni varijable
 	c_Lang225 =	Statičke varijable
+	c_Lang226 =	Iz
+	c_Lang227 =	E-mail
+	c_Lang228 =	Predmet
+	c_Lang229 =	Poruka
+	c_Lang230 =	Do
+	c_Lang231 =	KOPIJA
+	c_Lang232 =	BCC
+	c_Lang233 =	Priloži datoteke
+	c_Lang234 =	HTML
+	c_Lang235 =	Pošalji e-mail
+	c_Lang236 =	Download / upload datoteka
+	c_Lang237 =	Zip / unzip kartoteka
+	c_Lang238 =	Upaliti
+	c_Lang239 =	Iskljuciti
 		
 ; 16. Other Windows		
 	t_Lang001 =	Izvoz u AutoHotkey
@@ -696,19 +710,15 @@
 	t_Lang179 =	Napravite novo
 	t_Lang180 =	Koristite Enter, PgDn i PgUp za navigaciju.
 	t_Lang181 =	Pošalji
-	t_Lang182 =	Iz
-	t_Lang183 =	Ime
-	t_Lang184 =	E-mail
-	t_Lang185 =	Predmet
-	t_Lang186 =	Poruka
-	t_Lang187 =	Spremi promjene?
-	t_Lang188 =	Jezik datoteke
-	t_Lang189 =	Referentni datoteke
-	t_Lang190 =	Pošaljite reviziju ili novi prijevod
-	t_Lang191 =	Sažmi sve
-	t_Lang192 =	Proširi sve
-	t_Lang193 =	Do
-	t_Lang194 =	Jezik
+	t_Lang182 =	Ime
+	t_Lang183 =	Spremi promjene?
+	t_Lang184 =	Jezik datoteke
+	t_Lang185 =	Referentni datoteke
+	t_Lang186 =	Pošaljite reviziju ili novi prijevod
+	t_Lang187 =	Sažmi sve
+	t_Lang188 =	Proširi sve
+	t_Lang189 =	Jezik
+	t_Lang190 =	Pretvori prijelome redaka
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Otvoreno
@@ -840,6 +850,9 @@
 	d_Lang104 =	Ova poruka neće biti ponovno prikazana za isti ažuriranja. Možete ga preuzeti na izborniku Pomoć > Provjeri ima li ažuriranja.
 	d_Lang105 =	Datoteka je uspješno poslana. Hvala!
 	d_Lang106 =	Jezična datoteka je uspješno ažuriran.
+	d_Lang107 =	Nije moguće pokrenuti timer
+	d_Lang108 =	Sve pozicije su registrirani. Molim te, izbrisati jedan od njih.
+	d_Lang109 =	Ciljana oznaka ne postoji.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Možete stvoriti makronaredbe pomoću naredbenog gumba u glavnom prozoru ili pomoću snimača kopirati svoje radnje. Idi na Opcije > Postavke > Snimanje odabrati ono što ulazi će biti zabilježen.
@@ -1135,6 +1148,7 @@
 	Exit	Izlaztrenutni razgovor ili (ako jeoriginal nije uporni i ne sadrži HotKeys)cijelu skriptu .
 	ExitApp	Raskine skriptu bezuvjetno .
 	Exp	Vraća e (što je otprilike 2,71828182845905) podignuta na n-ti snage .
+	Expression	Obavlja jednu ili više operacija na nizu varijabli, doslovnim žice i / ili doslovnih brojeva.
 	FileAppend	Piše tekst do kraja datoteke (prva stvaranje datoteke , ako je potrebno) .
 	FileCopy	Kopije jednu ili više datoteka .
 	FileCopyDir	Kopira mapu zajedno sa svim svojim pod -mape i datoteke (slično xcopy) .

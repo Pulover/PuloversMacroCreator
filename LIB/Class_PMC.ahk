@@ -131,6 +131,33 @@
 					RegExMatch(Col[3], "sU)(.+)\s(\W?\W\W?)(?-U)\s(.*)", Out)
 				,	Col[3] := Out1 " " Out2 " " CheckExp(Out3)
 				}
+				If (Col[6] = "COMInterface")
+				{
+					Action := Col[2]
+					StringSplit, Act, Action, :
+					If (Act2 != "")
+						Details := Act2 " := " Act1 "." CheckComExp(Col[3], "", "", Act1)
+					Else
+					{
+						Details := "", Step := StrReplace(Col[3], "``n", "`n")
+						Loop, Parse, Step, `n, %A_Space%%A_Tab%
+						{
+							If (A_LoopField = "")
+								continue
+							ComExp := CheckComExp(A_LoopField, "", sArray := "", Act1)
+						,	Details .= sArray . Act1 "." ComExp "``n"
+						}
+					}
+					Col[2] := Act1, Col[3] := Details
+				}
+				If ((Col[6] = "VBScript") || (Col[6] = "JScript"))
+				{
+					Act := SubStr(Col[2], 1, 2)
+				,	LV_Add("Check" chk, 1, "[Assign Variable]", Act "Code := " Col[3], 1, 0, "Variable")
+				,	Details := Act ".Language := """ Col[6] """"
+				,	Details .= "`n" Act ".ExecuteStatement(" Act "Code)"
+				,	Col[2] := Act, Col[3] := Details, Col[6] := "COMInterface"
+				}
 			}
 			LV_Add("Check" chk, Col*)
 		}

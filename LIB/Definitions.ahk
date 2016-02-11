@@ -51,15 +51,15 @@ ListCount1 := 0
 ,	cType39 := "LoopParse"
 ,	cType40 := "LoopFilePattern"
 ,	cType41 := "LoopRegistry"
-,	cType42 := "VBScript"
-,	cType43 := "JScript"
+,	cType42 := "CommentBlock"
+,	cType43 := "Expression"
 ,	cType44 := "Function"
 ,	cType45 := "ForLoop"
 ,	cType46 := "Method"
 ,	cType47 := "UserFunction"
 ,	cType48 := "FuncParameter"
 ,	cType49 := "FuncReturn"
-,	cType50 := "CommentBlock"
+,	cType50 := "SetTimer"
 
 Action1 := "Click"
 ,	Action2 := "Move"
@@ -110,6 +110,7 @@ RecOptChecks := ["ClearNewList", "", "Strokes", "CaptKDn", "RecKeybdCtrl"
 ,	CopyMenuLabels := []
 ,	ScopedVars := {}
 ,	Static_Vars := {}
+,	RegisteredTimers := []
 ,	LVManager := new LV_Rows()
 ,	LVManager.SetCallback("LVCallback")
 ,	Exp_Mult := {1:2, 2:4, 3:8, 4:16, 5:32}
@@ -147,7 +148,7 @@ IconsNames := { "apply": 1
 			,	"ini": 30
 			,	"insert": 31
 			,	"joy": 32
-			,	"jscript": 33
+			,	"expression": 33
 			,	"labels": 34
 			,	"userfunc": 35
 			,	"loop": 36
@@ -190,7 +191,7 @@ IconsNames := { "apply": 1
 			,	"treeview": 73
 			,	"undo": 74
 			,	"variables": 75
-			,	"vbscript": 76
+			,	"paragraph": 76
 			,	"wait": 77
 			,	"warn": 78
 			,	"window": 79
@@ -224,7 +225,10 @@ IconsNames := { "apply": 1
 			,	"parameter": 107
 			,	"close": 108
 			,	"extedit": 109
-			,	"sort": 110 }
+			,	"sort": 110
+			,	"upload": 111
+			,	"email": 112
+			,	"zip": 113 }
 
 KeyNameRep := "
 (Join,
@@ -1048,9 +1052,9 @@ DefaultBar := {FileOpt: "Enabled AutoSize", File: ["New=" w_Lang040 ":41", "Open
 			, CommandOpt: "Enabled AutoSize", Command: ["Mouse=" w_Lang050 ":38", "Text=" w_Lang051 ":70", "ControlCmd=" w_Lang053 ":7"
 														, "", "Sleep=" w_Lang054 ":45", "MsgBox=" w_Lang055 ":11", "KeyWait=" w_Lang056 ":77"
 														, "", "Window=" w_Lang057 ":79", "Image=" w_Lang058 ":27", "Run=" w_Lang059 ":58"
-														, "", "ComLoop=" w_Lang060 ":36", "ComGoto=" w_Lang061 ":22", "AddLabel=" w_Lang062 ":34"
+														, "", "ComLoop=" w_Lang060 ":36", "ComGoto=" w_Lang061 ":22", "TimedLabel=" w_Lang062 ":71"
 														, "", "IfSt=" w_Lang063 ":26", "AsVar=" w_Lang064 ":75", "AsFunc=" w_Lang065 ":21"
-														, "", "IECom=" w_Lang066 ":25", "ComInt=" w_Lang067 ":4", "RunScrLet=" w_Lang068 ":76"
+														, "", "IECom=" w_Lang066 ":25", "ComInt=" w_Lang067 ":33", "RunScrLet=" w_Lang068 ":76"
 														, "", "SendMsg=" w_Lang069 ":61"
 														, "", "CmdFind=" w_Lang091 ":92"]
 			, SetOpt: "Enabled AutoSize", Settings: ["HideMainWin=" w_Lang013 ":80", "OnScCtrl=" w_Lang009 ":87"
@@ -1066,10 +1070,9 @@ DefaultBar := {FileOpt: "Enabled AutoSize", File: ["New=" w_Lang040 ":41", "Open
 														, "", "TabPlus=" w_Lang072 ":66", "TabClose=" w_Lang073 ":68", "DuplicateList=" w_Lang074 ":69", "EditMacros=" w_Lang052 ":97"
 														, "", "Import=" w_Lang075 ":28", "SaveCurrentList=" w_Lang076 ":67"
 														, "", "UserFunction=" w_Lang103 ":35", "FuncParameter=" w_Lang104 ":107", "FuncReturn=" w_Lang105 ":105"]}
-FixedBar :=	{PrevOpt: "Enabled AutoSize", Preview: ["PrevDock=" t_Lang124 ":106"
-														, "", "PrevCopy=" c_Lang023 ":8", "PrevRefreshButton=" t_Lang014 ":90(Enabled Dropdown)"
-														, "", "TabIndent=" t_Lang011 ":85", "TextWrap=" t_Lang052 ":96", "CommentUnchecked=" w_Lang107 ":5", "OnTop=" t_Lang016 ":81"
-														, "", "EditScript=" t_Lang138 ":109", "Preview=" c_Lang022 ":108"]
+FixedBar :=	{PrevOpt: "Enabled AutoSize", Preview: ["PrevCopy=" c_Lang023 ":8", "PrevRefreshButton=" t_Lang014 ":90(Enabled Dropdown)"
+														, "", "TabIndent=" t_Lang011 ":85", "ConvertBreaks=" t_Lang195 ":76", "CommentUnchecked=" w_Lang107 ":5", "TextWrap=" t_Lang052 ":96", "OnTop=" t_Lang016 ":81"
+														, "", "EditScript=" t_Lang138 ":109", "PrevDock=" t_Lang124 ":106", "Preview=" c_Lang022 ":108"]
 			, TextOpt: "Enabled AutoSize", Text: ["OpenT=" t_Lang126 ":42", "SaveT=" t_Lang127 ":59"
 														, "", "CutT=" t_Lang128 ":9", "CopyT=" t_Lang129 ":8", "PasteT=" t_Lang130 ":44"
 														, "", "RemoveT=" t_Lang132 ":10", "SelAllT=" t_Lang131 ":99"]
