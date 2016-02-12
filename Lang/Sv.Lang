@@ -527,6 +527,10 @@
 	c_Lang237 =	Zip / packa upp filer
 	c_Lang238 =	Sätta på
 	c_Lang239 =	Stäng av
+	c_Lang240 =	positioner registreras.
+	c_Lang241 =	Ta bort alla timers
+	c_Lang242 =	Set timer
+	c_Lang243 =	Fram tills
 		
 ; 16. Other Windows		
 	t_Lang001 =	Exportera till AutoHotkey
@@ -930,6 +934,7 @@
 	InsertKeyT_TT =	Infoga Tangenttryckning
 	JoyKey_TT =	Tryck på en knapp på joysticken
 	LoopLVColor_TT =	Klicka här för att välja en färg
+	LUntil_TT =	Gäller ett tillstånd till en fortsättning av en slinga eller for-loop.
 	ManKey_TT =	Snabbknappen till spela Macro "steg-för-steg"
 	MRel_TT =	Rörelser i förhållande till nuvarande position.
 		Eller om de används med Kontroll: position i förhållande till Control.
@@ -1317,6 +1322,7 @@
 	UrlDownloadToFile	Hämtar en fil från Internet.
 	UserFunction	Luo Tehtävä rakenne.
 	VarSetCapacity	Förstorar en variabel innehav kapacitet eller frigör minnet. Normalt är detta nödvändigt endast för ovanliga omständigheter såsom DllCall.
+	While-loop	Utför en serie kommandon tills det angivna uttrycket utvärderas till false.
 	WinActivate	Aktiverar angivna fönstret (gör det främst).
 	WinActivateBottom	Samma som WinActivate förutom att den aktiverar den nedersta (åtminstone nyligen aktiv) matchande fönster snarare än det översta.
 	WinActive	Returnerar Unikt ID (HWND) av det aktiva fönstret om det matchar de angivna kriterierna.

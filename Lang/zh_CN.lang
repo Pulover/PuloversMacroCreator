@@ -527,6 +527,10 @@
 	c_Lang237 =	压缩/解压缩文件
 	c_Lang238 =	打开
 	c_Lang239 =	关掉
+	c_Lang240 =	位置注册。
+	c_Lang241 =	删除所有计时器
+	c_Lang242 =	设置计时器
+	c_Lang243 =	直到
 		
 ; 16. Other Windows		
 	t_Lang001 =	导出为AutoHotkey
@@ -930,6 +934,7 @@
 	InsertKeyT_TT =	插入键击
 	JoyKey_TT =	按下操纵杆按钮
 	LoopLVColor_TT =	单击选取颜色
+	LUntil_TT =	根据条件判断是否继续执行Loop或For循环。
 	ManKey_TT =	步进回放宏的热键
 	MRel_TT =	相对当前位置移动。
 		当用于控件时则相对于当前控件的位置。
@@ -1317,6 +1322,7 @@
 	UrlDownloadToFile	从互联网下载文件。
 	UserFunction	创建一个功能结构。
 	VarSetCapacity	增加或清空变量占用的内存。通常只有在特殊情况下才需要，例如DllCall。
+	While-loop	执行一系列命令，直到指定的表达式的值为false。
 	WinActivate	激活指定的窗口（让它置于最前面）。
 	WinActivateBottom	和WinActivate一样，只是此命令激活最下面的（最早激活的）匹配窗口而不是最上面的。
 	WinActive	返回匹配指定条件的活动窗口的 唯一 ID（HWND）。

@@ -527,6 +527,10 @@
 	c_Lang237 =	Zip / Sıkıştırılmış dosya
 	c_Lang238 =	Aç
 	c_Lang239 =	Kapat
+	c_Lang240 =	pozisyonları kayıtlı.
+	c_Lang241 =	Tüm sayaçlarını silmek
+	c_Lang242 =	Set zamanlayıcı
+	c_Lang243 =	Kadar
 		
 ; 16. Other Windows		
 	t_Lang001 =	AutoHotkey Aktar
@@ -930,6 +934,7 @@
 	InsertKeyT_TT =	Tuş Eklemek
 	JoyKey_TT =	Joystick üzerindeki bir düğmeye basın
 	LoopLVColor_TT =	Bir renk seçmek için tıklayınız
+	LUntil_TT =	Bir döngü ya da için-döngünün devamı için bir koşul geçerlidir.
 	ManKey_TT =	Kısayol Makro "adım adım" oynamak
 	MRel_TT =	Geçerli konuma göre Hareketleri.
 		Yoksa Kontrol kullanılırsa: Denetim göreli konumu.
@@ -1317,6 +1322,7 @@
 	UrlDownloadToFile	Internetten bir dosya indirir.
 	UserFunction	Bir işlev yapısı oluşturur.
 	VarSetCapacity	Bir değişkenin tutma kapasitesi büyütür ya da belleği serbest bırakır. Normal olarak, bu sadece bu DllCall gibi olağan dışı durumlarda gereklidir.
+	While-loop	Belirtilen ifade yanlış olarak değerlendirilir kadar art arda bir dizi komut gerçekleştirir.
 	WinActivate	Belirtilen penceresi (bu her şeyden yapar) etkinleştirir.
 	WinActivateBottom	Bu en alttaki (en son aktif) eşleştirme pencere yerine üstteki aktive dışında WinActivate aynı.
 	WinActive	, Belirtilen ölçütlerle eşleşen eğer etkin pencerenin Benzersiz Kimlik (HWND) döndürür.

@@ -1,7 +1,7 @@
 ﻿LV_Export(ListID)
 {
 	local LVData, Id_LVData, Indent, RowData, Action, Match, ExpValue
-	, Step, TimesX, DelayX, Type, Target, Window, Comment, sArray
+	, Step, TimesX, DelayX, Type, Target, Window, Comment, UntilArray := []
 	, PAction, PType, PDelayX, PComment, Act, iCount, init_ie, ComExp
 	, VarsScope, FuncParams, IsFunction := false, CommentOut := false
 	Gui, chMacro:Default
@@ -128,7 +128,7 @@
 				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
 		}
 		Else If ((Type = cType7) || (Type = cType38) || (Type = cType39)
-		|| (Type = cType40) || (Type = cType41) || (Type = cType45))
+		|| (Type = cType40) || (Type = cType41) || (Type = cType45) || (Type = cType51))
 		{
 			If (Action = "[LoopStart]")
 			{
@@ -149,12 +149,18 @@
 					If (SubStr(RowData, 0) = "``")
 						RowData := SubStr(RowData, 1, StrLen(RowData)-1)
 				}
+				UntilArray.Push(Target)
 			}
 			If (Comment != "")
 				RowData .= "  " "; " Comment
 			RowData .= "`n{"
 			If (Action = "[LoopEnd]")
+			{
 				RowData := "`n}"
+			,	Target := UntilArray.Pop()
+				If (Target != "")
+					RowData .= "`nUntil, " Target
+			}
 		}
 		Else If (Type = cType12)
 		{
@@ -432,8 +438,17 @@
 			RowData := "`n" Type ", " Step
 		,	RowData := Add_CD(RowData, Comment, DelayX)
 		}
-		Else If (Type = cType50)
+		Else If (Type = cType42)
 			RowData := (IsChecked = A_Index) ? "`n/*`n" Step "`n*/" : ""
+		Else If (Type = cType50)
+		{
+			Action := RegExReplace(Action, ".*\s")
+		,	RowData := "`n" Type ", " Step ", " (Action = "Once" ? (DelayX > 0 ? -DelayX : -1)
+												: Action = "Period" ? DelayX
+												: Action)
+			If (Comment != "")
+				RowData .= "  " "; " Comment
+		}
 		Else If ((Type = cType3) || (Type = cType8) || (Type = cType11)
 		|| (Type = cType13) || (Type = cType14))
 		{
@@ -495,7 +510,7 @@
 			RowData := StrReplace(RowData, "```,", "`,")
 		If ((IsChecked = A_Index) && (CommentOut))
 			LVData .= "`n*/" RowData, CommentOut := false
-		Else If ((IsChecked != A_Index) && (!CommentOut) && (Type != cType50))
+		Else If ((IsChecked != A_Index) && (!CommentOut) && (Type != cType42))
 			LVData .= "`n/*" RowData, CommentOut := true
 		Else
 			LVData .= RowData

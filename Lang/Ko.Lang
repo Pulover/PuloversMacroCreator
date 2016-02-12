@@ -527,6 +527,10 @@
 	c_Lang237 =	우편 번호 / 압축 해제 파일
 	c_Lang238 =	켜다
 	c_Lang239 =	끄다
+	c_Lang240 =	위치 등록.
+	c_Lang241 =	모든 타이머 삭제
+	c_Lang242 =	설정 타이머
+	c_Lang243 =	까지
 		
 ; 16. Other Windows		
 	t_Lang001 =	AutoHotkey로 내보내기
@@ -930,6 +934,7 @@
 	InsertKeyT_TT =	키를 삽입
 	JoyKey_TT =	조이스틱 버튼을 눌러
 	LoopLVColor_TT =	색상을 선택하려면 클릭하십시오
+	LUntil_TT =	루프 또는 루프의 지속에 조건을 적용합니다.
 	ManKey_TT =	단축키 매크로 "단계별"를 재생
 	MRel_TT =	현재 위치를 기준으로 움직임.
 		또는 제어와 함께 사용하는 경우: 컨트롤에 상대적인 위치.
@@ -1317,6 +1322,7 @@
 	UrlDownloadToFile	인터넷에서 파일을 다운로드합니다.
 	UserFunction	기능 구조를 작성합니다.
 	VarSetCapacity	변수의 보유 용량을 확대하거나 메모리를 해제합니다. 일반적으로, 이것은 단지 등 DllCall 같은 특별한 상황을 위해 필요합니다.
+	While-loop	지정된 표현식이 false로 평가 될 때까지 반복적으로 일련의 명령을 수행합니다.
 	WinActivate	지정된 창 (그것이 최초한다) 활성화합니다.
 	WinActivateBottom	그것은 맨 아래 (가장 최근에 활성화) 매칭 창이 아닌 최상위를 활성화하는 것을 제외 WinActivate과 동일합니다.
 	WinActive	는 지정된 기준과 일치하면 활성 창의 고유 ID (HWND)을 반환합니다.

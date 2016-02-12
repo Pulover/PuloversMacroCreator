@@ -527,6 +527,10 @@
 	c_Lang237 =	Zip / Giải nén file
 	c_Lang238 =	Bật
 	c_Lang239 =	Tắt
+	c_Lang240 =	vị trí đăng ký.
+	c_Lang241 =	Xóa tất cả các giờ
+	c_Lang242 =	Bộ đếm thời gian
+	c_Lang243 =	Cho đến khi
 		
 ; 16. Other Windows		
 	t_Lang001 =	Xuất khẩu sang AutoHotkey
@@ -930,6 +934,7 @@
 	InsertKeyT_TT =	Chèn Tổ hợp phím
 	JoyKey_TT =	Nhấn một nút trên điều khiển
 	LoopLVColor_TT =	Nhấn vào đây để chọn một màu
+	LUntil_TT =	Áp dụng một điều kiện để việc tiếp tục một vòng hoặc Đối với vòng lặp.
 	ManKey_TT =	Phím nóng để chơi vĩ mô "từng bước"
 	MRel_TT =	Chuyển động tương đối so với vị trí hiện tại.
 		Hoặc nếu được sử dụng với điều khiển: Vị trí tương đối vào Control.
@@ -1317,6 +1322,7 @@
 	UrlDownloadToFile	Tải về một tập tin từ Internet.
 	UserFunction	Tạo ra một cấu trúc chức năng.
 	VarSetCapacity	Phóng to khả năng giữ một biến hoặc giải phóng bộ nhớ của nó. Thông thường, điều này chỉ cần thiết cho trường hợp bất thường như DllCall.
+	While-loop	Izvede niz ukazov, dokler se navedeni izraz neresničen.
 	WinActivate	Kích hoạt các cửa sổ chỉ định (làm cho nó quan trọng nhất).
 	WinActivateBottom	Giống như WinActivate ngoại trừ việc nó kích hoạt dưới cùng (ít nhất là gần đây hoạt động) cửa sổ phù hợp chứ không phải là trên cùng.
 	WinActive	Trả về ID duy nhất (HWND) của cửa sổ hoạt động nếu nó phù hợp với tiêu chuẩn quy định.

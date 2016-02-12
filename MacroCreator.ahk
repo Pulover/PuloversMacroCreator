@@ -8,7 +8,7 @@
 ; Forum: http://autohotkey.com/boards/viewtopic.php?f=6&t=143
 ; Version: 5.0.0
 ; Release Date: February, 2016
-; AutoHotkey Version: 1.1.23.01
+; AutoHotkey Version: 1.1.23.00
 ; Copyright © 2012-2016 Rodolfo U. Batista
 ; GNU General Public License 3.0 or higher
 ; <http://www.gnu.org/licenses/gpl-3.0.txt>
@@ -3045,7 +3045,7 @@ Gui, 4:Add, Button, -Wrap y+10 xs+10 W75 H23 Disabled vSaveLang gSaveLang, %t_La
 Gui, 4:Add, Button, -Wrap yp x+10 W75 H23 gCreateLangFile, %t_Lang179%
 Gui, 4:Add, Button, -Wrap yp x+10 W75 H23 gSubmitTrans, %t_Lang181%
 Gui, 4:Add, Button, -Wrap yp-25 x+20 W115 H23 gColGroups, %t_Lang187%
-Gui, 4:Add, Button, -Wrap yp+25 xp W115 H23 gExpGroups, %t_Lang192%
+Gui, 4:Add, Button, -Wrap yp+25 xp W115 H23 gExpGroups, %t_Lang188%
 Gui, 4:Tab, 8
 ; User Variables
 Gui, 4:Add, GroupBox, Section ym xm+170 W400 H395, %t_Lang096%:
@@ -5908,17 +5908,22 @@ Gui, 12:+owner1 -MinimizeBox +E0x00000400 +HwndCmdWin
 Gui, 1:+Disabled
 Gui, 12:Add, Tab2, W450 H0 vTabControl AltSubmit, CmdTab1|CmdTab2|CmdTab3
 ; Loop
-Gui, 12:Add, Groupbox, Section ym xm W450 H200
+Gui, 12:Add, Groupbox, Section ym xm W450 H93
 Gui, 12:Add, Radio, -Wrap Checked ys+15 xs+10 W80 vLoop gLoopType R1, %c_Lang132%
-Gui, 12:Add, Radio, -Wrap y+10 xp W80 vLFilePattern gLoopType R1, %c_Lang133%
-Gui, 12:Add, Radio, -Wrap ys+15 x+5 W80 vLParse gLoopType R1, %c_Lang134%
-Gui, 12:Add, Radio, -Wrap y+10 xp W80 vLFor gLoopType R1, For-Loop
-Gui, 12:Add, Radio, -Wrap ys+15 x+5 W80 vLRead gLoopType R1, %c_Lang135%
-Gui, 12:Add, Radio, -Wrap y+10 xp W80 R1 vLRegistry gLoopType R1, %c_Lang136%
-Gui, 12:Add, Text, ys+15 x+10 W160 R1, %w_Lang015% (%t_Lang004%):
-Gui, 12:Add, Edit, y+10 xp W120 R1 vEdRept
-Gui, 12:Add, UpDown, vTimesL 0x80 Range0-999999999, 2
-Gui, 12:Add, Text, y+10 xs+10 W160 vField1, %c_Lang137%
+Gui, 12:Add, Radio, -Wrap y+10 xp W80 vLWhile gLoopType R1, While-%c_Lang132%
+Gui, 12:Add, Radio, -Wrap y+10 xp W80 vLFor gLoopType R1, For-%c_Lang132%
+Gui, 12:Add, Radio, -Wrap ys+15 x+5 W80 vLFilePattern gLoopType R1, %c_Lang133%
+Gui, 12:Add, Radio, -Wrap y+10 xp W80 vLParse gLoopType R1, %c_Lang134%
+Gui, 12:Add, Radio, -Wrap y+10 xp W80 vLRead gLoopType R1, %c_Lang135%
+Gui, 12:Add, Radio, -Wrap ys+15 x+5 W80 R1 vLRegistry gLoopType R1, %c_Lang136%
+Gui, 12:Add, Checkbox, -Wrap y+10 xp W80 vLUntil gLUntil R1, %c_Lang243%
+Gui, 12:Add, Text, y+10 xp W80 vUntilExprT, %c_Lang087%:
+Gui, 12:Add, Edit, yp x+10 W170 vUntilExpr Disabled
+Gui, 12:Add, Text, ys+15 xp W160 R1, %w_Lang015% (%t_Lang004%):
+Gui, 12:Add, Edit, y+5 xp W120 R1 vEdRept
+Gui, 12:Add, UpDown, vTimesL 0x80 Range0-999999999, 0
+Gui, 12:Add, Groupbox, Section xs y+43 W450 H125
+Gui, 12:Add, Text, ys+15 xs+10 W160 vField1, %c_Lang137%
 Gui, 12:Add, CheckBox, -Wrap yp x+10 W80 vIncFiles Disabled R1 Checked, %c_Lang145%
 Gui, 12:Add, CheckBox, -Wrap yp x+10 W80 vIncFolders Disabled R1, %c_Lang138%
 Gui, 12:Add, CheckBox, -Wrap yp x+10 W80 vRecurse Disabled R1, %c_Lang139%
@@ -5928,9 +5933,9 @@ Gui, 12:Add, Text, y+5 xs+10 W210 vField2, %c_Lang141%
 Gui, 12:Add, Text, yp x+10 W210 vField3, %c_Lang142%
 Gui, 12:Add, Edit, y+5 xs+10 W210 R1 vDelim Disabled
 Gui, 12:Add, Edit, yp x+10 W210 R1 vOmit Disabled
-Gui, 12:Add, Text, y+5 xs+15 W430 r1 cGray, %c_Lang025%
-; Gui, 12:Add, Text, y+5 r1 W430 cGray, %c_Lang025%
-Gui, 12:Add, Groupbox, Section xs y+33 W450 H50, %c_Lang123%:
+Gui, 12:Add, Text, y+5 xs+15 W430 r1 cGray vVarTxt, %c_Lang025%
+Gui, 12:Add, Link, xp yp W430 r1 vExprLink2 gExprLink Hidden, <a>%c_Lang091%</a>
+Gui, 12:Add, Groupbox, Section xs y+13 W450 H50, %c_Lang123%:
 Gui, 12:Add, Button, -Wrap ys+18 xs+85 W75 H23 gAddBreak, %c_Lang075%
 Gui, 12:Add, Button, -Wrap yp x+10 W75 H23 gAddContinue, %c_Lang076%
 Gui, 12:Add, Button, -Wrap Section xm Default W75 H23 gLoopOK, %c_Lang020%
@@ -5970,6 +5975,8 @@ Gui, 12:Add, Radio, -Wrap W200 vDelete gTimerOpt R1, %t_Lang132%
 Gui, 12:Add, Button, -Wrap Section xm y+17 W75 H23 vTimedLabelOK gTimedLabelOK, %c_Lang020%
 Gui, 12:Add, Button, -Wrap ys W75 H23 gLoopCancel, %c_Lang021%
 Gui, 12:Add, Button, -Wrap ys W75 H23 vTimedLabelApply gTimedLabelApply Disabled, %c_Lang131%
+Gui, 12:Add, Text, ys x+5 W200 R1 vTimersCount, % RegisteredTimers.Length() "/10 " c_Lang240
+Gui, 12:Add, Link, y+0 xp W200 R1 gClearTimers, <a>%c_Lang241%</a>
 Gui, 12:Add, StatusBar, gStatusBarHelp
 Gui, 12:Default
 SB_SetIcon(ResDllPath, IconsNames["help"])
@@ -6070,7 +6077,17 @@ If (s_Caller = "Edit")
 			GuiControl, 12:, Omit, %Par3%
 			GuiControl, 12:, LFor, 1
 		}
-		GuiControl, 12:, TabControl, |%c_Lang073%
+		If (Type = cType51)
+		{
+			GuiControl, 12:, LParamsFile, %Details%
+			GuiControl, 12:, LWhile, 1
+		}
+		If (Target != "")
+		{
+			GuiControl, 12:, LUntil, 1
+			GuiControl, 12:Enable, UntilExpr
+			GuiControl, 12:, UntilExpr, %Target%
+		}
 		GoSub, LoopType
 		GoSub, ClearPars
 	}
@@ -6104,7 +6121,7 @@ Else If ((s_Caller = "Find") && (InStr(GotoRes1, "Loop")))
 }
 Else If (s_Caller != "Edit")
 	SBShowTip("Loop (normal)")
-Gui, 12:Show, % InStr(A_ThisLabel, "Loop") ? "" : "H247", % InStr(A_ThisLabel, "Goto") ? c_Lang077 : InStr(A_ThisLabel, "Time") ? t_Lang080 : c_Lang073
+Gui, 12:Show, % InStr(A_ThisLabel, "Loop") ? "" : "H247", % InStr(A_ThisLabel, "Goto") ? c_Lang077 : InStr(A_ThisLabel, "Time") ? c_Lang242 : c_Lang073
 ChangeIcon(hIL_Icons, CmdWin, InStr(A_ThisLabel, "Goto") ? IconsNames["goto"] : InStr(A_ThisLabel, "Time") ? IconsNames["timer"] : IconsNames["loop"])
 Input
 Tooltip
@@ -6160,6 +6177,18 @@ Else If (LFor = 1)
 	Details := LParamsFile ", " Delim ", " Omit
 ,	TimesL := 1, Type := cType45
 }
+Else If (LWhile = 1)
+{
+	If (LParamsFile = "")
+	{
+		Gui, 12:Font, cRed
+		GuiControl, 12:Font, Field1
+		GuiControl, 12:Focus, LParamsFile
+		return
+	}
+	Details := LParamsFile
+,	TimesL := 1, Type := cType51
+}
 Else If (LFilePattern = 1)
 {
 	If (LParamsFile = "")
@@ -6182,6 +6211,19 @@ Else
 	Details := "LoopStart", Type := cType7
 ,	TimesL := InStr(EdRept, "%") ? EdRept : TimesL
 }
+If (LUntil = 1)
+{
+	If (UntilExpr = "")
+	{
+		Gui, 12:Font, cRed
+		GuiControl, 12:Font, UntilExprT
+		GuiControl, 12:Focus, UntilExpr
+		return
+	}
+	Target := UntilExpr
+}
+Else
+	Target := ""
 EscCom(false, Details)
 If (A_ThisLabel != "LoopApply")
 {
@@ -6191,24 +6233,24 @@ If (A_ThisLabel != "LoopApply")
 Gui, chMacro:Default
 RowSelection := LV_GetCount("Selected"), LV_GetText(RowType, LV_GetNext(), 6)
 If (s_Caller = "Edit")
-	LV_Modify(RowNumber, "Col3", Details, TimesL, DelayX, Type)
+	LV_Modify(RowNumber, "Col3", Details, TimesL, DelayX, Type, Target)
 Else If ((RowSelection = 0) || ((RowType = cType47) || RowType = cType48))
 {
-	LV_Add("Check", ListCount%A_List%+1, "[LoopStart]", Details, TimesL, 0, Type)
+	LV_Add("Check", ListCount%A_List%+1, "[LoopStart]", Details, TimesL, 0, Type, Target)
 	LV_Add("Check", ListCount%A_List%+2, "[LoopEnd]", "LoopEnd", 1, 0, "Loop")
 	LV_Modify(ListCount%A_List%+2, "Vis")
 }
 Else
 {
-	LV_Insert(LV_GetNext(), "Check", "", "[LoopStart]", Details, TimesL, 0, Type)
-,	LVManager.InsertAtGroup(1, LV_GetNext()), RowNumber := 0, LastRow := 0
+	LV_Insert(LV_GetNext(), "Check", "", "[LoopStart]", Details, TimesL, 0, Type, Target)
+,	LVManager.InsertAtGroup(1, LV_GetNext() - 1), RowNumber := 0, LastRow := 0
 	Loop
 	{
 		RowNumber := LV_GetNext(RowNumber)
 		If (!RowNumber)
 		{
-			LV_Insert(LastRow+1, "Check",LastRow+1, "[LoopEnd]", "LoopEnd", 1, 0, "Loop")
-		,	LVManager.InsertAtGroup(1, LastRow)
+			LV_Insert(LastRow+1, "Check", LastRow+1, "[LoopEnd]", "LoopEnd", 1, 0, "Loop")
+			LVManager.InsertAtGroup(1, LastRow)
 			break
 		}
 		LastRow := LV_GetNext(LastRow)
@@ -6329,6 +6371,13 @@ Else
 }
 return
 
+ClearTimers:
+Loop, 10
+	SetTimer, RunTimerOn%A_Index%, Delete
+RegisteredTimers.RemoveAt(1, RegisteredTimers.Length())
+GuiControl, 12:, TimersCount, % RegisteredTimers.Length() "/10 " c_Lang240
+return
+
 TimedLabelApply:
 TimedLabelOK:
 Gui, 12:+OwnDialogs
@@ -6422,6 +6471,11 @@ GoSub, b_Start
 GuiControl, Focus, InputList%A_List%
 return
 
+LUntil:
+Gui, 12:Submit, NoHide
+GuiControl, 12:Enable%LUntil%, UntilExpr
+return
+
 LoopType:
 Gui, 12:Submit, NoHide
 GuiControl, 12:Enable%Loop%, EdRept
@@ -6458,12 +6512,20 @@ If (LFor)
 }
 Else
 {
-	GuiControl, 12:, Field1, % (LParse ? c_Lang140 : (LRead ? c_Lang143 : (LRegistry ? c_Lang144 : c_Lang137)))
+	GuiControl, 12:, Field1, % LWhile ? c_Lang087 : LParse ? c_Lang140 : LRead ? c_Lang143 : LRegistry ? c_Lang144 : c_Lang137
 	GuiControl, 12:, Field2, %c_Lang141%
 	GuiControl, 12:, Field3, %c_Lang142%
 	GuiControl, 12:, Delim, %Par2%
 	GuiControl, 12:, Omit, %Par3%
 }
+If (LWhile)
+{
+	GuiControl, 12:, LUntil, 0
+	GuiControl, 12:Disable, LUntil
+	GuiControl, 12:Disable, UntilExpr
+}
+Else
+	GuiControl, 12:Enable, LUntil
 GuiControl, 12:Text, IncFiles, % (LRegistry ? c_Lang210 : c_Lang145)
 GuiControl, 12:Text, IncFolders, % (LRegistry ? c_Lang146 : c_Lang138)
 GuiControl, 12:, LParamsFile, % Par1 ? Par1 : ""
@@ -6475,10 +6537,22 @@ Else If (LParse)
 	SBShowTip("Loop (parse a string)")
 Else If (LFor)
 	SBShowTip("For")
+Else If (LWhile)
+	SBShowTip("While-loop")
 Else If (LRead)
 	SBShowTip("Loop (read file contents)")
 Else If (LRegistry)
 	SBShowTip("Loop (registry)")
+If (LWhile || LFor)
+{
+	GuiControl, 12:Hide, VarTxt
+	GuiControl, 12:Show, ExprLink2
+}
+Else
+{
+	GuiControl, 12:Show, VarTxt
+	GuiControl, 12:Hide, ExprLink2
+}
 return
 
 EditWindow:
@@ -7861,7 +7935,7 @@ Else If ((RowSelection = 0) || ((RowType = cType47) || RowType = cType48))
 Else
 {
 	LV_Insert(LV_GetNext(), "Check", "", Statement, TestVar, 1, 0, cType17)
-,	LVManager.InsertAtGroup(1, LV_GetNext()), RowNumber := 0, LastRow := 0
+,	LVManager.InsertAtGroup(1, LV_GetNext() - 1), RowNumber := 0, LastRow := 0
 	Loop
 	{
 		RowNumber := LV_GetNext(RowNumber)
@@ -10884,6 +10958,7 @@ LVManager.SetHwnd(ListID%A_List%)
 CopyMenuLabels[1] := "Macro1"
 Menu, CopyTo, Add, % CopyMenuLabels[1], CopyList, Radio
 Menu, CopyTo, Check, % CopyMenuLabels[1]
+Gosub, ClearTimers
 return
 
 SelectAll:
@@ -11392,7 +11467,7 @@ GoSub, ClearPars
 LV_GetTexts(RowNumber, Action, Details, TimesX, DelayX, Type, Target, Window, Comment)
 If (Action = "[LoopEnd]")
 	return
-If Type in %cType7%,%cType38%,%cType39%,%cType40%,%cType41%,%cType45%
+If Type in %cType7%,%cType38%,%cType39%,%cType40%,%cType41%,%cType45%,%cType51%
 	Goto, EditLoop
 If Type in %cType15%,%cType16%
 	Goto, EditImage
@@ -13408,7 +13483,7 @@ Loop, % LV_GetCount()
 :	(Type = cType5) ? LV_Modify(A_Index, "Icon" IconsNames["pause"])
 :	(Type = cType6) ? LV_Modify(A_Index, "Icon" IconsNames["dialogs"])
 :	(Type = cType14) ? LV_Modify(A_Index, "Icon" IconsNames["wait"])
-:	RegExMatch(Type, cType7 "|" cType38 "|" cType39 "|" cType40 "|" cType41 "|" cType45) ? LV_Modify(A_Index, "Icon" IconsNames["loop"])
+:	RegExMatch(Type, cType7 "|" cType38 "|" cType39 "|" cType40 "|" cType41 "|" cType45 "|" cType51) ? LV_Modify(A_Index, "Icon" IconsNames["loop"])
 :	(Type = cType29) ? LV_Modify(A_Index, "Icon" IconsNames["break"])
 :	(Type = cType30) ? LV_Modify(A_Index, "Icon" IconsNames["continue"])
 :	(Type = cType21) ? LV_Modify(A_Index, "Icon" IconsNames["variables"])
@@ -13425,13 +13500,16 @@ Loop, % LV_GetCount()
 :	(Type = cType48) ? LV_Modify(A_Index, "Icon" IconsNames["parameter"])
 :	(Type = cType49) ? LV_Modify(A_Index, "Icon" IconsNames["return"])
 :	(Type = cType43) ? LV_Modify(A_Index, "Icon" IconsNames["expression"])
+:	(Type = "Pause") ? LV_Modify(A_Index, "Icon" IconsNames["recpause"])
+:	(Type = "Return") ? LV_Modify(A_Index, "Icon" IconsNames["stop"])
+:	(Type = "ExitApp") ? LV_Modify(A_Index, "Icon" IconsNames["exit"])
 :	RegExMatch(Type, cType36 "|" cType37) ? LV_Modify(A_Index, "Icon" IconsNames["goto"])
 :	RegExMatch(Type, cType11 "|" cType14 "|Run|RunWait|RunAs") ? LV_Modify(A_Index, "Icon" IconsNames["run"])
 :	RegExMatch(Type, "Process") ? LV_Modify(A_Index, "Icon" IconsNames["process"])
 :	RegExMatch(Type, "Shutdown") ? LV_Modify(A_Index, "Icon" IconsNames["shutdown"])
 :	""
 	(Type = cType42) ? LV_Modify(A_Index, "Icon" IconsNames["comment"])
-	(Type = cType50) ? LV_Modify(A_Index, "Icon" IconsNames["timer"])
+:	(Type = cType50) ? LV_Modify(A_Index, "Icon" IconsNames["timer"])
 :	RegExMatch(Type, cType32 "|" cType33) ? LV_Modify(A_Index, "Icon" IconsNames["ie"])
 :	(InStr(Type, "Sort") || InStr(Type, "String") || InStr(Type, "Split")) ? LV_Modify(A_Index, "Icon" IconsNames["string"])
 :	(InStr(Type, "InputBox") || InStr(Type, "Msg") || InStr(Type, "Tip")
@@ -13445,9 +13523,6 @@ Loop, % LV_GetCount()
 :	InStr(Type, "Group") ? LV_Modify(A_Index, "Icon" IconsNames["group"])
 :	InStr(Type, "Env") ? LV_Modify(A_Index, "Icon" IconsNames["variables"])
 :	(!InStr(Type, "Control") && InStr(Type, "Get")) ? LV_Modify(A_Index, "Icon" IconsNames["info"])
-:	(Type = "Pause") ? LV_Modify(A_Index, "Icon" IconsNames["recpause"])
-:	(Type = "Return") ? LV_Modify(A_Index, "Icon" IconsNames["stop"])
-:	(Type = "ExitApp") ? LV_Modify(A_Index, "Icon" IconsNames["exit"])
 :	(InStr(Type, "Url")) ? LV_Modify(A_Index, "Icon" IconsNames["download"])
 :	(InStr(Type, "LockState") || InStr(Type, "Time") || InStr(Type, "Transform") || InStr(Type, "ListVars")
 	|| InStr(Type, "Random") || InStr(Type, "ClipWait") || InStr(Type, "Block") || InStr(Type, "Debug")

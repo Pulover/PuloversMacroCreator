@@ -60,6 +60,7 @@ ListCount1 := 0
 ,	cType48 := "FuncParameter"
 ,	cType49 := "FuncReturn"
 ,	cType50 := "SetTimer"
+,	cType51 := "While"
 
 Action1 := "Click"
 ,	Action2 := "Move"

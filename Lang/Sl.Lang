@@ -527,6 +527,10 @@
 	c_Lang237 =	Zip / unzip datotek
 	c_Lang238 =	Vklopiti
 	c_Lang239 =	Ugasni
+	c_Lang240 =	registrirani pozicije.
+	c_Lang241 =	Izbriši vse časovnike
+	c_Lang242 =	Set timer
+	c_Lang243 =	Do
 		
 ; 16. Other Windows		
 	t_Lang001 =	Izvoz v AutoHotkey
@@ -930,6 +934,7 @@
 	InsertKeyT_TT =	Vstavite Keystroke
 	JoyKey_TT =	Pritisnite gumb na ročici
 	LoopLVColor_TT =	Kliknite, da izberete barvo
+	LUntil_TT =	Velja pogoj za nadaljevanje Loop ali za-loop.
 	ManKey_TT =	Bližnjica za predvajanje makrov "korak za korakom"
 	MRel_TT =	Premikanje glede na trenutni položaj.
 		Ali pa, če se uporablja z regulacijo: lega glede na kontrolo.
@@ -1317,6 +1322,7 @@
 	UrlDownloadToFile	Prenese datoteko iz interneta.
 	UserFunction	Ustvarja strukturo funkcij.
 	VarSetCapacity	Poveča razpoložljivih zmogljivosti spremenljivka, ali pa osvobodi svoj spomin. Običajno je to potrebno, samo za neobičajnih dogodkov, kot DllCall.
+	While-loop	Izvede niz ukazov, dokler se navedeni izraz neresničen.
 	WinActivate	Aktivira določeno okno (zaradi česar je predvsem).
 	WinActivateBottom	Enako kot WinActivate razen tega, da aktivira: Spodnja (vsaj v zadnjem času aktivno) ujemanje okno namesto vrhunska.
 	WinActive	Vrne Unique ID (hWnd) aktivnega okna, če se ujema določene kriterije.

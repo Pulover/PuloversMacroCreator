@@ -10,7 +10,7 @@ Copyright © 2012-2016 Rodolfo U. Batista
 
 Version: 5.0.0  
 Release Date: February, 2016  
-AutoHotkey Version: 1.1.23.01  
+AutoHotkey Version: 1.1.23.00  
 
 Software License: [GNU General Public License](License.html)  
 
@@ -44,8 +44,11 @@ Thiago Talma for some improvements to the code, debugging and many suggestions.
 * Implemented real Auto-Hotkey format expressions in Functions, Methods, Variable Assignment, Evaluate Expression, COM Interface and command parameters started with % .
 * Multiple If Statements are now supported in 'Evaluate Expression' (e.g.: var = 5 || var = "a").
 * Function parameter can now be another function, array, array element or expression.
+* Added SetTimer command.
 * Loops now work in Manual Playback.
-* Added For-Loops in Loop Command window.
+* Added While-Loop in Loop Command window.
+* Added For-Loop in Loop Command window.
+* Added Until in Loop Command window.
 * Added support for array assignment.
 * Added support for Associative Arrays assignment.
 * Added support for array methods in Functions window.

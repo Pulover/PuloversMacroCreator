@@ -527,6 +527,10 @@
 	c_Lang237 =	Zip / Unzip files
 	c_Lang238 =	Turn on
 	c_Lang239 =	Turn off
+	c_Lang240 =	positions registered.
+	c_Lang241 =	Delete all timers
+	c_Lang242 =	Set timer
+	c_Lang243 =	Until
 		
 ; 16. Other Windows		
 	t_Lang001 =	Export to AutoHotkey
@@ -930,6 +934,7 @@
 	InsertKeyT_TT =	Insert Keystroke
 	JoyKey_TT =	Press a button on the joystick
 	LoopLVColor_TT =	Click to pick a color
+	LUntil_TT =	Applies a condition to the continuation of a Loop or For-loop.
 	ManKey_TT =	Hotkey to play Macro "step-by-step"
 	MRel_TT =	Movements relative to current position.
 		Or if used with Control: Position relative to Control.
@@ -1317,6 +1322,7 @@
 	UrlDownloadToFile	Downloads a file from the Internet.
 	UserFunction	Creates a Function structure.
 	VarSetCapacity	Enlarges a variable's holding capacity or frees its memory. Normally, this is necessary only for unusual circumstances such as DllCall.
+	While-loop	Performs a series of commands repeatedly until the specified expression evaluates to false. 
 	WinActivate	Activates the specified window (makes it foremost).
 	WinActivateBottom	Same as WinActivate except that it activates the bottommost (least recently active) matching window rather than the topmost.
 	WinActive	Returns the Unique ID (HWND) of the active window if it matches the specified criteria.

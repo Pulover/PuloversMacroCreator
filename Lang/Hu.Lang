@@ -527,6 +527,10 @@
 	c_Lang237 =	Zip / Unzip fájlok
 	c_Lang238 =	Bekapcsol
 	c_Lang239 =	Kikapcsolni
+	c_Lang240 =	nyilvántartott pozíciók.
+	c_Lang241 =	Az összes törlése időzítő
+	c_Lang242 =	Set timer
+	c_Lang243 =	Amíg
 		
 ; 16. Other Windows		
 	t_Lang001 =	Exportálás AutoHotkey
@@ -930,6 +934,7 @@
 	InsertKeyT_TT =	Be Gombnyomás
 	JoyKey_TT =	Nyomja meg a gombot a joystick
 	LoopLVColor_TT =	Kattintson válasszon egy színt
+	LUntil_TT =	Alkalmaz feltétele a folytatása a hurok vagy-loop.
 	ManKey_TT =	Gyorsgomb játszani Macro "lépésről-lépésre"
 	MRel_TT =	Mozgásokat képest aktuális pozícióját.
 		Vagy ha használt Control: Pozíció a kontrollhoz képest.
@@ -1317,6 +1322,7 @@
 	UrlDownloadToFile	Letölt egy fájlt az interneten.
 	UserFunction	Létrehoz egy függvény szerkezete.
 	VarSetCapacity	Nagyítja változó tárolókapacitás vagy felszabadítja a memóriát. Általában ez csak akkor szükséges, a szokatlan körülmények között, mint DllCall.
+	While-loop	Belirtilen ifade yanlış olarak değerlendirilir kadar art arda bir dizi komut gerçekleştirir.
 	WinActivate	Aktiválja a megadott ablak (teszi elsősorban).
 	WinActivateBottom	Ugyanaz, mint a WinActivate, kivéve, hogy aktiválja a legalsó (legrégebben aktív) egyező ablak helyett a legmagasabb.
 	WinActive	Visszaadja a Egyedi azonosító (HWND) az aktív ablak, ha az megfelel a kritériumoknak.

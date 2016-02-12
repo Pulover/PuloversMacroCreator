@@ -527,6 +527,10 @@
 	c_Lang237 =	Zip / file Unzip
 	c_Lang238 =	Nyalakan
 	c_Lang239 =	Matikan
+	c_Lang240 =	posisi terdaftar.
+	c_Lang241 =	Hapus semua timer
+	c_Lang242 =	Set Timer
+	c_Lang243 =	Sampai
 		
 ; 16. Other Windows		
 	t_Lang001 =	Ekspor ke AutoHotkey
@@ -930,6 +934,7 @@
 	InsertKeyT_TT =	Masukkan keystroke
 	JoyKey_TT =	Tekan tombol pada joystick
 	LoopLVColor_TT =	Klik untuk memilih warna
+	LUntil_TT =	Berlaku kondisi untuk kelanjutan Loop atau Untuk loop.
 	ManKey_TT =	Hotkey untuk bermain Makro "langkah-demi-langkah"
 	MRel_TT =	Gerakan relatif terhadap posisi saat ini.
 		Atau jika digunakan dengan Control: Posisi relatif ke Control.
@@ -1317,6 +1322,7 @@
 	UrlDownloadToFile	Mendownload file dari Internet.
 	UserFunction	Menciptakan struktur Fungsi.
 	VarSetCapacity	Memperbesar kapasitas memegang variabel atau membebaskan memori. Biasanya, ini diperlukan hanya untuk kondisi yang tidak biasa seperti DllCall.
+	While-loop	Melakukan serangkaian perintah berulang kali hingga ekspresi yang ditentukan false.
 	WinActivate	Mengaktifkan jendela yang ditentukan (membuatnya utama).
 	WinActivateBottom	Sama seperti WinActivate kecuali bahwa ia mengaktifkan paling bawah (paling baru ini aktif) jendela pencocokan daripada teratas.
 	WinActive	Mengembalikan ID unik (HWND) dari jendela aktif jika sesuai dengan kriteria yang ditentukan.

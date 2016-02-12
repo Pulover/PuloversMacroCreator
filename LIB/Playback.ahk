@@ -2,7 +2,7 @@
 {
 	local PlaybackVars := [], LVData := [], LoopDepth := 0, LoopCount := [0], StartMark := []
 	, m_ListCount := ListCount%Macro_On%, mLoopIndex, cLoopIndex, iLoopIndex := 0, mLoopLength, mLoopSize, mListRow
-	, Action, Step, TimesX, DelayX, Type, Target, Window, Loop_Start, Loop_End, Lab, _Label, _i, Pars
+	, Action, Step, TimesX, DelayX, Type, Target, Window, Loop_Start, Loop_End, Lab, _Label, _i, Pars, _Count
 	, NextStep, NStep, NTimesX, NType, NTarget, NWindow, _each, _value, _key, _depth, _pair, _index, _point
 	, pbParams, VarName, VarValue, Oper, RowData, ActiveRows, Increment := 0, TabIdx, RowIdx, LabelFound
 	, ScopedParams := [], UserGlobals, GlobalList, CursorX, CursorY
@@ -94,12 +94,12 @@
 				If Type not in %cType7%,%cType17%,%cType21%,%cType35%,%cType38%,%cType39%,%cType40%,%cType41%,%cType44%,%cType45%,%cType46%,%cType47%,%cType48%,%cType49%,%cType50%
 				{
 					GuiControl, 28:, OSCProg, %A_Index%
-					GuiControl, 28:, OSCProgTip, % "M" Macro_On " [Loop: " (iLoopIndex ? 1 "/" (LoopCount[LoopDepth] + 1) : mLoopIndex "/" mLoopSize) " | Row: " A_Index "/" m_ListCount "]"
+					GuiControl, 28:, OSCProgTip, % "M" Macro_On " [Loop: " (iLoopIndex ? 1 "/" (LoopCount[LoopDepth][1] + 1) : mLoopIndex "/" mLoopSize) " | Row: " A_Index "/" m_ListCount "]"
 				}
 				Else If (ManualKey)
 				{
 					GuiControl, 28:, OSCProg, %A_Index%
-					GuiControl, 28:, OSCProgTip, % "M" Macro_On " [Loop: " (iLoopIndex ? 1 "/" (LoopCount[LoopDepth] + 1) : mLoopIndex "/" mLoopSize) " | Row: " A_Index "/" m_ListCount "]"
+					GuiControl, 28:, OSCProgTip, % "M" Macro_On " [Loop: " (iLoopIndex ? 1 "/" (LoopCount[LoopDepth][1] + 1) : mLoopIndex "/" mLoopSize) " | Row: " A_Index "/" m_ListCount "]"
 				}
 			}
 			If ((ManualKey) && (ShowStep = 1))
@@ -424,7 +424,7 @@
 			If ((ManualKey) && (Type = cType5))
 					continue
 			If ((Type = cType7) || (Type = cType38) || (Type = cType39)
-			|| (Type = cType40) || (Type = cType41) || (Type = cType45))
+			|| (Type = cType40) || (Type = cType41) || (Type = cType45) || (Type = cType51))
 			{
 				If (Action = "[LoopStart]")
 				{
@@ -462,7 +462,7 @@
 							If (StopIt)
 								break 3
 							PlaybackVars[LoopDepth][A_Index, "A_LoopReadLine"] := A_LoopReadLine
-						,	LoopCount[LoopDepth] := A_Index - 1
+						,	LoopCount[LoopDepth] := [A_Index - 1, "", Target]
 						}
 					}
 					Else If (Type = cType39)
@@ -472,7 +472,7 @@
 							If (StopIt)
 								break 3
 							PlaybackVars[LoopDepth][A_Index, "A_LoopField"] := A_LoopField
-						,	LoopCount[LoopDepth] := A_Index - 1
+						,	LoopCount[LoopDepth] := [A_Index - 1, "", Target]
 						}
 					}
 					Else If (Type = cType40)
@@ -495,7 +495,7 @@
 						,	PlaybackVars[LoopDepth][A_Index, "A_LoopFileSize"] := A_LoopFileSize
 						,	PlaybackVars[LoopDepth][A_Index, "A_LoopFileSizeKB"] := A_LoopFileSizeKB
 						,	PlaybackVars[LoopDepth][A_Index, "A_LoopFileSizeMB"] := A_LoopFileSizeMB
-						,	LoopCount[LoopDepth] := A_Index - 1
+						,	LoopCount[LoopDepth] := [A_Index - 1, "", Target]
 						}
 					}
 					Else If (Type = cType41)
@@ -509,7 +509,7 @@
 						,	PlaybackVars[LoopDepth][A_Index, "A_LoopRegKey"] := A_LoopRegKey
 						,	PlaybackVars[LoopDepth][A_Index, "A_LoopRegSubKey"] := A_LoopRegSubKey
 						,	PlaybackVars[LoopDepth][A_Index, "A_LoopRegTimeModified"] := A_LoopRegTimeModified
-						,	LoopCount[LoopDepth] := A_Index - 1
+						,	LoopCount[LoopDepth] := [A_Index - 1, "", Target]
 						}
 					}
 					Else If (Type = cType45)
@@ -521,27 +521,49 @@
 								break 3
 							PlaybackVars[LoopDepth][A_Index, Pars[2]] := _each
 						,	PlaybackVars[LoopDepth][A_Index, Pars[3]] := _value
-						,	LoopCount[LoopDepth] := A_Index - 1
+						,	LoopCount[LoopDepth] := [A_Index - 1, "", Target]
 						}
 					}
+					Else If (Type = cType51)
+					{
+						If (!Eval(Step, PlaybackVars[LoopDepth][mLoopIndex])[1])
+						{
+							PlaybackVars[LoopDepth][mLoopIndex, "A_Index"] := mLoopIndex
+						,	FlowControl.Break++
+							continue
+						}
+						LoopCount[LoopDepth] := [0, Step]
+					}
 					Else
-						LoopCount[LoopDepth] := TimesX - 1
-					If (LoopCount[LoopDepth] = "")
+						LoopCount[LoopDepth] := [TimesX - 1, "", Target]
+					If (!IsObject(LoopCount[LoopDepth]))
 					{
 						PlaybackVars[LoopDepth][mLoopIndex, "A_Index"] := mLoopIndex
-						FlowControl.Break++
+					,	FlowControl.Break++
 					}
 					continue
 				}
 				If (Action = "[LoopEnd]")
 				{
-					LoopInfo := {LoopDepth: LoopDepth
+					_Count := LoopCount[LoopDepth][1]
+				,	LoopInfo := {LoopDepth: LoopDepth
 							,	PlaybackVars: PlaybackVars
 							,	Range: {Start: StartMark[LoopDepth], End: A_Index}
-							,	Count: LoopCount[LoopDepth] + 1}
+							,	Count: _Count + 1}
+					If (LoopCount[LoopDepth][3] != "")
+					{
+						If (Eval(LoopCount[LoopDepth][3], PlaybackVars[LoopDepth][mLoopIndex])[1])
+							_Count := 0
+					}
 					Loop
 					{
-						If (LoopCount[LoopDepth] = 0)
+						PlaybackVars[LoopDepth][A_Index + 1, "A_Index"] := A_Index + 1
+						If (LoopCount[LoopDepth][2] != "")
+						{
+							If (!Eval(LoopCount[LoopDepth][2], PlaybackVars[LoopDepth][A_Index + 1])[1])
+								break
+						}
+						Else If (_Count = 0)
 							break
 						If (StopIt)
 							break 3
@@ -598,8 +620,13 @@
 								return _Label
 							return
 						}
-						If (LoopCount[LoopDepth] = A_Index)
+						If (_Count = A_Index)
 							break
+						If (LoopCount[LoopDepth][3] != "")
+						{
+							If (Eval(LoopCount[LoopDepth][3], PlaybackVars[LoopDepth][A_Index + 1])[1])
+								break
+						}
 					}
 					LoopCount[LoopDepth] := "", LoopDepth--, iLoopIndex--
 					If (ManualKey)

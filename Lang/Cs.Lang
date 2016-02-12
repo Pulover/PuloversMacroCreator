@@ -527,6 +527,10 @@
 	c_Lang237 =	Zip / rozbalení souborů
 	c_Lang238 =	Zapnout
 	c_Lang239 =	Vypnout
+	c_Lang240 =	regálových pozic.
+	c_Lang241 =	Smazat všechny časovače
+	c_Lang242 =	Set časovač
+	c_Lang243 =	Až do
 		
 ; 16. Other Windows		
 	t_Lang001 =	Export do AutoHotkey
@@ -930,6 +934,7 @@
 	InsertKeyT_TT =	Vložit Klávesy
 	JoyKey_TT =	Stiskněte tlačítko na joysticku
 	LoopLVColor_TT =	Klepněte na tlačítko vybrat barvu
+	LUntil_TT =	Platí podmínku pro pokračování Loop nebo cyklus for.
 	ManKey_TT =	Klávesová zkratka pro přehrávání makra "krok-za-krokem"
 	MRel_TT =	Pohyby v poměru k aktuální pozici.
 		Nebo pokud jsou použity s ovládáním: Poloha vzhledem ke kontrole.
@@ -1317,6 +1322,7 @@
 	UrlDownloadToFile	Stáhne soubor z internetu.
 	UserFunction	Stvara funkciju strukturu.
 	VarSetCapacity	Zvětšení proměnné kapacitu ustájení nebo uvolní jeho paměť. Normálně, je to nutné jen pro mimořádných okolností, jako jsou DllCall.
+	While-loop	Provádí řadu příkazů opakovaně, dokud zadaný výraz vyhodnocen jako nepravdivý.
 	WinActivate	Aktivuje uvedené okno (dělá to především).
 	WinActivateBottom	Stejné jako WinActivate kromě toho, že se aktivuje nejspodnější (alespoň v poslední době aktivní) odpovídající okno, spíše než nejvyšší.
 	WinActive	Vrací jedinečný identifikátor (HWND) aktivního okna, pokud to odpovídá zadaným kritériím.

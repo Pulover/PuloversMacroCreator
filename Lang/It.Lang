@@ -527,6 +527,10 @@
 	c_Lang237 =	Zip / file Unzip
 	c_Lang238 =	Accendere
 	c_Lang239 =	Spegni
+	c_Lang240 =	posizioni registrate.
+	c_Lang241 =	Eliminare tutti i timer
+	c_Lang242 =	Ensemble minuterie
+	c_Lang243 =	Fino a
 		
 ; 16. Other Windows		
 	t_Lang001 =	Esporta in AutoHotkey
@@ -930,6 +934,7 @@
 	InsertKeyT_TT =	Inserire Battitura
 	JoyKey_TT =	Premere un pulsante sul joystick
 	LoopLVColor_TT =	Fare clic per selezionare un colore
+	LUntil_TT =	Applica una condizione per la continuazione di un loop o ciclo for.
 	ManKey_TT =	Tasti di scelta rapida per riprodurre macro "passo-passo"
 	MRel_TT =	Movimenti relativi alla posizione corrente.
 		Oppure, se usato con controllo: posizione rispetto al controllo.
@@ -1317,6 +1322,7 @@
 	UrlDownloadToFile	Scarica un file da Internet.
 	UserFunction	Erstellt eine Funktionsstruktur.
 	VarSetCapacity	Ingrandisce capacità di ritenzione di una variabile o libera la sua memoria. Normalmente, questo è necessaria solo per circostanze anomale, quali DllCall.
+	While-loop	Esegue una serie di comandi più volte fino a quando l'espressione specificata restituisce false.
 	WinActivate	Attiva la finestra specificata (lo rende più importante).
 	WinActivateBottom	Stessa WinActivate tranne che attiva la in basso (meno di recente attiva) la finestra corrispondente, piuttosto che il più in alto.
 	WinActive	Restituisce l'ID univoco (HWND) della finestra attiva se corrisponde ai criteri specificati.

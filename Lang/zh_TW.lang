@@ -527,6 +527,10 @@
 	c_Lang237 =	壓縮/解壓縮文件
 	c_Lang238 =	打開
 	c_Lang239 =	關掉
+	c_Lang240 =	位置註冊。
+	c_Lang241 =	刪除所有計時器
+	c_Lang242 =	設置計時器
+	c_Lang243 =	直到
 		
 ; 16. Other Windows		
 	t_Lang001 =	導出到華民航空
@@ -930,6 +934,7 @@
 	InsertKeyT_TT =	插入擊鍵
 	JoyKey_TT =	按下操縱桿上的按鈕
 	LoopLVColor_TT =	點擊挑顏色
+	LUntil_TT =	適用條件迴路或For循環的延續。
 	ManKey_TT =	熱鍵玩宏“一步一步”
 	MRel_TT =	相對於當前位置的變動。
 		或者，如果使用控制：相對位置的控制。
@@ -1317,6 +1322,7 @@
 	UrlDownloadToFile	從互聯網上下載一個文件。
 	UserFunction	創建一個功能結構。
 	VarSetCapacity	放大一個變量的控股能力，或釋放其內存。通常，這是必要的，只有不尋常的情況下，如DllCall。
+	While-loop	執行一系列命令，直到指定的表達式的值為false。
 	WinActivate	激活指定的窗口（使得它最重要的）。
 	WinActivateBottom	同WinActivate，除非它激活最底部（最近最少活躍）匹配窗口，而不是最頂層。
 	WinActive	返回活動窗口的唯一ID（HWND），如果它符合指定的條件。
