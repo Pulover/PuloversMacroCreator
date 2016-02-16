@@ -140,10 +140,12 @@ F9::GoSub, ComLoop
 F10::GoSub, IfSt
 +F10::GoSub, AsVar
 ^F10::GoSub, AsFunc
-F11::GoSub, IECom
-+F11::GoSub, ComInt
-^F11::GoSub, RunScrLet
-F12::GoSub, SendMsg
+F11::GoSub, Email
++F11::GoSub, DownloadFiles
+^F11::GoSub, ZipFiles
+F12::GoSub, IECom
++F12::GoSub, ComInt
+^F12::GoSub, SendMsg
 ~Enter::GoSub, EditButton
 
 #If WinActive("ahk_id " LVEditMacros) && !InEdit

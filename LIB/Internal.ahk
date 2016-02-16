@@ -459,7 +459,7 @@ GuiAddLV(ident)
 	Critical
 	Gui, chMacro:Default
 	Gui, chMacro:Tab, %ident%
-	Try Gui, chMacro:Add, ListView, x+0 y+0 AltSubmit Checked hwndListID%ident% vInputList%ident% gInputList NoSort LV0x10000, %w_Lang030%|%w_Lang031%|%w_Lang032%|%w_Lang033%|%w_Lang034%|%w_Lang035%|%w_Lang036%|%w_Lang037%|%w_Lang038%|%w_Lang039%
+	Try Gui, chMacro:Add, ListView, x+0 y+0 AltSubmit Checked hwndListID%ident% vInputList%ident% gInputList NoSort LV0x10000 LV0x4000, %w_Lang030%|%w_Lang031%|%w_Lang032%|%w_Lang033%|%w_Lang034%|%w_Lang035%|%w_Lang036%|%w_Lang037%|%w_Lang038%|%w_Lang039%
 	LV_SetImageList(hIL_Icons)
 	Loop, 10
 		LV_ModifyCol(A_Index, Col_%A_Index%)
@@ -536,6 +536,15 @@ class IfWin
 	{
 		return 1
 	}
+}
+
+StopPlay(s)
+{
+	global
+	StopIt := s
+	SetTitleMatchMode, 2
+	DetectHiddenWindows, Off
+	DetectHiddenText, On
 }
 
 ActivateHotkeys(Rec := "", Play := "", Speed := "", Stop := "", Pause := "", Joy := "")
@@ -931,12 +940,54 @@ LVCallback(Func, Hwnd)
 	return true
 }
 
+TreeGetChecked()
+{
+	ItemID := 0, LastItemID := 0, CheckedVars := []
+	Loop
+	{
+		ItemID := TV_GetNext(ItemID, "Full")
+		If (!ItemID)
+			break
+		CheckedVars.Push(TV_GetNext(LastItemID, "Checked") = ItemID)
+		LastItemID := ItemID
+	}
+	return CheckedVars
+}
+
+UpdateMailAccounts()
+{
+	global
+	MailIni := ""
+	Loop, % LV_GetCount()
+	{
+		RowData := LV_Rows.RowText(A_Index)
+	,	RowData.RemoveAt(1)
+	,	MailIni .= "[UserAccount" A_Index "]`n"
+		For _each, _value in RowData
+			MailIni .= Email_Fields[A_Index] "=" _value "`n"
+	}
+	UserMailAccounts.Set(MailIni)
+,	UserMailAccounts.Write(UserAccountsPath)
+}
+
+LoadMailAccounts()
+{
+	global
+	User_Accounts := UserMailAccounts.Get(true)
+	For _each, Section in User_Accounts
+	{
+		RowData := []
+		For _key, _value in Email_Fields
+			RowData.Push(Section[_value])
+		LV_Add("", RowData*)
+	}
+}
+
 UnZip(Source, OutDir)
 {
 	objShell := ComObjCreate("Shell.Application")
 	objSource := objShell.NameSpace(Source).Items()
 	objTarget := objShell.NameSpace(OutDir)
-	;~ https://msdn.microsoft.com/en-us/library/windows/desktop/bb787866(v=vs.85).aspx
 	intOptions := 256 + 128
 	objTarget.CopyHere(objSource, intOptions)
 	ObjRelease(objShell)

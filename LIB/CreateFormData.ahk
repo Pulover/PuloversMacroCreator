@@ -1,4 +1,4 @@
-;###########################################################
+﻿;###########################################################
 ; Created by tmplinshi
 ; CreateFormData - Creates "multipart/form-data" for http post
 ; http://autohotkey.com/boards/viewtopic.php?f=6&t=7647

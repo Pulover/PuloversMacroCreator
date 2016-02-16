@@ -1,4 +1,4 @@
-;###########################################################
+﻿;###########################################################
 ; Original by PhiLho
 ; Modified by skwire
 ; http://www.autohotkey.com/board/topic/11926-can-you-move-a-listview-column-programmatically/#entry237340

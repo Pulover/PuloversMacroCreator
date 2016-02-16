@@ -67,11 +67,13 @@
 	i_Lang013 =	I&f
 	i_Lang014 =	&Zmienne / Macierze
 	i_Lang015 =	Fu&nkcje / Metody tablicy
-	i_Lang016 =	Inte&rnet Explorer
-	i_Lang017 =	&COM Interfejs
-	i_Lang018 =	Uruc&hom Scriptlet
-	i_Lang019 =	Komunik&aty Windows
-	i_Lang020 =	Zna&jdź polecenia
+	i_Lang016 =	&Wysłać email
+	i_Lang017 =	&Download / upload plików
+	i_Lang018 =	Zip &/ Rozpakuj pliki
+	i_Lang019 =	Inte&rnet Explorer
+	i_Lang020 =	&COM Interfejs
+	i_Lang021 =	Komunik&aty Windows
+	i_Lang022 =	Zna&jdź polecenia
 		
 ; 06. Edit Sub Menu		
 	e_Lang001 =	&Duplikat
@@ -235,7 +237,7 @@
 	w_Lang053 =	Control (F4)
 	w_Lang054 =	Pauza (F5)
 	w_Lang055 =	Message Box (Shift+F5)
-	w_Lang056 =	Key Czekać (Control+F5)
+	w_Lang056 =	Key Czekać (Ctrl+F5)
 	w_Lang057 =	Window (F6)
 	w_Lang058 =	Image / Pixel Szukaj (F7)
 	w_Lang059 =	Uruchom / Plik / String / Misc. (F8)
@@ -245,10 +247,10 @@
 	w_Lang063 =	If (F10)
 	w_Lang064 =	Zmiennych / Macierze (Shift+F10)
 	w_Lang065 =	Funkcje / Metody tablicy (Ctrl+F10)
-	w_Lang066 =	Internet Explorer (F11)
-	w_Lang067 =	Wyrażenie / Interfejs COM (Shift+F11)
-	w_Lang068 =	Uruchom Scriptlet (Ctrl+F11)
-	w_Lang069 =	Komunikaty Windows (F12)
+	w_Lang066 =	Internet Explorer (F12)
+	w_Lang067 =	Wyrażenie / Interfejs COM (Shift+F12)
+	w_Lang068 =	Wysłać email (F11)
+	w_Lang069 =	Komunikaty Windows (Ctrl+F12)
 	w_Lang070 =	Dodaj klawisz Windows na "Zagraj" skrótu
 	w_Lang071 =	Użyj przycisku joysticka jako skrótu
 	w_Lang072 =	Dodaj Macro (Ctrl+T)
@@ -276,17 +278,19 @@
 	w_Lang094 =	Przenieś tutaj
 	w_Lang095 =	Skopiuj tutaj
 	w_Lang096 =	grupy
-	w_Lang097 =	Włącz grupy (Ctrl + Shift + G)
-	w_Lang098 =	Dodaj grupę (Ctrl + Shift + Y)
-	w_Lang099 =	Usuń grupę (Ctrl + Shift + R)
+	w_Lang097 =	Włącz grupy (Ctrl+Shift+G)
+	w_Lang098 =	Dodaj grupę (Ctrl+Shift+Y)
+	w_Lang099 =	Usuń grupę (Ctrl+Shift+R)
 	w_Lang100 =	Usuń wszystkie grupy
 	w_Lang101 =	Edytuj grupy
 	w_Lang102 =	Nazwa grupy
-	w_Lang103 =	Tworzenie funkcji (Ctrl + Shift + U)
-	w_Lang104 =	Dodaj parametrów (Ctrl + Shift + P)
-	w_Lang105 =	Dodaj Return (Ctrl + Shift + N)
-	w_Lang106 =	Konwersja Makro Function (Ctrl + Shift + C)
+	w_Lang103 =	Tworzenie funkcji (Ctrl+Shift+U)
+	w_Lang104 =	Dodaj parametrów (Ctrl+Shift+P)
+	w_Lang105 =	Dodaj Return (Ctrl+Shift+N)
+	w_Lang106 =	Konwersja Makro Function (Ctrl+Shift+C)
 	w_Lang107 =	Komentarz się nie zaznaczonych wierszy
+	w_Lang108 =	Download / upload plików (Shift+F11)
+	w_Lang109 =	Zip / Rozpakuj pliki (Ctrl+F11)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mysz
@@ -442,7 +446,7 @@
 	c_Lang152 =	Informacja
 	c_Lang153 =	Zawsze na wierzchu
 	c_Lang154 =	Minut
-	c_Lang155 =	Uruchom Scriptlet
+	c_Lang155 =	Aż do
 	c_Lang156 =	Scenariusz
 	c_Lang157 =	Język Script
 	c_Lang158 =	Nie kompatybilny z 64-bitowymi!
@@ -520,7 +524,7 @@
 	c_Lang230 =	Do
 	c_Lang231 =	CC
 	c_Lang232 =	UDW
-	c_Lang233 =	Dołącz pliki
+	c_Lang233 =	F2, aby edytować
 	c_Lang234 =	HTML
 	c_Lang235 =	Wysłać email
 	c_Lang236 =	Download / upload plików
@@ -530,7 +534,10 @@
 	c_Lang240 =	zarejestrowanych pozycji.
 	c_Lang241 =	Usuń wszystkie liczniki
 	c_Lang242 =	Zestaw zegar
-	c_Lang243 =	Aż do
+	c_Lang243 =	Prawym uzasadnione
+	c_Lang244 =	Od prawej do lewej
+	c_Lang245 =	Załączniki
+	c_Lang246 =	Ścieżka
 		
 ; 16. Other Windows		
 	t_Lang001 =	Eksport do AutoHotkey
@@ -723,6 +730,17 @@
 	t_Lang188 =	Rozwiń wszystkie
 	t_Lang189 =	Język
 	t_Lang190 =	Konwersja podziały wiersza
+	t_Lang191 =	Konta e-mail
+	t_Lang192 =	Aktualizacja
+	t_Lang193 =	Dwukrotnie kliknij, aby edytować
+	t_Lang194 =	Serwer SMTP
+	t_Lang195 =	Port
+	t_Lang196 =	Uwierzytelniać
+	t_Lang197 =	Nazwa użytkownika
+	t_Lang198 =	Hasło
+	t_Lang199 =	SSL
+	t_Lang200 =	Wyślij tryb
+	t_Lang201 =	Wyślij test
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Otwarte
@@ -837,7 +855,7 @@
 	d_Lang096 =	- NIE DOŁĄCZYĆ ZMIENNYCH W ZNAKI PROCENT TUTAJ.
 		- Zwracana wartość musi być wyrażeniem.
 		- Możesz użyć ciągi znaków, zmienne, tablice i funkcje. Można również łączyć żadnego z nich.
-		- Aby używać łańcuchów, ująć w cudzysłów, np: "Wynik jest:" A + B.
+		- Aby używać łańcuchów, ująć w cudzysłów, np: "Wynik jest:" A+B.
 		- Jeśli chcesz, aby powrócić dodatkowe wyniki, możesz również skorzystać z ByRef w parametrach.
 		- Macierze można stosować do powrotu wiele wartości lub nawet Wartości.
 	d_Lang097 =	- NIE DOŁĄCZYĆ ZMIENNYCH W ZNAKI PROCENT TUTAJ.
@@ -857,6 +875,12 @@
 	d_Lang107 =	Nie można uruchomić stoper
 	d_Lang108 =	Wszystkie pozycje są rejestrowane. Proszę o usunięcie jednego z nich.
 	d_Lang109 =	Etykieta docelowa nie istnieje.
+	d_Lang110 =	Potwierdź zastąpienie pliku
+	d_Lang111 =	już istnieje.
+		Chcesz go zastąpić?
+	d_Lang112 =	Учетной записи электронной почты не найден.
+	d_Lang113 =	Nie zgłosiło błąd.
+	d_Lang114 =	Skrypty eksportowane (nawet jeśli skompilowany) z funkcją wysyłania e-maili (CDO) będzie miał widoczne informacje dotyczące kont e-mail, w tym również hasło. Plik projektu PMC nie ma tej informacji.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Makra można tworzyć za pomocą przycisków poleceń w oknie głównym lub za pomocą dyktafonu skopiować swoje działania. Przejdź do Opcje > Ustawienia > Nagrywanie, aby wybrać to, co wejścia zostaną zapisane.
@@ -891,6 +915,7 @@
 	A_List_TT =	Wybierz Makro (Ctrl+1~0)
 	AbortKey_TT =	Skrót, aby zatrzymać odtwarzanie
 	ActiveObj_TT =	Próbuje połączyć się z aktywnego obiektu COM
+	AddAtt_TT =	Dołącz pliki
 	ApplyI_TT =	Zastosować
 	ApplyL_TT =	Wstaw z pudełkiem (Insert)
 	ApplyT_TT =	Zastosować
@@ -912,6 +937,7 @@
 		w kontrolce Edit (nie ma to wpływu
 		zawartość schowka).
 	Ex_EdScript_TT =	Otwórz w edytorze zewnętrznym
+	Ex_ExecScript_TT =	Uruchom skrypt
 	ExprLink2_TT =	- NIE DOŁĄCZYĆ ZMIENNYCH W ZNAKI PROCENT TUTAJ.
 		- Większość wyrażeń AHK są obsługiwane.
 		- Możesz użyć ciągi znaków, zmienne, tablice i funkcje.
@@ -1101,6 +1127,7 @@
 	ATan	Zwraca arcus tangens (liczba , której styczna jest Number) w radianach .
 	BlockInput	Wyłącza lub włącza zdolność użytkownika do interakcji z komputerem za pośrednictwem klawiatury i myszy.
 	Break	Wyjścia (przerywa)pętli. Ważne wewnątrz każdego rodzaju pętli.
+	CDO	Wysyła e-maile używając konta zdefiniowanego przez użytkownika.
 	Ceil	Liczba Zwraca zaokrągloną w górę do najbliższej liczby całkowitej (bez 0,00 przyrostek) .
 	Chr	Zwraca jeden znak odpowiadający kod znaku wskazanego przez numer .
 	Click	Kliknie przycisk myszy w podanych współrzędnych. Można również przytrzymać przycisk, obróć tarczę , lub przenieść.
@@ -1143,7 +1170,7 @@
 	DriveSpaceFree	Pobiera wolnego miejsca na dysku w megabajtach .
 	Edit	Otwiera bieżący skrypt do edycji w dołączonym edytorze.
 	Else	Określapolecenie (y) do wykonania , jeśliIF- oświadczenie ma wartość false. Jeżeli więcej niż jedno polecenie jest obecny , należy ująć je w bloku (szelki) .
-	EnvAdd	Ustawia zmienną sumie sama plus wartość danej (można również dodać lub odjąć czas z wartości data-czas) . Synonim : Var + Value = .
+	EnvAdd	Ustawia zmienną sumie sama plus wartość danej (można również dodać lub odjąć czas z wartości data-czas) . Synonim : Var+Value = .
 	EnvDiv	Ustawia zmienną na sobie podzielony przez podaną wartość. Synonim : Var / Value = .
 	EnvGet	Pobiera zmienną środowiskową .
 	EnvMult	Ustawia zmienną na sobie razy podana wartość . Synonim : Var * = wartość.
@@ -1237,8 +1264,8 @@
 	MouseGetPos	Pobiera bieżącą pozycję kursora myszy i ewentualnie które okno i kontroli jest aktywując.
 	MouseMove	Przesunięcie kursora myszy.
 	MsgBox	Wyświetla określony tekst w małym okienku zawierającego jeden lub więcej przycisków (np. Tak i Nie).
-	NumGet	Zwraca liczbę binarną przechowywane na wskazany adres + offsetu.
-	NumPut	Sklepy Numer w formacie binarnym na wskazany adres + offset i zwraca adres z prawej pozycji tylko w formie pisemnej.
+	NumGet	Zwraca liczbę binarną przechowywane na wskazany adres+offsetu.
+	NumPut	Sklepy Numer w formacie binarnym na wskazany adres+offset i zwraca adres z prawej pozycji tylko w formie pisemnej.
 	Object	Tworzy skrypty asocjacyjnej.
 	OnExit	Określa podprogramu, aby uruchomić się automatycznie po zamknięciu skryptów.
 	OnMessage	Określa funkcję połączenie automatycznie po skrypt otrzymuje określoną wiadomość.
@@ -1351,3 +1378,4 @@
 	WinWaitActive	Czeka, aż określona okno jest aktywne.
 	WinWaitClose	Czeka, aż określona okno nie istnieje.
 	WinWaitNotActive	Czeka, aż określona okno nie jest aktywne.
+	Zip / UnZip	Skompresować lub dekompresji jeden lub więcej plików ZIP.

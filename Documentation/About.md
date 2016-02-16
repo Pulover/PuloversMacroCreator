@@ -10,7 +10,7 @@ Copyright © 2012-2016 Rodolfo U. Batista
 
 Version: 5.0.0  
 Release Date: February, 2016  
-AutoHotkey Version: 1.1.23.00  
+AutoHotkey Version: 1.1.23.01  
 
 Software License: [GNU General Public License](License.html)  
 
@@ -39,10 +39,13 @@ Thiago Talma for some improvements to the code, debugging and many suggestions.
 
 ## Version 5.0.0
 
-* New feature: *User Defined Functions*.
-* New feature: *Listview Groups* (+WinVista).
+* New feature: **User Defined Functions**.
+* New feature: **Send Email**.
+* New feature: **Download / Upload Files**.
+* New feature: **Zip / Unzip Files**.
+* New feature: **Listview Groups** (+WinVista).
 * Implemented real Auto-Hotkey format expressions in Functions, Methods, Variable Assignment, Evaluate Expression, COM Interface and command parameters started with % .
-* Multiple If Statements are now supported in 'Evaluate Expression' (e.g.: var = 5 || var = "a").
+* Multiple If Statements are now supported in *Evaluate Expression* (e.g.: var = 5 || var = "a").
 * Function parameter can now be another function, array, array element or expression.
 * Added SetTimer command.
 * Loops now work in Manual Playback.
@@ -62,11 +65,11 @@ Thiago Talma for some improvements to the code, debugging and many suggestions.
 * Added new translations.
 * Added Language editor in *Settings* window with submit form.
 * Languages files are now kept in the Lang folder and can be added, modified or removed.
-* Updated "Loop, File" and "Loop, Reg" to new format with "Mode" parameter.
-* Changed "List Variables" to display User-Defined variables only.
+* Updated *Loop, File* and *Loop, Reg* to new format with *Mode/ parameter.
+* Changed *List Variables* to display User-Defined variables only.
 * Fixed corrupted pmc files saved on exit.
 * Fixed bug with WinWait timeout.
-* Fixed bug with IE/COM Interface.
+* Fixed bugs with IE/COM Interface.
 * Fixed default editor not set correctly on first run.
 * Removed Launcher.exe from Portable version due to false virus warnings.
 

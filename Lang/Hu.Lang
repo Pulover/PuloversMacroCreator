@@ -67,11 +67,13 @@
 	i_Lang013 =	Ha &Nyilatkozatok
 	i_Lang014 =	&Változók / Tömbök
 	i_Lang015 =	&Funkciók / Array módszerek
-	i_Lang016 =	In&ternet Explorer
-	i_Lang017 =	C&OM Interface
-	i_Lang018 =	F&uss Scriptlet
-	i_Lang019 =	A &Windows Üzenetek
-	i_Lang020 =	Keresse meg a &parancsot
+	i_Lang016 =	K&üldjön e-mailt
+	i_Lang017 =	&Letöltés / Feltöltés fájlok
+	i_Lang018 =	Zi&p / Unzip fájlok
+	i_Lang019 =	In&ternet Explorer
+	i_Lang020 =	C&OM Interface
+	i_Lang021 =	A &Windows Üzenetek
+	i_Lang022 =	Keresse meg a parancsot
 		
 ; 06. Edit Sub Menu		
 	e_Lang001 =	&Másolat
@@ -235,7 +237,7 @@
 	w_Lang053 =	Control (F4)
 	w_Lang054 =	Szünet (F5)
 	w_Lang055 =	Message Box (Shift+F5)
-	w_Lang056 =	Kulcs Várakozás (Control+F5)
+	w_Lang056 =	Kulcs Várakozás (Ctrl+F5)
 	w_Lang057 =	Window (F6)
 	w_Lang058 =	Image / Pixel Search (F7)
 	w_Lang059 =	Run / Fájl / String / Misc. (F8)
@@ -245,10 +247,10 @@
 	w_Lang063 =	Ha a nyilatkozatok (F10)
 	w_Lang064 =	Változók / Tömbök (Shift+F10)
 	w_Lang065 =	Függvények / Array módszerek (Ctrl+F10)
-	w_Lang066 =	Internet Explorer (F11)
-	w_Lang067 =	Kifejezés / COM Interface (Shift+F11)
-	w_Lang068 =	Fuss Scriptlet (Ctrl+F11)
-	w_Lang069 =	A Windows üzenetek (F12)
+	w_Lang066 =	Internet Explorer (F12)
+	w_Lang067 =	Kifejezés / COM Interface (Shift+F12)
+	w_Lang068 =	Küldjön e-mailt (F11)
+	w_Lang069 =	A Windows üzenetek (Ctrl+F12)
 	w_Lang070 =	Adja hozzá a Windows billentyű a "Play" gyorsbillentyű
 	w_Lang071 =	Használjon joystick gombot hotkey
 	w_Lang072 =	Kedvencek Macro (Ctrl+T)
@@ -276,17 +278,19 @@
 	w_Lang094 =	Áthelyezés ide
 	w_Lang095 =	Másolás ide
 	w_Lang096 =	csoportok
-	w_Lang097 =	Engedélyezze csoportok (Ctrl + Shift + G)
-	w_Lang098 =	Add csoport (Ctrl + Shift + Y)
-	w_Lang099 =	Csoport eltávolítása (Ctrl + Shift + R)
+	w_Lang097 =	Engedélyezze csoportok (Ctrl+Shift+G)
+	w_Lang098 =	Add csoport (Ctrl+Shift+Y)
+	w_Lang099 =	Csoport eltávolítása (Ctrl+Shift+R)
 	w_Lang100 =	Vegye ki az összes csoport
 	w_Lang101 =	Csoportok szerkesztése
 	w_Lang102 =	Csoport név
-	w_Lang103 =	Hozzon funkció (Ctrl + Shift + U)
-	w_Lang104 =	Add Paraméter (Ctrl + Shift + P)
-	w_Lang105 =	Add Return (Ctrl + Shift + N)
-	w_Lang106 =	Convert Makró Function (Ctrl + Shift + C)
+	w_Lang103 =	Hozzon funkció (Ctrl+Shift+U)
+	w_Lang104 =	Add Paraméter (Ctrl+Shift+P)
+	w_Lang105 =	Add Return (Ctrl+Shift+N)
+	w_Lang106 =	Convert Makró Function (Ctrl+Shift+C)
 	w_Lang107 =	Hozzászólás ki ellenőrizetlenül sorok
+	w_Lang108 =	Letöltés / Feltöltés fájlok (Shift+F11)
+	w_Lang109 =	Zip / Unzip fájlok (Ctrl+F11)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Egér
@@ -442,7 +446,7 @@
 	c_Lang152 =	Információ
 	c_Lang153 =	Mindig a tetején
 	c_Lang154 =	Perc
-	c_Lang155 =	Fuss Scriptlet
+	c_Lang155 =	Amíg
 	c_Lang156 =	Forgatókönyv
 	c_Lang157 =	Script Language
 	c_Lang158 =	Nem kompatibilis a 64-bit!
@@ -520,7 +524,7 @@
 	c_Lang230 =	Karşı
 	c_Lang231 =	CC
 	c_Lang232 =	TITKOS
-	c_Lang233 =	Dosyaları ekle
+	c_Lang233 =	F2 szerkeszteni
 	c_Lang234 =	HTML
 	c_Lang235 =	Küldjön e-mailt
 	c_Lang236 =	Letöltés / Feltöltés fájlok
@@ -530,7 +534,10 @@
 	c_Lang240 =	nyilvántartott pozíciók.
 	c_Lang241 =	Az összes törlése időzítő
 	c_Lang242 =	Set timer
-	c_Lang243 =	Amíg
+	c_Lang243 =	Jobb indokolt
+	c_Lang244 =	Jobbról balra
+	c_Lang245 =	Mellékletek
+	c_Lang246 =	Pálya
 		
 ; 16. Other Windows		
 	t_Lang001 =	Exportálás AutoHotkey
@@ -723,6 +730,17 @@
 	t_Lang188 =	Az összes kibontása
 	t_Lang189 =	Nyelv
 	t_Lang190 =	Átalakítás sortöréseket
+	t_Lang191 =	E-mail fiókok
+	t_Lang192 =	Frissítés
+	t_Lang193 =	Kattintson duplán a szerkeszteni
+	t_Lang194 =	SMTP szerver
+	t_Lang195 =	Kikötő
+	t_Lang196 =	Hitelesít
+	t_Lang197 =	Felhasználónév
+	t_Lang198 =	Jelszó
+	t_Lang199 =	SSL
+	t_Lang200 =	Küldj mód
+	t_Lang201 =	Zaslat test
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Nyitva
@@ -837,7 +855,7 @@
 	d_Lang096 =	- NE CSATOLNI VARIABLES SZÁZALÉKOS JELEK ITT.
 		- Vissza értéknek kell lennie egy kifejezés.
 		- Használhatja vonósok, változók, tömbök és függvények. Ön is kombinálhatja azokat.
-		- Ahhoz, hogy használni húrok, csatolja őket idézetek, pl: "Az eredmény:" a + b.
+		- Ahhoz, hogy használni húrok, csatolja őket idézetek, pl: "Az eredmény:" a+b.
 		- Ha vissza kíván térni extra eredményeket, akkor is használhatja ByRef a paramétereket.
 		- Arrays lehet használni, hogy visszatérjen több értéket, vagy akár elemzi értékeket.
 	d_Lang097 =	- NE CSATOLNI VARIABLES SZÁZALÉKOS JELEK ITT.
@@ -857,6 +875,12 @@
 	d_Lang107 =	Nem sikerült elindítani a timer
 	d_Lang108 =	Az összes találat van bejegyezve. Kérjük, törölje az egyiket.
 	d_Lang109 =	Cél címke nem létezik.
+	d_Lang110 =	Erősítse fájl helyére
+	d_Lang111 =	már létezik.
+		Szeretném cserélni?
+	d_Lang112 =	E-mail fiók nem található.
+	d_Lang113 =	Nem jelzett hibát.
+	d_Lang114 =	Scripts exportált (még ha össze) a send email funkció (CDO) lesz látható információk az e-mail fiókok használni, beleértve a jelszót. A PMC projekt fájl nem rendelkezik ezekkel az adatokkal.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Hozhat létre makrók a Command gombok a fő ablakban, vagy a felvevő másolni a tevékenységét. Válassza az Opciók > Beállítások > Felvétel kiválasztható, hogy milyen bemeneteket kerülnek rögzítésre.
@@ -891,6 +915,7 @@
 	A_List_TT =	Makró Kiválasztása (Ctrl+1~0)
 	AbortKey_TT =	Gyorsgomb a lejátszás megállításához
 	ActiveObj_TT =	Próbál csatlakozni egy Active COM objektum
+	AddAtt_TT =	Dosyaları ekle
 	ApplyI_TT =	Alkalmaz
 	ApplyL_TT =	Beszúrás box (Insert)
 	ApplyT_TT =	Alkalmaz
@@ -912,6 +937,7 @@
 		egy Szerkesztés-ellenőrzés (ez nem érinti
 		az a vágólap tartalmát.)
 	Ex_EdScript_TT =	Nyílt külső szerkesztőben
+	Ex_ExecScript_TT =	Run script
 	ExprLink2_TT =	- NE CSATOLNI VARIABLES SZÁZALÉKOS JELEK ITT.
 		- A legtöbb AHK kifejezések támogatottak.
 		- Használhatja vonósok, változók, tömbök és függvények.
@@ -1101,6 +1127,7 @@
 	ATan	Visszaadja a cotanges (a szám, amelynek tangense a szám) radiánban.
 	BlockInput	Tiltja le vagy engedélyezi a felhasználó képes kölcsönhatásba a számítógéphez billentyűzet és egér.
 	Break	Kilépés (megszűnik) a hurok. Érvényes belül bármilyen hurok.
+	CDO	Küld e-maileket egy felhasználó által definiált fiókot.
 	Ceil	Visszatér szám kerekítve a legközelebbi egész (nélkül 0,00 utótag).
 	Chr	Visszaadja az egyetlen karakter megfelelő karaktert kódot jelzett szám.
 	Click	Kattintás az egérrel a megadott koordinátákat. Azt is tartsuk lenyomva a gombot, forgassa a kereket, vagy áthelyezni.
@@ -1143,7 +1170,7 @@
 	DriveSpaceFree	Letölti a szabad lemezterület a meghajtón, megabyte.
 	Edit	Megnyitja az aktuális szkript szerkesztésre a kapcsolódó szerkesztő.
 	Else	Megadja a parancs (ek) azon képessége, ha IF-utasítás kiértékeli a hamis. Ha több, mint egy parancs aktív, tegye őket egy blokkban (fogszabályozó).
-	EnvAdd	Beállítja egy változó összege is, valamint az adott értéket (is összeadást vagy időt a dátum-idő érték). Egyet jelent: Var + = érték.
+	EnvAdd	Beállítja egy változó összege is, valamint az adott értéket (is összeadást vagy időt a dátum-idő érték). Egyet jelent: Var+= érték.
 	EnvDiv	Beállítja egy változó magára osztani az adott értékre. Egyet jelent: Var / = érték.
 	EnvGet	Letölti egy környezeti változót.
 	EnvMult	Beállítja egy változó magát alkalommal az adott értékre. Egyet jelent: Var * = érték.
@@ -1238,7 +1265,7 @@
 	MouseMove	Mozgatja a kurzort.
 	MsgBox	Megjeleníti a megadott szöveget egy kis ablak, amely egy vagy több gomb (például Igen és Nem).
 	NumGet	Visszaadja a bináris számot tárolt a megadott címre eltolva.
-	NumPut	Üzletek száma bináris formában a megadott címre + offset és visszatér a címet, jobbra az elem csak írásban.
+	NumPut	Üzletek száma bináris formában a megadott címre+offset és visszatér a címet, jobbra az elem csak írásban.
 	Object	Létrehoz egy scriptable asszociatív tömb.
 	OnExit	Megadja a szubrutin automatikusan futnak, ha a script kilép.
 	OnMessage	Megadja a funkció hívás automatikusan a szkript megkapja az adott üzenetet.
@@ -1351,3 +1378,4 @@
 	WinWaitActive	Megvárja, amíg a megadott ablak aktív.
 	WinWaitClose	Megvárja, amíg a meghatározott ablak nem létezik.
 	WinWaitNotActive	Megvárja, amíg a meghatározott ablak nem aktív.
+	Zip / UnZip	Tömöríteni vagy tömörítse egy vagy több zip fájlt.

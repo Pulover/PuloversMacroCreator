@@ -1,4 +1,4 @@
-;###########################################################
+﻿;###########################################################
 ; Create a scheduled task natively [AHK_L]
 ; Original by shajul
 ; http://www.autohotkey.com/board/topic/61042-create-a-scheduled-task-natively-ahk-l/

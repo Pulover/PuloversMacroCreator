@@ -67,11 +67,13 @@
 	i_Lang013 =	Pok&ud Závěrka
 	i_Lang014 =	P&roměnné / Pole
 	i_Lang015 =	&Funkce / Metody pole
-	i_Lang016 =	&Internet Explorer
-	i_Lang017 =	&COM Rozhraní
-	i_Lang018 =	Spustit Skript&y
-	i_Lang019 =	&Windows Zprávy
-	i_Lang020 =	Na&jít příkaz
+	i_Lang016 =	Poslat e&-mailem
+	i_Lang017 =	&Download / upload souborů
+	i_Lang018 =	&Zip / rozbalení souborů
+	i_Lang019 =	&Internet Explorer
+	i_Lang020 =	&COM Rozhraní
+	i_Lang021 =	&Windows Zprávy
+	i_Lang022 =	Na&jít příkaz
 		
 ; 06. Edit Sub Menu		
 	e_Lang001 =	&Duplikát
@@ -235,7 +237,7 @@
 	w_Lang053 =	Control (F4)
 	w_Lang054 =	Pauza (F5)
 	w_Lang055 =	Message Box (Shift+F5)
-	w_Lang056 =	Klíč Čekání (Control+F5)
+	w_Lang056 =	Klíč Čekání (Ctrl+F5)
 	w_Lang057 =	Window (F6)
 	w_Lang058 =	Obrázek / Pixel Search (F7)
 	w_Lang059 =	Spustit / Soubor / String / Misc. (F8)
@@ -245,10 +247,10 @@
 	w_Lang063 =	Pokud výkazy (F10)
 	w_Lang064 =	Proměnné / Pole (Shift+F10)
 	w_Lang065 =	Funkce / Metody pole (Ctrl+F10)
-	w_Lang066 =	Internet Explorer (F11)
-	w_Lang067 =	Výraz / COM rozhraní (Shift+F11)
-	w_Lang068 =	Spustit Skripty (Ctrl+F11)
-	w_Lang069 =	Windows Zprávy (F12)
+	w_Lang066 =	Internet Explorer (F12)
+	w_Lang067 =	Výraz / COM rozhraní (Shift+F12)
+	w_Lang068 =	Poslat e-mailem (F11)
+	w_Lang069 =	Windows Zprávy (Ctrl+F12)
 	w_Lang070 =	Přidat klávesu Windows na "Play" klávesové zkratky
 	w_Lang071 =	Použijte joystick jako klávesovou zkratku
 	w_Lang072 =	Přidat makro (Ctrl+T)
@@ -276,17 +278,19 @@
 	w_Lang094 =	Přesunout sem
 	w_Lang095 =	Kopírování zde
 	w_Lang096 =	Skupiny
-	w_Lang097 =	Povolit skupiny (Ctrl + Shift + G)
-	w_Lang098 =	Přidat skupinu (Ctrl + Shift + Y)
-	w_Lang099 =	Odstranit skupinu (Ctrl + Shift + R)
+	w_Lang097 =	Povolit skupiny (Ctrl+Shift+G)
+	w_Lang098 =	Přidat skupinu (Ctrl+Shift+Y)
+	w_Lang099 =	Odstranit skupinu (Ctrl+Shift+R)
 	w_Lang100 =	Odstranit všechny skupiny
 	w_Lang101 =	Upravit skupiny
 	w_Lang102 =	Název skupiny
-	w_Lang103 =	Vytvoření funkce (Ctrl + Shift + U)
-	w_Lang104 =	Přidat parametr (Ctrl + Shift + P)
-	w_Lang105 =	Přidat Return (Ctrl + Shift + N)
-	w_Lang106 =	Převést makra fungovat (Ctrl + Shift + C)
+	w_Lang103 =	Vytvoření funkce (Ctrl+Shift+U)
+	w_Lang104 =	Přidat parametr (Ctrl+Shift+P)
+	w_Lang105 =	Přidat Return (Ctrl+Shift+N)
+	w_Lang106 =	Převést makra fungovat (Ctrl+Shift+C)
 	w_Lang107 =	Komentář mimo nezkontrolované řádků
+	w_Lang108 =	Download / upload souborů (Shift+F11)
+	w_Lang109 =	Zip / rozbalení souborů (Ctrl+F11)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Myš
@@ -442,7 +446,7 @@
 	c_Lang152 =	Informace
 	c_Lang153 =	Vždy navrchu
 	c_Lang154 =	Minut
-	c_Lang155 =	Spustit Skripty
+	c_Lang155 =	Až do
 	c_Lang156 =	Skript
 	c_Lang157 =	Script Language
 	c_Lang158 =	Není kompatibilní s 64-bit!
@@ -520,7 +524,7 @@
 	c_Lang230 =	Na
 	c_Lang231 =	CC
 	c_Lang232 =	SKRYTÁ
-	c_Lang233 =	Připojit soubory
+	c_Lang233 =	F2 upravit
 	c_Lang234 =	HTML
 	c_Lang235 =	Poslat e-mailem
 	c_Lang236 =	Download / upload souborů
@@ -530,7 +534,10 @@
 	c_Lang240 =	regálových pozic.
 	c_Lang241 =	Smazat všechny časovače
 	c_Lang242 =	Set časovač
-	c_Lang243 =	Až do
+	c_Lang243 =	Pravým odůvodněno
+	c_Lang244 =	Pravo na lijevo
+	c_Lang245 =	Přílohy
+	c_Lang246 =	Cesta
 		
 ; 16. Other Windows		
 	t_Lang001 =	Export do AutoHotkey
@@ -723,6 +730,17 @@
 	t_Lang188 =	Rozšířit vše
 	t_Lang189 =	Jazyk
 	t_Lang190 =	Převod řádků
+	t_Lang191 =	E-mailové účty
+	t_Lang192 =	Aktualizovat
+	t_Lang193 =	Poklepáním editovat
+	t_Lang194 =	SMTP server
+	t_Lang195 =	Přístav
+	t_Lang196 =	Ověřit
+	t_Lang197 =	Uživatelské jméno
+	t_Lang198 =	Heslo
+	t_Lang199 =	SSL
+	t_Lang200 =	režim Odeslat
+	t_Lang201 =	Zaslat test
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Otevřít
@@ -837,7 +855,7 @@
 	d_Lang096 =	- NEPOUŽÍVEJTE UZAVŘETE PROMĚNNÉ V ZNAKY PROCENTA ZDE.
 		- Návrat hodnota musí být výraz.
 		- Můžete použít řetězce, proměnné, pole a funkce. Můžete také kombinovat některé z nich.
-		- Chcete-li použít řetězce, uzavřete do uvozovek, například: "Výsledek je:" a + b.
+		- Chcete-li použít řetězce, uzavřete do uvozovek, například: "Výsledek je:" a+b.
 		- Pokud se chcete vrátit další výsledky, můžete také použít ByRef v parametrech.
 		- Pole může být použit k vrátit více hodnot, nebo dokonce pojmenované hodnoty.
 	d_Lang097 =	- NEPOUŽÍVEJTE UZAVŘETE PROMĚNNÉ V ZNAKY PROCENTA ZDE.
@@ -857,6 +875,12 @@
 	d_Lang107 =	Nelze spustit časovač
 	d_Lang108 =	Všechny pozice jsou registrovány. Prosím, odstraňte jeden z nich.
 	d_Lang109 =	Cílový štítek neexistuje.
+	d_Lang110 =	Potvrdit nahrazení souboru
+	d_Lang111 =	již existuje.
+		Chtěli byste ji nahradit?
+	d_Lang112 =	E-mailový účet nebyl nalezen.
+	d_Lang113 =	Hlášena žádná chyba.
+	d_Lang114 =	Skripty vyvážené (i když sestavil) pomocí odesílání e-mailů funkce (CDO) bude mít viditelné informace o e-mailových účtů k použití, včetně hesla. Soubor projektu PMC nemá tuto informaci.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Můžete vytvářet makra pomocí příkazových tlačítek v hlavním okně, nebo pomocí rekordéru kopírovat své akce. Přejít na Možnosti > Nastavení > Nahrávání na vstupy vybrat, co budou zaznamenány.
@@ -891,6 +915,7 @@
 	A_List_TT =	Vyberte Makro (Ctrl+1~0)
 	AbortKey_TT =	Klávesová zkratka pro zastavení přehrávání
 	ActiveObj_TT =	Pokusí připojit k Active objektu COM
+	AddAtt_TT =	Připojit soubory
 	ApplyI_TT =	Platit
 	ApplyL_TT =	Vložit z krabice (Insert)
 	ApplyT_TT =	Platit
@@ -912,6 +937,7 @@
 		v kontrole úprav (to nemá vliv
 		obsah schránky).
 	Ex_EdScript_TT =	Otvori u vanjskom uređivaču
+	Ex_ExecScript_TT =	Spustit skript
 	ExprLink2_TT =	- NEPOUŽÍVEJTE UZAVŘETE PROMĚNNÉ V ZNAKY PROCENTA ZDE.
 		- Většina AHK výrazy jsou podporovány.
 		- Můžete použít řetězce, proměnné, pole a funkce.
@@ -1101,6 +1127,7 @@
 	ATan	Vrací arkustangens (číslo, jehož tangens je číslo) v radiánech .
 	BlockInput	Zamknutí nebo odemknutí uživatele schopnost komunikovat s počítačem pomocí klávesnice a myši.
 	Break	Ukončí (ukončí)smyčky. Platí v jakékoliv smyčky .
+	CDO	Posílá e-maily pomocí uživatelsky definovaného účtu.
 	Ceil	Vrátí číslo zaokrouhlené nahoru na nejbližší celé číslo (bez přípony 0,00) .
 	Chr	Vrátí znak odpovídající kód znaku označena číslicemi .
 	Click	Klepne na tlačítko myši na zadané souřadnice . To může také podržet tlačítko , otočte kolečkem nebo přesunout .
@@ -1143,7 +1170,7 @@
 	DriveSpaceFree	Načte volného prostoru disku v MB.
 	Edit	Otevře aktuální skript pro editaci v příslušném editoru.
 	Else	Určuje příkaz (y) provedl v případěIF -příkaz vyhodnocen jako NEPRAVDA . Při více než jeden příkaz je k dispozici, je uzavřít do bloku (rovnátka) .
-	EnvAdd	Nastaví proměnnou součet sobě plus danou hodnotu (můžete také přidat nebo odečíst čas z data a časové hodnoty) . Synonymem : Var + = hodnota .
+	EnvAdd	Nastaví proměnnou součet sobě plus danou hodnotu (můžete také přidat nebo odečíst čas z data a časové hodnoty) . Synonymem : Var+= hodnota .
 	EnvDiv	Nastaví proměnnou na sebe dělí o danou hodnotu . Synonymem : Var / = hodnota .
 	EnvGet	Načte proměnnou prostředí .
 	EnvMult	Nastaví proměnnou na sobě krát danou hodnotu . Synonymem : Var * = hodnota .
@@ -1237,8 +1264,8 @@
 	MouseGetPos	Načte aktuální pozici kurzoru a případně kde je otevřené okno a řízení je vznášející se nad.
 	MouseMove	Přesune kurzor myši.
 	MsgBox	Zobrazení textu uvedeno v malém okně, které obsahuje jedno nebo více tlačítek (například Ano a Ne).
-	NumGet	Vrací binární číslo uložené na zadanou adresu + offset.
-	NumPut	Obchody číslo v binárním formátu na určenou adresu + offset a vrátí adresu vpravo od položky právě napsal.
+	NumGet	Vrací binární číslo uložené na zadanou adresu+offset.
+	NumPut	Obchody číslo v binárním formátu na určenou adresu+offset a vrátí adresu vpravo od položky právě napsal.
 	Object	Vytváří skriptovatelné asociativní pole.
 	OnExit	Určuje podprogram spustit automaticky, když skript východy.
 	OnMessage	Určuje funkce pro volání automaticky, když skript obdrží zadanou zprávu.
@@ -1351,3 +1378,4 @@
 	WinWaitActive	Čeká zadaný okno je aktivní.
 	WinWaitClose	Čeká zadaný okno neexistuje.
 	WinWaitNotActive	Čeká zadaný okno není aktivní.
+	Zip / UnZip	Komprimovat nebo dekomprimovat jeden nebo více souborů ZIP.

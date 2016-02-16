@@ -67,11 +67,13 @@
 	i_Lang013 =	&Če Izjave
 	i_Lang014 =	&Spremenljivke / Nizi
 	i_Lang015 =	&Funkcije / Metode zaporedji
-	i_Lang016 =	In&ternet Explorer
-	i_Lang017 =	&COM Vmesnik
-	i_Lang018 =	R&un Skriptov
-	i_Lang019 =	&Windows Sporočila
-	i_Lang020 =	Na&jdi ukaz
+	i_Lang016 =	Po&šlji sporočilo
+	i_Lang017 =	&Download / Upload datotek
+	i_Lang018 =	&Zip / unzip datotek
+	i_Lang019 =	In&ternet Explorer
+	i_Lang020 =	&COM Vmesnik
+	i_Lang021 =	&Windows Sporočila
+	i_Lang022 =	Na&jdi ukaz
 		
 ; 06. Edit Sub Menu		
 	e_Lang001 =	&Dvojnik
@@ -235,7 +237,7 @@
 	w_Lang053 =	Control (F4)
 	w_Lang054 =	Premor (F5)
 	w_Lang055 =	Polje sporočilo (Shift+F5)
-	w_Lang056 =	ključne Počakaj (Control+F5)
+	w_Lang056 =	ključne Počakaj (Ctrl+F5)
 	w_Lang057 =	Okno (F6)
 	w_Lang058 =	Image / Pixel Search (F7)
 	w_Lang059 =	Run / datoteke / String / Razno. (F8)
@@ -245,10 +247,10 @@
 	w_Lang063 =	Če izjave (F10)
 	w_Lang064 =	Spremenljivke / Nizi (Shift+F10)
 	w_Lang065 =	Funkcije / Metode zaporedji (Ctrl+F10)
-	w_Lang066 =	Internet Explorer (F11)
-	w_Lang067 =	Izraz / COM vmesnik (Shift+F11)
-	w_Lang068 =	Run skriptov (Ctrl+F11)
-	w_Lang069 =	Windows Sporočila (F12)
+	w_Lang066 =	Internet Explorer (F12)
+	w_Lang067 =	Izraz / COM vmesnik (Shift+F12)
+	w_Lang068 =	Pošlji sporočilo (F11)
+	w_Lang069 =	Windows Sporočila (Ctrl+F12)
 	w_Lang070 =	Dodaj na tipko Windows in »Play" hotkey
 	w_Lang071 =	Uporabite gumb za igralno palico kot hotkey
 	w_Lang072 =	Dodaj Macro (Ctrl+T)
@@ -276,17 +278,19 @@
 	w_Lang094 =	Premakniti tukaj
 	w_Lang095 =	Kopiranje tukaj
 	w_Lang096 =	skupine
-	w_Lang097 =	Omogoči skupine (Ctrl + Shift + G)
-	w_Lang098 =	Dodaj skupino (Ctrl + Shift + Y)
-	w_Lang099 =	Odstrani skupino (Ctrl + Shift + R)
+	w_Lang097 =	Omogoči skupine (Ctrl+Shift+G)
+	w_Lang098 =	Dodaj skupino (Ctrl+Shift+Y)
+	w_Lang099 =	Odstrani skupino (Ctrl+Shift+R)
 	w_Lang100 =	Odstranite vse skupine
 	w_Lang101 =	Urejanje skupine
 	w_Lang102 =	Ime skupine
-	w_Lang103 =	Ustvarite Funkcija (Ctrl + Shift + U)
-	w_Lang104 =	Dodaj Parameter (Ctrl + Shift + P)
-	w_Lang105 =	Dodaj za vračanje (Ctrl + Shift + N)
-	w_Lang106 =	Pretvarjanje makro funkcijo (Ctrl + Shift + C)
+	w_Lang103 =	Ustvarite Funkcija (Ctrl+Shift+U)
+	w_Lang104 =	Dodaj Parameter (Ctrl+Shift+P)
+	w_Lang105 =	Dodaj za vračanje (Ctrl+Shift+N)
+	w_Lang106 =	Pretvarjanje makro funkcijo (Ctrl+Shift+C)
 	w_Lang107 =	Zakomentirajte nepreverjene vrstice
+	w_Lang108 =	Download / Upload datotek (Shift+F11)
+	w_Lang109 =	Zip / unzip datotek (Ctrl+F11)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Miška
@@ -442,7 +446,7 @@
 	c_Lang152 =	Info
 	c_Lang153 =	Vedno na vrhu
 	c_Lang154 =	Zapisnik
-	c_Lang155 =	Run skriptov
+	c_Lang155 =	Do
 	c_Lang156 =	Script
 	c_Lang157 =	Script Language
 	c_Lang158 =	Ni združljiv z 64-bit!
@@ -520,7 +524,7 @@
 	c_Lang230 =	Če želite
 	c_Lang231 =	CC
 	c_Lang232 =	BCC
-	c_Lang233 =	Priložite dokumentacijo
+	c_Lang233 =	F2 urediti
 	c_Lang234 =	HTML
 	c_Lang235 =	Pošlji sporočilo
 	c_Lang236 =	Download / Upload datotek
@@ -530,7 +534,10 @@
 	c_Lang240 =	registrirani pozicije.
 	c_Lang241 =	Izbriši vse časovnike
 	c_Lang242 =	Set timer
-	c_Lang243 =	Do
+	c_Lang243 =	Desno upravičena
+	c_Lang244 =	Desne proti levi
+	c_Lang245 =	Priključki
+	c_Lang246 =	Pot
 		
 ; 16. Other Windows		
 	t_Lang001 =	Izvoz v AutoHotkey
@@ -723,6 +730,17 @@
 	t_Lang188 =	Razširi vse
 	t_Lang189 =	Jezik
 	t_Lang190 =	Pretvarjanje prelome vrstic
+	t_Lang191 =	E-poštni računi
+	t_Lang192 =	Update
+	t_Lang193 =	Dvokliknite za urejanje
+	t_Lang194 =	SMTP Server
+	t_Lang195 =	Port
+	t_Lang196 =	Preverjanje pristnosti
+	t_Lang197 =	Uporabniško ime
+	t_Lang198 =	Geslo
+	t_Lang199 =	SSL
+	t_Lang200 =	Pošlji način
+	t_Lang201 =	Pošlji test
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Odprite
@@ -837,7 +855,7 @@
 	d_Lang096 =	- NE PRILOŽITI SPREMENLJIVK ZNAKI ZA ODSTOTEK TUKAJ.
 		- Vrnjena vrednost mora biti izraz.
 		- Lahko uporabite strune, spremenljivke, polja in funkcije. Prav tako lahko kombinirate katerega koli od teh.
-		- Za uporabo nizov, jih priložite v narekovajih, na primer: "Rezultat je:" a + b.
+		- Za uporabo nizov, jih priložite v narekovajih, na primer: "Rezultat je:" a+b.
 		- Če se želite vrniti dodatne rezultate, lahko uporabite tudi ByRef v parametrih.
 		- Polja lahko uporabimo za vrnitev več vrednosti ali celo imenovanih vrednosti.
 	d_Lang097 =	- NE PRILOŽITI SPREMENLJIVK ZNAKI ZA ODSTOTEK TUKAJ.
@@ -857,6 +875,12 @@
 	d_Lang107 =	Ni bilo mogoče zagnati odštevalnik
 	d_Lang108 =	Vse pozicije so registrirani. Prosimo, izbrišite enega od njih.
 	d_Lang109 =	Ciljna oznaka ne obstaja.
+	d_Lang110 =	Potrdite datoteko zamenjati
+	d_Lang111 =	že obstaja.
+		Bi želeli zamenjati?
+	d_Lang112 =	E-poštni račun ni bilo mogoče najti.
+	d_Lang113 =	Poročali nobena napaka.
+	d_Lang114 =	Skripte izvažajo (tudi če je prevedeni) z za pošiljanje e-pošte funkcije (CDO) bodo imeli vidne informacije o e-poštnih računov, ki se uporabljajo, vključno z geslom. Projekt datoteke PMC teh podatkov ne imeti.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Lahko ustvarite makre z uporabo ukaznih gumbov v glavnem oknu ali z uporabo snemalnika kopirati dejanja. Pojdi na Možnosti> Nastavitve> Snemanje izbrati tisto vhodi bo posnet.
@@ -891,6 +915,7 @@
 	A_List_TT =	Izberite Macro (Ctrl +1 ~ 0)
 	AbortKey_TT =	Bližnjica za zaustavitev predvajanja
 	ActiveObj_TT =	Poskuša povezati z Active COM Object
+	AddAtt_TT =	Priložite dokumentacijo
 	ApplyI_TT =	Uporabi
 	ApplyL_TT =	Vstavite okencu (Insert)
 	ApplyT_TT =	Uporabi
@@ -912,6 +937,7 @@
 		v nadzor Edit (to ne vpliva na
 		Vsebino odložišča).
 	Ex_EdScript_TT =	Odpri v zunanjem urejevalniku
+	Ex_ExecScript_TT =	Zaženi skript
 	ExprLink2_TT =	- NE PRILOŽITI SPREMENLJIVK ZNAKI ZA ODSTOTEK TUKAJ.
 		- Večina AHK izrazov so podprte.
 		- Lahko uporabite strune, spremenljivke, polja in funkcije.
@@ -1101,6 +1127,7 @@
 	ATan	Vrne arkus (število, katerega tangens je število) v radianih.
 	BlockInput	Onemogoči ali omogoči uporabnikovo sposobnost, da komunicirajo z računalnikom preko tipkovnice in miške.
 	Break	Izhodi (konča) zanke. Veljaven znotraj kakršnokoli zanko.
+	CDO	Pošilja e-poštna sporočila prek svojega računa, uporabniško določeno.
 	Ceil	Vrne število zaokroži na najbližje celo število (brez končnice 0,00).
 	Chr	Vrne en znak, ki ustreza kodi znaka s številko.
 	Click	Klikne gumb miške ob določenem koordinatami. Prav tako lahko držite gumb, zavrtite kolesce, ali premakniti.
@@ -1143,7 +1170,7 @@
 	DriveSpaceFree	Prikliče nezasedenega prostora na disku za vožnjo v MB.
 	Edit	Odpre se sedanji scenarij za urejanje v pridruženi urednik.
 	Else	Določa ukaz (s) izvaja, če IF-izjavo ocenjuje na false. Če je prisoten več kot en ukaz, jih priloži v bloku (oporniki).
-	EnvAdd	Nastavi spremenljivko vsoti sebi plus dano vrednost (lahko tudi dodate ali odštejemo čas od datuma-časovne vrednosti). Sinonim: Var + = vrednost.
+	EnvAdd	Nastavi spremenljivko vsoti sebi plus dano vrednost (lahko tudi dodate ali odštejemo čas od datuma-časovne vrednosti). Sinonim: Var+= vrednost.
 	EnvDiv	Nastavi spremenljivko na sebi deljeno z določeno vrednostjo. Sinonim: Var / = vrednost.
 	EnvGet	Prenese spremenljivko okolja.
 	EnvMult	Nastavi spremenljivko na sebi krat dano vrednost. Sinonim: Var * = vrednost.
@@ -1351,3 +1378,4 @@
 	WinWaitActive	Počaka, da je določeno okno aktivno.
 	WinWaitClose	Počaka določen okno ne obstaja.
 	WinWaitNotActive	Počaka določen okno ni aktivna.
+	Zip / UnZip	Stisniti ali raztegniti eno ali več zip datotek.

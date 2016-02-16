@@ -67,11 +67,13 @@
 	i_Lang013 =	N&ếu báo cáo
 	i_Lang014 =	&Biến / Mảng
 	i_Lang015 =	Ch&ức năng / Chức Phương pháp mảng
-	i_Lang016 =	&Internet Explorer
-	i_Lang017 =	C&OM giao diện
-	i_Lang018 =	Chạ&y Scriptlet
-	i_Lang019 =	Tin nh&ắn cửa sổ
-	i_Lang020 =	Tì&m một lệnh
+	i_Lang016 =	G&ửi email
+	i_Lang017 =	T&ải về / tập tin Tải lên
+	i_Lang018 =	&Zip / Giải nén file
+	i_Lang019 =	&Internet Explorer
+	i_Lang020 =	C&OM giao diện
+	i_Lang021 =	Tin nh&ắn cửa sổ
+	i_Lang022 =	Tì&m một lệnh
 		
 ; 06. Edit Sub Menu		
 	e_Lang001 =	&Bản sao
@@ -219,74 +221,76 @@
 	w_Lang037 =	Cửa sổ
 	w_Lang038 =	Bình luận
 	w_Lang039 =	Màu
-	w_Lang040 =	Mới (Ctrl + N)
-	w_Lang041 =	Mở (Ctrl + O)
-	w_Lang042 =	Save (Ctrl + S)
-	w_Lang043 =	Xuất khẩu sang AHK (Ctrl + E)
-	w_Lang044 =	Xem trước Script (Ctrl + P)
-	w_Lang045 =	Thiết lập (Ctrl + G)
-	w_Lang046 =	Record Macro (Ctrl + R)
-	w_Lang047 =	Kích hoạt Macro (Ctrl + Enter)
-	w_Lang048 =	Chơi vĩ mô hiện tại (Ctrl + Shift + Enter)
-	w_Lang049 =	Hẹn giờ (Ctrl + Shift + T)
+	w_Lang040 =	Mới (Ctrl+N)
+	w_Lang041 =	Mở (Ctrl+O)
+	w_Lang042 =	Save (Ctrl+S)
+	w_Lang043 =	Xuất khẩu sang AHK (Ctrl+E)
+	w_Lang044 =	Xem trước Script (Ctrl+P)
+	w_Lang045 =	Thiết lập (Ctrl+G)
+	w_Lang046 =	Record Macro (Ctrl+R)
+	w_Lang047 =	Kích hoạt Macro (Ctrl+Enter)
+	w_Lang048 =	Chơi vĩ mô hiện tại (Ctrl+Shift+Enter)
+	w_Lang049 =	Hẹn giờ (Ctrl+Shift+T)
 	w_Lang050 =	Chuột (F2)
 	w_Lang051 =	Văn bản (F3)
 	w_Lang052 =	Chỉnh Sửa Macro (Ctrl+Shift+M)
 	w_Lang053 =	Kiểm soát (F4)
 	w_Lang054 =	Tạm dừng (F5)
-	w_Lang055 =	Hộp tin nhắn (Shift + F5)
-	w_Lang056 =	Chờ chính (Control + F5)
+	w_Lang055 =	Hộp tin nhắn (Shift+F5)
+	w_Lang056 =	Chờ chính (Ctrl+F5)
 	w_Lang057 =	Cửa sổ (F6)
 	w_Lang058 =	Hình ảnh / Pixel Tìm kiếm (F7)
 	w_Lang059 =	Chạy / File / String / Misc. (F8)
 	w_Lang060 =	Vòng lặp (F9)
-	w_Lang061 =	Goto (Shift + F9)
-	w_Lang062 =	Nhãn (Ctrl + F9)
+	w_Lang061 =	Goto (Shift+F9)
+	w_Lang062 =	Nhãn (Ctrl+F9)
 	w_Lang063 =	Nếu báo cáo (F10)
-	w_Lang064 =	Biến / Mảng (Shift + F10)
-	w_Lang065 =	Chức năng / Phương pháp mảng (Ctrl + F10)
-	w_Lang066 =	Internet Explorer (F11)
-	w_Lang067 =	Biểu / COM giao diện (Shift + F11)
-	w_Lang068 =	Chạy Scriptlet (Ctrl + F11)
-	w_Lang069 =	Tin nhắn cửa sổ (F12)
+	w_Lang064 =	Biến / Mảng (Shift+F10)
+	w_Lang065 =	Chức năng / Phương pháp mảng (Ctrl+F10)
+	w_Lang066 =	Internet Explorer (F12)
+	w_Lang067 =	Biểu / COM giao diện (Shift+F12)
+	w_Lang068 =	Gửi email (F11)
+	w_Lang069 =	Tin nhắn cửa sổ (Ctrl+F12)
 	w_Lang070 =	Thêm phím Windows để "chơi" phím nóng
 	w_Lang071 =	Sử dụng nút điều khiển như phím nóng
-	w_Lang072 =	Thêm vĩ mô (Ctrl + T)
-	w_Lang073 =	Gần vĩ mô (Ctrl + W)
-	w_Lang074 =	Bản sao vĩ mô (Ctrl + Shift + D)
-	w_Lang075 =	Nhập khẩu vĩ mô (Ctrl + I)
-	w_Lang076 =	Lưu vĩ mô hiện tại (Ctrl + Alt + S)
-	w_Lang077 =	Move Up (Ctrl + PageUp)
-	w_Lang078 =	Move Down (Ctrl + PageDown)
-	w_Lang079 =	Bản sao dòng chọn (Ctrl + D)
-	w_Lang080 =	Cắt dòng chọn (Ctrl + X)
-	w_Lang081 =	Sao chép dòng chọn (Ctrl + C)
-	w_Lang082 =	Hàng dán sao chép (Ctrl + V)
+	w_Lang072 =	Thêm vĩ mô (Ctrl+T)
+	w_Lang073 =	Gần vĩ mô (Ctrl+W)
+	w_Lang074 =	Bản sao vĩ mô (Ctrl+Shift+D)
+	w_Lang075 =	Nhập khẩu vĩ mô (Ctrl+I)
+	w_Lang076 =	Lưu vĩ mô hiện tại (Ctrl+Alt+S)
+	w_Lang077 =	Move Up (Ctrl+PageUp)
+	w_Lang078 =	Move Down (Ctrl+PageDown)
+	w_Lang079 =	Bản sao dòng chọn (Ctrl+D)
+	w_Lang080 =	Cắt dòng chọn (Ctrl+X)
+	w_Lang081 =	Sao chép dòng chọn (Ctrl+C)
+	w_Lang082 =	Hàng dán sao chép (Ctrl+V)
 	w_Lang083 =	Xóa dòng chọn (Del)
-	w_Lang084 =	Undo (Ctrl + Z)
-	w_Lang085 =	Redo (Ctrl + Y)
+	w_Lang084 =	Undo (Ctrl+Z)
+	w_Lang085 =	Redo (Ctrl+Y)
 	w_Lang086 =	Sao chép vào...
-	w_Lang087 =	Tìm / Thay thế (Ctrl + F)
-	w_Lang088 =	Chèn / Sửa bình (Ctrl + L)
-	w_Lang089 =	Sửa màu Mark (Ctrl + M)
+	w_Lang087 =	Tìm / Thay thế (Ctrl+F)
+	w_Lang088 =	Chèn / Sửa bình (Ctrl+L)
+	w_Lang089 =	Sửa màu Mark (Ctrl+M)
 	w_Lang090 =	Tùy chỉnh
-	w_Lang091 =	Tìm một lệnh (Ctrl + Shift + F)
+	w_Lang091 =	Tìm một lệnh (Ctrl+Shift+F)
 	w_Lang092 =	Chỉnh sửa (Enter)
 	w_Lang093 =	Che
 	w_Lang094 =	Di chuyển đây
 	w_Lang095 =	Sao chép ở đây
 	w_Lang096 =	Các nhóm
-	w_Lang097 =	Kích hoạt tính năng nhóm (Ctrl + Shift + G)
-	w_Lang098 =	Thêm nhóm (Ctrl + Shift + Y)
-	w_Lang099 =	Xóa nhóm (Ctrl + Shift + R)
+	w_Lang097 =	Kích hoạt tính năng nhóm (Ctrl+Shift+G)
+	w_Lang098 =	Thêm nhóm (Ctrl+Shift+Y)
+	w_Lang099 =	Xóa nhóm (Ctrl+Shift+R)
 	w_Lang100 =	Hủy bỏ tất cả các nhóm
 	w_Lang101 =	Chỉnh sửa nhóm
 	w_Lang102 =	Tên nhóm
-	w_Lang103 =	Tạo Function (Ctrl + Shift + U)
-	w_Lang104 =	Thêm Parameter (Ctrl + Shift + P)
-	w_Lang105 =	Thêm Return (Ctrl + Shift + N)
-	w_Lang106 =	Chuyển đổi Macro Để Function (Ctrl + Shift + C)
+	w_Lang103 =	Tạo Function (Ctrl+Shift+U)
+	w_Lang104 =	Thêm Parameter (Ctrl+Shift+P)
+	w_Lang105 =	Thêm Return (Ctrl+Shift+N)
+	w_Lang106 =	Chuyển đổi Macro Để Function (Ctrl+Shift+C)
 	w_Lang107 =	Thảo luận ra các hàng không được kiểm soát
+	w_Lang108 =	Tải về / tập tin Tải lên (Shift+F11)
+	w_Lang109 =	Zip / Giải nén file (Ctrl+F11)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Chuột
@@ -442,7 +446,7 @@
 	c_Lang152 =	Thông tin
 	c_Lang153 =	Luôn luôn trên đầu trang
 	c_Lang154 =	Phút
-	c_Lang155 =	Chạy Scriptlet
+	c_Lang155 =	Cho đến khi
 	c_Lang156 =	Kịch bản
 	c_Lang157 =	Ngôn ngữ kịch bản
 	c_Lang158 =	Không tương thích với 64-bit!
@@ -520,7 +524,7 @@
 	c_Lang230 =	Če želite
 	c_Lang231 =	CC
 	c_Lang232 =	BCC
-	c_Lang233 =	Đính kèm tập tin
+	c_Lang233 =	F2 để chỉnh sửa
 	c_Lang234 =	HTML
 	c_Lang235 =	Gửi email
 	c_Lang236 =	Tải về / tập tin Tải lên
@@ -530,7 +534,10 @@
 	c_Lang240 =	vị trí đăng ký.
 	c_Lang241 =	Xóa tất cả các giờ
 	c_Lang242 =	Bộ đếm thời gian
-	c_Lang243 =	Cho đến khi
+	c_Lang243 =	Phải chứng minh
+	c_Lang244 =	Phải sang trái
+	c_Lang245 =	File đính kèm
+	c_Lang246 =	Con đường
 		
 ; 16. Other Windows		
 	t_Lang001 =	Xuất khẩu sang AutoHotkey
@@ -723,6 +730,17 @@
 	t_Lang188 =	Mở rộng tất cả
 	t_Lang189 =	Ngôn ngư
 	t_Lang190 =	Chuyển đổi ngắt dòng
+	t_Lang191 =	Các tài khoản email
+	t_Lang192 =	Cập nhật
+	t_Lang193 =	Double-click để chỉnh sửa
+	t_Lang194 =	SMTP server
+	t_Lang195 =	Hải cảng
+	t_Lang196 =	Xác nhận
+	t_Lang197 =	Tên đăng nhập
+	t_Lang198 =	Mật khẩu
+	t_Lang199 =	SSL
+	t_Lang200 =	Gửi chế độ
+	t_Lang201 =	Gửi một thử nghiệm
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Mở
@@ -768,7 +786,7 @@
 	d_Lang037 =	Hình ảnh / Pixel Không tìm thấy.
 	d_Lang038 =	Bấm OK để tiếp tục.
 	d_Lang039 =	Thời gian chờ!
-	d_Lang040 =	Tính năng này đòi hỏi các thư viện GDI +.
+	d_Lang040 =	Tính năng này đòi hỏi các thư viện GDI+.
 		Nhấn OK để đi tải trang.
 	d_Lang041 =	Tên biến có chứa một nhân vật bất hợp pháp.
 	d_Lang042 =	là một từ dành riêng.
@@ -788,8 +806,8 @@
 	d_Lang055 =	Vui lòng chọn một tập tin kịch bản AutoHotkey (AHK.) Và nhập Tên Chức năng.
 	d_Lang056 =	Tính năng này đòi hỏi phải cài đặt AutoHotkey.
 		Nhấn OK để đi tải trang.
-	d_Lang057 =	- Nhấn Ctrl + phím mũi tên để di chuyển vùng chọn.
-		- Nhấn Shift + phím mũi tên để thay đổi kích thước vùng chọn.
+	d_Lang057 =	- Nhấn Ctrl+phím mũi tên để di chuyển vùng chọn.
+		- Nhấn Shift+phím mũi tên để thay đổi kích thước vùng chọn.
 		- Nhấn Enter để kết thúc.
 	d_Lang058 =	Một số tính năng đòi hỏi privilages admnistrator để hoạt động đúng.
 		Bạn nên khởi động lại ứng dụng như là Administrator.
@@ -837,7 +855,7 @@
 	d_Lang096 =	- KHÔNG GỬI KÈM BIẾN TRONG DẤU HIỆU PERCENT ĐÂY.
 		- Giá trị Return phải là một biểu.
 		- Bạn có thể sử dụng các chuỗi, các biến, mảng và chức năng. Bạn cũng có thể kết hợp bất kỳ của những người.
-		- Để sử dụng dây, đặt chúng trong dấu ngoặc kép, ví dụ như: "Kết quả là:" a + b.
+		- Để sử dụng dây, đặt chúng trong dấu ngoặc kép, ví dụ như: "Kết quả là:" a+b.
 		- Nếu bạn muốn trả lại kết quả hơn, bạn cũng có thể sử dụng các thông số ByRef trong.
 		- Mảng có thể được sử dụng để trả lại nhiều giá trị hoặc giá trị thậm chí còn được đặt tên.
 	d_Lang097 =	- KHÔNG GỬI KÈM BIẾN TRONG DẤU HIỆU PERCENT ĐÂY.
@@ -857,6 +875,12 @@
 	d_Lang107 =	Không thể bắt đầu hẹn giờ
 	d_Lang108 =	Tất cả các vị trí đã được đăng ký. Xin vui lòng, xóa một trong số họ.
 	d_Lang109 =	Nhãn Target không tồn tại.
+	d_Lang110 =	Xác nhận tập tin thay thế
+	d_Lang111 =	đã tồn tại.
+		Muốn thay thế nó?
+	d_Lang112 =	Không tìm thấy tài khoản email.
+	d_Lang113 =	Báo cáo không có lỗi.
+	d_Lang114 =	Kịch bản xuất khẩu (ngay cả khi biên dịch) với chức năng gửi email (CDO) sẽ có thông tin rõ ràng của các tài khoản email được sử dụng, bao gồm cả các PASSWORD. Hồ sơ dự án PMC không có thông tin này.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Bạn có thể tạo macro bằng cách sử dụng nút lệnh trong cửa sổ chính hoặc sử dụng máy ghi âm để sao chép các hành động của bạn. Vào Tùy chọn> Cài đặt> Ghi chọn những đầu vào sẽ được ghi lại.
@@ -877,7 +901,7 @@
 		Bạn có thể mở, sao chép, di chuyển hoặc xóa các tập tin và thư mục bằng cách sử dụng một trong các lệnh trong Insert> Run / File / String / Misc.
 		Để ghi lại Down và ký nhà nước của mỗi đi quan trọng để chọn> Cài đặt> Ghi âm và kiểm tra "Chụp nhà nước chủ chốt (Down / Up)" tùy chọn.
 		Bạn có thể sử dụng phím nóng để tăng tốc độ hoặc làm chậm phát lại. Vào Tùy chọn> Cài đặt> Phát lại để thiết lập phím và tốc độ.
-		Để điều chỉnh khu vực chụp bằng cách sử dụng "Hãy Ảnh chụp màn hình" công cụ vào Options> Settings> Ảnh chụp màn hình và chọn "Nhấn Enter để Capture". Sau khi vẽ hình chữ nhật sử dụng Control + phím mũi tên để di chuyển vùng chọn và phím Shift + phím mũi tên để thay đổi kích thước.
+		Để điều chỉnh khu vực chụp bằng cách sử dụng "Hãy Ảnh chụp màn hình" công cụ vào Options> Settings> Ảnh chụp màn hình và chọn "Nhấn Enter để Capture". Sau khi vẽ hình chữ nhật sử dụng Control+phím mũi tên để di chuyển vùng chọn và phím Shift+phím mũi tên để thay đổi kích thước.
 		Chọn nhanh: Chọn bất kỳ hàng và nhấp chuột vào một tiêu đề cột để lựa chọn các hàng tương tự dựa trên văn bản của tế bào từ cột đó.
 		Run / File / String / Misc. cửa sổ có nhiều lệnh hữu ích khác như Shutdown và UrlDownloadToFile.
 		Sử dụng "Ảnh chụp màn hình" chức năng trong cửa sổ chức năng (Insert> Nếu cáo / biến / chức năng) để tạo ra một ảnh chụp màn hình của một phần của màn hình. Tham số đầu tiên là đường dẫn tập tin đích và tên có phần mở rộng png. Tham số thứ hai là các tọa độ ống cách nhau trong màn hình, ví dụ như 100 | 200 | 50 | 100 (X | Y | Chiều rộng | Chiều Cao).
@@ -891,6 +915,7 @@
 	A_List_TT =	Chọn vĩ mô (Ctrl +1 ~ 0)
 	AbortKey_TT =	Phím nóng để ngăn chặn phát lại
 	ActiveObj_TT =	Cố gắng để kết nối với một đối tượng COM đăng nhập
+	AddAtt_TT =	Đính kèm tập tin
 	ApplyI_TT =	Áp dụng
 	ApplyL_TT =	Chèn từ Box (Insert)
 	ApplyT_TT =	Áp dụng
@@ -912,6 +937,7 @@
 		trong một điều khiển Edit (điều này không ảnh hưởng đến
 		các nội dung của clipboard).
 	Ex_EdScript_TT =	Mở trong trình soạn thảo bên ngoài
+	Ex_ExecScript_TT =	Chạy kịch bản
 	ExprLink2_TT =	- KHÔNG GỬI KÈM BIẾN TRONG DẤU HIỆU PERCENT ĐÂY.
 		- Hầu hết các biểu AHK được hỗ trợ.
 		- Bạn có thể sử dụng các chuỗi, các biến, mảng và chức năng.
@@ -930,7 +956,7 @@
 	IfLVColor_TT =	Nhấn vào đây để chọn một màu
 	IncFiles_TT =	Bao gồm các file / Giá trị
 	IncFolders_TT =	Bao gồm các thư mục (folder) / Keys
-	InsertKey_TT =	Chèn Tổ hợp phím (Ctrl + Insert)
+	InsertKey_TT =	Chèn Tổ hợp phím (Ctrl+Insert)
 	InsertKeyT_TT =	Chèn Tổ hợp phím
 	JoyKey_TT =	Nhấn một nút trên điều khiển
 	LoopLVColor_TT =	Nhấn vào đây để chọn một màu
@@ -1101,6 +1127,7 @@
 	ATan	Trả về arctangent (số có tiếp tuyến là số) trong radian.
 	BlockInput	Vô hiệu hóa hoặc cho phép khả năng của người sử dụng tương tác với máy tính thông qua bàn phím và chuột.
 	Break	Thoát khỏi môi trường (chấm dứt) một vòng lặp. Hợp lệ trong các vòng lặp.
+	CDO	Gửi email sử dụng một tài khoản người dùng định nghĩa.
 	Ceil	Trả lại số làm tròn đến số nguyên gần nhất (không có hậu tố .00).
 	Chr	Trả về nhân vật duy nhất tương ứng với mã ký tự được chỉ định bởi số.
 	Click	Nhấn một nút chuột tại tọa độ quy định. Nó cũng có thể giữ một nút, quay bánh xe, hoặc di chuyển.
@@ -1143,7 +1170,7 @@
 	DriveSpaceFree	Lấy không gian đĩa miễn phí của một ổ đĩa, trong MB.
 	Edit	Mở ra các kịch bản hiện tại để chỉnh sửa trong trình soạn thảo liên quan.
 	Else	Quy định cụ thể các lệnh (s) để thực hiện nếu một IF-tuyên bố đánh giá để FALSE. Khi có nhiều hơn một lệnh là hiện tại, đặt chúng trong một khối (niềng răng).
-	EnvAdd	Thiết đặt một biến với tổng của bản thân cộng với giá trị nhất định (cũng có thể thêm hoặc trừ đi thời gian từ một giá trị ngày tháng thời gian). Đồng nghĩa với: Var + = giá trị gia tăng.
+	EnvAdd	Thiết đặt một biến với tổng của bản thân cộng với giá trị nhất định (cũng có thể thêm hoặc trừ đi thời gian từ một giá trị ngày tháng thời gian). Đồng nghĩa với: Var+= giá trị gia tăng.
 	EnvDiv	Thiết đặt một biến để tự chia cho giá trị nhất định. Đồng nghĩa với: Var / = giá trị gia tăng.
 	EnvGet	Lấy một biến môi trường.
 	EnvMult	Thiết đặt một biến để tự lần giá trị nhất định. Đồng nghĩa với: Var * = Giá trị.
@@ -1237,8 +1264,8 @@
 	MouseGetPos	Lấy vị trí hiện tại của con trỏ chuột, và tùy chọn mà cửa sổ và kiểm soát nó được lơ lửng trên.
 	MouseMove	Di chuyển con trỏ chuột.
 	MsgBox	Hiển thị các văn bản quy định trong một cửa sổ nhỏ chứa một hay nhiều nút (như Yes và No).
-	NumGet	Trả về số nhị phân được lưu trữ tại địa chỉ cụ thể + bù đắp.
-	NumPut	Số cửa hàng trong định dạng nhị phân theo địa chỉ cho trước + bù đắp và trả về địa chỉ ở bên phải của mục chỉ bằng văn bản.
+	NumGet	Trả về số nhị phân được lưu trữ tại địa chỉ cụ thể+bù đắp.
+	NumPut	Số cửa hàng trong định dạng nhị phân theo địa chỉ cho trước+bù đắp và trả về địa chỉ ở bên phải của mục chỉ bằng văn bản.
 	Object	Tạo ra một mảng kết hợp kịch bản.
 	OnExit	Quy định cụ thể một chương trình con để chạy tự động khi thoát khỏi kịch bản.
 	OnMessage	Quy định cụ thể chức năng gọi tự động khi kịch bản nhận được thông báo cụ thể.
@@ -1351,3 +1378,4 @@
 	WinWaitActive	Đợi cho đến khi cửa sổ chỉ định đang hoạt động.
 	WinWaitClose	Đợi cho đến khi cửa sổ chỉ định không tồn tại.
 	WinWaitNotActive	Đợi cho đến khi cửa sổ chỉ định là không hoạt động.
+	Zip / UnZip	Nén hay giải nén một hoặc nhiều tập tin zip.

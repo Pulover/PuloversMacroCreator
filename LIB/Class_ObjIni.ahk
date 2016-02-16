@@ -11,31 +11,27 @@
 
 Class ObjIni
 {
-	__New(File, Section := "")
+	__New(File)
 	{
+		this.IniObj := Object()
 		Loop, Read, %File%
 		{
 			If (A_LoopReadLine = "")
 				continue
 			If (RegExMatch(A_LoopReadLine, "^\[(.*)\]$", Sect))
 			{
-				If (ReadSection != "")
-				{
-					this[ReadSection] := %ReadSection%
-				}
-				ReadSection := Sect1, %Sect1% := []
+				ReadSection := Trim(Sect1)
+			,	this.IniObj[ReadSection] := {}
 				continue
 			}
-			If ((Section != "") && (Section != ReadSection))
-				continue
 			If (RegExMatch(A_LoopReadLine, "U)^(.*)=(.*)$", Key))
 			{
-				Key1 := RegExReplace(Key1, "[^\w\d#_@$]")
-			,	%Key1% := {Section: ReadSection, Key: Key1, Value: Key2}
-				%ReadSection%[Key1] := %Key1%
+				If (ReadSection = "")
+					ReadSection := "Main", this.IniObj[ReadSection] := {}
+				Key1 := Trim(RegExReplace(Key1, "[^\w\d#_@$]"))
+			,	this.IniObj[ReadSection][Key1] := Trim(Key2)
 			}
 		}
-		this[ReadSection] := %ReadSection%
 	}
 	
 	__Delete()
@@ -47,80 +43,122 @@ Class ObjIni
 
 	Read()
 	{
-		local each, Section, Key
-		
-		For each, Section in this
-		{
-			For each, Key in Section
-			{
-				Try
-				{
-					VarName := Key.Key
-				,	%VarName% := Key.Value
-				}
-			}
-		}
+		local Each, Section
+		For Each, Section in this.IniObj
+			For Key, Value in Section
+				Try %Key% := Value
 	}
 
 	Write(File)
 	{
-		For each, Section in this
-			For each, Key in Section
-				IniWrite, % Key.Value, %File%, % Key.Section, % Key.Key
+		FileDelete, %File%
+		For Each, Section in this.IniObj
+			For Key, Value in Section
+				IniWrite, % Value, %File%, %Each%, % Key
 	}
 	
-	Get(AsObject := false)
+	Get(AsObject := false, WhichSection := false, IncludeSection := false, AsExpression := false, Prefix := "")
 	{
 		If (AsObject)
-			return this.Clone()
-		For each, Section in this
-			For each, Key in Section
-				List .= Key.Key " = " Key.Value "`n"
+		{
+			If (!WhichSection)
+				return this.IniObj.Clone()
+			If (IsObject(this.IniObj[WhichSection]))
+				return this.IniObj[WhichSection].Clone()
+			Else
+				return ""
+		}
+		If (!WhichSection)
+		{
+			For Each, Section in this.IniObj
+			{
+				If (IncludeSection)
+					List .= AsExpression ? "; " Each "`n" : "[" Each "]`n"
+				For Key, Value in Section
+					List .= Prefix . (AsExpression ? Key " := " (RegExMatch(Value, "^-?\d+$") ? Value : """" Value """") "`n"
+																: Key " = " Value "`n")
+			}
+		}
+		Else If (IsObject(this.IniObj[WhichSection]))
+		{
+			For Key, Value in this.IniObj[WhichSection]
+			{
+				If (IncludeSection)
+					List .= AsExpression ? "; " WhichSection "`n" : "[" WhichSection "]`n"
+				List .= Prefix . (AsExpression ? Key " := " (RegExMatch(Value, "^-?\d+$") ? Value : """" Value """") "`n"
+															: Key " = " Value "`n")
+			}
+		}
 		return List
 	}
 	
-	Set(NewList, DefaultSection := "UserGlobalVars")
+	Set(NewList)
 	{
-		this.RemoveAt(1, this.Length())
-		this.SetCapacity(0)
-		ReadSection := DefaultSection, %ReadSection% := []
+		this.IniObj := Object()
 		Loop, Parse, NewList, `n
 		{
 			If (A_LoopField = "")
 				continue
 			If (RegExMatch(A_LoopField, "^\[(.*)\]$", Sect))
 			{
-				If (ReadSection != "")
-					this[ReadSection] := %ReadSection%
-				ReadSection := Sect1, %Sect1% := []
+				ReadSection := Trim(Sect1)
+			,	this.IniObj[ReadSection] := {}
 				continue
 			}
 			If (RegExMatch(A_LoopField, "U)^(.*)\s?=\s?(.*)$", Key))
 			{
-				Key1 := RegExReplace(Key1, "[^\w\d#_@$]")
-			,	%Key1% := {Section: ReadSection, Key: Key1, Value: Key2}
-				%ReadSection%[Key1] := %Key1%
+				If (ReadSection = "")
+					ReadSection := "Main", this.IniObj[ReadSection] := {}
+				Key1 := Trim(RegExReplace(Key1, "[^\w\d#_@$]"))
+			,	this.IniObj[ReadSection][Key1] := Trim(Key2)
 			}
+			For Each, Section in this.IniObj
+				size := A_Index
 		}
-		this[ReadSection] := %ReadSection%
 	}
 	
-	Tree(Gui)
+	Tree(ChecksArray := "")
 	{
-		Gui, %Gui%:Default
-		For each, Section in this
+		Idx := 0
+		For Each, Section in this.IniObj
 		{
-			For each, Key in Section
+			Idx++
+		,	Level := TV_Add(Each, "", "Bold Check Expand")
+			If (ChecksArray[Idx] = 0)
+				TV_Modify(Level, "-Check")
+			For Key, Value in Section
 			{
-				If (A_Index = 1)
-					Level := TV_Add(Key.Section, "", "Bold Check Expand")
-				TV_Add(Key.Key " = " Key.Value, Level, "Check")
+				Idx++
+			,	ItemID := TV_Add(Key " = " Value, Level, "Check")
+				If (ChecksArray[Idx] = 0)
+					TV_Modify(ItemID, "-Check")
 			}
 		}
 	}
+	
+	TreeGetItems(IncludeSection := false, AsExpression := false, Prefix := "")
+	{
+		ItemID := 0
+		Loop
+		{
+			ItemID := TV_GetNext(ItemID, "Full")
+			If !(ItemID)
+				break
+			TV_GetText(ItemText, ItemID)
+			If (!TV_GetParent(ItemID))
+				ReadSection := ItemText
+			If (!TV_Get(ItemID, "Check"))
+				continue
+			If ((IncludeSection) && (!TV_GetParent(ItemID)))
+				List .= AsExpression ? "; " ItemText "`n" : "[" ItemText "]`n"
+			If (RegExMatch(ItemText, "U)^(.*)\s?=\s?(.*)$", Key))
+			{
+				Key := Trim(Key1), Value := this.IniObj[ReadSection][Key]
+			,	List .= Prefix . (AsExpression ? Key " := " (RegExMatch(Value, "^-?\d+$") ? Value : """" Value """") "`n"
+															: Key " = " Value "`n")
+			}
+		}
+		return List
+	}
 }
-
-
-
-
 

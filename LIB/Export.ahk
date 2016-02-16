@@ -4,6 +4,8 @@
 	, Step, TimesX, DelayX, Type, Target, Window, Comment, UntilArray := []
 	, PAction, PType, PDelayX, PComment, Act, iCount, init_ie, ComExp
 	, VarsScope, FuncParams, IsFunction := false, CommentOut := false
+	, CDO_To, CDO_Sub, CDO_Msg, CDO_Att, CDO_Html, CDO_CC, CDO_BCC, SelAcc
+	, _each, _Section
 	Gui, chMacro:Default
 	Gui, chMacro:ListView, InputList%ListID%
 	ComType := ComCr ? "ComObjCreate" : "ComObjActive"
@@ -145,7 +147,7 @@
 				,	Type := StrReplace(Type, "Parse", ", Parse")
 				,	Type := StrReplace(Type, "Read", ", Read")
 				,	Type := StrReplace(Type, "Registry", ", Reg")
-				,	RowData := "`n" Type ", " RTrim(Step, ", ")
+				,	RowData := "`n" Type . (Type = cType51 ? " " : ", ") . RTrim(Step, ", ")
 					If (SubStr(RowData, 0) = "``")
 						RowData := SubStr(RowData, 1, StrLen(RowData)-1)
 				}
@@ -418,11 +420,11 @@
 			If (Window = "LoadWait")
 				RowData .=
 				(LTrim
-				"`nWhile !(ie.busy)
+				"`nWhile !(" Action ".busy)
 				`tSleep, 100
-				While (ie.busy)
+				While (" Action ".busy)
 				`tSleep, 100
-				While !(ie.document.Readystate = ""Complete"")
+				While !(" Action ".document.Readystate = ""Complete"")
 				`tSleep, 100"
 				)
 			If ((TimesX > 1) || InStr(TimesX, "%"))
@@ -469,6 +471,43 @@
 				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
 			If (Action = "[Text]")
 				RowData := "`nSetKeyDelay, " DelayX RowData
+		}
+		Else If (Type = cType52)
+		{
+			StringSplit, Act, Action, :
+			Action := SubStr(Action, StrLen(Act1) + 2)
+			StringSplit, Tar, Target, /
+			CDO_To := CheckExp(SubStr(Tar1, 4))
+		,	CDO_Sub := CheckExp(Action)
+		,	CDO_Msg := SubStr(Step, 3)
+		,	CDO_Html := SubStr(Step, 1, 1)
+		,	CDO_Att := CheckExp(Window)
+		,	CDO_CC := CheckExp(SubStr(Tar2, 4)), CDO_CC := CDO_CC = """""" ? "" : CDO_CC
+		,	CDO_BCC := CheckExp(SubStr(Tar3, 5)), CDO_BCC := CDO_BCC = """""" ? "" : CDO_BCC
+		
+		,	SelAcc := ""
+		,	User_Accounts := UserMailAccounts.Get(true)
+			For _each, _Section in User_Accounts
+			{
+				If (Act1 = _Section.email)
+				{
+					SelAcc := _each
+					break
+				}
+			}
+			
+			If ((ConvertBreaks) && (InStr(CDO_Msg, "``n")))
+			{
+				CDO_Msg := StrReplace(CDO_Msg, "``n", "`n")
+			,	CDO_Msg := "`n(LTrim`n" CDO_Msg "`n)"
+			}
+			CDO_Msg := StrReplace(CDO_Msg, "`````,", "```,")
+		,	RowData := "`nMsgBody := " CheckExp(CDO_Msg) . (CDO_Att = """""" ? "" : "`nAttachments := " CDO_Att)
+		,	RowData .= "`nCDO(" SelAcc ", " CDO_To ", " CDO_Sub ", MsgBody, " CDO_Html ", " (CDO_Att = """""" ? "" : Attachments) ", " CDO_CC ", " CDO_BCC
+		,	RowData := RTrim(RowData, ", ") . ")"
+		,	RowData := Add_CD(RowData, Comment, DelayX)
+			If ((TimesX > 1) || InStr(TimesX, "%"))
+				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
 		}
 		Else If (InStr(FileCmdList, Type "|"))
 		{
@@ -826,4 +865,44 @@ IEComExp(Method, Value := "", Element := "", ElIndex := 0, OutputVar := "", GetB
 			return "ie.document." getEl "(" Element ")" ElIndex "." Method " := " Value
 	}
 }
+
+IncludeFunc(Which)
+{
+	Func_CDO =
+	(%
+
+
+CDO(Account, To, Subject := "", Msg := "", Html := false, Attach := "", CC := "", BCC := "")
+{
+	MsgObj			:= ComObjCreate("CDO.Message")
+	MsgObj.From		:= Account.email
+	MsgObj.To		:= StrReplace(To, ",", ";")
+	MsgObj.BCC		:= StrReplace(BCC, ",", ";")
+	MsgObj.CC		:= StrReplace(CC, ",", ";")
+	MsgObj.Subject	:= Subject
+
+	If (Html)
+		MsgObj.HtmlBody	:= Msg
+	Else
+		MsgObj.TextBody	:= Msg
+
+	Schema	:= "http://schemas.microsoft.com/cdo/configuration/"
+	Pfld	:= MsgObj.Configuration.Fields
+
+	For Field, Value in Account
+		(Field != "email") ? Pfld.Item(Schema . Field) := Value : ""
+	Pfld.Update()
+
+	Attach := StrReplace(Attach, ",", ";")
+	Loop, Parse, Attach, `;, %A_Space%%A_Tab%
+		MsgObj.AddAttachment(A_LoopField)
+	
+	MsgObj.Send()
+}
+
+)
+
+return Func_%Which%
+}
+
 

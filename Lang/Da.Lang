@@ -67,11 +67,13 @@
 	i_Lang013 =	&Hvis Erklæringer
 	i_Lang014 =	Var&iabler / Arrays
 	i_Lang015 =	&Funktioner / Array-metoder
-	i_Lang016 =	Internet E&xplorer
-	i_Lang017 =	&COM Interface
-	i_Lang018 =	K&ør Scriptlet
-	i_Lang019 =	&Windows Messages
-	i_Lang020 =	Fin&d en kommando
+	i_Lang016 =	&Send e-mail
+	i_Lang017 =	&Download / Upload filer
+	i_Lang018 =	&Zip / Unzip filer
+	i_Lang019 =	Internet E&xplorer
+	i_Lang020 =	&COM Interface
+	i_Lang021 =	&Windows Messages
+	i_Lang022 =	Find en k&ommando
 		
 ; 06. Edit Sub Menu		
 	e_Lang001 =	&Dupliker
@@ -235,7 +237,7 @@
 	w_Lang053 =	Control (F4)
 	w_Lang054 =	Pause (F5)
 	w_Lang055 =	Message Box (Shift+F5)
-	w_Lang056 =	Nøgle Vente (Control+F5)
+	w_Lang056 =	Nøgle Vente (Ctrl+F5)
 	w_Lang057 =	Window (F6)
 	w_Lang058 =	Billede / Pixel Søg (F7)
 	w_Lang059 =	Run / File / String / Misc. (F8)
@@ -245,10 +247,10 @@
 	w_Lang063 =	Hvis Erklæringer (F10)
 	w_Lang064 =	Variabler / Arrays (Shift+F10)
 	w_Lang065 =	Funktioner / Array-metoder (Ctrl+F10)
-	w_Lang066 =	Internet Explorer (F11)
-	w_Lang067 =	Expression / COM interface (Shift+F11)
-	w_Lang068 =	Kør Scriptlet (Ctrl+F11)
-	w_Lang069 =	Windows Messages (F12)
+	w_Lang066 =	Internet Explorer (F12)
+	w_Lang067 =	Expression / COM interface (Shift+F12)
+	w_Lang068 =	Send e-mail (F11)
+	w_Lang069 =	Windows Messages (Ctrl+F12)
 	w_Lang070 =	Tilføj på Windows-tasten på "Play" genvejen
 	w_Lang071 =	Brug et joystick knap som genvejstast
 	w_Lang072 =	Tilføj Makro (Ctrl+T)
@@ -276,17 +278,19 @@
 	w_Lang094 =	Flyt her
 	w_Lang095 =	Kopier her
 	w_Lang096 =	grupper
-	w_Lang097 =	Aktiver grupper (Ctrl + Shift + G)
-	w_Lang098 =	Tilføj gruppe (Ctrl + Shift + Y)
-	w_Lang099 =	Fjern gruppe (Ctrl + Shift + R)
+	w_Lang097 =	Aktiver grupper (Ctrl+Shift+G)
+	w_Lang098 =	Tilføj gruppe (Ctrl+Shift+Y)
+	w_Lang099 =	Fjern gruppe (Ctrl+Shift+R)
 	w_Lang100 =	Fjern alle grupper
 	w_Lang101 =	Rediger grupper
 	w_Lang102 =	Gruppe navn
-	w_Lang103 =	Opret Funktion (Ctrl + Shift + U)
-	w_Lang104 =	Tilføj Parameter (Ctrl + Shift + P)
-	w_Lang105 =	Tilføj Retur (Ctrl + Shift + N)
-	w_Lang106 =	Konverter Makro til at fungere (Ctrl + Shift + C)
+	w_Lang103 =	Opret Funktion (Ctrl+Shift+U)
+	w_Lang104 =	Tilføj Parameter (Ctrl+Shift+P)
+	w_Lang105 =	Tilføj Retur (Ctrl+Shift+N)
+	w_Lang106 =	Konverter Makro til at fungere (Ctrl+Shift+C)
 	w_Lang107 =	Udkommentere ukontrolleret rækker
+	w_Lang108 =	Download / Upload filer (Shift+F11)
+	w_Lang109 =	Zip / Unzip filer (Ctrl+F11)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mus
@@ -442,7 +446,7 @@
 	c_Lang152 =	Information
 	c_Lang153 =	Altid på toppen
 	c_Lang154 =	Minutter
-	c_Lang155 =	Kør Scriptlet
+	c_Lang155 =	Indtil
 	c_Lang156 =	Script
 	c_Lang157 =	Script Language
 	c_Lang158 =	Ikke kompatibel med 64-bit!
@@ -520,7 +524,7 @@
 	c_Lang230 =	Naar
 	c_Lang231 =	CC
 	c_Lang232 =	BCC
-	c_Lang233 =	Vedhæft filer
+	c_Lang233 =	F2 for at redigere
 	c_Lang234 =	HTML
 	c_Lang235 =	Send e-mail
 	c_Lang236 =	Download / Upload filer
@@ -530,7 +534,10 @@
 	c_Lang240 =	positioner registreret.
 	c_Lang241 =	Slet alle timere
 	c_Lang242 =	Sæt timeren
-	c_Lang243 =	Indtil
+	c_Lang243 =	Højreklik berettiget
+	c_Lang244 =	Højre mod venstre
+	c_Lang245 =	Vedhæftede filer
+	c_Lang246 =	Sti
 		
 ; 16. Other Windows		
 	t_Lang001 =	Eksporter til AutoHotkey
@@ -723,6 +730,17 @@
 	t_Lang188 =	Udvid alle
 	t_Lang189 =	Sprog
 	t_Lang190 =	Konverter linjeskift
+	t_Lang191 =	E-mail-konti
+	t_Lang192 =	Opdatering
+	t_Lang193 =	Dobbeltklik for at redigere
+	t_Lang194 =	SMTP-server
+	t_Lang195 =	Havn
+	t_Lang196 =	Godkend
+	t_Lang197 =	Brugernavn
+	t_Lang198 =	Adgangskode
+	t_Lang199 =	SSL
+	t_Lang200 =	Send tilstand
+	t_Lang201 =	Stuur een test
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Åbent
@@ -837,7 +855,7 @@
 	d_Lang096 =	- IKKE VEDLÆG VARIABLER I PROCENTTEGN HER.
 		- Retur værdi skal være et udtryk.
 		- Du må bruge strygere, variabler, arrays og funktioner. Du kan også kombinere nogen af dem.
-		- For at bruge strenge, vedlægge dem i anførselstegn, f.eks: "Resultat er:" a + b.
+		- For at bruge strenge, vedlægge dem i anførselstegn, f.eks: "Resultat er:" a+b.
 		- Hvis du ønsker at returnere ekstra resultater, kan du også bruge ByRef i parametre.
 		- Arrays kan bruges til at returnere flere værdier eller endda navngivne værdier.
 	d_Lang097 =	- IKKE VEDLÆG VARIABLER I PROCENTTEGN HER.
@@ -857,6 +875,12 @@
 	d_Lang107 =	Kunne ikke starte timeren
 	d_Lang108 =	Alle positioner er registreret. Venligst, slette en af dem.
 	d_Lang109 =	Måletiketten findes ikke.
+	d_Lang110 =	Bekræft fil erstatte
+	d_Lang111 =	eksisterer allerede.
+		Vil gerne erstatte den?
+	d_Lang112 =	E-mail-konto ikke fundet.
+	d_Lang113 =	Ingen fejl rapporteret.
+	d_Lang114 =	Scripts eksporteres (selvom kompileret) med Send e-mail-funktionen (CDO) vil have synlige informationer af e-mail konti, herunder adgangskoden. Projektet fil PMC har ikke disse oplysninger.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Du kan oprette makroer ved hjælp af kommandoen knapper i hovedvinduet eller ved hjælp af optageren til at kopiere dine handlinger. Gå til Valg > Indstillinger > Optagelse at vælge, hvad input vil blive registreret.
@@ -891,6 +915,7 @@
 	A_List_TT =	Vælge Macro (Ctrl+1~0)
 	AbortKey_TT =	Genvejstast for at stoppe afspilningen
 	ActiveObj_TT =	Forsøger at oprette forbindelse til en Active COM objekt
+	AddAtt_TT =	Vedhæft filer
 	ApplyI_TT =	Anvend
 	ApplyL_TT =	Indsæt fra kassen (Insert)
 	ApplyT_TT =	Anvend
@@ -912,6 +937,7 @@
 		i en Edit kontrol (dette påvirker ikke
 		indholdet af klippebordet).
 	Ex_EdScript_TT =	Open in externe editor
+	Ex_ExecScript_TT =	Kør script
 	ExprLink2_TT =	- IKKE VEDLÆG VARIABLER I PROCENTTEGN HER.
 		- De fleste af AHK udtryk understøttes.
 		- Du må bruge strygere, variabler, arrays og funktioner.
@@ -1101,6 +1127,7 @@
 	ATan	Returnerer arcus (antallet , hvis tangens er Number) i radianer .
 	BlockInput	Deaktiverer eller muliggør brugerens evne til at interagere med computeren via tastatur og mus .
 	Break	Udgange (slutter) en løkke. Gyldige inden enhver form for løkke .
+	CDO	Sender emails med en brugerdefineret konto.
 	Ceil	Retur nummer rundet op til nærmeste hele tal (uden nogen .00 suffix) .
 	Chr	Returnerer enkelt tegn , der svarer til karakteren angivet af nummer.
 	Click	Klikker på en museknap på de angivne koordinater. Det kan også holde en knap, og drej rattet , eller flytte .
@@ -1143,7 +1170,7 @@
 	DriveSpaceFree	Henter den frie diskplads af et drev , i megabyte .
 	Edit	Åbner det aktuelle script til redigering i den tilhørende editor.
 	Else	Angiver kommandoen (s) til at udføre, hvis en IF -sætning evalueres til FALSK . Når mere end én kommando er til stede, vedlægge dem i en blok (seler) .
-	EnvAdd	Sætter en variabel til summen af sig selv plus given værdi (kan også tilføje eller trække tid fra en dato - tidsværdi) . Synonymt med : Var + = Værdi .
+	EnvAdd	Sætter en variabel til summen af sig selv plus given værdi (kan også tilføje eller trække tid fra en dato - tidsværdi) . Synonymt med : Var+= Værdi .
 	EnvDiv	Sætter en variabel til sig selv divideret med den givne værdi . Synonymt med : Var / = Værdi .
 	EnvGet	Henter en miljøvariabel .
 	EnvMult	Sætter en variabel til selv gange den givne værdi . Synonymt med : Var * = Værdi .
@@ -1237,8 +1264,8 @@
 	MouseGetPos	Henter den aktuelle position af musemarkøren, og eventuelt hvilket vindue og kontrol er det svæver over.
 	MouseMove	Flytter musemarkøren.
 	MsgBox	Viser den angivne tekst i et lille vindue, der indeholder en eller flere knapper (såsom Ja og Nej).
-	NumGet	Returnerer det binære tal er gemt på den angivne adresse + offset.
-	NumPut	Butikker Antal i binært format på den angivne adresse + offset og returnerer adressen til højre for elementet lige skrevet.
+	NumGet	Returnerer det binære tal er gemt på den angivne adresse+offset.
+	NumPut	Butikker Antal i binært format på den angivne adresse+offset og returnerer adressen til højre for elementet lige skrevet.
 	Object	Opretter en instrukser associative array.
 	OnExit	Angiver en subrutine til at køre automatisk, når scriptet afslutter.
 	OnMessage	Angiver en funktion til at kalde automatisk, når scriptet modtager den angivne meddelelse.
@@ -1351,3 +1378,4 @@
 	WinWaitActive	Venter, indtil den angivne vindue er aktivt.
 	WinWaitClose	Venter, indtil den angivne vindue ikke eksisterer.
 	WinWaitNotActive	Venter, indtil den angivne vinduet ikke er aktivt.
+	Zip / UnZip	Komprimer eller dekomprimere en eller flere zip-filer.

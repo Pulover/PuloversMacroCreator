@@ -66,12 +66,14 @@
 	i_Lang012 =	L&evy
 	i_Lang013 =	&Jos Lausumat
 	i_Lang014 =	M&uuttujat / Taulukot
-	i_Lang015 =	Toiminnot / Array menetelmiä
-	i_Lang016 =	Internet E&xplorer
-	i_Lang017 =	&COM-Liitäntä
-	i_Lang018 =	&Suorita Komentosarjasovelman
-	i_Lang019 =	&Windows Viestit
-	i_Lang020 =	Etsi komento
+	i_Lang015 =	Toiminnot &/ Array menetelmiä
+	i_Lang016 =	L&ähetä sähköposti
+	i_Lang017 =	Lataa / Lataa tie&dostot
+	i_Lang018 =	&Zip / Pura tiedostot
+	i_Lang019 =	Internet E&xplorer
+	i_Lang020 =	&COM-Liitäntä
+	i_Lang021 =	&Windows Viestit
+	i_Lang022 =	Et&si komento
 		
 ; 06. Edit Sub Menu		
 	e_Lang001 =	&Monistaa
@@ -235,7 +237,7 @@
 	w_Lang053 =	Control (F4)
 	w_Lang054 =	Tauko (F5)
 	w_Lang055 =	Message Box (Shift+F5)
-	w_Lang056 =	Näppäintä Odotus (Control+F5)
+	w_Lang056 =	Näppäintä Odotus (Ctrl+F5)
 	w_Lang057 =	Window (F6)
 	w_Lang058 =	Kuva / Pixel Search (F7)
 	w_Lang059 =	Run / File / String / Misc. (F8)
@@ -245,10 +247,10 @@
 	w_Lang063 =	Jos lausunnot (F10)
 	w_Lang064 =	Muuttujat / Taulukot (Shift+F10)
 	w_Lang065 =	Funktiot / Array menetelmiä (Ctrl+F10)
-	w_Lang066 =	Internet Explorer (F11)
-	w_Lang067 =	Lauseke / COM-rajapinta (Shift+F11)
-	w_Lang068 =	Suorita Komentosarjasovelman (Ctrl+F11)
-	w_Lang069 =	Windows viestit (F12)
+	w_Lang066 =	Internet Explorer (F12)
+	w_Lang067 =	Lauseke / COM-rajapinta (Shift+F12)
+	w_Lang068 =	Lähetä sähköposti (F11)
+	w_Lang069 =	Windows viestit (Ctrl+F12)
 	w_Lang070 =	Lisää Windows-näppäintä "Play" pikanäppäin
 	w_Lang071 =	Käytä ohjainta painiketta kuin pikanäppäin
 	w_Lang072 =	Lisää Makro (Ctrl+T)
@@ -276,17 +278,19 @@
 	w_Lang094 =	Pendelöintifoorumi
 	w_Lang095 =	Kopioi täällä
 	w_Lang096 =	Ryhmät
-	w_Lang097 =	Ota ryhmät (Ctrl + Shift + G)
-	w_Lang098 =	Lisää ryhmä (Ctrl + Shift + Y)
-	w_Lang099 =	Poista ryhmä (Ctrl + Shift + R)
+	w_Lang097 =	Ota ryhmät (Ctrl+Shift+G)
+	w_Lang098 =	Lisää ryhmä (Ctrl+Shift+Y)
+	w_Lang099 =	Poista ryhmä (Ctrl+Shift+R)
 	w_Lang100 =	Poista kaikki ryhmät
 	w_Lang101 =	Muokkaa ryhmiä
 	w_Lang102 =	Ryhmän nimi
-	w_Lang103 =	Luo Toiminto (Ctrl + Shift + U)
-	w_Lang104 =	Lisää Parametri (Ctrl + Shift + P)
-	w_Lang105 =	Lisää Paluulennot (Ctrl + Shift + N)
-	w_Lang106 =	Makron muunto Toimiakseen (Ctrl + Shift + C)
+	w_Lang103 =	Luo Toiminto (Ctrl+Shift+U)
+	w_Lang104 =	Lisää Parametri (Ctrl+Shift+P)
+	w_Lang105 =	Lisää Paluulennot (Ctrl+Shift+N)
+	w_Lang106 =	Makron muunto Toimiakseen (Ctrl+Shift+C)
 	w_Lang107 =	Kommentoi pois valitsematta riviä
+	w_Lang108 =	Lataa / Lataa tiedostot (Shift+F11)
+	w_Lang109 =	Zip / Pura tiedostot (Ctrl+F11)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Hiiri
@@ -442,7 +446,7 @@
 	c_Lang152 =	Tiedot
 	c_Lang153 =	Aina päällimmäisenä
 	c_Lang154 =	Minuuttia
-	c_Lang155 =	Suorita Komentosarjasovelman
+	c_Lang155 =	Siihen asti kun
 	c_Lang156 =	Käsikirjoitus
 	c_Lang157 =	Skriptikielellä
 	c_Lang158 =	Ei yhteensopiva 64-bittinen!
@@ -520,7 +524,7 @@
 	c_Lang230 =	Jotta
 	c_Lang231 =	CC
 	c_Lang232 =	BCC
-	c_Lang233 =	Liitä tiedostot
+	c_Lang233 =	F2 muokata
 	c_Lang234 =	HTML
 	c_Lang235 =	Lähetä sähköposti
 	c_Lang236 =	Lataa / Lataa tiedostot
@@ -530,7 +534,10 @@
 	c_Lang240 =	kantoja rekisteröity.
 	c_Lang241 =	Poista kaikki ajastimet
 	c_Lang242 =	Set ajastin
-	c_Lang243 =	Siihen asti kun
+	c_Lang243 =	Oikea-perusteltua
+	c_Lang244 =	Oikealta vasemmalle
+	c_Lang245 =	Liitteet
+	c_Lang246 =	Polku
 		
 ; 16. Other Windows		
 	t_Lang001 =	Vie AutoHotkey
@@ -723,6 +730,17 @@
 	t_Lang188 =	Laajenna kaikki
 	t_Lang189 =	Kieli
 	t_Lang190 =	Muuta rivinvaihdot
+	t_Lang191 =	Sähköpostitilit
+	t_Lang192 =	Päivittää
+	t_Lang193 =	Kaksoisnapsauta muokata
+	t_Lang194 =	SMTP-palvelin
+	t_Lang195 =	Portti
+	t_Lang196 =	Todenna
+	t_Lang197 =	Käyttäjätunnus
+	t_Lang198 =	Salasana
+	t_Lang199 =	SSL
+	t_Lang200 =	Lähetä mode
+	t_Lang201 =	Lähetä testi
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Avata
@@ -837,7 +855,7 @@
 	d_Lang096 =	- ÄLÄ LIITTÄÄ MUUTTUJAT PROSENTTIA SIGNS TÄSTÄ.
 		- Paluu arvon on oltava lauseke.
 		- Voit käyttää jouset, muuttujat, taulukot ja toimintoja. Voit myös yhdistää mitään näistä.
-		- Jos haluat käyttää jouset, liittää ne lainausmerkkeihin, esimerkiksi: "Tulos on:" + b.
+		- Jos haluat käyttää jouset, liittää ne lainausmerkkeihin, esimerkiksi: "Tulos on:"+b.
 		- Jos haluat palauttaa ylimääräisiä tuloksia, voit käyttää myös ByRef parametreissa.
 		- Arrays voidaan palauttaa useita arvoja tai jopa nimesi arvoja.
 	d_Lang097 =	- ÄLÄ LIITTÄÄ MUUTTUJAT PROSENTTIA SIGNS TÄSTÄ.
@@ -857,6 +875,12 @@
 	d_Lang107 =	Ei voitu käynnistää ajastimen
 	d_Lang108 =	Kaikki asemat rekisteröidään. Ole hyvä, poista yksi heistä.
 	d_Lang109 =	Target etiketti ei ole olemassa.
+	d_Lang110 =	Vahvista tiedosto korvaa
+	d_Lang111 =	on jo olemassa.
+		Haluaisitko korvata sen?
+	d_Lang112 =	Sähköpostitili ei löytynyt.
+	d_Lang113 =	Ei raportoitu virhe.
+	d_Lang114 =	Scripts eksporteres (selv om kompilert) med sende e-postfunksjonen  (CDO) vil ha synlige opplysninger av e-postkontoer  som brukes, inkludert passordet. PMC prosjektfilen  ikke har denne informasjonen.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Voit luoda makroja käyttäen Command painikkeet pääikkunassa tai käyttämällä Recorder kopioida toimia. Valitse Valinnat > Asetukset > Tallennus valita mitä panoksia tallennetaan.
@@ -891,6 +915,7 @@
 	A_List_TT =	Valitse Makro (Ctrl+1~0)
 	AbortKey_TT =	Pikanäppäin lopettaa toiston
 	ActiveObj_TT =	Yrittää muodostaa yhteyden Active COM Object
+	AddAtt_TT =	Liitä tiedostot
 	ApplyI_TT =	Käyttää
 	ApplyL_TT =	Insertin laatikko (Insert)
 	ApplyT_TT =	Käyttää
@@ -912,6 +937,7 @@
 		vuonna Muokkaa kontrolli (tämä ei vaikuta
 		leikepöydän sisällön).
 	Ex_EdScript_TT =	Avaa ulkoisen editorin
+	Ex_ExecScript_TT =	Suorita skripti
 	ExprLink2_TT =	- ÄLÄ LIITTÄÄ MUUTTUJAT PROSENTTIA SIGNS TÄSTÄ.
 		- Useimmat AHK ilmaisuja tuetaan.
 		- Voit käyttää jouset, muuttujat, taulukot ja toimintoja.
@@ -1101,6 +1127,7 @@
 	ATan	Palauttaakaaritangentin (numero , jonka tangentti on Number) radiaaneina .
 	BlockInput	Käytöstä tai ottaa käyttöön käyttäjän kykyä olla vuorovaikutuksessatietokoneen kautta, näppäimistö ja hiiri .
 	Break	Poistuu (päättyy)silmukka . Voimassa sisällä minkäänlaista silmukan .
+	CDO	Lähettää sähköposteja käyttäen käyttäjän määrittämiä tilin.
 	Ceil	Palauttaa määrä pyöristetään ylöspäinlähimpään kokonaislukuun (ilman 0,00 pääte) .
 	Chr	Palauttaayhden merkin vastaavanmerkin koodin luvuilla .
 	Click	Napsauttaa hiiren painikettamääritellyt koordinaatit . Se voi myös pitämälläpainiketta , käännä pyörää , tai siirtää .
@@ -1143,7 +1170,7 @@
 	DriveSpaceFree	Hakeevapaata levytilaaajaa , megatavuina .
 	Edit	Avaanykyisen käsikirjoituksen muokkaaminenliittyvien toimittaja .
 	Else	Määrittääkomennon (t) suorittaa , josIF -lause on EPÄTOSI . Kun useampi kuin yksi komento on läsnä , kirjoita nelohko (olkaimet) .
-	EnvAdd	Asettaamuuttujansumma itse jaannetaan arvoa (voi myös lisätä tai vähentää aikaapäivämäärä - aika-arvon) . Synonyymi : Var + = arvo .
+	EnvAdd	Asettaamuuttujansumma itse jaannetaan arvoa (voi myös lisätä tai vähentää aikaapäivämäärä - aika-arvon) . Synonyymi : Var+= arvo .
 	EnvDiv	Asettaamuuttujan itselleen jaettunaannettu arvo . Synonyymi : Var / = arvo .
 	EnvGet	Hakeemuuttujan .
 	EnvMult	Asettaamuuttujan itselleen kertaaannettu arvo . Synonyymi : Var * = arvo .
@@ -1351,3 +1378,4 @@
 	WinWaitActive	Odottaa, kunnes määritelty ikkuna on aktiivinen.
 	WinWaitClose	Odottaa, kunnes määritelty ikkuna ei ole olemassa.
 	WinWaitNotActive	Odottaa, kunnes määritelty ikkuna ei ole aktiivinen.
+	Zip / UnZip	Pakkaa tai purkaa yhden tai useampia zip-tiedostoja.

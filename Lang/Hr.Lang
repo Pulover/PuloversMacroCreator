@@ -67,11 +67,13 @@
 	i_Lang013 =	Ako &Izjave
 	i_Lang014 =	&Varijable / Nizovi
 	i_Lang015 =	Vari&jable Funkcije / Metode array
-	i_Lang016 =	I&nternet Explorer
-	i_Lang017 =	&COM Sučelja
-	i_Lang018 =	Trčanje Scriptlet
-	i_Lang019 =	&Windows Poruke
-	i_Lang020 =	Prona&đite naredbu
+	i_Lang016 =	Po&šalji e-mail
+	i_Lang017 =	&Download / upload datoteka
+	i_Lang018 =	&Zip / unzip kartoteka
+	i_Lang019 =	I&nternet Explorer
+	i_Lang020 =	&COM Sučelja
+	i_Lang021 =	&Windows Poruke
+	i_Lang022 =	Prona&đite naredbu
 		
 ; 06. Edit Sub Menu		
 	e_Lang001 =	&Duplikat
@@ -235,7 +237,7 @@
 	w_Lang053 =	Kontrola (F4)
 	w_Lang054 =	Pauza (F5)
 	w_Lang055 =	Poruka Box (Shift+F5)
-	w_Lang056 =	Ključ Čekati (Control+F5)
+	w_Lang056 =	Ključ Čekati (Ctrl+F5)
 	w_Lang057 =	Prozor (F6)
 	w_Lang058 =	Slika / Pixel pretrage (F7)
 	w_Lang059 =	Trčanje / File / String / Razno. (F8)
@@ -245,10 +247,10 @@
 	w_Lang063 =	Ako izvještaji (F10)
 	w_Lang064 =	Varijable / Nizovi (Shift+F10)
 	w_Lang065 =	funkcija / Metode array (Ctrl+F10)
-	w_Lang066 =	Internet Explorer (F11)
-	w_Lang067 =	Izraz / COM sučelja (Shift+F11)
-	w_Lang068 =	Trčanje Scriptlet (Ctrl+F11)
-	w_Lang069 =	Windows Poruke (F12)
+	w_Lang066 =	Internet Explorer (F12)
+	w_Lang067 =	Izraz / COM sučelja (Shift+F12)
+	w_Lang068 =	Pošalji e-mail (F11)
+	w_Lang069 =	Windows Poruke (Ctrl+F12)
 	w_Lang070 =	Dodaj Windows tipku "igrati" prečac
 	w_Lang071 =	Koristite joystick tipke kao hotkey
 	w_Lang072 =	Dodaj Macro (Ctrl+T)
@@ -276,17 +278,19 @@
 	w_Lang094 =	Pomicanje ovdje
 	w_Lang095 =	Kopirajte ovdje
 	w_Lang096 =	Grupe
-	w_Lang097 =	Omogućite grupe (Ctrl + Shift + G)
-	w_Lang098 =	Dodaj skupinu (Ctrl + Shift + Y)
-	w_Lang099 =	Izvadite skupinu (Ctrl + Shift + R)
+	w_Lang097 =	Omogućite grupe (Ctrl+Shift+G)
+	w_Lang098 =	Dodaj skupinu (Ctrl+Shift+Y)
+	w_Lang099 =	Izvadite skupinu (Ctrl+Shift+R)
 	w_Lang100 =	Ukloni sve skupine
 	w_Lang101 =	Uredi grupe
 	w_Lang102 =	Naziv grupe
-	w_Lang103 =	Napravite Function (Ctrl + Shift + U)
-	w_Lang104 =	Dodaj parametara (Ctrl + Shift + P)
-	w_Lang105 =	Dodaj Povratak (Ctrl + Shift + N)
-	w_Lang106 =	Pretvori Makro funkcionirati (Ctrl + Shift + C)
+	w_Lang103 =	Napravite Function (Ctrl+Shift+U)
+	w_Lang104 =	Dodaj parametara (Ctrl+Shift+P)
+	w_Lang105 =	Dodaj Povratak (Ctrl+Shift+N)
+	w_Lang106 =	Pretvori Makro funkcionirati (Ctrl+Shift+C)
 	w_Lang107 =	Komentar iz označenim redaka
+	w_Lang108 =	Download / upload datoteka (Shift+F11)
+	w_Lang109 =	Zip / unzip kartoteka (Ctrl+F11)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Miš
@@ -442,7 +446,7 @@
 	c_Lang152 =	Informacije
 	c_Lang153 =	Uvijek na vrhu
 	c_Lang154 =	Minuta
-	c_Lang155 =	Trčanje Scriptlet
+	c_Lang155 =	Do
 	c_Lang156 =	Skripta
 	c_Lang157 =	Skripta Jezik
 	c_Lang158 =	Nije kompatibilan s 64-bitnom!
@@ -520,7 +524,7 @@
 	c_Lang230 =	Do
 	c_Lang231 =	KOPIJA
 	c_Lang232 =	BCC
-	c_Lang233 =	Priloži datoteke
+	c_Lang233 =	F2 urediti
 	c_Lang234 =	HTML
 	c_Lang235 =	Pošalji e-mail
 	c_Lang236 =	Download / upload datoteka
@@ -530,7 +534,10 @@
 	c_Lang240 =	pozicije registriran.
 	c_Lang241 =	Izbriši sve mjerače vremena
 	c_Lang242 =	Set timer
-	c_Lang243 =	Do
+	c_Lang243 =	Desni opravdano
+	c_Lang244 =	Pravo na lijevo
+	c_Lang245 =	Prilozi
+	c_Lang246 =	Staza
 		
 ; 16. Other Windows		
 	t_Lang001 =	Izvoz u AutoHotkey
@@ -723,6 +730,17 @@
 	t_Lang188 =	Proširi sve
 	t_Lang189 =	Jezik
 	t_Lang190 =	Pretvori prijelome redaka
+	t_Lang191 =	Računi e-pošte
+	t_Lang192 =	Ažuriraj
+	t_Lang193 =	Dvaput kliknite za uređivanje
+	t_Lang194 =	SMTP poslužitelj
+	t_Lang195 =	Luka
+	t_Lang196 =	Potvrditi
+	t_Lang197 =	Korisničko ime
+	t_Lang198 =	Lozinka
+	t_Lang199 =	SSL
+	t_Lang200 =	Pošalji moda
+	t_Lang201 =	Envia una prova
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Otvoreno
@@ -768,7 +786,7 @@
 	d_Lang037 =	Slika / Pixel nije pronađena.
 	d_Lang038 =	Pritisnite OK za nastavak.
 	d_Lang039 =	Timeout!
-	d_Lang040 =	Ova značajka zahtijeva knjižnicu GDI +.
+	d_Lang040 =	Ova značajka zahtijeva knjižnicu GDI+.
 		Kliknite OK za odlazak na stranicu za preuzimanje.
 	d_Lang041 =	Naziv varijable sadrži nedopušteni znak.
 	d_Lang042 =	je rezervirana riječ.
@@ -837,7 +855,7 @@
 	d_Lang096 =	- NE PRILAŽETE VARIJABLI U POSTOCIMA ZNAKOVA OVDJE.
 		- Povratak vrijednost mora biti izraz.
 		- Možete koristiti žice, varijabli, polja i funkcije. Vi svibanj također kombinirati bilo koje od njih.
-		- Za korištenje žice, priložiti ih u navodnike, npr: "Rezultat je:" A + B.
+		- Za korištenje žice, priložiti ih u navodnike, npr: "Rezultat je:" A+B.
 		- Ako želite vratiti dodatne rezultate, vi svibanj također koristiti ByRef u parametrima.
 		- Nizovi se može koristiti za povratak više vrijednosti ili čak pod nazivom vrijednosti.
 	d_Lang097 =	- NE PRILAŽETE VARIJABLI U POSTOCIMA ZNAKOVA OVDJE.
@@ -857,6 +875,12 @@
 	d_Lang107 =	Nije moguće pokrenuti timer
 	d_Lang108 =	Sve pozicije su registrirani. Molim te, izbrisati jedan od njih.
 	d_Lang109 =	Ciljana oznaka ne postoji.
+	d_Lang110 =	Potvrda datoteku zamijeniti
+	d_Lang111 =	već postoji.
+		Želite li ga zamijeniti?
+	d_Lang112 =	E-mail račun nije pronađen.
+	d_Lang113 =	Izvijestio bez pogreške.
+	d_Lang114 =	Skripte izvoze (čak i ako je sastavljen) s funkcijom poslati e-mail (CDO) će imati vidljive informacije o računima e-pošte koristi, uključujući i lozinke. Projekt datoteka PMC nema tu informaciju.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Možete stvoriti makronaredbe pomoću naredbenog gumba u glavnom prozoru ili pomoću snimača kopirati svoje radnje. Idi na Opcije > Postavke > Snimanje odabrati ono što ulazi će biti zabilježen.
@@ -891,6 +915,7 @@
 	A_List_TT =	Odabir Makro (Ctrl+1~0)
 	AbortKey_TT =	Prečac za zaustavljanje
 	ActiveObj_TT =	Pokušava se povezati s Active COM objekt
+	AddAtt_TT =	Priloži datoteke
 	ApplyI_TT =	Primijeniti
 	ApplyL_TT =	Stavite na kutiji (Insert)
 	ApplyT_TT =	Primijeniti
@@ -912,6 +937,7 @@
 		u uređivanje kontrole (to ne utječe
 		sadržaj na prijenosnik).
 	Ex_EdScript_TT =	Otvori u vanjskom uređivaču
+	Ex_ExecScript_TT =	Pokreni skriptu
 	ExprLink2_TT =	- NE PRILAŽETE VARIJABLI U POSTOCIMA ZNAKOVA OVDJE.
 		- Većina AHK izraza su podržani.
 		- Možete koristiti žice, varijabli, polja i funkcije.
@@ -1101,6 +1127,7 @@
 	ATan	Vraća arkus tangens (čiji broj je tangente broj) u radijanima .
 	BlockInput	Onemogućuje ili omogućuje korisniku sposobnost za interakciju s računalom putem tipkovnice i miša .
 	Break	Izlaz (prestaje)petljom . Vrijedi unutar bilo koje vrste petlji .
+	CDO	Šalje e-pošte pomoću korisnički definiranih računa.
 	Ceil	Vraća broj zaokružen na najbliži cijeli broj (bez sufiks 0,00) .
 	Chr	Vraća jedan lik odgovara znakovni kod označena brojem .
 	Click	Klikne na tipku miša na određenom koordinatama . Također možete držite gumb , okrenuti kotač , ili premjestiti .
@@ -1143,7 +1170,7 @@
 	DriveSpaceFree	Dohvaća slobodnog prostora na disku od pogona , u megabajta .
 	Edit	Otvara trenutnu skriptu za uređivanje u udruženom urednika .
 	Else	Određujenaredba (e) za izvođenje akoIF - izjavu procjenjuje na FALSE . Kada je više od jedan naredbeni je prisutan, ih priložiti u blok (proteza) .
-	EnvAdd	Postavlja varijablu zbroju sebi plus zadane vrijednosti (također može dodati ili oduzeti vrijeme od datuma -vremena) . Sinonim : Var + = vrijednost .
+	EnvAdd	Postavlja varijablu zbroju sebi plus zadane vrijednosti (također može dodati ili oduzeti vrijeme od datuma -vremena) . Sinonim : Var+= vrijednost .
 	EnvDiv	Postavlja varijablu sebi podijeljen na zadanu vrijednost . Sinonim : Var / = vrijednost .
 	EnvGet	Dohvaća je varijabla okruženja.
 	EnvMult	Postavlja varijablu sebi puta na zadanu vrijednost . Sinonim : Var * = vrijednost .
@@ -1237,8 +1264,8 @@
 	MouseGetPos	Dohvaća trenutni položaj pokazivača miša i izboru koji prozor i kontrola se nadvili nad.
 	MouseMove	Pomiče pokazivač miša.
 	MsgBox	Prikazuje naveden tekst u malom prozoru koji sadrži jedan ili više tipki (kao da i ne).
-	NumGet	Vraća binarni broj pohranjen na navedenoj adresi + prebijanje.
-	NumPut	Prodavaonice broj u binarnom formatu na navedenoj adresi + offset i vraća adresu na desno od stavke samo pismeni.
+	NumGet	Vraća binarni broj pohranjen na navedenoj adresi+prebijanje.
+	NumPut	Prodavaonice broj u binarnom formatu na navedenoj adresi+offset i vraća adresu na desno od stavke samo pismeni.
 	Object	Stvara scriptable asocijativni niz.
 	OnExit	Određuje potprogram se automatski pokrenuti kada skriptu izlaze.
 	OnMessage	Određuje funkciju na poziv automatski kada skriptu prima određenu poruku.
@@ -1351,3 +1378,4 @@
 	WinWaitActive	Waits sve navedeno prozor aktivan.
 	WinWaitClose	Waits sve navedeno prozor ne postoji.
 	WinWaitNotActive	Waits sve navedeno prozor nije aktivna.
+	Zip / UnZip	Stisnuti ili otpakirati jedan ili više zip datoteka.

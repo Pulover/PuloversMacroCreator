@@ -67,11 +67,13 @@
 	i_Lang013 =	Jika La&poran
 	i_Lang014 =	&Variabel / Array
 	i_Lang015 =	&Fungsi / Metode Array
-	i_Lang016 =	I&nternet Explorer
-	i_Lang017 =	&COM Antarmuka
-	i_Lang018 =	Jalankan &Scriptlet
-	i_Lang019 =	Jen&dela Pesan
-	i_Lang020 =	Ca&ri perintah
+	i_Lang016 =	Me&ngirim email
+	i_Lang017 =	&Download / Upload file
+	i_Lang018 =	&Zip / file Unzip
+	i_Lang019 =	Inte&rnet Explorer
+	i_Lang020 =	&COM Antarmuka
+	i_Lang021 =	Jendela Pe&san
+	i_Lang022 =	Cari perinta&h
 		
 ; 06. Edit Sub Menu		
 	e_Lang001 =	&Duplikat
@@ -235,7 +237,7 @@
 	w_Lang053 =	Control (F4)
 	w_Lang054 =	Jeda (F5)
 	w_Lang055 =	Kotak pesan (Shift+F5)
-	w_Lang056 =	Tunggu Key (Control+F5)
+	w_Lang056 =	Tunggu Key (Ctrl+F5)
 	w_Lang057 =	Window (F6)
 	w_Lang058 =	Image / Pixel Cari (F7)
 	w_Lang059 =	Jalankan / file / String / Misc. (F8)
@@ -245,10 +247,10 @@
 	w_Lang063 =	Jika Laporan (F10)
 	w_Lang064 =	Variabel / Array (Shift+F10)
 	w_Lang065 =	Fungsi / Metode Array (Ctrl+F10)
-	w_Lang066 =	Internet Explorer (F11)
-	w_Lang067 =	Ekspresi / COM Antarmuka (Shift+F11)
-	w_Lang068 =	Run Scriptlet (Ctrl+F11)
-	w_Lang069 =	Jendela Messages (F12)
+	w_Lang066 =	Internet Explorer (F12)
+	w_Lang067 =	Ekspresi / COM Antarmuka (Shift+F12)
+	w_Lang068 =	Mengirim email (F11)
+	w_Lang069 =	Jendela Messages (Ctrl+F12)
 	w_Lang070 =	Tambahkan tombol Windows untuk "Play" hotkey
 	w_Lang071 =	Gunakan tombol joystick sebagai hotkey
 	w_Lang072 =	Tambahkan Makro (Ctrl+T)
@@ -276,17 +278,19 @@
 	w_Lang094 =	Pindah ke sini
 	w_Lang095 =	Kopi di sini
 	w_Lang096 =	Grup
-	w_Lang097 =	Memungkinkan kelompok (Ctrl + Shift + G)
-	w_Lang098 =	Menambahkan grup (Ctrl + Shift + Y)
-	w_Lang099 =	Menghapus grup (Ctrl + Shift + R)
+	w_Lang097 =	Memungkinkan kelompok (Ctrl+Shift+G)
+	w_Lang098 =	Menambahkan grup (Ctrl+Shift+Y)
+	w_Lang099 =	Menghapus grup (Ctrl+Shift+R)
 	w_Lang100 =	Hapus semua kelompok
 	w_Lang101 =	Kelompok mengedit
 	w_Lang102 =	Nama grup
-	w_Lang103 =	Buat Fungsi (Ctrl + Shift + U)
-	w_Lang104 =	Tambahkan Parameter (Ctrl + Shift + P)
-	w_Lang105 =	Tambahkan Return (Ctrl + Shift + N)
-	w_Lang106 =	Mengkonversi Makro Untuk Fungsi (Ctrl + Shift + C)
+	w_Lang103 =	Buat Fungsi (Ctrl+Shift+U)
+	w_Lang104 =	Tambahkan Parameter (Ctrl+Shift+P)
+	w_Lang105 =	Tambahkan Return (Ctrl+Shift+N)
+	w_Lang106 =	Mengkonversi Makro Untuk Fungsi (Ctrl+Shift+C)
 	w_Lang107 =	Komentar dari baris dicentang
+	w_Lang108 =	Download / Upload file (Shift+F11)
+	w_Lang109 =	Zip / file Unzip (Ctrl+F11)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mouse
@@ -442,7 +446,7 @@
 	c_Lang152 =	Info
 	c_Lang153 =	Selalu di atas
 	c_Lang154 =	Menit
-	c_Lang155 =	Jalankan Scriptlet
+	c_Lang155 =	Sampai
 	c_Lang156 =	Naskah
 	c_Lang157 =	Script Bahasa
 	c_Lang158 =	Tidak kompatibel dengan 64-bit!
@@ -520,7 +524,7 @@
 	c_Lang230 =	Karşı
 	c_Lang231 =	CC
 	c_Lang232 =	TITKOS
-	c_Lang233 =	Melampirkan file
+	c_Lang233 =	F2 untuk mengedit
 	c_Lang234 =	HTML
 	c_Lang235 =	Mengirim email
 	c_Lang236 =	Download / Upload file
@@ -530,7 +534,10 @@
 	c_Lang240 =	posisi terdaftar.
 	c_Lang241 =	Hapus semua timer
 	c_Lang242 =	Set Timer
-	c_Lang243 =	Sampai
+	c_Lang243 =	Benar-dibenarkan
+	c_Lang244 =	Kanan ke kiri
+	c_Lang245 =	Lampiran
+	c_Lang246 =	Jalan
 		
 ; 16. Other Windows		
 	t_Lang001 =	Ekspor ke AutoHotkey
@@ -723,6 +730,17 @@
 	t_Lang188 =	Melebarkan semua
 	t_Lang189 =	Bahasa
 	t_Lang190 =	Mengkonversi line break
+	t_Lang191 =	Account email
+	t_Lang192 =	Memperbarui
+	t_Lang193 =	Klik dua kali untuk mengedit
+	t_Lang194 =	SMTP Server
+	t_Lang195 =	Pelabuhan
+	t_Lang196 =	Membuktikan
+	t_Lang197 =	Nama pengguna
+	t_Lang198 =	Kata sandi
+	t_Lang199 =	SSL
+	t_Lang200 =	Kirim modus
+	t_Lang201 =	Zaslat test
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Buka
@@ -837,7 +855,7 @@
 	d_Lang096 =	- JANGAN MELAMPIRKAN VARIABEL DI TANDA PERSEN DI SINI.
 		- Mengembalikan nilai harus menjadi ekspresi.
 		- Anda dapat menggunakan string, variabel, array dan fungsi. Anda juga dapat menggabungkan salah satu dari mereka.
-		- Untuk menggunakan string, menyertakan mereka dalam tanda kutip, misalnya: "Hasil adalah:" a + b.
+		- Untuk menggunakan string, menyertakan mereka dalam tanda kutip, misalnya: "Hasil adalah:" a+b.
 		- Jika Anda ingin kembali hasil tambahan, Anda juga dapat menggunakan ByRef dalam parameter.
 		- Array dapat digunakan untuk mengembalikan beberapa nilai atau nilai-nilai bahkan bernama.
 	d_Lang097 =	- JANGAN MELAMPIRKAN VARIABEL DI TANDA PERSEN DI SINI.
@@ -857,6 +875,12 @@
 	d_Lang107 =	Tidak dapat memulai timer
 	d_Lang108 =	Semua posisi terdaftar. Silakan, menghapus salah satu dari mereka.
 	d_Lang109 =	Label target tidak ada.
+	d_Lang110 =	Konfirmasi berkas ganti
+	d_Lang111 =	sudah ada.
+		Ingin menggantinya?
+	d_Lang112 =	E-mail fiók nem található.
+	d_Lang113 =	Melaporkan tidak ada kesalahan.
+	d_Lang114 =	Skrip diekspor (bahkan jika dikompilasi) dengan fungsi mengirim email (CDO) akan memiliki informasi terlihat dari akun email yang digunakan, termasuk PASSWORD. File proyek PMC tidak memiliki informasi ini.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Anda dapat membuat Macro dengan menggunakan Tombol Perintah di jendela utama atau menggunakan Recorder untuk menyalin tindakan Anda. Buka Opsi> Pengaturan> Merekam untuk memilih apa yang input akan disimpan.
@@ -891,6 +915,7 @@
 	A_List_TT =	Pilih Makro (Ctrl +1 ~ 0)
 	AbortKey_TT =	Hotkey untuk menghentikan pemutaran
 	ActiveObj_TT =	Mencoba untuk terhubung ke COM Obyek Aktif
+	AddAtt_TT =	Melampirkan file
 	ApplyI_TT =	Menerapkan
 	ApplyL_TT =	Masukkan dari Box (Insert)
 	ApplyT_TT =	Menerapkan
@@ -912,6 +937,7 @@
 		dalam kontrol Edit (ini tidak mempengaruhi
 		isi clipboard).
 	Ex_EdScript_TT =	Nyílt külső szerkesztőben
+	Ex_ExecScript_TT =	Script berjalan
 	ExprLink2_TT =	- JANGAN MELAMPIRKAN VARIABEL DI TANDA PERSEN DI SINI.
 		- Sebagian besar dari ekspresi AHK didukung.
 		- Anda dapat menggunakan string, variabel, array dan fungsi.
@@ -1101,6 +1127,7 @@
 	ATan	Mengembalikan arctangent (jumlah yang tangen adalah Number) dalam radian.
 	BlockInput	Menonaktifkan atau memungkinkan kemampuan pengguna untuk berinteraksi dengan komputer melalui keyboard dan mouse.
 	Break	Keluar (berakhir) loop. Berlaku dalam setiap jenis loop.
+	CDO	Mengirim email menggunakan akun yang ditetapkan pengguna.
 	Ceil	Pengembalian Nomor dibulatkan ke integer terdekat (tanpa akhiran .00).
 	Chr	Mengembalikan karakter tunggal sesuai dengan kode karakter yang ditunjukkan oleh Nomor.
 	Click	Mengklik tombol mouse pada koordinat yang ditentukan. Hal ini juga dapat menekan tombol, memutar roda, atau bergerak.
@@ -1143,7 +1170,7 @@
 	DriveSpaceFree	Mengambil ruang disk drive, dalam Megabyte.
 	Edit	Membuka naskah saat ini untuk mengedit dalam editor terkait.
 	Else	Menentukan perintah (s) untuk melakukan jika IF-pernyataan mengevaluasi ke FALSE. Bila lebih dari satu perintah hadir, menyertakan mereka dalam blok (kawat gigi).
-	EnvAdd	Set variabel dengan jumlah dari dirinya sendiri ditambah nilai yang diberikan (juga dapat menambah atau mengurangi waktu dari nilai tanggal-waktu). Identik dengan: Var + = Nilai.
+	EnvAdd	Set variabel dengan jumlah dari dirinya sendiri ditambah nilai yang diberikan (juga dapat menambah atau mengurangi waktu dari nilai tanggal-waktu). Identik dengan: Var+= Nilai.
 	EnvDiv	Menetapkan variabel untuk dirinya sendiri dibagi dengan nilai yang diberikan. Identik dengan: Var / = Nilai.
 	EnvGet	Mengambil variabel lingkungan.
 	EnvMult	Menetapkan variabel untuk dirinya sendiri kali nilai yang diberikan. Identik dengan: Var * = Nilai.
@@ -1237,8 +1264,8 @@
 	MouseGetPos	Mengambil posisi saat kursor mouse, dan secara opsional yang jendela dan kontrol itu melayang di atas.
 	MouseMove	Memindahkan kursor mouse.
 	MsgBox	Menampilkan teks ditentukan dalam jendela kecil yang berisi satu atau lebih tombol (seperti Ya dan Tidak).
-	NumGet	Mengembalikan bilangan biner disimpan di alamat yang ditentukan + offset.
-	NumPut	Jumlah Toko dalam format biner pada alamat yang ditentukan + offset dan mengembalikan alamat ke sebelah kanan item saja menulis.
+	NumGet	Mengembalikan bilangan biner disimpan di alamat yang ditentukan+offset.
+	NumPut	Jumlah Toko dalam format biner pada alamat yang ditentukan+offset dan mengembalikan alamat ke sebelah kanan item saja menulis.
 	Object	Menciptakan array asosiatif scriptable.
 	OnExit	Menentukan subroutine untuk menjalankan secara otomatis ketika keluar skrip.
 	OnMessage	Menentukan fungsi untuk memanggil secara otomatis ketika script menerima pesan tertentu.
@@ -1351,3 +1378,4 @@
 	WinWaitActive	Menunggu sampai jendela yang ditentukan aktif.
 	WinWaitClose	Menunggu sampai jendela yang ditentukan tidak ada.
 	WinWaitNotActive	Menunggu sampai jendela yang ditentukan tidak aktif.
+	Zip / UnZip	Kompres atau uncompress satu atau lebih file zip.

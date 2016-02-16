@@ -57,7 +57,7 @@
 	i_Lang003 =	&Controle
 	i_Lang004 =	&Pausa
 	i_Lang005 =	C&aja de Mensaje
-	i_Lang006 =	&Espera Clave
+	i_Lang006 =	E&spera Clave
 	i_Lang007 =	&Ventana
 	i_Lang008 =	&Imagen / Tamaño De Píxel Buscar
 	i_Lang009 =	E&jecutar / Archivo / String / Misc.
@@ -67,11 +67,13 @@
 	i_Lang013 =	&Declaraciones Si
 	i_Lang014 =	Varia&bles / Matrizes
 	i_Lang015 =	&Funciones / Métodos de matriz
-	i_Lang016 =	I&nternet Explorer
-	i_Lang017 =	C&OM Interface
-	i_Lang018 =	E&xecutar Scriptlet...
-	i_Lang019 =	&Mensajes De Windows
-	i_Lang020 =	Encontrar &un comando
+	i_Lang016 =	&Enviar correo electrónico
+	i_Lang017 =	Descar&ga de archivos / Subir
+	i_Lang018 =	&Zip / descomprimir archivos
+	i_Lang019 =	I&nternet Explorer
+	i_Lang020 =	C&OM Interface
+	i_Lang021 =	&Mensajes De Windows
+	i_Lang022 =	Encontrar &un comando
 		
 ; 06. Edit Sub Menu		
 	e_Lang001 =	&Duplicar
@@ -235,7 +237,7 @@
 	w_Lang053 =	Control (F4)
 	w_Lang054 =	Pausa (F5)
 	w_Lang055 =	Caja de Mensaje (Shift+F5)
-	w_Lang056 =	Espera Clave (Control+F5)
+	w_Lang056 =	Espera Clave (Ctrl+F5)
 	w_Lang057 =	Ventana (F6)
 	w_Lang058 =	Imagen / Tamaño de píxel Search (F7)
 	w_Lang059 =	Ejecutar / Archivo / String / Misc. (F8)
@@ -245,10 +247,10 @@
 	w_Lang063 =	Si Declaraciones (F10)
 	w_Lang064 =	Variables / Matrizes (Shift+F10)
 	w_Lang065 =	Funciones / Métodos de matriz (Ctrl+F10)
-	w_Lang066 =	Internet Explorer (F11)
-	w_Lang067 =	Expresión / COM Interface (Shift+F11)
-	w_Lang068 =	Executar Scriptlet (Ctrl+F11)
-	w_Lang069 =	Mensajes de Windows (F12)
+	w_Lang066 =	Internet Explorer (F12)
+	w_Lang067 =	Expresión / COM Interface (Shift+F12)
+	w_Lang068 =	Enviar correo electrónico (F11)
+	w_Lang069 =	Mensajes de Windows (Ctrl+F12)
 	w_Lang070 =	Agregue la clave de Windows para tecla de acceso rápido "Reproducir"
 	w_Lang071 =	Utilizar un botón del joystick como tecla de acceso directo
 	w_Lang072 =	Añadir Macro (Ctrl+T)
@@ -276,17 +278,19 @@
 	w_Lang094 =	Mover aquí
 	w_Lang095 =	Copiar aquí
 	w_Lang096 =	Grupos
-	w_Lang097 =	Habilitar grupos (Ctrl + Shift + G)
-	w_Lang098 =	Añadir grupo (Ctrl + Shift + Y)
-	w_Lang099 =	Retire grupo (Ctrl + Shift + R)
+	w_Lang097 =	Habilitar grupos (Ctrl+Shift+G)
+	w_Lang098 =	Añadir grupo (Ctrl+Shift+Y)
+	w_Lang099 =	Retire grupo (Ctrl+Shift+R)
 	w_Lang100 =	Retire todos los grupos
 	w_Lang101 =	Editar grupos
 	w_Lang102 =	Nombre del grupo
-	w_Lang103 =	Crear funciones (Ctrl + Shift + U)
-	w_Lang104 =	Añadir parámetro (Ctrl + Shift + P)
-	w_Lang105 =	Añadir Retorno (Ctrl + Shift + N)
-	w_Lang106 =	Convertir Macro para funcionar (Ctrl + Shift + C)
+	w_Lang103 =	Crear funciones (Ctrl+Shift+U)
+	w_Lang104 =	Añadir parámetro (Ctrl+Shift+P)
+	w_Lang105 =	Añadir Retorno (Ctrl+Shift+N)
+	w_Lang106 =	Convertir Macro para funcionar (Ctrl+Shift+C)
 	w_Lang107 =	Comente filas sin marcar
+	w_Lang108 =	Descarga de archivos / Subir (Shift+F11)
+	w_Lang109 =	Zip / descomprimir archivos (Ctrl+F11)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Ratón
@@ -442,7 +446,7 @@
 	c_Lang152 =	Información
 	c_Lang153 =	Siempre visible
 	c_Lang154 =	Minutos
-	c_Lang155 =	Executar Scriptlet...
+	c_Lang155 =	Hasta
 	c_Lang156 =	Guión
 	c_Lang157 =	Escritura De La Lengua
 	c_Lang158 =	No es compatible con 64 bits!
@@ -520,7 +524,7 @@
 	c_Lang230 =	Para
 	c_Lang231 =	CC
 	c_Lang232 =	CCO
-	c_Lang233 =	Adjuntar archivos
+	c_Lang233 =	F2 para editar
 	c_Lang234 =	HTML
 	c_Lang235 =	Enviar correo electrónico
 	c_Lang236 =	Descarga de archivos / Subir
@@ -530,7 +534,10 @@
 	c_Lang240 =	posiciones registradas.
 	c_Lang241 =	Borrar todos los temporizadores
 	c_Lang242 =	Ajuste del temporizador
-	c_Lang243 =	Hasta
+	c_Lang243 =	Justificado a la derecha
+	c_Lang244 =	De derecha a izquierda
+	c_Lang245 =	Archivos adjuntos
+	c_Lang246 =	Camino
 		
 ; 16. Other Windows		
 	t_Lang001 =	Exportar a AutoHotkey
@@ -723,6 +730,17 @@
 	t_Lang188 =	Expandir todo
 	t_Lang189 =	Idioma
 	t_Lang190 =	Convertir saltos de línea
+	t_Lang191 =	Cuentas de correo electrónico
+	t_Lang192 =	Actualizar
+	t_Lang193 =	Haga doble clic para editar
+	t_Lang194 =	servidor SMTP
+	t_Lang195 =	Puerto
+	t_Lang196 =	Autenticar
+	t_Lang197 =	Nombre de usuario
+	t_Lang198 =	Contraseña
+	t_Lang199 =	SSL
+	t_Lang200 =	Modo de envio
+	t_Lang201 =	Enviar una prueba
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Abierto
@@ -837,7 +855,7 @@
 	d_Lang096 =	- NO INCLUIR LAS VARIABLES EN SIGNOS DE PORCENTAJE AQUÍ.
 		- Valor de retorno debe ser una expresión.
 		- Usted puede usar cadenas, variables, matrices y funciones. También puede combinar cualquiera de esos.
-		- Para utilizar cuerdas, encerrarlos entre comillas, por ejemplo: "El resultado es:" a + b.
+		- Para utilizar cuerdas, encerrarlos entre comillas, por ejemplo: "El resultado es:" a+b.
 		- Si desea devolver resultados adicionales, también se puede usar en los parámetros ByRef.
 		- Las matrices se pueden utilizar para devolver múltiples valores o valores incluso con nombre.
 	d_Lang097 =	- NO INCLUIR LAS VARIABLES EN SIGNOS DE PORCENTAJE AQUÍ.
@@ -857,6 +875,12 @@
 	d_Lang107 =	No se pudo iniciar el temporizador
 	d_Lang108 =	Todas las posiciones están registrados. Por favor, elimine uno de ellos.
 	d_Lang109 =	Etiqueta de destino no existe.
+	d_Lang110 =	Confirme el reemplazo del archivo
+	d_Lang111 =	ya existe.
+		Le gustaría reemplazarlo?
+	d_Lang112 =	Cuenta de correo electrónico no se encuentra.
+	d_Lang113 =	Ningún error informado.
+	d_Lang114 =	Scripts exportados (incluso si compilado) con la función de envío de correo electrónico (CDO) tendrán informaciones visibles de cuentas de correo electrónico utilizadas, incluyendo la contraseña. El archivo de proyecto PMC no tiene esta información.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Puede crear macros utilizando los botones de comando en la ventana principal o el uso de la grabadora para copiar sus acciones. Vaya a Opciones > Configuración > Grabación para seleccionar lo que se registran las entradas.
@@ -891,6 +915,7 @@
 	A_List_TT =	Seleccione Macro (Ctrl+1~0)
 	AbortKey_TT =	Hotkey para detener la reproducción
 	ActiveObj_TT =	Intenta conectarse a un objeto COM activo
+	AddAtt_TT =	Adjuntar archivos
 	ApplyI_TT =	Aplicar
 	ApplyL_TT =	Inserte de Caja (Insert)
 	ApplyT_TT =	Aplicar
@@ -912,6 +937,7 @@
 		en un control Edit (esto no afecta
 		el contenido del portapapeles).
 	Ex_EdScript_TT =	Abrir en editor externo
+	Ex_ExecScript_TT =	Ejecutar script
 	ExprLink2_TT =	- NO INCLUIR LAS VARIABLES EN SIGNOS DE PORCENTAJE AQUÍ.
 		- La mayor parte de las expresiones AHK son compatibles.
 		- Usted puede usar cadenas, variables, matrices y funciones.
@@ -1101,6 +1127,7 @@
 	ATan	Devuelve el arco tangente (el número cuya tangente es número) en radianes.
 	BlockInput	Activa o desactiva la capacidad del usuario para interactuar con el ordenador a través del teclado y el ratón.
 	Break	Sale (termina) un bucle. Válido dentro de cualquier tipo de bucle.
+	CDO	Envía mensajes de correo electrónico utilizando una cuenta definida por el usuario.
 	Ceil	Devuelve Número redondeado al número entero más próximo (sin sufijo .00) .
 	Chr	Devuelve el carácter único correspondiente al código de caracteres indicado por Número .
 	Click	Hace clic con el botón del ratón en las coordenadas especificadas . También puede mantener pulsado un botón , gire la rueda , o mover.
@@ -1143,7 +1170,7 @@
 	DriveSpaceFree	Recupera el espacio libre de un disco , en megabytes .
 	Edit	Abre el script actual para su edición en el editor asociado.
 	Else	Especifica el comando (s) para llevar a cabo si una sentencia if se evalúa como FALSE . Cuando más de un comando está presente , encierre en un bloque (frenos) .
-	EnvAdd	Establece una variable a la suma de sí mismo más el valor dado (también se puede sumar o restar el tiempo de un valor de fecha y hora) . Sinónimo de : Var + = Valor .
+	EnvAdd	Establece una variable a la suma de sí mismo más el valor dado (también se puede sumar o restar el tiempo de un valor de fecha y hora) . Sinónimo de : Var+= Valor .
 	EnvDiv	Establece una variable a sí mismo dividido por el valor dado . Sinónimo de : Var / = Valor .
 	EnvGet	Recupera una variable de entorno .
 	EnvMult	Establece una variable a veces el mismo valor dado. Sinónimo de : Var * = Valor .
@@ -1237,8 +1264,8 @@
 	MouseGetPos	Recupera la posición actual del cursor del ratón, y que opcionalmente ventana y el control que se cierne sobre.
 	MouseMove	Mueve el cursor del ratón.
 	MsgBox	Muestra el texto especificado en una pequeña ventana que contiene uno o más botones (como sí y no).
-	NumGet	Devuelve el número binario almacenado en la dirección especificada + offset.
-	NumPut	Almacena el número en formato binario en la dirección especificada + offset y devuelve la dirección a la derecha del elemento recién escrito.
+	NumGet	Devuelve el número binario almacenado en la dirección especificada+offset.
+	NumPut	Almacena el número en formato binario en la dirección especificada+offset y devuelve la dirección a la derecha del elemento recién escrito.
 	Object	Crea una matriz asociativa.
 	OnExit	Especifica una subrutina para ejecutar automáticamente cuando el script finaliza.
 	OnMessage	Especifica una función para llamar automáticamente cuando el script recibe el mensaje especificado.
@@ -1351,3 +1378,4 @@
 	WinWaitActive	Espera a que la ventana especificada está activa.
 	WinWaitClose	Espera a que no existe la ventana especificada.
 	WinWaitNotActive	Espera hasta que la ventana especificada no está activo.
+	Zip / UnZip	Comprimir o descomprimir uno o más archivos zip.

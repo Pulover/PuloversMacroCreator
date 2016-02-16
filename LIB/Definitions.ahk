@@ -61,6 +61,7 @@ ListCount1 := 0
 ,	cType49 := "FuncReturn"
 ,	cType50 := "SetTimer"
 ,	cType51 := "While"
+,	cType52 := "SendEmail"
 
 Action1 := "Click"
 ,	Action2 := "Move"
@@ -115,7 +116,9 @@ RecOptChecks := ["ClearNewList", "", "Strokes", "CaptKDn", "RecKeybdCtrl"
 ,	LVManager := new LV_Rows()
 ,	LVManager.SetCallback("LVCallback")
 ,	Exp_Mult := {1:2, 2:4, 3:8, 4:16, 5:32}
-,	MsgBoxStyles := [262144, 512, 256]
+,	MsgBoxStyles := [1048576, 524288, 262144, 512, 256]
+,	Email_Fields := ["email", "smtpserver", "smtpserverport", "sendusername", "sendpassword"
+				,	"smtpauthenticate", "smtpusessl", "smtpconnectiontimeout", "sendusing"]
 
 IconsNames := { "apply": 1
 			,	"break": 2
@@ -1055,8 +1058,8 @@ DefaultBar := {FileOpt: "Enabled AutoSize", File: ["New=" w_Lang040 ":41", "Open
 														, "", "Window=" w_Lang057 ":79", "Image=" w_Lang058 ":27", "Run=" w_Lang059 ":58"
 														, "", "ComLoop=" w_Lang060 ":36", "ComGoto=" w_Lang061 ":22", "TimedLabel=" w_Lang062 ":71"
 														, "", "IfSt=" w_Lang063 ":26", "AsVar=" w_Lang064 ":75", "AsFunc=" w_Lang065 ":21"
-														, "", "IECom=" w_Lang066 ":25", "ComInt=" w_Lang067 ":33", "RunScrLet=" w_Lang068 ":76"
-														, "", "SendMsg=" w_Lang069 ":61"
+														, "", "Email=" w_Lang068 ":112", "DownloadFiles=" w_Lang108 ":95", "ZipFiles=" w_Lang109 ":113"
+														, "", "IECom=" w_Lang066 ":25", "ComInt=" w_Lang067 ":33", "SendMsg=" w_Lang069 ":61"
 														, "", "CmdFind=" w_Lang091 ":92"]
 			, SetOpt: "Enabled AutoSize", Settings: ["HideMainWin=" w_Lang013 ":80", "OnScCtrl=" w_Lang009 ":87"
 														, "", "Capt=" w_Lang012 ":83", "CheckHkOn=" w_Lang014 ":82"

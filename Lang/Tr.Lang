@@ -67,11 +67,13 @@
 	i_Lang013 =	E&ğer Tablolar
 	i_Lang014 =	Deği&şkenler / Diziler
 	i_Lang015 =	Fo&nksiyonlar / Dizi yöntemleri
-	i_Lang016 =	Inte&rnet Explorer
-	i_Lang017 =	&COM Arabirimi
-	i_Lang018 =	Kom&ut Dosyası Çalıştırmak
-	i_Lang019 =	&Windows Iletileri
-	i_Lang020 =	&(Ctrl+Shift+F) bir komut bul
+	i_Lang016 =	Epo&sta gönder
+	i_Lang017 =	&İndirme / Yükleme dosyaları
+	i_Lang018 =	&Zip / Sıkıştırılmış dosya
+	i_Lang019 =	Inte&rnet Explorer
+	i_Lang020 =	&COM Arabirimi
+	i_Lang021 =	&Windows Iletileri
+	i_Lang022 =	&(Ctrl+Shift+F) bir komut bul
 		
 ; 06. Edit Sub Menu		
 	e_Lang001 =	&Çift
@@ -235,7 +237,7 @@
 	w_Lang053 =	Kontrol (F4)
 	w_Lang054 =	Durma (F5)
 	w_Lang055 =	Mesaj Kutusu (Shift+F5)
-	w_Lang056 =	Anahtar Bekleyin (Control+F5)
+	w_Lang056 =	Anahtar Bekleyin (Ctrl+F5)
 	w_Lang057 =	Pencere (F6)
 	w_Lang058 =	Görüntü / Piksel Arama (F7)
 	w_Lang059 =	/ Dosya / Dizi / Misc çalıştırın. (F8)
@@ -245,10 +247,10 @@
 	w_Lang063 =	Eğer Tablolar (F10)
 	w_Lang064 =	Değişkenler / Diziler (F10+Shift)
 	w_Lang065 =	İşlevler / Dizi yöntemleri (Ctrl+F10)
-	w_Lang066 =	Internet Explorer (F11)
-	w_Lang067 =	Ifade / COM Arabirimi (Shift+F11)
-	w_Lang068 =	Komut Dosyası Çalıştırmak (Ctrl+F11)
-	w_Lang069 =	Windows iletileri (F12)
+	w_Lang066 =	Internet Explorer (F12)
+	w_Lang067 =	Ifade / COM Arabirimi (Shift+F12)
+	w_Lang068 =	Eposta gönder (F11)
+	w_Lang069 =	Windows iletileri (Ctrl+F12)
 	w_Lang070 =	Kısayol tuşu "Play" için Windows tuşu ekle
 	w_Lang071 =	Kısayol olarak bir joystick düğmesini kullanın
 	w_Lang072 =	Makro Ekle (Ctrl+T)
@@ -276,17 +278,19 @@
 	w_Lang094 =	Buraya taşımak
 	w_Lang095 =	Buraya kopyala
 	w_Lang096 =	Gruplar
-	w_Lang097 =	Grupları etkinleştirme (Ctrl + Shift + G)
-	w_Lang098 =	Grup ekle (Ctrl + Shift + Y)
-	w_Lang099 =	Grup kaldır (Ctrl + Shift + R)
+	w_Lang097 =	Grupları etkinleştirme (Ctrl+Shift+G)
+	w_Lang098 =	Grup ekle (Ctrl+Shift+Y)
+	w_Lang099 =	Grup kaldır (Ctrl+Shift+R)
 	w_Lang100 =	Tüm grupları kaldırın
 	w_Lang101 =	Düzenleme grupları
 	w_Lang102 =	Grup ismi
-	w_Lang103 =	Fonksiyon oluşturun (Ctrl + Shift + U)
-	w_Lang104 =	Parametre (Ctrl + Shift + P) ekleyin
-	w_Lang105 =	Dönüş (Ctrl + Shift + N) ekleyin
-	w_Lang106 =	(Ctrl + Shift + C) Fonksiyonu için makro dönüştürme
+	w_Lang103 =	Fonksiyon oluşturun (Ctrl+Shift+U)
+	w_Lang104 =	Parametre (Ctrl+Shift+P) ekleyin
+	w_Lang105 =	Dönüş (Ctrl+Shift+N) ekleyin
+	w_Lang106 =	(Ctrl+Shift+C) Fonksiyonu için makro dönüştürme
 	w_Lang107 =	Denetlenmeyen satırları açıklama
+	w_Lang108 =	İndirme / Yükleme dosyaları (F11+Shift)
+	w_Lang109 =	Zip / Sıkıştırılmış dosya (Ctrl+F11)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Fare
@@ -442,7 +446,7 @@
 	c_Lang152 =	Bilgi
 	c_Lang153 =	Her zaman üstte
 	c_Lang154 =	Dakika
-	c_Lang155 =	Komut Dosyası Çalıştırmak
+	c_Lang155 =	Kadar
 	c_Lang156 =	Senaryo
 	c_Lang157 =	Script Dili
 	c_Lang158 =	64-bit ile uyumlu değildir!
@@ -520,7 +524,7 @@
 	c_Lang230 =	Karşı
 	c_Lang231 =	CC
 	c_Lang232 =	GIZLI
-	c_Lang233 =	Dosyaları ekle
+	c_Lang233 =	F2 düzenleyin
 	c_Lang234 =	HTML
 	c_Lang235 =	Eposta gönder
 	c_Lang236 =	İndirme / Yükleme dosyaları
@@ -530,7 +534,10 @@
 	c_Lang240 =	pozisyonları kayıtlı.
 	c_Lang241 =	Tüm sayaçlarını silmek
 	c_Lang242 =	Set zamanlayıcı
-	c_Lang243 =	Kadar
+	c_Lang243 =	Sağ haklı
+	c_Lang244 =	Pravo na lijevo
+	c_Lang245 =	Ekler
+	c_Lang246 =	Yol
 		
 ; 16. Other Windows		
 	t_Lang001 =	AutoHotkey Aktar
@@ -723,6 +730,17 @@
 	t_Lang188 =	Hepsini genişlet
 	t_Lang189 =	Dil
 	t_Lang190 =	Satır aralıklarını dönüştür
+	t_Lang191 =	E-posta hesapları
+	t_Lang192 =	Güncelleştirme
+	t_Lang193 =	Düzenlemek için çift tıklayın
+	t_Lang194 =	SMTP Sunucusu
+	t_Lang195 =	Liman
+	t_Lang196 =	Kimlik doğrulaması
+	t_Lang197 =	Kullanıcı adı
+	t_Lang198 =	Parola
+	t_Lang199 =	SSL
+	t_Lang200 =	modunu gönder
+	t_Lang201 =	Zaslat test
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Açık
@@ -837,7 +855,7 @@
 	d_Lang096 =	- BURAYA YÜZDE IŞARETLERI DEĞİŞKENLER IÇINE ALMAYıN.
 		- Dönüş değeri bir ifade olmalıdır.
 		- Sen dizeleri, değişkenler, diziler ve işlevlerini kullanabilirsiniz. Ayrıca, bu herhangi bir birleştirebiliriz.
-		Sonuç ise: a + b - örneğin tırnak işareti içine, dizeleri kullanın.
+		Sonuç ise: a+b - örneğin tırnak işareti içine, dizeleri kullanın.
 		- Eğer fazladan sonuçları döndürmek istiyorsanız, siz de parametrelerinde ByRef kullanabilirsiniz.
 		- Diziler birden çok değer ya da değerleri adlı döndürmek için kullanılabilir.
 	d_Lang097 =	- BURAYA YÜZDE IŞARETLERI DEĞİŞKENLER IÇINE ALMAYıN.
@@ -857,6 +875,12 @@
 	d_Lang107 =	Sayacını başlatmak olamazdı
 	d_Lang108 =	Tüm pozisyonlar kayıtlıdır. Bunlardan birini silin lütfen.
 	d_Lang109 =	Hedef etiket yok.
+	d_Lang110 =	Yerine dosyayı onayla
+	d_Lang111 =	zaten var.
+		Bunu değiştirmek ister misiniz?
+	d_Lang112 =	E-posta hesabı bulunamadı.
+	d_Lang113 =	Hiçbir hata bildirdi.
+	d_Lang114 =	send e-posta fonksiyonu (CDO) ile (derlenmiş olsa bile) ihraç Scripts ŞİFRE dahil kullanılan e-posta hesapları görünür bilgileri, sahip olacaktır. PMC Proje dosyası bu bilgiye sahip değildir.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Bu ana pencerede komut düğmeleri kullanarak ya da eylemleri kopyalamak için Kayıt kullanarak Makrolar oluşturabilirsiniz. Seçenekler > Ayarlar > giriş kaydedilecektir ne seçmek için kayıt.
@@ -891,6 +915,7 @@
 	A_List_TT =	Makro Seçin (Ctrl+1~0)
 	AbortKey_TT =	Kısayol çalma durdurmak için
 	ActiveObj_TT =	Active COM Nesne bağlanmaya çalışır
+	AddAtt_TT =	Dosyaları ekle
 	ApplyI_TT =	Uygulamak
 	ApplyL_TT =	Kutusundan Ekle (Insert)
 	ApplyT_TT =	Uygulamak
@@ -912,6 +937,7 @@
 		Bir düzenleme denetimi (bu etkilemez
 		Pano içeriği).
 	Ex_EdScript_TT =	Harici düzenleyicide açın
+	Ex_ExecScript_TT =	Çalıştır komut
 	ExprLink2_TT =	- BURAYA YÜZDE IŞARETLERI DEĞİŞKENLER IÇINE ALMAYıN.
 		- AHK ifadelerin çoğu desteklenmektedir.
 		- Sen dizeleri, değişkenler, diziler ve işlevlerini kullanabilirsiniz.
@@ -1101,6 +1127,7 @@
 	ATan	Radyan arktanjant (teğet Numarasısayı) döndürür.
 	BlockInput	Devre dışı bırakır ya da klavye ve fare ile bilgisayar ile etkileşim kullanıcı yeteneğini sağlar .
 	Break	Çıkar (sona erer) bir döngü . Döngü her türlü iç geçerlidir.
+	CDO	Bir kullanıcı tanımlı hesabı kullanarak e-posta gönderir.
 	Ceil	Döndürür Number en yakın tam sayıya (herhangi bir .00 eki olmadan) kadar yuvarlanır .
 	Chr	Sayısı ile gösterilen karakter koduna karşılık gelentek bir karakter döndürür.
 	Click	Belirtilen koordinatlarda bir fare düğmesini tıklar. Ayrıca , bir düğmesini basılı tutuntekerleği çevirmek , ya da taşıyabilirsiniz .
@@ -1143,7 +1170,7 @@
 	DriveSpaceFree	Megabyte , bir sürücünün boş disk alanı alır .
 	Edit	Ilgili düzenleyici düzenleme için geçerli komut dosyası açar .
 	Else	Bir IF -ifadesi YANLIŞ olarak değerlendirirse komut (lar) gerçekleştirmek için belirtir . Birden fazla komut mevcut olduğunda , bir blok (parantez) içine alın .
-	EnvAdd	Kendisi toplamı artı Verilen değer (ekleyin ya da tarih-saat değeri zaman çıkarabilirsiniz) bir değişken ayarlar. Ile eşanlamlı : Var + = Değer .
+	EnvAdd	Kendisi toplamı artı Verilen değer (ekleyin ya da tarih-saat değeri zaman çıkarabilirsiniz) bir değişken ayarlar. Ile eşanlamlı : Var+= Değer .
 	EnvDiv	Verilen değer bölünmesiyle kendisine bir değişken ayarlar. Ile eşanlamlı : Var / = Değer .
 	EnvGet	Bir ortam değişkeni alır .
 	EnvMult	Kendisine bir değişken kez Verilen değer ayarlar . Ile eşanlamlı : Var * = Değer .
@@ -1237,8 +1264,8 @@
 	MouseGetPos	Mevcut fare imleci konumu ve isteğe bağlı olarak hangi pencere ve kontrol üzerine asılı olan alır.
 	MouseMove	Fare imlecini hareket ettirir.
 	MsgBox	Bir veya daha fazla düğme (örneğin, Evet ve Hayır olarak) içeren küçük bir pencerede belirtilen metni görüntüler.
-	NumGet	Belirtilen adres + ofset saklanan ikili sayı döndürür.
-	NumPut	Belirtilen adresteki ikili biçimde mağaza sayısı + ofset ve sadece yazılı öğenin sağındaki adresini döndürür.
+	NumGet	Belirtilen adres+ofset saklanan ikili sayı döndürür.
+	NumPut	Belirtilen adresteki ikili biçimde mağaza sayısı+ofset ve sadece yazılı öğenin sağındaki adresini döndürür.
 	Object	Bir script ilişkisel dizi oluşturur.
 	OnExit	Otomatik olarak script çıkmadan çalıştırmak için bir alt yordam belirtir.
 	OnMessage	Script Belirtilen ileti aldığında otomatik olarak aramak için bir işlev belirtir.
@@ -1351,3 +1378,4 @@
 	WinWaitActive	Belirtilen pencere aktif olana dek bekler.
 	WinWaitClose	Belirtilen pencere yok kadar bekler.
 	WinWaitNotActive	Belirtilen penceresi etkin değil kadar bekler.
+	Zip / UnZip	Sıkıştırmak veya bir veya daha fazla zip dosyaları sıkıştırmasını.

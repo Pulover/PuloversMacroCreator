@@ -56,7 +56,7 @@
 	i_Lang002 =	文本(&X)
 	i_Lang003 =	控件(&C)
 	i_Lang004 =	暂停(&P)
-	i_Lang005 =	消息框(&E)
+	i_Lang005 =	消息框(&B)
 	i_Lang006 =	等待按键(&K)
 	i_Lang007 =	窗口(&W)
 	i_Lang008 =	图片/像素搜索(&I)
@@ -67,11 +67,13 @@
 	i_Lang013 =	If语句(&S)
 	i_Lang014 =	变量 / 배열(&V)
 	i_Lang015 =	函数(&U) / 阵列方法
-	i_Lang016 =	IE浏览器(&N)
-	i_Lang017 =	COM接口(&O)
-	i_Lang018 =	运行小脚本(&T)
-	i_Lang019 =	Windows消息(&D)
-	i_Lang020 =	查找命令(&F)
+	i_Lang016 =	发电子邮件(&E)
+	i_Lang017 =	下载/上传文件(&N)
+	i_Lang018 =	压缩/解压缩文件(&Z)
+	i_Lang019 =	IE浏览器(&T)
+	i_Lang020 =	COM接口(&O)
+	i_Lang021 =	Windows消息(&D)
+	i_Lang022 =	查找命令(&F)
 		
 ; 06. Edit Sub Menu		
 	e_Lang001 =	复写(&L)
@@ -235,7 +237,7 @@
 	w_Lang053 =	控制(F4)
 	w_Lang054 =	暂停(F5)
 	w_Lang055 =	消息框(Shift+F5)
-	w_Lang056 =	等待按键(Control+F5) 
+	w_Lang056 =	等待按键(Ctrl+F5) 
 	w_Lang057 =	窗口(F6)
 	w_Lang058 =	图片/像素搜索(F7)
 	w_Lang059 =	运行/文件/字符串/其他(F8)
@@ -245,10 +247,10 @@
 	w_Lang063 =	If语句(F10)
 	w_Lang064 =	变量 / 배열(&V) (Shift+F10)
 	w_Lang065 =	函数 / 阵列方法 (Ctrl+F10)
-	w_Lang066 =	IE浏览器(F11)
-	w_Lang067 =	表达式 / COM接口 (التحول + F11)
-	w_Lang068 =	运行小脚本(Ctrl+F11)
-	w_Lang069 =	Windows消息(F12)
+	w_Lang066 =	IE浏览器(F12)
+	w_Lang067 =	表达式 / COM接口 (التحول+F12)
+	w_Lang068 =	发电子邮件 (F11)
+	w_Lang069 =	Windows消息(Ctrl+F12)
 	w_Lang070 =	添加Windows键到“回放”热键
 	w_Lang071 =	使用操作杆作为热键
 	w_Lang072 =	添加宏(Ctrl+T)
@@ -276,17 +278,19 @@
 	w_Lang094 =	移到这里
 	w_Lang095 =	复制到这里
 	w_Lang096 =	组
-	w_Lang097 =	启用组 （Ctrl + Shift+ G）
-	w_Lang098 =	添加组 （Ctrl + Shift+ Y）
-	w_Lang099 =	删除组 （Ctrl + Shift+ R）
+	w_Lang097 =	启用组 （Ctrl+Shift+ G）
+	w_Lang098 =	添加组 （Ctrl+Shift+ Y）
+	w_Lang099 =	删除组 （Ctrl+Shift+ R）
 	w_Lang100 =	删除所有组
 	w_Lang101 =	编辑组
 	w_Lang102 =	团队名字
-	w_Lang103 =	创建函数（Ctrl + Shift+ U）
-	w_Lang104 =	添加参数（Ctrl + Shift+ P）
-	w_Lang105 =	加入返程（Ctrl + Shift+ N）
-	w_Lang106 =	转换宏功能（Ctrl + Shift+ C）
+	w_Lang103 =	创建函数（Ctrl+Shift+ U）
+	w_Lang104 =	添加参数（Ctrl+Shift+ P）
+	w_Lang105 =	加入返程（Ctrl+Shift+ N）
+	w_Lang106 =	转换宏功能（Ctrl+Shift+ C）
 	w_Lang107 =	注释掉选中的行
+	w_Lang108 =	下载/上传文件 (Shift+F11)
+	w_Lang109 =	压缩/解压缩文件 (Ctrl+F11)
 		
 ; 15. Command Windows		
 	c_Lang001 =	鼠标
@@ -442,7 +446,7 @@
 	c_Lang152 =	信息
 	c_Lang153 =	总是最前
 	c_Lang154 =	分钟
-	c_Lang155 =	运行小脚本
+	c_Lang155 =	直到
 	c_Lang156 =	脚本
 	c_Lang157 =	脚本语言
 	c_Lang158 =	不适用于64位！
@@ -520,7 +524,7 @@
 	c_Lang230 =	至
 	c_Lang231 =	抄送
 	c_Lang232 =	密件抄送
-	c_Lang233 =	附加文件
+	c_Lang233 =	F2编辑
 	c_Lang234 =	HTML
 	c_Lang235 =	发电子邮件
 	c_Lang236 =	下载/上传文件
@@ -530,7 +534,10 @@
 	c_Lang240 =	位置注册。
 	c_Lang241 =	删除所有计时器
 	c_Lang242 =	设置计时器
-	c_Lang243 =	直到
+	c_Lang243 =	右对齐
+	c_Lang244 =	右到左
+	c_Lang245 =	附件
+	c_Lang246 =	路径
 		
 ; 16. Other Windows		
 	t_Lang001 =	导出为AutoHotkey
@@ -723,6 +730,17 @@
 	t_Lang188 =	展开全部
 	t_Lang189 =	语言
 	t_Lang190 =	换行符
+	t_Lang191 =	电子邮件帐户
+	t_Lang192 =	更新
+	t_Lang193 =	双击编辑
+	t_Lang194 =	SMTP服务器
+	t_Lang195 =	端口
+	t_Lang196 =	认证
+	t_Lang197 =	用户名
+	t_Lang198 =	密码
+	t_Lang199 =	SSL
+	t_Lang200 =	发送模式
+	t_Lang201 =	发送测试
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	打开
@@ -837,7 +855,7 @@
 	d_Lang096 =	- 不要用百分号这里的变量。
 		- 返回值必须是一个表达式。
 		- 您可以使用字符串，变量，数组和函数。您也可以结合任何这些。
-		- 要使用字符串，它们括在引号，如：“结果是：”A + B。
+		- 要使用字符串，它们括在引号，如：“结果是：”A+B。
 		- 如果你想返回额外的结果，你也可以使用的ByRef的参数。
 		- 阵列可用于返回多个值，甚至命名值。
 	d_Lang097 =	- 不要用百分号这里的变量。
@@ -857,6 +875,12 @@
 	d_Lang107 =	无法启动计时器
 	d_Lang108 =	所有位置被登记。请删除其中之一。
 	d_Lang109 =	目标标签不存在。
+	d_Lang110 =	确认文件替换
+	d_Lang111 =	已存在。
+		想更换呢？
+	d_Lang112 =	电子邮件帐户未找到。
+	d_Lang113 =	报道没有错误。
+	d_Lang114 =	出口（即使编译）用电子邮件发送功能（CDO）的脚本将使用的电子邮件帐户可见的信息，包括密码。该项目的PMC文件没有这些信息。
 		
 ; 18. Start-up Tips		
 	Start_Tips =	您可以用主窗口中的命令按钮创建宏或使用录制器录制您的操作。打开选项>设置>录制来选择录制哪些类型。
@@ -891,6 +915,7 @@
 	A_List_TT =	选择宏(Ctrl+1~0)
 	AbortKey_TT =	停止回放热键
 	ActiveObj_TT =	尝试连接到活动的COM对象
+	AddAtt_TT =	附加文件
 	ApplyI_TT =	应用
 	ApplyL_TT =	从框中插入(Insert)
 	ApplyT_TT =	应用
@@ -912,6 +937,7 @@
 		粘贴String（此操作不会影响
 		剪贴板的内容）。
 	Ex_EdScript_TT =	打开外部编辑器
+	Ex_ExecScript_TT =	运行脚本
 	ExprLink2_TT =	- 不要用百分号这里的变量。
 		- 大多数AHK表达式的支持。
 		- 您可以使用字符串，变量，数组和函数。
@@ -1101,6 +1127,7 @@
 	ATan	返回弧度表示的反正切值（其正切值为Number）。
 	BlockInput	禁用或启用用户通过键盘和鼠标与计算机交互的能力。
 	Break	退出（终止）循环。在各种循环中都是有效的。
+	CDO	将使用用户定义的帐户的电子邮件。
 	Ceil	返回由Number向上取整到最近的整数（不带任何.00后缀）。
 	Chr	返回与Number表示的字符编码相对应的单个字符。
 	Click	在指定坐标处点击鼠标按钮。它还可以按下按钮、转动滚轮或移动鼠标。
@@ -1351,3 +1378,4 @@
 	WinWaitActive	等到指定的窗口处于活动状态。
 	WinWaitClose	等到指定的窗口消失。
 	WinWaitNotActive	等待，直到指定的窗口不活跃。
+	Zip / UnZip	压缩或解压缩一个或多个zip文件。

@@ -3,19 +3,22 @@ SetWorkingDir %A_ScriptDir%
 
 xlLastCell := 11
 
+Clip := Clipboard
+
 XL := ComObjCreate("Excel.Application")
 XL.Workbooks.Open(A_ScriptDir "\Languages.xls")
 XL.Sheets("Lang_Files").Activate
 Xl.Range(Xl.Range("A1"), Xl.Range("A1").SpecialCells(xlLastCell)).Copy
 
 ClipWait
-If !InStr(Clipboard, "Lang_")=1
+Data := Clipboard, Clipboard := Clip
+If !InStr(Data, "Lang_")=1
 {
 	MsgBox Error
 	return
 }
 PMC := {}, nLang := []
-Loop, Parse, Clipboard, `n, `r
+Loop, Parse, Data, `n, `r
 {
 	Label := "", a := A_Index
 	StringSplit, Line, A_LoopField, `t

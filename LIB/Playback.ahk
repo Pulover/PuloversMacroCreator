@@ -2,7 +2,7 @@
 {
 	local PlaybackVars := [], LVData := [], LoopDepth := 0, LoopCount := [0], StartMark := []
 	, m_ListCount := ListCount%Macro_On%, mLoopIndex, cLoopIndex, iLoopIndex := 0, mLoopLength, mLoopSize, mListRow
-	, Action, Step, TimesX, DelayX, Type, Target, Window, Loop_Start, Loop_End, Lab, _Label, _i, Pars, _Count
+	, Action, Step, TimesX, DelayX, Type, Target, Window, Loop_Start, Loop_End, Lab, _Label, _i, Pars, _Count, TimesLoop, FieldsData
 	, NextStep, NStep, NTimesX, NType, NTarget, NWindow, _each, _value, _key, _depth, _pair, _index, _point
 	, pbParams, VarName, VarValue, Oper, RowData, ActiveRows, Increment := 0, TabIdx, RowIdx, LabelFound
 	, ScopedParams := [], UserGlobals, GlobalList, CursorX, CursorY
@@ -91,7 +91,7 @@
 			Data_GetTexts(LVData, A_Index, Action, Step, TimesX, DelayX, Type, Target, Window)
 			If ((ShowProgBar = 1) && (RunningFunction = "") && (FlowControl.Break = 0) && (FlowControl.Continue = 0) && (FlowControl.If = 0))
 			{
-				If Type not in %cType7%,%cType17%,%cType21%,%cType35%,%cType38%,%cType39%,%cType40%,%cType41%,%cType44%,%cType45%,%cType46%,%cType47%,%cType48%,%cType49%,%cType50%
+				If Type not in %cType7%,%cType17%,%cType21%,%cType35%,%cType38%,%cType39%,%cType40%,%cType41%,%cType44%,%cType45%,%cType46%,%cType47%,%cType48%,%cType49%,%cType42%
 				{
 					GuiControl, 28:, OSCProg, %A_Index%
 					GuiControl, 28:, OSCProgTip, % "M" Macro_On " [Loop: " (iLoopIndex ? 1 "/" (LoopCount[LoopDepth][1] + 1) : mLoopIndex "/" mLoopSize) " | Row: " A_Index "/" m_ListCount "]"
@@ -107,7 +107,7 @@
 				NextStep := A_Index + 1
 				If (NextStep > LVData.Length())
 					NextStep := 1
-				While (!ActiveRows.Checked[NextStep])
+				While ((!ActiveRows.Checked[NextStep]) || (LVData[NextStep, 8] = cType42))
 				{
 					NextStep++
 					If (A_Index > m_ListCount)
@@ -205,8 +205,8 @@
 					}
 					UserGlobals := User_Vars.Get(true)
 					For each, Section in UserGlobals
-						For _each, _Key in Section
-							GlobalList .= _Key.Key ","
+						For _key, _value in Section
+							GlobalList .= _key ","
 					UserGlobals := ""
 					
 					SavedVars(, VarsList, true)
@@ -299,9 +299,7 @@
 						Loop, % ListCount%A_Index%
 						{
 							LV_GetText(Row_Type, A_Index, 6)
-							If ((Row_Type = cType36) || (Row_Type = cType37) || (Row_Type = cType50))
-								continue
-							LV_GetText(TargetLabel, A_Index, 3)
+						,	LV_GetText(TargetLabel, A_Index, 3)
 							If ((Row_Type = cType35) && (TargetLabel = Step))
 							{
 								RowIdx := A_Index, LabelFound := true
@@ -315,7 +313,7 @@
 					MsgBox, 20, %d_Lang007%, % "Macro" Macro_On ", " d_Lang065 " " mListRow
 						. "`n" d_Lang007 ":`t`t" d_Lang109 "`n" d_Lang066 ":`t" Step
 					IfMsgBox, No
-						StopIt := 1
+						StopPlay(1)
 					continue
 				}
 				If (Type = cType36)
@@ -662,7 +660,7 @@
 							.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" (InStr(e.Message, "0x800401E3") ? d_Lang088 : e.Extra) "`n`n" d_Lang035
 						IfMsgBox, No
 						{
-							StopIt := 1
+							StopPlay(1)
 							continue
 						}
 					}
@@ -682,7 +680,7 @@
 							.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" (InStr(e.Message, "0x800401E3") ? d_Lang088 : e.Extra) "`n`n" d_Lang035
 						IfMsgBox, No
 						{
-							StopIt := 1
+							StopPlay(1)
 							continue
 						}
 					}
@@ -731,7 +729,7 @@
 											.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" (InStr(e.Message, "0x800401E3") ? d_Lang088 : e.Extra) "`n`n" d_Lang035
 										IfMsgBox, No
 										{
-											StopIt := 1
+											StopPlay(1)
 											continue 3
 										}
 									}
@@ -759,7 +757,7 @@
 								.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" (InStr(e.Message, "0x800401E3") ? d_Lang088 : e.Extra) "`n`n" d_Lang035
 							IfMsgBox, No
 							{
-								StopIt := 1
+								StopPlay(1)
 								continue
 							}
 						}
@@ -807,11 +805,15 @@
 					FlowControl.Continue++
 				continue
 			}
-			If (Type = cType50)
+			If (Type = cType42)
 				continue
-			Pars := SplitStep(PlaybackVars[LoopDepth][mLoopIndex], Step, TimesX, DelayX, Type, Target, Window)
+			TimesLoop := TimesX > 1
+		,	CheckVars(TimesX)
+		,	FieldsData := {Action: Action, Step: Step, DelayX: DelayX, Type: Type, Target: Target, Window: Window}
 			While (TimesX)
 			{
+				PlaybackVars[LoopDepth][mLoopIndex, "A_Index"] := TimesLoop ? A_Index : mLoopIndex
+			,	Pars := SplitStep(PlaybackVars[LoopDepth][mLoopIndex], Step, TimesX, DelayX, Type, Target, Window)
 				If (StopIt)
 				{
 					Try Menu, Tray, Icon, %DefaultIcon%, 1
@@ -834,6 +836,8 @@
 				}
 				Else
 					TimesX--
+				For _each, _value in FieldsData
+					%_each% := _value
 				If Type in Sleep,KeyWait,MsgBox
 					continue
 				If !(ManualKey)
@@ -915,6 +919,7 @@
 PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars, CustomVars, RunningFunction, ErrorMsg := "")
 {
 	local Par1, Par2, Par3, Par4, Par5, Par6, Par7, Par8, Par9, Par10, Par11, Win
+		,	_each, _value, _Section, SelAcc, IeIntStr, lMatch, lMatch1, lResult
 	For _each, _value in Pars
 		Par%_each% := _value
 	
@@ -924,7 +929,7 @@ PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars, CustomVars, Runnin
 	pb_Send:
 		If (WinActive("ahk_id " PMCWinID))
 		{
-			StopIt := 1
+			StopPlay(1)
 			return
 		}
 		Send, %Step%
@@ -936,7 +941,7 @@ PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars, CustomVars, Runnin
 	pb_Click:
 		If (WinActive("ahk_id " PMCWinID))
 		{
-			StopIt := 1
+			StopPlay(1)
 			return
 		}
 		Click, %Step%
@@ -948,7 +953,7 @@ PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars, CustomVars, Runnin
 	pb_SendEvent:
 		If (WinActive("ahk_id " PMCWinID))
 		{
-			StopIt := 1
+			StopPlay(1)
 			return
 		}
 		If (Action = "[Text]")
@@ -984,7 +989,7 @@ PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars, CustomVars, Runnin
 	pb_SendRaw:
 		If (WinActive("ahk_id " PMCWinID))
 		{
-			StopIt := 1
+			StopPlay(1)
 			return
 		}
 		SendRaw, %Step%
@@ -1572,6 +1577,48 @@ PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars, CustomVars, Runnin
 
 	;##### Playback COM Commands #####
 
+	pb_SendEmail:
+		StringSplit, Act, Action, :
+		Action := SubStr(Action, StrLen(Act1) + 2)
+		StringSplit, Tar, Target, /
+		CDO_To := SubStr(Tar1, 4)
+	,	CDO_Sub := Action
+	,	CDO_Msg := SubStr(Step, 3)
+	,	CDO_Html := SubStr(Step, 1, 1)
+	,	CDO_Att := Window
+	,	CDO_CC := SubStr(Tar2, 4)
+	,	CDO_BCC := SubStr(Tar3, 5)
+		
+	,	User_Accounts := UserMailAccounts.Get(true)
+		For _each, _Section in User_Accounts
+		{
+			If (Act1 = _Section.email)
+			{
+				SelAcc := _Section
+				break
+			}
+		}
+		If (!IsObject(SelAcc))
+		{
+			MsgBox, 20, %d_Lang007%, % d_Lang064 " Macro" Macro_On ", " d_Lang065 " " mListRow
+				.	"`n" d_Lang007 ":`t`t" d_Lang112 "`n" d_Lang066 ":`t" Act1 "`n`n" d_Lang035
+			IfMsgBox, No
+				StopPlay(1)
+			return
+		}
+		
+		Try
+			CDO(SelAcc, CDO_To, CDO_Sub, CDO_Msg, CDO_Html, CDO_Att, CDO_CC, CDO_BCC)
+		Catch e
+		{
+			MsgBox, 20, %d_Lang007%, % d_Lang064 " Macro" Macro_On ", " d_Lang065 " " mListRow
+				.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" (InStr(e.Message, "0x800401E3") ? d_Lang088 : e.Extra) "`n`n" d_Lang035
+			IfMsgBox, No
+				StopPlay(1)
+			return
+		}
+	return
+	
 	pb_IECOM_Set:
 		StringSplit, Act, Action, :
 		StringSplit, El, Target, :
@@ -1602,10 +1649,8 @@ PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars, CustomVars, Runnin
 			MsgBox, 20, %d_Lang007%, % d_Lang064 " Macro" Macro_On ", " d_Lang065 " " mListRow
 				.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" (InStr(e.Message, "0x800401E3") ? d_Lang088 : e.Extra) "`n`n" d_Lang035
 			IfMsgBox, No
-			{
-				StopIt := 1
-				return
-			}
+				StopPlay(1)
+			return
 		}
 		
 		If (Window = "LoadWait")
@@ -1637,7 +1682,6 @@ PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars, CustomVars, Runnin
 			Catch
 			{
 				MsgBox, 16, %d_Lang007%, %d_Lang041%
-				StopIt := 1
 				return
 			}
 		}
@@ -1674,10 +1718,8 @@ PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars, CustomVars, Runnin
 			MsgBox, 20, %d_Lang007%, % d_Lang064 " Macro" Macro_On ", " d_Lang065 " " mListRow
 				.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" (InStr(e.Message, "0x800401E3") ? d_Lang088 : e.Extra) "`n`n" d_Lang035
 			IfMsgBox, No
-			{
-				StopIt := 1
-				return
-			}
+				StopPlay(1)
+			return
 		}
 		Try SavedVars(Step,,, RunningFunction)
 		
@@ -1692,13 +1734,13 @@ PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars, CustomVars, Runnin
 		}
 	return
 
-	pb_Expression:
 	pb_COMInterface:
 		If (Target != "")
 		{
 			If (!IsObject(%Action%))
 				%Action% := ComObjCreate(%Action%, Target)
 		}
+	pb_Expression:
 		Step := StrReplace(Step, "`n", ",")
 		Try
 			Eval(Step, CustomVars)
@@ -1706,17 +1748,15 @@ PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars, CustomVars, Runnin
 		{
 			MsgBox, 20, %d_Lang007%, % ErrorMsg . e.Message "`n" d_Lang066 ":`t" (InStr(e.Message, "0x800401E3") ? d_Lang088 : e.Extra) "`n`n" d_Lang035
 			IfMsgBox, No
-			{
-				StopIt := 1
-				return
-			}
+				StopPlay(1)
+			return
 		}
 		If (Window = "LoadWait")
 		{
 			Try Menu, Tray, Icon, %ResDllPath%, 77
 			ChangeProgBarColor("Blue", "OSCProg", 28)
 			Try
-				IELoad(%Act1%)
+				IELoad(%Action%)
 			Try Menu, Tray, Icon, %ResDllPath%, 46
 			ChangeProgBarColor("20D000", "OSCProg", 28)
 		}
@@ -2043,7 +2083,7 @@ class WaitFor
 		If (ErrorLevel)
 		{
 			MsgBox %d_Lang039%
-			StopIt := 1
+			StopPlay(1)
 			return
 		}
 	}

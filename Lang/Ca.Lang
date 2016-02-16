@@ -67,11 +67,13 @@
 	i_Lang013 =	&Si Els Estats
 	i_Lang014 =	&Variables / Matriu
 	i_Lang015 =	F&uncions / Mètodes de matriu
-	i_Lang016 =	I&nterfície d'Internet Explorer
-	i_Lang017 =	C&OM
-	i_Lang018 =	Executar Scriptlet
-	i_Lang019 =	&Missatges De Windows
-	i_Lang020 =	Trobar una or&dre
+	i_Lang016 =	E&nvia un correu electrònic
+	i_Lang017 =	&Descàrrega de fitxers / Pujar
+	i_Lang018 =	&Zip / descomprimir arxius
+	i_Lang019 =	Interf&ície d'Internet Explorer
+	i_Lang020 =	C&OM
+	i_Lang021 =	&Missatges De Windows
+	i_Lang022 =	Trobar una ordre
 		
 ; 06. Edit Sub Menu		
 	e_Lang001 =	&Duplicar
@@ -235,7 +237,7 @@
 	w_Lang053 =	Control de (F4)
 	w_Lang054 =	Pausa (F5)
 	w_Lang055 =	Bústia de missatges (Shift+F5)
-	w_Lang056 =	Espera Clau (Control+F5)
+	w_Lang056 =	Espera Clau (Ctrl+F5)
 	w_Lang057 =	Finestra (F6)
 	w_Lang058 =	Imatge / píxel motor (F7)
 	w_Lang059 =	Executar / Arxiu / cadena / Misc. (F8)
@@ -245,10 +247,10 @@
 	w_Lang063 =	Si Declaracions (F10)
 	w_Lang064 =	Variables / Matriu (Shift+F10)
 	w_Lang065 =	Funcions / Mètodes de matriu (Ctrl+F10)
-	w_Lang066 =	Internet Explorer (F11)
-	w_Lang067 =	Expressió / COM Interface (Shift+F11)
-	w_Lang068 =	Executar Scriptlet (Ctrl+F11)
-	w_Lang069 =	Missatges de Windows (F12)
+	w_Lang066 =	Internet Explorer (F12)
+	w_Lang067 =	Expressió / COM Interface (Shift+F12)
+	w_Lang068 =	Envia un correu electrònic (F11)
+	w_Lang069 =	Missatges de Windows (Ctrl+F12)
 	w_Lang070 =	Afegiu la clau de Windows per "Play" tecla d'accés ràpid
 	w_Lang071 =	Utilitzeu un botó del joystick com a tecla d'accés directe
 	w_Lang072 =	Afegir Macro (Ctrl+T)
@@ -276,17 +278,19 @@
 	w_Lang094 =	Moure aquí
 	w_Lang095 =	Copieu aquí
 	w_Lang096 =	grups
-	w_Lang097 =	Habilitar grups (Ctrl + Shift + G)
-	w_Lang098 =	Afegir grup (Ctrl + Maj + I)
-	w_Lang099 =	Traieu grup (Ctrl + Shift + R)
+	w_Lang097 =	Habilitar grups (Ctrl+Shift+G)
+	w_Lang098 =	Afegir grup (Ctrl+Maj+I)
+	w_Lang099 =	Traieu grup (Ctrl+Shift+R)
 	w_Lang100 =	Traieu tots els grups
 	w_Lang101 =	Edita grups
 	w_Lang102 =	Nom del grup
-	w_Lang103 =	Crear funcions (Ctrl + Shift + O)
-	w_Lang104 =	Afegir paràmetre (Ctrl + Shift + P)
-	w_Lang105 =	Afegir Retorn (Ctrl + Shift + N)
-	w_Lang106 =	Converteix Macro per funcionar (Ctrl + Shift + C)
+	w_Lang103 =	Crear funcions (Ctrl+Shift+O)
+	w_Lang104 =	Afegir paràmetre (Ctrl+Shift+P)
+	w_Lang105 =	Afegir Retorn (Ctrl+Shift+N)
+	w_Lang106 =	Converteix Macro per funcionar (Ctrl+Shift+C)
 	w_Lang107 =	Comenteu files sense marcar
+	w_Lang108 =	Descàrrega de fitxers / Pujar (Shift+F11)
+	w_Lang109 =	Zip / descomprimir arxius (Ctrl+F11)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Ratolí
@@ -442,7 +446,7 @@
 	c_Lang152 =	Informació
 	c_Lang153 =	Sempre visible
 	c_Lang154 =	Minuts
-	c_Lang155 =	Executar Scriptlet
+	c_Lang155 =	fins
 	c_Lang156 =	Guió
 	c_Lang157 =	Escriptura De La Llengua
 	c_Lang158 =	No és compatible amb 64 bits!
@@ -520,7 +524,7 @@
 	c_Lang230 =	Till
 	c_Lang231 =	CC
 	c_Lang232 =	CCO
-	c_Lang233 =	Adjuntar arxius
+	c_Lang233 =	F2 per editar
 	c_Lang234 =	HTML
 	c_Lang235 =	Envia un correu electrònic
 	c_Lang236 =	Descàrrega de fitxers / Pujar
@@ -530,7 +534,10 @@
 	c_Lang240 =	posicions registrades.
 	c_Lang241 =	Esborrar tots els temporitzadors
 	c_Lang242 =	Ajust del temporitzador
-	c_Lang243 =	fins
+	c_Lang243 =	Höger motiverade
+	c_Lang244 =	De dreta a esquerra
+	c_Lang245 =	Adjunts
+	c_Lang246 =	Camí
 		
 ; 16. Other Windows		
 	t_Lang001 =	Exporta a AutoHotkey
@@ -723,6 +730,17 @@
 	t_Lang188 =	Expandir tot
 	t_Lang189 =	Idioma
 	t_Lang190 =	Converteix salts de línia
+	t_Lang191 =	Comptes de correu electrònic
+	t_Lang192 =	Actualització
+	t_Lang193 =	Feu doble clic per editar
+	t_Lang194 =	servidor SMTP
+	t_Lang195 =	Port
+	t_Lang196 =	Autenticar
+	t_Lang197 =	Nom d'usuari
+	t_Lang198 =	Contrasenya
+	t_Lang199 =	SSL
+	t_Lang200 =	Enviar la manera
+	t_Lang201 =	Envia una prova
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Obert
@@ -768,7 +786,7 @@
 	d_Lang037 =	Imatge / píxel no trobada.
 	d_Lang038 =	Premeu D'acord per continuar.
 	d_Lang039 =	Temps d'espera!
-	d_Lang040 =	Aquesta funció requereix la biblioteca GDI +.
+	d_Lang040 =	Aquesta funció requereix la biblioteca GDI+.
 		Premeu D'acord per anar a la pàgina de descàrrega.
 	d_Lang041 =	El nom de la variable conté un caràcter il · legal.
 	d_Lang042 =	és una paraula reservada.
@@ -837,7 +855,7 @@
 	d_Lang096 =	- NO INCLOURE LES VARIABLES A SIGNES DE PERCENTATGE AQUÍ.
 		- Valor de retorn ha de ser una expressió.
 		- Vostè pot usar cadenes, variables, matrius i funcions. També pot combinar qualsevol d'aquests.
-		- Per utilitzar cordes, tancar-los entre cometes, per exemple: "El resultat és:" a + b.
+		- Per utilitzar cordes, tancar-los entre cometes, per exemple: "El resultat és:" a+b.
 		- Si voleu tornar resultats addicionals, també es pot usar en els paràmetres ByRef.
 		- Les matrius es poden utilitzar per retornar múltiples valors o valors fins i tot amb nom.
 	d_Lang097 =	- NO INCLOURE LES VARIABLES A SIGNES DE PERCENTATGE AQUÍ.
@@ -857,6 +875,12 @@
 	d_Lang107 =	No s'ha pogut iniciar el temporitzador
 	d_Lang108 =	Totes les posicions estan registrats. Si us plau, elimini un d'ells.
 	d_Lang109 =	Etiqueta de destinació no existeix.
+	d_Lang110 =	Confirma reemplaçar arxiu
+	d_Lang111 =	ja existeix.
+		Li agradaria reemplaçar?
+	d_Lang112 =	E-postkonto inte hittas.
+	d_Lang113 =	Informa de cap error.
+	d_Lang114 =	Scripts eksporteres (selv om kompilert) med sende e-postfunksjonen  (CDO) vil ha synlige opplysninger av e-postkontoer  som brukes, inkludert passordet. PMC prosjektfilen  ikke har denne informasjonen.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Podeu crear macros utilitzant els botons de comandament a la finestra principal o l'ús de la gravadora per copiar les seves accions. Aneu a Opcions> Configuració> Gravació per seleccionar el que es registren les entrades.
@@ -891,6 +915,7 @@
 	A_List_TT =	Seleccioneu Macro (Ctrl+1~0)
 	AbortKey_TT =	Hotkey per aturar la reproducció
 	ActiveObj_TT =	Intenta connectar-se a un objecte COM actiu
+	AddAtt_TT =	Adjuntar arxius
 	ApplyI_TT =	Aplicar
 	ApplyL_TT =	Inseriu de Caixa (Insert)
 	ApplyT_TT =	Aplicar
@@ -912,6 +937,7 @@
 		en un control d'edició (això no afecta
 		el contingut del porta-retalls).
 	Ex_EdScript_TT =	Avaa ulkoisen editorin
+	Ex_ExecScript_TT =	Executar script
 	ExprLink2_TT =	- NO INCLOURE LES VARIABLES A SIGNES DE PERCENTATGE AQUÍ.
 		- La major part de les expressions AHK són compatibles.
 		- Vostè pot usar cadenes, variables, matrius i funcions.
@@ -1101,6 +1127,7 @@
 	ATan	Retorna l'arc tangent (el nombre la tangent és número) en radians .
 	BlockInput	Activa o desactiva la capacitat de l'usuari per interactuar amb l'ordinador a través del teclat i el ratolí .
 	Break	Surt (acaba) un bucle . Vàlid dins de qualsevol tipus de bucle .
+	CDO	Envia missatges de correu electrònic utilitzant un compte definida per l'usuari.
 	Ceil	Retorna Nombre arrodonit al nombre enter més pròxim (sense sufix .00) .
 	Chr	Retorna el caràcter únic corresponent al codi de caràcters indicat per Nombre .
 	Click	Fa clic amb el botó del ratolí a les coordenades especificades . També pot mantenir premut un botó , giri la roda , o moure .
@@ -1143,7 +1170,7 @@
 	DriveSpaceFree	Recupera l' espai lliure d'un disc , en megabytes .
 	Edit	Obre l'script per a la seva edició en l'editor associat .
 	Else	Especifica la comanda (s) per dur a terme si una sentència if s'avalua com FALSE . Quan més d' un comando està present , tanqui en un bloc (frens) .
-	EnvAdd	Estableix una variable a la suma de si mateix més el valor donat (també es pot sumar o restar el temps d'un valor de data i hora) . Sinònim de : Var + = Valor .
+	EnvAdd	Estableix una variable a la suma de si mateix més el valor donat (també es pot sumar o restar el temps d'un valor de data i hora) . Sinònim de : Var+= Valor .
 	EnvDiv	Estableix una variable a si mateix dividit pel valor donat . Sinònim de : Var / = Valor .
 	EnvGet	Recupera una variable d'entorn .
 	EnvMult	Estableix una variable de vegades el mateix valor donat . Sinònim de : Var * = Valor .
@@ -1237,8 +1264,8 @@
 	MouseGetPos	Recupera la posició actual del cursor del ratolí, i que opcionalment finestra i el control que plana sobre.
 	MouseMove	Mou el cursor del ratolí.
 	MsgBox	Mostra el text especificat en una petita finestra que conté un o més botons (com sí i no).
-	NumGet	Retorna el nombre binari emmagatzemat a l'adreça especificada + offset.
-	NumPut	Emmagatzema el número en format binari a l'adreça especificada + offset i retorna l'adreça a la dreta de l'element acabat escrit.
+	NumGet	Retorna el nombre binari emmagatzemat a l'adreça especificada+offset.
+	NumPut	Emmagatzema el número en format binari a l'adreça especificada+offset i retorna l'adreça a la dreta de l'element acabat escrit.
 	Object	Crea una matriu associativa scripts.
 	OnExit	Especifica una subrutina per executar automàticament quan l'script finalitza.
 	OnMessage	Especifica una funció per cridar automàticament quan l'script rep el missatge especificat.
@@ -1351,3 +1378,4 @@
 	WinWaitActive	Espera que la finestra especificada està activa.
 	WinWaitClose	Espera que no existeix la finestra especificada.
 	WinWaitNotActive	Espera fins que la finestra especificada no està actiu.
+	Zip / UnZip	Comprimir o descomprimir un o més arxius zip.

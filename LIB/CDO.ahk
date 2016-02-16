@@ -1,40 +1,39 @@
-CDO(From := "", To := "", Subject := "", Msg := "", Atts := "", HtmlMsg := "", CC := "", BCC := "")
+﻿/*
+Account	:= {email					: "email@gmail.com"
+		,	smtpserver				: "smtp.gmail.com"
+		,	smtpserverport			: 465
+		,	sendusername			: "email@gmail.com"
+		,	sendpassword			: "password"
+		,	smtpauthenticate		: 1
+		,	smtpusessl				: 1
+		,	smtpconnectiontimeout	: 60
+		,	sendusing				: 2}
+*/
+
+CDO(Account, To, Subject := "", Msg := "", Html := false, Attach := "", CC := "", BCC := "")
 {
-	pmsg          := ComObjCreate("CDO.Message")
-	pmsg.From     := From
-	pmsg.To       := To
-	pmsg.BCC      := BCC   ; Blind Carbon Copy, Invisable for all, same syntax as CC
-	pmsg.CC       := CC
-	pmsg.Subject  := Subject
+	MsgObj			:= ComObjCreate("CDO.Message")
+	MsgObj.From		:= Account.email
+	MsgObj.To		:= StrReplace(To, ",", ";")
+	MsgObj.BCC		:= StrReplace(BCC, ",", ";")
+	MsgObj.CC		:= StrReplace(CC, ",", ";")
+	MsgObj.Subject	:= Subject
 
-	If (HtmlMsg = "")
-		;You can use either Text or HTML body like
-		pmsg.TextBody    := Msg
-	Elze
-		pmsg.HtmlBody := HtmlMsg
+	If (Html)
+		MsgObj.HtmlBody	:= Msg
+	Else
+		MsgObj.TextBody	:= Msg
 
+	Schema	:= "http://schemas.microsoft.com/cdo/configuration/"
+	Pfld	:= MsgObj.Configuration.Fields
 
-	sAttach         := Atts ; can add multiple attachments, the delimiter is |
+	For Field, Value in Account
+		(Field != "email") ? Pfld.Item(Schema . Field) := Value : ""
+	Pfld.Update()
 
-	fields := Object()
-	fields.smtpserver            := "smtp.gmail.com" ; specify your SMTP server
-	fields.smtpserverport        := 465 ; 25
-	fields.smtpusessl            := True ; False
-	fields.sendusing             := 2   ; cdoSendUsingPort
-	fields.smtpauthenticate      := 1   ; cdoBasic
-	fields.sendusername          := "...@gmail.com"
-	fields.sendpassword          := "your_password_here"
-	fields.smtpconnectiontimeout := 60
-	schema := "http://schemas.microsoft.com/cdo/configuration/"
-
-
-	pfld :=   pmsg.Configuration.Fields
-
-	For field,value in fields
-	   pfld.Item(schema . field) := value
-	pfld.Update()
-
-	Loop, Parse, sAttach, |, %A_Space%%A_Tab%
-	  pmsg.AddAttachment(A_LoopField)
-	pmsg.Send()
+	Attach := StrReplace(Attach, ",", ";")
+	Loop, Parse, Attach, `;, %A_Space%%A_Tab%
+		MsgObj.AddAttachment(A_LoopField)
+	
+	MsgObj.Send()
 }

@@ -56,7 +56,7 @@
 	i_Lang002 =	Te&xt
 	i_Lang003 =	&Control
 	i_Lang004 =	&Pause
-	i_Lang005 =	M&essage Box
+	i_Lang005 =	Message &Box
 	i_Lang006 =	&Key Wait
 	i_Lang007 =	&Window
 	i_Lang008 =	&Image / Pixel Search
@@ -67,11 +67,13 @@
 	i_Lang013 =	If &Statements
 	i_Lang014 =	&Variables / Arrays
 	i_Lang015 =	F&unctions / Array Methods
-	i_Lang016 =	I&nternet Explorer
-	i_Lang017 =	C&OM Interface
-	i_Lang018 =	Run Scrip&tlet
-	i_Lang019 =	Win&dows Messages
-	i_Lang020 =	&Find a command
+	i_Lang016 =	Send &Email
+	i_Lang017 =	Dow&nload / Upload files
+	i_Lang018 =	&Zip / Unzip files
+	i_Lang019 =	In&ternet Explorer
+	i_Lang020 =	C&OM Interface
+	i_Lang021 =	Win&dows Messages
+	i_Lang022 =	&Find a command
 		
 ; 06. Edit Sub Menu		
 	e_Lang001 =	Dup&licate
@@ -235,7 +237,7 @@
 	w_Lang053 =	Control (F4)
 	w_Lang054 =	Pause (F5)
 	w_Lang055 =	Message Box (Shift+F5)
-	w_Lang056 =	Key Wait (Control+F5) 
+	w_Lang056 =	Key Wait (Ctrl+F5) 
 	w_Lang057 =	Window (F6)
 	w_Lang058 =	Image / Pixel Search (F7)
 	w_Lang059 =	Run / File / String / Misc. (F8)
@@ -245,10 +247,10 @@
 	w_Lang063 =	If Statements (F10)
 	w_Lang064 =	Variables / Arrays (Shift+F10)
 	w_Lang065 =	Functions / Array Methods (Ctrl+F10)
-	w_Lang066 =	Internet Explorer (F11)
-	w_Lang067 =	Expression / COM Interface (Shift+F11)
-	w_Lang068 =	Run Scriptlet (Ctrl+F11)
-	w_Lang069 =	Windows Messages (F12)
+	w_Lang066 =	Internet Explorer (F12)
+	w_Lang067 =	Expression / COM Interface (Shift+F12)
+	w_Lang068 =	Send Email (F11)
+	w_Lang069 =	Windows Messages (Ctrl+F12)
 	w_Lang070 =	Add the Windows key to "Play" hotkey
 	w_Lang071 =	Use a joystick button as hotkey
 	w_Lang072 =	Add Macro (Ctrl+T)
@@ -276,9 +278,9 @@
 	w_Lang094 =	Move here
 	w_Lang095 =	Copy here
 	w_Lang096 =	Groups
-	w_Lang097 =	Enable groups (Ctrl + Shift + G)
-	w_Lang098 =	Add group (Ctrl + Shift + Y)
-	w_Lang099 =	Remove group (Ctrl + Shift + R)
+	w_Lang097 =	Enable groups (Ctrl+Shift+G)
+	w_Lang098 =	Add group (Ctrl+Shift+Y)
+	w_Lang099 =	Remove group (Ctrl+Shift+R)
 	w_Lang100 =	Remove all groups
 	w_Lang101 =	Edit groups
 	w_Lang102 =	Group name
@@ -287,6 +289,8 @@
 	w_Lang105 =	Add Return (Ctrl+Shift+N)
 	w_Lang106 =	Convert Macro To Function (Ctrl+Shift+C)
 	w_Lang107 =	Comment out unchecked rows
+	w_Lang108 =	Download / Upload files (Shift+F11)
+	w_Lang109 =	Zip / Unzip files (Ctrl+F11)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mouse
@@ -442,7 +446,7 @@
 	c_Lang152 =	Info
 	c_Lang153 =	Always on top
 	c_Lang154 =	Minutes
-	c_Lang155 =	Run Scriptlet
+	c_Lang155 =	Until
 	c_Lang156 =	Script
 	c_Lang157 =	Script Language
 	c_Lang158 =	Not compatible with 64-bit!
@@ -520,7 +524,7 @@
 	c_Lang230 =	To
 	c_Lang231 =	CC
 	c_Lang232 =	BCC
-	c_Lang233 =	Attach files
+	c_Lang233 =	F2 to edit
 	c_Lang234 =	HTML
 	c_Lang235 =	Send Email
 	c_Lang236 =	Download / Upload files
@@ -530,7 +534,10 @@
 	c_Lang240 =	positions registered.
 	c_Lang241 =	Delete all timers
 	c_Lang242 =	Set timer
-	c_Lang243 =	Until
+	c_Lang243 =	Right-justified
+	c_Lang244 =	Right-to-Left
+	c_Lang245 =	Attachments
+	c_Lang246 =	Path
 		
 ; 16. Other Windows		
 	t_Lang001 =	Export to AutoHotkey
@@ -723,6 +730,17 @@
 	t_Lang188 =	Expand all
 	t_Lang189 =	Language
 	t_Lang190 =	Convert line breaks
+	t_Lang191 =	Email accounts
+	t_Lang192 =	Update
+	t_Lang193 =	Double-click to edit
+	t_Lang194 =	SMTP Server
+	t_Lang195 =	Port
+	t_Lang196 =	Authenticate
+	t_Lang197 =	Username
+	t_Lang198 =	Password
+	t_Lang199 =	SSL
+	t_Lang200 =	Send mode
+	t_Lang201 =	Send a test
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Open
@@ -739,7 +757,7 @@
 	d_Lang012 =	No control selected.`nContinue?
 	d_Lang013 =	Export Script
 	d_Lang014 =	Script Exported
-	d_Lang015 =	The file was succesfully exported!
+	d_Lang015 =	The file was successfully exported!
 	d_Lang016 =	Click 'Get' to mark position.
 	d_Lang017 =	- Select the window.
 		- Point to desired position.
@@ -837,7 +855,7 @@
 	d_Lang096 =	- DO NOT ENCLOSE VARIABLES IN PERCENT SIGNS HERE.
 		- Return value must be an expression.
 		- You may use strings, variables, arrays and functions. You may also combine any of those.
-		- To use strings, enclose them in quotes, e.g.: "Result is: " a + b.
+		- To use strings, enclose them in quotes, e.g.: "Result is: " a+b.
 		- If you want to return extra results, you may also use ByRef in parameters.
 		- Arrays can be used to return multiple values or even named values.
 	d_Lang097 =	- DO NOT ENCLOSE VARIABLES IN PERCENT SIGNS HERE.
@@ -857,6 +875,12 @@
 	d_Lang107 =	Could not start timer
 	d_Lang108 =	All positions are registered. Please, delete one of them.
 	d_Lang109 =	Target label does not exist.
+	d_Lang110 =	Confirm file replace
+	d_Lang111 =	already exists.
+		Would like to replace it?
+	d_Lang112 =	Email account not found.
+	d_Lang113 =	No error reported.
+	d_Lang114 =	Scripts exported (even if compiled) with the send email function (CDO) will have visible informations of email accounts used, including the PASSWORD. The PMC project file does not have this information.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	You can create Macros using the Command Buttons in the main window or using the Recorder to copy your actions. Go to Options > Settings > Recording to select what inputs will be recorded.
@@ -891,6 +915,7 @@
 	A_List_TT =	Select Macro (Ctrl+1~0)
 	AbortKey_TT =	Hotkey to stop playback
 	ActiveObj_TT =	Tries to connect to an Active COM Object
+	AddAtt_TT =	Attach files
 	ApplyI_TT =	Apply
 	ApplyL_TT =	Insert from Box (Insert)
 	ApplyT_TT =	Apply
@@ -912,6 +937,7 @@
 		in an Edit control (this does not affect
 		the contents of the clipboard).
 	Ex_EdScript_TT =	Open in external editor
+	Ex_ExecScript_TT =	Run script
 	ExprLink2_TT =	- DO NOT ENCLOSE VARIABLES IN PERCENT SIGNS HERE.
 		- Most of AHK expressions are supported.
 		- You may use strings, variables, arrays and functions.
@@ -1101,6 +1127,7 @@
 	ATan	Returns the arctangent (the number whose tangent is Number) in radians.
 	BlockInput	Disables or enables the user's ability to interact with the computer via keyboard and mouse.
 	Break	Exits (terminates) a loop. Valid inside any kind of loop.
+	CDO	Sends emails using an user-defined account.
 	Ceil	Returns Number rounded up to the nearest integer (without any .00 suffix).
 	Chr	Returns the single character corresponding to the character code indicated by Number.
 	Click	Clicks a mouse button at the specified coordinates. It can also hold down a button, turn the wheel, or move.
@@ -1351,3 +1378,4 @@
 	WinWaitActive	Waits until the specified window is active.
 	WinWaitClose	Waits until the specified window does not exist.
 	WinWaitNotActive	Waits until the specified window is not active.
+	Zip / UnZip	Compress or uncompress one or more zip files.

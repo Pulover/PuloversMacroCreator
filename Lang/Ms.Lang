@@ -67,11 +67,13 @@
 	i_Lang013 =	Jika &Penyata
 	i_Lang014 =	Pemb&olehubah / Tatasusunan
 	i_Lang015 =	&Fungsi / Kaedah mudah
-	i_Lang016 =	I&nternet Explorer
-	i_Lang017 =	&COM Muka
-	i_Lang018 =	Main &Scriptlet
-	i_Lang019 =	&Windows Mesej
-	i_Lang020 =	Cari perinta&h
+	i_Lang016 =	Me&nghantar e-mel
+	i_Lang017 =	&Download / Muat naik fail
+	i_Lang018 =	&Zip / fail Unzip
+	i_Lang019 =	Internet E&xplorer
+	i_Lang020 =	&COM Muka
+	i_Lang021 =	&Windows Mesej
+	i_Lang022 =	Cari perinta&h
 		
 ; 06. Edit Sub Menu		
 	e_Lang001 =	&Gandakan
@@ -235,7 +237,7 @@
 	w_Lang053 =	Kawalan (F4)
 	w_Lang054 =	Jeda (F5)
 	w_Lang055 =	Box Mesej (Shift+F5)
-	w_Lang056 =	Tunggu Utama (Control+F5)
+	w_Lang056 =	Tunggu Utama (Ctrl+F5)
 	w_Lang057 =	Tingkap (F6)
 	w_Lang058 =	Imej / Pixel Search (F7)
 	w_Lang059 =	Run / File / String / Misc. (F8)
@@ -245,10 +247,10 @@
 	w_Lang063 =	Jika Penyata (F10)
 	w_Lang064 =	Pembolehubah / Tatasusunan (Shift+F10)
 	w_Lang065 =	Fungsi / Kaedah mudah (Ctrl+F10)
-	w_Lang066 =	Internet Explorer (F11)
-	w_Lang067 =	Ungkapan / COM Muka (Shift+F11)
-	w_Lang068 =	Run Scriptlet (Ctrl+F11)
-	w_Lang069 =	Mesej Windows (F12)
+	w_Lang066 =	Internet Explorer (F12)
+	w_Lang067 =	Ungkapan / COM Muka (Shift+F12)
+	w_Lang068 =	Menghantar e-mel (F11)
+	w_Lang069 =	Mesej Windows (Ctrl+F12)
 	w_Lang070 =	Tambah utama Windows untuk "Main" hotkey
 	w_Lang071 =	Gunakan butang joystick sebagai hotkey
 	w_Lang072 =	Tambah Macro (Ctrl+T)
@@ -276,17 +278,19 @@
 	w_Lang094 =	Bergerak di sini
 	w_Lang095 =	Salinan di sini
 	w_Lang096 =	kumpulan
-	w_Lang097 =	Membolehkan kumpulan (Ctrl + Shift + G)
-	w_Lang098 =	Tambah kumpulan (Ctrl + Shift + Y)
-	w_Lang099 =	Memadam kumpulan (Ctrl + Shift + R)
+	w_Lang097 =	Membolehkan kumpulan (Ctrl+Shift+G)
+	w_Lang098 =	Tambah kumpulan (Ctrl+Shift+Y)
+	w_Lang099 =	Memadam kumpulan (Ctrl+Shift+R)
 	w_Lang100 =	Buang semua kumpulan
 	w_Lang101 =	Edit kumpulan
 	w_Lang102 =	Nama kumpulan
-	w_Lang103 =	Buat Fungsi (Ctrl + Shift + U)
-	w_Lang104 =	Tambah Parameter (Ctrl + Shift + P)
-	w_Lang105 =	Tambah Pulangan (Ctrl + Shift + N)
-	w_Lang106 =	Menukar Makro Untuk Function (Ctrl + Shift + C)
+	w_Lang103 =	Buat Fungsi (Ctrl+Shift+U)
+	w_Lang104 =	Tambah Parameter (Ctrl+Shift+P)
+	w_Lang105 =	Tambah Pulangan (Ctrl+Shift+N)
+	w_Lang106 =	Menukar Makro Untuk Function (Ctrl+Shift+C)
 	w_Lang107 =	Komen daripada baris tidak dikawal
+	w_Lang108 =	Download / Muat naik fail (Shift+F11)
+	w_Lang109 =	Zip / fail Unzip (Ctrl+F11)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mouse
@@ -442,7 +446,7 @@
 	c_Lang152 =	Maklumat
 	c_Lang153 =	Sentiasa di atas
 	c_Lang154 =	Minit
-	c_Lang155 =	Main Scriptlet
+	c_Lang155 =	sehingga
 	c_Lang156 =	Script
 	c_Lang157 =	Bahasa skrip
 	c_Lang158 =	Tidak serasi dengan 64-bit!
@@ -520,7 +524,7 @@
 	c_Lang230 =	Karşı
 	c_Lang231 =	CC
 	c_Lang232 =	SKT
-	c_Lang233 =	Lampirkan fail
+	c_Lang233 =	F2 edit
 	c_Lang234 =	HTML
 	c_Lang235 =	Menghantar e-mel
 	c_Lang236 =	Download / Muat naik fail
@@ -530,7 +534,10 @@
 	c_Lang240 =	jawatan berdaftar.
 	c_Lang241 =	Padam semua pemasa
 	c_Lang242 =	Set Timer
-	c_Lang243 =	sehingga
+	c_Lang243 =	Kanan dibenarkan
+	c_Lang244 =	Kanan ke Kiri
+	c_Lang245 =	Lampiran
+	c_Lang246 =	Path
 		
 ; 16. Other Windows		
 	t_Lang001 =	Eksport ke AutoHotkey
@@ -723,6 +730,17 @@
 	t_Lang188 =	Buka semua
 	t_Lang189 =	Bahasa
 	t_Lang190 =	Menukar rehat talian
+	t_Lang191 =	Akaun e-mel
+	t_Lang192 =	Update
+	t_Lang193 =	Klik dua kali untuk mengedit
+	t_Lang194 =	SMTP Server
+	t_Lang195 =	Port
+	t_Lang196 =	Mengesahkan
+	t_Lang197 =	Nama pengguna
+	t_Lang198 =	Kata laluan
+	t_Lang199 =	SSL
+	t_Lang200 =	menghantar mod
+	t_Lang201 =	Zaslat test
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Buka
@@ -837,7 +855,7 @@
 	d_Lang096 =	- JANGAN LAMPIRKAN PEMBOLEH UBAH DI SIGNS PERCENT SINI.
 		- Nilai Pulangan mesti ungkapan.
 		- Anda boleh menggunakan tali, pembolehubah, tatasusunan dan fungsi. Anda juga boleh menggabungkan mana-mana daripada mereka.
-		- Untuk menggunakan tali, sertakan mereka dalam petikan, contohnya: "Keputusan adalah:" a + b.
+		- Untuk menggunakan tali, sertakan mereka dalam petikan, contohnya: "Keputusan adalah:" a+b.
 		- Jika anda ingin mengembalikan hasil tambahan, anda juga boleh menggunakan ByRef dalam parameter.
 		- Tatasusunan boleh digunakan untuk kembali pelbagai nilai atau dinamakan nilai.
 	d_Lang097 =	- JANGAN LAMPIRKAN PEMBOLEH UBAH DI SIGNS PERCENT SINI.
@@ -857,6 +875,12 @@
 	d_Lang107 =	Tidak dapat memulakan pemasa
 	d_Lang108 =	Semua kedudukan didaftarkan. Sila, memadam salah seorang daripada mereka.
 	d_Lang109 =	Label sasaran tidak wujud.
+	d_Lang110 =	Sahkan fail menggantikan
+	d_Lang111 =	telah wujud.
+		Ingin menggantikannya?
+	d_Lang112 =	Akaun e-mel tidak dijumpai.
+	d_Lang113 =	Tiada kesilapan dilaporkan.
+	d_Lang114 =	Skrip dieksport (walaupun disusun) dengan fungsi e-mel menghantar (CDO) akan mempunyai maklumat yang boleh dilihat dengan akaun e-mel yang digunakan, termasuk KATALALUAN. PMC fail projek tidak mempunyai maklumat ini.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Anda boleh membuat Makro menggunakan Butang Perintah dalam tetingkap utama atau menggunakan Perakam meniru tindakan anda. Pergi ke Pilihan> Tetapan> Rakaman untuk memilih apa input akan direkodkan.
@@ -891,6 +915,7 @@
 	A_List_TT =	Pilih Macro (Ctrl +1 ~ 0)
 	AbortKey_TT =	Hotkey untuk menghentikan main balik
 	ActiveObj_TT =	Cuba untuk menyambung ke objek COM Aktif
+	AddAtt_TT =	Lampirkan fail
 	ApplyI_TT =	Memohon
 	ApplyL_TT =	Memasukkan dari Box (Insert)
 	ApplyT_TT =	Memohon
@@ -912,6 +937,7 @@
 		dalam kawalan Edit (ini tidak menjejaskan
 		kandungan papan klip).
 	Ex_EdScript_TT =	Buka dalam editor luaran
+	Ex_ExecScript_TT =	Jalankan skrip
 	ExprLink2_TT =	- JANGAN LAMPIRKAN PEMBOLEH UBAH DI SIGNS PERCENT SINI.
 		- Kebanyakan ungkapan AHK disokong.
 		- Anda boleh menggunakan tali, pembolehubah, tatasusunan dan fungsi.
@@ -1101,6 +1127,7 @@
 	ATan	Kembali arctangent itu (bilangan yang tangen adalah Bilangan) dalam radian.
 	BlockInput	Menyahboleh atau membolehkan keupayaan pengguna untuk berinteraksi dengan komputer melalui papan kekunci dan tetikus.
 	Break	Keluar (tamat) gelung. Sah di dalam apa-apa jenis gelung.
+	CDO	Menghantar e-mel menggunakan akaun yang ditetapkan pengguna.
 	Ceil	Pulangan Bilangan dinaikkan kepada integer yang terdekat (tanpa apa-apa .00 akhiran).
 	Chr	Kembali watak tunggal yang sepadan dengan kod watak yang ditunjukkan oleh nombor.
 	Click	Klik butang tetikus pada koordinat dinyatakan. Ia juga boleh tahan butang, putarkan roda, atau bergerak.
@@ -1143,7 +1170,7 @@
 	DriveSpaceFree	Mendapatkan semula ruang cakera bebas memandu, di Megabit.
 	Edit	Buka skrip semasa untuk menyunting dalam editor bersekutu.
 	Else	Menyatakan arahan (s) untuk melaksanakan jika IF-pernyataan dinilai sebagai FALSE. Apabila lebih daripada satu arahan hadir, letakkan mereka dalam satu blok (penyokong).
-	EnvAdd	Set ubah kepada jumlah nilai ditambah sendiri yang diberikan (juga boleh menambah atau menolak masa dari nilai tarikh masa). Sinonim dengan: Var + = Nilai.
+	EnvAdd	Set ubah kepada jumlah nilai ditambah sendiri yang diberikan (juga boleh menambah atau menolak masa dari nilai tarikh masa). Sinonim dengan: Var+= Nilai.
 	EnvDiv	Menetapkan ubah kepada dirinya dibahagikan dengan nilai yang diberikan. Sinonim dengan: Var / = Nilai.
 	EnvGet	Semula pembolehubah persekitaran.
 	EnvMult	Menetapkan ubah kepada dirinya kali nilai yang diberikan. Sinonim dengan: Var * = Nilai.
@@ -1237,8 +1264,8 @@
 	MouseGetPos	Mendapatkan semula kedudukan semasa kursor tetikus, dan pilihan yang tingkap dan kawalan ia berlegar.
 	MouseMove	Menggerakkan kursor tetikus.
 	MsgBox	Memaparkan teks yang dinyatakan dalam tetingkap kecil yang mengandungi satu atau lebih butang (seperti Ya dan Tidak).
-	NumGet	Kembali nombor perduaan yang disimpan di alamat yang dinyatakan + mengimbangi.
-	NumPut	Bilangan kedai di format binari di alamat yang dinyatakan + mengimbangi dan mengembalikan alamat di sebelah kanan item hanya bertulis.
+	NumGet	Kembali nombor perduaan yang disimpan di alamat yang dinyatakan+mengimbangi.
+	NumPut	Bilangan kedai di format binari di alamat yang dinyatakan+mengimbangi dan mengembalikan alamat di sebelah kanan item hanya bertulis.
 	Object	Mencipta pelbagai bersekutu scriptable.
 	OnExit	Menetapkan satu subrutin untuk berjalan secara automatik apabila keluar skrip.
 	OnMessage	Menetapkan fungsi untuk memanggil secara automatik apabila skrip menerima mesej yang ditentukan.
@@ -1351,3 +1378,4 @@
 	WinWaitActive	Menunggu sehingga tingkap yang dinyatakan adalah aktif.
 	WinWaitClose	Menunggu sehingga tingkap yang dinyatakan tidak wujud.
 	WinWaitNotActive	Menunggu sehingga tingkap yang dinyatakan tidak aktif.
+	Zip / UnZip	Memampatkan atau uncompress satu atau lebih fail zip.

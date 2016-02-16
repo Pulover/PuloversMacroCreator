@@ -67,11 +67,13 @@
 	i_Lang013 =	Al&s Verklaringen
 	i_Lang014 =	Var&iabelen / Scala
 	i_Lang015 =	&Functies / Scala methoden
-	i_Lang016 =	I&nternet Explorer
-	i_Lang017 =	C&OM-Interface
-	i_Lang018 =	R&un Scriptlet
-	i_Lang019 =	&Windows Messages
-	i_Lang020 =	&Zoek een commando
+	i_Lang016 =	E&-mail verzenden
+	i_Lang017 =	&Download / Upload bestanden
+	i_Lang018 =	&Zip / Unzip bestanden
+	i_Lang019 =	I&nternet Explorer
+	i_Lang020 =	C&OM-Interface
+	i_Lang021 =	&Windows Messages
+	i_Lang022 =	Zoek een commando
 		
 ; 06. Edit Sub Menu		
 	e_Lang001 =	&Duplicaat
@@ -235,7 +237,7 @@
 	w_Lang053 =	Control (F4)
 	w_Lang054 =	Pauzeren (F5)
 	w_Lang055 =	Message Box (Shift+F5)
-	w_Lang056 =	Key Wachten (Control+F5)
+	w_Lang056 =	Key Wachten (Ctrl+F5)
 	w_Lang057 =	Window (F6)
 	w_Lang058 =	Afbeelding / Pixel Zoeken (F7)
 	w_Lang059 =	Run / Bestand / String / Misc. (F8)
@@ -245,10 +247,10 @@
 	w_Lang063 =	Als Verklaringen (F10)
 	w_Lang064 =	Variabelen / Scala (Shift+F10)
 	w_Lang065 =	Functies / Scala methoden (Ctrl+F10)
-	w_Lang066 =	Internet Explorer (F11)
-	w_Lang067 =	Uitdrukking / COM-interface (Shift+F11)
-	w_Lang068 =	Run Scriptlet (Ctrl+F11)
-	w_Lang069 =	Windows Messages (F12)
+	w_Lang066 =	Internet Explorer (F12)
+	w_Lang067 =	Uitdrukking / COM-interface (Shift+F12)
+	w_Lang068 =	E-mail verzenden (F11)
+	w_Lang069 =	Windows Messages (Ctrl+F12)
 	w_Lang070 =	Voeg de Windows-toets op "Play" sneltoets
 	w_Lang071 =	Gebruik een joystick knop als sneltoets
 	w_Lang072 =	Voeg Macro (Ctrl+T)
@@ -276,17 +278,19 @@
 	w_Lang094 =	Bewegen hier
 	w_Lang095 =	Kopieer hier
 	w_Lang096 =	groepen
-	w_Lang097 =	Groepen inschakelen (Ctrl + Shift + G)
-	w_Lang098 =	Groep toevoegen (Ctrl + Shift + Y)
-	w_Lang099 =	Verwijder groep (Ctrl + Shift + R)
+	w_Lang097 =	Groepen inschakelen (Ctrl+Shift+G)
+	w_Lang098 =	Groep toevoegen (Ctrl+Shift+Y)
+	w_Lang099 =	Verwijder groep (Ctrl+Shift+R)
 	w_Lang100 =	Verwijder alle groepen
 	w_Lang101 =	Groepen bewerken
 	w_Lang102 =	Groepsnaam
-	w_Lang103 =	Maak Function (Ctrl + Shift + U)
-	w_Lang104 =	Voeg Parameter (Ctrl + Shift + P)
-	w_Lang105 =	Voeg Return (Ctrl + Shift + N)
-	w_Lang106 =	Omzetten Macro Aan (Ctrl + Shift + C) Functie
+	w_Lang103 =	Maak Function (Ctrl+Shift+U)
+	w_Lang104 =	Voeg Parameter (Ctrl+Shift+P)
+	w_Lang105 =	Voeg Return (Ctrl+Shift+N)
+	w_Lang106 =	Omzetten Macro Aan (Ctrl+Shift+C) Functie
 	w_Lang107 =	Commentaar uit ongecontroleerd rijen
+	w_Lang108 =	Download / Upload bestanden (Shift+F11)
+	w_Lang109 =	Zip / Unzip bestanden (Ctrl+F11)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Muis
@@ -442,7 +446,7 @@
 	c_Lang152 =	Informatie
 	c_Lang153 =	Altijd op voorgrond
 	c_Lang154 =	Minuten
-	c_Lang155 =	Run Scriptlet
+	c_Lang155 =	Tot
 	c_Lang156 =	Script
 	c_Lang157 =	Script Language
 	c_Lang158 =	Niet compatibel met 64-bit!
@@ -520,7 +524,7 @@
 	c_Lang230 =	Naar
 	c_Lang231 =	CC
 	c_Lang232 =	BCC
-	c_Lang233 =	Voeg bestanden toe
+	c_Lang233 =	F2 te bewerken
 	c_Lang234 =	HTML
 	c_Lang235 =	E-mail verzenden
 	c_Lang236 =	Download / Upload bestanden
@@ -530,7 +534,10 @@
 	c_Lang240 =	posities geregistreerd.
 	c_Lang241 =	Verwijder alle timers
 	c_Lang242 =	Set timer
-	c_Lang243 =	Tot
+	c_Lang243 =	Rechts uitgelijnd
+	c_Lang244 =	Rechts naar links
+	c_Lang245 =	Toebehoren
+	c_Lang246 =	Pad
 		
 ; 16. Other Windows		
 	t_Lang001 =	Exporteren naar AutoHotkey
@@ -723,6 +730,17 @@
 	t_Lang188 =	Alles uitklappen
 	t_Lang189 =	Taal
 	t_Lang190 =	Converteren regeleinden
+	t_Lang191 =	E-mailaccounts
+	t_Lang192 =	Bijwerken
+	t_Lang193 =	Dubbelklik om te bewerken
+	t_Lang194 =	SMTP-server
+	t_Lang195 =	Haven
+	t_Lang196 =	Waarmerken
+	t_Lang197 =	Gebruikersnaam
+	t_Lang198 =	Wachtwoord
+	t_Lang199 =	SSL
+	t_Lang200 =	Stuur-modus
+	t_Lang201 =	Stuur een test
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Open
@@ -837,7 +855,7 @@
 	d_Lang096 =	- NIET BIJGAAND VARIABELEN IN PROCENTTEKENS HIER.
 		- Return waarde moet een uitdrukking zijn.
 		- U kunt gebruik maken van snaren, variabelen, arrays en functies. U kunt ook een van deze te combineren.
-		- Om strings gebruiken, omsluiten ze tussen aanhalingstekens, bijvoorbeeld: "Resultaat is:" a + b.
+		- Om strings gebruiken, omsluiten ze tussen aanhalingstekens, bijvoorbeeld: "Resultaat is:" a+b.
 		- Als u wilt extra resultaten, kunt u ook ByRef gebruiken parameters.
 		- Arrays kunnen worden gebruikt om meerdere waarden of zelfs noemde waarden retourneren.
 	d_Lang097 =	- NIET BIJGAAND VARIABELEN IN PROCENTTEKENS HIER.
@@ -857,6 +875,12 @@
 	d_Lang107 =	Kan niet worden gestart timer
 	d_Lang108 =	Alle posities zijn geregistreerd. Gelieve, verwijder een van hen.
 	d_Lang109 =	LABEL bestaat niet.
+	d_Lang110 =	Bevestig bestand te vervangen
+	d_Lang111 =	bestaat al.
+		Zou graag willen vervangen?
+	d_Lang112 =	E-mailaccount niet gevonden.
+	d_Lang113 =	Geen fout gemeld.
+	d_Lang114 =	Scripts worden uitgevoerd (zelfs als gecompileerd) met de send e-mailfunctie (CDO) is zichtbaar informatie van e-mailaccounts gebruikt, met inbegrip van het wachtwoord. De PMC project bestand beschikt niet over deze informatie.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	U kunt macro's met behulp van de Command Knoppen in het hoofdvenster of het gebruik van de recorder om uw acties te kopiëren creëren. Ga naar Opties > Instellingen > Opname te selecteren wat input wordt opgenomen.
@@ -891,6 +915,7 @@
 	A_List_TT =	Selecteert Macro (Ctrl+1~0)
 	AbortKey_TT =	Sneltoets om het afspelen te stoppen
 	ActiveObj_TT =	Verbinding probeert te maken met een Active COM-object
+	AddAtt_TT =	Voeg bestanden toe
 	ApplyI_TT =	Van toepassing zijn
 	ApplyL_TT =	Invoegen van Box (Insert)
 	ApplyT_TT =	Van toepassing zijn
@@ -912,6 +937,7 @@
 		in een Edit-besturingselement (dit heeft geen invloed
 		de inhoud van het klembord).
 	Ex_EdScript_TT =	Open in externe editor
+	Ex_ExecScript_TT =	Script
 	ExprLink2_TT =	- NIET BIJGAAND VARIABELEN IN PROCENTTEKENS HIER.
 		- De meeste van de AHK uitdrukkingen worden ondersteund.
 		- U kunt gebruik maken van snaren, variabelen, arrays en functies.
@@ -1101,6 +1127,7 @@
 	ATan	Geeft de boogtangens (het nummer waarvan de tangens Number) in radialen .
 	BlockInput	Schakelt het vermogen van de gebruiker om te interageren met de computer via het toetsenbord en de muis .
 	Break	Uitgangen (beëindigt) een lus . Geldig binnen elk soort lus .
+	CDO	Stuurt e-mails met behulp van een door de gebruiker gedefinieerde account.
 	Ceil	Returns Number afgerond op het dichtstbijzijnde gehele getal (zonder 0,00 achtervoegsel) .
 	Chr	Geeft als resultaat het teken dat overeenkomt met het karakter code aangegeven met nummer .
 	Click	Klikt op een muisknop op de opgegeven coördinaten . Het kan ook ingedrukt houden van een knop , draai aan het wiel , of verplaatsen .
@@ -1143,7 +1170,7 @@
 	DriveSpaceFree	Haalt de vrije schijfruimte van een station , in megabytes .
 	Edit	Opent het huidige script te bewerken in de bijbehorende editor .
 	Else	Geeft het commando (s) uit te voeren als een IF - statement evalueert naar FALSE . Wanneer meer dan een commando aanwezig is , omsluiten ze in een blok (beugels) .
-	EnvAdd	Stelt een variabele aan de som van zelf plus de gegeven waarde (kan ook optellen of aftrekken tijd uit een datum - tijdwaarde) . Synoniem : Var + = waarde .
+	EnvAdd	Stelt een variabele aan de som van zelf plus de gegeven waarde (kan ook optellen of aftrekken tijd uit een datum - tijdwaarde) . Synoniem : Var+= waarde .
 	EnvDiv	Zet een variabele om zichzelf gedeeld door de gegeven waarde . Synoniem : Var / = waarde .
 	EnvGet	Haalt een omgevingsvariabele .
 	EnvMult	Zet een variabele om zichzelf keer de opgegeven waarde . Synoniem : Var * = waarde .
@@ -1237,8 +1264,8 @@
 	MouseGetPos	Haalt de huidige positie van de muiscursor, en eventueel welk venster en controle wordt zweefde over.
 	MouseMove	Beweegt de muiscursor.
 	MsgBox	Toont de opgegeven tekst in een klein venster met een of meer knoppen (zoals ja en nee).
-	NumGet	Retourneert het binaire getal opgeslagen bij het opgegeven adres + offset.
-	NumPut	Winkels Nummer in binair formaat op het opgegeven adres + offset en het adres terug naar de rechterkant van de punt enkel geschreven.
+	NumGet	Retourneert het binaire getal opgeslagen bij het opgegeven adres+offset.
+	NumPut	Winkels Nummer in binair formaat op het opgegeven adres+offset en het adres terug naar de rechterkant van de punt enkel geschreven.
 	Object	Maakt een scripts associatieve array.
 	OnExit	Hiermee geeft u een subroutine om automatisch wanneer het script eindigt draaien.
 	OnMessage	Geeft een functie om automatisch te bellen wanneer het script ontvangt de opgegeven boodschap.
@@ -1351,3 +1378,4 @@
 	WinWaitActive	Wacht tot het opgegeven venster actief is.
 	WinWaitClose	Wacht tot de opgegeven venster niet bestaat.
 	WinWaitNotActive	Wacht tot het opgegeven venster niet actief is.
+	Zip / UnZip	Comprimeren of decomprimeren één of meerdere zip-bestanden.

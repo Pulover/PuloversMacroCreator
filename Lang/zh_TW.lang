@@ -56,7 +56,7 @@
 	i_Lang002 =	文本(&X)
 	i_Lang003 =	控制(&C)
 	i_Lang004 =	暫停(&P)
-	i_Lang005 =	消息框(&E)
+	i_Lang005 =	消息框(&B)
 	i_Lang006 =	關鍵的等待(&K)
 	i_Lang007 =	窗口(&W)
 	i_Lang008 =	圖片 / 像素搜索(&I)
@@ -67,11 +67,13 @@
 	i_Lang013 =	如果報表(&S)
 	i_Lang014 =	變量 / 배열(&V)
 	i_Lang015 =	函數 / 陣列方法(&U)
-	i_Lang016 =	IE瀏覽器(&N)
-	i_Lang017 =	COM接口(&O)
-	i_Lang018 =	運行的Scriptlet(&T)
-	i_Lang019 =	Windows消息(&D)
-	i_Lang020 =	查找命令(&F)
+	i_Lang016 =	發電子郵件(&E)
+	i_Lang017 =	下載/上傳文件(&N)
+	i_Lang018 =	壓縮/解壓縮文件(&Z)
+	i_Lang019 =	IE瀏覽器(&T)
+	i_Lang020 =	COM接口(&O)
+	i_Lang021 =	Windows消息(&D)
+	i_Lang022 =	查找命令(&F)
 		
 ; 06. Edit Sub Menu		
 	e_Lang001 =	複製(&L)
@@ -235,7 +237,7 @@
 	w_Lang053 =	控制（F4）
 	w_Lang054 =	暫停 （F5）
 	w_Lang055 =	消息框 （Shift+F5）
-	w_Lang056 =	關鍵的等待 （Control+F5）
+	w_Lang056 =	關鍵的等待 （Ctrl+F5）
 	w_Lang057 =	窗口（F6）
 	w_Lang058 =	圖片/像素搜索（F7）
 	w_Lang059 =	運行/文件/串/ MISC。 （F8）。
@@ -245,10 +247,10 @@
 	w_Lang063 =	如果報表附註（F10）
 	w_Lang064 =	變量 / 배열(&V) （按Shift+F10）
 	w_Lang065 =	功能 / 陣列方法 （按Ctrl+F10）
-	w_Lang066 =	IE瀏覽器（F11）
-	w_Lang067 =	表達 / COM接口 (Shift + F11)
-	w_Lang068 =	運行的scriptlet（按Ctrl+ F11）
-	w_Lang069 =	Windows消息（F12）
+	w_Lang066 =	IE瀏覽器（F12）
+	w_Lang067 =	表達 / COM接口 (Shift+F12)
+	w_Lang068 =	發電子郵件 (F11)
+	w_Lang069 =	Windows消息（Ctrl+F12）
 	w_Lang070 =	Windows鍵“播放”熱鍵
 	w_Lang071 =	使用操縱桿按鈕，熱鍵
 	w_Lang072 =	添加宏（按Ctrl+T）
@@ -276,17 +278,19 @@
 	w_Lang094 =	搬到這裡
 	w_Lang095 =	複製到這裡
 	w_Lang096 =	組
-	w_Lang097 =	啟用組 （Ctrl + Shift+ G）
-	w_Lang098 =	添加組 （Ctrl + Shift+ Y）
-	w_Lang099 =	刪除組 （Ctrl + Shift+ R）
+	w_Lang097 =	啟用組 （Ctrl+Shift+ G）
+	w_Lang098 =	添加組 （Ctrl+Shift+ Y）
+	w_Lang099 =	刪除組 （Ctrl+Shift+ R）
 	w_Lang100 =	刪除所有組
 	w_Lang101 =	編輯組
 	w_Lang102 =	團隊名字
-	w_Lang103 =	創建函數（Ctrl + Shift+ U）
-	w_Lang104 =	添加參數（Ctrl + Shift+ P）
-	w_Lang105 =	加入返程（Ctrl + Shift+ N）
-	w_Lang106 =	轉換宏功能（Ctrl + Shift+ C）
+	w_Lang103 =	創建函數（Ctrl+Shift+ U）
+	w_Lang104 =	添加參數（Ctrl+Shift+ P）
+	w_Lang105 =	加入返程（Ctrl+Shift+ N）
+	w_Lang106 =	轉換宏功能（Ctrl+Shift+ C）
 	w_Lang107 =	註釋掉選中的行
+	w_Lang108 =	下載/上傳文件 （按Shift+F11）
+	w_Lang109 =	壓縮/解壓縮文件 （按Ctrl+F11）
 		
 ; 15. Command Windows		
 	c_Lang001 =	鼠標
@@ -442,7 +446,7 @@
 	c_Lang152 =	信息
 	c_Lang153 =	總在最前
 	c_Lang154 =	分鐘
-	c_Lang155 =	運行的Scriptlet
+	c_Lang155 =	直到
 	c_Lang156 =	腳本
 	c_Lang157 =	腳本語言
 	c_Lang158 =	不兼容64位！
@@ -520,7 +524,7 @@
 	c_Lang230 =	至
 	c_Lang231 =	抄送
 	c_Lang232 =	密件抄送
-	c_Lang233 =	附加文件
+	c_Lang233 =	F2編輯
 	c_Lang234 =	HTML
 	c_Lang235 =	發電子郵件
 	c_Lang236 =	下載/上傳文件
@@ -530,7 +534,10 @@
 	c_Lang240 =	位置註冊。
 	c_Lang241 =	刪除所有計時器
 	c_Lang242 =	設置計時器
-	c_Lang243 =	直到
+	c_Lang243 =	右對齊
+	c_Lang244 =	右到左
+	c_Lang245 =	附件
+	c_Lang246 =	路徑
 		
 ; 16. Other Windows		
 	t_Lang001 =	導出到華民航空
@@ -723,6 +730,17 @@
 	t_Lang188 =	展開全部
 	t_Lang189 =	語
 	t_Lang190 =	換行符
+	t_Lang191 =	電子郵件帳戶
+	t_Lang192 =	更新
+	t_Lang193 =	雙擊編輯
+	t_Lang194 =	SMTP服務器
+	t_Lang195 =	端口
+	t_Lang196 =	認證
+	t_Lang197 =	用戶名
+	t_Lang198 =	密碼
+	t_Lang199 =	SSL
+	t_Lang200 =	發送模式
+	t_Lang201 =	發送測試
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	打開
@@ -768,7 +786,7 @@
 	d_Lang037 =	圖片/像素找不到。
 	d_Lang038 =	按“確定”繼續。
 	d_Lang039 =	超時！
-	d_Lang040 =	此功能需要GDI +庫。
+	d_Lang040 =	此功能需要GDI+庫。
 		單擊OK轉到下載頁面。
 	d_Lang041 =	變量名包含非法字符。
 	d_Lang042 =	是一個保留字。
@@ -837,7 +855,7 @@
 	d_Lang096 =	- 不要用百分號這裡的變量。
 		- 返回值必須是一個表達式。
 		- 您可以使用字符串，變量，數組和函數。您也可以結合任何這些。
-		- 要使用字符串，它們括在引號，如：“結果是：”A + B。
+		- 要使用字符串，它們括在引號，如：“結果是：”A+B。
 		- 如果你想返回額外的結果，你也可以使用的ByRef的參數。
 		- 陣列可用於返回多個值，甚至命名值。
 	d_Lang097 =	- 不要用百分號這裡的變量。
@@ -857,6 +875,12 @@
 	d_Lang107 =	無法啟動計時器
 	d_Lang108 =	所有位置被登記。請刪除其中之一。
 	d_Lang109 =	目標標籤不存在。
+	d_Lang110 =	確認文件替換
+	d_Lang111 =	已經存在。
+		想更換呢？
+	d_Lang112 =	電子郵件帳戶未找到。
+	d_Lang113 =	報導沒有錯誤。
+	d_Lang114 =	出口（即使編譯）用電子郵件發送功能（CDO）的腳本將使用的電子郵件帳戶可見的信息，包括密碼。該項目的PMC文件沒有這些信息。
 		
 ; 18. Start-up Tips		
 	Start_Tips =	您可以創建宏命令按鈕在主窗口中，或者使用記錄，複製你的行動。轉到“選項”>“設置”>“錄製到選擇什麼樣的輸入將被記錄。
@@ -891,6 +915,7 @@
 	A_List_TT =	選擇“宏”（Ctrl+1~0）
 	AbortKey_TT =	熱鍵停止播放
 	ActiveObj_TT =	嘗試連接到一個活躍的COM對象
+	AddAtt_TT =	附加文件
 	ApplyI_TT =	申請
 	ApplyL_TT =	插入盒（插入）
 	ApplyT_TT =	申請
@@ -912,6 +937,7 @@
 		在編輯控制（這並不影響
 		剪貼板中的內容）。
 	Ex_EdScript_TT =	打开外部编辑器
+	Ex_ExecScript_TT =	運行腳本
 	ExprLink2_TT =	- 不要用百分號這裡的變量。
 		- 大多數AHK表達式的支持。
 		- 您可以使用字符串，變量，數組和函數。
@@ -1101,6 +1127,7 @@
 	ATan	返回弧度的反正切值（正切數）。
 	BlockInput	禁止或允許用戶通過鍵盤和鼠標與電腦互動的能力。
 	Break	退出（終止）一個循環。有效期內任何一種循環。
+	CDO	將使用用戶定義的帳戶的電子郵件。
 	Ceil	返回Number向上舍入到最接近的整數（不帶任何.00後綴）。
 	Chr	返回以數字表示的字符代碼對應的單個字符。
 	Click	單擊鼠標按鈕在指定的坐標。它也可以按住一個按鈕，轉動方向盤，或移動。
@@ -1143,7 +1170,7 @@
 	DriveSpaceFree	檢索可用磁盤空間的驅動器，以兆字節為單位。
 	Edit	打開當前腳本在關聯編輯器進行編輯。
 	Else	指定執行命令（S），如果IF語句的計算結果為FALSE。當一個以上的命令是，把它們括在一個塊（大括號）。
-	EnvAdd	設置一個變量本身以及給定值（也可以添加或減去時間從日期時間值）的總和。代名詞：VAR + =價值。
+	EnvAdd	設置一個變量本身以及給定值（也可以添加或減去時間從日期時間值）的總和。代名詞：VAR+=價值。
 	EnvDiv	設置一個變量除以給定的值本身。代名詞：無功/ =價值。
 	EnvGet	獲取環境變量。
 	EnvMult	設置一個變量，以本身乘以給定的值。代名詞：VAR =價值。
@@ -1351,3 +1378,4 @@
 	WinWaitActive	等待，直到指定的窗口處於活動狀態。
 	WinWaitClose	等待，直到指定的窗口不存在。
 	WinWaitNotActive	等待，直到指定的窗口不活躍。
+	Zip / UnZip	壓縮或解壓縮一個或多個zip文件。

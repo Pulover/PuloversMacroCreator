@@ -57,7 +57,7 @@
 	i_Lang003 =	&Kontroll
 	i_Lang004 =	&Paus
 	i_Lang005 =	M&eddelanderuta
-	i_Lang006 =	&Tangent Vänta
+	i_Lang006 =	T&angent Vänta
 	i_Lang007 =	&Fönster
 	i_Lang008 =	&Bild / Pixel Sök
 	i_Lang009 =	K&ör / Arkiv / String / Misc.
@@ -67,11 +67,13 @@
 	i_Lang013 =	&Om Uttalanden
 	i_Lang014 =	&Variabler / Arrayer
 	i_Lang015 =	F&unktioner / Array metoder
-	i_Lang016 =	Inte&rnet Explorer
-	i_Lang017 =	&COM-Gränssnitt
-	i_Lang018 =	Kör &Skriptlet
-	i_Lang019 =	&Windows-Meddelanden
-	i_Lang020 =	&Hitta ett kommando
+	i_Lang016 =	&Skicka epost
+	i_Lang017 =	La&dda ner / Ladda upp filer
+	i_Lang018 =	&Zip / packa upp filer
+	i_Lang019 =	I&nternet Explorer
+	i_Lang020 =	&COM-Gränssnitt
+	i_Lang021 =	&Windows-Meddelanden
+	i_Lang022 =	&Hitta ett kommando
 		
 ; 06. Edit Sub Menu		
 	e_Lang001 =	&Duplicera
@@ -235,7 +237,7 @@
 	w_Lang053 =	Kontroll (F4)
 	w_Lang054 =	Paus (F5)
 	w_Lang055 =	Meddelanderuta (Shift+F5)
-	w_Lang056 =	Nyckel Vänta (Control+F5)
+	w_Lang056 =	Nyckel Vänta (Ctrl+F5)
 	w_Lang057 =	Fönster (F6)
 	w_Lang058 =	Bild / Pixel Sök (F7)
 	w_Lang059 =	Kör / Arkiv / String / Misc. (F8)
@@ -245,10 +247,10 @@
 	w_Lang063 =	Om rapporter (F10)
 	w_Lang064 =	Variabler / Arrayer (Shift+F10)
 	w_Lang065 =	Funktioner / Array metoder (Ctrl+F10)
-	w_Lang066 =	Internet Explorer (F11)
-	w_Lang067 =	Expression / COM-gränssnitt (Skift+F11)
-	w_Lang068 =	Kör Skriptlet (Ctrl+F11)
-	w_Lang069 =	Windows-meddelanden (F12)
+	w_Lang066 =	Internet Explorer (F12)
+	w_Lang067 =	Expression / COM-gränssnitt (Skift+F12)
+	w_Lang068 =	Skicka epost (F11)
+	w_Lang069 =	Windows-meddelanden (Ctrl+F12)
 	w_Lang070 =	Lägg den Windows-tangenten till "Play" hotkey
 	w_Lang071 =	Använd en joystick knapp som hotkey
 	w_Lang072 =	Lägg Makro (Ctrl+T)
@@ -276,17 +278,19 @@
 	w_Lang094 =	Flytta hit
 	w_Lang095 =	Kopiera här
 	w_Lang096 =	grupper
-	w_Lang097 =	Aktivera grupper (Ctrl + Shift + G)
-	w_Lang098 =	Lägg till grupp (Ctrl + Skift + Y)
-	w_Lang099 =	Ta bort grupp (Ctrl + Skift + R)
+	w_Lang097 =	Aktivera grupper (Ctrl+Shift+G)
+	w_Lang098 =	Lägg till grupp (Ctrl+Skift+Y)
+	w_Lang099 =	Ta bort grupp (Ctrl+Skift+R)
 	w_Lang100 =	Ta bort alla grupper
 	w_Lang101 =	Redigera grupper
 	w_Lang102 =	Gruppnamn
-	w_Lang103 =	Skapa Funktion (Ctrl + Skift + U)
-	w_Lang104 =	Lägg Parameter (Ctrl + Skift + P)
-	w_Lang105 =	Lägg Return (Ctrl + Skift + N)
-	w_Lang106 =	Konvertera Macro att fungera (Ctrl + Skift + C)
+	w_Lang103 =	Skapa Funktion (Ctrl+Skift+U)
+	w_Lang104 =	Lägg Parameter (Ctrl+Skift+P)
+	w_Lang105 =	Lägg Return (Ctrl+Skift+N)
+	w_Lang106 =	Konvertera Macro att fungera (Ctrl+Skift+C)
 	w_Lang107 =	Kommentera ut okontrollerade rader
+	w_Lang108 =	Ladda ner / Ladda upp filer (Shift+F11)
+	w_Lang109 =	Zip / packa upp filer (Ctrl+F11)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mus
@@ -442,7 +446,7 @@
 	c_Lang152 =	Uppgifter
 	c_Lang153 =	Alltid överst
 	c_Lang154 =	Minuter
-	c_Lang155 =	Kör Skriptlet
+	c_Lang155 =	Fram tills
 	c_Lang156 =	Script
 	c_Lang157 =	Script Language
 	c_Lang158 =	Inte kompatibel med 64-bitars!
@@ -520,7 +524,7 @@
 	c_Lang230 =	Till
 	c_Lang231 =	CC
 	c_Lang232 =	BCC
-	c_Lang233 =	Bifoga filer
+	c_Lang233 =	F2 för att redigera
 	c_Lang234 =	HTML
 	c_Lang235 =	Skicka epost
 	c_Lang236 =	Ladda ner / Ladda upp filer
@@ -530,7 +534,10 @@
 	c_Lang240 =	positioner registreras.
 	c_Lang241 =	Ta bort alla timers
 	c_Lang242 =	Set timer
-	c_Lang243 =	Fram tills
+	c_Lang243 =	Höger motiverade
+	c_Lang244 =	Höger till vänster
+	c_Lang245 =	Bilagor
+	c_Lang246 =	Väg
 		
 ; 16. Other Windows		
 	t_Lang001 =	Exportera till AutoHotkey
@@ -723,6 +730,17 @@
 	t_Lang188 =	Expandera alla
 	t_Lang189 =	Språk
 	t_Lang190 =	Konvertera radbrytningar
+	t_Lang191 =	E-postkonton
+	t_Lang192 =	Uppdatera
+	t_Lang193 =	Dubbelklicka för att redigera
+	t_Lang194 =	SMTP-server
+	t_Lang195 =	Hamn
+	t_Lang196 =	Autentisera
+	t_Lang197 =	Användarnamn
+	t_Lang198 =	Lösenord
+	t_Lang199 =	SSL
+	t_Lang200 =	Skicka läge
+	t_Lang201 =	Skicka ett test
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Öppet
@@ -837,7 +855,7 @@
 	d_Lang096 =	- INTE BIFOGA VARIABLER I PROCENT TECKEN HÄR.
 		- Returvärdet måste vara ett uttryck.
 		- Du kan använda strängar, variabler, arrayer och funktioner. Du kan också kombinera någon av dessa.
-		- Om du vill använda strängar, bifoga dem i citationstecken, till exempel: "Resultatet är:" a + b.
+		- Om du vill använda strängar, bifoga dem i citationstecken, till exempel: "Resultatet är:" a+b.
 		- Om du vill återgå extra resultat, kan du också använda ByRef i parametrar.
 		- Arrays kan användas för att returnera flera värden eller ens namngivna värden.
 	d_Lang097 =	- INTE BIFOGA VARIABLER I PROCENT TECKEN HÄR.
@@ -857,6 +875,12 @@
 	d_Lang107 =	Det gick inte att starta timer
 	d_Lang108 =	Alla positioner registreras. Vänligen, ta bort en av dem.
 	d_Lang109 =	Existerar inte måletiketten.
+	d_Lang110 =	Bekräfta fil ersätta
+	d_Lang111 =	existerar redan.
+		Skulle vilja ersätta det?
+	d_Lang112 =	E-postkonto inte hittas.
+	d_Lang113 =	Inget fel rapporterats.
+	d_Lang114 =	Scripts eksporteres (selv om kompilert) med sende e-postfunksjonen  (CDO) vil ha synlige opplysninger av e-postkontoer  som brukes, inkludert passordet. PMC prosjektfilen  ikke har denne informasjonen.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Du kan skapa makron med hjälp av kommandoknapparna i huvudfönstret eller använda inspelaren för att kopiera dina handlingar. Gå till Alternativ> Inställningar> Inspelning för att välja vilka ingångar kommer att registreras.
@@ -891,6 +915,7 @@
 	A_List_TT =	Välj Makro (Ctrl+1~0)
 	AbortKey_TT =	Hotkey för att stoppa uppspelningen
 	ActiveObj_TT =	Försöker ansluta till en Active COM objekt
+	AddAtt_TT =	Bifoga filer
 	ApplyI_TT =	Ansök
 	ApplyL_TT =	Infoga från rutan (Insert)
 	ApplyT_TT =	Ansök
@@ -912,6 +937,7 @@
 		i en Edit-kontroll (detta påverkar inte
 		innehållet i Urklipp).
 	Ex_EdScript_TT =	Avaa ulkoisen editorin
+	Ex_ExecScript_TT =	Köra skript
 	ExprLink2_TT =	- INTE BIFOGA VARIABLER I PROCENT TECKEN HÄR.
 		- De flesta av AHK uttryck stöds.
 		- Du kan använda strängar, variabler, arrayer och funktioner.
@@ -1101,6 +1127,7 @@
 	ATan	Returnerar arcus (antalet vars tangent är Number) i radianer .
 	BlockInput	Avaktiverar eller gör det möjligt för användarens förmåga att interagera med datorn via tangentbord och mus.
 	Break	Avslutar (slutar) en loop. Gäller inuti någon slags loop .
+	CDO	Skickar e-post med hjälp av en användardefinierad  konto.
 	Ceil	Returnerar tal avrundat uppåt till närmaste heltal (utan .00 suffix) .
 	Chr	Returnerar enstaka tecken motsvarar det tecken -nummer efter nummer .
 	Click	Klickar på en musknapp på de angivna koordinaterna . Det kan också hålla ned en knapp , vrid ratten , eller flytta .
@@ -1143,7 +1170,7 @@
 	DriveSpaceFree	Hämtar ledigt diskutrymme för en enhet , i megabyte .
 	Edit	Öppnar det aktuella skriptet för redigering i den tillhörande editorn .
 	Else	Anger kommando (s) att utföra om en IF-satsen utvärderas till false . När mer än ett kommando är närvarande , bifoga dem i ett block (hängslen) .
-	EnvAdd	Ställer en variabel till summan av sig själv plus det givna värdet (kan också lägga till eller dra ifrån tid från ett datum - tidsvärde) . Synonymt med : Var + = Värde .
+	EnvAdd	Ställer en variabel till summan av sig själv plus det givna värdet (kan också lägga till eller dra ifrån tid från ett datum - tidsvärde) . Synonymt med : Var+= Värde .
 	EnvDiv	Ställer en variabel för sig själv dividerat med det givna värdet . Synonymt med : Var / = Värde .
 	EnvGet	Hämtar en miljövariabel .
 	EnvMult	Ställer en variabel för sig själv gånger det angivna värdet . Synonymt med : Var * = Värde .
@@ -1237,8 +1264,8 @@
 	MouseGetPos	Hämtar den aktuella positionen för muspekaren, och eventuellt vilket fönster och kontroll är det svävar över.
 	MouseMove	Flyttar muspekaren.
 	MsgBox	Visar den angivna texten i ett litet fönster som innehåller en eller flera knappar (t.ex. Ja och Nej).
-	NumGet	Returnerar binära talet lagras vid den specificerade adressen + förskjutning.
-	NumPut	Butiker Antal i binärt format på den angivna adressen + offset och returnerar adressen till höger om objektet just skrivit.
+	NumGet	Returnerar binära talet lagras vid den specificerade adressen+förskjutning.
+	NumPut	Butiker Antal i binärt format på den angivna adressen+offset och returnerar adressen till höger om objektet just skrivit.
 	Object	Skapar ett skript associativ array.
 	OnExit	Anger en subrutin för att köras automatiskt när skriptet avslutats.
 	OnMessage	Anger en funktion som ska anropas automatiskt när skriptet emot den angivna meddelandet.
@@ -1351,3 +1378,4 @@
 	WinWaitActive	Väntar tills det angivna fönstret är aktivt.
 	WinWaitClose	Väntar tills det angivna fönstret inte existerar.
 	WinWaitNotActive	Väntar tills det angivna fönstret inte är aktivt.
+	Zip / UnZip	Komprimera eller expandera en eller flera zip-filer.
