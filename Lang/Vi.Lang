@@ -224,73 +224,74 @@
 	w_Lang040 =	Mới (Ctrl+N)
 	w_Lang041 =	Mở (Ctrl+O)
 	w_Lang042 =	Save (Ctrl+S)
-	w_Lang043 =	Xuất khẩu sang AHK (Ctrl+E)
-	w_Lang044 =	Xem trước Script (Ctrl+P)
-	w_Lang045 =	Thiết lập (Ctrl+G)
-	w_Lang046 =	Record Macro (Ctrl+R)
-	w_Lang047 =	Kích hoạt Macro (Ctrl+Enter)
-	w_Lang048 =	Chơi vĩ mô hiện tại (Ctrl+Shift+Enter)
-	w_Lang049 =	Hẹn giờ (Ctrl+Shift+T)
-	w_Lang050 =	Chuột (F2)
-	w_Lang051 =	Văn bản (F3)
-	w_Lang052 =	Chỉnh Sửa Macro (Ctrl+Shift+M)
-	w_Lang053 =	Kiểm soát (F4)
-	w_Lang054 =	Tạm dừng (F5)
-	w_Lang055 =	Hộp tin nhắn (Shift+F5)
-	w_Lang056 =	Chờ chính (Ctrl+F5)
-	w_Lang057 =	Cửa sổ (F6)
-	w_Lang058 =	Hình ảnh / Pixel Tìm kiếm (F7)
-	w_Lang059 =	Chạy / File / String / Misc. (F8)
-	w_Lang060 =	Vòng lặp (F9)
-	w_Lang061 =	Goto (Shift+F9)
-	w_Lang062 =	Nhãn (Ctrl+F9)
-	w_Lang063 =	Nếu báo cáo (F10)
-	w_Lang064 =	Biến / Mảng (Shift+F10)
-	w_Lang065 =	Chức năng / Phương pháp mảng (Ctrl+F10)
-	w_Lang066 =	Internet Explorer (F12)
-	w_Lang067 =	Biểu / COM giao diện (Shift+F12)
-	w_Lang068 =	Gửi email (F11)
-	w_Lang069 =	Tin nhắn cửa sổ (Ctrl+F12)
-	w_Lang070 =	Thêm phím Windows để "chơi" phím nóng
-	w_Lang071 =	Sử dụng nút điều khiển như phím nóng
-	w_Lang072 =	Thêm vĩ mô (Ctrl+T)
-	w_Lang073 =	Gần vĩ mô (Ctrl+W)
-	w_Lang074 =	Bản sao vĩ mô (Ctrl+Shift+D)
-	w_Lang075 =	Nhập khẩu vĩ mô (Ctrl+I)
-	w_Lang076 =	Lưu vĩ mô hiện tại (Ctrl+Alt+S)
-	w_Lang077 =	Move Up (Ctrl+PageUp)
-	w_Lang078 =	Move Down (Ctrl+PageDown)
-	w_Lang079 =	Bản sao dòng chọn (Ctrl+D)
-	w_Lang080 =	Cắt dòng chọn (Ctrl+X)
-	w_Lang081 =	Sao chép dòng chọn (Ctrl+C)
-	w_Lang082 =	Hàng dán sao chép (Ctrl+V)
-	w_Lang083 =	Xóa dòng chọn (Del)
-	w_Lang084 =	Undo (Ctrl+Z)
-	w_Lang085 =	Redo (Ctrl+Y)
-	w_Lang086 =	Sao chép vào...
-	w_Lang087 =	Tìm / Thay thế (Ctrl+F)
-	w_Lang088 =	Chèn / Sửa bình (Ctrl+L)
-	w_Lang089 =	Sửa màu Mark (Ctrl+M)
-	w_Lang090 =	Tùy chỉnh
-	w_Lang091 =	Tìm một lệnh (Ctrl+Shift+F)
-	w_Lang092 =	Chỉnh sửa (Enter)
-	w_Lang093 =	Che
-	w_Lang094 =	Di chuyển đây
-	w_Lang095 =	Sao chép ở đây
-	w_Lang096 =	Các nhóm
-	w_Lang097 =	Kích hoạt tính năng nhóm (Ctrl+Shift+G)
-	w_Lang098 =	Thêm nhóm (Ctrl+Shift+Y)
-	w_Lang099 =	Xóa nhóm (Ctrl+Shift+R)
-	w_Lang100 =	Hủy bỏ tất cả các nhóm
-	w_Lang101 =	Chỉnh sửa nhóm
-	w_Lang102 =	Tên nhóm
-	w_Lang103 =	Tạo Function (Ctrl+Shift+U)
-	w_Lang104 =	Thêm Parameter (Ctrl+Shift+P)
-	w_Lang105 =	Thêm Return (Ctrl+Shift+N)
-	w_Lang106 =	Chuyển đổi Macro Để Function (Ctrl+Shift+C)
-	w_Lang107 =	Thảo luận ra các hàng không được kiểm soát
-	w_Lang108 =	Tải về / tập tin Tải lên (Shift+F11)
-	w_Lang109 =	Zip / Giải nén file (Ctrl+F11)
+	w_Lang043 =	Save As (Ctrl+Shift+S)
+	w_Lang044 =	Xuất khẩu sang AHK (Ctrl+E)
+	w_Lang045 =	Xem trước Script (Ctrl+P)
+	w_Lang046 =	Thiết lập (Ctrl+G)
+	w_Lang047 =	Record Macro (Ctrl+R)
+	w_Lang048 =	Kích hoạt Macro (Ctrl+Enter)
+	w_Lang049 =	Chơi vĩ mô hiện tại (Ctrl+Shift+Enter)
+	w_Lang050 =	Hẹn giờ (Ctrl+Shift+T)
+	w_Lang051 =	Chuột (F2)
+	w_Lang052 =	Văn bản (F3)
+	w_Lang053 =	Chỉnh Sửa Macro (Ctrl+Shift+M)
+	w_Lang054 =	Kiểm soát (F4)
+	w_Lang055 =	Tạm dừng (F5)
+	w_Lang056 =	Hộp tin nhắn (Shift+F5)
+	w_Lang057 =	Chờ chính (Ctrl+F5)
+	w_Lang058 =	Cửa sổ (F6)
+	w_Lang059 =	Hình ảnh / Pixel Tìm kiếm (F7)
+	w_Lang060 =	Chạy / File / String / Misc. (F8)
+	w_Lang061 =	Vòng lặp (F9)
+	w_Lang062 =	Goto (Shift+F9)
+	w_Lang063 =	Nhãn (Ctrl+F9)
+	w_Lang064 =	Nếu báo cáo (F10)
+	w_Lang065 =	Biến / Mảng (Shift+F10)
+	w_Lang066 =	Chức năng / Phương pháp mảng (Ctrl+F10)
+	w_Lang067 =	Internet Explorer (F12)
+	w_Lang068 =	Biểu / COM giao diện (Shift+F12)
+	w_Lang069 =	Gửi email (F11)
+	w_Lang070 =	Tin nhắn cửa sổ (Ctrl+F12)
+	w_Lang071 =	Thêm phím Windows để "chơi" phím nóng
+	w_Lang072 =	Sử dụng nút điều khiển như phím nóng
+	w_Lang073 =	Thêm vĩ mô (Ctrl+T)
+	w_Lang074 =	Gần vĩ mô (Ctrl+W)
+	w_Lang075 =	Bản sao vĩ mô (Ctrl+Shift+D)
+	w_Lang076 =	Nhập khẩu vĩ mô (Ctrl+I)
+	w_Lang077 =	Lưu vĩ mô hiện tại (Ctrl+Alt+S)
+	w_Lang078 =	Move Up (Ctrl+PageUp)
+	w_Lang079 =	Move Down (Ctrl+PageDown)
+	w_Lang080 =	Bản sao dòng chọn (Ctrl+D)
+	w_Lang081 =	Cắt dòng chọn (Ctrl+X)
+	w_Lang082 =	Sao chép dòng chọn (Ctrl+C)
+	w_Lang083 =	Hàng dán sao chép (Ctrl+V)
+	w_Lang084 =	Xóa dòng chọn (Del)
+	w_Lang085 =	Undo (Ctrl+Z)
+	w_Lang086 =	Redo (Ctrl+Y)
+	w_Lang087 =	Sao chép vào...
+	w_Lang088 =	Tìm / Thay thế (Ctrl+F)
+	w_Lang089 =	Chèn / Sửa bình (Ctrl+L)
+	w_Lang090 =	Sửa màu Mark (Ctrl+M)
+	w_Lang091 =	Tùy chỉnh
+	w_Lang092 =	Tìm một lệnh (Ctrl+Shift+F)
+	w_Lang093 =	Chỉnh sửa (Enter)
+	w_Lang094 =	Che
+	w_Lang095 =	Di chuyển đây
+	w_Lang096 =	Sao chép ở đây
+	w_Lang097 =	Các nhóm
+	w_Lang098 =	Kích hoạt tính năng nhóm (Ctrl+Shift+G)
+	w_Lang099 =	Thêm nhóm (Ctrl+Shift+Y)
+	w_Lang100 =	Xóa nhóm (Ctrl+Shift+R)
+	w_Lang101 =	Hủy bỏ tất cả các nhóm
+	w_Lang102 =	Chỉnh sửa nhóm
+	w_Lang103 =	Tên nhóm
+	w_Lang104 =	Tạo Function (Ctrl+Shift+U)
+	w_Lang105 =	Thêm Parameter (Ctrl+Shift+P)
+	w_Lang106 =	Thêm Return (Ctrl+Shift+N)
+	w_Lang107 =	Chuyển đổi Macro Để Function (Ctrl+Shift+C)
+	w_Lang108 =	Thảo luận ra các hàng không được kiểm soát
+	w_Lang109 =	Tải về / tập tin Tải lên (Shift+F11)
+	w_Lang110 =	Zip / Giải nén file (Ctrl+F11)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Chuột
@@ -538,6 +539,7 @@
 	c_Lang244 =	Phải sang trái
 	c_Lang245 =	File đính kèm
 	c_Lang246 =	Con đường
+	c_Lang247 =	Če
 		
 ; 16. Other Windows		
 	t_Lang001 =	Xuất khẩu sang AutoHotkey
@@ -741,6 +743,11 @@
 	t_Lang199 =	SSL
 	t_Lang200 =	Gửi chế độ
 	t_Lang201 =	Gửi một thử nghiệm
+	t_Lang202 =	Màn Hình Và Cửa Sổ
+	t_Lang203 =	Phát Hiện Các Cửa Sổ Ẩn
+	t_Lang204 =	Phát Hiện Văn Bản Ẩn
+	t_Lang205 =	Chế Độ Trận Tranh Đai
+	t_Lang206 =	Tốc Độ Trận Đấu Tiêu Đề
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Mở
@@ -818,7 +825,7 @@
 		Để vô hiệu hóa tự động kiểm tra chọn Help> Check khi khởi động
 	d_Lang062 =	Bạn đã có phiên bản mới nhất.
 	d_Lang063 =	Một lỗi xảy ra trong khi kiểm tra.
-	d_Lang064 =	Lỗi đối tượng COM trong
+	d_Lang064 =	Napaka v
 	d_Lang065 =	Hàng
 	d_Lang066 =	Đặc biệt
 	d_Lang067 =	Hiển thị cửa sổ này khi khởi động
@@ -880,7 +887,7 @@
 		Muốn thay thế nó?
 	d_Lang112 =	Không tìm thấy tài khoản email.
 	d_Lang113 =	Báo cáo không có lỗi.
-	d_Lang114 =	Kịch bản xuất khẩu (ngay cả khi biên dịch) với chức năng gửi email (CDO) sẽ có thông tin rõ ràng của các tài khoản email được sử dụng, bao gồm cả các PASSWORD. Hồ sơ dự án PMC không có thông tin này.
+	d_Lang114 =	Skripte izvažajo (tudi če je prevedeni) z za pošiljanje e-pošte funkcije (CDO) bodo imeli vidne informacije o e-poštnih računov, ki se uporabljajo, vključno z geslom. Projekt datoteke PMC teh podatkov ne imeti.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Bạn có thể tạo macro bằng cách sử dụng nút lệnh trong cửa sổ chính hoặc sử dụng máy ghi âm để sao chép các hành động của bạn. Vào Tùy chọn> Cài đặt> Ghi chọn những đầu vào sẽ được ghi lại.
@@ -936,8 +943,41 @@
 	EditPaste_TT =	Bột nhão dây ở vị trí dấu nháy / chèn
 		trong một điều khiển Edit (điều này không ảnh hưởng đến
 		các nội dung của clipboard).
+	Ex_AF_TT =	Bỏ qua các phương pháp nhẹ nhàng kích hoạt một cửa sổ
+		và đi thẳng vào các phương pháp mạnh mẽ.
+	Ex_DH_TT =	Xác định liệu các cửa sổ vô hình được "nhìn thấy" bởi kịch bản.
 	Ex_EdScript_TT =	Mở trong trình soạn thảo bên ngoài
+	Ex_EdVars_TT =	Chọn các biến toàn cầu được xuất khẩu.
 	Ex_ExecScript_TT =	Chạy kịch bản
+	Ex_HK_TT =	Buộc việc sử dụng các móc để thực hiện tất cả
+		hoặc một số phím tắt bàn phím.
+	Ex_IfDir_TT =	Tạo phím nóng và hotstrings tùy thuộc bối cảnh nhạy cảm
+		vào loại cửa sổ đang hoạt động hay tồn tại.
+	Ex_IfDirType_TT =	Tạo phím nóng và hotstrings tùy thuộc bối cảnh nhạy cảm
+		vào loại cửa sổ đang hoạt động hay tồn tại.
+	Ex_IN_TT =	Gây ra các kịch bản để hành xử như thể các quy định
+		nội dung của tập tin có mặt tại vị trí này chính xác.
+	Ex_MD_TT =	Thiết lập sự chậm trễ đó sẽ xảy ra sau khi
+		mỗi di chuyển chuột hoặc nhấp chuột.
+	Ex_MT_TT =	Thiết lập số lượng tối đa đồng thời
+		chủ đề cho mỗi phím nóng hoặc hotstring.
+	Ex_NT_TT =	Vô hiệu hóa hiển thị một biểu tượng trên khay.
+	Ex_PT_TT =	Giữ một kịch bản vĩnh viễn chạy
+		(Có nghĩa là, cho đến khi người dùng đóng nó hoặc ExitApp là gặp phải).
+	Ex_SB_TT =	Xác định nhanh như thế nào một kịch bản sẽ chạy (ảnh hưởng đến việc sử dụng CPU).
+	Ex_SC_TT =	Thiết lập sự chậm trễ đó sẽ xảy ra sau khi
+		mỗi kiểm soát sửa đổi lệnh.
+	Ex_SI_TT =	Xác định liệu một kịch bản được phép chạy một lần nữa khi nó đang chạy.
+	Ex_SK_TT =	Thiết lập sự chậm trễ đó sẽ xảy ra sau mỗi
+		tổ hợp phím gửi Gửi hoặc ControlSend.
+	Ex_SM_TT =	Gửi làm đồng nghĩa với SendInput hoặc SendPlay hơn
+		mặc định (SendEvent). Cũng làm cho Click và MouseMove / Click / Kéo
+		sử dụng phương pháp xác định.
+	Ex_ST_TT =	Thiết lập các hành vi phù hợp với các tham số WinTitle trong lệnh như WinWait.
+	Ex_SW_TT =	Thiết lập sự chậm trễ đó sẽ xảy ra sau khi
+		mỗi lệnh cửa sổ, chẳng hạn như WinActivate.
+	Ex_UV_TT =	Xuất khẩu các biến toàn cầu.
+	ExpList_TT =	Đúp Nhấn vào đây để chỉnh sửa
 	ExprLink2_TT =	- KHÔNG GỬI KÈM BIẾN TRONG DẤU HIỆU PERCENT ĐÂY.
 		- Hầu hết các biểu AHK được hỗ trợ.
 		- Bạn có thể sử dụng các chuỗi, các biến, mảng và chức năng.
@@ -951,6 +991,8 @@
 	ExpView_TT =	Biên tập viên cao cấp
 	ExpView2_TT =	Biên tập viên cao cấp
 	Fast_TT =	Sử dụng một phương pháp tìm kiếm nhanh hơn (đề nghị)
+	HiddenWin_TT =	Xác định xem cửa sổ vô hình đang "nhìn thấy" của kịch bản.
+	HiddenText_TT =	Xác định xem văn bản vô hình trong một cửa sổ được "nhìn thấy" với mục đích của việc tìm kiếm các cửa sổ. Điều này ảnh hưởng đến lệnh như IfWinExist và WinActivate.
 	HScale_TT =	Quy mô chiều cao
 	IconN_TT =	Số nhóm biểu tượng
 	IfLVColor_TT =	Nhấn vào đây để chọn một màu
@@ -986,48 +1028,6 @@
 	Screen_TT =	Tọa độ tương đối so với máy tính để bàn (toàn màn hình).
 	Screenshot_TT =	Hãy Ảnh chụp màn hình
 	SetText_TT =	Thay đổi nội dung của một điều khiển.
-	TimeoutM_TT =	0 = vô hạn
-	ToggleC_TT =	Kích hoạt ghi âm tương đối khi nhà nước chính là trên.
-	TransC_TT =	Màu trong suốt
-	VarCopyA_TT =	Sao chép nội dung biến hiện nay
-	VarCopyB_TT =	Sao chép nội dung biến hiện nay
-	VariatT_TT =	Sắc thái của sự thay đổi
-	WScale_TT =	Quy mô chiều rộng
-		
-; 20. Tooltips from AHK Docs		
-	Ex_AF_TT =	Bỏ qua các phương pháp nhẹ nhàng kích hoạt một cửa sổ
-		và đi thẳng vào các phương pháp mạnh mẽ.
-	Ex_DH_TT =	Xác định liệu các cửa sổ vô hình được "nhìn thấy" bởi kịch bản.
-	Ex_EdVars_TT =	Chọn các biến toàn cầu được xuất khẩu.
-	Ex_HK_TT =	Buộc việc sử dụng các móc để thực hiện tất cả
-		hoặc một số phím tắt bàn phím.
-	Ex_IfDir_TT =	Tạo phím nóng và hotstrings tùy thuộc bối cảnh nhạy cảm
-		vào loại cửa sổ đang hoạt động hay tồn tại.
-	Ex_IfDirType_TT =	Tạo phím nóng và hotstrings tùy thuộc bối cảnh nhạy cảm
-		vào loại cửa sổ đang hoạt động hay tồn tại.
-	Ex_IN_TT =	Gây ra các kịch bản để hành xử như thể các quy định
-		nội dung của tập tin có mặt tại vị trí này chính xác.
-	Ex_MD_TT =	Thiết lập sự chậm trễ đó sẽ xảy ra sau khi
-		mỗi di chuyển chuột hoặc nhấp chuột.
-	Ex_MT_TT =	Thiết lập số lượng tối đa đồng thời
-		chủ đề cho mỗi phím nóng hoặc hotstring.
-	Ex_NT_TT =	Vô hiệu hóa hiển thị một biểu tượng trên khay.
-	Ex_PT_TT =	Giữ một kịch bản vĩnh viễn chạy
-		(Có nghĩa là, cho đến khi người dùng đóng nó hoặc ExitApp là gặp phải).
-	Ex_SB_TT =	Xác định nhanh như thế nào một kịch bản sẽ chạy (ảnh hưởng đến việc sử dụng CPU).
-	Ex_SC_TT =	Thiết lập sự chậm trễ đó sẽ xảy ra sau khi
-		mỗi kiểm soát sửa đổi lệnh.
-	Ex_SI_TT =	Xác định liệu một kịch bản được phép chạy một lần nữa khi nó đang chạy.
-	Ex_SK_TT =	Thiết lập sự chậm trễ đó sẽ xảy ra sau mỗi
-		tổ hợp phím gửi Gửi hoặc ControlSend.
-	Ex_SM_TT =	Gửi làm đồng nghĩa với SendInput hoặc SendPlay hơn
-		mặc định (SendEvent). Cũng làm cho Click và MouseMove / Click / Kéo
-		sử dụng phương pháp xác định.
-	Ex_ST_TT =	Thiết lập các hành vi phù hợp với các tham số WinTitle trong lệnh như WinWait.
-	Ex_SW_TT =	Thiết lập sự chậm trễ đó sẽ xảy ra sau khi
-		mỗi lệnh cửa sổ, chẳng hạn như WinActivate.
-	Ex_UV_TT =	Xuất khẩu các biến toàn cầu.
-	ExpList_TT =	Đúp Nhấn vào đây để chỉnh sửa
 	SI_TT =	Các FORCE từ bỏ qua các hộp thoại và thay thế các ví dụ cũ sẽ tự động,
 		tương tự như trong thực thi các lệnh lại.
 		Từ bỏ qua bỏ qua hộp thoại và lá dụ cũ chạy.
@@ -1044,8 +1044,21 @@
 		2: tiêu đề của một cửa sổ có thể chứa WinTitle bất cứ nơi nào bên trong nó là một trận đấu.
 		3: Một tiêu đề của cửa sổ phải phù hợp chính xác WinTitle là một trận đấu.
 		Regex: Thay đổi WinTitle, WinText, ExcludeTitle, và ExcludeText được biểu thức thông thường.
+	TimeoutM_TT =	0 = vô hạn
+	TitleMatch_TT =	1: tiêu đề của một cửa sổ phải bắt đầu với WinTitle định là một trận đấu.
+		2: tiêu đề của một cửa sổ có thể chứa WinTitle bất cứ nơi nào bên trong nó là một trận đấu.
+		3: tiêu đề của một cửa sổ chính xác phải phù hợp với WinTitle là một trận đấu.
+		Regex: Thay đổi WinTitle, WinText, Loại trừ Tiêu đề, và Loại trừ các văn bản để được biểu thức thông thường.
+	TitleSpeed_TT =	Nhanh: Đây là hành vi mặc định. Hiệu suất có thể được tốt hơn đáng kể so với chậm, nhưng các yếu tố WinText nhất định đối với một số loại cửa sổ có thể không được "nhìn" bằng các lệnh cửa sổ khác nhau.
+		Chậm: có thể là chậm hơn nhiều, nhưng tất cả WinText có thể được lấy từ tất cả các cửa sổ như là một lệnh cửa sổ tìm kiếm thông qua họ cho một trận đấu. Window Spy cho thấy phần nào của văn bản của cửa sổ (nếu có) yêu cầu chế độ chậm.
+	ToggleC_TT =	Kích hoạt ghi âm tương đối khi nhà nước chính là trên.
+	TransC_TT =	Màu trong suốt
+	VarCopyA_TT =	Sao chép nội dung biến hiện nay
+	VarCopyB_TT =	Sao chép nội dung biến hiện nay
+	VariatT_TT =	Sắc thái của sự thay đổi
+	WScale_TT =	Quy mô chiều rộng
 		
-; 21. Operators		
+; 20. Operators		
 	As_Oper_1 =	Gán
 	As_Oper_2 =	Thêm
 	As_Oper_3 =	Trừ
@@ -1065,8 +1078,16 @@
 	Co_Oper_5 =	Ít
 	Co_Oper_6 =	Lớn hơn hoặc bằng
 	Co_Oper_7 =	Ít hơn hoặc bằng
+	Co_Oper_8 =	Trong (danh sách)
+	Co_Oper_9 =	 Không phải trong (danh sách)
+	Co_Oper_10 =	 Chứa (danh sách)
+	Co_Oper_11 =	 Không chứa (danh sách)
+	Co_Oper_12 =	 Giữa (dòng 1) và (2 dòng)
+	Co_Oper_13 =	 Không phải giữa (dòng 1) và (2 dòng)
+	Co_Oper_14 =	 Là (loại)
+	Co_Oper_15 =	 Không phải là (loại)
 		
-; 22. IE Commands Tips		
+; 21. IE Commands Tips		
 	IE_Cmd_Index =	
 	Checked	Thiết lập hoặc lấy trạng thái của hộp kiểm tra hoặc nút radio.
 	Click	Mô phỏng một nhấp chuột vào đối tượng.
@@ -1094,7 +1115,7 @@
 	Value	Được hoặc đặt giá trị của đối tượng.
 	Width	Thiết lập hoặc lấy chiều rộng của đối tượng.
 		
-; 23. COM Methods Tips		
+; 22. COM Methods Tips		
 	COM_CLSID_Index =	
 	Excel.Application	Thao túng tờ Excel.
 	HTMLfile	Có thể được sử dụng để đọc, viết và tương tác với HTML.
@@ -1117,7 +1138,7 @@
 	WScript.Shell	Nhiệm vụ quản lý khác nhau (nhiều nhiệm vụ AHK bản địa).
 	Word.Application	Thao tác các tài liệu Word.
 		
-; 24. AHK Commands Tips		
+; 23. AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	Abs	Trả về giá trị tuyệt đối của số.
 	ACos	Trả về arccosine (số có cosin là số) trong radian.

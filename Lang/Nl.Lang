@@ -224,73 +224,74 @@
 	w_Lang040 =	Nieuw (Ctrl+N)
 	w_Lang041 =	Openen (Ctrl+O)
 	w_Lang042 =	Opslaan (Ctrl+S)
-	w_Lang043 =	Exporteren naar AHK (Ctrl+E)
-	w_Lang044 =	Voorbeeld Script (Ctrl+P)
-	w_Lang045 =	Instellingen (Ctrl+G)
-	w_Lang046 =	Macro opnemen (Ctrl+R)
-	w_Lang047 =	Macro's activeren (Ctrl+Enter)
-	w_Lang048 =	Speel huidige macro (Ctrl+Shift+Enter)
-	w_Lang049 =	Timer (Ctrl+Shift+T)
-	w_Lang050 =	Muis (F2)
-	w_Lang051 =	Tekst (F3)
-	w_Lang052 =	Macro's Bewerken (Ctrl+Shift+M)
-	w_Lang053 =	Control (F4)
-	w_Lang054 =	Pauzeren (F5)
-	w_Lang055 =	Message Box (Shift+F5)
-	w_Lang056 =	Key Wachten (Ctrl+F5)
-	w_Lang057 =	Window (F6)
-	w_Lang058 =	Afbeelding / Pixel Zoeken (F7)
-	w_Lang059 =	Run / Bestand / String / Misc. (F8)
-	w_Lang060 =	Loop (F9)
-	w_Lang061 =	Ga naar (Shift+F9)
-	w_Lang062 =	Label (Ctrl+F9)
-	w_Lang063 =	Als Verklaringen (F10)
-	w_Lang064 =	Variabelen / Scala (Shift+F10)
-	w_Lang065 =	Functies / Scala methoden (Ctrl+F10)
-	w_Lang066 =	Internet Explorer (F12)
-	w_Lang067 =	Uitdrukking / COM-interface (Shift+F12)
-	w_Lang068 =	E-mail verzenden (F11)
-	w_Lang069 =	Windows Messages (Ctrl+F12)
-	w_Lang070 =	Voeg de Windows-toets op "Play" sneltoets
-	w_Lang071 =	Gebruik een joystick knop als sneltoets
-	w_Lang072 =	Voeg Macro (Ctrl+T)
-	w_Lang073 =	Sluiten Macro (Ctrl+W)
-	w_Lang074 =	Dubbele Macro (Ctrl+Shift+D)
-	w_Lang075 =	Import Macro (Ctrl+I)
-	w_Lang076 =	Save Current Macro (Ctrl+Alt+S)
-	w_Lang077 =	Move Up (Ctrl+PageUp)
-	w_Lang078 =	Omlaag (Ctrl+PageDown)
-	w_Lang079 =	Geselecteerde rijen dupliceren (Ctrl+D)
-	w_Lang080 =	Snijd Geselecteerde rijen (Ctrl+X)
-	w_Lang081 =	Kopieer geselecteerde rijen (Ctrl+C)
-	w_Lang082 =	Plakken Gekopieerde rijen (Ctrl+V)
-	w_Lang083 =	Geselecteerde rijen verwijderen (Del)
-	w_Lang084 =	Ongedaan maken (Ctrl+Z)
-	w_Lang085 =	Opnieuw (Ctrl+Y)
-	w_Lang086 =	Kopiëren naar...
-	w_Lang087 =	Zoeken / Vervangen (Ctrl+F)
-	w_Lang088 =	Invoegen / Opmerking bewerken (Ctrl+L)
-	w_Lang089 =	Bewerken kleurmarkering (Ctrl+M)
-	w_Lang090 =	Aanpassen
-	w_Lang091 =	Zoek een commando (Ctrl+Shift+F)
-	w_Lang092 =	Redigeren (Enter)
-	w_Lang093 =	Verbergen
-	w_Lang094 =	Bewegen hier
-	w_Lang095 =	Kopieer hier
-	w_Lang096 =	groepen
-	w_Lang097 =	Groepen inschakelen (Ctrl+Shift+G)
-	w_Lang098 =	Groep toevoegen (Ctrl+Shift+Y)
-	w_Lang099 =	Verwijder groep (Ctrl+Shift+R)
-	w_Lang100 =	Verwijder alle groepen
-	w_Lang101 =	Groepen bewerken
-	w_Lang102 =	Groepsnaam
-	w_Lang103 =	Maak Function (Ctrl+Shift+U)
-	w_Lang104 =	Voeg Parameter (Ctrl+Shift+P)
-	w_Lang105 =	Voeg Return (Ctrl+Shift+N)
-	w_Lang106 =	Omzetten Macro Aan (Ctrl+Shift+C) Functie
-	w_Lang107 =	Commentaar uit ongecontroleerd rijen
-	w_Lang108 =	Download / Upload bestanden (Shift+F11)
-	w_Lang109 =	Zip / Unzip bestanden (Ctrl+F11)
+	w_Lang043 =	Opslaan als (Ctrl+Shift+S)
+	w_Lang044 =	Exporteren naar AHK (Ctrl+E)
+	w_Lang045 =	Voorbeeld Script (Ctrl+P)
+	w_Lang046 =	Instellingen (Ctrl+G)
+	w_Lang047 =	Macro opnemen (Ctrl+R)
+	w_Lang048 =	Macro's activeren (Ctrl+Enter)
+	w_Lang049 =	Speel huidige macro (Ctrl+Shift+Enter)
+	w_Lang050 =	Timer (Ctrl+Shift+T)
+	w_Lang051 =	Muis (F2)
+	w_Lang052 =	Tekst (F3)
+	w_Lang053 =	Macro's Bewerken (Ctrl+Shift+M)
+	w_Lang054 =	Control (F4)
+	w_Lang055 =	Pauzeren (F5)
+	w_Lang056 =	Message Box (Shift+F5)
+	w_Lang057 =	Key Wachten (Ctrl+F5)
+	w_Lang058 =	Window (F6)
+	w_Lang059 =	Afbeelding / Pixel Zoeken (F7)
+	w_Lang060 =	Run / Bestand / String / Misc. (F8)
+	w_Lang061 =	Loop (F9)
+	w_Lang062 =	Ga naar (Shift+F9)
+	w_Lang063 =	Label (Ctrl+F9)
+	w_Lang064 =	Als Verklaringen (F10)
+	w_Lang065 =	Variabelen / Scala (Shift+F10)
+	w_Lang066 =	Functies / Scala methoden (Ctrl+F10)
+	w_Lang067 =	Internet Explorer (F12)
+	w_Lang068 =	Uitdrukking / COM-interface (Shift+F12)
+	w_Lang069 =	E-mail verzenden (F11)
+	w_Lang070 =	Windows Messages (Ctrl+F12)
+	w_Lang071 =	Voeg de Windows-toets op "Play" sneltoets
+	w_Lang072 =	Gebruik een joystick knop als sneltoets
+	w_Lang073 =	Voeg Macro (Ctrl+T)
+	w_Lang074 =	Sluiten Macro (Ctrl+W)
+	w_Lang075 =	Dubbele Macro (Ctrl+Shift+D)
+	w_Lang076 =	Import Macro (Ctrl+I)
+	w_Lang077 =	Save Current Macro (Ctrl+Alt+S)
+	w_Lang078 =	Move Up (Ctrl+PageUp)
+	w_Lang079 =	Omlaag (Ctrl+PageDown)
+	w_Lang080 =	Geselecteerde rijen dupliceren (Ctrl+D)
+	w_Lang081 =	Snijd Geselecteerde rijen (Ctrl+X)
+	w_Lang082 =	Kopieer geselecteerde rijen (Ctrl+C)
+	w_Lang083 =	Plakken Gekopieerde rijen (Ctrl+V)
+	w_Lang084 =	Geselecteerde rijen verwijderen (Del)
+	w_Lang085 =	Ongedaan maken (Ctrl+Z)
+	w_Lang086 =	Opnieuw (Ctrl+Y)
+	w_Lang087 =	Kopiëren naar...
+	w_Lang088 =	Zoeken / Vervangen (Ctrl+F)
+	w_Lang089 =	Invoegen / Opmerking bewerken (Ctrl+L)
+	w_Lang090 =	Bewerken kleurmarkering (Ctrl+M)
+	w_Lang091 =	Aanpassen
+	w_Lang092 =	Zoek een commando (Ctrl+Shift+F)
+	w_Lang093 =	Redigeren (Enter)
+	w_Lang094 =	Verbergen
+	w_Lang095 =	Bewegen hier
+	w_Lang096 =	Kopieer hier
+	w_Lang097 =	groepen
+	w_Lang098 =	Groepen inschakelen (Ctrl+Shift+G)
+	w_Lang099 =	Groep toevoegen (Ctrl+Shift+Y)
+	w_Lang100 =	Verwijder groep (Ctrl+Shift+R)
+	w_Lang101 =	Verwijder alle groepen
+	w_Lang102 =	Groepen bewerken
+	w_Lang103 =	Groepsnaam
+	w_Lang104 =	Maak Function (Ctrl+Shift+U)
+	w_Lang105 =	Voeg Parameter (Ctrl+Shift+P)
+	w_Lang106 =	Voeg Return (Ctrl+Shift+N)
+	w_Lang107 =	Omzetten Macro Aan (Ctrl+Shift+C) Functie
+	w_Lang108 =	Commentaar uit ongecontroleerd rijen
+	w_Lang109 =	Download / Upload bestanden (Shift+F11)
+	w_Lang110 =	Zip / Unzip bestanden (Ctrl+F11)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Muis
@@ -538,6 +539,7 @@
 	c_Lang244 =	Rechts naar links
 	c_Lang245 =	Toebehoren
 	c_Lang246 =	Pad
+	c_Lang247 =	indien
 		
 ; 16. Other Windows		
 	t_Lang001 =	Exporteren naar AutoHotkey
@@ -741,6 +743,11 @@
 	t_Lang199 =	SSL
 	t_Lang200 =	Stuur-modus
 	t_Lang201 =	Stuur een test
+	t_Lang202 =	Screen En Window
+	t_Lang203 =	Detecteren Verborgen Vensters
+	t_Lang204 =	Detecteren Verborgen Tekst
+	t_Lang205 =	Titelgelijke Mode
+	t_Lang206 =	Titelgelijke Snelheid
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Open
@@ -818,7 +825,7 @@
 		Om automatische controles uit te schakelen selecteert u Help > Controleer bij opstarten
 	d_Lang062 =	Je hebt al de meest recente versie.
 	d_Lang063 =	Er is een fout opgetreden tijdens het controleren.
-	d_Lang064 =	COM-object fout in
+	d_Lang064 =	Fout in
 	d_Lang065 =	Rij
 	d_Lang066 =	Specifiek
 	d_Lang067 =	Laat dit venster bij het opstarten
@@ -936,8 +943,41 @@
 	EditPaste_TT =	Pasta's String op het dakje / invoegpositie
 		in een Edit-besturingselement (dit heeft geen invloed
 		de inhoud van het klembord).
+	Ex_AF_TT =	Slaat de zachte methode voor het activeren van een venster
+		en gaat rechtstreeks naar de krachtige methode.
+	Ex_DH_TT =	Bepaalt of onzichtbare ramen zijn 'gezien' door het script.
 	Ex_EdScript_TT =	Open in externe editor
+	Ex_EdVars_TT =	Selecteer globale variabelen te exporteren.
 	Ex_ExecScript_TT =	Script
+	Ex_HK_TT =	Legt het gebruik van de haak genoeg implementeren
+		of een toetsenbord sneltoetsen.
+	Ex_IfDir_TT =	Maakt contextgevoelige sneltoetsen en hotstrings afhankelijk
+		van het type venster dat actief is of bestaat.
+	Ex_IfDirType_TT =	Maakt contextgevoelige sneltoetsen en hotstrings afhankelijk
+		van het type venster dat actief is of bestaat.
+	Ex_IN_TT =	Veroorzaakt het script te gedragen alsof de opgegeven
+		bestand de inhoud van zijn aanwezig op deze exacte positie.
+	Ex_MD_TT =	Hiermee stelt u de vertraging die zal plaatsvinden na
+		elke muisbeweging of klik op.
+	Ex_MT_TT =	Stelt het maximum aantal gelijktijdige
+		draden per sneltoets of hotstring.
+	Ex_NT_TT =	Schakelt de weergave van een pictogram in het systeemvak.
+	Ex_PT_TT =	Houdt een script dat zich permanent langs
+		(dat is, totdat de gebruiker sluit het of ExitApp wordt aangetroffen).
+	Ex_SB_TT =	Bepaalt hoe snel een script wordt uitgevoerd (bij gebruik van de CPU).
+	Ex_SC_TT =	Hiermee stelt u de vertraging die zal plaatsvinden na
+		elke controle-modificerende commando.
+	Ex_SI_TT =	Bepaalt of een script mag opnieuw uit te voeren wanneer deze al wordt uitgevoerd.
+	Ex_SK_TT =	Hiermee stelt u de vertraging die zal plaatsvinden na elke
+		toetsaanslag per verzenden of ControlSend.
+	Ex_SM_TT =	Maakt Stuur synoniem met SendInput of SendPlay in plaats van
+		de standaard (sendEvent). Maakt ook Klik en mouseMove / Klik / Sleep
+		gebruik maken van de voorgeschreven methode.
+	Ex_ST_TT =	Hiermee stelt u de bijpassende gedrag van de WinTitle parameter in commando's zoals WinWait.
+	Ex_SW_TT =	Hiermee stelt u de vertraging die zal plaatsvinden na
+		elke windowing commando, zoals WinActivate.
+	Ex_UV_TT =	Exporteren globale variabelen.
+	ExpList_TT =	Dubbelklik op om te bewerken
 	ExprLink2_TT =	- NIET BIJGAAND VARIABELEN IN PROCENTTEKENS HIER.
 		- De meeste van de AHK uitdrukkingen worden ondersteund.
 		- U kunt gebruik maken van snaren, variabelen, arrays en functies.
@@ -951,6 +991,8 @@
 	ExpView_TT =	Geavanceerde Editor
 	ExpView2_TT =	Geavanceerde Editor
 	Fast_TT =	Maakt gebruik van een snellere zoekmethode (aanbevolen)
+	HiddenWin_TT =	Bepaalt of onzichtbare vensters worden door het script 'gezien'.
+	HiddenText_TT =	Bepaalt of onzichtbare tekst in een venster wordt "gezien" voor het doel van het vinden van het venster. Dit heeft invloed op commando's zoals IfWinExist en WinActivate.
 	HScale_TT =	Hoogte schaal
 	IconN_TT =	Nummer van het pictogram groep
 	IfLVColor_TT =	Klik hier om een ​​kleur te kiezen
@@ -986,48 +1028,6 @@
 	Screen_TT =	Coördinaten zijn ten opzichte van het bureaublad (hele scherm).
 	Screenshot_TT =	Maak Screenshot
 	SetText_TT =	Hiermee wijzigt u de tekst van een controle.
-	TimeoutM_TT =	0 = oneindig
-	ToggleC_TT =	Activeer Relatieve opnemen wanneer belangrijke staat is op.
-	TransC_TT =	Transparante kleur
-	VarCopyA_TT =	Kopieer huidige variabele inhoud
-	VarCopyB_TT =	Kopieer huidige variabele inhoud
-	VariatT_TT =	Shades of variatie
-	WScale_TT =	Schaal breedte
-		
-; 20. Tooltips from AHK Docs		
-	Ex_AF_TT =	Slaat de zachte methode voor het activeren van een venster
-		en gaat rechtstreeks naar de krachtige methode.
-	Ex_DH_TT =	Bepaalt of onzichtbare ramen zijn 'gezien' door het script.
-	Ex_EdVars_TT =	Selecteer globale variabelen te exporteren.
-	Ex_HK_TT =	Legt het gebruik van de haak genoeg implementeren
-		of een toetsenbord sneltoetsen.
-	Ex_IfDir_TT =	Maakt contextgevoelige sneltoetsen en hotstrings afhankelijk
-		van het type venster dat actief is of bestaat.
-	Ex_IfDirType_TT =	Maakt contextgevoelige sneltoetsen en hotstrings afhankelijk
-		van het type venster dat actief is of bestaat.
-	Ex_IN_TT =	Veroorzaakt het script te gedragen alsof de opgegeven
-		bestand de inhoud van zijn aanwezig op deze exacte positie.
-	Ex_MD_TT =	Hiermee stelt u de vertraging die zal plaatsvinden na
-		elke muisbeweging of klik op.
-	Ex_MT_TT =	Stelt het maximum aantal gelijktijdige
-		draden per sneltoets of hotstring.
-	Ex_NT_TT =	Schakelt de weergave van een pictogram in het systeemvak.
-	Ex_PT_TT =	Houdt een script dat zich permanent langs
-		(dat is, totdat de gebruiker sluit het of ExitApp wordt aangetroffen).
-	Ex_SB_TT =	Bepaalt hoe snel een script wordt uitgevoerd (bij gebruik van de CPU).
-	Ex_SC_TT =	Hiermee stelt u de vertraging die zal plaatsvinden na
-		elke controle-modificerende commando.
-	Ex_SI_TT =	Bepaalt of een script mag opnieuw uit te voeren wanneer deze al wordt uitgevoerd.
-	Ex_SK_TT =	Hiermee stelt u de vertraging die zal plaatsvinden na elke
-		toetsaanslag per verzenden of ControlSend.
-	Ex_SM_TT =	Maakt Stuur synoniem met SendInput of SendPlay in plaats van
-		de standaard (sendEvent). Maakt ook Klik en mouseMove / Klik / Sleep
-		gebruik maken van de voorgeschreven methode.
-	Ex_ST_TT =	Hiermee stelt u de bijpassende gedrag van de WinTitle parameter in commando's zoals WinWait.
-	Ex_SW_TT =	Hiermee stelt u de vertraging die zal plaatsvinden na
-		elke windowing commando, zoals WinActivate.
-	Ex_UV_TT =	Exporteren globale variabelen.
-	ExpList_TT =	Dubbelklik op om te bewerken
 	SI_TT =	Het woord FORCE slaat het dialoogvenster en vervangt de oude instantie automatisch,
 		die vergelijkbaar in effect op de Reload commando.
 		Het woord IGNORE slaat het dialoogvenster en laat de oude instance die wordt uitgevoerd.
@@ -1044,8 +1044,21 @@
 		2: een venster van de titel kan bevatten WinTitle ergens in dat het een match.
 		3: een venster van de titel moet exact overeenkomen WinTitle om een ​​wedstrijd te zijn.
 		RegEx: Veranderingen WinTitle, WinText, ExcludeTitle, en ExcludeText te zijn reguliere expressies.
+	TimeoutM_TT =	0 = oneindig
+	TitleMatch_TT =	1: De titel van een venster moet beginnen met de opgegeven WinTitle om een wedstrijd te zijn.
+		2: De titel van een venster kan WinTitle overal bevatten erin om een wedstrijd te zijn.
+		3: De titel van een venster moeten exact overeenkomen WinTitle om een wedstrijd te zijn.
+		RegEx: Wijzigingen WinTitle, WinText, Uitsluiten titel, en Uitsluiten tekst reguliere expressies zijn.
+	TitleSpeed_TT =	Snel: Dit is het standaard gedrag. Prestaties kunnen aanzienlijk beter dan traag, maar zeker WinText elementen voor bepaalde soorten ramen mag niet worden 'gezien' door de verschillende venster commando's.
+		Langzaam: Kan veel trager, maar alle mogelijke WinText wordt opgehaald uit elk raam als een windowing commando doorzoekt ze voor een wedstrijd. Venster Spy laat zien welke delen van de tekst van een venster (indien van toepassing) moet de langzame modus.
+	ToggleC_TT =	Activeer Relatieve opnemen wanneer belangrijke staat is op.
+	TransC_TT =	Transparante kleur
+	VarCopyA_TT =	Kopieer huidige variabele inhoud
+	VarCopyB_TT =	Kopieer huidige variabele inhoud
+	VariatT_TT =	Shades of variatie
+	WScale_TT =	Schaal breedte
 		
-; 21. Operators		
+; 20. Operators		
 	As_Oper_1 =	Toewijzen
 	As_Oper_2 =	Toevoegen
 	As_Oper_3 =	Aftrekken
@@ -1065,8 +1078,16 @@
 	Co_Oper_5 =	Minder
 	Co_Oper_6 =	Groter dan of gelijk
 	Co_Oper_7 =	Minder of gelijk
+	Co_Oper_8 =	In (lijst)
+	Co_Oper_9 =	 Niet in (lijst)
+	Co_Oper_10 =	 Bevat (lijst)
+	Co_Oper_11 =	 Niet bevat (lijst)
+	Co_Oper_12 =	 Tussen (lijn 1) en (lijn 2)
+	Co_Oper_13 =	 Niet tussen (lijn 1) en (lijn 2)
+	Co_Oper_14 =	 Is (type)
+	Co_Oper_15 =	 Is niet (type)
 		
-; 22. IE Commands Tips		
+; 21. IE Commands Tips		
 	IE_Cmd_Index =	
 	Checked	Stelt of haalt de status van het selectievakje of keuzerondje.
 	Click	Simuleert een klik op het object.
@@ -1094,7 +1115,7 @@
 	Value	Hiermee wordt de waarde van het object.
 	Width	Bepaalt of haalt de breedte van het object.
 		
-; 23. COM Methods Tips		
+; 22. COM Methods Tips		
 	COM_CLSID_Index =	
 	Excel.Application	Manipuleert Excel sheets.
 	HTMLfile	Kan worden gebruikt voor het lezen, schrijven en interageren met HTML.
@@ -1117,7 +1138,7 @@
 	WScript.Shell	Diverse administratieve taken (vele inheemse AHK taken).
 	Word.Application	Manipuleert Word-documenten.
 		
-; 24. AHK Commands Tips		
+; 23. AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	Abs	Geeft de absolute waarde van het nummer .
 	ACos	Geeft de boogcosinus (het getal waarvan de cosinus is Number) in radialen .

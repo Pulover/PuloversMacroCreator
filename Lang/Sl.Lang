@@ -224,73 +224,74 @@
 	w_Lang040 =	New (Ctrl+N)
 	w_Lang041 =	Odprta (Ctrl+O)
 	w_Lang042 =	Prihranite (Ctrl+S)
-	w_Lang043 =	Izvoz v AHK (Ctrl+E)
-	w_Lang044 =	Predogled Script (Ctrl+P)
-	w_Lang045 =	Nastavitve (Ctrl+G)
-	w_Lang046 =	Record Macro (Ctrl+R)
-	w_Lang047 =	Vključi Makri (Ctrl+Enter)
-	w_Lang048 =	Igraj trenutni makro (Ctrl+Shift+Enter)
-	w_Lang049 =	Timer (Ctrl+Shift+T)
-	w_Lang050 =	Mouse (F2)
-	w_Lang051 =	Besedilo (F3)
-	w_Lang052 =	Uredi Makri (Ctrl+Shift+M)
-	w_Lang053 =	Control (F4)
-	w_Lang054 =	Premor (F5)
-	w_Lang055 =	Polje sporočilo (Shift+F5)
-	w_Lang056 =	ključne Počakaj (Ctrl+F5)
-	w_Lang057 =	Okno (F6)
-	w_Lang058 =	Image / Pixel Search (F7)
-	w_Lang059 =	Run / datoteke / String / Razno. (F8)
-	w_Lang060 =	Zanka (F9)
-	w_Lang061 =	Goto (Shift+F9)
-	w_Lang062 =	Label (Ctrl+F9)
-	w_Lang063 =	Če izjave (F10)
-	w_Lang064 =	Spremenljivke / Nizi (Shift+F10)
-	w_Lang065 =	Funkcije / Metode zaporedji (Ctrl+F10)
-	w_Lang066 =	Internet Explorer (F12)
-	w_Lang067 =	Izraz / COM vmesnik (Shift+F12)
-	w_Lang068 =	Pošlji sporočilo (F11)
-	w_Lang069 =	Windows Sporočila (Ctrl+F12)
-	w_Lang070 =	Dodaj na tipko Windows in »Play" hotkey
-	w_Lang071 =	Uporabite gumb za igralno palico kot hotkey
-	w_Lang072 =	Dodaj Macro (Ctrl+T)
-	w_Lang073 =	Zapri Macro (Ctrl+W)
-	w_Lang074 =	Dvojnik makro (Ctrl+Shift+D)
-	w_Lang075 =	Uvoz Macro (Ctrl+I)
-	w_Lang076 =	Shrani trenutni makro (Ctrl+Alt+S)
-	w_Lang077 =	Move Up (Ctrl+PageUp)
-	w_Lang078 =	Premakni navzdol (Ctrl+PageDown)
-	w_Lang079 =	Dvojnik izbrane vrstice (Ctrl+D)
-	w_Lang080 =	Cut izbrane vrstice (Ctrl+X)
-	w_Lang081 =	Kopirajte izbrane vrstice (Ctrl+C)
-	w_Lang082 =	Prilepi prekopiranih vrsticah (Ctrl+V)
-	w_Lang083 =	Izbriši izbrane vrstice (DEL)
-	w_Lang084 =	Razveljavi (Ctrl+Z)
-	w_Lang085 =	Ponovi (Ctrl+Y)
-	w_Lang086 =	Kopiraj v.
-	w_Lang087 =	Najdi / Zamenjaj (Ctrl+F)
-	w_Lang088 =	Vstavite / Uredi komentar (Ctrl+L)
-	w_Lang089 =	Edit Color Mark (Ctrl+M)
-	w_Lang090 =	Prilagajanje
-	w_Lang091 =	Najdi ukaz (Ctrl+Shift+F)
-	w_Lang092 =	Uredi (Enter)
-	w_Lang093 =	Skrij
-	w_Lang094 =	Premakniti tukaj
-	w_Lang095 =	Kopiranje tukaj
-	w_Lang096 =	skupine
-	w_Lang097 =	Omogoči skupine (Ctrl+Shift+G)
-	w_Lang098 =	Dodaj skupino (Ctrl+Shift+Y)
-	w_Lang099 =	Odstrani skupino (Ctrl+Shift+R)
-	w_Lang100 =	Odstranite vse skupine
-	w_Lang101 =	Urejanje skupine
-	w_Lang102 =	Ime skupine
-	w_Lang103 =	Ustvarite Funkcija (Ctrl+Shift+U)
-	w_Lang104 =	Dodaj Parameter (Ctrl+Shift+P)
-	w_Lang105 =	Dodaj za vračanje (Ctrl+Shift+N)
-	w_Lang106 =	Pretvarjanje makro funkcijo (Ctrl+Shift+C)
-	w_Lang107 =	Zakomentirajte nepreverjene vrstice
-	w_Lang108 =	Download / Upload datotek (Shift+F11)
-	w_Lang109 =	Zip / unzip datotek (Ctrl+F11)
+	w_Lang043 =	Shrani kot (Ctrl+Shift+S)
+	w_Lang044 =	Izvoz v AHK (Ctrl+E)
+	w_Lang045 =	Predogled Script (Ctrl+P)
+	w_Lang046 =	Nastavitve (Ctrl+G)
+	w_Lang047 =	Record Macro (Ctrl+R)
+	w_Lang048 =	Vključi Makri (Ctrl+Enter)
+	w_Lang049 =	Igraj trenutni makro (Ctrl+Shift+Enter)
+	w_Lang050 =	Timer (Ctrl+Shift+T)
+	w_Lang051 =	Mouse (F2)
+	w_Lang052 =	Besedilo (F3)
+	w_Lang053 =	Uredi Makri (Ctrl+Shift+M)
+	w_Lang054 =	Control (F4)
+	w_Lang055 =	Premor (F5)
+	w_Lang056 =	Polje sporočilo (Shift+F5)
+	w_Lang057 =	ključne Počakaj (Ctrl+F5)
+	w_Lang058 =	Okno (F6)
+	w_Lang059 =	Image / Pixel Search (F7)
+	w_Lang060 =	Run / datoteke / String / Razno. (F8)
+	w_Lang061 =	Zanka (F9)
+	w_Lang062 =	Goto (Shift+F9)
+	w_Lang063 =	Label (Ctrl+F9)
+	w_Lang064 =	Če izjave (F10)
+	w_Lang065 =	Spremenljivke / Nizi (Shift+F10)
+	w_Lang066 =	Funkcije / Metode zaporedji (Ctrl+F10)
+	w_Lang067 =	Internet Explorer (F12)
+	w_Lang068 =	Izraz / COM vmesnik (Shift+F12)
+	w_Lang069 =	Pošlji sporočilo (F11)
+	w_Lang070 =	Windows Sporočila (Ctrl+F12)
+	w_Lang071 =	Dodaj na tipko Windows in »Play" hotkey
+	w_Lang072 =	Uporabite gumb za igralno palico kot hotkey
+	w_Lang073 =	Dodaj Macro (Ctrl+T)
+	w_Lang074 =	Zapri Macro (Ctrl+W)
+	w_Lang075 =	Dvojnik makro (Ctrl+Shift+D)
+	w_Lang076 =	Uvoz Macro (Ctrl+I)
+	w_Lang077 =	Shrani trenutni makro (Ctrl+Alt+S)
+	w_Lang078 =	Move Up (Ctrl+PageUp)
+	w_Lang079 =	Premakni navzdol (Ctrl+PageDown)
+	w_Lang080 =	Dvojnik izbrane vrstice (Ctrl+D)
+	w_Lang081 =	Cut izbrane vrstice (Ctrl+X)
+	w_Lang082 =	Kopirajte izbrane vrstice (Ctrl+C)
+	w_Lang083 =	Prilepi prekopiranih vrsticah (Ctrl+V)
+	w_Lang084 =	Izbriši izbrane vrstice (DEL)
+	w_Lang085 =	Razveljavi (Ctrl+Z)
+	w_Lang086 =	Ponovi (Ctrl+Y)
+	w_Lang087 =	Kopiraj v.
+	w_Lang088 =	Najdi / Zamenjaj (Ctrl+F)
+	w_Lang089 =	Vstavite / Uredi komentar (Ctrl+L)
+	w_Lang090 =	Edit Color Mark (Ctrl+M)
+	w_Lang091 =	Prilagajanje
+	w_Lang092 =	Najdi ukaz (Ctrl+Shift+F)
+	w_Lang093 =	Uredi (Enter)
+	w_Lang094 =	Skrij
+	w_Lang095 =	Premakniti tukaj
+	w_Lang096 =	Kopiranje tukaj
+	w_Lang097 =	skupine
+	w_Lang098 =	Omogoči skupine (Ctrl+Shift+G)
+	w_Lang099 =	Dodaj skupino (Ctrl+Shift+Y)
+	w_Lang100 =	Odstrani skupino (Ctrl+Shift+R)
+	w_Lang101 =	Odstranite vse skupine
+	w_Lang102 =	Urejanje skupine
+	w_Lang103 =	Ime skupine
+	w_Lang104 =	Ustvarite Funkcija (Ctrl+Shift+U)
+	w_Lang105 =	Dodaj Parameter (Ctrl+Shift+P)
+	w_Lang106 =	Dodaj za vračanje (Ctrl+Shift+N)
+	w_Lang107 =	Pretvarjanje makro funkcijo (Ctrl+Shift+C)
+	w_Lang108 =	Zakomentirajte nepreverjene vrstice
+	w_Lang109 =	Download / Upload datotek (Shift+F11)
+	w_Lang110 =	Zip / unzip datotek (Ctrl+F11)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Miška
@@ -538,6 +539,7 @@
 	c_Lang244 =	Desne proti levi
 	c_Lang245 =	Priključki
 	c_Lang246 =	Pot
+	c_Lang247 =	Če
 		
 ; 16. Other Windows		
 	t_Lang001 =	Izvoz v AutoHotkey
@@ -741,6 +743,11 @@
 	t_Lang199 =	SSL
 	t_Lang200 =	Pošlji način
 	t_Lang201 =	Pošlji test
+	t_Lang202 =	Zaslon In Okna
+	t_Lang203 =	Odkrivanje Skritih Oken
+	t_Lang204 =	Odkriti Skrito Besedilo
+	t_Lang205 =	Način Tekmo Naslov
+	t_Lang206 =	Hitrost Tekmo Naslov
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Odprite
@@ -818,7 +825,7 @@
 		Če želite onemogočiti samodejne preglede izberite Pomoč> Preveri na start-up. > Preveri ob zagonu
 	d_Lang062 =	Že imate najnovejšo različico.
 	d_Lang063 =	Napaka pri preverjanju do napake.
-	d_Lang064 =	COM objekt napaka
+	d_Lang064 =	Ralat dalam
 	d_Lang065 =	Vrstica
 	d_Lang066 =	Posebej
 	d_Lang067 =	Prikaži to okno ob zagonu
@@ -936,8 +943,41 @@
 	EditPaste_TT =	Paste String na položaju strešica / vstaviti
 		v nadzor Edit (to ne vpliva na
 		Vsebino odložišča).
+	Ex_AF_TT =	Preskoči na nežen način aktiviranja okno
+		in gre naravnost do nasilne metode.
+	Ex_DH_TT =	Ugotovi, ali so nevidni okna "videli", ki ga scenarij.
 	Ex_EdScript_TT =	Odpri v zunanjem urejevalniku
+	Ex_EdVars_TT =	Izberite globalne spremenljivke, ki se izvaža.
 	Ex_ExecScript_TT =	Zaženi skript
+	Ex_HK_TT =	Prisili uporabo kavelj za izvajanje vseh
+		ali nekatere tipke bližnjice.
+	Ex_IfDir_TT =	Ustvarja kontekst občutljive bližnjic in hotstrings odvisno
+		na vrsto oknu, ki je aktiven ali obstaja.
+	Ex_IfDirType_TT =	Ustvarja kontekst občutljive bližnjic in hotstrings odvisno
+		na vrsto oknu, ki je aktiven ali obstaja.
+	Ex_IN_TT =	Povzroča scenarij, da se obnašajo, kot da je določeno
+		Vsebina dokumenta, ki so prisotni na tem točno določenem položaju.
+	Ex_MD_TT =	Nastavi zakasnitev, da se bo zgodilo po
+		vsako gibanje miške ali klik.
+	Ex_MT_TT =	Določa največje število hkratnih
+		niti na hotkey ali hotstring.
+	Ex_NT_TT =	Onemogoči prikazovanje ikono pladenj.
+	Ex_PT_TT =	Drži scenarij stalno teče
+		(To je do uporabnik zapre ali ExitApp srečamo).
+	Ex_SB_TT =	Določa, kako hitro se bo pognal (pojavijo CPU).
+	Ex_SC_TT =	Nastavi zakasnitev, da se bo zgodilo po
+		vsak nadzorni spreminjanje ukaz.
+	Ex_SI_TT =	Določa, ali je scenarij lahko ponovno teči, ko že teče.
+	Ex_SK_TT =	Nastavi zakasnitev, da se bo zgodilo po vsaki
+		pritisk na tipko poslala pošiljati ali ControlSend.
+	Ex_SM_TT =	Naredi Pošlji sinonim SendInput ali SendPlay namesto
+		default (SendEvent). Prav tako Klikni in MouseMove / Kliknite / Drag
+		uporabljajte predpisano metodo.
+	Ex_ST_TT =	Nastavi ujemanje obnašanje WinTitle parameter pri ukazih, kot WinWait.
+	Ex_SW_TT =	Nastavi zakasnitev, da se bo zgodilo po
+		Okenski vsak ukaz, kot WinActivate.
+	Ex_UV_TT =	Izvoz globalne spremenljivke.
+	ExpList_TT =	Dvakrat kliknite za urejanje
 	ExprLink2_TT =	- NE PRILOŽITI SPREMENLJIVK ZNAKI ZA ODSTOTEK TUKAJ.
 		- Večina AHK izrazov so podprte.
 		- Lahko uporabite strune, spremenljivke, polja in funkcije.
@@ -951,6 +991,8 @@
 	ExpView_TT =	Napredno Editor
 	ExpView2_TT =	Napredno Editor
 	Fast_TT =	Uporablja metodo hitrejše iskanje (priporočljivo)
+	HiddenWin_TT =	Določa, ali so nevidni okna "videl", ki jih skript.
+	HiddenText_TT =	Ugotovi, ali je neviden tekst v oknu "videl" za iskanje okno. To vpliva na ukaze, kot IfWinExist in WinActivate.
 	HScale_TT =	Višina lestvico
 	IconN_TT =	Število skupine ikon
 	IfLVColor_TT =	Kliknite, da izberete barvo
@@ -986,48 +1028,6 @@
 	Screen_TT =	Koordinate so relativne na namizje (celoten zaslon).
 	Screenshot_TT =	Naredite Screenshot
 	SetText_TT =	Spremeni besedilo na kontroli.
-	TimeoutM_TT =	0 = neskončno
-	ToggleC_TT =	Vključite Relativna snemanja, ko je ključ država je na.
-	TransC_TT =	Pregleden barvni
-	VarCopyA_TT =	Kopiranje trenutne spremenljive vsebine
-	VarCopyB_TT =	Kopiranje trenutne spremenljive vsebine
-	VariatT_TT =	Odtenki variacije
-	WScale_TT =	Širina lestvico
-		
-; 20. Tooltips from AHK Docs		
-	Ex_AF_TT =	Preskoči na nežen način aktiviranja okno
-		in gre naravnost do nasilne metode.
-	Ex_DH_TT =	Ugotovi, ali so nevidni okna "videli", ki ga scenarij.
-	Ex_EdVars_TT =	Izberite globalne spremenljivke, ki se izvaža.
-	Ex_HK_TT =	Prisili uporabo kavelj za izvajanje vseh
-		ali nekatere tipke bližnjice.
-	Ex_IfDir_TT =	Ustvarja kontekst občutljive bližnjic in hotstrings odvisno
-		na vrsto oknu, ki je aktiven ali obstaja.
-	Ex_IfDirType_TT =	Ustvarja kontekst občutljive bližnjic in hotstrings odvisno
-		na vrsto oknu, ki je aktiven ali obstaja.
-	Ex_IN_TT =	Povzroča scenarij, da se obnašajo, kot da je določeno
-		Vsebina dokumenta, ki so prisotni na tem točno določenem položaju.
-	Ex_MD_TT =	Nastavi zakasnitev, da se bo zgodilo po
-		vsako gibanje miške ali klik.
-	Ex_MT_TT =	Določa največje število hkratnih
-		niti na hotkey ali hotstring.
-	Ex_NT_TT =	Onemogoči prikazovanje ikono pladenj.
-	Ex_PT_TT =	Drži scenarij stalno teče
-		(To je do uporabnik zapre ali ExitApp srečamo).
-	Ex_SB_TT =	Določa, kako hitro se bo pognal (pojavijo CPU).
-	Ex_SC_TT =	Nastavi zakasnitev, da se bo zgodilo po
-		vsak nadzorni spreminjanje ukaz.
-	Ex_SI_TT =	Določa, ali je scenarij lahko ponovno teči, ko že teče.
-	Ex_SK_TT =	Nastavi zakasnitev, da se bo zgodilo po vsaki
-		pritisk na tipko poslala pošiljati ali ControlSend.
-	Ex_SM_TT =	Naredi Pošlji sinonim SendInput ali SendPlay namesto
-		default (SendEvent). Prav tako Klikni in MouseMove / Kliknite / Drag
-		uporabljajte predpisano metodo.
-	Ex_ST_TT =	Nastavi ujemanje obnašanje WinTitle parameter pri ukazih, kot WinWait.
-	Ex_SW_TT =	Nastavi zakasnitev, da se bo zgodilo po
-		Okenski vsak ukaz, kot WinActivate.
-	Ex_UV_TT =	Izvoz globalne spremenljivke.
-	ExpList_TT =	Dvakrat kliknite za urejanje
 	SI_TT =	Beseda FORCE preskoči pogovorno okno in nadomešča stari primerek samodejno
 		, ki je podoben učinek na ukaz Reload.
 		Beseda IGNORE preskoči pogovorno okno in pusti star primerek prikazovati.
@@ -1044,8 +1044,21 @@
 		2: Naslov Okno lahko vsebuje WinTitle kjerkoli v notranjosti, da je tekma.
 		3: Naslov Okno mora popolnoma ujemati WinTitle za tekmo.
 		Regex: Spremembe WinTitle, WinText, ExcludeTitle in ExcludeText biti regularne izraze.
+	TimeoutM_TT =	0 = neskončno
+	TitleMatch_TT =	1: Naslov okno, se mora začeti z določenim WinTitle biti tekmo.
+		2: Naslov oknom je lahko vsebuje WinTitle kjerkoli v notranjosti, da je ujemanje.
+		3: naslov okno, mora natančno ujemati WinTitle biti tekmo.
+		Regularni izraz: Spremembe WinTitle, WinText, Izključi naslov, in Izključi Besedilo biti regularni izrazi.
+	TitleSpeed_TT =	Hitro: To je privzeto obnašanje. Uspešnost lahko bistveno bolje kot počasen, vendar nekateri WinText elementi za nekatere vrste oken ne sme biti "videl" z različnimi okna ukazov.
+		Slow: Lahko je veliko počasnejši, ampak vse mogoče WinText so pridobljeni iz vsakega okna kot ukaz okenski iskanj prek njih za tekmo. Okno Spy razkriva, kateri deli besedila oknom (če obstaja) zahtevajo počasen način.
+	ToggleC_TT =	Vključite Relativna snemanja, ko je ključ država je na.
+	TransC_TT =	Pregleden barvni
+	VarCopyA_TT =	Kopiranje trenutne spremenljive vsebine
+	VarCopyB_TT =	Kopiranje trenutne spremenljive vsebine
+	VariatT_TT =	Odtenki variacije
+	WScale_TT =	Širina lestvico
 		
-; 21. Operators		
+; 20. Operators		
 	As_Oper_1 =	Dodeli
 	As_Oper_2 =	Dodaj
 	As_Oper_3 =	Odštevanje
@@ -1065,8 +1078,16 @@
 	Co_Oper_5 =	Manj
 	Co_Oper_6 =	Večja ali enaka
 	Co_Oper_7 =	Manjša ali enaka
+	Co_Oper_8 =	V (seznam)
+	Co_Oper_9 =	 Ne v (seznam)
+	Co_Oper_10 =	 Vsebuje (seznam)
+	Co_Oper_11 =	 Ne vsebuje (seznam)
+	Co_Oper_12 =	 Med (linije 1) in (liniji 2)
+	Co_Oper_13 =	 Ni med (linije 1) in (linija 2)
+	Co_Oper_14 =	 Je (tip)
+	Co_Oper_15 =	 Ni (tip)
 		
-; 22. IE Commands Tips		
+; 21. IE Commands Tips		
 	IE_Cmd_Index =	
 	Checked	Nastavi ali pridobi stanje potrditvenega polja ali izbirnega gumba.
 	Click	Simulira klik na objekt.
@@ -1094,7 +1115,7 @@
 	Value	Dobi ali določa vrednost predmeta.
 	Width	Komplet ali pridobi širino predmeta.
 		
-; 23. COM Methods Tips		
+; 22. COM Methods Tips		
 	COM_CLSID_Index =	
 	Excel.Application	Manipulira Excel listov.
 	HTMLfile	Lahko se uporablja za branje, pisanje in interakcijo s HTML.
@@ -1117,7 +1138,7 @@
 	WScript.Shell	Različne upravne naloge (mnogi materni AHK naloge).
 	Word.Application	Manipulira Wordovih dokumentov.
 		
-; 24. AHK Commands Tips		
+; 23. AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	Abs	Vrne absolutno vrednost številke.
 	ACos	Vrne arkus kosinus (število, katerega kosinus je število) v radianih.

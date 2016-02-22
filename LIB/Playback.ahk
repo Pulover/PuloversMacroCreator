@@ -24,6 +24,10 @@
 		CoordMode, Mouse, Screen
 		MouseGetPos, CursorX, CursorY
 		CoordMode, Mouse, %CoordMouse%
+		SetTitleMatchMode, %TitleMatch%
+		SetTitleMatchMode, %TitleSpeed%
+		DetectHiddenWindows, %HiddenWin%
+		DetectHiddenText, %HiddenText%
 		If (Record = 1)
 		{
 			GoSub, RecStop
@@ -277,7 +281,7 @@
 					WaitFor.Key(o_ManKey[ManualKey], 0)
 				continue
 			}
-			If (FlowControl.If > 0)
+			If (FlowControl.If != 0)
 				continue
 			If ((Type = cType36) || (Type = cType37) || (Type = cType50))
 			{
@@ -313,7 +317,7 @@
 					MsgBox, 20, %d_Lang007%, % "Macro" Macro_On ", " d_Lang065 " " mListRow
 						. "`n" d_Lang007 ":`t`t" d_Lang109 "`n" d_Lang066 ":`t" Step
 					IfMsgBox, No
-						StopPlay(1)
+						StopIt := 1
 					continue
 				}
 				If (Type = cType36)
@@ -660,7 +664,7 @@
 							.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" (InStr(e.Message, "0x800401E3") ? d_Lang088 : e.Extra) "`n`n" d_Lang035
 						IfMsgBox, No
 						{
-							StopPlay(1)
+							StopIt := 1
 							continue
 						}
 					}
@@ -680,7 +684,7 @@
 							.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" (InStr(e.Message, "0x800401E3") ? d_Lang088 : e.Extra) "`n`n" d_Lang035
 						IfMsgBox, No
 						{
-							StopPlay(1)
+							StopIt := 1
 							continue
 						}
 					}
@@ -729,7 +733,7 @@
 											.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" (InStr(e.Message, "0x800401E3") ? d_Lang088 : e.Extra) "`n`n" d_Lang035
 										IfMsgBox, No
 										{
-											StopPlay(1)
+											StopIt := 1
 											continue 3
 										}
 									}
@@ -757,7 +761,7 @@
 								.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" (InStr(e.Message, "0x800401E3") ? d_Lang088 : e.Extra) "`n`n" d_Lang035
 							IfMsgBox, No
 							{
-								StopPlay(1)
+								StopIt := 1
 								continue
 							}
 						}
@@ -820,8 +824,16 @@
 					Menu, Tray, Default, %w_Lang005%
 					break 3
 				}
-				PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars, PlaybackVars[LoopDepth][mLoopIndex], RunningFunction, d_Lang064 " Macro" Macro_On ", " d_Lang065 " " mListRow . "`n" d_Lang007 ":`t`t")
-			,	PlaybackVars[LoopDepth][mLoopIndex, "ErrorLevel"] := ErrorLevel
+				Try
+					TakeAction := PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars, PlaybackVars[LoopDepth][mLoopIndex], RunningFunction)
+				Catch e
+				{
+					MsgBox, 20, %d_Lang007%, % d_Lang064 " Macro" Macro_On ", " d_Lang065 " " mListRow
+						.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" (InStr(e.Message, "0x800401E3") ? d_Lang088 : e.Extra) "`n`n" d_Lang035
+					IfMsgBox, No
+						StopIt := 1
+				}
+				PlaybackVars[LoopDepth][mLoopIndex, "ErrorLevel"] := ErrorLevel
 				If ((Type = cType15) || (Type = cType16))
 				{
 					If ((TakeAction = "Break") || ((Target = "Break") && (SearchResult = 0)))
@@ -916,10 +928,10 @@
 
 ;##### Playback Commands #####
 
-PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars, CustomVars, RunningFunction, ErrorMsg := "")
+PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars, CustomVars, RunningFunction)
 {
 	local Par1, Par2, Par3, Par4, Par5, Par6, Par7, Par8, Par9, Par10, Par11, Win
-		,	_each, _value, _Section, SelAcc, IeIntStr, lMatch, lMatch1, lResult
+		, _each, _value, _Section, SelAcc, IeIntStr, lMatch, lMatch1, lResult, TakeAction
 	For _each, _value in Pars
 		Par%_each% := _value
 	
@@ -929,7 +941,7 @@ PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars, CustomVars, Runnin
 	pb_Send:
 		If (WinActive("ahk_id " PMCWinID))
 		{
-			StopPlay(1)
+			StopIt := 1
 			return
 		}
 		Send, %Step%
@@ -941,7 +953,7 @@ PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars, CustomVars, Runnin
 	pb_Click:
 		If (WinActive("ahk_id " PMCWinID))
 		{
-			StopPlay(1)
+			StopIt := 1
 			return
 		}
 		Click, %Step%
@@ -953,7 +965,7 @@ PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars, CustomVars, Runnin
 	pb_SendEvent:
 		If (WinActive("ahk_id " PMCWinID))
 		{
-			StopPlay(1)
+			StopIt := 1
 			return
 		}
 		If (Action = "[Text]")
@@ -989,7 +1001,7 @@ PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars, CustomVars, Runnin
 	pb_SendRaw:
 		If (WinActive("ahk_id " PMCWinID))
 		{
-			StopPlay(1)
+			StopIt := 1
 			return
 		}
 		SendRaw, %Step%
@@ -1392,13 +1404,13 @@ PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars, CustomVars, Runnin
 		PixelSearch, FoundX, FoundY, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%, %Par6%, %Par7%
 		SearchResult := ErrorLevel
 		GoSub, TakeAction
-	return
+	return TakeAction
 	pb_ImageSearch:
 		CoordMode, Pixel, %Window%
 		ImageSearch, FoundX, FoundY, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%
 		SearchResult := ErrorLevel
 		GoSub, TakeAction
-	return
+	return TakeAction
 	pb_SendMessage:
 		Win := SplitWin(Window)
 		SendMessage, %Par1%, %Par2%, %Par3%, %Target%, % Win[1], % Win[2], % Win[3], % Win[4]
@@ -1575,6 +1587,34 @@ PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars, CustomVars, Runnin
 		GroupClose, %Par1%, %Par2%
 	return
 
+	TakeAction:
+	TakeAction := DoAction(FoundX, FoundY, Act1, Act2, Window, SearchResult)
+	If (TakeAction = "Continue")
+		TakeAction := 0
+	Else If (TakeAction = "Stop")
+		StopIt := 1
+	Else If (TimesX = 1) && (TakeAction = "Break")
+		BreakIt++
+	Else If (TakeAction = "Prompt")
+	{
+		If (SearchResult = 0)
+			MsgBox, 49, %d_Lang035%, %d_Lang036% %FoundX%x%FoundY%.`n%d_Lang038%
+		Else
+			MsgBox, 49, %d_Lang035%, %d_Lang037%`n%d_Lang038%
+		IfMsgBox, Cancel
+			StopIt := 1
+	}
+	Else If (TakeAction = "Play Sound")
+	{
+		If (SearchResult = 0)
+			SoundBeep
+		Else
+			Loop, 2
+				SoundBeep
+	}
+	CoordMode, Mouse, %CoordMouse%
+	return
+
 	;##### Playback COM Commands #####
 
 	pb_SendEmail:
@@ -1603,20 +1643,11 @@ PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars, CustomVars, Runnin
 			MsgBox, 20, %d_Lang007%, % d_Lang064 " Macro" Macro_On ", " d_Lang065 " " mListRow
 				.	"`n" d_Lang007 ":`t`t" d_Lang112 "`n" d_Lang066 ":`t" Act1 "`n`n" d_Lang035
 			IfMsgBox, No
-				StopPlay(1)
+				StopIt := 1
 			return
 		}
 		
-		Try
-			CDO(SelAcc, CDO_To, CDO_Sub, CDO_Msg, CDO_Html, CDO_Att, CDO_CC, CDO_BCC)
-		Catch e
-		{
-			MsgBox, 20, %d_Lang007%, % d_Lang064 " Macro" Macro_On ", " d_Lang065 " " mListRow
-				.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" (InStr(e.Message, "0x800401E3") ? d_Lang088 : e.Extra) "`n`n" d_Lang035
-			IfMsgBox, No
-				StopPlay(1)
-			return
-		}
+		CDO(SelAcc, CDO_To, CDO_Sub, CDO_Msg, CDO_Html, CDO_Att, CDO_CC, CDO_BCC)
 	return
 	
 	pb_IECOM_Set:
@@ -1642,16 +1673,7 @@ PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars, CustomVars, Runnin
 		,	ie.Visible := true
 		}
 		
-		Try
-			Eval(IeIntStr, CustomVars)
-		Catch e
-		{
-			MsgBox, 20, %d_Lang007%, % d_Lang064 " Macro" Macro_On ", " d_Lang065 " " mListRow
-				.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" (InStr(e.Message, "0x800401E3") ? d_Lang088 : e.Extra) "`n`n" d_Lang035
-			IfMsgBox, No
-				StopPlay(1)
-			return
-		}
+		Eval(IeIntStr, CustomVars)
 		
 		If (Window = "LoadWait")
 		{
@@ -1708,19 +1730,8 @@ PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars, CustomVars, Runnin
 		,	ie.Visible := true
 		}
 		
-		Try
-		{
-			lResult := Eval(IeIntStr, CustomVars)[1]
-		,	AssignVar(Step, ":=", lResult, CustomVars, RunningFunction)
-		}
-		Catch e
-		{
-			MsgBox, 20, %d_Lang007%, % d_Lang064 " Macro" Macro_On ", " d_Lang065 " " mListRow
-				.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" (InStr(e.Message, "0x800401E3") ? d_Lang088 : e.Extra) "`n`n" d_Lang035
-			IfMsgBox, No
-				StopPlay(1)
-			return
-		}
+		lResult := Eval(IeIntStr, CustomVars)[1]
+	,	AssignVar(Step, ":=", lResult, CustomVars, RunningFunction)
 		Try SavedVars(Step,,, RunningFunction)
 		
 		If (Window = "LoadWait")
@@ -1742,15 +1753,9 @@ PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars, CustomVars, Runnin
 		}
 	pb_Expression:
 		Step := StrReplace(Step, "`n", ",")
-		Try
-			Eval(Step, CustomVars)
-		Catch e
-		{
-			MsgBox, 20, %d_Lang007%, % ErrorMsg . e.Message "`n" d_Lang066 ":`t" (InStr(e.Message, "0x800401E3") ? d_Lang088 : e.Extra) "`n`n" d_Lang035
-			IfMsgBox, No
-				StopPlay(1)
-			return
-		}
+		
+		Eval(Step, CustomVars)
+		
 		If (Window = "LoadWait")
 		{
 			Try Menu, Tray, Icon, %ResDllPath%, 77
@@ -1832,6 +1837,66 @@ IfEval(_Name, _Operator, _Value)
 		result := (_Name >= _Value) ? true : false
 	Else If (_Operator = "<=")
 		result := (_Name <= _Value) ? true : false
+	Else If (_Operator = "in")
+	{
+		If _Name in %_Value%
+			result := true
+		Else
+			result := false
+	}
+	Else If (_Operator = "not in")
+	{
+		If _Name not in %_Value%
+			result := true
+		Else
+			result := false
+	}
+	Else If (_Operator = "contains")
+	{
+		If _Name contains %_Value%
+			result := true
+		Else
+			result := false
+	}
+	Else If (_Operator = "not contains")
+	{
+		If _Name not contains %_Value%
+			result := true
+		Else
+			result := false
+	}
+	Else If (_Operator = "between")
+	{
+		_Val1 := "", _Val2 := ""
+		StringSplit, _Val, _Value, `n, %A_Space%%A_Tab%
+		If _Name between %_Val1% and %_Val2%
+			result := true
+		Else
+			result := false
+	}
+	Else If (_Operator = "not between")
+	{
+		_Val1 := "", _Val2 := ""
+		StringSplit, _Val, _Value, `n, %A_Space%%A_Tab%
+		If _Name not between %_Val1% and %_Val2%
+			result := true
+		Else
+			result := false
+	}
+	Else If (_Operator = "is")
+	{
+		If _Name is %_Value%
+			result := true
+		Else
+			result := false
+	}
+	Else If (_Operator = "is not")
+	{
+		If _Name is not %_Value%
+			result := true
+		Else
+			result := false
+	}
 	return result
 }
 
@@ -1898,169 +1963,130 @@ IfStatement(ThisError, CustomVars, Action, Step, TimesX, DelayX, Type, Target, W
 	local Pars, VarName, Oper, VarValue, lMatch
 	
 	If (Step = "EndIf")
-	{
-		If (ThisError > 0)
-			ThisError--
-		Else
-			ThisError := 0
-		return ThisError
-	}
+		return ThisError < 1 ? 0 : --ThisError
 	If ((BreakIt > 0) || (SkipIt > 0))
 		return ThisError
-	If (Step = "Else")
+	If (Action = "[Else]")
 	{
 		If (ThisError = 1)
+			return 0
+		If (ThisError = 0)
+			return 1
+	}
+	If (InStr(Action, "[ElseIf]"))
+	{
+		If ((ThisError = 0) || (ThisError = -1))
+			return -1
+		If (ThisError = 1)
 			ThisError := 0
-		Else If (ThisError = 0)
-			ThisError := 1
-		return ThisError
+		Action := SubStr(Action, 10)
 	}
 	If (ThisError > 0)
+		return ++ThisError
+	If (ThisError = -1)
+		return -1
+	Tooltip
+	CheckVars(CustomVars, Step, Target, Window)
+,	EscCom(true, Step, TimesX, DelayX, Target, Window)
+,	Step := StrReplace(Step, _z, A_Space)
+,	Target := StrReplace(Target, _z, A_Space)
+,	Window := StrReplace(Window, _z, A_Space)
+	If (Action = If1)
 	{
-		ThisError++
-		return ThisError
+		IfWinActive, %Step%
+			return 0
 	}
-	Else
+	Else If (Action = If2)
 	{
-		Tooltip
-		CheckVars(CustomVars, Step, Target, Window)
-		EscCom(true, Step, TimesX, DelayX, Target, Window)
-		Step := StrReplace(Step, _z, A_Space)
-		Target := StrReplace(Target, _z, A_Space)
-		Window := StrReplace(Window, _z, A_Space)
-		If (ThisError > 0)
-		{
-			ThisError++
-			return
-		}
-		Else If (Action = If1)
-		{
-			IfWinActive, %Step%
-				ThisError := 0
-			Else
-				ThisError++
-		}
-		Else If (Action = If2)
-		{
-			IfWinNotActive, %Step%
-				ThisError := 0
-			Else
-				ThisError++
-		}
-		Else If (Action = If3)
-		{
-			IfWinExist, %Step%
-				ThisError := 0
-			Else
-				ThisError++
-		}
-		Else If (Action = If4)
-		{
-			IfWinNotExist, %Step%
-				ThisError := 0
-			Else
-				ThisError++
-		}
-		Else If (Action = If5)
-		{
-			IfExist, %Step%
-				ThisError := 0
-			Else
-				ThisError++
-		}
-		Else If (Action = If6)
-		{
-			IfNotExist, %Step%
-				ThisError := 0
-			Else
-				ThisError++
-		}
-		Else If (Action = If7)
-		{
-			ClipContents := Clipboard
-			If (ClipContents = Step)
-				ThisError := 0
-			Else
-				ThisError++
-		}
-		Else If (Action = If8)
-		{
-			If (CustomVars["A_Index"] = Step)
-				ThisError := 0
-			Else
-				ThisError++
-		}
-		Else If (Action = If9)
-		{
-			If (SearchResult = 0)
-				ThisError := 0
-			Else
-				ThisError++
-		}
-		Else If (Action = If10)
-		{
-			If (SearchResult != 0)
-				ThisError := 0
-			Else
-				ThisError++
-		}
-		Else If (Action = If11)
-		{
-			Pars := SplitStep(CustomVars, Step, TimesX, DelayX, Type, Target, Window)
-		,	VarName := Pars[1], VarName := %VarName%
-			For _key, _value in CustomVars
-				If (Pars[1] = _key)
-					VarName := _value
-			If (InStr(VarName, Pars[2]))
-				ThisError := 0
-			Else
-				ThisError++
-		}
-		Else If (Action = If12)
-		{
-			Pars := SplitStep(CustomVars, Step, TimesX, DelayX, Type, Target, Window)
-		,	VarName := Pars[1], VarName := %VarName%
-			For _key, _value in CustomVars
-				If (Pars[1] = _key)
-					VarName := _value
-			If (!InStr(VarName, Pars[2]))
-				ThisError := 0
-			Else
-				ThisError++
-		}
-		Else If (Action = If13)
-		{
-			IfMsgBox, %Step%
-				ThisError := 0
-			Else
-				ThisError++
-		}
-		Else If (Action = If14)
-		{
-			CompareParse(Step, VarName, Oper, VarValue)
-		,	CheckVars(CustomVars, VarName, VarValue)
-		,	EscCom(true, VarValue, VarName)
-			For _key, _value in CustomVars
-				If (VarName = _key)
-					VarName := _value
-			For _key, _value in CustomVars
-				If (VarValue = _key)
-					VarValue := _value
-			If (IfEval(VarName, Oper, VarValue))
-				ThisError := 0
-			Else
-				ThisError++
-		}
-		Else If (Action = If15)
-		{
-			EvalResult := Eval(Step, CustomVars)
-			If (EvalResult[1])
-				ThisError := 0
-			Else
-				ThisError++
-		}
+		IfWinNotActive, %Step%
+			return 0
 	}
-	return ThisError
+	Else If (Action = If3)
+	{
+		IfWinExist, %Step%
+			return 0
+	}
+	Else If (Action = If4)
+	{
+		IfWinNotExist, %Step%
+			return 0
+	}
+	Else If (Action = If5)
+	{
+		IfExist, %Step%
+			return 0
+	}
+	Else If (Action = If6)
+	{
+		IfNotExist, %Step%
+			return 0
+	}
+	Else If (Action = If7)
+	{
+		ClipContents := Clipboard
+		If (ClipContents = Step)
+			return 0
+	}
+	Else If (Action = If8)
+	{
+		If (CustomVars["A_Index"] = Step)
+			return 0
+	}
+	Else If (Action = If9)
+	{
+		If (SearchResult = 0)
+			return 0
+	}
+	Else If (Action = If10)
+	{
+		If (SearchResult != 0)
+			return 0
+	}
+	Else If (Action = If11)
+	{
+		Pars := SplitStep(CustomVars, Step, TimesX, DelayX, Type, Target, Window)
+	,	VarName := Pars[1], VarName := %VarName%
+		For _key, _value in CustomVars
+			If (Pars[1] = _key)
+				VarName := _value
+		If (InStr(VarName, Pars[2]))
+			return 0
+	}
+	Else If (Action = If12)
+	{
+		Pars := SplitStep(CustomVars, Step, TimesX, DelayX, Type, Target, Window)
+	,	VarName := Pars[1], VarName := %VarName%
+		For _key, _value in CustomVars
+			If (Pars[1] = _key)
+				VarName := _value
+		If (!InStr(VarName, Pars[2]))
+			return 0
+	}
+	Else If (Action = If13)
+	{
+		IfMsgBox, %Step%
+			return 0
+	}
+	Else If (Action = If14)
+	{
+		CompareParse(Step, VarName, Oper, VarValue)
+	,	CheckVars(CustomVars, VarName, VarValue)
+	,	EscCom(true, VarValue)
+		If (CustomVars.HasKey(VarName))
+			VarName := CustomVars[VarName]
+		Else
+			VarName := %VarName%
+		VarValue := StrReplace(VarValue, "``n", "`n")
+		If (IfEval(VarName, Oper, VarValue))
+			return 0
+	}
+	Else If (Action = If15)
+	{
+		EvalResult := Eval(Step, CustomVars)
+		If (EvalResult[1])
+			return 0
+	}
+	return 1
 }
 
 class WaitFor
@@ -2083,7 +2109,7 @@ class WaitFor
 		If (ErrorLevel)
 		{
 			MsgBox %d_Lang039%
-			StopPlay(1)
+			StopIt := 1
 			return
 		}
 	}

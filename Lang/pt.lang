@@ -224,73 +224,74 @@
 	w_Lang040 =	Novo (Ctrl+N)
 	w_Lang041 =	Abrir (Ctrl+O)
 	w_Lang042 =	Salvar (Ctrl+S)
-	w_Lang043 =	Exportar para AHK (Ctrl+E)
-	w_Lang044 =	Visualizar Script (Ctrl+P)
-	w_Lang045 =	Configurações (Ctrl+G)
-	w_Lang046 =	Gravar Macro (Ctrl+R)
-	w_Lang047 =	Ativar Macros (Ctrl+Enter)
-	w_Lang048 =	Executar Macro Atual (Ctrl+Shift+Enter)
-	w_Lang049 =	Temporizador (Ctrl+Shift+T)
-	w_Lang050 =	Mouse (F2)
-	w_Lang051 =	Texto (F3)
-	w_Lang052 =	Editar Macros (Ctrl+Shift+M)
-	w_Lang053 =	Controle (F4)
-	w_Lang054 =	Pausa (F5)
-	w_Lang055 =	Caixa de Mensagem (Shift+F5)
-	w_Lang056 =	Esperar Tecla (Ctrl+F5)
-	w_Lang057 =	Janela (F6)
-	w_Lang058 =	Procurar Imagem / Pixel (F7)
-	w_Lang059 =	Executar / Arquivos / Texto / Misc. (F8)
-	w_Lang060 =	Loop (F9)
-	w_Lang061 =	Pular (Shift+F9)
-	w_Lang062 =	Rótulo (Ctrl+F9)
-	w_Lang063 =	Declaração Se (F10)
-	w_Lang064 =	Variáveis / Matrizes (Shift+F10)
-	w_Lang065 =	Funções / Métodos de Matriz (Ctrl+F10)
-	w_Lang066 =	Internet Explorer (F12)
-	w_Lang067 =	Expressão / Interface COM (Shift+F12)
-	w_Lang068 =	Enviar E-Mail (F11)
-	w_Lang069 =	Mensages do Windows (Ctrl+F12)
-	w_Lang070 =	Adicionar a tecla Windows ao atalho "Executar"
-	w_Lang071 =	Usar um botão do joystick como atalho
-	w_Lang072 =	Adicionar Macro (Ctrl+T)
-	w_Lang073 =	Fechar Macro (Ctrl+W)
-	w_Lang074 =	Duplicar Macro (Ctrl+Shift+D)
-	w_Lang075 =	Importar Macro (Ctrl+I)
-	w_Lang076 =	Salvar Macro Atual (Ctrl+Alt+S)
-	w_Lang077 =	Mover para Cima (Ctrl+PageUp)
-	w_Lang078 =	Mover para Baixo (Ctrl+PageDown)
-	w_Lang079 =	Duplicar Linhas Selecionadas (Ctrl+D)
-	w_Lang080 =	Recortar Linhas Selecionadas (Ctrl+X)
-	w_Lang081 =	Copiar Linhas Selecionadas (Ctrl+C)
-	w_Lang082 =	Colar Linhas Copiadas (Ctrl+V)
-	w_Lang083 =	Excluir Linhas Selecionadas (Del)
-	w_Lang084 =	Desfazer (Ctrl+Z)
-	w_Lang085 =	Refazer (Ctrl+Y)
-	w_Lang086 =	Copiar para...
-	w_Lang087 =	Localizar / Substituir (Ctrl+F)
-	w_Lang088 =	Inserir / Editar Comentário (Ctrl+L)
-	w_Lang089 =	Editar Marca de Cor (Ctrl+M)
-	w_Lang090 =	Personalizar
-	w_Lang091 =	Localizar um comando (Ctrl+Shift+F)
-	w_Lang092 =	Editar (Enter)
-	w_Lang093 =	Ocultar
-	w_Lang094 =	Mover para cá
-	w_Lang095 =	Copiar aqui
-	w_Lang096 =	Grupos
-	w_Lang097 =	Habilitar grupos (Ctrl+Shift+G)
-	w_Lang098 =	Adicionar grupo (Ctrl+Shift+Y)
-	w_Lang099 =	Remover grupo (Ctrl+Shift+R)
-	w_Lang100 =	Remove todos os grupos
-	w_Lang101 =	Editar grupos
-	w_Lang102 =	Nome do grupo
-	w_Lang103 =	Criar Função (Ctrl+Shift+U)
-	w_Lang104 =	Adicionar Parâmetro (Ctrl+Shift+P)
-	w_Lang105 =	Adicionar Retorno (Ctrl+Shift+N)
-	w_Lang106 =	Converter Macro em Função (Ctrl+Shift+C)
-	w_Lang107 =	Comentar linhas desmarcadas
-	w_Lang108 =	Baixar / Subir arquivos (Shift+F11)
-	w_Lang109 =	Compactar / Descompactar arquivos (Ctrl+F11)
+	w_Lang043 =	Salvar Como (Ctrl+Shift+S)
+	w_Lang044 =	Exportar para AHK (Ctrl+E)
+	w_Lang045 =	Visualizar Script (Ctrl+P)
+	w_Lang046 =	Configurações (Ctrl+G)
+	w_Lang047 =	Gravar Macro (Ctrl+R)
+	w_Lang048 =	Ativar Macros (Ctrl+Enter)
+	w_Lang049 =	Executar Macro Atual (Ctrl+Shift+Enter)
+	w_Lang050 =	Temporizador (Ctrl+Shift+T)
+	w_Lang051 =	Mouse (F2)
+	w_Lang052 =	Texto (F3)
+	w_Lang053 =	Editar Macros (Ctrl+Shift+M)
+	w_Lang054 =	Controle (F4)
+	w_Lang055 =	Pausa (F5)
+	w_Lang056 =	Caixa de Mensagem (Shift+F5)
+	w_Lang057 =	Esperar Tecla (Ctrl+F5)
+	w_Lang058 =	Janela (F6)
+	w_Lang059 =	Procurar Imagem / Pixel (F7)
+	w_Lang060 =	Executar / Arquivos / Texto / Misc. (F8)
+	w_Lang061 =	Loop (F9)
+	w_Lang062 =	Pular (Shift+F9)
+	w_Lang063 =	Rótulo (Ctrl+F9)
+	w_Lang064 =	Declaração Se (F10)
+	w_Lang065 =	Variáveis / Matrizes (Shift+F10)
+	w_Lang066 =	Funções / Métodos de Matriz (Ctrl+F10)
+	w_Lang067 =	Internet Explorer (F12)
+	w_Lang068 =	Expressão / Interface COM (Shift+F12)
+	w_Lang069 =	Enviar E-Mail (F11)
+	w_Lang070 =	Mensages do Windows (Ctrl+F12)
+	w_Lang071 =	Adicionar a tecla Windows ao atalho "Executar"
+	w_Lang072 =	Usar um botão do joystick como atalho
+	w_Lang073 =	Adicionar Macro (Ctrl+T)
+	w_Lang074 =	Fechar Macro (Ctrl+W)
+	w_Lang075 =	Duplicar Macro (Ctrl+Shift+D)
+	w_Lang076 =	Importar Macro (Ctrl+I)
+	w_Lang077 =	Salvar Macro Atual (Ctrl+Alt+S)
+	w_Lang078 =	Mover para Cima (Ctrl+PageUp)
+	w_Lang079 =	Mover para Baixo (Ctrl+PageDown)
+	w_Lang080 =	Duplicar Linhas Selecionadas (Ctrl+D)
+	w_Lang081 =	Recortar Linhas Selecionadas (Ctrl+X)
+	w_Lang082 =	Copiar Linhas Selecionadas (Ctrl+C)
+	w_Lang083 =	Colar Linhas Copiadas (Ctrl+V)
+	w_Lang084 =	Excluir Linhas Selecionadas (Del)
+	w_Lang085 =	Desfazer (Ctrl+Z)
+	w_Lang086 =	Refazer (Ctrl+Y)
+	w_Lang087 =	Copiar para...
+	w_Lang088 =	Localizar / Substituir (Ctrl+F)
+	w_Lang089 =	Inserir / Editar Comentário (Ctrl+L)
+	w_Lang090 =	Editar Marca de Cor (Ctrl+M)
+	w_Lang091 =	Personalizar
+	w_Lang092 =	Localizar um comando (Ctrl+Shift+F)
+	w_Lang093 =	Editar (Enter)
+	w_Lang094 =	Ocultar
+	w_Lang095 =	Mover para cá
+	w_Lang096 =	Copiar aqui
+	w_Lang097 =	Grupos
+	w_Lang098 =	Habilitar grupos (Ctrl+Shift+G)
+	w_Lang099 =	Adicionar grupo (Ctrl+Shift+Y)
+	w_Lang100 =	Remover grupo (Ctrl+Shift+R)
+	w_Lang101 =	Remove todos os grupos
+	w_Lang102 =	Editar grupos
+	w_Lang103 =	Nome do grupo
+	w_Lang104 =	Criar Função (Ctrl+Shift+U)
+	w_Lang105 =	Adicionar Parâmetro (Ctrl+Shift+P)
+	w_Lang106 =	Adicionar Retorno (Ctrl+Shift+N)
+	w_Lang107 =	Converter Macro em Função (Ctrl+Shift+C)
+	w_Lang108 =	Comentar linhas desmarcadas
+	w_Lang109 =	Baixar / Subir arquivos (Shift+F11)
+	w_Lang110 =	Compactar / Descompactar arquivos (Ctrl+F11)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mouse
@@ -538,6 +539,7 @@
 	c_Lang244 =	Direita para esquerda
 	c_Lang245 =	Anexos
 	c_Lang246 =	Caminho
+	c_Lang247 =	Se
 		
 ; 16. Other Windows		
 	t_Lang001 =	Exportar para AutoHotkey
@@ -583,7 +585,7 @@
 	t_Lang041 =	Tela
 	t_Lang042 =	Intervalo Padrão do Mouse
 	t_Lang043 =	Intervalo Padrão das Janelas
-	t_Lang044 =	Histório Máximo por Macro
+	t_Lang044 =	Histórico Máximo por Macro
 	t_Lang045 =	Apagar Histórico
 	t_Lang046 =	Capturar Imagem
 	t_Lang047 =	Desenhar com
@@ -741,6 +743,11 @@
 	t_Lang199 =	SSL
 	t_Lang200 =	Modo de envio
 	t_Lang201 =	Enviar um teste
+	t_Lang202 =	Tela e Janela
+	t_Lang203 =	Detectar Janelas Ocultas
+	t_Lang204 =	Detectar Texto Oculto
+	t_Lang205 =	Modo De Correspondência De Título
+	t_Lang206 =	Velocidade De Correspondência De Título
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Abrir
@@ -818,7 +825,7 @@
 		Para desabilitar a verificação automática selecine Ajuda > Verificar ao iniciar
 	d_Lang062 =	Você já possui a versão mais recente.
 	d_Lang063 =	Ocorreu um erro durante a verificação.
-	d_Lang064 =	Erro do objeto COM em
+	d_Lang064 =	Erro em
 	d_Lang065 =	Linha
 	d_Lang066 =	Especificamente
 	d_Lang067 =	Mostrar esta janela ao iniciar
@@ -936,8 +943,41 @@
 	EditPaste_TT =	Cola o Texto no ponto de inserção
 		em um controle Editar (isto não afeta
 		o conteúdo da Área de Transferência).
+	Ex_AF_TT =	Pula o método gentil de ativação da janela
+		e vai direto para o método bruto.
+	Ex_DH_TT =	Determina se janelas invisíveis são 'vistas' pelo script.
 	Ex_EdScript_TT =	Abrir em editor externo
+	Ex_EdVars_TT =	Selecionar variáveis globais a serem exportadas.
 	Ex_ExecScript_TT =	Executar script
+	Ex_HK_TT =	Força o uso do gancho (hook) para todos
+		ou alguns atalhos de teclado.
+	Ex_IfDir_TT =	Faz os Atalhos funcionarem dependendo
+		do tipo de janela ativa ou existente.
+	Ex_IfDirType_TT =	Faz os Atalhos funcionarem dependendo
+		do tipo de janela ativa ou existente.
+	Ex_IN_TT =	Faz com que o script comporte-se como se o conteúdo do
+		arquivo especificado estivesse presente nesta exata posição
+	Ex_MD_TT =	Ajusta o tempo de espera que irá ocorrer após
+		cada movimento do mouse ou clique.
+	Ex_MT_TT =	Ajusta o número máximo de execuções
+		simultâneas por hotkey ou hotstring.
+	Ex_NT_TT =	Disabilita o ícone de bandeja do sistema.
+	Ex_PT_TT =	Mantem um script executando permanentemente
+		(isto é, até que o usuário feche-o ou ExitApp seja encontrado).
+	Ex_SB_TT =	Determina a velocidade de execução do script (afeta utilização da CPU).
+	Ex_SC_TT =	Ajusta o tempo de espera que irá ocorrer após
+		cada comando de modificação de controle.
+	Ex_SI_TT =	Determina se o script poderá ser executado novamente quando já está em execução.
+	Ex_SK_TT =	Ajusta o tempo de espera que irá ocorrer após cada
+		tecla enviada por Send ou ControlSend.
+	Ex_SM_TT =	Torna Send sinônimo de SendInput ou SendPlay ao invés do
+		padrão (SendEvent). Também faz Click e MouseMove/Click/Drag
+		usarem o método especificado.
+	Ex_ST_TT =	Ajusta o modo de busca do parâmetro WinTitle em comandos como WinWait.
+	Ex_SW_TT =	Ajusta o tempo de espera que irá ocorrer após
+		cada comando de janela, como WinActivate.
+	Ex_UV_TT =	Exportar variáveis globais.
+	ExpList_TT =	Duplo-Clique para editar
 	ExprLink2_TT =	- NÃO COLOQUE VARIÁVEIS ENTRE SINAIS DE PORCENTAGEM AQUI.
 		- A maioria das expressões AHK são suportadas.
 		- Pode usar textos, variáveis, matrizes e funções.
@@ -951,6 +991,8 @@
 	ExpView_TT =	Editor Avançado
 	ExpView2_TT =	Editor Avançado
 	Fast_TT =	Usa um método de busca mais rápido (recomendado)
+	HiddenWin_TT =	Determina se janelas invisíveis são "vistos" pelo script.
+	HiddenText_TT =	Determina se o texto invisível em que uma janela é "visto" com a finalidade de encontrar a janela. Isso afeta comandos como IfWinExist e WinActivate.
 	HScale_TT =	Escala de altura
 	IconN_TT =	Número do grupo de ícones
 	IfLVColor_TT =	Clique para selecionar uma cor
@@ -986,48 +1028,6 @@
 	Screen_TT =	Coordenadas relativas à área de trabalho (tela inteira).
 	Screenshot_TT =	Capturar Imagem
 	SetText_TT =	Muda o texto de um controle.
-	TimeoutM_TT =	0 = infinito
-	ToggleC_TT =	Ativa Gravação Relativa quando a tecla estiver acionada.
-	TransC_TT =	Cor transparente
-	VarCopyA_TT =	Copy current variable contents
-	VarCopyB_TT =	Copy current variable contents
-	VariatT_TT =	Tons de variação
-	WScale_TT =	Escala de largura
-		
-; 20. Tooltips from AHK Docs		
-	Ex_AF_TT =	Pula o método gentil de ativação da janela
-		e vai direto para o método bruto.
-	Ex_DH_TT =	Determina se janelas invisíveis são 'vistas' pelo script.
-	Ex_EdVars_TT =	Selecionar variáveis globais a serem exportadas.
-	Ex_HK_TT =	Força o uso do gancho (hook) para todos
-		ou alguns atalhos de teclado.
-	Ex_IfDir_TT =	Faz os Atalhos funcionarem dependendo
-		do tipo de janela ativa ou existente.
-	Ex_IfDirType_TT =	Faz os Atalhos funcionarem dependendo
-		do tipo de janela ativa ou existente.
-	Ex_IN_TT =	Faz com que o script comporte-se como se o conteúdo do
-		arquivo especificado estivesse presente nesta exata posição
-	Ex_MD_TT =	Ajusta o tempo de espera que irá ocorrer após
-		cada movimento do mouse ou clique.
-	Ex_MT_TT =	Ajusta o número máximo de execuções
-		simultâneas por hotkey ou hotstring.
-	Ex_NT_TT =	Disabilita o ícone de bandeja do sistema.
-	Ex_PT_TT =	Mantem um script executando permanentemente
-		(isto é, até que o usuário feche-o ou ExitApp seja encontrado).
-	Ex_SB_TT =	Determina a velocidade de execução do script (afeta utilização da CPU).
-	Ex_SC_TT =	Ajusta o tempo de espera que irá ocorrer após
-		cada comando de modificação de controle.
-	Ex_SI_TT =	Determina se o script poderá ser executado novamente quando já está em execução.
-	Ex_SK_TT =	Ajusta o tempo de espera que irá ocorrer após cada
-		tecla enviada por Send ou ControlSend.
-	Ex_SM_TT =	Torna Send sinônimo de SendInput ou SendPlay ao invés do
-		padrão (SendEvent). Também faz Click e MouseMove/Click/Drag
-		usarem o método especificado.
-	Ex_ST_TT =	Ajusta o modo de busca do parâmetro WinTitle em comandos como WinWait.
-	Ex_SW_TT =	Ajusta o tempo de espera que irá ocorrer após
-		cada comando de janela, como WinActivate.
-	Ex_UV_TT =	Exportar variáveis globais.
-	ExpList_TT =	Duplo-Clique para editar
 	SI_TT =	A palavra FORCE pula a mensagem e substitui a instância antiga automaticamente,
 		que é similar em efeito ao comando Reload.
 		A palavra IGNORE pula a mensagem e deixa instância antiga em execução.
@@ -1044,8 +1044,21 @@
 		2: Uma janela precisa conter o título especificado em qualquer lugar.
 		3: Uma janela precisa ter exatamente o título especificado.
 		RegEx: Muda WinTitle, WinText, ExcludeTitle, e ExcludeText para expressões regulares.
+	TimeoutM_TT =	0 = infinito
+	TitleMatch_TT =	1: título da janela deve começar com o WinTitle especificado para ser um jogo.
+		2: O título de um janela pode conter WinTitle qualquer lugar dentro dele para ser um jogo.
+		3: título da janela deve corresponder exatamente WinTitle ser um jogo.
+		RegEx: Alterações WinTitle, WinText, Excluir título, e excluir do texto a ser expressões regulares.
+	TitleSpeed_TT =	Rápido: Este é o comportamento padrão. O desempenho pode ser substancialmente melhor do que lento, mas certos elementos WinText para alguns tipos de janelas não podem ser "visto" pelos vários comandos da janela.
+		Lento: Pode ser muito mais lento, mas tudo é possível WinText é recuperado de cada janela como um comando de janelas pesquisas através deles para uma partida. Window Spy revela que partes do texto de uma janela (se houver) exigem o modo lento.
+	ToggleC_TT =	Ativa Gravação Relativa quando a tecla estiver acionada.
+	TransC_TT =	Cor transparente
+	VarCopyA_TT =	Copy current variable contents
+	VarCopyB_TT =	Copy current variable contents
+	VariatT_TT =	Tons de variação
+	WScale_TT =	Escala de largura
 		
-; 21. Operators		
+; 20. Operators		
 	As_Oper_1 =	Atribuir
 	As_Oper_2 =	Adicionar
 	As_Oper_3 =	Subtrair
@@ -1065,8 +1078,16 @@
 	Co_Oper_5 =	Menor
 	Co_Oper_6 =	Maior ou igual
 	Co_Oper_7 =	Menor ou igual
+	Co_Oper_8 =	Em (lista)
+	Co_Oper_9 =	 Não em (lista)
+	Co_Oper_10 =	 Contém (lista)
+	Co_Oper_11 =	 Não contém (lista)
+	Co_Oper_12 =	 Entre (linha 1) e (linha 2)
+	Co_Oper_13 =	 Não entre (linha 1) e (linha 2)
+	Co_Oper_14 =	 É (tipo)
+	Co_Oper_15 =	 não é (tipo)
 		
-; 22. IE Commands Tips		
+; 21. IE Commands Tips		
 	IE_Cmd_Index =	
 	Checked	Define ou copia o estado de uma check box ou botão de rádio.
 	Click	Simula um clique em um objeto.
@@ -1094,7 +1115,7 @@
 	Value	Copia ou define o valor de um objeto.
 	Width	Define ou copia o comprimento de conteúdo do objeto.
 		
-; 23. COM Methods Tips		
+; 22. COM Methods Tips		
 	COM_CLSID_Index =	
 	Excel.Application	Manipula planilhas de Excel.
 	HTMLfile	Pode ser usado para ler, escrever e interagir com HTML.
@@ -1117,7 +1138,7 @@
 	WScript.Shell	Várias tarefas administrativas (muitas das tarefas nativas do AHK)
 	Word.Application	Manipula documentos do Word.
 		
-; 24. AHK Commands Tips		
+; 23. AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	Abs	Retorna o valor absoluto do número.
 	ACos	Retorna o arco cosseno (o número cujo cosseno é Número) em radianos.

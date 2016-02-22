@@ -1049,33 +1049,33 @@ Loop, Parse, MsgList, `n
 
 Sort, WM_Msgs, D|
 
-DefaultBar := {FileOpt: "Enabled AutoSize", File: ["New=" w_Lang040 ":41", "Open=" w_Lang041 ":42(Enabled Dropdown)", "Save=" w_Lang042 ":59(Enabled Dropdown)"
-													, "", "Export=" w_Lang043 ":16", "Preview=" w_Lang044 ":49", "Options=" w_Lang045 ":43"]
-			, RecPlayOpt: "Enabled AutoSize", RecPlay: ["Record=" w_Lang046 ":54(Enabled AutoSize Dropdown)"
-																, "", "PlayStart=" w_Lang047 ":46(Enabled AutoSize Dropdown)", "TestRun=" w_Lang048 ":48", "RunTimer=" w_Lang049 ":71"]
-			, CommandOpt: "Enabled AutoSize", Command: ["Mouse=" w_Lang050 ":38", "Text=" w_Lang051 ":70", "ControlCmd=" w_Lang053 ":7"
-														, "", "Sleep=" w_Lang054 ":45", "MsgBox=" w_Lang055 ":11", "KeyWait=" w_Lang056 ":77"
-														, "", "Window=" w_Lang057 ":79", "Image=" w_Lang058 ":27", "Run=" w_Lang059 ":58"
-														, "", "ComLoop=" w_Lang060 ":36", "ComGoto=" w_Lang061 ":22", "TimedLabel=" w_Lang062 ":71"
-														, "", "IfSt=" w_Lang063 ":26", "AsVar=" w_Lang064 ":75", "AsFunc=" w_Lang065 ":21"
-														, "", "Email=" w_Lang068 ":112", "DownloadFiles=" w_Lang108 ":95", "ZipFiles=" w_Lang109 ":113"
-														, "", "IECom=" w_Lang066 ":25", "ComInt=" w_Lang067 ":33", "SendMsg=" w_Lang069 ":61"
-														, "", "CmdFind=" w_Lang091 ":92"]
+DefaultBar := {FileOpt: "Enabled AutoSize", File: ["New=" w_Lang040 ":41", "Open=" w_Lang041 ":42(Enabled Dropdown)", "Save=" w_Lang042 ":59", "SaveAs=" w_Lang043 ":86"
+													, "", "Export=" w_Lang044 ":16", "Preview=" w_Lang045 ":49", "Options=" w_Lang046 ":43"]
+			, RecPlayOpt: "Enabled AutoSize", RecPlay: ["Record=" w_Lang047 ":54(Enabled AutoSize Dropdown)"
+																, "", "PlayStart=" w_Lang048 ":46(Enabled AutoSize Dropdown)", "TestRun=" w_Lang049 ":48", "RunTimer=" w_Lang050 ":71"]
+			, CommandOpt: "Enabled AutoSize", Command: ["Mouse=" w_Lang051 ":38", "Text=" w_Lang052 ":70", "ControlCmd=" w_Lang054 ":7"
+														, "", "Sleep=" w_Lang055 ":45", "MsgBox=" w_Lang056 ":11", "KeyWait=" w_Lang057 ":77"
+														, "", "Window=" w_Lang058 ":79", "Image=" w_Lang059 ":27", "Run=" w_Lang060 ":58"
+														, "", "ComLoop=" w_Lang061 ":36", "ComGoto=" w_Lang062 ":22", "TimedLabel=" w_Lang063 ":71"
+														, "", "IfSt=" w_Lang064 ":26", "AsVar=" w_Lang065 ":75", "AsFunc=" w_Lang066 ":21"
+														, "", "Email=" w_Lang069 ":112", "DownloadFiles=" w_Lang109 ":95", "ZipFiles=" w_Lang110 ":113"
+														, "", "IECom=" w_Lang067 ":25", "ComInt=" w_Lang068 ":33", "SendMsg=" w_Lang070 ":61"
+														, "", "CmdFind=" w_Lang092 ":92"]
 			, SetOpt: "Enabled AutoSize", Settings: ["HideMainWin=" w_Lang013 ":80", "OnScCtrl=" w_Lang009 ":87"
 														, "", "Capt=" w_Lang012 ":83", "CheckHkOn=" w_Lang014 ":82"
 														, "", "OnFinish=" w_Lang020 ":20(Enabled WholeDropdown)", "SetWin=" t_Lang009 ":101"
-														, "", "WinKey=" w_Lang070 ":88", "SetJoyButton=" w_Lang071 ":32"]
-			, EditOpt: "Enabled AutoSize", Edit: ["EditButton=" w_Lang092 ":14", "CutRows=" w_Lang080 ":9", "CopyRows=" w_Lang081 ":8", "PasteRows=" w_Lang082 ":44", "Remove=" w_Lang083 ":10"
-														, "", "Duplicate=" w_Lang079 ":13", "SelectMenu=" t_Lang139 ":99(Enabled WholeDropdown)", "CopyTo=" w_Lang086 ":8(Enabled WholeDropdown)"
-														, "", "GroupsMode=" w_Lang096 ":104(Enabled AutoSize Dropdown)"
-														, "", "MoveUp=" w_Lang077 ":40", "MoveDn=" w_Lang078 ":39"
-														, "", "Undo=" w_Lang084 ":74", "Redo=" w_Lang085 ":56"
-														, "", "FindReplace=" w_Lang087 ":19", "EditComm=" w_Lang088 ":5", "EditColor=" w_Lang089 ":3"
-														, "", "TabPlus=" w_Lang072 ":66", "TabClose=" w_Lang073 ":68", "DuplicateList=" w_Lang074 ":69", "EditMacros=" w_Lang052 ":97"
-														, "", "Import=" w_Lang075 ":28", "SaveCurrentList=" w_Lang076 ":67"
-														, "", "UserFunction=" w_Lang103 ":35", "FuncParameter=" w_Lang104 ":107", "FuncReturn=" w_Lang105 ":105"]}
+														, "", "WinKey=" w_Lang071 ":88", "SetJoyButton=" w_Lang072 ":32"]
+			, EditOpt: "Enabled AutoSize", Edit: ["EditButton=" w_Lang093 ":14", "CutRows=" w_Lang081 ":9", "CopyRows=" w_Lang082 ":8", "PasteRows=" w_Lang083 ":44", "Remove=" w_Lang084 ":10"
+														, "", "Duplicate=" w_Lang080 ":13", "SelectMenu=" t_Lang139 ":99(Enabled WholeDropdown)", "CopyTo=" w_Lang087 ":8(Enabled WholeDropdown)"
+														, "", "GroupsMode=" w_Lang097 ":104(Enabled AutoSize Dropdown)"
+														, "", "MoveUp=" w_Lang078 ":40", "MoveDn=" w_Lang079 ":39"
+														, "", "Undo=" w_Lang085 ":74", "Redo=" w_Lang086 ":56"
+														, "", "FindReplace=" w_Lang088 ":19", "EditComm=" w_Lang089 ":5", "EditColor=" w_Lang090 ":3"
+														, "", "TabPlus=" w_Lang073 ":66", "TabClose=" w_Lang074 ":68", "DuplicateList=" w_Lang075 ":69", "EditMacros=" w_Lang053 ":97"
+														, "", "Import=" w_Lang076 ":28", "SaveCurrentList=" w_Lang077 ":67"
+														, "", "UserFunction=" w_Lang104 ":35", "FuncParameter=" w_Lang105 ":107", "FuncReturn=" w_Lang106 ":105"]}
 FixedBar :=	{PrevOpt: "Enabled AutoSize", Preview: ["PrevCopy=" c_Lang023 ":8", "PrevRefreshButton=" t_Lang014 ":90(Enabled Dropdown)"
-														, "", "TabIndent=" t_Lang011 ":85", "ConvertBreaks=" t_Lang195 ":76", "CommentUnchecked=" w_Lang107 ":5", "TextWrap=" t_Lang052 ":96", "OnTop=" t_Lang016 ":81"
+														, "", "TabIndent=" t_Lang011 ":85", "ConvertBreaks=" t_Lang195 ":76", "CommentUnchecked=" w_Lang108 ":5", "TextWrap=" t_Lang052 ":96", "OnTop=" t_Lang016 ":81"
 														, "", "EditScript=" t_Lang138 ":109", "PrevDock=" t_Lang124 ":106", "Preview=" c_Lang022 ":108"]
 			, TextOpt: "Enabled AutoSize", Text: ["OpenT=" t_Lang126 ":42", "SaveT=" t_Lang127 ":59"
 														, "", "CutT=" t_Lang128 ":9", "CopyT=" t_Lang129 ":8", "PasteT=" t_Lang130 ":44"

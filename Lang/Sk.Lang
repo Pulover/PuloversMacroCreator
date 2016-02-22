@@ -224,73 +224,74 @@
 	w_Lang040 =	Nový (Ctrl+N)
 	w_Lang041 =	Otvoriť (Ctrl+O)
 	w_Lang042 =	Uložiť (Ctrl+S)
-	w_Lang043 =	Export do AHK (Ctrl+E)
-	w_Lang044 =	Náhľad Script (Ctrl+P)
-	w_Lang045 =	Nastavenie (Ctrl+G)
-	w_Lang046 =	Záznam makra (Ctrl+R)
-	w_Lang047 =	Aktivácia Makrá (Ctrl+Enter)
-	w_Lang048 =	Prehrať aktuálne makro (Ctrl+Shift+Enter)
-	w_Lang049 =	Timer (Ctrl+Shift+T)
-	w_Lang050 =	Myš (F2)
-	w_Lang051 =	Text (F3)
-	w_Lang052 =	Úprava Makra (Ctrl+Shift+M)
-	w_Lang053 =	Control (F4)
-	w_Lang054 =	Pauza (F5)
-	w_Lang055 =	Message Box (Shift+F5)
-	w_Lang056 =	Key Wait (Ctrl+F5)
-	w_Lang057 =	Okno (F6)
-	w_Lang058 =	Obrázok / Pixel Search (F7)
-	w_Lang059 =	Spustiť / Súbor / String / Misc. (F8)
-	w_Lang060 =	Loop (F9)
-	w_Lang061 =	Goto (Shift+F9)
-	w_Lang062 =	Label (Ctrl+F9)
-	w_Lang063 =	Pokiaľ závierka (F10)
-	w_Lang064 =	Premenné / Poľa (Shift+F10)
-	w_Lang065 =	Funkcia / Metódy poľa (Ctrl+F10)
-	w_Lang066 =	Internet Explorer (F12)
-	w_Lang067 =	Výraz / COM rozhranie (Shift+F12)
-	w_Lang068 =	Poslať email (F11)
-	w_Lang069 =	Windows Správy (Ctrl+F12)
-	w_Lang070 =	Pridať kláves Windows na "Play" klávesové skratky
-	w_Lang071 =	Použite joystick ako klávesovú skratku
-	w_Lang072 =	Pridať makro (Ctrl+T)
-	w_Lang073 =	Zavrieť Makro (Ctrl+W)
-	w_Lang074 =	Duplicitné makro (Ctrl+Shift+D)
-	w_Lang075 =	Dovoz Makro (Ctrl+I)
-	w_Lang076 =	Uložiť aktuálny makro (Ctrl+Alt+S)
-	w_Lang077 =	Posunúť hore (Ctrl+PageUp)
-	w_Lang078 =	Dole (Ctrl+PageDown)
-	w_Lang079 =	Duplicitné vybrané riadky (Ctrl+D)
-	w_Lang080 =	Vyňať vybrané riadky (Ctrl+X)
-	w_Lang081 =	Kopírovať vybrané riadky (Ctrl+C)
-	w_Lang082 =	Vložiť kopírované riadky (Ctrl+V)
-	w_Lang083 =	Zmazať vybrané riadky (DEL)
-	w_Lang084 =	Späť (Ctrl+Z)
-	w_Lang085 =	Znovu (Ctrl+Y)
-	w_Lang086 =	Kopírovať do...
-	w_Lang087 =	Nájsť / Nahradiť (Ctrl+F)
-	w_Lang088 =	Vložiť / Upraviť komentár (Ctrl+L)
-	w_Lang089 =	Edit Color Mark (Ctrl+M)
-	w_Lang090 =	Vlastné
-	w_Lang091 =	Nájsť príkaz (Ctrl+Shift+F)
-	w_Lang092 =	Upraviť (Enter)
-	w_Lang093 =	Schovať
-	w_Lang094 =	Premiestniť sem
-	w_Lang095 =	Kopírovanie tu
-	w_Lang096 =	skupiny
-	w_Lang097 =	Povoliť skupiny (Ctrl+Shift+G)
-	w_Lang098 =	Pridať skupinu (Ctrl+Shift+Y)
-	w_Lang099 =	Odstrániť skupinu (Ctrl+Shift+R)
-	w_Lang100 =	Odstrániť všetky skupiny
-	w_Lang101 =	Upraviť skupiny
-	w_Lang102 =	Názov skupiny
-	w_Lang103 =	Vytvorenie funkcie (Ctrl+Shift+U)
-	w_Lang104 =	Pridať parameter (Ctrl+Shift+P)
-	w_Lang105 =	Pridať Return (Ctrl+Shift+N)
-	w_Lang106 =	Previesť makra fungovať (Ctrl+Shift+C)
-	w_Lang107 =	Komentár mimo neskontrolované riadkov
-	w_Lang108 =	Download / upload súborov (Shift+F11)
-	w_Lang109 =	Zip / rozbalenie súborov (Ctrl+F11)
+	w_Lang043 =	Uložiť ako (Ctrl+Shift+S)
+	w_Lang044 =	Export do AHK (Ctrl+E)
+	w_Lang045 =	Náhľad Script (Ctrl+P)
+	w_Lang046 =	Nastavenie (Ctrl+G)
+	w_Lang047 =	Záznam makra (Ctrl+R)
+	w_Lang048 =	Aktivácia Makrá (Ctrl+Enter)
+	w_Lang049 =	Prehrať aktuálne makro (Ctrl+Shift+Enter)
+	w_Lang050 =	Timer (Ctrl+Shift+T)
+	w_Lang051 =	Myš (F2)
+	w_Lang052 =	Text (F3)
+	w_Lang053 =	Úprava Makra (Ctrl+Shift+M)
+	w_Lang054 =	Control (F4)
+	w_Lang055 =	Pauza (F5)
+	w_Lang056 =	Message Box (Shift+F5)
+	w_Lang057 =	Key Wait (Ctrl+F5)
+	w_Lang058 =	Okno (F6)
+	w_Lang059 =	Obrázok / Pixel Search (F7)
+	w_Lang060 =	Spustiť / Súbor / String / Misc. (F8)
+	w_Lang061 =	Loop (F9)
+	w_Lang062 =	Goto (Shift+F9)
+	w_Lang063 =	Label (Ctrl+F9)
+	w_Lang064 =	Pokiaľ závierka (F10)
+	w_Lang065 =	Premenné / Poľa (Shift+F10)
+	w_Lang066 =	Funkcia / Metódy poľa (Ctrl+F10)
+	w_Lang067 =	Internet Explorer (F12)
+	w_Lang068 =	Výraz / COM rozhranie (Shift+F12)
+	w_Lang069 =	Poslať email (F11)
+	w_Lang070 =	Windows Správy (Ctrl+F12)
+	w_Lang071 =	Pridať kláves Windows na "Play" klávesové skratky
+	w_Lang072 =	Použite joystick ako klávesovú skratku
+	w_Lang073 =	Pridať makro (Ctrl+T)
+	w_Lang074 =	Zavrieť Makro (Ctrl+W)
+	w_Lang075 =	Duplicitné makro (Ctrl+Shift+D)
+	w_Lang076 =	Dovoz Makro (Ctrl+I)
+	w_Lang077 =	Uložiť aktuálny makro (Ctrl+Alt+S)
+	w_Lang078 =	Posunúť hore (Ctrl+PageUp)
+	w_Lang079 =	Dole (Ctrl+PageDown)
+	w_Lang080 =	Duplicitné vybrané riadky (Ctrl+D)
+	w_Lang081 =	Vyňať vybrané riadky (Ctrl+X)
+	w_Lang082 =	Kopírovať vybrané riadky (Ctrl+C)
+	w_Lang083 =	Vložiť kopírované riadky (Ctrl+V)
+	w_Lang084 =	Zmazať vybrané riadky (DEL)
+	w_Lang085 =	Späť (Ctrl+Z)
+	w_Lang086 =	Znovu (Ctrl+Y)
+	w_Lang087 =	Kopírovať do...
+	w_Lang088 =	Nájsť / Nahradiť (Ctrl+F)
+	w_Lang089 =	Vložiť / Upraviť komentár (Ctrl+L)
+	w_Lang090 =	Edit Color Mark (Ctrl+M)
+	w_Lang091 =	Vlastné
+	w_Lang092 =	Nájsť príkaz (Ctrl+Shift+F)
+	w_Lang093 =	Upraviť (Enter)
+	w_Lang094 =	Schovať
+	w_Lang095 =	Premiestniť sem
+	w_Lang096 =	Kopírovanie tu
+	w_Lang097 =	skupiny
+	w_Lang098 =	Povoliť skupiny (Ctrl+Shift+G)
+	w_Lang099 =	Pridať skupinu (Ctrl+Shift+Y)
+	w_Lang100 =	Odstrániť skupinu (Ctrl+Shift+R)
+	w_Lang101 =	Odstrániť všetky skupiny
+	w_Lang102 =	Upraviť skupiny
+	w_Lang103 =	Názov skupiny
+	w_Lang104 =	Vytvorenie funkcie (Ctrl+Shift+U)
+	w_Lang105 =	Pridať parameter (Ctrl+Shift+P)
+	w_Lang106 =	Pridať Return (Ctrl+Shift+N)
+	w_Lang107 =	Previesť makra fungovať (Ctrl+Shift+C)
+	w_Lang108 =	Komentár mimo neskontrolované riadkov
+	w_Lang109 =	Download / upload súborov (Shift+F11)
+	w_Lang110 =	Zip / rozbalenie súborov (Ctrl+F11)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Myš
@@ -538,6 +539,7 @@
 	c_Lang244 =	Right-to-Left
 	c_Lang245 =	Prílohy
 	c_Lang246 =	Cesta
+	c_Lang247 =	ak
 		
 ; 16. Other Windows		
 	t_Lang001 =	Export do AutoHotkey
@@ -741,6 +743,11 @@
 	t_Lang199 =	SSL
 	t_Lang200 =	režim Odoslať
 	t_Lang201 =	Zaslat test
+	t_Lang202 =	Obrazovky A Okná
+	t_Lang203 =	Odhaliť Skryté Okná
+	t_Lang204 =	Odhaliť Skrytý Text
+	t_Lang205 =	Režim O Titul Zápas
+	t_Lang206 =	Názov Rýchlosť Zápas
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Otvorené
@@ -818,7 +825,7 @@
 		Ak chcete zakázať automatickú kontrolu vyberte Pomocník> Skontrolovať pri spustení. > Pozrite sa na štarte
 	d_Lang062 =	Už máte najnovšiu verziu.
 	d_Lang063 =	Nastala chyba pri kontrole.
-	d_Lang064 =	COM objekt chyba
+	d_Lang064 =	Ralat dalam
 	d_Lang065 =	Riadok
 	d_Lang066 =	Konkrétne
 	d_Lang067 =	Zobraziť toto okno pri spustení
@@ -880,7 +887,7 @@
 		Chceli by ste ju nahradiť?
 	d_Lang112 =	E-mailový účet nebol nájdený.
 	d_Lang113 =	Hlásená žiadna chyba.
-	d_Lang114 =	Skripty vyvážené (aj keď zostavil) pomocou odosielanie e-mailov funkcie (CDO) bude mať viditeľné informácie o e-mailových účtov na použitie, vrátane hesla. Súbor projektu PMC nemá túto informáciu.
+	d_Lang114 =	Skrip dieksport (walaupun disusun) dengan fungsi e-mel menghantar (CDO) akan mempunyai maklumat yang boleh dilihat dengan akaun e-mel yang digunakan, termasuk KATALALUAN. PMC fail projek tidak mempunyai maklumat ini.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Môžete vytvárať makrá pomocou príkazových tlačidiel v hlavnom okne, alebo pomocou rekordéra kopírovať svoje akcie. Prejsť na Možnosti> Nastavenie> Nahrávanie na vstupy vybrať, čo budú zaznamenané.
@@ -936,8 +943,41 @@
 	EditPaste_TT =	Pasty String na striešky / vlož pozície
 		v konaní Edit (to neovplyvní
 		obsah schránky).
+	Ex_AF_TT =	Preskočí jemný spôsob aktivovanie okna
+		a ide rovno do násilnej metódy.
+	Ex_DH_TT =	Určuje, či neviditeľné okná sú "vidieť" pomocou skriptu.
 	Ex_EdScript_TT =	Otvoriť v externom editore
+	Ex_EdVars_TT =	Vyberte globálne premenné, ktoré chcete exportovať.
 	Ex_ExecScript_TT =	Spustiť skript
+	Ex_HK_TT =	Vynúti použitie háku pre vykonávanie všetkých
+		alebo niektoré klávesové klávesové skratky.
+	Ex_IfDir_TT =	Vytvorí kontextovo citlivé klávesy a hotstrings závislosti
+		na type okna, ktoré je aktívne, alebo neexistuje.
+	Ex_IfDirType_TT =	Vytvorí kontextovo citlivé klávesy a hotstrings závislosti
+		na type okna, ktoré je aktívne, alebo neexistuje.
+	Ex_IN_TT =	Spôsobí, že skript sa správať, ako by špecifikované
+		obsah súboru sú prítomné práve v tomto mieste.
+	Ex_MD_TT =	Nastavuje oneskorenie, dôjde po
+		Každý pohyb myši alebo tlačidlom.
+	Ex_MT_TT =	Nastaví maximálny počet súčasne
+		závitov na klávesy alebo hotstring.
+	Ex_NT_TT =	Zakáže predvádzanie tray ikonou.
+	Ex_PT_TT =	Udržuje skript beží trvale
+		(To je, kým používateľ zavrie alebo ExitApp je zistená).
+	Ex_SB_TT =	Určuje, ako rýchlo sa skript spustí (ovplyvňuje využitie procesora).
+	Ex_SC_TT =	Nastavuje oneskorenie, dôjde po
+		Každý ovládací prvok modifikujúce príkaz.
+	Ex_SI_TT =	Určuje, či je povolené skript spustiť znovu, keď je už spustená.
+	Ex_SK_TT =	Nastavuje oneskorenie, dôjde po každom
+		klávesy poslal Odoslať alebo ControlSend.
+	Ex_SM_TT =	Robí Poslať synonymom SendInput alebo SendPlay skôr než
+		Východisková hodnota (SendEvent). Tiež robí Kliknite a MouseMove / Kliknite / Drag
+		použiť špecifikovanú metódu.
+	Ex_ST_TT =	Nastaví zodpovedajúce správanie WinTitle parametrov v príkazoch ako WinWait.
+	Ex_SW_TT =	Nastavuje oneskorenie, dôjde po
+		každý Windowing príkaz, napríklad WinActivate.
+	Ex_UV_TT =	Export globálne premenné.
+	ExpList_TT =	Poklepaním editovať
 	ExprLink2_TT =	- NEPOUŽÍVAJTE UZAVRITE PREMENNÉ V ZNAKY PERCENTA TU.
 		- Väčšina AHK výrazy sú podporované.
 		- Môžete použiť reťazca, premenné, pole a funkcia.
@@ -951,6 +991,8 @@
 	ExpView_TT =	Rozšírené Editor
 	ExpView2_TT =	Rozšírené Editor
 	Fast_TT =	Používa rýchlejšie vyhľadávanie metódu (odporúčané)
+	HiddenWin_TT =	Určuje, či neviditeľné okná sú "vidieť" pomocou skriptu.
+	HiddenText_TT =	Určuje, či neviditeľný textu v okne je "vidieť" za účelom zistenia okna. To má vplyv na príkazy, ako je IfWinExist a WinActivate.
 	HScale_TT =	Výška stupnice
 	IconN_TT =	Číslo skupiny ikon
 	IfLVColor_TT =	Kliknutím vyberte farbu
@@ -986,48 +1028,6 @@
 	Screen_TT =	Súradnice sú relatívna k ploche (celá obrazovka).
 	Screenshot_TT =	Vytvoriť snímku
 	SetText_TT =	Zmení text ovládacieho prvku.
-	TimeoutM_TT =	0 = nekonečno
-	ToggleC_TT =	Aktivácia Relatívna nahrávania pri stlačení stav je ďalej.
-	TransC_TT =	Transparentná farba
-	VarCopyA_TT =	Skopírujte bežný variabilný obsah
-	VarCopyB_TT =	Skopírujte bežný variabilný obsah
-	VariatT_TT =	Odtiene variácie
-	WScale_TT =	Šírka stupnice
-		
-; 20. Tooltips from AHK Docs		
-	Ex_AF_TT =	Preskočí jemný spôsob aktivovanie okna
-		a ide rovno do násilnej metódy.
-	Ex_DH_TT =	Určuje, či neviditeľné okná sú "vidieť" pomocou skriptu.
-	Ex_EdVars_TT =	Vyberte globálne premenné, ktoré chcete exportovať.
-	Ex_HK_TT =	Vynúti použitie háku pre vykonávanie všetkých
-		alebo niektoré klávesové klávesové skratky.
-	Ex_IfDir_TT =	Vytvorí kontextovo citlivé klávesy a hotstrings závislosti
-		na type okna, ktoré je aktívne, alebo neexistuje.
-	Ex_IfDirType_TT =	Vytvorí kontextovo citlivé klávesy a hotstrings závislosti
-		na type okna, ktoré je aktívne, alebo neexistuje.
-	Ex_IN_TT =	Spôsobí, že skript sa správať, ako by špecifikované
-		obsah súboru sú prítomné práve v tomto mieste.
-	Ex_MD_TT =	Nastavuje oneskorenie, dôjde po
-		Každý pohyb myši alebo tlačidlom.
-	Ex_MT_TT =	Nastaví maximálny počet súčasne
-		závitov na klávesy alebo hotstring.
-	Ex_NT_TT =	Zakáže predvádzanie tray ikonou.
-	Ex_PT_TT =	Udržuje skript beží trvale
-		(To je, kým používateľ zavrie alebo ExitApp je zistená).
-	Ex_SB_TT =	Určuje, ako rýchlo sa skript spustí (ovplyvňuje využitie procesora).
-	Ex_SC_TT =	Nastavuje oneskorenie, dôjde po
-		Každý ovládací prvok modifikujúce príkaz.
-	Ex_SI_TT =	Určuje, či je povolené skript spustiť znovu, keď je už spustená.
-	Ex_SK_TT =	Nastavuje oneskorenie, dôjde po každom
-		klávesy poslal Odoslať alebo ControlSend.
-	Ex_SM_TT =	Robí Poslať synonymom SendInput alebo SendPlay skôr než
-		Východisková hodnota (SendEvent). Tiež robí Kliknite a MouseMove / Kliknite / Drag
-		použiť špecifikovanú metódu.
-	Ex_ST_TT =	Nastaví zodpovedajúce správanie WinTitle parametrov v príkazoch ako WinWait.
-	Ex_SW_TT =	Nastavuje oneskorenie, dôjde po
-		každý Windowing príkaz, napríklad WinActivate.
-	Ex_UV_TT =	Export globálne premenné.
-	ExpList_TT =	Poklepaním editovať
 	SI_TT =	Slovo FORCE preskočí dialóg a nahrádza pôvodný inštancie automaticky,
 		ktorý je podobný v skutočnosti na Reload príkazu.
 		Slovo ignorovať preskočí dialógové okno a nechá starej inštancie spustená.
@@ -1044,8 +1044,21 @@
 		2: názov okna môže obsahovať WinTitle kdekoľvek vo vnútri, že je to zápas.
 		3: názov okna sa musí presne zhodovať WinTitle byť zhoda.
 		Regex: Zmeny WinTitle, WinText, ExcludeTitle a ExcludeText byť regulárne výrazy.
+	TimeoutM_TT =	0 = nekonečno
+	TitleMatch_TT =	1: Názov oknom musí začínať s určenou WinTitle byť zhoda.
+		2: Názov oknom môže obsahovať WinTitle kdekoľvek vo vnútri to byť zhoda.
+		3: Názov oknom musí presne zodpovedať WinTitle byť zhoda.
+		Regex: Zmeny WinTitle, WinText, Vylúčiť názov a Vylúčiť text, ktorý bude regulárne výrazy.
+	TitleSpeed_TT =	Fast: Toto je predvolené správanie. Výkon môže byť podstatne lepší ako pomalá, ale určité prvky WinText u niektorých typov okien nesmie byť "vidieť" rôznymi príkazmi okien.
+		Slow: Môže byť oveľa pomalší, ale to vôbec možné WinText vyvolá z každého okna ako príkaz oknami hľadá skrze nich na zápas. Okno Spy odhalí, ktoré časti textu oknom (ak existuje) vyžadujú pomalý režim.
+	ToggleC_TT =	Aktivácia Relatívna nahrávania pri stlačení stav je ďalej.
+	TransC_TT =	Transparentná farba
+	VarCopyA_TT =	Skopírujte bežný variabilný obsah
+	VarCopyB_TT =	Skopírujte bežný variabilný obsah
+	VariatT_TT =	Odtiene variácie
+	WScale_TT =	Šírka stupnice
 		
-; 21. Operators		
+; 20. Operators		
 	As_Oper_1 =	Priradiť
 	As_Oper_2 =	Pridať
 	As_Oper_3 =	Odčítať
@@ -1065,8 +1078,16 @@
 	Co_Oper_5 =	Menej
 	Co_Oper_6 =	Väčšie alebo rovné
 	Co_Oper_7 =	Menší alebo rovný
+	Co_Oper_8 =	In (zoznam)
+	Co_Oper_9 =	 Nie v (zoznam)
+	Co_Oper_10 =	 Obsahuje (zoznam)
+	Co_Oper_11 =	 Nie je obsahuje (zoznam)
+	Co_Oper_12 =	 Medzi (linka 1) a (linka 2)
+	Co_Oper_13 =	 Nie je medzi (riadok 1) a (linka 2)
+	Co_Oper_14 =	 Je (typ)
+	Co_Oper_15 =	 Nie je (typ)
 		
-; 22. IE Commands Tips		
+; 21. IE Commands Tips		
 	IE_Cmd_Index =	
 	Checked	Nastaví alebo získa stav zaškrtávacie políčko alebo prepínač.
 	Click	Simuluje kliknite na objekt.
@@ -1094,7 +1115,7 @@
 	Value	Získa alebo nastaví hodnotu objektu.
 	Width	Nastaví alebo získa šírku objektu.
 		
-; 23. COM Methods Tips		
+; 22. COM Methods Tips		
 	COM_CLSID_Index =	
 	Excel.Application	Manipuluje listy programu Excel.
 	HTMLfile	Môže byť použitý na čítať, písať a komunikovať s HTML.
@@ -1117,7 +1138,7 @@
 	WScript.Shell	Rôzne administratívne úlohy (veľa prirodzených AHK úlohy).
 	Word.Application	Manipuluje dokumentov aplikácie Word.
 		
-; 24. AHK Commands Tips		
+; 23. AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	Abs	Vráti absolútnu hodnotu čísla.
 	ACos	Vracia arkuskosínus (číslo, ktorého kosínus je číslo) v radiánoch.

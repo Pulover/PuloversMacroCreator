@@ -224,73 +224,74 @@
 	w_Lang040 =	새 (Ctrl 키+N)
 	w_Lang041 =	열기 (Ctrl 키+O)
 	w_Lang042 =	저장하기 (Ctrl+S)
-	w_Lang043 =	AHK (Ctrl 키+E)로 내보내기
-	w_Lang044 =	미리보기 스크립트 (Ctrl 키+P)
-	w_Lang045 =	설정 (Ctrl 키를+G)
-	w_Lang046 =	기록 매크로 (Ctrl 키+R)
-	w_Lang047 =	활성화 매크로 (Ctrl 키를+입력)
-	w_Lang048 =	현재 매크로를 재생 (Ctrl+Shift+입력)
-	w_Lang049 =	타이머 (Ctrl+Shift+T)
-	w_Lang050 =	마우스 (F2​​)
-	w_Lang051 =	텍스트 (F3)
-	w_Lang052 =	매크로 편집 (Ctrl+Shift+M)
-	w_Lang053 =	컨트롤 (F4)
-	w_Lang054 =	중지
-	w_Lang055 =	메시지 박스 (Shift+F5)
-	w_Lang056 =	키 대기
-	w_Lang057 =	창 (F6)
-	w_Lang058 =	이미지 / 픽셀 검색 (F7)
-	w_Lang059 =	/ 파일 / 문자열 / 기타를 실행합니다. (F8)
-	w_Lang060 =	루프 (F9)
-	w_Lang061 =	고토 (+ F9를 Shift)
-	w_Lang062 =	라벨 (Ctrl 키를+F9)
-	w_Lang063 =	만약 명세서 (F10)
-	w_Lang064 =	변수 / 배열(&V) (+ F10를 Shift)
-	w_Lang065 =	함수 / 배열 방법 (Ctrl 키를+F10)
-	w_Lang066 =	인터넷 익스플로러 (F12)
-	w_Lang067 =	표현 / COM 인터페이스 (Shift+F12)
-	w_Lang068 =	이메일을 보내 (F11)
-	w_Lang069 =	윈도우 메시지 (Ctrl+F12)
-	w_Lang070 =	단축키를 "재생"을 Windows 키 추가
-	w_Lang071 =	단축키로 조이스틱 버튼을 사용하여
-	w_Lang072 =	매크로를 추가합니다 (Ctrl+T)
-	w_Lang073 =	닫기 매크로 (Ctrl 키를+W)
-	w_Lang074 =	매크로를 복사 (Ctrl+Shift+D)
-	w_Lang075 =	가져 오기 매크로 (Ctrl 키를+I)
-	w_Lang076 =	현재 매크로를 저장 (Ctrl+Alt+S)
-	w_Lang077 =	위로 이동합니다 (Ctrl+페이지 업)
-	w_Lang078 =	(Ctrl 키를+PageDown 키) 아래로 이동
-	w_Lang079 =	선택한 행을 복제 (Ctrl 키+D)
-	w_Lang080 =	선택한 행합니다 (Ctrl+X)를 잘라
-	w_Lang081 =	선택한 행합니다 (Ctrl+C)를 복사합니다
-	w_Lang082 =	붙여 넣기 복사 행 (Ctrl 키를+V)
-	w_Lang083 =	선택된 행 (델)을 삭제
-	w_Lang084 =	실행 취소 (Ctrl 키+Z)
-	w_Lang085 =	다시 실행 (Ctrl 키를+Y)
-	w_Lang086 =	에 복사...
-	w_Lang087 =	찾기 / 바꾸기 (Ctrl 키+F)
-	w_Lang088 =	삽입하다 / 댓글 수정 (Ctrl 키+L)
-	w_Lang089 =	편집 색상 표 (Ctrl 키+M)
-	w_Lang090 =	사용자 지정
-	w_Lang091 =	명령 찾기 (Ctrl+Shift+F)
-	w_Lang092 =	수정 (Enter)
-	w_Lang093 =	숨기기
-	w_Lang094 =	여기에 이동
-	w_Lang095 =	여기에 복사
-	w_Lang096 =	여러 떼
-	w_Lang097 =	그룹을 사용 (Ctrl 키를+시프트+G)
-	w_Lang098 =	그룹을 추가 (Ctrl 키를+시프트+Y)
-	w_Lang099 =	그룹을 제거 (Ctrl 키를+시프트+R)
-	w_Lang100 =	모든 그룹을 제거
-	w_Lang101 =	편집 그룹
-	w_Lang102 =	그룹 이름
-	w_Lang103 =	기능 만들기 (Ctrl 키를+시프트+U)
-	w_Lang104 =	매개 변수 (Ctrl+Shift+P를) 추가
-	w_Lang105 =	Return 키 (Ctrl 키를+시프트+N)를 추가
-	w_Lang106 =	(Ctrl 키를+시프트+C를) 함수 매크로 변환
-	w_Lang107 =	선택하지 않은 행을 주석
-	w_Lang108 =	다운로드 / 업로드 파일 (+ F11를 Shift)
-	w_Lang109 =	우편 번호 / 압축 해제 파일 (Ctrl 키를+F11)
+	w_Lang043 =	다른 이름으로 저장 (Ctrl+Shift+S)
+	w_Lang044 =	AHK (Ctrl 키+E)로 내보내기
+	w_Lang045 =	미리보기 스크립트 (Ctrl 키+P)
+	w_Lang046 =	설정 (Ctrl 키를+G)
+	w_Lang047 =	기록 매크로 (Ctrl 키+R)
+	w_Lang048 =	활성화 매크로 (Ctrl 키를+입력)
+	w_Lang049 =	현재 매크로를 재생 (Ctrl+Shift+입력)
+	w_Lang050 =	타이머 (Ctrl+Shift+T)
+	w_Lang051 =	마우스 (F2​​)
+	w_Lang052 =	텍스트 (F3)
+	w_Lang053 =	매크로 편집 (Ctrl+Shift+M)
+	w_Lang054 =	컨트롤 (F4)
+	w_Lang055 =	중지
+	w_Lang056 =	메시지 박스 (Shift+F5)
+	w_Lang057 =	키 대기
+	w_Lang058 =	창 (F6)
+	w_Lang059 =	이미지 / 픽셀 검색 (F7)
+	w_Lang060 =	/ 파일 / 문자열 / 기타를 실행합니다. (F8)
+	w_Lang061 =	루프 (F9)
+	w_Lang062 =	고토 (+ F9를 Shift)
+	w_Lang063 =	라벨 (Ctrl 키를+F9)
+	w_Lang064 =	만약 명세서 (F10)
+	w_Lang065 =	변수 / 배열(&V) (+ F10를 Shift)
+	w_Lang066 =	함수 / 배열 방법 (Ctrl 키를+F10)
+	w_Lang067 =	인터넷 익스플로러 (F12)
+	w_Lang068 =	표현 / COM 인터페이스 (Shift+F12)
+	w_Lang069 =	이메일을 보내 (F11)
+	w_Lang070 =	윈도우 메시지 (Ctrl+F12)
+	w_Lang071 =	단축키를 "재생"을 Windows 키 추가
+	w_Lang072 =	단축키로 조이스틱 버튼을 사용하여
+	w_Lang073 =	매크로를 추가합니다 (Ctrl+T)
+	w_Lang074 =	닫기 매크로 (Ctrl 키를+W)
+	w_Lang075 =	매크로를 복사 (Ctrl+Shift+D)
+	w_Lang076 =	가져 오기 매크로 (Ctrl 키를+I)
+	w_Lang077 =	현재 매크로를 저장 (Ctrl+Alt+S)
+	w_Lang078 =	위로 이동합니다 (Ctrl+페이지 업)
+	w_Lang079 =	(Ctrl 키를+PageDown 키) 아래로 이동
+	w_Lang080 =	선택한 행을 복제 (Ctrl 키+D)
+	w_Lang081 =	선택한 행합니다 (Ctrl+X)를 잘라
+	w_Lang082 =	선택한 행합니다 (Ctrl+C)를 복사합니다
+	w_Lang083 =	붙여 넣기 복사 행 (Ctrl 키를+V)
+	w_Lang084 =	선택된 행 (델)을 삭제
+	w_Lang085 =	실행 취소 (Ctrl 키+Z)
+	w_Lang086 =	다시 실행 (Ctrl 키를+Y)
+	w_Lang087 =	에 복사...
+	w_Lang088 =	찾기 / 바꾸기 (Ctrl 키+F)
+	w_Lang089 =	삽입하다 / 댓글 수정 (Ctrl 키+L)
+	w_Lang090 =	편집 색상 표 (Ctrl 키+M)
+	w_Lang091 =	사용자 지정
+	w_Lang092 =	명령 찾기 (Ctrl+Shift+F)
+	w_Lang093 =	수정 (Enter)
+	w_Lang094 =	숨기기
+	w_Lang095 =	여기에 이동
+	w_Lang096 =	여기에 복사
+	w_Lang097 =	여러 떼
+	w_Lang098 =	그룹을 사용 (Ctrl 키를+시프트+G)
+	w_Lang099 =	그룹을 추가 (Ctrl 키를+시프트+Y)
+	w_Lang100 =	그룹을 제거 (Ctrl 키를+시프트+R)
+	w_Lang101 =	모든 그룹을 제거
+	w_Lang102 =	편집 그룹
+	w_Lang103 =	그룹 이름
+	w_Lang104 =	기능 만들기 (Ctrl 키를+시프트+U)
+	w_Lang105 =	매개 변수 (Ctrl+Shift+P를) 추가
+	w_Lang106 =	Return 키 (Ctrl 키를+시프트+N)를 추가
+	w_Lang107 =	(Ctrl 키를+시프트+C를) 함수 매크로 변환
+	w_Lang108 =	선택하지 않은 행을 주석
+	w_Lang109 =	다운로드 / 업로드 파일 (+ F11를 Shift)
+	w_Lang110 =	우편 번호 / 압축 해제 파일 (Ctrl 키를+F11)
 		
 ; 15. Command Windows		
 	c_Lang001 =	마우스
@@ -538,6 +539,7 @@
 	c_Lang244 =	오른쪽에서 왼쪽
 	c_Lang245 =	첨부 파일
 	c_Lang246 =	통로
+	c_Lang247 =	면
 		
 ; 16. Other Windows		
 	t_Lang001 =	AutoHotkey로 내보내기
@@ -741,6 +743,11 @@
 	t_Lang199 =	SSL
 	t_Lang200 =	모드 보내기
 	t_Lang201 =	 시험 보내기
+	t_Lang202 =	화면 및 창
+	t_Lang203 =	숨겨진 창을 검출
+	t_Lang204 =	숨겨진 텍스트를 검색
+	t_Lang205 =	타이틀 매치 모드
+	t_Lang206 =	타이틀 매치 속도
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	열기
@@ -818,7 +825,7 @@
 		자동 검사를 해제하려면 도움말을 선택 > 시작을 확인
 	d_Lang062 =	당신은 이미 가장 최신 버전이 있습니다.
 	d_Lang063 =	확인하는 동안 오류가 발생했습니다.
-	d_Lang064 =	에서 COM 개체 오류
+	d_Lang064 =	오류
 	d_Lang065 =	열
 	d_Lang066 =	특히
 	d_Lang067 =	시작할 때이 창 표시
@@ -936,8 +943,41 @@
 	EditPaste_TT =	캐럿 / 삽입 위치에 붙여 넣 문자열
 		편집 컨트롤에 (이 영향을 미치지 않습니다
 		클립 보드의 내용).
+	Ex_AF_TT =	창을 활성화의 완만 한 방법을 건너 뜁니다
+		그리고 강제 방법 바로갑니다.
+	Ex_DH_TT =	눈에 보이지 않는 창은 스크립트에 의해 '볼'여부를 결정합니다.
 	Ex_EdScript_TT =	외부 편집기에서 열기
+	Ex_EdVars_TT =	내보낼 전역 변수를 선택합니다.
 	Ex_ExecScript_TT =	실행 스크립트
+	Ex_HK_TT =	모두를 구현하는 후크를 강제로 사용합니다
+		또는 일부 키보드 단축키.
+	Ex_IfDir_TT =	상황에 맞는 키와 따라 hotstrings을 만듭니다
+		활성화 또는 존재 창 유형에.
+	Ex_IfDirType_TT =	상황에 맞는 키와 따라 hotstrings을 만듭니다
+		활성화 또는 존재 창 유형에.
+	Ex_IN_TT =	지정된 것처럼 스크립트가 동작하게됩니다
+		파일의 내용이 정확한 위치에 존재한다.
+	Ex_MD_TT =	후 발생하는 지연을 설정합니다
+		각 마우스 움직임이나 클릭합니다.
+	Ex_MT_TT =	동시의 최대 수를 설정합니다
+		단축키 또는 hotstring 당 스레드.
+	Ex_NT_TT =	트레이 아이콘의 상영을 사용할 수 없습니다.
+	Ex_PT_TT =	스크립트가 영구적으로 실행 유지
+		(사용자가 그것을 닫거나 ExitApp가 발생 될 때까지 즉,)입니다.
+	Ex_SB_TT =	스크립트가 (CPU 사용률에 영향을 미치는)를 실행하는 방법을 빨리 결정합니다.
+	Ex_SC_TT =	후 발생하는 지연을 설정합니다
+		각 명령을 제어 수정.
+	Ex_SI_TT =	스크립트가 이미 실행중인 경우 다시 실행 할 수 있는지 여부를 결정합니다.
+	Ex_SK_TT =	각 후 발생하는 지연을 설정합니다
+		키 입력을 보내거나 ControlSend으로 보냈습니다.
+	Ex_SM_TT =	SendInput 또는 SendPlay와 동의어로 보내기보다는 만듭니다
+		기본 (SendEvent). 또한하게는 클릭하고 MouseMove /을 클릭 / 드래그
+		지정된 메서드를 사용합니다.
+	Ex_ST_TT =	같은 WinWait 같은 명령에 WinTitle 매개 변수의 일치 동작을 설정합니다.
+	Ex_SW_TT =	후 발생하는 지연을 설정합니다
+		같은 WinActivate 각 윈도우 명령.
+	Ex_UV_TT =	전역 변수를 내 보냅니다.
+	ExpList_TT =	편집하려면 더블 클릭
 	ExprLink2_TT =	- 여기 퍼센트 기호 변수를 동봉하지 마십시오.
 		- AHK 식의 대부분이 지원됩니다.
 		- 당신은 문자열, 변수 배열과 기능을 사용할 수 있습니다.
@@ -951,6 +991,8 @@
 	ExpView_TT =	고급 편집기
 	ExpView2_TT =	고급 편집기
 	Fast_TT =	빠른 검색 방법 (권장)를 사용
+	HiddenWin_TT =	눈에 보이지 않는 창은 스크립트에 의해 "볼"수 있는지 여부를 결정합니다.
+	HiddenText_TT =	창에 보이지 않는 텍스트 창을 발견하기위한 목적으로 "볼"되는지 여부를 결정합니다. 이는 IfWinExist 및 WinActivate 같은 명령에 영향을 미칩니다.
 	HScale_TT =	높이 규모
 	IconN_TT =	아이콘 그룹의 수
 	IfLVColor_TT =	색상을 선택하려면 클릭하십시오
@@ -986,48 +1028,6 @@
 	Screen_TT =	좌표가 바탕 화면 (전체 화면)을 기준으로합니다.
 	Screenshot_TT =	스크린 샷 만들기
 	SetText_TT =	컨트롤의 텍스트를 변경합니다.
-	TimeoutM_TT =	0 = 무한
-	ToggleC_TT =	키 상태에있을 때 상대 기록을 활성화합니다.
-	TransC_TT =	투명한 색깔
-	VarCopyA_TT =	현재 변수 내용을 복사
-	VarCopyB_TT =	현재 변수 내용을 복사
-	VariatT_TT =	변화의 그늘
-	WScale_TT =	폭 규모
-		
-; 20. Tooltips from AHK Docs		
-	Ex_AF_TT =	창을 활성화의 완만 한 방법을 건너 뜁니다
-		그리고 강제 방법 바로갑니다.
-	Ex_DH_TT =	눈에 보이지 않는 창은 스크립트에 의해 '볼'여부를 결정합니다.
-	Ex_EdVars_TT =	내보낼 전역 변수를 선택합니다.
-	Ex_HK_TT =	모두를 구현하는 후크를 강제로 사용합니다
-		또는 일부 키보드 단축키.
-	Ex_IfDir_TT =	상황에 맞는 키와 따라 hotstrings을 만듭니다
-		활성화 또는 존재 창 유형에.
-	Ex_IfDirType_TT =	상황에 맞는 키와 따라 hotstrings을 만듭니다
-		활성화 또는 존재 창 유형에.
-	Ex_IN_TT =	지정된 것처럼 스크립트가 동작하게됩니다
-		파일의 내용이 정확한 위치에 존재한다.
-	Ex_MD_TT =	후 발생하는 지연을 설정합니다
-		각 마우스 움직임이나 클릭합니다.
-	Ex_MT_TT =	동시의 최대 수를 설정합니다
-		단축키 또는 hotstring 당 스레드.
-	Ex_NT_TT =	트레이 아이콘의 상영을 사용할 수 없습니다.
-	Ex_PT_TT =	스크립트가 영구적으로 실행 유지
-		(사용자가 그것을 닫거나 ExitApp가 발생 될 때까지 즉,)입니다.
-	Ex_SB_TT =	스크립트가 (CPU 사용률에 영향을 미치는)를 실행하는 방법을 빨리 결정합니다.
-	Ex_SC_TT =	후 발생하는 지연을 설정합니다
-		각 명령을 제어 수정.
-	Ex_SI_TT =	스크립트가 이미 실행중인 경우 다시 실행 할 수 있는지 여부를 결정합니다.
-	Ex_SK_TT =	각 후 발생하는 지연을 설정합니다
-		키 입력을 보내거나 ControlSend으로 보냈습니다.
-	Ex_SM_TT =	SendInput 또는 SendPlay와 동의어로 보내기보다는 만듭니다
-		기본 (SendEvent). 또한하게는 클릭하고 MouseMove /을 클릭 / 드래그
-		지정된 메서드를 사용합니다.
-	Ex_ST_TT =	같은 WinWait 같은 명령에 WinTitle 매개 변수의 일치 동작을 설정합니다.
-	Ex_SW_TT =	후 발생하는 지연을 설정합니다
-		같은 WinActivate 각 윈도우 명령.
-	Ex_UV_TT =	전역 변수를 내 보냅니다.
-	ExpList_TT =	편집하려면 더블 클릭
 	SI_TT =	단어 힘은 대화 상자를 생략하고 자동으로 기존의 인스턴스를 대체
 		어떤 효과가에있는 새로 고침 명령과 유사합니다.
 		단어는 건너 뛰 대화 상자를 무시하고 이전 인스턴스가 실행 출발합니다.
@@ -1044,8 +1044,21 @@
 		2: 그것이 일치하는 내부 창의 제목이 어느 WinTitle 포함 할 수 있습니다.
 		3: 창의 제목은 정확히 일치하는 WinTitle 일치해야합니다.
 		정규식: 변경은 WinText, ExcludeTitle, 그리고 정규 표현식이 될 수 ExcludeText을 WinTitle.
+	TimeoutM_TT =	0 = 무한
+	TitleMatch_TT =	1 : 지정된 윈도우 제목으로 시작해야 윈도우의 제목이 일치한다.
+		2 : 그것은 일치하는 것으로 내부 창의 제목 어디서나 윈도우 제목을 포함 할 수 있습니다.
+		3 : 윈도우의 제목이 정확히 일치로 윈도우 제목과 일치해야합니다.
+		정규식 : 변경 윈도우 제목, WinText는 제목을 제외하고 정규 표현식으로 텍스트를 제외합니다.
+	TitleSpeed_TT =	빠른 :이 기본 동작이다. 성능이 느린보다 실질적으로 더 좋을 수 있지만, 윈도우의 일부 유형에 대한 특정 WinText 요소는 다양한 윈도우 명령에 의해 "볼"수 없습니다.
+		느린 : 매우 느릴 수 있지만, 모든 가능한 WinText는 일치 그들을 통해 윈도우 명령 검색 등의 모든 창에서 검색됩니다. 윈도우 스파이는 윈도우의 텍스트 부분 (있는 경우) 저속 모드를 필요로하는 알 수있다.
+	ToggleC_TT =	키 상태에있을 때 상대 기록을 활성화합니다.
+	TransC_TT =	투명한 색깔
+	VarCopyA_TT =	현재 변수 내용을 복사
+	VarCopyB_TT =	현재 변수 내용을 복사
+	VariatT_TT =	변화의 그늘
+	WScale_TT =	폭 규모
 		
-; 21. Operators		
+; 20. Operators		
 	As_Oper_1 =	지정
 	As_Oper_2 =	추가
 	As_Oper_3 =	덜다
@@ -1065,8 +1078,16 @@
 	Co_Oper_5 =	적게
 	Co_Oper_6 =	크거나 같음
 	Co_Oper_7 =	작거나 같은
+	Co_Oper_8 =	에서 (목록)
+	Co_Oper_9 =	 하지에 (목록)
+	Co_Oper_10 =	 포함 (목록)
+	Co_Oper_11 =	 포함되지 않음 (목록)
+	Co_Oper_12 =	 (라인 1)과 (2 호선) 사이
+	Co_Oper_13 =	 없음 (1 호선) 사이 (라인 2)
+	Co_Oper_14 =	 가 (유형)
+	Co_Oper_15 =	 아니다 (유형)
 		
-; 22. IE Commands Tips		
+; 21. IE Commands Tips		
 	IE_Cmd_Index =	
 	Checked	설정 또는 체크 박스 나 라디오 버튼의 상태를 검색합니다.
 	Click	개체를 클릭을 시뮬레이트합니다.
@@ -1094,7 +1115,7 @@
 	Value	옵니다 또는 개체의 값을 설정합니다.
 	Width	설정하거나 객체의 폭을 검색합니다.
 		
-; 23. COM Methods Tips		
+; 22. COM Methods Tips		
 	COM_CLSID_Index =	
 	Excel.Application	엑셀 시트를 조작합니다.
 	HTMLfile	읽기, 쓰기 및 HTML과 상호 작용하는 데 사용할 수 있습니다.
@@ -1117,7 +1138,7 @@
 	WScript.Shell	다양한 관리 작업 (많은 네이티브 AHK 작업).
 	Word.Application	Word 문서를 조작합니다.
 		
-; 24. AHK Commands Tips		
+; 23. AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	Abs	숫자의 절대 값을 반환합니다.
 	ACos	라디안 단위 아크 코사인 (코사인 수있는 수)를 반환합니다.

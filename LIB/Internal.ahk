@@ -179,7 +179,7 @@ DragTab()
 				GoSub, RowCheck
 				GoSub, b_Enable
 				GoSub, UpdateCopyTo
-				Proj_Opts := "", SavePrompt := true
+				Proj_Opts := "", SavePrompt(true)
 				SetTimer, HitFix, -10
 			}
 			Else
@@ -196,8 +196,24 @@ return
 
 CompareParse(String, ByRef VarName, ByRef Oper, ByRef VarValue)
 {
-	RegExMatch(String, "(.*?)([=<>]{1,2})(?=([^""]*""[^""]*"")*[^""]*$)(.*)", Out)
-,   VarName := Trim(Out1), Oper := Out2, VarValue := Trim(Out4)
+	String := RegExReplace(String, "^(\w+\s+)not in ", "$1!@ ",, 1)
+,	String := RegExReplace(String, "^(\w+\s+)not contains ", "$1!& ",, 1)
+,	String := RegExReplace(String, "^(\w+\s+)not between ", "$1!| ",, 1)
+,	String := RegExReplace(String, "^(\w+\s+)is not ", "$1!* ",, 1)
+,	String := RegExReplace(String, "^(\w+\s+)in ", "$1@ ",, 1)
+,	String := RegExReplace(String, "^(\w+\s+)contains ", "$1& ",, 1)
+,	String := RegExReplace(String, "^(\w+\s+)between ", "$1| ",, 1)
+,	String := RegExReplace(String, "^(\w+\s+)is ", "$1* ",, 1)
+,	RegExMatch(String, "^(\w+)\s+([!=<>\|&@\*]{1,2})\s+(.*)", Out)
+,   VarName := Out1, Oper := Out2, VarValue := Out3
+,	Oper := RegExReplace(Oper, "!@", "not in")
+,	Oper := RegExReplace(Oper, "!&", "not contains")
+,	Oper := RegExReplace(Oper, "!\|", "not between")
+,	Oper := RegExReplace(Oper, "!\*", "is not")
+,	Oper := RegExReplace(Oper, "@", "in")
+,	Oper := RegExReplace(Oper, "&", "contains")
+,	Oper := RegExReplace(Oper, "\|", "between")
+,	Oper := RegExReplace(Oper, "\*", "is")
 }
 
 ShowContextHelp()
@@ -538,15 +554,6 @@ class IfWin
 	}
 }
 
-StopPlay(s)
-{
-	global
-	StopIt := s
-	SetTitleMatchMode, 2
-	DetectHiddenWindows, Off
-	DetectHiddenText, On
-}
-
 ActivateHotkeys(Rec := "", Play := "", Speed := "", Stop := "", Pause := "", Joy := "")
 {
 	local ActiveKeys
@@ -715,7 +722,7 @@ HistCheck()
 {
 	global
 
-	SavePrompt := true
+	SavePrompt(true)
 	If (MaxHistory = 0)
 		return
 	LVManager.Add()
@@ -935,9 +942,20 @@ LVCallback(Func, Hwnd)
 		}
 	}
 	If Func in Cut,Paste,Duplicate,Delete,Move,Drag,Undo,Redo
-		SavePrompt := true
+		SavePrompt(true)
 		
 	return true
+}
+
+SavePrompt(State)
+{
+	global
+	SavePrompt := State
+,	TB_Edit(TbFile, "Save",, State)
+	If (State)
+		Menu, FileMenu, Enable, %f_Lang003%`t%_s%Ctrl+S
+	Else
+		Menu, FileMenu, Disable, %f_Lang003%`t%_s%Ctrl+S
 }
 
 TreeGetChecked()

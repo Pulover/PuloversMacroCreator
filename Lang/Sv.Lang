@@ -224,73 +224,74 @@
 	w_Lang040 =	Ny (Ctrl+N)
 	w_Lang041 =	Öppna (Ctrl+O)
 	w_Lang042 =	Spara (Ctrl+S)
-	w_Lang043 =	Exportera till AHK (Ctrl+E)
-	w_Lang044 =	Förhandsgranska Script (Ctrl+P)
-	w_Lang045 =	Inställningar (Ctrl+G)
-	w_Lang046 =	Spela in makro (Ctrl+R)
-	w_Lang047 =	Aktivera makron (Ctrl+Enter)
-	w_Lang048 =	Spela Aktuell Makro (Ctrl+Skift+Enter)
-	w_Lang049 =	Timer (Ctrl+Skift+T)
-	w_Lang050 =	Mus (F2)
-	w_Lang051 =	Text (F3)
-	w_Lang052 =	Redigera Makron (Ctrl+Shift+M)
-	w_Lang053 =	Kontroll (F4)
-	w_Lang054 =	Paus (F5)
-	w_Lang055 =	Meddelanderuta (Shift+F5)
-	w_Lang056 =	Nyckel Vänta (Ctrl+F5)
-	w_Lang057 =	Fönster (F6)
-	w_Lang058 =	Bild / Pixel Sök (F7)
-	w_Lang059 =	Kör / Arkiv / String / Misc. (F8)
-	w_Lang060 =	Loop (F9)
-	w_Lang061 =	Gå (Shift+F9)
-	w_Lang062 =	Etikett (Ctrl+F9)
-	w_Lang063 =	Om rapporter (F10)
-	w_Lang064 =	Variabler / Arrayer (Shift+F10)
-	w_Lang065 =	Funktioner / Array metoder (Ctrl+F10)
-	w_Lang066 =	Internet Explorer (F12)
-	w_Lang067 =	Expression / COM-gränssnitt (Skift+F12)
-	w_Lang068 =	Skicka epost (F11)
-	w_Lang069 =	Windows-meddelanden (Ctrl+F12)
-	w_Lang070 =	Lägg den Windows-tangenten till "Play" hotkey
-	w_Lang071 =	Använd en joystick knapp som hotkey
-	w_Lang072 =	Lägg Makro (Ctrl+T)
-	w_Lang073 =	Stäng Makro (Ctrl+W)
-	w_Lang074 =	Duplicera makro (Ctrl+Skift+D)
-	w_Lang075 =	Importera Makro (Ctrl+I)
-	w_Lang076 =	Spara Aktuell Makro (Ctrl+Alt+S)
-	w_Lang077 =	Flytta upp (Ctrl+PageUp)
-	w_Lang078 =	Flytta ner (Ctrl+Page Down)
-	w_Lang079 =	Duplicera markerade rader (Ctrl+D)
-	w_Lang080 =	Klippa ut markerad rader (Ctrl+X)
-	w_Lang081 =	Kopiera valda rader (Ctrl+C)
-	w_Lang082 =	Klistra in kopierade rader (Ctrl+V)
-	w_Lang083 =	Ta bort markerade rader (DEL)
-	w_Lang084 =	Ångra (Ctrl+Z)
-	w_Lang085 =	Gör om (Ctrl+Y)
-	w_Lang086 =	Kopiera till...
-	w_Lang087 =	Sök / Ersätt (Ctrl+F)
-	w_Lang088 =	Infoga / Redigera kommentar (Ctrl+L)
-	w_Lang089 =	Redigera färgmarkering (Ctrl+M)
-	w_Lang090 =	Anpassa
-	w_Lang091 =	Hitta ett kommando (Ctrl+Skift+F)
-	w_Lang092 =	Redigera (Enter)
-	w_Lang093 =	Dölj
-	w_Lang094 =	Flytta hit
-	w_Lang095 =	Kopiera här
-	w_Lang096 =	grupper
-	w_Lang097 =	Aktivera grupper (Ctrl+Shift+G)
-	w_Lang098 =	Lägg till grupp (Ctrl+Skift+Y)
-	w_Lang099 =	Ta bort grupp (Ctrl+Skift+R)
-	w_Lang100 =	Ta bort alla grupper
-	w_Lang101 =	Redigera grupper
-	w_Lang102 =	Gruppnamn
-	w_Lang103 =	Skapa Funktion (Ctrl+Skift+U)
-	w_Lang104 =	Lägg Parameter (Ctrl+Skift+P)
-	w_Lang105 =	Lägg Return (Ctrl+Skift+N)
-	w_Lang106 =	Konvertera Macro att fungera (Ctrl+Skift+C)
-	w_Lang107 =	Kommentera ut okontrollerade rader
-	w_Lang108 =	Ladda ner / Ladda upp filer (Shift+F11)
-	w_Lang109 =	Zip / packa upp filer (Ctrl+F11)
+	w_Lang043 =	Spara som (Ctrl+Skift+S)
+	w_Lang044 =	Exportera till AHK (Ctrl+E)
+	w_Lang045 =	Förhandsgranska Script (Ctrl+P)
+	w_Lang046 =	Inställningar (Ctrl+G)
+	w_Lang047 =	Spela in makro (Ctrl+R)
+	w_Lang048 =	Aktivera makron (Ctrl+Enter)
+	w_Lang049 =	Spela Aktuell Makro (Ctrl+Skift+Enter)
+	w_Lang050 =	Timer (Ctrl+Skift+T)
+	w_Lang051 =	Mus (F2)
+	w_Lang052 =	Text (F3)
+	w_Lang053 =	Redigera Makron (Ctrl+Shift+M)
+	w_Lang054 =	Kontroll (F4)
+	w_Lang055 =	Paus (F5)
+	w_Lang056 =	Meddelanderuta (Shift+F5)
+	w_Lang057 =	Nyckel Vänta (Ctrl+F5)
+	w_Lang058 =	Fönster (F6)
+	w_Lang059 =	Bild / Pixel Sök (F7)
+	w_Lang060 =	Kör / Arkiv / String / Misc. (F8)
+	w_Lang061 =	Loop (F9)
+	w_Lang062 =	Gå (Shift+F9)
+	w_Lang063 =	Etikett (Ctrl+F9)
+	w_Lang064 =	Om rapporter (F10)
+	w_Lang065 =	Variabler / Arrayer (Shift+F10)
+	w_Lang066 =	Funktioner / Array metoder (Ctrl+F10)
+	w_Lang067 =	Internet Explorer (F12)
+	w_Lang068 =	Expression / COM-gränssnitt (Skift+F12)
+	w_Lang069 =	Skicka epost (F11)
+	w_Lang070 =	Windows-meddelanden (Ctrl+F12)
+	w_Lang071 =	Lägg den Windows-tangenten till "Play" hotkey
+	w_Lang072 =	Använd en joystick knapp som hotkey
+	w_Lang073 =	Lägg Makro (Ctrl+T)
+	w_Lang074 =	Stäng Makro (Ctrl+W)
+	w_Lang075 =	Duplicera makro (Ctrl+Skift+D)
+	w_Lang076 =	Importera Makro (Ctrl+I)
+	w_Lang077 =	Spara Aktuell Makro (Ctrl+Alt+S)
+	w_Lang078 =	Flytta upp (Ctrl+PageUp)
+	w_Lang079 =	Flytta ner (Ctrl+Page Down)
+	w_Lang080 =	Duplicera markerade rader (Ctrl+D)
+	w_Lang081 =	Klippa ut markerad rader (Ctrl+X)
+	w_Lang082 =	Kopiera valda rader (Ctrl+C)
+	w_Lang083 =	Klistra in kopierade rader (Ctrl+V)
+	w_Lang084 =	Ta bort markerade rader (DEL)
+	w_Lang085 =	Ångra (Ctrl+Z)
+	w_Lang086 =	Gör om (Ctrl+Y)
+	w_Lang087 =	Kopiera till...
+	w_Lang088 =	Sök / Ersätt (Ctrl+F)
+	w_Lang089 =	Infoga / Redigera kommentar (Ctrl+L)
+	w_Lang090 =	Redigera färgmarkering (Ctrl+M)
+	w_Lang091 =	Anpassa
+	w_Lang092 =	Hitta ett kommando (Ctrl+Skift+F)
+	w_Lang093 =	Redigera (Enter)
+	w_Lang094 =	Dölj
+	w_Lang095 =	Flytta hit
+	w_Lang096 =	Kopiera här
+	w_Lang097 =	grupper
+	w_Lang098 =	Aktivera grupper (Ctrl+Shift+G)
+	w_Lang099 =	Lägg till grupp (Ctrl+Skift+Y)
+	w_Lang100 =	Ta bort grupp (Ctrl+Skift+R)
+	w_Lang101 =	Ta bort alla grupper
+	w_Lang102 =	Redigera grupper
+	w_Lang103 =	Gruppnamn
+	w_Lang104 =	Skapa Funktion (Ctrl+Skift+U)
+	w_Lang105 =	Lägg Parameter (Ctrl+Skift+P)
+	w_Lang106 =	Lägg Return (Ctrl+Skift+N)
+	w_Lang107 =	Konvertera Macro att fungera (Ctrl+Skift+C)
+	w_Lang108 =	Kommentera ut okontrollerade rader
+	w_Lang109 =	Ladda ner / Ladda upp filer (Shift+F11)
+	w_Lang110 =	Zip / packa upp filer (Ctrl+F11)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mus
@@ -538,6 +539,7 @@
 	c_Lang244 =	Höger till vänster
 	c_Lang245 =	Bilagor
 	c_Lang246 =	Väg
+	c_Lang247 =	om
 		
 ; 16. Other Windows		
 	t_Lang001 =	Exportera till AutoHotkey
@@ -741,6 +743,11 @@
 	t_Lang199 =	SSL
 	t_Lang200 =	Skicka läge
 	t_Lang201 =	Skicka ett test
+	t_Lang202 =	Skärm Och Fönster
+	t_Lang203 =	Detektera Dolda Fönster
+	t_Lang204 =	Upptäcka Dold Text
+	t_Lang205 =	Titelmatch Läge
+	t_Lang206 =	Titelmatch Hastighet
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Öppet
@@ -818,7 +825,7 @@
 		Vill du avaktivera automatiska Updatering  väljer du Hjälp > Kontrollera updatering vid uppstart
 	d_Lang062 =	Du har redan den senaste versionen.
 	d_Lang063 =	Ett fel inträffade vid kontrollen.
-	d_Lang064 =	COM-objekt fel i
+	d_Lang064 =	Fel i
 	d_Lang065 =	Rad
 	d_Lang066 =	Specifikt
 	d_Lang067 =	Visa det här fönstret vid start
@@ -880,7 +887,7 @@
 		Skulle vilja ersätta det?
 	d_Lang112 =	E-postkonto inte hittas.
 	d_Lang113 =	Inget fel rapporterats.
-	d_Lang114 =	Scripts eksporteres (selv om kompilert) med sende e-postfunksjonen  (CDO) vil ha synlige opplysninger av e-postkontoer  som brukes, inkludert passordet. PMC prosjektfilen  ikke har denne informasjonen.
+	d_Lang114 =	Skriptejä viedään (vaikka käännetty) kanssa lähetä sähköpostia toiminto (CDO) on näkyvissä merkintä sähköpostitilejä käytetään, mukaan lukien salasana. PMC Projektitiedosto ei ole tätä tietoa.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Du kan skapa makron med hjälp av kommandoknapparna i huvudfönstret eller använda inspelaren för att kopiera dina handlingar. Gå till Alternativ> Inställningar> Inspelning för att välja vilka ingångar kommer att registreras.
@@ -936,8 +943,41 @@
 	EditPaste_TT =	Klistrar sträng vid cirkumflex / insättningspunkten
 		i en Edit-kontroll (detta påverkar inte
 		innehållet i Urklipp).
+	Ex_AF_TT =	Hoppar den milda metoden för att aktivera en fönster
+		och går direkt till kraftfulla metoden.
+	Ex_DH_TT =	Avgör om osynliga fönster "ses" av skriptet.
 	Ex_EdScript_TT =	Avaa ulkoisen editorin
+	Ex_EdVars_TT =	Välj globala variabler som skall exporteras.
 	Ex_ExecScript_TT =	Köra skript
+	Ex_HK_TT =	Tvingar att använda kroken för att genomföra alla
+		eller vissa tangentbordets snabbknappar.
+	Ex_IfDir_TT =	Skapar sammanhangsberoende snabbtangenter och hotstrings beroende
+		på vilken typ av fönster som är aktiv eller existerar.
+	Ex_IfDirType_TT =	Skapar sammanhangsberoende snabbtangenter och hotstrings beroende
+		på vilken typ av fönster som är aktiv eller existerar.
+	Ex_IN_TT =	Orsakar skriptet att agera som om den angivna
+		filens innehåll är närvarande vid denna exakta positionen.
+	Ex_MD_TT =	Ställer in fördröjningen som sker efter
+		varje mus rörelse eller klicka på.
+	Ex_MT_TT =	Anger det maximala antalet samtidiga
+		trådar per hotkey eller hotstring.
+	Ex_NT_TT =	Inaktiverar visning av en ikon.
+	Ex_PT_TT =	Håller ett skript permanent går
+		(det vill säga, tills användaren stänger det eller ExitApp påträffas).
+	Ex_SB_TT =	Bestämmer hur snabbt ett skript körs (påverkar CPU-användning).
+	Ex_SC_TT =	Ställer in fördröjningen som sker efter
+		varje kontroll-ändra kommandot.
+	Ex_SI_TT =	Avgör om ett skript får köras igen när det redan är igång.
+	Ex_SK_TT =	Ställer in fördröjningen som sker efter varje
+		tangenttryckning skickas med skicka eller ControlSend.
+	Ex_SM_TT =	Skicka synonymt med SendInput eller SendPlay snarare än
+		standard (sendEvent). Gör också Klicka och mouseMove / Klicka / dra
+		Använd den angivna metoden.
+	Ex_ST_TT =	Anger motsvarande beteende WinTitle parameter i kommandon som WinWait.
+	Ex_SW_TT =	Ställer in fördröjningen som sker efter
+		varje fönsterfunktion kommando, såsom WinActivate.
+	Ex_UV_TT =	Exportera globala variabler.
+	ExpList_TT =	Dubbelklicka för att redigera
 	ExprLink2_TT =	- INTE BIFOGA VARIABLER I PROCENT TECKEN HÄR.
 		- De flesta av AHK uttryck stöds.
 		- Du kan använda strängar, variabler, arrayer och funktioner.
@@ -951,6 +991,8 @@
 	ExpView_TT =	Avancerad Redigerare
 	ExpView2_TT =	Avancerad Redigerare
 	Fast_TT =	Använder en snabbare sökning metod (rekommenderas)
+	HiddenWin_TT =	Avgör om osynliga fönster "ses" av skriptet.
+	HiddenText_TT =	Avgör om osynlig text i ett fönster "ses" i syfte att hitta fönstret. Detta påverkar kommandon som IfWinExist och WinActivate.
 	HScale_TT =	Höjd skala
 	IconN_TT =	Antal ikonen gruppen
 	IfLVColor_TT =	Klicka här för att välja en färg
@@ -986,48 +1028,6 @@
 	Screen_TT =	Koordinater i förhållande till skrivbordet (hela skärmen).
 	Screenshot_TT =	Gör Skärmdump
 	SetText_TT =	Ändrar texten till en kontroll.
-	TimeoutM_TT =	0 = oändlig
-	ToggleC_TT =	Aktivera Relativ inspelning när nyckeln staten är på.
-	TransC_TT =	Transparent färg
-	VarCopyA_TT =	Kopiera befintliga variabla innehåll
-	VarCopyB_TT =	Kopiera befintliga variabla innehåll
-	VariatT_TT =	Nyanser av variation
-	WScale_TT =	Bredd skala
-		
-; 20. Tooltips from AHK Docs		
-	Ex_AF_TT =	Hoppar den milda metoden för att aktivera en fönster
-		och går direkt till kraftfulla metoden.
-	Ex_DH_TT =	Avgör om osynliga fönster "ses" av skriptet.
-	Ex_EdVars_TT =	Välj globala variabler som skall exporteras.
-	Ex_HK_TT =	Tvingar att använda kroken för att genomföra alla
-		eller vissa tangentbordets snabbknappar.
-	Ex_IfDir_TT =	Skapar sammanhangsberoende snabbtangenter och hotstrings beroende
-		på vilken typ av fönster som är aktiv eller existerar.
-	Ex_IfDirType_TT =	Skapar sammanhangsberoende snabbtangenter och hotstrings beroende
-		på vilken typ av fönster som är aktiv eller existerar.
-	Ex_IN_TT =	Orsakar skriptet att agera som om den angivna
-		filens innehåll är närvarande vid denna exakta positionen.
-	Ex_MD_TT =	Ställer in fördröjningen som sker efter
-		varje mus rörelse eller klicka på.
-	Ex_MT_TT =	Anger det maximala antalet samtidiga
-		trådar per hotkey eller hotstring.
-	Ex_NT_TT =	Inaktiverar visning av en ikon.
-	Ex_PT_TT =	Håller ett skript permanent går
-		(det vill säga, tills användaren stänger det eller ExitApp påträffas).
-	Ex_SB_TT =	Bestämmer hur snabbt ett skript körs (påverkar CPU-användning).
-	Ex_SC_TT =	Ställer in fördröjningen som sker efter
-		varje kontroll-ändra kommandot.
-	Ex_SI_TT =	Avgör om ett skript får köras igen när det redan är igång.
-	Ex_SK_TT =	Ställer in fördröjningen som sker efter varje
-		tangenttryckning skickas med skicka eller ControlSend.
-	Ex_SM_TT =	Skicka synonymt med SendInput eller SendPlay snarare än
-		standard (sendEvent). Gör också Klicka och mouseMove / Klicka / dra
-		Använd den angivna metoden.
-	Ex_ST_TT =	Anger motsvarande beteende WinTitle parameter i kommandon som WinWait.
-	Ex_SW_TT =	Ställer in fördröjningen som sker efter
-		varje fönsterfunktion kommando, såsom WinActivate.
-	Ex_UV_TT =	Exportera globala variabler.
-	ExpList_TT =	Dubbelklicka för att redigera
 	SI_TT =	Ordet FORCE hoppar dialogrutan och ersätter den gamla instans automatiskt,
 		som liknar verkan som Reload kommandot.
 		Ordet IGNORERA hoppar dialogrutan och lämnar den gamla instans som körs.
@@ -1044,8 +1044,21 @@
 		2: Ett fönster titel kan innehålla WinTitle var som helst i att det är en match.
 		3: Ett fönster titel måste exakt matcha WinTitle vara en match.
 		RegEx: Ändringar WinTitle, WinText, ExcludeTitle och ExcludeText att vara reguljära uttryck.
+	TimeoutM_TT =	0 = oändlig
+	TitleMatch_TT =	1: Ett fönster titel måste börja med den angivna WinTitle att vara en match.
+		2: Ett fönster titel kan innehålla WinTitle helst inuti den för att vara en match.
+		3: Ett fönster titel måste överensstämma exakt WinTitle att vara en match.
+		RegEx: Ändringar WinTitle, WinText, Uteslut Titel och Uteslut text som reguljära uttryck.
+	TitleSpeed_TT =	Snabb: Detta är standardbeteendet . Prestanda kan vara betydligt bättre än långsam, men vissa WinText element för vissa typer av fönster kan inte "ses" av de olika Windows-kommandon.
+		Långsam: Kan vara mycket långsammare , men alla möjliga WinText hämtas från varje fönster som en fönster kommandot söker genom dem för en match. Fönster Spy avslöjar vilka delar av ett fönster text (i förekommande fall) kräver långsamt läge.
+	ToggleC_TT =	Aktivera Relativ inspelning när nyckeln staten är på.
+	TransC_TT =	Transparent färg
+	VarCopyA_TT =	Kopiera befintliga variabla innehåll
+	VarCopyB_TT =	Kopiera befintliga variabla innehåll
+	VariatT_TT =	Nyanser av variation
+	WScale_TT =	Bredd skala
 		
-; 21. Operators		
+; 20. Operators		
 	As_Oper_1 =	Tilldela
 	As_Oper_2 =	Lägg
 	As_Oper_3 =	Subtrahera
@@ -1065,8 +1078,16 @@
 	Co_Oper_5 =	Mindre
 	Co_Oper_6 =	Större än eller lika
 	Co_Oper_7 =	Mindre eller lika
+	Co_Oper_8 =	I (lista)
+	Co_Oper_9 =	 Inte i (lista)
+	Co_Oper_10 =	 Innehåller (lista)
+	Co_Oper_11 =	 Inte innehåller (lista)
+	Co_Oper_12 =	 Mellan (linje 1) och (linje 2)
+	Co_Oper_13 =	 Inte mellan (linje 1) och (linje 2)
+	Co_Oper_14 =	 Är (typ)
+	Co_Oper_15 =	 Är inte (typ)
 		
-; 22. IE Commands Tips		
+; 21. IE Commands Tips		
 	IE_Cmd_Index =	
 	Checked	Ställer eller hämtar tillståndet i kryssrutan eller alternativknappen.
 	Click	Simulerar ett klick på objektet.
@@ -1094,7 +1115,7 @@
 	Value	Hämtar eller ställer in värdet för objektet.
 	Width	Ställer eller hämtar objektets bredd.
 		
-; 23. COM Methods Tips		
+; 22. COM Methods Tips		
 	COM_CLSID_Index =	
 	Excel.Application	Manipulerar excelark.
 	HTMLfile	Kan användas för att läsa, skriva och interagera med HTML.
@@ -1117,7 +1138,7 @@
 	WScript.Shell	Olika administrativa uppgifter (många infödda AHK uppgifter).
 	Word.Application	Manipulerar Word-dokument.
 		
-; 24. AHK Commands Tips		
+; 23. AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	Abs	Returnerar det absoluta värdet för Antal .
 	ACos	Returnerar arcus (det tal vars cosinus är Tal) i radianer .

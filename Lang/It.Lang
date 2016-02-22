@@ -224,73 +224,74 @@
 	w_Lang040 =	Nuovo (Ctrl+N)
 	w_Lang041 =	Apri (Ctrl+O)
 	w_Lang042 =	Salva (Ctrl+S)
-	w_Lang043 =	Esporta in AHK (Ctrl+E)
-	w_Lang044 =	Anteprima Script (Ctrl+P)
-	w_Lang045 =	Impostazioni (Ctrl+G)
-	w_Lang046 =	Registra macro (Ctrl+R)
-	w_Lang047 =	Attiva macro (Ctrl+Invio)
-	w_Lang048 =	Esegui Macro corrente (Ctrl+Maiusc+Invio)
-	w_Lang049 =	Timer (Ctrl+Maiusc+T)
-	w_Lang050 =	Mouse (F2)
-	w_Lang051 =	Testo (F3)
-	w_Lang052 =	Modifica Macro (Ctrl+Shift+M)
-	w_Lang053 =	Control (F4)
-	w_Lang054 =	Pausa (F5)
-	w_Lang055 =	Message Box (Shift+F5)
-	w_Lang056 =	Wait Chiave (Ctrl+F5)
-	w_Lang057 =	Finestra (F6)
-	w_Lang058 =	Immagine / Pixel Search (F7)
-	w_Lang059 =	Eseguire / File / String / Misc. (F8)
-	w_Lang060 =	Loop (F9)
-	w_Lang061 =	Goto (Shift+F9)
-	w_Lang062 =	etichetta (Ctrl+F9)
-	w_Lang063 =	Se Dichiarazioni (F10)
-	w_Lang064 =	Variabili / Matrici (Shift+F10)
-	w_Lang065 =	Funzioni / Metodi di matrice (Ctrl+F10)
-	w_Lang066 =	Internet Explorer (F12)
-	w_Lang067 =	Espressione / Interfaccia COM (Shift+F12)
-	w_Lang068 =	Invia una email (F11)
-	w_Lang069 =	Messaggi di Windows (Ctrl+F12)
-	w_Lang070 =	Aggiungere la chiave di Windows per "giocare" hotkey
-	w_Lang071 =	Utilizzare un tasto del joystick come tasto di scelta rapida
-	w_Lang072 =	Aggiungi Macro (Ctrl+T)
-	w_Lang073 =	Chiudere Macro (Ctrl+W)
-	w_Lang074 =	Duplica macro (Ctrl+Shift+D)
-	w_Lang075 =	Importa Macro (Ctrl+I)
-	w_Lang076 =	Salva Macro corrente (Ctrl+Alt+S)
-	w_Lang077 =	Move Up (Ctrl+Pag su)
-	w_Lang078 =	Sposta in basso (Ctrl+Pag giù)
-	w_Lang079 =	Duplica le righe selezionate (Ctrl+D)
-	w_Lang080 =	Tagliare righe selezionate (Ctrl+X)
-	w_Lang081 =	Copia le righe selezionate (Ctrl+C)
-	w_Lang082 =	Righe copiate Incolla (Ctrl+V)
-	w_Lang083 =	Elimina le righe selezionate (Del)
-	w_Lang084 =	Annulla (Ctrl+Z)
-	w_Lang085 =	Ripeti (Ctrl+Y)
-	w_Lang086 =	Copia...
-	w_Lang087 =	Trova / Sostituisci (Ctrl+F)
-	w_Lang088 =	Inserire / Modifica commento (Ctrl+L)
-	w_Lang089 =	Modifica marchio di colore (Ctrl+M)
-	w_Lang090 =	Personalizzare
-	w_Lang091 =	Trova un comando (Ctrl+Shift+F)
-	w_Lang092 =	Modifica (Enter)
-	w_Lang093 =	Nascondere
-	w_Lang094 =	Sposta qui
-	w_Lang095 =	Copia qui
-	w_Lang096 =	gruppi
-	w_Lang097 =	Abilita gruppi (Ctrl+Shift+G)
-	w_Lang098 =	Aggiungi gruppo (Ctrl+Shift+Y)
-	w_Lang099 =	Rimuovere gruppo (Ctrl+Shift+R)
-	w_Lang100 =	Rimuovere tutti i gruppi
-	w_Lang101 =	Modifica gruppi
-	w_Lang102 =	Nome del gruppo
-	w_Lang103 =	Creare Function (Ctrl+Shift+U)
-	w_Lang104 =	Aggiungi parametro (Ctrl+Shift+P)
-	w_Lang105 =	Aggiungere Return (Ctrl+Shift+N)
-	w_Lang106 =	Convertire Macro alla funzione (Ctrl+Shift+C)
-	w_Lang107 =	Commentare le righe non controllati
-	w_Lang108 =	Download / upload di file (Shift+F11)
-	w_Lang109 =	Zip / file Unzip (Ctrl+F11)
+	w_Lang043 =	Salva con nome (Ctrl+Maiusc+S)
+	w_Lang044 =	Esporta in AHK (Ctrl+E)
+	w_Lang045 =	Anteprima Script (Ctrl+P)
+	w_Lang046 =	Impostazioni (Ctrl+G)
+	w_Lang047 =	Registra macro (Ctrl+R)
+	w_Lang048 =	Attiva macro (Ctrl+Invio)
+	w_Lang049 =	Esegui Macro corrente (Ctrl+Maiusc+Invio)
+	w_Lang050 =	Timer (Ctrl+Maiusc+T)
+	w_Lang051 =	Mouse (F2)
+	w_Lang052 =	Testo (F3)
+	w_Lang053 =	Modifica Macro (Ctrl+Shift+M)
+	w_Lang054 =	Control (F4)
+	w_Lang055 =	Pausa (F5)
+	w_Lang056 =	Message Box (Shift+F5)
+	w_Lang057 =	Wait Chiave (Ctrl+F5)
+	w_Lang058 =	Finestra (F6)
+	w_Lang059 =	Immagine / Pixel Search (F7)
+	w_Lang060 =	Eseguire / File / String / Misc. (F8)
+	w_Lang061 =	Loop (F9)
+	w_Lang062 =	Goto (Shift+F9)
+	w_Lang063 =	etichetta (Ctrl+F9)
+	w_Lang064 =	Se Dichiarazioni (F10)
+	w_Lang065 =	Variabili / Matrici (Shift+F10)
+	w_Lang066 =	Funzioni / Metodi di matrice (Ctrl+F10)
+	w_Lang067 =	Internet Explorer (F12)
+	w_Lang068 =	Espressione / Interfaccia COM (Shift+F12)
+	w_Lang069 =	Invia una email (F11)
+	w_Lang070 =	Messaggi di Windows (Ctrl+F12)
+	w_Lang071 =	Aggiungere la chiave di Windows per "giocare" hotkey
+	w_Lang072 =	Utilizzare un tasto del joystick come tasto di scelta rapida
+	w_Lang073 =	Aggiungi Macro (Ctrl+T)
+	w_Lang074 =	Chiudere Macro (Ctrl+W)
+	w_Lang075 =	Duplica macro (Ctrl+Shift+D)
+	w_Lang076 =	Importa Macro (Ctrl+I)
+	w_Lang077 =	Salva Macro corrente (Ctrl+Alt+S)
+	w_Lang078 =	Move Up (Ctrl+Pag su)
+	w_Lang079 =	Sposta in basso (Ctrl+Pag giù)
+	w_Lang080 =	Duplica le righe selezionate (Ctrl+D)
+	w_Lang081 =	Tagliare righe selezionate (Ctrl+X)
+	w_Lang082 =	Copia le righe selezionate (Ctrl+C)
+	w_Lang083 =	Righe copiate Incolla (Ctrl+V)
+	w_Lang084 =	Elimina le righe selezionate (Del)
+	w_Lang085 =	Annulla (Ctrl+Z)
+	w_Lang086 =	Ripeti (Ctrl+Y)
+	w_Lang087 =	Copia...
+	w_Lang088 =	Trova / Sostituisci (Ctrl+F)
+	w_Lang089 =	Inserire / Modifica commento (Ctrl+L)
+	w_Lang090 =	Modifica marchio di colore (Ctrl+M)
+	w_Lang091 =	Personalizzare
+	w_Lang092 =	Trova un comando (Ctrl+Shift+F)
+	w_Lang093 =	Modifica (Enter)
+	w_Lang094 =	Nascondere
+	w_Lang095 =	Sposta qui
+	w_Lang096 =	Copia qui
+	w_Lang097 =	gruppi
+	w_Lang098 =	Abilita gruppi (Ctrl+Shift+G)
+	w_Lang099 =	Aggiungi gruppo (Ctrl+Shift+Y)
+	w_Lang100 =	Rimuovere gruppo (Ctrl+Shift+R)
+	w_Lang101 =	Rimuovere tutti i gruppi
+	w_Lang102 =	Modifica gruppi
+	w_Lang103 =	Nome del gruppo
+	w_Lang104 =	Creare Function (Ctrl+Shift+U)
+	w_Lang105 =	Aggiungi parametro (Ctrl+Shift+P)
+	w_Lang106 =	Aggiungere Return (Ctrl+Shift+N)
+	w_Lang107 =	Convertire Macro alla funzione (Ctrl+Shift+C)
+	w_Lang108 =	Commentare le righe non controllati
+	w_Lang109 =	Download / upload di file (Shift+F11)
+	w_Lang110 =	Zip / file Unzip (Ctrl+F11)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mouse
@@ -538,6 +539,7 @@
 	c_Lang244 =	Rechts nach links
 	c_Lang245 =	Allegati
 	c_Lang246 =	Il percorso
+	c_Lang247 =	se
 		
 ; 16. Other Windows		
 	t_Lang001 =	Esporta in AutoHotkey
@@ -741,6 +743,11 @@
 	t_Lang199 =	SSL
 	t_Lang200 =	Invia modalità
 	t_Lang201 =	Senden Sie eine Test
+	t_Lang202 =	Schermo e Finestra
+	t_Lang203 =	Rilevare Finestre Nascoste
+	t_Lang204 =	Rilevare Testo Nascosto
+	t_Lang205 =	Modalità Match Per Il Titolo
+	t_Lang206 =	Partita Di Titolo Velocità
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Aperto
@@ -818,7 +825,7 @@
 		Per disattivare il controllo automatico selezionare Aiuto > Controlla all'avvio
 	d_Lang062 =	Hai già la versione più recente.
 	d_Lang063 =	Si è verificato un errore durante la verifica.
-	d_Lang064 =	Errore di oggetto COM in
+	d_Lang064 =	Errore in
 	d_Lang065 =	Riga
 	d_Lang066 =	Specificamente
 	d_Lang067 =	Mostra questa finestra all'avvio
@@ -880,7 +887,7 @@
 		Vorrebbe sostituirlo?
 	d_Lang112 =	Account e-mail non trovata.
 	d_Lang113 =	Nessun errore segnalato.
-	d_Lang114 =	Scripts exportés (même si compilé) avec la fonction d'envoi d'e-mail (CDO) auront des informations visibles de comptes de messagerie utilisés, y compris le MOT DE PASSE. Le fichier de projet PMC n'a pas cette information.
+	d_Lang114 =	Script esportati (anche se compilato) con la funzione di invio e-mail (CDO) avranno informazioni visibili di account di posta elettronica utilizzati, inclusa la password. Il file di progetto PMC non dispone di tali informazioni.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	È possibile creare macro utilizzando i pulsanti di comando nella finestra principale o utilizzando il registratore per copiare le vostre azioni. Andare su Opzioni > Impostazioni > Registrazione per selezionare ciò che verrà registrato ingressi.
@@ -936,8 +943,41 @@
 	EditPaste_TT =	String Paste al punto di inserimento / inserto posizione
 		in un controllo di modifica (questo non influisce
 		il contenuto degli appunti).
+	Ex_AF_TT =	Salta il modo delicato di attivare una finestra
+		e va dritto al metodo forte.
+	Ex_DH_TT =	Determina se le finestre sono invisibili 'visto' dallo script.
 	Ex_EdScript_TT =	Apri in editor esterno
+	Ex_EdVars_TT =	Selezionare le variabili globali da esportare.
 	Ex_ExecScript_TT =	Esegui script
+	Ex_HK_TT =	Forza l'uso del gancio di attuare tutte
+		o alcuni tasti di scelta rapida da tastiera.
+	Ex_IfDir_TT =	Crea tasti di scelta rapida sensibili al contesto e hotstrings seconda
+		del tipo di finestra che è attiva o esiste.
+	Ex_IfDirType_TT =	Crea tasti di scelta rapida sensibili al contesto e hotstrings seconda
+		del tipo di finestra che è attiva o esiste.
+	Ex_IN_TT =	Provoca lo script a comportarsi come se specificato
+		il contenuto dei file sono presenti a questa posizione esatta.
+	Ex_MD_TT =	Imposta il ritardo che si verifica dopo
+		ogni movimento del mouse o fare clic su.
+	Ex_MT_TT =	Imposta il numero massimo di simultanea
+		filetti per hotkey o hotstring.
+	Ex_NT_TT =	Disattiva la visualizzazione di una icona nella barra.
+	Ex_PT_TT =	Mantiene uno script in esecuzione in modo permanente
+		(cioè fino a quando l'utente chiude o riscontrato ExitApp).
+	Ex_SB_TT =	Determina la velocità di uno script viene eseguito (interessa l'utilizzo della CPU).
+	Ex_SC_TT =	Imposta il ritardo che si verifica dopo
+		ogni controllo-comando di modifica.
+	Ex_SI_TT =	Determina se uno script è consentita l'esecuzione di nuovo quando si è già in esecuzione.
+	Ex_SK_TT =	Imposta il ritardo che si verifica dopo ogni
+		tasto di invio o inviato da ControlSend.
+	Ex_SM_TT =	Rende Invia sinonimo di SendInput o SendPlay piuttosto che
+		il valore predefinito (SendEvent). Rende inoltre possibile fare clic e MouseMove / Cliccare / Trascinare
+		utilizzare il metodo specificato.
+	Ex_ST_TT =	Consente di impostare il comportamento di corrispondenza del parametro WinTitle in comandi come WinWait.
+	Ex_SW_TT =	Imposta il ritardo che si verifica dopo
+		ogni comando a finestre, come WinActivate.
+	Ex_UV_TT =	Esportare le variabili globali.
+	ExpList_TT =	Fare doppio clic per modificare
 	ExprLink2_TT =	- NON ALLEGARE VARIABILI IN SEGNI DI PERCENTUALE QUI.
 		- La maggior parte delle espressioni AHK sono supportati.
 		- È possibile utilizzare stringhe, le variabili, array e funzioni.
@@ -951,6 +991,8 @@
 	ExpView_TT =	Editor Avanzato
 	ExpView2_TT =	Editor Avanzato
 	Fast_TT =	Utilizza un metodo di ricerca più veloce (consigliato)
+	HiddenWin_TT =	Determina se le finestre sono invisibili "visti" dallo script.
+	HiddenText_TT =	Determina se il testo invisibile in una finestra è "visto" con lo scopo di trovare la finestra. Questo influisce comandi come IfWinExist e WinActivate.
 	HScale_TT =	Scala di altezza
 	IconN_TT =	Numero del gruppo di icona
 	IfLVColor_TT =	Fare clic per selezionare un colore
@@ -986,48 +1028,6 @@
 	Screen_TT =	Le coordinate sono relative al desktop (schermo intero).
 	Screenshot_TT =	Fare Screenshot
 	SetText_TT =	Cambia il testo di un controllo.
-	TimeoutM_TT =	0 = infinito
-	ToggleC_TT =	Attivare la registrazione relativo quando la chiave è stato acceso.
-	TransC_TT =	Colore trasparente
-	VarCopyA_TT =	Copiare il contenuto delle variabili correnti
-	VarCopyB_TT =	Copiare il contenuto delle variabili correnti
-	VariatT_TT =	Sfumature di variazione
-	WScale_TT =	Scala Larghezza
-		
-; 20. Tooltips from AHK Docs		
-	Ex_AF_TT =	Salta il modo delicato di attivare una finestra
-		e va dritto al metodo forte.
-	Ex_DH_TT =	Determina se le finestre sono invisibili 'visto' dallo script.
-	Ex_EdVars_TT =	Selezionare le variabili globali da esportare.
-	Ex_HK_TT =	Forza l'uso del gancio di attuare tutte
-		o alcuni tasti di scelta rapida da tastiera.
-	Ex_IfDir_TT =	Crea tasti di scelta rapida sensibili al contesto e hotstrings seconda
-		del tipo di finestra che è attiva o esiste.
-	Ex_IfDirType_TT =	Crea tasti di scelta rapida sensibili al contesto e hotstrings seconda
-		del tipo di finestra che è attiva o esiste.
-	Ex_IN_TT =	Provoca lo script a comportarsi come se specificato
-		il contenuto dei file sono presenti a questa posizione esatta.
-	Ex_MD_TT =	Imposta il ritardo che si verifica dopo
-		ogni movimento del mouse o fare clic su.
-	Ex_MT_TT =	Imposta il numero massimo di simultanea
-		filetti per hotkey o hotstring.
-	Ex_NT_TT =	Disattiva la visualizzazione di una icona nella barra.
-	Ex_PT_TT =	Mantiene uno script in esecuzione in modo permanente
-		(cioè fino a quando l'utente chiude o riscontrato ExitApp).
-	Ex_SB_TT =	Determina la velocità di uno script viene eseguito (interessa l'utilizzo della CPU).
-	Ex_SC_TT =	Imposta il ritardo che si verifica dopo
-		ogni controllo-comando di modifica.
-	Ex_SI_TT =	Determina se uno script è consentita l'esecuzione di nuovo quando si è già in esecuzione.
-	Ex_SK_TT =	Imposta il ritardo che si verifica dopo ogni
-		tasto di invio o inviato da ControlSend.
-	Ex_SM_TT =	Rende Invia sinonimo di SendInput o SendPlay piuttosto che
-		il valore predefinito (SendEvent). Rende inoltre possibile fare clic e MouseMove / Cliccare / Trascinare
-		utilizzare il metodo specificato.
-	Ex_ST_TT =	Consente di impostare il comportamento di corrispondenza del parametro WinTitle in comandi come WinWait.
-	Ex_SW_TT =	Imposta il ritardo che si verifica dopo
-		ogni comando a finestre, come WinActivate.
-	Ex_UV_TT =	Esportare le variabili globali.
-	ExpList_TT =	Fare doppio clic per modificare
 	SI_TT =	Il FORCE parola salta la finestra di dialogo e sostituisce l'istanza precedente automaticamente,
 		che è simile in effetti al comando Ricarica.
 		La parola IGNORE salta la finestra di dialogo e lascia la vecchia istanza in esecuzione.
@@ -1044,8 +1044,21 @@
 		2: titolo di una finestra può contenere WinTitle ovunque al suo interno per essere una partita.
 		3: titolo di una finestra deve corrispondere esattamente WinTitle essere una partita.
 		RegEx: Modifiche WinTitle, WinText, ExcludeTitle, e ExcludeText di essere espressioni regolari.
+	TimeoutM_TT =	0 = infinito
+	TitleMatch_TT =	1: il titolo di una finestra deve iniziare con la WinTitle specificato di essere un match.
+		2: il titolo di una finestra può contenere WinTitle ovunque all'interno che sia una partita.
+		3: il titolo di una finestra deve corrispondere esattamente WinTitle essere una partita.
+		RegEx: Modifiche WinTitle, WinText, Escludi titolo ed escludere testo da espressioni regolari.
+	TitleSpeed_TT =	Veloce: Questo è il comportamento predefinito. Le prestazioni possono essere sostanzialmente meglio di lento, ma alcuni elementi WinText per alcuni tipi di finestre non può essere "visto" dai vari comandi delle finestre.
+		Lento: Può essere molto più lento, ma tutti i possibili WinText viene recuperato da ogni finestra come un comando a finestre ricerche attraverso di loro per una partita. Window Spy rivela quali parti del testo di una finestra (se presente) richiedono la modalità lenta.
+	ToggleC_TT =	Attivare la registrazione relativo quando la chiave è stato acceso.
+	TransC_TT =	Colore trasparente
+	VarCopyA_TT =	Copiare il contenuto delle variabili correnti
+	VarCopyB_TT =	Copiare il contenuto delle variabili correnti
+	VariatT_TT =	Sfumature di variazione
+	WScale_TT =	Scala Larghezza
 		
-; 21. Operators		
+; 20. Operators		
 	As_Oper_1 =	Assegna
 	As_Oper_2 =	Aggiungi
 	As_Oper_3 =	Sottrarre
@@ -1065,8 +1078,16 @@
 	Co_Oper_5 =	Meno
 	Co_Oper_6 =	Maggiore o uguale
 	Co_Oper_7 =	Minore o uguale
+	Co_Oper_8 =	In (elenco)
+	Co_Oper_9 =	 Non in (lista)
+	Co_Oper_10 =	 Contiene (elenco)
+	Co_Oper_11 =	 Non contiene (elenco)
+	Co_Oper_12 =	 Tra (linea 1) e (linea 2)
+	Co_Oper_13 =	 Non tra (linea 1) e (linea 2)
+	Co_Oper_14 =	 Is (tipo)
+	Co_Oper_15 =	 Non è (tipo)
 		
-; 22. IE Commands Tips		
+; 21. IE Commands Tips		
 	IE_Cmd_Index =	
 	Checked	Imposta o recupera lo stato della casella di controllo o pulsante di opzione.
 	Click	Simula un clic sull'oggetto.
@@ -1094,7 +1115,7 @@
 	Value	Ottiene o imposta il valore dell'oggetto.
 	Width	Imposta o recupera la larghezza dell'oggetto.
 		
-; 23. COM Methods Tips		
+; 22. COM Methods Tips		
 	COM_CLSID_Index =	
 	Excel.Application	Manipola fogli Excel.
 	HTMLfile	Può essere usato per leggere, scrivere e interagire con l'HTML.
@@ -1117,7 +1138,7 @@
 	WScript.Shell	Varie attività di gestione (molti compiti nativi AHK).
 	Word.Application	Manipola documenti di Word.
 		
-; 24. AHK Commands Tips		
+; 23. AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	Abs	Restituisce il valore assoluto di un numero .
 	ACos	Restituisce l' arcocoseno (il numero il cui coseno è Number) in radianti .

@@ -224,73 +224,74 @@
 	w_Lang040 =	Baru (Ctrl+N)
 	w_Lang041 =	Buka (Ctrl+O)
 	w_Lang042 =	Simpan (Ctrl+S)
-	w_Lang043 =	Ekspor ke AHK (Ctrl+E)
-	w_Lang044 =	Preview Script (Ctrl+P)
-	w_Lang045 =	Pengaturan (Ctrl+G)
-	w_Lang046 =	Rekam Makro (Ctrl+R)
-	w_Lang047 =	Aktifkan Macro (Ctrl+Enter)
-	w_Lang048 =	Bermain Makro sekarang (Ctrl+Shift+Enter)
-	w_Lang049 =	Timer (Ctrl+Shift+T)
-	w_Lang050 =	Mouse (F2)
-	w_Lang051 =	Teks (F3)
-	w_Lang052 =	Mengedit Macro (Ctrl+Shift+M)
-	w_Lang053 =	Control (F4)
-	w_Lang054 =	Jeda (F5)
-	w_Lang055 =	Kotak pesan (Shift+F5)
-	w_Lang056 =	Tunggu Key (Ctrl+F5)
-	w_Lang057 =	Window (F6)
-	w_Lang058 =	Image / Pixel Cari (F7)
-	w_Lang059 =	Jalankan / file / String / Misc. (F8)
-	w_Lang060 =	Lingkaran (F9)
-	w_Lang061 =	Goto (Shift+F9)
-	w_Lang062 =	Label (Ctrl+F9)
-	w_Lang063 =	Jika Laporan (F10)
-	w_Lang064 =	Variabel / Array (Shift+F10)
-	w_Lang065 =	Fungsi / Metode Array (Ctrl+F10)
-	w_Lang066 =	Internet Explorer (F12)
-	w_Lang067 =	Ekspresi / COM Antarmuka (Shift+F12)
-	w_Lang068 =	Mengirim email (F11)
-	w_Lang069 =	Jendela Messages (Ctrl+F12)
-	w_Lang070 =	Tambahkan tombol Windows untuk "Play" hotkey
-	w_Lang071 =	Gunakan tombol joystick sebagai hotkey
-	w_Lang072 =	Tambahkan Makro (Ctrl+T)
-	w_Lang073 =	Tutup Makro (Ctrl+W)
-	w_Lang074 =	Gandakan Makro (Ctrl+Shift+D)
-	w_Lang075 =	Impor Makro (Ctrl+I)
-	w_Lang076 =	Simpan Makro saat ini (Ctrl+Alt+S)
-	w_Lang077 =	Move Up (Ctrl+PageUp)
-	w_Lang078 =	Kebawah (Ctrl+PageDown)
-	w_Lang079 =	Gandakan Baris Terpilih (Ctrl+D)
-	w_Lang080 =	Potong Baris Dipilih (Ctrl+X)
-	w_Lang081 =	Kopi Baris Dipilih (Ctrl+C)
-	w_Lang082 =	Baris Paste Disalin (Ctrl+V)
-	w_Lang083 =	Hapus Baris Terpilih (Del)
-	w_Lang084 =	Undo (Ctrl+Z)
-	w_Lang085 =	Redo (Ctrl+Y)
-	w_Lang086 =	Salin ke...
-	w_Lang087 =	Cari / Ganti (Ctrl+F)
-	w_Lang088 =	Menyisipkan / Mengedit Komentar (Ctrl+L)
-	w_Lang089 =	Sunting Color Mark (Ctrl+M)
-	w_Lang090 =	Sesuaikan
-	w_Lang091 =	Cari perintah (Ctrl+Shift+F)
-	w_Lang092 =	Mengedit (Enter)
-	w_Lang093 =	Menyembunyikan
-	w_Lang094 =	Pindah ke sini
-	w_Lang095 =	Kopi di sini
-	w_Lang096 =	Grup
-	w_Lang097 =	Memungkinkan kelompok (Ctrl+Shift+G)
-	w_Lang098 =	Menambahkan grup (Ctrl+Shift+Y)
-	w_Lang099 =	Menghapus grup (Ctrl+Shift+R)
-	w_Lang100 =	Hapus semua kelompok
-	w_Lang101 =	Kelompok mengedit
-	w_Lang102 =	Nama grup
-	w_Lang103 =	Buat Fungsi (Ctrl+Shift+U)
-	w_Lang104 =	Tambahkan Parameter (Ctrl+Shift+P)
-	w_Lang105 =	Tambahkan Return (Ctrl+Shift+N)
-	w_Lang106 =	Mengkonversi Makro Untuk Fungsi (Ctrl+Shift+C)
-	w_Lang107 =	Komentar dari baris dicentang
-	w_Lang108 =	Download / Upload file (Shift+F11)
-	w_Lang109 =	Zip / file Unzip (Ctrl+F11)
+	w_Lang043 =	Save As (Ctrl+Shift+S)
+	w_Lang044 =	Ekspor ke AHK (Ctrl+E)
+	w_Lang045 =	Preview Script (Ctrl+P)
+	w_Lang046 =	Pengaturan (Ctrl+G)
+	w_Lang047 =	Rekam Makro (Ctrl+R)
+	w_Lang048 =	Aktifkan Macro (Ctrl+Enter)
+	w_Lang049 =	Bermain Makro sekarang (Ctrl+Shift+Enter)
+	w_Lang050 =	Timer (Ctrl+Shift+T)
+	w_Lang051 =	Mouse (F2)
+	w_Lang052 =	Teks (F3)
+	w_Lang053 =	Mengedit Macro (Ctrl+Shift+M)
+	w_Lang054 =	Control (F4)
+	w_Lang055 =	Jeda (F5)
+	w_Lang056 =	Kotak pesan (Shift+F5)
+	w_Lang057 =	Tunggu Key (Ctrl+F5)
+	w_Lang058 =	Window (F6)
+	w_Lang059 =	Image / Pixel Cari (F7)
+	w_Lang060 =	Jalankan / file / String / Misc. (F8)
+	w_Lang061 =	Lingkaran (F9)
+	w_Lang062 =	Goto (Shift+F9)
+	w_Lang063 =	Label (Ctrl+F9)
+	w_Lang064 =	Jika Laporan (F10)
+	w_Lang065 =	Variabel / Array (Shift+F10)
+	w_Lang066 =	Fungsi / Metode Array (Ctrl+F10)
+	w_Lang067 =	Internet Explorer (F12)
+	w_Lang068 =	Ekspresi / COM Antarmuka (Shift+F12)
+	w_Lang069 =	Mengirim email (F11)
+	w_Lang070 =	Jendela Messages (Ctrl+F12)
+	w_Lang071 =	Tambahkan tombol Windows untuk "Play" hotkey
+	w_Lang072 =	Gunakan tombol joystick sebagai hotkey
+	w_Lang073 =	Tambahkan Makro (Ctrl+T)
+	w_Lang074 =	Tutup Makro (Ctrl+W)
+	w_Lang075 =	Gandakan Makro (Ctrl+Shift+D)
+	w_Lang076 =	Impor Makro (Ctrl+I)
+	w_Lang077 =	Simpan Makro saat ini (Ctrl+Alt+S)
+	w_Lang078 =	Move Up (Ctrl+PageUp)
+	w_Lang079 =	Kebawah (Ctrl+PageDown)
+	w_Lang080 =	Gandakan Baris Terpilih (Ctrl+D)
+	w_Lang081 =	Potong Baris Dipilih (Ctrl+X)
+	w_Lang082 =	Kopi Baris Dipilih (Ctrl+C)
+	w_Lang083 =	Baris Paste Disalin (Ctrl+V)
+	w_Lang084 =	Hapus Baris Terpilih (Del)
+	w_Lang085 =	Undo (Ctrl+Z)
+	w_Lang086 =	Redo (Ctrl+Y)
+	w_Lang087 =	Salin ke...
+	w_Lang088 =	Cari / Ganti (Ctrl+F)
+	w_Lang089 =	Menyisipkan / Mengedit Komentar (Ctrl+L)
+	w_Lang090 =	Sunting Color Mark (Ctrl+M)
+	w_Lang091 =	Sesuaikan
+	w_Lang092 =	Cari perintah (Ctrl+Shift+F)
+	w_Lang093 =	Mengedit (Enter)
+	w_Lang094 =	Menyembunyikan
+	w_Lang095 =	Pindah ke sini
+	w_Lang096 =	Kopi di sini
+	w_Lang097 =	Grup
+	w_Lang098 =	Memungkinkan kelompok (Ctrl+Shift+G)
+	w_Lang099 =	Menambahkan grup (Ctrl+Shift+Y)
+	w_Lang100 =	Menghapus grup (Ctrl+Shift+R)
+	w_Lang101 =	Hapus semua kelompok
+	w_Lang102 =	Kelompok mengedit
+	w_Lang103 =	Nama grup
+	w_Lang104 =	Buat Fungsi (Ctrl+Shift+U)
+	w_Lang105 =	Tambahkan Parameter (Ctrl+Shift+P)
+	w_Lang106 =	Tambahkan Return (Ctrl+Shift+N)
+	w_Lang107 =	Mengkonversi Makro Untuk Fungsi (Ctrl+Shift+C)
+	w_Lang108 =	Komentar dari baris dicentang
+	w_Lang109 =	Download / Upload file (Shift+F11)
+	w_Lang110 =	Zip / file Unzip (Ctrl+F11)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mouse
@@ -538,6 +539,7 @@
 	c_Lang244 =	Kanan ke kiri
 	c_Lang245 =	Lampiran
 	c_Lang246 =	Jalan
+	c_Lang247 =	jika
 		
 ; 16. Other Windows		
 	t_Lang001 =	Ekspor ke AutoHotkey
@@ -741,6 +743,11 @@
 	t_Lang199 =	SSL
 	t_Lang200 =	Kirim modus
 	t_Lang201 =	Zaslat test
+	t_Lang202 =	Layar Dan Jendela
+	t_Lang203 =	Mendeteksi Jendela Tersembunyi
+	t_Lang204 =	Mendeteksi Teks Tersembunyi
+	t_Lang205 =	Modus Pertandingan Judul
+	t_Lang206 =	Kecepatan Pertandingan Judul
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Buka
@@ -818,7 +825,7 @@
 		Untuk menonaktifkan pemeriksaan otomatis pilih Bantuan> Periksa pada start-up. > Periksa pada startup
 	d_Lang062 =	Anda sudah memiliki versi terbaru.
 	d_Lang063 =	Terjadi galat saat memeriksa.
-	d_Lang064 =	COM objek kesalahan dalam
+	d_Lang064 =	Kesalahan dalam
 	d_Lang065 =	Baris
 	d_Lang066 =	Secara khusus
 	d_Lang067 =	Tampilkan jendela ini pada startup
@@ -936,8 +943,41 @@
 	EditPaste_TT =	Pasta String pada posisi tanda sisipan / insert
 		dalam kontrol Edit (ini tidak mempengaruhi
 		isi clipboard).
+	Ex_AF_TT =	Melompat metode lembut mengaktifkan jendela
+		dan langsung menuju ke metode kuat.
+	Ex_DH_TT =	Menentukan apakah jendela tak kasat mata 'dilihat' oleh script.
 	Ex_EdScript_TT =	Nyílt külső szerkesztőben
+	Ex_EdVars_TT =	Pilih variabel global yang akan diekspor.
 	Ex_ExecScript_TT =	Script berjalan
+	Ex_HK_TT =	Memaksa penggunaan hook untuk melaksanakan semua
+		atau hotkeys keyboard yang.
+	Ex_IfDir_TT =	Menciptakan konteks-sensitif hotkeys dan hotstrings tergantung
+		pada jenis jendela yang aktif atau ada.
+	Ex_IfDirType_TT =	Menciptakan konteks-sensitif hotkeys dan hotstrings tergantung
+		pada jenis jendela yang aktif atau ada.
+	Ex_IN_TT =	Penyebab script untuk berperilaku seolah-olah ditentukan
+		isi file yang hadir pada posisi yang tepat.
+	Ex_MD_TT =	Mengatur penundaan yang akan terjadi setelah
+		setiap gerakan mouse atau klik.
+	Ex_MT_TT =	Menetapkan jumlah maksimum simultan
+		benang per hotkey atau hotstring.
+	Ex_NT_TT =	Menonaktifkan pertunjukan tray icon.
+	Ex_PT_TT =	Menyimpan script permanen berjalan
+		(Yaitu, sampai pengguna menutup atau ExitApp ditemui).
+	Ex_SB_TT =	Menentukan seberapa cepat script akan berjalan (mempengaruhi utilisasi CPU).
+	Ex_SC_TT =	Mengatur penundaan yang akan terjadi setelah
+		setiap kontrol-memodifikasi perintah.
+	Ex_SI_TT =	Menentukan apakah script yang diperbolehkan untuk berjalan lagi ketika sudah berjalan.
+	Ex_SK_TT =	Mengatur penundaan yang akan terjadi setelah setiap
+		keystroke dikirim oleh Kirim atau ControlSend.
+	Ex_SM_TT =	Membuat Kirim identik dengan SendInput atau SendPlay daripada
+		default (SendEvent). Juga membuat Klik dan mousemove / Klik / Drag
+		menggunakan metode tertentu.
+	Ex_ST_TT =	Mengatur perilaku pencocokan parameter WinTitle dalam perintah seperti WinWait.
+	Ex_SW_TT =	Mengatur penundaan yang akan terjadi setelah
+		setiap perintah windowing, seperti WinActivate.
+	Ex_UV_TT =	Ekspor variabel global.
+	ExpList_TT =	Double-Klik untuk mengedit
 	ExprLink2_TT =	- JANGAN MELAMPIRKAN VARIABEL DI TANDA PERSEN DI SINI.
 		- Sebagian besar dari ekspresi AHK didukung.
 		- Anda dapat menggunakan string, variabel, array dan fungsi.
@@ -951,6 +991,8 @@
 	ExpView_TT =	Editor canggih
 	ExpView2_TT =	Editor canggih
 	Fast_TT =	Menggunakan metode yang lebih cepat mencari (dianjurkan)
+	HiddenWin_TT =	Menentukan apakah jendela terlihat sedang "dilihat" oleh script.
+	HiddenText_TT =	Menentukan apakah teks yang tak terlihat di jendela adalah "terlihat" untuk tujuan menemukan jendela. Ini mempengaruhi perintah seperti IfWinExist dan WinActivate.
 	HScale_TT =	Skala Tinggi
 	IconN_TT =	Jumlah kelompok ikon
 	IfLVColor_TT =	Klik untuk memilih warna
@@ -986,48 +1028,6 @@
 	Screen_TT =	Koordinat relatif terhadap desktop (seluruh layar).
 	Screenshot_TT =	Membuat Screenshot
 	SetText_TT =	Mengubah teks kontrol.
-	TimeoutM_TT =	0 = tak terbatas
-	ToggleC_TT =	Aktifkan Recording Relatif ketika negara kunci di.
-	TransC_TT =	Transparan warna
-	VarCopyA_TT =	Menyalin isi variabel saat ini
-	VarCopyB_TT =	Menyalin isi variabel saat ini
-	VariatT_TT =	Nuansa variasi
-	WScale_TT =	Skala Lebar
-		
-; 20. Tooltips from AHK Docs		
-	Ex_AF_TT =	Melompat metode lembut mengaktifkan jendela
-		dan langsung menuju ke metode kuat.
-	Ex_DH_TT =	Menentukan apakah jendela tak kasat mata 'dilihat' oleh script.
-	Ex_EdVars_TT =	Pilih variabel global yang akan diekspor.
-	Ex_HK_TT =	Memaksa penggunaan hook untuk melaksanakan semua
-		atau hotkeys keyboard yang.
-	Ex_IfDir_TT =	Menciptakan konteks-sensitif hotkeys dan hotstrings tergantung
-		pada jenis jendela yang aktif atau ada.
-	Ex_IfDirType_TT =	Menciptakan konteks-sensitif hotkeys dan hotstrings tergantung
-		pada jenis jendela yang aktif atau ada.
-	Ex_IN_TT =	Penyebab script untuk berperilaku seolah-olah ditentukan
-		isi file yang hadir pada posisi yang tepat.
-	Ex_MD_TT =	Mengatur penundaan yang akan terjadi setelah
-		setiap gerakan mouse atau klik.
-	Ex_MT_TT =	Menetapkan jumlah maksimum simultan
-		benang per hotkey atau hotstring.
-	Ex_NT_TT =	Menonaktifkan pertunjukan tray icon.
-	Ex_PT_TT =	Menyimpan script permanen berjalan
-		(Yaitu, sampai pengguna menutup atau ExitApp ditemui).
-	Ex_SB_TT =	Menentukan seberapa cepat script akan berjalan (mempengaruhi utilisasi CPU).
-	Ex_SC_TT =	Mengatur penundaan yang akan terjadi setelah
-		setiap kontrol-memodifikasi perintah.
-	Ex_SI_TT =	Menentukan apakah script yang diperbolehkan untuk berjalan lagi ketika sudah berjalan.
-	Ex_SK_TT =	Mengatur penundaan yang akan terjadi setelah setiap
-		keystroke dikirim oleh Kirim atau ControlSend.
-	Ex_SM_TT =	Membuat Kirim identik dengan SendInput atau SendPlay daripada
-		default (SendEvent). Juga membuat Klik dan mousemove / Klik / Drag
-		menggunakan metode tertentu.
-	Ex_ST_TT =	Mengatur perilaku pencocokan parameter WinTitle dalam perintah seperti WinWait.
-	Ex_SW_TT =	Mengatur penundaan yang akan terjadi setelah
-		setiap perintah windowing, seperti WinActivate.
-	Ex_UV_TT =	Ekspor variabel global.
-	ExpList_TT =	Double-Klik untuk mengedit
 	SI_TT =	Kata FORCE melompati kotak dialog dan menggantikan contoh lama secara otomatis,
 		yang mirip dalam efek perintah Reload.
 		Kata ABAIKAN melompat kotak dialog dan meninggalkan contoh lama berjalan.
@@ -1044,8 +1044,21 @@
 		2: Judul window dapat berisi WinTitle mana saja di dalamnya menjadi pertandingan.
 		3: Judul window harus sama persis WinTitle menjadi pertandingan.
 		Regex: Perubahan WinTitle, WinText, ExcludeTitle, dan ExcludeText menjadi ekspresi reguler.
+	TimeoutM_TT =	0 = tak terbatas
+	TitleMatch_TT =	1: Judul Sebuah jendela harus mulai dengan WinTitle ditentukan untuk menjadi pertandingan.
+		2: Judul Jendela ini dapat berisi WinTitle di mana saja di dalamnya menjadi pertandingan.
+		3: Judul Sebuah jendela harus sama persis dengan WinTitle menjadi pertandingan.
+		Regex: Perubahan WinTitle, WinText, Kecualikan Judul, dan Kecualikan Text menjadi ekspresi reguler.
+	TitleSpeed_TT =	Cepat: ini adalah perilaku default. Kinerja mungkin jauh lebih baik dibandingkan Lambat, tetapi unsur-unsur WinText tertentu untuk beberapa jenis windows tidak dapat "dilihat" oleh berbagai perintah jendela.
+		Lambat: Bisa menjadi lebih lambat, tapi semua kemungkinan WinText diambil dari setiap jendela sebagai pencarian perintah windowing melalui mereka untuk pertandingan. Jendela Spy mengungkapkan bagian mana dari teks jendela (jika ada) memerlukan modus lambat.
+	ToggleC_TT =	Aktifkan Recording Relatif ketika negara kunci di.
+	TransC_TT =	Transparan warna
+	VarCopyA_TT =	Menyalin isi variabel saat ini
+	VarCopyB_TT =	Menyalin isi variabel saat ini
+	VariatT_TT =	Nuansa variasi
+	WScale_TT =	Skala Lebar
 		
-; 21. Operators		
+; 20. Operators		
 	As_Oper_1 =	Menetapkan
 	As_Oper_2 =	Menambahkan
 	As_Oper_3 =	Mengurangi
@@ -1065,8 +1078,16 @@
 	Co_Oper_5 =	Kurang
 	Co_Oper_6 =	Lebih besar atau sama
 	Co_Oper_7 =	Kurang atau sama
+	Co_Oper_8 =	Dalam (daftar)
+	Co_Oper_9 =	 Tidak di (daftar)
+	Co_Oper_10 =	 Berisi (daftar)
+	Co_Oper_11 =	 Tidak mengandung (daftar)
+	Co_Oper_12 =	 Antara (line 1) dan (jalur 2)
+	Co_Oper_13 =	 Bukan antara (line 1) dan (jalur 2)
+	Co_Oper_14 =	 Adalah (tipe)
+	Co_Oper_15 =	 Bukankah (jenis)
 		
-; 22. IE Commands Tips		
+; 21. IE Commands Tips		
 	IE_Cmd_Index =	
 	Checked	Mengatur atau mengambil keadaan kotak centang atau tombol radio.
 	Click	Mensimulasikan klik pada objek.
@@ -1094,7 +1115,7 @@
 	Value	Mendapatkan atau menetapkan nilai objek.
 	Width	Mengatur atau mengambil lebar objek.
 		
-; 23. COM Methods Tips		
+; 22. COM Methods Tips		
 	COM_CLSID_Index =	
 	Excel.Application	Memanipulasi lembar Excel.
 	HTMLfile	Dapat digunakan untuk membaca, menulis dan berinteraksi dengan HTML.
@@ -1117,7 +1138,7 @@
 	WScript.Shell	Berbagai tugas-tugas administrasi (AHK banyak tugas asli).
 	Word.Application	Memanipulasi dokumen Word.
 		
-; 24. AHK Commands Tips		
+; 23. AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	Abs	Mengembalikan nilai absolut Nomor.
 	ACos	Mengembalikan arccosine (jumlah yang kosinus Number) dalam radian.

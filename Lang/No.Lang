@@ -224,73 +224,74 @@
 	w_Lang040 =	New (Ctrl+N)
 	w_Lang041 =	Open (Ctrl+O)
 	w_Lang042 =	Lagre (Ctrl+S)
-	w_Lang043 =	Eksporter til AHK (Ctrl+E)
-	w_Lang044 =	Forhåndsvisning Script (Ctrl+P)
-	w_Lang045 =	Innstillinger (Ctrl+G)
-	w_Lang046 =	Registrer makro (Ctrl+R)
-	w_Lang047 =	Aktiver makroer (Ctrl+Enter)
-	w_Lang048 =	Spille Nåværende Makro (Ctrl+Shift+Enter)
-	w_Lang049 =	Timer (Ctrl+Shift+T)
-	w_Lang050 =	Mus (F2)
-	w_Lang051 =	Tekst (F3)
-	w_Lang052 =	Redigere Makroer (Ctrl+Shift+M)
-	w_Lang053 =	Kontroll (F4)
-	w_Lang054 =	Pause (F5)
-	w_Lang055 =	Melding Box (Shift+F5)
-	w_Lang056 =	Nøkkelen Vente (Ctrl+F5)
-	w_Lang057 =	Window (F6)
-	w_Lang058 =	Image / Pixel Søk (F7)
-	w_Lang059 =	Kjør / File / String / Misc. (F8)
-	w_Lang060 =	Loop (F9)
-	w_Lang061 =	Goto (Shift+F9)
-	w_Lang062 =	Label (Ctrl+F9)
-	w_Lang063 =	Hvis uttalelsene (F10)
-	w_Lang064 =	Variabler / Arrays (Shift+F10)
-	w_Lang065 =	Funksjoner / Array-metoder (Ctrl+F10)
-	w_Lang066 =	Internet Explorer (F12)
-	w_Lang067 =	Expression / COM-grensesnitt (Shift+F12)
-	w_Lang068 =	Send e-post (F11)
-	w_Lang069 =	Windows-meldinger (Ctrl+F12)
-	w_Lang070 =	Legg Windows-tasten til "Play" hurtigtast
-	w_Lang071 =	Bruk en joystick knappen som hurtigtast
-	w_Lang072 =	Legg Makro (Ctrl+T)
-	w_Lang073 =	Lukk Makro (Ctrl+W)
-	w_Lang074 =	Duplisere Makro (Ctrl+Shift+D)
-	w_Lang075 =	Import Makro (Ctrl+I)
-	w_Lang076 =	Lagre gjeldende Makro (Ctrl+Alt+S)
-	w_Lang077 =	Flytt opp (Ctrl+PageUp)
-	w_Lang078 =	Flytt ned (Ctrl+PageDown)
-	w_Lang079 =	Dupliser valgte rader (Ctrl+D)
-	w_Lang080 =	Skjær valgte rader (Ctrl+X)
-	w_Lang081 =	Kopiere valgte rader (Ctrl+C)
-	w_Lang082 =	Lim Kopierte rader (Ctrl+V)
-	w_Lang083 =	Slett valgte rader (Del)
-	w_Lang084 =	Angre (Ctrl+Z)
-	w_Lang085 =	Gjør om (Ctrl+Y)
-	w_Lang086 =	Kopier til...
-	w_Lang087 =	Finn / Erstatt (Ctrl+F)
-	w_Lang088 =	Sett / Rediger Kommentar (Ctrl+L)
-	w_Lang089 =	Edit fargemerki (Ctrl+M)
-	w_Lang090 =	Tilpass
-	w_Lang091 =	Finn en kommando (Ctrl+Shift+F)
-	w_Lang092 =	Redigere (Enter)
-	w_Lang093 =	Skjule
-	w_Lang094 =	Flytte hit
-	w_Lang095 =	Kopier hit
-	w_Lang096 =	grupper
-	w_Lang097 =	Aktiver grupper (Ctrl+Shift+G)
-	w_Lang098 =	Legg til gruppe (Ctrl+Shift+Y)
-	w_Lang099 =	Fjern gruppe (Ctrl+Shift+R)
-	w_Lang100 =	Fjern alle grupper
-	w_Lang101 =	Rediger grupper
-	w_Lang102 =	Gruppenavn
-	w_Lang103 =	Opprett Funksjon (Ctrl+Shift+U)
-	w_Lang104 =	Legg Parameter (Ctrl+Shift+P)
-	w_Lang105 =	Legg Return (Ctrl+Shift+N)
-	w_Lang106 =	Konverter Macro å fungere (Ctrl+Shift+C)
-	w_Lang107 =	Kommentar ut ukontrollert rader
-	w_Lang108 =	Last ned / opp filer (Shift+F11)
-	w_Lang109 =	Zip / Unzip filer (Ctrl+F11)
+	w_Lang043 =	Lagre som (Ctrl+Shift+S)
+	w_Lang044 =	Eksporter til AHK (Ctrl+E)
+	w_Lang045 =	Forhåndsvisning Script (Ctrl+P)
+	w_Lang046 =	Innstillinger (Ctrl+G)
+	w_Lang047 =	Registrer makro (Ctrl+R)
+	w_Lang048 =	Aktiver makroer (Ctrl+Enter)
+	w_Lang049 =	Spille Nåværende Makro (Ctrl+Shift+Enter)
+	w_Lang050 =	Timer (Ctrl+Shift+T)
+	w_Lang051 =	Mus (F2)
+	w_Lang052 =	Tekst (F3)
+	w_Lang053 =	Redigere Makroer (Ctrl+Shift+M)
+	w_Lang054 =	Kontroll (F4)
+	w_Lang055 =	Pause (F5)
+	w_Lang056 =	Melding Box (Shift+F5)
+	w_Lang057 =	Nøkkelen Vente (Ctrl+F5)
+	w_Lang058 =	Window (F6)
+	w_Lang059 =	Image / Pixel Søk (F7)
+	w_Lang060 =	Kjør / File / String / Misc. (F8)
+	w_Lang061 =	Loop (F9)
+	w_Lang062 =	Goto (Shift+F9)
+	w_Lang063 =	Label (Ctrl+F9)
+	w_Lang064 =	Hvis uttalelsene (F10)
+	w_Lang065 =	Variabler / Arrays (Shift+F10)
+	w_Lang066 =	Funksjoner / Array-metoder (Ctrl+F10)
+	w_Lang067 =	Internet Explorer (F12)
+	w_Lang068 =	Expression / COM-grensesnitt (Shift+F12)
+	w_Lang069 =	Send e-post (F11)
+	w_Lang070 =	Windows-meldinger (Ctrl+F12)
+	w_Lang071 =	Legg Windows-tasten til "Play" hurtigtast
+	w_Lang072 =	Bruk en joystick knappen som hurtigtast
+	w_Lang073 =	Legg Makro (Ctrl+T)
+	w_Lang074 =	Lukk Makro (Ctrl+W)
+	w_Lang075 =	Duplisere Makro (Ctrl+Shift+D)
+	w_Lang076 =	Import Makro (Ctrl+I)
+	w_Lang077 =	Lagre gjeldende Makro (Ctrl+Alt+S)
+	w_Lang078 =	Flytt opp (Ctrl+PageUp)
+	w_Lang079 =	Flytt ned (Ctrl+PageDown)
+	w_Lang080 =	Dupliser valgte rader (Ctrl+D)
+	w_Lang081 =	Skjær valgte rader (Ctrl+X)
+	w_Lang082 =	Kopiere valgte rader (Ctrl+C)
+	w_Lang083 =	Lim Kopierte rader (Ctrl+V)
+	w_Lang084 =	Slett valgte rader (Del)
+	w_Lang085 =	Angre (Ctrl+Z)
+	w_Lang086 =	Gjør om (Ctrl+Y)
+	w_Lang087 =	Kopier til...
+	w_Lang088 =	Finn / Erstatt (Ctrl+F)
+	w_Lang089 =	Sett / Rediger Kommentar (Ctrl+L)
+	w_Lang090 =	Edit fargemerki (Ctrl+M)
+	w_Lang091 =	Tilpass
+	w_Lang092 =	Finn en kommando (Ctrl+Shift+F)
+	w_Lang093 =	Redigere (Enter)
+	w_Lang094 =	Skjule
+	w_Lang095 =	Flytte hit
+	w_Lang096 =	Kopier hit
+	w_Lang097 =	grupper
+	w_Lang098 =	Aktiver grupper (Ctrl+Shift+G)
+	w_Lang099 =	Legg til gruppe (Ctrl+Shift+Y)
+	w_Lang100 =	Fjern gruppe (Ctrl+Shift+R)
+	w_Lang101 =	Fjern alle grupper
+	w_Lang102 =	Rediger grupper
+	w_Lang103 =	Gruppenavn
+	w_Lang104 =	Opprett Funksjon (Ctrl+Shift+U)
+	w_Lang105 =	Legg Parameter (Ctrl+Shift+P)
+	w_Lang106 =	Legg Return (Ctrl+Shift+N)
+	w_Lang107 =	Konverter Macro å fungere (Ctrl+Shift+C)
+	w_Lang108 =	Kommentar ut ukontrollert rader
+	w_Lang109 =	Last ned / opp filer (Shift+F11)
+	w_Lang110 =	Zip / Unzip filer (Ctrl+F11)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mus
@@ -538,6 +539,7 @@
 	c_Lang244 =	Høyre mot venstre
 	c_Lang245 =	Vedlegg
 	c_Lang246 =	Sti
+	c_Lang247 =	om
 		
 ; 16. Other Windows		
 	t_Lang001 =	Eksportere til AutoHotkey
@@ -741,6 +743,11 @@
 	t_Lang199 =	SSL
 	t_Lang200 =	Send modus
 	t_Lang201 =	Send en test
+	t_Lang202 =	Skjerm Og Vindu
+	t_Lang203 =	Oppdage Skjulte Vinduer
+	t_Lang204 =	Oppdage Skjult Tekst
+	t_Lang205 =	Tittelen Kamp Modus
+	t_Lang206 =	Tittelkamp Hastighet
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Åpent
@@ -818,7 +825,7 @@
 		Hvis du vil deaktivere automatiske kontroller velge Hjelp > Sjekk ved oppstart
 	d_Lang062 =	Du allerede har den nyeste versjonen.
 	d_Lang063 =	Det oppstod en feil mens du sjekker.
-	d_Lang064 =	COM objekt feil i
+	d_Lang064 =	Feil på
 	d_Lang065 =	Rad
 	d_Lang066 =	Spesielt
 	d_Lang067 =	Vis dette vinduet ved oppstart
@@ -936,8 +943,41 @@
 	EditPaste_TT =	Pastaer String på caret / insert stilling
 		i en Rediger-kontroll (dette påvirker ikke
 		innholdet påutklippstavla).
+	Ex_AF_TT =	Hopper skånsom metode for å aktivere et vindu
+		og går rett til den kraftfulle metoden.
+	Ex_DH_TT =	Avgjør om usynlige vinduer er "sett" av skriptet.
 	Ex_EdScript_TT =	Open in externe editor
+	Ex_EdVars_TT =	Velg globale variabler som skal eksporteres.
 	Ex_ExecScript_TT =	Kjør skriptet
+	Ex_HK_TT =	Tvinger bruk av kroken for å implementere alle
+		eller noen tastatur hurtigtaster.
+	Ex_IfDir_TT =	Oppretter kontekstavhengige hurtigtaster og hotstrings avhengig
+		av type vindu som er aktiv eller eksisterer.
+	Ex_IfDirType_TT =	Oppretter kontekstavhengige hurtigtaster og hotstrings avhengig
+		av type vindu som er aktiv eller eksisterer.
+	Ex_IN_TT =	Årsaker skriptet til å oppføre seg som om den angitte
+		filens innhold er tilstede på denne eksakte posisjonen.
+	Ex_MD_TT =	Stiller forsinkelse som vil skje etter
+		hver mus bevegelse eller klikk.
+	Ex_MT_TT =	Angir maksimalt antall samtidige
+		tråder per hurtigtast eller hotstring.
+	Ex_NT_TT =	Deaktiverer visning av en ikonet.
+	Ex_PT_TT =	Holder et skript permanent drift
+		(det vil si, inntil brukeren lukker den eller ExitApp er oppstått).
+	Ex_SB_TT =	Bestemmer hvor raskt et skript vil kjøre (påvirker CPU).
+	Ex_SC_TT =	Stiller forsinkelse som vil skje etter
+		hver kontroll-endring kommandoen.
+	Ex_SI_TT =	Avgjør om et skript har lov til å kjøre igjen når det allerede er i gang.
+	Ex_SK_TT =	Stiller forsinkelse som vil oppstå etter hvert
+		tastetrykk sendes ved å sende eller ControlSend.
+	Ex_SM_TT =	Gjør Send synonymt med SendInput eller SendPlay stedet
+		standard (SendEvent). Også gjør Klikk og MouseMove / Klikk / Dra
+		bruke den angitte metoden.
+	Ex_ST_TT =	Stiller matchende oppførselen til WinTitle parameter i kommandoer som WinWait.
+	Ex_SW_TT =	Stiller forsinkelse som vil skje etter
+		hver windowing kommando, for eksempel WinActivate.
+	Ex_UV_TT =	Eksportere globale variabler.
+	ExpList_TT =	Dobbeltklikk for å redigere
 	ExprLink2_TT =	- IKKE SETT VARIABLER I PROSENTTEGN HER.
 		- De fleste av AHK uttrykk støttes.
 		- Du kan bruke strenger, variabler, matriser og funksjoner.
@@ -951,6 +991,8 @@
 	ExpView_TT =	Avansert Redigeringsprogram
 	ExpView2_TT =	Avansert Redigeringsprogram
 	Fast_TT =	Bruker en raskere søking metode (anbefales)
+	HiddenWin_TT =	Bestemmer om usynlige vinduer er "sett" av skriptet.
+	HiddenText_TT =	Bestemmer hvorvidt  usynlig tekst i et vindu blir "sett" for det formål å finne vinduet. Dette påvirker kommandoer som IfWinExist og WinActivate.
 	HScale_TT =	Høyde skala
 	IconN_TT =	Antall ikonet gruppen
 	IfLVColor_TT =	Klikk for å velge en farge
@@ -986,48 +1028,6 @@
 	Screen_TT =	Koordinatene er relative til skrivebordet (hele skjermen).
 	Screenshot_TT =	Gjør Skjermbilde
 	SetText_TT =	Endrer teksten i en kontroll.
-	TimeoutM_TT =	0 = uendelig
-	ToggleC_TT =	Aktiver Relativ opptak når nøkkelen staten er på.
-	TransC_TT =	Transparent farge
-	VarCopyA_TT =	Kopier gjeldende variabelinnhold
-	VarCopyB_TT =	Kopier gjeldende variabelinnhold
-	VariatT_TT =	Nyanser av variasjon
-	WScale_TT =	Bredde skala
-		
-; 20. Tooltips from AHK Docs		
-	Ex_AF_TT =	Hopper skånsom metode for å aktivere et vindu
-		og går rett til den kraftfulle metoden.
-	Ex_DH_TT =	Avgjør om usynlige vinduer er "sett" av skriptet.
-	Ex_EdVars_TT =	Velg globale variabler som skal eksporteres.
-	Ex_HK_TT =	Tvinger bruk av kroken for å implementere alle
-		eller noen tastatur hurtigtaster.
-	Ex_IfDir_TT =	Oppretter kontekstavhengige hurtigtaster og hotstrings avhengig
-		av type vindu som er aktiv eller eksisterer.
-	Ex_IfDirType_TT =	Oppretter kontekstavhengige hurtigtaster og hotstrings avhengig
-		av type vindu som er aktiv eller eksisterer.
-	Ex_IN_TT =	Årsaker skriptet til å oppføre seg som om den angitte
-		filens innhold er tilstede på denne eksakte posisjonen.
-	Ex_MD_TT =	Stiller forsinkelse som vil skje etter
-		hver mus bevegelse eller klikk.
-	Ex_MT_TT =	Angir maksimalt antall samtidige
-		tråder per hurtigtast eller hotstring.
-	Ex_NT_TT =	Deaktiverer visning av en ikonet.
-	Ex_PT_TT =	Holder et skript permanent drift
-		(det vil si, inntil brukeren lukker den eller ExitApp er oppstått).
-	Ex_SB_TT =	Bestemmer hvor raskt et skript vil kjøre (påvirker CPU).
-	Ex_SC_TT =	Stiller forsinkelse som vil skje etter
-		hver kontroll-endring kommandoen.
-	Ex_SI_TT =	Avgjør om et skript har lov til å kjøre igjen når det allerede er i gang.
-	Ex_SK_TT =	Stiller forsinkelse som vil oppstå etter hvert
-		tastetrykk sendes ved å sende eller ControlSend.
-	Ex_SM_TT =	Gjør Send synonymt med SendInput eller SendPlay stedet
-		standard (SendEvent). Også gjør Klikk og MouseMove / Klikk / Dra
-		bruke den angitte metoden.
-	Ex_ST_TT =	Stiller matchende oppførselen til WinTitle parameter i kommandoer som WinWait.
-	Ex_SW_TT =	Stiller forsinkelse som vil skje etter
-		hver windowing kommando, for eksempel WinActivate.
-	Ex_UV_TT =	Eksportere globale variabler.
-	ExpList_TT =	Dobbeltklikk for å redigere
 	SI_TT =	Ordet FORCE hopper dialogboksen og erstatter den gamle eksempel automatisk,
 		som er lik i effekt til Reload kommandoen.
 		Ordet IGNORE hopper dialogboksen og lar den gamle forekomsten som kjører.
@@ -1044,8 +1044,21 @@
 		2: Et vindu tittel kan inneholde WinTitle hvor som helst innenfor det å være en kamp.
 		3: Et vindu tittel må samsvare nøyaktig WinTitle å være en kamp.
 		RegEx: Endringer WinTitle, WinText, ExcludeTitle, og ExcludeText å være faste uttrykk.
+	TimeoutM_TT =	0 = uendelig
+	TitleMatch_TT =	1: Et vindu tittel må starte med det angitte WinTitle å være en kamp.
+		2: Et vindu tittel kan inneholde WinTitle hvor som helst innenfor det å være en kamp.
+		3: Et vindu tittel må samsvare nøyaktig WinTitle å være en kamp.
+		RegEx: Endringer WinTitle, WinText, Ekskluder tittel, og Ekskluder Tekst å være regulære uttrykk.
+	TitleSpeed_TT =	Rask: Dette er standard virkemåte . Ytelsen kan bli vesentlig bedre enn Sakte, men visse WinText elementer for enkelte typer vinduer kan ikke bli "sett" av de ulike vindus kommandoer.
+		Slow: Kan være mye tregere, men alt mulig WinText hentes fra hvert vindu som en vindus kommando søker gjennom dem for en kamp. Vindu Spy avslører hvilke deler av et vindu teksten (hvis noen) krever langsom modus.
+	ToggleC_TT =	Aktiver Relativ opptak når nøkkelen staten er på.
+	TransC_TT =	Transparent farge
+	VarCopyA_TT =	Kopier gjeldende variabelinnhold
+	VarCopyB_TT =	Kopier gjeldende variabelinnhold
+	VariatT_TT =	Nyanser av variasjon
+	WScale_TT =	Bredde skala
 		
-; 21. Operators		
+; 20. Operators		
 	As_Oper_1 =	Tildele
 	As_Oper_2 =	Legg
 	As_Oper_3 =	Trekk fra
@@ -1065,8 +1078,16 @@
 	Co_Oper_5 =	Mindre
 	Co_Oper_6 =	Større eller lik
 	Co_Oper_7 =	Mindre eller lik
+	Co_Oper_8 =	I (liste)
+	Co_Oper_9 =	 Ikke i (liste)
+	Co_Oper_10 =	 Inneholder (liste)
+	Co_Oper_11 =	 Ikke inneholder (liste)
+	Co_Oper_12 =	 Mellom (linje 1) og (linje 2)
+	Co_Oper_13 =	 Ikke mellom (linje 1) og (linje 2)
+	Co_Oper_14 =	 Er (type)
+	Co_Oper_15 =	 Er ikke (type)
 		
-; 22. IE Commands Tips		
+; 21. IE Commands Tips		
 	IE_Cmd_Index =	
 	Checked	Stiller eller henter statusen for avmerkingsboks eller knapp.
 	Click	Simulerer et klikk på objektet.
@@ -1094,7 +1115,7 @@
 	Value	Får eller setter verdien av objektet.
 	Width	Stiller eller henter bredden på objektet.
 		
-; 23. COM Methods Tips		
+; 22. COM Methods Tips		
 	COM_CLSID_Index =	
 	Excel.Application	Manipulerer Excel ark.
 	HTMLfile	Kan brukes til å lese, skrive og kommunisere med HTML.
@@ -1117,7 +1138,7 @@
 	WScript.Shell	Ulike oppgaver administrasjon (mange innfødte AHK oppgaver).
 	Word.Application	Manipulerer Word-dokumenter.
 		
-; 24. AHK Commands Tips		
+; 23. AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	Abs	Returnerer den absolutte verdien av nummer.
 	ACos	Returnerer arccosinus (antall som har cosinus er Number) i radianer .

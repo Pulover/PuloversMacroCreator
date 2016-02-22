@@ -224,73 +224,74 @@
 	w_Lang040 =	Uusi (Ctrl+N)
 	w_Lang041 =	Open (Ctrl+O)
 	w_Lang042 =	Tallenna (Ctrl+S)
-	w_Lang043 =	Vie AHK (Ctrl+E)
-	w_Lang044 =	Esikatselu Script (Ctrl+P)
-	w_Lang045 =	Asetukset (Ctrl+G)
-	w_Lang046 =	Nauhoita makro (Ctrl+R)
-	w_Lang047 =	Aktivoi Makrot (Ctrl+Enter)
-	w_Lang048 =	Pelaa Nykyinen Makro (Ctrl+Shift+Enter)
-	w_Lang049 =	Ajastin (Ctrl+Shift+T)
-	w_Lang050 =	Hiiri (F2)
-	w_Lang051 =	Teksti (F3)
-	w_Lang052 =	Muokkaa Makrot (Ctrl+Shift+M)
-	w_Lang053 =	Control (F4)
-	w_Lang054 =	Tauko (F5)
-	w_Lang055 =	Message Box (Shift+F5)
-	w_Lang056 =	Näppäintä Odotus (Ctrl+F5)
-	w_Lang057 =	Window (F6)
-	w_Lang058 =	Kuva / Pixel Search (F7)
-	w_Lang059 =	Run / File / String / Misc. (F8)
-	w_Lang060 =	Loop (F9)
-	w_Lang061 =	Goto (Shift+F9)
-	w_Lang062 =	Label (Ctrl+F9)
-	w_Lang063 =	Jos lausunnot (F10)
-	w_Lang064 =	Muuttujat / Taulukot (Shift+F10)
-	w_Lang065 =	Funktiot / Array menetelmiä (Ctrl+F10)
-	w_Lang066 =	Internet Explorer (F12)
-	w_Lang067 =	Lauseke / COM-rajapinta (Shift+F12)
-	w_Lang068 =	Lähetä sähköposti (F11)
-	w_Lang069 =	Windows viestit (Ctrl+F12)
-	w_Lang070 =	Lisää Windows-näppäintä "Play" pikanäppäin
-	w_Lang071 =	Käytä ohjainta painiketta kuin pikanäppäin
-	w_Lang072 =	Lisää Makro (Ctrl+T)
-	w_Lang073 =	Sulje Makro (Ctrl+W)
-	w_Lang074 =	Monista Makro (Ctrl+Shift+D)
-	w_Lang075 =	Tuo Makro (Ctrl+I)
-	w_Lang076 =	Tallenna Nykyinen Makro (Ctrl+Alt+S)
-	w_Lang077 =	Siirrä ylös (Ctrl+Page Up)
-	w_Lang078 =	Siirrä alas (Ctrl+Page Down)
-	w_Lang079 =	Monista valitut rivit (Ctrl+D)
-	w_Lang080 =	Leikkaa valitut rivit (Ctrl+X)
-	w_Lang081 =	Kopioi valitut rivit (Ctrl+C)
-	w_Lang082 =	Liitä kopioidut rivit (Ctrl+V)
-	w_Lang083 =	Poista valitut rivit (Del)
-	w_Lang084 =	Kumoa (Ctrl+Z)
-	w_Lang085 =	Redo (Ctrl+Y)
-	w_Lang086 =	Kopioida...
-	w_Lang087 =	Etsi / Korvaa (Ctrl+F)
-	w_Lang088 =	Lisätä / Edit Kommentti (Ctrl+L)
-	w_Lang089 =	Edit värimerkk (Ctrl+M)
-	w_Lang090 =	Muokkaa
-	w_Lang091 =	Etsi komento (Ctrl+Shift+F)
-	w_Lang092 =	Muokata (Enter)
-	w_Lang093 =	Piilottaa
-	w_Lang094 =	Pendelöintifoorumi
-	w_Lang095 =	Kopioi täällä
-	w_Lang096 =	Ryhmät
-	w_Lang097 =	Ota ryhmät (Ctrl+Shift+G)
-	w_Lang098 =	Lisää ryhmä (Ctrl+Shift+Y)
-	w_Lang099 =	Poista ryhmä (Ctrl+Shift+R)
-	w_Lang100 =	Poista kaikki ryhmät
-	w_Lang101 =	Muokkaa ryhmiä
-	w_Lang102 =	Ryhmän nimi
-	w_Lang103 =	Luo Toiminto (Ctrl+Shift+U)
-	w_Lang104 =	Lisää Parametri (Ctrl+Shift+P)
-	w_Lang105 =	Lisää Paluulennot (Ctrl+Shift+N)
-	w_Lang106 =	Makron muunto Toimiakseen (Ctrl+Shift+C)
-	w_Lang107 =	Kommentoi pois valitsematta riviä
-	w_Lang108 =	Lataa / Lataa tiedostot (Shift+F11)
-	w_Lang109 =	Zip / Pura tiedostot (Ctrl+F11)
+	w_Lang043 =	Tallenna Koska (Ctrl+Shift+S)
+	w_Lang044 =	Vie AHK (Ctrl+E)
+	w_Lang045 =	Esikatselu Script (Ctrl+P)
+	w_Lang046 =	Asetukset (Ctrl+G)
+	w_Lang047 =	Nauhoita makro (Ctrl+R)
+	w_Lang048 =	Aktivoi Makrot (Ctrl+Enter)
+	w_Lang049 =	Pelaa Nykyinen Makro (Ctrl+Shift+Enter)
+	w_Lang050 =	Ajastin (Ctrl+Shift+T)
+	w_Lang051 =	Hiiri (F2)
+	w_Lang052 =	Teksti (F3)
+	w_Lang053 =	Muokkaa Makrot (Ctrl+Shift+M)
+	w_Lang054 =	Control (F4)
+	w_Lang055 =	Tauko (F5)
+	w_Lang056 =	Message Box (Shift+F5)
+	w_Lang057 =	Näppäintä Odotus (Ctrl+F5)
+	w_Lang058 =	Window (F6)
+	w_Lang059 =	Kuva / Pixel Search (F7)
+	w_Lang060 =	Run / File / String / Misc. (F8)
+	w_Lang061 =	Loop (F9)
+	w_Lang062 =	Goto (Shift+F9)
+	w_Lang063 =	Label (Ctrl+F9)
+	w_Lang064 =	Jos lausunnot (F10)
+	w_Lang065 =	Muuttujat / Taulukot (Shift+F10)
+	w_Lang066 =	Funktiot / Array menetelmiä (Ctrl+F10)
+	w_Lang067 =	Internet Explorer (F12)
+	w_Lang068 =	Lauseke / COM-rajapinta (Shift+F12)
+	w_Lang069 =	Lähetä sähköposti (F11)
+	w_Lang070 =	Windows viestit (Ctrl+F12)
+	w_Lang071 =	Lisää Windows-näppäintä "Play" pikanäppäin
+	w_Lang072 =	Käytä ohjainta painiketta kuin pikanäppäin
+	w_Lang073 =	Lisää Makro (Ctrl+T)
+	w_Lang074 =	Sulje Makro (Ctrl+W)
+	w_Lang075 =	Monista Makro (Ctrl+Shift+D)
+	w_Lang076 =	Tuo Makro (Ctrl+I)
+	w_Lang077 =	Tallenna Nykyinen Makro (Ctrl+Alt+S)
+	w_Lang078 =	Siirrä ylös (Ctrl+Page Up)
+	w_Lang079 =	Siirrä alas (Ctrl+Page Down)
+	w_Lang080 =	Monista valitut rivit (Ctrl+D)
+	w_Lang081 =	Leikkaa valitut rivit (Ctrl+X)
+	w_Lang082 =	Kopioi valitut rivit (Ctrl+C)
+	w_Lang083 =	Liitä kopioidut rivit (Ctrl+V)
+	w_Lang084 =	Poista valitut rivit (Del)
+	w_Lang085 =	Kumoa (Ctrl+Z)
+	w_Lang086 =	Redo (Ctrl+Y)
+	w_Lang087 =	Kopioida...
+	w_Lang088 =	Etsi / Korvaa (Ctrl+F)
+	w_Lang089 =	Lisätä / Edit Kommentti (Ctrl+L)
+	w_Lang090 =	Edit värimerkk (Ctrl+M)
+	w_Lang091 =	Muokkaa
+	w_Lang092 =	Etsi komento (Ctrl+Shift+F)
+	w_Lang093 =	Muokata (Enter)
+	w_Lang094 =	Piilottaa
+	w_Lang095 =	Pendelöintifoorumi
+	w_Lang096 =	Kopioi täällä
+	w_Lang097 =	Ryhmät
+	w_Lang098 =	Ota ryhmät (Ctrl+Shift+G)
+	w_Lang099 =	Lisää ryhmä (Ctrl+Shift+Y)
+	w_Lang100 =	Poista ryhmä (Ctrl+Shift+R)
+	w_Lang101 =	Poista kaikki ryhmät
+	w_Lang102 =	Muokkaa ryhmiä
+	w_Lang103 =	Ryhmän nimi
+	w_Lang104 =	Luo Toiminto (Ctrl+Shift+U)
+	w_Lang105 =	Lisää Parametri (Ctrl+Shift+P)
+	w_Lang106 =	Lisää Paluulennot (Ctrl+Shift+N)
+	w_Lang107 =	Makron muunto Toimiakseen (Ctrl+Shift+C)
+	w_Lang108 =	Kommentoi pois valitsematta riviä
+	w_Lang109 =	Lataa / Lataa tiedostot (Shift+F11)
+	w_Lang110 =	Zip / Pura tiedostot (Ctrl+F11)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Hiiri
@@ -538,6 +539,7 @@
 	c_Lang244 =	Oikealta vasemmalle
 	c_Lang245 =	Liitteet
 	c_Lang246 =	Polku
+	c_Lang247 =	jos
 		
 ; 16. Other Windows		
 	t_Lang001 =	Vie AutoHotkey
@@ -741,6 +743,11 @@
 	t_Lang199 =	SSL
 	t_Lang200 =	Lähetä mode
 	t_Lang201 =	Lähetä testi
+	t_Lang202 =	Näyttö Ja Ikkuna
+	t_Lang203 =	Piileviä Ikkunat
+	t_Lang204 =	Havaita Piilotekstiä
+	t_Lang205 =	Title Vastaavuustila
+	t_Lang206 =	Title Ottelu Nopeus
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Avata
@@ -818,7 +825,7 @@
 		Voit poistaa automaattisen valvonnan valitse Ohje > Tarkista käynnistettäessä
 	d_Lang062 =	Sinulla on jo uusin versio.
 	d_Lang063 =	Virhe tarkkailun.
-	d_Lang064 =	COM-objekti virhe
+	d_Lang064 =	Virhe
 	d_Lang065 =	Rivi
 	d_Lang066 =	Erityisesti
 	d_Lang067 =	Näytä tämä ikkuna käynnistettäessä
@@ -880,7 +887,7 @@
 		Haluaisitko korvata sen?
 	d_Lang112 =	Sähköpostitili ei löytynyt.
 	d_Lang113 =	Ei raportoitu virhe.
-	d_Lang114 =	Scripts eksporteres (selv om kompilert) med sende e-postfunksjonen  (CDO) vil ha synlige opplysninger av e-postkontoer  som brukes, inkludert passordet. PMC prosjektfilen  ikke har denne informasjonen.
+	d_Lang114 =	Skriptejä viedään (vaikka käännetty) kanssa lähetä sähköpostia toiminto (CDO) on näkyvissä merkintä sähköpostitilejä käytetään, mukaan lukien salasana. PMC Projektitiedosto ei ole tätä tietoa.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Voit luoda makroja käyttäen Command painikkeet pääikkunassa tai käyttämällä Recorder kopioida toimia. Valitse Valinnat > Asetukset > Tallennus valita mitä panoksia tallennetaan.
@@ -936,8 +943,41 @@
 	EditPaste_TT =	Tahnat String at sirkumfleksi / insertti asentoon
 		vuonna Muokkaa kontrolli (tämä ei vaikuta
 		leikepöydän sisällön).
+	Ex_AF_TT =	Ohittaa lempeä menetelmä aktivoimiseksi ikkunan
+		ja menee suoraan voimakkaan menetelmällä.
+	Ex_DH_TT =	Määrittelee näkymättömät ikkunat "nähnyt", jonka käsikirjoitus.
 	Ex_EdScript_TT =	Avaa ulkoisen editorin
+	Ex_EdVars_TT =	Valitse globaalien muuttujien viedään.
 	Ex_ExecScript_TT =	Suorita skripti
+	Ex_HK_TT =	Pakottaa käyttö koukku toteuttaa kaikki
+		tai joitakin näppäimistön pikanäppäimiä.
+	Ex_IfDir_TT =	Luo tilannekohtaisia ​​pikanäppäimiä ja hotstrings riippuen
+		tyypistä ikkuna, joka on aktiivinen tai on olemassa.
+	Ex_IfDirType_TT =	Luo tilannekohtaisia ​​pikanäppäimiä ja hotstrings riippuen
+		tyypistä ikkuna, joka on aktiivinen tai on olemassa.
+	Ex_IN_TT =	Aiheuttaa script käyttäytymään ikään määritelty
+		tiedoston sisältöä on läsnä juuri tämän kannan.
+	Ex_MD_TT =	Asettaa viive että tapahtuu jälkeen
+		Kunkin hiiren liikettä tai napsautuksella.
+	Ex_MT_TT =	Asettaa maksimimäärän samanaikaisia
+		lankaa pikanäppäin tai hotstring.
+	Ex_NT_TT =	Poistaa esittämisen kuvaketta.
+	Ex_PT_TT =	Pitää script pysyvästi kulje
+		(eli siihen asti, kunnes käyttäjä sulkee sen tai ExitApp kohdataan).
+	Ex_SB_TT =	Määrittää, kuinka nopeasti skripti ajaa (vaikuttaa suorittimen käyttö).
+	Ex_SC_TT =	Asettaa viive että tapahtuu jälkeen
+		jokainen ohjaus-muuttamalla komennon.
+	Ex_SI_TT =	Määrittää, käsikirjoitus saa ajaa uudelleen, kun se on jo käynnissä.
+	Ex_SK_TT =	Asettaa viive että tapahtuu jokaisen
+		näppäinpainalluksen lähettämä Lähetä tai ControlSend.
+	Ex_SM_TT =	Tekee Lähetä synonyymi SendInput tai SendPlay sijaan
+		default (SendEvent). Tekee myös napsauttamalla ja mouseMove / Click / vedä
+		käyttää määritettyä menetelmää.
+	Ex_ST_TT =	Asettaa vastaavat käyttäytymistä WinTitle parametrin komentoja kuten WinWait.
+	Ex_SW_TT =	Asettaa viive että tapahtuu jälkeen
+		Kunkin ikkunointi komennon, kuten WinActivate.
+	Ex_UV_TT =	Viedä globaalien muuttujien.
+	ExpList_TT =	Kaksoisnapsauta muokata
 	ExprLink2_TT =	- ÄLÄ LIITTÄÄ MUUTTUJAT PROSENTTIA SIGNS TÄSTÄ.
 		- Useimmat AHK ilmaisuja tuetaan.
 		- Voit käyttää jouset, muuttujat, taulukot ja toimintoja.
@@ -951,6 +991,8 @@
 	ExpView_TT =	Kehittynyt Editori
 	ExpView2_TT =	Kehittynyt Editori
 	Fast_TT =	Käyttää nopeampi hakutapa (suositus)
+	HiddenWin_TT =	Määrittää näkymätön ikkunoita "näkee" kirjoitus.
+	HiddenText_TT =	Määrittää näkymätön tekstin ikkuna "nähdä", jonka tarkoituksena löytää ikkunan. Tämä vaikuttaa komentoja kuten IfWinExist ja WinActivate.
 	HScale_TT =	Korkeusasteikon
 	IconN_TT =	Määrä kuvaketta ryhmän
 	IfLVColor_TT =	Klikkaa valita värin
@@ -986,48 +1028,6 @@
 	Screen_TT =	Koordinaatit ovat suhteessa työpöydälle (koko näyttö).
 	Screenshot_TT =	Tee Screenshot
 	SetText_TT =	Muuttaa tekstin ohjaus.
-	TimeoutM_TT =	0 = ääretön
-	ToggleC_TT =	Aktivoi Suhteellinen äänitystä kun avain tila on.
-	TransC_TT =	Läpinäkyvä väri
-	VarCopyA_TT =	Kopioi nykyinen muuttujan sisältö
-	VarCopyB_TT =	Kopioi nykyinen muuttujan sisältö
-	VariatT_TT =	Shades of vaihtelu
-	WScale_TT =	Leveys mittakaavassa
-		
-; 20. Tooltips from AHK Docs		
-	Ex_AF_TT =	Ohittaa lempeä menetelmä aktivoimiseksi ikkunan
-		ja menee suoraan voimakkaan menetelmällä.
-	Ex_DH_TT =	Määrittelee näkymättömät ikkunat "nähnyt", jonka käsikirjoitus.
-	Ex_EdVars_TT =	Valitse globaalien muuttujien viedään.
-	Ex_HK_TT =	Pakottaa käyttö koukku toteuttaa kaikki
-		tai joitakin näppäimistön pikanäppäimiä.
-	Ex_IfDir_TT =	Luo tilannekohtaisia ​​pikanäppäimiä ja hotstrings riippuen
-		tyypistä ikkuna, joka on aktiivinen tai on olemassa.
-	Ex_IfDirType_TT =	Luo tilannekohtaisia ​​pikanäppäimiä ja hotstrings riippuen
-		tyypistä ikkuna, joka on aktiivinen tai on olemassa.
-	Ex_IN_TT =	Aiheuttaa script käyttäytymään ikään määritelty
-		tiedoston sisältöä on läsnä juuri tämän kannan.
-	Ex_MD_TT =	Asettaa viive että tapahtuu jälkeen
-		Kunkin hiiren liikettä tai napsautuksella.
-	Ex_MT_TT =	Asettaa maksimimäärän samanaikaisia
-		lankaa pikanäppäin tai hotstring.
-	Ex_NT_TT =	Poistaa esittämisen kuvaketta.
-	Ex_PT_TT =	Pitää script pysyvästi kulje
-		(eli siihen asti, kunnes käyttäjä sulkee sen tai ExitApp kohdataan).
-	Ex_SB_TT =	Määrittää, kuinka nopeasti skripti ajaa (vaikuttaa suorittimen käyttö).
-	Ex_SC_TT =	Asettaa viive että tapahtuu jälkeen
-		jokainen ohjaus-muuttamalla komennon.
-	Ex_SI_TT =	Määrittää, käsikirjoitus saa ajaa uudelleen, kun se on jo käynnissä.
-	Ex_SK_TT =	Asettaa viive että tapahtuu jokaisen
-		näppäinpainalluksen lähettämä Lähetä tai ControlSend.
-	Ex_SM_TT =	Tekee Lähetä synonyymi SendInput tai SendPlay sijaan
-		default (SendEvent). Tekee myös napsauttamalla ja mouseMove / Click / vedä
-		käyttää määritettyä menetelmää.
-	Ex_ST_TT =	Asettaa vastaavat käyttäytymistä WinTitle parametrin komentoja kuten WinWait.
-	Ex_SW_TT =	Asettaa viive että tapahtuu jälkeen
-		Kunkin ikkunointi komennon, kuten WinActivate.
-	Ex_UV_TT =	Viedä globaalien muuttujien.
-	ExpList_TT =	Kaksoisnapsauta muokata
 	SI_TT =	Sana FORCE ohittaa valintaikkunassa ja korvaa vanhat tapauksessa automaattisesti,
 		joka on samanlainen vaikutus kuin Reload komennon.
 		Sana IGNORE ohittaa valintaikkunan ja jättää vanhan oikeusasteessa käynnissä.
@@ -1044,8 +1044,21 @@
 		2: ikkunan otsikko voi sisältää WinTitle missä sen sisällä olevan ottelun.
 		3: ikkunan otsikko on täsmälleen sama WinTitle olla ottelu.
 		RegEx: Muutokset WinTitle, WinText, ExcludeTitle ja ExcludeText olla säännöllisiä lausekkeita.
+	TimeoutM_TT =	0 = ääretön
+	TitleMatch_TT =	1: ikkunan otsikko on aloitettava määritetty WinTitle olla ottelussa.
+		2: ikkunan otsikko voi sisältää WinTitle missään sisällä sen olevan ottelussa.
+		3: ikkunan otsikko on täsmälleen WinTitle olla ottelussa.
+		RegEx: Muutokset WinTitle, WinText, Poissulje osaston ja poissulkevat Teksti olla säännöllisiä lausekkeita.
+	TitleSpeed_TT =	Nopea: Tämä on oletusarvo käyttäytymistä. Suorituskyky saattaa olla huomattavasti parempi kuin hidas, mutta tietyt WinText elementtejä joidenkin ikkunoita ei saa "näkee" eri käyttöjärjestelmän komentoja.
+		Hidas: Voi olla paljon hitaampi, mutta kaikki mahdolliset WinText noudetaan jokaisesta ikkunasta kuin ikkunointi komento hakee niiden kautta ottelussa. Ikkuna Spy paljastaa, mitkä osat ikkunan tekstin (jos on) vaativat hidasta tilassa.
+	ToggleC_TT =	Aktivoi Suhteellinen äänitystä kun avain tila on.
+	TransC_TT =	Läpinäkyvä väri
+	VarCopyA_TT =	Kopioi nykyinen muuttujan sisältö
+	VarCopyB_TT =	Kopioi nykyinen muuttujan sisältö
+	VariatT_TT =	Shades of vaihtelu
+	WScale_TT =	Leveys mittakaavassa
 		
-; 21. Operators		
+; 20. Operators		
 	As_Oper_1 =	Antaa
 	As_Oper_2 =	Lisätä
 	As_Oper_3 =	Vähentää
@@ -1065,8 +1078,16 @@
 	Co_Oper_5 =	Vähemmän
 	Co_Oper_6 =	Suurempi tai yhtä suuri
 	Co_Oper_7 =	Pienempi tai yhtä suuri
+	Co_Oper_8 =	In (lista)
+	Co_Oper_9 =	 Ei (lista)
+	Co_Oper_10 =	 Sisältää (lista)
+	Co_Oper_11 =	 Ei sisältää (lista)
+	Co_Oper_12 =	 Välillä (rivi 1) ja (linja 2)
+	Co_Oper_13 =	 Ei välillä (rivi 1) ja (linja 2)
+	Co_Oper_14 =	 Is (tyyppi)
+	Co_Oper_15 =	 Ei (tyyppi)
 		
-; 22. IE Commands Tips		
+; 21. IE Commands Tips		
 	IE_Cmd_Index =	
 	Checked	Asettaa tai noutaa tila-valintaruutu tai valintanappi.
 	Click	Simuloi klikkaa objekti.
@@ -1094,7 +1115,7 @@
 	Value	Saa tai asettaa kohteen arvo.
 	Width	Asettaa tai noutaa leveys objektin.
 		
-; 23. COM Methods Tips		
+; 22. COM Methods Tips		
 	COM_CLSID_Index =	
 	Excel.Application	Manipuloi Excel levyt.
 	HTMLfile	Voidaan käyttää lukea, kirjoittaa ja vuorovaikutuksessa HTML.
@@ -1117,7 +1138,7 @@
 	WScript.Shell	Eri hallintotehtävät (monien kotoperäisten AHK tehtäviä).
 	Word.Application	Manipuloi Word-asiakirjoja.
 		
-; 24. AHK Commands Tips		
+; 23. AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	Abs	Palauttaa absoluuttinen arvo lukumäärä.
 	ACos	Palauttaakaarikosinin (numero , jonka kosini on Number) radiaaneina .

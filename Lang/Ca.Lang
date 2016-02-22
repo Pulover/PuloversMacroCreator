@@ -224,73 +224,74 @@
 	w_Lang040 =	Nou (Ctrl+N)
 	w_Lang041 =	Obrir (Ctrl+O)
 	w_Lang042 =	Desa (Ctrl+S)
-	w_Lang043 =	Exporta a AHK (Ctrl+I)
-	w_Lang044 =	Vista prèvia de script (Ctrl+P)
-	w_Lang045 =	Settings (Ctrl+G)
-	w_Lang046 =	Gravar macro (Ctrl+R)
-	w_Lang047 =	Activar Macros (Ctrl+Enter)
-	w_Lang048 =	Jugar Macro actual (Ctrl+Shift+Enter)
-	w_Lang049 =	Timer (Ctrl+Shift+T)
-	w_Lang050 =	Mouse (F2)
-	w_Lang051 =	Text (F3)
-	w_Lang052 =	Edita Macros (Ctrl+Shift+M)
-	w_Lang053 =	Control de (F4)
-	w_Lang054 =	Pausa (F5)
-	w_Lang055 =	Bústia de missatges (Shift+F5)
-	w_Lang056 =	Espera Clau (Ctrl+F5)
-	w_Lang057 =	Finestra (F6)
-	w_Lang058 =	Imatge / píxel motor (F7)
-	w_Lang059 =	Executar / Arxiu / cadena / Misc. (F8)
-	w_Lang060 =	Loop (F9)
-	w_Lang061 =	Ir (Shift+F9)
-	w_Lang062 =	Label (Ctrl+F9)
-	w_Lang063 =	Si Declaracions (F10)
-	w_Lang064 =	Variables / Matriu (Shift+F10)
-	w_Lang065 =	Funcions / Mètodes de matriu (Ctrl+F10)
-	w_Lang066 =	Internet Explorer (F12)
-	w_Lang067 =	Expressió / COM Interface (Shift+F12)
-	w_Lang068 =	Envia un correu electrònic (F11)
-	w_Lang069 =	Missatges de Windows (Ctrl+F12)
-	w_Lang070 =	Afegiu la clau de Windows per "Play" tecla d'accés ràpid
-	w_Lang071 =	Utilitzeu un botó del joystick com a tecla d'accés directe
-	w_Lang072 =	Afegir Macro (Ctrl+T)
-	w_Lang073 =	Tancar Macro (Ctrl+W)
-	w_Lang074 =	Duplicar macro (Ctrl+Shift+D)
-	w_Lang075 =	Importació Macro (Ctrl+I)
-	w_Lang076 =	Guardar macro actual (Ctrl+Alt+S)
-	w_Lang077 =	Move Up (Ctrl+RePàg)
-	w_Lang078 =	Moure baix (Ctrl+AvPàg)
-	w_Lang079 =	Duplicar files seleccionades (Ctrl+D)
-	w_Lang080 =	Tallar files seleccionades (Ctrl+X)
-	w_Lang081 =	Copia files seleccionades (Ctrl+C)
-	w_Lang082 =	Files Enganxa copiar (Ctrl+V)
-	w_Lang083 =	Eliminar files seleccionades (Del)
-	w_Lang084 =	Desfer (Ctrl+Z)
-	w_Lang085 =	Refer (Ctrl+I)
-	w_Lang086 =	Copiar a...
-	w_Lang087 =	Cercar / Reemplaçar (Ctrl+F)
-	w_Lang088 =	Insereix / Redactar comentari (Ctrl+L)
-	w_Lang089 =	Edita color (Ctrl+M)
-	w_Lang090 =	Personalitzar
-	w_Lang091 =	Trobar una ordre (Ctrl+Shift+F)
-	w_Lang092 =	Edita (Enter)
-	w_Lang093 =	Amagar
-	w_Lang094 =	Moure aquí
-	w_Lang095 =	Copieu aquí
-	w_Lang096 =	grups
-	w_Lang097 =	Habilitar grups (Ctrl+Shift+G)
-	w_Lang098 =	Afegir grup (Ctrl+Maj+I)
-	w_Lang099 =	Traieu grup (Ctrl+Shift+R)
-	w_Lang100 =	Traieu tots els grups
-	w_Lang101 =	Edita grups
-	w_Lang102 =	Nom del grup
-	w_Lang103 =	Crear funcions (Ctrl+Shift+O)
-	w_Lang104 =	Afegir paràmetre (Ctrl+Shift+P)
-	w_Lang105 =	Afegir Retorn (Ctrl+Shift+N)
-	w_Lang106 =	Converteix Macro per funcionar (Ctrl+Shift+C)
-	w_Lang107 =	Comenteu files sense marcar
-	w_Lang108 =	Descàrrega de fitxers / Pujar (Shift+F11)
-	w_Lang109 =	Zip / descomprimir arxius (Ctrl+F11)
+	w_Lang043 =	Desa (Ctrl+Shift+S)
+	w_Lang044 =	Exporta a AHK (Ctrl+I)
+	w_Lang045 =	Vista prèvia de script (Ctrl+P)
+	w_Lang046 =	Settings (Ctrl+G)
+	w_Lang047 =	Gravar macro (Ctrl+R)
+	w_Lang048 =	Activar Macros (Ctrl+Enter)
+	w_Lang049 =	Jugar Macro actual (Ctrl+Shift+Enter)
+	w_Lang050 =	Timer (Ctrl+Shift+T)
+	w_Lang051 =	Mouse (F2)
+	w_Lang052 =	Text (F3)
+	w_Lang053 =	Edita Macros (Ctrl+Shift+M)
+	w_Lang054 =	Control de (F4)
+	w_Lang055 =	Pausa (F5)
+	w_Lang056 =	Bústia de missatges (Shift+F5)
+	w_Lang057 =	Espera Clau (Ctrl+F5)
+	w_Lang058 =	Finestra (F6)
+	w_Lang059 =	Imatge / píxel motor (F7)
+	w_Lang060 =	Executar / Arxiu / cadena / Misc. (F8)
+	w_Lang061 =	Loop (F9)
+	w_Lang062 =	Ir (Shift+F9)
+	w_Lang063 =	Label (Ctrl+F9)
+	w_Lang064 =	Si Declaracions (F10)
+	w_Lang065 =	Variables / Matriu (Shift+F10)
+	w_Lang066 =	Funcions / Mètodes de matriu (Ctrl+F10)
+	w_Lang067 =	Internet Explorer (F12)
+	w_Lang068 =	Expressió / COM Interface (Shift+F12)
+	w_Lang069 =	Envia un correu electrònic (F11)
+	w_Lang070 =	Missatges de Windows (Ctrl+F12)
+	w_Lang071 =	Afegiu la clau de Windows per "Play" tecla d'accés ràpid
+	w_Lang072 =	Utilitzeu un botó del joystick com a tecla d'accés directe
+	w_Lang073 =	Afegir Macro (Ctrl+T)
+	w_Lang074 =	Tancar Macro (Ctrl+W)
+	w_Lang075 =	Duplicar macro (Ctrl+Shift+D)
+	w_Lang076 =	Importació Macro (Ctrl+I)
+	w_Lang077 =	Guardar macro actual (Ctrl+Alt+S)
+	w_Lang078 =	Move Up (Ctrl+RePàg)
+	w_Lang079 =	Moure baix (Ctrl+AvPàg)
+	w_Lang080 =	Duplicar files seleccionades (Ctrl+D)
+	w_Lang081 =	Tallar files seleccionades (Ctrl+X)
+	w_Lang082 =	Copia files seleccionades (Ctrl+C)
+	w_Lang083 =	Files Enganxa copiar (Ctrl+V)
+	w_Lang084 =	Eliminar files seleccionades (Del)
+	w_Lang085 =	Desfer (Ctrl+Z)
+	w_Lang086 =	Refer (Ctrl+I)
+	w_Lang087 =	Copiar a...
+	w_Lang088 =	Cercar / Reemplaçar (Ctrl+F)
+	w_Lang089 =	Insereix / Redactar comentari (Ctrl+L)
+	w_Lang090 =	Edita color (Ctrl+M)
+	w_Lang091 =	Personalitzar
+	w_Lang092 =	Trobar una ordre (Ctrl+Shift+F)
+	w_Lang093 =	Edita (Enter)
+	w_Lang094 =	Amagar
+	w_Lang095 =	Moure aquí
+	w_Lang096 =	Copieu aquí
+	w_Lang097 =	grups
+	w_Lang098 =	Habilitar grups (Ctrl+Shift+G)
+	w_Lang099 =	Afegir grup (Ctrl+Maj+I)
+	w_Lang100 =	Traieu grup (Ctrl+Shift+R)
+	w_Lang101 =	Traieu tots els grups
+	w_Lang102 =	Edita grups
+	w_Lang103 =	Nom del grup
+	w_Lang104 =	Crear funcions (Ctrl+Shift+O)
+	w_Lang105 =	Afegir paràmetre (Ctrl+Shift+P)
+	w_Lang106 =	Afegir Retorn (Ctrl+Shift+N)
+	w_Lang107 =	Converteix Macro per funcionar (Ctrl+Shift+C)
+	w_Lang108 =	Comenteu files sense marcar
+	w_Lang109 =	Descàrrega de fitxers / Pujar (Shift+F11)
+	w_Lang110 =	Zip / descomprimir arxius (Ctrl+F11)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Ratolí
@@ -538,6 +539,7 @@
 	c_Lang244 =	De dreta a esquerra
 	c_Lang245 =	Adjunts
 	c_Lang246 =	Camí
+	c_Lang247 =	si
 		
 ; 16. Other Windows		
 	t_Lang001 =	Exporta a AutoHotkey
@@ -741,6 +743,11 @@
 	t_Lang199 =	SSL
 	t_Lang200 =	Enviar la manera
 	t_Lang201 =	Envia una prova
+	t_Lang202 =	Pantalla I Finestra
+	t_Lang203 =	Detectar Les Finestres Ocultes
+	t_Lang204 =	Detectar Text Ocult
+	t_Lang205 =	La Manera De Combat Pel Títol
+	t_Lang206 =	Velocitat De Combat Pel Títol
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Obert
@@ -818,7 +825,7 @@
 		Per desactivar les comprovacions automàtiques seleccioneu Ajuda > Comproveu en l'arrencada
 	d_Lang062 =	Vostè ja té la versió més recent.
 	d_Lang063 =	S'ha produït un error durant la comprovació.
-	d_Lang064 =	Error d'objecte COM en
+	d_Lang064 =	Error en
 	d_Lang065 =	Fila
 	d_Lang066 =	Específicament
 	d_Lang067 =	Mostra aquesta finestra en iniciar
@@ -880,7 +887,7 @@
 		Li agradaria reemplaçar?
 	d_Lang112 =	E-postkonto inte hittas.
 	d_Lang113 =	Informa de cap error.
-	d_Lang114 =	Scripts eksporteres (selv om kompilert) med sende e-postfunksjonen  (CDO) vil ha synlige opplysninger av e-postkontoer  som brukes, inkludert passordet. PMC prosjektfilen  ikke har denne informasjonen.
+	d_Lang114 =	Skriptejä viedään (vaikka käännetty) kanssa lähetä sähköpostia toiminto (CDO) on näkyvissä merkintä sähköpostitilejä käytetään, mukaan lukien salasana. PMC Projektitiedosto ei ole tätä tietoa.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Podeu crear macros utilitzant els botons de comandament a la finestra principal o l'ús de la gravadora per copiar les seves accions. Aneu a Opcions> Configuració> Gravació per seleccionar el que es registren les entrades.
@@ -936,8 +943,41 @@
 	EditPaste_TT =	Pastes cadena en la posició de cursor / insert
 		en un control d'edició (això no afecta
 		el contingut del porta-retalls).
+	Ex_AF_TT =	Omet el mètode suau d'activar una finestra
+		i va directament al mètode contundent.
+	Ex_DH_TT =	Determina si les finestres invisibles són "vistos" per el guió.
 	Ex_EdScript_TT =	Avaa ulkoisen editorin
+	Ex_EdVars_TT =	Seleccionar variables globals destinats a l'exportació.
 	Ex_ExecScript_TT =	Executar script
+	Ex_HK_TT =	Força l'ús del ganxo per posar en pràctica totes les
+		o algunes tecles d'accés ràpid del teclat.
+	Ex_IfDir_TT =	Crea dreceres de teclat i hotstrings depenent contextuals
+		en el tipus de finestra que és actiu o no existeix.
+	Ex_IfDirType_TT =	Crea dreceres de teclat i hotstrings depenent contextuals
+		en el tipus de finestra que és actiu o no existeix.
+	Ex_IN_TT =	Fa que el guió es comporti com si l'especificada
+		contingut de l'arxiu es presenti en aquesta posició exacta.
+	Ex_MD_TT =	Estableix la demora que es produirà després
+		cada moviment del ratolí o feu clic.
+	Ex_MT_TT =	Estableix el nombre màxim de connexions simultànies
+		fils per tecla d'accés directe o cadena d'accés ràpid.
+	Ex_NT_TT =	Desactiva la projecció d'una icona de la safata.
+	Ex_PT_TT =	Manté un script que s'executa permanentment
+		(És a dir, fins que l'usuari tanca o es troba ExitApp).
+	Ex_SB_TT =	Determina la rapidesa amb què executar un script (que afecta la utilització de CPU).
+	Ex_SC_TT =	Estableix la demora que es produirà després
+		comandament de cada control de modificació.
+	Ex_SI_TT =	Determina si un script es pot executar de nou quan ja s'està executant.
+	Ex_SK_TT =	Estableix la demora que es produirà després de cada
+		pulsació enviat per enviament o ControlSend.
+	Ex_SM_TT =	Fa Enviar sinònim SendInput o SendPlay en lloc de
+		el valor per defecte (SendEvent). També fa clic i mousemove / clic / Arrossegueu
+		utilitzar el mètode especificat.
+	Ex_ST_TT =	Estableix el comportament d'igualar el paràmetre WinTitle a ordres com WinWait.
+	Ex_SW_TT =	Estableix la demora que es produirà després
+		cada comanda finestres, com el WinActivate.
+	Ex_UV_TT =	Exportar variables globals.
+	ExpList_TT =	Feu doble clic per editar
 	ExprLink2_TT =	- NO INCLOURE LES VARIABLES A SIGNES DE PERCENTATGE AQUÍ.
 		- La major part de les expressions AHK són compatibles.
 		- Vostè pot usar cadenes, variables, matrius i funcions.
@@ -951,6 +991,8 @@
 	ExpView_TT =	Editor Avançat
 	ExpView2_TT =	Editor Avançat
 	Fast_TT =	Utilitza un mètode de cerca més ràpid (recomanat)
+	HiddenWin_TT =	Determina si les finestres invisibles són "vistos" pel guió.
+	HiddenText_TT =	Determina si el text invisible en una finestra és "vista" per tal de trobar la finestra. Això afecta a ordres com IfWinExist i WinActivate.
 	HScale_TT =	Escala d'altura
 	IconN_TT =	Número del grup d'icones
 	IfLVColor_TT =	Feu clic per seleccionar un color
@@ -986,48 +1028,6 @@
 	Screen_TT =	Les coordenades són relatives a l'escriptori (pantalla completa).
 	Screenshot_TT =	Fer Screenshot
 	SetText_TT =	Canvia el text d'un control.
-	TimeoutM_TT =	0 = infinit
-	ToggleC_TT =	Activa gravació relativa a l'estat de la tecla.
-	TransC_TT =	Color Transparent
-	VarCopyA_TT =	Copia contingut actual de variables
-	VarCopyB_TT =	Copia contingut actual de variables
-	VariatT_TT =	Les ombres de variació
-	WScale_TT =	Escala Ample
-		
-; 20. Tooltips from AHK Docs		
-	Ex_AF_TT =	Omet el mètode suau d'activar una finestra
-		i va directament al mètode contundent.
-	Ex_DH_TT =	Determina si les finestres invisibles són "vistos" per el guió.
-	Ex_EdVars_TT =	Seleccionar variables globals destinats a l'exportació.
-	Ex_HK_TT =	Força l'ús del ganxo per posar en pràctica totes les
-		o algunes tecles d'accés ràpid del teclat.
-	Ex_IfDir_TT =	Crea dreceres de teclat i hotstrings depenent contextuals
-		en el tipus de finestra que és actiu o no existeix.
-	Ex_IfDirType_TT =	Crea dreceres de teclat i hotstrings depenent contextuals
-		en el tipus de finestra que és actiu o no existeix.
-	Ex_IN_TT =	Fa que el guió es comporti com si l'especificada
-		contingut de l'arxiu es presenti en aquesta posició exacta.
-	Ex_MD_TT =	Estableix la demora que es produirà després
-		cada moviment del ratolí o feu clic.
-	Ex_MT_TT =	Estableix el nombre màxim de connexions simultànies
-		fils per tecla d'accés directe o cadena d'accés ràpid.
-	Ex_NT_TT =	Desactiva la projecció d'una icona de la safata.
-	Ex_PT_TT =	Manté un script que s'executa permanentment
-		(És a dir, fins que l'usuari tanca o es troba ExitApp).
-	Ex_SB_TT =	Determina la rapidesa amb què executar un script (que afecta la utilització de CPU).
-	Ex_SC_TT =	Estableix la demora que es produirà després
-		comandament de cada control de modificació.
-	Ex_SI_TT =	Determina si un script es pot executar de nou quan ja s'està executant.
-	Ex_SK_TT =	Estableix la demora que es produirà després de cada
-		pulsació enviat per enviament o ControlSend.
-	Ex_SM_TT =	Fa Enviar sinònim SendInput o SendPlay en lloc de
-		el valor per defecte (SendEvent). També fa clic i mousemove / clic / Arrossegueu
-		utilitzar el mètode especificat.
-	Ex_ST_TT =	Estableix el comportament d'igualar el paràmetre WinTitle a ordres com WinWait.
-	Ex_SW_TT =	Estableix la demora que es produirà després
-		cada comanda finestres, com el WinActivate.
-	Ex_UV_TT =	Exportar variables globals.
-	ExpList_TT =	Feu doble clic per editar
 	SI_TT =	La paraula FORCE salta el quadre de diàleg i substitueix l'antiga instància de forma automàtica,
 		que és un efecte similar al de la comanda reload.
 		La paraula IGNORE salta el quadre de diàleg i surt de l'antiga instància en execució.
@@ -1044,8 +1044,21 @@
 		2: el títol d'una finestra pot contenir WinTitle qualsevol lloc dins que fos una coincidència.
 		3: el títol d'una finestra ha de coincidir exactament amb WinTitle un partit.
 		Regex: Canvis WinTitle, WinText, ExcludeTitle i ExcludeText com expressions regulars.
+	TimeoutM_TT =	0 = infinit
+	TitleMatch_TT =	1: El títol d'una finestra ha de començar amb el WinTitle especificada a ser un partit.
+		2: el títol d'una finestra pot contenir qualsevol lloc dins WinTitle que sigui una coincidència.
+		3: el títol d'una finestra ha de coincidir exactament amb WinTitle a ser un partit.
+		Regex: Canvis WinTitle, WinText, Excloure Títol i Excloure text com a expressions regulars.
+	TitleSpeed_TT =	Ràpid: Aquest és el comportament per defecte. El rendiment pot ser substancialment millor que lent, però certs elements WinText per a alguns tipus de finestres no pot ser "vist" pels diferents comandaments de la finestra.
+		Lent: Pot ser molt més lent, però és possible WinText està recuperat de totes les finestres com una ordre recerca de finestres a través d'ells per a un partit. Finestra espia revela quines parts d'un text de la finestra (si n'hi ha) requereixen la manera lent.
+	ToggleC_TT =	Activa gravació relativa a l'estat de la tecla.
+	TransC_TT =	Color Transparent
+	VarCopyA_TT =	Copia contingut actual de variables
+	VarCopyB_TT =	Copia contingut actual de variables
+	VariatT_TT =	Les ombres de variació
+	WScale_TT =	Escala Ample
 		
-; 21. Operators		
+; 20. Operators		
 	As_Oper_1 =	Assignar
 	As_Oper_2 =	Afegir
 	As_Oper_3 =	Sostreure
@@ -1065,8 +1078,16 @@
 	Co_Oper_5 =	Menys
 	Co_Oper_6 =	Major o igual
 	Co_Oper_7 =	Menor o igual
+	Co_Oper_8 =	En (llista)
+	Co_Oper_9 =	 No en (llista)
+	Co_Oper_10 =	 Conté (llista)
+	Co_Oper_11 =	 No conté (llista)
+	Co_Oper_12 =	 Entre (línia 1) i (línia 2)
+	Co_Oper_13 =	 No entre (línia 1) i (línia 2)
+	Co_Oper_14 =	 És (tipus)
+	Co_Oper_15 =	 No és (tipus)
 		
-; 22. IE Commands Tips		
+; 21. IE Commands Tips		
 	IE_Cmd_Index =	
 	Checked	Estableix o indica l'estat de la casella de verificació o botó de ràdio.
 	Click	Simula un clic sobre l'objecte.
@@ -1094,7 +1115,7 @@
 	Value	Obté o estableix el valor de l'objecte.
 	Width	Estableix o recupera l'amplada de l'objecte.
 		
-; 23. COM Methods Tips		
+; 22. COM Methods Tips		
 	COM_CLSID_Index =	
 	Excel.Application	Manipula fulles d'Excel.
 	HTMLfile	Es pot utilitzar per llegir, escriure i interactuar amb HTML.
@@ -1117,7 +1138,7 @@
 	WScript.Shell	Diverses tasques d'administració (moltes tasques natives AHK).
 	Word.Application	Manipula els documents de Word.
 		
-; 24. AHK Commands Tips		
+; 23. AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	Abs	Retorna el valor absolut del nombre .
 	ACos	Retorna l'arc cosinus (el nombre el cosinus és número) en radians .

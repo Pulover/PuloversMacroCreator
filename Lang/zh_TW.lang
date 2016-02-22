@@ -224,73 +224,74 @@
 	w_Lang040 =	新（按Ctrl+N）
 	w_Lang041 =	開放（按Ctrl+O）
 	w_Lang042 =	保存（Ctrl+S）
-	w_Lang043 =	導出華民航空（Ctrl+E鍵）
-	w_Lang044 =	預覽腳本（按Ctrl+P）
-	w_Lang045 =	設置（按Ctrl+G）
-	w_Lang046 =	錄製宏（按Ctrl+R）
-	w_Lang047 =	激活宏（按Ctrl+Enter鍵）
-	w_Lang048 =	播放當前宏觀經濟（按Ctrl+Shift +回車）
-	w_Lang049 =	定時器（按Ctrl+Shift+T）
-	w_Lang050 =	鼠標（F2）
-	w_Lang051 =	文本（F3）
-	w_Lang052 =	編輯宏（按Ctrl+Shift+ M）
-	w_Lang053 =	控制（F4）
-	w_Lang054 =	暫停 （F5）
-	w_Lang055 =	消息框 （Shift+F5）
-	w_Lang056 =	關鍵的等待 （Ctrl+F5）
-	w_Lang057 =	窗口（F6）
-	w_Lang058 =	圖片/像素搜索（F7）
-	w_Lang059 =	運行/文件/串/ MISC。 （F8）。
-	w_Lang060 =	環路（F9）
-	w_Lang061 =	後藤（按Shift+F9）
-	w_Lang062 =	標籤（按Ctrl+F9）
-	w_Lang063 =	如果報表附註（F10）
-	w_Lang064 =	變量 / 배열(&V) （按Shift+F10）
-	w_Lang065 =	功能 / 陣列方法 （按Ctrl+F10）
-	w_Lang066 =	IE瀏覽器（F12）
-	w_Lang067 =	表達 / COM接口 (Shift+F12)
-	w_Lang068 =	發電子郵件 (F11)
-	w_Lang069 =	Windows消息（Ctrl+F12）
-	w_Lang070 =	Windows鍵“播放”熱鍵
-	w_Lang071 =	使用操縱桿按鈕，熱鍵
-	w_Lang072 =	添加宏（按Ctrl+T）
-	w_Lang073 =	關閉宏（按Ctrl+W）
-	w_Lang074 =	重複宏（按Ctrl+Shift+D）
-	w_Lang075 =	進口宏（按Ctrl+I）
-	w_Lang076 =	保存當前宏（按Ctrl+Alt+S）
-	w_Lang077 =	向上移動（按Ctrl+上一頁）
-	w_Lang078 =	“下移”（按Ctrl+下一頁）
-	w_Lang079 =	複製選中的行（CTRL+D）
-	w_Lang080 =	剪切選定行（Ctrl+X鍵）
-	w_Lang081 =	選定行複製（Ctrl+C組合鍵）
-	w_Lang082 =	粘貼複製的行（Ctrl+V鍵）
-	w_Lang083 =	刪除選定的行（DEL）
-	w_Lang084 =	撤消（CTRL+Z）
-	w_Lang085 =	重做（CTRL+Y）
-	w_Lang086 =	複製到...
-	w_Lang087 =	查找/替換（Ctrl+F鍵）
-	w_Lang088 =	插入 / 編輯點評（Ctrl+L鍵）
-	w_Lang089 =	編輯顏色標誌（Ctrl+M鍵）
-	w_Lang090 =	定制
-	w_Lang091 =	查找命令（按Ctrl+Shift+ F）
-	w_Lang092 =	編輯（Enter）
-	w_Lang093 =	隱藏
-	w_Lang094 =	搬到這裡
-	w_Lang095 =	複製到這裡
-	w_Lang096 =	組
-	w_Lang097 =	啟用組 （Ctrl+Shift+ G）
-	w_Lang098 =	添加組 （Ctrl+Shift+ Y）
-	w_Lang099 =	刪除組 （Ctrl+Shift+ R）
-	w_Lang100 =	刪除所有組
-	w_Lang101 =	編輯組
-	w_Lang102 =	團隊名字
-	w_Lang103 =	創建函數（Ctrl+Shift+ U）
-	w_Lang104 =	添加參數（Ctrl+Shift+ P）
-	w_Lang105 =	加入返程（Ctrl+Shift+ N）
-	w_Lang106 =	轉換宏功能（Ctrl+Shift+ C）
-	w_Lang107 =	註釋掉選中的行
-	w_Lang108 =	下載/上傳文件 （按Shift+F11）
-	w_Lang109 =	壓縮/解壓縮文件 （按Ctrl+F11）
+	w_Lang043 =	另存為 （Ctrl+Shift+S）
+	w_Lang044 =	導出華民航空（Ctrl+E鍵）
+	w_Lang045 =	預覽腳本（按Ctrl+P）
+	w_Lang046 =	設置（按Ctrl+G）
+	w_Lang047 =	錄製宏（按Ctrl+R）
+	w_Lang048 =	激活宏（按Ctrl+Enter鍵）
+	w_Lang049 =	播放當前宏觀經濟（按Ctrl+Shift +回車）
+	w_Lang050 =	定時器（按Ctrl+Shift+T）
+	w_Lang051 =	鼠標（F2）
+	w_Lang052 =	文本（F3）
+	w_Lang053 =	編輯宏（按Ctrl+Shift+ M）
+	w_Lang054 =	控制（F4）
+	w_Lang055 =	暫停 （F5）
+	w_Lang056 =	消息框 （Shift+F5）
+	w_Lang057 =	關鍵的等待 （Ctrl+F5）
+	w_Lang058 =	窗口（F6）
+	w_Lang059 =	圖片/像素搜索（F7）
+	w_Lang060 =	運行/文件/串/ MISC。 （F8）。
+	w_Lang061 =	環路（F9）
+	w_Lang062 =	後藤（按Shift+F9）
+	w_Lang063 =	標籤（按Ctrl+F9）
+	w_Lang064 =	如果報表附註（F10）
+	w_Lang065 =	變量 / 배열(&V) （按Shift+F10）
+	w_Lang066 =	功能 / 陣列方法 （按Ctrl+F10）
+	w_Lang067 =	IE瀏覽器（F12）
+	w_Lang068 =	表達 / COM接口 (Shift+F12)
+	w_Lang069 =	發電子郵件 (F11)
+	w_Lang070 =	Windows消息（Ctrl+F12）
+	w_Lang071 =	Windows鍵“播放”熱鍵
+	w_Lang072 =	使用操縱桿按鈕，熱鍵
+	w_Lang073 =	添加宏（按Ctrl+T）
+	w_Lang074 =	關閉宏（按Ctrl+W）
+	w_Lang075 =	重複宏（按Ctrl+Shift+D）
+	w_Lang076 =	進口宏（按Ctrl+I）
+	w_Lang077 =	保存當前宏（按Ctrl+Alt+S）
+	w_Lang078 =	向上移動（按Ctrl+上一頁）
+	w_Lang079 =	“下移”（按Ctrl+下一頁）
+	w_Lang080 =	複製選中的行（CTRL+D）
+	w_Lang081 =	剪切選定行（Ctrl+X鍵）
+	w_Lang082 =	選定行複製（Ctrl+C組合鍵）
+	w_Lang083 =	粘貼複製的行（Ctrl+V鍵）
+	w_Lang084 =	刪除選定的行（DEL）
+	w_Lang085 =	撤消（CTRL+Z）
+	w_Lang086 =	重做（CTRL+Y）
+	w_Lang087 =	複製到...
+	w_Lang088 =	查找/替換（Ctrl+F鍵）
+	w_Lang089 =	插入 / 編輯點評（Ctrl+L鍵）
+	w_Lang090 =	編輯顏色標誌（Ctrl+M鍵）
+	w_Lang091 =	定制
+	w_Lang092 =	查找命令（按Ctrl+Shift+ F）
+	w_Lang093 =	編輯（Enter）
+	w_Lang094 =	隱藏
+	w_Lang095 =	搬到這裡
+	w_Lang096 =	複製到這裡
+	w_Lang097 =	組
+	w_Lang098 =	啟用組 （Ctrl+Shift+ G）
+	w_Lang099 =	添加組 （Ctrl+Shift+ Y）
+	w_Lang100 =	刪除組 （Ctrl+Shift+ R）
+	w_Lang101 =	刪除所有組
+	w_Lang102 =	編輯組
+	w_Lang103 =	團隊名字
+	w_Lang104 =	創建函數（Ctrl+Shift+ U）
+	w_Lang105 =	添加參數（Ctrl+Shift+ P）
+	w_Lang106 =	加入返程（Ctrl+Shift+ N）
+	w_Lang107 =	轉換宏功能（Ctrl+Shift+ C）
+	w_Lang108 =	註釋掉選中的行
+	w_Lang109 =	下載/上傳文件 （按Shift+F11）
+	w_Lang110 =	壓縮/解壓縮文件 （按Ctrl+F11）
 		
 ; 15. Command Windows		
 	c_Lang001 =	鼠標
@@ -538,6 +539,7 @@
 	c_Lang244 =	右到左
 	c_Lang245 =	附件
 	c_Lang246 =	路徑
+	c_Lang247 =	如果
 		
 ; 16. Other Windows		
 	t_Lang001 =	導出到華民航空
@@ -741,6 +743,11 @@
 	t_Lang199 =	SSL
 	t_Lang200 =	發送模式
 	t_Lang201 =	發送測試
+	t_Lang202 =	屏幕和窗口
+	t_Lang203 =	檢測隱藏的窗口
+	t_Lang204 =	檢測隱藏文本
+	t_Lang205 =	標題匹配模式
+	t_Lang206 =	冠軍比賽速度
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	打開
@@ -818,7 +825,7 @@
 		要禁用自動檢查，選擇“啟動”幫助“>”檢查。 > 檢查啟動
 	d_Lang062 =	您已經有最新的版本。
 	d_Lang063 =	檢查時發生錯誤。
-	d_Lang064 =	COM對象錯誤
+	d_Lang064 =	錯誤
 	d_Lang065 =	排
 	d_Lang066 =	特別是
 	d_Lang067 =	顯示這個窗口啟動
@@ -936,8 +943,41 @@
 	EditPaste_TT =	免燒磚字符串在插入符號/插入位置
 		在編輯控制（這並不影響
 		剪貼板中的內容）。
+	Ex_AF_TT =	跳過溫和的方法激活一個窗口
+		徑直強而有力的方法。
+	Ex_DH_TT =	確定是否有無形的窗戶“看到”的腳本。
 	Ex_EdScript_TT =	打开外部编辑器
+	Ex_EdVars_TT =	選擇要導出的全局變量。
 	Ex_ExecScript_TT =	運行腳本
+	Ex_HK_TT =	強制利用鉤子實現所有
+		或一些鍵盤熱鍵。
+	Ex_IfDir_TT =	創建上下文敏感的熱鍵和熱字串取決於
+		不同的窗口，該窗口是活動的還是存在。
+	Ex_IfDirType_TT =	創建上下文敏感的熱鍵和熱字串取決於
+		不同的窗口，該窗口是活動的還是存在。
+	Ex_IN_TT =	導致腳本彷彿指定的行為
+		文件的內容是目前在這個確切位置。
+	Ex_MD_TT =	設置延遲後會發生
+		每一次鼠標移動或點擊。
+	Ex_MT_TT =	設置最大數量的同時
+		線程，每個熱鍵或熱字串。
+	Ex_NT_TT =	禁止放映的托盤圖標。
+	Ex_PT_TT =	永久保持一個腳本運行
+		（即，直到用戶關閉或ExitApp命令遇到）。
+	Ex_SB_TT =	確定腳本將運行多快的速度（影響CPU利用率）。
+	Ex_SC_TT =	設置延遲後會發生
+		每個控件修改命令。
+	Ex_SI_TT =	確定腳本是否允許再次運行時，它已經在運行。
+	Ex_SK_TT =	設置的延遲會發生在每個
+		發送或至於ControlSend發送按鍵。
+	Ex_SM_TT =	使發送與Send​​Input或SendPlay模式的代名詞，而不是
+		的默認的SendEvent。也使得MOUSEMOVE /點擊/拖動
+		使用指定的方法。
+	Ex_ST_TT =	設置WinWait命令，如在WinTitle參數的匹配行為。
+	Ex_SW_TT =	設置延遲後會發生
+		每個窗口的命令，如WinActivate。
+	Ex_UV_TT =	導出全局變量。
+	ExpList_TT =	雙擊編輯
 	ExprLink2_TT =	- 不要用百分號這裡的變量。
 		- 大多數AHK表達式的支持。
 		- 您可以使用字符串，變量，數組和函數。
@@ -951,6 +991,8 @@
 	ExpView_TT =	高級編輯
 	ExpView2_TT =	高級編輯
 	Fast_TT =	使用更快的搜索方法（推薦）
+	HiddenWin_TT =	確定是否無形窗口“看到”的腳本。
+	HiddenText_TT =	確定在一個窗口不可見的文本是否被“看到”查找窗口的目的。這會影響諸如IfWinExist和WinActivate命令。
 	HScale_TT =	身高規模
 	IconN_TT =	圖標組中的數
 	IfLVColor_TT =	點擊挑顏色
@@ -986,48 +1028,6 @@
 	Screen_TT =	坐標是相對於桌面（整個畫面）。
 	Screenshot_TT =	製作截圖
 	SetText_TT =	更改文本的控制。
-	TimeoutM_TT =	0 =無限
-	ToggleC_TT =	國家重點時，激活相對錄製。
-	TransC_TT =	透明色
-	VarCopyA_TT =	複製當前變量內容
-	VarCopyB_TT =	複製當前變量內容
-	VariatT_TT =	色調的變化
-	WScale_TT =	寬規模
-		
-; 20. Tooltips from AHK Docs		
-	Ex_AF_TT =	跳過溫和的方法激活一個窗口
-		徑直強而有力的方法。
-	Ex_DH_TT =	確定是否有無形的窗戶“看到”的腳本。
-	Ex_EdVars_TT =	選擇要導出的全局變量。
-	Ex_HK_TT =	強制利用鉤子實現所有
-		或一些鍵盤熱鍵。
-	Ex_IfDir_TT =	創建上下文敏感的熱鍵和熱字串取決於
-		不同的窗口，該窗口是活動的還是存在。
-	Ex_IfDirType_TT =	創建上下文敏感的熱鍵和熱字串取決於
-		不同的窗口，該窗口是活動的還是存在。
-	Ex_IN_TT =	導致腳本彷彿指定的行為
-		文件的內容是目前在這個確切位置。
-	Ex_MD_TT =	設置延遲後會發生
-		每一次鼠標移動或點擊。
-	Ex_MT_TT =	設置最大數量的同時
-		線程，每個熱鍵或熱字串。
-	Ex_NT_TT =	禁止放映的托盤圖標。
-	Ex_PT_TT =	永久保持一個腳本運行
-		（即，直到用戶關閉或ExitApp命令遇到）。
-	Ex_SB_TT =	確定腳本將運行多快的速度（影響CPU利用率）。
-	Ex_SC_TT =	設置延遲後會發生
-		每個控件修改命令。
-	Ex_SI_TT =	確定腳本是否允許再次運行時，它已經在運行。
-	Ex_SK_TT =	設置的延遲會發生在每個
-		發送或至於ControlSend發送按鍵。
-	Ex_SM_TT =	使發送與Send​​Input或SendPlay模式的代名詞，而不是
-		的默認的SendEvent。也使得MOUSEMOVE /點擊/拖動
-		使用指定的方法。
-	Ex_ST_TT =	設置WinWait命令，如在WinTitle參數的匹配行為。
-	Ex_SW_TT =	設置延遲後會發生
-		每個窗口的命令，如WinActivate。
-	Ex_UV_TT =	導出全局變量。
-	ExpList_TT =	雙擊編輯
 	SI_TT =	字力跳過對話框，並自動替換舊的實例，
 		這是類似效果reload命令。
 		這個詞忽略跳過對話框，並留下舊的實例運行。
@@ -1044,8 +1044,21 @@
 		2：一個窗口的標題，可以包含WinTitle內的任何地方它是一個比賽。
 		3：一個窗口的標題必須完全匹配WinTitle匹配。
 		正則表達式：更改的的WinTitle，WinText，ExcludeTitle，ExcludeText是正則表達式。
+	TimeoutM_TT =	0 =無限
+	TitleMatch_TT =	1：窗口的標題必須與指定的WinTitle下手要匹配。
+		2：窗口的標題可以包含WinTitle內的任何地方這是一個比賽。
+		3：窗口標題必須準確匹配WinTitle要匹配。
+		正則表達式：更改WinTitle，WinText，排除標題，並排除文本是正則表達式。
+	TitleSpeed_TT =	快速：這是默認的行為。性能可基本上比慢越好，但由各個窗口的命令對某些類型的窗口一定WinText元件可以不被“看到”。
+		慢：可以更慢，但所有可能WinText是從每一個窗口通過他們一個窗口命令搜索匹配檢索。窗口間諜揭示其中一個窗口的文本的部分（如果有的話）需要慢速模式。
+	ToggleC_TT =	國家重點時，激活相對錄製。
+	TransC_TT =	透明色
+	VarCopyA_TT =	複製當前變量內容
+	VarCopyB_TT =	複製當前變量內容
+	VariatT_TT =	色調的變化
+	WScale_TT =	寬規模
 		
-; 21. Operators		
+; 20. Operators		
 	As_Oper_1 =	分配
 	As_Oper_2 =	加
 	As_Oper_3 =	減去
@@ -1065,8 +1078,16 @@
 	Co_Oper_5 =	少
 	Co_Oper_6 =	大於或等於
 	Co_Oper_7 =	小於或等於
+	Co_Oper_8 =	在（名單）
+	Co_Oper_9 =	不在（名單）
+	Co_Oper_10 =	包含（名單）
+	Co_Oper_11 =	不包含（名單）
+	Co_Oper_12 =	之間（線1）和（2行）
+	Co_Oper_13 =	未之間（線1）和（2行）
+	Co_Oper_14 =	是（類型）
+	Co_Oper_15 =	是不是（類型）
 		
-; 22. IE Commands Tips		
+; 21. IE Commands Tips		
 	IE_Cmd_Index =	
 	Checked	設置或檢索的複選框或單選按鈕的狀態。
 	Click	模擬單擊對象。
@@ -1094,7 +1115,7 @@
 	Value	獲取或設置對象的值。
 	Width	設置或獲取對象的寬度。
 		
-; 23. COM Methods Tips		
+; 22. COM Methods Tips		
 	COM_CLSID_Index =	
 	Excel.Application	엑셀 시트를 조작합니다.
 	HTMLfile	읽기, 쓰기 및 HTML과 상호 작용하는 데 사용할 수 있습니다.
@@ -1117,7 +1138,7 @@
 	WScript.Shell	다양한 관리 작업 (많은 네이티브 AHK 작업).
 	Word.Application	Word 문서를 조작합니다.
 		
-; 24. AHK Commands Tips		
+; 23. AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	Abs	返回數字的絕對值。
 	ACos	返回弧度反餘弦（餘弦數）。

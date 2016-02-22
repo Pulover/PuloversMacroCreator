@@ -224,73 +224,74 @@
 	w_Lang040 =	New (Ctrl+N)
 	w_Lang041 =	Open (Ctrl+O)
 	w_Lang042 =	Save (Ctrl+S)
-	w_Lang043 =	Export to AHK (Ctrl+E)
-	w_Lang044 =	Preview Script (Ctrl+P)
-	w_Lang045 =	Settings (Ctrl+G)
-	w_Lang046 =	Record Macro (Ctrl+R)
-	w_Lang047 =	Activate Macros (Ctrl+Enter)
-	w_Lang048 =	Play Current Macro (Ctrl+Shift+Enter)
-	w_Lang049 =	Timer (Ctrl+Shift+T)
-	w_Lang050 =	Mouse (F2)
-	w_Lang051 =	Text (F3)
-	w_Lang052 =	Edit Macros (Ctrl+Shift+M)
-	w_Lang053 =	Control (F4)
-	w_Lang054 =	Pause (F5)
-	w_Lang055 =	Message Box (Shift+F5)
-	w_Lang056 =	Key Wait (Ctrl+F5) 
-	w_Lang057 =	Window (F6)
-	w_Lang058 =	Image / Pixel Search (F7)
-	w_Lang059 =	Run / File / String / Misc. (F8)
-	w_Lang060 =	Loop (F9)
-	w_Lang061 =	Goto (Shift+F9)
-	w_Lang062 =	Label (Ctrl+F9)
-	w_Lang063 =	If Statements (F10)
-	w_Lang064 =	Variables / Arrays (Shift+F10)
-	w_Lang065 =	Functions / Array Methods (Ctrl+F10)
-	w_Lang066 =	Internet Explorer (F12)
-	w_Lang067 =	Expression / COM Interface (Shift+F12)
-	w_Lang068 =	Send Email (F11)
-	w_Lang069 =	Windows Messages (Ctrl+F12)
-	w_Lang070 =	Add the Windows key to "Play" hotkey
-	w_Lang071 =	Use a joystick button as hotkey
-	w_Lang072 =	Add Macro (Ctrl+T)
-	w_Lang073 =	Close Macro (Ctrl+W)
-	w_Lang074 =	Duplicate Macro (Ctrl+Shift+D)
-	w_Lang075 =	Import Macro (Ctrl+I)
-	w_Lang076 =	Save Current Macro (Ctrl+Alt+S)
-	w_Lang077 =	Move Up (Ctrl+PageUp)
-	w_Lang078 =	Move Down (Ctrl+PageDown)
-	w_Lang079 =	Duplicate Selected Rows (Ctrl+D)
-	w_Lang080 =	Cut Selected Rows (Ctrl+X)
-	w_Lang081 =	Copy Selected Rows (Ctrl+C)
-	w_Lang082 =	Paste Copied Rows (Ctrl+V)
-	w_Lang083 =	Delete Selected Rows (Del)
-	w_Lang084 =	Undo (Ctrl+Z)
-	w_Lang085 =	Redo (Ctrl+Y)
-	w_Lang086 =	Copy to...
-	w_Lang087 =	Find / Replace (Ctrl+F)
-	w_Lang088 =	Insert / Edit Comment (Ctrl+L)
-	w_Lang089 =	Edit Color Mark (Ctrl+M)
-	w_Lang090 =	Customize
-	w_Lang091 =	Find a command (Ctrl+Shift+F)
-	w_Lang092 =	Edit (Enter)
-	w_Lang093 =	Hide
-	w_Lang094 =	Move here
-	w_Lang095 =	Copy here
-	w_Lang096 =	Groups
-	w_Lang097 =	Enable groups (Ctrl+Shift+G)
-	w_Lang098 =	Add group (Ctrl+Shift+Y)
-	w_Lang099 =	Remove group (Ctrl+Shift+R)
-	w_Lang100 =	Remove all groups
-	w_Lang101 =	Edit groups
-	w_Lang102 =	Group name
-	w_Lang103 =	Create Function (Ctrl+Shift+U)
-	w_Lang104 =	Add Parameter (Ctrl+Shift+P)
-	w_Lang105 =	Add Return (Ctrl+Shift+N)
-	w_Lang106 =	Convert Macro To Function (Ctrl+Shift+C)
-	w_Lang107 =	Comment out unchecked rows
-	w_Lang108 =	Download / Upload files (Shift+F11)
-	w_Lang109 =	Zip / Unzip files (Ctrl+F11)
+	w_Lang043 =	Save As (Ctrl+Shift+S)
+	w_Lang044 =	Export to AHK (Ctrl+E)
+	w_Lang045 =	Preview Script (Ctrl+P)
+	w_Lang046 =	Settings (Ctrl+G)
+	w_Lang047 =	Record Macro (Ctrl+R)
+	w_Lang048 =	Activate Macros (Ctrl+Enter)
+	w_Lang049 =	Play Current Macro (Ctrl+Shift+Enter)
+	w_Lang050 =	Timer (Ctrl+Shift+T)
+	w_Lang051 =	Mouse (F2)
+	w_Lang052 =	Text (F3)
+	w_Lang053 =	Edit Macros (Ctrl+Shift+M)
+	w_Lang054 =	Control (F4)
+	w_Lang055 =	Pause (F5)
+	w_Lang056 =	Message Box (Shift+F5)
+	w_Lang057 =	Key Wait (Ctrl+F5) 
+	w_Lang058 =	Window (F6)
+	w_Lang059 =	Image / Pixel Search (F7)
+	w_Lang060 =	Run / File / String / Misc. (F8)
+	w_Lang061 =	Loop (F9)
+	w_Lang062 =	Goto (Shift+F9)
+	w_Lang063 =	Label (Ctrl+F9)
+	w_Lang064 =	If Statements (F10)
+	w_Lang065 =	Variables / Arrays (Shift+F10)
+	w_Lang066 =	Functions / Array Methods (Ctrl+F10)
+	w_Lang067 =	Internet Explorer (F12)
+	w_Lang068 =	Expression / COM Interface (Shift+F12)
+	w_Lang069 =	Send Email (F11)
+	w_Lang070 =	Windows Messages (Ctrl+F12)
+	w_Lang071 =	Add the Windows key to "Play" hotkey
+	w_Lang072 =	Use a joystick button as hotkey
+	w_Lang073 =	Add Macro (Ctrl+T)
+	w_Lang074 =	Close Macro (Ctrl+W)
+	w_Lang075 =	Duplicate Macro (Ctrl+Shift+D)
+	w_Lang076 =	Import Macro (Ctrl+I)
+	w_Lang077 =	Save Current Macro (Ctrl+Alt+S)
+	w_Lang078 =	Move Up (Ctrl+PageUp)
+	w_Lang079 =	Move Down (Ctrl+PageDown)
+	w_Lang080 =	Duplicate Selected Rows (Ctrl+D)
+	w_Lang081 =	Cut Selected Rows (Ctrl+X)
+	w_Lang082 =	Copy Selected Rows (Ctrl+C)
+	w_Lang083 =	Paste Copied Rows (Ctrl+V)
+	w_Lang084 =	Delete Selected Rows (Del)
+	w_Lang085 =	Undo (Ctrl+Z)
+	w_Lang086 =	Redo (Ctrl+Y)
+	w_Lang087 =	Copy to...
+	w_Lang088 =	Find / Replace (Ctrl+F)
+	w_Lang089 =	Insert / Edit Comment (Ctrl+L)
+	w_Lang090 =	Edit Color Mark (Ctrl+M)
+	w_Lang091 =	Customize
+	w_Lang092 =	Find a command (Ctrl+Shift+F)
+	w_Lang093 =	Edit (Enter)
+	w_Lang094 =	Hide
+	w_Lang095 =	Move here
+	w_Lang096 =	Copy here
+	w_Lang097 =	Groups
+	w_Lang098 =	Enable groups (Ctrl+Shift+G)
+	w_Lang099 =	Add group (Ctrl+Shift+Y)
+	w_Lang100 =	Remove group (Ctrl+Shift+R)
+	w_Lang101 =	Remove all groups
+	w_Lang102 =	Edit groups
+	w_Lang103 =	Group name
+	w_Lang104 =	Create Function (Ctrl+Shift+U)
+	w_Lang105 =	Add Parameter (Ctrl+Shift+P)
+	w_Lang106 =	Add Return (Ctrl+Shift+N)
+	w_Lang107 =	Convert Macro To Function (Ctrl+Shift+C)
+	w_Lang108 =	Comment out unchecked rows
+	w_Lang109 =	Download / Upload files (Shift+F11)
+	w_Lang110 =	Zip / Unzip files (Ctrl+F11)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mouse
@@ -538,6 +539,7 @@
 	c_Lang244 =	Right-to-Left
 	c_Lang245 =	Attachments
 	c_Lang246 =	Path
+	c_Lang247 =	If
 		
 ; 16. Other Windows		
 	t_Lang001 =	Export to AutoHotkey
@@ -741,6 +743,11 @@
 	t_Lang199 =	SSL
 	t_Lang200 =	Send mode
 	t_Lang201 =	Send a test
+	t_Lang202 =	Screen And Window
+	t_Lang203 =	Detect Hidden Windows
+	t_Lang204 =	Detect Hidden Text
+	t_Lang205 =	Title Match Mode
+	t_Lang206 =	Title Match Speed
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Open
@@ -818,7 +825,7 @@
 		To disable automatic checks select Help > Check on startup
 	d_Lang062 =	You already have the most recent version.
 	d_Lang063 =	An error occured while checking.
-	d_Lang064 =	COM object error in
+	d_Lang064 =	Error in
 	d_Lang065 =	Row
 	d_Lang066 =	Specifically
 	d_Lang067 =	Show this window on startup
@@ -936,8 +943,41 @@
 	EditPaste_TT =	Pastes String at the caret/insert position
 		in an Edit control (this does not affect
 		the contents of the clipboard).
+	Ex_AF_TT =	Skips the gentle method of activating a window
+		and goes straight to the forceful method.
+	Ex_DH_TT =	Determines whether invisible windows are 'seen' by the script.
 	Ex_EdScript_TT =	Open in external editor
+	Ex_EdVars_TT =	Select global variables to be exported.
 	Ex_ExecScript_TT =	Run script
+	Ex_HK_TT =	Forces the use of the hook to implement all
+		or some keyboard hotkeys.
+	Ex_IfDir_TT =	Creates context-sensitive hotkeys and hotstrings depending
+		on the type of window that is active or exists.
+	Ex_IfDirType_TT =	Creates context-sensitive hotkeys and hotstrings depending
+		on the type of window that is active or exists.
+	Ex_IN_TT =	Causes the script to behave as though the specified
+		file's contents are present at this exact position.
+	Ex_MD_TT =	Sets the delay that will occur after
+		each mouse movement or click.
+	Ex_MT_TT =	Sets the maximum number of simultaneous
+		threads per hotkey or hotstring.
+	Ex_NT_TT =	Disables the showing of a tray icon.
+	Ex_PT_TT =	Keeps a script permanently running
+		(that is, until the user closes it or ExitApp is encountered).
+	Ex_SB_TT =	Determines how fast a script will run (affects CPU utilization).
+	Ex_SC_TT =	Sets the delay that will occur after
+		each control-modifying command.
+	Ex_SI_TT =	Determines whether a script is allowed to run again when it is already running.
+	Ex_SK_TT =	Sets the delay that will occur after each
+		keystroke sent by Send or ControlSend.
+	Ex_SM_TT =	Makes Send synonymous with SendInput or SendPlay rather than
+		the default (SendEvent). Also makes Click and MouseMove/Click/Drag
+		use the specified method.
+	Ex_ST_TT =	Sets the matching behavior of the WinTitle parameter in commands such as WinWait.
+	Ex_SW_TT =	Sets the delay that will occur after
+		each windowing command, such as WinActivate.
+	Ex_UV_TT =	Export global variables.
+	ExpList_TT =	Double-Click to edit
 	ExprLink2_TT =	- DO NOT ENCLOSE VARIABLES IN PERCENT SIGNS HERE.
 		- Most of AHK expressions are supported.
 		- You may use strings, variables, arrays and functions.
@@ -951,6 +991,8 @@
 	ExpView_TT =	Advanced Editor
 	ExpView2_TT =	Advanced Editor
 	Fast_TT =	Uses a faster searching method (recommended)
+	HiddenWin_TT =	Determines whether invisible windows are "seen" by the script.
+	HiddenText_TT =	Determines whether invisible text in a window is "seen" for the purpose of finding the window. This affects commands such as IfWinExist and WinActivate.
 	HScale_TT =	Height scale
 	IconN_TT =	Number of the icon group
 	IfLVColor_TT =	Click to pick a color
@@ -986,48 +1028,6 @@
 	Screen_TT =	Coordinates are relative to the desktop (entire screen).
 	Screenshot_TT =	Make Screenshot
 	SetText_TT =	Changes the text of a control.
-	TimeoutM_TT =	0 = infinite
-	ToggleC_TT =	Activate Relative Recording when key state is on.
-	TransC_TT =	Transparent color
-	VarCopyA_TT =	Copy current variable contents
-	VarCopyB_TT =	Copy current variable contents
-	VariatT_TT =	Shades of variation
-	WScale_TT =	Width scale
-		
-; 20. Tooltips from AHK Docs		
-	Ex_AF_TT =	Skips the gentle method of activating a window
-		and goes straight to the forceful method.
-	Ex_DH_TT =	Determines whether invisible windows are 'seen' by the script.
-	Ex_EdVars_TT =	Select global variables to be exported.
-	Ex_HK_TT =	Forces the use of the hook to implement all
-		or some keyboard hotkeys.
-	Ex_IfDir_TT =	Creates context-sensitive hotkeys and hotstrings depending
-		on the type of window that is active or exists.
-	Ex_IfDirType_TT =	Creates context-sensitive hotkeys and hotstrings depending
-		on the type of window that is active or exists.
-	Ex_IN_TT =	Causes the script to behave as though the specified
-		file's contents are present at this exact position.
-	Ex_MD_TT =	Sets the delay that will occur after
-		each mouse movement or click.
-	Ex_MT_TT =	Sets the maximum number of simultaneous
-		threads per hotkey or hotstring.
-	Ex_NT_TT =	Disables the showing of a tray icon.
-	Ex_PT_TT =	Keeps a script permanently running
-		(that is, until the user closes it or ExitApp is encountered).
-	Ex_SB_TT =	Determines how fast a script will run (affects CPU utilization).
-	Ex_SC_TT =	Sets the delay that will occur after
-		each control-modifying command.
-	Ex_SI_TT =	Determines whether a script is allowed to run again when it is already running.
-	Ex_SK_TT =	Sets the delay that will occur after each
-		keystroke sent by Send or ControlSend.
-	Ex_SM_TT =	Makes Send synonymous with SendInput or SendPlay rather than
-		the default (SendEvent). Also makes Click and MouseMove/Click/Drag
-		use the specified method.
-	Ex_ST_TT =	Sets the matching behavior of the WinTitle parameter in commands such as WinWait.
-	Ex_SW_TT =	Sets the delay that will occur after
-		each windowing command, such as WinActivate.
-	Ex_UV_TT =	Export global variables.
-	ExpList_TT =	Double-Click to edit
 	SI_TT =	The word FORCE skips the dialog box and replaces the old instance automatically,
 		which is similar in effect to the Reload command.
 		The word IGNORE skips the dialog box and leaves the old instance running.
@@ -1044,8 +1044,21 @@
 		2: A window's title can contain WinTitle anywhere inside it to be a match.
 		3: A window's title must exactly match WinTitle to be a match.
 		RegEx: Changes WinTitle, WinText, ExcludeTitle, and ExcludeText to be regular expressions.
+	TimeoutM_TT =	0 = infinite
+	TitleMatch_TT =	1: A window's title must start with the specified WinTitle to be a match.
+		2: A window's title can contain WinTitle anywhere inside it to be a match.
+		3: A window's title must exactly match WinTitle to be a match.
+		RegEx: Changes WinTitle, WinText, ExcludeTitle, and ExcludeText to be regular expressions.
+	TitleSpeed_TT =	Fast: This is the default behavior. Performance may be substantially better than Slow, but certain WinText elements for some types of windows may not be "seen" by the various window commands.
+		Slow: Can be much slower, but all possible WinText is retrieved from every window as a windowing command searches through them for a match. Window Spy reveals which parts of a Window's text (if any) require the slow mode.
+	ToggleC_TT =	Activate Relative Recording when key state is on.
+	TransC_TT =	Transparent color
+	VarCopyA_TT =	Copy current variable contents
+	VarCopyB_TT =	Copy current variable contents
+	VariatT_TT =	Shades of variation
+	WScale_TT =	Width scale
 		
-; 21. Operators		
+; 20. Operators		
 	As_Oper_1 =	Assign
 	As_Oper_2 =	Add
 	As_Oper_3 =	Subtract
@@ -1065,8 +1078,16 @@
 	Co_Oper_5 =	Less
 	Co_Oper_6 =	Greater or equal
 	Co_Oper_7 =	Less or equal
+	Co_Oper_8 =	In (list)
+	Co_Oper_9 =	Not in (list)
+	Co_Oper_10 =	Contains (list)
+	Co_Oper_11 =	Not contains (list)
+	Co_Oper_12 =	Between (line 1) and (line 2)
+	Co_Oper_13 =	Not between (line 1) and (line 2)
+	Co_Oper_14 =	Is (type)
+	Co_Oper_15 =	Is not (type)
 		
-; 22. IE Commands Tips		
+; 21. IE Commands Tips		
 	IE_Cmd_Index =	
 	Checked	Sets or retrieves the state of the check box or radio button.
 	Click	Simulates a click on the object.
@@ -1094,7 +1115,7 @@
 	Value	Gets or sets the value of the object.
 	Width	Sets or retrieves the width of the object.
 		
-; 23. COM Methods Tips		
+; 22. COM Methods Tips		
 	COM_CLSID_Index =	
 	Excel.Application	Manipulates Excel sheets.
 	HTMLfile	Can be used to read, write and interact with HTML.
@@ -1117,7 +1138,7 @@
 	WScript.Shell	Various administration tasks (many native AHK tasks).
 	Word.Application	Manipulates Word documents.
 		
-; 24. AHK Commands Tips		
+; 23. AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	Abs	Returns the absolute value of Number.
 	ACos	Returns the arccosine (the number whose cosine is Number) in radians.

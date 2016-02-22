@@ -9,6 +9,7 @@
 	Gui, chMacro:Default
 	Gui, chMacro:ListView, InputList%ListID%
 	ComType := ComCr ? "ComObjCreate" : "ComObjActive"
+	Critical
 	Loop, % LV_GetCount()
 	{
 		LV_GetTexts(A_Index, Action, Step, TimesX, DelayX, Type, Target, Window, Comment)
@@ -242,6 +243,14 @@
 			Else
 			{
 				IfStReplace(Action, Step)
+			,	CompareParse(Step, VarName, Oper, VarValue)
+				If ((Oper = "between") || (Oper = "not between"))
+				{
+					_Val1 := "", _Val2 := ""
+				,	VarValue := StrReplace(VarValue, "``n", "`n")
+					StringSplit, _Val, VarValue, `n, %A_Space%%A_Tab%
+					Step := VarName " " Oper " " _Val1 " and " _Val2
+				}
 				RowData := "`n" Action " " Step
 			,	RowData := RTrim(RowData)
 				If (Comment != "")
@@ -578,12 +587,17 @@
 
 IfStReplace(ByRef Action, ByRef Step)
 {
-	global
+	local ElseIf := false
+	If (InStr(Action, "[ElseIf]"))
+		Action := SubStr(Action, 10), ElseIf := true
 	Loop, 15
 	{
 		Act := "If" A_Index
 		If (Action = %Act%)
+		{
 			Action := c_%Act%
+			break
+		}
 	}
 	If (Action = c_If15)
 	{
@@ -591,6 +605,8 @@ IfStReplace(ByRef Action, ByRef Step)
 		StringReplace, Step, Step, `%,, All
 		Step := "(" Step ")"
 	}
+	If (ElseIf)
+		Action := "}`nElse " Action
 }
 
 Add_CD(RowData, Comment, DelayX)

@@ -48,6 +48,7 @@ Thiago Talma for some improvements to the code, debugging and many suggestions.
 * Multiple If Statements are now supported in *Evaluate Expression* (e.g.: var = 5 || var = "a").
 * Function parameter can now be another function, array, array element or expression.
 * Added SetTimer command.
+* Added *Else If* Statement option.
 * Loops now work in Manual Playback.
 * Added While-Loop in Loop Command window.
 * Added For-Loop in Loop Command window.
@@ -59,6 +60,8 @@ Thiago Talma for some improvements to the code, debugging and many suggestions.
 * Added support for named keys in arrays (e.g.: N["key"] or N.key, MyArray.1 := OtherArray.Name).
 * Added support for array methods.
 * Added support for arrays inside IECom and COMInterface parameters.
+* Added options to set TitleMatchMode, TitleMatchMode Speed, DetectHiddenWindows and DetectHiddenText.
+* Added var [not] in, var [not] contains, var [not] between and var is in Compare Variables If Statement.
 * Added option to change color of the rectangle of Image/Pixel Search area and Screenshots tool.
 * Added *Insert Comment Block* to "Edit Comment" window.
 * Added option to comment out unchecked rows in Preview/Exported scripts.
@@ -71,7 +74,6 @@ Thiago Talma for some improvements to the code, debugging and many suggestions.
 * Fixed bug with WinWait timeout.
 * Fixed bugs with IE/COM Interface.
 * Fixed default editor not set correctly on first run.
-* Removed Launcher.exe from Portable version due to false virus warnings.
 
 ## Version 4.1.3
 

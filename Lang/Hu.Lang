@@ -224,73 +224,74 @@
 	w_Lang040 =	Új (Ctrl+N)
 	w_Lang041 =	Open (Ctrl+O)
 	w_Lang042 =	Mentés (Ctrl+S)
-	w_Lang043 =	Exportálás AHK (Ctrl+E)
-	w_Lang044 =	Preview Script (Ctrl+P)
-	w_Lang045 =	Settings (Ctrl+G)
-	w_Lang046 =	Makró rögzítése (Ctrl+R)
-	w_Lang047 =	Activate makrók (Ctrl+Enter)
-	w_Lang048 =	Játssz Current Macro (Ctrl+Shift+Enter)
-	w_Lang049 =	Timer (Ctrl+Shift+T)
-	w_Lang050 =	Mouse (F2)
-	w_Lang051 =	Text (F3)
-	w_Lang052 =	Szerkeszteni Makrók (Ctrl+Shift+M)
-	w_Lang053 =	Control (F4)
-	w_Lang054 =	Szünet (F5)
-	w_Lang055 =	Message Box (Shift+F5)
-	w_Lang056 =	Kulcs Várakozás (Ctrl+F5)
-	w_Lang057 =	Window (F6)
-	w_Lang058 =	Image / Pixel Search (F7)
-	w_Lang059 =	Run / Fájl / String / Misc. (F8)
-	w_Lang060 =	Loop (F9)
-	w_Lang061 =	Goto (Shift+F9)
-	w_Lang062 =	Label (Ctrl+F9)
-	w_Lang063 =	Ha a nyilatkozatok (F10)
-	w_Lang064 =	Változók / Tömbök (Shift+F10)
-	w_Lang065 =	Függvények / Array módszerek (Ctrl+F10)
-	w_Lang066 =	Internet Explorer (F12)
-	w_Lang067 =	Kifejezés / COM Interface (Shift+F12)
-	w_Lang068 =	Küldjön e-mailt (F11)
-	w_Lang069 =	A Windows üzenetek (Ctrl+F12)
-	w_Lang070 =	Adja hozzá a Windows billentyű a "Play" gyorsbillentyű
-	w_Lang071 =	Használjon joystick gombot hotkey
-	w_Lang072 =	Kedvencek Macro (Ctrl+T)
-	w_Lang073 =	Bezárás Macro (Ctrl+W)
-	w_Lang074 =	Ismétlődő Macro (Ctrl+Shift+D)
-	w_Lang075 =	Import Macro (Ctrl+I)
-	w_Lang076 =	Save Current Macro (Ctrl+Alt+S)
-	w_Lang077 =	Move Up (Ctrl+PageUp)
-	w_Lang078 =	Lejjebb (Ctrl+PageDown)
-	w_Lang079 =	Kijelölt sorok másolása (Ctrl+D)
-	w_Lang080 =	Vágott Kiválasztott sorok (Ctrl+X)
-	w_Lang081 =	Kijelölt sorok másolása (Ctrl+C)
-	w_Lang082 =	Paste másolt sorok (Ctrl+V)
-	w_Lang083 =	A kijelölt sorok törlése (Del)
-	w_Lang084 =	Visszavonás (Ctrl+Z)
-	w_Lang085 =	Ismét (Ctrl+Y)
-	w_Lang086 =	Másolás...
-	w_Lang087 =	Keresés / Csere (Ctrl+F)
-	w_Lang088 =	Beszúrása / Megjegyzés szerkesztése (Ctrl+L)
-	w_Lang089 =	Szerkesztés színvédjegy (Ctrl+M)
-	w_Lang090 =	Testreszabása
-	w_Lang091 =	Keresse meg a parancsot (Ctrl+Shift+F)
-	w_Lang092 =	Szerkeszt (Enter)
-	w_Lang093 =	Elrejt
-	w_Lang094 =	Áthelyezés ide
-	w_Lang095 =	Másolás ide
-	w_Lang096 =	csoportok
-	w_Lang097 =	Engedélyezze csoportok (Ctrl+Shift+G)
-	w_Lang098 =	Add csoport (Ctrl+Shift+Y)
-	w_Lang099 =	Csoport eltávolítása (Ctrl+Shift+R)
-	w_Lang100 =	Vegye ki az összes csoport
-	w_Lang101 =	Csoportok szerkesztése
-	w_Lang102 =	Csoport név
-	w_Lang103 =	Hozzon funkció (Ctrl+Shift+U)
-	w_Lang104 =	Add Paraméter (Ctrl+Shift+P)
-	w_Lang105 =	Add Return (Ctrl+Shift+N)
-	w_Lang106 =	Convert Makró Function (Ctrl+Shift+C)
-	w_Lang107 =	Hozzászólás ki ellenőrizetlenül sorok
-	w_Lang108 =	Letöltés / Feltöltés fájlok (Shift+F11)
-	w_Lang109 =	Zip / Unzip fájlok (Ctrl+F11)
+	w_Lang043 =	Mentés másként (Ctrl+Shift+S)
+	w_Lang044 =	Exportálás AHK (Ctrl+E)
+	w_Lang045 =	Preview Script (Ctrl+P)
+	w_Lang046 =	Settings (Ctrl+G)
+	w_Lang047 =	Makró rögzítése (Ctrl+R)
+	w_Lang048 =	Activate makrók (Ctrl+Enter)
+	w_Lang049 =	Játssz Current Macro (Ctrl+Shift+Enter)
+	w_Lang050 =	Timer (Ctrl+Shift+T)
+	w_Lang051 =	Mouse (F2)
+	w_Lang052 =	Text (F3)
+	w_Lang053 =	Szerkeszteni Makrók (Ctrl+Shift+M)
+	w_Lang054 =	Control (F4)
+	w_Lang055 =	Szünet (F5)
+	w_Lang056 =	Message Box (Shift+F5)
+	w_Lang057 =	Kulcs Várakozás (Ctrl+F5)
+	w_Lang058 =	Window (F6)
+	w_Lang059 =	Image / Pixel Search (F7)
+	w_Lang060 =	Run / Fájl / String / Misc. (F8)
+	w_Lang061 =	Loop (F9)
+	w_Lang062 =	Goto (Shift+F9)
+	w_Lang063 =	Label (Ctrl+F9)
+	w_Lang064 =	Ha a nyilatkozatok (F10)
+	w_Lang065 =	Változók / Tömbök (Shift+F10)
+	w_Lang066 =	Függvények / Array módszerek (Ctrl+F10)
+	w_Lang067 =	Internet Explorer (F12)
+	w_Lang068 =	Kifejezés / COM Interface (Shift+F12)
+	w_Lang069 =	Küldjön e-mailt (F11)
+	w_Lang070 =	A Windows üzenetek (Ctrl+F12)
+	w_Lang071 =	Adja hozzá a Windows billentyű a "Play" gyorsbillentyű
+	w_Lang072 =	Használjon joystick gombot hotkey
+	w_Lang073 =	Kedvencek Macro (Ctrl+T)
+	w_Lang074 =	Bezárás Macro (Ctrl+W)
+	w_Lang075 =	Ismétlődő Macro (Ctrl+Shift+D)
+	w_Lang076 =	Import Macro (Ctrl+I)
+	w_Lang077 =	Save Current Macro (Ctrl+Alt+S)
+	w_Lang078 =	Move Up (Ctrl+PageUp)
+	w_Lang079 =	Lejjebb (Ctrl+PageDown)
+	w_Lang080 =	Kijelölt sorok másolása (Ctrl+D)
+	w_Lang081 =	Vágott Kiválasztott sorok (Ctrl+X)
+	w_Lang082 =	Kijelölt sorok másolása (Ctrl+C)
+	w_Lang083 =	Paste másolt sorok (Ctrl+V)
+	w_Lang084 =	A kijelölt sorok törlése (Del)
+	w_Lang085 =	Visszavonás (Ctrl+Z)
+	w_Lang086 =	Ismét (Ctrl+Y)
+	w_Lang087 =	Másolás...
+	w_Lang088 =	Keresés / Csere (Ctrl+F)
+	w_Lang089 =	Beszúrása / Megjegyzés szerkesztése (Ctrl+L)
+	w_Lang090 =	Szerkesztés színvédjegy (Ctrl+M)
+	w_Lang091 =	Testreszabása
+	w_Lang092 =	Keresse meg a parancsot (Ctrl+Shift+F)
+	w_Lang093 =	Szerkeszt (Enter)
+	w_Lang094 =	Elrejt
+	w_Lang095 =	Áthelyezés ide
+	w_Lang096 =	Másolás ide
+	w_Lang097 =	csoportok
+	w_Lang098 =	Engedélyezze csoportok (Ctrl+Shift+G)
+	w_Lang099 =	Add csoport (Ctrl+Shift+Y)
+	w_Lang100 =	Csoport eltávolítása (Ctrl+Shift+R)
+	w_Lang101 =	Vegye ki az összes csoport
+	w_Lang102 =	Csoportok szerkesztése
+	w_Lang103 =	Csoport név
+	w_Lang104 =	Hozzon funkció (Ctrl+Shift+U)
+	w_Lang105 =	Add Paraméter (Ctrl+Shift+P)
+	w_Lang106 =	Add Return (Ctrl+Shift+N)
+	w_Lang107 =	Convert Makró Function (Ctrl+Shift+C)
+	w_Lang108 =	Hozzászólás ki ellenőrizetlenül sorok
+	w_Lang109 =	Letöltés / Feltöltés fájlok (Shift+F11)
+	w_Lang110 =	Zip / Unzip fájlok (Ctrl+F11)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Egér
@@ -538,6 +539,7 @@
 	c_Lang244 =	Jobbról balra
 	c_Lang245 =	Mellékletek
 	c_Lang246 =	Pálya
+	c_Lang247 =	ha
 		
 ; 16. Other Windows		
 	t_Lang001 =	Exportálás AutoHotkey
@@ -741,6 +743,11 @@
 	t_Lang199 =	SSL
 	t_Lang200 =	Küldj mód
 	t_Lang201 =	Zaslat test
+	t_Lang202 =	Képernyő És Ablak
+	t_Lang203 =	Felismerni Rejtett Ablakok
+	t_Lang204 =	Felismerni Rejtett Szöveg
+	t_Lang205 =	Cím Egyezik Mód
+	t_Lang206 =	Cím Egyezik Sebesség
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Nyitva
@@ -818,7 +825,7 @@
 		Ha ki szeretné kapcsolni az automatikus ellenőrzés válassza a Help > Ellenőrizze indításkor
 	d_Lang062 =	Már így is a legújabb verzióra.
 	d_Lang063 =	Hiba történt ellenőrzés.
-	d_Lang064 =	COM objektum hiba
+	d_Lang064 =	Hiba a
 	d_Lang065 =	Sor
 	d_Lang066 =	Konkrétan
 	d_Lang067 =	Mutasd az ablakban indításkor
@@ -936,8 +943,41 @@
 	EditPaste_TT =	Paszták karakterlánc a kalap / betét pozíció
 		egy Szerkesztés-ellenőrzés (ez nem érinti
 		az a vágólap tartalmát.)
+	Ex_AF_TT =	Kihagyja a szelíd eljárás aktiválására ablak
+		és megy egyenesen az erőszakos módszer.
+	Ex_DH_TT =	Meghatározza, hogy a láthatatlan ablakok 'látott' a script.
 	Ex_EdScript_TT =	Nyílt külső szerkesztőben
+	Ex_EdVars_TT =	Válassza globális változók exportálni.
 	Ex_ExecScript_TT =	Run script
+	Ex_HK_TT =	Kényszerű használata a horog, hogy hajtsák végre
+		vagy egy billentyűzet gyorsbillentyűk.
+	Ex_IfDir_TT =	Létrehoz környezetfüggő gyorsbillentyűk és hotstrings függően
+		típusától ablak, amely aktív vagy létezik.
+	Ex_IfDirType_TT =	Létrehoz környezetfüggő gyorsbillentyűk és hotstrings függően
+		típusától ablak, amely aktív vagy létezik.
+	Ex_IN_TT =	Eszmék a szkript úgy viselkedni, mintha a megadott
+		fájl tartalmát jelen vannak ebben a pontos pozícióját.
+	Ex_MD_TT =	Megadja a késleltetést követően alakul ki
+		Minden egér mozgását és kattintson.
+	Ex_MT_TT =	Beállítja a maximális számú egyidejű
+		szálak egy gyorsbillentyűvel vagy hotstring.
+	Ex_NT_TT =	Kikapcsolja a megjelenítését a tálca ikon.
+	Ex_PT_TT =	Megtartja a szkript fut állandóan
+		(azaz, amíg a felhasználó bezárja, vagy ExitApp találkozik).
+	Ex_SB_TT =	Meghatározza, hogy milyen gyorsan egy szkript fut (hat CPU kihasználtsága.)
+	Ex_SC_TT =	Megadja a késleltetést követően alakul ki
+		Minden kontroll módosító parancsot.
+	Ex_SI_TT =	Meghatározza, hogy a szkript futhat újra, ha már fut.
+	Ex_SK_TT =	Megadja a késleltetést követően alakul ki az egyes
+		gombnyomás által küldött Send vagy ControlSend.
+	Ex_SM_TT =	Teszi Küldés szinonimájává SendInput vagy SendPlay helyett
+		Az alapértelmezett (SendEvent). Teszi Kattintson és MouseMove / Kattints / Drag
+		a megadott módszer.
+	Ex_ST_TT =	Beállítja a megfelelő viselkedését WinTitle paraméter parancsokat, mint például WinWait.
+	Ex_SW_TT =	Megadja a késleltetést követően alakul ki
+		Minden ablakozás parancsot, például WinActivate.
+	Ex_UV_TT =	Export globális változók.
+	ExpList_TT =	Kattintson duplán a szerkeszteni
 	ExprLink2_TT =	- NE CSATOLNI VARIABLES SZÁZALÉKOS JELEK ITT.
 		- A legtöbb AHK kifejezések támogatottak.
 		- Használhatja vonósok, változók, tömbök és függvények.
@@ -951,6 +991,8 @@
 	ExpView_TT =	Fejlett Szerkesztő
 	ExpView2_TT =	Fejlett Szerkesztő
 	Fast_TT =	Használ egy gyorsabb keresési módot (ajánlott)
+	HiddenWin_TT =	Meghatározza, hogy a láthatatlan ablakok "látja" a forgatókönyvet.
+	HiddenText_TT =	Meghatározza, hogy a láthatatlan szöveget egy ablak "látható" céljára találni az ablakon. Ez befolyásolja a parancsokat, mint IfWinExist és WinActivate.
 	HScale_TT =	Magasság méret
 	IconN_TT =	Száma ikon csoport
 	IfLVColor_TT =	Kattintson válasszon egy színt
@@ -986,48 +1028,6 @@
 	Screen_TT =	Koordináták relatív az asztalra (teljes képernyő).
 	Screenshot_TT =	Gyártó Screenshot
 	SetText_TT =	Megváltoztatja a szöveg egy ellenőrzés.
-	TimeoutM_TT =	0 = végtelen
-	ToggleC_TT =	Aktiválja Relatív felvételt, ha kulcsfontosságú állami be van kapcsolva.
-	TransC_TT =	Átlátszó szín
-	VarCopyA_TT =	Másolása a jelenlegi változó tartalmát
-	VarCopyB_TT =	Másolása a jelenlegi változó tartalmát
-	VariatT_TT =	Shades variációs
-	WScale_TT =	Szélesség skála
-		
-; 20. Tooltips from AHK Docs		
-	Ex_AF_TT =	Kihagyja a szelíd eljárás aktiválására ablak
-		és megy egyenesen az erőszakos módszer.
-	Ex_DH_TT =	Meghatározza, hogy a láthatatlan ablakok 'látott' a script.
-	Ex_EdVars_TT =	Válassza globális változók exportálni.
-	Ex_HK_TT =	Kényszerű használata a horog, hogy hajtsák végre
-		vagy egy billentyűzet gyorsbillentyűk.
-	Ex_IfDir_TT =	Létrehoz környezetfüggő gyorsbillentyűk és hotstrings függően
-		típusától ablak, amely aktív vagy létezik.
-	Ex_IfDirType_TT =	Létrehoz környezetfüggő gyorsbillentyűk és hotstrings függően
-		típusától ablak, amely aktív vagy létezik.
-	Ex_IN_TT =	Eszmék a szkript úgy viselkedni, mintha a megadott
-		fájl tartalmát jelen vannak ebben a pontos pozícióját.
-	Ex_MD_TT =	Megadja a késleltetést követően alakul ki
-		Minden egér mozgását és kattintson.
-	Ex_MT_TT =	Beállítja a maximális számú egyidejű
-		szálak egy gyorsbillentyűvel vagy hotstring.
-	Ex_NT_TT =	Kikapcsolja a megjelenítését a tálca ikon.
-	Ex_PT_TT =	Megtartja a szkript fut állandóan
-		(azaz, amíg a felhasználó bezárja, vagy ExitApp találkozik).
-	Ex_SB_TT =	Meghatározza, hogy milyen gyorsan egy szkript fut (hat CPU kihasználtsága.)
-	Ex_SC_TT =	Megadja a késleltetést követően alakul ki
-		Minden kontroll módosító parancsot.
-	Ex_SI_TT =	Meghatározza, hogy a szkript futhat újra, ha már fut.
-	Ex_SK_TT =	Megadja a késleltetést követően alakul ki az egyes
-		gombnyomás által küldött Send vagy ControlSend.
-	Ex_SM_TT =	Teszi Küldés szinonimájává SendInput vagy SendPlay helyett
-		Az alapértelmezett (SendEvent). Teszi Kattintson és MouseMove / Kattints / Drag
-		a megadott módszer.
-	Ex_ST_TT =	Beállítja a megfelelő viselkedését WinTitle paraméter parancsokat, mint például WinWait.
-	Ex_SW_TT =	Megadja a késleltetést követően alakul ki
-		Minden ablakozás parancsot, például WinActivate.
-	Ex_UV_TT =	Export globális változók.
-	ExpList_TT =	Kattintson duplán a szerkeszteni
 	SI_TT =	A szó FORCE kihagyja a párbeszédpanelt, és felváltja a régi példány automatikusan
 		ami hasonló hatással van a Reload parancsot.
 		A szó IGNORE átugorja a párbeszédpanelt, és elhagyja a régi példány fut.
@@ -1044,8 +1044,21 @@
 		2: Egy ablak címét is tartalmazhat WinTitle bárhol benne, hogy a mérkőzés.
 		3: Egy ablak címét pontosan meg kell egyeznie WinTitle hogy egy meccs.
 		RegEx: Változások WinTitle, WinText, ExcludeTitle és ExcludeText legyen reguláris kifejezések.
+	TimeoutM_TT =	0 = végtelen
+	TitleMatch_TT =	1: Egy ablak címét kell kezdeni a megadott WinTitle hogy a mérkőzés.
+		2: Egy ablak címét tartalmazhat WinTitle bárhova, hogy legyen a mérkőzés.
+		3: Egy ablak címét pontosan meg kell egyeznie WinTitle hogy a mérkőzés.
+		RegEx: Változások WinTitle, WinText, kizárása cím és kizárása szöveget reguláris kifejezéseket.
+	TitleSpeed_TT =	Gyors: Ez az alapértelmezett viselkedés. A teljesítmény lényegesen jobb, mint a lassú, de biztos WinText elemek bizonyos típusú ablakok nem "látható" a különböző ablak parancsokat.
+		Lassú: Lehet, hogy sokkal lassabb, de minden lehetséges WinText visszakeresődik minden ablak windowing parancs megkeresi azokat a mérkőzés. Ablak Spy kiderül mely részeit ablak szövege (ha van ilyen) megkövetelik a lassú üzemmódot.
+	ToggleC_TT =	Aktiválja Relatív felvételt, ha kulcsfontosságú állami be van kapcsolva.
+	TransC_TT =	Átlátszó szín
+	VarCopyA_TT =	Másolása a jelenlegi változó tartalmát
+	VarCopyB_TT =	Másolása a jelenlegi változó tartalmát
+	VariatT_TT =	Shades variációs
+	WScale_TT =	Szélesség skála
 		
-; 21. Operators		
+; 20. Operators		
 	As_Oper_1 =	Hozzárendelése
 	As_Oper_2 =	Hozzáad
 	As_Oper_3 =	Levon
@@ -1065,8 +1078,16 @@
 	Co_Oper_5 =	Kevesebb
 	Co_Oper_6 =	Nagyobb vagy egyenlő
 	Co_Oper_7 =	Kisebb vagy egyenlő
+	Co_Oper_8 =	In (lista)
+	Co_Oper_9 =	 Nincs (lista)
+	Co_Oper_10 =	 Tartalmaz (lista)
+	Co_Oper_11 =	 Nem tartalmaz (lista)
+	Co_Oper_12 =	 Között (1-es vonal) és a (2-es vonal)
+	Co_Oper_13 =	 Nem között (1-es vonal) és a (2-es vonal)
+	Co_Oper_14 =	 Is (típus)
+	Co_Oper_15 =	 Nem (típus)
 		
-; 22. IE Commands Tips		
+; 21. IE Commands Tips		
 	IE_Cmd_Index =	
 	Checked	Beállítja vagy beolvassa az állam a jelölőnégyzet vagy rádió gombot.
 	Click	Szimulál egy kattintás az objektumra.
@@ -1094,7 +1115,7 @@
 	Value	Gets vagy beállítja az értékét a tárgy.
 	Width	Beállítja vagy visszaadja a szélessége az objektum.
 		
-; 23. COM Methods Tips		
+; 22. COM Methods Tips		
 	COM_CLSID_Index =	
 	Excel.Application	Manipulálja Excel táblák.
 	HTMLfile	Lehet használni, hogy írni, olvasni és kölcsönhatásba HTML.
@@ -1117,7 +1138,7 @@
 	WScript.Shell	Különböző adminisztrációs feladatokat (sok natív AHK feladatok).
 	Word.Application	Manipulálja a Word dokumentumokat.
 		
-; 24. AHK Commands Tips		
+; 23. AHK Commands Tips		
 	Ahk_Cmd_Index =	
 	Abs	Abszolút értékét a számot.
 	ACos	Arkusz koszinuszát adja (a szám, amelynek koszinusz is Number) radiánban.
