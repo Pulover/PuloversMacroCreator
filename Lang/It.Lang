@@ -350,7 +350,7 @@
 	c_Lang054 =	(Millisecondi) 0 = infinito
 	c_Lang055 =	Comando
 	c_Lang056 =	Valore
-	c_Lang057 =	Di uscita variabile
+	c_Lang057 =	Di Uscita Variabile
 	c_Lang058 =	Posizione
 	c_Lang059 =	Dimensione
 	c_Lang060 =	4 variabili verrà creato con questo prefisso e terminano con X, Y, W, H.
@@ -362,7 +362,7 @@
 	c_Lang066 =	Wait Chiave
 	c_Lang067 =	Se trovato
 	c_Lang068 =	Se non trovato / Errore
-	c_Lang069 =	Coordinate memorizzato in%FoundX%/%FoundY%.
+	c_Lang069 =	variabili di uscita
 	c_Lang070 =	Coord
 	c_Lang071 =	Variazioni
 	c_Lang072 =	Anteprima

@@ -1402,13 +1402,15 @@ PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars, CustomVars, Runnin
 	pb_PixelSearch:
 		CoordMode, Pixel, %Window%
 		PixelSearch, FoundX, FoundY, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%, %Par6%, %Par7%
-		SearchResult := ErrorLevel
+		OutVarX := Act3, OutVarY := Act4, %OutVarX% := FoundX, %OutVarY% := FoundY
+	,	SearchResult := ErrorLevel
 		GoSub, TakeAction
 	return TakeAction
 	pb_ImageSearch:
 		CoordMode, Pixel, %Window%
 		ImageSearch, FoundX, FoundY, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%
-		SearchResult := ErrorLevel
+		OutVarX := Act3, OutVarY := Act4, %OutVarX% := FoundX, %OutVarY% := FoundY
+	,	SearchResult := ErrorLevel
 		GoSub, TakeAction
 	return TakeAction
 	pb_SendMessage:

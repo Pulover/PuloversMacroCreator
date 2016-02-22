@@ -350,7 +350,7 @@
 	c_Lang054 =	(Miliseconds) 0 = tidak terhingga
 	c_Lang055 =	Perintah
 	c_Lang056 =	Nilai
-	c_Lang057 =	Pembolehubah output
+	c_Lang057 =	Pembolehubah Output
 	c_Lang058 =	Kedudukan
 	c_Lang059 =	Saiz
 	c_Lang060 =	4 pembolehubah akan diwujudkan dengan awalan ini dan berakhir dengan X, Y, W, H.
@@ -362,7 +362,7 @@
 	c_Lang066 =	Tunggu Utama
 	c_Lang067 =	Jika didapati
 	c_Lang068 =	Jika tidak ditemui / Ralat
-	c_Lang069 =	Coords disimpan untuk %FoundX%/%FoundY%.
+	c_Lang069 =	pembolehubah output
 	c_Lang070 =	Coord
 	c_Lang071 =	Variasi
 	c_Lang072 =	Preview

@@ -350,7 +350,7 @@
 	c_Lang054 =	(Miliseconds) 0 = vô hạn
 	c_Lang055 =	Lệnh
 	c_Lang056 =	Giá trị
-	c_Lang057 =	Biến đầu ra
+	c_Lang057 =	Biến Đầu Ra
 	c_Lang058 =	Chức vụ
 	c_Lang059 =	Kích thước
 	c_Lang060 =	4 biến sẽ được tạo ra với tiền tố này và kết thúc với X, Y, W, H.
@@ -362,7 +362,7 @@
 	c_Lang066 =	Chờ chính
 	c_Lang067 =	Nếu tìm thấy
 	c_Lang068 =	Nếu không tìm thấy / Lỗi
-	c_Lang069 =	Coords lưu trữ để %FoundX%/%FoundY%.
+	c_Lang069 =	biến đầu ra
 	c_Lang070 =	Coord
 	c_Lang071 =	Biến thể
 	c_Lang072 =	Xem trước

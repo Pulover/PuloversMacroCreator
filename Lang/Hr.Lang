@@ -350,7 +350,7 @@
 	c_Lang054 =	(Miliseconds) 0 = beskonačno
 	c_Lang055 =	Naredba
 	c_Lang056 =	Vrijednost
-	c_Lang057 =	Izlazna varijabla
+	c_Lang057 =	Izlazna Varijabla
 	c_Lang058 =	Položaj
 	c_Lang059 =	Veličina
 	c_Lang060 =	4 varijable će biti kreiran s ovim prefiksom, a završava s X, Y, W, H
@@ -362,7 +362,7 @@
 	c_Lang066 =	Ključ Čekati
 	c_Lang067 =	Ako se utvrdi da
 	c_Lang068 =	Ako nije pronađen Greška /
-	c_Lang069 =	Coords pohranjeni FoundX u %FoundX%/%FoundY%.
+	c_Lang069 =	Izlazne varijable
 	c_Lang070 =	Coord
 	c_Lang071 =	Varijacije
 	c_Lang072 =	Pregled

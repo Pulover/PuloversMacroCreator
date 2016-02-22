@@ -350,7 +350,7 @@
 	c_Lang054 =	(Milisekundah) 0 = neskončno
 	c_Lang055 =	Ukaz
 	c_Lang056 =	Vrednost
-	c_Lang057 =	Izhodna spremenljivka
+	c_Lang057 =	Izhodna Spremenljivka
 	c_Lang058 =	Položaj
 	c_Lang059 =	Velikost
 	c_Lang060 =	4 spremenljivke bo ustvarjena s to predpono in konča z X, Y, W, H.
@@ -362,7 +362,7 @@
 	c_Lang066 =	Ključ Počakaj
 	c_Lang067 =	Če se ugotovi,
 	c_Lang068 =	Če ni mogoče najti / zmota
-	c_Lang069 =	Coords shranjeni v %FoundX%/%FoundY% funtov.
+	c_Lang069 =	izhodne spremenljivke
 	c_Lang070 =	Coord
 	c_Lang071 =	Variacije
 	c_Lang072 =	Predogled

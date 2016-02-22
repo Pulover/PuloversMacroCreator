@@ -6385,7 +6385,7 @@ Else If (LParse = 1)
 		z_Check := VarSetCapacity(%LParamsFile%)
 	Catch
 	{
-		MsgBox, 16, %d_Lang007%, %d_Lang041%
+		MsgBox, 16, %d_Lang007%, %d_Lang041%`n`n%LParamsFile%
 		return
 	}
 	EscCom(false, Delim), EscCom(false, Omit)
@@ -6965,7 +6965,7 @@ If (InStr(WinCom, "Get"))
 		z_Check := VarSetCapacity(%VarName%)
 	Catch
 	{
-		MsgBox, 16, %d_Lang007%, %d_Lang041%
+		MsgBox, 16, %d_Lang007%, %d_Lang041%`n`n%VarName%
 		return
 	}
 	If (WinCom = "WinGet")
@@ -7164,7 +7164,11 @@ Gui, 19:Add, DDL, yp-2 x+10 W80 vIfFound gIfFound, Continue||Break|Stop|Prompt|M
 Gui, 19:Add, Text, -Wrap R1 y+5 xs+10 W163 Right, %c_Lang068%:
 Gui, 19:Add, DDL, yp-2 x+10 W80 vIfNotFound, Continue||Break|Stop|Prompt|Play Sound
 Gui, 19:Add, CheckBox, Checked -Wrap y+0 xs+10 W180 vAddIf, %c_Lang162%
-Gui, 19:Add, Text, -Wrap y+5 xs+10 W250 r1 cGray, %c_Lang069%
+Gui, 19:Add, Text, -Wrap y+5 xs+10 W95 R1 vOutVarT, %c_Lang069%
+Gui, 19:Add, Text, yp x+0 R1, X:
+Gui, 19:Add, Edit, yp-5 x+5 W60 H20 vOutVarX, FoundX
+Gui, 19:Add, Text, yp+5 x+10 R1, Y:
+Gui, 19:Add, Edit, yp-5 x+5 W60 H20 vOutVarY, FoundY
 ; Preview
 Gui, 19:Add, Groupbox, Section ym xs+280 W275 H240, %c_Lang072%:
 Gui, 19:Add, Pic, ys+20 xs+10 W255 H200 0x100 vPicPrev gPicOpen
@@ -7215,10 +7219,16 @@ If (s_Caller = "Edit")
 	GuiControl, 19:, EdRept, %TimesX%
 	GuiControl, 19:, DelayX, %DelayX%
 	GuiControl, 19:, DelayC, %DelayX%
+	Loop, 4
+		Act%A_Index% := ""
 	Loop, Parse, Action, `,,%A_Space%
 		Act%A_Index% := A_LoopField
 	GuiControl, 19:ChooseString, IfFound, %Act1%
 	GuiControl, 19:ChooseString, IfNotFound, %Act2%
+	If (Act3 != "")
+		GuiControl, 19:, OutVarX, %Act3%
+	If (Act4 != "")
+		GuiControl, 19:, OutVarY, %Act4%
 	Loop, Parse, Details, `,,%A_Space%
 		Det%A_Index% := A_LoopField
 	If (Type = cType16)
@@ -7297,13 +7307,34 @@ If (ImgFile = "")
 	GuiControl, 19:Focus, ImgFile
 	return
 }
+If ((OutVarX = "") || (OutVarY = ""))
+{
+	Gui, 10:Font, cRed
+	GuiControl, 10:Font, OutVarT
+	GuiControl, 10:Focus, OutVarX
+	return
+}
+Try
+	z_Check := VarSetCapacity(%OutVarX%)
+Catch
+{
+	MsgBox, 16, %d_Lang007%, %d_Lang041%`n`n%OutVarX%
+	return
+}
+Try
+	z_Check := VarSetCapacity(%OutVarY%)
+Catch
+{
+	MsgBox, 16, %d_Lang007%, %d_Lang041%`n`n%OutVarY%
+	return
+}
 DelayX := InStr(DelayC, "%") ? DelayC : DelayX
 If (Sec = 1)
 	DelayX *= 1000
 TimesX := InStr(EdRept, "%") ? EdRept : TimesX
 If (TimesX = 0)
 	TimesX := 1
-Action := IfFound "`, " IfNotFound
+Action := IfFound "`, " IfNotFound ", " OutVarX ", " OutVarY
 If (ImageS = 1)
 {
 	ImgOptions := ""
@@ -7675,7 +7706,7 @@ Loop, 11
 			z_Check := VarSetCapacity(%VarName%)
 		Catch
 		{
-			MsgBox, 16, %d_Lang007%, %d_Lang041%
+			MsgBox, 16, %d_Lang007%, %d_Lang041%`n`n%VarName%
 			return
 		}
 	}
@@ -8134,7 +8165,7 @@ If (InStr(Statement, "Compare"))
 		z_Check := VarSetCapacity(%TestVar%)
 	Catch
 	{
-		MsgBox, 16, %d_Lang007%, %d_Lang041%
+		MsgBox, 16, %d_Lang007%, %d_Lang041%`n`n%TestVar%
 		return
 	}
 	TestVar := TestVar " " IfOper " " TestVar2
@@ -8145,7 +8176,7 @@ Else If (InStr(Statement, "String"))
 		z_Check := VarSetCapacity(%TestVar%)
 	Catch
 	{
-		MsgBox, 16, %d_Lang007%, %d_Lang041%
+		MsgBox, 16, %d_Lang007%, %d_Lang041%`n`n%TestVar%
 		return
 	}
 	TestVar := TestVar ", " TestVar2
@@ -8261,7 +8292,7 @@ If (RegExMatch(VarName, "^(\w+)(\[\S+\]|\.\w+)+", lMatch))
 		z_Check := VarSetCapacity(%lMatch1%)
 	Catch
 	{
-		MsgBox, 16, %d_Lang007%, %d_Lang041%
+		MsgBox, 16, %d_Lang007%, %d_Lang041%`n`n%lMatch1%
 		return
 	}
 }
@@ -8271,7 +8302,7 @@ Else
 		z_Check := VarSetCapacity(%VarName%)
 	Catch
 	{
-		MsgBox, 16, %d_Lang007%, %d_Lang041%
+		MsgBox, 16, %d_Lang007%, %d_Lang041%`n`n%VarName%
 		return
 	}
 }
@@ -8853,7 +8884,7 @@ If ((ControlCmd = cType23) || (ControlCmd = cType27)
 		z_Check := VarSetCapacity(%VarName%)
 	Catch
 	{
-		MsgBox, 16, %d_Lang007%, %d_Lang041%
+		MsgBox, 16, %d_Lang007%, %d_Lang041%`n`n%VarName%
 		return
 	}
 	If (ControlCmd = cType28)
@@ -9342,7 +9373,7 @@ If (Get)
 			z_Check := VarSetCapacity(%lMatch1%)
 		Catch
 		{
-			MsgBox, 16, %d_Lang007%, %d_Lang041%
+			MsgBox, 16, %d_Lang007%, %d_Lang041%`n`n%lMatch1%
 			return
 		}
 	}
@@ -9352,7 +9383,7 @@ If (Get)
 			z_Check := VarSetCapacity(%Value%)
 		Catch
 		{
-			MsgBox, 16, %d_Lang007%, %d_Lang041%
+			MsgBox, 16, %d_Lang007%, %d_Lang041%`n`n%Value%
 			return
 		}
 	}
@@ -9436,7 +9467,7 @@ If (CreateComObj)
 		z_Check := VarSetCapacity(%ComHwnd%)
 	Catch
 	{
-		MsgBox, 16, %d_Lang007%, %d_Lang041%
+		MsgBox, 16, %d_Lang007%, %d_Lang041%`n`n%ComHwnd%
 		return
 	}
 	Action := ComHwnd, Type := cType34, Target := ComCLSID
@@ -9574,7 +9605,7 @@ Try
 	z_Check := VarSetCapacity(%ComHwnd%)
 Catch
 {
-	MsgBox, 16, %d_Lang007%, %d_Lang041%
+	MsgBox, 16, %d_Lang007%, %d_Lang041%`n`n%ComHwnd%
 	return
 }
 %ComHwnd% := "", Title := ""
@@ -10038,7 +10069,7 @@ If (TabControl = 2)
 		z_Check := VarSetCapacity(%ParamName%)
 	Catch
 	{
-		MsgBox, 16, %d_Lang007%, %d_Lang041%
+		MsgBox, 16, %d_Lang007%, %d_Lang041%`n`n%ParamName%
 		return
 	}
 	If (DefaultValue != "")

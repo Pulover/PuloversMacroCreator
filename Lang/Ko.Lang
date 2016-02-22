@@ -362,7 +362,7 @@
 	c_Lang066 =	키 대기
 	c_Lang067 =	발견하는 경우
 	c_Lang068 =	/ 오류를 발견하지 않은 경우
-	c_Lang069 =	Coords는 %FoundX%/%FoundY%로 저장됩니다.
+	c_Lang069 =	출력 변수
 	c_Lang070 =	Coord
 	c_Lang071 =	유사
 	c_Lang072 =	시사

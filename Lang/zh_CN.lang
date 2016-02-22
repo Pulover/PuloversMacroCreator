@@ -362,7 +362,7 @@
 	c_Lang066 =	等待按键
 	c_Lang067 =	如果找到
 	c_Lang068 =	如果未找到或出错
-	c_Lang069 =	坐标保存在%FoundX%/%FoundY%。
+	c_Lang069 =	输出变量
 	c_Lang070 =	坐标
 	c_Lang071 =	变体
 	c_Lang072 =	预览

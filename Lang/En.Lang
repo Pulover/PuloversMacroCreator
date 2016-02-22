@@ -362,7 +362,7 @@
 	c_Lang066 =	Key Wait
 	c_Lang067 =	If found
 	c_Lang068 =	If not found / Error
-	c_Lang069 =	Coords stored to %FoundX%/%FoundY%.
+	c_Lang069 =	Output variables
 	c_Lang070 =	Coord
 	c_Lang071 =	Variations
 	c_Lang072 =	Preview

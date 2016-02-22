@@ -350,7 +350,7 @@
 	c_Lang054 =	(Ezredmásodperc) 0 = végtelen
 	c_Lang055 =	Parancs
 	c_Lang056 =	Érték
-	c_Lang057 =	Kimeneti változó
+	c_Lang057 =	Kimeneti Változó
 	c_Lang058 =	Pozíció
 	c_Lang059 =	Méret
 	c_Lang060 =	4 változó jön létre ezt az előtagot, és befejezve X, Y, W, H.
@@ -362,7 +362,7 @@
 	c_Lang066 =	Kulcs Várakozás
 	c_Lang067 =	Ha talált
 	c_Lang068 =	Ha nem talált / Error
-	c_Lang069 =	Koordináták tárolt %FoundX%/%FoundY%.
+	c_Lang069 =	kimeneti változókat
 	c_Lang070 =	Coord
 	c_Lang071 =	Változatok
 	c_Lang072 =	Előnézet

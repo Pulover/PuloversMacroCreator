@@ -350,7 +350,7 @@
 	c_Lang054 =	(milisegundos) 0 = infinito
 	c_Lang055 =	Comando
 	c_Lang056 =	Valor
-	c_Lang057 =	Nome da Variável
+	c_Lang057 =	Variável De Saída
 	c_Lang058 =	Posição
 	c_Lang059 =	Tamanho
 	c_Lang060 =	Serão criadas 4 variáveis com este prefixo e terminadas em X, Y, W, H.
@@ -362,7 +362,7 @@
 	c_Lang066 =	Esperar Tecla
 	c_Lang067 =	Se encontrada
 	c_Lang068 =	Se não encontrada / Erro
-	c_Lang069 =	Coords gravadas em %FoundX%/%FoundY%.
+	c_Lang069 =	Variáveis de saída
 	c_Lang070 =	Coord
 	c_Lang071 =	Variações
 	c_Lang072 =	Pré-Visualização

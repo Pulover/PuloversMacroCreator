@@ -350,7 +350,7 @@
 	c_Lang054 =	(Millisecondes) 0 = infini
 	c_Lang055 =	Commandement
 	c_Lang056 =	Valeur
-	c_Lang057 =	Variable de sortie
+	c_Lang057 =	Variable De Sortie
 	c_Lang058 =	Position
 	c_Lang059 =	Taille
 	c_Lang060 =	4 variables seront créés par ce préfixe et se terminant par X, Y, W, H.
@@ -362,7 +362,7 @@
 	c_Lang066 =	Attente Touche
 	c_Lang067 =	S'il est trouvé
 	c_Lang068 =	S'il n'est pas trouvé d'erreur /
-	c_Lang069 =	Coords stockées en %FoundX%/%FoundY%.
+	c_Lang069 =	Les variables de sortie
 	c_Lang070 =	Coord
 	c_Lang071 =	Variations
 	c_Lang072 =	Avant-première

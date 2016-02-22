@@ -185,10 +185,14 @@
 		}
 		Else If ((Type = cType15) || (Type = cType16))
 		{
-			RowData := "`nCoordMode, Pixel, " Window
-		,	RowData .= "`n" Type ", FoundX, FoundY, " Step
+			Loop, 4
+				Act%A_Index% := ""
 			Loop, Parse, Action, `,,%A_Space%
 				Act%A_Index% := A_LoopField
+			OutVarX := Act3 != "" ? Act3 : "FoundX"
+		,	OutVarY := Act4 != "" ? Act4 : "FoundY"
+		,	RowData := "`nCoordMode, Pixel, " Window
+		,	RowData .= "`n" Type ", " OutVarX ", " OutVarY ", " Step
 			If (Act1 != "Continue")
 			{
 				RowData .= "`nIf ErrorLevel = 0"
@@ -197,15 +201,15 @@
 				Else If (Act1 = "Stop")
 					RowData .= "`n`tReturn"
 				Else If (Act1 = "Move")
-					RowData .= "`n`tClick, %FoundX%, %FoundY%, 0"
+					RowData .= "`n`tClick, %" OutVarX "%, %" OutVarY "%, 0"
 				Else If (InStr(Act1, "Click"))
 				{
 					Loop, Parse, Act1, %A_Space%
 						Action%A_Index% := A_LoopField
-					RowData .= "`n`tClick, %FoundX%, %FoundY% " Action1 ", 1"
+					RowData .= "`n`tClick, %" OutVarX "%, %" OutVarY "% " Action1 ", 1"
 				}
 				Else If (Act1 = "Prompt")
-					RowData .= "`n{`nMsgBox, 49, " d_Lang035 ", " d_Lang036 " %FoundX%x%FoundY%.``n" d_Lang038 "`nIfMsgBox, Cancel`n`tReturn`n}"
+					RowData .= "`n{`nMsgBox, 49, " d_Lang035 ", " d_Lang036 " %" OutVarX "%x%" OutVarY "%.``n" d_Lang038 "`nIfMsgBox, Cancel`n`tReturn`n}"
 				Else If (Act1 = "Play Sound")
 					RowData .= "`n`tSoundBeep"
 			}

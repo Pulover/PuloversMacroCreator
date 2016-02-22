@@ -350,7 +350,7 @@
 	c_Lang054 =	(Milisekundy) 0 = nieskończony
 	c_Lang055 =	Komenda
 	c_Lang056 =	Wartość
-	c_Lang057 =	Zmienna wyjściowa
+	c_Lang057 =	Zmienna Wyjściowa
 	c_Lang058 =	Stanowisko
 	c_Lang059 =	Rozmiar
 	c_Lang060 =	4 zmienne będą tworzone z tego prefiksu, a kończąc na X, Y, W, H.
@@ -362,7 +362,7 @@
 	c_Lang066 =	Key Czekać
 	c_Lang067 =	Jeśli stwierdzono
 	c_Lang068 =	Jeśli nie znaleziono / błąd
-	c_Lang069 =	Coords przechowywane na %FoundX%/%FoundY%.
+	c_Lang069 =	zmienne wyjściowe
 	c_Lang070 =	Coord
 	c_Lang071 =	Odmiany
 	c_Lang072 =	Podgląd

@@ -350,7 +350,7 @@
 	c_Lang054 =	(Milisekúnd) 0 = nekonečno
 	c_Lang055 =	Príkaz
 	c_Lang056 =	Hodnota
-	c_Lang057 =	Výstupné premenné
+	c_Lang057 =	Výstupné Premenné
 	c_Lang058 =	Pozícia
 	c_Lang059 =	Veľkosť
 	c_Lang060 =	4 premenné budú vytvorené s touto predponou končiac X, Y, W, H.
@@ -362,7 +362,7 @@
 	c_Lang066 =	Počkajte Key
 	c_Lang067 =	Ak nájdených
 	c_Lang068 =	Ak nie je nájdený / Chyba
-	c_Lang069 =	Súradnice uložené na %FoundX%/%FoundY%.
+	c_Lang069 =	výstupné premenné
 	c_Lang070 =	Coord
 	c_Lang071 =	Variácie
 	c_Lang072 =	Náhľad

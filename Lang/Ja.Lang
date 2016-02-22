@@ -362,7 +362,7 @@
 	c_Lang066 =	キー待ち
 	c_Lang067 =	見つけたら
 	c_Lang068 =	/エラーが見つからない場合
-	c_Lang069 =	COORDSは、 %FoundX%/%FoundY%に格納されている。
+	c_Lang069 =	出力変数
 	c_Lang070 =	座標
 	c_Lang071 =	バリエーション
 	c_Lang072 =	プレビュー

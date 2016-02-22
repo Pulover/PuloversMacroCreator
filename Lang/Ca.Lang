@@ -350,7 +350,7 @@
 	c_Lang054 =	(Milisegons) 0 = infinit
 	c_Lang055 =	Comando
 	c_Lang056 =	Valor
-	c_Lang057 =	Variable de sortida
+	c_Lang057 =	Variable De Sortida
 	c_Lang058 =	Posició
 	c_Lang059 =	Mida
 	c_Lang060 =	4 variables es creen amb aquest prefix i acabant amb X, Y, W, H.
@@ -362,7 +362,7 @@
 	c_Lang066 =	Espera Clau
 	c_Lang067 =	Si es troba
 	c_Lang068 =	Si no el troba / Error
-	c_Lang069 =	Coordenades emmagatzemat per %FoundX%/%FoundY%.
+	c_Lang069 =	variables de sortida
 	c_Lang070 =	Coord
 	c_Lang071 =	Variacions
 	c_Lang072 =	Avanç
