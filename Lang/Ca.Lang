@@ -119,23 +119,24 @@
 	v_Lang005 =	A&vanç
 	v_Lang006 =	Ba&rres D'eines
 	v_Lang007 =	&Tecles D'accés Ràpid
-	v_Lang008 =	R&establir mida de les columnes
-	v_Lang009 =	&Mida De Les Icones
-	v_Lang010 =	Restab&lir Disseny
-	v_Lang011 =	&Expedient
-	v_Lang012 =	&Gravar i reproduir
-	v_Lang013 =	&Ordres
-	v_Lang014 =	&Modifica
-	v_Lang015 =	O&pcions
-	v_Lang016 =	Pe&rsonalitzar
-	v_Lang017 =	&Automàtic
-	v_Lang018 =	&Manual
-	v_Lang019 =	A&turi
-	v_Lang020 =	&Pausa
-	v_Lang021 =	&Compacte
-	v_Lang022 =	&Defecte
-	v_Lang023 =	&Menor
-	v_Lang024 =	&Gran
+	v_Lang008 =	Barra &De Cerca
+	v_Lang009 =	R&establir mida de les columnes
+	v_Lang010 =	&Mida De Les Icones
+	v_Lang011 =	Restab&lir Disseny
+	v_Lang012 =	E&xpedient
+	v_Lang013 =	&Gravar i reproduir
+	v_Lang014 =	&Ordres
+	v_Lang015 =	Mod&ifica
+	v_Lang016 =	O&pcions
+	v_Lang017 =	Perso&nalitzar
+	v_Lang018 =	A&utomàtic
+	v_Lang019 =	Manual
+	v_Lang020 =	Aturi
+	v_Lang021 =	Pausa
+	v_Lang022 =	&Compacte
+	v_Lang023 =	Defecte
+	v_Lang024 =	Menor
+	v_Lang025 =	Gran
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Configuració
@@ -292,6 +293,7 @@
 	w_Lang108 =	Comenteu files sense marcar
 	w_Lang109 =	Descàrrega de fitxers / Pujar (Shift+F11)
 	w_Lang110 =	Zip / descomprimir arxius (Ctrl+F11)
+	w_Lang111 =	Cercar... (Premeu Retorn per anar)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Ratolí
@@ -888,6 +890,7 @@
 	d_Lang112 =	E-postkonto inte hittas.
 	d_Lang113 =	Informa de cap error.
 	d_Lang114 =	Skriptejä viedään (vaikka käännetty) kanssa lähetä sähköpostia toiminto (CDO) on näkyvissä merkintä sähköpostitilejä käytetään, mukaan lukien salasana. PMC Projektitiedosto ei ole tätä tietoa.
+	d_Lang115 =	- Mantingui Alt regió per establir en la mateixa ubicació.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Podeu crear macros utilitzant els botons de comandament a la finestra principal o l'ús de la gravadora per copiar les seves accions. Aneu a Opcions> Configuració> Gravació per seleccionar el que es registren les entrades.
@@ -1249,7 +1252,7 @@
 	If var [not] between	Comprova si el contingut d'una variable són numèricament o alfabèticament entre dos valors (inclosos) .
 	If var [not] in/contains MatchList 	Comprova si el contingut d'una variable coincideixen amb un dels elements d'una llista .
 	If var is [not] type	Comprova si el contingut d'una variable són numèrics , majúscules , etc
-	IfEqual/IfNotEqual	Compara una variable en un valor de la igualtat . Sinònim : si Var = Valor | si Var < > Value .
+	IfEqual / IfNotEqual	Compara una variable en un valor de la igualtat . Sinònim : si Var = Valor | si Var < > Value .
 	IfExist / IfNotExist / FileExist	Comprova l'existència d'un fitxer o carpeta .
 	IfGreater / IfGreaterOrEqual	Compara una variable a un valor . Sinònim : si Var > Valor | si Var > = Valor .
 	IfInString / IfNotInString / InStr	Comprova si una variable conté la cadena especificada .

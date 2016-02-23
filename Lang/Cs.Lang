@@ -119,23 +119,24 @@
 	v_Lang005 =	&Náhled
 	v_Lang006 =	&Panely Nástrojů
 	v_Lang007 =	&Klávesové Zkratky
-	v_Lang008 =	O&bnovit sloupce Velikost
-	v_Lang009 =	&Ikony Velikost
-	v_Lang010 =	Obnovi&t Rozložení
-	v_Lang011 =	&Soubor
-	v_Lang012 =	&Nahrávat a přehrávat
-	v_Lang013 =	&Příkazy
-	v_Lang014 =	&Editovat
-	v_Lang015 =	&Možnosti
-	v_Lang016 =	&Vlastní
-	v_Lang017 =	&Automatický
-	v_Lang018 =	&Manuál
-	v_Lang019 =	&Zastavit
-	v_Lang020 =	&Pauza
-	v_Lang021 =	&Kompaktní
-	v_Lang022 =	&Standardní
-	v_Lang023 =	&Malý
-	v_Lang024 =	&Velký
+	v_Lang008 =	V&yhledávací Panel
+	v_Lang009 =	O&bnovit sloupce Velikost
+	v_Lang010 =	&Ikony Velikost
+	v_Lang011 =	Obnovi&t Rozložení
+	v_Lang012 =	&Soubor
+	v_Lang013 =	N&ahrávat a přehrávat
+	v_Lang014 =	P&říkazy
+	v_Lang015 =	&Editovat
+	v_Lang016 =	&Možnosti
+	v_Lang017 =	Vlastn&í
+	v_Lang018 =	A&utomatický
+	v_Lang019 =	Manu&ál
+	v_Lang020 =	Zastavit
+	v_Lang021 =	Pauza
+	v_Lang022 =	Kompaktní
+	v_Lang023 =	Stan&dardní
+	v_Lang024 =	Mal&ý
+	v_Lang025 =	Velký
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Nastavení
@@ -292,6 +293,7 @@
 	w_Lang108 =	Komentář mimo nezkontrolované řádků
 	w_Lang109 =	Download / upload souborů (Shift+F11)
 	w_Lang110 =	Zip / rozbalení souborů (Ctrl+F11)
+	w_Lang111 =	Vyhledávání... (Klávesou Enter prejdete)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Myš
@@ -888,6 +890,7 @@
 	d_Lang112 =	E-mailový účet nebyl nalezen.
 	d_Lang113 =	Hlášena žádná chyba.
 	d_Lang114 =	Skripte izvoze (čak i ako je sastavljen) s funkcijom poslati e-mail (CDO) će imati vidljive informacije o računima e-pošte koristi, uključujući i lozinke. Projekt datoteka PMC nema tu informaciju.
+	d_Lang115 =	- Podržte Alt nastavit region na stejném místě.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Můžete vytvářet makra pomocí příkazových tlačítek v hlavním okně, nebo pomocí rekordéru kopírovat své akce. Přejít na Možnosti > Nastavení > Nahrávání na vstupy vybrat, co budou zaznamenány.
@@ -1249,7 +1252,7 @@
 	If var [not] between	Kontroly , zda proměnná je obsahem jsou číselně nebo abecedně mezi dvěma hodnotami (včetně) .
 	If var [not] in/contains MatchList 	Kontroly , zda proměnná je obsahem odpovídat na jednu z položek v seznamu.
 	If var is [not] type	Zkontroluje, zda proměnná je obsah jsou číselné , velká , atd.
-	IfEqual/IfNotEqual	Porovná proměnnou na hodnotu pro rovnost. Synonymem : pokud Var = hodnota | pokud Var <> hodnota .
+	IfEqual / IfNotEqual	Porovná proměnnou na hodnotu pro rovnost. Synonymem : pokud Var = hodnota | pokud Var <> hodnota .
 	IfExist / IfNotExist / FileExist	Kontroly na existenci souboru nebo složky .
 	IfGreater / IfGreaterOrEqual	Porovná proměnnou hodnotu . Synonymem : pokud Var > hodnota | pokud Var > = hodnota .
 	IfInString / IfNotInString / InStr	Zkontroluje, zda proměnná obsahuje zadaný řetězec .

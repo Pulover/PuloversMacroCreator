@@ -119,23 +119,24 @@
 	v_Lang005 =	预览(&P)
 	v_Lang006 =	工具栏(&T)
 	v_Lang007 =	热键(&O)
-	v_Lang008 =	复位列宽(&R)
-	v_Lang009 =	图标尺寸(&S)
-	v_Lang010 =	复位布局(&E)
-	v_Lang011 =	文件(&F)
-	v_Lang012 =	录制回放(&R)
-	v_Lang013 =	命令(&C)
-	v_Lang014 =	编辑(&E)
-	v_Lang015 =	选项(&O)
-	v_Lang016 =	定制(&U)
-	v_Lang017 =	自动(&A)
-	v_Lang018 =	手动(&M)
-	v_Lang019 =	停止(&S)
-	v_Lang020 =	暂停(&P)
-	v_Lang021 =	简洁(&C)
-	v_Lang022 =	默认(&D)
-	v_Lang023 =	小(&S)
-	v_Lang024 =	大(&L)
+	v_Lang008 =	搜索栏(&B)
+	v_Lang009 =	复位列宽(&R)
+	v_Lang010 =	图标尺寸(&S)
+	v_Lang011 =	复位布局(&E)
+	v_Lang012 =	文件(&F)
+	v_Lang013 =	录制回放(&R)
+	v_Lang014 =	命令(&C)
+	v_Lang015 =	编辑(&E)
+	v_Lang016 =	选项(&O)
+	v_Lang017 =	定制(&U)
+	v_Lang018 =	自动(&A)
+	v_Lang019 =	手动(&M)
+	v_Lang020 =	停止(&S)
+	v_Lang021 =	暂停(&P)
+	v_Lang022 =	简洁(&C)
+	v_Lang023 =	默认(&D)
+	v_Lang024 =	小(&S)
+	v_Lang025 =	大(&L)
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	设置(&S)
@@ -292,6 +293,7 @@
 	w_Lang108 =	注释掉选中的行
 	w_Lang109 =	下载/上传文件 (Shift+F11)
 	w_Lang110 =	压缩/解压缩文件 (Ctrl+F11)
+	w_Lang111 =	搜索... (按Enter键进入)
 		
 ; 15. Command Windows		
 	c_Lang001 =	鼠标
@@ -888,6 +890,7 @@
 	d_Lang112 =	电子邮件帐户未找到。
 	d_Lang113 =	报道没有错误。
 	d_Lang114 =	出口（即使编译）用电子邮件发送功能（CDO）的脚本将使用的电子邮件帐户可见的信息，包括密码。该项目的PMC文件没有这些信息。
+	d_Lang115 =	- 持有Alt可设定区域相同的位置。
 		
 ; 18. Start-up Tips		
 	Start_Tips =	您可以用主窗口中的命令按钮创建宏或使用录制器录制您的操作。打开选项>设置>录制来选择录制哪些类型。
@@ -1249,7 +1252,7 @@
 	If var [not] between	根据数值或字母顺序检查变量的内容是否在两个值之间（包含边界）。
 	If var [not] in/contains MatchList 	检查变量的内容是否匹配列表中的某项。
 	If var is [not] type	检查变量的内容是否为数值、大写字母或其他。
-	IfEqual/IfNotEqual	比较变量和值判断它们是否相等。同义于：if var = value | if var <> value
+	IfEqual / IfNotEqual	比较变量和值判断它们是否相等。同义于：if var = value | if var <> value
 	IfExist / IfNotExist / FileExist	检查文件或文件夹是否存在。
 	IfGreater / IfGreaterOrEqual	比较变量和某个值。同义于：if var > value | if var >= value
 	IfInString / IfNotInString / InStr	检查变量是否包含指定的字符串。

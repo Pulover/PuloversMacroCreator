@@ -119,23 +119,24 @@
 	v_Lang005 =	&Predogled
 	v_Lang006 =	Pan&ely Nástrojov
 	v_Lang007 =	&Klávesové Skratky
-	v_Lang008 =	Pona&stavi stolpce Velikost
-	v_Lang009 =	Ve&likost Ikone
-	v_Lang010 =	&Reset Postavitev
-	v_Lang011 =	&Súbor
-	v_Lang012 =	S&nemanje in predvajanje
-	v_Lang013 =	&Príkazy
-	v_Lang014 =	&Editovať
-	v_Lang015 =	&Možnosti
-	v_Lang016 =	P&rilagajanje
-	v_Lang017 =	&Avtomatski
-	v_Lang018 =	&Ročni
-	v_Lang019 =	&Stop
-	v_Lang020 =	&Premor
-	v_Lang021 =	&Kompaktna
-	v_Lang022 =	&Privzeto
-	v_Lang023 =	&Majhno
-	v_Lang024 =	&Velika
+	v_Lang008 =	&Iskanje Bar
+	v_Lang009 =	Pona&stavi stolpce Velikost
+	v_Lang010 =	Ve&likost Ikone
+	v_Lang011 =	&Reset Postavitev
+	v_Lang012 =	S&úbor
+	v_Lang013 =	Sne&manje in predvajanje
+	v_Lang014 =	Pr&íkazy
+	v_Lang015 =	E&ditovať
+	v_Lang016 =	Mo&žnosti
+	v_Lang017 =	Prila&gajanje
+	v_Lang018 =	Av&tomatski
+	v_Lang019 =	Ro&čni
+	v_Lang020 =	Stop
+	v_Lang021 =	Premor
+	v_Lang022 =	Kompaktna
+	v_Lang023 =	Priv&zeto
+	v_Lang024 =	Ma&jhno
+	v_Lang025 =	Velika
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Nastavitve
@@ -292,6 +293,7 @@
 	w_Lang108 =	Zakomentirajte nepreverjene vrstice
 	w_Lang109 =	Download / Upload datotek (Shift+F11)
 	w_Lang110 =	Zip / unzip datotek (Ctrl+F11)
+	w_Lang111 =	Iskanje... (Pritisnite Enter, da gredo)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Miška
@@ -888,6 +890,7 @@
 	d_Lang112 =	E-poštni račun ni bilo mogoče najti.
 	d_Lang113 =	Poročali nobena napaka.
 	d_Lang114 =	Skripte izvažajo (tudi če je prevedeni) z za pošiljanje e-pošte funkcije (CDO) bodo imeli vidne informacije o e-poštnih računov, ki se uporabljajo, vključno z geslom. Projekt datoteke PMC teh podatkov ne imeti.
+	d_Lang115 =	- Držite Alt nastaviti regijo na isti lokaciji.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Lahko ustvarite makre z uporabo ukaznih gumbov v glavnem oknu ali z uporabo snemalnika kopirati dejanja. Pojdi na Možnosti> Nastavitve> Snemanje izbrati tisto vhodi bo posnet.
@@ -1249,7 +1252,7 @@
 	If var [not] between	Preverièe vsebine s spremenljivo so številčno ali abecedno med dvema vrednostma (vključno).
 	If var [not] in/contains MatchList 	Preverièe vsebine s spremenljivo ujemajo enega od elementov na seznamu.
 	If var is [not] type	Preveri, ali so vsebina spremenljivka je številčna, z velikimi črkami, itd
-	IfEqual/IfNotEqual	Primerja spremenljivko na vrednost za enakost. Sinonim: če Var = vrednost | če Var <> vrednost.
+	IfEqual / IfNotEqual	Primerja spremenljivko na vrednost za enakost. Sinonim: če Var = vrednost | če Var <> vrednost.
 	IfExist / IfNotExist / FileExist	Pregledi za obstoj datoteke ali mape.
 	IfGreater / IfGreaterOrEqual	Primerja spremenljivko na vrednost. Sinonim: če Var> Vrednost | če Var> = vrednost.
 	IfInString / IfNotInString / InStr	Preveri, če spremenljivko vsebuje določen niz.

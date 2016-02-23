@@ -119,23 +119,24 @@
 	v_Lang005 =	預覽(&P)
 	v_Lang006 =	工具欄(&T)
 	v_Lang007 =	熱鍵(&O)
-	v_Lang008 =	重列大小(&R)
-	v_Lang009 =	圖標尺寸(&S)
-	v_Lang010 =	重佈局(&E)
-	v_Lang011 =	文件(&F)
-	v_Lang012 =	錄製和播放(&R)
-	v_Lang013 =	命令(&C)
-	v_Lang014 =	編輯(&E)
-	v_Lang015 =	選項(&O)
-	v_Lang016 =	定制(&U)
-	v_Lang017 =	自動(&A)
-	v_Lang018 =	手冊(&M)
-	v_Lang019 =	停止(&S)
-	v_Lang020 =	暫停(&P)
-	v_Lang021 =	緊湊(&C)
-	v_Lang022 =	默認(&D)
-	v_Lang023 =	小(&S)
-	v_Lang024 =	大(&L)
+	v_Lang008 =	搜索欄(&B)
+	v_Lang009 =	重列大小(&R)
+	v_Lang010 =	圖標尺寸(&S)
+	v_Lang011 =	重佈局(&E)
+	v_Lang012 =	文件(&F)
+	v_Lang013 =	錄製和播放(&R)
+	v_Lang014 =	命令(&C)
+	v_Lang015 =	編輯(&E)
+	v_Lang016 =	選項(&O)
+	v_Lang017 =	定制(&U)
+	v_Lang018 =	自動(&A)
+	v_Lang019 =	手冊(&M)
+	v_Lang020 =	停止(&S)
+	v_Lang021 =	暫停(&P)
+	v_Lang022 =	緊湊(&C)
+	v_Lang023 =	默認(&D)
+	v_Lang024 =	小(&S)
+	v_Lang025 =	大(&L)
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	設置(&S)
@@ -292,6 +293,7 @@
 	w_Lang108 =	註釋掉選中的行
 	w_Lang109 =	下載/上傳文件 （按Shift+F11）
 	w_Lang110 =	壓縮/解壓縮文件 （按Ctrl+F11）
+	w_Lang111 =	搜索... (按Enter鍵進入)
 		
 ; 15. Command Windows		
 	c_Lang001 =	鼠標
@@ -888,6 +890,7 @@
 	d_Lang112 =	電子郵件帳戶未找到。
 	d_Lang113 =	報導沒有錯誤。
 	d_Lang114 =	出口（即使編譯）用電子郵件發送功能（CDO）的腳本將使用的電子郵件帳戶可見的信息，包括密碼。該項目的PMC文件沒有這些信息。
+	d_Lang115 =	- 持有Alt可設定區域相同的位置。
 		
 ; 18. Start-up Tips		
 	Start_Tips =	您可以創建宏命令按鈕在主窗口中，或者使用記錄，複製你的行動。轉到“選項”>“設置”>“錄製到選擇什麼樣的輸入將被記錄。
@@ -1249,7 +1252,7 @@
 	If var [not] between	檢查變量的內容是數字或字母，兩個值之間（含）。
 	If var [not] in/contains MatchList 	檢查變量的內容是否匹配列表中的項目之一。
 	If var is [not] type	檢查變量的內容是否是數字，大寫等。
-	IfEqual/IfNotEqual	比較變量的值相等。代名詞：如果var =價值瓦爾省<>價值。
+	IfEqual / IfNotEqual	比較變量的值相等。代名詞：如果var =價值瓦爾省<>價值。
 	IfExist / IfNotExist / FileExist	檢查文件或文件夾的存在。
 	IfGreater / IfGreaterOrEqual	比較變數的值。代名詞：如果瓦爾省>價值|如果瓦爾省> =價值。
 	IfInString / IfNotInString / InStr	檢查一個變量是否包含指定的字符串。

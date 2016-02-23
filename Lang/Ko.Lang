@@ -119,23 +119,24 @@
 	v_Lang005 =	시사(&P)
 	v_Lang006 =	도구 모음(&T)
 	v_Lang007 =	단축키(&O)
-	v_Lang008 =	열 크기를 재설정(&R)
-	v_Lang009 =	아이콘 크기(&S)
-	v_Lang010 =	레이아웃 재설정(&E)
-	v_Lang011 =	파일(&F)
-	v_Lang012 =	기록 및 재생(&R)
-	v_Lang013 =	명령(&C)
-	v_Lang014 =	편집(&E)
-	v_Lang015 =	옵션(&O)
-	v_Lang016 =	사용자 지정(&U)
-	v_Lang017 =	자동적 인(&A)
-	v_Lang018 =	사용 설명서(&M)
-	v_Lang019 =	정지(&S)
-	v_Lang020 =	중지(&P)
-	v_Lang021 =	콤팩트(&C)
-	v_Lang022 =	디폴트 값(&D)
-	v_Lang023 =	작은(&S)
-	v_Lang024 =	큰(&L)
+	v_Lang008 =	검색 창(&B)
+	v_Lang009 =	열 크기를 재설정(&R)
+	v_Lang010 =	아이콘 크기(&S)
+	v_Lang011 =	레이아웃 재설정(&E)
+	v_Lang012 =	파일(&F)
+	v_Lang013 =	기록 및 재생(&R)
+	v_Lang014 =	명령(&C)
+	v_Lang015 =	편집(&E)
+	v_Lang016 =	옵션(&O)
+	v_Lang017 =	사용자 지정(&U)
+	v_Lang018 =	자동적 인(&A)
+	v_Lang019 =	사용 설명서(&M)
+	v_Lang020 =	정지(&S)
+	v_Lang021 =	중지(&P)
+	v_Lang022 =	콤팩트(&C)
+	v_Lang023 =	디폴트 값(&D)
+	v_Lang024 =	작은(&S)
+	v_Lang025 =	큰(&L)
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	설정(&S)
@@ -292,6 +293,7 @@
 	w_Lang108 =	선택하지 않은 행을 주석
 	w_Lang109 =	다운로드 / 업로드 파일 (+ F11를 Shift)
 	w_Lang110 =	우편 번호 / 압축 해제 파일 (Ctrl 키를+F11)
+	w_Lang111 =	검색... (눌러 이동 입력)
 		
 ; 15. Command Windows		
 	c_Lang001 =	마우스
@@ -888,6 +890,7 @@
 	d_Lang112 =	이메일 계정을 찾을 수 없습니다.
 	d_Lang113 =	오류가보고되지.
 	d_Lang114 =	송신 메일 기능 (CDO)과 (컴파일 된 경우에도) 수출 스크립트는 암호를 포함하여 사용하는 이메일 계정의 표시 정보를,해야합니다. PMC 프로젝트 파일이 정보가 없다.
+	d_Lang115 =	- 같은 위치로 영역을 설정 Alt 키를 누른 상태.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	당신은 메인 창에 명령 단추를 사용하거나 작업을 복사 할 레코더를 사용하여 매크로를 만들 수 있습니다. 옵션으로 이동 > 설정 > 입력이 기록 될 것인지를 선택하는 기록.
@@ -1249,7 +1252,7 @@
 	If var [not] between	변수의 내용 여부를 검사 두 개의 값 (포함) 사이의 숫자 또는 알파벳입니다.
 	If var [not] in/contains MatchList 	변수의 내용 여부를 점검 목록에있는 항목 중 하나를 일치합니다.
 	If var is [not] type	변수의 내용이 숫자인지 검사, 대문자 등
-	IfEqual/IfNotEqual	평등에 대한 값에 변수를 비교합니다. 와 동의어 : 만약 바르 = 값 | 바르가 <> 값 경우.
+	IfEqual / IfNotEqual	평등에 대한 값에 변수를 비교합니다. 와 동의어 : 만약 바르 = 값 | 바르가 <> 값 경우.
 	IfExist / IfNotExist / FileExist	파일이나 폴더의 존재 여부를 확인합니다.
 	IfGreater / IfGreaterOrEqual	값에 변수를 비교합니다. 와 동의어 : 만약 바르> 가격 | 만약 바르> = 값입니다.
 	IfInString / IfNotInString / InStr	변수의 경우 검사는 지정된 문자열을 포함합니다.

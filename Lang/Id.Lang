@@ -119,23 +119,24 @@
 	v_Lang005 =	&Preview
 	v_Lang006 =	&Toolbar
 	v_Lang007 =	&Hotkeys
-	v_Lang008 =	Ula&ng Kolom Ukuran
-	v_Lang009 =	&Ukuran Ikon
-	v_Lang010 =	Atu&r Ulang Tata Letak
-	v_Lang011 =	&Berkas
-	v_Lang012 =	&Rekam dan Putar
-	v_Lang013 =	&Perintah
-	v_Lang014 =	&Mengedit
-	v_Lang015 =	P&ilihan
-	v_Lang016 =	&Sesuaikan
-	v_Lang017 =	&Otomatis
-	v_Lang018 =	&Pedoman
-	v_Lang019 =	&Berhenti
-	v_Lang020 =	B&erhenti sebentar
-	v_Lang021 =	&Padat
-	v_Lang022 =	&Kegagalan
-	v_Lang023 =	&Kecil
-	v_Lang024 =	&Besar
+	v_Lang008 =	Ba&r Pencarian
+	v_Lang009 =	&Ulang Kolom Ukuran
+	v_Lang010 =	Ukura&n Ikon
+	v_Lang011 =	Atur Ulan&g Tata Letak
+	v_Lang012 =	B&erkas
+	v_Lang013 =	Reka&m dan Putar
+	v_Lang014 =	Per&intah
+	v_Lang015 =	Menge&dit
+	v_Lang016 =	Pilihan
+	v_Lang017 =	&Sesuaikan
+	v_Lang018 =	&Otomatis
+	v_Lang019 =	Pedoman
+	v_Lang020 =	Berhenti
+	v_Lang021 =	Berhenti sebentar
+	v_Lang022 =	Padat
+	v_Lang023 =	Kegagalan
+	v_Lang024 =	Ke&cil
+	v_Lang025 =	Besar
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Pengaturan
@@ -292,6 +293,7 @@
 	w_Lang108 =	Komentar dari baris dicentang
 	w_Lang109 =	Download / Upload file (Shift+F11)
 	w_Lang110 =	Zip / file Unzip (Ctrl+F11)
+	w_Lang111 =	Cari... (Tekan Enter untuk pergi)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mouse
@@ -888,6 +890,7 @@
 	d_Lang112 =	E-mail fiók nem található.
 	d_Lang113 =	Melaporkan tidak ada kesalahan.
 	d_Lang114 =	Skrip diekspor (bahkan jika dikompilasi) dengan fungsi mengirim email (CDO) akan memiliki informasi terlihat dari akun email yang digunakan, termasuk PASSWORD. File proyek PMC tidak memiliki informasi ini.
+	d_Lang115 =	- Tahan Alt untuk mengatur wilayah ke lokasi yang sama.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Anda dapat membuat Macro dengan menggunakan Tombol Perintah di jendela utama atau menggunakan Recorder untuk menyalin tindakan Anda. Buka Opsi> Pengaturan> Merekam untuk memilih apa yang input akan disimpan.
@@ -1249,7 +1252,7 @@
 	If var [not] between	Cek apakah isi variabel adalah numerik atau abjad antara dua nilai (inklusif).
 	If var [not] in/contains MatchList 	Cek apakah isi variabel ini sesuai dengan salah satu item dalam daftar.
 	If var is [not] type	Cek apakah isi variabel adalah angka, huruf besar, dll
-	IfEqual/IfNotEqual	Membandingkan variabel untuk nilai untuk kesetaraan. Identik dengan: jika Var = Nilai | jika Var <> Nilai.
+	IfEqual / IfNotEqual	Membandingkan variabel untuk nilai untuk kesetaraan. Identik dengan: jika Var = Nilai | jika Var <> Nilai.
 	IfExist / IfNotExist / FileExist	Cek untuk keberadaan file atau folder.
 	IfGreater / IfGreaterOrEqual	Membandingkan variabel ke nilai. Identik dengan: jika Var> Nilai | jika Var> = Nilai.
 	IfInString / IfNotInString / InStr	Cek jika sebuah variabel berisi string tertentu.

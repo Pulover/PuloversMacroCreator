@@ -119,23 +119,24 @@
 	v_Lang005 =	&Pregled
 	v_Lang006 =	&Alatne Trake
 	v_Lang007 =	&Hotkeys
-	v_Lang008 =	V&eličina Reset Kolumne
-	v_Lang009 =	Ik&one VeličIna
-	v_Lang010 =	&Reset Raspored
-	v_Lang011 =	&File
-	v_Lang012 =	&Snimanje i reprodukciju
-	v_Lang013 =	&Naredbe
-	v_Lang014 =	&Uredi
-	v_Lang015 =	&Mogućnosti
-	v_Lang016 =	&Prilagodite
-	v_Lang017 =	&Automatski
-	v_Lang018 =	&Priručnik
-	v_Lang019 =	&Stop
-	v_Lang020 =	Pa&uza
-	v_Lang021 =	&Kompaktan
-	v_Lang022 =	&Default
-	v_Lang023 =	&Mali
-	v_Lang024 =	&Veliki
+	v_Lang008 =	&Traka Za Pretraživanje
+	v_Lang009 =	V&eličina Reset Kolumne
+	v_Lang010 =	Ik&one VeličIna
+	v_Lang011 =	&Reset Raspored
+	v_Lang012 =	&File
+	v_Lang013 =	&Snimanje i reprodukciju
+	v_Lang014 =	&Naredbe
+	v_Lang015 =	Ure&di
+	v_Lang016 =	&Mogućnosti
+	v_Lang017 =	Pri&lagodite
+	v_Lang018 =	Automatski
+	v_Lang019 =	Priru&čnik
+	v_Lang020 =	Stop
+	v_Lang021 =	Pau&za
+	v_Lang022 =	Kompaktan
+	v_Lang023 =	Default
+	v_Lang024 =	Mali
+	v_Lang025 =	Veliki
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Postavke
@@ -292,6 +293,7 @@
 	w_Lang108 =	Komentar iz označenim redaka
 	w_Lang109 =	Download / upload datoteka (Shift+F11)
 	w_Lang110 =	Zip / unzip kartoteka (Ctrl+F11)
+	w_Lang111 =	Traži... (Pritisnite Enter kako)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Miš
@@ -888,6 +890,7 @@
 	d_Lang112 =	E-mail račun nije pronađen.
 	d_Lang113 =	Izvijestio bez pogreške.
 	d_Lang114 =	Skripte izvoze (čak i ako je sastavljen) s funkcijom poslati e-mail (CDO) će imati vidljive informacije o računima e-pošte koristi, uključujući i lozinke. Projekt datoteka PMC nema tu informaciju.
+	d_Lang115 =	- Držite Alt postaviti regiju na istom mjestu.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Možete stvoriti makronaredbe pomoću naredbenog gumba u glavnom prozoru ili pomoću snimača kopirati svoje radnje. Idi na Opcije > Postavke > Snimanje odabrati ono što ulazi će biti zabilježen.
@@ -1249,7 +1252,7 @@
 	If var [not] between	Provjerava je li varijabla sadržaju su numerički ili po abecednom redu između dvije vrijednosti (uključivo) .
 	If var [not] in/contains MatchList 	Provjerava je li varijabla sadržaju odgovaraju jednu od stavki na popisu .
 	If var is [not] type	Provjerava je li varijabla je sadržaji su numerički , velikih , itd.
-	IfEqual/IfNotEqual	Uspoređuje varijablu na vrijednost za jednakost . Sinonim : ako Var = Vrijednost | ako Var < > vrijednost .
+	IfEqual / IfNotEqual	Uspoređuje varijablu na vrijednost za jednakost . Sinonim : ako Var = Vrijednost | ako Var < > vrijednost .
 	IfExist / IfNotExist / FileExist	Provjerava postojanje datoteke ili mape .
 	IfGreater / IfGreaterOrEqual	Uspoređuje varijable na vrijednost . Sinonim : ako Var > Vrijednost | ako Var > = vrijednost .
 	IfInString / IfNotInString / InStr	Provjerava ako varijabla sadrži zadani niz .

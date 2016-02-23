@@ -119,23 +119,24 @@
 	v_Lang005 =	P&odgląd
 	v_Lang006 =	P&aski Narzędzi
 	v_Lang007 =	&Hotkeys
-	v_Lang008 =	&Resetuj rozmiar kolumny
-	v_Lang009 =	&Ikony Rozmiar
-	v_Lang010 =	W&yzeruj
-	v_Lang011 =	&Plik
-	v_Lang012 =	&Nagrywanie i odtwarzanie
-	v_Lang013 =	P&olecenia
-	v_Lang014 =	&Edytować
-	v_Lang015 =	Op&cje
-	v_Lang016 =	&Настроить...
-	v_Lang017 =	&Automatyczny
-	v_Lang018 =	&Ręczny
-	v_Lang019 =	&Zatrzymać
-	v_Lang020 =	&Pauza
-	v_Lang021 =	&Zwarty
-	v_Lang022 =	&Domyślnie
-	v_Lang023 =	&Mały
-	v_Lang024 =	&Duże
+	v_Lang008 =	Pa&sek Wyszukiwania
+	v_Lang009 =	&Resetuj rozmiar kolumny
+	v_Lang010 =	&Ikony Rozmiar
+	v_Lang011 =	W&yzeruj
+	v_Lang012 =	P&lik
+	v_Lang013 =	&Nagrywanie i odtwarzanie
+	v_Lang014 =	Pol&ecenia
+	v_Lang015 =	E&dytować
+	v_Lang016 =	Opc&je
+	v_Lang017 =	&Настроить...
+	v_Lang018 =	A&utomatyczny
+	v_Lang019 =	R&ęczny
+	v_Lang020 =	Za&trzymać
+	v_Lang021 =	Pauza
+	v_Lang022 =	Zwarty
+	v_Lang023 =	Do&myślnie
+	v_Lang024 =	Ma&ły
+	v_Lang025 =	Du&że
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Ustawienia
@@ -292,6 +293,7 @@
 	w_Lang108 =	Komentarz się nie zaznaczonych wierszy
 	w_Lang109 =	Download / upload plików (Shift+F11)
 	w_Lang110 =	Zip / Rozpakuj pliki (Ctrl+F11)
+	w_Lang111 =	Szukaj... (Naciśnij klawisz Enter, aby przejść)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mysz
@@ -888,6 +890,7 @@
 	d_Lang112 =	Учетной записи электронной почты не найден.
 	d_Lang113 =	Nie zgłosiło błąd.
 	d_Lang114 =	Script esportati (anche se compilato) con la funzione di invio e-mail (CDO) avranno informazioni visibili di account di posta elettronica utilizzati, inclusa la password. Il file di progetto PMC non dispone di tali informazioni.
+	d_Lang115 =	- Trzymając Alt ustawienie obszaru do tej samej lokalizacji.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Makra można tworzyć za pomocą przycisków poleceń w oknie głównym lub za pomocą dyktafonu skopiować swoje działania. Przejdź do Opcje > Ustawienia > Nagrywanie, aby wybrać to, co wejścia zostaną zapisane.
@@ -1249,7 +1252,7 @@
 	If var [not] between	Sprawdza, czy zmienna jest zawartość są numerycznie lub alfabetycznie pomiędzy dwoma wartościami (włącznie) .
 	If var [not] in/contains MatchList 	Sprawdza, czy zmienna jest zawartość dopasować jedną z pozycji na liście.
 	If var is [not] type	Sprawdza, czy zmienna jest zawartość jest numeryczny , duże , itp.
-	IfEqual/IfNotEqual	Porównuje zmiennej do wartości równości . Synonim : jeśli Var = Value | jeśli Var < > wartość .
+	IfEqual / IfNotEqual	Porównuje zmiennej do wartości równości . Synonim : jeśli Var = Value | jeśli Var < > wartość .
 	IfExist / IfNotExist / FileExist	Sprawdza istnienie pliku lub folderu .
 	IfGreater / IfGreaterOrEqual	Porównuje zmienną na wartość . Synonim : jeśli Var > Wartość | jeśli Var > Value = .
 	IfInString / IfNotInString / InStr	Sprawdza, czy zmienna zawiera określony ciąg znaków .

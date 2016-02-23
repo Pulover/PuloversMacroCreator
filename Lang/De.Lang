@@ -119,23 +119,24 @@
 	v_Lang005 =	&Vorschau
 	v_Lang006 =	S&ymbolleisten
 	v_Lang007 =	&Hotkeys
-	v_Lang008 =	S&paltengröße zurücksetzen 
-	v_Lang009 =	&Icons Größe
-	v_Lang010 =	&Layout zurücksetzen
-	v_Lang011 =	&Datei
-	v_Lang012 =	&Aufnahme und Wiedergabe
-	v_Lang013 =	&Befehle
-	v_Lang014 =	B&earbeiten
-	v_Lang015 =	&Optionen
-	v_Lang016 =	A&npassen
-	v_Lang017 =	&Automatische
-	v_Lang018 =	&Handbuch
-	v_Lang019 =	&Stopp
-	v_Lang020 =	&Pause
-	v_Lang021 =	&Compact
-	v_Lang022 =	&Standard
-	v_Lang023 =	Klein
-	v_Lang024 =	Große
+	v_Lang008 =	S&uchleiste
+	v_Lang009 =	S&paltengröße zurücksetzen 
+	v_Lang010 =	I&cons Größe
+	v_Lang011 =	&Layout zurücksetzen
+	v_Lang012 =	&Datei
+	v_Lang013 =	&Aufnahme und Wiedergabe
+	v_Lang014 =	&Befehle
+	v_Lang015 =	Bea&rbeiten
+	v_Lang016 =	&Optionen
+	v_Lang017 =	A&npassen
+	v_Lang018 =	Au&tomatische
+	v_Lang019 =	Handbuch
+	v_Lang020 =	Stopp
+	v_Lang021 =	Pause
+	v_Lang022 =	Co&mpact
+	v_Lang023 =	Standard
+	v_Lang024 =	&Klein
+	v_Lang025 =	&Große
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Einstellungen
@@ -292,6 +293,7 @@
 	w_Lang108 =	Nicht markiert Zeilen kommentieren
 	w_Lang109 =	Download / Upload von Dateien (Umschalt+F11)
 	w_Lang110 =	Zip / Entpacken von Dateien (Strg+F11)
+	w_Lang111 =	Suchen... (Drücken Sie die Eingabetaste zu gehen)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Maus
@@ -888,6 +890,7 @@
 	d_Lang112 =	E-Mail-Account nicht gefunden.
 	d_Lang113 =	Kein Fehler gemeldet.
 	d_Lang114 =	Skripte exportiert mit dem E-Mail senden Funktion (auch wenn kompiliert) (CDO) wird sichtbar Informationen von E-Mail-Konten verwendet haben, einschließlich des Passworts. Die PMC-Projektdatei  nicht über diese Informationen.
+	d_Lang115 =	- Halten Sie Alt-Region an die gleiche Stelle zu setzen.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Sie können Makros mit den Befehls-Schaltflächen im Hauptfenster erzeugen oder mittels Rekorder Ihre Aktionen kopieren. Klicken Sie auf Optionen > Einstellungen > Aufnahme, um festzulegen welche Eingaben aufgezeichnet werden sollen.
@@ -1249,7 +1252,7 @@
 	If var [not] between	Prüft, ob eine Variable Inhalte sind numerisch oder alphabetisch zwischen zwei Werten (einschließlich) .
 	If var [not] in/contains MatchList 	Prüft, ob eine Variable den Inhalt übereinstimmen eines der Elemente in einer Liste.
 	If var is [not] type	Prüft, ob eine Variable den Inhalt numerisch sind , Großbuchstaben usw.
-	IfEqual/IfNotEqual	Vergleicht eine Variable auf einen Wert für die Gleichstellung . Gleichbedeutend mit : if Var = Wert | if Var <> -Wert.
+	IfEqual / IfNotEqual	Vergleicht eine Variable auf einen Wert für die Gleichstellung . Gleichbedeutend mit : if Var = Wert | if Var <> -Wert.
 	IfExist / IfNotExist / FileExist	Prüft das Vorhandensein einer Datei oder eines Ordners.
 	IfGreater / IfGreaterOrEqual	Vergleicht eine Variable auf einen Wert . Gleichbedeutend mit : if Var > Value | if Var> = Wert .
 	IfInString / IfNotInString / InStr	Prüft, ob eine Variable enthält die angegebene Zeichenfolge .

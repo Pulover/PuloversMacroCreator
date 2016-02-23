@@ -119,23 +119,24 @@
 	v_Lang005 =	E&lőnézet
 	v_Lang006 =	E&szköztárak
 	v_Lang007 =	&Gyorsbillentyűk
-	v_Lang008 =	&Visszaállítás oszlopok méret
-	v_Lang009 =	&Ikonok MéRete
-	v_Lang010 =	&Törlés Layout
-	v_Lang011 =	&Reszelő
-	v_Lang012 =	R&ögzítése és lejátszása
-	v_Lang013 =	&Parancsok
-	v_Lang014 =	&Szerkeszt
-	v_Lang015 =	&Lehetőségek
-	v_Lang016 =	&Testreszabása
-	v_Lang017 =	&Automatikus
-	v_Lang018 =	&Kézi
-	v_Lang019 =	&Megáll
-	v_Lang020 =	&Szünet
-	v_Lang021 =	&Kompakt
-	v_Lang022 =	&Alapértelmezett
-	v_Lang023 =	&Kicsi
-	v_Lang024 =	&Nagy
+	v_Lang008 =	Ke&resősáv
+	v_Lang009 =	&Visszaállítás oszlopok méret
+	v_Lang010 =	&Ikonok MéRete
+	v_Lang011 =	&Törlés Layout
+	v_Lang012 =	Res&zelő
+	v_Lang013 =	R&ögzítése és lejátszása
+	v_Lang014 =	&Parancsok
+	v_Lang015 =	Szerkeszt
+	v_Lang016 =	Le&hetőségek
+	v_Lang017 =	Testresz&abása
+	v_Lang018 =	A&utomatikus
+	v_Lang019 =	K&ézi
+	v_Lang020 =	Meg&áll
+	v_Lang021 =	Sz&ünet
+	v_Lang022 =	K&ompakt
+	v_Lang023 =	Alapértelmezett
+	v_Lang024 =	Ki&csi
+	v_Lang025 =	&Nagy
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Beállítások
@@ -292,6 +293,7 @@
 	w_Lang108 =	Hozzászólás ki ellenőrizetlenül sorok
 	w_Lang109 =	Letöltés / Feltöltés fájlok (Shift+F11)
 	w_Lang110 =	Zip / Unzip fájlok (Ctrl+F11)
+	w_Lang111 =	Keresés... (Nyomja meg az Enter menni)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Egér
@@ -888,6 +890,7 @@
 	d_Lang112 =	E-mail fiók nem található.
 	d_Lang113 =	Nem jelzett hibát.
 	d_Lang114 =	Scripts exportált (még ha össze) a send email funkció (CDO) lesz látható információk az e-mail fiókok használni, beleértve a jelszót. A PMC projekt fájl nem rendelkezik ezekkel az adatokkal.
+	d_Lang115 =	- Tartsa Alt beállítani régió ugyanazon a helyen.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Hozhat létre makrók a Command gombok a fő ablakban, vagy a felvevő másolni a tevékenységét. Válassza az Opciók > Beállítások > Felvétel kiválasztható, hogy milyen bemeneteket kerülnek rögzítésre.
@@ -1249,7 +1252,7 @@
 	If var [not] between	Ellenőrzi, hogy a változó tartalmát számszerint vagy ABC két érték között (bezárólag).
 	If var [not] in/contains MatchList 	Ellenőrzi, hogy a változó tartalmát egyezik az egyik elem a listában.
 	If var is [not] type	Ellenőrzi, hogy a változó tartalma numerikus, nagybetűs, stb
-	IfEqual/IfNotEqual	Összehasonlítja a változó értéke az egyenlőség. Egyet jelent: ha a Var = érték | ha Var <> érték.
+	IfEqual / IfNotEqual	Összehasonlítja a változó értéke az egyenlőség. Egyet jelent: ha a Var = érték | ha Var <> érték.
 	IfExist / IfNotExist / FileExist	Ellenőrzi, hogy létezik egy fájl vagy mappa.
 	IfGreater / IfGreaterOrEqual	Összehasonlítja a változó értéke. Egyet jelent: ha a Var> Érték | ha Var> = érték.
 	IfInString / IfNotInString / InStr	Ellenőrzi, hogy a változó tartalmazza a megadott string.

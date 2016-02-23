@@ -119,23 +119,24 @@
 	v_Lang005 =	&Xem trước
 	v_Lang006 =	Thanh &công cụ
 	v_Lang007 =	&Phím nóng
-	v_Lang008 =	Th&iết lập lại Cột Kích
-	v_Lang009 =	&BiểU TượNg KíCh ThướC
-	v_Lang010 =	&Giao Diện Thiết Lập Lại
-	v_Lang011 =	&Tập tin
-	v_Lang012 =	&Ghi lại và chơi
-	v_Lang013 =	&Lệnh
-	v_Lang014 =	&Chỉnh sửa
-	v_Lang015 =	T&ùy chọn
-	v_Lang016 =	Tù&y chỉnh
-	v_Lang017 =	&Tự động
-	v_Lang018 =	&Hướng dẫn sử dụng
-	v_Lang019 =	Th&ôi
-	v_Lang020 =	T&ạm dừng
-	v_Lang021 =	&Nhỏ gọn
-	v_Lang022 =	&Mặc Định
-	v_Lang023 =	&Nhỏ
-	v_Lang024 =	&Lớn
+	v_Lang008 =	Thanh T&ìm Kiếm
+	v_Lang009 =	Th&iết lập lại Cột Kích
+	v_Lang010 =	&BiểU TượNg KíCh ThướC
+	v_Lang011 =	&Giao Diện Thiết Lập Lại
+	v_Lang012 =	T&ập tin
+	v_Lang013 =	Ghi &lại và chơi
+	v_Lang014 =	L&ệnh
+	v_Lang015 =	Ch&ỉnh sửa
+	v_Lang016 =	T&ùy chọn
+	v_Lang017 =	Tù&y chỉnh
+	v_Lang018 =	T&ự động
+	v_Lang019 =	Hư&ớng dẫn sử dụng
+	v_Lang020 =	Th&ôi
+	v_Lang021 =	T&ạm dừng
+	v_Lang022 =	Nh&ỏ gọn
+	v_Lang023 =	&Mặc Định
+	v_Lang024 =	Nhỏ
+	v_Lang025 =	Lớn
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Cài đặt
@@ -292,6 +293,7 @@
 	w_Lang108 =	Thảo luận ra các hàng không được kiểm soát
 	w_Lang109 =	Tải về / tập tin Tải lên (Shift+F11)
 	w_Lang110 =	Zip / Giải nén file (Ctrl+F11)
+	w_Lang111 =	Tìm kiếm... (Nhấn Enter để đi)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Chuột
@@ -888,6 +890,7 @@
 	d_Lang112 =	Không tìm thấy tài khoản email.
 	d_Lang113 =	Báo cáo không có lỗi.
 	d_Lang114 =	Skripte izvažajo (tudi če je prevedeni) z za pošiljanje e-pošte funkcije (CDO) bodo imeli vidne informacije o e-poštnih računov, ki se uporabljajo, vključno z geslom. Projekt datoteke PMC teh podatkov ne imeti.
+	d_Lang115 =	- Giữ Alt để thiết lập khu vực vào cùng vị trí.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Bạn có thể tạo macro bằng cách sử dụng nút lệnh trong cửa sổ chính hoặc sử dụng máy ghi âm để sao chép các hành động của bạn. Vào Tùy chọn> Cài đặt> Ghi chọn những đầu vào sẽ được ghi lại.
@@ -1249,7 +1252,7 @@
 	If var [not] between	Kiểm tra xem nội dung của một biến có số lượng hoặc theo bảng chữ cái giữa hai giá trị (bao gồm).
 	If var [not] in/contains MatchList 	Kiểm tra xem nội dung của một biến phù hợp với một trong các mục trong một danh sách.
 	If var is [not] type	Kiểm tra xem nội dung của một biến là số, chữ hoa, vv
-	IfEqual/IfNotEqual	So sánh một biến với một giá trị bình đẳng. Đồng nghĩa với: nếu Var = Giá trị | nếu Var <> Giá trị.
+	IfEqual / IfNotEqual	So sánh một biến với một giá trị bình đẳng. Đồng nghĩa với: nếu Var = Giá trị | nếu Var <> Giá trị.
 	IfExist / IfNotExist / FileExist	Kiểm tra sự tồn tại của một tập tin hoặc thư mục.
 	IfGreater / IfGreaterOrEqual	So sánh một biến với một giá trị. Đồng nghĩa với: nếu Var> Giá trị | nếu Var> = giá trị gia tăng.
 	IfInString / IfNotInString / InStr	Kiểm tra nếu một biến chứa chuỗi định.

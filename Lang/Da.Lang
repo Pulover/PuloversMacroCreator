@@ -119,23 +119,24 @@
 	v_Lang005 =	&Eksempel
 	v_Lang006 =	&Værktøjslinjer
 	v_Lang007 =	&Genvejstaster
-	v_Lang008 =	&Nulstil Kolonner Size
-	v_Lang009 =	Ik&oner StøRrelse
-	v_Lang010 =	&Reset Layout
-	v_Lang011 =	&Fil
-	v_Lang012 =	&Optage og afspille
-	v_Lang013 =	&Kommandoer
-	v_Lang014 =	&Redigere
-	v_Lang015 =	O&ptioner
-	v_Lang016 =	&Tilpas
-	v_Lang017 =	&Automatisk
-	v_Lang018 =	&Manual
-	v_Lang019 =	&Stands
-	v_Lang020 =	&Pause
-	v_Lang021 =	&Compact
-	v_Lang022 =	&Standard
-	v_Lang023 =	&Lille
-	v_Lang024 =	&Stor
+	v_Lang008 =	&Søgelinjen
+	v_Lang009 =	&Nulstil Kolonner Size
+	v_Lang010 =	Ik&oner StøRrelse
+	v_Lang011 =	&Reset Layout
+	v_Lang012 =	Fi&l
+	v_Lang013 =	O&ptage og afspille
+	v_Lang014 =	Ko&mmandoer
+	v_Lang015 =	Re&digere
+	v_Lang016 =	Op&tioner
+	v_Lang017 =	Tilpas
+	v_Lang018 =	A&utomatisk
+	v_Lang019 =	Manual
+	v_Lang020 =	Stands
+	v_Lang021 =	Pause
+	v_Lang022 =	&Compact
+	v_Lang023 =	Standard
+	v_Lang024 =	Lille
+	v_Lang025 =	Stor
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Indstillinger
@@ -292,6 +293,7 @@
 	w_Lang108 =	Udkommentere ukontrolleret rækker
 	w_Lang109 =	Download / Upload filer (Shift+F11)
 	w_Lang110 =	Zip / Unzip filer (Ctrl+F11)
+	w_Lang111 =	Søg... (Tryk Enter for at gå)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mus
@@ -888,6 +890,7 @@
 	d_Lang112 =	E-mail-konto ikke fundet.
 	d_Lang113 =	Ingen fejl rapporteret.
 	d_Lang114 =	Scripts eksporteres (selvom kompileret) med Send e-mail-funktionen (CDO) vil have synlige informationer af e-mail konti, herunder adgangskoden. Projektet fil PMC har ikke disse oplysninger.
+	d_Lang115 =	- Hold Alt for at indstille region til samme sted.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Du kan oprette makroer ved hjælp af kommandoen knapper i hovedvinduet eller ved hjælp af optageren til at kopiere dine handlinger. Gå til Valg > Indstillinger > Optagelse at vælge, hvad input vil blive registreret.
@@ -1249,7 +1252,7 @@
 	If var [not] between	Kontrollerer, om en variabels indhold er numerisk eller alfabetisk mellem to værdier (inklusive).
 	If var [not] in/contains MatchList 	Kontrollerer, om en variabels indhold matcher et af elementerne på en liste.
 	If var is [not] type	Kontrollerer , om en variabels indhold er numerisk , store osv.
-	IfEqual/IfNotEqual	Sammenligner en variabel til en værdi for ligestilling . Synonymt med : Hvis Var = Værdi | hvis Var < > Value .
+	IfEqual / IfNotEqual	Sammenligner en variabel til en værdi for ligestilling . Synonymt med : Hvis Var = Værdi | hvis Var < > Value .
 	IfExist / IfNotExist / FileExist	Kontrollerer eksistensen af en fil eller mappe .
 	IfGreater / IfGreaterOrEqual	Sammenligner en variabel til en værdi . Synonymt med : Hvis Var> Value | hvis Var> = Værdi .
 	IfInString / IfNotInString / InStr	Tjekker, om en variabel indeholder den angivne streng .

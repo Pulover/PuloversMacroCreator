@@ -119,23 +119,24 @@
 	v_Lang005 =	&Preview
 	v_Lang006 =	&Työkalurivit
 	v_Lang007 =	P&ikanäppäimet
-	v_Lang008 =	Pa&lauta sarakkeet Koko
-	v_Lang009 =	K&uvakkeet Koko
-	v_Lang010 =	Palauta La&yout
-	v_Lang011 =	&Tiedosto
-	v_Lang012 =	T&allentaa ja toistaa
-	v_Lang013 =	&Komennot
-	v_Lang014 =	&Muokata
-	v_Lang015 =	&Vaihtoehtoja
-	v_Lang016 =	M&uokkaa
-	v_Lang017 =	&Automaattinen
-	v_Lang018 =	&Manuaalinen
-	v_Lang019 =	&Lopettaa
-	v_Lang020 =	&Tauko
-	v_Lang021 =	&Kompakti
-	v_Lang022 =	&Oletusarvo
-	v_Lang023 =	&Pieni
-	v_Lang024 =	&Suuri
+	v_Lang008 =	Hak&upalkki
+	v_Lang009 =	Pa&lauta sarakkeet Koko
+	v_Lang010 =	Ku&vakkeet Koko
+	v_Lang011 =	Palauta La&yout
+	v_Lang012 =	Ti&edosto
+	v_Lang013 =	Talle&ntaa ja toistaa
+	v_Lang014 =	K&omennot
+	v_Lang015 =	&Muokata
+	v_Lang016 =	Vaihtoehto&ja
+	v_Lang017 =	Muokkaa
+	v_Lang018 =	Automaattinen
+	v_Lang019 =	Manuaalinen
+	v_Lang020 =	Lopettaa
+	v_Lang021 =	Tauko
+	v_Lang022 =	Kompakti
+	v_Lang023 =	Oletusa&rvo
+	v_Lang024 =	Pieni
+	v_Lang025 =	Suuri
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Asetukset
@@ -292,6 +293,7 @@
 	w_Lang108 =	Kommentoi pois valitsematta riviä
 	w_Lang109 =	Lataa / Lataa tiedostot (Shift+F11)
 	w_Lang110 =	Zip / Pura tiedostot (Ctrl+F11)
+	w_Lang111 =	Etsi... (Paina Enter päästäksesi)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Hiiri
@@ -888,6 +890,7 @@
 	d_Lang112 =	Sähköpostitili ei löytynyt.
 	d_Lang113 =	Ei raportoitu virhe.
 	d_Lang114 =	Skriptejä viedään (vaikka käännetty) kanssa lähetä sähköpostia toiminto (CDO) on näkyvissä merkintä sähköpostitilejä käytetään, mukaan lukien salasana. PMC Projektitiedosto ei ole tätä tietoa.
+	d_Lang115 =	- Pidä Alt asettaa alueelle samaan paikkaan.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Voit luoda makroja käyttäen Command painikkeet pääikkunassa tai käyttämällä Recorder kopioida toimia. Valitse Valinnat > Asetukset > Tallennus valita mitä panoksia tallennetaan.
@@ -1249,7 +1252,7 @@
 	If var [not] between	Tarkistaa, onkomuuttujan sisältöä ovat numeerisesti tai aakkosjärjestyksessä kahden arvon välillä (mukaan lukien) .
 	If var [not] in/contains MatchList 	Tarkistaa, onkomuuttujan sisältö vastaa yksiluettelon kohteita .
 	If var is [not] type	Tarkistaa, onkomuuttujan sisältöä ovat numeerisia , isoja, jne.
-	IfEqual/IfNotEqual	Vertaa muuttujanarvoa tasa-arvon . Synonyymi : jos Var = Arvo | jos Var < > Arvo .
+	IfEqual / IfNotEqual	Vertaa muuttujanarvoa tasa-arvon . Synonyymi : jos Var = Arvo | jos Var < > Arvo .
 	IfExist / IfNotExist / FileExist	Tarkistaa, onko tiedoston tai kansion .
 	IfGreater / IfGreaterOrEqual	Vertaa muuttujanarvoa . Synonyymi : jos Var > Arvo | jos Var > = arvo .
 	IfInString / IfNotInString / InStr	Tarkistaa, onkomuuttuja sisältäätietyn merkkijonon .

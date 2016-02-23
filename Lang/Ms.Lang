@@ -119,23 +119,24 @@
 	v_Lang005 =	&Preview
 	v_Lang006 =	&Toolbars
 	v_Lang007 =	&Hotkeys
-	v_Lang008 =	&Reset Saiz Lajur
-	v_Lang009 =	S&aiz Ikon
-	v_Lang010 =	R&eset Layout
-	v_Lang011 =	&Fail
-	v_Lang012 =	&Rakam dan Main
-	v_Lang013 =	&Arahan
-	v_Lang014 =	&Edit
-	v_Lang015 =	&Pilihan
-	v_Lang016 =	&Menyesuaikan
-	v_Lang017 =	&Automatik
-	v_Lang018 =	&Manual
-	v_Lang019 =	&Hentikan
-	v_Lang020 =	&Jeda
-	v_Lang021 =	&Padat
-	v_Lang022 =	&Default
-	v_Lang023 =	&Kecil
-	v_Lang024 =	&Besar
+	v_Lang008 =	B&ar Carian
+	v_Lang009 =	&Reset Saiz Lajur
+	v_Lang010 =	Sai&z Ikon
+	v_Lang011 =	R&eset Layout
+	v_Lang012 =	&Fail
+	v_Lang013 =	Raka&m dan Main
+	v_Lang014 =	Araha&n
+	v_Lang015 =	E&dit
+	v_Lang016 =	Pi&lihan
+	v_Lang017 =	Men&yesuaikan
+	v_Lang018 =	A&utomatik
+	v_Lang019 =	Manual
+	v_Lang020 =	Hentikan
+	v_Lang021 =	&Jeda
+	v_Lang022 =	Padat
+	v_Lang023 =	Default
+	v_Lang024 =	Ke&cil
+	v_Lang025 =	Besar
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Tetapan
@@ -292,6 +293,7 @@
 	w_Lang108 =	Komen daripada baris tidak dikawal
 	w_Lang109 =	Download / Muat naik fail (Shift+F11)
 	w_Lang110 =	Zip / fail Unzip (Ctrl+F11)
+	w_Lang111 =	Carian... (Tekan Enter untuk pergi)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mouse
@@ -888,6 +890,7 @@
 	d_Lang112 =	Akaun e-mel tidak dijumpai.
 	d_Lang113 =	Tiada kesilapan dilaporkan.
 	d_Lang114 =	Skrip dieksport (walaupun disusun) dengan fungsi e-mel menghantar (CDO) akan mempunyai maklumat yang boleh dilihat dengan akaun e-mel yang digunakan, termasuk KATALALUAN. PMC fail projek tidak mempunyai maklumat ini.
+	d_Lang115 =	- Pegang Alt untuk menetapkan kawasan ke lokasi yang sama.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Anda boleh membuat Makro menggunakan Butang Perintah dalam tetingkap utama atau menggunakan Perakam meniru tindakan anda. Pergi ke Pilihan> Tetapan> Rakaman untuk memilih apa input akan direkodkan.
@@ -1249,7 +1252,7 @@
 	If var [not] between	Cek sama ada kandungan yang berubah-ubah adalah berangka atau abjad antara dua nilai (termasuk).
 	If var [not] in/contains MatchList 	Cek sama ada kandungan yang berubah-ubah yang sesuai dengan salah satu perkara-perkara dalam senarai.
 	If var is [not] type	Cek sama ada kandungan yang berubah-ubah adalah angka, huruf besar, dan lain-lain
-	IfEqual/IfNotEqual	Membandingkan ubah untuk nilai untuk kesaksamaan. Sinonim dengan: jika Var = Nilai | jika Var <> Nilai.
+	IfEqual / IfNotEqual	Membandingkan ubah untuk nilai untuk kesaksamaan. Sinonim dengan: jika Var = Nilai | jika Var <> Nilai.
 	IfExist / IfNotExist / FileExist	Pemeriksaan bagi kewujudan fail atau folder.
 	IfGreater / IfGreaterOrEqual	Membandingkan ubah untuk nilai. Sinonim dengan: jika Var> Nilai | jika Var> = Nilai.
 	IfInString / IfNotInString / InStr	Pemeriksaan jika ubah mengandungi rentetan tertentu.

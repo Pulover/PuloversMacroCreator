@@ -119,23 +119,24 @@
 	v_Lang005 =	&Önizleme
 	v_Lang006 =	&Araç Çubukları
 	v_Lang007 =	K&ısayol Tuşları
-	v_Lang008 =	S&ütunlar Boyutu Sıfırla
-	v_Lang009 =	&Simgeler Boyutu
-	v_Lang010 =	&Düzen Sıfırla
-	v_Lang011 =	&Dosya
-	v_Lang012 =	&Kaydedin ve oyna
-	v_Lang013 =	K&omutları
-	v_Lang014 =	D&üzenleme
-	v_Lang015 =	&Seçenekleri
-	v_Lang016 =	&Özelleştirme
-	v_Lang017 =	&Otomatik
-	v_Lang018 =	&Manuel
-	v_Lang019 =	&Dur
-	v_Lang020 =	D&urma
-	v_Lang021 =	&Kompakt
-	v_Lang022 =	&Varsayılan
-	v_Lang023 =	&Küçük
-	v_Lang024 =	&Büyük
+	v_Lang008 =	A&rama Çubuğu
+	v_Lang009 =	&Sütunlar Boyutu Sıfırla
+	v_Lang010 =	S&imgeler Boyutu
+	v_Lang011 =	&Düzen Sıfırla
+	v_Lang012 =	D&osya
+	v_Lang013 =	Ka&ydedin ve oyna
+	v_Lang014 =	Ko&mutları
+	v_Lang015 =	D&üzenleme
+	v_Lang016 =	S&eçenekleri
+	v_Lang017 =	Ö&zelleştirme
+	v_Lang018 =	O&tomatik
+	v_Lang019 =	Ma&nuel
+	v_Lang020 =	D&ur
+	v_Lang021 =	Durma
+	v_Lang022 =	Kom&pakt
+	v_Lang023 =	Varsayı&lan
+	v_Lang024 =	Kü&çük
+	v_Lang025 =	&Büyük
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Ayarlar
@@ -292,6 +293,7 @@
 	w_Lang108 =	Denetlenmeyen satırları açıklama
 	w_Lang109 =	İndirme / Yükleme dosyaları (F11+Shift)
 	w_Lang110 =	Zip / Sıkıştırılmış dosya (Ctrl+F11)
+	w_Lang111 =	Arama... (Basın gitmek için Enter)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Fare
@@ -888,6 +890,7 @@
 	d_Lang112 =	E-posta hesabı bulunamadı.
 	d_Lang113 =	Hiçbir hata bildirdi.
 	d_Lang114 =	Skripte izvoze (čak i ako je sastavljen) s funkcijom poslati e-mail (CDO) će imati vidljive informacije o računima e-pošte koristi, uključujući i lozinke. Projekt datoteka PMC nema tu informaciju.
+	d_Lang115 =	- aynı konuma bölgeyi ayarlamak için Alt tutun.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Bu ana pencerede komut düğmeleri kullanarak ya da eylemleri kopyalamak için Kayıt kullanarak Makrolar oluşturabilirsiniz. Seçenekler > Ayarlar > giriş kaydedilecektir ne seçmek için kayıt.
@@ -1249,7 +1252,7 @@
 	If var [not] between	Bir değişkenin içeriği olup olmadığını kontrol eder iki değeri (dahil) arasında sayısal ya da alfabetik olarak bulunmaktadır.
 	If var [not] in/contains MatchList 	Bir değişkenin içeriğini kontrol eder bir listede öğelerin bir maç .
 	If var is [not] type	Bir değişkenin içeriğini sayısal olup olmadığını kontrol eder , büyük harf, vb
-	IfEqual/IfNotEqual	Eşitlik için bir değere bir değişken karşılaştırır . Ile eşanlamlı : Eğer Var = Değer | Var < > Değer eğer .
+	IfEqual / IfNotEqual	Eşitlik için bir değere bir değişken karşılaştırır . Ile eşanlamlı : Eğer Var = Değer | Var < > Değer eğer .
 	IfExist / IfNotExist / FileExist	Bir dosya veya klasörün varlığını kontrol eder.
 	IfGreater / IfGreaterOrEqual	Bir değere bir değişken karşılaştırır . Ile eşanlamlı : if Var > Değer | Eğer Var > = Değer .
 	IfInString / IfNotInString / InStr	Bir değişken diye bakar belirtilen dize içerir .

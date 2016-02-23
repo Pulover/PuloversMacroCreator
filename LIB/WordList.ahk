@@ -37,7 +37,7 @@ SyHi_Fun =
 _addref _clone _getaddress _getcapacity _insert _maxindex _minindex _newenum _release _remove
 _setcapacity abs acos array asc asin atan ceil chr comobjactive comobjarray comobjconnect
 comobjcreate comobjenwrap comobjerror comobjflags comobjget comobjmissing comobjparameter
-comobjquery comobjtype comobjunwrap comobjvalue cos delete dllcall exp fileexist fileopen floor func
+comobjquery comobjtype comobjunwrap comobjvalue cos delete dllcall exp fileexist fileopen floor format func
 getaddress getcapacity getkeyname getkeysc getkeystate getkeyvk haskey il_add il_create il_destroy
 insert insertat instr isbyref isfunc islabel isobject ln log ltrim lv_add lv_delete lv_deletecol lv_getcount
 lv_getnext lv_gettext lv_insert lv_insertcol lv_modify lv_modifycol lv_setimagelist maxindex

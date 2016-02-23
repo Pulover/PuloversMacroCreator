@@ -38,7 +38,7 @@
 
 	Import(SelectedFile, DL := "`n", New := "1")
 	{
-		local FoundC, Labels, TabText
+		local FoundC, Labels, TabText, AutoRefreshState
 
 		Gui, chMacro:Submit, NoHide
 		ColOrder := LVOrder_Get(10, ListID%A_List%)

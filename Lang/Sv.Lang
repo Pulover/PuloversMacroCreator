@@ -119,23 +119,24 @@
 	v_Lang005 =	&Förhandsgranska
 	v_Lang006 =	&Verktygsfält
 	v_Lang007 =	&Snabbtangenter
-	v_Lang008 =	&Återställ kolumner Storlek
-	v_Lang009 =	Ik&oner Storlek
-	v_Lang010 =	Å&terställ Layout
-	v_Lang011 =	&Fil
-	v_Lang012 =	&Spela in och spela
-	v_Lang013 =	&Kommandon
-	v_Lang014 =	&Redigera
-	v_Lang015 =	&Alternativ
-	v_Lang016 =	A&npassa
-	v_Lang017 =	&Automatisk
-	v_Lang018 =	&Manuell
-	v_Lang019 =	&Stopp
-	v_Lang020 =	&Paus
-	v_Lang021 =	&Kompakt
-	v_Lang022 =	&Default
-	v_Lang023 =	&Små
-	v_Lang024 =	S&tor
+	v_Lang008 =	S&ökfält
+	v_Lang009 =	&Återställ kolumner Storlek
+	v_Lang010 =	Ik&oner Storlek
+	v_Lang011 =	Å&terställ Layout
+	v_Lang012 =	Fi&l
+	v_Lang013 =	S&pela in och spela
+	v_Lang014 =	Komma&ndon
+	v_Lang015 =	&Redigera
+	v_Lang016 =	Alt&ernativ
+	v_Lang017 =	Anpassa
+	v_Lang018 =	A&utomatisk
+	v_Lang019 =	Manuell
+	v_Lang020 =	Stopp
+	v_Lang021 =	Paus
+	v_Lang022 =	Kompakt
+	v_Lang023 =	&Default
+	v_Lang024 =	Sm&å
+	v_Lang025 =	Stor
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Inställningar
@@ -292,6 +293,7 @@
 	w_Lang108 =	Kommentera ut okontrollerade rader
 	w_Lang109 =	Ladda ner / Ladda upp filer (Shift+F11)
 	w_Lang110 =	Zip / packa upp filer (Ctrl+F11)
+	w_Lang111 =	Sök... (Tryck Enter för att gå)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mus
@@ -888,6 +890,7 @@
 	d_Lang112 =	E-postkonto inte hittas.
 	d_Lang113 =	Inget fel rapporterats.
 	d_Lang114 =	Skriptejä viedään (vaikka käännetty) kanssa lähetä sähköpostia toiminto (CDO) on näkyvissä merkintä sähköpostitilejä käytetään, mukaan lukien salasana. PMC Projektitiedosto ei ole tätä tietoa.
+	d_Lang115 =	- Håll Alt för att ställa in region på samma plats.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Du kan skapa makron med hjälp av kommandoknapparna i huvudfönstret eller använda inspelaren för att kopiera dina handlingar. Gå till Alternativ> Inställningar> Inspelning för att välja vilka ingångar kommer att registreras.
@@ -1249,7 +1252,7 @@
 	If var [not] between	Kontrollerar om en variabel innehåll är numeriskt eller alfabetiskt mellan två värden (inklusive) .
 	If var [not] in/contains MatchList 	Kontrollerar om en variabel innehåll matchar ett av objekten i en lista .
 	If var is [not] type	Kontrollerar om en variabel innehåll är numeriska , versaler etc.
-	IfEqual/IfNotEqual	Jämför en variabel till ett värde för jämställdhet . Synonymt med : om var = värde | om Var < > Value .
+	IfEqual / IfNotEqual	Jämför en variabel till ett värde för jämställdhet . Synonymt med : om var = värde | om Var < > Value .
 	IfExist / IfNotExist / FileExist	Kontrollerar om det finns en fil eller mapp .
 	IfGreater / IfGreaterOrEqual	Jämför en variabel till ett värde . Synonymt med : om Var> Standard | Om Var> = Värde .
 	IfInString / IfNotInString / InStr	Kontrollerar om en variabel innehåller den angivna strängen .

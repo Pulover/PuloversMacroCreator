@@ -122,7 +122,7 @@ GuiControl, chMacro:Choose, A_List, %mSel%
 GoSub, TabSel
 return
 
-#If !HotkeyCtrlHasFocus() && WinActive("ahk_id" PMCWinID) && !Capt
+#If !HotkeyCtrlHasFocus() && !ControlXHasFocus() && WinActive("ahk_id" PMCWinID) && !Capt
 
 +F1::GoSub, HelpAbout
 F2::GoSub, Mouse
@@ -147,6 +147,10 @@ F12::GoSub, IECom
 +F12::GoSub, ComInt
 ^F12::GoSub, SendMsg
 ~Enter::GoSub, EditButton
+
+#If ControlXHasFocus() && WinActive("ahk_id" PMCWinID)
+
+~Enter::GoSub, GoToFind
 
 #If WinActive("ahk_id " LVEditMacros) && !InEdit
 

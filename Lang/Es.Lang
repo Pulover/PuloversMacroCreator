@@ -119,23 +119,24 @@
 	v_Lang005 =	&Previa
 	v_Lang006 =	Ba&rras De Herramientas
 	v_Lang007 =	&Teclas De Acceso Rápido
-	v_Lang008 =	&Cambiar Tamaño Columnas
-	v_Lang009 =	Tamaño de Los &Iconos
-	v_Lang010 =	R&establecer Diseño
-	v_Lang011 =	&Expediente
-	v_Lang012 =	&Grabar y reproducir
-	v_Lang013 =	&Comandos
-	v_Lang014 =	E&ditar
-	v_Lang015 =	&Opciones
-	v_Lang016 =	&Personalizar
-	v_Lang017 =	&Automático
-	v_Lang018 =	&Manual
-	v_Lang019 =	&Detener
-	v_Lang020 =	&Pausa
-	v_Lang021 =	&Compacto
-	v_Lang022 =	&Defecto
-	v_Lang023 =	&Pequeño
-	v_Lang024 =	&Grande
+	v_Lang008 =	Barra De Bús&queda
+	v_Lang009 =	&Cambiar Tamaño Columnas
+	v_Lang010 =	Tamaño de Los &Iconos
+	v_Lang011 =	R&establecer Diseño
+	v_Lang012 =	&Expediente
+	v_Lang013 =	&Grabar y reproducir
+	v_Lang014 =	&Comandos
+	v_Lang015 =	E&ditar
+	v_Lang016 =	&Opciones
+	v_Lang017 =	&Personalizar
+	v_Lang018 =	&Automático
+	v_Lang019 =	&Manual
+	v_Lang020 =	&Detener
+	v_Lang021 =	&Pausa
+	v_Lang022 =	&Compacto
+	v_Lang023 =	&Defecto
+	v_Lang024 =	&Pequeño
+	v_Lang025 =	&Grande
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Configuración
@@ -292,6 +293,7 @@
 	w_Lang108 =	Comente filas sin marcar
 	w_Lang109 =	Descarga de archivos / Subir (Shift+F11)
 	w_Lang110 =	Zip / descomprimir archivos (Ctrl+F11)
+	w_Lang111 =	Buscar... (Pulse Intro para ir)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Ratón
@@ -888,6 +890,7 @@
 	d_Lang112 =	Cuenta de correo electrónico no se encuentra.
 	d_Lang113 =	Ningún error informado.
 	d_Lang114 =	Scripts exportados (incluso si compilado) con la función de envío de correo electrónico (CDO) tendrán informaciones visibles de cuentas de correo electrónico utilizadas, incluyendo la contraseña. El archivo de proyecto PMC no tiene esta información.
+	d_Lang115 =	- Mantenga Alt región para establecer en la misma ubicación.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Puede crear macros utilizando los botones de comando en la ventana principal o el uso de la grabadora para copiar sus acciones. Vaya a Opciones > Configuración > Grabación para seleccionar lo que se registran las entradas.
@@ -1249,7 +1252,7 @@
 	If var [not] between	Comprueba si el contenido de una variable son numéricamente o alfabéticamente entre dos valores (inclusive).
 	If var [not] in/contains MatchList 	Comprueba si el contenido de una variable coinciden con uno de los elementos de una lista .
 	If var is [not] type	Comprueba si el contenido de una variable son numéricos, mayúsculas , etc
-	IfEqual/IfNotEqual	Compara una variable en un valor de la igualdad. Sinónimo : si Var = Valor | si Var < > Value.
+	IfEqual / IfNotEqual	Compara una variable en un valor de la igualdad. Sinónimo : si Var = Valor | si Var < > Value.
 	IfExist / IfNotExist / FileExist	Comprueba la existencia de un archivo o carpeta .
 	IfGreater / IfGreaterOrEqual	Compara una variable a un valor. Sinónimo : si Var > Valor | si Var > = Valor .
 	IfInString / IfNotInString / InStr	Comprueba si una variable contiene la cadena especificada.

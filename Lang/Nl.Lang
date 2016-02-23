@@ -119,23 +119,24 @@
 	v_Lang005 =	&Voorbeeld
 	v_Lang006 =	&Werkbalken
 	v_Lang007 =	H&otkeys
-	v_Lang008 =	&Reset Kolommen Grootte
-	v_Lang009 =	Ico&nen Grootte
-	v_Lang010 =	R&eset Layout
-	v_Lang011 =	&Bestand
-	v_Lang012 =	&Opnemen en afspelen
-	v_Lang013 =	&Commando's
-	v_Lang014 =	&Uitgeven
-	v_Lang015 =	O&pties
-	v_Lang016 =	&Aanpassen
-	v_Lang017 =	&Automatisch
-	v_Lang018 =	&Handboek
-	v_Lang019 =	&Stoppen
-	v_Lang020 =	&Pauze
-	v_Lang021 =	&Compact
-	v_Lang022 =	&Verzuim
-	v_Lang023 =	&Klein
-	v_Lang024 =	&Groot
+	v_Lang008 =	&Zoekbalk
+	v_Lang009 =	&Reset Kolommen Grootte
+	v_Lang010 =	Ico&nen Grootte
+	v_Lang011 =	R&eset Layout
+	v_Lang012 =	&Bestand
+	v_Lang013 =	O&pnemen en afspelen
+	v_Lang014 =	Co&mmando's
+	v_Lang015 =	&Uitgeven
+	v_Lang016 =	Op&ties
+	v_Lang017 =	Aanpa&ssen
+	v_Lang018 =	Automatisch
+	v_Lang019 =	Han&dboek
+	v_Lang020 =	Stoppen
+	v_Lang021 =	Pauze
+	v_Lang022 =	Compact
+	v_Lang023 =	Verzuim
+	v_Lang024 =	&Klein
+	v_Lang025 =	&Groot
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Instellingen
@@ -292,6 +293,7 @@
 	w_Lang108 =	Commentaar uit ongecontroleerd rijen
 	w_Lang109 =	Download / Upload bestanden (Shift+F11)
 	w_Lang110 =	Zip / Unzip bestanden (Ctrl+F11)
+	w_Lang111 =	Zoeken... (Druk op Enter om te gaan)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Muis
@@ -888,6 +890,7 @@
 	d_Lang112 =	E-mailaccount niet gevonden.
 	d_Lang113 =	Geen fout gemeld.
 	d_Lang114 =	Scripts worden uitgevoerd (zelfs als gecompileerd) met de send e-mailfunctie (CDO) is zichtbaar informatie van e-mailaccounts gebruikt, met inbegrip van het wachtwoord. De PMC project bestand beschikt niet over deze informatie.
+	d_Lang115 =	- Houd Alt tot regio ingesteld op dezelfde locatie.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	U kunt macro's met behulp van de Command Knoppen in het hoofdvenster of het gebruik van de recorder om uw acties te kopiëren creëren. Ga naar Opties > Instellingen > Opname te selecteren wat input wordt opgenomen.
@@ -1249,7 +1252,7 @@
 	If var [not] between	Controleert of de inhoud van een variabele zijn numeriek of alfabetisch tussen twee waarden (inclusief) .
 	If var [not] in/contains MatchList 	Controleert of de inhoud van een variabele overeenkomt met een van de items in een lijst .
 	If var is [not] type	Controleert of de inhoud van een variabele zijn numeriek , hoofdletters , enz.
-	IfEqual/IfNotEqual	Vergelijkt een variabele om een waarde voor de gelijkheid . Synoniem : indien Var = Waarde | indien Var < > Value .
+	IfEqual / IfNotEqual	Vergelijkt een variabele om een waarde voor de gelijkheid . Synoniem : indien Var = Waarde | indien Var < > Value .
 	IfExist / IfNotExist / FileExist	Controles voor het bestaan van een bestand of map .
 	IfGreater / IfGreaterOrEqual	Vergelijkt een variabele een waarde . Synoniem : indien Var > Waarde | Als Var > = waarde .
 	IfInString / IfNotInString / InStr	Controleert of een variabele bevat de opgegeven tekenreeks .

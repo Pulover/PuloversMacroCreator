@@ -327,6 +327,8 @@ ControlXHasFocus()
 		If (ctrl = "RowLang")
 			return true
 	}
+	If (ctrl = "FindList")
+		return true
 	return false
 }
 

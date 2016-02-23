@@ -1,6 +1,6 @@
 ﻿Lang_en
 		
-		; English
+		Lang_
 		
 ; 01. Main Menu		
 	m_Lang001 =	&File
@@ -119,23 +119,24 @@
 	v_Lang005 =	&Preview
 	v_Lang006 =	&Toolbars
 	v_Lang007 =	H&otkeys
-	v_Lang008 =	&Reset Columns Size
-	v_Lang009 =	&Icons Size
-	v_Lang010 =	R&eset Layout
-	v_Lang011 =	&File
-	v_Lang012 =	&Record  Play
-	v_Lang013 =	&Commands
-	v_Lang014 =	&Edit
-	v_Lang015 =	&Options
-	v_Lang016 =	C&ustomize
-	v_Lang017 =	&Automatic
-	v_Lang018 =	&Manual
-	v_Lang019 =	&Stop
-	v_Lang020 =	&Pause
-	v_Lang021 =	&Compact
-	v_Lang022 =	&Default
-	v_Lang023 =	&Small
-	v_Lang024 =	&Large
+	v_Lang008 =	Search &Bar
+	v_Lang009 =	&Reset Columns Size
+	v_Lang010 =	&Icons Size
+	v_Lang011 =	R&eset Layout
+	v_Lang012 =	&File
+	v_Lang013 =	&Record  Play
+	v_Lang014 =	&Commands
+	v_Lang015 =	&Edit
+	v_Lang016 =	&Options
+	v_Lang017 =	C&ustomize
+	v_Lang018 =	&Automatic
+	v_Lang019 =	&Manual
+	v_Lang020 =	&Stop
+	v_Lang021 =	&Pause
+	v_Lang022 =	&Compact
+	v_Lang023 =	&Default
+	v_Lang024 =	&Small
+	v_Lang025 =	&Large
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Settings
@@ -292,6 +293,7 @@
 	w_Lang108 =	Comment out unchecked rows
 	w_Lang109 =	Download / Upload files (Shift+F11)
 	w_Lang110 =	Zip / Unzip files (Ctrl+F11)
+	w_Lang111 =	Search... (Press Enter to go)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mouse
@@ -888,6 +890,7 @@
 	d_Lang112 =	Email account not found.
 	d_Lang113 =	No error reported.
 	d_Lang114 =	Scripts exported (even if compiled) with the send email function (CDO) will have visible informations of email accounts used, including the PASSWORD. The PMC project file does not have this information.
+	d_Lang115 =	- Hold Alt to set region to the same location.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	You can create Macros using the Command Buttons in the main window or using the Recorder to copy your actions. Go to Options > Settings > Recording to select what inputs will be recorded.
@@ -1249,7 +1252,7 @@
 	If var [not] between	Checks whether a variable's contents are numerically or alphabetically between two values (inclusive).
 	If var [not] in/contains MatchList 	Checks whether a variable's contents match one of the items in a list.
 	If var is [not] type	Checks whether a variable's contents are numeric, uppercase, etc.
-	IfEqual/IfNotEqual	Compares a variable to a value for equality. Synonymous with: if Var = Value | if Var <> Value.
+	IfEqual / IfNotEqual	Compares a variable to a value for equality. Synonymous with: if Var = Value | if Var <> Value.
 	IfExist / IfNotExist / FileExist	Checks for the existence of a file or folder.
 	IfGreater / IfGreaterOrEqual	Compares a variable to a value. Synonymous with: if Var > Value | if Var >= Value.
 	IfInString / IfNotInString / InStr	Checks if a variable contains the specified string.
