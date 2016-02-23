@@ -10374,6 +10374,7 @@ GoResult:
 Gui, 34:Submit, NoHide
 Gui, 34:Default
 LV_GetText(GotoRes1, LV_GetNext(), 1), LV_GetText(GotoRes2, LV_GetNext(), 2)
+GotoResult:
 Loop, Parse, KeywordsList, |
 {
 	SearchIn := A_LoopField
@@ -11351,6 +11352,14 @@ return
 
 GoToFind:
 Gui, Submit, NoHide
+If (FindList = "")
+	return
+FoundResults := Find_Command(FindList)
+If (FoundResults.Length() = 1)
+{
+	GotoRes1 := FoundResults[1].Cmd, GotoRes2 := FoundResults[1].Path
+	Goto, GotoResult
+}
 GoSub, CmdFind
 GuiControl,, FindCmd, %FindList%
 GoSub, FindCmd

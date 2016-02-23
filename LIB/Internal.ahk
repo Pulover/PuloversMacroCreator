@@ -93,7 +93,7 @@ Find_Command(SearchWord)
 {
 	local Results, SearchIn, Search
 	
-	Results := {}
+	Results := []
 	Loop, Parse, KeywordsList, |
 	{
 		SearchIn := A_LoopField
@@ -103,11 +103,11 @@ Find_Command(SearchWord)
 				Search := "Type" A_Index
 			Else
 				Search := SearchIn
-			If (InStr(A_LoopField, FindCmd))
+			If (InStr(A_LoopField, SearchWord))
 				Results.Push({Cmd: A_LoopField, Path: %Search%_Path})
 			Else Try
 			{
-				If (InStr(%A_LoopField%_Desc, FindCmd))
+				If (InStr(%A_LoopField%_Desc, SearchWord))
 					Results.Push({Cmd: A_LoopField, Path: %Search%_Path})
 			}
 		}
