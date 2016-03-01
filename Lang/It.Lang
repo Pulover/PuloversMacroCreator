@@ -291,7 +291,7 @@
 	w_Lang106 =	Aggiungere Return (Ctrl+Shift+N)
 	w_Lang107 =	Convertire Macro alla funzione (Ctrl+Shift+C)
 	w_Lang108 =	Commentare le righe non controllati
-	w_Lang109 =	Download / upload di file (Shift+F11)
+	w_Lang109 =	Scaricare file (Shift+F11)
 	w_Lang110 =	Zip / file Unzip (Ctrl+F11)
 	w_Lang111 =	Cerca... (Premere Invio per andare)
 		
@@ -530,7 +530,7 @@
 	c_Lang233 =	F2 per modificare
 	c_Lang234 =	HTML
 	c_Lang235 =	Invia una email
-	c_Lang236 =	Download / upload di file
+	c_Lang236 =	Scaricare file
 	c_Lang237 =	Zip / file Unzip
 	c_Lang238 =	Accendere
 	c_Lang239 =	Spegni
@@ -541,7 +541,16 @@
 	c_Lang244 =	Rechts nach links
 	c_Lang245 =	Allegati
 	c_Lang246 =	Il percorso
-	c_Lang247 =	se
+	c_Lang247 =	Se
+	c_Lang248 =	Comprimere ogni file di un archivio diverso
+	c_Lang249 =	Estrarre ogni file in una cartella diversa
+	c_Lang250 =	File Zip
+	c_Lang251 =	Decomprimere i file
+	c_Lang252 =	Link per il download
+	c_Lang253 =	Cartella di destinazione
+	c_Lang254 =	File di destinazione
+	c_Lang255 =	Separati da virgola, virgola o di linea.
+	c_Lang256 =	Regolare coordinate al centro dell'immagine
 		
 ; 16. Other Windows		
 	t_Lang001 =	Esporta in AutoHotkey
@@ -852,7 +861,7 @@
 	d_Lang085 =	Mancante "End Loop" economico Macro 
 	d_Lang086 =	Mancante "End If" economico Macro
 	d_Lang087 =	Si noti che le modifiche apportate allo script di fuori del programma non influisce in alcun modo MACRO.
-		 Questa caratteristica è intesa solo come una funzione di esportazione rapido. PMC non è destinata ad essere un editor di script AHK.
+		Questa funzione serve solo come una funzione rapida di esportazione. PMC non è progettato per essere un editor di script AHK.
 	d_Lang088 =	Provare a eseguire come utente comune (non amministratore).
 	d_Lang089 =	Nessuna riga selezionato!
 	d_Lang090 =	Per favore, selezionare una riga per inserire o rimuovere il gruppo.
@@ -1387,6 +1396,7 @@
 	WinGetText	Recupera il testo dalla finestra specificata.
 	WinGetTitle	Recupera il titolo della finestra specificata.
 	WinHide	Nasconde la finestra specificata.
+	WinHttpDownloadToFile	Download uno o più file da Internet.
 	WinKill	Forza la finestra specificata per chiudere.
 	WinMaximize	Ingrandisce la finestra specificata per la dimensione massima.
 	WinMenuSelectItem	Richiama una voce di menu dalla barra dei menu della finestra specificata.

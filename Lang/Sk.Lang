@@ -291,7 +291,7 @@
 	w_Lang106 =	Pridať Return (Ctrl+Shift+N)
 	w_Lang107 =	Previesť makra fungovať (Ctrl+Shift+C)
 	w_Lang108 =	Komentár mimo neskontrolované riadkov
-	w_Lang109 =	Download / upload súborov (Shift+F11)
+	w_Lang109 =	Súbory k stiahnutiu (Shift+F11)
 	w_Lang110 =	Zip / rozbalenie súborov (Ctrl+F11)
 	w_Lang111 =	Vyhľadávanie... (Klávesou Enter prejdite)
 		
@@ -530,7 +530,7 @@
 	c_Lang233 =	F2 upraviť
 	c_Lang234 =	HTML
 	c_Lang235 =	Poslať email
-	c_Lang236 =	Download / upload súborov
+	c_Lang236 =	Súbory k stiahnutiu
 	c_Lang237 =	Zip / rozbalenie súborov
 	c_Lang238 =	Zapnúť
 	c_Lang239 =	Vypnúť
@@ -541,7 +541,16 @@
 	c_Lang244 =	Right-to-Left
 	c_Lang245 =	Prílohy
 	c_Lang246 =	Cesta
-	c_Lang247 =	ak
+	c_Lang247 =	Ak
+	c_Lang248 =	Komprimuje každý súbor do iného archívu
+	c_Lang249 =	Extrakt každý súbor do inej zložky
+	c_Lang250 =	Zips súbory
+	c_Lang251 =	Rozbalenie súborov
+	c_Lang252 =	Odkazy na stiahnutie
+	c_Lang253 =	Cieľová zložka
+	c_Lang254 =	Súbor Destination
+	c_Lang255 =	Oddelené bodkočiarkami, čiarky alebo linke.
+	c_Lang256 =	Nastavte súradníc do stredu obrazu
 		
 ; 16. Other Windows		
 	t_Lang001 =	Export do AutoHotkey
@@ -852,7 +861,7 @@
 	d_Lang085 =	Chýbajúce "End Loop" vyhlásenie v Makro 
 	d_Lang086 =	Chýbajúce "End If" vyhlásenie v Makro
 	d_Lang087 =	Všimnite si, že zmeny vykonané v skriptu mimo program nebude mať vplyv na vaše makrá v žiadnom prípade.
-		 Táto funkcia je určená len k rýchlemu exportné funkcie. PMC nie je chcel byť editor AHK skript.
+		Táto funkcia je určená len k rýchlemu exportné funkcie. PMC nie je navrhnutý tak, aby editor AHK skript.
 	d_Lang088 =	Skúste spustiť ako bežných užívateľov (nie správca).
 	d_Lang089 =	Nie riadok vybraný!
 	d_Lang090 =	Prosím, vyberte riadok pre vloženie alebo odstránenie skupiny.
@@ -1387,6 +1396,7 @@
 	WinGetText	Načíta text zo zadaného okna.
 	WinGetTitle	Načíta názov zadané okno.
 	WinHide	Skryje uvedené okno.
+	WinHttpDownloadToFile	Sťahovanie jeden alebo viac súborov z Internetu.
 	WinKill	Vynúti zadaný okno zatvorte.
 	WinMaximize	Zväčší zadané okno na maximálnu veľkosť.
 	WinMenuSelectItem	Vyvolá položku z panela ponúk zadané okno.

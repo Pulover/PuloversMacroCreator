@@ -291,7 +291,7 @@
 	w_Lang106 =	Tambah Pulangan (Ctrl+Shift+N)
 	w_Lang107 =	Menukar Makro Untuk Function (Ctrl+Shift+C)
 	w_Lang108 =	Komen daripada baris tidak dikawal
-	w_Lang109 =	Download / Muat naik fail (Shift+F11)
+	w_Lang109 =	Fail muat turun (Shift+F11)
 	w_Lang110 =	Zip / fail Unzip (Ctrl+F11)
 	w_Lang111 =	Carian... (Tekan Enter untuk pergi)
 		
@@ -530,7 +530,7 @@
 	c_Lang233 =	F2 edit
 	c_Lang234 =	HTML
 	c_Lang235 =	Menghantar e-mel
-	c_Lang236 =	Download / Muat naik fail
+	c_Lang236 =	Fail muat turun
 	c_Lang237 =	Zip / fail Unzip
 	c_Lang238 =	Hidupkan
 	c_Lang239 =	Tutup
@@ -542,6 +542,15 @@
 	c_Lang245 =	Lampiran
 	c_Lang246 =	Path
 	c_Lang247 =	Jika
+	c_Lang248 =	Memampatkan setiap fail untuk arkib yang lain
+	c_Lang249 =	Extract setiap fail ke folder yang berbeza
+	c_Lang250 =	Fail zip
+	c_Lang251 =	Fail Unzip
+	c_Lang252 =	Pautan muat turun
+	c_Lang253 =	Folder destinasi
+	c_Lang254 =	Fail destinasi
+	c_Lang255 =	Dipisahkan oleh koma bertitik, koma atau talian.
+	c_Lang256 =	Laraskan koordinat ke tengah imej
 		
 ; 16. Other Windows		
 	t_Lang001 =	Eksport ke AutoHotkey
@@ -852,7 +861,7 @@
 	d_Lang085 =	Hilang "End Loop" kenyataan dalam Makro 
 	d_Lang086 =	Hilang "End If" kenyataan dalam Makro
 	d_Lang087 =	Perhatikan bahawa perubahan yang dibuat kepada tulisan di luar program ini TIDAK AKAN MENJEJASKAN MAKRO ANDA dalam apa jua cara.
-		 Ciri ini hanya bertujuan sebagai fungsi eksport mudah. PMC bukan bermaksud untuk menjadi editor skrip AHK.
+		Ciri ini hanya bertujuan sebagai fungsi eksport cepat. PMC tidak direka untuk menjadi editor skrip AHK.
 	d_Lang088 =	Cuba untuk menjalankan sebagai pengguna biasa (bukan pentadbir).
 	d_Lang089 =	Tiada berturut-turut dipilih!
 	d_Lang090 =	Sila, pilih berturut-turut untuk memasukkan atau mengeluarkan kumpulan.
@@ -1387,6 +1396,7 @@
 	WinGetText	Mendapatkan semula teks dari tingkap yang ditetapkan.
 	WinGetTitle	Mendapatkan semula gelaran tingkap yang ditetapkan.
 	WinHide	Menyembunyikan tetingkap yang dinyatakan.
+	WinHttpDownloadToFile	Muat turun satu atau lebih fail dari Internet.
 	WinKill	Angkatan tingkap yang dinyatakan untuk menutup.
 	WinMaximize	Membesarkan tetingkap yang dinyatakan kepada saiz maksimum.
 	WinMenuSelectItem	Menyembah item menu dari menu bar tetingkap tertentu.

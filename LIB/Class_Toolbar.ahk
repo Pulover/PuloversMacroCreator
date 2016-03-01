@@ -4,8 +4,8 @@
 ;
 ; Author:            Pulover [Rodolfo U. Batista]
 ;                    rodolfoub@gmail.com
-; AHK version:       1.1.11.00
-; Release date:      19 August 2013
+; AHK version:       1.1.23.01
+; Release date:      1 March 2016
 ;
 ;                    Class for AutoHotkey Toolbar custom controls
 ;=======================================================================================
@@ -78,7 +78,8 @@ Class Toolbar extends Toolbar.Private
 ;    Method:             Add
 ;    Description:        Add button(s) to the end the toolbar. The Buttons parameters
 ;                            sets target Label, text caption and icon index for each
-;                            button.
+;                            button. If not a valid label name, a function name can be
+;                            used instead.
 ;                        To add a separator call this method without parameters.
 ;                        Prepend any non letter or digit symbol, such as "-" or "*"
 ;                            to the label to add a hidden button. Hidden buttons won't
@@ -250,7 +251,7 @@ Class Toolbar extends Toolbar.Private
 ;        State:          OutputVar to store the button's state numeric value.
 ;        Style:          OutputVar to store the button's style numeric value.
 ;        Icon:           OutputVar to store the button's icon index.
-;        Label:          OutputVar to store the button's associated script label.
+;        Label:          OutputVar to store the button's associated script label or function.
 ;        Index:          OutputVar to store the button's text string index.
 ;    Return:             TRUE if successful, FALSE if there was a problem.
 ;=======================================================================================
@@ -372,7 +373,7 @@ Class Toolbar extends Toolbar.Private
 ;    Method:             LabelToIndex
 ;    Description:        Converts a button label to its index in a toolbar.
 ;    Parameters:
-;        Label:          Button's associated label.
+;        Label:          Button's associated label or function.
 ;    Return:             The 1-based index for the button or FALSE if Label is invalid.
 ;=======================================================================================
     LabelToIndex(Label)
@@ -470,15 +471,24 @@ Class Toolbar extends Toolbar.Private
 ;        CommandID:      Command ID associated with the button. This is send via
 ;                            WM_COMMAND message, you must pass the wParam from
 ;                            inside a function that monitors this message.
-;    Return:             TRUE if target label exists, or FALSE otherwise.
+;        FuncParams:     In case the button is associated with a valid function,
+;                            you may pass optional parameters for the function call.
+;                            You can pass any number of parameters.
+;    Return:             TRUE if target label or function exists, or FALSE otherwise.
 ;=======================================================================================
-    OnMessage(CommandID)
+    OnMessage(CommandID, FuncParams*)
     {
         If (IsLabel(this.Labels[CommandID]))
         {
             GoSub, % this.Labels[CommandID]
             return true
         }
+		Else If (IsFunc(this.Labels[CommandID]))
+		{
+			BtnFunc := this.Labels[CommandID]
+		,	%BtnFunc%(FuncParams*)
+			return true
+		}
         Else
             return False
     }
@@ -493,7 +503,7 @@ Class Toolbar extends Toolbar.Private
 ;        Param:          The lParam from WM_NOTIFY message.
 ;        MenuXPos:       OutputVar to store the horizontal position for a menu.
 ;        MenuYPos:       OutputVar to store the vertical position for a menu.
-;        BtnLabel:       OutputVar to store the label name associated with the button.
+;        BtnLabel:       OutputVar to store the label or function name associated with the button.
 ;        ID:             OutputVar to store the button's Command ID.
 ;        AllowCustom:    Set to FALSE to prevent customization of toolbars.
 ;        AllowReset:     Set to FALSE to prevent Reset button from restoring original buttons.

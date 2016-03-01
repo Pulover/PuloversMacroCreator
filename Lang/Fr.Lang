@@ -291,7 +291,7 @@
 	w_Lang106 =	Ajouter retour (Ctrl+Maj+N)
 	w_Lang107 =	Convertir à la fonction Macro (Ctrl+Maj+C)
 	w_Lang108 =	Commentaire sur les lignes non contrôlées
-	w_Lang109 =	Download / upload de fichiers (Maj+F11)
+	w_Lang109 =	Télécharger des fichiers (Maj+F11)
 	w_Lang110 =	Zip / dézipper les fichiers (Ctrl+F11)
 	w_Lang111 =	Rechercher... (Appuyez sur Entrée pour aller)
 		
@@ -530,7 +530,7 @@
 	c_Lang233 =	F2 zu bearbeiten
 	c_Lang234 =	HTML
 	c_Lang235 =	Envoyer un message
-	c_Lang236 =	Download / upload de fichiers
+	c_Lang236 =	Télécharger des fichiers
 	c_Lang237 =	Zip / dézipper les fichiers
 	c_Lang238 =	Allumer
 	c_Lang239 =	Éteindre
@@ -541,7 +541,16 @@
 	c_Lang244 =	Rechts nach links
 	c_Lang245 =	Pièces jointes
 	c_Lang246 =	Chemin
-	c_Lang247 =	si
+	c_Lang247 =	Si
+	c_Lang248 =	Compresser chaque fichier dans une archive différente
+	c_Lang249 =	Extraire chaque fichier dans un autre dossier
+	c_Lang250 =	Les fichiers Zip
+	c_Lang251 =	Décompressez les fichiers
+	c_Lang252 =	Les liens de téléchargement
+	c_Lang253 =	Dossier de destination
+	c_Lang254 =	Le fichier de destination
+	c_Lang255 =	Séparé par un point virgule, virgule ou en ligne.
+	c_Lang256 =	Ajuster les coordonnées du centre de l'image
 		
 ; 16. Other Windows		
 	t_Lang001 =	Exporter vers AutoHotkey
@@ -852,7 +861,7 @@
 	d_Lang085 =	Manquant "End Loop" déclaration Macro 
 	d_Lang086 =	Manquant "End If" déclaration Macro
 	d_Lang087 =	Notez que les modifications apportées au script en dehors du programme ne sera pas affecter vos macros en aucune façon.
-		 Cette fonction est uniquement destinée en fonction rapide de l'exportation. PMC est pas destiné à être un éditeur de script AHK.
+		Cette fonctionnalité est uniquement destinée en fonction rapide à l'exportation. PMC n'a pas été conçu pour être un éditeur de script AHK.
 	d_Lang088 =	Essayez de courir utilisateur comme commun (non administrateur).
 	d_Lang089 =	Aucune ligne sélectionnée!
 	d_Lang090 =	S'il vous plaît, sélectionner une ligne pour insérer ou retirer le groupe.
@@ -1387,6 +1396,7 @@
 	WinGetText	Récupère le texte de la fenêtre spécifiée.
 	WinGetTitle	Récupère le titre de la fenêtre spécifiée.
 	WinHide	Masque la fenêtre spécifiée.
+	WinHttpDownloadToFile	Téléchargements un ou plusieurs fichiers à partir d'Internet.
 	WinKill	Force la fenêtre spécifiée pour fermer.
 	WinMaximize	Agrandit la fenêtre spécifiée à sa taille maximale.
 	WinMenuSelectItem	Appelle un élément de menu dans la barre de menus de la fenêtre spécifiée.

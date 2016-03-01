@@ -221,7 +221,7 @@ Eval($x, _CustomVars := "", _Init := true)
 			
 			If ((IsFunc(_Match1)) && (!Func(_Match1).IsBuiltIn))
 			{
-				If _Match1 not in Screenshot,Zip,UnZip
+				If _Match1 not in Screenshot,Zip,UnZip,WinHttpDownloadToFile
 				{
 					$z[$i] := StrReplace($z[$i], _Match, "ERROR: NOT ALLOWED")
 					_Match1 := ""

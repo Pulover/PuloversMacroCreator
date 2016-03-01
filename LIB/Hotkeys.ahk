@@ -195,7 +195,7 @@ MButton::GoSub, DrawStart
 ; MButton Up::GoSub, DrawEnd
 
 #If Draw && OnEnter
-Enter::GoSub, Restore
+*Enter::GoSub, Restore
 
 #If Draw
 

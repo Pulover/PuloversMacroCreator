@@ -62,6 +62,9 @@ ListCount1 := 0
 ,	cType50 := "SetTimer"
 ,	cType51 := "While"
 ,	cType52 := "SendEmail"
+,	cType53 := "DownloadFiles"
+,	cType54 := "Zip"
+,	cType55 := "Unzip"
 
 Action1 := "Click"
 ,	Action2 := "Move"
@@ -75,15 +78,17 @@ Action1 := "Click"
 			,	8: ["TextB"]
 			,	10: ["RunB"]
 			,	11: ["WindowB"]
-			,	12: ["ComLoopB", "ComGotoB", "AddLabelB"]
+			,	12: ["ComLoopB", "ComGotoB", "TimedLabelB"]
 			,	14: ["ExportG"]
 			,	16: ["IfDirB"]
 			,	19: ["ImageB"]
 			,	21: ["IfStB", "AsVarB", "AsFuncB"]
 			,	22: ["SendMsgB"]
 			,	23: ["ControlB"]
-			,	24: ["IEComB", "IEComB", "IEComB"]
-			,	38: ["UserFuncB", "UserFuncB", "UserFuncB"]}
+			,	24: ["IEComB", "IEComB"]
+			,	38: ["UserFuncB", "UserFuncB", "UserFuncB"]
+			,	39: ["EmailB"]
+			,	40: ["DownloadB", "ZipB"]}
 ,	ContHTitle := {	2: ["p6-Preview.html"]
 			,	3: ["Commands/Pause.html", "Commands/Message_Box.html", "Commands/KeyWait.html"]
 			,	4: ["p7-Settings.html", "p7-Settings.html#misc.", "p7-Settings.html#user-global-variables"]
@@ -230,9 +235,8 @@ IconsNames := { "apply": 1
 			,	"close": 108
 			,	"extedit": 109
 			,	"sort": 110
-			,	"upload": 111
-			,	"email": 112
-			,	"zip": 113 }
+			,	"zip": 111
+			,	"email": 112 }
 
 KeyNameRep := "
 (Join,
@@ -727,8 +731,11 @@ StrSplit
 SubStr
 Tan
 Trim
+Unzip
 WinActive
 WinExist
+WinHttpDownloadToFile
+Zip
 )"
 
 BuiltinFuncParams := "
@@ -790,8 +797,11 @@ StrSplit (String [, Delimiters, OmitChars])
 SubStr (String, StartingPos [, Length])
 Tan (Number)
 Trim (String, OmitChars = "" `t"")
+Unzip (Sources, OutDir [, SeparateFolders])
 WinActive ([WinTitle, WinText, ExcludeTitle, ExcludeText])
 WinExist ([WinTitle, WinText, ExcludeTitle, ExcludeText])
+WinHttpDownloadToFile (UrlList, DestFolder)
+Zip (FilesToZip, OutFile [, SeparateFiles])
 Delete (Key / FirstKey, LastKey)
 HasKey (Key)
 InsertAt (Pos, Value1 [, Value2, ... ValueN])
@@ -1058,7 +1068,7 @@ DefaultBar := {FileOpt: "Enabled AutoSize", File: ["New=" w_Lang040 ":41", "Open
 														, "", "Window=" w_Lang058 ":79", "Image=" w_Lang059 ":27", "Run=" w_Lang060 ":58"
 														, "", "ComLoop=" w_Lang061 ":36", "ComGoto=" w_Lang062 ":22", "TimedLabel=" w_Lang063 ":71"
 														, "", "IfSt=" w_Lang064 ":26", "AsVar=" w_Lang065 ":75", "AsFunc=" w_Lang066 ":21"
-														, "", "Email=" w_Lang069 ":112", "DownloadFiles=" w_Lang109 ":95", "ZipFiles=" w_Lang110 ":113"
+														, "", "Email=" w_Lang069 ":112", "DownloadFiles=" w_Lang109 ":95", "ZipFiles=" w_Lang110 ":111"
 														, "", "IECom=" w_Lang067 ":25", "ComInt=" w_Lang068 ":33", "SendMsg=" w_Lang070 ":61"
 														, "", "CmdFind=" w_Lang092 ":92"]
 			, SetOpt: "Enabled AutoSize", Settings: ["HideMainWin=" w_Lang013 ":80", "OnScCtrl=" w_Lang009 ":87"

@@ -291,7 +291,7 @@
 	w_Lang106 =	Voeg Return (Ctrl+Shift+N)
 	w_Lang107 =	Omzetten Macro Aan (Ctrl+Shift+C) Functie
 	w_Lang108 =	Commentaar uit ongecontroleerd rijen
-	w_Lang109 =	Download / Upload bestanden (Shift+F11)
+	w_Lang109 =	Bestanden downloaden (Shift+F11)
 	w_Lang110 =	Zip / Unzip bestanden (Ctrl+F11)
 	w_Lang111 =	Zoeken... (Druk op Enter om te gaan)
 		
@@ -530,7 +530,7 @@
 	c_Lang233 =	F2 te bewerken
 	c_Lang234 =	HTML
 	c_Lang235 =	E-mail verzenden
-	c_Lang236 =	Download / Upload bestanden
+	c_Lang236 =	Bestanden downloaden
 	c_Lang237 =	Zip / Unzip bestanden
 	c_Lang238 =	Aanzetten
 	c_Lang239 =	Uitschakelen
@@ -541,7 +541,16 @@
 	c_Lang244 =	Rechts naar links
 	c_Lang245 =	Toebehoren
 	c_Lang246 =	Pad
-	c_Lang247 =	indien
+	c_Lang247 =	Indien
+	c_Lang248 =	Comprimeren elk bestand naar een ander archief
+	c_Lang249 =	Extract elk bestand naar een andere map
+	c_Lang250 =	Zip-bestanden
+	c_Lang251 =	Unzip bestanden
+	c_Lang252 =	Download links
+	c_Lang253 =	Folder Destination
+	c_Lang254 =	Destination file
+	c_Lang255 =	Gescheiden door puntkomma, komma of lijn.
+	c_Lang256 =	Stel coördinaten naar het midden van het beeld
 		
 ; 16. Other Windows		
 	t_Lang001 =	Exporteren naar AutoHotkey
@@ -852,7 +861,7 @@
 	d_Lang085 =	Ontbrekende "End Loop" verklaring in Macro 
 	d_Lang086 =	Ontbrekende "End If" verklaring in Macro
 	d_Lang087 =	Merk op dat wijzigingen in het script buiten het programma NIET uw macro zal invloed hebben op geen enkele manier.
-		 Deze functie is alleen bedoeld als een snelle exportfunctie. PMC is niet bedoeld om een AHK-script editor.
+		Deze functie is alleen bedoeld als een snelle export functie. PMC is niet ontworpen om een AHK-script editor.
 	d_Lang088 =	Probeer zo gewone gebruiker (geen beheerder) draaien.
 	d_Lang089 =	Geen rij geselecteerd!
 	d_Lang090 =	Alstublieft, selecteer een rij te plaatsen of te verwijderen van de groep.
@@ -1387,6 +1396,7 @@
 	WinGetText	Haalt de tekst uit het opgegeven venster.
 	WinGetTitle	Haalt de titel van het opgegeven venster.
 	WinHide	Verbergt het opgegeven venster.
+	WinHttpDownloadToFile	Downloads een of meer bestanden van het internet.
 	WinKill	Dwingt het opgegeven venster te sluiten.
 	WinMaximize	Vergroot het gespecificeerde venster op de maximale grootte.
 	WinMenuSelectItem	Roept een menu-item in de menubalk van het opgegeven venster.

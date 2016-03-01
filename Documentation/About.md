@@ -9,7 +9,7 @@ Author: Pulover \[Rodolfo U. Batista\]
 Copyright © 2012-2016 Rodolfo U. Batista  
 
 Version: 5.0.0  
-Release Date: February, 2016  
+Release Date: March, 2016  
 AutoHotkey Version: 1.1.23.01  
 
 Software License: [GNU General Public License](License.html)  
@@ -41,7 +41,7 @@ Thiago Talma for some improvements to the code, debugging and many suggestions.
 
 * New feature: **User Defined Functions**.
 * New feature: **Send Email**.
-* New feature: **Download / Upload Files**.
+* New feature: **Download Files**.
 * New feature: **Zip / Unzip Files**.
 * New feature: **Listview Groups** (+WinVista).
 * Implemented real Auto-Hotkey format expressions in Functions, Methods, Variable Assignment, Evaluate Expression, COM Interface and command parameters started with % .
@@ -62,6 +62,7 @@ Thiago Talma for some improvements to the code, debugging and many suggestions.
 * Added support for arrays inside IECom and COMInterface parameters.
 * Added options to set TitleMatchMode, TitleMatchMode Speed, DetectHiddenWindows and DetectHiddenText.
 * Added var [not] in, var [not] contains, var [not] between and var is in Compare Variables If Statement.
+* Added option to center coordinates of *ImageSearch* results.
 * Added option to change color of the rectangle of Image/Pixel Search area and Screenshots tool.
 * Added *Insert Comment Block* to "Edit Comment" window.
 * Added option to comment out unchecked rows in Preview/Exported scripts.

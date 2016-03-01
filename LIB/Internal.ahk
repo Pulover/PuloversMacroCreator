@@ -223,7 +223,7 @@ ShowContextHelp()
 	MouseGetPos,,,, Control
 	If (InStr(Control, "Edit"))
 		return
-	If A_Gui in 3,5,7,8,10,11,12,14,16,19,21,22,23,24,38
+	If A_Gui in 3,5,7,8,10,11,12,14,16,19,21,22,23,24,38,39,40
 	{
 		GuiControlGet, Pag,, TabControl
 		Title := ContHelp[A_Gui][Pag ? Pag : 1]
@@ -248,19 +248,19 @@ CmdHelp()
 		return
 	Gui, %Gui%:Submit, NoHide
 	If (Gui = 19)
-		Pag := (PixelS = 1) ? 2 : 1
+		Pag := (PixelS) ? 2 : 1
 	Else If (Gui = 12)
 	{
 		GuiControlGet, Pag,, TabControl
 		If (Pag = 1)
 		{
-			If (LFilePattern = 1)
+			If (LFilePattern)
 				Pag := 4
-			Else If (LParse = 1)
+			Else If (LParse)
 				Pag := 5
-			Else If (LRead = 1)
+			Else If (LRead)
 				Pag := 6
-			Else If (LRegistry = 1)
+			Else If (LRegistry)
 				Pag := 7
 		}
 	}
@@ -279,6 +279,29 @@ CmdHelp()
 	Else
 		Run, http://www.macrocreator.com/docs/%Title%
 	return 0
+}
+
+PicGetSize(File, ByRef Width, ByRef Height)
+{
+	static LoadedPic
+	LastEL := ErrorLevel
+	Gui, Pict:Add, Pic, vLoadedPic, %File% 
+	GuiControlGet, LoadedPic, Pict:Pos
+	Gui, Pict:Destroy
+	Width := LoadedPicW, Height := LoadedPicH
+	ErrorLevel := LastEL
+}
+
+CenterImgSrchCoords(File, ByRef CoordX, ByRef CoordY)
+{
+	static LoadedPic
+	LastEL := ErrorLevel
+	Gui, Pict:Add, Pic, vLoadedPic, %File% 
+	GuiControlGet, LoadedPic, Pict:Pos
+	Gui, Pict:Destroy
+	CoordX += LoadedPicW // 2
+	CoordY += LoadedPicH // 2
+	ErrorLevel := LastEL
 }
 
 ActiveGui(Hwnd)
@@ -1003,47 +1026,122 @@ LoadMailAccounts()
 	}
 }
 
-UnZip(Source, OutDir)
+WinHttpDownloadToFile(UrlList, DestFolder)
 {
+	UrlList := StrReplace(UrlList, "`n", ";")
+	UrlList := StrReplace(UrlList, ",", ";")
+	DestFolder := RTrim(DestFolder, "\") . "\"
+	
+	Loop, Parse, UrlList, `;, %A_Space%%A_Tab%
+	{
+		Url := A_LoopField, FileName := DestFolder . RegExReplace(A_LoopField, ".*/")
+		whr := ComObjCreate("WinHttp.WinHttpRequest.5.1")
+		whr.Open("GET", Url, True)
+		whr.Send()
+		If (whr.WaitForResponse())
+		{
+			ado := ComObjCreate("ADODB.Stream")
+			ado.Type := 1 ; adTypeBinary
+			ado.Open
+			ado.Write(whr.ResponseBody)
+			ado.SaveToFile(FileName, 2)
+			ado.Close
+		}
+	}
+}
+
+Unzip(Sources, OutDir, SeparateFolders := false)
+{
+	Static vOptions := 16|256
+	
+	Sources := StrReplace(Sources, "`n", ";")
+	Sources := StrReplace(Sources, ",", ";")
+	Sources := Trim(Sources, ";")
+	OutDir := RTrim(OutDir, "\")
+	
 	objShell := ComObjCreate("Shell.Application")
-	objSource := objShell.NameSpace(Source).Items()
-	objTarget := objShell.NameSpace(OutDir)
-	intOptions := 256 + 128
-	objTarget.CopyHere(objSource, intOptions)
+	Loop, Parse, Sources, `;, %A_Space%%A_Tab%
+	{
+		objSource := objShell.NameSpace(A_LoopField).Items()
+		TargetDir := OutDir
+		If (SeparateFolders)
+		{
+			SplitPath, A_LoopField,,,, FileNameNoExt
+			TargetDir .= "\" FileNameNoExt
+			If (!InStr(FileExist(TargetDir), "D"))
+				FileCreateDir, %TargetDir%
+		}
+		objTarget := objShell.NameSpace(TargetDir)
+		objTarget.CopyHere(objSource, vOptions)
+	}
 	ObjRelease(objShell)
 }
 
-Zip(FilesToZip, OutFile)
+Zip(FilesToZip, OutFile, SeparateFiles := false)
 {
-	If (!FileExist(OutFile))
-		CreateZipFile(OutFile)
+	Static vOptions := 4|16
+	
+	FilesToZip := StrReplace(FilesToZip, "`n", ";")
+	FilesToZip := StrReplace(FilesToZip, ",", ";")
+	FilesToZip := Trim(FilesToZip, ";")
+	
 	objShell := ComObjCreate("Shell.Application")
-	objTarget := objShell.Namespace(OutFile)
-	If (InStr(FileExist(FilesToZip), "D"))
-		FilesToZip .= (SubStr(FilesToZip, 0) = "\") ? "*.*" : "\*.*"
-	IntOptions := 4|16
-	Loop, %FilesToZip%, 1
+	If (SeparateFiles)
+		SplitPath, OutFile,, OutDir
+	Else
+	{
+		If (!FileExist(OutFile))
+			CreateZipFile(OutFile)
+		objTarget := objShell.Namespace(OutFile)
+	}
+	zipped := objTarget.items().Count
+	Loop, Parse, FilesToZip, `;, %A_Space%%A_Tab%
 	{
 		zipped++
-		objTarget.CopyHere(A_LoopFileLongPath, intOptions)
-		Loop
+		SplitPath, A_LoopField, FileName, FileDir,, FileNameNoExt
+		FileDir := RegExReplace(FileDir, ".*\\")
+		If (SeparateFiles)
 		{
-			done := objTarget.items().count
-			if (done = zipped)
-				break
+			OutFile := OutDir "\" FileNameNoExt ".zip"
+			If (!FileExist(OutFile))
+				CreateZipFile(OutFile)
+			objTarget := objShell.Namespace(OutFile)
+			zipped := 1
 		}
-		done := -1
+		For item in objTarget.Items
+		{
+			If (item.Name = FileDir)
+			{
+				item.InvokeVerb("Delete")
+				zipped--
+				break
+			}
+			If (item.Name = FileName)
+			{
+				objShell.Namespace(A_Temp).MoveHere(item)
+				FileDelete, % A_Temp "\" item.Name
+				zipped--
+				break
+			}
+		}
+		objTarget.CopyHere(A_LoopField, vOptions)
+		While (objTarget.items().Count != zipped)
+			Sleep, 10
 	}
+	ObjRelease(objShell)
 }
 
 CreateZipFile(sZip)
 {
+	CurrentEncoding := A_FileEncoding
+	FileEncoding, CP1252
 	Header1 := "PK" . Chr(5) . Chr(6)
 	VarSetCapacity(Header2, 18, 0)
 	file := FileOpen(sZip,"w")
 	file.Write(Header1)
 	file.RawWrite(Header2,18)
 	file.close()
+	FileEncoding, %CurrentEncoding%
 }
 
 SavedVars(_Var := "", ByRef _Saved := "", AsArray := false, RunningFunction := "")
@@ -1052,7 +1150,7 @@ SavedVars(_Var := "", ByRef _Saved := "", AsArray := false, RunningFunction := "
 	Local ListOfVars, i, v
 	
 	If _Var in %BuiltinVars%,Action,Step,Details,TimesX,DelayX,Type,Target,Window,IfError,VarName,VarValue,Oper,Par,Param,Version,Lang,AutoKey,ManKey,AbortKey,PauseKey,RecKey,RecNewKey,RelKey,FastKey,SlowKey,ClearNewList,DelayG,OnScCtrl,ShowStep,HideMainWin,DontShowPb,DontShowRec,DontShowEdt,ConfirmDelete,ShowTips,NextTip,IfDirectContext,IfDirectWindow,KeepHkOn,Mouse,Moves,TimedI,Strokes,CaptKDn,MScroll,WClass,WTitle,MDelay,DelayM,DelayW,MaxHistory,TDelay,ToggleC,RecKeybdCtrl,RecMouseCtrl,CoordMouse,SpeedUp,SpeedDn,MouseReturn,ShowProgBar,ShowBarOnStart,AutoHideBar,RandomSleeps,RandPercent,DrawButton,OnRelease,OnEnter,LineW,ScreenDir,DefaultEditor,DefaultMacro,StdLibFile,KeepDefKeys,TbNoTheme,AutoBackup,MultInst,EvalDefault,CloseAction,ShowLoopIfMark,ShowActIdent,SearchAreaColor,LoopLVColor,IfLVColor,VirtualKeys,AutoUpdate,Ex_AbortKey,Ex_PauseKey,Ex_SM,SM,Ex_SI,SI,Ex_ST,ST,Ex_DH,Ex_AF,Ex_HK,Ex_PT,Ex_NT,Ex_SC,SC,Ex_SW,SW,Ex_SK,SK,Ex_MD,MD,Ex_SB,SB,Ex_MT,MT,Ex_IN,Ex_UV,Ex_Speed,ComCr,ComAc,Send_Loop,TabIndent,IncPmc,Exe_Exp,ShowExpOpt,MainWinSize,MainWinPos,WinState,ColSizes,ColOrder,PrevWinSize,ShowPrev,TextWrap,CommentUnchecked,CustomColors,OSCPos,OSTrans,OSCaption,AutoRefresh,ShowGroups,IconSize,UserLayout,MainLayout,MacroLayout,FileLayout,RecPlayLayout,SettingsLayout,CommandLayout,EditLayout,ShowBands
-		If (_Var != "Clipboard")
+		If ((_Var != "Clipboard") || (_Var != "ErrorLevel"))
 			TrayTip, %d_Lang011%, %_Var% %d_Lang042%,, 18
 	If (IsByRef(_Saved))
 	{

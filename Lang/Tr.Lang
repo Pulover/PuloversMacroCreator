@@ -291,7 +291,7 @@
 	w_Lang106 =	Dönüş (Ctrl+Shift+N) ekleyin
 	w_Lang107 =	(Ctrl+Shift+C) Fonksiyonu için makro dönüştürme
 	w_Lang108 =	Denetlenmeyen satırları açıklama
-	w_Lang109 =	İndirme / Yükleme dosyaları (F11+Shift)
+	w_Lang109 =	Dosya indirme (F11+Shift)
 	w_Lang110 =	Zip / Sıkıştırılmış dosya (Ctrl+F11)
 	w_Lang111 =	Arama... (Basın gitmek için Enter)
 		
@@ -530,7 +530,7 @@
 	c_Lang233 =	F2 düzenleyin
 	c_Lang234 =	HTML
 	c_Lang235 =	Eposta gönder
-	c_Lang236 =	İndirme / Yükleme dosyaları
+	c_Lang236 =	Dosya indirme
 	c_Lang237 =	Zip / Sıkıştırılmış dosya
 	c_Lang238 =	Aç
 	c_Lang239 =	Kapat
@@ -541,7 +541,16 @@
 	c_Lang244 =	Pravo na lijevo
 	c_Lang245 =	Ekler
 	c_Lang246 =	Yol
-	c_Lang247 =	eğer
+	c_Lang247 =	Eğer
+	c_Lang248 =	Farklı bir arşive her dosyayı sıkıştırmak
+	c_Lang249 =	Farklı bir klasöre her dosya ayıkla
+	c_Lang250 =	Zip dosyaları
+	c_Lang251 =	Sıkıştırılmış dosyalar
+	c_Lang252 =	Indirme bağlantıları
+	c_Lang253 =	Hedef klasör
+	c_Lang254 =	Hedef dosya
+	c_Lang255 =	Noktalı virgül, virgül veya bir çizgi ile ayrılır.
+	c_Lang256 =	Görüntünün merkezine koordinatları ayarlayın
 		
 ; 16. Other Windows		
 	t_Lang001 =	AutoHotkey Aktar
@@ -852,7 +861,7 @@
 	d_Lang085 =	Makro deyimi 'Loop End' Eksik 
 	d_Lang086 =	Makro ifadesi "End If" Eksik
 	d_Lang087 =	Programın dışında komut yapılan değişiklikler hiçbir şekilde Makrolarınızı etkilemez dikkat edin.
-		 Bu özellik sadece hızlı bir ihracat fonksiyonu olarak ifade edilir. PMC bir AHK komut editörü olmak anlamına gelmez.
+		Tato funkce je určena pouze k rychlému exportní funkce. PMC není navržen tak, aby editor AHK skript.
 	d_Lang088 =	Ortak kullanıcı (değil yönetici) çalıştırmayı deneyin.
 	d_Lang089 =	Hiçbir satır seçili!
 	d_Lang090 =	Eklemek veya grubu kaldırmak için bir satır seçiniz.
@@ -1387,6 +1396,7 @@
 	WinGetText	Belirtilen penceresinden metin alır.
 	WinGetTitle	Belirtilen pencerenin başlık alır.
 	WinHide	Belirtilen penceresini gizler.
+	WinHttpDownloadToFile	İndirme bir veya internetten daha fazla dosya.
 	WinKill	Belirtilen penceresini kapatmak için zorlar.
 	WinMaximize	En büyük boyutuna Belirtilen penceresini büyütür.
 	WinMenuSelectItem	Belirtilen penceresinin menü çubuğundan bir menü öğesi çağırır.

@@ -85,7 +85,7 @@
 				RowData .= "`n" "Static " . FuncVariables2
 		}
 		Else If (Type = cType49)
-			RowData := "`nReturn " Step
+			RowData := "`nReturn, " Step
 		Else If ((Type = cType2) || (Type = cType9) || (Type = cType10))
 		{
 			If ((ConvertBreaks) && (InStr(Step, "``n")))
@@ -185,7 +185,7 @@
 		}
 		Else If ((Type = cType15) || (Type = cType16))
 		{
-			Loop, 4
+			Loop, 5
 				Act%A_Index% := ""
 			Loop, Parse, Action, `,,%A_Space%
 				Act%A_Index% := A_LoopField
@@ -193,6 +193,11 @@
 		,	OutVarY := Act4 != "" ? Act4 : "FoundY"
 		,	RowData := "`nCoordMode, Pixel, " Window
 		,	RowData .= "`n" Type ", " OutVarX ", " OutVarY ", " Step
+			If ((Type = cType16) && (Act5))
+			{
+				StringSplit, Stp, Step, `,, %A_Space%%A_Tab%
+				RowData .= "`nCenterImgSrchCoords(" CheckExp(Stp5) ", " OutVarX ", " OutVarY ")"
+			}
 			If (Act1 != "Continue")
 			{
 				RowData .= "`nIf ErrorLevel = 0"
@@ -522,6 +527,21 @@
 			If ((TimesX > 1) || InStr(TimesX, "%"))
 				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
 		}
+		Else If (Type = cType53)
+		{
+			RowData := "`nWinHttpDownloadToFile(" CheckExp(Step) ", " CheckExp(Action) ")"
+		,	RowData := Add_CD(RowData, Comment, DelayX)
+			If ((TimesX > 1) || InStr(TimesX, "%"))
+				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
+		}
+		Else If ((Type = cType54) || (Type = cType55))
+		{
+			RowData := "`n" Type "(" CheckExp(Step) ", " CheckExp(Action) ", " (Target ? "true" : "")
+		,	RowData := RTrim(RowData, ", ") . ")"
+		,	RowData := Add_CD(RowData, Comment, DelayX)
+			If ((TimesX > 1) || InStr(TimesX, "%"))
+				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
+		}
 		Else If (InStr(FileCmdList, Type "|"))
 		{
 			If ((ConvertBreaks) && (InStr(Step, "``n")) && (Type = cType8))
@@ -625,34 +645,42 @@ Add_CD(RowData, Comment, DelayX)
 Script_Header()
 {
 	global
-	Header := HeadLine "`n`n#NoEnv`nSetWorkingDir %A_ScriptDir%`nCoordMode, Mouse, " CoordMouse
-	If (Ex_SM = 1)
+	Header := HeadLine "`n`n#NoEnv`nSetWorkingDir %A_ScriptDir%"
+	If (Ex_WN)
+		Header .= "`n#Warn"
+	If (Ex_CM)
+		Header .= "`nCoordMode, Mouse, " CM
+	If (Ex_SM)
 		Header .= "`nSendMode " SM
-	If (Ex_SI = 1)
+	If (Ex_SI)
 		Header .= "`n#SingleInstance " SI
-	If (Ex_ST = 1)
+	If (Ex_ST)
 		Header .= "`nSetTitleMatchMode " ST
-	If (Ex_DH = 1)
-		Header .= "`nDetectHiddenWindows On"
-	If (Ex_AF = 1)
+	If (Ex_SP)
+		Header .= "`nSetTitleMatchMode " SP
+	If (Ex_DH)
+		Header .= "`nDetectHiddenWindows " DH
+	If (Ex_DT)
+		Header .= "`nDetectHiddenText " DT
+	If (Ex_AF)
 		Header .= "`n#WinActivateForce"
-	If (Ex_NT = 1)
+	If (Ex_NT)
 		Header .= "`n#NoTrayIcon"
-	If (Ex_SC = 1)
+	If (Ex_SC)
 		Header .= "`nSetControlDelay " SC
-	If (Ex_SW = 1)
+	If (Ex_SW)
 		Header .= "`nSetWinDelay " SW
-	If (Ex_SK = 1)
+	If (Ex_SK)
 		Header .= "`nSetKeyDelay " SK
-	If (Ex_MD = 1)
+	If (Ex_MD)
 		Header .= "`nSetMouseDelay " MD
-	If (Ex_SB = 1)
+	If (Ex_SB)
 		Header .= "`nSetBatchLines " SB
-	If (Ex_HK = 1)
+	If (Ex_HK)
 		Header .= "`n#UseHook"
-	If (Ex_PT = 1)
+	If (Ex_PT)
 		Header .= "`n#Persistent"
-	If (Ex_MT = 1)
+	If (Ex_MT)
 		Header .= "`n#MaxThreadsPerHotkey " MT
 	Header .= "`n`n"
 	return Header
@@ -889,7 +917,7 @@ IEComExp(Method, Value := "", Element := "", ElIndex := 0, OutputVar := "", GetB
 IncludeFunc(Which)
 {
 	Func_CDO =
-	(%
+	(`%
 
 
 CDO(Account, To, Subject := "", Msg := "", Html := false, Attach := "", CC := "", BCC := "")
@@ -922,7 +950,152 @@ CDO(Account, To, Subject := "", Msg := "", Html := false, Attach := "", CC := ""
 
 )
 
-return Func_%Which%
+	Func_Zip =
+	(`%
+	
+Unzip(Sources, OutDir, SeparateFolders := false)
+{
+	Static vOptions := 16|256
+	
+	Sources := StrReplace(Sources, "`n", ";")
+	Sources := StrReplace(Sources, ",", ";")
+	Sources := Trim(Sources, ";")
+	OutDir := RTrim(OutDir, "\")
+	
+	objShell := ComObjCreate("Shell.Application")
+	Loop, Parse, Sources, `;, %A_Space%%A_Tab%
+	{
+		objSource := objShell.NameSpace(A_LoopField).Items()
+		TargetDir := OutDir
+		If (SeparateFolders)
+		{
+			SplitPath, A_LoopField,,,, FileNameNoExt
+			TargetDir .= "\" FileNameNoExt
+			If (!InStr(FileExist(TargetDir), "D"))
+				FileCreateDir, %TargetDir%
+		}
+		objTarget := objShell.NameSpace(TargetDir)
+		objTarget.CopyHere(objSource, vOptions)
+	}
+	ObjRelease(objShell)
+}
+
+Zip(FilesToZip, OutFile, SeparateFiles := false)
+{
+	Static vOptions := 4|16
+	
+	FilesToZip := StrReplace(FilesToZip, "`n", ";")
+	FilesToZip := StrReplace(FilesToZip, ",", ";")
+	FilesToZip := Trim(FilesToZip, ";")
+	
+	objShell := ComObjCreate("Shell.Application")
+	If (SeparateFiles)
+		SplitPath, OutFile,, OutDir
+	Else
+	{
+		If (!FileExist(OutFile))
+			CreateZipFile(OutFile)
+		objTarget := objShell.Namespace(OutFile)
+	}
+	zipped := objTarget.items().Count
+	Loop, Parse, FilesToZip, `;, %A_Space%%A_Tab%
+	{
+		zipped++
+		SplitPath, A_LoopField, FileName, FileDir,, FileNameNoExt
+		FileDir := RegExReplace(FileDir, ".*\\")
+		If (SeparateFiles)
+		{
+			OutFile := OutDir "\" FileNameNoExt ".zip"
+			If (!FileExist(OutFile))
+				CreateZipFile(OutFile)
+			objTarget := objShell.Namespace(OutFile)
+			zipped := 1
+		}
+		For item in objTarget.Items
+		{
+			If (item.Name = FileDir)
+			{
+				item.InvokeVerb("Delete")
+				zipped--
+				break
+			}
+			If (item.Name = FileName)
+			{
+				objShell.Namespace(A_Temp).MoveHere(item)
+				FileDelete, % A_Temp "\" item.Name
+				zipped--
+				break
+			}
+		}
+		objTarget.CopyHere(A_LoopField, vOptions)
+		While (objTarget.items().Count != zipped)
+			Sleep, 10
+	}
+	ObjRelease(objShell)
+}
+
+CreateZipFile(sZip)
+{
+	CurrentEncoding := A_FileEncoding
+	FileEncoding, CP1252
+	Header1 := "PK" . Chr(5) . Chr(6)
+	VarSetCapacity(Header2, 18, 0)
+	file := FileOpen(sZip,"w")
+	file.Write(Header1)
+	file.RawWrite(Header2,18)
+	file.close()
+	FileEncoding, %CurrentEncoding%
+}
+
+)
+
+	Func_WinHttpDownloadToFile =
+	(`%
+	
+WinHttpDownloadToFile(UrlList, DestFolder)
+{
+	UrlList := StrReplace(UrlList, "`n", ";")
+	UrlList := StrReplace(UrlList, ",", ";")
+	DestFolder := RTrim(DestFolder, "\") . "\"
+	
+	Loop, Parse, UrlList, `;, %A_Space%%A_Tab%
+	{
+		Url := A_LoopField, FileName := DestFolder . RegExReplace(A_LoopField, ".*/")
+		whr := ComObjCreate("WinHttp.WinHttpRequest.5.1")
+		whr.Open("GET", Url, True)
+		whr.Send()
+		If (whr.WaitForResponse())
+		{
+			ado := ComObjCreate("ADODB.Stream")
+			ado.Type := 1 ; adTypeBinary
+			ado.Open
+			ado.Write(whr.ResponseBody)
+			ado.SaveToFile(FileName, 2)
+			ado.Close
+		}
+	}
+}
+
+)
+
+	Func_CenterImgSrchCoords =
+	(`%
+	
+CenterImgSrchCoords(File, ByRef CoordX, ByRef CoordY)
+{
+	static LoadedPic
+	LastEL := ErrorLevel
+	Gui, Pict:Add, Pic, vLoadedPic, %File% 
+	GuiControlGet, LoadedPic, Pict:Pos
+	Gui, Pict:Destroy
+	CoordX += LoadedPicW // 2
+	CoordY += LoadedPicH // 2
+	ErrorLevel := LastEL
+}
+
+)
+
+	return Func_%Which%
 }
 
 

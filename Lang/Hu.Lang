@@ -291,7 +291,7 @@
 	w_Lang106 =	Add Return (Ctrl+Shift+N)
 	w_Lang107 =	Convert Makró Function (Ctrl+Shift+C)
 	w_Lang108 =	Hozzászólás ki ellenőrizetlenül sorok
-	w_Lang109 =	Letöltés / Feltöltés fájlok (Shift+F11)
+	w_Lang109 =	Fájlok letöltése (Shift+F11)
 	w_Lang110 =	Zip / Unzip fájlok (Ctrl+F11)
 	w_Lang111 =	Keresés... (Nyomja meg az Enter menni)
 		
@@ -530,7 +530,7 @@
 	c_Lang233 =	F2 szerkeszteni
 	c_Lang234 =	HTML
 	c_Lang235 =	Küldjön e-mailt
-	c_Lang236 =	Letöltés / Feltöltés fájlok
+	c_Lang236 =	Fájlok letöltése
 	c_Lang237 =	Zip / Unzip fájlok
 	c_Lang238 =	Bekapcsol
 	c_Lang239 =	Kikapcsolni
@@ -541,7 +541,16 @@
 	c_Lang244 =	Jobbról balra
 	c_Lang245 =	Mellékletek
 	c_Lang246 =	Pálya
-	c_Lang247 =	ha
+	c_Lang247 =	Ha
+	c_Lang248 =	Tömöríteni minden fájlt egy másik archív
+	c_Lang249 =	Kivonat minden fájlt egy másik mappába
+	c_Lang250 =	Zip fájlok
+	c_Lang251 =	Unzip fájlok
+	c_Lang252 =	Letöltési linkek
+	c_Lang253 =	Célmappa
+	c_Lang254 =	Célfájl
+	c_Lang255 =	Elválasztott pontosvessző, vessző vagy vonal.
+	c_Lang256 =	Állítsa a koordináták a kép közepén
 		
 ; 16. Other Windows		
 	t_Lang001 =	Exportálás AutoHotkey
@@ -852,7 +861,7 @@
 	d_Lang085 =	Hiányzó "End Loop" kijelentés Macro 
 	d_Lang086 =	Hiányzó "End If" kijelentés Macro
 	d_Lang087 =	Figyeljük meg, hogy a módosítások a script kívül a program nem fogja befolyásolni a makrókat semmilyen módon.
-		 Ez a funkció csak azt jelentette, mint egy gyors export funkció. PMC nem azt jelentette, hogy egy AHK script editor.
+		Ez a funkció csak azt jelentette, mint egy gyors export funkciót. PMC nem célja, hogy egy AHK script editor.
 	d_Lang088 =	Próbáld futtatni, közös felhasználói (nem rendszergazda).
 	d_Lang089 =	Nincs sorban kiválasztva!
 	d_Lang090 =	Kérjük, jelöljön ki egy sort beszúrni, vagy eltávolíthatja a csoport.
@@ -1387,6 +1396,7 @@
 	WinGetText	Letölti a szöveget a megadott ablak.
 	WinGetTitle	Letölti a címet a megadott ablak.
 	WinHide	Elrejti a megadott ablakot.
+	WinHttpDownloadToFile	Letöltés egy vagy több fájlt az internetről.
 	WinKill	Arra kényszeríti a megadott ablak bezárásához.
 	WinMaximize	Nagyítja a megadott ablak maximális méretét.
 	WinMenuSelectItem	Meghív egy menüpontot a menüsorban a megadott ablak.

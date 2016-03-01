@@ -3,7 +3,6 @@
 		*The Complete Automation Tool*
 		
 		Version: 5.0.0  
-		Release Date: February, 2016  
 
 		[www.macrocreator.com](http://www.macrocreator.com)  
 		[Forum Thread](http://autohotkey.com/boards/viewtopic.php?f=6&t=143)  

@@ -80,8 +80,21 @@
 			,	o_AutoKey[TabCount] := (Opt[2] != "") ? Opt[2] : ""
 			,	o_ManKey[TabCount] := (Opt[3] != "") ? Opt[3] : ""
 			,	o_TimesG[TabCount] := (Opt[4] != "") ? Opt[4] : 1
-			,	CoordMouse := (Opt[5] != "") ? Opt[5] : CoordMouse
-			,	OnFinishCode := (Opt[6] != "") ? Opt[6] : 1
+				
+				If (Opt[5] != "")
+				{
+					Loop, 5
+						Mode%A_Index% := ""
+					Loop, Parse, % Opt[5], `,, %A_Space%
+						Mode%A_Index% := A_LoopField
+					CoordMouse := (Mode1 != "") ? Mode1 : CoordMouse
+				,	TitleMatch := (Mode2 != "") ? Mode2 : TitleMatch
+				,	TitleSpeed := (Mode3 != "") ? Mode3 : TitleSpeed
+				,	HiddenWin := (Mode4 != "") ? Mode4 : HiddenWin
+				,	HiddenText := (Mode5 != "") ? Mode5 : HiddenText
+				}
+				
+				OnFinishCode := (Opt[6] != "") ? Opt[6] : 1
 			,	Labels .= ((Opt[7] != "") ? Opt[7] : "Macro" TabCount) "|"
 			,	LVManager.SetHwnd(ListID%TabCount%), LVManager.ClearHistory()
 			,	LVManager.SetGroups(PmcGroups[A_Index]), LVManager.Add()
@@ -96,7 +109,9 @@
 			GoSub, UpdateCopyTo
 		}
 		GoSub, SetFinishButtom
-		GuiControl, 1:, CoordTip, CoordMode: %CoordMouse%
+		GuiControl, 1:, CoordTip, <a>CoordMode</a>: %CoordMouse%
+		GuiControl, 1:, TModeTip, <a>TitleMatchMode</a>: %TitleMatch%
+		GuiControl, 1:, TSpeedTip, <a>TitleMatchSpeed</a>: %TitleSpeed%
 		Gui, 1:-Disabled
 	}
 

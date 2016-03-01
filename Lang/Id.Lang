@@ -291,7 +291,7 @@
 	w_Lang106 =	Tambahkan Return (Ctrl+Shift+N)
 	w_Lang107 =	Mengkonversi Makro Untuk Fungsi (Ctrl+Shift+C)
 	w_Lang108 =	Komentar dari baris dicentang
-	w_Lang109 =	Download / Upload file (Shift+F11)
+	w_Lang109 =	Download file (Shift+F11)
 	w_Lang110 =	Zip / file Unzip (Ctrl+F11)
 	w_Lang111 =	Cari... (Tekan Enter untuk pergi)
 		
@@ -530,7 +530,7 @@
 	c_Lang233 =	F2 untuk mengedit
 	c_Lang234 =	HTML
 	c_Lang235 =	Mengirim email
-	c_Lang236 =	Download / Upload file
+	c_Lang236 =	Download file
 	c_Lang237 =	Zip / file Unzip
 	c_Lang238 =	Nyalakan
 	c_Lang239 =	Matikan
@@ -541,7 +541,16 @@
 	c_Lang244 =	Kanan ke kiri
 	c_Lang245 =	Lampiran
 	c_Lang246 =	Jalan
-	c_Lang247 =	jika
+	c_Lang247 =	Jika
+	c_Lang248 =	Mengkompres setiap file ke arsip yang berbeda
+	c_Lang249 =	Ekstrak setiap file ke folder lain
+	c_Lang250 =	File zip
+	c_Lang251 =	Unzip file
+	c_Lang252 =	Download link
+	c_Lang253 =	Folder tujuan
+	c_Lang254 =	File tujuan
+	c_Lang255 =	Dipisahkan dengan titik koma, koma atau baris.
+	c_Lang256 =	Menyesuaikan koordinat ke tengah gambar
 		
 ; 16. Other Windows		
 	t_Lang001 =	Ekspor ke AutoHotkey
@@ -852,7 +861,7 @@
 	d_Lang085 =	Hilang "End Loop" pernyataan dalam Makro 
 	d_Lang086 =	Hilang "End If" pernyataan dalam Makro
 	d_Lang087 =	Perhatikan bahwa perubahan yang dibuat untuk script luar program TIDAK AKAN MEMPENGARUHI macro ANDA dengan cara apapun.
-		 Fitur ini hanya dimaksudkan sebagai fungsi ekspor cepat. PMC tidak dimaksudkan untuk menjadi editor naskah AHK.
+		Fitur ini hanya dimaksudkan sebagai fungsi ekspor cepat. PMC tidak dirancang untuk menjadi editor skrip AHK.
 	d_Lang088 =	Cobalah untuk menjalankan pengguna yang biasa (tidak administrator).
 	d_Lang089 =	Tidak ada baris yang dipilih!
 	d_Lang090 =	Silakan, pilih baris untuk memasukkan atau mengeluarkan kelompok.
@@ -1387,6 +1396,7 @@
 	WinGetText	Mengambil teks dari jendela yang ditentukan.
 	WinGetTitle	Mengambil judul dari jendela yang ditentukan.
 	WinHide	Menyembunyikan jendela yang ditentukan.
+	WinHttpDownloadToFile	Download satu atau lebih file dari internet.
 	WinKill	Memaksa jendela yang ditentukan untuk menutup.
 	WinMaximize	Memperbesar jendela yang ditentukan untuk ukuran maksimumnya.
 	WinMenuSelectItem	Memanggil item menu dari menu bar dari jendela yang ditentukan.

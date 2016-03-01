@@ -291,7 +291,7 @@
 	w_Lang106 =	Add Return (Ctrl+Shift+N)
 	w_Lang107 =	Convert Macro To Function (Ctrl+Shift+C)
 	w_Lang108 =	Comment out unchecked rows
-	w_Lang109 =	Download / Upload files (Shift+F11)
+	w_Lang109 =	Download files (Shift+F11)
 	w_Lang110 =	Zip / Unzip files (Ctrl+F11)
 	w_Lang111 =	Search... (Press Enter to go)
 		
@@ -530,7 +530,7 @@
 	c_Lang233 =	F2 to edit
 	c_Lang234 =	HTML
 	c_Lang235 =	Send Email
-	c_Lang236 =	Download / Upload files
+	c_Lang236 =	Download files
 	c_Lang237 =	Zip / Unzip files
 	c_Lang238 =	Turn on
 	c_Lang239 =	Turn off
@@ -542,6 +542,15 @@
 	c_Lang245 =	Attachments
 	c_Lang246 =	Path
 	c_Lang247 =	If
+	c_Lang248 =	Compress each file to a different archive
+	c_Lang249 =	Extract each file to a different folder
+	c_Lang250 =	Zip files
+	c_Lang251 =	Unzip files
+	c_Lang252 =	Download links
+	c_Lang253 =	Destination folder
+	c_Lang254 =	Destination file
+	c_Lang255 =	Separated by semicolon, comma or line.
+	c_Lang256 =	Adjust coordinates to the center of the image
 		
 ; 16. Other Windows		
 	t_Lang001 =	Export to AutoHotkey
@@ -852,7 +861,7 @@
 	d_Lang085 =	Missing "End Loop" statement in Macro
 	d_Lang086 =	Missing "End If" statement in Macro
 	d_Lang087 =	Notice that changes made to the script outside the program WILL NOT AFFECT YOUR MACROS in any way.
-		This feature is only meant as a quick export function. PMC is not meant to be an AHK script editor.
+		This feature is only meant as a quick export function. PMC is not designed to be an AHK script editor.
 	d_Lang088 =	Try to run as common user (not administrator).
 	d_Lang089 =	No row selected!
 	d_Lang090 =	Please, select a row to insert or remove the group.
@@ -1387,6 +1396,7 @@
 	WinGetText	Retrieves the text from the specified window.
 	WinGetTitle	Retrieves the title of the specified window.
 	WinHide	Hides the specified window.
+	WinHttpDownloadToFile	Downloads one or more files from the Internet.
 	WinKill	Forces the specified window to close.
 	WinMaximize	Enlarges the specified window to its maximum size.
 	WinMenuSelectItem	Invokes a menu item from the menu bar of the specified window.

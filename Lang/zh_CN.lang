@@ -291,7 +291,7 @@
 	w_Lang106 =	加入返程（Ctrl+Shift+ N）
 	w_Lang107 =	转换宏功能（Ctrl+Shift+ C）
 	w_Lang108 =	注释掉选中的行
-	w_Lang109 =	下载/上传文件 (Shift+F11)
+	w_Lang109 =	下载文件 (Shift+F11)
 	w_Lang110 =	压缩/解压缩文件 (Ctrl+F11)
 	w_Lang111 =	搜索... (按Enter键进入)
 		
@@ -530,7 +530,7 @@
 	c_Lang233 =	F2编辑
 	c_Lang234 =	HTML
 	c_Lang235 =	发电子邮件
-	c_Lang236 =	下载/上传文件
+	c_Lang236 =	下载文件
 	c_Lang237 =	压缩/解压缩文件
 	c_Lang238 =	打开
 	c_Lang239 =	关掉
@@ -542,6 +542,15 @@
 	c_Lang245 =	附件
 	c_Lang246 =	路径
 	c_Lang247 =	如果
+	c_Lang248 =	每个文件压缩到不同归档
+	c_Lang249 =	每个文件解压到不同的文件夹
+	c_Lang250 =	Zip文件
+	c_Lang251 =	解压缩文件
+	c_Lang252 =	下载链接
+	c_Lang253 =	目标文件夹
+	c_Lang254 =	目标文件
+	c_Lang255 =	用分号，逗号或行分隔。
+	c_Lang256 =	调整坐标到图像的中心
 		
 ; 16. Other Windows		
 	t_Lang001 =	导出为AutoHotkey
@@ -852,7 +861,7 @@
 	d_Lang085 =	宏内缺少“结束循环”语句
 	d_Lang086 =	宏内缺少“结束If”语句
 	d_Lang087 =	请注意，该脚本所做的计划外变化不会影响您的宏以任何方式。
-		此功能仅作为一个快速的导出功能。 PMC并不意味着是华民脚本编辑器。
+		此功能只意味着作为一个快速的导出功能。 PMC是不是设计成一个AHK脚本编辑器。
 	d_Lang088 =	尝试运行作为普通用户（非管理员）。
 	d_Lang089 =	没有行选择！
 	d_Lang090 =	请选择一个行插入或删除组。
@@ -1387,6 +1396,7 @@
 	WinGetText	获取指定窗口的文本。
 	WinGetTitle	获取指定窗口的标题。
 	WinHide	隐藏指定的窗口。
+	WinHttpDownloadToFile	下载一个或从互联网上更多的文件。
 	WinKill	强制关闭指定的窗口。
 	WinMaximize	最大化指定的窗口。
 	WinMenuSelectItem	调用指定窗口菜单栏中的菜单项。

@@ -291,7 +291,7 @@
 	w_Lang106 =	Dodaj Povratak (Ctrl+Shift+N)
 	w_Lang107 =	Pretvori Makro funkcionirati (Ctrl+Shift+C)
 	w_Lang108 =	Komentar iz označenim redaka
-	w_Lang109 =	Download / upload datoteka (Shift+F11)
+	w_Lang109 =	Preuzimanje datoteka (Shift+F11)
 	w_Lang110 =	Zip / unzip kartoteka (Ctrl+F11)
 	w_Lang111 =	Traži... (Pritisnite Enter kako)
 		
@@ -530,7 +530,7 @@
 	c_Lang233 =	F2 urediti
 	c_Lang234 =	HTML
 	c_Lang235 =	Pošalji e-mail
-	c_Lang236 =	Download / upload datoteka
+	c_Lang236 =	Preuzimanje datoteka
 	c_Lang237 =	Zip / unzip kartoteka
 	c_Lang238 =	Upaliti
 	c_Lang239 =	Iskljuciti
@@ -541,7 +541,16 @@
 	c_Lang244 =	Pravo na lijevo
 	c_Lang245 =	Prilozi
 	c_Lang246 =	Staza
-	c_Lang247 =	ako
+	c_Lang247 =	Ako
+	c_Lang248 =	Stisnuti svaku datoteku u drugu arhivu
+	c_Lang249 =	Ekstrakt svaku datoteku u drugu mapu
+	c_Lang250 =	Zip datoteke
+	c_Lang251 =	Raspakirajte datoteke
+	c_Lang252 =	Preuzimanje linkovi
+	c_Lang253 =	Odredišna mapa
+	c_Lang254 =	Odredište datoteka
+	c_Lang255 =	Odvojene točka-zarezom, zarez ili liniju.
+	c_Lang256 =	Podesite koordinate u središtu slike
 		
 ; 16. Other Windows		
 	t_Lang001 =	Izvoz u AutoHotkey
@@ -852,7 +861,7 @@
 	d_Lang085 =	Nedostaje "End Loop" izjavu u Macro 
 	d_Lang086 =	Nedostaje '"End If" iskaz u Macro
 	d_Lang087 =	Obavijest da su promjene koje su napravljene na skriptu izvan programa NEĆE utjecati na vaše makronaredbe na bilo koji način.
-		 Ova značajka je namijenjena samo kao brzi izvoza funkciju. PMC nije značilo da se urednik AHK skripta.
+		Ova značajka je namijenjena samo kao brzi izvozne funkcije. PMC nije namijenjen da bude urednik AHK skripta.
 	d_Lang088 =	Pokušajte izvoditi kao zajednički korisnik (ne administrator).
 	d_Lang089 =	Ne red bira!
 	d_Lang090 =	Molimo, odaberite redak za umetanje ili uklanjanje skupinu.
@@ -1387,6 +1396,7 @@
 	WinGetText	Dohvaća tekst iz određenog prozora.
 	WinGetTitle	Dohvaća titulu navedenog prozora.
 	WinHide	Skriva navedenu prozor.
+	WinHttpDownloadToFile	Preuzimanje jednu ili više datoteka s Interneta.
 	WinKill	Snaga navedeno prozor zatvorite.
 	WinMaximize	Povećava naveden prozor svoje maksimalne veličine.
 	WinMenuSelectItem	Priziva izbornika na traci izbornika u određenom prozoru.

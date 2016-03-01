@@ -23,11 +23,6 @@
 			Loop_Start := LoopInfo
 		CoordMode, Mouse, Screen
 		MouseGetPos, CursorX, CursorY
-		CoordMode, Mouse, %CoordMouse%
-		SetTitleMatchMode, %TitleMatch%
-		SetTitleMatchMode, %TitleSpeed%
-		DetectHiddenWindows, %HiddenWin%
-		DetectHiddenText, %HiddenText%
 		If (Record = 1)
 		{
 			GoSub, RecStop
@@ -50,6 +45,11 @@
 			GuiControl, 28:+Range0-%m_ListCount%, OSCProg
 		mLoopSize := o_TimesG[Macro_On]
 	}
+	CoordMode, Mouse, %CoordMouse%
+	SetTitleMatchMode, %TitleMatch%
+	SetTitleMatchMode, %TitleSpeed%
+	DetectHiddenWindows, %HiddenWin%
+	DetectHiddenText, %HiddenText%
 	If (!FlowControl.GetCapacity())
 		FlowControl := {Break: 0, Continue: 0, If: 0}
 	CurrentRange := m_ListCount, ChangeProgBarColor("20D000", "OSCProg", 28)
@@ -774,6 +774,8 @@
 			}
 			If ((Type = cType15) || (Type = cType16))
 			{
+				Loop, 5
+					Act%A_Index% := ""
 				Loop, Parse, Action, `,,%A_Space%
 					Act%A_Index% := A_LoopField
 			}
@@ -1166,10 +1168,12 @@ PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars, CustomVars, Runnin
 	return
 	pb_FileSelectFile:
 		FileSelectFile, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%
+		FreeMemory()
 		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_FileSelectFolder:
 		FileSelectFolder, %Par1%, %Par2%, %Par3%, %Par4%
+		FreeMemory()
 		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_FileSetAttrib:
@@ -1402,15 +1406,17 @@ PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars, CustomVars, Runnin
 	pb_PixelSearch:
 		CoordMode, Pixel, %Window%
 		PixelSearch, FoundX, FoundY, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%, %Par6%, %Par7%
-		OutVarX := Act3, OutVarY := Act4, %OutVarX% := FoundX, %OutVarY% := FoundY
-	,	SearchResult := ErrorLevel
+		SearchResult := ErrorLevel
+		Try %Act3% := FoundX, %Act4% := FoundY
 		GoSub, TakeAction
 	return TakeAction
 	pb_ImageSearch:
 		CoordMode, Pixel, %Window%
 		ImageSearch, FoundX, FoundY, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%
-		OutVarX := Act3, OutVarY := Act4, %OutVarX% := FoundX, %OutVarY% := FoundY
-	,	SearchResult := ErrorLevel
+		SearchResult := ErrorLevel
+		If ((Act5) && (ErrorLevel = 0))
+			CenterImgSrchCoords(Par5, FoundX, FoundY)
+		Try %Act3% := FoundX, %Act4% := FoundY
 		GoSub, TakeAction
 	return TakeAction
 	pb_SendMessage:
@@ -1590,7 +1596,7 @@ PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars, CustomVars, Runnin
 	return
 
 	TakeAction:
-	TakeAction := DoAction(FoundX, FoundY, Act1, Act2, Window, SearchResult)
+	TakeAction := DoAction(FoundX, FoundY, Act1, Act2, SearchResult)
 	If (TakeAction = "Continue")
 		TakeAction := 0
 	Else If (TakeAction = "Stop")
@@ -1642,14 +1648,23 @@ PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars, CustomVars, Runnin
 		}
 		If (!IsObject(SelAcc))
 		{
-			MsgBox, 20, %d_Lang007%, % d_Lang064 " Macro" Macro_On ", " d_Lang065 " " mListRow
-				.	"`n" d_Lang007 ":`t`t" d_Lang112 "`n" d_Lang066 ":`t" Act1 "`n`n" d_Lang035
-			IfMsgBox, No
-				StopIt := 1
+			Throw Exception(d_Lang112,, Act1)
 			return
 		}
 		
 		CDO(SelAcc, CDO_To, CDO_Sub, CDO_Msg, CDO_Html, CDO_Att, CDO_CC, CDO_BCC)
+	return
+	
+	pb_DownloadFiles:
+		WinHttpDownloadToFile(Step, Action)
+	return
+	
+	pb_Zip:
+		Zip(Step, Action, Target)
+	return
+	
+	pb_Unzip:
+		Unzip(Step, Action, Target)
 	return
 	
 	pb_IECOM_Set:
@@ -1902,9 +1917,8 @@ IfEval(_Name, _Operator, _Value)
 	return result
 }
 
-DoAction(X, Y, Action1, Action2, Coord, Error)
+DoAction(X, Y, Action1, Action2, Error)
 {
-	CoordMode, Mouse, %Coord%
 	If (Error = 0)
 	{
 		If (Action1 = "Move")
