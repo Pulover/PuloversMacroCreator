@@ -6,7 +6,7 @@ xlLastCell := 11
 Clip := Clipboard
 
 XL := ComObjCreate("Excel.Application")
-XL.Workbooks.Open(A_ScriptDir "\Languages.xls")
+XL.Workbooks.Open(A_ScriptDir "\Languages.xlsx")
 XL.Sheets("Lang_Files").Activate
 Xl.Range(Xl.Range("A1"), Xl.Range("A1").SpecialCells(xlLastCell)).Copy
 

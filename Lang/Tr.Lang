@@ -244,17 +244,17 @@
 	w_Lang059 =	Görüntü / Piksel Arama (F7)
 	w_Lang060 =	/ Dosya / Dizi / Misc çalıştırın. (F8)
 	w_Lang061 =	Döngü (F9)
-	w_Lang062 =	Git (Shift+F9)
-	w_Lang063 =	Etiket (Ctrl+F9)
+	w_Lang062 =	/ Etiket Gidin (+ F9 Shift)
+	w_Lang063 =	Sayacını Ayarlamak (Ctrl + F9)
 	w_Lang064 =	Eğer Tablolar (F10)
 	w_Lang065 =	Değişkenler / Diziler (F10+Shift)
 	w_Lang066 =	İşlevler / Dizi yöntemleri (Ctrl+F10)
-	w_Lang067 =	Internet Explorer (F12)
-	w_Lang068 =	Ifade / COM Arabirimi (Shift+F12)
-	w_Lang069 =	Eposta gönder (F11)
-	w_Lang070 =	Windows iletileri (Ctrl+F12)
-	w_Lang071 =	Kısayol tuşu "Play" için Windows tuşu ekle
-	w_Lang072 =	Kısayol olarak bir joystick düğmesini kullanın
+	w_Lang067 =	Eposta gönder (F11)
+	w_Lang068 =	Dosya indirme (F11+Shift)
+	w_Lang069 =	Zip / Sıkıştırılmış dosya (Ctrl+F11)
+	w_Lang070 =	Internet Explorer (F12)
+	w_Lang071 =	Ifade / COM Arabirimi (Shift+F12)
+	w_Lang072 =	Windows iletileri (Ctrl+F12)
 	w_Lang073 =	Makro Ekle (Ctrl+T)
 	w_Lang074 =	Kapat Makro (Ctrl+W)
 	w_Lang075 =	Makro çoğaltın (Ctrl+Shift+D)
@@ -291,8 +291,8 @@
 	w_Lang106 =	Dönüş (Ctrl+Shift+N) ekleyin
 	w_Lang107 =	(Ctrl+Shift+C) Fonksiyonu için makro dönüştürme
 	w_Lang108 =	Denetlenmeyen satırları açıklama
-	w_Lang109 =	Dosya indirme (F11+Shift)
-	w_Lang110 =	Zip / Sıkıştırılmış dosya (Ctrl+F11)
+	w_Lang109 =	Kısayol tuşu "Play" için Windows tuşu ekle
+	w_Lang110 =	Kısayol olarak bir joystick düğmesini kullanın
 	w_Lang111 =	Arama... (Basın gitmek için Enter)
 		
 ; 15. Command Windows		
@@ -759,6 +759,7 @@
 	t_Lang204 =	Gizli Metin Tespit
 	t_Lang205 =	Başlık Maç Modu
 	t_Lang206 =	Název Rychlost Zápas
+	t_Lang207 =	Müşteri
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Açık
@@ -939,10 +940,14 @@
 	ApplyL_TT =	Kutusundan Ekle (Insert)
 	ApplyT_TT =	Uygulamak
 	AutoKey_TT =	Kısayol Makro oynamak
+	Client_TT =	Koordinatlar (standart bir tane varsa) ve sınırlar pencerenin başlık çubuğu, menü dışlayan etkin pencere istemci alanı, göredir.
 	Clip_TT =	Geçici metni göndermek için Pano kullanır.
 		işlemi tamamlandığında, komut
 		Orijinal pano içeriği geri yükler.
 		(Güncel içeriği yapıştırmak için boş metin bırakın)
+	CM_TT =	Screen: Koordinatlar masaüstü (tüm ekranı) göredir.
+		Window: Koordinatlar etkin pencere göredir.
+		Client: Koordinatlar (standart bir tane varsa) ve sınırlar pencerenin başlık çubuğu, menü dışlayan etkin pencere istemci alanı, göredir.
 	CmdFilter_TT =	Türleri filtresi
 	CmdSort_TT =	Alfabetik sıralama
 	ColorPick_TT =	Ekranda piksel olsun
@@ -957,7 +962,9 @@
 		Pano içeriği).
 	Ex_AF_TT =	Bir pencere aktive nazik yöntemi atlar
 		ve güçlü yöntemi düz gider.
-	Ex_DH_TT =	Görünmez pencereleri script tarafından 'görülen' belirler.
+	Ex_DH_TT =	Görünmez pencere komut dosyası tarafından "görülür" belirler.
+	Ex_DT_TT =	Bir pencerede görünmez metin penceresi bulma amacıyla "görülen" belirler. Bu, IfWinExist ve WinActivate gibi komutları etkiler.
+	Ex_CM_TT =	Fare etkin pencere veya ekranın ya göreli olarak komutları için takımlar modunu koordinat.
 	Ex_EdScript_TT =	Harici düzenleyicide açın
 	Ex_EdVars_TT =	Ihraç edilecek genel değişkenleri seçin.
 	Ex_ExecScript_TT =	Çalıştır komut
@@ -989,6 +996,7 @@
 	Ex_SW_TT =	Sonra gerçekleşecek gecikmesini ayarlar
 		Bu tür WinActivate gibi her bir pencere bir komut.
 	Ex_UV_TT =	Global değişkenler ihracat.
+	Ex_WN_TT =	Etkinleştirir veya bu tür bir yazım hatası ya da eksik "küresel" ilanı gibi bir hata gösterebilir özel koşullar için uyarılar devre dışı bırakır.
 	ExpList_TT =	Düzenlemek için çift tıklayın
 	ExprLink2_TT =	- BURAYA YÜZDE IŞARETLERI DEĞİŞKENLER IÇINE ALMAYıN.
 		- AHK ifadelerin çoğu desteklenmektedir.
@@ -1193,15 +1201,11 @@
 	ControlSetText	Bir kontrol metnini değiştirir .
 	CoordMode	Ayarlar etkin pencere veya ekran ya göreli olarak çeşitli komutlar için mod koordine .
 	Cos	Sayısıtrigonometrik kosinüsünü verir .
-	Critical	Diğer konuları kesintiye olmaktan geçerli iş parçacığı engeller .
 	Delete	Bir nesneden anahtar-değer çiftleri kaldırır.
-	DetectHiddenText	Bir pencerede görünmez metin pencerenin bulma amacıyla " görülür " olup olmadığını belirler . Bu, IfWinExist ve WinActivate gibi komutları etkiler.
-	DetectHiddenWindows	Görünmez pencereler komut dosyası tarafından " görülen " olup olmadığını belirler .
 	DllCall	Bu standart bir Windows API işlevi gibi bir DLL içinde bir işlevini çağırır.
 	Drive	/ Geri çeker bir CD veya DVD sürücüsünetepsisini çıkarır , ya da bir sürücünün birim etiketini ayarlar .
 	DriveGet	Bilgisayarın disk (ler) hakkında çeşitli bilgi türleri alır .
 	DriveSpaceFree	Megabyte , bir sürücünün boş disk alanı alır .
-	Edit	Ilgili düzenleyici düzenleme için geçerli komut dosyası açar .
 	Else	Bir IF -ifadesi YANLIŞ olarak değerlendirirse komut (lar) gerçekleştirmek için belirtir . Birden fazla komut mevcut olduğunda , bir blok (parantez) içine alın .
 	EnvAdd	Kendisi toplamı artı Verilen değer (ekleyin ya da tarih-saat değeri zaman çıkarabilirsiniz) bir değişken ayarlar. Ile eşanlamlı : Var+= Değer .
 	EnvDiv	Verilen değer bölünmesiyle kendisine bir değişken ayarlar. Ile eşanlamlı : Var / = Değer .
@@ -1210,7 +1214,6 @@
 	EnvSet	Ortamda bulunan bir değişkene bir değer yazar.
 	EnvSub	Verilen değer (ayrıca tarih-saat değerleri karşılaştırabilirsiniz) eksi kendisine bir değişken ayarlar. Ile eş anlamlıdır : Var - = Değer .
 	EnvUpdate	OS ve ortam değişkeni (ler) değişti tüm çalışan uygulamaları bildirir .
-	Exit	Çıkar Geçerli iş parçacığı veya (komut kalıcı değildir ve hiçbir kısayol tuşları varsa) tüm komut dosyası .
 	ExitApp	Koşulsuz script sonlandırır .
 	Exp	İade e (yaklaşık 2.71828182845905 olan)N. gücüne yükseltilmiş .
 	Expression	Değişkenler, dizeler ve / veya değişmez bir dizi sayı üzerine bir veya birden fazla işlemlerini gerçekleştirir.
@@ -1220,13 +1223,11 @@
 	FileCreateDir	Bir klasör oluşturur .
 	FileCreateShortcut	Bir kısayol (. Lnk) dosyası oluşturur .
 	FileDelete	Siler bir veya daha fazla dosya .
-	FileEncoding	FILEREAD , FileReadLine , Döngü Oku , FileAppend ve FileOpen için varsayılan kodlama ayarlar .
 	FileGetAttrib	Bir dosya veya klasör salt okunur olup olmadığını raporlar , gizli , vb
 	FileGetShortcut	Bu hedef dosyası olarak bir kısayol (. Lnk) dosyası , hakkında bilgi alır .
 	FileGetSize	Bir dosyanın boyutunu alır .
 	FileGetTime	Bir dosya veya klasörün datetime damgası alır .
 	FileGetVersion	Bir dosyanın sürümünü alır .
-	FileInstall	Script derlenmiş versiyonu içinde belirtilen dosyayı içerir .
 	FileMove	Taşır veya yeniden adlandırır bir veya daha fazla dosya .
 	FileMoveDir	Alt klasör ve dosyaları ile birlikte tüm bir klasör taşır . Ayrıca bir klasör yeniden adlandırabilirsiniz.
 	FileOpen	Sağlar nesne yönelimli dosya I / O
@@ -1253,18 +1254,18 @@
 	GroupClose	Sadece GroupActivate veya GroupDeactivate ile aktive ise aktif pencereyi kapatır . Daha sonra serinin bir sonraki pencere aktif hale getirir. Ayrıca gruptaki tüm pencereleri kapatabilirsiniz .
 	GroupDeactivate	Değilgrupta bir sonraki pencere aktive dışında GroupActivate benzer .
 	HasKey	Key değeri ile ilişkili true döndürür.
-	if	Bir değere bir değişkenin karşılaştırılması TRUE evalutes eğer komut (lar) gerçekleştirmek için belirtir . Birden fazla komut mevcut olduğunda , bir blok (parantez) içine alın .
-	if (expression)	Bir ifade DOĞRU olarak değerlendirirse komut (lar) gerçekleştirmek için belirtir .
+	If	Bir değere bir değişkenin karşılaştırılması TRUE evalutes eğer komut (lar) gerçekleştirmek için belirtir . Birden fazla komut mevcut olduğunda , bir blok (parantez) içine alın .
+	If (expression)	Bir ifade DOĞRU olarak değerlendirirse komut (lar) gerçekleştirmek için belirtir .
 	If A_Index	Mevcut döngü tekrarında diye bakar bir belirtilen bir numarayla matchs .
 	If Clipboard	Pano metin ise Çekler belirtilen bir dize matchs .
 	If ErrorLevel	Belirli bir görüntü veya piksel diye bakarekranında bulundu .
 	If var [not] between	Bir değişkenin içeriği olup olmadığını kontrol eder iki değeri (dahil) arasında sayısal ya da alfabetik olarak bulunmaktadır.
-	If var [not] in/contains MatchList 	Bir değişkenin içeriğini kontrol eder bir listede öğelerin bir maç .
+	If var [not] in / If var [not] contains MatchList	Bir değişkenin içeriğini kontrol eder bir listede öğelerin bir maç .
 	If var is [not] type	Bir değişkenin içeriğini sayısal olup olmadığını kontrol eder , büyük harf, vb
 	IfEqual / IfNotEqual	Eşitlik için bir değere bir değişken karşılaştırır . Ile eşanlamlı : Eğer Var = Değer | Var < > Değer eğer .
 	IfExist / IfNotExist / FileExist	Bir dosya veya klasörün varlığını kontrol eder.
 	IfGreater / IfGreaterOrEqual	Bir değere bir değişken karşılaştırır . Ile eşanlamlı : if Var > Değer | Eğer Var > = Değer .
-	IfInString / IfNotInString / InStr	Bir değişken diye bakar belirtilen dize içerir .
+	IfInString / IfNotInString	Bir değişken diye bakar belirtilen dize içerir .
 	IfLess / IfLessOrEqual	Bir değere bir değişken karşılaştırır . Ile eşanlamlı : eğer Var < Değer | Var < = Değer eğer .
 	IfMsgBox	Hangi düğme Çekler En son MsgBox komut sırasında kullanıcı tarafından itildi .
 	IfWinActive / IfWinNotActive	Çekler belirtilen pencere var ve (en önemlisi) etkin olup olmadığını .
@@ -1277,9 +1278,8 @@
 	InputBox	Bir giriş kutusu bir dize girmek için kullanıcı sormak görüntüler .
 	InsertAt	Doğrusal bir dizi içindeki belirli bir pozisyonda bir veya daha fazla değer ekler.
 	InStr	Sol veya sağ taraftan bir dize belirli bir olay arar .
-	KeyHistory	Komut bilgi ve en son tuş vuruşlarını ve fare tıklaması öyküsü görüntüler.
 	KeyWait	Serbest veya basılı gereken bir anahtar veya fare / joystick düğmesine bekler.
-	Labels	Bir etiket, bir kod hattı tanımlayan, ve Goto hedef olarak ya da bir alt yordam oluşturmak için de kullanılabilir.
+	Label	Bir etiket, bir kod hattı tanımlayan, ve Goto hedef olarak ya da bir alt yordam oluşturmak için de kullanılabilir.
 	Length	1 konumundaki başlayan doğrusal bir dizinin uzunluğunu döndürür.
 	ListVars	İsimlerini ve geçerli içeriğini: betiğin değişkenleri görüntüler.
 	Ln	Sayısı doğal logaritma (Taban e) döndürür.
@@ -1290,18 +1290,13 @@
 	Loop (read file contents)	Bir metin dosyasına satırları, bir zaman (FileReadLine daha iyi performans) az bir alır.
 	Loop (registry)	Bir anda belirtilen kayıt defteri alt anahtarını, bir öğe içeriğini alır.
 	MaxIndex	En yüksek tamsayı anahtarı döndürür.
-	Menu	,, Siler oluşturur değiştirir ve menüler ve menü öğeleri görüntüler. Tepsi simgesi ve araç ipucu değiştirir. Derlenmiş bir komut dosyası ana penceresi açılır olup olmadığını kontrol eder.
 	MinIndex	En tamsayı anahtarı döndürür.
 	Mod	Modulo. Temettü bölen bölünür kalanı verir.
-	MouseClickDrag	Tıklanma ve, belirtilen fare düğmesini tutan hedef koordinatları için fareyi hareket, sonra düğmeyi serbest bırakır.
 	MouseGetPos	Mevcut fare imleci konumu ve isteğe bağlı olarak hangi pencere ve kontrol üzerine asılı olan alır.
-	MouseMove	Fare imlecini hareket ettirir.
 	MsgBox	Bir veya daha fazla düğme (örneğin, Evet ve Hayır olarak) içeren küçük bir pencerede belirtilen metni görüntüler.
 	NumGet	Belirtilen adres+ofset saklanan ikili sayı döndürür.
 	NumPut	Belirtilen adresteki ikili biçimde mağaza sayısı+ofset ve sadece yazılı öğenin sağındaki adresini döndürür.
 	Object	Bir script ilişkisel dizi oluşturur.
-	OnExit	Otomatik olarak script çıkmadan çalıştırmak için bir alt yordam belirtir.
-	OnMessage	Script Belirtilen ileti aldığında otomatik olarak aramak için bir işlev belirtir.
 	Ord	Dize ilk karakterin sıra değeri (sayısal karakter kodu) döndürür.
 	OutputDebug	Ekran için hata ayıklayıcı (varsa) için bir dize gönderir.
 	Parameter	Işleve bir parametre ekler.
@@ -1317,7 +1312,6 @@
 	RegDelete	Siler kayıt defterinden bir alt anahtarı veya değeri.
 	RegExMatch	Bir dize bir desen (düzenli ifade) içerip içermediğini belirler.
 	RegExReplace	Bir dize içinde bir desen (düzenli ifade) oluşunda değiştirir.
-	RegisterCallback	Çağrıldığında, komut dosyası bir işlev çağrısı yönlendiren bir makine kodu adres oluşturur.
 	RegRead	Kayıt defterinden bir değer okur.
 	RegWrite	Kayıt defterine bir değer yazar.
 	RemoveAt	Doğrusal bir dizide verilen pozisyona öğeleri kaldırır.
@@ -1326,16 +1320,11 @@
 	Run	Harici bir program çalıştırır.
 	RunAs	Run ve RunWait sonraki tüm kullanımlar için kullanılacak kullanıcı kimlik bilgileri kümesi belirtir. Windows 2000/XP veya sonraki sürümünü gerektirir.
 	RunWait	Harici bir program çalıştırır ve bitene kadar bekler.
-	Screenshot	Bir belirtilen alanın bir PNG ekran görüntüsü oluşturur.
-	Send / SendRaw / SendInput / SendPlay	Etkin pencere için simüle tuş vuruşlarını ve fare tıklaması gönderir.
+	Send / SendRaw	Etkin pencere için simüle tuş vuruşlarını ve fare tıklaması gönderir.
 	SendLevel	Yapay klavye ve fare olayları kısayol tuşları ve hotstrings tarafından göz ardı edilir Kontroller.
 	SendMessage	Bir pencere veya kontrol için bir mesaj gönderir ve onay bekler.
-	SendMode	SendInput veya SendPlay ile oldukça varsayılan (SendEvent) daha eşanlamlı Gönder yapar. Ayrıca yapar tıklayın ve mousemove / tıklayın / belirtilen yöntemi kullanın sürükleyin.
 	SetCapslockState	Capslock tuşunun durumunu ayarlar. Ayrıca anahtar açık veya kapalı kalmak zorlayabilir.
-	SetEnv (Var = Value)	Bir değişkene belirtilen değeri atar.
-	SetFormat	Matematik işlemleri tarafından oluşturulan tamsayı ve kayan nokta sayıları biçimini ayarlar.
 	SetKeyDelay	Gönder veya ControlSend tarafından gönderilen her tuş sonra oluşacak gecikme ayarlar.
-	SetMouseDelay	Her fare hareketi veya tıklama sonra oluşacak gecikme ayarlar.
 	SetNumlockState	Numlock tuşunun durumunu ayarlar. Ayrıca anahtar açık veya kapalı kalmak zorlayabilir.
 	SetRegView	32-bit komut kayıt komutları 64-bit kayıt defteri görünümü ve tersi erişmenizi sağlar.
 	SetScrollLockState	ScrollLock anahtarın durumunu ayarlar. Ayrıca anahtar açık veya kapalı kalmak zorlayabilir.
@@ -1357,8 +1346,7 @@
 	Sqrt	Sayısı kare kökünü verir.
 	StatusBarGetText	Standart bir durum çubuğu kontrolünden metni alır.
 	StatusBarWait	Bir pencerenin durum çubuğu belirtilen dize içerir kadar bekler.
-	StringCaseSense	Dize karşılaştırmaları olup olmadığını küçük harf duyarlı (varsayılan "değil küçük harf duyarlı" olduğu). Belirler
-	StringGetPos / InStr	Bir dize içinde belirtilen alt yerini alır.
+	StringGetPos	Bir dize içinde belirtilen alt yerini alır.
 	StringLeft	Bir dize sol taraftan karakter sayısını alır.
 	StringLen / StrLen	Bir dize ne kadar çok karakter sayısını alır.
 	StringLower	Küçük harfe bir dize dönüştürür.
@@ -1370,27 +1358,22 @@
 	StringTrimRight	Bir dize sağ taraftan karakter bir dizi kaldırır.
 	StringUpper	Büyük harfe bir dize dönüştürür.
 	StrPut / StrGet	Kod sayfaları arasında dönüştürerek isteğe bağlı bir bellek adresi, veya bir dize kopyalar.
-	Suspend	Devre dışı bırakır veya tüm veya seçilen kısayol tuşları ve hotstrings sağlar.
 	SysGet	Ekran çözünürlüğü, çoklu monitör bilgi, sistem nesneleri boyutları ve diğer sistem özellikleri alır.
 	Tan	Sayısı trigonometrik tanjantını verir.
 	ToolTip	Ekranda herhangi bir yere bir zaman-on-top pencere oluşturur.
 	Transform	Çeşitli matematik fonksiyonları, bit işlemleri ve bu ASCII / Unicode dönüştürme gibi görevleri gerçekleştirir.
 	TrayTip	Tepsi simgesinin yanında bir balon mesaj penceresi oluşturur. Windows 2000/XP veya sonraki sürümünü gerektirir.
 	Trim / LTrim / RTrim	Başlangıç ve / veya bir dize sonundan düzeltir bazı karakterler.
-	Try	Çalışma zamanı hataları ve atış komutu tarafından atılan istisnalar karşı koruma sağlar bir veya daha fazla tablo (komut veya ifadeler).
 	Until	Bir döngü ya da için-döngünün devamı için bir koşul geçerlidir.
 	UrlDownloadToFile	Internetten bir dosya indirir.
 	UserFunction	Bir işlev yapısı oluşturur.
-	VarSetCapacity	Bir değişkenin tutma kapasitesi büyütür ya da belleği serbest bırakır. Normal olarak, bu sadece bu DllCall gibi olağan dışı durumlarda gereklidir.
-	While-loop	Belirtilen ifade yanlış olarak değerlendirilir kadar art arda bir dizi komut gerçekleştirir.
+	While	Belirtilen ifade yanlış olarak değerlendirilir kadar art arda bir dizi komut gerçekleştirir.
 	WinActivate	Belirtilen penceresi (bu her şeyden yapar) etkinleştirir.
 	WinActivateBottom	Bu en alttaki (en son aktif) eşleştirme pencere yerine üstteki aktive dışında WinActivate aynı.
 	WinActive	, Belirtilen ölçütlerle eşleşen eğer etkin pencerenin Benzersiz Kimlik (HWND) döndürür.
 	WinClose	Belirtilen penceresini kapatır.
 	WinExist	Çekler belirtilen pencere varsa.
 	WinGet	Belirtilen pencerenin benzersiz kimlik, süreç kimliği, işlem adı veya denetimlerinin listesini alır. Ayrıca belirtilen kriterlere uyan bütün pencerelerin listesini alabilirsiniz.
-	WinGetActiveStats	Tek bir komutta WinGetActiveTitle ve WinGetPos fonksiyonlarını birleştirir.
-	WinGetActiveTitle	Etkin pencerenin başlık alır.
 	WinGetClass	Belirtilen pencere sınıf adı alır.
 	WinGetPos	Belirtilen pencerenin konumunu ve boyutunu alır.
 	WinGetText	Belirtilen penceresinden metin alır.

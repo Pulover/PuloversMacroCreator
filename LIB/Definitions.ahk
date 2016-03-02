@@ -54,7 +54,7 @@ ListCount1 := 0
 ,	cType42 := "CommentBlock"
 ,	cType43 := "Expression"
 ,	cType44 := "Function"
-,	cType45 := "ForLoop"
+,	cType45 := "For"
 ,	cType46 := "Method"
 ,	cType47 := "UserFunction"
 ,	cType48 := "FuncParameter"
@@ -91,23 +91,28 @@ Action1 := "Click"
 			,	40: ["DownloadB", "ZipB"]}
 ,	ContHTitle := {	2: ["p6-Preview.html"]
 			,	3: ["Commands/Pause.html", "Commands/Message_Box.html", "Commands/KeyWait.html"]
-			,	4: ["p7-Settings.html", "p7-Settings.html#misc.", "p7-Settings.html#user-global-variables"]
+			,	4: ["p7-Settings.html", "p7-Settings.html#recording.", "p7-Settings.html#playback", "p7-Settings.html#defaults"
+				, "p7-Settings.html#screenshots", "p7-Settings.html#email-accounts", "p7-Settings.html#language"
+				, "p7-Settings.html#language-editor", "p7-Settings.html#user-global-variables", "p7-Settings.html#language-editor"]
 			,	5: ["Commands/Mouse.html"]
 			,	8: ["Commands/Text.html"]
 			,	10: ["Commands/Run.html"]
 			,	11: ["Commands/Window.html"]
-			,	12: ["Commands/Loop.html", "Commands/Goto_and_Gosub.html", "Commands/Label.html"
-				, "Commands/Loop_FilePattern.html",	"Commands/Loop_Parse.html", "Commands/Loop_Read.html", "Commands/Loop_Registry.html"]
+			,	12: ["Commands/Loop.html", "Commands/Goto_and_Gosub.html", "Commands/Label.html", "Commands/SetTimer.html"
+				, "Commands/Loop_FilePattern.html",	"Commands/Loop_Parse.html", "Commands/Loop_Read.html", "Commands/Loop_Registry.html"
+				, "Commands/While.html", "Commands/For.html", "Commands/Until.html"]
 			,	14: ["p5-Export.html"]
 			,	19: ["Commands/Image_Search.html", "Commands/Pixel_Search.html"]
 			,	21: ["Commands/If_Statements.html", "Commands/Assign_Variable.html", "Commands/Functions.html"]
 			,	22: ["Commands/PostMessage_and_SendMessage.html"]
 			,	23: ["Commands/Control.html"]
-			,	24: ["Commands/Internet_Explorer.html", "Commands/COM_Interface.html", "Commands/Run_Scriptlet.html"]
+			,	24: ["Commands/Internet_Explorer.html", "p8-Variables.html#expressions"]
 			,	26: ["Commands/Find_a_Command.html"]
-			,	30: ["Commands/COM_Interface.html"]
+			,	30: ["p8-Variables.html#expressions"]
 			,	34: ["Commands/Find_a_Command.html"]
-			,	38: ["p9-UserFunctions", "p9-UserFunctions", "p9-UserFunctions"] }
+			,	38: ["p9-UserFunctions", "p9-UserFunctions", "p9-UserFunctions"]
+			,	39: ["Commands/Send_Email.html"]
+			,	40: ["Commands/Download_Files.html", "Commands/Zip_Files.html"] }
 
 RecOptChecks := ["ClearNewList", "", "Strokes", "CaptKDn", "RecKeybdCtrl"
 					, "", "Mouse", "MScroll", "Moves", "RecMouseCtrl"
@@ -406,7 +411,7 @@ Evaluate Expression|If (expression)
 )"
 Loop, Parse, IfCmd, `n
 {
-	Count := A_index
+	Count := A_Index
 	Loop, Parse, A_LoopField, |
 	{
 		If (A_Index = 1)
@@ -559,8 +564,10 @@ FileAppend, Text, Filename, Encoding
 FileCopy, SourcePattern, DestPattern, Flag
 FileCopyDir, Source, Dest, Flag
 FileCreateDir, DirName
+FileCreateShortcut, Target, LinkFile, WorkingDir, Args, Description, IconFile, ShortcutKey, IconNumber, RunState
 FileDelete, FilePattern
 FileGetAttrib, OutputVar, Filename
+FileGetShortcut, LinkFile, OutTarget, OutDir, OutArgs, OutDescription, OutIcon, OutIconNum, OutRunState
 FileGetSize, OutputVar, Filename, Units
 FileGetTime, OutputVar, Filename, WhichTime
 FileGetVersion, OutputVar, Filename
@@ -702,6 +709,7 @@ Exp
 FileExist
 FileOpen
 Floor
+Format
 Func
 GetKeyName
 GetKeySC
@@ -720,7 +728,6 @@ RegExMatch
 RegExReplace
 Round
 RTrim
-Screenshot
 Sin
 Sqrt
 StrGet
@@ -734,8 +741,6 @@ Trim
 Unzip
 WinActive
 WinExist
-WinHttpDownloadToFile
-Zip
 )"
 
 BuiltinFuncParams := "
@@ -768,6 +773,7 @@ Exp (N)
 FileExist (FilePattern)
 FileOpen ()
 Floor (Number)
+Format (FormatStr [, Values...])
 Func (FunctionName)
 GetKeyName (Key)
 GetKeySC (Key)
@@ -786,7 +792,6 @@ RegExMatch (Haystack, NeedleRegEx [, UnquotedOutputVar = "", StartingPos = 1])
 RegExReplace (Haystack, NeedleRegEx [, Replacement = """", OutputVarCount = """", Limit = -1, StartingPos = 1])
 Round (Number [, N])
 RTrim (String, OmitChars = "" `t"")
-Screenshot (FilePattern, X|Y|Width|Height)
 Sin (Number)
 Sqrt (Number)
 StrGet (Address [, Length] [, Encoding = None])
@@ -800,8 +805,6 @@ Trim (String, OmitChars = "" `t"")
 Unzip (Sources, OutDir [, SeparateFolders])
 WinActive ([WinTitle, WinText, ExcludeTitle, ExcludeText])
 WinExist ([WinTitle, WinText, ExcludeTitle, ExcludeText])
-WinHttpDownloadToFile (UrlList, DestFolder)
-Zip (FilesToZip, OutFile [, SeparateFiles])
 Delete (Key / FirstKey, LastKey)
 HasKey (Key)
 InsertAt (Pos, Value1 [, Value2, ... ValueN])
@@ -1068,13 +1071,13 @@ DefaultBar := {FileOpt: "Enabled AutoSize", File: ["New=" w_Lang040 ":41", "Open
 														, "", "Window=" w_Lang058 ":79", "Image=" w_Lang059 ":27", "Run=" w_Lang060 ":58"
 														, "", "ComLoop=" w_Lang061 ":36", "ComGoto=" w_Lang062 ":22", "TimedLabel=" w_Lang063 ":71"
 														, "", "IfSt=" w_Lang064 ":26", "AsVar=" w_Lang065 ":75", "AsFunc=" w_Lang066 ":21"
-														, "", "Email=" w_Lang069 ":112", "DownloadFiles=" w_Lang109 ":95", "ZipFiles=" w_Lang110 ":111"
-														, "", "IECom=" w_Lang067 ":25", "ComInt=" w_Lang068 ":33", "SendMsg=" w_Lang070 ":61"
+														, "", "Email=" w_Lang067 ":112", "DownloadFiles=" w_Lang068 ":95", "ZipFiles=" w_Lang069 ":111"
+														, "", "IECom=" w_Lang070 ":25", "ComInt=" w_Lang071 ":33", "SendMsg=" w_Lang072 ":61"
 														, "", "CmdFind=" w_Lang092 ":92"]
 			, SetOpt: "Enabled AutoSize", Settings: ["HideMainWin=" w_Lang013 ":80", "OnScCtrl=" w_Lang009 ":87"
 														, "", "Capt=" w_Lang012 ":83", "CheckHkOn=" w_Lang014 ":82"
 														, "", "OnFinish=" w_Lang020 ":20(Enabled WholeDropdown)", "SetWin=" t_Lang009 ":101"
-														, "", "WinKey=" w_Lang071 ":88", "SetJoyButton=" w_Lang072 ":32"]
+														, "", "WinKey=" w_Lang109 ":88", "SetJoyButton=" w_Lang110 ":32"]
 			, EditOpt: "Enabled AutoSize", Edit: ["EditButton=" w_Lang093 ":14", "CutRows=" w_Lang081 ":9", "CopyRows=" w_Lang082 ":8", "PasteRows=" w_Lang083 ":44", "Remove=" w_Lang084 ":10"
 														, "", "Duplicate=" w_Lang080 ":13", "SelectMenu=" t_Lang139 ":99(Enabled WholeDropdown)", "CopyTo=" w_Lang087 ":8(Enabled WholeDropdown)"
 														, "", "GroupsMode=" w_Lang097 ":104(Enabled AutoSize Dropdown)"

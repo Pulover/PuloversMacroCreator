@@ -210,7 +210,7 @@ Eval($x, _CustomVars := "", _Init := true)
 							Else
 							{
 								If $y is not Number
-									$y := """" $y """"
+									$y := """" StrRePlace($y, """", """""") """"
 							}
 							$z[$i] := StrReplace($z[$i], _Match, IsObject($y) ? """<~#" ObjName "#:>""" : $y)
 							continue 3
@@ -239,7 +239,7 @@ Eval($x, _CustomVars := "", _Init := true)
 				Else
 				{
 					If $y is not Number
-						$y := """" $y """"
+						$y := """" StrReplace($y, """", """""") """"
 				}
 				$z[$i] := StrReplace($z[$i], _Match, IsObject($y) ? """<~#" ObjName "#~>""" : $y)
 			}
@@ -358,7 +358,7 @@ ParseObjects(v_String, _CustomVars  :=  "", ByRef v_levels := "", QuoteStrings :
 			_ArrayObject := _ArrayObject[_Key*]
 	}
 	If ((!IsObject(_ArrayObject)) && (QuoteStrings) && (!RegExMatch(_ArrayObject, "^-?\d+$")))
-		_ArrayObject := """" _ArrayObject """"
+		_ArrayObject := """" StrReplace(_ArrayObject, """", """""") """"
 	If (HasMethod)
 		v_levels := ""
 	return _ArrayObject
@@ -377,7 +377,7 @@ StrJoin(InputArray, JChr := "", Quote := false)
 		If (IsObject(v))
 			return v
 		If (Quote) && ((!RegExMatch(v, "^-?\d+$")))
-			v := """" v """"
+			v := """" StrReplace(v, """", """""") """"
 		JoinedStr .= v . JChr
 	}
 	If (JChr != "")

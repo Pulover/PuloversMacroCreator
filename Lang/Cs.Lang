@@ -244,17 +244,17 @@
 	w_Lang059 =	Obrázek / Pixel Search (F7)
 	w_Lang060 =	Spustit / Soubor / String / Misc. (F8)
 	w_Lang061 =	Loop (F9)
-	w_Lang062 =	Goto (Shift+F9)
-	w_Lang063 =	Label (Ctrl+F9)
+	w_Lang062 =	Přejít Na Etiketě / (Shift + F9)
+	w_Lang063 =	Nastavit Časovač (Ctrl + F9)
 	w_Lang064 =	Pokud výkazy (F10)
 	w_Lang065 =	Proměnné / Pole (Shift+F10)
 	w_Lang066 =	Funkce / Metody pole (Ctrl+F10)
-	w_Lang067 =	Internet Explorer (F12)
-	w_Lang068 =	Výraz / COM rozhraní (Shift+F12)
-	w_Lang069 =	Poslat e-mailem (F11)
-	w_Lang070 =	Windows Zprávy (Ctrl+F12)
-	w_Lang071 =	Přidat klávesu Windows na "Play" klávesové zkratky
-	w_Lang072 =	Použijte joystick jako klávesovou zkratku
+	w_Lang067 =	Poslat e-mailem (F11)
+	w_Lang068 =	Soubory ke stažení (Shift+F11)
+	w_Lang069 =	Zip / rozbalení souborů (Ctrl+F11)
+	w_Lang070 =	Internet Explorer (F12)
+	w_Lang071 =	Výraz / COM rozhraní (Shift+F12)
+	w_Lang072 =	Windows Zprávy (Ctrl+F12)
 	w_Lang073 =	Přidat makro (Ctrl+T)
 	w_Lang074 =	Zavřít Makro (Ctrl+W)
 	w_Lang075 =	Duplicitní makro (Ctrl+Shift+D)
@@ -291,8 +291,8 @@
 	w_Lang106 =	Přidat Return (Ctrl+Shift+N)
 	w_Lang107 =	Převést makra fungovat (Ctrl+Shift+C)
 	w_Lang108 =	Komentář mimo nezkontrolované řádků
-	w_Lang109 =	Soubory ke stažení (Shift+F11)
-	w_Lang110 =	Zip / rozbalení souborů (Ctrl+F11)
+	w_Lang109 =	Přidat klávesu Windows na "Play" klávesové zkratky
+	w_Lang110 =	Použijte joystick jako klávesovou zkratku
 	w_Lang111 =	Vyhledávání... (Klávesou Enter prejdete)
 		
 ; 15. Command Windows		
@@ -759,6 +759,7 @@
 	t_Lang204 =	Odhalit Skrytý Text
 	t_Lang205 =	Režim Titulový Zápas
 	t_Lang206 =	Název Rychlost Zápas
+	t_Lang207 =	Zákazník
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Otevřít
@@ -939,10 +940,14 @@
 	ApplyL_TT =	Vložit z krabice (Insert)
 	ApplyT_TT =	Platit
 	AutoKey_TT =	Klávesová zkratka pro přehrávání makra
+	Client_TT =	Souřadnice jsou vztaženy k aktivní oblasti okna klienta, který vylučuje záhlaví okna, nabídku (pokud má standardně jeden) a hranice.
 	Clip_TT =	Dočasně používá Schránka zaslat znění.
 		Po dokončení operace, skript
 		obnoví původní obsah schránky.
 		(Ponechat prázdné text vložit aktuální obsah)
+	CM_TT =	Screen: Souřadnice jsou relativní k ploše (celá obrazovka).
+		Window: Polohu jsou vztaženy k aktivním okně.
+		Client: Souřadnice jsou vztaženy k aktivní oblasti okna klienta, který vylučuje záhlaví okna, nabídku (pokud má standardně jeden) a hranice.
 	CmdFilter_TT =	Filtrovat podle typu
 	CmdSort_TT =	Řadit abecedně
 	ColorPick_TT =	Dostat pixel na obrazovce
@@ -957,7 +962,9 @@
 		obsah schránky).
 	Ex_AF_TT =	Přeskočí jemný způsob aktivace okna
 		a jde rovnou do násilné metody.
-	Ex_DH_TT =	Určuje, zda neviditelné okna jsou "vidět" ve skriptu.
+	Ex_DH_TT =	Určuje, zda neviditelné okna jsou "vidět" pomocí skriptu.
+	Ex_DT_TT =	Určuje, zda neviditelný textu v okně je "vidět" za účelem zjištění okna. To má vliv na příkazy, jako je IfWinExist a WinActivate.
+	Ex_CM_TT =	Sady režimu Souřadnice myši příkazy být vztaženy buď aktivní okno nebo na obrazovce.
 	Ex_EdScript_TT =	Otvori u vanjskom uređivaču
 	Ex_EdVars_TT =	Vyberte globální proměnné, které chcete exportovat.
 	Ex_ExecScript_TT =	Spustit skript
@@ -989,6 +996,7 @@
 	Ex_SW_TT =	Nastavuje zpoždění, které nastanou po
 		každý okenní příkaz, jako je WinActivate.
 	Ex_UV_TT =	Export globální proměnné.
+	Ex_WN_TT =	Povolí nebo zakáže varování pro specifické podmínky, které mohou indikovat chybu, jako je překlep nebo chybějící "globální" prohlášení.
 	ExpList_TT =	Dvakrát klikněte na upravit
 	ExprLink2_TT =	- NEPOUŽÍVEJTE UZAVŘETE PROMĚNNÉ V ZNAKY PROCENTA ZDE.
 		- Většina AHK výrazy jsou podporovány.
@@ -1193,15 +1201,11 @@
 	ControlSetText	Změní text ovládacího prvku.
 	CoordMode	Sady koordinovat režim pro různé příkazy, které se ve srovnání s buď aktivní okno nebo na obrazovce .
 	Cos	Vrátí trigonometrický cosinus čísla.
-	Critical	Zabraňuje aktuální vlákno z přerušován jiných podprocesů .
 	Delete	Odstraňuje dvojice klíč-hodnota z objektu.
-	DetectHiddenText	Určuje, zda neviditelný text okně je "vidět" za účelem zjištění okno. To se týká např. příkazy IfWinExist a WinActivate .
-	DetectHiddenWindows	Určuje, zda neviditelné okna jsou "vidět" pomocí skriptu .
 	DllCall	Volánífunkce v DLL , jako je standardní funkce Windows API .
 	Drive	Vysune / zasunezásobník na CD nebo DVD , nebo nastaví měniče svazku .
 	DriveGet	Načte různé typy informací o počítače disk (y).
 	DriveSpaceFree	Načte volného prostoru disku v MB.
-	Edit	Otevře aktuální skript pro editaci v příslušném editoru.
 	Else	Určuje příkaz (y) provedl v případěIF -příkaz vyhodnocen jako NEPRAVDA . Při více než jeden příkaz je k dispozici, je uzavřít do bloku (rovnátka) .
 	EnvAdd	Nastaví proměnnou součet sobě plus danou hodnotu (můžete také přidat nebo odečíst čas z data a časové hodnoty) . Synonymem : Var+= hodnota .
 	EnvDiv	Nastaví proměnnou na sebe dělí o danou hodnotu . Synonymem : Var / = hodnota .
@@ -1210,7 +1214,6 @@
 	EnvSet	Zapíšehodnotu proměnné obsažené v životním prostředí.
 	EnvSub	Nastaví proměnnou na sebe minus danou hodnotu (lze také porovnat data a časové hodnoty) . Synonymem : Var - = hodnota .
 	EnvUpdate	Upozorní OS a všechny spuštěné aplikace, které proměnné prostředí (s) se změnily .
-	Exit	Ukončí aktuální vlákno , nebo (v případě, že skript není perzistentní a neobsahuje žádné klávesové zkratky) Celý skript .
 	ExitApp	Ukončí skript bezpodmínečně.
 	Exp	Vrátí e (což je přibližně 2.71828182845905) raisnul na tý moci.
 	Expression	Vykonává jednu nebo více operací na řadě proměnných, doslovných řetězců a / nebo doslovné čísel.
@@ -1220,13 +1223,11 @@
 	FileCreateDir	Vytvoří složku .
 	FileCreateShortcut	Vytvoří zástupce (. LNK) soubor .
 	FileDelete	Odstraní jeden nebo více souborů.
-	FileEncoding	Nastaví výchozí kódování pro FILEREAD , FileReadLine , Loop číst, FileAppend a FileOpen .
 	FileGetAttrib	Ukazuje, zdasoubor nebo složka je pouze pro čtení , skrytý , atd.
 	FileGetShortcut	Načte informace o zástupce (. LNK) souboru , jako je jeho cílového souboru .
 	FileGetSize	Načte velikost souboru .
 	FileGetTime	Načte datetime razítko souboru nebo složky .
 	FileGetVersion	Načte verzi souboru .
-	FileInstall	Zahrnuje zadaný soubor uvnitř kompilované verzi skriptu.
 	FileMove	Přesun nebo změna jednoho nebo více souborů .
 	FileMoveDir	Přesune složku spolu se všemi sub-složky a soubory. To může také přejmenovat složku.
 	FileOpen	Poskytuje objektově orientovaný soubor I / O.
@@ -1253,18 +1254,18 @@
 	GroupClose	Zavře aktivní okno , pokud to byl právě aktivován GroupActivate nebo GroupDeactivate . To aktivuje následující okno v seriálu . To může také zavřít všechna okna ve skupině.
 	GroupDeactivate	Podobně GroupActivate kromě aktivuje následující okno není ve skupině.
 	HasKey	Vrací true, pokud klíč je spojen s hodnotou.
-	if	Určuje příkaz (y) k provedení , pokud srovnání proměnné na hodnotu evalutes na hodnotu TRUE. Při více než jeden příkaz je k dispozici, je uzavřít do bloku (rovnátka) .
-	if (expression)	Určuje příkaz (y) k provedení , pokudvýraz vyhodnocen jako PRAVDA .
+	If	Určuje příkaz (y) k provedení , pokud srovnání proměnné na hodnotu evalutes na hodnotu TRUE. Při více než jeden příkaz je k dispozici, je uzavřít do bloku (rovnátka) .
+	If (expression)	Určuje příkaz (y) k provedení , pokudvýraz vyhodnocen jako PRAVDA .
 	If A_Index	Kontroluje, zda aktuální iteraci smyčky matchs na zadané číslo.
 	If Clipboard	Zkontroluje, zda je schránka text je matchs zadaný řetězec.
 	If ErrorLevel	Zkontroluje, zda zadané obrázku nebo pixelu byl nalezen na obrazovce .
 	If var [not] between	Kontroly , zda proměnná je obsahem jsou číselně nebo abecedně mezi dvěma hodnotami (včetně) .
-	If var [not] in/contains MatchList 	Kontroly , zda proměnná je obsahem odpovídat na jednu z položek v seznamu.
+	If var [not] in / If var [not] contains MatchList	Kontroly , zda proměnná je obsahem odpovídat na jednu z položek v seznamu.
 	If var is [not] type	Zkontroluje, zda proměnná je obsah jsou číselné , velká , atd.
 	IfEqual / IfNotEqual	Porovná proměnnou na hodnotu pro rovnost. Synonymem : pokud Var = hodnota | pokud Var <> hodnota .
 	IfExist / IfNotExist / FileExist	Kontroly na existenci souboru nebo složky .
 	IfGreater / IfGreaterOrEqual	Porovná proměnnou hodnotu . Synonymem : pokud Var > hodnota | pokud Var > = hodnota .
-	IfInString / IfNotInString / InStr	Zkontroluje, zda proměnná obsahuje zadaný řetězec .
+	IfInString / IfNotInString	Zkontroluje, zda proměnná obsahuje zadaný řetězec .
 	IfLess / IfLessOrEqual	Porovná proměnnou hodnotu . Synonymem : pokud Var < hodnota | pokud Var < = hodnota .
 	IfMsgBox	Kontroly , které tlačítko bylo tlačil uživatelem během posledního příkazu MsgBox .
 	IfWinActive / IfWinNotActive	Zkontroluje, zda zadaný okno existuje a je aktivní (především) .
@@ -1277,9 +1278,8 @@
 	InputBox	Zobrazívstupní pole požádat uživatele k zadání řetězce .
 	InsertAt	Vloží jednu nebo více hodnot v dané poloze v lineárním poli.
 	InStr	Vyhledá danou výskyt řetězce , z levé nebo pravé straně.
-	KeyHistory	Zobrazuje skript info a historie nejnovějších stisků kláves a myši.
 	KeyWait	Čeká klíčem nebo tlačítka myši / joysticku být propuštěn nebo stisknutá.
-	Labels	Štítek označuje řádek kódu, a může být použit jako cíl Goto nebo vytvořit podprogram.
+	Label	Štítek označuje řádek kódu, a může být použit jako cíl Goto nebo vytvořit podprogram.
 	Length	Vrátí délku lineárním poli začínající v poloze 1.
 	ListVars	Zobrazí proměnných skriptu: jejich jména a aktuální obsah.
 	Ln	Vrátí přirozený logaritmus (základ e) Number.
@@ -1290,18 +1290,13 @@
 	Loop (read file contents)	Načte řádky v textovém souboru, jeden po druhém (lepší než FileReadLine).
 	Loop (registry)	Načte obsah zadaného podklíč registru, jeden kus po druhém.
 	MaxIndex	Vrací nejvyšší celočíselnou klíč.
-	Menu	Vytvoří, odstraní, upraví a zobrazí se menu a položky. Změní ikonu a její Tooltip. Určuje, zda se hlavní okno kompilovaný skript lze otevřít.
 	MinIndex	Vrací nejmenší celočíselnou klíč.
 	Mod	Modulo. Vrátí zbytek, když je dividenda podělil dělitel.
-	MouseClickDrag	Kliknutí a má zadaný tlačítko myši, pohyb myši na cílové souřadnice, a pak uvolnění tlačítka.
 	MouseGetPos	Načte aktuální pozici kurzoru a případně kde je otevřené okno a řízení je vznášející se nad.
-	MouseMove	Přesune kurzor myši.
 	MsgBox	Zobrazení textu uvedeno v malém okně, které obsahuje jedno nebo více tlačítek (například Ano a Ne).
 	NumGet	Vrací binární číslo uložené na zadanou adresu+offset.
 	NumPut	Obchody číslo v binárním formátu na určenou adresu+offset a vrátí adresu vpravo od položky právě napsal.
 	Object	Vytváří skriptovatelné asociativní pole.
-	OnExit	Určuje podprogram spustit automaticky, když skript východy.
-	OnMessage	Určuje funkce pro volání automaticky, když skript obdrží zadanou zprávu.
 	Ord	Vrátí pořadové hodnotu (číselný kód znaku) prvního znaku v řetězci.
 	OutputDebug	Odešle řetězec ladicí program (pokud existuje) na displeji.
 	Parameter	Přidá parametr do funkce.
@@ -1317,7 +1312,6 @@
 	RegDelete	Odstraní podklíč nebo hodnotu z registru.
 	RegExMatch	Určuje, zda řetězec obsahuje vzor (regulární výraz).
 	RegExReplace	Nahrazuje výskyty vzoru (regulární výraz) uvnitř řetězce.
-	RegisterCallback	Vytvoří strojově kód adresy, který při volání, přesměrování hovoru na funkce ve skriptu.
 	RegRead	Čte hodnotu z registru.
 	RegWrite	Zapíše hodnotu do registru.
 	RemoveAt	Odstraní položky z dané pozice v lineárním poli.
@@ -1326,16 +1320,11 @@
 	Run	Spustí externí program.
 	RunAs	Určuje sadu uživatelských pověření použít pro všechna další použití jízdy a RunWait. Vyžaduje systém Windows 2000/XP nebo novější.
 	RunWait	Spustí externí program, a čeká, až to skončí.
-	Screenshot	Vytvoří screenshot ve formátu PNG o uvedené oblasti.
-	Send / SendRaw / SendInput / SendPlay	Odešle simulované stisky kláves a kliknutí myší na aktivní okno.
+	Send / SendRaw	Odešle simulované stisky kláves a kliknutí myší na aktivní okno.
 	SendLevel	Ovládací prvky, které umělé klávesnice a myši události jsou ignorovány klávesové zkratky a hotstrings.
 	SendMessage	Odešle zprávu do okna nebo ovládací prvek a čeká na potvrzení.
-	SendMode	Dělá Poslat synonymem SendInput nebo SendPlay spíše než výchozí (SendEvent). Také dělá Klikněte a MouseMove / Klikněte / Přetáhněte použít specifikovanou metodu.
 	SetCapslockState	Nastaví stav klávesy CapsLock. Můžete také vynutit klíč zůstat zapnutý nebo vypnutý.
-	SetEnv (Var = Value)	Přiřadí určenou hodnotu proměnné.
-	SetFormat	Nastaví formát čísel a desetinných čísel vytvořených matematických operací.
 	SetKeyDelay	Nastavuje zpoždění, dojde po každém stisknutí tlačítka Odeslat nebo zaslané ControlSend.
-	SetMouseDelay	Nastavuje zpoždění, dojde po každém pohybu myší nebo klepněte na tlačítko.
 	SetNumlockState	Nastaví stav klávesu NumLock. Můžete také vynutit klíč zůstat zapnutý nebo vypnutý.
 	SetRegView	Umožňuje registru příkazy v 32bitové skript pro přístup k 64-bit registru názor a naopak.
 	SetScrollLockState	Nastaví stav klávesy ScrollLock. Můžete také vynutit klíč zůstat zapnutý nebo vypnutý.
@@ -1357,8 +1346,7 @@
 	Sqrt	Vrátí druhou odmocninu čísla.
 	StatusBarGetText	Načte text ze standardního ovládacího prvku na stavovém řádku.
 	StatusBarWait	Čeká, až se okno stavovém řádku obsahuje zadaný řetězec.
-	StringCaseSense	Určuje, zda porovnávání řetězců jsou malá a velká písmena (výchozí nastavení je "není case sensitive").
-	StringGetPos / InStr	Načte pozici zadaného podřetězce v řetězci.
+	StringGetPos	Načte pozici zadaného podřetězce v řetězci.
 	StringLeft	Načte počet znaků z levé strany řetězce.
 	StringLen / StrLen	Načte počet kolik znaků v řetězci.
 	StringLower	Převede řetězec na malá písmena.
@@ -1370,27 +1358,22 @@
 	StringTrimRight	Odebere počet znaků z pravé strany řetězce.
 	StringUpper	Převede řetězec na velká písmena.
 	StrPut / StrGet	Zkopíruje řetězec nebo z adresy v paměti, volitelné převedením mezi kódovými stránkami.
-	Suspend	Zamknutí nebo odemknutí všech nebo vybraných klávesových zkratek a hotstrings.
 	SysGet	Načte rozlišení obrazovky, multi-monitorů Info, rozměry systémové objekty, a jiné systémové vlastnosti.
 	Tan	Vrátí trigonometrický tangens čísla.
 	ToolTip	Vytvoří vždy-na-top okno kdekoliv na obrazovce.
 	Transform	Provádí různé matematické funkce, bitové operace a úkoly, jako je ASCII / Unicode.
 	TrayTip	Vytvoří balón okno se zprávou u ikonu na hlavním panelu. Vyžaduje systém Windows 2000/XP nebo novější.
 	Trim / LTrim / RTrim	Lemy určité znaky ze začátku a / nebo konci řetězce.
-	Try	Chrániče jeden nebo více příkazů (příkazy nebo výrazy) proti runtime chyby a výjimky vyvolané příkazem throw.
 	Until	Platí podmínku pro pokračování Loop nebo cyklus for.
 	UrlDownloadToFile	Stáhne soubor z internetu.
 	UserFunction	Stvara funkciju strukturu.
-	VarSetCapacity	Zvětšení proměnné kapacitu ustájení nebo uvolní jeho paměť. Normálně, je to nutné jen pro mimořádných okolností, jako jsou DllCall.
-	While-loop	Provádí řadu příkazů opakovaně, dokud zadaný výraz vyhodnocen jako nepravdivý.
+	While	Provádí řadu příkazů opakovaně, dokud zadaný výraz vyhodnocen jako nepravdivý.
 	WinActivate	Aktivuje uvedené okno (dělá to především).
 	WinActivateBottom	Stejné jako WinActivate kromě toho, že se aktivuje nejspodnější (alespoň v poslední době aktivní) odpovídající okno, spíše než nejvyšší.
 	WinActive	Vrací jedinečný identifikátor (HWND) aktivního okna, pokud to odpovídá zadaným kritériím.
 	WinClose	Zavře zadané okno.
 	WinExist	Zkontroluje, zda zadaný okno existuje.
 	WinGet	Vyhledá zadané okno je jedinečný identifikátor, ID procesu, procesní jméno nebo seznam svých kontrol. To může také získat seznam všech oken odpovídajících zadaným kritériím.
-	WinGetActiveStats	Kombinuje funkce WinGetActiveTitle a WinGetPos do jednoho příkazu.
-	WinGetActiveTitle	Načte název aktivního okna.
 	WinGetClass	Načte zadaný název třídy okna.
 	WinGetPos	Načte polohu a velikost zadané okno.
 	WinGetText	Načte text ze zadaného okna.

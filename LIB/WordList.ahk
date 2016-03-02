@@ -121,3 +121,5 @@ printscreen ralt raw rbutton rcontrol rctrl right rshift rwin rwindown rwinup sc
 shiftdown shiftup space tab up volume_down volume_mute volume_up wheeldown wheelleft wheelright
 wheelup xbutton1 xbutton2
 )
+
+SyHi_UserDef = cdo unzip zip createzipfile winhttpdownloadtofile centerimgsrchcoords

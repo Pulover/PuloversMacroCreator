@@ -60,8 +60,9 @@ Thiago Talma for some improvements to the code, debugging and many suggestions.
 * Added support for named keys in arrays (e.g.: N["key"] or N.key, MyArray.1 := OtherArray.Name).
 * Added support for array methods.
 * Added support for arrays inside IECom and COMInterface parameters.
-* Added options to set TitleMatchMode, TitleMatchMode Speed, DetectHiddenWindows and DetectHiddenText.
 * Added var [not] in, var [not] contains, var [not] between and var is in Compare Variables If Statement.
+* Added options to set TitleMatchMode, TitleMatchMode Speed, DetectHiddenWindows and DetectHiddenText.
+* Added *Client* mode for Mouse and Pixel/Image Search coordinates.
 * Added option to center coordinates of *ImageSearch* results.
 * Added option to change color of the rectangle of Image/Pixel Search area and Screenshots tool.
 * Added *Insert Comment Block* to "Edit Comment" window.

@@ -89,7 +89,7 @@ SBShowTip(Command)
 	return Cmd_Tips[Command]
 }
 
-Find_Command(SearchWord)
+Find_Command(SearchWord, TrueMatch := false)
 {
 	local Results, SearchIn, Search
 	
@@ -103,12 +103,20 @@ Find_Command(SearchWord)
 				Search := "Type" A_Index
 			Else
 				Search := SearchIn
-			If (InStr(A_LoopField, SearchWord))
-				Results.Push({Cmd: A_LoopField, Path: %Search%_Path})
-			Else Try
+			If (TrueMatch)
 			{
-				If (InStr(%A_LoopField%_Desc, SearchWord))
+				If (A_LoopField = SearchWord)
 					Results.Push({Cmd: A_LoopField, Path: %Search%_Path})
+			}
+			Else
+			{
+				If (InStr(A_LoopField, SearchWord))
+					Results.Push({Cmd: A_LoopField, Path: %Search%_Path})
+				Else Try
+				{
+					If (InStr(%A_LoopField%_Desc, SearchWord))
+						Results.Push({Cmd: A_LoopField, Path: %Search%_Path})
+				}
 			}
 		}
 	}
@@ -255,13 +263,17 @@ CmdHelp()
 		If (Pag = 1)
 		{
 			If (LFilePattern)
-				Pag := 4
-			Else If (LParse)
 				Pag := 5
-			Else If (LRead)
+			Else If (LParse)
 				Pag := 6
-			Else If (LRegistry)
+			Else If (LRead)
 				Pag := 7
+			Else If (LRegistry)
+				Pag := 8
+			Else If (LWhile)
+				Pag := 9
+			Else If (LFor)
+				Pag := 10
 		}
 	}
 	Else
@@ -269,7 +281,7 @@ CmdHelp()
 	Title := ContHTitle[Gui][Pag ? Pag : 1]
 	If (WinActive("A") != StartTipID) && ((!Title) || (WinActive("A") != CmdWin))
 		Title := "index.html"
-	ShortLang := RegExReplace(Lang, "(\w+).*", "$1")
+	ShortLang := RegExReplace(Lang, "_.*")
 	IfExist, %A_ScriptDir%\MacroCreator_Help_%Lang%.chm
 		Run, hh.exe mk:@MSITStore:%A_ScriptDir%\MacroCreator_Help_%Lang%.chm::/%Title%
 	Else IfExist, %A_ScriptDir%\MacroCreator_Help_%ShortLang%.chm

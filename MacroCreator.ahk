@@ -676,6 +676,7 @@ GoSub, LoadLang
 
 #Include <Definitions>
 #Include <WordList>
+UserDefFunctions := SyHi_UserDef " "
 
 GoSub, ObjCreate
 ToggleMode := ToggleC ? "T" : "P"
@@ -1377,6 +1378,7 @@ TB_Define(tbPrev, htbPrev, hIL_Icons, FixedBar.Preview, FixedBar.PrevOpt)
 ,	sciPrev.StyleSetFore(0xB, 0x0086B3) ; Commands
 ,	sciPrev.StyleSetFore(0xC, 0xBB5046), sciPrev.StyleSetBold(0xC, 0x1) ; Functions
 ,	sciPrev.StyleSetFore(0xD, 0x009B4E), sciPrev.StyleSetBold(0xD, 0x1) ; Keys
+,	sciPrev.StyleSetFore(0x11, 0xF04020), sciPrev.StyleSetBold(0x11, 0x1) ; User defined functions
 ,	sciPrev.StyleSetFore(0x10, 0xCF00CF) ; Built-In Variables
 ,	sciPrev.StyleSetFore(0x9, 0x008080) ; Variables
 ,	sciPrev.StyleSetFore(0xF, 0xDD1144) ; Parameters
@@ -1392,8 +1394,9 @@ TB_Define(tbPrev, htbPrev, hIL_Icons, FixedBar.Preview, FixedBar.PrevOpt)
 ,	sciPrev.SetKeywords(0x0, SyHi_Com)
 ,	sciPrev.SetKeywords(0x1, SyHi_Fun)
 ,	sciPrev.SetKeywords(0x2, SyHi_Keys)
-,	sciPrev.SetKeywords(0x5, SyHi_BIVar)
 ,	sciPrev.SetKeywords(0x4, SyHi_Param)
+,	sciPrev.SetKeywords(0x5, SyHi_BIVar)
+,	sciPrev.SetKeywords(0x6, SyHi_UserDef)
 ,	sciPrev.SetText("", Preview)
 ,	sciPrev.SetReadOnly(0x1)
 
@@ -1415,6 +1418,7 @@ TB_Define(tbPrevF, htbPrevF, hIL_Icons, FixedBar.Preview, FixedBar.PrevOpt)
 ,	sciPrevF.StyleSetFore(0xB, 0x0086B3) ; Commands
 ,	sciPrevF.StyleSetFore(0xC, 0x990000), sciPrevF.StyleSetBold(0xC, 0x1) ; Functions
 ,	sciPrevF.StyleSetFore(0xD, 0x009B4E), sciPrevF.StyleSetBold(0xD, 0x1) ; Keys
+,	sciPrevF.StyleSetFore(0x11, 0xF04020), sciPrev.StyleSetBold(0x11, 0x1) ; User defined functions
 ,	sciPrevF.StyleSetFore(0x10, 0xCF00CF) ; Built-In Variables
 ,	sciPrevF.StyleSetFore(0x9, 0x008080) ; Variables
 ,	sciPrevF.StyleSetFore(0xF, 0xDD1144) ; Parameters
@@ -1430,8 +1434,9 @@ TB_Define(tbPrevF, htbPrevF, hIL_Icons, FixedBar.Preview, FixedBar.PrevOpt)
 ,	sciPrevF.SetKeywords(0x0, SyHi_Com)
 ,	sciPrevF.SetKeywords(0x1, SyHi_Fun)
 ,	sciPrevF.SetKeywords(0x2, SyHi_Keys)
-,	sciPrevF.SetKeywords(0x5, SyHi_BIVar)
 ,	sciPrevF.SetKeywords(0x4, SyHi_Param)
+,	sciPrevF.SetKeywords(0x5, SyHi_BIVar)
+,	sciPrevF.SetKeywords(0x6, SyHi_UserDef)
 ,	sciPrevF.SetText("", Preview)
 ,	sciPrevF.SetReadOnly(0x1)
 Gui, 2:Default
@@ -2418,9 +2423,9 @@ Gui, 14:Add, Checkbox, -Wrap Checked%Ex_SP% y+5 xs+10 W140 vEx_SP R1, SetTitleMa
 Gui, 14:Add, DDL, yp-3 x+5 vSP w75, Fast%_x%%_x%Slow
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_CM% y+5 xs+10 W140 vEx_CM R1, CoordMode, Mouse
 Gui, 14:Add, DDL, yp-3 x+5 vCM w75, Window%_x%%_x%Screen%_x%Client
-Gui, 14:Add, Checkbox, -Wrap Checked%HiddenWin% y+5 xs+10 W140 vEx_DH R1, DetectHiddenWindows
+Gui, 14:Add, Checkbox, -Wrap Checked%Ex_DH% y+5 xs+10 W140 vEx_DH R1, DetectHiddenWindows
 Gui, 14:Add, DDL, yp-3 x+5 vDH w75, On%_x%Off%_x%%_x%
-Gui, 14:Add, Checkbox, -Wrap Checked%HiddenText% y+5 xs+10 W140 vEx_DT R1, DetectHiddenText
+Gui, 14:Add, Checkbox, -Wrap Checked%Ex_DT% y+5 xs+10 W140 vEx_DT R1, DetectHiddenText
 Gui, 14:Add, DDL, yp-3 x+5 vDT w75, On%_x%%_x%Off
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_AF% y+8 xs+10 W220 vEx_AF R1, #WinActivateForce
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_PT% y+5 xs+10 W220 vEx_PT R1, #Persistent
@@ -3104,8 +3109,9 @@ Gui, 4:Tab, 3
 ; Playback
 Gui, 4:Add, GroupBox, Section ym xm+170 W400 H175, %t_Lang202%:
 Gui, 4:Add, Text, -Wrap R1 ys+20 xs+10 W380, %t_Lang039%:
-Gui, 4:Add, Radio, -Wrap y+5 xs+10 W190 R1 vRelative R1, %c_Lang005%
-Gui, 4:Add, Radio, -Wrap yp x+10 W180 R1 vScreen R1, %t_Lang041%
+Gui, 4:Add, Radio, -Wrap y+5 xs+10 W120 R1 vRelative R1, %c_Lang005%
+Gui, 4:Add, Radio, -Wrap yp x+10 W120 R1 vScreen R1, %t_Lang041%
+Gui, 4:Add, Radio, -Wrap yp x+10 W120 R1 vClient R1, %t_Lang207%
 Gui, 4:Add, Text, -Wrap R1 y+20 xs+10 W200, %t_Lang205%:
 Gui, 4:Add, DDL, yp-2 x+0 W80 vTitleMatch, 1|2||3|RegEx
 Gui, 4:Add, Text, -Wrap R1 y+10 xs+10 W200, %t_Lang206%:
@@ -3275,6 +3281,8 @@ If (CoordMouse = "Window")
 	GuiControl, 4:, Relative, 1
 Else If (CoordMouse = "Screen")
 	GuiControl, 4:, Screen, 1
+Else If (CoordMouse = "Client")
+	GuiControl, 4:, Client, 1
 GuiControl, 4:, OnRelease, %OnRelease%
 GuiControl, 4:, OnEnter, %OnEnter%
 GuiControl, 4:Enable%RandomSleeps%, RandPercent
@@ -3308,6 +3316,8 @@ If (Relative = 1)
 	CoordMouse := "Window"
 Else If (Screen = 1)
 	CoordMouse := "Screen"
+Else If (Client = 1)
+	CoordMouse := "Client"
 SSMode := OnRelease ? "OnRelease" : "OnEnter"
 CloseAction := MinToTray ? "Minimize" : (CloseApp ? "Close" : "")
 VirtualKeys := EditMod, UserVarsList := Trim(UserVarsList, "`n ")
@@ -6453,11 +6463,20 @@ If (InStr(A_ThisLabel, "Goto"))
 	Else
 		GoSub, Goto
 }
-Else If ((s_Caller = "Find") && (InStr(GotoRes1, "Loop")))
+Else If ((s_Caller = "Find") && ((InStr(GotoRes1, "Loop"))
+		|| (GotoRes1 = "While") || (GotoRes1 = "For") || (GotoRes1 = "Until")))
 {
-	StringReplace, GotoRes, GotoRes1, Loop, L
-	GuiControl, 12:, %GotoRes%, 1
+	StringReplace, GotoRes1, GotoRes1, Loop
+	StringReplace, GotoRes1, GotoRes1, %A_Space%(files & folders), FilePattern
+	StringReplace, GotoRes1, GotoRes1, %A_Space%(normal)
+	StringReplace, GotoRes1, GotoRes1, %A_Space%(parse a string), Parse
+	StringReplace, GotoRes1, GotoRes1, %A_Space%(read file contents), Read
+	StringReplace, GotoRes1, GotoRes1, %A_Space%(registry), Registry
+	
+	GotoRes1 := "L" GotoRes1
+	GuiControl, 12:, %GotoRes1%, 1
 	GoSub, LoopType
+	GuiControl, 12:Enable%LUntil%, UntilExpr
 }
 Else If (s_Caller != "Edit")
 	SBShowTip("Loop (normal)")
@@ -6876,7 +6895,7 @@ Else If (LParse)
 Else If (LFor)
 	SBShowTip("For")
 Else If (LWhile)
-	SBShowTip("While-loop")
+	SBShowTip("While")
 Else If (LRead)
 	SBShowTip("Loop (read file contents)")
 Else If (LRegistry)
@@ -7288,9 +7307,9 @@ Gui, 19:Add, Text, yp+5 x+10 R1, Y:
 Gui, 19:Add, Edit, yp-5 x+5 W60 H20 vOutVarY, FoundY
 Gui, 19:Add, Checkbox, yp+5 x+20 W260 R1 vFixFoundVars, %c_Lang256%
 ; Options
-Gui, 19:Add, GroupBox, Section y+16 xm W275 H115, %c_Lang159%:
+Gui, 19:Add, GroupBox, Section y+17 xm W275 H115, %c_Lang159%:
 Gui, 19:Add, Text, -Wrap R1 ys+20 xs+10 W40 Right, %c_Lang070%:
-Gui, 19:Add, DDL, yp x+10 W65 vCoordPixel, Screen||Window
+Gui, 19:Add, DDL, yp x+10 W65 vCoordPixel, Screen||Window|Client
 Gui, 19:Add, Text, -Wrap R1 yp+3 x+0 W85 Right, %c_Lang071%:
 Gui, 19:Add, Edit, yp-3 x+10 vVariatT W45 Number Limit
 Gui, 19:Add, UpDown, vVariat 0x80 Range0-255, 0
@@ -8021,29 +8040,31 @@ Loop, %TabCount%
 		}
 	}
 }
+Statement := "
+(Join$
+" c_Lang190 "$
+" c_Lang191 "
+" c_Lang192 "
+" c_Lang193 "
+" c_Lang194 "
+" c_Lang195 "
+" c_Lang196 "
+" c_Lang197 "
+" c_Lang198 "
+" c_Lang199 "
+" c_Lang200 "
+" c_Lang201 "
+" c_Lang202 "
+" c_Lang203 "
+" c_Lang204 "
+)"
+
 Gui, 21:+owner1 -MinimizeBox +E0x00000400 +HwndCmdWin +Delimiter$
 Gui, 1:+Disabled
 Gui, 21:Add, Tab2, W450 H0 vTabControl AltSubmit, CmdTab1$CmdTab2$CmdTab3
 ; Statements
 Gui, 21:Add, GroupBox, Section xm ym W450 H240
-Gui, 21:Add, DDL, ys+15 xs+10 W190 vStatement gStatement AltSubmit,
-(Join$
-%c_Lang190%$
-%c_Lang191%
-%c_Lang192%
-%c_Lang193%
-%c_Lang194%
-%c_Lang195%
-%c_Lang196%
-%c_Lang197%
-%c_Lang198%
-%c_Lang199%
-%c_Lang200%
-%c_Lang201%
-%c_Lang202%
-%c_Lang203%
-%c_Lang204%
-)
+Gui, 21:Add, DDL, ys+15 xs+10 W190 vStatement gStatement AltSubmit, %Statement%
 Gui, 21:Add, Text, yp x+5 h25 0x11
 Gui, 21:Add, DDL, yp x+0 W105 vIfMsgB AltSubmit Disabled, %c_Lang168%$$%c_Lang169%$%c_Lang170%$%c_Lang171%$%c_Lang172%$%c_Lang173%$%c_Lang174%$%c_Lang175%$%c_Lang176%$%c_Lang177%
 Gui, 21:Add, Text, yp x+5 h25 0x11
@@ -8228,7 +8249,23 @@ If (A_ThisLabel = "IfSt")
 	GuiTitle := c_Lang009
 	If (s_Caller = "Find")
 	{
-		GuiControl, 21:ChooseString, Statement, %GotoRes1%
+		If (InStr(IfCmd, GotoRes1))
+		{
+			Loop, Parse, IfCmd, `n
+			{
+				cIf := RTrim(c_If%A_Index%, " ,=0")
+				If (GotoRes1 = cIf)
+				{
+					GuiControl, 21:Choose, Statement, %A_Index%
+					break
+				}
+			}
+		}
+		Else
+		{
+			GotoRes1 := If_Replace[GotoRes1]
+			GuiControl, 21:ChooseString, Statement, %GotoRes1%
+		}
 		GoSub, Statement
 	}
 	Else
@@ -9682,8 +9719,11 @@ If (A_ThisLabel = "ComInt")
 {
 	GuiControl, 24:Choose, TabControl, 2
 	GuiControl, 24:+Default, ComOK
-	If (s_Caller = "Find")
+	If ((s_Caller = "Find") && (InStr(CLSList, GotoRes1)))
+	{
+		GuiControl, 24:, CreateComObj, 1
 		GuiControl, 24:ChooseString, ComCLSID, %GotoRes1%
+	}
 	Gosub, CreateComObj
 	GuiControl, 24:, LoadWait, 0
 	GuiTitle := c_Lang013
@@ -10452,7 +10492,7 @@ If (TabControl = 2)
 		RowNumber := 1
 		Loop, % ListCount%A_List%
 		{
-			LV_GetText(RowType, LV_GetNext(), 6)
+			LV_GetText(RowType, RowNumber, 6)
 			If (RowType = cType47)
 				break
 			RowNumber++
@@ -11691,7 +11731,7 @@ GoToFind:
 Gui, Submit, NoHide
 If (FindList = "")
 	return
-FoundResults := Find_Command(FindList)
+FoundResults := Find_Command(FindList, true)
 If (FoundResults.Length() = 1)
 {
 	GotoRes1 := FoundResults[1].Cmd, GotoRes2 := FoundResults[1].Path
@@ -11747,6 +11787,7 @@ CopyMenuLabels[1] := "Macro1"
 Menu, CopyTo, Add, % CopyMenuLabels[1], CopyList, Radio
 Menu, CopyTo, Check, % CopyMenuLabels[1]
 Gosub, ClearTimers
+sciPrev.SetKeywords(0x6, SyHi_UserDef), sciPrevF.SetKeywords(0x6, SyHi_UserDef), UserDefFunctions := SyHi_UserDef " "
 return
 
 SelectAll:
@@ -14208,6 +14249,16 @@ Loop, % LV_GetCount()
 ,	LV_Modify(A_Index, "Col2", Action)
 	If (Type = "")
 		break
+	If (Type = cType47)
+	{
+		If (!InStr(UserDefFunctions, " " Details " "))
+		{
+			StringLower, UserDefFunc, Details
+			UserDefFunctions .= UserDefFunc " "
+		,	sciPrev.SetKeywords(0x6, UserDefFunctions)
+		,	sciPrevF.SetKeywords(0x6, UserDefFunctions)
+		}
+	}
 	If (ShowLoopIfMark = 1)
 	{
 		OnMessage(WM_NOTIFY, "LV_ColorsMessage")
@@ -15279,14 +15330,14 @@ TB_Edit(tbCommand, "Mouse", "", "", w_Lang051), TB_Edit(tbCommand, "Text", "", "
 , TB_Edit(tbCommand, "Window", "", "", w_Lang058), TB_Edit(tbCommand, "Image", "", "", w_Lang059), TB_Edit(tbCommand, "Run", "", "", w_Lang060)
 , TB_Edit(tbCommand, "ComLoop", "", "", w_Lang061), TB_Edit(tbCommand, "ComGoto", "", "", w_Lang062), TB_Edit(tbCommand, "TimedLabel", "", "", w_Lang063)
 , TB_Edit(tbCommand, "IfSt", "", "", w_Lang064), TB_Edit(tbCommand, "AsVar", "", "", w_Lang065), TB_Edit(tbCommand, "AsFunc", "", "", w_Lang066)
-, TB_Edit(tbCommand, "Email", "", "", w_Lang069), TB_Edit(tbCommand, "DownloadFiles", "", "", w_Lang109), TB_Edit(tbCommand, "Zipfiles", "", "", w_Lang110)
-, TB_Edit(tbCommand, "IECom", "", "", w_Lang067), TB_Edit(tbCommand, "ComInt", "", "", w_Lang068), TB_Edit(tbCommand, "SendMsg", "", "", w_Lang070)
+, TB_Edit(tbCommand, "Email", "", "", w_Lang067), TB_Edit(tbCommand, "DownloadFiles", "", "", w_Lang068), TB_Edit(tbCommand, "Zipfiles", "", "", w_Lang069)
+, TB_Edit(tbCommand, "IECom", "", "", w_Lang070), TB_Edit(tbCommand, "ComInt", "", "", w_Lang071), TB_Edit(tbCommand, "SendMsg", "", "", w_Lang072)
 , TB_Edit(tbCommand, "CmdFind", "", "", w_Lang092)
 ; Settings
 TB_Edit(tbSettings, "HideMainWin", "", "", w_Lang013), TB_Edit(tbSettings, "OnScCtrl", "", "", w_Lang009)
 , TB_Edit(tbSettings, "Capt", "", "", w_Lang012), TB_Edit(tbSettings, "CheckHkOn", "", "", w_Lang014)
 , TB_Edit(tbSettings, "OnFinish", "", "", w_Lang020) , TB_Edit(tbSettings, "SetWin", "", "", t_Lang009)
-, TB_Edit(tbSettings, "WinKey", "", "", w_Lang071), TB_Edit(tbSettings, "SetJoyButton", "", "", w_Lang072)
+, TB_Edit(tbSettings, "WinKey", "", "", w_Lang109), TB_Edit(tbSettings, "SetJoyButton", "", "", w_Lang110)
 ; Edit
 TB_Edit(tbEdit, "EditButton", "", "", w_Lang093), TB_Edit(tbEdit, "CutRows", "", "", w_Lang081), TB_Edit(tbEdit, "CopyRows", "", "", w_Lang082), TB_Edit(tbEdit, "PasteRows", "", "", w_Lang083), TB_Edit(tbEdit, "Remove", "", "", w_Lang084)
 , TB_Edit(tbEdit, "Duplicate", "", "", w_Lang080), TB_Edit(tbEdit, "SelectMenu", "", "", t_Lang139), TB_Edit(tbEdit, "CopyTo", "", "", w_Lang087) 
@@ -15409,67 +15460,107 @@ Loop, Parse, COM_CLSID_Index, `n
 	Loop, Parse, Command, /, %A_Space%
 		Com_Tips[A_LoopField] := TipArray[2], Tips_List .= A_LoopField "|"
 }
+Sort, Tips_List, UD|
 TipArray := ""
 return
 
 ;##### Command Search: #####
 SetFindCmd:
 Type_Keywords := "
-(Join`,
-" cType4 "
-" cType5 "
-" cType6 "
-" cType7 "
-" cType15 "
-" cType16 "
-" cType17 "
-" cType18 "
-" cType19 "
-" cType20 "
-" cType21 "
-" cType29 "
-" cType30 "
-" cType35 "
-" cType36 "
-" cType37 "
-" cType38 "
-" cType39 "
-" cType40 "
-" cType41 "
-" cType43 "
-" cType44 "
-" cType45 "
-" cType46 "
+(C Join,
+" cType4 "    ; ControlClick
+" cType5 "    ; Sleep
+" cType6 "    ; MsgBox
+" cType7 "    ; Loop
+" cType15 "   ; PixelSearch
+" cType16 "   ; ImageSearch
+" cType17 "   ; If_Statement
+Else
+" cType18 "   ; SendMessage
+" cType19 "   ; PostMessage
+" cType20 "   ; KeyWait
+" cType21 "   ; Variable
+" cType29 "   ; Break
+" cType30 "   ; Continue
+" cType35 "   ; Label
+" cType36 "   ; Goto
+" cType37 "   ; Gosub
+" cType38 "   ; LoopRead
+" cType39 "   ; LoopParse
+" cType40 "   ; LoopFilePattern
+" cType41 "   ; LoopRegistry
+Loop (files & folders)
+Loop (normal)
+Loop (parse a string)
+Loop (read file contents)
+Loop (registry)
+Until
+" cType43 "   ; Expression
+" cType44 "   ; Function
+" cType45 "   ; For
+" cType46 "   ; Method
+" cType47 "   ; UserFunction
+" cType48 "   ; FuncParameter
+Parameter
+" cType49 "   ; FuncReturn
+" cType50 "   ; SetTimer
+" cType51 "   ; While
+" cType52 "   ; SendEmail
+CDO
+" cType53 "   ; DownloadFiles
+WinHttpDownloadToFile
+" cType54 "   ; Zip
+" cType55 "   ; Unzip
 InternetExplorer
-COMInterface
+" cType34 "   ; COMInterface
 )"
 ,	Types_Path := "
-(
-" w_Lang051 "
-" w_Lang055 "
-" w_Lang056 "
-" w_Lang061 "
-" w_Lang059 "
-" w_Lang059 "
-" w_Lang064 "
-" w_Lang070 "
-" w_Lang070 "
-" w_Lang057 "
-" w_Lang065 "
-" w_Lang061 "
-" w_Lang061 "
-" w_Lang063 "
-" w_Lang062 "
-" w_Lang062 "
-" w_Lang061 "
-" w_Lang061 "
-" w_Lang061 "
-" w_Lang061 "
-" w_Lang069 "
-" w_Lang069 "
-" w_Lang066 "
-" w_Lang067 "
-" w_Lang068 "
+(C
+" w_Lang051 " ; Mouse (F2)
+" w_Lang055 " ; Pause (F5)
+" w_Lang056 " ; Message Box (Shift+F5)
+" w_Lang061 " ; Loop (F9)
+" w_Lang059 " ; Image / Pixel Search (F7)
+" w_Lang059 " ; Image / Pixel Search (F7)
+" w_Lang064 " ; If Statements (F10)
+" w_Lang064 " ; If Statements (F10)
+" w_Lang072 " ; Windows Messages (Ctrl+F12)
+" w_Lang072 " ; Windows Messages (Ctrl+F12)
+" w_Lang057 " ; Key Wait (Ctrl+F5) 
+" w_Lang065 " ; Variables / Arrays (Shift+F10)
+" w_Lang061 " ; Loop (F9)
+" w_Lang061 " ; Loop (F9)
+" w_Lang062 " ; Go To / Label (Shift+F9)
+" w_Lang062 " ; Go To / Label (Shift+F9)
+" w_Lang062 " ; Go To / Label (Shift+F9)
+" w_Lang061 " ; Loop (F9)
+" w_Lang061 " ; Loop (F9)
+" w_Lang061 " ; Loop (F9)
+" w_Lang061 " ; Loop (F9)
+" w_Lang061 " ; Loop (F9)
+" w_Lang061 " ; Loop (F9)
+" w_Lang061 " ; Loop (F9)
+" w_Lang061 " ; Loop (F9)
+" w_Lang061 " ; Loop (F9)
+" w_Lang061 " ; Loop (F9)
+" w_Lang071 " ; Expression / COM Interface (Shift+F12)
+" w_Lang066 " ; Functions / Array Methods (Ctrl+F10)
+" w_Lang061 " ; Loop (F9)
+" w_Lang066 " ; Functions / Array Methods (Ctrl+F10)
+" w_Lang104 " ; Create Function (Ctrl+Shift+U)
+" w_Lang105 " ; Add Parameter (Ctrl+Shift+P)
+" w_Lang105 " ; Add Parameter (Ctrl+Shift+P)
+" w_Lang106 " ; Add Return (Ctrl+Shift+N)
+" w_Lang063 " ; Set Timer (Ctrl+F9)
+" w_Lang061 " ; Loop (F9)
+" w_Lang067 " ; Send Email (F11)
+" w_Lang067 " ; Send Email (F11)
+" w_Lang068 " ; Download files (Shift+F11)
+" w_Lang068 " ; Download files (Shift+F11)
+" w_Lang069 " ; Zip / Unzip files (Ctrl+F11)
+" w_Lang069 " ; Zip / Unzip files (Ctrl+F11)
+" w_Lang070 " ; Internet Explorer (F12)
+" w_Lang071 " ; Expression / COM Interface (Shift+F12)
 )"
 ,	Types_Goto := "
 (
@@ -15480,20 +15571,42 @@ ComLoop
 Image
 Image
 IfSt
+IfSt
 SendMsg
 SendMsg
 KeyWait
 AsVar
 ComLoop
 ComLoop
-TimedLabel
 ComGoto
 ComGoto
+ComGoto
 ComLoop
 ComLoop
 ComLoop
+ComLoop
+ComLoop
+ComLoop
+ComLoop
+ComLoop
+ComLoop
+ComLoop
+ComInt
+AsFunc
 ComLoop
 AsFunc
+UserFunction
+FuncParameter
+FuncParameter
+FuncReturn
+TimedLabel
+ComLoop
+Email
+Email
+DownloadFiles
+DownloadFiles
+ZipFiles
+ZipFiles
 IECom
 ComInt
 )"
@@ -15503,7 +15616,7 @@ Loop, Parse, Types_Goto, `n
 	Type%A_Index%_Goto := A_LoopField
 
 Text_Keywords := "
-(Join`,
+(Join,
 " cType1 "
 " cType2 "
 " cType8 "
@@ -15515,7 +15628,7 @@ Text_Keywords := "
 ,	Text_Path := w_Lang052, Text_Goto := "Text"
 
 Mouse_Keywords := "
-(Join`,
+(Join,
 )"
 While (Action%A_Index%)
 	Mouse_Keywords .= Action%A_Index% ","
@@ -15534,14 +15647,41 @@ Win_Keywords := RegExReplace(WinCmdList, "\|", ",") ","
 Misc_Keywords := RegExReplace(FileCmdList, "\|", ",")
 ,	Misc_Path := w_Lang060, Misc_Goto := "Run"
 
-If_Keywords := RegExReplace(IfList, "\$", ",")
+If_Keywords := "
+(Join,
+If
+If (expression)
+If A_Index
+If Clipboard
+If ErrorLevel
+If var [not] between
+If var [not] in
+If var [not] contains MatchList
+If var is [not] type
+IfEqual
+IfNotEqual
+IfExist
+IfNotExist
+IfGreater
+IfGreaterOrEqual
+IfInString
+IfNotInString
+IfLess
+IfLessOrEqual
+IfMsgBox
+IfWinActive
+IfWinNotActive
+IfWinExist
+IfWinNotExist
+)"
+If_Keywords .= "," RegExReplace(IfList, "\$", ",")
 ,	If_Path := w_Lang064, If_Goto := "IfSt"
 
 IE_Keywords := RegExReplace(IECmdList, "\|", ",")
-,	IE_Path := w_Lang067, IE_Goto := "IECom"
+,	IE_Path := w_Lang070, IE_Goto := "IECom"
 
 Com_Keywords := RegExReplace(CLSList, "\|", ",")
-,	Com_Path := w_Lang068, Com_Goto := "ComInt"
+,	Com_Path := w_Lang071, Com_Goto := "ComInt"
 
 Func_Keywords := RegExReplace(BuiltinFuncList, "\$", ",")
 ,	Func_Path := w_Lang066, Func_Goto := "AsFunc"
@@ -15552,6 +15692,31 @@ Meth_Keywords := RegExReplace(ArrayMethodsList, "\$", ",")
 Loop, Parse, KeywordsList, |
 	Loop, Parse, %A_LoopField%_Keywords, `,
 		Try %A_LoopField%_Desc := SBShowTip(A_LoopField)
+
+If_Replace := { "If": If14
+			,	"If (expression)": If15
+			,	"If A_Index": If8
+			,	"If Clipboard": If7
+			,	"If ErrorLevel": If9
+			,	"If var [not] between": If14
+			,	"If var [not] in": If14
+			,	"If var [not] contains MatchList": If14
+			,	"If var is [not] type": If14
+			,	"IfEqual": If14
+			,	"IfNotEqual": If14
+			,	"IfExist": If5
+			,	"IfNotExist": If6
+			,	"IfGreater": If14
+			,	"IfGreaterOrEqual": If14
+			,	"IfInString": If11
+			,	"IfNotInString": If12
+			,	"IfLess": If14
+			,	"IfLessOrEqual": If14
+			,	"IfMsgBox": If13
+			,	"IfWinActive": If1
+			,	"IfWinNotActive": If2
+			,	"IfWinExist": If3
+			,	"IfWinNotExist": If4}
 return
 
 #Include <Hotkeys>

@@ -244,17 +244,17 @@
 	w_Lang059 =	Afbeelding / Pixel Zoeken (F7)
 	w_Lang060 =	Run / Bestand / String / Misc. (F8)
 	w_Lang061 =	Loop (F9)
-	w_Lang062 =	Ga naar (Shift+F9)
-	w_Lang063 =	Label (Ctrl+F9)
+	w_Lang062 =	Ga Naar / Label (Shift + F9)
+	w_Lang063 =	Set Timer (Ctrl + F9)
 	w_Lang064 =	Als Verklaringen (F10)
 	w_Lang065 =	Variabelen / Scala (Shift+F10)
 	w_Lang066 =	Functies / Scala methoden (Ctrl+F10)
-	w_Lang067 =	Internet Explorer (F12)
-	w_Lang068 =	Uitdrukking / COM-interface (Shift+F12)
-	w_Lang069 =	E-mail verzenden (F11)
-	w_Lang070 =	Windows Messages (Ctrl+F12)
-	w_Lang071 =	Voeg de Windows-toets op "Play" sneltoets
-	w_Lang072 =	Gebruik een joystick knop als sneltoets
+	w_Lang067 =	E-mail verzenden (F11)
+	w_Lang068 =	Bestanden downloaden (Shift+F11)
+	w_Lang069 =	Zip / Unzip bestanden (Ctrl+F11)
+	w_Lang070 =	Internet Explorer (F12)
+	w_Lang071 =	Uitdrukking / COM-interface (Shift+F12)
+	w_Lang072 =	Windows Messages (Ctrl+F12)
 	w_Lang073 =	Voeg Macro (Ctrl+T)
 	w_Lang074 =	Sluiten Macro (Ctrl+W)
 	w_Lang075 =	Dubbele Macro (Ctrl+Shift+D)
@@ -291,8 +291,8 @@
 	w_Lang106 =	Voeg Return (Ctrl+Shift+N)
 	w_Lang107 =	Omzetten Macro Aan (Ctrl+Shift+C) Functie
 	w_Lang108 =	Commentaar uit ongecontroleerd rijen
-	w_Lang109 =	Bestanden downloaden (Shift+F11)
-	w_Lang110 =	Zip / Unzip bestanden (Ctrl+F11)
+	w_Lang109 =	Voeg de Windows-toets op "Play" sneltoets
+	w_Lang110 =	Gebruik een joystick knop als sneltoets
 	w_Lang111 =	Zoeken... (Druk op Enter om te gaan)
 		
 ; 15. Command Windows		
@@ -759,6 +759,7 @@
 	t_Lang204 =	Detecteren Verborgen Tekst
 	t_Lang205 =	Titelgelijke Mode
 	t_Lang206 =	Titelgelijke Snelheid
+	t_Lang207 =	Cliënt
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Open
@@ -939,10 +940,14 @@
 	ApplyL_TT =	Invoegen van Box (Insert)
 	ApplyT_TT =	Van toepassing zijn
 	AutoKey_TT =	Sneltoets om Macro te spelen
+	Client_TT =	Coördinaten zijn ten opzichte van het actieve venster client gebied, dat de titelbalk, menu uitsluit (als het een standaard) en grenzen.
 	Clip_TT =	Tijdelijk gebruik van het klembord te sturen van de tekst.
 		Als de handeling is afgerond, het script
 		herstelt de oorspronkelijke inhoud van het klembord.
 		(Laat tekst leeg om de huidige inhoud plakken)
+	CM_TT =	Screen: Coördinaten zijn ten opzichte van het bureaublad (hele scherm).
+		Window: Coördinaten zijn ten opzichte van het actieve venster.
+		Client: Coördinaten zijn ten opzichte van het actieve venster client gebied, dat de titelbalk, menu uitsluit (als het een standaard) en grenzen.
 	CmdFilter_TT =	Filteren op soort
 	CmdSort_TT =	Alfabetisch sorteren
 	ColorPick_TT =	Krijgen pixel op het scherm
@@ -957,7 +962,9 @@
 		de inhoud van het klembord).
 	Ex_AF_TT =	Slaat de zachte methode voor het activeren van een venster
 		en gaat rechtstreeks naar de krachtige methode.
-	Ex_DH_TT =	Bepaalt of onzichtbare ramen zijn 'gezien' door het script.
+	Ex_DH_TT =	Bepaalt of onzichtbare vensters worden door het script 'gezien'.
+	Ex_DT_TT =	Bepaalt of onzichtbare tekst in een venster wordt "gezien" voor het doel van het vinden van het venster. Dit heeft invloed op commando's zoals IfWinExist en WinActivate.
+	Ex_CM_TT =	Stelt coördineren-modus voor de muis commando's ten opzichte van zowel het actieve venster of het scherm te zijn.
 	Ex_EdScript_TT =	Open in externe editor
 	Ex_EdVars_TT =	Selecteer globale variabelen te exporteren.
 	Ex_ExecScript_TT =	Script
@@ -989,6 +996,7 @@
 	Ex_SW_TT =	Hiermee stelt u de vertraging die zal plaatsvinden na
 		elke windowing commando, zoals WinActivate.
 	Ex_UV_TT =	Exporteren globale variabelen.
+	Ex_WN_TT =	Schakelt waarschuwingen voor specifieke omstandigheden die een fout kunnen wijzen, zoals een typo of ontbrekende "global" verklaring.
 	ExpList_TT =	Dubbelklik op om te bewerken
 	ExprLink2_TT =	- NIET BIJGAAND VARIABELEN IN PROCENTTEKENS HIER.
 		- De meeste van de AHK uitdrukkingen worden ondersteund.
@@ -1193,15 +1201,11 @@
 	ControlSetText	Verandert de tekst van een controle.
 	CoordMode	Sets coördineren modus voor verschillende opdrachten te zijn ten opzichte van zowel het actieve venster of het scherm .
 	Cos	Geeft de trigonometrische cosinus van nummer .
-	Critical	Voorkomt dat de huidige thread van wordt onderbroken door andere threads .
 	Delete	Verwijdert key-waarde paren van een object.
-	DetectHiddenText	Bepaalt of onzichtbare tekst in een venster wordt " gezien" voor het doel van het vinden van het venster . Dit heeft invloed op commando's zoals IfWinExist en WinActivate .
-	DetectHiddenWindows	Bepaalt of onzichtbare vensters worden 'gezien' door het script .
 	DllCall	Roept een functie in een DLL , zoals een standaard Windows API functie .
 	Drive	Werpt / trekt de lade in een cd-of dvd-station , of zet het volume label van een schijf .
 	DriveGet	Haalt verschillende soorten informatie over de schijf van de computer (s) .
 	DriveSpaceFree	Haalt de vrije schijfruimte van een station , in megabytes .
-	Edit	Opent het huidige script te bewerken in de bijbehorende editor .
 	Else	Geeft het commando (s) uit te voeren als een IF - statement evalueert naar FALSE . Wanneer meer dan een commando aanwezig is , omsluiten ze in een blok (beugels) .
 	EnvAdd	Stelt een variabele aan de som van zelf plus de gegeven waarde (kan ook optellen of aftrekken tijd uit een datum - tijdwaarde) . Synoniem : Var+= waarde .
 	EnvDiv	Zet een variabele om zichzelf gedeeld door de gegeven waarde . Synoniem : Var / = waarde .
@@ -1210,7 +1214,6 @@
 	EnvSet	Schrijft een waarde aan een variabele die in het milieu .
 	EnvSub	Zet een variabele om zichzelf min de opgegeven waarde (kan ook datum-tijd waarden te vergelijken) . Synoniem : Var - = waarde .
 	EnvUpdate	Meldt het besturingssysteem en alle toepassingen die omgeving variabele (s) zijn veranderd .
-	Exit	Verlaat de huidige thread of (als het script is niet persistent en bevat geen hotkeys) het hele script .
 	ExitApp	Beëindigt het script onvoorwaardelijk .
 	Exp	Geeft e (dat is ongeveer 2,71828182845905) verheven tot de macht n .
 	Expression	Voert één of meer malen op een aantal variabelen, letterlijke strings en / of letterlijke getallen.
@@ -1220,13 +1223,11 @@
 	FileCreateDir	Maakt een map .
 	FileCreateShortcut	Creëert een snelkoppeling (. Lnk -bestand) .
 	FileDelete	Verwijdert een of meer bestanden .
-	FileEncoding	Stelt de standaard codering voor FileRead , FileReadLine , Loop Read , FileAppend en FileOpen .
 	FileGetAttrib	Rapporten of een bestand of map is alleen-lezen , verborgen , enz.
 	FileGetShortcut	Haalt informatie over een snelkoppeling (. Lnk -bestand) , zoals het doelbestand .
 	FileGetSize	Haalt de grootte van een bestand .
 	FileGetTime	Haalt de datetime stempel van een bestand of map .
 	FileGetVersion	Haalt de versie van een bestand .
-	FileInstall	Omvat het opgegeven bestand in de gecompileerde versie van het script .
 	FileMove	Verplaatst of hernoemt een of meer bestanden .
 	FileMoveDir	Verplaatst een folder samen met alle submappen en bestanden . Het kan ook een map hernoemen .
 	FileOpen	Biedt objectgeoriënteerde file I / O.
@@ -1253,18 +1254,18 @@
 	GroupClose	Sluit het actieve venster als het alleen werd geactiveerd door GroupActivate of GroupDeactivate . Het activeert vervolgens het volgende venster in de reeks . Het kan ook alle ramen te sluiten in een groep .
 	GroupDeactivate	Vergelijkbaar met GroupActivate behalve activeert het volgende venster niet in de groep .
 	HasKey	Geeft true als Key wordt geassocieerd met een waarde.
-	if	Specificeert het commando (s) uit te voeren als een vergelijking van een variabele een waarde evalutes WAAR . Wanneer meer dan een commando aanwezig is , omsluiten ze in een blok (beugels) .
-	if (expression)	Geeft het commando (s) uit te voeren als een expressie evalueert tot TRUE .
+	If	Specificeert het commando (s) uit te voeren als een vergelijking van een variabele een waarde evalutes WAAR . Wanneer meer dan een commando aanwezig is , omsluiten ze in een blok (beugels) .
+	If (expression)	Geeft het commando (s) uit te voeren als een expressie evalueert tot TRUE .
 	If A_Index	Gecontroleerd of de huidige lus iteratie matchs een opgegeven een nummer.
 	If Clipboard	Controleert of de tekst in het klembord is matchs een opgegeven tekenreeks .
 	If ErrorLevel	Controleert of een bepaald beeld of pixel werd gevonden in het scherm .
 	If var [not] between	Controleert of de inhoud van een variabele zijn numeriek of alfabetisch tussen twee waarden (inclusief) .
-	If var [not] in/contains MatchList 	Controleert of de inhoud van een variabele overeenkomt met een van de items in een lijst .
+	If var [not] in / If var [not] contains MatchList	Controleert of de inhoud van een variabele overeenkomt met een van de items in een lijst .
 	If var is [not] type	Controleert of de inhoud van een variabele zijn numeriek , hoofdletters , enz.
 	IfEqual / IfNotEqual	Vergelijkt een variabele om een waarde voor de gelijkheid . Synoniem : indien Var = Waarde | indien Var < > Value .
 	IfExist / IfNotExist / FileExist	Controles voor het bestaan van een bestand of map .
 	IfGreater / IfGreaterOrEqual	Vergelijkt een variabele een waarde . Synoniem : indien Var > Waarde | Als Var > = waarde .
-	IfInString / IfNotInString / InStr	Controleert of een variabele bevat de opgegeven tekenreeks .
+	IfInString / IfNotInString	Controleert of een variabele bevat de opgegeven tekenreeks .
 	IfLess / IfLessOrEqual	Vergelijkt een variabele een waarde . Synoniem : indien Var < Waarde | indien Var < = Waarde .
 	IfMsgBox	Controles die knop werd door de gebruiker geduwd tijdens de meest recente MsgBox opdracht .
 	IfWinActive / IfWinNotActive	Controleert of het opgegeven venster bestaat en is momenteel actief (vooral) .
@@ -1277,9 +1278,8 @@
 	InputBox	Geeft een invoerveld aan de gebruiker vragen om een string in te voeren .
 	InsertAt	Voegt een of meer waarden op een gegeven positie in een lineaire array.
 	InStr	Zoekt een bepaalde optreden van een string van links of rechts .
-	KeyHistory	Geeft script info en een geschiedenis van de meest recente toetsaanslagen en muisklikken.
 	KeyWait	Wacht op een toets of muis / joystick knop worden vrijgegeven of ingedrukt.
-	Labels	Een label identificeert een regel code, en kan worden gebruikt als een doelwit Goto of een subroutine vormen.
+	Label	Een label identificeert een regel code, en kan worden gebruikt als een doelwit Goto of een subroutine vormen.
 	Length	Geeft de lengte van een lineaire array beginnend op positie 1.
 	ListVars	Geeft het script variabelen: hun namen en de huidige inhoud.
 	Ln	Geeft de natuurlijke logaritme (basis e) van Number.
@@ -1290,18 +1290,13 @@
 	Loop (read file contents)	Haalt de lijnen in een tekstbestand, een voor een (beter presteert dan FileReadLine).
 	Loop (registry)	Haalt de inhoud van de opgegeven registersubsleutel, een item tegelijk.
 	MaxIndex	Geeft de hoogste integer sleutel.
-	Menu	Creëert, verwijdert, wijzigt en toont menu's en menu-items. Verandert het pictogram in het systeemvak en de tooltip. Bepaalt of het hoofdvenster van een gecompileerd script kan worden geopend.
 	MinIndex	Geeft het laagste getal sleutel.
 	Mod	Modulo. Geeft de rest wanneer dividend wordt gedeeld door deler.
-	MouseClickDrag	Klikken en houdt de opgegeven muisknop, beweegt de muis naar de bestemming coördinaten, geeft vervolgens de knop.
 	MouseGetPos	Haalt de huidige positie van de muiscursor, en eventueel welk venster en controle wordt zweefde over.
-	MouseMove	Beweegt de muiscursor.
 	MsgBox	Toont de opgegeven tekst in een klein venster met een of meer knoppen (zoals ja en nee).
 	NumGet	Retourneert het binaire getal opgeslagen bij het opgegeven adres+offset.
 	NumPut	Winkels Nummer in binair formaat op het opgegeven adres+offset en het adres terug naar de rechterkant van de punt enkel geschreven.
 	Object	Maakt een scripts associatieve array.
-	OnExit	Hiermee geeft u een subroutine om automatisch wanneer het script eindigt draaien.
-	OnMessage	Geeft een functie om automatisch te bellen wanneer het script ontvangt de opgegeven boodschap.
 	Ord	Geeft de ordinale waarde (numeriek karakter code) van het eerste teken in string.
 	OutputDebug	Stuurt een string naar de debugger (indien aanwezig) voor weergave.
 	Parameter	Dodaje parametr do funkcji.
@@ -1317,7 +1312,6 @@
 	RegDelete	Verwijdert een subsleutel of waarde uit het register.
 	RegExMatch	Bepaalt of een string bevat een patroon (reguliere expressie).
 	RegExReplace	Vervangt voorkomens van een patroon (reguliere expressie) in een string.
-	RegisterCallback	Maakt een machine-code-adres dat als ze worden opgeroepen, leidt de oproep naar een functie in het script.
 	RegRead	Leest een waarde uit het register.
 	RegWrite	Schrijft een waarde in het register.
 	RemoveAt	Verwijdert items uit de gegeven positie in een lineaire array.
@@ -1326,16 +1320,11 @@
 	Run	Loopt een extern programma.
 	RunAs	Hiermee geeft u een set van gebruikersgegevens te gebruiken voor alle volgende vormen van gebruik van Run en RunWait. Vereist Windows 2000/XP of hoger.
 	RunWait	Loopt een extern programma en wacht tot het klaar is.
-	Screenshot	Maakt een PNG screenshot van de een gespecificeerde gebied.
-	Send / SendRaw / SendInput / SendPlay	Stuurt gesimuleerde toetsaanslagen en muisklikken om het actieve venster.
+	Send / SendRaw	Stuurt gesimuleerde toetsaanslagen en muisklikken om het actieve venster.
 	SendLevel	Controles die kunstmatige toetsenbord en muis gebeurtenissen worden genegeerd door de sneltoetsen en hotstrings.
 	SendMessage	Stuurt een bericht naar een raam of controle en wacht op bevestiging.
-	SendMode	Maakt Stuur synoniem met SendInput of SendPlay plaats van de standaard (sendEvent). Ook maakt Klik en mousemove / Klik / sleep gebruik van de voorgeschreven methode.
 	SetCapslockState	Zet de toestand van de Capslock sleutel. Kan ook dwingen de sleutel aan of uit blijven.
-	SetEnv (Var = Value)	Wijst de opgegeven waarde toe aan een variabele.
-	SetFormat	Stelt het formaat van integers en floating point getallen gegenereerd door wiskundige bewerkingen.
 	SetKeyDelay	Stelt de vertraging die zal plaatsvinden na iedere toetsaanslag die door Send of ControlSend.
-	SetMouseDelay	Stelt de vertraging die zal plaatsvinden na elke muisbeweging of klik.
 	SetNumlockState	Zet de toestand van de Numlock-toets. Kan ook dwingen de sleutel aan of uit blijven.
 	SetRegView	Laat register commando's in een 32-bits script om toegang te krijgen tot de 64-bit register uitzicht en vice versa.
 	SetScrollLockState	Zet de toestand van de ScrollLock sleutel. Kan ook dwingen de sleutel aan of uit blijven.
@@ -1357,8 +1346,7 @@
 	Sqrt	Geeft de vierkantswortel van het nummer.
 	StatusBarGetText	Haalt de tekst uit een standaard statusbalk controle.
 	StatusBarWait	Wacht tot statusbalk van een venster bevat de opgegeven tekenreeks.
-	StringCaseSense	Bepaalt of tekenreeksvergelijkingen zijn hoofdlettergevoelig (standaard is "niet hoofdlettergevoelig").
-	StringGetPos / InStr	Haalt de positie van de opgegeven subtekenreeks binnen een string.
+	StringGetPos	Haalt de positie van de opgegeven subtekenreeks binnen een string.
 	StringLeft	Haalt een aantal tekens van de linkerzijde van een string.
 	StringLen / StrLen	Haalt de telling van het aantal karakters in een string.
 	StringLower	Zet een tekenreeks naar kleine letters.
@@ -1370,27 +1358,22 @@
 	StringTrimRight	Verwijdert een aantal personages uit de rechterzijde van een string.
 	StringUpper	Zet een tekenreeks om in hoofdletters.
 	StrPut / StrGet	Kopieert een string van of naar een geheugen adres, optioneel te converteren tussen codetabellen.
-	Suspend	Schakelt alle of geselecteerde sneltoetsen en hotstrings.
 	SysGet	Haalt schermresolutie, multi-monitor info, afmetingen van het systeem objecten, en andere systeemeigenschappen.
 	Tan	Geeft de trigonometrische tangens van nummer.
 	ToolTip	Maakt een always-on-top-venster ergens op het scherm.
 	Transform	Voert diverse wiskundige functies, bitwise operaties en taken zoals ASCII / Unicode conversie.
 	TrayTip	Creëert een ballon bericht venster in de buurt van de tray icon. Vereist Windows 2000/XP of hoger.
 	Trim / LTrim / RTrim	Versieringen bepaalde tekens vanaf het begin en / of einde van een string.
-	Try	Bewakers een of meer verklaringen (opdrachten of uitdrukkingen) tegen runtime fouten en uitzonderingen door de worp commando gegooid.
 	Until	Geldt als voorwaarde voor de voortzetting van een Loop-of Voor-loop.
 	UrlDownloadToFile	Downloadt een bestand van het internet.
 	UserFunction	Maakt een functie structuur.
-	VarSetCapacity	Vergroot houden capaciteit van een variabele of bevrijdt het geheugen. Normaal, dat is alleen voor de ongewone omstandigheden, zoals DllCall.
-	While-loop	Voert een serie opdrachten totdat de opgegeven expressie naar false evalueert.
+	While	Voert een serie opdrachten totdat de opgegeven expressie naar false evalueert.
 	WinActivate	Activeert het gespecificeerde venster (maakt het belangrijkste).
 	WinActivateBottom	Zelfde als WinActivate behalve dat het activeert de onderste (minst recent actieve) matching venster in plaats van de bovenste.
 	WinActive	Geeft de unieke ID (HWND) van het actieve venster of het overeenkomt met de opgegeven criteria.
 	WinClose	Sluit het opgegeven venster.
 	WinExist	Controleert of het opgegeven venster bestaat.
 	WinGet	Haalt het opgegeven venster de unieke ID, proces ID, proces naam, of een lijst van haar controles. Het kan ook een lijst van alle vensters die voldoen aan de opgegeven criteria halen.
-	WinGetActiveStats	Combineert de functies van WinGetActiveTitle en WinGetPos in een opdrachtregel.
-	WinGetActiveTitle	Haalt de titel van het actieve venster.
 	WinGetClass	Haalt class naam het opgegeven venster.
 	WinGetPos	Haalt de positie en grootte van het opgegeven venster.
 	WinGetText	Haalt de tekst uit het opgegeven venster.

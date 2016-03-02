@@ -244,17 +244,17 @@
 	w_Lang059 =	Kuva / Pixel Search (F7)
 	w_Lang060 =	Run / File / String / Misc. (F8)
 	w_Lang061 =	Loop (F9)
-	w_Lang062 =	Goto (Shift+F9)
-	w_Lang063 =	Label (Ctrl+F9)
+	w_Lang062 =	Mene / Etiketti (Shift + F9)
+	w_Lang063 =	Asettaa Ajastinta (Ctrl + F9)
 	w_Lang064 =	Jos lausunnot (F10)
 	w_Lang065 =	Muuttujat / Taulukot (Shift+F10)
 	w_Lang066 =	Funktiot / Array menetelmiä (Ctrl+F10)
-	w_Lang067 =	Internet Explorer (F12)
-	w_Lang068 =	Lauseke / COM-rajapinta (Shift+F12)
-	w_Lang069 =	Lähetä sähköposti (F11)
-	w_Lang070 =	Windows viestit (Ctrl+F12)
-	w_Lang071 =	Lisää Windows-näppäintä "Play" pikanäppäin
-	w_Lang072 =	Käytä ohjainta painiketta kuin pikanäppäin
+	w_Lang067 =	Lähetä sähköposti (F11)
+	w_Lang068 =	Lataa tiedostoja (Shift+F11)
+	w_Lang069 =	Zip / Pura tiedostot (Ctrl+F11)
+	w_Lang070 =	Internet Explorer (F12)
+	w_Lang071 =	Lauseke / COM-rajapinta (Shift+F12)
+	w_Lang072 =	Windows viestit (Ctrl+F12)
 	w_Lang073 =	Lisää Makro (Ctrl+T)
 	w_Lang074 =	Sulje Makro (Ctrl+W)
 	w_Lang075 =	Monista Makro (Ctrl+Shift+D)
@@ -291,8 +291,8 @@
 	w_Lang106 =	Lisää Paluulennot (Ctrl+Shift+N)
 	w_Lang107 =	Makron muunto Toimiakseen (Ctrl+Shift+C)
 	w_Lang108 =	Kommentoi pois valitsematta riviä
-	w_Lang109 =	Lataa tiedostoja (Shift+F11)
-	w_Lang110 =	Zip / Pura tiedostot (Ctrl+F11)
+	w_Lang109 =	Lisää Windows-näppäintä "Play" pikanäppäin
+	w_Lang110 =	Käytä ohjainta painiketta kuin pikanäppäin
 	w_Lang111 =	Etsi... (Paina Enter päästäksesi)
 		
 ; 15. Command Windows		
@@ -759,6 +759,7 @@
 	t_Lang204 =	Havaita Piilotekstiä
 	t_Lang205 =	Title Vastaavuustila
 	t_Lang206 =	Title Ottelu Nopeus
+	t_Lang207 =	Asiakas
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Avata
@@ -939,10 +940,14 @@
 	ApplyL_TT =	Insertin laatikko (Insert)
 	ApplyT_TT =	Käyttää
 	AutoKey_TT =	Pikanäppäin pelata Macro
+	Client_TT =	Koordinaatit ovat suhteessa aktiivisen ikkunan asiakas alue, joka sulkee ikkunan otsikkoriviä, valikko (jos se on vakio yksi) ja rajoja.
 	Clip_TT =	Tilapäisesti käyttää Leikepöytä lähettää tekstiä.
 		Kun toimenpide on valmis, käsikirjoitus
 		palauttaa alkuperäisen leikepöydän sisällön.
 		(Jätä Teksti tyhjä liittää nykyinen sisältö)
+	CM_TT =	Screen: Koordinaatit ovat suhteessa työpöydälle (koko näyttö).
+		Window: Koordinaatit ovat suhteessa aktiivisen ikkunan.
+		Client: Koordinaatit ovat suhteessa aktiivisen ikkunan asiakas alue, joka sulkee ikkunan otsikkoriviä, valikko (jos se on vakio yksi) ja rajoja.
 	CmdFilter_TT =	Suodattaa tyyppi
 	CmdSort_TT =	Lajittele aakkosjärjestyksessä
 	ColorPick_TT =	Saada pikselin näytöllä
@@ -957,7 +962,9 @@
 		leikepöydän sisällön).
 	Ex_AF_TT =	Ohittaa lempeä menetelmä aktivoimiseksi ikkunan
 		ja menee suoraan voimakkaan menetelmällä.
-	Ex_DH_TT =	Määrittelee näkymättömät ikkunat "nähnyt", jonka käsikirjoitus.
+	Ex_DH_TT =	Määrittää näkymätön ikkunoita "näkee" kirjoitus.
+	Ex_DT_TT =	Määrittää näkymätön tekstin ikkuna "nähdä", jonka tarkoituksena löytää ikkunan. Tämä vaikuttaa komentoja kuten IfWinExist ja WinActivate.
+	Ex_CM_TT =	Sarjaa koordinoi tila hiirikomennot olevan suhteellinen joko aktiivisen ikkunan tai näytön.
 	Ex_EdScript_TT =	Avaa ulkoisen editorin
 	Ex_EdVars_TT =	Valitse globaalien muuttujien viedään.
 	Ex_ExecScript_TT =	Suorita skripti
@@ -989,6 +996,7 @@
 	Ex_SW_TT =	Asettaa viive että tapahtuu jälkeen
 		Kunkin ikkunointi komennon, kuten WinActivate.
 	Ex_UV_TT =	Viedä globaalien muuttujien.
+	Ex_WN_TT =	Käyttöön tai poistaa käytöstä varoitukset erityiset edellytykset, jotka voivat ilmoittaa virheestä, kuten kirjoitusvirheen tai puuttuva "globaali" ilmoitusta.
 	ExpList_TT =	Kaksoisnapsauta muokata
 	ExprLink2_TT =	- ÄLÄ LIITTÄÄ MUUTTUJAT PROSENTTIA SIGNS TÄSTÄ.
 		- Useimmat AHK ilmaisuja tuetaan.
@@ -1193,15 +1201,11 @@
 	ControlSetText	Muuttaatekstinohjaus .
 	CoordMode	Lavastus koordinoida tilassa eri komennot ovat suhteessa jokoaktiivisen ikkunan tainäytön .
 	Cos	Palauttaatrigonometriset kosinin lukumäärä.
-	Critical	Estäänykyisen lanka on katkaistu muut ketjut .
 	Delete	Poistaa avainarvopareja objektista.
-	DetectHiddenText	Määrittää, näkymätön tekstiikkuna on " nähnyt" varten löytääikkuna . Tämä vaikuttaa komennot kuten IfWinExist ja WinActivate .
-	DetectHiddenWindows	Määrittää, näkymätön ikkunat " näkee"kirjoitus.
 	DllCall	Puheluttoiminnon sisälläDLL , kutenstandardi Windows API-funktiota .
 	Drive	Poistaa / vetäytyylokeroCD-tai DVD-asema tai vahvistetaanaseman levyn nimi .
 	DriveGet	Hakee erilaisia tietojatietokoneen asema (t) .
 	DriveSpaceFree	Hakeevapaata levytilaaajaa , megatavuina .
-	Edit	Avaanykyisen käsikirjoituksen muokkaaminenliittyvien toimittaja .
 	Else	Määrittääkomennon (t) suorittaa , josIF -lause on EPÄTOSI . Kun useampi kuin yksi komento on läsnä , kirjoita nelohko (olkaimet) .
 	EnvAdd	Asettaamuuttujansumma itse jaannetaan arvoa (voi myös lisätä tai vähentää aikaapäivämäärä - aika-arvon) . Synonyymi : Var+= arvo .
 	EnvDiv	Asettaamuuttujan itselleen jaettunaannettu arvo . Synonyymi : Var / = arvo .
@@ -1210,7 +1214,6 @@
 	EnvSet	Kirjoittaaarvon muuttujaan sisältyvätympäristöön .
 	EnvSub	Asettaamuuttujan itselleen miinusannettu arvo (voi myös verrata päivämäärä - aika-arvoja) . Synonyymi : Var - = arvo .
 	EnvUpdate	IlmoittaaOS ja kaikki käynnissä olevat sovellukset , jotka muuttujan (t) ovat muuttuneet .
-	Exit	Poistutaan lanka tai (jos käsikirjoitus ei ole pysyvää eikä sisällä pikanäppäimet)koko käsikirjoituksen .
 	ExitApp	Lopettaascript ehdoitta .
 	Exp	Palauttaa e (joka on noin +2,71828182845905) nostipotenssiin .
 	Expression	Harjoittaa yhtä tai useampaa operaatiota, kun muuttujien sarjaa, kirjaimellinen jouset, ja / tai kirjaimellinen numeroita.
@@ -1220,13 +1223,11 @@
 	FileCreateDir	Luo kansion .
 	FileCreateShortcut	Luo pikakuvakkeen (. Lnk) tiedosto .
 	FileDelete	Poistaa yhden tai useampia tiedostoja .
-	FileEncoding	Asettaaoletukseksi varten FileRead , FileReadLine , Loop Read, FileAppend ja FileOpen .
 	FileGetAttrib	Kertomuksen siitä, onkotiedosto tai kansio on vain luku- , piilotettu jne.
 	FileGetShortcut	Hakee tietoapikakuvakkeen (. LNK) tiedosto , kuten tavoitteensa tiedosto .
 	FileGetSize	Hakee tiedoston koon .
 	FileGetTime	Hakeepäivämäärä leimatiedoston tai kansion .
 	FileGetVersion	Hakeetiedoston version .
-	FileInstall	Sisältää määritetyn tiedoston sisällekäännetyn versionkäsikirjoituksen .
 	FileMove	Liikkuu tai nimeää yhden tai useampia tiedostoja .
 	FileMoveDir	Siirtääkansio sekä kaikki sen osa- kansiot ja tiedostot . Se voi myös nimetä kansion .
 	FileOpen	Tarjoaa olio- tiedoston I / O.
@@ -1253,18 +1254,18 @@
 	GroupClose	Sulkeeaktiivisen ikkunan , jos se vain aktivoituu GroupActivate tai GroupDeactivate . Se aktivoi sitten seuraavaan ikkunaan sarjassa . Se voi myös sulkea kaikki ikkunatryhmään .
 	GroupDeactivate	Samanlaisia GroupActivate paitsi aktivoiseuraava ikkuna kuulu ryhmään .
 	HasKey	Palauttaa true jos Key liittyy arvo.
-	if	Määrittääkomennon (t) suorittaa , josvertailumuuttujanarvo evalutes TOSI . Kun useampi kuin yksi komento on läsnä , kirjoita nelohko (olkaimet) .
-	if (expression)	Määrittääkomennon (t) suorittaa , joslauseke on TOSI .
+	If	Määrittääkomennon (t) suorittaa , josvertailumuuttujanarvo evalutes TOSI . Kun useampi kuin yksi komento on läsnä , kirjoita nelohko (olkaimet) .
+	If (expression)	Määrittääkomennon (t) suorittaa , joslauseke on TOSI .
 	If A_Index	Tarkastukset josvirtasilmukkaan iteraatio matchsmääritettynumero.
 	If Clipboard	Tarkastukset josleikepöydälle teksti on matchsmääritettyä merkkijonoa .
 	If ErrorLevel	Tarkistaa, onko tietyn kuvan tai pikseli havaittiin näytöllä .
 	If var [not] between	Tarkistaa, onkomuuttujan sisältöä ovat numeerisesti tai aakkosjärjestyksessä kahden arvon välillä (mukaan lukien) .
-	If var [not] in/contains MatchList 	Tarkistaa, onkomuuttujan sisältö vastaa yksiluettelon kohteita .
+	If var [not] in / If var [not] contains MatchList	Tarkistaa, onkomuuttujan sisältö vastaa yksiluettelon kohteita .
 	If var is [not] type	Tarkistaa, onkomuuttujan sisältöä ovat numeerisia , isoja, jne.
 	IfEqual / IfNotEqual	Vertaa muuttujanarvoa tasa-arvon . Synonyymi : jos Var = Arvo | jos Var < > Arvo .
 	IfExist / IfNotExist / FileExist	Tarkistaa, onko tiedoston tai kansion .
 	IfGreater / IfGreaterOrEqual	Vertaa muuttujanarvoa . Synonyymi : jos Var > Arvo | jos Var > = arvo .
-	IfInString / IfNotInString / InStr	Tarkistaa, onkomuuttuja sisältäätietyn merkkijonon .
+	IfInString / IfNotInString	Tarkistaa, onkomuuttuja sisältäätietyn merkkijonon .
 	IfLess / IfLessOrEqual	Vertaa muuttujanarvoa . Synonyymi : jos Var < Arvo | jos Var < = arvo .
 	IfMsgBox	Tarkastukset painiketta on käyttäjä painaa viimeisimmässä MsgBox -komento .
 	IfWinActive / IfWinNotActive	Tarkastukset josmääritelty ikkuna on olemassa ja toimii tällä hetkellä (ennen kaikkea) .
@@ -1277,9 +1278,8 @@
 	InputBox	Näyttääkirjoitusruutu pyytääkäyttäjää syöttämäänmerkkijono .
 	InsertAt	Lisää yhden tai useampia arvoja tietyllä asema lineaarista.
 	InStr	Hakeetietyn esiintyminenmerkkijonon , vasemmalta taioikealta .
-	KeyHistory	Näyttää script info ja historian viimeisimmän näppäimistön ja hiiren napsautuksella.
 	KeyWait	Odottaa näppäintä tai hiiren / joystick-painiketta vapautetaan tai painetaan alas.
-	Labels	Merkki osoittaa, rivi koodia, ja sitä voidaan käyttää Goto kohde tai muodostaa aliohjelmaan.
+	Label	Merkki osoittaa, rivi koodia, ja sitä voidaan käyttää Goto kohde tai muodostaa aliohjelmaan.
 	Length	Palauttaa pituus lineaarisen joka alkaa asemassa 1.
 	ListVars	Näyttää skriptin muuttujat: heidän nimensä ja nykyisen sisällön.
 	Ln	Palauttaa luvun luonnollisen logaritmin (base e) ja lukumäärä.
@@ -1290,18 +1290,13 @@
 	Loop (read file contents)	Hakee rivit tekstitiedosto, yksi kerrallaan (toimii paremmin kuin FileReadLine).
 	Loop (registry)	Hakee sisältö määritelty aliavaimen yhden kohteen kerrallaan.
 	MaxIndex	Palauttaa korkein kokonaisluvun avain.
-	Menu	Luo, poistaa, muuttaa ja näyttää valikot ja valikon. Muuttaa kuvaketta ja sen tooltip. Ohjaa, pääikkuna koottu script voidaan avata.
 	MinIndex	Palauttaa alin kokonaisluvun avain.
 	Mod	Modulo. Palauttaa jakojäännös, kun osinko jaetaan jakaja.
-	MouseClickDrag	Napsauttaa ja pitää määritetyn hiiren painike siirtää hiirtä määränpäähän koordinaatit, vapauttaa sitten painiketta.
 	MouseGetPos	Hakee nykyinen asema hiiren kursori, ja valinnaisesti joka ikkunasta ja valvonnan yhteydessä leijuu.
-	MouseMove	Siirtää hiiren kursori.
 	MsgBox	Näyttää määritetyn tekstin pienessä ikkunassa, joka sisältää yhden tai useampia painikkeita (kuten kyllä ja ei).
 	NumGet	Palauttaa binääriluku tallennettu määrättyyn osoitteeseen aikaeron.
 	NumPut	Kaupat määrä binäärimuodossa määrättyyn osoitteeseen aikaeron ja palauttaa osoitteen kohteen oikealla puolella juuri kirjoitettu.
 	Object	Luo koodattavissa assosiatiivisia array.
-	OnExit	Määrittää aliohjelman toimimaan automaattisesti kun käsikirjoitus poistuu.
-	OnMessage	Määrittää toiminnon soittaa automaattisesti, kun käsikirjoitus vastaanottaa tietyn viestin.
 	Ord	Palauttaa järjestysluku arvo (numeerinen merkki koodi) ensimmäisen merkin merkkijono.
 	OutputDebug	Lähettää merkkijonon debuggeri (mahdolliset) näyttö.
 	Parameter	Lisää parametrin funktio.
@@ -1317,7 +1312,6 @@
 	RegDelete	Poistaa aliavaimen tai arvon rekisteristä.
 	RegExMatch	Määrittää, onko merkkijono sisältää kuvio (säännöllinen lauseke).
 	RegExReplace	Korvaa esiintymiä kuvio (säännöllinen lauseke) sisällä merkkijono.
-	RegisterCallback	Luo kone-koodi osoite, että kun kutsutaan, ohjaa puhelun toiminnon script.
 	RegRead	Lukee arvo rekisteristä.
 	RegWrite	Kirjoittaa arvon rekisteriin.
 	RemoveAt	Poistaa kohteita annetaan asema lineaarista.
@@ -1326,16 +1320,11 @@
 	Run	Toimii ulkoinen ohjelma.
 	RunAs	Määrittelee joukon käyttäjän kirjautumistiedot myöhempiä käyttökertoja Run ja RunWait. Vaatii Windows 2000/XP tai uudempi.
 	RunWait	Toimii ulkoinen ohjelma ja odottaa kunnes se on valmis.
-	Screenshot	Luo PNG kuvakaappaus määritelty alue.
-	Send / SendRaw / SendInput / SendPlay	Lähettää simuloituja näppäimistön ja hiiren klikkauksella aktiivisen ikkunan.
+	Send / SendRaw	Lähettää simuloituja näppäimistön ja hiiren klikkauksella aktiivisen ikkunan.
 	SendLevel	Valvontaa, joka keinotekoinen näppäimistön ja hiiren tapahtumia ohitetaan pikanäppäimiä ja hotstrings.
 	SendMessage	Lähettää viestin ikkuna tai valvontaa ja odottaa kuittausta.
-	SendMode	Tekee Lähetä synonyymi SendInput tai SendPlay kuin oletus (sendEvent). Tekee myös napsauttamalla ja mouseMove / Valitse / Vedä käyttää määritettyä menetelmää.
 	SetCapslockState	Asettaa tilan Capslock-näppäintä. Myös pakottaa avain jäädä päälle tai pois päältä.
-	SetEnv (Var = Value)	Määrittää tietyn arvon muuttujaan.
-	SetFormat	Asettaa muoto kokonaislukuja ja liukulukuja syntyy matemaattisia toimintoja.
 	SetKeyDelay	Asettaa viive, joka esiintyy jokaisen näppäilyn jälkeen lähetetään Lähetä tai ControlSend.
-	SetMouseDelay	Asettaa viive, joka esiintyy jokaisen hiiren liikkeitä tai napsauta.
 	SetNumlockState	Asettaa tila Numlock-näppäintä. Myös pakottaa avain jäädä päälle tai pois päältä.
 	SetRegView	Mahdollistaa rekisterin komennot 32-bittinen script käyttää 64-bittinen rekisterin mieltä ja päinvastoin.
 	SetScrollLockState	Asettaa tila ScrollLock näppäintä. Myös pakottaa avain jäädä päälle tai pois päältä.
@@ -1357,8 +1346,7 @@
 	Sqrt	Palauttaa neliöjuuri lukumäärä.
 	StatusBarGetText	Hakee tekstiä standardin aseman barin.
 	StatusBarWait	Odottaa, kunnes ikkunan tilarivillä sisältää tietyn merkkijonon.
-	StringCaseSense	Määrittää, onko merkkijono vertailut ovat isot (oletus on "ei ole merkitystä").
-	StringGetPos / InStr	Noutaa asema määritellyn alimerkkijonona sisällä merkkijono.
+	StringGetPos	Noutaa asema määritellyn alimerkkijonona sisällä merkkijono.
 	StringLeft	Noutaa määrän merkkejä vasemmalla puolella merkkijono.
 	StringLen / StrLen	Hakee laskea, kuinka monta merkkiä ovat merkkijono.
 	StringLower	Muuntaa merkkijonon pieniksi.
@@ -1370,27 +1358,22 @@
 	StringTrimRight	Poistetaan useita merkkejä oikealla puolella merkkijono.
 	StringUpper	Muuntaa merkkijonon isoiksi.
 	StrPut / StrGet	Kopioi merkkijono tai muistin osoite, valinnainen muuntamalla se välillä koodisivuja.
-	Suspend	Käytöstä tai ottaa käyttöön kaikki tai valitut pikanäppäimiä ja hotstrings.
 	SysGet	Hakee näytön resoluutio, usean näytön tiedot, mitat järjestelmän esineitä, ja muut ominaisuudet.
 	Tan	Palauttaa trigonometriset tangentin lukumäärä.
 	ToolTip	Luo aina-on-top ikkunan mihin tahansa näytöllä.
 	Transform	Suorittaa sekalaiset matemaattiset funktiot, bittioperaatioita ja tehtäviä, kuten ASCII / Unicode muuntaminen.
 	TrayTip	Luo ilmapallo viesti-ikkuna lähellä kuvaketta. Vaatii Windows 2000/XP tai uudempi.
 	Trim / LTrim / RTrim	Trimmit tiettyjä merkkejä alusta ja / tai lopussa merkkijono.
-	Try	Vartijat yhden tai useamman lausuntoja (komennot ja ilmaisut) vastaan runtime virheitä ja poikkeuksia heittänyt heittää komennon.
 	Until	Koskee kunnossa jatkoa Loop tai silmukan.
 	UrlDownloadToFile	Lataa tiedoston Internetistä.
 	UserFunction	Luo Tehtävä rakenne.
-	VarSetCapacity	Suurentaa muuttujan vetoisuudeltaan tai vapauttaa sen muistiin. Normaalisti tämä on tarpeen vain syiden vuoksi kuin DllCall.
-	While-loop	Suorittaa sarjan komentoja, kunnes määritelty lauseke on epätosi.
+	While	Suorittaa sarjan komentoja, kunnes määritelty lauseke on epätosi.
 	WinActivate	Aktivoi määritetty ikkunan (tekee kaikkea).
 	WinActivateBottom	Sama kuin WinActivate paitsi että se aktivoi alimmainen (ainakin viime aikoina aktiivinen) matching ikkunan sijasta päällimmäinen.
 	WinActive	Palauttaa Unique ID (HWND) aktiivisen ikkunan, jos se vastaa määritellyt kriteerit.
 	WinClose	Sulkee tietyn ikkunan.
 	WinExist	Tarkastukset jos määritelty ikkuna on olemassa.
 	WinGet	Hakee tietyn ikkunan yksilöllinen tunnus, prosessi ID, prosessin nimi, tai luettelo sen valvontaa. Se voi myös hakea listan kaikki ikkunat vastaavia määritellyt kriteerit.
-	WinGetActiveStats	Yhdistyvät toiminnot WinGetActiveTitle ja WinGetPos yhdeksi komento.
-	WinGetActiveTitle	Hakee otsikko aktiivisen ikkunan.
 	WinGetClass	Hakee määritetyn ikkunan luokan nimi.
 	WinGetPos	Noutaa sijainti ja koko määritellyn ikkunan.
 	WinGetText	Hakee tekstiä tietyn ikkunan.

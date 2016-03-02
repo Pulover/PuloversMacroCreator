@@ -244,17 +244,17 @@
 	w_Lang059 =	Hình ảnh / Pixel Tìm kiếm (F7)
 	w_Lang060 =	Chạy / File / String / Misc. (F8)
 	w_Lang061 =	Vòng lặp (F9)
-	w_Lang062 =	Goto (Shift+F9)
-	w_Lang063 =	Nhãn (Ctrl+F9)
+	w_Lang062 =	Đi Vào / Nhãn (Shift + F9)
+	w_Lang063 =	Thiết Lập Bộ Đếm Thời Gian (Ctrl + F9)
 	w_Lang064 =	Nếu báo cáo (F10)
 	w_Lang065 =	Biến / Mảng (Shift+F10)
 	w_Lang066 =	Chức năng / Phương pháp mảng (Ctrl+F10)
-	w_Lang067 =	Internet Explorer (F12)
-	w_Lang068 =	Biểu / COM giao diện (Shift+F12)
-	w_Lang069 =	Gửi email (F11)
-	w_Lang070 =	Tin nhắn cửa sổ (Ctrl+F12)
-	w_Lang071 =	Thêm phím Windows để "chơi" phím nóng
-	w_Lang072 =	Sử dụng nút điều khiển như phím nóng
+	w_Lang067 =	Gửi email (F11)
+	w_Lang068 =	Tải file (Shift+F11)
+	w_Lang069 =	Zip / Giải nén file (Ctrl+F11)
+	w_Lang070 =	Internet Explorer (F12)
+	w_Lang071 =	Biểu / COM giao diện (Shift+F12)
+	w_Lang072 =	Tin nhắn cửa sổ (Ctrl+F12)
 	w_Lang073 =	Thêm vĩ mô (Ctrl+T)
 	w_Lang074 =	Gần vĩ mô (Ctrl+W)
 	w_Lang075 =	Bản sao vĩ mô (Ctrl+Shift+D)
@@ -291,8 +291,8 @@
 	w_Lang106 =	Thêm Return (Ctrl+Shift+N)
 	w_Lang107 =	Chuyển đổi Macro Để Function (Ctrl+Shift+C)
 	w_Lang108 =	Thảo luận ra các hàng không được kiểm soát
-	w_Lang109 =	Tải file (Shift+F11)
-	w_Lang110 =	Zip / Giải nén file (Ctrl+F11)
+	w_Lang109 =	Thêm phím Windows để "chơi" phím nóng
+	w_Lang110 =	Sử dụng nút điều khiển như phím nóng
 	w_Lang111 =	Tìm kiếm... (Nhấn Enter để đi)
 		
 ; 15. Command Windows		
@@ -759,6 +759,7 @@
 	t_Lang204 =	Phát Hiện Văn Bản Ẩn
 	t_Lang205 =	Chế Độ Trận Tranh Đai
 	t_Lang206 =	Tốc Độ Trận Đấu Tiêu Đề
+	t_Lang207 =	Khách hàng
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Mở
@@ -939,10 +940,14 @@
 	ApplyL_TT =	Chèn từ Box (Insert)
 	ApplyT_TT =	Áp dụng
 	AutoKey_TT =	Phím nóng để chơi vĩ mô
+	Client_TT =	Tọa độ là tương đối so với các khu vực cửa sổ khách hàng hoạt động, mà không bao gồm các thanh tiêu đề của cửa sổ, trình đơn (nếu nó có một tiêu chuẩn một) và biên giới.
 	Clip_TT =	Tạm thời sử dụng Clipboard để gửi văn bản.
 		Khi hoạt động được hoàn tất, kịch bản
 		khôi phục nội dung clipboard ban đầu.
 		(Để lại Tiêu trống để dán nội dung hiện tại)
+	CM_TT =	Screen: Tọa độ tương đối so với máy tính để bàn (toàn màn hình).
+		Window: Tọa độ có liên quan đến cửa sổ hoạt động.
+		Client: Tọa độ là tương đối so với các khu vực cửa sổ khách hàng hoạt động, mà không bao gồm các thanh tiêu đề của cửa sổ, trình đơn (nếu nó có một tiêu chuẩn một) và biên giới.
 	CmdFilter_TT =	Lọc theo loại
 	CmdSort_TT =	Xếp theo vần
 	ColorPick_TT =	Có được điểm ảnh trên màn hình
@@ -957,7 +962,9 @@
 		các nội dung của clipboard).
 	Ex_AF_TT =	Bỏ qua các phương pháp nhẹ nhàng kích hoạt một cửa sổ
 		và đi thẳng vào các phương pháp mạnh mẽ.
-	Ex_DH_TT =	Xác định liệu các cửa sổ vô hình được "nhìn thấy" bởi kịch bản.
+	Ex_DH_TT =	Xác định xem cửa sổ vô hình đang "nhìn thấy" của kịch bản.
+	Ex_DT_TT =	Xác định xem văn bản vô hình trong một cửa sổ được "nhìn thấy" với mục đích của việc tìm kiếm các cửa sổ. Điều này ảnh hưởng đến lệnh như IfWinExist và WinActivate.
+	Ex_CM_TT =	Bộ chế độ phối hợp cho các lệnh chuột để được liên quan đến một trong hai cửa sổ hoạt động hay màn hình.
 	Ex_EdScript_TT =	Mở trong trình soạn thảo bên ngoài
 	Ex_EdVars_TT =	Chọn các biến toàn cầu được xuất khẩu.
 	Ex_ExecScript_TT =	Chạy kịch bản
@@ -989,6 +996,7 @@
 	Ex_SW_TT =	Thiết lập sự chậm trễ đó sẽ xảy ra sau khi
 		mỗi lệnh cửa sổ, chẳng hạn như WinActivate.
 	Ex_UV_TT =	Xuất khẩu các biến toàn cầu.
+	Ex_WN_TT =	Cho phép hoặc vô hiệu hóa các cảnh báo cho các điều kiện cụ thể mà có thể chỉ ra một lỗi, chẳng hạn như một lỗi đánh máy hoặc mất tích khai "toàn cầu".
 	ExpList_TT =	Đúp Nhấn vào đây để chỉnh sửa
 	ExprLink2_TT =	- KHÔNG GỬI KÈM BIẾN TRONG DẤU HIỆU PERCENT ĐÂY.
 		- Hầu hết các biểu AHK được hỗ trợ.
@@ -1193,15 +1201,11 @@
 	ControlSetText	Thay đổi nội dung của một điều khiển.
 	CoordMode	Bộ phối hợp chế độ cho các lệnh khác nhau để được liên quan đến một trong hai cửa sổ đang hoạt động hoặc màn hình.
 	Cos	Trả về cosin lượng giác của số.
-	Critical	Ngăn chặn các chủ đề hiện tại không bị gián đoạn bởi các chủ đề khác.
 	Delete	Loại bỏ các cặp khóa-giá trị từ một đối tượng.
-	DetectHiddenText	Xác định xem văn bản vô hình trong một cửa sổ được "nhìn thấy" với mục đích tìm kiếm các cửa sổ. Điều này ảnh hưởng đến lệnh như IfWinExist và WinActivate.
-	DetectHiddenWindows	Xác định liệu các cửa sổ vô hình được "nhìn thấy" bởi kịch bản.
 	DllCall	Gọi một chức năng trong một DLL, chẳng hạn như một chức năng Windows API chuẩn.
 	Drive	Đẩy / thu lại các khay trong một ổ đĩa CD hoặc DVD, hoặc đặt nhãn khối lượng của ổ đĩa.
 	DriveGet	Lấy các loại thông tin về ổ đĩa của máy tính (s).
 	DriveSpaceFree	Lấy không gian đĩa miễn phí của một ổ đĩa, trong MB.
-	Edit	Mở ra các kịch bản hiện tại để chỉnh sửa trong trình soạn thảo liên quan.
 	Else	Quy định cụ thể các lệnh (s) để thực hiện nếu một IF-tuyên bố đánh giá để FALSE. Khi có nhiều hơn một lệnh là hiện tại, đặt chúng trong một khối (niềng răng).
 	EnvAdd	Thiết đặt một biến với tổng của bản thân cộng với giá trị nhất định (cũng có thể thêm hoặc trừ đi thời gian từ một giá trị ngày tháng thời gian). Đồng nghĩa với: Var+= giá trị gia tăng.
 	EnvDiv	Thiết đặt một biến để tự chia cho giá trị nhất định. Đồng nghĩa với: Var / = giá trị gia tăng.
@@ -1210,7 +1214,6 @@
 	EnvSet	Viết một giá trị cho một biến có trong môi trường.
 	EnvSub	Thiết đặt một biến để tự trừ đi giá trị nhất định (có thể so sánh giá trị ngày thời gian). Đồng nghĩa với: Var - = Giá trị.
 	EnvUpdate	Thông báo cho hệ điều hành và tất cả các ứng dụng đang chạy mà biến môi trường (s) đã thay đổi.
-	Exit	Thoát ra khỏi chủ đề hiện tại hoặc (nếu kịch bản là không bền vững và không chứa các phím nóng) toàn bộ kịch bản.
 	ExitApp	Kết thúc kịch bản vô điều kiện.
 	Exp	Lợi nhuận điện tử (đó là khoảng 2,71828182845905) nâng lên sức mạnh thứ N.
 	Expression	Thực hiện một hoặc nhiều hoạt động trên một loạt các biến, các chuỗi chữ và / hoặc số chữ.
@@ -1220,13 +1223,11 @@
 	FileCreateDir	Tạo ra một thư mục.
 	FileCreateShortcut	Tạo ra một (LNK). File shortcut.
 	FileDelete	Xóa một hoặc nhiều tập tin.
-	FileEncoding	Thiết lập mã hóa mặc định cho FileRead, FileReadLine, Loop đã đọc, FileAppend, và FileOpen.
 	FileGetAttrib	Báo cáo xem một tập tin hoặc thư mục là chỉ đọc, ẩn, vv
 	FileGetShortcut	Lấy thông tin về một phím tắt (LNK.) Tập tin, chẳng hạn như tập tin mục tiêu của nó.
 	FileGetSize	Lấy kích thước của một tập tin.
 	FileGetTime	Lấy dấu datetime của một tập tin hoặc thư mục.
 	FileGetVersion	Lấy phiên bản của một tập tin.
-	FileInstall	Bao gồm các tập tin được chỉ định trong các phiên bản biên dịch của kịch bản.
 	FileMove	Di chuyển hoặc đổi tên một hoặc nhiều tập tin.
 	FileMoveDir	Di chuyển một thư mục cùng với tất cả các tiểu thư mục và tập tin. Nó cũng có thể đổi tên thư mục.
 	FileOpen	Cung cấp tập tin hướng đối tượng I / O.
@@ -1253,18 +1254,18 @@
 	GroupClose	Đóng cửa sổ hoạt động nếu nó đã được chỉ kích hoạt bằng GroupActivate hoặc GroupDeactivate. Sau đó nó sẽ kích hoạt cửa sổ tiếp theo của loạt bài này. Nó cũng có thể đóng tất cả các cửa sổ trong một nhóm.
 	GroupDeactivate	Tương tự như GroupActivate ngoại trừ kích hoạt cửa sổ tiếp theo không trong nhóm.
 	HasKey	Trả về true nếu chính là liên kết với một giá trị.
-	if	Quy định cụ thể các lệnh (s) để thực hiện nếu so sánh của một biến với một giá trị evalutes đúng sự thật. Khi có nhiều hơn một lệnh là hiện tại, đặt chúng trong một khối (niềng răng).
-	if (expression)	Quy định cụ thể các lệnh (s) để thực hiện nếu biểu thức đánh giá này đúng.
+	If	Quy định cụ thể các lệnh (s) để thực hiện nếu so sánh của một biến với một giá trị evalutes đúng sự thật. Khi có nhiều hơn một lệnh là hiện tại, đặt chúng trong một khối (niềng răng).
+	If (expression)	Quy định cụ thể các lệnh (s) để thực hiện nếu biểu thức đánh giá này đúng.
 	If A_Index	Kiểm tra nếu vòng lặp hiện tại Đá một quy định một số.
 	If Clipboard	Kiểm tra nếu văn bản Clipboard là Đá chuỗi đã xác định.
 	If ErrorLevel	Kiểm tra nếu một hình ảnh hoặc điểm ảnh quy định đã được tìm thấy trong màn hình.
 	If var [not] between	Kiểm tra xem nội dung của một biến có số lượng hoặc theo bảng chữ cái giữa hai giá trị (bao gồm).
-	If var [not] in/contains MatchList 	Kiểm tra xem nội dung của một biến phù hợp với một trong các mục trong một danh sách.
+	If var [not] in / If var [not] contains MatchList	Kiểm tra xem nội dung của một biến phù hợp với một trong các mục trong một danh sách.
 	If var is [not] type	Kiểm tra xem nội dung của một biến là số, chữ hoa, vv
 	IfEqual / IfNotEqual	So sánh một biến với một giá trị bình đẳng. Đồng nghĩa với: nếu Var = Giá trị | nếu Var <> Giá trị.
 	IfExist / IfNotExist / FileExist	Kiểm tra sự tồn tại của một tập tin hoặc thư mục.
 	IfGreater / IfGreaterOrEqual	So sánh một biến với một giá trị. Đồng nghĩa với: nếu Var> Giá trị | nếu Var> = giá trị gia tăng.
-	IfInString / IfNotInString / InStr	Kiểm tra nếu một biến chứa chuỗi định.
+	IfInString / IfNotInString	Kiểm tra nếu một biến chứa chuỗi định.
 	IfLess / IfLessOrEqual	So sánh một biến với một giá trị. Đồng nghĩa với: nếu Var <Giá trị | nếu Var <= giá trị gia tăng.
 	IfMsgBox	Kiểm tra nút đã được đẩy bởi người sử dụng trong các lệnh MsgBox gần đây nhất.
 	IfWinActive / IfWinNotActive	Kiểm tra nếu các cửa sổ chỉ định tồn tại và hiện đang hoạt động (quan trọng nhất).
@@ -1277,9 +1278,8 @@
 	InputBox	Hiển thị một hộp đầu vào để yêu cầu người dùng nhập vào một chuỗi.
 	InsertAt	Chèn một hoặc nhiều giá trị tại một vị trí nhất định trong một mảng tuyến tính.
 	InStr	Tìm kiếm cho một sự xuất hiện được một chuỗi, từ bên trái hoặc bên phải.
-	KeyHistory	Hiển thị thông tin kịch bản và lịch sử của các tổ hợp phím gần đây nhất và cú click chuột.
 	KeyWait	Chờ đợi cho một phím hoặc chuột / phím điều khiển nút sẽ được phát hành hoặc ép xuống.
-	Labels	Một nhãn xác định một dòng mã, và có thể được sử dụng như là một mục tiêu Chuyển đến hoặc để tạo thành một chương trình con.
+	Label	Một nhãn xác định một dòng mã, và có thể được sử dụng như là một mục tiêu Chuyển đến hoặc để tạo thành một chương trình con.
 	Length	Trả về độ dài của một mảng tuyến tính bắt đầu ở vị trí 1.
 	ListVars	Hiển thị các biến của kịch bản: tên và nội dung hiện tại.
 	Ln	Trả về logarit tự nhiên (cơ số e) của số.
@@ -1290,18 +1290,13 @@
 	Loop (read file contents)	Lấy các dòng trong một tập tin văn bản, một tại một thời điểm (thực hiện tốt hơn so với FileReadLine).
 	Loop (registry)	Lấy nội dung của các khóa registry được chỉ định, một mục tại một thời điểm.
 	MaxIndex	Trả về các phím số nguyên cao nhất.
-	Menu	Tạo, xóa, chỉnh sửa và hiển thị các menu và các mục menu. Thay đổi các biểu tượng trên khay và tooltip của nó. Kiểm soát cho dù cửa sổ chính của một kịch bản biên dịch có thể được mở ra.
 	MinIndex	Trả về các phím số nguyên thấp nhất.
 	Mod	Modulo. Trả về phần còn lại khi cổ tức được chia cho Số chia.
-	MouseClickDrag	Nhấp chuột và giữ nút chuột được chỉ định, di chuyển chuột đến tọa độ điểm đến, sau đó ra mắt nút.
 	MouseGetPos	Lấy vị trí hiện tại của con trỏ chuột, và tùy chọn mà cửa sổ và kiểm soát nó được lơ lửng trên.
-	MouseMove	Di chuyển con trỏ chuột.
 	MsgBox	Hiển thị các văn bản quy định trong một cửa sổ nhỏ chứa một hay nhiều nút (như Yes và No).
 	NumGet	Trả về số nhị phân được lưu trữ tại địa chỉ cụ thể+bù đắp.
 	NumPut	Số cửa hàng trong định dạng nhị phân theo địa chỉ cho trước+bù đắp và trả về địa chỉ ở bên phải của mục chỉ bằng văn bản.
 	Object	Tạo ra một mảng kết hợp kịch bản.
-	OnExit	Quy định cụ thể một chương trình con để chạy tự động khi thoát khỏi kịch bản.
-	OnMessage	Quy định cụ thể chức năng gọi tự động khi kịch bản nhận được thông báo cụ thể.
 	Ord	Trả về giá trị thứ tự (mã ký tự số) của các nhân vật đầu tiên trong String.
 	OutputDebug	Gửi một chuỗi các trình sửa lỗi (nếu có) để hiển thị.
 	Parameter	Thêm một tham số cho hàm.
@@ -1317,7 +1312,6 @@
 	RegDelete	Xóa một khóa hoặc giá trị từ registry.
 	RegExMatch	Xác định xem một chuỗi có chứa một mô hình (biểu hiện thường xuyên).
 	RegExReplace	Thay thế lần xuất hiện của một mô hình (biểu thức chính quy) trong một chuỗi.
-	RegisterCallback	Tạo ra một địa chỉ máy mã mà khi gọi, chuyển hướng cuộc gọi đến một chức năng trong kịch bản.
 	RegRead	Đọc một giá trị từ registry.
 	RegWrite	Viết một giá trị để đăng ký.
 	RemoveAt	Loại bỏ các mục từ vị trí nhất định trong một mảng tuyến tính.
@@ -1326,16 +1320,11 @@
 	Run	Chạy một chương trình bên ngoài.
 	RunAs	Xác định một tập hợp các thông tin người dùng để sử dụng cho tất cả các ứng dụng tiếp theo của Run và RunWait. Yêu cầu Windows 2000/XP hoặc sau đó.
 	RunWait	Chạy một chương trình bên ngoài và chờ đợi cho đến khi nó kết thúc.
-	Screenshot	Tạo ra một ảnh chụp màn hình PNG của một khu vực xác định.
-	Send / SendRaw / SendInput / SendPlay	Gửi tổ hợp phím mô phỏng và nhấp chuột vào cửa sổ hoạt động.
+	Send / SendRaw	Gửi tổ hợp phím mô phỏng và nhấp chuột vào cửa sổ hoạt động.
 	SendLevel	Điều khiển thiết bị bàn phím và chuột sự kiện nhân tạo được bỏ qua bởi các phím nóng và hotstrings.
 	SendMessage	Gửi tin nhắn đến một cửa sổ hoặc điều khiển và chờ đợi sự thừa nhận.
-	SendMode	Gửi làm đồng nghĩa với SendInput hoặc SendPlay thay vì mặc định (SendEvent). Cũng làm cho Click và MouseMove / Click / Kéo sử dụng phương pháp xác định.
 	SetCapslockState	Thiết lập trạng thái của phím Capslock. Cũng có thể buộc chìa khóa để ở trên hoặc tắt.
-	SetEnv (Var = Value)	Gán giá trị cụ thể cho một biến.
-	SetFormat	Thiết lập định dạng số nguyên và số dấu chấm động được tạo ra bởi hoạt động toán học.
 	SetKeyDelay	Thiết lập sự chậm trễ đó sẽ xảy ra sau mỗi một phím thường gửi Gửi hoặc ControlSend.
-	SetMouseDelay	Thiết lập sự chậm trễ đó sẽ xảy ra sau mỗi lần di chuyển chuột hoặc nhấp chuột.
 	SetNumlockState	Thiết lập trạng thái của phím NumLock. Cũng có thể buộc chìa khóa để ở trên hoặc tắt.
 	SetRegView	Cho phép lệnh đăng ký trong một kịch bản 32-bit để truy cập vào xem đăng ký 64-bit và ngược lại.
 	SetScrollLockState	Thiết lập trạng thái của phím ScrollLock. Cũng có thể buộc chìa khóa để ở trên hoặc tắt.
@@ -1357,8 +1346,7 @@
 	Sqrt	Trả về căn bậc hai của số.
 	StatusBarGetText	Lấy văn bản từ một điều khiển thanh trạng thái tiêu chuẩn.
 	StatusBarWait	Đợi cho đến khi thanh trạng thái của cửa sổ chứa các chuỗi xác định.
-	StringCaseSense	Quyết định nếu so sánh chuỗi là trường hợp nhạy cảm (mặc định là "không trường hợp nhạy cảm").
-	StringGetPos / InStr	Lấy vị trí của chuỗi xác định trong một chuỗi.
+	StringGetPos	Lấy vị trí của chuỗi xác định trong một chuỗi.
 	StringLeft	Lấy một số ký tự từ phía bên tay trái của một chuỗi.
 	StringLen / StrLen	Lấy số lượng bao nhiêu ký tự trong một chuỗi.
 	StringLower	Chuyển đổi một chuỗi thành chữ thường.
@@ -1370,27 +1358,22 @@
 	StringTrimRight	Loại bỏ một số ký tự từ phía bên phải của một chuỗi.
 	StringUpper	Chuyển đổi một chuỗi thành chữ hoa.
 	StrPut / StrGet	Sao chép một chuỗi hoặc từ một địa chỉ bộ nhớ, tùy chọn chuyển đổi nó giữa các trang mã.
-	Suspend	Vô hiệu hóa hoặc cho phép tất cả hoặc chọn phím nóng và hotstrings.
 	SysGet	Lấy độ phân giải màn hình, thông tin đa màn hình, kích thước của các đối tượng hệ thống, và hệ thống tài sản khác.
 	Tan	Trả về tang lượng giác của số.
 	ToolTip	Tạo ra một cửa sổ luôn luôn-on-top bất cứ nơi nào trên màn hình.
 	Transform	Thực hiện chức năng linh tinh toán, hoạt động bitwise, và nhiệm vụ như ASCII / chuyển đổi Unicode.
 	TrayTip	Tạo ra một cửa sổ thông báo bóng gần khay hệ thống. Yêu cầu Windows 2000/XP hoặc sau đó.
 	Trim / LTrim / RTrim	Cắt tỉa một số ký tự từ đầu và / hoặc kết thúc của một chuỗi.
-	Try	Bảo vệ một hoặc nhiều câu lệnh (lệnh hoặc biểu thức) chống lại các lỗi thời gian chạy và hợp ngoại lệ ném bởi lệnh ném.
 	Until	Áp dụng một điều kiện để việc tiếp tục một vòng hoặc Đối với vòng lặp.
 	UrlDownloadToFile	Tải về một tập tin từ Internet.
 	UserFunction	Tạo ra một cấu trúc chức năng.
-	VarSetCapacity	Phóng to khả năng giữ một biến hoặc giải phóng bộ nhớ của nó. Thông thường, điều này chỉ cần thiết cho trường hợp bất thường như DllCall.
-	While-loop	Izvede niz ukazov, dokler se navedeni izraz neresničen.
+	While	Izvede niz ukazov, dokler se navedeni izraz neresničen.
 	WinActivate	Kích hoạt các cửa sổ chỉ định (làm cho nó quan trọng nhất).
 	WinActivateBottom	Giống như WinActivate ngoại trừ việc nó kích hoạt dưới cùng (ít nhất là gần đây hoạt động) cửa sổ phù hợp chứ không phải là trên cùng.
 	WinActive	Trả về ID duy nhất (HWND) của cửa sổ hoạt động nếu nó phù hợp với tiêu chuẩn quy định.
 	WinClose	Đóng cửa sổ chỉ định.
 	WinExist	Kiểm tra nếu các cửa sổ chỉ định tồn tại.
 	WinGet	Lấy ID của cửa sổ chỉ định của độc đáo, quá trình ID, tên quá trình, hoặc một danh sách các điều khiển của nó. Nó cũng có thể lấy một danh sách của tất cả các cửa sổ phù hợp với tiêu chuẩn quy định.
-	WinGetActiveStats	Kết hợp các chức năng của WinGetActiveTitle và WinGetPos vào một lệnh.
-	WinGetActiveTitle	Lấy tiêu đề của cửa sổ hoạt động.
 	WinGetClass	Lấy tên lớp cửa sổ chỉ định của.
 	WinGetPos	Lấy vị trí và kích thước của cửa sổ chỉ định.
 	WinGetText	Lấy văn bản từ cửa sổ xác định.

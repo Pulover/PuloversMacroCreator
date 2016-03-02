@@ -244,17 +244,17 @@
 	w_Lang059 =	Bild / Pixel Sök (F7)
 	w_Lang060 =	Kör / Arkiv / String / Misc. (F8)
 	w_Lang061 =	Loop (F9)
-	w_Lang062 =	Gå (Shift+F9)
-	w_Lang063 =	Etikett (Ctrl+F9)
+	w_Lang062 =	Gå Till / Etikett (Shift + F9)
+	w_Lang063 =	Inställd Timer (Ctrl + F9)
 	w_Lang064 =	Om rapporter (F10)
 	w_Lang065 =	Variabler / Arrayer (Shift+F10)
 	w_Lang066 =	Funktioner / Array metoder (Ctrl+F10)
-	w_Lang067 =	Internet Explorer (F12)
-	w_Lang068 =	Expression / COM-gränssnitt (Skift+F12)
-	w_Lang069 =	Skicka epost (F11)
-	w_Lang070 =	Windows-meddelanden (Ctrl+F12)
-	w_Lang071 =	Lägg den Windows-tangenten till "Play" hotkey
-	w_Lang072 =	Använd en joystick knapp som hotkey
+	w_Lang067 =	Skicka epost (F11)
+	w_Lang068 =	Ladda ner filer (Shift+F11)
+	w_Lang069 =	Zip / packa upp filer (Ctrl+F11)
+	w_Lang070 =	Internet Explorer (F12)
+	w_Lang071 =	Expression / COM-gränssnitt (Skift+F12)
+	w_Lang072 =	Windows-meddelanden (Ctrl+F12)
 	w_Lang073 =	Lägg Makro (Ctrl+T)
 	w_Lang074 =	Stäng Makro (Ctrl+W)
 	w_Lang075 =	Duplicera makro (Ctrl+Skift+D)
@@ -291,8 +291,8 @@
 	w_Lang106 =	Lägg Return (Ctrl+Skift+N)
 	w_Lang107 =	Konvertera Macro att fungera (Ctrl+Skift+C)
 	w_Lang108 =	Kommentera ut okontrollerade rader
-	w_Lang109 =	Ladda ner filer (Shift+F11)
-	w_Lang110 =	Zip / packa upp filer (Ctrl+F11)
+	w_Lang109 =	Lägg den Windows-tangenten till "Play" hotkey
+	w_Lang110 =	Använd en joystick knapp som hotkey
 	w_Lang111 =	Sök... (Tryck Enter för att gå)
 		
 ; 15. Command Windows		
@@ -759,6 +759,7 @@
 	t_Lang204 =	Upptäcka Dold Text
 	t_Lang205 =	Titelmatch Läge
 	t_Lang206 =	Titelmatch Hastighet
+	t_Lang207 =	Klient
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Öppet
@@ -939,10 +940,14 @@
 	ApplyL_TT =	Infoga från rutan (Insert)
 	ApplyT_TT =	Ansök
 	AutoKey_TT =	Snabbknappen till spela Makro
+	Client_TT =	Koordinater i förhållande till det aktiva fönstret klient område, vilket utesluter fönstrets namnlist , meny (om den har en standard en) och gränser.
 	Clip_TT =	Tillfälligt använder Urklipp för att skicka texten.
 		När operationen är klar, skriptet
 		återställer de ursprungliga innehållet i Urklipp.
 		(Lämna text tom att klistra aktuellt innehåll)
+	CM_TT =	Screen: Koordinater i förhållande till skrivbordet (hela skärmen).
+		Window: Koordinater är i förhållande till den aktiva fönstret.
+		Client: Koordinater i förhållande till det aktiva fönstret klient område, vilket utesluter fönstrets namnlist , meny (om den har en standard en) och gränser.
 	CmdFilter_TT =	Filtrera efter typ
 	CmdSort_TT =	Sortera alfabetiskt
 	ColorPick_TT =	Få pixel på skärmen
@@ -958,6 +963,8 @@
 	Ex_AF_TT =	Hoppar den milda metoden för att aktivera en fönster
 		och går direkt till kraftfulla metoden.
 	Ex_DH_TT =	Avgör om osynliga fönster "ses" av skriptet.
+	Ex_DT_TT =	Avgör om osynlig text i ett fönster "ses" i syfte att hitta fönstret. Detta påverkar kommandon som IfWinExist och WinActivate.
+	Ex_CM_TT =	Ställer samordna läge för mus kommandon för att vara i förhållande till antingen det aktiva fönstret eller skärmen.
 	Ex_EdScript_TT =	Avaa ulkoisen editorin
 	Ex_EdVars_TT =	Välj globala variabler som skall exporteras.
 	Ex_ExecScript_TT =	Köra skript
@@ -989,6 +996,7 @@
 	Ex_SW_TT =	Ställer in fördröjningen som sker efter
 		varje fönsterfunktion kommando, såsom WinActivate.
 	Ex_UV_TT =	Exportera globala variabler.
+	Ex_WN_TT =	Aktiverar eller inaktiverar varningar för särskilda villkor som kan tyda på ett fel, till exempel ett stavfel eller saknas "globalt" deklaration.
 	ExpList_TT =	Dubbelklicka för att redigera
 	ExprLink2_TT =	- INTE BIFOGA VARIABLER I PROCENT TECKEN HÄR.
 		- De flesta av AHK uttryck stöds.
@@ -1193,15 +1201,11 @@
 	ControlSetText	Ändrar texten i en kontroll .
 	CoordMode	Ställer samordna läge för olika kommandon för att vara i förhållande till antingen det aktiva fönstret eller skärmen .
 	Cos	Returnerar trigonometrisk cosinus Number .
-	Critical	Förhindrar den aktuella tråden från att bli avbruten av andra trådar .
 	Delete	Tar bort nyckel-värde par från ett objekt.
-	DetectHiddenText	Avgör om osynlig text i ett fönster "ses " i syfte att finna fönstret . Detta påverkar kommandon som IfWinExist och WinActivate .
-	DetectHiddenWindows	Avgör om osynliga fönster är " ses " av skriptet .
 	DllCall	Anropar en funktion inuti en DLL , såsom en vanlig Windows API-funktionen .
 	Drive	Matar / drar in facket i en CD-eller DVD-enhet , eller ställer en enhet volym etikett .
 	DriveGet	Hämtar olika typer av information om datorns enhet (er) .
 	DriveSpaceFree	Hämtar ledigt diskutrymme för en enhet , i megabyte .
-	Edit	Öppnar det aktuella skriptet för redigering i den tillhörande editorn .
 	Else	Anger kommando (s) att utföra om en IF-satsen utvärderas till false . När mer än ett kommando är närvarande , bifoga dem i ett block (hängslen) .
 	EnvAdd	Ställer en variabel till summan av sig själv plus det givna värdet (kan också lägga till eller dra ifrån tid från ett datum - tidsvärde) . Synonymt med : Var+= Värde .
 	EnvDiv	Ställer en variabel för sig själv dividerat med det givna värdet . Synonymt med : Var / = Värde .
@@ -1210,7 +1214,6 @@
 	EnvSet	Skriver ett värde till en variabel i miljön.
 	EnvSub	Ställer en variabel för sig minus det angivna värdet (kan även jämföra tids- värden) . Synonymt med : Var - = Värde .
 	EnvUpdate	Meddelar OS och alla program som körs som miljövariabel (s) har ändrats .
-	Exit	Avslutar den aktuella tråden eller (om skriptet inte är ihållande och innehåller inga snabbtangenter) hela manuset .
 	ExitApp	Avslutar scriptet villkorslöst .
 	Exp	Returer e (vilket är ca 2,71828182845905) upphöjt till N: te makten .
 	Expression	Utför en eller flera operationer på en rad variabler, bokstav strängar och / eller bokstav siffror.
@@ -1220,13 +1223,11 @@
 	FileCreateDir	Skapar en mapp .
 	FileCreateShortcut	Skapar en genväg (. Lnk) fil .
 	FileDelete	Tar bort en eller flera filer .
-	FileEncoding	Anger standard kodning för FileRead , FileReadLine , Loop Read, FileAppend och ArkivÖppna .
 	FileGetAttrib	Rapporter om en fil eller mapp är skrivskyddad , dold , etc.
 	FileGetShortcut	Hämtar information om en genväg (. Lnk) filer , såsom dess målfilen .
 	FileGetSize	Hämtar storleken på en fil .
 	FileGetTime	Hämtar datetime stämpel på en fil eller mapp .
 	FileGetVersion	Hämtar version av en fil .
-	FileInstall	Innehåller den angivna filen inuti kompilerade versionen av manuset .
 	FileMove	Flyttar eller döper om en eller flera filer .
 	FileMoveDir	Flyttar en mapp tillsammans med alla dess undermappar och filer . Det kan också byta namn på en mapp .
 	FileOpen	Ger objektorienterad fil I / O.
@@ -1253,18 +1254,18 @@
 	GroupClose	Stänger det aktiva fönstret om det bara aktiveras av GroupActivate eller GroupDeactivate . Den aktiverar sedan nästa fönster i serien. Det kan också stänga alla fönster i en grupp .
 	GroupDeactivate	Liknar GroupActivate utom aktiverar nästa fönster inte i gruppen .
 	HasKey	Returnerar true om Key är förknippad med ett värde.
-	if	Anger kommandot (er) för att utföra om jämförelsen av en variabel till ett värde utvärderar moduler till TRUE. När mer än ett kommando är närvarande , bifoga dem i ett block (hängslen) .
-	if (expression)	Anger kommando (s) att utföra om ett uttryck utvärderas till true .
+	If	Anger kommandot (er) för att utföra om jämförelsen av en variabel till ett värde utvärderar moduler till TRUE. När mer än ett kommando är närvarande , bifoga dem i ett block (hängslen) .
+	If (expression)	Anger kommando (s) att utföra om ett uttryck utvärderas till true .
 	If A_Index	Kontrollerar om det aktuella slingiteration matchs ett specificerat ett antal .
 	If Clipboard	Kontrollerar om Urklipp text är matchs en angiven sträng .
 	If ErrorLevel	Kontrollerar om en angiven bild eller pixel hittades i skärmen .
 	If var [not] between	Kontrollerar om en variabel innehåll är numeriskt eller alfabetiskt mellan två värden (inklusive) .
-	If var [not] in/contains MatchList 	Kontrollerar om en variabel innehåll matchar ett av objekten i en lista .
+	If var [not] in / If var [not] contains MatchList	Kontrollerar om en variabel innehåll matchar ett av objekten i en lista .
 	If var is [not] type	Kontrollerar om en variabel innehåll är numeriska , versaler etc.
 	IfEqual / IfNotEqual	Jämför en variabel till ett värde för jämställdhet . Synonymt med : om var = värde | om Var < > Value .
 	IfExist / IfNotExist / FileExist	Kontrollerar om det finns en fil eller mapp .
 	IfGreater / IfGreaterOrEqual	Jämför en variabel till ett värde . Synonymt med : om Var> Standard | Om Var> = Värde .
-	IfInString / IfNotInString / InStr	Kontrollerar om en variabel innehåller den angivna strängen .
+	IfInString / IfNotInString	Kontrollerar om en variabel innehåller den angivna strängen .
 	IfLess / IfLessOrEqual	Jämför en variabel till ett värde . Synonymt med : om Var < Value | om Var < = Värde .
 	IfMsgBox	Kontroller som knapptryckning av användaren under de senaste MsgBox kommando .
 	IfWinActive / IfWinNotActive	Kontrollerar om det angivna fönstret finns och är aktiv (främst) .
@@ -1277,9 +1278,8 @@
 	InputBox	Visar en ingång rutan för att uppmana användaren att ange en sträng .
 	InsertAt	Infogar ett eller flera värden vid en given position inom en linjär grupp.
 	InStr	Söker efter en viss förekomst av en sträng , från vänster eller höger.
-	KeyHistory	Visar script info och en historia av de senaste tangenttryckningar och musklick.
 	KeyWait	Väntar på en knapp eller mus / joystick för att släppas eller intryckt.
-	Labels	En etikett identifierar en rad kod, och kan användas som ett Goto mål eller för att bilda en subrutin.
+	Label	En etikett identifierar en rad kod, och kan användas som ett Goto mål eller för att bilda en subrutin.
 	Length	Returnerar längden på en linjär grupp som börjar vid position 1.
 	ListVars	Visar script variabler: deras namn och aktuella innehållet.
 	Ln	Returnerar den naturliga logaritmen (basen e) av Number.
@@ -1290,18 +1290,13 @@
 	Loop (read file contents)	Hämtar raderna i en textfil, en i taget (presterar bättre än FileReadLine).
 	Loop (registry)	Hämtar innehållet i den angivna registerundernyckeln, ett plagg i taget.
 	MaxIndex	Returnerar högsta heltal knappen.
-	Menu	Skapar, tar bort, ändrar och visar menyer och menyalternativ. Ändrar ikonen och dess verktygstips. Styr om huvudfönstret i en kompilerad skript kan öppnas.
 	MinIndex	Returnerar lägsta heltal knappen.
 	Mod	Modulo. Returnerar resten när Utdelning dividerad med Divisor.
-	MouseClickDrag	Klick och håller den angivna musknapp, förflyttar musen till destinationen koordinater, släpper sedan knappen.
 	MouseGetPos	Hämtar den aktuella positionen för muspekaren, och eventuellt vilket fönster och kontroll är det svävar över.
-	MouseMove	Flyttar muspekaren.
 	MsgBox	Visar den angivna texten i ett litet fönster som innehåller en eller flera knappar (t.ex. Ja och Nej).
 	NumGet	Returnerar binära talet lagras vid den specificerade adressen+förskjutning.
 	NumPut	Butiker Antal i binärt format på den angivna adressen+offset och returnerar adressen till höger om objektet just skrivit.
 	Object	Skapar ett skript associativ array.
-	OnExit	Anger en subrutin för att köras automatiskt när skriptet avslutats.
-	OnMessage	Anger en funktion som ska anropas automatiskt när skriptet emot den angivna meddelandet.
 	Ord	Returnerar ordnings värde (siffra kod) för det första tecknet i sträng.
 	OutputDebug	Sänder en sträng till detta program (om någon) för visning.
 	Parameter	Lisää parametrin funktio.
@@ -1317,7 +1312,6 @@
 	RegDelete	Raderar en undernyckel eller värde från registret.
 	RegExMatch	Avgör om en sträng innehåller ett mönster (reguljära uttryck).
 	RegExReplace	Ersätter förekomster av ett mönster (reguljära uttryck) i en sträng.
-	RegisterCallback	Skapar en maskin-kod adress som då kallades, omdirigerar samtalet till en funktion i skriptet.
 	RegRead	Läser ett värde från registret.
 	RegWrite	Skriver ett värde till registret.
 	RemoveAt	Tar bort objekt från den givna plats i en linjär grupp.
@@ -1326,16 +1320,11 @@
 	Run	Kör ett externt program.
 	RunAs	Anger en uppsättning inloggningsuppgifter för att använda för alla efterföljande användning av Run och RunWait. Kräver Windows 2000/XP eller senare.
 	RunWait	Körs ett externt program och väntar tills den är klar.
-	Screenshot	Skapar en PNG skärmdump av det specificerade område.
-	Send / SendRaw / SendInput / SendPlay	Skickar simulerade tangenttryckningar och musklick till det aktiva fönstret.
+	Send / SendRaw	Skickar simulerade tangenttryckningar och musklick till det aktiva fönstret.
 	SendLevel	Kontroller som konstgjorda tangentbord och mus händelser ignoreras av snabbtangenter och hotstrings.
 	SendMessage	Skickar ett meddelande till ett fönster eller kontroll och väntar på bekräftelse.
-	SendMode	Gör Skicka synonymt med SendInput eller SendPlay snarare än standard (sendEvent). Gör också klicka och MouseMove / Klicka / Dra använda den angivna metoden.
 	SetCapslockState	Ställer in tillståndet för CapsLock-tangenten. Kan också tvinga nyckeln för att stanna på eller av.
-	SetEnv (Var = Value)	Tilldelar det angivna värde till en variabel.
-	SetFormat	Ställer in formatet för heltal och flyttal som genereras av matematiska operationer.
 	SetKeyDelay	Ställer in fördröjningen som sker efter varje knapptryckning skickas med Sänd eller ControlSend.
-	SetMouseDelay	Ställer in fördröjningen som sker efter varje musrörelser eller klick.
 	SetNumlockState	Ställer in tillståndet för NumLock. Kan också tvinga nyckeln för att stanna på eller av.
 	SetRegView	Tillåter registret kommandon i en 32-bitars script för att få tillgång till 64-bitars register vy och vice versa.
 	SetScrollLockState	Ställer in tillståndet för ScrollLock tangenten. Kan också tvinga nyckeln för att stanna på eller av.
@@ -1357,8 +1346,7 @@
 	Sqrt	Returnerar kvadratroten av Tal.
 	StatusBarGetText	Hämtar texten från en vanlig statusrad kontroll.
 	StatusBarWait	Väntar tills ett fönsters statusrad innehåller den angivna strängen.
-	StringCaseSense	Avgör om strängjämförelser är skiftlägeskänsliga (standard är "inte skiftlägeskänsligt").
-	StringGetPos / InStr	Hämtar positionen för den specificerade delsträng inom en sträng.
+	StringGetPos	Hämtar positionen för den specificerade delsträng inom en sträng.
 	StringLeft	Hämtar ett antal tecken från den vänstra sidan av en sträng.
 	StringLen / StrLen	Hämtar räkningen på hur många tecken som finns i en sträng.
 	StringLower	Konverterar en sträng till gemener.
@@ -1370,27 +1358,22 @@
 	StringTrimRight	Tar bort ett antal tecken från den högra sidan av en sträng.
 	StringUpper	Konverterar en sträng till versaler.
 	StrPut / StrGet	Kopierar en sträng till eller från en minnesadress, tillval konvertera den mellan teckentabeller.
-	Suspend	Aktiverar eller avaktiverar alla eller valda snabbtangenter och hotstrings.
 	SysGet	Hämtar skärmupplösning, multi-monitor info, dimensioner av systemets objekt, och andra egenskaper systemet.
 	Tan	Returnerar trigonometrisk tangens för Number.
 	ToolTip	Skapar en alltid-på-topp fönster som helst på skärmen.
 	Transform	Utför diverse matematiska funktioner, bitvis operationer, och uppgifter såsom ASCII / Unicode konvertering.
 	TrayTip	Skapar ett fönster ballong meddelande nära ikonen. Kräver Windows 2000/XP eller senare.
 	Trim / LTrim / RTrim	Trims vissa tecken från början och / eller slutet av en sträng.
-	Try	Guards ett eller flera uttalanden (kommandon eller uttryck) mot runtime fel och undantag kastas av kast kommandot.
 	Until	Gäller ett tillstånd till en fortsättning av en slinga eller for-loop.
 	UrlDownloadToFile	Hämtar en fil från Internet.
 	UserFunction	Luo Tehtävä rakenne.
-	VarSetCapacity	Förstorar en variabel innehav kapacitet eller frigör minnet. Normalt är detta nödvändigt endast för ovanliga omständigheter såsom DllCall.
-	While-loop	Utför en serie kommandon tills det angivna uttrycket utvärderas till false.
+	While	Utför en serie kommandon tills det angivna uttrycket utvärderas till false.
 	WinActivate	Aktiverar angivna fönstret (gör det främst).
 	WinActivateBottom	Samma som WinActivate förutom att den aktiverar den nedersta (åtminstone nyligen aktiv) matchande fönster snarare än det översta.
 	WinActive	Returnerar Unikt ID (HWND) av det aktiva fönstret om det matchar de angivna kriterierna.
 	WinClose	Stänger det angivna fönstret.
 	WinExist	Kontrollerar om det angivna fönstret existerar.
 	WinGet	Hämtar det angivna fönstret unika ID, process-ID, process namn, eller en lista på sina kontroller. Det kan också hämta en lista över alla fönster som matchar de angivna kriterierna.
-	WinGetActiveStats	Kombinerar funktionerna hos WinGetActiveTitle och WinGetPos in ett kommando.
-	WinGetActiveTitle	Hämtar titeln på det aktiva fönstret.
 	WinGetClass	Hämtar det angivna fönstrets klassnamn.
 	WinGetPos	Hämtar position och storlek av det specificerade fönstret.
 	WinGetText	Hämtar text från specificerade fönstret.

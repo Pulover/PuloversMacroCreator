@@ -244,17 +244,17 @@
 	w_Lang059 =	圖片/像素搜索（F7）
 	w_Lang060 =	運行/文件/串/ MISC。 （F8）。
 	w_Lang061 =	環路（F9）
-	w_Lang062 =	後藤（按Shift+F9）
-	w_Lang063 =	標籤（按Ctrl+F9）
+	w_Lang062 =	去/標籤（Shift + 9）
+	w_Lang063 =	設置定時器（CTRL+ F9）
 	w_Lang064 =	如果報表附註（F10）
 	w_Lang065 =	變量 / 배열(&V) （按Shift+F10）
 	w_Lang066 =	功能 / 陣列方法 （按Ctrl+F10）
-	w_Lang067 =	IE瀏覽器（F12）
-	w_Lang068 =	表達 / COM接口 (Shift+F12)
-	w_Lang069 =	發電子郵件 (F11)
-	w_Lang070 =	Windows消息（Ctrl+F12）
-	w_Lang071 =	Windows鍵“播放”熱鍵
-	w_Lang072 =	使用操縱桿按鈕，熱鍵
+	w_Lang067 =	發電子郵件 (F11)
+	w_Lang068 =	下載文件 （按Shift+F11）
+	w_Lang069 =	壓縮/解壓縮文件 （按Ctrl+F11）
+	w_Lang070 =	IE瀏覽器（F12）
+	w_Lang071 =	表達 / COM接口 (Shift+F12)
+	w_Lang072 =	Windows消息（Ctrl+F12）
 	w_Lang073 =	添加宏（按Ctrl+T）
 	w_Lang074 =	關閉宏（按Ctrl+W）
 	w_Lang075 =	重複宏（按Ctrl+Shift+D）
@@ -291,8 +291,8 @@
 	w_Lang106 =	加入返程（Ctrl+Shift+ N）
 	w_Lang107 =	轉換宏功能（Ctrl+Shift+ C）
 	w_Lang108 =	註釋掉選中的行
-	w_Lang109 =	下載文件 （按Shift+F11）
-	w_Lang110 =	壓縮/解壓縮文件 （按Ctrl+F11）
+	w_Lang109 =	Windows鍵“播放”熱鍵
+	w_Lang110 =	使用操縱桿按鈕，熱鍵
 	w_Lang111 =	搜索... (按Enter鍵進入)
 		
 ; 15. Command Windows		
@@ -759,6 +759,7 @@
 	t_Lang204 =	檢測隱藏文本
 	t_Lang205 =	標題匹配模式
 	t_Lang206 =	冠軍比賽速度
+	t_Lang207 =	客戶
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	打開
@@ -939,10 +940,14 @@
 	ApplyL_TT =	插入盒（插入）
 	ApplyT_TT =	申請
 	AutoKey_TT =	熱鍵玩宏
+	Client_TT =	坐標是相對於當前活動窗口的客戶區，不包括窗口的標題欄，菜單（如果它有一個標準）和邊界。
 	Clip_TT =	暫時使用剪貼板發送文本。
 		當操作完成時，該腳本
 		恢復原來的剪貼板中的內容。
 		（留下空的文本粘貼當前內容）
+	CM_TT =	Screen: 坐標是相對於桌面（整個畫面）。
+		Window: 坐標是相對的活動窗口。
+		Client: 坐標是相對於當前活動窗口的客戶區，不包括窗口的標題欄，菜單（如果它有一個標準）和邊界。
 	CmdFilter_TT =	按類型篩選
 	CmdSort_TT =	按字母順序排序
 	ColorPick_TT =	獲取屏幕上的像素
@@ -957,7 +962,9 @@
 		剪貼板中的內容）。
 	Ex_AF_TT =	跳過溫和的方法激活一個窗口
 		徑直強而有力的方法。
-	Ex_DH_TT =	確定是否有無形的窗戶“看到”的腳本。
+	Ex_DH_TT =	確定是否無形窗口“看到”的腳本。
+	Ex_DT_TT =	確定在一個窗口不可見的文本是否被“看到”查找窗口的目的。這會影響諸如IfWinExist和WinActivate命令。
+	Ex_CM_TT =	對於鼠標命令是相對於任一活動窗口或屏幕集坐標模式。
 	Ex_EdScript_TT =	打开外部编辑器
 	Ex_EdVars_TT =	選擇要導出的全局變量。
 	Ex_ExecScript_TT =	運行腳本
@@ -989,6 +996,7 @@
 	Ex_SW_TT =	設置延遲後會發生
 		每個窗口的命令，如WinActivate。
 	Ex_UV_TT =	導出全局變量。
+	Ex_WN_TT =	啟用或禁用對可能指示錯誤的具體條件，如輸入錯誤或丟失的“全球性”聲明警告。
 	ExpList_TT =	雙擊編輯
 	ExprLink2_TT =	- 不要用百分號這裡的變量。
 		- 大多數AHK表達式的支持。
@@ -1193,15 +1201,11 @@
 	ControlSetText	更改文本的控制。
 	CoordMode	集協調各種命令模式是相對的活動窗口或屏幕。
 	Cos	返回三角餘弦數。
-	Critical	防止當前線程的其他線程被打斷。
 	Delete	移除對象鍵 - 值對。
-	DetectHiddenText	確定是否有隱形文字在一個窗口“看到”的目的找到窗口。這種影響如IfWinExist WinActivate的命令。
-	DetectHiddenWindows	確定無形窗口“看到”的腳本。
 	DllCall	DLL內部調用一個函數，比如一個標準的Windows API函數。
 	Drive	CD或DVD驅動器的托盤彈出/縮回，或設置驅動器的卷標。
 	DriveGet	檢索計算機的驅動器（S）的各類信息。
 	DriveSpaceFree	檢索可用磁盤空間的驅動器，以兆字節為單位。
-	Edit	打開當前腳本在關聯編輯器進行編輯。
 	Else	指定執行命令（S），如果IF語句的計算結果為FALSE。當一個以上的命令是，把它們括在一個塊（大括號）。
 	EnvAdd	設置一個變量本身以及給定值（也可以添加或減去時間從日期時間值）的總和。代名詞：VAR+=價值。
 	EnvDiv	設置一個變量除以給定的值本身。代名詞：無功/ =價值。
@@ -1210,7 +1214,6 @@
 	EnvSet	一個值寫入到一個環境中的變量。
 	EnvSub	設置一個變量減去給定值（也可以比較日期時間值）。代名詞：瓦爾省 - =價值。
 	EnvUpdate	通知OS及所有運行的應用程序的環境變量（S）已經改變。
-	Exit	退出當前線程或（如果腳本不是持久的，不包含熱鍵）整個腳本。
 	ExitApp	終止無條件腳本。
 	Exp	返回e（約2.71828182845905）提出的N次方。
 	Expression	在一系列的變量，文字串，和/或文字的數字執行一個或多個操作。
@@ -1220,13 +1223,11 @@
 	FileCreateDir	創建一個文件夾。
 	FileCreateShortcut	創建一個快捷方式（LNK）文件。
 	FileDelete	刪除一個或多個文件。
-	FileEncoding	設置FileReadLine FILEREAD，循環讀取，FileAppend和文件打開的默認編碼。
 	FileGetAttrib	報告文件或文件夾是否是只讀，隱藏等。
 	FileGetShortcut	獲取信息的快捷方式（LNK）的文件，如目標文件。
 	FileGetSize	檢索一個文件的大小。
 	FileGetTime	檢索日期時間戳的文件或文件夾。
 	FileGetVersion	檢索一個文件的版本。
-	FileInstall	包括指定的文件裡面的腳本的編譯版本。
 	FileMove	移動或重命名一個或多個文件。
 	FileMoveDir	將文件夾以及其所有子文件夾和文件。它也可以重命名文件夾。
 	FileOpen	提供面向對象的文件I / O。
@@ -1253,18 +1254,18 @@
 	GroupClose	關閉活動窗口，如果它只是激活，GroupActivate或GroupDeactivate的。然後激活該系列中的下一個窗口。它也可以關閉所有的窗口，在一組。
 	GroupDeactivate	類似GroupActivate不在組中除了激活下一個窗口。
 	HasKey	返回true如果密鑰與一個值相關聯。
-	if	指定命令（S）來執行，如果一個變量的值比較evalutes TRUE。當一個以上的命令是，把它們括在一個塊（大括號）。
-	if (expression)	指定執行命令（S），如果表達式的計算結果為TRUE。
+	If	指定命令（S）來執行，如果一個變量的值比較evalutes TRUE。當一個以上的命令是，把它們括在一個塊（大括號）。
+	If (expression)	指定執行命令（S），如果表達式的計算結果為TRUE。
 	If A_Index	的檢查，如果在當前循環的迭代配指定了一些。
 	If Clipboard	檢查如果剪貼板文本配指定的字符串。
 	If ErrorLevel	如果指定的圖像或像素的檢查，發現在屏幕上。
 	If var [not] between	檢查變量的內容是數字或字母，兩個值之間（含）。
-	If var [not] in/contains MatchList 	檢查變量的內容是否匹配列表中的項目之一。
+	If var [not] in / If var [not] contains MatchList	檢查變量的內容是否匹配列表中的項目之一。
 	If var is [not] type	檢查變量的內容是否是數字，大寫等。
 	IfEqual / IfNotEqual	比較變量的值相等。代名詞：如果var =價值瓦爾省<>價值。
 	IfExist / IfNotExist / FileExist	檢查文件或文件夾的存在。
 	IfGreater / IfGreaterOrEqual	比較變數的值。代名詞：如果瓦爾省>價值|如果瓦爾省> =價值。
-	IfInString / IfNotInString / InStr	檢查一個變量是否包含指定的字符串。
+	IfInString / IfNotInString	檢查一個變量是否包含指定的字符串。
 	IfLess / IfLessOrEqual	比較變數的值。代名詞：如果var <價值|瓦爾省<=價值。
 	IfMsgBox	在最近的MsgBox命令時，檢查由用戶按壓了哪個按鈕。
 	IfWinActive / IfWinNotActive	檢查是否存在指定的窗口，是目前活躍（最重要的）。
@@ -1277,9 +1278,8 @@
 	InputBox	顯示一個輸入框，要求用戶輸入一個字符串。
 	InsertAt	插入一個或多個值，在一個線性陣列內的給定位置。
 	InStr	檢索數據對於一個給定的字符串的發生，從左側或右側。
-	KeyHistory	顯示腳本信息和最近期的鍵盤和鼠標操作的歷史。
 	KeyWait	等待被釋放或按下一個鍵或鼠標/操縱桿按鈕。
-	Labels	一個標籤標識的代碼行，並可以用作轉到目標或形成一個子程序。
+	Label	一個標籤標識的代碼行，並可以用作轉到目標或形成一個子程序。
 	Length	返回開始位置1處的線性陣列的長度。
 	ListVars	顯示腳本的變量：他們的名字和當前內容。
 	Ln	返回自然對數（以e為底）數目。
@@ -1290,18 +1290,13 @@
 	Loop (read file contents)	檢索在一個文本文件，一個（執行優於FileReadLine）時間線。
 	Loop (registry)	檢索指定的註冊表子項，一個項目的內容在同一時間。
 	MaxIndex	返回的最大整數鍵。
-	Menu	創建，刪除，修改和顯示菜單和菜單項。更改托盤圖標和工具提示。控制編譯腳本的主窗口是否可以打開。
 	MinIndex	返回最低整數鍵。
 	Mod	模。返回剩餘股利除以除數時。
-	MouseClickDrag	點擊次數，並持有指定的鼠標按鈕，將鼠標移動到目的地的坐標，然後釋放按鈕。
 	MouseGetPos	檢索當前鼠標光標位置，以及可選的窗口和控件懸停。
-	MouseMove	移動鼠標光標。
 	MsgBox	顯示在一個小窗口，其中包含一個或多個按鈕（如“是”和“否”）指定的文本。
 	NumGet	返回+偏移量存儲在指定的地址的二進制數。
 	NumPut	商店數量以二進制格式在指定的地址+偏移量的地址，並返回剛剛寫入的項目的右側。
 	Object	創建一個腳本化的關聯數組。
-	OnExit	指定一個子程序時自動運行的腳本退出。
-	OnMessage	指定一個函數調用腳本時自動接收到指定的消息。
 	Ord	返回字符串的第一個字符的順序值（數字字符代碼）。
 	OutputDebug	將字符串發送到顯示調試器（如果有的話）。
 	Parameter	添加一個參數的函數。
@@ -1317,7 +1312,6 @@
 	RegDelete	刪除註冊表子項或值。
 	RegExMatch	確定一個字符串是否包含一個模式（正則表達式）。
 	RegExReplace	出現替換字符串內的模式（正則表達式）。
-	RegisterCallback	創建一個機器代碼地址，調用時，將呼叫重定向到一個腳本中的函數。
 	RegRead	從註冊表中讀取一個值。
 	RegWrite	寫入到註冊表的值。
 	RemoveAt	移除成線性陣列的給定的位置的項目。
@@ -1326,16 +1320,11 @@
 	Run	運行外部程序。
 	RunAs	指定一組用戶憑據用於所有後續的運行和RunWait用途。需要Windows 2000/XP或更高版本。
 	RunWait	運行一個外部程序和等待，直到它完成。
-	Screenshot	創建一個PNG截圖的指定區域。
-	Send / SendRaw / SendInput / SendPlay	模擬鍵盤和鼠標操作發送到活動窗口。
+	Send / SendRaw	模擬鍵盤和鼠標操作發送到活動窗口。
 	SendLevel	控制熱鍵和熱字串人工鍵盤和鼠標事件被忽略。
 	SendMessage	一個窗口或控制發送消息，並等待確認。
-	SendMode	使得與SendInput或SendPlay模式的代名詞，而不是默認的SendEvent發送。也使得MOUSEMOVE /點擊/拖動使用指定的方法。
 	SetCapslockState	設置CapsLock鍵的狀態。也可以強制鑰匙留在或關閉。
-	SetEnv (Var = Value)	將指定值分配給一個變量。
-	SetFormat	數學運算所產生的整數和浮點數的格式設置。
 	SetKeyDelay	設置發送或至於ControlSend發送每個按鍵後會發生延遲。
-	SetMouseDelay	設定每個鼠標移動或點擊後會發生延遲。
 	SetNumlockState	設置的NumLock鍵的狀態。也可以強制鑰匙留在或關閉。
 	SetRegView	允許一個32位註冊表中的命令腳本訪問64位註冊表視圖，反之亦然。
 	SetScrollLockState	設置ScrollLock鍵鍵的狀態。也可以強制鑰匙留在或關閉。
@@ -1357,8 +1346,7 @@
 	Sqrt	返回的平方根數目。
 	StatusBarGetText	檢索文本，從一個標準的狀態欄控制。
 	StatusBarWait	等待，直到窗口的狀態欄包含指定的字符串。
-	StringCaseSense	確定字符串比較是否區分大小寫（默認是“不區分大小寫”）。
-	StringGetPos / InStr	檢索的指定子字符串內的位置。
+	StringGetPos	檢索的指定子字符串內的位置。
 	StringLeft	檢索一個從左手側的一個字符串的字符數。
 	StringLen / StrLen	檢索在一個字符串中有多少個字符的計數。
 	StringLower	將字符串轉換為小寫。
@@ -1370,27 +1358,22 @@
 	StringTrimRight	從右側的字符串中刪除的字符數。
 	StringUpper	將字符串轉換為大寫。
 	StrPut / StrGet	一個字符串複製或從一個內存地址，可選的代碼頁之間轉換。
-	Suspend	禁用或啟用所有或選定的熱鍵和熱字串。
 	SysGet	檢索屏幕分辨率，多顯示器的信息，系統對象的尺寸，和其他系統的性能。
 	Tan	返回數的三角正切。
 	ToolTip	創建一個始終保持接通頂窗口在屏幕上的任何地方。
 	Transform	執行雜的數學函數，按位運算，如ASCII / Unicode轉換任務。
 	TrayTip	創建一個氣球消息窗口附近的托盤圖標。需要Windows 2000/XP或更高版本。
 	Trim / LTrim / RTrim	修剪某些字符從一個字符串的開頭和/或結尾。
-	Try	衛隊的一個或多個語句（命令或表達式）對運行時錯誤和異常拋出由throw命令。
 	Until	適用條件迴路或For循環的延續。
 	UrlDownloadToFile	從互聯網上下載一個文件。
 	UserFunction	創建一個功能結構。
-	VarSetCapacity	放大一個變量的控股能力，或釋放其內存。通常，這是必要的，只有不尋常的情況下，如DllCall。
-	While-loop	執行一系列命令，直到指定的表達式的值為false。
+	While	執行一系列命令，直到指定的表達式的值為false。
 	WinActivate	激活指定的窗口（使得它最重要的）。
 	WinActivateBottom	同WinActivate，除非它激活最底部（最近最少活躍）匹配窗口，而不是最頂層。
 	WinActive	返回活動窗口的唯一ID（HWND），如果它符合指定的條件。
 	WinClose	關閉指定的窗口。
 	WinExist	檢查是否存在指定的窗口。
 	WinGet	檢索指定窗口的唯一ID，進程ID，進程名稱，或者其控制清單。它也可以檢索符合指定條件的所有窗口的列表。
-	WinGetActiveStats	結合到一個命令中的職能WinGetActiveTitle WinGetPos。
-	WinGetActiveTitle	檢索活動窗口的標題。
 	WinGetClass	檢索指定窗口的類名。
 	WinGetPos	檢索指定窗口的位置和大小。
 	WinGetText	檢索文本從指定的窗口。

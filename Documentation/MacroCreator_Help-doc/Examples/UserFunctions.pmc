@@ -12,10 +12,10 @@ Groups=Start:1
 10|[MsgBox]|GlobalFunc result:`n%res%|1|0|MsgBox|0||||
 11|[MsgBox]|% "Dynamic Function Call:`n" GlobalFunc("some value")|1|0|MsgBox|0||||
 12|CreateArray|myarray := 9, "text param", globalvar, newObj|1|0|Function|||||
-13|[LoopStart]|myarray`, key`, value|1|0|ForLoop|||||
+13|[LoopStart]|myarray`, key`, value|1|0|For|||||
 14|[MsgBox]|myarray from CreateArray():`n%key%: %value%|1|0|MsgBox|0||||
 15|[LoopEnd]|LoopEnd|1|0|Loop|||||
-16|[LoopStart]|newObj`, key`, value|1|0|ForLoop|||||
+16|[LoopStart]|newObj`, key`, value|1|0|For|||||
 17|[MsgBox]|newObj from CreateArray (ByRef parameter):`n%key%: %value%|1|0|MsgBox|0||||
 18|[LoopEnd]|LoopEnd|1|0|Loop|||||
 

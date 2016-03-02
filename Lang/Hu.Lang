@@ -244,17 +244,17 @@
 	w_Lang059 =	Image / Pixel Search (F7)
 	w_Lang060 =	Run / Fájl / String / Misc. (F8)
 	w_Lang061 =	Loop (F9)
-	w_Lang062 =	Goto (Shift+F9)
-	w_Lang063 =	Label (Ctrl+F9)
+	w_Lang062 =	Megy / Label (Shift + F9)
+	w_Lang063 =	Beállított Időzítő (Ctrl + F9)
 	w_Lang064 =	Ha a nyilatkozatok (F10)
 	w_Lang065 =	Változók / Tömbök (Shift+F10)
 	w_Lang066 =	Függvények / Array módszerek (Ctrl+F10)
-	w_Lang067 =	Internet Explorer (F12)
-	w_Lang068 =	Kifejezés / COM Interface (Shift+F12)
-	w_Lang069 =	Küldjön e-mailt (F11)
-	w_Lang070 =	A Windows üzenetek (Ctrl+F12)
-	w_Lang071 =	Adja hozzá a Windows billentyű a "Play" gyorsbillentyű
-	w_Lang072 =	Használjon joystick gombot hotkey
+	w_Lang067 =	Küldjön e-mailt (F11)
+	w_Lang068 =	Fájlok letöltése (Shift+F11)
+	w_Lang069 =	Zip / Unzip fájlok (Ctrl+F11)
+	w_Lang070 =	Internet Explorer (F12)
+	w_Lang071 =	Kifejezés / COM Interface (Shift+F12)
+	w_Lang072 =	A Windows üzenetek (Ctrl+F12)
 	w_Lang073 =	Kedvencek Macro (Ctrl+T)
 	w_Lang074 =	Bezárás Macro (Ctrl+W)
 	w_Lang075 =	Ismétlődő Macro (Ctrl+Shift+D)
@@ -291,8 +291,8 @@
 	w_Lang106 =	Add Return (Ctrl+Shift+N)
 	w_Lang107 =	Convert Makró Function (Ctrl+Shift+C)
 	w_Lang108 =	Hozzászólás ki ellenőrizetlenül sorok
-	w_Lang109 =	Fájlok letöltése (Shift+F11)
-	w_Lang110 =	Zip / Unzip fájlok (Ctrl+F11)
+	w_Lang109 =	Adja hozzá a Windows billentyű a "Play" gyorsbillentyű
+	w_Lang110 =	Használjon joystick gombot hotkey
 	w_Lang111 =	Keresés... (Nyomja meg az Enter menni)
 		
 ; 15. Command Windows		
@@ -759,6 +759,7 @@
 	t_Lang204 =	Felismerni Rejtett Szöveg
 	t_Lang205 =	Cím Egyezik Mód
 	t_Lang206 =	Cím Egyezik Sebesség
+	t_Lang207 =	Ügyfél
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Nyitva
@@ -939,10 +940,14 @@
 	ApplyL_TT =	Beszúrás box (Insert)
 	ApplyT_TT =	Alkalmaz
 	AutoKey_TT =	Gyorsgomb játszani Macro
+	Client_TT =	Koordinátákat relatív az aktív ablak ügyfél terület, amely kizárja az ablak címsorában, menü (ha van egy standard) és a határok.
 	Clip_TT =	Ideiglenesen használ vágólap küldje el a szöveget.
 		Amikor a művelet befejeződött, a script
 		visszaállítja az eredeti vágólap tartalmát.
 		(Text hagyja üresen be aktuális tartalom)
+	CM_TT =	Screen: Koordináták relatív az asztalra (teljes képernyő).
+		Window: Koordináták relatív az aktív ablak.
+		Client: Koordinátákat relatív az aktív ablak ügyfél terület, amely kizárja az ablak címsorában, menü (ha van egy standard) és a határok.
 	CmdFilter_TT =	Szűrés típus
 	CmdSort_TT =	Rendezés ABC sorrendbe
 	ColorPick_TT =	Kap pixel a képernyőn
@@ -957,7 +962,9 @@
 		az a vágólap tartalmát.)
 	Ex_AF_TT =	Kihagyja a szelíd eljárás aktiválására ablak
 		és megy egyenesen az erőszakos módszer.
-	Ex_DH_TT =	Meghatározza, hogy a láthatatlan ablakok 'látott' a script.
+	Ex_DH_TT =	Meghatározza, hogy a láthatatlan ablakok "látja" a forgatókönyvet.
+	Ex_DT_TT =	Meghatározza, hogy a láthatatlan szöveget egy ablak "látható" céljára találni az ablakon. Ez befolyásolja a parancsokat, mint IfWinExist és WinActivate.
+	Ex_CM_TT =	Készletek koordináta rendszer egér parancsok képest sem az aktív ablak vagy a képernyőn.
 	Ex_EdScript_TT =	Nyílt külső szerkesztőben
 	Ex_EdVars_TT =	Válassza globális változók exportálni.
 	Ex_ExecScript_TT =	Run script
@@ -989,6 +996,7 @@
 	Ex_SW_TT =	Megadja a késleltetést követően alakul ki
 		Minden ablakozás parancsot, például WinActivate.
 	Ex_UV_TT =	Export globális változók.
+	Ex_WN_TT =	Engedélyezi vagy letiltja a figyelmeztetések az adott körülmények között, amelyek hibát jelez, mint például egy elírás vagy hiányzó "globális" nyilatkozatot.
 	ExpList_TT =	Kattintson duplán a szerkeszteni
 	ExprLink2_TT =	- NE CSATOLNI VARIABLES SZÁZALÉKOS JELEK ITT.
 		- A legtöbb AHK kifejezések támogatottak.
@@ -1193,15 +1201,11 @@
 	ControlSetText	Megváltoztatja a szöveg egy ellenőrzés.
 	CoordMode	Készletek koordinálja mód különböző parancsokat, hogy relatív, hogy vagy az aktív ablak vagy a képernyőn.
 	Cos	Visszaadja a trigonometrikus koszinuszával száma.
-	Critical	Megakadályozza az aktuális téma attól, hogy zavarhatja meg más szálak.
 	Delete	Eltávolítja kulcsértékpárok egy objektum.
-	DetectHiddenText	Meghatározza, hogy a láthatatlan szöveget egy ablakban "látható" abból a célból, hogy megtalálja az ablakon. Ez befolyásolja parancsokat, mint a IfWinExist és WinActivate.
-	DetectHiddenWindows	Meghatározza, hogy a láthatatlan ablak "látható" a szkriptet.
 	DllCall	A függvény belsejében egy DLL, mint egy szabványos Windows API függvény.
 	Drive	Kiadja / visszahúzza a tálcát a CD-vagy DVD-meghajtó, vagy beállítja a meghajtó kötetcímkét.
 	DriveGet	Letölti különböző típusú információkat a számítógép meghajtó (k).
 	DriveSpaceFree	Letölti a szabad lemezterület a meghajtón, megabyte.
-	Edit	Megnyitja az aktuális szkript szerkesztésre a kapcsolódó szerkesztő.
 	Else	Megadja a parancs (ek) azon képessége, ha IF-utasítás kiértékeli a hamis. Ha több, mint egy parancs aktív, tegye őket egy blokkban (fogszabályozó).
 	EnvAdd	Beállítja egy változó összege is, valamint az adott értéket (is összeadást vagy időt a dátum-idő érték). Egyet jelent: Var+= érték.
 	EnvDiv	Beállítja egy változó magára osztani az adott értékre. Egyet jelent: Var / = érték.
@@ -1210,7 +1214,6 @@
 	EnvSet	Ír egy értéket egy változó tartalmazza a környezetben.
 	EnvSub	Beállítja egy változó is mínusz a megadott értéket (is összehasonlítani dátum-idő érték). Egyet jelent: Var - = érték.
 	EnvUpdate	Értesíti az operációs rendszer és az összes futó alkalmazást, hogy a környezet változó (k) megváltozott.
-	Exit	Kilép az aktuális téma, vagy (ha a szkript nem tartós, és nem tartalmaz gyorsbillentyűket) az egész forgatókönyvet.
 	ExitApp	Leállítja a forgatókönyvet feltétel nélkül.
 	Exp	Visszatér e (ami megközelítőleg 2,71828182845905) emelte az n-edik hatalom.
 	Expression	Egy vagy több olyan műveleteket, miután egy sor változó, szó húrok, és / vagy a szó szerinti számokat.
@@ -1220,13 +1223,11 @@
 	FileCreateDir	Létrehoz egy mappát.
 	FileCreateShortcut	Létrehoz egy parancsikont (. Lnk) fájlt.
 	FileDelete	Töröl egy vagy több fájlt.
-	FileEncoding	Beállítja az alapértelmezett kódolása FILEREAD, FileReadLine, Loop Read, FileAppend és FileOpen.
 	FileGetAttrib	Azt mutatja, hogy a fájl vagy mappa csak olvasható, rejtett, stb
 	FileGetShortcut	Információkat gyűjt a helyi (. Lnk) fájlt, például a cél fájlt.
 	FileGetSize	Letölti a fájl mérete.
 	FileGetTime	Letölti a datetime bélyeg egy fájl vagy mappa.
 	FileGetVersion	Letölti a változat egy fájlt.
-	FileInstall	Tartalmazza a megadott fájl belsejében a lefordított változata a forgatókönyvet.
 	FileMove	Mozog vagy átnevezi egy vagy több fájl.
 	FileMoveDir	Mozgatja a mappa mellett minden al-mappákat és fájlokat. Azt is átnevezni egy mappát.
 	FileOpen	Biztosít az objektum-orientált fájl I / O
@@ -1253,18 +1254,18 @@
 	GroupClose	Bezárja az aktív ablakot, ha csak aktiválva GroupActivate vagy GroupDeactivate. Ezután aktiválja a következő ablakban a sorozatban. Azt is zárja be az összes ablakot egy csoportban.
 	GroupDeactivate	Hasonló a GroupActivate kivéve aktiválja a következő ablak nincs a csoportban.
 	HasKey	True, ha Key társított értéket.
-	if	Meghatározza a parancs (ek) azon képessége, ha az összehasonlítás egy változó értékre evalutes TRUE. Ha több, mint egy parancs aktív, tegye őket egy blokkban (fogszabályozó).
-	if (expression)	Megadja a parancs (ok), hogy végre, ha a kifejezés értéke TRUE.
+	If	Meghatározza a parancs (ek) azon képessége, ha az összehasonlítás egy változó értékre evalutes TRUE. Ha több, mint egy parancs aktív, tegye őket egy blokkban (fogszabályozó).
+	If (expression)	Megadja a parancs (ok), hogy végre, ha a kifejezés értéke TRUE.
 	If A_Index	Ellenőrzi, hogy az aktuális iteráció beleillik a megadott számot.
 	If Clipboard	Ellenőrzi, hogy a vágólapról szöveget beleillik a megadott string.
 	If ErrorLevel	Ellenőrzi, hogy a megadott képet vagy pixel találtak a képernyőn.
 	If var [not] between	Ellenőrzi, hogy a változó tartalmát számszerint vagy ABC két érték között (bezárólag).
-	If var [not] in/contains MatchList 	Ellenőrzi, hogy a változó tartalmát egyezik az egyik elem a listában.
+	If var [not] in / If var [not] contains MatchList	Ellenőrzi, hogy a változó tartalmát egyezik az egyik elem a listában.
 	If var is [not] type	Ellenőrzi, hogy a változó tartalma numerikus, nagybetűs, stb
 	IfEqual / IfNotEqual	Összehasonlítja a változó értéke az egyenlőség. Egyet jelent: ha a Var = érték | ha Var <> érték.
 	IfExist / IfNotExist / FileExist	Ellenőrzi, hogy létezik egy fájl vagy mappa.
 	IfGreater / IfGreaterOrEqual	Összehasonlítja a változó értéke. Egyet jelent: ha a Var> Érték | ha Var> = érték.
-	IfInString / IfNotInString / InStr	Ellenőrzi, hogy a változó tartalmazza a megadott string.
+	IfInString / IfNotInString	Ellenőrzi, hogy a változó tartalmazza a megadott string.
 	IfLess / IfLessOrEqual	Összehasonlítja a változó értéke. Egyet jelent: ha a Var <érték | ha Var <= érték.
 	IfMsgBox	Ellenőrzések megnyomták a felhasználó a legutolsó MsgBox parancsot.
 	IfWinActive / IfWinNotActive	Ellenőrzi, hogy a megadott ablak létezik, és aktív (elsősorban).
@@ -1277,9 +1278,8 @@
 	InputBox	Megjelenít egy beviteli mezőbe, hogy kéri a felhasználót, hogy adja meg a string.
 	InsertAt	Beszúr egy vagy több értéket egy adott helyzetben egy lineáris tömbben.
 	InStr	Keres egy adott előfordulása egy string, a bal vagy a jobb.
-	KeyHistory	Megjeleníti script info és a történelem, a legutóbbi billentyűleütéseket, és egérkattintással.
 	KeyWait	Várja, hogy a billentyűk, vagy egér / joystick gombot kell szabadítani, vagy nyomva.
-	Labels	A címke azonosít egy sor kódot, és fel lehet használni, mint egy cél, vagy Goto alkotnak egy szubrutint.
+	Label	A címke azonosít egy sor kódot, és fel lehet használni, mint egy cél, vagy Goto alkotnak egy szubrutint.
 	Length	Visszaadja a hossza egy egyenes sorban kezdődő 1 pozícióban.
 	ListVars	Jeleníti meg a szkript változó: a nevüket és a jelenlegi tartalmát.
 	Ln	Természetes logaritmusát (alap e) a szám.
@@ -1290,18 +1290,13 @@
 	Loop (read file contents)	Letölti a vonalak egy szöveges fájlt, egy olyan időpontban (jobban teljesít, mint FileReadLine).
 	Loop (registry)	Letölti a tartalmát a megadott alkulcs, egy tétel egy időben.
 	MaxIndex	Visszaadja a legnagyobb egész kulcs.
-	Menu	Hoz létre, töröl, módosít, és megjeleníti menük és a menüpontok. Megváltoztatja a tálca ikon és tooltip. Azt szabályozza, hogy a fő ablakban a lefordított script nyitható.
 	MinIndex	Visszaadja a legalacsonyabb egész kulcsot.
 	Mod	Modulo. Visszaadja a maradékot, ha osztalék osztva osztó.
-	MouseClickDrag	Kattintások és birtokolja a megadott egérgombbal megmozdítja az egeret a cél koordinátákat, majd elengedi a gombot.
 	MouseGetPos	Letölti a jelenlegi helyzetben a kurzort, és esetleg melyik ablak és ellenőrzés lebeg.
-	MouseMove	Mozgatja a kurzort.
 	MsgBox	Megjeleníti a megadott szöveget egy kis ablak, amely egy vagy több gomb (például Igen és Nem).
 	NumGet	Visszaadja a bináris számot tárolt a megadott címre eltolva.
 	NumPut	Üzletek száma bináris formában a megadott címre+offset és visszatér a címet, jobbra az elem csak írásban.
 	Object	Létrehoz egy scriptable asszociatív tömb.
-	OnExit	Megadja a szubrutin automatikusan futnak, ha a script kilép.
-	OnMessage	Megadja a funkció hívás automatikusan a szkript megkapja az adott üzenetet.
 	Ord	Visszaadja a sorrendi értéket (számjegyet kód) az első karakter karakterlánc.
 	OutputDebug	Küld egy stringet a debugger (ha van ilyen) a kijelzőn.
 	Parameter	Hozzáad egy paramétert a funkciót.
@@ -1317,7 +1312,6 @@
 	RegDelete	Törli alkulcsaként vagy értéket a rendszerleíró adatbázisban.
 	RegExMatch	Meghatározza, hogy a szöveg tartalmaz egy minta (reguláris kifejezés).
 	RegExReplace	Lecseréli események egy minta (reguláris kifejezés) belül egy string.
-	RegisterCallback	Létrehoz egy gépi kódot címet, ha hívják, irányítja a hívást, hogy a funkciót a script.
 	RegRead	Olvasás egy értéket a rendszerleíró adatbázisban.
 	RegWrite	Ír egy értéket a rendszerleíró adatbázisban.
 	RemoveAt	Eltávolítja az elemeket a megadott pozíció lineáris tömbben.
@@ -1326,16 +1320,11 @@
 	Run	Egy külsõ programot futtat.
 	RunAs	Megadja a sor felhasználói hitelesítő adatokat használja minden további felhasználására Run és RunWait. Szükséges Windows 2000/XP vagy újabb verzió.
 	RunWait	Egy külsõ programot futtat, és megvárja, amíg befejezi.
-	Screenshot	Létrehoz egy PNG screenshot az egy meghatározott területen.
-	Send / SendRaw / SendInput / SendPlay	Elküldi szimulált billentyűleütéseket, és egérkattintással az aktív ablak.
+	Send / SendRaw	Elküldi szimulált billentyűleütéseket, és egérkattintással az aktív ablak.
 	SendLevel	Vezérli, hogy mely mesterséges billentyűzet és egér eseményeket figyelmen kívül hagyja a gyorsbillentyűk és hotstrings.
 	SendMessage	Üzenetet küld egy ablak, vagy szabályozás és vár elismerést.
-	SendMode	Teszi küldése szinonimája SendInput vagy SendPlay helyett az alapértelmezett (SendEvent). Is teszi Kattintson és MouseMove / Kattints / Húzza a megadott módszer.
 	SetCapslockState	Állítja az állam a CapsLock gomb. Is kényszeríti a legfontosabb, hogy maradni vagy ki.
-	SetEnv (Var = Value)	Rendel a megadott érték a változó.
-	SetFormat	Beállítja a formátumot egész és lebegőpontos számok által generált matematikai műveleteket.
 	SetKeyDelay	Megadja a késleltetést, ami történik minden gombnyomás után küldött küldése vagy ControlSend.
-	SetMouseDelay	Megadja a késleltetést követően alakul ki minden egér mozgását vagy kattintással.
 	SetNumlockState	Állítja az állam a NumLock gomb. Is kényszeríti a legfontosabb, hogy maradni vagy ki.
 	SetRegView	Lehetővé teszi a regisztrációs parancsokat egy 32 bites script eléréséhez a 64 bites adatbázis nézet, és fordítva.
 	SetScrollLockState	Állítja az állam a ScrollLock gombot. Is kényszeríti a legfontosabb, hogy maradni vagy ki.
@@ -1357,8 +1346,7 @@
 	Sqrt	Visszaadja a négyzetgyöke számát.
 	StatusBarGetText	Beolvassa a szöveget a szabványos állapotsort ellenőrzés.
 	StatusBarWait	Megvárja, amíg az ablak állapotsor tartalmazza a megadott string.
-	StringCaseSense	Meghatározza, hogy a szöveg az összehasonlítás kis-és nagybetűket (alapértelmezésben "nem érzékenyek".)
-	StringGetPos / InStr	Letölti a helyzet a megadott substring egy string.
+	StringGetPos	Letölti a helyzet a megadott substring egy string.
 	StringLeft	Lekéri a karakterek száma a bal oldali a string.
 	StringLen / StrLen	Letölti a gróf, hogy hány karakter van a szövegben.
 	StringLower	Átalakítja a karakterlánc kisbetűs.
@@ -1370,27 +1358,22 @@
 	StringTrimRight	Eltávolítja a karakterek száma a jobb oldali a string.
 	StringUpper	Konvertál egy string nagybetűs.
 	StrPut / StrGet	Másolja egy string vagy egy memória cím, az opcionális átalakítása között kódlapot.
-	Suspend	Tiltja le vagy engedélyezi vagy a kiválasztott gyorsbillentyűk és hotstrings.
 	SysGet	Letölti képernyő felbontás, multi-monitor info, méretei rendszer tárgyak, és a rendszer egyéb tulajdonságait.
 	Tan	Visszaadja a trigonometrikus tangensét száma.
 	ToolTip	Létrehoz egy always-on-top ablakban bárhol a képernyőn.
 	Transform	Végrehajtja egyéb matematikai függvényeket, bitenkénti műveletek és feladatokat, mint például ASCII / Unicode átalakítás.
 	TrayTip	Létrehoz egy léggömb üzenet ablak mellett a ikon. Szükséges Windows 2000/XP vagy újabb verzió.
 	Trim / LTrim / RTrim	Kárpitok bizonyos karakterek az elején és / vagy végén egy string.
-	Try	Guards egy vagy több utasítások (parancsok vagy kifejezések) ellen futásidejű hibák és kivételek dobott a dobás parancsot.
 	Until	Alkalmaz feltétele a folytatása a hurok vagy-loop.
 	UrlDownloadToFile	Letölt egy fájlt az interneten.
 	UserFunction	Létrehoz egy függvény szerkezete.
-	VarSetCapacity	Nagyítja változó tárolókapacitás vagy felszabadítja a memóriát. Általában ez csak akkor szükséges, a szokatlan körülmények között, mint DllCall.
-	While-loop	Belirtilen ifade yanlış olarak değerlendirilir kadar art arda bir dizi komut gerçekleştirir.
+	While	Belirtilen ifade yanlış olarak değerlendirilir kadar art arda bir dizi komut gerçekleştirir.
 	WinActivate	Aktiválja a megadott ablak (teszi elsősorban).
 	WinActivateBottom	Ugyanaz, mint a WinActivate, kivéve, hogy aktiválja a legalsó (legrégebben aktív) egyező ablak helyett a legmagasabb.
 	WinActive	Visszaadja a Egyedi azonosító (HWND) az aktív ablak, ha az megfelel a kritériumoknak.
 	WinClose	Bezárja a megadott ablak.
 	WinExist	Ellenőrzi, hogy a megadott ablak létezik.
 	WinGet	Letölti a megadott ablak egyedi azonosító, ID folyamat, folyamat neve, vagy egy listát a ellenőrzéseket. Azt is letölteni egy listát az összes ablak megfelelő a kritériumoknak.
-	WinGetActiveStats	Ötvözi a WinGetActiveTitle és WinGetPos egyetlen parancsban.
-	WinGetActiveTitle	Letölti a címet az aktív ablak.
 	WinGetClass	Letölti a megadott ablak osztály nevét.
 	WinGetPos	Lekéri a helyzete és mérete a megadott ablakot.
 	WinGetText	Letölti a szöveget a megadott ablak.

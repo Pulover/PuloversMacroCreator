@@ -244,17 +244,17 @@
 	w_Lang059 =	Immagine / Pixel Search (F7)
 	w_Lang060 =	Eseguire / File / String / Misc. (F8)
 	w_Lang061 =	Loop (F9)
-	w_Lang062 =	Goto (Shift+F9)
-	w_Lang063 =	etichetta (Ctrl+F9)
+	w_Lang062 =	Andare A / Etichetta (Shift + F9)
+	w_Lang063 =	Impostare Il Timer (Ctrl + F9)
 	w_Lang064 =	Se Dichiarazioni (F10)
 	w_Lang065 =	Variabili / Matrici (Shift+F10)
 	w_Lang066 =	Funzioni / Metodi di matrice (Ctrl+F10)
-	w_Lang067 =	Internet Explorer (F12)
-	w_Lang068 =	Espressione / Interfaccia COM (Shift+F12)
-	w_Lang069 =	Invia una email (F11)
-	w_Lang070 =	Messaggi di Windows (Ctrl+F12)
-	w_Lang071 =	Aggiungere la chiave di Windows per "giocare" hotkey
-	w_Lang072 =	Utilizzare un tasto del joystick come tasto di scelta rapida
+	w_Lang067 =	Invia una email (F11)
+	w_Lang068 =	Scaricare file (Shift+F11)
+	w_Lang069 =	Zip / file Unzip (Ctrl+F11)
+	w_Lang070 =	Internet Explorer (F12)
+	w_Lang071 =	Espressione / Interfaccia COM (Shift+F12)
+	w_Lang072 =	Messaggi di Windows (Ctrl+F12)
 	w_Lang073 =	Aggiungi Macro (Ctrl+T)
 	w_Lang074 =	Chiudere Macro (Ctrl+W)
 	w_Lang075 =	Duplica macro (Ctrl+Shift+D)
@@ -291,8 +291,8 @@
 	w_Lang106 =	Aggiungere Return (Ctrl+Shift+N)
 	w_Lang107 =	Convertire Macro alla funzione (Ctrl+Shift+C)
 	w_Lang108 =	Commentare le righe non controllati
-	w_Lang109 =	Scaricare file (Shift+F11)
-	w_Lang110 =	Zip / file Unzip (Ctrl+F11)
+	w_Lang109 =	Aggiungere la chiave di Windows per "giocare" hotkey
+	w_Lang110 =	Utilizzare un tasto del joystick come tasto di scelta rapida
 	w_Lang111 =	Cerca... (Premere Invio per andare)
 		
 ; 15. Command Windows		
@@ -759,6 +759,7 @@
 	t_Lang204 =	Rilevare Testo Nascosto
 	t_Lang205 =	Modalità Match Per Il Titolo
 	t_Lang206 =	Partita Di Titolo Velocità
+	t_Lang207 =	Cliente
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Aperto
@@ -939,10 +940,14 @@
 	ApplyL_TT =	Inserisci da scatola (Insert)
 	ApplyT_TT =	Applicare
 	AutoKey_TT =	Tasti di scelta rapida per riprodurre Macro
+	Client_TT =	Le coordinate sono relative al client area della finestra attiva, che esclude la barra del titolo della finestra, il menu (se ne ha uno standard di uno) e confini.
 	Clip_TT =	Utilizza temporaneamente Appunti per inviare il testo.
 		Quando l'operazione viene completata, lo script
 		ripristina il contenuto degli appunti originali.
 		(Lasciare vuoto per incollare testo contenuto corrente)
+	CM_TT =	Screen: Le coordinate sono relative al desktop (schermo intero).
+		Window: Le coordinate sono relative alla finestra attiva.
+		Client: Le coordinate sono relative al client area della finestra attiva, che esclude la barra del titolo della finestra, il menu (se ne ha uno standard di uno) e confini.
 	CmdFilter_TT =	Filtra per tipo
 	CmdSort_TT =	Ordine alfabetico
 	ColorPick_TT =	Ottenere pixel sullo schermo
@@ -957,7 +962,9 @@
 		il contenuto degli appunti).
 	Ex_AF_TT =	Salta il modo delicato di attivare una finestra
 		e va dritto al metodo forte.
-	Ex_DH_TT =	Determina se le finestre sono invisibili 'visto' dallo script.
+	Ex_DH_TT =	Determina se le finestre sono invisibili "visti" dallo script.
+	Ex_DT_TT =	Determina se il testo invisibile in una finestra è "visto" con lo scopo di trovare la finestra. Questo influisce comandi come IfWinExist e WinActivate.
+	Ex_CM_TT =	Imposta la modalità di coordinate per i comandi del mouse per essere relativo sia alla finestra attiva o lo schermo.
 	Ex_EdScript_TT =	Apri in editor esterno
 	Ex_EdVars_TT =	Selezionare le variabili globali da esportare.
 	Ex_ExecScript_TT =	Esegui script
@@ -989,6 +996,7 @@
 	Ex_SW_TT =	Imposta il ritardo che si verifica dopo
 		ogni comando a finestre, come WinActivate.
 	Ex_UV_TT =	Esportare le variabili globali.
+	Ex_WN_TT =	Attiva o disattiva gli avvisi per condizioni specifiche che possono indicare un errore, ad esempio un errore di battitura o di dichiarazione mancante "globale".
 	ExpList_TT =	Fare doppio clic per modificare
 	ExprLink2_TT =	- NON ALLEGARE VARIABILI IN SEGNI DI PERCENTUALE QUI.
 		- La maggior parte delle espressioni AHK sono supportati.
@@ -1193,15 +1201,11 @@
 	ControlSetText	Modifica il testo di un controllo .
 	CoordMode	Imposta la modalità di coordinate per i vari comandi per essere relativo sia la finestra attiva o lo schermo .
 	Cos	Restituisce il coseno trigonometrico di numero .
-	Critical	Impedisce il thread corrente venga interrotta da altri thread .
 	Delete	Rimuove coppie chiave-valore da un oggetto.
-	DetectHiddenText	Determina se il testo non visibile in una finestra è "visto " ai fini della individuazione della finestra . Questo influisce comandi come IfWinExist e WinActivate .
-	DetectHiddenWindows	Determina se le finestre invisibili vengono " visti " dal copione .
 	DllCall	Chiama una funzione all'interno di una DLL , ad esempio una funzione standard di Windows API .
 	Drive	Espelle / ritrae il vassoio in un lettore di CD o DVD , o imposta l'etichetta di volume di un disco .
 	DriveGet	Recupera i vari tipi di informazioni sul disco del computer (s) .
 	DriveSpaceFree	Recupera lo spazio libero di un disco , in megabyte.
-	Edit	Apre lo script corrente per la modifica nell'editor associato.
 	Else	Specifica il comando (s) da eseguire se un IF -statement restituisce FALSO . Quando più di un comando è presente, racchiuderli in un blocco (parentesi graffe) .
 	EnvAdd	Consente di impostare una variabile per la somma di sé , più il valore dato (può anche aggiungere o sottrarre tempo da un valore data-ora) . Sinonimo di : Var+= Valore.
 	EnvDiv	Consente di impostare una variabile a se stesso diviso per il valore dato . Sinonimo di : Var / = Valore.
@@ -1210,7 +1214,6 @@
 	EnvSet	Scrive un valore di una variabile contenuto nell'ambiente .
 	EnvSub	Consente di impostare una variabile a se stessa meno il valore dato (può anche confrontare i valori di data e ora) . Sinonimo di : Var - = Valore.
 	EnvUpdate	Notifica al sistema operativo e tutte le applicazioni in esecuzione che variabile d'ambiente (s) sono cambiati.
-	Exit	Esce il thread corrente oppure (se lo script non è persistente e non contiene tasti di scelta rapida), l'intero script .
 	ExitApp	Termina lo script incondizionatamente .
 	Exp	Restituisce e (che è di circa 2,71828182845905) elevato alla ennesima potenza .
 	Expression	Esegue una o più operazioni su una serie di variabili, stringhe letterali, e / o numeri letterali.
@@ -1220,13 +1223,11 @@
 	FileCreateDir	Crea una cartella .
 	FileCreateShortcut	Crea un file di collegamento (. Lnk) .
 	FileDelete	Elimina uno o più file.
-	FileEncoding	Consente di impostare la codifica predefinita per FileRead , FileReadLine , Loop Read, FileAppend e FileOpen .
 	FileGetAttrib	Segnala se un file o una cartella è di sola lettura , nascosto, ecc
 	FileGetShortcut	Recupera informazioni su un collegamento (. Lnk) di file , come ad esempio il file di destinazione .
 	FileGetSize	Recupera le dimensioni di un file.
 	FileGetTime	Recupera il timbro datetime di un file o di una cartella .
 	FileGetVersion	Recupera la versione di un file .
-	FileInstall	Include il file specificato all'interno della versione compilata dello script .
 	FileMove	Sposta o rinomina uno o più file.
 	FileMoveDir	Sposta una cartella con tutte le sue sotto- cartelle e file. Si può anche rinominare una cartella .
 	FileOpen	Fornisce file di object-oriented di I / O.
@@ -1253,18 +1254,18 @@
 	GroupClose	Chiude la finestra attiva se è stato appena attivato da GroupActivate o GroupDeactivate . Si attiva quindi la finestra successiva della serie . Si può anche chiudere tutte le finestre in un gruppo.
 	GroupDeactivate	Simile a GroupActivate tranne attiva la finestra successiva non nel gruppo .
 	HasKey	Restituisce true se il tasto è associato un valore.
-	if	Specifica il comando (s) da eseguire se il confronto di una variabile ad un valore evalutes su TRUE . Quando più di un comando è presente, racchiuderli in un blocco (parentesi graffe) .
-	if (expression)	Specifica il comando (s) da eseguire se l'espressione restituisce TRUE.
+	If	Specifica il comando (s) da eseguire se il confronto di una variabile ad un valore evalutes su TRUE . Quando più di un comando è presente, racchiuderli in un blocco (parentesi graffe) .
+	If (expression)	Specifica il comando (s) da eseguire se l'espressione restituisce TRUE.
 	If A_Index	Controlla se l' iterazione corrente del ciclo di partite specificato un numero.
 	If Clipboard	Controlla se il testo Appunti sono partite una stringa specificata .
 	If ErrorLevel	Verifica se un immagine o pixel specificato è stato trovato nella schermata .
 	If var [not] between	Controlla se il contenuto di una variabile sono numericamente o alfabeticamente tra due valori (compreso) .
-	If var [not] in/contains MatchList 	Controlla se il contenuto di una variabile corrispondono a una delle voci di un elenco .
+	If var [not] in / If var [not] contains MatchList	Controlla se il contenuto di una variabile corrispondono a una delle voci di un elenco .
 	If var is [not] type	Verifica se il contenuto di una variabile vengono numerico , maiuscole, ecc
 	IfEqual / IfNotEqual	Confronta una variabile di un valore per l'uguaglianza . Sinonimo di : se Var = Valore | se Var < > Valore .
 	IfExist / IfNotExist / FileExist	Verifica l'esistenza di un file o di una cartella .
 	IfGreater / IfGreaterOrEqual	Confronta una variabile a un valore. Sinonimo di : se Var > Valore | se Var > = Valore.
-	IfInString / IfNotInString / InStr	Controlla se una variabile contiene la stringa specificata .
+	IfInString / IfNotInString	Controlla se una variabile contiene la stringa specificata .
 	IfLess / IfLessOrEqual	Confronta una variabile a un valore. Sinonimo di : se Var < Valore | se Var < = Valore.
 	IfMsgBox	Controlli quale pulsante è stato spinto da parte dell'utente durante la più recente comando MsgBox .
 	IfWinActive / IfWinNotActive	Controlla se la finestra specificata esiste ed è attualmente attivo (soprattutto) .
@@ -1277,9 +1278,8 @@
 	InputBox	Consente di visualizzare una casella di input per chiedere all'utente di inserire una stringa .
 	InsertAt	Inserire uno o più valori in una determinata posizione all'interno di un array lineare.
 	InStr	Ricerche per una data occorrenza di una stringa , da sinistra o da destra .
-	KeyHistory	Consente di visualizzare informazioni sceneggiatura e una storia delle più recenti sequenze di tasti e click del mouse.
 	KeyWait	Attende un tasto o pulsante del mouse / joystick per essere rilasciato o premuto.
-	Labels	Un'etichetta identifica una riga di codice, e può essere usato come un bersaglio Goto o per formare una subroutine.
+	Label	Un'etichetta identifica una riga di codice, e può essere usato come un bersaglio Goto o per formare una subroutine.
 	Length	Restituisce la lunghezza di una schiera lineare che inizia alla posizione 1.
 	ListVars	Consente di visualizzare le variabili dello script: i loro nomi e contenuto corrente.
 	Ln	Restituisce il logaritmo naturale (in base e) del Codice.
@@ -1290,18 +1290,13 @@
 	Loop (read file contents)	Recupera le righe in un file di testo, uno per volta (si comporta meglio di FileReadLine).
 	Loop (registry)	Recupera il contenuto della sottochiave del Registro specificato, un elemento alla volta.
 	MaxIndex	Restituisce la chiave intera più alta.
-	Menu	Crea, cancella, modifica e visualizza i menu e voci di menu. Cambia l'icona del vassoio e il suo suggerimento. Controlla se la finestra principale di uno script compilato può essere aperto.
 	MinIndex	Restituisce la chiave intera più basso.
 	Mod	Modulo. Restituisce il resto quando dividendo viene diviso per divisore.
-	MouseClickDrag	Click e detiene il pulsante del mouse specificato, sposta il mouse alle coordinate di destinazione, quindi rilascia il pulsante.
 	MouseGetPos	Recupera la posizione corrente del cursore del mouse e, facoltativamente, il quale finestra e il controllo si passa sopra.
-	MouseMove	Sposta il cursore del mouse.
 	MsgBox	Visualizza il testo specificato in una piccola finestra che contiene uno o più pulsanti (come Sì e No).
 	NumGet	Restituisce il numero binario memorizzato all'indirizzo specificato+offset.
 	NumPut	Negozi numero in formato binario all'indirizzo specificato+offset e restituisce l'indirizzo a destra della voce appena scritto.
 	Object	Crea un array associativo script.
-	OnExit	Specifica una subroutine per eseguire automaticamente quando lo script esce.
-	OnMessage	Consente di specificare una funzione da chiamare automaticamente quando lo script riceve il messaggio specificato.
 	Ord	Restituisce il valore ordinale (codice di carattere numerico) del primo carattere di stringa.
 	OutputDebug	Invia una stringa al debugger (se presente) per la visualizzazione.
 	Parameter	Aggiunge un parametro della funzione.
@@ -1317,7 +1312,6 @@
 	RegDelete	Elimina una sottochiave o di valore dal Registro di sistema.
 	RegExMatch	Determina se una stringa contiene un modello (espressione regolare).
 	RegExReplace	Sostituisce le occorrenze di un pattern (espressione regolare) all'interno di una stringa.
-	RegisterCallback	Crea un indirizzo di macchina-codice che quando viene chiamato, reindirizza la chiamata a una funzione nello script.
 	RegRead	Legge un valore del Registro di sistema.
 	RegWrite	Scrive un valore al Registro di sistema.
 	RemoveAt	Rimuove elementi dal posizione data in una serie lineare.
@@ -1326,16 +1320,11 @@
 	Run	Esegue un programma esterno.
 	RunAs	Specifica un set di credenziali utente da utilizzare per tutti gli usi successivi di Run e RunWait. Richiede Windows 2000/XP o successivo.
 	RunWait	Esegue un programma esterno e aspetta fino a quando non finisce.
-	Screenshot	Crea un PNG screenshot della zona specificata.
-	Send / SendRaw / SendInput / SendPlay	Invia sequenze di tasti e click del mouse simulato alla finestra attiva.
+	Send / SendRaw	Invia sequenze di tasti e click del mouse simulato alla finestra attiva.
 	SendLevel	Controlli che gli eventi della tastiera e del mouse artificiali vengono ignorati da tasti di scelta rapida e hotstrings.
 	SendMessage	Invia un messaggio a una finestra o di controllo e attende il riconoscimento.
-	SendMode	Rende Invia sinonimo di SendInput o SendPlay piuttosto che il default (SendEvent). Rende inoltre possibile fare clic e mousemove / Cliccare / Trascinare utilizzare il metodo specificato.
 	SetCapslockState	Imposta lo stato del tasto Capslock. Può anche forzare la chiave per rimanere acceso o spento.
-	SetEnv (Var = Value)	Assegna il valore specificato in una variabile.
-	SetFormat	Consente di impostare il formato dei numeri interi e numeri in virgola mobile generati da operazioni matematiche.
 	SetKeyDelay	Imposta il ritardo che si verifica dopo ogni pressione del tasto inviato Invia o ControlSend.
-	SetMouseDelay	Imposta il ritardo che si verifica dopo ogni movimento del mouse o click.
 	SetNumlockState	Imposta lo stato del tasto Bloc Num. Può anche forzare la chiave per rimanere acceso o spento.
 	SetRegView	Consente comandi Registro di sistema in uno script a 32 bit di accedere alla visualizzazione del Registro di 64 bit e viceversa.
 	SetScrollLockState	Imposta lo stato del tasto Scrolllock. Può anche forzare la chiave per rimanere acceso o spento.
@@ -1357,8 +1346,7 @@
 	Sqrt	Restituisce la radice quadrata del numero.
 	StatusBarGetText	Recupera il testo da un controllo standard barra di stato.
 	StatusBarWait	Attende barra di stato della finestra contiene la stringa specificata.
-	StringCaseSense	Determina se i confronti tra stringhe sono case sensitive (di default è "non è case sensitive").
-	StringGetPos / InStr	Recupera la posizione della sottostringa specificata all'interno di una stringa.
+	StringGetPos	Recupera la posizione della sottostringa specificata all'interno di una stringa.
 	StringLeft	Recupera un numero di caratteri a partire dal lato sinistro di una stringa.
 	StringLen / StrLen	Recupera il numero di quanti caratteri sono in una stringa.
 	StringLower	Converte una stringa in caratteri minuscoli.
@@ -1370,27 +1358,22 @@
 	StringTrimRight	Rimuove un numero di caratteri dalla destra di una stringa.
 	StringUpper	Converte una stringa in maiuscolo.
 	StrPut / StrGet	Copia una stringa o da un indirizzo di memoria, opzionale conversione tra le pagine di codice.
-	Suspend	Attivare o disattivare le o tasti di scelta rapida e selezionate hotstrings.
 	SysGet	Recupera risoluzione dello schermo, informazioni multi-monitor, le dimensioni degli oggetti di sistema, e altre proprietà del sistema.
 	Tan	Restituisce la tangente trigonometrica del numero.
 	ToolTip	Crea una finestra sempre in primo piano qualsiasi dello schermo.
 	Transform	Esegue le funzioni ausiliarie per la matematica, le operazioni bit per bit, e compiti come ad esempio ASCII / conversione Unicode.
 	TrayTip	Crea una finestra di messaggio pallone vicino l'icona del vassoio. Richiede Windows 2000/XP o successivo.
 	Trim / LTrim / RTrim	Trims certi caratteri dall'inizio e / o alla fine di una stringa.
-	Try	Guardie una o più istruzioni (comandi o espressioni) contro gli errori di runtime e le eccezioni generate dal comando di tiro.
 	Until	Applica una condizione per la continuazione di un loop o ciclo for.
 	UrlDownloadToFile	Scarica un file da Internet.
 	UserFunction	Erstellt eine Funktionsstruktur.
-	VarSetCapacity	Ingrandisce capacità di ritenzione di una variabile o libera la sua memoria. Normalmente, questo è necessaria solo per circostanze anomale, quali DllCall.
-	While-loop	Esegue una serie di comandi più volte fino a quando l'espressione specificata restituisce false.
+	While	Esegue una serie di comandi più volte fino a quando l'espressione specificata restituisce false.
 	WinActivate	Attiva la finestra specificata (lo rende più importante).
 	WinActivateBottom	Stessa WinActivate tranne che attiva la in basso (meno di recente attiva) la finestra corrispondente, piuttosto che il più in alto.
 	WinActive	Restituisce l'ID univoco (HWND) della finestra attiva se corrisponde ai criteri specificati.
 	WinClose	Chiude la finestra specificata.
 	WinExist	Controlla se esiste la finestra specificata.
 	WinGet	Recupera ID della finestra specificata univoco, ID di processo, nome del processo, o l'elenco dei suoi controlli. Si può anche recuperare un elenco di tutte le finestre che corrispondono ai criteri specificati.
-	WinGetActiveStats	Combina le funzioni di WinGetActiveTitle e WinGetPos in un unico comando.
-	WinGetActiveTitle	Recupera il titolo della finestra attiva.
 	WinGetClass	Recupera il nome della classe della finestra specificata.
 	WinGetPos	Recupera la posizione e la dimensione della finestra specificata.
 	WinGetText	Recupera il testo dalla finestra specificata.

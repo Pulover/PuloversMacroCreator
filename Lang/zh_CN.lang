@@ -244,17 +244,17 @@
 	w_Lang059 =	图片/像素搜索(F7)
 	w_Lang060 =	运行/文件/字符串/其他(F8)
 	w_Lang061 =	循环(F9)
-	w_Lang062 =	转到(Shift+F9)
-	w_Lang063 =	标签(Ctrl+F9)
+	w_Lang062 =	去/标签（Shift + 9）
+	w_Lang063 =	设置定时器（CTRL+ F9）
 	w_Lang064 =	If语句(F10)
 	w_Lang065 =	变量 / 배열(&V) (Shift+F10)
 	w_Lang066 =	函数 / 阵列方法 (Ctrl+F10)
-	w_Lang067 =	IE浏览器(F12)
-	w_Lang068 =	表达式 / COM接口 (التحول+F12)
-	w_Lang069 =	发电子邮件 (F11)
-	w_Lang070 =	Windows消息(Ctrl+F12)
-	w_Lang071 =	添加Windows键到“回放”热键
-	w_Lang072 =	使用操作杆作为热键
+	w_Lang067 =	发电子邮件 (F11)
+	w_Lang068 =	下载文件 (Shift+F11)
+	w_Lang069 =	压缩/解压缩文件 (Ctrl+F11)
+	w_Lang070 =	IE浏览器(F12)
+	w_Lang071 =	表达式 / COM接口 (التحول+F12)
+	w_Lang072 =	Windows消息(Ctrl+F12)
 	w_Lang073 =	添加宏(Ctrl+T)
 	w_Lang074 =	关闭宏(Ctrl+W)
 	w_Lang075 =	复写宏(Ctrl+Shift+D)
@@ -291,8 +291,8 @@
 	w_Lang106 =	加入返程（Ctrl+Shift+ N）
 	w_Lang107 =	转换宏功能（Ctrl+Shift+ C）
 	w_Lang108 =	注释掉选中的行
-	w_Lang109 =	下载文件 (Shift+F11)
-	w_Lang110 =	压缩/解压缩文件 (Ctrl+F11)
+	w_Lang109 =	添加Windows键到“回放”热键
+	w_Lang110 =	使用操作杆作为热键
 	w_Lang111 =	搜索... (按Enter键进入)
 		
 ; 15. Command Windows		
@@ -759,6 +759,7 @@
 	t_Lang204 =	检测隐藏文本
 	t_Lang205 =	标题匹配模式
 	t_Lang206 =	冠军比赛速度
+	t_Lang207 =	客户
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	打开
@@ -939,10 +940,14 @@
 	ApplyL_TT =	从框中插入(Insert)
 	ApplyT_TT =	应用
 	AutoKey_TT =	回放宏的热键
+	Client_TT =	坐标是相对于当前活动窗口的客户区，不包括窗口的标题栏，菜单（如果它有一个标准）和边界。
 	Clip_TT =	临时使用剪贴板发送文本。
 		操作结束时，脚本会
 		恢复剪贴板原来的内容。
 		（留空Text则粘贴当前内容）
+	CM_TT =	Screen: 坐标相对于桌面（整个屏幕）。
+		Window: 坐标相对于活动窗口。
+		Client: 坐标是相对于当前活动窗口的客户区，不包括窗口的标题栏，菜单（如果它有一个标准）和边界。
 	CmdFilter_TT =	按类型过滤
 	CmdSort_TT =	按字母顺序排序
 	ColorPick_TT =	获取屏幕像素
@@ -957,7 +962,9 @@
 		剪贴板的内容）。
 	Ex_AF_TT =	跳过温和的方法而
 		直接使用强制的方法激活窗口。
-	Ex_DH_TT =	设置脚本是否可以“看见”隐藏的窗口。
+	Ex_DH_TT =	确定是否无形窗口“看到”的脚本。
+	Ex_DT_TT =	确定在一个窗口不可见的文本是否被“看到”查找窗口的目的。这会影响诸如IfWinExist和WinActivate命令。
+	Ex_CM_TT =	对于鼠标命令是相对于任一活动窗口或屏幕集坐标模式。
 	Ex_EdScript_TT =	打开外部编辑器
 	Ex_EdVars_TT =	选择要导出的全局变量。
 	Ex_ExecScript_TT =	运行脚本
@@ -989,6 +996,7 @@
 	Ex_SW_TT =	设置自动的延时在
 		每次执行窗口命令（例如WinActivate）后。
 	Ex_UV_TT =	导出全局变量。
+	Ex_WN_TT =	启用或禁用对可能指示错误的具体条件，如输入错误或丢失的“全球性”声明警告。
 	ExpList_TT =	双击进行编辑
 	ExprLink2_TT =	- 不要用百分号这里的变量。
 		- 大多数AHK表达式的支持。
@@ -1193,15 +1201,11 @@
 	ControlSetText	改变控件的文本。
 	CoordMode	为多个命令设置坐标模式，相对于活动窗口还是屏幕。
 	Cos	返回Number的余弦三角函数值。
-	Critical	防止当前线程被其他线程中断。
 	Delete	移除对象键 - 值对。
-	DetectHiddenText	设置在探测窗口时窗口中隐藏的文本是否“可见”。此设置影响例如IfWinExist和WinActivate的这些命令。
-	DetectHiddenWindows	设置脚本是否可以“看见”隐藏的窗口。
 	DllCall	调用DLL文件中的函数，例如标准的Windows API函数。
 	Drive	弹出/收进CD或DVD驱动器托盘，或设置驱动器的卷标。
 	DriveGet	获取计算机驱动器的各种类型的信息。
 	DriveSpaceFree	获取驱动器的可用磁盘空间，单位为 MB。
-	Edit	在关联编辑器中打开当前脚本进行编辑。
 	Else	指定当IF语句计算结果为FALSE时执行的命令。包含多个命令时，需要把它们括在区块（大括号）中。
 	EnvAdd	设置变量的值为它自身加上给定的值的和（还可以从日期-时间值中增加或减去时间）。同义于：var += value。
 	EnvDiv	设置变量的值为它自身除以给定的值。同义于：var /= value。
@@ -1210,7 +1214,6 @@
 	EnvSet	向系统环境中的变量写入值。
 	EnvSub	设置变量的值为它自身减去给定的值（还可以比较日期-时间值）。同义于：var -= value。
 	EnvUpdate	通知操作系统和所有正在运行的程序环境变量已经改变。
-	Exit	退出当前线程或（如果脚本不是持续运行的且不包含热键时）整个脚本。
 	ExitApp	无条件终止脚本。
 	Exp	返回e（其近似值为2.71828182845905）的N次幂。
 	Expression	在一系列的变量，文字串，和/或文字的数字执行一个或多个操作。
@@ -1220,13 +1223,11 @@
 	FileCreateDir	创建文件夹。
 	FileCreateShortcut	创建快捷方式（.lnk）文件。
 	FileDelete	删除一个或多个文件。
-	FileEncoding	为FileRead、FileReadLine、Loop Read、FileAppend和FileOpen设置默认编码。
 	FileGetAttrib	报告文件或文件夹是否为只读、隐藏等。
 	FileGetShortcut	获取快捷方式（.lnk）文件的信息，例如其目标文件。
 	FileGetSize	获取文件的大小。
 	FileGetTime	获取文件或文件夹的时间戳。
 	FileGetVersion	获取文件的版本。
-	FileInstall	封装指定的文件到脚本的已编译版本中。
 	FileMove	移动或重命名一个或多个文件。
 	FileMoveDir	移动文件夹及其所有子文件夹和文件。它还可以重命名文件夹。
 	FileOpen	提供面向对象的文件I/O。
@@ -1253,18 +1254,18 @@
 	GroupClose	关闭刚刚由GroupActivate或GroupDeactivate激活的活动窗口。接着激活系列中的下一个窗口。它还可以关闭组中所有窗口。
 	GroupDeactivate	类似于GroupActivate，不同的是它激活不在组中的下一个窗口。
 	HasKey	返回true如果密钥与一个值相关联。
-	if	指定在变量与值比较结果为TRUE时执行的命令。包含多个命令时，需要把它们括在区块（大括号）中。
-	if (expression)	指定在表达式计算结果为TRUE时执行的命令。
+	If	指定在变量与值比较结果为TRUE时执行的命令。包含多个命令时，需要把它们括在区块（大括号）中。
+	If (expression)	指定在表达式计算结果为TRUE时执行的命令。
 	If A_Index	检查当前循环重复数是否匹配指定的数字。
 	If Clipboard	检查剪贴板文本是否匹配指定的字符串。
 	If ErrorLevel	检查是否在屏幕中找到指定的图片或像素。
 	If var [not] between	根据数值或字母顺序检查变量的内容是否在两个值之间（包含边界）。
-	If var [not] in/contains MatchList 	检查变量的内容是否匹配列表中的某项。
+	If var [not] in / If var [not] contains MatchList	检查变量的内容是否匹配列表中的某项。
 	If var is [not] type	检查变量的内容是否为数值、大写字母或其他。
 	IfEqual / IfNotEqual	比较变量和值判断它们是否相等。同义于：if var = value | if var <> value
 	IfExist / IfNotExist / FileExist	检查文件或文件夹是否存在。
 	IfGreater / IfGreaterOrEqual	比较变量和某个值。同义于：if var > value | if var >= value
-	IfInString / IfNotInString / InStr	检查变量是否包含指定的字符串。
+	IfInString / IfNotInString	检查变量是否包含指定的字符串。
 	IfLess / IfLessOrEqual	比较变量和某个值。同义于：if var < value | if var <= value
 	IfMsgBox	检查用户在最近的MsgBox命令中点击了哪个按钮。
 	IfWinActive / IfWinNotActive	检查指定的窗口是否存在且当前是否活动（在最前面）。
@@ -1277,9 +1278,8 @@
 	InputBox	显示输入框让用户输入字符串。
 	InsertAt	插入一个或多个值，在一个线性阵列内的给定位置。
 	InStr	搜索字符串的出现位置，从左边或右边开始。
-	KeyHistory	显示脚本信息和最近键击和鼠标点击的历史。
 	KeyWait	等待按键或鼠标/操纵杆按钮被松开或按下。
-	Labels	标签用来标识代码行，可以作为Goto目标或组成子程序。
+	Label	标签用来标识代码行，可以作为Goto目标或组成子程序。
 	Length	返回开始位置1处的线性阵列的长度。
 	ListVars	显示脚本的变量：他们的名字和当前内容。
 	Ln	返回Number的自然对数（底数为e）。
@@ -1290,18 +1290,13 @@
 	Loop (read file contents)	逐行读取文本文件的内容，每次一行（比FileReadLine执行的更好）。
 	Loop (registry)	获取指定的注册表子键的内容，每次一个项目。
 	MaxIndex	返回的最大整数键。
-	Menu	创建、删除、修改和显示菜单和菜单项。改变托盘图标和它的提示。控制是否可以打开已编译脚本的主窗口。
 	MinIndex	返回最低整数键。
 	Mod	求模。返回被除数Dividend除以除数Divisor后得到的余数。
-	MouseClickDrag	点击并按住指定的鼠标按钮，接着移动鼠标到目标坐标，然后松开按钮。
 	MouseGetPos	获取鼠标光标的当前位置以及鼠标当前悬停的窗口和控件（可选的）。
-	MouseMove	移动鼠标光标。
 	MsgBox	在含有一个或多个按钮（例如“是”和“否”）的小窗口中显示指定的文本 。
 	NumGet	返回在指定地址+偏移的位置存储的二进制数。
 	NumPut	以二进制格式把Number存储到指定地址+偏移的位置并返回刚写入项右边的地址。
 	Object	创建一个脚本化的关联数组。
-	OnExit	指定在脚本退出时自动运行的子程序。
-	OnMessage	指定当脚本接收到特定消息时自动调用的函数。
 	Ord	返回字符串的第一个字符的顺序值（数字字符代码）。
 	OutputDebug	发送字符串到调试器（如果有的话）显示出来。
 	Parameter	添加一个参数的函数。
@@ -1317,7 +1312,6 @@
 	RegDelete	从注册表中删除子键或值。
 	RegExMatch	判断字符串是否包含某个匹配模式（正则表达式）。
 	RegExReplace	替换字符串中匹配模式（正则表达式）出现的地方。
-	RegisterCallback	创建机器码地址，当它被调用时会重定向到脚本中的函数。
 	RegRead	从注册表读取值。
 	RegWrite	写入值到注册表。
 	RemoveAt	移除成线性阵列的给定的位置的项目。
@@ -1326,16 +1320,11 @@
 	Run	运行外部程序。
 	RunAs	指定在后续所有的Run和RunWait中使用的一组用户凭据。需要Windows 2000/XP或更高版本。
 	RunWait	运行外部程序并等待其结束。
-	Screenshot	截取指定区域图片并保存为PNG文件。
-	Send / SendRaw / SendInput / SendPlay	发送模拟键击和鼠标点击到活动窗口。
+	Send / SendRaw	发送模拟键击和鼠标点击到活动窗口。
 	SendLevel	控制热键和热字串是否忽略模拟的键盘和鼠标事件。
 	SendMessage	发送消息到窗口或控件并等待确认。
-	SendMode	让Send和SendInput或SendPlay具有相同的功能而不是默认的（SendEvent）。也使Click和MouseMove/Click/Drag使用指定的方法。
 	SetCapslockState	设置Capslock键的状态。还可以强制此键保持打开或关闭状态。
-	SetEnv (Var = Value)	把指定的值赋给变量。
-	SetFormat	设置数学运算得到的整数和浮点数的格式。
 	SetKeyDelay	设置每次Send或ControlSend发送键击后自动的延时。
-	SetMouseDelay	设置每次鼠标移动或点击后自动的延时。
 	SetNumlockState	设置Numlock键的状态。还可以强制此键保持打开或关闭状态。
 	SetRegView	允许32位脚本中的注册表命令访问64位注册表视图，反之亦然。
 	SetScrollLockState	设置Scrolllock键的状态。还可以强制此键保持打开或关闭状态。
@@ -1357,8 +1346,7 @@
 	Sqrt	返回Number的平方根。
 	StatusBarGetText	获取标准状态栏控件的文本。
 	StatusBarWait	等待窗口的状态栏包含指定的字符串。
-	StringCaseSense	设置在字符串比较中是否区分大小写（默认为“不区分大小写”）。
-	StringGetPos / InStr	获取指定的子字符串在某个字符串中的位置。
+	StringGetPos	获取指定的子字符串在某个字符串中的位置。
 	StringLeft	从字符串的左边提取一些字符。
 	StringLen / StrLen	获取字符串中包含的字符数量。
 	StringLower	把字符串中的英文字母转换成小写。
@@ -1370,27 +1358,22 @@
 	StringTrimRight	从字符串的右边移除一些字符。
 	StringUpper	把字符串中的英文字母转换成大写。
 	StrPut / StrGet	复制字符串到内存地址或来自内存地址，并可选地对其在不同代码页间进行转换。
-	Suspend	禁用或启用所有或已选的热键和热字串。
 	SysGet	获取屏幕分辨率、多显示器信息、系统对象的尺寸和其他系统属性。
 	Tan	返回Number的正切三角函数值。
 	ToolTip	在屏幕的任意位置创建总是置顶的窗口。
 	Transform	执行各种数学计算、按位运算以及类似ASCII/Unicode转换的任务。
 	TrayTip	在托盘图标附近创建气球提示窗口。需要Windows 2000/XP或更高版本。
 	Trim / LTrim / RTrim	移除字符串的开始和/或末尾的某些字符。
-	Try	守护一个或多个语句（命令或表达式）以防备由throw命令抛出的运行时错误和异常。
 	Until	根据条件判断是否继续执行Loop或For循环。
 	UrlDownloadToFile	从互联网下载文件。
 	UserFunction	创建一个功能结构。
-	VarSetCapacity	增加或清空变量占用的内存。通常只有在特殊情况下才需要，例如DllCall。
-	While-loop	执行一系列命令，直到指定的表达式的值为false。
+	While	执行一系列命令，直到指定的表达式的值为false。
 	WinActivate	激活指定的窗口（让它置于最前面）。
 	WinActivateBottom	和WinActivate一样，只是此命令激活最下面的（最早激活的）匹配窗口而不是最上面的。
 	WinActive	返回匹配指定条件的活动窗口的 唯一 ID（HWND）。
 	WinClose	关闭指定的窗口。
 	WinExist	检查指定的窗口是否存在。
 	WinGet	获取指定窗口的唯一 ID、进程 ID、进程名或控件列表。它还可以获取匹配指定条件的所有窗口的列表。
-	WinGetActiveStats	组合了WinGetActiveTitle和WinGetPos两个命令的功能。
-	WinGetActiveTitle	获取活动窗口的标题。
 	WinGetClass	获取指定窗口的类名。
 	WinGetPos	获取指定窗口的位置和大小。
 	WinGetText	获取指定窗口的文本。

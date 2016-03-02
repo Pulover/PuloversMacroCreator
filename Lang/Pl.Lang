@@ -244,17 +244,17 @@
 	w_Lang059 =	Image / Pixel Szukaj (F7)
 	w_Lang060 =	Uruchom / Plik / String / Misc. (F8)
 	w_Lang061 =	Loop (F9)
-	w_Lang062 =	Goto (Shift+F9)
-	w_Lang063 =	Label (Ctrl+F9)
+	w_Lang062 =	Przejdź Do / Etykiety (Shift + F9)
+	w_Lang063 =	Ustawić Czasomierz (Ctrl + F9)
 	w_Lang064 =	If (F10)
 	w_Lang065 =	Zmiennych / Macierze (Shift+F10)
 	w_Lang066 =	Funkcje / Metody tablicy (Ctrl+F10)
-	w_Lang067 =	Internet Explorer (F12)
-	w_Lang068 =	Wyrażenie / Interfejs COM (Shift+F12)
-	w_Lang069 =	Wysłać email (F11)
-	w_Lang070 =	Komunikaty Windows (Ctrl+F12)
-	w_Lang071 =	Dodaj klawisz Windows na "Zagraj" skrótu
-	w_Lang072 =	Użyj przycisku joysticka jako skrótu
+	w_Lang067 =	Wysłać email (F11)
+	w_Lang068 =	Pobieranie plików (Shift+F11)
+	w_Lang069 =	Zip / Rozpakuj pliki (Ctrl+F11)
+	w_Lang070 =	Internet Explorer (F12)
+	w_Lang071 =	Wyrażenie / Interfejs COM (Shift+F12)
+	w_Lang072 =	Komunikaty Windows (Ctrl+F12)
 	w_Lang073 =	Dodaj Macro (Ctrl+T)
 	w_Lang074 =	Zamknij makro (Ctrl+W)
 	w_Lang075 =	Powiel makro (Ctrl+Shift+D)
@@ -291,8 +291,8 @@
 	w_Lang106 =	Dodaj Return (Ctrl+Shift+N)
 	w_Lang107 =	Konwersja Makro Function (Ctrl+Shift+C)
 	w_Lang108 =	Komentarz się nie zaznaczonych wierszy
-	w_Lang109 =	Pobieranie plików (Shift+F11)
-	w_Lang110 =	Zip / Rozpakuj pliki (Ctrl+F11)
+	w_Lang109 =	Dodaj klawisz Windows na "Zagraj" skrótu
+	w_Lang110 =	Użyj przycisku joysticka jako skrótu
 	w_Lang111 =	Szukaj... (Naciśnij klawisz Enter, aby przejść)
 		
 ; 15. Command Windows		
@@ -759,6 +759,7 @@
 	t_Lang204 =	Wykrywania Ukrytego Tekstu
 	t_Lang205 =	Tryb Mecz Tytuł
 	t_Lang206 =	Tytułowy Dopasowanie Prędkości
+	t_Lang207 =	Klient
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Otwarte
@@ -939,10 +940,14 @@
 	ApplyL_TT =	Wstaw z pudełkiem (Insert)
 	ApplyT_TT =	Zastosować
 	AutoKey_TT =	Skrót grać makro
+	Client_TT =	Współrzędne są względem obszaru aktywnego okna klienta, co wyklucza okna pasek tytułowy, menu (jeśli ma jednego standardowego) oraz granice.
 	Clip_TT =	Czasowo używa Schowka wysłać tekst.
 		Po zakończeniu operacji, skrypt
 		przywraca oryginalną zawartość schowka.
 		(Pozostaw puste, aby wkleić tekst aktualnej zawartości)
+	CM_TT =	Screen: Współrzędne są w stosunku do pulpitu (ekranu cały).
+		Window: Współrzędne są w stosunku do aktywnego okna.
+		Client: Współrzędne są względem obszaru aktywnego okna klienta, co wyklucza okna pasek tytułowy, menu (jeśli ma jednego standardowego) oraz granice.
 	CmdFilter_TT =	Filtrować według typu
 	CmdSort_TT =	Sortuj alfabetycznie
 	ColorPick_TT =	Dostać piksel na ekranie
@@ -957,7 +962,9 @@
 		zawartość schowka).
 	Ex_AF_TT =	Pomija delikatną metodę aktywacji okna
 		i idzie prosto do silnego metody.
-	Ex_DH_TT =	Określa, czy okna są niewidoczne "widziana" przez skrypt.
+	Ex_DH_TT =	Określa, czy okna są niewidoczne "widziane" przez skrypt.
+	Ex_DT_TT =	Określa, czy niewidoczne tekstu w oknie jest "widziany" w celu znalezienia okno. Ma to wpływ na polecenia, takie jak IfWinExist i WinActivate.
+	Ex_CM_TT =	Ustawia tryb współrzędnych Komendy mysz się w stosunku do obu aktywnego okna lub ekranu.
 	Ex_EdScript_TT =	Otwórz w edytorze zewnętrznym
 	Ex_EdVars_TT =	Wybierz zmienne globalne być wyeksportowane.
 	Ex_ExecScript_TT =	Uruchom skrypt
@@ -989,6 +996,7 @@
 	Ex_SW_TT =	Ustawia opóźnienie, które pojawi się po
 		każda komenda okienkowy, jak WinActivate.
 	Ex_UV_TT =	Wyeksportować zmienne globalne.
+	Ex_WN_TT =	Włącza lub wyłącza ostrzeżenia dla szczególnych warunków, które mogą wskazywać na błąd, takich jak literówki lub brakującej "globalnej" deklaracją.
 	ExpList_TT =	Kliknij dwukrotnie, aby edytować
 	ExprLink2_TT =	- NIE DOŁĄCZYĆ ZMIENNYCH W ZNAKI PROCENT TUTAJ.
 		- Większość wyrażeń AHK są obsługiwane.
@@ -1193,15 +1201,11 @@
 	ControlSetText	Zmienia tekst kontrolki .
 	CoordMode	Zestawy koordynować trybu dla różnych poleceń się w stosunku do obu aktywnego okna lub ekranu .
 	Cos	Zwraca cosinus trygonometryczne numer .
-	Critical	Zapobiega bieżącego wątku z przerywane przez inne wątki .
 	Delete	Usuwa par klucz-wartość z obiektu.
-	DetectHiddenText	Określa, czy niewidoczny tekst w oknie jest "widziany " w celu znalezienia okno. Ma to wpływ na takie polecenia jak IfWinExist i WinActivate .
-	DetectHiddenWindows	Określa, czy niewidzialne okna są "widziane " przez skrypt .
 	DllCall	Wywołuje funkcję wewnątrz DLL , na przykład standardowej funkcji API systemu Windows.
 	Drive	Wysuwa / wsuwa tackę napędu CD lub DVD , lub ustawia napędu etykietę woluminu .
 	DriveGet	Pobiera różne rodzaje informacji o dysku komputera (-ów) .
 	DriveSpaceFree	Pobiera wolnego miejsca na dysku w megabajtach .
-	Edit	Otwiera bieżący skrypt do edycji w dołączonym edytorze.
 	Else	Określapolecenie (y) do wykonania , jeśliIF- oświadczenie ma wartość false. Jeżeli więcej niż jedno polecenie jest obecny , należy ująć je w bloku (szelki) .
 	EnvAdd	Ustawia zmienną sumie sama plus wartość danej (można również dodać lub odjąć czas z wartości data-czas) . Synonim : Var+Value = .
 	EnvDiv	Ustawia zmienną na sobie podzielony przez podaną wartość. Synonim : Var / Value = .
@@ -1210,7 +1214,6 @@
 	EnvSet	Zapisujewartość do zmiennej zawartej w otoczeniu .
 	EnvSub	Ustawia zmienną na sobie minus danej wartości (można również porównać wartości daty i godziny) . Synonim : Var - Value = .
 	EnvUpdate	Powiadamia OS i wszystkie uruchomione aplikacje , że zmienna (s) uległy zmianie .
-	Exit	Zamykabieżący wątek lub (jeśli skrypt nie jest trwały i nie zawiera żadnych skrótów)cały skrypt .
 	ExitApp	Kończy skrypt bezwarunkowo.
 	Exp	E Returns (co stanowi około +2,71828182845905) podniesione do potęgi .
 	Expression	Wykonuje jedną lub więcej operacji na serii zmiennych, tekstowymi i / lub numerów dosłownych.
@@ -1220,13 +1223,11 @@
 	FileCreateDir	Tworzy folder .
 	FileCreateShortcut	Tworzy skrótów (. Lnk) plik .
 	FileDelete	Usuwa jeden lub więcej plików .
-	FileEncoding	Ustawianie domyślnego kodowania dla FILEREAD , FileReadLine , Loop czytać, FileAppend i FileOpen .
 	FileGetAttrib	Wskazuje, czyplik lub folder jest tylko do odczytu , ukryty , itp.
 	FileGetShortcut	Pobiera informacje o skrót (. Lnk) pliku , takie jak jego pliku docelowego.
 	FileGetSize	Pobiera rozmiar pliku.
 	FileGetTime	Pobiera datetime pieczęć pliku lub folderu .
 	FileGetVersion	Pobiera wersję pliku .
-	FileInstall	Zawiera określony plik wewnątrz skompilowanej wersji skryptu.
 	FileMove	Przenosi lub zmienia nazwę jednego lub więcej plików .
 	FileMoveDir	Przenosi folder wraz ze wszystkimi jego podfolderów i plików. Można również zmienić nazwę folderu .
 	FileOpen	Zapewnia obiektowy plik I / O.
@@ -1253,18 +1254,18 @@
 	GroupClose	Zamyka aktywne okno , czy to właśnie aktywowane przez GroupActivate lub GroupDeactivate . Następnie aktywuje się następne okno w serii . Można również zamknąć wszystkie okna w grupie.
 	GroupDeactivate	Podobne do GroupActivate wyjątkiem aktywuje następne okno nie w grupie.
 	HasKey	Zwraca true, jeśli klucz jest związane z wartością.
-	if	Określapolecenie (y) do wykonania , jeśliporównanie zmiennej do wartości evalutes TRUE . Jeżeli więcej niż jedno polecenie jest obecny , należy ująć je w bloku (szelki) .
-	if (expression)	Określapolecenie (y) do wykonania , jeśliwyrażenie ma wartość TRUE .
+	If	Określapolecenie (y) do wykonania , jeśliporównanie zmiennej do wartości evalutes TRUE . Jeżeli więcej niż jedno polecenie jest obecny , należy ująć je w bloku (szelki) .
+	If (expression)	Określapolecenie (y) do wykonania , jeśliwyrażenie ma wartość TRUE .
 	If A_Index	Sprawdza, czy aktualnej iteracji pętli mecze na określony numer.
 	If Clipboard	Sprawdza, czytekst Schowek jest mecze określony ciąg .
 	If ErrorLevel	Sprawdza, czy określony obraz lub piksela znaleziono na ekranie .
 	If var [not] between	Sprawdza, czy zmienna jest zawartość są numerycznie lub alfabetycznie pomiędzy dwoma wartościami (włącznie) .
-	If var [not] in/contains MatchList 	Sprawdza, czy zmienna jest zawartość dopasować jedną z pozycji na liście.
+	If var [not] in / If var [not] contains MatchList	Sprawdza, czy zmienna jest zawartość dopasować jedną z pozycji na liście.
 	If var is [not] type	Sprawdza, czy zmienna jest zawartość jest numeryczny , duże , itp.
 	IfEqual / IfNotEqual	Porównuje zmiennej do wartości równości . Synonim : jeśli Var = Value | jeśli Var < > wartość .
 	IfExist / IfNotExist / FileExist	Sprawdza istnienie pliku lub folderu .
 	IfGreater / IfGreaterOrEqual	Porównuje zmienną na wartość . Synonim : jeśli Var > Wartość | jeśli Var > Value = .
-	IfInString / IfNotInString / InStr	Sprawdza, czy zmienna zawiera określony ciąg znaków .
+	IfInString / IfNotInString	Sprawdza, czy zmienna zawiera określony ciąg znaków .
 	IfLess / IfLessOrEqual	Porównuje zmienną na wartość . Synonim : jeśli Var < Value | jeśli Var < = wartość .
 	IfMsgBox	Sprawdza, który przycisk został wciśnięty przez użytkownika w ciągu ostatnich poleceniem MsgBox .
 	IfWinActive / IfWinNotActive	Sprawdza, czyokreślony okno istnieje i jest aktywna (przede wszystkim) .
@@ -1277,9 +1278,8 @@
 	InputBox	Wyświetlapole wprowadzania poprosić użytkownika o wprowadzenie ciągu znaków .
 	InsertAt	Wstawienie jednego lub więcej wartości w danej pozycji w liniową matrycę.
 	InStr	Wyszukiwania dla danego wystąpienia łańcucha , z lewej lub z prawej strony.
-	KeyHistory	Wyświetlanie informacji skrypt i historia z ostatnich klawiszy i kliknięć myszką.
 	KeyWait	Czeka na przycisku klucza lub mysz / joystick być wydany lub sprasowany.
-	Labels	Etykieta określa linię kodu, i może być stosowany jako cel Goto, lub tworzenia podprogram.
+	Label	Etykieta określa linię kodu, i może być stosowany jako cel Goto, lub tworzenia podprogram.
 	Length	Zwraca długość układu liniowego rozpoczynającego się w pozycji 1.
 	ListVars	Wyświetla zmiennych do skryptu: ich nazwiska i aktualną zawartość.
 	Ln	Zwraca logarytm naturalny (e baza) z numeru.
@@ -1290,18 +1290,13 @@
 	Loop (read file contents)	Pobiera wiersze w pliku tekstowym, po jednym na raz (działa lepiej niż FileReadLine).
 	Loop (registry)	Pobiera zawartość określonego podklucz rejestru, jeden element naraz.
 	MaxIndex	Zwraca największy klucz całkowitą.
-	Menu	Tworzy, usuwa, zmienia i wyświetla menu i ich elementów. Zmienia ikonę w zasobniku i jego tooltip. Określa, czy główne okno skompilowanego skryptu można otworzyć.
 	MinIndex	Zwraca najniższy klucz całkowitą.
 	Mod	Modulo. Zwraca resztę, gdy dywidendy dzieli się przez dzielnik.
-	MouseClickDrag	Kliknięcia i posiada określony przycisk myszy, przesuwa kursor do współrzędnych docelowego, a następnie zwalnia przycisk.
 	MouseGetPos	Pobiera bieżącą pozycję kursora myszy i ewentualnie które okno i kontroli jest aktywując.
-	MouseMove	Przesunięcie kursora myszy.
 	MsgBox	Wyświetla określony tekst w małym okienku zawierającego jeden lub więcej przycisków (np. Tak i Nie).
 	NumGet	Zwraca liczbę binarną przechowywane na wskazany adres+offsetu.
 	NumPut	Sklepy Numer w formacie binarnym na wskazany adres+offset i zwraca adres z prawej pozycji tylko w formie pisemnej.
 	Object	Tworzy skrypty asocjacyjnej.
-	OnExit	Określa podprogramu, aby uruchomić się automatycznie po zamknięciu skryptów.
-	OnMessage	Określa funkcję połączenie automatycznie po skrypt otrzymuje określoną wiadomość.
 	Ord	Zwraca wartość porządkową (numeryczny kodu znaków) pierwszego znaku w ciągu znaków.
 	OutputDebug	Wysyła ciąg do debuggera (jeśli w ogóle) na wyświetlaczu.
 	Parameter	Dodaje parametr do funkcji.
@@ -1317,7 +1312,6 @@
 	RegDelete	Usuwa podklucz lub wartość z rejestru.
 	RegExMatch	Określa, czy ciąg zawiera wzór (wyrażenie regularne).
 	RegExReplace	Zastępuje wystąpień wzorca (wyrażenie regularne) wewnątrz ciągu.
-	RegisterCallback	Tworzy kodu maszynowego adres, że po nazwie, przekierowuje połączenia do funkcji w skrypcie.
 	RegRead	Odczytuje wartości z rejestru.
 	RegWrite	Zapisuje wartość do rejestru.
 	RemoveAt	Usuwa elementy z danej pozycji w układzie liniowym.
@@ -1326,16 +1320,11 @@
 	Run	Uruchamia program zewnętrzny.
 	RunAs	Określa zestaw poświadczeń użytkownika do korzystania dla wszystkich kolejnych zastosowań Run i RunWait. Wymaga systemu Windows 2000/XP lub nowszy.
 	RunWait	Uruchamia zewnętrzny program i czeka aż zakończy.
-	Screenshot	Tworzy zrzut ekranu PNG w określonym miejscu.
-	Send / SendRaw / SendInput / SendPlay	Wysyła symulowanych naciśnięć klawiszy i kliknięć myszką do aktywnego okna.
+	Send / SendRaw	Wysyła symulowanych naciśnięć klawiszy i kliknięć myszką do aktywnego okna.
 	SendLevel	Kontrole, które sztuczne zdarzenia myszy i klawiatury są ignorowane przez klawisze i hotstrings.
 	SendMessage	Wysyła komunikat do okna lub kontroli i czeka na potwierdzenie.
-	SendMode	Sprawia Wyślij synonimem SendInput lub SendPlay zamiast domyślnego (sendEvent). Również sprawia Kliknij i mousemove / Kliknij / Przeciągnij stosować odpowiedni sposób.
 	SetCapslockState	Ustawia stan klawisza CapsLock. Można także wymusić, aby zatrzymać lub wyłączyć.
-	SetEnv (Var = Value)	Przypisuje określoną wartość do zmiennej.
-	SetFormat	Ustawia format liczby całkowite i zmiennoprzecinkowe generowanego przez operacje matematyczne.
 	SetKeyDelay	Ustawia opóźnienie, które pojawią się po każdym naciśnięciu klawisza wysłana przez Wyślij lub ControlSend.
-	SetMouseDelay	Ustawia opóźnienie, które pojawią się po każdym ruchu myszy lub kliknij.
 	SetNumlockState	Ustawia stan klawisza NumLock. Można także wymusić, aby zatrzymać lub wyłączyć.
 	SetRegView	Pozwala rejestru poleceń w skrypcie 32-bitowym, aby przejść do widoku 64-bitowego rejestru i vice versa.
 	SetScrollLockState	Ustawia stan klawisza ScrollLock. Można także wymusić, aby zatrzymać lub wyłączyć.
@@ -1357,8 +1346,7 @@
 	Sqrt	Zwraca pierwiastek kwadratowy z numeru.
 	StatusBarGetText	Pobiera tekst ze standardowego sterowania na pasku stanu.
 	StatusBarWait	Czeka, aż okno za pasek stanu zawiera określony ciąg znaków.
-	StringCaseSense	Określa, czy porównywanie stringów jest wielkość liter (domyślnie jest to "nie uwzględnia wielkości liter").
-	StringGetPos / InStr	Pobiera pozycję określonego podciągu w ciągu znaków.
+	StringGetPos	Pobiera pozycję określonego podciągu w ciągu znaków.
 	StringLeft	Pobiera liczbę znaków z lewej strony łańcucha.
 	StringLen / StrLen	Pobiera liczbę, ile znaków jest w ciągu znaków.
 	StringLower	Konwertuje ciąg znaków na małe litery.
@@ -1370,27 +1358,22 @@
 	StringTrimRight	Usuwa liczbę znaków z prawej strony łańcucha.
 	StringUpper	Konwertuje ciąg znaków na wielkie litery.
 	StrPut / StrGet	Kopiuje łańcuch lub z adresu pamięci, opcjonalnego przekształcenie go między stron kodowych.
-	Suspend	Wyłącza lub włącza wszystkie lub wybrane skróty klawiszowe i hotstrings.
 	SysGet	Pobiera rozdzielczość ekranu, multi-monitora info, wymiary obiektów systemowych oraz inne informacje systemowe.
 	Tan	Zwraca tangens trygonometryczne numer.
 	ToolTip	Tworzy zawsze na wierzchu okna w dowolnym miejscu na ekranie.
 	Transform	Wykonuje różne funkcje matematyczne, operacje bitowe i zadania, takie jak konwersja ASCII / Unicode.
 	TrayTip	Tworzy okno dymek z komunikatem obok ikony na pasku zadań. Wymaga systemu Windows 2000/XP lub nowszy.
 	Trim / LTrim / RTrim	Wzory określone znaki z początku i / lub na końcu łańcucha.
-	Try	Straż jedno lub więcej oświadczeń (komendy lub wyrażenia) przed błędami runtime i wyjątki rzucane przez rzutów polecenia.
 	Until	Obowiązuje warunek do kontynuacji pętli lub pętli for.
 	UrlDownloadToFile	Pobiera plik z Internetu.
 	UserFunction	Tworzy strukturę funkcji.
-	VarSetCapacity	Zwiększa zdolność zatrzymywania zmiennej lub uwalnia swoją pamięć. Zwykle jest to konieczne tylko w przypadku zaistnienia nadzwyczajnych okoliczności, takich jak DllCall.
-	While-loop	Wykonuje serię poleceń, aż określona wyrażenia jest fałszywa.
+	While	Wykonuje serię poleceń, aż określona wyrażenia jest fałszywa.
 	WinActivate	Uaktywnia określone okno (czyni to przede wszystkim).
 	WinActivateBottom	Tak samo jak WinActivate wyjątkiem tego, że aktywuje najniżej (najmniej ostatnio aktywne) pasujące okno niż najwyższa.
 	WinActive	Zwraca unikatowy identyfikator (HWND) w aktywnym oknie, czy pasuje do podanych kryteriów.
 	WinClose	Zamyka określonego okna.
 	WinExist	Sprawdza, czy określony okno istnieje.
 	WinGet	Pobiera określonym oknie unikalny identyfikator, identyfikator procesu, nazwę procesu, lub listę swoich kontroli. Można go również pobrać listę wszystkich okien spełniających określone kryteria.
-	WinGetActiveStats	Łączy w sobie funkcje WinGetActiveTitle i WinGetPos w jedno polecenie.
-	WinGetActiveTitle	Pobiera tytuł aktywnego okna.
 	WinGetClass	Pobiera określonym oknie nazwę klasy.
 	WinGetPos	Pobiera pozycję i rozmiar wybranego okna.
 	WinGetText	Pobiera tekst z określonym oknie.

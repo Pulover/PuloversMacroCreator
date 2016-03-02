@@ -1055,10 +1055,10 @@ PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars, CustomVars, Runnin
 		Loop, 4
 		{
 			If (Par%A_Index% = "")
-				Par%A_Index% := "Null"
+				Par%A_Index% := "_null"
 		}
 		MouseGetPos, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%
-		Null := ""
+		_null := ""
 		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_PixelGetColor:
@@ -1124,12 +1124,29 @@ PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars, CustomVars, Runnin
 	pb_FileCreateDir:
 		FileCreateDir, %Step%
 	return
+	pb_FileCreateShortcut:
+		FileCreateShortcut, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%, %Par6%, %Par7%, %Par8%, %Par9%
+	return
 	pb_FileDelete:
 		FileDelete, %Step%
 	return
 	pb_FileGetAttrib:
 		FileGetAttrib, %Par1%, %Par2%
 		Try SavedVars(Par1,,, RunningFunction)
+	return
+	pb_FileGetShortcut:
+		Loop, 8
+		{
+			If (Par%A_Index% = "")
+				Par%A_Index% := "_null"
+		}
+		FileGetShortcut, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%, %Par6%, %Par7%, %Par8%
+		_null := ""
+		Loop, 7
+		{
+			AI := A_Index + 1
+			Try SavedVars(Par%AI%)
+		}
 	return
 	pb_FileGetSize:
 		FileGetSize, %Par1%, %Par2%, %Par3%
@@ -1250,12 +1267,15 @@ PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars, CustomVars, Runnin
 		Loop, 6
 		{
 			If (Par%A_Index% = "")
-				Par%A_Index% := "Null"
+				Par%A_Index% := "_null"
 		}
 		SplitPath, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%, %Par6%
-		Null := ""
+		_null := ""
 		Loop, 5
-			Try SavedVars(Par%A_Index%)
+		{
+			AI := A_Index + 1
+			Try SavedVars(Par%AI%)
+		}
 	return
 	pb_InputBox:
 		InputBox, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%, %Par6%, %Par7%, %Par8%,, %Par10%, %Par11%

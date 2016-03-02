@@ -117,6 +117,7 @@
 
 	LVLoad(List, Code)
 	{
+		Global sciPrev, sciPrevF, UserDefFunctions
 		Static _x := Chr(2), _y := Chr(3), _z := Chr(4)
 		
 		Critical
@@ -134,6 +135,16 @@
 		,	((Col[6] = "LoopRegistry") && (RegExMatch(Col[3], "```, \d```, \d"))) ? (Col[3] := this.FormatCmd(Col[3], "Reg")) : ""
 		,	((Col[6] = "Variable") && (Col[2] != "[Assign Variable]")) ? (Col[6] := "Function") : ""
 		,	Col[6] := RegExReplace(Col[6], "\s", "_")
+			If (Col[6] = "UserFunction")
+			{
+				If (!InStr(UserDefFunctions, " " Col[3] " "))
+				{
+					StringLower, UserDefFunc, % Col[3]
+					UserDefFunctions .= UserDefFunc " "
+				,	sciPrev.SetKeywords(0x6, UserDefFunctions)
+				,	sciPrevF.SetKeywords(0x6, UserDefFunctions)
+				}
+			}
 			If (Code.Version = "")
 			{
 				Col[3] := CheckForExp(Col[3])
