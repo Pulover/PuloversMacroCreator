@@ -5,8 +5,8 @@
 ; 01. Main Menu		
 	m_Lang001 =	&Berkas
 	m_Lang002 =	&Makro
-	m_Lang003 =	&Fungsi
-	m_Lang004 =	&Perintah
+	m_Lang003 =	&Perintah
+	m_Lang004 =	&Fungsi
 	m_Lang005 =	M&engedit
 	m_Lang006 =	Mem&ilih
 	m_Lang007 =	Me&lihat
@@ -71,7 +71,7 @@
 	i_Lang017 =	&Download file
 	i_Lang018 =	&Zip / file Unzip
 	i_Lang019 =	Internet E&xplorer
-	i_Lang020 =	&COM Antarmuka
+	i_Lang020 =	Ekspresi / &COM Antarmuka
 	i_Lang021 =	&Jendela Pesan
 	i_Lang022 =	Cari perinta&h
 		

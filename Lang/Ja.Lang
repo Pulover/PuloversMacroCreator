@@ -5,8 +5,8 @@
 ; 01. Main Menu		
 	m_Lang001 =	ファイル(&F)
 	m_Lang002 =	マクロ(&M)
-	m_Lang003 =	機能(&U)
-	m_Lang004 =	コマンド(&C)
+	m_Lang003 =	コマンド(&C)
+	m_Lang004 =	機能(&U)
 	m_Lang005 =	編集(&E)
 	m_Lang006 =	選択する(&S)
 	m_Lang007 =	表示(&V)
@@ -71,7 +71,7 @@
 	i_Lang017 =	ダウンロードファイル(&N)
 	i_Lang018 =	郵便番号/解凍ファイル(&Z)
 	i_Lang019 =	インターネットエクスプローラ(&T)
-	i_Lang020 =	COMインタフェース(&O)
+	i_Lang020 =	表現 / COMインタフェース(&O)
 	i_Lang021 =	Windowsメッセージ(&D)
 	i_Lang022 =	コマンドを見つける(&F)
 		

@@ -5,8 +5,8 @@
 ; 01. Main Menu		
 	m_Lang001 =	&Tập tin
 	m_Lang002 =	&Vĩ mô
-	m_Lang003 =	&Chức năng
-	m_Lang004 =	&Lệnh
+	m_Lang003 =	&Lệnh
+	m_Lang004 =	&Chức năng
 	m_Lang005 =	C&hỉnh sửa
 	m_Lang006 =	Ch&ọn
 	m_Lang007 =	&Xem
@@ -71,7 +71,7 @@
 	i_Lang017 =	T&ải file
 	i_Lang018 =	&Zip / Giải nén file
 	i_Lang019 =	Int&ernet Explorer
-	i_Lang020 =	C&OM giao diện
+	i_Lang020 =	Bi&ểu / COM giao diện
 	i_Lang021 =	Tin nh&ắn cửa sổ
 	i_Lang022 =	Tì&m một lệnh
 		

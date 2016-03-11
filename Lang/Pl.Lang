@@ -5,8 +5,8 @@
 ; 01. Main Menu		
 	m_Lang001 =	&Plik
 	m_Lang002 =	&Macro
-	m_Lang003 =	&Funkcjonować
-	m_Lang004 =	P&olecenia
+	m_Lang003 =	P&olecenia
+	m_Lang004 =	&Funkcjonować
 	m_Lang005 =	&Edytuj
 	m_Lang006 =	&Wybierać
 	m_Lang007 =	W&idok
@@ -71,9 +71,9 @@
 	i_Lang017 =	Po&bieranie plików
 	i_Lang018 =	Zip / Rozp&akuj pliki
 	i_Lang019 =	Internet E&xplorer
-	i_Lang020 =	COM Interfe&js
-	i_Lang021 =	Komunikat&y Windows
-	i_Lang022 =	Znaj&dź polecenia
+	i_Lang020 =	W&yrażenie / Interfejs COM
+	i_Lang021 =	Komunikaty Win&dows
+	i_Lang022 =	Zna&jdź polecenia
 		
 ; 06. Edit Sub Menu		
 	e_Lang001 =	&Duplikat

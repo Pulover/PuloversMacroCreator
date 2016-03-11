@@ -5,8 +5,8 @@
 ; 01. Main Menu		
 	m_Lang001 =	&Fails
 	m_Lang002 =	&Macro
-	m_Lang003 =	F&unkcija
-	m_Lang004 =	&Komandas
+	m_Lang003 =	&Komandas
+	m_Lang004 =	F&unkcija
 	m_Lang005 =	&Rediģēt
 	m_Lang006 =	&Atlasīt
 	m_Lang007 =	&Skats
@@ -71,7 +71,7 @@
 	i_Lang017 =	Lej&upielādēt failus
 	i_Lang018 =	&Zip / unzip failus
 	i_Lang019 =	Internet E&xplorer
-	i_Lang020 =	C&OM Interface
+	i_Lang020 =	Expressi&on / COM Interface
 	i_Lang021 =	&Windows Messages
 	i_Lang022 =	Atrast koman&du
 		

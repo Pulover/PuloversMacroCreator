@@ -5,8 +5,8 @@
 ; 01. Main Menu		
 	m_Lang001 =	&Fişier
 	m_Lang002 =	&Macro
-	m_Lang003 =	F&uncţie
-	m_Lang004 =	&Comenzile
+	m_Lang003 =	&Comenzile
+	m_Lang004 =	F&uncţie
 	m_Lang005 =	&Editați | ×
 	m_Lang006 =	&Selecta
 	m_Lang007 =	&Vizualizare
@@ -71,7 +71,7 @@
 	i_Lang017 =	Desc&ărcarea fișierelor
 	i_Lang018 =	&Zip / fișiere Dezarhiveaza
 	i_Lang019 =	I&nternet Explorer
-	i_Lang020 =	Interfa&ță COM
+	i_Lang020 =	E&xprimarea / Interfață COM
 	i_Lang021 =	Ferestre Mesa&je
 	i_Lang022 =	&Găsi o comandă
 		

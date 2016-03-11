@@ -5,8 +5,8 @@
 ; 01. Main Menu		
 	m_Lang001 =	קוֹבֶץ(&F)
 	m_Lang002 =	מאקרו(&M)
-	m_Lang003 =	פוּנקצִיָה(&U)
-	m_Lang004 =	פקוד(&C)
+	m_Lang003 =	פקוד(&C)
+	m_Lang004 =	פוּנקצִיָה(&U)
 	m_Lang005 =	לַעֲרוֹך(&E)
 	m_Lang006 =	בחר(&S)
 	m_Lang007 =	נוֹף(&V)
@@ -71,7 +71,7 @@
 	i_Lang017 =	הורדת קבצים(&N)
 	i_Lang018 =	קבצי Zip / Unzip(&Z)
 	i_Lang019 =	אינטרנט אקספלורר(&T)
-	i_Lang020 =	ממשק COM(&O)
+	i_Lang020 =	הביטוי / ממשק COM(&O)
 	i_Lang021 =	הודעות Windows(&D)
 	i_Lang022 =	מצא פקודה(&F)
 		

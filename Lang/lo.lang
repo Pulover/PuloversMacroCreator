@@ -5,8 +5,8 @@
 ; 01. Main Menu		
 	m_Lang001 =	ເອກະສານ(&F)
 	m_Lang002 =	ມະຫາພາກ(&M)
-	m_Lang003 =	ຫນ້າທີ່(&U)
-	m_Lang004 =	ຄໍາສັ່ງ(&C)
+	m_Lang003 =	ຄໍາສັ່ງ(&C)
+	m_Lang004 =	ຫນ້າທີ່(&U)
 	m_Lang005 =	ດັດແກ້(&E)
 	m_Lang006 =	ເລືອກ(&S)
 	m_Lang007 =	View(&V)
@@ -71,7 +71,7 @@
 	i_Lang017 =	ດາວນ໌ໂຫລດໄຟລ໌(&N)
 	i_Lang018 =	Zip / ໄຟຂະຫຍາຍ(&Z)
 	i_Lang019 =	Internet Explorer(&T)
-	i_Lang020 =	COM Interface(&O)
+	i_Lang020 =	ການສະແດງອອກ / COM Interface(&O)
 	i_Lang021 =	ຂໍ້ຄວາມ Windows(&D)
 	i_Lang022 =	ຊອກຫາຄໍາສັ່ງ(&F)
 		

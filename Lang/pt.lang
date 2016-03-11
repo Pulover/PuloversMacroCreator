@@ -5,8 +5,8 @@
 ; 01. Main Menu		
 	m_Lang001 =	&Arquivo
 	m_Lang002 =	&Macro
-	m_Lang003 =	&Função
-	m_Lang004 =	&Comandos
+	m_Lang003 =	&Comandos
+	m_Lang004 =	&Função
 	m_Lang005 =	&Editar
 	m_Lang006 =	&Selecionar
 	m_Lang007 =	E&xibir
@@ -71,7 +71,7 @@
 	i_Lang017 =	&Baixar arquivos
 	i_Lang018 =	Compactar / Descompactar ar&quivos
 	i_Lang019 =	&Internet Explorer
-	i_Lang020 =	I&nterface COM
+	i_Lang020 =	Expressão / I&nterface COM
 	i_Lang021 =	Mensa&ges Do Windows
 	i_Lang022 =	Locali&zar um comando
 		

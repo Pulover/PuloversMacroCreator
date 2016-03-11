@@ -5,8 +5,8 @@
 ; 01. Main Menu		
 	m_Lang001 =	&Bestand
 	m_Lang002 =	&Macro
-	m_Lang003 =	&Functie
-	m_Lang004 =	&Commando's
+	m_Lang003 =	&Commando's
+	m_Lang004 =	&Functie
 	m_Lang005 =	&Redigeren
 	m_Lang006 =	&Kiezen
 	m_Lang007 =	&Zien
@@ -71,9 +71,9 @@
 	i_Lang017 =	Besta&nden downloaden
 	i_Lang018 =	&Zip / Unzip bestanden
 	i_Lang019 =	Internet E&xplorer
-	i_Lang020 =	C&OM-Interface
+	i_Lang020 =	&Uitdrukking / COM-interface
 	i_Lang021 =	&Windows Messages
-	i_Lang022 =	Zoek een comman&do
+	i_Lang022 =	Z&oek een commando
 		
 ; 06. Edit Sub Menu		
 	e_Lang001 =	&Duplicaat

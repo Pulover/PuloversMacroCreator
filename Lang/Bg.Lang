@@ -5,8 +5,8 @@
 ; 01. Main Menu		
 	m_Lang001 =	&Досие
 	m_Lang002 =	&Макро
-	m_Lang003 =	&функция
-	m_Lang004 =	&Команди
+	m_Lang003 =	&Команди
+	m_Lang004 =	&функция
 	m_Lang005 =	&Редактирам
 	m_Lang006 =	&Изберете
 	m_Lang007 =	&Преглед
@@ -71,7 +71,7 @@
 	i_Lang017 =	И&зтегляне на файлове
 	i_Lang018 =	&Zip / Разархивирайте файловете
 	i_Lang019 =	I&nternet Explorer
-	i_Lang020 =	&COM Interface
+	i_Lang020 =	Изр&азяване / COM интерфейс
 	i_Lang021 =	&Windows Съобщения
 	i_Lang022 =	&Намерете командата
 		

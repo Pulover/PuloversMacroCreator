@@ -5,8 +5,8 @@
 ; 01. Main Menu		
 	m_Lang001 =	&Fil
 	m_Lang002 =	&Makro
-	m_Lang003 =	F&unksjon
-	m_Lang004 =	&Kommandoer
+	m_Lang003 =	&Kommandoer
+	m_Lang004 =	F&unksjon
 	m_Lang005 =	&Redigere
 	m_Lang006 =	&Velg
 	m_Lang007 =	V&is
@@ -71,9 +71,9 @@
 	i_Lang017 =	Last ned file&r
 	i_Lang018 =	&Zip / Unzip filer
 	i_Lang019 =	Internet E&xplorer
-	i_Lang020 =	&COM-Grensesnitt
+	i_Lang020 =	Expressi&on / COM-grensesnitt
 	i_Lang021 =	&Windows-Meldinger
-	i_Lang022 =	Finn en k&ommando
+	i_Lang022 =	&Finn en kommando
 		
 ; 06. Edit Sub Menu		
 	e_Lang001 =	&Duplisere

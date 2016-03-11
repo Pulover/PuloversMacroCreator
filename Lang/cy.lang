@@ -5,8 +5,8 @@
 ; 01. Main Menu		
 	m_Lang001 =	&Ffeil
 	m_Lang002 =	&Macro
-	m_Lang003 =	&Swyddogaeth
-	m_Lang004 =	&Gorchmynion
+	m_Lang003 =	&Gorchmynion
+	m_Lang004 =	&Swyddogaeth
 	m_Lang005 =	G&olygu
 	m_Lang006 =	&Dewiswch
 	m_Lang007 =	&View
@@ -71,7 +71,7 @@
 	i_Lang017 =	Lawrlw&ytho ffeiliau
 	i_Lang018 =	&Zip / ffeiliau unzip
 	i_Lang019 =	Rhyn&grwyd archwiliwr
-	i_Lang020 =	&COM Rhyngwyneb
+	i_Lang020 =	Mynegiant / &COM Rhyngwyneb
 	i_Lang021 =	Negese&uon Windows
 	i_Lang022 =	&Dod o hyd i gorchymyn
 		

@@ -5,8 +5,8 @@
 ; 01. Main Menu		
 	m_Lang001 =	&Fichier
 	m_Lang002 =	&Macro
-	m_Lang003 =	F&unktioun
-	m_Lang004 =	&Commandéiert
+	m_Lang003 =	&Commandéiert
+	m_Lang004 =	F&unktioun
 	m_Lang005 =	&Edit
 	m_Lang006 =	&Wielt
 	m_Lang007 =	&View
@@ -71,7 +71,7 @@
 	i_Lang017 =	&Download Fichieren
 	i_Lang018 =	&Zip / alleng Fichieren
 	i_Lang019 =	I&nternet Explorer
-	i_Lang020 =	&COM Letzebuerger
+	i_Lang020 =	&Ausdrock / COM Letzebuerger
 	i_Lang021 =	Wind&ows Messagen
 	i_Lang022 =	Op ee &Bléck engem Kommando
 		

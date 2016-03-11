@@ -5,8 +5,8 @@
 ; 01. Main Menu		
 	m_Lang001 =	&File
 	m_Lang002 =	&Macro
-	m_Lang003 =	&Virka
-	m_Lang004 =	&Skipanir
+	m_Lang003 =	&Skipanir
+	m_Lang004 =	&Virka
 	m_Lang005 =	&Breyta
 	m_Lang006 =	V&eldu
 	m_Lang007 =	&Útsýni
@@ -71,7 +71,7 @@
 	i_Lang017 =	S&ækja skrá
 	i_Lang018 =	&Zip / renna niður skrá
 	i_Lang019 =	&Internet Explorer
-	i_Lang020 =	&COM Tengi
+	i_Lang020 =	&Framsetning / COM tengi
 	i_Lang021 =	&Windows Messages
 	i_Lang022 =	Finna ski&pun
 		

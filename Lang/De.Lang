@@ -5,8 +5,8 @@
 ; 01. Main Menu		
 	m_Lang001 =	&Datei
 	m_Lang002 =	&Makro
-	m_Lang003 =	&Funktion
-	m_Lang004 =	&Befehle
+	m_Lang003 =	&Befehle
+	m_Lang004 =	&Funktion
 	m_Lang005 =	B&earbeiten
 	m_Lang006 =	&Auswahl
 	m_Lang007 =	A&nzeigen
@@ -71,7 +71,7 @@
 	i_Lang017 =	Her&unterladen von Dateien
 	i_Lang018 =	Packe&n / Entpacken von Dateien
 	i_Lang019 =	Internet E&xplorer
-	i_Lang020 =	&COM-Schnittstelle
+	i_Lang020 =	Expression / &COM-Schnittstelle
 	i_Lang021 =	&Windows-Messages
 	i_Lang022 =	Fin&den Sie einen Befehl
 		

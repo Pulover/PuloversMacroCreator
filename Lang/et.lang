@@ -5,8 +5,8 @@
 ; 01. Main Menu		
 	m_Lang001 =	&Fail
 	m_Lang002 =	&Macro
-	m_Lang003 =	F&unktsioon
-	m_Lang004 =	&Käsud
+	m_Lang003 =	&Käsud
+	m_Lang004 =	F&unktsioon
 	m_Lang005 =	&Edit
 	m_Lang006 =	&Valima
 	m_Lang007 =	V&aade
@@ -71,7 +71,7 @@
 	i_Lang017 =	&Lae faile
 	i_Lang018 =	&Zip / Unzip faili
 	i_Lang019 =	I&nternet Explorer
-	i_Lang020 =	&COM liides
+	i_Lang020 =	E&xpression / COM Interface
 	i_Lang021 =	&Windows sõnumid
 	i_Lang022 =	&Leia käsk
 		

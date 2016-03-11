@@ -5,8 +5,8 @@
 ; 01. Main Menu		
 	m_Lang001 =	&Ifayili
 	m_Lang002 =	&Macro
-	m_Lang003 =	I&theko
-	m_Lang004 =	Imi&yalelo
+	m_Lang003 =	Imi&yalelo
+	m_Lang004 =	I&theko
 	m_Lang005 =	&Hlela
 	m_Lang006 =	&Khetha
 	m_Lang007 =	&Uluvo
@@ -71,7 +71,7 @@
 	i_Lang017 =	Iifayil&e umxokozelo
 	i_Lang018 =	&Zip / UnZip
 	i_Lang019 =	Inte&rnet Explorer
-	i_Lang020 =	&COM Interface
+	i_Lang020 =	E&xpression / COM Ujongano
 	i_Lang021 =	Imiyalezo Win&dows
 	i_Lang022 =	&Fumana umyalelo
 		

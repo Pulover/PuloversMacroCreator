@@ -5,8 +5,8 @@
 ; 01. Main Menu		
 	m_Lang001 =	&Αρχείο
 	m_Lang002 =	&Macro
-	m_Lang003 =	&Λειτουργία
-	m_Lang004 =	&Εντολές
+	m_Lang003 =	&Εντολές
+	m_Lang004 =	&Λειτουργία
 	m_Lang005 =	Ε&πεξεργασία
 	m_Lang006 =	Επ&ιλέξτε
 	m_Lang007 =	&Θέα
@@ -71,7 +71,7 @@
 	i_Lang017 =	Λ&ήψη αρχείων
 	i_Lang018 =	&Zip / αρχεία Αποσυμπίεση
 	i_Lang019 =	&Internet Explorer
-	i_Lang020 =	&COM Interface
+	i_Lang020 =	Έ&κφραση / COM Interface
 	i_Lang021 =	&Τα Μηνύματα Των Windows
 	i_Lang022 =	&Βρείτε μια εντολή
 		

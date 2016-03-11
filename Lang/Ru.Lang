@@ -5,8 +5,8 @@
 ; 01. Main Menu		
 	m_Lang001 =	&Файл
 	m_Lang002 =	&Макрос
-	m_Lang003 =	&функция
-	m_Lang004 =	&Команды
+	m_Lang003 =	&Команды
+	m_Lang004 =	&функция
 	m_Lang005 =	&Редактировать
 	m_Lang006 =	&Выбирать
 	m_Lang007 =	&Смотреть
@@ -71,7 +71,7 @@
 	i_Lang017 =	&Загрузка файлов
 	i_Lang018 =	&Zip / файлы распаковать
 	i_Lang019 =	&Internet Explorer
-	i_Lang020 =	&COM-Интерфейса
+	i_Lang020 =	В&ыражение / COM интерфейс
 	i_Lang021 =	&Windows Messages
 	i_Lang022 =	Н&айти команду
 		

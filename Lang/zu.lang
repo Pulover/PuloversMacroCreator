@@ -5,8 +5,8 @@
 ; 01. Main Menu		
 	m_Lang001 =	&Ifayela
 	m_Lang002 =	&Macro
-	m_Lang003 =	&Umsebenzi
-	m_Lang004 =	Imi&yalo
+	m_Lang003 =	Imi&yalo
+	m_Lang004 =	&Umsebenzi
 	m_Lang005 =	&Hlela
 	m_Lang006 =	&Khetha
 	m_Lang007 =	&Buka
@@ -71,7 +71,7 @@
 	i_Lang017 =	Lan&da amafayela
 	i_Lang018 =	Zi&p / amafayela Unzip
 	i_Lang019 =	Internet E&xplorer
-	i_Lang020 =	COM Inter&face
+	i_Lang020 =	Expression / COM Inter&face
 	i_Lang021 =	Windows Imila&yezo
 	i_Lang022 =	T&hola umyalo
 		

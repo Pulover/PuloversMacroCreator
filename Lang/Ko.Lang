@@ -5,8 +5,8 @@
 ; 01. Main Menu		
 	m_Lang001 =	파일(&F)
 	m_Lang002 =	매크로(&M)
-	m_Lang003 =	기능(&U)
-	m_Lang004 =	명령(&C)
+	m_Lang003 =	명령(&C)
+	m_Lang004 =	기능(&U)
 	m_Lang005 =	수정(&E)
 	m_Lang006 =	선택(&S)
 	m_Lang007 =	전망(&V)
@@ -71,7 +71,7 @@
 	i_Lang017 =	파일 다운로드(&N)
 	i_Lang018 =	우편 번호 / 압축 해제 파일(&Z)
 	i_Lang019 =	인터넷 익스플로러(&T)
-	i_Lang020 =	COM 인터페이스(&O)
+	i_Lang020 =	표현 / COM 인터페이스(&O)
 	i_Lang021 =	윈도우 메시지(&D)
 	i_Lang022 =	명령 찾기(&F)
 		

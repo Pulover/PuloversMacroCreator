@@ -5,8 +5,8 @@
 ; 01. Main Menu		
 	m_Lang001 =	ფაილი(&F)
 	m_Lang002 =	მაკრო(&M)
-	m_Lang003 =	ფუნქცია(&U)
-	m_Lang004 =	ბრძანებები(&C)
+	m_Lang003 =	ბრძანებები(&C)
+	m_Lang004 =	ფუნქცია(&U)
 	m_Lang005 =	რედაქტირება(&E)
 	m_Lang006 =	აირჩიეთ(&S)
 	m_Lang007 =	კალენდარი(&V)
@@ -71,7 +71,7 @@
 	i_Lang017 =	ჩამოქაჩვის(&N)
 	i_Lang018 =	Zip / unzip ფაილი(&Z)
 	i_Lang019 =	Internet Explorer(&T)
-	i_Lang020 =	COM Interface(&O)
+	i_Lang020 =	გამოხატვის / COM Interface(&O)
 	i_Lang021 =	Windows შეტყობინებები(&D)
 	i_Lang022 =	ძებნა ბრძანება(&F)
 		

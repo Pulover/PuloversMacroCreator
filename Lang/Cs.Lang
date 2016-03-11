@@ -5,8 +5,8 @@
 ; 01. Main Menu		
 	m_Lang001 =	&Soubor
 	m_Lang002 =	&Makro
-	m_Lang003 =	&Funkce
-	m_Lang004 =	&Příkazy
+	m_Lang003 =	&Příkazy
+	m_Lang004 =	&Funkce
 	m_Lang005 =	&Upravit
 	m_Lang006 =	&Vybrat
 	m_Lang007 =	P&ohled
@@ -71,7 +71,7 @@
 	i_Lang017 =	Soubor&y ke stažení
 	i_Lang018 =	&Zip / rozbalení souborů
 	i_Lang019 =	&Internet Explorer
-	i_Lang020 =	&COM Rozhraní
+	i_Lang020 =	&Výraz / COM rozhraní
 	i_Lang021 =	&Windows Zprávy
 	i_Lang022 =	Na&jít příkaz
 		

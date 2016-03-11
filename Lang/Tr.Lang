@@ -5,8 +5,8 @@
 ; 01. Main Menu		
 	m_Lang001 =	&Dosya
 	m_Lang002 =	&Makro
-	m_Lang003 =	&fonksiyon
-	m_Lang004 =	&Komutları
+	m_Lang003 =	&Komutları
+	m_Lang004 =	&fonksiyon
 	m_Lang005 =	D&üzenle
 	m_Lang006 =	&Seçmek
 	m_Lang007 =	&Görmek
@@ -71,7 +71,7 @@
 	i_Lang017 =	Dos&ya indirme
 	i_Lang018 =	&Zip / Sıkıştırılmış dosya
 	i_Lang019 =	Internet E&xplorer
-	i_Lang020 =	&COM Arabirimi
+	i_Lang020 =	Ifade / &COM Arabirimi
 	i_Lang021 =	&Windows Iletileri
 	i_Lang022 =	&(Ctrl+Shift+F) bir komut bul
 		

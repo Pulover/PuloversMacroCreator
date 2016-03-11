@@ -5,8 +5,8 @@
 ; 01. Main Menu		
 	m_Lang001 =	&Expedient
 	m_Lang002 =	&Macro
-	m_Lang003 =	&funció
-	m_Lang004 =	&Ordres
+	m_Lang003 =	&Ordres
+	m_Lang004 =	&funció
 	m_Lang005 =	E&dita
 	m_Lang006 =	&Seleccionar
 	m_Lang007 =	&Visa
@@ -71,9 +71,9 @@
 	i_Lang017 =	&Descàrrega d'arxius
 	i_Lang018 =	&Zip / descomprimir arxius
 	i_Lang019 =	Interf&ície d'Internet Explorer
-	i_Lang020 =	C&OM
+	i_Lang020 =	Expressi&ó / COM Interface
 	i_Lang021 =	&Missatges De Windows
-	i_Lang022 =	&Trobar una ordre
+	i_Lang022 =	Tr&obar una ordre
 		
 ; 06. Edit Sub Menu		
 	e_Lang001 =	&Duplicar

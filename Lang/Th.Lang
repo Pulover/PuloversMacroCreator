@@ -5,8 +5,8 @@
 ; 01. Main Menu		
 	m_Lang001 =	ไฟล์(&F)
 	m_Lang002 =	มาโคร(&M)
-	m_Lang003 =	ฟังก์ชั่น(&U)
-	m_Lang004 =	คำสั่ง(&C)
+	m_Lang003 =	คำสั่ง(&C)
+	m_Lang004 =	ฟังก์ชั่น(&U)
 	m_Lang005 =	แก้ไข(&E)
 	m_Lang006 =	เลือก(&S)
 	m_Lang007 =	ดู(&V)
@@ -71,7 +71,7 @@
 	i_Lang017 =	ดาวน์โหลดไฟล์(&N)
 	i_Lang018 =	Zip / unzip ไฟล์(&Z)
 	i_Lang019 =	Internet Explorer(&T)
-	i_Lang020 =	COM อินเตอร์เฟซ(&O)
+	i_Lang020 =	การแสดงออก / COM อินเตอร์เฟซ COM อินเตอร์เฟซ(&O)
 	i_Lang021 =	หน้าต่างข้อความ(&D)
 	i_Lang022 =	ค้นหาคำสั่ง(&F)
 		

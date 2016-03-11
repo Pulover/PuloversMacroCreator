@@ -5,8 +5,8 @@
 ; 01. Main Menu		
 	m_Lang001 =	&Fájl
 	m_Lang002 =	&Macro
-	m_Lang003 =	F&unkció
-	m_Lang004 =	&Parancsok
+	m_Lang003 =	&Parancsok
+	m_Lang004 =	F&unkció
 	m_Lang005 =	&Szerkeszt
 	m_Lang006 =	&Választ
 	m_Lang007 =	&Kilátás
@@ -71,9 +71,9 @@
 	i_Lang017 =	F&ájlok letöltése
 	i_Lang018 =	Zi&p / Unzip fájlok
 	i_Lang019 =	Internet E&xplorer
-	i_Lang020 =	&COM Interface
+	i_Lang020 =	Kife&jezés / COM Interface
 	i_Lang021 =	A &Windows Üzenetek
-	i_Lang022 =	Keresse meg a parancs&ot
+	i_Lang022 =	Keresse meg a paran&csot
 		
 ; 06. Edit Sub Menu		
 	e_Lang001 =	&Másolat

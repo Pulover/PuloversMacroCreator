@@ -5,8 +5,8 @@
 ; 01. Main Menu		
 	m_Lang001 =	&Skedar
 	m_Lang002 =	&Macro
-	m_Lang003 =	&Funksion
-	m_Lang004 =	&Komandat
+	m_Lang003 =	&Komandat
+	m_Lang004 =	&Funksion
 	m_Lang005 =	&Redaktoj
 	m_Lang006 =	&Zgjedh
 	m_Lang007 =	&Pamje
@@ -71,7 +71,7 @@
 	i_Lang017 =	S&hkarko files
 	i_Lang018 =	&Zip / Unzip files
 	i_Lang019 =	Internet E&xplorer
-	i_Lang020 =	&COM Interface
+	i_Lang020 =	Expressi&on / COM Interface
 	i_Lang021 =	Drit&aret Messages
 	i_Lang022 =	G&jeni një komandë
 		

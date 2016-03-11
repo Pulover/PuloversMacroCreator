@@ -5,8 +5,8 @@
 ; 01. Main Menu		
 	m_Lang001 =	&Dossier
 	m_Lang002 =	&Macro
-	m_Lang003 =	&Fonction
-	m_Lang004 =	&Commandes
+	m_Lang003 =	&Commandes
+	m_Lang004 =	&Fonction
 	m_Lang005 =	&Éditer
 	m_Lang006 =	&Sélectionner
 	m_Lang007 =	&Voir
@@ -71,7 +71,7 @@
 	i_Lang017 =	T&élécharger des fichiers
 	i_Lang018 =	&Zip / dézipper les fichiers
 	i_Lang019 =	Inte&rnet Explorer
-	i_Lang020 =	&COM Interface
+	i_Lang020 =	E&xpression / Interface COM
 	i_Lang021 =	Messa&ges De Windows
 	i_Lang022 =	Tro&uvez une commande
 		

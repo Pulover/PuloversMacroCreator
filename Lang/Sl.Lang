@@ -5,8 +5,8 @@
 ; 01. Main Menu		
 	m_Lang001 =	&Datoteka
 	m_Lang002 =	&Makro
-	m_Lang003 =	&funkcija
-	m_Lang004 =	&Príkazy
+	m_Lang003 =	&Príkazy
+	m_Lang004 =	&funkcija
 	m_Lang005 =	&Urejanje
 	m_Lang006 =	&Izberite
 	m_Lang007 =	P&oglej
@@ -71,9 +71,9 @@
 	i_Lang017 =	Prenos &datotek
 	i_Lang018 =	&Zip / unzip datotek
 	i_Lang019 =	Internet E&xplorer
-	i_Lang020 =	&COM Vmesnik
+	i_Lang020 =	Izr&az / COM vmesnik
 	i_Lang021 =	&Windows Sporočila
-	i_Lang022 =	N&ajdi ukaz
+	i_Lang022 =	Na&jdi ukaz
 		
 ; 06. Edit Sub Menu		
 	e_Lang001 =	&Dvojnik

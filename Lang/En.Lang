@@ -5,8 +5,8 @@
 ; 01. Main Menu		
 	m_Lang001 =	&File
 	m_Lang002 =	&Macro
-	m_Lang003 =	F&unction
-	m_Lang004 =	&Commands
+	m_Lang003 =	&Commands
+	m_Lang004 =	F&unction
 	m_Lang005 =	&Edit
 	m_Lang006 =	&Select
 	m_Lang007 =	&View
@@ -71,7 +71,7 @@
 	i_Lang017 =	Dow&nload files
 	i_Lang018 =	&Zip / Unzip files
 	i_Lang019 =	In&ternet Explorer
-	i_Lang020 =	C&OM Interface
+	i_Lang020 =	Expression / C&OM Interface
 	i_Lang021 =	Win&dows Messages
 	i_Lang022 =	&Find a command
 		

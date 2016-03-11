@@ -5,8 +5,8 @@
 ; 01. Main Menu		
 	m_Lang001 =	Ֆայլ(&F)
 	m_Lang002 =	Մակրո(&M)
-	m_Lang003 =	Ֆունկցիա(&U)
-	m_Lang004 =	Հրամաններ(&C)
+	m_Lang003 =	Հրամաններ(&C)
+	m_Lang004 =	Ֆունկցիա(&U)
 	m_Lang005 =	Խմբագրել(&E)
 	m_Lang006 =	Ընտրել(&S)
 	m_Lang007 =	Տեսարան(&V)
@@ -71,7 +71,7 @@
 	i_Lang017 =	Բեռնել ֆայլեր(&N)
 	i_Lang018 =	Zip / unzip ֆայլեր(&Z)
 	i_Lang019 =	Internet Explorer(&T)
-	i_Lang020 =	COM Interface(&O)
+	i_Lang020 =	Արտահայտությունը / COM Interface(&O)
 	i_Lang021 =	Windows Messages(&D)
 	i_Lang022 =	Գտնել մի հրաման(&F)
 		

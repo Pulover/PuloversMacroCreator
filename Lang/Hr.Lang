@@ -5,8 +5,8 @@
 ; 01. Main Menu		
 	m_Lang001 =	&File
 	m_Lang002 =	&Makro
-	m_Lang003 =	F&unkcija
-	m_Lang004 =	&Naredbe
+	m_Lang003 =	&Naredbe
+	m_Lang004 =	F&unkcija
 	m_Lang005 =	U&redi
 	m_Lang006 =	&Odabrati
 	m_Lang007 =	&Pogled
@@ -71,7 +71,7 @@
 	i_Lang017 =	Pre&uzimanje datoteka
 	i_Lang018 =	&Zip / unzip kartoteka
 	i_Lang019 =	I&nternet Explorer
-	i_Lang020 =	&COM Sučelja
+	i_Lang020 =	Izraz / &COM sučelja
 	i_Lang021 =	&Windows Poruke
 	i_Lang022 =	Prona&đite naredbu
 		

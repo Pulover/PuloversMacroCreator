@@ -5,8 +5,8 @@
 ; 01. Main Menu		
 	m_Lang001 =	&File
 	m_Lang002 =	&Makro
-	m_Lang003 =	F&untzioa
-	m_Lang004 =	&Komandoak
+	m_Lang003 =	&Komandoak
+	m_Lang004 =	F&untzioa
 	m_Lang005 =	&Edit
 	m_Lang006 =	&Aukeratu
 	m_Lang007 =	&Ikusi
@@ -71,7 +71,7 @@
 	i_Lang017 =	De&skarga-fitxategiak
 	i_Lang018 =	Zi&p / Unzip fitxategiak
 	i_Lang019 =	I&nternet Explorer
-	i_Lang020 =	&COM Interface
+	i_Lang020 =	E&xpression / COM Interface
 	i_Lang021 =	&Windows Mezuak
 	i_Lang022 =	A&urki komando bat
 		

@@ -5,8 +5,8 @@
 ; 01. Main Menu		
 	m_Lang001 =	文件(&F)
 	m_Lang002 =	宏(&M)
-	m_Lang003 =	功能(&U)
-	m_Lang004 =	命令(&C)
+	m_Lang003 =	命令(&C)
+	m_Lang004 =	功能(&U)
 	m_Lang005 =	編輯(&E)
 	m_Lang006 =	選擇(&S)
 	m_Lang007 =	視圖(&V)
@@ -71,7 +71,7 @@
 	i_Lang017 =	下載文件(&N)
 	i_Lang018 =	壓縮/解壓縮文件(&Z)
 	i_Lang019 =	IE瀏覽器(&T)
-	i_Lang020 =	COM接口(&O)
+	i_Lang020 =	表達 / COM接口(&O)
 	i_Lang021 =	Windows消息(&D)
 	i_Lang022 =	查找命令(&F)
 		

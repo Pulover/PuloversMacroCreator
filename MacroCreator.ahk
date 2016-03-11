@@ -1724,350 +1724,6 @@ Try Menu, Tray, Default, %w_Lang005%
 tbOSC.ModifyButtonInfo(5, "Image", 54)
 return
 
-KeyboardRecord:
-Loop
-{
-	If (Record = 0)
-		break
-	Input, sKey, V M L1, %VirtualKeys%
-	If (ErrorLevel = NewInput)
-		continue
-	sKey := (ErrorLevel != "Max") ? SubStr(ErrorLevel, 8) : sKey
-	If sKey in %A_Space%,`n,`t
-		continue
-	GoSub, ChReplace
-	If (InStr(sKey, "_") < 1)
-		If (Asc(sKey) < 192) && ((sKey != "/") && (sKey != ".") && (sKey != "?")&& (!GetKeyState(sKey, "P")))
-			continue
-	If ((GetKeyState("RAlt", "P")) && !(HoldRAlt))
-		sKey := "RAlt", HoldRAlt := 1
-	If (Asc(sKey) < 192) && ((CaptKDn = 1) || InStr(sKey, "Control") || InStr(sKey, "Shift")
-	|| InStr(sKey, "Alt") || InStr(sKey, "Win"))
-	{
-		ScK := GetKeySC(sKey)
-		If (Hold%ScK%)
-			continue
-		Hotkey, If
-		#If
-		If (sKey = "/")
-			HotKey, ~*VKC1SC730 Up, RecKeyUp, On
-		Else
-			HotKey, ~*%sKey% Up, RecKeyUp, On
-		If (sKey = ".")
-			HotKey, ~*VKC2SC7E0 Up, RecKeyUp, On
-		Hotkey, If
-		#If
-		Hold%ScK% := 1, sKey .= " Down"
-	}
-	tKey := sKey, sKey := "{" sKey "}"
-	If (Record = 0)
-		break
-	GoSub, InsertRow
-}
-return
-
-InsertRow:
-IfWinActive, ahk_id %PMCOSC%
-	return
-Type := cType1, Target := "", Window := ""
-If (Record = 1)
-{
-	If (RecKeybdCtrl = 1)
-	{
-		If ((InStr(sKey, "Control")) || (InStr(sKey, "Shift"))
-		|| (InStr(sKey, "Alt")))
-			Goto, KeyInsert
-		ControlGetFocus, ActiveCtrl, A
-		If (ActiveCtrl != "")
-		{
-			Type := cType2, Target := ActiveCtrl
-			WinGetTitle, c_Title, A
-			WinGetClass, c_Class, A
-			If (WTitle = 1)
-				Window := c_Title
-			If (WClass = 1)
-				Window := Window " ahk_class " c_Class
-			If ((WTitle = 0) && (WClass = 0))
-				Window := "A"
-		}
-	}
-}
-KeyInsert:
-Gui, chMacro:Default
-If (Record = 1)
-{
-	If (TimedI = 1)
-	{
-		If (Interval := TimeRecord())
-		{
-			If (Interval > TDelay)
-			GoSub, SleepInput
-		}
-		InputDelay := 0, WinDelay := 0
-	}
-	Else
-		InputDelay := DelayG, WinDelay := DelayW
-	If ((WClass = 1) || (WTitle = 1))
-		WindowRecord(A_List, WinDelay)
-}
-Else
-	InputDelay := DelayG
-RowSelection := LV_GetCount("Selected")
-If (Record || RowSelection = 0)
-{
-	LV_Add("Check", ListCount%A_List%+1, tKey, sKey, 1, InputDelay, Type, Target, Window)
-,	LV_Modify(ListCount%A_List%+1, "Vis")
-}
-Else
-{
-	RowNumber := 0
-	Loop, %RowSelection%
-	{
-		RowNumber := LV_GetNext(RowNumber)
-	,	LV_Insert(RowNumber, "Check", RowNumber, tKey, sKey, 1, DelayG, Type, Target, Window)
-	,	LVManager.InsertAtGroup(1, RowNumber)
-	,	RowNumber++
-	}
-	LV_Modify(RowNumber, "Vis")
-}
-If (!Record)
-{
-	GoSub, RowCheck
-	GoSub, b_Start
-}
-return
-
-MouseRecord:
-If (Moves = 1) && (MouseMove := MoveCheck())
-{
-	Action := Action2, Details := MouseMove ", 0"
-,	Type := cType3, Target := "", Window := ""
-	GoSub, MouseAdd
-}
-If (!GetKeyState(RelKey, ToggleMode))
-	RelHold := 0, Relative := ""
-If (MScroll = 1)
-{
-	If (mScUp > 0 && A_TimeIdle > 50)
-	{
-		If (RecMouseCtrl = 1)
-			Details := ClickOn(xPos, yPos, "WheelUp", Up)
-		Else
-			Details := "WheelUp, " Up
-		Action := Action5, Type := cType3
-		GoSub, MouseInput
-		mScUp := 0
-	}
-	If (mScDn > 0 && A_TimeIdle > 50)
-	{
-		If (RecMouseCtrl = 1)
-			Details := ClickOn(xPos, yPos, "WheelDown", Dn)
-		Else
-			Details := "WheelDown, " Dn
-		Action := Action6, Type := cType3
-		GoSub, MouseInput
-		mScDn := 0
-	}
-}
-return
-
-#If ((Record = 1) && (Mouse = 1) && !(A_IsPaused))
-*~LButton::
-	Critical
-	; Send, {Blind}{LButton Down}
-	CoordMode, Mouse, %CoordMouse%
-	MouseGetPos,,, id, control
-	WinGetClass, m_Class, ahk_id %id%
-	If ((InStr(m_Class, "#32") != 1) && (m_Class != "Button")
-	&& (id != PMCWinID) && (id != PrevID) && (id != PMCOSC))
-		WinActivate, ahk_id %id%
-	MouseGetPos, xPd, yPd
-	Button := "Left"
-,	Details := ClickOn(xPd, yPd, Button) ((RecMouseCtrl = 1) ? ", Down" : "Down")
-,	Action := Button " " Action3, Type := cType3
-	GoSub, MouseInput
-return
-*~LButton Up::
-	Critical
-	; Send, {Blind}{LButton Up}
-	CoordMode, Mouse, %CoordMouse%
-	MouseGetPos, xPd, yPd
-	Button := "Left"
-,	Details := ClickOn(xPd, yPd, Button) ((RecMouseCtrl = 1) ? ", Up" : "Up")
-,	Action := Button " " Action3, Type := cType3
-	GoSub, MouseInput
-return
-*~RButton::
-	Critical
-	; Send, {Blind}{RButton Down}
-	CoordMode, Mouse, %CoordMouse%
-	MouseGetPos,,, id, control
-	WinGetClass, m_Class, ahk_id %id%
-	If ((InStr(m_Class, "#32") != 1) && (m_Class != "Button")
-	&& (id != PMCWinID) && (id != PrevID) && (id != PMCOSC))
-		WinActivate, ahk_id %id%
-	MouseGetPos, xPd, yPd
-	Button := "Right"
-,	Details := ClickOn(xPd, yPd, Button) ((RecMouseCtrl = 1) ? ", Down" : "Down")
-,	Action := Button " " Action3, Type := cType3
-	GoSub, MouseInput
-return
-*~RButton Up::
-	Critical
-	; Send, {Blind}{RButton Up}
-	CoordMode, Mouse, %CoordMouse%
-	MouseGetPos, xPd, yPd
-	Button := "Right"
-,	Details := ClickOn(xPd, yPd, Button) ((RecMouseCtrl = 1) ? ", Up" : "Up")
-,	Action := Button " " Action3, Type := cType3
-	GoSub, MouseInput
-return
-*~MButton::
-	Critical
-	; Send, {Blind}{MButton Down}
-	CoordMode, Mouse, %CoordMouse%
-	MouseGetPos,,, id, control
-	WinGetClass, m_Class, ahk_id %id%
-	If ((InStr(m_Class, "#32") != 1) && (m_Class != "Button")
-	&& (id != PMCWinID) && (id != PrevID) && (id != PMCOSC))
-		WinActivate, ahk_id %id%
-	MouseGetPos, xPd, yPd
-	Button := "Middle"
-,	Details := ClickOn(xPd, yPd, Button) ((RecMouseCtrl = 1) ? ", Down" : "Down")
-,	Action := Button " " Action3, Type := cType3
-	GoSub, MouseInput
-return
-*~MButton Up::
-	Critical
-	; Send, {Blind}{MButton Up}
-	CoordMode, Mouse, %CoordMouse%
-	MouseGetPos, xPd, yPd
-	Button := "Middle"
-,	Details := ClickOn(xPd, yPd, Button) ((RecMouseCtrl = 1) ? ", Up" : "Up")
-,	Action := Button " " Action3, Type := cType3
-	GoSub, MouseInput
-return
-*~XButton1::
-	Critical
-	; Send, {Blind}{XButton1 Down}
-	CoordMode, Mouse, %CoordMouse%
-	MouseGetPos,,, id, control
-	WinGetClass, m_Class, ahk_id %id%
-	If ((InStr(m_Class, "#32") != 1) && (m_Class != "Button")
-	&& (id != PMCWinID) && (id != PrevID) && (id != PMCOSC))
-		WinActivate, ahk_id %id%
-	MouseGetPos, xPd, yPd
-	Button := "X1"
-,	Details := ClickOn(xPd, yPd, Button) ((RecMouseCtrl = 1) ? ", Down" : "Down")
-,	Action := Button " " Action3, Type := cType3
-	GoSub, MouseInput
-return
-*~XButton1 Up::
-	Critical
-	; Send, {Blind}{XButton1 Up}
-	CoordMode, Mouse, %CoordMouse%
-	MouseGetPos, xPd, yPd
-	Button := "X1"
-,	Details := ClickOn(xPd, yPd, Button) ((RecMouseCtrl = 1) ? ", Up" : "Up")
-,	Action := Button " " Action3, Type := cType3
-	GoSub, MouseInput
-return
-*~XButton2::
-	Critical
-	; Send, {Blind}{XButton2 Down}
-	CoordMode, Mouse, %CoordMouse%
-	MouseGetPos,,, id, control
-	WinGetClass, m_Class, ahk_id %id%
-	If ((InStr(m_Class, "#32") != 1) && (m_Class != "Button")
-	&& (id != PMCWinID) && (id != PrevID) && (id != PMCOSC))
-		WinActivate, ahk_id %id%
-	MouseGetPos, xPd, yPd
-	Button := "X2"
-,	Details := ClickOn(xPd, yPd, Button) ((RecMouseCtrl = 1) ? ", Down" : "Down")
-,	Action := Button " " Action3, Type := cType3
-	GoSub, MouseInput
-return
-*~XButton2 Up::
-	Critical
-	; Send, {Blind}{XButton2 Up}
-	CoordMode, Mouse, %CoordMouse%
-	MouseGetPos, xPd, yPd
-	Button := "X2"
-,	Details := ClickOn(xPd, yPd, Button) ((RecMouseCtrl = 1) ? ", Up" : "Up")
-,	Action := Button " " Action3, Type := cType3
-	GoSub, MouseInput
-return
-#If
-
-MWUp:
-mScUp++
-return
-
-MWDn:
-mScDn++
-return
-
-MouseInput:
-If (id = PMCOSC)
-	return
-Target := "", Window := ""
-If ((RecMouseCtrl = 1) && (InStr(m_Class, "#32") != 1))
-{
-	If ((InStr(Details, "rel")) || (InStr(Details, "click")))
-		Goto, MouseAdd
-	CoordMode, Mouse, %CoordMouse%
-	If (control != "")
-	{
-		ControlGetPos, x, y,,, %control%, A
-		xcpos := Controlpos(xPd, x), ycpos := Controlpos(yPd, y)
-	,	Details := RegExReplace(Details, "\d+, \d+ ")
-		If (xcpos != "")
-			Details .= " x" xcpos " y" ycpos " NA"
-		Else
-			Details .= " NA"
-		Target := control
-	}
-	Else
-	{
-		Details := RegExReplace(Details, "\d+, \d+ ")
-	,	Details .= " NA"
-	,	Target := "x" xPd " y" yPd
-	}
-	Action := Button " " Action1, Type := cType4
-	WinGetTitle, c_Title, A
-	WinGetClass, c_Class, A
-	If (WTitle = 1)
-		Window := c_Title
-	If (WClass = 1)
-		Window := Window " ahk_class " c_Class
-	If ((WTitle = 0) && (WClass = 0))
-		Window := "A"
-}
-MouseAdd:
-Gui, chMacro:Default
-If (TimedI = 1)
-{
-	If (Interval := TimeRecord())
-	{
-		If (Interval > TDelay)
-		GoSub, SleepInput
-	}
-	RecDelay := 0, WinDelay := 0
-}
-Else
-	RecDelay := DelayM, WinDelay := DelayW
-If (!InStr(Details, "Up") && (Action != Action2))
-{
-	If ((WClass = 1) || (WTitle = 1))
-		WindowRecord(A_List, WinDelay)
-}
-LV_Add("Check", ListCount%A_List%+1, Action, Details, 1, RecDelay, Type, Target, Window)
-return
-
-SleepInput:
-LV_Add("Check", ListCount%A_List%+1, "[Pause]", "", 1, Interval, cType5)
-return
-
 ;##### Subroutines: Menus & Buttons #####
 
 New:
@@ -9780,6 +9436,8 @@ If (s_Caller = "Edit")
 			GuiControl, 24:, ComHwnd, %Action%
 			GoSub, TabControl
 		}
+		Else
+			SB_SetText(Cmd_Tips["Expression"])
 		GuiControl, 24:, ComSc, %Details%
 	}
 	Else
@@ -14753,7 +14411,7 @@ Menu, GroupMenu, Add
 Menu, GroupMenu, Add, %e_Lang021%, CollapseGroups
 Menu, GroupMenu, Add, %e_Lang022%, ExpandGroups
 
-Menu, EditMenu, Add, %m_Lang004%`t%_s%Enter, EditButton
+Menu, EditMenu, Add, %m_Lang005%`t%_s%Enter, EditButton
 Menu, EditMenu, Add, %e_Lang007%`t%_s%Ctrl+X, CutRows
 Menu, EditMenu, Add, %e_Lang008%`t%_s%Ctrl+C, CopyRows
 Menu, EditMenu, Add, %e_Lang009%`t%_s%Ctrl+V, PasteRows
@@ -14777,7 +14435,7 @@ Menu, EditMenu, Add, %e_Lang015%`t%_s%Ctrl+M, EditColor
 Menu, EditMenu, Add
 Menu, EditMenu, Add, %e_Lang013%`t%_s%Insert, ApplyL
 Menu, EditMenu, Add, %e_Lang014%`t%_s%Ctrl+Insert, InsertKey
-Menu, EditMenu, Default, %m_Lang004%`t%_s%Enter
+Menu, EditMenu, Default, %m_Lang005%`t%_s%Enter
 
 Menu, CustomMenu, Add, %v_Lang012%, TbCustomize
 Menu, CustomMenu, Add, %v_Lang013%, TbCustomize
@@ -14860,8 +14518,8 @@ Menu, DonationMenu, Add, %p_Lang001%, DonatePayPal
 
 Menu, MenuBar, Add, %m_Lang001%, :FileMenu
 Menu, MenuBar, Add, %m_Lang002%, :MacroMenu
-Menu, MenuBar, Add, %m_Lang003%, :FuncMenu
-Menu, MenuBar, Add, %m_Lang004%, :CommandMenu
+Menu, MenuBar, Add, %m_Lang003%, :CommandMenu
+Menu, MenuBar, Add, %m_Lang004%, :FuncMenu
 Menu, MenuBar, Add, %m_Lang005%, :EditMenu
 Menu, MenuBar, Add, %m_Lang006%, :SelectMenu
 Menu, MenuBar, Add, %m_Lang007%, :ViewMenu
@@ -15031,7 +14689,7 @@ Menu, CommandMenu, Icon, %i_Lang019%`t%_s%F12, %ResDllPath%, % IconsNames["ie"]
 Menu, CommandMenu, Icon, %i_Lang020%`t%_s%Shift+F12, %ResDllPath%, % IconsNames["com"]
 Menu, CommandMenu, Icon, %i_Lang021%`t%_s%Ctrl+F12, %ResDllPath%, % IconsNames["sendmsg"]
 Menu, CommandMenu, Icon, %i_Lang022%`t%_s%Ctrl+Shift+F, %ResDllPath%, % IconsNames["findcmd"]
-Menu, EditMenu, Icon, %m_Lang004%`t%_s%Enter, %ResDllPath%, % IconsNames["edit"]
+Menu, EditMenu, Icon, %m_Lang005%`t%_s%Enter, %ResDllPath%, % IconsNames["edit"]
 Menu, EditMenu, Icon, %e_Lang007%`t%_s%Ctrl+X, %ResDllPath%, % IconsNames["cut"]
 Menu, EditMenu, Icon, %e_Lang008%`t%_s%Ctrl+C, %ResDllPath%, % IconsNames["copy"]
 Menu, EditMenu, Icon, %e_Lang009%`t%_s%Ctrl+V, %ResDllPath%, % IconsNames["paste"]

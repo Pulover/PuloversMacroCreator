@@ -5,8 +5,8 @@
 ; 01. Main Menu		
 	m_Lang001 =	&Byla
 	m_Lang002 =	&Makro
-	m_Lang003 =	&Funkcija
-	m_Lang004 =	&Komandos
+	m_Lang003 =	&Komandos
+	m_Lang004 =	&Funkcija
 	m_Lang005 =	&Redaguoti
 	m_Lang006 =	&Pasirinkti
 	m_Lang007 =	&Vaizdas
@@ -71,9 +71,9 @@
 	i_Lang017 =	Parsisi&ųsti failai
 	i_Lang018 =	&Zip / unzip failai
 	i_Lang019 =	Internet E&xplorer
-	i_Lang020 =	K&OM sąsaja
+	i_Lang020 =	I&šraiška / COM sąsaja
 	i_Lang021 =	&Windows Žinutės
-	i_Lang022 =	Rasti koman&dą
+	i_Lang022 =	Rasti k&omandą
 		
 ; 06. Edit Sub Menu		
 	e_Lang001 =	&Dublikatas

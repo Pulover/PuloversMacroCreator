@@ -74,6 +74,7 @@ Thiago Talma for some improvements to the code, debugging and many suggestions.
 * Updated *Loop, File* and *Loop, Reg* to new format with *Mode/ parameter.
 * Changed *List Variables* to display User-Defined variables only.
 * Fixed corrupted pmc files saved on exit.
+* Fixed bug with recording of mouse buttons.
 * Fixed bug with WinWait timeout.
 * Fixed bugs with IE/COM Interface.
 * Fixed default editor not set correctly on first run.
