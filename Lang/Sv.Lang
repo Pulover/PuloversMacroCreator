@@ -62,13 +62,13 @@
 	i_Lang008 =	&Bild / Pixel Sök
 	i_Lang009 =	K&ör / Arkiv / String / Misc.
 	i_Lang010 =	&Loop
-	i_Lang011 =	&Gå
-	i_Lang012 =	Et&ikett
+	i_Lang011 =	&Gå Till / Etikett
+	i_Lang012 =	&Set timer
 	i_Lang013 =	&Om Uttalanden
 	i_Lang014 =	&Variabler / Arrayer
 	i_Lang015 =	F&unktioner / Array metoder
-	i_Lang016 =	&Skicka epost
-	i_Lang017 =	La&dda ner / Ladda upp filer
+	i_Lang016 =	Sk&icka epost
+	i_Lang017 =	La&dda ner filer
 	i_Lang018 =	&Zip / packa upp filer
 	i_Lang019 =	I&nternet Explorer
 	i_Lang020 =	&COM-Gränssnitt
@@ -324,10 +324,10 @@
 	c_Lang026 =	Åtgärd
 	c_Lang027 =	Klicka
 	c_Lang028 =	Flytta
-	c_Lang029 =	Flytta och klicka
+	c_Lang029 =	Flytta Och Klicka
 	c_Lang030 =	Hjul Upp
 	c_Lang031 =	Hjulet
-	c_Lang032 =	Dra och släpp
+	c_Lang032 =	Dra Och Släpp
 	c_Lang033 =	Koordinater
 	c_Lang034 =	Sök
 	c_Lang035 =	Delkommando
@@ -626,7 +626,7 @@
 	t_Lang071 =	Hittade
 	t_Lang072 =	Ersätt
 	t_Lang073 =	V&alda rader
-	t_Lang074 =	Alla &rader
+	t_Lang074 =	Alla ra&der
 	t_Lang075 =	Alla ma&kron
 	t_Lang076 =	Om
 	t_Lang077 =	&Vanligt uttryck
@@ -760,6 +760,8 @@
 	t_Lang205 =	Titelmatch Läge
 	t_Lang206 =	Titelmatch Hastighet
 	t_Lang207 =	Klient
+	t_Lang208 =	H&itta
+	t_Lang209 =	E&rsätt
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Öppet
@@ -769,11 +771,14 @@
 	d_Lang005 =	Spara Projekt
 	d_Lang006 =	Det gick inte att spara / skriva filen
 	d_Lang007 =	Fel
-	d_Lang008 =	Fel: Ingen Makro Vald.`nKontrollera minst en makro i listan.
+	d_Lang008 =	Fel: Ingen Makro Vald.
+		Kontrollera minst en makro i listan.
 	d_Lang009 =	Fel: Ingen Hotkey vald.
-	d_Lang010 =	Fel: Ogiltig adress.`nDen valda adressen eller filnamnet är ogiltigt.
+	d_Lang010 =	Fel: Ogiltig adress.
+		Den valda adressen eller filnamnet är ogiltigt.
 	d_Lang011 =	Varning
-	d_Lang012 =	Ingen kontroll vald.`nFortsätta?
+	d_Lang012 =	Ingen kontroll vald.
+		Fortsätta?
 	d_Lang013 =	Exportera skriptet
 	d_Lang014 =	Scriptet Exporterades
 	d_Lang015 =	Filen har framgångsrikt exporterats!
@@ -788,7 +793,8 @@
 	d_Lang022 =	Föregående
 	d_Lang023 =	Meddelande
 	d_Lang024 =	Ladda standardinställningarna?
-	d_Lang025 =	Makro (er) aktiveras.`nAnvänd snabbtangenter för att spela.
+	d_Lang025 =	Makron aktiveras.
+		Använd snabbtangenter  för att spela.
 	d_Lang026 =	att starta / stoppa inspelningen
 	d_Lang027 =	Inspelning stoppas
 	d_Lang028 =	Inspelning...
@@ -805,7 +811,8 @@
 	d_Lang037 =	Bild / Pixel hittades inte.
 	d_Lang038 =	Tryck på OK för att fortsätta.
 	d_Lang039 =	Tidsgräns!
-	d_Lang040 =	Den här funktionen kräver GDI+ bibliotek.
+	d_Lang040 =	
+.	Tämä ominaisuus vaatii GDI+ kirjasto.	Тази функция изисква GDI+ Library.
 		Klicka på OK för att gå att ladda ner sidan.
 	d_Lang041 =	Variabelnamnet innehåller ett ogiltigt tecken.
 	d_Lang042 =	är ett reserverat ord.
@@ -833,8 +840,7 @@
 	d_Lang059 =	Detta kommando stöder inte uttryck eller funktioner.
 		Vänligen tilldela en variabel och använda den i parametern.
 	d_Lang060 =	En ny version tillgänglig
-	d_Lang061 =	Vill du ladda ner den nu?
-		Vill du avaktivera automatiska Updatering  väljer du Hjälp > Kontrollera updatering vid uppstart
+	d_Lang061 =	
 	d_Lang062 =	Du har redan den senaste versionen.
 	d_Lang063 =	Ett fel inträffade vid kontrollen.
 	d_Lang064 =	Fel i
@@ -901,35 +907,45 @@
 	d_Lang113 =	Inget fel rapporterats.
 	d_Lang114 =	Skriptejä viedään (vaikka käännetty) kanssa lähetä sähköpostia toiminto (CDO) on näkyvissä merkintä sähköpostitilejä käytetään, mukaan lukien salasana. PMC Projektitiedosto ei ole tätä tietoa.
 	d_Lang115 =	- Håll Alt för att ställa in region på samma plats.
+	d_Lang116 =	Överföra och installera
+	d_Lang117 =	Gå till nedladdningssidan
+	d_Lang118 =	Nedladdning ... Snälla vänta.
 		
 ; 18. Start-up Tips		
-	Start_Tips =	Du kan skapa makron med hjälp av kommandoknapparna i huvudfönstret eller använda inspelaren för att kopiera dina handlingar. Gå till Alternativ> Inställningar> Inspelning för att välja vilka ingångar kommer att registreras.
-		Om du vill använda brännaren för snabbuppgifter gå till Alternativ> Inställningar> Inspelning och kontrollera "Rensa lista" alternativet. Sedan klickar du på knappen Spela in i huvudfönstret och använd F10 för att rensa den aktuella Makro och starta en ny med samma kortkommando. Du kan också kolla "alltid aktiv" i huvudfönstret för att hålla Inspelning och uppspelning snabbtangenter aktiv.
-		För att få hjälp för ett visst kommando högerklicka någonstans på ett kommando fönster för att visa länkar till AutoHotkey onlinehjälpen.
-		Kontrollera "Capture Keys" alternativ för att ange nycklar och kombinationer till ditt makro direkt från huvudfönstret.
-		Enter och kombinationer på Hotkey rutan längst ner och tryck på knappen Infoga för att lägga dem till de utvalda raderna.
-		Om inga rader valt redigera knapparna gälla för alla rader i listan.
-		Du kan tilldela dina egna variabler i variablerna windows (Infoga> Om Uttalanden / variabler / funktioner). För att använda dem inne kommandon bifoga variabelnamnet i procent tecken, t.ex.: % MyVar%.
-		Den "Loop" räknare upptill anger det totala antalet slingor för den valda makro.
-		Du kan redigera en rad genom att dubbelklicka den eller genom att markera den och klicka på Redigera knapparna längst ner.
-		Du kan redigera flera markerade rader med hjälp av alternativen i redigeringsrutan längst ner.
+	Start_Tips =	Kolla in video tutorials på www.macrocreator.com/help att lära sig om de många funktionerna i Pulover s makro Skaparen.
+		Att få hjälp med en specifik kommando högerklicka någonstans på ett kommandofönster för att visa länkar till onlinehjälpen.
+		Du kan skapa makron med hjälp av kommandoknapparna i huvudfönstret eller använda inspelaren för att kopiera dina handlingar. Gå till Alternativ> Inställningar> Inspelnings att välja vilka ingångar kommer att registreras.
+		Använd sökfältet eller "Hitta ett kommando" fönster för att söka efter kommandon och funktioner.
+		Vill du hjälpa fixa en översättning eller ens skapa en ny? Gå till Alternativ> Inställningar> Språk redaktör och göra några korrigeringar du vill. Du kan förhandsgranska den när som helst. Klicka på Skicka för att skicka din revision. Skicka in ett obegränsat antal korrigeringar så många gånger du vill.
+		Kontrollera "Capture nycklar" för att komma in nycklar och kombinationer till Macro direkt från huvudfönstret.
+		Ange nycklar och kombinationer i Hotkey rutan längst ner och tryck på knappen Infoga för att lägga dem till de utvalda rader.
+		Använd redigerings knapparna längst ned i huvudfönstret för att ställa in upprepning och fördröja att flera rader samtidigt. Om inga rader väljs redigeringsknapparna gäller för alla rader i listan.
+		Nästan varje kommando och funktion accepterar och matar variabler. Du kan tilldela dina egna variabler i variablerna fönster (Kommandon> Variabler / Arrays). För att använda dem i kommandon bifoga variabelnamnet i procenttecken, t.ex .:% MyVar%. Funktioner, använda dem utan procenttecken, t.ex .: substr (MyVar, 5).
+		Högerklicka någonstans i kommandofönstret för att enkelt infoga inbyggda variabler från en lista.
+		Om du vill använda brännaren för snabbuppgifter gå till Alternativ> Inställningar> Inspelning och kontrollera "Rensa lista" alternativet. Klicka sedan på inspelningsknappen i huvudfönstret och använd F10 för att rensa nuvarande Makro och starta en ny med samma kortkommando. Du kan också kontrollera "alltid aktiv" i huvudfönstret för att hålla inspelning och uppspelning snabbtangenter aktiva.
+		PMC stöder Array objekt och metoder, precis som AutoHotkey skript. Du kan skapa arrayer på många sätt, det vanligaste är att gå till Variabler fönstret, kontrollera "Expression" och innesluter värdena inom parentes, t.ex .: [10, 20, Var, "sträng"]. Du kan också skapa namngivna nycklar, t.ex .: {Keya: Vara, "några viktiga": "strängvärdet"}.
+		Funktioner använder AHK uttryck syntax. Bokstav strängar måste omges av citattecken och variabler behöver inte procenttecken. Du kan använda andra funktioner eller gruppelement som parametrar. T.ex .: StrReplace (MyVar, MyArray [ "A"], substr (OtherVar, 2, 3)).
+		Uttryck stöds i AutoHotkey Expression Syntax. Om du vill använda ett uttryck i en parameter kommando, börjar det med en procenttecken, t.ex .:% substr (Var, 5).
+		Loop disk på toppen sätter det totala antalet loopar för den valda makro.
+		Du kan redigera en rad genom att dubbelklicka på den eller genom att markera den och klicka på Redigera knapparna längst ned. Du kan redigera flera markerade rader med hjälp av alternativen i redigeringsfältet längst ned.
+		Du kan definiera egna funktioner i Funktion> Skapa funktion och använda dem från fönstret Funktion eller inuti uttryck.
+		Du kan definiera globa / lokala och statiska variabler för användardefinierade funktioner. Globala variabler som definieras i Val> Inställningar> Användar globala variabler anses Super Global, och kommer alltid att vara tillgängliga inom funktioner, även om definieras som lokal.
 		Välj en eller flera rader för att lägga till nya kommandon ovanpå dem.
-		Du kan flytta rader med klick-och-dra.
-		Dubbelklicka på på ikonen för att aktivera snabbtangenter eller stoppa uppspelning / inspelning. Klicka på den med den mellersta knappen under uppspelning eller inspelning för att pausa.
-		Du kan exportera dina makron till arbets AutoHotkey skript eller fristående körbara från fönstret Exportera.
-		För att spela in och spela upp musen med absoluta koordinater gå till Alternativ> Inställningar> Grundinställningar och set musens koordinater till skärmen.
-		Du kan öppna, kopiera, flytta eller radera filer och mappar med ett kommando i Infoga> Run / Arkiv / String / Misc.
-		Om du vill spela Down och Up tillstånd varje nyckel gå till Alternativ> Inställningar> Inspelning och kolla "Fånga viktiga statliga (Down / Up)" alternativet.
-		Du kan använda snabbtangenter för att påskynda eller fördröja Uppspelning. Gå till Alternativ> Inställningar> Uppspelning ställa nycklar och hastighet.
-		För att justera fånga område med "gör skärmdump" verktyget gå till Alternativ> Inställningar> Skärmbilder och välj "Tryck Enter för att fånga". Efter teckning Control rektangeln användning+piltangenterna för att flytta markeringen och Skift+piltangenterna för att ändra storlek på den.
-		Snabbval: Välj en rad och klicka på en kolumnrubrik för att välja liknande rader baserat på cellens text från den kolumnen.
-		The Run / Arkiv / String / Misc. fönster har många andra användbara kommandon såsom avstängning och UrlDownloadToFile.
-		Använd "Skärmdump"-funktionen i funktionerna fönstret (Infoga> Om Uttalanden / variabler / funktioner) för att göra en skärmdump av en del av skärmen. Första parametern är den destination filens sökväg och namn med en png förlängning. Andra parametern är pipe-separerade koordinater på skärmen, t.ex. 100 | 200 | 50 | 100 (X | Y | Bredd | Höjd).
-		Klicka på Index kolumnrubriken för att slå på / stänga Hjälp, mönster och färger för loopar och uttalanden. Dubbel-klicka på Åtgärd kolumnrubriken för att slå på / av Indrag för Loops och uttalanden.
-		Du kan felsöka dina makron med hjälp av handboken Hotkey och alternativen Play i Makromenyknappen. Du kan också inaktivera åtgärder genom att avmarkera dem i Macro listan.
-		För att göra dina makron fungerar bara på ett visst fönster gå till Macro> sammanhangsberoende snabbtangenter.
-		Du kan ställa dina egna globala variabler som skall laddas vid start och som ska exporteras. Gå till Alternativ> Inställningar> Användarinställningar globala variabler för att lägga till dem.
-		Du kan köra avancerade funktioner såsom SUBSTR och RegExReplace från funktionsfönstret (Sätt> Om Uttalanden / variabler / funktioner). Eller köra egna funktioner från externa AutoHotkey skript.
+		Du kan flytta rader med klicka och dra.
+		Dubbelklicka på ikonen i aktivitetsfältet för att aktivera snabbtangenter eller stoppa uppspelning / inspelning. Klicka på den med mittenknappen under uppspelning eller inspelning för att pausa.
+		Du kan exportera dina makron till arbets AutoHotkey skript eller fristående körbara från Export fönstret.
+		För att spela in och spela upp musen med hjälp av absoluta koordinater gå till Alternativ> Inställningar> Standardinställningar och ställ Mouse koordinater till skärmen.
+		Du kan öppna, kopiera, flytta eller ta bort filer och mappar med en av kommandona i Kommandon> Kör / Arkiv / String / Div. Det finns många andra användbara kommandon som StringReplace, InputBox och MouseGetPos.
+		Om du vill spela ner och upp tillståndet för varje nyckel gå till Alternativ> Inställningar> inspelning och kontrollera "Capture Key State (Ned / Upp)" alternativet.
+		Du kan använda snabbtangenter för att påskynda eller fördröja uppspelning. Gå till Alternativ> Inställningar> Uppspelning för att ställa in nycklar och hastighet.
+		För att justera fånga område med "gör skärmdump" verktyg gå till Alternativ> Inställningar> Skärm och välj "Tryck Enter för att fånga". Efter att dra rektangeln använda Control + piltangenterna för att flytta markeringen och Skift + piltangenterna för att ändra storlek på det.
+		Quick Select: Välj varje rad och klicka på en kolumnrubrik för att välja liknande rader baserat på cellens text från den kolumnen.
+		Klicka på Index kolumnrubriken för att slå på / stänga Hjälp, mönster och färger för loopar och rapporter. Dubbelklicka på Åtgärd kolumnrubriken för att slå på / stänga indrag för loopar och rapporter.
+		Du kan felsöka makron med hjälp av manuell Hotkey och Alternativ för uppspelning i makromenyn. Du kan också stänga av åtgärder genom att avmarkera dem i makro listan.
+		För att göra dina makron fungerar bara på en viss fönster gå till Macro> kontextkänslig snabbtangenter.
+		Du kan ställa dina egna globala variabler som skall lastas på start och som ska exporteras. Gå till Val> Inställningar> Användar globala variabler för att lägga till dem.
+		Du kan köra avancerade funktioner som substr och RegExReplace från funktionsfönstret (Kommandon> Funktioner / Array Methods). Du kan också definiera egna funktioner eller kör funktioner från externa AutoHotkey skript.
+		Du kan spela in musrörelser i förhållande till den aktuella positionen genom att hålla CapsLock under inspelning (du kan ändra nyckeln och göra det växla i Inställningar).
 		
 ; 19. Tooltips		
 	A_List_TT =	Välj Makro (Ctrl+1~0)
@@ -998,12 +1014,12 @@
 	Ex_UV_TT =	Exportera globala variabler.
 	Ex_WN_TT =	Aktiverar eller inaktiverar varningar för särskilda villkor som kan tyda på ett fel, till exempel ett stavfel eller saknas "globalt" deklaration.
 	ExpList_TT =	Dubbelklicka för att redigera
-	ExprLink2_TT =	- INTE BIFOGA VARIABLER I PROCENT TECKEN HÄR.
+	ExprLink2_TT 	- INTE BIFOGA VARIABLER I PROCENT TECKEN HÄR.
 		- De flesta av AHK uttryck stöds.
 		- Du kan använda strängar, variabler, arrayer och funktioner.
-		- Om du vill använda strängar, bifoga dem i citationstecken, till exempel: var = "a".
-		- Flera rapporter stöds, t.ex. var = "a" || InStr (var, "b").
-	ExprLink3_TT =	- INTE BIFOGA VARIABLER I PROCENT TECKEN HÄR.
+		- Om du vill använda strängar, bifoga dem i citationstecken, till exempel: var  "a".
+		- Flera rapporter stöds, t.ex. var  "a" || InStr (var, "b").
+	ExprLink3_TT 	- INTE BIFOGA VARIABLER I PROCENT TECKEN HÄR.
 		- De flesta av AHK uttryck stöds.
 		- Du kan använda strängar, variabler, arrayer och funktioner.
 		- Om du vill använda strängar, bifoga dem i citationstecken, till exempel: var = "a".
@@ -1099,13 +1115,13 @@
 	Co_Oper_6 =	Större än eller lika
 	Co_Oper_7 =	Mindre eller lika
 	Co_Oper_8 =	I (lista)
-	Co_Oper_9 =	 Inte i (lista)
-	Co_Oper_10 =	 Innehåller (lista)
-	Co_Oper_11 =	 Inte innehåller (lista)
-	Co_Oper_12 =	 Mellan (linje 1) och (linje 2)
-	Co_Oper_13 =	 Inte mellan (linje 1) och (linje 2)
-	Co_Oper_14 =	 Är (typ)
-	Co_Oper_15 =	 Är inte (typ)
+	Co_Oper_9 =	Inte i (lista)
+	Co_Oper_10 =	Innehåller (lista)
+	Co_Oper_11 =	Inte innehåller (lista)
+	Co_Oper_12 =	Mellan (linje 1) och (linje 2)
+	Co_Oper_13 =	Inte mellan (linje 1) och (linje 2)
+	Co_Oper_14 =	Är (typ)
+	Co_Oper_15 =	Är inte (typ)
 		
 ; 21. IE Commands Tips		
 	IE_Cmd_Index =	
@@ -1135,7 +1151,7 @@
 	Value	Hämtar eller ställer in värdet för objektet.
 	Width	Ställer eller hämtar objektets bredd.
 		
-; 22. COM Methods Tips		
+; 22. COM Objects Tips		
 	COM_CLSID_Index =	
 	Excel.Application	Manipulerar excelark.
 	HTMLfile	Kan användas för att läsa, skriva och interagera med HTML.
@@ -1283,6 +1299,7 @@
 	Length	Returnerar längden på en linjär grupp som börjar vid position 1.
 	ListVars	Visar script variabler: deras namn och aktuella innehållet.
 	Ln	Returnerar den naturliga logaritmen (basen e) av Number.
+	LoadPicture	Läser in en bild från fil och returnerar en bitmapp eller ikon handtag.
 	Log	Returnerar logaritmen (bas 10) av Number.
 	Loop (files & folders)	Hämtar de angivna filerna eller mapparna, en i taget.
 	Loop (normal) 	Utför en serie kommandon flera gånger: antingen det angivna antalet gånger eller tills brott uppstår.
@@ -1367,11 +1384,36 @@
 	Until	Gäller ett tillstånd till en fortsättning av en slinga eller for-loop.
 	UrlDownloadToFile	Hämtar en fil från Internet.
 	UserFunction	Luo Tehtävä rakenne.
+	Variable	Tilldelar  det angivna värdet till en variabel.
 	While	Utför en serie kommandon tills det angivna uttrycket utvärderas till false.
 	WinActivate	Aktiverar angivna fönstret (gör det främst).
 	WinActivateBottom	Samma som WinActivate förutom att den aktiverar den nedersta (åtminstone nyligen aktiv) matchande fönster snarare än det översta.
 	WinActive	Returnerar Unikt ID (HWND) av det aktiva fönstret om det matchar de angivna kriterierna.
 	WinClose	Stänger det angivna fönstret.
+	WinExist	Kontrollerar om det angivna fönstret existerar.
+	WinGet	Hämtar det angivna fönstret unika ID, process-ID, process namn, eller en lista på sina kontroller. Det kan också hämta en lista över alla fönster som matchar de angivna kriterierna.
+	WinGetClass	Hämtar det angivna fönstrets klassnamn.
+	WinGetPos	Hämtar position och storlek av det specificerade fönstret.
+	WinGetText	Hämtar text från specificerade fönstret.
+	WinGetTitle	Hämtar titeln på det specificerade fönstret.
+	WinHide	Döljer angivna fönstret.
+	WinHttpDownloadToFile	Överför en eller flera filer från Internet.
+	WinKill	Tvingar den angivna fönstret för att stänga.
+	WinMaximize	Förstorar angivna fönstret till maximal storlek.
+	WinMenuSelectItem	Startar ett menyalternativ på menyraden i det specificerade fönstret.
+	WinMinimize	Komprimerar det angivna fönstret till en knapp på aktivitetsfältet.
+	WinMinimizeAll	Minimerar alla fönster.
+	WinMinimizeAllUndo	Vänder effekten av en tidigare WinMinimizeAll.
+	WinMove	Ändrar positionen och / eller storleken på det specificerade fönstret.
+	WinRestore	Unminimizes eller unmaximizes det specificerade fönstret om det är minimerat eller maximerat.
+	WinSet	Gör en mängd ändringar i specificerade fönstret, t.ex. "alltid överst" och öppenhet.
+	WinSetTitle	Ändrar titeln på det angivna fönstret.
+	WinShow	Unhides den angivna fönstret.
+	WinWait	Väntar tills den angivna fönstret existerar.
+	WinWaitActive	Väntar tills det angivna fönstret är aktivt.
+	WinWaitClose	Väntar tills det angivna fönstret inte existerar.
+	WinWaitNotActive	Väntar tills det angivna fönstret inte är aktivt.
+	Zip / UnZip	Komprimera eller expandera en eller flera zip-filer.
 	WinExist	Kontrollerar om det angivna fönstret existerar.
 	WinGet	Hämtar det angivna fönstret unika ID, process-ID, process namn, eller en lista på sina kontroller. Det kan också hämta en lista över alla fönster som matchar de angivna kriterierna.
 	WinGetClass	Hämtar det angivna fönstrets klassnamn.

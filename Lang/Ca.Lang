@@ -62,18 +62,18 @@
 	i_Lang008 =	&Imatge / Píxel Cerca
 	i_Lang009 =	E&xecutar / Arxiu / Cadena / Misc.
 	i_Lang010 =	&Loop
-	i_Lang011 =	&Anar A
-	i_Lang012 =	Label
+	i_Lang011 =	&Anar A / Etiqueta
+	i_Lang012 =	A&just del temporitzador
 	i_Lang013 =	&Si Els Estats
 	i_Lang014 =	&Variables / Matriu
 	i_Lang015 =	F&uncions / Mètodes de matriu
 	i_Lang016 =	E&nvia un correu electrònic
-	i_Lang017 =	&Descàrrega de fitxers / Pujar
+	i_Lang017 =	&Descàrrega d'arxius
 	i_Lang018 =	&Zip / descomprimir arxius
 	i_Lang019 =	Interf&ície d'Internet Explorer
 	i_Lang020 =	C&OM
 	i_Lang021 =	&Missatges De Windows
-	i_Lang022 =	Trobar una ordre
+	i_Lang022 =	&Trobar una ordre
 		
 ; 06. Edit Sub Menu		
 	e_Lang001 =	&Duplicar
@@ -324,10 +324,10 @@
 	c_Lang026 =	Acció
 	c_Lang027 =	Clic
 	c_Lang028 =	Moure
-	c_Lang029 =	&& Move clic
+	c_Lang029 =	Moure I Feu Clic
 	c_Lang030 =	Roda Up
 	c_Lang031 =	Roda de Down
-	c_Lang032 =	Arrossegueu && gota
+	c_Lang032 =	Arrossegar I Deixar Anar
 	c_Lang033 =	Coordina
 	c_Lang034 =	Cercar
 	c_Lang035 =	Subcomando
@@ -622,14 +622,14 @@
 	t_Lang067 =	Cercar / Reemplaçar
 	t_Lang068 =	&Trobar
 	t_Lang069 =	&Coincidir majúscules i minúscules
-	t_Lang070 =	&Reemplaçar
+	t_Lang070 =	R&eemplaçar
 	t_Lang071 =	Fundar
 	t_Lang072 =	Substituït
 	t_Lang073 =	&Les files seleccionades
 	t_Lang074 =	Tote&s les files
-	t_Lang075 =	Tots &Macros
+	t_Lang075 =	Tots M&acros
 	t_Lang076 =	Sobre
-	t_Lang077 =	&Expressió Regular
+	t_Lang077 =	E&xpressió Regular
 	t_Lang078 =	Reproduir un cop
 	t_Lang079 =	Juga cada X (mili) segon
 	t_Lang080 =	Timer
@@ -760,6 +760,8 @@
 	t_Lang205 =	La Manera De Combat Pel Títol
 	t_Lang206 =	Velocitat De Combat Pel Títol
 	t_Lang207 =	Client
+	t_Lang208 =	T&robar
+	t_Lang209 =	Ree&mplaçar
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Obert
@@ -769,11 +771,14 @@
 	d_Lang005 =	Desar Projecte
 	d_Lang006 =	Error en desar / sobreescriure l'arxiu
 	d_Lang007 =	Error
-	d_Lang008 =	Error: No macro seleccionada `nComproveu almenys una macro a la llista ..
+	d_Lang008 =	Error: No macro seleccionada 
+		Comproveu almenys una macro a la llista ..
 	d_Lang009 =	Error: No Seleccionat tecla d'accés directe.
-	d_Lang010 =	Error:. Direcció invàlida `nLa adreça seleccionada o el nom del fitxer no és vàlid.
+	d_Lang010 =	Error:. Direcció invàlida 
+		La adreça seleccionada o el nom del fitxer no és vàlid.
 	d_Lang011 =	Advertència
-	d_Lang012 =	No hi ha control seleccionat. `N Voleu continuar?
+	d_Lang012 =	No hi ha control seleccionat. 
+		 Voleu continuar?
 	d_Lang013 =	Guió Exportació
 	d_Lang014 =	Guió Exportats
 	d_Lang015 =	L'arxiu s'ha exportat amb èxit!
@@ -788,7 +793,8 @@
 	d_Lang022 =	Anterior
 	d_Lang023 =	Missatge
 	d_Lang024 =	Carregar configuració per defecte?
-	d_Lang025 =	Macro (s) activa. `Nuse les tecles d'accés ràpid per jugar.
+	d_Lang025 =	Macros activades.
+		Utilitza les tecles d'accés ràpid per jugar.
 	d_Lang026 =	per a iniciar / aturar la gravació
 	d_Lang027 =	L'enregistrament s'atura
 	d_Lang028 =	Enregistrament...
@@ -805,7 +811,8 @@
 	d_Lang037 =	Imatge / píxel no trobada.
 	d_Lang038 =	Premeu D'acord per continuar.
 	d_Lang039 =	Temps d'espera!
-	d_Lang040 =	Aquesta funció requereix la biblioteca GDI+.
+	d_Lang040 =	
+.	Tämä ominaisuus vaatii GDI+ kirjasto.	Ова функција захтева ГДИ+библиотеку.
 		Premeu D'acord per anar a la pàgina de descàrrega.
 	d_Lang041 =	El nom de la variable conté un caràcter il · legal.
 	d_Lang042 =	és una paraula reservada.
@@ -833,8 +840,7 @@
 	d_Lang059 =	Aquesta comanda no admet expressions o funcions.
 		Assigneu una variable i utilitzar-lo en el paràmetre.
 	d_Lang060 =	Nova versió disponible
-	d_Lang061 =	Voleu descarregar-ho ara?
-		Per desactivar les comprovacions automàtiques seleccioneu Ajuda > Comproveu en l'arrencada
+	d_Lang061 =	
 	d_Lang062 =	Vostè ja té la versió més recent.
 	d_Lang063 =	S'ha produït un error durant la comprovació.
 	d_Lang064 =	Error en
@@ -901,35 +907,45 @@
 	d_Lang113 =	Informa de cap error.
 	d_Lang114 =	Skriptejä viedään (vaikka käännetty) kanssa lähetä sähköpostia toiminto (CDO) on näkyvissä merkintä sähköpostitilejä käytetään, mukaan lukien salasana. PMC Projektitiedosto ei ole tätä tietoa.
 	d_Lang115 =	- Mantingui Alt regió per establir en la mateixa ubicació.
+	d_Lang116 =	Transferir i instal·lar
+	d_Lang117 =	Anar a la pàgina de descàrrega
+	d_Lang118 =	Baixant ... Espereu.
 		
 ; 18. Start-up Tips		
-	Start_Tips =	Podeu crear macros utilitzant els botons de comandament a la finestra principal o l'ús de la gravadora per copiar les seves accions. Aneu a Opcions> Configuració> Gravació per seleccionar el que es registren les entrades.
-		Per utilitzar la gravadora per a tasques ràpides aneu a Opcions> Configuració> Gravació i marqui l'opció "Esborrar llista". A continuació, feu clic al botó de gravació a la finestra principal i utilitzar F10 per esborrar la macro actual i iniciar un de nou amb la mateixa combinació de tecles. També podeu consultar l'opció "Sempre actiu" en la finestra principal a tenir enregistrament i reproducció hotkeys actiu.
-		Per obtenir ajuda per a una ordre específic feu clic dret en qualsevol part de la finestra de comandaments per mostrar enllaços a AutoHotkey ajuda en línia.
-		Marqueu l'opció "Claus Capture" per entrar tecles i combinacions a la macro directament de la finestra principal.
-		Introduïu tecles i combinacions de tecles d'accés ràpid a la caixa a la part inferior i premi el botó Insereix per afegir a les files seleccionades.
-		Si no se selecciona cap fila dels botons d'edició s'apliquen a totes les files de la llista.
-		Pots assignar les teves pròpies variables en les variables de finestres (Inserir> Si Declaracions / variables / funcions). Per utilitzar les ordres a l'interior tanquen el nom de la variable entre signes de percentatge, per exemple: % MiVar%.
-		El comptador de "Loop" a la part superior estableix el nombre total de bucles de la macro seleccionada.
-		Podeu editar una fila fent doble clic o seleccionant-lo i fent clic en els botons d'edició a la part inferior.
-		Podeu editar diverses files seleccionades usant les opcions de la barra d'edició a la part inferior.
-		Seleccionar una o més files per afegir nous comandaments a la part superior d'ells.
-		Podeu moure files amb fer clic i arrossegar.
-		Feu doble clic a la icona de la safata per activar tecles d'accés ràpid o aturar la reproducció / enregistrament. Feu clic amb el botó central durant la reproducció o l'enregistrament en pausa.
-		Vostè pot exportar els seus macros als scripts AutoHotkey treball o executables independents de la finestra Exporta.
-		Per gravar i reproduir ratolí utilitzant coordenades absolutes anar a Opcions> Configuració> Valors predeterminats i establir coordenades del ratolí a la pantalla.
-		Vostè pot obrir, copiar, moure o esborrar arxius i carpetes utilitzant un dels comandaments de Inserir> Run / Arxiu / cadena / Misc.
-		Per gravar Down i Up estat de tots els go clau a Opcions> Configuració> Gravació i seleccioneu "Capturar estat clau (baix / dalt)" opció.
-		Podeu utilitzar tecles d'accés ràpid per accelerar o reduir la velocitat de reproducció. Aneu a Opcions> Configuració> Reprodueix per establir les claus i la velocitat.
-		Per ajustar l'àrea de captura amb "Fer Screenshot" aneu a Opcions> Configuració> Imatges i seleccioneu "Premeu Enter per capturar". Després de dibuixar el control d'ús rectangle+tecles de cursor per moure la selecció i Shift+tecles de fletxa per canviar la seva mida.
-		Seleccioneu ràpida: Seleccioneu qualsevol fila i feu clic a una capçalera de columna per seleccionar files similars basades en text de la cel d'aquesta columna.
-		The Run / Arxiu / cadena / Misc. finestra té molts altres ordres útils com ara apagat i URLDownloadToFile.
-		Utilitzeu la funció "Captura" a la finestra de funcions (Inserir> Si Declaracions / Variables / Funcions) per fer una captura de pantalla d'una part de la pantalla. El primer paràmetre és la ruta del fitxer de destinació i el nom amb una extensió png. El segon paràmetre són les coordenades canonada separats a la pantalla, per exemple, 100 | 200 | 50 | 100 (X | Y | Ample | Alt).
-		Feu clic a la capçalera de columna Índex per encendre / apagar Ajuda marques i colors de bucles i sentències. Feu doble clic a la capçalera de columna Acció per encendre / apagar sagnia de bucles i sentències.
-		Pot depurar les seves macros utilitzant el Hotkey manual i les opcions de joc al menú Macro. També pot desactivar desmarcant les accions en la llista de macros.
-		Per fer les seves macros només funcionen en una determinada finestra anar a Macro> Tecles d'accés directe sensibles al context.
-		Podeu definir les seves pròpies variables globals per ser carregat en l'arrencada i per a l'exportació. Aneu a Opcions> Configuració> Usuari Variables globals per afegir.
-		Podeu executar funcions avançades com ara substr i RegExReplace de la finestra Funcions (Inserir> Si Declaracions / variables / funcions). O executar les seves pròpies funcions de seqüència AutoHotkey externs.
+	Start_Tips =	Fes una ullada als tutorials en vídeo a www.macrocreator.com/help per aprendre sobre les moltes característiques del creador de l'Macro pullòver.
+		Per obtenir ajuda per una ordre específic feu clic dret en qualsevol part d'una finestra d'ordres per mostrar els de l'ajuda en línia.
+		Podeu crear macros usant els botons de comandament a la finestra principal o l'ús de la gravadora a copiar les seves accions. Anar a Opcions> Configuració> Enregistrament per seleccionar el que es registraran les entrades.
+		Utilitzeu la barra de cerca oa la finestra "Trobar una ordre" per buscar les ordres i funcions.
+		Li agradaria ajudar a fixar una traducció o fins i tot crear una nova? Anar a Opcions> Configuració> Editor d'idiomes i fer les correccions que desitja. Podeu obtenir una vista prèvia en qualsevol moment. Feu clic a Envia per enviar la seva revisió. No dubteu a enviar qualsevol nombre de correccions tantes vegades com vulgui.
+		Marqueu l'opció "Claus de captura" per entrar tecles i combinacions a la macro directament de la finestra principal.
+		Introdueixi tecles i combinacions de tecles d'accés ràpid en el quadre a la part inferior i premi el botó Insereix per afegir-los a les files seleccionades.
+		Utilitzeu els botons d'edició de la part inferior de la finestra principal per ajustar la repetició i el retard de diverses files al mateix temps. Si no se seleccionen files dels botons d'edició s'apliquen a totes les files de la llista.
+		Gairebé tots els comandaments i la funció accepta i envia les variables. Es poden assignar les seves pròpies variables en les variables de finestres (Comandos> Variables / Arrays). Per usar-los en l'interior ordres tanquen el nom de la variable entre signes de percentatge, per exemple.:% MiVar%. En funcions, utilitzar-los sense signes de percentatge, per exemple.: Substr (MiVar, 5).
+		Feu clic a qualsevol lloc a la finestra d'ordres per inserir variables fàcilment construït a partir d'una llista.
+		Per utilitzar la gravadora per a tasques ràpides van a Opcions> Configuració> Gravació i seleccioni l'opció "Esborrar llista". A continuació, feu clic al botó de gravació a la finestra principal i utilitzar F10 per desactivar l'actual macro i començar un de nou amb la mateixa tecla d'accés directe. També pot comprovar l'opció "Sempre actiu" a la finestra principal per mantenir la gravació i reproducció tecles d'accés ràpid activa.
+		PMC suporta objectes Array i mètodes, igual que les seqüències d'ordres AutoHotkey. Podeu crear matrius de moltes maneres, sent la més habitual va a la finestra Variables, marcant l'opció "Expressió" i que tanca els valors entre parèntesis, per exemple.: [10, 20, Var, "cadena"]. També pot crear claus amb nom, per exemple.: {KEYA: Vara, "alguna clau": "cadena de valor"}.
+		Funcions utilitzen la sintaxi d'expressions AHK. Les cadenes literals han d'anar entre cometes, i les variables no necessiten signes de percentatge. Es poden fer servir altres funcions o elements de la matriu com a paràmetres. Per exemple.: StrReplace (MiVar, MiArray [ "A"], substr (otra_var, 2, 3)).
+		Les expressions s'admeten en AutoHotkey Expressió Sintaxi. Per utilitzar una expressió dins d'un paràmetre de comandament, començar amb un signe de percentatge, per exemple.:% Substr (Var, 5).
+		El comptador de "bucle" a la part superior estableix el nombre total de bucles per a la macro seleccionada.
+		Podeu editar una fila fent doble clic o seleccionant-lo i fent clic en els botons d'edició a la part inferior. Podeu editar diverses files seleccionades usant les opcions de la barra d'edició a la part inferior.
+		Podeu definir les seves pròpies funcions en funció> Crear i utilitzar la funció des de la finestra de funcions o expressions dins.
+		Es poden definir les variables globals / locals i estàtiques per a les funcions definides per l'usuari. Les variables globals definides a Opcions> Configuració> variables globals d'usuari es consideren Súper global, i seran sempre dins de les funcions disponibles, fins i tot quan es defineix com a local.
+		Seleccioneu una o més files per afegir nous comandaments en la part superior d'ells.
+		Podeu moure files amb clic i arrossegar.
+		Feu doble clic a la icona de la safata tecles d'accés ràpid per activar o aturar la reproducció / enregistrament. Feu clic amb el botó central durant la reproducció o gravació per fer una pausa.
+		Pot exportar els seus macros per a les seqüències d'ordres AutoHotkey de treball o independent executables des de la finestra d'exportació.
+		Per gravar i reproduir ratolí utilitzant coordenades absolutes aneu a Opcions> Configuració> Opcions per defecte i establir coordenades del ratolí a la pantalla.
+		Vostè pot obrir, copiar, moure o eliminar arxius i carpetes utilitzant un dels comandaments en Ordres> Executar / Arxiu / Cadena / Varis. Hi ha molts altres ordres útils com ara StringReplace, inputbox i MouseGetPos.
+		Per gravar Down i estat Dalt de cada go clau per Opcions> Configuració> Enregistrament i marca "captura de l'estat fonamental (baix / dalt)" opció.
+		Podeu utilitzar tecles d'accés ràpid per accelerar o alentir la reproducció. Anar a Opcions> Configuració> Reproducció per establir claus i velocitat.
+		Per ajustar l'àrea de captura amb la funció "Fer Captura" anar a Opcions> Configuració> Imatges i seleccioneu "Premeu Retorn per capturar". Després de dibuixar les tecles de fletxa ús rectangle Control + per moure la selecció i Shift + tecles de fletxa per canviar la seva grandària.
+		Selecció ràpida: Seleccioneu qualsevol fila i feu clic a una capçalera de columna per seleccionar les files similars basats en el text de cel·la d'aquesta columna.
+		Feu clic a la capçalera de la columna Índex per encendre / apagar Ajuda, dibuixos i colors per bucles i declaracions. Feu doble clic a la capçalera de la columna Acció per encendre / apagar sagnia per als bucles i declaracions.
+		Es pot depurar les seves macros utilitzant la tecla d'accés directe manual i les opcions d'aquesta última al menú Macro. També pot desactivar desmarcant accions en la llista de macros.
+		Per fer les seves macros només funcionen en una determinada finestra anar a Macro> sensible al context tecles d'accés ràpid.
+		Podeu configurar les seves pròpies variables globals que es carreguen en l'arrencada i per ser exportats. Anar a Opcions> Configuració> Variables globals d'usuari afegir.
+		Podeu executar funcions avançades com ara substr i REGEXREPLACE des de la finestra de Funcions (Comandos> Funcions / Mètodes de matriu). També pot definir les seves pròpies funcions o funcions van de seqüència AutoHotkey externs.
+		Pot gravar els moviments del ratolí respecte a la posició actual mantenint CapsLock durant l'enregistrament (es pot canviar la clau i arribar alternar en la configuració).
 		
 ; 19. Tooltips		
 	A_List_TT =	Seleccioneu Macro (Ctrl+1~0)
@@ -998,12 +1014,12 @@
 	Ex_UV_TT =	Exportar variables globals.
 	Ex_WN_TT =	Activa o desactiva els advertiments per a condicions específiques que poden indicar un error, com un error tipogràfic o de falta de declaració "global".
 	ExpList_TT =	Feu doble clic per editar
-	ExprLink2_TT =	- NO INCLOURE LES VARIABLES A SIGNES DE PERCENTATGE AQUÍ.
+	ExprLink2_TT 	- NO INCLOURE LES VARIABLES A SIGNES DE PERCENTATGE AQUÍ.
 		- La major part de les expressions AHK són compatibles.
 		- Vostè pot usar cadenes, variables, matrius i funcions.
-		- Per utilitzar cordes, tancar-los entre cometes, per exemple: var = "a".
-		- Són compatibles Diverses sentències, per exemple: var = "a" || Instr (var, "b").
-	ExprLink3_TT =	- NO INCLOURE LES VARIABLES A SIGNES DE PERCENTATGE AQUÍ.
+		- Per utilitzar cordes, tancar-los entre cometes, per exemple: var  "a".
+		- Són compatibles Diverses sentències, per exemple: var  "a" || Instr (var, "b").
+	ExprLink3_TT 	- NO INCLOURE LES VARIABLES A SIGNES DE PERCENTATGE AQUÍ.
 		- La major part de les expressions AHK són compatibles.
 		- Vostè pot usar cadenes, variables, matrius i funcions.
 		- Per utilitzar cordes, tancar-los entre cometes, per exemple: var = "a".
@@ -1099,13 +1115,13 @@
 	Co_Oper_6 =	Major o igual
 	Co_Oper_7 =	Menor o igual
 	Co_Oper_8 =	En (llista)
-	Co_Oper_9 =	 No en (llista)
-	Co_Oper_10 =	 Conté (llista)
-	Co_Oper_11 =	 No conté (llista)
-	Co_Oper_12 =	 Entre (línia 1) i (línia 2)
-	Co_Oper_13 =	 No entre (línia 1) i (línia 2)
-	Co_Oper_14 =	 És (tipus)
-	Co_Oper_15 =	 No és (tipus)
+	Co_Oper_9 =	No en (llista)
+	Co_Oper_10 =	Conté (llista)
+	Co_Oper_11 =	No conté (llista)
+	Co_Oper_12 =	Entre (línia 1) i (línia 2)
+	Co_Oper_13 =	No entre (línia 1) i (línia 2)
+	Co_Oper_14 =	És (tipus)
+	Co_Oper_15 =	No és (tipus)
 		
 ; 21. IE Commands Tips		
 	IE_Cmd_Index =	
@@ -1135,7 +1151,7 @@
 	Value	Obté o estableix el valor de l'objecte.
 	Width	Estableix o recupera l'amplada de l'objecte.
 		
-; 22. COM Methods Tips		
+; 22. COM Objects Tips		
 	COM_CLSID_Index =	
 	Excel.Application	Manipula fulles d'Excel.
 	HTMLfile	Es pot utilitzar per llegir, escriure i interactuar amb HTML.
@@ -1283,6 +1299,7 @@
 	Length	Retorna la longitud d'una matriu lineal començant en la posició 1.
 	ListVars	Mostra les variables del script: els seus noms i continguts actuals.
 	Ln	Retorna el logaritme natural (base e) del número.
+	LoadPicture	Carrega una imatge d'arxiu i retorna un identificador de mapa de bits o icona.
 	Log	Retorna el logaritme (base 10) del nombre.
 	Loop (files & folders)	Recupera els arxius o carpetes especificats, un a la vegada.
 	Loop (normal) 	Realitzeu una sèrie d'ordres en diverses ocasions: es troben ja sigui el nombre especificat de vegades o fins trencament.
@@ -1367,11 +1384,36 @@
 	Until	Aplica una condició per a la continuació d'un cicle o bucle for.
 	UrlDownloadToFile	Descarrega un arxiu des d'Internet.
 	UserFunction	Crea una estructura de funcions.
+	Variable	Assigna el valor especificat a una variable.
 	While	Realitza una sèrie d'ordres diverses vegades fins que l'expressió especificada s'avalua com a falsa.
 	WinActivate	Activa la finestra especificada (ho fa sobretot).
 	WinActivateBottom	Igual que WinActivate excepte que activa el situat més avall (menys actiu recentment) Finestra a joc en lloc de la més alta.
 	WinActive	Retorna l'ID únic (HWND) de la finestra activa si coincideix amb els criteris especificats.
 	WinClose	Tanca la finestra especificada.
+	WinExist	Comprova si hi ha la finestra especificada.
+	WinGet	Recupera la finestra especificada única ID, ID de procés, nom del procés, o una llista dels seus controls. També pot obtenir una llista de totes les finestres que coincideixen amb els criteris especificats.
+	WinGetClass	Recupera el nom de classe de finestra especificada.
+	WinGetPos	Recupera la posició i la mida de la finestra especificada.
+	WinGetText	Recupera el text de la finestra especificada.
+	WinGetTitle	Recupera el títol de la finestra especificada.
+	WinHide	Oculta la finestra especificada.
+	WinHttpDownloadToFile	Descàrregues un o més arxius des d'Internet.
+	WinKill	Força la finestra especificada per tancar.
+	WinMaximize	Amplia la finestra especificada amb la seva mida màxim.
+	WinMenuSelectItem	Invoca una opció del menú de la barra de menús de la finestra especificada.
+	WinMinimize	Contreu la finestra especificada en un botó a la barra de tasques.
+	WinMinimizeAll	Minimitza totes les finestres.
+	WinMinimizeAllUndo	Inverteix l'efecte d'un WinMinimizeAll anterior.
+	WinMove	Els canvis de la posició i / o la mida de la finestra especificada.
+	WinRestore	Unminimizes o unmaximizes la finestra especificada si es minimitza o maximitza.
+	WinSet	Fa una varietat de canvis en la finestra especificada, com "sempre a sobre" i la transparència.
+	WinSetTitle	Canvia el títol de la finestra especificada.
+	WinShow	Unhides la finestra especificada.
+	WinWait	Espera que hi ha la finestra especificada.
+	WinWaitActive	Espera que la finestra especificada està activa.
+	WinWaitClose	Espera que no existeix la finestra especificada.
+	WinWaitNotActive	Espera fins que la finestra especificada no està actiu.
+	Zip / UnZip	Comprimir o descomprimir un o més arxius zip.
 	WinExist	Comprova si hi ha la finestra especificada.
 	WinGet	Recupera la finestra especificada única ID, ID de procés, nom del procés, o una llista dels seus controls. També pot obtenir una llista de totes les finestres que coincideixen amb els criteris especificats.
 	WinGetClass	Recupera el nom de classe de finestra especificada.

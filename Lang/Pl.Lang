@@ -62,18 +62,18 @@
 	i_Lang008 =	&Image / Pixel Szukaj
 	i_Lang009 =	&Uruchom / Plik / String / Misc.
 	i_Lang010 =	P&ętla
-	i_Lang011 =	&Goto
-	i_Lang012 =	&Label
+	i_Lang011 =	P&rzejdź Do / Etykiety
+	i_Lang012 =	&Zestaw zegar
 	i_Lang013 =	I&f
-	i_Lang014 =	&Zmienne / Macierze
-	i_Lang015 =	Fu&nkcje / Metody tablicy
+	i_Lang014 =	Zmie&nne / Macierze
+	i_Lang015 =	Funk&cje / Metody tablicy
 	i_Lang016 =	&Wysłać email
-	i_Lang017 =	&Download / upload plików
-	i_Lang018 =	Zip &/ Rozpakuj pliki
-	i_Lang019 =	Inte&rnet Explorer
-	i_Lang020 =	&COM Interfejs
-	i_Lang021 =	Komunik&aty Windows
-	i_Lang022 =	Zna&jdź polecenia
+	i_Lang017 =	Po&bieranie plików
+	i_Lang018 =	Zip / Rozp&akuj pliki
+	i_Lang019 =	Internet E&xplorer
+	i_Lang020 =	COM Interfe&js
+	i_Lang021 =	Komunikat&y Windows
+	i_Lang022 =	Znaj&dź polecenia
 		
 ; 06. Edit Sub Menu		
 	e_Lang001 =	&Duplikat
@@ -324,10 +324,10 @@
 	c_Lang026 =	Akcja
 	c_Lang027 =	Kliknij
 	c_Lang028 =	Przenieść
-	c_Lang029 =	Przesuń i kliknij
+	c_Lang029 =	Poruszania Się I Kliknij
 	c_Lang030 =	Do koła
 	c_Lang031 =	Wheel dół
-	c_Lang032 =	Przeciągnij i upuść
+	c_Lang032 =	Przeciągnij I Upuść
 	c_Lang033 =	Współrzędne
 	c_Lang034 =	Szukaj
 	c_Lang035 =	Polecenie
@@ -760,6 +760,8 @@
 	t_Lang205 =	Tryb Mecz Tytuł
 	t_Lang206 =	Tytułowy Dopasowanie Prędkości
 	t_Lang207 =	Klient
+	t_Lang208 =	O&dnaleźć
+	t_Lang209 =	Z&astąpić
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Otwarte
@@ -769,11 +771,14 @@
 	d_Lang005 =	Zapisz Projekt
 	d_Lang006 =	Nie udało się zapisać / nadpisać plik
 	d_Lang007 =	Błąd
-	d_Lang008 =	Błąd: Makro wybrane.`nProszę sprawdzić co najmniej jedno makro na liście.
+	d_Lang008 =	Błąd: Makro wybrane.
+		Proszę sprawdzić co najmniej jedno makro na liście.
 	d_Lang009 =	Błąd: Brak Hotkey Wybrane.
-	d_Lang010 =	Błąd: nieprawidłowy adres.`nWybrany adres lub nazwa pliku jest nieprawidłowa.
+	d_Lang010 =	Błąd: nieprawidłowy adres.
+		Wybrany adres lub nazwa pliku jest nieprawidłowa.
 	d_Lang011 =	Ostrzeżenie
-	d_Lang012 =	Brak kontroli wybrany.`nKontynuować?
+	d_Lang012 =	Brak kontroli wybrany.
+		Kontynuować?
 	d_Lang013 =	Export Script
 	d_Lang014 =	Script wyeksportowanych
 	d_Lang015 =	Plik został pomyślnie eksportu!
@@ -788,7 +793,8 @@
 	d_Lang022 =	Poprzedni
 	d_Lang023 =	Wiadomość
 	d_Lang024 =	Załadować ustawienia domyślne?
-	d_Lang025 =	Makro (y) aktywacji.`nUżyj klawiszy skrótu do gry.
+	d_Lang025 =	aktywowane makra.
+		Użyj skrótu, aby zagrać.
 	d_Lang026 =	, aby rozpocząć / zatrzymać nagrywanie
 	d_Lang027 =	Nagrywanie zatrzymane
 	d_Lang028 =	Nagrywanie...
@@ -806,6 +812,7 @@
 	d_Lang038 =	Naciśnij przycisk OK, aby kontynuować.
 	d_Lang039 =	Timeout!
 	d_Lang040 =	Ta funkcja wymaga biblioteki GDI+.
+.	Tämä ominaisuus vaatii GDI+ kirjasto.	Ciri ini memerlukan+Library GDI.
 		Kliknij przycisk OK, aby przejść do strony pobierania.
 	d_Lang041 =	Nazwa zmiennej zawiera niedozwolony znak.
 	d_Lang042 =	Jest to słowo zarezerwowane.
@@ -833,8 +840,7 @@
 	d_Lang059 =	To polecenie nie obsługuje wyrażenia lub funkcji.
 		Proszę przypisać zmiennej i użyć go w parametrze.
 	d_Lang060 =	Nowa wersja dostępna
-	d_Lang061 =	Chcesz go ściągnąć?
-		Aby wyłączyć automatyczne kontrole wybierz Pomoc > Sprawdź na starcie
+	d_Lang061 =	
 	d_Lang062 =	Masz już najnowszą wersję.
 	d_Lang063 =	Wystąpił błąd podczas sprawdzania.
 	d_Lang064 =	Błąd
@@ -901,35 +907,45 @@
 	d_Lang113 =	Nie zgłosiło błąd.
 	d_Lang114 =	Script esportati (anche se compilato) con la funzione di invio e-mail (CDO) avranno informazioni visibili di account di posta elettronica utilizzati, inclusa la password. Il file di progetto PMC non dispone di tali informazioni.
 	d_Lang115 =	- Trzymając Alt ustawienie obszaru do tej samej lokalizacji.
+	d_Lang116 =	Przelew i zainstalować
+	d_Lang117 =	Przejdź do strony pobierania
+	d_Lang118 =	Pobieranie ... Proszę czekać.
 		
 ; 18. Start-up Tips		
-	Start_Tips =	Makra można tworzyć za pomocą przycisków poleceń w oknie głównym lub za pomocą dyktafonu skopiować swoje działania. Przejdź do Opcje > Ustawienia > Nagrywanie, aby wybrać to, co wejścia zostaną zapisane.
-		Aby korzystać z rejestratora do szybkiego zadania przejdź do Opcje > Ustawienia > Nagrywanie i zaznacz opcję "Wyczyść listę" opcji. Następnie kliknij przycisk Record w głównym oknie i użyć F10, aby usunąć bieżące makro i rozpocząć nową z tym samym skrótu. Możesz także zaznaczyć opcję "Zawsze Aktywny" opcji w oknie głównym, aby zachować zapis i odtwarzanie skrótów aktywne.
-		Aby uzyskać pomoc dla konkretnej komendy kliknij prawym przyciskiem myszy w dowolnym miejscu na oknie polecenia, aby wyświetlić linki do AutoHotkey Pomocy online.
-		Sprawdź "Capture Keys" opcję, aby wprowadzić klucze i kombinacje do makra bezpośrednio z głównego okna.
-		Wprowadź klucze i kombinacje w polu Hotkey na dole i wciśnij przycisk Insert, aby dodać je do wybranych wierszy.
-		Jeśli wiersze nie są wybrane przyciski EDIT zastosowanie do wszystkich wierszy w liście.
-		Można przypisać własne zmienne w zmiennych okna (Wstaw > if / zmienne / funkcje). Aby ich użyć wewnątrz polecenia dołączyć nazwę zmiennej w znakami procentu, np.: %MyVar%.
-		Loop licznik na górze przedstawia całkowitą liczbę pętli dla wybranego Makro.
-		Można edytować wiersz przez dwukrotne kliknięcie lub wybierając go i klikając przycisk Edycja na dole.
-		Możesz edytować wiele wybranych wierszy przy użyciu opcji w edycji barze na dole.
+	Start_Tips =	Sprawdź samouczki wideo na www.macrocreator.com/help~~pobj aby dowiedzieć się o wielu funkcji Macro Stwórcy Pulover użytkownika.
+		Aby otrzymać pomoc dla konkretnej komendy prawym przyciskiem myszy w dowolnym miejscu na oknie poleceń, aby zobaczyć linki do pomocy online.
+		Można tworzyć makra za pomocą przycisków poleceń w oknie głównym lub za pomocą dyktafonu skopiować swoje działania. Przejdź do Opcje> Ustawienia> Nagrywanie, aby wybrać to, co Wejścia będą rejestrowane.
+		Użyj paska wyszukiwania lub okno "Znajdź" polecenia, aby szukać poleceń i funkcji.
+		Chciałbyś pomóc naprawić tłumaczenie lub nawet stworzyć nową? Przejdź do Opcje> Ustawienia> Język i redaktor dokonywać żadnych korekt, które chcesz. Można go obejrzeć w dowolnym momencie. Kliknij na Zatwierdź aby wysłać rewizji. Zapraszam do składania dowolną liczbę korekt tyle razy, ile chcesz.
+		Zaznacz opcję "Keys przechwytywania", aby wejść do kombinacji klawiszy i makra bezpośrednio z głównego okna.
+		Wprowadź klucze i kombinacje w polu Skrót na dole i wciśnij przycisk Wstaw, aby dodać je do wybranych wierszy.
+		Za pomocą przycisków edycji w dolnej części okna głównego, aby ustawić powtarzanie i opóźnienia do wielu wierszy w tym samym czasie. Jeśli nie wybrano żadnych wierszy przyciski edytować zastosowanie do wszystkich wierszy w liście.
+		Prawie każde polecenie, a funkcja przyjmuje i wysyła zmienne. Można przypisać własne zmienne w zmiennych okien (Polecenia> Zmienne / podgrupach). Aby wykorzystać je wewnątrz polecenia dołączyć nazwę zmiennej w procentach znaków, np .:% MyVar%. W funkcjach, należy je bez znakami procentu, np .: substr (MyVar, 5).
+		Kliknij prawym przyciskiem myszy w dowolnym miejscu okna poleceń na łatwe wstawianie wbudowanych zmiennych z listy.
+		Aby korzystać z dyktafonu do szybkiego zadania przejdź do Opcje> Ustawienia> Nagrywanie i zaznacz opcję "Wyczyść listę". Następnie kliknij przycisk Record w oknie głównym programu i użyć F10, aby usunąć obecny Makro i rozpocząć nowe z tego samego skrótu. Można również sprawdzić "zawsze aktywne" opcja w oknie głównym, aby utrzymać hotkeys nagrywania i odtwarzania aktywne.
+		PMC obsługuje obiektów tablicy i metod, podobnie jak skrypty AutoHotkey. Można tworzyć tablice pod wieloma względami najbardziej zwykle będzie oknie Zmienne, zaznaczając opcję "ekspresja" i załączając wartości w nawiasach, np .: [10, 20, Var, "string"]. Można także tworzyć nazwane klucze, np .: {Keya: Vara, "jakiś klucz": "wartość ciągu"}.
+		Funkcje użyć składni wyrażeń AHK. Stringi, musi być ujęty w cudzysłów, a zmienne nie muszą procent znaki. Można korzystać z innych funkcji lub elementów tablicy jako parametry. Np .: StrReplace (MyVar, MyArray [ "A"], substr (OtherVar, 2, 3)).
+		Wyrażenia są obsługiwane w AutoHotkey Expression składni. Aby użyć wyrażenia wewnątrz parametru polecenia, uruchom go znakiem procentu, np .:% substr (Var, 5).
+		The "pętli" licznik w górę określa całkowitą liczbę pętli dla wybranego makro.
+		Można edytować wiersz poprzez dwukrotne kliknięcie lub wybranie i kliknięcie przycisku Edytuj na dole. Można edytować wiele wybranych wierszy przy użyciu opcji na pasku edycji na dole.
+		Można definiować własne funkcje function> Tworzenie funkcji i używać ich z okna funkcji lub wyrażeń wewnątrz.
+		Można zdefiniować Globa / zmiennych lokalnych i statycznych dla funkcji zdefiniowanych przez użytkownika. Zmienne globalne zdefiniowane w Opcje> Ustawienia> zmienne globalne użytkownika są uważane Super Global, i zawsze będzie dostępne funkcje wewnętrzne, nawet jeśli zdefiniowano jako lokalne.
 		Wybierz jeden lub więcej wierszy, aby dodać nowe polecenia na nich.
-		Można przenieść wiersze z Kliknij i przeciągnij.
-		Kliknij dwukrotnie ikonę na pasku, aby uaktywnić klawisze skrótu lub zatrzymanie odtwarzania / nagrywania. Kliknij na nim środkowego przycisku podczas odtwarzania lub nagrywania, aby wstrzymać.
-		Można eksportować makr do pracy skryptów AutoHotkey lub samodzielnych plików wykonywalnych z okna eksportu.
-		Aby nagrywać i odtwarzać przy użyciu myszy współrzędne bezwzględne przejdź do Opcje > Ustawienia > Ustawienia domyślne i mysz zestaw współrzędnych ekranu.
-		Można otworzyć, kopiowanie, przenoszenie i usuwanie plików i folderów za pomocą jednego z poleceń w Wstaw > Run / File / String / Inne.
-		Aby nagrywać w dół i w górę stan wszystkich kluczowych przejdź do Opcje > Ustawienia > Nagrywanie i sprawdź "Capture kluczową stan (Down / Up)" opcję.
-		Możesz użyć klawiszy skrótu, aby przyspieszyć lub spowolnić odtwarzanie. Przejdź do Opcje > Ustawienia > Odtwarzanie ustawienia klawiszy i prędkość.
-		Aby dostosować obszar przechwytywania za pomocą "zrzutu ekranu" narzędzie przejdź do Opcje > Ustawienia > Zrzuty ekranu i wybierz "Naciśnij Enter Capture". Po narysowaniu klawiszy sterowania prostokąt zastosowania strzałek, aby przenieść wybór i Shift klawiszy strzałek, aby zmienić jego rozmiar.
-		Szybki wybór: Wybierz dowolny wiersz i kliknij nagłówek kolumny, aby wybrać podobne wiersze na podstawie tekstu z komórki tej kolumny.
-		Run / File / String / Inne. Okno posiada wiele innych przydatnych poleceń, takich jak wyłączanie i UrlDownloadToFile.
-		Użyj funkcji "screenshot" w oknie funkcji (Wstaw > if / zmienne / funkcje), aby zrobić zrzut ekranu z części ekranu. Pierwszy parametr to plik docelowy na ścieżkę i nazwę z rozszerzeniem png. Drugi parametr to współrzędne oddzielone rury na ekranie, np. 100|200|50|100 (X|Y|Szerokość|Wysokość).
-		Kliknij na nagłówek kolumny indeksu, aby włączyć / Off znaki Pomoc i kolory dla pętli i oświadczenia. Dwukrotnie kliknij na nagłówek kolumny działania, aby włączyć / Off Wcięcia dla pętli i oświadczenia.
-		Możesz debugowania makra za pomocą klawiszy skrótu i ręczne opcje odegrania w menu Makro. Można także wyłączyć działania odznaczając je w Makro listy.
-		Aby dokonać Makra działają tylko w określonym oknie przejdź do Makro > context Hotkeys wrażliwej.
-		Możesz ustawić własne zmiennych globalnych, które mają być załadowane na początku i na wywóz. Przejdź do Opcje > Ustawienia > użytkownika zmiennych globalnych, aby je dodać.
-		Możesz uruchomić zaawansowane funkcje, takie jak substr i RegExReplace w oknie funkcji (Wstaw > if / zmienne / funkcje). Albo uruchomić własnych funkcji z zewnętrznych skryptów AutoHotkey.
+		Można przenieść wiersze z kliknij i przeciągnij.
+		Kliknij dwukrotnie ikonę na pasku zadań, aby włączyć lub wyłączyć skróty klawiszowe odtwarzania / nagrywania. Kliknij na nim środkowego przycisku podczas odtwarzania lub nagrywania, aby wstrzymać.
+		Można eksportować makr roboczych skryptów AutoHotkey lub samodzielnych plików wykonywalnych z okna eksportu.
+		Aby nagrać i odtworzyć za pomocą myszy współrzędne bezwzględne przejdź do Opcje> Ustawienia> Ustawienia domyślne i ustawić Mouse współrzędne ekranu.
+		Można otwierać, kopiować, przenosić i usuwać pliki i foldery za pomocą jednego z poleceń w poleceniach> Uruchom / File / String / Inne. Istnieje wiele innych przydatnych komend, takich jak StringReplace InputBox i MouseGetPos.
+		Aby nagrać Down and Up stan każdej kluczowej Przejdź do Opcje> Ustawienia> Nagrywanie i sprawdzić "Uchwyć państwa klucz (/ Up Down)" opcję.
+		Można używać skrótów klawiaturowych, aby przyspieszyć lub spowolnić odtwarzanie. Przejdź do Opcje> Ustawienia> Odtwarzanie ustawić klawisze i szybkość.
+		Aby dostosować obszar przechwytywania używając "Make Screen" narzędzie przejdź do Opcje> Ustawienia> Zrzuty ekranu i wybierz "Naciśnij Enter Capture". Po narysowaniu kontroli wykorzystywania prostokąt + klawisze strzałek, aby przesunąć zaznaczenie i Shift + klawisze strzałek, aby zmienić jego rozmiar.
+		Szybki wybór: Wybierz dowolny wiersz i kliknij na nagłówek kolumny, aby wybrać podobne wiersze na podstawie tekstu komórki z tej kolumny.
+		Kliknij na nagłówek kolumny Indeks włączać / wyłączać pomocy znaczników i kolory dla pętli i instrukcji. Dwukrotnie kliknij na nagłówek kolumny, aby działania Włączanie / wyłączanie wcięcia dla pętli i instrukcji.
+		Można debugowania makra przy użyciu ręcznego szybkiego dostępu oraz opcje zagrać w menu Macro. Można również wyłączyć działań odznaczając je na liście makro.
+		Aby makra działają tylko w określonym oknie przejdź do makrofotografii> kontekstową skrótów klawiszowych.
+		Można ustawić własne zmienne globalne mają zostać załadowane na starcie i być eksportowane. Przejdź do Opcje> Ustawienia> użytkownika zmienne globalne, aby je dodać.
+		Można uruchomić zaawansowane funkcje, takie jak substr i REGEXREPLACE w oknie funkcji (Polecenia> Funkcje / metod Array). Można również zdefiniować własne funkcje lub uruchamianie funkcji z zewnętrznych skryptów AutoHotkey.
+		Można nagrywać ruchy myszy w stosunku do aktualnej pozycji trzymając CapsLock podczas nagrywania (można zmienić klucz i uczynić ją włączyć w ustawieniach).
 		
 ; 19. Tooltips		
 	A_List_TT =	Wybierz Makro (Ctrl+1~0)
@@ -998,12 +1014,12 @@
 	Ex_UV_TT =	Wyeksportować zmienne globalne.
 	Ex_WN_TT =	Włącza lub wyłącza ostrzeżenia dla szczególnych warunków, które mogą wskazywać na błąd, takich jak literówki lub brakującej "globalnej" deklaracją.
 	ExpList_TT =	Kliknij dwukrotnie, aby edytować
-	ExprLink2_TT =	- NIE DOŁĄCZYĆ ZMIENNYCH W ZNAKI PROCENT TUTAJ.
+	ExprLink2_TT 	- NIE DOŁĄCZYĆ ZMIENNYCH W ZNAKI PROCENT TUTAJ.
 		- Większość wyrażeń AHK są obsługiwane.
 		- Możesz użyć ciągi znaków, zmienne, tablice i funkcje.
-		- Aby używać łańcuchów, ująć w cudzysłów, np: var = "A".
-		- Wiele Oświadczenia są obsługiwane, na przykład: var = "a" || InStr (var, "b").
-	ExprLink3_TT =	- NIE DOŁĄCZYĆ ZMIENNYCH W ZNAKI PROCENT TUTAJ.
+		- Aby używać łańcuchów, ująć w cudzysłów, np: var  "A".
+		- Wiele Oświadczenia są obsługiwane, na przykład: var  "a" || InStr (var, "b").
+	ExprLink3_TT 	- NIE DOŁĄCZYĆ ZMIENNYCH W ZNAKI PROCENT TUTAJ.
 		- Większość wyrażeń AHK są obsługiwane.
 		- Możesz użyć ciągi znaków, zmienne, tablice i funkcje.
 		- Aby używać łańcuchów, ująć w cudzysłów, np: var = "A".
@@ -1099,13 +1115,13 @@
 	Co_Oper_6 =	Większe lub równe
 	Co_Oper_7 =	Mniejszy lub równy
 	Co_Oper_8 =	W (lista)
-	Co_Oper_9 =	 Nie w (lista)
-	Co_Oper_10 =	 Zawiera (lista)
-	Co_Oper_11 =	 Nie zawiera (lista)
-	Co_Oper_12 =	 Pomiędzy (linia 1) i (linia 2)
-	Co_Oper_13 =	 Nie między (linia 1) i (linia 2)
-	Co_Oper_14 =	 Czy (typ)
-	Co_Oper_15 =	 nie jest (typ)
+	Co_Oper_9 =	Nie w (lista)
+	Co_Oper_10 =	Zawiera (lista)
+	Co_Oper_11 =	Nie zawiera (lista)
+	Co_Oper_12 =	Pomiędzy (linia 1) i (linia 2)
+	Co_Oper_13 =	Nie między (linia 1) i (linia 2)
+	Co_Oper_14 =	Czy (typ)
+	Co_Oper_15 =	Nie jest (typ)
 		
 ; 21. IE Commands Tips		
 	IE_Cmd_Index =	
@@ -1135,7 +1151,7 @@
 	Value	Pobiera lub ustawia wartość obiektu.
 	Width	Ustawia lub pobiera szerokość obiektu.
 		
-; 22. COM Methods Tips		
+; 22. COM Objects Tips		
 	COM_CLSID_Index =	
 	Excel.Application	Manipuluje arkuszy Excel.
 	HTMLfile	Może być używany do odczytu, zapisu i interakcji z HTML.
@@ -1283,6 +1299,7 @@
 	Length	Zwraca długość układu liniowego rozpoczynającego się w pozycji 1.
 	ListVars	Wyświetla zmiennych do skryptu: ich nazwiska i aktualną zawartość.
 	Ln	Zwraca logarytm naturalny (e baza) z numeru.
+	LoadPicture	Ładuje obrazek z pliku i zwraca uchwyt bitmapy lub ikony.
 	Log	Zwraca logarytm (o podstawie 10) z numeru.
 	Loop (files & folders)	Pobiera określone pliki lub foldery, po jednym na raz.
 	Loop (normal) 	Wykonaj serię poleceń wielokrotnie: albo określoną liczbę razy lub do momentu napotkania przerwie.
@@ -1367,11 +1384,36 @@
 	Until	Obowiązuje warunek do kontynuacji pętli lub pętli for.
 	UrlDownloadToFile	Pobiera plik z Internetu.
 	UserFunction	Tworzy strukturę funkcji.
+	Variable	Przypisuje określoną wartość do zmiennej.
 	While	Wykonuje serię poleceń, aż określona wyrażenia jest fałszywa.
 	WinActivate	Uaktywnia określone okno (czyni to przede wszystkim).
 	WinActivateBottom	Tak samo jak WinActivate wyjątkiem tego, że aktywuje najniżej (najmniej ostatnio aktywne) pasujące okno niż najwyższa.
 	WinActive	Zwraca unikatowy identyfikator (HWND) w aktywnym oknie, czy pasuje do podanych kryteriów.
 	WinClose	Zamyka określonego okna.
+	WinExist	Sprawdza, czy określony okno istnieje.
+	WinGet	Pobiera określonym oknie unikalny identyfikator, identyfikator procesu, nazwę procesu, lub listę swoich kontroli. Można go również pobrać listę wszystkich okien spełniających określone kryteria.
+	WinGetClass	Pobiera określonym oknie nazwę klasy.
+	WinGetPos	Pobiera pozycję i rozmiar wybranego okna.
+	WinGetText	Pobiera tekst z określonym oknie.
+	WinGetTitle	Pobiera tytuł określonym oknie.
+	WinHide	Ukrywa określone okno.
+	WinHttpDownloadToFile	Pliki do pobrania jednego lub wielu plików z Internetu.
+	WinKill	Wymusza określone okno, aby zamknąć.
+	WinMaximize	Powiększa określonym oknie do maksymalnej wielkości.
+	WinMenuSelectItem	Wywołuje element menu z paska menu w określonym oknie.
+	WinMinimize	Zwija określonego okna do przycisku na pasku zadań.
+	WinMinimizeAll	Minimalizuje wszystkie okna.
+	WinMinimizeAllUndo	Odwraca efekt poprzedniej WinMinimizeAll.
+	WinMove	Zmiany pozycji i / lub rozmiar wybranego okna.
+	WinRestore	Unminimizes lub unmaximizes podane okno, jeśli jest zminimalizowane lub zmaksymalizowane.
+	WinSet	Sprawia, że wiele zmian w określonym oknie, takie jak "zawsze na wierzchu" i przejrzystości.
+	WinSetTitle	Zmienia tytuł określonym oknie.
+	WinShow	Odkrywa określonym oknie.
+	WinWait	Czeka, aż określona okno istnieje.
+	WinWaitActive	Czeka, aż określona okno jest aktywne.
+	WinWaitClose	Czeka, aż określona okno nie istnieje.
+	WinWaitNotActive	Czeka, aż określona okno nie jest aktywne.
+	Zip / UnZip	Skompresować lub dekompresji jeden lub więcej plików ZIP.
 	WinExist	Sprawdza, czy określony okno istnieje.
 	WinGet	Pobiera określonym oknie unikalny identyfikator, identyfikator procesu, nazwę procesu, lub listę swoich kontroli. Można go również pobrać listę wszystkich okien spełniających określone kryteria.
 	WinGetClass	Pobiera określonym oknie nazwę klasy.

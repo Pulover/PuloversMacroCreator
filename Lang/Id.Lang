@@ -62,17 +62,17 @@
 	i_Lang008 =	&Image / Pixel Pencarian
 	i_Lang009 =	J&alankan / File / String / Misc.
 	i_Lang010 =	&Loop
-	i_Lang011 =	&Goto
-	i_Lang012 =	La&bel
-	i_Lang013 =	Jika La&poran
+	i_Lang011 =	&Pergi Ke / Label
+	i_Lang012 =	&Set Timer
+	i_Lang013 =	Jika Lapo&ran
 	i_Lang014 =	&Variabel / Array
 	i_Lang015 =	&Fungsi / Metode Array
 	i_Lang016 =	Me&ngirim email
-	i_Lang017 =	&Download / Upload file
+	i_Lang017 =	&Download file
 	i_Lang018 =	&Zip / file Unzip
-	i_Lang019 =	Inte&rnet Explorer
+	i_Lang019 =	Internet E&xplorer
 	i_Lang020 =	&COM Antarmuka
-	i_Lang021 =	Jendela Pe&san
+	i_Lang021 =	&Jendela Pesan
 	i_Lang022 =	Cari perinta&h
 		
 ; 06. Edit Sub Menu		
@@ -324,10 +324,10 @@
 	c_Lang026 =	Tindakan
 	c_Lang027 =	Klik
 	c_Lang028 =	Bergerak
-	c_Lang029 =	Pindah && Klik
+	c_Lang029 =	Bergerak Dan Klik
 	c_Lang030 =	Roda Up
 	c_Lang031 =	Roda Bawah
-	c_Lang032 =	Drag && Drop
+	c_Lang032 =	Drag Dan Drop
 	c_Lang033 =	Koordinat
 	c_Lang034 =	Cari
 	c_Lang035 =	Subcommand
@@ -622,7 +622,7 @@
 	t_Lang067 =	Cari / Ganti
 	t_Lang068 =	&Menemukan
 	t_Lang069 =	&Cocokkan Kasus
-	t_Lang070 =	M&enggantikan
+	t_Lang070 =	Me&nggantikan
 	t_Lang071 =	Ditemukan
 	t_Lang072 =	Diganti
 	t_Lang073 =	&Baris Terpilih
@@ -760,6 +760,8 @@
 	t_Lang205 =	Modus Pertandingan Judul
 	t_Lang206 =	Kecepatan Pertandingan Judul
 	t_Lang207 =	Klien
+	t_Lang208 =	M&enemukan
+	t_Lang209 =	Men&ggantikan
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Buka
@@ -769,11 +771,14 @@
 	d_Lang005 =	Simpan Proyek
 	d_Lang006 =	Gagal menyimpan / menimpa file
 	d_Lang007 =	Kesalahan
-	d_Lang008 =	Kesalahan: Tidak Makro Dipilih`nHarap periksa setidaknya satu Makro dalam daftar..
+	d_Lang008 =	Kesalahan: Tidak Makro Dipilih
+		Harap periksa setidaknya satu Makro dalam daftar..
 	d_Lang009 =	Kesalahan: Tidak ada Hotkey Dipilih.
-	d_Lang010 =	Error: Alamat tidak valid`nTim alamat atau nama file yang dipilih tidak valid..
+	d_Lang010 =	Error: Alamat tidak valid
+		Tim alamat atau nama file yang dipilih tidak valid..
 	d_Lang011 =	Peringatan
-	d_Lang012 =	Tidak ada kontrol yang dipilih.`nTeruskan?
+	d_Lang012 =	Tidak ada kontrol yang dipilih.
+		Teruskan?
 	d_Lang013 =	Ekspor Script
 	d_Lang014 =	Script Diekspor
 	d_Lang015 =	File tersebut berhasil diekspor!
@@ -788,7 +793,8 @@
 	d_Lang022 =	Sebelumnya
 	d_Lang023 =	Pesan
 	d_Lang024 =	Memuat pengaturan default?
-	d_Lang025 =	Makro (s) diaktifkan.`nGunakan Hotkeys Bermain.
+	d_Lang025 =	Macro diaktifkan.
+		Gunakan Hotkeys Bermain.
 	d_Lang026 =	untuk mulai / berhenti merekam
 	d_Lang027 =	Rekaman berhenti
 	d_Lang028 =	Rekaman...
@@ -805,7 +811,8 @@
 	d_Lang037 =	Image / Pixel Tidak Ditemukan.
 	d_Lang038 =	Tekan OK untuk melanjutkan.
 	d_Lang039 =	Timeout!
-	d_Lang040 =	Fitur ini memerlukan+Library GDI.
+	d_Lang040 =	
+.	Tämä ominaisuus vaatii GDI+ kirjasto.	Šī funkcija prasa GDI + bibliotēka.
 		Klik OK untuk pergi ke halaman download.
 	d_Lang041 =	Nama variabel mengandung karakter ilegal.
 	d_Lang042 =	adalah kata reserved.
@@ -833,8 +840,7 @@
 	d_Lang059 =	Perintah ini tidak mendukung ekspresi atau fungsi.
 		Silahkan menetapkan variabel dan menggunakannya dalam parameter.
 	d_Lang060 =	Versi baru tersedia
-	d_Lang061 =	Apakah Anda ingin men-download sekarang?
-		Untuk menonaktifkan pemeriksaan otomatis pilih Bantuan> Periksa pada start-up. > Periksa pada startup
+	d_Lang061 =	
 	d_Lang062 =	Anda sudah memiliki versi terbaru.
 	d_Lang063 =	Terjadi galat saat memeriksa.
 	d_Lang064 =	Kesalahan dalam
@@ -901,35 +907,45 @@
 	d_Lang113 =	Melaporkan tidak ada kesalahan.
 	d_Lang114 =	Skrip diekspor (bahkan jika dikompilasi) dengan fungsi mengirim email (CDO) akan memiliki informasi terlihat dari akun email yang digunakan, termasuk PASSWORD. File proyek PMC tidak memiliki informasi ini.
 	d_Lang115 =	- Tahan Alt untuk mengatur wilayah ke lokasi yang sama.
+	d_Lang116 =	Mentransfer dan menginstal
+	d_Lang117 =	Pergi ke halaman download
+	d_Lang118 =	Download ... Mohon tunggu.
 		
 ; 18. Start-up Tips		
-	Start_Tips =	Anda dapat membuat Macro dengan menggunakan Tombol Perintah di jendela utama atau menggunakan Recorder untuk menyalin tindakan Anda. Buka Opsi> Pengaturan> Merekam untuk memilih apa yang input akan disimpan.
-		Untuk menggunakan perekam untuk tugas-tugas cepat masuk ke Pilihan> Pengaturan> Recording dan periksa "Clear List" pilihan. Kemudian klik tombol Record di jendela utama dan menggunakan F10 untuk menghapus Makro saat ini dan memulai yang baru dengan hotkey yang sama. Anda juga dapat memeriksa "Selalu Aktif" pilihan di jendela utama untuk menjaga Recording dan Playback hotkeys aktif.
-		Untuk mendapatkan bantuan untuk perintah tertentu klik kanan di mana saja di jendela perintah untuk menampilkan link ke Autohotkey Bantuan online.
-		Periksa "Capture Tombol" pilihan untuk memasukkan kunci dan kombinasi Makro Anda langsung dari jendela utama.
-		Masukkan kunci dan kombinasi di kotak Hotkey di bagian bawah dan tekan tombol Insert untuk menambahkan mereka ke pilih baris.
-		Jika tidak ada baris yang dipilih tombol sunting berlaku untuk semua baris dalam daftar.
-		Anda dapat menetapkan variabel Anda sendiri dalam Variabel jendela (Insert> Jika Laporan / Variabel / Fungsi). Untuk menggunakannya dalam perintah memasukkan nama variabel dalam tanda persen, misalnya: %MyVar%.
-		Loop counter di atas menetapkan jumlah loop untuk Makro dipilih.
-		Anda dapat mengedit baris dengan mengklik dua kali atau dengan memilih dan mengklik tombol Edit di bagian bawah.
-		Anda dapat mengedit beberapa baris yang dipilih dengan menggunakan opsi di edit bar di bagian bawah.
+	Start_Tips =	Check out video tutorial di www.macrocreator.com/help untuk belajar tentang banyak fitur dari Pencipta Makro Pulover ini.
+		Untuk mendapatkan bantuan untuk perintah tertentu klik kanan di mana saja di jendela perintah untuk menampilkan link ke bantuan online.
+		Anda dapat membuat Macro dengan menggunakan Tombol Perintah di jendela utama atau menggunakan Recorder untuk menyalin tindakan Anda. Pergi ke Pilihan> Pengaturan> Recording untuk memilih apa yang akan disimpan masukan.
+		Gunakan search bar atau "Cari perintah" jendela untuk mencari perintah dan fungsi.
+		Apakah Anda ingin membantu memperbaiki terjemahan atau bahkan membuat yang baru? Pergi ke Pilihan> Pengaturan> Editor Bahasa dan melakukan koreksi yang Anda inginkan. Anda dapat melihat setiap saat. Klik Submit untuk mengirim revisi Anda. Jangan ragu untuk mengirimkan sejumlah koreksi sebanyak yang Anda inginkan.
+		Periksa "Capture Keys" pilihan untuk masuk kunci dan kombinasi Makro Anda langsung dari jendela utama.
+		Masukkan kunci dan kombinasi dalam kotak Hotkey di bagian bawah dan tekan tombol Insert untuk menambahkan mereka ke pilih baris.
+		Gunakan tombol edit di bagian bawah jendela utama untuk mengatur ulang dan menunda untuk beberapa baris pada saat yang sama. Jika tidak ada baris yang dipilih tombol mengedit berlaku untuk semua baris dalam daftar.
+		Hampir setiap perintah dan fungsi menerima dan output variabel. Anda dapat menetapkan variabel Anda sendiri dalam Variabel jendela (Commands> Variabel / Array). Untuk menggunakannya dalam perintah menyertakan nama variabel dalam tanda persen, mis .:% MyVar%. Dalam fungsi, menggunakannya tanpa tanda persen, mis .: substr (MyVar, 5).
+		Klik kanan di mana saja di jendela perintah untuk dengan mudah memasukkan Built-In variabel dari daftar.
+		Untuk menggunakan perekam untuk tugas-tugas cepat masuk ke Pilihan> Pengaturan> Recording dan periksa "Clear List" pilihan. Kemudian klik tombol Record di jendela utama dan menggunakan F10 untuk menghapus makro saat ini dan memulai yang baru dengan hotkey yang sama. Anda juga dapat memeriksa "Selalu Aktif" pilihan di jendela utama untuk menjaga Recording dan Playback hotkeys aktif.
+		PMC mendukung Array objek dan metode, seperti script AutoHotKey. Anda dapat membuat array dalam banyak hal, yang paling biasa akan jendela Variabel, memeriksa "Expression" pilihan dan melampirkan nilai-nilai dalam kurung, mis .: [10, 20, Var, "string"]. Anda juga dapat membuat nama kunci, mis .: {Keya: Vara, "beberapa kunci": "nilai string"}.
+		Fungsi menggunakan sintaks ekspresi AHK. string literal harus diapit dalam tanda kutip, dan variabel tidak perlu tanda persen. Anda dapat menggunakan fungsi lain atau elemen array sebagai parameter. Mis .: StrReplace (MyVar, MyArray [ "A"], substr (OtherVar, 2, 3)).
+		Ekspresi didukung dalam AutoHotKey Expression Sintaks. Untuk menggunakan ekspresi dalam parameter perintah, mulai dengan tanda persen, mis .:% substr (Var, 5).
+		Loop counter di atas menetapkan jumlah loop untuk Makro yang dipilih.
+		Anda dapat mengedit berturut-turut dengan mengklik dua kali atau dengan memilih dan mengklik tombol Ubah di bagian bawah. Anda dapat mengedit beberapa baris yang dipilih menggunakan pilihan di edit bar di bagian bawah.
+		Anda dapat menentukan fungsi sendiri di Function> Buat fungsi dan menggunakannya dari Fungsi jendela atau di dalam ekspresi.
+		Anda dapat menentukan Globa / variabel lokal dan statis untuk Ditetapkan Pengguna Fungsi. variabel global didefinisikan dalam Pilihan> Pengaturan> Pengguna variabel global dianggap super Global, dan akan selalu tersedia fungsi dalam, bahkan ketika didefinisikan sebagai lokal.
 		Pilih satu atau lebih baris untuk menambahkan perintah baru di atas mereka.
 		Anda dapat memindahkan baris dengan klik-dan-tarik.
-		Klik dua kali pada Icon Tray untuk mengaktifkan hotkeys atau menghentikan pemutaran / rekaman. Klik dengan tombol tengah selama pemutaran atau merekam untuk jeda.
-		Anda dapat mengekspor Macro Anda untuk script Autohotkey bekerja atau executable yang berdiri sendiri dari jendela Ekspor.
-		Untuk merekam dan memutar mouse menggunakan koordinat mutlak masuk ke Pilihan> Pengaturan> Default dan mengatur mouse Koordinat ke Screen.
-		Anda dapat membuka, menyalin, memindahkan atau menghapus file dan folder menggunakan salah satu perintah dalam Insert> Run / file / String / Misc.
-		Untuk merekam Down dan Up negara setiap pergi kunci Pilihan> Pengaturan> Recording dan periksa "Tangkap negara kunci (Bawah / Up)" pilihan.
+		Klik dua kali pada Tray Icon untuk mengaktifkan hotkeys atau menghentikan pemutaran / perekaman. Klik dengan tombol tengah selama pemutaran atau merekam untuk jeda.
+		Anda dapat mengekspor Macro untuk script AutoHotKey bekerja atau berdiri sendiri executable dari jendela Export.
+		Untuk merekam dan memutar mouse menggunakan koordinat absolut masuk ke Pilihan> Pengaturan> Default dan mengatur mouse Koordinat ke Screen.
+		Anda dapat membuka, menyalin, memindahkan atau menghapus file dan folder menggunakan salah satu perintah di Commands> Run / File / String / Lain-lain. Ada banyak perintah lain yang berguna seperti StringReplace, InputBox dan MouseGetPos.
+		Untuk merekam Down dan negara Up setiap pergi kunci untuk Pilihan> Pengaturan> Recording dan periksa "Tangkap negara kunci (Bawah / Up)" pilihan.
 		Anda dapat menggunakan hotkeys untuk mempercepat atau memperlambat Playback. Pergi ke Pilihan> Pengaturan> Playback untuk mengatur tombol dan kecepatan.
-		Untuk mengatur daerah menangkap menggunakan "Membuat Screenshot" alat masuk ke Pilihan> Pengaturan> Layar dan pilih "Tekan Enter untuk Capture". Setelah menggambar persegi panjang menggunakan Control+tombol panah untuk memindahkan seleksi dan Shift+tombol panah untuk mengubah ukurannya.
+		Untuk menyesuaikan daerah penangkapan menggunakan "Membuat Screenshot" alat masuk ke Pilihan> Pengaturan> Tampilan dan pilih "Tekan Enter untuk menangkap". Setelah menggambar penggunaan persegi panjang tombol panah Control + untuk memindahkan pilihan dan Shift tombol panah + untuk mengubah ukurannya.
 		Cepat Pilih: Pilih baris apapun dan klik pada header kolom untuk memilih baris yang sama berdasarkan teks sel dari kolom tersebut.
-		Jalankan / file / String / Misc. Jendela memiliki banyak perintah lain yang berguna seperti Shutdown dan UrlDownloadToFile.
-		Gunakan "Screenshot" fungsi di jendela fungsi (Insert> Jika Laporan / Variabel / Fungsi) untuk membuat screenshot dari bagian dari layar. Parameter pertama adalah path file tujuan dan nama dengan ekstensi png. Parameter kedua adalah koordinat pipa-separated di layar, misalnya 100 | 200 | 50 | 100 (X | Y | Lebar | Tinggi).
-		Klik pada Indeks Kolom header untuk mengubah On / Off Bantuan Marks dan Warna untuk Loops dan Laporan. Double-klik pada Action Kolom header untuk mengubah On / Off Indentasi untuk Loops dan Laporan.
-		Anda dapat men-debug Macro Anda menggunakan Hotkey manual dan pilihan Putar di menu Makro. Anda juga dapat menonaktifkan tindakan dengan menghapus centang dalam daftar Makro.
-		Untuk membuat Macro Anda bekerja hanya pada jendela tertentu pergi ke Makro> Konteks Hotkeys Sensitif.
-		Anda dapat mengatur Variabel global Anda sendiri yang akan dimuat pada start up dan diekspor. Pergi ke Pilihan> Pengaturan> User global Variabel untuk menambahkannya.
-		Anda dapat menjalankan fungsi-fungsi lanjutan seperti substr dan RegExReplace dari jendela Fungsi (Insert> Jika Laporan / Variabel / Fungsi). Atau menjalankan fungsi-fungsi anda sendiri dari script Autohotkey eksternal.
+		Klik pada Header Indeks Kolom untuk menghidupkan On / Off Bantuan Marks dan Warna untuk Loops dan Laporan. Ganda-Klik pada Header Action Kolom untuk menghidupkan On / Off Indentasi untuk Loops dan Laporan.
+		Anda dapat men-debug Macro Anda menggunakan Hotkey Manual dan pilihan Putar di menu Macro. Anda juga dapat menonaktifkan tindakan dengan menghapus centang dalam daftar Makro.
+		Untuk membuat Macro Anda bekerja hanya pada jendela tertentu pergi ke Macro> Konteks Sensitif Hotkeys.
+		Anda dapat mengatur Variabel global Anda sendiri yang akan dimuat di startup dan untuk diekspor. Pergi ke Pilihan> Pengaturan> Pengguna Variabel global untuk menambahkannya.
+		Anda dapat menjalankan fungsi-fungsi lanjutan seperti substr dan REGEXREPLACE dari jendela Fungsi (Commands> Fungsi / Metode Array). Anda juga dapat menentukan fungsi Anda sendiri atau menjalankan fungsi dari skrip AutoHotkey eksternal.
+		Anda dapat merekam gerakan mouse relatif terhadap posisi saat ini dengan memegang CapsLock selama perekaman (Anda dapat mengubah kunci dan membuatnya beralih di Settings).
 		
 ; 19. Tooltips		
 	A_List_TT =	Pilih Makro (Ctrl +1 ~ 0)
@@ -998,12 +1014,12 @@
 	Ex_UV_TT =	Ekspor variabel global.
 	Ex_WN_TT =	Mengaktifkan atau menonaktifkan peringatan untuk kondisi tertentu yang mungkin menunjukkan kesalahan, seperti kesalahan ketik atau hilang deklarasi "global".
 	ExpList_TT =	Double-Klik untuk mengedit
-	ExprLink2_TT =	- JANGAN MELAMPIRKAN VARIABEL DI TANDA PERSEN DI SINI.
+	ExprLink2_TT 	- JANGAN MELAMPIRKAN VARIABEL DI TANDA PERSEN DI SINI.
 		- Sebagian besar dari ekspresi AHK didukung.
 		- Anda dapat menggunakan string, variabel, array dan fungsi.
-		- Untuk menggunakan string, menyertakan mereka dalam tanda kutip, misalnya: var = "a".
-		- Beberapa Laporan yang didukung, misalnya: var = "a" || InStr (var, "b").
-	ExprLink3_TT =	- JANGAN MELAMPIRKAN VARIABEL DI TANDA PERSEN DI SINI.
+		- Untuk menggunakan string, menyertakan mereka dalam tanda kutip, misalnya: var  "a".
+		- Beberapa Laporan yang didukung, misalnya: var  "a" || InStr (var, "b").
+	ExprLink3_TT 	- JANGAN MELAMPIRKAN VARIABEL DI TANDA PERSEN DI SINI.
 		- Sebagian besar dari ekspresi AHK didukung.
 		- Anda dapat menggunakan string, variabel, array dan fungsi.
 		- Untuk menggunakan string, menyertakan mereka dalam tanda kutip, misalnya: var = "a".
@@ -1099,13 +1115,13 @@
 	Co_Oper_6 =	Lebih besar atau sama
 	Co_Oper_7 =	Kurang atau sama
 	Co_Oper_8 =	Dalam (daftar)
-	Co_Oper_9 =	 Tidak di (daftar)
-	Co_Oper_10 =	 Berisi (daftar)
-	Co_Oper_11 =	 Tidak mengandung (daftar)
-	Co_Oper_12 =	 Antara (line 1) dan (jalur 2)
-	Co_Oper_13 =	 Bukan antara (line 1) dan (jalur 2)
-	Co_Oper_14 =	 Adalah (tipe)
-	Co_Oper_15 =	 Bukankah (jenis)
+	Co_Oper_9 =	Tidak di (daftar)
+	Co_Oper_10 =	Berisi (daftar)
+	Co_Oper_11 =	Tidak mengandung (daftar)
+	Co_Oper_12 =	Antara (line 1) dan (jalur 2)
+	Co_Oper_13 =	Bukan antara (line 1) dan (jalur 2)
+	Co_Oper_14 =	Adalah (tipe)
+	Co_Oper_15 =	Bukankah (jenis)
 		
 ; 21. IE Commands Tips		
 	IE_Cmd_Index =	
@@ -1135,7 +1151,7 @@
 	Value	Mendapatkan atau menetapkan nilai objek.
 	Width	Mengatur atau mengambil lebar objek.
 		
-; 22. COM Methods Tips		
+; 22. COM Objects Tips		
 	COM_CLSID_Index =	
 	Excel.Application	Memanipulasi lembar Excel.
 	HTMLfile	Dapat digunakan untuk membaca, menulis dan berinteraksi dengan HTML.
@@ -1283,6 +1299,7 @@
 	Length	Mengembalikan panjang array linier dimulai pada posisi 1.
 	ListVars	Menampilkan variabel script ini: nama mereka dan isi saat.
 	Ln	Mengembalikan logaritma natural (basis e) Nomor.
+	LoadPicture	Beban gambar dari file dan mengembalikan bitmap atau ikon pegangan.
 	Log	Mengembalikan logaritma (basis 10) Nomor.
 	Loop (files & folders)	Mengambil file tertentu atau folder, satu per satu.
 	Loop (normal) 	Lakukan serangkaian perintah berulang kali: baik jumlah tertentu kali atau sampai istirahat ditemui.
@@ -1367,11 +1384,36 @@
 	Until	Berlaku kondisi untuk kelanjutan Loop atau Untuk loop.
 	UrlDownloadToFile	Mendownload file dari Internet.
 	UserFunction	Menciptakan struktur Fungsi.
+	Variable	Memberikan nilai yang ditentukan untuk variabel.
 	While	Melakukan serangkaian perintah berulang kali hingga ekspresi yang ditentukan false.
 	WinActivate	Mengaktifkan jendela yang ditentukan (membuatnya utama).
 	WinActivateBottom	Sama seperti WinActivate kecuali bahwa ia mengaktifkan paling bawah (paling baru ini aktif) jendela pencocokan daripada teratas.
 	WinActive	Mengembalikan ID unik (HWND) dari jendela aktif jika sesuai dengan kriteria yang ditentukan.
 	WinClose	Menutup jendela yang ditentukan.
+	WinExist	Cek jika jendela yang ditentukan ada.
+	WinGet	Mengambil jendela yang ditentukan ID unik, proses ID, nama proses, atau daftar kontrol nya. Hal ini juga dapat mengambil daftar semua jendela yang cocok dengan kriteria yang ditentukan.
+	WinGetClass	Mengambil nama kelas jendela yang ditentukan itu.
+	WinGetPos	Mengambil posisi dan ukuran jendela yang ditentukan.
+	WinGetText	Mengambil teks dari jendela yang ditentukan.
+	WinGetTitle	Mengambil judul dari jendela yang ditentukan.
+	WinHide	Menyembunyikan jendela yang ditentukan.
+	WinHttpDownloadToFile	Download satu atau lebih file dari internet.
+	WinKill	Memaksa jendela yang ditentukan untuk menutup.
+	WinMaximize	Memperbesar jendela yang ditentukan untuk ukuran maksimumnya.
+	WinMenuSelectItem	Memanggil item menu dari menu bar dari jendela yang ditentukan.
+	WinMinimize	Runtuh jendela tertentu ke sebuah tombol pada task bar.
+	WinMinimizeAll	Meminimalkan semua jendela.
+	WinMinimizeAllUndo	Membalikkan efek dari WinMinimizeAll sebelumnya.
+	WinMove	Perubahan posisi dan / atau ukuran jendela yang ditentukan.
+	WinRestore	Unminimizes atau unmaximizes jendela tertentu jika itu diminimalkan atau dimaksimalkan.
+	WinSet	Membuat berbagai perubahan ke jendela tertentu, seperti "selalu di atas" dan transparansi.
+	WinSetTitle	Mengubah judul jendela yang ditentukan.
+	WinShow	Unhides jendela yang ditentukan.
+	WinWait	Menunggu sampai jendela yang ditentukan ada.
+	WinWaitActive	Menunggu sampai jendela yang ditentukan aktif.
+	WinWaitClose	Menunggu sampai jendela yang ditentukan tidak ada.
+	WinWaitNotActive	Menunggu sampai jendela yang ditentukan tidak aktif.
+	Zip / UnZip	Kompres atau uncompress satu atau lebih file zip.
 	WinExist	Cek jika jendela yang ditentukan ada.
 	WinGet	Mengambil jendela yang ditentukan ID unik, proses ID, nama proses, atau daftar kontrol nya. Hal ini juga dapat mengambil daftar semua jendela yang cocok dengan kriteria yang ditentukan.
 	WinGetClass	Mengambil nama kelas jendela yang ditentukan itu.

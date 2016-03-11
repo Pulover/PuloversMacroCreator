@@ -1,0 +1,1440 @@
+﻿Lang_gl
+		
+		; Galician
+		
+; 01. Main Menu		
+	m_Lang001 =	&Arquivo
+	m_Lang002 =	&Macro
+	m_Lang003 =	&Función
+	m_Lang004 =	&Comandos
+	m_Lang005 =	&Editar
+	m_Lang006 =	&Seleccionar
+	m_Lang007 =	&Vista
+	m_Lang008 =	&Opcións
+	m_Lang009 =	&Doar
+	m_Lang010 =	A&xudar
+		
+; 02. File Sub Menu		
+	f_Lang001 =	&Novo
+	f_Lang002 =	&Aberto
+	f_Lang003 =	&Gardar
+	f_Lang004 =	Ga&rdar como
+	f_Lang005 =	Ar&quivos recentes
+	f_Lang006 =	&Exportar AHK
+	f_Lang007 =	&Previsualización Script
+	f_Lang008 =	E&ditar Script
+	f_Lang009 =	&Macros de axenda
+	f_Lang010 =	&Listar Variables
+	f_Lang011 =	&Saída
+	f_Lang012 =	N&ingún arquivo
+		
+; 03. Macro Sub Menu		
+	r_Lang001 =	&Gardar Macro
+	r_Lang002 =	&Activar macros
+	r_Lang003 =	&Xogar Macro actual
+	r_Lang004 =	&Cronómetro
+	r_Lang005 =	&Desactivar macros
+	r_Lang006 =	&Reproducir desde liña seleccionada
+	r_Lang007 =	X&ogar ata liña seleccionada
+	r_Lang008 =	Xogar &liñas seleccionadas
+	r_Lang009 =	Co&ntexto Teclas de atallo sensibles
+	r_Lang010 =	Agr&egar Macro
+	r_Lang011 =	&Pechar Macro
+	r_Lang012 =	&Macro duplicado
+	r_Lang013 =	Ed&itar macros
+	r_Lang014 =	Impor&t Macro
+	r_Lang015 =	Gardar Macro act&ual
+		
+; 04. Function Sub Menu		
+	u_Lang001 =	&Crear Función
+	u_Lang002 =	&Agregar parámetro
+	u_Lang003 =	A&gregar Retorno
+	u_Lang004 =	C&onverter Macro para funcionar
+		
+; 05. Commands Sub Menu		
+	i_Lang001 =	&Rato
+	i_Lang002 =	&Texto
+	i_Lang003 =	&Control
+	i_Lang004 =	&Pausa
+	i_Lang005 =	C&aixa de mensaxes
+	i_Lang006 =	&Espérase clave
+	i_Lang007 =	&Ventá
+	i_Lang008 =	&Image / Pixel Buscar
+	i_Lang009 =	R&un / File / String / Misc.
+	i_Lang010 =	&Lazo
+	i_Lang011 =	Ir a&o / etiqueta
+	i_Lang012 =	&Set temporizador
+	i_Lang013 =	Se &Demostracións
+	i_Lang014 =	Varia&bles / Arrays
+	i_Lang015 =	&Funcións / Métodos de Array
+	i_Lang016 =	E&nviar email
+	i_Lang017 =	Descar&gar ficheiros
+	i_Lang018 =	&Zip / descomprimir arquivos
+	i_Lang019 =	Internet E&xplorer
+	i_Lang020 =	&Interface
+	i_Lang021 =	&Mensaxes de Windows
+	i_Lang022 =	&Atopar un comando
+		
+; 06. Edit Sub Menu		
+	e_Lang001 =	&Duplicar
+	e_Lang002 =	&Editar comentario
+	e_Lang003 =	&Buscar / Reemplazar
+	e_Lang004 =	&Copiar ...
+	e_Lang005 =	De&sfacer
+	e_Lang006 =	&Refacer
+	e_Lang007 =	C&orte
+	e_Lang008 =	Co&pia
+	e_Lang009 =	Co&lar
+	e_Lang010 =	El&iminar
+	e_Lang011 =	S&ubir
+	e_Lang012 =	B&aixar
+	e_Lang013 =	I&nserir de Box
+	e_Lang014 =	Inserir &Keystroke
+	e_Lang015 =	Edi&tar cor Mark
+	e_Lang016 =	&Grupos
+	e_Lang017 =	Per&mitir que os grupos
+	e_Lang018 =	&Agregar grupo
+	e_Lang019 =	&Eliminar grupo
+	e_Lang020 =	&Eliminar todos os grupos
+	e_Lang021 =	&Recoller todo
+	e_Lang022 =	E&xpandir todo
+		
+; 07. Select Sub Menu		
+	s_Lang001 =	&Seleccionar todo
+	s_Lang002 =	S&elecciona Ningún
+	s_Lang003 =	&Invertir selección
+	s_Lang004 =	&Comprobe Seleccionado
+	s_Lang005 =	&Desmarque a opción seleccionada
+	s_Lang006 =	&Verifica Inverter
+	s_Lang007 =	&Mover a selección superior
+	s_Lang008 =	M&over selección abaixo
+	s_Lang009 =	&Tipo seleccionado
+	s_Lang010 =	Ti&po de mando
+		
+; 08. View Sub Menu		
+	v_Lang001 =	&Always on Top
+	v_Lang002 =	&Liñas de destaque
+	v_Lang003 =	&Entalhe
+	v_Lang004 =	&Controls Toolbar
+	v_Lang005 =	&Visualización
+	v_Lang006 =	&Barras de ferramentas
+	v_Lang007 =	&Teclas de atallo
+	v_Lang008 =	B&uscar Bar
+	v_Lang009 =	C&olumnas Restaurar tamaño
+	v_Lang010 =	&Iconos Tamaño
+	v_Lang011 =	&Restaurar esquema
+	v_Lang012 =	Ar&quivo
+	v_Lang013 =	&Grave Tocar
+	v_Lang014 =	Co&mandos
+	v_Lang015 =	E&ditar
+	v_Lang016 =	O&pcións
+	v_Lang017 =	Per&sonaliza
+	v_Lang018 =	Autom&ático
+	v_Lang019 =	Ma&nual
+	v_Lang020 =	&Pare
+	v_Lang021 =	&Pausa
+	v_Lang022 =	&Compacto
+	v_Lang023 =	De&fecto
+	v_Lang024 =	&Pequeno
+	v_Lang025 =	&Gran
+		
+; 09. Options Sub Menu		
+	o_Lang001 =	&Configuración
+	o_Lang002 =	&Minimizar a bandexa
+	o_Lang003 =	&Barra de ferramentas controis de visualización
+	o_Lang004 =	C&apturar teclas presionadas nesta fiestra
+	o_Lang005 =	&Teclas de atallo sempre activo
+	o_Lang006 =	&Opcións de apagado (Cando a reprodución remata ...)
+	o_Lang007 =	Co&ntexto Teclas de atallo sensibles
+	o_Lang008 =	&Engada a chave de Windows para "Play" atallo
+	o_Lang009 =	&Use o botón de mando como teclas de atallo
+	o_Lang010 =	E&stablecer por defecto Teclas de atallo
+	o_Lang011 =	&Definir como ficheiro estándar
+	o_Lang012 =	E&liminar ficheiro estándar
+	o_Lang013 =	Teclas de atallo est&ándar
+	o_Lang014 =	De&fault Settings
+		
+; 10. Donate Sub Menu		
+	p_Lang001 =	&PayPal Doazón
+		
+; 11. Help Sub Menu		
+	h_Lang001 =	&Axudar
+	h_Lang002 =	&Tutoriais
+	h_Lang003 =	&Consellos
+	h_Lang004 =	&Macro Creator Home
+	h_Lang005 =	&Foro
+	h_Lang006 =	&Documentación AHK en liña
+	h_Lang007 =	C&omprobar actualizacións ...
+	h_Lang008 =	Com&probar ao iniciar
+	h_Lang009 =	&Sobre
+		
+; 12. Tray Menu		
+	y_Lang001 =	Hide Window
+	y_Lang002 =	Escaparate
+	y_Lang003 =	Controls Toolbar
+		
+; 13. Built-in Vars Menu		
+	b_Lang001 =	Caracteres especiais
+	b_Lang002 =	Propiedades
+	b_Lang003 =	Data e Hora
+	b_Lang004 =	Usuario Tempo de espera
+	b_Lang005 =	Sistema e usuario
+	b_Lang006 =	Misc.
+	b_Lang007 =	Lazo
+		
+; 14. Main Window		
+	w_Lang001 =	Exportación
+	w_Lang002 =	Visualización
+	w_Lang003 =	Opcións
+	w_Lang004 =	Rexistro
+	w_Lang005 =	Xogar
+	w_Lang006 =	Reprodución
+	w_Lang007 =	Manual
+	w_Lang008 =	Pare
+	w_Lang009 =	Barra de ferramentas controis de visualización
+	w_Lang010 =	Pausa
+	w_Lang011 =	Lazo
+	w_Lang012 =	Capturar teclas presionadas nesta fiestra
+	w_Lang013 =	Minimizar a bandexa
+	w_Lang014 =	Teclas de atallo sempre activo
+	w_Lang015 =	Repetición
+	w_Lang016 =	Demora (ms)
+	w_Lang017 =	Aplicar
+	w_Lang018 =	Inserir
+	w_Lang019 =	Editar
+	w_Lang020 =	Opcións de apagado (Cando a reprodución remata ...)
+	w_Lang021 =	Non fagas nada
+	w_Lang022 =	Pechar a aplicación
+	w_Lang023 =	Apagado
+	w_Lang024 =	Shutdown (forza)
+	w_Lang025 =	Reinicio
+	w_Lang026 =	Desconectarse
+	w_Lang027 =	Hibernar
+	w_Lang028 =	Suspender
+	w_Lang029 =	Bloquear ordenador
+	w_Lang030 =	Índice
+	w_Lang031 =	Acción
+	w_Lang032 =	Detalles
+	w_Lang033 =	Repetición
+	w_Lang034 =	Atraso
+	w_Lang035 =	Tipo
+	w_Lang036 =	Control
+	w_Lang037 =	Ventá
+	w_Lang038 =	Comentario
+	w_Lang039 =	Cor
+	w_Lang040 =	New (Ctrl + N)
+	w_Lang041 =	Abrir (Ctrl + O)
+	w_Lang042 =	Salva (Ctrl + S)
+	w_Lang043 =	Gardar como (Ctrl + Maiús + S)
+	w_Lang044 =	Exportar AHK (Ctrl + E)
+	w_Lang045 =	Previsualización Script (Ctrl + P)
+	w_Lang046 =	Configuración (Ctrl + G)
+	w_Lang047 =	Gardar Macro (Ctrl + R)
+	w_Lang048 =	Activar Macros (Ctrl + Intro)
+	w_Lang049 =	Xogar Macro Actual (Ctrl + Maiús + Intro)
+	w_Lang050 =	Timer (Ctrl + Maiús + T)
+	w_Lang051 =	Rato (F2)
+	w_Lang052 =	Texto (F3)
+	w_Lang053 =	Editar Macros (Ctrl + Maiús + M)
+	w_Lang054 =	Control (F4)
+	w_Lang055 =	Pause (F5)
+	w_Lang056 =	Caixa de mensaxes (Shift + F5)
+	w_Lang057 =	Espérase clave (Ctrl + F5)
+	w_Lang058 =	Fiestra (F6)
+	w_Lang059 =	Image / Pixel Buscar (F7)
+	w_Lang060 =	Run / File / String / Misc. (F8)
+	w_Lang061 =	Loop (F9)
+	w_Lang062 =	Ir ao / etiqueta (Shift + F9)
+	w_Lang063 =	Set Timer (Ctrl + F9)
+	w_Lang064 =	Se Demostracións (F10)
+	w_Lang065 =	Variables / Arrays (Shift + F10)
+	w_Lang066 =	Funcións / Métodos de Array (Ctrl + F10)
+	w_Lang067 =	Enviar correo-e (F11)
+	w_Lang068 =	Descargar arquivos (Shift + F11)
+	w_Lang069 =	Arquivos zip / Descompactá (Ctrl + F11)
+	w_Lang070 =	Internet Explorer (F12)
+	w_Lang071 =	Expresión / CON Interface (Shift + F12)
+	w_Lang072 =	Mensaxes de Windows (Ctrl + F12)
+	w_Lang073 =	Agregar Macro (Ctrl + T)
+	w_Lang074 =	Pechar Macro (Ctrl + W)
+	w_Lang075 =	Duplicar Macro (Ctrl + Maiús + D)
+	w_Lang076 =	Import Macro (Ctrl + I)
+	w_Lang077 =	Gardar Macro Actual (Ctrl + Alt + S)
+	w_Lang078 =	Subir (Ctrl + retroceso de páxina)
+	w_Lang079 =	Mover abaixo (Ctrl + avance)
+	w_Lang080 =	Duplicar liñas seleccionadas (Ctrl + D)
+	w_Lang081 =	Corte as liñas seleccionadas (Ctrl + X)
+	w_Lang082 =	Pega as liñas seleccionadas (Ctrl + C)
+	w_Lang083 =	Pegar está copiado Liñas (Ctrl + V)
+	w_Lang084 =	Eliminar liñas seleccionadas (Del)
+	w_Lang085 =	Desfacer (Ctrl + Z)
+	w_Lang086 =	Refacer (Ctrl + Y)
+	w_Lang087 =	Copiar ...
+	w_Lang088 =	Buscar / Reemplazar (Ctrl + F)
+	w_Lang089 =	Inserir / Editar Comentario (Ctrl + L)
+	w_Lang090 =	Editar cor Mark (Ctrl + M)
+	w_Lang091 =	Personaliza
+	w_Lang092 =	Atopar un comando (Ctrl + Maiús + F)
+	w_Lang093 =	Edit (Intro)
+	w_Lang094 =	Ocultar
+	w_Lang095 =	Mover aquí
+	w_Lang096 =	Pega aquí
+	w_Lang097 =	Grupos
+	w_Lang098 =	Permitir que os grupos (Ctrl + Maiús + G)
+	w_Lang099 =	Agregar grupo (Ctrl + Maiús + Y)
+	w_Lang100 =	Eliminar grupo (Ctrl + Maiús + R)
+	w_Lang101 =	Eliminar todos os grupos
+	w_Lang102 =	Editar grupos
+	w_Lang103 =	Nome do grupo
+	w_Lang104 =	Crear Función (Ctrl + Maiús + U)
+	w_Lang105 =	Agregar parámetro (Ctrl + Maiús + P)
+	w_Lang106 =	Agregar Return (Ctrl + Maiús + N)
+	w_Lang107 =	Converter Macro para funcionar (Ctrl + Maiús + C)
+	w_Lang108 =	Comentar as liñas marcar
+	w_Lang109 =	Engada a chave de Windows para "Play" atallo
+	w_Lang110 =	Use o botón de mando como teclas de atallo
+	w_Lang111 =	Buscar ... (Prema Intro para ir)
+		
+; 15. Command Windows		
+	c_Lang001 =	Rato
+	c_Lang002 =	Texto
+	c_Lang003 =	Pausa
+	c_Lang004 =	Control
+	c_Lang005 =	Ventá
+	c_Lang006 =	Image search
+	c_Lang007 =	Pixel Buscar
+	c_Lang008 =	Run / File / String / Misc.
+	c_Lang009 =	Se Demostracións
+	c_Lang010 =	Variables
+	c_Lang011 =	Funcións / Métodos de Array
+	c_Lang012 =	Internet Explorer
+	c_Lang013 =	Expresión / interface
+	c_Lang014 =	Seleccionar Aplicación (Avanzado)
+	c_Lang015 =	Mensaxe
+	c_Lang016 =	Control
+	c_Lang017 =	Atraso
+	c_Lang018 =	Milisegundos
+	c_Lang019 =	Segundos
+	c_Lang020 =	Ok
+	c_Lang021 =	Cancelar
+	c_Lang022 =	Preto
+	c_Lang023 =	Copia
+	c_Lang024 =	Eliminar
+	c_Lang025 =	Use% para variables, por exemplo.:% Clipboard%
+	c_Lang026 =	Acción
+	c_Lang027 =	Prema
+	c_Lang028 =	Cambio
+	c_Lang029 =	Mover e prema
+	c_Lang030 =	Roda superior
+	c_Lang031 =	Roda de Down
+	c_Lang032 =	Arrastrar e soltar
+	c_Lang033 =	Coordenadas
+	c_Lang034 =	Busca
+	c_Lang035 =	Subcomando
+	c_Lang036 =	Parente
+	c_Lang037 =	Botón
+	c_Lang038 =	Esquerda
+	c_Lang039 =	Dereito
+	c_Lang040 =	Medio
+	c_Lang041 =	X1
+	c_Lang042 =	X2
+	c_Lang043 =	Reter / Lanzamento
+	c_Lang044 =	Prema Conde
+	c_Lang045 =	Plain Text (Raw)
+	c_Lang046 =	Texto comandos
+	c_Lang047 =	Pegar do portapapeis
+	c_Lang048 =	Colar de Control
+	c_Lang049 =	O texto presentado
+	c_Lang050 =	Agregar pausa
+	c_Lang051 =	Caixa de mensaxes
+	c_Lang052 =	Agarde por chave
+	c_Lang053 =	Tempo de espera
+	c_Lang054 =	(En milisegundos) 0 = infinito
+	c_Lang055 =	Mando
+	c_Lang056 =	Valor
+	c_Lang057 =	Variable de saída
+	c_Lang058 =	Posición
+	c_Lang059 =	Tamaño
+	c_Lang060 =	4 variables será creado con ese prefixo e terminando con X, Y, W, H.
+	c_Lang061 =	Comezo
+	c_Lang062 =	Final
+	c_Lang063 =	Imaxe
+	c_Lang064 =	Pixel
+	c_Lang065 =	Fai Screenshot
+	c_Lang066 =	Espérase clave
+	c_Lang067 =	Se se atopa
+	c_Lang068 =	Se non está / Error
+	c_Lang069 =	Variables de saída
+	c_Lang070 =	Coord
+	c_Lang071 =	Variacións
+	c_Lang072 =	Visualización
+	c_Lang073 =	Lazo
+	c_Lang074 =	Crear automaticamente obxecto CON
+	c_Lang075 =	Pausa
+	c_Lang076 =	Continuar
+	c_Lang077 =	Goto
+	c_Lang078 =	Ir etiquetar
+	c_Lang079 =	Etiqueta
+	c_Lang080 =	Agregar Etiqueta
+	c_Lang081 =	Cadea (inputVar)
+	c_Lang082 =	Variable
+	c_Lang083 =	Máis
+	c_Lang084 =	Asignar variable
+	c_Lang085 =	Contido
+	c_Lang086 =	Operador
+	c_Lang087 =	Expresión
+	c_Lang088 =	Restablecer
+	c_Lang089 =	Nome función
+	c_Lang090 =	Separados por comas parámetros (sen parénteses)
+	c_Lang091 =	Usar o formato expresións
+	c_Lang092 =	Páxina Elemento / Index
+	c_Lang093 =	Definir
+	c_Lang094 =	Obter
+	c_Lang095 =	Método
+	c_Lang096 =	Propiedade
+	c_Lang097 =	Agarde por páxina para cargar.
+	c_Lang098 =	CLSID
+	c_Lang099 =	Conectar
+	c_Lang100 =	Manexar
+	c_Lang101 =	Script CON
+	c_Lang102 =	Número de mensaxe
+	c_Lang103 =	Claves especiais
+	c_Lang104 =	Volver do navegador
+	c_Lang105 =	Navegador Avanzado
+	c_Lang106 =	Actualizar navegador
+	c_Lang107 =	Navegador Deixar
+	c_Lang108 =	Navegador Buscar
+	c_Lang109 =	Favoritos do navegador
+	c_Lang110 =	Inicio navegador
+	c_Lang111 =	Medios
+	c_Lang112 =	Mudo
+	c_Lang113 =	Volume Up
+	c_Lang114 =	Volume Down
+	c_Lang115 =	Reproducir / Pausa
+	c_Lang116 =	Seguinte pista
+	c_Lang117 =	Pista anterior
+	c_Lang118 =	Pare
+	c_Lang119 =	Correo-e
+	c_Lang120 =	App 1
+	c_Lang121 =	App 2
+	c_Lang122 =	Scancode
+	c_Lang123 =	Engadir
+	c_Lang124 =	Historia Key
+	c_Lang125 =	Escriba un Scancode ...
+	c_Lang126 =	Código á lista de teclas virtuais!
+	c_Lang127 =	Escriba un nome para a variable
+	c_Lang128 =	Use a función de arquivo externo
+	c_Lang130 =	Repita ata que
+	c_Lang131 =	Aplicar
+	c_Lang132 =	Lazo
+	c_Lang133 =	Arquivo
+	c_Lang134 =	Analizar
+	c_Lang135 =	Ler
+	c_Lang136 =	Rexistro
+	c_Lang137 =	Estándar de ficheiro:
+	c_Lang138 =	Directorios
+	c_Lang139 =	Recursiva
+	c_Lang140 =	Variable de entrada:
+	c_Lang141 =	Delimitadores:
+	c_Lang142 =	Omitir caracteres:
+	c_Lang143 =	Input File:
+	c_Lang144 =	Administrador Key \ Clave:
+	c_Lang145 =	Arquivos
+	c_Lang146 =	Claves
+	c_Lang147 =	Icona
+	c_Lang148 =	Sen icona
+	c_Lang149 =	Erro
+	c_Lang150 =	Pregunta
+	c_Lang151 =	Exclamación
+	c_Lang152 =	Información
+	c_Lang153 =	Sempre na parte superior
+	c_Lang154 =	Actas
+	c_Lang155 =	Ata
+	c_Lang156 =	Escrita
+	c_Lang157 =	Script Language
+	c_Lang158 =	Non é compatible con 64 bits!
+	c_Lang159 =	Opcións de busca
+	c_Lang160 =	Transparente
+	c_Lang161 =	Escala
+	c_Lang162 =	Engadir "Se Statement"
+	c_Lang163 =	Modo de envío
+	c_Lang164 =	Igual
+	c_Lang165 =	Contén
+	c_Lang166 =	Maior
+	c_Lang167 =	Menos
+	c_Lang168 =	Si
+	c_Lang169 =	Non
+	c_Lang170 =	Ok
+	c_Lang171 =	Cancelar
+	c_Lang172 =	Abortar
+	c_Lang173 =	Ignorar
+	c_Lang174 =	Tentar
+	c_Lang175 =	Continuar
+	c_Lang176 =	Tenta de novo
+	c_Lang177 =	Timeout
+	c_Lang178 =	Establecer atraso clave
+	c_Lang179 =	Atraso Key
+	c_Lang180 =	Atraso aleatorio
+	c_Lang181 =	Mínimo
+	c_Lang182 =	Máximo
+	c_Lang183 =	Desactivar atrasos aleatorios para este comando
+	c_Lang184 =	Escoller da lista
+	c_Lang185 =	Botóns
+	c_Lang186 =	Primeiro
+	c_Lang187 =	Segundo
+	c_Lang188 =	Terceiro
+	c_Lang189 =	Título
+	c_Lang190 =	Se a ventá activa
+	c_Lang191 =	Se a ventá non activa
+	c_Lang192 =	Se a xanela hai
+	c_Lang193 =	Se a ventá non existe
+	c_Lang194 =	Se o ficheiro existe
+	c_Lang195 =	Se o ficheiro non existe
+	c_Lang196 =	Se o texto no portapapeis
+	c_Lang197 =	Se o índice de loop
+	c_Lang198 =	Se image / pixel atopou
+	c_Lang199 =	Se image / pixel non atopou
+	c_Lang200 =	Se cadea contén
+	c_Lang201 =	Se cadea non conteña
+	c_Lang202 =	Se a caixa de mensaxe
+	c_Lang203 =	Comparar variables
+	c_Lang204 =	Avaliar a expresión
+	c_Lang205 =	Rexión
+	c_Lang206 =	(Use [] para crear matrices, por exemplo.: [10, 20, avariable, "aString"])
+	c_Lang207 =	Obxecto array
+	c_Lang208 =	Nome da clave
+	c_Lang209 =	Nome do valor
+	c_Lang210 =	Valores
+	c_Lang211 =	Orde
+	c_Lang212 =	Función definida polo usuario
+	c_Lang213 =	Parámetro función
+	c_Lang214 =	Retorno función
+	c_Lang215 =	Parámetros
+	c_Lang216 =	Valor de retorno
+	c_Lang217 =	Valor por defecto
+	c_Lang218 =	Ámbito
+	c_Lang219 =	Local
+	c_Lang220 =	Global
+	c_Lang221 =	Nome
+	c_Lang222 =	Pode engadir máis parámetros do menú de funcións.
+	c_Lang223 =	Variables globais
+	c_Lang224 =	Variables locais
+	c_Lang225 =	Variables estáticas
+	c_Lang226 =	De
+	c_Lang227 =	Email
+	c_Lang228 =	Tema
+	c_Lang229 =	Mensaxe
+	c_Lang230 =	Para
+	c_Lang231 =	CC
+	c_Lang232 =	BCC
+	c_Lang233 =	F2 para editar
+	c_Lang234 =	HTML
+	c_Lang235 =	Enviar email
+	c_Lang236 =	Descargar ficheiros
+	c_Lang237 =	Zip / descomprimir arquivos
+	c_Lang238 =	Acende
+	c_Lang239 =	Apagar
+	c_Lang240 =	Posicións rexistrado.
+	c_Lang241 =	Eliminar todos os temporizadores
+	c_Lang242 =	Set temporizador
+	c_Lang243 =	Xustificado á dereita
+	c_Lang244 =	Da dereita á esquerda
+	c_Lang245 =	Anexos
+	c_Lang246 =	Camiño
+	c_Lang247 =	Se
+	c_Lang248 =	Comprimir cada ficheiro a un ficheiro diferente
+	c_Lang249 =	Extraia cada ficheiro a un cartafol diferente
+	c_Lang250 =	Arquivos zip
+	c_Lang251 =	Descomprimir arquivos
+	c_Lang252 =	Ligazóns para descargar
+	c_Lang253 =	Cartafol de destino
+	c_Lang254 =	Ficheiro de destino
+	c_Lang255 =	Separados por punto e coma, coma ou liña.
+	c_Lang256 =	Axustar as coordenadas do centro da imaxe
+		
+; 16. Other Windows		
+	t_Lang001 =	Exportar AutoHotkey
+	t_Lang002 =	Macros
+	t_Lang003 =	Loops
+	t_Lang004 =	0 = infinito
+	t_Lang005 =	Use Hotstring
+	t_Lang006 =	Bloque do rato
+	t_Lang007 =	Todo
+	t_Lang008 =	Ningún
+	t_Lang009 =	Contexto Teclas de atallo sensibles
+	t_Lang010 =	Exportar
+	t_Lang011 =	Entalhe
+	t_Lang012 =	Incluír Código PMC
+	t_Lang013 =	Non concatenar Enviar comandos
+	t_Lang014 =	Refrescar
+	t_Lang015 =	Auto-Refresh
+	t_Lang016 =	Always on Top
+	t_Lang017 =	Configuración
+	t_Lang018 =	Xeral
+	t_Lang019 =	Inicio / Deixar Gravación
+	t_Lang020 =	Gardar Nova Macro
+	t_Lang021 =	Keystrokes
+	t_Lang022 =	Gravación
+	t_Lang023 =	Capturar o estado fundamental (arriba / abaixo)
+	t_Lang024 =	Click do rato
+	t_Lang025 =	Wheel rato
+	t_Lang026 =	Movementos do rato
+	t_Lang027 =	Intervalos de tempo
+	t_Lang028 =	Atraso mínimo
+	t_Lang029 =	Clases de fiestra
+	t_Lang030 =	Títulos de xanela
+	t_Lang031 =	Grave ControlSend
+	t_Lang032 =	Grave ControlClick
+	t_Lang033 =	Relativa tecla Gardar
+	t_Lang034 =	Cambiar
+	t_Lang035 =	Reprodución
+	t_Lang036 =	Acelerar
+	t_Lang037 =	Desacelerar
+	t_Lang038 =	Retorno do rato despois a reprodución
+	t_Lang039 =	Rato Coordenadas
+	t_Lang040 =	Ventá
+	t_Lang041 =	Pantalla
+	t_Lang042 =	Estándar rato Demora
+	t_Lang043 =	Estándar Ventana Demora
+	t_Lang044 =	Max Historia per Macro
+	t_Lang045 =	Borrar Historial
+	t_Lang046 =	Screenshots
+	t_Lang047 =	Debuxe Botón
+	t_Lang048 =	Ancho da liña (Px)
+	t_Lang049 =	Capturar na liberación
+	t_Lang050 =	Prema Intro para capturar
+	t_Lang051 =	Directorio screenshots
+	t_Lang052 =	Quebra automática de liña
+	t_Lang053 =	Teclas de atallo
+	t_Lang054 =	Establecer por defecto Teclas de atallo
+	t_Lang055 =	Desactivar Atallos de fiestra
+	t_Lang056 =	Columnas Restaurar tamaño
+	t_Lang057 =	Estándar Macro Arquivo
+	t_Lang058 =	Estándar Biblioteca de Arquivos
+	t_Lang059 =	Use Expresión por defecto para as variables Assignment
+	t_Lang060 =	Centrado Loops e Demostracións
+	t_Lang061 =	(Fai clic na cabeceira da columna Índice para activar / desactivar)
+	t_Lang062 =	Teclas virtuais
+	t_Lang063 =	Defecto
+	t_Lang064 =	Editar comentario
+	t_Lang065 =	Comentario
+	t_Lang066 =	Buscar Columna
+	t_Lang067 =	Buscar / Reemplazar
+	t_Lang068 =	&Atopar
+	t_Lang069 =	&Match Case
+	t_Lang070 =	&Substituír
+	t_Lang071 =	Atopar
+	t_Lang072 =	Substituído
+	t_Lang073 =	&Liñas seleccionadas
+	t_Lang074 =	To&das as liñas
+	t_Lang075 =	Todos os ma&cros
+	t_Lang076 =	Sobre
+	t_Lang077 =	&Expresións regulares
+	t_Lang078 =	Xogar xa
+	t_Lang079 =	Xogar cada X segundos (mili)
+	t_Lang080 =	Cronómetro
+	t_Lang081 =	Pausa
+	t_Lang082 =	Demostracións
+	t_Lang083 =	Amosar recuar para loops e Demostracións
+	t_Lang084 =	(Prema dúas veces na cabeceira da columna Acción activar / desactivar)
+	t_Lang085 =	Exhibición controla Bar no arranque
+	t_Lang086 =	Busca Funcións. Por favor espera...
+	t_Lang087 =	Incluír ficheiros externos
+	t_Lang088 =	Crear ficheiro EXE
+	t_Lang089 =	Permitir varias instancias
+	t_Lang090 =	Estándares
+	t_Lang091 =	Permitir arrastrar liñas
+	t_Lang092 =	&O contido das celas enteiras
+	t_Lang093 =	Formato estándar INI
+	t_Lang094 =	Name = Valor
+	t_Lang095 =	Escriba 1 variable por liña. Tamén pode engadir [Seccións].
+	t_Lang096 =	Variables globais de usuarios
+	t_Lang097 =	Premer un botón no mando
+	t_Lang098 =	Retroceso para borrar
+	t_Lang099 =	Botón
+	t_Lang100 =	Consellos de globo de visualización
+	t_Lang101 =	Velocidade
+	t_Lang102 =	Lento
+	t_Lang103 =	Rápido
+	t_Lang104 =	Show / Hide barra de título
+	t_Lang105 =	Show / Hide xanela principal
+	t_Lang106 =	Executar inmediatamente
+	t_Lang107 =	Os atrasos aleatorios
+	t_Lang108 =	Normal
+	t_Lang109 =	Abaixo
+	t_Lang110 =	Arriba
+	t_Lang111 =	Inserir Keystroke
+	t_Lang112 =	Reproducir / Pausa
+	t_Lang113 =	Pare
+	t_Lang114 =	Opcións de reprodución
+	t_Lang115 =	Inicio / Deixar Gravación
+	t_Lang116 =	Gardar Nova Macro
+	t_Lang117 =	Opcións de gravación
+	t_Lang118 =	Borrar Lista
+	t_Lang119 =	Amosar barra de progreso
+	t_Lang120 =	Acelerar
+	t_Lang121 =	Desacelerar
+	t_Lang122 =	Show / Hide barra de título
+	t_Lang123 =	Show / Hide xanela principal
+	t_Lang124 =	Desencaixar
+	t_Lang125 =	Peirao
+	t_Lang126 =	Aberto
+	t_Lang127 =	Gardar
+	t_Lang128 =	Corte
+	t_Lang129 =	Copia
+	t_Lang130 =	Colar
+	t_Lang131 =	Seleccionar todo
+	t_Lang132 =	Eliminar
+	t_Lang133 =	Teclado
+	t_Lang134 =	Rato
+	t_Lang135 =	Outros
+	t_Lang136 =	Liñas de destaque
+	t_Lang137 =	Estándar Script Editor
+	t_Lang138 =	Open in editor externo (Ctrl + Maiús + E)
+	t_Lang139 =	Seleccionar
+	t_Lang140 =	Por columna
+	t_Lang141 =	Todas as columnas
+	t_Lang142 =	Eliminar Theme from barras de ferramentas (require reiniciar)
+	t_Lang143 =	Agochar automaticamente barra de ferramentas controis
+	t_Lang144 =	Fai clic e arrastra para cambiar a orde. Dun dobre clic para editar.
+	t_Lang145 =	Editar macros
+	t_Lang146 =	En liña
+	t_Lang147 =	Macro
+	t_Lang148 =	Acción do botón de peche da xanela principal
+	t_Lang149 =	Pechar a aplicación
+	t_Lang150 =	Minimizar a bandexa
+	t_Lang151 =	Confirmación de exhibición ao pechar unha macro
+	t_Lang152 =	Crear copias de seguridade automática
+	t_Lang153 =	Crea unha tarefa programada no calendario de tarefas de Windows.
+	t_Lang154 =	Tempo de primeira execución
+	t_Lang155 =	Tipo de programación
+	t_Lang156 =	Xa || Diario | Semanal | Mensual | Inicio | Sesión | ausente
+	t_Lang157 =	Arquivo de destino PMC
+	t_Lang158 =	Arquivo de destino AHK
+	t_Lang159 =	O script serán gardados ou substituído no directorio actual!
+	t_Lang160 =	Axenda de Tarefas aberto
+	t_Lang161 =	Tarefa creada con éxito!
+	t_Lang162 =	Houbo un erro. A tarefa non puido ser creado.
+	t_Lang163 =	Schedule
+	t_Lang164 =	Macros de axenda
+	t_Lang165 =	Macro realizar
+	t_Lang166 =	Arquivo
+	t_Lang167 =	Corda
+	t_Lang168 =	Obter información
+	t_Lang169 =	Agarde
+	t_Lang170 =	Grupos de fiestra
+	t_Lang171 =	Mensaxes
+	t_Lang172 =	Rexistro e INI
+	t_Lang173 =	Son
+	t_Lang174 =	Variables
+	t_Lang175 =	Misc.
+	t_Lang176 =	Agregar grupo
+	t_Lang177 =	Grupo
+	t_Lang178 =	Editor de idiomas
+	t_Lang179 =	Crear novo
+	t_Lang180 =	Use a tecla Intro, PgDn e PgUp para navegar.
+	t_Lang181 =	Someter
+	t_Lang182 =	Nome
+	t_Lang183 =	Gardar cambios?
+	t_Lang184 =	Arquivo idioma
+	t_Lang185 =	Referencia do Arquivo
+	t_Lang186 =	Enviar revisión ou tradución
+	t_Lang187 =	Recoller todo
+	t_Lang188 =	Expandir todo
+	t_Lang189 =	Idioma
+	t_Lang190 =	Converter saltos de liña
+	t_Lang191 =	Contas de correo electrónico
+	t_Lang192 =	Actualizar
+	t_Lang193 =	Prema dúas veces para editar
+	t_Lang194 =	Servidor SMTP
+	t_Lang195 =	Porto
+	t_Lang196 =	Autenticar
+	t_Lang197 =	Nome de usuario
+	t_Lang198 =	Contrasinal
+	t_Lang199 =	SSL
+	t_Lang200 =	Modo Enviar
+	t_Lang201 =	Enviar unha proba
+	t_Lang202 =	Fiestra e pantalla
+	t_Lang203 =	Detectar oculto de Windows
+	t_Lang204 =	Detectar texto oculto
+	t_Lang205 =	Modo de Xogo título
+	t_Lang206 =	Título velocidade Xogo
+	t_Lang207 =	Cliente
+	t_Lang208 =	A&topar
+	t_Lang209 =	S&ubstituír
+		
+; 17. Messages & Dialogs		
+	d_Lang001 =	Aberto
+	d_Lang002 =	Gardar proxecto actual?
+	d_Lang003 =	Default Settings
+	d_Lang004 =	Ficheiros Macro Creador
+	d_Lang005 =	Save Project
+	d_Lang006 =	Erro ao gardar o ficheiro / escreber
+	d_Lang007 =	Erro
+	d_Lang008 =	Erro: Ningunha verificación Selected.
+		Please გამშვები მინიმუმ ერთი მაკრო სიაში.
+	d_Lang009 =	Erro: Non hotkey seleccionados.
+	d_Lang010 =	Erro: Invalid Address.
+		The შერჩეული მისამართი ან ფაილის სახელი არასწორია.
+	d_Lang011 =	Aviso
+	d_Lang012 =	Sen selected.
+		Continue?
+	d_Lang013 =	Export Script
+	d_Lang014 =	Script Exportados
+	d_Lang015 =	O ficheiro foi exportado con éxito!
+	d_Lang016 =	Prema en "Get 'para marcar posición.
+	d_Lang017 =	#NOME?
+		#NOME?
+		#NOME?
+	d_Lang018 =	Pixel Color
+	d_Lang019 =	Borrar Lista
+	d_Lang020 =	Pechar Macro?
+	d_Lang021 =	Seguinte
+	d_Lang022 =	Anterior
+	d_Lang023 =	Mensaxe
+	d_Lang024 =	Cargando configuración por defecto?
+	d_Lang025 =	Macros activado.
+		Use as teclas de atallo para xogar.
+	d_Lang026 =	Para iniciar / deter a gravación
+	d_Lang027 =	Gravación interrompida
+	d_Lang028 =	A gravación ...
+	d_Lang029 =	Parar
+	d_Lang030 =	Para iniciar nova marca
+	d_Lang031 =	Non é un nome de función válido.
+	d_Lang032 =	Erro: Hotkeys duplicado.
+	d_Lang033 =	Activar macros
+	d_Lang034 =	- Fai clic e arrastra co% DrawButton% para seleccionar a área.
+		- Fai clic e solte sen arrastrar para seleccionar a área de control.
+		- Faga clic nunha área sen un control para seleccionar a área da xanela.
+	d_Lang035 =	Continuar?
+	d_Lang036 =	Image / Pixel Atópase en
+	d_Lang037 =	Image / Pixel non atopado.
+	d_Lang038 =	Prema Aceptar para continuar.
+	d_Lang039 =	Intervalo!
+	d_Lang040 =	
+.	Tämä ominaisuus vaatii GDI+ kirjasto.	تتطلب هذه الميزة+مكتبة GDI.
+		Prema en Aceptar para ir á páxina de descarga.
+	d_Lang041 =	O nome da variable contén un carácter ilegal.
+	d_Lang042 =	é unha palabra reservada.
+	d_Lang043 =	Ou use a barra de ferramentas Controis.
+	d_Lang044 =	Esta característica require a función eval ().
+		Prema en Aceptar para ir á páxina de descarga.
+	d_Lang045 =	Por favor, seleccione unha ventá do navegador!
+	d_Lang046 =	Conexión con éxito!
+	d_Lang047 =	Fallou a conexión!
+	d_Lang048 =	Introduce un cable e unha CLSID.
+	d_Lang049 =	Etiquetas Nome non válido.
+	d_Lang050 =	Etiquetas duplicada.
+	d_Lang051 =	Para reproducir un press Macro do hotkey correspondente (Auto / Man).
+	d_Lang052 =	Para comezar a gravar, prema un rexistro hotkey.
+	d_Lang053 =	Non mostrar esta mensaxe de novo.
+	d_Lang054 =	Por favor, seleccione un diálogo Excel!
+	d_Lang055 =	Por favor, seleccione un ficheiro de script AutoHotkey (.ahk) e unha introduza un nome de función.
+	d_Lang056 =	Esta característica require AutoHotkey instalado.
+		Prema en Aceptar para ir á páxina de descarga.
+	d_Lang057 =	#NOME?
+		#NOME?
+		#NOME?
+	d_Lang058 =	Algunhas funcións esixen admnistrator privilages, a fin de funcionar correctamente.
+		Recoméndase para reiniciar a aplicación como administrador.
+	d_Lang059 =	Este comando non soporta expresións ou funcións.
+		Por favor, asignar unha variable e usalo no parámetro.
+	d_Lang060 =	Nova versión dispoñíbel
+	d_Lang061 =	Agora non
+	d_Lang062 =	Xa ten a última versión.
+	d_Lang063 =	Produciuse un erro durante a comprobación.
+	d_Lang064 =	erro no
+	d_Lang065 =	liña
+	d_Lang066 =	especialmente
+	d_Lang067 =	Mostra este diálogo no arranque
+	d_Lang068 =	suxestións:
+	d_Lang069 =	Unha morea de tempo e esforzo foi canalizado para o desenvolvemento do Creador Macro do pulôver. Se cre que é útil, por favor considere mostrando o seu aprezo cunha doazón.
+		Doar ou non, non haberá diferenza das súas características e funcionalidade.
+	d_Lang070 =	Doe ...
+	d_Lang071 =	Non, grazas
+	d_Lang072 =	software de soporte Open Source
+	d_Lang073 =	Erro: Invalid hotkey seleccionados.
+	d_Lang074 =	Atopar un comando ou función
+	d_Lang075 =	Benvido ao Creador Macro do pulôver
+	d_Lang076 =	Por favor, escolla o seu esquema preferido
+	d_Lang077 =	compacto
+	d_Lang078 =	defecto
+	d_Lang079 =	Comprobar actualizacións na inicialización.
+	d_Lang080 =	Pode cambiar isto en Opcións> Axustes> Xeral.
+	d_Lang081 =	Pode cambiar e adaptar esquemas no menú View.
+	d_Lang082 =	O ficheiro non se atopou!
+	d_Lang083 =	Un arquivo de copia de seguridade se atopou. Desexa abrilo?
+	d_Lang084 =	Por favor, garde os cambios antes de programar unha tarefa.
+	d_Lang085 =	Falta declaración "End Loop" en Macro
+	d_Lang086 =	Missing "End If" declaración en Macro
+	d_Lang087 =	Teña en conta que os cambios feitos no guión de fóra do programa non pode afectar as súas macros de forma algunha.
+		Esta característica serve só como unha función de exportación rápida. PMC non está deseñado para ser un editor de guións AHK.
+	d_Lang088 =	Probe realizar usuario como común (non administrador).
+	d_Lang089 =	Ningunha liña seleccionada!
+	d_Lang090 =	Por favor, seleccione unha liña para introducir ou eliminar o grupo.
+	d_Lang091 =	método válido
+	d_Lang092 =	iconas pequenos
+	d_Lang093 =	iconas grandes
+	d_Lang094 =	Esta característica require Windows Vista ou superior.
+	d_Lang095 =	O uso de ByRef provoca un parámetro para facer un alias para a variable pasado do emisor da chamada. Noutras palabras, o parámetro variable e do interlocutor ambos refírense aos mesmos contidos na memoria.
+	d_Lang096 =	#NOME?
+		#NOME?
+		- Pode utilizar cordas, variables, matrices e funcións. Tamén pode combinar calquera destes.
+		- Para usar cordas, coloque os entre comiñas, por exemplo. "O resultado é:" a + b.
+		- Se quere devolver resultados extra, tamén se pode usar ByRef en parámetros.
+		- Arrays poden ser usados ​​para voltar varios valores ou valores aínda nomeados.
+	d_Lang097 =	#NOME?
+		#NOME?
+		- Pode utilizar cordas, variables, matrices e funcións.
+		- Para usar cordas, coloque os entre comiñas, por exemplo.: Var = "a".
+		- Múltiples declaracións son soportados, por exemplo.: Var = "a" || INSTR (var, "b").
+	d_Lang098 =	Un parámetro ten un valor por defecto, os seguintes parámetros están obrigados a ter un tamén.
+	d_Lang099 =	O nome da función contén un carácter ilegal.
+	d_Lang100 =	Goto, gosub e etiqueta non se permiten en funcións.
+	d_Lang101 =	Función duplicado.
+	d_Lang102 =	Houbo un erro. Pode enviar un correo electrónico para 'pulover@macrocreator.com' co arquivo:
+	d_Lang103 =	Arquivo dispoñible novas linguas.
+	d_Lang104 =	Esta mensaxe non se amosará novo á mesma actualización. Pode baixa-lo dende o menú Axuda> Comprobar actualizacións.
+	d_Lang105 =	Arquivo enviada correctamente. Grazas!
+	d_Lang106 =	Arquivos de idioma actualizado correctamente.
+	d_Lang107 =	Non se puido iniciar o contador
+	d_Lang108 =	Todas as posicións son rexistrados. Por favor, borre un deles.
+	d_Lang109 =	Etiqueta de destino non existe.
+	d_Lang110 =	Confirmar substitución de ficheiro
+	d_Lang111 =	Xa existe.
+		Desexa substituílo?
+	d_Lang112 =	Conta de correo electrónico non se atopou.
+	d_Lang113 =	Ningún erro relatado.
+	d_Lang114 =	Scripts exportados (mesmo se compilado) coa función de envío de correo-e (CDO) terá información visibles de contas de correo electrónico usados, incluíndo o contrasinal. O ficheiro de proxecto PMC non ten esta información.
+	d_Lang115 =	#NOME?
+	d_Lang116 =	Descargar e instalar
+	d_Lang117 =	Ir a páxina de descarga
+	d_Lang118 =	Descargar ... Por favor, espere.
+		
+; 18. Start-up Tips		
+	Start_Tips =	Consulte os tutoriais en video no www.macrocreator.com/help para aprender sobre as moitas características do Creador Macro do pulôver.
+		Para obter axuda para unha orde específica, faga clic co botón dereito en calquera lugar nunha ventá de consola para mostrar enlaces a axuda en liña.
+		Pode crear macros utilizando os botóns de comando na fiestra principal ou usar a gravadora para copiar as súas accións. Vaia Opcións> Axustes> Gravación para seleccionar cales entradas serán gardadas.
+		Use a barra de busca ou "Atopar un comando" xanela para buscar comandos e funcións.
+		Desexa axudar a corrixir unha tradución ou incluso crear un novo? Vaia Opcións> Axustes> Idioma editor e faga as correccións que quere. Pode velo en calquera momento. Prema en Enviar para enviar a súa revisión. Sinto-se libre para enviar calquera número de correccións cantas veces quixer.
+		Marque a opción "Teclas de captura" para introducir as claves e combinacións para a Macro directamente dende a xanela principal.
+		Introduza teclas e combinacións no cadro Atallo de teclado na parte inferior e prema o botón Inserir para engadila los para as liñas seleccionadas.
+		Use os botóns de edición na parte inferior da xanela principal para definir repeat e atrasar a varias liñas á vez. Se non o houbera liñas son seleccionados os botóns de edición aplícanse a todas as liñas da lista.
+		Case todos os comandos e función acepta e xera variables. Pode asignar as súas propias variables nas variables fiestras (Ordes> Variables / matrices). Para usalos dentro comandos incluír o nome de variable en sinais de porcentaxe, por exemplo.:% MyVar%. En funcións, usalos sen signos de porcentaxe, por exemplo.: Substr (MyVar, 5).
+		Botón dereito do rato en calquera lugar na ventá de comandos para inserir facilmente variables Built-in a partir dunha lista.
+		Para usar a gravadora para tarefas rápidas vaia Opcións> Axustes> Gravación e seleccione a opción "Borrar lista". A continuación, prema no botón Gardar na xanela principal e utilizar F10 para limpar a cadea Macro e comezar un novo coa mesma tecla de acceso. Tamén pode comprobar a opción "Sempre activo" na xanela principal para manter a gravación e reprodución Hotkeys activa.
+		PMC soporta obxectos Array e métodos, así como guións de AutoHotkey. Pode crear matrices de moitos xeitos, o máis habitual é que van á fiestra Variables, marcando a opción "Expresión" e encerrando os valores entre parénteses, por exemplo.: [10, 20, Var, "cadea"]. Tamén pode crear claves nomeadas, por exemplo.: {Keya: Vara ", algúns key": "valor de cadea"}.
+		Funcións usar sintaxe de expresión AHK. cadeas literais deben ser colocados entre aspas, e variables non precisan de sinais de porcentaxe. Podes usar outras funcións ou elementos de matriz como parámetros. Ex.: StrReplace (MyVar, MyArray [ "A"], substr (outra_var, 2, 3)).
+		Expresións dispoñible no AutoHotkey Expression Syntax. Para usar unha expresión dentro dun parámetro de comandos, inicie o con un signo de porcentaxe, por exemplo.:% Substr (Var, 5).
+		O contador de "Bucle" na parte superior define o número total de voltas á macro seleccionada.
+		Pode editar unha liña premendo dúas veces nel ou seleccionando-o e facendo clic nos botóns de edición na parte inferior. Pode editar varias liñas seleccionadas mediante os controis da barra de edición na parte inferior.
+		Podes establecer as súas propias funcións, en función> Crear función e usalos desde a ventá de función ou expresións dentro.
+		Podes establecer Globo variables / locais e estáticos para funcións definidas polo usuario. variables globais definidas en Opcións> Axustes> variables globais de usuario son considerados Super Global, e será sempre dentro funcións dispoñibles, mesmo cando está definido como local.
+		Seleccione unha ou máis liñas para engadir novos comandos enriba deles.
+		Pode mover as liñas con click-e-arrastre.
+		Dun dobre clic na icona de bandexa para activar as teclas de acceso ou deter a reprodución / gravación. Prema nel co botón central durante a reprodución ou gravación para facer unha pausa.
+		Pode exportar os seus Macros a scripts AutoHotkey de traballo ou autónomo executable dende a xanela de exportación.
+		Para gravar e reproducir rato usar coordenadas absolutas ir Opcións> Axustes> Patróns e establecer coordenadas do rato para Screen.
+		Pode abrir, copiar, mover ou borrar arquivos e carpetas usando un dos comandos Comandos> Executar / File / String / Misc. Existen moitos outros comandos útiles como StringReplace, InputBox e MouseGetPos.
+		Para gravar Down e da superior de cada movemento clave Opcións> Axustes> Gravación e comproba "Captura estado clave (Down / Up)" opción.
+		Podes usar teclas de atallo para acelerar ou desacelerar a reprodución. Vaia Opcións> Axustes> Reprodución para definir as claves e velocidade.
+		Para axustar a área de captura usando o "Facer Screenshot" ferramenta de ir Opcións> Axustes> Imaxes e selecciona "Prema Intro para capturar". Despois de deseñar as teclas de frecha controlar o uso rectángulo + para mover a selección e Maiús + teclas de frecha para redimensionar-la.
+		Quick Select: Seleccionar calquera liña e prema na cabeceira da columna para seleccionar liñas similares a base de texto de teléfono a partir desa columna.
+		Prema na cabeceira índice de columna para activar / desactivar Axuda marcas e cores para loops e declaracións. Dun dobre clic na cabeceira da columna Acción para activar / desactivar recuar para loops e declaracións.
+		Pode depurar as súas macros usando hotkey manual e as opcións de reprodución no menú Macro. Tamén pode desactivar accións, desmarcada-los na lista Macro.
+		Para facer as súas macros traballar só nunha determinada ventá ir Macro> sensible ao contexto Teclas de atallo.
+		Podes establecer as súas propias variables globais sexan cargados na inicialización e sendo exportado. Ir Opcións> Axustes> user variables globais para engadila los.
+		Pode realizar funcións avanzadas, como substr e REGEXREPLACE do diálogo de funcións (Ordes> Funcións / Métodos de Array). Tamén pode definir as súas propias funcións ou funcións executadas desde scripts AutoHotkey externas.
+		Pode gravar os movementos do rato con respecto á posición actual, mantendo BloqMaiús durante a gravación (pode cambiar a chave e facelo cambiar na configuración).
+		
+; 19. Tooltips		
+	A_List_TT =	Select Macro (Ctrl + 1 ~ 0)
+	AbortKey_TT =	Hotkey para deter a reprodución
+	ActiveObj_TT =	Tenta conectarse a un obxecto COM Activo
+	AddAtt_TT =	Achegar arquivos
+	ApplyI_TT =	Aplicar
+	ApplyL_TT =	Inserir de Box (Insert)
+	ApplyT_TT =	Aplicar
+	AutoKey_TT =	Hotkey para xogar Macro
+	Client_TT =	As coordenadas son relativas á área da ventá activa do cliente, que exclúe barra de título da fiestra, menú (se ten un patrón un) e fronteiras.
+	Clip_TT =	Temporalmente usa portapapeis para enviar o texto.
+		Cando a operación estea rematado, o script
+		Restaurar o contido do portarretallos orixinais.
+		(Deixar o texto en branco para pegar o contido actual)
+	CM_TT =	Pantalla: Coordenadas son en relación ao ambiente de traballo (pantalla completa) a.
+		Fiestra: Coordenadas son relativas á fiestra activa.
+		Cliente: As coordenadas son relativas á área da fiestra activa do cliente, que exclúe barra de título da fiestra, menú (se ten un patrón un) e fronteiras.
+	CmdFilter_TT =	Filtrar por tipo
+	CmdSort_TT =	Ordenar alfabéticamente
+	ColorPick_TT =	Obter píxeles en pantalla
+	ComEvent_TT =	A taxa á que folgas de tecla envíanse é determinada pola chave de atraso.
+	ComText_TT =	Cando non está en modo RAW, o carácter seguinte
+		Son tratados como modificadores (estes modificadores afectan
+		Só a clave seguinte):!, +, ^, #
+	CoordPixel_TT =	Modo de coordinar
+	DefaultMacro_TT =	Seleccione o ficheiro para cargar na inicialización do programa
+	EditPaste_TT =	Carpetas corda na posición do cursor / inserción
+		Nun control Edit (isto non afecta
+		O contido do portarretallos).
+	Ex_AF_TT =	Ignora o método suave de activar unha ventá
+		E vai directo para o método forzado.
+	Ex_DH_TT =	Determina se fiestras invisibles son "vistos" polo guión.
+	Ex_DT_TT =	Determina se o texto invisible no que unha xanela é "visto" coa finalidade de atopar o diálogo. Isto afecta comandos como IfWinExist e WinActivate.
+	Ex_CM_TT =	Configura o modo de coordenadas para as ordes do rato para ser relativo a calquera ventá activa ou na pantalla.
+	Ex_EdScript_TT =	Open in editor externo
+	Ex_EdVars_TT =	Seleccione variables globais para ser exportada.
+	Ex_ExecScript_TT =	Script executado
+	Ex_HK_TT =	Forza o uso do gancho para aplicar toda
+		Ou algúns atallos de teclado.
+	Ex_IfDir_TT =	Crea Hotkeys e hotstrings sensibles ao contexto, dependendo
+		Co tipo de fiestra que se activa ou existe.
+	Ex_IfDirType_TT =	Crea Hotkeys e hotstrings sensibles ao contexto, dependendo
+		Co tipo de fiestra que se activa ou existe.
+	Ex_IN_TT =	Fai que o script para comportarse como o especificado
+		Contido do arquivo están presentes nesta posición exacta.
+	Ex_MD_TT =	Define o atraso que debería ocorrer despois
+		Cada movemento do rato ou prema.
+	Ex_MT_TT =	Define o número máximo de simultáneo
+		Threads por tecla de acceso ou hotstring.
+	Ex_NT_TT =	Desactiva a visualización de icona na bandexa.
+	Ex_PT_TT =	Mantén un script permanentemente en execución
+		(Isto é, ata que o usuario pecha-lo ou ExitApp se atopa).
+	Ex_SB_TT =	Determina o quão rápido un script será executado (afecta a utilización da CPU).
+	Ex_SC_TT =	Define o atraso que debería ocorrer despois
+		Cada comando de modificación de control.
+	Ex_SI_TT =	Determina se un script pode ser executado de novo cando xa está en execución.
+	Ex_SK_TT =	Define o atraso que debería ocorrer despois de cada
+		Keystroke enviado polo envío ou ControlSend.
+	Ex_SM_TT =	Fai Enviar sinónimo de SendInput ou SendPlay en vez de
+		O estándar (SendEvent). Tamén fai aquí e MouseMove / clic / arrastrar
+		Usar o método especificado.
+	Ex_ST_TT =	Define o comportamento de correspondencia do parámetro WinTitle en comandos como WinWait.
+	Ex_SW_TT =	Define o atraso que debería ocorrer despois
+		Cada comando de fiestras, como WinActivate.
+	Ex_UV_TT =	Exportación variables globais.
+	Ex_WN_TT =	Activa ou desactiva avisos para as condicións específicas que poden indicar un erro, como un erro de dixitación ou falta de declaración de "global".
+	ExpList_TT =	Dobre clic para editar
+	ExprLink2_TT 	- Non coloque VARIABLES de sinais de porcentaxe aquí.
+		- a maioría das expresións AHK dispoñible.
+		- Pode utilizar cordas, variables, matrices e funcións.
+		- Para usar cordas, coloque os entre comiñas, por exemplo.: Var  "a".
+		- Múltiples declaracións son soportados, por exemplo.: Var  "a" || INSTR (var, "b").
+	ExprLink3_TT 	- Non coloque VARIABLES de sinais de porcentaxe aquí.
+		- a maioría das expresións AHK dispoñible.
+		- Pode utilizar cordas, variables, matrices e funcións.
+		- Para usar cordas, coloque os entre comiñas, por exemplo.: Var = "a".
+		- Múltiples declaracións son soportados, por exemplo.: Var = "a" || INSTR (var, "b").
+	ExpView_TT =	Editor avanzado
+	ExpView2_TT =	Editor avanzado
+	Fast_TT =	Utiliza un método de investigación máis rápida (recomendado)
+	HiddenWin_TT =	Determina se fiestras invisibles son "vistos" polo guión.
+	HiddenText_TT =	Determina se o texto invisible no que unha xanela é "visto" coa finalidade de atopar o diálogo. Isto afecta comandos como IfWinExist e WinActivate.
+	HScale_TT =	Escala altura
+	IconN_TT =	Número do grupo icona
+	IfLVColor_TT =	Prema para escoller unha cor
+	IncFiles_TT =	Incluír arquivos / Valores
+	IncFolders_TT =	Incluír directorios (cartafois) / Chaves
+	InsertKey_TT =	Inserir Keystroke (Ctrl + Insert)
+	InsertKeyT_TT =	Inserir Keystroke
+	JoyKey_TT =	Premer un botón no mando
+	LoopLVColor_TT =	Prema para escoller unha cor
+	LUntil_TT =	Aplícase unha condición para a continuación de un loop ou Para-loop.
+	ManKey_TT =	Hotkey para xogar Macro "paso a paso"
+	MRel_TT =	Movementos relativos á posición actual.
+		Ou, se usa con control: posición en relación ao control.
+	OSHK_TT =	Select Macro
+	OSHKEd_TT =	Select Macro
+	OSProgB_TT =	Amosar barra de progreso
+	OSTrans_TT =	Opacidade
+	PauseKey_TT =	Hotkey para deter a reprodución
+	PicPrev_TT =	Dun dobre clic para abrir o Image
+	Raw_TT =	A orde SendRaw interpreta todos os personaxes literalmente
+		Ao contrario de traducir {Intro} a un pressionamento de tecla Intro,
+		^ C para Control-C, etc.
+	RecKey_TT =	Retroceso para borrar
+	RecNewKey_TT =	Retroceso para borrar
+	Recurse_TT =	RECURSE en subdirectorios (subdirectorios) / Subkeys
+	RefreshIEW_TT =	Actualizar lista
+	Relative_TT =	Coordenadas son relativo á fiestra activa.
+	RelKey_TT =	Movementos rexistros e clicks do rato como compensacións
+		A partir da posición anterior, cando realizada.
+	ReptC_TT =	0 = infinito
+	Reset_TT =	O contido de variables claras
+	RGB_TT =	Fai que a cor a ser interpretado como un valor RGB en vez de BGR
+	Screen_TT =	As coordenadas son relativas á área de traballo (pantalla completa).
+	Screenshot_TT =	Fai Screenshot
+	SetText_TT =	Visto o texto dun control.
+	SI_TT =	A palabra FORCE pula caixa de diálogo e substitúe o antigo instancia automaticamente
+		Que é semellante en vigor ao mando Reload.
+		A palabra ignore ignora a caixa de diálogo e deixa a instancia antiga en execución.
+		Noutras palabras, os intentos de lanzar un script xa en execución son ignorados.
+		A palabra permite OFF varias instancias do guión para ser executado ao mesmo tempo.
+	SM_TT =	Evento: Este é o patrón de partida utilizado por todos os scripts.
+		Usa o método SendEvent para enviar, SendRaw, Prema e MouseMove / clic / arrastrar.
+		Entrada: Alterna ao método SendInput para enviar, SendRaw, Prema e MouseMove / clic / arrastrar.
+		InputThenPlay: O mesmo que por riba, agás que no canto de caer ao seu modo de Evento
+		Cando SendInput non está dispoñible, el reverte para (abaixo) para Play. Isto tamén fai que
+		A orde SendInput si para reverter o modo de reprodución cando SendInput non está dispoñible.
+		Reproducir: Alterna ao método SendPlay para enviar, SendRaw, Prema e MouseMove / clic / arrastrar.
+	ST_TT =	1: título da fiestra debería comezar co WinTitle indicado para ser un xogo.
+		2: O título dun diálogo pode conter WinTitle calquera lugar dentro del para ser un xogo.
+		3: Título da fiestra debe corresponder exactamente WinTitle ser un xogo.
+		Expresión regular: Cambios WinTitle, WinText, ExcludeTitle e ExcludeText ser expresións regulares.
+	TimeoutM_TT =	0 = infinito
+	TitleMatch_TT =	1: título da fiestra debería comezar co WinTitle indicado para ser un xogo.
+		2: O título dun diálogo pode conter WinTitle calquera lugar dentro del para ser un xogo.
+		3: Título da fiestra debe corresponder exactamente WinTitle ser un xogo.
+		Expresión regular: Cambios WinTitle, WinText, ExcludeTitle e ExcludeText ser expresións regulares.
+	TitleSpeed_TT =	Rápido: Esta é a conduta estándar. O rendemento pode ser substancialmente mellor que lento, pero certos elementos WinText para algúns tipos de fiestras non poden ser "visto" polos varios mandos da xanela.
+		Lento: Pode ser moito máis lento, pero todo é posible WinText é recuperado de cada fiestra como un comando de fiestras investigacións a través deles para un partido. Window Spy revela que partes do texto dunha fiestra (se) esixen o modo lento.
+	ToggleC_TT =	Active a gravación relativa ao estado clave está ligada.
+	TransC_TT =	Cor transparente
+	VarCopyA_TT =	Copiar o contido de variables actuais
+	VarCopyB_TT =	Copiar o contido de variables actuais
+	VariatT_TT =	Escala de variación
+	WScale_TT =	Escala ancho
+		
+; 20. Operators		
+	As_Oper_1 =	Asignar
+	As_Oper_2 =	Engadir
+	As_Oper_3 =	Restar
+	As_Oper_4 =	Multiply
+	As_Oper_5 =	Dividir
+	As_Oper_6 =	División chan
+	As_Oper_7 =	CONCATENATE
+	As_Oper_8 =	Bit a bit OU inclusivo
+	As_Oper_9 =	Bit a bit e
+	As_Oper_10 =	Bit a bit OU exclusivo
+	As_Oper_11 =	Desprazamento cara á dereita e
+	As_Oper_12 =	Desprazamento á esquerda e
+	Co_Oper_1 =	Igual
+	Co_Oper_2 =	Igual (case sensitive)
+	Co_Oper_3 =	Non igual
+	Co_Oper_4 =	Maior
+	Co_Oper_5 =	Menos
+	Co_Oper_6 =	Maior ou igual
+	Co_Oper_7 =	Inferior ou igual
+	Co_Oper_8 =	En (lista)
+	Co_Oper_9 =	Non en (lista)
+	Co_Oper_10 =	Contén (lista)
+	Co_Oper_11 =	Non contén (lista)
+	Co_Oper_12 =	Entre (liña 1) e (liña 2)
+	Co_Oper_13 =	Non entre (liña 1) e (liña 2)
+	Co_Oper_14 =	É (tipo)
+	Co_Oper_15 =	Non é (tipo)
+		
+; 21. IE Commands Tips		
+	IE_Cmd_Index =	
+	Checked	Define ou recupera o estado da caixa de verificación ou botón de opción.
+	Click	Simula un clic no obxecto.
+	Focus	Define o foco para o obxecto.
+	GoBack	Navega atrás nun elemento da lista de histórico.
+	GoForward	Navega cara adiante un elemento da lista de histórico.
+	GoHome	Navega á casa actual ou a páxina de inicio.
+	GoSearch	Navega á páxina de busca actual.
+	Height	Define ou recupera a altura do obxecto.
+	Href	Define ou recupera un URL de destino ou un punto de ancoraxe.
+	InnerHTML	Define ou recupera o HTML do obxecto.
+	InnerText	Define ou obtén o texto do obxecto.
+	Length	Define ou recupera o número de obxectos nunha colección.
+	LocationName	Obtén a páxina actual camiño ou título.
+	LocationURL	Obtén a URL da páxina actual.
+	Navigate	Navega a unha URL ou camiño.
+	OuterHTML	Define ou recupera o obxecto eo seu contido HTML.
+	Quit	Pecha a páxina.
+	Refresh	Recarga a páxina aparecerá no momento.
+	SelectedIndex	Define ou recupera o índice da opción seleccionada nun obxecto de selección.
+	Src	Define ou recupera un URL para ser cargado polo obxecto.
+	Stop	Cancela unha navegación pendente ou descarga.
+	Submit	Envía o formulario.
+	Type	Define ou recupera o tipo de contido do obxecto.
+	Value	Obtén ou define o valor do obxecto.
+	Width	Define ou recupera o ancho do obxecto.
+		
+; 22. COM Objects Tips		
+	COM_CLSID_Index =	
+	Excel.Application	Manipula follas de cálculo de Excel.
+	HTMLfile	Pode ser usado para ler, escribir e interactuar con HTML.
+	InternetExplorer.Application	Explora sitios web.
+	MSXML2.DOMDocument.6.0	Parser XML.
+	MSXML2.XMLHTTP	Representa unha solicitude XML usando HTTP.
+	Outlook.Application	Manipula tarefas e elementos de Outlook.
+	PowerPoint.Application	Manipula presentacións de PowerPoint.
+	Schedule.Service	Programar e editar tarefas de Windows.
+	ScriptControl	Dinamicamente realizar VBScript ou JScript.
+	Scripting.Dictionary	Obxecto que almacena clave de datos, os pares de elementos.
+	Scripting.FileSystemObject	Carpetas de arquivos de acceso
+	Shell.Application	Fiestras de acceso Explorador IE / OAT; aberto manipular as fiestras.
+	Shell.Explorer	Incorporar un control Explorador / Browser nun GUI (Internet Explorer - navegador tridente).
+	SAPI.SpVoice	Text-to-Speech (TTS).
+	VBScript.RegExp	VBS Expresións Regulares (incluíndo xogo global).
+	WMPlayer.OCX	Reproducir ficheiros multimedia, control Embed Wmplayer nunha GUI.
+	WinHttp.WinHttpRequest.5.1	Ofrece funcionalidade de cliente HTTP simple, permitindo máis control do que URLDownloadToFile.
+	Winmgmt	Obter información do sistema; Xestionar servizos de Windows.
+	WScript.Shell	Varias tarefas de administración (moitas tarefas AHK nativo).
+	Word.Application	Manipula documentos de Word.
+		
+; 23. AHK Commands Tips		
+	Ahk_Cmd_Index =	
+	Abs	Devolve o valor absoluto do número.
+	ACos	Devolve o arco coseno (o número cuxo coseno é Number) en radiáns.
+	Array	Crea unha matriz asociativa programable con claves enteiras.
+	Asc	Devolve o código de caracteres (un número entre 1 e 255 (en ANSI compilacións) ou 65535 (en Unicode compilacións)) para o primeiro carácter na cadea.
+	ASin	Devolve o arco seno (o número cuxo seno é Number) en radiáns.
+	ATan	Devolve o arco tanxente (o número cuxa tanxente é Number) en radiáns.
+	BlockInput	Desactiva ou activa a capacidade do usuario para interactuar co ordenador vía teclado e rato.
+	Break	Saídas (terminar) bucle. Válido dentro de calquera tipo de loop.
+	CDO	Envía correos electrónicos usando unha conta definida polo usuario.
+	Ceil	Volve Number redondeado ao número enteiro máis próximo (sen .00 sufixo).
+	Chr	Devolve o carácter único correspondente ao código de caracteres indicada polo número.
+	Click	Clic nun botón do rato nas coordenadas especificadas. Tamén pode manter premido o botón, xirar a roda, ou mover.
+	Clipboard	Cola o texto do portapapeis.
+	ClipWait	Espera ata que o portarretallos contén datos.
+	ComObjActive	Recupera un obxecto COM rexistrado.
+	ComObjArray	Crea un SAFEARRAY para uso con COM.
+	ComObjConnect	Conecta fontes de eventos nun obxecto CON para funcións cun determinado prefixo.
+	ComObjCreate	Crea un obxecto COM.
+	ComObjEnwrap / ComObjUnwrap	Wraps / desembrulha un obxecto COM.
+	ComObjError	Activa ou desactiva a notificación de erros CON.
+	ComObjFlags	Recupera ou modifica bandeiras que controlan o comportamento dun obxecto de invólucro CON.
+	ComObjGet	Devolve unha referencia a un obxecto seleccionado por un compoñente CON.
+	ComObjMissing	Crea un obxecto "parámetro que falta" para pasar un método CON.
+	ComObjParameter	Implica un valor e tipo para pasar como un parámetro a un método CON.
+	ComObjQuery	Consulta un obxecto COM para unha interface ou servizo.
+	ComObjType	Recupera información de tipo de obxecto COM.
+	ComObjValue	Recupera o valor ou punteiro almacenado nun obxecto CON envoltorio.
+	Continue	Ignora o resto da iteración do bucle actual e comeza un novo. Válido dentro de calquera tipo de loop.
+	Control	Fai unha variedade de cambios a un control.
+	ControlClick	Envía un botón do rato ou evento roda do rato para un control.
+	ControlEditPaste	Carpetas corda na posición do cursor / inserción nun control Edit (isto non afecta ao contido do portarretallos).
+	ControlFocus	Define o foco de entrada para un control nunha ventá.
+	ControlGet	Recupera varios tipos de información sobre un control.
+	ControlGetFocus	Recupera cal o control da fiestra de destino ten o foco de entrada, se hai.
+	ControlGetPos	Recupera a posición eo tamaño dun control.
+	ControlGetText	Recupera o texto dun control.
+	ControlMove	Move ou redimensiona un control.
+	ControlSend / ControlSendRaw 	Envía teclas escritas simulado para unha xanela ou control.
+	ControlSetText	Visto o texto dun control.
+	CoordMode	Configura o modo de coordenadas para varios comandos para ser relativo a calquera ventá activa ou na pantalla.
+	Cos	Devolve o coseno trigonométrica de Number.
+	Delete	Eliminar pares chave-valor dun obxecto.
+	DllCall	Chama unha función dentro dunha DLL, como unha función da API de Windows estándar.
+	Drive	Ejeta / retraer a bandexa nunha unidade de CD ou DVD, ou define etiqueta de volume dunha unidade.
+	DriveGet	Recupera varios tipos de información sobre a unidade (s) do seu ordenador.
+	DriveSpaceFree	Recupera o espazo libre en disco dunha unidade, en Megabytes.
+	Else	Especifica a orde (s) a executar unha instrución if for valorada como FALSE. Cando máis dun comando está presente, coloque os nun bloque (aparellos).
+	EnvAdd	Define unha variable para a suma de si máis o valor determinado (tamén pode engadir ou restar tempo a partir dun valor de data e hora). Sinónimo de: Var + = Valor.
+	EnvDiv	Define unha variable para si, dividido polo valor dado. Sinónimo de: var / = Valor.
+	EnvGet	Recupera unha variábel de entorno.
+	EnvMult	Define unha variable para si veces o valor dado. Sinónimo de: Var * = Valor.
+	EnvSet	Grava un valor para unha variable contida no ambiente.
+	EnvSub	Define unha variable para si menos o valor dado (tamén pode comparar valores de data e hora). Sinónimo de: Var - = Valor.
+	EnvUpdate	Notifica o sistema operativo e as aplicacións en execución desta variable (s) Marco cambiaron.
+	ExitApp	Finaliza o script incondicionalmente.
+	Exp	Volve e (que é de aproximadamente 2.71828182845905) elevado á enésima potencia.
+	Expression	Realizar unha ou máis operacións nunha serie de variables, cadeas literais, e / ou números literais.
+	FileAppend	Escribe un texto ao final dun ficheiro (en primeiro lugar a creación do ficheiro, se é necesario).
+	FileCopy	Copia un ou máis ficheiros.
+	FileCopyDir	Copias dun cartafol con todas as súas sub-carpetas e arquivos (semellante ao xcopy).
+	FileCreateDir	Crea un cartafol.
+	FileCreateShortcut	Crea un ficheiro de atallo (.lnk).
+	FileDelete	Exclúe un ou máis ficheiros.
+	FileGetAttrib	Informes se un ficheiro ou cartafol é de só lectura, oculto, etc.
+	FileGetShortcut	Recupera información sobre un arquivo de acceso (.lnk), así como o seu arquivo de destino.
+	FileGetSize	Recupera o tamaño dun arquivo.
+	FileGetTime	Recupera o selo de data e hora de un ficheiro ou cartafol.
+	FileGetVersion	Recupera a versión dun ficheiro.
+	FileMove	Move ou renomear un ou máis ficheiros.
+	FileMoveDir	Move un cartafol con todas as súas sub-carpetas e arquivos. Tamén pode cambiar o nome dun cartafol.
+	FileOpen	Ofrece orientada a obxecto de arquivo I / O.
+	FileRead	Le o contido do arquivo nunha variable.
+	FileReadLine	Le a liña especificada dun arquivo e almacena o texto nun variable.
+	FileRecycle	Envía un ficheiro ou directorio para lixo, se é posible.
+	FileRecycleEmpty	Baleira lixo.
+	FileRemoveDir	Exclúe un cartafol.
+	FileSelectFile	Exhibe unha caixa de diálogo estándar que permite que o usuario abrir ou gardar o ficheiro (s).
+	FileSelectFolder	Exhibe unha caixa de diálogo estándar que permite que o usuario escolla un cartafol.
+	FileSetAttrib	Modifica os atributos de un ou máis arquivos ou carpetas. Curinga son soportados.
+	FileSetTime	Visto o selo de data e hora de un ou máis arquivos ou carpetas. Curinga son soportados.
+	Floor	Volve Number redondeado ao número enteiro máis próximo (sen .00 sufixo).
+	For	Repite unha serie de comandos unha vez para cada par clave-valor nun obxecto.
+	Format	Formato dun número variable de valores de entrada segundo unha secuencia de formato.
+	FormatTime	Transforma un timestamp YYYYMMDDHH24MISS ao formato de data / hora especificada.
+	Func	Recupera unha referencia a unha función.
+	GetKeyName / GetKeyVK / GetKeySC	Recupera o nome ou texto, código de clave virtual ou un código de verificación de unha chave.
+	GetKeyState	Comproba se unha tecla do teclado ou o botón / joystick rato está abaixo ou cara arriba. Tamén recupera o estado joystick.
+	Gosub	Salta a etiqueta específica e continúa a execución ata o regreso se atopa.
+	Goto	Salta a etiqueta específica e continúa a execución.
+	GroupActivate	Activa a seguinte fiestra nun grupo de fiestras que foi definido con groupadd.
+	GroupAdd	Engade unha especificación de fiestra para un grupo de fiestras, creando o grupo se é necesario.
+	GroupClose	Pecha a xanela activa se estaba só activado por GroupActivate ou GroupDeactivate. Logo activa o diálogo seguinte na serie. Tamén pode pechar todas as fiestras nun grupo.
+	GroupDeactivate	Semellante a GroupActivate agás activa a seguinte fiestra non no grupo.
+	HasKey	Volve true se Key está asociada a un valor.
+	If	Especifica a orde (s) para realizar a comparación dunha variable para un valor resulte en certo. Cando máis dun comando está presente, coloque os nun bloque (aparellos).
+	If (expression)	Especifica a orde (s) para realizar unha expresión for valorada como TRUE.
+	If A_Index	Comproba se a iteración do bucle de corrente matchs un especificou un número.
+	If Clipboard	Comproba se o texto no portapapeis é matchs unha cadea especificada.
+	If ErrorLevel	Comproba se unha imaxe ou píxeles especificar se atopou na pantalla.
+	If var [not] between	Comproba se o contido dunha variable son numericamente ou por orde alfabética entre dous valores (e).
+	If var [not] in / If var [not] contains MatchList	Comproba se o contido dunha variable corresponder a un dos elementos nunha lista.
+	If var is [not] type	Comproba se o contido dunha variable son numéricos, maiúsculas, etc.
+	IfEqual / IfNotEqual	Compara unha variable para un valor para a igualdade. Sinónimo de: se Var = Valor | Se Var <> Valor.
+	IfExist / IfNotExist / FileExist	Comproba a existencia dun ficheiro ou cartafol.
+	IfGreater / IfGreaterOrEqual	Compara unha variable para un valor. Sinónimo de: se Var> Valor | Se Var> = Valor.
+	IfInString / IfNotInString	Comproba se unha variable contén a cadea especificada.
+	IfLess / IfLessOrEqual	Compara unha variable para un valor. Sinónimo de: se Var <Valor | Se Var <= Valor.
+	IfMsgBox	Comproba que botón foi presionado polo usuario durante a orde última msgbox.
+	IfWinActive / IfWinNotActive	Comproba se a fiestra especificada existe e está actualmente activa (por riba de todo).
+	IfWinExist / IfWinNotExist	Comproba se existe a xanela especificada.
+	ImageSearch	Pescudas unha rexión da pantalla para unha imaxe.
+	IniDelete	Exclúe un valor dun ficheiro ini formato estándar.
+	IniRead	Le un valor dun ficheiro ini formato estándar.
+	IniWrite	Grava un valor a un arquivo ini formato estándar.
+	Input	Espérase que o usuario introduza unha cadea (non soportado en Windows 9x: non fai nada).
+	InputBox	Exhibe unha caixa de entrada de pedir que o usuario introduza unha cadea.
+	InsertAt	Insire un ou máis valores nunha determinada posición dentro dunha matriz lineal.
+	InStr	Investigacións para unha determinada aparición dunha cadea, desde a esquerda ou da dereita.
+	KeyWait	Espera por unha tecla ou botón do rato / joystick para ser liberado ou presionado.
+	Label	Unha etiqueta identifica unha liña de código, e pode ser usado como un obxectivo Goto ou para formar unha sub-rutina.
+	Length	Volve a lonxitude dunha matriz lineal comezando na posición 1.
+	ListVars	Mostra variables do guión: os seus nomes e contido actual.
+	Ln	Devolve o logaritmo natural (base e) do número.
+	LoadPicture	Leva unha imaxe de arquivo e retorna un bitmap ou icona do maneta.
+	Log	Devolve o logaritmo (base 10) de Number.
+	Loop (files & folders)	Recupera arquivos especificados ou carpetas, unha de cada vez.
+	Loop (normal) 	Realizar unha serie de comandos varias veces: é o número indicado de veces ou ata break sexa atopada.
+	Loop (parse a string)	Recupera substrings (campos) a partir dunha cadea de caracteres, unha de cada vez.
+	Loop (read file contents)	Recupera as liñas dun arquivo de texto, un de cada vez (rendemento mellor que FileReadLine).
+	Loop (registry)	Recupera o contido da subchave de rexistro indicado, un elemento de cada vez.
+	MaxIndex	Volve a clave de enteiro máis elevado.
+	MinIndex	Devolve o menor clave enteiro.
+	Mod	Modulo. Devolve o resto cando dividendos divídese polo divisor.
+	MouseGetPos	Recupera a posición actual do cursor do rato, e incluso que fiestra e control-lo está paira sobre.
+	MsgBox	Mostra o texto especificado nunha fiestra que contén un ou máis botóns (como Si e Non).
+	NumGet	Devolve o número binario almacenado no enderezo indicado + offset.
+	NumPut	Almacena o número en formato binario no enderezo indicado + offset e retorna a dirección á dereita do elemento acaba de escribir.
+	Object	Crea unha matriz asociativa scripts.
+	Ord	Devolve o valor ordinal (código de caracteres numéricos) do primeiro carácter na cadea.
+	OutputDebug	Envía unha cadea para o depurador (se) para exhibición.
+	Parameter	Engade un parámetro para a función.
+	Pause	Pausa segmento actual do guión.
+	PixelGetColor	Recupera a memoria dun pixel no especificado coordenadas x, y.
+	PixelSearch	Pescudas unha rexión da pantalla para un pixel da cor especificada.
+	Pop	Eliminar e devolve o último elemento da matriz.
+	PostMessage	Pon unha mensaxe na fila de mensaxes dunha fiestra ou de control.
+	Process	Realizar unha das seguintes operacións nun proceso: verifica se existe; cambia a súa prioridade; pecha-lo; espera de pechar.
+	Progress	Crea ou actualiza unha xanela cunha barra de progreso.
+	Push	Engade valores para o final dunha matriz.
+	Random	Xera un número pseudo-aleatorio.
+	RegDelete	Exclúe unha subchave ou valor do rexistro.
+	RegExMatch	Determina se unha secuencia contén un patrón (expresións regulares).
+	RegExReplace	Substitúe coincidencias dun patrón (expresións regulares) dentro dunha cadea.
+	RegRead	Le un valor desde o rexistro.
+	RegWrite	Grava un valor para o rexistro.
+	RemoveAt	Eliminar os elementos da posición dada nunha matriz lineal.
+	Return	Volve dunha sub-rutina para que a execución xa saltara mediante chamada de función, gosub, activación hotkey, GroupActivate, ou outros medios.
+	Round	Se N for omitido ou 0, número será redondeado ao número enteiro máis próximo. Se N é o número positivo, número é redondeado para n cifras decimais. Se N é negativo, número será redondeado por N díxitos á esquerda do punto decimal.
+	Run	Executa un programa externo.
+	RunAs	Especifica un conxunto de credenciais do usuario a usar para todos os usos posteriores de Correr e RunWait. Require Windows 2000 / XP ou posterior.
+	RunWait	Executa un programa externo e agarda ata que termine.
+	Send / SendRaw	Envía teclas escritas simulados e click do rato para a fiestra activa.
+	SendLevel	Controla cales eventos de teclado e rato artificiais son ignorados polo Hotkeys e hotstrings.
+	SendMessage	Envía unha mensaxe a un diálogo ou control e agarda confirmación.
+	SetCapslockState	Define o estado da clave BloqMaius. Tamén é posible facer a clave para estar activado ou desactivado.
+	SetKeyDelay	Define o atraso que debería ocorrer despois de cada keystroke enviado polo envío ou ControlSend.
+	SetNumlockState	Define o estado da tecla BloqNum. Tamén é posible facer a clave para estar activado ou desactivado.
+	SetRegView	Permite que os comandos de rexistro nun guión de 32 bits para acceder a exhibición do rexistro de 64 bits e viceversa.
+	SetScrollLockState	Define o estado da clave BloqDespr. Tamén é posible facer a clave para estar activado ou desactivado.
+	SetTimer	Provoca unha sub-rutina para executarse automaticamente e repetidamente nun intervalo de tempo.
+	Shutdown	Apagar, reiniciar, ou fai logoff do sistema.
+	Sin	Devolve o seno trigonométrica de Number.
+	Sleep	Agarda o período de tempo antes de continuar.
+	Sort	Organiza o contido dunha variable en orde alfabética, numérica, ou orde aleatoria (opcionalmente eliminación de duplicados).
+	SoundBeep	Emite un son do altofalante do PC.
+	SoundGet	Obtén varias opcións dun dispositivo de son (Mute mestre, volume master, etc.)
+	SoundGetWaveVolume	Recupera o volume de saída de onda a partir dun dispositivo de son.
+	SoundPlay	Reproduce un son, vídeo ou outro tipo de ficheiro soportado.
+	SoundSet	Cambios varias opcións dun dispositivo de son (Mute mestre, mestre de volume, etc.)
+	SoundSetWaveVolume	Visto o volume de saída de onda a un dispositivo de son.
+	SplashImage	Crea ou actualiza unha ventá que contén unha imaxe JPG, GIF ou BMP.
+	SplashTextOff	Pecha a xanela anterior.
+	SplashTextOn	Crea un diálogo personalizable texto emerxente.
+	SplitPath	Separa un nome de ficheiro ou URL no seu nome, directorio, extensión e unidade.
+	Sqrt	Volve a raíz cadrada de Number.
+	StatusBarGetText	Recupera o texto dun control barra de estado estándar.
+	StatusBarWait	Espera ata a barra de estado da xanela contén a cadea especificada.
+	StringGetPos	Recupera a posición da substring especificada dentro dunha cadea.
+	StringLeft	Recupera un número de caracteres desde o lado esquerdo dunha cadea.
+	StringLen / StrLen	Recupera a conta de cantos personaxes están nunha corda.
+	StringLower	Converte unha cadea para minúsculas.
+	StringMid / SubStr	Recupera un ou máis caracteres a partir da posición especificada nunha cadea.
+	StringReplace / StrReplace	Substitúe a substring especificada por unha nova cadea.
+	StringRight	Recupera un número de personaxes da dereita dunha cadea.
+	StringSplit / StrSplit	Separa unha cadea nunha matriz de substrings usando os delimitadores especificados.
+	StringTrimLeft	Eliminar un número de caracteres desde o lado esquerdo dunha cadea.
+	StringTrimRight	Eliminar un número de personaxes da dereita dunha cadea.
+	StringUpper	Converte unha cadea para maiúsculas.
+	StrPut / StrGet	Copia unha cadea para ou desde un enderezo de memoria, opcional converténdose a entre as páxinas de código.
+	SysGet	Recupera resolución de pantalla, información multi-monitor, dimensións de obxectos do sistema, e outras propiedades do sistema.
+	Tan	Volve a tanxente trigonométrica de Number.
+	ToolTip	Crea un diálogo always-on-top en calquera lugar da pantalla.
+	Transform	Realizar diversas funcións matemáticas, operacións bit a bit, e tarefas como ASCII conversión / Unicode.
+	TrayTip	Crea un diálogo de mensaxe de globo preto da icona da bandexa. Require Windows 2000 / XP ou posterior.
+	Trim / LTrim / RTrim	Apara certos caracteres desde o inicio e / ou final dunha cadea.
+	Until	Aplícase unha condición para a continuación de un loop ou Para-loop.
+	UrlDownloadToFile	Descargar un ficheiro desde a Internet.
+	UserFunction	Crea unha estrutura de Función.
+	Variable	Atribúe o valor especificado para unha variable.
+	While	Realizar unha serie de comandos repetido até que a expresión especificada for valorada como falsa.
+	WinActivate	Activa o diálogo especificada (fai máis importante).
+	WinActivateBottom	Aínda que WinActivate salvo que activa o máis baixo (menos activo recentemente) correspondencia fiestra no canto do superior.
+	WinActive	Devolve o ID único (HWND) da ventá activa se corresponde aos criterios especificados.
+	WinClose	Pecha a xanela especificada.
+	WinExist	Comproba se existe a xanela especificada.
+	WinGet	Recupera ID da xanela especificada único, ID de proceso, nome do proceso, ou a lista dos seus controis. Tamén pode recuperar a lista de todas as ventás correspondentes aos criterios especificados.
+	WinGetClass	Recupera o nome da clase da fiestra especificada.
+	WinGetPos	Recupera a posición e tamaño da ventá especificada.
+	WinGetText	Recupera o texto da ventá especificada.
+	WinGetTitle	Recupera o título da xanela especificada.
+	WinHide	Oculta a fiestra especificada.
+	WinHttpDownloadToFile	Transferencias dun ou máis ficheiros desde a Internet.
+	WinKill	Forza a xanela especificada para pechar.
+	WinMaximize	Amplía a xanela especificada para o tamaño máximo.
+	WinMenuSelectItem	Chama un elemento de menú na barra de menú da xanela especificada.
+	WinMinimize	Recolle a xanela especificada no botón na barra de tarefas.
+	WinMinimizeAll	Minimiza todas as fiestras.
+	WinMinimizeAllUndo	Inverte o efecto dun WinMinimizeAll anterior.
+	WinMove	Modifica a posición e / ou o tamaño da xanela especificada.
+	WinRestore	Unminimizes ou unmaximizes a xanela especificada, de ser minimizada ou maximizada.
+	WinSet	Fai unha variedade de cambios para a xanela especificada, como "sempre na parte superior" e transparencia.
+	WinSetTitle	Visto o título da xanela especificada.
+	WinShow	Dille novo a xanela especificada.
+	WinWait	Espera ata que exista a xanela especificada.
+	WinWaitActive	Espera ata que a fiestra especificada está activa.
+	WinWaitClose	Espera ata que a fiestra especificada non existe.
+	WinWaitNotActive	Espera ata que a fiestra especificada non está activo.
+	Zip / UnZip	Comprimir ou descomprimir un ou máis arquivos zip.
+	WinExist	Comproba se existe a xanela especificada.
+	WinGet	Recupera ID da xanela especificada único, ID de proceso, nome do proceso, ou a lista dos seus controis. Tamén pode recuperar a lista de todas as ventás correspondentes aos criterios especificados.
+	WinGetClass	Recupera o nome da clase da fiestra especificada.
+	WinGetPos	Recupera a posición e tamaño da ventá especificada.
+	WinGetText	Recupera o texto da ventá especificada.
+	WinGetTitle	Recupera o título da xanela especificada.
+	WinHide	Oculta a fiestra especificada.
+	WinHttpDownloadToFile	Transferencias dun ou máis ficheiros desde a Internet.
+	WinKill	Forza a xanela especificada para pechar.
+	WinMaximize	Amplía a xanela especificada para o tamaño máximo.
+	WinMenuSelectItem	Chama un elemento de menú na barra de menú da xanela especificada.
+	WinMinimize	Recolle a xanela especificada no botón na barra de tarefas.
+	WinMinimizeAll	Minimiza todas as fiestras.
+	WinMinimizeAllUndo	Inverte o efecto dun WinMinimizeAll anterior.
+	WinMove	Modifica a posición e / ou o tamaño da xanela especificada.
+	WinRestore	Unminimizes ou unmaximizes a xanela especificada, de ser minimizada ou maximizada.
+	WinSet	Fai unha variedade de cambios para a xanela especificada, como "sempre na parte superior" e transparencia.
+	WinSetTitle	Visto o título da xanela especificada.
+	WinShow	Dille novo a xanela especificada.
+	WinWait	Espera ata que exista a xanela especificada.
+	WinWaitActive	Espera ata que a fiestra especificada está activa.
+	WinWaitClose	Espera ata que a fiestra especificada non existe.
+	WinWaitNotActive	Espera ata que a fiestra especificada non está activo.
+	Zip / UnZip	Comprimir ou descomprimir un ou máis arquivos zip.

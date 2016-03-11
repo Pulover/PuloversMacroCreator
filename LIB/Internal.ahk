@@ -52,6 +52,34 @@ LV_GetSelCheck()
 	return SelectedRows
 }
 
+GetRealLineFeeds(String)
+{
+	_Elements := {}
+	While (RegExMatch(String, "\[([^\[\]]++|(?R))*\]", _Bracket%A_Index%))
+		_Elements["&_Bracket" A_Index "_&"] := _Bracket%A_Index%
+	,	String := RegExReplace(String, "\[([^\[\]]++|(?R))*\]", "&_Bracket" A_Index "_&", "", 1)
+	While (RegExMatch(String, "\{[^\{\}]++\}", _Brace%A_Index%))
+		_Elements["&_Brace" A_Index "_&"] := _Brace%A_Index%
+	,	String := RegExReplace(String, "\{[^\{\}]++\}", "&_Brace" A_Index "_&", "", 1)
+	While (RegExMatch(String, "\(([^()]++|(?R))*\)", _Parent%A_Index%))
+		_Elements["&_Parent" A_Index "_&"] := _Parent%A_Index%
+	,	String := RegExReplace(String, "\(([^()]++|(?R))*\)", "&_Parent" A_Index "_&", "", 1)
+	While (RegExMatch(String, "sU)"".*""", _String%A_Index%))
+		_Elements["&_String" A_Index "_&"] := _String%A_Index%
+	,	String := RegExReplace(String, "sU)"".*""", "&_String" A_Index "_&", "", 1)
+	String := StrReplace(String, "``n", "`n")
+	While (RegExMatch(String, "&_\w+_&", pd))
+		String := StrReplace(String, pd, _Elements[pd])
+	return String
+}
+
+SetUserWords(Functions)
+{
+	global
+	sciPrev.SetKeywords(0x7, Functions)
+,	sciPrevF.SetKeywords(0x7, Functions)
+}
+
 ShowTooltip()
 {
 	static CurrControl, PrevControl, _TT, TT_A
@@ -1162,7 +1190,7 @@ SavedVars(_Var := "", ByRef _Saved := "", AsArray := false, RunningFunction := "
 	Local ListOfVars, i, v
 	
 	If _Var in %BuiltinVars%,Action,Step,Details,TimesX,DelayX,Type,Target,Window,IfError,VarName,VarValue,Oper,Par,Param,Version,Lang,AutoKey,ManKey,AbortKey,PauseKey,RecKey,RecNewKey,RelKey,FastKey,SlowKey,ClearNewList,DelayG,OnScCtrl,ShowStep,HideMainWin,DontShowPb,DontShowRec,DontShowEdt,ConfirmDelete,ShowTips,NextTip,IfDirectContext,IfDirectWindow,KeepHkOn,Mouse,Moves,TimedI,Strokes,CaptKDn,MScroll,WClass,WTitle,MDelay,DelayM,DelayW,MaxHistory,TDelay,ToggleC,RecKeybdCtrl,RecMouseCtrl,CoordMouse,SpeedUp,SpeedDn,MouseReturn,ShowProgBar,ShowBarOnStart,AutoHideBar,RandomSleeps,RandPercent,DrawButton,OnRelease,OnEnter,LineW,ScreenDir,DefaultEditor,DefaultMacro,StdLibFile,KeepDefKeys,TbNoTheme,AutoBackup,MultInst,EvalDefault,CloseAction,ShowLoopIfMark,ShowActIdent,SearchAreaColor,LoopLVColor,IfLVColor,VirtualKeys,AutoUpdate,Ex_AbortKey,Ex_PauseKey,Ex_SM,SM,Ex_SI,SI,Ex_ST,ST,Ex_DH,Ex_AF,Ex_HK,Ex_PT,Ex_NT,Ex_SC,SC,Ex_SW,SW,Ex_SK,SK,Ex_MD,MD,Ex_SB,SB,Ex_MT,MT,Ex_IN,Ex_UV,Ex_Speed,ComCr,ComAc,Send_Loop,TabIndent,IncPmc,Exe_Exp,ShowExpOpt,MainWinSize,MainWinPos,WinState,ColSizes,ColOrder,PrevWinSize,ShowPrev,TextWrap,CommentUnchecked,CustomColors,OSCPos,OSTrans,OSCaption,AutoRefresh,ShowGroups,IconSize,UserLayout,MainLayout,MacroLayout,FileLayout,RecPlayLayout,SettingsLayout,CommandLayout,EditLayout,ShowBands
-		If ((_Var != "Clipboard") || (_Var != "ErrorLevel"))
+		If ((_Var != "Clipboard") && (_Var != "ErrorLevel"))
 			TrayTip, %d_Lang011%, %_Var% %d_Lang042%,, 18
 	If (IsByRef(_Saved))
 	{

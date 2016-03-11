@@ -172,14 +172,14 @@
 				Step := StrReplace(Step, "``n", "`n")
 			,	Step := "`n(LTrim`n" Step "`n)"
 			}
-			RowData := "`n" ((Step != "") ? "SavedClip := ClipboardAll`nClipboard =`nClipboard = " Step "`nSleep, 333" : "")
+			RowData := "`n" ((Step != "") ? "SavedClip := ClipboardAll`nClipboard := """"`nClipboard := " CheckExp(Step) "`nSleep, 333" : "")
 			If ((Target != "") && (Step != ""))
 				RowData .= "`nControlSend, " Target ", ^v, " Window
 			Else
 				RowData .= "`nSend, ^v"
 			RowData := Add_CD(RowData, Comment, DelayX)
 			If (Step != "")
-				RowData .= "`nClipboard := SavedClip`nSavedClip ="
+				RowData .= "`nClipboard := SavedClip`nSavedClip := """""
 			If ((TimesX > 1) || InStr(TimesX, "%"))
 				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
 		}
@@ -231,9 +231,9 @@
 					RowData .= "`n`tLoop, 2`n`t`tSoundBeep"
 			}
 			RowData := Add_CD(RowData, Comment, DelayX)
-			If (Target = "Break")
+			If (Target = "UntilFound")
 				RowData := "`nLoop`n{" RowData "`n}`nUntil ErrorLevel = 0"
-			Else If (Target = "Continue")
+			Else If (Target = "UntilNotFound")
 				RowData := "`nLoop`n{" RowData "`n}`nUntil ErrorLevel"
 			Else If ((TimesX > 1) || InStr(TimesX, "%"))
 				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
@@ -384,7 +384,7 @@
 			StringSplit, Act, Action, :
 			StringSplit, El, Target, :
 			RowData := "`n" IEComExp(Act2, Step, El1, El2, "", Act3, Act1)
-		,	RowData := CheckComExp(RowData)
+		; ,	RowData := CheckComExp(RowData)
 		,	RowData := Add_CD(RowData, Comment, DelayX)
 			If (!init_ie)
 				RowData := "`nIf !IsObject(ie)"
@@ -392,15 +392,7 @@
 				.			"`nie.Visible := true" RowData
 			init_ie := true
 			If (Window = "LoadWait")
-				RowData .=
-				(LTrim
-				"`nWhile !(ie.busy)
-				`tSleep, 100
-				While (ie.busy)
-				`tSleep, 100
-				While !(ie.document.Readystate = ""Complete"")
-				`tSleep, 100"
-				)
+				RowData .= "`nIELoad(ie)"
 			If ((TimesX > 1) || InStr(TimesX, "%"))
 				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
 		}
@@ -409,7 +401,7 @@
 			StringSplit, Act, Action, :
 			StringSplit, El, Target, :
 			RowData := "`n" IEComExp(Act2, "", El1, El2, Step, Act3, Act1)
-		,	RowData := CheckComExp(RowData, Step)
+		; ,	RowData := CheckComExp(RowData, Step)
 		,	RowData := Add_CD(RowData, Comment, DelayX)
 			If (!init_ie)
 				RowData := "`nIf !IsObject(ie)"
@@ -417,34 +409,18 @@
 				.			"`nie.Visible := true" RowData
 			init_ie := true
 			If (Window = "LoadWait")
-				RowData .=
-				(LTrim
-				"`nWhile !(ie.busy)
-				`tSleep, 100
-				While (ie.busy)
-				`tSleep, 100
-				While !(ie.document.Readystate = ""Complete"")
-				`tSleep, 100"
-				)
+				RowData .= "`nIELoad(ie)"
 			If ((TimesX > 1) || InStr(TimesX, "%"))
 				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
 		}
 		Else If ((Type = cType34) || (Type = cType43))
 		{
-			RowData := "`n" StrReplace(Step, "``n", "`n")
+			RowData := "`n" GetRealLineFeeds(Step)
 		,	RowData := Add_CD(RowData, Comment, DelayX)
 			If ((Target != "") && (!InStr(LVData, Action " := " ComType "(")))
 				RowData := "`nIf !IsObject(" Action ")`n`t" Action " := " ComType "(""" Target """)" RowData
 			If (Window = "LoadWait")
-				RowData .=
-				(LTrim
-				"`nWhile !(" Action ".busy)
-				`tSleep, 100
-				While (" Action ".busy)
-				`tSleep, 100
-				While !(" Action ".document.Readystate = ""Complete"")
-				`tSleep, 100"
-				)
+				RowData .= "`nIELoad(" Action ")"
 			If ((TimesX > 1) || InStr(TimesX, "%"))
 				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
 		}
@@ -916,9 +892,23 @@ IEComExp(Method, Value := "", Element := "", ElIndex := 0, OutputVar := "", GetB
 
 IncludeFunc(Which)
 {
-	Func_CDO =
+	Func_IELoad =
 	(`%
 
+IELoad(Pwb)
+{
+	While !(Pwb.busy)
+		Sleep, 100
+	While (Pwb.busy)
+		Sleep, 100
+	While !(Pwb.document.Readystate = "Complete")
+		Sleep, 100
+}
+
+)
+
+	Func_CDO =
+	(`%
 
 CDO(Account, To, Subject := "", Msg := "", Html := false, Attach := "", CC := "", BCC := "")
 {
@@ -952,7 +942,7 @@ CDO(Account, To, Subject := "", Msg := "", Html := false, Attach := "", CC := ""
 
 	Func_Zip =
 	(`%
-	
+
 Unzip(Sources, OutDir, SeparateFolders := false)
 {
 	Static vOptions := 16|256
@@ -1051,7 +1041,7 @@ CreateZipFile(sZip)
 
 	Func_WinHttpDownloadToFile =
 	(`%
-	
+
 WinHttpDownloadToFile(UrlList, DestFolder)
 {
 	UrlList := StrReplace(UrlList, "`n", ";")
@@ -1080,7 +1070,7 @@ WinHttpDownloadToFile(UrlList, DestFolder)
 
 	Func_CenterImgSrchCoords =
 	(`%
-	
+
 CenterImgSrchCoords(File, ByRef CoordX, ByRef CoordY)
 {
 	static LoadedPic

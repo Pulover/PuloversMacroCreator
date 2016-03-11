@@ -62,18 +62,18 @@
 	i_Lang008 =	&Afbeelding / Pixel Zoeken
 	i_Lang009 =	&Run / Bestand / String / Misc.
 	i_Lang010 =	&Loop
-	i_Lang011 =	&Ga Naar
-	i_Lang012 =	La&bel
-	i_Lang013 =	Al&s Verklaringen
-	i_Lang014 =	Var&iabelen / Scala
+	i_Lang011 =	&Ga Naar / Label
+	i_Lang012 =	&Set timer
+	i_Lang013 =	Als Verklar&ingen
+	i_Lang014 =	Varia&belen / Scala
 	i_Lang015 =	&Functies / Scala methoden
 	i_Lang016 =	E&-mail verzenden
-	i_Lang017 =	&Download / Upload bestanden
+	i_Lang017 =	Besta&nden downloaden
 	i_Lang018 =	&Zip / Unzip bestanden
-	i_Lang019 =	I&nternet Explorer
+	i_Lang019 =	Internet E&xplorer
 	i_Lang020 =	C&OM-Interface
 	i_Lang021 =	&Windows Messages
-	i_Lang022 =	Zoek een commando
+	i_Lang022 =	Zoek een comman&do
 		
 ; 06. Edit Sub Menu		
 	e_Lang001 =	&Duplicaat
@@ -324,10 +324,10 @@
 	c_Lang026 =	Actie
 	c_Lang027 =	Klikken
 	c_Lang028 =	Bewegen
-	c_Lang029 =	Verplaatsen en klik
+	c_Lang029 =	Verplaatsen En Klik Op
 	c_Lang030 =	Wiel omhoog
 	c_Lang031 =	Wiel Omlaag
-	c_Lang032 =	Slepen en neerzetten
+	c_Lang032 =	Drag And Drop
 	c_Lang033 =	Coördinaten
 	c_Lang034 =	Zoeken
 	c_Lang035 =	Subopdracht
@@ -625,11 +625,11 @@
 	t_Lang070 =	V&ervang
 	t_Lang071 =	Gevonden
 	t_Lang072 =	Vervangen
-	t_Lang073 =	&Geselecteerde Rijen
+	t_Lang073 =	Ge&selecteerde Rijen
 	t_Lang074 =	&Alle Rijen
 	t_Lang075 =	A&lle macro's
 	t_Lang076 =	Over
-	t_Lang077 =	&Regular Expression
+	t_Lang077 =	Re&gular Expression
 	t_Lang078 =	Een keer afspelen
 	t_Lang079 =	Speel elke X (mili) seconden
 	t_Lang080 =	Timer
@@ -760,6 +760,8 @@
 	t_Lang205 =	Titelgelijke Mode
 	t_Lang206 =	Titelgelijke Snelheid
 	t_Lang207 =	Cliënt
+	t_Lang208 =	V&inden
+	t_Lang209 =	Ve&rvang
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Open
@@ -769,11 +771,14 @@
 	d_Lang005 =	Project Opslaan
 	d_Lang006 =	Mislukt opslaan / overschrijven bestand
 	d_Lang007 =	Fout
-	d_Lang008 =	Fout: Geen Macro geselecteerd.`nControleer ten minste een macro in de lijst.
+	d_Lang008 =	Fout: Geen Macro geselecteerd.
+		Controleer ten minste een macro in de lijst.
 	d_Lang009 =	Fout: Geen Sneltoets Geselecteerd.
-	d_Lang010 =	Fout: ongeldig adres.`nHet geselecteerde adres of de bestandsnaam is ongeldig.
+	d_Lang010 =	Fout: ongeldig adres.
+		Het geselecteerde adres of de bestandsnaam is ongeldig.
 	d_Lang011 =	Waarschuwing
-	d_Lang012 =	Geen controle geselecteerd.`nVerder?
+	d_Lang012 =	Geen controle geselecteerd.
+		Verder?
 	d_Lang013 =	Export Script
 	d_Lang014 =	Script Geëxporteerde
 	d_Lang015 =	Het bestand is succesvol geëxporteerd!
@@ -788,7 +793,8 @@
 	d_Lang022 =	Vorig
 	d_Lang023 =	Bericht
 	d_Lang024 =	Laad de standaardinstellingen?
-	d_Lang025 =	Macro (s) geactiveerd.`nGebruik de sneltoetsen om te spelen.
+	d_Lang025 =	Macro's ingeschakeld.
+		Użyj skrótu, aby zagrać.
 	d_Lang026 =	te starten / stoppen met opnemen
 	d_Lang027 =	Opname gestopt
 	d_Lang028 =	Opname...
@@ -806,6 +812,7 @@
 	d_Lang038 =	Druk op OK om verder te gaan.
 	d_Lang039 =	Time-out!
 	d_Lang040 =	Voor deze functie moet de GDI+ bibliotheek.
+.	Tämä ominaisuus vaatii GDI+ kirjasto.	Táto funkcia vyžaduje rozhrania GDI+knižnice.
 		Klik op OK om naar de pagina te downloaden.
 	d_Lang041 =	De naam van de variabele bevat een ongeldig teken.
 	d_Lang042 =	is een gereserveerd woord.
@@ -833,8 +840,7 @@
 	d_Lang059 =	Dit commando ondersteunt geen uitdrukkingen of functies.
 		Gelieve toekennen van een variabele en gebruik het in de parameter.
 	d_Lang060 =	Nieuwe versie beschikbaar
-	d_Lang061 =	Wilt u deze nu downloaden?
-		Om automatische controles uit te schakelen selecteert u Help > Controleer bij opstarten
+	d_Lang061 =	
 	d_Lang062 =	Je hebt al de meest recente versie.
 	d_Lang063 =	Er is een fout opgetreden tijdens het controleren.
 	d_Lang064 =	Fout in
@@ -901,35 +907,45 @@
 	d_Lang113 =	Geen fout gemeld.
 	d_Lang114 =	Scripts worden uitgevoerd (zelfs als gecompileerd) met de send e-mailfunctie (CDO) is zichtbaar informatie van e-mailaccounts gebruikt, met inbegrip van het wachtwoord. De PMC project bestand beschikt niet over deze informatie.
 	d_Lang115 =	- Houd Alt tot regio ingesteld op dezelfde locatie.
+	d_Lang116 =	Transfer en installeer
+	d_Lang117 =	Ga naar pagina te downloaden
+	d_Lang118 =	Downloaden ... Even wachten aub.
 		
 ; 18. Start-up Tips		
-	Start_Tips =	U kunt macro's met behulp van de Command Knoppen in het hoofdvenster of het gebruik van de recorder om uw acties te kopiëren creëren. Ga naar Opties > Instellingen > Opname te selecteren wat input wordt opgenomen.
-		Om de recorder te gebruiken voor snelle taken ga naar Opties > Instellingen > Opname en controleer de "Lijst wissen" optie. Klik vervolgens op de knop Opnemen in het hoofdvenster en gebruik F10 om de huidige macro wissen en een nieuwe te beginnen met dezelfde sneltoets. U kunt ook de "Always Active"-optie in het hoofdvenster naar Opnemen en afspelen sneltoetsen actief te houden.
-		Om hulp voor een specifieke opdracht krijgen klik met de rechtermuisknop ergens op een commando venster om links naar AutoHotkey online Help te tonen.
-		Controleer de "Capture Sleutels" optie om sleutels en combinaties direct in te voeren om uw Macro vanuit het hoofdvenster.
-		Enter-toetsen en combinaties in het vak Sneltoets aan de onderkant en druk op de knop Invoegen om ze toe te voegen aan het selecte rijen.
-		Als er geen rijen zijn geselecteerd de bewerking knoppen gelden voor alle rijen in de lijst.
-		U kunt uw eigen variabelen in de Variabelen toewijzen ramen (Invoegen > Als Verklaringen / variabelen / functies). Om ze te gebruiken in opdrachten omsluiten de variabele naam in procent tekens, bijvoorbeeld: %MyVar%.
-		De "Loop" teller boven wordt het aantal lussen van de geselecteerde macro.
-		U kunt een rij bewerken door erop te dubbelklikken of door het te selecteren en op de knop Bewerken knoppen aan de onderkant.
-		U kunt meerdere geselecteerde rijen met behulp van de opties in het bewerken balk onderaan bewerken.
-		Selecteer een of meer rijen om nieuwe commando's toe te voegen op de top van hen.
+	Start_Tips =	Bekijk de video tutorials op www.macrocreator.com/help om te leren over de vele functies van Macro Schepper Pulover's.
+		Om help voor een specifiek commando te krijgen klik met de rechtermuisknop ergens op een commando venster om links naar online help te tonen.
+		U kunt macro's maken met behulp van de Command Knoppen in het hoofdvenster of via de recorder om uw acties te kopiëren. Ga naar Opties> Instellingen> Opname te selecteren welke input zal worden opgenomen.
+		Gebruik de zoekbalk of het venster "Zoek een opdracht" om te zoeken naar opdrachten en functies.
+		Wilt u helpen vast te stellen een vertaling of zelfs een nieuwe maken? Ga naar Opties> Instellingen> Taal-editor en de correcties aanbrengen die u wilt. Je kan het elk moment bekijken. Klik op Verzenden om uw revisie te sturen. Voel je vrij om een ​​aantal correcties in te dienen zo vaak als je wilt.
+		Controleer de optie 'Capture Keys "om sleutels en combinaties direct in te voeren om uw Macro vanuit het hoofdvenster.
+		Enter-toetsen en combinaties in het Sneltoets vak aan de onderkant en druk op de knop Invoegen om ze toe te voegen aan de select rijen.
+		Gebruik het bewerken van knoppen aan de onderkant van het hoofdvenster om herhaling te stellen en vertraging op meerdere rijen tegelijk. Als er geen rijen worden gekozen voor de bewerking knoppen van toepassing op alle rijen in de lijst.
+		Bijna elk commando en functie aanvaardt en voert variabelen. U kunt uw eigen variabelen toe te wijzen in de variabelen ramen (Opdrachten> Variabelen / Arrays). Om ze te gebruiken in commando's plaatst u de naam van de variabele in procenten tekenen, bijv .:% myvar%. In functies, gebruik ze zonder procent tekens, bijv .: SUBSTR (myVar, 5).
+		Klik met de rechtermuisknop ergens in de command window om gemakkelijk in te voegen ingebouwde variabelen uit een lijst.
+		Om de recorder te gebruiken voor snelle taken gaat u naar Opties> Instellingen> Opnemen en vink de optie "Lijst wissen". Klik vervolgens op de knop Opnemen in het hoofdvenster en gebruik F10 om de huidige Macro te wissen en een nieuwe te beginnen met dezelfde sneltoets. U kunt ook de "Always Active" optie in het hoofdvenster om Opnemen en afspelen hotkeys actief te houden.
+		PMC ondersteunt Array-objecten en methoden, net als AutoHotkey scripts. U kunt arrays op vele manieren, de meest voorkomende gaat het venster Variabelen, het controleren van de optie 'Expression' en bijvoeging van de waarden tussen haakjes, bijv .: creëren [10, 20, Var, "string"]. U kunt ook de naam sleutels aan te maken, bijv .: {Keya: VARA, "een aantal belangrijke": "string value"}.
+		Functies AHK expressie syntax. Letterlijke strings moeten tussen aanhalingstekens, en variabelen niet procent borden nodig. U kunt andere functies of array-elementen als parameters gebruiken. Bijv .: StrReplace (myVar, MyArray [ "A"], substr (OtherVar, 2, 3)).
+		Uitdrukkingen worden ondersteund in AutoHotkey Expression Syntax. Om een ​​uitdrukking in een commando parameter te gebruiken, te beginnen met een procent teken, bijv .:% SUBSTR (Var, 5).
+		De "Loop" teller boven wordt het totale aantal lussen van de geselecteerde macro.
+		U kunt een rij bewerken door erop te dubbelklikken of door het te selecteren en te klikken op de knop Bewerken aan de onderkant. U kunt meerdere geselecteerde rijen met behulp van de opties in de bewerken balk aan de onderkant te bewerken.
+		U kunt uw eigen functies definiëren in functie> Maak de functie en gebruik ze uit het raam functie of binnen uitdrukkingen.
+		U kunt Globa / lokale en statische variabelen voor de gebruiker gedefinieerde functies te definiëren. Globale variabelen gedefinieerd in Opties> Instellingen> Gebruiker globale variabelen worden beschouwd Super Global, en zal altijd beschikbaar zijn binnen functies, zelfs wanneer gedefinieerd als lokaal.
+		Selecteer een of meer rijen nieuwe opdrachten toevoegen erbovenop.
 		U kunt rijen bewegen met click-and-drag.
-		Dubbelklik op het pictogram op de taakbalk om een sneltoets te gebruiken of te stoppen het afspelen / opnemen. Klik erop met de middelste knop tijdens het afspelen of opnemen te pauzeren.
-		U kunt uw macro's exporteren naar werken AutoHotkey scripts of stand-alone executables uit het venster Export.
-		Op te nemen en af te spelen met behulp van de muis absolute coördinaten ga naar Opties > Instellingen > Defaults en set Mouse Coördinaten naar Screen.
-		U kunt openen, kopiëren, verplaatsen of verwijderen van bestanden en mappen met behulp van een van de commando's in Invoegen > Run / File / String / Misc.
-		Om op te nemen omlaag en omhoog staat van iedere toets ga naar Opties > Instellingen > Opname en check "Capture-toets staat (omlaag / omhoog)" optie.
-		U kunt sneltoetsen gebruiken om te versnellen of te vertragen afspelen. Ga naar Opties > Instellingen > Weergave om sleutels en snelheid in te stellen.
-		Om capture gebied aan te passen met behulp van de functie "Make Screenshot" ga naar Opties > Instellingen > Screenshots en selecteer "Druk op Enter om Capture". Na het tekenen van de rechthoek gebruik Controle pijltjestoetsen om de selectie te verplaatsen en Shift pijltoetsen om het formaat te wijzigen.
-		Snel Selecteer: Selecteer een rij en klik op een kolomkop om soortgelijke rijen op basis van de tekst van die kolom cel te selecteren.
-		De Run / File / String / Misc. raam hebben vele andere nuttige commando's zoals Shutdown en UrlDownloadToFile.
-		Gebruik de functie "Screenshot" in het venster functies (Invoegen > Als Verklaringen / variabelen / functies) om een screenshot van een deel van het scherm te maken. Eerste parameter is het pad van het doelbestand en de naam met een png extensie. Tweede parameter is de pijp-separated coördinaten in het scherm, bijvoorbeeld 100|200|50|100 (X|Y|Breedte|Hoogte).
-		Klik op de Index Kolomkoptekst aan / uit Help tekeningen en kleuren voor Loops en uitspraken over te schakelen. Dubbel-klik op de actie Kolomkoptekst Inspringen voor Loops en Verklaringen aan / uit te schakelen.
-		U kunt debuggen van uw macro's met behulp van de handmatige sneltoets en de Play-opties in het menu Macro. U kunt ook acties uitschakelen door ze in de lijst Macro.
-		Om uw macro's werken alleen op een bepaald venster ga naar Macro > Context Sensitive Sneltoetsen.
-		U kunt uw eigen globale variabelen ingesteld bij het opstarten en uit te voeren om te worden geladen. Ga naar Opties > Instellingen > Gebruiker globale variabelen om ze toe te voegen.
-		U kunt geavanceerde functies zoals substr en RegExReplace uit het raam Functions (Invoegen > Als Verklaringen / variabelen / functies) draaien. Of draai je eigen functies van externe AutoHotkey scripts.
+		Dubbelklik op het systeemvakpictogram om hotkeys activeren of te stoppen met het afspelen / opnemen. Klik erop met de middelste knop tijdens het afspelen of de opname te pauzeren.
+		U kunt uw macro's exporteren naar werken AutoHotkey scripts of stand-alone executables vanuit het venster Export.
+		Op te nemen en af ​​te spelen met behulp van de muis absolute coördinaten gaat u naar Opties> Instellingen> Defaults en stel muiscoördinaten op Bleken.
+		U kunt openen, kopiëren, verplaatsen of verwijderen van bestanden en mappen met behulp van een van de opdrachten in Opdrachten> Run / Bestand / String / Misc. Er zijn vele andere nuttige commando's zoals StringReplace, InputBox en MouseGetPos.
+		Down opnemen en Up staat van iedere toets Ga naar Opties> Instellingen> Opnemen en vink "Capture-toets staat (omlaag / omhoog)" optie.
+		U kunt sneltoetsen gebruiken om te versnellen of vertragen afspelen. Ga naar Opties> Instellingen> Afspelen om sleutels en snelheid in te stellen.
+		Om gebied vast te leggen met behulp van de "Make Screenshot" tool gaat u naar Opties> Instellingen> Screenshots en selecteer aanpassen "Druk op Enter om Capture". Na het tekenen van de rechthoek gebruik Control + pijltjestoetsen om de selectie te verplaatsen en Shift + pijltoetsen om het formaat te wijzigen.
+		Quick Select: Selecteer elke rij en klik op een kolomkop om soortgelijke rijen op basis van cel tekst uit die kolom te selecteren.
+		Klik op de Index kolomkop om On / Off te zetten Help, tekeningen en kleuren voor Loops en verklaringen. Dubbelklik op de Actie Kolomkoptekst / Off Inspringen voor Loops en verklaringen over te schakelen.
+		U kunt uw macro's debuggen met behulp van de handmatige sneltoets en de Play opties in het Macro menu. U kunt ook de acties uit te schakelen door ze uit te vinken in de Macro lijst.
+		Om uw macro's werken alleen op een bepaalde venster naar Macro> Context Sensitive Sneltoetsen.
+		U kunt uw eigen Global variabelen worden geladen bij het opstarten en uit te voeren. Ga naar Opties> Instellingen> Gebruiker Global variabelen om ze toe te voegen.
+		U kunt lopen geavanceerde functies zoals substr en REGEXREPLACE uit het raam functies (Opdrachten> Functies / Array Methods). U kunt ook uw eigen functies of lopen functies definiëren van externe AutoHotkey scripts.
+		U kunt muisbewegingen ten opzichte van de huidige positie door te oordelen CapsLock tijdens het opnemen (u kunt de sleutel veranderen en maken het schakelen in instellingen) op te nemen.
 		
 ; 19. Tooltips		
 	A_List_TT =	Selecteert Macro (Ctrl+1~0)
@@ -998,12 +1014,12 @@
 	Ex_UV_TT =	Exporteren globale variabelen.
 	Ex_WN_TT =	Schakelt waarschuwingen voor specifieke omstandigheden die een fout kunnen wijzen, zoals een typo of ontbrekende "global" verklaring.
 	ExpList_TT =	Dubbelklik op om te bewerken
-	ExprLink2_TT =	- NIET BIJGAAND VARIABELEN IN PROCENTTEKENS HIER.
+	ExprLink2_TT 	- NIET BIJGAAND VARIABELEN IN PROCENTTEKENS HIER.
 		- De meeste van de AHK uitdrukkingen worden ondersteund.
 		- U kunt gebruik maken van snaren, variabelen, arrays en functies.
-		- Om strings gebruiken, omsluiten ze tussen aanhalingstekens, bijvoorbeeld: var = "a".
-		- Meerdere verklaringen worden ondersteund, bijvoorbeeld: var = "a" || InStr (var, "b").
-	ExprLink3_TT =	- NIET BIJGAAND VARIABELEN IN PROCENTTEKENS HIER.
+		- Om strings gebruiken, omsluiten ze tussen aanhalingstekens, bijvoorbeeld: var  "a".
+		- Meerdere verklaringen worden ondersteund, bijvoorbeeld: var  "a" || InStr (var, "b").
+	ExprLink3_TT 	- NIET BIJGAAND VARIABELEN IN PROCENTTEKENS HIER.
 		- De meeste van de AHK uitdrukkingen worden ondersteund.
 		- U kunt gebruik maken van snaren, variabelen, arrays en functies.
 		- Om strings gebruiken, omsluiten ze tussen aanhalingstekens, bijvoorbeeld: var = "a".
@@ -1099,13 +1115,13 @@
 	Co_Oper_6 =	Groter dan of gelijk
 	Co_Oper_7 =	Minder of gelijk
 	Co_Oper_8 =	In (lijst)
-	Co_Oper_9 =	 Niet in (lijst)
-	Co_Oper_10 =	 Bevat (lijst)
-	Co_Oper_11 =	 Niet bevat (lijst)
-	Co_Oper_12 =	 Tussen (lijn 1) en (lijn 2)
-	Co_Oper_13 =	 Niet tussen (lijn 1) en (lijn 2)
-	Co_Oper_14 =	 Is (type)
-	Co_Oper_15 =	 Is niet (type)
+	Co_Oper_9 =	Niet in (lijst)
+	Co_Oper_10 =	Bevat (lijst)
+	Co_Oper_11 =	Niet bevat (lijst)
+	Co_Oper_12 =	Tussen (lijn 1) en (lijn 2)
+	Co_Oper_13 =	Niet tussen (lijn 1) en (lijn 2)
+	Co_Oper_14 =	Is (type)
+	Co_Oper_15 =	Is niet (type)
 		
 ; 21. IE Commands Tips		
 	IE_Cmd_Index =	
@@ -1135,7 +1151,7 @@
 	Value	Hiermee wordt de waarde van het object.
 	Width	Bepaalt of haalt de breedte van het object.
 		
-; 22. COM Methods Tips		
+; 22. COM Objects Tips		
 	COM_CLSID_Index =	
 	Excel.Application	Manipuleert Excel sheets.
 	HTMLfile	Kan worden gebruikt voor het lezen, schrijven en interageren met HTML.
@@ -1283,6 +1299,7 @@
 	Length	Geeft de lengte van een lineaire array beginnend op positie 1.
 	ListVars	Geeft het script variabelen: hun namen en de huidige inhoud.
 	Ln	Geeft de natuurlijke logaritme (basis e) van Number.
+	LoadPicture	Laadt een afbeelding uit een bestand en geeft een bitmap of pictogram handvat.
 	Log	Geeft de logaritme (grondtal 10) van het nummer.
 	Loop (files & folders)	Haalt de opgegeven bestanden of mappen, een voor een.
 	Loop (normal) 	Voer een reeks opdrachten herhaaldelijk: ofwel het opgegeven aantal malen of tot breuk wordt aangetroffen.
@@ -1367,11 +1384,36 @@
 	Until	Geldt als voorwaarde voor de voortzetting van een Loop-of Voor-loop.
 	UrlDownloadToFile	Downloadt een bestand van het internet.
 	UserFunction	Maakt een functie structuur.
+	Variable	Wijst de opgegeven waarde aan een variabele.
 	While	Voert een serie opdrachten totdat de opgegeven expressie naar false evalueert.
 	WinActivate	Activeert het gespecificeerde venster (maakt het belangrijkste).
 	WinActivateBottom	Zelfde als WinActivate behalve dat het activeert de onderste (minst recent actieve) matching venster in plaats van de bovenste.
 	WinActive	Geeft de unieke ID (HWND) van het actieve venster of het overeenkomt met de opgegeven criteria.
 	WinClose	Sluit het opgegeven venster.
+	WinExist	Controleert of het opgegeven venster bestaat.
+	WinGet	Haalt het opgegeven venster de unieke ID, proces ID, proces naam, of een lijst van haar controles. Het kan ook een lijst van alle vensters die voldoen aan de opgegeven criteria halen.
+	WinGetClass	Haalt class naam het opgegeven venster.
+	WinGetPos	Haalt de positie en grootte van het opgegeven venster.
+	WinGetText	Haalt de tekst uit het opgegeven venster.
+	WinGetTitle	Haalt de titel van het opgegeven venster.
+	WinHide	Verbergt het opgegeven venster.
+	WinHttpDownloadToFile	Downloads een of meer bestanden van het internet.
+	WinKill	Dwingt het opgegeven venster te sluiten.
+	WinMaximize	Vergroot het gespecificeerde venster op de maximale grootte.
+	WinMenuSelectItem	Roept een menu-item in de menubalk van het opgegeven venster.
+	WinMinimize	Stort het opgegeven venster in een knop op de taakbalk.
+	WinMinimizeAll	Minimaliseert alle vensters.
+	WinMinimizeAllUndo	Draait het effect van een eerdere WinMinimizeAll.
+	WinMove	Verandert de positie en / of de grootte van het opgegeven venster.
+	WinRestore	Unminimizes of unmaximizes het gespecificeerde sluiten indien deze geminimaliseerd of gemaximaliseerd.
+	WinSet	Maakt een aantal veranderingen aan de opgegeven venster, zoals "always on top" en transparantie.
+	WinSetTitle	Verandert de titel van het gespecificeerde venster.
+	WinShow	Zichtbaar maken van de opgegeven venster.
+	WinWait	Wacht tot de opgegeven venster bestaat.
+	WinWaitActive	Wacht tot het opgegeven venster actief is.
+	WinWaitClose	Wacht tot de opgegeven venster niet bestaat.
+	WinWaitNotActive	Wacht tot het opgegeven venster niet actief is.
+	Zip / UnZip	Comprimeren of decomprimeren één of meerdere zip-bestanden.
 	WinExist	Controleert of het opgegeven venster bestaat.
 	WinGet	Haalt het opgegeven venster de unieke ID, proces ID, proces naam, of een lijst van haar controles. Het kan ook een lijst van alle vensters die voldoen aan de opgegeven criteria halen.
 	WinGetClass	Haalt class naam het opgegeven venster.

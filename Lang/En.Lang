@@ -1,6 +1,6 @@
 ﻿Lang_en
 		
-		Lang_
+		; English
 		
 ; 01. Main Menu		
 	m_Lang001 =	&File
@@ -62,13 +62,13 @@
 	i_Lang008 =	&Image / Pixel Search
 	i_Lang009 =	&Run / File / String / Misc.
 	i_Lang010 =	&Loop
-	i_Lang011 =	&Goto
-	i_Lang012 =	L&abel
+	i_Lang011 =	&Go To / Label
+	i_Lang012 =	S&et timer
 	i_Lang013 =	If &Statements
 	i_Lang014 =	&Variables / Arrays
 	i_Lang015 =	F&unctions / Array Methods
 	i_Lang016 =	Send &Email
-	i_Lang017 =	Dow&nload / Upload files
+	i_Lang017 =	Dow&nload files
 	i_Lang018 =	&Zip / Unzip files
 	i_Lang019 =	In&ternet Explorer
 	i_Lang020 =	C&OM Interface
@@ -324,10 +324,10 @@
 	c_Lang026 =	Action
 	c_Lang027 =	Click
 	c_Lang028 =	Move
-	c_Lang029 =	Move && Click
+	c_Lang029 =	Move And Click
 	c_Lang030 =	Wheel Up
 	c_Lang031 =	Wheel Down
-	c_Lang032 =	Drag && Drop
+	c_Lang032 =	Drag And Drop
 	c_Lang033 =	Coordinates
 	c_Lang034 =	Search
 	c_Lang035 =	Subcommand
@@ -644,7 +644,7 @@
 	t_Lang089 =	Allow Multiple Instances
 	t_Lang090 =	Defaults
 	t_Lang091 =	Allow Dragging Rows
-	t_Lang092 =	&Entire cell contents
+	t_Lang092 =	E&ntire cell contents
 	t_Lang093 =	Standard INI format
 	t_Lang094 =	Name = Value
 	t_Lang095 =	Enter 1 variable per line. You may also add [Sections].
@@ -760,6 +760,8 @@
 	t_Lang205 =	Title Match Mode
 	t_Lang206 =	Title Match Speed
 	t_Lang207 =	Client
+	t_Lang208 =	F&ind
+	t_Lang209 =	R&eplace
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Open
@@ -769,18 +771,21 @@
 	d_Lang005 =	Save Project
 	d_Lang006 =	Failed to save/overwrite file
 	d_Lang007 =	Error
-	d_Lang008 =	Error: No Macro Selected.`nPlease check at least one Macro in the list.
+	d_Lang008 =	Error: No Macro Selected.
+		Please check at least one Macro in the list.
 	d_Lang009 =	Error: No Hotkey Selected.
-	d_Lang010 =	Error: Invalid Address.`nThe selected address or file name is invalid.
+	d_Lang010 =	Error: Invalid Address.
+		The selected address or file name is invalid.
 	d_Lang011 =	Warning
-	d_Lang012 =	No control selected.`nContinue?
+	d_Lang012 =	No control selected.
+		Continue?
 	d_Lang013 =	Export Script
 	d_Lang014 =	Script Exported
 	d_Lang015 =	The file was successfully exported!
 	d_Lang016 =	Click 'Get' to mark position.
-	d_Lang017 =	- Select the window.
-		- Point to desired position.
-		- Press the Right Button.
+	d_Lang017 =	#NOME?
+		#NOME?
+		#NOME?
 	d_Lang018 =	Pixel Color
 	d_Lang019 =	Clear List
 	d_Lang020 =	Close Macro?
@@ -788,7 +793,8 @@
 	d_Lang022 =	Previous
 	d_Lang023 =	Message
 	d_Lang024 =	Load default settings?
-	d_Lang025 =	Macro(s) activated.`nUse the Hotkeys to Play.
+	d_Lang025 =	Macros activated.
+		Use the Hotkeys to Play.
 	d_Lang026 =	to start / stop recording
 	d_Lang027 =	Recording stopped
 	d_Lang028 =	Recording...
@@ -806,6 +812,7 @@
 	d_Lang038 =	Press OK to continue.
 	d_Lang039 =	Timeout!
 	d_Lang040 =	This feature requires the GDI+ Library.
+.	Tämä ominaisuus vaatii GDI+ kirjasto.	Den här funktionen kräver GDI+ bibliotek.
 		Click OK to go to download page.
 	d_Lang041 =	The variable name contains an illegal character.
 	d_Lang042 =	is a reserved word.
@@ -825,16 +832,15 @@
 	d_Lang055 =	Please select an AutoHotkey script file (.ahk) and a enter a Function Name.
 	d_Lang056 =	This feature requires AutoHotkey installed.
 		Click OK to go to download page.
-	d_Lang057 =	- Press Ctrl+Arrow keys to move selected area.
-		- Press Shift+Arrow keys to resize selected area.
-		- Press Enter to finish.
+	d_Lang057 =	#NOME?
+		#NOME?
+		#NOME?
 	d_Lang058 =	Some features require admnistrator privilages in order to function properly.
 		It's recommended to restart the application as Administrator.
 	d_Lang059 =	This command does not support expressions or functions.
 		Please assign a variable and use it in the parameter.
 	d_Lang060 =	New version available
-	d_Lang061 =	Would you like to download it now?
-		To disable automatic checks select Help > Check on startup
+	d_Lang061 =	Not now
 	d_Lang062 =	You already have the most recent version.
 	d_Lang063 =	An error occured while checking.
 	d_Lang064 =	Error in
@@ -871,14 +877,14 @@
 	d_Lang093 =	Large icons
 	d_Lang094 =	This feature requires Windows Vista or higher.
 	d_Lang095 =	The use of ByRef causes a parameter to become an alias for the variable passed in from the caller. In other words, the parameter and the caller's variable both refer to the same contents in memory.
-	d_Lang096 =	- DO NOT ENCLOSE VARIABLES IN PERCENT SIGNS HERE.
-		- Return value must be an expression.
+	d_Lang096 =	#NOME?
+		#NOME?
 		- You may use strings, variables, arrays and functions. You may also combine any of those.
 		- To use strings, enclose them in quotes, e.g.: "Result is: " a+b.
 		- If you want to return extra results, you may also use ByRef in parameters.
-		- Arrays can be used to return multiple values or even named values.
-	d_Lang097 =	- DO NOT ENCLOSE VARIABLES IN PERCENT SIGNS HERE.
-		- Most of AHK expressions are supported.
+		#NOME?
+	d_Lang097 =	#NOME?
+		#NOME?
 		- You may use strings, variables, arrays and functions.
 		- To use strings, enclose them in quotes, e.g.: var = "a".
 		- Multiple Statements are supported, e.g.: var = "a" || InStr(var, "b").
@@ -900,36 +906,46 @@
 	d_Lang112 =	Email account not found.
 	d_Lang113 =	No error reported.
 	d_Lang114 =	Scripts exported (even if compiled) with the send email function (CDO) will have visible informations of email accounts used, including the PASSWORD. The PMC project file does not have this information.
-	d_Lang115 =	- Hold Alt to set region to the same location.
+	d_Lang115 =	#NOME?
+	d_Lang116 =	Transfer and install
+	d_Lang117 =	Go to download page
+	d_Lang118 =	Downloading... Please, wait.
 		
 ; 18. Start-up Tips		
-	Start_Tips =	You can create Macros using the Command Buttons in the main window or using the Recorder to copy your actions. Go to Options > Settings > Recording to select what inputs will be recorded.
-		To use the recorder for quick tasks go to Options > Settings > Recording and check the "Clear List" option. Then click the Record button in the main window and use F10 to clear the current Macro and start a new one with the same hotkey. You can also check the "Always Active" option in the main window to keep Recording and Playback hotkeys active.
-		To get help for an specific command right-click anywhere on a command window to show links to AutoHotkey online Help.
+	Start_Tips =	Check out the video tutorials at www.macrocreator.com/help to learn about the many features of Pulover's Macro Creator.
+		To get help for an specific command right-click anywhere on a command window to show links to online help.
+		You can create Macros using the Command Buttons in the main window or using the Recorder to copy your actions. Go to Options > Settings > Recording to select what inputs will be recorded.
+		Use the search bar or the "Find a command" window to search for commands and functions.
+		Would you like to help fix a translation or even create a new one? Go to Options > Settings > Language editor and make any corrections you want. You can preview it any time. Click on Submit to send your revision. Feel free to submit any number of corrections as many times as you want.
 		Check the "Capture Keys" option to enter keys and combinations to your Macro directly from the main window.
 		Enter keys and combinations in the Hotkey box at the bottom and press the Insert button to add them to the select rows.
-		If no rows are selected the edit buttons apply to all rows in the list.
-		You can assign your own variables in the Variables windows (Insert > If Statements / Variables / Functions). To use them inside commands enclose the variable name in percent signs, e.g.: %MyVar%.
+		Use the edit buttons at the bottom of the main window to set repeat and delay to multiple rows at the same time. If no rows are selected the edit buttons apply to all rows in the list.
+		Almost every command and function accepts and outputs variables. You can assign your own variables in the Variables windows (Commands > Variables / Arrays). To use them inside commands enclose the variable name in percent signs, e.g.: %MyVar%. In functions, use them without percent signs, e.g.: SubStr(MyVar, 5).
+		Right-Click anywhere in command window to easily insert Built-In variables from a list.
+		To use the recorder for quick tasks go to Options > Settings > Recording and check the "Clear List" option. Then click the Record button in the main window and use F10 to clear the current Macro and start a new one with the same hotkey. You can also check the "Always Active" option in the main window to keep Recording and Playback hotkeys active.
+		PMC supports Array objects and methods, just like AutoHotkey scripts. You can create arrays in many ways, the most usual is going to the Variables window, checking the "Expression" option and enclosing the values in brackets, e.g.: [10, 20, Var, "string"]. You can also create named keys, e.g.: {KeyA: VarA, "some key": "string value"}.
+		Functions use AHK expression syntax. Literal strings must be enclosed in quotes, and variables do not need percent signs. You can use other functions or array elements as parameters. E.g.: StrReplace(MyVar, MyArray["A"], SubStr(OtherVar, 2, 3)).
+		Expressions are supported in AutoHotkey Expression Syntax. To use an expression inside a command parameter, start it with a percent sign, e.g.: % SubStr(Var, 5).
 		The "Loop" counter at the top sets the total number of loops for the selected Macro.
-		You can edit a row by double-clicking it or by selecting it and clicking the Edit buttons at the bottom.
-		You can edit multiple selected rows using the options in the edit bar at the bottom.
+		You can edit a row by double-clicking it or by selecting it and clicking the Edit buttons at the bottom. You can edit multiple selected rows using the options in the edit bar at the bottom.
+		You can define your own functions in Function > Create function and use them from the Function window or inside expressions.
+		You can define globa/local and static variables for User Defined Functions. Global variables defined in Options > Settings > User global variables are considered Super Global, and will always be available inside functions, even when defined as local.
 		Select one or more rows to add new commands on top of them.
 		You can move rows with click-and-drag.
 		Double-click on the Tray Icon to activate hotkeys or stop playback / recording. Click on it with the middle button during playback or recording to pause.
 		You can export your Macros to working AutoHotkey scripts or stand-alone executables from the Export window.
 		To record and play Mouse using absolute coordinates go to Options > Settings > Defaults and set Mouse Coordinates to Screen.
-		You can open, copy, move or delete files and folders using one of the commands in Insert > Run / File / String / Misc.
+		You can open, copy, move or delete files and folders using one of the commands in Commands > Run / File / String / Misc. There are many other useful commands such as StringReplace, InputBox and MouseGetPos.
 		To record Down and Up state of every key go to Options > Settings > Recording and check "Capture key state (Down / Up)" option.
 		You can use hotkeys to speed up or slow down Playback. Go to Options > Settings > Playback to set keys and speed.
 		To adjust capture area using the "Make Screenshot" tool go to Options > Settings > Screenshots and select "Press Enter to Capture". After drawing the rectangle use Control+arrow keys to move the selection and Shift+arrow keys to resize it.
 		Quick Select: Select any row and click on a column header to select similar rows based on cell's text from that column.
-		The Run / File / String / Misc. window have many other useful commands such as Shutdown and UrlDownloadToFile.
-		Use the "Screenshot" function in the functions window (Insert > If Statements / Variables / Functions) to make a screenshot of part of the screen. First parameter is the destination file's path and name with a png extension. Second parameter are the pipe-separated coordinates in the screen, e.g. 100|200|50|100 (X|Y|Width|Height).
 		Click on the Index Column Header to turn On/Off Help Marks and Colors for Loops and Statements. Double-Click on the Action Column Header to turn On/Off Indentation for Loops and Statements.
 		You can debug your Macros using the Manual Hotkey and the Play options in the Macro menu. You can also disable actions by unchecking them in the Macro list.
 		To make your Macros work only on a certain window go to Macro > Context Sensitive Hotkeys.
 		You can set your own Global Variables to be loaded on startup and to be exported. Go to Options > Settings > User Global Variables to add them.
-		You can run advanced functions such as SubStr and RegExReplace from the Functions window (Insert > If Statements / Variables / Functions). Or run your own functions from external AutoHotkey scripts.
+		You can run advanced functions such as SubStr and RegExReplace from the Functions window (Commands > Functions / Array Methods). You can also define your own functions or run functions from external AutoHotkey scripts.
+		You can record mouse movements relative to the current position by holding CapsLock during recording (you can change the key and make it toggle in Settings).
 		
 ; 19. Tooltips		
 	A_List_TT =	Select Macro (Ctrl+1~0)
@@ -998,12 +1014,12 @@
 	Ex_UV_TT =	Export global variables.
 	Ex_WN_TT =	Enables or disables warnings for specific conditions which may indicate an error, such as a typo or missing "global" declaration.
 	ExpList_TT =	Double-Click to edit
-	ExprLink2_TT =	- DO NOT ENCLOSE VARIABLES IN PERCENT SIGNS HERE.
+	ExprLink2_TT 	- DO NOT ENCLOSE VARIABLES IN PERCENT SIGNS HERE.
 		- Most of AHK expressions are supported.
 		- You may use strings, variables, arrays and functions.
-		- To use strings, enclose them in quotes, e.g.: var = "a".
-		- Multiple Statements are supported, e.g.: var = "a" || InStr(var, "b").
-	ExprLink3_TT =	- DO NOT ENCLOSE VARIABLES IN PERCENT SIGNS HERE.
+		- To use strings, enclose them in quotes, e.g.: var  "a".
+		- Multiple Statements are supported, e.g.: var  "a" || InStr(var, "b").
+	ExprLink3_TT 	- DO NOT ENCLOSE VARIABLES IN PERCENT SIGNS HERE.
 		- Most of AHK expressions are supported.
 		- You may use strings, variables, arrays and functions.
 		- To use strings, enclose them in quotes, e.g.: var = "a".
@@ -1135,7 +1151,7 @@
 	Value	Gets or sets the value of the object.
 	Width	Sets or retrieves the width of the object.
 		
-; 22. COM Methods Tips		
+; 22. COM Objects Tips		
 	COM_CLSID_Index =	
 	Excel.Application	Manipulates Excel sheets.
 	HTMLfile	Can be used to read, write and interact with HTML.
@@ -1283,6 +1299,7 @@
 	Length	Returns the length of a linear array beginning at position 1.
 	ListVars	Displays the script's variables: their names and current contents.
 	Ln	Returns the natural logarithm (base e) of Number.
+	LoadPicture	Loads a picture from file and returns a bitmap or icon handle.
 	Log	Returns the logarithm (base 10) of Number.
 	Loop (files & folders)	Retrieves the specified files or folders, one at a time.
 	Loop (normal) 	Perform a series of commands repeatedly: either the specified number of times or until break is encountered.
@@ -1367,11 +1384,36 @@
 	Until	Applies a condition to the continuation of a Loop or For-loop.
 	UrlDownloadToFile	Downloads a file from the Internet.
 	UserFunction	Creates a Function structure.
+	Variable	Assigns the specified value to a variable.
 	While	Performs a series of commands repeatedly until the specified expression evaluates to false. 
 	WinActivate	Activates the specified window (makes it foremost).
 	WinActivateBottom	Same as WinActivate except that it activates the bottommost (least recently active) matching window rather than the topmost.
 	WinActive	Returns the Unique ID (HWND) of the active window if it matches the specified criteria.
 	WinClose	Closes the specified window.
+	WinExist	Checks if the specified window exists.
+	WinGet	Retrieves the specified window's unique ID, process ID, process name, or a list of its controls. It can also retrieve a list of all windows matching the specified criteria.
+	WinGetClass	Retrieves the specified window's class name.
+	WinGetPos	Retrieves the position and size of the specified window.
+	WinGetText	Retrieves the text from the specified window.
+	WinGetTitle	Retrieves the title of the specified window.
+	WinHide	Hides the specified window.
+	WinHttpDownloadToFile	Downloads one or more files from the Internet.
+	WinKill	Forces the specified window to close.
+	WinMaximize	Enlarges the specified window to its maximum size.
+	WinMenuSelectItem	Invokes a menu item from the menu bar of the specified window.
+	WinMinimize	Collapses the specified window into a button on the task bar.
+	WinMinimizeAll	Minimizes all windows.
+	WinMinimizeAllUndo	Reverses the effect of a previous WinMinimizeAll.
+	WinMove	Changes the position and/or size of the specified window.
+	WinRestore	Unminimizes or unmaximizes the specified window if it is minimized or maximized.
+	WinSet	Makes a variety of changes to the specified window, such as "always on top" and transparency.
+	WinSetTitle	Changes the title of the specified window.
+	WinShow	Unhides the specified window.
+	WinWait	Waits until the specified window exists.
+	WinWaitActive	Waits until the specified window is active.
+	WinWaitClose	Waits until the specified window does not exist.
+	WinWaitNotActive	Waits until the specified window is not active.
+	Zip / UnZip	Compress or uncompress one or more zip files.
 	WinExist	Checks if the specified window exists.
 	WinGet	Retrieves the specified window's unique ID, process ID, process name, or a list of its controls. It can also retrieve a list of all windows matching the specified criteria.
 	WinGetClass	Retrieves the specified window's class name.

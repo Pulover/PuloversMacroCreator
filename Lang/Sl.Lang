@@ -58,22 +58,22 @@
 	i_Lang004 =	&Premor
 	i_Lang005 =	P&olje sporočilo
 	i_Lang006 =	&Ključne Počakaj
-	i_Lang007 =	Okno
+	i_Lang007 =	&Okno
 	i_Lang008 =	&Image / Pixel Iskanje
 	i_Lang009 =	&Run / Datoteke / String / Razno.
 	i_Lang010 =	&Loop
-	i_Lang011 =	&Goto
-	i_Lang012 =	L&abel
+	i_Lang011 =	I&ti / Etiketi
+	i_Lang012 =	&Set timer
 	i_Lang013 =	&Če Izjave
-	i_Lang014 =	&Spremenljivke / Nizi
+	i_Lang014 =	Spr&emenljivke / Nizi
 	i_Lang015 =	&Funkcije / Metode zaporedji
 	i_Lang016 =	Po&šlji sporočilo
-	i_Lang017 =	&Download / Upload datotek
+	i_Lang017 =	Prenos &datotek
 	i_Lang018 =	&Zip / unzip datotek
-	i_Lang019 =	In&ternet Explorer
+	i_Lang019 =	Internet E&xplorer
 	i_Lang020 =	&COM Vmesnik
 	i_Lang021 =	&Windows Sporočila
-	i_Lang022 =	Na&jdi ukaz
+	i_Lang022 =	N&ajdi ukaz
 		
 ; 06. Edit Sub Menu		
 	e_Lang001 =	&Dvojnik
@@ -324,10 +324,10 @@
 	c_Lang026 =	Akcija
 	c_Lang027 =	Kliknite
 	c_Lang028 =	Premikanje
-	c_Lang029 =	Move & Kliknite
+	c_Lang029 =	Premikanje In Kliknite
 	c_Lang030 =	Wheel Up
 	c_Lang031 =	Kolo dol
-	c_Lang032 =	Povleci in spusti
+	c_Lang032 =	Povleci In Spusti
 	c_Lang033 =	Koordinira
 	c_Lang034 =	Iskanje
 	c_Lang035 =	Subcommand
@@ -621,7 +621,7 @@
 	t_Lang066 =	Iskanje stolpec
 	t_Lang067 =	Najdi / zamenjaj
 	t_Lang068 =	&Najdi
-	t_Lang069 =	&Match Case
+	t_Lang069 =	Ma&tch Case
 	t_Lang070 =	&Zamenjajte
 	t_Lang071 =	Najdeno
 	t_Lang072 =	Nadomesti
@@ -760,6 +760,8 @@
 	t_Lang205 =	Način Tekmo Naslov
 	t_Lang206 =	Hitrost Tekmo Naslov
 	t_Lang207 =	Client
+	t_Lang208 =	N&ajdi
+	t_Lang209 =	Za&menjajte
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Odprite
@@ -769,11 +771,14 @@
 	d_Lang005 =	Shrani Projekt
 	d_Lang006 =	Ni uspelo rešiti / prepisati datoteko
 	d_Lang007 =	Napaka
-	d_Lang008 =	Napaka: Ne Makro Izbrano`nMolimo preveriti vsaj en makro na seznamu.
+	d_Lang008 =	Napaka: Ne Makro Izbrano
+		Molimo preveriti vsaj en makro na seznamu.
 	d_Lang009 =	Napaka: Ne Bližnjica Izbrano.
-	d_Lang010 =	Napaka: Neveljavna Naslov`nSkupina izbrani naslov ali ime datoteke je neveljavno.
+	d_Lang010 =	Napaka: Neveljavna Naslov
+		Skupina izbrani naslov ali ime datoteke je neveljavno.
 	d_Lang011 =	Opozorilo
-	d_Lang012 =	Izbrali nobenega nadzora.`nNadaljujem?
+	d_Lang012 =	Izbrali nobenega nadzora.
+		Nadaljujem?
 	d_Lang013 =	Izvozi scenarij
 	d_Lang014 =	Scenarij Izvozni
 	d_Lang015 =	Datoteka je bila uspešno izvažajo!
@@ -788,7 +793,8 @@
 	d_Lang022 =	Prejšnja
 	d_Lang023 =	Sporočilo
 	d_Lang024 =	Naložite privzete nastavitve?
-	d_Lang025 =	Makro (ov) aktivirana.`nCe Bližnjice igrati.
+	d_Lang025 =	aktivira Makri.
+		Uporabite bližnjic igrati.
 	d_Lang026 =	za začetek / konec snemanja
 	d_Lang027 =	Snemanje ustavi
 	d_Lang028 =	Snemanje.
@@ -805,7 +811,8 @@
 	d_Lang037 =	Image / Pixel ni bilo mogoče najti.
 	d_Lang038 =	Za nadaljevanje pritisnite OK.
 	d_Lang039 =	Timeout!
-	d_Lang040 =	Ta funkcija zahteva GDI+knjižnice.
+	d_Lang040 =	
+.	Tämä ominaisuus vaatii GDI+ kirjasto.	Оваа функција бара + библиотека на GDI.
 		Kliknite V redu, da gredo na stran za prenos.
 	d_Lang041 =	Ime spremenljivke vsebuje neveljaven znak.
 	d_Lang042 =	je rezervirana beseda.
@@ -833,8 +840,7 @@
 	d_Lang059 =	Ta ukaz ne podpira izrazov ali funkcij.
 		Prosimo, določite spremenljivko in jo uporabite v parametru.
 	d_Lang060 =	Nova različica je na voljo
-	d_Lang061 =	Želite prenesti sedaj?
-		Če želite onemogočiti samodejne preglede izberite Pomoč> Preveri na start-up. > Preveri ob zagonu
+	d_Lang061 =	
 	d_Lang062 =	Že imate najnovejšo različico.
 	d_Lang063 =	Napaka pri preverjanju do napake.
 	d_Lang064 =	Ralat dalam
@@ -901,35 +907,45 @@
 	d_Lang113 =	Poročali nobena napaka.
 	d_Lang114 =	Skripte izvažajo (tudi če je prevedeni) z za pošiljanje e-pošte funkcije (CDO) bodo imeli vidne informacije o e-poštnih računov, ki se uporabljajo, vključno z geslom. Projekt datoteke PMC teh podatkov ne imeti.
 	d_Lang115 =	- Držite Alt nastaviti regijo na isti lokaciji.
+	d_Lang116 =	Prenos in namestitev
+	d_Lang117 =	Pojdite na stran za prenos
+	d_Lang118 =	Prenašanje ... Prosim, počakajte.
 		
 ; 18. Start-up Tips		
-	Start_Tips =	Lahko ustvarite makre z uporabo ukaznih gumbov v glavnem oknu ali z uporabo snemalnika kopirati dejanja. Pojdi na Možnosti> Nastavitve> Snemanje izbrati tisto vhodi bo posnet.
-		Za uporabo snemalnika za hitre naloge, pojdite na Možnosti> Nastavitve> Snemanje in preverite "Počisti seznam" možnost. Nato kliknite na gumb Snemaj v glavnem oknu in uporabite F10, da počistite trenutni makro in začeti novega z isto hotkey. Si lahko ogledate tudi "Vedno Active" možnost v glavnem oknu za ohranitev snemanje in predvajanje Bližnjice aktiven.
-		Da bi dobili pomoč za določen ukaz desno tipko miške kliknite kjer koli na ukazno okno za prikaz povezave na AutoHotkey spletni pomoči.
-		Preverite "Capture Keys" možnost, da vstopijo tipke in kombinacije s svojim Macro neposredno iz glavnega okna.
-		Vpišite tipke in kombinacije v polje aktivne tipke na dnu in pritisnite gumb Insert, da jih dodate na izbranih vrstah.
-		Če ni izbran noben vrstic za urejanje gumbov veljajo za vse vrstice v seznamu.
-		Lahko določite svoje spremenljivke v spremenljivkah okna (Insert> Če Izjave / spremenljivke / funkcije). Če jih želite uporabljati v notranjosti ukazi priložiti ime spremenljivke v odstotkih znakov, na primer: %MyVar% funtov.
-		Zanka Števec na vrhu določa skupno število zank za izbrano Macro.
-		Lahko uredite vrstico z dvojnim klikom ali ga izberete in kliknete Uredi gumbe na dnu.
-		Lahko urejate več izbrane vrstice z uporabo možnosti v vnosno vrstico na dnu.
-		Izberite eno ali več vrstic za dodajanje novih ukazov na vrhu njih.
-		Lahko premaknete vrstice z klik-in-povleci.
-		Dvakrat kliknite na ikono programa za aktiviranje bližnjic ali zaustavitev predvajanja / snemanja. Kliknite na to s srednjo tipko med predvajanjem ali snemanje na pavzo.
-		Lahko izvozite Makri delovnih skripte AutoHotkey ali samostojnih izvršljiv, iz okna Export.
-		Za snemanje in predvajanje miško uporabljate absolutne koordinate pojdite na Možnosti> Nastavitve> Neplačila in komplet Miška koordinate na zaslonu.
-		Lahko odpirate, kopirate, premikate ali brišete datoteke in mape z uporabo enega od ukazov Insert> Run / datoteke / String / Razno.
-		Za snemanje dol in gor stanje vseh ključnih pojdite na Možnosti> Nastavitve> Snemanje in preverite, "Capture ključno stanje (dol / gor)" možnost.
-		Lahko uporabite hotkeys, da pospešijo ali upočasnijo predvajanja. Pojdi na Možnosti> Nastavitve> Playback nastavite tipke in hitrost.
-		Če želite prilagoditi zajem območja z uporabo "Znamka Screenshot" orodje pojdite na Možnosti> Nastavitve> Screenshots in izberite "Pritisnite Enter za zajem". Po jemanju uporabo nadzorne pravokotnik+smerne tipke za premikanje izbire in Shift+smerne tipke, da spremenite velikost.
-		Hitro Izberite: Izberite katero koli vrstico in kliknite na glavo stolpca, da izberete podobne vrstice, ki temeljijo na besedilu celice iz tega stolpca.
-		Run / datoteke / String / Razno. okna imajo številne druge koristne ukaze, kot Shutdown in UrlDownloadToFile.
-		Uporabite funkcijo »Screenshot« v oknu funkcije (Insert> Če Izjave / spremenljivke / funkcije) narediti screenshot delu zaslona. Prvi parameter je pot ciljna datoteka in ime z razširitvijo png. Drugi parameter so cevi, ločene koordinate na zaslonu, npr 100 | 200 | 50 | 100 (X | Y | Širina | Višina).
-		Kliknite na indeks stolpca Glava za vklop / izklop Pomoč znamke in barve za Zank in izjav. Dvojnim klikom na stolpec Glava akciji za vklop / izklop zamikanjem za Zank in izjav.
-		Lahko razhroščevanje vaše makre z ročnim Hotkey in možnosti igrati v makro meniju. Lahko onemogočite tudi ukrepe, ki so jih počistite na Makro seznamu.
-		Če želite, da vaše Makri deluje le na določenem oknu pojdite na Makro> konteksta bližnjic.
-		Lahko nastavite svoje globalne spremenljivke, ki se naložijo ob zagonu in se izvozijo. Pojdi na Možnosti> Nastavitve> Uporabniške globalnih spremenljivk, da jih dodate.
-		Lahko zaženete napredne funkcije, kot so substr in RegExReplace iz okna Funkcije (Insert> Če Izjave / spremenljivke / funkcije). Ali teči svoje funkcije iz zunanjih AutoHotkey skripte.
+	Start_Tips =	Oglejte si video Vadnice na www.macrocreator.com/help~~pobj za spoznavanje mnogih značilnosti makro Stvarnika Pulover je.
+		Da bi dobili pomoč za specifičen ukaz desno tipko miške kliknite kjerkoli na oknu ukaza za prikaz povezave do spletne pomoči.
+		Lahko ustvariti makre uporabo ukazni gumbi v glavnem oknu ali z uporabo snemalnika kopirati dejanja. Pojdi na Možnosti> Nastavitve> Snemanje izbrati, kaj vložkov bo zabeležen.
+		Uporabite iskalno vrstico ali »Iskanje ukaz" okno za iskanje ukazov in funkcij.
+		Bi radi pomagali popraviti prevod ali celo ustvariti novega? Pojdi na Možnosti> Nastavitve> urednik jezik in da morebitne popravke, ki jih želite. Si ga kadarkoli lahko ogledate. Kliknite Pošlji, da pošljete svojo revizijo. Vas prosimo, da predloži število popravkov, tolikokrat, kot želite.
+		Preverite "Snemanje ključev" možnost za vstop tipke in kombinacije za vaš Macro neposredno iz glavnega okna.
+		Vnesite tipke in kombinacije v polje aktivne tipke na dnu in pritisnite gumb Vstavi, da jih dodate na izbranih vrstic.
+		Gumbi za urejanje na dnu glavnega okna za določitev ponovi in ​​odloži na več vrstic hkrati. Če ni izbran noben vrstic gumbi urejanje veljajo za vse vrstice v seznamu.
+		Skoraj vsak ukaz in funkcija sprejema in oddaja spremenljivke. Lahko določite svoje lastne spremenljivke v zvezi s spremenljivkami okna (Ukazi> spremenljivke / Arrays). Za njihovo uporabo v notranjosti ukazi priložiti ime spremenljivke v odstotkih znake, npr .:% MyVar%. Funkcij, ki jih uporablja brez odstotkov znakov, npr .: substr (MyVar, 5).
+		Desno-kliknite kjerkoli v oknu ukaznega enostavno vstavite vgrajene spremenljivke s seznama.
+		Navodila za uporabo snemalnika za hitro naloge, izberite Možnosti> Nastavitve> Snemanje in preverite možnost "Počisti seznam". Nato kliknite na gumb Record v glavnem oknu in uporabo F10, počistite trenutni makro in začeti novo z istim hotkey. Prav tako lahko preverite "Vedno Active« v glavnem oknu za ohranjanje snemanje in predvajanje hotkeys aktiven.
+		PMC podpira matričnih predmetov in metod, tako kot AutoHotKey skripte. Ustvarite lahko nize v mnogih pogledih, najbolj običajno se bo okno Spremenljivke, preverjanje možnosti "Expression" in priloži vrednosti v oklepajih, npr .: [10, 20, Var, "niz"]. Ustvarite lahko tudi imenovan tipke, npr .: {Keya: Vara, "nekateri ključni": "vrednost niza"}.
+		Funkcije uporabo AHK izraz sintakso. Besedilni nizi morajo biti v narekovajih, in spremenljivke ne potrebujejo znake za odstotek. Lahko uporabljate druge funkcije ali matrične elemente, kot so parametri. Npr .: StrReplace (MyVar, MyArray [ "A"], substr (OtherVar, 2, 3)).
+		Izrazi so podprte v AutoHotKey Expression skladnje. Za uporabo izraza znotraj parameter ukaza, da začnejo z znakom za odstotek, npr .:% substr (Var, 5).
+		Zanke števec na vrhu določa skupno število zank za izbrani makro.
+		Lahko uredite vrstico, da ga dvokliknete ali ga izberete in kliknete gumba Urejanje na dnu. Lahko uredite več izbranih vrstic z uporabo možnosti v urejanje vrstici na dnu.
+		Določite lahko svoje naloge v funkciji> Ustvari funkcije in jih uporabiti v oknu Funkcija ali znotraj izrazov.
+		Določite lahko globa / lokalne in statične spremenljivke za uporabniško definirane funkcije. Globalne spremenljivke so opredeljene v Možnosti> Nastavitve> Uporabniške globalne spremenljivke se štejejo Super globalno, in bo vedno na voljo znotraj funkcije, tudi če je opredeljen kot lokalni ravni.
+		Izberite eno ali več vrstic za dodajanje novih ukazov na njih.
+		Lahko premaknete vrstice s klik-in-povleci.
+		Dvakrat kliknite na pladenj ikona za aktiviranje bližnjic ali ustavi predvajanje / snemanje. Med predvajanjem ali snemanjem za premor kliknite nanj z srednjega gumba.
+		Lahko izvozite Makri delovnih skripte AutoHotKey ali samostojen izvršljiv iz okna Export.
+		Za snemanje in predvajanje Mouse uporabo absolutnih koordinat izberite Možnosti> Nastavitve> privzetih in določil Mouse Koordinate Screen.
+		Lahko odpiranje, kopiranje, premikanje ali brisanje datotek in map z enim od ukazov v poveljstvih> Run / datoteke / String / MISC. Obstaja veliko drugih uporabnih ukazov, kot so StringReplace, InputBox in MouseGetPos.
+		Za snemanje dol in gor stanje vseh ključnih izberite Možnosti> Nastavitve> Snemanje in preverite "Capture ključ državno (dol / gor)" možnost.
+		Lahko uporabite hotkeys za pospešitev ali upočasnitev predvajanje. Izberite Možnosti> Nastavitve> Predvajanje nastaviti tipke in hitrost.
+		Za prilagoditev območja za slikanje z uporabo "Naredi Screenshot" orodje, izberite Možnosti> Nastavitve> Galerija slik in izberite "Pritisnite Enter za zajem". Po izdelavi nadzor nad uporabo pravokotnik + smerne tipke za premikanje izbor in Shift + puščico tipke za velikost.
+		Quick Select: Izberite vsako vrstico in kliknite na glavo stolpca izberite podobne vrstice, ki temelji na besedilu celice iz tega stolpca.
+		Kliknite na indeks stolpca za vklop / izklop za pomoč mark in barve za Loops in izjav. Dvakrat kliknite Action stolpca za vklop / izklop zarezi za Loops in izjav.
+		Lahko debug svoje makre z ročno Hotkey in možnosti igrati v makro meniju. Lahko tudi onemogočite ukrepe, ki jih počistite na makro seznamu.
+		Da bo vaše Makri deluje le na določenem oknu pojdite na makro> Context Sensitive hotkeys.
+		Lahko nastavite lastne globalne spremenljivke, ki se naložijo ob zagonu in ki se izvaža. Pojdi na Možnosti> Nastavitve> Uporabniške globalnih spremenljivk, da jih dodate.
+		Lahko zaženete napredne funkcije, kot so substr in REGEXREPLACE v oknu Funkcije (Ukazi> Funkcije / matrične metode). Lahko tudi določite svoje funkcije ali izvajajo funkcije iz zunanjih skripte AutoHotKey.
+		Snemate lahko premike miške relativno na trenutni položaj, ki ga imajo CapsLock med snemanjem (lahko spremenite ključ in da bo preklop v nastavitvah).
 		
 ; 19. Tooltips		
 	A_List_TT =	Izberite Macro (Ctrl +1 ~ 0)
@@ -998,12 +1014,12 @@
 	Ex_UV_TT =	Izvoz globalne spremenljivke.
 	Ex_WN_TT =	Omogoča ali onemogoča opozorila za posebne pogoje, ki lahko kažejo na napake, kot so tipkarske napake ali manjkajoče "globalna" izjave.
 	ExpList_TT =	Dvakrat kliknite za urejanje
-	ExprLink2_TT =	- NE PRILOŽITI SPREMENLJIVK ZNAKI ZA ODSTOTEK TUKAJ.
+	ExprLink2_TT 	- NE PRILOŽITI SPREMENLJIVK ZNAKI ZA ODSTOTEK TUKAJ.
 		- Večina AHK izrazov so podprte.
 		- Lahko uporabite strune, spremenljivke, polja in funkcije.
-		- Za uporabo nizov, jih priložite v narekovajih, na primer: var = "A".
-		- Več Izjave so podprti, na primer: var = "a" || Instr (var, "b").
-	ExprLink3_TT =	- NE PRILOŽITI SPREMENLJIVK ZNAKI ZA ODSTOTEK TUKAJ.
+		- Za uporabo nizov, jih priložite v narekovajih, na primer: var  "A".
+		- Več Izjave so podprti, na primer: var  "a" || Instr (var, "b").
+	ExprLink3_TT 	- NE PRILOŽITI SPREMENLJIVK ZNAKI ZA ODSTOTEK TUKAJ.
 		- Večina AHK izrazov so podprte.
 		- Lahko uporabite strune, spremenljivke, polja in funkcije.
 		- Za uporabo nizov, jih priložite v narekovajih, na primer: var = "A".
@@ -1099,13 +1115,13 @@
 	Co_Oper_6 =	Večja ali enaka
 	Co_Oper_7 =	Manjša ali enaka
 	Co_Oper_8 =	V (seznam)
-	Co_Oper_9 =	 Ne v (seznam)
-	Co_Oper_10 =	 Vsebuje (seznam)
-	Co_Oper_11 =	 Ne vsebuje (seznam)
-	Co_Oper_12 =	 Med (linije 1) in (liniji 2)
-	Co_Oper_13 =	 Ni med (linije 1) in (linija 2)
-	Co_Oper_14 =	 Je (tip)
-	Co_Oper_15 =	 Ni (tip)
+	Co_Oper_9 =	Ne v (seznam)
+	Co_Oper_10 =	Vsebuje (seznam)
+	Co_Oper_11 =	Ne vsebuje (seznam)
+	Co_Oper_12 =	Med (linije 1) in (liniji 2)
+	Co_Oper_13 =	Ni med (linije 1) in (linija 2)
+	Co_Oper_14 =	Je (tip)
+	Co_Oper_15 =	Ni (tip)
 		
 ; 21. IE Commands Tips		
 	IE_Cmd_Index =	
@@ -1135,7 +1151,7 @@
 	Value	Dobi ali določa vrednost predmeta.
 	Width	Komplet ali pridobi širino predmeta.
 		
-; 22. COM Methods Tips		
+; 22. COM Objects Tips		
 	COM_CLSID_Index =	
 	Excel.Application	Manipulira Excel listov.
 	HTMLfile	Lahko se uporablja za branje, pisanje in interakcijo s HTML.
@@ -1283,6 +1299,7 @@
 	Length	Vrne dolžino linearni niz, ki se začne pri položaju 1.
 	ListVars	Prikaže spremenljivk skripta: njihova imena in trenutne vsebine.
 	Ln	Vrne naravni logaritem (z osnovo e) na številki.
+	LoadPicture	Naloži sliko iz datoteke in vrne bitno ali ikono ročaj.
 	Log	Vrne logaritem (z osnovo 10) številke.
 	Loop (files & folders)	Pridobi določene datoteke ali mape, enega naenkrat.
 	Loop (normal) 	Opravila vrsto ukazov večkrat: bodisi določeno število krat ali dokler premoru se srečujejo.
@@ -1367,11 +1384,36 @@
 	Until	Velja pogoj za nadaljevanje Loop ali za-loop.
 	UrlDownloadToFile	Prenese datoteko iz interneta.
 	UserFunction	Ustvarja strukturo funkcij.
+	Variable	Dodeli določeno vrednost spremenljivki.
 	While	Izvede niz ukazov, dokler se navedeni izraz neresničen.
 	WinActivate	Aktivira določeno okno (zaradi česar je predvsem).
 	WinActivateBottom	Enako kot WinActivate razen tega, da aktivira: Spodnja (vsaj v zadnjem času aktivno) ujemanje okno namesto vrhunska.
 	WinActive	Vrne Unique ID (hWnd) aktivnega okna, če se ujema določene kriterije.
 	WinClose	Zapre določeno okno.
+	WinExist	Preveri, če obstaja določeno okno.
+	WinGet	Prenese določenem okna edinstven ID, ID procesa ime procesa, ali seznam svojih kontrol. Prav tako lahko poiskati seznam vseh oknih, ki ustrezajo določene kriterije.
+	WinGetClass	Pridobi ime razreda v določenem okna.
+	WinGetPos	Pridobi položaj in velikost določenem oknu.
+	WinGetText	Prikliče besedilo iz določenega okna.
+	WinGetTitle	Pridobi naziv v določenem oknu.
+	WinHide	Skrije določeno okno.
+	WinHttpDownloadToFile	Prenosi eno ali več datotek iz interneta.
+	WinKill	Sili, določeno okno zapreti.
+	WinMaximize	Razširja določene okno na svojo največjo velikost.
+	WinMenuSelectItem	Sklicuje na element menija v menijski vrstici določenega okna.
+	WinMinimize	Zgrudi določeno okno v gumb v opravilni vrstici.
+	WinMinimizeAll	Zmanjša vsa okna.
+	WinMinimizeAllUndo	Obrne učinek prejšnje WinMinimizeAll.
+	WinMove	Spremembe položaj in / ali velikost določenega okna.
+	WinRestore	Unminimizes ali unmaximizes določeno okno, če je čim bolj zmanjšati ali čim večje.
+	WinSet	Omogoča različne spremembe v določenem oknu, kot so "vedno na vrhu" in preglednosti.
+	WinSetTitle	Spremeni naslov iz okna.
+	WinShow	Razkrije predpisano okno.
+	WinWait	Počaka, da obstaja določeno okno.
+	WinWaitActive	Počaka, da je določeno okno aktivno.
+	WinWaitClose	Počaka določen okno ne obstaja.
+	WinWaitNotActive	Počaka določen okno ni aktivna.
+	Zip / UnZip	Stisniti ali raztegniti eno ali več zip datotek.
 	WinExist	Preveri, če obstaja določeno okno.
 	WinGet	Prenese določenem okna edinstven ID, ID procesa ime procesa, ali seznam svojih kontrol. Prav tako lahko poiskati seznam vseh oknih, ki ustrezajo določene kriterije.
 	WinGetClass	Pridobi ime razreda v določenem okna.

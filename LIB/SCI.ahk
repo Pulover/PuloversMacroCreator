@@ -45,9 +45,9 @@ class scintilla {
             __SCI(this.hwnd := hwnd, this)
         ; else
             ; return this
-		; if !init        ;  WM_NOTIFY = 0x4E
+        ; if !init        ;  WM_NOTIFY = 0x4E
 			; old:=OnMessage(0x4E,"__sciNotify"),init:=true
-		__sendEditor(this.hwnd)               ; initialize sendEditor function
+        __sendEditor(this.hwnd)               ; initialize sendEditor function
     }
 
     __call(msg, wParam := 0, lParam := 0, params*){
@@ -56,12 +56,12 @@ class scintilla {
             __SCI(this.hwnd := __Add(wParam, lParam, params*), this)
         else
         {
-            (wParam && !(wParam+0) && !isObject(wParam)) ? (VarSetCapacity(wParamA, StrPut(wParam, "CP0"))
-                                                           ,StrPut(wParam, &wParamA, "CP0")
+            (wParam && !(wParam+0) && !isObject(wParam)) ? (VarSetCapacity(wParamA, StrPut(wParam, scintilla.encoding))
+                                                           ,StrPut(wParam, &wParamA, scintilla.encoding)
                                                            ,wParam:=&wParamA) : null
 
-            (lParam && !(lParam+0) && !isObject(lParam)) ? (VarSetCapacity(lParamA, StrPut(lParam, "CP0"))
-                                                           ,StrPut(lParam, &lParamA, "CP0")
+            (lParam && !(lParam+0) && !isObject(lParam)) ? (VarSetCapacity(lParamA, StrPut(lParam, scintilla.encoding))
+                                                           ,StrPut(lParam, &lParamA, scintilla.encoding)
                                                            ,lParam:=&lParamA) : null
 
             /*

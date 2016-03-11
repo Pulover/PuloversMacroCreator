@@ -62,13 +62,13 @@
 	i_Lang008 =	P&rocurar Imagem / Pixel
 	i_Lang009 =	E&xecutar / Arquivos / Texto / Misc.
 	i_Lang010 =	&Loop
-	i_Lang011 =	P&ular
-	i_Lang012 =	Rótul&o
+	i_Lang011 =	Ir Para / Rót&ulo
+	i_Lang012 =	Definir temp&orizador
 	i_Lang013 =	&Declaração Se
 	i_Lang014 =	&Variáveis / Matrizes
 	i_Lang015 =	&Funções / Métodos de Matriz
 	i_Lang016 =	&Enviar E-Mail
-	i_Lang017 =	&Baixar / Subir arquivos
+	i_Lang017 =	&Baixar arquivos
 	i_Lang018 =	Compactar / Descompactar ar&quivos
 	i_Lang019 =	&Internet Explorer
 	i_Lang020 =	I&nterface COM
@@ -324,7 +324,7 @@
 	c_Lang026 =	Ação
 	c_Lang027 =	Clicar
 	c_Lang028 =	Mover
-	c_Lang029 =	Mover e Clicar
+	c_Lang029 =	Mover E Clicar
 	c_Lang030 =	Rolar para Cima
 	c_Lang031 =	Rolar para Baixo
 	c_Lang032 =	Arrastar e Soltar
@@ -627,7 +627,7 @@
 	t_Lang072 =	Substituidos
 	t_Lang073 =	L&inhas Selecionadas
 	t_Lang074 =	&Todas as Linhas
-	t_Lang075 =	T&odas as Macros Macros
+	t_Lang075 =	Tod&as as Macros Macros
 	t_Lang076 =	Sobre
 	t_Lang077 =	&Expressão Regular
 	t_Lang078 =	Executar uma vez
@@ -760,6 +760,8 @@
 	t_Lang205 =	Modo De Correspondência De Título
 	t_Lang206 =	Velocidade De Correspondência De Título
 	t_Lang207 =	Cliente
+	t_Lang208 =	L&ocalizar
+	t_Lang209 =	S&ubstituir
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Abrir
@@ -769,11 +771,14 @@
 	d_Lang005 =	Salvar Projeto
 	d_Lang006 =	Não foi possível salvar/substituir o arquivo
 	d_Lang007 =	Erro
-	d_Lang008 =	Erro: Nenhuma Macro Selecionada.`nPor favor marque ao menos uma Macro na lista.
+	d_Lang008 =	Erro: Nenhuma Macro Selecionada.
+		Por favor marque ao menos uma Macro na lista.
 	d_Lang009 =	Erro: Nenhum Atalho Selecionado.
-	d_Lang010 =	Erro: Endereço Inválido.`nO endereço ou nome do arquivo selecionado é inválido.
+	d_Lang010 =	Erro: Endereço Inválido.
+		O endereço ou nome do arquivo selecionado é inválido.
 	d_Lang011 =	Aviso
-	d_Lang012 =	Nenhum controle selecionado.`nContinuar?
+	d_Lang012 =	Nenhum controle selecionado.
+		Continuar?
 	d_Lang013 =	Exportar Script
 	d_Lang014 =	Script Exportado
 	d_Lang015 =	Arquivo exportado com sucesso!
@@ -788,7 +793,8 @@
 	d_Lang022 =	Anterior
 	d_Lang023 =	Mensagem
 	d_Lang024 =	Carregar configuração padrão?
-	d_Lang025 =	Macro(s) ativada(s).`nUse os Atalhos para Iniciar.
+	d_Lang025 =	Macros activadas.
+		Use os Atalhos para Iniciar.
 	d_Lang026 =	para iniciar / parar a gravação
 	d_Lang027 =	Fim da gravação
 	d_Lang028 =	Gravando...
@@ -806,6 +812,7 @@
 	d_Lang038 =	Pressione OK para continuar.
 	d_Lang039 =	Tempo esgotado!
 	d_Lang040 =	Este recurso requer a Biblioteca GDI+.
+.	Tämä ominaisuus vaatii GDI+ kirjasto.	Aquesta funció requereix la biblioteca GDI+.
 		Pressione OK para ir para a página de download.
 	d_Lang041 =	O nome da variável contém um caractere ilegal.
 	d_Lang042 =	é uma palavra reservada.
@@ -833,8 +840,7 @@
 	d_Lang059 =	Este comando não suporta expressões ou funções.
 		Por favor associe uma variável e use-a no parâmetro.
 	d_Lang060 =	Nova versão disponível
-	d_Lang061 =	Gostaria de fazer o download agora?
-		Para desabilitar a verificação automática selecine Ajuda > Verificar ao iniciar
+	d_Lang061 =	
 	d_Lang062 =	Você já possui a versão mais recente.
 	d_Lang063 =	Ocorreu um erro durante a verificação.
 	d_Lang064 =	Erro em
@@ -901,35 +907,45 @@
 	d_Lang113 =	Nenhum erro informado.
 	d_Lang114 =	Scripts exportados (mesmo se compilado) com a função de envio de e-mail (CDO) terá informações visíveis das contas de e-mail usadas, incluindo a senha. O arquivo de projeto PMC não tem esta informação.
 	d_Lang115 =	- Segure Alt para ajustar a região para o mesmo local.
+	d_Lang116 =	Transferir e instalar
+	d_Lang117 =	Ir para página de download
+	d_Lang118 =	Baixando ... Por favor, aguarde.
 		
 ; 18. Start-up Tips		
-	Start_Tips =	Você pode criar Macros utilizando os botões de comando na janela principal ou usar o gravador para copiar suas ações. Vá até Opções > Configurações > Gravar para selecionar quais entradas serão gravadas.
-		Para utilizar o gravador para tarefas rápidas vá em Opções > Configurações > Gravação e marque a opção "Limpar Lista". Em seguida, clique no botão Gravar na janela principal e use F10 para limpar a Macro atual e iniciar uma nova com a mesma hotkey. Você também pode marcar a opção "Sempre Ativo" na janela principal para manter as teclas de gravação e execução ativas.
-		Para obter ajuda para um comando específico clique com o botão direito do mouse em qualquer lugar em uma janela de comando para mostrar links para a Ajuda online AutoHotkey.
-		Marque a opção "Capturar Teclas" para inserir teclas e combinações à sua Macro diretamente na da janela principal.
-		Digite teclas e combinações na Caixa de Atalhos na parte inferior e pressione o botão Inserir para adicioná-las às linhas selecionadas.
-		Se nenhuma linha estiver selecionada os botões de edição se aplicam a todas as linhas da lista.
-		Você pode atribuir suas próprias variáveis na janela Variáveis (Inserir > Declarações SE / Variáveis / Funções). Para usá-las dentro de comandos coloque o nome da variável entre sinais de porcentagem, por exemplo: %MyVar%.
-		O contador de "Loop" no topo define o número total de repetições para a Macro selecionada.
-		Você pode editar uma linha clicando duas vezes nela ou selecionando-a e clicando nos botões de edição na parte inferior.
-		Você pode editar várias linhas selecionadas usando as opções na barra de edição na parte inferior.
-		Selecione uma ou mais linhas para adicionar novos comandos em cima delas.
+	Start_Tips =	Confira os tutoriais em vídeo no www.macrocreator.com/help para aprender sobre as muitas características do Criador Macro do Pulover.
+		Para obter ajuda para um comando específico, clique com o botão direito em qualquer lugar em uma janela de comando para mostrar links para ajuda online.
+		Você pode criar macros utilizando os botões de comando na janela principal ou usar o gravador para copiar suas ações. Vá para Opções> Configurações> Gravação para selecionar quais entradas serão gravadas.
+		Use a barra de pesquisa ou "Encontre um comando" janela para procurar comandos e funções.
+		Você gostaria de ajudar a corrigir uma tradução ou até mesmo criar um novo? Vá para Opções> Configurações> Idioma editor e faça as correções que você deseja. Você pode visualizá-lo a qualquer momento. Clique em Enviar para enviar a sua revisão. Sinta-se livre para enviar qualquer número de correções quantas vezes quiser.
+		Marque a opção "Teclas de captura" para inserir as chaves e combinações para a sua Macro directamente a partir da janela principal.
+		Digite teclas e combinações na caixa Tecla de atalho na parte inferior e pressione o botão Inserir para adicioná-los para as linhas selecionadas.
+		Use os botões de edição na parte inferior da janela principal para definir repeat e atrasar a várias linhas ao mesmo tempo. Se não houver linhas são selecionados os botões de edição aplicam-se a todas as linhas na lista.
+		Quase todos os comandos e função aceita e gera variáveis. Você pode atribuir suas próprias variáveis ​​nas variáveis ​​janelas (Comandos> Variáveis ​​/ matrizes). Para usá-los dentro de comandos incluir o nome de variável em sinais de porcentagem, por exemplo .:% MyVar%. Em funções, usá-los sem sinais de porcentagem, por exemplo .: substr (MyVar, 5).
+		Botão direito do mouse em qualquer lugar na janela de comando para inserir facilmente variáveis ​​Built-in a partir de uma lista.
+		Para utilizar o gravador para tarefas rápidas vá para Opções> Configurações> Gravação e marque a opção "Limpar lista". Em seguida, clique no botão Gravar na janela principal e usar F10 para limpar a corrente Macro e começar um novo com a mesma tecla de atalho. Você também pode verificar a opção "Sempre ativo" na janela principal para manter a gravação e reprodução hotkeys ativa.
+		PMC suporta objetos Array e métodos, assim como scripts de AutoHotkey. Você pode criar matrizes de muitas maneiras, o mais usual é que vão para a janela Variáveis, marcando a opção "Expressão" e encerrando os valores entre parênteses, por exemplo .: [10, 20, Var, "string"]. Você também pode criar chaves nomeadas, por exemplo .: {Keya: Vara ", alguns key": "valor de cadeia"}.
+		Funções usar sintaxe de expressão AHK. strings literais devem ser colocados entre aspas, e variáveis ​​não precisam de sinais de porcentagem. Você pode usar outras funções ou elementos de matriz como parâmetros. Ex .: strReplace (MyVar, MyArray [ "A"], substr (outra_var, 2, 3)).
+		Expressões são suportados no AutoHotkey Expression Syntax. Para usar uma expressão dentro de um parâmetro de comando, inicie-o com um sinal de porcentagem, por exemplo .:% substr (Var, 5).
+		O contador de "Loop" no topo define o número total de voltas para a macro selecionada.
+		Você pode editar uma linha clicando duas vezes nele ou selecionando-o e clicando nos botões de edição na parte inferior. Você pode editar várias linhas selecionadas usando as opções na barra de edição na parte inferior.
+		Você pode definir suas próprias funções, em função> Criar função e usá-los a partir da janela de função ou expressões dentro.
+		Você pode definir Globa variáveis ​​/ locais e estáticos para funções definidas pelo usuário. variáveis ​​globais definidas em Opções> Configurações> variáveis ​​globais de usuário são considerados Super Global, e será sempre dentro de funções disponíveis, mesmo quando definido como local.
+		Selecione uma ou mais linhas para adicionar novos comandos em cima deles.
 		Você pode mover as linhas com clique-e-arraste.
-		Dê um duplo clique no ícone da bandeja para ativar hotkeys ou parar a execução / gravação. Clique nele com o botão do meio durante a execução ou gravação para fazer pausar.
-		Você pode exportar suas Macros para scripts AutoHotkey funcionais ou executáveis stand-alone através da janela de exportação.
-		Para gravar e executar o Mouse usando coordenadas absolutas vá em Opções > Configurações > Padrões e ajuste Coordenadas do Mouse para Tela.
-		Você pode abrir, copiar, mover ou apagar arquivos e pastas usando um dos comandos em Inserir > Executar / Arquivo / Texto / Misc.
-		Para gravar Down e Up estado de cada chave vá para Opções > Configurações > Gravação e marque "Capturar estado da tecla (press. / solta)" opção.
-		Você pode usar teclas de atalho para acelerar ou desacelerar Execução. Vá até Opções > Configurações > Execução para definir as chaves e velocidade.
-		Para ajustar a área de captura utilizando a ferramenta "Capturar Imagem" vá em Opções > Configurações > Imagens e selecione "Press. Enter para capturar". Depois de desenhar o controle do uso do retângulo+setas para mover as teclas de seta de seleção e Shift+para redimensioná-la.
-		Seleção rápida: Selecione uma linha e clique no cabeçalho da coluna para selecionar linhas semelhantes baseadas no texto da célula de coluna.
-		A janela Executar / Arquivo / Texto / Misc. tem muitos outros comandos úteis, como Desligar e URLDownloadToFile.
-		Use a função "Screenshot" na janela de funções (Inserir > Declaração Se / Variáveis / Funções) para fazer uma screenshot de parte da tela. O primeiro parâmetro é o caminho e o nome do arquivo de destino com uma extensão png. O segundo parâmetro são as coordenadas da tela separadas por barra vertical, por exemplo, 100|200|50|100 (X|Y|Largura|Altura).
-		Clique no cabeçalho da coluna Índice de ligar / desligar Ajuda marcas e cores para Loops e declarações. Duplo-Clique no cabeçalho da coluna Ação para ligar / desligar recuo para Loops e declarações.
-		Você pode depurar suas macros utilizando a tecla de excução manual e as opções de execução no menu Macro. Você também pode desativar ações, desmarcando-as na lista da Macro.
-		Para fazer suas Macros funcionarem apenas em uma determinada janela vá em Macro > Atalho Condicionais.
-		Você pode definir suas próprias variáveis globais para serem carregadas ao iniciar e para serem exportadas. Vá em Opções > Configurações > Variáveis Globais do Usuário para adicioná-las.
-		Você pode executar funções avançadas como SubStr e RegExReplace da janela Funções (Inserir > Declaração Se / Variáveis / Funções). Ou executar suas próprias funções a partir de scripts AutoHotkey externos.
+		Dê um duplo clique no ícone de Bandeja para activar as teclas de atalho ou parar a reprodução / gravação. Clique nele com o botão do meio durante a reprodução ou gravação para fazer uma pausa.
+		Você pode exportar seus Macros a scripts AutoHotkey de trabalho ou autônomo executáveis ​​a partir da janela de exportação.
+		Para gravar e reproduzir rato usando coordenadas absolutas ir para Opções> Configurações> Padrões e definir coordenadas do mouse para Screen.
+		Você pode abrir, copiar, mover ou apagar arquivos e pastas usando um dos comandos em Comandos> Executar / File / String / Misc. Existem muitos outros comandos úteis como StringReplace, InputBox e MouseGetPos.
+		Para gravar Down e do estado para cima de cada movimento chave para Opções> Configurações> Gravação e verifique "Capture estado-chave (Down / Up)" opção.
+		Você pode usar teclas de atalho para acelerar ou desacelerar a reprodução. Vá para Opções> Configurações> Reprodução para definir as chaves e velocidade.
+		Para ajustar a área de captura usando o "Fazer Screenshot" ferramenta de ir para Opções> Configurações> Imagens e selecione "Pressione Enter para capturar". Depois de desenhar as teclas de seta controlar o uso retângulo + para mover a seleção e Shift + teclas de seta para redimensioná-la.
+		Quick Select: Selecione qualquer linha e clique no cabeçalho da coluna para selecionar linhas semelhantes à base de texto de celular a partir dessa coluna.
+		Clique no cabeçalho índice de coluna para ligar / desligar Ajuda marcas e cores para Loops e declarações. Dê um duplo clique no cabeçalho da coluna Ação para ligar / desligar recuo para Loops e declarações.
+		Você pode depurar suas macros usando o Hotkey manual e as opções de reprodução no menu Macro. Você também pode desativar ações, desmarcando-los na lista Macro.
+		Para fazer suas macros trabalhar apenas em uma determinada janela ir para Macro> sensível ao contexto Teclas de atalho.
+		Você pode definir suas próprias variáveis ​​globais sejam carregados na inicialização e a ser exportado. Ir para Opções> Configurações> user variáveis ​​globais para adicioná-los.
+		Você pode executar funções avançadas, tais como substr e REGEXREPLACE da janela de funções (Comandos> Funções / Métodos de Array). Você também pode definir suas próprias funções ou funções executadas a partir de scripts AutoHotkey externas.
+		Você pode gravar os movimentos do mouse em relação à posição atual, mantendo CapsLock durante a gravação (você pode mudar a chave e torná-lo alternar nas configurações).
 		
 ; 19. Tooltips		
 	A_List_TT =	Selecionar Macro (Ctrl+1~0)
@@ -998,12 +1014,12 @@
 	Ex_UV_TT =	Exportar variáveis globais.
 	Ex_WN_TT =	Ativa ou desativa avisos para as condições específicas que podem indicar um erro, como um erro de digitação ou falta de declaração "global".
 	ExpList_TT =	Duplo-Clique para editar
-	ExprLink2_TT =	- NÃO COLOQUE VARIÁVEIS ENTRE SINAIS DE PORCENTAGEM AQUI.
+	ExprLink2_TT 	- NÃO COLOQUE VARIÁVEIS ENTRE SINAIS DE PORCENTAGEM AQUI.
 		- A maioria das expressões AHK são suportadas.
 		- Pode usar textos, variáveis, matrizes e funções.
-		- Para usar textos, coloque-os entre aspas, ex.: var = "a".
-		- Condições multiplas são suportadas, ex.: var = "a" || InStr(var, "b").
-	ExprLink3_TT =	- NÃO COLOQUE VARIÁVEIS ENTRE SINAIS DE PORCENTAGEM AQUI.
+		- Para usar textos, coloque-os entre aspas, ex.: var  "a".
+		- Condições multiplas são suportadas, ex.: var  "a" || InStr(var, "b").
+	ExprLink3_TT 	- NÃO COLOQUE VARIÁVEIS ENTRE SINAIS DE PORCENTAGEM AQUI.
 		- A maioria das expressões AHK são suportadas.
 		- Pode usar textos, variáveis, matrizes e funções.
 		- Para usar textos, coloque-os entre aspas, ex.: var = "a".
@@ -1099,13 +1115,13 @@
 	Co_Oper_6 =	Maior ou igual
 	Co_Oper_7 =	Menor ou igual
 	Co_Oper_8 =	Em (lista)
-	Co_Oper_9 =	 Não em (lista)
-	Co_Oper_10 =	 Contém (lista)
-	Co_Oper_11 =	 Não contém (lista)
-	Co_Oper_12 =	 Entre (linha 1) e (linha 2)
-	Co_Oper_13 =	 Não entre (linha 1) e (linha 2)
-	Co_Oper_14 =	 É (tipo)
-	Co_Oper_15 =	 não é (tipo)
+	Co_Oper_9 =	Não em (lista)
+	Co_Oper_10 =	Contém (lista)
+	Co_Oper_11 =	Não contém (lista)
+	Co_Oper_12 =	Entre (linha 1) e (linha 2)
+	Co_Oper_13 =	Não entre (linha 1) e (linha 2)
+	Co_Oper_14 =	É (tipo)
+	Co_Oper_15 =	Não é (tipo)
 		
 ; 21. IE Commands Tips		
 	IE_Cmd_Index =	
@@ -1135,7 +1151,7 @@
 	Value	Copia ou define o valor de um objeto.
 	Width	Define ou copia o comprimento de conteúdo do objeto.
 		
-; 22. COM Methods Tips		
+; 22. COM Objects Tips		
 	COM_CLSID_Index =	
 	Excel.Application	Manipula planilhas de Excel.
 	HTMLfile	Pode ser usado para ler, escrever e interagir com HTML.
@@ -1283,6 +1299,7 @@
 	Length	Retorna o tamanho de uma matriz linear começando na posição 1.
 	ListVars	Exibe as variáveis do script: seus nomes e conteúdos atuais.
 	Ln	Retorna o logaritmo natural (base e) do n.
+	LoadPicture	Carrega uma imagem de arquivo e retorna um bitmap ou ícone do manípulo.
 	Log	Retorna o logaritmo (base 10) de número.
 	Loop (files & folders)	Recupera os arquivos especificados ou pastas, uma de cada vez.
 	Loop (normal) 	Realizar uma série de comandos repetidamente: ou o número especificado de vezes ou até ruptura for encontrado.
@@ -1367,11 +1384,36 @@
 	Until	Aplica-se uma condição para a continuação de um loop ou For-loop.
 	UrlDownloadToFile	Download de um arquivo da Internet.
 	UserFunction	Cria uma estrutura de Função.
+	Variable	Define um valor específico à uma variável.
 	While	Executa uma série de comandos repetidamente, até que a expressão especificada for avaliada como falsa.
 	WinActivate	Ativa a janela especificada (faz tudo).
 	WinActivateBottom	Mesmo que WinActivate exceto que ele ativa o mais inferior (menos recentemente ativo) janela correspondente ao invés do superior.
 	WinActive	Retorna o ID único (HWND) da janela ativa se ele corresponde aos critérios especificados.
 	WinClose	Fecha a janela especificada.
+	WinExist	Verifica se a janela especificada existe.
+	WinGet	Recupera único ID da janela especificada, o processo de identificação, nome do processo, ou uma lista de seus controles. Ele também pode recuperar uma lista de todas as janelas que correspondem aos critérios especificados.
+	WinGetClass	Recupera o nome da classe da janela especificada.
+	WinGetPos	Recupera a posição e o tamanho da janela especificada.
+	WinGetText	Recupera o texto da janela especificada.
+	WinGetTitle	Recupera o título da janela especificada.
+	WinHide	Oculta a janela especificada.
+	WinHttpDownloadToFile	Baixa um ou mais arquivos da Internet.
+	WinKill	Força a janela especificada para fechar.
+	WinMaximize	Amplia a janela especificada para o tamanho máximo.
+	WinMenuSelectItem	Invoca um item de menu na barra de menu da janela especificada.
+	WinMinimize	Fecha a janela especificada em um botão na barra de tarefas.
+	WinMinimizeAll	Minimiza todas as janelas.
+	WinMinimizeAllUndo	Reverte o efeito de um WinMinimizeAll anterior.
+	WinMove	Alterações a posição e / ou o tamanho da janela especificada.
+	WinRestore	Unminimizes ou unmaximizes a janela especificada, se for minimizada ou maximizada.
+	WinSet	Faz uma variedade de alterações na janela especificada, tais como "sempre em cima" e transparência.
+	WinSetTitle	Altera o título da janela especificada.
+	WinShow	Exibe novamente a janela especificada.
+	WinWait	Aguarda até que a janela especificada existe.
+	WinWaitActive	Aguarda até que a janela especificada está ativa.
+	WinWaitClose	Aguarda até que a janela especificada não existe.
+	WinWaitNotActive	Aguarda até que a janela especificada não está ativa.
+	Zip / UnZip	Comprimir ou descomprimir um ou mais arquivos zip.
 	WinExist	Verifica se a janela especificada existe.
 	WinGet	Recupera único ID da janela especificada, o processo de identificação, nome do processo, ou uma lista de seus controles. Ele também pode recuperar uma lista de todas as janelas que correspondem aos critérios especificados.
 	WinGetClass	Recupera o nome da classe da janela especificada.

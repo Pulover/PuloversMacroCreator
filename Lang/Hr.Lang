@@ -62,13 +62,13 @@
 	i_Lang008 =	&Slika / Pixel Traži
 	i_Lang009 =	Tr&čanje / File / String / Razno.
 	i_Lang010 =	P&etlja
-	i_Lang011 =	&Goto
-	i_Lang012 =	L&abel
-	i_Lang013 =	Ako &Izjave
+	i_Lang011 =	&Ići / Oznaci
+	i_Lang012 =	&Set timer
+	i_Lang013 =	&Ako Izjave
 	i_Lang014 =	&Varijable / Nizovi
 	i_Lang015 =	Vari&jable Funkcije / Metode array
 	i_Lang016 =	Po&šalji e-mail
-	i_Lang017 =	&Download / upload datoteka
+	i_Lang017 =	Pre&uzimanje datoteka
 	i_Lang018 =	&Zip / unzip kartoteka
 	i_Lang019 =	I&nternet Explorer
 	i_Lang020 =	&COM Sučelja
@@ -324,10 +324,10 @@
 	c_Lang026 =	Akcija
 	c_Lang027 =	Klik
 	c_Lang028 =	Premjestiti
-	c_Lang029 =	Kliknite Move &&
+	c_Lang029 =	Premjestiti I Kliknite
 	c_Lang030 =	Kotač se
 	c_Lang031 =	Kotača Down
-	c_Lang032 =	Drag Drop &&
+	c_Lang032 =	Povuci I Ispusti
 	c_Lang033 =	Koordinate
 	c_Lang034 =	Traži
 	c_Lang035 =	Podnaredbe
@@ -629,7 +629,7 @@
 	t_Lang074 =	&Svi reci
 	t_Lang075 =	S&vi Makro
 	t_Lang076 =	Oko
-	t_Lang077 =	&Regular Expression
+	t_Lang077 =	R&egular Expression
 	t_Lang078 =	Igrajte jednom
 	t_Lang079 =	Igrajte svakih X (mili) sekundi
 	t_Lang080 =	Timer
@@ -760,6 +760,8 @@
 	t_Lang205 =	Način Naslov Utakmica
 	t_Lang206 =	Naslov Brzina Utakmica
 	t_Lang207 =	Klijent
+	t_Lang208 =	P&ronaći
+	t_Lang209 =	Z&amijeniti
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Otvoreno
@@ -769,11 +771,14 @@
 	d_Lang005 =	Spremi Projekt
 	d_Lang006 =	Neuspjelo spremanje / prebrisati datoteku
 	d_Lang007 =	Pogreška
-	d_Lang008 =	Pogreška: Makro U Izabrani `nImajte provjeriti barem jednu makronaredbu na popisu..
+	d_Lang008 =	Pogreška: Makro U Izabrani 
+		Imajte provjeriti barem jednu makronaredbu na popisu..
 	d_Lang009 =	Pogreška: Ne Hotkey Odabrani.
-	d_Lang010 =	Pogreška:. Invalid Adresa `nTim odabrana adresa ili ime datoteke nije valjan.
+	d_Lang010 =	Pogreška:. Invalid Adresa 
+		Tim odabrana adresa ili ime datoteke nije valjan.
 	d_Lang011 =	Upozorenje
-	d_Lang012 =	Ne kontrola odabrana. `NNastaviti?
+	d_Lang012 =	Ne kontrola odabrana. 
+		Nastaviti?
 	d_Lang013 =	Izvoz Script
 	d_Lang014 =	Izvoze Script
 	d_Lang015 =	Datoteka je uspješno izvoze!
@@ -788,7 +793,8 @@
 	d_Lang022 =	Prijašnji
 	d_Lang023 =	Poruka
 	d_Lang024 =	Postavite zadane postavke?
-	d_Lang025 =	Makro (e) aktivirana. `NPomoću Hotkeys igrati.
+	d_Lang025 =	Makro aktiviran.
+		Koristite tipke na Play.
 	d_Lang026 =	za početak / zaustavljanje snimanja
 	d_Lang027 =	Snimanje zaustavljen
 	d_Lang028 =	Snimanje...
@@ -805,7 +811,8 @@
 	d_Lang037 =	Slika / Pixel nije pronađena.
 	d_Lang038 =	Pritisnite OK za nastavak.
 	d_Lang039 =	Timeout!
-	d_Lang040 =	Ova značajka zahtijeva knjižnicu GDI+.
+	d_Lang040 =	
+.	Tämä ominaisuus vaatii GDI+ kirjasto.	Ця функція вимагає бібліотеці GDI+.
 		Kliknite OK za odlazak na stranicu za preuzimanje.
 	d_Lang041 =	Naziv varijable sadrži nedopušteni znak.
 	d_Lang042 =	je rezervirana riječ.
@@ -833,8 +840,7 @@
 	d_Lang059 =	Ova naredba ne podržava izraze ili funkcije.
 		Molimo dodijeliti varijablu i koristiti ga u parametar.
 	d_Lang060 =	Nova verzija dostupna
-	d_Lang061 =	Želite li ga skinuti sada?
-		Kako onemogućiti automatske provjere odabir Pomoć > Provjerite na startup
+	d_Lang061 =	
 	d_Lang062 =	Vi već imate najnoviju verziju.
 	d_Lang063 =	Došlo je do pogreške tijekom provjere.
 	d_Lang064 =	Greška u
@@ -901,35 +907,45 @@
 	d_Lang113 =	Izvijestio bez pogreške.
 	d_Lang114 =	Skripte izvoze (čak i ako je sastavljen) s funkcijom poslati e-mail (CDO) će imati vidljive informacije o računima e-pošte koristi, uključujući i lozinke. Projekt datoteka PMC nema tu informaciju.
 	d_Lang115 =	- Držite Alt postaviti regiju na istom mjestu.
+	d_Lang116 =	Prijenos i instalirati
+	d_Lang117 =	Idi na stranicu za preuzimanje
+	d_Lang118 =	Preuzimanje ... Molim pričekajte.
 		
 ; 18. Start-up Tips		
-	Start_Tips =	Možete stvoriti makronaredbe pomoću naredbenog gumba u glavnom prozoru ili pomoću snimača kopirati svoje radnje. Idi na Opcije > Postavke > Snimanje odabrati ono što ulazi će biti zabilježen.
-		Za korištenje rekorder brze zadatke ići na Opcije > Postavke > Snimanje i provjeriti "Clear List" opciju. Zatim pritisnite gumb rekord u glavnom prozoru i F10 izbiti trenutni makro i započeti novu s istim hotkey. Također možete provjeriti "Uvijek aktivan" opciju u glavnom prozoru da bi se snimanje i reprodukcija hotkeys aktivna.
-		Da biste dobili pomoć za određene naredbe desnom tipkom miša bilo gdje na naredbeni prozor pokazati linkove na AutoHotKey online pomoći.
-		Provjerite "Hvatanje Keys" opciju za ulazak i kombinacije tipki na Macro izravno iz glavnog prozora.
-		Unesite tipki i kombinacije u hotkey kutiji na dnu i pritisnite tipku Insert bi ih dodali na odabranim redovima.
-		Ako nema reda odabrao edit tipke primjenjuje na sve retke na popisu.
-		Možete dodijeliti svoje varijable u varijablama prozori (Insert > Ako Izjave varijable / / funkcija). Kako ih koristiti unutar naredbe priložiti ime varijable u posto znakove, npr.: %MyVar%.
-		Loop brojač na vrhu postavlja ukupan broj petlji za odabrane Macro.
-		Možete urediti red tako da ga dvostrukim klikom ili ga i pritiskom tipke za uređivanje na dnu.
-		Možete uređivati više odabranih redaka pomoću mogućnosti u uređivanju traci na dnu.
-		Odabrati jedan ili više redaka za dodavanje novih naredbi na njih.
-		Možete premjestiti redaka s klik-i-povuci.
-		Dvaput kliknite na ikona prečaca za aktiviranje ili zaustavljanje reprodukcije / snimanja. Kliknite na njega s srednji gumb tijekom reprodukcije ili snimanja na pauzu.
-		Vostè pot exportar els seus macros als scripts AutoHotkey treball o executables independents de la finestra Exporta.
-		Za snimanje i reprodukciju miša preko apsolutnih koordinata idite na Opcije > Postavke > Zadani skup i Miš koordinate na zaslonu.
-		Vostè pot obrir, copiar, moure o esborrar arxius i carpetes utilitzant un dels comandaments de Inserir > Run / Arxiu / cadena / Misc.
-		Per gravar Down i Up estat de tots els go clau a Opcions > Configuració > Gravació i seleccioneu "Capturar estat clau (baix / dalt)" opció.
-		Podeu utilitzar tecles d'accés ràpid per accelerar o reduir la velocitat de reproducció. Aneu a Opcions > Configuració > Reprodueix per establir les claus i la velocitat.
-		Per ajustar l'àrea de captura amb "Fer Screenshot" aneu a Opcions > Configuració > Imatges i seleccioneu "Premeu Enter per capturar". Després de dibuixar l'ús tecles de control per moure el rectangle de selecció i Shift tecles de fletxa per canviar la seva mida.
-		Seleccioneu ràpida: Seleccioneu qualsevol fila i feu clic a una capçalera de columna per seleccionar files similars basades en text de la cel d'aquesta columna.
-		The Run / Arxiu / cadena / Misc. finestra té molts altres ordres útils com ara apagat i URLDownloadToFile.
-		Koristite "screenshot" funkciju u funkcija prozora (Umetnite > Ako Izjave / / varijable funkcionira) napraviti screenshot dijelu ekrana. Prvi parametar je odredišnoj datoteci je put i naziv s PNG produžetak. Drugi parametar su cijevi odvojene koordinate na zaslonu, npr. 100|200|50|100 (X|Y|Širina|Visina).
-		Feu clic a la capçalera de columna Índex per encendre / apagar Ajuda marques i colors de bucles i sentències. Feu doble clic a la capçalera de columna Acció per encendre / apagar sagnia de bucles i sentències.
-		Pot depurar les seves macros utilitzant el Hotkey manual i les opcions de joc al menú Macro. També pot desactivar desmarcant les accions en la llista de macros.
-		Per fer les seves macros només funcionen en una determinada finestra anar a Macro > Tecles d'accés directe sensibles al context.
-		Podeu definir les seves pròpies variables globals per ser carregat en l'arrencada i per a l'exportació. Aneu a Opcions > Configuració > Usuari Variables globals per afegir.
-		Podeu executar funcions avançades com ara substr i RegExReplace de la finestra Funcions (Inserir > Si Declaracions / variables / funcions). O executar les seves pròpies funcions de seqüència AutoHotkey externs.
+	Start_Tips =	Pogledajte video tutoriali na www.macrocreator.com/help~~pobj naučiti o mnogim značajkama Pulover makro Stvoritelja.
+		Da biste dobili pomoć za određene naredbe desnom tipkom miša bilo gdje na prozor naredbenog pokazati linkove na online pomoć.
+		Možete stvoriti makronaredbe pomoću naredbenog gumba na glavnom prozoru ili pomoću snimača kopirati svoje radnje. Idi na Opcije> Postavke> Snimanje za odabir što će biti zabilježen ulaza.
+		Koristite traku za pretraživanje ili "Traži naredbu" prozor za traženje naredbi i funkcija.
+		Želite li pomoći popraviti prijevod ili čak stvoriti novu? Idi na Opcije> Postavke> Jezik urednik i napraviti ispravke koje želite. Vi to u bilo koje vrijeme može pregledati. Kliknite na Pošalji da biste poslali reviziju. Slobodno podnijeti bilo koji broj ispravaka onoliko puta koliko želite.
+		Provjerite "hvatanje tipke" opciju za unos tipke i kombinacije kako bi vaš Makro izravno iz glavnog prozora.
+		Unesite ključeve i kombinacije u hotkey okvir na dnu i pritisnite gumb Insert da biste ih dodali u odabrane retke.
+		Koristite uređivanje tipke na dnu glavnog prozora postaviti ponavljanje i odgoditi za više redaka u isto vrijeme. Ako nema odabranih redaka se urediti tipke primjenjuje na sve retke u popisu.
+		Gotovo svaka naredba i funkcije prihvaća i izlazi varijabli. Možete dodijeliti svoje varijable u varijablama prozore (Naredbe> varijable / polja). Kako ih koristiti unutar naredbe priložiti naziv varijable u postocima u znakovima, npr .:% MyVar%. U funkcijama, koristiti ih bez znakova postotka, npr .: SubStr (MyVar, 5).
+		Desnom tipkom miša kliknite bilo gdje u naredbeni prozor za lako umetanje ugrađene varijable s popisa.
+		Za korištenje rekordera za brze poslove idite na Opcije> Postavke> snimanje i provjeriti "Clear list" opciju. Zatim kliknite na gumb za snimanje u glavnom prozoru i koristiti F10 za brisanje trenutne Makro i započeti novu s istim hotkey. Također možete provjeriti na "uvijek aktivan" opciju u glavnom prozoru da bi snimanje i reprodukciju hotkeys aktivan.
+		PMC podržava Array predmete i metode, kao i AutoHotkey skripte. Možete stvoriti polja na mnogo načina, najčešći ide do prozora varijable, provjeravanje "Expression" opciju i zatvara vrijednosti u zagradama, npr .: [10, 20, Var "string"]. Također možete stvoriti nazivom tipke, npr .: {Keya: Vara ", neki ključ": "string vrijednost"}.
+		Funkcije koristite AHK izraz sintakse. Literalni string mora se nalaziti u navodnicima, a varijable ne trebaju posto znakove. Možete koristiti i druge funkcije ili polje elemente kao parametara. Npr .: StrReplace (MyVar, MyArray [ "A"], SubStr (OtherVar, 2, 3)).
+		Izrazi podržani u AutoHotkey Expression sintakse. Za korištenje izraza unutar parametar komandne, početi s postotnim znak, npr .:% SubStr (Var, 5).
+		U "Loop" brojač na vrhu postavlja ukupan broj petlji za odabrani Macro.
+		Možete urediti red tako da ga dvostrukim klikom ili tako da ga odaberete i kliknete na gumbe Uredi pri dnu. Možete urediti više odabranih redaka pomoću opcije u uređivanju traci pri dnu.
+		Možete definirati vlastite funkcije u funkciji> Nova funkcija i koristiti ih s prozora funkcije ili unutar izraza.
+		Možete definirati Globa / lokalne i statičke varijable za korisnički definirane funkcije. Globalne varijable definirane u Opcije> Postavke> Korisničke globalne varijable smatraju Super Global, i uvijek će biti dostupni unutar funkcije, čak i kada se definira kao lokalni.
+		Odaberite jedan ili više redaka za dodavanje novih naredbi na vrhu njih.
+		Možete premjestiti retke Kliknite-i-povucite.
+		Dvaput kliknite na pladanj ikona za aktiviranje hotkeys ili zaustavljanje reprodukcije / snimanja. Kliknite na nju sa srednje tipke tijekom reprodukcije ili snimanja na pauzu.
+		Možete izvesti svoje Makronaredbe da rade AutoHotkey skripte ili stand-alone izvršne kroz prozor Export.
+		Za snimanje i reprodukciju miš pomoću apsolutnih koordinata idite na Opcije> Postavke> Zadani skup i postavili Miš koordinata na radnu površinu.
+		Možete otvoriti, kopirati, premjestiti ili izbrisati datoteke i mape koristeći neki od naredbi u naredbi> Run / File / String / Misc. Postoje mnoge druge korisne naredbe kao što StringReplace, InputBox i MouseGetPos.
+		Za snimanje dolje i gore stanje svakog ključnog idite na Opcije> Postavke> snimanje i kliknite na "tipka za snimanje stanje (dolje / gore)" opciju.
+		Možete koristiti hotkeys ubrzati ili usporiti reprodukcije. Idi na Opcije> Postavke> Reprodukcija postaviti ključeve i brzinu.
+		Za podešavanje snimanja površinu pomoću "Uvođenje Screenshot" alat idite na Opcije> Postavke> Slike i odaberite "Pritisnite Enter za hvatanje". Nakon izrade uporabne pravokutnik Control + tipke sa strelicama za pomicanje odabira i Shift + tipke sa strelicama za promjenu veličine.
+		Quick Select: Odaberite bilo koji redak i kliknite na zaglavlje stupca da biste odabrali slične retke na temelju teksta stanice iz tog stupca.
+		Kliknite na Index zaglavlja stupca za uključivanje / isključivanje za pomoć Marks and Boje za Loops i izvještaje. Dvaput kliknite na Action zaglavlje stupca da uključivanje / isključivanje uvlaku za Loops i izvještaja.
+		Možete ispravljanje pogrešaka Makronaredbe pomoću manualnog hotkey i mogućnosti igrati u makro izbornika. Također možete onemogućiti djelovanje tako da ih Odznačavanjem u Macro popisu.
+		Da bi vaše makronaredbe radi samo na određenom prozoru idite na makro> Kontekstna hotkeys.
+		Možete postaviti svoje vlastite globalne varijable da se učita na početak i da se izvozi. Idi na Opcije> Postavke> Korisničke globalne varijable kako bi ih dodali.
+		Možete pokrenuti napredne funkcije kao što su SubStr i REGEXREPLACE iz prozora funkcija (Naredbe> Funkcija / Array metodama). Također možete definirati svoje vlastite funkcije ili pokretanje funkcije od vanjskih AutoHotkey skripte.
+		Možete snimiti mišem pokreta u odnosu na trenutnu poziciju držeći CapsLock tijekom snimanja (možete promijeniti ključ i čine ga uključi u postavkama).
 		
 ; 19. Tooltips		
 	A_List_TT =	Odabir Makro (Ctrl+1~0)
@@ -998,12 +1014,12 @@
 	Ex_UV_TT =	Izvoz globalne varijable.
 	Ex_WN_TT =	Omogućuje ili onemogućuje upozorenja za određene uvjete koji mogu ukazivati na pogrešku, kao što su pogreškom ili nestalog "globalne" izjave.
 	ExpList_TT =	Dvaput kliknite za uređivanje
-	ExprLink2_TT =	- NE PRILAŽETE VARIJABLI U POSTOCIMA ZNAKOVA OVDJE.
+	ExprLink2_TT 	- NE PRILAŽETE VARIJABLI U POSTOCIMA ZNAKOVA OVDJE.
 		- Većina AHK izraza su podržani.
 		- Možete koristiti žice, varijabli, polja i funkcije.
-		- Za korištenje žice, priložiti ih u navodnike, npr: var = "A".
-		- Više Izjave su podržani, npr: var = "a" || Instr (var, "b").
-	ExprLink3_TT =	- NE PRILAŽETE VARIJABLI U POSTOCIMA ZNAKOVA OVDJE.
+		- Za korištenje žice, priložiti ih u navodnike, npr: var  "A".
+		- Više Izjave su podržani, npr: var  "a" || Instr (var, "b").
+	ExprLink3_TT 	- NE PRILAŽETE VARIJABLI U POSTOCIMA ZNAKOVA OVDJE.
 		- Većina AHK izraza su podržani.
 		- Možete koristiti žice, varijabli, polja i funkcije.
 		- Za korištenje žice, priložiti ih u navodnike, npr: var = "A".
@@ -1099,13 +1115,13 @@
 	Co_Oper_6 =	Veće ili jednako
 	Co_Oper_7 =	Manje ili jednako
 	Co_Oper_8 =	U (popis)
-	Co_Oper_9 =	 Ne u (popis)
-	Co_Oper_10 =	 Sadrži (popis)
-	Co_Oper_11 =	 Ne sadrži (popis)
-	Co_Oper_12 =	 Između (linija 1) i (linija 2)
-	Co_Oper_13 =	 Ne između (linija 1) i (linija 2)
-	Co_Oper_14 =	 Je li (tip)
-	Co_Oper_15 =	 Nije (tip)
+	Co_Oper_9 =	Ne u (popis)
+	Co_Oper_10 =	Sadrži (popis)
+	Co_Oper_11 =	Ne sadrži (popis)
+	Co_Oper_12 =	Između (linija 1) i (linija 2)
+	Co_Oper_13 =	Ne između (linija 1) i (linija 2)
+	Co_Oper_14 =	Je li (tip)
+	Co_Oper_15 =	Nije (tip)
 		
 ; 21. IE Commands Tips		
 	IE_Cmd_Index =	
@@ -1135,7 +1151,7 @@
 	Value	Dobiva ili postavlja vrijednost objekta.
 	Width	Postavlja ili vraća širinu objekta.
 		
-; 22. COM Methods Tips		
+; 22. COM Objects Tips		
 	COM_CLSID_Index =	
 	Excel.Application	Manipulira Excel listova.
 	HTMLfile	Može se koristiti za čitanje, pisanje i interakciju s HTML.
@@ -1283,6 +1299,7 @@
 	Length	Vraća duljinu linearno početkom na poziciji 1.
 	ListVars	Prikazuje skripte varijable: njihova imena i trenutni sadržaj.
 	Ln	Vraća prirodni logaritam (baze e) broja.
+	LoadPicture	Učitava slike iz datoteke i vraća bitmap ili ikonu ručku.
 	Log	Vraća logaritam (baza 10) broja.
 	Loop (files & folders)	Dohvaća određene datoteke ili mape, jednu po jednu.
 	Loop (normal) 	Izvođenje niz naredbi puta: ili određeni broj puta ili do prekida je naišao.
@@ -1367,11 +1384,36 @@
 	Until	Odnosi uvjet za nastavak petlje ili for-petlje.
 	UrlDownloadToFile	Preuzimanja datoteku s Interneta.
 	UserFunction	Stvara funkciju strukturu.
+	Variable	Dodjeljuje određenu vrijednost varijable.
 	While	Obavlja niz naredbi više puta dok se navedeni izraz false.
 	WinActivate	Aktivira navedene prozor (čini najvažnije).
 	WinActivateBottom	Isto kao WinActivate osim da aktivira najniži (najmanje zadnje aktivne) isti prozor umjesto najviši.
 	WinActive	Vraća jedinstveni ID (HWND) od aktivnog prozora, ako to odgovara zadanim uvjetima.
 	WinClose	Zatvara odabrani prozor.
+	WinExist	Provjerava jesu li navedeni prozor postoji.
+	WinGet	Dohvaća navedeni prozor je jedinstveni ID, ID procesa, proces ime, ili popis njezinih kontrola. On također može dohvatiti popis svih prozora koji odgovaraju zadanim uvjetima.
+	WinGetClass	Dohvaća odabrani prozor u ime klase.
+	WinGetPos	Dohvaća položaj i veličinu navedenog prozora.
+	WinGetText	Dohvaća tekst iz određenog prozora.
+	WinGetTitle	Dohvaća titulu navedenog prozora.
+	WinHide	Skriva navedenu prozor.
+	WinHttpDownloadToFile	Preuzimanje jednu ili više datoteka s Interneta.
+	WinKill	Snaga navedeno prozor zatvorite.
+	WinMaximize	Povećava naveden prozor svoje maksimalne veličine.
+	WinMenuSelectItem	Priziva izbornika na traci izbornika u određenom prozoru.
+	WinMinimize	Sažimanje odabrani prozor na gumb na traci.
+	WinMinimizeAll	Minimizira sve prozore.
+	WinMinimizeAllUndo	Zakretanje učinak prethodnog WinMinimizeAll.
+	WinMove	Mijenja položaj i / ili veličinu navedeni prozor.
+	WinRestore	Unminimizes ili unmaximizes navedenu prozor ako je minimiziran ili maksimiziran.
+	WinSet	Stvara razne promjene u navedenom prozora, kao što su "uvijek na vrhu" i transparentnosti.
+	WinSetTitle	Mijenja naslov navedenom prozoru.
+	WinShow	Otkriva navedenu prozor.
+	WinWait	Waits sve navedeno postoji prozor.
+	WinWaitActive	Waits sve navedeno prozor aktivan.
+	WinWaitClose	Waits sve navedeno prozor ne postoji.
+	WinWaitNotActive	Waits sve navedeno prozor nije aktivna.
+	Zip / UnZip	Stisnuti ili otpakirati jedan ili više zip datoteka.
 	WinExist	Provjerava jesu li navedeni prozor postoji.
 	WinGet	Dohvaća navedeni prozor je jedinstveni ID, ID procesa, proces ime, ili popis njezinih kontrola. On također može dohvatiti popis svih prozora koji odgovaraju zadanim uvjetima.
 	WinGetClass	Dohvaća odabrani prozor u ime klase.

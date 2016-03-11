@@ -62,15 +62,15 @@
 	i_Lang008 =	O&brázok / Pixel Vyhľadávanie
 	i_Lang009 =	&Spustiť / Súbor / String / Misc.
 	i_Lang010 =	&Loop
-	i_Lang011 =	&Goto
-	i_Lang012 =	L&abel
+	i_Lang011 =	P&rejsť Na Etikete /
+	i_Lang012 =	Set &časovač
 	i_Lang013 =	Pok&iaľ Závierka
 	i_Lang014 =	&Ukazovatele / Poľa
 	i_Lang015 =	&Funkcia / Metódy poľa
-	i_Lang016 =	Posla&ť email
-	i_Lang017 =	&Download / upload súborov
+	i_Lang016 =	Posl&ať email
+	i_Lang017 =	S&úbory k stiahnutiu
 	i_Lang018 =	&Zip / rozbalenie súborov
-	i_Lang019 =	Inte&rnet Explorer
+	i_Lang019 =	Internet E&xplorer
 	i_Lang020 =	&COM Rozhranie
 	i_Lang021 =	&Windows Správy
 	i_Lang022 =	N&ájsť príkaz
@@ -324,10 +324,10 @@
 	c_Lang026 =	Akcie
 	c_Lang027 =	Kliknite na tlačidlo
 	c_Lang028 =	Pohyb
-	c_Lang029 =	Presunúť & Click
+	c_Lang029 =	Pohybovať A Kliknite
 	c_Lang030 =	Kolesá Hore
 	c_Lang031 =	Kolesá dole
-	c_Lang032 =	Drag & Drop
+	c_Lang032 =	Drag And Drop
 	c_Lang033 =	Súradnice
 	c_Lang034 =	Vyhľadávanie
 	c_Lang035 =	Čiastkové
@@ -760,6 +760,8 @@
 	t_Lang205 =	Režim O Titul Zápas
 	t_Lang206 =	Názov Rýchlosť Zápas
 	t_Lang207 =	Zákazník
+	t_Lang208 =	N&ájsť
+	t_Lang209 =	Na&hradiť
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Otvorené
@@ -769,11 +771,14 @@
 	d_Lang005 =	UložIť Projekt
 	d_Lang006 =	Nepodarilo sa uložiť / prepísať súbor
 	d_Lang007 =	Chyba
-	d_Lang008 =	Chyba: Nie Makro`nSkontrolujte aspoň jeden makro v zozname.
+	d_Lang008 =	Chyba: Nie Makro
+		Skontrolujte aspoň jeden makro v zozname.
 	d_Lang009 =	Chyba: No Hotkey vybrané.
-	d_Lang010 =	Chyba: Neplatná adresa`nČím vybranú adresu alebo názov súboru je neplatný.
+	d_Lang010 =	Chyba: Neplatná adresa
+		Čím vybranú adresu alebo názov súboru je neplatný.
 	d_Lang011 =	Upozornenie
-	d_Lang012 =	No zvolená regulácia.`nPokračovať?
+	d_Lang012 =	No zvolená regulácia.
+		Pokračovať?
 	d_Lang013 =	Export Script
 	d_Lang014 =	Script exportovaný
 	d_Lang015 =	Súbor bol úspešne exportovaný!
@@ -788,7 +793,8 @@
 	d_Lang022 =	Predchádzajúci
 	d_Lang023 =	Správa
 	d_Lang024 =	Načítať predvolené nastavenia?
-	d_Lang025 =	Makro (y) aktivovaný.`nPoužite klávesové skratky hrať.
+	d_Lang025 =	Makrá aktivovaný.
+		Použite klávesových skratiek hrať.
 	d_Lang026 =	štart / stop nahrávania
 	d_Lang027 =	Nahrávanie sa zastaví,
 	d_Lang028 =	Nahrávanie...
@@ -805,7 +811,8 @@
 	d_Lang037 =	Obrázok / Pixel nebol nájdený.
 	d_Lang038 =	Stlačte OK pre pokračovanie.
 	d_Lang039 =	Časový limit!
-	d_Lang040 =	Táto funkcia vyžaduje rozhrania GDI+knižnice.
+	d_Lang040 =	
+.	Tämä ominaisuus vaatii GDI+ kirjasto.	Esta característica require + Biblioteca GDI.
 		Kliknite na tlačidlo OK prejdite na stránku pre stiahnutie.
 	d_Lang041 =	Názov premennej obsahuje nepovolený znak.
 	d_Lang042 =	je vyhradené slovo.
@@ -833,8 +840,7 @@
 	d_Lang059 =	Tento príkaz nepodporuje výrazy alebo funkcie.
 		Prosím priradiť premennú a použiť ho v parametri.
 	d_Lang060 =	Nová verzia je k dispozícii
-	d_Lang061 =	Chcete ju hneď stiahnuť?
-		Ak chcete zakázať automatickú kontrolu vyberte Pomocník> Skontrolovať pri spustení. > Pozrite sa na štarte
+	d_Lang061 =	
 	d_Lang062 =	Už máte najnovšiu verziu.
 	d_Lang063 =	Nastala chyba pri kontrole.
 	d_Lang064 =	Ralat dalam
@@ -901,35 +907,45 @@
 	d_Lang113 =	Hlásená žiadna chyba.
 	d_Lang114 =	Skrip dieksport (walaupun disusun) dengan fungsi e-mel menghantar (CDO) akan mempunyai maklumat yang boleh dilihat dengan akaun e-mel yang digunakan, termasuk KATALALUAN. PMC fail projek tidak mempunyai maklumat ini.
 	d_Lang115 =	- Podržte Alt nastaviť región na rovnakom mieste.
+	d_Lang116 =	Prenášať a inštalovať
+	d_Lang117 =	Prejdite na stránku na stiahnutie
+	d_Lang118 =	Sťahovanie ... Prosím, počkajte.
 		
 ; 18. Start-up Tips		
-	Start_Tips =	Môžete vytvárať makrá pomocou príkazových tlačidiel v hlavnom okne, alebo pomocou rekordéra kopírovať svoje akcie. Prejsť na Možnosti> Nastavenie> Nahrávanie na vstupy vybrať, čo budú zaznamenané.
-		Ak chcete použiť rekordér pre rýchle úlohy, ísť do Voľby> Nastavenia> Nahrávanie a zaškrtnite "Vymazať zoznam" možnosť voľby. Potom kliknite na tlačidlo Record v hlavnom okne a pomocou F10 pre vymazanie aktuálneho makra a začať novú s rovnakou klávesovú skratku. Môžete tiež zaškrtnúť voľbu "vždy aktívny" v hlavnom okne udržať nahrávanie a prehrávanie klávesy aktívne.
-		Ak chcete získať nápovedu pre konkrétny príkaz kliknite pravým tlačidlom myši na okne príkazového riadku sa zobrazí odkazy na AutoHotkey pomocníkovi.
-		Pozrite sa na "Capture" Keys možnosť zadať kľúče a kombinácie do makra priamo z hlavného okna.
-		Enter a ich kombinácie v poli Hotkey dolu a stlačte tlačidlo Vložiť a pridať ich do vybraných riadkov.
-		Ak žiadne položky sú označené editačné tlačidlá platí pre všetky riadky v zozname.
-		Môžete priradiť svoje vlastné premenné v premennej windows (Vložiť> if / premennej / funkcie). Ak chcete používať je vnútri príkazy názov premennej uzavrite v percentách znaky, napr: %MyVar%.
-		Loop počítadlo v hornej časti stanovuje celkový počet slučiek pre vybrané makro.
-		Môžete upraviť riadok poklepaním, alebo jeho výberom a kliknutím na tlačidlo Upraviť tlačidlá v dolnej časti.
-		Tu môžete editovať viac vybraných riadkov pomocou voľby v editačnom riadku v dolnej časti.
-		Vyberte jeden alebo viac riadkov, ktoré chcete pridať nové príkazy nad nimi.
+	Start_Tips =	Pozrite sa na video tutoriály na www.macrocreator.com/help~~pobj dozvedieť sa o mnohých funkcií makro Stvoriteľa Pulóver je.
+		Ak chcete získať pomoc pre o konkrétnom príkaze pravým tlačidlom myši kdekoľvek v príkazovom okne zobraziť odkazy na on-line nápovedu.
+		Môžete vytvoriť makrá pomocou tlačidiel príkazu v hlavnom okne alebo pomocou rekordéra kopírovať svoje akcie. Prejdite na Možnosti> Nastavenie> nahrávaním vybrať, aké vstupy budú zaznamenané.
+		Použite vyhľadávacie lištu alebo "Nájsť príkaz" okno na hľadanie príkazov a funkcií.
+		Chceli by ste pomôcť vyriešiť preklade, alebo dokonca vytvoriť nový? Prejsť na Možnosti> Nastavenie> editore jazyka a vykonať opravy, ktoré chcete. Môžete si pozrieť to kedykoľvek. Kliknite na Odoslať na odoslanie revízie. Pocit voľného odoslať ľubovoľný počet opráv toľkokrát, koľkokrát chcete.
+		Skontrolujte "zachytávanie klávesy" možnosť zadať kľúče a kombinácie, aby vaše makro priamo z hlavného okna.
+		Enter a kombinácie v tejto klávesové skratky poľa v dolnej časti a stlačte tlačidlo Vložiť a pridať ich do vybraných riadkov.
+		Použite editačné tlačidlá v dolnej časti hlavného okna pre nastavenie opakovania a oneskorenia na viac riadkov naraz. Ak nie sú vybraté žiadne riadky editačné tlačidlá platí pre všetky riadky v zozname.
+		Takmer každý príkaz a funkcia prijíma a výstupy premenných. Môžete priradiť vlastné premenné do premenných okna (Príkazy> Premenné / Arrays). Ich použitie vo vnútri príkazy názov premennej uzavrite do znaky percenta, napr.:% MyVar%. Vo funkciách, ich použitie, bez toho, aby medzi znakmi percenta, napr.: Substr (MyVar, 5).
+		Kliknite pravým tlačidlom myši kdekoľvek v okne príkazového riadku ľahko vložiť vstavaný premenné zo zoznamu.
+		Ak chcete použiť rekordér na rýchle úlohy, prejdite na Voľby> Nastavenia> Nahrávanie a zaškrtnite voľbu "Clear List". Potom kliknite na tlačidlo Record v hlavnom okne a pomocou F10 zrušte aktuálne makro a spustiť novú s rovnakou klávesovú skratku. Môžete sa tiež pozrieť na "Vždy aktívny" v hlavnom okne udržať nahrávanie a prehrávanie klávesových skratiek aktívny.
+		PMC podporuje objekty Array a metódy, rovnako ako AutoHotkey skriptov. Môžete vytvoriť pole v mnohých spôsoby, najbežnejšie je ísť k oknu premenných, kontrola voľbu "vyjadrenie" a prikladať hodnoty v zátvorkách, napr.: [10, 20, Var, "reťazec"]. Môžete si tiež vytvoriť pomenované kľúče, napr.: {Keya: Vara, "nejaký kľúč": "Hodnota reťazec"}.
+		Funkcia používať AHK syntax výraz. Doslovné reťazca musí byť v úvodzovkách, a premenné nepotrebujú znaky percent. Môžete použiť aj iné funkcie alebo prvky poľa ako parametre. Napr.: StrReplace (MyVar, MyArray [ "A"], substr (OtherVar, 2, 3)).
+		Výrazy sú podporované v AutoHotkey Expression syntaxe. Ak chcete použiť výraz vnútri príkazu parameter, spustite ho s znakom percenta, napr.:% Substr (Var, 5).
+		Ďalej len "Loop" počítadlo v hornej časti stanovuje celkový počet slučiek pre vybrané makro.
+		Môžete upraviť riadok tým, že ho poklepaním alebo jeho výberom a kliknutím na tlačidlo Upraviť v dolnej časti. Môžete upraviť viac vybrané riadky pomocou voľby v editačnom riadku v dolnej časti.
+		Môžete definovať svoje vlastné funkcie vo funkcii> Vytvoriť funkciu a používať ich z okna funkcie alebo vnútri výrazov.
+		Môžete definovať Globo / local statické premenné pre užívateľské funkcie. Globálne premenné sú definované v Voľby> Nastavenia> Používateľské globálne premenné sú považované za Super globálne, a bude vždy k dispozícii vnútri funkcie, aj keď je definovaná ako lokálne.
+		Vyberte jeden alebo viac riadkov pridať nové príkazy nad nimi.
 		Môžete presunúť riadky s click-and-drag.
-		Dvakrát kliknite na ikonu v oznamovacej oblasti na Klávesovú skratku aktivujete alebo zastaviť prehrávanie / nahrávanie. Kliknite na neho stredným tlačidlom počas prehrávania alebo nahrávania pozastavíte.
-		Môžete exportovať makrá pracovných AutoHotkey skripty alebo samostatné spustiteľné z exportu okna.
-		Ak chcete nahrávať a prehrávať myši pomocou absolútnych súradníc prejdite na Možnosti> Nastavenie> Predvolené nastavenie a myš polohu na obrazovke.
-		Môžete otvoriť, kopírovať, presúvať alebo mazať súbory a priečinky pomocou jedného z príkazov Vložiť> Run / Súbor / String / Misc.
-		Ak chcete nahrávať hore a dole stav po každom stlačení Choď na Voľby> Nastavenia> Nahrávanie a skontrolujte "Capture Key State (dole / hore)" možnosť voľby.
-		Môžete použiť klávesové skratky pre urýchlenie alebo spomalenie prehrávania. Prejsť na Možnosti> Nastavenie> Prehrať na nastavenie kľúče a rýchlosť.
-		Ak chcete nastaviť snímanie priestoru pomocou "Vytvoriť snímku" nástroj choďte na Možnosti> Nastavenie> Screenshoty a zvoľte "Stlačte Enter pre snímanie". Po nakreslení obdĺžnika použite Control+šípky pre pohyb výber a Shift+kurzorové tlačidlo zmeniť jeho veľkosť.
-		Rýchly výber: Vyberte ľubovoľný riadok a kliknite na hlavičku stĺpca vyberte podobné riadky na základe textu z bunky tohto stĺpca.
-		Run / Súbor / String / Misc. Okno má mnoho ďalších užitočných príkazov, ako je vypnutie a UrlDownloadToFile.
-		Použite "Screenshot" funkcia vo funkčnom okne (Vložiť> if / premennej / funkcie), aby sa snímka časti obrazovky. Prvý parameter je cieľový súbor je cesta a názov s príponou PNG. Druhý parameter sú potrubia oddelené polohu na obrazovke, napr 100 | 200 | 50 | 100 (X | Y | Šírka | Výška).
-		Kliknutím na záhlavie stĺpca index pre zapnutie / vypnutie pomocníka známky a farby pre slučky a príkazy. Double-kliknite na hlavičku stĺpca Akcia pre zapnutie / vypnutie odsadenie pre slučky a príkazy.
-		Môžete ladiť makrá pomocou klávesovej skratky Ručné a možnosťou prehrávania v ponuke makro. Môžete tiež vypnúť odškrtnutím akcie je v zozname Makro.
-		Ak chcete, aby vaše makrá fungujú iba na určitom okne ukážte na položku Makro> kontextovú klávesovým skratkám.
-		Môžete si nastaviť vlastné Globálne premenné má naložiť na spustenie a ktorý sa má vyviezť. Prejsť na Možnosti> Nastavenie> Užívateľská globálne premenné pridať.
-		Môžete spustiť pokročilé funkcie ako substr a RegExReplace z funkcií okna (Vložiť> if / premennej / funkcie). Alebo spustiť vlastné funkcie z externých AutoHotkey skriptov.
+		Dvakrát kliknite nad ikonou aktivovať klávesových skratiek alebo zastavenie prehrávania / nahrávania. Kliknite na neho prostredné tlačidlo počas prehrávania alebo nahrávania pozastaviť.
+		Môžete exportovať makrá do pracovných skriptov AutoHotkey alebo stand-alone spustiteľné súbory z okna Export.
+		Nahrávať a prehrávať myši pomocou absolútnych súradníc cez Voľby> Nastavenia> Predvolený a nastaviť súradnice myši na obrazovku.
+		Môžete otvoriť, kopírovať, presúvať či mazať súbory a priečinky pomocou jedného z príkazov Príkazy> Spustiť / Súbor / String / Rôzne. Existuje mnoho ďalších užitočných príkazov, ako StringReplace, InputBox a MouseGetPos.
+		Ak chcete nahrávať hore a dole stav každého kľúčového cez Voľby> Nastavenia> Záznam a nechajte "Spúšť fotoaparátu stavu (/ hore dole)" možnosť voľby.
+		Môžete použiť klávesové skratky zrýchliť alebo spomaliť prehrávanie. Voľby> Nastavenia> prehrávania pre nastavenie kľúča a rýchlosť.
+		Ak chcete upraviť zachytenie oblasť pomocou "Make Screenshot" nástroj cez Voľby> Nastavenia> obrazovky a zvoľte "Stlačením tlačidla Enter zachytiť". Po nakreslení obdĺžnika použití Ctrl + šípky pre pohyb výber a Shift + šípka zmeniť jeho veľkosť.
+		Rýchly výber: Vyberte ľubovoľný riadok a kliknite na hlavičku stĺpca pre výber podobné riadky na základe textu bunky z tohto stĺpca.
+		Kliknutím na záhlavie stĺpca v indexe pre zapnutie / vypnutie pomocníka Marks and Colors slučiek a uzávierky. Dvojitým kliknutím na záhlavie stĺpci Akcia pre zapnutie / vypnutie odsadenie pre slučky a uzávierky.
+		Môžete ladiť svoje makrá pomocou ručného klávesové skratky a možnosti hrať v ponuke makro. Môžete tiež zakázať akcie tým, že zrušením začiarknutia v zozname Makro.
+		Ak chcete, aby vaše makrá pracovať iba na určité okno ísť Makro> kontextová klávesových skratiek.
+		Môžete si nastaviť vlastné Globálne premenné, ktoré majú byť naložené na štarte a ktorý sa vyváža. Prejsť na Možnosti> Nastavenie> Užívateľské globálne premenné pridať.
+		Môžete spustiť pokročilé funkcie, ako substr a RegExReplace z funkcií okna (Príkazy> Funkcia / Array metódy). Môžete tiež definovať svoje vlastné funkcie alebo pri spúšťaní funkcií z externých AutoHotkey skriptov.
+		Môžete zaznamenávať pohyby myši vo vzťahu k aktuálnej pozíciu tým, že drží CapsLock pri nahrávaní (môžete zmeniť kľúč a urobiť z neho prepnúť v nastaveniach).
 		
 ; 19. Tooltips		
 	A_List_TT =	Zvoľte Makro (Ctrl +1 ~ 0)
@@ -998,12 +1014,12 @@
 	Ex_UV_TT =	Export globálne premenné.
 	Ex_WN_TT =	Povolí alebo zakáže varovanie pre špecifické podmienky, ktoré môžu indikovať chybu, ako je preklep alebo chýbajúce "globálne" vyhlásenie.
 	ExpList_TT =	Poklepaním editovať
-	ExprLink2_TT =	- NEPOUŽÍVAJTE UZAVRITE PREMENNÉ V ZNAKY PERCENTA TU.
+	ExprLink2_TT 	- NEPOUŽÍVAJTE UZAVRITE PREMENNÉ V ZNAKY PERCENTA TU.
 		- Väčšina AHK výrazy sú podporované.
 		- Môžete použiť reťazca, premenné, pole a funkcia.
-		- Ak chcete použiť reťazca, uzavrite do úvodzoviek, napríklad: var = "A".
-		- Viac príkazov sú podporované, napr: var = "a" || Instru (var, "b").
-	ExprLink3_TT =	- NEPOUŽÍVAJTE UZAVRITE PREMENNÉ V ZNAKY PERCENTA TU.
+		- Ak chcete použiť reťazca, uzavrite do úvodzoviek, napríklad: var  "A".
+		- Viac príkazov sú podporované, napr: var  "a" || Instru (var, "b").
+	ExprLink3_TT 	- NEPOUŽÍVAJTE UZAVRITE PREMENNÉ V ZNAKY PERCENTA TU.
 		- Väčšina AHK výrazy sú podporované.
 		- Môžete použiť reťazca, premenné, pole a funkcia.
 		- Ak chcete použiť reťazca, uzavrite do úvodzoviek, napríklad: var = "A".
@@ -1099,13 +1115,13 @@
 	Co_Oper_6 =	Väčšie alebo rovné
 	Co_Oper_7 =	Menší alebo rovný
 	Co_Oper_8 =	In (zoznam)
-	Co_Oper_9 =	 Nie v (zoznam)
-	Co_Oper_10 =	 Obsahuje (zoznam)
-	Co_Oper_11 =	 Nie je obsahuje (zoznam)
-	Co_Oper_12 =	 Medzi (linka 1) a (linka 2)
-	Co_Oper_13 =	 Nie je medzi (riadok 1) a (linka 2)
-	Co_Oper_14 =	 Je (typ)
-	Co_Oper_15 =	 Nie je (typ)
+	Co_Oper_9 =	Nie v (zoznam)
+	Co_Oper_10 =	Obsahuje (zoznam)
+	Co_Oper_11 =	Nie je obsahuje (zoznam)
+	Co_Oper_12 =	Medzi (linka 1) a (linka 2)
+	Co_Oper_13 =	Nie je medzi (riadok 1) a (linka 2)
+	Co_Oper_14 =	Je (typ)
+	Co_Oper_15 =	Nie je (typ)
 		
 ; 21. IE Commands Tips		
 	IE_Cmd_Index =	
@@ -1135,7 +1151,7 @@
 	Value	Získa alebo nastaví hodnotu objektu.
 	Width	Nastaví alebo získa šírku objektu.
 		
-; 22. COM Methods Tips		
+; 22. COM Objects Tips		
 	COM_CLSID_Index =	
 	Excel.Application	Manipuluje listy programu Excel.
 	HTMLfile	Môže byť použitý na čítať, písať a komunikovať s HTML.
@@ -1283,6 +1299,7 @@
 	Length	Vráti dĺžku lineárnym poli začínajúce v polohe 1.
 	ListVars	Zobrazí premenných skriptu: ich mená a aktuálny obsah.
 	Ln	Vráti prirodzený logaritmus (základ e) Number.
+	LoadPicture	Načíta obrázok zo súboru a vracia bitmapy alebo ikony rukoväť.
 	Log	Vráti logaritmus (základ 10) Number.
 	Loop (files & folders)	Načíta určité súbory alebo priečinky, jeden po druhom.
 	Loop (normal) 	Vykonajte sériu príkazov opakovane: buď zadaný počet opakovaní alebo kým prestávke sa stretol.
@@ -1367,11 +1384,36 @@
 	Until	Platí podmienku pre pokračovanie Loop alebo cyklus for.
 	UrlDownloadToFile	Stiahne súbor z internetu.
 	UserFunction	Vytvára štruktúru funkcie.
+	Variable	Priradí určenú hodnotu premennej.
 	While	Vykonáva množstvo príkazov opakovane, kým zadaný výraz vyhodnotený ako nepravdivý.
 	WinActivate	Aktivuje uvedené okno (robí to predovšetkým).
 	WinActivateBottom	Rovnaké ako WinActivate okrem toho, že sa aktivuje najspodnejšej (aspoň v poslednej dobe aktívne) zodpovedajúce okno, skôr než najvyššia.
 	WinActive	Vracia jedinečný identifikátor (HWND) aktívneho okna, ak to zodpovedá zadaným kritériám.
 	WinClose	Zatvorí zadané okno.
+	WinExist	Skontroluje, či zadaný okno existuje.
+	WinGet	Vyhľadá zadané okno je jedinečný identifikátor, ID procesu, procesné meno alebo zoznam svojich kontrol. To môže tiež získať zoznam všetkých okien zodpovedajúcich zadaným kritériám.
+	WinGetClass	Načíta zadaný názov triedy okna.
+	WinGetPos	Načíta polohu a veľkosť zadané okno.
+	WinGetText	Načíta text zo zadaného okna.
+	WinGetTitle	Načíta názov zadané okno.
+	WinHide	Skryje uvedené okno.
+	WinHttpDownloadToFile	Sťahovanie jeden alebo viac súborov z Internetu.
+	WinKill	Vynúti zadaný okno zatvorte.
+	WinMaximize	Zväčší zadané okno na maximálnu veľkosť.
+	WinMenuSelectItem	Vyvolá položku z panela ponúk zadané okno.
+	WinMinimize	Zbalí zadané okno do jedného tlačidla na paneli úloh.
+	WinMinimizeAll	Minimalizuje všetky okná.
+	WinMinimizeAllUndo	Obráti účinok predchádzajúcej WinMinimizeAll.
+	WinMove	Zmeny polohy a / alebo veľkosti zadané okno.
+	WinRestore	Unminimizes alebo unmaximizes zadaný okna, ak je minimalizácia alebo maximalizácia.
+	WinSet	Robí rad zmien uvedeného okna, ako "vždy navrchu" a transparentnosti.
+	WinSetTitle	Zmení názov určeného okna.
+	WinShow	Slúži na zobrazenie zadané okno.
+	WinWait	Čaká zadaný okno existuje.
+	WinWaitActive	Čaká zadaný okno je aktívny.
+	WinWaitClose	Čaká zadaný okno neexistuje.
+	WinWaitNotActive	Čaká zadaný okno nie je aktívne.
+	Zip / UnZip	Komprimovať alebo dekomprimovať jeden alebo viac súborov ZIP.
 	WinExist	Skontroluje, či zadaný okno existuje.
 	WinGet	Vyhľadá zadané okno je jedinečný identifikátor, ID procesu, procesné meno alebo zoznam svojich kontrol. To môže tiež získať zoznam všetkých okien zodpovedajúcich zadaným kritériám.
 	WinGetClass	Načíta zadaný názov triedy okna.

@@ -62,18 +62,18 @@
 	i_Lang008 =	K&ép / Pixel Search
 	i_Lang009 =	&Run / Fájl / String / Misc.
 	i_Lang010 =	&Hurok
-	i_Lang011 =	&Goto
-	i_Lang012 =	&Címke
+	i_Lang011 =	Me&gy / Label
+	i_Lang012 =	Se&t timer
 	i_Lang013 =	Ha &Nyilatkozatok
 	i_Lang014 =	&Változók / Tömbök
 	i_Lang015 =	&Funkciók / Array módszerek
 	i_Lang016 =	K&üldjön e-mailt
-	i_Lang017 =	&Letöltés / Feltöltés fájlok
+	i_Lang017 =	F&ájlok letöltése
 	i_Lang018 =	Zi&p / Unzip fájlok
-	i_Lang019 =	In&ternet Explorer
-	i_Lang020 =	C&OM Interface
+	i_Lang019 =	Internet E&xplorer
+	i_Lang020 =	&COM Interface
 	i_Lang021 =	A &Windows Üzenetek
-	i_Lang022 =	Keresse meg a parancsot
+	i_Lang022 =	Keresse meg a parancs&ot
 		
 ; 06. Edit Sub Menu		
 	e_Lang001 =	&Másolat
@@ -324,10 +324,10 @@
 	c_Lang026 =	Akció
 	c_Lang027 =	Kattintson a
 	c_Lang028 =	Mozog
-	c_Lang029 =	Mozgás és kattintson
+	c_Lang029 =	Mozgás És Kattintson
 	c_Lang030 =	Wheel Up
 	c_Lang031 =	Kerék Csökkenő
-	c_Lang032 =	Fogd és vidd
+	c_Lang032 =	Drag And Drop
 	c_Lang033 =	Koordináták
 	c_Lang034 =	Keresés
 	c_Lang035 =	Alparancs
@@ -760,6 +760,8 @@
 	t_Lang205 =	Cím Egyezik Mód
 	t_Lang206 =	Cím Egyezik Sebesség
 	t_Lang207 =	Ügyfél
+	t_Lang208 =	T&alál
+	t_Lang209 =	C&serélje
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Nyitva
@@ -769,11 +771,14 @@
 	d_Lang005 =	Projekt MentéS
 	d_Lang006 =	Nem sikerült menteni / felülírni a fájlt
 	d_Lang007 =	Hiba
-	d_Lang008 =	Hiba: Nincs Makró Kiválasztott.`nKérjük, legalább egy makró a listán.
+	d_Lang008 =	Hiba: Nincs Makró Kiválasztott.
+		Kérjük, legalább egy makró a listán.
 	d_Lang009 =	Hiba: Nincs Hotkey Kiválasztott.
-	d_Lang010 =	Hiba: Érvénytelen cím.`nA kiválasztott cím vagy a fájl név helytelen.
+	d_Lang010 =	Hiba: Érvénytelen cím.
+		A kiválasztott cím vagy a fájl név helytelen.
 	d_Lang011 =	Figyelmeztetés
-	d_Lang012 =	Nincs ellenőrzés kiválasztva.`nFolytatás?
+	d_Lang012 =	Nincs ellenőrzés kiválasztva.
+		Folytatás?
 	d_Lang013 =	Export Script
 	d_Lang014 =	Script Exportált
 	d_Lang015 =	A fájl sikeresen exportálták!
@@ -788,7 +793,8 @@
 	d_Lang022 =	Előző
 	d_Lang023 =	Üzenet
 	d_Lang024 =	Alapértelmezett beállítások betöltése?
-	d_Lang025 =	Makró (s) aktiválódik.`nA Hotkeys kell játszani.
+	d_Lang025 =	Makrók aktiválva.
+		Használja a Gyorsbillentyűk játszható.
 	d_Lang026 =	A start / stop felvétel
 	d_Lang027 =	Felvételi megállt
 	d_Lang028 =	Felvétel...
@@ -805,7 +811,8 @@
 	d_Lang037 =	Image / Pixel Not Found.
 	d_Lang038 =	Nyomja meg az OK gombot a folytatáshoz.
 	d_Lang039 =	Timeout!
-	d_Lang040 =	Ez a funkció csak a GDI+ Library.
+	d_Lang040 =	
+.	Tämä ominaisuus vaatii GDI+ kirjasto.	Þessi eiginleiki krefst GDI + Library.
 		Kattintson az OK gombra, hogy menjen le az oldalt.
 	d_Lang041 =	A változó neve szabálytalan karaktert tartalmaz.
 	d_Lang042 =	foglalt szó.
@@ -833,8 +840,7 @@
 	d_Lang059 =	Ez a parancs nem támogatja a kifejezéseket vagy funkciókat.
 		Kérjük, hozzá egy változó, és használja azt a paramétert.
 	d_Lang060 =	Az új verzió
-	d_Lang061 =	Szeretne letölteni most?
-		Ha ki szeretné kapcsolni az automatikus ellenőrzés válassza a Help > Ellenőrizze indításkor
+	d_Lang061 =	
 	d_Lang062 =	Már így is a legújabb verzióra.
 	d_Lang063 =	Hiba történt ellenőrzés.
 	d_Lang064 =	Hiba a
@@ -901,35 +907,45 @@
 	d_Lang113 =	Nem jelzett hibát.
 	d_Lang114 =	Scripts exportált (még ha össze) a send email funkció (CDO) lesz látható információk az e-mail fiókok használni, beleértve a jelszót. A PMC projekt fájl nem rendelkezik ezekkel az adatokkal.
 	d_Lang115 =	- Tartsa Alt beállítani régió ugyanazon a helyen.
+	d_Lang116 =	Transzfer és telepítése
+	d_Lang117 =	Tovább a letöltési oldalon
+	d_Lang118 =	Letöltés ... Kérem, várjon.
 		
 ; 18. Start-up Tips		
-	Start_Tips =	Hozhat létre makrók a Command gombok a fő ablakban, vagy a felvevő másolni a tevékenységét. Válassza az Opciók > Beállítások > Felvétel kiválasztható, hogy milyen bemeneteket kerülnek rögzítésre.
-		Ahhoz, hogy a felvevő gyors feladatok válasszuk az Opciók > Beállítások > Felvétel és ellenőrizze a "Lista törlése" opciót. Majd kattintson a Felvétel gombra a fő ablakot, majd F10 gombbal törölheti az aktuális makro-és újat azonos gyorsbillentyűket. Ön is ellenőrizheti a "Mindig aktív" opciót a fő ablakban, hogy felvétel és lejátszás gyorsbillentyűk aktív.
-		A súgó egy adott parancs a jobb gombbal bárhol egy parancssori ablakot mutatni linkek AutoHotkey súgójában.
-		Ellenőrizze, hogy a "Capture Keys" opciót be kulcsok és kombinációk a Macro közvetlenül a fő ablakban.
-		Adja meg a kulcsok és kombinációk a gyorsbillentyűket doboz alján, és nyomja meg az Insert gombot, hogy vegye fel őket a kiválasztott sorokat.
-		Ha nincs sor van kijelölve a szerkesztés funkció alkalmazni az összes sort a listában.
-		Hozzá lehet rendelni saját változókat a Változók windows (Beszúrás > IF / változók / függvények). Használatához be őket parancsokat csatolnia kell a változó neve százalékban jelek, pl: %MyVar%.
-		A "hurok" pult tetején beállítja az összes hurkot a kiválasztott Macro.
-		Bármikor módosíthatja a sorban duplán kattintva, vagy válassza ki azt, és kattintson a Szerkesztés gomb alján.
-		Tudod szerkeszteni több kijelölt sorokat a beállításokat a szerkesztő alján.
+	Start_Tips =	Nézze meg a videót tutorials a www.macrocreator.com/help, hogy megismerjék a számos jellemzője pulóver Macro Creator.
+		Ahhoz, hogy segítséget egy adott parancs a jobb gombbal bárhol a parancsablakban hivatkozásokat jelenít meg az online súgó.
+		Hozhat létre makrók segítségével parancsgombok a fő ablakban, vagy a felvevő másolni a tevékenységét. Válassza az Opciók> Beállítások> Felvétel kiválasztható, hogy milyen bemenetek kerülnek rögzítésre.
+		Használja a keresési sáv vagy a "Find parancsot" ablak kíván parancsokat és funkciókat.
+		Szeretné, hogy segítsen kijavítani fordítást vagy akár létre egy újat? Válassza az Opciók> Beállítások> Nyelv szerkesztő, és az esetleges javításokat szeretne. Ön megtekintheti, hogy bármikor. Kattints a Küldés gombra a felülvizsgálat. Nyugodtan Tetszőleges számú korrekciókat, ahányszor csak akar.
+		Ellenőrizze a "Capture Keys" opciót adja kulcsok és kombinációk a Macro közvetlenül a fő ablakban.
+		Adjon meg kulcsokat és kombinációk Billentyű doboz alján, majd nyomja meg a Beszúrás gombra, hogy adjunk nekik, hogy a select sorokat.
+		Használja a szerkesztés gomb alján a fő ablak beállításához ismételje meg, és késleltetheti a több sor egyszerre. Ha egy sor kiválasztott a szerkesztés funkció alkalmazni az összes sort a listában.
+		Szinte minden parancs és funkcióban és kimenetek változókat. Meg lehet rendelni saját változókat a Változók ablak (parancsok> változók / tömbök). Ahhoz, hogy használni őket belülről parancsokat zárja a változó nevét százalék jelek, pl .:% MyVar%. Ezen funkciók használni őket anélkül százalék jelek, pl .: substr (MyVar, 5).
+		Kattintson a jobb gombbal bárhol parancs ablakban könnyen be beépített változó listából.
+		Ahhoz, hogy a felvevő gyors feladatok válasszuk az Opciók> Beállítások> Felvétel és jelölje be a "List" opciót. Ezután kattintson a Felvétel gombra a fő ablakban, és használja az F10, hogy törölje a jelenlegi makro és elkezd egy újat az azonos gyorsbillentyűket. Azt is ellenőrizze a "mindig aktív" opciót a fő ablakban, hogy felvétel és lejátszás gyorsbillentyűk aktív.
+		PMC támogatja Array tárgyak és módszerek, mint AutoHotkey szkripteket. Hozhat létre tömbök sok, a legtöbb szokásos megy a változók ablakban, és ellenőrizze a "Expression" opciót, és ahhoz csatolja a zárójelbe tett értékek, pl .: [10, 20, Var, "string"]. Ön is létrehozhat nevű kulcsot, pl .: {Keya: Vara, "néhány kulcsfontosságú": "string értéke"}.
+		Funkciók használata AHK kifejezésszintaktikai. Betűs húrok kell idézőjelek közé, és a változók nem kell százalékos jeleket. Akkor más funkciók vagy tömb elemek paramétereit. Pl .: StrReplace (MyVar, myArray [ "A"], substr (OtherVar, 2, 3)).
+		Kifejezések támogatottak AutoHotkey kifejezésszintaktikai. Ahhoz, hogy használni egy kifejezés belsejében egy parancs paraméter, akkor indítsa el a százalékos jel, pl .:% substr (Var, 5).
+		A "hurok" pult tetején beállítja az összes hurok a kiválasztott makró.
+		Bármikor módosíthatja a sorban duplán kattintva, vagy kiválasztja azt, és kattintson a Szerkesztés gomb alján. Bármikor módosíthatja több kijelölt sorok használatával lehetőség a szerkesztés alján.
+		Akkor meg a saját függvényeket Function> Új funkció, és használja őket a Funkció ablak vagy kifejezések belsejében.
+		Megadhatjuk globa / local és statikus változók felhasználó által definiált függvények. A globális változók meghatározása az Opciók> Beállítások> Felhasználói globális változókat tekintjük Super Global, és mindig elérhető lesz benne funkciók, akkor is, ha definiált helyi.
 		Válasszon ki egy vagy több sort, hogy új parancsokat a tetejükön.
 		Tudod mozgatni sorok click-and-drag.
-		Kattintson duplán a tálcán az ikonra, hogy aktiválja gyorsbillentyűket vagy állítsa le a lejátszást / felvételt. Kattints rá a középső gombot a lejátszás vagy felvétel szüneteltetése.
-		A kivitel a makrók munka AutoHotkey szkriptek vagy önálló végrehajtható az Export ablakban.
-		Rögzíteni és lejátszani egér segítségével abszolút koordináták válasszuk az Opciók > Beállítások > Alapbeállítások és állítsa egér koordinátáit a képernyőn.
-		Meg tudja nyitni, másolni, áthelyezni vagy törölni fájlokat és mappákat az egyik parancs a Beszúrás > Run / Fájl / String / Misc.
-		Rögzítése lefelé és felfelé állapota minden kulcsfontosságú válasszuk az Opciók > Beállítások > Felvétel és ellenőriz "Rögzítés gomb állapotát (fel / le)" opciót.
-		Használhatja gyorsbillentyűk, hogy gyorsítsák fel, vagy lassítani lejátszás. Válassza az Opciók > Beállítások > Playback beállításához kulcsokat és a sebesség.
-		A beállításhoz rögzítési terület a "Make Pillanatkép" eszközt válasszuk az Opciók > Beállítások > Képek és válassza ki a "Nyomja meg az Enter Capture". Megrajzolása után a téglalap használatát vezérlő nyilakkal mozgatni a kiválasztás és a Shift nyilakkal a méretét.
-		Gyors Kiválasztás: Válassza ki sort, majd kattintson az oszlop fejlécére, hogy válassza ki a hasonló sorokat alapján sejt szöveget az oszlop.
-		A Run / Fájl / String / Misc. ablak sok más hasznos parancsokat, mint a leállítás és UrlDownloadToFile.
-		Használja a "Pillanatkép" funkciót funkciók ablakban (Beszúrás > IF / Változók / funkciók), hogy egy screenshot része a képernyőn. Az első paraméter a cél fájl elérési útját és nevét a png kiterjesztés. A második paraméter a cső elválasztott koordinátákat a képernyőn, például 100|200|50|100 (X|Y|Szélesség|Magasság).
-		Kattintson az Index fejlécére be / ki Súgó Marks és színek hurkok és nyilatkozatok. Kattintson duplán a cselekvési fejlécére be / ki a behúzás hurkok és nyilatkozatok.
-		Lehet hibakeresés makrók a Kézi Hotkey és a játék lehetőségek a Makró menüben. Azt is letilthatja intézkedéseit akadálytalan őket a Macro listában.
-		Ahhoz, hogy a makrók csak egy bizonyos ablakban a Macro > Context Sensitive gyorsbillentyűk.
-		Beállíthatjuk, hogy a saját globális változók kell betölteni az induló, és az exportot. Válassza az Opciók > Beállítások > Felhasználó globális változók, hogy adjunk nekik.
-		Futtathat speciális funkciókat, mint a substr és RegExReplace a funkciók ablakban (Beszúrás > IF / változók / függvények). Vagy futtatni a saját funkciók külső AutoHotkey szkripteket.
+		Kattintson duplán a tálcán az ikonra gyorsbillentyűk aktiválásához vagy leállításához lejátszás / felvétel. Kattints rá a középső gombot lejátszás közben, vagy a felvétel szüneteltetése.
+		A kivitel a makrók dolgozó AutoHotkey szkriptek vagy önálló futtatható az Export ablakot.
+		Felvételére és lejátszására egér segítségével abszolút koordinátákat válasszuk az Opciók> Beállítások> Alapbeállítások és állítsa egér koordinátáit képernyő.
+		Meg tudja nyitni, másolni, áthelyezni vagy törölni fájlokat és mappákat az egyik a parancsokat Parancsok> Futtatás / Fájl / String / Misc. Sok más hasznos parancsokat, mint például StringReplace, InputBox és MouseGetPos.
+		Rögzítéséhez lefelé és felfelé állapotában minden gomb Válassza az Opciók> Beállítások> Felvétel és jelölje be a "Rögzítés gomb állapotát (fel / le)" opciót.
+		Használhatja gyorsbillentyűk gyorsítani, lassítani lejátszás. Válassza az Opciók> Beállítások> Visszajátszás beállítani kulcsokat és a sebesség.
+		Állítsa rögzítési terület a "Make Screenshot" eszköz válasszuk az Opciók> Beállítások> Képek és válassza ki a "Press Enter Capture". Miután megrajzoltuk a téglalap használat Control + nyilakkal mozgatni a kiválasztás és a Shift + nyíl billentyűkkel méretét.
+		Gyors kijelölés: válasszon ki egy sort, majd kattintson az oszlop fejlécére kiválasztásához hasonló sorok alapján sejt szöveget, hogy az oszlop.
+		Kattintson az Index Oszlopfejléc kapcsolja On / Off Súgó Marks és színek hurkok és nyilatkozatok. Kattintson duplán a cselekvési Oszlopfejléc kapcsolja On / Off beljebb hurkok és nyilatkozatok.
+		Akkor hibakeresés makrók, a kézi Hotkey és a Play opciót a makró menüben. Azt is letilthatja akciók szüntesd őket a Macro listában.
+		Ahhoz, hogy a makrók csak a meghatározott ablak megy Macro> Context Sensitive gyorsbillentyűk.
+		Beállíthatjuk, hogy a saját globális változók kell betölteni indításkor és az exportot. Válassza az Opciók> Beállítások> Felhasználói globális változók, hogy adjunk nekik.
+		Meg lehet futtatni a fejlett funkciók, mint a substr és REGEXREPLACE a funkciók ablak (parancsok> Funkciók / Array módszerek). Azt is meghatározhatjuk, saját funkciókat vagy fuss funkciók külső AutoHotkey szkripteket.
+		Felvehet egér mozgását képest a jelenlegi helyzetben tartja CapsLock felvétel közben (meg lehet változtatni a kulcsot, és azt válthat a beállítások).
 		
 ; 19. Tooltips		
 	A_List_TT =	Makró Kiválasztása (Ctrl+1~0)
@@ -998,12 +1014,12 @@
 	Ex_UV_TT =	Export globális változók.
 	Ex_WN_TT =	Engedélyezi vagy letiltja a figyelmeztetések az adott körülmények között, amelyek hibát jelez, mint például egy elírás vagy hiányzó "globális" nyilatkozatot.
 	ExpList_TT =	Kattintson duplán a szerkeszteni
-	ExprLink2_TT =	- NE CSATOLNI VARIABLES SZÁZALÉKOS JELEK ITT.
+	ExprLink2_TT 	- NE CSATOLNI VARIABLES SZÁZALÉKOS JELEK ITT.
 		- A legtöbb AHK kifejezések támogatottak.
 		- Használhatja vonósok, változók, tömbök és függvények.
-		- Ahhoz, hogy használni húrok, csatolja őket idézetek, pl: var = "a".
-		- Több utasítást támogat, például: var = "a" || InStr (var, "b").
-	ExprLink3_TT =	- NE CSATOLNI VARIABLES SZÁZALÉKOS JELEK ITT.
+		- Ahhoz, hogy használni húrok, csatolja őket idézetek, pl: var  "a".
+		- Több utasítást támogat, például: var  "a" || InStr (var, "b").
+	ExprLink3_TT 	- NE CSATOLNI VARIABLES SZÁZALÉKOS JELEK ITT.
 		- A legtöbb AHK kifejezések támogatottak.
 		- Használhatja vonósok, változók, tömbök és függvények.
 		- Ahhoz, hogy használni húrok, csatolja őket idézetek, pl: var = "a".
@@ -1099,13 +1115,13 @@
 	Co_Oper_6 =	Nagyobb vagy egyenlő
 	Co_Oper_7 =	Kisebb vagy egyenlő
 	Co_Oper_8 =	In (lista)
-	Co_Oper_9 =	 Nincs (lista)
-	Co_Oper_10 =	 Tartalmaz (lista)
-	Co_Oper_11 =	 Nem tartalmaz (lista)
-	Co_Oper_12 =	 Között (1-es vonal) és a (2-es vonal)
-	Co_Oper_13 =	 Nem között (1-es vonal) és a (2-es vonal)
-	Co_Oper_14 =	 Is (típus)
-	Co_Oper_15 =	 Nem (típus)
+	Co_Oper_9 =	Nincs (lista)
+	Co_Oper_10 =	Tartalmaz (lista)
+	Co_Oper_11 =	Nem tartalmaz (lista)
+	Co_Oper_12 =	Között (1-es vonal) és a (2-es vonal)
+	Co_Oper_13 =	Nem között (1-es vonal) és a (2-es vonal)
+	Co_Oper_14 =	Is (típus)
+	Co_Oper_15 =	Nem (típus)
 		
 ; 21. IE Commands Tips		
 	IE_Cmd_Index =	
@@ -1135,7 +1151,7 @@
 	Value	Gets vagy beállítja az értékét a tárgy.
 	Width	Beállítja vagy visszaadja a szélessége az objektum.
 		
-; 22. COM Methods Tips		
+; 22. COM Objects Tips		
 	COM_CLSID_Index =	
 	Excel.Application	Manipulálja Excel táblák.
 	HTMLfile	Lehet használni, hogy írni, olvasni és kölcsönhatásba HTML.
@@ -1283,6 +1299,7 @@
 	Length	Visszaadja a hossza egy egyenes sorban kezdődő 1 pozícióban.
 	ListVars	Jeleníti meg a szkript változó: a nevüket és a jelenlegi tartalmát.
 	Ln	Természetes logaritmusát (alap e) a szám.
+	LoadPicture	Betölt egy képet fájlból és visszatér egy bitmap vagy ikon nyéllel.
 	Log	Visszaadja a logaritmusát (alap 10) Szám.
 	Loop (files & folders)	Letölti a megadott fájlokat vagy mappákat, egyesével.
 	Loop (normal) 	Végre egy sor parancsot többször: vagy a megadott számú alkalommal, vagy amíg break találkozott.
@@ -1367,11 +1384,36 @@
 	Until	Alkalmaz feltétele a folytatása a hurok vagy-loop.
 	UrlDownloadToFile	Letölt egy fájlt az interneten.
 	UserFunction	Létrehoz egy függvény szerkezete.
+	Variable	Hozzárendeli a megadott értéket egy változónak.
 	While	Belirtilen ifade yanlış olarak değerlendirilir kadar art arda bir dizi komut gerçekleştirir.
 	WinActivate	Aktiválja a megadott ablak (teszi elsősorban).
 	WinActivateBottom	Ugyanaz, mint a WinActivate, kivéve, hogy aktiválja a legalsó (legrégebben aktív) egyező ablak helyett a legmagasabb.
 	WinActive	Visszaadja a Egyedi azonosító (HWND) az aktív ablak, ha az megfelel a kritériumoknak.
 	WinClose	Bezárja a megadott ablak.
+	WinExist	Ellenőrzi, hogy a megadott ablak létezik.
+	WinGet	Letölti a megadott ablak egyedi azonosító, ID folyamat, folyamat neve, vagy egy listát a ellenőrzéseket. Azt is letölteni egy listát az összes ablak megfelelő a kritériumoknak.
+	WinGetClass	Letölti a megadott ablak osztály nevét.
+	WinGetPos	Lekéri a helyzete és mérete a megadott ablakot.
+	WinGetText	Letölti a szöveget a megadott ablak.
+	WinGetTitle	Letölti a címet a megadott ablak.
+	WinHide	Elrejti a megadott ablakot.
+	WinHttpDownloadToFile	Letöltés egy vagy több fájlt az internetről.
+	WinKill	Arra kényszeríti a megadott ablak bezárásához.
+	WinMaximize	Nagyítja a megadott ablak maximális méretét.
+	WinMenuSelectItem	Meghív egy menüpontot a menüsorban a megadott ablak.
+	WinMinimize	Összeesik a megadott ablakot egy gomb a tálcán.
+	WinMinimizeAll	Minden ablak méretét minimalizálja.
+	WinMinimizeAllUndo	Visszavonja a hatás a korábbi WinMinimizeAll.
+	WinMove	Változások a pozíció és / vagy a méret a megadott ablak.
+	WinRestore	Unminimizes vagy unmaximizes a megadott ablakot, ha minimális vagy maximális.
+	WinSet	Teszi a különböző változások a megadott ablak, mint a "mindig felül" és az átláthatóság.
+	WinSetTitle	Megváltoztatja a címet a megadott ablak.
+	WinShow	Felfedése a megadott ablakot.
+	WinWait	Megvárja, amíg a megadott ablak létezik.
+	WinWaitActive	Megvárja, amíg a megadott ablak aktív.
+	WinWaitClose	Megvárja, amíg a meghatározott ablak nem létezik.
+	WinWaitNotActive	Megvárja, amíg a meghatározott ablak nem aktív.
+	Zip / UnZip	Tömöríteni vagy tömörítse egy vagy több zip fájlt.
 	WinExist	Ellenőrzi, hogy a megadott ablak létezik.
 	WinGet	Letölti a megadott ablak egyedi azonosító, ID folyamat, folyamat neve, vagy egy listát a ellenőrzéseket. Azt is letölteni egy listát az összes ablak megfelelő a kritériumoknak.
 	WinGetClass	Letölti a megadott ablak osztály nevét.

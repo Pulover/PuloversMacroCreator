@@ -1,0 +1,1440 @@
+﻿Lang_eu
+		
+		; Basque
+		
+; 01. Main Menu		
+	m_Lang001 =	&File
+	m_Lang002 =	&Makro
+	m_Lang003 =	F&untzioa
+	m_Lang004 =	&Komandoak
+	m_Lang005 =	&Edit
+	m_Lang006 =	&Aukeratu
+	m_Lang007 =	&Ikusi
+	m_Lang008 =	Auke&rak
+	m_Lang009 =	&Dohaintzan
+	m_Lang010 =	&Laguntza
+		
+; 02. File Sub Menu		
+	f_Lang001 =	&New
+	f_Lang002 =	&Open
+	f_Lang003 =	&Save
+	f_Lang004 =	&Gorde
+	f_Lang005 =	&Azken fitxategiak
+	f_Lang006 =	&Export to AHK
+	f_Lang007 =	A&urreikusi Script
+	f_Lang008 =	E&ditatu Script
+	f_Lang009 =	O&rdutegiak Makroak
+	f_Lang010 =	&Zerrenda aldagaiak
+	f_Lang011 =	E&xit
+	f_Lang012 =	Ez dago &fitxategi
+		
+; 03. Macro Sub Menu		
+	r_Lang001 =	&Grabatu Macro
+	r_Lang002 =	&Aktibatu Makroak
+	r_Lang003 =	&Play Oraingo Makro
+	r_Lang004 =	&Timer
+	r_Lang005 =	&Desaktibatu Makroak
+	r_Lang006 =	P&lay Aukeratutako gaineko batetik
+	r_Lang007 =	Pla&y Aukeratutako il arte
+	r_Lang008 =	Play &Hautatutako lerroak
+	r_Lang009 =	T&estuingurua sentiberak Hotkeys
+	r_Lang010 =	Geh&itu makroa
+	r_Lang011 =	It&xi Makro
+	r_Lang012 =	D&uplicate Makro
+	r_Lang013 =	Editatu &Makroak
+	r_Lang014 =	I&nportatu Makro
+	r_Lang015 =	G&orde uneko makro
+		
+; 04. Function Sub Menu		
+	u_Lang001 =	&Sortu Funtzioa
+	u_Lang002 =	&Gehitu Parametroa
+	u_Lang003 =	G&ehitu Return
+	u_Lang004 =	&Bihurtu Makro itzuli funtzio
+		
+; 05. Commands Sub Menu		
+	i_Lang001 =	&Mouse
+	i_Lang002 =	&Testua
+	i_Lang003 =	&Kontrol
+	i_Lang004 =	&Eten
+	i_Lang005 =	Me&zua Box
+	i_Lang006 =	&Gakoa Wait
+	i_Lang007 =	&Leiho
+	i_Lang008 =	&Image / Pixel bilaketa
+	i_Lang009 =	&Run / Archivo / String / Misc.
+	i_Lang010 =	L&oop
+	i_Lang011 =	&Joan / Label
+	i_Lang012 =	Ez&arri tenporizadorea
+	i_Lang013 =	A&dierazpenak bada
+	i_Lang014 =	Aldagaiak / Arra&yak
+	i_Lang015 =	&Funtzioak / Array metodoak
+	i_Lang016 =	&Bidali mezu elektroniko
+	i_Lang017 =	De&skarga-fitxategiak
+	i_Lang018 =	Zi&p / Unzip fitxategiak
+	i_Lang019 =	I&nternet Explorer
+	i_Lang020 =	&COM Interface
+	i_Lang021 =	&Windows Mezuak
+	i_Lang022 =	A&urki komando bat
+		
+; 06. Edit Sub Menu		
+	e_Lang001 =	&Bikoiztu
+	e_Lang002 =	&Editatu oharra
+	e_Lang003 =	B&ilatu / Ordeztu
+	e_Lang004 =	&Copy to ...
+	e_Lang005 =	&Desegin
+	e_Lang006 =	Be&rregin
+	e_Lang007 =	Eb&aki
+	e_Lang008 =	C&opy
+	e_Lang009 =	&Paste
+	e_Lang010 =	E&zabatu
+	e_Lang011 =	Era&man gora
+	e_Lang012 =	Erama&n behera
+	e_Lang013 =	Bo&x Txertatu
+	e_Lang014 =	&Txertatu Tekleatzeko
+	e_Lang015 =	&Kolore Mark
+	e_Lang016 =	Ta&ldeak
+	e_Lang017 =	&Gaitu talde
+	e_Lang018 =	Ge&hitu talde
+	e_Lang019 =	Kend&u taldea
+	e_Lang020 =	&Kendu talde guztiak
+	e_Lang021 =	Tole&stu guztiak
+	e_Lang022 =	&Zabaldu guztiak
+		
+; 07. Select Sub Menu		
+	s_Lang001 =	&Hautatu guztiak
+	s_Lang002 =	&Bat ere ez hautatu
+	s_Lang003 =	&Abiatu
+	s_Lang004 =	&Check Aukeratutako
+	s_Lang005 =	&Desmarkatu Aukeratutako
+	s_Lang006 =	A&lderantzikatu Checks
+	s_Lang007 =	&Eraman hautapena Up
+	s_Lang008 =	E&raman hautapena Down
+	s_Lang009 =	A&ukeratutako Mota
+	s_Lang010 =	&Komando mota
+		
+; 08. View Sub Menu		
+	v_Lang001 =	&Beti aurrealdean
+	v_Lang002 =	&Nabarmendu Ilarak
+	v_Lang003 =	&Koska
+	v_Lang004 =	K&ontrolak Toolbar
+	v_Lang005 =	&Aurreikusi
+	v_Lang006 =	&Tresna-barrak
+	v_Lang007 =	&Hotkeys
+	v_Lang008 =	&Search Bar
+	v_Lang009 =	&Reset zutabeak neurria
+	v_Lang010 =	&Icons neurria
+	v_Lang011 =	B&errezartzeko diseinu
+	v_Lang012 =	&File
+	v_Lang013 =	&Grabatu Play
+	v_Lang014 =	Ko&mandoak
+	v_Lang015 =	E&dit
+	v_Lang016 =	A&ukerak
+	v_Lang017 =	&Pertsonalizatu
+	v_Lang018 =	&Automatikoa
+	v_Lang019 =	Manua&l
+	v_Lang020 =	&Gelditu
+	v_Lang021 =	&Eten
+	v_Lang022 =	&Compact
+	v_Lang023 =	&Default
+	v_Lang024 =	&Small
+	v_Lang025 =	&Handiak
+		
+; 09. Options Sub Menu		
+	o_Lang001 =	&Ezarpenak
+	o_Lang002 =	&Minimizatu erretilura
+	o_Lang003 =	&Bistan kontrolak toolbar
+	o_Lang004 =	&Atera giltza prentsak leiho honetan
+	o_Lang005 =	&Hotkeys beti aktibo
+	o_Lang006 =	&Shutdown aukera (playback bukatzen denean ...)
+	o_Lang007 =	&Testuingurua sentiberak Hotkeys
+	o_Lang008 =	&Gehitu Windows gakoa den "Play" laster
+	o_Lang009 =	E&rabili joystick botoi bat laster gisa
+	o_Lang010 =	E&zarri lehenetsi gisa Hotkeys
+	o_Lang011 =	Ezarr&i File lehenetsi gisa
+	o_Lang012 =	&'Kendu fitxategia Default
+	o_Lang013 =	H&otkeys Default
+	o_Lang014 =	Ezar&pen lehenetsiak
+		
+; 10. Donate Sub Menu		
+	p_Lang001 =	&PayPal dohaintza
+		
+; 11. Help Sub Menu		
+	h_Lang001 =	&Laguntza
+	h_Lang002 =	&Tutoretzak
+	h_Lang003 =	&Aholkuak
+	h_Lang004 =	&Makro Sortzailea Hasiera
+	h_Lang005 =	&Foroa
+	h_Lang006 =	A&HK Online Documentation
+	h_Lang007 =	&Begiratu eguneratzerik dagoen ...
+	h_Lang008 =	&Check abioan
+	h_Lang009 =	B&uruz
+		
+; 12. Tray Menu		
+	y_Lang001 =	Ezkutatu leihoa
+	y_Lang002 =	Erakutsi leihoa
+	y_Lang003 =	Kontrolak Toolbar
+		
+; 13. Built-in Vars Menu		
+	b_Lang001 =	Pertsonaiak bereziak
+	b_Lang002 =	Onibarrak
+	b_Lang003 =	Data eta ordua
+	b_Lang004 =	Erabiltzaile Idle Time
+	b_Lang005 =	Sistema eta Erabiltzaileen
+	b_Lang006 =	Misc.
+	b_Lang007 =	Loop
+		
+; 14. Main Window		
+	w_Lang001 =	Export
+	w_Lang002 =	Aurreikusi
+	w_Lang003 =	Aukerak
+	w_Lang004 =	Grabatu
+	w_Lang005 =	Play
+	w_Lang006 =	Playback
+	w_Lang007 =	Manual
+	w_Lang008 =	Gelditu
+	w_Lang009 =	Bistan kontrolak toolbar
+	w_Lang010 =	Eten
+	w_Lang011 =	Loop
+	w_Lang012 =	Atera giltza prentsak leiho honetan
+	w_Lang013 =	Minimizatu erretilura
+	w_Lang014 =	Hotkeys beti aktibo
+	w_Lang015 =	Errepikatu
+	w_Lang016 =	Denbora (ms)
+	w_Lang017 =	Aplikatu
+	w_Lang018 =	Txertatu
+	w_Lang019 =	Edit
+	w_Lang020 =	Shutdown aukera (playback bukatzen denean ...)
+	w_Lang021 =	Ez egin ezer
+	w_Lang022 =	Itxi aplikazio
+	w_Lang023 =	Itzali
+	w_Lang024 =	Shutdown (indarrean)
+	w_Lang025 =	Berrabiarazi
+	w_Lang026 =	Irten
+	w_Lang027 =	Hibernatu
+	w_Lang028 =	Eseki
+	w_Lang029 =	Blokeo ordenagailua
+	w_Lang030 =	Index
+	w_Lang031 =	Ekintza
+	w_Lang032 =	Xehetasunak
+	w_Lang033 =	Errepikatu
+	w_Lang034 =	Atzerapena
+	w_Lang035 =	Mota
+	w_Lang036 =	Kontrol
+	w_Lang037 =	Leiho
+	w_Lang038 =	Iruzkina
+	w_Lang039 =	Kolorea
+	w_Lang040 =	Berria (Ctrl + N)
+	w_Lang041 =	Open (Ctrl + O)
+	w_Lang042 =	Gorde (Ktrl + S)
+	w_Lang043 =	Save As (Ctrl + Shift + S)
+	w_Lang044 =	AHK to Export (Ctrl + E)
+	w_Lang045 =	Aurreikusi Script (Ctrl + P)
+	w_Lang046 =	Ezarpenak (Ctrl + G)
+	w_Lang047 =	Grabatu Macro (Ctrl + R)
+	w_Lang048 =	Aktibatu makroak (Ctrl + Enter)
+	w_Lang049 =	Play uneko makro (Ctrl + Shift + Enter)
+	w_Lang050 =	Timer (Ctrl + Shift + T)
+	w_Lang051 =	Mouse (F2)
+	w_Lang052 =	Testua (F3)
+	w_Lang053 =	Editatu Makroak (Ctrl + Shift + M)
+	w_Lang054 =	Kontrol (F4)
+	w_Lang055 =	Eten (F5)
+	w_Lang056 =	Mezua Box (Shift + F5)
+	w_Lang057 =	Gakoa Wait (Ctrl + F5)
+	w_Lang058 =	Leiho (F6)
+	w_Lang059 =	Image / Pixel Search (F7)
+	w_Lang060 =	Run / Archivo / String / Misc. (F8)
+	w_Lang061 =	Loop (F9)
+	w_Lang062 =	Joan / Label (Shift + F9)
+	w_Lang063 =	Ezarri kontagailua (Ctrl + F9)
+	w_Lang064 =	Adierazpenak bada (F10)
+	w_Lang065 =	Aldagaiak / Arrayak (Shift + F10)
+	w_Lang066 =	Funtzioak / Array metodoak (Ctrl + F10)
+	w_Lang067 =	Email (F11)
+	w_Lang068 =	Deskarga-fitxategiak (Shift + F11)
+	w_Lang069 =	Zip / Unzip fitxategiak (Ctrl + F11)
+	w_Lang070 =	Internet Explorer (F12)
+	w_Lang071 =	Expression / COM Interface (Shift + F12)
+	w_Lang072 =	Windows Mezuak (Ctrl + F12)
+	w_Lang073 =	Gehitu makroa (Ctrl + T)
+	w_Lang074 =	Itxi Macro (Ctrl + W)
+	w_Lang075 =	Bikoiztu Macro (Ctrl + Shift + D)
+	w_Lang076 =	Inportatu Macro (Ctrl + I)
+	w_Lang077 =	Gorde uneko makro (Ctrl + Alt + S)
+	w_Lang078 =	Mugitu Up (Ctrl + PageUp)
+	w_Lang079 =	Eraman behera (Ctrl + PageDown)
+	w_Lang080 =	Bikoiztu hautatutako lerroak (Ctrl + D)
+	w_Lang081 =	Ebaki hautatutako lerroak (Ctrl + X)
+	w_Lang082 =	Kopiatu hautatutako lerroak (Ctrl + C)
+	w_Lang083 =	Paste Kopiatua Rows (Ctrl + V)
+	w_Lang084 =	Ezabatu hautatutako lerroak (Del)
+	w_Lang085 =	Desegin (Ctrl + Z)
+	w_Lang086 =	Berregin (Ctrl + Y)
+	w_Lang087 =	Copy to ...
+	w_Lang088 =	Bilatu / Ordeztu (Ctrl + F)
+	w_Lang089 =	Txertatu / Editatu iruzkina (Ctrl + L)
+	w_Lang090 =	Kolore Mark (Ctrl + M)
+	w_Lang091 =	Pertsonalizatu
+	w_Lang092 =	Aurki komando bat (Ctrl + Shift + F)
+	w_Lang093 =	Edit (Sartu)
+	w_Lang094 =	Ezkutatu
+	w_Lang095 =	Mugitu hona
+	w_Lang096 =	Kopiatu hemen
+	w_Lang097 =	Taldeak
+	w_Lang098 =	Gaitu talde (Ctrl + Shift + G)
+	w_Lang099 =	Gehitu taldea (Ctrl + Shift + Y)
+	w_Lang100 =	Kendu taldea (Ctrl + Shift + I)
+	w_Lang101 =	Kendu talde guztiak
+	w_Lang102 =	Editatu talde
+	w_Lang103 =	Group name
+	w_Lang104 =	Sortu Funtzioa (Ctrl + Shift + U)
+	w_Lang105 =	Gehitu Parameter (Ctrl + Shift + P)
+	w_Lang106 =	Gehitu Return (Ctrl + Shift + N)
+	w_Lang107 =	Bihurtu Makro funtzionatzeko (Ctrl + Shift + C)
+	w_Lang108 =	Komentatu Deshautatzen errenkadak
+	w_Lang109 =	Gehitu Windows gakoa den "Play" laster
+	w_Lang110 =	Erabili joystick botoi bat laster gisa
+	w_Lang111 =	Search ... (Sakatu Sartu joan)
+		
+; 15. Command Windows		
+	c_Lang001 =	Mouse
+	c_Lang002 =	Testua
+	c_Lang003 =	Eten
+	c_Lang004 =	Kontrol
+	c_Lang005 =	Leiho
+	c_Lang006 =	Image Search
+	c_Lang007 =	Pixel bilaketa
+	c_Lang008 =	Run / Archivo / String / Misc.
+	c_Lang009 =	Adierazpenak bada
+	c_Lang010 =	Aldagaiak
+	c_Lang011 =	Funtzioak / Array metodoak
+	c_Lang012 =	Internet Explorer
+	c_Lang013 =	Expression / COM Interface
+	c_Lang014 =	Aukeratu eskaera (aurreratua)
+	c_Lang015 =	Mezua
+	c_Lang016 =	Kontrol
+	c_Lang017 =	Atzerapena
+	c_Lang018 =	MiliSeconds
+	c_Lang019 =	Seconds
+	c_Lang020 =	Ondo da
+	c_Lang021 =	Utzi
+	c_Lang022 =	Itxi
+	c_Lang023 =	Copy
+	c_Lang024 =	Ezabatu
+	c_Lang025 =	Erabili% aldagaiak da, adib .:% Clipboard%
+	c_Lang026 =	Ekintza
+	c_Lang027 =	Klikatu
+	c_Lang028 =	Mugitu
+	c_Lang029 =	Mugitu eta klik
+	c_Lang030 =	Gurpila Up
+	c_Lang031 =	Wheel Down
+	c_Lang032 =	Arrastatu eta askatu
+	c_Lang033 =	Koordenatuak
+	c_Lang034 =	Search
+	c_Lang035 =	Subcommand
+	c_Lang036 =	Erlatiboa
+	c_Lang037 =	Button
+	c_Lang038 =	Ezker
+	c_Lang039 =	Eskuin
+	c_Lang040 =	Erdi
+	c_Lang041 =	X1
+	c_Lang042 =	X2
+	c_Lang043 =	Eutsi / oharra
+	c_Lang044 =	Egin klik Count
+	c_Lang045 =	Testu Arrunta (Raw)
+	c_Lang046 =	Komandori Testua
+	c_Lang047 =	Arbelaren etik itsatsi
+	c_Lang048 =	Kontrol on Itsatsi
+	c_Lang049 =	Ezarri Testua
+	c_Lang050 =	Gehitu Pausa
+	c_Lang051 =	Mezua Box
+	c_Lang052 =	Itxaron tekla
+	c_Lang053 =	Itxaron Timeout
+	c_Lang054 =	(MiliSeconds) 0 = mugagabea
+	c_Lang055 =	Komando
+	c_Lang056 =	Balio
+	c_Lang057 =	Irteera aldakorra
+	c_Lang058 =	Kargua
+	c_Lang059 =	Tamaina
+	c_Lang060 =	4 aldagai aurrizkia honekin sortuko da eta X, Y, W, H. batekin bukatzen
+	c_Lang061 =	Hasiera
+	c_Lang062 =	Amaiera
+	c_Lang063 =	Image
+	c_Lang064 =	Pixel
+	c_Lang065 =	Egin pantaila
+	c_Lang066 =	Gakoa Wait
+	c_Lang067 =	Aurkitzen badu
+	c_Lang068 =	Ez da aurkitu bada / Error
+	c_Lang069 =	Irteera aldagaiak
+	c_Lang070 =	Coord
+	c_Lang071 =	Variations
+	c_Lang072 =	Aurreikusi
+	c_Lang073 =	Loop
+	c_Lang074 =	Automatikoki sortu COM objektu
+	c_Lang075 =	Break
+	c_Lang076 =	Jarraitu
+	c_Lang077 =	Joan
+	c_Lang078 =	Joan etiketara
+	c_Lang079 =	Label
+	c_Lang080 =	Gehitu Label
+	c_Lang081 =	String (InputVar)
+	c_Lang082 =	Aldakorra
+	c_Lang083 =	Else
+	c_Lang084 =	Esleitu aldakorra
+	c_Lang085 =	Edukia
+	c_Lang086 =	Operator
+	c_Lang087 =	Expression
+	c_Lang088 =	Berrezarri
+	c_Lang089 =	Funtzio izena
+	c_Lang090 =	Komaz bereiztutako parametroak (parentesi gabe)
+	c_Lang091 =	Erabili adierazpen formatuan
+	c_Lang092 =	Page Element / Index
+	c_Lang093 =	Ezarri
+	c_Lang094 =	Talde
+	c_Lang095 =	Metodoa
+	c_Lang096 =	Jabetza
+	c_Lang097 =	Itxaron orria kargatu.
+	c_Lang098 =	CLSID
+	c_Lang099 =	Konektatu
+	c_Lang100 =	Maneiatu
+	c_Lang101 =	COM Script
+	c_Lang102 =	Mezua zenbakia
+	c_Lang103 =	Keys bereziak
+	c_Lang104 =	Browser Itzuli
+	c_Lang105 =	Browser Forward
+	c_Lang106 =	Browser Refresh
+	c_Lang107 =	Browser Gelditu
+	c_Lang108 =	Bilaketa Nabigatzaile
+	c_Lang109 =	Browser gogokoak
+	c_Lang110 =	Browser Home
+	c_Lang111 =	Media
+	c_Lang112 =	Mutu
+	c_Lang113 =	Bolumen Up
+	c_Lang114 =	Bolumen Down
+	c_Lang115 =	Play / Pause
+	c_Lang116 =	Hurrengo pista
+	c_Lang117 =	Aurreko pista
+	c_Lang118 =	Gelditu
+	c_Lang119 =	E-mail
+	c_Lang120 =	App 1
+	c_Lang121 =	App 2
+	c_Lang122 =	ScanCode
+	c_Lang123 =	Gehitu
+	c_Lang124 =	Gakoa Historia
+	c_Lang125 =	Idatzi ScanCode bat ...
+	c_Lang126 =	Kode Virtual Keys zerrendan gehitu dira!
+	c_Lang127 =	Idatzi izen bat aldagairako
+	c_Lang128 =	Erabili funtzioa kanpoko fitxategi batetik
+	c_Lang130 =	Errepikatu arte
+	c_Lang131 =	Aplikatu
+	c_Lang132 =	Loop
+	c_Lang133 =	File
+	c_Lang134 =	Prozesaketa
+	c_Lang135 =	Irakurri
+	c_Lang136 =	Erregistroan
+	c_Lang137 =	File Eredua:
+	c_Lang138 =	Direktorioak
+	c_Lang139 =	Errekurtsiboa
+	c_Lang140 =	Sarrerako aldakorra:
+	c_Lang141 =	Mugatzaileak:
+	c_Lang142 =	Ez ipini Pertsonaiak:
+	c_Lang143 =	Input File:
+	c_Lang144 =	Erro Gakoa \ Gakoa:
+	c_Lang145 =	Fitxategiak
+	c_Lang146 =	Keys
+	c_Lang147 =	Ikonoa
+	c_Lang148 =	Ez dago ikonoa
+	c_Lang149 =	Error
+	c_Lang150 =	Galdera
+	c_Lang151 =	Harridura
+	c_Lang152 =	Info
+	c_Lang153 =	Beti goian
+	c_Lang154 =	Minutuak
+	c_Lang155 =	Arte
+	c_Lang156 =	Script
+	c_Lang157 =	Script Hizkuntza
+	c_Lang158 =	Not 64-bit bateragarria!
+	c_Lang159 =	Bilaketa aukerak
+	c_Lang160 =	Transparent
+	c_Lang161 =	Eskalatu
+	c_Lang162 =	Gehitu "Statement bada"
+	c_Lang163 =	Bidali Mode
+	c_Lang164 =	Berdintasuna
+	c_Lang165 =	Dauka
+	c_Lang166 =	Greater
+	c_Lang167 =	Gutxiago
+	c_Lang168 =	Bai
+	c_Lang169 =	Ez
+	c_Lang170 =	Ondo da
+	c_Lang171 =	Utzi
+	c_Lang172 =	Abortatu
+	c_Lang173 =	Ez ikusi egin
+	c_Lang174 =	Berriro saiatu nahi duzu
+	c_Lang175 =	Jarraitu
+	c_Lang176 =	Saiatu berriro
+	c_Lang177 =	Timeout
+	c_Lang178 =	Ezarri tekla atzerapena
+	c_Lang179 =	Gakoa atzerapena
+	c_Lang180 =	Random atzerapena
+	c_Lang181 =	Gutxieneko
+	c_Lang182 =	Gehienezko
+	c_Lang183 =	Komando honen Desgaitu ausazko atzerapenak
+	c_Lang184 =	Aukeratu zerrenda batetik
+	c_Lang185 =	Buttons
+	c_Lang186 =	Lehen
+	c_Lang187 =	Bigarren
+	c_Lang188 =	Hirugarren
+	c_Lang189 =	Izenburua
+	c_Lang190 =	Leiho aktiboa bada
+	c_Lang191 =	Bada ez leiho aktibo
+	c_Lang192 =	Leiho existitzen bada
+	c_Lang193 =	Leiho bada ez da existitzen
+	c_Lang194 =	Fitxategia existitzen bada
+	c_Lang195 =	Fitxategi bada ez da existitzen
+	c_Lang196 =	Testu arbelera bada
+	c_Lang197 =	Bada begizta indizea
+	c_Lang198 =	Irudia / pixel bada aurkitu
+	c_Lang199 =	Irudia / pixel ez bada topatu
+	c_Lang200 =	Kate izanez gero
+	c_Lang201 =	Katea ez badu
+	c_Lang202 =	Bada mezu kutxa
+	c_Lang203 =	Tarifa aldagai
+	c_Lang204 =	Ebaluatu espresioa
+	c_Lang205 =	Region
+	c_Lang206 =	(Erabili [] matrizeak sortzeko, adib .: [10, 20, aVariable, "aString"])
+	c_Lang207 =	Array Object
+	c_Lang208 =	Gakoa izena
+	c_Lang209 =	Balio izena
+	c_Lang210 =	Baloreak
+	c_Lang211 =	Array
+	c_Lang212 =	Erabiltzaileak definitua Funtzioa
+	c_Lang213 =	Funtzio Parametroa
+	c_Lang214 =	Funtzio Return
+	c_Lang215 =	Parametroak
+	c_Lang216 =	Return Balio
+	c_Lang217 =	Balio lehenetsia
+	c_Lang218 =	Scope
+	c_Lang219 =	Tokiko
+	c_Lang220 =	Global
+	c_Lang221 =	Izena
+	c_Lang222 =	Parametro gehiago gehi ditzakezu Funtzio menuan.
+	c_Lang223 =	Aldagai orokorretan
+	c_Lang224 =	Bertako aldagaiak
+	c_Lang225 =	Variables estatikoa
+	c_Lang226 =	Aurrera
+	c_Lang227 =	Emaila
+	c_Lang228 =	Gaia
+	c_Lang229 =	Mezua
+	c_Lang230 =	To
+	c_Lang231 =	CC
+	c_Lang232 =	BCC
+	c_Lang233 =	F2 to editatu
+	c_Lang234 =	HTML
+	c_Lang235 =	Bidali mezu elektroniko
+	c_Lang236 =	Deskarga-fitxategiak
+	c_Lang237 =	Zip / Unzip fitxategiak
+	c_Lang238 =	Piztu
+	c_Lang239 =	Itzali
+	c_Lang240 =	Posizioak erregistratuta.
+	c_Lang241 =	Ezabatu tenporizadoreak
+	c_Lang242 =	Ezarri tenporizadorea
+	c_Lang243 =	Eskuin-justifikatuta
+	c_Lang244 =	Eskuin-to-Ezker
+	c_Lang245 =	Eranskinak
+	c_Lang246 =	Path
+	c_Lang247 =	Bada
+	c_Lang248 =	Konprimatu fitxategia bakoitza ezberdina artxibo bat
+	c_Lang249 =	Atera fitxategi bakoitza beste karpeta batera
+	c_Lang250 =	Zip fitxategi
+	c_Lang251 =	Unzip fitxategiak
+	c_Lang252 =	Jaitsi estekak
+	c_Lang253 =	Helburu direktorioa
+	c_Lang254 =	Helmuga-fitxategia
+	c_Lang255 =	Puntu eta koma, koma edo lerro bidez bereizita.
+	c_Lang256 =	Egokitu koordenadak irudiaren erdian
+		
+; 16. Other Windows		
+	t_Lang001 =	Export to AutoHotkey
+	t_Lang002 =	Makroak
+	t_Lang003 =	Loops
+	t_Lang004 =	0 = mugagabea
+	t_Lang005 =	Erabili Hotstring
+	t_Lang006 =	Block Mouse
+	t_Lang007 =	Guztiak
+	t_Lang008 =	Bat ere ez
+	t_Lang009 =	Testuingurua sentiberak Hotkeys
+	t_Lang010 =	Export to
+	t_Lang011 =	Koska
+	t_Lang012 =	Besteak beste, PMC Código
+	t_Lang013 =	Ez kateatu Bidali komandoak
+	t_Lang014 =	Freskatu
+	t_Lang015 =	Auto-Refresh
+	t_Lang016 =	Beti aurrealdean
+	t_Lang017 =	Ezarpenak
+	t_Lang018 =	General
+	t_Lang019 =	Hasi / Gelditu Record
+	t_Lang020 =	Grabatu makro berria
+	t_Lang021 =	Zanpatze
+	t_Lang022 =	Grabaketa
+	t_Lang023 =	Atera giltza egoera (behera / gora)
+	t_Lang024 =	Mouse Bisitaldiak
+	t_Lang025 =	Mouse Wheel
+	t_Lang026 =	Mouse Mugimenduak
+	t_Lang027 =	Denbora muga gainditu tarteak
+	t_Lang028 =	Gutxieneko atzerapena
+	t_Lang029 =	Leiho Klaseak
+	t_Lang030 =	Leiho Izenburuak
+	t_Lang031 =	Grabatu ControlSend
+	t_Lang032 =	Grabatu ControlClick
+	t_Lang033 =	Erlatiboa grabatu Key
+	t_Lang034 =	Toggle
+	t_Lang035 =	Playback
+	t_Lang036 =	Arindu
+	t_Lang037 =	Lasaitu
+	t_Lang038 =	Return Mouse playback ondoren
+	t_Lang039 =	Mouse Koordenatuak
+	t_Lang040 =	Leiho
+	t_Lang041 =	Screen
+	t_Lang042 =	Aurremugatutako Mouse atzerapena
+	t_Lang043 =	Default Window atzerapena
+	t_Lang044 =	Max Historia Makro per
+	t_Lang045 =	Garbitu historia
+	t_Lang046 =	Pantaila-
+	t_Lang047 =	Marraztu Button
+	t_Lang048 =	Line Zabalera (Px)
+	t_Lang049 =	Capture oharra
+	t_Lang050 =	Sakatu Sartu harrapatzeko
+	t_Lang051 =	Pantaila-Directory
+	t_Lang052 =	Line wrap
+	t_Lang053 =	Hotkeys
+	t_Lang054 =	Ezarri lehenetsi gisa Hotkeys
+	t_Lang055 =	Disable Leiho Shortcuts
+	t_Lang056 =	Reset zutabeak neurria
+	t_Lang057 =	Makro fitxategi lehenetsi
+	t_Lang058 =	Standard Liburutegia File
+	t_Lang059 =	Erabili Expression lehenetsita aldagaiak Assignment
+	t_Lang060 =	Nabarmendu Loops eta adierazpenak
+	t_Lang061 =	(Klikatu Index zutabe goiburua / desgaitu egin gaitu)
+	t_Lang062 =	Keys Virtual
+	t_Lang063 =	Default
+	t_Lang064 =	Editatu oharra
+	t_Lang065 =	Iruzkina
+	t_Lang066 =	Bilaketa zutabea
+	t_Lang067 =	Bilatu / Ordeztu
+	t_Lang068 =	&Aurkitu
+	t_Lang069 =	&Match Case
+	t_Lang070 =	&Ordeztu
+	t_Lang071 =	Found
+	t_Lang072 =	Ordezkatua
+	t_Lang073 =	&Hautatutako lerroak
+	t_Lang074 =	&Ilarak guztiak
+	t_Lang075 =	Ma&kroak guztiak
+	t_Lang076 =	Buruz
+	t_Lang077 =	&Esapide
+	t_Lang078 =	Play behin
+	t_Lang079 =	Play guztietan X (mili) segundotan
+	t_Lang080 =	Timer
+	t_Lang081 =	Eten
+	t_Lang082 =	Adierazpenak
+	t_Lang083 =	Erakutsi Loops eta adierazpenak koska
+	t_Lang084 =	(Klik bikoitza Ekintza zutabe goiburua gaitu / ezgaitu)
+	t_Lang085 =	Bistan kontrolatzen Bar abioan
+	t_Lang086 =	Funtzioak bilatzea. Itxaron mesedez...
+	t_Lang087 =	Besteak beste, kanpoko fitxategiak
+	t_Lang088 =	Sortu EXE fitxategia
+	t_Lang089 =	Onartu Instantziak
+	t_Lang090 =	Lehenetsiak
+	t_Lang091 =	Onartu Ilarak Arrastratuta
+	t_Lang092 =	O&soa zelula edukiak
+	t_Lang093 =	Standard INI formatuan
+	t_Lang094 =	Izena = Balio
+	t_Lang095 =	Sartu 1 aldagai lerro bakoitzeko. ere gehi ditzakezu [Atalak].
+	t_Lang096 =	Erabiltzaile aldagaiak orokorrak
+	t_Lang097 =	Sakatu botoi bat joystick buruzko
+	t_Lang098 =	Atzera-tekla garbitzeko
+	t_Lang099 =	Button
+	t_Lang100 =	Bistan puxika aholkuak
+	t_Lang101 =	Abiadura
+	t_Lang102 =	Slow
+	t_Lang103 =	Fast
+	t_Lang104 =	Erakutsi / ezkutatu Izenburua Bar
+	t_Lang105 =	Erakutsi / Ezkutatu leiho nagusia
+	t_Lang106 =	Run berehala
+	t_Lang107 =	Random Atzerapenak
+	t_Lang108 =	Normal
+	t_Lang109 =	Down
+	t_Lang110 =	Up
+	t_Lang111 =	Txertatu Tekleatzeko
+	t_Lang112 =	Play / Pause
+	t_Lang113 =	Gelditu
+	t_Lang114 =	Playback Aukerak
+	t_Lang115 =	Hasi / Gelditu Record
+	t_Lang116 =	Grabatu makro berria
+	t_Lang117 =	Grabaketa Aukerak
+	t_Lang118 =	Garbitu zerrenda
+	t_Lang119 =	Erakutsi Eraikitzen Bar
+	t_Lang120 =	Arindu
+	t_Lang121 =	Lasaitu
+	t_Lang122 =	Erakutsi / ezkutatu Izenburua Bar
+	t_Lang123 =	Erakutsi / Ezkutatu leiho nagusia
+	t_Lang124 =	Banatu
+	t_Lang125 =	Dock
+	t_Lang126 =	Open
+	t_Lang127 =	Save
+	t_Lang128 =	Ebaki
+	t_Lang129 =	Copy
+	t_Lang130 =	Paste
+	t_Lang131 =	Hautatu guztiak
+	t_Lang132 =	Ezabatu
+	t_Lang133 =	Keyboard
+	t_Lang134 =	Mouse
+	t_Lang135 =	Beste batzuk
+	t_Lang136 =	Nabarmendu Ilarak
+	t_Lang137 =	Aurremugatutako Script editorea
+	t_Lang138 =	Kanpoko editore batean ireki (Ctrl + Shift + E)
+	t_Lang139 =	Aukeratu
+	t_Lang140 =	Zutabeka
+	t_Lang141 =	Zutabe guztiak
+	t_Lang142 =	Kendu gaia barrak batetik (berrabiarazi behar da)
+	t_Lang143 =	Auto ezkutatu kontrolatzen Toolbar
+	t_Lang144 =	Egin klik eta arrastatu ordena aldatzeko. Egin klik bikoitza editatu.
+	t_Lang145 =	Editatu Makroak
+	t_Lang146 =	Harian
+	t_Lang147 =	Makro
+	t_Lang148 =	Leiho nagusia ren botoia hurbileko Ekintza
+	t_Lang149 =	Itxi aplikazio
+	t_Lang150 =	Minimizatu erretilura
+	t_Lang151 =	Bistan berrespena denean makro bat itxiz
+	t_Lang152 =	Sortu backups automatikoki
+	t_Lang153 =	Windows Ataza antolatzailea programatuta zeregin bat sortzen du.
+	t_Lang154 =	Lehen run Time
+	t_Lang155 =	Ordutegiak mota
+	t_Lang156 =	Behin || Daily | Weekly | Astea | Hasi | sarrera | Idle
+	t_Lang157 =	Xede PMC fitxategia
+	t_Lang158 =	Xede AHK fitxategia
+	t_Lang159 =	Gidoi gordeko da edo uneko direktorioan gainetik idatzi!
+	t_Lang160 =	Open ataza-antolatzaile
+	t_Lang161 =	Task sortu da!
+	t_Lang162 =	Errorea gertatu da. Zeregina ezin izan da sortu.
+	t_Lang163 =	Antolatzaile
+	t_Lang164 =	Ordutegiak Makroak
+	t_Lang165 =	Run Makro
+	t_Lang166 =	File
+	t_Lang167 =	String
+	t_Lang168 =	Talde Info
+	t_Lang169 =	Itxaron
+	t_Lang170 =	Leiho Taldeak
+	t_Lang171 =	Mezuak
+	t_Lang172 =	Erregistroan Eta INI
+	t_Lang173 =	Soinua
+	t_Lang174 =	Aldagaiak
+	t_Lang175 =	Misc.
+	t_Lang176 =	Gehitu talde
+	t_Lang177 =	Talde berria
+	t_Lang178 =	Hizkuntza editorea
+	t_Lang179 =	Sortu berria
+	t_Lang180 =	Erabili Sartu, OrrBeh eta PgUp nabigatzeko.
+	t_Lang181 =	Bidali
+	t_Lang182 =	Izena
+	t_Lang183 =	Aldaketak gorde?
+	t_Lang184 =	Hizkuntza File
+	t_Lang185 =	Erreferentzia File
+	t_Lang186 =	Bidali berrikuspena edo itzulpen berriak
+	t_Lang187 =	Tolestu guztiak
+	t_Lang188 =	Zabaldu guztiak
+	t_Lang189 =	Hizkuntza
+	t_Lang190 =	Bihurtu lerro-jauziak
+	t_Lang191 =	Posta-kontuak
+	t_Lang192 =	Update
+	t_Lang193 =	Egin klik bikoitza editatu
+	t_Lang194 =	SMTP Server
+	t_Lang195 =	Port
+	t_Lang196 =	Autentifikatu
+	t_Lang197 =	Erabiltzaile izena
+	t_Lang198 =	Pasahitza
+	t_Lang199 =	SSL
+	t_Lang200 =	Bidali modua
+	t_Lang201 =	Bidali proba bat
+	t_Lang202 =	Pantaila Eta Window
+	t_Lang203 =	Detektatu Ezkutuko Windows
+	t_Lang204 =	Detektatu Ezkutuko Testua
+	t_Lang205 =	Izenburua Match modua
+	t_Lang206 =	Izenburua Match Abiadura
+	t_Lang207 =	Bezeroa
+	t_Lang208 =	A&urkitu
+	t_Lang209 =	O&rdeztu
+		
+; 17. Messages & Dialogs		
+	d_Lang001 =	Open
+	d_Lang002 =	Gorde uneko proiektua?
+	d_Lang003 =	Ezarpen lehenetsiak
+	d_Lang004 =	Makro Sortzailea Files
+	d_Lang005 =	Save Project
+	d_Lang006 =	Huts / gainidatzi fitxategia gorde
+	d_Lang007 =	Error
+	d_Lang008 =	Errorea: Ez Makro Selected.
+		Please kontrolli vähemalt üks Macro nimekirjas.
+	d_Lang009 =	Errorea: Ez da laster Aukeratutako.
+	d_Lang010 =	Errorea: baliogabeak Address.
+		The valitud aadressi või faili nimi on kehtetu.
+	d_Lang011 =	Abisua
+	d_Lang012 =	Ez dago kontrol selected.
+		Continue?
+	d_Lang013 =	Export Script
+	d_Lang014 =	Script esportatu
+	d_Lang015 =	Fitxategia arrakastaz esportatu da!
+	d_Lang016 =	Klikatu 'Lortu' posizioa markatzeko.
+	d_Lang017 =	#NOME?
+		#NOME?
+		#NOME?
+	d_Lang018 =	Pixel Color
+	d_Lang019 =	Garbitu zerrenda
+	d_Lang020 =	Itxi Makro?
+	d_Lang021 =	Hurrengoa
+	d_Lang022 =	Aurreko
+	d_Lang023 =	Mezua
+	d_Lang024 =	Ezarpenak Kargatu default?
+	d_Lang025 =	Makroak aktibatzen.
+		Erabili Hotkeys jolasteko.
+	d_Lang026 =	Stop grabatzen hasteko
+	d_Lang027 =	Grabaketa gelditu
+	d_Lang028 =	Grabaketa ...
+	d_Lang029 =	Gelditu
+	d_Lang030 =	Errekor berria hasteko
+	d_Lang031 =	Ez da baliozko funtzio-izen bat.
+	d_Lang032 =	Akatsa: Duplicate Hotkeys.
+	d_Lang033 =	Aktibatu Makroak
+	d_Lang034 =	- Klik eta%% DrawButton Arrastatu area hautatzeko.
+		- Klik eta kontrol gunea hautatzeko arrastatu gabe askatu.
+		- Eremu batean klik kontrol gabe leihoaren area hautatzeko.
+	d_Lang035 =	Jarraitu?
+	d_Lang036 =	Image / Pixel at Found
+	d_Lang037 =	Image / Pixel Not Found.
+	d_Lang038 =	Sakatu Ados jarraitzeko.
+	d_Lang039 =	Timeout!
+	d_Lang040 =	
+.	Tämä ominaisuus vaatii GDI+ kirjasto.	Lesi sici sidinga uhlelo GDI + Library.
+		Egin klik Ados orria deskargatzeko joan.
+	d_Lang041 =	aldagai izen ilegala pertsonaia bat izanez.
+	d_Lang042 =	erreserbatutako hitza da.
+	d_Lang043 =	Edo erabili Kontrolak Toolbar du.
+	d_Lang044 =	Ezaugarri honek eval () funtzioak eskatzen.
+		Egin klik Ados orria deskargatzeko joan.
+	d_Lang045 =	Mesedez, aukeratu Internet Explorer leiho bat!
+	d_Lang046 =	Connection arrakastatsua!
+	d_Lang047 =	Huts egin!
+	d_Lang048 =	Txertatu Handle bat eta CLSID bat.
+	d_Lang049 =	Label izena baliogabea.
+	d_Lang050 =	Duplicate etiketa.
+	d_Lang051 =	Makro prentsa dagokion Hotkey (Auto / Man) erreproduzitzeko.
+	d_Lang052 =	grabatzen prentsa grabatu Hotkey bat hasteko.
+	d_Lang053 =	Mezu hau ez da berriro agertuko.
+	d_Lang054 =	Mesedez hautatu Excel leiho bat!
+	d_Lang055 =	Mesedez hautatu AutoHotkey script fitxategia (.ahk) eta bat sartu funtzio-izen bat.
+	d_Lang056 =	Ezaugarri honek AutoHotkey instalatu egin behar da.
+		Egin klik Ados orria deskargatzeko joan.
+	d_Lang057 =	#NOME?
+		#NOME?
+		#NOME?
+	d_Lang058 =	Ezaugarri batzuk privilages admnistrator eskatzen funtzionatu ahal izateko ere.
+		Gomendatzen Aplikazio Administrator gisa berrabiarazi.
+	d_Lang059 =	Komando honek ez du esamolde edo funtziorik onartzen.
+		Mesedez esleitzeko aldagai bat eta erabili parametroan.
+	d_Lang060 =	Bertsio berria eskuragarri
+	d_Lang061 =	Orain ez
+	d_Lang062 =	bertsiorik berriena Dagoeneko baduzu.
+	d_Lang063 =	Errore bat gertatu da egiaztapena.
+	d_Lang064 =	Errorea
+	d_Lang065 =	Row
+	d_Lang066 =	Zehazki
+	d_Lang067 =	Erakutsi abioan leiho hau
+	d_Lang068 =	Aholkuak:
+	d_Lang069 =	denbora eta ahalegin asko ditu Pulover en Makro Sortzailea garapenean sartzen joan. Aurkituko duzu, erabilgarria bada, mesedez pentsa ezazu estimua erakusten dohaintza batekin.
+		Eman edo ez, ez da bere ezaugarri eta funtzionalitate diferentzia ez da izango.
+	d_Lang070 =	Dohaintzan ...
+	d_Lang071 =	Ez eskerrik asko
+	d_Lang072 =	Laguntzarako Software Ireki
+	d_Lang073 =	Errorea: baliogabeak Hotkey Aukeratutako.
+	d_Lang074 =	Aurki komando bat edo funtzio
+	d_Lang075 =	Ongi Pulover en Makro Sortzailea
+	d_Lang076 =	Mesedez, aukeratu zure gogokoena diseinua
+	d_Lang077 =	Compact
+	d_Lang078 =	Default
+	d_Lang079 =	abioan eguneratzeak.
+	d_Lang080 =	hau alda dezakezu Aukerak> Ezarpenak> Orokorra ere.
+	d_Lang081 =	aldatu eta diseinu pertsonalizatu Ikusi menuko dezakezu.
+	d_Lang082 =	fitxategia ez da aurkitu!
+	d_Lang083 =	backup fitxategi bat aurkitu da. Egingo ireki nahi duzu?
+	d_Lang084 =	Mesedez, gorde zure aldaketak zeregin bat programatuz aurretik.
+	d_Lang085 =	Falta "End Loop" Makro-en adierazpena
+	d_Lang086 =	Falta "Amaitu bada" Makro-en adierazpena
+	d_Lang087 =	Iragarki gidoia egin programatik kanpo aldaketa hori ez du eraginik izango YOUR MAKROAK inolaz ere.
+		Ezaugarri honek soilik azkar export funtzio gisa ekarri da. PMC ez dago AHK script editore bat izan nahi du.
+	d_Lang088 =	Saiatu erabiltzaile arrunta (ez administratzaile) exekutatu.
+	d_Lang089 =	Ilara aukeratu!
+	d_Lang090 =	Mesedez, hautatu txertatu edo taldea ezabatu.
+	d_Lang091 =	metodo baliogabea
+	d_Lang092 =	ikono txikiak
+	d_Lang093 =	ikono handiak
+	d_Lang094 =	Ezaugarri honek Windows Vista edo handiagoa da.
+	d_Lang095 =	ByRef erabilera parametro bat eragiten gainditu deitzailearen aldagaia ezizen bat bihurtu da. Beste era batera esanda, parametro eta deitzailearen aldagai biak edukiak bera aipatzeko oroimenez.
+	d_Lang096 =	#NOME?
+		#NOME?
+		- Kateak, aldagaiak, array-ak eta funtzioak erabili ahal izango duzu. ere konbinatu ahal izango duzu, horietako edozein.
+		- Kateak erabiltzeko, erantsi horiek komatxo artean, adib .: "Emaitza da:" + b a.
+		- Emaitzak estra itzuli nahi baduzu, ere erabili ahal izango duzu ByRef parametroetan.
+		#NOME?
+	d_Lang097 =	#NOME?
+		#NOME?
+		- Kateak, aldagaiak, array-ak eta funtzioak erabili ahal izango duzu.
+		- Kateak erabiltzeko, erantsi horiek komatxo artean, adib .: var = "a".
+		- Adierazpenak anitzak onartzen dira, adib .: var = "a" || InStr (var, "b").
+	d_Lang098 =	Parametro bat balio lehenetsia baldin badu, honako parametroak bete behar dira bat dute gehiegi.
+	d_Lang099 =	Funtzioaren izena legez kanpoko pertsonaia bat izanez.
+	d_Lang100 =	Goto, Gosub eta Label ez diren funtzio onartzen.
+	d_Lang101 =	Duplicate funtzioa.
+	d_Lang102 =	Errorea gertatu da. bidal dezakezu mezu elektroniko to 'pulover@macrocreator.com' fitxategia batera:
+	d_Lang103 =	New hizkuntzetan artxibatzen eskuragarri.
+	d_Lang104 =	Mezu hau ez da erakutsiko berriro eguneratzea bera da. Deskargatu dezakezu Laguntza menuan> eguneratzeak.
+	d_Lang105 =	File bidali da. Eskerrik asko!
+	d_Lang106 =	Hizkuntza fitxategiak behar bezala eguneratuta.
+	d_Lang107 =	Ezin izan tenporizadorea hasteko
+	d_Lang108 =	Posizioak guztiak erregistratuak dira. Mesedez, ezabatu horietako bat.
+	d_Lang109 =	Xede etiketa ez da existitzen.
+	d_Lang110 =	Berretsi fitxategia ordezkatu
+	d_Lang111 =	Existitzen da dagoeneko.
+		Ordeztu nahi?
+	d_Lang112 =	Email kontua ez da aurkitu.
+	d_Lang113 =	No error du.
+	d_Lang114 =	Esportatutako (konpilatu bada ere) egindako bidali email funtzioa (JD) Scripts batera email kontuak informations ikusgai erabili, pasahitza barne izango dute. The PMC proiektuaren fitxategiak ez du informazio hori.
+	d_Lang115 =	#NOME?
+	d_Lang116 =	Transferentzia eta instalatu
+	d_Lang117 =	Joan orria deskargatu
+	d_Lang118 =	Deskargen ... Mesedez, itxaron.
+		
+; 18. Start-up Tips		
+	Start_Tips =	Begiratu bideo tutorialak www.macrocreator.com/help at Pulover en Makro Sortzailea ezaugarri asko ezagutzea.
+		Komando partida bat jokatzera laguntza eskuratzeko eskubidea klik edonon komandoa leiho bat online laguntza loturak erakusteko.
+		Makroak sortzea ditzakezu Komando botoiak erabiliz leiho nagusian edo zure ekintza kopiatzeko Recorder erabiliz. Aukerak> Ezarpenak> Grabaketa Joan zer Sarrerek grabatu egingo hautatzeko.
+		Erabili bilaketa-barra edo "Aurki komando bat" leiho bilatu komandoak eta funtzioak.
+		Gustatuko itzulpen bat konpondu berri bat sortzen laguntzeko edo are nahi duzu? Aukerak> Ezarpenak> Hizkuntza editore joan eta nahi duzun edozein zuzenketak egiteko. da edozein denbora aurreikusteko dezakezu. Klik on Bidali zure berrikuspena ikusi bidaltzeko. Feel free zuzenketa kopuru aurkeztu behar beste aldiz, nahi duzun bezala.
+		Begiratu "Capture Keys" Aukera gakoak eta konbinazioak sartzeko zure Makro zuzenean leiho nagusian.
+		Sartu gakoak eta konbinazioak Hotkey behealdean koadroan eta sakatu Txertatu botoia horiek gehitzeko hautatu errenkadak izateko.
+		Erabili edizio botoiak leiho nagusiaren behealdean errepikatu ezartzeko eta ilara bat baino gehiago atzeratzen aldi berean. errenkada hautatzen badira editatzeko botoiak zerrendako lerro guztiak aplikatuko.
+		Ia komando eta funtzio guztietan onartzen eta aldagai irteerak. zure aldagaiak esleitu ditzakezu aldagaiak leihoak (Komandoak> aldagaiak / Array) ere. horiek erabiltzeko barruan komandoak ixteko aldagai izen ehuneko seinaleak ere, adib .:% MyVar%. funtzioak, erabili horietako ehuneko seinaleak gabe, adib .: SubStr (MyVar, 5).
+		Eskuin-klik edonon komando leihoan erraz sartzeko, horma-aldagaiak zerrenda batetik.
+		Grabagailua erabiltzeko zeregin azkar Aukerak> Ezarpenak> Grabaketa eta egiaztatu "Garbitu zerrenda" aukera. Ondoren, egin klik botoi grabatu du leiho nagusian eta F10 erabili uneko makro garbitzeko eta laster berdinarekin berri bat hasteko. ere egiaztatu ahal izango duzu "Beti aktiboa" leiho nagusian aukera grabaketa eta erreprodukzioa teklak aktibatuta izatea.
+		PMC Array objektuak eta metodoak sustatzea, besterik AutoHotkey gidoiak bezala. Modu askotan, gehienetan ohikoa da aldagaiak leihora joan zen, eta "Expresión" Aukera egiaztapena eta balioak erantsiz Parentesi artean, adibidez, array sor ditzakezu .: [10, 20, Var, "katea"]. You izeneko gakoak ere sor daitezke, adib .: {Keya: Vara, "gako batzuk": "katea balio"}.
+		Funtzioak erabili AHK adierazpen sintaxia. Literal kateak izango komatxo artean egon behar du, eta aldagai behar ez ehuneko seinaleak. beste funtzio edo array elementu parametro gisa erabili ahal izango duzu. Adib .: StrReplace (MyVar, MyArray [ "A"], SubStr (OtherVar, 2, 3)).
+		Expressions AutoHotkey Expression sintaxia onartzen dira. komando parametro baten barruan adierazpen bat erabiltzeko, hasi da ehuneko ikurra, adib .:% SubStr (Var, 5).
+		The "Loop" goialdean counter hautatutako Makro begiztak kopuru osoa ezartzen.
+		Ilara bat editatu dezakezu birritan klikatuz edo hautatu eta Editatu botoiak sakatzen behealdean. anitz Hautatutako lerroak editatu behealdean barran aukerak erabiliz alda ditzakezu.
+		Zure funtzioak definitzen dezakezu funtzioa> Sortu funtzioa eta horiek erabili Funtzio leiho edo barruan adierazpenak.
+		Globa / local eta estatiko Erabiltzaileak definitutako funtzioak aldagaiak defini dezakezu. Aukerak> Ezarpenak definitutako aldagai orokorrak> Erabiltzaileak aldagai global jotzen dira Super orokorrak, eta beti egongo da eskuragarri barruan funtzio izan, tokiko gisa definitzen denean ere.
+		Hautatu lerro bat edo gehiago komando berriak gehitzeko horiek gainean.
+		Ilararik dezakezu click-eta-arrastatu.
+		Egin klik bikoitza ikonoa on teklak aktibatzeko edo gelditu erreprodukzioa / grabazioa. Klikatu bertan erdiko botoia erreprodukzioa edo eteteko grabatzen ari zaren bitartean.
+		Zure Makroak esportatu dezakezu lan AutoHotkey gidoiak edo stand-alone exekutagarriak Export leihotik.
+		Grabatzeko eta erreproduzitzeko Mouse koordenatu absolutuak erabiliz Aukerak> Ezarpenak> Lehenetsiak eta ezarri Mouse Koordenatuak joan den pantaila.
+		Ireki, kopiatu, mugitu edo ezabatu fitxategiak eta karpetak komandoetako komandoetako bat erabiliz> Run / Archivo / String / Misc. hala nola StringReplace, InputBox eta MouseGetPos beste hainbat komando baliagarri daude.
+		Down grabatzeko eta igo tekla Aukerak> Ezarpenak> Grabaketa go bakoitzaren egoera eta egiaztatu "Atera giltza egoera (Down / Up)" aukera.
+		Teklak erabil dezakezu azkartzeko edo mantsotu Playback. Aukerak> Ezarpenak> Erreprodukzioa Joan gakoak eta abiadura ezartzeko.
+		Harrapaketa-eremua "Egin pantaila" tresna joan Aukerak> Ezarpenak> Pantaila-eta hautatu erabiliz doitzeko "Enter sakatu harrapatzeko". laukizuzen erabilera Control + gezi gakoak marrazten ondoren aukeraketa mugitzeko eta Maius + gezi gakoak tamaina egokitzeko.
+		Quick Aukeratu: Aukeratu ilara edozein eta sakatu Zutabe baten oinarritzen zelula-en zutabe hartatik testuan antzeko ilaratan hautatzeko.
+		Egin klik Index Zutabearen buruzko On / Off piztu Laguntza Marks eta koloreak Loops eta adierazpenak. Egin klik bikoitza Ekintza Zutabearen buruzko On buelta / Off Loops eta adierazpenak koska.
+		Zure Makroak arazteko dezakezu Manual Hotkey eta Play Makro menu aukerak erabilita. halaber ekintzak desgai dezakezu horiek desgaituz Makro zerrendan arabera.
+		Zure Makroak lan bakarra leiho jakin bat Macro> Testuingurua sentiberak Hotkeys joan dadin.
+		Ezar dezakezu zure kabuz aldagaiak orokorrak abioan kargatu behar eta esportatu ahal izateko. Aukerak> Ezarpenak> Aldagaiak Global Joan gehitzeko.
+		Hala nola SubStr eta RegExReplace funtzio aurreratuak diren funtzionalitate leihoa (Komandoak> Funtzioak / Array metodoak) tik exekutatu ahal izango duzu. You Zure funtzioak edo exekutatu funtzioak zehaztu daiteke kanpoko AutoHotkey gidoiak.
+		Saguaren mugimenduak egungo posizio erlatiboa BlokMaius eusten grabaketa (gakoa aldatu ahal izango duzu, eta egin txandakatzeko Ezarpenak atalean) zehar graba dezakezu.
+		
+; 19. Tooltips		
+	A_List_TT =	Aukeratu Macro (Ctrl + 1 ~ 0)
+	AbortKey_TT =	Hotkey erreprodukzioa eteteko
+	ActiveObj_TT =	Saiatzen da COM aktiboa Objektu bat konektatu
+	AddAtt_TT =	Erantsi fitxategiak
+	ApplyI_TT =	Aplikatu
+	ApplyL_TT =	Txertatu Box-tik (Insertar)
+	ApplyT_TT =	Aplikatu
+	AutoKey_TT =	Hotkey Makro jolasteko
+	Client_TT =	Koordenadak leiho aktiboa bezero gunea, hau leiho izeneko barra, menu baztertzen du (estandar bat badu) eta mugak erlatiboak dira.
+	Clip_TT =	Aldi baterako erabiltzen Arbela testua bidaltzeko.
+		Noiz eragiketa bukatu da, gidoia
+		Arbelaren jatorrizko edukia berreskuratu.
+		(Utzi Testua hutsik uneko edukia itsasteko)
+	CM_TT =	Pantaila: Koordenatuak Mahaigainean (pantaila osoan) erlatiboak dira.
+		Leiho: Koordenatuak leiho aktiboa erlatiboak dira.
+		Bezeroa: koordenadak leiho aktiboa bezero gunea, hau leiho izeneko barra, menu baztertzen du (estandar bat badu) eta mugak erlatiboak dira.
+	CmdFilter_TT =	Iragazi motaren arabera
+	CmdSort_TT =	Alfabetikoki ordenatu
+	ColorPick_TT =	Talde Pixel pantaila
+	ComEvent_TT =	Tasa zein zanpatze bidaltzen diren da gakoa atzerapena zehazten.
+	ComText_TT =	Noiz ez modu gordinean, pertsonaiak honako
+		Modifikatzaile gisa tratatzen dira (modifikatzaile horiek eraginik
+		Bakarrik oso hurrengo tekla):!, +, ^, #
+	CoordPixel_TT =	Koordenatuen modua
+	DefaultMacro_TT =	Aukera ezazu fitxategi-programarik abioan kargatu
+	EditPaste_TT =	Pastak du kurtsore / txertatze posizioan String
+		Editatu kontrol batean (hau da, ez du eraginik izango
+		Arbeleko edukiak).
+	Ex_AF_TT =	Leiho bat aktibatzea metodo leuna Salto
+		Eta doa zuzenean irmoa metodoa.
+	Ex_DH_TT =	Ikusezina leihoak diren ala ez "ikusten" script-ek zehazten.
+	Ex_DT_TT =	Leiho batean testua ikustezina da ala "ikusi" leiho aurkitzeko helburuarekin zehazten du. Honek, hala nola IfWinExist eta WinActivate aginduak eragiten.
+	Ex_CM_TT =	Sets koordinatzeko modua sagua komandoak bai leiho aktiboa edo pantailaren erlatiboa izango.
+	Ex_EdScript_TT =	Kanpoko editore batean ireki
+	Ex_EdVars_TT =	Aukeratu aldagai global esportatu ahal izateko.
+	Ex_ExecScript_TT =	Exekutatu script
+	Ex_HK_TT =	Indar amua erabilera guztiak ezartzea
+		Edo teklatuaren teklak batzuk.
+	Ex_IfDir_TT =	Testuinguruaren teklak eta hotstrings arabera sortzen
+		Leiho dela aktibo edo existitzen motaren.
+	Ex_IfDirType_TT =	Testuinguruaren teklak eta hotstrings arabera sortzen
+		Leiho dela aktibo edo existitzen motaren.
+	Ex_IN_TT =	Causes gidoia bagina bezala zehaztutako portatzen
+		File edukiak posizio zehatza hau agertu dira.
+	Ex_MD_TT =	Atzerapena izango dela ondoren gertatzen ezartzen
+		Saguaren mugimendu bakoitza edo click.
+	Ex_MT_TT =	Aldi bereko gehienezko kopurua ezartzen du
+		Laster edo hotstring zenbat hari.
+	Ex_NT_TT =	Bandejan ikono bat erakustea desgaitzen.
+	Ex_PT_TT =	Mantentzen gidoi bat betirako exekutatzen
+		(Hau da, erabiltzaileak ixten duen arte edo ExitApp topatu da).
+	Ex_SB_TT =	Gidoi bat nola azkar exekutatu egingo (CPU erabilera eragiten) zehazten du.
+	Ex_SC_TT =	Atzerapena izango dela ondoren gertatzen ezartzen
+		Kontrol-aldatzea komando bakoitza.
+	Ex_SI_TT =	Gidoi bat ala berriro noiz martxan dago jada exekutatu baimenduta dagoen ala ez.
+	Ex_SK_TT =	Atzerapena izango dela bakoitzaren ondoren gertatzen ezartzen
+		Bidali tekla edo ControlSend bidez bidali.
+	Ex_SM_TT =	Makes Bidali sinonimo SendInput edo SendPlay batera baino
+		Lehenetsia (SendEvent). Halaber, horrek klik eta MouseMove / Klik / Drag
+		Zehaztutako metodoa erabili.
+	Ex_ST_TT =	Matching WinTitle parametroa portaera, hala nola WinWait aginduak ezartzen du.
+	Ex_SW_TT =	Atzerapena izango dela ondoren gertatzen ezartzen
+		Leiho komando bakoitza, hala nola WinActivate bezala.
+	Ex_UV_TT =	Export aldagai global.
+	Ex_WN_TT =	Gaitzen edo baldintza zehatzak zein errore bat adieraz dezake, hala nola, typo bat edo falta "global" deklarazio gisa abisuak desgaitzen.
+	ExpList_TT =	Egin klik bikoitza editatu
+	ExprLink2_TT 	- EZ Behean daukazue VARIABLES ehuneko seinaleak hemen.
+		- AHK esamoldeak gehienak onartzen dira.
+		- Kateak, aldagaiak, array-ak eta funtzioak erabili ahal izango duzu.
+		- Kateak erabiltzeko, erantsi horiek komatxo artean, adib .: var  "a".
+		- Adierazpenak anitzak onartzen dira, adib .: var  "a" || InStr (var, "b").
+	ExprLink3_TT 	- EZ Behean daukazue VARIABLES ehuneko seinaleak hemen.
+		- AHK esamoldeak gehienak onartzen dira.
+		- Kateak, aldagaiak, array-ak eta funtzioak erabili ahal izango duzu.
+		- Kateak erabiltzeko, erantsi horiek komatxo artean, adib .: var = "a".
+		- Adierazpenak anitzak onartzen dira, adib .: var = "a" || InStr (var, "b").
+	ExpView_TT =	Editore aurreratua
+	ExpView2_TT =	Editore aurreratua
+	Fast_TT =	Azkarrago bilatzen metodo bat erabiltzen du (gomendatua)
+	HiddenWin_TT =	Ikusezina leihoak diren ala ez "ikusten" script-ek zehazten.
+	HiddenText_TT =	Leiho batean testua ikustezina da ala "ikusi" leiho aurkitzeko helburuarekin zehazten du. Honek, hala nola IfWinExist eta WinActivate aginduak eragiten.
+	HScale_TT =	Altuera eskala
+	IconN_TT =	Ikonoa taldearen zenbakia
+	IfLVColor_TT =	Egin klik kolorea hautatzeko
+	IncFiles_TT =	Besteak beste fitxategiak / Baloreak
+	IncFolders_TT =	Besteak beste guneak (direktorioak) / Keys
+	InsertKey_TT =	Txertatu Tekleatzeko (Ctrl + Insert)
+	InsertKeyT_TT =	Txertatu Tekleatzeko
+	JoyKey_TT =	Sakatu botoi bat joystick buruzko
+	LoopLVColor_TT =	Egin klik kolorea hautatzeko
+	LUntil_TT =	Baldintza bat aplikatzen du Loop baten jarraipena edo For begizta.
+	ManKey_TT =	Hotkey jolastu Makro "urratsez urrats"
+	MRel_TT =	Mugimenduak egungo posizio erlatiboa.
+		Edo Kontrol erabiltzen bada: Kargua erlatiboa kontrolatzeko.
+	OSHK_TT =	Aukeratu Makro
+	OSHKEd_TT =	Aukeratu Makro
+	OSProgB_TT =	Erakutsi Eraikitzen Bar
+	OSTrans_TT =	Opakotasuna
+	PauseKey_TT =	Hotkey erreprodukzioa geldiarazteko
+	PicPrev_TT =	Egin klik bikoitza irudi irekitzeko
+	Raw_TT =	SendRaw Komandoa karaktere guztiak interpretatzen literalki
+		Baizik itzultzeari {} Sartu tekla sakatu ENTER bat baino,
+		^ C Kontrol-C, eta abar
+	RecKey_TT =	Atzera-tekla garbitzeko
+	RecNewKey_TT =	Atzera-tekla garbitzeko
+	Recurse_TT =	Azpidirektorio (azpikarpetak) errekurtsiboki / azpigakoa
+	RefreshIEW_TT =	Freskatu zerrenda
+	Relative_TT =	Koordenatuak leiho aktiboa erlatiboak dira.
+	RelKey_TT =	Records Mouse mugimendu eta klik desplazamenduak gisa
+		Aurreko posizio batetik ospatzen denean.
+	ReptC_TT =	0 = mugagabea
+	Reset_TT =	Eguraldi aldakorra edukiak
+	RGB_TT =	Causes kolorea RGB balio bat ordez BGR gisa interpretatu behar
+	Screen_TT =	Koordenatuak mahaigaina (pantaila osoan) erlatiboak dira.
+	Screenshot_TT =	Egin pantaila
+	SetText_TT =	Kontrol baten testua aldatzen.
+	SI_TT =	Hitza FORCE elkarrizketa-koadroan salto eta zahar esate automatikoki ordezkatuko du,
+		Bertan Reload komandoa ondorio berekoa da.
+		Hitza ez ikusi salto elkarrizketa koadroan, eta antzinako instantziarik martxan uzten.
+		Beste era batera esanda, saiatzen ez ikusi egingo zaie dagoeneko martxan gidoi bat abiarazteko.
+		Hitza OFF esker, gidoi bat baino gehiago aldi berean exekutatu behar.
+	SM_TT =	Ekitaldia: Hau gidoiak guztiek erabilitako hasierako lehenetsia da.
+		SendEvent Bidali metodoa erabiltzen du, SendRaw, klik egin, eta MouseMove / Klik / Drag.
+		Sarrera: SendInput Bidali metodoa aldatzen, SendRaw, klik egin, eta MouseMove / Klik / Drag.
+		InputThenPlay: Same gainetik dagoela ezik itzultzen Gertaera modura baino areago
+		Denean SendInput dago erabilgarri, Play modua (behean) itzultzen da. Hau ere eragiten
+		SendInput komando bera Play modua denean SendInput ez dago eskuragarri leheneratu.
+		Play: SendPlay Bidali metodoa aldatzen, SendRaw, klik egin, eta MouseMove / Klik / Drag.
+	ST_TT =	1: leiho baten izenburua zehaztu WinTitle batekin hasi du partida bat izango da.
+		2: leiho bat izenburua WinTitle eduki dezake edonon barruan partida bat izan da.
+		3: leiho batek izenburu bat etorri behar WinTitle partida bat izan nahi du.
+		RegEx: aldaketak WinTitle, WinText, ExcludeTitle, eta ExcludeText adierazpen erregularrak izan.
+	TimeoutM_TT =	0 = mugagabea
+	TitleMatch_TT =	1: leiho baten izenburua zehaztu WinTitle batekin hasi du partida bat izango da.
+		2: leiho bat izenburua WinTitle eduki dezake edonon barruan partida bat izan da.
+		3: leiho batek izenburu bat etorri behar WinTitle partida bat izan nahi du.
+		RegEx: aldaketak WinTitle, WinText, ExcludeTitle, eta ExcludeText adierazpen erregularrak izan.
+	TitleSpeed_TT =	Fast: Hau portaera lehenetsia da. Performance nabarmen Slow baino hobea izan daiteke, baina leiho mota batzuk egiteko zenbait elementu WinText ezingo dira "ikusi" Leiho hainbat komando arabera.
+		Slow: askoz motelagoa izan daiteke, baina posible da WinText guztiak bat leiho komando bilaketak horien bitartez partida bat bezala leiho guztietan eskuratuko. Leiho Spy agerian uzten horrek Leiho baten testu-zatiak (baldin badaude) motela moduan eskatzen.
+	ToggleC_TT =	Aktibatu Grabaketa erlatiboa gako egoera oinarritzen da.
+	TransC_TT =	Kolore gardena
+	VarCopyA_TT =	Kopiatu uneko edukiak aldakorra
+	VarCopyB_TT =	Kopiatu uneko edukiak aldakorra
+	VariatT_TT =	Aldakuntza Shades
+	WScale_TT =	Zabalera eskala
+		
+; 20. Operators		
+	As_Oper_1 =	Esleitu
+	As_Oper_2 =	Gehitu
+	As_Oper_3 =	Kendu
+	As_Oper_4 =	Biderkatu
+	As_Oper_5 =	Divide
+	As_Oper_6 =	Solairua arraila
+	As_Oper_7 =	Kateatu
+	As_Oper_8 =	Bitez biak barne OR
+	As_Oper_9 =	ETA bitarra
+	As_Oper_10 =	Bitez esklusiboa OR
+	As_Oper_11 =	Eskuin shift ETA
+	As_Oper_12 =	Ezker shift ETA
+	Co_Oper_1 =	Berdintasuna
+	Co_Oper_2 =	Berdintasuna (kasu sentikorra)
+	Co_Oper_3 =	Ez da berdina
+	Co_Oper_4 =	Greater
+	Co_Oper_5 =	Gutxiago
+	Co_Oper_6 =	Handiagoa edo berdina
+	Co_Oper_7 =	Txikiagoa edo berdina
+	Co_Oper_8 =	In (zerrenda)
+	Co_Oper_9 =	Not in (zerrenda)
+	Co_Oper_10 =	Dauka (zerrenda)
+	Co_Oper_11 =	Ez dauka (zerrenda)
+	Co_Oper_12 =	(1. linea) eta (2 linea) Between
+	Co_Oper_13 =	Not artean (1. linea) eta (2 linea)
+	Co_Oper_14 =	Da (mota)
+	Co_Oper_15 =	Ez al da (mota)
+		
+; 21. IE Commands Tips		
+	IE_Cmd_Index =	
+	Checked	Ezartzen edo laukia edo irrati botoia estatuan berreskuratzen.
+	Click	Objektu gainean klik bat simulatzen du.
+	Focus	Sets objektuaren ardatz.
+	GoBack	Atzeratua elementu bat nabigatu historia zerrendan.
+	GoForward	Nabigatu aurrera historia zerrendako elementu bat.
+	GoHome	Uneko etxera joaten edo hasi orria.
+	GoSearch	Uneko bilaketa orrira nabigatu.
+	Height	Ezartzen edo objektu altuera berreskuratzen.
+	Href	Ezartzen edo helmuga URL bat edo aingura puntu bat eskuratzen.
+	InnerHTML	Ezartzen edo objektuaren HTML eskuratzen.
+	InnerText	Ezartzen edo objektuaren testu lortzen.
+	Length	Ezartzen edo objektu kopurua berreskuratzen bilduma batean.
+	LocationName	Bide edo titulua current page lortzen.
+	LocationURL	Uneko orriaren URL lortzen du.
+	Navigate	URL edo bide joaten.
+	OuterHTML	Ezartzen edo objektuaren eta bere edukiak ere HTML berreskuratzen.
+	Quit	Orri ixten.
+	Refresh	Unean erakutsitako orria birkargatu.
+	SelectedIndex	Ezartzen edo hautatutako objektu bat hautatu aukeraren indizea eskuratzen.
+	Src	Ezarri edo URL bat eskuratzen den objektua kargatu behar diren.
+	Stop	Oraindik nabigazioa edo deskargatu bertan behera uzten du.
+	Submit	Inprimakia aurkeztu.
+	Type	Ezartzen edo eduki objektuaren mota eskuratzen.
+	Value	Lortzen edo objektuaren balioa ezartzen du.
+	Width	Ezartzen edo objektuaren zabalera berreskuratzen.
+		
+; 22. COM Objects Tips		
+	COM_CLSID_Index =	
+	Excel.Application	Manipulatzen Excel orriak.
+	HTMLfile	Erabili ahal izango da, irakurri, idatzi eta HTML elkarreragin.
+	InternetExplorer.Application	Arakatu webguneak.
+	MSXML2.DOMDocument.6.0	XML parser.
+	MSXML2.XMLHTTP	XML eskaera bat HTTP erabiliz adierazten ditu.
+	Outlook.Application	Outlook zereginak eta elementuak manipulatzen.
+	PowerPoint.Application	PowerPoint aurkezpenak manipulatzen.
+	Schedule.Service	Ordutegiak eta Windows zereginak editatzeko.
+	ScriptControl	Dinamikoki exekutatu VBScript edo JScript.
+	Scripting.Dictionary	Objektu datuak gakoa, elementua bikote gordetzen duen.
+	Scripting.FileSystemObject	Access fitxategiak karpetak
+	Shell.Application	Sarbide Explorer IE windows / tabs; open manipulatzeko leihoak.
+	Shell.Explorer	Embed Explorer / Browser GUI bat (Internet Explorer - sardea nabigatzailean) en kontrol bat.
+	SAPI.SpVoice	Testutik-hizketarako (TTS).
+	VBScript.RegExp	VBS Regular Expressions (match global barne).
+	WMPlayer.OCX	Multimedia fitxategiak; Ikasi WMPlayer kontrol GUI batean.
+	WinHttp.WinHttpRequest.5.1	Simple HTTP bezero funtzionalitate bat eskaintzen, UrlDownloadToFile baino kontrol askoz gehiago ematen du.
+	Winmgmt	Lortu informazio sistema; Kudeatu leihoak zerbitzuak.
+	WScript.Shell	Hainbat administrazio zereginak (jaiotzez AHK zeregin asko).
+	Word.Application	Manipulatzen Word dokumentuak.
+		
+; 23. AHK Commands Tips		
+	Ahk_Cmd_Index =	
+	Abs	Zenbakia balio absolutua itzultzen.
+	ACos	Arkokosinua du (zenbaki zeinen kosinu da zenbakia) radianetan itzultzen.
+	Array	Osokoa gako array elkarte scripten bat sortzen du.
+	Asc	Pertsonaia kodea itzultzen (1 eta 255 arteko zenbaki bat (ere ANSI eraikitzen) edo 65535 (in Unicode eraikitzen)) String lehen pertsonaia da.
+	ASin	Arkusinua du (zenbaki zeinen sine da zenbakia) radianetan itzultzen.
+	ATan	Arkutangentea (kopurua eta horren tangentea da zenbakia) radianetan itzultzen.
+	BlockInput	Desgaitzen edo erabiltzailearen teklatua eta saguaren bidez ordenagailua elkarreragiteko gaitasuna ematen dizu.
+	Break	Irteerak (helmuga) begizta bat. Edozein motatako begizta barruan baliogarria.
+	CDO	Postak erabiltzaileak definitutako kontua erabiliz bidaltzen.
+	Ceil	Gorantz biribildutako gertueneko zenbaki kopurua itzultzen du (edozein .00 atzizki gabe).
+	Chr	Pertsonaia bakar Zenbakia bidez adierazten pertsonaia kodeari dagokion itzultzen.
+	Click	Saguaren botoi bat zehaztutako koordenatuetan Bisitaldiak. Era berean, eduki ahal behera botoi bat, gurpila biratu, edo mugitu.
+	Clipboard	Arbeletik Pastak testua.
+	ClipWait	Waits arbelari datuak ditu arte.
+	ComObjActive	Erregistratua COM objektu bat eskuratzen du.
+	ComObjArray	COM batera erabiltzeko SAFEARRAY bat sortzen du.
+	ComObjConnect	A COM objektuaren gertaera iturri konektatzen aurrizki jakin batekin funtzio bat.
+	ComObjCreate	COM objektu bat sortzen du.
+	ComObjEnwrap / ComObjUnwrap	Wraps / COM objektu bat unwraps.
+	ComObjError	Gaitzen edo COM hutsen jakinarazpena desaktibatzen du.
+	ComObjFlags	Eskuratzen edo COM wrapper objektuaren portaera kontrolatzen duten banderak aldatzen.
+	ComObjGet	COM osagai batek emandako objektu bat erreferentzia bat itzultzen du.
+	ComObjMissing	A "parametroa falta" objektu den COM metodo bat pasatzeko sortzen.
+	ComObjParameter	Balio bat eta mota biltzen den COM metodo bat parametro gisa pasatzen.
+	ComObjQuery	COM interfaze edo zerbitzu baten objektu bat kontsultak.
+	ComObjType	Eskuratzen informazioa idatz COM objektu bat.
+	ComObjValue	Balioa edo erakuslea COM wrapper objektu bat gordeta eskuratzen du.
+	Continue	Uneko begizta-iterazio gainerako Salto eta berri bat hasten da. Edozein motatako begizta barruan baliogarria.
+	Control	Kontrol bat aldaketak barietate bat egiten du.
+	ControlClick	Saguaren botoi bat edo saguaren gurpila gertaera kontrol bat bidaltzen du.
+	ControlEditPaste	Pastak kurtsore / txertatze Editatu kontrol batean posizioan String (honek ez duela arbelaren edukinak eragina).
+	ControlFocus	Sarrerako foku ezartzen leiho batean kontrol jakin bati.
+	ControlGet	Kontrol bat informazio-mota ezberdinak eskuratzen du.
+	ControlGetFocus	Eskuratzen zein helburu leihoa kontrola sarrerako foku ditu, baldin badago.
+	ControlGetPos	Posizioa eta tamaina kontrol baten eskuratzen du.
+	ControlGetText	Kontrol batetik testu eskuratzen du.
+	ControlMove	Mugimenduak edo kontrol baten tamaina aldatzen.
+	ControlSend / ControlSendRaw 	Simulatu leiho bat edo kontrol to zanpatze bidaltzen.
+	ControlSetText	Kontrol baten testua aldatzen.
+	CoordMode	Sets koordinatzeko modua da hainbat komando bai leiho aktiboa edo pantailaren erlatiboa izango.
+	Cos	Trigonometria Zenbakia kosinua itzultzen du.
+	Delete	Gako-balio bikote kentzen objektu bat.
+	DllCall	DLL bat barruan funtzio bat Deiak, hala nola, Windows API funtzio estandar bezala.
+	Drive	Ejects erretiluan / retracts CD edo DVD unitatea batean, edo disko baten bolumenaren etiketa ezartzen.
+	DriveGet	Ordenagailuaren disko (s) informazio-mota ezberdinak eskuratzen du.
+	DriveSpaceFree	Aina bat espazioan, Megabyte ere eskuratzen du.
+	Else	Komandoa (k) IF-adierazpen bat FALSE baliora ebaluatzen bada burutzeko zehazten. Noiz komando bat baino gehiago da, erantsi horiek bloke bat (giltza) ere.
+	EnvAdd	Beraren batura gehi emandako balioa (ere batu edo kendu denbora data-time balio bat daiteke) aldagai bat ezartzen du. Var + = Balio: sinonimoa.
+	EnvDiv	Bera aldagai bat emandako balioa arabera banatzen ezartzen du. Var / = Balio: sinonimoa.
+	EnvGet	Ingurune-aldagai bat eskuratzen du.
+	EnvMult	Aldagai bat ezartzen bera da emandako balioa aldiz. Var * = Balio: sinonimoa.
+	EnvSet	Balio bat idazten ditu ingurumenaren jasotako aldagai bat.
+	EnvSub	Aldagai bat ezartzen du bera ken emandako balioa (ere data-time balioak alderatu daiteke) ra. sinonimoa: Var - = balioa.
+	EnvUpdate	OS eta hori inguruneko aldagaia (s) aldatu egin dira martxan aplikazio guztiak jakinarazten.
+	ExitApp	Gidoia amaitzen baldintzarik gabe.
+	Exp	Itzultzen e (hau da, gutxi gorabehera, 2.71828182845905) n botere planteatu.
+	Expression	Operazio bat edo gehiago egiten du aldagai, literal kateak, eta / edo literal zenbaki batzuk gainean.
+	FileAppend	Testua idazten du fitxategi bat (lehen fitxategia sortzeko, beharrezkoa izanez gero) amaierara arte.
+	FileCopy	Kopia bat edo fitxategi gehiago.
+	FileCopyDir	Kopiak bere azpi-karpetak eta fitxategiak (xcopy antzekoa) guztiak batera karpeta bat.
+	FileCreateDir	Karpeta bat sortzen du.
+	FileCreateShortcut	Lasterbidea (.lnk) fitxategi bat sortzen du.
+	FileDelete	Fitxategi bat edo gehiago ezabatzen.
+	FileGetAttrib	Txostenak karpeta edo fitxategi bat irakurri-bakarrik ote da, ezkutatuta, etc.
+	FileGetShortcut	A shortcut (.lnk) fitxategiari buruzko informazioa eskuratzen du, besteak beste, bere helburu fitxategi gisa.
+	FileGetSize	Fitxategi baten tamaina eskuratzen du.
+	FileGetTime	Datetime fitxategia edo karpeta batean zigilua eskuratzen du.
+	FileGetVersion	Fitxategi baten bertsio eskuratzen du.
+	FileMove	Mugimenduak edo fitxategi bat edo gehiago izena aldatuko.
+	FileMoveDir	Karpeta batean Mugimenduak bere azpi-karpetak eta fitxategiak guztiekin batera. Era berean, karpeta bat aldatu ahal izango.
+	FileOpen	Objektu bideratutako fitxategia I / O ematen du.
+	FileRead	Fitxategi baten edukinak irakurtzen aldagai bat sartu.
+	FileReadLine	Zehaztutako fitxategi batetik lerroa irakurtzen eta aldagai batean testua gordetzen du.
+	FileRecycle	Fitxategi edo direktorio zakarrontzira bidaltzen du, ahal izanez gero.
+	FileRecycleEmpty	Recycle bin husten.
+	FileRemoveDir	Karpeta bat ezabatzen.
+	FileSelectFile	Erabiltzaileak fitxategia irekitzeko edo (k) gordetzeko aukera ematen du elkarrizketa-estandarra bistaratzen du.
+	FileSelectFolder	Ahalbidetzen duen erabiltzaileak karpeta bat hautatzeko elkarrizketa-estandarra bistaratzen du.
+	FileSetAttrib	Fitxategi edo karpeta bat edo gehiago atributuak aldatzen. Komodinak onartzen dira.
+	FileSetTime	Datetime fitxategiak edo karpetak bat edo gehiago zigilua aldatzen. Komodinak onartzen dira.
+	Floor	Biribildutako gertueneko zenbaki kopurua itzultzen du (edozein .00 atzizki gabe).
+	For	Komandoak serie bat behin gako-balio objektu bat bikote bakoitzeko errepikatzen.
+	Format	Sarrerako balioen kopurua aldagai bat formatu katea arabera formatuak.
+	FormatTime	YYYYMMDDHH24MISS unea azalduko zehaztutako data / ordua formatu bilakatzen.
+	Func	Funtzio bat erreferentzia eskuratzen du.
+	GetKeyName / GetKeyVK / GetKeySC	Izena edo testu, kode birtual edo gako baten kodea eskaneatu eskuratzen du.
+	GetKeyState	Checks teklatua tekla edo saguaren / joystick botoia gora edo behera bada. Era joystick egoera eskuratzen.
+	Gosub	Zehaztutako etiketa joango da eta exekuzioa jarraitzen Return topatu arte.
+	Goto	Zehaztutako etiketa joango da eta exekuzioa jarraitzen.
+	GroupActivate	Leiho talde bat groupadd definitu zen hurrengo leihoa aktibatzen du.
+	GroupAdd	Leiho zehaztapen bat gehitzen leiho talde bati, beharrezkoa izanez gero, taldea sortzeko.
+	GroupClose	Leiho aktiboa ixten GroupActivate edo GroupDeactivate by besterik ez da aktibatzen zen gero. gero serieko hurrengo leihoa aktibatuko da. Era berean, leiho guztiak itxi daiteke talde batean.
+	GroupDeactivate	Antzeko hurrengo leihoa aktibatuko ez ezik talde batean GroupActivate izateko.
+	HasKey	Egia itzultzen gakoa balio bat lotuta.
+	If	Zehazten komandoa (k) egin nahi izanez gero, aldagai baten konparazioa balio TRUE evalutes izateko. Noiz komando bat baino gehiago da, erantsi horiek bloke bat (giltza) ere.
+	If (expression)	Komandoa (k) adierazpen bat TRUE bada burutzeko zehazten.
+	If A_Index	Checks uneko begizta-iterazio betetzen dituen zenbaki bat zehaztu bada.
+	If Clipboard	Checks Arbela testua bada zehaztutako katea bat betetzen dituen.
+	If ErrorLevel	Egiaztatzen bada edo irudia pixel bat zehaztu pantailan aurkitu zen.
+	If var [not] between	Checks aldagai baten edukiak ala zenbakiz edo alfabetikoki bi balioak (biak barne) arteko daude.
+	If var [not] in / If var [not] contains MatchList	Checks aldagai baten edukiak ala etortzeko zerrenda bateko elementu bat.
+	If var is [not] type	Checks aldagai baten edukien ote diren zenbaki, maiuskulaz, etc.
+	IfEqual / IfNotEqual	Aldagai bat konparatzen berdintasunerako balio bat. Sinonimoa rekin: Var = Balio | bada Var <> Balio.
+	IfExist / IfNotExist / FileExist	Fitxategi edo karpeta bat existentzia egiaztatzen.
+	IfGreater / IfGreaterOrEqual	Aldagai bat konparatzen balio bat. sinonimoa: bada Var> Balio | bada Var> = balioa.
+	IfInString / IfNotInString	Egiaztatzen aldagai bat zehaztutako katea izanez gero.
+	IfLess / IfLessOrEqual	Aldagai bat konparatzen balio bat. sinonimoa: bada Var <Balio | Var <= Balio bada.
+	IfMsgBox	Checks bertan botoia zen erabiltzaileak berak bultzatu du MsgBox azken komandoaren zehar.
+	IfWinActive / IfWinNotActive	Checks zehaztutako leiho existitzen bada eta une honetan aktibo dago (behin).
+	IfWinExist / IfWinNotExist	Egiaztatzen zehaztutako leiho existitzen bada.
+	ImageSearch	Pantailaren eskualde bat bilatzen du, irudi bat da.
+	IniDelete	Formatu .ini fitxategi estandar batean balio bat ezabatzen.
+	IniRead	Formatu .ini fitxategi estandar batean balio bat irakurtzen.
+	IniWrite	Balio bat idazten formatuan .ini fitxategi estandar bat da.
+	Input	Erabiltzaileak kate bat idatzi itxaroten (ez Windows 9x eutsitako: ez da ezer gertatzen).
+	InputBox	Sarrera kutxa erabiltzaileak eskatu kate bat sartzeko bistaratzen.
+	InsertAt	Balore bat edo gehiago txertatzen array lineal baten barruan posizio jakin batean.
+	InStr	Kate baten agerraldia jakin batean, ezkerreko edo eskuineko bilatzen du.
+	KeyWait	Tekla edo saguaren / joystick botoia Waits kaleratu behar edo sakatzen behera.
+	Label	Etiketa bat kode-lerro bat identifikatzen, eta Goto helburu edo azpierrutinarentzat osatzeko gisa erabili ahal izango dira.
+	Length	Array lineal bat posizio 1 hasita luzera itzultzen.
+	ListVars	Beren izenak eta egungo edukiak: gidoia aldagaiak erakusten du.
+	Ln	Du logaritmo arrunta (base e) zenbakia itzultzen du.
+	LoadPicture	Irudi bat kargatzen du fitxategia eta bitmap edo ikono helduleku itzultzen.
+	Log	Logaritmoa (base 10) zenbakia itzultzen du.
+	Loop (files & folders)	Zehaztutako fitxategi edo karpetak, aldi berean bat eskuratzen du.
+	Loop (normal) 	Landu komandoak serie bat behin eta berriz: bai zehaztu zenbat aldiz edo break topatu arte.
+	Loop (parse a string)	Eskuratzen azpikateak (eremuak) kate bat, aldi berean batetik.
+	Loop (read file contents)	Testu fitxategi bat, bat lerro eskuratzen denbora bat (hobe burutzen FileReadLine baino ez).
+	Loop (registry)	Zehaztutako erregistro Azpigako edukiak, aldi berean, elementu bat eskuratzen du.
+	MaxIndex	Osokoa gakoa altuena itzultzen.
+	MinIndex	Txikiena osokoa giltza itzultzen.
+	Mod	Modulo. gainerako denean Dibidenduen da zatitzailea arabera banatzen itzultzen.
+	MouseGetPos	Egungo saguaren kurtsorearen posizioan, eta aukeran, leihoak eta kontrolatzeko, gainetik pasatzean eskuratzen du.
+	MsgBox	Zehaztutako botoiak (esaterako, Bai eta Ez gisa) bat edo gehiago dituen leiho txiki batean testua bistaratzen du.
+	NumGet	Zehaztutako helbidean gordeta + offset bitar zenbakia itzultzen du.
+	NumPut	Zehaztutako helbidean formatu bitarrean dendak Zenbakia + konpentsatzeko eta helbidea itzultzen elementua eskubidea besterik idatzia.
+	Object	Scripten elkartze-array bat sortzen du.
+	Ord	Ordinalak balio (zenbakizko pertsonaia kodea) String pertsonaia lehen itzultzen.
+	OutputDebug	Kate bat bidaltzen araztailea (baldin badaude) bistaratzeko izateko.
+	Parameter	Funtzioak parametro bat gehitzen du.
+	Pause	Gidoia egungo haria pausarazten.
+	PixelGetColor	Zehaztutako x at pixelaren kolorea eskuratzen du, y koordinatzen.
+	PixelSearch	Pantailaren eskualde bat bilatzen du, zehaztutako kolore pixel bat da.
+	Pop	Kentzen eta azken array elementu itzultzen.
+	PostMessage	Mezu bat Plazak mezua leiho bat edo kontrol ilaran.
+	Process	Egiten prozesu batean ondorengo eragiketa bat: txekeak balu Bere lehentasuna aldatzen; ixten da; itxaroten den ixteko.
+	Progress	Sortzen edo progresio-barra bat duen leiho bat eguneratuko.
+	Push	Balioak eransten array baten amaieran.
+	Random	Sasi-ausazko zenbaki bat sortzen.
+	RegDelete	Azpigako bat edo balio erregistroan ezabatzen.
+	RegExMatch	Kate baten eredu bat (adierazpen erregular) dauka ala ez zehazten du.
+	RegExReplace	Eredu bat (adierazpen erregular) kate baten barruan agerraldi ordeztu du.
+	RegRead	Erregistrotik balio bat irakurtzen.
+	RegWrite	Balio bat idazten du erregistratzeko.
+	RemoveAt	Emandako array lineal bat posizio batetik elementuak kentzen.
+	Return	Azpierrutinarentzat itzultzen zein exekuzioa Aurretik funtzio-deia, Gosub, laster aktibazioa, GroupActivate, edo beste bide baten bidez salto egin zuen.
+	Round	N kendutako edo 0 bada, zenbakia gertueneko zenbaki osora biribilduko da. N zenbaki positiboa bada, zenbakia hamartar N lekuak biribilduko da. N negatiboa bada, zenbakia N digituak biribilduko du dezimal ezkerrera.
+	Run	Kanpoko programaren bat exekutatzen.
+	RunAs	Erabiltzaile kredentzial multzo bat ondorengo Run eta RunWait erabilera guztiak erabili behar den zehazten. Eskatzen Windows 2000 / XP edo geroago.
+	RunWait	Kanpoko programaren bat exekutatzen, eta itxaroten amaitu arte.
+	Send / SendRaw	Simulatu zanpatze eta sagu klik bidaltzen du lehio aktiboan.
+	SendLevel	Teklatua eta saguaren artifizial ekitaldiak teklak eta hotstrings arabera ez ikusi egingo zaie Kontrolak.
+	SendMessage	Mezu bat bidaltzen leiho bat edo kontrol eta aitortzea itxaroten.
+	SetCapslockState	BlokMaius gakoaren egoera ezartzen du. Ezin ere gakoa behartzeko on edo off egoteko.
+	SetKeyDelay	Atzerapena izango dela Send edo ControlSend bitartez bidaltzeko tekla bakoitzaren ondoren gertatzen ezartzen du.
+	SetNumlockState	Blok zenb gakoaren egoera ezartzen du. Ezin ere gakoa behartzeko on edo off egoteko.
+	SetRegView	Erregistroko 32-bit gidoi batean komandoak 64-bit erregistroan ikuspegia sartzeko eta alderantziz ahalbidetzen du.
+	SetScrollLockState	Korr gakoaren egoera ezartzen du. Ezin ere gakoa behartzeko on edo off egoteko.
+	SetTimer	Causes azpierrutinarentzat martxan jarri behar da automatikoki eta behin eta berriz zehaztutako denbora-tarte batean.
+	Shutdown	Itzaltzen, berrabiaraztean, edo sistema deskonektatzen da.
+	Sin	Trigonometria Zenbakia sinua itzultzen.
+	Sleep	Adierazitako denboraz itxaroten jarraitu aurretik.
+	Sort	Aldagai baten edukien antolatzen alfabetikoan, numerikoak, edo ausazko ordena (aukeran bikoiztuak kendu) ere.
+	SoundBeep	PC bozgarailua batetik tonua igortzen.
+	SoundGet	Soinu gailu batetik hainbat ezarpenak (mutua maisua, bolumen maisua, eta abar) eskuratzen
+	SoundGetWaveVolume	Olatu irteera soinu gailu batetik bolumen eskuratzen du.
+	SoundPlay	Soinua, bideoa edo beste onartutako fitxategi-mota bat jokatzen.
+	SoundSet	Aldaketak hainbat soinu gailu baten ezarpenak (maisu mutu, bolumen maisua, eta abar)
+	SoundSetWaveVolume	Olatu irteera soinu gailu baten bolumena aldatzen du.
+	SplashImage	Sortzen edo JPG, GIF, BMP edo irudi bat duen leiho bat eguneratuko.
+	SplashTextOff	Goiko leihoa ixten du.
+	SplashTextOn	Customizable testu popup leiho bat sortzen du.
+	SplitPath	Fitxategi baten izena edo URL bere izena, direktorioa, luzapena, eta disko sartu bereizten.
+	Sqrt	Zenbakia erro karratua itzultzen du.
+	StatusBarGetText	A status bar kontrol estandarretik testu eskuratzen du.
+	StatusBarWait	Waits leiho bat egoera barran zehaztutako katea dauka arte.
+	StringGetPos	Zehaztutako azpikate posizioa kate baten barruan eskuratzen du.
+	StringLeft	Ezker-eskua kate baten alde batetik karaktere kopuru bat eskuratzen du.
+	StringLen / StrLen	Zenbat karaktere kate bat daude kondea eskuratzen du.
+	StringLower	Kate bat minuskulan bihurtzen du.
+	StringMid / SubStr	Zehaztutako katea batean posiziotik karaktere bat edo gehiago eskuratzen du.
+	StringReplace / StrReplace	Ordezkatze zehaztutako katea berri batekin azpikate du.
+	StringRight	Eskuineko kate baten alde batetik karaktere kopuru bat eskuratzen du.
+	StringSplit / StrSplit	Kate bat azpikateak zehaztutako mugatzaileak erabiliz array bat sartu bereizten.
+	StringTrimLeft	Ezker-eskua kate baten alde batetik karaktere kopuru bat kentzen.
+	StringTrimRight	Eskuineko kate baten alde batetik karaktere kopuru bat kentzen.
+	StringUpper	Kate bat maiuskulara bihurtzen du.
+	StrPut / StrGet	Kopiak edo memoria-helbide bat kate bat, aukerakoa da kodea orrialdeek arteko bihurtzeko.
+	SysGet	Eskuratzen pantailaren bereizmena, multi-monitore info, sistema objektuen neurriak, eta beste sistema propietate.
+	Tan	Trigonometria Zenbakia sinua itzultzen du.
+	ToolTip	Beti-on-top leiho bat pantailaren edozein tokitan sortzen.
+	Transform	Miscellaneous math funtzioak, bitekin operazioak, eta, besteak beste, ASCII / Unicode bihurtze gisa zereginak.
+	TrayTip	Puxika mezua leiho bat bandejako ikonoa gertu sortzen. Eskatzen Windows 2000 / XP edo geroago.
+	Trim / LTrim / RTrim	Hasiera eta / edo amaieran kate baten pertsonaiak zenbait mozketa.
+	Until	Baldintza bat aplikatzen du Loop baten jarraipena edo For begizta.
+	UrlDownloadToFile	Internetetik fitxategi bat deskargatzen.
+	UserFunction	Funtzio egitura bat sortzen du.
+	Variable	Zehaztutako aldagai bati balioa ematen dio.
+	While	Komandoak serie bat egiten du behin eta berriz Zehaztutako adierazpen gezurra ebaluatzen arte.
+	WinActivate	Zehaztutako leiho (egiten nagusietan) aktibatzen du.
+	WinActivateBottom	WinActivate berdina duten ezik beheragoen (gutxienez aktibo) Leiho aktibatzen da beharrean lehenengoa baino.
+	WinActive	Berezia ID (HWND) leiho aktiboa zehaztutako irizpide bat datorrenean, haren itzultzen.
+	WinClose	Zehaztutako leiho ixten.
+	WinExist	Egiaztatzen zehaztutako leiho existitzen bada.
+	WinGet	Zehaztutako leiho ikastetxerako ID berezia, prozesu ID, prozesuaren izena, edo bere kontrolak zerrenda bat eskuratzen du. Era berean, zehaztutako irizpideak betetzen leihoen zerrenda bat berreskuratu ahal.
+	WinGetClass	Zehaztutako leiho klase name eskuratzen du.
+	WinGetPos	Posizioa eta tamaina zehaztutako leihoaren eskuratzen du.
+	WinGetText	Zehaztutako leiho batetik testu eskuratzen du.
+	WinGetTitle	Zehaztutako leiho titulua eskuratzen du.
+	WinHide	Zehaztutako leiho ezkutatzen.
+	WinHttpDownloadToFile	Downloads bat edo Internetetik fitxategiak gehiago.
+	WinKill	Zehaztutako leiho ixteko indarrak.
+	WinMaximize	Zehaztu bere tamaina gehienez leihoa handitzen du.
+	WinMenuSelectItem	Menu zehaztutako leihoaren barratik menu-elementu bat deitzen du.
+	WinMinimize	Zehaztutako leiho kolapsoak botoi bat atentzioa orrian sartu.
+	WinMinimizeAll	Leiho guztiak gutxitzen.
+	WinMinimizeAllUndo	Aurreko WinMinimizeAll bat ekintza desegiten.
+	WinMove	Posizioa eta / edo tamaina zehaztutako leihoaren aldatzen.
+	WinRestore	Unminimizes edo zehaztutako leiho da txikitzean edo handitzen bada unmaximizes.
+	WinSet	Zehaztutako leiho aldaketak, hala nola, "beti gainean" eta gardentasuna barietate bat egiten du.
+	WinSetTitle	Zehaztutako leiho titulua aldatzen.
+	WinShow	Zehaztutako leiho unhides.
+	WinWait	Waits zehaztutako leiho existitzen arte.
+	WinWaitActive	Waits zehaztutako leiho aktibatu arte.
+	WinWaitClose	Waits zehaztutako leiho ez arte existitzen.
+	WinWaitNotActive	Waits zehaztutako leiho ez da aktiboa arte.
+	Zip / UnZip	Konprimatu edo zip fitxategi bat edo gehiago deskonprimitu.
+	WinExist	Egiaztatzen zehaztutako leiho existitzen bada.
+	WinGet	Zehaztutako leiho ikastetxerako ID berezia, prozesu ID, prozesuaren izena, edo bere kontrolak zerrenda bat eskuratzen du. Era berean, zehaztutako irizpideak betetzen leihoen zerrenda bat berreskuratu ahal.
+	WinGetClass	Zehaztutako leiho klase name eskuratzen du.
+	WinGetPos	Posizioa eta tamaina zehaztutako leihoaren eskuratzen du.
+	WinGetText	Zehaztutako leiho batetik testu eskuratzen du.
+	WinGetTitle	Zehaztutako leiho titulua eskuratzen du.
+	WinHide	Zehaztutako leiho ezkutatzen.
+	WinHttpDownloadToFile	Downloads bat edo Internetetik fitxategiak gehiago.
+	WinKill	Zehaztutako leiho ixteko indarrak.
+	WinMaximize	Zehaztu bere tamaina gehienez leihoa handitzen du.
+	WinMenuSelectItem	Menu zehaztutako leihoaren barratik menu-elementu bat deitzen du.
+	WinMinimize	Zehaztutako leiho kolapsoak botoi bat atentzioa orrian sartu.
+	WinMinimizeAll	Leiho guztiak gutxitzen.
+	WinMinimizeAllUndo	Aurreko WinMinimizeAll bat ekintza desegiten.
+	WinMove	Posizioa eta / edo tamaina zehaztutako leihoaren aldatzen.
+	WinRestore	Unminimizes edo zehaztutako leiho da txikitzean edo handitzen bada unmaximizes.
+	WinSet	Zehaztutako leiho aldaketak, hala nola, "beti gainean" eta gardentasuna barietate bat egiten du.
+	WinSetTitle	Zehaztutako leiho titulua aldatzen.
+	WinShow	Zehaztutako leiho unhides.
+	WinWait	Waits zehaztutako leiho existitzen arte.
+	WinWaitActive	Waits zehaztutako leiho aktibatu arte.
+	WinWaitClose	Waits zehaztutako leiho ez arte existitzen.
+	WinWaitNotActive	Waits zehaztutako leiho ez da aktiboa arte.
+	Zip / UnZip	Konprimatu edo zip fitxategi bat edo gehiago deskonprimitu.

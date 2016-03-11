@@ -62,18 +62,18 @@
 	i_Lang008 =	&Kuva / Pixel Search
 	i_Lang009 =	&Run / File / String / Misc.
 	i_Lang010 =	&Loop
-	i_Lang011 =	&Goto
-	i_Lang012 =	L&evy
+	i_Lang011 =	M&ene / Etiketti
+	i_Lang012 =	&Set ajastin
 	i_Lang013 =	&Jos Lausumat
 	i_Lang014 =	M&uuttujat / Taulukot
-	i_Lang015 =	Toiminnot &/ Array menetelmiä
+	i_Lang015 =	Toiminnot / Arra&y menetelmiä
 	i_Lang016 =	L&ähetä sähköposti
-	i_Lang017 =	Lataa / Lataa tie&dostot
+	i_Lang017 =	Lataa tie&dostoja
 	i_Lang018 =	&Zip / Pura tiedostot
 	i_Lang019 =	Internet E&xplorer
 	i_Lang020 =	&COM-Liitäntä
 	i_Lang021 =	&Windows Viestit
-	i_Lang022 =	Et&si komento
+	i_Lang022 =	&Etsi komento
 		
 ; 06. Edit Sub Menu		
 	e_Lang001 =	&Monistaa
@@ -324,10 +324,10 @@
 	c_Lang026 =	Toiminta
 	c_Lang027 =	Napsauttaa
 	c_Lang028 =	Liikkua
-	c_Lang029 =	Siirrä ja valitsemalla
+	c_Lang029 =	Liikkua Ja Klikkaa
 	c_Lang030 =	Pyörän Up
 	c_Lang031 =	Pyörää
-	c_Lang032 =	Vedä ja pudota
+	c_Lang032 =	Raahaa Ja Pudota
 	c_Lang033 =	Koordinaatit
 	c_Lang034 =	Etsi
 	c_Lang035 =	Alikomento
@@ -629,7 +629,7 @@
 	t_Lang074 =	K&aikki rivit
 	t_Lang075 =	Ka&ikki Makrot
 	t_Lang076 =	Noin
-	t_Lang077 =	&Säännöllinen lauseke
+	t_Lang077 =	S&äännöllinen lauseke
 	t_Lang078 =	Toista kerran
 	t_Lang079 =	Toista jokainen X (soti) sekuntia
 	t_Lang080 =	Ajastin
@@ -644,7 +644,7 @@
 	t_Lang089 =	Salli useita esiintymiä
 	t_Lang090 =	Oletukset
 	t_Lang091 =	Salli vetämällä rivejä
-	t_Lang092 =	K&oko solun sisältö
+	t_Lang092 =	Koko &solun sisältö
 	t_Lang093 =	Standard INI muodossa
 	t_Lang094 =	Nimi = arvo
 	t_Lang095 =	Anna 1 muuttujan riville. Voit myös lisätä [§].
@@ -760,6 +760,8 @@
 	t_Lang205 =	Title Vastaavuustila
 	t_Lang206 =	Title Ottelu Nopeus
 	t_Lang207 =	Asiakas
+	t_Lang208 =	L&öytää
+	t_Lang209 =	K&orvata
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Avata
@@ -769,11 +771,14 @@
 	d_Lang005 =	Tallenna Projekti
 	d_Lang006 =	Tallennus epäonnistui / korvata tiedosto
 	d_Lang007 =	Virhe
-	d_Lang008 =	Virhe: Ei Macro Valittu.`nTarkista ainakin yksi makro luettelosta.
+	d_Lang008 =	Virhe: Ei Macro Valittu.
+		Tarkista ainakin yksi makro luettelosta.
 	d_Lang009 =	Virhe: Ei Hotkey Valittu.
-	d_Lang010 =	Virhe: Virheellinen osoite.`nValitun osoitteen tai tiedoston nimi ei kelpaa.
+	d_Lang010 =	Virhe: Virheellinen osoite.
+		Valitun osoitteen tai tiedoston nimi ei kelpaa.
 	d_Lang011 =	Varoitus
-	d_Lang012 =	Ei ohjaus valittu.`nJatka?
+	d_Lang012 =	Ei ohjaus valittu.
+		Jatka?
 	d_Lang013 =	Vie Script
 	d_Lang014 =	Script Viety
 	d_Lang015 =	Tiedosto onnistuneesti viety!
@@ -788,7 +793,8 @@
 	d_Lang022 =	Edellinen
 	d_Lang023 =	Viesti
 	d_Lang024 =	Ladata oletusasetukset?
-	d_Lang025 =	Makro (s) aktivoituu.`nKäytä pikanäppäimet pelata.
+	d_Lang025 =	Makrot aktivoitu.
+		Käytä pikanäppäimet pelataan.
 	d_Lang026 =	Aloita / lopeta nauhoitus
 	d_Lang027 =	Tallennus pysäytetty
 	d_Lang028 =	Tallennus...
@@ -805,7 +811,8 @@
 	d_Lang037 =	Kuva / Pixel ei löytynyt.
 	d_Lang038 =	Jatka painamalla OK.
 	d_Lang039 =	Timeout!
-	d_Lang040 =	Tämä ominaisuus vaatii GDI+ kirjasto.
+	d_Lang040 =	
+.	Tämä ominaisuus vaatii GDI+ kirjasto.	Αυτή η λειτουργία απαιτεί το GDI+βιβλιοθήκη.
 		Klikkaa OK mennäksesi ladata sivulle.
 	d_Lang041 =	Muuttujan nimi sisältää epäkelvon merkin.
 	d_Lang042 =	on varattu sana.
@@ -833,8 +840,7 @@
 	d_Lang059 =	Tämä komento ei tue ilmaisuja tai toimintoja.
 		Ole hyvä määrittää muuttujaa ja käyttää sitä parametrin.
 	d_Lang060 =	Uusi versio saatavilla
-	d_Lang061 =	Haluatko ladata sen nyt?
-		Voit poistaa automaattisen valvonnan valitse Ohje > Tarkista käynnistettäessä
+	d_Lang061 =	
 	d_Lang062 =	Sinulla on jo uusin versio.
 	d_Lang063 =	Virhe tarkkailun.
 	d_Lang064 =	Virhe
@@ -901,35 +907,45 @@
 	d_Lang113 =	Ei raportoitu virhe.
 	d_Lang114 =	Skriptejä viedään (vaikka käännetty) kanssa lähetä sähköpostia toiminto (CDO) on näkyvissä merkintä sähköpostitilejä käytetään, mukaan lukien salasana. PMC Projektitiedosto ei ole tätä tietoa.
 	d_Lang115 =	- Pidä Alt asettaa alueelle samaan paikkaan.
+	d_Lang116 =	Siirto ja asennus
+	d_Lang117 =	Mene ladata sivulle
+	d_Lang118 =	Lataaminen ... Ole hyvä, odota.
 		
 ; 18. Start-up Tips		
-	Start_Tips =	Voit luoda makroja käyttäen Command painikkeet pääikkunassa tai käyttämällä Recorder kopioida toimia. Valitse Valinnat > Asetukset > Tallennus valita mitä panoksia tallennetaan.
-		Voit käyttää tallenninta nopeasti tehtäviä mene Valinnat > Asetukset > Tallennus ja tarkista "Clear List" vaihtoehto. Napsauta sitten Tallenna-painiketta pääikkunassa ja käyttää F10 tyhjentää nykyisen Macro ja aloittaa uuden samalla pikanäppäin. Voit myös tarkistaa "Aina aktiivinen" vaihtoehto pääikkunassa pitää Tallennus ja toisto pikanäppäimiä aktiivinen.
-		Saada apua tietyn komennon hiiren kakkospainikkeella missä tahansa komento ikkuna näyttää linkkejä AutoHotkey ohjeessa.
-		Tarkista "Capture Keys" mahdollisuus tulla Avainten ja yhdistelmien teidän Macro suoraan pääikkunassa.
-		Anna avaimet ja yhdistelmät pikanäppäin alalaidassa ja paina Lisää-painiketta ja lisää ne valita rivejä.
-		Jos rivejä on valittu edit painikkeet koskevat kaikkia rivejä luettelon.
-		Voit määrittää oman muuttujia muuttujat ikkunat (Insert > Jos Lausunnot / muuttujat / toiminnot). Käyttää niitä sisällä komentoja liittää muuttujan nimeä prosenttia merkkejä, esim.: %MyVar%.
-		Loop counter yläosassa asettaa kokonaismäärä silmukoita valitun Macro.
-		Voit muokata rivi kaksoisnapsauttamalla sitä tai valitsemalla sen ja napsauttamalla Muokkaa painikkeita.
-		Voit muokata useita valitut rivit käyttämällä vaihtoehtoja muokata alareunassa.
-		Valitse yksi tai useampi rivi lisää uusia komentoja niiden päälle.
-		Voit siirtyä krs click-ja-vedä.
-		Kaksoisnapsauta kuvake aktivoi pikanäppäimet tai toiston / tallennuksen lopetus. Klikkaa sitä keskellä olevaa painiketta toiston tai tallennuksen tauko.
-		Voit viedä Makrot työ AutoHotkey skriptejä tai stand-alone ajettavat alkaen Vie-ikkuna.
-		Tallentaa ja toistaa hiiri käyttäen absoluuttista koordinaatit mene Valinnat > Asetukset > Ensisijaiset ja asettaa Hiiri Koordinaatit Screen.
-		Voit avata, kopioida, siirtää tai poistaa tiedostoja ja kansioita yksi komennot Lisää > Run / File / String / Misc.
-		Tallentaa alas ja ylös tilan jokainen näppäin Valitse Valinnat > Asetukset > Tallennus ja katso "Capture-näppäimen tila (Down / Up)" vaihtoehto.
-		Voit käyttää pikanäppäimiä nopeuttaa tai hidastaa toisto. Valitse Valinnat > Asetukset > Toisto asettaa avaimet ja nopeus.
-		Voit säätää korjuualueella käyttäen "Make Screenshot" työkalu mene Valinnat > Asetukset > Kuvakaappaukset ja valitse "Paina Enter Capture". Kun olet piirtänyt suorakulmion käytön valvonta nuolinäppäimillä valinta ja Shift nuolinäppäimillä muuttaa sen kokoa.
-		Nopea Valitse: Valitse jokin rivi ja napsauta sarakkeen otsikkoa ja valitse samanlaisia rivejä perustuu solun tekstin sarakkeen.
-		Run / File / String / Misc. ikkuna on monia muita hyödyllisiä komentoja, kuten sammutus ja UrlDownloadToFile.
-		Käytä "Screenshot"-toiminto toimii ikkunan (Lisää > Jos Lausunnot / muuttujat / toiminnot) tehdä kuvakaappaus osan näytön. Ensimmäinen parametri on kohde tiedoston polku ja nimi kanssa png laajennus. Toinen parametri on putki erotetut koordinaatit näyttö, esim. 100|200|50|100 (X|Y|Leveys|Korkeus).
-		Klikkaa Index Sarakeotsikko päälle / pois Ohje Marks ja värit silmukat ja liitetiedot. Kaksoisnapsauta Action Sarakeotsikko päälle / pois painaumakestävyys silmukat ja liitetiedot.
-		Voit debug Makrot käyttämällä Manual pikanäppäin ja Play vaihtoehtoja makrovalikon. Voit myös poistaa toimia poistamalla ne Macro luetteloon.
-		Voit tehdä makrot toimivat vain tietyn ikkunan mennä Macro > Context Sensitive pikanäppäimet.
-		Voit asettaa oman Global muuttujat ladataan käynnistettäessä ja viedä. Valitse Valinnat > Asetukset > Käyttäjän yleismuuttujat lisätä ne.
-		Voit käyttää kehittyneitä toimintoja, kuten substr ja RegExReplace päässä toiminnot ikkunan (Lisää > Jos Lausunnot / muuttujat / toiminnot). Tai ajaa omia toimintoja ulkopuolisilta AutoHotkey skriptejä.
+	Start_Tips =	Katso video tutorials klo www.macrocreator.com/help oppia monia piirteitä Pulover Macro Creator.
+		Saada apua erityinen komento hiiren kakkospainikkeella tahansa komentoikkunan näyttämään linkkejä ohjeen.
+		Voit luoda makroja käyttäen Command Painikkeet pääikkunassa tai käyttämällä tallentimen kopioida toimia. Valitse Valinnat> Asetukset> Tallennus valita mitä panoksia tallennetaan.
+		Käytä hakupalkki tai "Etsi komento" ikkuna etsiä komentoja ja toimintoja.
+		Haluatko auttaa korjaamaan käännöksen tai jopa luoda uuden? Valitse Valinnat> Asetukset> Kieli editorin ja tehdä korjauksia haluat. Voit esikatsella sen milloin tahansa. Napsauttamalla Lähetä lähettää tarkistamista. Voit vapaasti esittää mitään lukuisia korjauksia niin monta kertaa kuin haluat.
+		Tarkista "Capture Keys" mahdollisuuden siirtyä Avainten ja yhdistelmien omaan Macro suoraan pääikkunassa.
+		Anna avaimet ja yhdistelmiä Hotkey alaosassa ja painamalla Lisää-painiketta lisätä niitä valitsemalla rivit.
+		Käytä muokata painikkeita pääikkunan asettaa toista ja viivästyttää useita rivejä samanaikaisesti. Jos rivejä on valittu muokata painikkeiden koskevat kaikkia rivit luettelossa.
+		Lähes jokainen komento ja funktio hyväksyy ja lähdöt muuttujia. Voit määrittää oman muuttujia muuttujat ikkunat (komennot> Variables / Arrays). Voit käyttää niitä sisällä komentoja liittää muuttujan nimeä prosenttia merkeistä, esim .:% myvar%. Funktioissa, käyttää niitä ilman prosentin merkkejä, esim .: substr (myVar, 5).
+		Napsauta mitä tahansa komennossa ikkunassa helposti lisätä sisäisiin muuttujiin listasta.
+		Jos haluat käyttää tallenninta nopeasti tehtävät mene Valinnat> Asetukset> Tallennus ja tarkista "Clear List" vaihtoehto. Valitse sitten Tallenna-painiketta pääikkunassa ja käyttää F10 tyhjentää nykyisen Macro ja aloittaa uuden samalla pikanäppäin. Voit myös tarkistaa "Always Active" vaihtoehto pääikkunassa pitää Tallennus ja toisto pikanäppäimiä aktiivinen.
+		PMC tukee Array ja -tavat, kuten AutoHotkey skriptejä. Voit luoda taulukoita monin tavoin, yleisin on menossa muuttujat ikkunan tarkkailun "Expression" vaihtoehto ja liitti arvot suluissa, esim .: [10, 20, Var, "merkkijono"]. Voit myös luoda nimetty avaimet, esim .: {Keya: Vara "joitakin keskeisiä": "string value"}.
+		Toiminnot käyttävät AHK lausekesyntaksia. Kirjaimellinen jouset on lainausmerkeissä, ja muuttujia ei tarvitse prosenttia merkkejä. Voit käyttää muita toimintoja tai ryhmän elementtien parametreina. Esim .: StrReplace (myVar, myArray [ "A"], substr (OtherVar, 2, 3)).
+		Expressions tuetaan AutoHotkey Expression Syntax. Jos haluat käyttää ilmaisua sisällä komennon parametrin, aloita se prosenttimerkillä, esim .:% substr (Var, 5).
+		Loop laskuri yläosassa asettaa kokonaismäärä silmukoita valitun Macro.
+		Voit muokata rivi kaksoisnapsauttamalla sitä tai valitsemalla sen ja napsauttamalla Muokkaa painikkeita. Voit muokata useita valitut rivit käyttämällä vaihtoehtoja muokata alareunassa.
+		Voit määrittää omia toimintoja Function> Luo toiminto ja käyttää niitä Function ikkunasta tai sisällä ilmaisuja.
+		Voit määritellä globa / paikallisten ja staattiset muuttujat Käyttäjän määrittämät toiminnot. Global muuttujat on määritelty Valinnat> Asetukset> Käyttäjän yleismuuttujat pidetään Super Global, ja tulee aina olemaan saatavilla sisällä toimintoja, vaikka määritellä paikallisiksi.
+		Valitse yksi tai useampia rivejä lisätä uusia komentoja niiden päälle.
+		Voit siirtyä krs click ja vetämällä.
+		Kaksoisnapsauta kuvake aktivoida pikavalintanäppäimet tai lopettaa toiston / tallennuksen. Klikkaa sitä keskimmäisellä painikkeella toiston tai tallennuksen keskeyttää.
+		Voit viedä Makrot työ- AutoHotkey skriptejä tai stand-alone ajettavat päässä Export ikkuna.
+		Tallentaa ja toistaa hiiri käyttäen absoluuttista koordinaatteja mene Valinnat> Asetukset> Ensisijaiset ja asettaa Hiiri Koordinaatit Screen.
+		Voit avata, kopioida, siirtää tai poistaa tiedostoja ja kansioita yksi komennoista komennot> Suorita / File / String / Misc. On olemassa monia muita hyödyllisiä komentoja, kuten StringReplace, InputBox ja MouseGetPos.
+		Jos haluat tallentaa alas ja ylös tilasta jokaisen avaimen mene Valinnat> Asetukset> Tallennus ja tarkista "Kuvausnäppäin tila (alas / ylös)" vaihtoehto.
+		Voit käyttää pikanäppäimiä nopeuttaa tai hidastaa toisto. Valitse Valinnat> Asetukset> Toisto asettaa avaimia ja nopeuden.
+		Säädä kaapata alueella käyttäen "Make Screenshot" työkalu mene Valinnat> Asetukset> Kuvakaappaukset ja valitse "Press Enter Capture". Kun olet piirtänyt suorakulmion käyttö Control + nuolinäppäimiä valintaa ja Shift + nuolinäppäimillä muuttaa sen kokoa.
+		Nopea Select: Valitse jokin rivi ja klikkaa sarakeotsikkoa valitsemaan samantyyppisiä rivit perustuu solun tekstin sarakkeen.
+		Klikkaa Index Sarakeotsikko kytkeä päälle / pois Ohje Marks Colors Silmukat ja liitetiedot. Kaksoisnapsauta Action Sarakeotsikko kytkeä päälle / pois Sisennys silmukoita ja liitetiedot.
+		Voit debug Makrot avulla Manual Hotkey ja Play vaihtoehtoja makrovalikon. Voit myös poistaa toimia poistamalla ne Macro luetteloon.
+		Voit tehdä Makrot toimivat vain tietyn ikkunan mennä Macro> Context Sensitive pikanäppäimet.
+		Voit asettaa oman Global muuttujat lastataan käynnistyksen ja viedään. Valitse Valinnat> Asetukset> Käyttäjän Global muuttujat lisätä ne.
+		Voit suorittaa kehittyneitä toimintoja, kuten substr ja REGEXREPLACE alkaen toiminnot ikkunasta (komennot> Toiminnot / Array Methods). Voit myös määritellä omia toimintoja tai suorittaa toimintoja ulkoisesta AutoHotkey skriptejä.
+		Voit tallentaa hiiren liikkeet suhteessa nykyiseen asemaan pitämällä CapsLock tallennuksen aikana (voit muuttaa avain ja se vaihtaa Asetuksista).
 		
 ; 19. Tooltips		
 	A_List_TT =	Valitse Makro (Ctrl+1~0)
@@ -998,12 +1014,12 @@
 	Ex_UV_TT =	Viedä globaalien muuttujien.
 	Ex_WN_TT =	Käyttöön tai poistaa käytöstä varoitukset erityiset edellytykset, jotka voivat ilmoittaa virheestä, kuten kirjoitusvirheen tai puuttuva "globaali" ilmoitusta.
 	ExpList_TT =	Kaksoisnapsauta muokata
-	ExprLink2_TT =	- ÄLÄ LIITTÄÄ MUUTTUJAT PROSENTTIA SIGNS TÄSTÄ.
+	ExprLink2_TT 	- ÄLÄ LIITTÄÄ MUUTTUJAT PROSENTTIA SIGNS TÄSTÄ.
 		- Useimmat AHK ilmaisuja tuetaan.
 		- Voit käyttää jouset, muuttujat, taulukot ja toimintoja.
-		- Jos haluat käyttää jouset, liittää ne lainausmerkkeihin, esimerkiksi: var = "".
-		- Useita ilmoituksia tukevat, esimerkiksi: var = "" || InStr (var, "b").
-	ExprLink3_TT =	- ÄLÄ LIITTÄÄ MUUTTUJAT PROSENTTIA SIGNS TÄSTÄ.
+		- Jos haluat käyttää jouset, liittää ne lainausmerkkeihin, esimerkiksi: var  "".
+		- Useita ilmoituksia tukevat, esimerkiksi: var  "" || InStr (var, "b").
+	ExprLink3_TT 	- ÄLÄ LIITTÄÄ MUUTTUJAT PROSENTTIA SIGNS TÄSTÄ.
 		- Useimmat AHK ilmaisuja tuetaan.
 		- Voit käyttää jouset, muuttujat, taulukot ja toimintoja.
 		- Jos haluat käyttää jouset, liittää ne lainausmerkkeihin, esimerkiksi: var = "".
@@ -1099,13 +1115,13 @@
 	Co_Oper_6 =	Suurempi tai yhtä suuri
 	Co_Oper_7 =	Pienempi tai yhtä suuri
 	Co_Oper_8 =	In (lista)
-	Co_Oper_9 =	 Ei (lista)
-	Co_Oper_10 =	 Sisältää (lista)
-	Co_Oper_11 =	 Ei sisältää (lista)
-	Co_Oper_12 =	 Välillä (rivi 1) ja (linja 2)
-	Co_Oper_13 =	 Ei välillä (rivi 1) ja (linja 2)
-	Co_Oper_14 =	 Is (tyyppi)
-	Co_Oper_15 =	 Ei (tyyppi)
+	Co_Oper_9 =	Ei (lista)
+	Co_Oper_10 =	Sisältää (lista)
+	Co_Oper_11 =	Ei sisältää (lista)
+	Co_Oper_12 =	Välillä (rivi 1) ja (linja 2)
+	Co_Oper_13 =	Ei välillä (rivi 1) ja (linja 2)
+	Co_Oper_14 =	Is (tyyppi)
+	Co_Oper_15 =	Ei (tyyppi)
 		
 ; 21. IE Commands Tips		
 	IE_Cmd_Index =	
@@ -1135,7 +1151,7 @@
 	Value	Saa tai asettaa kohteen arvo.
 	Width	Asettaa tai noutaa leveys objektin.
 		
-; 22. COM Methods Tips		
+; 22. COM Objects Tips		
 	COM_CLSID_Index =	
 	Excel.Application	Manipuloi Excel levyt.
 	HTMLfile	Voidaan käyttää lukea, kirjoittaa ja vuorovaikutuksessa HTML.
@@ -1283,6 +1299,7 @@
 	Length	Palauttaa pituus lineaarisen joka alkaa asemassa 1.
 	ListVars	Näyttää skriptin muuttujat: heidän nimensä ja nykyisen sisällön.
 	Ln	Palauttaa luvun luonnollisen logaritmin (base e) ja lukumäärä.
+	LoadPicture	Lataa kuvan tiedostosta ja palauttaa bittikartta tai kuvake kahva.
 	Log	Palauttaa logaritmin (base 10) lukumäärä.
 	Loop (files & folders)	Hakee määritetyt tiedostot tai kansiot, yksi kerrallaan.
 	Loop (normal) 	Suorita sarja käskyjä toistuvasti: joko annettu määrä kertoja tai kunnes tauko on kohdannut.
@@ -1367,11 +1384,36 @@
 	Until	Koskee kunnossa jatkoa Loop tai silmukan.
 	UrlDownloadToFile	Lataa tiedoston Internetistä.
 	UserFunction	Luo Tehtävä rakenne.
+	Variable	Asettaa määritetyn arvon muuttujaan.
 	While	Suorittaa sarjan komentoja, kunnes määritelty lauseke on epätosi.
 	WinActivate	Aktivoi määritetty ikkunan (tekee kaikkea).
 	WinActivateBottom	Sama kuin WinActivate paitsi että se aktivoi alimmainen (ainakin viime aikoina aktiivinen) matching ikkunan sijasta päällimmäinen.
 	WinActive	Palauttaa Unique ID (HWND) aktiivisen ikkunan, jos se vastaa määritellyt kriteerit.
 	WinClose	Sulkee tietyn ikkunan.
+	WinExist	Tarkastukset jos määritelty ikkuna on olemassa.
+	WinGet	Hakee tietyn ikkunan yksilöllinen tunnus, prosessi ID, prosessin nimi, tai luettelo sen valvontaa. Se voi myös hakea listan kaikki ikkunat vastaavia määritellyt kriteerit.
+	WinGetClass	Hakee määritetyn ikkunan luokan nimi.
+	WinGetPos	Noutaa sijainti ja koko määritellyn ikkunan.
+	WinGetText	Hakee tekstiä tietyn ikkunan.
+	WinGetTitle	Hakee otsikko tietyn ikkunan.
+	WinHide	Piilottaa määritelty ikkuna.
+	WinHttpDownloadToFile	Lataukset yksi tai useampia tiedostoja Internetistä.
+	WinKill	Pakottaa määritelty ikkunan lähellä.
+	WinMaximize	Suurentaa määritelty ikkunan sen enimmäiskoko.
+	WinMenuSelectItem	Vetoaa valikon valikkoriviltä määritellyn ikkunan.
+	WinMinimize	Romahtaa määritetyn ikkunan painiketta tehtäväpalkissa.
+	WinMinimizeAll	Pienentää kaikki ikkunat.
+	WinMinimizeAllUndo	Kääntää vaikutus edellisen WinMinimizeAll.
+	WinMove	Muutokset aseman ja / tai koko on määritetty ikkunan.
+	WinRestore	Unminimizes tai unmaximizes määritetyn ikkunassa, jos se on minimoitu tai maksimoidaan.
+	WinSet	Tekee erilaisia muutoksia määritellyn ikkunan, kuten "aina päällä" ja avoimuutta.
+	WinSetTitle	Muuttaa otsikko määritellyn ikkunan.
+	WinShow	Tuo näkyviin määritelty ikkuna.
+	WinWait	Odottaa, kunnes määritelty ikkuna on olemassa.
+	WinWaitActive	Odottaa, kunnes määritelty ikkuna on aktiivinen.
+	WinWaitClose	Odottaa, kunnes määritelty ikkuna ei ole olemassa.
+	WinWaitNotActive	Odottaa, kunnes määritelty ikkuna ei ole aktiivinen.
+	Zip / UnZip	Pakkaa tai purkaa yhden tai useampia zip-tiedostoja.
 	WinExist	Tarkastukset jos määritelty ikkuna on olemassa.
 	WinGet	Hakee tietyn ikkunan yksilöllinen tunnus, prosessi ID, prosessin nimi, tai luettelo sen valvontaa. Se voi myös hakea listan kaikki ikkunat vastaavia määritellyt kriteerit.
 	WinGetClass	Hakee määritetyn ikkunan luokan nimi.

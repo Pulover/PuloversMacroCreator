@@ -111,13 +111,12 @@
 		GoSub, SetFinishButtom
 		GuiControl, 1:, CoordTip, <a>CoordMode</a>: %CoordMouse%
 		GuiControl, 1:, TModeTip, <a>TitleMatchMode</a>: %TitleMatch%
-		GuiControl, 1:, TSpeedTip, <a>TitleMatchSpeed</a>: %TitleSpeed%
 		Gui, 1:-Disabled
 	}
 
 	LVLoad(List, Code)
 	{
-		Global sciPrev, sciPrevF, UserDefFunctions
+		Global UserDefFunctions
 		Static _x := Chr(2), _y := Chr(3), _z := Chr(4)
 		
 		Critical
@@ -141,8 +140,7 @@
 				{
 					StringLower, UserDefFunc, % Col[3]
 					UserDefFunctions .= UserDefFunc " "
-				,	sciPrev.SetKeywords(0x6, UserDefFunctions)
-				,	sciPrevF.SetKeywords(0x6, UserDefFunctions)
+				,	SetUserWords(UserDefFunctions)
 				}
 			}
 			If (Code.Version = "")
@@ -183,6 +181,13 @@
 				,	Details := Act ".Language := """ Col[6] """"
 				,	Details .= "`n" Act ".ExecuteStatement(" Act "Code)"
 				,	Col[2] := Act, Col[3] := Details, Col[6] := "COMInterface"
+				}
+				If (InStr(Col[6], "Search"))
+				{
+					If (Col[7] = "Break")
+						Col[7] := "UntilFound"
+					If (Col[7] = "Continue")
+						Col[7] := "UntilNotFound"
 				}
 			}
 			LV_Add("Check" chk, Col*)

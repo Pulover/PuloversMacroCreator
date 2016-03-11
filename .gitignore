@@ -4,6 +4,7 @@
 /Documentation/MacroCreator_Help-doc/Commands/*.html
 /Documentation/MacroCreator_Help-doc/hha.dll
 /Screenshots/
+/*.txt
 *.exe
 *.chm
 *.ini

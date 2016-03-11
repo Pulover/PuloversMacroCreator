@@ -1,52 +1,40 @@
-;=======================================================================================
+﻿;=======================================================================================
 ;
-; Function:	  Eval
-; Description:   Evaluate Expressions in Strings.
-; Return value:  An array (object) with the result of each expression.
+; Function:		Eval
+; http://autohotkey.com/boards/viewtopic.php?f=6&t=13565
+; Description:	Evaluate Expressions in Strings.
+; Return value:	An array (object) with the result of each expression.
 ;
 ; Author:		Pulover [Rodolfo U. Batista] (rodolfoub@gmail.com)
-; Credits:	   ExprEval() by Uberi
+; Credits:		ExprEval() by Uberi
 ;
 ;=======================================================================================
-;
-; Parameters:
-;
-;	$x:		   The input string to be evaluated. You can enter multiple expressions
-;					  separated by commas (inside the string).
-;	_CustomVars:  An optional Associative Array object containing variables names
-;					  as keys and values to replace them.
-;				  For example, setting it to {A_Index: A_Index} inside a loop will replace
-;					  occurrences of A_Index with the correct value for the iteration.
-;	_Init:		Used internally for the recursive calls. If TRUE it resets the static
-;					  object _Objects, which holds objects references to be restored.
-;
-;=======================================================================================
-
 Eval($x, _CustomVars := "", _Init := true)
 {
-	local $y, $z, $i, $v, _Elements, $o, _Match, _Match1, _Match2, _Match3, _Match4
-	, $pd, $pd1, EvalResult, ObjName, VarName, Oper, VarValue, _Pos, _i, _v, $Result
+	local $y, $z, $i, $v, _Elements, __Elements, HidString, RepString, $o
+	, _Match, _Match1, _Match2, _Match3, _Match4, $pd, $pd1, EvalResult
+	, ObjName, VarName, Oper, VarValue, _Pos, _i, _v, $Result
 	Static _Objects
 	_Elements := {}
 	If (_Init)
 		_Objects := {}
-
+	
 	; Strip off comments
 	$x := RegExReplace($x, "U)/\*.*\*/"), $x := RegExReplace($x, "U)\s;.*(\v|$)")
 	
 	; Replace brackets, braces, parenthesis and isolated Strings
-	While (RegExMatch($x, "\[([^\[\]]++|(?R))*\]", _Bracket%A_Index%))
-		_Elements["&_Bracket" A_Index "_&"] := _Bracket%A_Index%
-	,   $x := RegExReplace($x, "\[([^\[\]]++|(?R))*\]", "&_Bracket" A_Index "_&", "", 1)
-	While (RegExMatch($x, "\{[^\{\}]++\}", _Brace%A_Index%))
-		_Elements["&_Brace" A_Index "_&"] := _Brace%A_Index%
-	,   $x := RegExReplace($x, "\{[^\{\}]++\}", "&_Brace" A_Index "_&", "", 1)
-	While (RegExMatch($x, "\(([^()]++|(?R))*\)", _Parent%A_Index%))
-		_Elements["&_Parent" A_Index "_&"] := _Parent%A_Index%
-	,   $x := RegExReplace($x, "\(([^()]++|(?R))*\)", "&_Parent" A_Index "_&", "", 1)
-	While (RegExMatch($x, "U)"".*""", _String%A_Index%))
-		_Elements["&_String" A_Index "_&"] := _String%A_Index%
-	,   $x := RegExReplace($x, "U)"".*""", "&_String" A_Index "_&", "", 1)
+	While (RegExMatch($x, "\[([^\[\]]++|(?R))*\]", _Bracket))
+		_Elements["&_Bracket" A_Index "_&"] := _Bracket
+	,	$x := RegExReplace($x, "\[([^\[\]]++|(?R))*\]", "&_Bracket" A_Index "_&",, 1)
+	While (RegExMatch($x, "\{[^\{\}]++\}", _Brace))
+		_Elements["&_Brace" A_Index "_&"] := _Brace
+	,	$x := RegExReplace($x, "\{[^\{\}]++\}", "&_Brace" A_Index "_&",, 1)
+	While (RegExMatch($x, "\(([^()]++|(?R))*\)", _Parent))
+		_Elements["&_Parent" A_Index "_&"] := _Parent
+	,	$x := RegExReplace($x, "\(([^()]++|(?R))*\)", "&_Parent" A_Index "_&",, 1)
+	While (RegExMatch($x, "sU)"".*""", _String))
+		_Elements["&_String" A_Index "_&"] := _String
+	,	$x := RegExReplace($x, "sU)"".*""", "&_String" A_Index "_&",, 1)
 	
 	; Split multiple expressions
 	$z := StrSplit($x, ",", " `t")
@@ -63,12 +51,12 @@ Eval($x, _CustomVars := "", _Init := true)
 					_Match%$o% := StrReplace(_Match%$o%, $pd, _Elements[$pd])
 			}
 			EvalResult := Eval(_Match1, _CustomVars, false)
-		,   $y := EvalResult[1]
+		,	$y := EvalResult[1]
 			If ($y)
 			{
 				EvalResult := Eval(_Match2, _CustomVars, false)
-			,   $y := StrJoin(EvalResult,, true)
-			,   ObjName := RegExReplace(_Match2, "\W", "_")
+			,	$y := StrJoin(EvalResult,, true, false)
+			,	ObjName := RegExReplace(_Match2, "\W", "_")
 				If (IsObject($y))
 					_Objects[ObjName] := $y
 				$z[$i] := StrReplace($z[$i], _Match, IsObject($y) ? """<~#" ObjName "#~>""" : $y)
@@ -76,8 +64,8 @@ Eval($x, _CustomVars := "", _Init := true)
 			Else
 			{
 				EvalResult := Eval(_Match3, _CustomVars, false)
-			,   $y := StrJoin(EvalResult,, true)
-			,   ObjName := RegExReplace(_Match3, "\W", "_")
+			,	$y := StrJoin(EvalResult,, true, false)
+			,	ObjName := RegExReplace(_Match3, "\W", "_")
 				If (IsObject($y))
 					_Objects[ObjName] := $y
 				$z[$i] := StrReplace($z[$i], _Match, IsObject($y) ? """<~#" ObjName "#~>""" : $y)
@@ -86,7 +74,7 @@ Eval($x, _CustomVars := "", _Init := true)
 		
 		_Pos := 1
 		; Check for Object calls
-		While (RegExMatch($z[$i], "(\w+)(\.|&_Bracket|&_Parent\d+_&)[\w\.&]+(.*)", _Match, _Pos))
+		While (RegExMatch($z[$i], "(\w+)(\.|&_Bracket|&_Parent\d+_&)(?!.*"")[\w\.&]+(.*)", _Match, _Pos))
 		{
 			AssignParse(_Match, VarName, Oper, VarValue)
 			If (Oper != "")
@@ -94,7 +82,9 @@ Eval($x, _CustomVars := "", _Init := true)
 				While (RegExMatch(VarValue, "&_\w+_&", $pd))
 					VarValue := StrReplace(VarValue, $pd, _Elements[$pd])
 				EvalResult := Eval(VarValue, _CustomVars, false)
-			,   VarValue := StrJoin(EvalResult)
+			,	VarValue := StrJoin(EvalResult)
+				If (!IsObject(VarValue))
+					VarValue := RegExReplace(VarValue, """{2,2}", """")
 			}
 			Else
 				_Match := StrReplace(_Match, _Match3), VarName := _Match
@@ -102,15 +92,22 @@ Eval($x, _CustomVars := "", _Init := true)
 			While (RegExMatch(VarName, "&_\w+_&", $pd))
 				VarName := StrReplace(VarName, $pd, _Elements[$pd])
 			
-			If (RegExMatch(_Match1, "^-?\d+$"))
+			If _Match1 is Number
 			{
 				_Pos += StrLen(_Match1)
 				continue
 			}
-			$y := ParseObjects(VarName, _CustomVars,, true, Oper, VarValue)
-		,   ObjName := RegExReplace(_Match, "\W", "_")
+			
+			$y := ParseObjects(VarName, _CustomVars,, Oper, VarValue)
+		,	ObjName := RegExReplace(_Match, "\W", "_")
+			
 			If (IsObject($y))
 				_Objects[ObjName] := $y
+			Else If $y is not Number
+				$y := """" StrReplace($y, """", """""") """"
+			,	HidString := "&_String" (ObjCount(_Elements) + 1) "_&"
+			,	_Elements[HidString] := $y
+			,	$y := HidString
 			$z[$i] := StrReplace($z[$i], _Match, IsObject($y) ? """<~#" ObjName "#~>""" : $y)
 		}
 		
@@ -118,45 +115,63 @@ Eval($x, _CustomVars := "", _Init := true)
 		While (RegExMatch($z[$i], "&_Bracket\d+_&", $pd))
 		{
 			$z[$i] := StrReplace($z[$i], $pd, _Elements[$pd],, 1)
-		,   RegExMatch($z[$i], "\[(.*)\]", _Match)
-		,   $y := Eval(_Match1, _CustomVars, false)
-		,   ObjName := RegExReplace(_Match, "\W", "_")
-		,   _Objects[ObjName] := $y
-		,   $z[$i] := StrReplace($z[$i], _Match, """<~#" ObjName "#~>""")
+		,	RegExMatch($z[$i], "\[(.*)\]", _Match)
+		,	$y := Eval(_Match1, _CustomVars, false)
+		,	ObjName := RegExReplace(_Match, "\W", "_")
+		,	_Objects[ObjName] := $y
+		,	$z[$i] := StrReplace($z[$i], _Match, """<~#" ObjName "#~>""")
 		}
 		
 		; Assign Associative Arrays
 		While (RegExMatch($z[$i], "&_Brace\d+_&", $pd))
 		{
-			$y := {}
-		,   $z[$i] := StrReplace($z[$i], $pd, _Elements[$pd],, 1)
-		,   RegExMatch($z[$i], "\{(.*)\}", _Match)
+			$y := {}, o_Elements := {}
+		,	$o := _Elements[$pd]
+			While (RegExMatch($o, "&_\w+_&", $od))
+				$o := StrReplace($o, $od, _Elements[$od])
+			While (RegExMatch($o, "sU)"".*""", _String%A_Index%))
+				o_Elements["&_String" A_Index "_&"] := _String%A_Index%
+		,	$o := RegExReplace($o, "sU)"".*""", "&_String" A_Index "_&", "", 1)
+			$z[$i] := StrReplace($z[$i], $pd, $o,, 1)
+		,	RegExMatch($z[$i], "\{(.*)\}", _Match)
 			Loop, Parse, _Match1, `,, %A_Space%%A_Tab%
 			{
 				$o := StrSplit(A_LoopField, ":", " `t")
-				While (RegExMatch($o.2, "&_Brace\d+_&", $pd))
-					$o.2 := StrReplace($o.2, $pd, _Elements[$pd])
-				While (RegExMatch($o.2, "&_Bracket\d+_&", $pd))
-					$o.2 := StrReplace($o.2, $pd, _Elements[$pd])
+				While (RegExMatch($o.1, "&_\w+_&", $pd))
+					$o.1 := StrReplace($o.1, $pd, o_Elements[$pd])
+				While (RegExMatch($o.2, "&_\w+_&", $pd))
+					$o.2 := StrReplace($o.2, $pd, o_Elements[$pd])
 				EvalResult := Eval($o.2, _CustomVars, false)
-			,   $o.1 := Trim($o.1, """")
-			,   $y[$o.1] := EvalResult[1]
+			,	$o.1 := Trim($o.1, """")
+			,	$y[$o.1] := EvalResult[1]
 			}
 			ObjName := RegExReplace(_Match, "\W", "_")
-		,   _Objects[ObjName] := $y
-		,   $z[$i] := StrReplace($z[$i], _Match, """<~#" ObjName "#~>""")
+		,	_Objects[ObjName] := $y
+		,	$z[$i] := StrReplace($z[$i], _Match, """<~#" ObjName "#~>""")
 		}
 		
 		; Restore and evaluate any remaining parenthesis
 		While (RegExMatch($z[$i], "&_Parent\d+_&", $pd))
 		{
 			_Match := RegExReplace(_Elements[$pd], "\((.*)\)", "$1")
-		,   EvalResult := Eval(_Match, _CustomVars, false)
-		,   $y := StrJoin(EvalResult, ", ", true)
-		,   ObjName := RegExReplace($pd, "\W", "_")
-			If (IsObject($y))
-				_Objects[ObjName] := $y
-			$z[$i] := StrReplace($z[$i], $pd, "(" (IsObject($y) ? """<~#" ObjName "#~>""" : $y) ")")
+			While (RegExMatch(_Match, "&_\w+_&", $pe))
+				_Match := StrReplace(_Match, $pe, _Elements[$pe])
+			EvalResult := Eval(_Match, _CustomVars, false)
+		,	RepString := "("
+			For _i, _v in EvalResult
+			{
+				ObjName := RegExReplace($pd . _i, "\W", "_")
+				If (IsObject(_v))
+					_Objects[ObjName] := _v
+				Else If _v is not Number
+					_v := """" _v """"
+				,	HidString := "&_String" (ObjCount(_Elements) + 1) "_&"
+				,	_Elements[HidString] := _v
+				,	_v := HidString
+				RepString .= (IsObject(_v) ? """<~#" ObjName "#~>""" : _v) ", "
+			}
+			RepString := SubStr(RepString, 1, -2) ")"
+			$z[$i] := StrReplace($z[$i], $pd, RepString)
 		}
 		
 		; Check whether the whole string is an object
@@ -168,23 +183,22 @@ Eval($x, _CustomVars := "", _Init := true)
 				If (IsObject(_CustomVars[$y]))
 				{
 					ObjName := RegExReplace($y, "\W", "_")
-				,   _Objects[ObjName] := _CustomVars[$y].Clone()
-				,   $z[$i] := """<~#" ObjName "#~>"""
+				,	_Objects[ObjName] := _CustomVars[$y].Clone()
+				,	$z[$i] := """<~#" ObjName "#~>"""
 				}
 			}
 			Else If (IsObject(%$y%))
 			{
 				ObjName := RegExReplace($y, "\W", "_")
-			,   _Objects[ObjName] := %$y%.Clone()
-			,   $z[$i] := """<~#" ObjName "#~>"""
+			,	_Objects[ObjName] := %$y%.Clone()
+			,	$z[$i] := """<~#" ObjName "#~>"""
 			}
 		}
 		
 		_Pos := 1
 		; Check for Functions
-		While (_Pos := RegExMatch($z[$i], "([\w_]+)\((.*?)\)", _Match, _Pos))
+		While (_Pos := RegExMatch($z[$i], "s)([\w_]+)\((.*?)\)", _Match, _Pos))
 		{
-			; ### Start of PMC exclusive code ###
 			Loop, %TabCount%
 			{
 				TabIdx := A_Index
@@ -197,6 +211,8 @@ Eval($x, _CustomVars := "", _Init := true)
 						LV_GetText(TargetFunc, A_Index, 3)
 						If ((Row_Type = cType47) && (TargetFunc = _Match1))
 						{
+							While (RegExMatch(_Match2, "&_\w+_&", $pd))
+								_Match2 := StrReplace(_Match2, $pd, _Elements[$pd])
 							_Params := {}
 						,	FuncPars := ExprGetPars(_Match2)
 						,	EvalResult := Eval(_Match2, _CustomVars, false)
@@ -207,11 +223,11 @@ Eval($x, _CustomVars := "", _Init := true)
 						,	ObjName := RegExReplace(_Match, "\W", "_")
 							If (IsObject($y))
 								_Objects[ObjName] := $y
-							Else
-							{
-								If $y is not Number
-									$y := """" StrRePlace($y, """", """""") """"
-							}
+							Else If $y is not Number
+								$y := """" $y """"
+							,	HidString := "&_String" (ObjCount(_Elements) + 1) "_&"
+							,	_Elements[HidString] := $y
+							,	$y := HidString
 							$z[$i] := StrReplace($z[$i], _Match, IsObject($y) ? """<~#" ObjName "#:>""" : $y)
 							continue 3
 						}
@@ -227,20 +243,21 @@ Eval($x, _CustomVars := "", _Init := true)
 					_Match1 := ""
 				}
 			}
-			; ### End of PMC exclusive code ###
 			
 			If (IsFunc(_Match1))
 			{
+				While (RegExMatch(_Match2, "&_\w+_&", $pd))
+					_Match2 := StrReplace(_Match2, $pd, _Elements[$pd])
 				_Params := Eval(_Match2, _CustomVars, false)
-			,   $y := %_Match1%(_Params*)
-			,   ObjName := RegExReplace(_Match, "\W", "_")
+			,	$y := %_Match1%(_Params*)
+			,	ObjName := RegExReplace(_Match, "\W", "_")
 				If (IsObject($y))
 					_Objects[ObjName] := $y
-				Else
-				{
-					If $y is not Number
-						$y := """" StrReplace($y, """", """""") """"
-				}
+				Else If $y is not Number
+					$y := """" $y """"
+				,	HidString := "&_String" (ObjCount(_Elements) + 1) "_&"
+				,	_Elements[HidString] := $y
+				,	$y := HidString
 				$z[$i] := StrReplace($z[$i], _Match, IsObject($y) ? """<~#" ObjName "#~>""" : $y)
 			}
 			Else
@@ -250,28 +267,26 @@ Eval($x, _CustomVars := "", _Init := true)
 		; Dereference variables in percent signs
 		While (RegExMatch($z[$i], "U)%(\S+)%", _Match))
 			EvalResult := Eval(_Match1, _CustomVars, false)
-		,   $z[$i] := RegExReplace($z[$i], _Match, EvalResult[1])
+		,	$z[$i] := RegExReplace($z[$i], _Match, EvalResult[1])
 		
-		; Process strings again for objects results (to fix concatenation)
+		; ExprEval() cannot handle Unicode strings, so the "real" strings are "hidden" from ExprCompile() and restored later
 		While (RegExMatch($z[$i], "&_\w+_&", $pd))
 			$z[$i] := StrReplace($z[$i], $pd, _Elements[$pd])
-		While (RegExMatch($z[$i], "U)"".*""", _String%A_Index%))
-			_Elements["&_String" A_Index "_&"] := _String%A_Index%
-		,   $z[$i] := RegExReplace($z[$i], "U)"".*""", "&_String" A_Index "_&", "", 1)
-		
-		; Add concatenate operator after strings where necessary
-		While (RegExMatch($z[$i], "(&_String\d+_&\s+)([^\d\.,\s:\?])"))
-			$z[$i] := RegExReplace($z[$i], "(&_String\d+_&\s+)([^\d\.,\s:\?])", "$1. $2")
-		
-		; Restore isolated strings
-		While (RegExMatch($z[$i], "&_\w+_&", $pd))
-			$z[$i] := StrReplace($z[$i], $pd, _Elements[$pd])
+		__Elements := {}
+		While (RegExMatch($z[$i], "sU)""(.*)""", _String))
+			__Elements["&_String" A_Index "_&"] := _String1
+		,	$z[$i] := RegExReplace($z[$i], "sU)"".*""", "&_String" A_Index "_&",, 1)
+		$z[$i] := RegExReplace($z[$i], "&_String\d+_&", """$0""")
 
+		; Add concatenate operator after strings where necessary
+		While (RegExMatch($z[$i], "(""&_String\d+_&""\s+)([^\d\.,\s:\?])"))
+			$z[$i] := RegExReplace($z[$i], "(""&_String\d+_&""\s+)([^\d\.,\s:\?])", "$1. $2")
+		
 		; Evaluate parsed expression with ExprEval()
 		ExprInit()
-	,   CompiledExpression := ExprCompile($z[$i])
-	,   $Result := ExprEval(CompiledExpression, _CustomVars, _Objects)
-	,   $Result := StrSplit($Result, Chr(1))
+	,	CompiledExpression := ExprCompile($z[$i])
+	,	$Result := ExprEval(CompiledExpression, _CustomVars, _Objects, __Elements)
+	,	$Result := StrSplit($Result, Chr(1))
 		
 		; Restore object references
 		For _i, _v in $Result
@@ -280,24 +295,21 @@ Eval($x, _CustomVars := "", _Init := true)
 				$Result[_i] := _Objects[$pd1]
 		}
 		
-		$z[$i] := StrJoin($Result)
+		$z[$i] := StrJoin($Result,, false, _Init)
 	}
 	
 	return $z
 }
 
-ParseObjects(v_String, _CustomVars  :=  "", ByRef v_levels := "", QuoteStrings := false, o_Oper := "", o_Value := "")
+ParseObjects(v_String, _CustomVars  :=  "", ByRef v_levels := "", o_Oper := "", o_Value := "")
 {
 	Static _needle := "(\w+\.?|\(([^()]++|(?R))*\)\.?|\[([^\[\]]++|(?R))*\]\.?)"
 	
 	l_Matches := [], _Pos := 1, HasMethod := false
 	While (_Pos := RegExMatch(v_String, _needle, l_Found, _Pos))
-	{
 		l_Matches.Push(RTrim(l_Found, "."))
-	,	_Pos += StrLen(l_Found), o_String .= l_Found
-	}
-	_ArrayObject := o_String
-,	v_levels := [], v_Obj := l_Matches[1]
+	,	_Pos += StrLen(l_Found)
+	v_Obj := l_Matches[1]
 	If (_CustomVars.HasKey(v_Obj))
 		_ArrayObject := _CustomVars[v_Obj]
 	Else
@@ -308,7 +320,7 @@ ParseObjects(v_String, _CustomVars  :=  "", ByRef v_levels := "", QuoteStrings :
 			continue
 		If (RegExMatch($v, "^\[(.*)\]$", l_Found))
 			EvalResult := Eval(l_Found1, _CustomVars, false)
-		,   _Key := EvalResult
+		,	_Key := EvalResult
 		Else
 			_Key := [$v]
 		$n := l_Matches[$i + 1]
@@ -317,12 +329,31 @@ ParseObjects(v_String, _CustomVars  :=  "", ByRef v_levels := "", QuoteStrings :
 		If (RegExMatch($n, "^\((.*)\)$", l_Found))
 		{
 			_Key := _Key[1]
-			If ($i = 1)
-				_Params := Eval(l_Found1, _CustomVars, false)
-			,   _ArrayObject := %_Key%(_Params*)
-			Else
-				_Params := Eval(l_Found1, _CustomVars, false)
-			,   _ArrayObject := _ArrayObject[_Key](_Params*)
+		,	_Params := Eval(l_Found1, _CustomVars, false)
+			
+			Try
+			{
+				If ($i = 1)
+					_ArrayObject := %_Key%(_Params*)
+				Else
+					_ArrayObject := _ArrayObject[_Key](_Params*)
+			}
+			Catch e
+			{
+				If (InStr(e.Message, "0x800A03EC"))
+				{
+					; Workaround for strange bug in some Excel methods
+					For _i, _v in _Params
+						_Params[_i] := " " _v
+				
+					If ($i = 1)
+						_ArrayObject := %_Key%(_Params*)
+					Else
+						_ArrayObject := _ArrayObject[_Key](_Params*)
+				}
+				Else
+					Throw e
+			}
 		}
 		Else If (($i = l_Matches.Length()) && (o_Value != ""))
 		{
@@ -357,8 +388,6 @@ ParseObjects(v_String, _CustomVars  :=  "", ByRef v_levels := "", QuoteStrings :
 		Else If ($i > 1)
 			_ArrayObject := _ArrayObject[_Key*]
 	}
-	If ((!IsObject(_ArrayObject)) && (QuoteStrings) && (!RegExMatch(_ArrayObject, "^-?\d+$")))
-		_ArrayObject := """" StrReplace(_ArrayObject, """", """""") """"
 	If (HasMethod)
 		v_levels := ""
 	return _ArrayObject
@@ -367,17 +396,22 @@ ParseObjects(v_String, _CustomVars  :=  "", ByRef v_levels := "", QuoteStrings :
 AssignParse(String, ByRef VarName, ByRef Oper, ByRef VarValue)
 {
 	RegExMatch(String, "(.*?)(:=|\+=|-=|\*=|/=|//=|\.=|\|=|&=|\^=|>>=|<<=)(?=([^""]*""[^""]*"")*[^""]*$)(.*)", Out)
-,   VarName := Trim(Out1), Oper := Out2, VarValue := Trim(Out4)
+,	VarName := Trim(Out1), Oper := Out2, VarValue := Trim(Out4)
 }
 
-StrJoin(InputArray, JChr := "", Quote := false)
+StrJoin(InputArray, JChr := "", Quote := false, Init := true)
 {
 	For i, v in InputArray
 	{
 		If (IsObject(v))
 			return v
-		If (Quote) && ((!RegExMatch(v, "^-?\d+$")))
-			v := """" StrReplace(v, """", """""") """"
+		If v is not Number
+		{
+			If (!Init)
+				v := RegExReplace(v, """{1,2}", """""")
+			If (Quote)
+				v := """" v """"
+		}
 		JoinedStr .= v . JChr
 	}
 	If (JChr != "")
@@ -385,10 +419,15 @@ StrJoin(InputArray, JChr := "", Quote := false)
 	return JoinedStr
 }
 
+ObjCount(Obj)
+{
+	return NumGet(&Obj + 4 * A_PtrSize)
+}
+
 ;##################################################
 ; Author: Uberi
 ; Modified by: Pulover
-; https://autohotkey.com/board/topic/64167-expreval-evaluate-expressions/
+; http://autohotkey.com/board/topic/64167-expreval-evaluate-expressions/
 ;##################################################
 ExprInit()
 {
@@ -447,12 +486,14 @@ ExprCompile(e)
 	Return,ou
 }
 
-ExprEval(e,lp,eo)
+ExprEval(e,lp,eo,el)
 {
 	c1:=Chr(1)
 	Loop,Parse,e,%c1%
 	{
 		lf:=A_LoopField,tt:=SubStr(lf,1,1),t:=SubStr(lf,2)
+		While (RegExMatch(lf,"&_String\d+_&",rm))
+		lf:=StrReplace(lf,rm,el[rm])
 		If tt In l,v
 		lf:=Exprp1(s,lf)
 		Else{

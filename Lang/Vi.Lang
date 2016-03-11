@@ -62,15 +62,15 @@
 	i_Lang008 =	H&ình ảnh / Pixel Tìm kiếm
 	i_Lang009 =	Ch&ạy / File / String / Misc.
 	i_Lang010 =	V&òng lặp
-	i_Lang011 =	&Goto
-	i_Lang012 =	&Nhãn
-	i_Lang013 =	N&ếu báo cáo
-	i_Lang014 =	&Biến / Mảng
+	i_Lang011 =	&Đi Vào / Nhãn
+	i_Lang012 =	&Bộ đếm thời gian
+	i_Lang013 =	&Nếu báo cáo
+	i_Lang014 =	B&iến / Mảng
 	i_Lang015 =	Ch&ức năng / Chức Phương pháp mảng
-	i_Lang016 =	G&ửi email
-	i_Lang017 =	T&ải về / tập tin Tải lên
+	i_Lang016 =	&Gửi email
+	i_Lang017 =	T&ải file
 	i_Lang018 =	&Zip / Giải nén file
-	i_Lang019 =	&Internet Explorer
+	i_Lang019 =	Int&ernet Explorer
 	i_Lang020 =	C&OM giao diện
 	i_Lang021 =	Tin nh&ắn cửa sổ
 	i_Lang022 =	Tì&m một lệnh
@@ -324,10 +324,10 @@
 	c_Lang026 =	Hành động
 	c_Lang027 =	Nhấp
 	c_Lang028 =	Di chuyển
-	c_Lang029 =	Di chuyển && Click vào
+	c_Lang029 =	Di Chuyển Và Nhấp
 	c_Lang030 =	Bánh xe ký
 	c_Lang031 =	Bánh xe xuống
-	c_Lang032 =	Kéo && thả
+	c_Lang032 =	Kéo Và Thả
 	c_Lang033 =	Phối hợp
 	c_Lang034 =	Tìm kiếm
 	c_Lang035 =	Subcommand
@@ -760,6 +760,8 @@
 	t_Lang205 =	Chế Độ Trận Tranh Đai
 	t_Lang206 =	Tốc Độ Trận Đấu Tiêu Đề
 	t_Lang207 =	Khách hàng
+	t_Lang208 =	T&ìm
+	t_Lang209 =	Th&ay thế
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Mở
@@ -769,11 +771,14 @@
 	d_Lang005 =	LưU Dự áN
 	d_Lang006 =	Không thể lưu / ghi đè lên tập tin
 	d_Lang007 =	Lôi
-	d_Lang008 =	Lỗi: Không có Macro chọn.`nVui lòng kiểm tra ít nhất một Macro trong danh sách.
+	d_Lang008 =	Lỗi: Không có Macro chọn.
+		Vui lòng kiểm tra ít nhất một Macro trong danh sách.
 	d_Lang009 =	Lỗi: Không có chọn Hotkey.
-	d_Lang010 =	Lỗi: Địa chỉ không hợp lệ.`nCác địa chỉ được lựa chọn hoặc tên tập tin không hợp lệ.
+	d_Lang010 =	Lỗi: Địa chỉ không hợp lệ.
+		Các địa chỉ được lựa chọn hoặc tên tập tin không hợp lệ.
 	d_Lang011 =	Cảnh báo
-	d_Lang012 =	Không kiểm soát được lựa chọn.`nTiếp tục?
+	d_Lang012 =	Không kiểm soát được lựa chọn.
+		Tiếp tục?
 	d_Lang013 =	Xuất khẩu Script
 	d_Lang014 =	Kịch bản xuất khẩu
 	d_Lang015 =	Tập tin đã thành công xuất khẩu!
@@ -788,7 +793,8 @@
 	d_Lang022 =	Trước
 	d_Lang023 =	Tin nhắn
 	d_Lang024 =	Tải các cài đặt mặc định?
-	d_Lang025 =	Vĩ mô (s) kích hoạt.`nSử dụng các phím nóng để chơi.
+	d_Lang025 =	Macros kích hoạt.
+		Sử dụng các phím nóng để chơi.
 	d_Lang026 =	để bắt đầu / dừng ghi âm
 	d_Lang027 =	Ghi dừng lại
 	d_Lang028 =	Ghi âm...
@@ -805,7 +811,8 @@
 	d_Lang037 =	Hình ảnh / Pixel Không tìm thấy.
 	d_Lang038 =	Bấm OK để tiếp tục.
 	d_Lang039 =	Thời gian chờ!
-	d_Lang040 =	Tính năng này đòi hỏi các thư viện GDI+.
+	d_Lang040 =	
+.	Tämä ominaisuus vaatii GDI+ kirjasto.	Această caracteristică necesită GDI + biblioteca.
 		Nhấn OK để đi tải trang.
 	d_Lang041 =	Tên biến có chứa một nhân vật bất hợp pháp.
 	d_Lang042 =	là một từ dành riêng.
@@ -833,8 +840,7 @@
 	d_Lang059 =	Lệnh này không hỗ trợ các biểu thức hoặc chức năng.
 		Hãy chỉ định một biến và sử dụng nó trong các tham số.
 	d_Lang060 =	Phiên bản mới có sẵn
-	d_Lang061 =	Bạn có muốn tải về ngay bây giờ?
-		Để vô hiệu hóa tự động kiểm tra chọn Help> Check khi khởi động
+	d_Lang061 =	
 	d_Lang062 =	Bạn đã có phiên bản mới nhất.
 	d_Lang063 =	Một lỗi xảy ra trong khi kiểm tra.
 	d_Lang064 =	Napaka v
@@ -901,35 +907,45 @@
 	d_Lang113 =	Báo cáo không có lỗi.
 	d_Lang114 =	Skripte izvažajo (tudi če je prevedeni) z za pošiljanje e-pošte funkcije (CDO) bodo imeli vidne informacije o e-poštnih računov, ki se uporabljajo, vključno z geslom. Projekt datoteke PMC teh podatkov ne imeti.
 	d_Lang115 =	- Giữ Alt để thiết lập khu vực vào cùng vị trí.
+	d_Lang116 =	Chuyển và cài đặt
+	d_Lang117 =	Đến trang tải về
+	d_Lang118 =	Tải ... Vui lòng đợi.
 		
 ; 18. Start-up Tips		
-	Start_Tips =	Bạn có thể tạo macro bằng cách sử dụng nút lệnh trong cửa sổ chính hoặc sử dụng máy ghi âm để sao chép các hành động của bạn. Vào Tùy chọn> Cài đặt> Ghi chọn những đầu vào sẽ được ghi lại.
-		Sử dụng máy ghi âm cho các nhiệm vụ nhanh chóng vào Tùy chọn> Cài đặt> Ghi âm và kiểm tra các "Clear List" tùy chọn. Sau đó nhấn vào nút Record trong cửa sổ chính và sử dụng F10 để xóa vĩ mô hiện tại và bắt đầu một cái mới với các hotkey. Bạn cũng có thể kiểm tra "Luôn đăng nhập" tùy chọn trong cửa sổ chính để tiếp tục ghi âm và phát lại các phím nóng hoạt động.
-		Để có được sự giúp đỡ cho một lệnh cụ thể kích chuột phải vào bất cứ nơi nào trên một cửa sổ lệnh để hiển thị các liên kết đến AutoHotkey trợ giúp trực tuyến.
-		Kiểm tra "Capture phím" tùy chọn để nhập phím và kết hợp để vĩ mô của bạn trực tiếp từ cửa sổ chính.
+	Start_Tips =	Kiểm tra các video hướng dẫn tại www.macrocreator.com/help để tìm hiểu về các tính năng của Đấng Tạo Macro Pulover của.
+		Để có được sự giúp đỡ cho một lệnh cụ thể kích chuột phải vào bất cứ nơi nào trên một cửa sổ lệnh để hiển thị các liên kết để trợ giúp trực tuyến.
+		Bạn có thể tạo macro bằng cách sử dụng nút lệnh trong cửa sổ chính hoặc sử dụng máy ghi âm để sao chép các hành động của bạn. Vào Options> Settings> Recording để lựa chọn những yếu tố đầu vào sẽ được ghi lại.
+		Sử dụng thanh tìm kiếm hoặc các cửa sổ "Tìm một lệnh" để tìm kiếm các lệnh và chức năng.
+		Bạn có muốn giúp sửa chữa một bản dịch hay thậm chí tạo ra một cái mới? Vào Options> Settings> biên tập ngôn ngữ và thực hiện bất kỳ điều chỉnh nào bạn muốn. Bạn có thể xem trước nó bất cứ lúc nào. Nhấn vào Submit để gửi sửa đổi của bạn. Hãy nộp thêm bất kỳ số hiệu chỉnh nhiều lần như bạn muốn.
+		Kiểm tra "Capture Keys" tùy chọn để nhập các phím và kết hợp để Macro của bạn trực tiếp từ cửa sổ chính.
 		Nhập phím và kết hợp trong hộp Hotkey ở phía dưới và nhấn nút Insert để thêm chúng vào các hàng lựa chọn.
-		Nếu không có hàng được lựa chọn các nút chỉnh sửa áp dụng cho tất cả các hàng trong danh sách.
-		Bạn có thể gán biến của riêng bạn trong các biến cửa sổ (Insert> Nếu cáo / biến / chức năng). Để sử dụng chúng trong các lệnh kèm theo tên biến trong dấu phần trăm, ví dụ như: %MyVar%.
-		Các "vòng" truy cập ở phía trên đặt tổng số vòng cho các vĩ mô được lựa chọn.
-		Bạn có thể chỉnh sửa một hàng bằng cách nhấp đúp nó hoặc bằng cách chọn nó và nhấn vào nút Edit ở phía dưới.
-		Bạn có thể chỉnh sửa nhiều hàng lựa chọn sử dụng các tùy chọn trong thanh chỉnh sửa ở phía dưới.
+		Sử dụng các nút chỉnh sửa ở dưới cùng của cửa sổ chính để thiết lập lại và trì hoãn đến nhiều hàng cùng một lúc. Nếu không có hàng được lựa chọn các nút chỉnh sửa áp dụng cho tất cả các hàng trong danh sách.
+		Hầu như tất cả các lệnh và chức năng chấp nhận và kết quả đầu ra các biến. Bạn có thể gán các biến của riêng bạn trong các biến cửa sổ (Commands> Biến / Arrays). Để sử dụng chúng trong các lệnh đặt tên của biến trong dấu phần trăm, ví dụ .:% myVar%. Trong chức năng, sử dụng chúng mà không có dấu phần trăm, ví dụ .: substr (myVar, 5).
+		Right-Click bất cứ nơi nào trong cửa sổ lệnh để dễ dàng chèn các biến Built-In từ danh sách.
+		Để sử dụng máy ghi âm cho các nhiệm vụ nhanh chóng đi vào Options> Settings> Ghi và kiểm tra "Clear List" tùy chọn. Sau đó nhấp vào nút Record trong cửa sổ chính và sử dụng F10 để xóa Macro hiện tại và bắt đầu một cái mới với các phím nóng tương tự. Bạn cũng có thể kiểm tra tùy chọn "Luôn luôn hoạt động" trong cửa sổ chính để giữ Ghi và phát có phím nóng hoạt động.
+		PMC hỗ trợ đối tượng Array và phương pháp, giống như kịch bản AutoHotkey. Bạn có thể tạo ra các mảng trong nhiều cách, thông thường nhất là đi đến cửa sổ biến, kiểm tra các "biểu hiện" tùy chọn và kèm theo các giá trị trong ngoặc đơn, ví dụ .: [10, 20, Var, "chuỗi"]. Bạn cũng có thể tạo tên khóa, ví dụ .: {Keya: Vara, "một số trọng điểm": "chuỗi giá trị"}.
+		Chức năng sử dụng cú pháp biểu AHK. chuỗi chữ phải được đặt trong dấu ngoặc kép, và các biến không cần dấu phần trăm. Bạn có thể sử dụng các chức năng khác hoặc các phần tử mảng là tham số. Ví dụ .: StrReplace (myVar, myArray [ "A"], substr (OtherVar, 2, 3)).
+		Biểu thức được hỗ trợ trong AutoHotkey Biểu hiện cú pháp. Để sử dụng một biểu hiện bên trong một tham số lệnh, bắt đầu với một dấu phần trăm, ví dụ .:% substr (Var, 5).
+		Các "Loop" phản ở đầu bộ tổng số vòng cho Macro chọn.
+		Bạn có thể chỉnh sửa một hàng bằng cách bấm đúp vào nó hoặc bằng cách chọn nó và nhấn vào nút Edit ở phía dưới. Bạn có thể chỉnh sửa nhiều hàng lựa chọn sử dụng các tùy chọn trên thanh chỉnh sửa ở phía dưới.
+		Bạn có thể xác định chức năng của riêng bạn trong Function> Tạo chức năng và sử dụng chúng từ cửa sổ chức năng hoặc các biểu thức bên trong.
+		Bạn có thể xác định globa / biến địa phương và tĩnh cho Chức năng người dùng định nghĩa. Các biến toàn cục được định nghĩa trong Tùy chọn> Cài đặt> Người dùng biến toàn cầu được coi là siêu toàn cầu, và sẽ luôn luôn có sẵn các chức năng bên trong, ngay cả khi xác định là địa phương.
 		Chọn một hoặc nhiều hàng để thêm các lệnh mới trên đầu trang của họ.
-		Bạn có thể di chuyển hàng với nhấp chuột và kéo.
-		Nhấp đúp chuột vào biểu tượng trên khay để kích hoạt các phím nóng hoặc ngừng phát lại / ghi âm. Click vào nó với nút giữa trong khi phát hoặc ghi tạm dừng.
-		Bạn có thể xuất macro của bạn để kịch bản AutoHotkey làm việc hoặc thực thi độc lập từ cửa sổ xuất khẩu.
-		Ghi và chơi chuột sử dụng tọa độ tuyệt đối vào Tùy chọn> Cài đặt> mặc định và thiết lập chuột Tọa độ để màn hình.
-		Bạn có thể mở, sao chép, di chuyển hoặc xóa các tập tin và thư mục bằng cách sử dụng một trong các lệnh trong Insert> Run / File / String / Misc.
-		Để ghi lại Down và ký nhà nước của mỗi đi quan trọng để chọn> Cài đặt> Ghi âm và kiểm tra "Chụp nhà nước chủ chốt (Down / Up)" tùy chọn.
-		Bạn có thể sử dụng phím nóng để tăng tốc độ hoặc làm chậm phát lại. Vào Tùy chọn> Cài đặt> Phát lại để thiết lập phím và tốc độ.
-		Để điều chỉnh khu vực chụp bằng cách sử dụng "Hãy Ảnh chụp màn hình" công cụ vào Options> Settings> Ảnh chụp màn hình và chọn "Nhấn Enter để Capture". Sau khi vẽ hình chữ nhật sử dụng Control+phím mũi tên để di chuyển vùng chọn và phím Shift+phím mũi tên để thay đổi kích thước.
-		Chọn nhanh: Chọn bất kỳ hàng và nhấp chuột vào một tiêu đề cột để lựa chọn các hàng tương tự dựa trên văn bản của tế bào từ cột đó.
-		Run / File / String / Misc. cửa sổ có nhiều lệnh hữu ích khác như Shutdown và UrlDownloadToFile.
-		Sử dụng "Ảnh chụp màn hình" chức năng trong cửa sổ chức năng (Insert> Nếu cáo / biến / chức năng) để tạo ra một ảnh chụp màn hình của một phần của màn hình. Tham số đầu tiên là đường dẫn tập tin đích và tên có phần mở rộng png. Tham số thứ hai là các tọa độ ống cách nhau trong màn hình, ví dụ như 100 | 200 | 50 | 100 (X | Y | Chiều rộng | Chiều Cao).
-		Bấm vào chỉ số cột Header để chuyển On / Off Marks Trợ giúp và màu sắc cho vòng lặp và báo cáo. Double-Click vào hành động Cột Header để chuyển On / Off lõm cho vòng lặp và báo cáo.
-		Bạn có thể gỡ lỗi Macros của bạn bằng cách sử dụng phím tắt bằng tay và các tùy chọn chơi trong trình đơn vĩ mô. Bạn cũng có thể vô hiệu hóa hành động bằng cách bỏ chọn chúng trong danh sách vĩ mô.
-		Để làm cho Macro của bạn chỉ làm việc trên một cửa sổ nào đó đi để Macro> Hotkeys bối cảnh nhạy cảm.
-		Bạn có thể đặt biến toàn cầu của riêng bạn để được nạp vào khởi động và sẽ được xuất khẩu. Vào Tùy chọn> Cài đặt> Người dùng biến toàn cầu để thêm chúng.
-		Bạn có thể chạy các chức năng tiên tiến như SUBSTR và RegExReplace từ cửa sổ chức năng (Insert> Nếu cáo / biến / chức năng). Hoặc chạy các chức năng của riêng bạn từ các kịch bản AutoHotkey bên ngoài.
+		Bạn có thể di chuyển các hàng với nhấp chuột và kéo.
+		Double-click vào Tray Icon để kích hoạt các phím nóng hoặc dừng phát lại / ghi âm. Click vào nó với nút giữa trong khi phát lại hoặc ghi âm để tạm dừng.
+		Bạn có thể xuất Macro của bạn để kịch bản AutoHotkey làm việc hoặc độc lập thực thi từ cửa sổ xuất.
+		Để ghi âm và chơi Chuột sử dụng tọa độ tuyệt đối vào Options> Settings> Mặc định và thiết lập chuột Tọa độ Screen.
+		Bạn có thể mở, sao chép, di chuyển hoặc xóa các tập tin và thư mục bằng cách sử dụng một trong các lệnh trong Commands> Run / File / String / Misc. Có rất nhiều lệnh hữu ích khác như StringReplace, InputBox và MouseGetPos.
+		Để ghi Down và trạng thái Up của mỗi đi quan trọng để chọn> Cài đặt> Ghi và kiểm tra "Capture nhà nước chủ chốt (Down / Up)" tùy chọn.
+		Bạn có thể dùng các phím nóng để tăng tốc độ hoặc làm chậm phát lại. Vào Options> Settings> Playback để thiết lập phím và tốc độ.
+		Để điều chỉnh chụp khu vực bằng cách sử dụng "Hãy chụp màn hình" công cụ vào Options> Settings> Ảnh chụp màn hình và chọn "Press Enter để Capture". Sau khi vẽ hình chữ nhật sử dụng Control + phím mũi tên để di chuyển vùng chọn và Shift + phím mũi tên để thay đổi kích thước.
+		Chọn nhanh: Chọn bất kỳ liên tiếp và nhấp chuột vào tiêu đề cột để chọn hàng tương tự dựa trên văn bản của tế bào từ cột đó.
+		Nhấp chuột vào Header Index Cột biến On / Off giúp Marks và màu sắc cho Loops và báo cáo. Double-Click vào Header Hành động Cột biến On / Off lõm cho Loops và báo cáo.
+		Bạn có thể gỡ lỗi Macro của bạn bằng cách sử dụng phím nóng tay và các tùy chọn chơi trong menu Macro. Bạn cũng có thể vô hiệu hóa các hành động bằng cách bỏ chọn chúng trong danh sách Macro.
+		Để thực hiện Macro của bạn chỉ làm việc trên một cửa sổ nào đó đi đến Macro> Hotkeys Bối cảnh nhạy cảm.
+		Bạn có thể thiết lập các biến toàn cầu của riêng bạn để được nạp khi khởi động và sẽ được xuất khẩu. Vào Options> Settings> Các biến toàn cầu tài để thêm chúng.
+		Bạn có thể chạy các chức năng tiên tiến như substr và REGEXREPLACE từ chức năng cửa sổ (Commands> Hàm / Phương pháp Array). Bạn cũng có thể xác định chức năng của riêng bạn hoặc các chức năng chạy từ kịch bản AutoHotkey bên ngoài.
+		Bạn có thể ghi lại các phong trào chuột tương đối so với vị trí hiện tại bằng cách giữ phím CapsLock trong quá trình ghi (bạn có thể thay đổi khóa và làm cho nó chuyển đổi trong Cài đặt).
 		
 ; 19. Tooltips		
 	A_List_TT =	Chọn vĩ mô (Ctrl +1 ~ 0)
@@ -998,12 +1014,12 @@
 	Ex_UV_TT =	Xuất khẩu các biến toàn cầu.
 	Ex_WN_TT =	Cho phép hoặc vô hiệu hóa các cảnh báo cho các điều kiện cụ thể mà có thể chỉ ra một lỗi, chẳng hạn như một lỗi đánh máy hoặc mất tích khai "toàn cầu".
 	ExpList_TT =	Đúp Nhấn vào đây để chỉnh sửa
-	ExprLink2_TT =	- KHÔNG GỬI KÈM BIẾN TRONG DẤU HIỆU PERCENT ĐÂY.
+	ExprLink2_TT 	- KHÔNG GỬI KÈM BIẾN TRONG DẤU HIỆU PERCENT ĐÂY.
 		- Hầu hết các biểu AHK được hỗ trợ.
 		- Bạn có thể sử dụng các chuỗi, các biến, mảng và chức năng.
-		- Để sử dụng dây, đặt chúng trong dấu ngoặc kép, ví dụ: var = "a".
-		- Nhiều báo cáo được hỗ trợ, ví dụ như: var = "a" || InStr (var, "b").
-	ExprLink3_TT =	- KHÔNG GỬI KÈM BIẾN TRONG DẤU HIỆU PERCENT ĐÂY.
+		- Để sử dụng dây, đặt chúng trong dấu ngoặc kép, ví dụ: var  "a".
+		- Nhiều báo cáo được hỗ trợ, ví dụ như: var  "a" || InStr (var, "b").
+	ExprLink3_TT 	- KHÔNG GỬI KÈM BIẾN TRONG DẤU HIỆU PERCENT ĐÂY.
 		- Hầu hết các biểu AHK được hỗ trợ.
 		- Bạn có thể sử dụng các chuỗi, các biến, mảng và chức năng.
 		- Để sử dụng dây, đặt chúng trong dấu ngoặc kép, ví dụ: var = "a".
@@ -1099,13 +1115,13 @@
 	Co_Oper_6 =	Lớn hơn hoặc bằng
 	Co_Oper_7 =	Ít hơn hoặc bằng
 	Co_Oper_8 =	Trong (danh sách)
-	Co_Oper_9 =	 Không phải trong (danh sách)
-	Co_Oper_10 =	 Chứa (danh sách)
-	Co_Oper_11 =	 Không chứa (danh sách)
-	Co_Oper_12 =	 Giữa (dòng 1) và (2 dòng)
-	Co_Oper_13 =	 Không phải giữa (dòng 1) và (2 dòng)
-	Co_Oper_14 =	 Là (loại)
-	Co_Oper_15 =	 Không phải là (loại)
+	Co_Oper_9 =	Không phải trong (danh sách)
+	Co_Oper_10 =	Chứa (danh sách)
+	Co_Oper_11 =	Không chứa (danh sách)
+	Co_Oper_12 =	Giữa (dòng 1) và (2 dòng)
+	Co_Oper_13 =	Không phải giữa (dòng 1) và (2 dòng)
+	Co_Oper_14 =	Là (loại)
+	Co_Oper_15 =	Không phải là (loại)
 		
 ; 21. IE Commands Tips		
 	IE_Cmd_Index =	
@@ -1135,7 +1151,7 @@
 	Value	Được hoặc đặt giá trị của đối tượng.
 	Width	Thiết lập hoặc lấy chiều rộng của đối tượng.
 		
-; 22. COM Methods Tips		
+; 22. COM Objects Tips		
 	COM_CLSID_Index =	
 	Excel.Application	Thao túng tờ Excel.
 	HTMLfile	Có thể được sử dụng để đọc, viết và tương tác với HTML.
@@ -1283,6 +1299,7 @@
 	Length	Trả về độ dài của một mảng tuyến tính bắt đầu ở vị trí 1.
 	ListVars	Hiển thị các biến của kịch bản: tên và nội dung hiện tại.
 	Ln	Trả về logarit tự nhiên (cơ số e) của số.
+	LoadPicture	Tải một hình ảnh từ tập tin và trả về một bitmap hoặc biểu tượng tay cầm.
 	Log	Trả về logarit (cơ số 10) của số.
 	Loop (files & folders)	Lấy các tập tin hoặc thư mục được chỉ định, tại một thời điểm.
 	Loop (normal) 	Thực hiện một loạt các lệnh liên tục: hoặc số quy định của lần hoặc cho đến khi nghỉ là gặp phải.
@@ -1367,11 +1384,36 @@
 	Until	Áp dụng một điều kiện để việc tiếp tục một vòng hoặc Đối với vòng lặp.
 	UrlDownloadToFile	Tải về một tập tin từ Internet.
 	UserFunction	Tạo ra một cấu trúc chức năng.
+	Variable	Gán giá trị quy định cho một biến.
 	While	Izvede niz ukazov, dokler se navedeni izraz neresničen.
 	WinActivate	Kích hoạt các cửa sổ chỉ định (làm cho nó quan trọng nhất).
 	WinActivateBottom	Giống như WinActivate ngoại trừ việc nó kích hoạt dưới cùng (ít nhất là gần đây hoạt động) cửa sổ phù hợp chứ không phải là trên cùng.
 	WinActive	Trả về ID duy nhất (HWND) của cửa sổ hoạt động nếu nó phù hợp với tiêu chuẩn quy định.
 	WinClose	Đóng cửa sổ chỉ định.
+	WinExist	Kiểm tra nếu các cửa sổ chỉ định tồn tại.
+	WinGet	Lấy ID của cửa sổ chỉ định của độc đáo, quá trình ID, tên quá trình, hoặc một danh sách các điều khiển của nó. Nó cũng có thể lấy một danh sách của tất cả các cửa sổ phù hợp với tiêu chuẩn quy định.
+	WinGetClass	Lấy tên lớp cửa sổ chỉ định của.
+	WinGetPos	Lấy vị trí và kích thước của cửa sổ chỉ định.
+	WinGetText	Lấy văn bản từ cửa sổ xác định.
+	WinGetTitle	Lấy tiêu đề của cửa sổ chỉ định.
+	WinHide	Ẩn các cửa sổ chỉ định.
+	WinHttpDownloadToFile	Tải một hoặc nhiều tập tin từ Internet.
+	WinKill	Buộc các cửa sổ chỉ định đóng cửa.
+	WinMaximize	Phóng to cửa sổ chỉ định kích thước tối đa của nó.
+	WinMenuSelectItem	Gọi một mục trình đơn từ thanh menu của cửa sổ chỉ định.
+	WinMinimize	Lấp các cửa sổ chỉ định vào một nút trên thanh tác vụ.
+	WinMinimizeAll	Thu nhỏ tất cả các cửa sổ.
+	WinMinimizeAllUndo	Đảo ngược tác dụng của một WinMinimizeAll trước.
+	WinMove	Thay đổi vị trí và / hoặc kích thước của cửa sổ chỉ định.
+	WinRestore	Unminimizes hoặc unmaximizes cửa sổ xác định nếu nó được giảm thiểu hoặc tối đa.
+	WinSet	Làm cho một loạt các thay đổi trong cửa sổ chỉ định, chẳng hạn như "luôn luôn trên đầu trang" và minh bạch.
+	WinSetTitle	Thay đổi tiêu đề của cửa sổ chỉ định.
+	WinShow	Unhides cửa sổ chỉ định.
+	WinWait	Đợi cho đến khi cửa sổ chỉ định tồn tại.
+	WinWaitActive	Đợi cho đến khi cửa sổ chỉ định đang hoạt động.
+	WinWaitClose	Đợi cho đến khi cửa sổ chỉ định không tồn tại.
+	WinWaitNotActive	Đợi cho đến khi cửa sổ chỉ định là không hoạt động.
+	Zip / UnZip	Nén hay giải nén một hoặc nhiều tập tin zip.
 	WinExist	Kiểm tra nếu các cửa sổ chỉ định tồn tại.
 	WinGet	Lấy ID của cửa sổ chỉ định của độc đáo, quá trình ID, tên quá trình, hoặc một danh sách các điều khiển của nó. Nó cũng có thể lấy một danh sách của tất cả các cửa sổ phù hợp với tiêu chuẩn quy định.
 	WinGetClass	Lấy tên lớp cửa sổ chỉ định của.

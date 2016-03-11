@@ -6,9 +6,17 @@ Pulover's Macro Creator is a Free Automation Tool and Script Generator based on 
 
 **Current Version:** 5.0.0
 
+### Supported platforms
+
+Windows 7, 8, 8.1, 10
+
+(NOT tested on Windows XP, Vista)
+
 ## For developers ##
 
 Source requires the latest version of [AutoHotkey](http://ahkscript.org/) to run.
+
+The source for SciLexer.dll can be found at [fincs/SciTE4AutoHotkey](https://github.com/fincs/SciTE4AutoHotkey).
 
 Installer is created with [Inno Setup](http://www.jrsoftware.org/).
 

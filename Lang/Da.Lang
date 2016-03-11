@@ -62,18 +62,18 @@
 	i_Lang008 =	&Billede / Pixel Søg
 	i_Lang009 =	&Run / File / String / Misc.
 	i_Lang010 =	&Loop
-	i_Lang011 =	&Goto
-	i_Lang012 =	L&abel
+	i_Lang011 =	&Gå Til / Label
+	i_Lang012 =	&Sæt timeren
 	i_Lang013 =	&Hvis Erklæringer
-	i_Lang014 =	Var&iabler / Arrays
+	i_Lang014 =	V&ariabler / Arrays
 	i_Lang015 =	&Funktioner / Array-metoder
-	i_Lang016 =	&Send e-mail
-	i_Lang017 =	&Download / Upload filer
+	i_Lang016 =	Sen&d e-mail
+	i_Lang017 =	&Overførsel af filer
 	i_Lang018 =	&Zip / Unzip filer
-	i_Lang019 =	Internet E&xplorer
+	i_Lang019 =	&Internet Explorer
 	i_Lang020 =	&COM Interface
 	i_Lang021 =	&Windows Messages
-	i_Lang022 =	Find en k&ommando
+	i_Lang022 =	&Find en kommando
 		
 ; 06. Edit Sub Menu		
 	e_Lang001 =	&Dupliker
@@ -324,10 +324,10 @@
 	c_Lang026 =	Aktion
 	c_Lang027 =	Klik
 	c_Lang028 =	Flyt
-	c_Lang029 =	Flyt og klik
+	c_Lang029 =	Flytte Og Klik
 	c_Lang030 =	Wheel Up
 	c_Lang031 =	Wheel Down
-	c_Lang032 =	Træk og slip
+	c_Lang032 =	Træk Og Slip
 	c_Lang033 =	Koordinater
 	c_Lang034 =	Søg
 	c_Lang035 =	Underkommando
@@ -629,7 +629,7 @@
 	t_Lang074 =	&Alle rækker
 	t_Lang075 =	A&lle Makroer
 	t_Lang076 =	Om
-	t_Lang077 =	&Regular Expression
+	t_Lang077 =	Re&gular Expression
 	t_Lang078 =	Afspil én gang
 	t_Lang079 =	Spil hver X (mili) sekunder
 	t_Lang080 =	Timer
@@ -760,6 +760,8 @@
 	t_Lang205 =	Title Match-Tilstand
 	t_Lang206 =	Title Match Hastighed
 	t_Lang207 =	Klient
+	t_Lang208 =	F&ind
+	t_Lang209 =	E&rstat
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Åbent
@@ -769,11 +771,14 @@
 	d_Lang005 =	Gem Projekt
 	d_Lang006 =	Kunne ikke gemme / overskrive filen
 	d_Lang007 =	Fejl
-	d_Lang008 =	Fejl: Ingen Makro Valgt.`nTjek venligst mindst ét ​​Makro på listen.
+	d_Lang008 =	Fejl: Ingen Makro Valgt.
+		Tjek venligst mindst ét ​​Makro på listen.
 	d_Lang009 =	Fejl: Ingen Hotkey Valgt.
-	d_Lang010 =	Fejl: Ugyldig adresse.`nDen valgte adresse eller filnavnet er ugyldigt.
+	d_Lang010 =	Fejl: Ugyldig adresse.
+		Den valgte adresse eller filnavnet er ugyldigt.
 	d_Lang011 =	Advarsel
-	d_Lang012 =	Ingen kontrol valgt.`nFortsæt?
+	d_Lang012 =	Ingen kontrol valgt.
+		Fortsæt?
 	d_Lang013 =	Eksport Script
 	d_Lang014 =	Script Eksporterede
 	d_Lang015 =	Filen blev succesfuldt eksporteret!
@@ -788,7 +793,8 @@
 	d_Lang022 =	Forrige
 	d_Lang023 =	Message
 	d_Lang024 =	Indlæs standardindstillinger?
-	d_Lang025 =	Makro (s) aktiveret.`nBrug genvejstaster til at spille.
+	d_Lang025 =	Makroer aktiveret.
+		Użyj skrótu, aby zagrać.
 	d_Lang026 =	for at starte / stoppe optagelsen
 	d_Lang027 =	Optagelse stoppet
 	d_Lang028 =	Optagelse...
@@ -806,6 +812,7 @@
 	d_Lang038 =	Tryk på OK for at fortsætte.
 	d_Lang039 =	Timeout!
 	d_Lang040 =	Denne funktion kræver GDI+ Bibliotek.
+.	Tämä ominaisuus vaatii GDI+ kirjasto.	Ta funkcija zahteva GDI+knjižnice.
 		Klik på OK for at gå til download siden.
 	d_Lang041 =	Den variable navn indeholder et ulovligt tegn.
 	d_Lang042 =	er et reserveret ord.
@@ -833,8 +840,7 @@
 	d_Lang059 =	Denne kommando understøtter ikke udtryk eller funktioner.
 		Venligst tildele en variabel og bruge det i parameter.
 	d_Lang060 =	Ny version tilgængelig
-	d_Lang061 =	Kunne du tænke dig at hente den nu?
-		For at deaktivere automatiske kontroller Vælg Hjælp > Tjek på opstart
+	d_Lang061 =	
 	d_Lang062 =	Du har allerede den nyeste version.
 	d_Lang063 =	Der opstod en fejl under kontrol.
 	d_Lang064 =	Fejl i
@@ -901,35 +907,45 @@
 	d_Lang113 =	Ingen fejl rapporteret.
 	d_Lang114 =	Scripts eksporteres (selvom kompileret) med Send e-mail-funktionen (CDO) vil have synlige informationer af e-mail konti, herunder adgangskoden. Projektet fil PMC har ikke disse oplysninger.
 	d_Lang115 =	- Hold Alt for at indstille region til samme sted.
+	d_Lang116 =	Overfør og installer
+	d_Lang117 =	Gå til download side
+	d_Lang118 =	Downloading ... venligst, vent.
 		
 ; 18. Start-up Tips		
-	Start_Tips =	Du kan oprette makroer ved hjælp af kommandoen knapper i hovedvinduet eller ved hjælp af optageren til at kopiere dine handlinger. Gå til Valg > Indstillinger > Optagelse at vælge, hvad input vil blive registreret.
-		Hvis du vil bruge optageren i hurtige opgaver gå til Valg > Indstillinger > Optagelse og tjek "Clear List" valgmulighed. Klik derefter på knappen Optag i hovedvinduet og bruge F10 til at rydde den aktuelle Makro og starte en ny med samme genvejstast. Du kan også tjekke "altid aktiv" i hovedvinduet til at holde Optagelse og afspilning genvejstaster aktive.
-		For at få hjælp til en specifik kommando højreklikke et vilkårligt sted på et kommandovindue til at vise links til AutoHotkey online Hjælp.
-		Check "Capture taster" mulighed for at indtaste nøgler og koder til din makro direkte fra hovedvinduet.
-		Indtast nøgler og koder i Genvejstast boksen nederst og tryk på knappen Indsæt for at føje dem til de udvalgte rækker.
-		Hvis der ikke rækker udvalgt de edit knapper gælder for alle rækker i listen.
-		Du kan tildele dine egne variabler i variablerne windows (Indsæt > Hvis Statements / variable / funktioner). For at bruge dem inde kommandoer vedlægge variabelnavnet i procenttegn, fx: %MyVar%.
-		Den "Loop" counter øverst indstiller samlede antal loops for den valgte makro.
-		Du kan redigere en række, ved at dobbeltklikke på den eller ved at vælge det og klikke Rediger knapperne nederst.
-		Du kan redigere flere markerede rækker ved hjælp af indstillingerne i redigeringsfeltet nederst.
-		Vælg en eller flere rækker at tilføje nye kommandoer på toppen af dem.
+	Start_Tips =	Tjek de video tutorials på www.macrocreator.com/help for at lære om de mange funktioner i Pulover s Macro Skaber.
+		For at få hjælp til en specifik kommando højreklikke et vilkårligt sted på en kommando vindue for at vise links til online hjælp.
+		Du kan oprette makroer ved hjælp af Command knapper i hovedvinduet eller bruge optageren til at kopiere dine handlinger. Gå til Valg> Indstillinger> Optagelse for at vælge, hvad input vil blive registreret.
+		Brug søgefeltet eller "Find en kommando" vinduet for at søge efter kommandoer og funktioner.
+		Vil du gerne hjælpe med at løse en oversættelse eller endda oprette en ny? Gå til Valg> Indstillinger> Sprog redaktør og foretage eventuelle rettelser, du ønsker. Du kan få vist det nogen tid. Klik på Send for at sende din revision. Du er velkommen til at indsende et vilkårligt antal korrektioner så mange gange som du ønsker.
+		Check "Capture nøgler" mulighed for at indtaste nøgler og koder til din Makro direkte fra hovedvinduet.
+		Indtast nøgler og koder i Genvejstast boksen nederst og tryk på knappen Indsæt for at tilføje dem til de udvalgte rækker.
+		Brug knapperne redigere nederst i hovedvinduet til at indstille gentagelse og forsinke til flere rækker på samme tid. Hvis der er valgt ikke rækker Rediger knapper gælder for alle rækker i listen.
+		Næsten hver kommando og funktion accepterer og udgange variabler. Du kan tildele dine egne variabler i de variabler vinduer (Kommandoer> variabler / Arrays). For at bruge dem inde kommandoer vedlægge variabelnavnet i procenttegn, f.eks .:% myVar%. I funktioner, bruge dem uden procenttegn, f.eks .: substr (myVar, 5).
+		Højreklik et vilkårligt sted i kommando-vinduet for nemt indsætte indbyggede variable fra en liste.
+		For at bruge optageren til hurtige opgaver gå til Valg> Indstillinger> Optagelse og kontroller "Clear List" valgmulighed. Klik derefter på knappen Record i hovedvinduet og bruge F10 for at slette den aktuelle Makro og starte en ny med samme genvejstast. Du kan også kontrollere "Always Active" i hovedvinduet til at holde indspilning og afspilning genvejstaster aktiv.
+		PMC understøtter Array objekter og metoder, ligesom AutoHotkey scripts. Du kan oprette arrays på mange måder, de mest almindelige er at gå til vinduet Variable, kontrol af "Expression", og omslutter værdierne i parentes, f.eks .: [10, 20, Var, "streng"]. Du kan også oprette navngivne nøgler, f.eks .: {Keya: Vara "nogle nøgle": "streng værdi"}.
+		Funktioner bruger AHK udtryk syntaks. Bogstavstrenge skal vedlægges i anførselstegn, og variabler behøver ikke procenttegn. Du kan bruge andre funktioner eller array-elementer som parametre. F.eks .: StrReplace (myVar, myArray [ "A"], substr (OtherVar, 2, 3)).
+		Udtryk er understøttet i AutoHotkey Expression Syntaks. For at bruge et udtryk i en kommando parameter, starter det med et procenttegn, f.eks .:% substr (Var, 5).
+		Den "Loop" tæller øverst indstiller det samlede antal loops for den valgte makro.
+		Du kan redigere en række ved at dobbeltklikke på den eller ved at vælge det og klikke på knapperne Rediger nederst. Du kan redigere flere markerede rækker ved hjælp af indstillingerne i redigeringsfeltet nederst.
+		Du kan definere dine egne funktioner i Funktion> Opret funktion og bruge dem fra Function vindue eller inde udtryk.
+		Du kan definere globa / lokale og statiske variabler for brugerdefinerede funktioner. Globale variabler er defineret i Valg> Indstillinger> Bruger globale variabler betragtes Super Global, og vil altid være tilgængelige i funktioner, selv når defineres som lokalt.
+		Vælg en eller flere rækker for at tilføje nye kommandoer oven på dem.
 		Du kan flytte rækker med klik-og-træk.
-		Dobbeltklik på ikonen for at aktivere genvejstaster eller stoppe afspilning / optagelse. Klik på det med den midterste knap under afspilning eller optagelse for at holde pause.
-		Du kan eksportere dine makroer arbejdsvilkår AutoHotkey scripts eller enkeltstående eksekverbare fra Export vinduet.
-		At optage og afspille Mouse bruger absolutte koordinater gå til Valg > Indstillinger > Standard og sæt Mouse koordinater til Screen.
-		Du kan åbne, kopiere, flytte eller slette filer og mapper ved hjælp af en af kommandoerne i Indsæt > Run / File / String / Misc.
-		Hvis du vil optage ned og op tilstand alle centrale Gå til Valg > Indstillinger > Optagelse og marker "Udløsertast tilstand (op / ned)" valgmulighed.
-		Du kan bruge genvejstaster til at fremskynde eller sinke gengivelse. Gå til Valg > Indstillinger > Afspilning for at sætte nøgler og hastighed.
-		For at justere capture område ved hjælp af "Make Screenshot" værktøj gå til Indstillinger > Indstillinger > screenshots og vælg "Tryk Enter for at Capture". Efter tegning af rektangel bruge Kontrol piletasterne til at flytte markeringen og Shift piletasterne til at ændre størrelsen.
-		Quick Vælg: Vælg en række, og klik på en kolonneoverskrift for at vælge tilsvarende rækker baseret på cellens tekst fra den pågældende kolonne.
-		The Run / File / String / Misc. Vinduet har mange andre nyttige kommandoer såsom Shutdown og UrlDownloadToFile.
-		Brug "Screenshot"-funktionen i funktioner vindue (Indsæt > Hvis Statements / variabler / funktioner) til at lave en screenshot af en del af skærmen. Første parameter er den destination filens sti og navn med en png forlængelse. Anden parameter er de rør adskilte koordinater i skærmen, fx 100|200|50|100 (X|Y|Width|Højde).
-		Klik på Index kolonneoverskrift for at tænde / slukke Hjælp Marks og Farver til Loops og erklæringer. Dobbelt-klik på aktion kolonneoverskrift for at tænde / slukke Indrykning for Loops og udsagn.
-		Du kan debug dine makroer ved hjælp af Manual Hotkey og Play muligheder i Macro-menuen. Du kan også deaktivere handlinger ved at fjerne markeringen dem i Makro listen.
-		For at gøre dine makroer virker kun på et bestemt vindue gå til Makro > kontekstafhængige genvejstaster.
-		Du kan indstille dine egne globale variable, der skal lastes på opstart og skal eksporteres. Gå til Valg > Indstillinger > Brugerindstillinger globale variabler til at tilføje dem.
-		Du kan køre avancerede funktioner såsom SUBSTR og RegExReplace fra Funktioner vindue (Indsæt > Hvis Statements / variable / funktioner). Eller køre dine egne funktioner fra eksterne AutoHotkey scripts.
+		Dobbeltklik på ikonen for at aktivere genvejstaster eller stoppe afspilning / optagelse. Klik på den med den midterste knap under afspilning eller optagelse for at holde pause.
+		Du kan eksportere dine makroer arbejdsvilkår AutoHotkey scripts eller stand-alone eksekverbare fra vinduet Export.
+		Hvis du vil optage og afspille Mouse hjælp absolutte koordinater gå til Valg> Indstillinger> Standard og sæt Mouse Koordinater til skærm.
+		Du kan åbne, kopiere, flytte eller slette filer og mapper ved hjælp af en af ​​kommandoerne i Kommandoer> Kør / File / String / Misc. Der er mange andre nyttige kommandoer såsom StringReplace, InputBox og MouseGetPos.
+		Sådan optager Ned og op tilstand af alle centrale Gå til Valg> Indstillinger> Optagelse og marker "Capture key tilstand (Ned / Op)" valgmulighed.
+		Du kan bruge genvejstaster til at fremskynde eller sinke afspilning. Gå til Valg> Indstillinger> Afspilning at sætte nøgler og hastighed.
+		For at justere fangstområdet ved hjælp af "Make Screenshot" værktøj gå til Valg> Indstillinger> Screenshots og vælg "Tryk Enter for at Capture". Efter tegning brug rektangel Ctrl + piletasterne til at flytte markeringen og Shift + piletasterne til at ændre størrelsen.
+		Quick Select: Vælg et række og klik på en kolonneoverskrift for at vælge lignende rækker baseret på cellens tekst fra denne kolonne.
+		Klik på indeks kolonneoverskrift for at slå On / Off Hjælp Marks og Farver for løkker og Udtalelser. Dobbeltklik Klik på Handling kolonneoverskrift for at slå On / Off Indrykning for Loops og Udtalelser.
+		Du kan debug dine makroer ved hjælp af Manuel Hotkey og Play muligheder i Macro menuen. Du kan også deaktivere handlinger ved at fjerne markeringen dem i Makro listen.
+		For at gøre dine makroer fungerer kun på en bestemt vindue gå til Makro> kontekstafhængig genvejstaster.
+		Du kan indstille dine egne globale variable der skal lastes på opstart og skal eksporteres. Gå til Valg> Indstillinger> Brugerindstillinger Globale variabler for at tilføje dem.
+		Du kan køre avancerede funktioner som SUBSTR og REGEXREPLACE fra Funktioner vinduet (Kommandoer> funktioner / Array Methods). Du kan også definere dine egne funktioner eller køre funktioner fra eksterne AutoHotkey scripts.
+		Du kan optage musebevægelser forhold til den aktuelle position ved at holde CapsLock under optagelse (du kan ændre nøglen og gøre det skifte i Indstillinger).
 		
 ; 19. Tooltips		
 	A_List_TT =	Vælge Macro (Ctrl+1~0)
@@ -998,12 +1014,12 @@
 	Ex_UV_TT =	Eksportere globale variabler.
 	Ex_WN_TT =	Aktiverer eller deaktiverer advarsler for specifikke betingelser, der kan tyde en fejl, såsom en tastefejl eller mangler "global" erklæring.
 	ExpList_TT =	Dobbeltklik for at redigere
-	ExprLink2_TT =	- IKKE VEDLÆG VARIABLER I PROCENTTEGN HER.
+	ExprLink2_TT 	- IKKE VEDLÆG VARIABLER I PROCENTTEGN HER.
 		- De fleste af AHK udtryk understøttes.
 		- Du må bruge strygere, variabler, arrays og funktioner.
-		- For at bruge strenge, vedlægge dem i anførselstegn, f.eks: var = "a".
-		- Flere Udtalelser understøttes, fx: var = "a" || InStr (var, "b").
-	ExprLink3_TT =	- IKKE VEDLÆG VARIABLER I PROCENTTEGN HER.
+		- For at bruge strenge, vedlægge dem i anførselstegn, f.eks: var  "a".
+		- Flere Udtalelser understøttes, fx: var  "a" || InStr (var, "b").
+	ExprLink3_TT 	- IKKE VEDLÆG VARIABLER I PROCENTTEGN HER.
 		- De fleste af AHK udtryk understøttes.
 		- Du må bruge strygere, variabler, arrays og funktioner.
 		- For at bruge strenge, vedlægge dem i anførselstegn, f.eks: var = "a".
@@ -1099,13 +1115,13 @@
 	Co_Oper_6 =	Større end eller lig
 	Co_Oper_7 =	Mindre end eller lig
 	Co_Oper_8 =	I (liste)
-	Co_Oper_9 =	 Ikke i (liste)
-	Co_Oper_10 =	 Indeholder (listen)
-	Co_Oper_11 =	 Ikke indeholder (liste)
-	Co_Oper_12 =	 Mellem (linie 1) og (linje 2)
-	Co_Oper_13 =	 Ikke mellem (linie 1) og (linje 2)
-	Co_Oper_14 =	 Er (type)
-	Co_Oper_15 =	 Er det ikke (type)
+	Co_Oper_9 =	Ikke i (liste)
+	Co_Oper_10 =	Indeholder (listen)
+	Co_Oper_11 =	Ikke indeholder (liste)
+	Co_Oper_12 =	Mellem (linie 1) og (linje 2)
+	Co_Oper_13 =	Ikke mellem (linie 1) og (linje 2)
+	Co_Oper_14 =	Er (type)
+	Co_Oper_15 =	Er det ikke (type)
 		
 ; 21. IE Commands Tips		
 	IE_Cmd_Index =	
@@ -1135,7 +1151,7 @@
 	Value	Får eller indstiller værdien af ​​genstanden.
 	Width	Indstiller eller henter bredden af ​​objektet.
 		
-; 22. COM Methods Tips		
+; 22. COM Objects Tips		
 	COM_CLSID_Index =	
 	Excel.Application	Manipulerer Excel-ark.
 	HTMLfile	Kan bruges til at læse, skrive og interagere med HTML.
@@ -1283,6 +1299,7 @@
 	Length	Returnerer længden af et lineært array begynder ved position 1.
 	ListVars	Viser script s variabler: deres navne og aktuelle indhold.
 	Ln	Returnerer den naturlige logaritme (base e) nummer.
+	LoadPicture	Indlæser et billede fra fil og returnerer en bitmap eller ikon håndtag.
 	Log	Returnerer logaritme (basis 10) i nummer.
 	Loop (files & folders)	Henter de angivne filer eller mapper, en ad gangen.
 	Loop (normal) 	Udføre en række kommandoer gentagne gange: enten angivne antal gange, eller indtil pause stødt.
@@ -1367,11 +1384,36 @@
 	Until	Anvender en betingelse for videreførelse af en Loop eller For-løkke.
 	UrlDownloadToFile	Downloader en fil fra internettet.
 	UserFunction	Opretter en funktion struktur.
+	Variable	Tildeler den angivne værdi til en variabel.
 	While	Udfører en række kommandoer, indtil det angivne udtryk evalueres til falsk.
 	WinActivate	Aktiverer den angivne vindue (gør det forreste).
 	WinActivateBottom	Samme som WinActivate bortset fra at det aktiverer den nederste (mindst nylig aktiv) matchende vindue snarere end den øverste.
 	WinActive	Returnerer Unikt ID (HWND) af det aktive vindue, hvis det matcher de angivne kriterier.
 	WinClose	Lukker angivne vindue.
+	WinExist	Kontrollerer om den angivne vindue eksisterer.
+	WinGet	Henter den angivne vindue unikke id, proces-id, proces navn eller en liste over sine kontroller. Det kan også hente en liste over alle vinduer der matcher de angivne kriterier.
+	WinGetClass	Henter den angivne vindue klasse navn.
+	WinGetPos	Henter positionen og størrelsen af den angivne vindue.
+	WinGetText	Henter teksten fra angivne vindue.
+	WinGetTitle	Henter titlen på den angivne vindue.
+	WinHide	Skjuler angivne vinduet.
+	WinHttpDownloadToFile	Overførsler en eller flere filer fra internettet.
+	WinKill	Tvinger den angivne vinduet for at lukke.
+	WinMaximize	Forstørrer angivne vindue til dets maksimale størrelse.
+	WinMenuSelectItem	Starter et menupunkt fra menulinjen i angivne vindue.
+	WinMinimize	Skjuler det angivne vindue i en knap på proceslinjen.
+	WinMinimizeAll	Minimerer alle vinduer.
+	WinMinimizeAllUndo	Vender effekt af en tidligere WinMinimizeAll.
+	WinMove	Ændrer position og / eller størrelsen af den angivne vindue.
+	WinRestore	Unminimizes eller unmaximizes det angivne vindue, hvis det er minimeret eller maksimeret.
+	WinSet	Gør en række ændringer i den angivne vindue, såsom "always on top" og gennemsigtighed.
+	WinSetTitle	Ændrer titlen på den angivne vindue.
+	WinShow	Unhides den angivne vinduet.
+	WinWait	Venter, indtil den angivne vindue eksisterer.
+	WinWaitActive	Venter, indtil den angivne vindue er aktivt.
+	WinWaitClose	Venter, indtil den angivne vindue ikke eksisterer.
+	WinWaitNotActive	Venter, indtil den angivne vinduet ikke er aktivt.
+	Zip / UnZip	Komprimer eller dekomprimere en eller flere zip-filer.
 	WinExist	Kontrollerer om den angivne vindue eksisterer.
 	WinGet	Henter den angivne vindue unikke id, proces-id, proces navn eller en liste over sine kontroller. Det kan også hente en liste over alle vinduer der matcher de angivne kriterier.
 	WinGetClass	Henter den angivne vindue klasse navn.

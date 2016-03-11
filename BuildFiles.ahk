@@ -112,7 +112,7 @@ Name: "{commondesktop}\{#PmcName}"; Filename: "{app}\{#PmcExeName}"; Tasks: desk
 Name: "{userappdata}\Microsoft\Internet Explorer\Quick Launch\{#PmcName}"; Filename: "{app}\{#PmcExeName}"; Tasks: quicklaunchicon
 
 [Run]
-Filename: "{app}\{#PmcExeName}"; Description: "{cm:LaunchProgram,{#StringChange(PmcName, '&', '&&')}}"; Flags: nowait postinstall skipifsilent
+Filename: "{app}\{#PmcExeName}"; Description: "{cm:LaunchProgram,{#StringChange(PmcName, '&', '&&')}}"; Flags: nowait postinstall
 
 [UninstallDelete]
 Type: "filesandordirs"; Name: "{userappdata}\MacroCreator"

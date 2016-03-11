@@ -1,4 +1,4 @@
-﻿[PMC Code v5.0.0]|F1||1|Window|1|UserFunctionCalls
+﻿[PMC Code v5.0.0]|F1||1|Window,2,Fast,0,1|1|UserFunctionCalls
 Groups=Start:1
 1|[Assign Variable]|globalvar := Global value|1|0|Variable|||||
 2|Sum|res := 100, A_Sec|1|0|Function|||||
@@ -19,7 +19,7 @@ Groups=Start:1
 17|[MsgBox]|newObj from CreateArray (ByRef parameter):`n%key%: %value%|1|0|MsgBox|0||||
 18|[LoopEnd]|LoopEnd|1|0|Loop|||||
 
-[PMC Code v5.0.0]|||1|Window|1|Sum()
+[PMC Code v5.0.0]|||1|Window,2,Fast,0,1|1|Sum()
 Groups=Start:1
 1|[FuncParameter]|VarA|1|0|FuncParameter|||||
 2|[FuncParameter]|VarB|1|0|FuncParameter|||||
@@ -32,31 +32,31 @@ Groups=Start:1
 09|[LoopEnd]|LoopEnd|1|0|Loop|||||
 10|[FuncReturn]|VarA + VarB|1|0|FuncReturn|||||
 
-[PMC Code v5.0.0]|||1|Window|1|Swap()
+[PMC Code v5.0.0]|||1|Window,2,Fast,0,1|1|Swap()
 Groups=Start:1
 1|[FuncParameter]|Left|1|0|FuncParameter|ByRef||||
 2|[FuncParameter]|Right|1|0|FuncParameter|ByRef||||
-3|[FunctionStart]|Swap|1|0|UserFunction|Local| / MyStatic := 1|my function! ha!||
+3|[FunctionStart]|Swap|1|0|UserFunction|Local| / MyStatic := 1|||
 4|[Assign Variable]|MyStatic += 1|1|0|Variable|||||
 05|[MsgBox]|MyStatic: %MyStatic%|1|0|MsgBox|0||||
 6|[Assign Variable]|temp := %Left%|1|0|Variable|||||
 7|[Assign Variable]|Left := %Right%|1|0|Variable|||||
 8|[Assign Variable]|Right := %temp%|1|0|Variable|||||
 
-[PMC Code v5.0.0]|||1|Window|1|GlobalFunc()
+[PMC Code v5.0.0]|||1|Window,2,Fast,0,1|1|GlobalFunc()
 Groups=Start:1
 1|[FuncParameter]|localparameter := "Parameter value"|1|0|FuncParameter|||||
 2|[FunctionStart]|GlobalFunc|1|0|UserFunction|Global|localvar := "Local value" / |||
 03|[MsgBox]|localvar: %localvar%`nglobalvar: %globalvar%`nlocalparameter: %localparameter%|1|0|MsgBox|0||||
 4|[FuncReturn]|localvar "/" localparameter|1|0|FuncReturn|||||
 
-[PMC Code v5.0.0]|||1|Window|1|CreateArray()
+[PMC Code v5.0.0]|||1|Window,2,Fast,0,1|1|CreateArray()
 Groups=Start:1
 1|[FuncParameter]|item1|1|0|FuncParameter|||||
 2|[FuncParameter]|item2|1|0|FuncParameter|||||
 3|[FuncParameter]|item3|1|0|FuncParameter|||||
 4|[FuncParameter]|ref := "none"|1|0|FuncParameter|ByRef||||
-5|[FunctionStart]|CreateArray|1|0|UserFunction|Local|/|||
+5|[FunctionStart]|CreateArray|1|0|UserFunction|Local|/||0xFF80C0|
 6|[Assign Variable]|ref := ["byrefvalue1", "byrevalue2"]|1|0|Variable|Expression||||
 07|[MsgBox]|% ref[1] " x " ref[2]|1|0|MsgBox|0||||
 8|[Assign Variable]|newarray := [item1, item2, item3]|1|0|Variable|Expression||||

@@ -5,7 +5,7 @@
 	, Action, Step, TimesX, DelayX, Type, Target, Window, Loop_Start, Loop_End, Lab, _Label, _i, Pars, _Count, TimesLoop, FieldsData
 	, NextStep, NStep, NTimesX, NType, NTarget, NWindow, _each, _value, _key, _depth, _pair, _index, _point
 	, pbParams, VarName, VarValue, Oper, RowData, ActiveRows, Increment := 0, TabIdx, RowIdx, LabelFound
-	, ScopedParams := [], UserGlobals, GlobalList, CursorX, CursorY
+	, ScopedParams := [], UserGlobals, GlobalList, CursorX, CursorY, TakeAction
 	, Func_Result, SVRef, FuncPars, ParamIdx := 1, EvalResult
 
 	If (LoopInfo.GetCapacity())
@@ -276,7 +276,7 @@
 			If (Type = cType17)
 			{
 				FlowControl.If := IfStatement(FlowControl.If, PlaybackVars[LoopDepth][mLoopIndex]
-							, Action, Step, TimesX, DelayX, Type, Target, Window, FlowControl.Break, FlowControl.Continue)
+							, Action, Step, TimesX, DelayX, Type, Target, Window, FlowControl)
 				If (ManualKey)
 					WaitFor.Key(o_ManKey[ManualKey], 0)
 				continue
@@ -827,7 +827,7 @@
 					break 3
 				}
 				Try
-					TakeAction := PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars, PlaybackVars[LoopDepth][mLoopIndex], RunningFunction)
+					TakeAction := PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, FlowControl, PlaybackVars[LoopDepth][mLoopIndex], RunningFunction)
 				Catch e
 				{
 					MsgBox, 20, %d_Lang007%, % d_Lang064 " Macro" Macro_On ", " d_Lang065 " " mListRow
@@ -838,14 +838,25 @@
 				PlaybackVars[LoopDepth][mLoopIndex, "ErrorLevel"] := ErrorLevel
 				If ((Type = cType15) || (Type = cType16))
 				{
-					If ((TakeAction = "Break") || ((Target = "Break") && (SearchResult = 0)))
+					If (((Target = "UntilFound") && (SearchResult))
+					||	((Target = "UntilNotFound") && (SearchResult = 0)))
 					{
-						TakeAction := 0
+						For _each, _value in FieldsData
+							%_each% := _value
+						If !(ManualKey)
+							PlayCommand("Sleep", Action, Step, TimesX, DelayX, Target, Window, Pars, FlowControl, PlaybackVars[LoopDepth][mLoopIndex], RunningFunction)
+						continue
+					}
+					If (TakeAction = "Break")
+					{
+						TakeAction := ""
+						For _each, _value in FieldsData
+							%_each% := _value
+						If !(ManualKey)
+							PlayCommand("Sleep", Action, Step, TimesX, DelayX, Target, Window, Pars, FlowControl, PlaybackVars[LoopDepth][mLoopIndex], RunningFunction)
 						break
 					}
-					Else If ((Target = "Continue") && (SearchResult))
-						break
-					Else If (Target = "")
+					Else
 						TimesX--
 				}
 				Else
@@ -855,7 +866,7 @@
 				If Type in Sleep,KeyWait,MsgBox
 					continue
 				If !(ManualKey)
-					PlayCommand("Sleep", Action, Step, DelayX, Target, Window, Pars, PlaybackVars[LoopDepth][mLoopIndex], RunningFunction)
+					PlayCommand("Sleep", Action, Step, TimesX, DelayX, Target, Window, Pars, FlowControl, PlaybackVars[LoopDepth][mLoopIndex], RunningFunction)
 			}
 			If (ManualKey)
 				WaitFor.Key(o_ManKey[ManualKey], 0)
@@ -930,14 +941,14 @@
 
 ;##### Playback Commands #####
 
-PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars, CustomVars, RunningFunction)
+PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, Flow, CustomVars, RunningFunction)
 {
 	local Par1, Par2, Par3, Par4, Par5, Par6, Par7, Par8, Par9, Par10, Par11, Win
-		, _each, _value, _Section, SelAcc, IeIntStr, lMatch, lMatch1, lResult, TakeAction
+		, _each, _value, _Section, SelAcc, IeIntStr, lMatch, lMatch1, lResult, TakeAction := ""
 	For _each, _value in Pars
 		Par%_each% := _value
 	
-	GoSub, pb_%Type%
+	Goto, pb_%Type%
 	return
 	
 	pb_Send:
@@ -1616,31 +1627,31 @@ PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars, CustomVars, Runnin
 	return
 
 	TakeAction:
-	TakeAction := DoAction(FoundX, FoundY, Act1, Act2, SearchResult)
-	If (TakeAction = "Continue")
-		TakeAction := 0
-	Else If (TakeAction = "Stop")
-		StopIt := 1
-	Else If (TimesX = 1) && (TakeAction = "Break")
-		BreakIt++
-	Else If (TakeAction = "Prompt")
-	{
-		If (SearchResult = 0)
-			MsgBox, 49, %d_Lang035%, %d_Lang036% %FoundX%x%FoundY%.`n%d_Lang038%
-		Else
-			MsgBox, 49, %d_Lang035%, %d_Lang037%`n%d_Lang038%
-		IfMsgBox, Cancel
+		TakeAction := DoAction(FoundX, FoundY, Act1, Act2, SearchResult)
+		If (TakeAction = "Continue")
+			TakeAction := ""
+		Else If (TakeAction = "Stop")
 			StopIt := 1
-	}
-	Else If (TakeAction = "Play Sound")
-	{
-		If (SearchResult = 0)
-			SoundBeep
-		Else
-			Loop, 2
+		Else If (TakeAction = "Break") && (Target = "") && (TimesX = 1)
+			Flow.Break++
+		Else If (TakeAction = "Prompt")
+		{
+			If (SearchResult = 0)
+				MsgBox, 49, %d_Lang035%, %d_Lang036% %FoundX%x%FoundY%.`n%d_Lang038%
+			Else
+				MsgBox, 49, %d_Lang035%, %d_Lang037%`n%d_Lang038%
+			IfMsgBox, Cancel
+				StopIt := 1
+		}
+		Else If (TakeAction = "Play Sound")
+		{
+			If (SearchResult = 0)
 				SoundBeep
-	}
-	CoordMode, Mouse, %CoordMouse%
+			Else
+				Loop, 2
+					SoundBeep
+		}
+		CoordMode, Mouse, %CoordMouse%
 	return
 
 	;##### Playback COM Commands #####
@@ -1786,7 +1797,7 @@ PlayCommand(Type, Action, Step, DelayX, Target, Window, Pars, CustomVars, Runnin
 		If (Target != "")
 		{
 			If (!IsObject(%Action%))
-				%Action% := ComObjCreate(%Action%, Target)
+				%Action% := ComObjCreate(Target)
 		}
 	pb_Expression:
 		Step := StrReplace(Step, "`n", ",")
@@ -1956,7 +1967,7 @@ DoAction(X, Y, Action1, Action2, Error)
 		Else
 			return Action1
 	}
-	If (Error = 1 || Error = 2)
+	If (Error)
 		return Action2
 }
 
@@ -1994,13 +2005,13 @@ RunExtFunc(File, FuncName, Params*)
 	return SubStr(Result, 1, -1)
 }
 
-IfStatement(ThisError, CustomVars, Action, Step, TimesX, DelayX, Type, Target, Window, BreakIt, SkipIt)
+IfStatement(ThisError, CustomVars, Action, Step, TimesX, DelayX, Type, Target, Window, Flow)
 {
 	local Pars, VarName, Oper, VarValue, lMatch
 	
 	If (Step = "EndIf")
 		return ThisError < 1 ? 0 : --ThisError
-	If ((BreakIt > 0) || (SkipIt > 0))
+	If ((Flow.Break > 0) || (Flow.Continue > 0))
 		return ThisError
 	If (Action = "[Else]")
 	{
@@ -2246,7 +2257,7 @@ AssignVar(_Name, _Operator, _Value, CustomVars, RunningFunction)
 	
 	While (RegExMatch(_Name, "(\w+)(\[\S+\]|\.\w+)+", lFound))
 	{
-		If (RegExMatch(lFound1, "^-?\d+$"))
+		If lFound1 is Number
 			break
 		_content := ParseObjects(_Name, CustomVars, _ObjItems)
 	,	_Name := lFound1

@@ -1,0 +1,1439 @@
+﻿Lang_sq
+		
+		; Albanian
+		
+; 01. Main Menu		
+	m_Lang001 =	&Skedar
+	m_Lang002 =	&Macro
+	m_Lang003 =	&Funksion
+	m_Lang004 =	&Komandat
+	m_Lang005 =	&Redaktoj
+	m_Lang006 =	&Zgjedh
+	m_Lang007 =	&Pamje
+	m_Lang008 =	&Options
+	m_Lang009 =	&Dhuroj
+	m_Lang010 =	&Ndihmë
+		
+; 02. File Sub Menu		
+	f_Lang001 =	&I ri
+	f_Lang002 =	&Hapur
+	f_Lang003 =	&Save
+	f_Lang004 =	S&ave As
+	f_Lang005 =	&Files të fundit
+	f_Lang006 =	&Eksporti në AHK
+	f_Lang007 =	&Preview Script
+	f_Lang008 =	E&dit Script
+	f_Lang009 =	&Orari Macros
+	f_Lang010 =	&Lista Variablat
+	f_Lang011 =	Dal&je
+	f_Lang012 =	&Nuk ka fotografi
+		
+; 03. Macro Sub Menu		
+	r_Lang001 =	&Macro Record
+	r_Lang002 =	&Aktivizo macros
+	r_Lang003 =	&Luaj Macro aktual
+	r_Lang004 =	&Kohëmatës
+	r_Lang005 =	&Çaktivizo macros
+	r_Lang006 =	L&uaj nga Row zgjedhura
+	r_Lang007 =	Lua&j deri Row zgjedhura
+	r_Lang008 =	Luaj &Rreshta zgjedhura
+	r_Lang009 =	K&onteksti Hotkeys ndjeshme
+	r_Lang010 =	&Shto Macro
+	r_Lang011 =	&Close Macro
+	r_Lang012 =	Macro &Duplicate
+	r_Lang013 =	&Edit Macros
+	r_Lang014 =	&Import Macro
+	r_Lang015 =	Ruaj Macro ak&tual
+		
+; 04. Function Sub Menu		
+	u_Lang001 =	&Krijo Funksioni
+	u_Lang002 =	&Shto Parametër
+	u_Lang003 =	S&hto Kthehu
+	u_Lang004 =	&Convert Macro To Funksioni
+		
+; 05. Commands Sub Menu		
+	i_Lang001 =	&Maus
+	i_Lang002 =	&Tekst
+	i_Lang003 =	&Kontroll
+	i_Lang004 =	&Pushim
+	i_Lang005 =	M&essage Box
+	i_Lang006 =	P&risni Key
+	i_Lang007 =	&Dritare
+	i_Lang008 =	&Image / Pixel Kërko
+	i_Lang009 =	R&un / File / String / Misc.
+	i_Lang010 =	&Lak
+	i_Lang011 =	&Go To / Label
+	i_Lang012 =	&Set timer
+	i_Lang013 =	&Nëse pasqyrat
+	i_Lang014 =	&Variablat / Vargjeve
+	i_Lang015 =	&Funksionet / Metodat Array
+	i_Lang016 =	D&ërgoni një email
+	i_Lang017 =	S&hkarko files
+	i_Lang018 =	&Zip / Unzip files
+	i_Lang019 =	Internet E&xplorer
+	i_Lang020 =	&COM Interface
+	i_Lang021 =	Drit&aret Messages
+	i_Lang022 =	G&jeni një komandë
+		
+; 06. Edit Sub Menu		
+	e_Lang001 =	&Kopje
+	e_Lang002 =	&Edit Comment
+	e_Lang003 =	&Gjej / Replace
+	e_Lang004 =	K&opjo në ...
+	e_Lang005 =	&Prish
+	e_Lang006 =	&Bëj sërish
+	e_Lang007 =	P&rerje
+	e_Lang008 =	Kop&je
+	e_Lang009 =	&Ngjit
+	e_Lang010 =	&Fshij
+	e_Lang011 =	&Leviz
+	e_Lang012 =	Le&viz poshtë
+	e_Lang013 =	F&ut nga Box
+	e_Lang014 =	Fu&t keystroke
+	e_Lang015 =	E&dit Color Mark
+	e_Lang016 =	&Grupet
+	e_Lang017 =	&Që grupet
+	e_Lang018 =	&Shto grup
+	e_Lang019 =	&Hiq grup
+	e_Lang020 =	H&iq të gjitha grupet
+	e_Lang021 =	&Collapse gjitha
+	e_Lang022 =	&Zgjerimin e të gjitha
+		
+; 07. Select Sub Menu		
+	s_Lang001 =	&Selektoj të gjitha
+	s_Lang002 =	&Zgjidh Asnjë
+	s_Lang003 =	&Kundër zgjedhjes
+	s_Lang004 =	K&ontrolloni zgjedhura
+	s_Lang005 =	&Uncheck zgjedhura
+	s_Lang006 =	&Verifikimet Përmbys
+	s_Lang007 =	&Leviz Selection Up
+	s_Lang008 =	L&eviz Selection Poshte
+	s_Lang009 =	Llo&ji i zgjedhur
+	s_Lang010 =	Lloj&i Command
+		
+; 08. View Sub Menu		
+	v_Lang001 =	&Gjithmonë në krye
+	v_Lang002 =	&Rreshtat Highlight
+	v_Lang003 =	G&jurmë
+	v_Lang004 =	&Controls Toolbar
+	v_Lang005 =	&Inspektim
+	v_Lang006 =	&Toolbars
+	v_Lang007 =	&Hotkeys
+	v_Lang008 =	&Kërko Bar
+	v_Lang009 =	C&olumns Reset Size
+	v_Lang010 =	Ico&ns Size
+	v_Lang011 =	R&eset Layout
+	v_Lang012 =	&Skedar
+	v_Lang013 =	Recor&d Dëgjo
+	v_Lang014 =	Ko&mandat
+	v_Lang015 =	Red&aktoj
+	v_Lang016 =	O&ptions
+	v_Lang017 =	C&ustomize
+	v_Lang018 =	&Automatik
+	v_Lang019 =	Udh&ëzues
+	v_Lang020 =	&Stop
+	v_Lang021 =	&Pushim
+	v_Lang022 =	&Kompakt
+	v_Lang023 =	De&fault
+	v_Lang024 =	I &vogël
+	v_Lang025 =	&I madh
+		
+; 09. Options Sub Menu		
+	o_Lang001 =	&Cilësimet
+	o_Lang002 =	&Minimize të tray
+	o_Lang003 =	&Display kontrollet toolbar
+	o_Lang004 =	C&apture shtyn kyçe në këtë dritare
+	o_Lang005 =	&Hotkeys Gjithmonë aktive
+	o_Lang006 =	&Opsionet mbyllje (Kur playback mbaron ...)
+	o_Lang007 =	&Konteksti Hotkeys ndjeshme
+	o_Lang008 =	&Shto butonin e Windows për të "luajtur" hotkey
+	o_Lang009 =	&Përdorni butonin levë si hotkey
+	o_Lang010 =	&Bëje si Default Hotkeys
+	o_Lang011 =	B&ëje si Default Skeda
+	o_Lang012 =	H&iq Default Skedar
+	o_Lang013 =	D&efault Hotkeys
+	o_Lang014 =	Ci&lësimet e albumit
+		
+; 10. Donate Sub Menu		
+	p_Lang001 =	&PayPal Donation
+		
+; 11. Help Sub Menu		
+	h_Lang001 =	&Ndihmë
+	h_Lang002 =	&Tutorials
+	h_Lang003 =	T&ips
+	h_Lang004 =	&Macro Krijuesi Faqja kryesore
+	h_Lang005 =	&Forum
+	h_Lang006 =	&AHK Online Documentation
+	h_Lang007 =	&Kontrollo për përditësime ...
+	h_Lang008 =	K&ontrolloni në nisje
+	h_Lang009 =	&Për
+		
+; 12. Tray Menu		
+	y_Lang001 =	Hide Window
+	y_Lang002 =	Trego Window
+	y_Lang003 =	Controls Toolbar
+		
+; 13. Built-in Vars Menu		
+	b_Lang001 =	Characters veçanta
+	b_Lang002 =	Vetitë
+	b_Lang003 =	Data dhe ora
+	b_Lang004 =	User Koha Idle
+	b_Lang005 =	Sistemit dhe përdoruesit
+	b_Lang006 =	Misc.
+	b_Lang007 =	Lak
+		
+; 14. Main Window		
+	w_Lang001 =	Eksport
+	w_Lang002 =	Inspektim
+	w_Lang003 =	Options
+	w_Lang004 =	Rekord
+	w_Lang005 =	Luaj
+	w_Lang006 =	Rishikim
+	w_Lang007 =	Udhëzues
+	w_Lang008 =	Stop
+	w_Lang009 =	Display kontrollet toolbar
+	w_Lang010 =	Pushim
+	w_Lang011 =	Loop
+	w_Lang012 =	Capture shtyn kyçe në këtë dritare
+	w_Lang013 =	Minimize të tray
+	w_Lang014 =	Hotkeys Gjithmonë aktive
+	w_Lang015 =	Përsëritje
+	w_Lang016 =	Vonesa (ms)
+	w_Lang017 =	Aplikoni
+	w_Lang018 =	Insert
+	w_Lang019 =	Redaktoj
+	w_Lang020 =	Opsionet mbyllje (Kur playback mbaron ...)
+	w_Lang021 =	Mos bej gje
+	w_Lang022 =	Close aplikimit
+	w_Lang023 =	Fike
+	w_Lang024 =	Shutdown (force)
+	w_Lang025 =	Reboot
+	w_Lang026 =	Log off
+	w_Lang027 =	Prehem
+	w_Lang028 =	Pezulloj
+	w_Lang029 =	Kompjuter Lock
+	w_Lang030 =	Indeks
+	w_Lang031 =	Veprim
+	w_Lang032 =	Detalet
+	w_Lang033 =	Përsëritje
+	w_Lang034 =	Vonesë
+	w_Lang035 =	Lloj
+	w_Lang036 =	Kontroll
+	w_Lang037 =	Dritare
+	w_Lang038 =	Koment
+	w_Lang039 =	Ngjyrë
+	w_Lang040 =	New (Ctrl + N)
+	w_Lang041 =	Open (Ctrl + O)
+	w_Lang042 =	Save (Ctrl + S)
+	w_Lang043 =	Save As (Ctrl + Shift + S)
+	w_Lang044 =	Eksporti në AHK (Ctrl + E)
+	w_Lang045 =	Preview Script (Ctrl + P)
+	w_Lang046 =	Settings (Ctrl + G)
+	w_Lang047 =	Macro Record (Ctrl + R)
+	w_Lang048 =	Aktivizo Macros (Ctrl + Enter)
+	w_Lang049 =	Luaj Macro aktuale (Ctrl + Shift + Enter)
+	w_Lang050 =	Timer (Ctrl + Shift + T)
+	w_Lang051 =	Mouse (F2)
+	w_Lang052 =	Text (F3)
+	w_Lang053 =	Edit Macros (Ctrl + Shift + M)
+	w_Lang054 =	Control (F4)
+	w_Lang055 =	Ndalo (F5)
+	w_Lang056 =	Message Box (Shift + F5)
+	w_Lang057 =	Prisni Key (Ctrl + F5)
+	w_Lang058 =	Window (F6)
+	w_Lang059 =	Image / Pixel Kërko (F7)
+	w_Lang060 =	Run / File / String / Misc. (F8)
+	w_Lang061 =	Loop (F9)
+	w_Lang062 =	Go To / Label (Shift + F9)
+	w_Lang063 =	Set Timer (Ctrl + F9)
+	w_Lang064 =	Nëse Pasqyrave (F10)
+	w_Lang065 =	Variablat / Vargjeve (Shift + F10)
+	w_Lang066 =	Funksionet / Metodat Array (Ctrl F10 +)
+	w_Lang067 =	Dërgo Email (F11)
+	w_Lang068 =	Shkarko files (Shift + F11)
+	w_Lang069 =	Zip / Unzip files (Ctrl F11 +)
+	w_Lang070 =	Internet Explorer (F12)
+	w_Lang071 =	Expression / COM Interface (Shift + F12)
+	w_Lang072 =	Dritaret Messages (Ctrl + F12)
+	w_Lang073 =	Shto Macro (Ctrl + T)
+	w_Lang074 =	Mbylle Macro (Ctrl + W)
+	w_Lang075 =	Duplicate Macro (Ctrl + Shift + D)
+	w_Lang076 =	Import Macro (Ctrl + I)
+	w_Lang077 =	Ruaj Macro aktual (Ctrl + Alt + S)
+	w_Lang078 =	Leviz Up (Ctrl + PageUp)
+	w_Lang079 =	Leviz poshtë (Ctrl + PageDown)
+	w_Lang080 =	Duplicate Rreshta zgjedhura (Ctrl + D)
+	w_Lang081 =	Pritini zgjedhur Rreshtat (Ctrl + X)
+	w_Lang082 =	Copy Selected Rreshtat (Ctrl + C)
+	w_Lang083 =	Paste Kopjuar Rreshtat (Ctrl + V)
+	w_Lang084 =	Fshij Rreshta zgjedhura (Del)
+	w_Lang085 =	Undo (Ctrl + Z)
+	w_Lang086 =	Redo (Ctrl + Y)
+	w_Lang087 =	Kopjo në ...
+	w_Lang088 =	Gjej / Replace (Ctrl + F)
+	w_Lang089 =	Fut / Edit koment (Ctrl + L)
+	w_Lang090 =	Edit Color Mark (Ctrl + M)
+	w_Lang091 =	Customize
+	w_Lang092 =	Gjeni një komandë (Ctrl + Shift + F)
+	w_Lang093 =	Edit (Enter)
+	w_Lang094 =	Fsheh
+	w_Lang095 =	Leviz këtu
+	w_Lang096 =	Copy këtu
+	w_Lang097 =	Grupet
+	w_Lang098 =	Që grupet (Ctrl + Shift + G)
+	w_Lang099 =	Shto grup (Ctrl + Shift + Y)
+	w_Lang100 =	Hiq grup (Ctrl + Shift + R)
+	w_Lang101 =	Hiq të gjitha grupet
+	w_Lang102 =	Ndrysho grupet
+	w_Lang103 =	Emri i grupit
+	w_Lang104 =	Krijo Funksioni (Ctrl + Shift + U)
+	w_Lang105 =	Shto Parametri (Ctrl + Shift + P)
+	w_Lang106 =	Shto Return (Ctrl + Shift + N)
+	w_Lang107 =	Convert Macro Të Funksioni (Ctrl + Shift + C)
+	w_Lang108 =	Koment nga rreshtave pakontrolluar
+	w_Lang109 =	Shto butonin e Windows për të "luajtur" hotkey
+	w_Lang110 =	Përdorni butonin levë si hotkey
+	w_Lang111 =	Kërko ... (Shtypni Enter për të shkuar)
+		
+; 15. Command Windows		
+	c_Lang001 =	Maus
+	c_Lang002 =	Tekst
+	c_Lang003 =	Pushim
+	c_Lang004 =	Kontroll
+	c_Lang005 =	Dritare
+	c_Lang006 =	Image Kërko
+	c_Lang007 =	Pixel Kërko
+	c_Lang008 =	Run / File / String / Misc.
+	c_Lang009 =	Nëse pasqyrat
+	c_Lang010 =	Variablat
+	c_Lang011 =	Funksionet / Metodat Array
+	c_Lang012 =	Internet Explorer
+	c_Lang013 =	Expression / Interface COM
+	c_Lang014 =	Select Application (Advanced)
+	c_Lang015 =	Mesazh
+	c_Lang016 =	Kontroll
+	c_Lang017 =	Vonesë
+	c_Lang018 =	Miliseconds
+	c_Lang019 =	Sekonda
+	c_Lang020 =	Ne rregull
+	c_Lang021 =	Anuloj
+	c_Lang022 =	Afër
+	c_Lang023 =	Kopje
+	c_Lang024 =	Fshij
+	c_Lang025 =	Përdorni% për variablat, e.g .:% Clipboard%
+	c_Lang026 =	Veprim
+	c_Lang027 =	Kliko
+	c_Lang028 =	Veprim
+	c_Lang029 =	Leviz dhe klikoni
+	c_Lang030 =	Rrota Up
+	c_Lang031 =	Wheel poshtë
+	c_Lang032 =	Tërhiq dhe lësho
+	c_Lang033 =	Koordinon
+	c_Lang034 =	Kërkim
+	c_Lang035 =	Subcommand
+	c_Lang036 =	I afërm
+	c_Lang037 =	Buton
+	c_Lang038 =	Majtas
+	c_Lang039 =	E drejtë
+	c_Lang040 =	Mes
+	c_Lang041 =	X1
+	c_Lang042 =	X2
+	c_Lang043 =	Hold / Release
+	c_Lang044 =	Kliko Count
+	c_Lang045 =	Tekst Plain (Raw)
+	c_Lang046 =	Tekst me komandat
+	c_Lang047 =	Paste nga Clipboard
+	c_Lang048 =	Paste mbi Kontrollin
+	c_Lang049 =	Set Text
+	c_Lang050 =	Shto Ndalo
+	c_Lang051 =	Message Box
+	c_Lang052 =	Prisni për çelës
+	c_Lang053 =	Prisni timeout
+	c_Lang054 =	(miliseconds) 0 = pafund
+	c_Lang055 =	Komandë
+	c_Lang056 =	Vlerë
+	c_Lang057 =	Variable output
+	c_Lang058 =	Pozitë
+	c_Lang059 =	Madhësi
+	c_Lang060 =	4 variabla do të krijohet me këtë parashtesë dhe duke përfunduar me X, Y, W, H.
+	c_Lang061 =	Fillim
+	c_Lang062 =	Fund
+	c_Lang063 =	Imazh
+	c_Lang064 =	Pixel
+	c_Lang065 =	Bëni Screenshot
+	c_Lang066 =	Prisni Key
+	c_Lang067 =	Nëse gjendet
+	c_Lang068 =	Nëse nuk u gjet / Error
+	c_Lang069 =	Variablat output
+	c_Lang070 =	COORD
+	c_Lang071 =	Variacionet
+	c_Lang072 =	Inspektim
+	c_Lang073 =	Lak
+	c_Lang074 =	Automatikisht të krijojë objektin COM
+	c_Lang075 =	Pushim
+	c_Lang076 =	Vazhdoj
+	c_Lang077 =	Shko te
+	c_Lang078 =	Shko tek Label
+	c_Lang079 =	Etiketë
+	c_Lang080 =	Shto Label
+	c_Lang081 =	String (InputVar)
+	c_Lang082 =	Variabël
+	c_Lang083 =	Tjetër
+	c_Lang084 =	Cakto ndryshueshme
+	c_Lang085 =	Përmbajtje
+	c_Lang086 =	Operator
+	c_Lang087 =	Shprehje
+	c_Lang088 =	Reset
+	c_Lang089 =	Funksioni Emri
+	c_Lang090 =	Ndarë me presje parametrat (pa kllapa)
+	c_Lang091 =	Format Përdorimi shprehjet
+	c_Lang092 =	Page Element / Index
+	c_Lang093 =	Set
+	c_Lang094 =	Marr
+	c_Lang095 =	Metodë
+	c_Lang096 =	Pronë
+	c_Lang097 =	Prisni për faqe të ngarkesës.
+	c_Lang098 =	CLSID
+	c_Lang099 =	Lidh
+	c_Lang100 =	Handle
+	c_Lang101 =	COM Script
+	c_Lang102 =	Numri mesazh
+	c_Lang103 =	Keys veçanta
+	c_Lang104 =	Browser Back
+	c_Lang105 =	Browser Forward
+	c_Lang106 =	Browser Refresh
+	c_Lang107 =	Browser Stop
+	c_Lang108 =	Browser Kërko
+	c_Lang109 =	Browser Favoritet
+	c_Lang110 =	Browser Faqja kryesore
+	c_Lang111 =	Media
+	c_Lang112 =	Memec
+	c_Lang113 =	Volume Up
+	c_Lang114 =	Vëllimi Poshte
+	c_Lang115 =	Play / Pause
+	c_Lang116 =	Track Next
+	c_Lang117 =	Track Previous
+	c_Lang118 =	Stop
+	c_Lang119 =	E-mail
+	c_Lang120 =	App 1
+	c_Lang121 =	App 2
+	c_Lang122 =	ScanCode
+	c_Lang123 =	Shtoj
+	c_Lang124 =	Historia Key
+	c_Lang125 =	Shkruani një ScanCode ...
+	c_Lang126 =	Code shtohet Virtual Lista Keys!
+	c_Lang127 =	Shtyp një emër për variablin
+	c_Lang128 =	Përdorni funksionin nga Skeda të jashtëm
+	c_Lang130 =	Përsëriteni derisa të
+	c_Lang131 =	Aplikoni
+	c_Lang132 =	Lak
+	c_Lang133 =	Skedar
+	c_Lang134 =	Bëj analizë gramatikore
+	c_Lang135 =	Lexoj
+	c_Lang136 =	Regjistrimi
+	c_Lang137 =	Skeda Model:
+	c_Lang138 =	Directories
+	c_Lang139 =	Rekursive
+	c_Lang140 =	Variable Input:
+	c_Lang141 =	Përndarësit:
+	c_Lang142 =	Heq figurë:
+	c_Lang143 =	Input dokumentit:
+	c_Lang144 =	Root Key \ Key:
+	c_Lang145 =	Files
+	c_Lang146 =	Keys
+	c_Lang147 =	Ikonë
+	c_Lang148 =	Asnjë ikonë
+	c_Lang149 =	Gabim
+	c_Lang150 =	Pyetje
+	c_Lang151 =	Thirrje
+	c_Lang152 =	Info
+	c_Lang153 =	Gjithmonë në krye
+	c_Lang154 =	Minuta
+	c_Lang155 =	Deri
+	c_Lang156 =	Dorëshkrim
+	c_Lang157 =	Script Gjuha
+	c_Lang158 =	Jo në përputhje me 64-bit?
+	c_Lang159 =	Mundësitë për kërkesë
+	c_Lang160 =	I tejdukshëm
+	c_Lang161 =	Shkallë
+	c_Lang162 =	Shto "Nëse Deklarata"
+	c_Lang163 =	Dërgo Mode
+	c_Lang164 =	I barabartë
+	c_Lang165 =	Përmban
+	c_Lang166 =	Më e madhe
+	c_Lang167 =	Më pak
+	c_Lang168 =	Po
+	c_Lang169 =	Jo
+	c_Lang170 =	Ne rregull
+	c_Lang171 =	Anuloj
+	c_Lang172 =	Dështoj
+	c_Lang173 =	Injoroj
+	c_Lang174 =	Rigjykoj
+	c_Lang175 =	Vazhdoj
+	c_Lang176 =	Provo përsëri
+	c_Lang177 =	Koha mbaroi
+	c_Lang178 =	Vonesa vendosur kyçe
+	c_Lang179 =	Vonesa Key
+	c_Lang180 =	Vonesa Random
+	c_Lang181 =	Minimum
+	c_Lang182 =	Maksimal
+	c_Lang183 =	Disable vonesa të rastit për këtë komandë
+	c_Lang184 =	Zgjidh nga lista
+	c_Lang185 =	Buttons
+	c_Lang186 =	I parë
+	c_Lang187 =	I dytë
+	c_Lang188 =	I tretë
+	c_Lang189 =	Titull
+	c_Lang190 =	Nëse dritarja aktive
+	c_Lang191 =	Nëse dritarja nuk aktiv
+	c_Lang192 =	Nëse dritarja ekzistojnë
+	c_Lang193 =	Nëse dritarja nuk ekzistojnë
+	c_Lang194 =	Nëse dosja ekzistojnë
+	c_Lang195 =	Nëse skedari nuk ekziston
+	c_Lang196 =	Nëse tekstin clipboard
+	c_Lang197 =	Në qoftë se indeksi loop
+	c_Lang198 =	Nëse image / pixel gjetur
+	c_Lang199 =	Nëse image / pixel nuk u gjet
+	c_Lang200 =	Nëse string përmban
+	c_Lang201 =	Nëse string nuk përmban
+	c_Lang202 =	Nëse kuti mesazh
+	c_Lang203 =	Krahaso variablave
+	c_Lang204 =	Vlerësuar shprehje
+	c_Lang205 =	Rajon
+	c_Lang206 =	(Përdorni [] për të krijuar vargjeve, e.g .: [10, 20, aVariable "aString"])
+	c_Lang207 =	Array Object
+	c_Lang208 =	Emri Key
+	c_Lang209 =	Vlera Emri
+	c_Lang210 =	Vlerat
+	c_Lang211 =	Grup
+	c_Lang212 =	User Përcaktuar Funksioni
+	c_Lang213 =	Funksioni Parametri
+	c_Lang214 =	Funksioni Return
+	c_Lang215 =	Parameters
+	c_Lang216 =	Vlera e kthimit
+	c_Lang217 =	Vlera e parazgjedhur
+	c_Lang218 =	Fushë
+	c_Lang219 =	Lokal
+	c_Lang220 =	Global
+	c_Lang221 =	Emër
+	c_Lang222 =	Ju mund të shtoni më shumë parametrat nga menuja Funksioni.
+	c_Lang223 =	Variablat globale
+	c_Lang224 =	Variablat lokale
+	c_Lang225 =	Variablat statike
+	c_Lang226 =	Nga
+	c_Lang227 =	Email
+	c_Lang228 =	Subjekt
+	c_Lang229 =	Mesazh
+	c_Lang230 =	Në
+	c_Lang231 =	CC
+	c_Lang232 =	BCC
+	c_Lang233 =	F2 për të redaktuar
+	c_Lang234 =	HTML
+	c_Lang235 =	Dërgoni një email
+	c_Lang236 =	Shkarko files
+	c_Lang237 =	Zip / Unzip files
+	c_Lang238 =	Ndez
+	c_Lang239 =	Fik
+	c_Lang240 =	Pozicionet regjistruar.
+	c_Lang241 =	Fshi të gjitha timers
+	c_Lang242 =	Set timer
+	c_Lang243 =	Djathtas-justifikuar
+	c_Lang244 =	Right-to-Left
+	c_Lang245 =	Attachments
+	c_Lang246 =	Rrugë
+	c_Lang247 =	Nëse
+	c_Lang248 =	Compress çdo fotografi në një arkiv të ndryshme
+	c_Lang249 =	Ekstrakt çdo fotografi në një dosje të ndryshme
+	c_Lang250 =	Fotografi zip
+	c_Lang251 =	Fotografi unzip
+	c_Lang252 =	Download links
+	c_Lang253 =	Dosja e Destinacionit
+	c_Lang254 =	Fotografi destinacion
+	c_Lang255 =	Të ndara me pikëpresje, presje apo linjë.
+	c_Lang256 =	Rregullo koordinatat në qendër të imazhit
+		
+; 16. Other Windows		
+	t_Lang001 =	Eksporti në AutoHotkey
+	t_Lang002 =	Macros
+	t_Lang003 =	Loops
+	t_Lang004 =	0 = pafund
+	t_Lang005 =	Përdorimi Hotstring
+	t_Lang006 =	Block Mouse
+	t_Lang007 =	Të gjithë
+	t_Lang008 =	Asnjë
+	t_Lang009 =	Konteksti Hotkeys ndjeshme
+	t_Lang010 =	Eksportit të
+	t_Lang011 =	Gjurmë
+	t_Lang012 =	Përfshijnë Kodin PMC
+	t_Lang013 =	Mos lidh Dërgo komandat
+	t_Lang014 =	Freskoj
+	t_Lang015 =	Auto-Refresh
+	t_Lang016 =	Gjithmonë në krye
+	t_Lang017 =	Cilësimet
+	t_Lang018 =	I përgjithshëm
+	t_Lang019 =	Filloni / Stop Record
+	t_Lang020 =	Record Macro New
+	t_Lang021 =	Tasteve
+	t_Lang022 =	Regjistrimi
+	t_Lang023 =	Capture Shtetit Key (poshtë / lart)
+	t_Lang024 =	Mouse Clicks
+	t_Lang025 =	Mouse Wheel
+	t_Lang026 =	Lëviz Mouse
+	t_Lang027 =	Intervalet në kohën e duhur
+	t_Lang028 =	Vonesa minimale
+	t_Lang029 =	Klasat Window
+	t_Lang030 =	Titujt Window
+	t_Lang031 =	Record ControlSend
+	t_Lang032 =	Record ControlClick
+	t_Lang033 =	Relative Record Key
+	t_Lang034 =	Kunj
+	t_Lang035 =	Rishikim
+	t_Lang036 =	Speed ​​Up
+	t_Lang037 =	Ngadalëso
+	t_Lang038 =	Kthehu pas Mouse rishikim
+	t_Lang039 =	Mouse Koordinatat
+	t_Lang040 =	Dritare
+	t_Lang041 =	Ekran
+	t_Lang042 =	Default Mouse Delay
+	t_Lang043 =	Default Window Delay
+	t_Lang044 =	Max Historia per Makro
+	t_Lang045 =	Clear History
+	t_Lang046 =	Screenshots
+	t_Lang047 =	Draw Button
+	t_Lang048 =	Line Width (Px)
+	t_Lang049 =	Capture në lirim
+	t_Lang050 =	Shtypni Enter për të kapur
+	t_Lang051 =	Screenshots Directory
+	t_Lang052 =	Përfundojë Line
+	t_Lang053 =	Hotkeys
+	t_Lang054 =	Vendosur si default Hotkeys
+	t_Lang055 =	Çaktivizo Window Shortcuts
+	t_Lang056 =	Columns Reset Size
+	t_Lang057 =	Default Skedar Macro
+	t_Lang058 =	Dokumentit Standard Library
+	t_Lang059 =	Përdorni Shprehje parazgjedhje për variablat Caktimin
+	t_Lang060 =	Highlight unazore dhe Pasqyrat
+	t_Lang061 =	(Kliko kolonën header Indeksi për të mundësuar / disable)
+	t_Lang062 =	Keys Virtual
+	t_Lang063 =	Default
+	t_Lang064 =	Edit Comment
+	t_Lang065 =	Koment
+	t_Lang066 =	Kërko Column
+	t_Lang067 =	Gjej / Replace
+	t_Lang068 =	&Gjej
+	t_Lang069 =	&Match Case
+	t_Lang070 =	&Zëvendësoj
+	t_Lang071 =	Gjetur
+	t_Lang072 =	Zëvendësohet
+	t_Lang073 =	Rr&eshtat e zgjedhur
+	t_Lang074 =	&Të gjitha Rreshtat
+	t_Lang075 =	Të gj&itha Macros
+	t_Lang076 =	Për
+	t_Lang077 =	&Rregullt Shprehja
+	t_Lang078 =	Luaj herë
+	t_Lang079 =	Luaj çdo X (mili) sekonda
+	t_Lang080 =	Kohëmatës
+	t_Lang081 =	Pushim
+	t_Lang082 =	Deklaratat
+	t_Lang083 =	Trego Vulë për unazore dhe Pasqyrat
+	t_Lang084 =	(Double-Kliko kolona Action header mundësuar / disable)
+	t_Lang085 =	Display Kontrollet Bar në nisje
+	t_Lang086 =	Duke kërkuar për funksionet. Te lutem prit...
+	t_Lang087 =	Përfshijnë fotografi të jashtëm
+	t_Lang088 =	Krijo exe file
+	t_Lang089 =	Lejo raste të shumta
+	t_Lang090 =	Defaults
+	t_Lang091 =	Lejo Zvarritje Rreshta
+	t_Lang092 =	&Përmbajtja e qelizave të tëra
+	t_Lang093 =	Format standarde INI
+	t_Lang094 =	Emri = Vlera
+	t_Lang095 =	Shkruani 1 variabël për çdo rresht. Ju gjithashtu mund të shtoni [Seksionet].
+	t_Lang096 =	Përdorues Variablat globale
+	t_Lang097 =	Shtypni një buton në levë
+	t_Lang098 =	Backspace për të pastruar
+	t_Lang099 =	Buton
+	t_Lang100 =	Tips Display tullumbace
+	t_Lang101 =	Shpejtësi
+	t_Lang102 =	I ngadalshëm
+	t_Lang103 =	Shpejt
+	t_Lang104 =	Trego / fsheh Title Bar
+	t_Lang105 =	Trego / fsheh Main Window
+	t_Lang106 =	Run immediately
+	t_Lang107 =	Vonesat rastësishme
+	t_Lang108 =	Normal
+	t_Lang109 =	Poshtë
+	t_Lang110 =	Lart
+	t_Lang111 =	Fut keystroke
+	t_Lang112 =	Play / Pause
+	t_Lang113 =	Stop
+	t_Lang114 =	Rishikim Options
+	t_Lang115 =	Filloni / Stop Record
+	t_Lang116 =	Record Macro New
+	t_Lang117 =	Options regjistrimi
+	t_Lang118 =	Liste e qarte
+	t_Lang119 =	Display Progresit Bar
+	t_Lang120 =	Speed ​​Up
+	t_Lang121 =	Ngadalëso
+	t_Lang122 =	Trego / fsheh Title Bar
+	t_Lang123 =	Trego / fsheh Main Window
+	t_Lang124 =	Undock
+	t_Lang125 =	Dok
+	t_Lang126 =	Hapur
+	t_Lang127 =	Save
+	t_Lang128 =	Prerje
+	t_Lang129 =	Kopje
+	t_Lang130 =	Ngjit
+	t_Lang131 =	Selektoj të gjitha
+	t_Lang132 =	Fshij
+	t_Lang133 =	Tastierë
+	t_Lang134 =	Maus
+	t_Lang135 =	Të tjerët
+	t_Lang136 =	Rreshtat Highlight
+	t_Lang137 =	Default Script Editor
+	t_Lang138 =	Open in editor të jashtëm (Ctrl + Shift + E)
+	t_Lang139 =	Zgjedh
+	t_Lang140 =	By kolonën
+	t_Lang141 =	Të gjitha Columns
+	t_Lang142 =	Hiq Theme nga Toolbars (kërkon restart)
+	t_Lang143 =	Auto Hide Controls Toolbar
+	t_Lang144 =	Cliko dhe terhiq për të ndryshuar rendin. Double-Kliko për të redaktuar.
+	t_Lang145 =	Edit Macros
+	t_Lang146 =	Ne rresht
+	t_Lang147 =	Macro
+	t_Lang148 =	Veprimi i butonin ngushtë dritares kryesore së
+	t_Lang149 =	Close aplikimit
+	t_Lang150 =	Minimize të tray
+	t_Lang151 =	Display konfirmim kur mbylljes një makro
+	t_Lang152 =	Krijo backups automatike
+	t_Lang153 =	Krijon një detyrë të caktuar në Windows Task Scheduler.
+	t_Lang154 =	Koha e drejtuar parë
+	t_Lang155 =	Lloji Orari
+	t_Lang156 =	Pasi || Daily | Javore | Monthly | Filloni | Logon | Idle
+	t_Lang157 =	Fotografi Target PMC
+	t_Lang158 =	Fotografi Target AHK
+	t_Lang159 =	Script do të ruhen ose overwritten në dosjen aktuale!
+	t_Lang160 =	Open Task Scheduler
+	t_Lang161 =	Task krijua me sukses!
+	t_Lang162 =	Ndodhi një gabim. Detyra nuk mund të krijohet.
+	t_Lang163 =	Scheduler
+	t_Lang164 =	Orari Macros
+	t_Lang165 =	Macro Run
+	t_Lang166 =	Skedar
+	t_Lang167 =	Varg
+	t_Lang168 =	Get Info
+	t_Lang169 =	Prit
+	t_Lang170 =	Grupet Window
+	t_Lang171 =	Mesazhet
+	t_Lang172 =	Registry Dhe INI
+	t_Lang173 =	Tingull
+	t_Lang174 =	Variablat
+	t_Lang175 =	Misc.
+	t_Lang176 =	Shto grup
+	t_Lang177 =	Grup i ri
+	t_Lang178 =	Gjuha Editor
+	t_Lang179 =	Krijo të re
+	t_Lang180 =	Përdorni Shkruani, PgDn dhe PgUp për të lundruar.
+	t_Lang181 =	Paraqes
+	t_Lang182 =	Emër
+	t_Lang183 =	Ruaj ndryshimet?
+	t_Lang184 =	Gjuha dokumentit
+	t_Lang185 =	Referenca e dosjes,
+	t_Lang186 =	Submit rishikim ose përkthim të ri
+	t_Lang187 =	Collapse gjitha
+	t_Lang188 =	Zgjerimin e të gjitha
+	t_Lang189 =	Gjuhë
+	t_Lang190 =	Convert thyen linjë
+	t_Lang191 =	Llogaritë e-mail
+	t_Lang192 =	Update
+	t_Lang193 =	Double-click për të redaktuar
+	t_Lang194 =	SMTP Server
+	t_Lang195 =	Port
+	t_Lang196 =	Vërtetoj
+	t_Lang197 =	Emri i përdoruesit
+	t_Lang198 =	Fjalëkalim
+	t_Lang199 =	SSL
+	t_Lang200 =	Dërgo mënyrën
+	t_Lang201 =	Dërgo një test
+	t_Lang202 =	Screen And Window
+	t_Lang203 =	Zbuluar Hidden Windows-
+	t_Lang204 =	Zbuluar Hidden Text
+	t_Lang205 =	Titulli Match Mode
+	t_Lang206 =	Titulli Match Speed
+	t_Lang207 =	Klient
+	t_Lang208 =	G&jej
+	t_Lang209 =	Z&ëvendësoj
+		
+; 17. Messages & Dialogs		
+	d_Lang001 =	Hapur
+	d_Lang002 =	Ruaj projektin aktual?
+	d_Lang003 =	Cilësimet e albumit
+	d_Lang004 =	Macro Krijuesi Files
+	d_Lang005 =	Save Project
+	d_Lang006 =	Dështoi për të ruajtur / fotografi mbishkrimit
+	d_Lang007 =	Gabim
+	d_Lang008 =	Gabim: Nuk ka kontroll Macro Selected.
+		Please itshekhi Macro ubuncinane enye Macro kuluhlu.
+	d_Lang009 =	Gabim: No Hotkey zgjedhur.
+	d_Lang010 =	Gabim: Invalid Address.
+		The Elingasebenziyo ekhethiweyo idilesi okanye igama lefayile ayisebenzi.
+	d_Lang011 =	Paralajmërim
+	d_Lang012 =	Nuk ka kontroll selected.
+		
+	d_Lang013 =	Export Script
+	d_Lang014 =	Script eksportuara
+	d_Lang015 =	Dosja u eksportuar me sukses!
+	d_Lang016 =	Kliko "Get 'për të shënuar pozicionin.
+	d_Lang017 =	#NOME?
+		#NOME?
+		#NOME?
+	d_Lang018 =	pixel Color
+	d_Lang019 =	Liste e qarte
+	d_Lang020 =	Close Macro?
+	d_Lang021 =	tjetër
+	d_Lang022 =	i mëparshëm
+	d_Lang023 =	mesazh
+	d_Lang024 =	settings Load parazgjedhur?
+	d_Lang025 =	Macros aktivizuar.
+		Përdorni Hotkeys për të luajtur.
+	d_Lang026 =	për të filluar / ndaluar regjistrimin
+	d_Lang027 =	Regjistrimi ndalur
+	d_Lang028 =	Regjistrimi ...
+	d_Lang029 =	të ndalosh
+	d_Lang030 =	për të filluar rekord të ri
+	d_Lang031 =	nuk është një emër i vlefshëm funksion.
+	d_Lang032 =	Error: Duplicate Hotkeys.
+	d_Lang033 =	Aktivizo macros
+	d_Lang034 =	- Kliko dhe terhiq me% DrawButton% për të zgjedhur zonën.
+		- Kliko dhe lirimin pa zvarritje për të zgjedhur zonën e kontrollit.
+		- Klikoni në një zonë pa një kontroll për të zgjedhur zonën e dritares.
+	d_Lang035 =	Vazhdo?
+	d_Lang036 =	Image / Pixel Found në
+	d_Lang037 =	Image / Pixel Not Found.
+	d_Lang038 =	Shtypni OK për të vazhduar.
+	d_Lang039 =	Koha mbaroi!
+.	Tämä ominaisuus vaatii GDI+ kirjasto.	این قابلیت نیاز به + GDI کتابخانه.
+		Kliko OK për të shkuar për të shkarkuar faqe.
+	d_Lang041 =	Emri ndryshueshme përmban një karakter të paligjshme.
+	d_Lang042 =	është një fjalë e rezervuar.
+	d_Lang043 =	Ose përdorni Kontrollet Toolbar.
+	d_Lang044 =	Ky funksion kërkon Eval () Funksioni.
+		Kliko OK për të shkuar për të shkarkuar faqe.
+	d_Lang045 =	Ju lutem, përzgjidhni një dritare Internet Explorer!
+	d_Lang046 =	Lidhja e suksesshme!
+	d_Lang047 =	Dështoi në Lidhu!
+	d_Lang048 =	Fut një trajtuar dhe një CLSID.
+	d_Lang049 =	Invalid Label Emri.
+	d_Lang050 =	etiketë Duplicate.
+	d_Lang051 =	Për të luajtur një shtyp makro hotkey përkatës (Auto / Man).
+	d_Lang052 =	Për të filluar regjistrimin shtypni një hotkey Record.
+	d_Lang053 =	Mos trego më këtë mesazh përsëri.
+	d_Lang054 =	Ju lutem, përzgjidhni një dritare Excel!
+	d_Lang055 =	Ju lutem, përzgjidhni një skedar AutoHotkey script (.ahk) dhe të hyjë në një Funksioni Emri.
+	d_Lang056 =	Ky funksion kërkon AutoHotkey instaluar.
+		Kliko OK për të shkuar për të shkarkuar faqe.
+	d_Lang057 =	#NOME?
+		#NOME?
+		#NOME?
+	d_Lang058 =	Disa karakteristika të kërkojë admnistrator privilages në mënyrë që të funksionojë si duhet.
+		Është e rekomanduar për të rifilluar aplikimin si Administrator.
+	d_Lang059 =	Kjo komandë nuk mbështet shprehje ose funksione.
+		Ju lutemi të caktojë një ndryshore dhe e përdorin atë në parametër.
+	d_Lang060 =	version të ri në dispozicion
+	d_Lang061 =	Jo tani
+	d_Lang062 =	Ju tashmë keni versionin më të fundit.
+	d_Lang063 =	Ndodhi një gabim gjatë kontrollit.
+	d_Lang064 =	gabim në
+	d_Lang065 =	rresht
+	d_Lang066 =	Në mënyrë të veçantë
+	d_Lang067 =	Trego këtë dritare në nisje
+	d_Lang068 =	Këshilla:
+	d_Lang069 =	Një shumë e kohës dhe përpjekje ka shkuar në zhvillimin e Krijuesit Macro Pulover së. Nëse ju të gjeni të dobishme, ju lutem konsideroni duke treguar vlerësimin tuaj me një donacion.
+		Dhurimi ose jo, nuk do të ketë ndryshim në karakteristikat e tij dhe funksionalitetin.
+	d_Lang070 =	Dhuroni ...
+	d_Lang071 =	Jo faleminderit
+	d_Lang072 =	software Mbështetje Open Source
+	d_Lang073 =	Gabim: Invalid Hotkey zgjedhur.
+	d_Lang074 =	Gjeni një komandë apo funksion
+	d_Lang075 =	Mirë se vini në Krijuesin Makro Pulover-së
+	d_Lang076 =	Ju lutemi zgjidhni layout tuaj e preferuar
+	d_Lang077 =	kompakt
+	d_Lang078 =	Default
+	d_Lang079 =	Kontrollo për përditësime mbi fillimin.
+	d_Lang080 =	Ju mund ta ndryshoni këtë në Opsionet> Cilësimet> Përgjithshëm.
+	d_Lang081 =	Ju mund të ndryshojë dhe të rregulloje Layouts në View menu.
+	d_Lang082 =	Dosja nuk u gjet!
+	d_Lang083 =	Një fotografi backup është gjetur. Do të ju pëlqen për të hapur atë?
+	d_Lang084 =	Ju lutemi të ruajtur ndryshimet tuaja para caktimit një detyrë.
+	d_Lang085 =	Zhdukur "End Loop" Deklarata në Macro
+	d_Lang086 =	Missing "End If" deklaratë në Macro
+	d_Lang087 =	Vini re se ndryshimet e bëra në dorëshkrim jashtë programit nuk do të ndikojë macros tuaj në asnjë mënyrë.
+		Ky funksion është menduar vetëm si një funksion të shpejtë të eksportit. PMC nuk është projektuar të jetë një editor AHK script.
+	d_Lang088 =	Përpiqen për të drejtuar përdoruesit si të përbashkët (jo administrator).
+	d_Lang089 =	Asnjë rresht zgjedhur!
+	d_Lang090 =	Ju lutem, përzgjidhni një rresht për të futur ose hequr grupin.
+	d_Lang091 =	Metoda e pavlefshme
+	d_Lang092 =	ikonat e vogla
+	d_Lang093 =	ikonat e mëdha
+	d_Lang094 =	Ky funksion kërkon Windows Vista ose më e lartë.
+	d_Lang095 =	Përdorimi i ByRef shkakton një parametër për t'u bërë një alias për variablin kaluar nga e thirrësit. Me fjalë të tjera, parametri dhe variabli i telefonuesit të dy i referohen të njëjtave përmbajtjes në kujtesë.
+	d_Lang096 =	#NOME?
+		#NOME?
+		- Ju mund të përdorni vargjet, variablat, vargjeve dhe funksionet. Ju gjithashtu mund të kombinohen ndonjë nga ata.
+		- Për të përdorur vargjet, mbyllni ato në thonjëza, e.g .: "Rezultati është:" a + b.
+		- Nëse ju doni të kthehen rezultatet shtesë, ju mund të përdorë gjithashtu edhe ByRef në parametrat.
+		#NOME?
+	d_Lang097 =	#NOME?
+		#NOME?
+		- Ju mund të përdorni vargjet, variablat, vargjeve dhe funksionet.
+		- Për të përdorur vargjet, mbyllni ato në thonjëza, e.g .: var = "a".
+		- Deklaratat e shumëfishta janë të mbështetura, e.g .: var = "a" || Instr (var, "b").
+	d_Lang098 =	Në qoftë se një parametër ka vlerë të paracaktuar, parametrat e mëposhtëm janë të nevojshme që të ketë një shumë.
+	d_Lang099 =	Emri Funksioni përmban një karakter të paligjshme.
+	d_Lang100 =	Goto, Gosub dhe Label nuk janë të lejuara në funksione.
+	d_Lang101 =	Funksioni Duplicate.
+	d_Lang102 =	Ndodhi një gabim. Ju mund të dërgoni një email tek 'pulover@macrocreator.com' me fotografi:
+	d_Lang103 =	Gjuhët e reja të paraqesë në dispozicion.
+	d_Lang104 =	Ky mesazh nuk është e dukshme edhe një herë për të njëjtën update. Ju mund ta shkarkoni nga menyja Help> Kontrollo për përditësime.
+	d_Lang105 =	File dërguar me sukses. Faleminderit!
+	d_Lang106 =	Fotografi Gjuha rifreskua me sukses.
+	d_Lang107 =	Nuk mund të fillojë timer
+	d_Lang108 =	Të gjitha pozicionet janë të regjistruar. Ju lutem, fshini një prej tyre.
+	d_Lang109 =	Etiketa Target nuk ekziston.
+	d_Lang110 =	Konfirmo fotografi të zëvendësojë
+	d_Lang111 =	Tashmë ekziston.
+		Do të donte për të zëvendësuar atë?
+	d_Lang112 =	Llogaria Email nuk u gjet.
+	d_Lang113 =	Raportuar asnjë gabim.
+	d_Lang114 =	Scripts eksportuara (edhe në qoftë se hartuar) me funksionin Send Email (KVV) do të ketë informacione të dukshme të llogarive email përdoren, duke përfshirë edhe fjalëkalimin. Dosja Projekti PMC nuk e ka këtë informacion.
+	d_Lang115 =	#NOME?
+	d_Lang116 =	Transferoni dhe të instaloni
+	d_Lang117 =	Shko te shkarkoni faqe
+	d_Lang118 =	Shkarkim ... Ju lutem prisni.
+		
+; 18. Start-up Tips		
+	Start_Tips =	Check out video tutorial në www.macrocreator.com/help~~pobj të mësojnë në lidhje me shumë karakteristika të Krijuesit Macro Pulover së.
+		Për të marrë ndihmë për një komandë të veçantë right-click kudo në një dritare komanduese për të treguar lidhje me ndihmën e internet.
+		Ju mund të krijoni macros duke përdorur butona komandash në dritaren kryesore ose duke përdorur Recorder për kopje veprimet tuaja. Shko tek Options> Cilësimet> Regjistrimi për të zgjedhur se çfarë inputeve do të regjistrohet.
+		Përdorni shiritin e kërkimit, ose "Gjej një komandë" dritare për të kërkuar për komandat dhe funksionet.
+		Dëshironi të ndihmuar të rregulluar një përkthim ose madje edhe të krijoni një të re? Shko tek Opsionet> Cilësimet> redaktor Gjuha dhe të bëjë ndonjë korrigjimet që ju dëshironi. Ju mund preview atë në çdo kohë. Kliko në Submit për të dërguar rishikimin tuaj. Ndjehen të lirë për të paraqitur ndonjë numër të korrigjimeve sa herë që ju dëshironi.
+		Kontrolloni "Keys Capture" mundësi për të hyrë në çelësat dhe kombinime të Macro tuaj direkt nga dritarja kryesore.
+		Shkruani çelësat dhe kombinime në kutinë hotkey në pjesën e poshtme dhe të shtypni butonin Insert për të shtuar ato në të zgjedhur rreshtave.
+		Përdorni edit butonat në fund të dritares kryesore për të vendosur të përsëritur dhe të vonojë për të rreshtave të shumta në të njëjtën kohë. Nëse nuk ka radhë janë zgjedhur edit butonat zbatohen për të gjithë rreshtat në listë.
+		Pothuajse çdo komandë dhe funksioni pranon dhe nxjerr variablave. Ju mund të caktoni variablave tuaj në variablat dritaret (Komandat> Variablat / vargjeve). Për t'i përdorur ato brenda komandave bashkangjitni emrin e ndryshueshme në shenjat për qind, e.g .:% MyVar%. Në funksionet, përdorimin e tyre pa shenja për qind, e.g .: SubStr (MyVar, 5).
+		Djathtas-klikoni kudo në dritaren e komandave të lehtë të futur Built-In variablave nga një listë.
+		Për të përdorur regjistrues për detyrat e shpejtë të shkoni në Options> Settings> Regjistrimi dhe kontrolloni "Clear List" option. Pastaj klikoni butonin Record në dritaren kryesore dhe të përdorin F10 për të pastruar Macro aktuale dhe të fillojnë një të ri me të njëjtin hotkey. Ju gjithashtu mund të kontrolloni "Gjithmonë aktiv" opsion në dritaren kryesore për të mbajtur Regjistrimi dhe rishikim hotkeys aktiv.
+		PMC mbështet objekte Array dhe metodat, ashtu si Scripts AutoHotkey. Ju mund të krijoni vargjeve në shumë mënyra, më e zakonshme është duke shkuar në dritare variablave, duke kontrolluar "Shprehje" opsion dhe bashkëngjitur vlerat në kllapa, e.g .: [10, 20, Var, "string"]. Ju gjithashtu mund të krijoni çelësat emrin, e.g .: {Keya: vara, "disa kyç": "Vlera string"}.
+		Funksionet përdorin AHK shprehje sintaksë. strings mirëfillta duhet të jetë i mbyllur në thonjëza, dhe variabla nuk kanë nevojë për shenja qind. Ju mund të përdorni funksione të tjera ose elemente array si parametra. E.g .: StrReplace (MyVar, MyArray [ "A"] SubStr (OtherVar, 2, 3)).
+		Shprehjet që janë të mbështetur në AutoHotkey Shprehjes Sintaksa. Për të përdorur një shprehje brenda një parametër të komandës, të fillojë me një shenjë për qind, e.g .:% SubStr (Var, 5).
+		E "Loop" counter në krye përcakton numrin e përgjithshëm të sythe për Macro zgjedhur.
+		Ju mund të redaktoni një rresht nga double-klikuar atë ose duke zgjedhur atë dhe klikuar Edit butonat në fund. Ju mund të redaktoni rreshtave të shumta zgjedhura përdorur opsionet në edit bar në pjesën e poshtme.
+		Ju mund të përcaktojë funksionet tuaja në Function> Krijo funksionin dhe përdorimin e tyre nga dritarja Funksioni apo shprehjeve brenda.
+		Ju mund të përcaktojë Globa / ndryshoret lokale dhe statike për Funksionet User defined. Variablat globale e përcaktuara në Opsionet> Cilësimet> User ndryshore globale konsiderohen Super Global, dhe gjithmonë do të jetë në dispozicion brenda funksionet, madje edhe kur përcaktuar si lokal.
+		Zgjidhni një ose më shumë rreshta për të shtuar komanda të reja në krye të tyre.
+		Ju mund të lëvizin rreshtat me click-dhe-terhiq.
+		Double-click mbi Icon Tray për të aktivizuar hotkeys ose të ndaluar rishikim / regjistrimin. Klikoni mbi të me butonin e mesme gjatë riprodhimit ose regjistrimit për pushim.
+		Ju mund të eksportit macros tuaj të punës Scripts AutoHotkey ose stand-alone ekzekutuesit nga dritarja eksportit.
+		Për të regjistruar dhe luajnë Mouse duke përdorur koordinatat absolute shkoni në Options> Settings> Defaults dhe vendosur Mouse Koordinatat për Screen.
+		Ju mund të hapur, kopje, veprim ose fshini skedarët dhe dosjet duke përdorur një nga komandat në Komandat> Run / dokumentit / String / Misc. Ka shumë komanda të tjera të dobishme të tilla si StringReplace, InputBox dhe MouseGetPos.
+		Për të regjistruar poshtë dhe lart gjendjen e çdo lëvizje kyç për Opsionet> Cilësimet> Regjistrimi dhe kliko tek "Capture Shtetit Key (Poshtë / Up)" opsion.
+		Ju mund të përdorni hotkeys për të shpejtuar ose ngadalësuar Playback. Shko tek Opsionet> Cilësimet> Playback për të vendosur çelësat dhe shpejtësinë.
+		Për të rregulluar zonën e kapur duke përdorur "Bëni Screenshot" mjet shkoni në Options> Cilësimet> Screenshots dhe zgjidhni "Shtypni Enter për të kapur". Pas tërhequr përdorimin drejtkëndësh Kontrollit + arrow çelësat për të lëvizur përzgjedhjen dhe Shift + arrow çelësat për të resize atë.
+		Quick Zgjidh: Zgjidhni çdo rresht dhe klikoni mbi kokë kolonë për të zgjedhur rreshtave të ngjashme bazuar në tekstin e qelizës nga atë kolonë.
+		Klikoni mbi Header Index Column për ta kthyer On / Off Ndihmë Marks dhe Colors për unazore dhe pasqyrat. Double-Kliko mbi Header Veprimi Kolona të kthehet on / off vulë për unazore dhe pasqyrat.
+		Ju mund të korrigjoj macros tuaj duke përdorur hotkey Manual dhe opsionet Luaj në menynë Macro. Ju gjithashtu mund të çaktivizoni veprime duke unchecking tyre në listën Macro.
+		Për të bërë Macros tuaja të punojnë vetëm në një dritare të caktuar shkojnë në makro> Konteksti ndjeshme Hotkeys.
+		Ju mund të vendosni Variablat tuaj globale për t'u ngarkuar në fillimin dhe për t'u eksportuar. Shko tek Opsionet> Cilësimet> User variablat globale për të shtuar ato.
+		Ju mund të kandidojë funksione të përparuara të tilla si SubStr dhe RegExReplace nga funksionet dritarja (Komandat> Funksionet / Metodat Array). Ju gjithashtu mund të përcaktojë funksionet tuaj ose funksionet e drejtuar nga Scripts AutoHotkey jashtme.
+		Ju mund të regjistroni lëvizjet e miut të afërm të pozitës aktuale duke mbajtur capslock gjatë regjistrimit (ju mund të ndryshojë çelësin dhe e bëjnë të toggle në Settings).
+		
+; 19. Tooltips		
+	A_List_TT =	Select Macro (Ctrl + 1 ~ 0)
+	AbortKey_TT =	Hotkey për të ndaluar riprodhimin
+	ActiveObj_TT =	Përpiqet të lidheni me një COM Object aktive
+	AddAtt_TT =	Bashkangjit fotografi
+	ApplyI_TT =	Aplikoni
+	ApplyL_TT =	Futur nga Box (Insert)
+	ApplyT_TT =	Aplikoni
+	AutoKey_TT =	Hotkey për të luajtur Macro
+	Client_TT =	Koordinatat janë në lidhje me zonën e dritares aktive e klientit, e cila përjashton shiritin e titullit të Windows-it, menu (në qoftë se ka një standard njeri) dhe kufijtë.
+	Clip_TT =	Përkohësisht përdor Clipboard për të dërguar tekstin.
+		Kur operacioni është përfunduar, script
+		Rikthen përmbajtjen origjinale clipboard.
+		(Lënë Tekst bosh për të ngjitur përmbajtjen aktuale)
+	CM_TT =	Screen: Koordinatat janë relative për desktop (të gjithë ekranin): të.
+		Dritare: Koordinatat janë relative në dritaren aktive.
+		Klienti: Koordinatat janë në lidhje me zonën e dritares aktive e klientit, e cila përjashton shiritin e titullit të Windows-it, menu (në qoftë se ka një standard njeri) dhe kufijtë.
+	CmdFilter_TT =	Filter sipas llojit
+	CmdSort_TT =	Rendit sipas rendit alfabetik
+	ColorPick_TT =	Get Pixel në Screen
+	ComEvent_TT =	Shkalla në të cilën tasteve janë dërguar përcaktohet nga vonesa kryesore.
+	ComText_TT =	Kur nuk është në mënyrë të papërpunuara, personazhet në vijim
+		Trajtohen si modifikues (këto modifiers ndikojnë
+		Vetëm çelësi shumë tjetër):, +, ^, #
+	CoordPixel_TT =	Mënyrën koordinojë
+	DefaultMacro_TT =	Zgjidhni fotografi të ngarkesës në fillimin e programit
+	EditPaste_TT =	Xhel String në kursorit / insert pozicion
+		Në një kontroll të Edit (kjo nuk do të ndikojë
+		Përmbajtjen e clipboard).
+	Ex_AF_TT =	Skips metodën butë të aktivizuar një dritare
+		Dhe shkon drejt e në metodën me forcë.
+	Ex_DH_TT =	Përcakton nëse dritaret padukshme "shihet" nga script.
+	Ex_DT_TT =	Përcakton nëse teksti i padukshëm në një dritare është "shihet" me qëllim të gjetjes dritaren. Kjo ndikon komandat si IfWinExist dhe WinActivate.
+	Ex_CM_TT =	Përcakton mënyrën e koordinuar për të miut urdhëron që të jetë në lidhje me ose në dritaren aktive ose ekran.
+	Ex_EdScript_TT =	Open në editor të jashtëm
+	Ex_EdVars_TT =	Zgjidhni variablave globale për t'u eksportuar.
+	Ex_ExecScript_TT =	Script Run
+	Ex_HK_TT =	Forcat përdorimi i grep për zbatimin e të gjitha
+		Ose disa hotkeys tastierës.
+	Ex_IfDir_TT =	Krijon kontekst të ndjeshme hotkeys dhe hotstrings varësi
+		Në llojin e dritares që është aktiv apo ekziston.
+	Ex_IfDirType_TT =	Krijon kontekst të ndjeshme hotkeys dhe hotstrings varësi
+		Në llojin e dritares që është aktive ose ekziston.
+	Ex_IN_TT =	Shkakton script të sillet sikur specifikuar
+		Përmbajtja e dokumentit janë të pranishëm në këtë pozicionin e saktë.
+	Ex_MD_TT =	Përcakton vonesën që do të ndodhë pas
+		Çdo miu lëvizje ose click.
+	Ex_MT_TT =	Përcakton numrin maksimal të njëkohshëm
+		Temat për hotkey ose hotstring.
+	Ex_NT_TT =	Pamundëson shfaqjen e një tray icon.
+	Ex_PT_TT =	Mban një script të përhershme duke
+		(Që është, derisa përdoruesi mbyll apo ExitApp është hasur).
+	Ex_SB_TT =	Përcakton se sa shpejt një script do të kandidojë (ndikon në përdorimin CPU).
+	Ex_SC_TT =	Përcakton vonesën që do të ndodhë pas
+		Çdo kontroll-modifikimin e komandës.
+	Ex_SI_TT =	Përcakton nëse një script është e lejuar për të kandiduar përsëri kur ajo është duke punuar.
+	Ex_SK_TT =	Përcakton vonesën që do të ndodhë pas çdo
+		Keystroke dërguar nga të dërguar ose ControlSend.
+	Ex_SM_TT =	Bën Dërgo sinonim me SendInput ose SendPlay më tepër se
+		Default (SendEvent). Gjithashtu bën Kliko dhe MouseMove / Kliko Drag /
+		Përdorur metodën e specifikuar.
+	Ex_ST_TT =	Përcakton sjelljen përputhen e parametrit WinTitle në komandave të tilla si WinWait.
+	Ex_SW_TT =	Përcakton vonesën që do të ndodhë pas
+		Çdo komandë windowing, të tilla si WinActivate.
+	Ex_UV_TT =	Eksportit ndryshoret globale.
+	Ex_WN_TT =	Aktivizon ose çaktivizon paralajmërime për kushte të veçanta të cilat mund të tregojnë një gabim, të tilla si një typo ose zhdukur shpalljes "globale".
+	ExpList_TT =	Double-Kliko për të redaktuar
+	ExprLink2_TT 	- MOS bashkangjitni variablave në shenjave të përqindjes KETU.
+		- Shumica e shprehjeve AHK janë të mbështetur.
+		- Ju mund të përdorni vargjet, variablat, vargjeve dhe funksionet.
+		- Për të përdorur vargjet, mbyllni ato në thonjëza, e.g .: var  "a".
+		- Deklaratat e shumëfishta janë të mbështetura, e.g .: var  "a" || Instr (var, "b").
+	ExprLink3_TT 	- MOS bashkangjitni variablave në SHENJAT qind KETU.
+		- Shumica e shprehjeve AHK janë të mbështetur.
+		- Ju mund të përdorni vargjet, variablat, vargjeve dhe funksionet.
+		- Për të përdorur vargjet, mbyllni ato në thonjëza, e.g .: var = "a".
+		- Deklaratat e shumëfishta janë të mbështetura, e.g .: var = "a" || Instr (var, "b").
+	ExpView_TT =	Avancuar Editor
+	ExpView2_TT =	Avancuar Editor
+	Fast_TT =	Përdor një metodë më të shpejtë në kërkim (e rekomanduar)
+	HiddenWin_TT =	Përcakton nëse dritaret padukshme "shihet" nga script.
+	HiddenText_TT =	Përcakton nëse teksti i padukshëm në një dritare është "shihet" me qëllim të gjetjes dritaren. Kjo ndikon komandat si IfWinExist dhe WinActivate.
+	HScale_TT =	Shkallë lartësi
+	IconN_TT =	Numri i grupit icon
+	IfLVColor_TT =	Klikoni për të marr një ngjyrë
+	IncFiles_TT =	Përfshijnë fotografi / Vlerat
+	IncFolders_TT =	Përfshijnë directories (folders) / Keys
+	InsertKey_TT =	Insert keystroke (Ctrl + Insert)
+	InsertKeyT_TT =	Fut keystroke
+	JoyKey_TT =	Shtypni një buton në levë
+	LoopLVColor_TT =	Klikoni për të marr një ngjyrë
+	LUntil_TT =	Zbatohet një kusht për vazhdimin e një loop ose For-lak.
+	ManKey_TT =	Hotkey për të luajtur Macro "hap pas hapi"
+	MRel_TT =	Lëvizjet relative për pozitën aktuale.
+		Ose në qoftë se përdoret me Kontrollit: Pozita relative të Kontrollit.
+	OSHK_TT =	Zgjidh Macro
+	OSHKEd_TT =	Zgjidh Macro
+	OSProgB_TT =	Display Progresit Bar
+	OSTrans_TT =	Perde
+	PauseKey_TT =	Hotkey për pushim rishikim
+	PicPrev_TT =	Double-Kliko për të hapur imazhin
+	Raw_TT =	Komanda SendRaw interpreton të gjitha karakteret fjalë për fjalë
+		Në vend se përkthimin {Shkruani} për një ENTER keystroke,
+		^ C të Kontrollit-C, etj
+	RecKey_TT =	Backspace për të pastruar
+	RecNewKey_TT =	Backspace për të pastruar
+	Recurse_TT =	Recurse në subdirectories (subfolders) / subkeys
+	RefreshIEW_TT =	Lista refresh
+	Relative_TT =	Koordinatat janë relative në dritaren aktive.
+	RelKey_TT =	Lëvizjet Records Mouse dhe klikimeve si offsets
+		Nga pozicioni i mëparshëm, kur mbahen.
+	ReptC_TT =	0 = pafund
+	Reset_TT =	Përmbajtja qarta ndryshueshme
+	RGB_TT =	Shkakton ngjyra të interpretohet si një vlerë RGB vend të BGR
+	Screen_TT =	Koordinatat janë relative në desktop (tërë ekran).
+	Screenshot_TT =	Bëni Screenshot
+	SetText_TT =	Ndryshon tekstin e një kontrolli.
+	SI_TT =	Fjala FORCE skips kuti dialogu dhe zëvendëson shembull vjetër automatikisht,
+		E cila është e ngjashme në fuqi në komandën Reload.
+		Fjala injorojë skips kutinë e dialogut dhe e lë shembull të vjetër running.
+		Me fjalë të tjera, përpjekjet për të nisur një skenar tashmë running janë injoruar.
+		Fjala OFF lejon raste të shumta të shkrimit për të kandiduar në të njëjtën kohë.
+	SM_TT =	Event: Ky është parazgjedhur fillimit përdoret nga të gjitha Scripts.
+		Ai përdor metodën SendEvent për Send, SendRaw, Kliko, dhe MouseMove / Kliko / Drag.
+		Input: Kalon në metodën SendInput për Send, SendRaw, Kliko, dhe MouseMove / Kliko / Drag.
+		InputThenPlay: Njësoj si më sipër, përveç se në vend se të bjerë përsëri në mënyrë Event
+		Kur SendInput është në dispozicion, ai kthehet në Play mode (më poshtë). Kjo gjithashtu shkakton
+		Vetë komandën SendInput të kthehet në Play mode kur SendInput është i padisponueshëm.
+		Play: Kalon në metodën SendPlay për Send, SendRaw, Kliko, dhe MouseMove / Kliko / Drag.
+	ST_TT =	1: Titulli Një dritare duhet të fillojë me WinTitle të caktuar të jetë një ndeshje.
+		2: Titulli Një dritare mund të përmbajnë WinTitle kudo brenda që ajo të jetë një ndeshje.
+		3: Titulli Një dritare duhet saktësisht të përputhen WinTitle të jetë një ndeshje.
+		Regex: Ndryshimet WinTitle, WinText, ExcludeTitle dhe ExcludeText të jetë shprehje të rregullta.
+	TimeoutM_TT =	0 = pafund
+	TitleMatch_TT =	1: Titulli Një dritare duhet të fillojë me WinTitle të caktuar të jetë një ndeshje.
+		2: Titulli Një dritare mund të përmbajnë WinTitle kudo brenda që ajo të jetë një ndeshje.
+		3: Titulli Një dritare duhet saktësisht të përputhen WinTitle të jetë një ndeshje.
+		Regex: Ndryshimet WinTitle, WinText, ExcludeTitle dhe ExcludeText të jetë shprehje të rregullta.
+	TitleSpeed_TT =	Fast: Kjo është sjellja e parazgjedhur. Performance mund të jetë dukshëm më mirë se Slow, por disa elemente WinText për disa lloje të dritareve nuk mund të "shihet" nga komandat e ndryshme dritare.
+		Slow: A mund të jetë shumë më e ngadalshme, por të gjitha WinText mundur është marrë nga çdo dritare si një komanduese windowing kërkimet përmes tyre për një ndeshje. Window Spy zbulon se cilat pjesë të tekstit të një Windows-it (nëse ka) të kërkojnë mënyrën e ngadaltë.
+	ToggleC_TT =	Aktivizo Regjistrimi relative kur shteti kyç është në.
+	TransC_TT =	Ngjyra transparente
+	VarCopyA_TT =	Kopjo përmbajtjen aktuale të ndryshueshme
+	VarCopyB_TT =	Kopjo përmbajtjen aktuale të ndryshueshme
+	VariatT_TT =	Hije e variacionit
+	WScale_TT =	Shkalla gjerësia
+		
+; 20. Operators		
+	As_Oper_1 =	Caktoj
+	As_Oper_2 =	Shtoj
+	As_Oper_3 =	Zbres
+	As_Oper_4 =	Multiply
+	As_Oper_5 =	Përçaj
+	As_Oper_6 =	Floor ndarje
+	As_Oper_7 =	Lidh
+	As_Oper_8 =	Bitwise përfshirëse OR
+	As_Oper_9 =	Bitwise DHE
+	As_Oper_10 =	Bitwise ekskluzive OR
+	As_Oper_11 =	Ndryshim të drejtë dhe
+	As_Oper_12 =	Ndryshim Majtas DHE
+	Co_Oper_1 =	I barabartë
+	Co_Oper_2 =	Të barabartë (rasti të ndjeshme)
+	Co_Oper_3 =	Jo të barabartë
+	Co_Oper_4 =	Më e madhe
+	Co_Oper_5 =	Më pak
+	Co_Oper_6 =	Më e madhe ose e barabartë
+	Co_Oper_7 =	Më pak ose e barabartë
+	Co_Oper_8 =	Në (Lista)
+	Co_Oper_9 =	Jo në (Lista)
+	Co_Oper_10 =	Përmban (lista)
+	Co_Oper_11 =	Nuk përmban (lista)
+	Co_Oper_12 =	Midis (linjë 1) dhe (2) linjë
+	Co_Oper_13 =	Not mes (linjë 1) dhe (2 linja)
+	Co_Oper_14 =	Është (lloji)
+	Co_Oper_15 =	Nuk është (lloji)
+		
+; 21. IE Commands Tips		
+	IE_Cmd_Index =	
+	Checked	Vendos ose Rinxjerr gjendjen e kutinë e kontrollit ose butonin e radios.
+	Click	Simulon një klik mbi objektin.
+	Focus	Vendos të përqëndrohet në objekt.
+	GoBack	Lundron prapambetur një artikull në listën e historisë.
+	GoForward	Lundron përpara një artikull në listën e historisë.
+	GoHome	Lundron në shtëpinë e tanishme ose të fillojnë faqe.
+	GoSearch	Lundron në faqen e kërkimit aktuale.
+	Height	Vendos ose Rinxjerr lartësinë e objektit.
+	Href	Vendos ose Rinxjerr një URL destinacion apo një pikë spirancë.
+	InnerHTML	Vendos ose Rinxjerr HTML të objektit.
+	InnerText	Vendos ose merr tekstin e objektit.
+	Length	Vendos ose Rinxjerr numrin e objekteve në një koleksion.
+	LocationName	Merr rrugën ose titullin faqen e tanishme.
+	LocationURL	Merr URL e faqes aktuale.
+	Navigate	Lundron në një URL apo rrugë.
+	OuterHTML	Vendos ose Rinxjerr objektin dhe përmbajtjen e saj në HTML.
+	Quit	Mbyll faqen.
+	Refresh	Reloads faqen shfaqet aktualisht.
+	SelectedIndex	Vendos ose Rinxjerr indeksi i opsionit të zgjedhur në një objekt të zgjedhur.
+	Src	Grupe apo Rinxjerr një URL të jenë të ngarkuar nga objekti.
+	Stop	Anullon një navigacion pritje ose shkarkoni.
+	Submit	Paraqet formën.
+	Type	Vendos ose Rinxjerr lloj përmbajtje e objektit.
+	Value	Merr ose e cakton vlerën e objektit.
+	Width	Vendos ose Rinxjerr gjerësia e objektit.
+		
+; 22. COM Objects Tips		
+	COM_CLSID_Index =	
+	Excel.Application	Manipulon fletë Excel.
+	HTMLfile	Mund të përdoret për të lexuar, shkruar dhe bashkëveprojnë me HTML.
+	InternetExplorer.Application	Explore faqet e internetit.
+	MSXML2.DOMDocument.6.0	XML parser.
+	MSXML2.XMLHTTP	Paraqet një kërkesë XML duke përdorur HTTP.
+	Outlook.Application	Manipulon detyrat Outlook dhe sende.
+	PowerPoint.Application	Manipulon PowerPoint presentations.
+	Schedule.Service	Orari dhe redaktoni Detyrat e Windows.
+	ScriptControl	Dinamike ekzekutuar VBScript ose JScript.
+	Scripting.Dictionary	Objekt që ruan çelësin e të dhënave, çifte pika.
+	Scripting.FileSystemObject	Fotografi Qasja dosjet
+	Shell.Application	Qasja Explorer IE dritare / tabs; të hapur të manipuluar dritare.
+	Shell.Explorer	Embed një kontroll Explorer / Browser në një GUI (Internet Explorer - shfletuesi trident).
+	SAPI.SpVoice	Text-to-Speech (TTS).
+	VBScript.RegExp	VBS rregullta Shprehjet (përfshirë ndeshje globale).
+	WMPlayer.OCX	Luaj mediat fotografi; Kontrolli i Mbjell WMPlayer në një GUI.
+	WinHttp.WinHttpRequest.5.1	Ofron funksionalitet të thjeshtë klientit HTTP, duke lejuar më shumë kontroll se sa UrlDownloadToFile.
+	Winmgmt	Merrni informacion të sistemit; Menaxhuar dritaret e shërbimeve.
+	WScript.Shell	Detyra të ndryshme të administratës (shumë detyra amtare AHK).
+	Word.Application	Manipulon dokumentet e Word.
+		
+; 23. AHK Commands Tips		
+	Ahk_Cmd_Index =	
+	Abs	Kthen vlerën absolute të Numri.
+	ACos	Kthen harkkosinusi (numri kosinus cilit është Number) në radian.
+	Array	Krijon një rrjet scriptable associative me çelësat numër i plotë.
+	Asc	Kthen kodin e karaktereve (një numër midis 1 dhe 255 (në ANSI ndërton) ose 65535 (në Unicode ndërton)) për karakterin e parë në String.
+	ASin	Kthen arcsine (numri sine cilit është Number) në radian.
+	ATan	Kthen harktangjenti (numri tangjent të cilit është Number) në radian.
+	BlockInput	Pamundëson ose mundëson aftësinë e përdoruesit për të bashkëvepruar me kompjuterin nëpërmjet tastierë dhe maus.
+	Break	Daljet (mbaron) një lak. Vlefshme brenda çdo lloj lak.
+	CDO	Dërgon postë elektronike duke përdorur një llogari të përcaktuar nga përdoruesi.
+	Ceil	Kthim Numri i rrumbullakuar në numrin e plotë më të afërt (pa ndonjë .00 prapashtesë).
+	Chr	Kthen karakter të vetëm që korrespondon me kodin karakterin e treguar nga Number.
+	Click	Klikon butonin e miut në koordinatat e përcaktuara. Ajo gjithashtu mund të mbani të shtypur një buton, të kthehet në timon, apo veprim.
+	Clipboard	Xhel text nga clipboard.
+	ClipWait	Pret deri në clipboard përmban të dhëna.
+	ComObjActive	Rinxjerr një objekt regjistruar COM.
+	ComObjArray	Krijon një SAFEARRAY për përdorim me COM.
+	ComObjConnect	Lidhet burime ngjarje një objekt COM për funksionet me një prefiks të caktuar.
+	ComObjCreate	Krijon një objekt COM.
+	ComObjEnwrap / ComObjUnwrap	Përfundon / unwraps një objekt COM.
+	ComObjError	Aktivizon ose çaktivizon njoftimin e gabimeve COM.
+	ComObjFlags	Rinxjerr ose ndryshon flamuj të cilat kontrollojnë sjelljen e një com këmishë objekti.
+	ComObjGet	Kthen një referencë në një objekt të dhënë nga një komponent COM.
+	ComObjMissing	Krijon një "parametër humbur" objekt për të kaluar në një metodë COM.
+	ComObjParameter	Përfundon një vlerë dhe lloji për të kaluar si një parametër për një metodë COM.
+	ComObjQuery	Pyetje një objekt COM për një ndërfaqe apo shërbim.
+	ComObjType	Rinxjerr lloj informacion nga një objekt COM.
+	ComObjValue	Merr vlerën apo treguesin ruhet në një objekt COM këmishë.
+	Continue	Skips pjesën tjetër përsëritje e tanishme lak dhe fillon një të re. Vlefshme brenda çdo lloj lak.
+	Control	Bën një shumëllojshmëri të ndryshimeve në një kontroll.
+	ControlClick	Dërgon një mouse button ose ngjarje timon miut për një kontroll.
+	ControlEditPaste	Xhel String në caret / insert pozicion në një kontroll të Edit (kjo nuk do të ndikojë në përmbajtjen e clipboard).
+	ControlFocus	Vendos fokusin e input në një kontroll të caktuar në një dritare.
+	ControlGet	Rinxjerr lloje të ndryshme të informacionit në lidhje me një kontroll.
+	ControlGetFocus	Rinxjerr të cilat kontrolli i dritares synuar ka fokusin e input, nëse ka ndonjë.
+	ControlGetPos	Rinxjerr pozitën dhe madhësinë e një kontrolli.
+	ControlGetText	Rinxjerr tekst nga një kontroll.
+	ControlMove	Lëviz apo madhësinë e një kontroll.
+	ControlSend / ControlSendRaw 	Dërgon tasteve simuluar në një dritare apo kontroll.
+	ControlSetText	Ndryshon tekstin e një kontrolli.
+	CoordMode	Përcakton mënyrën e koordinuar për komandave të ndryshme që të jetë në lidhje me ose në dritaren aktive ose ekran.
+	Cos	Kthen kosinusin trigonometrike e Numri.
+	Delete	Heq palë me vlerë të rëndësishme nga një objekt.
+	DllCall	Quan një funksion brenda një DLL, të tilla si një funksion standarde e Windows API.
+	Drive	Ejects / retracts tabaka në një CD ose DVD drive, ose vendos etiketën një makinë e volumit.
+	DriveGet	Rinxjerr lloje të ndryshme të informacionit në lidhje me makinë (a) të kompjuterit.
+	DriveSpaceFree	Rinxjerr pa hapësirë ​​në disk të një makinë, në Megabytes.
+	Else	Specifikon komandën (s) për të kryer nëse një IF-deklaratë e vlerëson të FALSE. Kur më shumë se një komandë është i pranishëm, mbyllni ato në një bllok (formatimin e teksteve).
+	EnvAdd	Vë një ndryshore në shumën e vetë plus vlerën e caktuar (mund të shtoni apo zbres kohë nga një vlerë date me kohë). Sinonim me: Var + = Vlerën.
+	EnvDiv	Përcakton një variabël për vete ndarë nga vlera e dhënë. Sinonim me: Var / = Vlera.
+	EnvGet	Rinxjerr një variabël mjedisi.
+	EnvMult	Vendos një ndryshore në vetvete herë vlerën e dhënë. Sinonim me: Var * = Vlera.
+	EnvSet	Shkruan një vlerë të një variable të përfshira në mjedis.
+	EnvSub	Vendos një ndryshore në vetvete minus vlerën e caktuar (mund të krahasohen vlerat date me kohë). Sinonim me: Var - = Vlera.
+	EnvUpdate	Njofton OS dhe të gjitha aplikacionet running se mjedisi ndryshueshme (s) kanë ndryshuar.
+	ExitApp	Përfundon script pa kushte.
+	Exp	Kthimet e (e cila është përafërsisht 2,71828182845905) ngritur në pushtet n-.
+	Expression	Kryen një ose më shumë operacioneve mbi një sërë variablash, vargjet letrare, dhe / ose numrat e letrare.
+	FileAppend	Shkruan tekstin në fund të një file (së pari duke krijuar file, nëse është e nevojshme).
+	FileCopy	Kopjet një ose më shumë fotografi.
+	FileCopyDir	Kopjet një dosje së bashku me të gjitha sub-folders saj dhe fotografi (të ngjashme me xcopy).
+	FileCreateDir	Krijon një dosje.
+	FileCreateShortcut	Krijon një shkurtore (.lnk) file.
+	FileDelete	Fshin një ose më shumë fotografi.
+	FileGetAttrib	Raportet nëse një skedar apo dosje është lexuar vetëm, e fshehur, etj
+	FileGetShortcut	Rinxjerr informacion në lidhje me një shkurtore (.lnk) file, të tilla si skedar objektivin e saj.
+	FileGetSize	Rinxjerr madhësinë e një file.
+	FileGetTime	Rinxjerr vulën datetime e një skedar apo dosje.
+	FileGetVersion	Rinxjerr versionin e një skedar.
+	FileMove	Lëviz ose renames një ose më shumë fotografi.
+	FileMoveDir	Lëviz një dosje së bashku me të gjitha sub-folders saj dhe dosjet. Ajo gjithashtu mund të riemërtoni një dosje.
+	FileOpen	Ofron object-oriented dosja I / O.
+	FileRead	Lexon përmbajtjen e një file në një variabël.
+	FileReadLine	Lexon vijën e përcaktuar nga një skedar dhe ruan tekstin në një ndryshore.
+	FileRecycle	Dërgon një file apo directory në Recycle Bin, nëse është e mundur.
+	FileRecycleEmpty	Boshatis Recycle Bin.
+	FileRemoveDir	Fshin një dosje.
+	FileSelectFile	Tregon një dialog standarde që lejon përdoruesin për të hapur ose të ruajtur file (s).
+	FileSelectFolder	Tregon një dialog standarde që lejon përdoruesin të zgjidhni një dosje.
+	FileSetAttrib	Ndryshimet atributet e një ose më shumë fotografi apo dosjet. Wildcards.
+	FileSetTime	Ndryshon vulën datetime e një ose më shumë fotografi apo dosjet. Wildcards.
+	Floor	Kthim Numri rrumbullakuar deri në numrin e plotë më të afërt (pa ndonjë .00 prapashtesë).
+	For	Përsërit një seri e komandave herë për secilën palë-vlerës kyç në një objekt.
+	Format	Formatet një numër të ndryshueshëm të vlerave të dhëna në bazë të një varg format.
+	FormatTime	Transformon një timestamp YYYYMMDDHH24MISS në datën / format të caktuar kohore.
+	Func	Rinxjerr një referencë për një funksion.
+	GetKeyName / GetKeyVK / GetKeySC	Rinxjerr emrin ose tekst, kodin virtuale kyçe ose kod scan e një çelës.
+	GetKeyState	Kontrollon nëse një kyç keyboard apo miut button / levë është poshtë ose lart. Gjithashtu Rinxjerr statusin levë.
+	Gosub	Kërcen në etiketë të caktuar dhe vazhdon ekzekutimin derisa Kthimi është hasur.
+	Goto	Kërcen në etiketë të caktuar dhe vazhdon ekzekutimin.
+	GroupActivate	Aktivizon dritaren e ardhshme në një grup dritare që ishte përcaktuar me groupadd.
+	GroupAdd	Shton një specifikim dritare në një grup dritare, duke krijuar grupin nëse është e nevojshme.
+	GroupClose	Mbyll dritaren aktive në qoftë se ajo u aktivizua vetëm duke GroupActivate ose GroupDeactivate. Ajo pastaj aktivizon dritaren e ardhshme në seri. Ajo gjithashtu mund të mbyllni të gjitha dritaret në një grup.
+	GroupDeactivate	Ngjashëm me GroupActivate përveç aktivizon dritaren tjetër jo në grup.
+	HasKey	Jep true nëse Key është i lidhur me një vlerë.
+	If	Specifikon komanda (s) për të kryer, nëse krahasimi i një ndryshore në një vlerë të evalutes në TRUE. Kur më shumë se një komandë është i pranishëm, mbyllni ato në një bllok (formatimin e teksteve).
+	If (expression)	Specifikon komandën (s) për të kryer në qoftë se një shprehje vlerëson për TRUE.
+	If A_Index	Kontrollon nëse Përsëritje e tanishme loop matchs një specifikuar një numër.
+	If Clipboard	Kontrollon nëse teksti Clipboard është matchs një varg të caktuar.
+	If ErrorLevel	Kontrollon nëse një imazh të specifikuara ose pixel u gjet në ekran.
+	If var [not] between	Kontrollon nëse përmbajtja e një variable janë numerikisht ose alfabetike midis dy vlerave (përfshirëse).
+	If var [not] in / If var [not] contains MatchList	Kontrollon nëse përmbajtja e një variable të përputhen me një nga pikat në një listë.
+	If var is [not] type	Kontrollon nëse përmbajtja e një variable janë numerike, uppercase, etj
+	IfEqual / IfNotEqual	Krahason një ndryshore në një vlerë për barazi. Sinonim me: nëse Var = Vlera | nëse Var <> Vlera.
+	IfExist / IfNotExist / FileExist	Verifikimet për ekzistencën e një skedar apo dosje.
+	IfGreater / IfGreaterOrEqual	Krahason një ndryshore në një vlerë. Sinonim me: nëse Var> Vlera | nëse Var> = Vlera.
+	IfInString / IfNotInString	Kontrollon nëse një variabël përmban vargun e specifikuar.
+	IfLess / IfLessOrEqual	Krahason një ndryshore në një vlerë. Sinonim me: nëse Var <Value | nëse Var <= Vlera.
+	IfMsgBox	Verifikimet e cila button u shtyrë nga përdoruesi gjatë komandën më të fundit MsgBox.
+	IfWinActive / IfWinNotActive	Kontrollon nëse dritarja specifikuar ekziston dhe aktualisht është aktive (kryesorja).
+	IfWinExist / IfWinNotExist	Kontrollon nëse ekziston dritarja specifikuar.
+	ImageSearch	Kërkon një rajon të ekranit për një imazh.
+	IniDelete	Fshin një vlerë prej një standardi format skedar .ini.
+	IniRead	Lexon një vlerë prej një standardi format skedar .ini.
+	IniWrite	Shkruan një vlerë në një standard format skedar .ini.
+	Input	Pret për përdoruesit që të shkruani një varg (jo i mbështetur në Windows 9x: ajo nuk bën asgjë).
+	InputBox	Shfaq një kuti input për të kërkuar e përdoruesit për të hyrë në një varg.
+	InsertAt	Fut nje ose me shume vlera në një pozicion të caktuar brenda një grup linear.
+	InStr	Kërkimet për një dukuri të caktuar të një varg, nga e majta apo e djathta.
+	KeyWait	Pret për një çelës ose butonin e miut / levë që do të dalë apo të ngjeshur.
+	Label	Një etiketë identifikon një linjë të kodit, dhe mund të përdoren si objektiv Goto ose për të formuar një subroutine.
+	Length	Kthen gjatësinë e një grup lineare duke filluar në pozicionin 1.
+	ListVars	Shfaq variablave Script-së: emrat e tyre dhe përmbajtjen aktuale.
+	Ln	Kthen logaritmin natyral (baza e) e Numri.
+	LoadPicture	Ngarkon një foto nga fotografi dhe kthen një bitmap ose icon trajtuar.
+	Log	Kthen logaritmin (bazë) 10 e Numri i.
+	Loop (files & folders)	Rinxjerr fotografi të specifikuara apo dosjet, një në një kohë.
+	Loop (normal) 	Kryer një seri e komandave të përsëritur: ose numri të caktuar të kohës ose deri break është hasur.
+	Loop (parse a string)	Rinxjerr vargjet (fushat) nga një varg, një në një kohë.
+	Loop (read file contents)	Rinxjerr linjat në një skedar teksti, një në një kohë (kryen më mirë se FileReadLine).
+	Loop (registry)	Rinxjerr përmbajtjen e subkey specifikuar regjistrit, një artikull në një kohë.
+	MaxIndex	Kthen çelësin më të lartë integer.
+	MinIndex	Kthen ulët çelësin integer.
+	Mod	Modulo. Kthim mbetur kur dividentit është e ndarë nga Pjesëtues.
+	MouseGetPos	Rinxjerr pozicionin aktual të kursorit të miut, dhe mundësisht të cilat dritare dhe kontrolluar është fluturonte mbi.
+	MsgBox	Shfaq tekstin e specifikuar në një dritare të vogël që përmban një ose më shumë butona (si po dhe jo).
+	NumGet	Kthen numrin binar ruajtur në adresën e specifikuar + kompensuar.
+	NumPut	Dyqane Numri në format binar në adresën e specifikuar + kompensuar dhe kthen adresën në të djathtë e sendit vetëm me shkrim.
+	Object	Krijon një rrjet scriptable associative.
+	Ord	Kthen vlerën rendor (kodin karakter numerik) të karakterit të parë në String.
+	OutputDebug	Dërgon një varg të Rregullues (nëse ka) për shfaqje.
+	Parameter	Shton një parametër të funksionit.
+	Pause	Pushimeve fije tanishme script-së.
+	PixelGetColor	Rinxjerr ngjyrën e pixel në x specifikuar, y koordinatat.
+	PixelSearch	Kërkon një rajon të ekranit për një piksel të ngjyrës të caktuar.
+	Pop	Heq dhe e kthen elementin e fundit array.
+	PostMessage	Vendos një mesazh në radhë mesazhin e një dritare apo kontroll.
+	Process	Kryen një nga veprimet e mëposhtme në një proces: kontrolle nëse ekziston; ndryshon prioritet e saj; mbyllet ajo; pret që ajo të mbyllet.
+	Progress	Krijon apo përditëson një dritare që përmban një bar të progresit.
+	Push	Bashkangjet vlerat në fund të një grup.
+	Random	Gjeneron një numër pseudo-rastësishëm.
+	RegDelete	Fshin një subkey ose vlerë nga regjistri.
+	RegExMatch	Përcakton nëse një varg përmban një model (shprehje e rregullt).
+	RegExReplace	Zëvendëson dukuritë e një model (shprehje e rregullt) brenda një varg.
+	RegRead	Lexon një vlerë nga regjistri.
+	RegWrite	Shkruan një vlerë të regjistrit.
+	RemoveAt	Heq artikuj nga pozita e dhënë në një grup lineare.
+	Return	Kthim nga një subroutine për të cilin ekzekutimi kishte kërceu më parë nëpërmjet funksion-thirrje, Gosub, aktivizimin hotkey, GroupActivate, ose mjete të tjera.
+	Round	Nëse N është lënë pas dore, ose 0, Numri i rrumbullakuar në numrin e plotë më të afërt. Nëse N është numër pozitiv, Numri i rrumbullakuar në vende N dhjetore. Nëse N është negative, Numri i rrethuar nga shifra N në të majtë të presjes dhjetore.
+	Run	Drejton një program të jashtëm.
+	RunAs	Përcakton një grup të kredencialeve të përdoruesit për të përdorur për të gjitha përdorimet e mëvonshme e Run dhe RunWait. Kërkon Windows 2000 / XP ose më vonë.
+	RunWait	Drejton një program të jashtëm dhe pret deri sa përfundon.
+	Send / SendRaw	Dërgon tasteve simuluar dhe klikime të miut në dritaren aktive.
+	SendLevel	Kontrollet e cila artificiale tastierë dhe maus ngjarje janë injoruar nga hotkeys dhe hotstrings.
+	SendMessage	Dërgon një mesazh në një dritare apo kontroll dhe pret njohjen.
+	SetCapslockState	Përcakton gjendjen e tastin capslock. Mund të detyrojë kyç për të qëndruar në ose off.
+	SetKeyDelay	Përcakton vonesën që do të ndodhë pas çdo keystroke të dërguar nga të dërguar ose ControlSend.
+	SetNumlockState	Përcakton gjendjen e çelësi NumLock. Mund të detyrojë kyç për të qëndruar në ose off.
+	SetRegView	Lejon komandat e regjistrit në një 32-bit script për të hyrë në pamjen e regjistrit të 64-bit dhe anasjelltas.
+	SetScrollLockState	Përcakton gjendjen e kyç Scrolllock. Mund të detyrojë kyç për të qëndruar në ose off.
+	SetTimer	Shkakton një subroutine të jetë nisur automatikisht dhe të përsëritur në një interval caktuar kohe.
+	Shutdown	Mbyll, rinis, ose shkrimet off sistemin.
+	Sin	Kthen sinusin trigonometrike e Numri.
+	Sleep	Pret shumën e specifikuar e kohës para se të vazhdoni.
+	Sort	Rregullon përmbajtjen një variabël në alfabetike, numerike, ose mënyrë të rastit (opsionale hequr kopje identike).
+	SoundBeep	Lëshon një ton nga folësit PC.
+	SoundGet	Rinxjerr cilësimet e ndryshme nga një pajisje të shëndoshë (pagojë master, vëllimit master, etj)
+	SoundGetWaveVolume	Rinxjerr volumin e prodhimit valës nga një pajisje të shëndoshë.
+	SoundPlay	Luan një zë, video, ose të tjera të mbështetur lloj file.
+	SoundSet	Ndryshimet settings ndryshme të një pajisje të shëndoshë (Master memec, vëllimi master, etj)
+	SoundSetWaveVolume	Ndryshon volumin e prodhimit valë për një pajisje të shëndoshë.
+	SplashImage	Krijon apo përditëson një dritare që përmban një imazh JPG, GIF, BMP ose.
+	SplashTextOff	Mbyll dritaren sipër.
+	SplashTextOn	Krijon një dritare customizable text popup.
+	SplitPath	Ndan një emër file ose URL në saj emrin, directory, zgjerim, dhe me makinë.
+	Sqrt	Kthen rrënja katrore e Numri.
+	StatusBarGetText	Rinxjerr tekstin nga një kontroll standarde bar status.
+	StatusBarWait	Pret deri status bar një dritare përmban vargun e specifikuar.
+	StringGetPos	Rinxjerr pozicionin e substring specifikuar brenda një varg.
+	StringLeft	Rinxjerr një numër të karaktereve nga ana e majtë e një varg.
+	StringLen / StrLen	Rinxjerr numërimin e sa personazhet janë në një varg.
+	StringLower	Konverton një varg jo kapitale.
+	StringMid / SubStr	Rinxjerr një ose më shumë karaktere nga pozicion të caktuar në një varg.
+	StringReplace / StrReplace	Zëvendëson substring të caktuar me një varg të ri.
+	StringRight	Rinxjerr një numër të karaktereve nga ana e djathtë të një varg.
+	StringSplit / StrSplit	Ndan një varg në një sërë nën-vargjet duke përdorur përndarësit specifikuara.
+	StringTrimLeft	Heq një numër të karaktereve nga ana e majtë e një varg.
+	StringTrimRight	Heq një numër të karaktereve nga ana e djathtë të një varg.
+	StringUpper	Konverton një varg të uppercase.
+	StrPut / StrGet	Kopjet një string për të ose nga një adresë e kujtesës, optional konvertimin e tij në mes të faqeve Kodi.
+	SysGet	Rinxjerr rezolutë ekran, info multi-monitor, dimensionet e objekteve të sistemit, dhe pronat e tjera të sistemit.
+	Tan	Kthen tangjent trigonometrike e Numri.
+	ToolTip	Krijon një dritare gjithmonë-në-krye kudo në ekran.
+	Transform	Kryen funksione miscellaneous matematikë, operacionet bitwise dhe detyra të tilla si ASCII / Unicode konvertimit.
+	TrayTip	Krijon një dritare mesazh tullumbace pranë tray icon. Kërkon Windows 2000 / XP ose më vonë.
+	Trim / LTrim / RTrim	Trims karaktere të caktuara që në fillim dhe / ose në fund të një varg.
+	Until	Zbatohet një kusht për vazhdimin e një loop ose For-lak.
+	UrlDownloadToFile	Shkarkon një fotografi nga Interneti.
+	UserFunction	Krijon një strukturë Funksioni.
+	Variable	Cakton vlerën e caktuar për një ndryshore.
+	While	Kryen një seri e komandave vazhdimisht derisa shprehja specifikuar vlerëson të rreme.
+	WinActivate	Aktivizon dritaren e specifikuar (e bën atë më kryesorja).
+	WinActivateBottom	Njësoj si WinActivate përveç se ajo aktivizon më i fundit (së paku fundit aktive) dritare përputhen dhe jo i larti.
+	WinActive	Kthen ID unike (HWND) të dritares aktive nëse ajo përputhet me kriteret e përcaktuara.
+	WinClose	Mbyll dritaren specifikuar.
+	WinExist	Kontrollon nëse ekziston dritarja specifikuar.
+	WinGet	Rinxjerr ID e dritares së specifikuar të veçantë, procesin e ID, emri proces, ose një listë të kontrolleve të saj. Ajo gjithashtu mund të marrim një listë të të gjitha dritaret që përputhen kriteret e përcaktuara.
+	WinGetClass	Rinxjerr emrin e klasës e dritares specifikuar së.
+	WinGetPos	Rinxjerr pozitën dhe madhësinë e dritares specifikuar.
+	WinGetText	Rinxjerr tekstin nga dritarja e specifikuar.
+	WinGetTitle	Rinxjerr titullin e dritares specifikuar.
+	WinHide	Fsheh dritaren e specifikuar.
+	WinHttpDownloadToFile	Downloads një ose më shumë fotografi nga Interneti.
+	WinKill	Forcat dritarja specifikuar për të mbyllur.
+	WinMaximize	Zgjeron dritaren e përcaktuar për madhësinë e saj maksimale.
+	WinMenuSelectItem	Thirret një menu item nga menu bar të dritares specifikuar.
+	WinMinimize	Bie dritaren e specifikuar në një buton në bar detyrë.
+	WinMinimizeAll	Minimizon të gjitha dritaret.
+	WinMinimizeAllUndo	Shfuqizon efektin e një WinMinimizeAll të mëparshëm.
+	WinMove	Ndryshon pozicionin dhe / ose madhësinë e dritares specifikuar.
+	WinRestore	Unminimizes ose unmaximizes dritaren specifikuar nëse është minimizuar, ose maksimalisht.
+	WinSet	Bën një shumëllojshmëri të ndryshimeve në dritare të caktuar, të tilla si "gjithmonë në krye" dhe transparencës.
+	WinSetTitle	Ndryshon titullin e dritares specifikuar.
+	WinShow	Unhides dritaren e specifikuar.
+	WinWait	Pret deri sa ekziston dritarja specifikuar.
+	WinWaitActive	Pret deri dritarja specifikuar është aktive.
+	WinWaitClose	Pret deri dritarja e specifikuar nuk ekziston.
+	WinWaitNotActive	Pret deri dritarja specifikuar nuk është aktiv.
+	Zip / UnZip	Compress ose uncompress një ose më shumë fotografi zip.
+	WinExist	Kontrollon nëse ekziston dritarja specifikuar.
+	WinGet	Rinxjerr ID e dritares së specifikuar të veçantë, procesin e ID, emri proces, ose një listë të kontrolleve të saj. Ajo gjithashtu mund të marrim një listë të të gjitha dritaret që përputhen kriteret e përcaktuara.
+	WinGetClass	Rinxjerr emrin e klasës e dritares specifikuar së.
+	WinGetPos	Rinxjerr pozitën dhe madhësinë e dritares specifikuar.
+	WinGetText	Rinxjerr tekstin nga dritarja e specifikuar.
+	WinGetTitle	Rinxjerr titullin e dritares specifikuar.
+	WinHide	Fsheh dritaren e specifikuar.
+	WinHttpDownloadToFile	Downloads një ose më shumë fotografi nga Interneti.
+	WinKill	Forcat dritarja specifikuar për të mbyllur.
+	WinMaximize	Zgjeron dritaren e përcaktuar për madhësinë e saj maksimale.
+	WinMenuSelectItem	Thirret një menu item nga menu bar të dritares specifikuar.
+	WinMinimize	Bie dritaren e specifikuar në një buton në bar detyrë.
+	WinMinimizeAll	Minimizon të gjitha dritaret.
+	WinMinimizeAllUndo	Shfuqizon efektin e një WinMinimizeAll të mëparshëm.
+	WinMove	Ndryshon pozicionin dhe / ose madhësinë e dritares specifikuar.
+	WinRestore	Unminimizes ose unmaximizes dritaren specifikuar nëse është minimizuar, ose maksimalisht.
+	WinSet	Bën një shumëllojshmëri të ndryshimeve në dritare të caktuar, të tilla si "gjithmonë në krye" dhe transparencës.
+	WinSetTitle	Ndryshon titullin e dritares specifikuar.
+	WinShow	Unhides dritaren e specifikuar.
+	WinWait	Pret deri sa ekziston dritarja specifikuar.
+	WinWaitActive	Pret deri dritarja specifikuar është aktive.
+	WinWaitClose	Pret deri dritarja e specifikuar nuk ekziston.
+	WinWaitNotActive	Pret deri dritarja specifikuar nuk është aktiv.
+	Zip / UnZip	Compress ose uncompress një ose më shumë fotografi zip.

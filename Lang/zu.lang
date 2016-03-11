@@ -1,0 +1,1439 @@
+﻿Lang_zu
+		
+		; Zulu
+		
+; 01. Main Menu		
+	m_Lang001 =	&Ifayela
+	m_Lang002 =	&Macro
+	m_Lang003 =	&Umsebenzi
+	m_Lang004 =	Imi&yalo
+	m_Lang005 =	&Hlela
+	m_Lang006 =	&Khetha
+	m_Lang007 =	&Buka
+	m_Lang008 =	I&zinketho
+	m_Lang009 =	&Nikela
+	m_Lang010 =	U&sizo
+		
+; 02. File Sub Menu		
+	f_Lang001 =	&New
+	f_Lang002 =	&Vula
+	f_Lang003 =	&Londoloza
+	f_Lang004 =	&Igcine njenge
+	f_Lang005 =	&Amafayela kwakamuva
+	f_Lang006 =	&Export to AHK
+	f_Lang007 =	&Buka kuqala Script
+	f_Lang008 =	&Hlela Script
+	f_Lang009 =	&Schedule Amamakhro
+	f_Lang010 =	&Uhlu eziguquguqukayo
+	f_Lang011 =	&Phuma
+	f_Lang012 =	A&wekho amafayela
+		
+; 03. Macro Sub Menu		
+	r_Lang001 =	&Record Macro
+	r_Lang002 =	&Cupha Amamakhro
+	r_Lang003 =	&Play Macro yamanje
+	r_Lang004 =	&Isikhathi
+	r_Lang005 =	&Yekisa Amamakhro
+	r_Lang006 =	P&lay kusuka Umugqa Okukhethiwe
+	r_Lang007 =	Pl&ay kuze Umugqa Okukhethiwe
+	r_Lang008 =	Play i&migqa ekhethiwe
+	r_Lang009 =	C&ontext hotkeys olunozwela
+	r_Lang010 =	&Engeza Macro
+	r_Lang011 =	&Vala Macro
+	r_Lang012 =	Macro &Duplicate
+	r_Lang013 =	&Hlela Amamakhro
+	r_Lang014 =	&Ngenisa Macro
+	r_Lang015 =	Londolo&za Macro yamanje
+		
+; 04. Function Sub Menu		
+	u_Lang001 =	&Dala Umsebenzi
+	u_Lang002 =	&Engeza Ipharamitha
+	u_Lang003 =	E&ngeza Return
+	u_Lang004 =	&Inguqulela Macro usebenze
+		
+; 05. Commands Sub Menu		
+	i_Lang001 =	&Mouse
+	i_Lang002 =	&Umbhalo
+	i_Lang003 =	&Control
+	i_Lang004 =	M&isa okwesikhashana
+	i_Lang005 =	Um&layezo Ibhokisi
+	i_Lang006 =	&Wait Key
+	i_Lang007 =	Wi&ndow
+	i_Lang008 =	Im&age / Pixel Ukucinga
+	i_Lang009 =	&Run / Ifayela / String / Misc.
+	i_Lang010 =	L&oop
+	i_Lang011 =	&Go To / Label
+	i_Lang012 =	&Setha timer
+	i_Lang013 =	Uma I&zitatimende
+	i_Lang014 =	&Eziguquguqukayo / ukurhemisa
+	i_Lang015 =	Imise&benzi / Array Izindlela
+	i_Lang016 =	&Thumela i-imeyili
+	i_Lang017 =	Lan&da amafayela
+	i_Lang018 =	Zi&p / amafayela Unzip
+	i_Lang019 =	Internet E&xplorer
+	i_Lang020 =	COM Inter&face
+	i_Lang021 =	Windows Imila&yezo
+	i_Lang022 =	T&hola umyalo
+		
+; 06. Edit Sub Menu		
+	e_Lang001 =	&Impinda
+	e_Lang002 =	&Hlela Amazwana
+	e_Lang003 =	&Thola / Miselela
+	e_Lang004 =	&Kopisha ...
+	e_Lang005 =	H&lehlisa
+	e_Lang006 =	&Redo
+	e_Lang007 =	&Cut
+	e_Lang008 =	K&opisha
+	e_Lang009 =	&Namathisela
+	e_Lang010 =	&Susa
+	e_Lang011 =	H&amba uyephezulu
+	e_Lang012 =	&Move Down
+	e_Lang013 =	&Faka kusuka Ibhokisi
+	e_Lang014 =	Faka K&eystroke
+	e_Lang015 =	&Hlela Color Mark
+	e_Lang016 =	Ama&qembu
+	e_Lang017 =	&Vumela amaqembu
+	e_Lang018 =	En&geza iqembu
+	e_Lang019 =	S&usa iqembu
+	e_Lang020 =	Susa &wonke amaqembu
+	e_Lang021 =	&Goqa konke
+	e_Lang022 =	Nwe&ba konke
+		
+; 07. Select Sub Menu		
+	s_Lang001 =	&Khetha konke
+	s_Lang002 =	K&hetha None
+	s_Lang003 =	&Guqula Selection
+	s_Lang004 =	H&lola Kukhethwe
+	s_Lang005 =	&Ukumaka Kukhethwe
+	s_Lang006 =	Gu&qula Amasheke
+	s_Lang007 =	&Move Selection Up
+	s_Lang008 =	M&ove Selection Down
+	s_Lang009 =	Uhlo&bo Kukhethwe
+	s_Lang010 =	&Command uhlobo
+		
+; 08. View Sub Menu		
+	v_Lang001 =	&Njalo On Top
+	v_Lang002 =	&Gqamisa Imigqa
+	v_Lang003 =	&Indentation
+	v_Lang004 =	I&zilawuli kwebha yamathuluzi e
+	v_Lang005 =	&Buka kuqala
+	v_Lang006 =	&Wamathuluzi
+	v_Lang007 =	&Hotkeys
+	v_Lang008 =	&Ukucinga Bar
+	v_Lang009 =	&Setha kabusha Columns Usayizi
+	v_Lang010 =	I&cons Usayizi
+	v_Lang011 =	S&etha kabusha Ukuhlelwa
+	v_Lang012 =	I&fayela
+	v_Lang013 =	&Record Play
+	v_Lang014 =	I&miyalo
+	v_Lang015 =	H&lela
+	v_Lang016 =	Izin&ketho
+	v_Lang017 =	Ngen&dlela oyifisayo
+	v_Lang018 =	&Automatic
+	v_Lang019 =	&Manual
+	v_Lang020 =	&Ima
+	v_Lang021 =	Misa &okwesikhashana
+	v_Lang022 =	Com&pact
+	v_Lang023 =	Okuzenzakalela&yo
+	v_Lang024 =	&Small
+	v_Lang025 =	&Large
+		
+; 09. Options Sub Menu		
+	o_Lang001 =	&Amasethingi
+	o_Lang002 =	&Nciphisa so
+	o_Lang003 =	&Khombisa Izilawuli yamathuluzi
+	o_Lang004 =	&Capture ukucindezela ukhiye kule iwindi
+	o_Lang005 =	&Hotkeys Active Njalo
+	o_Lang006 =	&Izinketho Cima (Uma sokudlala eqeda ...)
+	o_Lang007 =	C&ontext hotkeys olunozwela
+	o_Lang008 =	&Engeza ukhiye Windows "Dlala" hotkey
+	o_Lang009 =	&Sebenzisa inkinobho induku yokudlala njengoba hotkey
+	o_Lang010 =	Se&tha njenge Oxhu nab hotkeys
+	o_Lang011 =	Setha n&jengoba Okuzenzakalelayo yefayela
+	o_Lang012 =	S&usa ifayela
+	o_Lang013 =	Oku&zenzakalelayo hotkeys
+	o_Lang014 =	A&masethingi Okuzenzakalelayo
+		
+; 10. Donate Sub Menu		
+	p_Lang001 =	&PayPal Donation
+		
+; 11. Help Sub Menu		
+	h_Lang001 =	&Usizo
+	h_Lang002 =	&Tutorials
+	h_Lang003 =	&Amathiphu
+	h_Lang004 =	&Macro uMdali Home
+	h_Lang005 =	&Forum
+	h_Lang006 =	A&HK Online Amaphepha
+	h_Lang007 =	H&lolela izibuyekezo ...
+	h_Lang008 =	Hl&ola ekuqaleni
+	h_Lang009 =	Ma&yelana
+		
+; 12. Tray Menu		
+	y_Lang001 =	Fihla Window
+	y_Lang002 =	Bonisa Window
+	y_Lang003 =	Izilawuli kwebha yamathuluzi e
+		
+; 13. Built-in Vars Menu		
+	b_Lang001 =	Ezikhethekile
+	b_Lang002 =	Izakhiwo
+	b_Lang003 =	Usuku nesikhathi
+	b_Lang004 =	Umsebenzisi Isikhathi Idle
+	b_Lang005 =	System kanye Umsebenzisi
+	b_Lang006 =	Uhlelo iwezinkanyezi nokunye.
+	b_Lang007 =	Loop
+		
+; 14. Main Window		
+	w_Lang001 =	Export
+	w_Lang002 =	Buka kuqala
+	w_Lang003 =	Izinketho
+	w_Lang004 =	Record
+	w_Lang005 =	Play
+	w_Lang006 =	Ukudlala
+	w_Lang007 =	Manual
+	w_Lang008 =	Ima
+	w_Lang009 =	Khombisa Izilawuli yamathuluzi
+	w_Lang010 =	Misa okwesikhashana
+	w_Lang011 =	Loop
+	w_Lang012 =	Capture ukucindezela ukhiye kule iwindi
+	w_Lang013 =	Nciphisa so
+	w_Lang014 =	Hotkeys Active Njalo
+	w_Lang015 =	Phinda
+	w_Lang016 =	Kokulibala (ms)
+	w_Lang017 =	Faka isicelo
+	w_Lang018 =	Faka
+	w_Lang019 =	Hlela
+	w_Lang020 =	Izinketho Cima (Uma sokudlala eqeda ...)
+	w_Lang021 =	Ungenzi lutho
+	w_Lang022 =	Vala isicelo
+	w_Lang023 =	Vala shaqa
+	w_Lang024 =	Cima (force)
+	w_Lang025 =	Ukuqalisa
+	w_Lang026 =	Phuma ngemvume
+	w_Lang027 =	Yokucashisa
+	w_Lang028 =	Misa
+	w_Lang029 =	Lock computer
+	w_Lang030 =	Index
+	w_Lang031 =	Action
+	w_Lang032 =	Yekuchumana
+	w_Lang033 =	Phinda
+	w_Lang034 =	Siphele
+	w_Lang035 =	Uhlobo
+	w_Lang036 =	Control
+	w_Lang037 =	Window
+	w_Lang038 =	Amazwana
+	w_Lang039 =	Color
+	w_Lang040 =	New (Ctrl + N)
+	w_Lang041 =	Vula (Ctrl + O)
+	w_Lang042 =	Londoloza (Ctrl + S)
+	w_Lang043 =	Londoloza As (Ctrl + Shift + S)
+	w_Lang044 =	Export to AHK (Ctrl + E)
+	w_Lang045 =	Buka kuqala Script (Ctrl + P)
+	w_Lang046 =	Izilungiselelo (Ctrl + G)
+	w_Lang047 =	Record Macro (Ctrl + R)
+	w_Lang048 =	Cupha Macros (Ctrl + Enter)
+	w_Lang049 =	Play Macro yamanje (Ctrl + Shift + Enter)
+	w_Lang050 =	Isikhathi (Ctrl + Shift + T)
+	w_Lang051 =	Mouse (F2)
+	w_Lang052 =	Umbhalo (F3)
+	w_Lang053 =	Hlela Macros (Ctrl + Shift + M)
+	w_Lang054 =	Control (F4)
+	w_Lang055 =	Hlaba ikhefu elincane (F5)
+	w_Lang056 =	Umlayezo Box (Shift + F5)
+	w_Lang057 =	Linda Key (Ctrl + F5)
+	w_Lang058 =	Window (F6)
+	w_Lang059 =	Image / Pixel Ukucinga (F7)
+	w_Lang060 =	Run / Ifayela / String / Misc. (F8)
+	w_Lang061 =	Loop (F9)
+	w_Lang062 =	Go To / Label (Shift + F9)
+	w_Lang063 =	Setha Timer (Ctrl + F9)
+	w_Lang064 =	Uma Nekuhlola (F10)
+	w_Lang065 =	Eziguquguqukayo / ukurhemisa (Shift + F10)
+	w_Lang066 =	Imisebenzi / Array Izindlela (Ctrl + F10)
+	w_Lang067 =	Thumela i-imeyili (F11)
+	w_Lang068 =	Landa amafayela (Shift + F11)
+	w_Lang069 =	Zip / amafayela Unzip (Ctrl + F11)
+	w_Lang070 =	Internet Explorer (F12)
+	w_Lang071 =	Expression / COM Interface (Shift + F12)
+	w_Lang072 =	Windows Imilayezo (Ctrl + F12)
+	w_Lang073 =	Engeza Macro (Ctrl + T)
+	w_Lang074 =	Vala Macro (Ctrl + W)
+	w_Lang075 =	Impinda Macro (Ctrl + Shift + D)
+	w_Lang076 =	Ngenisa Macro (Ctrl + mina)
+	w_Lang077 =	Londoloza Macro yamanje (Ctrl Alt S)
+	w_Lang078 =	Move Up (Ctrl + PageUp)
+	w_Lang079 =	Move Down (Ctrl + PageDown)
+	w_Lang080 =	Impinda imigqa ekhethiwe (Ctrl + D)
+	w_Lang081 =	Cut Okukhethiwe Imigqa (Ctrl + X)
+	w_Lang082 =	Kopisha Okukhethiwe Imigqa (Ctrl + C)
+	w_Lang083 =	Namathisela Kukopishwe Imigqa (Ctrl + V)
+	w_Lang084 =	Susa imigqa ekhethiwe (Del)
+	w_Lang085 =	Hlehlisa (Ctrl + Z)
+	w_Lang086 =	Redo (Ctrl + Y)
+	w_Lang087 =	Kopisha ...
+	w_Lang088 =	Thola / Miselela (Ctrl + F)
+	w_Lang089 =	Faka / hlela amazwana (Ctrl + L)
+	w_Lang090 =	Hlela Color Marku (Ctrl + M)
+	w_Lang091 =	Ngendlela oyifisayo
+	w_Lang092 =	Thola umyalo (Ctrl + Shift + F)
+	w_Lang093 =	Hlela (Faka)
+	w_Lang094 =	Fihla
+	w_Lang095 =	Move lapha
+	w_Lang096 =	Kopisha lapha
+	w_Lang097 =	Amaqembu
+	w_Lang098 =	Nika amandla amaqembu (Ctrl + Shift + G)
+	w_Lang099 =	Engeza iqe (Ctrl + Shift + Y)
+	w_Lang100 =	Susa iqembu (Ctrl + Shift + R)
+	w_Lang101 =	Susa wonke amaqembu
+	w_Lang102 =	Hlela amaqembu
+	w_Lang103 =	Igama Group
+	w_Lang104 =	Yakha Umsebenzi (Ctrl + Shift + U)
+	w_Lang105 =	Engeza Ipharamitha (Ctrl + Shift + P)
+	w_Lang106 =	Engeza Return (Ctrl + Shift + N)
+	w_Lang107 =	Inguqulela Macro usebenze (Ctrl + Shift + C)
+	w_Lang108 =	Comment out imigqa uma kunganqandwa
+	w_Lang109 =	Engeza ukhiye Windows "Dlala" hotkey
+	w_Lang110 =	Sebenzisa inkinobho induku yokudlala njengoba hotkey
+	w_Lang111 =	Ukucinga ... (Cindezela u-Enter ukuze ahambe)
+		
+; 15. Command Windows		
+	c_Lang001 =	Mouse
+	c_Lang002 =	Umbhalo
+	c_Lang003 =	Misa okwesikhashana
+	c_Lang004 =	Control
+	c_Lang005 =	Window
+	c_Lang006 =	Ukusesha
+	c_Lang007 =	Pixel Ukucinga
+	c_Lang008 =	Run / Ifayela / String / Misc.
+	c_Lang009 =	Uma Izitatimende
+	c_Lang010 =	Eziguquguqukayo
+	c_Lang011 =	Imisebenzi / Array Izindlela
+	c_Lang012 =	Internet Explorer
+	c_Lang013 =	Expression / COM Interface
+	c_Lang014 =	Khetha Isicelo (Advanced)
+	c_Lang015 =	Umlayezo
+	c_Lang016 =	Control
+	c_Lang017 =	Siphele
+	c_Lang018 =	Miliseconds
+	c_Lang019 =	Seconds
+	c_Lang020 =	KULUNGILE
+	c_Lang021 =	Khansela
+	c_Lang022 =	Vala
+	c_Lang023 =	Kopisha
+	c_Lang024 =	Susa
+	c_Lang025 =	Sebenzisa% for eziguquguqukayo, isb .:% lokunamathisela%
+	c_Lang026 =	Action
+	c_Lang027 =	Chofoza
+	c_Lang028 =	Move
+	c_Lang029 =	Move And Chofoza
+	c_Lang030 =	Wheel Up
+	c_Lang031 =	Wheel Down
+	c_Lang032 =	Hudula bese uphonsa
+	c_Lang033 =	Uhlela
+	c_Lang034 =	Ukucinga
+	c_Lang035 =	Subcommand
+	c_Lang036 =	Isihlobo
+	c_Lang037 =	Inkinobho
+	c_Lang038 =	Kwesobunxele
+	c_Lang039 =	Right
+	c_Lang040 =	Middle
+	c_Lang041 =	X1
+	c_Lang042 =	X2
+	c_Lang043 =	Bamba / Release
+	c_Lang044 =	Chofoza Bala
+	c_Lang045 =	Umbhalo Plain (Raw)
+	c_Lang046 =	Umbhalo nemiyalo
+	c_Lang047 =	Namathisela kusuka lokunamathisela
+	c_Lang048 =	Namathisela Ukulawula
+	c_Lang049 =	Setha Umbhalo
+	c_Lang050 =	Ngeza ukumisa
+	c_Lang051 =	Umlayezo Ibhokisi
+	c_Lang052 =	Linda ukhiye
+	c_Lang053 =	Linda siphelile
+	c_Lang054 =	(Miliseconds) 0 = elingapheli
+	c_Lang055 =	Command
+	c_Lang056 =	Value
+	c_Lang057 =	Okukhipha eliguqukayo
+	c_Lang058 =	Isikhundla
+	c_Lang059 =	Usayizi
+	c_Lang060 =	4 eziguquguqukayo izokwakhiwa nale sicalo ziphethe X, Y, W, H.
+	c_Lang061 =	Qala
+	c_Lang062 =	Ukuphela
+	c_Lang063 =	Image
+	c_Lang064 =	Pixel
+	c_Lang065 =	Yenza skrini
+	c_Lang066 =	Wait Key
+	c_Lang067 =	Uma kutholakale
+	c_Lang068 =	Uma ayitholakalanga / Iphutha
+	c_Lang069 =	Okukhipha eziguquguqukayo
+	c_Lang070 =	COORD
+	c_Lang071 =	Ukuhluka
+	c_Lang072 =	Buka kuqala
+	c_Lang073 =	Loop
+	c_Lang074 =	Ukudala ngokuzenzakalela COM object
+	c_Lang075 =	Break
+	c_Lang076 =	Qhubeka
+	c_Lang077 =	Iya ku
+	c_Lang078 =	Iya kulebula
+	c_Lang079 =	Bhala
+	c_Lang080 =	Engeza Label
+	c_Lang081 =	String (InputVar)
+	c_Lang082 =	Eliguqukayo
+	c_Lang083 =	Else
+	c_Lang084 =	Nikeza eliguqukayo
+	c_Lang085 =	Okuqukethwe
+	c_Lang086 =	Operator
+	c_Lang087 =	Expression
+	c_Lang088 =	Setha kabusha
+	c_Lang089 =	Umsebenzi Igama
+	c_Lang090 =	Oluhlukaniswe nemingcele (ngaphandle abakaki)
+	c_Lang091 =	Sebenzisa izinkulumo format
+	c_Lang092 =	Sekhasi / Index
+	c_Lang093 =	Misa
+	c_Lang094 =	Thola
+	c_Lang095 =	Indlela
+	c_Lang096 =	Property
+	c_Lang097 =	Linda ikhasi ukulayisha.
+	c_Lang098 =	CLSID
+	c_Lang099 =	Xhuma
+	c_Lang100 =	Handle
+	c_Lang101 =	COM Script
+	c_Lang102 =	Inombolo Umlayezo
+	c_Lang103 =	Keys Special
+	c_Lang104 =	Isiphequluli Emuva
+	c_Lang105 =	Isiphequluli Phambili
+	c_Lang106 =	Isiphequluli Vuselela
+	c_Lang107 =	Isiphequluli Stop
+	c_Lang108 =	Ukucinga Browser
+	c_Lang109 =	Izintandokazi Browser
+	c_Lang110 =	Home Browser
+	c_Lang111 =	Media
+	c_Lang112 =	Thulisa
+	c_Lang113 =	Volume Up
+	c_Lang114 =	Volume Down
+	c_Lang115 =	Play / Misa okwesikhashana
+	c_Lang116 =	Track Okulandelayo
+	c_Lang117 =	Track Previous
+	c_Lang118 =	Ima
+	c_Lang119 =	E-mail
+	c_Lang120 =	App 1
+	c_Lang121 =	App 2
+	c_Lang122 =	ScanCode
+	c_Lang123 =	Engeza
+	c_Lang124 =	Umlando Key
+	c_Lang125 =	Thayipha ScanCode ...
+	c_Lang126 =	Ikhodi ungeze ku Virtual Keys ohlwini!
+	c_Lang127 =	Thayipha igama variable
+	c_Lang128 =	Sebenzisa Umsebenzi kusuka File Lwangaphandle
+	c_Lang130 =	Phinda kuze
+	c_Lang131 =	Faka isicelo
+	c_Lang132 =	Loop
+	c_Lang133 =	Ifayela
+	c_Lang134 =	Hlaziya
+	c_Lang135 =	Funda
+	c_Lang136 =	Registry
+	c_Lang137 =	Ifayela Iphethini:
+	c_Lang138 =	Ezinye
+	c_Lang139 =	Recursive
+	c_Lang140 =	Eliguqukayo Input:
+	c_Lang141 =	Delimiters:
+	c_Lang142 =	Yeka Characters:
+	c_Lang143 =	Ifayela Input:
+	c_Lang144 =	Umsuka Key \ Key:
+	c_Lang145 =	Amafayela
+	c_Lang146 =	Keys
+	c_Lang147 =	Icon
+	c_Lang148 =	Alukho uphawu
+	c_Lang149 =	Iphutha
+	c_Lang150 =	Umbuzo
+	c_Lang151 =	Lokumemeza
+	c_Lang152 =	Info
+	c_Lang153 =	Njalo phezulu
+	c_Lang154 =	Amaminithi
+	c_Lang155 =	Kuze
+	c_Lang156 =	Script
+	c_Lang157 =	Script Ulimi
+	c_Lang158 =	Ayihambisani 64-bit!
+	c_Lang159 =	Izinketho Ukucinga
+	c_Lang160 =	Esobala
+	c_Lang161 =	Scale
+	c_Lang162 =	Engeza "Uma Isitatimende"
+	c_Lang163 =	Thumela Mode
+	c_Lang164 =	Equal
+	c_Lang165 =	Iqukethe
+	c_Lang166 =	Greater
+	c_Lang167 =	Ngaphansi
+	c_Lang168 =	Yebo
+	c_Lang169 =	Azikho
+	c_Lang170 =	KULUNGILE
+	c_Lang171 =	Khansela
+	c_Lang172 =	Khansela
+	c_Lang173 =	Ziba
+	c_Lang174 =	Zama
+	c_Lang175 =	Qhubeka
+	c_Lang176 =	Zama futhi
+	c_Lang177 =	Isikhathi siphelile
+	c_Lang178 =	Setha kokulibala key
+	c_Lang179 =	Kokulibala Key
+	c_Lang180 =	Kokulibala Random
+	c_Lang181 =	Minimum
+	c_Lang182 =	Maximum
+	c_Lang183 =	Khubaza ukubambezeleka okungahleliwe lomyalo
+	c_Lang184 =	Khetha kusuka ohlwini
+	c_Lang185 =	Izinkinobho
+	c_Lang186 =	Okokuqala
+	c_Lang187 =	Okwesibili
+	c_Lang188 =	Okwesithathu
+	c_Lang189 =	Isihloko
+	c_Lang190 =	Uma ifasitela elisasebenza
+	c_Lang191 =	Uma ifasitela ayisebenzi
+	c_Lang192 =	Uma ifasitela akhona
+	c_Lang193 =	Uma iwindi abutholakali
+	c_Lang194 =	Uma ifayela akhona
+	c_Lang195 =	Uma ifayela abutholakali
+	c_Lang196 =	Uma umbhalo lokunamathisela
+	c_Lang197 =	Uma loop Inkomba
+	c_Lang198 =	Uma isithombe / kwe-pixel ezitholakele
+	c_Lang199 =	Uma isithombe / kwe-pixel ayitholakalanga
+	c_Lang200 =	Uma string iqukethe
+	c_Lang201 =	Uma string hhayi liqukethe
+	c_Lang202 =	Uma umyalezo ibhokisi
+	c_Lang203 =	Qhathanisa eziguquguqukayo
+	c_Lang204 =	Linganisa nkulumo
+	c_Lang205 =	Region
+	c_Lang206 =	(Sebenzisa [] ukwakha amaqoqo, isb .: [10, 20, aVariable, "aString"])
+	c_Lang207 =	Array Object
+	c_Lang208 =	Igama Key
+	c_Lang209 =	Value Igama
+	c_Lang210 =	Izindinganiso
+	c_Lang211 =	Array
+	c_Lang212 =	Umsebenzisi Defined Umsebenzi
+	c_Lang213 =	Umsebenzi Ipharamitha
+	c_Lang214 =	Umsebenzi Return
+	c_Lang215 =	Amapharamitha
+	c_Lang216 =	Buyisela Value
+	c_Lang217 =	Inani elimisiwe
+	c_Lang218 =	Scope
+	c_Lang219 =	Local
+	c_Lang220 =	Global
+	c_Lang221 =	Igama
+	c_Lang222 =	Ungakwazi ukwengeza nemingcele ngaphezulu kusuka imenyu Umsebenzi.
+	c_Lang223 =	Eziguquguqukayo Global
+	c_Lang224 =	Eziguquguqukayo Local
+	c_Lang225 =	Eziguquguqukayo Static
+	c_Lang226 =	Kusuka
+	c_Lang227 =	Imeyili
+	c_Lang228 =	Subject
+	c_Lang229 =	Umlayezo
+	c_Lang230 =	Ukuze
+	c_Lang231 =	CC
+	c_Lang232 =	BCC
+	c_Lang233 =	F2 ukuze uhlele
+	c_Lang234 =	HTML
+	c_Lang235 =	Thumela i-imeyili
+	c_Lang236 =	Landa amafayela
+	c_Lang237 =	Zip / amafayela Unzip
+	c_Lang238 =	Vula
+	c_Lang239 =	Vala
+	c_Lang240 =	Tikhundla bhalisiwe.
+	c_Lang241 =	Susa wonke Isilinganiso
+	c_Lang242 =	Setha timer
+	c_Lang243 =	Right-walungisiswa
+	c_Lang244 =	Right-to-Left
+	c_Lang245 =	Izinamathiseli
+	c_Lang246 =	Path
+	c_Lang247 =	Uma
+	c_Lang248 =	Cindezela ifayela ngasinye archive ezahlukene
+	c_Lang249 =	Okukhishwa ifayela ngalinye kwifolda ehlukile
+	c_Lang250 =	Amafayela Zip
+	c_Lang251 =	Amafayela unzip
+	c_Lang252 =	Thwebula links
+	c_Lang253 =	Ifolda Destination
+	c_Lang254 =	Ifayela elamukelayo
+	c_Lang255 =	Ahlukaniswe isemikholoni, khefana noma umugqa.
+	c_Lang256 =	Lungisa izixhumanisi kuya maphakathi isithombe
+		
+; 16. Other Windows		
+	t_Lang001 =	Export to AutoHotkey
+	t_Lang002 =	Amamakhro
+	t_Lang003 =	Izihibe
+	t_Lang004 =	0 = okungenamkhawulo
+	t_Lang005 =	Sebenzisa Hotstring
+	t_Lang006 =	Block Mouse
+	t_Lang007 =	Zonke
+	t_Lang008 =	None
+	t_Lang009 =	Context hotkeys olunozwela
+	t_Lang010 =	Export to
+	t_Lang011 =	Indentation
+	t_Lang012 =	Zihlanganisa PMC Ikhodi
+	t_Lang013 =	Musa concatenate Thumela imiyalo
+	t_Lang014 =	Vuselela
+	t_Lang015 =	Auto-Vuselela
+	t_Lang016 =	Njalo On Top
+	t_Lang017 =	Amasethingi
+	t_Lang018 =	General
+	t_Lang019 =	Qala / Stop Record
+	t_Lang020 =	Record New Macro
+	t_Lang021 =	Ukuchofoza izinkinobho
+	t_Lang022 =	Ukuqopha
+	t_Lang023 =	Capture wombuso key (phansi / phezulu)
+	t_Lang024 =	Mouse Ukuchofoza
+	t_Lang025 =	Mouse Wheel
+	t_Lang026 =	Mouse Moves
+	t_Lang027 =	Izikhathi Kuphele
+	t_Lang028 =	Kokulibala Minimum
+	t_Lang029 =	Window Amakilasi
+	t_Lang030 =	Window Titles
+	t_Lang031 =	Record ControlSend
+	t_Lang032 =	Record ControlClick
+	t_Lang033 =	Isihlobo Record Key
+	t_Lang034 =	Ukuguquguqula
+	t_Lang035 =	Ukudlala
+	t_Lang036 =	Sheshisa
+	t_Lang037 =	Yehlisa kancane ijubane
+	t_Lang038 =	Buyela Mouse ngemva sokudlala
+	t_Lang039 =	Mouse uhlela
+	t_Lang040 =	Window
+	t_Lang041 =	Screen
+	t_Lang042 =	Okuzenzakalelayo Mouse Kokulibala
+	t_Lang043 =	Okuzenzakalelayo Window Kokulibala
+	t_Lang044 =	Max Umlando Macro ngayinye
+	t_Lang045 =	Sula umlando
+	t_Lang046 =	Sikrini
+	t_Lang047 =	Dweba Button
+	t_Lang048 =	Line Ububanzi (px)
+	t_Lang049 =	Capture ku release
+	t_Lang050 =	Cindezela u-Enter ukuze uthwebule
+	t_Lang051 =	Sikrini Directory
+	t_Lang052 =	Ukugoqa umbhalo
+	t_Lang053 =	Hotkeys
+	t_Lang054 =	Setha kube okohlelo hotkeys
+	t_Lang055 =	Khubaza Window Amashothikhathi
+	t_Lang056 =	Setha kabusha Columns Usayizi
+	t_Lang057 =	Ifayela Macro
+	t_Lang058 =	Standard Ifayela Library
+	t_Lang059 =	Sebenzisa Expression ngokuzenzakalelayo eziguquguqukayo Assignment
+	t_Lang060 =	Gqamisa Loops kanye nesiTatimende
+	t_Lang061 =	(Chofoza Index ikholomu unhlokweni ukuze sikwazi / yekisa)
+	t_Lang062 =	Keys Virtual
+	t_Lang063 =	Okuzenzakalelayo
+	t_Lang064 =	Hlela Amazwana
+	t_Lang065 =	Amazwana
+	t_Lang066 =	Ukucinga Ikholomu
+	t_Lang067 =	Thola / Miselela
+	t_Lang068 =	&Thola
+	t_Lang069 =	M&atch Case
+	t_Lang070 =	&Miselela
+	t_Lang071 =	Found
+	t_Lang072 =	Sithathelwe
+	t_Lang073 =	Imi&gqa ekhethiwe
+	t_Lang074 =	&Zonke Imigqa
+	t_Lang075 =	Zo&nke Amamakhro
+	t_Lang076 =	Mayelana
+	t_Lang077 =	&Expression Regular
+	t_Lang078 =	Play uma
+	t_Lang079 =	Play zonke X (Mili) imizuzwana
+	t_Lang080 =	Isikhathi
+	t_Lang081 =	Misa okwesikhashana
+	t_Lang082 =	Izitatimende
+	t_Lang083 =	Bonisa indenti for Loops kanye nesiTatimende
+	t_Lang084 =	(Double-Chofoza wesenzo unhlokweni sikwazi / yekisa)
+	t_Lang085 =	Khombisa Controls Bar ekuqaleni
+	t_Lang086 =	Iseshela Imisebenzi. Ngicela ulinde...
+	t_Lang087 =	Zihlanganisa Amafayela wangaphandle
+	t_Lang088 =	Dala Exe File
+	t_Lang089 =	Vumela Izimo Multiple
+	t_Lang090 =	Okuzenzakalelayo
+	t_Lang091 =	Vumela Ukuhudula Imigqa
+	t_Lang092 =	&Okuqukethwe kuseli Lonke
+	t_Lang093 =	Standard INI format
+	t_Lang094 =	Igama = Value
+	t_Lang095 =	Faka 1 variable emugqeni. Ungase futhi wengeze [ISigaba].
+	t_Lang096 =	Umsebenzisi eziguquguqukayo Global
+	t_Lang097 =	Cindezela inkinobho on the induku yokudlala
+	t_Lang098 =	Backspace ukusula
+	t_Lang099 =	Inkinobho
+	t_Lang100 =	Amathiphu Khombisa ibhaluni
+	t_Lang101 =	Speed
+	t_Lang102 =	Slow
+	t_Lang103 =	Fast
+	t_Lang104 =	Bonisa / Fihla Isihloko Bar
+	t_Lang105 =	Bonisa / Fihla Main Window
+	t_Lang106 =	Qalisa ngokushesha
+	t_Lang107 =	Ukubambezeleka Random
+	t_Lang108 =	Normal
+	t_Lang109 =	Down
+	t_Lang110 =	Up
+	t_Lang111 =	Faka Keystroke
+	t_Lang112 =	Play / Misa okwesikhashana
+	t_Lang113 =	Ima
+	t_Lang114 =	Izinketho Ukudlala
+	t_Lang115 =	Qala / Stop Record
+	t_Lang116 =	Record New Macro
+	t_Lang117 =	Izinketho Ukuqopha
+	t_Lang118 =	Sula List
+	t_Lang119 =	Bonisa Progress Bar
+	t_Lang120 =	Sheshisa
+	t_Lang121 =	Yehlisa kancane ijubane
+	t_Lang122 =	Bonisa / Fihla Isihloko Bar
+	t_Lang123 =	Bonisa / Fihla Main Window
+	t_Lang124 =	Ungadokhi
+	t_Lang125 =	Dokha
+	t_Lang126 =	Vula
+	t_Lang127 =	Londoloza
+	t_Lang128 =	Cut
+	t_Lang129 =	Kopisha
+	t_Lang130 =	Namathisela
+	t_Lang131 =	Khetha konke
+	t_Lang132 =	Susa
+	t_Lang133 =	Keyboard
+	t_Lang134 =	Mouse
+	t_Lang135 =	Abanye
+	t_Lang136 =	Gqamisa Imigqa
+	t_Lang137 =	Okuzenzakalelayo Script Editor
+	t_Lang138 =	Vula ku Umhleli yangaphandle (Ctrl + Shift + E)
+	t_Lang139 =	Khetha
+	t_Lang140 =	By Ikholomu
+	t_Lang141 =	Zonke Columns
+	t_Lang142 =	Susa Theme kusukela Toolbars (idinga ukuqala kabusha)
+	t_Lang143 =	Auto Fihla Controls ibha yamathuluzi e
+	t_Lang144 =	Chofoza futhi Hudula ukuze ushintshe oda. Double-Chofoza ukuze uhlele.
+	t_Lang145 =	Hlela Amamakhro
+	t_Lang146 =	Emugqeni
+	t_Lang147 =	Macro
+	t_Lang148 =	Action of inkinobho main window ibe seduze
+	t_Lang149 =	Vala isicelo
+	t_Lang150 =	Nciphisa so
+	t_Lang151 =	Ukuveza isiqinisekiso lapho ukuvala a Macro
+	t_Lang152 =	Dala izipele ngokuzenzakalelayo
+	t_Lang153 =	Kwakha umsebenzi esihleliwe e Windows Task Semisebenzi.
+	t_Lang154 =	Isikhathi run kuqala
+	t_Lang155 =	Schedule uhlobo
+	t_Lang156 =	Once || Daily | Weekly | Monthly | Qala | Logon | Idle
+	t_Lang157 =	Ifayela Target PMC
+	t_Lang158 =	Ifayela Target AHK
+	t_Lang159 =	Lo mbhalo uyakusindiswa noma overwritten lwemibhalo wamanje!
+	t_Lang160 =	Vula iSihleli Semisebenzi
+	t_Lang161 =	Umsebenti wadala ngempumelelo!
+	t_Lang162 =	Kuvele iphutha. Lo msebenzi ayikwazanga ukudalwa.
+	t_Lang163 =	Semisebenzi
+	t_Lang164 =	Schedule Amamakhro
+	t_Lang165 =	Macro Run
+	t_Lang166 =	Ifayela
+	t_Lang167 =	String
+	t_Lang168 =	Thola Info
+	t_Lang169 =	Linda
+	t_Lang170 =	Window Amaqembu
+	t_Lang171 =	Imilayezo
+	t_Lang172 =	Ukugcinwa kwemibhalo kanye nezinto INI
+	t_Lang173 =	Umsindo
+	t_Lang174 =	Eziguquguqukayo
+	t_Lang175 =	Uhlelo iwezinkanyezi nokunye.
+	t_Lang176 =	Engeza iqembu
+	t_Lang177 =	Iqembu New
+	t_Lang178 =	Ulimi Editor
+	t_Lang179 =	Dala okusha
+	t_Lang180 =	Sebenzisa u-Enter, PgDn futhi PgUp ukuyisebenzisa.
+	t_Lang181 =	Hambisa
+	t_Lang182 =	Igama
+	t_Lang183 =	Londoloza izinguquko?
+	t_Lang184 =	Ifayela Ulimi
+	t_Lang185 =	Ifayela Izikhombo
+	t_Lang186 =	Thumela isibuyekezo noma inguqulo entsha
+	t_Lang187 =	Goqa konke
+	t_Lang188 =	Nweba konke
+	t_Lang189 =	Ulimi
+	t_Lang190 =	Ukuguqula kunqamuke umugqa
+	t_Lang191 =	Ama-akhawunti imeyili
+	t_Lang192 =	Update
+	t_Lang193 =	Chofoza kabili ukuze uhlele
+	t_Lang194 =	Iseva ye-SMTP
+	t_Lang195 =	Port
+	t_Lang196 =	Qinisekisa
+	t_Lang197 =	Igama lomsebenzisi
+	t_Lang198 =	Iphasiwedi
+	t_Lang199 =	SSL
+	t_Lang200 =	Thumela mode
+	t_Lang201 =	Thumela test
+	t_Lang202 =	Screen And Window
+	t_Lang203 =	Thola Hidden Windows
+	t_Lang204 =	Thola Umbhalo Ofihlekile
+	t_Lang205 =	Isihloko Match Mode
+	t_Lang206 =	Isihloko Match Speed
+	t_Lang207 =	Client
+	t_Lang208 =	T&hola
+	t_Lang209 =	M&iselela
+		
+; 17. Messages & Dialogs		
+	d_Lang001 =	Vula
+	d_Lang002 =	Londoloza project wamanje?
+	d_Lang003 =	Amasethingi Okuzenzakalelayo
+	d_Lang004 =	Amafayela uMdali Macro
+	d_Lang005 =	Londoloza Project
+	d_Lang006 =	Yehlulekile ukulondoloza / ifayela ngaphezulu
+	d_Lang007 =	Iphutha
+	d_Lang008 =	Iphutha: Ayikho Macro Selected.
+		Sicela uhlole okungenani oyedwa Macro ohlwini.
+	d_Lang009 =	Iphutha: Ayikho hotkey Selected.
+	d_Lang010 =	Iphutha: Ikheli engavumelekile.
+		Ekhethiwe ikheli noma ifayela igama alivumelekile.
+	d_Lang011 =	Isexwayiso
+	d_Lang012 =	Ayikho control akhethiwe.
+		Qhubeka?
+	d_Lang013 =	Export Script
+	d_Lang014 =	Script zithunyelwa
+	d_Lang015 =	Ifayela athunyelwa ngempumelelo!
+	d_Lang016 =	Chofoza 'Thola' ukumaka isikhundla.
+	d_Lang017 =	#NOME?
+		#NOME?
+		#NOME?
+	d_Lang018 =	Pixel Color
+	d_Lang019 =	Sula List
+	d_Lang020 =	Vala Macro?
+	d_Lang021 =	Olandelayo
+	d_Lang022 =	Langaphambilini
+	d_Lang023 =	Umlayezo
+	d_Lang024 =	Izilungiselelo Layisha ezizenzakalelayo?
+	d_Lang025 =	Amamakhro isiyasebenza.
+		Sebenzisa hotkeys ku-Google Play.
+	d_Lang026 =	Ukuqala / stop zokuqopha
+	d_Lang027 =	Ukuqopha kumisiwe
+	d_Lang028 =	Ukuqopha ...
+	d_Lang029 =	Kuzoma
+	d_Lang030 =	Ukuqala irekhodi elisha
+	d_Lang031 =	Aliyona igama umsebenzi.
+	d_Lang032 =	Iphutha: Duplicate hotkeys.
+	d_Lang033 =	Cupha Amamakhro
+	d_Lang034 =	- Chofoza and Hudula nge% DrawButton% ukuze ukhethe indawo.
+		- Chofoza nokukhululwa ngaphandle ehudula ukukhetha nokulawula indawo.
+		- Chofoza endaweni ngaphandle control ukukhetha indawo ngefasitela.
+	d_Lang035 =	Qhubeka?
+	d_Lang036 =	Image / Pixel Esiku
+	d_Lang037 =	Image / Pixel Not Found.
+	d_Lang038 =	Cindezela KULUNGILE ukuze uqhubeke.
+	d_Lang039 =	Isikhathi siphelile!
+.	Tämä ominaisuus vaatii GDI+ kirjasto.	यो सुविधा GDI + पुस्तकालय आवश्यक छ।
+		Chofoza OK ukuya ukulanda ikhasi.
+	d_Lang041 =	Igama variable inohlamvu olungekho emthethweni.
+	d_Lang042 =	Yigama agodliwe.
+	d_Lang043 =	Noma sebenzisa Controls lamathuluzi.
+	d_Lang044 =	Lesi sici sidinga uhlelo Eval () Umsebenzi.
+		Chofoza OK ukuya ukulanda ikhasi.
+	d_Lang045 =	Sicela ukhethe i window Internet Explorer!
+	d_Lang046 =	Uxhumano luphumelele!
+	d_Lang047 =	Yehlulekile Xhuma!
+	d_Lang048 =	Faka isibambo a CLSID.
+	d_Lang049 =	Igama Label engavumelekile.
+	d_Lang050 =	Ilebula Duplicate.
+	d_Lang051 =	Ukudlala cindezela Macro the hotkey esihambelanayo (Auto / Man).
+	d_Lang052 =	Ukuze uqale ukuqopha cindezela Record hotkey.
+	d_Lang053 =	Musa ubonise lomlayezo.
+	d_Lang054 =	Sicela ukhethe i iwindi Excel!
+	d_Lang055 =	Sicela ukhethe i ifayela AutoHotkey script (.ahk) kanye ufake igama Umsebenzi.
+	d_Lang056 =	Lesi sici sidinga AutoHotkey efakwe.
+		Chofoza OK ukuya ukulanda ikhasi.
+	d_Lang057 =	#NOME?
+		#NOME?
+		#NOME?
+	d_Lang058 =	Ezinye izici zidinga admnistrator privilages ukuze usebenze kahle.
+		Kuyanconywa ukuba uqale kabusha isicelo njengoba Administrator.
+	d_Lang059 =	Lomyalo ayisekeli izinkulumo noma imisebenzi.
+		Sicela ukwabela kwenombolo futhi silusebenzise ipharamitha.
+	d_Lang060 =	Inguqulo entsha iyatholakala
+	d_Lang061 =	Hhayi manje
+	d_Lang062 =	Usuvele unayo inguqulo yakamuva.
+	d_Lang063 =	Kuvele iphutha ngenkathi kokuhlola.
+	d_Lang064 =	Iphutha in
+	d_Lang065 =	Umugqa
+	d_Lang066 =	Ngokuqondile
+	d_Lang067 =	Bonisa iwindi ekuqaleni
+	d_Lang068 =	Amacebiso:
+	d_Lang069 =	A esiningi nomzamo esenyukele ukuthuthukiswa uMdali Pulover sika Macro. Uma inosizo, siza ucabangele ubonise ukwazisa kwakho nge ezinhlanganweni eziqoqa iminikelo.
+		Ngokunikela noma cha, ngeke kube khona umehluko izici zayo kanye nokusebenza.
+	d_Lang070 =	Nikela ...
+	d_Lang071 =	Cha ngiyabonga
+	d_Lang072 =	Isofthiwe Open Source ukweseka
+	d_Lang073 =	Iphutha: engavumelekile hotkey Selected.
+	d_Lang074 =	Thola umyalo noma umsebenzi
+	d_Lang075 =	Siyakwamukela ku uMdali Pulover sika Macro
+	d_Lang076 =	Sicela ukhethe isakhiwo sakho prefered
+	d_Lang077 =	Compact
+	d_Lang078 =	Okuzenzakalelayo
+	d_Lang079 =	Hlolela izibuyekezo uqalisa.
+	d_Lang080 =	Ungashintsha lokhu ku Izinketh> Izinhlelo> Okujwayelekile.
+	d_Lang081 =	Ungashintsha futhi ngezifiso Izakhiwo in the Buka imenyu.
+	d_Lang082 =	Ifayela ayitholakalanga!
+	d_Lang083 =	Ifayela yokusekelayo oye watholakala. Ungathanda uyivule?
+	d_Lang084 =	Sicela ulondoloze izinguquko zakho ngaphambi nokushejula msebenti.
+	d_Lang085 =	Missing "Ukuphela Loop" sitatimende Macro
+	d_Lang086 =	Missing "Qeda Uma" sitatimende Macro
+	d_Lang087 =	Phawula ukuthi izinguquko ezenziwe script ngaphandle kohlelo ngeke kuthinte Macros zenu nganoma iyiphi indlela.
+		Lesi sici kuphela kwakusho njengoba ukuthekelisa umsebenzi okusheshayo. PMC is hhayi yakhelwe ukuba ibe umhleli AHK script.
+	d_Lang088 =	Zama ukusebenzisa umsebenzisi njengoba kuvamile (hhayi umlawuli).
+	d_Lang089 =	Ayikho irowu ezikhethiwe!
+	d_Lang090 =	Sicela, ukhethe umugqa kokufaka noma ukukhipha i qembu.
+	d_Lang091 =	Indlela engavumelekile
+	d_Lang092 =	Icons Small
+	d_Lang093 =	Icons Large
+	d_Lang094 =	Lesi sici sidinga i-Windows Vista noma ngaphezulu.
+	d_Lang095 =	Ukusetshenziswa ByRef kubangela ipharamitha yinto alias for okuguquguqukayo ophasiswe koshayayo. Ngamanye amazwi, ipharamitha futhi variable ucingo luka zombili zibhekisela okuqukethwe efanayo kumemori.
+	d_Lang096 =	#NOME?
+		#NOME?
+		- Ungase usebenzise strings, eziguquguqukayo, ukurhemisa kanye nemisebenzi. Ungase futhi sihlanganise yalezo zimfanelo.
+		- Ukusebenzisa strings, buyela nabo izingcaphuno, isb .: "Umphumela uwukuthi:" a b +.
+		- Uma ufuna ukubuyela imiphumela extra, ungase futhi usebenzise ByRef e nemingcele.
+		#NOME?
+	d_Lang097 =	#NOME?
+		#NOME?
+		- Ungase usebenzise strings, eziguquguqukayo, ukurhemisa kanye nemisebenzi.
+		- Ukusebenzisa strings, buyela nabo izingcaphuno, isb .: var  "a".
+		- Izitatimende Multiple asekelwa, isb .: var  "a" || InStr (var, "b").
+	d_Lang098 =	Uma omunye ipharamitha ye inenani ezenzakalelayo, nemingcele ezilandelayo ziyadingeka ukuze babe munye futhi.
+	d_Lang099 =	Igama Umsebenzi inohlamvu olungekho emthethweni.
+	d_Lang100 =	Goto, Gosub futhi Ilebula abavunyelwe imisebenzi.
+	d_Lang101 =	Umsebenzi Duplicate.
+	d_Lang102 =	Kuvele iphutha. Ungathumela i-imeyili ku 'pulover@macrocreator.com' ifayela:
+	d_Lang103 =	Izilimi New ifayela litholakale.
+	d_Lang104 =	Lo mlayezo ngeke aboniswe aphinde update efanayo. Ungalanda it kusuka kwimenyu Help> Hlola for izibuyekezo.
+	d_Lang105 =	Ifayela ithunyelwe ngempumelelo. Ngiyabonga!
+	d_Lang106 =	Amafayela Ulimi olusha ngempumelelo.
+	d_Lang107 =	Ayikwazanga ukuqala timer
+	d_Lang108 =	Zonke izikhundla zibhaliswe. Sicela, susa omunye wabo.
+	d_Lang109 =	Target Ilebula ayikho.
+	d_Lang110 =	Qinisekisa ifayela buyisela
+	d_Lang111 =	Selivele likhona.
+		Angathanda esikhundleni salo?
+	d_Lang112 =	I-akhawunti imeyili ayitholakalanga.
+	d_Lang113 =	Alikho iphutha kusho umbiko.
+	d_Lang114 =	Izikriphthi zase elithekelisiwe (ngisho uma eyahlanganiswa) umsebenzi yokuthumela imeyili (CDO) kuyodingeka informations ebonakalayo yama-akhawunti ye-imeyli esetshenziswa, kuhlanganise Iphasiwedi. Le PMC lephrojekthi akanawo lolu lwazi.
+	d_Lang115 =	#NOME?
+	d_Lang116 =	Dlulisa futhi ufake
+	d_Lang117 =	Hamba ukulanda ikhasi
+	d_Lang118 =	Ukulanda ... Sicela, ulinde.
+		
+; 18. Start-up Tips		
+	Start_Tips =	Hlola tutorials video at www.macrocreator.com/help ukuze ufunde mayelana nezici eziningi uMdali Pulover sika Macro.
+		Ukuze uthole usizo an umyalo oqondile uchofoze kwesokudla kuphi on a window umyalo wokubonisa links usizo online.
+		Ungakha Macros besebenzisa Command Buttons emafasiteleni main noma usebenzisa i-mibhalo ukuba ukukopisha izenzo zakho. Iya ku Izinketh> Amasethingi> Ukuqopha ukukhetha lokho kokwenziwayo kuzoqoshwa.
+		Sebenzisa ibha yokusesha noma "Thola umyalo" ifasitela ukucinga imiyalo kanye nemisebenzi.
+		Ungathanda ukusiza ukulungisa translation noma udale entsha? Iya ku Izinketh> Amasethingi> Umhleli Ulimi futhi wenze noma yimuphi izilungiso ofuna. Ungakwazi kuqala noma nini. Chofoza on Thumela ukuthumela zibukezwe yakho. Zizwe ukhululekile ukuba bathumele iyiphi inombolo izilungiso njengoba izikhathi eziningi njengoba ufuna.
+		Hlola "Capture Izihluthulelo" option ukungena okhiye futhi inhlanganisela ukuze Macro yakho ngokuqondile window main.
+		Faka okhiye futhi inhlanganisela in ebhokisini hotkey ezansi bese ucindezela inkinobho Faka ukwengeza kuwo kuya khetha imigqa.
+		Sebenzisa uhlele izinkinobho ezansi ewindini elikhulu ukusetha uphinda futhi alibale ukuba imigqa multiple ngesikhathi esifanayo. Uma kungekho imigqa ekhethiwe yokuhlela izinkinobho zisebenza kubo bonke imigqa ohlwini.
+		Cishe zonke umyalo umsebenzi owamukela Imiphumela eziguquguqukayo. Ungakwazi babela eziguquguqukayo wakho esikhathini eziguquguqukayo amafasitela (Imiyalo> eziguquguqukayo / ukurhemisa). Ukuze usebenzise kubo ngaphakathi imiyalo buyela igama okuguquguqukayo izimpawu amaphesenti, isb .:% MyVar%. Ngo imisebenzi, ukusebenzise ngaphandle izimpawu amaphesenti, isb .: SubStr (MyVar, 5).
+		Right-Chofoza noma yikuphi ifasitela ukuze kalula ufaka eziguquguqukayo Eyakhelwe ohlwini.
+		Ukuze usebenzise i-recorder ngoba imisebenzi okusheshayo iya ku Izinketh> Amasethingi> Ukuqopha kanye uhlole "Sula List" option. Bese uchofoza inkinobho Record emafasiteleni main bese usebenzisa F10 ukusula Macro zamanje bese uqala entsha hotkey efanayo. Ungahlola the "Active Njalo" option efasiteleni main ukugcina Ukuqopha kanye Ukudlala hotkeys esebenzayo.
+		PMC isekela Array lezinto nezindlela, njengamabhere AutoHotkey zokubhala. Ungakha afanayo ngezindlela eziningi, evamile kakhulu uya iwindi eziguquguqukayo, ehlola "Expression" option futhi befaka amagugu kubakaki, isb .: [10, 20, Var, "string"]. Ungakha futhi okhiye ogama lakhe, isb .: {KeyA: VARA, "ezinye key": "string value"}.
+		Imisebenzi sebenzisa AHK nkulumo e-syntax. strings engokoqobo kumelwe azungezwe izingcaphuno, kanye eziguquguqukayo akudingeki izimpawu amaphesenti. Ungasebenzisa eminye imisebenzi noma izakhi behleliwe njengabantu abayakulwa nemingcele. Isb .: StrReplace (MyVar, MyArray [ "A"], SubStr (OtherVar, 2, 3)).
+		Izinkulumo basekelwa AutoHotkey Expression syntax. Ukuze usebenzise inkulumo ngaphakathi ipharamitha umyalo, qala nge uphawu amaphesenti, isb .:% SubStr (Var, 5).
+		I "Loop" counter phezulu kumisa inani ingqikithi lezihitshela ezingamatshumi for Macro akhethiwe.
+		Ungahlela zilandelana by kabili ngokuchofoza it noma ngokukhetha kwaso bese uchofoza Hlela izinkinobho ezansi. Ungahlela imigqa multiple akhethiwe usebenzisa izinketho yamakheli oxhumano bar ezansi.
+		Ungakwazi ichaze imisebenzi yakho siqu Umsebenzi> Yakha umsebenzi futhi uwasebenzise ngefasitela Umsebenzi noma izinkulumo ngaphakathi.
+		Ungakwazi ichaze globa / eziguquguqukayo endawo kanye static for User Defined Imisebenzi. eziguquguqukayo Global ichazwe ku Izinketh> Amasethingi> User eziguquguqukayo emhlabeni wonke yilezo ezithatha kubhekwe Super Global, futhi njalo izotholakala imisebenzi ngaphakathi, ngisho nalapho kuchazwa zendawo.
+		Khetha okukodwa noma ngaphezulu imigqa ukwengeza imiyalo emisha phezu kwabo.
+		Ungahambisa imigqa ngokuchofoza-and-hola.
+		Qhafaza kabili on the Tray Icon kusebenze hotkeys noma ayeke sokudlala / ukuqopha. Chofoza kuso inkinobho ophakathi ngesikhathi sokudlala noma ukuqopha zacabanga.
+		Ungakwazi ukuthumela Macros yakho ukuze ukusebenza AutoHotkey scripts noma ame-yedwa nokwenziwayo kusukela window Export.
+		Ukurekhoda nokuthumela udlale Mouse usebenzisa izixhumanisi eliphelele iya ku Izinketh> Amasethingi> okwakhona bese usetha Mouse uhlela SCREEN.
+		Ungakwazi ukuvula, ikhophi, ukuthutha noma susa amafayela namafolda usebenzisa elinye imiyalo Imiyalo> Run / Ifayela / String / Misc. Zikhona nezinye imiyalo eminingi ewusizo ezifana StringReplace, InputBox kanye MouseGetPos.
+		Ukurekhoda Phansi Up state of zonke Ikhi Yiya Izinketho> Amasethingi> Ukuqopha kanye hlola "Bamba isimo key (Down / Up)" option.
+		Ungasebenzisa hotkeys ukuze kusheshiswe noma ijubane lokudlala. Iya ku Izinketh> Amasethingi> Ukudlala ukusetha okhiye nesivinini.
+		Ukuze ulungise bamba bendawo ngokusebenzisa le "Yenza sesikrini" ithuluzi iya ku Izinketh> Amasethingi> sikrini bese ukhetha "Cindezela u-Enter ukuze Capture". Ngemva abansala Control calandze ukusetshenziswa + umcibisholo okhiye ukuhambisa ukukhetha kanye Shift + imicibisholo usikhulise.
+		Quick Khetha: Khetha noma yikuphi irowu bese uchofoze on unhlokweni ikholomu ukukhetha imigqa efanayo esekelwe embhalweni seli kusukela ngalolo ikholomu.
+		Chofoza unhlokweni Index Ikholomu uvule On / Off Usizo Marks and Colors for Loops kanye nesiTatimende. Double-Chofoza unhlokweni Action Ikholomu uvule On / Off indenti for Loops kanye nesiTatimende.
+		Ungakwazi-DEBUG Macros yakho usebenzisa i-hotkey Manual kanye Play ongakhetha kwimenyu Macro. Ungase futhi ukukhubaza nezenzo ukuhlola kwabo ohlwini Macro.
+		Ukuze wenze Macros yakho isebenza kuphela ifasitela ethile iya ku Macro> yokuqukethwe olunozwela hotkeys.
+		Ungasetha siqu eziguquguqukayo yakho Global zifakwe uqalisa futhi zithunyelwe. Iya ku Izinketh> Amasethingi> User eziguquguqukayo Global ukwengeza kubo.
+		Ungakwazi ukusebenzisa imisebenzi ezithuthukile ezifana SubStr futhi REGEXREPLACE kusukela Imisebenzi iwindi (Imiyalo> Imisebenzi / Array Izindlela). Ungase futhi ichaze imisebenzi yakho siqu noma imisebenzi balekela yangaphandle AutoHotkey scripts.
+		Ungarekhoda igundane ukunyakaza isihlobo isikhundla wamanje ngokubamba capslock ngesikhathi ukuqopha (ungakwazi ukushintsha ukhiye bese zenza kube toggle in izilungiselelo).
+		
+; 19. Tooltips		
+	A_List_TT =	Khetha Macro (Ctrl + 1 ~ 0)
+	AbortKey_TT =	Hotkey ukuyeka impindakudlala
+	ActiveObj_TT =	Uzama ukuxhuma Active COM Object
+	AddAtt_TT =	Namathisela amafayela
+	ApplyI_TT =	Faka isicelo
+	ApplyL_TT =	Faka kusuka Box (Faka)
+	ApplyT_TT =	Faka isicelo
+	AutoKey_TT =	Hotkey ukudlala Macro
+	Client_TT =	Uhlela kukhona isihlobo iklayenti endaweni kwewindi esebenzayo sika, okuyinto akufaki isihloko bar iwindi sika, imenyu (uma unalo nendinganiso eyodwa) kanye imingcele.
+	Clip_TT =	Isebenzisa okwesikhashana ibhodi yokunamathisela ukuthumela umbhalo.
+		Lapho lo msebenzi usuphothuliwe, iskripthi
+		Ubuyisela okuqukethwe yokunamathisela original.
+		(Shiya Umbhalo esingenalutho unamathisele okuqukethwe wamanje)
+	CM_TT =	Screen: uhlela kukhona isihlobo ideski (isikrini sonke).
+		Window: uhlela kukhona isihlobo kwewindi esebenzayo.
+		Client: uhlela kukhona isihlobo iklayenti endaweni kwewindi esebenzayo sika, okuyinto akufaki isihloko bar iwindi sika, imenyu (uma unalo nendinganiso eyodwa) kanye imingcele.
+	CmdFilter_TT =	Hlunga uhlobo
+	CmdSort_TT =	Hlunga ngama-alfabethi
+	ColorPick_TT =	Thola Pixel Screen
+	ComEvent_TT =	Izinga lapho okhiye ithunyelwa kunqunywa kokulibala key.
+	ComText_TT =	Lapho cha kwimodi eluhlaza, lokhu okulandelayo abalingiswa
+		Ziphathwa njengoba modifiers (lezi modifiers ezithinta
+		Kuphela ikhi olulandelayo):, +, ^ #
+	CoordPixel_TT =	Ukudidiyela mode
+	DefaultMacro_TT =	Khetha ifayela ukulayisha ohlelweni sokuqalisa
+	EditPaste_TT =	Ayinhlama String at the lokufaka / yokufaka isikhundla
+		In an control Hlela (lokhu akuphazamisi
+		Okuqukethwe lokunamathisela).
+	Ex_AF_TT =	Ukweqa indlela emnene isebenze a window
+		Futhi uya ngqo indlela wamandla.
+	Ex_DH_TT =	Enquma ukuthi amafasitela ezingabonakali zibonakala 'abonwe' script.
+	Ex_DT_TT =	Enquma ukuthi umbhalo engabonakali in a window 'bubonakala "ngenjongo lokuthola window. Lokhu kuthinta imiyalo efana IfWinExist kanye WinActivate.
+	Ex_CM_TT =	Amasethi bazihlela modi igundane imiyalo lixhomeke noma umbhalo osasebenza noma esibukweni.
+	Ex_EdScript_TT =	Vula ku umhleli wangaphandle
+	Ex_EdVars_TT =	Khetha eziguquguqukayo global ukuba zithunyelwe.
+	Ex_ExecScript_TT =	Script Run
+	Ex_HK_TT =	Amabutho ukusetshenziswa hook ukuze ukusebenzisa konke ukungenelela
+		Noma ezinye hotkeys ikhibhodi.
+	Ex_IfDir_TT =	Kwakha hotkeys ngokwengqikithi futhi hotstrings kuye
+		Ngohlobo kwefasitela ephilayo noma ukhona.
+	Ex_IfDirType_TT =	Kwakha hotkeys ngokwengqikithi futhi hotstrings kuye
+		Ngohlobo kwefasitela ephilayo noma ukhona.
+	Ex_IN_TT =	Ubangela script ukuba baziphathe sengathi esibekiwe
+		Okuqukethwe ifayela sika abakhona kule ndawo esiqondile.
+	Ex_MD_TT =	Imisa kokulibala ezizokwenzeka ngemva
+		Ngamunye ukunyakaza igundane noma chofoza.
+	Ex_MT_TT =	Imisa inombolo esiphezulu of kanyekanye
+		Izindikimba hotkey noma hotstring ngamunye.
+	Ex_NT_TT =	Ikhubaza ukubonisa icon ugqoko.
+	Ex_PT_TT =	Ugcina script egijima unomphela
+		(Okungukuthi, kuze umsebenzisi uvala it noma ExitApp is wahlangabezana).
+	Ex_SB_TT =	Unquma fast kanjani script Kuzoze (kuthinta CPU ukusetshenziswa).
+	Ex_SC_TT =	Imisa kokulibala ezizokwenzeka ngemva
+		Sokuzithiba ekulungiseni umyalo ngamunye.
+	Ex_SI_TT =	Enquma ukuthi script ovunyelwe ukusebenzisa futhi uma isivele egijima.
+	Ex_SK_TT =	Imisa kokulibala ezizokwenzeka ngemva ngamunye
+		Keystroke wathumela by Thumela noma ControlSend.
+	Ex_SM_TT =	Kwenza Thumela lahlotshaniswa nokuba SendInput noma SendPlay kunokuba
+		Kube okumisiwe (SendEvent). Futhi kwenza Chofoza kanye MouseMove / Chofoza / Drag
+		Sebenzisa indlela ecacisiwe.
+	Ex_ST_TT =	Imisa ukuziphatha lelihambisana WinTitle ipharamitha ye imiyalo efana WinWait.
+	Ex_SW_TT =	Imisa kokulibala ezizokwenzeka ngemva
+		Umyalo windowing ngamunye, ezifana WinActivate.
+	Ex_UV_TT =	Export eziguquguqukayo global.
+	Ex_WN_TT =	Inika noma ikhubaza izixwayiso for imibandela ethize lapho kungase kubonise nephutha, ezifana inkinga noma ulahlekile isimemezelo "global".
+	ExpList_TT =	Double-Chofoza ukuze uhlele
+	ExprLink2_TT 	- MUSA buyela eziguquguqukayo angu SIGNS LAPHA.
+		- Iningi AHK izinkulumo asekelwa.
+		- Ungase usebenzise strings, eziguquguqukayo, ukurhemisa kanye nemisebenzi.
+		- Ukusebenzisa strings, buyela nabo izingcaphuno, isb .: var  "a".
+		- Izitatimende Multiple asekelwa, isb .: var  "a" || InStr (var, "b").
+	ExprLink3_TT 	- MUSA buyela eziguquguqukayo angu SIGNS LAPHA.
+		- Iningi AHK izinkulumo asekelwa.
+		- Ungase usebenzise strings, eziguquguqukayo, ukurhemisa kanye nemisebenzi.
+		- Ukusebenzisa strings, buyela nabo izingcaphuno, isb .: var = "a".
+		- Izitatimende Multiple asekelwa, isb .: var = "a" || InStr (var, "b").
+	ExpView_TT =	Umhleli Advanced
+	ExpView2_TT =	Umhleli Advanced
+	Fast_TT =	Usebentisa indlela esheshayo ucwaninga (kuyanconywa)
+	HiddenWin_TT =	Enquma ukuthi amafasitela ezingabonakali zibonakala 'abonwe' script.
+	HiddenText_TT =	Enquma ukuthi umbhalo engabonakali in a window 'bubonakala "ngenjongo lokuthola window. Lokhu kuthinta imiyalo efana IfWinExist kanye WinActivate.
+	HScale_TT =	Ukuphakama isikali
+	IconN_TT =	Number of the group icon
+	IfLVColor_TT =	Chofoza ukuze ukhethe umbala
+	IncFiles_TT =	Zihlanganisa amafayela / Values
+	IncFolders_TT =	Zihlanganisa Izincwajana (amafolda) / Keys
+	InsertKey_TT =	Faka Keystroke (Ctrl + Faka)
+	InsertKeyT_TT =	Faka Keystroke
+	JoyKey_TT =	Cindezela inkinobho on the induku yokudlala
+	LoopLVColor_TT =	Chofoza ukuze ukhethe umbala
+	LUntil_TT =	Kusebenza a isimo ukuqhubeka Loop noma For-loop.
+	ManKey_TT =	Hotkey ukudlala Macro "step-by-step"
+	MRel_TT =	Ukunyakaza mayelana nesimo samanje.
+		Noma uma lusetshenziswa Control: Isikhundla isihlobo Ukulawula.
+	OSHK_TT =	Khetha Macro
+	OSHKEd_TT =	Khetha Macro
+	OSProgB_TT =	Bonisa Progress Bar
+	OSTrans_TT =	Opacity
+	PauseKey_TT =	Hotkey kuya misa isikhashana ukudlala
+	PicPrev_TT =	Double-Chofoza ukuze uvule Image
+	Raw_TT =	I SendRaw myalo uhumusha zonke izinhlamvu ngokoqobo
+		Kunokuba kokuhumusha {Faka} lokuthola ENTER keystroke,
+		^ C lokulawula-C, njll
+	RecKey_TT =	Backspace ukusula
+	RecNewKey_TT =	Backspace ukusula
+	Recurse_TT =	Recurse zibe subdirectories (amafolda) / Subkeys
+	RefreshIEW_TT =	Vuselela Uhlu
+	Relative_TT =	Uhlela kukhona isihlobo ukuba kwewindi esebenzayo.
+	RelKey_TT =	Amarekhodi Mouse ukunyakaza futhi ukuchofoza njengoba izinciphiso
+		Kusukela isikhundla eyedlule lapho ebanjwa.
+	ReptC_TT =	0 = okungenamkhawulo
+	Reset_TT =	Sula okuqukethwe variable
+	RGB_TT =	Kubangela umbala kumelwe lithathwe njengoba i value RGB esikhundleni BGR
+	Screen_TT =	Uhlela kukhona isihlobo ideski (isikrini sonke).
+	Screenshot_TT =	Yenza skrini
+	SetText_TT =	Ishintsha umbhalo control.
+	SI_TT =	Igama Force imigqomo ebhokisini lengxoxo kanye ubuyisela Ngokwesibonelo elidala ngokuzenzakalelayo,
+		Okuyinto efana empeleni ukuze umyalo Reload.
+		Igama Ziba ukweqa ebhokisini lengxoxo ishiye Ngokwesibonelo elidala egijima.
+		Ngamanye amazwi, imizamo ukuqalisa script kakade egijima indiva.
+		Igama OFF uvumela Kukhokonke eziningi script sizohambisana.
+	SM_TT =	Izinkundla: Lokhu liyithuluzi ezenzakalelayo esetshenziswa yibo bonke scripts.
+		Isebenzisa indlela SendEvent for Thumela, SendRaw, Chofoza, futhi MouseMove / Chofoza / Drag.
+		Input: wokushintsha indlela SendInput for Thumela, SendRaw, Chofoza, futhi MouseMove / Chofoza / Drag.
+		InputThenPlay: Same njengoba ngenhla ngaphandle ukuthi kunokuba falling emuva imodi Izinkundla
+		Lapho SendInput ayitholakali, ibuyela Play mode (ngezansi). Lokhu futhi kubangela
+		The SendInput umyalo uqobo ukubuyela Play mode lapho SendInput ayitholakali.
+		Play: wokushintsha indlela SendPlay for Thumela, SendRaw, Chofoza, futhi MouseMove / Chofoza / Drag.
+	ST_TT =	1: Isihloko A iwindi kumele kuqale WinTitle esibekiwe ukuze ube nomdlalo.
+		2: Isihloko A iwindi sika ingaqukatha WinTitle kuphi ngaphakathi ube nomdlalo.
+		3: Isihloko A iwindi kumele ahambisana WinTitle ukuba abe nomdlalo.
+		Regex: Izinguquko WinTitle, WinText, ExcludeTitle, futhi ExcludeText ukuba abe izinkulumo njalo.
+	TimeoutM_TT =	0 = okungenamkhawulo
+	TitleMatch_TT =	1: Isihloko A iwindi kumele kuqale WinTitle esibekiwe ukuze ube nomdlalo.
+		2: Isihloko A iwindi sika ingaqukatha WinTitle kuphi ngaphakathi ube nomdlalo.
+		3: Isihloko A iwindi kumele ahambisana WinTitle ukuba abe nomdlalo.
+		Regex: Izinguquko WinTitle, WinText, ExcludeTitle, futhi ExcludeText ukuba abe izinkulumo njalo.
+	TitleSpeed_TT =	Fast: Lona ukuziphatha okuzenzakalelayo. Performance kungase kube kakhulu kangcono ukwedlula Slow, kodwa izakhi ezithile WinText for ezinye izinhlobo emafasiteleni angeke kube 'abonwe' imiyalo ehlukahlukene iwindi.
+		Slow: Ingaba kancane kakhulu, kodwa zonke WinText kungenzeka is ukubuyiswa kusuka zonke iwindi njengoba ukusesha windowing umyalo ngokusebenzisa kwabo umdlalo. Window Spy yembula ukuthi yiziphi izingxenye umbhalo Window sika (uma ikhona) zidinga i-mode slow.
+	ToggleC_TT =	Cupha Ukuqopha isihlobo uma isimo ikhi ivuliwe.
+	TransC_TT =	Umbala esobala
+	VarCopyA_TT =	Kopisha okuqukethwe variable zamanje
+	VarCopyB_TT =	Kopisha okuqukethwe variable zamanje
+	VariatT_TT =	Shades of ukushintshashintsha
+	WScale_TT =	Isikali ububanzi
+		
+; 20. Operators		
+	As_Oper_1 =	Nikeza
+	As_Oper_2 =	Engeza
+	As_Oper_3 =	Ukhupha
+	As_Oper_4 =	Phindaphinda
+	As_Oper_5 =	Hlukanisa
+	As_Oper_6 =	Floor ihlukanise
+	As_Oper_7 =	CONCATENATE
+	As_Oper_8 =	Bitwise obandakanya wonke umuntu NOMA
+	As_Oper_9 =	Bitwise KANYE
+	As_Oper_10 =	Bitwise okukhethekile NOMA
+	As_Oper_11 =	Shift Right KANYE
+	As_Oper_12 =	Shift Kwesobunxele KANYE
+	Co_Oper_1 =	Equal
+	Co_Oper_2 =	Equal (azwela)
+	Co_Oper_3 =	Not elinganayo
+	Co_Oper_4 =	Greater
+	Co_Oper_5 =	Ngaphansi
+	Co_Oper_6 =	Ngaphezulu noma ilingane
+	Co_Oper_7 =	Less noma alinganayo
+	Co_Oper_8 =	In (uhlu)
+	Co_Oper_9 =	Not in (uhlu)
+	Co_Oper_10 =	Iqukethe (uhlu)
+	Co_Oper_11 =	Not iqukethe (uhlu)
+	Co_Oper_12 =	Between (ulayini 1) no (2)
+	Co_Oper_13 =	Akukho phakathi (ulayini 1) no (2)
+	Co_Oper_14 =	Is (uhlobo)
+	Co_Oper_15 =	Aint (uhlobo)
+		
+; 21. IE Commands Tips		
+	IE_Cmd_Index =	
+	Checked	Imisa noma uthatha isimo ibhokisi isheke noma inkinobho yomsakazo.
+	Click	Kulingisa ngokuchofoza into.
+	Focus	Imisa ukugxila into.
+	GoBack	Izulela uhlehle into eyodwa ohlwini emlandweni.
+	GoForward	Izulela phambili into eyodwa ohlwini emlandweni.
+	GoHome	Izulela ekhaya wamanje noma uqale ikhasi.
+	GoSearch	Izulela lamanje ikhasi.
+	Height	Imisa noma uthatha ukuphakama into.
+	Href	Imisa noma uthatha i-URL noma entanjeni.
+	InnerHTML	Imisa noma uthatha i-HTML into.
+	InnerText	Imisa noma uthola umbhalo into.
+	Length	Imisa noma uthatha inani lezinto eqoqweni.
+	LocationName	Ungena indlela noma isihloko khasi.
+	LocationURL	Uthola i-URL yekhasi lamanje.
+	Navigate	Izulela i-URL noma endleleni.
+	OuterHTML	Imisa noma uthatha into nokuqukethwe yayo in HTML.
+	Quit	Kuvalwa ikhasi.
+	Refresh	Kulayisha kabusha ikhasi njengamanje ukuboniswa.
+	SelectedIndex	Imisa noma uthatha uhlu ukhetho akhethiwe endaweni intfo khetha.
+	Src	Amasethi noma uthatha i-URL ukuze zifakwe by the object.
+	Stop	Imisiwe navigation okulindile noma thwebula.
+	Submit	Uhambisa ifomu.
+	Type	Imisa noma uthatha uhlobo okuqukethwe into.
+	Value	Ungena noma kubekela inani lento.
+	Width	Imisa noma uthatha ububanzi into.
+		
+; 22. COM Objects Tips		
+	COM_CLSID_Index =	
+	Excel.Application	Manipulates Excel amashidi.
+	HTMLfile	Kungasetshenziswa ukufunda, ukubhala kanye uxhumana HTML.
+	InternetExplorer.Application	Hlola website.
+	MSXML2.DOMDocument.6.0	XML ushintsho.
+	MSXML2.XMLHTTP	Imelela isicelo XML usebenzisa HTTP.
+	Outlook.Application	Manipulates Outlook imisebenzi nezinto.
+	PowerPoint.Application	Manipulates izintshumayelo PowerPoint.
+	Schedule.Service	Hlela bese uhlela Windows Imisebenzi.
+	ScriptControl	Ngamandla akhiphe VBscript noma JScript.
+	Scripting.Dictionary	Object eligcina key idatha, intwana ngazimbili.
+	Scripting.FileSystemObject	Amafayela Ukufinyelela amafolda
+	Shell.Application	Finyelela Explorer IE emafasiteleni / amathebhu; evulekile bangasizakali amawindi.
+	Shell.Explorer	Shumeka i control Explorer / Browser in GUI (Internet Explorer - Trident isiphequluli).
+	SAPI.SpVoice	Text-to-Speech (TTS).
+	VBScript.RegExp	VBS Izinkulumo avamile (kuhlanganise nomdlalo global).
+	WMPlayer.OCX	Play amafayela emidiya; Shumeka WMPlayer control in a GUI.
+	WinHttp.WinHttpRequest.5.1	Inikeza elula HTTP iklayenti ukusebenza, uvumela control kokuthile okungaphezu nje UrlDownloadToFile.
+	Winmgmt	Thola ulwazi uhlelo; Phatha imisebenzi ye-Windows.
+	WScript.Shell	Various nokuphathwa imisebenzi (abaningi bomdabu AHK imisebenzi).
+	Word.Application	Manipulates amadokhumenti e-Word.
+		
+; 23. AHK Commands Tips		
+	Ahk_Cmd_Index =	
+	Abs	Ibuyisa inani eliphelele Number.
+	ACos	Ibuyisa arccosine (inombolo ogama cosine kuyinto Inombolo) e radians.
+	Array	Kwakha scriptable array associative nge lwenombolo izihluthulelo.
+	Asc	Ibuyisa ikhodi yohlamvu (inombolo ephakathi kuka-1 no 255 (e ANSI yakhela) noma 65535 (e-Unicode yakhela)) ngoba uhlamvu lokuqala ngo String.
+	ASin	Ibuyisa arcsine (inombolo ogama sine kuyinto Inombolo) e radians.
+	ATan	Ibuyisa arctangent (inombolo ogama tangent kuyinto Inombolo) e radians.
+	BlockInput	Khubaza noma kwenza ikhono yomsebenzisi basebenzisane computer nge ikhibhodi negundane.
+	Break	Iphuma (kunqamuka) iluphu. Kusebenza ngaphakathi noma yiluphi uhlobo loop.
+	CDO	Uthumela ama-imeyili usebenzisa i-akhawunti ezichazwe umsebenzisi.
+	Ceil	Ibuyisa Number babanjwa kuya kunamba eseduze (ngaphandle .00 isijobelelo).
+	Chr	Ibuyisa uhlamvu olulodwa elihambisana ikhodi yohlamvu baboniswa ngalolu phawu Number.
+	Click	Izichofozo inkinobho yegundane esebenza njalo at izixhumanisi ecacisiwe. Lingase ubamba inkinobho, vula wheel, noma ukuhambisa.
+	Clipboard	Ayinhlama umbhalo kusuka yokunamathisela.
+	ClipWait	Ukulinda kuze kube ebhodini lokunamathisela iqukethe idatha.
+	ComObjActive	Uthatha a COM intfo obhalisiwe.
+	ComObjArray	Kwakha SAFEARRAY for ukusetshenziswa ne COM.
+	ComObjConnect	Ixhuma imithombo umcimbi ube COM intfo sika imisebenzi sicalo inikezwe.
+	ComObjCreate	Kwakha intfo COM.
+	ComObjEnwrap / ComObjUnwrap	Ezisonga / unwraps a intfo COM.
+	ComObjError	Inika noma ikhubaza isaziso COM amaphutha.
+	ComObjFlags	Retrieves or changes flags which control a COM wrapper object's behaviour.
+	ComObjGet	Returns a reference to an object provided by a COM component.
+	ComObjMissing	Creates a "missing parameter" object to pass to a COM method.
+	ComObjParameter	Wraps a value and type to pass as a parameter to a COM method.
+	ComObjQuery	Queries a COM object for an interface or service.
+	ComObjType	Retrieves type information from a COM object.
+	ComObjValue	Retrieves the value or pointer stored in a COM wrapper object.
+	Continue	Skips the rest of the current loop iteration and begins a new one. Valid inside any kind of loop.
+	Control	Makes a variety of changes to a control.
+	ControlClick	Sends a mouse button or mouse wheel event to a control.
+	ControlEditPaste	Pastes String at the caret/insert position in an Edit control (this does not affect the contents of the clipboard).
+	ControlFocus	Sets input focus to a given control on a window.
+	ControlGet	Retrieves various types of information about a control.
+	ControlGetFocus	Retrieves which control of the target window has input focus, if any.
+	ControlGetPos	Retrieves the position and size of a control.
+	ControlGetText	Retrieves text from a control.
+	ControlMove	Moves or resizes a control.
+	ControlSend / ControlSendRaw 	Sends simulated keystrokes to a window or control.
+	ControlSetText	Changes the text of a control.
+	CoordMode	Sets coordinate mode for various commands to be relative to either the active window or the screen.
+	Cos	Returns the trigonometric cosine of Number.
+	Delete	Removes key-value pairs from an object.
+	DllCall	Calls a function inside a DLL, such as a standard Windows API function.
+	Drive	Ejects/retracts the tray in a CD or DVD drive, or sets a drive's volume label.
+	DriveGet	Retrieves various types of information about the computer's drive(s).
+	DriveSpaceFree	Retrieves the free disk space of a drive, in Megabytes.
+	Else	Specifies the command(s) to perform if an IF-statement evaluates to FALSE. When more than one command is present, enclose them in a block (braces).
+	EnvAdd	Sets a variable to the sum of itself plus the given value (can also add or subtract time from a date-time value). Synonymous with: Var += Value.
+	EnvDiv	Sets a variable to itself divided by the given value. Synonymous with: Var /= Value.
+	EnvGet	Retrieves an environment variable.
+	EnvMult	Sets a variable to itself times the given value. Synonymous with: Var *= Value.
+	EnvSet	Writes a value to a variable contained in the environment.
+	EnvSub	Sets a variable to itself minus the given value (can also compare date-time values). Synonymous with: Var -= Value.
+	EnvUpdate	Notifies the OS and all running applications that environment variable(s) have changed.
+	ExitApp	Terminates the script unconditionally.
+	Exp	Returns e (which is approximately 2.71828182845905) raised to the Nth power.
+	Expression	Performs one or more operations upon a series of variables, literal strings, and/or literal numbers.
+	FileAppend	Writes text to the end of a file (first creating the file, if necessary).
+	FileCopy	Copies one or more files.
+	FileCopyDir	Copies a folder along with all its sub-folders and files (similar to xcopy).
+	FileCreateDir	Creates a folder.
+	FileCreateShortcut	Creates a shortcut (.lnk) file.
+	FileDelete	Deletes one or more files.
+	FileGetAttrib	Reports whether a file or folder is read-only, hidden, etc.
+	FileGetShortcut	Retrieves information about a shortcut (.lnk) file, such as its target file.
+	FileGetSize	Retrieves the size of a file.
+	FileGetTime	Retrieves the datetime stamp of a file or folder.
+	FileGetVersion	Retrieves the version of a file.
+	FileMove	Moves or renames one or more files.
+	FileMoveDir	Moves a folder along with all its sub-folders and files. It can also rename a folder.
+	FileOpen	Provides object-oriented file I/O.
+	FileRead	Reads a file's contents into a variable.
+	FileReadLine	Reads the specified line from a file and stores the text in a variable.
+	FileRecycle	Sends a file or directory to the recycle bin, if possible.
+	FileRecycleEmpty	Empties the recycle bin.
+	FileRemoveDir	Deletes a folder.
+	FileSelectFile	Displays a standard dialog that allows the user to open or save file(s).
+	FileSelectFolder	Displays a standard dialog that allows the user to select a folder.
+	FileSetAttrib	Changes the attributes of one or more files or folders. Wildcards are supported.
+	FileSetTime	Changes the datetime stamp of one or more files or folders. Wildcards are supported.
+	Floor	Returns Number rounded down to the nearest integer (without any .00 suffix).
+	For	Repeats a series of commands once for each key-value pair in an object.
+	Format	Formats a variable number of input values according to a format string.
+	FormatTime	Transforms a YYYYMMDDHH24MISS timestamp into the specified date/time format.
+	Func	Retrieves a reference to a function.
+	GetKeyName / GetKeyVK / GetKeySC	Retrieves the name or text, virtual key code or scan code of a key.
+	GetKeyState	Checks if a keyboard key or mouse/joystick button is down or up. Also retrieves joystick status.
+	Gosub	Jumps to the specified label and continues execution until Return is encountered.
+	Goto	Jumps to the specified label and continues execution.
+	GroupActivate	Activates the next window in a window group that was defined with GroupAdd.
+	GroupAdd	Adds a window specification to a window group, creating the group if necessary.
+	GroupClose	Closes the active window if it was just activated by GroupActivate or GroupDeactivate. It then activates the next window in the series. It can also close all windows in a group.
+	GroupDeactivate	Similar to GroupActivate except activates the next window not in the group.
+	HasKey	Returns true if Key is associated with a value.
+	If	Specifies the command(s) to perform if the comparison of a variable to a value evalutes to TRUE. When more than one command is present, enclose them in a block (braces).
+	If (expression)	Specifies the command(s) to perform if an expression evaluates to TRUE.
+	If A_Index	Checks if the current loop iteration matchs a specified a number.
+	If Clipboard	Checks if the Clipboard text is matchs a specified string.
+	If ErrorLevel	Checks if a specified image or pixel was found in the screen.
+	If var [not] between	Checks whether a variable's contents are numerically or alphabetically between two values (inclusive).
+	If var [not] in / If var [not] contains MatchList	Checks whether a variable's contents match one of the items in a list.
+	If var is [not] type	Checks whether a variable's contents are numeric, uppercase, etc.
+	IfEqual / IfNotEqual	Compares a variable to a value for equality. Synonymous with: if Var = Value | if Var <> Value.
+	IfExist / IfNotExist / FileExist	Checks for the existence of a file or folder.
+	IfGreater / IfGreaterOrEqual	Compares a variable to a value. Synonymous with: if Var > Value | if Var >= Value.
+	IfInString / IfNotInString	Checks if a variable contains the specified string.
+	IfLess / IfLessOrEqual	Compares a variable to a value. Synonymous with: if Var < Value | if Var <= Value.
+	IfMsgBox	Checks which button was pushed by the user during the most recent MsgBox command.
+	IfWinActive / IfWinNotActive	Checks if the specified window exists and is currently active (foremost).
+	IfWinExist / IfWinNotExist	Checks if the specified window exists.
+	ImageSearch	Searches a region of the screen for an image.
+	IniDelete	Deletes a value from a standard format .ini file.
+	IniRead	Reads a value from a standard format .ini file.
+	IniWrite	Writes a value to a standard format .ini file.
+	Input	Waits for the user to type a string (not supported on Windows 9x: it does nothing).
+	InputBox	Displays an input box to ask the user to enter a string.
+	InsertAt	Inserts one or more values at a given position within a linear array.
+	InStr	Searches for a given occurrence of a string, from the left or the right.
+	KeyWait	Waits for a key or mouse/joystick button to be released or pressed down.
+	Label	A label identifies a line of code, and can be used as a Goto target or to form a subroutine.
+	Length	Returns the length of a linear array beginning at position 1.
+	ListVars	Displays the script's variables: their names and current contents.
+	Ln	Returns the natural logarithm (base e) of Number.
+	LoadPicture	Ukulayisha isithombe kusuka ifayela futhi ibuyisa bitmap noma icon isibambo.
+	Log	Returns the logarithm (base 10) of Number.
+	Loop (files & folders)	Retrieves the specified files or folders, one at a time.
+	Loop (normal) 	Perform a series of commands repeatedly: either the specified number of times or until break is encountered.
+	Loop (parse a string)	Retrieves substrings (fields) from a string, one at a time.
+	Loop (read file contents)	Retrieves the lines in a text file, one at a time (performs better than FileReadLine).
+	Loop (registry)	Retrieves the contents of the specified registry subkey, one item at a time.
+	MaxIndex	Returns the highest integer key.
+	MinIndex	Returns the lowest integer key.
+	Mod	Modulo. Returns the remainder when Dividend is divided by Divisor.
+	MouseGetPos	Retrieves the current position of the mouse cursor, and optionally which window and control it is hovering over.
+	MsgBox	Displays the specified text in a small window containing one or more buttons (such as Yes and No).
+	NumGet	Returns the binary number stored at the specified address+offset.
+	NumPut	Stores Number in binary format at the specified address+offset and returns the address to the right of the item just written.
+	Object	Creates a scriptable associative array.
+	Ord	Returns the ordinal value (numeric character code) of the first character in String.
+	OutputDebug	Sends a string to the debugger (if any) for display.
+	Parameter	Adds a parameter to the function.
+	Pause	Pauses the script's current thread.
+	PixelGetColor	Retrieves the color of the pixel at the specified x,y coordinates.
+	PixelSearch	Searches a region of the screen for a pixel of the specified color.
+	Pop	Removes and returns the last array element.
+	PostMessage	Places a message in the message queue of a window or control.
+	Process	Performs one of the following operations on a process: checks if it exists; changes its priority; closes it; waits for it to close.
+	Progress	Creates or updates a window containing a progress bar.
+	Push	Appends values to the end of an array.
+	Random	Generates a pseudo-random number.
+	RegDelete	Deletes a subkey or value from the registry.
+	RegExMatch	Determines whether a string contains a pattern (regular expression).
+	RegExReplace	Replaces occurrences of a pattern (regular expression) inside a string.
+	RegRead	Reads a value from the registry.
+	RegWrite	Writes a value to the registry.
+	RemoveAt	Removes items from the given position in a linear array.
+	Return	Returns from a subroutine to which execution had previously jumped via function-call, Gosub, Hotkey activation, GroupActivate, or other means.
+	Round	If N is omitted or 0, Number is rounded to the nearest integer. If N is positive number, Number is rounded to N decimal places. If N is negative, Number is rounded by N digits to the left of the decimal point.
+	Run	Runs an external program.
+	RunAs	Specifies a set of user credentials to use for all subsequent uses of Run and RunWait. Requires Windows 2000/XP or later.
+	RunWait	Runs an external program and waits until it finishes.
+	Send / SendRaw	Sends simulated keystrokes and mouse clicks to the active window.
+	SendLevel	Controls which artificial keyboard and mouse events are ignored by hotkeys and hotstrings.
+	SendMessage	Sends a message to a window or control and waits for acknowledgement.
+	SetCapslockState	Sets the state of the Capslock key. Can also force the key to stay on or off.
+	SetKeyDelay	Sets the delay that will occur after each keystroke sent by Send or ControlSend.
+	SetNumlockState	Sets the state of the Numlock key. Can also force the key to stay on or off.
+	SetRegView	Allows registry commands in a 32-bit script to access the 64-bit registry view and vice versa.
+	SetScrollLockState	Sets the state of the Scrolllock key. Can also force the key to stay on or off.
+	SetTimer	Causes a subroutine to be launched automatically and repeatedly at a specified time interval.
+	Shutdown	Shuts down, restarts, or logs off the system.
+	Sin	Returns the trigonometric sine of Number.
+	Sleep	Waits the specified amount of time before continuing.
+	Sort	Arranges a variable's contents in alphabetical, numerical, or random order (optionally removing duplicates).
+	SoundBeep	Emits a tone from the PC speaker.
+	SoundGet	Retrieves various settings from a sound device (master mute, master volume, etc.)
+	SoundGetWaveVolume	Retrieves the wave output volume from a sound device.
+	SoundPlay	Plays a sound, video, or other supported file type.
+	SoundSet	Changes various settings of a sound device (master mute, master volume, etc.)
+	SoundSetWaveVolume	Changes the wave output volume for a sound device.
+	SplashImage	Creates or updates a window containing a JPG, GIF, or BMP image.
+	SplashTextOff	Closes the above window.
+	SplashTextOn	Creates a customizable text popup window.
+	SplitPath	Separates a file name or URL into its name, directory, extension, and drive.
+	Sqrt	Returns the square root of Number.
+	StatusBarGetText	Retrieves the text from a standard status bar control.
+	StatusBarWait	Waits until a window's status bar contains the specified string.
+	StringGetPos	Retrieves the position of the specified substring within a string.
+	StringLeft	Retrieves a number of characters from the left-hand side of a string.
+	StringLen / StrLen	Retrieves the count of how many characters are in a string.
+	StringLower	Converts a string to lowercase.
+	StringMid / SubStr	Retrieves one or more characters from the specified position in a string.
+	StringReplace / StrReplace	Replaces the specified substring with a new string.
+	StringRight	Retrieves a number of characters from the right-hand side of a string.
+	StringSplit / StrSplit	Separates a string into an array of substrings using the specified delimiters.
+	StringTrimLeft	Removes a number of characters from the left-hand side of a string.
+	StringTrimRight	Removes a number of characters from the right-hand side of a string.
+	StringUpper	Converts a string to uppercase.
+	StrPut / StrGet	Copies a string to or from a memory address, optional converting it between code pages.
+	SysGet	Retrieves screen resolution, multi-monitor info, dimensions of system objects, and other system properties.
+	Tan	Returns the trigonometric tangent of Number.
+	ToolTip	Creates an always-on-top window anywhere on the screen.
+	Transform	Performs miscellaneous math functions, bitwise operations, and tasks such as ASCII/Unicode conversion.
+	TrayTip	Creates a balloon message window near the tray icon. Requires Windows 2000/XP or later.
+	Trim / LTrim / RTrim	Trims certain characters from the beginning and/or end of a string.
+	Until	Applies a condition to the continuation of a Loop or For-loop.
+	UrlDownloadToFile	Downloads a file from the Internet.
+	UserFunction	Creates a Function structure.
+	Variable	Assigns the specified value to a variable.
+	While	Performs a series of commands repeatedly until the specified expression evaluates to false.
+	WinActivate	Activates the specified window (makes it foremost).
+	WinActivateBottom	Same as WinActivate except that it activates the bottommost (least recently active) matching window rather than the topmost.
+	WinActive	Returns the Unique ID (HWND) of the active window if it matches the specified criteria.
+	WinClose	Closes the specified window.
+	WinExist	Checks if the specified window exists.
+	WinGet	Retrieves the specified window's unique ID, process ID, process name, or a list of its controls. It can also retrieve a list of all windows matching the specified criteria.
+	WinGetClass	Retrieves the specified window's class name.
+	WinGetPos	Retrieves the position and size of the specified window.
+	WinGetText	Retrieves the text from the specified window.
+	WinGetTitle	Retrieves the title of the specified window.
+	WinHide	Hides the specified window.
+	WinHttpDownloadToFile	Downloads one or more files from the Internet.
+	WinKill	Forces the specified window to close.
+	WinMaximize	Enlarges the specified window to its maximum size.
+	WinMenuSelectItem	Invokes a menu item from the menu bar of the specified window.
+	WinMinimize	Collapses the specified window into a button on the task bar.
+	WinMinimizeAll	Minimizes all windows.
+	WinMinimizeAllUndo	Reverses the effect of a previous WinMinimizeAll.
+	WinMove	Changes the position and/or size of the specified window.
+	WinRestore	Unminimizes or unmaximizes the specified window if it is minimized or maximized.
+	WinSet	Makes a variety of changes to the specified window, such as "always on top" and transparency.
+	WinSetTitle	Changes the title of the specified window.
+	WinShow	Unhides the specified window.
+	WinWait	Waits until the specified window exists.
+	WinWaitActive	Waits until the specified window is active.
+	WinWaitClose	Waits until the specified window does not exist.
+	WinWaitNotActive	Waits until the specified window is not active.
+	Zip / UnZip	Compress or uncompress one or more zip files.
+	WinExist	Checks if the specified window exists.
+	WinGet	Retrieves the specified window's unique ID, process ID, process name, or a list of its controls. It can also retrieve a list of all windows matching the specified criteria.
+	WinGetClass	Retrieves the specified window's class name.
+	WinGetPos	Retrieves the position and size of the specified window.
+	WinGetText	Retrieves the text from the specified window.
+	WinGetTitle	Retrieves the title of the specified window.
+	WinHide	Hides the specified window.
+	WinHttpDownloadToFile	Downloads one or more files from the Internet.
+	WinKill	Forces the specified window to close.
+	WinMaximize	Enlarges the specified window to its maximum size.
+	WinMenuSelectItem	Invokes a menu item from the menu bar of the specified window.
+	WinMinimize	Collapses the specified window into a button on the task bar.
+	WinMinimizeAll	Minimizes all windows.
+	WinMinimizeAllUndo	Reverses the effect of a previous WinMinimizeAll.
+	WinMove	Changes the position and/or size of the specified window.
+	WinRestore	Unminimizes or unmaximizes the specified window if it is minimized or maximized.
+	WinSet	Makes a variety of changes to the specified window, such as "always on top" and transparency.
+	WinSetTitle	Changes the title of the specified window.
+	WinShow	Unhides the specified window.
+	WinWait	Waits until the specified window exists.
+	WinWaitActive	Waits until the specified window is active.
+	WinWaitClose	Waits until the specified window does not exist.
+	WinWaitNotActive	Waits until the specified window is not active.
+	Zip / UnZip	Compress or uncompress one or more zip files.

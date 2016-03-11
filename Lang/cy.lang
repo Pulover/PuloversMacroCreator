@@ -1,0 +1,1439 @@
+﻿Lang_cy
+		
+		; Welsh
+		
+; 01. Main Menu		
+	m_Lang001 =	&Ffeil
+	m_Lang002 =	&Macro
+	m_Lang003 =	&Swyddogaeth
+	m_Lang004 =	&Gorchmynion
+	m_Lang005 =	G&olygu
+	m_Lang006 =	&Dewiswch
+	m_Lang007 =	&View
+	m_Lang008 =	D&ewisiadau
+	m_Lang009 =	&Cyfrannwch
+	m_Lang010 =	&Help
+		
+; 02. File Sub Menu		
+	f_Lang001 =	&Newydd
+	f_Lang002 =	&Agored
+	f_Lang003 =	&Save
+	f_Lang004 =	Sa&ve As
+	f_Lang005 =	&Ffeiliau diweddar
+	f_Lang006 =	A&llforio i AHK
+	f_Lang007 =	&Rhagolwg Sgript
+	f_Lang008 =	&Golygu Sgript
+	f_Lang009 =	A&todlen Macros
+	f_Lang010 =	N&ewidynnau rhestr
+	f_Lang011 =	&Ymadael
+	f_Lang012 =	&Dim ffeiliau
+		
+; 03. Macro Sub Menu		
+	r_Lang001 =	&Macro cofnod
+	r_Lang002 =	&Activate Macros
+	r_Lang003 =	&Chwarae Macro Cyfredol
+	r_Lang004 =	Am&serydd
+	r_Lang005 =	&Deactivate Macros
+	r_Lang006 =	C&hwarae o Row Selected
+	r_Lang007 =	Ch&waraewch hyd nes Row Selected
+	r_Lang008 =	Chwa&rae Rhesi Dethol
+	r_Lang009 =	C&yd-destun Hotkeys Sensitif
+	r_Lang010 =	Ychwa&negu Macro
+	r_Lang011 =	Macr&o Close
+	r_Lang012 =	Macro dy&blyg
+	r_Lang013 =	&Golygu Macros
+	r_Lang014 =	Macro m&ewnforio
+	r_Lang015 =	Arbed Macro Cy&fredol
+		
+; 04. Function Sub Menu		
+	u_Lang001 =	&Creu Swyddogaeth
+	u_Lang002 =	&Ychwanegu Paramedr
+	u_Lang003 =	Yc&hwanegu Dychwelyd
+	u_Lang004 =	&Trosi Macro I Swyddogaeth
+		
+; 05. Commands Sub Menu		
+	i_Lang001 =	&Llygoden
+	i_Lang002 =	&Testun
+	i_Lang003 =	&Rheoli
+	i_Lang004 =	&Saib
+	i_Lang005 =	&Blwch neges
+	i_Lang006 =	&Aros allweddol
+	i_Lang007 =	&Ffenestr
+	i_Lang008 =	&Image / Picsel Chwilio
+	i_Lang009 =	R&hedeg / File / String / Misc.
+	i_Lang010 =	&Dolen
+	i_Lang011 =	&Ewch i / Label
+	i_Lang012 =	Ti&mer set
+	i_Lang013 =	&Os Datganiadau
+	i_Lang014 =	&Newidynnau / Araeau
+	i_Lang015 =	S&wyddogaethau / Dulliau Array
+	i_Lang016 =	Anfon e&-bost
+	i_Lang017 =	Lawrlw&ytho ffeiliau
+	i_Lang018 =	&Zip / ffeiliau unzip
+	i_Lang019 =	Rhyn&grwyd archwiliwr
+	i_Lang020 =	&COM Rhyngwyneb
+	i_Lang021 =	Negese&uon Windows
+	i_Lang022 =	&Dod o hyd i gorchymyn
+		
+; 06. Edit Sub Menu		
+	e_Lang001 =	&Dyblygu
+	e_Lang002 =	&Golygu Sylw
+	e_Lang003 =	D&od o hyd i / Replace
+	e_Lang004 =	&Copi i ...
+	e_Lang005 =	D&adwneud
+	e_Lang006 =	A&il-wneud
+	e_Lang007 =	&Torrwch
+	e_Lang008 =	Co&pi
+	e_Lang009 =	G&ludo
+	e_Lang010 =	Dil&eu
+	e_Lang011 =	&Symud i fyny
+	e_Lang012 =	S&ymud i lawr
+	e_Lang013 =	&Mewnosod o Box
+	e_Lang014 =	Me&wnosod trawiadau
+	e_Lang015 =	Ma&rk Lliw Golygu
+	e_Lang016 =	Grwpia&u
+	e_Lang017 =	&Galluogi grwpiau
+	e_Lang018 =	Yc&hwanegu grŵp
+	e_Lang019 =	Gr&ŵp Tynnwch
+	e_Lang020 =	Ty&nnwch yr holl grwpiau
+	e_Lang021 =	Collapse po&b
+	e_Lang022 =	E&xpand pob
+		
+; 07. Select Sub Menu		
+	s_Lang001 =	&Dewis Popeth
+	s_Lang002 =	D&ewiswch Dim
+	s_Lang003 =	De&wis Gwrthdroi
+	s_Lang004 =	&Gwiriwch Detholiad
+	s_Lang005 =	D&ad-diciwch dethol
+	s_Lang006 =	Gw&iriadau Gwrthdroi
+	s_Lang007 =	&Symud Detholiad Up
+	s_Lang008 =	S&ymud Detholiad Down
+	s_Lang009 =	&Math dethol
+	s_Lang010 =	Ma&th o Reoli
+		
+; 08. View Sub Menu		
+	v_Lang001 =	&Bob amser Ar Top
+	v_Lang002 =	&Rhesi Amlygu
+	v_Lang003 =	&Mewnoliad
+	v_Lang004 =	R&heolaethau Bar Offer
+	v_Lang005 =	Rh&agolwg
+	v_Lang006 =	&Toolbars
+	v_Lang007 =	H&otkeys
+	v_Lang008 =	&Chwilio Bar
+	v_Lang009 =	Co&lofnau Ailosod Maint
+	v_Lang010 =	&Eiconau Maint
+	v_Lang011 =	A&ilosod Layout
+	v_Lang012 =	&Ffeil
+	v_Lang013 =	Ch&warae cofnod
+	v_Lang014 =	&Gorchmynion
+	v_Lang015 =	Gol&ygu
+	v_Lang016 =	&Dewisiadau
+	v_Lang017 =	Adda&su
+	v_Lang018 =	&Awtomatig
+	v_Lang019 =	&Llawlyfr
+	v_Lang020 =	Sto&p
+	v_Lang021 =	&Saib
+	v_Lang022 =	&Compact
+	v_Lang023 =	Defa&ult
+	v_Lang024 =	&Bach
+	v_Lang025 =	&Mawr
+		
+; 09. Options Sub Menu		
+	o_Lang001 =	&Gosodiadau
+	o_Lang002 =	&Lleihau i hambwrdd
+	o_Lang003 =	&Rheolaethau Arddangos bar offer
+	o_Lang004 =	&Dal gweisg allweddol yn y ffenestr hon
+	o_Lang005 =	&Hotkeys Bob amser Active
+	o_Lang006 =	&Opsiynau Shutdown (Pryd chwarae gorffen ...)
+	o_Lang007 =	&Cyd-destun Hotkeys Sensitif
+	o_Lang008 =	&Ychwanegwch yr allwedd Windows i "Chwarae" hotkey
+	o_Lang009 =	D&efnyddiwch fotwm ffon reoli fel hotkey
+	o_Lang010 =	Go&sod fel Rhagosodiad Hotkeys
+	o_Lang011 =	Gosod &fel Rhagosodiad File
+	o_Lang012 =	&Tynnu Ffeil ddiofyn
+	o_Lang013 =	Def&ault Hotkeys
+	o_Lang014 =	Gosod&iadau diofyn
+		
+; 10. Donate Sub Menu		
+	p_Lang001 =	&PayPal Rhodd
+		
+; 11. Help Sub Menu		
+	h_Lang001 =	&Help
+	h_Lang002 =	&Tiwtorialau
+	h_Lang003 =	&Awgrymiadau
+	h_Lang004 =	&Crëwr Macro Cartref
+	h_Lang005 =	&Fforwm
+	h_Lang006 =	&Dogfennaeth AHK Ar-lein
+	h_Lang007 =	&Gwiriwch am ddiweddariadau ...
+	h_Lang008 =	G&wirio ar startup
+	h_Lang009 =	&Ynglŷn
+		
+; 12. Tray Menu		
+	y_Lang001 =	Cuddio Ffenestr
+	y_Lang002 =	Dangos Ffenestr
+	y_Lang003 =	Rheolaethau Bar Offer
+		
+; 13. Built-in Vars Menu		
+	b_Lang001 =	Cymeriadau Arbennig
+	b_Lang002 =	Priodweddau
+	b_Lang003 =	Dyddiad ac Amser
+	b_Lang004 =	Defnyddiwr Idle Amser
+	b_Lang005 =	System a Defnyddwyr
+	b_Lang006 =	Misc.
+	b_Lang007 =	Dolen
+		
+; 14. Main Window		
+	w_Lang001 =	Allforio
+	w_Lang002 =	Rhagolwg
+	w_Lang003 =	Dewisiadau
+	w_Lang004 =	Cofnod
+	w_Lang005 =	Chwarae
+	w_Lang006 =	Playback
+	w_Lang007 =	Llawlyfr
+	w_Lang008 =	Stop
+	w_Lang009 =	Rheolaethau Arddangos bar offer
+	w_Lang010 =	Saib
+	w_Lang011 =	Dolen
+	w_Lang012 =	Dal gweisg allweddol yn y ffenestr hon
+	w_Lang013 =	Lleihau i hambwrdd
+	w_Lang014 =	Hotkeys Bob amser Active
+	w_Lang015 =	Ailadrodd
+	w_Lang016 =	Oedi (ms)
+	w_Lang017 =	Gwneud cais
+	w_Lang018 =	Mewnosod
+	w_Lang019 =	Golygu
+	w_Lang020 =	Opsiynau Shutdown (Pryd chwarae gorffen ...)
+	w_Lang021 =	Gwneud dim
+	w_Lang022 =	Cais Close
+	w_Lang023 =	Shutdown
+	w_Lang024 =	Shutdown (grym)
+	w_Lang025 =	Reboot
+	w_Lang026 =	Allgofnodi
+	w_Lang027 =	Gaeafgysgu
+	w_Lang028 =	Seibio
+	w_Lang029 =	Cyfrifiadur Lock
+	w_Lang030 =	Mynegai
+	w_Lang031 =	Gweithred
+	w_Lang032 =	Manylion
+	w_Lang033 =	Ailadrodd
+	w_Lang034 =	Oedi
+	w_Lang035 =	Math
+	w_Lang036 =	Rheoli
+	w_Lang037 =	Ffenestr
+	w_Lang038 =	Sylw
+	w_Lang039 =	Lliw
+	w_Lang040 =	Newydd (Ctrl + D)
+	w_Lang041 =	Agored (Ctrl + O)
+	w_Lang042 =	Arbedwch (Ctrl + S)
+	w_Lang043 =	Save As (Ctrl + Shift + S)
+	w_Lang044 =	Allforio i AHK (Ctrl + D)
+	w_Lang045 =	Rhagolwg Script (Ctrl + P)
+	w_Lang046 =	Gosodiadau (Ctrl + G)
+	w_Lang047 =	Macro Cofnod (Ctrl + R)
+	w_Lang048 =	Activate Macros (Ctrl + Enter)
+	w_Lang049 =	Chwarae Macro cyfredol (Ctrl + Shift + Enter)
+	w_Lang050 =	Amserydd (Ctrl + Shift + T)
+	w_Lang051 =	Llygoden (F2)
+	w_Lang052 =	Testun (F3)
+	w_Lang053 =	Golygu Macros (Ctrl + Shift + M)
+	w_Lang054 =	Rheoli (F4)
+	w_Lang055 =	Saib (F5)
+	w_Lang056 =	Neges Box (Shift + F5)
+	w_Lang057 =	Aros allweddol (Ctrl + F5)
+	w_Lang058 =	Ffenestr (F6)
+	w_Lang059 =	Image / Pixel Chwilio (F7)
+	w_Lang060 =	Rhedeg / File / String / Misc. (F8)
+	w_Lang061 =	Dolen (F9)
+	w_Lang062 =	Ewch i / Label (Shift + F9)
+	w_Lang063 =	Set Amserydd (Ctrl + F9)
+	w_Lang064 =	Os Datganiadau (F10)
+	w_Lang065 =	Newidynnau / Araeau (Shift + F10)
+	w_Lang066 =	Swyddogaethau / Dulliau Array (Ctrl + F10)
+	w_Lang067 =	Anfon E-bost (F11)
+	w_Lang068 =	Lawrlwytho ffeiliau (Shift + F11)
+	w_Lang069 =	Zip ffeiliau / Unzip (Ctrl + F11)
+	w_Lang070 =	Internet Explorer (F12)
+	w_Lang071 =	Mynegiant / COM Rhyngwyneb (Shift + F12)
+	w_Lang072 =	Negeseuon Windows (Ctrl + F12)
+	w_Lang073 =	Ychwanegu Macro (Ctrl + T)
+	w_Lang074 =	Macro Close (Ctrl + C)
+	w_Lang075 =	Dyblygu Macro (Ctrl + Shift + D)
+	w_Lang076 =	Mewnforio Macro (Ctrl + I)
+	w_Lang077 =	Arbedwch Macro cyfredol (Ctrl + Alt + S)
+	w_Lang078 =	Symud i Fyny (Ctrl + PageUp)
+	w_Lang079 =	Symud i Lawr (Ctrl + PageDown)
+	w_Lang080 =	Ddyblyga Rhesi Dethol (Ctrl + D)
+	w_Lang081 =	Torrwch Selected Rhesi (Ctrl + X)
+	w_Lang082 =	Copi Selected Rhesi (Ctrl + C)
+	w_Lang083 =	Gludo Copïwyd Rhesi (Ctrl + V)
+	w_Lang084 =	Dileu Rhesi Dethol (Del)
+	w_Lang085 =	Dadwneud (Ctrl + Z)
+	w_Lang086 =	Ail-wneud (Ctrl + Y)
+	w_Lang087 =	Copi i ...
+	w_Lang088 =	Dod o hyd i / Replace (Ctrl + F)
+	w_Lang089 =	Mewnosod / Golygu Sylw (Ctrl + L)
+	w_Lang090 =	Golygu Lliw Mark (Ctrl + M)
+	w_Lang091 =	Addasu
+	w_Lang092 =	Dod o hyd i gorchymyn (Ctrl + Shift + F)
+	w_Lang093 =	Edit (Rhowch)
+	w_Lang094 =	Cuddio
+	w_Lang095 =	Symud yma
+	w_Lang096 =	Copïwch yma
+	w_Lang097 =	Grwpiau
+	w_Lang098 =	Grwpiau Galluogi (Ctrl + Shift + G)
+	w_Lang099 =	Grŵp ychwanegu (Ctrl + Shift + Y)
+	w_Lang100 =	Tynnu grwp (Ctrl + Shift + R)
+	w_Lang101 =	Tynnwch yr holl grwpiau
+	w_Lang102 =	Grwpiau golygu
+	w_Lang103 =	Enw'r grŵp
+	w_Lang104 =	Creu Swyddogaeth (Ctrl + Shift + U)
+	w_Lang105 =	Ychwanegu Paramedr (Ctrl + Shift + P)
+	w_Lang106 =	Ychwanegu Dychwelyd (Ctrl + Shift + N)
+	w_Lang107 =	Trosi Macro I Swyddogaeth (Ctrl + Shift + C)
+	w_Lang108 =	Sylw allan rhesi ddirwystr
+	w_Lang109 =	Ychwanegwch yr allwedd Windows i "Chwarae" hotkey
+	w_Lang110 =	Defnyddiwch fotwm ffon reoli fel hotkey
+	w_Lang111 =	Chwilio ... (Gwasg Enter i fynd)
+		
+; 15. Command Windows		
+	c_Lang001 =	Llygoden
+	c_Lang002 =	Testun
+	c_Lang003 =	Saib
+	c_Lang004 =	Rheoli
+	c_Lang005 =	Ffenestr
+	c_Lang006 =	Delwedd Chwilio
+	c_Lang007 =	Pixel Chwilio
+	c_Lang008 =	Rhedeg / File / String / Misc.
+	c_Lang009 =	Os Datganiadau
+	c_Lang010 =	Newidynnau
+	c_Lang011 =	Swyddogaethau / Dulliau Array
+	c_Lang012 =	Rhyngrwyd archwiliwr
+	c_Lang013 =	Mynegiant / Rhyngwyneb COM
+	c_Lang014 =	Dewiswch Cais (Uwch)
+	c_Lang015 =	Neges
+	c_Lang016 =	Rheoli
+	c_Lang017 =	Oedi
+	c_Lang018 =	Miliseconds
+	c_Lang019 =	Eiliad
+	c_Lang020 =	Iawn
+	c_Lang021 =	Diddymu
+	c_Lang022 =	Close
+	c_Lang023 =	Copi
+	c_Lang024 =	Dileu
+	c_Lang025 =	Defnyddiwch% ar gyfer Newidynnau, e.e. .: Clipfwrdd%%
+	c_Lang026 =	Gweithred
+	c_Lang027 =	Cliciwch
+	c_Lang028 =	Symud
+	c_Lang029 =	Symud A Cliciwch
+	c_Lang030 =	Olwyn Up
+	c_Lang031 =	Olwyn Down
+	c_Lang032 =	Llusgo a gollwng
+	c_Lang033 =	Cyfesurynnau
+	c_Lang034 =	Chwilio
+	c_Lang035 =	Subcommand
+	c_Lang036 =	Perthynas
+	c_Lang037 =	Button
+	c_Lang038 =	Chwith
+	c_Lang039 =	Dde
+	c_Lang040 =	Canol
+	c_Lang041 =	X1
+	c_Lang042 =	X2
+	c_Lang043 =	Cynnal / Rhyddhau
+	c_Lang044 =	Cliciwch Cyfrif
+	c_Lang045 =	Testun Plaen (Raw)
+	c_Lang046 =	Testun gyda gorchmynion
+	c_Lang047 =	Gludo o Clipfwrdd
+	c_Lang048 =	Gludo am Reolaeth
+	c_Lang049 =	Testun gosod
+	c_Lang050 =	Ychwanegu Saib
+	c_Lang051 =	Blwch neges
+	c_Lang052 =	Arhoswch am allwedd
+	c_Lang053 =	Arhoswch Goramser
+	c_Lang054 =	(Miliseconds) 0 = anfeidrol
+	c_Lang055 =	Ardal Reoli
+	c_Lang056 =	Gwerth
+	c_Lang057 =	Amrywiol allbwn
+	c_Lang058 =	Swydd
+	c_Lang059 =	Maint
+	c_Lang060 =	Bydd 4 newidynnau yn cael eu creu gyda rhagddodiad hwn ac yn gorffen gyda X, Y, W, H.
+	c_Lang061 =	Dechrau
+	c_Lang062 =	Diwedd
+	c_Lang063 =	Delwedd
+	c_Lang064 =	Pixel
+	c_Lang065 =	Gwneud Screenshot
+	c_Lang066 =	Aros allweddol
+	c_Lang067 =	Os canfyddir
+	c_Lang068 =	Os na dod o hyd / Error
+	c_Lang069 =	Newidynnau allbwn
+	c_Lang070 =	Coord
+	c_Lang071 =	Amrywiadau
+	c_Lang072 =	Rhagolwg
+	c_Lang073 =	Dolen
+	c_Lang074 =	Yn awtomatig creu COM gwrthrych
+	c_Lang075 =	Egwyl
+	c_Lang076 =	Parhau
+	c_Lang077 =	Mynd i
+	c_Lang078 =	Ewch i Labelwch
+	c_Lang079 =	Label
+	c_Lang080 =	Ychwanegu Label
+	c_Lang081 =	Llinynnol (InputVar)
+	c_Lang082 =	Amrywiol
+	c_Lang083 =	Else
+	c_Lang084 =	Neilltuo Amrywiol
+	c_Lang085 =	Cynnwys
+	c_Lang086 =	Gweithredwr
+	c_Lang087 =	Mynegiant
+	c_Lang088 =	Ailosod
+	c_Lang089 =	Swyddogaeth Enw
+	c_Lang090 =	Gwahanu Adain Garpiog paramedrau (heb cromfachau)
+	c_Lang091 =	Fformat Defnyddio ymadroddion
+	c_Lang092 =	Page Elfen / Mynegai
+	c_Lang093 =	Gosod
+	c_Lang094 =	Cael
+	c_Lang095 =	Dull
+	c_Lang096 =	Eiddo
+	c_Lang097 =	Arhoswch am dudalen i lwytho.
+	c_Lang098 =	CLSID
+	c_Lang099 =	Cysylltu
+	c_Lang100 =	Trin
+	c_Lang101 =	COM Sgript
+	c_Lang102 =	Rhif neges
+	c_Lang103 =	Bysellau Arbennig
+	c_Lang104 =	Porwr Back
+	c_Lang105 =	Porwr Ymlaen
+	c_Lang106 =	Porwr Refresh
+	c_Lang107 =	Porwr Stop
+	c_Lang108 =	Porwr Chwilio
+	c_Lang109 =	Ffefrynnau porwr
+	c_Lang110 =	Porwr Cartref
+	c_Lang111 =	Cyfryngau
+	c_Lang112 =	Mud
+	c_Lang113 =	Cyfrol Up
+	c_Lang114 =	Cyfrol Down
+	c_Lang115 =	Chwarae / Saib
+	c_Lang116 =	Trac nesaf
+	c_Lang117 =	Trac blaenorol
+	c_Lang118 =	Stop
+	c_Lang119 =	E-bost
+	c_Lang120 =	App 1
+	c_Lang121 =	App 2
+	c_Lang122 =	ScanCode
+	c_Lang123 =	Ychwanegu
+	c_Lang124 =	Hanes allweddol
+	c_Lang125 =	Teipiwch ScanCode ...
+	c_Lang126 =	Ychwanegodd Côd at Restr Keys Rhith!
+	c_Lang127 =	Teipiwch enw ar gyfer y newidyn
+	c_Lang128 =	Defnyddio Swyddogaeth o Ffeil Allanol
+	c_Lang130 =	Ailadrodd nes
+	c_Lang131 =	Gwneud cais
+	c_Lang132 =	Dolen
+	c_Lang133 =	Ffeil
+	c_Lang134 =	Gramadegu
+	c_Lang135 =	Darllen
+	c_Lang136 =	Y Gofrestrfa
+	c_Lang137 =	Patrwm Ffeil:
+	c_Lang138 =	Chyfeiriaduron
+	c_Lang139 =	Recursive
+	c_Lang140 =	Amrywiol Mewnbwn:
+	c_Lang141 =	Amffinyddion:
+	c_Lang142 =	Hepgorer Cymeriadau:
+	c_Lang143 =	Ffeil Mewnbwn:
+	c_Lang144 =	Root Allweddol \ allweddol:
+	c_Lang145 =	Ffeiliau
+	c_Lang146 =	Keys
+	c_Lang147 =	Icon
+	c_Lang148 =	Dim icon
+	c_Lang149 =	Gwall
+	c_Lang150 =	Cwestiwn
+	c_Lang151 =	Exclamation
+	c_Lang152 =	Gwybodaeth
+	c_Lang153 =	Bob amser ar ei ben
+	c_Lang154 =	Cofnodion
+	c_Lang155 =	Tan
+	c_Lang156 =	Sgript
+	c_Lang157 =	Sgript Iaith
+	c_Lang158 =	Ddim yn cyd-fynd â 64-bit!
+	c_Lang159 =	Dewisiadau chwilio
+	c_Lang160 =	Tryloyw
+	c_Lang161 =	Graddfa
+	c_Lang162 =	Ychwanegu "Os Datganiad"
+	c_Lang163 =	Anfon Modd
+	c_Lang164 =	Cyfartal
+	c_Lang165 =	Yn cynnwys
+	c_Lang166 =	Mwy
+	c_Lang167 =	Llai
+	c_Lang168 =	Ydw
+	c_Lang169 =	Nac oes
+	c_Lang170 =	Iawn
+	c_Lang171 =	Diddymu
+	c_Lang172 =	Erthylu
+	c_Lang173 =	Anwybyddu
+	c_Lang174 =	Ceisio eto
+	c_Lang175 =	Parhau
+	c_Lang176 =	Ceisio eto
+	c_Lang177 =	Amser allan
+	c_Lang178 =	Gosod oedi allweddol
+	c_Lang179 =	Oedi allweddol
+	c_Lang180 =	Oedi ar hap
+	c_Lang181 =	Isafswm
+	c_Lang182 =	Uchafswm
+	c_Lang183 =	Analluoga oedi ar hap i hon archa
+	c_Lang184 =	Dewiswch o restr
+	c_Lang185 =	Botymau
+	c_Lang186 =	Yn gyntaf
+	c_Lang187 =	Ail
+	c_Lang188 =	Trydydd
+	c_Lang189 =	Teitl
+	c_Lang190 =	Os ffenestr weithredol
+	c_Lang191 =	Os nad yw ffenestr weithredol
+	c_Lang192 =	Os ffenestr yn bodoli
+	c_Lang193 =	Os ffenestr yn bodoli
+	c_Lang194 =	Os ffeil yn bodoli
+	c_Lang195 =	Os ffeil ddim yn bodoli
+	c_Lang196 =	Os destun clipfwrdd
+	c_Lang197 =	Os mynegai dolen
+	c_Lang198 =	Os darganfyddir image / picsel
+	c_Lang199 =	Os image / picsel heb ei ganfod
+	c_Lang200 =	Os llinyn yn cynnwys
+	c_Lang201 =	Os llinyn Nid yn cynnwys
+	c_Lang202 =	Os blwch neges
+	c_Lang203 =	Cymharu newidynnau
+	c_Lang204 =	Gwerthuso mynegiant
+	c_Lang205 =	Rhanbarth
+	c_Lang206 =	(Defnyddiwch [] i greu arrays, e.e. .: [10, 20, aVariable, "aString"])
+	c_Lang207 =	Array Gwrthrych
+	c_Lang208 =	Enw allweddol
+	c_Lang209 =	Enw gwerth
+	c_Lang210 =	Gwerthoedd
+	c_Lang211 =	Array
+	c_Lang212 =	Defnyddiwr Diffiniedig Swyddogaeth
+	c_Lang213 =	Paramedr swyddogaeth
+	c_Lang214 =	Dychwelyd swyddogaeth
+	c_Lang215 =	Paramedrau
+	c_Lang216 =	Gwerth dychwelyd
+	c_Lang217 =	Gwerth diofyn
+	c_Lang218 =	Cwmpas
+	c_Lang219 =	Lleol
+	c_Lang220 =	Byd-eang
+	c_Lang221 =	Enw
+	c_Lang222 =	Gallwch ychwanegu mwy o baramedrau o'r ddewislen Swyddogaeth.
+	c_Lang223 =	Newidynnau Byd-eang
+	c_Lang224 =	Newidynnau lleol
+	c_Lang225 =	Newidynnau statig
+	c_Lang226 =	O
+	c_Lang227 =	E-bost
+	c_Lang228 =	Pwnc
+	c_Lang229 =	Neges
+	c_Lang230 =	I
+	c_Lang231 =	CC
+	c_Lang232 =	BCC
+	c_Lang233 =	F2 i olygu
+	c_Lang234 =	HTML
+	c_Lang235 =	Anfon e-bost
+	c_Lang236 =	Lawrlwytho ffeiliau
+	c_Lang237 =	Zip / ffeiliau unzip
+	c_Lang238 =	Trowch ar
+	c_Lang239 =	Diffoddwch
+	c_Lang240 =	Swyddi cofrestredig.
+	c_Lang241 =	Dileu pob amser
+	c_Lang242 =	Timer set
+	c_Lang243 =	Dde-gyfiawnhau
+	c_Lang244 =	Hawl i Chwith
+	c_Lang245 =	Ymlyniadau
+	c_Lang246 =	Llwybr
+	c_Lang247 =	Os
+	c_Lang248 =	Cywasgu pob ffeil i archif gwahanol
+	c_Lang249 =	Dyfyniad pob ffeil i ffolder gwahanol
+	c_Lang250 =	Ffeiliau Zip
+	c_Lang251 =	Ffeiliau Unzip
+	c_Lang252 =	Cysylltiadau Download
+	c_Lang253 =	Ffolder cyrchfan
+	c_Lang254 =	Ffeil cyrchfan
+	c_Lang255 =	Gwahanu gan hanner colon, coma neu linell.
+	c_Lang256 =	Addaswch cyfesurynnau i ganol y llun
+		
+; 16. Other Windows		
+	t_Lang001 =	Allforio i AutoHotkey
+	t_Lang002 =	Macros
+	t_Lang003 =	Dolennau
+	t_Lang004 =	0 = anfeidrol
+	t_Lang005 =	Defnydd Hotstring
+	t_Lang006 =	Bloc Llygoden
+	t_Lang007 =	All
+	t_Lang008 =	Dim
+	t_Lang009 =	Cyd-destun Hotkeys Sensitif
+	t_Lang010 =	Allforio i
+	t_Lang011 =	Mewnoliad
+	t_Lang012 =	Cynnwys Cod PMC
+	t_Lang013 =	Peidiwch â concatenate Anfon gorchmynion
+	t_Lang014 =	Refresh
+	t_Lang015 =	Auto-Refresh
+	t_Lang016 =	Bob amser Ar Top
+	t_Lang017 =	Gosodiadau
+	t_Lang018 =	Cyffredinol
+	t_Lang019 =	Dechrau Cofnodi / Stop
+	t_Lang020 =	Cofnod Macro Newydd
+	t_Lang021 =	Keystrokes
+	t_Lang022 =	Cofnodi
+	t_Lang023 =	Dal cyflwr allweddol (i lawr / i fyny)
+	t_Lang024 =	Chleciau llygoden
+	t_Lang025 =	Llygoden Olwyn
+	t_Lang026 =	Symud llygoden
+	t_Lang027 =	Ysbeidiau hamseru
+	t_Lang028 =	Isafswm oedi
+	t_Lang029 =	Dosbarthiadau ffenestr
+	t_Lang030 =	Teitlau ffenestr
+	t_Lang031 =	ControlSend cofnod
+	t_Lang032 =	ControlClick cofnod
+	t_Lang033 =	Perthynas Cofnod Allweddol
+	t_Lang034 =	Toggle
+	t_Lang035 =	Playback
+	t_Lang036 =	Chwyrlïa I fyny
+	t_Lang037 =	Arafwch
+	t_Lang038 =	Dychwelyd Llygoden ar ôl chwarae
+	t_Lang039 =	Llygoden Cyfesurynnau
+	t_Lang040 =	Ffenestr
+	t_Lang041 =	Sgrîn
+	t_Lang042 =	Default Llygoden Oedi
+	t_Lang043 =	Default Ffenestr Oedi
+	t_Lang044 =	Max Hanes fesul Macro
+	t_Lang045 =	Clirio Hanes
+	t_Lang046 =	Screenshots
+	t_Lang047 =	Draw Button
+	t_Lang048 =	Llinell Lled (PX)
+	t_Lang049 =	Dal ar ôl eu rhyddhau
+	t_Lang050 =	Gwasgwch Enter i ddal
+	t_Lang051 =	Cyfeiriadur screenshots
+	t_Lang052 =	Amlapio llinell
+	t_Lang053 =	Hotkeys
+	t_Lang054 =	Gosod Fel Ball Hotkeys
+	t_Lang055 =	Analluogi Byrlwybrau Ffenestr
+	t_Lang056 =	Colofnau Ailosod Maint
+	t_Lang057 =	Default Ffeil Macro
+	t_Lang058 =	Ffeil Library Safonol
+	t_Lang059 =	Defnyddiwch Mynegiant yn ddiofyn ar gyfer Newidynnau Aseiniad
+	t_Lang060 =	Tynnwch sylw at Cylchoedd a Datganiadau
+	t_Lang061 =	(Cliciwch ar y pennawd colofn Mynegai i alluogi / analluogi)
+	t_Lang062 =	Allweddi Rhithwir
+	t_Lang063 =	Default
+	t_Lang064 =	Golygu Sylw
+	t_Lang065 =	Sylw
+	t_Lang066 =	Chwilio Colofn
+	t_Lang067 =	Dod o hyd i / Replace
+	t_Lang068 =	&Dod o hyd i
+	t_Lang069 =	Ac&hos Match
+	t_Lang070 =	&Amnewid
+	t_Lang071 =	Wedi dod o hyd
+	t_Lang072 =	Wedi disodli
+	t_Lang073 =	&Rhesi dethol
+	t_Lang074 =	&Pob Rhesi
+	t_Lang075 =	Po&b Macros
+	t_Lang076 =	Ynglŷn
+	t_Lang077 =	M&ynegiant rheolaidd
+	t_Lang078 =	Chwarae unwaith
+	t_Lang079 =	Chwarae pob (Mili) eiliad X
+	t_Lang080 =	Amserydd
+	t_Lang081 =	Saib
+	t_Lang082 =	Datganiadau
+	t_Lang083 =	Show Dogfenniaeth gyfer Cylchoedd a Datganiadau
+	t_Lang084 =	(Double-Cliciwch y golofn pennawd Gweithredu alluogi / analluogi)
+	t_Lang085 =	Arddangos Rheolaethau Bar ar startup
+	t_Lang086 =	Chwilio am Swyddogaethau. Arhoswch os gwelwch yn dda...
+	t_Lang087 =	Cynnwys Ffeiliau Allanol
+	t_Lang088 =	Creu Exe ffeil
+	t_Lang089 =	Caniatáu enghreifftiau Lluosog
+	t_Lang090 =	Rhagosodion
+	t_Lang091 =	Caniatáu Llusgo'r Rhesi
+	t_Lang092 =	&Cynnwys y gell Cyfan
+	t_Lang093 =	Fformat INI Safonol
+	t_Lang094 =	Name = Gwerth
+	t_Lang095 =	Rhowch 1 newidiol am bob llinell. Efallai y byddwch hefyd ychwanegu [Adrannau].
+	t_Lang096 =	Defnyddiwr Newidynnau Byd-eang
+	t_Lang097 =	Bwyso botwm ar y ffon reoli
+	t_Lang098 =	Backspace i glirio
+	t_Lang099 =	Button
+	t_Lang100 =	Awgrymiadau Arddangos balŵn
+	t_Lang101 =	Cyflymder
+	t_Lang102 =	Araf
+	t_Lang103 =	Cyflym
+	t_Lang104 =	Dangos / Cuddio Bar Teitl
+	t_Lang105 =	Dangos / Cuddio Prif Ffenestr
+	t_Lang106 =	Rhedeg ar unwaith
+	t_Lang107 =	Oedi ar hap
+	t_Lang108 =	Normal
+	t_Lang109 =	Down
+	t_Lang110 =	Up
+	t_Lang111 =	Mewnosod trawiadau
+	t_Lang112 =	Chwarae / Saib
+	t_Lang113 =	Stop
+	t_Lang114 =	Dewisiadau Playback
+	t_Lang115 =	Dechrau Cofnodi / Stop
+	t_Lang116 =	Cofnod Macro Newydd
+	t_Lang117 =	Dewisiadau cofnodi
+	t_Lang118 =	Rhestr Clear
+	t_Lang119 =	Arddangos Cynnydd Bar
+	t_Lang120 =	Chwyrlïa I fyny
+	t_Lang121 =	Arafwch
+	t_Lang122 =	Dangos / Cuddio Bar Teitl
+	t_Lang123 =	Dangos / Cuddio Prif Ffenestr
+	t_Lang124 =	Undock
+	t_Lang125 =	Doc
+	t_Lang126 =	Agored
+	t_Lang127 =	Save
+	t_Lang128 =	Torrwch
+	t_Lang129 =	Copi
+	t_Lang130 =	Gludo
+	t_Lang131 =	Dewis Popeth
+	t_Lang132 =	Dileu
+	t_Lang133 =	Allweddell
+	t_Lang134 =	Llygoden
+	t_Lang135 =	Eraill
+	t_Lang136 =	Rhesi Amlygu
+	t_Lang137 =	Default Golygydd Sgript
+	t_Lang138 =	Agor mewn golygydd allanol (Ctrl + Shift + E)
+	t_Lang139 =	Dewiswch
+	t_Lang140 =	Drwy Colofn
+	t_Lang141 =	Mae pob Colofnau
+	t_Lang142 =	Tynnu Thema o Toolbars (angen ailgychwyn)
+	t_Lang143 =	Auto Cuddio Rheolaethau Toolbar
+	t_Lang144 =	Cliciwch a Llusgwch i newid trefn. Double-Cliciwch i olygu.
+	t_Lang145 =	Golygu Macros
+	t_Lang146 =	Mewn llinell
+	t_Lang147 =	Macro
+	t_Lang148 =	Gweithredu ym mhrif ffenestr yn botwm cau
+	t_Lang149 =	Cais Close
+	t_Lang150 =	Lleihau i hambwrdd
+	t_Lang151 =	Cadarnhad Arddangos wrth gau macro
+	t_Lang152 =	Creu copïau wrth gefn yn awtomatig
+	t_Lang153 =	Creu tasg a drefnwyd mewn Ffenestri Dasgu Scheduler.
+	t_Lang154 =	Amser y tro cyntaf
+	t_Lang155 =	Math o Atodlen
+	t_Lang156 =	Unwaith || Daily | Wythnosol | Misol | Dechrau | Logon | Idle
+	t_Lang157 =	File Targed PMC
+	t_Lang158 =	File Targed AHK
+	t_Lang159 =	Bydd y sgript yn cael eu cadw neu trosysgrifo yn y cyfeiriadur cyfredol!
+	t_Lang160 =	Scheduler Gorchwyl Agored
+	t_Lang161 =	Crëwyd dasg yn llwyddiannus!
+	t_Lang162 =	Digwyddodd gwall. Ni allai'r dasg yn cael ei greu.
+	t_Lang163 =	Scheduler
+	t_Lang164 =	Atodlen Macros
+	t_Lang165 =	Macro rhedeg
+	t_Lang166 =	Ffeil
+	t_Lang167 =	Llinyn
+	t_Lang168 =	Get Info
+	t_Lang169 =	Arhoswch
+	t_Lang170 =	Grwpiau ffenestr
+	t_Lang171 =	Negeseuon
+	t_Lang172 =	Y Gofrestrfa Ac INI
+	t_Lang173 =	Sain
+	t_Lang174 =	Newidynnau
+	t_Lang175 =	Misc.
+	t_Lang176 =	Ychwanegu grŵp
+	t_Lang177 =	Grŵp newydd
+	t_Lang178 =	Golygydd iaith
+	t_Lang179 =	Creu Newydd
+	t_Lang180 =	Defnyddiwch Mewnbynnu, PgDn a PgUp i lywio.
+	t_Lang181 =	Cyflwyno
+	t_Lang182 =	Enw
+	t_Lang183 =	Cadw newidiadau?
+	t_Lang184 =	Ffeil iaith
+	t_Lang185 =	Ffeil cyfeirnod
+	t_Lang186 =	Cyflwyno adolygu neu gyfieithiad newydd
+	t_Lang187 =	Collapse pob
+	t_Lang188 =	Expand pob
+	t_Lang189 =	Iaith
+	t_Lang190 =	Trosi toriadau llinell
+	t_Lang191 =	Cyfrifon e-bost
+	t_Lang192 =	Diweddariad
+	t_Lang193 =	Dwbl-gliciwch i olygu
+	t_Lang194 =	Gweinydd SMTP
+	t_Lang195 =	Port
+	t_Lang196 =	Dilysu
+	t_Lang197 =	Enw defnyddiwr
+	t_Lang198 =	Cyfrinair
+	t_Lang199 =	SSL
+	t_Lang200 =	Anfon modd
+	t_Lang201 =	Anfonwch brawf
+	t_Lang202 =	Sgrîn Ac Ffenestr
+	t_Lang203 =	Canfod Ffenestri Cudd
+	t_Lang204 =	Canfod Testun Hidden
+	t_Lang205 =	Teitl Modd Match
+	t_Lang206 =	Teitl Cyflymder Match
+	t_Lang207 =	Cleient
+	t_Lang208 =	D&od o hyd i
+	t_Lang209 =	A&mnewid
+		
+; 17. Messages & Dialogs		
+	d_Lang001 =	Agored
+	d_Lang002 =	Arbed prosiect cyfredol?
+	d_Lang003 =	Gosodiadau diofyn
+	d_Lang004 =	Crëwr Macro Ffeiliau
+	d_Lang005 =	Prosiect Achub
+	d_Lang006 =	Wedi methu i arbed / ffeil Trosysgrifo
+	d_Lang007 =	Gwall
+	d_Lang008 =	Gwall: Dim gwiriad Selected.
+		Please چیک کی فہرست میں کم از کم ایک میکرو.
+	d_Lang009 =	Gwall: Dim Hotkey detholedig.
+	d_Lang010 =	Gwall: Annilys Address.
+		The منتخب کردہ ایڈریس یا فائل کا نام غلط ہے.
+	d_Lang011 =	Rhybudd
+	d_Lang012 =	Dim selected.
+		Continue?
+	d_Lang013 =	Allforio Sgript
+	d_Lang014 =	Sgript allfudo
+	d_Lang015 =	Mae'r ffeil yn cael ei allforio yn llwyddiannus!
+	d_Lang016 =	Cliciwch 'Get' i nodi'r sefyllfa.
+	d_Lang017 =	#NOME?
+		#NOME?
+		#NOME?
+	d_Lang018 =	Pixel Lliw
+	d_Lang019 =	Rhestr Clear
+	d_Lang020 =	Macro Close?
+	d_Lang021 =	nesaf
+	d_Lang022 =	blaenorol
+	d_Lang023 =	neges
+	d_Lang024 =	gosodiadau diofyn Llwyth?
+	d_Lang025 =	Macros actifadu.
+		Defnyddiwch y Hotkeys i Chwarae.
+	d_Lang026 =	i ddechrau / stopio recordio
+	d_Lang027 =	cofnodi stopio
+	d_Lang028 =	Cofnodi ...
+	d_Lang029 =	stopio
+	d_Lang030 =	i ddechrau cofnod newydd
+	d_Lang031 =	Nid yw enw swyddogaeth dilys.
+	d_Lang032 =	Gwall: dyblyg Hotkeys.
+	d_Lang033 =	activate Macros
+	d_Lang034 =	- Cliciwch a Llusgwch gyda% DrawButton% i ddewis ardal.
+		- Cliciwch a rhyddhau heb llusgo i ddewis ardal rheoli.
+		- Cliciwch mewn ardal heb reolaeth i ddewis ardal y ffenestr.
+	d_Lang035 =	Parhau?
+	d_Lang036 =	Image / Picsel Wedi dod o hyd ar
+	d_Lang037 =	Image / Pixel Heb ei ddarganfod.
+	d_Lang038 =	Pwyso Iawn i barhau.
+	d_Lang039 =	Amser allan!
+.	Tämä ominaisuus vaatii GDI+ kirjasto.	ຄຸນນະສົມບັດນີ້ຮຽກຮ້ອງໃຫ້ມີ + ຫໍສະຫມຸດ GDI.
+		Cliciwch OK i fynd i lawrlwytho dudalen.
+	d_Lang041 =	Yr enw newidyn yn cynnwys cymeriad anghyfreithlon.
+	d_Lang042 =	yn air neilltuedig.
+	d_Lang043 =	Neu defnyddiwch y Bar Offer Rheolaethau.
+	d_Lang044 =	Mae'r nodwedd hon yn ei gwneud yn ofynnol y eval () Swyddogaeth.
+		Cliciwch OK i fynd i lawrlwytho dudalen.
+	d_Lang045 =	Dewiswch ffenestr Internet Explorer!
+	d_Lang046 =	Cysylltiad llwyddiannus!
+	d_Lang047 =	Methwyd Cysylltu!
+	d_Lang048 =	Mewnosod Trin a CLSID.
+	d_Lang049 =	Label Annilys Enw.
+	d_Lang050 =	label dyblyg.
+	d_Lang051 =	I chwarae wasg Macro y Hotkey cyfatebol (Auto / Manaw).
+	d_Lang052 =	I ddechrau recordio wasg yn Hotkey Cofnod.
+	d_Lang053 =	Peidiwch â dangos y neges hon eto.
+	d_Lang054 =	Dewiswch ffenestr Excel!
+	d_Lang055 =	Dewiswch ffeil script AutoHotkey (.ahk) a mynd i mewn i Enw Swyddogaeth.
+	d_Lang056 =	Mae'r nodwedd hon yn ei gwneud yn ofynnol AutoHotkey gorseddedig.
+		Cliciwch OK i fynd i lawrlwytho dudalen.
+	d_Lang057 =	- Allweddi i'r wasg Ctrl + Saeth i symud ardal a ddewiswyd.
+		#NOME?
+		#NOME?
+	d_Lang058 =	Rhai nodweddion ei gwneud yn ofynnol admnistrator privilages er mwyn gweithio'n iawn.
+		Mae'n argymell i ailgychwyn y cais fel Administrator.
+	d_Lang059 =	Nid yw hyn yn cefnogi gorchymyn ymadroddion neu swyddogaethau.
+		Os gwelwch yn dda aseinio newidyn ac yn ei ddefnyddio yn y paramedr.
+	d_Lang060 =	fersiwn newydd ar gael
+	d_Lang061 =	nid yn awr
+	d_Lang062 =	Rydych eisoes yn cael y fersiwn diweddaraf.
+	d_Lang063 =	Digwyddodd gwall wrth wirio.
+	d_Lang064 =	gwall yn
+	d_Lang065 =	Row
+	d_Lang066 =	Yn benodol
+	d_Lang067 =	Dangoswch y ffenestr hon ar startup
+	d_Lang068 =	Awgrymiadau:
+	d_Lang069 =	Mae llawer o amser ac ymdrech i ddatblygu Crëwr Macro Pulover yn. Os byddwch yn ei chael yn ddefnyddiol, ystyriwch dangos eich gwerthfawrogiad gyda rhodd.
+		Rhoi neu beidio, ni fydd unrhyw wahaniaeth o ran ei nodweddion a functionality.
+	d_Lang070 =	Cyfrannwch ...
+	d_Lang071 =	Dim Diolch
+	d_Lang072 =	Meddalwedd Cymorth Agor Darddiad
+	d_Lang073 =	Gwall: Annilys Hotkey Dethol.
+	d_Lang074 =	Dod o hyd i orchymyn neu swyddogaeth
+	d_Lang075 =	Croeso i Crëwr Macro Pulover yn
+	d_Lang076 =	Dewiswch eich gosodiad a ffefrir
+	d_Lang077 =	Compact
+	d_Lang078 =	Default
+	d_Lang079 =	Gwiriwch am ddiweddariadau ar startup.
+	d_Lang080 =	Gallwch newid hyn mewn Opsiynau> Gosodiadau> Cyffredinol.
+	d_Lang081 =	Gallwch newid ac addasu cynlluniau yn y ddewislen View.
+	d_Lang082 =	Nid yw'r ffeil ganfuwyd!
+	d_Lang083 =	Mae ffeil wrth gefn wedi cael ei ddarganfod. Hoffech chi agor?
+	d_Lang084 =	Os gwelwch yn dda gadw eich newidiadau cyn amserlennu dasg.
+	d_Lang085 =	Goll datganiad "End Loop" yn Macro
+	d_Lang086 =	Coll "Diwedd Os" datganiad mewn Macro
+	d_Lang087 =	Sylwch fod BYDD newidiadau a wnaed i'r sgript tu allan i'r rhaglen NI AR EICH macros mewn unrhyw ffordd.
+		Mae'r nodwedd hon yn unig a olygir fel swyddogaeth allforio gyflym. Nid PMC wedi'i gynllunio i fod yn olygydd sgript AHK.
+	d_Lang088 =	Ceisiwch i redeg defnyddiwr cyffredin (nid gweinyddwr).
+	d_Lang089 =	Dim rhes a ddewiswyd!
+	d_Lang090 =	Os gwelwch yn dda, dewiswch rhes i roi neu gael gwared ar y grŵp.
+	d_Lang091 =	dull annilys
+	d_Lang092 =	eiconau bach
+	d_Lang093 =	eiconau mawr
+	d_Lang094 =	Mae'r nodwedd hon yn ei gwneud yn ofynnol Windows Vista neu uwch.
+	d_Lang095 =	Mae'r defnydd o ByRef yn achosi paramedr i ddod yn alias gyfer y newidyn a basiwyd yn y galwr. Mewn geiriau eraill, mae'r paramedr ac amrywiol y galwr yn cyfeirio at yr un cynnwys yn y cof.
+	d_Lang096 =	#NOME?
+		- Mae'n rhaid i werth Dychwelyd fod yn fynegiant.
+		- Gallwch ddefnyddio llinynnau, newidynnau, araeau a swyddogaethau. Efallai y byddwch hefyd gyfuno unrhyw un o'r rhai.
+		- I ddefnyddio llinynnau, yn eu amgáu mewn dyfynodau, e.e. .: "Canlyniad yw:" a + b.
+		- Os ydych am ddychwelyd canlyniadau ychwanegol, efallai y byddwch hefyd yn defnyddio ByRef mewn paramedrau.
+		#NOME?
+	d_Lang097 =	#NOME?
+		- Mae'r rhan fwyaf o ymadroddion AHK yn cael eu cefnogi.
+		- Gallwch ddefnyddio llinynnau, newidynnau, araeau a swyddogaethau.
+		- I ddefnyddio llinynnau, yn eu amgáu mewn dyfynodau, e.e. .: var = "yn".
+		- Datganiadau Lluosog yn cael eu cefnogi, e.e. .: var = "a" || INSTR (var, "b").
+	d_Lang098 =	Os yw un paramedr mae gwerth diofyn, mae'n ofynnol i'r paramedrau canlynol i gael un hefyd.
+	d_Lang099 =	Yr enw swyddogaeth yn cynnwys cymeriad anghyfreithlon.
+	d_Lang100 =	Nid yw Goto, Gosub a Label ganiateir mewn swyddogaethau.
+	d_Lang101 =	Swyddogaeth dyblyg.
+	d_Lang102 =	Digwyddodd gwall. Gallwch anfon e-bost at 'pulover@macrocreator.com' gyda'r ffeil:
+	d_Lang103 =	Ieithoedd newydd ffeil ar gael.
+	d_Lang104 =	Ni fydd y neges yn cael ei ddangos eto ar gyfer yr un diweddariad. Gallwch ei lawrlwytho o'r ddewislen Help> Gwirio am ddiweddariadau.
+	d_Lang105 =	Anfon ffeil yn llwyddiannus. Diolch!
+	d_Lang106 =	Ffeiliau Iaith ddiweddaru'n llwyddiannus.
+	d_Lang107 =	Methu cychwyn amserydd
+	d_Lang108 =	Mae'r holl swyddi yn cael eu cofrestru. Os gwelwch yn dda, dileu un ohonynt.
+	d_Lang109 =	Nid yw label targed yn bodoli.
+	d_Lang110 =	Cadarnhau ffeil cymryd lle
+	d_Lang111 =	Eisoes yn bodoli.
+		A fyddech yn hoffi i gymryd ei le?
+	d_Lang112 =	Cyfrif e-bost heb ei darganfod.
+	d_Lang113 =	Adrodd unrhyw wall.
+	d_Lang114 =	Bydd sgriptiau allforio (hyd yn oed os llunio) gyda'r swyddogaeth e-bost anfon (CDO) cael informations gweledol o gyfrifon e-bost a ddefnyddiwyd, gan gynnwys y PASSWORD. Nid oes gan y wybodaeth hon Mae'r ffeil prosiect Monitro'r Rhaglen.
+	d_Lang115 =	- Cynnal Alt i osod rhanbarth i'r un lleoliad.
+	d_Lang116 =	Trosglwyddo a gosod
+	d_Lang117 =	Ewch i lawrlwytho dudalen
+	d_Lang118 =	Lawrlwytho ... Os gwelwch yn dda, aros.
+		
+; 18. Start-up Tips		
+	Start_Tips =	Edrychwch ar y tiwtorialau fideo ar www.macrocreator.com/help i ddysgu am nodweddion llawer o Crëwr Macro Pulover yn.
+		I gael help ar gyfer gorchymyn penodol de-gliciwch unrhyw le ar orchymyn ffenestr i ddangos cysylltiadau i gymorth ar-lein.
+		Gallwch greu macros gan ddefnyddio'r Buttons Ardal Reoli yn y brif ffenestr neu ddefnyddio'r Cofiadur i gopïo eich gweithredoedd. Ewch i Opsiynau> Gosodiadau> Cofnodi i ddewis pa mewnbynnau yn cael eu cofnodi.
+		Defnyddiwch y bar chwilio neu'r "Dod o hyd i command" ffenestr i chwilio am orchmynion a swyddogaethau.
+		Hoffech chi helpu i atgyweiria cyfieithiad neu hyd yn oed greu un newydd? Ewch i Opsiynau> Gosodiadau> golygydd Iaith ac yn gwneud unrhyw gywiriadau yr ydych ei eisiau. gallwch rhagolwg ei unrhyw adeg. Cliciwch ar Cyflwyno i anfon eich adolygu. Teimlwch yn rhydd i gyflwyno unrhyw nifer o gywiriadau gymaint o weithiau ag y dymunwch.
+		Gwiriwch y "Keys Dal" opsiwn i fynd i mewn allweddi a chyfuniadau i'ch Macro yn uniongyrchol oddi wrth y brif ffenestr.
+		Rhowch allweddi a chyfuniadau yn y blwch Hotkey ar y gwaelod a phwyswch y botwm Mewnosod i ychwanegu nhw i'r dethol rhesi.
+		Defnyddiwch y botymau edit ar waelod y brif ffenestr i osod ailadrodd ac oedi i rhesi lluosog ar yr un pryd. Os na rhesi yn cael eu dewis y edit botymau yn berthnasol i bob rhesi yn y rhestr.
+		Mae bron pob gorchymyn a swyddogaeth yn derbyn ac allbynnau newidynnau. Gallwch aseinio eich newidynnau eu hunain yn y ffenestri Newidynnau (Gorchmynion> Newidynnau / Arrays). I'w defnyddio y tu mewn gorchmynion amgáu'r enw newidyn yn arwyddion y cant, e.e. .:% MyVar%. Yn swyddogaethau, eu defnyddio heb arwyddion y cant, e.e. .: SubStr (MyVar, 5).
+		Dde-Cliciwch yn unrhyw le mewn ffenestr gorchymyn i fewnosod newidynnau Built-In yn hawdd o restr.
+		I ddefnyddio'r recordydd ar gyfer tasgau cyflym yn mynd i Opsiynau> Gosodiadau> Cofnodi a edrych ar y "Rhestr Clear" ddewisiad. Yna cliciwch y botwm Cofnod yn y brif ffenestr ac yn defnyddio F10 i glirio'r Macro cyfredol a dechrau un newydd gyda'r un hotkey. Gallwch hefyd edrych ar yr opsiwn "Always Active" yn y prif ffenestr i gadw Cofnodi a Playback hotkeys gweithredol.
+		PMC yn cefnogi gwrthrychau a dulliau Array, yn union fel sgriptiau AutoHotkey. Gallwch greu araeau mewn sawl ffordd, y mwyaf arferol yn mynd at y ffenestr Newidynnau, gwirio'r "Mynegiant" opsiwn ac amgáu'r gwerthoedd mewn cromfachau, e.e. .: [10, 20, Var, "llinyn"]. Gallwch hefyd greu allweddi a enwyd, e.e. .: {Keya: Vara, "rhywfaint o allwedd": "Gwerth llinyn"}.
+		Swyddogaethau yn defnyddio AHK cystrawen mynegiant. Rhaid llinynnau llythrennol yn cael eu hamgáu mewn dyfynodau, ac nid oes angen arwyddion cant newidynnau. Gallwch ddefnyddio swyddogaethau eraill neu elfennau amrywiaeth fel paramedrau. E.e. .: StrReplace (MyVar, MyArray [ "A"], SubStr (OtherVar, 2, 3)).
+		Mae i ymadroddion yn cael eu cefnogi yn AutoHotkey Expression cystrawen. I ddefnyddio ymadrodd y tu mewn i paramedr gorchymyn, yn dechrau gyda arwydd y cant, e.e. .:% SubStr (Var, 5).
+		Mae'r "Loop" cownter ar y brig yn gosod cyfanswm nifer y dolenni ar gyfer y Macro dethol.
+		Gallwch olygu rhes gan dwbl-glicio neu drwy ddewis ei a chlicio ar y botymau Golygu ar y gwaelod. Gallwch olygu rhesi lluosog a ddewiswyd gan ddefnyddio'r opsiwn yn y edit bar wrth waelod.
+		Gallwch ddiffinio eich swyddogaethau ei hun mewn Swyddogaeth> Creu swyddogaeth ac yn eu defnyddio oddi wrth y ffenestr Swyddogaeth neu ymadroddion y tu mewn.
+		Gallwch ddiffinio globa newidynnau / lleol a sefydlog am Swyddogaethau Defnyddwyr Diffiniedig. newidynnau byd-eang a ddiffinnir yn Opsiynau> Gosodiadau> Defnyddiwr newidynnau byd-eang yn cael eu hystyried Super Byd-eang, a bydd bob amser fod yn swyddogaethau y tu mewn sydd ar gael, hyd yn oed pan ddiffinnir fel lleol.
+		Dewiswch un neu fwy o resi i ychwanegu gorchmynion newydd ar eu pennau.
+		Gallwch symud rhesi gyda cliciwch-a-llusgo.
+		Dwbl-gliciwch ar y Icon Hambwrdd at activate hotkeys neu stopio chwarae / cofnodi. Cliciwch arno gyda'r botwm canol yn ystod chwarae neu recordio i oedi.
+		Gallwch allforio eich Macros i sgriptiau AutoHotkey gwaith neu arunig executables o'r ffenestr Allforio.
+		Cofnodi a chwarae Llygoden gan ddefnyddio cyfesurynnau absoliwt ewch i Opsiynau> Gosodiadau> Rhagosodion a gosod Llygoden Cyfesurynnau i Screen.
+		Gallwch agor, copi, yn symud ddileu 'r ffeiliau a ffolderi gan ddefnyddio un o'r gorchmynion yn yr Ardaloedd Rheoli> Run / File / String / Misc. Mae llawer o orchmynion defnyddiol eraill fel StringReplace, InputBox a MouseGetPos.
+		Cofnodi Down ac Up gyflwr pob go allweddol i Opsiynau> Gosodiadau> Cofnodi a sieciwch "Dal cyflwr allweddol (Down / Up)" opsiwn.
+		Gallwch ddefnyddio hotkeys i gyflymu neu arafu Playback. Ewch i Opsiynau> Gosodiadau> Playback i osod allweddi a chyflymder.
+		I addasu ardal cipio gan ddefnyddio'r teclyn "Gwnewch Screenshot" mynd i Opsiynau> Gosodiadau> Screenshots a dewis "Gwasgwch Enter i Dal". Ar ôl tynnu Rheoli defnydd petryal + bysellau saeth i symud y dewis a Shift + bysellau saeth i newid maint iddo.
+		Quick Dewiswch: Dewiswch unrhyw res a chliciwch ar bennawd colofn i ddewis rhesi tebyg ar sail destun gell gan y golofn honno.
+		Cliciwch ar y Pennawd Mynegai Colofn i droi On / Off Help Marks and Lliwiau ar gyfer Cylchoedd a Datganiadau. Dwbl-Cliciwch ar y Pennawd Gweithredu Colofn i droi On / Off Mewnoliad ar gyfer Cylchoedd a Datganiadau.
+		Gallwch debug eich Macros ddefnyddio'r Hotkey Llawlyfr a'r opsiynau Chwarae yn y ddewislen Macro. Gallwch hefyd analluoga camau gweithredu drwy eu ddatddewis yn y rhestr Macro.
+		I wneud eich gwaith yn unig Macros ar rai ffenestr ewch i Macro> Cyd-destun sensitif Hotkeys.
+		Gallwch osod eich Newidynnau byd-eang eu hunain i gael eu llwytho ar startup ac i gael ei allforio. Ewch i Opsiynau> Gosodiadau> Defnyddiwr Newidynnau byd-eang i'w hychwanegu.
+		Gallwch chi redeg swyddogaethau datblygedig megis SubStr a RegExReplace o'r ffenestr Swyddogaethau (Gorchmynion> Swyddogaethau / Dulliau Array). Gallwch hefyd ddiffinio eich hun swyddogaethau neu swyddogaethau rhedeg o sgriptiau AutoHotkey allanol.
+		Gallwch gofnodi symudiadau llygoden gymharu â'r sefyllfa bresennol drwy gynnal CAPSLOCK yn ystod recordio (gallwch newid y allweddol ac yn ei gwneud yn toggle mewn Lleoliadau).
+		
+; 19. Tooltips		
+	A_List_TT =	Dewiswch Macro (Ctrl + 1 ~ 0)
+	AbortKey_TT =	Hotkey i roi'r gorau i chwarae
+	ActiveObj_TT =	Ceisio cysylltu â COM Gwrthrych Egnïol
+	AddAtt_TT =	Atodi ffeiliau
+	ApplyI_TT =	Gwneud cais
+	ApplyL_TT =	Mewnosod o Box (Mewnosod)
+	ApplyT_TT =	Gwneud cais
+	AutoKey_TT =	Hotkey i chwarae Macro
+	Client_TT =	Cyfesurynnau yn berthnasol i ardal y ffenestr weithredol yn gleient, nad yw'n cynnwys bar teitl y ffenestr, a bwydlen (os oes ganddo un safonol) a borderi.
+	Clip_TT =	Dros dro yn defnyddio Clipfwrdd i anfon testun.
+		Pan fydd y llawdriniaeth yn cael ei gwblhau, y sgript
+		Adfer y cynnwys gwreiddiol y gludfwrdd.
+		(Gadewch Text gwag i past cynnwys presennol)
+	CM_TT =	Sgrîn: Cyfesurynnau yn berthnasol i'r bwrdd gwaith (sgrin gyfan).
+		Ffenestr: Cyfesurynnau yn berthnasol i'r ffenestr weithredol.
+		Cleient: Cyfesurynnau yn berthnasol i ardal y ffenestr weithredol yn gleient, nad yw'n cynnwys bar teitl y ffenestr, a bwydlen (os oes ganddo un safonol) a borderi.
+	CmdFilter_TT =	Hidlo yn ôl math
+	CmdSort_TT =	Trefnu yn nhrefn yr wyddor
+	ColorPick_TT =	Cael Pixel ar Sgrîn
+	ComEvent_TT =	Mae'r gyfradd y mae keystrokes yn cael eu hanfon yn cael ei bennu gan oedi allweddol.
+	ComText_TT =	Pan nad yw yn y modd amrwd, y nodau canlynol
+		Yn cael eu trin fel addasyddion (modifiers hyn yn effeithio ar
+		Dim ond yr allwedd nesaf iawn):!, +, ^, #
+	CoordPixel_TT =	Cydlynu modd
+	DefaultMacro_TT =	Dewiswch ffeil i lwytho wrth gychwyn y rhaglen
+	EditPaste_TT =	Pastau Llinynnol yn y caret / mewnosoder sefyllfa
+		Mewn rheoli Golygu (nid yw hyn yn effeithio ar
+		Cynnwys y clipfwrdd).
+	Ex_AF_TT =	Sgipiau y dull ysgafn o activating ffenestr
+		Ac yn mynd yn syth at y dull grymus.
+	Ex_DH_TT =	Penderfynu a ffenestri anweledig yn "gweld" gan y sgript.
+	Ex_DT_TT =	Penderfynu a thestun anweledig mewn ffenestr yw "gweld" at ddibenion canfod y ffenestr. Mae hyn yn effeithio gorchmynion megis IfWinExist a WinActivate.
+	Ex_CM_TT =	Setiau cydlynu modd ar gyfer llygoden gorchmynion i fod yn berthynol i naill ai'r ffenestr weithredol neu'r sgrin.
+	Ex_EdScript_TT =	Agor mewn golygydd allanol
+	Ex_EdVars_TT =	Dewiswch newidynnau byd-eang i gael ei allforio.
+	Ex_ExecScript_TT =	Sgript rhedeg
+	Ex_HK_TT =	Lluoedd y defnydd o'r bachyn i weithredu pob
+		Neu ryw hotkeys bysellfwrdd.
+	Ex_IfDir_TT =	Yn creu hotkeys a hotstrings-cyd-destun sy'n sensitif yn dibynnu
+		Ar y math o ffenestr sydd yn weithredol neu'n bodoli.
+	Ex_IfDirType_TT =	Yn creu hotkeys a hotstrings-cyd-destun sy'n sensitif yn dibynnu
+		Ar y math o ffenestr sydd yn weithredol neu'n bodoli.
+	Ex_IN_TT =	Achosion y sgript i ymddwyn fel pe y nodwyd
+		Cynnwys ffeiliau yw bresennol yn union sefyllfa hon.
+	Ex_MD_TT =	Yn gosod yr oedi a fydd yn digwydd ar ôl
+		Bob symudiad llygoden neu cliciwch.
+	Ex_MT_TT =	Gosod y nifer mwyaf o pryd
+		Edafedd fesul hotkey neu hotstring.
+	Ex_NT_TT =	Analluogi'r penderfyniad i ddangos eicon hambwrdd.
+	Ex_PT_TT =	Cadw sgript yn rhedeg yn barhaol
+		(Hynny yw, nes bod y defnyddiwr yn cau neu ExitApp yn dod ar eu traws).
+	Ex_SB_TT =	Penderfynu pa mor gyflym y bydd sgript rhedeg (yn effeithio defnydd CPU).
+	Ex_SC_TT =	Yn gosod yr oedi a fydd yn digwydd ar ôl
+		Pob rheolaeth-addasu gorchymyn.
+	Ex_SI_TT =	Yn penderfynu a yw sgript yn cael ei ganiatáu i redeg eto pan mae eisoes yn rhedeg.
+	Ex_SK_TT =	Yn gosod yr oedi a fydd yn digwydd ar ôl pob
+		Anfon trawiadau drwy Anfon neu ControlSend.
+	Ex_SM_TT =	Gwneud Anfon gyfystyr â SendInput neu SendPlay yn hytrach na
+		R ball (SendEvent). Hefyd yn gwneud Cliciwch a MouseMove / Clic / Llusgwch
+		Defnyddiwch y dull a nodir.
+	Ex_ST_TT =	Setiau ymddygiad cyfateb y paramedr WinTitle o ran gorchmynion megis WinWait.
+	Ex_SW_TT =	Yn gosod yr oedi a fydd yn digwydd ar ôl
+		Pob gorchymyn windowing, megis WinActivate.
+	Ex_UV_TT =	Allforio newidynnau byd-eang.
+	Ex_WN_TT =	Galluogi neu analluogi rhybuddion ar gyfer cyflyrau penodol all fod yn arwydd gwall, fel typo neu ar goll "fyd-eang" datganiad.
+	ExpList_TT =	Double-Cliciwch i olygu
+	ExprLink2_TT 	- PEIDIWCH AMGÁU newidynnau mewn ARWYDDION PERCENT YMA.
+		- Mae'r rhan fwyaf o ymadroddion AHK yn cael eu cefnogi.
+		- Gallwch ddefnyddio llinynnau, newidynnau, araeau a swyddogaethau.
+		- I ddefnyddio llinynnau, yn eu amgáu mewn dyfynodau, e.e. .: var  "yn".
+		- Datganiadau Lluosog yn cael eu cefnogi, e.e. .: var  "a" || INSTR (var, "b").
+	ExprLink3_TT 	- PEIDIWCH AMGÁU newidynnau mewn ARWYDDION PERCENT YMA.
+		- Mae'r rhan fwyaf o ymadroddion AHK yn cael eu cefnogi.
+		- Gallwch ddefnyddio llinynnau, newidynnau, araeau a swyddogaethau.
+		- I ddefnyddio llinynnau, yn eu amgáu mewn dyfynodau, e.e. .: var = "yn".
+		- Datganiadau Lluosog yn cael eu cefnogi, e.e. .: var = "a" || INSTR (var, "b").
+	ExpView_TT =	Golygydd Uwch
+	ExpView2_TT =	Golygydd Uwch
+	Fast_TT =	Defnyddio dull cyflymach chwilio (a argymhellir)
+	HiddenWin_TT =	Penderfynu a ffenestri anweledig yn "gweld" gan y sgript.
+	HiddenText_TT =	Penderfynu a thestun anweledig mewn ffenestr yw "gweld" at ddibenion canfod y ffenestr. Mae hyn yn effeithio gorchmynion megis IfWinExist a WinActivate.
+	HScale_TT =	Raddfa uchder
+	IconN_TT =	Nifer y grŵp eicon
+	IfLVColor_TT =	Cliciwch i ddewis lliw
+	IncFiles_TT =	Cynnwys ffeiliau / Gwerthoedd
+	IncFolders_TT =	Cynnwys cyfeiriaduron (ffolderi) / Keys
+	InsertKey_TT =	Mewnosod keystroke (Ctrl + Mewnosod)
+	InsertKeyT_TT =	Mewnosod trawiadau
+	JoyKey_TT =	Bwyso botwm ar y ffon reoli
+	LoopLVColor_TT =	Cliciwch i ddewis lliw
+	LUntil_TT =	Yn berthnasol amod i barhad Loop neu I-ddolen.
+	ManKey_TT =	Hotkey i chwarae Macro "gam wrth gam"
+	MRel_TT =	Symudiadau gymharu â sefyllfa bresennol.
+		Neu os cânt eu defnyddio gyda Rheoli: Swydd perthynas i Reoli.
+	OSHK_TT =	Dewiswch Macro
+	OSHKEd_TT =	Dewiswch Macro
+	OSProgB_TT =	Arddangos Cynnydd Bar
+	OSTrans_TT =	Didreiddiad
+	PauseKey_TT =	Hotkey i oedi chwarae
+	PicPrev_TT =	Double-Click to open image
+	Raw_TT =	Y gorchymyn SendRaw dehongli pob gymeriadau llythrennol
+		Yn hytrach na chyfieithu {} Rhowch i ENTER keystroke,
+		^ C i Reoli-C, ac ati
+	RecKey_TT =	Backspace i glirio
+	RecNewKey_TT =	Backspace i glirio
+	Recurse_TT =	Recurse i mewn subdirectories (subfolders) / Subkeys
+	RefreshIEW_TT =	Rhestr Refresh
+	Relative_TT =	Cyfesurynnau yn berthnasol i'r ffenestr weithredol.
+	RelKey_TT =	Symudiadau Llygoden Cofnodion ac chleciau fel gwrthbwyso
+		O swydd flaenorol pan gynhelir.
+	ReptC_TT =	0 = anfeidrol
+	Reset_TT =	Cynnwys newidyn clir
+	RGB_TT =	Achosion lliw i'w ddehongli fel gwerth RGB yn lle BGR
+	Screen_TT =	Cyfesurynnau yn berthnasol i'r bwrdd gwaith (sgrin gyfan).
+	Screenshot_TT =	Gwneud Screenshot
+	SetText_TT =	Newidiadau destun rheolaeth.
+	SI_TT =	Mae'r gair FORCE sgipiau y blwch deialog ac mae'n disodli'r hen achos yn awtomatig,
+		Sydd yn debyg o ran effaith i'r gorchymyn Reload.
+		Mae'r gair ANWYBYDDU'R sgipiau y blwch deialog ac yn gadael yr hen achos yn rhedeg.
+		Mewn geiriau eraill, ymdrechion i lansio sgript eisoes yn rhedeg yn cael eu hanwybyddu.
+		Mae'r gair ODDI caniatáu i achosion lluosog o'r sgript i gydredeg.
+	SM_TT =	Digwyddiad: Dyma sy 'n rhagosodedig cychwyn ddefnyddir gan yr holl sgriptiau.
+		Mae'n defnyddio dull SendEvent gyfer Anfon, SendRaw, Cliciwch, a MouseMove / Clic / Llusgwch.
+		Mewnbwn: switshis i'r dull SendInput gyfer Anfon, SendRaw, Cliciwch, a MouseMove / Clic / Llusgwch.
+		InputThenPlay: Yr un peth â'r uchod ac eithrio bod yn hytrach na gostwng yn ôl i ddelw Digwyddiad
+		Pan SendInput ar gael, mae'n dychwelyd i Chwarae ddelw (isod). Mae hyn hefyd yn achosi
+		Gorchymyn SendInput ei hun i ddychwelyd i Chwarae modd pan SendInput ar gael.
+		Chwarae: switshis i'r dull SendPlay gyfer Anfon, SendRaw, Cliciwch, a MouseMove / Clic / Llusgwch.
+	ST_TT =	1: Teitl Ffenestr yn rhaid dechrau gyda'r WinTitle penodedig i fod yn gêm.
+		2: Gall teitl Ffenestr yn cynnwys WinTitle unrhyw le y tu mewn iddo i fod yn gêm.
+		3: Rhaid teitl Ffenestr yn cyfateb yn union WinTitle i fod yn gêm.
+		Regex: Newidiadau WinTitle, WinText, ExcludeTitle, a ExcludeText i fod mynegiadau rheolaidd.
+	TimeoutM_TT =	0 = anfeidrol
+	TitleMatch_TT =	1: Teitl Ffenestr yn rhaid dechrau gyda'r WinTitle penodedig i fod yn gêm.
+		2: Gall teitl Ffenestr yn cynnwys WinTitle unrhyw le y tu mewn iddo i fod yn gêm.
+		3: Rhaid teitl Ffenestr yn cyfateb yn union WinTitle i fod yn gêm.
+		Regex: Newidiadau WinTitle, WinText, ExcludeTitle, a ExcludeText i fod mynegiadau rheolaidd.
+	TitleSpeed_TT =	Fast: Mae hyn yn ymddygiad rhagosodedig. Efallai y perfformiad fod yn sylweddol well na Araf, ond efallai na fydd rhai elfennau WinText ar gyfer rhai mathau o ffenestri yn cael eu "gweld" gan yr amrywiol gorchmynion ffenestr.
+		Araf: A all fod yn llawer arafach, ond mae pob WinText posibl yn cael ei adfer o bob ffenestr fel gorchymyn windowing chwilio drwyddynt ar gyfer gêm. Ffenestr Spy yn datgelu pa rannau o'r testun Ffenestr (os oes un) ei gwneud yn ofynnol y modd araf.
+	ToggleC_TT =	Activate Cofnodi cymharol pan wladwriaeth allweddol ar.
+	TransC_TT =	Lliw tryloyw
+	VarCopyA_TT =	Copïwch cynnwys newidyn cyfredol
+	VarCopyB_TT =	Copïwch cynnwys newidyn cyfredol
+	VariatT_TT =	Sbectol Haul o amrywiad
+	WScale_TT =	Graddfa lled
+		
+; 20. Operators		
+	As_Oper_1 =	Neilltuo
+	As_Oper_2 =	Ychwanegu
+	As_Oper_3 =	Tynnwch
+	As_Oper_4 =	Lluoswch
+	As_Oper_5 =	Divide
+	As_Oper_6 =	Rhaniad llawr
+	As_Oper_7 =	Concatenate
+	As_Oper_8 =	Bitwise gynhwysol NEU
+	As_Oper_9 =	Bitwise A
+	As_Oper_10 =	Bitwise unigryw NEU
+	As_Oper_11 =	Sifft Right A
+	As_Oper_12 =	Sifft Chwith A
+	Co_Oper_1 =	Cyfartal
+	Co_Oper_2 =	Cyfartal (achos sensitif)
+	Co_Oper_3 =	Ddim yn gyfartal
+	Co_Oper_4 =	Mwy
+	Co_Oper_5 =	Llai
+	Co_Oper_6 =	Mwy neu gyfartal
+	Co_Oper_7 =	Llai neu'n hafal
+	Co_Oper_8 =	Yn (rhestr)
+	Co_Oper_9 =	Ddim mewn (rhestr)
+	Co_Oper_10 =	Yn cynnwys (rhestr)
+	Co_Oper_11 =	Nid yw cynnwys (rhestr)
+	Co_Oper_12 =	Rhwng (llinell 1) a (llinell 2)
+	Co_Oper_13 =	Ddim rhwng (llinell 1) a (llinell 2)
+	Co_Oper_14 =	A yw (math)
+	Co_Oper_15 =	Nid yw (math)
+		
+; 21. IE Commands Tips		
+	IE_Cmd_Index =	
+	Checked	Setiau neu adennill cyflwr y blwch siec neu fotwm radio.
+	Click	Efelychu, cliciwch ar y gwrthrych.
+	Focus	Gosod y ffocws ar y gwrthrych.
+	GoBack	Llywio yn ôl un eitem yn y rhestr hanes.
+	GoForward	Llywio ymlaen un eitem yn y rhestr hanes.
+	GoHome	Llywio i'r cartref presennol neu ddechrau dudalen.
+	GoSearch	Llywio i'r dudalen chwilio ar hyn o bryd.
+	Height	Setiau neu adennill uchder y gwrthrych.
+	Href	Setiau neu'n retrieves URL cyrchfan neu bwynt angori.
+	InnerHTML	Setiau neu adennill y HTML y gwrthrych.
+	InnerText	Setiau neu'n cael testun y gwrthrych.
+	Length	Setiau neu adennill y nifer o wrthrychau mewn casgliad.
+	LocationName	Gets y llwybr neu deitl dudalen gyfredol.
+	LocationURL	Gets URL y dudalen gyfredol.
+	Navigate	Llywio â URL neu lwybr.
+	OuterHTML	Setiau neu adennill y gwrthrych a'i gynnwys mewn HTML.
+	Quit	Yn cau y dudalen.
+	Refresh	Yn ail lwytho'r dudalen harddangos ar hyn o bryd.
+	SelectedIndex	Setiau neu adennill y mynegai yr opsiwn a ddewiswyd mewn gwrthrych dethol.
+	Src	Setiau neu retrieves URL gael eu llwytho gan y gwrthrych.
+	Stop	Canslo navigation arfaeth neu eu lawrlwytho.
+	Submit	Yn cyflwyno'r ffurflen.
+	Type	Setiau neu adennill y math cynnwys y gwrthrych.
+	Value	Gets neu yn gosod y gwerth y gwrthrych.
+	Width	Setiau neu adennill lled y gwrthrych.
+		
+; 22. COM Objects Tips		
+	COM_CLSID_Index =	
+	Excel.Application	Thrin taflenni Excel.
+	HTMLfile	Gellir ei ddefnyddio i ddarllen, ysgrifennu a rhyngweithio â HTML.
+	InternetExplorer.Application	Archwiliwch gwefannau.
+	MSXML2.DOMDocument.6.0	Parser XML.
+	MSXML2.XMLHTTP	Yn cynrychioli cais XML gan ddefnyddio HTTP.
+	Outlook.Application	Trin tasgau Outlook ac eitemau.
+	PowerPoint.Application	Yn trin cyflwyniadau PowerPoint.
+	Schedule.Service	Atodlen a golygu Windows Tasgau.
+	ScriptControl	Ddeinamig gweithredu VBScript neu JScript.
+	Scripting.Dictionary	Gwrthrych sy'n storio allwedd data, parau eitem.
+	Scripting.FileSystemObject	Ffolderi ffeiliau Mynediad
+	Shell.Application	Ffenestri Mynediad Explorer IE / tabiau; agored yn trin ffenestri.
+	Shell.Explorer	Gwreiddio rheolaeth Explorer / Porwr mewn GUI (Internet Explorer - porwr Trident).
+	SAPI.SpVoice	Testun-i-Lleferydd (TTS).
+	VBScript.RegExp	VBS Mynegiadau rheolaidd (gan gynnwys gêm byd-eang).
+	WMPlayer.OCX	Chwarae ffeiliau cyfryngau; rheoli Ymgorffori WMPlayer mewn GUI.
+	WinHttp.WinHttpRequest.5.1	Darparu swyddogaeth cleient HTTP syml, gan ganiatáu llawer mwy o reolaeth nag UrlDownloadToFile.
+	Winmgmt	Cael gwybodaeth system; Rheoli gwasanaethau ffenestri.
+	WScript.Shell	Amrywiol tasgau gweinyddol (llawer o dasgau AHK brodorol).
+	Word.Application	Thrin dogfennau Word.
+		
+; 23. AHK Commands Tips		
+	Ahk_Cmd_Index =	
+	Abs	Dychwelyd y gwerth absoliwt Rhif.
+	ACos	Dychwelyd y arccosine (y nifer y mae ei cosin yw Rhif) mewn radianau.
+	Array	Creu amrywiaeth cysylltiadol scriptable gydag allweddi cyfanrif.
+	Asc	Dychwelyd y cod gymeriad (rhif rhwng 1 a 255 (yn ANSI yn adeiladu) neu 65535 (yn Unicode yn adeiladu)) ar gyfer y nod cyntaf mewn Llinynnol.
+	ASin	Dychwelyd y arcsine (y nifer y mae ei sin yn Rhif) mewn radianau.
+	ATan	Dychwelyd y arctangent (y nifer y mae ei tangiad yn Rhif) mewn radianau.
+	BlockInput	Analluogi'r neu'n galluogi gallu'r defnyddiwr i ryngweithio gyda'r cyfrifiadur drwy bysellfwrdd a llygoden.
+	Break	Allanfeydd (Terfynu) dolen. Yn ddilys tu mewn i unrhyw fath o ddolen.
+	CDO	Anfon negeseuon e-bost gan ddefnyddio cyfrif ddiffinnir gan y defnyddiwr.
+	Ceil	Dychwelyd Nifer dalgrynnu i fyny i'r cyfanrif agosaf (heb unrhyw ôl-ddodiad .00).
+	Chr	Dychwelyd y nod sengl sy'n cyfateb i'r cod cymeriad a nodir gan Rhif.
+	Click	Cliciau botwm llygoden ar y cyfesurynnau penodedig. Gall hefyd dal i lawr botwm, trowch yr olwyn, neu symud.
+	Clipboard	Pastau testun o clipfwrdd.
+	ClipWait	Aros nes bod y clipfwrdd yn cynnwys data.
+	ComObjActive	Retrieves yn COM gwrthrych cofrestredig.
+	ComObjArray	Creu SAFEARRAY i'w defnyddio gyda COM.
+	ComObjConnect	Cysylltu ffynonellau digwyddiad COM gwrthrych i swyddogaethau gyda rhagddodiad penodol.
+	ComObjCreate	Creu COM gwrthrych.
+	ComObjEnwrap / ComObjUnwrap	Wraps / unwraps yn COM gwrthrych.
+	ComObjError	Galluogi neu analluogi hysbysiad o wallau COM.
+	ComObjFlags	Retrieves neu'n newid baneri sy'n rheoli ymddygiad COM lapio gwrthrych.
+	ComObjGet	Dychwelyd cyfeiriad at wrthrych a ddarperir gan elfen COM.
+	ComObjMissing	Creu "paramedr ar goll" gwrthrych i basio at ddull COM.
+	ComObjParameter	Lapio gwerth a math i basio fel baramedr at ddull COM.
+	ComObjQuery	Ymholiadau gwrthrych COM am rhyngwyneb neu wasanaeth.
+	ComObjType	Retrieves deipio gwybodaeth o COM gwrthrych.
+	ComObjValue	Adennill y gwerth neu'r pwyntydd storio mewn gwrthrych COM deunydd lapio.
+	Continue	Sgipiau gweddill y iteriad dolen presennol ac yn dechrau un newydd. Yn ddilys tu mewn i unrhyw fath o ddolen.
+	Control	Gwneud amrywiaeth o newidiadau i reolaeth.
+	ControlClick	Anfon botwm llygoden neu ddigwyddiad olwyn y llygoden i reoli.
+	ControlEditPaste	Pastau Llinynnol yn y caret / mewnosoder sefyllfa mewn rheolaeth Golygu (nid yw hyn yn effeithio ar gynnwys y clipfwrdd).
+	ControlFocus	Setiau ffocws mewnbynnu i reoli a roddir ar ffenestr.
+	ControlGet	Adennill gwahanol fathau o wybodaeth am reoli.
+	ControlGetFocus	Adennill pa rheolaeth ar y ffenestr targed wedi ffocws mewnbynnu, os o gwbl.
+	ControlGetPos	Adfer y sefyllfa a maint o reolaeth.
+	ControlGetText	Retrieves testun o reolaeth.
+	ControlMove	Symud neu newid maint rheolaeth.
+	ControlSend / ControlSendRaw 	Anfon keystrokes ffug i ffenestr neu reoli.
+	ControlSetText	Newidiadau destun rheolaeth.
+	CoordMode	Setiau cydlynu dull ar gyfer gwahanol gorchmynion i fod yn berthynol i naill ai'r ffenestr weithredol neu'r sgrin.
+	Cos	Dychwelyd y cosin trigonometrig Rhif.
+	Delete	Cael gwared parau allweddol-werth o wrthrych.
+	DllCall	Galwadau swyddogaeth y tu mewn i DLL, megis swyddogaeth API safonol Windows.
+	Drive	Ejects / retracts yr hambwrdd mewn CD neu DVD cathrena, neu yn gosod label gyfrol ymgyrch yn.
+	DriveGet	Adennill gwahanol fathau o wybodaeth am ymgyrch (au) y cyfrifiadur.
+	DriveSpaceFree	Adennill y lle ar y ddisg rhad ac am ddim o ymgyrch, yn Megabeit.
+	Else	Mae hwn yn dynodi y gorchymyn (au) i berfformio os yw IF-ddatganiad gwerthuso i ANWIR. Pan fydd mwy nag un gorchymyn yn bresennol, yn eu amgáu mewn bloc (braces).
+	EnvAdd	Setiau newidyn at y swm o ei hun yn ogystal â'r gwerth a roddir (gall hefyd adio neu dynnu amser o werth dyddiad-amser). Gyfystyr â: Var + = Gwerth.
+	EnvDiv	Setiau newidyn i hun yn rhannu gan y gwerth a roddir. Gyfystyr â: Var / = Gwerth.
+	EnvGet	Adennill newidyn amgylchedd.
+	EnvMult	Setiau newidyn i hun amserau 'r gwerth penodol. Gyfystyr â: Var * = Gwerth.
+	EnvSet	Ysgrifennu gwerth i newidyn a gynhwysir yn yr amgylchedd.
+	EnvSub	Setiau newidyn i hun minws 'r gwerth penodol (gall hefyd yn cymharu gwerthoedd dyddiad-amser). Gyfystyr â: Var - = Gwerth.
+	EnvUpdate	Yn rhoi gwybod i'r OS a phob cais yn rhedeg y newidyn (au) yr amgylchedd wedi newid.
+	ExitApp	Yn dod i ben y sgript yn ddiamod.
+	Exp	Ffurflenni e (sydd tua 2.71828182845905) godi i bŵer nfed.
+	Expression	Yn perfformio un neu fwy o lawdriniaethau ar gyfres o newidynnau, llinynnau llythrennol, a / neu rifau llythrennol.
+	FileAppend	Yn ysgrifennu testun i ddiwedd ffeil (cyntaf greu'r ffeil, os oes angen).
+	FileCopy	Copïau un neu fwy o ffeiliau.
+	FileCopyDir	Mae copïau ffolder ynghyd â'i holl is-ffolderi a ffeiliau (yn debyg i xcopy).
+	FileCreateDir	Creu ffolder.
+	FileCreateShortcut	Creu llwybr byr (.lnk) ffeil.
+	FileDelete	Dileu un neu fwy o ffeiliau.
+	FileGetAttrib	Adroddiadau a yw ffeil neu ffolder yn cael ei darllen yn unig, cudd, ac ati
+	FileGetShortcut	Retrieves gwybodaeth am a shortcut (.lnk) ffeil, megis ei ffeil darged.
+	FileGetSize	Adennill y maint o ffeil.
+	FileGetTime	Adennill y stamp datetime o ffeil neu ffolder.
+	FileGetVersion	Adennill y fersiwn o'r ffeil.
+	FileMove	Symud neu ailenwi un neu fwy o ffeiliau.
+	FileMoveDir	Yn symud ffolder ynghyd â'r holl ei is-ffolderi a ffeiliau. Gall hefyd ail-enwi'r ffolder.
+	FileOpen	Yn darparu gwrthrych-oriented ffeil I / O.
+	FileRead	Yn darllen cynnwys ffeil i mewn newidyn.
+	FileReadLine	Yn darllen y llinell a nodir o ffeil ac yn storio testun mewn newidyn.
+	FileRecycle	Anfon ffeil neu gyfeiriadur i'r bin ailgylchu, os yn bosibl.
+	FileRecycleEmpty	Gwagio'r bin ailgylchu.
+	FileRemoveDir	Dileu'r ffolder.
+	FileSelectFile	Yn dangos deialog safonol sy'n caniatáu i'r defnyddiwr i agor neu gadw ffeil (iau).
+	FileSelectFolder	Yn dangos deialog safonol sy'n caniatáu i'r defnyddiwr i ddewis plygell.
+	FileSetAttrib	Newidiadau priodoleddau un neu fwy o ffeiliau neu ffolderi. Cardiau Gwyllt yn cael eu cefnogi.
+	FileSetTime	Newidiadau stamp datetime o un neu fwy o ffeiliau neu ffolderi. Cardiau Gwyllt yn cael eu cefnogi.
+	Floor	Dychwelyd Nifer dalgrynnu i lawr i'r cyfanrif agosaf (heb unrhyw ôl-ddodiad .00).
+	For	Ailddarllediadau cyfres o orchmynion unwaith ar gyfer pob pâr allweddol-werth mewn gwrthrych.
+	Format	Fformatau nifer amrywiol o werthoedd mewnbwn yn ôl fformat llinyn.
+	FormatTime	Yn trawsnewid stamp amser YYYYMMDDHH24MISS i mewn i'r fformat dyddiad / amser penodedig.
+	Func	Retrieves mae cyfeiriad at swyddogaeth.
+	GetKeyName / GetKeyVK / GetKeySC	Yn adfer enw neu destun, cod allweddol rhithwir neu cod sgan o allwedd.
+	GetKeyState	Gwiriadau os allwedd bysellfwrdd neu fotwm / ffon reoli llygoden i lawr neu i fyny. Hefyd retrieves statws ffon reoli.
+	Gosub	Neidio at y label penodol ac yn parhau hyd nes y gweithredu Dychwelyd ei dod ar eu traws.
+	Goto	Neidio at y label penodol ac mae'n parhau gweithredu.
+	GroupActivate	Activates y ffenestr nesaf mewn grŵp ffenestr sy'n cael ei ddiffinio gyda GroupAdd.
+	GroupAdd	Yn ychwanegu manyleb ffenestr i grŵp ffenestr, gan greu y grŵp os oes angen.
+	GroupClose	Yn cau y ffenestr weithredol os oedd dim ond actifadu gan GroupActivate neu GroupDeactivate. Yna mae'n activates y ffenestr nesaf yn y gyfres. Gall hefyd gau pob ffenestr mewn grŵp.
+	GroupDeactivate	Yn debyg i GroupActivate heblaw activates y ffenestr nesaf nid yn y grŵp.
+	HasKey	Dychwelyd wir os Allweddol yn gysylltiedig â gwerth.
+	If	Pennu'r gorchymyn (au) i berfformio os yw cymhariaeth o newidyn i werth mae evalutes i WIR. Pan fydd mwy nag un gorchymyn yn bresennol, yn eu amgáu mewn bloc (braces).
+	If (expression)	Mae hwn yn dynodi y gorchymyn (au) i berfformio os mynegiant yn gwerthuso i WIR.
+	If A_Index	Gwiriadau os yw'r iteriad ddolen bresennol matchs yn nodi nifer.
+	If Clipboard	Gwiriadau os yw'r testun Clipfwrdd yn matchs llinyn penodol.
+	If ErrorLevel	Gwiriadau os ddelwedd neu picsel penodol Daethpwyd o hyd yn y sgrîn.
+	If var [not] between	Gwiriadau a yw cynnwys newidyn yw rhifiadol neu yn nhrefn yr wyddor rhwng dau werth (yn gynhwysol).
+	If var [not] in / If var [not] contains MatchList	Gwiriadau a yw cynnwys newidyn yn cyfateb un o'r eitemau mewn rhestr.
+	If var is [not] type	Gwiriadau a yw cynnwys newidyn yw rhifol, priflythyren, ac ati
+	IfEqual / IfNotEqual	Cymharu newidyn at werth ar gyfer cydraddoldeb. Gyfystyr â: os Var = Werth | os Var <> Gwerth.
+	IfExist / IfNotExist / FileExist	Gwiriadau dros fodolaeth ffeil neu ffolder.
+	IfGreater / IfGreaterOrEqual	Cymharu newidyn at werth. Gyfystyr â: os Var> Gwerth | os Var> = Gwerth.
+	IfInString / IfNotInString	Gwiriadau os newidyn yn cynnwys y llinyn penodedig.
+	IfLess / IfLessOrEqual	Cymharu newidyn at werth. Gyfystyr â: os Var <Gwerth | os Var <= Gwerth.
+	IfMsgBox	Gwiriadau sy'n fotwm ei wthio gan y defnyddwyr yn ystod y gorchymyn MsgBox mwyaf diweddar.
+	IfWinActive / IfWinNotActive	Gwiriadau os bydd y ffenestr a bennir yn bodoli ac yn weithredol ar hyn o bryd (yn bennaf).
+	IfWinExist / IfWinNotExist	Gwiriadau os bydd y ffenestr a bennir yn bodoli.
+	ImageSearch	Chwiliadau rhanbarth y sgrin ar gyfer delwedd.
+	IniDelete	Dileu gwerth o fformat ffeil .ini safonol.
+	IniRead	Darllen gwerth o fformat ffeil .ini safonol.
+	IniWrite	Ysgrifennu gwerth i fformat ffeil .ini safonol.
+	Input	Aros ar gyfer y defnyddiwr i deipio llinyn (heb ei gefnogi ar Windows 9x: yw'n gwneud dim).
+	InputBox	Arddangosfeydd blwch mewnbwn i ofyn i'r defnyddiwr i fynd i linyn.
+	InsertAt	Mewnosod un neu fwy o werthoedd mewn safle roi o fewn amrywiaeth llinol.
+	InStr	Chwiliadau ar gyfer digwyddiad penodol o linyn, o'r chwith neu i'r dde.
+	KeyWait	Waits am allwedd neu botwm y llygoden / ffon reoli i gael eu rhyddhau neu ei wasgu i lawr.
+	Label	Mae label yn nodi llinell o god, a gellir ei ddefnyddio fel targed Goto neu i ffurfio is-reolwaith.
+	Length	Dychwelyd hyd amrywiaeth llinellol yn dechrau am sefyllfa 1.
+	ListVars	Arddangosfeydd newidynnau y sgript yn: eu henwau a'u cynnwys ar hyn o bryd.
+	Ln	Dychwelyd y logarithm naturiol (sylfaen e) Rhif.
+	LoadPicture	Llwythi llun o ffeil ac yn dychwelyd Didfap neu eicon handlen.
+	Log	Dychwelyd y logarithm (sylfaen 10) Rhif.
+	Loop (files & folders)	Adennill y ffeiliau neu ffolderi penodedig, un ar y tro.
+	Loop (normal) 	Perfformio cyfres o orchmynion dro ar ôl tro: naill ai y nifer penodol o weithiau neu hyd nes egwyl yn dod ar eu traws.
+	Loop (parse a string)	Retrieves substrings (caeau) o linyn, un ar y tro.
+	Loop (read file contents)	Adennill y llinellau mewn ffeil destun, un ar y tro (yn perfformio'n well na FileReadLine).
+	Loop (registry)	Adennill cynnwys y subkey gofrestrfa penodedig, un eitem ar y tro.
+	MaxIndex	Dychwelyd yr allwedd cyfanrif uchaf.
+	MinIndex	Dychwelyd yr allwedd cyfanrif isaf.
+	Mod	Modwlo. Dychwelyd y gweddill pan Difidend wedi'i rannu gan rhannydd.
+	MouseGetPos	Yn adfer y sefyllfa bresennol y cyrchwr llygoden, ac yn ddewisol sy'n ffenestr a rheoli ei fod yn hofran dros.
+	MsgBox	Yn dangos y testun a bennir mewn ffenestr fechan sy'n cynnwys un neu fwy o botymau (fel Ie a Na).
+	NumGet	Dychwelyd y rhif deuaidd cael ei storio yn y cyfeiriad a nodir + gwrthbwyso.
+	NumPut	Stores Nifer mewn fformat deuaidd yn y cyfeiriad a nodir + gwrthbwyso ac yn dychwelyd y cyfeiriad ar y dde o'r eitem yn unig ysgrifenedig.
+	Object	Creu amrywiaeth cysylltiadol scriptable.
+	Ord	Dychwelyd y gwerth trefnolion (cod cymeriad rhifol) y nod cyntaf mewn Llinynnol.
+	OutputDebug	Anfon llinyn i'r debugger (os o gwbl) i'w harddangos.
+	Parameter	Yn ychwanegu baramedr i'r swyddogaeth.
+	Pause	Seibiau edau cyfredol y sgript yn.
+	PixelGetColor	Adennill y lliw y picsel yn y x penodedig, y cyfesurynnau.
+	PixelSearch	Chwiliadau rhanbarth y sgrin am picsel o'r lliw penodedig.
+	Pop	Cael gwared ar ac yn dychwelyd yr elfen amrywiaeth diwethaf.
+	PostMessage	Lleoedd neges yn y ciw neges ffenestr neu reoli.
+	Process	Perfformio un o'r gweithrediadau canlynol ar broses: gwiriadau os yw'n bodoli; yn newid ei blaenoriaeth; ei gau; aros am iddo gau.
+	Progress	Creu neu'n diweddaru ffenestr sy'n cynnwys bar cynnydd.
+	Push	Appends gwerthoedd i ddiwedd arae.
+	Random	Yn cynhyrchu rhif ffug-hap.
+	RegDelete	Dileu yn subkey neu werth gan y gofrestrfa.
+	RegExMatch	Yn penderfynu a yw llinyn yn cynnwys patrwm (mynegiant rheolaidd).
+	RegExReplace	Yn disodli digwyddiadau o batrwm (mynegiant rheolaidd) tu mewn i linyn.
+	RegRead	Darllen werth gan y gofrestrfa.
+	RegWrite	Yn ysgrifennu gwerth at y gofrestrfa.
+	RemoveAt	Cael gwared ar eitemau o'r sefyllfa a roddir mewn amrywiaeth llinol.
+	Return	Ffurflenni o is-reolwaith y mae gweithredu wedi neidio o'r blaen trwy swyddogaeth-alwad, Gosub, activation Hotkey, GroupActivate, neu ddulliau eraill.
+	Round	Os N yn cael ei hepgor neu 0, Nifer ei dalgrynnu i'r cyfanrif agosaf. Os N yw rhif positif, Nifer ei dalgrynnu i lle degol N. Os N yn negyddol, Rhif ei dalgrynnu gan digidau N i'r chwith y pwynt degol.
+	Run	Yn rhedeg rhaglen allanol.
+	RunAs	Mae hwn yn dynodi cyfres o gymwysterau defnyddiwr i'w ddefnyddio ar gyfer pob defnydd dilynol o Run a RunWait. Ei gwneud yn ofynnol Windows 2000 / XP neu ddiweddarach.
+	RunWait	Yn rhedeg rhaglen allanol ac aros nes ei fod yn dod i ben.
+	Send / SendRaw	Anfon keystrokes ffug a llygoden chleciau i ffenestr weithredol.
+	SendLevel	Rheolaethau pa ddigwyddiadau bysellfwrdd a llygoden artiffisial yn cael eu hanwybyddu gan hotkeys a hotstrings.
+	SendMessage	Yn anfon neges at ffenestr neu reolaeth ac aros am gydnabyddiaeth.
+	SetCapslockState	Setiau cyflwr yr allwedd CAPSLOCK. Gall hefyd yn gorfodi yr allwedd i aros ymlaen neu i ffwrdd.
+	SetKeyDelay	Yn gosod yr oedi a fydd yn digwydd ar ôl pob keystroke a anfonwyd gan Anfon neu ControlSend.
+	SetNumlockState	Setiau cyflwr y allweddell numlock. Gall hefyd yn gorfodi yr allwedd i aros ymlaen neu i ffwrdd.
+	SetRegView	Yn caniatáu gorchmynion registry mewn sgript 32-bit i gael mynediad i'r 64-bit farn cofrestrfa ac i'r gwrthwyneb.
+	SetScrollLockState	Setiau cyflwr yr allwedd Scrolllock. Gall hefyd yn gorfodi yr allwedd i aros ymlaen neu i ffwrdd.
+	SetTimer	Yn achosi is-reolwaith yn cael ei lansio yn awtomatig ac dro ar ôl tro mewn cyfnod amser penodedig.
+	Shutdown	Cau i lawr, restarts, neu logiau oddi ar y system.
+	Sin	Dychwelyd y sin trigonometrig Rhif.
+	Sleep	Disgwyl y swm a bennir o amser cyn parhau.
+	Sort	Trefnu cynnwys newidyn yn nhrefn yr wyddor, rhifiadol, neu orchymyn hap (cael gwared dyblygu ddewisol).
+	SoundBeep	Allyrru dôn gan y siaradwr PC.
+	SoundGet	Retrieves lleoliadau amrywiol o ddyfais sain (meistr mud, meistr gyfrol, ac ati)
+	SoundGetWaveVolume	Adennill y gyfrol allbwn tonnau o ddyfais sain.
+	SoundPlay	Yn chwarae sain, fideo, neu fath arall ffeilia a gefnogir.
+	SoundSet	Newidiadau lleoliadau amrywiol o ddyfais sain (meistr mud, meistr gyfrol, ac ati)
+	SoundSetWaveVolume	Newidiadau cyfaint allbwn tonnau ar gyfer dyfais sain.
+	SplashImage	Creu neu'n diweddaru ffenestr sy'n cynnwys delwedd JPG, GIF, BMP neu.
+	SplashTextOff	Yn cau y ffenestr uchod.
+	SplashTextOn	Creu customizable naidlen testun.
+	SplitPath	Gwahanu enw ffeil neu URL i mewn i ei enw, cyfeiriadur, estyniad, a gyrru.
+	Sqrt	Dychwelyd ail isradd Rhif.
+	StatusBarGetText	Retrieves y testun o reolaeth bar statws safonol.
+	StatusBarWait	Disgwyl hyd at far statws ffenestr yn cynnwys llinyn penodol.
+	StringGetPos	Adennill sefyllfa'r linyn penodol o fewn llinyn.
+	StringLeft	Retrieves nifer o gymeriadau o ochr chwith llinyn.
+	StringLen / StrLen	Adennill y cyfrif o faint o gymeriadau sydd yn llinyn.
+	StringLower	Trosi llinyn i lythrennau bach.
+	StringMid / SubStr	Retrieves un neu fwy o gymeriadau o'r sefyllfa a nodir yn llinyn.
+	StringReplace / StrReplace	Disodli'r linyn penodedig gydag llinyn newydd.
+	StringRight	Retrieves nifer o gymeriadau o ochr dde llinyn.
+	StringSplit / StrSplit	Gwahanu llinyn i mewn i amrywiaeth o substrings ddefnyddio'r amffinyddion penodedig.
+	StringTrimLeft	Cael gwared ar nifer o gymeriadau o ochr chwith llinyn.
+	StringTrimRight	Cael gwared ar nifer o gymeriadau o ochr dde llinyn.
+	StringUpper	Trosi llinyn i priflythyren.
+	StrPut / StrGet	Mae copïau llinyn i neu o gyfeiriad cof, dewisol drosi rhwng tudalennau cod.
+	SysGet	Retrieves cydraniad sgrin, aml-monitro info, dimensiynau o wrthrychau system, ac eiddo system arall.
+	Tan	Dychwelyd y tangiad trigonometrig Rhif.
+	ToolTip	Creu ffenestr bob amser-ar-top yn unrhyw le ar y sgrin.
+	Transform	Cyflawni swyddogaethau amrywiol mathemateg, gweithrediadau bitwise, a thasgau megis ASCII trosi / Unicode.
+	TrayTip	Creu balŵn ffenestr neges ger yr eicon hambwrdd. Ei gwneud yn ofynnol Windows 2000 / XP neu ddiweddarach.
+	Trim / LTrim / RTrim	Thrimiau cymeriadau rhai o'r dechrau a / neu pen llinyn.
+	Until	Yn berthnasol amod i barhad Loop neu I-ddolen.
+	UrlDownloadToFile	Lawrlwytho ffeil oddi ar y Rhyngrwyd.
+	UserFunction	Creu strwythur Swyddogaeth.
+	Variable	Aseinio'r gwerth a bennwyd at newidyn.
+	While	Perfformio cyfres o orchmynion dro ar ôl tro nes bod y mynegiant penodol yn gwerthuso i ffug.
+	WinActivate	Activates y ffenestr penodol (yn ei gwneud yn bennaf).
+	WinActivateBottom	Yr un peth â'r WinActivate heblaw ei fod yn activates y bottommost (lleiaf gweithgar yn ddiweddar) cyfateb ffenestr yn hytrach na'r topmost.
+	WinActive	Dychwelyd y ID Unigryw (HWND) o'r ffenestr weithredol os yw'n cyfateb i'r meini prawf penodedig.
+	WinClose	Yn cau y ffenestr penodedig.
+	WinExist	Gwiriadau os bydd y ffenestr a bennir yn bodoli.
+	WinGet	Retrieves ID y ffenestr a bennir yn unigryw, proses ID, enw proses, neu restr o ei reolaethau. Gall hefyd adfer rhestr o'r holl ffenestri cyfateb i'r meini prawf penodedig.
+	WinGetClass	Retrieves enw'r dosbarth ffenestr a bennir yn.
+	WinGetPos	Adfer y safle a maint y ffenestr penodedig.
+	WinGetText	Retrieves testun o'r ffenestr penodedig.
+	WinGetTitle	Adennill teitl y ffenestr penodedig.
+	WinHide	Yn cuddio'r ffenestr penodedig.
+	WinHttpDownloadToFile	Lawrlwythiadau un neu fwy o ffeiliau oddi ar y Rhyngrwyd.
+	WinKill	Grymoedd y ffenestr penodol i gau.
+	WinMaximize	Enlarges y ffenestr a bennir at ei maint mwyaf.
+	WinMenuSelectItem	Ennyn eitem dewislen o'r bar dewislen y ffenestr penodedig.
+	WinMinimize	Dymchwel y ffenestr a bennir mewn i botwm ar y bar tasgau.
+	WinMinimizeAll	Lleihau'r bob ffenestr.
+	WinMinimizeAllUndo	Gwrthdroi effaith WinMinimizeAll flaenorol.
+	WinMove	Newidiadau sefyllfa a / neu maint y ffenestr penodedig.
+	WinRestore	Unminimizes neu unmaximizes y ffenestr penodedig os yw'n cael ei leihau neu eithaf.
+	WinSet	Gwneud amrywiaeth o newidiadau i'r ffenestr penodol, megis "bob amser ar ei ben" a thryloywder.
+	WinSetTitle	Newidiadau teitl y ffenestr penodedig.
+	WinShow	Unhides y ffenestr penodedig.
+	WinWait	Aros nes bod y ffenestr a bennir yn bodoli.
+	WinWaitActive	Aros nes bod y ffenestr a bennir yn weithredol.
+	WinWaitClose	Aros hyd nes nad yw'r ffenestr penodol yn bodoli.
+	WinWaitNotActive	Aros hyd nes nad yw'r ffenestr penodedig yn weithredol.
+	Zip / UnZip	Gywasgu neu uncompress un neu fwy o ffeiliau sip.
+	WinExist	Gwiriadau os bydd y ffenestr a bennir yn bodoli.
+	WinGet	Retrieves ID y ffenestr a bennir yn unigryw, proses ID, enw proses, neu restr o ei reolaethau. Gall hefyd adfer rhestr o'r holl ffenestri cyfateb i'r meini prawf penodedig.
+	WinGetClass	Retrieves enw'r dosbarth ffenestr a bennir yn.
+	WinGetPos	Adfer y safle a maint y ffenestr penodedig.
+	WinGetText	Retrieves testun o'r ffenestr penodedig.
+	WinGetTitle	Adennill teitl y ffenestr penodedig.
+	WinHide	Yn cuddio'r ffenestr penodedig.
+	WinHttpDownloadToFile	Lawrlwythiadau un neu fwy o ffeiliau oddi ar y Rhyngrwyd.
+	WinKill	Grymoedd y ffenestr penodol i gau.
+	WinMaximize	Enlarges y ffenestr a bennir at ei maint mwyaf.
+	WinMenuSelectItem	Ennyn eitem dewislen o'r bar dewislen y ffenestr penodedig.
+	WinMinimize	Dymchwel y ffenestr a bennir mewn i botwm ar y bar tasgau.
+	WinMinimizeAll	Lleihau'r bob ffenestr.
+	WinMinimizeAllUndo	Gwrthdroi effaith WinMinimizeAll flaenorol.
+	WinMove	Newidiadau sefyllfa a / neu maint y ffenestr penodedig.
+	WinRestore	Unminimizes neu unmaximizes y ffenestr penodedig os yw'n cael ei leihau neu eithaf.
+	WinSet	Gwneud amrywiaeth o newidiadau i'r ffenestr penodol, megis "bob amser ar ei ben" a thryloywder.
+	WinSetTitle	Newidiadau teitl y ffenestr penodedig.
+	WinShow	Unhides y ffenestr penodedig.
+	WinWait	Aros nes bod y ffenestr a bennir yn bodoli.
+	WinWaitActive	Aros nes bod y ffenestr a bennir yn weithredol.
+	WinWaitClose	Aros hyd nes nad yw'r ffenestr penodol yn bodoli.
+	WinWaitNotActive	Aros hyd nes nad yw'r ffenestr penodedig yn weithredol.
+	Zip / UnZip	Gywasgu neu uncompress un neu fwy o ffeiliau sip.
