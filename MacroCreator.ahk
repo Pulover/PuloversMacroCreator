@@ -10404,7 +10404,7 @@ If (A_ThisLabel != "CmdFind")
 	Gui, 34:Add, Text, -Wrap R1 w220, %d_Lang072%
 	Gui, 34:Font
 	Gui, 34:Font,, Tahoma
-	Gui, 34:Add, Text, -Wrap R1 w220, %d_Lang069%
+	Gui, 34:Add, Text, w220, %d_Lang069%
 	Gui, 34:Font
 	Gui, 34:Add, Button, Section -Wrap xm+60 W75 H23 gDonatePayPal, %d_Lang070%
 	Gui, 34:Add, Button, -Wrap ys W75 H23 gTipsClose, %d_Lang071%
