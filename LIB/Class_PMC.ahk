@@ -57,6 +57,7 @@
 		Gui, 1:+Disabled
 		Gui, chMacro:Default
 		StringSplit, SelectedFile, SelectedFile, %DL%, `r
+		Critical
 		Loop, %SelectedFile0%
 		{
 			If InStr(FileExist(SelectedFile%A_Index%), "D")
@@ -98,6 +99,7 @@
 			,	Labels .= ((Opt[7] != "") ? Opt[7] : "Macro" TabCount) "|"
 			,	LVManager.SetHwnd(ListID%TabCount%), LVManager.ClearHistory()
 			,	LVManager.SetGroups(PmcGroups[A_Index]), LVManager.Add()
+				OutputDebug, PMCAdd %A_LineNumber%: %A_ThisLabel%
 			}
 		}
 		If (TabCount = 0)
