@@ -595,21 +595,25 @@ SelectByFilter(Act, Det, Tim, Del, Typ, Tar, Win, Com, Col, Case)
 	return Found
 }
 
-class IfWin
+class IfCondition
 {
-	Active(Win)
+	Expression(Expr)
+	{
+		return Eval(Expr)[1]
+	}
+	WinActive(Win)
 	{
 		return WinActive(Win)
 	}
-	NotActive(Win)
+	WinNotActive(Win)
 	{
 		return !WinActive(Win)
 	}
-	Exist(Win)
+	WinExist(Win)
 	{
 		return WinExist(Win)
 	}
-	NotExist(Win)
+	WinNotExist(Win)
 	{
 		return !WinExist(Win)
 	}
@@ -655,8 +659,8 @@ ActivateHotkeys(Rec := "", Play := "", Speed := "", Stop := "", Pause := "", Joy
 	{
 		Loop, %TabCount%
 		{
-			#If !WinActive("ahk_id" PMCWinID) && IfWin[IfDirectContext](IfDirectWindow)
-			Hotkey, If, !WinActive("ahk_id" PMCWinID) && IfWin[IfDirectContext](IfDirectWindow)
+			#If !WinActive("ahk_id" PMCWinID) && IfCondition[IfDirectContext](IfDirectWindow)
+			Hotkey, If, !WinActive("ahk_id" PMCWinID) && IfCondition[IfDirectContext](IfDirectWindow)
 			If (ListCount%A_Index% = 0)
 				continue
 			If (o_AutoKey[A_Index] != "")

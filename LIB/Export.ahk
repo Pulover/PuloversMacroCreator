@@ -78,14 +78,14 @@
 			RowData .= "`n{"
 			StringSplit, FuncVariables, Window, /, %A_Space%
 			If (FuncVariables1 != "")
-				RowData .= "`n" ((Target = "Local") ? "Global " : "Local ") . FuncVariables1
-			Else If (Target = "Global")
-				RowData .= "`nGlobal"
+				RowData .= "`n" ((Target = "local") ? "global " : "local ") . FuncVariables1
+			Else If (Target = "global")
+				RowData .= "`nglobal"
 			If (FuncVariables2 != "")
-				RowData .= "`n" "Static " . FuncVariables2
+				RowData .= "`n" "static " . FuncVariables2
 		}
 		Else If (Type = cType49)
-			RowData := "`nReturn, " Step
+			RowData := "`nreturn " Step
 		Else If ((Type = cType2) || (Type = cType9) || (Type = cType10))
 		{
 			If ((ConvertBreaks) && (InStr(Step, "``n")))

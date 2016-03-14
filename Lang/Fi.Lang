@@ -783,7 +783,7 @@
 	d_Lang014 =	Script Viety
 	d_Lang015 =	Tiedosto onnistuneesti viety!
 	d_Lang016 =	Napsauta Get "merkitä asentoon.
-	d_Lang017 =	- Valitse ikkunassa.
+	d_Lang017 	- Valitse ikkunassa.
 		- Osoita haluttuun asentoon.
 		- Paina oikeaa painiketta.
 	d_Lang018 =	Pixel Color
@@ -793,14 +793,13 @@
 	d_Lang022 =	Edellinen
 	d_Lang023 =	Viesti
 	d_Lang024 =	Ladata oletusasetukset?
-	d_Lang025 =	Makrot aktivoitu.
-		Käytä pikanäppäimet pelataan.
+	d_Lang025 =	Makro (s) aktivoituu.`nKäytä pikanäppäimet pelata.
 	d_Lang026 =	Aloita / lopeta nauhoitus
 	d_Lang027 =	Tallennus pysäytetty
 	d_Lang028 =	Tallennus...
 	d_Lang029 =	lopettaa
 	d_Lang030 =	Aloita uusi ennätys
-	d_Lang031 =	ei kelpaa funktion nimi.
+	d_Lang031 =	Soita olematon toiminto.
 	d_Lang032 =	Virhe: Duplicate pikanäppäimet.
 	d_Lang033 =	Aktivoi Makrot
 	d_Lang034 =	- Napsauta ja vedä %DrawButton% valitaksesi alueen.
@@ -811,8 +810,7 @@
 	d_Lang037 =	Kuva / Pixel ei löytynyt.
 	d_Lang038 =	Jatka painamalla OK.
 	d_Lang039 =	Timeout!
-	d_Lang040 =	
-.	Tämä ominaisuus vaatii GDI+ kirjasto.	Αυτή η λειτουργία απαιτεί το GDI+βιβλιοθήκη.
+	d_Lang040 =	Tämä ominaisuus vaatii GDI+ kirjasto.
 		Klikkaa OK mennäksesi ladata sivulle.
 	d_Lang041 =	Muuttujan nimi sisältää epäkelvon merkin.
 	d_Lang042 =	on varattu sana.
@@ -832,7 +830,7 @@
 	d_Lang055 =	Valitse AutoHotkey komentosarjatiedosto (. AHK) ja kirjoita funktion nimi.
 	d_Lang056 =	Tämä ominaisuus vaatii AutoHotkey asennettu.
 		Klikkaa OK mennäksesi ladata sivulle.
-	d_Lang057 =	- Paina Ctrl+nuolinäppäimillä liikkua valittuun alueeseen.
+	d_Lang057 	- Paina Ctrl+nuolinäppäimillä liikkua valittuun alueeseen.
 		- Paina VAIHTO+nuolinäppäimet kokoa valitulla alueella.
 		- Paina Enter loppuun.
 	d_Lang058 =	Jotkin ominaisuudet vaativat admnistrator privilages toimiakseen kunnolla.
@@ -872,18 +870,18 @@
 	d_Lang088 =	Yritä juosta yhteisinä käyttäjä (ei pääkäyttäjä).
 	d_Lang089 =	Ei rivi valittu!
 	d_Lang090 =	Ole hyvä, valitse rivi lisätä tai poistaa ryhmän.
-	d_Lang091 =	Virheellinen menetelmä
+	d_Lang091 =	Lataaminen ... Ole hyvä, odota.
 	d_Lang092 =	Pienet kuvakkeet
 	d_Lang093 =	Suuret kuvakkeet
 	d_Lang094 =	Tämä ominaisuus vaatii Windows Vistan tai uudemman.
 	d_Lang095 =	Käyttö ByRef aiheuttaa parametri tulla alias välitetyn sisään soittajan. Toisin sanoen, parametri ja soittajan muuttuva sekä viittaavat samaan sisällön muistiin.
-	d_Lang096 =	- ÄLÄ LIITTÄÄ MUUTTUJAT PROSENTTIA SIGNS TÄSTÄ.
+	d_Lang096 	- ÄLÄ LIITTÄÄ MUUTTUJAT PROSENTTIA SIGNS TÄSTÄ.
 		- Paluu arvon on oltava lauseke.
 		- Voit käyttää jouset, muuttujat, taulukot ja toimintoja. Voit myös yhdistää mitään näistä.
 		- Jos haluat käyttää jouset, liittää ne lainausmerkkeihin, esimerkiksi: "Tulos on:"+b.
 		- Jos haluat palauttaa ylimääräisiä tuloksia, voit käyttää myös ByRef parametreissa.
 		- Arrays voidaan palauttaa useita arvoja tai jopa nimesi arvoja.
-	d_Lang097 =	- ÄLÄ LIITTÄÄ MUUTTUJAT PROSENTTIA SIGNS TÄSTÄ.
+	d_Lang097 	- ÄLÄ LIITTÄÄ MUUTTUJAT PROSENTTIA SIGNS TÄSTÄ.
 		- Useimmat AHK ilmaisuja tuetaan.
 		- Voit käyttää jouset, muuttujat, taulukot ja toimintoja.
 		- Jos haluat käyttää jouset, liittää ne lainausmerkkeihin, esimerkiksi: var = "".
@@ -906,10 +904,9 @@
 	d_Lang112 =	Sähköpostitili ei löytynyt.
 	d_Lang113 =	Ei raportoitu virhe.
 	d_Lang114 =	Skriptejä viedään (vaikka käännetty) kanssa lähetä sähköpostia toiminto (CDO) on näkyvissä merkintä sähköpostitilejä käytetään, mukaan lukien salasana. PMC Projektitiedosto ei ole tätä tietoa.
-	d_Lang115 =	- Pidä Alt asettaa alueelle samaan paikkaan.
+	d_Lang115 	- Pidä Alt asettaa alueelle samaan paikkaan.
 	d_Lang116 =	Siirto ja asennus
 	d_Lang117 =	Mene ladata sivulle
-	d_Lang118 =	Lataaminen ... Ole hyvä, odota.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Katso video tutorials klo www.macrocreator.com/help oppia monia piirteitä Pulover Macro Creator.

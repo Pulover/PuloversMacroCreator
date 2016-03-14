@@ -783,9 +783,9 @@
 	d_Lang014 =	Script Exported
 	d_Lang015 =	The file was successfully exported!
 	d_Lang016 =	Click 'Get' to mark position.
-	d_Lang017 =	#NOME?
-		#NOME?
-		#NOME?
+	d_Lang017 	- Select the window.
+		- Point to desired position.
+		- Press the Right Button.
 	d_Lang018 =	Pixel Color
 	d_Lang019 =	Clear List
 	d_Lang020 =	Close Macro?
@@ -793,14 +793,13 @@
 	d_Lang022 =	Previous
 	d_Lang023 =	Message
 	d_Lang024 =	Load default settings?
-	d_Lang025 =	Macros activated.
-		Use the Hotkeys to Play.
+	d_Lang025 =	Macro(s) activated.`nUse the Hotkeys to Play.
 	d_Lang026 =	to start / stop recording
 	d_Lang027 =	Recording stopped
 	d_Lang028 =	Recording...
 	d_Lang029 =	to stop
 	d_Lang030 =	to start new record
-	d_Lang031 =	is not a valid function name.
+	d_Lang031 =	Call to nonexistent function.
 	d_Lang032 =	Error: Duplicate Hotkeys.
 	d_Lang033 =	Activate Macros
 	d_Lang034 =	- Click and Drag with %DrawButton% to select area.
@@ -812,7 +811,6 @@
 	d_Lang038 =	Press OK to continue.
 	d_Lang039 =	Timeout!
 	d_Lang040 =	This feature requires the GDI+ Library.
-.	Tämä ominaisuus vaatii GDI+ kirjasto.	Den här funktionen kräver GDI+ bibliotek.
 		Click OK to go to download page.
 	d_Lang041 =	The variable name contains an illegal character.
 	d_Lang042 =	is a reserved word.
@@ -832,9 +830,9 @@
 	d_Lang055 =	Please select an AutoHotkey script file (.ahk) and a enter a Function Name.
 	d_Lang056 =	This feature requires AutoHotkey installed.
 		Click OK to go to download page.
-	d_Lang057 =	#NOME?
-		#NOME?
-		#NOME?
+	d_Lang057 	- Press Ctrl+Arrow keys to move selected area.
+		- Press Shift+Arrow keys to resize selected area.
+		- Press Enter to finish.
 	d_Lang058 =	Some features require admnistrator privilages in order to function properly.
 		It's recommended to restart the application as Administrator.
 	d_Lang059 =	This command does not support expressions or functions.
@@ -872,19 +870,19 @@
 	d_Lang088 =	Try to run as common user (not administrator).
 	d_Lang089 =	No row selected!
 	d_Lang090 =	Please, select a row to insert or remove the group.
-	d_Lang091 =	Invalid method
+	d_Lang091 =	Downloading... Please, wait.
 	d_Lang092 =	Small icons
 	d_Lang093 =	Large icons
 	d_Lang094 =	This feature requires Windows Vista or higher.
 	d_Lang095 =	The use of ByRef causes a parameter to become an alias for the variable passed in from the caller. In other words, the parameter and the caller's variable both refer to the same contents in memory.
-	d_Lang096 =	#NOME?
-		#NOME?
+	d_Lang096 	- DO NOT ENCLOSE VARIABLES IN PERCENT SIGNS HERE.
+		- Return value must be an expression.
 		- You may use strings, variables, arrays and functions. You may also combine any of those.
 		- To use strings, enclose them in quotes, e.g.: "Result is: " a+b.
 		- If you want to return extra results, you may also use ByRef in parameters.
-		#NOME?
-	d_Lang097 =	#NOME?
-		#NOME?
+		- Arrays can be used to Return multiple values or even named values.
+	d_Lang097 	- DO NOT ENCLOSE VARIABLES IN PERCENT SIGNS HERE.
+		- Most of AHK expressions are supported.
 		- You may use strings, variables, arrays and functions.
 		- To use strings, enclose them in quotes, e.g.: var = "a".
 		- Multiple Statements are supported, e.g.: var = "a" || InStr(var, "b").
@@ -906,10 +904,9 @@
 	d_Lang112 =	Email account not found.
 	d_Lang113 =	No error reported.
 	d_Lang114 =	Scripts exported (even if compiled) with the send email function (CDO) will have visible informations of email accounts used, including the PASSWORD. The PMC project file does not have this information.
-	d_Lang115 =	#NOME?
+	d_Lang115 	- Hold Alt to set region to the same location.
 	d_Lang116 =	Transfer and install
 	d_Lang117 =	Go to download page
-	d_Lang118 =	Downloading... Please, wait.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Check out the video tutorials at www.macrocreator.com/help to learn about the many features of Pulover's Macro Creator.

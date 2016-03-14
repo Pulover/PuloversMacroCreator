@@ -783,7 +783,7 @@
 	d_Lang014 =	Izvoze Script
 	d_Lang015 =	Datoteka je uspješno izvoze!
 	d_Lang016 =	Kliknite na "Get 'označiti poziciju.
-	d_Lang017 =	- Odaberite prozor.
+	d_Lang017 	- Odaberite prozor.
 		- Pokažite na željenu poziciju.
 		- Pritisnite tipku Desno.
 	d_Lang018 =	Pixel Color
@@ -793,14 +793,13 @@
 	d_Lang022 =	Prijašnji
 	d_Lang023 =	Poruka
 	d_Lang024 =	Postavite zadane postavke?
-	d_Lang025 =	Makro aktiviran.
-		Koristite tipke na Play.
+	d_Lang025 =	Makro (e) aktivirana. `NPomoću Hotkeys igrati.
 	d_Lang026 =	za početak / zaustavljanje snimanja
 	d_Lang027 =	Snimanje zaustavljen
 	d_Lang028 =	Snimanje...
 	d_Lang029 =	zaustaviti
 	d_Lang030 =	započeti novi rekord
-	d_Lang031 =	nije valjana ime funkcije.
+	d_Lang031 =	Poziv na nepostojeću funkciju.
 	d_Lang032 =	Pogreška: Duple prečace.
 	d_Lang033 =	Aktivirajte Makronaredbe
 	d_Lang034 =	- Kliknite i povucite s %DrawButton% za odabir područja.
@@ -811,8 +810,7 @@
 	d_Lang037 =	Slika / Pixel nije pronađena.
 	d_Lang038 =	Pritisnite OK za nastavak.
 	d_Lang039 =	Timeout!
-	d_Lang040 =	
-.	Tämä ominaisuus vaatii GDI+ kirjasto.	Ця функція вимагає бібліотеці GDI+.
+	d_Lang040 =	Ova značajka zahtijeva knjižnicu GDI+.
 		Kliknite OK za odlazak na stranicu za preuzimanje.
 	d_Lang041 =	Naziv varijable sadrži nedopušteni znak.
 	d_Lang042 =	je rezervirana riječ.
@@ -832,7 +830,7 @@
 	d_Lang055 =	Molimo odaberite datoteku AutoHotKey skripte (. AHK), a za ulazak u ime funkcije.
 	d_Lang056 =	Ova značajka zahtijeva AutoHotkey instalirana.
 		Kliknite OK za odlazak na stranicu za preuzimanje.
-	d_Lang057 =	- Pritisnite CTRL+tipke sa strelicama za pomicanje odabranog područja.
+	d_Lang057 	- Pritisnite CTRL+tipke sa strelicama za pomicanje odabranog područja.
 		- Pritisnite Shift+tipke sa strelicama za promjenu veličine odabranog područja.
 		- Pritisnite Enter završiti.
 	d_Lang058 =	Neke značajke zahtijevaju admnistrator privilages kako bi pravilno funkcionirao.
@@ -872,18 +870,18 @@
 	d_Lang088 =	Pokušajte izvoditi kao zajednički korisnik (ne administrator).
 	d_Lang089 =	Ne red bira!
 	d_Lang090 =	Molimo, odaberite redak za umetanje ili uklanjanje skupinu.
-	d_Lang091 =	Pogrešna metoda
+	d_Lang091 =	Preuzimanje ... Molim pričekajte.
 	d_Lang092 =	Male ikone
 	d_Lang093 =	Velike ikone
 	d_Lang094 =	Ova značajka zahtijeva sustav Windows Vista ili noviji.
 	d_Lang095 =	Korištenje ByRef uzrokuje parametar postati pseudonim za varijable prošao s pozivateljem. Drugim riječima, parametar a pozivatelja varijabilni i odnose se na istog sadržaja u memoriju.
-	d_Lang096 =	- NE PRILAŽETE VARIJABLI U POSTOCIMA ZNAKOVA OVDJE.
+	d_Lang096 	- NE PRILAŽETE VARIJABLI U POSTOCIMA ZNAKOVA OVDJE.
 		- Povratak vrijednost mora biti izraz.
 		- Možete koristiti žice, varijabli, polja i funkcije. Vi svibanj također kombinirati bilo koje od njih.
 		- Za korištenje žice, priložiti ih u navodnike, npr: "Rezultat je:" A+B.
 		- Ako želite vratiti dodatne rezultate, vi svibanj također koristiti ByRef u parametrima.
 		- Nizovi se može koristiti za povratak više vrijednosti ili čak pod nazivom vrijednosti.
-	d_Lang097 =	- NE PRILAŽETE VARIJABLI U POSTOCIMA ZNAKOVA OVDJE.
+	d_Lang097 	- NE PRILAŽETE VARIJABLI U POSTOCIMA ZNAKOVA OVDJE.
 		- Većina AHK izraza su podržani.
 		- Možete koristiti žice, varijabli, polja i funkcije.
 		- Za korištenje žice, priložiti ih u navodnike, npr: var = "A".
@@ -906,10 +904,9 @@
 	d_Lang112 =	E-mail račun nije pronađen.
 	d_Lang113 =	Izvijestio bez pogreške.
 	d_Lang114 =	Skripte izvoze (čak i ako je sastavljen) s funkcijom poslati e-mail (CDO) će imati vidljive informacije o računima e-pošte koristi, uključujući i lozinke. Projekt datoteka PMC nema tu informaciju.
-	d_Lang115 =	- Držite Alt postaviti regiju na istom mjestu.
+	d_Lang115 	- Držite Alt postaviti regiju na istom mjestu.
 	d_Lang116 =	Prijenos i instalirati
 	d_Lang117 =	Idi na stranicu za preuzimanje
-	d_Lang118 =	Preuzimanje ... Molim pričekajte.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Pogledajte video tutoriali na www.macrocreator.com/help~~pobj naučiti o mnogim značajkama Pulover makro Stvoritelja.

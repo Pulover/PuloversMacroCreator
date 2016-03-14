@@ -783,7 +783,7 @@
 	d_Lang014 =	Skrip dieksport
 	d_Lang015 =	Fail telah berjaya dieksport!
 	d_Lang016 =	Klik 'Dapatkan' untuk menandakan kedudukan.
-	d_Lang017 =	- Pilih tingkap.
+	d_Lang017 	- Pilih tingkap.
 		- Halakan ke kedudukan yang dikehendaki.
 		- Tekan butang kanan.
 	d_Lang018 =	Pixel Warna
@@ -793,14 +793,13 @@
 	d_Lang022 =	Sebelumnya
 	d_Lang023 =	Mesej
 	d_Lang024 =	Memuatkan tetapan lalai?
-	d_Lang025 =	Makro diaktifkan.
-		Gunakan Hotkeys untuk bermain.
+	d_Lang025 =	Makro (s) diaktifkan.`nGunakan hotkeys bermain.
 	d_Lang026 =	untuk memulakan / menghentikan rakaman
 	d_Lang027 =	Rakaman berhenti
 	d_Lang028 =	Rakaman...
 	d_Lang029 =	untuk menghentikan
 	d_Lang030 =	untuk memulakan rekod baru
-	d_Lang031 =	bukan nama fungsi yang sah.
+	d_Lang031 =	Panggilan ke fungsi tidak wujud.
 	d_Lang032 =	Ralat: hotkeys salinan.
 	d_Lang033 =	Aktifkan Makro
 	d_Lang034 =	- Klik dan Seret dengan %DrawButton% untuk memilih kawasan.
@@ -811,8 +810,7 @@
 	d_Lang037 =	Imej / Pixel Not Found.
 	d_Lang038 =	Tekan OK untuk meneruskan.
 	d_Lang039 =	Tamat!
-	d_Lang040 =	
-.	Tämä ominaisuus vaatii GDI+ kirjasto.	Ši funkcija reikalauja GDI + biblioteka.
+	d_Lang040 =	Ciri ini memerlukan+Library GDI.
 		Klik OK untuk pergi ke halaman muat turun.
 	d_Lang041 =	Nama pembolehubah mengandungi aksara tidak sah.
 	d_Lang042 =	adalah perkataan reserved.
@@ -832,7 +830,7 @@
 	d_Lang055 =	Sila pilih fail skrip AutoHotkey (. Ahk) dan memasukkan Nama Fungsi.
 	d_Lang056 =	Ciri ini memerlukan AutoHotkey dipasang.
 		Klik OK untuk pergi ke halaman muat turun.
-	d_Lang057 =	- Tekan Ctrl+anak panah untuk bergerak ke kawasan yang dipilih.
+	d_Lang057 	- Tekan Ctrl+anak panah untuk bergerak ke kawasan yang dipilih.
 		- Tekan Shift+kekunci anak panah untuk mengubah saiz kawasan yang dipilih.
 		- Tekan Enter untuk selesai.
 	d_Lang058 =	Beberapa ciri-ciri memerlukan privilages admnistrator untuk berfungsi dengan betul.
@@ -872,18 +870,18 @@
 	d_Lang088 =	Cuba untuk menjalankan sebagai pengguna biasa (bukan pentadbir).
 	d_Lang089 =	Tiada berturut-turut dipilih!
 	d_Lang090 =	Sila, pilih berturut-turut untuk memasukkan atau mengeluarkan kumpulan.
-	d_Lang091 =	Kaedah tidak sah
+	d_Lang091 =	Memuat turun ... Sila, tunggu.
 	d_Lang092 =	Ikon kecil
 	d_Lang093 =	Ikon besar
 	d_Lang094 =	Ciri ini memerlukan Windows Vista atau lebih tinggi.
 	d_Lang095 =	Penggunaan ByRef menyebabkan parameter untuk menjadi alias untuk pembolehubah berlalu dari pemanggil. Dengan kata lain, parameter dan pembolehubah pemanggil kedua-dua merujuk kepada kandungan yang sama dalam ingatan.
-	d_Lang096 =	- JANGAN LAMPIRKAN PEMBOLEH UBAH DI SIGNS PERCENT SINI.
+	d_Lang096 	- JANGAN LAMPIRKAN PEMBOLEH UBAH DI SIGNS PERCENT SINI.
 		- Nilai Pulangan mesti ungkapan.
 		- Anda boleh menggunakan tali, pembolehubah, tatasusunan dan fungsi. Anda juga boleh menggabungkan mana-mana daripada mereka.
 		- Untuk menggunakan tali, sertakan mereka dalam petikan, contohnya: "Keputusan adalah:" a+b.
 		- Jika anda ingin mengembalikan hasil tambahan, anda juga boleh menggunakan ByRef dalam parameter.
 		- Tatasusunan boleh digunakan untuk kembali pelbagai nilai atau dinamakan nilai.
-	d_Lang097 =	- JANGAN LAMPIRKAN PEMBOLEH UBAH DI SIGNS PERCENT SINI.
+	d_Lang097 	- JANGAN LAMPIRKAN PEMBOLEH UBAH DI SIGNS PERCENT SINI.
 		- Kebanyakan ungkapan AHK disokong.
 		- Anda boleh menggunakan tali, pembolehubah, tatasusunan dan fungsi.
 		- Untuk menggunakan tali, sertakan mereka dalam sebut harga, contoh: var = "a".
@@ -906,10 +904,9 @@
 	d_Lang112 =	Akaun e-mel tidak dijumpai.
 	d_Lang113 =	Tiada kesilapan dilaporkan.
 	d_Lang114 =	Skrip dieksport (walaupun disusun) dengan fungsi e-mel menghantar (CDO) akan mempunyai maklumat yang boleh dilihat dengan akaun e-mel yang digunakan, termasuk KATALALUAN. PMC fail projek tidak mempunyai maklumat ini.
-	d_Lang115 =	- Pegang Alt untuk menetapkan kawasan ke lokasi yang sama.
+	d_Lang115 	- Pegang Alt untuk menetapkan kawasan ke lokasi yang sama.
 	d_Lang116 =	Memindahkan dan memasang
 	d_Lang117 =	Pergi ke halaman muat turun
-	d_Lang118 =	Memuat turun ... Sila, tunggu.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Semak tutorial video di www.macrocreator.com/help untuk belajar tentang ciri-ciri banyak Creator Macro Pulover ini.

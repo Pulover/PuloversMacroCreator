@@ -783,7 +783,7 @@
 	d_Lang014 =	Script exportovaný
 	d_Lang015 =	Súbor bol úspešne exportovaný!
 	d_Lang016 =	Kliknite na tlačidlo "" na označenie polohy.
-	d_Lang017 =	- Vyberte okno.
+	d_Lang017 	- Vyberte okno.
 		- Prejdite na požadovanú pozíciu.
 		- Stlačte pravé tlačidlo.
 	d_Lang018 =	Farba obrazového bodu
@@ -793,14 +793,13 @@
 	d_Lang022 =	Predchádzajúci
 	d_Lang023 =	Správa
 	d_Lang024 =	Načítať predvolené nastavenia?
-	d_Lang025 =	Makrá aktivovaný.
-		Použite klávesových skratiek hrať.
+	d_Lang025 =	Makro (y) aktivovaný.`nPoužite klávesové skratky hrať.
 	d_Lang026 =	štart / stop nahrávania
 	d_Lang027 =	Nahrávanie sa zastaví,
 	d_Lang028 =	Nahrávanie...
 	d_Lang029 =	zastaviť
 	d_Lang030 =	začať nový rekord
-	d_Lang031 =	nie je platný názov funkcie.
+	d_Lang031 =	Výzva na neexistujúce funkciu.
 	d_Lang032 =	Chyba: Duplicitné klávesové skratky.
 	d_Lang033 =	Aktivácia makrá
 	d_Lang034 =	- Kliknite a ťahajte %DrawButton% vyberte oblasť.
@@ -811,8 +810,7 @@
 	d_Lang037 =	Obrázok / Pixel nebol nájdený.
 	d_Lang038 =	Stlačte OK pre pokračovanie.
 	d_Lang039 =	Časový limit!
-	d_Lang040 =	
-.	Tämä ominaisuus vaatii GDI+ kirjasto.	Esta característica require + Biblioteca GDI.
+	d_Lang040 =	Táto funkcia vyžaduje rozhrania GDI+knižnice.
 		Kliknite na tlačidlo OK prejdite na stránku pre stiahnutie.
 	d_Lang041 =	Názov premennej obsahuje nepovolený znak.
 	d_Lang042 =	je vyhradené slovo.
@@ -832,7 +830,7 @@
 	d_Lang055 =	Prosím vyberte skriptu AutoHotkey súbor (. AHK) a zadať názov funkcie.
 	d_Lang056 =	Táto funkcia vyžaduje AutoHotkey nainštalovaný.
 		Kliknite na tlačidlo OK prejdite na stránku pre stiahnutie.
-	d_Lang057 =	- Stlačte Ctrl+klávesov so šípkami pohybovať vybranú oblasť.
+	d_Lang057 	- Stlačte Ctrl+klávesov so šípkami pohybovať vybranú oblasť.
 		- Stlačením tlačidla Shift+klávesy so šípkami zmeňte veľkosť vybranej oblasti.
 		- Stlačte Enter pre dokončenie.
 	d_Lang058 =	Niektoré funkcie vyžadujú admnistrátorovi privilages, aby správne fungovali.
@@ -872,18 +870,18 @@
 	d_Lang088 =	Skúste spustiť ako bežných užívateľov (nie správca).
 	d_Lang089 =	Nie riadok vybraný!
 	d_Lang090 =	Prosím, vyberte riadok pre vloženie alebo odstránenie skupiny.
-	d_Lang091 =	Neplatná metóda
+	d_Lang091 =	Sťahovanie ... Prosím, počkajte.
 	d_Lang092 =	Malé ikony
 	d_Lang093 =	Veľké ikony
 	d_Lang094 =	Táto funkcia vyžaduje systém Windows Vista alebo vyšší.
 	d_Lang095 =	Použitie ByRef spôsobí parameter, aby sa stal alias na premennú odovzdaný od volajúceho. Inými slovami, je parameter a variabilné volajúceho ako sa vzťahujú na rovnaké obsahu v pamäti.
-	d_Lang096 =	- NEPOUŽÍVAJTE UZAVRITE PREMENNÉ V ZNAKY PERCENTA TU.
+	d_Lang096 	- NEPOUŽÍVAJTE UZAVRITE PREMENNÉ V ZNAKY PERCENTA TU.
 		- Návrat hodnota musí byť výraz.
 		- Môžete použiť reťazca, premenné, pole a funkcia. Môžete tiež kombinovať niektoré z nich.
 		- Ak chcete použiť reťazca, uzavrite do úvodzoviek, napríklad: "Výsledok je:" a+b.
 		- Ak sa chcete vrátiť ďalšie výsledky, môžete tiež použiť ByRef v parametroch.
 		- Pole môže byť použitý k vrátiť viac hodnôt, alebo dokonca pomenované hodnoty.
-	d_Lang097 =	- NEPOUŽÍVAJTE UZAVRITE PREMENNÉ V ZNAKY PERCENTA TU.
+	d_Lang097 	- NEPOUŽÍVAJTE UZAVRITE PREMENNÉ V ZNAKY PERCENTA TU.
 		- Väčšina AHK výrazy sú podporované.
 		- Môžete použiť reťazca, premenné, pole a funkcia.
 		- Ak chcete použiť reťazca, uzavrite do úvodzoviek, napríklad: var = "A".
@@ -906,10 +904,9 @@
 	d_Lang112 =	E-mailový účet nebol nájdený.
 	d_Lang113 =	Hlásená žiadna chyba.
 	d_Lang114 =	Skrip dieksport (walaupun disusun) dengan fungsi e-mel menghantar (CDO) akan mempunyai maklumat yang boleh dilihat dengan akaun e-mel yang digunakan, termasuk KATALALUAN. PMC fail projek tidak mempunyai maklumat ini.
-	d_Lang115 =	- Podržte Alt nastaviť región na rovnakom mieste.
+	d_Lang115 	- Podržte Alt nastaviť región na rovnakom mieste.
 	d_Lang116 =	Prenášať a inštalovať
 	d_Lang117 =	Prejdite na stránku na stiahnutie
-	d_Lang118 =	Sťahovanie ... Prosím, počkajte.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Pozrite sa na video tutoriály na www.macrocreator.com/help~~pobj dozvedieť sa o mnohých funkcií makro Stvoriteľa Pulóver je.

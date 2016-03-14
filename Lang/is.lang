@@ -783,26 +783,25 @@
 	d_Lang014 =	Script Útfluttar
 	d_Lang015 =	Skráin var flutt út!
 	d_Lang016 =	Smelltu á 'Fá að merkja stöðu.
-	d_Lang017 =	#NOME?
-		#NOME?
-		#NOME?
+	d_Lang017 	- Veldu glugga.
+		- Point til viðkomandi stöðu.
+		- Ýttu á hægri hnappinn.
 	d_Lang018 =	Pixel Color
 	d_Lang019 =	Hreinsa List
 	d_Lang020 =	Loka Macro?
-	d_Lang021 =	Næsta
-	d_Lang022 =	Fyrri
-	d_Lang023 =	Skilaboð
+	d_Lang021 =	næsta
+	d_Lang022 =	fyrri
+	d_Lang023 =	skilaboð
 	d_Lang024 =	Hlaða sjálfgefnar stillingar?
-	d_Lang025 =	Fjölvi virkt.
-		Notaðu hotkeys að spila.
-	d_Lang026 =	Að byrja / stöðva upptöku
-	d_Lang027 =	Upptaka stöðvuð
+	d_Lang025 =	Macro (s) activated.`nUse hotkeys til að spila.
+	d_Lang026 =	að byrja / stöðva upptöku
+	d_Lang027 =	upptaka stöðvuð
 	d_Lang028 =	Upptöku ...
-	d_Lang029 =	Að hætta
-	d_Lang030 =	Að byrja nýtt met
-	d_Lang031 =	Er ekki gilt virka nafn.
+	d_Lang029 =	að hætta
+	d_Lang030 =	að byrja nýtt met
+	d_Lang031 =	Hringja til nonexistent virka.
 	d_Lang032 =	Villa: Afrit hotkeys.
-	d_Lang033 =	Virkja Fjölvi
+	d_Lang033 =	virkja Fjölvi
 	d_Lang034 =	- Smelltu og dragðu með% DrawButton% til að velja svæði.
 		- Smelltu og losa án þess að draga að velja stjórna svæði.
 		- Smelltu á svæði án eftirlits til að velja svæði á glugganum.
@@ -811,8 +810,7 @@
 	d_Lang037 =	Mynd / Pixel fannst ekki.
 	d_Lang038 =	Ýttu á OK til að halda áfram.
 	d_Lang039 =	Hlé!
-	d_Lang040 =	
-.	Tämä ominaisuus vaatii GDI+ kirjasto.	이 기능은 GDI+라이브러리가 필요합니다.
+	d_Lang040 =	Þessi eiginleiki krefst GDI + Library.
 		Smelltu á Í lagi til að fara að sækja síðuna.
 	d_Lang041 =	Breytan nafn inniheldur ólöglegt staf.
 	d_Lang042 =	er frátekið orð.
@@ -832,9 +830,9 @@
 	d_Lang055 =	Vinsamlegast veldu AutoHotkey handrit skrá (.ahk) og slá inn heiti aðgerðar.
 	d_Lang056 =	Þessi eiginleiki krefst AutoHotkey uppsett.
 		Smelltu á Í lagi til að fara að sækja síðuna.
-	d_Lang057 =	#NOME?
-		#NOME?
-		#NOME?
+	d_Lang057 	- Ýttu á Ctrl + Arrow takkana til að hreyfa völdu svæði.
+		- Ýtið Shift + Arrow takkana til að breyta stærð völdu svæði.
+		- Ýttu á Enter til að ljúka.
 	d_Lang058 =	Sumar aðgerðir krefjast admnistrator rrÃ © ttindi til að virka almennilega.
 		Það er mælt með því að endurræsa forritið sem Administrator.
 	d_Lang059 =	Þessi skipun styður ekki tjáning eða aðgerðir.
@@ -872,19 +870,19 @@
 	d_Lang088 =	Reyndu að keyra eins sameiginlega notandi (ekki stjórnandi).
 	d_Lang089 =	Engin röð valinn!
 	d_Lang090 =	Vinsamlegast velja röð til að setja eða fjarlægja hópinn.
-	d_Lang091 =	Ógilt aðferð
+	d_Lang091 =	Sæki ... Bíðið.
 	d_Lang092 =	Lítil tákn
 	d_Lang093 =	stór tákn
 	d_Lang094 =	Þessi eiginleiki krefst Windows Vista eða hærri.
 	d_Lang095 =	Notkun ByRef veldur breytu til að verða samnefni fyrir breytu liðin frá þeim sem hringir. Með öðrum orðum, breytu og breyta þess sem hringir, bæði vísa til sömu innihald í minni.
-	d_Lang096 =	#NOME?
-		#NOME?
+	d_Lang096 	- EKKI láta breytur í prósentumerki hér.
+		- Return gildi verður að vera tjáning.
 		- Þú getur notað strengir, breytur, fylki og aðgerðir. Þú gætir líka sameina eitthvað af þeim.
 		- Til að nota strengi, láta þá innan gæsalappa, t.d .: "Niðurstaðan er:" a + b.
 		- Ef þú vilt fara aftur auka árangur, getur þú líka notað ByRef í þáttum.
-		#NOME?
-	d_Lang097 =	#NOME?
-		#NOME?
+		- Fylki er hægt að nota til að snúa aftur mörg gildi eða jafnvel gerist gildum.
+	d_Lang097 	- EKKI láta breytur í prósentumerki hér.
+		- Flestir AHK tjáning eru studd.
 		- Þú getur notað strengir, breytur, fylki og aðgerðir.
 		- Til að nota strengi, láta þá innan gæsalappa, t.d .: var = "a".
 		- Margar Yfirlýsingar eru studd, t.d .: var = "a" || Instr (var, "b").
@@ -906,10 +904,9 @@
 	d_Lang112 =	Email reikningur fannst ekki.
 	d_Lang113 =	Engin villa tilkynnt.
 	d_Lang114 =	Scripts flutt (jafnvel þótt unnin) með senda tölvupóst virka (CDO) verður sýnileg upplýsingar um reikninga email notuð, þar á meðal lykilorð. The PMC verkefnið skrá hjartarskinn ekki hafa þessar upplýsingar.
-	d_Lang115 =	#NOME?
+	d_Lang115 	- Halda Alt að setja svæðið á sama stað.
 	d_Lang116 =	Flytja og setja
 	d_Lang117 =	Fara að sækja síðuna
-	d_Lang118 =	Sæki ... Bíðið.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Skoðaðu vídeó námskeið á www.macrocreator.com/help~~pobj til að læra um marga eiginleika Macro skapara Pulover er.

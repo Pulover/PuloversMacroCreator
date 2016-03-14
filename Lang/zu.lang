@@ -783,24 +783,23 @@
 	d_Lang014 =	Script zithunyelwa
 	d_Lang015 =	Ifayela athunyelwa ngempumelelo!
 	d_Lang016 =	Chofoza 'Thola' ukumaka isikhundla.
-	d_Lang017 =	#NOME?
-		#NOME?
-		#NOME?
+	d_Lang017 	- Khetha iwindi.
+		- Khomba isikhundla oyifunayo.
+		- Cindezela inkinobho kwesokudla.
 	d_Lang018 =	Pixel Color
 	d_Lang019 =	Sula List
 	d_Lang020 =	Vala Macro?
 	d_Lang021 =	Olandelayo
 	d_Lang022 =	Langaphambilini
 	d_Lang023 =	Umlayezo
-	d_Lang024 =	Izilungiselelo Layisha ezizenzakalelayo?
-	d_Lang025 =	Amamakhro isiyasebenza.
-		Sebenzisa hotkeys ku-Google Play.
-	d_Lang026 =	Ukuqala / stop zokuqopha
+	d_Lang024 =	izilungiselelo Layisha ezizenzakalelayo?
+	d_Lang025 =	Macro (s) activated.`nUse the hotkeys ku-Google Play.
+	d_Lang026 =	ukuqala / stop zokuqopha
 	d_Lang027 =	Ukuqopha kumisiwe
 	d_Lang028 =	Ukuqopha ...
-	d_Lang029 =	Kuzoma
-	d_Lang030 =	Ukuqala irekhodi elisha
-	d_Lang031 =	Aliyona igama umsebenzi.
+	d_Lang029 =	kuzoma
+	d_Lang030 =	ukuqala irekhodi elisha
+	d_Lang031 =	Ukubiza umsebenzi wawungekho.
 	d_Lang032 =	Iphutha: Duplicate hotkeys.
 	d_Lang033 =	Cupha Amamakhro
 	d_Lang034 =	- Chofoza and Hudula nge% DrawButton% ukuze ukhethe indawo.
@@ -811,7 +810,7 @@
 	d_Lang037 =	Image / Pixel Not Found.
 	d_Lang038 =	Cindezela KULUNGILE ukuze uqhubeke.
 	d_Lang039 =	Isikhathi siphelile!
-.	Tämä ominaisuus vaatii GDI+ kirjasto.	यो सुविधा GDI + पुस्तकालय आवश्यक छ।
+	d_Lang040 =	Lesi sici sidinga uhlelo GDI + Library.
 		Chofoza OK ukuya ukulanda ikhasi.
 	d_Lang041 =	Igama variable inohlamvu olungekho emthethweni.
 	d_Lang042 =	Yigama agodliwe.
@@ -831,9 +830,9 @@
 	d_Lang055 =	Sicela ukhethe i ifayela AutoHotkey script (.ahk) kanye ufake igama Umsebenzi.
 	d_Lang056 =	Lesi sici sidinga AutoHotkey efakwe.
 		Chofoza OK ukuya ukulanda ikhasi.
-	d_Lang057 =	#NOME?
-		#NOME?
-		#NOME?
+	d_Lang057 	- Cindezela Ctrl imicibisholo ukuhambisa endaweni ekhethiwe.
+		- Cindezela u-Shift + imicibisholo usikhulise endaweni ekhethiwe.
+		- Cindezela u-Enter ukuze uqedele.
 	d_Lang058 =	Ezinye izici zidinga admnistrator privilages ukuze usebenze kahle.
 		Kuyanconywa ukuba uqale kabusha isicelo njengoba Administrator.
 	d_Lang059 =	Lomyalo ayisekeli izinkulumo noma imisebenzi.
@@ -871,19 +870,19 @@
 	d_Lang088 =	Zama ukusebenzisa umsebenzisi njengoba kuvamile (hhayi umlawuli).
 	d_Lang089 =	Ayikho irowu ezikhethiwe!
 	d_Lang090 =	Sicela, ukhethe umugqa kokufaka noma ukukhipha i qembu.
-	d_Lang091 =	Indlela engavumelekile
+	d_Lang091 =	Ukulanda ... Sicela, ulinde.
 	d_Lang092 =	Icons Small
 	d_Lang093 =	Icons Large
 	d_Lang094 =	Lesi sici sidinga i-Windows Vista noma ngaphezulu.
 	d_Lang095 =	Ukusetshenziswa ByRef kubangela ipharamitha yinto alias for okuguquguqukayo ophasiswe koshayayo. Ngamanye amazwi, ipharamitha futhi variable ucingo luka zombili zibhekisela okuqukethwe efanayo kumemori.
-	d_Lang096 =	#NOME?
-		#NOME?
+	d_Lang096 	- MUSA buyela eziguquguqukayo angu SIGNS LAPHA.
+		- Return Inani ziwukubonakaliswa.
 		- Ungase usebenzise strings, eziguquguqukayo, ukurhemisa kanye nemisebenzi. Ungase futhi sihlanganise yalezo zimfanelo.
 		- Ukusebenzisa strings, buyela nabo izingcaphuno, isb .: "Umphumela uwukuthi:" a b +.
 		- Uma ufuna ukubuyela imiphumela extra, ungase futhi usebenzise ByRef e nemingcele.
-		#NOME?
-	d_Lang097 =	#NOME?
-		#NOME?
+		- Afanayo ingasetshenziswa ukubuyela amagugu amaningi noma amagugu babeze bazethe igama elithi.
+	d_Lang097 	- MUSA buyela eziguquguqukayo angu SIGNS LAPHA.
+		- Iningi AHK izinkulumo asekelwa.
 		- Ungase usebenzise strings, eziguquguqukayo, ukurhemisa kanye nemisebenzi.
 		- Ukusebenzisa strings, buyela nabo izingcaphuno, isb .: var  "a".
 		- Izitatimende Multiple asekelwa, isb .: var  "a" || InStr (var, "b").
@@ -905,10 +904,9 @@
 	d_Lang112 =	I-akhawunti imeyili ayitholakalanga.
 	d_Lang113 =	Alikho iphutha kusho umbiko.
 	d_Lang114 =	Izikriphthi zase elithekelisiwe (ngisho uma eyahlanganiswa) umsebenzi yokuthumela imeyili (CDO) kuyodingeka informations ebonakalayo yama-akhawunti ye-imeyli esetshenziswa, kuhlanganise Iphasiwedi. Le PMC lephrojekthi akanawo lolu lwazi.
-	d_Lang115 =	#NOME?
+	d_Lang115 	- Hold Alt ukusetha esifundeni kuleyo ndawo.
 	d_Lang116 =	Dlulisa futhi ufake
 	d_Lang117 =	Hamba ukulanda ikhasi
-	d_Lang118 =	Ukulanda ... Sicela, ulinde.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Hlola tutorials video at www.macrocreator.com/help ukuze ufunde mayelana nezici eziningi uMdali Pulover sika Macro.

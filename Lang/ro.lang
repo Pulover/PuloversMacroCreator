@@ -783,24 +783,23 @@
 	d_Lang014 =	Script-Exportata
 	d_Lang015 =	Dosarul a fost exportat cu succes!
 	d_Lang016 =	Faceți clic pe 'Get' pentru a marca poziția.
-	d_Lang017 =	#NOME?
-		#NOME?
-		#NOME?
+	d_Lang017 	- Selectați fereastra.
+		- Punctul în poziția dorită.
+		- Apăsați pe butonul din dreapta.
 	d_Lang018 =	pixel de culoare
 	d_Lang019 =	Listă clară
 	d_Lang020 =	Închide Macro?
 	d_Lang021 =	Următor →
 	d_Lang022 =	Anterior
 	d_Lang023 =	Mesaj
-	d_Lang024 =	Setările de încărcare implicite?
-	d_Lang025 =	Macrocomenzi activat.
-		Utilizați tastele rapide pentru a juca.
+	d_Lang024 =	Încarcă setările implicite?
+	d_Lang025 =	Macro (e) activated.`nUse tastele rapide pentru a juca.
 	d_Lang026 =	pentru a porni / opri înregistrarea
 	d_Lang027 =	înregistrare oprită
 	d_Lang028 =	Înregistrare...
 	d_Lang029 =	a opri
 	d_Lang030 =	pentru a începe noi
-	d_Lang031 =	nu este un nume de funcție validă.
+	d_Lang031 =	Apelarea funcției inexistente.
 	d_Lang032 =	Eroare: Duplicate Hotkeys.
 	d_Lang033 =	activa Macrocomenzi
 	d_Lang034 =	- Faceți clic și trageți cu% DrawButton% pentru a selecta o zonă.
@@ -811,7 +810,7 @@
 	d_Lang037 =	Imagine / Pixel Nu a fost găsit.
 	d_Lang038 =	Apăsați OK pentru a continua.
 	d_Lang039 =	Pauză!
-.	Tämä ominaisuus vaatii GDI+ kirjasto.	תכונה זו מחייבת הספרייה + GDI.
+	d_Lang040 =	Această caracteristică necesită GDI + biblioteca.
 		Faceți clic pe OK pentru a merge la pagina de descărcare.
 	d_Lang041 =	Numele variabilei conține un caracter ilegal.
 	d_Lang042 =	este un cuvânt rezervat.
@@ -831,9 +830,9 @@
 	d_Lang055 =	Vă rugăm să selectați un fișier script AutoHotkey (.ahk) și introduceți un nume de funcție.
 	d_Lang056 =	Această funcție necesită AutoHotkey instalat.
 		Faceți clic pe OK pentru a merge la pagina de descărcare.
-	d_Lang057 =	#NOME?
-		#NOME?
-		#NOME?
+	d_Lang057 	- Apăsați tastele Ctrl + săgeată pentru a muta zona selectată.
+		- Apăsați tastele Shift + săgeată pentru a redimensiona zona selectată.
+		- Apăsați Enter pentru a termina.
 	d_Lang058 =	Anumite caracteristici necesită admnistrator privilages pentru a putea funcționa corect.
 		Este recomandat pentru a reporni aplicația ca administrator.
 	d_Lang059 =	Această comandă nu acceptă expresii sau funcții.
@@ -871,19 +870,19 @@
 	d_Lang088 =	Încercați să rulați utilizatorul ca comun (nu administrator).
 	d_Lang089 =	Nici rând selectat!
 	d_Lang090 =	Vă rugăm să selectați un rând pentru a introduce sau scoate din grup.
-	d_Lang091 =	metoda nevalidă
+	d_Lang091 =	Se descarcă ... Vă rog, așteptați.
 	d_Lang092 =	pictograme mici
 	d_Lang093 =	pictograme mari
 	d_Lang094 =	Această caracteristică necesită Windows Vista sau mai mare.
 	d_Lang095 =	Utilizarea de ByRef determină un parametru pentru a deveni un alias pentru variabila transmisă de apelant. Cu alte cuvinte, parametrul și variabila apelantului ambele se referă la același conținut în memorie.
-	d_Lang096 =	#NOME?
-		#NOME?
+	d_Lang096 	- NU ENCLOSE VARIABILE IN SEMNE PERCENT AICI.
+		- Valoarea returnată trebuie să fie o expresie.
 		- Aveți dreptul să utilizați șiruri, variabile, tablouri și funcții. De asemenea, s-ar putea combina oricare dintre acestea.
 		- Pentru a utiliza siruri de caractere, incadrati in ghilimele, ex .: "Rezultatul este:" a + b.
 		- Dacă doriți să reveniți rezultate suplimentare, puteți utiliza, de asemenea, în parametri ByRef.
-		#NOME?
-	d_Lang097 =	#NOME?
-		#NOME?
+		- Tablourile pot fi folosite pentru a returna mai multe valori sau valori chiar numite.
+	d_Lang097 	- NU ENCLOSE VARIABILE IN SEMNE PERCENT AICI.
+		- Cele mai multe dintre expresiile AHK sunt acceptate.
 		- Aveți dreptul să utilizați șiruri, variabile, tablouri și funcții.
 		- Pentru a utiliza siruri de caractere, incadrati in ghilimele, ex .: var = "o".
 		- Declarațiile multiple sunt susținute, de exemplu .: var = "o" || Instr (var, "b").
@@ -905,10 +904,9 @@
 	d_Lang112 =	Contul de e-mail nu a fost găsit.
 	d_Lang113 =	A raportat nici o eroare.
 	d_Lang114 =	Script-exportate (chiar dacă este compilat) cu funcția de e-mail send (CDO) va avea informațiile vizibile de conturi de e-mail utilizate, inclusiv parola. Fișierul de proiect PMC nu are aceste informații.
-	d_Lang115 =	#NOME?
+	d_Lang115 	- Hold Alt pentru a seta regiunea în aceeași locație.
 	d_Lang116 =	Se transferă și instala
 	d_Lang117 =	Du-te la pagina de descărcare
-	d_Lang118 =	Se descarcă ... Vă rog, așteptați.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Check out tutoriale video de la www.macrocreator.com/help pentru a afla despre multe caracteristici ale Creatorului Macro Pulover lui.

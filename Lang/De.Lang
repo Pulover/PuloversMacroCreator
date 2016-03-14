@@ -783,7 +783,7 @@
 	d_Lang014 =	Script exportiert
 	d_Lang015 =	Die Datei wurde erfolgreich exportiert.
 	d_Lang016 =	Klicken Sie auf "Get", um die Position zu markieren.
-	d_Lang017 =	- Fenster wählen.
+	d_Lang017 	- Fenster wählen.
 		- Zur gewünschte Position bewegen.
 		- Drücken Sie die rechte Maustaste.
 	d_Lang018 =	Pixelfarbe
@@ -793,14 +793,13 @@
 	d_Lang022 =	Vorheriger
 	d_Lang023 =	Nachricht
 	d_Lang024 =	Standardeinstellungen laden?
-	d_Lang025 =	Makros aktiviert.
-		Mit den Hotkeys wiedergeben.
+	d_Lang025 =	Makro(s) aktiviert.`nMit den Hotkeys wiedergeben.
 	d_Lang026 =	Zum Starten/Beenden der Aufnahme
 	d_Lang027 =	Aufnahme beendet
 	d_Lang028 =	Aufnahme...
 	d_Lang029 =	zum Beenden
 	d_Lang030 =	um neue Aufnahme zu starten
-	d_Lang031 =	ist kein gültiger Funktionsname.
+	d_Lang031 =	Rufen Sie an nicht existierende Funktion.
 	d_Lang032 =	Fehler: Doppelte Hotkeys.
 	d_Lang033 =	Makros aktivieren
 	d_Lang034 =	- Mit %DrawButton% klicken und ziehen, um Bereich auszuwählen.
@@ -812,7 +811,6 @@
 	d_Lang038 =	OK, um fortzufahren.
 	d_Lang039 =	Timeout!
 	d_Lang040 =	Diese Funktion erfordert die GDI+ Bibliothek.
-.	Tämä ominaisuus vaatii GDI+ kirjasto.	Tato funkce vyžaduje rozhraní GDI+ knihovny.
 		Klicken Sie auf OK, um zur Download-Seite zu gelangen.
 	d_Lang041 =	Der Variablen-Name enthält ein ungültiges Zeichen.
 	d_Lang042 =	ist ein reserviertes Wort.
@@ -832,7 +830,7 @@
 	d_Lang055 =	Bitte wählen Sie eine AutoHotkey Skriptdatei (. Ahk) und geben Sie einen Funktionsnamen ein.
 	d_Lang056 =	Für diese Funktion muss AutoHotkey installiert sein.
 		Klicken Sie auf OK, um AutoHotkey von der Internetseite herunterladen.
-	d_Lang057 =	- Drücken Sie Strg+Pfeiltasten um den ausgewählten Bereich zu verschieben.
+	d_Lang057 	- Drücken Sie Strg+Pfeiltasten um den ausgewählten Bereich zu verschieben.
 		- Drücken Sie die Umschalttaste+Pfeiltasten, um die Größe ausgewählten Bereich.
 		- Drücken Sie die Eingabetaste zum Beenden.
 	d_Lang058 =	Einige Funktionen erfordern Admnistratorrechte, damit sie richtig funktionieren.
@@ -872,18 +870,18 @@
 	d_Lang088 =	Versuchen Sie, so gemeinsame Benutzeroberfläche (nicht Administrator) ausgeführt werden.
 	d_Lang089 =	Keine Zeile ausgewählt!
 	d_Lang090 =	Bitte wählen Sie eine Zeile einfügen oder entfernen Sie die Gruppe.
-	d_Lang091 =	Ungültige Methode
+	d_Lang091 =	Das Herunterladen ... Bitte warten.
 	d_Lang092 =	Kleine Symbole
 	d_Lang093 =	Große Icons
 	d_Lang094 =	Dieses Feature erfordert Windows Vista oder höher.
 	d_Lang095 =	Die Verwendung von ByRef bewirkt einen Parameter, um ein Alias für die Variable in der Aufrufer übergeben zu werden. Mit anderen Worten, der Parameter und Variable des Aufrufers beziehen sich beide auf dem gleichen Inhalt in Speicher.
-	d_Lang096 =	- NICHT BEILEGEN VARIABLEN IN PROZENTZEICHEN HIER.
+	d_Lang096 	- NICHT BEILEGEN VARIABLEN IN PROZENTZEICHEN HIER.
 		- Rückgabewert muss ein Ausdruck sein.
 		- Sie können Strings, Variablen, Arrays und Funktionen zu nutzen. Sie können auch kombinieren, irgendwelche von denen.
 		- Zur Zeichenfolgen verwenden, schließen Sie sie in Anführungszeichen, zum Beispiel: "Das Ergebnis ist:" a+b.
 		- Wenn Sie zusätzliche Ergebnisse zurückgeben möchten, haben Sie die ByRef verwenden in Parameter.
 		- Arrays kann verwendet werden, um mehrere Werte oder sogar benannten Werte zurück.
-	d_Lang097 =	- NICHT BEILEGEN VARIABLEN IN PROZENTZEICHEN HIER.
+	d_Lang097 	- NICHT BEILEGEN VARIABLEN IN PROZENTZEICHEN HIER.
 		- Die meisten der AHK Ausdrücke werden unterstützt.
 		- Sie können Strings, Variablen, Arrays und Funktionen zu nutzen.
 		- Zur Zeichenfolgen verwenden, schließen Sie sie in Anführungszeichen, zum Beispiel: var = "a".
@@ -906,10 +904,9 @@
 	d_Lang112 =	E-Mail-Account nicht gefunden.
 	d_Lang113 =	Kein Fehler gemeldet.
 	d_Lang114 =	Skripte exportiert mit dem E-Mail senden Funktion (auch wenn kompiliert) (CDO) wird sichtbar Informationen von E-Mail-Konten verwendet haben, einschließlich des Passworts. Die PMC-Projektdatei  nicht über diese Informationen.
-	d_Lang115 =	- Halten Sie Alt-Region an die gleiche Stelle zu setzen.
+	d_Lang115 	- Halten Sie Alt-Region an die gleiche Stelle zu setzen.
 	d_Lang116 =	Übertragen und installieren
 	d_Lang117 =	Gehe zu Seite zum Download
-	d_Lang118 =	Das Herunterladen ... Bitte warten.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Schauen Sie sich die Video-Tutorials auf www.macrocreator.com/help sich über die vielen Funktionen von Pulover Makro Schöpfer zu lernen.

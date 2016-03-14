@@ -11,7 +11,7 @@
 ;=======================================================================================
 Eval($x, _CustomVars := "", _Init := true)
 {
-	local $y, $z, $i, $v, _Elements, __Elements, HidString, RepString, $o
+	local $y, $z, $i, $v, _Elements, o_Elements, __Elements, HidString, RepString, $o
 	, _Match, _Match1, _Match2, _Match3, _Match4, $pd, $pd1, EvalResult
 	, ObjName, VarName, Oper, VarValue, _Pos, _i, _v, $Result
 	Static _Objects
@@ -47,8 +47,7 @@ Eval($x, _CustomVars := "", _Init := true)
 			Loop, 3
 			{
 				$o := A_Index, _Match%$o% := Trim(_Match%$o%)
-				While (RegExMatch(_Match%$o%, "&_\w+_&", $pd))
-					_Match%$o% := StrReplace(_Match%$o%, $pd, _Elements[$pd])
+			,	_Match%$o% := RestoreElements(_Match%$o%, _Elements)
 			}
 			EvalResult := Eval(_Match1, _CustomVars, false)
 		,	$y := EvalResult[1]
@@ -74,14 +73,13 @@ Eval($x, _CustomVars := "", _Init := true)
 		
 		_Pos := 1
 		; Check for Object calls
-		While (RegExMatch($z[$i], "(\w+)(\.|&_Bracket|&_Parent\d+_&)(?!.*"")[\w\.&]+(.*)", _Match, _Pos))
+		While (RegExMatch($z[$i], "([\w%]+)(\.|&_Bracket|&_Parent\d+_&)[\w\.&%]+(.*)", _Match, _Pos))
 		{
 			AssignParse(_Match, VarName, Oper, VarValue)
 			If (Oper != "")
 			{
-				While (RegExMatch(VarValue, "&_\w+_&", $pd))
-					VarValue := StrReplace(VarValue, $pd, _Elements[$pd])
-				EvalResult := Eval(VarValue, _CustomVars, false)
+				VarValue := RestoreElements(VarValue, _Elements)
+			,	EvalResult := Eval(VarValue, _CustomVars, false)
 			,	VarValue := StrJoin(EvalResult)
 				If (!IsObject(VarValue))
 					VarValue := RegExReplace(VarValue, """{2,2}", """")
@@ -89,8 +87,7 @@ Eval($x, _CustomVars := "", _Init := true)
 			Else
 				_Match := StrReplace(_Match, _Match3), VarName := _Match
 
-			While (RegExMatch(VarName, "&_\w+_&", $pd))
-				VarName := StrReplace(VarName, $pd, _Elements[$pd])
+			VarName := RestoreElements(VarName, _Elements)
 			
 			If _Match1 is Number
 			{
@@ -104,10 +101,12 @@ Eval($x, _CustomVars := "", _Init := true)
 			If (IsObject($y))
 				_Objects[ObjName] := $y
 			Else If $y is not Number
+			{
 				$y := """" StrReplace($y, """", """""") """"
 			,	HidString := "&_String" (ObjCount(_Elements) + 1) "_&"
 			,	_Elements[HidString] := $y
 			,	$y := HidString
+			}
 			$z[$i] := StrReplace($z[$i], _Match, IsObject($y) ? """<~#" ObjName "#~>""" : $y)
 		}
 		
@@ -127,21 +126,18 @@ Eval($x, _CustomVars := "", _Init := true)
 		{
 			$y := {}, o_Elements := {}
 		,	$o := _Elements[$pd]
-			While (RegExMatch($o, "&_\w+_&", $od))
-				$o := StrReplace($o, $od, _Elements[$od])
+		,	$o := RestoreElements($o, _Elements)
 			While (RegExMatch($o, "sU)"".*""", _String%A_Index%))
 				o_Elements["&_String" A_Index "_&"] := _String%A_Index%
-		,	$o := RegExReplace($o, "sU)"".*""", "&_String" A_Index "_&", "", 1)
+			,	$o := RegExReplace($o, "sU)"".*""", "&_String" A_Index "_&", "", 1)
 			$z[$i] := StrReplace($z[$i], $pd, $o,, 1)
 		,	RegExMatch($z[$i], "\{(.*)\}", _Match)
 			Loop, Parse, _Match1, `,, %A_Space%%A_Tab%
 			{
 				$o := StrSplit(A_LoopField, ":", " `t")
-				While (RegExMatch($o.1, "&_\w+_&", $pd))
-					$o.1 := StrReplace($o.1, $pd, o_Elements[$pd])
-				While (RegExMatch($o.2, "&_\w+_&", $pd))
-					$o.2 := StrReplace($o.2, $pd, o_Elements[$pd])
-				EvalResult := Eval($o.2, _CustomVars, false)
+			,	$o.1 := RestoreElements($o.1, o_Elements)
+			,	$o.2 := RestoreElements($o.2, o_Elements)
+			,	EvalResult := Eval($o.2, _CustomVars, false)
 			,	$o.1 := Trim($o.1, """")
 			,	$y[$o.1] := EvalResult[1]
 			}
@@ -154,9 +150,8 @@ Eval($x, _CustomVars := "", _Init := true)
 		While (RegExMatch($z[$i], "&_Parent\d+_&", $pd))
 		{
 			_Match := RegExReplace(_Elements[$pd], "\((.*)\)", "$1")
-			While (RegExMatch(_Match, "&_\w+_&", $pe))
-				_Match := StrReplace(_Match, $pe, _Elements[$pe])
-			EvalResult := Eval(_Match, _CustomVars, false)
+		,	_Match := RestoreElements(_Match, _Elements)
+		,	EvalResult := Eval(_Match, _CustomVars, false)
 		,	RepString := "("
 			For _i, _v in EvalResult
 			{
@@ -164,14 +159,16 @@ Eval($x, _CustomVars := "", _Init := true)
 				If (IsObject(_v))
 					_Objects[ObjName] := _v
 				Else If _v is not Number
+				{
 					_v := """" _v """"
 				,	HidString := "&_String" (ObjCount(_Elements) + 1) "_&"
 				,	_Elements[HidString] := _v
 				,	_v := HidString
+				}
 				RepString .= (IsObject(_v) ? """<~#" ObjName "#~>""" : _v) ", "
 			}
-			RepString := SubStr(RepString, 1, -2) ")"
-			$z[$i] := StrReplace($z[$i], $pd, RepString)
+			RepString := RTrim(RepString, ", ") ")"
+		,	$z[$i] := StrReplace($z[$i], $pd, RepString)
 		}
 		
 		; Check whether the whole string is an object
@@ -195,10 +192,10 @@ Eval($x, _CustomVars := "", _Init := true)
 			}
 		}
 		
-		_Pos := 1
 		; Check for Functions
-		While (_Pos := RegExMatch($z[$i], "s)([\w_]+)\((.*?)\)", _Match, _Pos))
+		While (RegExMatch($z[$i], "s)([\w%]+)\((.*?)\)", _Match))
 		{
+			_Match1 := (RegExMatch(_Match1, "^%(\S+)%$", $pd)) ? %$pd1% : _Match1
 			Loop, %TabCount%
 			{
 				TabIdx := A_Index
@@ -211,9 +208,8 @@ Eval($x, _CustomVars := "", _Init := true)
 						LV_GetText(TargetFunc, A_Index, 3)
 						If ((Row_Type = cType47) && (TargetFunc = _Match1))
 						{
-							While (RegExMatch(_Match2, "&_\w+_&", $pd))
-								_Match2 := StrReplace(_Match2, $pd, _Elements[$pd])
-							_Params := {}
+							_Match2 := RestoreElements(_Match2, _Elements)
+						,	_Params := {}
 						,	FuncPars := ExprGetPars(_Match2)
 						,	EvalResult := Eval(_Match2, _CustomVars, false)
 							For i, v in EvalResult
@@ -224,11 +220,13 @@ Eval($x, _CustomVars := "", _Init := true)
 							If (IsObject($y))
 								_Objects[ObjName] := $y
 							Else If $y is not Number
+							{
 								$y := """" $y """"
 							,	HidString := "&_String" (ObjCount(_Elements) + 1) "_&"
 							,	_Elements[HidString] := $y
 							,	$y := HidString
 							$z[$i] := StrReplace($z[$i], _Match, IsObject($y) ? """<~#" ObjName "#:>""" : $y)
+							}
 							continue 3
 						}
 					}
@@ -237,47 +235,43 @@ Eval($x, _CustomVars := "", _Init := true)
 			
 			If ((IsFunc(_Match1)) && (!Func(_Match1).IsBuiltIn))
 			{
-				If _Match1 not in Screenshot,Zip,UnZip,WinHttpDownloadToFile
+				If _Match1 not in Screenshot,CDO,Zip,UnZip,CreateZipFile,WinHttpDownloadToFile,CenterImgSrchCoords
 				{
-					$z[$i] := StrReplace($z[$i], _Match, "ERROR: NOT ALLOWED")
-					_Match1 := ""
+					$z[$i] := StrReplace($z[$i], _Match)
+				,	_Match1 := ""
+					Throw Exception(d_Lang031,, _Match1)
 				}
 			}
 			
-			If (IsFunc(_Match1))
+			_Match2 := RestoreElements(_Match2, _Elements)
+		,	_Params := Eval(_Match2, _CustomVars, false)
+		,	$y := %_Match1%(_Params*)
+		,	ObjName := RegExReplace(_Match, "\W", "_")
+			If (IsObject($y))
+				_Objects[ObjName] := $y
+			Else If $y is not Number
 			{
-				While (RegExMatch(_Match2, "&_\w+_&", $pd))
-					_Match2 := StrReplace(_Match2, $pd, _Elements[$pd])
-				_Params := Eval(_Match2, _CustomVars, false)
-			,	$y := %_Match1%(_Params*)
-			,	ObjName := RegExReplace(_Match, "\W", "_")
-				If (IsObject($y))
-					_Objects[ObjName] := $y
-				Else If $y is not Number
-					$y := """" $y """"
-				,	HidString := "&_String" (ObjCount(_Elements) + 1) "_&"
-				,	_Elements[HidString] := $y
-				,	$y := HidString
-				$z[$i] := StrReplace($z[$i], _Match, IsObject($y) ? """<~#" ObjName "#~>""" : $y)
+				$y := """" $y """"
+			,	HidString := "&_String" (ObjCount(_Elements) + 1) "_&"
+			,	_Elements[HidString] := $y
+			,	$y := HidString
 			}
-			Else
-				_Pos += StrLen(_Match)
+			$z[$i] := StrReplace($z[$i], _Match, IsObject($y) ? """<~#" ObjName "#~>""" : $y)
 		}
 		
 		; Dereference variables in percent signs
 		While (RegExMatch($z[$i], "U)%(\S+)%", _Match))
 			EvalResult := Eval(_Match1, _CustomVars, false)
-		,	$z[$i] := RegExReplace($z[$i], _Match, EvalResult[1])
+		,	$z[$i] := StrReplace($z[$i], _Match, EvalResult[1])
 		
-		; ExprEval() cannot handle Unicode strings, so the "real" strings are "hidden" from ExprCompile() and restored later
-		While (RegExMatch($z[$i], "&_\w+_&", $pd))
-			$z[$i] := StrReplace($z[$i], $pd, _Elements[$pd])
-		__Elements := {}
+		; ExprEval() cannot parse Unicode strings, so the "real" strings are "hidden" from ExprCompile() and restored later
+		$z[$i] := RestoreElements($z[$i], _Elements)
+	,	__Elements := {}
 		While (RegExMatch($z[$i], "sU)""(.*)""", _String))
 			__Elements["&_String" A_Index "_&"] := _String1
 		,	$z[$i] := RegExReplace($z[$i], "sU)"".*""", "&_String" A_Index "_&",, 1)
 		$z[$i] := RegExReplace($z[$i], "&_String\d+_&", """$0""")
-
+		
 		; Add concatenate operator after strings where necessary
 		While (RegExMatch($z[$i], "(""&_String\d+_&""\s+)([^\d\.,\s:\?])"))
 			$z[$i] := RegExReplace($z[$i], "(""&_String\d+_&""\s+)([^\d\.,\s:\?])", "$1. $2")
@@ -303,11 +297,11 @@ Eval($x, _CustomVars := "", _Init := true)
 
 ParseObjects(v_String, _CustomVars  :=  "", ByRef v_levels := "", o_Oper := "", o_Value := "")
 {
-	Static _needle := "(\w+\.?|\(([^()]++|(?R))*\)\.?|\[([^\[\]]++|(?R))*\]\.?)"
+	Static _needle := "([\w%]+\.?|\(([^()]++|(?R))*\)\.?|\[([^\[\]]++|(?R))*\]\.?)"
 	
 	l_Matches := [], _Pos := 1, HasMethod := false
 	While (_Pos := RegExMatch(v_String, _needle, l_Found, _Pos))
-		l_Matches.Push(RTrim(l_Found, "."))
+		l_Matches.Push(RegExMatch(RTrim(l_Found, "."), "^%(\S+)%$", $pd) ? %$pd1% : RTrim(l_Found, "."))
 	,	_Pos += StrLen(l_Found)
 	v_Obj := l_Matches[1]
 	If (_CustomVars.HasKey(v_Obj))
@@ -319,8 +313,7 @@ ParseObjects(v_String, _CustomVars  :=  "", ByRef v_levels := "", o_Oper := "", 
 		If (RegExMatch($v, "^\((.*)\)$"))
 			continue
 		If (RegExMatch($v, "^\[(.*)\]$", l_Found))
-			EvalResult := Eval(l_Found1, _CustomVars, false)
-		,	_Key := EvalResult
+			_Key := Eval(l_Found1, _CustomVars, false)
 		Else
 			_Key := [$v]
 		$n := l_Matches[$i + 1]
@@ -391,6 +384,13 @@ ParseObjects(v_String, _CustomVars  :=  "", ByRef v_levels := "", o_Oper := "", 
 	If (HasMethod)
 		v_levels := ""
 	return _ArrayObject
+}
+
+RestoreElements(_String, _Elements)
+{
+	While (RegExMatch(_String, "&_\w+_&", $pd))
+		_String := StrReplace(_String, $pd, _Elements[$pd])
+	return _String
 }
 
 AssignParse(String, ByRef VarName, ByRef Oper, ByRef VarValue)

@@ -783,7 +783,7 @@
 	d_Lang014 =	Script Exportált
 	d_Lang015 =	A fájl sikeresen exportálták!
 	d_Lang016 =	Kattintson a "Get" megjelölni helyzetbe.
-	d_Lang017 =	- Válasszuk ki az ablakot.
+	d_Lang017 	- Válasszuk ki az ablakot.
 		- Mutasson a kívánt pozícióba.
 		- Nyomja meg a Jobbra gombot.
 	d_Lang018 =	Pixel Color
@@ -793,14 +793,13 @@
 	d_Lang022 =	Előző
 	d_Lang023 =	Üzenet
 	d_Lang024 =	Alapértelmezett beállítások betöltése?
-	d_Lang025 =	Makrók aktiválva.
-		Használja a Gyorsbillentyűk játszható.
+	d_Lang025 =	Makró (s) aktiválódik.`nA Hotkeys kell játszani.
 	d_Lang026 =	A start / stop felvétel
 	d_Lang027 =	Felvételi megállt
 	d_Lang028 =	Felvétel...
 	d_Lang029 =	megállítani
 	d_Lang030 =	kezdeni új rekord
-	d_Lang031 =	nem érvényes függvény neve.
+	d_Lang031 =	Hívjátok létező funkciót.
 	d_Lang032 =	Hiba: Duplicate Hotkeys.
 	d_Lang033 =	Aktiválása Makrók
 	d_Lang034 =	- Kattintson és húzza vele: %DrawButton% válassza területen.
@@ -811,8 +810,7 @@
 	d_Lang037 =	Image / Pixel Not Found.
 	d_Lang038 =	Nyomja meg az OK gombot a folytatáshoz.
 	d_Lang039 =	Timeout!
-	d_Lang040 =	
-.	Tämä ominaisuus vaatii GDI+ kirjasto.	Þessi eiginleiki krefst GDI + Library.
+	d_Lang040 =	Ez a funkció csak a GDI+ Library.
 		Kattintson az OK gombra, hogy menjen le az oldalt.
 	d_Lang041 =	A változó neve szabálytalan karaktert tartalmaz.
 	d_Lang042 =	foglalt szó.
@@ -832,7 +830,7 @@
 	d_Lang055 =	Kérjük, válasszon egy AutoHotkey script fájlt (. AHK) és adja meg a függvény neve.
 	d_Lang056 =	Ehhez a funkcióhoz AutoHotkey telepítve.
 		Kattintson az OK gombra, hogy menjen le az oldalt.
-	d_Lang057 =	- Nyomja meg a Ctrl+nyilakkal mozgatni a kijelölt területen.
+	d_Lang057 	- Nyomja meg a Ctrl+nyilakkal mozgatni a kijelölt területen.
 		- Nyomja meg a Shift+nyíl billentyűk átméretezésére kijelölt terület.
 		- Nyomja meg az Entert, hogy befejezze.
 	d_Lang058 =	Egyes funkciók megkövetelik admnistrator privilages ahhoz, hogy megfelelően működjön.
@@ -872,18 +870,18 @@
 	d_Lang088 =	Próbáld futtatni, közös felhasználói (nem rendszergazda).
 	d_Lang089 =	Nincs sorban kiválasztva!
 	d_Lang090 =	Kérjük, jelöljön ki egy sort beszúrni, vagy eltávolíthatja a csoport.
-	d_Lang091 =	Érvénytelen módszer
+	d_Lang091 =	Letöltés ... Kérem, várjon.
 	d_Lang092 =	Kis ikonok
 	d_Lang093 =	Nagy ikonok
 	d_Lang094 =	Ez a funkció csak Windows Vista vagy újabb.
 	d_Lang095 =	Használata ByRef okoz paramétert, hogy legyen egy álnevet a változó telt el a hívó fél. Más szavakkal, a paraméter, és a hívó változó mind ugyanarra a tartalmát a memóriába.
-	d_Lang096 =	- NE CSATOLNI VARIABLES SZÁZALÉKOS JELEK ITT.
+	d_Lang096 	- NE CSATOLNI VARIABLES SZÁZALÉKOS JELEK ITT.
 		- Vissza értéknek kell lennie egy kifejezés.
 		- Használhatja vonósok, változók, tömbök és függvények. Ön is kombinálhatja azokat.
 		- Ahhoz, hogy használni húrok, csatolja őket idézetek, pl: "Az eredmény:" a+b.
 		- Ha vissza kíván térni extra eredményeket, akkor is használhatja ByRef a paramétereket.
 		- Arrays lehet használni, hogy visszatérjen több értéket, vagy akár elemzi értékeket.
-	d_Lang097 =	- NE CSATOLNI VARIABLES SZÁZALÉKOS JELEK ITT.
+	d_Lang097 	- NE CSATOLNI VARIABLES SZÁZALÉKOS JELEK ITT.
 		- A legtöbb AHK kifejezések támogatottak.
 		- Használhatja vonósok, változók, tömbök és függvények.
 		- Ahhoz, hogy használni húrok, csatolja őket idézetek, pl: var = "a".
@@ -906,10 +904,9 @@
 	d_Lang112 =	E-mail fiók nem található.
 	d_Lang113 =	Nem jelzett hibát.
 	d_Lang114 =	Scripts exportált (még ha össze) a send email funkció (CDO) lesz látható információk az e-mail fiókok használni, beleértve a jelszót. A PMC projekt fájl nem rendelkezik ezekkel az adatokkal.
-	d_Lang115 =	- Tartsa Alt beállítani régió ugyanazon a helyen.
+	d_Lang115 	- Tartsa Alt beállítani régió ugyanazon a helyen.
 	d_Lang116 =	Transzfer és telepítése
 	d_Lang117 =	Tovább a letöltési oldalon
-	d_Lang118 =	Letöltés ... Kérem, várjon.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Nézze meg a videót tutorials a www.macrocreator.com/help, hogy megismerjék a számos jellemzője pulóver Macro Creator.

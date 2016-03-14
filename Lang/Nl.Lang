@@ -783,7 +783,7 @@
 	d_Lang014 =	Script Geëxporteerde
 	d_Lang015 =	Het bestand is succesvol geëxporteerd!
 	d_Lang016 =	Klik op 'Get' om positie te markeren.
-	d_Lang017 =	- Selecteer in het venster.
+	d_Lang017 	- Selecteer in het venster.
 		- Wijs de gewenste positie.
 		- Druk op de knop Rechts.
 	d_Lang018 =	Pixel Kleur
@@ -793,14 +793,13 @@
 	d_Lang022 =	Vorig
 	d_Lang023 =	Bericht
 	d_Lang024 =	Laad de standaardinstellingen?
-	d_Lang025 =	Macro's ingeschakeld.
-		Użyj skrótu, aby zagrać.
+	d_Lang025 =	Macro (s) geactiveerd.`nGebruik de sneltoetsen om te spelen.
 	d_Lang026 =	te starten / stoppen met opnemen
 	d_Lang027 =	Opname gestopt
 	d_Lang028 =	Opname...
 	d_Lang029 =	stoppen
 	d_Lang030 =	naar nieuw record te beginnen
-	d_Lang031 =	is geen geldige functienaam.
+	d_Lang031 =	Call to onbestaande functie.
 	d_Lang032 =	Fout: Dubbele Hotkeys.
 	d_Lang033 =	Activeer Macro's
 	d_Lang034 =	- Klik en sleep met %DrawButton% naar gebied te selecteren.
@@ -812,7 +811,6 @@
 	d_Lang038 =	Druk op OK om verder te gaan.
 	d_Lang039 =	Time-out!
 	d_Lang040 =	Voor deze functie moet de GDI+ bibliotheek.
-.	Tämä ominaisuus vaatii GDI+ kirjasto.	Táto funkcia vyžaduje rozhrania GDI+knižnice.
 		Klik op OK om naar de pagina te downloaden.
 	d_Lang041 =	De naam van de variabele bevat een ongeldig teken.
 	d_Lang042 =	is een gereserveerd woord.
@@ -832,7 +830,7 @@
 	d_Lang055 =	Selecteer een AutoHotkey script-bestand (. AHK) en een voer een functienaam.
 	d_Lang056 =	Voor deze functie is AutoHotkey geïnstalleerd.
 		Klik op OK om naar de pagina te downloaden.
-	d_Lang057 =	- Druk op Ctrl+Pijl-toetsen om het geselecteerde gebied te verplaatsen.
+	d_Lang057 	- Druk op Ctrl+Pijl-toetsen om het geselecteerde gebied te verplaatsen.
 		- Druk op Shift+pijltjestoetsen om geselecteerde gebied wijzigen.
 		- Druk op Enter om te voltooien.
 	d_Lang058 =	Voor sommige functies is admnistrator privileges om goed te functioneren.
@@ -872,18 +870,18 @@
 	d_Lang088 =	Probeer zo gewone gebruiker (geen beheerder) draaien.
 	d_Lang089 =	Geen rij geselecteerd!
 	d_Lang090 =	Alstublieft, selecteer een rij te plaatsen of te verwijderen van de groep.
-	d_Lang091 =	Ongeldige methode
+	d_Lang091 =	Downloaden ... Even wachten aub.
 	d_Lang092 =	Kleine pictogrammen
 	d_Lang093 =	Grote pictogrammen
 	d_Lang094 =	Deze functie vereist Windows Vista of hoger.
 	d_Lang095 =	Het gebruik van ByRef veroorzaakt een parameter een alias voor de variabele doorgegeven aan de oproeper worden. Met andere woorden, de variabele parameter en de beller beide naar dezelfde inhoud in het geheugen.
-	d_Lang096 =	- NIET BIJGAAND VARIABELEN IN PROCENTTEKENS HIER.
+	d_Lang096 	- NIET BIJGAAND VARIABELEN IN PROCENTTEKENS HIER.
 		- Return waarde moet een uitdrukking zijn.
 		- U kunt gebruik maken van snaren, variabelen, arrays en functies. U kunt ook een van deze te combineren.
 		- Om strings gebruiken, omsluiten ze tussen aanhalingstekens, bijvoorbeeld: "Resultaat is:" a+b.
 		- Als u wilt extra resultaten, kunt u ook ByRef gebruiken parameters.
 		- Arrays kunnen worden gebruikt om meerdere waarden of zelfs noemde waarden retourneren.
-	d_Lang097 =	- NIET BIJGAAND VARIABELEN IN PROCENTTEKENS HIER.
+	d_Lang097 	- NIET BIJGAAND VARIABELEN IN PROCENTTEKENS HIER.
 		- De meeste van de AHK uitdrukkingen worden ondersteund.
 		- U kunt gebruik maken van snaren, variabelen, arrays en functies.
 		- Om strings gebruiken, omsluiten ze tussen aanhalingstekens, bijvoorbeeld: var = "a".
@@ -906,10 +904,9 @@
 	d_Lang112 =	E-mailaccount niet gevonden.
 	d_Lang113 =	Geen fout gemeld.
 	d_Lang114 =	Scripts worden uitgevoerd (zelfs als gecompileerd) met de send e-mailfunctie (CDO) is zichtbaar informatie van e-mailaccounts gebruikt, met inbegrip van het wachtwoord. De PMC project bestand beschikt niet over deze informatie.
-	d_Lang115 =	- Houd Alt tot regio ingesteld op dezelfde locatie.
+	d_Lang115 	- Houd Alt tot regio ingesteld op dezelfde locatie.
 	d_Lang116 =	Transfer en installeer
 	d_Lang117 =	Ga naar pagina te downloaden
-	d_Lang118 =	Downloaden ... Even wachten aub.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Bekijk de video tutorials op www.macrocreator.com/help om te leren over de vele functies van Macro Schepper Pulover's.

@@ -783,24 +783,23 @@
 	d_Lang014 =	Script esportatu
 	d_Lang015 =	Fitxategia arrakastaz esportatu da!
 	d_Lang016 =	Klikatu 'Lortu' posizioa markatzeko.
-	d_Lang017 =	#NOME?
-		#NOME?
-		#NOME?
+	d_Lang017 	- Aukeratu leihoan.
+		- Nahi den posizioan Point.
+		- Eskuineko botoia sakatu.
 	d_Lang018 =	Pixel Color
 	d_Lang019 =	Garbitu zerrenda
 	d_Lang020 =	Itxi Makro?
 	d_Lang021 =	Hurrengoa
-	d_Lang022 =	Aurreko
+	d_Lang022 =	aurreko
 	d_Lang023 =	Mezua
-	d_Lang024 =	Ezarpenak Kargatu default?
-	d_Lang025 =	Makroak aktibatzen.
-		Erabili Hotkeys jolasteko.
-	d_Lang026 =	Stop grabatzen hasteko
+	d_Lang024 =	ezarpenak Kargatu default?
+	d_Lang025 =	Makro (s) Hotkeys du activated.`nUse Play.
+	d_Lang026 =	/ Stop grabatzen hasteko
 	d_Lang027 =	Grabaketa gelditu
 	d_Lang028 =	Grabaketa ...
-	d_Lang029 =	Gelditu
-	d_Lang030 =	Errekor berria hasteko
-	d_Lang031 =	Ez da baliozko funtzio-izen bat.
+	d_Lang029 =	gelditu
+	d_Lang030 =	errekor berria hasteko
+	d_Lang031 =	existitzen ez den funtzioaren deia.
 	d_Lang032 =	Akatsa: Duplicate Hotkeys.
 	d_Lang033 =	Aktibatu Makroak
 	d_Lang034 =	- Klik eta%% DrawButton Arrastatu area hautatzeko.
@@ -810,9 +809,8 @@
 	d_Lang036 =	Image / Pixel at Found
 	d_Lang037 =	Image / Pixel Not Found.
 	d_Lang038 =	Sakatu Ados jarraitzeko.
-	d_Lang039 =	Timeout!
-	d_Lang040 =	
-.	Tämä ominaisuus vaatii GDI+ kirjasto.	Lesi sici sidinga uhlelo GDI + Library.
+	d_Lang039 =	Denboraz kanpo!
+	d_Lang040 =	Erabiltzaileek GDI + Liburutegia eskatzen.
 		Egin klik Ados orria deskargatzeko joan.
 	d_Lang041 =	aldagai izen ilegala pertsonaia bat izanez.
 	d_Lang042 =	erreserbatutako hitza da.
@@ -832,9 +830,9 @@
 	d_Lang055 =	Mesedez hautatu AutoHotkey script fitxategia (.ahk) eta bat sartu funtzio-izen bat.
 	d_Lang056 =	Ezaugarri honek AutoHotkey instalatu egin behar da.
 		Egin klik Ados orria deskargatzeko joan.
-	d_Lang057 =	#NOME?
-		#NOME?
-		#NOME?
+	d_Lang057 	- Prentsa Ctrl + Arrow gakoak hautatutako area mugitzeko.
+		- Sakatu Shift + Arrow gakoak hautatutako area tamaina aldatzeko.
+		- Sakatu Sartu amaitzeko.
 	d_Lang058 =	Ezaugarri batzuk privilages admnistrator eskatzen funtzionatu ahal izateko ere.
 		Gomendatzen Aplikazio Administrator gisa berrabiarazi.
 	d_Lang059 =	Komando honek ez du esamolde edo funtziorik onartzen.
@@ -872,19 +870,19 @@
 	d_Lang088 =	Saiatu erabiltzaile arrunta (ez administratzaile) exekutatu.
 	d_Lang089 =	Ilara aukeratu!
 	d_Lang090 =	Mesedez, hautatu txertatu edo taldea ezabatu.
-	d_Lang091 =	metodo baliogabea
+	d_Lang091 =	Deskargen ... Mesedez, itxaron.
 	d_Lang092 =	ikono txikiak
 	d_Lang093 =	ikono handiak
 	d_Lang094 =	Ezaugarri honek Windows Vista edo handiagoa da.
 	d_Lang095 =	ByRef erabilera parametro bat eragiten gainditu deitzailearen aldagaia ezizen bat bihurtu da. Beste era batera esanda, parametro eta deitzailearen aldagai biak edukiak bera aipatzeko oroimenez.
-	d_Lang096 =	#NOME?
-		#NOME?
+	d_Lang096 	- EZ Behean daukazue VARIABLES ehuneko seinaleak hemen.
+		- Return balio adierazpen bat izan behar du.
 		- Kateak, aldagaiak, array-ak eta funtzioak erabili ahal izango duzu. ere konbinatu ahal izango duzu, horietako edozein.
 		- Kateak erabiltzeko, erantsi horiek komatxo artean, adib .: "Emaitza da:" + b a.
 		- Emaitzak estra itzuli nahi baduzu, ere erabili ahal izango duzu ByRef parametroetan.
-		#NOME?
-	d_Lang097 =	#NOME?
-		#NOME?
+		- Array erabil daiteke hainbat balio edo balio are izeneko itzultzeko.
+	d_Lang097 	- EZ Behean daukazue VARIABLES ehuneko seinaleak hemen.
+		- AHK esamoldeak gehienak onartzen dira.
 		- Kateak, aldagaiak, array-ak eta funtzioak erabili ahal izango duzu.
 		- Kateak erabiltzeko, erantsi horiek komatxo artean, adib .: var = "a".
 		- Adierazpenak anitzak onartzen dira, adib .: var = "a" || InStr (var, "b").
@@ -906,10 +904,9 @@
 	d_Lang112 =	Email kontua ez da aurkitu.
 	d_Lang113 =	No error du.
 	d_Lang114 =	Esportatutako (konpilatu bada ere) egindako bidali email funtzioa (JD) Scripts batera email kontuak informations ikusgai erabili, pasahitza barne izango dute. The PMC proiektuaren fitxategiak ez du informazio hori.
-	d_Lang115 =	#NOME?
+	d_Lang115 	- Hold Alt eskualdean ezarri Kokapen berean.
 	d_Lang116 =	Transferentzia eta instalatu
 	d_Lang117 =	Joan orria deskargatu
-	d_Lang118 =	Deskargen ... Mesedez, itxaron.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Begiratu bideo tutorialak www.macrocreator.com/help at Pulover en Makro Sortzailea ezaugarri asko ezagutzea.

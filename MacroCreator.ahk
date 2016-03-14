@@ -999,7 +999,7 @@ Gui, Add, Button, -Wrap ys-4 x+0 W25 H23 hwndApplyL vApplyL gApplyL
 Gui, Add, Button, -Wrap ys-4 x+5 W25 H23 hwndInsertKey vInsertKey gInsertKey
 	ILButton(InsertKey, ResDllPath ":" 91)
 Gui, Add, Text, W2 H25 ys-3 x+5 0x11 vSeparator3
-Gui, Add, Link, -Wrap ys x+5 W85 R1 vContextTip gSetWin, <a>#IfWin</a>: %IfDirectContext%
+Gui, Add, Link, -Wrap ys x+5 W85 R1 vContextTip gSetWin, <a>#If</a>: %IfDirectContext%
 Gui, Add, Text, W2 H25 ys-3 x+5 0x11 vSeparator4
 Gui, Add, Link, -Wrap ys x+5 W115 R1 vCoordTip gOptions, <a>CoordMode</a>: %CoordMouse%
 Gui, Add, Text, W2 H25 ys-3 x+5 0x11 vSeparator5
@@ -2077,7 +2077,7 @@ Gui, 14:Add, Combobox, yp-5 x+0 W60 vPauseKey gAutoComplete, %KeybdList%
 ; Context
 Gui, 14:Add, GroupBox, Section y+16 xs W450 H80
 Gui, 14:Add, Checkbox, -Wrap Section ys xs vEx_IfDir gEx_Checks R1, %t_Lang009%:
-Gui, 14:Add, DDL, xs+10 W105 vEx_IfDirType Disabled, #IfWinActive%_x%%_x%#IfWinNotActive%_x%#IfWinExist%_x%#IfNotWinExist
+Gui, 14:Add, DDL, xs+10 W105 vEx_IfDirType Disabled, #IfWinActive%_x%%_x%#IfWinNotActive%_x%#IfWinExist%_x%#IfNotWinExist%_x%#If
 Gui, 14:Add, DDL, yp x+250 W75 vIdent Disabled, Title%_x%%_x%Class%_x%Process%_x%ID%_x%PID
 Gui, 14:Add, Edit, -Wrap R1 xs+10 W400 vTitle Disabled
 Gui, 14:Add, Button, -Wrap yp-1 x+0 W30 H23 vGetWin gGetWin Disabled, ...
@@ -2163,7 +2163,10 @@ GoSub, Ex_Checks
 If (IfDirectContext != "None")
 {
 	GuiControl, 14:, Ex_IfDir, 1
-	GuiControl, 14:ChooseString, Ex_IfDirType, #IfWin%IfDirectContext%
+	If (IfDirectContext = "Expression")
+		GuiControl, 14:Choose, Ex_IfDirType, 5
+	Else
+		GuiControl, 14:ChooseString, Ex_IfDirType, #If%IfDirectContext%
 	GuiControl, 14:, Title, %IfDirectWindow%
 	GoSub, Ex_Checks
 }
@@ -2658,7 +2661,7 @@ Else
 	Body := AllScripts
 AllScripts := ""
 If (Ex_IfDir = 1)
-	Body := Ex_IfDirType ", " Title "`n`n" Body Ex_IfDirType "`n"
+	Body := Ex_IfDirType " " Title "`n`n" Body Ex_IfDirType "`n"
 If (Ex_AbortKey = 1)
 	Body .= "`n" AbortKey "::ExitApp`n"
 If (Ex_PauseKey = 1)
@@ -3812,7 +3815,7 @@ return
 
 TransferUpdate:
 GoSub, UpdateCancel
-SplashTextOn, 300, 25, %AppName%, %d_Lang118%
+SplashTextOn, 300, 25, %AppName%, %d_Lang091%
 WinHttpDownloadToFile(VerChk.DlUrl, A_Desktop)
 SplashTextOff
 File := A_Desktop "\" RegExReplace(VerChk.DlUrl, ".*/")
@@ -7870,7 +7873,7 @@ Gui, 21:Add, Edit, W200 R1 -Multi vArrayName Disabled
 Gui, 21:Add, Checkbox, -Wrap R1 y+10 xs+10 W430 vUseExtFunc gUseExtFunc, %c_Lang128%
 Gui, 21:Add, Edit, W400 R1 -Multi vFileNameEx Disabled, %StdLibFile%
 Gui, 21:Add, Button, -Wrap yp-1 x+0 W30 H23 vSearchFEX gSearchAHK Disabled, ...
-Gui, 21:Add, Text, -Wrap R1 y+10 xs+10 W130, %c_Lang089%:
+Gui, 21:Add, Text, -Wrap R1 y+10 xs+10 W130 vFuncNameT, %c_Lang089%:
 Gui, 21:Add, Combobox, W400 -Multi vFuncName gFuncName, %Proj_Funcs%%BuiltinFuncList%
 Gui, 21:Add, Button, -Wrap W25 yp-1 x+5 hwndFuncHelp vFuncHelp gFuncHelp Disabled
 	ILButton(FuncHelp, ResDllPath ":" 24)
@@ -8151,6 +8154,13 @@ Gui, 21:+OwnDialogs
 Gui, 21:Submit, NoHide
 If (TabControl = 3)
 {
+	If (FuncName = "")
+	{
+		Gui, 21:Font, cRed
+		GuiControl, 21:Font, FuncNameT
+		GuiControl, 21:Focus, FuncName
+		return
+	}
 	If (UseExtFunc)
 	{
 		SplitPath, FileNameEx,,, ext
@@ -8162,24 +8172,7 @@ If (TabControl = 3)
 		Target := FileNameEx
 	}
 	Else If (IsArray)
-	{
-		If FuncName not in Delete,HasKey,InsertAt,Length,MaxIndex,MinIndex,RemoveAt,Pop,Push
-		{
-			MsgBox, 16, %d_Lang007%, %d_Lang091%: "%FuncName%"
-			return
-		}
 		Target := ArrayName
-	}
-	Else If (!IsFunc(FuncName))
-	{
-		UserFuncs := StrReplace(Proj_Funcs, "$", ",")
-		If FuncName not in %UserFuncs%
-		{
-			MsgBox, 16, %d_Lang007%, "%FuncName%" %d_Lang031%
-			return
-		}
-		Target := ""
-	}
 	Else
 		Target := ""
 	VarName := VarNameF
@@ -12553,8 +12546,8 @@ Gui, 16:+owner1 -MinimizeBox +HwndCmdWin
 Gui, chMacro:Default
 Gui, 1:+Disabled
 Gui, 16:Add, Groupbox, W450 H75
-Gui, 16:Add, Text, -Wrap R1 ys+20 xs+10 W40 cBlue, #IfWin
-Gui, 16:Add, DDL, yp-3 x+5 W100 vIfDirectContext, None||Active|NotActive|Exist|NotExist
+Gui, 16:Add, Text, -Wrap R1 ys+20 xs+10 W40 cBlue, #If
+Gui, 16:Add, DDL, yp-3 x+5 W100 vIfDirectContext gIfDirectContext, None||WinActive|WinNotActive|WinExist|WinNotExist|Expression
 Gui, 16:Add, DDL, yp x+210 W75 vIdent, Title||Class|Process|ID|PID
 Gui, 16:Add, Edit, y+5 xs+10 W400 vTitle R1 -Multi, %IfDirectWindow%
 Gui, 16:Add, Button, -Wrap yp-1 x+0 W30 H23 vGetWin gGetWin, ...
@@ -12571,7 +12564,7 @@ IfDirectWindow := Title, TB_Edit(TbSettings, "SetWin", (IfDirectContext = "None"
 Gui, 1:-Disabled
 Gui, 16:Destroy
 Gui, chMacro:Default
-GuiControl, 1:, ContextTip, <a>#IfWin</a>: %IfDirectContext%
+GuiControl, 1:, ContextTip, <a>#If</a>: %IfDirectContext%
 return
 
 SWinCancel:
@@ -12579,6 +12572,20 @@ SWinCancel:
 16GuiEscape:
 Gui, 1:-Disabled
 Gui, 16:Destroy
+return
+
+IfDirectContext:
+Gui, 16:Submit, NoHide
+If (IfDirectContext = "Expression")
+{
+	GuiControl, 16:Disable, Ident
+	GuiControl, 16:Disable, GetWin
+}
+Else
+{
+	GuiControl, 16:Enable, Ident
+	GuiControl, 16:Enable, GetWin
+}
 return
 
 EditComm:
@@ -13578,7 +13585,7 @@ If (WinExist("ahk_id " PMCOSC))
 	Gui, 28:Show, % OSCPos (ShowProgBar ? "H40" : "H30") " W415 NoActivate", %AppName%
 GuiControl, 1:, CoordTip, <a>CoordMode</a>: %CoordMouse%
 GuiControl, 1:, TModeTip, <a>TitleMatchMode</a>: %TitleMatch%
-GuiControl, 1:, ContextTip, <a>#IfWin</a>: %IfDirectContext%
+GuiControl, 1:, ContextTip, <a>#If</a>: %IfDirectContext%
 GuiControl, 1:, AbortKey, %AbortKey%
 GuiControl, 1:, PauseKey, %PauseKey%
 GuiControl, 1:, DelayG, 0

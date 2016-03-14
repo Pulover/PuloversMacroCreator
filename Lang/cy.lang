@@ -783,9 +783,9 @@
 	d_Lang014 =	Sgript allfudo
 	d_Lang015 =	Mae'r ffeil yn cael ei allforio yn llwyddiannus!
 	d_Lang016 =	Cliciwch 'Get' i nodi'r sefyllfa.
-	d_Lang017 =	#NOME?
-		#NOME?
-		#NOME?
+	d_Lang017 	- Dewiswch y ffenestr.
+		- Pwynt i sefyllfa a ddymunir.
+		- Gwasgwch y botwm Iawn.
 	d_Lang018 =	Pixel Lliw
 	d_Lang019 =	Rhestr Clear
 	d_Lang020 =	Macro Close?
@@ -793,14 +793,13 @@
 	d_Lang022 =	blaenorol
 	d_Lang023 =	neges
 	d_Lang024 =	gosodiadau diofyn Llwyth?
-	d_Lang025 =	Macros actifadu.
-		Defnyddiwch y Hotkeys i Chwarae.
+	d_Lang025 =	Macro (au) activated.`nUse y Hotkeys i Chwarae.
 	d_Lang026 =	i ddechrau / stopio recordio
 	d_Lang027 =	cofnodi stopio
 	d_Lang028 =	Cofnodi ...
 	d_Lang029 =	stopio
 	d_Lang030 =	i ddechrau cofnod newydd
-	d_Lang031 =	Nid yw enw swyddogaeth dilys.
+	d_Lang031 =	Galwad i swyddogaeth ddim yn bodoli.
 	d_Lang032 =	Gwall: dyblyg Hotkeys.
 	d_Lang033 =	activate Macros
 	d_Lang034 =	- Cliciwch a Llusgwch gyda% DrawButton% i ddewis ardal.
@@ -811,7 +810,7 @@
 	d_Lang037 =	Image / Pixel Heb ei ddarganfod.
 	d_Lang038 =	Pwyso Iawn i barhau.
 	d_Lang039 =	Amser allan!
-.	Tämä ominaisuus vaatii GDI+ kirjasto.	ຄຸນນະສົມບັດນີ້ຮຽກຮ້ອງໃຫ້ມີ + ຫໍສະຫມຸດ GDI.
+	d_Lang040 =	Mae'r nodwedd hon yn ei gwneud yn ofynnol i'r Llyfrgell GDI +.
 		Cliciwch OK i fynd i lawrlwytho dudalen.
 	d_Lang041 =	Yr enw newidyn yn cynnwys cymeriad anghyfreithlon.
 	d_Lang042 =	yn air neilltuedig.
@@ -831,9 +830,9 @@
 	d_Lang055 =	Dewiswch ffeil script AutoHotkey (.ahk) a mynd i mewn i Enw Swyddogaeth.
 	d_Lang056 =	Mae'r nodwedd hon yn ei gwneud yn ofynnol AutoHotkey gorseddedig.
 		Cliciwch OK i fynd i lawrlwytho dudalen.
-	d_Lang057 =	- Allweddi i'r wasg Ctrl + Saeth i symud ardal a ddewiswyd.
-		#NOME?
-		#NOME?
+	d_Lang057 	- Allweddi i'r wasg Ctrl + Saeth i symud ardal a ddewiswyd.
+		- Shift Wasg + Saeth Allweddi i newid maint ardal a ddewiswyd.
+		- Gwasgwch Enter i orffen.
 	d_Lang058 =	Rhai nodweddion ei gwneud yn ofynnol admnistrator privilages er mwyn gweithio'n iawn.
 		Mae'n argymell i ailgychwyn y cais fel Administrator.
 	d_Lang059 =	Nid yw hyn yn cefnogi gorchymyn ymadroddion neu swyddogaethau.
@@ -871,18 +870,18 @@
 	d_Lang088 =	Ceisiwch i redeg defnyddiwr cyffredin (nid gweinyddwr).
 	d_Lang089 =	Dim rhes a ddewiswyd!
 	d_Lang090 =	Os gwelwch yn dda, dewiswch rhes i roi neu gael gwared ar y grŵp.
-	d_Lang091 =	dull annilys
+	d_Lang091 =	Lawrlwytho ... Os gwelwch yn dda, aros.
 	d_Lang092 =	eiconau bach
 	d_Lang093 =	eiconau mawr
 	d_Lang094 =	Mae'r nodwedd hon yn ei gwneud yn ofynnol Windows Vista neu uwch.
 	d_Lang095 =	Mae'r defnydd o ByRef yn achosi paramedr i ddod yn alias gyfer y newidyn a basiwyd yn y galwr. Mewn geiriau eraill, mae'r paramedr ac amrywiol y galwr yn cyfeirio at yr un cynnwys yn y cof.
-	d_Lang096 =	#NOME?
+	d_Lang096 	- PEIDIWCH AMGÁU newidynnau mewn ARWYDDION PERCENT YMA.
 		- Mae'n rhaid i werth Dychwelyd fod yn fynegiant.
 		- Gallwch ddefnyddio llinynnau, newidynnau, araeau a swyddogaethau. Efallai y byddwch hefyd gyfuno unrhyw un o'r rhai.
 		- I ddefnyddio llinynnau, yn eu amgáu mewn dyfynodau, e.e. .: "Canlyniad yw:" a + b.
 		- Os ydych am ddychwelyd canlyniadau ychwanegol, efallai y byddwch hefyd yn defnyddio ByRef mewn paramedrau.
-		#NOME?
-	d_Lang097 =	#NOME?
+		- Gellir Araeau yn cael ei ddefnyddio i ddychwelyd gwerthoedd lluosog neu werthoedd a enwir hyd yn oed.
+	d_Lang097 	- PEIDIWCH AMGÁU newidynnau mewn ARWYDDION PERCENT YMA.
 		- Mae'r rhan fwyaf o ymadroddion AHK yn cael eu cefnogi.
 		- Gallwch ddefnyddio llinynnau, newidynnau, araeau a swyddogaethau.
 		- I ddefnyddio llinynnau, yn eu amgáu mewn dyfynodau, e.e. .: var = "yn".
@@ -905,10 +904,9 @@
 	d_Lang112 =	Cyfrif e-bost heb ei darganfod.
 	d_Lang113 =	Adrodd unrhyw wall.
 	d_Lang114 =	Bydd sgriptiau allforio (hyd yn oed os llunio) gyda'r swyddogaeth e-bost anfon (CDO) cael informations gweledol o gyfrifon e-bost a ddefnyddiwyd, gan gynnwys y PASSWORD. Nid oes gan y wybodaeth hon Mae'r ffeil prosiect Monitro'r Rhaglen.
-	d_Lang115 =	- Cynnal Alt i osod rhanbarth i'r un lleoliad.
+	d_Lang115 	- Cynnal Alt i osod rhanbarth i'r un lleoliad.
 	d_Lang116 =	Trosglwyddo a gosod
 	d_Lang117 =	Ewch i lawrlwytho dudalen
-	d_Lang118 =	Lawrlwytho ... Os gwelwch yn dda, aros.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Edrychwch ar y tiwtorialau fideo ar www.macrocreator.com/help i ddysgu am nodweddion llawer o Crëwr Macro Pulover yn.

@@ -743,30 +743,35 @@
 							}
 						}
 					}
-					If (IsFunc(Action))
+					If (!Func(Action).IsBuiltIn)
 					{
-						If (!Func(Action).IsBuiltIn)
-							If Action not in Screenshot,Zip,UnZip
-								continue
-								
-						pbParams := Eval(VarValue, PlaybackVars[LoopDepth][mLoopIndex])
-						Try
-						{
-							VarValue := %Action%(pbParams*)
-						,	AssignVar(VarName, ":=", VarValue, PlaybackVars[LoopDepth][mLoopIndex], RunningFunction)
-						}
-						Catch e
+						If Action not in Screenshot,CDO,Zip,UnZip,CreateZipFile,WinHttpDownloadToFile,CenterImgSrchCoords
 						{
 							MsgBox, 20, %d_Lang007%, % "Macro" Macro_On ", " d_Lang065 " " mListRow
-								.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" (InStr(e.Message, "0x800401E3") ? d_Lang088 : e.Extra) "`n`n" d_Lang035
+								.	"`n" d_Lang007 ":`t`t" d_Lang031 "`n" d_Lang066 ":`t" Action "`n`n" d_Lang035
 							IfMsgBox, No
-							{
 								StopIt := 1
-								continue
-							}
+							continue
 						}
-						Try SavedVars(VarName,,, RunningFunction)
 					}
+							
+					pbParams := Eval(VarValue, PlaybackVars[LoopDepth][mLoopIndex])
+					Try
+					{
+						VarValue := %Action%(pbParams*)
+					,	AssignVar(VarName, ":=", VarValue, PlaybackVars[LoopDepth][mLoopIndex], RunningFunction)
+					}
+					Catch e
+					{
+						MsgBox, 20, %d_Lang007%, % "Macro" Macro_On ", " d_Lang065 " " mListRow
+							.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" (InStr(e.Message, "0x800401E3") ? d_Lang088 : e.Extra) "`n`n" d_Lang035
+						IfMsgBox, No
+						{
+							StopIt := 1
+							continue
+						}
+					}
+					Try SavedVars(VarName,,, RunningFunction)
 				}
 				If (ManualKey)
 					WaitFor.Key(o_ManKey[ManualKey], 0)
@@ -2303,20 +2308,34 @@ AssignVar(_Name, _Operator, _Value, CustomVars, RunningFunction)
 
 CheckVars(CustomVars, ByRef CheckVar1 := "", ByRef CheckVar2 := "", ByRef CheckVar3 := "", ByRef CheckVar4 := "", ByRef CheckVar5 := "")
 {
+	global d_Lang007, d_Lang035, d_Lang065, d_Lang066, d_Lang088, StopIt
 	Loop, 5
 	{
 		If (!IsByRef(CheckVar%A_Index%))
 			continue
 		_i := A_Index
+		If (RegExMatch(CheckVar%_i%, "sU)^%\s+(.+)$", lMatch))  ; Expressions
+		{
+			Try
+				EvalResult := Eval(lMatch1, CustomVars), CheckVar%_i% := EvalResult[1]
+			Catch e
+			{
+				MsgBox, 20, %d_Lang007%, % "Macro" Macro_On ", " d_Lang065 " " mListRow
+					.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" (InStr(e.Message, "0x800401E3") ? d_Lang088 : e.Extra) "`n`n" d_Lang035
+				IfMsgBox, No
+				{
+					StopIt := 1
+					continue
+				}
+			}
+			continue
+		}
 		For _key, _value in CustomVars
 		{
 			While (RegExMatch(CheckVar%_i%, "i)%" _key "%", lMatch))
 				CheckVar%_i% := RegExReplace(CheckVar%_i%, "U)" lMatch, _value)
 		}
 		CheckVar%_i% := DerefVars(CheckVar%_i%)
-		
-		If (RegExMatch(CheckVar%_i%, "sU)^%\s+(.+)$", lMatch))  ; Expressions
-			EvalResult := Eval(lMatch1, CustomVars), CheckVar%_i% := EvalResult[1]
 	}
 }
 

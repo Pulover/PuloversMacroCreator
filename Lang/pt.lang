@@ -783,7 +783,7 @@
 	d_Lang014 =	Script Exportado
 	d_Lang015 =	Arquivo exportado com sucesso!
 	d_Lang016 =	Clique em 'Buscar' para marcar a posição.
-	d_Lang017 =	- Selecione a janela.
+	d_Lang017 	- Selecione a janela.
 		- Aponte para o local desejado.
 		- Clique com o Botão Direito.
 	d_Lang018 =	Cor do Pixel
@@ -793,14 +793,13 @@
 	d_Lang022 =	Anterior
 	d_Lang023 =	Mensagem
 	d_Lang024 =	Carregar configuração padrão?
-	d_Lang025 =	Macros activadas.
-		Use os Atalhos para Iniciar.
+	d_Lang025 =	Macro(s) ativada(s).`nUse os Atalhos para Iniciar.
 	d_Lang026 =	para iniciar / parar a gravação
 	d_Lang027 =	Fim da gravação
 	d_Lang028 =	Gravando...
 	d_Lang029 =	para parar
 	d_Lang030 =	para iniciar nova gravação
-	d_Lang031 =	não é um nome de função válido.
+	d_Lang031 =	Chamado à função não-existente.
 	d_Lang032 =	Erro: Atalhos duplicados.
 	d_Lang033 =	Ativar Macros
 	d_Lang034 =	- Clique arraste com %DrawButton% para selecionar a área.
@@ -812,7 +811,6 @@
 	d_Lang038 =	Pressione OK para continuar.
 	d_Lang039 =	Tempo esgotado!
 	d_Lang040 =	Este recurso requer a Biblioteca GDI+.
-.	Tämä ominaisuus vaatii GDI+ kirjasto.	Aquesta funció requereix la biblioteca GDI+.
 		Pressione OK para ir para a página de download.
 	d_Lang041 =	O nome da variável contém um caractere ilegal.
 	d_Lang042 =	é uma palavra reservada.
@@ -832,7 +830,7 @@
 	d_Lang055 =	Por favor, selecione um arquivo de script AutoHotkey e digite um nome de Função.
 	d_Lang056 =	Este recurso requer o AutoHotkey instalado.
 		Pressione OK para ir para a página de download.
-	d_Lang057 =	- Pressione Ctrl+Setas para mover a área selecionada.
+	d_Lang057 	- Pressione Ctrl+Setas para mover a área selecionada.
 		- Pressione Shift+Setas para redimensionar a área selecionada.
 		- Pressione Enter para finalizar.
 	d_Lang058 =	Alguns recursos requerem privilégios administrativos para funcionarem corretamente.
@@ -872,18 +870,18 @@
 	d_Lang088 =	Tente executar como usuário comum (não administrador).
 	d_Lang089 =	Nenhuma linha selecionada!
 	d_Lang090 =	Por favor, selecione uma linha para inserir ou remover o grupo.
-	d_Lang091 =	Método inválido
+	d_Lang091 =	Baixando ... Por favor, aguarde.
 	d_Lang092 =	Ícones pequenos
 	d_Lang093 =	Ícones grandes
 	d_Lang094 =	Este recurso requer Windows Vista ou superior.
 	d_Lang095 =	O uso de ByRef faz um parâmetro se tornar uma referência à variável passada para a função. Em outras palavras, o parâmetro e a variável se referem ao mesmo conteúdo na memória.
-	d_Lang096 =	- NÃO COLOQUE VARIÁVEIS ENTRE SINAIS DE PORCENTAGEM AQUI.
+	d_Lang096 	- NÃO COLOQUE VARIÁVEIS ENTRE SINAIS DE PORCENTAGEM AQUI.
 		- O valor de retorno deve ser uma expressão.
 		- Pode usar textos, variáveis, matrizes e funções. Pode combinar qualquer uma dessas.
 		- Para usar textos, coloque-os entre aspas, ex.: "Resultado é: " a+b.
 		- Se quiser retornar resultados extras, pode usar parâmetros ByRef também.
 		- Matrizes podem ser usadas para retornar multiplos valores, ou mesmo valores com nomes.
-	d_Lang097 =	- NÃO COLOQUE VARIÁVEIS ENTRE SINAIS DE PORCENTAGEM AQUI.
+	d_Lang097 	- NÃO COLOQUE VARIÁVEIS ENTRE SINAIS DE PORCENTAGEM AQUI.
 		- A maioria das expressões AHK são suportadas.
 		- Pode usar textos, variáveis, matrizes e funções.
 		- Para usar textos, coloque-os entre aspas, ex.: var = "a".
@@ -906,10 +904,9 @@
 	d_Lang112 =	Conta de e-mail não encontrada.
 	d_Lang113 =	Nenhum erro informado.
 	d_Lang114 =	Scripts exportados (mesmo se compilado) com a função de envio de e-mail (CDO) terá informações visíveis das contas de e-mail usadas, incluindo a senha. O arquivo de projeto PMC não tem esta informação.
-	d_Lang115 =	- Segure Alt para ajustar a região para o mesmo local.
+	d_Lang115 	- Segure Alt para ajustar a região para o mesmo local.
 	d_Lang116 =	Transferir e instalar
 	d_Lang117 =	Ir para página de download
-	d_Lang118 =	Baixando ... Por favor, aguarde.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Confira os tutoriais em vídeo no www.macrocreator.com/help para aprender sobre as muitas características do Criador Macro do Pulover.

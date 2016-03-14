@@ -783,26 +783,25 @@
 	d_Lang014 =	Script Exportados
 	d_Lang015 =	O ficheiro foi exportado con éxito!
 	d_Lang016 =	Prema en "Get 'para marcar posición.
-	d_Lang017 =	#NOME?
-		#NOME?
-		#NOME?
-	d_Lang018 =	Pixel Color
-	d_Lang019 =	Borrar Lista
+	d_Lang017 	- Seleccione a xanela.
+		- Punto para a posición desexada.
+		- Preme o botón dereito.
+	d_Lang018 =	pixel Color
+	d_Lang019 =	borrar Lista
 	d_Lang020 =	Pechar Macro?
-	d_Lang021 =	Seguinte
-	d_Lang022 =	Anterior
-	d_Lang023 =	Mensaxe
+	d_Lang021 =	seguinte
+	d_Lang022 =	anterior
+	d_Lang023 =	mensaxe
 	d_Lang024 =	Cargando configuración por defecto?
-	d_Lang025 =	Macros activado.
-		Use as teclas de atallo para xogar.
-	d_Lang026 =	Para iniciar / deter a gravación
-	d_Lang027 =	Gravación interrompida
+	d_Lang025 =	Macro (s) activated.`nUse as teclas de atallo para xogar.
+	d_Lang026 =	para iniciar / deter a gravación
+	d_Lang027 =	gravación interrompida
 	d_Lang028 =	A gravación ...
-	d_Lang029 =	Parar
-	d_Lang030 =	Para iniciar nova marca
-	d_Lang031 =	Non é un nome de función válido.
+	d_Lang029 =	parar
+	d_Lang030 =	para iniciar nova marca
+	d_Lang031 =	A chamada de función non existe.
 	d_Lang032 =	Erro: Hotkeys duplicado.
-	d_Lang033 =	Activar macros
+	d_Lang033 =	activar macros
 	d_Lang034 =	- Fai clic e arrastra co% DrawButton% para seleccionar a área.
 		- Fai clic e solte sen arrastrar para seleccionar a área de control.
 		- Faga clic nunha área sen un control para seleccionar a área da xanela.
@@ -811,8 +810,7 @@
 	d_Lang037 =	Image / Pixel non atopado.
 	d_Lang038 =	Prema Aceptar para continuar.
 	d_Lang039 =	Intervalo!
-	d_Lang040 =	
-.	Tämä ominaisuus vaatii GDI+ kirjasto.	تتطلب هذه الميزة+مكتبة GDI.
+	d_Lang040 =	Esta característica require + Biblioteca GDI.
 		Prema en Aceptar para ir á páxina de descarga.
 	d_Lang041 =	O nome da variable contén un carácter ilegal.
 	d_Lang042 =	é unha palabra reservada.
@@ -832,9 +830,9 @@
 	d_Lang055 =	Por favor, seleccione un ficheiro de script AutoHotkey (.ahk) e unha introduza un nome de función.
 	d_Lang056 =	Esta característica require AutoHotkey instalado.
 		Prema en Aceptar para ir á páxina de descarga.
-	d_Lang057 =	#NOME?
-		#NOME?
-		#NOME?
+	d_Lang057 	- Prema Ctrl + teclas de frechas para mover a área seleccionada.
+		- Prema as teclas Maiús + frecha para redimensionar a zona seleccionada.
+		- Prema Intro para finalizar.
 	d_Lang058 =	Algunhas funcións esixen admnistrator privilages, a fin de funcionar correctamente.
 		Recoméndase para reiniciar a aplicación como administrador.
 	d_Lang059 =	Este comando non soporta expresións ou funcións.
@@ -872,19 +870,19 @@
 	d_Lang088 =	Probe realizar usuario como común (non administrador).
 	d_Lang089 =	Ningunha liña seleccionada!
 	d_Lang090 =	Por favor, seleccione unha liña para introducir ou eliminar o grupo.
-	d_Lang091 =	método válido
+	d_Lang091 =	Descargar ... Por favor, espere.
 	d_Lang092 =	iconas pequenos
 	d_Lang093 =	iconas grandes
 	d_Lang094 =	Esta característica require Windows Vista ou superior.
 	d_Lang095 =	O uso de ByRef provoca un parámetro para facer un alias para a variable pasado do emisor da chamada. Noutras palabras, o parámetro variable e do interlocutor ambos refírense aos mesmos contidos na memoria.
-	d_Lang096 =	#NOME?
-		#NOME?
+	d_Lang096 	- Non coloque VARIABLES de sinais de porcentaxe aquí.
+		- o valor de retorno debe ser unha expresión.
 		- Pode utilizar cordas, variables, matrices e funcións. Tamén pode combinar calquera destes.
 		- Para usar cordas, coloque os entre comiñas, por exemplo. "O resultado é:" a + b.
 		- Se quere devolver resultados extra, tamén se pode usar ByRef en parámetros.
 		- Arrays poden ser usados ​​para voltar varios valores ou valores aínda nomeados.
-	d_Lang097 =	#NOME?
-		#NOME?
+	d_Lang097 	- Non coloque VARIABLES de sinais de porcentaxe aquí.
+		- a maioría das expresións AHK dispoñible.
 		- Pode utilizar cordas, variables, matrices e funcións.
 		- Para usar cordas, coloque os entre comiñas, por exemplo.: Var = "a".
 		- Múltiples declaracións son soportados, por exemplo.: Var = "a" || INSTR (var, "b").
@@ -906,10 +904,9 @@
 	d_Lang112 =	Conta de correo electrónico non se atopou.
 	d_Lang113 =	Ningún erro relatado.
 	d_Lang114 =	Scripts exportados (mesmo se compilado) coa función de envío de correo-e (CDO) terá información visibles de contas de correo electrónico usados, incluíndo o contrasinal. O ficheiro de proxecto PMC non ten esta información.
-	d_Lang115 =	#NOME?
+	d_Lang115 	- Manteña a tecla Alt para definir a rexión ao mesmo lugar.
 	d_Lang116 =	Descargar e instalar
 	d_Lang117 =	Ir a páxina de descarga
-	d_Lang118 =	Descargar ... Por favor, espere.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Consulte os tutoriais en video no www.macrocreator.com/help para aprender sobre as moitas características do Creador Macro do pulôver.

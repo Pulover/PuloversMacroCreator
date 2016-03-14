@@ -783,9 +783,9 @@
 	d_Lang014 =	Okushicilelweyo kumazwe
 	d_Lang015 =	Ifayile ngaphandle ngempumelelo!
 	d_Lang016 =	Nqakraza 'Fumana' ukuphawula isikhundla.
-	d_Lang017 =	#NOME?
-		#NOME?
-		#NOME?
+	d_Lang017 	- Khetha i window.
+		- Point ukuya kwisikhundla ezinqwenelekayo.
+		- Cinezela iqhosha Ekunene.
 	d_Lang018 =	pixel Umbala
 	d_Lang019 =	Cacisa uluhlu lodweliso
 	d_Lang020 =	Vala Macro?
@@ -793,14 +793,13 @@
 	d_Lang022 =	egqithileyo
 	d_Lang023 =	umyalezo
 	d_Lang024 =	izicwangciso Load olungagqibekanga?
-	d_Lang025 =	Zesikocan zingasebenzi.
-		Sebenzisa Hotkeys Udlala.
+	d_Lang025 =	Macro (s) activated.`nUse le Hotkeys Udlala.
 	d_Lang026 =	ukuqala / stop ukurekhoda
 	d_Lang027 =	ukurekhoda wayeka
 	d_Lang028 =	Ukurekhoda ...
 	d_Lang029 =	ukumisa
 	d_Lang030 =	ukuqala irekhodi entsha
-	d_Lang031 =	alikho igama elisebenzayo umsebenzi.
+	d_Lang031 =	Babiza umsebenzi engekhoyo.
 	d_Lang032 =	Imposiso: oluphindwe Hotkeys.
 	d_Lang033 =	Vule zesikocan
 	d_Lang034 =	- Nqakraza kwaye tsala nge% DrawButton% ukuba ukhethe indawo.
@@ -811,7 +810,7 @@
 	d_Lang037 =	Image / iphikseli Not Found.
 	d_Lang038 =	Cinezela KULUNGILE kuqhubeka.
 	d_Lang039 =	Kuphele ixesha!
-.	Tämä ominaisuus vaatii GDI+ kirjasto.	ეს ფუნქცია მოითხოვს GDI + ბიბლიოთეკა.
+	d_Lang040 =	Lo msebenzi osemqoka ifuna GDI + Library.
 		Nqakraza KULUNGILE ukuya ukukhuphela page.
 	d_Lang041 =	Igama Womendo iqulethe uphawu mthethweni.
 	d_Lang042 =	ligama Reserved.
@@ -831,9 +830,9 @@
 	d_Lang055 =	Nceda khetha ifayile AutoHotkey isikripthi (.ahk) kwaye ngenisa Igama Function.
 	d_Lang056 =	Lo msebenzi osemqoka kufuna AutoHotkey efakiweyo.
 		Nqakraza KULUNGILE ukuya ukukhuphela page.
-	d_Lang057 =	#NOME?
-		#NOME?
-		#NOME?
+	d_Lang057 	- Cinezela Ctrl + Arrow yezitshixo ukuhamba ariya ekhethiweyo.
+		- Cinezela Shift + utolo Izitsixo Konsole ariya ekhethiweyo.
+		- Cinezela Faka ukugqiba.
 	d_Lang058 =	Ezinye iinkalo zifuna admnistrator privilages ukuze isebenze kakuhle.
 		Loo nto Kucetyiswa ukuba uqale kwakhona isicelo njengoko Administrator.
 	d_Lang059 =	Lo myalelo akayixhasi amabinzana okanye imisebenzi.
@@ -871,19 +870,19 @@
 	d_Lang088 =	Zama ukubaleka umsebenzisi njengokuba eqhelekileyo (hayi administrator).
 	d_Lang089 =	Akukho umqolo okhethiweyo!
 	d_Lang090 =	Nceda, khetha umqolo ukufaka okanye ukususa qela.
-	d_Lang091 =	indlela engasebenziyo
+	d_Lang091 =	Ngolayisho ... Nceda, linda.
 	d_Lang092 =	iicons ezincinci
 	d_Lang093 =	icons ezinkulu
 	d_Lang094 =	Lo msebenzi osemqoka ifuna Vista okanye ngaphezulu Windows.
 	d_Lang095 =	Ukusetyenziswa ByRef ebangela parameter ukuba abe Elny.igma elitshintshayo lwamkelwa ukusuka fown. Ngamanye amazwi, le parameter kunye fown yakhe Womendo bobabini jonga imixholo efanayo kwinkumbulo.
-	d_Lang096 =	#NOME?
-		#NOME?
+	d_Lang096 	- MUSA kugqunywe Ifaka ngemiqondiso PESENTI APHA.
+		- Ixabiso Return kufuneka ibonise.
 		- Ungasebenzisa imitya, izinto ezitshintshayo, kwimiboniso kunye nemisebenzi. Nawe ukudibanisa nayiphi na kwezo.
 		- Ukusebenzisa imitya, Somrhaqa kubo kuchaphulo, umzk .: "isiphumo:" a + b.
 		- Ukuba ufuna ukubuyela iziphumo ezingaphezulu, usenokusebenzisa ByRef kwi parameters.
-		#NOME?
-	d_Lang097 =	#NOME?
-		#NOME?
+		- Kwimiboniso zingasetyenziswa Ukuba babuyele amaxabiso ezininzi okanye amaxabiso nokuba igama.
+	d_Lang097 	- MUSA kugqunywe Ifaka ngemiqondiso PESENTI APHA.
+		- Uninzi amabinzana AHK ziyaxhaswa.
 		- Ungasebenzisa imitya, izinto ezitshintshayo, kwimiboniso kunye nemisebenzi.
 		- Ukusebenzisa imitya, Somrhaqa kubo kuchaphulo, umzk .: var = "a".
 		- Iingxelo Multiple ziyaxhaswa, umzk .: var = "a" || IMIYALE (var, "b").
@@ -905,10 +904,9 @@
 	d_Lang112 =	Akhawunti Email ayifumaneki.
 	d_Lang113 =	Akukho imposiso ingxelo.
 	d_Lang114 =	Ashicilelwe kumazwe angaphandle (nokuba kuqulunqwe) kunye umsebenzi uthumele email (CDO) kuya kufuneka Inkcukacha ezibonakalayo akhawunti imeyile esetyenziswa, kuquka igama. Ifayile yeprojekthi NGEZIKHOKELO akanayo olu lwazi.
-	d_Lang115 =	#NOME?
+	d_Lang115 	- Bamba Alt ukuseta ummandla kwindawo enye.
 	d_Lang116 =	YokuGqithisela nokufakela
 	d_Lang117 =	Yiya ukukhuphela page
-	d_Lang118 =	Ngolayisho ... Nceda, linda.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Khangela le izifundo umboniso nangaliphi www.macrocreator.com/help bafunde iimpawu ezininzi uMdali Pulover ka-Macro.

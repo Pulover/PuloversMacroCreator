@@ -99,7 +99,6 @@
 			,	Labels .= ((Opt[7] != "") ? Opt[7] : "Macro" TabCount) "|"
 			,	LVManager.SetHwnd(ListID%TabCount%), LVManager.ClearHistory()
 			,	LVManager.SetGroups(PmcGroups[A_Index]), LVManager.Add()
-				OutputDebug, PMCAdd %A_LineNumber%: %A_ThisLabel%
 			}
 		}
 		If (TabCount = 0)

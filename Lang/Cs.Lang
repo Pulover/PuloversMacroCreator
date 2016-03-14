@@ -783,7 +783,7 @@
 	d_Lang014 =	Script Exportované
 	d_Lang015 =	Soubor byl úspěšně vyváží!
 	d_Lang016 =	Klepněte na tlačítko "Get" pro označení polohy.
-	d_Lang017 =	- Vyberte okno.
+	d_Lang017 	- Vyberte okno.
 		- Přejděte do požadované polohy.
 		- Stiskněte pravé tlačítko.
 	d_Lang018 =	Pixel Color
@@ -793,14 +793,13 @@
 	d_Lang022 =	Předchozí
 	d_Lang023 =	Zpráva
 	d_Lang024 =	Vložte výchozí nastavení?
-	d_Lang025 =	Makra aktivován.
-		Použijte klávesových zkratek hrát.
+	d_Lang025 =	Makro (y) aktivován.`nPomocí klávesových zkratek hrát.
 	d_Lang026 =	pro spuštění / zastavení nahrávání
 	d_Lang027 =	Záznam se zastavil
 	d_Lang028 =	Nahrávání...
 	d_Lang029 =	zastavit
 	d_Lang030 =	začít nový záznam
-	d_Lang031 =	není platný název funkce.
+	d_Lang031 =	Výzva k neexistující funkci.
 	d_Lang032 =	Chyba: Duplicitní Klávesové zkratky.
 	d_Lang033 =	Aktivace makra
 	d_Lang034 =	- Klikněte a táhněte %DrawButton% vyberte oblast.
@@ -811,8 +810,7 @@
 	d_Lang037 =	Obrázek / Pixel nebyl nalezen.
 	d_Lang038 =	Stiskněte tlačítko OK pro pokračování.
 	d_Lang039 =	Timeout!
-	d_Lang040 =	
-.	Tämä ominaisuus vaatii GDI+ kirjasto.	Erabiltzaileek GDI + Liburutegia eskatzen.
+	d_Lang040 =	Tato funkce vyžaduje rozhraní GDI+ knihovny.
 		Klepnutím na tlačítko OK přejděte na stránku pro stažení.
 	d_Lang041 =	Název proměnné obsahuje neplatný znak.
 	d_Lang042 =	je vyhrazené slovo.
@@ -832,7 +830,7 @@
 	d_Lang055 =	Prosím vyberte skriptu AutoHotkey soubor (. Ahk) a zadejte název funkce.
 	d_Lang056 =	Tato funkce vyžaduje AutoHotkey nainstalován.
 		Klepnutím na tlačítko OK přejděte na stránku pro stažení.
-	d_Lang057 =	- Stiskněte Ctrl+kláves se šipkami pohybovat vybranou oblast.
+	d_Lang057 	- Stiskněte Ctrl+kláves se šipkami pohybovat vybranou oblast.
 		- Stiskněte Shift+šipky pro změnu velikosti vybrané oblasti.
 		- Stiskněte Enter pro dokončení.
 	d_Lang058 =	Některé funkce vyžadují admnistrator privilages, aby správně fungovaly.
@@ -872,18 +870,18 @@
 	d_Lang088 =	Zkuste spustit jako běžné uživatele (ne správce).
 	d_Lang089 =	Ne řádek vybrán!
 	d_Lang090 =	Prosím, vyberte řádek pro vložení nebo odstranění skupiny.
-	d_Lang091 =	Neplatná metoda
+	d_Lang091 =	Stahování ... Prosím, vyčkejte.
 	d_Lang092 =	Malé ikony
 	d_Lang093 =	Velké ikony
 	d_Lang094 =	Tato funkce vyžaduje systém Windows Vista nebo vyšší.
 	d_Lang095 =	Použití ByRef způsobí parametr, aby se stal alias na proměnnou předaný od volajícího. Jinými slovy, je parametr a variabilní volajícího jak se vztahují na stejné obsahu v paměti.
-	d_Lang096 =	- NEPOUŽÍVEJTE UZAVŘETE PROMĚNNÉ V ZNAKY PROCENTA ZDE.
+	d_Lang096 	- NEPOUŽÍVEJTE UZAVŘETE PROMĚNNÉ V ZNAKY PROCENTA ZDE.
 		- Návrat hodnota musí být výraz.
 		- Můžete použít řetězce, proměnné, pole a funkce. Můžete také kombinovat některé z nich.
 		- Chcete-li použít řetězce, uzavřete do uvozovek, například: "Výsledek je:" a+b.
 		- Pokud se chcete vrátit další výsledky, můžete také použít ByRef v parametrech.
 		- Pole může být použit k vrátit více hodnot, nebo dokonce pojmenované hodnoty.
-	d_Lang097 =	- NEPOUŽÍVEJTE UZAVŘETE PROMĚNNÉ V ZNAKY PROCENTA ZDE.
+	d_Lang097 	- NEPOUŽÍVEJTE UZAVŘETE PROMĚNNÉ V ZNAKY PROCENTA ZDE.
 		- Většina AHK výrazy jsou podporovány.
 		- Můžete použít řetězce, proměnné, pole a funkce.
 		- Chcete-li použít řetězce, uzavřete do uvozovek, například: var = "A".
@@ -906,10 +904,9 @@
 	d_Lang112 =	E-mailový účet nebyl nalezen.
 	d_Lang113 =	Hlášena žádná chyba.
 	d_Lang114 =	Skripte izvoze (čak i ako je sastavljen) s funkcijom poslati e-mail (CDO) će imati vidljive informacije o računima e-pošte koristi, uključujući i lozinke. Projekt datoteka PMC nema tu informaciju.
-	d_Lang115 =	- Podržte Alt nastavit region na stejném místě.
+	d_Lang115 	- Podržte Alt nastavit region na stejném místě.
 	d_Lang116 =	Přenášet a instalovat
 	d_Lang117 =	Přejděte na stránku pro stažení
-	d_Lang118 =	Stahování ... Prosím, vyčkejte.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Podívejte se na video tutoriály na www.macrocreator.com/help~~pobj dozvědět se o mnoha funkcí makro Stvořitele Pulover je.

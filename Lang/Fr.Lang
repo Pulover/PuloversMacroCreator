@@ -783,7 +783,7 @@
 	d_Lang014 =	Script exportés
 	d_Lang015 =	Le fichier a été exporté avec succès!
 	d_Lang016 =	Cliquez sur 'Get' pour marquer la position.
-	d_Lang017 =	- Sélectionnez la fenêtre.
+	d_Lang017 	- Sélectionnez la fenêtre.
 		- Pointez sur la position désirée.
 		- Appuyez sur le bouton de droite.
 	d_Lang018 =	Couleur du pixel
@@ -793,14 +793,13 @@
 	d_Lang022 =	Précédent
 	d_Lang023 =	Message
 	d_Lang024 =	Charger les paramètres par défaut?
-	d_Lang025 =	Macros activées.
-		Utilisez les raccourcis clavier pour jouer.
+	d_Lang025 =	Macro (s) activée.`nUtilisez les raccourcis clavier pour jouer.
 	d_Lang026 =	pour démarrer / arrêter l'enregistrement
 	d_Lang027 =	L'enregistrement s'est arrêté
 	d_Lang028 =	Enregistrement...
 	d_Lang029 =	pour arrêter
 	d_Lang030 =	pour démarrer l'enregistrement de nouveaux
-	d_Lang031 =	n'est pas un nom de fonction valide.
+	d_Lang031 =	Appel à la fonction inexistante.
 	d_Lang032 =	Erreur: Touches en double.
 	d_Lang033 =	Activer les macros
 	d_Lang034 =	- Cliquer et faire glisser avec %DrawButton% pour sélectionner la zone.
@@ -812,7 +811,6 @@
 	d_Lang038 =	Appuyez sur OK pour continuer.
 	d_Lang039 =	Délai d'attente!
 	d_Lang040 =	Cette fonction requiert la bibliothèque GDI+.
-.	Tämä ominaisuus vaatii GDI+ kirjasto.	Bu özellik, GDI+ Kütüphane gerektirir.
 		Cliquez sur OK pour passer à la page de téléchargement.
 	d_Lang041 =	Le nom de la variable contient un caractère illégal.
 	d_Lang042 =	est un mot réservé.
@@ -832,7 +830,7 @@
 	d_Lang055 =	S'il vous plaît sélectionner un fichier de script AutoHotkey (. Ahk) et une saisissez un nom de fonction.
 	d_Lang056 =	Cette fonction nécessite AutoHotkey installé.
 		Cliquez sur OK pour passer à la page de téléchargement.
-	d_Lang057 =	- Appuyez sur Ctrl+touches fléchées pour déplacer la zone sélectionnée.
+	d_Lang057 	- Appuyez sur Ctrl+touches fléchées pour déplacer la zone sélectionnée.
 		- Appuyez sur Maj+touches fléchées pour redimensionner la zone sélectionnée.
 		- Appuyez sur Entrée pour terminer.
 	d_Lang058 =	Certaines fonctionnalités nécessitent privilages admnistrator Pour fonctionner correctement.
@@ -872,18 +870,18 @@
 	d_Lang088 =	Essayez de courir utilisateur comme commun (non administrateur).
 	d_Lang089 =	Aucune ligne sélectionnée!
 	d_Lang090 =	S'il vous plaît, sélectionner une ligne pour insérer ou retirer le groupe.
-	d_Lang091 =	Méthode invalide
+	d_Lang091 =	Téléchargement ... S'il vous plaît, attendez.
 	d_Lang092 =	Petites icônes
 	d_Lang093 =	Grandes icônes
 	d_Lang094 =	Cette fonction nécessite Windows Vista ou supérieur.
 	d_Lang095 =	L'utilisation de ByRef provoque un paramètre pour devenir un alias pour la variable passée à partir de l'appelant. En d'autres termes, le paramètre et la variable à la fois de l'appelant se réfèrent aux mêmes teneurs en mémoire.
-	d_Lang096 =	- NE JOIGNEZ PAS VARIABLES SIGNES DE POURCENTAGE ICI.
+	d_Lang096 	- NE JOIGNEZ PAS VARIABLES SIGNES DE POURCENTAGE ICI.
 		- Valeur de retour doit être une expression.
 		- Vous pouvez utiliser chaînes, variables, des tableaux et des fonctions. Vous pouvez aussi combiner un de ceux-là.
 		- Pour utiliser des chaînes, le placer entre guillemets, par exemple: "Le résultat est:" a+b.
 		- Si vous voulez obtenir des résultats supplémentaires, vous pouvez également utiliser des paramètres ByRef.
 		- Les tableaux peuvent être utilisés pour renvoyer plusieurs valeurs ou des valeurs encore nommés.
-	d_Lang097 =	- NE JOIGNEZ PAS VARIABLES SIGNES DE POURCENTAGE ICI.
+	d_Lang097 	- NE JOIGNEZ PAS VARIABLES SIGNES DE POURCENTAGE ICI.
 		- La plupart des expressions de AHK sont pris en charge.
 		- Vous pouvez utiliser chaînes, variables, des tableaux et des fonctions.
 		- Pour utiliser des chaînes, le placer entre guillemets, par exemple: var = "a".
@@ -906,10 +904,9 @@
 	d_Lang112 =	Compte de messagerie introuvable.
 	d_Lang113 =	Aucune erreur signalée.
 	d_Lang114 =	Scripts exportés (même si compilé) avec la fonction d'envoi d'e-mail (CDO) auront des informations visibles de comptes de messagerie utilisés, y compris le MOT DE PASSE. Le fichier de projet PMC n'a pas cette information.
-	d_Lang115 =	- Maintenez la touche Alt pour mettre la région au même endroit.
+	d_Lang115 	- Maintenez la touche Alt pour mettre la région au même endroit.
 	d_Lang116 =	Transfert et installation
 	d_Lang117 =	Aller à la page de téléchargement
-	d_Lang118 =	Téléchargement ... S'il vous plaît, attendez.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Consultez les didacticiels vidéo à www.macrocreator.com/help pour en apprendre davantage sur les nombreuses fonctionnalités de Creator Macro Pulover.

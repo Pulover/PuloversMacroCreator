@@ -60,6 +60,7 @@ Thiago Talma for some improvements to the code, debugging and many suggestions.
 * Added support for named keys in arrays (e.g.: N["key"] or N.key, MyArray.1 := OtherArray.Name).
 * Added support for array methods.
 * Added support for arrays inside IECom and COMInterface parameters.
+* Added support for *#If Expression* in Context Sensitive Hotkeys.
 * Added *GetElementsByClassName* option in InternetExplorer/COM *Get Element Tool*.
 * Added var [not] in, var [not] contains, var [not] between and var is in Compare Variables If Statement.
 * Added options to set TitleMatchMode, TitleMatchMode Speed, DetectHiddenWindows and DetectHiddenText.

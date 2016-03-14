@@ -783,7 +783,7 @@
 	d_Lang014 =	Script Diekspor
 	d_Lang015 =	File tersebut berhasil diekspor!
 	d_Lang016 =	Klik 'Get' untuk menandai posisi.
-	d_Lang017 =	- Pilih jendela.
+	d_Lang017 	- Pilih jendela.
 		- Arahkan ke posisi yang diinginkan.
 		- Tekan Tombol Kanan.
 	d_Lang018 =	Pixel Warna
@@ -793,14 +793,13 @@
 	d_Lang022 =	Sebelumnya
 	d_Lang023 =	Pesan
 	d_Lang024 =	Memuat pengaturan default?
-	d_Lang025 =	Macro diaktifkan.
-		Gunakan Hotkeys Bermain.
+	d_Lang025 =	Makro (s) diaktifkan.`nGunakan Hotkeys Bermain.
 	d_Lang026 =	untuk mulai / berhenti merekam
 	d_Lang027 =	Rekaman berhenti
 	d_Lang028 =	Rekaman...
 	d_Lang029 =	untuk menghentikan
 	d_Lang030 =	untuk memulai rekor baru
-	d_Lang031 =	bukan nama fungsi valid.
+	d_Lang031 =	Panggilan untuk fungsi tidak ada.
 	d_Lang032 =	Kesalahan: Hotkeys Duplikat.
 	d_Lang033 =	Aktifkan Macro
 	d_Lang034 =	- Klik dan Drag dengan %DrawButton% untuk memilih area.
@@ -811,8 +810,7 @@
 	d_Lang037 =	Image / Pixel Tidak Ditemukan.
 	d_Lang038 =	Tekan OK untuk melanjutkan.
 	d_Lang039 =	Timeout!
-	d_Lang040 =	
-.	Tämä ominaisuus vaatii GDI+ kirjasto.	Šī funkcija prasa GDI + bibliotēka.
+	d_Lang040 =	Fitur ini memerlukan+Library GDI.
 		Klik OK untuk pergi ke halaman download.
 	d_Lang041 =	Nama variabel mengandung karakter ilegal.
 	d_Lang042 =	adalah kata reserved.
@@ -832,7 +830,7 @@
 	d_Lang055 =	Silakan pilih file script AutoHotKey (AHK.) Dan memasukkan Nama Fungsi.
 	d_Lang056 =	Fitur ini memerlukan Autohotkey diinstal.
 		Klik OK untuk pergi ke halaman download.
-	d_Lang057 =	- Tekan Ctrl+Arrow tombol untuk memindahkan area yang dipilih.
+	d_Lang057 	- Tekan Ctrl+Arrow tombol untuk memindahkan area yang dipilih.
 		- Tekan Shift+tombol panah untuk mengubah ukuran area yang dipilih.
 		- Tekan Enter untuk menyelesaikan.
 	d_Lang058 =	Beberapa fitur memerlukan hak istimewa admnistrator untuk berfungsi dengan baik.
@@ -872,18 +870,18 @@
 	d_Lang088 =	Cobalah untuk menjalankan pengguna yang biasa (tidak administrator).
 	d_Lang089 =	Tidak ada baris yang dipilih!
 	d_Lang090 =	Silakan, pilih baris untuk memasukkan atau mengeluarkan kelompok.
-	d_Lang091 =	Metode valid
+	d_Lang091 =	Download ... Mohon tunggu.
 	d_Lang092 =	Ikon kecil
 	d_Lang093 =	Ikon besar
 	d_Lang094 =	Fitur ini memerlukan Windows Vista atau yang lebih tinggi.
 	d_Lang095 =	Penggunaan ByRef menyebabkan parameter untuk menjadi sebuah alias untuk variabel berlalu dalam dari penelepon. Dengan kata lain, parameter dan variabel pemanggil keduanya merujuk pada isi yang sama di memori.
-	d_Lang096 =	- JANGAN MELAMPIRKAN VARIABEL DI TANDA PERSEN DI SINI.
+	d_Lang096 	- JANGAN MELAMPIRKAN VARIABEL DI TANDA PERSEN DI SINI.
 		- Mengembalikan nilai harus menjadi ekspresi.
 		- Anda dapat menggunakan string, variabel, array dan fungsi. Anda juga dapat menggabungkan salah satu dari mereka.
 		- Untuk menggunakan string, menyertakan mereka dalam tanda kutip, misalnya: "Hasil adalah:" a+b.
 		- Jika Anda ingin kembali hasil tambahan, Anda juga dapat menggunakan ByRef dalam parameter.
 		- Array dapat digunakan untuk mengembalikan beberapa nilai atau nilai-nilai bahkan bernama.
-	d_Lang097 =	- JANGAN MELAMPIRKAN VARIABEL DI TANDA PERSEN DI SINI.
+	d_Lang097 	- JANGAN MELAMPIRKAN VARIABEL DI TANDA PERSEN DI SINI.
 		- Sebagian besar dari ekspresi AHK didukung.
 		- Anda dapat menggunakan string, variabel, array dan fungsi.
 		- Untuk menggunakan string, menyertakan mereka dalam tanda kutip, misalnya: var = "a".
@@ -906,10 +904,9 @@
 	d_Lang112 =	E-mail fiók nem található.
 	d_Lang113 =	Melaporkan tidak ada kesalahan.
 	d_Lang114 =	Skrip diekspor (bahkan jika dikompilasi) dengan fungsi mengirim email (CDO) akan memiliki informasi terlihat dari akun email yang digunakan, termasuk PASSWORD. File proyek PMC tidak memiliki informasi ini.
-	d_Lang115 =	- Tahan Alt untuk mengatur wilayah ke lokasi yang sama.
+	d_Lang115 	- Tahan Alt untuk mengatur wilayah ke lokasi yang sama.
 	d_Lang116 =	Mentransfer dan menginstal
 	d_Lang117 =	Pergi ke halaman download
-	d_Lang118 =	Download ... Mohon tunggu.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Check out video tutorial di www.macrocreator.com/help untuk belajar tentang banyak fitur dari Pencipta Makro Pulover ini.

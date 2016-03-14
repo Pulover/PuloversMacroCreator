@@ -783,7 +783,7 @@
 	d_Lang014 =	Script wyeksportowanych
 	d_Lang015 =	Plik został pomyślnie eksportu!
 	d_Lang016 =	Kliknij "Pobierz", aby zaznaczyć pozycję.
-	d_Lang017 =	- Wybierz okno.
+	d_Lang017 	- Wybierz okno.
 		- Wskaż żądaną pozycję.
 		- Nacisnąć prawy przycisk.
 	d_Lang018 =	Kolor Pixel
@@ -793,14 +793,13 @@
 	d_Lang022 =	Poprzedni
 	d_Lang023 =	Wiadomość
 	d_Lang024 =	Załadować ustawienia domyślne?
-	d_Lang025 =	aktywowane makra.
-		Użyj skrótu, aby zagrać.
+	d_Lang025 =	Makro (y) aktywacji.`nUżyj klawiszy skrótu do gry.
 	d_Lang026 =	, aby rozpocząć / zatrzymać nagrywanie
 	d_Lang027 =	Nagrywanie zatrzymane
 	d_Lang028 =	Nagrywanie...
 	d_Lang029 =	aby zatrzymać
 	d_Lang030 =	aby rozpocząć nowy rekord
-	d_Lang031 =	nie jest prawidłową nazwą funkcji.
+	d_Lang031 =	Wywołanie funkcji nieistniejącego.
 	d_Lang032 =	Błąd: Powtarzające Hotkeys.
 	d_Lang033 =	Aktywuj Makra
 	d_Lang034 =	- Kliknij i przeciągnij z %DrawButton%, aby wybrać obszar.
@@ -812,7 +811,6 @@
 	d_Lang038 =	Naciśnij przycisk OK, aby kontynuować.
 	d_Lang039 =	Timeout!
 	d_Lang040 =	Ta funkcja wymaga biblioteki GDI+.
-.	Tämä ominaisuus vaatii GDI+ kirjasto.	Ciri ini memerlukan+Library GDI.
 		Kliknij przycisk OK, aby przejść do strony pobierania.
 	d_Lang041 =	Nazwa zmiennej zawiera niedozwolony znak.
 	d_Lang042 =	Jest to słowo zarezerwowane.
@@ -832,7 +830,7 @@
 	d_Lang055 =	Proszę wybrać plik skryptu AutoHotkey (. AHK) i wpisz nazwę funkcji.
 	d_Lang056 =	Ta funkcja wymaga AutoHotkey zainstalowany.
 		Kliknij przycisk OK, aby przejść do strony pobierania.
-	d_Lang057 =	- Naciśnij klawisz CTRL+klawiszy strzałek wybranego obszaru.
+	d_Lang057 	- Naciśnij klawisz CTRL+klawiszy strzałek wybranego obszaru.
 		- NaciÊnij Shift+klawisze strzałek, aby zmienić rozmiar wybranego obszaru.
 		- Naciśnij klawisz Enter, aby zakończyć.
 	d_Lang058 =	Niektóre funkcje wymagają PRZYWILEJE admnistrator aby funkcjonować poprawnie.
@@ -872,18 +870,18 @@
 	d_Lang088 =	Spróbuj uruchomić jako wspólny użytkownika (nie administratora).
 	d_Lang089 =	Nie rząd wybrany!
 	d_Lang090 =	Proszę wybrać wiersz, aby wstawić lub usunąć grupę.
-	d_Lang091 =	Nieprawidłowy sposób
+	d_Lang091 =	Pobieranie ... Proszę czekać.
 	d_Lang092 =	Małe ikony
 	d_Lang093 =	Duże ikony
 	d_Lang094 =	Ta funkcja wymaga systemu Windows Vista lub nowszego.
 	d_Lang095 =	Korzystanie z ByRef powoduje parametru, aby stać się aliasem dla zmiennej przekazanej z rozmówcą. Innymi słowy, parametry i zmienne dzwoniącego odnoszą się do tych samych zawartości pamięci.
-	d_Lang096 =	- NIE DOŁĄCZYĆ ZMIENNYCH W ZNAKI PROCENT TUTAJ.
+	d_Lang096 	- NIE DOŁĄCZYĆ ZMIENNYCH W ZNAKI PROCENT TUTAJ.
 		- Zwracana wartość musi być wyrażeniem.
 		- Możesz użyć ciągi znaków, zmienne, tablice i funkcje. Można również łączyć żadnego z nich.
 		- Aby używać łańcuchów, ująć w cudzysłów, np: "Wynik jest:" A+B.
 		- Jeśli chcesz, aby powrócić dodatkowe wyniki, możesz również skorzystać z ByRef w parametrach.
 		- Macierze można stosować do powrotu wiele wartości lub nawet Wartości.
-	d_Lang097 =	- NIE DOŁĄCZYĆ ZMIENNYCH W ZNAKI PROCENT TUTAJ.
+	d_Lang097 	- NIE DOŁĄCZYĆ ZMIENNYCH W ZNAKI PROCENT TUTAJ.
 		- Większość wyrażeń AHK są obsługiwane.
 		- Możesz użyć ciągi znaków, zmienne, tablice i funkcje.
 		- Aby używać łańcuchów, ująć w cudzysłów, np: var = "A".
@@ -906,10 +904,9 @@
 	d_Lang112 =	Учетной записи электронной почты не найден.
 	d_Lang113 =	Nie zgłosiło błąd.
 	d_Lang114 =	Script esportati (anche se compilato) con la funzione di invio e-mail (CDO) avranno informazioni visibili di account di posta elettronica utilizzati, inclusa la password. Il file di progetto PMC non dispone di tali informazioni.
-	d_Lang115 =	- Trzymając Alt ustawienie obszaru do tej samej lokalizacji.
+	d_Lang115 	- Trzymając Alt ustawienie obszaru do tej samej lokalizacji.
 	d_Lang116 =	Przelew i zainstalować
 	d_Lang117 =	Przejdź do strony pobierania
-	d_Lang118 =	Pobieranie ... Proszę czekać.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Sprawdź samouczki wideo na www.macrocreator.com/help~~pobj aby dowiedzieć się o wielu funkcji Macro Stwórcy Pulover użytkownika.

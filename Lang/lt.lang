@@ -783,9 +783,9 @@
 	d_Lang014 =	Scenarijaus Eksportuota
 	d_Lang015 =	Šis failas buvo sėkmingai eksportuoti!
 	d_Lang016 =	Spustelėkite "Gauti" pažymėti poziciją.
-	d_Lang017 =	#NOME?
-		#NOME?
-		#NOME?
+	d_Lang017 	- Pasirinkite langą.
+		- Taškas į norimą padėtį.
+		- Paspauskite dešinįjį mygtuką.
 	d_Lang018 =	"Pixel spalva
 	d_Lang019 =	Švarus sąrašas
 	d_Lang020 =	Uždaryti Makro?
@@ -793,14 +793,13 @@
 	d_Lang022 =	ankstesnis
 	d_Lang023 =	žinutė
 	d_Lang024 =	Apkrovos numatytieji nustatymai?
-	d_Lang025 =	Makrokomandos įjungta.
-		Naudokite klavišus žaisti.
+	d_Lang025 =	Makro (-ai) activated.`nUse hotkeys žaisti.
 	d_Lang026 =	į start / stop įrašymo
 	d_Lang027 =	įrašymo sustojo
 	d_Lang028 =	Įrašymo ...
 	d_Lang029 =	sustoti
 	d_Lang030 =	pradėti naują rekordą
-	d_Lang031 =	yra neteisingas funkcijos pavadinimas.
+	d_Lang031 =	Kvietimas neegzistuojančio funkcija.
 	d_Lang032 =	Klaida: Duplicate Spartieji klavišai.
 	d_Lang033 =	Aktyvuok makrokomandas
 	d_Lang034 =	- Spustelėkite ir vilkite% DrawButton% pasirinkti plotą.
@@ -811,8 +810,7 @@
 	d_Lang037 =	Vaizdo / pikselių nerastas.
 	d_Lang038 =	Paspauskite OK, kad galėtumėte tęsti.
 	d_Lang039 =	Laikas baigėsi!
-	d_Lang040 =	
-.	Tämä ominaisuus vaatii GDI+ kirjasto.	此功能需要GDI+庫。
+	d_Lang040 =	Ši funkcija reikalauja GDI + biblioteka.
 		Spustelėkite Gerai, kad eiti į atsisiuntimo puslapį.
 	d_Lang041 =	Kintamojo pavadinimas yra neteisėtos charakterį.
 	d_Lang042 =	yra rezervuotas žodis.
@@ -832,9 +830,9 @@
 	d_Lang055 =	Prašome pasirinkti AutoHotkey scenarijaus failą (.ahk) ir įvesti funkcijos pavadinimas.
 	d_Lang056 =	Ši funkcija reikalauja AutoHotkey įdiegta.
 		Spustelėkite Gerai, kad eiti į atsisiuntimo puslapį.
-	d_Lang057 =	#NOME?
-		#NOME?
-		#NOME?
+	d_Lang057 	- Paspauskite Ctrl + rodyklių klavišus judėti pasirinktą sritį.
+		- Paspauskite Shift + rodyklių klavišus keisti pasirinktą sritį.
+		- Paspauskite Enter baigti.
 	d_Lang058 =	Kai kurios funkcijos reikalauja admnistrator privilegijų, siekiant tinkamai funkcionuoti.
 		Tai rekomenduojama iš naujo paleiskite programą kaip administratorius.
 	d_Lang059 =	Ši komanda nepalaiko išraiškas ar funkcijas.
@@ -872,19 +870,19 @@
 	d_Lang088 =	Pabandykite paleisti kaip bendrą vartotoją (ne administratorius).
 	d_Lang089 =	Nėra eilutė pasirinktas!
 	d_Lang090 =	Prašome, pasirinkite eilutę įterpti arba pašalinti grupę.
-	d_Lang091 =	Neteisingas metodas
+	d_Lang091 =	Atsisiuntimas ... Prašome palaukti.
 	d_Lang092 =	Mažos piktogramos
 	d_Lang093 =	didelės piktogramos
 	d_Lang094 =	Ši funkcija reikalauja "Windows Vista" arba naujesnė.
 	d_Lang095 =	Iš ByRef naudojimas sukelia parametrą tapti kintamojo praėjo iš skambinančiojo slapyvardį. Kitaip tariant, parametras ir skambinančiojo kintamasis tiek nurodo į minėtus turinį į atminties.
-	d_Lang096 =	#NOME?
-		#NOME?
+	d_Lang096 	- Negalima pridėti kintamųjų proc ŽENKLŲ čia.
+		- Grįžti vertė turi būti išraiška.
 		- Jūs galite naudoti stygos, kintamuosius, masyvus ir funkcijas. Jūs taip pat gali derinti bet iš tų.
 		- Norėdami naudoti stygas, pridėti juos į kabutes aminus, pvz .: "rezultatas:" A + B.
 		- Jei norite grįžti papildomų rezultatų, taip pat galite naudoti ByRef į parametrus.
-		#NOME?
-	d_Lang097 =	#NOME?
-		#NOME?
+		- Masyvai gali būti naudojama grąžinti kelias reikšmes ar NET pavadintas vertybes.
+	d_Lang097 	- Negalima pridėti kintamųjų proc ŽENKLŲ čia.
+		- Dauguma AHK išraiškų yra palaikomi.
 		- Jūs galite naudoti stygos, kintamuosius, masyvus ir funkcijas.
 		- Norėdami naudoti stygas, pridėti juos į kabutes aminus, pvz .: var = "A".
 		- Kelios ataskaitos yra palaikomi aminus, pvz .: var = "A" || Instr (var, "B").
@@ -906,10 +904,9 @@
 	d_Lang112 =	Pašto dėžutę nerastas.
 	d_Lang113 =	Pranešimų klaida.
 	d_Lang114 =	Eksportuotos (net jei sudaromi) su Send Email funkcija (CDO) Skriptai turės matomų informations elektroninio pašto sąskaitas, naudotas slaptažodį. PMC projekto failas neturi tokios informacijos.
-	d_Lang115 =	#NOME?
+	d_Lang115 	- Laikykite Alt nustatyti regioną į tą pačią vietą.
 	d_Lang116 =	Perkelti ir įdiegti
 	d_Lang117 =	Eiti į atsisiuntimo puslapį
-	d_Lang118 =	Atsisiuntimas ... Prašome palaukti.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Check out vaizdo samouczków ne www.macrocreator.com/help~~pobj sužinoti apie daug funkcijų Pulover makropotvarkių Kūrėją.

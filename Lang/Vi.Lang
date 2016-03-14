@@ -783,7 +783,7 @@
 	d_Lang014 =	Kịch bản xuất khẩu
 	d_Lang015 =	Tập tin đã thành công xuất khẩu!
 	d_Lang016 =	Nhấp vào 'Nhận' để đánh dấu vị trí.
-	d_Lang017 =	- Chọn cửa sổ.
+	d_Lang017 	- Chọn cửa sổ.
 		- Chỉ vào vị trí mong muốn.
 		- Bấm vào nút ngay.
 	d_Lang018 =	Điểm ảnh màu
@@ -793,14 +793,13 @@
 	d_Lang022 =	Trước
 	d_Lang023 =	Tin nhắn
 	d_Lang024 =	Tải các cài đặt mặc định?
-	d_Lang025 =	Macros kích hoạt.
-		Sử dụng các phím nóng để chơi.
+	d_Lang025 =	Vĩ mô (s) kích hoạt.`nSử dụng các phím nóng để chơi.
 	d_Lang026 =	để bắt đầu / dừng ghi âm
 	d_Lang027 =	Ghi dừng lại
 	d_Lang028 =	Ghi âm...
 	d_Lang029 =	để ngăn chặn
 	d_Lang030 =	để bắt đầu kỷ lục mới
-	d_Lang031 =	không phải là một tên hàm hợp lệ.
+	d_Lang031 =	Gọi đến chức năng không tồn tại.
 	d_Lang032 =	Lỗi: Hotkeys trùng lặp.
 	d_Lang033 =	Kích hoạt Macro
 	d_Lang034 =	- Click và kéo với %DrawButton% để chọn khu vực.
@@ -811,8 +810,7 @@
 	d_Lang037 =	Hình ảnh / Pixel Không tìm thấy.
 	d_Lang038 =	Bấm OK để tiếp tục.
 	d_Lang039 =	Thời gian chờ!
-	d_Lang040 =	
-.	Tämä ominaisuus vaatii GDI+ kirjasto.	Această caracteristică necesită GDI + biblioteca.
+	d_Lang040 =	Tính năng này đòi hỏi các thư viện GDI+.
 		Nhấn OK để đi tải trang.
 	d_Lang041 =	Tên biến có chứa một nhân vật bất hợp pháp.
 	d_Lang042 =	là một từ dành riêng.
@@ -832,7 +830,7 @@
 	d_Lang055 =	Vui lòng chọn một tập tin kịch bản AutoHotkey (AHK.) Và nhập Tên Chức năng.
 	d_Lang056 =	Tính năng này đòi hỏi phải cài đặt AutoHotkey.
 		Nhấn OK để đi tải trang.
-	d_Lang057 =	- Nhấn Ctrl+phím mũi tên để di chuyển vùng chọn.
+	d_Lang057 	- Nhấn Ctrl+phím mũi tên để di chuyển vùng chọn.
 		- Nhấn Shift+phím mũi tên để thay đổi kích thước vùng chọn.
 		- Nhấn Enter để kết thúc.
 	d_Lang058 =	Một số tính năng đòi hỏi privilages admnistrator để hoạt động đúng.
@@ -872,18 +870,18 @@
 	d_Lang088 =	Cố gắng chạy người sử dụng thông thường (không phải quản trị viên).
 	d_Lang089 =	Không có hàng lựa chọn!
 	d_Lang090 =	Xin vui lòng, hãy chọn một hàng để chèn hoặc xóa nhóm.
-	d_Lang091 =	Phương pháp không hợp lệ
+	d_Lang091 =	Tải ... Vui lòng đợi.
 	d_Lang092 =	Small icons
 	d_Lang093 =	Các biểu tượng lớn
 	d_Lang094 =	Tính năng này yêu cầu Windows Vista hoặc cao hơn.
 	d_Lang095 =	Việc sử dụng ByRef gây ra một tham số để trở thành một bí danh cho các biến được truyền từ người gọi. Nói cách khác, các tham số và biến của người gọi cả tham khảo các nội dung tương tự trong bộ nhớ.
-	d_Lang096 =	- KHÔNG GỬI KÈM BIẾN TRONG DẤU HIỆU PERCENT ĐÂY.
+	d_Lang096 	- KHÔNG GỬI KÈM BIẾN TRONG DẤU HIỆU PERCENT ĐÂY.
 		- Giá trị Return phải là một biểu.
 		- Bạn có thể sử dụng các chuỗi, các biến, mảng và chức năng. Bạn cũng có thể kết hợp bất kỳ của những người.
 		- Để sử dụng dây, đặt chúng trong dấu ngoặc kép, ví dụ như: "Kết quả là:" a+b.
 		- Nếu bạn muốn trả lại kết quả hơn, bạn cũng có thể sử dụng các thông số ByRef trong.
 		- Mảng có thể được sử dụng để trả lại nhiều giá trị hoặc giá trị thậm chí còn được đặt tên.
-	d_Lang097 =	- KHÔNG GỬI KÈM BIẾN TRONG DẤU HIỆU PERCENT ĐÂY.
+	d_Lang097 	- KHÔNG GỬI KÈM BIẾN TRONG DẤU HIỆU PERCENT ĐÂY.
 		- Hầu hết các biểu AHK được hỗ trợ.
 		- Bạn có thể sử dụng các chuỗi, các biến, mảng và chức năng.
 		- Để sử dụng dây, đặt chúng trong dấu ngoặc kép, ví dụ: var = "a".
@@ -906,10 +904,9 @@
 	d_Lang112 =	Không tìm thấy tài khoản email.
 	d_Lang113 =	Báo cáo không có lỗi.
 	d_Lang114 =	Skripte izvažajo (tudi če je prevedeni) z za pošiljanje e-pošte funkcije (CDO) bodo imeli vidne informacije o e-poštnih računov, ki se uporabljajo, vključno z geslom. Projekt datoteke PMC teh podatkov ne imeti.
-	d_Lang115 =	- Giữ Alt để thiết lập khu vực vào cùng vị trí.
+	d_Lang115 	- Giữ Alt để thiết lập khu vực vào cùng vị trí.
 	d_Lang116 =	Chuyển và cài đặt
 	d_Lang117 =	Đến trang tải về
-	d_Lang118 =	Tải ... Vui lòng đợi.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Kiểm tra các video hướng dẫn tại www.macrocreator.com/help để tìm hiểu về các tính năng của Đấng Tạo Macro Pulover của.

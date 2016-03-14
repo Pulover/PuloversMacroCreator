@@ -783,37 +783,35 @@
 	d_Lang014 =	Script Exported
 	d_Lang015 =	Fail eksporditi edukalt!
 	d_Lang016 =	Vajuta "Saada", et tähistada positsiooni.
-	d_Lang017 =	#NOME?
-		#NOME?
-		#NOME?
+	d_Lang017 	- Valige aknas.
+		- Point soovitud asendisse.
+		- Nuppu Paremale.
 	d_Lang018 =	Pixel Color
-	d_Lang019 =	Puhasta nimekiri
-	d_Lang020 =	Sule Macro?
-	d_Lang021 =	Järgmine
-	d_Lang022 =	Eelmine
-	d_Lang023 =	Sõnum
-	d_Lang024 =	Load vaikimisi seaded?
-	d_Lang025 =	Makrod aktiveeritud.
-		Kasutage Hotkeys mängida.
-	d_Lang026 =	To start / stop salvestus
-	d_Lang027 =	Salvestamine peatus
-	d_Lang028 =	Salvestamine ...
-	d_Lang029 =	Peatuma
-	d_Lang030 =	Alustada uue rekordi
-	d_Lang031 =	Ei ole kehtiv funktsiooni nime.
-	d_Lang032 =	Viga: Duplicate Hotkeys.
-	d_Lang033 =	Aktiveeri Makrod
-	d_Lang034 =	- Klõpsa ja lohista koos% DrawButton% valida ala.
-		- Vajuta ja vabasta ilma tõmmates valida kontrolli alal.
-		- Vajuta alal, kus puudub kontroll valida ala akent.
-	d_Lang035 =	Jätka?
-	d_Lang036 =	Pilt / Pixel leitud
-	d_Lang037 =	Pilt / Pixel ei leitud.
-	d_Lang038 =	Jätkamiseks vajuta.
-	d_Lang039 =	Aeg maha!
-	d_Lang040 =	
-.	Tämä ominaisuus vaatii GDI+ kirjasto.	この機能は、GDI+ライブラリが必要です。
-		Vajuta OK, et minna alla laadida leheküljel.
+	d_Lang019 =	Garbitu zerrenda
+	d_Lang020 =	Itxi Makro?
+	d_Lang021 =	Hurrengoa
+	d_Lang022 =	aurreko
+	d_Lang023 =	Mezua
+	d_Lang024 =	ezarpenak Kargatu default?
+	d_Lang025 =	Makro (s) Hotkeys du activated.`nUse Play.
+	d_Lang026 =	/ Stop grabatzen hasteko
+	d_Lang027 =	Grabaketa gelditu
+	d_Lang028 =	Grabaketa ...
+	d_Lang029 =	gelditu
+	d_Lang030 =	errekor berria hasteko
+	d_Lang031 =	Helista olematu funktsioon.
+	d_Lang032 =	Akatsa: Duplicate Hotkeys.
+	d_Lang033 =	Aktibatu Makroak
+	d_Lang034 =	- Klik eta%% DrawButton Arrastatu area hautatzeko.
+		- Klik eta kontrol gunea hautatzeko arrastatu gabe askatu.
+		- Eremu batean klik kontrol gabe leihoaren area hautatzeko.
+	d_Lang035 =	Jarraitu?
+	d_Lang036 =	Image / Pixel at Found
+	d_Lang037 =	Image / Pixel Not Found.
+	d_Lang038 =	Sakatu Ados jarraitzeko.
+	d_Lang039 =	Denboraz kanpo!
+	d_Lang040 =	Erabiltzaileek GDI + Liburutegia eskatzen.
+		Egin klik Ados orria deskargatzeko joan.
 	d_Lang041 =	Muutuja nimes ebaseadusliku iseloomu.
 	d_Lang042 =	on reserveeritud sõna.
 	d_Lang043 =	Või kasutada Controls tööriistariba.
@@ -832,9 +830,9 @@
 	d_Lang055 =	Palun valige AutoHotkey skripti faili (.ahk) ja sisestada funktsiooni nime.
 	d_Lang056 =	See funktsioon nõuab AutoHotkey paigaldatud.
 		Vajuta OK, et minna alla laadida leheküljel.
-	d_Lang057 =	#NOME?
-		#NOME?
-		#NOME?
+	d_Lang057 	- Press Ctrl + nooleklahve valitud piirkonnas.
+		- Press Shift + nooleklahvid suurust valitud piirkonnas.
+		- Press Sisesta lõpetada.
 	d_Lang058 =	Mõned funktsioonid nõuavad admnistrator privilages et toimida.
 		Soovitatav taaskäivitada rakenduse administraatorina.
 	d_Lang059 =	See käsk ei toeta väljendeid ega funktsioone.
@@ -872,19 +870,19 @@
 	d_Lang088 =	Proovige joosta nii tavakasutajate (mitte administraator).
 	d_Lang089 =	No järjest valitud!
 	d_Lang090 =	Palun valige järjest sisestada või eemaldada rühma.
-	d_Lang091 =	Vale meetod
+	d_Lang091 =	Allalaadimine ... Palun oodake.
 	d_Lang092 =	väikesed ikoonid
 	d_Lang093 =	suur ikoonid
 	d_Lang094 =	See funktsioon nõuab Windows Vista või kõrgem.
 	d_Lang095 =	Kasutamine ByRef põhjustab parameeter saada alias muutuja möödunud aastal alates helistaja. Teisisõnu, kui parameeter ning helistaja muutuja mõlemad seonduvad sama sisuga mällu.
-	d_Lang096 =	#NOME?
-		#NOME?
+	d_Lang096 	- ÄRGE pange MUUTUJATE protsentides Märgid SIIN.
+		- Return väärtus olema väljendus.
 		- Te võite kasutada stringe, muutujad, massiivid ja funktsioone. Võite kombineerida ühegi nimetatud.
 		- Kasutamiseks stringid, pange need tsitaadid, näiteks .: "Tulemus on:" a + b.
 		- Kui soovite naasta ekstra tulemusi, siis võib kasutada ka ByRef in parameetrid.
-		#NOME?
-	d_Lang097 =	#NOME?
-		#NOME?
+		- Massiivid saab kasutada tagastada mitu väärtused või isegi nimega väärtused.
+	d_Lang097 	- ÄRGE pange MUUTUJATE protsentides Märgid SIIN.
+		- Enamik AHK väljendeid on toetatud.
 		- Te võite kasutada stringe, muutujad, massiivid ja funktsioone.
 		- Kasutamiseks stringid, pange need tsitaadid, näiteks .: var = "a".
 		- Mitu Avaldused on toetatud, näiteks .: var = "a" || Instr (var, "b").
@@ -906,10 +904,9 @@
 	d_Lang112 =	E-posti konto ei leitud.
 	d_Lang113 =	Ei ole viga teatatud.
 	d_Lang114 =	Skriptid eksporditakse (isegi kui kompileeritud) koos send email funktsioon (CDO) on nähtav info e-posti kontode kasutamist, sealhulgas parool. PMC projekti toimik ei pea seda teavet.
-	d_Lang115 =	#NOME?
+	d_Lang115 	- Hoidke Alt seada piirkonna samas kohas.
 	d_Lang116 =	Transfer ja installida
 	d_Lang117 =	Mine alla laadida leheküljel
-	d_Lang118 =	Allalaadimine ... Palun oodake.
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Vaata videot õpetused on www.macrocreator.com/help õppida palju funktsioone pulover on Macro looja.
