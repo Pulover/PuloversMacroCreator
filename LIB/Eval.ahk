@@ -23,6 +23,9 @@ Eval($x, _CustomVars := "", _Init := true)
 	$x := RegExReplace($x, "U)/\*.*\*/"), $x := RegExReplace($x, "U)\s;.*(\v|$)")
 	
 	; Replace brackets, braces, parenthesis and isolated Strings
+	While (RegExMatch($x, "sU)"".*""", _String))
+		_Elements["&_String" A_Index "_&"] := _String
+	,	$x := RegExReplace($x, "sU)"".*""", "&_String" A_Index "_&",, 1)
 	While (RegExMatch($x, "\[([^\[\]]++|(?R))*\]", _Bracket))
 		_Elements["&_Bracket" A_Index "_&"] := _Bracket
 	,	$x := RegExReplace($x, "\[([^\[\]]++|(?R))*\]", "&_Bracket" A_Index "_&",, 1)
@@ -32,9 +35,6 @@ Eval($x, _CustomVars := "", _Init := true)
 	While (RegExMatch($x, "\(([^()]++|(?R))*\)", _Parent))
 		_Elements["&_Parent" A_Index "_&"] := _Parent
 	,	$x := RegExReplace($x, "\(([^()]++|(?R))*\)", "&_Parent" A_Index "_&",, 1)
-	While (RegExMatch($x, "sU)"".*""", _String))
-		_Elements["&_String" A_Index "_&"] := _String
-	,	$x := RegExReplace($x, "sU)"".*""", "&_String" A_Index "_&",, 1)
 	
 	; Split multiple expressions
 	$z := StrSplit($x, ",", " `t")
