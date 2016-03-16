@@ -3740,8 +3740,9 @@ whr.SetRequestHeader("Content-Type", "application/x-www-form-urlencoded")
 Try
 {
 	whr.Send()
+	ResponseText := whr.ResponseText
 	document := ComObjCreate("HTMLfile")
-	document.write(whr.ResponseText)
+	document.write(ResponseText)
 	VerChk := Eval(document.body.InnerText)[1]
 }
 If (IsObject(VerChk))
@@ -3810,16 +3811,16 @@ If (IsObject(VerChk))
 		MsgBox, 64, %AppName%, %d_Lang062%
 }
 Else If (A_ThisLabel = "CheckNow")
-	MsgBox, 16, %d_Lang007%, % d_Lang063 "`n`n""" SubStr(whr.ResponseText, 1, 500) """"
+	MsgBox, 16, %d_Lang007%, % d_Lang063 "`n`n""" SubStr(ResponseText, 1, 500) """"
 return
 
 TransferUpdate:
 GoSub, UpdateCancel
 SplashTextOn, 300, 25, %AppName%, %d_Lang091%
-WinHttpDownloadToFile(VerChk.DlUrl, A_Desktop)
+WinHttpDownloadToFile(VerChk.DlUrl, A_Temp)
 SplashTextOff
-File := A_Desktop "\" RegExReplace(VerChk.DlUrl, ".*/")
-Run, %File% /SILENT /FORCECLOSEAPPLICATIONS, %A_Desktop%
+File := A_Temp "\" RegExReplace(VerChk.DlUrl, ".*/")
+Run, %File% /SILENT /FORCECLOSEAPPLICATIONS, %A_Temp%
 GoSub, Exit
 return
 
@@ -4333,7 +4334,7 @@ Else
 	{
 		RowNumber := LV_GetNext(RowNumber)
 	,	LV_Insert(RowNumber, "Check", RowNumber, Action, Details, TimesX, DelayX, Type, Target, Window)
-	,	LVManager.InsertAtGroup(1, RowNumber)
+	,	LVManager.InsertAtGroup(RowNumber)
 	,	RowNumber++
 	}
 }
@@ -5443,7 +5444,7 @@ Else
 	{
 		RowNumber := LV_GetNext(RowNumber)
 	,	LV_Insert(RowNumber, "Check", RowNumber, Action, TextEdit, TimesX, DelayX, Type, Target, Window)
-	,	LVManager.InsertAtGroup(1, RowNumber)
+	,	LVManager.InsertAtGroup(RowNumber)
 	,	RowNumber++
 	}
 }
@@ -5918,7 +5919,7 @@ Else
 	{
 		RowNumber := LV_GetNext(RowNumber)
 	,	LV_Insert(RowNumber, "Check", RowNumber, Action, Details, 1, DelayX, Type, Target, Title)
-	,	LVManager.InsertAtGroup(1, RowNumber)
+	,	LVManager.InsertAtGroup(RowNumber)
 	,	RowNumber++
 		If (AddIf = 1)
 			break
@@ -5939,14 +5940,14 @@ If (AddIf = 1)
 	Else
 	{
 		LV_Insert(LV_GetNext(), "Check", "", If13, IfMsg, 1, 0, cType17)
-	,	LVManager.InsertAtGroup(1, LV_GetNext()), RowNumber := 0, LastRow := 0
+	,	LVManager.InsertAtGroup(LV_GetNext()), RowNumber := 0, LastRow := 0
 		Loop
 		{
 			RowNumber := LV_GetNext(RowNumber)
 			If (!RowNumber)
 			{
 				LV_Insert(LastRow+1, "Check",LastRow+1, "[End If]", "EndIf", 1, 0, cType17)
-			,	LVManager.InsertAtGroup(1, LastRow)
+			,	LVManager.InsertAtGroup(LastRow)
 				break
 			}
 			LastRow := LV_GetNext(LastRow)
@@ -6358,14 +6359,14 @@ Else If ((RowSelection = 0) || ((RowType = cType47) || RowType = cType48))
 Else
 {
 	LV_Insert(LV_GetNext(), "Check", "", "[LoopStart]", Details, TimesL, 0, Type, Target)
-,	LVManager.InsertAtGroup(1, LV_GetNext() - 1), RowNumber := 0, LastRow := 0
+,	LVManager.InsertAtGroup(LV_GetNext() - 1), RowNumber := 0, LastRow := 0
 	Loop
 	{
 		RowNumber := LV_GetNext(RowNumber)
 		If (!RowNumber)
 		{
 			LV_Insert(LastRow+1, "Check", LastRow+1, "[LoopEnd]", "LoopEnd", 1, 0, "Loop")
-			LVManager.InsertAtGroup(1, LastRow)
+			LVManager.InsertAtGroup(LastRow)
 			break
 		}
 		LastRow := LV_GetNext(LastRow)
@@ -6454,7 +6455,7 @@ Else If (RowSelection = 0)
 Else
 {
 	LV_Insert(LV_GetNext(), "Check", "", "[" Type "]", Details, 1, 0, Type)
-,	LVManager.InsertAtGroup(1, LV_GetNext())
+,	LVManager.InsertAtGroup(LV_GetNext())
 }
 GoSub, RowCheck
 GoSub, b_Start
@@ -6532,7 +6533,7 @@ Else If (RowSelection = 0)
 Else
 {
 	LV_Insert(LV_GetNext(), "Check", "", Action, GoTimerLabel, 1, DelayX, cType50)
-,	LVManager.InsertAtGroup(1, LV_GetNext())
+,	LVManager.InsertAtGroup(LV_GetNext())
 }
 GoSub, RowCheck
 GoSub, b_Start
@@ -6579,7 +6580,7 @@ If ((RowSelection = 0) || ((RowType = cType47) || RowType = cType48))
 Else
 {
 	LV_Insert(LV_GetNext(), "Check", "", Type, "", 1, 0, Type)
-,	LVManager.InsertAtGroup(1, LV_GetNext())
+,	LVManager.InsertAtGroup(LV_GetNext())
 }
 GoSub, RowCheck
 GoSub, b_Start
@@ -6885,7 +6886,7 @@ Else
 	{
 		RowNumber := LV_GetNext(RowNumber)
 	,	LV_Insert(RowNumber, "Check", RowNumber, WinCom, Details, 1, DelayWX, WinCom, "", Title)
-	,	LVManager.InsertAtGroup(1, RowNumber)
+	,	LVManager.InsertAtGroup(RowNumber)
 	,	RowNumber++
 	}
 }
@@ -7276,7 +7277,7 @@ Else If ((RowSelection = 0) || ((RowType = cType47) || RowType = cType48))
 Else
 {
 	LV_Insert(LV_GetNext(), "Check", LV_GetNext(), Action, Details, TimesX, DelayX, Type, Target, CoordPixel)
-,	LVManager.InsertAtGroup(1, LV_GetNext())
+,	LVManager.InsertAtGroup(LV_GetNext())
 }
 GoSub, RowCheck
 GoSub, b_Start
@@ -7291,14 +7292,14 @@ If (AddIf = 1)
 	Else
 	{
 		LV_Insert(LV_GetNext(), "Check", "", If9, "", 1, 0, cType17)
-	,	LVManager.InsertAtGroup(1, LV_GetNext()), RowNumber := 0, LastRow := 0
+	,	LVManager.InsertAtGroup(LV_GetNext()), RowNumber := 0, LastRow := 0
 		Loop
 		{
 			RowNumber := LV_GetNext(RowNumber)
 			If (!RowNumber)
 			{
 				LV_Insert(LastRow+1, "Check",LastRow+1, "[End If]", "EndIf", 1, 0, cType17)
-			,	LVManager.InsertAtGroup(1, LastRow)
+			,	LVManager.InsertAtGroup(LastRow)
 				break
 			}
 			LastRow := LV_GetNext(LastRow)
@@ -7637,7 +7638,7 @@ Else
 	{
 		RowNumber := LV_GetNext(RowNumber)
 	,	LV_Insert(RowNumber, "Check", RowNumber, FileCmdL, Details, 1, DelayG, FileCmdL)
-	,	LVManager.InsertAtGroup(1, RowNumber)
+	,	LVManager.InsertAtGroup(RowNumber)
 	,	RowNumber++
 	}
 }
@@ -8122,7 +8123,7 @@ Else If ((RowSelection = 0) || ((RowType = cType47) || RowType = cType48))
 Else
 {
 	LV_Insert(LV_GetNext(), "Check", "", Statement, TestVar, 1, 0, cType17, Target)
-,	LVManager.InsertAtGroup(1, LV_GetNext() - 1), RowNumber := 0, LastRow := 0
+,	LVManager.InsertAtGroup(LV_GetNext() - 1), RowNumber := 0, LastRow := 0
 	Loop
 	{
 		If (ElseIf)
@@ -8131,7 +8132,7 @@ Else
 		If (!RowNumber)
 		{
 			LV_Insert(LastRow+1, "Check",LastRow+1, "[End If]", "EndIf", 1, 0, cType17)
-		,	LVManager.InsertAtGroup(1, LastRow)
+		,	LVManager.InsertAtGroup(LastRow)
 			break
 		}
 		LastRow := LV_GetNext(LastRow)
@@ -8244,7 +8245,7 @@ Else If ((RowSelection = 0) || ((RowType = cType47) || RowType = cType48))
 Else
 {
 	LV_Insert(LV_GetNext(), "Check", "", Action, Details, 1, 0, Type, Target, "")
-,	LVManager.InsertAtGroup(1, LV_GetNext())
+,	LVManager.InsertAtGroup(LV_GetNext())
 }
 GoSub, RowCheck
 GoSub, b_Start
@@ -8285,7 +8286,7 @@ If ((RowSelection = 0) || ((RowType = cType47) || RowType = cType48))
 Else
 {
 	LV_Insert(LV_GetNext(), "Check", "", "[Else]", "Else", 1, 0, cType17)
-,	LVManager.InsertAtGroup(1, LV_GetNext())
+,	LVManager.InsertAtGroup(LV_GetNext())
 }
 GoSub, RowCheck
 GoSub, b_Start
@@ -8609,7 +8610,7 @@ Else
 	{
 		RowNumber := LV_GetNext(RowNumber)
 	,	LV_Insert(RowNumber, "Check", RowNumber, "[Windows Message]", Details, 1, DelayG, MsgType, DefCt, Title)
-	,	LVManager.InsertAtGroup(1, RowNumber)
+	,	LVManager.InsertAtGroup(RowNumber)
 	,	RowNumber++
 	}
 }
@@ -8817,7 +8818,7 @@ Else
 	{
 		RowNumber := LV_GetNext(RowNumber)
 	,	LV_Insert(RowNumber, "Check", RowNumber, "[Control]", Details, 1, DelayG, ControlCmd, DefCt, Title)
-	,	LVManager.InsertAtGroup(1, RowNumber)
+	,	LVManager.InsertAtGroup(RowNumber)
 	,	RowNumber++
 	}
 }
@@ -9033,7 +9034,7 @@ Else If ((RowSelection = 0) || ((RowType = cType47) || RowType = cType48))
 Else
 {
 	LV_Insert(LV_GetNext(), "Check", "", Action, Details, TimesX, DelayX, Type, Target, Attach)
-,	LVManager.InsertAtGroup(1, LV_GetNext())
+,	LVManager.InsertAtGroup(LV_GetNext())
 }
 GoSub, RowCheck
 GoSub, b_Start
@@ -9273,7 +9274,7 @@ Else
 	{
 		RowNumber := LV_GetNext(RowNumber)
 	,	LV_Insert(RowNumber, "Check", RowNumber, Action, Details, 1, DelayG, Type, Target)
-	,	LVManager.InsertAtGroup(1, RowNumber)
+	,	LVManager.InsertAtGroup(RowNumber)
 	,	RowNumber++
 	}
 }
@@ -9580,7 +9581,7 @@ Else
 	{
 		RowNumber := LV_GetNext(RowNumber)
 	,	LV_Insert(RowNumber, "Check", RowNumber, Action , Details, 1, DelayG, Type, Target, Load)
-	,	LVManager.InsertAtGroup(1, RowNumber)
+	,	LVManager.InsertAtGroup(RowNumber)
 	,	RowNumber++
 	}
 }
@@ -9644,7 +9645,7 @@ Else
 	{
 		RowNumber := LV_GetNext(RowNumber)
 	,	LV_Insert(RowNumber, "Check", RowNumber, Action, ComSc, 1, DelayG, Type, Target, Load)
-	,	LVManager.InsertAtGroup(1, RowNumber)
+	,	LVManager.InsertAtGroup(RowNumber)
 	,	RowNumber++
 	}
 }
@@ -10254,12 +10255,12 @@ If (TabControl = 2)
 			RowNumber++
 		}
 		LV_Insert(RowNumber, "Check", "", Action, Details, 1, 0, Type, Target, "")
-	,	LVManager.InsertAtGroup(1, RowNumber)
+	,	LVManager.InsertAtGroup(RowNumber)
 	}
 	Else
 	{
 		LV_Insert(LV_GetNext(), "Check", "", Action, Details, 1, 0, Type, Target, "")
-	,	LVManager.InsertAtGroup(1, LV_GetNext())
+	,	LVManager.InsertAtGroup(LV_GetNext())
 	}
 }
 If (TabControl = 3)
@@ -10276,7 +10277,7 @@ If (TabControl = 3)
 	Else
 	{
 		LV_Insert(LV_GetNext(), "Check", "", "[FuncReturn]", RetExpr, 1, 0, cType49, "", "")
-	,	LVManager.InsertAtGroup(1, LV_GetNext())
+	,	LVManager.InsertAtGroup(LV_GetNext())
 	}
 }
 If (A_ThisLabel != "UDFApply")
@@ -11718,7 +11719,7 @@ Else
 	{
 		RowNumber := LV_GetNext(RowNumber)
 	,	LV_Insert(RowNumber, "Check", RowNumber, tKey, sKey, 1, DelayG, cType1)
-	,	LVManager.InsertAtGroup(1, RowNumber)
+	,	LVManager.InsertAtGroup(RowNumber)
 	,	RowNumber++
 	}
 }
@@ -11800,7 +11801,7 @@ Else
 		{
 			RowNumber := LV_GetNext(RowNumber)
 		,	LV_Insert(RowNumber, "Check", RowNumber, tKey, sKey, TimesX, DelayX, cType1)
-		,	LVManager.InsertAtGroup(1, RowNumber)
+		,	LVManager.InsertAtGroup(RowNumber)
 		,	RowNumber++
 		}
 	}
@@ -12678,7 +12679,7 @@ If (RowSelection = 0)
 Else
 {
 	LV_Insert(RowNumber, "Check", LV_GetNext(), "[CommentBlock]", Comment, 0, 1, cType42, "", "")
-,	LVManager.InsertAtGroup(1, LV_GetNext())
+,	LVManager.InsertAtGroup(LV_GetNext())
 }
 GoSub, RowCheck
 GoSub, b_Start
@@ -14947,7 +14948,7 @@ If (GrName = "")
 	GrName := t_Lang177
 If (!ShowGroups)
 	GoSub, GroupsMode
-LVManager.AddGroup(, GrName)
+LVManager.InsertGroup(, GrName)
 LVManager.Add()
 return
 

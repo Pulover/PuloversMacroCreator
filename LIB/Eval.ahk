@@ -1,11 +1,10 @@
 ﻿;=======================================================================================
 ;
-; Function:		Eval
-; http://autohotkey.com/boards/viewtopic.php?f=6&t=13565
+; Function:		Eval (http://autohotkey.com/boards/viewtopic.php?f=6&t=13565)
 ; Description:	Evaluate Expressions in Strings.
 ; Return value:	An array (object) with the result of each expression.
 ;
-; Author:		Pulover [Rodolfo U. Batista] (rodolfoub@gmail.com)
+; Author:		Pulover [Rodolfo U. Batista]
 ; Credits:		ExprEval() by Uberi
 ;
 ;=======================================================================================

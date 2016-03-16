@@ -1,9 +1,9 @@
 ﻿;=======================================================================================
 ;
 ; Function:      CbAutoComplete
-; Description:   Auto-completes typed values in a combobox with matches from the list.
+; Description:   Auto-completes typed values in a ComboBox.
 ;
-; Author:        Pulover [Rodolfo U. Batista] (rodolfoub@gmail.com)
+; Author:        Pulover [Rodolfo U. Batista]
 ; Usage:         Call the function from the Combobox's gLabel.
 ;
 ;=======================================================================================

@@ -3,8 +3,7 @@
 ;                    Class LV_Rows
 ;
 ; Author:            Pulover [Rodolfo U. Batista]
-;                    rodolfoub@gmail.com
-; Release date:      25 September 2013
+; AHK version:       1.1.23.01
 ;
 ;                    Additional functions for ListView controls
 ;=======================================================================================
@@ -17,16 +16,39 @@
 ; Edit Functions:
 ;    Copy()
 ;    Cut()
-;    Paste(Row=0, Multiline=true)
+;    Paste([Row, Multiline])
 ;    Duplicate()
 ;    Delete()
-;    Move(Up=False)
-;    Drag(DragButton="D", AutoScroll=true, ScrollDelay=100, LineThick=2, Color="Black")
+;    Move([Up])
+;    Drag([DragButton, AutoScroll, ScrollDelay, LineThick, Color])
+;    CopyTo(Hwnd)
+;    MoveTo(Hwnd)
 ;
 ; History Functions:
 ;    Add()
 ;    Undo()
 ;    Redo()
+;    ClearHistory()
+;
+; Group Functions:
+;    EnableGroups([Enable, FirstName, Collapsible, StartCollapsed])
+;    InsertGroup([Row, GroupName])
+;    RemoveGroup([Row])
+;    InsertAtGroup([Count, Rows*])
+;    RemoveAtGroup([Count, Rows*])
+;    SetGroups(Groups)
+;    GetGroups([AsObject])
+;    SetGroupCollapisable([Collapsible])
+;    RemoveAllGroups()
+;    CollapseAll([Collapse])
+;    RefreshGroups([Collapsed])
+;
+; Management Functions:
+;    InsertHwnd(Hwnd)
+;    RemoveHwnd(Hwnd)
+;    SetHwnd(Hwnd [, NewData])
+;    GetData([Hwnd])
+;    SetCallback(Func)
 ;
 ;=======================================================================================
 ;
@@ -40,28 +62,35 @@
 ;        MyListHandle.Add()                 <--   Calls function for that Handle.
 ;
 ;    Like AutoHotkey built-in functions, these functions operate on the default gui,
-;        and active ListView control.
+;        and active ListView control. When usingle handles, SetHwnd will attempt to set
+;        the selected ListView as active, but it's recommend to call Gui, Listview on
+;        your script too.
 ;
-;    Initializing is required for History functions or in case your ListView has icons.
-;        You can also use the same handle for the Edit functions or use different
-;        handles for extra copy and paste actions keeping independent data in memory.
+;    Initializing is required for History and Group functions and in case your ListView
+;        has icons to be moved during Drag().
+;        Gui, Add, ListView, hwndhLV, Columns
+;        MyListHandle := New LV_Rows(hLV)  <--   Creates a new handle with Hwnd.
+;
+;        Gui, Add, ListView, hwndhLV1, Columns
+;        Gui, Add, ListView, hwndhLV2, Columns
+;        MyListHandle := New LV_Rows(hLV1, hLV2)
+;
+;        You can also use the same handle for the Edit functions.
+;        You can create more handles or pass the ListView's Hwnd to operate on different
+;        lists with the same handle.
 ;
 ;    In order to keep row's icons you need to initialize the class passing the
 ;        ListView's Hwnd. For example:
 ;        Gui, Add, ListView, hwndhLV, Columns
 ;        MyListHandle := New LV_Rows(hLV)
 ;
-;    You may keep an individual history of each ListView using different handles.
-;
 ;=======================================================================================
-
 Class LV_Rows extends LV_Rows.LV_EX
 {
 ;=======================================================================================
-;    Meta-Functions     By creating a new instance of the class via
-;                            Handle := New LV_Rows() you can keep different History and
-;                            Copy / Paste data for individual ListViews.
-;                       Pass the Hwnd of the Listiview to keep row's icons.
+;    Meta-Functions     Pass the Hwnd of one or more Listiviews when initializing it to
+;                            manage history, groups and keep row's icons during Drag().
+;                       Use InsertHwnd() to add more lists and SetHwnd() to switch between them.
 ;
 ;    Properties:
 ;        ActiveSlot:    Contains the current entry position in the ListView History.
@@ -118,12 +147,59 @@ Class LV_Rows extends LV_Rows.LV_EX
     ,   this.SetCapacity(0)
     ,   this.base := ""
     }
-    
-    SetCallback(Func)
+;=======================================================================================
+;    Management Functions: Set, Insert and Remove ListView Hwnd's.
+;=======================================================================================
+;    Function:           Handle.InsertHwnd()
+;    Description:        Inserts one or more ListView Hwnd's to be managed.
+;    Parameters:
+;        Hwnd:           One or more ListView Hwnd's.
+;    Return:             No return value.
+;=======================================================================================
+    InsertHwnd(Hwnd*)
     {
-        this.Callback := Func
+        If (Hwnd.Length())
+        {
+            For e, h in Hwnd
+            {
+                If (this.hArray.HasKey(h))
+                    continue
+                this.hArray[h] := { Hwnd: h
+                                  , GroupsArray: []
+                                  , Slot: []
+                                  , ActiveSlot: 1}
+            ,   this.hArray[h].GroupsArray.Push({Name: "Start", Row: 1})
+            }
+        }
     }
-    
+;=======================================================================================
+;    Function:           Handle.RemoveHwnd()
+;    Description:        Removes a ListView Hwnd.
+;    Parameters:
+;        Hwnd:           Hwnd of the ListView to be removed.
+;    Return:             No return value.
+;=======================================================================================
+    RemoveHwnd(Hwnd)
+    {
+        If (this.hArray.HasKey(Hwnd))
+        {
+            this.hArray[Hwnd].RemoveAt(1, this.Length())
+        ,   this.hArray[Hwnd].SetCapacity(0)
+        ,   this.hArray[Hwnd].base := ""
+        }
+    }
+;=======================================================================================
+;    Function:           Handle.SetHwnd()
+;    Description:        Selects a previously inserted ListView or adds it to the handle
+;                            and selects it, optionally copying the data, history and
+;                            groups from another Hwnd.
+;    Parameters:
+;        Hwnd:           Hwnd of a ListView to be selected. If the hwnd is not found, it
+;                            will be added to the handle and selected.
+;        NewData:        Hwnd of a previously inserted ListView whose data, history and groups
+;                            will be copied to the one being selected.
+;    Return:             No return value.
+;=======================================================================================
     SetHwnd(Hwnd, NewData := "")
     {
         If (this.hArray.HasKey(Hwnd))
@@ -179,7 +255,15 @@ Class LV_Rows extends LV_Rows.LV_EX
             }
         }
     }
-    
+;=======================================================================================
+;    Function:           Handle.GetData()
+;    Description:        Retrieves the data, history and groups of a previously inserted
+;                            ListView.
+;    Parameters:
+;        Hwnd:           Hwnd of a previously inserted ListView. If left blank, the
+;                            current active ListView will be returned.
+;    Return:             An object with data, history and groups of a ListView.
+;=======================================================================================
     GetData(Hwnd := "")
     {
         If (Hwnd = "")
@@ -187,32 +271,20 @@ Class LV_Rows extends LV_Rows.LV_EX
         If (this.hArray.HasKey(Hwnd))
             return this.hArray[Hwnd].Clone()
     }
-    
-    InsertHwnd(Hwnd*)
+;=======================================================================================
+;    Function:           LV_Rows.SetCallback()
+;    Description:        Sets a callback function where the user can take actions based
+;                            on the function being called called. The Callback function
+;                            must return true for the operation to be completed.
+;    Parameters:
+;        Func:           Name of a user-defined function that should receive 2 parameters:
+;                            The name of the function being called and the Hwnd of the
+;                            current set ListView.
+;    Return:             No return value.
+;=======================================================================================
+    SetCallback(Func)
     {
-        If (Hwnd.Length())
-        {
-            For e, h in Hwnd
-            {
-                If (this.hArray.HasKey(h))
-                    continue
-                this.hArray[h] := { Hwnd: h
-                                  , GroupsArray: []
-                                  , Slot: []
-                                  , ActiveSlot: 1}
-            ,   this.hArray[h].GroupsArray.Push({Name: "Start", Row: 1})
-            }
-        }
-    }
-    
-    RemoveHwnd(Hwnd)
-    {
-        If (this.hArray.HasKey(Hwnd))
-        {
-            this.hArray[Hwnd].RemoveAt(1, this.Length())
-        ,   this.hArray[Hwnd].SetCapacity(0)
-        ,   this.hArray[Hwnd].base := ""
-        }
+        this.Callback := Func
     }
 ;=======================================================================================
 ;    Edit Functions:     Edit ListView rows.
@@ -327,41 +399,6 @@ Class LV_Rows extends LV_Rows.LV_EX
     ,   this.RefreshGroups()
         return DupLines
     }
-    
-    CopyTo(Hwnd)
-    {
-        If (!this.hArray.HasKey(Hwnd))
-            return false
-        CurrentHwnd := this.LVHwnd
-    ,   CopyData := this.CopyData.Clone()
-    ,   CopiedLines := this.Copy()
-    ,   this.SetHwnd(Hwnd)
-    ,   this.Paste()
-    ,   this.CopyData := CopyData.Clone()
-    ,   CopyData.RemoveAt(1, CopyData.Length())
-    ,   CopyData := ""
-    ,   this.RefreshGroups()
-    ,   this.SetHwnd(CurrentHwnd)
-        return CopiedLines
-    }
-    
-    MoveTo(Hwnd)
-    {
-        If (!this.hArray.HasKey(Hwnd))
-            return false
-        CurrentHwnd := this.LVHwnd
-    ,   CopyData := this.CopyData.Clone()
-    ,   CopiedLines := this.Cut()
-    ,   this.SetHwnd(Hwnd)
-    ,   this.Paste()
-    ,   this.CopyData := CopyData.Clone()
-    ,   CopyData.RemoveAt(1, CopyData.Length())
-    ,   CopyData := ""
-    ,   this.RefreshGroups()
-    ,   this.SetHwnd(CurrentHwnd)
-        return CopiedLines
-    }
-    
 ;=======================================================================================
 ;    Function:           LV_Rows.Delete()
 ;    Description:        Delete selected rows.
@@ -587,7 +624,55 @@ Class LV_Rows extends LV_Rows.LV_EX
         return LV_currRow
     }
 ;=======================================================================================
+;    Function:           Handle.CopyTo()
+;    Description:        Copies selected rows to a different ListView (requires initializing).
+;    Parameters:
+;        Hwnd:           The Hwnd of a previously inserted ListView.
+;    Return:             Number of copied rows.
+;=======================================================================================
+    CopyTo(Hwnd)
+    {
+        If (!this.hArray.HasKey(Hwnd))
+            return false
+        CurrentHwnd := this.LVHwnd
+    ,   CopyData := this.CopyData.Clone()
+    ,   CopiedLines := this.Copy()
+    ,   this.SetHwnd(Hwnd)
+    ,   this.Paste()
+    ,   this.CopyData := CopyData.Clone()
+    ,   CopyData.RemoveAt(1, CopyData.Length())
+    ,   CopyData := ""
+    ,   this.RefreshGroups()
+    ,   this.SetHwnd(CurrentHwnd)
+        return CopiedLines
+    }
+;=======================================================================================
+;    Function:           Handle.MoveTo()
+;    Description:        Copies selected rows to a different ListView
+;                            and deletes them from the original (requires initializing).
+;    Parameters:
+;        Hwnd:           The Hwnd of a previously inserted ListView.
+;    Return:             Number of copied rows.
+;=======================================================================================
+    MoveTo(Hwnd)
+    {
+        If (!this.hArray.HasKey(Hwnd))
+            return false
+        CurrentHwnd := this.LVHwnd
+    ,   CopyData := this.CopyData.Clone()
+    ,   CopiedLines := this.Cut()
+    ,   this.SetHwnd(Hwnd)
+    ,   this.Paste()
+    ,   this.CopyData := CopyData.Clone()
+    ,   CopyData.RemoveAt(1, CopyData.Length())
+    ,   CopyData := ""
+    ,   this.RefreshGroups()
+    ,   this.SetHwnd(CurrentHwnd)
+        return CopiedLines
+    }
+;=======================================================================================
 ;    History Functions:  Keep a history of ListView changes and allow Undo and Redo.
+;                            These functions operate on the currently selected ListView.
 ;=======================================================================================
 ;    Function:           Handle.Add()
 ;    Description:        Adds an entry on History. This function requires
@@ -639,38 +724,32 @@ Class LV_Rows extends LV_Rows.LV_EX
     ,   this.Load()
         return this.Handle.ActiveSlot
     }
-    
+;=======================================================================================
+;    Function:           Handle.ClearHistory()
+;    Description:        Removes all history entries from the ListView.
+;    Return:             New entry position or false if it's already the last entry.
+;=======================================================================================
     ClearHistory()
     {
         this.Handle.Slot := []
     ,   this.Handle.ActiveSlot := 1
     }
-    
-    SetGroups(Groups)
-    {
-        this.Handle.GroupsArray := []
-        If (!Groups.Length())
-        {
-            Loop, Parse, Groups, `,, %A_Space%
-            {
-                Pars := StrSplit(A_LoopField, ":", A_Space)
-            ,   this.Handle.GroupsArray.Push({Name: Pars[1], Row: Pars[2]})
-            }
-        }
-        Else
-            this.Handle.GroupsArray := Groups
-        this.RefreshGroups()
-    }
-    
-    GetGroups(AsObject := false)
-    {
-        If (AsObject)
-            return this.Handle.GroupsArray
-        For e, g in this.Handle.GroupsArray
-            GroupsString .= g.Name ":" g.Row ","
-        return RTrim(GroupsString, ",")
-    }
-    
+;=======================================================================================
+;    Group Functions:    Set, add and remove Listview Groups.
+;                        These functions are based on just me's LV_EX library:
+;                        http://autohotkey.com/boards/viewtopic.php?t=1256
+;=======================================================================================
+;    Function:           Handle.EnableGroups()
+;    Description:        Enables or disables Groups in the currently selected ListView
+;                            initializing: MyListHandle := New LV_Rows()
+;    Parameters:
+;        Enable:         If TRUE enables GroupView in the selected ListView. If FALSE
+;                            disables it.
+;        FirstName:      Name for the first (mandatory) group at row 1.
+;        Collapsible:    If TRUE makes the groups collapsible.
+;        StartCollapsed: If TRUE starts all groups collapsed.
+;    Return:             No return value.
+;=======================================================================================
     EnableGroups(Enable := true, FirstName := "New Group", Collapsible := true, StartCollapsed := false)
     {
         Gui, Listview, % this.LVHwnd
@@ -684,19 +763,21 @@ Class LV_Rows extends LV_Rows.LV_EX
             this.RefreshGroups(StartCollapsed)
         }
     }
-    
-    SetGroupCollapisable(Collapsible := true)
-    {
-        this.Collapsible := Collapsible
-    ,   this.RefreshGroups()
-    }
-    
-    AddGroup(Row := "", GroupName := "New Group")
+;=======================================================================================
+;    Function:           Handle.InsertGroup()
+;    Description:        Inserts or renames a group on top of the specified row.
+;    Parameters:
+;        Row:            Number of the row for the group to be inserted. If left blank
+;                            the first selected row will be used.
+;        GroupName:      Name of the new group or new name for an existing group.
+;    Return:             TRUE if Row is bigger than 0 or FALSE otherwise.
+;=======================================================================================
+    InsertGroup(Row := "", GroupName := "New Group")
     {
         If (Row = "")
             Row := LV_GetNext()
         If (Row =< 0)
-            return
+            return false
         
         For e, g in this.Handle.GroupsArray
         {
@@ -723,14 +804,22 @@ Class LV_Rows extends LV_Rows.LV_EX
                 this.Handle.GroupsArray.Push({Name: GroupName, Row: Row})
         }
         this.RefreshGroups()
+		return true
     }
-    
+;=======================================================================================
+;    Function:           Handle.RemoveGroup()
+;    Description:        Removes the group the indicated row belongs to.
+;    Parameters:
+;        Row:            Number of a row the group belongs to. If left blank the first
+;                            selected row will be used.
+;    Return:             TRUE if Row is bigger than 0 or FALSE otherwise.
+;=======================================================================================
     RemoveGroup(Row := "")
     {
         If (Row = "")
             Row := LV_GetNext()
         If (Row =< 0)
-            return
+            return false
         
         For e, g in this.Handle.GroupsArray
         {
@@ -757,8 +846,99 @@ Class LV_Rows extends LV_Rows.LV_EX
             }
         }
         this.RefreshGroups()
+		return true
     }
-    
+;=======================================================================================
+;    Function:           Handle.InsertAtGroup()
+;    Description:        Inserts a row at indicated position, moving groups after it one
+;                            row down.
+;    Parameters:
+;        Row:            Number of the row where to insert.
+;    Return:             No return value.
+;=======================================================================================
+    InsertAtGroup(Row)
+    {
+		For e, g in this.Handle.GroupsArray
+		{
+			If ((Row > 0) && (Row < g.Row))
+				g.Row++
+		}
+    }
+;=======================================================================================
+;    Function:           Handle.RemoveAtGroup()
+;    Description:        Removes a row from indicated position, moving groups after it one
+;                            row up.
+;    Parameters:
+;        Row:            Number of the row where to insert.
+;    Return:             No return value.
+;=======================================================================================
+    RemoveAtGroup(Row)
+    {
+		For e, g in this.Handle.GroupsArray
+		{
+			If ((Row > 0) && (Row < g.Row))
+				g.Row--
+		}
+    }
+;=======================================================================================
+;    Function:           Handle.SetGroups()
+;    Description:        Sets one or more groups in the selected ListView.
+;    Parameters:
+;        Groups:         A list of groups in the format "GroupName:RowNumber" separated
+;                            by comma. You can use GetGroups() to save a valid String or
+;                            Object to be used with this function.
+;    Return:             No return value.
+;=======================================================================================
+    SetGroups(Groups)
+    {
+        this.Handle.GroupsArray := []
+        If (!Groups.Length())
+        {
+            Loop, Parse, Groups, `,, %A_Space%
+            {
+                Pars := StrSplit(A_LoopField, ":", A_Space)
+            ,   this.Handle.GroupsArray.Push({Name: Pars[1], Row: Pars[2]})
+            }
+        }
+        Else
+            this.Handle.GroupsArray := Groups
+        this.RefreshGroups()
+    }
+;=======================================================================================
+;    Function:           Handle.GetGroups()
+;    Description:        Returns a string or object representing the current groups in
+;                            the selected ListView.
+;    Parameters:
+;        AsObject:       If TRUE returns an object with the groups, otherwise an string.
+;                            Both can be used with SetGroups().
+;    Return:             No return value.
+;=======================================================================================
+    GetGroups(AsObject := false)
+    {
+        If (AsObject)
+            return this.Handle.GroupsArray.Clone()
+        For e, g in this.Handle.GroupsArray
+            GroupsString .= g.Name ":" g.Row ","
+        return RTrim(GroupsString, ",")
+    }
+;=======================================================================================
+;    Function:           Handle.SetGroupCollapisable()
+;    Description:        Enables or disables Groups Collapsible style.
+;    Parameters:
+;        Collapsible:    If TRUE enables Collapsible style in the selected ListView.
+;                            If FALSE disables it.
+;    Return:             No return value.
+;=======================================================================================
+    SetGroupCollapisable(Collapsible := true)
+    {
+        this.Collapsible := Collapsible
+    ,   this.RefreshGroups()
+    }
+;=======================================================================================
+;    Function:           Handle.RemoveAllGroups()
+;    Description:        Removes all groups in the selected ListView.
+;    Return:             No return value.
+;=======================================================================================
     RemoveAllGroups()
     {
         If (!this.Handle.GroupsArray.Length())
@@ -767,36 +947,27 @@ Class LV_Rows extends LV_Rows.LV_EX
             this.Handle.GroupsArray.RemoveAt(2, this.Handle.GroupsArray.Length())
         this.RefreshGroups()
     }
-    
-    InsertAtGroup(Count := 1, Rows*)
-    {
-        For each, LV_Row in Rows
-        {
-            For e, g in this.Handle.GroupsArray
-            {
-                If ((LV_Row > 0) && (LV_Row < g.Row))
-                    g.Row += Count
-            }
-        }
-    }
-    
-    RemoveAtGroup(Count := 1, Rows*)
-    {
-        For each, LV_Row in Rows
-        {
-            For e, g in this.Handle.GroupsArray
-            {
-                If ((LV_Row > 0) && (LV_Row < g.Row))
-                    g.Row--
-            }
-        }
-    }
-    
+;=======================================================================================
+;    Function:           Handle.CollapseAll()
+;    Description:        Collapses or expands all groups.
+;    Parameters:
+;        Collapse:       If TRUE collapses all groups in the selected ListView. If FALSE
+;                            expands all groups in the selected ListView.
+;    Return:             No return value.
+;=======================================================================================
     CollapseAll(Collapse := true)
     {
         this.RefreshGroups(Collapse)
     }
-    
+;=======================================================================================
+;    Function:           Handle.RefreshGroups()
+;    Description:        Reloads the ListView to update groups. This function is called
+;                            automatically in from other functions, usually it's not
+;                            necessary to use it in your script.
+;    Parameters:
+;        Collapsed:      If TRUE collapses all groups in the selected ListView.
+;    Return:             No return value.
+;=======================================================================================
     RefreshGroups(Collapsed := false)
     {
         Gui, Listview, % this.LVHwnd
@@ -886,7 +1057,7 @@ Class LV_Rows extends LV_Rows.LV_EX
 ; Tested with:    AHK 1.1.20.03 (A32/U32/U64)
 ; Tested on:      Win 8.1 (x64)
 ; Note:           This version has been modified to include only Group related functions, the complete
-;                 library can be found at https://autohotkey.com/boards/viewtopic.php?t=1256
+;                     library can be found at https://autohotkey.com/boards/viewtopic.php?t=1256
 ; Changelog:
 ;     1.1.00.00/2015-03-13/just me     -  added basic tile view support (suggested by toralf),
 ;                                         added basic (XP compatible) group view support,

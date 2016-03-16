@@ -3,9 +3,7 @@
 ;                    Class Rebar
 ;
 ; Author:            Pulover [Rodolfo U. Batista]
-;                    rodolfoub@gmail.com
-; AHK version:       1.1.11.00
-; Release date:      19 August 2013
+; AHK version:       1.1.23.01
 ;
 ;                    Class for AutoHotkey Rebar custom controls
 ;=======================================================================================
