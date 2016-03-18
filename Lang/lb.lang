@@ -1011,12 +1011,12 @@
 	Ex_UV_TT =	Export global Variabelen.
 	Ex_WN_TT =	Erlaabt oder Schalt Warnunge fir spezifesch Konditiounen deen e Fehler, wéi en Tippfeeler oder vermësst "global" Deklaratioun weg kënnen.
 	ExpList_TT =	Double-Klickt ze änneren
-	ExprLink2_TT 	- NET auszegin Verännerlechen prozent Unzeeche HEI.
+	ExprLink2_TT =	- NET auszegin Verännerlechen prozent Unzeeche HEI.
 		- Déi meescht vun AHK Ausdrock ginn ënnerstëtzt.
 		- Dir kënnt Sieg, Verännerlechen, flamenden Ofgrond a Funktioun benotzen.
 		- Sieg ze benotzen, auszegin hinnen an Zitater, e.g .: VAR  "e".
 		- Abberzuel Aussoen sinn ënnerstëtzt, e.g .: VAR  "e" || InStr (VAR, "b").
-	ExprLink3_TT 	- NET auszegin Verännerlechen prozent Unzeeche HEI.
+	ExprLink3_TT =	- NET auszegin Verännerlechen prozent Unzeeche HEI.
 		- Déi meescht vun AHK Ausdrock ginn ënnerstëtzt.
 		- Dir kënnt Sieg, Verännerlechen, flamenden Ofgrond a Funktioun benotzen.
 		- Sieg ze benotzen, auszegin hinnen an Zitater, e.g .: VAR = "e".

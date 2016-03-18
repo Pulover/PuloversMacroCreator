@@ -1011,12 +1011,12 @@
 	Ex_UV_TT =	Eksportere globale variabler.
 	Ex_WN_TT =	Aktiverer eller deaktiverer advarsler for bestemte forhold som kan tyde på en feil, for eksempel en skrivefeil  eller manglende "global" erklæring.
 	ExpList_TT =	Dobbeltklikk for å redigere
-	ExprLink2_TT 	- IKKE SETT VARIABLER I PROSENTTEGN HER.
+	ExprLink2_TT =	- IKKE SETT VARIABLER I PROSENTTEGN HER.
 		- De fleste av AHK uttrykk støttes.
 		- Du kan bruke strenger, variabler, matriser og funksjoner.
 		- For å bruke strenger, legge dem i anførselstegn, for eksempel: var  "a".
 		- Flere uttalelser støttes, for eksempel: var  "a" || InStr (var, "b").
-	ExprLink3_TT 	- IKKE SETT VARIABLER I PROSENTTEGN HER.
+	ExprLink3_TT =	- IKKE SETT VARIABLER I PROSENTTEGN HER.
 		- De fleste av AHK uttrykk støttes.
 		- Du kan bruke strenger, variabler, matriser og funksjoner.
 		- For å bruke strenger, legge dem i anførselstegn, for eksempel: var = "a".

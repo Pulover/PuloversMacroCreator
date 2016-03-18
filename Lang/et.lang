@@ -1011,12 +1011,12 @@
 	Ex_UV_TT =	Ekspordi globaalseid muutujaid.
 	Ex_WN_TT =	Lubab või keelab hoiatused eritingimused, mis võib viidata viga, nagu kirjaviga või puudu "globaalne" deklaratsioon.
 	ExpList_TT =	Topeltklõpsake muuta
-	ExprLink2_TT 	- ÄRGE pange MUUTUJATE protsentides Märgid SIIN.
+	ExprLink2_TT =	- ÄRGE pange MUUTUJATE protsentides Märgid SIIN.
 		- Enamik AHK väljendeid on toetatud.
 		- Te võite kasutada stringe, muutujad, massiivid ja funktsioone.
 		- Kasutamiseks stringid, pange need tsitaadid, näiteks .: var  "a".
 		- Mitu Avaldused on toetatud, näiteks .: var  "a" || Instr (var, "b").
-	ExprLink3_TT 	- ÄRGE pange MUUTUJATE protsentides Märgid SIIN.
+	ExprLink3_TT =	- ÄRGE pange MUUTUJATE protsentides Märgid SIIN.
 		- Enamik AHK väljendeid on toetatud.
 		- Te võite kasutada stringe, muutujad, massiivid ja funktsioone.
 		- Kasutamiseks stringid, pange need tsitaadid, näiteks .: var = "a".

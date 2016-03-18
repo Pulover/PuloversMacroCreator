@@ -1011,12 +1011,12 @@
 	Ex_UV_TT =	Export global variables.
 	Ex_WN_TT =	Enables or disables warnings for specific conditions which may indicate an error, such as a typo or missing "global" declaration.
 	ExpList_TT =	Double-Click to edit
-	ExprLink2_TT 	- DO NOT ENCLOSE VARIABLES IN PERCENT SIGNS HERE.
+	ExprLink2_TT =	- DO NOT ENCLOSE VARIABLES IN PERCENT SIGNS HERE.
 		- Most of AHK expressions are supported.
 		- You may use strings, variables, arrays and functions.
 		- To use strings, enclose them in quotes, e.g.: var  "a".
 		- Multiple Statements are supported, e.g.: var  "a" || InStr(var, "b").
-	ExprLink3_TT 	- DO NOT ENCLOSE VARIABLES IN PERCENT SIGNS HERE.
+	ExprLink3_TT =	- DO NOT ENCLOSE VARIABLES IN PERCENT SIGNS HERE.
 		- Most of AHK expressions are supported.
 		- You may use strings, variables, arrays and functions.
 		- To use strings, enclose them in quotes, e.g.: var = "a".

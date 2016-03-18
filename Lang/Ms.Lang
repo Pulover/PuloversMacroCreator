@@ -1011,12 +1011,12 @@
 	Ex_UV_TT =	Eksport pembolehubah global.
 	Ex_WN_TT =	Mendayakan atau melumpuhkan amaran untuk keadaan tertentu yang mungkin menunjukkan ralat, seperti kesilapan menaip atau hilang pengisytiharan "global".
 	ExpList_TT =	Klik dua kali untuk mengedit
-	ExprLink2_TT 	- JANGAN LAMPIRKAN PEMBOLEH UBAH DI SIGNS PERCENT SINI.
+	ExprLink2_TT =	- JANGAN LAMPIRKAN PEMBOLEH UBAH DI SIGNS PERCENT SINI.
 		- Kebanyakan ungkapan AHK disokong.
 		- Anda boleh menggunakan tali, pembolehubah, tatasusunan dan fungsi.
 		- Untuk menggunakan tali, sertakan mereka dalam sebut harga, contoh: var  "a".
 		- Penyata Pelbagai disokong, contoh: var  "a" || Instr (var, "b").
-	ExprLink3_TT 	- JANGAN LAMPIRKAN PEMBOLEH UBAH DI SIGNS PERCENT SINI.
+	ExprLink3_TT =	- JANGAN LAMPIRKAN PEMBOLEH UBAH DI SIGNS PERCENT SINI.
 		- Kebanyakan ungkapan AHK disokong.
 		- Anda boleh menggunakan tali, pembolehubah, tatasusunan dan fungsi.
 		- Untuk menggunakan tali, sertakan mereka dalam sebut harga, contoh: var = "a".

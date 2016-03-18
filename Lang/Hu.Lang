@@ -1011,12 +1011,12 @@
 	Ex_UV_TT =	Export globális változók.
 	Ex_WN_TT =	Engedélyezi vagy letiltja a figyelmeztetések az adott körülmények között, amelyek hibát jelez, mint például egy elírás vagy hiányzó "globális" nyilatkozatot.
 	ExpList_TT =	Kattintson duplán a szerkeszteni
-	ExprLink2_TT 	- NE CSATOLNI VARIABLES SZÁZALÉKOS JELEK ITT.
+	ExprLink2_TT =	- NE CSATOLNI VARIABLES SZÁZALÉKOS JELEK ITT.
 		- A legtöbb AHK kifejezések támogatottak.
 		- Használhatja vonósok, változók, tömbök és függvények.
 		- Ahhoz, hogy használni húrok, csatolja őket idézetek, pl: var  "a".
 		- Több utasítást támogat, például: var  "a" || InStr (var, "b").
-	ExprLink3_TT 	- NE CSATOLNI VARIABLES SZÁZALÉKOS JELEK ITT.
+	ExprLink3_TT =	- NE CSATOLNI VARIABLES SZÁZALÉKOS JELEK ITT.
 		- A legtöbb AHK kifejezések támogatottak.
 		- Használhatja vonósok, változók, tömbök és függvények.
 		- Ahhoz, hogy használni húrok, csatolja őket idézetek, pl: var = "a".

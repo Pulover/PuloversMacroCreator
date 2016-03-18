@@ -1011,12 +1011,12 @@
 	Ex_UV_TT =	Exporteren globale variabelen.
 	Ex_WN_TT =	Schakelt waarschuwingen voor specifieke omstandigheden die een fout kunnen wijzen, zoals een typo of ontbrekende "global" verklaring.
 	ExpList_TT =	Dubbelklik op om te bewerken
-	ExprLink2_TT 	- NIET BIJGAAND VARIABELEN IN PROCENTTEKENS HIER.
+	ExprLink2_TT =	- NIET BIJGAAND VARIABELEN IN PROCENTTEKENS HIER.
 		- De meeste van de AHK uitdrukkingen worden ondersteund.
 		- U kunt gebruik maken van snaren, variabelen, arrays en functies.
 		- Om strings gebruiken, omsluiten ze tussen aanhalingstekens, bijvoorbeeld: var  "a".
 		- Meerdere verklaringen worden ondersteund, bijvoorbeeld: var  "a" || InStr (var, "b").
-	ExprLink3_TT 	- NIET BIJGAAND VARIABELEN IN PROCENTTEKENS HIER.
+	ExprLink3_TT =	- NIET BIJGAAND VARIABELEN IN PROCENTTEKENS HIER.
 		- De meeste van de AHK uitdrukkingen worden ondersteund.
 		- U kunt gebruik maken van snaren, variabelen, arrays en functies.
 		- Om strings gebruiken, omsluiten ze tussen aanhalingstekens, bijvoorbeeld: var = "a".

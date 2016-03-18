@@ -1011,12 +1011,12 @@
 	Ex_UV_TT =	Izvoz globalne spremenljivke.
 	Ex_WN_TT =	Omogoča ali onemogoča opozorila za posebne pogoje, ki lahko kažejo na napake, kot so tipkarske napake ali manjkajoče "globalna" izjave.
 	ExpList_TT =	Dvakrat kliknite za urejanje
-	ExprLink2_TT 	- NE PRILOŽITI SPREMENLJIVK ZNAKI ZA ODSTOTEK TUKAJ.
+	ExprLink2_TT =	- NE PRILOŽITI SPREMENLJIVK ZNAKI ZA ODSTOTEK TUKAJ.
 		- Večina AHK izrazov so podprte.
 		- Lahko uporabite strune, spremenljivke, polja in funkcije.
 		- Za uporabo nizov, jih priložite v narekovajih, na primer: var  "A".
 		- Več Izjave so podprti, na primer: var  "a" || Instr (var, "b").
-	ExprLink3_TT 	- NE PRILOŽITI SPREMENLJIVK ZNAKI ZA ODSTOTEK TUKAJ.
+	ExprLink3_TT =	- NE PRILOŽITI SPREMENLJIVK ZNAKI ZA ODSTOTEK TUKAJ.
 		- Večina AHK izrazov so podprte.
 		- Lahko uporabite strune, spremenljivke, polja in funkcije.
 		- Za uporabo nizov, jih priložite v narekovajih, na primer: var = "A".

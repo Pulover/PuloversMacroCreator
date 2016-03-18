@@ -1011,12 +1011,12 @@
 	Ex_UV_TT =	Exportera globala variabler.
 	Ex_WN_TT =	Aktiverar eller inaktiverar varningar för särskilda villkor som kan tyda på ett fel, till exempel ett stavfel eller saknas "globalt" deklaration.
 	ExpList_TT =	Dubbelklicka för att redigera
-	ExprLink2_TT 	- INTE BIFOGA VARIABLER I PROCENT TECKEN HÄR.
+	ExprLink2_TT =	- INTE BIFOGA VARIABLER I PROCENT TECKEN HÄR.
 		- De flesta av AHK uttryck stöds.
 		- Du kan använda strängar, variabler, arrayer och funktioner.
 		- Om du vill använda strängar, bifoga dem i citationstecken, till exempel: var  "a".
 		- Flera rapporter stöds, t.ex. var  "a" || InStr (var, "b").
-	ExprLink3_TT 	- INTE BIFOGA VARIABLER I PROCENT TECKEN HÄR.
+	ExprLink3_TT =	- INTE BIFOGA VARIABLER I PROCENT TECKEN HÄR.
 		- De flesta av AHK uttryck stöds.
 		- Du kan använda strängar, variabler, arrayer och funktioner.
 		- Om du vill använda strängar, bifoga dem i citationstecken, till exempel: var = "a".

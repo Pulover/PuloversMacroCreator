@@ -1011,12 +1011,12 @@
 	Ex_UV_TT =	Export aldagai global.
 	Ex_WN_TT =	Gaitzen edo baldintza zehatzak zein errore bat adieraz dezake, hala nola, typo bat edo falta "global" deklarazio gisa abisuak desgaitzen.
 	ExpList_TT =	Egin klik bikoitza editatu
-	ExprLink2_TT 	- EZ Behean daukazue VARIABLES ehuneko seinaleak hemen.
+	ExprLink2_TT =	- EZ Behean daukazue VARIABLES ehuneko seinaleak hemen.
 		- AHK esamoldeak gehienak onartzen dira.
 		- Kateak, aldagaiak, array-ak eta funtzioak erabili ahal izango duzu.
 		- Kateak erabiltzeko, erantsi horiek komatxo artean, adib .: var  "a".
 		- Adierazpenak anitzak onartzen dira, adib .: var  "a" || InStr (var, "b").
-	ExprLink3_TT 	- EZ Behean daukazue VARIABLES ehuneko seinaleak hemen.
+	ExprLink3_TT =	- EZ Behean daukazue VARIABLES ehuneko seinaleak hemen.
 		- AHK esamoldeak gehienak onartzen dira.
 		- Kateak, aldagaiak, array-ak eta funtzioak erabili ahal izango duzu.
 		- Kateak erabiltzeko, erantsi horiek komatxo artean, adib .: var = "a".

@@ -1011,12 +1011,12 @@
 	Ex_UV_TT =	Esportare le variabili globali.
 	Ex_WN_TT =	Attiva o disattiva gli avvisi per condizioni specifiche che possono indicare un errore, ad esempio un errore di battitura o di dichiarazione mancante "globale".
 	ExpList_TT =	Fare doppio clic per modificare
-	ExprLink2_TT 	- NON ALLEGARE VARIABILI IN SEGNI DI PERCENTUALE QUI.
+	ExprLink2_TT =	- NON ALLEGARE VARIABILI IN SEGNI DI PERCENTUALE QUI.
 		- La maggior parte delle espressioni AHK sono supportati.
 		- È possibile utilizzare stringhe, le variabili, array e funzioni.
 		- Per utilizzare stringhe, racchiuderli tra virgolette, ad esempio: var  "a".
 		- Più istruzioni sono supportati, ad esempio: var  "a" || InStr (var, "b").
-	ExprLink3_TT 	- NON ALLEGARE VARIABILI IN SEGNI DI PERCENTUALE QUI.
+	ExprLink3_TT =	- NON ALLEGARE VARIABILI IN SEGNI DI PERCENTUALE QUI.
 		- La maggior parte delle espressioni AHK sono supportati.
 		- È possibile utilizzare stringhe, le variabili, array e funzioni.
 		- Per utilizzare stringhe, racchiuderli tra virgolette, ad esempio: var = "a".

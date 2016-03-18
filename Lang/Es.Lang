@@ -1011,12 +1011,12 @@
 	Ex_UV_TT =	Exportar variables globales.
 	Ex_WN_TT =	Activa o desactiva las advertencias para condiciones específicas que pueden indicar un error, como un error tipográfico o de falta de declaración "global".
 	ExpList_TT =	Haga doble clic para editar
-	ExprLink2_TT 	- NO INCLUIR LAS VARIABLES EN SIGNOS DE PORCENTAJE AQUÍ.
+	ExprLink2_TT =	- NO INCLUIR LAS VARIABLES EN SIGNOS DE PORCENTAJE AQUÍ.
 		- La mayor parte de las expresiones AHK son compatibles.
 		- Usted puede usar cadenas, variables, matrices y funciones.
 		- Para utilizar cuerdas, encerrarlos entre comillas, por ejemplo: var  "a".
 		- Son compatibles Varias sentencias, por ejemplo: var  "a" || InStr (var, "b").
-	ExprLink3_TT 	- NO INCLUIR LAS VARIABLES EN SIGNOS DE PORCENTAJE AQUÍ.
+	ExprLink3_TT =	- NO INCLUIR LAS VARIABLES EN SIGNOS DE PORCENTAJE AQUÍ.
 		- La mayor parte de las expresiones AHK son compatibles.
 		- Usted puede usar cadenas, variables, matrices y funciones.
 		- Para utilizar cuerdas, encerrarlos entre comillas, por ejemplo: var = "a".

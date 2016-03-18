@@ -1011,12 +1011,12 @@
 	Ex_UV_TT =	Ekspor variabel global.
 	Ex_WN_TT =	Mengaktifkan atau menonaktifkan peringatan untuk kondisi tertentu yang mungkin menunjukkan kesalahan, seperti kesalahan ketik atau hilang deklarasi "global".
 	ExpList_TT =	Double-Klik untuk mengedit
-	ExprLink2_TT 	- JANGAN MELAMPIRKAN VARIABEL DI TANDA PERSEN DI SINI.
+	ExprLink2_TT =	- JANGAN MELAMPIRKAN VARIABEL DI TANDA PERSEN DI SINI.
 		- Sebagian besar dari ekspresi AHK didukung.
 		- Anda dapat menggunakan string, variabel, array dan fungsi.
 		- Untuk menggunakan string, menyertakan mereka dalam tanda kutip, misalnya: var  "a".
 		- Beberapa Laporan yang didukung, misalnya: var  "a" || InStr (var, "b").
-	ExprLink3_TT 	- JANGAN MELAMPIRKAN VARIABEL DI TANDA PERSEN DI SINI.
+	ExprLink3_TT =	- JANGAN MELAMPIRKAN VARIABEL DI TANDA PERSEN DI SINI.
 		- Sebagian besar dari ekspresi AHK didukung.
 		- Anda dapat menggunakan string, variabel, array dan fungsi.
 		- Untuk menggunakan string, menyertakan mereka dalam tanda kutip, misalnya: var = "a".

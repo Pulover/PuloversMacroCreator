@@ -1011,12 +1011,12 @@
 	Ex_UV_TT =	Export variabile globale.
 	Ex_WN_TT =	Activează sau dezactivează avertismente pentru condiții specifice, care pot indica o eroare, cum ar fi o greșeală de scriere sau lipsă declarație "globală".
 	ExpList_TT =	Dublu-clic pentru a edita
-	ExprLink2_TT 	- NU ENCLOSE VARIABILE IN SEMNE PERCENT AICI.
+	ExprLink2_TT =	- NU ENCLOSE VARIABILE IN SEMNE PERCENT AICI.
 		- Cele mai multe dintre expresiile AHK sunt acceptate.
 		- Aveți dreptul să utilizați șiruri, variabile, tablouri și funcții.
 		- Pentru a utiliza siruri de caractere, incadrati in ghilimele, ex .: var  "o".
 		- Declarațiile multiple sunt susținute, de exemplu .: var  "o" || Instr (var, "b").
-	ExprLink3_TT 	- NU ENCLOSE VARIABILE IN SEMNE PERCENT AICI.
+	ExprLink3_TT =	- NU ENCLOSE VARIABILE IN SEMNE PERCENT AICI.
 		- Cele mai multe dintre expresiile AHK sunt acceptate.
 		- Aveți dreptul să utilizați șiruri, variabile, tablouri și funcții.
 		- Pentru a utiliza siruri de caractere, incadrati in ghilimele, ex .: var = "o".

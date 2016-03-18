@@ -1011,12 +1011,12 @@
 	Ex_UV_TT =	Viedä globaalien muuttujien.
 	Ex_WN_TT =	Käyttöön tai poistaa käytöstä varoitukset erityiset edellytykset, jotka voivat ilmoittaa virheestä, kuten kirjoitusvirheen tai puuttuva "globaali" ilmoitusta.
 	ExpList_TT =	Kaksoisnapsauta muokata
-	ExprLink2_TT 	- ÄLÄ LIITTÄÄ MUUTTUJAT PROSENTTIA SIGNS TÄSTÄ.
+	ExprLink2_TT =	- ÄLÄ LIITTÄÄ MUUTTUJAT PROSENTTIA SIGNS TÄSTÄ.
 		- Useimmat AHK ilmaisuja tuetaan.
 		- Voit käyttää jouset, muuttujat, taulukot ja toimintoja.
 		- Jos haluat käyttää jouset, liittää ne lainausmerkkeihin, esimerkiksi: var  "".
 		- Useita ilmoituksia tukevat, esimerkiksi: var  "" || InStr (var, "b").
-	ExprLink3_TT 	- ÄLÄ LIITTÄÄ MUUTTUJAT PROSENTTIA SIGNS TÄSTÄ.
+	ExprLink3_TT =	- ÄLÄ LIITTÄÄ MUUTTUJAT PROSENTTIA SIGNS TÄSTÄ.
 		- Useimmat AHK ilmaisuja tuetaan.
 		- Voit käyttää jouset, muuttujat, taulukot ja toimintoja.
 		- Jos haluat käyttää jouset, liittää ne lainausmerkkeihin, esimerkiksi: var = "".

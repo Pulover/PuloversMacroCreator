@@ -1011,12 +1011,12 @@
 	Ex_UV_TT =	Allforio newidynnau byd-eang.
 	Ex_WN_TT =	Galluogi neu analluogi rhybuddion ar gyfer cyflyrau penodol all fod yn arwydd gwall, fel typo neu ar goll "fyd-eang" datganiad.
 	ExpList_TT =	Double-Cliciwch i olygu
-	ExprLink2_TT 	- PEIDIWCH AMGÁU newidynnau mewn ARWYDDION PERCENT YMA.
+	ExprLink2_TT =	- PEIDIWCH AMGÁU newidynnau mewn ARWYDDION PERCENT YMA.
 		- Mae'r rhan fwyaf o ymadroddion AHK yn cael eu cefnogi.
 		- Gallwch ddefnyddio llinynnau, newidynnau, araeau a swyddogaethau.
 		- I ddefnyddio llinynnau, yn eu amgáu mewn dyfynodau, e.e. .: var  "yn".
 		- Datganiadau Lluosog yn cael eu cefnogi, e.e. .: var  "a" || INSTR (var, "b").
-	ExprLink3_TT 	- PEIDIWCH AMGÁU newidynnau mewn ARWYDDION PERCENT YMA.
+	ExprLink3_TT =	- PEIDIWCH AMGÁU newidynnau mewn ARWYDDION PERCENT YMA.
 		- Mae'r rhan fwyaf o ymadroddion AHK yn cael eu cefnogi.
 		- Gallwch ddefnyddio llinynnau, newidynnau, araeau a swyddogaethau.
 		- I ddefnyddio llinynnau, yn eu amgáu mewn dyfynodau, e.e. .: var = "yn".

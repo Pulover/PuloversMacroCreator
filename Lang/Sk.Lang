@@ -1011,12 +1011,12 @@
 	Ex_UV_TT =	Export globálne premenné.
 	Ex_WN_TT =	Povolí alebo zakáže varovanie pre špecifické podmienky, ktoré môžu indikovať chybu, ako je preklep alebo chýbajúce "globálne" vyhlásenie.
 	ExpList_TT =	Poklepaním editovať
-	ExprLink2_TT 	- NEPOUŽÍVAJTE UZAVRITE PREMENNÉ V ZNAKY PERCENTA TU.
+	ExprLink2_TT =	- NEPOUŽÍVAJTE UZAVRITE PREMENNÉ V ZNAKY PERCENTA TU.
 		- Väčšina AHK výrazy sú podporované.
 		- Môžete použiť reťazca, premenné, pole a funkcia.
 		- Ak chcete použiť reťazca, uzavrite do úvodzoviek, napríklad: var  "A".
 		- Viac príkazov sú podporované, napr: var  "a" || Instru (var, "b").
-	ExprLink3_TT 	- NEPOUŽÍVAJTE UZAVRITE PREMENNÉ V ZNAKY PERCENTA TU.
+	ExprLink3_TT =	- NEPOUŽÍVAJTE UZAVRITE PREMENNÉ V ZNAKY PERCENTA TU.
 		- Väčšina AHK výrazy sú podporované.
 		- Môžete použiť reťazca, premenné, pole a funkcia.
 		- Ak chcete použiť reťazca, uzavrite do úvodzoviek, napríklad: var = "A".

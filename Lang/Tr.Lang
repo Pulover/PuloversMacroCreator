@@ -1011,12 +1011,12 @@
 	Ex_UV_TT =	Global değişkenler ihracat.
 	Ex_WN_TT =	Etkinleştirir veya bu tür bir yazım hatası ya da eksik "küresel" ilanı gibi bir hata gösterebilir özel koşullar için uyarılar devre dışı bırakır.
 	ExpList_TT =	Düzenlemek için çift tıklayın
-	ExprLink2_TT 	- BURAYA YÜZDE IŞARETLERI DEĞİŞKENLER IÇINE ALMAYıN.
+	ExprLink2_TT =	- BURAYA YÜZDE IŞARETLERI DEĞİŞKENLER IÇINE ALMAYıN.
 		- AHK ifadelerin çoğu desteklenmektedir.
 		- Sen dizeleri, değişkenler, diziler ve işlevlerini kullanabilirsiniz.
 		- Örneğin, tırnak işareti içine, dizeleri kullanmak için: var  "a".
 		- Çoklu Tablolar desteklenir, örneğin: var  "a" || InStr (var "b").
-	ExprLink3_TT 	- BURAYA YÜZDE IŞARETLERI DEĞİŞKENLER IÇINE ALMAYıN.
+	ExprLink3_TT =	- BURAYA YÜZDE IŞARETLERI DEĞİŞKENLER IÇINE ALMAYıN.
 		- AHK ifadelerin çoğu desteklenmektedir.
 		- Sen dizeleri, değişkenler, diziler ve işlevlerini kullanabilirsiniz.
 		- Örneğin, tırnak işareti içine, dizeleri kullanmak için: var = "a".

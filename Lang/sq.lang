@@ -1011,12 +1011,12 @@
 	Ex_UV_TT =	Eksportit ndryshoret globale.
 	Ex_WN_TT =	Aktivizon ose çaktivizon paralajmërime për kushte të veçanta të cilat mund të tregojnë një gabim, të tilla si një typo ose zhdukur shpalljes "globale".
 	ExpList_TT =	Double-Kliko për të redaktuar
-	ExprLink2_TT 	- MOS bashkangjitni variablave në shenjave të përqindjes KETU.
+	ExprLink2_TT =	- MOS bashkangjitni variablave në shenjave të përqindjes KETU.
 		- Shumica e shprehjeve AHK janë të mbështetur.
 		- Ju mund të përdorni vargjet, variablat, vargjeve dhe funksionet.
 		- Për të përdorur vargjet, mbyllni ato në thonjëza, e.g .: var  "a".
 		- Deklaratat e shumëfishta janë të mbështetura, e.g .: var  "a" || Instr (var, "b").
-	ExprLink3_TT 	- MOS bashkangjitni variablave në SHENJAT qind KETU.
+	ExprLink3_TT =	- MOS bashkangjitni variablave në SHENJAT qind KETU.
 		- Shumica e shprehjeve AHK janë të mbështetur.
 		- Ju mund të përdorni vargjet, variablat, vargjeve dhe funksionet.
 		- Për të përdorur vargjet, mbyllni ato në thonjëza, e.g .: var = "a".

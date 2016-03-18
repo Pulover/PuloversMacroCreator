@@ -1011,12 +1011,12 @@
 	Ex_UV_TT =	Izvoz globalne varijable.
 	Ex_WN_TT =	Omogućuje ili onemogućuje upozorenja za određene uvjete koji mogu ukazivati na pogrešku, kao što su pogreškom ili nestalog "globalne" izjave.
 	ExpList_TT =	Dvaput kliknite za uređivanje
-	ExprLink2_TT 	- NE PRILAŽETE VARIJABLI U POSTOCIMA ZNAKOVA OVDJE.
+	ExprLink2_TT =	- NE PRILAŽETE VARIJABLI U POSTOCIMA ZNAKOVA OVDJE.
 		- Većina AHK izraza su podržani.
 		- Možete koristiti žice, varijabli, polja i funkcije.
 		- Za korištenje žice, priložiti ih u navodnike, npr: var  "A".
 		- Više Izjave su podržani, npr: var  "a" || Instr (var, "b").
-	ExprLink3_TT 	- NE PRILAŽETE VARIJABLI U POSTOCIMA ZNAKOVA OVDJE.
+	ExprLink3_TT =	- NE PRILAŽETE VARIJABLI U POSTOCIMA ZNAKOVA OVDJE.
 		- Većina AHK izraza su podržani.
 		- Možete koristiti žice, varijabli, polja i funkcije.
 		- Za korištenje žice, priložiti ih u navodnike, npr: var = "A".

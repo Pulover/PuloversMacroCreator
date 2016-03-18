@@ -1011,12 +1011,12 @@
 	Ex_UV_TT =	Eksportere globale variabler.
 	Ex_WN_TT =	Aktiverer eller deaktiverer advarsler for specifikke betingelser, der kan tyde en fejl, såsom en tastefejl eller mangler "global" erklæring.
 	ExpList_TT =	Dobbeltklik for at redigere
-	ExprLink2_TT 	- IKKE VEDLÆG VARIABLER I PROCENTTEGN HER.
+	ExprLink2_TT =	- IKKE VEDLÆG VARIABLER I PROCENTTEGN HER.
 		- De fleste af AHK udtryk understøttes.
 		- Du må bruge strygere, variabler, arrays og funktioner.
 		- For at bruge strenge, vedlægge dem i anførselstegn, f.eks: var  "a".
 		- Flere Udtalelser understøttes, fx: var  "a" || InStr (var, "b").
-	ExprLink3_TT 	- IKKE VEDLÆG VARIABLER I PROCENTTEGN HER.
+	ExprLink3_TT =	- IKKE VEDLÆG VARIABLER I PROCENTTEGN HER.
 		- De fleste af AHK udtryk understøttes.
 		- Du må bruge strygere, variabler, arrays og funktioner.
 		- For at bruge strenge, vedlægge dem i anførselstegn, f.eks: var = "a".

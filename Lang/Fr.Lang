@@ -1011,12 +1011,12 @@
 	Ex_UV_TT =	Exporter des variables globales.
 	Ex_WN_TT =	Active ou désactive les avertissements pour des conditions spécifiques qui peuvent indiquer une erreur, comme une faute de frappe ou manquante déclaration «globale».
 	ExpList_TT =	Double-cliquez dessus pour modifier
-	ExprLink2_TT 	- NE JOIGNEZ PAS VARIABLES SIGNES DE POURCENTAGE ICI.
+	ExprLink2_TT =	- NE JOIGNEZ PAS VARIABLES SIGNES DE POURCENTAGE ICI.
 		- La plupart des expressions de AHK sont pris en charge.
 		- Vous pouvez utiliser chaînes, variables, des tableaux et des fonctions.
 		- Pour utiliser des chaînes, le placer entre guillemets, par exemple: var  "a".
 		- Déclarations multiples sont pris en charge, par exemple: var  "a" || InStr (var, "b").
-	ExprLink3_TT 	- NE JOIGNEZ PAS VARIABLES SIGNES DE POURCENTAGE ICI.
+	ExprLink3_TT =	- NE JOIGNEZ PAS VARIABLES SIGNES DE POURCENTAGE ICI.
 		- La plupart des expressions de AHK sont pris en charge.
 		- Vous pouvez utiliser chaînes, variables, des tableaux et des fonctions.
 		- Pour utiliser des chaînes, le placer entre guillemets, par exemple: var = "a".

@@ -1011,12 +1011,12 @@
 	Ex_UV_TT =	Export alþjóðlegum breytur.
 	Ex_WN_TT =	Kveikir eða slekkur varnaðarorð ákveðnum skilyrðum sem geta bent á villu, svo sem prentvilla eða vantar "alheims" yfirlýsingu.
 	ExpList_TT =	Tvísmelltu til að breyta
-	ExprLink2_TT 	- EKKI láta breytur í prósentumerki hér.
+	ExprLink2_TT =	- EKKI láta breytur í prósentumerki hér.
 		- Flestir AHK tjáning eru studd.
 		- Þú getur notað strengir, breytur, fylki og aðgerðir.
 		- Til að nota strengi, láta þá innan gæsalappa, t.d .: var  "a".
 		- Margar Yfirlýsingar eru studd, t.d .: var  "a" || Instr (var, "b").
-	ExprLink3_TT 	- EKKI láta breytur í prósentumerki hér.
+	ExprLink3_TT =	- EKKI láta breytur í prósentumerki hér.
 		- Flestir AHK tjáning eru studd.
 		- Þú getur notað strengir, breytur, fylki og aðgerðir.
 		- Til að nota strengi, láta þá innan gæsalappa, t.d .: var = "a".

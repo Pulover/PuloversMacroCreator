@@ -1011,12 +1011,12 @@
 	Ex_UV_TT =	Export eziguquguqukayo global.
 	Ex_WN_TT =	Inika noma ikhubaza izixwayiso for imibandela ethize lapho kungase kubonise nephutha, ezifana inkinga noma ulahlekile isimemezelo "global".
 	ExpList_TT =	Double-Chofoza ukuze uhlele
-	ExprLink2_TT 	- MUSA buyela eziguquguqukayo angu SIGNS LAPHA.
+	ExprLink2_TT =	- MUSA buyela eziguquguqukayo angu SIGNS LAPHA.
 		- Iningi AHK izinkulumo asekelwa.
 		- Ungase usebenzise strings, eziguquguqukayo, ukurhemisa kanye nemisebenzi.
 		- Ukusebenzisa strings, buyela nabo izingcaphuno, isb .: var  "a".
 		- Izitatimende Multiple asekelwa, isb .: var  "a" || InStr (var, "b").
-	ExprLink3_TT 	- MUSA buyela eziguquguqukayo angu SIGNS LAPHA.
+	ExprLink3_TT =	- MUSA buyela eziguquguqukayo angu SIGNS LAPHA.
 		- Iningi AHK izinkulumo asekelwa.
 		- Ungase usebenzise strings, eziguquguqukayo, ukurhemisa kanye nemisebenzi.
 		- Ukusebenzisa strings, buyela nabo izingcaphuno, isb .: var = "a".

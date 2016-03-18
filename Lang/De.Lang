@@ -1011,12 +1011,12 @@
 	Ex_UV_TT =	Globale Variablen exportieren.
 	Ex_WN_TT =	Aktiviert oder deaktiviert Warnungen für bestimmte Bedingungen, die einen Fehler, wie zum Beispiel einen Tippfehler oder fehlende "global" Erklärung hinweisen.
 	ExpList_TT =	Zum Bearbeiten doppelklicken
-	ExprLink2_TT 	- NICHT BEILEGEN VARIABLEN IN PROZENTZEICHEN HIER.
+	ExprLink2_TT =	- NICHT BEILEGEN VARIABLEN IN PROZENTZEICHEN HIER.
 		- Die meisten der AHK Ausdrücke werden unterstützt.
 		- Sie können Strings, Variablen, Arrays und Funktionen zu nutzen.
 		- Zur Zeichenfolgen verwenden, schließen Sie sie in Anführungszeichen, zum Beispiel: var  "a".
 		- Multiple Statements werden unterstützt, zB: var  "a" || InStr (var, "b").
-	ExprLink3_TT 	- NICHT BEILEGEN VARIABLEN IN PROZENTZEICHEN HIER.
+	ExprLink3_TT =	- NICHT BEILEGEN VARIABLEN IN PROZENTZEICHEN HIER.
 		- Die meisten der AHK Ausdrücke werden unterstützt.
 		- Sie können Strings, Variablen, Arrays und Funktionen zu nutzen.
 		- Zur Zeichenfolgen verwenden, schließen Sie sie in Anführungszeichen, zum Beispiel: var = "a".

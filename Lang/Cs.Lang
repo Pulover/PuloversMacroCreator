@@ -1011,12 +1011,12 @@
 	Ex_UV_TT =	Export globální proměnné.
 	Ex_WN_TT =	Povolí nebo zakáže varování pro specifické podmínky, které mohou indikovat chybu, jako je překlep nebo chybějící "globální" prohlášení.
 	ExpList_TT =	Dvakrát klikněte na upravit
-	ExprLink2_TT 	- NEPOUŽÍVEJTE UZAVŘETE PROMĚNNÉ V ZNAKY PROCENTA ZDE.
+	ExprLink2_TT =	- NEPOUŽÍVEJTE UZAVŘETE PROMĚNNÉ V ZNAKY PROCENTA ZDE.
 		- Většina AHK výrazy jsou podporovány.
 		- Můžete použít řetězce, proměnné, pole a funkce.
 		- Chcete-li použít řetězce, uzavřete do uvozovek, například: var  "A".
 		- Více příkazů jsou podporovány, např: var  "a" || InStr (var, "b").
-	ExprLink3_TT 	- NEPOUŽÍVEJTE UZAVŘETE PROMĚNNÉ V ZNAKY PROCENTA ZDE.
+	ExprLink3_TT =	- NEPOUŽÍVEJTE UZAVŘETE PROMĚNNÉ V ZNAKY PROCENTA ZDE.
 		- Většina AHK výrazy jsou podporovány.
 		- Můžete použít řetězce, proměnné, pole a funkce.
 		- Chcete-li použít řetězce, uzavřete do uvozovek, například: var = "A".

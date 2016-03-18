@@ -1011,12 +1011,12 @@
 	Ex_UV_TT =	Rhweba variables zehlabathi.
 	Ex_WN_TT =	Yenza okanye kukhubaza izilumkiso kwizigulo ezithile leyo kungabonisa impazamo, efana Typo okanye kwalahleka isibhengezo "jikelele".
 	ExpList_TT =	Kabini-Cofa ukuhlela
-	ExprLink2_TT 	- MUSA kugqunywe Ifaka ngemiqondiso PESENTI APHA.
+	ExprLink2_TT =	- MUSA kugqunywe Ifaka ngemiqondiso PESENTI APHA.
 		- Uninzi amabinzana AHK ziyaxhaswa.
 		- Ungasebenzisa imitya, izinto ezitshintshayo, kwimiboniso kunye nemisebenzi.
 		- Ukusebenzisa imitya, Somrhaqa kubo kuchaphulo, umzk .: var  "a".
 		- Iingxelo Multiple ziyaxhaswa, umzk .: var  "a" || IMIYALE (var, "b").
-	ExprLink3_TT 	- MUSA kugqunywe Ifaka ngemiqondiso PESENTI APHA.
+	ExprLink3_TT =	- MUSA kugqunywe Ifaka ngemiqondiso PESENTI APHA.
 		- Uninzi amabinzana AHK ziyaxhaswa.
 		- Ungasebenzisa imitya, izinto ezitshintshayo, kwimiboniso kunye nemisebenzi.
 		- Ukusebenzisa imitya, Somrhaqa kubo kuchaphulo, umzk .: var = "a".

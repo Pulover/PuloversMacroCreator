@@ -1011,12 +1011,12 @@
 	Ex_UV_TT =	Eksporta globālie mainīgie.
 	Ex_WN_TT =	Iespējo vai atspējo brīdinājumus par konkrētiem nosacījumiem, kas var norādīt uz kļūdu, piemēram, drukas kļūdas vai pazudušu "globālo" deklarācija.
 	ExpList_TT =	Double-Click, lai rediģētu
-	ExprLink2_TT 	- DO NOT jāpievieno mainīgo procentu SIGNS ŠEIT.
+	ExprLink2_TT =	- DO NOT jāpievieno mainīgo procentu SIGNS ŠEIT.
 		- Lielākā daļa AHK izteiksmes tiek atbalstīti.
 		- Jūs varat izmantot stīgas, mainīgos, masīvus un funkcijas.
 		- Lai izmantotu stīgas, lieciet tos pēdiņās, piem .: var  "A".
 		- Vairāki paziņojumi tiek atbalstīti, piem .: var  "a" || Instr (var, "b").
-	ExprLink3_TT 	- DO NOT jāpievieno mainīgo procentu SIGNS ŠEIT.
+	ExprLink3_TT =	- DO NOT jāpievieno mainīgo procentu SIGNS ŠEIT.
 		- Lielākā daļa AHK izteiksmes tiek atbalstīti.
 		- Jūs varat izmantot stīgas, mainīgos, masīvus un funkcijas.
 		- Lai izmantotu stīgas, lieciet tos pēdiņās, piem .: var = "A".

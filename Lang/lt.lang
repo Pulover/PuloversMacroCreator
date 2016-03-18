@@ -1011,12 +1011,12 @@
 	Ex_UV_TT =	Eksporto globalių kintamųjų.
 	Ex_WN_TT =	Įjungia arba išjungia įspėjimai konkrečių sąlygų, kurios gali reikšti klaidą, pavyzdžiui, rašybos ar trūksta "pasaulio" deklaracijos.
 	ExpList_TT =	Dukart spustelėkite redaguoti
-	ExprLink2_TT 	- Negalima pridėti kintamųjų proc ŽENKLŲ čia.
+	ExprLink2_TT =	- Negalima pridėti kintamųjų proc ŽENKLŲ čia.
 		- Dauguma AHK išraiškų yra palaikomi.
 		- Jūs galite naudoti stygos, kintamuosius, masyvus ir funkcijas.
 		- Norėdami naudoti stygas, pridėti juos į kabutes aminus, pvz .: var  "A".
 		- Kelios ataskaitos yra palaikomi aminus, pvz .: var  "A" || Instr (var, "B").
-	ExprLink3_TT 	- Negalima pridėti kintamųjų proc ŽENKLŲ čia.
+	ExprLink3_TT =	- Negalima pridėti kintamųjų proc ŽENKLŲ čia.
 		- Dauguma AHK išraiškų yra palaikomi.
 		- Jūs galite naudoti stygos, kintamuosius, masyvus ir funkcijas.
 		- Norėdami naudoti stygas, pridėti juos į kabutes aminus, pvz .: var = "A".

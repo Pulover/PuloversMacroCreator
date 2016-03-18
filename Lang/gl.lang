@@ -1011,12 +1011,12 @@
 	Ex_UV_TT =	Exportación variables globais.
 	Ex_WN_TT =	Activa ou desactiva avisos para as condicións específicas que poden indicar un erro, como un erro de dixitación ou falta de declaración de "global".
 	ExpList_TT =	Dobre clic para editar
-	ExprLink2_TT 	- Non coloque VARIABLES de sinais de porcentaxe aquí.
+	ExprLink2_TT =	- Non coloque VARIABLES de sinais de porcentaxe aquí.
 		- a maioría das expresións AHK dispoñible.
 		- Pode utilizar cordas, variables, matrices e funcións.
 		- Para usar cordas, coloque os entre comiñas, por exemplo.: Var  "a".
 		- Múltiples declaracións son soportados, por exemplo.: Var  "a" || INSTR (var, "b").
-	ExprLink3_TT 	- Non coloque VARIABLES de sinais de porcentaxe aquí.
+	ExprLink3_TT =	- Non coloque VARIABLES de sinais de porcentaxe aquí.
 		- a maioría das expresións AHK dispoñible.
 		- Pode utilizar cordas, variables, matrices e funcións.
 		- Para usar cordas, coloque os entre comiñas, por exemplo.: Var = "a".

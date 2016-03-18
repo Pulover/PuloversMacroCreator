@@ -1011,12 +1011,12 @@
 	Ex_UV_TT =	Wyeksportować zmienne globalne.
 	Ex_WN_TT =	Włącza lub wyłącza ostrzeżenia dla szczególnych warunków, które mogą wskazywać na błąd, takich jak literówki lub brakującej "globalnej" deklaracją.
 	ExpList_TT =	Kliknij dwukrotnie, aby edytować
-	ExprLink2_TT 	- NIE DOŁĄCZYĆ ZMIENNYCH W ZNAKI PROCENT TUTAJ.
+	ExprLink2_TT =	- NIE DOŁĄCZYĆ ZMIENNYCH W ZNAKI PROCENT TUTAJ.
 		- Większość wyrażeń AHK są obsługiwane.
 		- Możesz użyć ciągi znaków, zmienne, tablice i funkcje.
 		- Aby używać łańcuchów, ująć w cudzysłów, np: var  "A".
 		- Wiele Oświadczenia są obsługiwane, na przykład: var  "a" || InStr (var, "b").
-	ExprLink3_TT 	- NIE DOŁĄCZYĆ ZMIENNYCH W ZNAKI PROCENT TUTAJ.
+	ExprLink3_TT =	- NIE DOŁĄCZYĆ ZMIENNYCH W ZNAKI PROCENT TUTAJ.
 		- Większość wyrażeń AHK są obsługiwane.
 		- Możesz użyć ciągi znaków, zmienne, tablice i funkcje.
 		- Aby używać łańcuchów, ująć w cudzysłów, np: var = "A".

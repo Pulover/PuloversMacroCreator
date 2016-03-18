@@ -1011,12 +1011,12 @@
 	Ex_UV_TT =	Xuất khẩu các biến toàn cầu.
 	Ex_WN_TT =	Cho phép hoặc vô hiệu hóa các cảnh báo cho các điều kiện cụ thể mà có thể chỉ ra một lỗi, chẳng hạn như một lỗi đánh máy hoặc mất tích khai "toàn cầu".
 	ExpList_TT =	Đúp Nhấn vào đây để chỉnh sửa
-	ExprLink2_TT 	- KHÔNG GỬI KÈM BIẾN TRONG DẤU HIỆU PERCENT ĐÂY.
+	ExprLink2_TT =	- KHÔNG GỬI KÈM BIẾN TRONG DẤU HIỆU PERCENT ĐÂY.
 		- Hầu hết các biểu AHK được hỗ trợ.
 		- Bạn có thể sử dụng các chuỗi, các biến, mảng và chức năng.
 		- Để sử dụng dây, đặt chúng trong dấu ngoặc kép, ví dụ: var  "a".
 		- Nhiều báo cáo được hỗ trợ, ví dụ như: var  "a" || InStr (var, "b").
-	ExprLink3_TT 	- KHÔNG GỬI KÈM BIẾN TRONG DẤU HIỆU PERCENT ĐÂY.
+	ExprLink3_TT =	- KHÔNG GỬI KÈM BIẾN TRONG DẤU HIỆU PERCENT ĐÂY.
 		- Hầu hết các biểu AHK được hỗ trợ.
 		- Bạn có thể sử dụng các chuỗi, các biến, mảng và chức năng.
 		- Để sử dụng dây, đặt chúng trong dấu ngoặc kép, ví dụ: var = "a".
