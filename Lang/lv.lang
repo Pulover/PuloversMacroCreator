@@ -870,7 +870,7 @@
 	d_Lang088 =	Mēģināt palaist kā vienotu lietotāju (nav administratora).
 	d_Lang089 =	Nē rinda izvēlēts!
 	d_Lang090 =	Lūdzu, izvēlieties rindu, lai ievietotu vai izņemtu grupu.
-	d_Lang091 =	Lejupielāde ... Lūdzu, pagaidiet.
+	d_Lang091 =	Lejupielāde. Lūdzu uzgaidiet...
 	d_Lang092 =	mazas ikonas
 	d_Lang093 =	Lielas ikonas
 	d_Lang094 =	Šī funkcija ir nepieciešama Windows Vista vai augstāka.
@@ -907,6 +907,7 @@
 	d_Lang115 =	- Hold Alt, lai uzstādītu reģionu, lai tajā pašā vietā.
 	d_Lang116 =	Pārsūtīt un instalēt
 	d_Lang117 =	Iet uz download lapu
+	d_Lang118 =	Sūtīšanu. Lūdzu uzgaidiet...
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Izbraukšana video pamācības pie www.macrocreator.com/help~~pobj lai uzzinātu par daudzajiem iezīmes Pulover s Macro Radītāju.

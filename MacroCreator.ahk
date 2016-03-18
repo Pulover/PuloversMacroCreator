@@ -3291,6 +3291,7 @@ whr.SetRequestHeader("Content-Type", hdr_ContentType)
 whr.SetRequestHeader("Referer", url)
 whr.SetRequestHeader("User-Agent", "Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko")
 whr.Option(6) := false ; No auto redirect
+SplashTextOn, 300, 25, %AppName%, %d_Lang118%
 Try
 {
 	whr.Send(PostData)
@@ -3298,14 +3299,16 @@ Try
 }
 Catch
 {
+	SplashTextOff
 	MsgBox, 16, %d_Lang007%, %d_Lang102%
 	return
 }
+SplashTextOff
 If (InStr(whr.ResponseText, "Email was sent successfully!"))
 	MsgBox, 64, %t_Lang186%, %d_Lang105%
 Else
 	MsgBox, 16, %d_Lang007%, %d_Lang102%
-GuiControl, 4:Choose, TabControl, Language
+GuiControl, 4:Choose, TabControl, LangEditor
 return
 
 GoNextLine:
@@ -3359,7 +3362,7 @@ return
 AddLang:
 Gui, 4:Submit, NoHide
 Gui, 4:ListView, LangList
-FilePath := RegExReplace(A_ThisMenuItem, "\s/.*"), SelLang := FilePath
+EditLang := RegExReplace(A_ThisMenuItem, "\s/.*"), SelLang := EditLang
 GoSub, ExportLang
 GoSub, ConfigCancel
 Gui, 1:Default
@@ -3430,6 +3433,7 @@ For i, _Section in LangFiles[RLang]
 	}
 	LangFile .= "`t`t`n"
 }
+LangFile := RTrim(LangFile, "`n`t") "`n"
 FileDelete, %FilePath%
 FileAppend, %LangFile%, %FilePath%, UTF-8
 GuiControl, 4:Enable, EditLang

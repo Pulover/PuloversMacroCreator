@@ -870,7 +870,7 @@
 	d_Lang088 =	Cuba untuk menjalankan sebagai pengguna biasa (bukan pentadbir).
 	d_Lang089 =	Tiada berturut-turut dipilih!
 	d_Lang090 =	Sila, pilih berturut-turut untuk memasukkan atau mengeluarkan kumpulan.
-	d_Lang091 =	Memuat turun ... Sila, tunggu.
+	d_Lang091 =	Memuat turun. Sila tunggu...
 	d_Lang092 =	Ikon kecil
 	d_Lang093 =	Ikon besar
 	d_Lang094 =	Ciri ini memerlukan Windows Vista atau lebih tinggi.
@@ -907,6 +907,7 @@
 	d_Lang115 =	- Pegang Alt untuk menetapkan kawasan ke lokasi yang sama.
 	d_Lang116 =	Memindahkan dan memasang
 	d_Lang117 =	Pergi ke halaman muat turun
+	d_Lang118 =	Hantaran. Sila tunggu...
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Semak tutorial video di www.macrocreator.com/help untuk belajar tentang ciri-ciri banyak Creator Macro Pulover ini.

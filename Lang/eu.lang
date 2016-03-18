@@ -870,7 +870,7 @@
 	d_Lang088 =	Saiatu erabiltzaile arrunta (ez administratzaile) exekutatu.
 	d_Lang089 =	Ilara aukeratu!
 	d_Lang090 =	Mesedez, hautatu txertatu edo taldea ezabatu.
-	d_Lang091 =	Deskargen ... Mesedez, itxaron.
+	d_Lang091 =	Deskargen. Itxaron mesedez...
 	d_Lang092 =	ikono txikiak
 	d_Lang093 =	ikono handiak
 	d_Lang094 =	Ezaugarri honek Windows Vista edo handiagoa da.
@@ -907,6 +907,7 @@
 	d_Lang115 =	- Hold Alt eskualdean ezarri Kokapen berean.
 	d_Lang116 =	Transferentzia eta instalatu
 	d_Lang117 =	Joan orria deskargatu
+	d_Lang118 =	Bidaltzea. Itxaron mesedez...
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Begiratu bideo tutorialak www.macrocreator.com/help at Pulover en Makro Sortzailea ezaugarri asko ezagutzea.

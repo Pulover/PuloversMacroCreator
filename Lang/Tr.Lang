@@ -870,7 +870,7 @@
 	d_Lang088 =	Ortak kullanıcı (değil yönetici) çalıştırmayı deneyin.
 	d_Lang089 =	Hiçbir satır seçili!
 	d_Lang090 =	Eklemek veya grubu kaldırmak için bir satır seçiniz.
-	d_Lang091 =	İndirme ... Lütfen bekleyin.
+	d_Lang091 =	İndirme. Lütfen bekle...
 	d_Lang092 =	Küçük simgeler
 	d_Lang093 =	Büyük ikonlar
 	d_Lang094 =	Bu özellik, Windows Vista veya üstü gerektirir.
@@ -907,6 +907,7 @@
 	d_Lang115 =	- aynı konuma bölgeyi ayarlamak için Alt tutun.
 	d_Lang116 =	Aktarın ve yükleyin
 	d_Lang117 =	sayfa indirmek için git
+	d_Lang118 =	Gönderme. Lütfen bekle...
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Pulôver en Makro Yaratıcı'nın birçok özelliği hakkında bilgi almak için www.macrocreator.com/help~~pobj video öğreticileri göz atın.

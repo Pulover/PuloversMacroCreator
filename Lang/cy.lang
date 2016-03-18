@@ -870,7 +870,7 @@
 	d_Lang088 =	Ceisiwch i redeg defnyddiwr cyffredin (nid gweinyddwr).
 	d_Lang089 =	Dim rhes a ddewiswyd!
 	d_Lang090 =	Os gwelwch yn dda, dewiswch rhes i roi neu gael gwared ar y grŵp.
-	d_Lang091 =	Lawrlwytho ... Os gwelwch yn dda, aros.
+	d_Lang091 =	Llwytho i lawr. Arhoswch os gwelwch yn dda...
 	d_Lang092 =	eiconau bach
 	d_Lang093 =	eiconau mawr
 	d_Lang094 =	Mae'r nodwedd hon yn ei gwneud yn ofynnol Windows Vista neu uwch.
@@ -907,6 +907,7 @@
 	d_Lang115 =	- Cynnal Alt i osod rhanbarth i'r un lleoliad.
 	d_Lang116 =	Trosglwyddo a gosod
 	d_Lang117 =	Ewch i lawrlwytho dudalen
+	d_Lang118 =	Anfon. Arhoswch os gwelwch yn dda...
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Edrychwch ar y tiwtorialau fideo ar www.macrocreator.com/help i ddysgu am nodweddion llawer o Crëwr Macro Pulover yn.

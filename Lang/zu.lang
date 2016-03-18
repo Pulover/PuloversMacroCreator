@@ -870,7 +870,7 @@
 	d_Lang088 =	Zama ukusebenzisa umsebenzisi njengoba kuvamile (hhayi umlawuli).
 	d_Lang089 =	Ayikho irowu ezikhethiwe!
 	d_Lang090 =	Sicela, ukhethe umugqa kokufaka noma ukukhipha i qembu.
-	d_Lang091 =	Ukulanda ... Sicela, ulinde.
+	d_Lang091 =	Ukulanda. Ngicela ulinde...
 	d_Lang092 =	Icons Small
 	d_Lang093 =	Icons Large
 	d_Lang094 =	Lesi sici sidinga i-Windows Vista noma ngaphezulu.
@@ -907,6 +907,7 @@
 	d_Lang115 =	- Hold Alt ukusetha esifundeni kuleyo ndawo.
 	d_Lang116 =	Dlulisa futhi ufake
 	d_Lang117 =	Hamba ukulanda ikhasi
+	d_Lang118 =	Ukuthumela. Ngicela ulinde...
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Hlola tutorials video at www.macrocreator.com/help ukuze ufunde mayelana nezici eziningi uMdali Pulover sika Macro.

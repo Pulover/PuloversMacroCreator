@@ -870,7 +870,7 @@
 	d_Lang088 =	Cobalah untuk menjalankan pengguna yang biasa (tidak administrator).
 	d_Lang089 =	Tidak ada baris yang dipilih!
 	d_Lang090 =	Silakan, pilih baris untuk memasukkan atau mengeluarkan kelompok.
-	d_Lang091 =	Download ... Mohon tunggu.
+	d_Lang091 =	Download. Mohon tunggu...
 	d_Lang092 =	Ikon kecil
 	d_Lang093 =	Ikon besar
 	d_Lang094 =	Fitur ini memerlukan Windows Vista atau yang lebih tinggi.
@@ -907,6 +907,7 @@
 	d_Lang115 =	- Tahan Alt untuk mengatur wilayah ke lokasi yang sama.
 	d_Lang116 =	Mentransfer dan menginstal
 	d_Lang117 =	Pergi ke halaman download
+	d_Lang118 =	Mengirim. Mohon tunggu...
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Check out video tutorial di www.macrocreator.com/help untuk belajar tentang banyak fitur dari Pencipta Makro Pulover ini.

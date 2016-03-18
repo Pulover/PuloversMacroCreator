@@ -870,7 +870,7 @@
 	d_Lang088 =	Poskusite zagnati kot skupni uporabniku (ne administratorja).
 	d_Lang089 =	Ne vrstica izbrana!
 	d_Lang090 =	Prosimo, izberite vrstico za vstavljanje ali odstraniti skupino.
-	d_Lang091 =	Prenašanje ... Prosim, počakajte.
+	d_Lang091 =	Prenos. Prosim počakaj...
 	d_Lang092 =	Majhne ikone
 	d_Lang093 =	Velike ikone
 	d_Lang094 =	Ta funkcija zahteva Windows Vista ali višje.
@@ -907,6 +907,7 @@
 	d_Lang115 =	- Držite Alt nastaviti regijo na isti lokaciji.
 	d_Lang116 =	Prenos in namestitev
 	d_Lang117 =	Pojdite na stran za prenos
+	d_Lang118 =	Pošiljanje. Prosim počakaj...
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Oglejte si video Vadnice na www.macrocreator.com/help~~pobj za spoznavanje mnogih značilnosti makro Stvarnika Pulover je.

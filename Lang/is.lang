@@ -870,7 +870,7 @@
 	d_Lang088 =	Reyndu að keyra eins sameiginlega notandi (ekki stjórnandi).
 	d_Lang089 =	Engin röð valinn!
 	d_Lang090 =	Vinsamlegast velja röð til að setja eða fjarlægja hópinn.
-	d_Lang091 =	Sæki ... Bíðið.
+	d_Lang091 =	Sækir. Vinsamlegast bíðið...
 	d_Lang092 =	Lítil tákn
 	d_Lang093 =	stór tákn
 	d_Lang094 =	Þessi eiginleiki krefst Windows Vista eða hærri.
@@ -907,6 +907,7 @@
 	d_Lang115 =	- Halda Alt að setja svæðið á sama stað.
 	d_Lang116 =	Flytja og setja
 	d_Lang117 =	Fara að sækja síðuna
+	d_Lang118 =	Sending. Vinsamlegast bíðið...
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Skoðaðu vídeó námskeið á www.macrocreator.com/help~~pobj til að læra um marga eiginleika Macro skapara Pulover er.

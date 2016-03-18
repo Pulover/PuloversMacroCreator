@@ -870,7 +870,7 @@
 	d_Lang088 =	Try to run as common user (not administrator).
 	d_Lang089 =	No row selected!
 	d_Lang090 =	Please, select a row to insert or remove the group.
-	d_Lang091 =	Downloading... Please, wait.
+	d_Lang091 =	Downloading. Please wait...
 	d_Lang092 =	Small icons
 	d_Lang093 =	Large icons
 	d_Lang094 =	This feature requires Windows Vista or higher.
@@ -907,6 +907,7 @@
 	d_Lang115 =	- Hold Alt to set region to the same location.
 	d_Lang116 =	Transfer and install
 	d_Lang117 =	Go to download page
+	d_Lang118 =	Sending. Please wait...
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Check out the video tutorials at www.macrocreator.com/help to learn about the many features of Pulover's Macro Creator.

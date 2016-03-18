@@ -870,7 +870,7 @@
 	d_Lang088 =	Probéiert als gemeinsam Benotzer (net Administrateur) ze lafen.
 	d_Lang089 =	Nee hannertenee ausgewielt!
 	d_Lang090 =	Weg, wielt enger Zeil ze setzen oder der Grupp ewechzehuelen.
-	d_Lang091 =	Erofgelueden ... Sot, wait.
+	d_Lang091 =	Erofgelueden. Sot wait ...
 	d_Lang092 =	kleng Ikonen
 	d_Lang093 =	grouss Symboler
 	d_Lang094 =	Dës Fonktioun verlaangt Windows Vista oder méi héich.
@@ -907,6 +907,7 @@
 	d_Lang115 =	- Stoe Alt Regioun zu der selwechter Plaz ze setzen.
 	d_Lang116 =	Transfert an installéiert
 	d_Lang117 =	Go Säit ze download
+	d_Lang118 =	SMS'en. Sot wait ...
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Check den video Léierprogrammer um www.macrocreator.com/help Ensembel de ville Fonctioune vun Pulover d'Macro Schëpfer ze léieren.

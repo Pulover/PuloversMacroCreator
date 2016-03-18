@@ -870,7 +870,7 @@
 	d_Lang088 =	Prøv å kjøre som vanlig bruker (ikke administrator).
 	d_Lang089 =	Ingen rad valgt!
 	d_Lang090 =	Vennligst, velg en rad for å sette inn eller ta gruppen.
-	d_Lang091 =	Nedlasting ... Vennligst vent.
+	d_Lang091 =	Nedlasting. Vennligst vent...
 	d_Lang092 =	Små ikoner
 	d_Lang093 =	Store ikoner
 	d_Lang094 =	Denne funksjonen krever Windows Vista eller høyere.
@@ -907,6 +907,7 @@
 	d_Lang115 =	- Hold Alt for å sette regionen på samme sted.
 	d_Lang116 =	Overføre og installere
 	d_Lang117 =	Gå til nedlastingssiden
+	d_Lang118 =	Sending. Vennligst vent...
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Sjekk ut video tutorials på www.macrocreator.com/help å lære om de mange funksjonene i pulover makro Creator.

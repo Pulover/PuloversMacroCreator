@@ -870,7 +870,7 @@
 	d_Lang088 =	Tente executar como usuário comum (não administrador).
 	d_Lang089 =	Nenhuma linha selecionada!
 	d_Lang090 =	Por favor, selecione uma linha para inserir ou remover o grupo.
-	d_Lang091 =	Baixando ... Por favor, aguarde.
+	d_Lang091 =	Baixando. Por favor, aguarde...
 	d_Lang092 =	Ícones pequenos
 	d_Lang093 =	Ícones grandes
 	d_Lang094 =	Este recurso requer Windows Vista ou superior.
@@ -907,6 +907,7 @@
 	d_Lang115 =	- Segure Alt para ajustar a região para o mesmo local.
 	d_Lang116 =	Transferir e instalar
 	d_Lang117 =	Ir para página de download
+	d_Lang118 =	Enviando. Por favor, aguarde...
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Confira os tutoriais em vídeo no www.macrocreator.com/help para aprender sobre as muitas características do Criador Macro do Pulover.

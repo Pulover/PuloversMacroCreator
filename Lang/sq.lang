@@ -870,7 +870,7 @@
 	d_Lang088 =	Përpiqen për të drejtuar përdoruesit si të përbashkët (jo administrator).
 	d_Lang089 =	Asnjë rresht zgjedhur!
 	d_Lang090 =	Ju lutem, përzgjidhni një rresht për të futur ose hequr grupin.
-	d_Lang091 =	Shkarkim ... Ju lutem prisni.
+	d_Lang091 =	Shkarkimit. Te lutem prit...
 	d_Lang092 =	ikonat e vogla
 	d_Lang093 =	ikonat e mëdha
 	d_Lang094 =	Ky funksion kërkon Windows Vista ose më e lartë.
@@ -907,6 +907,7 @@
 	d_Lang115 =	- Hold Alt për të vendosur rajonin në të njëjtin vend.
 	d_Lang116 =	Transferoni dhe të instaloni
 	d_Lang117 =	Shko te shkarkoni faqe
+	d_Lang118 =	Dërgimi. Te lutem prit...
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Check out video tutorial në www.macrocreator.com/help~~pobj të mësojnë në lidhje me shumë karakteristika të Krijuesit Macro Pulover së.

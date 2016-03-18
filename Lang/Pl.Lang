@@ -870,7 +870,7 @@
 	d_Lang088 =	Spróbuj uruchomić jako wspólny użytkownika (nie administratora).
 	d_Lang089 =	Nie rząd wybrany!
 	d_Lang090 =	Proszę wybrać wiersz, aby wstawić lub usunąć grupę.
-	d_Lang091 =	Pobieranie ... Proszę czekać.
+	d_Lang091 =	Ściąganie. Proszę czekać...
 	d_Lang092 =	Małe ikony
 	d_Lang093 =	Duże ikony
 	d_Lang094 =	Ta funkcja wymaga systemu Windows Vista lub nowszego.
@@ -907,6 +907,7 @@
 	d_Lang115 =	- Trzymając Alt ustawienie obszaru do tej samej lokalizacji.
 	d_Lang116 =	Przelew i zainstalować
 	d_Lang117 =	Przejdź do strony pobierania
+	d_Lang118 =	Wysyłanie. Proszę czekać...
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Sprawdź samouczki wideo na www.macrocreator.com/help~~pobj aby dowiedzieć się o wielu funkcji Macro Stwórcy Pulover użytkownika.

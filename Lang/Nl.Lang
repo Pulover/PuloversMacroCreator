@@ -870,7 +870,7 @@
 	d_Lang088 =	Probeer zo gewone gebruiker (geen beheerder) draaien.
 	d_Lang089 =	Geen rij geselecteerd!
 	d_Lang090 =	Alstublieft, selecteer een rij te plaatsen of te verwijderen van de groep.
-	d_Lang091 =	Downloaden ... Even wachten aub.
+	d_Lang091 =	Het downloaden. Even geduld aub...
 	d_Lang092 =	Kleine pictogrammen
 	d_Lang093 =	Grote pictogrammen
 	d_Lang094 =	Deze functie vereist Windows Vista of hoger.
@@ -907,6 +907,7 @@
 	d_Lang115 =	- Houd Alt tot regio ingesteld op dezelfde locatie.
 	d_Lang116 =	Transfer en installeer
 	d_Lang117 =	Ga naar pagina te downloaden
+	d_Lang118 =	Het verzenden. Even geduld aub...
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Bekijk de video tutorials op www.macrocreator.com/help om te leren over de vele functies van Macro Schepper Pulover's.

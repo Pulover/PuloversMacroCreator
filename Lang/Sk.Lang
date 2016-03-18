@@ -870,7 +870,7 @@
 	d_Lang088 =	Skúste spustiť ako bežných užívateľov (nie správca).
 	d_Lang089 =	Nie riadok vybraný!
 	d_Lang090 =	Prosím, vyberte riadok pre vloženie alebo odstránenie skupiny.
-	d_Lang091 =	Sťahovanie ... Prosím, počkajte.
+	d_Lang091 =	Sťahovanie. Prosím čakajte...
 	d_Lang092 =	Malé ikony
 	d_Lang093 =	Veľké ikony
 	d_Lang094 =	Táto funkcia vyžaduje systém Windows Vista alebo vyšší.
@@ -907,6 +907,7 @@
 	d_Lang115 =	- Podržte Alt nastaviť región na rovnakom mieste.
 	d_Lang116 =	Prenášať a inštalovať
 	d_Lang117 =	Prejdite na stránku na stiahnutie
+	d_Lang118 =	Odoslanie. Prosím čakajte...
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Pozrite sa na video tutoriály na www.macrocreator.com/help~~pobj dozvedieť sa o mnohých funkcií makro Stvoriteľa Pulóver je.

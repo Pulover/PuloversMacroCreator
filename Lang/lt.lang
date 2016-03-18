@@ -870,7 +870,7 @@
 	d_Lang088 =	Pabandykite paleisti kaip bendrą vartotoją (ne administratorius).
 	d_Lang089 =	Nėra eilutė pasirinktas!
 	d_Lang090 =	Prašome, pasirinkite eilutę įterpti arba pašalinti grupę.
-	d_Lang091 =	Atsisiuntimas ... Prašome palaukti.
+	d_Lang091 =	Atsisiuntimas. Prašau palauk...
 	d_Lang092 =	Mažos piktogramos
 	d_Lang093 =	didelės piktogramos
 	d_Lang094 =	Ši funkcija reikalauja "Windows Vista" arba naujesnė.
@@ -907,6 +907,7 @@
 	d_Lang115 =	- Laikykite Alt nustatyti regioną į tą pačią vietą.
 	d_Lang116 =	Perkelti ir įdiegti
 	d_Lang117 =	Eiti į atsisiuntimo puslapį
+	d_Lang118 =	Siuntimo. Prašau palauk...
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Check out vaizdo samouczków ne www.macrocreator.com/help~~pobj sužinoti apie daug funkcijų Pulover makropotvarkių Kūrėją.

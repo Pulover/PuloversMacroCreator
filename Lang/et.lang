@@ -870,7 +870,7 @@
 	d_Lang088 =	Proovige joosta nii tavakasutajate (mitte administraator).
 	d_Lang089 =	No järjest valitud!
 	d_Lang090 =	Palun valige järjest sisestada või eemaldada rühma.
-	d_Lang091 =	Allalaadimine ... Palun oodake.
+	d_Lang091 =	Allalaadimine. Palun oota...
 	d_Lang092 =	väikesed ikoonid
 	d_Lang093 =	suur ikoonid
 	d_Lang094 =	See funktsioon nõuab Windows Vista või kõrgem.
@@ -907,6 +907,7 @@
 	d_Lang115 =	- Hoidke Alt seada piirkonna samas kohas.
 	d_Lang116 =	Transfer ja installida
 	d_Lang117 =	Mine alla laadida leheküljel
+	d_Lang118 =	Saatmine. Palun oota...
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Vaata videot õpetused on www.macrocreator.com/help õppida palju funktsioone pulover on Macro looja.

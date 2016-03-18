@@ -870,7 +870,7 @@
 	d_Lang088 =	Prøv at køre som almindelig bruger (ikke administrator).
 	d_Lang089 =	Ingen rækken valgt!
 	d_Lang090 =	Please, skal du vælge en række for at indsætte eller fjerne gruppen.
-	d_Lang091 =	Downloading ... venligst, vent.
+	d_Lang091 =	Downloading. Vent venligst...
 	d_Lang092 =	Små ikoner
 	d_Lang093 =	Store ikoner
 	d_Lang094 =	Denne funktion kræver Windows Vista eller højere.
@@ -907,6 +907,7 @@
 	d_Lang115 =	- Hold Alt for at indstille region til samme sted.
 	d_Lang116 =	Overfør og installer
 	d_Lang117 =	Gå til download side
+	d_Lang118 =	Sender. Vent venligst...
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Tjek de video tutorials på www.macrocreator.com/help for at lære om de mange funktioner i Pulover s Macro Skaber.

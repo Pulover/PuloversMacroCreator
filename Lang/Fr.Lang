@@ -870,7 +870,7 @@
 	d_Lang088 =	Essayez de courir utilisateur comme commun (non administrateur).
 	d_Lang089 =	Aucune ligne sélectionnée!
 	d_Lang090 =	S'il vous plaît, sélectionner une ligne pour insérer ou retirer le groupe.
-	d_Lang091 =	Téléchargement ... S'il vous plaît, attendez.
+	d_Lang091 =	Téléchargement en cours. S'il vous plaît, attendez...
 	d_Lang092 =	Petites icônes
 	d_Lang093 =	Grandes icônes
 	d_Lang094 =	Cette fonction nécessite Windows Vista ou supérieur.
@@ -907,6 +907,7 @@
 	d_Lang115 =	- Maintenez la touche Alt pour mettre la région au même endroit.
 	d_Lang116 =	Transfert et installation
 	d_Lang117 =	Aller à la page de téléchargement
+	d_Lang118 =	Envoi. S'il vous plaît, attendez...
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Consultez les didacticiels vidéo à www.macrocreator.com/help pour en apprendre davantage sur les nombreuses fonctionnalités de Creator Macro Pulover.

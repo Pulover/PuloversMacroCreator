@@ -870,7 +870,7 @@
 	d_Lang088 =	Versuchen Sie, so gemeinsame Benutzeroberfläche (nicht Administrator) ausgeführt werden.
 	d_Lang089 =	Keine Zeile ausgewählt!
 	d_Lang090 =	Bitte wählen Sie eine Zeile einfügen oder entfernen Sie die Gruppe.
-	d_Lang091 =	Das Herunterladen ... Bitte warten.
+	d_Lang091 =	Das Herunterladen. Warten Sie mal...
 	d_Lang092 =	Kleine Symbole
 	d_Lang093 =	Große Icons
 	d_Lang094 =	Dieses Feature erfordert Windows Vista oder höher.
@@ -907,6 +907,7 @@
 	d_Lang115 =	- Halten Sie Alt-Region an die gleiche Stelle zu setzen.
 	d_Lang116 =	Übertragen und installieren
 	d_Lang117 =	Gehe zu Seite zum Download
+	d_Lang118 =	Senden. Warten Sie mal...
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Schauen Sie sich die Video-Tutorials auf www.macrocreator.com/help sich über die vielen Funktionen von Pulover Makro Schöpfer zu lernen.

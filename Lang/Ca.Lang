@@ -870,7 +870,7 @@
 	d_Lang088 =	Intenteu executar l'usuari tan comú (no administrador).
 	d_Lang089 =	No fila seleccionada!
 	d_Lang090 =	Seleccioneu una fila per inserir o extreure el grup.
-	d_Lang091 =	Baixant ... Espereu.
+	d_Lang091 =	La descàrrega. Si us plau ...
 	d_Lang092 =	Icones petits
 	d_Lang093 =	Icones grans
 	d_Lang094 =	Aquesta característica requereix Windows Vista o superior.
@@ -907,6 +907,7 @@
 	d_Lang115 =	- Mantingui Alt regió per establir en la mateixa ubicació.
 	d_Lang116 =	Transferir i instal·lar
 	d_Lang117 =	Anar a la pàgina de descàrrega
+	d_Lang118 =	L'enviament. Si us plau ...
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Fes una ullada als tutorials en vídeo a www.macrocreator.com/help per aprendre sobre les moltes característiques del creador de l'Macro pullòver.

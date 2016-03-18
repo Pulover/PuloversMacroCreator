@@ -870,7 +870,7 @@
 	d_Lang088 =	Yritä juosta yhteisinä käyttäjä (ei pääkäyttäjä).
 	d_Lang089 =	Ei rivi valittu!
 	d_Lang090 =	Ole hyvä, valitse rivi lisätä tai poistaa ryhmän.
-	d_Lang091 =	Lataaminen ... Ole hyvä, odota.
+	d_Lang091 =	Lataaminen. Odota...
 	d_Lang092 =	Pienet kuvakkeet
 	d_Lang093 =	Suuret kuvakkeet
 	d_Lang094 =	Tämä ominaisuus vaatii Windows Vistan tai uudemman.
@@ -907,6 +907,7 @@
 	d_Lang115 =	- Pidä Alt asettaa alueelle samaan paikkaan.
 	d_Lang116 =	Siirto ja asennus
 	d_Lang117 =	Mene ladata sivulle
+	d_Lang118 =	Lähettäminen. Odota...
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Katso video tutorials klo www.macrocreator.com/help oppia monia piirteitä Pulover Macro Creator.

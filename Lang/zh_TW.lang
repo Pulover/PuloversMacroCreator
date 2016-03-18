@@ -870,7 +870,7 @@
 	d_Lang088 =	嘗試運行作為普通用戶（非管理員）。
 	d_Lang089 =	沒有行選擇！
 	d_Lang090 =	請選擇一個行插入或刪除組。
-	d_Lang091 =	下載......請稍等。
+	d_Lang091 =	下載。 請稍候...
 	d_Lang092 =	小圖標
 	d_Lang093 =	大圖標
 	d_Lang094 =	此功能需要Windows Vista或更高。
@@ -907,6 +907,7 @@
 	d_Lang115 =	- 持有Alt可設定區域相同的位置。
 	d_Lang116 =	傳輸和安裝
 	d_Lang117 =	進入下載頁面
+	d_Lang118 =	發送。 請稍候...
 		
 ; 18. Start-up Tips		
 	Start_Tips =	退房的視頻教程在www.macrocreator.com/help了解Pulover宏觀造物主的許多功能。
