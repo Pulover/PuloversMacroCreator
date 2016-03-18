@@ -783,7 +783,7 @@
 	d_Lang014 =	Script zithunyelwa
 	d_Lang015 =	Ifayela athunyelwa ngempumelelo!
 	d_Lang016 =	Chofoza 'Thola' ukumaka isikhundla.
-	d_Lang017 	- Khetha iwindi.
+	d_Lang017 =	- Khetha iwindi.
 		- Khomba isikhundla oyifunayo.
 		- Cindezela inkinobho kwesokudla.
 	d_Lang018 =	Pixel Color
@@ -830,7 +830,7 @@
 	d_Lang055 =	Sicela ukhethe i ifayela AutoHotkey script (.ahk) kanye ufake igama Umsebenzi.
 	d_Lang056 =	Lesi sici sidinga AutoHotkey efakwe.
 		Chofoza OK ukuya ukulanda ikhasi.
-	d_Lang057 	- Cindezela Ctrl imicibisholo ukuhambisa endaweni ekhethiwe.
+	d_Lang057 =	- Cindezela Ctrl imicibisholo ukuhambisa endaweni ekhethiwe.
 		- Cindezela u-Shift + imicibisholo usikhulise endaweni ekhethiwe.
 		- Cindezela u-Enter ukuze uqedele.
 	d_Lang058 =	Ezinye izici zidinga admnistrator privilages ukuze usebenze kahle.
@@ -875,13 +875,13 @@
 	d_Lang093 =	Icons Large
 	d_Lang094 =	Lesi sici sidinga i-Windows Vista noma ngaphezulu.
 	d_Lang095 =	Ukusetshenziswa ByRef kubangela ipharamitha yinto alias for okuguquguqukayo ophasiswe koshayayo. Ngamanye amazwi, ipharamitha futhi variable ucingo luka zombili zibhekisela okuqukethwe efanayo kumemori.
-	d_Lang096 	- MUSA buyela eziguquguqukayo angu SIGNS LAPHA.
+	d_Lang096 =	- MUSA buyela eziguquguqukayo angu SIGNS LAPHA.
 		- Return Inani ziwukubonakaliswa.
 		- Ungase usebenzise strings, eziguquguqukayo, ukurhemisa kanye nemisebenzi. Ungase futhi sihlanganise yalezo zimfanelo.
 		- Ukusebenzisa strings, buyela nabo izingcaphuno, isb .: "Umphumela uwukuthi:" a b +.
 		- Uma ufuna ukubuyela imiphumela extra, ungase futhi usebenzise ByRef e nemingcele.
 		- Afanayo ingasetshenziswa ukubuyela amagugu amaningi noma amagugu babeze bazethe igama elithi.
-	d_Lang097 	- MUSA buyela eziguquguqukayo angu SIGNS LAPHA.
+	d_Lang097 =	- MUSA buyela eziguquguqukayo angu SIGNS LAPHA.
 		- Iningi AHK izinkulumo asekelwa.
 		- Ungase usebenzise strings, eziguquguqukayo, ukurhemisa kanye nemisebenzi.
 		- Ukusebenzisa strings, buyela nabo izingcaphuno, isb .: var  "a".
@@ -904,7 +904,7 @@
 	d_Lang112 =	I-akhawunti imeyili ayitholakalanga.
 	d_Lang113 =	Alikho iphutha kusho umbiko.
 	d_Lang114 =	Izikriphthi zase elithekelisiwe (ngisho uma eyahlanganiswa) umsebenzi yokuthumela imeyili (CDO) kuyodingeka informations ebonakalayo yama-akhawunti ye-imeyli esetshenziswa, kuhlanganise Iphasiwedi. Le PMC lephrojekthi akanawo lolu lwazi.
-	d_Lang115 	- Hold Alt ukusetha esifundeni kuleyo ndawo.
+	d_Lang115 =	- Hold Alt ukusetha esifundeni kuleyo ndawo.
 	d_Lang116 =	Dlulisa futhi ufake
 	d_Lang117 =	Hamba ukulanda ikhasi
 		

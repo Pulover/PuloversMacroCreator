@@ -783,7 +783,7 @@
 	d_Lang014 =	Okushicilelweyo kumazwe
 	d_Lang015 =	Ifayile ngaphandle ngempumelelo!
 	d_Lang016 =	Nqakraza 'Fumana' ukuphawula isikhundla.
-	d_Lang017 	- Khetha i window.
+	d_Lang017 =	- Khetha i window.
 		- Point ukuya kwisikhundla ezinqwenelekayo.
 		- Cinezela iqhosha Ekunene.
 	d_Lang018 =	pixel Umbala
@@ -830,7 +830,7 @@
 	d_Lang055 =	Nceda khetha ifayile AutoHotkey isikripthi (.ahk) kwaye ngenisa Igama Function.
 	d_Lang056 =	Lo msebenzi osemqoka kufuna AutoHotkey efakiweyo.
 		Nqakraza KULUNGILE ukuya ukukhuphela page.
-	d_Lang057 	- Cinezela Ctrl + Arrow yezitshixo ukuhamba ariya ekhethiweyo.
+	d_Lang057 =	- Cinezela Ctrl + Arrow yezitshixo ukuhamba ariya ekhethiweyo.
 		- Cinezela Shift + utolo Izitsixo Konsole ariya ekhethiweyo.
 		- Cinezela Faka ukugqiba.
 	d_Lang058 =	Ezinye iinkalo zifuna admnistrator privilages ukuze isebenze kakuhle.
@@ -875,13 +875,13 @@
 	d_Lang093 =	icons ezinkulu
 	d_Lang094 =	Lo msebenzi osemqoka ifuna Vista okanye ngaphezulu Windows.
 	d_Lang095 =	Ukusetyenziswa ByRef ebangela parameter ukuba abe Elny.igma elitshintshayo lwamkelwa ukusuka fown. Ngamanye amazwi, le parameter kunye fown yakhe Womendo bobabini jonga imixholo efanayo kwinkumbulo.
-	d_Lang096 	- MUSA kugqunywe Ifaka ngemiqondiso PESENTI APHA.
+	d_Lang096 =	- MUSA kugqunywe Ifaka ngemiqondiso PESENTI APHA.
 		- Ixabiso Return kufuneka ibonise.
 		- Ungasebenzisa imitya, izinto ezitshintshayo, kwimiboniso kunye nemisebenzi. Nawe ukudibanisa nayiphi na kwezo.
 		- Ukusebenzisa imitya, Somrhaqa kubo kuchaphulo, umzk .: "isiphumo:" a + b.
 		- Ukuba ufuna ukubuyela iziphumo ezingaphezulu, usenokusebenzisa ByRef kwi parameters.
 		- Kwimiboniso zingasetyenziswa Ukuba babuyele amaxabiso ezininzi okanye amaxabiso nokuba igama.
-	d_Lang097 	- MUSA kugqunywe Ifaka ngemiqondiso PESENTI APHA.
+	d_Lang097 =	- MUSA kugqunywe Ifaka ngemiqondiso PESENTI APHA.
 		- Uninzi amabinzana AHK ziyaxhaswa.
 		- Ungasebenzisa imitya, izinto ezitshintshayo, kwimiboniso kunye nemisebenzi.
 		- Ukusebenzisa imitya, Somrhaqa kubo kuchaphulo, umzk .: var = "a".
@@ -904,7 +904,7 @@
 	d_Lang112 =	Akhawunti Email ayifumaneki.
 	d_Lang113 =	Akukho imposiso ingxelo.
 	d_Lang114 =	Ashicilelwe kumazwe angaphandle (nokuba kuqulunqwe) kunye umsebenzi uthumele email (CDO) kuya kufuneka Inkcukacha ezibonakalayo akhawunti imeyile esetyenziswa, kuquka igama. Ifayile yeprojekthi NGEZIKHOKELO akanayo olu lwazi.
-	d_Lang115 	- Bamba Alt ukuseta ummandla kwindawo enye.
+	d_Lang115 =	- Bamba Alt ukuseta ummandla kwindawo enye.
 	d_Lang116 =	YokuGqithisela nokufakela
 	d_Lang117 =	Yiya ukukhuphela page
 		

@@ -783,7 +783,7 @@
 	d_Lang014 =	Script Exported
 	d_Lang015 =	Fail eksporditi edukalt!
 	d_Lang016 =	Vajuta "Saada", et tähistada positsiooni.
-	d_Lang017 	- Valige aknas.
+	d_Lang017 =	- Valige aknas.
 		- Point soovitud asendisse.
 		- Nuppu Paremale.
 	d_Lang018 =	Pixel Color
@@ -830,7 +830,7 @@
 	d_Lang055 =	Palun valige AutoHotkey skripti faili (.ahk) ja sisestada funktsiooni nime.
 	d_Lang056 =	See funktsioon nõuab AutoHotkey paigaldatud.
 		Vajuta OK, et minna alla laadida leheküljel.
-	d_Lang057 	- Press Ctrl + nooleklahve valitud piirkonnas.
+	d_Lang057 =	- Press Ctrl + nooleklahve valitud piirkonnas.
 		- Press Shift + nooleklahvid suurust valitud piirkonnas.
 		- Press Sisesta lõpetada.
 	d_Lang058 =	Mõned funktsioonid nõuavad admnistrator privilages et toimida.
@@ -875,13 +875,13 @@
 	d_Lang093 =	suur ikoonid
 	d_Lang094 =	See funktsioon nõuab Windows Vista või kõrgem.
 	d_Lang095 =	Kasutamine ByRef põhjustab parameeter saada alias muutuja möödunud aastal alates helistaja. Teisisõnu, kui parameeter ning helistaja muutuja mõlemad seonduvad sama sisuga mällu.
-	d_Lang096 	- ÄRGE pange MUUTUJATE protsentides Märgid SIIN.
+	d_Lang096 =	- ÄRGE pange MUUTUJATE protsentides Märgid SIIN.
 		- Return väärtus olema väljendus.
 		- Te võite kasutada stringe, muutujad, massiivid ja funktsioone. Võite kombineerida ühegi nimetatud.
 		- Kasutamiseks stringid, pange need tsitaadid, näiteks .: "Tulemus on:" a + b.
 		- Kui soovite naasta ekstra tulemusi, siis võib kasutada ka ByRef in parameetrid.
 		- Massiivid saab kasutada tagastada mitu väärtused või isegi nimega väärtused.
-	d_Lang097 	- ÄRGE pange MUUTUJATE protsentides Märgid SIIN.
+	d_Lang097 =	- ÄRGE pange MUUTUJATE protsentides Märgid SIIN.
 		- Enamik AHK väljendeid on toetatud.
 		- Te võite kasutada stringe, muutujad, massiivid ja funktsioone.
 		- Kasutamiseks stringid, pange need tsitaadid, näiteks .: var = "a".
@@ -904,7 +904,7 @@
 	d_Lang112 =	E-posti konto ei leitud.
 	d_Lang113 =	Ei ole viga teatatud.
 	d_Lang114 =	Skriptid eksporditakse (isegi kui kompileeritud) koos send email funktsioon (CDO) on nähtav info e-posti kontode kasutamist, sealhulgas parool. PMC projekti toimik ei pea seda teavet.
-	d_Lang115 	- Hoidke Alt seada piirkonna samas kohas.
+	d_Lang115 =	- Hoidke Alt seada piirkonna samas kohas.
 	d_Lang116 =	Transfer ja installida
 	d_Lang117 =	Mine alla laadida leheküljel
 		

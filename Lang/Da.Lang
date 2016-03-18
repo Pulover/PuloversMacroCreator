@@ -783,7 +783,7 @@
 	d_Lang014 =	Script Eksporterede
 	d_Lang015 =	Filen blev succesfuldt eksporteret!
 	d_Lang016 =	Klik på 'Hent' for at markere positionen.
-	d_Lang017 	- Vælg vinduet.
+	d_Lang017 =	- Vælg vinduet.
 		- Peg på den ønskede position.
 		- Tryk den højre knap.
 	d_Lang018 =	Pixelfarve
@@ -830,7 +830,7 @@
 	d_Lang055 =	Vælg en AutoHotkey script-fil (. AHK) og en indtaste en funktion navn.
 	d_Lang056 =	Denne funktion kræver AutoHotkey installeret.
 		Klik på OK for at gå til download siden.
-	d_Lang057 	- Tryk Ctrl+piletasterne til at flytte valgte område.
+	d_Lang057 =	- Tryk Ctrl+piletasterne til at flytte valgte område.
 		- Tryk på Skift+piletasterne for at ændre størrelsen valgte område.
 		- Tryk på Enter for at afslutte.
 	d_Lang058 =	Nogle funktioner kræver admnistrator privilages for at fungere ordentligt.
@@ -875,13 +875,13 @@
 	d_Lang093 =	Store ikoner
 	d_Lang094 =	Denne funktion kræver Windows Vista eller højere.
 	d_Lang095 =	Brugen af ByRef forårsager en parameter til at blive et alias for variablen gået ind fra den, der ringer. Med andre ord, den parameter og opkalderens variable henviser begge til det samme indhold i hukommelsen.
-	d_Lang096 	- IKKE VEDLÆG VARIABLER I PROCENTTEGN HER.
+	d_Lang096 =	- IKKE VEDLÆG VARIABLER I PROCENTTEGN HER.
 		- Retur værdi skal være et udtryk.
 		- Du må bruge strygere, variabler, arrays og funktioner. Du kan også kombinere nogen af dem.
 		- For at bruge strenge, vedlægge dem i anførselstegn, f.eks: "Resultat er:" a+b.
 		- Hvis du ønsker at returnere ekstra resultater, kan du også bruge ByRef i parametre.
 		- Arrays kan bruges til at returnere flere værdier eller endda navngivne værdier.
-	d_Lang097 	- IKKE VEDLÆG VARIABLER I PROCENTTEGN HER.
+	d_Lang097 =	- IKKE VEDLÆG VARIABLER I PROCENTTEGN HER.
 		- De fleste af AHK udtryk understøttes.
 		- Du må bruge strygere, variabler, arrays og funktioner.
 		- For at bruge strenge, vedlægge dem i anførselstegn, f.eks: var = "a".
@@ -904,7 +904,7 @@
 	d_Lang112 =	E-mail-konto ikke fundet.
 	d_Lang113 =	Ingen fejl rapporteret.
 	d_Lang114 =	Scripts eksporteres (selvom kompileret) med Send e-mail-funktionen (CDO) vil have synlige informationer af e-mail konti, herunder adgangskoden. Projektet fil PMC har ikke disse oplysninger.
-	d_Lang115 	- Hold Alt for at indstille region til samme sted.
+	d_Lang115 =	- Hold Alt for at indstille region til samme sted.
 	d_Lang116 =	Overfør og installer
 	d_Lang117 =	Gå til download side
 		

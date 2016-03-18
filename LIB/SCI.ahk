@@ -41,12 +41,10 @@ class scintilla {
     updated         := false    ; SCN_UPDATEUI
 
     __new(hwnd){
-        ; if (params.Length())
+        ; if (params.MaxIndex())
             __SCI(this.hwnd := hwnd, this)
         ; else
             ; return this
-        ; if !init        ;  WM_NOTIFY = 0x4E
-			; old:=OnMessage(0x4E,"__sciNotify"),init:=true
         __sendEditor(this.hwnd)               ; initialize sendEditor function
     }
 

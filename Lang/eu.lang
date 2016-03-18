@@ -783,7 +783,7 @@
 	d_Lang014 =	Script esportatu
 	d_Lang015 =	Fitxategia arrakastaz esportatu da!
 	d_Lang016 =	Klikatu 'Lortu' posizioa markatzeko.
-	d_Lang017 	- Aukeratu leihoan.
+	d_Lang017 =	- Aukeratu leihoan.
 		- Nahi den posizioan Point.
 		- Eskuineko botoia sakatu.
 	d_Lang018 =	Pixel Color
@@ -830,7 +830,7 @@
 	d_Lang055 =	Mesedez hautatu AutoHotkey script fitxategia (.ahk) eta bat sartu funtzio-izen bat.
 	d_Lang056 =	Ezaugarri honek AutoHotkey instalatu egin behar da.
 		Egin klik Ados orria deskargatzeko joan.
-	d_Lang057 	- Prentsa Ctrl + Arrow gakoak hautatutako area mugitzeko.
+	d_Lang057 =	- Prentsa Ctrl + Arrow gakoak hautatutako area mugitzeko.
 		- Sakatu Shift + Arrow gakoak hautatutako area tamaina aldatzeko.
 		- Sakatu Sartu amaitzeko.
 	d_Lang058 =	Ezaugarri batzuk privilages admnistrator eskatzen funtzionatu ahal izateko ere.
@@ -875,13 +875,13 @@
 	d_Lang093 =	ikono handiak
 	d_Lang094 =	Ezaugarri honek Windows Vista edo handiagoa da.
 	d_Lang095 =	ByRef erabilera parametro bat eragiten gainditu deitzailearen aldagaia ezizen bat bihurtu da. Beste era batera esanda, parametro eta deitzailearen aldagai biak edukiak bera aipatzeko oroimenez.
-	d_Lang096 	- EZ Behean daukazue VARIABLES ehuneko seinaleak hemen.
+	d_Lang096 =	- EZ Behean daukazue VARIABLES ehuneko seinaleak hemen.
 		- Return balio adierazpen bat izan behar du.
 		- Kateak, aldagaiak, array-ak eta funtzioak erabili ahal izango duzu. ere konbinatu ahal izango duzu, horietako edozein.
 		- Kateak erabiltzeko, erantsi horiek komatxo artean, adib .: "Emaitza da:" + b a.
 		- Emaitzak estra itzuli nahi baduzu, ere erabili ahal izango duzu ByRef parametroetan.
 		- Array erabil daiteke hainbat balio edo balio are izeneko itzultzeko.
-	d_Lang097 	- EZ Behean daukazue VARIABLES ehuneko seinaleak hemen.
+	d_Lang097 =	- EZ Behean daukazue VARIABLES ehuneko seinaleak hemen.
 		- AHK esamoldeak gehienak onartzen dira.
 		- Kateak, aldagaiak, array-ak eta funtzioak erabili ahal izango duzu.
 		- Kateak erabiltzeko, erantsi horiek komatxo artean, adib .: var = "a".
@@ -904,7 +904,7 @@
 	d_Lang112 =	Email kontua ez da aurkitu.
 	d_Lang113 =	No error du.
 	d_Lang114 =	Esportatutako (konpilatu bada ere) egindako bidali email funtzioa (JD) Scripts batera email kontuak informations ikusgai erabili, pasahitza barne izango dute. The PMC proiektuaren fitxategiak ez du informazio hori.
-	d_Lang115 	- Hold Alt eskualdean ezarri Kokapen berean.
+	d_Lang115 =	- Hold Alt eskualdean ezarri Kokapen berean.
 	d_Lang116 =	Transferentzia eta instalatu
 	d_Lang117 =	Joan orria deskargatu
 		

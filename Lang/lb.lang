@@ -783,7 +783,7 @@
 	d_Lang014 =	Script exportéiert
 	d_Lang015 =	De Fichier gouf erfollegräich exportéiert!
 	d_Lang016 =	Klickt 'Running' Positioun ze markéieren.
-	d_Lang017 	- D'Fënster Select.
+	d_Lang017 =	- D'Fënster Select.
 		- Point zu gewënschte Positioun.
 		Press d'Recht Button -.
 	d_Lang018 =	Pixel Faarf
@@ -830,7 +830,7 @@
 	d_Lang055 =	Wielt weg eng AutoHotkey Script Datei (.ahk) an engem enger Funktioun Numm gitt.
 	d_Lang056 =	Dës Fonktioun verlaangt AutoHotkey installéiert.
 		Klickt OK goen Säit erofzelueden.
-	d_Lang057 	- Press Ctrl + Vietnam Schlësselen ausgewielt Géigend plënneren.
+	d_Lang057 =	- Press Ctrl + Vietnam Schlësselen ausgewielt Géigend plënneren.
 		- Press Nuetsschicht + Vietnam Schlësselen ausgewielt Géigend resize.
 		- Press Gitt gelaf.
 	d_Lang058 =	Verschidde Funktiounen verlaangen admnistrator privilages fir anstänneg ze funktionéieren.
@@ -875,13 +875,13 @@
 	d_Lang093 =	grouss Symboler
 	d_Lang094 =	Dës Fonktioun verlaangt Windows Vista oder méi héich.
 	d_Lang095 =	D'Benotzung vun ByRef bewierkt spigelt en Alias ​​fir d'Variabel aus dem Ament gestëmmt ze ginn. An anere Wierder, de Parameter an der Variabel d'Ament kuckt souwuel un d'selwecht Inhalter an Erënnerung.
-	d_Lang096 	- NET auszegin Verännerlechen prozent Unzeeche HEI.
+	d_Lang096 =	- NET auszegin Verännerlechen prozent Unzeeche HEI.
 		- Zeréck Wäert muss Ausdrock gin.
 		- Dir kënnt Sieg, Verännerlechen, flamenden Ofgrond a Funktioun benotzen. Dir kënnt och eng vun deene kombinéieren.
 		- Sieg ze benotzen, auszegin hinnen an Zitater, e.g .: "Resultat ass:" e + b.
 		- Wann dir extra Resultater heemzekommen wëllt, dir och zu Parameter benotzt ByRef kann.
 		- Flamenden Ofgrond kann multiple Wäerter zeréckzeschecken oder souguer genannt Wäerter benotzt ginn.
-	d_Lang097 	- NET auszegin Verännerlechen prozent Unzeeche HEI.
+	d_Lang097 =	- NET auszegin Verännerlechen prozent Unzeeche HEI.
 		- Déi meescht vun AHK Ausdrock ginn ënnerstëtzt.
 		- Dir kënnt Sieg, Verännerlechen, flamenden Ofgrond a Funktioun benotzen.
 		- Sieg ze benotzen, auszegin hinnen an Zitater, e.g .: VAR = "e".
@@ -904,7 +904,7 @@
 	d_Lang112 =	Email Kont net fonnt.
 	d_Lang113 =	Nee Feeler gemellt.
 	d_Lang114 =	Scripten exportéiert mat der Mail schéckt Funktioun (och wann iwwerlieft) (CDO) gëtt siichtbar Bankdonnéeë vun Mail Konte benotzt hunn, dorënner de Passwuert. D'PMC Projet Fichier net dës Informatiounen.
-	d_Lang115 	- Stoe Alt Regioun zu der selwechter Plaz ze setzen.
+	d_Lang115 =	- Stoe Alt Regioun zu der selwechter Plaz ze setzen.
 	d_Lang116 =	Transfert an installéiert
 	d_Lang117 =	Go Säit ze download
 		

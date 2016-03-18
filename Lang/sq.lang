@@ -783,7 +783,7 @@
 	d_Lang014 =	Script eksportuara
 	d_Lang015 =	Dosja u eksportuar me sukses!
 	d_Lang016 =	Kliko "Get 'për të shënuar pozicionin.
-	d_Lang017 	- Zgjidhni dritaren.
+	d_Lang017 =	- Zgjidhni dritaren.
 		- Pika në pozicionin e dëshiruar.
 		- Shtypni butonin drejta.
 	d_Lang018 =	pixel Color
@@ -830,7 +830,7 @@
 	d_Lang055 =	Ju lutem, përzgjidhni një skedar AutoHotkey script (.ahk) dhe të hyjë në një Funksioni Emri.
 	d_Lang056 =	Ky funksion kërkon AutoHotkey instaluar.
 		Kliko OK për të shkuar për të shkarkuar faqe.
-	d_Lang057 	- Press Ctrl + Arrow çelësat për të lëvizur zonën e zgjedhur.
+	d_Lang057 =	- Press Ctrl + Arrow çelësat për të lëvizur zonën e zgjedhur.
 		- Shtypni Shift + Arrow çelësat për të resize zonën e zgjedhur.
 		- Shtypni Enter për të përfunduar.
 	d_Lang058 =	Disa karakteristika të kërkojë admnistrator privilages në mënyrë që të funksionojë si duhet.
@@ -875,13 +875,13 @@
 	d_Lang093 =	ikonat e mëdha
 	d_Lang094 =	Ky funksion kërkon Windows Vista ose më e lartë.
 	d_Lang095 =	Përdorimi i ByRef shkakton një parametër për t'u bërë një alias për variablin kaluar nga e thirrësit. Me fjalë të tjera, parametri dhe variabli i telefonuesit të dy i referohen të njëjtave përmbajtjes në kujtesë.
-	d_Lang096 	- MOS bashkangjitni variablave në SHENJAT qind KETU.
+	d_Lang096 =	- MOS bashkangjitni variablave në SHENJAT qind KETU.
 		- Vlera Kthimi duhet të jetë një shprehje.
 		- Ju mund të përdorni vargjet, variablat, vargjeve dhe funksionet. Ju gjithashtu mund të kombinohen ndonjë nga ata.
 		- Për të përdorur vargjet, mbyllni ato në thonjëza, e.g .: "Rezultati është:" a + b.
 		- Nëse ju doni të kthehen rezultatet shtesë, ju mund të përdorë gjithashtu edhe ByRef në parametrat.
 		- Vargjeve mund të përdoret për të kthyer vlerat e shumëfishta ose vlerat quajtur edhe.
-	d_Lang097 	- MOS bashkangjitni variablave në SHENJAT qind KETU.
+	d_Lang097 =	- MOS bashkangjitni variablave në SHENJAT qind KETU.
 		- Shumica e shprehjeve AHK janë të mbështetur.
 		- Ju mund të përdorni vargjet, variablat, vargjeve dhe funksionet.
 		- Për të përdorur vargjet, mbyllni ato në thonjëza, e.g .: var = "a".
@@ -904,7 +904,7 @@
 	d_Lang112 =	Llogaria Email nuk u gjet.
 	d_Lang113 =	Raportuar asnjë gabim.
 	d_Lang114 =	Scripts eksportuara (edhe në qoftë se hartuar) me funksionin Send Email (KVV) do të ketë informacione të dukshme të llogarive email përdoren, duke përfshirë edhe fjalëkalimin. Dosja Projekti PMC nuk e ka këtë informacion.
-	d_Lang115 	- Hold Alt për të vendosur rajonin në të njëjtin vend.
+	d_Lang115 =	- Hold Alt për të vendosur rajonin në të njëjtin vend.
 	d_Lang116 =	Transferoni dhe të instaloni
 	d_Lang117 =	Shko te shkarkoni faqe
 		

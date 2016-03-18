@@ -783,7 +783,7 @@
 	d_Lang014 =	Guió Exportats
 	d_Lang015 =	L'arxiu s'ha exportat amb èxit!
 	d_Lang016 =	Feu clic a "Get 'per marcar la posició.
-	d_Lang017 	- Seleccioneu la finestra.
+	d_Lang017 =	- Seleccioneu la finestra.
 		- Apunt a la posició desitjada.
 		- Premeu el botó de la dreta.
 	d_Lang018 =	Color del píxel
@@ -830,7 +830,7 @@
 	d_Lang055 =	Si us plau, seleccioneu un fitxer d'script de AutoHotkey (. AHK) i escriviu el nom de funció.
 	d_Lang056 =	Aquesta funció requereix AutoHotkey instal · lat.
 		Premeu D'acord per anar a la pàgina de descàrrega.
-	d_Lang057 	- Premeu Ctrl+Tecles de cursor per moure l'àrea seleccionada.
+	d_Lang057 =	- Premeu Ctrl+Tecles de cursor per moure l'àrea seleccionada.
 		- Premeu les tecles Maj+tecles de fletxa per canviar la mida d'àrea seleccionada.
 		- Premeu D'acord per finalitzar.
 	d_Lang058 =	Algunes característiques requereixen privilegis que admnistrator per poder funcionar.
@@ -875,13 +875,13 @@
 	d_Lang093 =	Icones grans
 	d_Lang094 =	Aquesta característica requereix Windows Vista o superior.
 	d_Lang095 =	L'ús d'ByRef provoca un paràmetre a ser un àlies de la variable passada per la persona que truca. En altres paraules, el paràmetre de la variable i de la persona que truca tant es refereixen als mateixos continguts en la memòria.
-	d_Lang096 	- NO INCLOURE LES VARIABLES A SIGNES DE PERCENTATGE AQUÍ.
+	d_Lang096 =	- NO INCLOURE LES VARIABLES A SIGNES DE PERCENTATGE AQUÍ.
 		- Valor de retorn ha de ser una expressió.
 		- Vostè pot usar cadenes, variables, matrius i funcions. També pot combinar qualsevol d'aquests.
 		- Per utilitzar cordes, tancar-los entre cometes, per exemple: "El resultat és:" a+b.
 		- Si voleu tornar resultats addicionals, també es pot usar en els paràmetres ByRef.
 		- Les matrius es poden utilitzar per retornar múltiples valors o valors fins i tot amb nom.
-	d_Lang097 	- NO INCLOURE LES VARIABLES A SIGNES DE PERCENTATGE AQUÍ.
+	d_Lang097 =	- NO INCLOURE LES VARIABLES A SIGNES DE PERCENTATGE AQUÍ.
 		- La major part de les expressions AHK són compatibles.
 		- Vostè pot usar cadenes, variables, matrius i funcions.
 		- Per utilitzar cordes, tancar-los entre cometes, per exemple: var = "a".
@@ -904,7 +904,7 @@
 	d_Lang112 =	E-postkonto inte hittas.
 	d_Lang113 =	Informa de cap error.
 	d_Lang114 =	Skriptejä viedään (vaikka käännetty) kanssa lähetä sähköpostia toiminto (CDO) on näkyvissä merkintä sähköpostitilejä käytetään, mukaan lukien salasana. PMC Projektitiedosto ei ole tätä tietoa.
-	d_Lang115 	- Mantingui Alt regió per establir en la mateixa ubicació.
+	d_Lang115 =	- Mantingui Alt regió per establir en la mateixa ubicació.
 	d_Lang116 =	Transferir i instal·lar
 	d_Lang117 =	Anar a la pàgina de descàrrega
 		

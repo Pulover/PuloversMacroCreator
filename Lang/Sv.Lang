@@ -783,7 +783,7 @@
 	d_Lang014 =	Scriptet Exporterades
 	d_Lang015 =	Filen har framgångsrikt exporterats!
 	d_Lang016 =	Klicka på "Hämta" för att markera positionen.
-	d_Lang017 	- Välj fönstret.
+	d_Lang017 =	- Välj fönstret.
 		- Peka på önskat läge.
 		- Tryck på den högra knappen.
 	d_Lang018 =	Pixelfärgen
@@ -830,7 +830,7 @@
 	d_Lang055 =	Välj ett AutoHotkey skript fil (. AHK) och en anger ett funktionsnamn.
 	d_Lang056 =	Den här funktionen kräver att AutoHotkey är installerad.
 		Klicka på OK för att gå att ladda ner sidan.
-	d_Lang057 	- Tryck på Ctrl+piltangenterna för att flytta på det markerade området.
+	d_Lang057 =	- Tryck på Ctrl+piltangenterna för att flytta på det markerade området.
 		- Tryck på Skift+piltangenterna för att ändra storlek på markerade området.
 		- Tryck på Enter för att avsluta.
 	d_Lang058 =	Vissa funktioner kräver admnistrator privilages för att kunna fungera korrekt.
@@ -875,13 +875,13 @@
 	d_Lang093 =	Stora ikoner
 	d_Lang094 =	Den här funktionen kräver Windows Vista eller senare.
 	d_Lang095 =	Användningen av ByRef orsakar en parameter för att bli ett alias för variabeln passerade in från den som ringer. Med andra ord, parametern och uppringarens variabel avser båda samma innehåll i minnet.
-	d_Lang096 	- INTE BIFOGA VARIABLER I PROCENT TECKEN HÄR.
+	d_Lang096 =	- INTE BIFOGA VARIABLER I PROCENT TECKEN HÄR.
 		- Returvärdet måste vara ett uttryck.
 		- Du kan använda strängar, variabler, arrayer och funktioner. Du kan också kombinera någon av dessa.
 		- Om du vill använda strängar, bifoga dem i citationstecken, till exempel: "Resultatet är:" a+b.
 		- Om du vill återgå extra resultat, kan du också använda ByRef i parametrar.
 		- Arrays kan användas för att returnera flera värden eller ens namngivna värden.
-	d_Lang097 	- INTE BIFOGA VARIABLER I PROCENT TECKEN HÄR.
+	d_Lang097 =	- INTE BIFOGA VARIABLER I PROCENT TECKEN HÄR.
 		- De flesta av AHK uttryck stöds.
 		- Du kan använda strängar, variabler, arrayer och funktioner.
 		- Om du vill använda strängar, bifoga dem i citationstecken, till exempel: var = "a".
@@ -904,7 +904,7 @@
 	d_Lang112 =	E-postkonto inte hittas.
 	d_Lang113 =	Inget fel rapporterats.
 	d_Lang114 =	Skriptejä viedään (vaikka käännetty) kanssa lähetä sähköpostia toiminto (CDO) on näkyvissä merkintä sähköpostitilejä käytetään, mukaan lukien salasana. PMC Projektitiedosto ei ole tätä tietoa.
-	d_Lang115 	- Håll Alt för att ställa in region på samma plats.
+	d_Lang115 =	- Håll Alt för att ställa in region på samma plats.
 	d_Lang116 =	Överföra och installera
 	d_Lang117 =	Gå till nedladdningssidan
 		

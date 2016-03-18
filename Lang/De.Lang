@@ -783,7 +783,7 @@
 	d_Lang014 =	Script exportiert
 	d_Lang015 =	Die Datei wurde erfolgreich exportiert.
 	d_Lang016 =	Klicken Sie auf "Get", um die Position zu markieren.
-	d_Lang017 	- Fenster wählen.
+	d_Lang017 =	- Fenster wählen.
 		- Zur gewünschte Position bewegen.
 		- Drücken Sie die rechte Maustaste.
 	d_Lang018 =	Pixelfarbe
@@ -830,7 +830,7 @@
 	d_Lang055 =	Bitte wählen Sie eine AutoHotkey Skriptdatei (. Ahk) und geben Sie einen Funktionsnamen ein.
 	d_Lang056 =	Für diese Funktion muss AutoHotkey installiert sein.
 		Klicken Sie auf OK, um AutoHotkey von der Internetseite herunterladen.
-	d_Lang057 	- Drücken Sie Strg+Pfeiltasten um den ausgewählten Bereich zu verschieben.
+	d_Lang057 =	- Drücken Sie Strg+Pfeiltasten um den ausgewählten Bereich zu verschieben.
 		- Drücken Sie die Umschalttaste+Pfeiltasten, um die Größe ausgewählten Bereich.
 		- Drücken Sie die Eingabetaste zum Beenden.
 	d_Lang058 =	Einige Funktionen erfordern Admnistratorrechte, damit sie richtig funktionieren.
@@ -875,13 +875,13 @@
 	d_Lang093 =	Große Icons
 	d_Lang094 =	Dieses Feature erfordert Windows Vista oder höher.
 	d_Lang095 =	Die Verwendung von ByRef bewirkt einen Parameter, um ein Alias für die Variable in der Aufrufer übergeben zu werden. Mit anderen Worten, der Parameter und Variable des Aufrufers beziehen sich beide auf dem gleichen Inhalt in Speicher.
-	d_Lang096 	- NICHT BEILEGEN VARIABLEN IN PROZENTZEICHEN HIER.
+	d_Lang096 =	- NICHT BEILEGEN VARIABLEN IN PROZENTZEICHEN HIER.
 		- Rückgabewert muss ein Ausdruck sein.
 		- Sie können Strings, Variablen, Arrays und Funktionen zu nutzen. Sie können auch kombinieren, irgendwelche von denen.
 		- Zur Zeichenfolgen verwenden, schließen Sie sie in Anführungszeichen, zum Beispiel: "Das Ergebnis ist:" a+b.
 		- Wenn Sie zusätzliche Ergebnisse zurückgeben möchten, haben Sie die ByRef verwenden in Parameter.
 		- Arrays kann verwendet werden, um mehrere Werte oder sogar benannten Werte zurück.
-	d_Lang097 	- NICHT BEILEGEN VARIABLEN IN PROZENTZEICHEN HIER.
+	d_Lang097 =	- NICHT BEILEGEN VARIABLEN IN PROZENTZEICHEN HIER.
 		- Die meisten der AHK Ausdrücke werden unterstützt.
 		- Sie können Strings, Variablen, Arrays und Funktionen zu nutzen.
 		- Zur Zeichenfolgen verwenden, schließen Sie sie in Anführungszeichen, zum Beispiel: var = "a".
@@ -904,7 +904,7 @@
 	d_Lang112 =	E-Mail-Account nicht gefunden.
 	d_Lang113 =	Kein Fehler gemeldet.
 	d_Lang114 =	Skripte exportiert mit dem E-Mail senden Funktion (auch wenn kompiliert) (CDO) wird sichtbar Informationen von E-Mail-Konten verwendet haben, einschließlich des Passworts. Die PMC-Projektdatei  nicht über diese Informationen.
-	d_Lang115 	- Halten Sie Alt-Region an die gleiche Stelle zu setzen.
+	d_Lang115 =	- Halten Sie Alt-Region an die gleiche Stelle zu setzen.
 	d_Lang116 =	Übertragen und installieren
 	d_Lang117 =	Gehe zu Seite zum Download
 		

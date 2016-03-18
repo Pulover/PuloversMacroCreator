@@ -783,7 +783,7 @@
 	d_Lang014 =	Sgript allfudo
 	d_Lang015 =	Mae'r ffeil yn cael ei allforio yn llwyddiannus!
 	d_Lang016 =	Cliciwch 'Get' i nodi'r sefyllfa.
-	d_Lang017 	- Dewiswch y ffenestr.
+	d_Lang017 =	- Dewiswch y ffenestr.
 		- Pwynt i sefyllfa a ddymunir.
 		- Gwasgwch y botwm Iawn.
 	d_Lang018 =	Pixel Lliw
@@ -830,7 +830,7 @@
 	d_Lang055 =	Dewiswch ffeil script AutoHotkey (.ahk) a mynd i mewn i Enw Swyddogaeth.
 	d_Lang056 =	Mae'r nodwedd hon yn ei gwneud yn ofynnol AutoHotkey gorseddedig.
 		Cliciwch OK i fynd i lawrlwytho dudalen.
-	d_Lang057 	- Allweddi i'r wasg Ctrl + Saeth i symud ardal a ddewiswyd.
+	d_Lang057 =	- Allweddi i'r wasg Ctrl + Saeth i symud ardal a ddewiswyd.
 		- Shift Wasg + Saeth Allweddi i newid maint ardal a ddewiswyd.
 		- Gwasgwch Enter i orffen.
 	d_Lang058 =	Rhai nodweddion ei gwneud yn ofynnol admnistrator privilages er mwyn gweithio'n iawn.
@@ -875,13 +875,13 @@
 	d_Lang093 =	eiconau mawr
 	d_Lang094 =	Mae'r nodwedd hon yn ei gwneud yn ofynnol Windows Vista neu uwch.
 	d_Lang095 =	Mae'r defnydd o ByRef yn achosi paramedr i ddod yn alias gyfer y newidyn a basiwyd yn y galwr. Mewn geiriau eraill, mae'r paramedr ac amrywiol y galwr yn cyfeirio at yr un cynnwys yn y cof.
-	d_Lang096 	- PEIDIWCH AMGÁU newidynnau mewn ARWYDDION PERCENT YMA.
+	d_Lang096 =	- PEIDIWCH AMGÁU newidynnau mewn ARWYDDION PERCENT YMA.
 		- Mae'n rhaid i werth Dychwelyd fod yn fynegiant.
 		- Gallwch ddefnyddio llinynnau, newidynnau, araeau a swyddogaethau. Efallai y byddwch hefyd gyfuno unrhyw un o'r rhai.
 		- I ddefnyddio llinynnau, yn eu amgáu mewn dyfynodau, e.e. .: "Canlyniad yw:" a + b.
 		- Os ydych am ddychwelyd canlyniadau ychwanegol, efallai y byddwch hefyd yn defnyddio ByRef mewn paramedrau.
 		- Gellir Araeau yn cael ei ddefnyddio i ddychwelyd gwerthoedd lluosog neu werthoedd a enwir hyd yn oed.
-	d_Lang097 	- PEIDIWCH AMGÁU newidynnau mewn ARWYDDION PERCENT YMA.
+	d_Lang097 =	- PEIDIWCH AMGÁU newidynnau mewn ARWYDDION PERCENT YMA.
 		- Mae'r rhan fwyaf o ymadroddion AHK yn cael eu cefnogi.
 		- Gallwch ddefnyddio llinynnau, newidynnau, araeau a swyddogaethau.
 		- I ddefnyddio llinynnau, yn eu amgáu mewn dyfynodau, e.e. .: var = "yn".
@@ -904,7 +904,7 @@
 	d_Lang112 =	Cyfrif e-bost heb ei darganfod.
 	d_Lang113 =	Adrodd unrhyw wall.
 	d_Lang114 =	Bydd sgriptiau allforio (hyd yn oed os llunio) gyda'r swyddogaeth e-bost anfon (CDO) cael informations gweledol o gyfrifon e-bost a ddefnyddiwyd, gan gynnwys y PASSWORD. Nid oes gan y wybodaeth hon Mae'r ffeil prosiect Monitro'r Rhaglen.
-	d_Lang115 	- Cynnal Alt i osod rhanbarth i'r un lleoliad.
+	d_Lang115 =	- Cynnal Alt i osod rhanbarth i'r un lleoliad.
 	d_Lang116 =	Trosglwyddo a gosod
 	d_Lang117 =	Ewch i lawrlwytho dudalen
 		

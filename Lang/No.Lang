@@ -783,7 +783,7 @@
 	d_Lang014 =	Script Eksportert
 	d_Lang015 =	Filen ble vellykket eksportert!
 	d_Lang016 =	Klikk "Get 'for å markere posisjonen.
-	d_Lang017 	- Velg vinduet.
+	d_Lang017 =	- Velg vinduet.
 		- Pek på ønsket posisjon.
 		- Trykk på høyre knapp.
 	d_Lang018 =	Pixel Color
@@ -830,7 +830,7 @@
 	d_Lang055 =	Vennligst velg en AutoHotkey script-fil (. AHK) og en inn en funksjon navn.
 	d_Lang056 =	Denne funksjonen krever AutoHotkey installert.
 		Klikk OK for å gå til nedlastingssiden.
-	d_Lang057 	- Trykk Ctrl+piltastene for å flytte valgte området.
+	d_Lang057 =	- Trykk Ctrl+piltastene for å flytte valgte området.
 		- Trykk Shift+piltastene til å endre størrelsen på valgte området.
 		- Trykk Enter for å fullføre.
 	d_Lang058 =	Noen funksjoner krever admnistrator privilages for å fungere skikkelig.
@@ -875,13 +875,13 @@
 	d_Lang093 =	Store ikoner
 	d_Lang094 =	Denne funksjonen krever Windows Vista eller høyere.
 	d_Lang095 =	Bruken av ByRef fører til en parameter for å bli et alias for variabelen gått i fra den som ringer. Med andre ord, den parameteren og innringerens variable både referere til det samme innholdet i minnet.
-	d_Lang096 	- IKKE SETT VARIABLER I PROSENTTEGN HER.
+	d_Lang096 =	- IKKE SETT VARIABLER I PROSENTTEGN HER.
 		- Returverdien må være et uttrykk.
 		- Du kan bruke strenger, variabler, matriser og funksjoner. Du kan også kombinere noen av de.
 		- For å bruke strenger, legge dem i anførselstegn, for eksempel: "Resultatet er:" a+b.
 		- Hvis du ønsker å returnere ekstra resultatene, kan du også bruke ByRef i parametere.
 		- Arrays kan brukes til å returnere flere verdier eller navngitte verdier.
-	d_Lang097 	- IKKE SETT VARIABLER I PROSENTTEGN HER.
+	d_Lang097 =	- IKKE SETT VARIABLER I PROSENTTEGN HER.
 		- De fleste av AHK uttrykk støttes.
 		- Du kan bruke strenger, variabler, matriser og funksjoner.
 		- For å bruke strenger, legge dem i anførselstegn, for eksempel: var = "a".
@@ -904,7 +904,7 @@
 	d_Lang112 =	E-postkonto  ikke funnet.
 	d_Lang113 =	Ingen feil rapportert.
 	d_Lang114 =	Scripts eksporteres (selv om kompilert) med sende e-postfunksjonen  (CDO) vil ha synlige opplysninger av e-postkontoer  som brukes, inkludert passordet. PMC prosjektfilen  ikke har denne informasjonen.
-	d_Lang115 	- Hold Alt for å sette regionen på samme sted.
+	d_Lang115 =	- Hold Alt for å sette regionen på samme sted.
 	d_Lang116 =	Overføre og installere
 	d_Lang117 =	Gå til nedlastingssiden
 		

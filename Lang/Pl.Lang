@@ -783,7 +783,7 @@
 	d_Lang014 =	Script wyeksportowanych
 	d_Lang015 =	Plik został pomyślnie eksportu!
 	d_Lang016 =	Kliknij "Pobierz", aby zaznaczyć pozycję.
-	d_Lang017 	- Wybierz okno.
+	d_Lang017 =	- Wybierz okno.
 		- Wskaż żądaną pozycję.
 		- Nacisnąć prawy przycisk.
 	d_Lang018 =	Kolor Pixel
@@ -830,7 +830,7 @@
 	d_Lang055 =	Proszę wybrać plik skryptu AutoHotkey (. AHK) i wpisz nazwę funkcji.
 	d_Lang056 =	Ta funkcja wymaga AutoHotkey zainstalowany.
 		Kliknij przycisk OK, aby przejść do strony pobierania.
-	d_Lang057 	- Naciśnij klawisz CTRL+klawiszy strzałek wybranego obszaru.
+	d_Lang057 =	- Naciśnij klawisz CTRL+klawiszy strzałek wybranego obszaru.
 		- NaciÊnij Shift+klawisze strzałek, aby zmienić rozmiar wybranego obszaru.
 		- Naciśnij klawisz Enter, aby zakończyć.
 	d_Lang058 =	Niektóre funkcje wymagają PRZYWILEJE admnistrator aby funkcjonować poprawnie.
@@ -875,13 +875,13 @@
 	d_Lang093 =	Duże ikony
 	d_Lang094 =	Ta funkcja wymaga systemu Windows Vista lub nowszego.
 	d_Lang095 =	Korzystanie z ByRef powoduje parametru, aby stać się aliasem dla zmiennej przekazanej z rozmówcą. Innymi słowy, parametry i zmienne dzwoniącego odnoszą się do tych samych zawartości pamięci.
-	d_Lang096 	- NIE DOŁĄCZYĆ ZMIENNYCH W ZNAKI PROCENT TUTAJ.
+	d_Lang096 =	- NIE DOŁĄCZYĆ ZMIENNYCH W ZNAKI PROCENT TUTAJ.
 		- Zwracana wartość musi być wyrażeniem.
 		- Możesz użyć ciągi znaków, zmienne, tablice i funkcje. Można również łączyć żadnego z nich.
 		- Aby używać łańcuchów, ująć w cudzysłów, np: "Wynik jest:" A+B.
 		- Jeśli chcesz, aby powrócić dodatkowe wyniki, możesz również skorzystać z ByRef w parametrach.
 		- Macierze można stosować do powrotu wiele wartości lub nawet Wartości.
-	d_Lang097 	- NIE DOŁĄCZYĆ ZMIENNYCH W ZNAKI PROCENT TUTAJ.
+	d_Lang097 =	- NIE DOŁĄCZYĆ ZMIENNYCH W ZNAKI PROCENT TUTAJ.
 		- Większość wyrażeń AHK są obsługiwane.
 		- Możesz użyć ciągi znaków, zmienne, tablice i funkcje.
 		- Aby używać łańcuchów, ująć w cudzysłów, np: var = "A".
@@ -904,7 +904,7 @@
 	d_Lang112 =	Учетной записи электронной почты не найден.
 	d_Lang113 =	Nie zgłosiło błąd.
 	d_Lang114 =	Script esportati (anche se compilato) con la funzione di invio e-mail (CDO) avranno informazioni visibili di account di posta elettronica utilizzati, inclusa la password. Il file di progetto PMC non dispone di tali informazioni.
-	d_Lang115 	- Trzymając Alt ustawienie obszaru do tej samej lokalizacji.
+	d_Lang115 =	- Trzymając Alt ustawienie obszaru do tej samej lokalizacji.
 	d_Lang116 =	Przelew i zainstalować
 	d_Lang117 =	Przejdź do strony pobierania
 		

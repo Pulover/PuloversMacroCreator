@@ -783,7 +783,7 @@
 	d_Lang014 =	Script Eksportēto
 	d_Lang015 =	Fails tika veiksmīgi eksportēts!
 	d_Lang016 =	Noklikšķiniet uz "Saņemt", lai atzīmētu vietu.
-	d_Lang017 	- Izvēlieties logu.
+	d_Lang017 =	- Izvēlieties logu.
 		- Point līdz vēlamajam stāvoklim.
 		- Nospiediet pogu Pa labi.
 	d_Lang018 =	Pixel Color
@@ -830,7 +830,7 @@
 	d_Lang055 =	Lūdzu, izvēlieties AutoHotkey skripta failu (.ahk) un ievadiet funkcijas nosaukums.
 	d_Lang056 =	Šī funkcija ir nepieciešama AutoHotkey uzstādīta.
 		Noklikšķiniet uz Labi, lai iet, lai lejupielādētu lapu.
-	d_Lang057 	- Nospiediet Ctrl + bultu taustiņus, lai pārvietotu izvēlēto laukumu.
+	d_Lang057 =	- Nospiediet Ctrl + bultu taustiņus, lai pārvietotu izvēlēto laukumu.
 		- Nospiediet Shift + bultu taustiņus, lai mainītu atlasīto apgabalu.
 		- Nospiediet Enter, lai pabeigtu.
 	d_Lang058 =	Dažas funkcijas prasa admnistrator privilages, lai darbotos pareizi.
@@ -875,13 +875,13 @@
 	d_Lang093 =	Lielas ikonas
 	d_Lang094 =	Šī funkcija ir nepieciešama Windows Vista vai augstāka.
 	d_Lang095 =	Par ByRef lietošana izraisa parametru kļūt par alias mainīgā pagājis no zvanītāja. Citiem vārdiem sakot, parametrs un zvanītāja mainīgo gan attiecas uz pašu saturu atmiņā.
-	d_Lang096 	- DO NOT jāpievieno mainīgo procentu SIGNS ŠEIT.
+	d_Lang096 =	- DO NOT jāpievieno mainīgo procentu SIGNS ŠEIT.
 		- Atgriešanās vērtība ir izpausme.
 		- Jūs varat izmantot stīgas, mainīgos, masīvus un funkcijas. Jūs varat arī kombinēt jebkuras no tiem.
 		- Lai izmantotu stīgas, lieciet tos pēdiņās, piem .: "Rezultāts ir:" a + b.
 		- Ja jūs vēlaties atgriezties papildus rezultātus, jūs varat arī izmantot ByRef in parametriem.
 		- Masīvi var tikt izmantots, lai atgrieztos vairākas vērtības, vai pat nosauktās vērtības.
-	d_Lang097 	- DO NOT jāpievieno mainīgo procentu SIGNS ŠEIT.
+	d_Lang097 =	- DO NOT jāpievieno mainīgo procentu SIGNS ŠEIT.
 		- Lielākā daļa AHK izteiksmes tiek atbalstīti.
 		- Jūs varat izmantot stīgas, mainīgos, masīvus un funkcijas.
 		- Lai izmantotu stīgas, lieciet tos pēdiņās, piem .: var = "A".
@@ -904,7 +904,7 @@
 	d_Lang112 =	E-pasta konts nav atrasts.
 	d_Lang113 =	Ziņots nav kļūda.
 	d_Lang114 =	Skripti eksportē (pat tad, ja apkopo) ar sūtīt e-pastu funkciju (CDO) būs redzamas informations e-pasta kontiem, ko izmanto, tostarp paroli. PMC projekta fails nav šo informāciju.
-	d_Lang115 	- Hold Alt, lai uzstādītu reģionu, lai tajā pašā vietā.
+	d_Lang115 =	- Hold Alt, lai uzstādītu reģionu, lai tajā pašā vietā.
 	d_Lang116 =	Pārsūtīt un instalēt
 	d_Lang117 =	Iet uz download lapu
 		

@@ -306,6 +306,27 @@ For _each, _Section in UserVars
 
 UserMailAccounts := new ObjIni(UserAccountsPath)
 
+If (DefaultEditor = "ERROR")
+{
+	SplitPath, A_AhkPath,, AhkDir
+	ProgramsFolder := (A_PtrSize = 8) ? ProgramFiles " (x86)" : ProgramFiles
+	If (FileExist(AhkDir "\SciTE\SciTE.exe"))
+		DefaultEditor := AhkDir "\SciTE\SciTE.exe"
+	Else If (FileExist(ProgramsFolder "\Notepad++\notepad++.exe"))
+		DefaultEditor := ProgramsFolder "\Notepad++\notepad++.exe"
+	Else If (FileExist(ProgramFiles "\Sublime Text 2\sublime_text.exe"))
+		DefaultEditor := ProgramFiles "\Sublime Text 2\sublime_text.exe"
+	Else If (FileExist(ProgramsFolder "\Notepad2\Notepad2.exe"))
+		DefaultEditor := ProgramsFolder "\Notepad2\Notepad2.exe"
+	Else
+		DefaultEditor := "notepad.exe"
+}
+
+If (IconSize = "ERROR")
+	IconSize := "Large"
+
+hIL := (IconSize = "Large") ? hIL_IconsHi : hIL_Icons
+
 LangInfo := "
 (Join`n
 0036	af	Afrikaans	Afrikaans	Afrikaans
@@ -597,27 +618,6 @@ If (Lang = "ERROR")
 
 GoSub, LoadLangFiles
 
-If (DefaultEditor = "ERROR")
-{
-	SplitPath, A_AhkPath,, AhkDir
-	ProgramsFolder := (A_PtrSize = 8) ? ProgramFiles " (x86)" : ProgramFiles
-	If (FileExist(AhkDir "\SciTE\SciTE.exe"))
-		DefaultEditor := AhkDir "\SciTE\SciTE.exe"
-	Else If (FileExist(ProgramsFolder "\Notepad++\notepad++.exe"))
-		DefaultEditor := ProgramsFolder "\Notepad++\notepad++.exe"
-	Else If (FileExist(ProgramFiles "\Sublime Text 2\sublime_text.exe"))
-		DefaultEditor := ProgramFiles "\Sublime Text 2\sublime_text.exe"
-	Else If (FileExist(ProgramsFolder "\Notepad2\Notepad2.exe"))
-		DefaultEditor := ProgramsFolder "\Notepad2\Notepad2.exe"
-	Else
-		DefaultEditor := "notepad.exe"
-}
-
-If (IconSize = "ERROR")
-	IconSize := "Large"
-
-hIL := (IconSize = "Large") ? hIL_IconsHi : hIL_Icons
-
 GoSub, WriteSettings
 
 If (!LangFiles.HasKey(Lang))
@@ -639,27 +639,43 @@ If (!LangFiles.HasKey(Lang))
 	MsgBox, 20, Error, Missing language files.`n`nWould you like to download them now?
 	IfMsgBox, No
 		ExitApp
-	FileDelete, %A_Temp%\Lang.zip
-	FileDelete, %A_Temp%\Lang\*.*
-	UrlDownloadToFile, http://www.macrocreator.com/lang/Lang.zip, %A_Temp%\Lang.zip
-	If (FileExist(A_Temp "\Lang.zip"))
+	VerChk := ""
+	url := "http://www.macrocreator.com/lang"
+	whr := ComObjCreate("WinHttp.WinHttpRequest.5.1")
+	whr.open("GET", url, false)
+	whr.SetRequestHeader("User-Agent", "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0)")
+	whr.SetRequestHeader("Referer", url)
+	whr.SetRequestHeader("Content-Type", "application/x-www-form-urlencoded")
+	Try
 	{
-		FileCreateDir, %A_Temp%\Lang_Temp "\Lang\")
-		UnZip(A_Temp "\Lang.zip", A_Temp "\Lang\")
-		FileCopy, %A_Temp%\Lang\*.lang, %SettingsFolder%\Lang\, 1
-		FileDelete, %A_Temp%\Lang.zip
-		Gui, 1:Default
-		GoSub, LoadLangFiles
-		GoSub, LoadLang
-		GoSub, UpdateLang
-		LangVersion := LangChk, LangLastCheck := LangChk
-		MsgBox, 64, %AppName%, %d_lang106%
+		whr.Send()
+		ResponseText := whr.ResponseText
+		document := ComObjCreate("HTMLfile")
+		document.write(ResponseText)
+		VerChk := Eval(document.body.InnerText)[1]
 	}
-	Else
+	If (!IsObject(VerChk))
+		MsgBox, 16, Pulover's Macro Creator, An error occurred.
+	FileDelete, %A_Temp%\Lang\*.*
+	SplashTextOn, 300, 25, Pulover's Macro Creator, Downloading... Please wait.
+	WinHttpDownloadToFile("http://www.macrocreator.com/lang/Lang.zip", A_Temp)
+	SplashTextOff
+	If (!FileExist(A_Temp "\Lang.zip"))
 	{
-		MsgBox, 16, %d_Lang007%, %d_Lang063%
+		MsgBox, 16, Pulover's Macro Creator, An error occurred.
 		ExitApp
 	}
+	FileCreateDir, %A_Temp%\Lang
+	FileCreateDir, %SettingsFolder%\Lang
+	FileDelete, %SettingsFolder%\Lang\*.*
+	UnZip(A_Temp "\Lang.zip", A_Temp "\Lang\")
+	FileCopy, %A_Temp%\Lang\*.lang, %SettingsFolder%\Lang\, 1
+	FileDelete, %A_Temp%\Lang.zip
+	FileRemoveDir, %A_Temp%\Lang
+	LangVersion := VerChk.LangRev, LangLastCheck := VerChk.LangRev
+	GoSub, WriteSettings
+	Run, %A_ScriptFullPath%
+	ExitApp
 }
 CurrentLang := Lang
 
@@ -2932,7 +2948,7 @@ Gui, 4:Add, Edit, y+5 xs+10 W380 R10 vMessage Limit2000
 Gui, 4:Add, Text, -Wrap R1 y+10 xs+10 W180, %t_Lang184%:
 Gui, 4:Add, Edit, y+5 xs+10 W380 R1 vLFile Disabled
 Gui, 4:Add, Button, -Wrap y+10 xs+10 W75 H23 gSendRevision, %t_Lang181%
-Gui, 4:Add, Link, -Wrap yp x+10 W75 H23 gCancelSubmit, <a>%c_Lang021%</a>
+Gui, 4:Add, Button, -Wrap yp x+10 W75 H23 gCancelSubmit, %c_Lang021%
 Gui, 4:Tab
 Gui, 4:Add, Button, -Wrap Default Section xm ym+315 W160 H23 gConfigOK, %c_Lang020%
 Gui, 4:Add, Button, -Wrap xp y+5 W160 H23 gConfigCancel, %c_Lang021%
@@ -3239,16 +3255,12 @@ If (EditOn)
 }
 FilePath := RegExReplace(EditLang, "\s/.*")
 GuiControl, 4:, Subject, Translation Revision: %FilePath%
-For e, l in LangData
+Loop, Parse, LangInfo, `n, `r
 {
-	If (FilePath = l.Lang)
+	F := StrSplit(A_LoopField, A_Tab, A_Space)
+	If ((FilePath = F.3) || (FilePath = F.4))
 	{
-		FilePath := SettingsFolder "\Lang\" e ".lang"
-		break
-	}
-	If (FilePath = l.Idiom)
-	{
-		FilePath := SettingsFolder "\Lang\" e ".lang"
+		FilePath := SettingsFolder "\Lang\" F.2 ".lang"
 		break
 	}
 }
@@ -3362,7 +3374,7 @@ return
 SaveLang:
 Gui, 4:Submit, NoHide
 Gui, 4:ListView, LangList
-FilePath := RegExReplace(EditLang, "\s/.*"), SelLang := ""
+EditLang := RegExReplace(EditLang, "\s/.*"), SelLang := ""
 ExportLang:
 Gui, 4:Default
 RLang := RegExReplace(RefLang, "\s/.*")
@@ -3388,20 +3400,16 @@ For i, l in LangFiles
 		break
 	}
 }
-For e, l in LangData
+Loop, Parse, LangInfo, `n, `r
 {
-	If (FilePath = l.Lang)
+	F := StrSplit(A_LoopField, A_Tab, A_Space)
+	If ((EditLang = F.3) || (EditLang = F.4))
 	{
-		FilePath := SettingsFolder "\Lang\" e ".lang"
-		break
-	}
-	If (FilePath = l.Idiom)
-	{
-		FilePath := SettingsFolder "\Lang\" e ".lang"
+		eLang := F.2, FilePath := SettingsFolder "\Lang\" eLang ".lang"
 		break
 	}
 }
-LangFile := "Lang_" e "`n`t`t`n`t`t; " (SelLang ? SelLang : lName) "`n`t`t`n", RowIdx := 1
+LangFile := "Lang_" eLang "`n`t`t`n`t`t; " (SelLang ? SelLang : EditLang) "`n`t`t`n", RowIdx := 1
 For i, _Section in LangFiles[RLang]
 {
 	LangFile .= "; " i "`t`t`n"
@@ -3420,7 +3428,7 @@ For i, _Section in LangFiles[RLang]
 		}
 		LangFile := RTrim(LangFile, "`t")
 	}
-	LangFile .= "`n"
+	LangFile .= "`t`t`n"
 }
 FileDelete, %FilePath%
 FileAppend, %LangFile%, %FilePath%, UTF-8
@@ -3783,13 +3791,18 @@ If (IsObject(VerChk))
 			IfMsgBox, Yes
 			{
 				FileDelete, %A_Temp%\Lang\*.*
+				SplashTextOn, 300, 25, %AppName%, %d_Lang091%
 				WinHttpDownloadToFile(VerChk.LangUrl, A_Temp "\Lang.zip")
+				SplashTextOff
 				If (FileExist(A_Temp "\Lang.zip"))
 				{
 					FileCreateDir, %A_Temp%\Lang
+					FileCreateDir, %SettingsFolder%\Lang
+					FileDelete, %SettingsFolder%\Lang\*.*
 					UnZip(A_Temp "\Lang.zip", A_Temp "\Lang\")
 					FileCopy, %A_Temp%\Lang\*.lang, %SettingsFolder%\Lang\, 1
 					FileDelete, %A_Temp%\Lang.zip
+					FileRemoveDir, %A_Temp%\Lang
 					Gui, 1:Default
 					GoSub, LoadLangFiles
 					GoSub, LoadLang
@@ -10395,7 +10408,7 @@ If (A_ThisLabel != "CmdFind")
 {
 	Gui, 34:Color, FFFFFF
 	Gui, 34:Font, Bold s10, Tahoma
-	Gui, 34:Add, Text, -Wrap R1 w220, %d_Lang072%
+	Gui, 34:Add, Text, w220, %d_Lang072%
 	Gui, 34:Font
 	Gui, 34:Font,, Tahoma
 	Gui, 34:Add, Text, w220, %d_Lang069%

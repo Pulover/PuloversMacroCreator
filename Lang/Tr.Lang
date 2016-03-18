@@ -783,7 +783,7 @@
 	d_Lang014 =	Komut İhracat
 	d_Lang015 =	Dosya başarıyla ihraç edildi!
 	d_Lang016 =	Konumunu işaretlemek için 'Al' seçeneğini tıklayın.
-	d_Lang017 	- Penceresini seçin.
+	d_Lang017 =	- Penceresini seçin.
 		- Istenen pozisyona gelin.
 		- Sağ Düğme basın.
 	d_Lang018 =	Piksel renk
@@ -830,7 +830,7 @@
 	d_Lang055 =	Bir AutoHotkey komut dosyası (. AHK) ve Fonksiyon Adı girin seçiniz.
 	d_Lang056 =	Bu özellik AutoHotkey yüklü gerektirir.
 		Sayfa indirmek için gitmek için Tamam'a tıklayın.
-	d_Lang057 	- Seçilen alanı taşımak için Ctrl+Ok tuşları.
+	d_Lang057 =	- Seçilen alanı taşımak için Ctrl+Ok tuşları.
 		- Shift+Ok tuşları Seçili alanı yeniden boyutlandırmak için.
 		- Bitirmek için Enter tuşuna basın.
 	d_Lang058 =	Bazı özellikler düzgün çalışması için admnistrator ayrıcalıkları gerektirir.
@@ -875,13 +875,13 @@
 	d_Lang093 =	Büyük ikonlar
 	d_Lang094 =	Bu özellik, Windows Vista veya üstü gerektirir.
 	d_Lang095 =	ByRef kullanımı arayanın geçirilen değişken için bir takma ad haline bir parametre neden olur. Bir başka deyişle, parametre ve arayanın değişken hem bellekte aynı içeriği bakın.
-	d_Lang096 	- BURAYA YÜZDE IŞARETLERI DEĞİŞKENLER IÇINE ALMAYıN.
+	d_Lang096 =	- BURAYA YÜZDE IŞARETLERI DEĞİŞKENLER IÇINE ALMAYıN.
 		- Dönüş değeri bir ifade olmalıdır.
 		- Sen dizeleri, değişkenler, diziler ve işlevlerini kullanabilirsiniz. Ayrıca, bu herhangi bir birleştirebiliriz.
 		Sonuç ise: a+b - örneğin tırnak işareti içine, dizeleri kullanın.
 		- Eğer fazladan sonuçları döndürmek istiyorsanız, siz de parametrelerinde ByRef kullanabilirsiniz.
 		- Diziler birden çok değer ya da değerleri adlı döndürmek için kullanılabilir.
-	d_Lang097 	- BURAYA YÜZDE IŞARETLERI DEĞİŞKENLER IÇINE ALMAYıN.
+	d_Lang097 =	- BURAYA YÜZDE IŞARETLERI DEĞİŞKENLER IÇINE ALMAYıN.
 		- AHK ifadelerin çoğu desteklenmektedir.
 		- Sen dizeleri, değişkenler, diziler ve işlevlerini kullanabilirsiniz.
 		- Örneğin, tırnak işareti içine, dizeleri kullanmak için: var = "a".
@@ -904,7 +904,7 @@
 	d_Lang112 =	E-posta hesabı bulunamadı.
 	d_Lang113 =	Hiçbir hata bildirdi.
 	d_Lang114 =	Skripte izvoze (čak i ako je sastavljen) s funkcijom poslati e-mail (CDO) će imati vidljive informacije o računima e-pošte koristi, uključujući i lozinke. Projekt datoteka PMC nema tu informaciju.
-	d_Lang115 	- aynı konuma bölgeyi ayarlamak için Alt tutun.
+	d_Lang115 =	- aynı konuma bölgeyi ayarlamak için Alt tutun.
 	d_Lang116 =	Aktarın ve yükleyin
 	d_Lang117 =	sayfa indirmek için git
 		

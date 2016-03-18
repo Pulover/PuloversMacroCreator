@@ -783,7 +783,7 @@
 	d_Lang014 =	Script Útfluttar
 	d_Lang015 =	Skráin var flutt út!
 	d_Lang016 =	Smelltu á 'Fá að merkja stöðu.
-	d_Lang017 	- Veldu glugga.
+	d_Lang017 =	- Veldu glugga.
 		- Point til viðkomandi stöðu.
 		- Ýttu á hægri hnappinn.
 	d_Lang018 =	Pixel Color
@@ -830,7 +830,7 @@
 	d_Lang055 =	Vinsamlegast veldu AutoHotkey handrit skrá (.ahk) og slá inn heiti aðgerðar.
 	d_Lang056 =	Þessi eiginleiki krefst AutoHotkey uppsett.
 		Smelltu á Í lagi til að fara að sækja síðuna.
-	d_Lang057 	- Ýttu á Ctrl + Arrow takkana til að hreyfa völdu svæði.
+	d_Lang057 =	- Ýttu á Ctrl + Arrow takkana til að hreyfa völdu svæði.
 		- Ýtið Shift + Arrow takkana til að breyta stærð völdu svæði.
 		- Ýttu á Enter til að ljúka.
 	d_Lang058 =	Sumar aðgerðir krefjast admnistrator rrÃ © ttindi til að virka almennilega.
@@ -875,13 +875,13 @@
 	d_Lang093 =	stór tákn
 	d_Lang094 =	Þessi eiginleiki krefst Windows Vista eða hærri.
 	d_Lang095 =	Notkun ByRef veldur breytu til að verða samnefni fyrir breytu liðin frá þeim sem hringir. Með öðrum orðum, breytu og breyta þess sem hringir, bæði vísa til sömu innihald í minni.
-	d_Lang096 	- EKKI láta breytur í prósentumerki hér.
+	d_Lang096 =	- EKKI láta breytur í prósentumerki hér.
 		- Return gildi verður að vera tjáning.
 		- Þú getur notað strengir, breytur, fylki og aðgerðir. Þú gætir líka sameina eitthvað af þeim.
 		- Til að nota strengi, láta þá innan gæsalappa, t.d .: "Niðurstaðan er:" a + b.
 		- Ef þú vilt fara aftur auka árangur, getur þú líka notað ByRef í þáttum.
 		- Fylki er hægt að nota til að snúa aftur mörg gildi eða jafnvel gerist gildum.
-	d_Lang097 	- EKKI láta breytur í prósentumerki hér.
+	d_Lang097 =	- EKKI láta breytur í prósentumerki hér.
 		- Flestir AHK tjáning eru studd.
 		- Þú getur notað strengir, breytur, fylki og aðgerðir.
 		- Til að nota strengi, láta þá innan gæsalappa, t.d .: var = "a".
@@ -904,7 +904,7 @@
 	d_Lang112 =	Email reikningur fannst ekki.
 	d_Lang113 =	Engin villa tilkynnt.
 	d_Lang114 =	Scripts flutt (jafnvel þótt unnin) með senda tölvupóst virka (CDO) verður sýnileg upplýsingar um reikninga email notuð, þar á meðal lykilorð. The PMC verkefnið skrá hjartarskinn ekki hafa þessar upplýsingar.
-	d_Lang115 	- Halda Alt að setja svæðið á sama stað.
+	d_Lang115 =	- Halda Alt að setja svæðið á sama stað.
 	d_Lang116 =	Flytja og setja
 	d_Lang117 =	Fara að sækja síðuna
 		

@@ -783,7 +783,7 @@
 	d_Lang014 =	Scenarij Izvozni
 	d_Lang015 =	Datoteka je bila uspešno izvažajo!
 	d_Lang016 =	Kliknite na "Prijava", da označite položaj.
-	d_Lang017 	- Izberite okno.
+	d_Lang017 =	- Izberite okno.
 		- Pokažite na želeni položaj.
 		- Pritisnite gumb desno.
 	d_Lang018 =	Barva pixel
@@ -830,7 +830,7 @@
 	d_Lang055 =	Prosimo, izberite datoteko skripta AutoHotkey (. AHK) in vnesti Ime funkcije.
 	d_Lang056 =	Ta funkcija zahteva AutoHotkey nameščen.
 		Kliknite V redu, da gredo na stran za prenos.
-	d_Lang057 	- Pritisnite Ctrl+smerne tipke za premikanje izbrano območje.
+	d_Lang057 =	- Pritisnite Ctrl+smerne tipke za premikanje izbrano območje.
 		- Pritisnite tipko Shift+smerne tipke, da spremenite velikost izbranega območja.
 		- Pritisnite Enter, da končate.
 	d_Lang058 =	Nekatere funkcije zahtevajo admnistrator privilages, da bi deloval pravilno.
@@ -875,13 +875,13 @@
 	d_Lang093 =	Velike ikone
 	d_Lang094 =	Ta funkcija zahteva Windows Vista ali višje.
 	d_Lang095 =	Uporaba ByRef povzroči parameter, da postane ime za spremenljivko sprejet leta od klicatelja. Z drugimi besedami, parameter in spremenljiva kličočega se oba nanašata na enako vsebino v pomnilniku.
-	d_Lang096 	- NE PRILOŽITI SPREMENLJIVK ZNAKI ZA ODSTOTEK TUKAJ.
+	d_Lang096 =	- NE PRILOŽITI SPREMENLJIVK ZNAKI ZA ODSTOTEK TUKAJ.
 		- Vrnjena vrednost mora biti izraz.
 		- Lahko uporabite strune, spremenljivke, polja in funkcije. Prav tako lahko kombinirate katerega koli od teh.
 		- Za uporabo nizov, jih priložite v narekovajih, na primer: "Rezultat je:" a+b.
 		- Če se želite vrniti dodatne rezultate, lahko uporabite tudi ByRef v parametrih.
 		- Polja lahko uporabimo za vrnitev več vrednosti ali celo imenovanih vrednosti.
-	d_Lang097 	- NE PRILOŽITI SPREMENLJIVK ZNAKI ZA ODSTOTEK TUKAJ.
+	d_Lang097 =	- NE PRILOŽITI SPREMENLJIVK ZNAKI ZA ODSTOTEK TUKAJ.
 		- Večina AHK izrazov so podprte.
 		- Lahko uporabite strune, spremenljivke, polja in funkcije.
 		- Za uporabo nizov, jih priložite v narekovajih, na primer: var = "A".
@@ -904,7 +904,7 @@
 	d_Lang112 =	E-poštni račun ni bilo mogoče najti.
 	d_Lang113 =	Poročali nobena napaka.
 	d_Lang114 =	Skripte izvažajo (tudi če je prevedeni) z za pošiljanje e-pošte funkcije (CDO) bodo imeli vidne informacije o e-poštnih računov, ki se uporabljajo, vključno z geslom. Projekt datoteke PMC teh podatkov ne imeti.
-	d_Lang115 	- Držite Alt nastaviti regijo na isti lokaciji.
+	d_Lang115 =	- Držite Alt nastaviti regijo na isti lokaciji.
 	d_Lang116 =	Prenos in namestitev
 	d_Lang117 =	Pojdite na stran za prenos
 		

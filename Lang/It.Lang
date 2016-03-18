@@ -783,7 +783,7 @@
 	d_Lang014 =	Script esportati
 	d_Lang015 =	Il file è stato esportato con successo!
 	d_Lang016 =	Fare clic su 'Avanti' per segnare la posizione.
-	d_Lang017 	- Selezionare la finestra.
+	d_Lang017 =	- Selezionare la finestra.
 		- Scegliere la posizione desiderata.
 		- Premere il pulsante Destra.
 	d_Lang018 =	Pixel di colore
@@ -830,7 +830,7 @@
 	d_Lang055 =	Si prega di selezionare un file di script AutoHotkey (. AHK) e inserire un nome di funzione.
 	d_Lang056 =	Questa funzionalità richiede AutoHotkey installato.
 		Fare clic su OK per andare alla pagina di download.
-	d_Lang057 	- Premere Ctrl+tasti freccia per spostare l'area selezionata.
+	d_Lang057 =	- Premere Ctrl+tasti freccia per spostare l'area selezionata.
 		- Premere Maiusc+tasti di direzione per ridimensionare area selezionata.
 		- Premere Invio per terminare.
 	d_Lang058 =	Alcune funzionalità richiedono privilegi di admnistrator al fine di funzionare correttamente.
@@ -875,13 +875,13 @@
 	d_Lang093 =	Icone grandi
 	d_Lang094 =	Questa funzionalità richiede Windows Vista o versioni successive.
 	d_Lang095 =	L'uso di un parametro ByRef provoca a diventare un alias per la variabile passata dal chiamante. In altre parole, il parametro e variabile del chiamante sia riferiscono agli stessi contenuti nella memoria.
-	d_Lang096 	- NON ALLEGARE VARIABILI IN SEGNI DI PERCENTUALE QUI.
+	d_Lang096 =	- NON ALLEGARE VARIABILI IN SEGNI DI PERCENTUALE QUI.
 		- Il valore di ritorno deve essere un'espressione.
 		- È possibile utilizzare stringhe, le variabili, array e funzioni. Si può anche combinare una di queste.
 		- Per utilizzare stringhe, racchiuderli tra virgolette, ad esempio: "Il risultato è:" a+b.
 		- Se si desidera restituire i risultati in più, si può anche utilizzare ByRef nei parametri.
 		- Array possono essere utilizzati per restituire più valori o valori anche denominati.
-	d_Lang097 	- NON ALLEGARE VARIABILI IN SEGNI DI PERCENTUALE QUI.
+	d_Lang097 =	- NON ALLEGARE VARIABILI IN SEGNI DI PERCENTUALE QUI.
 		- La maggior parte delle espressioni AHK sono supportati.
 		- È possibile utilizzare stringhe, le variabili, array e funzioni.
 		- Per utilizzare stringhe, racchiuderli tra virgolette, ad esempio: var = "a".
@@ -904,7 +904,7 @@
 	d_Lang112 =	Account e-mail non trovata.
 	d_Lang113 =	Nessun errore segnalato.
 	d_Lang114 =	Script esportati (anche se compilato) con la funzione di invio e-mail (CDO) avranno informazioni visibili di account di posta elettronica utilizzati, inclusa la password. Il file di progetto PMC non dispone di tali informazioni.
-	d_Lang115 	- Tenere premuto Alt per impostare regione nella stessa posizione.
+	d_Lang115 =	- Tenere premuto Alt per impostare regione nella stessa posizione.
 	d_Lang116 =	Trasferire ed installare
 	d_Lang117 =	Vai alla pagina di download
 		

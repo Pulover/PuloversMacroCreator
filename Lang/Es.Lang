@@ -783,7 +783,7 @@
 	d_Lang014 =	Guión Exportados
 	d_Lang015 =	El archivo se ha exportado con éxito!
 	d_Lang016 =	Haga clic en "Get" para marcar la posición.
-	d_Lang017 	- Seleccione la ventana.
+	d_Lang017 =	- Seleccione la ventana.
 		- Apunte la posición deseada.
 		- Pulse el botón de la derecha.
 	d_Lang018 =	Píxel de color
@@ -830,7 +830,7 @@
 	d_Lang055 =	Por favor, seleccione un archivo de script AutoHotkey (. Ahk) y escriba un nombre de función.
 	d_Lang056 =	Esta función requiere AutoHotkey instalado.
 		Haga clic en Aceptar para ir a la página de descargas.
-	d_Lang057 	- Presione Ctrl+Teclas de flecha para mover el área seleccionada.
+	d_Lang057 =	- Presione Ctrl+Teclas de flecha para mover el área seleccionada.
 		- Pulse las teclas Mayús+teclas de flecha para cambiar el tamaño de la zona seleccionada.
 		- Pulse Enter para finalizar.
 	d_Lang058 =	Algunas características requieren privilages admnistrator para poder funcionar correctamente.
@@ -875,13 +875,13 @@
 	d_Lang093 =	Iconos grandes
 	d_Lang094 =	Esta característica requiere Windows Vista o superior.
 	d_Lang095 =	El uso de ByRef provoca un parámetro a ser un alias de la variable pasada por la persona que llama. En otras palabras, el parámetro de la variable y de la persona que llama tanto se refieren a los mismos contenidos en la memoria.
-	d_Lang096 	- NO INCLUIR LAS VARIABLES EN SIGNOS DE PORCENTAJE AQUÍ.
+	d_Lang096 =	- NO INCLUIR LAS VARIABLES EN SIGNOS DE PORCENTAJE AQUÍ.
 		- Valor de retorno debe ser una expresión.
 		- Usted puede usar cadenas, variables, matrices y funciones. También puede combinar cualquiera de esos.
 		- Para utilizar cuerdas, encerrarlos entre comillas, por ejemplo: "El resultado es:" a+b.
 		- Si desea devolver resultados adicionales, también se puede usar en los parámetros ByRef.
 		- Las matrices se pueden utilizar para devolver múltiples valores o valores incluso con nombre.
-	d_Lang097 	- NO INCLUIR LAS VARIABLES EN SIGNOS DE PORCENTAJE AQUÍ.
+	d_Lang097 =	- NO INCLUIR LAS VARIABLES EN SIGNOS DE PORCENTAJE AQUÍ.
 		- La mayor parte de las expresiones AHK son compatibles.
 		- Usted puede usar cadenas, variables, matrices y funciones.
 		- Para utilizar cuerdas, encerrarlos entre comillas, por ejemplo: var = "a".
@@ -904,7 +904,7 @@
 	d_Lang112 =	Cuenta de correo electrónico no se encuentra.
 	d_Lang113 =	Ningún error informado.
 	d_Lang114 =	Scripts exportados (incluso si compilado) con la función de envío de correo electrónico (CDO) tendrán informaciones visibles de cuentas de correo electrónico utilizadas, incluyendo la contraseña. El archivo de proyecto PMC no tiene esta información.
-	d_Lang115 	- Mantenga Alt región para establecer en la misma ubicación.
+	d_Lang115 =	- Mantenga Alt región para establecer en la misma ubicación.
 	d_Lang116 =	Transferir e instalar
 	d_Lang117 =	Ir a la página de descarga
 		

@@ -783,7 +783,7 @@
 	d_Lang014 =	Scenarijaus Eksportuota
 	d_Lang015 =	Šis failas buvo sėkmingai eksportuoti!
 	d_Lang016 =	Spustelėkite "Gauti" pažymėti poziciją.
-	d_Lang017 	- Pasirinkite langą.
+	d_Lang017 =	- Pasirinkite langą.
 		- Taškas į norimą padėtį.
 		- Paspauskite dešinįjį mygtuką.
 	d_Lang018 =	"Pixel spalva
@@ -830,7 +830,7 @@
 	d_Lang055 =	Prašome pasirinkti AutoHotkey scenarijaus failą (.ahk) ir įvesti funkcijos pavadinimas.
 	d_Lang056 =	Ši funkcija reikalauja AutoHotkey įdiegta.
 		Spustelėkite Gerai, kad eiti į atsisiuntimo puslapį.
-	d_Lang057 	- Paspauskite Ctrl + rodyklių klavišus judėti pasirinktą sritį.
+	d_Lang057 =	- Paspauskite Ctrl + rodyklių klavišus judėti pasirinktą sritį.
 		- Paspauskite Shift + rodyklių klavišus keisti pasirinktą sritį.
 		- Paspauskite Enter baigti.
 	d_Lang058 =	Kai kurios funkcijos reikalauja admnistrator privilegijų, siekiant tinkamai funkcionuoti.
@@ -875,13 +875,13 @@
 	d_Lang093 =	didelės piktogramos
 	d_Lang094 =	Ši funkcija reikalauja "Windows Vista" arba naujesnė.
 	d_Lang095 =	Iš ByRef naudojimas sukelia parametrą tapti kintamojo praėjo iš skambinančiojo slapyvardį. Kitaip tariant, parametras ir skambinančiojo kintamasis tiek nurodo į minėtus turinį į atminties.
-	d_Lang096 	- Negalima pridėti kintamųjų proc ŽENKLŲ čia.
+	d_Lang096 =	- Negalima pridėti kintamųjų proc ŽENKLŲ čia.
 		- Grįžti vertė turi būti išraiška.
 		- Jūs galite naudoti stygos, kintamuosius, masyvus ir funkcijas. Jūs taip pat gali derinti bet iš tų.
 		- Norėdami naudoti stygas, pridėti juos į kabutes aminus, pvz .: "rezultatas:" A + B.
 		- Jei norite grįžti papildomų rezultatų, taip pat galite naudoti ByRef į parametrus.
 		- Masyvai gali būti naudojama grąžinti kelias reikšmes ar NET pavadintas vertybes.
-	d_Lang097 	- Negalima pridėti kintamųjų proc ŽENKLŲ čia.
+	d_Lang097 =	- Negalima pridėti kintamųjų proc ŽENKLŲ čia.
 		- Dauguma AHK išraiškų yra palaikomi.
 		- Jūs galite naudoti stygos, kintamuosius, masyvus ir funkcijas.
 		- Norėdami naudoti stygas, pridėti juos į kabutes aminus, pvz .: var = "A".
@@ -904,7 +904,7 @@
 	d_Lang112 =	Pašto dėžutę nerastas.
 	d_Lang113 =	Pranešimų klaida.
 	d_Lang114 =	Eksportuotos (net jei sudaromi) su Send Email funkcija (CDO) Skriptai turės matomų informations elektroninio pašto sąskaitas, naudotas slaptažodį. PMC projekto failas neturi tokios informacijos.
-	d_Lang115 	- Laikykite Alt nustatyti regioną į tą pačią vietą.
+	d_Lang115 =	- Laikykite Alt nustatyti regioną į tą pačią vietą.
 	d_Lang116 =	Perkelti ir įdiegti
 	d_Lang117 =	Eiti į atsisiuntimo puslapį
 		
