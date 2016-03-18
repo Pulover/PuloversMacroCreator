@@ -975,9 +975,9 @@
 		zawartość schowka).
 	Ex_AF_TT =	Pomija delikatną metodę aktywacji okna
 		i idzie prosto do silnego metody.
+	Ex_CM_TT =	Ustawia tryb współrzędnych Komendy mysz się w stosunku do obu aktywnego okna lub ekranu.
 	Ex_DH_TT =	Określa, czy okna są niewidoczne "widziane" przez skrypt.
 	Ex_DT_TT =	Określa, czy niewidoczne tekstu w oknie jest "widziany" w celu znalezienia okno. Ma to wpływ na polecenia, takie jak IfWinExist i WinActivate.
-	Ex_CM_TT =	Ustawia tryb współrzędnych Komendy mysz się w stosunku do obu aktywnego okna lub ekranu.
 	Ex_EdScript_TT =	Otwórz w edytorze zewnętrznym
 	Ex_EdVars_TT =	Wybierz zmienne globalne być wyeksportowane.
 	Ex_ExecScript_TT =	Uruchom skrypt
@@ -1021,11 +1021,11 @@
 		- Możesz użyć ciągi znaków, zmienne, tablice i funkcje.
 		- Aby używać łańcuchów, ująć w cudzysłów, np: var = "A".
 		- Wiele Oświadczenia są obsługiwane, na przykład: var = "a" || InStr (var, "b").
-	ExpView_TT =	Zaawansowany Edytor
 	ExpView2_TT =	Zaawansowany Edytor
+	ExpView_TT =	Zaawansowany Edytor
 	Fast_TT =	Używa szybsze wyszukiwanie metody (zalecane)
-	HiddenWin_TT =	Określa, czy okna są niewidoczne "widziane" przez skrypt.
 	HiddenText_TT =	Określa, czy niewidoczne tekstu w oknie jest "widziany" w celu znalezienia okno. Ma to wpływ na polecenia, takie jak IfWinExist i WinActivate.
+	HiddenWin_TT =	Określa, czy okna są niewidoczne "widziane" przez skrypt.
 	HScale_TT =	Skala wzrost
 	IconN_TT =	Numer grupy ikon
 	IfLVColor_TT =	Kliknij, aby wybrać kolor
@@ -1092,27 +1092,27 @@
 	WScale_TT =	Skala Szerokość
 		
 ; 20. Operators		
-	As_Oper_1 =	Przydzielać
-	As_Oper_2 =	Dodać
-	As_Oper_3 =	Odejmować
-	As_Oper_4 =	Mnożyć
-	As_Oper_5 =	Podzielić
-	As_Oper_6 =	Divide Floor
-	As_Oper_7 =	Powiązać
-	As_Oper_8 =	Bitwise inclusive OR
-	As_Oper_9 =	Bitwise AND
+	As_Oper_01 =	Przydzielać
+	As_Oper_02 =	Dodać
+	As_Oper_03 =	Odejmować
+	As_Oper_04 =	Mnożyć
+	As_Oper_05 =	Podzielić
+	As_Oper_06 =	Divide Floor
+	As_Oper_07 =	Powiązać
+	As_Oper_08 =	Bitwise inclusive OR
+	As_Oper_09 =	Bitwise AND
 	As_Oper_10 =	Bitwise exclusive OR
 	As_Oper_11 =	Right shift AND
 	As_Oper_12 =	Left shift AND
-	Co_Oper_1 =	Równy
-	Co_Oper_2 =	Równe (liter)
-	Co_Oper_3 =	Nie równe
-	Co_Oper_4 =	Większy
-	Co_Oper_5 =	Mniej
-	Co_Oper_6 =	Większe lub równe
-	Co_Oper_7 =	Mniejszy lub równy
-	Co_Oper_8 =	W (lista)
-	Co_Oper_9 =	Nie w (lista)
+	Co_Oper_01 =	Równy
+	Co_Oper_02 =	Równe (liter)
+	Co_Oper_03 =	Nie równe
+	Co_Oper_04 =	Większy
+	Co_Oper_05 =	Mniej
+	Co_Oper_06 =	Większe lub równe
+	Co_Oper_07 =	Mniejszy lub równy
+	Co_Oper_08 =	W (lista)
+	Co_Oper_09 =	Nie w (lista)
 	Co_Oper_10 =	Zawiera (lista)
 	Co_Oper_11 =	Nie zawiera (lista)
 	Co_Oper_12 =	Pomiędzy (linia 1) i (linia 2)
@@ -1210,7 +1210,7 @@
 	ControlGetPos	Pobiera pozycję i rozmiar kontrolę.
 	ControlGetText	Pobiera tekst z kontrolą.
 	ControlMove	Porusza się lub zmienia rozmiar kontrolę .
-	ControlSend / ControlSendRaw 	Wysyła symulowane naciśnięcia klawiszy do okna lub kontroli .
+	ControlSend / ControlSendRaw	Wysyła symulowane naciśnięcia klawiszy do okna lub kontroli .
 	ControlSetText	Zmienia tekst kontrolki .
 	CoordMode	Zestawy koordynować trybu dla różnych poleceń się w stosunku do obu aktywnego okna lub ekranu .
 	Cos	Zwraca cosinus trygonometryczne numer .
@@ -1299,7 +1299,7 @@
 	LoadPicture	Ładuje obrazek z pliku i zwraca uchwyt bitmapy lub ikony.
 	Log	Zwraca logarytm (o podstawie 10) z numeru.
 	Loop (files & folders)	Pobiera określone pliki lub foldery, po jednym na raz.
-	Loop (normal) 	Wykonaj serię poleceń wielokrotnie: albo określoną liczbę razy lub do momentu napotkania przerwie.
+	Loop (normal)	Wykonaj serię poleceń wielokrotnie: albo określoną liczbę razy lub do momentu napotkania przerwie.
 	Loop (parse a string)	Pobiera podciągi (pola) z ciągiem, jeden na raz.
 	Loop (read file contents)	Pobiera wiersze w pliku tekstowym, po jednym na raz (działa lepiej niż FileReadLine).
 	Loop (registry)	Pobiera zawartość określonego podklucz rejestru, jeden element naraz.

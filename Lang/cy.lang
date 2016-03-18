@@ -975,9 +975,9 @@
 		Cynnwys y clipfwrdd).
 	Ex_AF_TT =	Sgipiau y dull ysgafn o activating ffenestr
 		Ac yn mynd yn syth at y dull grymus.
+	Ex_CM_TT =	Setiau cydlynu modd ar gyfer llygoden gorchmynion i fod yn berthynol i naill ai'r ffenestr weithredol neu'r sgrin.
 	Ex_DH_TT =	Penderfynu a ffenestri anweledig yn "gweld" gan y sgript.
 	Ex_DT_TT =	Penderfynu a thestun anweledig mewn ffenestr yw "gweld" at ddibenion canfod y ffenestr. Mae hyn yn effeithio gorchmynion megis IfWinExist a WinActivate.
-	Ex_CM_TT =	Setiau cydlynu modd ar gyfer llygoden gorchmynion i fod yn berthynol i naill ai'r ffenestr weithredol neu'r sgrin.
 	Ex_EdScript_TT =	Agor mewn golygydd allanol
 	Ex_EdVars_TT =	Dewiswch newidynnau byd-eang i gael ei allforio.
 	Ex_ExecScript_TT =	Sgript rhedeg
@@ -1021,11 +1021,11 @@
 		- Gallwch ddefnyddio llinynnau, newidynnau, araeau a swyddogaethau.
 		- I ddefnyddio llinynnau, yn eu amgáu mewn dyfynodau, e.e. .: var = "yn".
 		- Datganiadau Lluosog yn cael eu cefnogi, e.e. .: var = "a" || INSTR (var, "b").
-	ExpView_TT =	Golygydd Uwch
 	ExpView2_TT =	Golygydd Uwch
+	ExpView_TT =	Golygydd Uwch
 	Fast_TT =	Defnyddio dull cyflymach chwilio (a argymhellir)
-	HiddenWin_TT =	Penderfynu a ffenestri anweledig yn "gweld" gan y sgript.
 	HiddenText_TT =	Penderfynu a thestun anweledig mewn ffenestr yw "gweld" at ddibenion canfod y ffenestr. Mae hyn yn effeithio gorchmynion megis IfWinExist a WinActivate.
+	HiddenWin_TT =	Penderfynu a ffenestri anweledig yn "gweld" gan y sgript.
 	HScale_TT =	Raddfa uchder
 	IconN_TT =	Nifer y grŵp eicon
 	IfLVColor_TT =	Cliciwch i ddewis lliw
@@ -1092,27 +1092,27 @@
 	WScale_TT =	Graddfa lled
 		
 ; 20. Operators		
-	As_Oper_1 =	Neilltuo
-	As_Oper_2 =	Ychwanegu
-	As_Oper_3 =	Tynnwch
-	As_Oper_4 =	Lluoswch
-	As_Oper_5 =	Divide
-	As_Oper_6 =	Rhaniad llawr
-	As_Oper_7 =	Concatenate
-	As_Oper_8 =	Bitwise gynhwysol NEU
-	As_Oper_9 =	Bitwise A
+	As_Oper_01 =	Neilltuo
+	As_Oper_02 =	Ychwanegu
+	As_Oper_03 =	Tynnwch
+	As_Oper_04 =	Lluoswch
+	As_Oper_05 =	Divide
+	As_Oper_06 =	Rhaniad llawr
+	As_Oper_07 =	Concatenate
+	As_Oper_08 =	Bitwise gynhwysol NEU
+	As_Oper_09 =	Bitwise A
 	As_Oper_10 =	Bitwise unigryw NEU
 	As_Oper_11 =	Sifft Right A
 	As_Oper_12 =	Sifft Chwith A
-	Co_Oper_1 =	Cyfartal
-	Co_Oper_2 =	Cyfartal (achos sensitif)
-	Co_Oper_3 =	Ddim yn gyfartal
-	Co_Oper_4 =	Mwy
-	Co_Oper_5 =	Llai
-	Co_Oper_6 =	Mwy neu gyfartal
-	Co_Oper_7 =	Llai neu'n hafal
-	Co_Oper_8 =	Yn (rhestr)
-	Co_Oper_9 =	Ddim mewn (rhestr)
+	Co_Oper_01 =	Cyfartal
+	Co_Oper_02 =	Cyfartal (achos sensitif)
+	Co_Oper_03 =	Ddim yn gyfartal
+	Co_Oper_04 =	Mwy
+	Co_Oper_05 =	Llai
+	Co_Oper_06 =	Mwy neu gyfartal
+	Co_Oper_07 =	Llai neu'n hafal
+	Co_Oper_08 =	Yn (rhestr)
+	Co_Oper_09 =	Ddim mewn (rhestr)
 	Co_Oper_10 =	Yn cynnwys (rhestr)
 	Co_Oper_11 =	Nid yw cynnwys (rhestr)
 	Co_Oper_12 =	Rhwng (llinell 1) a (llinell 2)
@@ -1210,7 +1210,7 @@
 	ControlGetPos	Adfer y sefyllfa a maint o reolaeth.
 	ControlGetText	Retrieves testun o reolaeth.
 	ControlMove	Symud neu newid maint rheolaeth.
-	ControlSend / ControlSendRaw 	Anfon keystrokes ffug i ffenestr neu reoli.
+	ControlSend / ControlSendRaw	Anfon keystrokes ffug i ffenestr neu reoli.
 	ControlSetText	Newidiadau destun rheolaeth.
 	CoordMode	Setiau cydlynu dull ar gyfer gwahanol gorchmynion i fod yn berthynol i naill ai'r ffenestr weithredol neu'r sgrin.
 	Cos	Dychwelyd y cosin trigonometrig Rhif.
@@ -1299,7 +1299,7 @@
 	LoadPicture	Llwythi llun o ffeil ac yn dychwelyd Didfap neu eicon handlen.
 	Log	Dychwelyd y logarithm (sylfaen 10) Rhif.
 	Loop (files & folders)	Adennill y ffeiliau neu ffolderi penodedig, un ar y tro.
-	Loop (normal) 	Perfformio cyfres o orchmynion dro ar ôl tro: naill ai y nifer penodol o weithiau neu hyd nes egwyl yn dod ar eu traws.
+	Loop (normal)	Perfformio cyfres o orchmynion dro ar ôl tro: naill ai y nifer penodol o weithiau neu hyd nes egwyl yn dod ar eu traws.
 	Loop (parse a string)	Retrieves substrings (caeau) o linyn, un ar y tro.
 	Loop (read file contents)	Adennill y llinellau mewn ffeil destun, un ar y tro (yn perfformio'n well na FileReadLine).
 	Loop (registry)	Adennill cynnwys y subkey gofrestrfa penodedig, un eitem ar y tro.

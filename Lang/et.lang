@@ -975,9 +975,9 @@
 		Sisu lõikelauale).
 	Ex_AF_TT =	Jätab õrn meetod aktiveerides aknas
 		Ja läheb otse jõuline meetod.
+	Ex_CM_TT =	Komplektid koordineerida režiimi Hiirekäsud olevat suhteline kas aktiivse akna või ekraanil.
 	Ex_DH_TT =	Määrab, kas nähtamatu aknad on "seen" skripti.
 	Ex_DT_TT =	Määrab, kas nähtamatu teksti aken "näinud", mille eesmärk on leida aknas. See mõjutab käske, nagu IfWinExist ja WinActivate.
-	Ex_CM_TT =	Komplektid koordineerida režiimi Hiirekäsud olevat suhteline kas aktiivse akna või ekraanil.
 	Ex_EdScript_TT =	Ava välist redaktorit
 	Ex_EdVars_TT =	Vali globaalseid muutujaid, mida eksporditakse.
 	Ex_ExecScript_TT =	Käivita skript
@@ -1021,11 +1021,11 @@
 		- Te võite kasutada stringe, muutujad, massiivid ja funktsioone.
 		- Kasutamiseks stringid, pange need tsitaadid, näiteks .: var = "a".
 		- Mitu Avaldused on toetatud, näiteks .: var = "a" || Instr (var, "b").
-	ExpView_TT =	Täpsem Editor
 	ExpView2_TT =	Täpsem Editor
+	ExpView_TT =	Täpsem Editor
 	Fast_TT =	Kasutab kiiremini otsivad meetodit (recommended)
-	HiddenWin_TT =	Määrab, kas nähtamatu aknad on "seen" skripti.
 	HiddenText_TT =	Määrab, kas nähtamatu teksti aken "näinud", mille eesmärk on leida aknas. See mõjutab käske, nagu IfWinExist ja WinActivate.
+	HiddenWin_TT =	Määrab, kas nähtamatu aknad on "seen" skripti.
 	HScale_TT =	Kõrgus skaala
 	IconN_TT =	Number ikoon rühm
 	IfLVColor_TT =	Kliki vali värv
@@ -1092,27 +1092,27 @@
 	WScale_TT =	Laius skaala
 		
 ; 20. Operators		
-	As_Oper_1 =	Määrama
-	As_Oper_2 =	Lisama
-	As_Oper_3 =	Lahutama
-	As_Oper_4 =	Korruta
-	As_Oper_5 =	Veelahe
-	As_Oper_6 =	Põranda lõhe
-	As_Oper_7 =	CONCATENATE
-	As_Oper_8 =	Bitikaupa kaasava OR
-	As_Oper_9 =	Bitikaupa JA
+	As_Oper_01 =	Määrama
+	As_Oper_02 =	Lisama
+	As_Oper_03 =	Lahutama
+	As_Oper_04 =	Korruta
+	As_Oper_05 =	Veelahe
+	As_Oper_06 =	Põranda lõhe
+	As_Oper_07 =	CONCATENATE
+	As_Oper_08 =	Bitikaupa kaasava OR
+	As_Oper_09 =	Bitikaupa JA
 	As_Oper_10 =	Bitikaupa välistav VÕI
 	As_Oper_11 =	Paremalenihe JA
 	As_Oper_12 =	Vasakulenihe JA
-	Co_Oper_1 =	Võrdne
-	Co_Oper_2 =	Võrdsed (tõstutundlik)
-	Co_Oper_3 =	Ei võrdu
-	Co_Oper_4 =	Suurem
-	Co_Oper_5 =	Vähem
-	Co_Oper_6 =	Suurem või võrdne
-	Co_Oper_7 =	Väiksem või võrdne
-	Co_Oper_8 =	In (nimekiri)
-	Co_Oper_9 =	Mitte (nimekiri)
+	Co_Oper_01 =	Võrdne
+	Co_Oper_02 =	Võrdsed (tõstutundlik)
+	Co_Oper_03 =	Ei võrdu
+	Co_Oper_04 =	Suurem
+	Co_Oper_05 =	Vähem
+	Co_Oper_06 =	Suurem või võrdne
+	Co_Oper_07 =	Väiksem või võrdne
+	Co_Oper_08 =	In (nimekiri)
+	Co_Oper_09 =	Mitte (nimekiri)
 	Co_Oper_10 =	Sisaldab (nimekiri)
 	Co_Oper_11 =	Ei sisalda (nimekiri)
 	Co_Oper_12 =	Aastatel (joon 1) ja (joon 2)
@@ -1210,7 +1210,7 @@
 	ControlGetPos	Otsib asukohta ja suurust kontrolli.
 	ControlGetText	Otsib teksti kontroll.
 	ControlMove	Liigub või suurust muuta kontrolli.
-	ControlSend / ControlSendRaw 	Saadab simuleeritud klahvivajutused akna või kontrolli.
+	ControlSend / ControlSendRaw	Saadab simuleeritud klahvivajutused akna või kontrolli.
 	ControlSetText	Muudab teksti kontroll.
 	CoordMode	Komplektid koordineerida režiim erinevat käske olevat suhteline kas aktiivse akna või ekraanil.
 	Cos	Tagasiside trigonomeetriliste koosinuse arv.
@@ -1299,7 +1299,7 @@
 	LoadPicture	Koormus pildi faili ja tagastab bitmap või ikooni käepide.
 	Log	Tagasiside logaritmi (alus 10) arvu.
 	Loop (files & folders)	Otsib määratud failid või kaustad, üks korraga.
-	Loop (normal) 	Tehakse rida käske korduvalt: kas määratud arv kordi või kuni paus on tekkinud.
+	Loop (normal)	Tehakse rida käske korduvalt: kas määratud arv kordi või kuni paus on tekkinud.
 	Loop (parse a string)	Otsib alamstringide (väljad) alates jada, üks korraga.
 	Loop (read file contents)	Otsib read tekstifaili, üks korraga (täidab paremini kui FileReadLine).
 	Loop (registry)	Otsib sisu määratud alamvõti, üks ese korraga.

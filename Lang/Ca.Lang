@@ -975,9 +975,9 @@
 		el contingut del porta-retalls).
 	Ex_AF_TT =	Omet el mètode suau d'activar una finestra
 		i va directament al mètode contundent.
+	Ex_CM_TT =	Estableix el mode de coordenades per les ordres de ratolí per a ser relativa a qualsevol de la finestra activa o la pantalla.
 	Ex_DH_TT =	Determina si les finestres invisibles són "vistos" pel guió.
 	Ex_DT_TT =	Determina si el text invisible en una finestra és "vista" per tal de trobar la finestra. Això afecta a ordres com IfWinExist i WinActivate.
-	Ex_CM_TT =	Estableix el mode de coordenades per les ordres de ratolí per a ser relativa a qualsevol de la finestra activa o la pantalla.
 	Ex_EdScript_TT =	Avaa ulkoisen editorin
 	Ex_EdVars_TT =	Seleccionar variables globals destinats a l'exportació.
 	Ex_ExecScript_TT =	Executar script
@@ -1021,11 +1021,11 @@
 		- Vostè pot usar cadenes, variables, matrius i funcions.
 		- Per utilitzar cordes, tancar-los entre cometes, per exemple: var = "a".
 		- Són compatibles Diverses sentències, per exemple: var = "a" || Instr (var, "b").
-	ExpView_TT =	Editor Avançat
 	ExpView2_TT =	Editor Avançat
+	ExpView_TT =	Editor Avançat
 	Fast_TT =	Utilitza un mètode de cerca més ràpid (recomanat)
-	HiddenWin_TT =	Determina si les finestres invisibles són "vistos" pel guió.
 	HiddenText_TT =	Determina si el text invisible en una finestra és "vista" per tal de trobar la finestra. Això afecta a ordres com IfWinExist i WinActivate.
+	HiddenWin_TT =	Determina si les finestres invisibles són "vistos" pel guió.
 	HScale_TT =	Escala d'altura
 	IconN_TT =	Número del grup d'icones
 	IfLVColor_TT =	Feu clic per seleccionar un color
@@ -1092,27 +1092,27 @@
 	WScale_TT =	Escala Ample
 		
 ; 20. Operators		
-	As_Oper_1 =	Assignar
-	As_Oper_2 =	Afegir
-	As_Oper_3 =	Sostreure
-	As_Oper_4 =	Multiplicar
-	As_Oper_5 =	Dividir
-	As_Oper_6 =	Divisió Floor
-	As_Oper_7 =	Concatenar
-	As_Oper_8 =	Bitwise inclusive OR
-	As_Oper_9 =	Bitwise AND
+	As_Oper_01 =	Assignar
+	As_Oper_02 =	Afegir
+	As_Oper_03 =	Sostreure
+	As_Oper_04 =	Multiplicar
+	As_Oper_05 =	Dividir
+	As_Oper_06 =	Divisió Floor
+	As_Oper_07 =	Concatenar
+	As_Oper_08 =	Bitwise inclusive OR
+	As_Oper_09 =	Bitwise AND
 	As_Oper_10 =	Bitwise exclusive OR
 	As_Oper_11 =	Right shift AND
 	As_Oper_12 =	Left shift AND
-	Co_Oper_1 =	Igual
-	Co_Oper_2 =	Equal (majúscules i minúscules)
-	Co_Oper_3 =	No és igual
-	Co_Oper_4 =	Major
-	Co_Oper_5 =	Menys
-	Co_Oper_6 =	Major o igual
-	Co_Oper_7 =	Menor o igual
-	Co_Oper_8 =	En (llista)
-	Co_Oper_9 =	No en (llista)
+	Co_Oper_01 =	Igual
+	Co_Oper_02 =	Equal (majúscules i minúscules)
+	Co_Oper_03 =	No és igual
+	Co_Oper_04 =	Major
+	Co_Oper_05 =	Menys
+	Co_Oper_06 =	Major o igual
+	Co_Oper_07 =	Menor o igual
+	Co_Oper_08 =	En (llista)
+	Co_Oper_09 =	No en (llista)
 	Co_Oper_10 =	Conté (llista)
 	Co_Oper_11 =	No conté (llista)
 	Co_Oper_12 =	Entre (línia 1) i (línia 2)
@@ -1210,7 +1210,7 @@
 	ControlGetPos	Recupera la posició i la mida d'un control .
 	ControlGetText	Recupera el text d'un control .
 	ControlMove	Mou o canvia la mida d'un control .
-	ControlSend / ControlSendRaw 	Envia pulsacions de tecles simulades per una finestra o de control .
+	ControlSend / ControlSendRaw	Envia pulsacions de tecles simulades per una finestra o de control .
 	ControlSetText	Canvia el text d'un control .
 	CoordMode	Estableix la manera de coordinar a diversos comandaments que és relatiu a qualsevol de la finestra activa o la pantalla .
 	Cos	Retorna el cosinus trigonomètric del Nombre .
@@ -1299,7 +1299,7 @@
 	LoadPicture	Carrega una imatge d'arxiu i retorna un identificador de mapa de bits o icona.
 	Log	Retorna el logaritme (base 10) del nombre.
 	Loop (files & folders)	Recupera els arxius o carpetes especificats, un a la vegada.
-	Loop (normal) 	Realitzeu una sèrie d'ordres en diverses ocasions: es troben ja sigui el nombre especificat de vegades o fins trencament.
+	Loop (normal)	Realitzeu una sèrie d'ordres en diverses ocasions: es troben ja sigui el nombre especificat de vegades o fins trencament.
 	Loop (parse a string)	Recupera subcadenes (camps) d'una cadena, d'una en una.
 	Loop (read file contents)	Recupera les línies en un arxiu de text, d'una en una (millor rendiment que FileReadLine).
 	Loop (registry)	Recupera el contingut de la subclau especificada, un element a la vegada.

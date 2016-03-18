@@ -975,9 +975,9 @@
 		obsah schránky).
 	Ex_AF_TT =	Preskočí jemný spôsob aktivovanie okna
 		a ide rovno do násilnej metódy.
+	Ex_CM_TT =	Sady režime Súradnice myši príkazy byť vztiahnuté buď aktívne okno alebo na obrazovke.
 	Ex_DH_TT =	Určuje, či neviditeľné okná sú "vidieť" pomocou skriptu.
 	Ex_DT_TT =	Určuje, či neviditeľný textu v okne je "vidieť" za účelom zistenia okna. To má vplyv na príkazy, ako je IfWinExist a WinActivate.
-	Ex_CM_TT =	Sady režime Súradnice myši príkazy byť vztiahnuté buď aktívne okno alebo na obrazovke.
 	Ex_EdScript_TT =	Otvoriť v externom editore
 	Ex_EdVars_TT =	Vyberte globálne premenné, ktoré chcete exportovať.
 	Ex_ExecScript_TT =	Spustiť skript
@@ -1021,11 +1021,11 @@
 		- Môžete použiť reťazca, premenné, pole a funkcia.
 		- Ak chcete použiť reťazca, uzavrite do úvodzoviek, napríklad: var = "A".
 		- Viac príkazov sú podporované, napr: var = "a" || Instru (var, "b").
-	ExpView_TT =	Rozšírené Editor
 	ExpView2_TT =	Rozšírené Editor
+	ExpView_TT =	Rozšírené Editor
 	Fast_TT =	Používa rýchlejšie vyhľadávanie metódu (odporúčané)
-	HiddenWin_TT =	Určuje, či neviditeľné okná sú "vidieť" pomocou skriptu.
 	HiddenText_TT =	Určuje, či neviditeľný textu v okne je "vidieť" za účelom zistenia okna. To má vplyv na príkazy, ako je IfWinExist a WinActivate.
+	HiddenWin_TT =	Určuje, či neviditeľné okná sú "vidieť" pomocou skriptu.
 	HScale_TT =	Výška stupnice
 	IconN_TT =	Číslo skupiny ikon
 	IfLVColor_TT =	Kliknutím vyberte farbu
@@ -1092,27 +1092,27 @@
 	WScale_TT =	Šírka stupnice
 		
 ; 20. Operators		
-	As_Oper_1 =	Priradiť
-	As_Oper_2 =	Pridať
-	As_Oper_3 =	Odčítať
-	As_Oper_4 =	Násobenie
-	As_Oper_5 =	Rozdeliť
-	As_Oper_6 =	Podlahové delenie
-	As_Oper_7 =	Spájať
-	As_Oper_8 =	Bitwise inclusive OR
-	As_Oper_9 =	Bitwise AND
+	As_Oper_01 =	Priradiť
+	As_Oper_02 =	Pridať
+	As_Oper_03 =	Odčítať
+	As_Oper_04 =	Násobenie
+	As_Oper_05 =	Rozdeliť
+	As_Oper_06 =	Podlahové delenie
+	As_Oper_07 =	Spájať
+	As_Oper_08 =	Bitwise inclusive OR
+	As_Oper_09 =	Bitwise AND
 	As_Oper_10 =	Bitwise exclusive OR
 	As_Oper_11 =	Right shift AND
 	As_Oper_12 =	Left shift AND
-	Co_Oper_1 =	Rovný
-	Co_Oper_2 =	Rovné (case sensitive)
-	Co_Oper_3 =	Nie je rovné
-	Co_Oper_4 =	Väčšia
-	Co_Oper_5 =	Menej
-	Co_Oper_6 =	Väčšie alebo rovné
-	Co_Oper_7 =	Menší alebo rovný
-	Co_Oper_8 =	In (zoznam)
-	Co_Oper_9 =	Nie v (zoznam)
+	Co_Oper_01 =	Rovný
+	Co_Oper_02 =	Rovné (case sensitive)
+	Co_Oper_03 =	Nie je rovné
+	Co_Oper_04 =	Väčšia
+	Co_Oper_05 =	Menej
+	Co_Oper_06 =	Väčšie alebo rovné
+	Co_Oper_07 =	Menší alebo rovný
+	Co_Oper_08 =	In (zoznam)
+	Co_Oper_09 =	Nie v (zoznam)
 	Co_Oper_10 =	Obsahuje (zoznam)
 	Co_Oper_11 =	Nie je obsahuje (zoznam)
 	Co_Oper_12 =	Medzi (linka 1) a (linka 2)
@@ -1210,7 +1210,7 @@
 	ControlGetPos	Načíta pozíciu a veľkosť ovládacieho prvku.
 	ControlGetText	Načíta text z ovládacieho prvku.
 	ControlMove	Presunie alebo zmení kontrolu.
-	ControlSend / ControlSendRaw 	Odošle simulované stlačenia klávesov do okna alebo ovládací prvok.
+	ControlSend / ControlSendRaw	Odošle simulované stlačenia klávesov do okna alebo ovládací prvok.
 	ControlSetText	Zmení text ovládacieho prvku.
 	CoordMode	Sady koordinovať režim pre rôzne príkazy, ktoré sa v porovnaní s buď aktívne okno alebo na obrazovke.
 	Cos	Vráti trigonometrický COSINUS čísla.
@@ -1299,7 +1299,7 @@
 	LoadPicture	Načíta obrázok zo súboru a vracia bitmapy alebo ikony rukoväť.
 	Log	Vráti logaritmus (základ 10) Number.
 	Loop (files & folders)	Načíta určité súbory alebo priečinky, jeden po druhom.
-	Loop (normal) 	Vykonajte sériu príkazov opakovane: buď zadaný počet opakovaní alebo kým prestávke sa stretol.
+	Loop (normal)	Vykonajte sériu príkazov opakovane: buď zadaný počet opakovaní alebo kým prestávke sa stretol.
 	Loop (parse a string)	Načíta čiastkové reťazca (pole), z povrázku, jeden po druhom.
 	Loop (read file contents)	Načíta riadky v textovom súbore, jeden po druhom (lepšie ako FileReadLine).
 	Loop (registry)	Načíta obsah zadaného podkľúč databázy Registry, jeden kus po druhom.

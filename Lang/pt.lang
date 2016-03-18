@@ -975,9 +975,9 @@
 		o conteúdo da Área de Transferência).
 	Ex_AF_TT =	Pula o método gentil de ativação da janela
 		e vai direto para o método bruto.
+	Ex_CM_TT =	Configura o modo de coordenadas para os comandos do mouse para ser relativo a qualquer janela ativa ou na tela.
 	Ex_DH_TT =	Determina se janelas invisíveis são "vistas" pelo script.
 	Ex_DT_TT =	Determina se o texto invisível em que uma janela é "visto" com a finalidade de encontrar a janela. Isso afeta comandos como IfWinExist e WinActivate.
-	Ex_CM_TT =	Configura o modo de coordenadas para os comandos do mouse para ser relativo a qualquer janela ativa ou na tela.
 	Ex_EdScript_TT =	Abrir em editor externo
 	Ex_EdVars_TT =	Selecionar variáveis globais a serem exportadas.
 	Ex_ExecScript_TT =	Executar script
@@ -1021,11 +1021,11 @@
 		- Pode usar textos, variáveis, matrizes e funções.
 		- Para usar textos, coloque-os entre aspas, ex.: var = "a".
 		- Condições multiplas são suportadas, ex.: var = "a" || InStr(var, "b").
-	ExpView_TT =	Editor Avançado
 	ExpView2_TT =	Editor Avançado
+	ExpView_TT =	Editor Avançado
 	Fast_TT =	Usa um método de busca mais rápido (recomendado)
-	HiddenWin_TT =	Determina se janelas invisíveis são "vistas" pelo script.
 	HiddenText_TT =	Determina se o texto invisível em que uma janela é "visto" com a finalidade de encontrar a janela. Isso afeta comandos como IfWinExist e WinActivate.
+	HiddenWin_TT =	Determina se janelas invisíveis são "vistas" pelo script.
 	HScale_TT =	Escala de altura
 	IconN_TT =	Número do grupo de ícones
 	IfLVColor_TT =	Clique para selecionar uma cor
@@ -1092,27 +1092,27 @@
 	WScale_TT =	Escala de largura
 		
 ; 20. Operators		
-	As_Oper_1 =	Atribuir
-	As_Oper_2 =	Adicionar
-	As_Oper_3 =	Subtrair
-	As_Oper_4 =	Multiplicar
-	As_Oper_5 =	Dividir
-	As_Oper_6 =	Dividir (arrendondar)
-	As_Oper_7 =	Concatenar
-	As_Oper_8 =	Bitwise inclusive OR
-	As_Oper_9 =	Bitwise AND
+	As_Oper_01 =	Atribuir
+	As_Oper_02 =	Adicionar
+	As_Oper_03 =	Subtrair
+	As_Oper_04 =	Multiplicar
+	As_Oper_05 =	Dividir
+	As_Oper_06 =	Dividir (arrendondar)
+	As_Oper_07 =	Concatenar
+	As_Oper_08 =	Bitwise inclusive OR
+	As_Oper_09 =	Bitwise AND
 	As_Oper_10 =	Bitwise exclusive OR
 	As_Oper_11 =	Right shift AND
 	As_Oper_12 =	Left shift AND
-	Co_Oper_1 =	Igual
-	Co_Oper_2 =	Igual (diferenciar maiúsc./minúsc.)
-	Co_Oper_3 =	Diferente
-	Co_Oper_4 =	Maior
-	Co_Oper_5 =	Menor
-	Co_Oper_6 =	Maior ou igual
-	Co_Oper_7 =	Menor ou igual
-	Co_Oper_8 =	Em (lista)
-	Co_Oper_9 =	Não em (lista)
+	Co_Oper_01 =	Igual
+	Co_Oper_02 =	Igual (diferenciar maiúsc./minúsc.)
+	Co_Oper_03 =	Diferente
+	Co_Oper_04 =	Maior
+	Co_Oper_05 =	Menor
+	Co_Oper_06 =	Maior ou igual
+	Co_Oper_07 =	Menor ou igual
+	Co_Oper_08 =	Em (lista)
+	Co_Oper_09 =	Não em (lista)
 	Co_Oper_10 =	Contém (lista)
 	Co_Oper_11 =	Não contém (lista)
 	Co_Oper_12 =	Entre (linha 1) e (linha 2)
@@ -1210,7 +1210,7 @@
 	ControlGetPos	Recupera a posição e o tamanho de um controle.
 	ControlGetText	Recupera o texto a partir de um controle.
 	ControlMove	Move ou redimensiona um controle.
-	ControlSend / ControlSendRaw 	Envia teclas simuladas para uma janela ou controle.
+	ControlSend / ControlSendRaw	Envia teclas simuladas para uma janela ou controle.
 	ControlSetText	Altera o texto de um controle.
 	CoordMode	Configura o modo de coordenar vários comandos para ser relativo ao ou a janela ativa ou tela.
 	Cos	Retorna o cosseno trigonométrico de Número.
@@ -1299,7 +1299,7 @@
 	LoadPicture	Carrega uma imagem de arquivo e retorna um bitmap ou ícone do manípulo.
 	Log	Retorna o logaritmo (base 10) de número.
 	Loop (files & folders)	Recupera os arquivos especificados ou pastas, uma de cada vez.
-	Loop (normal) 	Realizar uma série de comandos repetidamente: ou o número especificado de vezes ou até ruptura for encontrado.
+	Loop (normal)	Realizar uma série de comandos repetidamente: ou o número especificado de vezes ou até ruptura for encontrado.
 	Loop (parse a string)	Recupera subsequências (campos) de uma sequência de caracteres, um de cada vez.
 	Loop (read file contents)	Recupera as linhas em um arquivo de texto, um de cada vez (tem um desempenho melhor do que FileReadLine).
 	Loop (registry)	Recupera o conteúdo da subchave especificada, um item de cada vez.

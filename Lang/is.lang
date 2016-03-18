@@ -975,9 +975,9 @@
 		Innihald klemmuspjald).
 	Ex_AF_TT =	Sleppa blíður aðferð virkja glugga
 		Og fer beint í forceful aðferð.
+	Ex_CM_TT =	Leikmynd samræma ham fyrir mús skipanir að það sé miðað við annaðhvort virks glugga eða skjánum.
 	Ex_DH_TT =	Ákvarðar hvort ósýnilega gluggar "séð" af handriti.
 	Ex_DT_TT =	Ákvarðar hvort ósýnilega texta í glugga er "séð" í þeim tilgangi að finna gluggann. Þetta hefur áhrif á skipanir eins og IfWinExist og WinActivate.
-	Ex_CM_TT =	Leikmynd samræma ham fyrir mús skipanir að það sé miðað við annaðhvort virks glugga eða skjánum.
 	Ex_EdScript_TT =	Opna í ytri ritil
 	Ex_EdVars_TT =	Veldu alþjóðlegum breytur til að vera flutt.
 	Ex_ExecScript_TT =	Keyra skriftu
@@ -1021,11 +1021,11 @@
 		- Þú getur notað strengir, breytur, fylki og aðgerðir.
 		- Til að nota strengi, láta þá innan gæsalappa, t.d .: var = "a".
 		- Margar Yfirlýsingar eru studd, t.d .: var = "a" || Instr (var, "b").
-	ExpView_TT =	Advanced Editor
 	ExpView2_TT =	Advanced Editor
+	ExpView_TT =	Advanced Editor
 	Fast_TT =	Notar hraðar leita aðferð (mælt með)
-	HiddenWin_TT =	Ákvarðar hvort ósýnilega gluggar "séð" af handriti.
 	HiddenText_TT =	Ákvarðar hvort ósýnilega texta í glugga er "séð" í þeim tilgangi að finna gluggann. Þetta hefur áhrif á skipanir eins og IfWinExist og WinActivate.
+	HiddenWin_TT =	Ákvarðar hvort ósýnilega gluggar "séð" af handriti.
 	HScale_TT =	Hæð mælikvarði
 	IconN_TT =	Fjöldi táknið hópnum
 	IfLVColor_TT =	Smelltu til að velja lit
@@ -1092,27 +1092,27 @@
 	WScale_TT =	Breidd mælikvarða
 		
 ; 20. Operators		
-	As_Oper_1 =	Úthluta
-	As_Oper_2 =	Bæta
-	As_Oper_3 =	Draga
-	As_Oper_4 =	Margfalda
-	As_Oper_5 =	Divide
-	As_Oper_6 =	Floor skipta
-	As_Oper_7 =	Concatenate
-	As_Oper_8 =	Bita innifalið OR
-	As_Oper_9 =	Bita OG
+	As_Oper_01 =	Úthluta
+	As_Oper_02 =	Bæta
+	As_Oper_03 =	Draga
+	As_Oper_04 =	Margfalda
+	As_Oper_05 =	Divide
+	As_Oper_06 =	Floor skipta
+	As_Oper_07 =	Concatenate
+	As_Oper_08 =	Bita innifalið OR
+	As_Oper_09 =	Bita OG
 	As_Oper_10 =	Bita einkarétt OR
 	As_Oper_11 =	Hægri vakt og
 	As_Oper_12 =	Vinstri Shift og
-	Co_Oper_1 =	Jafnt
-	Co_Oper_2 =	Jöfn (tilfelli næmur)
-	Co_Oper_3 =	Ekki jöfn
-	Co_Oper_4 =	Greater
-	Co_Oper_5 =	Minna
-	Co_Oper_6 =	Meiri eða jöfn
-	Co_Oper_7 =	Minna en eða jafnt
-	Co_Oper_8 =	Í (listi)
-	Co_Oper_9 =	Ekki í (listi)
+	Co_Oper_01 =	Jafnt
+	Co_Oper_02 =	Jöfn (tilfelli næmur)
+	Co_Oper_03 =	Ekki jöfn
+	Co_Oper_04 =	Greater
+	Co_Oper_05 =	Minna
+	Co_Oper_06 =	Meiri eða jöfn
+	Co_Oper_07 =	Minna en eða jafnt
+	Co_Oper_08 =	Í (listi)
+	Co_Oper_09 =	Ekki í (listi)
 	Co_Oper_10 =	Inniheldur (listi)
 	Co_Oper_11 =	Ekki inniheldur (listi)
 	Co_Oper_12 =	Milli (lína 1) og (lína 2)
@@ -1210,7 +1210,7 @@
 	ControlGetPos	Sækir um stöðu og stærð stjórn.
 	ControlGetText	Sækir texta úr böndunum.
 	ControlMove	Færir eða resizes á stjórn.
-	ControlSend / ControlSendRaw 	Sendir endurprentanir mínútum til glugga eða stjórn.
+	ControlSend / ControlSendRaw	Sendir endurprentanir mínútum til glugga eða stjórn.
 	ControlSetText	Breytingar á texta á stjórn.
 	CoordMode	Leikmynd samræma ham fyrir ýmsar skipanir að það sé miðað við annaðhvort virks glugga eða skjánum.
 	Cos	Skilar hornaföllum kósínus af Number.
@@ -1299,7 +1299,7 @@
 	LoadPicture	Hleðst mynd úr skrá og skilar punktamynd eða táknið höndla.
 	Log	Skilar logra (stöð 10) Number.
 	Loop (files & folders)	Sækir tilgreind skrár eða möppur, eitt í einu.
-	Loop (normal) 	Framkvæma röð af skipunum ítrekað: annaðhvort tiltekinn fjöldi af sinnum eða þangað brot er komið.
+	Loop (normal)	Framkvæma röð af skipunum ítrekað: annaðhvort tiltekinn fjöldi af sinnum eða þangað brot er komið.
 	Loop (parse a string)	Sækir hlutstrengi (reiti) frá streng, einn í einu.
 	Loop (read file contents)	Sækir línurnar í textaskrá, einn í einu (virkar betur en FileReadLine).
 	Loop (registry)	Sækir innihald tilgreinda skrásetning subkey, eitt atriði í einu.

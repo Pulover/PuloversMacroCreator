@@ -975,9 +975,9 @@
 		indholdet af klippebordet).
 	Ex_AF_TT =	Springer den blide fremgangsmåde til aktivering af et vindue
 		og går lige til insisterende metode.
+	Ex_CM_TT =	Sæt koordinere mode for mus kommandoer at være relativ til enten det aktive vindue eller skærmen.
 	Ex_DH_TT =	Bestemmer, om usynlige vinduer "set" af scriptet.
 	Ex_DT_TT =	Bestemmer, om usynlig tekst i et vindue er "set" med det formål at finde vinduet. Dette påvirker kommandoer såsom IfWinExist og WinActivate.
-	Ex_CM_TT =	Sæt koordinere mode for mus kommandoer at være relativ til enten det aktive vindue eller skærmen.
 	Ex_EdScript_TT =	Open in externe editor
 	Ex_EdVars_TT =	Vælg globale variabler, der skal eksporteres.
 	Ex_ExecScript_TT =	Kør script
@@ -1021,11 +1021,11 @@
 		- Du må bruge strygere, variabler, arrays og funktioner.
 		- For at bruge strenge, vedlægge dem i anførselstegn, f.eks: var = "a".
 		- Flere Udtalelser understøttes, fx: var = "a" || InStr (var, "b").
-	ExpView_TT =	Avanceret Editor
 	ExpView2_TT =	Avanceret Editor
+	ExpView_TT =	Avanceret Editor
 	Fast_TT =	Bruger en hurtigere søgemetode (anbefales)
-	HiddenWin_TT =	Bestemmer, om usynlige vinduer "set" af scriptet.
 	HiddenText_TT =	Bestemmer, om usynlig tekst i et vindue er "set" med det formål at finde vinduet. Dette påvirker kommandoer såsom IfWinExist og WinActivate.
+	HiddenWin_TT =	Bestemmer, om usynlige vinduer "set" af scriptet.
 	HScale_TT =	Højde skala
 	IconN_TT =	Antallet af ikonet gruppen
 	IfLVColor_TT =	Klik for at vælge en farve
@@ -1092,27 +1092,27 @@
 	WScale_TT =	Bredde skala
 		
 ; 20. Operators		
-	As_Oper_1 =	Tildel
-	As_Oper_2 =	Tilføj
-	As_Oper_3 =	Trække
-	As_Oper_4 =	Multiply
-	As_Oper_5 =	Opdel
-	As_Oper_6 =	Gulv kløft
-	As_Oper_7 =	Sammenkæde
-	As_Oper_8 =	Bitwise inclusive OR
-	As_Oper_9 =	Bitwise AND
+	As_Oper_01 =	Tildel
+	As_Oper_02 =	Tilføj
+	As_Oper_03 =	Trække
+	As_Oper_04 =	Multiply
+	As_Oper_05 =	Opdel
+	As_Oper_06 =	Gulv kløft
+	As_Oper_07 =	Sammenkæde
+	As_Oper_08 =	Bitwise inclusive OR
+	As_Oper_09 =	Bitwise AND
 	As_Oper_10 =	Bitwise exclusive OR
 	As_Oper_11 =	Right shift AND
 	As_Oper_12 =	Left shift AND
-	Co_Oper_1 =	Equal
-	Co_Oper_2 =	Equal (små bogstaver)
-	Co_Oper_3 =	Ikke lig
-	Co_Oper_4 =	Større
-	Co_Oper_5 =	Mindre
-	Co_Oper_6 =	Større end eller lig
-	Co_Oper_7 =	Mindre end eller lig
-	Co_Oper_8 =	I (liste)
-	Co_Oper_9 =	Ikke i (liste)
+	Co_Oper_01 =	Equal
+	Co_Oper_02 =	Equal (små bogstaver)
+	Co_Oper_03 =	Ikke lig
+	Co_Oper_04 =	Større
+	Co_Oper_05 =	Mindre
+	Co_Oper_06 =	Større end eller lig
+	Co_Oper_07 =	Mindre end eller lig
+	Co_Oper_08 =	I (liste)
+	Co_Oper_09 =	Ikke i (liste)
 	Co_Oper_10 =	Indeholder (listen)
 	Co_Oper_11 =	Ikke indeholder (liste)
 	Co_Oper_12 =	Mellem (linie 1) og (linje 2)
@@ -1210,7 +1210,7 @@
 	ControlGetPos	Henter positionen og størrelsen af en kontrol.
 	ControlGetText	Henter tekst fra en kontrol.
 	ControlMove	Flytter eller ændrer størrelse på en kontrol.
-	ControlSend / ControlSendRaw 	Sender simulerede tastetryk til et vindue eller kontrol.
+	ControlSend / ControlSendRaw	Sender simulerede tastetryk til et vindue eller kontrol.
 	ControlSetText	Ændrer teksten til en kontrol.
 	CoordMode	Indstiller koordinere mode for forskellige kommandoer at være relativ til enten det aktive vindue eller skærmen.
 	Cos	Returnerer den trigonometriske cosinus af Tal .
@@ -1299,7 +1299,7 @@
 	LoadPicture	Indlæser et billede fra fil og returnerer en bitmap eller ikon håndtag.
 	Log	Returnerer logaritme (basis 10) i nummer.
 	Loop (files & folders)	Henter de angivne filer eller mapper, en ad gangen.
-	Loop (normal) 	Udføre en række kommandoer gentagne gange: enten angivne antal gange, eller indtil pause stødt.
+	Loop (normal)	Udføre en række kommandoer gentagne gange: enten angivne antal gange, eller indtil pause stødt.
 	Loop (parse a string)	Henter delstrenge (felter) fra en streng, en ad gangen.
 	Loop (read file contents)	Henter linjerne i en tekstfil, en ad gangen (præsterer bedre end FileReadLine).
 	Loop (registry)	Henter indholdet af den angivne undernøgle i registreringsdatabasen, et element ad gangen.

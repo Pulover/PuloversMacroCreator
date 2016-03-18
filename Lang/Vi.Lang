@@ -975,9 +975,9 @@
 		các nội dung của clipboard).
 	Ex_AF_TT =	Bỏ qua các phương pháp nhẹ nhàng kích hoạt một cửa sổ
 		và đi thẳng vào các phương pháp mạnh mẽ.
+	Ex_CM_TT =	Bộ chế độ phối hợp cho các lệnh chuột để được liên quan đến một trong hai cửa sổ hoạt động hay màn hình.
 	Ex_DH_TT =	Xác định xem cửa sổ vô hình đang "nhìn thấy" của kịch bản.
 	Ex_DT_TT =	Xác định xem văn bản vô hình trong một cửa sổ được "nhìn thấy" với mục đích của việc tìm kiếm các cửa sổ. Điều này ảnh hưởng đến lệnh như IfWinExist và WinActivate.
-	Ex_CM_TT =	Bộ chế độ phối hợp cho các lệnh chuột để được liên quan đến một trong hai cửa sổ hoạt động hay màn hình.
 	Ex_EdScript_TT =	Mở trong trình soạn thảo bên ngoài
 	Ex_EdVars_TT =	Chọn các biến toàn cầu được xuất khẩu.
 	Ex_ExecScript_TT =	Chạy kịch bản
@@ -1021,11 +1021,11 @@
 		- Bạn có thể sử dụng các chuỗi, các biến, mảng và chức năng.
 		- Để sử dụng dây, đặt chúng trong dấu ngoặc kép, ví dụ: var = "a".
 		- Nhiều báo cáo được hỗ trợ, ví dụ như: var = "a" || InStr (var, "b").
-	ExpView_TT =	Biên tập viên cao cấp
 	ExpView2_TT =	Biên tập viên cao cấp
+	ExpView_TT =	Biên tập viên cao cấp
 	Fast_TT =	Sử dụng một phương pháp tìm kiếm nhanh hơn (đề nghị)
-	HiddenWin_TT =	Xác định xem cửa sổ vô hình đang "nhìn thấy" của kịch bản.
 	HiddenText_TT =	Xác định xem văn bản vô hình trong một cửa sổ được "nhìn thấy" với mục đích của việc tìm kiếm các cửa sổ. Điều này ảnh hưởng đến lệnh như IfWinExist và WinActivate.
+	HiddenWin_TT =	Xác định xem cửa sổ vô hình đang "nhìn thấy" của kịch bản.
 	HScale_TT =	Quy mô chiều cao
 	IconN_TT =	Số nhóm biểu tượng
 	IfLVColor_TT =	Nhấn vào đây để chọn một màu
@@ -1092,27 +1092,27 @@
 	WScale_TT =	Quy mô chiều rộng
 		
 ; 20. Operators		
-	As_Oper_1 =	Gán
-	As_Oper_2 =	Thêm
-	As_Oper_3 =	Trừ
-	As_Oper_4 =	Nhân
-	As_Oper_5 =	Chia
-	As_Oper_6 =	Tầng chia
-	As_Oper_7 =	Tiếp nhau
-	As_Oper_8 =	Bitwise inclusive OR
-	As_Oper_9 =	Bitwise AND
+	As_Oper_01 =	Gán
+	As_Oper_02 =	Thêm
+	As_Oper_03 =	Trừ
+	As_Oper_04 =	Nhân
+	As_Oper_05 =	Chia
+	As_Oper_06 =	Tầng chia
+	As_Oper_07 =	Tiếp nhau
+	As_Oper_08 =	Bitwise inclusive OR
+	As_Oper_09 =	Bitwise AND
 	As_Oper_10 =	Bitwise exclusive OR
 	As_Oper_11 =	Right shift AND
 	As_Oper_12 =	Left shift AND
-	Co_Oper_1 =	Như nhau
-	Co_Oper_2 =	Bằng (chữ hoa)
-	Co_Oper_3 =	Không bình đẳng
-	Co_Oper_4 =	Lớn hơn
-	Co_Oper_5 =	Ít
-	Co_Oper_6 =	Lớn hơn hoặc bằng
-	Co_Oper_7 =	Ít hơn hoặc bằng
-	Co_Oper_8 =	Trong (danh sách)
-	Co_Oper_9 =	Không phải trong (danh sách)
+	Co_Oper_01 =	Như nhau
+	Co_Oper_02 =	Bằng (chữ hoa)
+	Co_Oper_03 =	Không bình đẳng
+	Co_Oper_04 =	Lớn hơn
+	Co_Oper_05 =	Ít
+	Co_Oper_06 =	Lớn hơn hoặc bằng
+	Co_Oper_07 =	Ít hơn hoặc bằng
+	Co_Oper_08 =	Trong (danh sách)
+	Co_Oper_09 =	Không phải trong (danh sách)
 	Co_Oper_10 =	Chứa (danh sách)
 	Co_Oper_11 =	Không chứa (danh sách)
 	Co_Oper_12 =	Giữa (dòng 1) và (2 dòng)
@@ -1210,7 +1210,7 @@
 	ControlGetPos	Lấy vị trí và kích thước của một điều khiển.
 	ControlGetText	Lấy văn bản từ một điều khiển.
 	ControlMove	Di chuyển hoặc thay đổi kích thước một điều khiển.
-	ControlSend / ControlSendRaw 	Gửi tổ hợp phím mô phỏng một cửa sổ hoặc kiểm soát.
+	ControlSend / ControlSendRaw	Gửi tổ hợp phím mô phỏng một cửa sổ hoặc kiểm soát.
 	ControlSetText	Thay đổi nội dung của một điều khiển.
 	CoordMode	Bộ phối hợp chế độ cho các lệnh khác nhau để được liên quan đến một trong hai cửa sổ đang hoạt động hoặc màn hình.
 	Cos	Trả về cosin lượng giác của số.
@@ -1299,7 +1299,7 @@
 	LoadPicture	Tải một hình ảnh từ tập tin và trả về một bitmap hoặc biểu tượng tay cầm.
 	Log	Trả về logarit (cơ số 10) của số.
 	Loop (files & folders)	Lấy các tập tin hoặc thư mục được chỉ định, tại một thời điểm.
-	Loop (normal) 	Thực hiện một loạt các lệnh liên tục: hoặc số quy định của lần hoặc cho đến khi nghỉ là gặp phải.
+	Loop (normal)	Thực hiện một loạt các lệnh liên tục: hoặc số quy định của lần hoặc cho đến khi nghỉ là gặp phải.
 	Loop (parse a string)	Truy xuất chuỗi con (lĩnh vực) từ một chuỗi, một tại một thời điểm.
 	Loop (read file contents)	Lấy các dòng trong một tập tin văn bản, một tại một thời điểm (thực hiện tốt hơn so với FileReadLine).
 	Loop (registry)	Lấy nội dung của các khóa registry được chỉ định, một mục tại một thời điểm.

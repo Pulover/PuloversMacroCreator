@@ -975,9 +975,9 @@
 		Iškarpinės turinys).
 	Ex_AF_TT =	Praleidžia švelnų būdą aktyvinti langą
 		Ir eina tiesiai į tvirtą būdą.
+	Ex_CM_TT =	Rinkiniai koordinuoti režimą pelės komandas būti santykinis arba į aktyvaus lango ar ekrano.
 	Ex_DH_TT =	Nustato, ar nematomas langai "matė" pagal scenarijų.
 	Ex_DT_TT =	Nustato, ar nematomas tekstas lange yra "matomas" rasti langą tikslu. Tai turi įtakos komandas, tokias kaip IfWinExist ir WinActivate.
-	Ex_CM_TT =	Rinkiniai koordinuoti režimą pelės komandas būti santykinis arba į aktyvaus lango ar ekrano.
 	Ex_EdScript_TT =	Atidaryti išorinį redaktorių
 	Ex_EdVars_TT =	Pasirinkite globalių kintamųjų turi būti eksportuojama.
 	Ex_ExecScript_TT =	Vykdyti scenarijų
@@ -1021,11 +1021,11 @@
 		- Jūs galite naudoti stygos, kintamuosius, masyvus ir funkcijas.
 		- Norėdami naudoti stygas, pridėti juos į kabutes aminus, pvz .: var = "A".
 		- Kelios ataskaitos yra palaikomi aminus, pvz .: var = "A" || Instr (var, "B").
-	ExpView_TT =	Išplėstinė redaktorius
 	ExpView2_TT =	Išplėstinė redaktorius
+	ExpView_TT =	Išplėstinė redaktorius
 	Fast_TT =	Naudoja greičiau ieškoti metodą (rekomenduojama)
-	HiddenWin_TT =	Nustato, ar nematomas langai "matė" pagal scenarijų.
 	HiddenText_TT =	Nustato, ar nematomas tekstas lange yra "matomas" rasti langą tikslu. Tai turi įtakos komandas, tokias kaip IfWinExist ir WinActivate.
+	HiddenWin_TT =	Nustato, ar nematomas langai "matė" pagal scenarijų.
 	HScale_TT =	Ūgis skalė
 	IconN_TT =	Taškų piktogramų grupės
 	IfLVColor_TT =	Spustelėkite, jei norite pasirinkti spalvą
@@ -1092,27 +1092,27 @@
 	WScale_TT =	Plotis skalė
 		
 ; 20. Operators		
-	As_Oper_1 =	Priskirti
-	As_Oper_2 =	Papildyti
-	As_Oper_3 =	Atimti
-	As_Oper_4 =	Padauginkite
-	As_Oper_5 =	Takoskyra
-	As_Oper_6 =	Grindų takoskyra
-	As_Oper_7 =	Jungiant
-	As_Oper_8 =	Bitinis įskaičiuota ARBA
-	As_Oper_9 =	Bitinis IR
+	As_Oper_01 =	Priskirti
+	As_Oper_02 =	Papildyti
+	As_Oper_03 =	Atimti
+	As_Oper_04 =	Padauginkite
+	As_Oper_05 =	Takoskyra
+	As_Oper_06 =	Grindų takoskyra
+	As_Oper_07 =	Jungiant
+	As_Oper_08 =	Bitinis įskaičiuota ARBA
+	As_Oper_09 =	Bitinis IR
 	As_Oper_10 =	Bitinis išskirtinė ARBA
 	As_Oper_11 =	Teisė perėjimo ir
 	As_Oper_12 =	Kairysis SHIFT IR
-	Co_Oper_1 =	Lygus
-	Co_Oper_2 =	Vienodas (didžiosios ir mažosios raidės)
-	Co_Oper_3 =	Nėra lygūs
-	Co_Oper_4 =	Didesnis
-	Co_Oper_5 =	Mažiau
-	Co_Oper_6 =	Didesnis arba lygus
-	Co_Oper_7 =	Mažiau arba lygu
-	Co_Oper_8 =	Be (sąrašas)
-	Co_Oper_9 =	Ne (sąrašas)
+	Co_Oper_01 =	Lygus
+	Co_Oper_02 =	Vienodas (didžiosios ir mažosios raidės)
+	Co_Oper_03 =	Nėra lygūs
+	Co_Oper_04 =	Didesnis
+	Co_Oper_05 =	Mažiau
+	Co_Oper_06 =	Didesnis arba lygus
+	Co_Oper_07 =	Mažiau arba lygu
+	Co_Oper_08 =	Be (sąrašas)
+	Co_Oper_09 =	Ne (sąrašas)
 	Co_Oper_10 =	Sudėtyje (sąrašas)
 	Co_Oper_11 =	Ne yra (sąrašas)
 	Co_Oper_12 =	Tarp (1 linija) ir (2 linijos)
@@ -1210,7 +1210,7 @@
 	ControlGetPos	Nuskaito padėtį ir dydį kontrolei.
 	ControlGetText	Nuskaito tekstą iš kontrolės.
 	ControlMove	Perkelia arba didinama kontrolei.
-	ControlSend / ControlSendRaw 	Siunčia imituoti klaviatūros prie lango ar kontrolės.
+	ControlSend / ControlSendRaw	Siunčia imituoti klaviatūros prie lango ar kontrolės.
 	ControlSetText	Keičia į kontrolės tekstą.
 	CoordMode	Rinkiniai koordinuoti režimą komandas, kad būti santykinis arba į aktyvaus lango ar ekrano.
 	Cos	Grąžina Trigonometrinis kosinusas Number.
@@ -1299,7 +1299,7 @@
 	LoadPicture	Įkelia paveikslėlį iš failo ir grąžina bitmap ar piktogramą rankeną.
 	Log	Grąžina logaritmas (pagrindas 10) numeris.
 	Loop (files & folders)	Nuskaito nurodytus failus ar aplankus, vienu metu.
-	Loop (normal) 	Atlikti komandų serija kartą: arba nurodyti skaičių kartų arba tol, kol pertrauka yra susiduriama.
+	Loop (normal)	Atlikti komandų serija kartą: arba nurodyti skaičių kartų arba tol, kol pertrauka yra susiduriama.
 	Loop (parse a string)	Nuskaito poeilių (laukų) nuo eilutę, vienu metu.
 	Loop (read file contents)	Nuskaito į tekstinį failą, viena linijas vienu metu (atlieka geriau nei FileReadLine).
 	Loop (registry)	Nuskaito konkretaus registro raktą turinys, vienas elementas vienu metu.

@@ -975,9 +975,9 @@
 		innehållet i Urklipp).
 	Ex_AF_TT =	Hoppar den milda metoden för att aktivera en fönster
 		och går direkt till kraftfulla metoden.
+	Ex_CM_TT =	Ställer samordna läge för mus kommandon för att vara i förhållande till antingen det aktiva fönstret eller skärmen.
 	Ex_DH_TT =	Avgör om osynliga fönster "ses" av skriptet.
 	Ex_DT_TT =	Avgör om osynlig text i ett fönster "ses" i syfte att hitta fönstret. Detta påverkar kommandon som IfWinExist och WinActivate.
-	Ex_CM_TT =	Ställer samordna läge för mus kommandon för att vara i förhållande till antingen det aktiva fönstret eller skärmen.
 	Ex_EdScript_TT =	Avaa ulkoisen editorin
 	Ex_EdVars_TT =	Välj globala variabler som skall exporteras.
 	Ex_ExecScript_TT =	Köra skript
@@ -1021,11 +1021,11 @@
 		- Du kan använda strängar, variabler, arrayer och funktioner.
 		- Om du vill använda strängar, bifoga dem i citationstecken, till exempel: var = "a".
 		- Flera rapporter stöds, t.ex. var = "a" || InStr (var, "b").
-	ExpView_TT =	Avancerad Redigerare
 	ExpView2_TT =	Avancerad Redigerare
+	ExpView_TT =	Avancerad Redigerare
 	Fast_TT =	Använder en snabbare sökning metod (rekommenderas)
-	HiddenWin_TT =	Avgör om osynliga fönster "ses" av skriptet.
 	HiddenText_TT =	Avgör om osynlig text i ett fönster "ses" i syfte att hitta fönstret. Detta påverkar kommandon som IfWinExist och WinActivate.
+	HiddenWin_TT =	Avgör om osynliga fönster "ses" av skriptet.
 	HScale_TT =	Höjd skala
 	IconN_TT =	Antal ikonen gruppen
 	IfLVColor_TT =	Klicka här för att välja en färg
@@ -1092,27 +1092,27 @@
 	WScale_TT =	Bredd skala
 		
 ; 20. Operators		
-	As_Oper_1 =	Tilldela
-	As_Oper_2 =	Lägg
-	As_Oper_3 =	Subtrahera
-	As_Oper_4 =	Multiplicera
-	As_Oper_5 =	Dividera
-	As_Oper_6 =	Golv klyftan
-	As_Oper_7 =	Hoplänka
-	As_Oper_8 =	Bitwise inclusive OR
-	As_Oper_9 =	Bitwise AND
+	As_Oper_01 =	Tilldela
+	As_Oper_02 =	Lägg
+	As_Oper_03 =	Subtrahera
+	As_Oper_04 =	Multiplicera
+	As_Oper_05 =	Dividera
+	As_Oper_06 =	Golv klyftan
+	As_Oper_07 =	Hoplänka
+	As_Oper_08 =	Bitwise inclusive OR
+	As_Oper_09 =	Bitwise AND
 	As_Oper_10 =	Bitwise exclusive OR
 	As_Oper_11 =	Right shift AND
 	As_Oper_12 =	Left shift AND
-	Co_Oper_1 =	Lika
-	Co_Oper_2 =	Lika (skiftlägeskänsligt)
-	Co_Oper_3 =	Inte lika
-	Co_Oper_4 =	Greater
-	Co_Oper_5 =	Mindre
-	Co_Oper_6 =	Större än eller lika
-	Co_Oper_7 =	Mindre eller lika
-	Co_Oper_8 =	I (lista)
-	Co_Oper_9 =	Inte i (lista)
+	Co_Oper_01 =	Lika
+	Co_Oper_02 =	Lika (skiftlägeskänsligt)
+	Co_Oper_03 =	Inte lika
+	Co_Oper_04 =	Greater
+	Co_Oper_05 =	Mindre
+	Co_Oper_06 =	Större än eller lika
+	Co_Oper_07 =	Mindre eller lika
+	Co_Oper_08 =	I (lista)
+	Co_Oper_09 =	Inte i (lista)
 	Co_Oper_10 =	Innehåller (lista)
 	Co_Oper_11 =	Inte innehåller (lista)
 	Co_Oper_12 =	Mellan (linje 1) och (linje 2)
@@ -1210,7 +1210,7 @@
 	ControlGetPos	Hämtar position och storlek för en kontroll.
 	ControlGetText	Hämtar text från en kontroll.
 	ControlMove	Flyttar eller ändrar storleken en kontroll.
-	ControlSend / ControlSendRaw 	Skickar simulerade tangenttryckningar till ett fönster eller kontroll .
+	ControlSend / ControlSendRaw	Skickar simulerade tangenttryckningar till ett fönster eller kontroll .
 	ControlSetText	Ändrar texten i en kontroll .
 	CoordMode	Ställer samordna läge för olika kommandon för att vara i förhållande till antingen det aktiva fönstret eller skärmen .
 	Cos	Returnerar trigonometrisk cosinus Number .
@@ -1299,7 +1299,7 @@
 	LoadPicture	Läser in en bild från fil och returnerar en bitmapp eller ikon handtag.
 	Log	Returnerar logaritmen (bas 10) av Number.
 	Loop (files & folders)	Hämtar de angivna filerna eller mapparna, en i taget.
-	Loop (normal) 	Utför en serie kommandon flera gånger: antingen det angivna antalet gånger eller tills brott uppstår.
+	Loop (normal)	Utför en serie kommandon flera gånger: antingen det angivna antalet gånger eller tills brott uppstår.
 	Loop (parse a string)	Hämtar delsträngar (fält) från en sträng, en i taget.
 	Loop (read file contents)	Hämtar raderna i en textfil, en i taget (presterar bättre än FileReadLine).
 	Loop (registry)	Hämtar innehållet i den angivna registerundernyckeln, ett plagg i taget.

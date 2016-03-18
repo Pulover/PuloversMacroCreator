@@ -3421,7 +3421,7 @@ For i, _Section in LangFiles[RLang]
 		{
 			LV_GetText(RowText, RowIdx)
 			If (RegExMatch(v, "(.+)\t.*", lMatch))
-				LangFile .= "`n`t" lMatch1 "`t" RowText
+				LangFile .= "`n`t" lMatch1 "`t" RowText ((e = _values.Length()) ? "`n`t`t" : "")
 			Else
 				LangFile .= RowText "`n`t`t"
 			RowIdx++
@@ -7846,7 +7846,7 @@ Gui, 21:Add, Text, -Wrap R1 y+5 xs+10 W200 vFormatTip
 Gui, 21:Add, Edit, y+5 xs+10 W430 R4 -vScroll vTestVar
 Gui, 21:Add, Text, -Wrap R1 y+11 xs+10 W135 vFormatTip2
 Gui, 21:Add, DDL, yp-5 x+0 W100 vIfOper gCoOper Disabled, =$$==$!=$>$<$>=$<=$in$not in$contains$not contains$between$not between$is$is not
-Gui, 21:Add, Text, -Wrap R1 yp+5 x+5 W150 vCoOper cGray, %Co_Oper_1%
+Gui, 21:Add, Text, -Wrap R1 yp+5 x+5 W150 vCoOper cGray, %Co_Oper_01%
 Gui, 21:Add, Text, -Wrap yp xs+10 W430 R6 vExpTxt Hidden, %d_Lang097%
 Gui, 21:Add, Edit, yp+20 xs+10 W430 R4 -vScroll vTestVar2 Disabled
 Gui, 21:Add, Text, -Wrap R1 W430 cGray vVarTxt, %c_Lang025%
@@ -7864,7 +7864,7 @@ Gui, 21:Add, Text, -Wrap R1 ys+15 xs+10 vVarNameT, %c_Lang057%:
 Gui, 21:Add, Edit, W200 R1 -Multi vVarName
 Gui, 21:Add, Text, -Wrap R1 yp-20 x+5 W120, %c_Lang086%:
 Gui, 21:Add, DDL, y+7 W60 vOper gAsOper, %AssignOperators%
-Gui, 21:Add, Text, -Wrap R1 yp+5 x+5 W150 vAsOper cGray, %As_Oper_1%
+Gui, 21:Add, Text, -Wrap R1 yp+5 x+5 W150 vAsOper cGray, %As_Oper_01%
 Gui, 21:Add, Text, -Wrap R1 y+9 xs+10 W200, %c_Lang056%:
 Gui, 21:Add, Checkbox, -Wrap Checked%EvalDefault% yp x+5 W220 vUseEval gUseEval R1, %c_Lang087% / %c_Lang211%
 Gui, 21:Add, Edit, y+10 xs+10 W430 H110 vVarValue
@@ -8274,14 +8274,14 @@ return
 CoOper:
 GuiControl, 21:+AltSubmit, IfOper
 Gui, 21:Submit, NoHide
-GuiControl, 21:, CoOper, % Co_Oper_%IfOper%
+GuiControl, 21:, CoOper, % IfOper < 10 ? Co_Oper_0%IfOper% : Co_Oper_%IfOper%
 GuiControl, 21:-AltSubmit, IfOper
 return
 
 AsOper:
 GuiControl, 21:+AltSubmit, Oper
 Gui, 21:Submit, NoHide
-GuiControl, 21:, AsOper, % As_Oper_%Oper%
+GuiControl, 21:, AsOper, % Oper < 10 ? As_Oper_0%Oper% : As_Oper_%Oper%
 GuiControl, 21:-AltSubmit, Oper
 return
 

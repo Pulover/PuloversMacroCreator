@@ -975,9 +975,9 @@
 		Arbeleko edukiak).
 	Ex_AF_TT =	Leiho bat aktibatzea metodo leuna Salto
 		Eta doa zuzenean irmoa metodoa.
+	Ex_CM_TT =	Sets koordinatzeko modua sagua komandoak bai leiho aktiboa edo pantailaren erlatiboa izango.
 	Ex_DH_TT =	Ikusezina leihoak diren ala ez "ikusten" script-ek zehazten.
 	Ex_DT_TT =	Leiho batean testua ikustezina da ala "ikusi" leiho aurkitzeko helburuarekin zehazten du. Honek, hala nola IfWinExist eta WinActivate aginduak eragiten.
-	Ex_CM_TT =	Sets koordinatzeko modua sagua komandoak bai leiho aktiboa edo pantailaren erlatiboa izango.
 	Ex_EdScript_TT =	Kanpoko editore batean ireki
 	Ex_EdVars_TT =	Aukeratu aldagai global esportatu ahal izateko.
 	Ex_ExecScript_TT =	Exekutatu script
@@ -1021,11 +1021,11 @@
 		- Kateak, aldagaiak, array-ak eta funtzioak erabili ahal izango duzu.
 		- Kateak erabiltzeko, erantsi horiek komatxo artean, adib .: var = "a".
 		- Adierazpenak anitzak onartzen dira, adib .: var = "a" || InStr (var, "b").
-	ExpView_TT =	Editore aurreratua
 	ExpView2_TT =	Editore aurreratua
+	ExpView_TT =	Editore aurreratua
 	Fast_TT =	Azkarrago bilatzen metodo bat erabiltzen du (gomendatua)
-	HiddenWin_TT =	Ikusezina leihoak diren ala ez "ikusten" script-ek zehazten.
 	HiddenText_TT =	Leiho batean testua ikustezina da ala "ikusi" leiho aurkitzeko helburuarekin zehazten du. Honek, hala nola IfWinExist eta WinActivate aginduak eragiten.
+	HiddenWin_TT =	Ikusezina leihoak diren ala ez "ikusten" script-ek zehazten.
 	HScale_TT =	Altuera eskala
 	IconN_TT =	Ikonoa taldearen zenbakia
 	IfLVColor_TT =	Egin klik kolorea hautatzeko
@@ -1092,27 +1092,27 @@
 	WScale_TT =	Zabalera eskala
 		
 ; 20. Operators		
-	As_Oper_1 =	Esleitu
-	As_Oper_2 =	Gehitu
-	As_Oper_3 =	Kendu
-	As_Oper_4 =	Biderkatu
-	As_Oper_5 =	Divide
-	As_Oper_6 =	Solairua arraila
-	As_Oper_7 =	Kateatu
-	As_Oper_8 =	Bitez biak barne OR
-	As_Oper_9 =	ETA bitarra
+	As_Oper_01 =	Esleitu
+	As_Oper_02 =	Gehitu
+	As_Oper_03 =	Kendu
+	As_Oper_04 =	Biderkatu
+	As_Oper_05 =	Divide
+	As_Oper_06 =	Solairua arraila
+	As_Oper_07 =	Kateatu
+	As_Oper_08 =	Bitez biak barne OR
+	As_Oper_09 =	ETA bitarra
 	As_Oper_10 =	Bitez esklusiboa OR
 	As_Oper_11 =	Eskuin shift ETA
 	As_Oper_12 =	Ezker shift ETA
-	Co_Oper_1 =	Berdintasuna
-	Co_Oper_2 =	Berdintasuna (kasu sentikorra)
-	Co_Oper_3 =	Ez da berdina
-	Co_Oper_4 =	Greater
-	Co_Oper_5 =	Gutxiago
-	Co_Oper_6 =	Handiagoa edo berdina
-	Co_Oper_7 =	Txikiagoa edo berdina
-	Co_Oper_8 =	In (zerrenda)
-	Co_Oper_9 =	Not in (zerrenda)
+	Co_Oper_01 =	Berdintasuna
+	Co_Oper_02 =	Berdintasuna (kasu sentikorra)
+	Co_Oper_03 =	Ez da berdina
+	Co_Oper_04 =	Greater
+	Co_Oper_05 =	Gutxiago
+	Co_Oper_06 =	Handiagoa edo berdina
+	Co_Oper_07 =	Txikiagoa edo berdina
+	Co_Oper_08 =	In (zerrenda)
+	Co_Oper_09 =	Not in (zerrenda)
 	Co_Oper_10 =	Dauka (zerrenda)
 	Co_Oper_11 =	Ez dauka (zerrenda)
 	Co_Oper_12 =	(1. linea) eta (2 linea) Between
@@ -1210,7 +1210,7 @@
 	ControlGetPos	Posizioa eta tamaina kontrol baten eskuratzen du.
 	ControlGetText	Kontrol batetik testu eskuratzen du.
 	ControlMove	Mugimenduak edo kontrol baten tamaina aldatzen.
-	ControlSend / ControlSendRaw 	Simulatu leiho bat edo kontrol to zanpatze bidaltzen.
+	ControlSend / ControlSendRaw	Simulatu leiho bat edo kontrol to zanpatze bidaltzen.
 	ControlSetText	Kontrol baten testua aldatzen.
 	CoordMode	Sets koordinatzeko modua da hainbat komando bai leiho aktiboa edo pantailaren erlatiboa izango.
 	Cos	Trigonometria Zenbakia kosinua itzultzen du.
@@ -1299,7 +1299,7 @@
 	LoadPicture	Irudi bat kargatzen du fitxategia eta bitmap edo ikono helduleku itzultzen.
 	Log	Logaritmoa (base 10) zenbakia itzultzen du.
 	Loop (files & folders)	Zehaztutako fitxategi edo karpetak, aldi berean bat eskuratzen du.
-	Loop (normal) 	Landu komandoak serie bat behin eta berriz: bai zehaztu zenbat aldiz edo break topatu arte.
+	Loop (normal)	Landu komandoak serie bat behin eta berriz: bai zehaztu zenbat aldiz edo break topatu arte.
 	Loop (parse a string)	Eskuratzen azpikateak (eremuak) kate bat, aldi berean batetik.
 	Loop (read file contents)	Testu fitxategi bat, bat lerro eskuratzen denbora bat (hobe burutzen FileReadLine baino ez).
 	Loop (registry)	Zehaztutako erregistro Azpigako edukiak, aldi berean, elementu bat eskuratzen du.

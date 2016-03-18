@@ -975,9 +975,9 @@
 		O contido do portarretallos).
 	Ex_AF_TT =	Ignora o método suave de activar unha ventá
 		E vai directo para o método forzado.
+	Ex_CM_TT =	Configura o modo de coordenadas para as ordes do rato para ser relativo a calquera ventá activa ou na pantalla.
 	Ex_DH_TT =	Determina se fiestras invisibles son "vistos" polo guión.
 	Ex_DT_TT =	Determina se o texto invisible no que unha xanela é "visto" coa finalidade de atopar o diálogo. Isto afecta comandos como IfWinExist e WinActivate.
-	Ex_CM_TT =	Configura o modo de coordenadas para as ordes do rato para ser relativo a calquera ventá activa ou na pantalla.
 	Ex_EdScript_TT =	Open in editor externo
 	Ex_EdVars_TT =	Seleccione variables globais para ser exportada.
 	Ex_ExecScript_TT =	Script executado
@@ -1021,11 +1021,11 @@
 		- Pode utilizar cordas, variables, matrices e funcións.
 		- Para usar cordas, coloque os entre comiñas, por exemplo.: Var = "a".
 		- Múltiples declaracións son soportados, por exemplo.: Var = "a" || INSTR (var, "b").
-	ExpView_TT =	Editor avanzado
 	ExpView2_TT =	Editor avanzado
+	ExpView_TT =	Editor avanzado
 	Fast_TT =	Utiliza un método de investigación máis rápida (recomendado)
-	HiddenWin_TT =	Determina se fiestras invisibles son "vistos" polo guión.
 	HiddenText_TT =	Determina se o texto invisible no que unha xanela é "visto" coa finalidade de atopar o diálogo. Isto afecta comandos como IfWinExist e WinActivate.
+	HiddenWin_TT =	Determina se fiestras invisibles son "vistos" polo guión.
 	HScale_TT =	Escala altura
 	IconN_TT =	Número do grupo icona
 	IfLVColor_TT =	Prema para escoller unha cor
@@ -1092,27 +1092,27 @@
 	WScale_TT =	Escala ancho
 		
 ; 20. Operators		
-	As_Oper_1 =	Asignar
-	As_Oper_2 =	Engadir
-	As_Oper_3 =	Restar
-	As_Oper_4 =	Multiply
-	As_Oper_5 =	Dividir
-	As_Oper_6 =	División chan
-	As_Oper_7 =	CONCATENATE
-	As_Oper_8 =	Bit a bit OU inclusivo
-	As_Oper_9 =	Bit a bit e
+	As_Oper_01 =	Asignar
+	As_Oper_02 =	Engadir
+	As_Oper_03 =	Restar
+	As_Oper_04 =	Multiply
+	As_Oper_05 =	Dividir
+	As_Oper_06 =	División chan
+	As_Oper_07 =	CONCATENATE
+	As_Oper_08 =	Bit a bit OU inclusivo
+	As_Oper_09 =	Bit a bit e
 	As_Oper_10 =	Bit a bit OU exclusivo
 	As_Oper_11 =	Desprazamento cara á dereita e
 	As_Oper_12 =	Desprazamento á esquerda e
-	Co_Oper_1 =	Igual
-	Co_Oper_2 =	Igual (case sensitive)
-	Co_Oper_3 =	Non igual
-	Co_Oper_4 =	Maior
-	Co_Oper_5 =	Menos
-	Co_Oper_6 =	Maior ou igual
-	Co_Oper_7 =	Inferior ou igual
-	Co_Oper_8 =	En (lista)
-	Co_Oper_9 =	Non en (lista)
+	Co_Oper_01 =	Igual
+	Co_Oper_02 =	Igual (case sensitive)
+	Co_Oper_03 =	Non igual
+	Co_Oper_04 =	Maior
+	Co_Oper_05 =	Menos
+	Co_Oper_06 =	Maior ou igual
+	Co_Oper_07 =	Inferior ou igual
+	Co_Oper_08 =	En (lista)
+	Co_Oper_09 =	Non en (lista)
 	Co_Oper_10 =	Contén (lista)
 	Co_Oper_11 =	Non contén (lista)
 	Co_Oper_12 =	Entre (liña 1) e (liña 2)
@@ -1210,7 +1210,7 @@
 	ControlGetPos	Recupera a posición eo tamaño dun control.
 	ControlGetText	Recupera o texto dun control.
 	ControlMove	Move ou redimensiona un control.
-	ControlSend / ControlSendRaw 	Envía teclas escritas simulado para unha xanela ou control.
+	ControlSend / ControlSendRaw	Envía teclas escritas simulado para unha xanela ou control.
 	ControlSetText	Visto o texto dun control.
 	CoordMode	Configura o modo de coordenadas para varios comandos para ser relativo a calquera ventá activa ou na pantalla.
 	Cos	Devolve o coseno trigonométrica de Number.
@@ -1299,7 +1299,7 @@
 	LoadPicture	Leva unha imaxe de arquivo e retorna un bitmap ou icona do maneta.
 	Log	Devolve o logaritmo (base 10) de Number.
 	Loop (files & folders)	Recupera arquivos especificados ou carpetas, unha de cada vez.
-	Loop (normal) 	Realizar unha serie de comandos varias veces: é o número indicado de veces ou ata break sexa atopada.
+	Loop (normal)	Realizar unha serie de comandos varias veces: é o número indicado de veces ou ata break sexa atopada.
 	Loop (parse a string)	Recupera substrings (campos) a partir dunha cadea de caracteres, unha de cada vez.
 	Loop (read file contents)	Recupera as liñas dun arquivo de texto, un de cada vez (rendemento mellor que FileReadLine).
 	Loop (registry)	Recupera o contido da subchave de rexistro indicado, un elemento de cada vez.

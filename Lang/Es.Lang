@@ -975,9 +975,9 @@
 		el contenido del portapapeles).
 	Ex_AF_TT =	Omite el método suave de activar una ventana
 		y va directo al método contundente.
+	Ex_CM_TT =	Establece el modo de coordenadas para los comandos de ratón para ser relativa a cualquiera de la ventana activa o la pantalla.
 	Ex_DH_TT =	Determina si las ventanas invisibles son "vistas" por el guión.
 	Ex_DT_TT =	Determina si el texto invisible en una ventana es "vista" con el fin de encontrar la ventana. Esto afecta a comandos como IfWinExist y WinActivate.
-	Ex_CM_TT =	Establece el modo de coordenadas para los comandos de ratón para ser relativa a cualquiera de la ventana activa o la pantalla.
 	Ex_EdScript_TT =	Abrir en editor externo
 	Ex_EdVars_TT =	Seleccionar variables globales destinados a la exportación.
 	Ex_ExecScript_TT =	Ejecutar script
@@ -1021,11 +1021,11 @@
 		- Usted puede usar cadenas, variables, matrices y funciones.
 		- Para utilizar cuerdas, encerrarlos entre comillas, por ejemplo: var = "a".
 		- Son compatibles Varias sentencias, por ejemplo: var = "a" || InStr (var, "b").
-	ExpView_TT =	Editor Avanzado
 	ExpView2_TT =	Editor Avanzado
+	ExpView_TT =	Editor Avanzado
 	Fast_TT =	Utiliza un método de búsqueda más rápido (recomendado)
-	HiddenWin_TT =	Determina si las ventanas invisibles son "vistas" por el guión.
 	HiddenText_TT =	Determina si el texto invisible en una ventana es "vista" con el fin de encontrar la ventana. Esto afecta a comandos como IfWinExist y WinActivate.
+	HiddenWin_TT =	Determina si las ventanas invisibles son "vistas" por el guión.
 	HScale_TT =	Escala de altura
 	IconN_TT =	Número del grupo de iconos
 	IfLVColor_TT =	Haga clic para seleccionar un color
@@ -1092,27 +1092,27 @@
 	WScale_TT =	Escala Ancho
 		
 ; 20. Operators		
-	As_Oper_1 =	Asignar
-	As_Oper_2 =	Añadir
-	As_Oper_3 =	Sustraer
-	As_Oper_4 =	Multiplicar
-	As_Oper_5 =	Dividir
-	As_Oper_6 =	División floor
-	As_Oper_7 =	Concatenar
-	As_Oper_8 =	Bitwise inclusive OR
-	As_Oper_9 =	Bitwise AND
+	As_Oper_01 =	Asignar
+	As_Oper_02 =	Añadir
+	As_Oper_03 =	Sustraer
+	As_Oper_04 =	Multiplicar
+	As_Oper_05 =	Dividir
+	As_Oper_06 =	División floor
+	As_Oper_07 =	Concatenar
+	As_Oper_08 =	Bitwise inclusive OR
+	As_Oper_09 =	Bitwise AND
 	As_Oper_10 =	Bitwise exclusive OR
 	As_Oper_11 =	Right shift AND
 	As_Oper_12 =	Left shift AND
-	Co_Oper_1 =	Igual
-	Co_Oper_2 =	Equal (mayúsculas y minúsculas)
-	Co_Oper_3 =	No es igual
-	Co_Oper_4 =	Mayor
-	Co_Oper_5 =	Menos
-	Co_Oper_6 =	Mayor o igual
-	Co_Oper_7 =	Menor o igual
-	Co_Oper_8 =	En (lista)
-	Co_Oper_9 =	No en (lista)
+	Co_Oper_01 =	Igual
+	Co_Oper_02 =	Equal (mayúsculas y minúsculas)
+	Co_Oper_03 =	No es igual
+	Co_Oper_04 =	Mayor
+	Co_Oper_05 =	Menos
+	Co_Oper_06 =	Mayor o igual
+	Co_Oper_07 =	Menor o igual
+	Co_Oper_08 =	En (lista)
+	Co_Oper_09 =	No en (lista)
 	Co_Oper_10 =	Contiene (lista)
 	Co_Oper_11 =	No contiene (lista)
 	Co_Oper_12 =	Entre (línea 1) y (línea 2)
@@ -1210,7 +1210,7 @@
 	ControlGetPos	Recupera la posición y el tamaño de un control.
 	ControlGetText	Recupera el texto de un control.
 	ControlMove	Mueve o cambia el tamaño de un control.
-	ControlSend / ControlSendRaw 	Envía pulsaciones de teclas simuladas para una ventana o de control .
+	ControlSend / ControlSendRaw	Envía pulsaciones de teclas simuladas para una ventana o de control .
 	ControlSetText	Cambia el texto de un control.
 	CoordMode	Establece el modo de coordinar a varios comandos que es relativo a cualquiera de la ventana activa o la pantalla.
 	Cos	Devuelve el coseno trigonométrico del Número .
@@ -1299,7 +1299,7 @@
 	LoadPicture	Carga una imagen de archivo y devuelve un identificador de mapa de bits o icono.
 	Log	Devuelve el logaritmo (base 10) del número.
 	Loop (files & folders)	Recupera los archivos o carpetas especificados, uno a la vez.
-	Loop (normal) 	Lleve a cabo una serie de comandos en varias ocasiones: se encuentran ya sea el número especificado de veces o hasta rotura.
+	Loop (normal)	Lleve a cabo una serie de comandos en varias ocasiones: se encuentran ya sea el número especificado de veces o hasta rotura.
 	Loop (parse a string)	Recupera subcadenas (campos) de una cadena, de una en una.
 	Loop (read file contents)	Recupera las líneas en un archivo de texto, de una en una (mejor rendimiento que FileReadLine).
 	Loop (registry)	Recupera el contenido de la subclave especificada, un elemento a la vez.

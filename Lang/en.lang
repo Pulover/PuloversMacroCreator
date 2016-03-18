@@ -975,9 +975,9 @@
 		the contents of the clipboard).
 	Ex_AF_TT =	Skips the gentle method of activating a window
 		and goes straight to the forceful method.
+	Ex_CM_TT =	Sets coordinate mode for mouse commands to be relative to either the active window or the screen.
 	Ex_DH_TT =	Determines whether invisible windows are "seen" by the script.
 	Ex_DT_TT =	Determines whether invisible text in a window is "seen" for the purpose of finding the window. This affects commands such as IfWinExist and WinActivate.
-	Ex_CM_TT =	Sets coordinate mode for mouse commands to be relative to either the active window or the screen.
 	Ex_EdScript_TT =	Open in external editor
 	Ex_EdVars_TT =	Select global variables to be exported.
 	Ex_ExecScript_TT =	Run script
@@ -1021,11 +1021,11 @@
 		- You may use strings, variables, arrays and functions.
 		- To use strings, enclose them in quotes, e.g.: var = "a".
 		- Multiple Statements are supported, e.g.: var = "a" || InStr(var, "b").
-	ExpView_TT =	Advanced Editor
 	ExpView2_TT =	Advanced Editor
+	ExpView_TT =	Advanced Editor
 	Fast_TT =	Uses a faster searching method (recommended)
-	HiddenWin_TT =	Determines whether invisible windows are "seen" by the script.
 	HiddenText_TT =	Determines whether invisible text in a window is "seen" for the purpose of finding the window. This affects commands such as IfWinExist and WinActivate.
+	HiddenWin_TT =	Determines whether invisible windows are "seen" by the script.
 	HScale_TT =	Height scale
 	IconN_TT =	Number of the icon group
 	IfLVColor_TT =	Click to pick a color
@@ -1092,27 +1092,27 @@
 	WScale_TT =	Width scale
 		
 ; 20. Operators		
-	As_Oper_1 =	Assign
-	As_Oper_2 =	Add
-	As_Oper_3 =	Subtract
-	As_Oper_4 =	Multiply
-	As_Oper_5 =	Divide
-	As_Oper_6 =	Floor divide
-	As_Oper_7 =	Concatenate
-	As_Oper_8 =	Bitwise inclusive OR
-	As_Oper_9 =	Bitwise AND
+	As_Oper_01 =	Assign
+	As_Oper_02 =	Add
+	As_Oper_03 =	Subtract
+	As_Oper_04 =	Multiply
+	As_Oper_05 =	Divide
+	As_Oper_06 =	Floor divide
+	As_Oper_07 =	Concatenate
+	As_Oper_08 =	Bitwise inclusive OR
+	As_Oper_09 =	Bitwise AND
 	As_Oper_10 =	Bitwise exclusive OR
 	As_Oper_11 =	Right shift AND
 	As_Oper_12 =	Left shift AND
-	Co_Oper_1 =	Equal
-	Co_Oper_2 =	Equal (case sensitive)
-	Co_Oper_3 =	Not equal
-	Co_Oper_4 =	Greater
-	Co_Oper_5 =	Less
-	Co_Oper_6 =	Greater or equal
-	Co_Oper_7 =	Less or equal
-	Co_Oper_8 =	In (list)
-	Co_Oper_9 =	Not in (list)
+	Co_Oper_01 =	Equal
+	Co_Oper_02 =	Equal (case sensitive)
+	Co_Oper_03 =	Not equal
+	Co_Oper_04 =	Greater
+	Co_Oper_05 =	Less
+	Co_Oper_06 =	Greater or equal
+	Co_Oper_07 =	Less or equal
+	Co_Oper_08 =	In (list)
+	Co_Oper_09 =	Not in (list)
 	Co_Oper_10 =	Contains (list)
 	Co_Oper_11 =	Not contains (list)
 	Co_Oper_12 =	Between (line 1) and (line 2)
@@ -1210,7 +1210,7 @@
 	ControlGetPos	Retrieves the position and size of a control.
 	ControlGetText	Retrieves text from a control.
 	ControlMove	Moves or resizes a control.
-	ControlSend / ControlSendRaw 	Sends simulated keystrokes to a window or control.
+	ControlSend / ControlSendRaw	Sends simulated keystrokes to a window or control.
 	ControlSetText	Changes the text of a control.
 	CoordMode	Sets coordinate mode for various commands to be relative to either the active window or the screen.
 	Cos	Returns the trigonometric cosine of Number.
@@ -1299,7 +1299,7 @@
 	LoadPicture	Loads a picture from file and returns a bitmap or icon handle.
 	Log	Returns the logarithm (base 10) of Number.
 	Loop (files & folders)	Retrieves the specified files or folders, one at a time.
-	Loop (normal) 	Perform a series of commands repeatedly: either the specified number of times or until break is encountered.
+	Loop (normal)	Perform a series of commands repeatedly: either the specified number of times or until break is encountered.
 	Loop (parse a string)	Retrieves substrings (fields) from a string, one at a time.
 	Loop (read file contents)	Retrieves the lines in a text file, one at a time (performs better than FileReadLine).
 	Loop (registry)	Retrieves the contents of the specified registry subkey, one item at a time.

@@ -975,9 +975,9 @@
 		Saturs starpliktuvē).
 	Ex_AF_TT =	Lēcieni maigu metodi aktivizējot logu
 		Un iet taisni uz spēcīgu metodi.
+	Ex_CM_TT =	Komplekti saskaņot režīmu pele komandas, lai būt relatīvs vai nu aktīvo logu vai ekrāna.
 	Ex_DH_TT =	Nosaka, vai neredzams logi "redzēt" ar skriptu.
 	Ex_DT_TT =	Nosaka, vai neredzams tekstu logā ir "redzējuši" ar mērķi atrast logu. Tas ietekmē tādas komandas, kā IfWinExist un WinActivate.
-	Ex_CM_TT =	Komplekti saskaņot režīmu pele komandas, lai būt relatīvs vai nu aktīvo logu vai ekrāna.
 	Ex_EdScript_TT =	Atvērt ārējo redaktoru
 	Ex_EdVars_TT =	Izvēlieties globālos mainīgos jāeksportē.
 	Ex_ExecScript_TT =	Palaist skriptu
@@ -1021,11 +1021,11 @@
 		- Jūs varat izmantot stīgas, mainīgos, masīvus un funkcijas.
 		- Lai izmantotu stīgas, lieciet tos pēdiņās, piem .: var = "A".
 		- Vairāki paziņojumi tiek atbalstīti, piem .: var = "a" || Instr (var, "b").
-	ExpView_TT =	Advanced Editor
 	ExpView2_TT =	Advanced Editor
+	ExpView_TT =	Advanced Editor
 	Fast_TT =	Izmanto ātrāk meklē metodi (ieteicams)
-	HiddenWin_TT =	Nosaka, vai neredzams logi "redzēt" ar skriptu.
 	HiddenText_TT =	Nosaka, vai neredzams tekstu logā ir "redzējuši" ar mērķi atrast logu. Tas ietekmē tādas komandas, kā IfWinExist un WinActivate.
+	HiddenWin_TT =	Nosaka, vai neredzams logi "redzēt" ar skriptu.
 	HScale_TT =	Augstums skala
 	IconN_TT =	Numurs ikona grupas
 	IfLVColor_TT =	Uzklikšķiniet, lai izvēlētos krāsu
@@ -1092,27 +1092,27 @@
 	WScale_TT =	Platums skala
 		
 ; 20. Operators		
-	As_Oper_1 =	Piešķirt
-	As_Oper_2 =	Pievienot
-	As_Oper_3 =	Atņemt
-	As_Oper_4 =	Reizināt
-	As_Oper_5 =	Dalīt
-	As_Oper_6 =	Stāvs dalīt
-	As_Oper_7 =	Saķēdēt
-	As_Oper_8 =	Bitu līmeņa ieskaitot OR
-	As_Oper_9 =	Bitu līmeņa un
+	As_Oper_01 =	Piešķirt
+	As_Oper_02 =	Pievienot
+	As_Oper_03 =	Atņemt
+	As_Oper_04 =	Reizināt
+	As_Oper_05 =	Dalīt
+	As_Oper_06 =	Stāvs dalīt
+	As_Oper_07 =	Saķēdēt
+	As_Oper_08 =	Bitu līmeņa ieskaitot OR
+	As_Oper_09 =	Bitu līmeņa un
 	As_Oper_10 =	Bitu līmeņa izslēgšanas
 	As_Oper_11 =	Tiesības maiņu un
 	As_Oper_12 =	Kreisais Shift un
-	Co_Oper_1 =	Vienāds
-	Co_Oper_2 =	Equal (reģistrjutīga)
-	Co_Oper_3 =	Nav vienāds
-	Co_Oper_4 =	Lielāka
-	Co_Oper_5 =	Mazāk
-	Co_Oper_6 =	Lielāks vai vienāds
-	Co_Oper_7 =	Mazāks vai vienāds
-	Co_Oper_8 =	In (saraksts)
-	Co_Oper_9 =	Ne (saraksts)
+	Co_Oper_01 =	Vienāds
+	Co_Oper_02 =	Equal (reģistrjutīga)
+	Co_Oper_03 =	Nav vienāds
+	Co_Oper_04 =	Lielāka
+	Co_Oper_05 =	Mazāk
+	Co_Oper_06 =	Lielāks vai vienāds
+	Co_Oper_07 =	Mazāks vai vienāds
+	Co_Oper_08 =	In (saraksts)
+	Co_Oper_09 =	Ne (saraksts)
 	Co_Oper_10 =	Satur (saraksts)
 	Co_Oper_11 =	Nav ietverti (saraksts)
 	Co_Oper_12 =	Starp (līnija 1) un (līnija 2)
@@ -1210,7 +1210,7 @@
 	ControlGetPos	Izgūst pozīciju un lielumu kontroli.
 	ControlGetText	Izgūst tekstu no kontroles.
 	ControlMove	Pārvieto vai maina kontroli.
-	ControlSend / ControlSendRaw 	Nosūta modelētiem keystrokes logam vai kontrolē.
+	ControlSend / ControlSendRaw	Nosūta modelētiem keystrokes logam vai kontrolē.
 	ControlSetText	Maina tekstu kontroli.
 	CoordMode	Komplekti saskaņot režīmu dažādas komandas, lai būt relatīvs vai nu aktīvo logu vai ekrāna.
 	Cos	Atgriež trigonometriskais kosinusu numurs.
@@ -1299,7 +1299,7 @@
 	LoadPicture	Slodzes attēlu no failu un atgriež bitkartes vai ikonu rokturi.
 	Log	Atgriež logaritmu (bāzes 10) numura.
 	Loop (files & folders)	Iegūst norādītos failus vai mapes, pa vienam.
-	Loop (normal) 	Veikt virkni komandas vairākkārt: vai nu reižu noteiktu skaitu vai līdz pārtraukums ir radušās.
+	Loop (normal)	Veikt virkni komandas vairākkārt: vai nu reižu noteiktu skaitu vai līdz pārtraukums ir radušās.
 	Loop (parse a string)	Iegūst apakšvirknēm (lauki) no virknes, pa vienam.
 	Loop (read file contents)	Izgūst līnijas teksta failu, viens laikā (veic labāk nekā FileReadLine).
 	Loop (registry)	Iegūst saturs norādīto reģistra apakšatslēgu, viens postenis laikā.

@@ -975,9 +975,9 @@
 		Den Inhalt vun den Numm).
 	Ex_AF_TT =	Préift de sanft Method vun enger Fënster activating
 		An geet direkt un de staarken Method.
+	Ex_CM_TT =	Leet koordinéieren Modus fir Maus zu entweder d'aktiv Fënster oder den Ecran gin relativ Befeeler.
 	Ex_DH_TT =	Bestëmmt ob weem Fënsteren "gesinn", déi vun der Schrëft sinn.
 	Ex_DT_TT =	Bestëmmt ob weem Text an enger Fënster ass "gesinn" fir den Zweck vun der Fënster ze fannen. Dëst gëllt commandéiert wéi IfWinExist an WinActivate.
-	Ex_CM_TT =	Leet koordinéieren Modus fir Maus zu entweder d'aktiv Fënster oder den Ecran gin relativ Befeeler.
 	Ex_EdScript_TT =	Open am externen Redakter
 	Ex_EdVars_TT =	Global Verännerlechen Select ginn exportéiert.
 	Ex_ExecScript_TT =	Run Script
@@ -1021,11 +1021,11 @@
 		- Dir kënnt Sieg, Verännerlechen, flamenden Ofgrond a Funktioun benotzen.
 		- Sieg ze benotzen, auszegin hinnen an Zitater, e.g .: VAR = "e".
 		- Abberzuel Aussoen sinn ënnerstëtzt, e.g .: VAR = "e" || InStr (VAR, "b").
-	ExpView_TT =	Détailléiert Redakter
 	ExpView2_TT =	Détailléiert Redakter
+	ExpView_TT =	Détailléiert Redakter
 	Fast_TT =	Notzt eng schnell Recherche Method (recommandéieren)
-	HiddenWin_TT =	Bestëmmt ob weem Fënsteren "gesinn", déi vun der Schrëft sinn.
 	HiddenText_TT =	Bestëmmt ob weem Text an enger Fënster ass "gesinn" fir den Zweck vun der Fënster ze fannen. Dëst gëllt commandéiert wéi IfWinExist an WinActivate.
+	HiddenWin_TT =	Bestëmmt ob weem Fënsteren "gesinn", déi vun der Schrëft sinn.
 	HScale_TT =	Héicht Skala
 	IconN_TT =	Zuel vun de icon Grupp
 	IfLVColor_TT =	Klickt eng Faarf ze deposéieren
@@ -1092,27 +1092,27 @@
 	WScale_TT =	Breet Skala
 		
 ; 20. Operators		
-	As_Oper_1 =	Uginn
-	As_Oper_2 =	Foto
-	As_Oper_3 =	Subtract
-	As_Oper_4 =	Féngeren
-	As_Oper_5 =	Gruef
-	As_Oper_6 =	Stack Gruef
-	As_Oper_7 =	Concatenate
-	As_Oper_8 =	Bitwise inklusiver ODER
-	As_Oper_9 =	Bitwise AN
+	As_Oper_01 =	Uginn
+	As_Oper_02 =	Foto
+	As_Oper_03 =	Subtract
+	As_Oper_04 =	Féngeren
+	As_Oper_05 =	Gruef
+	As_Oper_06 =	Stack Gruef
+	As_Oper_07 =	Concatenate
+	As_Oper_08 =	Bitwise inklusiver ODER
+	As_Oper_09 =	Bitwise AN
 	As_Oper_10 =	Bitwise exklusiv ODER
 	As_Oper_11 =	Recht dréint AN
 	As_Oper_12 =	Lénks dréint AN
-	Co_Oper_1 =	Gläich
-	Co_Oper_2 =	Gläich (case senisitive)
-	Co_Oper_3 =	Net gläich
-	Co_Oper_4 =	Groussregioun
-	Co_Oper_5 =	Manner
-	Co_Oper_6 =	Grouss oder gläich
-	Co_Oper_7 =	Manner oder gläich
-	Co_Oper_8 =	An (Lëscht)
-	Co_Oper_9 =	Net an (Lëscht)
+	Co_Oper_01 =	Gläich
+	Co_Oper_02 =	Gläich (case senisitive)
+	Co_Oper_03 =	Net gläich
+	Co_Oper_04 =	Groussregioun
+	Co_Oper_05 =	Manner
+	Co_Oper_06 =	Grouss oder gläich
+	Co_Oper_07 =	Manner oder gläich
+	Co_Oper_08 =	An (Lëscht)
+	Co_Oper_09 =	Net an (Lëscht)
 	Co_Oper_10 =	Enthält (Lëscht)
 	Co_Oper_11 =	Net enthält (Lëscht)
 	Co_Oper_12 =	Tëscht (Linn 1) an (Linn 2)
@@ -1210,7 +1210,7 @@
 	ControlGetPos	Retrieves der Positioun an der Gréisst vun enger Kontroll.
 	ControlGetText	Retrieves Text aus enger Kontroll.
 	ControlMove	Kombinatiounen oder resizes enger Kontroll.
-	ControlSend / ControlSendRaw 	Schéckt surfen Uschléi zu enger Fënster oder Kontroll.
+	ControlSend / ControlSendRaw	Schéckt surfen Uschléi zu enger Fënster oder Kontroll.
 	ControlSetText	Ännerungen den Text vun enger Kontroll.
 	CoordMode	Leet koordinéieren Modus fir verschidde Befeeler fir famill ze gin entweder d'aktiv Fënster oder den Ecran.
 	Cos	Returns der trigonometric cosine vun Number.
@@ -1299,7 +1299,7 @@
 	LoadPicture	Gedroen e Bild vun Fichier an rem eng bitmap oder icon verschaffen.
 	Log	Returns der uräicheren (woubäi 10) vun Number.
 	Loop (files & folders)	Retrieves der spezifizéierter Fichieren oder Classeuren, een op eng Kéier.
-	Loop (normal) 	Leeschtunge enger Serie vun commandéiert ërem: entweder der spezifizéierter Zuel vun Mol oder bis Paus begéint ass.
+	Loop (normal)	Leeschtunge enger Serie vun commandéiert ërem: entweder der spezifizéierter Zuel vun Mol oder bis Paus begéint ass.
 	Loop (parse a string)	Retrieves substrings (Felder) aus enger Kette, een op eng Kéier.
 	Loop (read file contents)	Retrieves d'Linnen an engem Text Fichier, een op eng Kéier (stécht besser wéi FileReadLine).
 	Loop (registry)	Retrieves d'Inhalter vun der spezifizéierter Enregistrement subkey, ee Punkt op enger Zäit.

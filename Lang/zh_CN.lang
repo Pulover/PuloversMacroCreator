@@ -975,9 +975,9 @@
 		剪贴板的内容）。
 	Ex_AF_TT =	跳过温和的方法而
 		直接使用强制的方法激活窗口。
+	Ex_CM_TT =	对于鼠标命令是相对于任一活动窗口或屏幕集坐标模式。
 	Ex_DH_TT =	确定是否无形窗口“看到”的脚本。
 	Ex_DT_TT =	确定在一个窗口不可见的文本是否被“看到”查找窗口的目的。这会影响诸如IfWinExist和WinActivate命令。
-	Ex_CM_TT =	对于鼠标命令是相对于任一活动窗口或屏幕集坐标模式。
 	Ex_EdScript_TT =	打开外部编辑器
 	Ex_EdVars_TT =	选择要导出的全局变量。
 	Ex_ExecScript_TT =	运行脚本
@@ -1021,11 +1021,11 @@
 		- 您可以使用字符串，变量，数组和函数。
 		- 要使用字符串，它们括在引号，例如：VAR=“A”。
 		- 多个语句的支持，例如：VAR=“一个”|| INSTR（变种，“B”）。
-	ExpView_TT =	高级编辑器
 	ExpView2_TT =	高级编辑器
+	ExpView_TT =	高级编辑器
 	Fast_TT =	使用更快的搜索方法（推荐）
-	HiddenWin_TT =	确定是否无形窗口“看到”的脚本。
 	HiddenText_TT =	确定在一个窗口不可见的文本是否被“看到”查找窗口的目的。这会影响诸如IfWinExist和WinActivate命令。
+	HiddenWin_TT =	确定是否无形窗口“看到”的脚本。
 	HScale_TT =	高度缩放
 	IconN_TT =	图标组编号
 	IfLVColor_TT =	单击选取颜色
@@ -1092,27 +1092,27 @@
 	WScale_TT =	宽度缩放
 		
 ; 20. Operators		
-	As_Oper_1 =	赋值
-	As_Oper_2 =	加
-	As_Oper_3 =	减
-	As_Oper_4 =	乘
-	As_Oper_5 =	除
-	As_Oper_6 =	向下舍除
-	As_Oper_7 =	连接
-	As_Oper_8 =	Bitwise inclusive OR
-	As_Oper_9 =	Bitwise AND
+	As_Oper_01 =	赋值
+	As_Oper_02 =	加
+	As_Oper_03 =	减
+	As_Oper_04 =	乘
+	As_Oper_05 =	除
+	As_Oper_06 =	向下舍除
+	As_Oper_07 =	连接
+	As_Oper_08 =	Bitwise inclusive OR
+	As_Oper_09 =	Bitwise AND
 	As_Oper_10 =	Bitwise exclusive OR
 	As_Oper_11 =	Right shift AND
 	As_Oper_12 =	Left shift AND
-	Co_Oper_1 =	等于
-	Co_Oper_2 =	等于（区分大小写）
-	Co_Oper_3 =	不等于
-	Co_Oper_4 =	大于
-	Co_Oper_5 =	小于
-	Co_Oper_6 =	大于或等于
-	Co_Oper_7 =	小于或等于
-	Co_Oper_8 =	在（名单）
-	Co_Oper_9 =	不在（名单）
+	Co_Oper_01 =	等于
+	Co_Oper_02 =	等于（区分大小写）
+	Co_Oper_03 =	不等于
+	Co_Oper_04 =	大于
+	Co_Oper_05 =	小于
+	Co_Oper_06 =	大于或等于
+	Co_Oper_07 =	小于或等于
+	Co_Oper_08 =	在（名单）
+	Co_Oper_09 =	不在（名单）
 	Co_Oper_10 =	包含（名单）
 	Co_Oper_11 =	不包含（名单）
 	Co_Oper_12 =	之间（线1）和（2行）
@@ -1210,7 +1210,7 @@
 	ControlGetPos	获取控件的位置和大小。
 	ControlGetText	获取控件的文本。
 	ControlMove	移动控件或调整其大小。
-	ControlSend / ControlSendRaw 	发送模拟键击到窗口或控件。
+	ControlSend / ControlSendRaw	发送模拟键击到窗口或控件。
 	ControlSetText	改变控件的文本。
 	CoordMode	为多个命令设置坐标模式，相对于活动窗口还是屏幕。
 	Cos	返回Number的余弦三角函数值。
@@ -1299,7 +1299,7 @@
 	LoadPicture	从文件加载图片，并返回一个位图或图标句柄。
 	Log	返回Number的对数（底数为10）。
 	Loop (files & folders)	获取指定的文件或文件夹，每次一个。
-	Loop (normal) 	重复执行一系列命令：可以指定表示重复次数的数字或直到遇到break。
+	Loop (normal)	重复执行一系列命令：可以指定表示重复次数的数字或直到遇到break。
 	Loop (parse a string)	从一个字符串中获取子字符串（片段），每次一个。
 	Loop (read file contents)	逐行读取文本文件的内容，每次一行（比FileReadLine执行的更好）。
 	Loop (registry)	获取指定的注册表子键的内容，每次一个项目。

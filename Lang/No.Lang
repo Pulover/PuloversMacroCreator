@@ -975,9 +975,9 @@
 		innholdet påutklippstavla).
 	Ex_AF_TT =	Hopper skånsom metode for å aktivere et vindu
 		og går rett til den kraftfulle metoden.
+	Ex_CM_TT =	Sett koordinere modus for mus kommandoer til å være i forhold til enten det aktive vinduet eller skjermen.
 	Ex_DH_TT =	Bestemmer om usynlige vinduer er "sett" av skriptet.
 	Ex_DT_TT =	Bestemmer hvorvidt  usynlig tekst i et vindu blir "sett" for det formål å finne vinduet. Dette påvirker kommandoer som IfWinExist og WinActivate.
-	Ex_CM_TT =	Sett koordinere modus for mus kommandoer til å være i forhold til enten det aktive vinduet eller skjermen.
 	Ex_EdScript_TT =	Open in externe editor
 	Ex_EdVars_TT =	Velg globale variabler som skal eksporteres.
 	Ex_ExecScript_TT =	Kjør skriptet
@@ -1021,11 +1021,11 @@
 		- Du kan bruke strenger, variabler, matriser og funksjoner.
 		- For å bruke strenger, legge dem i anførselstegn, for eksempel: var = "a".
 		- Flere uttalelser støttes, for eksempel: var = "a" || InStr (var, "b").
-	ExpView_TT =	Avansert Redigeringsprogram
 	ExpView2_TT =	Avansert Redigeringsprogram
+	ExpView_TT =	Avansert Redigeringsprogram
 	Fast_TT =	Bruker en raskere søking metode (anbefales)
-	HiddenWin_TT =	Bestemmer om usynlige vinduer er "sett" av skriptet.
 	HiddenText_TT =	Bestemmer hvorvidt  usynlig tekst i et vindu blir "sett" for det formål å finne vinduet. Dette påvirker kommandoer som IfWinExist og WinActivate.
+	HiddenWin_TT =	Bestemmer om usynlige vinduer er "sett" av skriptet.
 	HScale_TT =	Høyde skala
 	IconN_TT =	Antall ikonet gruppen
 	IfLVColor_TT =	Klikk for å velge en farge
@@ -1092,27 +1092,27 @@
 	WScale_TT =	Bredde skala
 		
 ; 20. Operators		
-	As_Oper_1 =	Tildele
-	As_Oper_2 =	Legg
-	As_Oper_3 =	Trekk fra
-	As_Oper_4 =	Multipliser
-	As_Oper_5 =	Fordel
-	As_Oper_6 =	Etasje skillet
-	As_Oper_7 =	Sette sammen
-	As_Oper_8 =	Bitwise inclusive OR
-	As_Oper_9 =	Bitwise AND
+	As_Oper_01 =	Tildele
+	As_Oper_02 =	Legg
+	As_Oper_03 =	Trekk fra
+	As_Oper_04 =	Multipliser
+	As_Oper_05 =	Fordel
+	As_Oper_06 =	Etasje skillet
+	As_Oper_07 =	Sette sammen
+	As_Oper_08 =	Bitwise inclusive OR
+	As_Oper_09 =	Bitwise AND
 	As_Oper_10 =	Bitwise exclusive OR
 	As_Oper_11 =	Right shift AND
 	As_Oper_12 =	Left shift AND
-	Co_Oper_1 =	Equal
-	Co_Oper_2 =	Lik (case sensitive)
-	Co_Oper_3 =	Ikke lik
-	Co_Oper_4 =	Greater
-	Co_Oper_5 =	Mindre
-	Co_Oper_6 =	Større eller lik
-	Co_Oper_7 =	Mindre eller lik
-	Co_Oper_8 =	I (liste)
-	Co_Oper_9 =	Ikke i (liste)
+	Co_Oper_01 =	Equal
+	Co_Oper_02 =	Lik (case sensitive)
+	Co_Oper_03 =	Ikke lik
+	Co_Oper_04 =	Greater
+	Co_Oper_05 =	Mindre
+	Co_Oper_06 =	Større eller lik
+	Co_Oper_07 =	Mindre eller lik
+	Co_Oper_08 =	I (liste)
+	Co_Oper_09 =	Ikke i (liste)
 	Co_Oper_10 =	Inneholder (liste)
 	Co_Oper_11 =	Ikke inneholder (liste)
 	Co_Oper_12 =	Mellom (linje 1) og (linje 2)
@@ -1210,7 +1210,7 @@
 	ControlGetPos	Henter posisjonen og størrelsen på en kontroll.
 	ControlGetText	Henter tekst fra en kontroll.
 	ControlMove	Flytter eller endrer en kontroll.
-	ControlSend / ControlSendRaw 	Sender simulerte tastetrykk til et vindu eller kontroll .
+	ControlSend / ControlSendRaw	Sender simulerte tastetrykk til et vindu eller kontroll .
 	ControlSetText	Endrer teksten i en kontroll.
 	CoordMode	Stiller koordinere modus for forskjellige kommandoer til å være i forhold til enten den aktive vinduet eller skjermen.
 	Cos	Returnerer trigonometriske cosinus til nummer.
@@ -1299,7 +1299,7 @@
 	LoadPicture	Laster inn et bilde fra fil og returnerer en bitmap eller ikon håndtak.
 	Log	Returnerer logaritmen (base 10) av nummer.
 	Loop (files & folders)	Henter de angitte filer eller mapper, ett om gangen.
-	Loop (normal) 	Utføre en rekke kommandoer gjentatte ganger: enten spesifisert antall ganger eller til pause er oppstått.
+	Loop (normal)	Utføre en rekke kommandoer gjentatte ganger: enten spesifisert antall ganger eller til pause er oppstått.
 	Loop (parse a string)	Henter understrenger (felt) fra en streng, ett om gangen.
 	Loop (read file contents)	Henter linjer i en tekstfil, ett om gangen (utfører bedre enn FileReadLine).
 	Loop (registry)	Henter innholdet i den angitte registerundernøkkelen, ett element om gangen.

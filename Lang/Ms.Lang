@@ -975,9 +975,9 @@
 		kandungan papan klip).
 	Ex_AF_TT =	Melangkau kaedah lembut mengaktifkan tingkap
 		dan pergi terus kepada kaedah secara paksa.
+	Ex_CM_TT =	Set mod menyelaras untuk tetikus arahan untuk menjadi relatif kepada sama ada tetingkap aktif atau skrin.
 	Ex_DH_TT =	Menentukan sama ada tingkap yang tidak dapat dilihat adalah "dilihat" oleh skrip.
 	Ex_DT_TT =	Menentukan sama ada teks yang tidak dapat dilihat dalam tetingkap adalah "dilihat" untuk maksud mencari tingkap. Ini memberi kesan kepada arahan seperti IfWinExist dan WinActivate.
-	Ex_CM_TT =	Set mod menyelaras untuk tetikus arahan untuk menjadi relatif kepada sama ada tetingkap aktif atau skrin.
 	Ex_EdScript_TT =	Buka dalam editor luaran
 	Ex_EdVars_TT =	Pilih pembolehubah global untuk dieksport.
 	Ex_ExecScript_TT =	Jalankan skrip
@@ -1021,11 +1021,11 @@
 		- Anda boleh menggunakan tali, pembolehubah, tatasusunan dan fungsi.
 		- Untuk menggunakan tali, sertakan mereka dalam sebut harga, contoh: var = "a".
 		- Penyata Pelbagai disokong, contoh: var = "a" || Instr (var, "b").
-	ExpView_TT =	Editor Advanced
 	ExpView2_TT =	Editor Advanced
+	ExpView_TT =	Editor Advanced
 	Fast_TT =	Menggunakan kaedah cepat mencari (disyorkan)
-	HiddenWin_TT =	Menentukan sama ada tingkap yang tidak dapat dilihat adalah "dilihat" oleh skrip.
 	HiddenText_TT =	Menentukan sama ada teks yang tidak dapat dilihat dalam tetingkap adalah "dilihat" untuk maksud mencari tingkap. Ini memberi kesan kepada arahan seperti IfWinExist dan WinActivate.
+	HiddenWin_TT =	Menentukan sama ada tingkap yang tidak dapat dilihat adalah "dilihat" oleh skrip.
 	HScale_TT =	Skala ketinggian
 	IconN_TT =	Bilangan kumpulan ikon
 	IfLVColor_TT =	Klik untuk memilih warna yang
@@ -1092,27 +1092,27 @@
 	WScale_TT =	Skala Lebar
 		
 ; 20. Operators		
-	As_Oper_1 =	Berikan
-	As_Oper_2 =	Tambah
-	As_Oper_3 =	Tolak
-	As_Oper_4 =	Membiak
-	As_Oper_5 =	Bahagikan
-	As_Oper_6 =	Jurang Floor
-	As_Oper_7 =	Concatenate
-	As_Oper_8 =	Bitwise inclusive OR
-	As_Oper_9 =	Bitwise AND
+	As_Oper_01 =	Berikan
+	As_Oper_02 =	Tambah
+	As_Oper_03 =	Tolak
+	As_Oper_04 =	Membiak
+	As_Oper_05 =	Bahagikan
+	As_Oper_06 =	Jurang Floor
+	As_Oper_07 =	Concatenate
+	As_Oper_08 =	Bitwise inclusive OR
+	As_Oper_09 =	Bitwise AND
 	As_Oper_10 =	Bitwise exclusive OR
 	As_Oper_11 =	Right shift AND
 	As_Oper_12 =	Left shift AND
-	Co_Oper_1 =	Sama
-	Co_Oper_2 =	Sama (kes sensitif)
-	Co_Oper_3 =	Tidak sama
-	Co_Oper_4 =	Lebih
-	Co_Oper_5 =	Kurang
-	Co_Oper_6 =	Lebih besar atau sama
-	Co_Oper_7 =	Kurang atau sama
-	Co_Oper_8 =	In (senarai)
-	Co_Oper_9 =	Tidak dalam (senarai)
+	Co_Oper_01 =	Sama
+	Co_Oper_02 =	Sama (kes sensitif)
+	Co_Oper_03 =	Tidak sama
+	Co_Oper_04 =	Lebih
+	Co_Oper_05 =	Kurang
+	Co_Oper_06 =	Lebih besar atau sama
+	Co_Oper_07 =	Kurang atau sama
+	Co_Oper_08 =	In (senarai)
+	Co_Oper_09 =	Tidak dalam (senarai)
 	Co_Oper_10 =	Mengandungi (senarai)
 	Co_Oper_11 =	Tidak mengandungi (senarai)
 	Co_Oper_12 =	Antara (laluan 1) dan (baris 2)
@@ -1210,7 +1210,7 @@
 	ControlGetPos	Mendapatkan semula kedudukan dan saiz kawalan.
 	ControlGetText	Mendapatkan semula teks dari kawalan.
 	ControlMove	Bergerak atau mengubah saiz kawalan.
-	ControlSend / ControlSendRaw 	Menghantar ketukan kekunci simulasi untuk tingkap atau kawalan.
+	ControlSend / ControlSendRaw	Menghantar ketukan kekunci simulasi untuk tingkap atau kawalan.
 	ControlSetText	Perubahan teks kawalan.
 	CoordMode	Set menyelaras mod untuk pelbagai arahan untuk menjadi relatif kepada sama ada tingkap aktif atau skrin.
 	Cos	Mengembalikan kosinus trigonometri nombor.
@@ -1299,7 +1299,7 @@
 	LoadPicture	Memuatkan gambar dari fail dan mengembalikan bitmap atau ikon pemegang.
 	Log	Kembali logaritma (asas 10) nombor.
 	Loop (files & folders)	Mendapatkan semula fail-fail tertentu atau folder, satu demi satu.
-	Loop (normal) 	Melaksanakan satu siri arahan berkali-kali: sama ada bilangan yang ditentukan masa atau sehingga rehat yang dihadapi.
+	Loop (normal)	Melaksanakan satu siri arahan berkali-kali: sama ada bilangan yang ditentukan masa atau sehingga rehat yang dihadapi.
 	Loop (parse a string)	Mendapatkan semula substrings (bidang) daripada rentetan, satu pada satu masa.
 	Loop (read file contents)	Mendapatkan semula baris dalam fail teks, satu pada satu masa (melakukan lebih baik daripada FileReadLine).
 	Loop (registry)	Mendapatkan semula kandungan subkey pendaftaran yang dinyatakan, satu perkara pada satu masa.

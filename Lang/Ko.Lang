@@ -975,9 +975,9 @@
 		클립 보드의 내용).
 	Ex_AF_TT =	창을 활성화의 완만 한 방법을 건너 뜁니다
 		그리고 강제 방법 바로갑니다.
+	Ex_CM_TT =	마우스를 활성 창 또는 화면 중 하나에 상대적 명령에 대한 설정 모드 좌표입니다.
 	Ex_DH_TT =	눈에 보이지 않는 창은 스크립트에 의해 "볼"수 있는지 여부를 결정합니다.
 	Ex_DT_TT =	창에 보이지 않는 텍스트 창을 발견하기위한 목적으로 "볼"되는지 여부를 결정합니다. 이는 IfWinExist 및 WinActivate 같은 명령에 영향을 미칩니다.
-	Ex_CM_TT =	마우스를 활성 창 또는 화면 중 하나에 상대적 명령에 대한 설정 모드 좌표입니다.
 	Ex_EdScript_TT =	외부 편집기에서 열기
 	Ex_EdVars_TT =	내보낼 전역 변수를 선택합니다.
 	Ex_ExecScript_TT =	실행 스크립트
@@ -1021,11 +1021,11 @@
 		- 당신은 문자열, 변수 배열과 기능을 사용할 수 있습니다.
 		- 예를 들어, 따옴표로 묶어, 문자열을 사용하려면, VAR = "를".
 		- 여러 개의 문이 지원됩니다, 예를 들면 : VAR = ""|| InStr이 (VAR, "B").
-	ExpView_TT =	고급 편집기
 	ExpView2_TT =	고급 편집기
+	ExpView_TT =	고급 편집기
 	Fast_TT =	빠른 검색 방법 (권장)를 사용
-	HiddenWin_TT =	눈에 보이지 않는 창은 스크립트에 의해 "볼"수 있는지 여부를 결정합니다.
 	HiddenText_TT =	창에 보이지 않는 텍스트 창을 발견하기위한 목적으로 "볼"되는지 여부를 결정합니다. 이는 IfWinExist 및 WinActivate 같은 명령에 영향을 미칩니다.
+	HiddenWin_TT =	눈에 보이지 않는 창은 스크립트에 의해 "볼"수 있는지 여부를 결정합니다.
 	HScale_TT =	높이 규모
 	IconN_TT =	아이콘 그룹의 수
 	IfLVColor_TT =	색상을 선택하려면 클릭하십시오
@@ -1092,27 +1092,27 @@
 	WScale_TT =	폭 규모
 		
 ; 20. Operators		
-	As_Oper_1 =	지정
-	As_Oper_2 =	추가
-	As_Oper_3 =	덜다
-	As_Oper_4 =	곱하기
-	As_Oper_5 =	분할
-	As_Oper_6 =	바닥 나누기
-	As_Oper_7 =	CONCATENATE
-	As_Oper_8 =	Bitwise inclusive OR
-	As_Oper_9 =	Bitwise AND
+	As_Oper_01 =	지정
+	As_Oper_02 =	추가
+	As_Oper_03 =	덜다
+	As_Oper_04 =	곱하기
+	As_Oper_05 =	분할
+	As_Oper_06 =	바닥 나누기
+	As_Oper_07 =	CONCATENATE
+	As_Oper_08 =	Bitwise inclusive OR
+	As_Oper_09 =	Bitwise AND
 	As_Oper_10 =	Bitwise exclusive OR
 	As_Oper_11 =	Right shift AND
 	As_Oper_12 =	Left shift AND
-	Co_Oper_1 =	같은
-	Co_Oper_2 =	동일 (대소 문자 구분)
-	Co_Oper_3 =	같지 않음
-	Co_Oper_4 =	더
-	Co_Oper_5 =	적게
-	Co_Oper_6 =	크거나 같음
-	Co_Oper_7 =	작거나 같은
-	Co_Oper_8 =	에서 (목록)
-	Co_Oper_9 =	하지에 (목록)
+	Co_Oper_01 =	같은
+	Co_Oper_02 =	동일 (대소 문자 구분)
+	Co_Oper_03 =	같지 않음
+	Co_Oper_04 =	더
+	Co_Oper_05 =	적게
+	Co_Oper_06 =	크거나 같음
+	Co_Oper_07 =	작거나 같은
+	Co_Oper_08 =	에서 (목록)
+	Co_Oper_09 =	하지에 (목록)
 	Co_Oper_10 =	포함 (목록)
 	Co_Oper_11 =	포함되지 않음 (목록)
 	Co_Oper_12 =	(라인 1)과 (2 호선) 사이
@@ -1210,7 +1210,7 @@
 	ControlGetPos	컨트롤의 위치와 크기를 검색합니다.
 	ControlGetText	컨트롤에서 텍스트를 검색합니다.
 	ControlMove	이동 또는 컨트롤 크기를 조정합니다.
-	ControlSend / ControlSendRaw 	창이나 컨트롤에 시뮬레이션 키 입력을 보냅니다.
+	ControlSend / ControlSendRaw	창이나 컨트롤에 시뮬레이션 키 입력을 보냅니다.
 	ControlSetText	컨트롤의 텍스트를 변경합니다.
 	CoordMode	설정은 활성 창 또는 화면 하나에 상대적 다양한 명령 모드를 조정.
 	Cos	수의 삼각 코사인을 반환합니다.
@@ -1299,7 +1299,7 @@
 	LoadPicture	파일에서 그림을로드 및 비트 맵 또는 아이콘 핸들을 반환합니다.
 	Log	숫자의 로그 (밑이 10)을 반환합니다.
 	Loop (files & folders)	지정된 파일 또는 폴더를 한 번에 하나씩 검색합니다.
-	Loop (normal) 	반복 일련의 명령을 수행 지정한 횟수 또는 중단 될 때까지 하나가 발생합니다.
+	Loop (normal)	반복 일련의 명령을 수행 지정한 횟수 또는 중단 될 때까지 하나가 발생합니다.
 	Loop (parse a string)	문자열에서 검색하는 하위 문자열 (필드), 한 번에 하나의.
 	Loop (read file contents)	텍스트 파일에 라인 시간 (FileReadLine보다 더 나은 수행) 하나를 검색합니다.
 	Loop (registry)	한 번에 지정된 레지스트리 하위 키를 하나의 항목의 내용을 검색합니다.

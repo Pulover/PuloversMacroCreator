@@ -975,9 +975,9 @@
 		Conținutul clipboard).
 	Ex_AF_TT =	Omite metoda usoara de activare a unei ferestre
 		Și merge direct la metoda puternică.
+	Ex_CM_TT =	Seturi de modul de coordonate pentru comenzile mouse-ul să fie în raport fie fereastra activă sau ecranul.
 	Ex_DH_TT =	Stabilește dacă ferestrele invizibile sunt "văzute" de script-ul.
 	Ex_DT_TT =	Stabilește dacă textul invizibil într-o fereastră este "văzut" în scopul de a găsi fereastra. Acest lucru afectează comenzi, cum ar fi IfWinExist și WinActivate.
-	Ex_CM_TT =	Seturi de modul de coordonate pentru comenzile mouse-ul să fie în raport fie fereastra activă sau ecranul.
 	Ex_EdScript_TT =	Open in editor extern
 	Ex_EdVars_TT =	Selectați variabile globale care urmează să fie exportate.
 	Ex_ExecScript_TT =	Script care rulează
@@ -1021,11 +1021,11 @@
 		- Aveți dreptul să utilizați șiruri, variabile, tablouri și funcții.
 		- Pentru a utiliza siruri de caractere, incadrati in ghilimele, ex .: var = "o".
 		- Declarațiile multiple sunt susținute, de exemplu .: var = "o" || Instr (var, "b").
-	ExpView_TT =	Editor avansat
 	ExpView2_TT =	Editor avansat
+	ExpView_TT =	Editor avansat
 	Fast_TT =	Folosește o metodă de căutare mai rapidă (recomandat)
-	HiddenWin_TT =	Stabilește dacă ferestrele invizibile sunt "văzute" de script-ul.
 	HiddenText_TT =	Stabilește dacă textul invizibil într-o fereastră este "văzut" în scopul de a găsi fereastra. Acest lucru afectează comenzi, cum ar fi IfWinExist și WinActivate.
+	HiddenWin_TT =	Stabilește dacă ferestrele invizibile sunt "văzute" de script-ul.
 	HScale_TT =	La scară înălțime
 	IconN_TT =	Numărul grupului icon
 	IfLVColor_TT =	Click pentru a alege o culoare
@@ -1092,27 +1092,27 @@
 	WScale_TT =	Lăţime scară
 		
 ; 20. Operators		
-	As_Oper_1 =	Atribui
-	As_Oper_2 =	Adăuga
-	As_Oper_3 =	Scădea
-	As_Oper_4 =	Multiplica
-	As_Oper_5 =	Divide
-	As_Oper_6 =	Diviza Etaj
-	As_Oper_7 =	Înlănţui
-	As_Oper_8 =	Bitwise inclusive SAU
-	As_Oper_9 =	Bitwise ȘI
+	As_Oper_01 =	Atribui
+	As_Oper_02 =	Adăuga
+	As_Oper_03 =	Scădea
+	As_Oper_04 =	Multiplica
+	As_Oper_05 =	Divide
+	As_Oper_06 =	Diviza Etaj
+	As_Oper_07 =	Înlănţui
+	As_Oper_08 =	Bitwise inclusive SAU
+	As_Oper_09 =	Bitwise ȘI
 	As_Oper_10 =	Bitwise SAU exclusiv
 	As_Oper_11 =	Deplasare la dreapta și
 	As_Oper_12 =	Deplasare la stânga și la
-	Co_Oper_1 =	Egal
-	Co_Oper_2 =	Același număr (caz sensibil)
-	Co_Oper_3 =	Nu este egal
-	Co_Oper_4 =	O mai mare
-	Co_Oper_5 =	Mai puțin
-	Co_Oper_6 =	O mai mare sau egal
-	Co_Oper_7 =	Mai mic sau egal
-	Co_Oper_8 =	În (listă)
-	Co_Oper_9 =	Nu în (listă)
+	Co_Oper_01 =	Egal
+	Co_Oper_02 =	Același număr (caz sensibil)
+	Co_Oper_03 =	Nu este egal
+	Co_Oper_04 =	O mai mare
+	Co_Oper_05 =	Mai puțin
+	Co_Oper_06 =	O mai mare sau egal
+	Co_Oper_07 =	Mai mic sau egal
+	Co_Oper_08 =	În (listă)
+	Co_Oper_09 =	Nu în (listă)
 	Co_Oper_10 =	Conține (listă)
 	Co_Oper_11 =	Nu conține (listă)
 	Co_Oper_12 =	Între (linia 2) (linia 1) și
@@ -1210,7 +1210,7 @@
 	ControlGetPos	Recuperează poziția și dimensiunea unui control.
 	ControlGetText	Recuperează text dintr-un control.
 	ControlMove	Se deplasează sau redimensioneaza un control.
-	ControlSend / ControlSendRaw 	Trimite intrarile de la tastatura simulate într-o fereastră sau de control.
+	ControlSend / ControlSendRaw	Trimite intrarile de la tastatura simulate într-o fereastră sau de control.
 	ControlSetText	Modifică textul unui control.
 	CoordMode	Seturi modul de coordonate pentru diferite comenzi pentru a fi în raport fie fereastra activă sau ecranul.
 	Cos	Returnează cosinusul trigonometrică a Number.
@@ -1299,7 +1299,7 @@
 	LoadPicture	Încarcă o imagine din fișier și returnează un bitmap sau pictogramă mâner.
 	Log	Returnează logaritmul (baza 10) Nr.
 	Loop (files & folders)	Recuperează fișierele sau directoarele specificate, câte unul la un moment dat.
-	Loop (normal) 	Efectuați o serie de comenzi în mod repetat: fie numărul specificat de ori sau până la pauză se întâlnește.
+	Loop (normal)	Efectuați o serie de comenzi în mod repetat: fie numărul specificat de ori sau până la pauză se întâlnește.
 	Loop (parse a string)	Recuperează subșirurilor (câmpuri) dintr-un șir de caractere, unul la un moment dat.
 	Loop (read file contents)	Recuperează liniile într-un fișier text, unul la un moment dat (performanță mai bună decât FileReadLine).
 	Loop (registry)	Extrage conținutul registrului specificat subcheii, un singur element la un moment dat.

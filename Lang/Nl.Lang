@@ -975,9 +975,9 @@
 		de inhoud van het klembord).
 	Ex_AF_TT =	Slaat de zachte methode voor het activeren van een venster
 		en gaat rechtstreeks naar de krachtige methode.
+	Ex_CM_TT =	Stelt coördineren-modus voor de muis commando's ten opzichte van zowel het actieve venster of het scherm te zijn.
 	Ex_DH_TT =	Bepaalt of onzichtbare vensters worden door het script 'gezien'.
 	Ex_DT_TT =	Bepaalt of onzichtbare tekst in een venster wordt "gezien" voor het doel van het vinden van het venster. Dit heeft invloed op commando's zoals IfWinExist en WinActivate.
-	Ex_CM_TT =	Stelt coördineren-modus voor de muis commando's ten opzichte van zowel het actieve venster of het scherm te zijn.
 	Ex_EdScript_TT =	Open in externe editor
 	Ex_EdVars_TT =	Selecteer globale variabelen te exporteren.
 	Ex_ExecScript_TT =	Script
@@ -1021,11 +1021,11 @@
 		- U kunt gebruik maken van snaren, variabelen, arrays en functies.
 		- Om strings gebruiken, omsluiten ze tussen aanhalingstekens, bijvoorbeeld: var = "a".
 		- Meerdere verklaringen worden ondersteund, bijvoorbeeld: var = "a" || InStr (var, "b").
-	ExpView_TT =	Geavanceerde Editor
 	ExpView2_TT =	Geavanceerde Editor
+	ExpView_TT =	Geavanceerde Editor
 	Fast_TT =	Maakt gebruik van een snellere zoekmethode (aanbevolen)
-	HiddenWin_TT =	Bepaalt of onzichtbare vensters worden door het script 'gezien'.
 	HiddenText_TT =	Bepaalt of onzichtbare tekst in een venster wordt "gezien" voor het doel van het vinden van het venster. Dit heeft invloed op commando's zoals IfWinExist en WinActivate.
+	HiddenWin_TT =	Bepaalt of onzichtbare vensters worden door het script 'gezien'.
 	HScale_TT =	Hoogte schaal
 	IconN_TT =	Nummer van het pictogram groep
 	IfLVColor_TT =	Klik hier om een ​​kleur te kiezen
@@ -1092,27 +1092,27 @@
 	WScale_TT =	Schaal breedte
 		
 ; 20. Operators		
-	As_Oper_1 =	Toewijzen
-	As_Oper_2 =	Toevoegen
-	As_Oper_3 =	Aftrekken
-	As_Oper_4 =	Vermenigvuldigen
-	As_Oper_5 =	Verdelen
-	As_Oper_6 =	Vloer kloof
-	As_Oper_7 =	Aaneenschakelen
-	As_Oper_8 =	Bitwise inclusive OR
-	As_Oper_9 =	Bitwise AND
+	As_Oper_01 =	Toewijzen
+	As_Oper_02 =	Toevoegen
+	As_Oper_03 =	Aftrekken
+	As_Oper_04 =	Vermenigvuldigen
+	As_Oper_05 =	Verdelen
+	As_Oper_06 =	Vloer kloof
+	As_Oper_07 =	Aaneenschakelen
+	As_Oper_08 =	Bitwise inclusive OR
+	As_Oper_09 =	Bitwise AND
 	As_Oper_10 =	Bitwise exclusive OR
 	As_Oper_11 =	Right shift AND
 	As_Oper_12 =	Left shift AND
-	Co_Oper_1 =	Gelijk
-	Co_Oper_2 =	Equal (hoofdlettergevoelig)
-	Co_Oper_3 =	Niet gelijk
-	Co_Oper_4 =	Groter
-	Co_Oper_5 =	Minder
-	Co_Oper_6 =	Groter dan of gelijk
-	Co_Oper_7 =	Minder of gelijk
-	Co_Oper_8 =	In (lijst)
-	Co_Oper_9 =	Niet in (lijst)
+	Co_Oper_01 =	Gelijk
+	Co_Oper_02 =	Equal (hoofdlettergevoelig)
+	Co_Oper_03 =	Niet gelijk
+	Co_Oper_04 =	Groter
+	Co_Oper_05 =	Minder
+	Co_Oper_06 =	Groter dan of gelijk
+	Co_Oper_07 =	Minder of gelijk
+	Co_Oper_08 =	In (lijst)
+	Co_Oper_09 =	Niet in (lijst)
 	Co_Oper_10 =	Bevat (lijst)
 	Co_Oper_11 =	Niet bevat (lijst)
 	Co_Oper_12 =	Tussen (lijn 1) en (lijn 2)
@@ -1210,7 +1210,7 @@
 	ControlGetPos	Haalt de positie en grootte van een controle.
 	ControlGetText	Haalt tekst uit een controle.
 	ControlMove	Verplaatst of past de grootte van een controle.
-	ControlSend / ControlSendRaw 	Stuurt gesimuleerde toetsaanslagen naar een raam of controle.
+	ControlSend / ControlSendRaw	Stuurt gesimuleerde toetsaanslagen naar een raam of controle.
 	ControlSetText	Verandert de tekst van een controle.
 	CoordMode	Sets coördineren modus voor verschillende opdrachten te zijn ten opzichte van zowel het actieve venster of het scherm .
 	Cos	Geeft de trigonometrische cosinus van nummer .
@@ -1299,7 +1299,7 @@
 	LoadPicture	Laadt een afbeelding uit een bestand en geeft een bitmap of pictogram handvat.
 	Log	Geeft de logaritme (grondtal 10) van het nummer.
 	Loop (files & folders)	Haalt de opgegeven bestanden of mappen, een voor een.
-	Loop (normal) 	Voer een reeks opdrachten herhaaldelijk: ofwel het opgegeven aantal malen of tot breuk wordt aangetroffen.
+	Loop (normal)	Voer een reeks opdrachten herhaaldelijk: ofwel het opgegeven aantal malen of tot breuk wordt aangetroffen.
 	Loop (parse a string)	Haalt substrings (velden) uit een tekenreeks, een voor een.
 	Loop (read file contents)	Haalt de lijnen in een tekstbestand, een voor een (beter presteert dan FileReadLine).
 	Loop (registry)	Haalt de inhoud van de opgegeven registersubsleutel, een item tegelijk.

@@ -975,9 +975,9 @@
 		isi clipboard).
 	Ex_AF_TT =	Melompat metode lembut mengaktifkan jendela
 		dan langsung menuju ke metode kuat.
+	Ex_CM_TT =	Set koordinat modus untuk mouse perintah untuk menjadi relatif baik jendela aktif atau layar.
 	Ex_DH_TT =	Menentukan apakah jendela terlihat sedang "dilihat" oleh script.
 	Ex_DT_TT =	Menentukan apakah teks yang tak terlihat di jendela adalah "terlihat" untuk tujuan menemukan jendela. Ini mempengaruhi perintah seperti IfWinExist dan WinActivate.
-	Ex_CM_TT =	Set koordinat modus untuk mouse perintah untuk menjadi relatif baik jendela aktif atau layar.
 	Ex_EdScript_TT =	Nyílt külső szerkesztőben
 	Ex_EdVars_TT =	Pilih variabel global yang akan diekspor.
 	Ex_ExecScript_TT =	Script berjalan
@@ -1021,11 +1021,11 @@
 		- Anda dapat menggunakan string, variabel, array dan fungsi.
 		- Untuk menggunakan string, menyertakan mereka dalam tanda kutip, misalnya: var = "a".
 		- Beberapa Laporan yang didukung, misalnya: var = "a" || InStr (var, "b").
-	ExpView_TT =	Editor canggih
 	ExpView2_TT =	Editor canggih
+	ExpView_TT =	Editor canggih
 	Fast_TT =	Menggunakan metode yang lebih cepat mencari (dianjurkan)
-	HiddenWin_TT =	Menentukan apakah jendela terlihat sedang "dilihat" oleh script.
 	HiddenText_TT =	Menentukan apakah teks yang tak terlihat di jendela adalah "terlihat" untuk tujuan menemukan jendela. Ini mempengaruhi perintah seperti IfWinExist dan WinActivate.
+	HiddenWin_TT =	Menentukan apakah jendela terlihat sedang "dilihat" oleh script.
 	HScale_TT =	Skala Tinggi
 	IconN_TT =	Jumlah kelompok ikon
 	IfLVColor_TT =	Klik untuk memilih warna
@@ -1092,27 +1092,27 @@
 	WScale_TT =	Skala Lebar
 		
 ; 20. Operators		
-	As_Oper_1 =	Menetapkan
-	As_Oper_2 =	Menambahkan
-	As_Oper_3 =	Mengurangi
-	As_Oper_4 =	Mengalikan
-	As_Oper_5 =	Membagi
-	As_Oper_6 =	Membagi lantai
-	As_Oper_7 =	Menyatukan
-	As_Oper_8 =	Bitwise inclusive OR
-	As_Oper_9 =	Bitwise AND
+	As_Oper_01 =	Menetapkan
+	As_Oper_02 =	Menambahkan
+	As_Oper_03 =	Mengurangi
+	As_Oper_04 =	Mengalikan
+	As_Oper_05 =	Membagi
+	As_Oper_06 =	Membagi lantai
+	As_Oper_07 =	Menyatukan
+	As_Oper_08 =	Bitwise inclusive OR
+	As_Oper_09 =	Bitwise AND
 	As_Oper_10 =	Bitwise exclusive OR
 	As_Oper_11 =	Right shift AND
 	As_Oper_12 =	Left shift AND
-	Co_Oper_1 =	Sama
-	Co_Oper_2 =	Sama (case sensitive)
-	Co_Oper_3 =	Tidak sama
-	Co_Oper_4 =	Lebih besar
-	Co_Oper_5 =	Kurang
-	Co_Oper_6 =	Lebih besar atau sama
-	Co_Oper_7 =	Kurang atau sama
-	Co_Oper_8 =	Dalam (daftar)
-	Co_Oper_9 =	Tidak di (daftar)
+	Co_Oper_01 =	Sama
+	Co_Oper_02 =	Sama (case sensitive)
+	Co_Oper_03 =	Tidak sama
+	Co_Oper_04 =	Lebih besar
+	Co_Oper_05 =	Kurang
+	Co_Oper_06 =	Lebih besar atau sama
+	Co_Oper_07 =	Kurang atau sama
+	Co_Oper_08 =	Dalam (daftar)
+	Co_Oper_09 =	Tidak di (daftar)
 	Co_Oper_10 =	Berisi (daftar)
 	Co_Oper_11 =	Tidak mengandung (daftar)
 	Co_Oper_12 =	Antara (line 1) dan (jalur 2)
@@ -1210,7 +1210,7 @@
 	ControlGetPos	Mengambil posisi dan ukuran kontrol.
 	ControlGetText	Mengambil teks dari kontrol.
 	ControlMove	Memindahkan atau mengubah ukuran kontrol.
-	ControlSend / ControlSendRaw 	Mengirim keystrokes simulasi ke jendela atau kontrol.
+	ControlSend / ControlSendRaw	Mengirim keystrokes simulasi ke jendela atau kontrol.
 	ControlSetText	Mengubah teks kontrol.
 	CoordMode	Set modus koordinasi untuk berbagai perintah harus relatif baik untuk jendela aktif atau layar.
 	Cos	Mengembalikan cosinus trigonometri Nomor.
@@ -1299,7 +1299,7 @@
 	LoadPicture	Beban gambar dari file dan mengembalikan bitmap atau ikon pegangan.
 	Log	Mengembalikan logaritma (basis 10) Nomor.
 	Loop (files & folders)	Mengambil file tertentu atau folder, satu per satu.
-	Loop (normal) 	Lakukan serangkaian perintah berulang kali: baik jumlah tertentu kali atau sampai istirahat ditemui.
+	Loop (normal)	Lakukan serangkaian perintah berulang kali: baik jumlah tertentu kali atau sampai istirahat ditemui.
 	Loop (parse a string)	Mengambil substring (field) dari string, satu per satu.
 	Loop (read file contents)	Mengambil baris dalam sebuah file teks, satu per satu waktu (melakukan lebih baik daripada FileReadLine).
 	Loop (registry)	Mengambil isi dari subkey registry yang ditentukan, satu item pada suatu waktu.

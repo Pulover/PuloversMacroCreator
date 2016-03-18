@@ -975,9 +975,9 @@
 		leikepöydän sisällön).
 	Ex_AF_TT =	Ohittaa lempeä menetelmä aktivoimiseksi ikkunan
 		ja menee suoraan voimakkaan menetelmällä.
+	Ex_CM_TT =	Sarjaa koordinoi tila hiirikomennot olevan suhteellinen joko aktiivisen ikkunan tai näytön.
 	Ex_DH_TT =	Määrittää näkymätön ikkunoita "näkee" kirjoitus.
 	Ex_DT_TT =	Määrittää näkymätön tekstin ikkuna "nähdä", jonka tarkoituksena löytää ikkunan. Tämä vaikuttaa komentoja kuten IfWinExist ja WinActivate.
-	Ex_CM_TT =	Sarjaa koordinoi tila hiirikomennot olevan suhteellinen joko aktiivisen ikkunan tai näytön.
 	Ex_EdScript_TT =	Avaa ulkoisen editorin
 	Ex_EdVars_TT =	Valitse globaalien muuttujien viedään.
 	Ex_ExecScript_TT =	Suorita skripti
@@ -1021,11 +1021,11 @@
 		- Voit käyttää jouset, muuttujat, taulukot ja toimintoja.
 		- Jos haluat käyttää jouset, liittää ne lainausmerkkeihin, esimerkiksi: var = "".
 		- Useita ilmoituksia tukevat, esimerkiksi: var = "" || InStr (var, "b").
-	ExpView_TT =	Kehittynyt Editori
 	ExpView2_TT =	Kehittynyt Editori
+	ExpView_TT =	Kehittynyt Editori
 	Fast_TT =	Käyttää nopeampi hakutapa (suositus)
-	HiddenWin_TT =	Määrittää näkymätön ikkunoita "näkee" kirjoitus.
 	HiddenText_TT =	Määrittää näkymätön tekstin ikkuna "nähdä", jonka tarkoituksena löytää ikkunan. Tämä vaikuttaa komentoja kuten IfWinExist ja WinActivate.
+	HiddenWin_TT =	Määrittää näkymätön ikkunoita "näkee" kirjoitus.
 	HScale_TT =	Korkeusasteikon
 	IconN_TT =	Määrä kuvaketta ryhmän
 	IfLVColor_TT =	Klikkaa valita värin
@@ -1092,27 +1092,27 @@
 	WScale_TT =	Leveys mittakaavassa
 		
 ; 20. Operators		
-	As_Oper_1 =	Antaa
-	As_Oper_2 =	Lisätä
-	As_Oper_3 =	Vähentää
-	As_Oper_4 =	Lisääntyä
-	As_Oper_5 =	Jakaa
-	As_Oper_6 =	Lattia kahtiajaon
-	As_Oper_7 =	Kytkeä peräkkäin
-	As_Oper_8 =	Bitwise inclusive OR
-	As_Oper_9 =	Bitwise AND
+	As_Oper_01 =	Antaa
+	As_Oper_02 =	Lisätä
+	As_Oper_03 =	Vähentää
+	As_Oper_04 =	Lisääntyä
+	As_Oper_05 =	Jakaa
+	As_Oper_06 =	Lattia kahtiajaon
+	As_Oper_07 =	Kytkeä peräkkäin
+	As_Oper_08 =	Bitwise inclusive OR
+	As_Oper_09 =	Bitwise AND
 	As_Oper_10 =	Bitwise exclusive OR
 	As_Oper_11 =	Right shift AND
 	As_Oper_12 =	Left shift AND
-	Co_Oper_1 =	Yhtäläinen
-	Co_Oper_2 =	Equal (isot ja pienet kirjaimet)
-	Co_Oper_3 =	Ei yhtä
-	Co_Oper_4 =	Suur-
-	Co_Oper_5 =	Vähemmän
-	Co_Oper_6 =	Suurempi tai yhtä suuri
-	Co_Oper_7 =	Pienempi tai yhtä suuri
-	Co_Oper_8 =	In (lista)
-	Co_Oper_9 =	Ei (lista)
+	Co_Oper_01 =	Yhtäläinen
+	Co_Oper_02 =	Equal (isot ja pienet kirjaimet)
+	Co_Oper_03 =	Ei yhtä
+	Co_Oper_04 =	Suur-
+	Co_Oper_05 =	Vähemmän
+	Co_Oper_06 =	Suurempi tai yhtä suuri
+	Co_Oper_07 =	Pienempi tai yhtä suuri
+	Co_Oper_08 =	In (lista)
+	Co_Oper_09 =	Ei (lista)
 	Co_Oper_10 =	Sisältää (lista)
 	Co_Oper_11 =	Ei sisältää (lista)
 	Co_Oper_12 =	Välillä (rivi 1) ja (linja 2)
@@ -1210,7 +1210,7 @@
 	ControlGetPos	Hakeesijainti ja kokoohjaus .
 	ControlGetText	Noutaa tekstinohjaus .
 	ControlMove	Siirtyy tai muuttaa kokoaanohjaus .
-	ControlSend / ControlSendRaw 	Lähettää simuloituja näppäimistön , ikkunan ääreen tai valvontaa .
+	ControlSend / ControlSendRaw	Lähettää simuloituja näppäimistön , ikkunan ääreen tai valvontaa .
 	ControlSetText	Muuttaatekstinohjaus .
 	CoordMode	Lavastus koordinoida tilassa eri komennot ovat suhteessa jokoaktiivisen ikkunan tainäytön .
 	Cos	Palauttaatrigonometriset kosinin lukumäärä.
@@ -1299,7 +1299,7 @@
 	LoadPicture	Lataa kuvan tiedostosta ja palauttaa bittikartta tai kuvake kahva.
 	Log	Palauttaa logaritmin (base 10) lukumäärä.
 	Loop (files & folders)	Hakee määritetyt tiedostot tai kansiot, yksi kerrallaan.
-	Loop (normal) 	Suorita sarja käskyjä toistuvasti: joko annettu määrä kertoja tai kunnes tauko on kohdannut.
+	Loop (normal)	Suorita sarja käskyjä toistuvasti: joko annettu määrä kertoja tai kunnes tauko on kohdannut.
 	Loop (parse a string)	Hakee merkkijonoa (kentät) alkaen merkkijonon, yksi kerrallaan.
 	Loop (read file contents)	Hakee rivit tekstitiedosto, yksi kerrallaan (toimii paremmin kuin FileReadLine).
 	Loop (registry)	Hakee sisältö määritelty aliavaimen yhden kohteen kerrallaan.

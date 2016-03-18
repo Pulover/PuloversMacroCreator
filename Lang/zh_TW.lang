@@ -975,9 +975,9 @@
 		剪貼板中的內容）。
 	Ex_AF_TT =	跳過溫和的方法激活一個窗口
 		徑直強而有力的方法。
+	Ex_CM_TT =	對於鼠標命令是相對於任一活動窗口或屏幕集坐標模式。
 	Ex_DH_TT =	確定是否無形窗口“看到”的腳本。
 	Ex_DT_TT =	確定在一個窗口不可見的文本是否被“看到”查找窗口的目的。這會影響諸如IfWinExist和WinActivate命令。
-	Ex_CM_TT =	對於鼠標命令是相對於任一活動窗口或屏幕集坐標模式。
 	Ex_EdScript_TT =	打开外部编辑器
 	Ex_EdVars_TT =	選擇要導出的全局變量。
 	Ex_ExecScript_TT =	運行腳本
@@ -1021,11 +1021,11 @@
 		- 您可以使用字符串，變量，數組和函數。
 		- 要使用字符串，它們括在引號，例如：VAR=“A”。
 		- 多個語句的支持，例如：VAR=“一個”|| INSTR（變種，“B”）。
-	ExpView_TT =	高級編輯
 	ExpView2_TT =	高級編輯
+	ExpView_TT =	高級編輯
 	Fast_TT =	使用更快的搜索方法（推薦）
-	HiddenWin_TT =	確定是否無形窗口“看到”的腳本。
 	HiddenText_TT =	確定在一個窗口不可見的文本是否被“看到”查找窗口的目的。這會影響諸如IfWinExist和WinActivate命令。
+	HiddenWin_TT =	確定是否無形窗口“看到”的腳本。
 	HScale_TT =	身高規模
 	IconN_TT =	圖標組中的數
 	IfLVColor_TT =	點擊挑顏色
@@ -1092,27 +1092,27 @@
 	WScale_TT =	寬規模
 		
 ; 20. Operators		
-	As_Oper_1 =	分配
-	As_Oper_2 =	加
-	As_Oper_3 =	減去
-	As_Oper_4 =	乘
-	As_Oper_5 =	劃分
-	As_Oper_6 =	地板鴻溝
-	As_Oper_7 =	串連
-	As_Oper_8 =	Bitwise inclusive OR
-	As_Oper_9 =	Bitwise AND
+	As_Oper_01 =	分配
+	As_Oper_02 =	加
+	As_Oper_03 =	減去
+	As_Oper_04 =	乘
+	As_Oper_05 =	劃分
+	As_Oper_06 =	地板鴻溝
+	As_Oper_07 =	串連
+	As_Oper_08 =	Bitwise inclusive OR
+	As_Oper_09 =	Bitwise AND
 	As_Oper_10 =	Bitwise exclusive OR
 	As_Oper_11 =	Right shift AND
 	As_Oper_12 =	Left shift AND
-	Co_Oper_1 =	等於
-	Co_Oper_2 =	平等（區分大小寫）
-	Co_Oper_3 =	不等於
-	Co_Oper_4 =	大
-	Co_Oper_5 =	少
-	Co_Oper_6 =	大於或等於
-	Co_Oper_7 =	小於或等於
-	Co_Oper_8 =	在（名單）
-	Co_Oper_9 =	不在（名單）
+	Co_Oper_01 =	等於
+	Co_Oper_02 =	平等（區分大小寫）
+	Co_Oper_03 =	不等於
+	Co_Oper_04 =	大
+	Co_Oper_05 =	少
+	Co_Oper_06 =	大於或等於
+	Co_Oper_07 =	小於或等於
+	Co_Oper_08 =	在（名單）
+	Co_Oper_09 =	不在（名單）
 	Co_Oper_10 =	包含（名單）
 	Co_Oper_11 =	不包含（名單）
 	Co_Oper_12 =	之間（線1）和（2行）
@@ -1210,7 +1210,7 @@
 	ControlGetPos	檢索的位置和大小的控制。
 	ControlGetText	擷取文字的控制。
 	ControlMove	移動或調整大小的控制。
-	ControlSend / ControlSendRaw 	發送模擬擊鍵一個窗口或控制。
+	ControlSend / ControlSendRaw	發送模擬擊鍵一個窗口或控制。
 	ControlSetText	更改文本的控制。
 	CoordMode	集協調各種命令模式是相對的活動窗口或屏幕。
 	Cos	返回三角餘弦數。
@@ -1299,7 +1299,7 @@
 	LoadPicture	從文件加載圖片，並返回一個位圖或圖標句柄。
 	Log	返回數的對數（基數為10）。
 	Loop (files & folders)	檢索指定的文件或文件夾，一次一個。
-	Loop (normal) 	反复執行的一系列命令：要么指定次數或休息，直到遇到。
+	Loop (normal)	反复執行的一系列命令：要么指定次數或休息，直到遇到。
 	Loop (parse a string)	檢索子字符串（字段）從一個字符串，一次一個。
 	Loop (read file contents)	檢索在一個文本文件，一個（執行優於FileReadLine）時間線。
 	Loop (registry)	檢索指定的註冊表子項，一個項目的內容在同一時間。

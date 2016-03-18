@@ -975,9 +975,9 @@
 		il contenuto degli appunti).
 	Ex_AF_TT =	Salta il modo delicato di attivare una finestra
 		e va dritto al metodo forte.
+	Ex_CM_TT =	Imposta la modalità di coordinate per i comandi del mouse per essere relativo sia alla finestra attiva o lo schermo.
 	Ex_DH_TT =	Determina se le finestre sono invisibili "visti" dallo script.
 	Ex_DT_TT =	Determina se il testo invisibile in una finestra è "visto" con lo scopo di trovare la finestra. Questo influisce comandi come IfWinExist e WinActivate.
-	Ex_CM_TT =	Imposta la modalità di coordinate per i comandi del mouse per essere relativo sia alla finestra attiva o lo schermo.
 	Ex_EdScript_TT =	Apri in editor esterno
 	Ex_EdVars_TT =	Selezionare le variabili globali da esportare.
 	Ex_ExecScript_TT =	Esegui script
@@ -1021,11 +1021,11 @@
 		- È possibile utilizzare stringhe, le variabili, array e funzioni.
 		- Per utilizzare stringhe, racchiuderli tra virgolette, ad esempio: var = "a".
 		- Più istruzioni sono supportati, ad esempio: var = "a" || InStr (var, "b").
-	ExpView_TT =	Editor Avanzato
 	ExpView2_TT =	Editor Avanzato
+	ExpView_TT =	Editor Avanzato
 	Fast_TT =	Utilizza un metodo di ricerca più veloce (consigliato)
-	HiddenWin_TT =	Determina se le finestre sono invisibili "visti" dallo script.
 	HiddenText_TT =	Determina se il testo invisibile in una finestra è "visto" con lo scopo di trovare la finestra. Questo influisce comandi come IfWinExist e WinActivate.
+	HiddenWin_TT =	Determina se le finestre sono invisibili "visti" dallo script.
 	HScale_TT =	Scala di altezza
 	IconN_TT =	Numero del gruppo di icona
 	IfLVColor_TT =	Fare clic per selezionare un colore
@@ -1092,27 +1092,27 @@
 	WScale_TT =	Scala Larghezza
 		
 ; 20. Operators		
-	As_Oper_1 =	Assegna
-	As_Oper_2 =	Aggiungi
-	As_Oper_3 =	Sottrarre
-	As_Oper_4 =	Moltiplicare
-	As_Oper_5 =	Divide
-	As_Oper_6 =	Piano divide
-	As_Oper_7 =	Concatenare
-	As_Oper_8 =	Bitwise inclusive OR
-	As_Oper_9 =	Bitwise AND
+	As_Oper_01 =	Assegna
+	As_Oper_02 =	Aggiungi
+	As_Oper_03 =	Sottrarre
+	As_Oper_04 =	Moltiplicare
+	As_Oper_05 =	Divide
+	As_Oper_06 =	Piano divide
+	As_Oper_07 =	Concatenare
+	As_Oper_08 =	Bitwise inclusive OR
+	As_Oper_09 =	Bitwise AND
 	As_Oper_10 =	Bitwise exclusive OR
 	As_Oper_11 =	Right shift AND
 	As_Oper_12 =	Left shift AND
-	Co_Oper_1 =	Equal
-	Co_Oper_2 =	Equal (maiuscole e minuscole)
-	Co_Oper_3 =	Non uguale
-	Co_Oper_4 =	Maggiore
-	Co_Oper_5 =	Meno
-	Co_Oper_6 =	Maggiore o uguale
-	Co_Oper_7 =	Minore o uguale
-	Co_Oper_8 =	In (elenco)
-	Co_Oper_9 =	Non in (lista)
+	Co_Oper_01 =	Equal
+	Co_Oper_02 =	Equal (maiuscole e minuscole)
+	Co_Oper_03 =	Non uguale
+	Co_Oper_04 =	Maggiore
+	Co_Oper_05 =	Meno
+	Co_Oper_06 =	Maggiore o uguale
+	Co_Oper_07 =	Minore o uguale
+	Co_Oper_08 =	In (elenco)
+	Co_Oper_09 =	Non in (lista)
 	Co_Oper_10 =	Contiene (elenco)
 	Co_Oper_11 =	Non contiene (elenco)
 	Co_Oper_12 =	Tra (linea 1) e (linea 2)
@@ -1210,7 +1210,7 @@
 	ControlGetPos	Recupera la posizione e le dimensioni di un controllo .
 	ControlGetText	Recupera testo da un controllo .
 	ControlMove	Sposta o ridimensiona un controllo.
-	ControlSend / ControlSendRaw 	Consente di inviare sequenze di tasti simulati a una finestra o un controllo .
+	ControlSend / ControlSendRaw	Consente di inviare sequenze di tasti simulati a una finestra o un controllo .
 	ControlSetText	Modifica il testo di un controllo .
 	CoordMode	Imposta la modalità di coordinate per i vari comandi per essere relativo sia la finestra attiva o lo schermo .
 	Cos	Restituisce il coseno trigonometrico di numero .
@@ -1299,7 +1299,7 @@
 	LoadPicture	Carica una foto da file e restituisce una bitmap o icone.
 	Log	Restituisce il logaritmo (base 10) del numero.
 	Loop (files & folders)	Recupera i file specificati o cartelle, una alla volta.
-	Loop (normal) 	Eseguire una serie di comandi più volte: si incontra sia il numero specificato di volte o fino a rottura.
+	Loop (normal)	Eseguire una serie di comandi più volte: si incontra sia il numero specificato di volte o fino a rottura.
 	Loop (parse a string)	Recupera sottostringhe (campi) da una stringa, uno alla volta.
 	Loop (read file contents)	Recupera le righe in un file di testo, uno per volta (si comporta meglio di FileReadLine).
 	Loop (registry)	Recupera il contenuto della sottochiave del Registro specificato, un elemento alla volta.

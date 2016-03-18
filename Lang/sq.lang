@@ -975,9 +975,9 @@
 		Përmbajtjen e clipboard).
 	Ex_AF_TT =	Skips metodën butë të aktivizuar një dritare
 		Dhe shkon drejt e në metodën me forcë.
+	Ex_CM_TT =	Përcakton mënyrën e koordinuar për të miut urdhëron që të jetë në lidhje me ose në dritaren aktive ose ekran.
 	Ex_DH_TT =	Përcakton nëse dritaret padukshme "shihet" nga script.
 	Ex_DT_TT =	Përcakton nëse teksti i padukshëm në një dritare është "shihet" me qëllim të gjetjes dritaren. Kjo ndikon komandat si IfWinExist dhe WinActivate.
-	Ex_CM_TT =	Përcakton mënyrën e koordinuar për të miut urdhëron që të jetë në lidhje me ose në dritaren aktive ose ekran.
 	Ex_EdScript_TT =	Open në editor të jashtëm
 	Ex_EdVars_TT =	Zgjidhni variablave globale për t'u eksportuar.
 	Ex_ExecScript_TT =	Script Run
@@ -1021,11 +1021,11 @@
 		- Ju mund të përdorni vargjet, variablat, vargjeve dhe funksionet.
 		- Për të përdorur vargjet, mbyllni ato në thonjëza, e.g .: var = "a".
 		- Deklaratat e shumëfishta janë të mbështetura, e.g .: var = "a" || Instr (var, "b").
-	ExpView_TT =	Avancuar Editor
 	ExpView2_TT =	Avancuar Editor
+	ExpView_TT =	Avancuar Editor
 	Fast_TT =	Përdor një metodë më të shpejtë në kërkim (e rekomanduar)
-	HiddenWin_TT =	Përcakton nëse dritaret padukshme "shihet" nga script.
 	HiddenText_TT =	Përcakton nëse teksti i padukshëm në një dritare është "shihet" me qëllim të gjetjes dritaren. Kjo ndikon komandat si IfWinExist dhe WinActivate.
+	HiddenWin_TT =	Përcakton nëse dritaret padukshme "shihet" nga script.
 	HScale_TT =	Shkallë lartësi
 	IconN_TT =	Numri i grupit icon
 	IfLVColor_TT =	Klikoni për të marr një ngjyrë
@@ -1092,27 +1092,27 @@
 	WScale_TT =	Shkalla gjerësia
 		
 ; 20. Operators		
-	As_Oper_1 =	Caktoj
-	As_Oper_2 =	Shtoj
-	As_Oper_3 =	Zbres
-	As_Oper_4 =	Multiply
-	As_Oper_5 =	Përçaj
-	As_Oper_6 =	Floor ndarje
-	As_Oper_7 =	Lidh
-	As_Oper_8 =	Bitwise përfshirëse OR
-	As_Oper_9 =	Bitwise DHE
+	As_Oper_01 =	Caktoj
+	As_Oper_02 =	Shtoj
+	As_Oper_03 =	Zbres
+	As_Oper_04 =	Multiply
+	As_Oper_05 =	Përçaj
+	As_Oper_06 =	Floor ndarje
+	As_Oper_07 =	Lidh
+	As_Oper_08 =	Bitwise përfshirëse OR
+	As_Oper_09 =	Bitwise DHE
 	As_Oper_10 =	Bitwise ekskluzive OR
 	As_Oper_11 =	Ndryshim të drejtë dhe
 	As_Oper_12 =	Ndryshim Majtas DHE
-	Co_Oper_1 =	I barabartë
-	Co_Oper_2 =	Të barabartë (rasti të ndjeshme)
-	Co_Oper_3 =	Jo të barabartë
-	Co_Oper_4 =	Më e madhe
-	Co_Oper_5 =	Më pak
-	Co_Oper_6 =	Më e madhe ose e barabartë
-	Co_Oper_7 =	Më pak ose e barabartë
-	Co_Oper_8 =	Në (Lista)
-	Co_Oper_9 =	Jo në (Lista)
+	Co_Oper_01 =	I barabartë
+	Co_Oper_02 =	Të barabartë (rasti të ndjeshme)
+	Co_Oper_03 =	Jo të barabartë
+	Co_Oper_04 =	Më e madhe
+	Co_Oper_05 =	Më pak
+	Co_Oper_06 =	Më e madhe ose e barabartë
+	Co_Oper_07 =	Më pak ose e barabartë
+	Co_Oper_08 =	Në (Lista)
+	Co_Oper_09 =	Jo në (Lista)
 	Co_Oper_10 =	Përmban (lista)
 	Co_Oper_11 =	Nuk përmban (lista)
 	Co_Oper_12 =	Midis (linjë 1) dhe (2) linjë
@@ -1210,7 +1210,7 @@
 	ControlGetPos	Rinxjerr pozitën dhe madhësinë e një kontrolli.
 	ControlGetText	Rinxjerr tekst nga një kontroll.
 	ControlMove	Lëviz apo madhësinë e një kontroll.
-	ControlSend / ControlSendRaw 	Dërgon tasteve simuluar në një dritare apo kontroll.
+	ControlSend / ControlSendRaw	Dërgon tasteve simuluar në një dritare apo kontroll.
 	ControlSetText	Ndryshon tekstin e një kontrolli.
 	CoordMode	Përcakton mënyrën e koordinuar për komandave të ndryshme që të jetë në lidhje me ose në dritaren aktive ose ekran.
 	Cos	Kthen kosinusin trigonometrike e Numri.
@@ -1299,7 +1299,7 @@
 	LoadPicture	Ngarkon një foto nga fotografi dhe kthen një bitmap ose icon trajtuar.
 	Log	Kthen logaritmin (bazë) 10 e Numri i.
 	Loop (files & folders)	Rinxjerr fotografi të specifikuara apo dosjet, një në një kohë.
-	Loop (normal) 	Kryer një seri e komandave të përsëritur: ose numri të caktuar të kohës ose deri break është hasur.
+	Loop (normal)	Kryer një seri e komandave të përsëritur: ose numri të caktuar të kohës ose deri break është hasur.
 	Loop (parse a string)	Rinxjerr vargjet (fushat) nga një varg, një në një kohë.
 	Loop (read file contents)	Rinxjerr linjat në një skedar teksti, një në një kohë (kryen më mirë se FileReadLine).
 	Loop (registry)	Rinxjerr përmbajtjen e subkey specifikuar regjistrit, një artikull në një kohë.

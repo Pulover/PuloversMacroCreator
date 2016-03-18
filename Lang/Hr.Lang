@@ -975,9 +975,9 @@
 		sadržaj na prijenosnik).
 	Ex_AF_TT =	Preskače nježan način aktiviranja prozor
 		i ide ravno u nasilnom metodom.
+	Ex_CM_TT =	Setovi koordinirati načina za miš naredbe da se u odnosu na bilo aktivnog prozora ili zaslona.
 	Ex_DH_TT =	Utvrđuje da li nevidljivi prozori "vidi" pismu.
 	Ex_DT_TT =	Utvrđuje da li nevidljivi tekst u prozoru se "vidi" u svrhu pronalaženja prozor. To utječe naredbe poput IfWinExist i WinActivate.
-	Ex_CM_TT =	Setovi koordinirati načina za miš naredbe da se u odnosu na bilo aktivnog prozora ili zaslona.
 	Ex_EdScript_TT =	Otvori u vanjskom uređivaču
 	Ex_EdVars_TT =	Odaberite globalne varijable se izvozi.
 	Ex_ExecScript_TT =	Pokreni skriptu
@@ -1021,11 +1021,11 @@
 		- Možete koristiti žice, varijabli, polja i funkcije.
 		- Za korištenje žice, priložiti ih u navodnike, npr: var = "A".
 		- Više Izjave su podržani, npr: var = "a" || Instr (var, "b").
-	ExpView_TT =	Napredni Uređivač
 	ExpView2_TT =	Napredni Uređivač
+	ExpView_TT =	Napredni Uređivač
 	Fast_TT =	Koristi se brže pretraživanje metodu (preporučeno)
-	HiddenWin_TT =	Utvrđuje da li nevidljivi prozori "vidi" pismu.
 	HiddenText_TT =	Utvrđuje da li nevidljivi tekst u prozoru se "vidi" u svrhu pronalaženja prozor. To utječe naredbe poput IfWinExist i WinActivate.
+	HiddenWin_TT =	Utvrđuje da li nevidljivi prozori "vidi" pismu.
 	HScale_TT =	Visina razmjera
 	IconN_TT =	Broj ikona skupine
 	IfLVColor_TT =	Kliknite da odaberete boju
@@ -1092,27 +1092,27 @@
 	WScale_TT =	Širina razmjera
 		
 ; 20. Operators		
-	As_Oper_1 =	Dodijeliti
-	As_Oper_2 =	Dodati
-	As_Oper_3 =	Oduzeti
-	As_Oper_4 =	Množiti
-	As_Oper_5 =	Podijeliti
-	As_Oper_6 =	Kat podijeljenost
-	As_Oper_7 =	Povezati u obliku lanca
-	As_Oper_8 =	Bitwise inclusive OR
-	As_Oper_9 =	Bitwise AND
+	As_Oper_01 =	Dodijeliti
+	As_Oper_02 =	Dodati
+	As_Oper_03 =	Oduzeti
+	As_Oper_04 =	Množiti
+	As_Oper_05 =	Podijeliti
+	As_Oper_06 =	Kat podijeljenost
+	As_Oper_07 =	Povezati u obliku lanca
+	As_Oper_08 =	Bitwise inclusive OR
+	As_Oper_09 =	Bitwise AND
 	As_Oper_10 =	Bitwise exclusive OR
 	As_Oper_11 =	Right shift AND
 	As_Oper_12 =	Left shift AND
-	Co_Oper_1 =	Jednak
-	Co_Oper_2 =	Jednak (mala i velika slova)
-	Co_Oper_3 =	Nije jednako
-	Co_Oper_4 =	Veća
-	Co_Oper_5 =	Manje
-	Co_Oper_6 =	Veće ili jednako
-	Co_Oper_7 =	Manje ili jednako
-	Co_Oper_8 =	U (popis)
-	Co_Oper_9 =	Ne u (popis)
+	Co_Oper_01 =	Jednak
+	Co_Oper_02 =	Jednak (mala i velika slova)
+	Co_Oper_03 =	Nije jednako
+	Co_Oper_04 =	Veća
+	Co_Oper_05 =	Manje
+	Co_Oper_06 =	Veće ili jednako
+	Co_Oper_07 =	Manje ili jednako
+	Co_Oper_08 =	U (popis)
+	Co_Oper_09 =	Ne u (popis)
 	Co_Oper_10 =	Sadrži (popis)
 	Co_Oper_11 =	Ne sadrži (popis)
 	Co_Oper_12 =	Između (linija 1) i (linija 2)
@@ -1210,7 +1210,7 @@
 	ControlGetPos	Dohvaća položaj i veličinu kontrole .
 	ControlGetText	Dohvaća tekst iz kontrole .
 	ControlMove	Pomiče ili mijenja veličinu kontrole .
-	ControlSend / ControlSendRaw 	Šalje simulirane tipke na prozor ili kontrolu .
+	ControlSend / ControlSendRaw	Šalje simulirane tipke na prozor ili kontrolu .
 	ControlSetText	Mijenja tekst kontrole .
 	CoordMode	Postavlja koordinirati način za razne naredbe da se u odnosu na bilo aktivnog prozora ili zaslona .
 	Cos	Vraća kosinus broja trigonometrijsku .
@@ -1299,7 +1299,7 @@
 	LoadPicture	Učitava slike iz datoteke i vraća bitmap ili ikonu ručku.
 	Log	Vraća logaritam (baza 10) broja.
 	Loop (files & folders)	Dohvaća određene datoteke ili mape, jednu po jednu.
-	Loop (normal) 	Izvođenje niz naredbi puta: ili određeni broj puta ili do prekida je naišao.
+	Loop (normal)	Izvođenje niz naredbi puta: ili određeni broj puta ili do prekida je naišao.
 	Loop (parse a string)	Dohvaća podnizova (polja) iz niza, jedan po jedan.
 	Loop (read file contents)	Dohvaća linije u tekstualnu datoteku, jednu po jednu (i bolji od FileReadLine).
 	Loop (registry)	Dohvaća sadržaj navedenog registra potključem, jedna točka na vrijeme.

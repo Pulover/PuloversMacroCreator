@@ -975,9 +975,9 @@
 		クリップボードの内容）。
 	Ex_AF_TT =	ウィンドウをアクティブにするの穏やかな方法をスキップします
 		と力強い方法に​​まっすぐ行く。
+	Ex_CM_TT =	マウスがアクティブウィンドウまたは画面のいずれかを基準にしたコマンドのために設定し、モードを調整します。
 	Ex_DH_TT =	目に見えないウィンドウがスクリプトによって「見える」かどうかを決定します。
 	Ex_DT_TT =	ウィンドウ内の目に見えないテキストがウィンドウを発見する目的のために「見」されているかどうかを決定します。これは、IfWinExistやWinActivateなどのコマンドに影響します。
-	Ex_CM_TT =	マウスがアクティブウィンドウまたは画面のいずれかを基準にしたコマンドのために設定し、モードを調整します。
 	Ex_EdScript_TT =	外部エディタで開きます
 	Ex_EdVars_TT =	エクスポートするグローバル変数を選択します。
 	Ex_ExecScript_TT =	スクリプトを実行
@@ -1021,11 +1021,11 @@
 		- あなたは、文字列、変数、配列や関数を使用することができます。
 		- 例えば、引用符で囲み、文字列を使用するには：VAR="a"を。
 		- 複数のステートメントがサポートされています、例えば：VAR=""|| InStr関数（VAR、"B"）。
-	ExpView_TT =	高度なエディタ
 	ExpView2_TT =	高度なエディタ
+	ExpView_TT =	高度なエディタ
 	Fast_TT =	高速な探索方法（推奨）を使用してい
-	HiddenWin_TT =	目に見えないウィンドウがスクリプトによって「見える」かどうかを決定します。
 	HiddenText_TT =	ウィンドウ内の目に見えないテキストがウィンドウを発見する目的のために「見」されているかどうかを決定します。これは、IfWinExistやWinActivateなどのコマンドに影響します。
+	HiddenWin_TT =	目に見えないウィンドウがスクリプトによって「見える」かどうかを決定します。
 	HScale_TT =	高さスケール
 	IconN_TT =	アイコン群の数
 	IfLVColor_TT =	色を選択するためにクリック
@@ -1092,27 +1092,27 @@
 	WScale_TT =	幅スケール
 		
 ; 20. Operators		
-	As_Oper_1 =	割り当てる
-	As_Oper_2 =	加える
-	As_Oper_3 =	引く
-	As_Oper_4 =	掛ける
-	As_Oper_5 =	分割
-	As_Oper_6 =	フロア除算
-	As_Oper_7 =	連結
-	As_Oper_8 =	Bitwise inclusive OR
-	As_Oper_9 =	Bitwise AND
+	As_Oper_01 =	割り当てる
+	As_Oper_02 =	加える
+	As_Oper_03 =	引く
+	As_Oper_04 =	掛ける
+	As_Oper_05 =	分割
+	As_Oper_06 =	フロア除算
+	As_Oper_07 =	連結
+	As_Oper_08 =	Bitwise inclusive OR
+	As_Oper_09 =	Bitwise AND
 	As_Oper_10 =	Bitwise exclusive OR
 	As_Oper_11 =	Right shift AND
 	As_Oper_12 =	Left shift AND
-	Co_Oper_1 =	等しい
-	Co_Oper_2 =	等しい（大文字と小文字を区別）
-	Co_Oper_3 =	等しくない
-	Co_Oper_4 =	グレーター
-	Co_Oper_5 =	レス
-	Co_Oper_6 =	大きいか等しい
-	Co_Oper_7 =	小さいか等しい
-	Co_Oper_8 =	では（リスト）
-	Co_Oper_9 =	NOT IN（リスト）
+	Co_Oper_01 =	等しい
+	Co_Oper_02 =	等しい（大文字と小文字を区別）
+	Co_Oper_03 =	等しくない
+	Co_Oper_04 =	グレーター
+	Co_Oper_05 =	レス
+	Co_Oper_06 =	大きいか等しい
+	Co_Oper_07 =	小さいか等しい
+	Co_Oper_08 =	では（リスト）
+	Co_Oper_09 =	NOT IN（リスト）
 	Co_Oper_10 =	含まれています（リスト）
 	Co_Oper_11 =	含まれていません（リスト）
 	Co_Oper_12 =	（ライン1）及び（2行目）との間に
@@ -1210,7 +1210,7 @@
 	ControlGetPos	コントロールの位置とサイズを取得します。
 	ControlGetText	コントロールからテキストを取得します。
 	ControlMove	移動したり、コントロールのサイズを変更します。
-	ControlSend / ControlSendRaw 	ウィンドウやコントロールにシミュレートされたキーストロークを送信します。
+	ControlSend / ControlSendRaw	ウィンドウやコントロールにシミュレートされたキーストロークを送信します。
 	ControlSetText	コントロールのテキストを変更します。
 	CoordMode	セットには、アクティブなウィンドウや画面のどちらに対して相対的であるために様々なコマンドのモードを調整する。
 	Cos	数の三角関数コサインを返します。
@@ -1299,7 +1299,7 @@
 	LoadPicture	ファイルから画像を読み込み、ビットマップまたはアイコンのハンドルを返します。
 	Log	数の対数（底10）を返します。
 	Loop (files & folders)	指定したファイルやフォルダを1つずつ取得します。
-	Loop (normal) 	繰り返して一連のコマンドを実行します指定された回数、または休憩までのどちらかに遭遇する。
+	Loop (normal)	繰り返して一連のコマンドを実行します指定された回数、または休憩までのどちらかに遭遇する。
 	Loop (parse a string)	一度は、文字列から部分文字列（フィールド）を取得します。
 	Loop (read file contents)	テキストファイルの行は、時間（FileReadLineより良い行い）少なくとも一つを取得します。
 	Loop (registry)	つの項目同時に、指定されたレジストリサブキーの内容を取得します。

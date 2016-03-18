@@ -975,9 +975,9 @@
 		Pano içeriği).
 	Ex_AF_TT =	Bir pencere aktive nazik yöntemi atlar
 		ve güçlü yöntemi düz gider.
+	Ex_CM_TT =	Fare etkin pencere veya ekranın ya göreli olarak komutları için takımlar modunu koordinat.
 	Ex_DH_TT =	Görünmez pencere komut dosyası tarafından "görülür" belirler.
 	Ex_DT_TT =	Bir pencerede görünmez metin penceresi bulma amacıyla "görülen" belirler. Bu, IfWinExist ve WinActivate gibi komutları etkiler.
-	Ex_CM_TT =	Fare etkin pencere veya ekranın ya göreli olarak komutları için takımlar modunu koordinat.
 	Ex_EdScript_TT =	Harici düzenleyicide açın
 	Ex_EdVars_TT =	Ihraç edilecek genel değişkenleri seçin.
 	Ex_ExecScript_TT =	Çalıştır komut
@@ -1021,11 +1021,11 @@
 		- Sen dizeleri, değişkenler, diziler ve işlevlerini kullanabilirsiniz.
 		- Örneğin, tırnak işareti içine, dizeleri kullanmak için: var = "a".
 		- Çoklu Tablolar desteklenir, örneğin: var = "a" || InStr (var "b").
-	ExpView_TT =	Gelişmiş Editörü
 	ExpView2_TT =	Gelişmiş Editörü
+	ExpView_TT =	Gelişmiş Editörü
 	Fast_TT =	Daha hızlı bir arama yöntemi (önerilir) kullanır
-	HiddenWin_TT =	Görünmez pencere komut dosyası tarafından "görülür" belirler.
 	HiddenText_TT =	Bir pencerede görünmez metin penceresi bulma amacıyla "görülen" belirler. Bu, IfWinExist ve WinActivate gibi komutları etkiler.
+	HiddenWin_TT =	Görünmez pencere komut dosyası tarafından "görülür" belirler.
 	HScale_TT =	Yükseklik ölçekli
 	IconN_TT =	Simge grubu sayısı
 	IfLVColor_TT =	Bir renk seçmek için tıklayınız
@@ -1092,27 +1092,27 @@
 	WScale_TT =	Genişlik ölçekli
 		
 ; 20. Operators		
-	As_Oper_1 =	Atamak
-	As_Oper_2 =	Eklemek
-	As_Oper_3 =	Çıkarmak
-	As_Oper_4 =	Çarpmak
-	As_Oper_5 =	Bölmek
-	As_Oper_6 =	Kat bölmek
-	As_Oper_7 =	Bağlamak
-	As_Oper_8 =	Bitwise inclusive OR
-	As_Oper_9 =	Bitwise AND
+	As_Oper_01 =	Atamak
+	As_Oper_02 =	Eklemek
+	As_Oper_03 =	Çıkarmak
+	As_Oper_04 =	Çarpmak
+	As_Oper_05 =	Bölmek
+	As_Oper_06 =	Kat bölmek
+	As_Oper_07 =	Bağlamak
+	As_Oper_08 =	Bitwise inclusive OR
+	As_Oper_09 =	Bitwise AND
 	As_Oper_10 =	Bitwise exclusive OR
 	As_Oper_11 =	Right shift AND
 	As_Oper_12 =	Left shift AND
-	Co_Oper_1 =	Eşit
-	Co_Oper_2 =	Eşit (küçük harf duyarlı)
-	Co_Oper_3 =	Eşit değil
-	Co_Oper_4 =	Büyük
-	Co_Oper_5 =	Daha az
-	Co_Oper_6 =	Büyük veya eşit
-	Co_Oper_7 =	Daha az ya da eşit
-	Co_Oper_8 =	In (liste)
-	Co_Oper_9 =	Değil (liste)
+	Co_Oper_01 =	Eşit
+	Co_Oper_02 =	Eşit (küçük harf duyarlı)
+	Co_Oper_03 =	Eşit değil
+	Co_Oper_04 =	Büyük
+	Co_Oper_05 =	Daha az
+	Co_Oper_06 =	Büyük veya eşit
+	Co_Oper_07 =	Daha az ya da eşit
+	Co_Oper_08 =	In (liste)
+	Co_Oper_09 =	Değil (liste)
 	Co_Oper_10 =	Içeren (liste)
 	Co_Oper_11 =	Içeriyor (liste)
 	Co_Oper_12 =	(Hat 1) ve (hat 2) arasındaki
@@ -1210,7 +1210,7 @@
 	ControlGetPos	Bir denetimin konumunu ve boyutunu alır .
 	ControlGetText	Bir kontrol metin alır .
 	ControlMove	Hareket ya da bir kontrol boyutlandırır .
-	ControlSend / ControlSendRaw 	Bir pencere veya kontrol için simüle tuş vuruşlarını gönderir .
+	ControlSend / ControlSendRaw	Bir pencere veya kontrol için simüle tuş vuruşlarını gönderir .
 	ControlSetText	Bir kontrol metnini değiştirir .
 	CoordMode	Ayarlar etkin pencere veya ekran ya göreli olarak çeşitli komutlar için mod koordine .
 	Cos	Sayısıtrigonometrik kosinüsünü verir .
@@ -1299,7 +1299,7 @@
 	LoadPicture	Dosyadan bir resim dosyasını yükler ve bitmap veya simge tanıtıcısı döndürür.
 	Log	Sayısı logaritma (10 tabanı) döndürür.
 	Loop (files & folders)	Belirtilen dosya veya klasörleri, her seferinde bir alır.
-	Loop (normal) 	Tekrar tekrar komutları bir dizi gerçekleştirin: Belirtilen kez numarası veya mola kadar da görülür.
+	Loop (normal)	Tekrar tekrar komutları bir dizi gerçekleştirin: Belirtilen kez numarası veya mola kadar da görülür.
 	Loop (parse a string)	Bir dize alır dizeleri (alanları), her seferinde bir.
 	Loop (read file contents)	Bir metin dosyasına satırları, bir zaman (FileReadLine daha iyi performans) az bir alır.
 	Loop (registry)	Bir anda belirtilen kayıt defteri alt anahtarını, bir öğe içeriğini alır.

@@ -975,9 +975,9 @@
 		az a vágólap tartalmát.)
 	Ex_AF_TT =	Kihagyja a szelíd eljárás aktiválására ablak
 		és megy egyenesen az erőszakos módszer.
+	Ex_CM_TT =	Készletek koordináta rendszer egér parancsok képest sem az aktív ablak vagy a képernyőn.
 	Ex_DH_TT =	Meghatározza, hogy a láthatatlan ablakok "látja" a forgatókönyvet.
 	Ex_DT_TT =	Meghatározza, hogy a láthatatlan szöveget egy ablak "látható" céljára találni az ablakon. Ez befolyásolja a parancsokat, mint IfWinExist és WinActivate.
-	Ex_CM_TT =	Készletek koordináta rendszer egér parancsok képest sem az aktív ablak vagy a képernyőn.
 	Ex_EdScript_TT =	Nyílt külső szerkesztőben
 	Ex_EdVars_TT =	Válassza globális változók exportálni.
 	Ex_ExecScript_TT =	Run script
@@ -1021,11 +1021,11 @@
 		- Használhatja vonósok, változók, tömbök és függvények.
 		- Ahhoz, hogy használni húrok, csatolja őket idézetek, pl: var = "a".
 		- Több utasítást támogat, például: var = "a" || InStr (var, "b").
-	ExpView_TT =	Fejlett Szerkesztő
 	ExpView2_TT =	Fejlett Szerkesztő
+	ExpView_TT =	Fejlett Szerkesztő
 	Fast_TT =	Használ egy gyorsabb keresési módot (ajánlott)
-	HiddenWin_TT =	Meghatározza, hogy a láthatatlan ablakok "látja" a forgatókönyvet.
 	HiddenText_TT =	Meghatározza, hogy a láthatatlan szöveget egy ablak "látható" céljára találni az ablakon. Ez befolyásolja a parancsokat, mint IfWinExist és WinActivate.
+	HiddenWin_TT =	Meghatározza, hogy a láthatatlan ablakok "látja" a forgatókönyvet.
 	HScale_TT =	Magasság méret
 	IconN_TT =	Száma ikon csoport
 	IfLVColor_TT =	Kattintson válasszon egy színt
@@ -1092,27 +1092,27 @@
 	WScale_TT =	Szélesség skála
 		
 ; 20. Operators		
-	As_Oper_1 =	Hozzárendelése
-	As_Oper_2 =	Hozzáad
-	As_Oper_3 =	Levon
-	As_Oper_4 =	Multiply
-	As_Oper_5 =	Oszt
-	As_Oper_6 =	Floor szakadék
-	As_Oper_7 =	Összekapcsol
-	As_Oper_8 =	Bitwise inclusive OR
-	As_Oper_9 =	Bitwise AND
+	As_Oper_01 =	Hozzárendelése
+	As_Oper_02 =	Hozzáad
+	As_Oper_03 =	Levon
+	As_Oper_04 =	Multiply
+	As_Oper_05 =	Oszt
+	As_Oper_06 =	Floor szakadék
+	As_Oper_07 =	Összekapcsol
+	As_Oper_08 =	Bitwise inclusive OR
+	As_Oper_09 =	Bitwise AND
 	As_Oper_10 =	Bitwise exclusive OR
 	As_Oper_11 =	Right shift AND
 	As_Oper_12 =	Left shift AND
-	Co_Oper_1 =	Egyenlő
-	Co_Oper_2 =	Egyenlő (nagybetűk)
-	Co_Oper_3 =	Nem egyenlő
-	Co_Oper_4 =	Nagyobb
-	Co_Oper_5 =	Kevesebb
-	Co_Oper_6 =	Nagyobb vagy egyenlő
-	Co_Oper_7 =	Kisebb vagy egyenlő
-	Co_Oper_8 =	In (lista)
-	Co_Oper_9 =	Nincs (lista)
+	Co_Oper_01 =	Egyenlő
+	Co_Oper_02 =	Egyenlő (nagybetűk)
+	Co_Oper_03 =	Nem egyenlő
+	Co_Oper_04 =	Nagyobb
+	Co_Oper_05 =	Kevesebb
+	Co_Oper_06 =	Nagyobb vagy egyenlő
+	Co_Oper_07 =	Kisebb vagy egyenlő
+	Co_Oper_08 =	In (lista)
+	Co_Oper_09 =	Nincs (lista)
 	Co_Oper_10 =	Tartalmaz (lista)
 	Co_Oper_11 =	Nem tartalmaz (lista)
 	Co_Oper_12 =	Között (1-es vonal) és a (2-es vonal)
@@ -1210,7 +1210,7 @@
 	ControlGetPos	Letölti a helye és mérete a vezérlő.
 	ControlGetText	Lekér szöveget a vezérlő.
 	ControlMove	Mozgatja vagy átméretezi a vezérlő.
-	ControlSend / ControlSendRaw 	Elküldi szimulált billentyűleütéseket egy ablakhoz, vagy ellenőrzés.
+	ControlSend / ControlSendRaw	Elküldi szimulált billentyűleütéseket egy ablakhoz, vagy ellenőrzés.
 	ControlSetText	Megváltoztatja a szöveg egy ellenőrzés.
 	CoordMode	Készletek koordinálja mód különböző parancsokat, hogy relatív, hogy vagy az aktív ablak vagy a képernyőn.
 	Cos	Visszaadja a trigonometrikus koszinuszával száma.
@@ -1299,7 +1299,7 @@
 	LoadPicture	Betölt egy képet fájlból és visszatér egy bitmap vagy ikon nyéllel.
 	Log	Visszaadja a logaritmusát (alap 10) Szám.
 	Loop (files & folders)	Letölti a megadott fájlokat vagy mappákat, egyesével.
-	Loop (normal) 	Végre egy sor parancsot többször: vagy a megadott számú alkalommal, vagy amíg break találkozott.
+	Loop (normal)	Végre egy sor parancsot többször: vagy a megadott számú alkalommal, vagy amíg break találkozott.
 	Loop (parse a string)	Letölti részkarakterláncokat (mezők) egy string, egy olyan időpontban.
 	Loop (read file contents)	Letölti a vonalak egy szöveges fájlt, egy olyan időpontban (jobban teljesít, mint FileReadLine).
 	Loop (registry)	Letölti a tartalmát a megadott alkulcs, egy tétel egy időben.

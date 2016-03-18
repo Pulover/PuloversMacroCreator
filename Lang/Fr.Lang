@@ -975,9 +975,9 @@
 		le contenu du presse-papiers).
 	Ex_AF_TT =	Ignore la méthode douce de l'activation d'une fenêtre
 		et va directement à la méthode énergique.
+	Ex_CM_TT =	Définit le mode de coordonnées pour la souris commande d'être par rapport à soit la fenêtre active ou l'écran.
 	Ex_DH_TT =	Détermine si les fenêtres sont invisibles "vu" par le script.
 	Ex_DT_TT =	Détermine si le texte invisible dans une fenêtre est «vu» dans le but de trouver la fenêtre. Cela affecte des commandes telles que IfWinExist et WinActivate.
-	Ex_CM_TT =	Définit le mode de coordonnées pour la souris commande d'être par rapport à soit la fenêtre active ou l'écran.
 	Ex_EdScript_TT =	Ouvrir dans l'éditeur externe
 	Ex_EdVars_TT =	Sélectionner des variables globales pour être exportés.
 	Ex_ExecScript_TT =	Exécuter le script
@@ -1021,11 +1021,11 @@
 		- Vous pouvez utiliser chaînes, variables, des tableaux et des fonctions.
 		- Pour utiliser des chaînes, le placer entre guillemets, par exemple: var = "a".
 		- Déclarations multiples sont pris en charge, par exemple: var = "a" || InStr (var, "b").
-	ExpView_TT =	Éditeur Avancé
 	ExpView2_TT =	Éditeur Avancé
+	ExpView_TT =	Éditeur Avancé
 	Fast_TT =	Utilise une méthode de recherche rapide (recommandé)
-	HiddenWin_TT =	Détermine si les fenêtres sont invisibles "vu" par le script.
 	HiddenText_TT =	Détermine si le texte invisible dans une fenêtre est «vu» dans le but de trouver la fenêtre. Cela affecte des commandes telles que IfWinExist et WinActivate.
+	HiddenWin_TT =	Détermine si les fenêtres sont invisibles "vu" par le script.
 	HScale_TT =	Échelle de la hauteur
 	IconN_TT =	Numéro du groupe icône
 	IfLVColor_TT =	Cliquez pour choisir une couleur
@@ -1092,27 +1092,27 @@
 	WScale_TT =	Échelle de la largeur
 		
 ; 20. Operators		
-	As_Oper_1 =	Attribuer
-	As_Oper_2 =	Ajouter
-	As_Oper_3 =	Soustraire
-	As_Oper_4 =	Multipliez
-	As_Oper_5 =	Diviser
-	As_Oper_6 =	Fracture du plancher
-	As_Oper_7 =	Concaténer
-	As_Oper_8 =	Bitwise inclusive OR
-	As_Oper_9 =	Bitwise AND
+	As_Oper_01 =	Attribuer
+	As_Oper_02 =	Ajouter
+	As_Oper_03 =	Soustraire
+	As_Oper_04 =	Multipliez
+	As_Oper_05 =	Diviser
+	As_Oper_06 =	Fracture du plancher
+	As_Oper_07 =	Concaténer
+	As_Oper_08 =	Bitwise inclusive OR
+	As_Oper_09 =	Bitwise AND
 	As_Oper_10 =	Bitwise exclusive OR
 	As_Oper_11 =	Right shift AND
 	As_Oper_12 =	Left shift AND
-	Co_Oper_1 =	Egalité
-	Co_Oper_2 =	Equal (sensible à la casse)
-	Co_Oper_3 =	Pas égaux
-	Co_Oper_4 =	Plus grand
-	Co_Oper_5 =	Moins
-	Co_Oper_6 =	Supérieur ou égal
-	Co_Oper_7 =	Inférieur ou égal
-	Co_Oper_8 =	Dans (liste)
-	Co_Oper_9 =	Pas dans la liste)
+	Co_Oper_01 =	Egalité
+	Co_Oper_02 =	Equal (sensible à la casse)
+	Co_Oper_03 =	Pas égaux
+	Co_Oper_04 =	Plus grand
+	Co_Oper_05 =	Moins
+	Co_Oper_06 =	Supérieur ou égal
+	Co_Oper_07 =	Inférieur ou égal
+	Co_Oper_08 =	Dans (liste)
+	Co_Oper_09 =	Pas dans la liste)
 	Co_Oper_10 =	Contient (liste)
 	Co_Oper_11 =	Non contient (liste)
 	Co_Oper_12 =	Entre (ligne 1) et (ligne 2)
@@ -1210,7 +1210,7 @@
 	ControlGetPos	Récupère la position et la taille d'un contrôle.
 	ControlGetText	Extrait texte à partir d'une commande .
 	ControlMove	Se déplace ou redimensionne un contrôle.
-	ControlSend / ControlSendRaw 	Envoie frappes simulées à une fenêtre ou un contrôle .
+	ControlSend / ControlSendRaw	Envoie frappes simulées à une fenêtre ou un contrôle .
 	ControlSetText	Modifie le texte d'un contrôle.
 	CoordMode	Définit le mode de coordonnées pour les différentes commandes à être relatif soit à la fenêtre active ou l'écran.
 	Cos	Retourne le cosinus trigonométrique de Number.
@@ -1299,7 +1299,7 @@
 	LoadPicture	Charge une image à partir du fichier et retourne un handle de bitmap ou l'icône.
 	Log	Renvoie le logarithme (base 10) de Number.
 	Loop (files & folders)	Extrait les fichiers spécifiés ou des dossiers, une à la fois.
-	Loop (normal) 	Effectuer une série de commandes à plusieurs reprises: soit le nombre de fois spécifié ou jusqu'à ce que la rupture se produit.
+	Loop (normal)	Effectuer une série de commandes à plusieurs reprises: soit le nombre de fois spécifié ou jusqu'à ce que la rupture se produit.
 	Loop (parse a string)	Récupère les chaînes (champs) d'une chaîne, un à la fois.
 	Loop (read file contents)	Récupère les lignes dans un fichier texte, un à la fois (performant que FileReadLine).
 	Loop (registry)	Récupère le contenu de la clé de Registre spécifiée, un seul élément à la fois.

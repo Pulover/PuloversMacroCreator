@@ -975,9 +975,9 @@
 		Imixholo yebhodi eqhotyoshwayo).
 	Ex_AF_TT =	Kudlula indlela ephucukileyo kokuyenza isebenze window
 		Kwaye uya ngqo indlela anamandla.
+	Ex_CM_TT =	Iiseti nokulungelelanisa ikwimo mouse yalela ukuba nonobudlelwane nokuba window esebenzayo okanye kwikhusi.
 	Ex_DH_TT =	Icaza ukuba iifestile ezingabonakaliyo 'zibonwa "by leempendulo elo.
 	Ex_DT_TT =	Icaza ukuba itekisi obungabonakaliyo iwindow "kubonwa" ngenjongo ekufumaneni window. Oku kuchaphazela imiyalelo efana IfWinExist kunye WinActivate.
-	Ex_CM_TT =	Iiseti nokulungelelanisa ikwimo mouse yalela ukuba nonobudlelwane nokuba window esebenzayo okanye kwikhusi.
 	Ex_EdScript_TT =	Vula kwi umhleli wangaphandle
 	Ex_EdVars_TT =	Khetha variables zehlabathi ukuba ngaphandle.
 	Ex_ExecScript_TT =	Elishicilelwe Yenza
@@ -1021,11 +1021,11 @@
 		- Ungasebenzisa imitya, izinto ezitshintshayo, kwimiboniso kunye nemisebenzi.
 		- Ukusebenzisa imitya, Somrhaqa kubo kuchaphulo, umzk .: var = "a".
 		- Iingxelo Multiple ziyaxhaswa, umzk .: var = "a" || IMIYALE (var, "b").
-	ExpView_TT =	Umhleli Advanced
 	ExpView2_TT =	Umhleli Advanced
+	ExpView_TT =	Umhleli Advanced
 	Fast_TT =	Ukusebenzisa indlela uphendlo ngokukhawuleza (ayikhuthazwa)
-	HiddenWin_TT =	Icaza ukuba iifestile ezingabonakaliyo 'zibonwa "by leempendulo elo.
 	HiddenText_TT =	Icaza ukuba itekisi obungabonakaliyo iwindow "kubonwa" ngenjongo ekufumaneni window. Oku kuchaphazela imiyalelo efana IfWinExist kunye WinActivate.
+	HiddenWin_TT =	Icaza ukuba iifestile ezingabonakaliyo 'zibonwa "by leempendulo elo.
 	HScale_TT =	Isikali Height
 	IconN_TT =	Inani leqela icon
 	IfLVColor_TT =	Cofa sokukhetha umbala
@@ -1092,27 +1092,27 @@
 	WScale_TT =	Isikali ububanzi
 		
 ; 20. Operators		
-	As_Oper_1 =	Yabela
-	As_Oper_2 =	Yongeza
-	As_Oper_3 =	Thabatha
-	As_Oper_4 =	Phinda
-	As_Oper_5 =	Yahlula
-	As_Oper_6 =	Floor yahlula
-	As_Oper_7 =	Concatenate
-	As_Oper_8 =	Bitwise equkayo OKANYE
-	As_Oper_9 =	Bitwise KUNYE
+	As_Oper_01 =	Yabela
+	As_Oper_02 =	Yongeza
+	As_Oper_03 =	Thabatha
+	As_Oper_04 =	Phinda
+	As_Oper_05 =	Yahlula
+	As_Oper_06 =	Floor yahlula
+	As_Oper_07 =	Concatenate
+	As_Oper_08 =	Bitwise equkayo OKANYE
+	As_Oper_09 =	Bitwise KUNYE
 	As_Oper_10 =	Bitwise kuphela OKANYE
 	As_Oper_11 =	Utshintsho Ekunene KUNYE
 	As_Oper_12 =	Utshintsho Ekhohlo KUNYE
-	Co_Oper_1 =	Equal
-	Co_Oper_2 =	Equal (mzekelo onovakalel)
-	Co_Oper_3 =	Ayilungelelene
-	Co_Oper_4 =	Greater
-	Co_Oper_5 =	Ngaphantsi
-	Co_Oper_6 =	Inkulu okanye iyalingana kune
-	Co_Oper_7 =	Ngaphantsi okanye ukulingana
-	Co_Oper_8 =	Kwi (uluhlu)
-	Co_Oper_9 =	Ayikho (uluhlu)
+	Co_Oper_01 =	Equal
+	Co_Oper_02 =	Equal (mzekelo onovakalel)
+	Co_Oper_03 =	Ayilungelelene
+	Co_Oper_04 =	Greater
+	Co_Oper_05 =	Ngaphantsi
+	Co_Oper_06 =	Inkulu okanye iyalingana kune
+	Co_Oper_07 =	Ngaphantsi okanye ukulingana
+	Co_Oper_08 =	Kwi (uluhlu)
+	Co_Oper_09 =	Ayikho (uluhlu)
 	Co_Oper_10 =	Liqulathe (uluhlu)
 	Co_Oper_11 =	Akukho iqulethe (uluhlu)
 	Co_Oper_12 =	Phakathi (umgca 1) kunye (umgca 2)
@@ -1210,7 +1210,7 @@
 	ControlGetPos	Kwakhona indawo nobungakanani yokulawula.
 	ControlGetText	Kwakhona okubhaliweyo ulawulo.
 	ControlMove	Isa okanye kwakhona yokulawula.
-	ControlSend / ControlSendRaw 	Uthumela yezitsixo oluye window okanye ulawulo.
+	ControlSend / ControlSendRaw	Uthumela yezitsixo oluye window okanye ulawulo.
 	ControlSetText	Itshintsha itekisi yomgaqo wolawulo.
 	CoordMode	Iiseti nokulungelelanisa imo imithetho ezahlukeneyo nonobudlelwane nokuba window esebenzayo okanye kwikhusi.
 	Cos	Ubuyisela i cosine netrigonometri of Number.
@@ -1299,7 +1299,7 @@
 	LoadPicture	Ewalayishayo umfanekiso kwifayile kwaye ubuyisela bitmap okanye icon nomqheba.
 	Log	Ubuyisela i logarithm (isiseko 10) Inani.
 	Loop (files & folders)	Kwakhona ifayile ekhankanyiweyo okanye abalawuli, omnye ngexesha.
-	Loop (normal) 	Yenza uthotho imiyalelo ngokuphindaphindiweyo: noba inani elichaziweyo amaxesha okanye kwada kwasa wadibana.
+	Loop (normal)	Yenza uthotho imiyalelo ngokuphindaphindiweyo: noba inani elichaziweyo amaxesha okanye kwada kwasa wadibana.
 	Loop (parse a string)	Kwakhona kwimitya (fields) evela umtya, omnye ngexesha.
 	Loop (read file contents)	Kwakhona imigca kwi kwifayile yokubhaliweyo, omnye ngexesha (osebenza bhetele ngaphezu FileReadLine).
 	Loop (registry)	Kwakhona imixholo irejistri subkey elikhankanyiweyo, into enye ngexesha.

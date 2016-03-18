@@ -975,9 +975,9 @@
 		Okuqukethwe lokunamathisela).
 	Ex_AF_TT =	Ukweqa indlela emnene isebenze a window
 		Futhi uya ngqo indlela wamandla.
+	Ex_CM_TT =	Amasethi bazihlela modi igundane imiyalo lixhomeke noma umbhalo osasebenza noma esibukweni.
 	Ex_DH_TT =	Enquma ukuthi amafasitela ezingabonakali zibonakala 'abonwe' script.
 	Ex_DT_TT =	Enquma ukuthi umbhalo engabonakali in a window 'bubonakala "ngenjongo lokuthola window. Lokhu kuthinta imiyalo efana IfWinExist kanye WinActivate.
-	Ex_CM_TT =	Amasethi bazihlela modi igundane imiyalo lixhomeke noma umbhalo osasebenza noma esibukweni.
 	Ex_EdScript_TT =	Vula ku umhleli wangaphandle
 	Ex_EdVars_TT =	Khetha eziguquguqukayo global ukuba zithunyelwe.
 	Ex_ExecScript_TT =	Script Run
@@ -1021,11 +1021,11 @@
 		- Ungase usebenzise strings, eziguquguqukayo, ukurhemisa kanye nemisebenzi.
 		- Ukusebenzisa strings, buyela nabo izingcaphuno, isb .: var = "a".
 		- Izitatimende Multiple asekelwa, isb .: var = "a" || InStr (var, "b").
-	ExpView_TT =	Umhleli Advanced
 	ExpView2_TT =	Umhleli Advanced
+	ExpView_TT =	Umhleli Advanced
 	Fast_TT =	Usebentisa indlela esheshayo ucwaninga (kuyanconywa)
-	HiddenWin_TT =	Enquma ukuthi amafasitela ezingabonakali zibonakala 'abonwe' script.
 	HiddenText_TT =	Enquma ukuthi umbhalo engabonakali in a window 'bubonakala "ngenjongo lokuthola window. Lokhu kuthinta imiyalo efana IfWinExist kanye WinActivate.
+	HiddenWin_TT =	Enquma ukuthi amafasitela ezingabonakali zibonakala 'abonwe' script.
 	HScale_TT =	Ukuphakama isikali
 	IconN_TT =	Number of the group icon
 	IfLVColor_TT =	Chofoza ukuze ukhethe umbala
@@ -1092,27 +1092,27 @@
 	WScale_TT =	Isikali ububanzi
 		
 ; 20. Operators		
-	As_Oper_1 =	Nikeza
-	As_Oper_2 =	Engeza
-	As_Oper_3 =	Ukhupha
-	As_Oper_4 =	Phindaphinda
-	As_Oper_5 =	Hlukanisa
-	As_Oper_6 =	Floor ihlukanise
-	As_Oper_7 =	CONCATENATE
-	As_Oper_8 =	Bitwise obandakanya wonke umuntu NOMA
-	As_Oper_9 =	Bitwise KANYE
+	As_Oper_01 =	Nikeza
+	As_Oper_02 =	Engeza
+	As_Oper_03 =	Ukhupha
+	As_Oper_04 =	Phindaphinda
+	As_Oper_05 =	Hlukanisa
+	As_Oper_06 =	Floor ihlukanise
+	As_Oper_07 =	CONCATENATE
+	As_Oper_08 =	Bitwise obandakanya wonke umuntu NOMA
+	As_Oper_09 =	Bitwise KANYE
 	As_Oper_10 =	Bitwise okukhethekile NOMA
 	As_Oper_11 =	Shift Right KANYE
 	As_Oper_12 =	Shift Kwesobunxele KANYE
-	Co_Oper_1 =	Equal
-	Co_Oper_2 =	Equal (azwela)
-	Co_Oper_3 =	Not elinganayo
-	Co_Oper_4 =	Greater
-	Co_Oper_5 =	Ngaphansi
-	Co_Oper_6 =	Ngaphezulu noma ilingane
-	Co_Oper_7 =	Less noma alinganayo
-	Co_Oper_8 =	In (uhlu)
-	Co_Oper_9 =	Not in (uhlu)
+	Co_Oper_01 =	Equal
+	Co_Oper_02 =	Equal (azwela)
+	Co_Oper_03 =	Not elinganayo
+	Co_Oper_04 =	Greater
+	Co_Oper_05 =	Ngaphansi
+	Co_Oper_06 =	Ngaphezulu noma ilingane
+	Co_Oper_07 =	Less noma alinganayo
+	Co_Oper_08 =	In (uhlu)
+	Co_Oper_09 =	Not in (uhlu)
 	Co_Oper_10 =	Iqukethe (uhlu)
 	Co_Oper_11 =	Not iqukethe (uhlu)
 	Co_Oper_12 =	Between (ulayini 1) no (2)
@@ -1210,7 +1210,7 @@
 	ControlGetPos	Retrieves the position and size of a control.
 	ControlGetText	Retrieves text from a control.
 	ControlMove	Moves or resizes a control.
-	ControlSend / ControlSendRaw 	Sends simulated keystrokes to a window or control.
+	ControlSend / ControlSendRaw	Sends simulated keystrokes to a window or control.
 	ControlSetText	Changes the text of a control.
 	CoordMode	Sets coordinate mode for various commands to be relative to either the active window or the screen.
 	Cos	Returns the trigonometric cosine of Number.
@@ -1299,7 +1299,7 @@
 	LoadPicture	Ukulayisha isithombe kusuka ifayela futhi ibuyisa bitmap noma icon isibambo.
 	Log	Returns the logarithm (base 10) of Number.
 	Loop (files & folders)	Retrieves the specified files or folders, one at a time.
-	Loop (normal) 	Perform a series of commands repeatedly: either the specified number of times or until break is encountered.
+	Loop (normal)	Perform a series of commands repeatedly: either the specified number of times or until break is encountered.
 	Loop (parse a string)	Retrieves substrings (fields) from a string, one at a time.
 	Loop (read file contents)	Retrieves the lines in a text file, one at a time (performs better than FileReadLine).
 	Loop (registry)	Retrieves the contents of the specified registry subkey, one item at a time.
