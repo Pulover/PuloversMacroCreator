@@ -3,6 +3,7 @@ SetWorkingDir %A_ScriptDir%
 SplitPath, A_AhkPath,, AhkDir
 
 FileCreateDir, Compiled
+FileCreateDir, Compiled\Lang
 FileCreateDir, Documentation\MacroCreator_Help-doc\Commands
 
 IfWinExist, ahk_exe MacroCreator.exe
@@ -28,9 +29,12 @@ FileCopy, Documentation\MacroCreator_Help-doc\MacroCreator_Help.chm, Compiled\Ma
 FileDelete, Compiled\Resources.dll
 FileDelete, Compiled\SciLexer-x64.dll
 FileDelete, Compiled\SciLexer-x86.dll
+FileDelete, Compiled\Lang\*.*
+
 FileCopy, Resources.dll, Compiled\Resources.dll, 1
 FileCopy, SciLexer-x64.dll, Compiled\SciLexer-x64.dll, 1
 FileCopy, SciLexer-x86.dll, Compiled\SciLexer-x86.dll, 1
+FileCopy, Lang\*.lang, Compiled\Lang\, 1
 
 RunWait, %AhkDir%\Compiler\Ahk2Exe.exe /in MacroCreator.ahk /out Compiled\MacroCreator.exe /icon Resources\PMC4_Mult.ico /bin "%AhkDir%\Compiler\Unicode 32-bit.bin",, UseErrorLevel
 If (ErrorLevel = "ERROR")
@@ -63,23 +67,28 @@ FileCreateDir, Compiled\MacroCreatorPortable\x86
 FileCreateDir, Compiled\MacroCreatorPortable\x64
 FileCreateDir, Compiled\MacroCreatorPortable\x86\MacroCreator
 FileCreateDir, Compiled\MacroCreatorPortable\x64\MacroCreator
+FileCreateDir, Compiled\MacroCreatorPortable\x86\MacroCreator\Lang
+FileCreateDir, Compiled\MacroCreatorPortable\x64\MacroCreator\Lang
 
 IniWrite, 0, Compiled\MacroCreator.ini, Options, AutoUpdate
 
 FileCopy, License.txt, Compiled\MacroCreatorPortable\, 1
+
 FileCopy, Compiled\MacroCreator.exe, Compiled\MacroCreatorPortable\x86\MacroCreator\, 1
 FileCopy, Compiled\MacroCreator.ini, Compiled\MacroCreatorPortable\x86\MacroCreator\, 1
 FileCopy, Compiled\MacroCreator_Help.chm, Compiled\MacroCreatorPortable\x86\MacroCreator\, 1
 FileCopy, Compiled\MacroCreator_Help_CN.chm, Compiled\MacroCreatorPortable\x86\MacroCreator\, 1
 FileCopy, Compiled\Resources.dll, Compiled\MacroCreatorPortable\x86\MacroCreator\, 1
 FileCopy, Compiled\SciLexer-x86.dll, Compiled\MacroCreatorPortable\x86\MacroCreator\SciLexer.dll, 1
+FileCopy, Compiled\Lang\*.lang, Compiled\MacroCreatorPortable\x86\MacroCreator\Lang\, 1
+
 FileCopy, Compiled\MacroCreator-x64.exe, Compiled\MacroCreatorPortable\x64\MacroCreator\MacroCreator.exe, 1
 FileCopy, Compiled\MacroCreator.ini, Compiled\MacroCreatorPortable\x64\MacroCreator\, 1
 FileCopy, Compiled\MacroCreator_Help.chm, Compiled\MacroCreatorPortable\x64\MacroCreator\, 1
 FileCopy, Compiled\MacroCreator_Help_CN.chm, Compiled\MacroCreatorPortable\x64\MacroCreator\, 1
 FileCopy, Compiled\Resources.dll, Compiled\MacroCreatorPortable\x64\MacroCreator\, 1
 FileCopy, Compiled\SciLexer-x64.dll, Compiled\MacroCreatorPortable\x64\MacroCreator\SciLexer.dll, 1
-FileCopy, Compiled\MacroCreatorPortable.exe, Compiled\MacroCreatorPortable\, 1
+FileCopy, Compiled\Lang\*.lang, Compiled\MacroCreatorPortable\x64\MacroCreator\Lang\, 1
 
 IniRead, Ver, MacroCreator.ini, Application, Version
 FileAppend,

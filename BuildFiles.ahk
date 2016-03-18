@@ -13,8 +13,10 @@ If (PMCVer = "Error")
 FileDelete, Compiled\MacroCreator.ini
 IniWrite, %PMCVer%, Compiled\MacroCreator.ini, Application, Version
 
-IfExist, Compiled\MacroCreator_Help_CN.chm
-	CNHelp := "Source: ""{#WorkDir}\Compiled\MacroCreator_Help_CN.chm""`; DestDir: ""{app}""`; Flags: ignoreversion"
+IfExist, Compiled\MacroCreator_Help_zh.chm
+	CNHelp := "Source: ""{#WorkDir}\Compiled\MacroCreator_Help_zh.chm""`; DestDir: ""{app}""`; Flags: ignoreversion"
+Else IfExist, Compiled\MacroCreator_Help_zh_CN.chm
+	CNHelp := "Source: ""{#WorkDir}\Compiled\MacroCreator_Help_zh_CN.chm""`; DestDir: ""{app}""`; Flags: ignoreversion"
 
 Script =
 (
@@ -22,7 +24,7 @@ Script =
 #define PmcVersion "%PMCVer%"
 #define PmcCompany "Rodolfo U. Batista"
 #define PmcURL "http://www.macrocreator.com"
-#define PmcCopyright "Copyright (C) 2012-2014 Rodolfo U. Batista"
+#define PmcCopyright "Copyright (C) 2012-2016 Rodolfo U. Batista"
 #define PmcExeName "MacroCreator.exe"
 #define PmcExt "pmc"
 #define WorkDir "%A_ScriptDir%"
@@ -100,6 +102,7 @@ Source: "{#WorkDir}\Compiled\SciLexer-x64.dll"; DestDir: "{app}"; DestName: "Sci
 Source: "{#WorkDir}\Compiled\SciLexer-x86.dll"; DestDir: "{app}"; DestName: "SciLexer.dll"; Flags: ignoreversion; Tasks: install32bit
 Source: "{#WorkDir}\Compiled\MacroCreator.ini"; DestDir: "{app}"; DestName: "MacroCreator.ini"; Flags: ignoreversion; Tasks: portableinstall
 Source: "{#WorkDir}\Compiled\Resources.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#WorkDir}\Compiled\Lang\*.lang"; DestDir: "{app}\Lang"; Flags: ignoreversion
 Source: "{#WorkDir}\Compiled\MacroCreator_Help.chm"; DestDir: "{app}"; Flags: ignoreversion
 %CNHelp%
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
