@@ -2,9 +2,10 @@
 
 **Note**: Right-click on a Button in the Main Window or anywhere on a Command Window to display links to AHK online help.
 
-* [Syntax differences from AutoHotkey.](#syntax-differences-from-autohotkey.)
 * [How do I start Recording / Playback?](#how-do-i-start-recording-/-playback)
 * [Can I import AHK scripts to Macro Creator and edit them?](#can-i-import-ahk-scripts-to-macro-creator-and-edit-them)
+* [How do create a random number/command?](#how-do-create-a-random-number/command)
+* [Can I create Graphic User Interface (Gui) with Macro Creator?](#can-i-create-graphic-user-interface-(gui)-with-macro-creator)
 * [Can Macro Creator automate Firefox or Chrome as it does with Internet Explorer?](#can-macro-creator-automate-firefox-or-chrome-as-it-does-with-internet-explorer)
 * [Can I make playback go faster/slower?](#can-i-make-playback-go-faster/slower)
 * [Can I execute a custom action based on Pixel/Image search result?](#can-i-execute-a-custom-action-based-on-pixel/image-search-result)
@@ -24,18 +25,12 @@
 * [Can I record keys when pressed down and released separately?](#can-i-record-keys-when-pressed-down-and-released-separately)
 * [Why won't the mouse stay where I recorded it when I play a Macro?](#why-wont-the-mouse-stay-where-i-recorded-it-when-i-play-a-macro)
 * [Can I keep all Hotkeys always active?](#can-i-keep-all-hotkeys-always-active)
-* [Can I open an .ahk file in PMC to edit it?](#can-i-open-an-.ahk-file-in-pmc-to-edit-it)
 * [Can I use another AHK script to record / play Macros in PMC?](#can-i-use-another-ahk-script-to-record-/-play-macros-in-pmc)
 * [Can I use Functions from my own AutoHotkey Scripts?](#can-i-use-functions-from-my-own-autohotkey-scripts)
 * [Can I make the Playback Hotkeys work on a certain windown only?](#can-i-make-the-playback-hotkeys-work-on-a-certain-windown-only)
 * [Why am I getting wrong mouse coordinates?](#why-am-i-getting-wrong-mouse-coordinates)
 * [I can run the program but Macros won't work / cannot take screenshots.](#i-can-run-the-program-but-macros-wont-work-/-cannot-take-screenshots.)
 * [I'm getting "Error: Invalid hotkey." when I try to launch the program.](#im-getting-"error:-invalid-hotkey."-when-i-try-to-launch-the-program.)
-
-### Syntax differences from AutoHotkey.
-
-* Since Playback uses a function to dereference variables they should always be enclosed in percent signs even for functions or assignments, execpt when the command parameter is OuputVar or InputVar. The syntax will be corrected for the exported script.  
-* It's not necessary to use "quotes" for string parameters in functions or COM commands except for blank parameters.  
 
 ### How do I start Recording / Playback?
 
@@ -45,6 +40,14 @@
 ### Can I import AHK scripts to Macro Creator and edit them?
 
 No. AHK scripts are too complex to be parsed and the conversion would never be perfect. You can, however, include the original PMC code into the exported scripts by checking this option in the [Export Window](p5-Export.html).
+
+### How do create a random number/command?
+
+Use the Random command in the Run / File / String / Misc. window to generate a random number. The command will save the number inside a variable of your choice. Use this variable inside commands like Sleep enclosed in percent signs, e.g. %Rand% and directly inside functions and expressions, e.g. MyArray[Rand].
+
+### Can I create Graphic User Interface (Gui) with Macro Creator?
+
+No, creating Guis is not in the scope of this project. But you can find some nice tools to design Gui in the [AHK forum](http://autohotkey.com/boards/viewtopic.php?f=6&t=3376). You can use the generated script along with exported scripts from PMC (the Gui's gLabel must point to a Label in the script).
 
 ### Can Macro Creator automate Firefox or Chrome as it does with Internet Explorer?
 
@@ -67,11 +70,11 @@ Follow these steps to execute an action for Pixel/Image search based on a condit
 
 ### Can I run a Macro in a timed interval?
 
-Yes, use the [Timer](p1-Main.html#buttons-&-menus).  
+Yes, use the [Timer](p1-Main.html#buttons-&-menus) or the [SetTimer](Commands/Set_Timer.html) command.  
 
 ### Can I run a Macro in a background window?
 
-If the window is a Win32 application with exposed controls you might be able to use Control commands to interact with it without needing to have it active in the foreground. For more info check the [video tutorial for control commands](http://www.macrocreator.com/new-tutorial-control-commands/).
+If the window is a Win32 application with exposed controls you might be able to use Control commands to interact with it without needing to have it active in the foreground. For more info check the [video tutorial for control commands](http://www.macrocreator.com/help/).
 
 ### Can I schedule a Macro to run when I want?
 
@@ -105,39 +108,7 @@ All settings are saved to *MacroCreator.ini* and User Global Variables are saved
 
 ### Which command line parameters are supported?
 
--p -- *Play*: Activate Playback Hotkeys on program start up.
-
-> MacroCreator.exe SavedFile.pmc -p
-
--a or -a*N* -- *AutoPlay*: Runs a Macro on program start up. *N* is the number of the Macro to run. The example below would execute the second Macro in the project file.
-
-> MacroCreator.exe SavedFile.pmc -a2
-
--t or -t*N* -- *Timer*: Runs a Macro automatically and repeatedly at the specified time interval. *N* is the interval in miliseconds, if not present defaults to 250ms. This paramter may be combined with the -a*N* to select which Macro to run.
-
-> MacroCreator.exe SavedFile.pmc -t -a4
-
-To run the first iteration immediately append an ! to the interval value, e.g. *-t5000!*.
-
--c -- *Close*: Exits the program after the first Macro is executed (normally used with the -a option).
-
-> MacroCreator.exe SavedFile.pmc -a -c
-
--h -- *Hide*: Hide Main Window on program start up (right-click the tray icon to show it).
-
-> MacroCreator.exe SavedFile.pmc -h
-
--s or -s*N* -- *Silent*: Combines -a, -h and -c parameters.
-
-> MacroCreator.exe SavedFile.pmc -s3
-
--b -- *Toolbar*: Shows Controls Toolbar on start-up.
-
-> MacroCreator.exe -b
-
-You can load multiple files with multiple parameters.
-
-> MacroCreator.exe File1.pmc File2.pmc File3.pmc -h -p -a3
+[Command line parameters](p1-Main.html#command-line-parameters)
 
 ### Can I execute an action every time a certain event occurs?
 
@@ -145,7 +116,7 @@ It's possible using the [Timer](p1-Main.html#buttons-&-menus) and some If Statem
 
 ### Can I play other Macros while Timer is running?
 
-Although the Timer is limited to run one Macro at a time, you can still activate the other Hotkeys by checking the *Always Active* option or right-clicking the TrayMenu icon and selecting **Play**.
+Although the Timer is limited to run one Macro at a time, you can still activate the other Hotkeys by checking the *Always Active* option or right-clicking the TrayMenu icon and selecting **Play**. The [SetTimer](Commands/Set_Timer.html) command is more flexible.
 
 ### Can I save my Macros as EXE to run on any computer?
 
@@ -160,7 +131,7 @@ The EXE file will be saved to the same directory as the script file.
 
 There are two methods:
 * Open the *Export* window and change the option *COM Objects* to ComObjActive. This is used for convenience and works in Playback only. ComObjActive doesn't really work with Internet Explorer but you can use external functions to connect to existing IE windows such as IEGet and WBGet found in the links below.  
-* Open the *Functions* window and type *o_ie* in the *Output Variable* field and IEGet in the *Function Name* field. IEGet is used internally by PMC and *o_ie* is the internal handle for IE commands.
+* Open the *Functions* window and type *ie* in the *Output Variable* field and WBGet in the *Function Name* field. WBGet is used internally by PMC and *o_ie* is the internal handle for IE commands.
 
 ### What is COM and how do I use it?
 
@@ -168,11 +139,12 @@ COM stands for [Component Object Model](http://en.wikipedia.org/wiki/Component_O
 
 * [Basic Webpage Controls with JavaScript / COM](http://www.autohotkey.com/board/topic/47052-basic-webpage-controls-with-javascript-com-tutorial/)
 * [Basic Ahk_L COM Tutorial for Excel](http://www.autohotkey.com/board/topic/69033-basic-ahk-l-com-tutorial-for-excel/)
+* [COM Object Reference](http://autohotkey.com/boards/viewtopic.php?t=77)
 * [Mickers Outlook COM MSDN for Ahk_L](http://www.autohotkey.com/board/topic/71335-mickers-outlook-com-msdn-for-ahk-l/)
 
 ### Can I take Screenshots during playback?
 
-Macro Creator has the [GDI+ Library](http://www.autohotkey.com/board/topic/29449-gdi-standard-library) integrated so you can make use of its functions.
+Macro Creator has the [GDI+ Library](http://autohotkey.com/boards/viewtopic.php?t=6517) integrated so you can make use of its functions.
 
 The example file below allows you to save a png from the clipboard in your Documents folder. The first macro sends PrintScreen, the second sends Alt+PrintScreen, the third are the functions to save the file (you can change the destination folder in the 3rd line).
 
@@ -210,10 +182,6 @@ Go to Settings > Playback and make sure that the option *Return Mouse to initial
 
 Yes, just check the *Always Active* option in the main window.  
 
-### Can I open an .ahk file in PMC to edit it?
-
-Parsing an .ahk script is not possible but you have the option to *Include PMC Code* for exported scripts so you can read it back from the .ahk file using PMC.  
-
 ### Can I use another AHK script to record / play Macros in PMC?
 
 Your script must use the Send command with a higher level to execute the Hotkeys in PMC. Put these two lines on top of it.  
@@ -227,6 +195,8 @@ Your script must use the Send command with a higher level to execute the Hotkeys
 
 Yes. You can load an external .ahk file in the *Functions* command window to run functions from it and save the results to the Output Variable. You can set a Standard Library File containing your functions in Settings > Misc., this file will be automatically selected when you enter the Function command window.   
 
+This function is limited and can only return 1 string/number value. It's recommended to use [User-Defined Functions](p6-UserFunctions.html) instead.
+
 ### Can I make the Playback Hotkeys work on a certain windown only?
 
 Yes, use the *Context Sensitive Hotkeys* button in the main window.  
@@ -237,7 +207,7 @@ The default settings for mouse coords are relative to the active window to make 
 
 ### I can run the program but Macros won't work / cannot take screenshots.
 
-Macro Creator requires administrator privileges in order to work properly. Enter the program or shortcut's Properties, select the Compatibility tab (click the Advanced button, if it's a shortcut) and check the "Run as administrator" option. 
+Jn some systems Macro Creator requires administrator privileges in order to work properly. Enter the program or shortcut's Properties, select the Compatibility tab (click the Advanced button, if it's a shortcut) and check the "Run as administrator" option. 
 
 ### I'm getting "Error: Invalid hotkey." when I try to launch the program.
 

@@ -1,30 +1,26 @@
-﻿#SingleInstance, Force
-
-;
+﻿;
 ; File encoding:  UTF-8
 ; Platform:  Windows XP/Vista/7
 ; Author:    fincs
 ;
-; GenDocs v3.0-alpha001
+; GenDocs v3.0-alpha004
 ;
 
 #NoEnv
+#NoTrayIcon
+#SingleInstance Ignore
 SendMode Input
 SetWorkingDir, %A_ScriptDir%
 
 FileEncoding, UTF-8
 
 DEBUG = 1
-VER = 3.0-alpha002
+VER = 3.0-alpha004
+_DefaultFName =
 
-if !DEBUG
-{
-	; Quick and dirty look for SciTE to grab initial filename.
-	_DefaultFName =
-	_SciTE := GetSciTEInstance()
-	if _SciTE
-		_DefaultFName := _SciTE.CurrentFile, _SciTE := ""
-}else
+#include *i %A_ScriptDir%\..\$gendocs_scite
+
+if DEBUG
 	_DefaultFName := A_ScriptDir "\MacroCreator_Help.ahk"
 
 if 0 > 0
@@ -45,16 +41,16 @@ if 0 > 0
 	ExitApp
 }
 
-Gui, +AlwaysOnTop
-Gui, Add, Text, x6 y10 w310 h20, Select your script and click on Document.
-Gui, Add, Edit, x6 y30 w280 h20 vfile, %_DefaultFName%
-Gui, Add, CheckBox, x26 y60 w260 h20 vCreateCHM Disabled, Generate CHM file (not implemented yet)
-Gui, Add, Button, x286 y30 w30 h20 gSelectFile, ...
-Gui, Add, Button, x26 y90 w100 h30 gDocument, &Document
-Gui, Add, Button, x186 y90 w100 h30 gGuiClose, Exit
+Gui, +AlwaysOnTop +hwndguiHnd
+Gui, Add, Text, , Select your script and click on Document.
+Gui, Add, Edit, section w280 vfile
+Gui, Add, Button, ys gSelectFile, ...
+GuiControl,, file, %_DefaultFName%
+Gui, Add, CheckBox, section xs vCreateCHM Disabled, Generate CHM file (not implemented yet)
+Gui, Add, Button, xs+125 gDocument vdocBtn, &Document
 Gui, Add, StatusBar
 Util_Status("Ready.")
-; Gui, Show, w325 h149, GenDocs v%VER%
+; Gui, Show,, GenDocs v%VER%
 Gosub, Document
 ExitApp
 return
@@ -88,13 +84,18 @@ DocumentCUI:
 SplitPath, file,, filedir
 imglist := []
 docs := RetrieveDocs(file)
+if !docs.contents.MaxIndex()
+{
+	Util_Status("No documentation could be found!", 1)
+	return
+}
 GenerateDocs(file, docs)
 Util_Status("Done!")
 if !CUI
 	SoundPlay, *64
 return
 
-Util_Status(ByRef t, err := 0)
+Util_Status(ByRef t, err=0)
 {
 	global CUI
 	if !CUI
@@ -108,13 +109,4 @@ Util_Status(ByRef t, err := 0)
 		if err
 			ExitApp 1
 	}
-}
-
-GetSciTEInstance()
-{
-	olderr := ComObjError()
-	ComObjError(false)
-	scite := ComObjActive("SciTE4AHK.Application")
-	ComObjError(olderr)
-	return IsObject(scite) ? scite : ""
 }

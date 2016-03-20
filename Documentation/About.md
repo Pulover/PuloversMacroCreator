@@ -10,14 +10,14 @@ Copyright © 2012-2016 Rodolfo U. Batista
 
 Version: 5.0.0  
 Release Date: March, 2016  
-AutoHotkey Version: 1.1.23.01  
+AutoHotkey Version: 1.1.23.03  
 
 Software License: [GNU General Public License](License.html)  
 
 ## Thanks to
 
 Chris and Lexikos for [AutoHotkey](http://autohotkey.com/).  
-tic (Tariq Porter) for his [GDI+ Library](http://autohotkey.com/board/topic/29449-gdi-standard-library).  
+tic (Tariq Porter) for his [GDI+ Library](http://autohotkey.com/boards/viewtopic.php?t=6517).  
 tkoi & majkinetor for the [ILButton function](http://autohotkey.com/board/topic/37147-ilbutton-image-buttons).  
 just me for [LV_Colors Class](http://autohotkey.com/boards/viewtopic.php?f=6&t=1081), [LV_EX](http://autohotkey.com/boards/viewtopic.php?t=1256)/[IL_EX](http://autohotkey.com/boards/viewtopic.php?f=6&t=1273) functions and for updating ILButton to 64bit.  
 Micahs for the [base code](http://autohotkey.com/board/topic/30486-listview-tooltip-on-mouse-hover/?p=280843) of the Drag-Rows function.  

@@ -1,8 +1,7 @@
 ﻿/*!
 	Library: Pulover's Macro Creator
-		*The Complete Automation Tool*
 		
-		Version: 5.0.0  
+		# Version: 5.0.0  
 
 		[www.macrocreator.com](http://www.macrocreator.com)  
 		[Forum Thread](http://autohotkey.com/boards/viewtopic.php?f=6&t=143)  
@@ -16,65 +15,84 @@
 		[AutoHotkey Online Documentation](http://autohotkey.com/docs)  
 		
 		**Support Open Source software: [Donate](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=rodolfoub%40gmail%2ecom&lc=US&item_name=Pulover%27s%20Macro%20Creator&item_number=App%2ePMC&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted)**
+		
+*/
+
+/*!
+	Page: Quick Tutorial
+	Filename: p0-Tutorial
+	Contents: @file:Tutorial.md
 */
 
 /*!
 	Page: FAQ - Frequently Asked Questions
-	Filename: p0-Faq
+	Filename: p1-Faq
 	Contents: @file:Faq.md
 */
 
 /*!
 	Page: Main Window
-	Filename: p1-Main
+	Filename: p2-Main
 	Contents: @file:Main.md
 */
 
 /*!
 	Page: Record
-	Filename: p2-Record
+	Filename: p3-Record
 	Contents: @file:Record.md
 */
 
 /*!
 	Page: Playback
-	Filename: p3-Playback
+	Filename: p4-Playback
 	Contents: @file:Playback.md
 */
 
 /*!
 	Page: Command Windows
-	Filename: p4-Commands
+	Filename: p5-Commands
 	Contents: @file:Commands.md
 */
 
 /*!
+	Page: User-Defined Functions
+	Filename: p6-UserFunctions
+	Contents: @file:UserFunction.md
+*/
+
+/*!
+	Page: Variables & Arrays/Objects
+	Filename: p7-Variables
+	Contents: @file:Variables.md
+*/
+
+/*!
+	Page: Functions (Built-In)
+	Filename: p8-Functions
+	Contents: @file:Variables.md
+*/
+
+/*!
 	Page: Export Window
-	Filename: p5-Export
+	Filename: p9-Export
 	Contents: @file:Export.md
 */
 
 /*!
 	Page: Preview Window
-	Filename: p6-Preview
+	Filename: p10-Preview
 	Contents: @file:Preview.md
 */
 
 /*!
 	Page: Settings
-	Filename: p7-Settings
+	Filename: p11-Settings
 	Contents: @file:Settings.md
 */
 
 /*!
-	Page: Variables & Functions
-	Filename: p8-Variables
-	Contents: @file:Variables.md
-*/
-
-/*!
 	Page: About & Changes
-	Filename: p9-About
+	Filename: p12-About
 	Contents: @file:About.md
 */
 

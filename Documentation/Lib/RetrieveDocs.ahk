@@ -1,30 +1,45 @@
 ;
-FileEncoding, UTF-8
+; File encoding:  UTF-8
 ;
 
 RetrieveDocs(file)
 {
 	Util_Status("Parsing AutoHotkey script...")
 	o := { contents: [] }
+	SplitPath, file,, fileDir
+	tmpWD := A_WorkingDir
+	SetWorkingDir, %fileDir%
+	files := [file]
 	try
 	{
-		file := FileOpen(file, "r")
-		
-		while !file.AtEOF
+		while files.MaxIndex()
 		{
-			line := RTrim(file.ReadLine(), " `t`r`n")
-			tline := LTrim(line)
-			if StrStartsWith(tline, "/*!")
+			file := FileOpen(q :=files.Remove(1), "r")
+			
+			while !file.AtEOF
 			{
-				indent := SubStr(line, 1, InStr(line, "/*!")-1)
-				ReadChunk(file, o, indent)
+				line := RTrim(file.ReadLine(), " `t`r`n")
+				tline := LTrim(line)
+				if StrStartsWith(tline, "/*!")
+				{
+					indent := SubStr(line, 1, InStr(line, "/*!")-1)
+					ReadChunk(file, o, indent)
+				}
+				if RegExMatch(tline, "i)^;!GenDocs-Import\s+(.+)$", tmp)
+				{
+					IfNotExist, %tmp1%
+						throw Exception("File does not exist!", 1, tmp1)
+					files.Insert(tmp1)
+				}
 			}
 		}
 		PackClasses(o.contents)
+		SetWorkingDir, %tmpWD%
 		return o
 	}catch e
 	{
 		Util_Status("An error happened (" e.what ")! " e.message " | " e.extra, 1)
+		SetWorkingDir, %tmpWD%
 		Exit
 	}
 }
@@ -75,7 +90,7 @@ ReadChunk(file, lib, beg_indent)
 	
 	ent.type := type
 	if type != Library
-		lib.contents._Insert(ent)
+		lib.contents.Insert(ent)
 }
 
 ReadValue(ByRef value, file, indent)
@@ -97,12 +112,12 @@ ReadValue(ByRef value, file, indent)
 PackClasses(cont)
 {
 	i := 1
-	while i <= cont._MaxIndex()
+	while i <= cont.MaxIndex()
 	{
 		if cont[i].type != "Class"
 			goto _PC_cont
 		last := "", depth := 1, j := i
-		while j <= cont._MaxIndex()
+		while j <= cont.MaxIndex()
 		{
 			j ++
 			if cont[j].type = "EndClass"
@@ -120,11 +135,11 @@ PackClasses(cont)
 		if count := last-i
 		{
 			Loop, %count%
-				arr._Insert(cont[i+A_Index-1])
+				arr.Insert(cont[i+A_Index-1])
 			PackClasses(arr)
-			cont._Remove(i, last-1)
+			cont.Remove(i, last-1)
 		}
-		cont._Remove(i)
+		cont.Remove(i)
 		continue
 		_PC_cont:
 		i ++

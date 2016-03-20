@@ -1,5 +1,5 @@
 ;
-FileEncoding, UTF-8
+; File encoding:  UTF-8
 ;
 
 StrStartsWith(ByRef v, ByRef w)

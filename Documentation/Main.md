@@ -1,6 +1,6 @@
 ﻿# Main Window
 
-**Note**: Right-click on a Button in the Main Window or anywhere on a Command Window to display links to AutoHotkey online help.
+**Tip**: Right-click on a Button in the Main Window or anywhere on a Command Window to display links to AutoHotkey online help.
 
 ## Table of Contents
 
@@ -11,7 +11,6 @@
 * [Modify / Insert](#modify-/-insert)
 * [Macros](#macros)
 * [Command Line Parameters](#command-line-parameters)
-* [Keyboard Shortcuts](#keyboard-shortcuts)
 
 ## Files
 
@@ -219,6 +218,10 @@ To run the first iteration immediately append an ! to the interval value, e.g. *
 -s or -s*N* -- *Silent*: Combines -a, -h and -c parameters.
 
 > MacroCreator.exe SavedFile.pmc -s3
+
+-r -- *Record*: Starts PMC in Recording Mode with current settings.
+
+> MacroCreator.exe -b
 
 -b -- *Toolbar*: Shows Controls Toolbar on start-up.
 

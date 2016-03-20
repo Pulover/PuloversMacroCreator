@@ -1,5 +1,5 @@
 ;
-FileEncoding, UTF-8
+; File encoding:  UTF-8
 ;
 
 #Include <Markdown2HTML>
@@ -14,8 +14,10 @@ GenerateDocs(file, docs)
 	
 	libname := docs.name
 	libdesc := docs.description
+	if docs.version
+		libextra .= " - Version " _HTML(docs.version)
 	if docs.author
-		libextra := " - by " _HTML(docs.author)
+		libextra .= " - by " _HTML(docs.author)
 	if docs.license
 		libextra .= " - released under the " _HTML(docs.license)
 	
@@ -27,6 +29,7 @@ GenerateDocs(file, docs)
 	<head>
 	<title>%libname%</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<link href="default.css" rel="stylesheet" type="text/css">
 	</head>
 	<body>
@@ -50,11 +53,11 @@ GenerateDocs(file, docs)
 			q := Generate_%type%(item)
 			if type != Page
 			{
-				if type = Function
-					continue
 				filetext .= "`n  <li><a href=""" q ".html"">"
 				q := SubStr(q, StrLen(w)+1)
-				if type = Class
+				if type = Function
+					filetext .= q "() Function"
+				else if type = Class
 					filetext .= q " Class"
 				else if type = Page
 					filetext .= _HTML(q)
@@ -80,13 +83,13 @@ GenerateDocs(file, docs)
 	SetWorkingDir, %oldw%
 }
 
-Generate_Function(item, prefix := "")
+Generate_Function(item, prefix="")
 {
 	Util_Status("Generating documentation for function " prefix item.name "...")
 	return Generate_Common(item, prefix)
 }
 
-Generate_Method(item, prefix := "")
+Generate_Method(item, prefix="")
 {
 	if !prefix
 		throw Exception("Methods must be inside classes!")
@@ -110,7 +113,7 @@ Generate_Constructor(item, prefix)
 	return Generate_Common(item, prefix)
 }
 
-Parse_Common(item, prefix, ByRef type, ByRef syntax, ByRef name, ByRef isConstr, ByRef HasParamTableAndRetVal, ByRef isGet, ByRef isSet)
+Parse_Common(item, prefix, ByRef type, ByRef syntax, ByRef name, ByRef isConstr, ByRef isGet, ByRef isSet)
 {
 	if type = Method
 		type = Function
@@ -132,7 +135,6 @@ Parse_Common(item, prefix, ByRef type, ByRef syntax, ByRef name, ByRef isConstr,
 			syntax := "obj := new " RTrim(prefix,".") syntax 
 			name := prefix "__New"
 		}
-		HasParamTableAndRetVal := true
 	}else if type = Property
 	{
 		name := prefix item.name
@@ -147,25 +149,30 @@ Parse_Common(item, prefix, ByRef type, ByRef syntax, ByRef name, ByRef isConstr,
 					throw Exception("You must specify [get], [set] or [get/set]!")
 			}else isGet := 0
 		}else isSet := 0
-		name := Trim(name)
+		pos := InStr(name, "[")
+		if pos
+		{
+			extra := SubStr(name, pos)
+			name := SubStr(name, 1, pos - 1)
+		}
+		name := Trim(name), extra := Trim(extra)
 		syntax := ""
 		if isGet
-			syntax .= "OutputVar := " name "`n"
+			syntax .= "OutputVar := " name extra "`n"
 		if isSet
-			syntax .= name " := Value`n"
+			syntax .= name extra " := Value`n"
 		StringTrimRight, syntax, syntax, 1
 		StringReplace, syntax, syntax, `r, <br/>
 	}
 }
 
-Generate_Common(item, prefix := "")
+Generate_Common(item, prefix="")
 {
 	type := item.type
-	Parse_Common(item, prefix, type, syntax, name, isConstr, HasParamTableAndRetVal, isGet, isSet)
+	Parse_Common(item, prefix, type, syntax, name, isConstr, isGet, isSet)
 	
-	prettyname := type = "Function" ? RegExReplace(name, "_", " ") : name
-	css := type = "Function" ? """../default.css""" : """default.css"""
-
+	prettyname := type = "Function" ? name "()" : name
+	
 	filetext =
 	(LTrim
 	<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
@@ -174,7 +181,8 @@ Generate_Common(item, prefix := "")
 	<head>
 	<title>%prettyname%</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<link href=%css% rel="stylesheet" type="text/css">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link href="default.css" rel="stylesheet" type="text/css">
 	</head>
 	<body>
 
@@ -182,28 +190,26 @@ Generate_Common(item, prefix := "")
 	)
 	if item.description
 		filetext .= "`n" Markdown2HTML(item.description)
-	; filetext .= "`n`n<pre class=""Syntax"">" _HTML(syntax) "</pre>"
-	if HasParamTableAndRetVal
+	filetext .= "`n`n<pre class=""Syntax"">" _HTML(syntax) "</pre>"
+	if params := item.parameters
 	{
-		if params := item.parameters
+		filetext .= "`n<h3>Parameters</h4>`n<dl>"
+		params := RegExReplace(params, "`n\s+", "`r")
+		Loop, Parse, params, `n
 		{
-			filetext .= "`n<h3>Parameters</h3>`n<table class=""info"">"
-			params := RegExReplace(params, "`n\s+", "`r")
-			Loop, Parse, params, `n
-			{
-				if not pos := InStr(A_LoopField, "-")
-					throw Exception("Invalid parameter syntax!")
-				pname := RTrim(SubStr(A_LoopField, 1, pos-1))
-				pval := LTrim(SubStr(A_LoopField, pos+1))
-				StringReplace, pval, pval, `r, `n, All
-				filetext .= "`n<tr>`n  <td width=""15%"">" pname "</td>`n  <td width=""85%"">" Markdown2HTML(pval,1) "</td>`n</tr>"
-			}
-			filetext .= "`n</table>"
+			if not pos := InStr(A_LoopField, "-")
+				throw Exception("Invalid parameter syntax!")
+			pname := RTrim(SubStr(A_LoopField, 1, pos-1))
+			pval := LTrim(SubStr(A_LoopField, pos+1))
+			StringReplace, pval, pval, `r, `n, All
+			filetext .= "`n  <dt>" pname "</dt>`n  <dd>" Markdown2HTML(pval,1) "</dd>"
 		}
-		if returns := item.returns
-			filetext .= "`n<h3>Returns</h3>`n" Markdown2HTML(returns)
-	}else if type = Property
-		filetext .= "`n<h3>Value</h3>`n" Markdown2HTML(item.value)
+		filetext .= "`n</dl>"
+	}
+	if returns := item.returns
+		filetext .= "`n<h3>Returns</h3>`n" Markdown2HTML(returns)
+	if value := item.value
+		filetext .= "`n<h3>Value</h3>`n" Markdown2HTML(value)
 	if throws := item.throws
 		filetext .= "`n<h3>Throws</h3>`n" Markdown2HTML(throws)
 	if remarks := item.remarks
@@ -215,14 +221,13 @@ Generate_Common(item, prefix := "")
 	
 	filetext .= "`n`n</body>`n</html>"
 	
-	name := (type = "Function") ? "Commands/" name : name
 	IfExist, %name%.html
 		FileDelete, %name%.html
 	FileAppend, % filetext, %name%.html
 	return name
 }
 
-Generate_Page(item, prefix := "")
+Generate_Page(item, prefix="")
 {
 	Util_Status("Generating page " item.name "...")
 	
@@ -238,6 +243,7 @@ Generate_Page(item, prefix := "")
 	<head>
 	<title>%name%</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<link href="default.css" rel="stylesheet" type="text/css">
 	</head>
 	<body>
@@ -251,7 +257,7 @@ Generate_Page(item, prefix := "")
 	FileAppend, % filetext, %filename%.html
 }
 
-Generate_Class(item, prefix := "")
+Generate_Class(item, prefix="")
 {
 	Util_Status("Generating documentation for class " prefix item.name "...")
 	
@@ -266,12 +272,15 @@ Generate_Class(item, prefix := "")
 	<head>
 	<title>%name% Class</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<link href="default.css" rel="stylesheet" type="text/css">
 	</head>
 	<body>
 
 	<h1>%name% Class</h1>
 	)
+	if item.inherits
+		filetext .= "`n<p>(Inherits from <a href=""" item.inherits ".html"">" item.inherits "</a>)</p>"
 	filetext .= "`n" Markdown2HTML(item.description)
 	
 	if !isShort
@@ -334,14 +343,14 @@ GenerateShort_Constructor(ByRef filetext, item, prefix)
 GenerateShort_Common(ByRef filetext, item, prefix)
 {
 	type := item.type
-	Parse_Common(item, prefix, type, syntax, name, isConstr, HasParamTableAndRetVal, isGet, isSet)
+	Parse_Common(item, prefix, type, syntax, name, isConstr, isGet, isSet)
 	name2 := SubStr(name, StrLen(prefix)+1)
 	prettyname := type = "Function" ? name2 "()" : name2
 	filetext .= "`n`n<div class=""methodShort"" id=""" name2 """><h2>" prettyname "</h2>"
 	if item.description
 		filetext .= "`n" Markdown2HTML(item.description)
 	filetext .= "`n`n<pre class=""Syntax"">" _HTML(syntax) "</pre>"
-	if item.value || item.parameters || item.returns || item.throws
+	if item.value || item.parameters || items.value || item.returns || item.throws
 	{
 		filetext .= "`n<table class=""info"">"
 		if q := item.value
@@ -378,6 +387,8 @@ GenerateShort_Class(ByRef filetext, item, prefix)
 {
 	name := item.name
 	filetext .= "`n`n<div class=""methodShort"" id=""" name """><h2>" name " Class</h2>"
+	if item.inherits
+		filetext .= "`n<p>(Inherits from <a href=""" item.inherits ".html"">" item.inherits "</a>)</p>"
 	filetext .= "`n" Markdown2HTML(item.description)
 	for each,it in item.contents
 	{

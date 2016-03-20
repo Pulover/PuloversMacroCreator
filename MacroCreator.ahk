@@ -8,7 +8,7 @@
 ; Forum: http://autohotkey.com/boards/viewtopic.php?f=6&t=143
 ; Version: 5.0.0
 ; Release Date: March, 2016
-; AutoHotkey Version: 1.1.23.01
+; AutoHotkey Version: 1.1.23.03
 ; Copyright © 2012-2016 Rodolfo U. Batista
 ; GNU General Public License 3.0 or higher
 ; <http://www.gnu.org/licenses/gpl-3.0.txt>
@@ -17,7 +17,7 @@
 Thanks to:
 
 tic (Tariq Porter) for his GDI+ Library.
-http://www.autohotkey.com/board/topic/29449-gdi-standard-library
+http://autohotkey.com/boards/viewtopic.php?t=6517
 
 tkoi & majkinetor for the Graphic Buttons function.
 http://www.autohotkey.com/board/topic/37147-ilbutton-image-buttons

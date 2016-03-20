@@ -1,5 +1,5 @@
 ;
-FileEncoding, UTF-8
+; File encoding:  UTF-8
 ;
 
 MD_IsMultiP(ByRef htmQ)
@@ -11,7 +11,7 @@ MD_IsMultiP(ByRef htmQ)
 	return !!ErrorLevel
 }
 
-Markdown2HTML(ByRef text, simplify := 0)
+Markdown2HTML(ByRef text, simplify=0)
 {
 	if !simplify
 		return Markdown2HTML_(text)
@@ -234,7 +234,7 @@ _MD_Callout(m, cId, foundPos, haystack)
 	if cId = 4
 	{
 		global imglist
-		imglist._Insert(SubStr(haystack, mPos2, mLen2))
+		imglist.Insert(SubStr(haystack, mPos2, mLen2))
 	}
 	
 	return 0

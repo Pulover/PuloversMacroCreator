@@ -1,44 +1,44 @@
 /* styles tweaked from the original AutoHotkey css */
 
 body {
-	font-family: Verdana, Arial, Helvetica, sans-serif, "MS sans serif";
-	font-size: 75%;
+	font-family: "Arial", sans-serif;
+	font-size: 95%;
+	color: black;
 	border: 0;
 	background-color: #FFFFFF;
-    line-height: 145%;
+	line-height: 145%;
+	margin: 1em 2em;
 }
 p {
 	margin-top: 0.7em;
 	margin-bottom: 0.7em;
-	text-align: left;
 }
 
 h1 {
-	font-size: 155%;
-	font-weight: normal;
-	margin: 0;
-    padding: 0 0 0.5em 4px;
-	border-bottom-style: ridge;
+	font-size: 2em;
+	font-weight: bold;
+	/* margin: 0; */
+    
+	/* padding: 0 0 0.5em 4px; */
+	/* border-bottom-style: ridge; */
     border-bottom-color: #FFFFFF;
     border-bottom-width: 2px;
+	color: darkblue;
 }
 h2 {
 	font-size: 144%;
 	font-weight: bold;
 	font-family: Arial, Helvetica, sans-serif, "MS sans serif";
-	background-color: #405871;
-	color: #FFFFFF;
+	color: #A04040;
 	margin: 1.5em 0 0.5em 0;
-	padding: 0.1em 0 0.1em 0.2em;
+	padding: 0.1em 0 0.1em 0;
 }
 h3 {
 	font-size: 111%;
 	font-weight: bold;
-	background-color: #E6E6E6;
 	margin: 1.0em 0 0.5em 0;
-	padding: 0.1em 0 0.1em 0.2em;
-	border-top: 1px solid silver;
-	border-bottom: 1px solid silver;
+	padding: 0.1em 0 0.1em 0;
+	color:  #00AA00;
 }
 h4 {
     font-size: 100%;
@@ -50,18 +50,9 @@ ul, ol {margin-top: 0.7em; margin-bottom: 0.7em;}
 li {margin-top: 0.2em; margin-bottom: 0.2em; margin-left: -0.75em;}
 
 a {text-decoration: none;}
-.hBanners {
-	text-align: center;
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 14px;
-}
-a:link, a:active {
-
-}
+a:link, a:active {color: #4280CA;}
 a:visited {color: #AA00AA;}
-a:hover {
-	color: #BA122B;
-}
+a:hover, a:focus {text-decoration: underline; color: #2A6496;}
 
 .Indent {
     margin-left: 2em;
@@ -74,10 +65,15 @@ a:hover {
 /* pre: code blocks, code: inline code, .Syntax: syntax definition (block/pre or inline/span) */
 pre, code, .Syntax {
 	font-family: Consolas, Courier New, monospace;
+	font-size: 1em;
 }
-pre, code { background-color: #F3F3FF; border: solid 1px #E3E3EF; }
+pre, code {
+    border-right: solid 1px #C8C8C8;
+    border-bottom: solid 1px #C8C8C8;
+    background-color: #F6F6E8;
+}
 .Syntax   { background-color: #FFFFAA; border: solid 1px #E8E89A; }
-code, span.Syntax { padding: 0 1px; }
+code, span.Syntax { padding: 0 0.2em; }
 pre {
     margin: 0.7em 1.5em 0.7em 1.5em;
     padding: 0.7em 0 0.7em 0.7em;
@@ -86,32 +82,15 @@ pre {
 }
 pre.Syntax {
     margin: 0 0 1.0em 0;
-    padding: 12px 0 12px 4px;
     line-height: 150%;
+	position: relative;
 }
 pre, pre.Short /*used with .Syntax*/ { line-height: 120%; }
 /* comments */
-pre em, code em { color: #008000; font-style: normal; }
-.LinksTable {
-	font-family: Verdana, Geneva, sans-serif;
-	color: #FFF;
-	background-color: #699;
-	font-weight: bold;
-	text-align: center;
-	font-size: 14px;
-	line-height: 140%;
-}
-.LinksTable:hover {
-	color: #FFF;
-	text-decoration: underline;
-}
-.LinksTable:visited {
-	font-weight: bold;
-	color: #FFF;
-}
+pre em, code em { color: #00A000; font-style: normal; }
 
 
-/* table of command parameters */
+/* tables */
 table.info {
     border: solid 2px #C0C0C0;
     border-collapse: collapse;
@@ -119,7 +98,7 @@ table.info {
     /*table-layout: fixed;*/
 }
 table.info td {
-    border: solid 2px #C0C0C0;
+    border: solid 1px #C0C0C0;
     padding: 0.3em;
 }
 table.info th {
@@ -127,9 +106,21 @@ table.info th {
 	padding: 0.3em;
 }
 
+/* command parameters */
+dt { /* param name */
+	font-style: italic;
+}
+dd {
+	margin-left: 0.3em;
+	padding-left: 1.5em;
+	border-left: 0.3em solid #e0e0e0;
+}
+dd > p:first-child {
+	margin-top: 0.3em;
+}
+
 /* version number/requirement tag */
 h1 .ver, h2 .ver, h3 .ver {font-size: 65%; font-weight: normal; margin-left: 1em; vertical-align: top}
-
 h2 .ver {color: lightgray; font-size: 80%;}
 .ver,
 /* de-emphasized */
@@ -155,10 +146,11 @@ h2 .ver {color: lightgray; font-size: 80%;}
 .methodShort:target { /* non-essential, but helpful if it works */
     border-color: black;
 }
-.MidSection {
-	text-align: center;
-	background-color: #F0F0F0;
+
+/* nav links */
+.navlinks {
+	float: right;
 }
-.Navbar {
-	background-color: #699;
+.navlinks a {
+	font-weight: bold;
 }
