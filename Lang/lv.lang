@@ -133,10 +133,11 @@
 	v_Lang019 =	Rokas&grāmata
 	v_Lang020 =	&Apstāties
 	v_Lang021 =	Pau&ze
-	v_Lang022 =	Ko&mpakts
-	v_Lang023 =	&Default
-	v_Lang024 =	&Mazs
-	v_Lang025 =	&Liels
+	v_Lang022 =	&Kompakts
+	v_Lang023 =	&Labākais Fit
+	v_Lang024 =	&Default
+	v_Lang025 =	&Mazs
+	v_Lang026 =	&Liels
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Settings
@@ -908,6 +909,9 @@
 	d_Lang116 =	Pārsūtīt un instalēt
 	d_Lang117 =	Iet uz download lapu
 	d_Lang118 =	Sūtīšanu. Lūdzu uzgaidiet...
+	d_Lang119 =	Labākais Fit
+	d_Lang120 =	Restart pieteikumu piemērot izmaiņas.
+	d_Lang121 =	Lai atjaunotu rīkjoslas izmērus, apmeklējiet:
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Izbraukšana video pamācības pie www.macrocreator.com/help~~pobj lai uzzinātu par daudzajiem iezīmes PMC.

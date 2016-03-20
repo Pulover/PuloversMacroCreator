@@ -134,9 +134,10 @@
 	v_Lang020 =	&Peatus
 	v_Lang021 =	&Paus
 	v_Lang022 =	&Kompaktne
-	v_Lang023 =	&Vaikimisi
-	v_Lang024 =	&Väike
-	v_Lang025 =	&Suur
+	v_Lang023 =	&Parim Sobivus
+	v_Lang024 =	&Vaikimisi
+	v_Lang025 =	&Väike
+	v_Lang026 =	&Suur
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Seaded
@@ -908,6 +909,9 @@
 	d_Lang116 =	Transfer ja installida
 	d_Lang117 =	Mine alla laadida leheküljel
 	d_Lang118 =	Saatmine. Palun oota...
+	d_Lang119 =	Parim Sobivus
+	d_Lang120 =	Taaskäivitage rakendus muutuste rakendamiseks.
+	d_Lang121 =	Nullimine tööriistaribad suurused, minge:
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Vaata videot õpetused on www.macrocreator.com/help õppida palju funktsioone PMC.

@@ -134,9 +134,10 @@
 	v_Lang020 =	&Gelditu
 	v_Lang021 =	&Eten
 	v_Lang022 =	&Compact
-	v_Lang023 =	&Default
-	v_Lang024 =	&Small
-	v_Lang025 =	&Handiak
+	v_Lang023 =	&Onena Fit
+	v_Lang024 =	&Default
+	v_Lang025 =	&Small
+	v_Lang026 =	&Handiak
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Ezarpenak
@@ -908,6 +909,9 @@
 	d_Lang116 =	Transferentzia eta instalatu
 	d_Lang117 =	Joan orria deskargatu
 	d_Lang118 =	Bidaltzea. Itxaron mesedez...
+	d_Lang119 =	Onena Fit
+	d_Lang120 =	Berrabiarazi aplikazioa aldaketak aplikatzeko.
+	d_Lang121 =	Tresna-barrak tamainak berrezartzeko, joan:
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Begiratu bideo tutorialak www.macrocreator.com/help at PMC ezaugarri asko ezagutzea.

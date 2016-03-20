@@ -133,10 +133,11 @@
 	v_Lang019 =	Ro&čni
 	v_Lang020 =	Stop
 	v_Lang021 =	Premor
-	v_Lang022 =	Kompaktna
-	v_Lang023 =	Priv&zeto
-	v_Lang024 =	Ma&jhno
-	v_Lang025 =	Velika
+	v_Lang022 =	&Kompaktna
+	v_Lang023 =	&Najbolj Ustrezajo
+	v_Lang024 =	&Privzeto
+	v_Lang025 =	Ma&jhno
+	v_Lang026 =	Velika
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Nastavitve
@@ -908,6 +909,9 @@
 	d_Lang116 =	Prenos in namestitev
 	d_Lang117 =	Pojdite na stran za prenos
 	d_Lang118 =	Pošiljanje. Prosim počakaj...
+	d_Lang119 =	Najbolj Ustrezajo
+	d_Lang120 =	Ponovno zaženite aplikacijo za uporabo sprememb.
+	d_Lang121 =	Za ponastavitev orodne vrstice velikosti, pojdite na:
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Oglejte si video Vadnice na www.macrocreator.com/help~~pobj za spoznavanje mnogih značilnosti PMC.

@@ -133,10 +133,11 @@
 	v_Lang019 =	K&ézi
 	v_Lang020 =	Meg&áll
 	v_Lang021 =	Sz&ünet
-	v_Lang022 =	K&ompakt
-	v_Lang023 =	Alapértelmezett
-	v_Lang024 =	Ki&csi
-	v_Lang025 =	&Nagy
+	v_Lang022 =	&Kompakt
+	v_Lang023 =	&Legjobban Illeszkedő
+	v_Lang024 =	&Alapértelmezett
+	v_Lang025 =	Ki&csi
+	v_Lang026 =	&Nagy
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Beállítások
@@ -908,6 +909,9 @@
 	d_Lang116 =	Transzfer és telepítése
 	d_Lang117 =	Tovább a letöltési oldalon
 	d_Lang118 =	Küldés. Kérlek várj...
+	d_Lang119 =	Legjobban Illeszkedő
+	d_Lang120 =	Indítsa újra az alkalmazást változtatások alkalmazásához.
+	d_Lang121 =	Visszaállításához eszköztárak méretben, megy:
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Nézze meg a videót tutorials a www.macrocreator.com/help megismerni számos tulajdonságát PMC.

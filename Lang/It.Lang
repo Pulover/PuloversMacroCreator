@@ -133,10 +133,11 @@
 	v_Lang019 =	Manuale
 	v_Lang020 =	Arresto
 	v_Lang021 =	Pausa
-	v_Lang022 =	Compatta
-	v_Lang023 =	Predefinito
-	v_Lang024 =	Piccolo
-	v_Lang025 =	&Grande
+	v_Lang022 =	&Compatta
+	v_Lang023 =	&Il Più Adatto
+	v_Lang024 =	&Predefinito
+	v_Lang025 =	Piccolo
+	v_Lang026 =	&Grande
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Impostazioni
@@ -908,6 +909,9 @@
 	d_Lang116 =	Trasferire ed installare
 	d_Lang117 =	Vai alla pagina di download
 	d_Lang118 =	Invio. Attendere prego...
+	d_Lang119 =	Il Più Adatto
+	d_Lang120 =	Riavviare l'applicazione per applicare le modifiche.
+	d_Lang121 =	Per ripristinare le barre degli strumenti dimensioni, vai a:
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Scopri i video tutorial a www.macrocreator.com/help per conoscere le molte caratteristiche di PMC.

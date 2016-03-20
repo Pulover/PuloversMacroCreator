@@ -134,9 +134,10 @@
 	v_Lang020 =	შეაჩერე(&S)
 	v_Lang021 =	Pause(&P)
 	v_Lang022 =	Compact(&C)
-	v_Lang023 =	Default(&D)
-	v_Lang024 =	პატარა(&S)
-	v_Lang025 =	დიდი(&L)
+	v_Lang023 =	საუკეთესო Fit(&B)
+	v_Lang024 =	Default(&D)
+	v_Lang025 =	პატარა(&S)
+	v_Lang026 =	დიდი(&L)
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	პარამეტრები(&S)
@@ -908,6 +909,9 @@
 	d_Lang116 =	გადასცეს და დააყენოთ
 	d_Lang117 =	გადასვლა ჩამოტვირთოთ გვერდი
 	d_Lang118 =	გაგზავნის. გთხოვთ მოიცადოთ...
+	d_Lang119 =	საუკეთესო Fit
+	d_Lang120 =	გადატვირთეთ პროგრამა უნდა მიმართონ ცვლილებები.
+	d_Lang121 =	გადატვირთვის toolbars ზომის, წასვლა:
 		
 ; 18. Start-up Tips		
 	Start_Tips =	შეამოწმეთ ვიდეო გაკვეთილები at www.macrocreator.com/help გაეცნონ ბევრი თვისებები PMC.

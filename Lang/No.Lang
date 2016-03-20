@@ -133,10 +133,11 @@
 	v_Lang019 =	Manuell
 	v_Lang020 =	Stopp
 	v_Lang021 =	Pause
-	v_Lang022 =	Kompakt
-	v_Lang023 =	Stan&dard
-	v_Lang024 =	Liten
-	v_Lang025 =	Stor
+	v_Lang022 =	&Kompakt
+	v_Lang023 =	&Passer Best
+	v_Lang024 =	&Standard
+	v_Lang025 =	Liten
+	v_Lang026 =	Stor
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Innstillinger
@@ -908,6 +909,9 @@
 	d_Lang116 =	Overføre og installere
 	d_Lang117 =	Gå til nedlastingssiden
 	d_Lang118 =	Sending. Vennligst vent...
+	d_Lang119 =	Passer Best
+	d_Lang120 =	Start programmet på nytt for å bruke endringene.
+	d_Lang121 =	For å tilbakestille  verktøylinjer  størrelser, gå til:
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Sjekk ut video tutorials på www.macrocreator.com/help å lære om de mange funksjonene i PMC.

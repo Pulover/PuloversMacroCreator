@@ -133,10 +133,11 @@
 	v_Lang019 =	Priru&čnik
 	v_Lang020 =	Stop
 	v_Lang021 =	Pau&za
-	v_Lang022 =	Kompaktan
-	v_Lang023 =	Default
-	v_Lang024 =	Mali
-	v_Lang025 =	Veliki
+	v_Lang022 =	&Kompaktan
+	v_Lang023 =	&Najbolje Odgovara
+	v_Lang024 =	&Default
+	v_Lang025 =	Mali
+	v_Lang026 =	Veliki
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Postavke
@@ -908,6 +909,9 @@
 	d_Lang116 =	Prijenos i instalirati
 	d_Lang117 =	Idi na stranicu za preuzimanje
 	d_Lang118 =	Slanje. Molimo pričekajte ...
+	d_Lang119 =	Najbolje Odgovara
+	d_Lang120 =	Pokrenite aplikaciju za primjenu promjena.
+	d_Lang121 =	Za resetiranje alatne trake veličine, idite na:
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Pogledajte video tutoriali na www.macrocreator.com/help~~pobj naučiti o mnogim značajkama PMC.

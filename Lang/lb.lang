@@ -133,10 +133,11 @@
 	v_Lang019 =	Ma&nuell
 	v_Lang020 =	&Stop
 	v_Lang021 =	&Pause
-	v_Lang022 =	Fiska&lpakt
-	v_Lang023 =	&Default
-	v_Lang024 =	Klen&g
-	v_Lang025 =	&Grouss
+	v_Lang022 =	&Fiskalpakt
+	v_Lang023 =	&Beschte Fit
+	v_Lang024 =	&Default
+	v_Lang025 =	Klen&g
+	v_Lang026 =	&Grouss
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Parameteren
@@ -908,6 +909,9 @@
 	d_Lang116 =	Transfert an installéiert
 	d_Lang117 =	Go Säit ze download
 	d_Lang118 =	SMS'en. Sot wait ...
+	d_Lang119 =	Beschte Fit
+	d_Lang120 =	Reouverture der Applikatioun Ännerungen ze gëllen.
+	d_Lang121 =	Fir Toolbare Gréisste Compteur, goen:
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Check den video Léierprogrammer um www.macrocreator.com/help Ensembel de ville Fonctioune vun PMC ze léieren.

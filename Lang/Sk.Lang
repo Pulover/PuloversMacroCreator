@@ -134,9 +134,10 @@
 	v_Lang020 =	Stop
 	v_Lang021 =	Pauza
 	v_Lang022 =	&Kompaktné
-	v_Lang023 =	&Štandardné
-	v_Lang024 =	Mal&ý
-	v_Lang025 =	Rozsiahly
+	v_Lang023 =	&Najlepšie Hodí
+	v_Lang024 =	&Štandardné
+	v_Lang025 =	Mal&ý
+	v_Lang026 =	Rozsiahly
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Nastavenie
@@ -908,6 +909,9 @@
 	d_Lang116 =	Prenášať a inštalovať
 	d_Lang117 =	Prejdite na stránku na stiahnutie
 	d_Lang118 =	Odoslanie. Prosím čakajte...
+	d_Lang119 =	Najlepšie Hodí
+	d_Lang120 =	Reštartujte aplikáciu použiť zmeny.
+	d_Lang121 =	Ak chcete obnoviť veľkostí panely nástrojov, nájdete na adrese:
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Pozrite sa na video tutoriály na www.macrocreator.com/help~~pobj dozvedieť sa o mnohých funkcií PMC.

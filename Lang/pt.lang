@@ -134,9 +134,10 @@
 	v_Lang020 =	&Parar
 	v_Lang021 =	Pa&usa
 	v_Lang022 =	&Compacto
-	v_Lang023 =	&Padrão
-	v_Lang024 =	&Pequeno
-	v_Lang025 =	&Grande
+	v_Lang023 =	&Melhor Ajuste
+	v_Lang024 =	&Padrão
+	v_Lang025 =	&Pequeno
+	v_Lang026 =	&Grande
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Configurações
@@ -850,7 +851,7 @@
 		Doando ou não, não haverá nenhuma diferença em seus recursos e funcionalidades.
 	d_Lang070 =	Doar...
 	d_Lang071 =	Não, obrigado
-	d_Lang072 =	Apoie software Livre / Código Aberto
+	d_Lang072 =	Apoie o software de Código Aberto
 	d_Lang073 =	Erro: Atalho Inválido Selecionado.
 	d_Lang074 =	Localizar um comando ou função
 	d_Lang075 =	Bem-vindo ao Pulover's Macro Creator
@@ -908,6 +909,9 @@
 	d_Lang116 =	Transferir e instalar
 	d_Lang117 =	Ir para página de download
 	d_Lang118 =	Enviando. Por favor, aguarde...
+	d_Lang119 =	Melhor Ajuste
+	d_Lang120 =	Reinicie o aplicativo para aplicar as alterações.
+	d_Lang121 =	Para reajustar os tamanhos das barras de ferramentas, vá para:
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Confira os tutoriais em vídeo no www.macrocreator.com/help para aprender sobre as muitas características do PMC.

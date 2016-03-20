@@ -134,9 +134,10 @@
 	v_Lang020 =	H&ættu
 	v_Lang021 =	&Hlé
 	v_Lang022 =	&Compact
-	v_Lang023 =	Sjálf&gefið
-	v_Lang024 =	L&ítil
-	v_Lang025 =	St&ór
+	v_Lang023 =	&Best Passa
+	v_Lang024 =	&Sjálfgefið
+	v_Lang025 =	L&ítil
+	v_Lang026 =	St&ór
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Stillingar
@@ -908,6 +909,9 @@
 	d_Lang116 =	Flytja og setja
 	d_Lang117 =	Fara að sækja síðuna
 	d_Lang118 =	Sending. Vinsamlegast bíðið...
+	d_Lang119 =	Best Passa
+	d_Lang120 =	Endurræsa forritið til breytinga.
+	d_Lang121 =	Til að endurstilla Toolbars stærðir, fara á:
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Skoðaðu vídeó námskeið á www.macrocreator.com/help~~pobj til að læra um marga eiginleika PMC.

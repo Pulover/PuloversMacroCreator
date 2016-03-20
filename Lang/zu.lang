@@ -133,10 +133,11 @@
 	v_Lang019 =	&Manual
 	v_Lang020 =	&Ima
 	v_Lang021 =	Misa &okwesikhashana
-	v_Lang022 =	Com&pact
-	v_Lang023 =	Okuzenzakalela&yo
-	v_Lang024 =	&Small
-	v_Lang025 =	&Large
+	v_Lang022 =	&Compact
+	v_Lang023 =	&Ukulingana Okufanele
+	v_Lang024 =	&Okuzenzakalelayo
+	v_Lang025 =	&Small
+	v_Lang026 =	&Large
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Amasethingi
@@ -908,6 +909,9 @@
 	d_Lang116 =	Dlulisa futhi ufake
 	d_Lang117 =	Hamba ukulanda ikhasi
 	d_Lang118 =	Ukuthumela. Ngicela ulinde...
+	d_Lang119 =	Ukulingana Okufanele
+	d_Lang120 =	Qala kabusha isicelo ukusebenzisa izinguquko.
+	d_Lang121 =	Ukuze usethe kabusha wamathuluzi ezinobukhulu, yiya ku:
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Hlola tutorials video at www.macrocreator.com/help ukuze ufunde mayelana nezici eziningi PMC.

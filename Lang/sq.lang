@@ -134,9 +134,10 @@
 	v_Lang020 =	&Stop
 	v_Lang021 =	&Pushim
 	v_Lang022 =	&Kompakt
-	v_Lang023 =	De&fault
-	v_Lang024 =	I &vogël
-	v_Lang025 =	&I madh
+	v_Lang023 =	&Pershtatja Me E Mire
+	v_Lang024 =	&Default
+	v_Lang025 =	I &vogël
+	v_Lang026 =	&I madh
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Cilësimet
@@ -908,6 +909,9 @@
 	d_Lang116 =	Transferoni dhe të instaloni
 	d_Lang117 =	Shko te shkarkoni faqe
 	d_Lang118 =	Dërgimi. Te lutem prit...
+	d_Lang119 =	Pershtatja Me E Mire
+	d_Lang120 =	Rinisni kërkesën për të aplikuar ndryshimet.
+	d_Lang121 =	Për të rivendosur madhësive panele, shkoni në:
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Check out video tutorial në www.macrocreator.com/help~~pobj të mësojnë në lidhje me shumë karakteristika të PMC.

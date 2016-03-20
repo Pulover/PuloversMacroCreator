@@ -274,7 +274,7 @@ IniRead, WinState, %IniFilePath%, WindowOptions, WinState, 1
 IniRead, ColSizes, %IniFilePath%, WindowOptions, ColSizes, 70,185,335,60,60,100,150,225,85,50
 IniRead, ColOrder, %IniFilePath%, WindowOptions, ColOrder, 1,2,3,4,5,6,7,8,9,10
 IniRead, PrevWinSize, %IniFilePath%, WindowOptions, PrevWinSize, W450 H500
-IniRead, ShowPrev, %IniFilePath%, WindowOptions, ShowPrev, 0
+IniRead, ShowPrev, %IniFilePath%, WindowOptions, ShowPrev, 1
 IniRead, TextWrap, %IniFilePath%, WindowOptions, TextWrap, 0
 IniRead, CommentUnchecked, %IniFilePath%, WindowOptions, CommentUnchecked, 1
 IniRead, CustomColors, %IniFilePath%, WindowOptions, CustomColors, 0
@@ -1167,7 +1167,7 @@ Else
 	}
 	If (ShowBarOnStart)
 		GoSub, ShowControls
-	If (UserLayout = "Error")
+	If (ShowWelcome)
 		GoSub, Welcome
 	Else
 	{
@@ -1224,7 +1224,10 @@ Loop, Parse, Default_Layout, |
 If (MainLayout = "ERROR")
 {
 	If (UserLayout = "ERROR")
-		GoSub, DefaultLayout
+	{
+		ShowWelcome := true
+		GoSub, SetBestFitLayout
+	}
 	return
 }
 Loop, 3
@@ -3742,6 +3745,7 @@ return
 CheckNow:
 CheckUpdates:
 Gui, 1:+OwnDialogs
+ComObjError(false)
 VerChk := ""
 url := "http://www.macrocreator.com/lang"
 whr := ComObjCreate("WinHttp.WinHttpRequest.5.1")
@@ -3829,6 +3833,7 @@ If (IsObject(VerChk))
 }
 Else If (A_ThisLabel = "CheckNow")
 	MsgBox, 16, %d_Lang007%, % d_Lang063 "`n`n""" SubStr(ResponseText, 1, 500) """"
+ComObjError(true)
 return
 
 TransferUpdate:
@@ -10364,19 +10369,18 @@ Welcome:
 Gui, 31:-MinimizeBox +owner1
 Gui, 1:+Disabled
 Gui, 31:Font, Bold s10, Tahoma
-Gui, 31:Add, Text, -Wrap R1 w300 Center, %d_Lang075%
+Gui, 31:Add, Text, -Wrap R1 w460 Center, %d_Lang075%
 Gui, 31:Font
-Gui, 31:Add, Groupbox, Section w320 h105 Center, %d_Lang076%:
-Gui, 31:Add, Radio, -Wrap R1 Checked xs+30 ys+30 W130 vDefault gDefaultLayout, %d_Lang078%
+Gui, 31:Add, Groupbox, Section w480 h90 Center, %d_Lang076%:
+Gui, 31:Add, Radio, -Wrap R1 Checked xs+30 ys+30 W130 vBestFit gBestFitLayout, %d_Lang119%
+Gui, 31:Add, Radio, -Wrap R1 yp x+20 W130 vDefault gDefaultLayout, %d_Lang078%
 Gui, 31:Add, Radio, -Wrap R1 yp x+20 W130 vBasic gBasicLayout, %d_Lang077%
-Gui, 31:Add, Radio, -Wrap R1 Checked Group xs+30 y+20 W130 vLarge gSetLargeIcons, %d_Lang093%
-Gui, 31:Add, Radio, -Wrap R1 yp x+20 W130 vSmall gSetSmallIcons, %d_Lang092%
-Gui, 31:Add, Text, -Wrap y+5 xs+10 W300 R1 cGray, %d_Lang081%
-Gui, 31:Add, Text, -Wrap y+20 xs W120 R1, %t_Lang189% (Language):
+Gui, 31:Add, Text, -Wrap y+15 xs+10 W300 R1 cGray, %d_Lang081%
+Gui, 31:Add, Text, -Wrap y+30 xs W170 R1, %t_Lang189% (Language):
 Gui, 31:Add, DDL, yp x+5 W190 vSelLang, %Lang_List%
 GuiControl, 31:ChooseString, SelLang, % RegExReplace(Lang_%CurrentLang%, "\t.*")
 Gui, 31:Add, Button, Default xm W75 H23 gWelcClose, %c_Lang020%
-Gui, 31:Add, Checkbox, Checked%AutoUpdate% -Wrap yp+5 x+10 W235 r1 vAutoUpdate, %d_Lang079%
+Gui, 31:Add, Checkbox, Checked%AutoUpdate% -Wrap yp+5 x+10 W350 r1 vAutoUpdate, %d_Lang079%
 Gui, 31:Show,, %AppName%
 return
 
@@ -13675,10 +13679,31 @@ Loop, Parse, ManKey, |
 	o_ManKey.Push(A_LoopField)
 return
 
+SetBasicLayout:
+SetDefaultLayout:
+SetBestFitLayout:
+If (A_ThisLabel = "SetBasicLayout")
+	UserLayout := "Basic"
+Else If (A_ThisLabel = "SetBestFitLayout")
+	UserLayout := "BestFit"
+Else
+	UserLayout := "Default"
+GoSub, %UserLayout%Layout
+GoSub, TabSel
+SavePrompt(SavePrompt)
+return
+
+SetSmallIcons:
+SetLargeIcons:
+Gui, 1:+OwnDialogs
+IconSize := (A_ThisLabel = "SetSmallIcons") ? "Small" : "Large"
+MsgBox, 64, %AppName%, % d_Lang120 "`n`n" d_Lang121 "`n" StrReplace(m_Lang007 " > " v_Lang011, "&")
+return
+
 DefaultLayout:
 Loop, 9
 	ShowBand%A_Index% := 1
-	TbFile.Reset(), TB_IdealSize(TbFile, TbFile_ID)
+TbFile.Reset(), TB_IdealSize(TbFile, TbFile_ID)
 ,	TbRecPlay.Reset(), TB_IdealSize(TbRecPlay, TbRecPlay_ID)
 ,	TbCommand.Reset(), TB_IdealSize(TbCommand, TbCommand_ID)
 ,	TbEdit.Reset(), TB_IdealSize(TbEdit, TbEdit_ID)
@@ -13704,40 +13729,44 @@ Menu, HotkeyMenu, Check, %v_Lang020%
 Menu, HotkeyMenu, Check, %v_Lang021%
 return
 
-SetBasicLayout:
-SetDefaultLayout:
-If (A_ThisLabel = "SetBasicLayout")
-	UserLayout := "Basic"
-Else
-	UserLayout := "Default"
-GoSub, %UserLayout%Layout
-GoSub, TabSel
-SavePrompt(SavePrompt)
-return
-
-SetSmallIcons:
-SetLargeIcons:
-hIL := (A_ThisLabel = "SetSmallIcons") ? hIL_Icons : hIL_IconsHi
-IconSize := (A_ThisLabel = "SetSmallIcons") ? "Small" : "Large"
-	TbFile.SetImageList(hIL), TB_IdealSize(TbFile, TbFile_ID)
-,	TbRecPlay.SetImageList(hIL), TB_IdealSize(TbRecPlay, TbRecPlay_ID)
-,	TbCommand.SetImageList(hIL), TB_IdealSize(TbCommand, TbCommand_ID)
-,	TbEdit.SetImageList(hIL), TB_IdealSize(TbEdit, TbEdit_ID)
-,	TbSettings.SetImageList(hIL), TB_IdealSize(TbSettings, TbSettings_ID)
-,	TbFile.Get(,,,, tbBtnHeight)
-Loop, 5
-	RbMain.ModifyBand(A_Index, "MinHeight", tbBtnHeight)
-If (A_ThisLabel = "SetSmallIcons")
-{
-	Menu, SetIconSizeMenu, Check, %v_Lang024%
-	Menu, SetIconSizeMenu, UnCheck, %v_Lang025%
-}
-Else
-{
-	Menu, SetIconSizeMenu, UnCheck, %v_Lang024%
-	Menu, SetIconSizeMenu, Check, %v_Lang025%
-}
-SavePrompt(SavePrompt)
+BestFitLayout:
+Loop, 9
+	ShowBand%A_Index% := 1
+TbFile.Reset(), TB_IdealSize(TbFile, TbFile_ID)
+,	TbRecPlay.Reset(), TB_IdealSize(TbRecPlay, TbRecPlay_ID)
+,	TbCommand.Reset(), TB_IdealSize(TbCommand, TbCommand_ID)
+,	TbEdit.Reset(), TB_IdealSize(TbEdit, TbEdit_ID)
+,	TbSettings.Reset(), TB_IdealSize(TbSettings, TbSettings_ID)
+,	TB_Edit(TbFile, "Preview", ShowPrev)
+,	TB_Edit(TbSettings, "HideMainWin", HideMainWin)
+,	TB_Edit(TbSettings, "OnScCtrl", OnScCtrl)
+,	TB_Edit(TbSettings, "CheckHkOn", KeepHkOn)
+,	TB_Edit(TbSettings, "SetWin", 0)
+,	TB_Edit(TbSettings, "SetJoyButton", 0)
+,	TB_Edit(TbOSC, "ProgBarToggle", ShowProgBar)
+BFLayout := "1," (TB_GetSize(TbFile) + 16) ",644|"
+		.	"2," (TB_GetSize(TbRecPlay) + 16) ",644|"
+		.	"5," (TB_GetSize(TbSettings) + 16) ",644|"
+		.	"7,50,644|"
+		.	"8,50,644|"
+		.	"11," 75 * (A_ScreenDPI/96) ",902|"
+		.	"3," (TB_GetSize(TbCommand) + 16) ",645|"
+		.	"6,150,644|"
+		.	"9,60,644|"
+		.	"10,60,644|"
+		.	"4," (TB_GetSize(TbEdit) + 16) ",645"
+Loop, 3
+	RbMain.SetLayout(BFLayout)
+Menu, ToolbarsMenu, Check, %v_Lang012%
+Menu, ToolbarsMenu, Check, %v_Lang013%
+Menu, ToolbarsMenu, Check, %v_Lang014%
+Menu, ToolbarsMenu, Check, %v_Lang015%
+Menu, ToolbarsMenu, Check, %v_Lang016%
+Menu, ViewMenu, Check, %v_lang008%
+Menu, HotkeyMenu, Check, %v_Lang018%
+Menu, HotkeyMenu, Check, %v_Lang019%
+Menu, HotkeyMenu, Check, %v_Lang020%
+Menu, HotkeyMenu, Check, %v_Lang021%
 return
 
 BasicLayout:
@@ -14481,11 +14510,12 @@ Menu, HotkeyMenu, Add, %v_Lang019%, ShowHideBandHK
 Menu, HotkeyMenu, Add, %v_Lang020%, ShowHideBandHK
 Menu, HotkeyMenu, Add, %v_Lang021%, ShowHideBandHK
 
-Menu, SetIconSizeMenu, Add, %v_Lang024%, SetSmallIcons, Radio
-Menu, SetIconSizeMenu, Add, %v_Lang025%, SetLargeIcons, Radio
+Menu, SetIconSizeMenu, Add, %v_Lang025%, SetSmallIcons
+Menu, SetIconSizeMenu, Add, %v_Lang026%, SetLargeIcons
 
 Menu, SetLayoutMenu, Add, %v_Lang022%, SetBasicLayout
-Menu, SetLayoutMenu, Add, %v_Lang023%, SetDefaultLayout
+Menu, SetLayoutMenu, Add, %v_Lang023%, SetBestFitLayout
+Menu, SetLayoutMenu, Add, %v_Lang024%, SetDefaultLayout
 
 Menu, ViewMenu, Add, %v_lang001%, MainOnTop
 Menu, ViewMenu, Add, %v_lang002%, ShowLoopIfMark
@@ -14633,16 +14663,6 @@ If (ShowBarOnStart)
 {
 	Menu, ViewMenu, Check, %v_lang004%`t%_s%Ctrl+B
 	Menu, Tray, Check, %y_Lang003%
-}
-If (IconSize = "Small")
-{
-	Menu, SetIconSizeMenu, Check, %v_Lang024%
-	Menu, SetIconSizeMenu, UnCheck, %v_Lang025%
-}
-Else
-{
-	Menu, SetIconSizeMenu, UnCheck, %v_Lang024%
-	Menu, SetIconSizeMenu, Check, %v_Lang025%
 }
 If (ShowPrev)
 	Menu, ViewMenu, Check, %v_lang005%`t%_s%Ctrl+P

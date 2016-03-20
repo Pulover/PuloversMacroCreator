@@ -133,10 +133,11 @@
 	v_Lang019 =	Manuaalinen
 	v_Lang020 =	Lopettaa
 	v_Lang021 =	Tauko
-	v_Lang022 =	Kompakti
-	v_Lang023 =	Oletusa&rvo
-	v_Lang024 =	Pieni
-	v_Lang025 =	Suuri
+	v_Lang022 =	&Kompakti
+	v_Lang023 =	&Parhaiten Sopiva
+	v_Lang024 =	&Oletusarvo
+	v_Lang025 =	Pieni
+	v_Lang026 =	Suuri
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Asetukset
@@ -908,6 +909,9 @@
 	d_Lang116 =	Siirto ja asennus
 	d_Lang117 =	Mene ladata sivulle
 	d_Lang118 =	Lähettäminen. Odota...
+	d_Lang119 =	Parhaiten Sopiva
+	d_Lang120 =	Käynnistä sovellus hakea muutoksia.
+	d_Lang121 =	Nollata työkalurivit kokoja, siirry:
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Katso video tutorials klo www.macrocreator.com/help oppia monia piirteitä PMC.

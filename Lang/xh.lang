@@ -133,10 +133,11 @@
 	v_Lang019 =	N&gezandla
 	v_Lang020 =	&Yeka
 	v_Lang021 =	N&qumama
-	v_Lang022 =	In&dawo yokudlala
-	v_Lang023 =	&Silela
-	v_Lang024 =	&Small
-	v_Lang025 =	&Ezinkulu
+	v_Lang022 =	&Indawo yokudlala
+	v_Lang023 =	&Kufanelekile Eyona
+	v_Lang024 =	&Silela
+	v_Lang025 =	&Small
+	v_Lang026 =	&Ezinkulu
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Izicwangciso
@@ -908,6 +909,9 @@
 	d_Lang116 =	YokuGqithisela nokufakela
 	d_Lang117 =	Yiya ukukhuphela page
 	d_Lang118 =	Uthumelo. Nceda linda...
+	d_Lang119 =	Kufanelekile Eyona
+	d_Lang120 =	Iqale kwakhona isicelo ukufaka utshintsho.
+	d_Lang121 =	Ukuseta iibar neesayizi, yiya ku:
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Khangela le izifundo umboniso nangaliphi www.macrocreator.com/help bafunde iimpawu ezininzi Xhosa.

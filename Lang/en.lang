@@ -134,9 +134,10 @@
 	v_Lang020 =	&Stop
 	v_Lang021 =	&Pause
 	v_Lang022 =	&Compact
-	v_Lang023 =	&Default
-	v_Lang024 =	&Small
-	v_Lang025 =	&Large
+	v_Lang023 =	&Best Fit
+	v_Lang024 =	&Default
+	v_Lang025 =	&Small
+	v_Lang026 =	&Large
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Settings
@@ -908,6 +909,9 @@
 	d_Lang116 =	Transfer and install
 	d_Lang117 =	Go to download page
 	d_Lang118 =	Sending. Please wait...
+	d_Lang119 =	Best Fit
+	d_Lang120 =	Restart the application to apply changes.
+	d_Lang121 =	To reset toolbars sizes, go to:
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Check out the video tutorials at www.macrocreator.com/help to learn about the many features of PMC.

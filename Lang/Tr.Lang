@@ -133,10 +133,11 @@
 	v_Lang019 =	Ma&nuel
 	v_Lang020 =	D&ur
 	v_Lang021 =	Durma
-	v_Lang022 =	Kom&pakt
-	v_Lang023 =	Varsayı&lan
-	v_Lang024 =	Kü&çük
-	v_Lang025 =	&Büyük
+	v_Lang022 =	&Kompakt
+	v_Lang023 =	&En Uygun
+	v_Lang024 =	&Varsayılan
+	v_Lang025 =	Kü&çük
+	v_Lang026 =	&Büyük
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Ayarlar
@@ -908,6 +909,9 @@
 	d_Lang116 =	Aktarın ve yükleyin
 	d_Lang117 =	sayfa indirmek için git
 	d_Lang118 =	Gönderme. Lütfen bekle...
+	d_Lang119 =	En Uygun
+	d_Lang120 =	Değişiklikleri uygulamak için uygulamayı yeniden başlatın.
+	d_Lang121 =	Araç çubukları boyutları sıfırlamak için şu adrese gidin:
 		
 ; 18. Start-up Tips		
 	Start_Tips =	PMC birçok özelliği hakkında bilgi almak için www.macrocreator.com/help~~pobj video öğreticileri göz atın.

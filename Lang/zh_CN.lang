@@ -134,9 +134,10 @@
 	v_Lang020 =	停止(&S)
 	v_Lang021 =	暂停(&P)
 	v_Lang022 =	简洁(&C)
-	v_Lang023 =	默认(&D)
-	v_Lang024 =	小(&S)
-	v_Lang025 =	大(&L)
+	v_Lang023 =	最合适(&B)
+	v_Lang024 =	默认(&D)
+	v_Lang025 =	小(&S)
+	v_Lang026 =	大(&L)
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	设置(&S)
@@ -908,6 +909,9 @@
 	d_Lang116 =	传输和安装
 	d_Lang117 =	进入下载页面
 	d_Lang118 =	发送。 请稍候...
+	d_Lang119 =	最合适
+	d_Lang120 =	重新启动应用更改应用程序。
+	d_Lang121 =	要重置工具栏的大小，请访问：
 		
 ; 18. Start-up Tips		
 	Start_Tips =	退房的视频教程在www.macrocreator.com/help了解PMC的许多功能。

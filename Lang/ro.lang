@@ -134,9 +134,10 @@
 	v_Lang020 =	&Stop
 	v_Lang021 =	Pau&ză
 	v_Lang022 =	&Compact
-	v_Lang023 =	&Mod implicit
-	v_Lang024 =	&Mic
-	v_Lang025 =	&Mare
+	v_Lang023 =	C&el Mai Potrivit
+	v_Lang024 =	&Mod implicit
+	v_Lang025 =	&Mic
+	v_Lang026 =	&Mare
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Setările
@@ -908,6 +909,9 @@
 	d_Lang116 =	Se transferă și instala
 	d_Lang117 =	Du-te la pagina de descărcare
 	d_Lang118 =	Se trimite. Te rog asteapta...
+	d_Lang119 =	Cel Mai Potrivit
+	d_Lang120 =	Reporniți aplicația pentru a aplica modificările.
+	d_Lang121 =	Pentru a reseta dimensiunile bare de instrumente, du-te la:
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Check out tutoriale video de la www.macrocreator.com/help pentru a afla despre multe caracteristici ale PMC.

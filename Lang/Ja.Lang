@@ -134,9 +134,10 @@
 	v_Lang020 =	停止(&S)
 	v_Lang021 =	休止(&P)
 	v_Lang022 =	コンパクト(&C)
-	v_Lang023 =	デフォルト(&D)
-	v_Lang024 =	小さい(&S)
-	v_Lang025 =	大(&L)
+	v_Lang023 =	最良適合(&B)
+	v_Lang024 =	デフォルト(&D)
+	v_Lang025 =	小さい(&S)
+	v_Lang026 =	大(&L)
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	設定(&S)
@@ -908,6 +909,9 @@
 	d_Lang116 =	転送してインストールします
 	d_Lang117 =	ダウンロードページに移動します
 	d_Lang118 =	送信。 お待ちください...
+	d_Lang119 =	最良適合
+	d_Lang120 =	変更を適用するアプリケーションを再起動します。
+	d_Lang121 =	ツールバーのサイズをリセットするには、次を参照してください。
 		
 ; 18. Start-up Tips		
 	Start_Tips =	PMCの多くの機能について学習するwww.macrocreator.com/helpでビデオチュートリアルをチェックしてください。

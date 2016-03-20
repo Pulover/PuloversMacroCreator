@@ -133,10 +133,11 @@
 	v_Lang019 =	Pedoman
 	v_Lang020 =	Berhenti
 	v_Lang021 =	Berhenti sebentar
-	v_Lang022 =	Padat
-	v_Lang023 =	Kegagalan
-	v_Lang024 =	Ke&cil
-	v_Lang025 =	Besar
+	v_Lang022 =	&Padat
+	v_Lang023 =	P&aling Cocok
+	v_Lang024 =	&Kegagalan
+	v_Lang025 =	Ke&cil
+	v_Lang026 =	Besar
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Pengaturan
@@ -908,6 +909,9 @@
 	d_Lang116 =	Mentransfer dan menginstal
 	d_Lang117 =	Pergi ke halaman download
 	d_Lang118 =	Mengirim. Mohon tunggu...
+	d_Lang119 =	Paling Cocok
+	d_Lang120 =	Restart aplikasi untuk menerapkan perubahan.
+	d_Lang121 =	Untuk mengatur ulang toolbar ukuran, pergi ke:
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Check out video tutorial di www.macrocreator.com/help untuk belajar tentang banyak fitur dari PMC.

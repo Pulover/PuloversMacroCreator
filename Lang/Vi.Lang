@@ -133,10 +133,11 @@
 	v_Lang019 =	Hư&ớng dẫn sử dụng
 	v_Lang020 =	Th&ôi
 	v_Lang021 =	T&ạm dừng
-	v_Lang022 =	Nh&ỏ gọn
-	v_Lang023 =	&Mặc Định
-	v_Lang024 =	Nhỏ
-	v_Lang025 =	Lớn
+	v_Lang022 =	&Nhỏ gọn
+	v_Lang023 =	&Phù Hợp Nhất
+	v_Lang024 =	&Mặc Định
+	v_Lang025 =	Nhỏ
+	v_Lang026 =	Lớn
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Cài đặt
@@ -908,6 +909,9 @@
 	d_Lang116 =	Chuyển và cài đặt
 	d_Lang117 =	Đến trang tải về
 	d_Lang118 =	Gửi. Xin vui lòng chờ ...
+	d_Lang119 =	Phù Hợp Nhất
+	d_Lang120 =	Khởi động lại các ứng dụng để áp dụng thay đổi.
+	d_Lang121 =	Để thiết lập lại các thanh công cụ kích thước, hãy vào:
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Kiểm tra các video hướng dẫn tại www.macrocreator.com/help để tìm hiểu về các tính năng của PMC.

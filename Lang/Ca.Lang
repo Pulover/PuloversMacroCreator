@@ -134,9 +134,10 @@
 	v_Lang020 =	Aturi
 	v_Lang021 =	Pausa
 	v_Lang022 =	&Compacte
-	v_Lang023 =	Defecte
-	v_Lang024 =	Menor
-	v_Lang025 =	Gran
+	v_Lang023 =	&Millor Ajust
+	v_Lang024 =	&Defecte
+	v_Lang025 =	Menor
+	v_Lang026 =	Gran
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Configuració
@@ -908,6 +909,9 @@
 	d_Lang116 =	Transferir i instal·lar
 	d_Lang117 =	Anar a la pàgina de descàrrega
 	d_Lang118 =	L'enviament. Si us plau ...
+	d_Lang119 =	Millor Ajust
+	d_Lang120 =	Reiniciar l'aplicació per aplicar els canvis.
+	d_Lang121 =	Per restablir les barres d'eines mides, aneu a:
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Fes una ullada als tutorials en vídeo a www.macrocreator.com/help per aprendre sobre les moltes característiques de PMC.

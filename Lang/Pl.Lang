@@ -133,10 +133,11 @@
 	v_Lang019 =	R&ęczny
 	v_Lang020 =	Za&trzymać
 	v_Lang021 =	Pauza
-	v_Lang022 =	Zwarty
-	v_Lang023 =	Do&myślnie
-	v_Lang024 =	Ma&ły
-	v_Lang025 =	Du&że
+	v_Lang022 =	&Zwarty
+	v_Lang023 =	&Najlepsze Dopasowanie
+	v_Lang024 =	&Domyślnie
+	v_Lang025 =	Ma&ły
+	v_Lang026 =	Du&że
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Ustawienia
@@ -908,6 +909,9 @@
 	d_Lang116 =	Przelew i zainstalować
 	d_Lang117 =	Przejdź do strony pobierania
 	d_Lang118 =	Wysyłanie. Proszę czekać...
+	d_Lang119 =	Najlepsze Dopasowanie
+	d_Lang120 =	Uruchom ponownie aplikację, aby zastosować zmiany.
+	d_Lang121 =	Aby przywrócić paski narzędzi rozmiary, przejdź do:
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Sprawdź samouczki wideo na www.macrocreator.com/help~~pobj aby dowiedzieć się o wielu funkcji PMC.

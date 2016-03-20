@@ -133,10 +133,11 @@
 	v_Lang019 =	Han&dboek
 	v_Lang020 =	Stoppen
 	v_Lang021 =	Pauze
-	v_Lang022 =	Compact
-	v_Lang023 =	Verzuim
-	v_Lang024 =	&Klein
-	v_Lang025 =	&Groot
+	v_Lang022 =	&Compact
+	v_Lang023 =	&Best Fit
+	v_Lang024 =	&Verzuim
+	v_Lang025 =	&Klein
+	v_Lang026 =	&Groot
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Instellingen
@@ -908,6 +909,9 @@
 	d_Lang116 =	Transfer en installeer
 	d_Lang117 =	Ga naar pagina te downloaden
 	d_Lang118 =	Het verzenden. Even geduld aub...
+	d_Lang119 =	Best Fit
+	d_Lang120 =	Start de toepassing om wijzigingen toe te passen.
+	d_Lang121 =	Om werkbalken maten te resetten, ga naar:
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Bekijk de video tutorials op www.macrocreator.com/help om te leren over de vele functies van PMC.

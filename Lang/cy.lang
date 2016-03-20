@@ -134,9 +134,10 @@
 	v_Lang020 =	Sto&p
 	v_Lang021 =	&Saib
 	v_Lang022 =	&Compact
-	v_Lang023 =	Defa&ult
-	v_Lang024 =	&Bach
-	v_Lang025 =	&Mawr
+	v_Lang023 =	&Ffit Orau
+	v_Lang024 =	&Default
+	v_Lang025 =	&Bach
+	v_Lang026 =	&Mawr
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Gosodiadau
@@ -908,6 +909,9 @@
 	d_Lang116 =	Trosglwyddo a gosod
 	d_Lang117 =	Ewch i lawrlwytho dudalen
 	d_Lang118 =	Anfon. Arhoswch os gwelwch yn dda...
+	d_Lang119 =	Ffit Orau
+	d_Lang120 =	Ailgychwyn y cais i gymhwyso newidiadau.
+	d_Lang121 =	I ailosod maint toolbars, ewch i:
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Edrychwch ar y tiwtorialau fideo ar www.macrocreator.com/help i ddysgu am nodweddion llawer o PMC.
