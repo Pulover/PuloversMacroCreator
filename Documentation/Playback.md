@@ -1,4 +1,4 @@
-﻿# Playback
+# Playback
 
 ## Table of Contents
 
@@ -46,6 +46,8 @@ In addition to the Manual Hotkey you can select one of these options from the Ma
 **Play From Selected Row**: If checked Playback will run each Macro from the first selected row in its list. Valid for all Playback commands.
 
 **Play Until Selected Row**: If checked Playback will stop each Macro when the first selected row in its list is reached. Valid for all Playback commands.
+
+**Play Selected Rows**: If checked Playback will only execute selected rows in each Macro. Valid for all Playback commands.
 
 You can also view the list of variables and contents from the File menu and Tray Icon menu.
 
