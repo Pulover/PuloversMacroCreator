@@ -55,38 +55,32 @@
 */
 
 /*!
-	Page: User-Defined Functions
-	Filename: p6-UserFunctions
-	Contents: @file:UserFunction.md
-*/
-
-/*!
 	Page: Variables & Arrays/Objects
-	Filename: p7-Variables
+	Filename: p6-Variables
 	Contents: @file:Variables.md
 */
 
 /*!
-	Page: Functions (Built-In)
-	Filename: p8-Functions
-	Contents: @file:Variables.md
+	Page: Functions
+	Filename: p7-Functions
+	Contents: @file:Functions.md
 */
 
 /*!
 	Page: Export Window
-	Filename: p9-Export
+	Filename: p8-Export
 	Contents: @file:Export.md
 */
 
 /*!
 	Page: Preview Window
-	Filename: p10-Preview
+	Filename: p9-Preview
 	Contents: @file:Preview.md
 */
 
 /*!
 	Page: Settings
-	Filename: p11-Settings
+	Filename: p10-Settings
 	Contents: @file:Settings.md
 */
 

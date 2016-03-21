@@ -92,15 +92,15 @@ You can also use dotted syntax:
 
 > % MyArray.5
 
-You can access the number of items inside the array using the MaxIndex() method in the Variables Assignment window when the "Expression" option is checked:
+You can access the number of items inside the array using the Length() method in the Variables Assignment window when the "Expression" option is checked:
 
 > MyArray := [10,20,30]                 ; Assign an array inside
 > ArrayCount := MyArray.MaxIndex()      ; Returns 3
 > ArrayCount := MyArray.MaxIndex() + 1  ; Returns 4
 
-You can also get a reference to MaxIndex inside a Dynamic References, but you cannot combine it with other expressions such as Array.MaxIndex + 1.
+You can also get a reference to MaxIndex inside a Dynamic References:
 
-> % MyArray.MaxIndex()  ; Inside any command, but without math operations.
+> % MyArray.MaxIndex()  ; Inside any command.
 
 A [For-Loop](Commands/For_Loop.html) can be used to retrieve the values one by one (an example is included in the link below).
 
@@ -111,53 +111,3 @@ Download Example: [Assigning and retrieving an Array inside Command Parameters](
 Built-in Variables can be used inside the program to reference dynamic information. A list of these Variables with their description can be found in the [AutoHotkey documentation](http://ahkscript.org/docs/Variables.htm#builtin).  
 You can also insert Built-in Variables into command window fields by right-clicking on any empty area and selecting the *Built-in Variables* submenu where you'll find them divided in categories. Select one of them it will be inserted in the Carater-Insert position (already enclosed in percent signs).
 
-## Using Functions
-
-Similarly to Variables it's also possible to use built-In Function results in Playback. To use a Function Call inside a command's parameter you have to use the same method as Dynamic Variables by preceding each Function with a percent sign and a space or tab.  
-
-> % StrLen(Some Text)
-> % SubStr(%MyVar%, 3, 7)
-> Result is: % RegExReplace(%Variable%, _, %A_Space%)
-
-*Notes*:  
-* Since Playback uses a function to dereference variables before assigning, variables references should be enclosed in percent signs. The syntax will be corrected for the exported script.  
-* Literal commas should be escaped.  
-> % SubStr(This is`, a literal comma, 13)
-* It's not necessary to use "quotes" for string parameters EXCEPT for blank parameters.  
-* Omitted parameters will use their default values just like a normal Function Call.  
-
-Download Example: [Using Functions inside Command Parameters](Examples/Functions.pmc).
-
-### Remarks
-
-Because **Macro Creator** uses a function that recognizes patterns using RegExMatch in order to convert Variables and Functions to their results it will allow some non-standard usage of Function Calls like in this example:
-
-> % SubStr(AutoHotkey, 1, 1)% SubStr(AutoHotkey, 5, 1)K
-
-If you put this into a Message Box command for Playback it will show "AHK", but the generated AHK script for this (in Preview or Export) would throw an error when you run it from an .ahk file since it has two leading percent signs and the K should be enclosed in quotes to be recognized as a string and not a variable.
-
-## eval()
-
-**Eval()** is a function written by **Laszlo** to solve Math Expressions in Strings. It can be found at AHK Forum [Monster: evaluate math expressions in strings](http://www.autohotkey.com/board/topic/15675-monster).
-
-This function has been integrated into **Macro Creator** to allow it to solve math expressions when assigning variables during playback (if Use Eval() option is enabled).
-
-**Example**: When you use the Image Search (or Pixel Search) command, the found coordinates are saved to the variables *%FoundX%* and *%FoundY%* that would point to the top-left corner of the image.  
-Now suppose we want to move the mouse 100 pixels right and 100 pixels down to click on an offset from the image position (Mouse coordinates accept variables). Without this function you'd have to first assign new variables:
-
-> NewVarX := %FoundX%
-> NewVarY := %FoundY%
-
-And then add another assignment for those variables with:
-
-> NewVarX += 100
-> NewVarY += 100
-
-If you check the *Use Eval()* option you can use the following directly in the first assignments to get the same results:
-
-> NewVarX := %FoundX% + 100
-> NewVarX := %FoundY% + 100
-
-The [Variables Example](Examples/Variables.pmc) has a demonstration of this usage.
-
-**Eval()** can also be used inside command parameters as described in Functions.
