@@ -276,14 +276,14 @@
 			If ((TimesX > 1) || InStr(TimesX, "%"))
 				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
 		}
-		Else If (Type = cType20)
+		Else If ((Type = cType20) && (Action = "[KeyWait]"))
 		{
 			RowData := "`n" Type ", " Step
 		,	RowData .= "`n" Type ", " Step ", D"
 			If (DelayX > 0)
-				RowData .= " T" Round(DelayX/1000, 2) "`nIf ErrorLevel`n`tReturn"
+				RowData .= " T" Round(DelayX/1000, 2)
 			Else If (InStr(DelayX, "%"))
-				RowData .= " T" DelayX "`nIf ErrorLevel`n`tReturn"
+				RowData .= " T" DelayX
 			If (Comment != "")
 				RowData .= "  " "; " Comment
 			If ((TimesX > 1) || InStr(TimesX, "%"))

@@ -704,11 +704,8 @@
 					pbParams := Eval(VarValue, PlaybackVars[LoopDepth][mLoopIndex])
 					If (A_AhkPath)
 					{
-						Try
-						{
-							VarValue := RunExtFunc(Target, Action, pbParams*)
-						,	AssignVar(VarName, ":=", VarValue, PlaybackVars[LoopDepth][mLoopIndex], RunningFunction)
-						}
+						VarValue := RunExtFunc(Target, Action, pbParams*)
+					,	AssignVar(VarName, ":=", VarValue, PlaybackVars[LoopDepth][mLoopIndex], RunningFunction)
 						
 						Try SavedVars(VarName,,, RunningFunction)
 					}
@@ -841,7 +838,7 @@
 					break 3
 				}
 				Try
-					TakeAction := PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, FlowControl, PlaybackVars[LoopDepth][mLoopIndex], RunningFunction)
+					TakeAction := PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, FlowControl, PlaybackVars[LoopDepth][mLoopIndex], RunningFunction, _LastError)
 				Catch e
 				{
 					MsgBox, 20, %d_Lang007%, % d_Lang064 " Macro" Macro_On ", " d_Lang065 " " mListRow
@@ -849,7 +846,7 @@
 					IfMsgBox, No
 						StopIt := 1
 				}
-				PlaybackVars[LoopDepth][mLoopIndex, "ErrorLevel"] := ErrorLevel
+				PlaybackVars[LoopDepth][mLoopIndex, "ErrorLevel"] := _LastError
 				If ((Type = cType15) || (Type = cType16))
 				{
 					If (((Target = "UntilFound") && (SearchResult))
@@ -955,7 +952,7 @@
 
 ;##### Playback Commands #####
 
-PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, Flow, CustomVars, RunningFunction)
+PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, Flow, CustomVars, RunningFunction, ByRef _LastError := "")
 {
 	local Par1, Par2, Par3, Par4, Par5, Par6, Par7, Par8, Par9, Par10, Par11, Win
 		, _each, _value, _Section, SelAcc, IeIntStr, lMatch, lMatch1, lResult, TakeAction := ""
@@ -976,6 +973,7 @@ PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, Flow, Cust
 	pb_ControlSend:
 		Win := SplitWin(Window)
 		ControlSend, %Target%, %Step%, % Win[1], % Win[2], % Win[3], % Win[4]
+		_LastError := ErrorLevel
 	return
 	pb_Click:
 		If (WinActive("ahk_id " PMCWinID))
@@ -984,10 +982,12 @@ PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, Flow, Cust
 			return
 		}
 		Click, %Step%
+		_LastError := ErrorLevel
 	return
 	pb_ControlClick:
 		Win := SplitWin(Window)
 		ControlClick, %Target%, % Win[1], % Win[2], %Par1%, %Par2%, %Par3%, % Win[3], % Win[4]
+		_LastError := ErrorLevel
 	return
 	pb_SendEvent:
 		If (WinActive("ahk_id " PMCWinID))
@@ -998,6 +998,7 @@ PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, Flow, Cust
 		If (Action = "[Text]")
 			SetKeyDelay, %DelayX%
 		SendEvent, %Step%
+		_LastError := ErrorLevel
 	return
 	pb_Sleep:
 		If ((Type = cType5) && (Step = "Random"))
@@ -1015,6 +1016,7 @@ PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, Flow, Cust
 			Else
 				Sleep, %DelayX%
 		}
+		_LastError := ErrorLevel
 	return
 	pb_MsgBox:
 		Step := StrReplace(Step, "``n", "`n")
@@ -1022,6 +1024,7 @@ PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, Flow, Cust
 		Try Menu, Tray, Icon, %ResDllPath%, 77
 		ChangeProgBarColor("Blue", "OSCProg", 28)
 		MsgBox, % Target, % (Window != "") ? Window : AppName, %Step%, %DelayX%
+		_LastError := ErrorLevel
 		Try Menu, Tray, Icon, %ResDllPath%, 46
 		ChangeProgBarColor("20D000", "OSCProg", 28)
 	return
@@ -1032,23 +1035,30 @@ PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, Flow, Cust
 			return
 		}
 		SendRaw, %Step%
+		_LastError := ErrorLevel
 	return
 	pb_ControlSendRaw:
 		Win := SplitWin(Window)
 		ControlSendRaw, %Target%, %Step%, % Win[1], % Win[2], % Win[3], % Win[4]
+		_LastError := ErrorLevel
 	return
 	pb_ControlSetText:
 		Win := SplitWin(Window)
 		ControlSetText, %Target%, %Step%, % Win[1], % Win[2], % Win[3], % Win[4]
+		_LastError := ErrorLevel
 	return
 	pb_Run:
 		If (Par4 != "")
 		{
 			Run, %Par1%, %Par2%, %Par3%, %Par4%
+			_LastError := ErrorLevel
 			Try SavedVars(Par4,,, RunningFunction)
 		}
 		Else
+		{
 			Run, %Par1%, %Par2%, %Par3%
+			_LastError := ErrorLevel
+		}
 	return
 	pb_RunWait:
 		Try Menu, Tray, Icon, %ResDllPath%, 77
@@ -1056,24 +1066,32 @@ PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, Flow, Cust
 		If (Par4 != "")
 		{
 			RunWait, %Par1%, %Par2%, %Par3%, %Par4%
+			_LastError := ErrorLevel
 			Try SavedVars(Par4,,, RunningFunction)
 		}
 		Else
+		{
 			RunWait, %Par1%, %Par2%, %Par3%
+			_LastError := ErrorLevel
+		}
 		Try Menu, Tray, Icon, %ResDllPath%, 46
 		ChangeProgBarColor("20D000", "OSCProg", 28)
 	return
 	pb_RunAs:
 		RunAs, %Par1%, %Par2%, %Par3%
+		_LastError := ErrorLevel
 	return
 	pb_Process:
 		Process, %Par1%, %Par2%, %Par3%
+		_LastError := ErrorLevel
 	return
 	pb_Shutdown:
 		Shutdown, %Step%
+		_LastError := ErrorLevel
 	return
 	pb_GetKeyState:
 		GetKeyState, %Par1%, %Par2%, %Par3%
+		_LastError := ErrorLevel
 		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_MouseGetPos:
@@ -1083,80 +1101,103 @@ PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, Flow, Cust
 				Par%A_Index% := "_null"
 		}
 		MouseGetPos, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%
+		_LastError := ErrorLevel
 		_null := ""
 		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_PixelGetColor:
 		PixelGetColor, %Par1%, %Par2%, %Par3%, %Par4%
+		_LastError := ErrorLevel
 		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_SysGet:
 		SysGet, %Par1%, %Par2%, %Par3%
+		_LastError := ErrorLevel
 		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_SetCapsLockState:
 		SetCapsLockState, %Par1%
+		_LastError := ErrorLevel
 	return
 	pb_SetNumLockState:
 		SetNumLockState, %Par1%
+		_LastError := ErrorLevel
 	return
 	pb_SetScrollLockState:
 		SetScrollLockState, %Par1%
+		_LastError := ErrorLevel
 	return
 	pb_EnvAdd:
 		EnvAdd, %Par1%, %Par2%, %Par3%
+		_LastError := ErrorLevel
 	return
 	pb_EnvSub:
 		EnvSub, %Par1%, %Par2%, %Par3%
+		_LastError := ErrorLevel
 	return
 	pb_EnvDiv:
 		EnvDiv, %Par1%, %Par2%
+		_LastError := ErrorLevel
 	return
 	pb_EnvMult:
 		EnvMult, %Par1%, %Par2%
+		_LastError := ErrorLevel
 	return
 	pb_EnvGet:
 		EnvGet, %Par1%, %Par2%
+		_LastError := ErrorLevel
 		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_EnvSet:
 		EnvSet, %Par1%, %Par2%
+		_LastError := ErrorLevel
 	return
 	pb_EnvUpdate:
 		EnvUpdate
+		_LastError := ErrorLevel
 	return
 	pb_FormatTime:
 		FormatTime, %Par1%, %Par2%, %Par3%
+		_LastError := ErrorLevel
 		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_Transform:
 		Transform, %Par1%, %Par2%, %Par3%, %Par4%
+		_LastError := ErrorLevel
 		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_Random:
 		Random, %Par1%, %Par2%, %Par3%
+		_LastError := ErrorLevel
 		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_FileAppend:
 		FileAppend, %Par1%, %Par2%, %Par3%
+		_LastError := ErrorLevel
 	return
 	pb_FileCopy:
 		FileCopy, %Par1%, %Par2%, %Par3%
+		_LastError := ErrorLevel
 	return
 	pb_FileCopyDir:
 		FileCopyDir, %Par1%, %Par2%, %Par3%
+		_LastError := ErrorLevel
 	return
 	pb_FileCreateDir:
 		FileCreateDir, %Step%
+		_LastError := ErrorLevel
 	return
 	pb_FileCreateShortcut:
 		FileCreateShortcut, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%, %Par6%, %Par7%, %Par8%, %Par9%
+		_LastError := ErrorLevel
 	return
 	pb_FileDelete:
 		FileDelete, %Step%
+		_LastError := ErrorLevel
 	return
 	pb_FileGetAttrib:
 		FileGetAttrib, %Par1%, %Par2%
+		_LastError := ErrorLevel
 		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_FileGetShortcut:
@@ -1166,6 +1207,7 @@ PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, Flow, Cust
 				Par%A_Index% := "_null"
 		}
 		FileGetShortcut, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%, %Par6%, %Par7%, %Par8%
+		_LastError := ErrorLevel
 		_null := ""
 		Loop, 7
 		{
@@ -1175,104 +1217,131 @@ PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, Flow, Cust
 	return
 	pb_FileGetSize:
 		FileGetSize, %Par1%, %Par2%, %Par3%
+		_LastError := ErrorLevel
 		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_FileGetTime:
 		FileGetTime, %Par1%, %Par2%, %Par3%
+		_LastError := ErrorLevel
 		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_FileGetVersion:
 		FileGetVersion, %Par1%, %Par2%
+		_LastError := ErrorLevel
 		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_FileMove:
 		FileMove, %Par1%, %Par2%, %Par3%
+		_LastError := ErrorLevel
 	return
 	pb_FileMoveDir:
 		FileMoveDir, %Par1%, %Par2%, %Par3%
+		_LastError := ErrorLevel
 	return
 	pb_FileRead:
 		FileRead, %Par1%, %Par2%
+		_LastError := ErrorLevel
 		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_FileReadLine:
 		FileReadLine, %Par1%, %Par2%, %Par3%
+		_LastError := ErrorLevel
 		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_FileRecycle:
 		FileRecycle, %Step%
+		_LastError := ErrorLevel
 	return
 	pb_FileRecycleEmpty:
 		FileRecycleEmpty, %Step%
+		_LastError := ErrorLevel
 	return
 	pb_FileRemoveDir:
 		FileRemoveDir, %Par1%, %Par2%
+		_LastError := ErrorLevel
 	return
 	pb_FileSelectFile:
 		FileSelectFile, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%
+		_LastError := ErrorLevel
 		FreeMemory()
 		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_FileSelectFolder:
 		FileSelectFolder, %Par1%, %Par2%, %Par3%, %Par4%
+		_LastError := ErrorLevel
 		FreeMemory()
 		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_FileSetAttrib:
 		FileSetAttrib, %Par1%, %Par2%, %Par3%, %Par4%
+		_LastError := ErrorLevel
 	return
 	pb_FileSetTime:
 		FileSetTime, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%
+		_LastError := ErrorLevel
 	return
 	pb_Drive:
 		Drive, %Par1%, %Par2%, %Par3%
+		_LastError := ErrorLevel
 	return
 	pb_DriveGet:
 		DriveGet, %Par1%, %Par2%, %Par3%
+		_LastError := ErrorLevel
 		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_DriveSpaceFree:
 		DriveSpaceFree, %Par1%, %Par2%
+		_LastError := ErrorLevel
 		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_Sort:
 		Sort, %Par1%, %Par2%
+		_LastError := ErrorLevel
 		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_StringGetPos:
 		StringGetPos, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%
+		_LastError := ErrorLevel
 		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_StringLeft:
 		StringLeft, %Par1%, %Par2%, %Par3%
+		_LastError := ErrorLevel
 		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_StringRight:
 		StringRight, %Par1%, %Par2%, %Par3%
+		_LastError := ErrorLevel
 		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_StringLen:
 		StringLen, %Par1%, %Par2%
+		_LastError := ErrorLevel
 		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_StringLower:
 		StringLower, %Par1%, %Par2%, %Par3%
+		_LastError := ErrorLevel
 		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_StringUpper:
 		StringUpper, %Par1%, %Par2%, %Par3%
+		_LastError := ErrorLevel
 		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_StringMid:
 		StringMid, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%
+		_LastError := ErrorLevel
 		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_StringReplace:
 		StringReplace, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%
+		_LastError := ErrorLevel
 		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_StringSplit:
 		StringSplit, %Par1%, %Par2%, %Par3%, %Par4%
+		_LastError := ErrorLevel
 		CGN := Par1 . "0"
 		Loop, % %CGN%
 		{
@@ -1282,10 +1351,12 @@ PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, Flow, Cust
 	return
 	pb_StringTrimLeft:
 		StringTrimLeft, %Par1%, %Par2%, %Par3%
+		_LastError := ErrorLevel
 		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_StringTrimRight:
 		StringTrimRight, %Par1%, %Par2%, %Par3%
+		_LastError := ErrorLevel
 		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_SplitPath:
@@ -1295,6 +1366,7 @@ PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, Flow, Cust
 				Par%A_Index% := "_null"
 		}
 		SplitPath, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%, %Par6%
+		_LastError := ErrorLevel
 		_null := ""
 		Loop, 5
 		{
@@ -1304,96 +1376,124 @@ PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, Flow, Cust
 	return
 	pb_InputBox:
 		InputBox, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%, %Par6%, %Par7%, %Par8%,, %Par10%, %Par11%
+		_LastError := ErrorLevel
 		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_ToolTip:
 		ToolTip, %Par1%, %Par2%, %Par3%, %Par4%
+		_LastError := ErrorLevel
 	return
 	pb_TrayTip:
 		TrayTip, %Par1%, %Par2%, %Par3%, %Par4%
+		_LastError := ErrorLevel
 	return
 	pb_Progress:
 		Progress, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%
+		_LastError := ErrorLevel
 	return
 	pb_SplashImage:
 		SplashImage, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%, %Par6%
+		_LastError := ErrorLevel
 	return
 	pb_SplashTextOn:
 		SplashTextOn, %Par1%, %Par2%, %Par3%, %Par4%
+		_LastError := ErrorLevel
 	return
 	pb_SplashTextOff:
 		SplashTextOff
+		_LastError := ErrorLevel
 	return
 	pb_RegRead:
 		RegRead, %Par1%, %Par2%, %Par3%, %Par4%
+		_LastError := ErrorLevel
 		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_RegWrite:
 		RegWrite, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%
+		_LastError := ErrorLevel
 	return
 	pb_RegDelete:
 		RegDelete, %Par1%, %Par2%, %Par3%
+		_LastError := ErrorLevel
 	return
 	pb_SetRegView:
 		SetRegView, %Par1%
+		_LastError := ErrorLevel
 	return
 	pb_IniRead:
 		IniRead, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%
+		_LastError := ErrorLevel
 		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_IniWrite:
 		IniWrite, %Par1%, %Par2%, %Par3%, %Par4%
+		_LastError := ErrorLevel
 	return
 	pb_IniDelete:
 		IniDelete, %Par1%, %Par2%, %Par3%
+		_LastError := ErrorLevel
 	return
 	pb_SoundBeep:
 		SoundBeep, %Par1%, %Par2%
+		_LastError := ErrorLevel
 	return
 	pb_SoundGet:
 		SoundGet, %Par1%, %Par2%, %Par3%, %Par4%
+		_LastError := ErrorLevel
 		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_SoundGetWaveVolume:
 		SoundGetWaveVolume, %Par1%, %Par2%
+		_LastError := ErrorLevel
 		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_SoundPlay:
 		SoundPlay, %Par1%, %Par2%
+		_LastError := ErrorLevel
 	return
 	pb_SoundSet:
 		SoundSet, %Par1%, %Par2%, %Par3%, %Par4%
+		_LastError := ErrorLevel
 	return
 	pb_SoundSetWaveVolume:
 		SoundSetWaveVolume, %Par1%, %Par2%
+		_LastError := ErrorLevel
 	return
 	pb_ClipWait:
 		Try Menu, Tray, Icon, %ResDllPath%, 77
 		ChangeProgBarColor("Blue", "OSCProg", 28)
 		ClipWait, %Par1%, %Par2%
+		_LastError := ErrorLevel
 		Try Menu, Tray, Icon, %ResDllPath%, 46
 		ChangeProgBarColor("20D000", "OSCProg", 28)
 	return
 	pb_BlockInput:
 		BlockInput, %Step%
+		_LastError := ErrorLevel
 	return
 	pb_UrlDownloadToFile:
 		UrlDownloadToFile, %Par1%, %Par2%
+		_LastError := ErrorLevel
 	return
 	pb_CoordMode:
 		CoordMode, %Par1%, %Par2%
+		_LastError := ErrorLevel
 	return
 	pb_OutputDebug:
 		OutputDebug, %Step%
+		_LastError := ErrorLevel
 	return
 	pb_WinMenuSelectItem:
 		WinMenuSelectItem, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%, %Par6%, %Par7%, %Par8%, %Par9%, %Par10%, %Par11%
+		_LastError := ErrorLevel
 	return
 	pb_SendLevel:
 		SendLevel, %Step%
+		_LastError := ErrorLevel
 	return
 	pb_SetKeyDelay:
 		SetKeyDelay, %Par1%, %Par2%, %Par3%
+		_LastError := ErrorLevel
 	return
 	pb_Pause:
 		ToggleIcon()
@@ -1407,12 +1507,14 @@ PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, Flow, Cust
 	return
 	pb_StatusBarGetText:
 		StatusBarGetText, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%, %Par6%
+		_LastError := ErrorLevel
 		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_StatusBarWait:
 		Try Menu, Tray, Icon, %ResDllPath%, 77
 		ChangeProgBarColor("Blue", "OSCProg", 28)
 		StatusBarWait, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%, %Par6%
+		_LastError := ErrorLevel
 		Try Menu, Tray, Icon, %ResDllPath%, 46
 		ChangeProgBarColor("20D000", "OSCProg", 28)
 	return
@@ -1439,26 +1541,29 @@ PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, Flow, Cust
 		Control, % RegExReplace(Step, "(^\w*).*", "$1")
 		, % RegExReplace(Step, "^\w*, ?(.*)", "$1")
 		, %Target%, % Win[1], % Win[2], % Win[3], % Win[4]
+		_LastError := ErrorLevel
 	return
 	pb_ControlFocus:
 		Win := SplitWin(Window)
 		ControlFocus, %Target%, % Win[1], % Win[2], % Win[3], % Win[4]
+		_LastError := ErrorLevel
 	return
 	pb_ControlMove:
 		Win := SplitWin(Window)
 		ControlMove, %Target%, %Par1%, %Par2%, %Par3%, %Par4%, % Win[1], % Win[2], % Win[3], % Win[4]
+		_LastError := ErrorLevel
 	return
 	pb_PixelSearch:
 		CoordMode, Pixel, %Window%
 		PixelSearch, FoundX, FoundY, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%, %Par6%, %Par7%
-		SearchResult := ErrorLevel
+		_LastError := ErrorLevel, SearchResult := ErrorLevel
 		Try %Act3% := FoundX, %Act4% := FoundY
 		GoSub, TakeAction
 	return TakeAction
 	pb_ImageSearch:
 		CoordMode, Pixel, %Window%
 		ImageSearch, FoundX, FoundY, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%
-		SearchResult := ErrorLevel
+		_LastError := ErrorLevel, SearchResult := ErrorLevel
 		If ((Act5) && (ErrorLevel = 0))
 			CenterImgSrchCoords(Par5, FoundX, FoundY)
 		Try %Act3% := FoundX, %Act4% := FoundY
@@ -1467,10 +1572,12 @@ PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, Flow, Cust
 	pb_SendMessage:
 		Win := SplitWin(Window)
 		SendMessage, %Par1%, %Par2%, %Par3%, %Target%, % Win[1], % Win[2], % Win[3], % Win[4]
+		_LastError := ErrorLevel
 	return
 	pb_PostMessage:
 		Win := SplitWin(Window)
 		PostMessage, %Par1%, %Par2%, %Par3%, %Target%, % Win[1], % Win[2], % Win[3], % Win[4]
+		_LastError := ErrorLevel
 	return
 	pb_KeyWait:
 		Try Menu, Tray, Icon, %ResDllPath%, 77
@@ -1479,35 +1586,42 @@ PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, Flow, Cust
 			KeyWait, %Par1%, %Par2%
 		Else
 			WaitFor.Key(Step, DelayX / 1000)
+		_LastError := ErrorLevel
 		Try Menu, Tray, Icon, %ResDllPath%, 46
 		ChangeProgBarColor("20D000", "OSCProg", 28)
 	return
 	pb_Input:
 		Input, %Par1%, %Par2%, %Par3%, %Par4%
+		_LastError := ErrorLevel
 		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_ControlEditPaste:
 		Win := SplitWin(Window)
 		Control, EditPaste, %Step%, %Target%, % Win[1], % Win[2], % Win[3], % Win[4]
+		_LastError := ErrorLevel
 	return
 	pb_ControlGetText:
 		Win := SplitWin(Window)
 		ControlGetText, %Step%, %Target%, % Win[1], % Win[2], % Win[3], % Win[4]
+		_LastError := ErrorLevel
 		Try SavedVars(Step,,, RunningFunction)
 	return
 	pb_ControlGetFocus:
 		Win := SplitWin(Window)
 		ControlGetFocus, %Step%, % Win[1], % Win[2], % Win[3], % Win[4]
+		_LastError := ErrorLevel
 		Try SavedVars(Step,,, RunningFunction)
 	return
 	pb_ControlGet:
 		Win := SplitWin(Window)
 		ControlGet, %Par1%, %Par2%, %Par3%, %Target%, % Win[1], % Win[2], % Win[3], % Win[4]
+		_LastError := ErrorLevel
 		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_ControlGetPos:
 		Win := SplitWin(Window)
 		ControlGetPos, %Step%X, %Step%Y, %Step%W, %Step%H, %Target%, % Win[1], % Win[2], % Win[3], % Win[4]
+		_LastError := ErrorLevel
 		CGPPars := "X|Y|W|H"
 		Loop, Parse, CGPPars, |
 		{
@@ -1518,61 +1632,76 @@ PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, Flow, Cust
 	pb_WinActivate:
 		Win := SplitWin(Window)
 		WinActivate, % Win[1], % Win[2], % Win[3], % Win[4]
+		_LastError := ErrorLevel
 	return
 	pb_WinActivateBottom:
 		Win := SplitWin(Window)
 		WinActivateBottom, % Win[1], % Win[2], % Win[3], % Win[4]
+		_LastError := ErrorLevel
 	return
 	pb_WinClose:
 		Win := SplitWin(Window)
 		WinClose, % Win[1], % Win[2], % Win[3], % Win[4]
+		_LastError := ErrorLevel
 	return
 	pb_WinHide:
 		Win := SplitWin(Window)
 		WinHide, % Win[1], % Win[2], % Win[3], % Win[4]
+		_LastError := ErrorLevel
 	return
 	pb_WinKill:
 		Win := SplitWin(Window)
 		WinKill, % Win[1], % Win[2], % Win[3], % Win[4], % Win[5]
+		_LastError := ErrorLevel
 	return
 	pb_WinMaximize:
 		Win := SplitWin(Window)
 		WinMaximize, % Win[1], % Win[2], % Win[3], % Win[4]
+		_LastError := ErrorLevel
 	return
 	pb_WinMinimize:
 		Win := SplitWin(Window)
 		WinMinimize, % Win[1], % Win[2], % Win[3], % Win[4]
+		_LastError := ErrorLevel
 	return
 	pb_WinMinimizeAll:
 		WinMinimizeAll, %Window%
+		_LastError := ErrorLevel
 	return
 	pb_WinMinimizeAllUndo:
 		WinMinimizeAllUndo, %Window%
+		_LastError := ErrorLevel
 	return
 	pb_WinMove:
 		Win := SplitWin(Window)
 		WinMove, % Win[1], % Win[2], %Par1%, %Par2%, %Par3%, %Par4%, % Win[3], % Win[4]
+		_LastError := ErrorLevel
 	return
 	pb_WinRestore:
 		Win := SplitWin(Window)
 		WinRestore, % Win[1], % Win[2], % Win[3], % Win[4]
+		_LastError := ErrorLevel
 	return
 	pb_WinSet:
 		Win := SplitWin(Window)
 		WinSet, %Par1%, %Par2%, % Win[1], % Win[2], % Win[3], % Win[4]
+		_LastError := ErrorLevel
 	return
 	pb_WinShow:
 		Win := SplitWin(Window)
 		WinShow, % Win[1], % Win[2], % Win[3], % Win[4]
+		_LastError := ErrorLevel
 	return
 	pb_WinSetTitle:
 		Win := SplitWin(Window)
 		WinSetTitle, % Win[1], % Win[2], % Win[3], % Win[4], % Win[5]
+		_LastError := ErrorLevel
 	return
 	pb_WinWait:
 		Try Menu, Tray, Icon, %ResDllPath%, 77
 		ChangeProgBarColor("Blue", "OSCProg", 28)
 	,	WaitFor.WinExist(SplitWin(Window), Step)
+		_LastError := ErrorLevel
 		Try Menu, Tray, Icon, %ResDllPath%, 46
 		ChangeProgBarColor("20D000", "OSCProg", 28)
 	return
@@ -1580,6 +1709,7 @@ PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, Flow, Cust
 		Try Menu, Tray, Icon, %ResDllPath%, 77
 		ChangeProgBarColor("Blue", "OSCProg", 28)
 	,	WaitFor.WinActive(SplitWin(Window), Step)
+		_LastError := ErrorLevel
 		Try Menu, Tray, Icon, %ResDllPath%, 46
 		ChangeProgBarColor("20D000", "OSCProg", 28)
 	return
@@ -1587,6 +1717,7 @@ PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, Flow, Cust
 		Try Menu, Tray, Icon, %ResDllPath%, 77
 		ChangeProgBarColor("Blue", "OSCProg", 28)
 	,	WaitFor.WinNotActive(SplitWin(Window), Step)
+		_LastError := ErrorLevel
 		Try Menu, Tray, Icon, %ResDllPath%, 46
 		ChangeProgBarColor("20D000", "OSCProg", 28)
 	return
@@ -1594,32 +1725,38 @@ PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, Flow, Cust
 		Try Menu, Tray, Icon, %ResDllPath%, 77
 		ChangeProgBarColor("Blue", "OSCProg", 28)
 	,	WaitFor.WinClose(SplitWin(Window), Step)
+		_LastError := ErrorLevel
 		Try Menu, Tray, Icon, %ResDllPath%, 46
 		ChangeProgBarColor("20D000", "OSCProg", 28)
 	return
 	pb_WinGet:
 		Win := SplitWin(Window)
 		WinGet, %Par1%, %Par2%, % Win[1], % Win[2], % Win[3], % Win[4]
+		_LastError := ErrorLevel
 		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_WinGetTitle:
 		Win := SplitWin(Window)
 		WinGetTitle, %Step%, % Win[1], % Win[2], % Win[3], % Win[4]
+		_LastError := ErrorLevel
 		Try SavedVars(Step,,, RunningFunction)
 	return
 	pb_WinGetClass:
 		Win := SplitWin(Window)
 		WinGetClass, %Step%, % Win[1], % Win[2], % Win[3], % Win[4]
+		_LastError := ErrorLevel
 		Try SavedVars(Step,,, RunningFunction)
 	return
 	pb_WinGetText:
 		Win := SplitWin(Window)
 		WinGetText, %Step%, % Win[1], % Win[2], % Win[3], % Win[4]
+		_LastError := ErrorLevel
 		Try SavedVars(Step,,, RunningFunction)
 	return
 	pb_WinGetpos:
 		Win := SplitWin(Window)
 		WinGetPos, %Step%X, %Step%Y, %Step%W, %Step%H, % Win[1], % Win[2], % Win[3], % Win[4]
+		_LastError := ErrorLevel
 		CGPPars := "X|Y|W|H"
 		Loop, Parse, CGPPars, |
 		{
@@ -1629,15 +1766,19 @@ PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, Flow, Cust
 	return
 	pb_GroupAdd:
 		GroupAdd, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%, %Par6%
+		_LastError := ErrorLevel
 	return
 	pb_GroupActivate:
 		GroupActivate, %Par1%, %Par2%
+		_LastError := ErrorLevel
 	return
 	pb_GroupDeactivate:
 		GroupDeactivate, %Par1%, %Par2%
+		_LastError := ErrorLevel
 	return
 	pb_GroupClose:
 		GroupClose, %Par1%, %Par2%
+		_LastError := ErrorLevel
 	return
 
 	TakeAction:
@@ -2154,7 +2295,7 @@ class WaitFor
 {
 	Key(Key, Delay := 0)
 	{
-		global StopIt, d_Lang039
+		global StopIt
 		
 		Loop
 		{
@@ -2168,11 +2309,7 @@ class WaitFor
 		If (StopIt = 1)
 			return
 		If (ErrorLevel)
-		{
-			MsgBox %d_Lang039%
-			StopIt := 1
 			return
-		}
 	}
 	
 	WinExist(Window, Seconds)

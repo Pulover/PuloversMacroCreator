@@ -1232,12 +1232,9 @@ If (MainLayout = "ERROR")
 }
 Loop, 3
 	RbMain.SetLayout(MainLayout)
-RbMain.ShowBand(RbMain.IDToIndex(1), ShowBand1), RbMain.ShowBand(RbMain.IDToIndex(2), ShowBand2)
-,	RbMain.ShowBand(RbMain.IDToIndex(3), ShowBand3), RbMain.ShowBand(RbMain.IDToIndex(4), ShowBand4)
-,	RbMain.ShowBand(RbMain.IDToIndex(5), ShowBand5), RbMain.ShowBand(RbMain.IDToIndex(6), ShowBand6)
-,	RbMain.ShowBand(RbMain.IDToIndex(7), ShowBand7), RbMain.ShowBand(RbMain.IDToIndex(8), ShowBand8)
-,	RbMain.ShowBand(RbMain.IDToIndex(9), ShowBand9), RbMain.ShowBand(RbMain.IDToIndex(10), ShowBand10)
-,	BtnsArray := [] 
+Loop, % RbMain.GetBandCount()
+	RbMain.ShowBand(RbMain.IDToIndex(A_Index), ShowBand%A_Index%)
+BtnsArray := [] 
 If (FileLayout != "ERROR")
 	TB_Layout(TbFile, FileLayout, TbFile_ID)
 If (RecPlayLayout != "ERROR")
@@ -12111,6 +12108,8 @@ If (Type = cType17)
 	Goto, EditSt
 If Type in %cType18%,%cType19%
 	Goto, EditMsg
+If ((Type = cType20) && (Action = "[KeyWait]"))
+	Goto, EditKeyWait
 If ((Type = cType11) || (Type = cType14) || InStr(FileCmdList, Type "|"))
 	Goto, EditRun
 If Type in %cType29%,%cType30%
@@ -12129,8 +12128,6 @@ If (Type = cType5)
 	Goto, EditSleep
 If (Type = cType6)
 	Goto, EditMsgBox
-If (Type = cType20)
-	Goto, EditKeyWait
 If (Type = cType42)
 	Goto, EditComm
 If Type in %cType35%,%cType36%,%cType37%
@@ -13450,7 +13447,7 @@ MainLayout := RbMain.GetLayout(), MacroLayout := RbMacro.GetLayout()
 ,	FileLayout := TbFile.Export(), RecPlayLayout := TbRecPlay.Export()
 ,	SettingsLayout := TbSettings.Export(), CommandLayout := TbCommand.Export()
 ,	EditLayout := TbEdit.Export(), ShowBands := ""
-Loop, 10
+Loop, % RbMain.GetBandCount()
 	ShowBands .= ShowBand%A_Index% ","
 StringTrimRight, ShowBands, ShowBands, 1
 GoSub, WriteSettings
@@ -13701,7 +13698,7 @@ MsgBox, 64, %AppName%, % d_Lang120 "`n`n" d_Lang121 "`n" StrReplace(m_Lang007 " 
 return
 
 DefaultLayout:
-Loop, 9
+Loop, % RbMain.GetBandCount()
 	ShowBand%A_Index% := 1
 TbFile.Reset(), TB_IdealSize(TbFile, TbFile_ID)
 ,	TbRecPlay.Reset(), TB_IdealSize(TbRecPlay, TbRecPlay_ID)
@@ -13730,7 +13727,7 @@ Menu, HotkeyMenu, Check, %v_Lang021%
 return
 
 BestFitLayout:
-Loop, 9
+Loop, % RbMain.GetBandCount()
 	ShowBand%A_Index% := 1
 TbFile.Reset(), TB_IdealSize(TbFile, TbFile_ID)
 ,	TbRecPlay.Reset(), TB_IdealSize(TbRecPlay, TbRecPlay_ID)
@@ -13772,15 +13769,12 @@ return
 BasicLayout:
 Loop, 3
 	RbMain.SetLayout(Default_Layout)
-ShowBands := "0,1,1,0,0,1,1,0,1,0"
+ShowBands := "0,1,1,0,0,1,1,0,1,0,1"
 Loop, Parse, ShowBands, `,
 	ShowBand%A_Index% := A_LoopField
-RbMain.ShowBand(RbMain.IDToIndex(1), ShowBand1), RbMain.ShowBand(RbMain.IDToIndex(2), ShowBand2)
-,	RbMain.ShowBand(RbMain.IDToIndex(3), ShowBand3), RbMain.ShowBand(RbMain.IDToIndex(4), ShowBand4)
-,	RbMain.ShowBand(RbMain.IDToIndex(5), ShowBand5), RbMain.ShowBand(RbMain.IDToIndex(6), ShowBand6)
-,	RbMain.ShowBand(RbMain.IDToIndex(7), ShowBand7), RbMain.ShowBand(RbMain.IDToIndex(8), ShowBand8)
-,	RbMain.ShowBand(RbMain.IDToIndex(9), ShowBand9), RbMain.ShowBand(RbMain.IDToIndex(10), ShowBand10)
-,	RecPlayLayout := "Record=" w_Lang047 ":54(Enabled AutoSize Dropdown),, PlayStart=" w_Lang048 ":46(Enabled AutoSize Dropdown)"
+Loop, % RbMain.GetBandCount()
+	RbMain.ShowBand(RbMain.IDToIndex(A_Index), ShowBand%A_Index%)
+RecPlayLayout := "Record=" w_Lang047 ":54(Enabled AutoSize Dropdown),, PlayStart=" w_Lang048 ":46(Enabled AutoSize Dropdown)"
 ,	TB_Layout(TbRecPlay, RecPlayLayout, TbRecPlay_ID)
 ,	TbCommand.Reset(), TB_IdealSize(TbCommand, TbCommand_ID)
 ,	RbMain.SetBandWidth(TbRecPlay_ID, TB_GetSize(tbRecPlay)+16)
