@@ -7888,7 +7888,7 @@ Gui, 21:Tab, 3
 Gui, 21:Add, GroupBox, Section xm ym W450 H240
 Gui, 21:Add, Text, -Wrap R1 ys+20 xs+10 W200, %c_Lang057%:
 Gui, 21:Add, Edit, W200 R1 -Multi vVarNameF
-Gui, 21:Add, Checkbox, -Wrap R1 ys+20 x+5 W200 vIsArray gIsArray, %c_Lang211%:
+Gui, 21:Add, Checkbox, -Wrap R1 ys+20 x+5 W200 vIsArray gIsArray, %c_Lang207%:
 Gui, 21:Add, Edit, W200 R1 -Multi vArrayName Disabled
 Gui, 21:Add, Checkbox, -Wrap R1 y+10 xs+10 W430 vUseExtFunc gUseExtFunc, %c_Lang128%
 Gui, 21:Add, Edit, W400 R1 -Multi vFileNameEx Disabled, %StdLibFile%

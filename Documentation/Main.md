@@ -93,9 +93,9 @@ To have other Macros active during Timer check the *Always Active* option or rig
 
 **Delete Rows**: Deletes selected Rows.
 
-**Undo**: Undo one step in History of current Macro. History is individual for each Macro.
+**Undo**: Undo one step in History of current Macro.
 
-**Redo**: Redo one step in History of current Macro. History is individual for each Macro.
+**Redo**: Redo one step in History of current Macro.
 
 **Move Up**: Moves selected rows Up.
 
@@ -105,9 +105,11 @@ To have other Macros active during Timer check the *Always Active* option or rig
 
 **Copy to...**: Copies selected rows to a different Macro tab.
 
+**Groups**: Enables or disables groups in ListViews. To add a new group, select a row, click the small arrow beside the Groups button and select *Add group*. Enter a name for the group and press OK, the new group will be added above the first selected row. To rename a group, select the row immediately below it and repeat the same steps.
+
 **Edit Color Mark**: Opens a Color-Pick dialog to add or change a custom color mark in the first column cell of selected rows. Customized colors can be saved as a custom palette.
 
-**Edit Comment**: Adds / Changes the comment to be displayed to the right of the line in Exported AHK Scripts on selected rows.
+**Edit Comment**: Adds / Changes the comment to be displayed to the right of the line in Exported AHK Scripts on selected rows. Click *Insert* to add a Comment Block.
 
 **Find / Replace**: This window helps finding and replacing parts of the commands in the *Details*, *Repeat*, *Delay*, *Control* and *Window* columns only. To select similar Command Types use the Select Menu.  
 Note: Changing parameters of certain commands may cause misbehavior in Playback. Replace should be used only when and where necessary.
