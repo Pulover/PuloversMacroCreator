@@ -9940,19 +9940,19 @@ Gui, 38:Add, GroupBox, Section xm ys+75 W450 H155, %c_Lang215%:
 Gui, 38:Add, Text, -Wrap R1 ys+20 xs+25 W210, %c_Lang221%:
 Gui, 38:Add, Text, -Wrap R1 yp x+5 W150, %c_Lang217%:
 Gui, 38:Add, Text, -Wrap R1 yp x+5 W30, ByRef
-Gui, 38:Add, Text, -Wrap R1 y+10 xs+5 W10, #1
+Gui, 38:Add, Text, -Wrap R1 y+10 xs+5 W15, #1
 Gui, 38:Add, Edit, yp-5 xs+25 W210 vParam1
 Gui, 38:Add, ComboBox, yp x+5 W150 vValue1, true|false|_blank
 Gui, 38:Add, CheckBox, -Wrap R1 yp+5 x+15 W30 vByRef1
-Gui, 38:Add, Text, -Wrap R1 y+10 xs+5 W10, #2
+Gui, 38:Add, Text, -Wrap R1 y+10 xs+5 W15, #2
 Gui, 38:Add, Edit, yp-5 xs+25 W210 vParam2
 Gui, 38:Add, ComboBox, yp x+5 W150 vValue2, true|false|_blank
 Gui, 38:Add, CheckBox, -Wrap R1 yp+5 x+15 W30 vByRef2
-Gui, 38:Add, Text, -Wrap R1 y+10 xs+5 W10, #3
+Gui, 38:Add, Text, -Wrap R1 y+10 xs+5 W15, #3
 Gui, 38:Add, Edit, yp-5 xs+25 W210 vParam3
 Gui, 38:Add, ComboBox, yp x+5 W150 vValue3, true|false|_blank
 Gui, 38:Add, CheckBox, -Wrap R1 yp+5 x+15 W30 vByRef3
-Gui, 38:Add, Text, -Wrap R1 y+10 xs+5 W10, #4
+Gui, 38:Add, Text, -Wrap R1 y+10 xs+5 W15, #4
 Gui, 38:Add, Edit, yp-5 xs+25 W210 vParam4
 Gui, 38:Add, ComboBox, yp x+5 W150 vValue4, true|false|_blank
 Gui, 38:Add, CheckBox, -Wrap R1 yp+5 x+15 W30 vByRef4

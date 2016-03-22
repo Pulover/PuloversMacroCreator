@@ -1,11 +1,24 @@
 ﻿;=======================================================================================
 ;
-; Function:		Eval (http://autohotkey.com/boards/viewtopic.php?f=6&t=13565)
-; Description:	Evaluate Expressions in Strings.
-; Return value:	An array (object) with the result of each expression.
+; Function:			Eval
+; Description:		Evaluate Expressions in Strings.
+; Return value:		An array (object) with the result of each expression.
 ;
-; Author:		Pulover [Rodolfo U. Batista]
-; Credits:		ExprEval() by Uberi
+; Author:			Pulover [Rodolfo U. Batista]
+; Credits:			ExprEval() by Uberi
+;
+;=======================================================================================
+;
+; Parameters:
+;
+;	$x:				The input string to be evaluated. You can enter multiple expressions
+;						separated by commas (inside the string).
+;	_CustomVars:	An optional Associative Array object containing variables names
+;					  as keys and values to replace them.
+;					For example, setting it to {A_Index: A_Index} inside a loop will replace
+;						occurrences of A_Index with the correct value for the iteration.
+;	_Init:			Used internally for the recursive calls. If TRUE it resets the static
+;						object _Objects, which holds objects references to be restored.
 ;
 ;=======================================================================================
 Eval($x, _CustomVars := "", _Init := true)
@@ -21,7 +34,7 @@ Eval($x, _CustomVars := "", _Init := true)
 	; Strip off comments
 	$x := RegExReplace($x, "U)/\*.*\*/"), $x := RegExReplace($x, "U)\s;.*(\v|$)")
 	
-	; Replace brackets, braces, parenthesis and isolated Strings
+	; Replace brackets, braces, parenthesis and literal strings
 	While (RegExMatch($x, "sU)"".*""", _String))
 		_Elements["&_String" A_Index "_&"] := _String
 	,	$x := RegExReplace($x, "sU)"".*""", "&_String" A_Index "_&",, 1)
@@ -114,6 +127,7 @@ Eval($x, _CustomVars := "", _Init := true)
 		{
 			$z[$i] := StrReplace($z[$i], $pd, _Elements[$pd],, 1)
 		,	RegExMatch($z[$i], "\[(.*)\]", _Match)
+		,	_Match1 := RestoreElements(_Match1, _Elements)
 		,	$y := Eval(_Match1, _CustomVars, false)
 		,	ObjName := RegExReplace(_Match, "\W", "_")
 		,	_Objects[ObjName] := $y
@@ -126,12 +140,20 @@ Eval($x, _CustomVars := "", _Init := true)
 			$y := {}, o_Elements := {}
 		,	$o := _Elements[$pd]
 		,	$o := RestoreElements($o, _Elements)
+		,	$o := SubStr($o, 2, -1)
 			While (RegExMatch($o, "sU)"".*""", _String%A_Index%))
 				o_Elements["&_String" A_Index "_&"] := _String%A_Index%
 			,	$o := RegExReplace($o, "sU)"".*""", "&_String" A_Index "_&", "", 1)
-			$z[$i] := StrReplace($z[$i], $pd, $o,, 1)
-		,	RegExMatch($z[$i], "\{(.*)\}", _Match)
-			Loop, Parse, _Match1, `,, %A_Space%%A_Tab%
+			While (RegExMatch($o, "\[([^\[\]]++|(?R))*\]", _Bracket))
+				o_Elements["&_Bracket" A_Index "_&"] := _Bracket
+			,	$o := RegExReplace($o, "\[([^\[\]]++|(?R))*\]", "&_Bracket" A_Index "_&",, 1)
+			While (RegExMatch($o, "\{[^\{\}]++\}", _Brace))
+				o_Elements["&_Brace" A_Index "_&"] := _Brace
+			,	$o := RegExReplace($o, "\{[^\{\}]++\}", "&_Brace" A_Index "_&",, 1)
+			While (RegExMatch($o, "\(([^()]++|(?R))*\)", _Parent))
+				o_Elements["&_Parent" A_Index "_&"] := _Parent
+			,	$o := RegExReplace($o, "\(([^()]++|(?R))*\)", "&_Parent" A_Index "_&",, 1)
+			Loop, Parse, $o, `,, %A_Space%%A_Tab%
 			{
 				$o := StrSplit(A_LoopField, ":", " `t")
 			,	$o.1 := RestoreElements($o.1, o_Elements)
@@ -142,7 +164,7 @@ Eval($x, _CustomVars := "", _Init := true)
 			}
 			ObjName := RegExReplace(_Match, "\W", "_")
 		,	_Objects[ObjName] := $y
-		,	$z[$i] := StrReplace($z[$i], _Match, """<~#" ObjName "#~>""")
+		,	$z[$i] := StrReplace($z[$i], $pd, """<~#" ObjName "#~>""")
 		}
 		
 		; Restore and evaluate any remaining parenthesis
@@ -294,11 +316,11 @@ Eval($x, _CustomVars := "", _Init := true)
 	return $z
 }
 
-ParseObjects(v_String, _CustomVars  :=  "", ByRef v_levels := "", o_Oper := "", o_Value := "")
+ParseObjects(v_String, _CustomVars := "", ByRef v_levels := "", o_Oper := "", o_Value := "")
 {
 	Static _needle := "([\w%]+\.?|\(([^()]++|(?R))*\)\.?|\[([^\[\]]++|(?R))*\]\.?)"
 	
-	l_Matches := [], _Pos := 1, HasMethod := false
+	l_Matches := [], _Pos := 1, HasMethod := false, v_levels := {}
 	While (_Pos := RegExMatch(v_String, _needle, l_Found, _Pos))
 		l_Matches.Push(RegExMatch(RTrim(l_Found, "."), "^%(\S+)%$", $pd) ? %$pd1% : RTrim(l_Found, "."))
 	,	_Pos += StrLen(l_Found)

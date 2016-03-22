@@ -195,7 +195,7 @@ Your script must use the Send command with a higher level to execute the Hotkeys
 
 Yes. You can load an external .ahk file in the *Functions* command window to run functions from it and save the results to the Output Variable. You can set a Standard Library File containing your functions in Settings > Misc., this file will be automatically selected when you enter the Function command window.   
 
-This function is limited and can only return 1 string/number value. It's recommended to use [User-Defined Functions](p6-UserFunctions.html) instead.
+This function is limited and can only return 1 string/number value. It's recommended to use [User-Defined Functions](p7-Functions.html#user-defined-functions) instead.
 
 ### Can I make the Playback Hotkeys work on a certain windown only?
 

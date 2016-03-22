@@ -1,4 +1,4 @@
-# Variables & Functions
+# Variables & Arrays/Objects
 
 ## Table of Contents
 

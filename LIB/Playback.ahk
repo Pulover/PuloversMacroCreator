@@ -658,12 +658,8 @@
 				{
 					If (Target = "Expression")
 					{
-						Loop, Parse, VarValue, `n, %A_Space%%A_Tab%
-						{
-							EvalResult := Eval(A_LoopField, PlaybackVars[LoopDepth][mLoopIndex])
-							If (A_Index = 1)
-								VarValue := EvalResult[1]
-						}
+						EvalResult := Eval(VarValue, PlaybackVars[LoopDepth][mLoopIndex])
+					,	VarValue := EvalResult[1]
 					}
 					Try
 						AssignVar(VarName, Oper, VarValue, PlaybackVars[LoopDepth][mLoopIndex], RunningFunction)
