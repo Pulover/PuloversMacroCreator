@@ -44,7 +44,7 @@ Thiago Talma for some improvements to the code, debugging and many suggestions.
 * New feature: **Download Files**.
 * New feature: **Zip / Unzip Files**.
 * New feature: **Listview Groups** (+WinVista).
-* Implemented real Auto-Hotkey format expressions in Functions, Methods, Variable Assignment, Evaluate Expression, COM Interface and command parameters started with % .
+* Implemented real AutoHotkey format expressions in Functions, Methods, Variable Assignment, Evaluate Expression, COM Interface and command parameters started with % .
 * Multiple If Statements are now supported in *Evaluate Expression* (e.g.: var = 5 || var = "a").
 * Function parameter can now be another function, array, array element or expression.
 * Added SetTimer command.

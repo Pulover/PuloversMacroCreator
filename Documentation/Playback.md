@@ -53,7 +53,7 @@ You can also view the list of variables and contents from the File menu and Tray
 
 ## Context Sensitive Hotkeys
 
-Makes all Hotkeys context-sensitive. Such hotkeys will only work depending on the type of window that is active or exists, or if an [expression](p6-Variables.html#expressions) is evaluated to true.  
+Makes all Hotkeys context-sensitive. Such hotkeys will only work depending on the type of window that is active or exists, or if an [expression](p6-Variables.html#expressions) is evaluated to true.
 
 This option affects ALL Hotkeys and will be saved to the programs settings when it's closed. There's a text tip at the bottom-right of the main window to show if it's active. To deactivate this option select *None* in the list.
 
@@ -62,6 +62,24 @@ For more information see [AutoHotkey Help](http://ahkscript.org/docs/commands/_I
 ## Playback Options
 
 To change options click the Options button on the main window or select Options Menu > Settings. Some of the options can also be accessible from the *Playback Options* button on the [Controls Toolbar](#controls-toolbar).
+
+**Title Match Mode**: Sets the matching behavior of the WinTitle parameter in commands such as WinWait.
+
+**1**: A window's title must start with the specified WinTitle to be a match.
+**2**: A window's title can contain WinTitle anywhere inside it to be a match.
+**3**: A window's title must exactly match WinTitle to be a match.
+
+**RegEx**: Changes WinTitle, WinText, ExcludeTitle, and ExcludeText to be regular expressions. Do not enclose such expressions in quotes when using them with commands. For example: WinActivate Untitled.*Notepad. RegEx also applies to ahk_class.
+
+**Title Match Speed**:
+
+**Fast**: This is the default behavior. Performance may be substantially better than Slow, but certain WinText elements for some types of windows may not be "seen" by the various window commands.
+
+**Slow**: Can be much slower, but all possible WinText is retrieved from every window as a windowing command searches through them for a match. Window Spy reveals which parts of a Window's text (if any) require the slow mode.
+
+**Detect Hidden Window**: Determines whether invisible windows are "seen" by the program.
+
+**Detect Hidden Text**: Determines whether invisible text in a window is "seen" for the purpose of finding the window. This affects commands such as IfWinExist and WinActivate.
 
 **Speed Up**: Selects the hotkey to toggle playback speed Up/Normal. When this option is on delay values will be cut by value set. Does not work when *Random Sleeps* is activated.
 

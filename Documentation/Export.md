@@ -10,7 +10,7 @@
 
 ## Introduction
 
-Exports selected Macros to a working AutoHotkey Script file (*.ahk).
+Exports selected Macros to a working AutoHotkey Script file (*.ahk), optionally converting the script to an executable (EXE) file (requires the latest version of [AutoHotkey](https://autohotkey.com/) installed).
 
 ## Macros
 
@@ -34,26 +34,34 @@ Select Macros to be exported. Empty Macros and unchecked rows will be ignored. Y
 
 **Indentation**: Use Tab-Indentation for Loops and If Statements.
 
-**Include PMC Code**: Includes a copy of the PMC code for each selected Macro at the end of the exported script to allow them to be loaded in **Macro Creator** by opening the ahk file from it. This will not affect the exported script execution.
+**Comment out unchecked rows**: Keeps unchecked rows in the macro as commented out script, instead of not exporting them.
 
 **Do not concatenate Send commands**: Exports sequences of Send commands in one line each and uses Loop for repeats.
 
+**Convert line breaks**: Converts line break symbols (`n) in command parameters to real line breaks.
+
+**Include PMC Code**: Includes a copy of the PMC code for each selected Macro at the end of the exported script to allow them to be loaded in **Macro Creator** by opening the ahk file from it. This will not affect the exported script execution.
+
 **Create EXE File**: Runs Ahk2Exe Compiler after exporting the script to create an Executable File. The EXE file will be saved to the same folder as the script.  
 Once a script is compiled, it becomes a standalone executable; that is, it can be used even on machines where AutoHotkey is not installed (and such EXEs can be distributed or sold with no restrictions).  
-*Note*: This feature requires [AutoHotkey](http://ahkscript.org/) installed. The Ahk2Exe file must be present in the Compiler folder inside AutoHotkey installation folder, if the file is not found the EXE will not be created (no error will be shown).
+*Note*: This feature requires the latest version of [AutoHotkey](http://autohotkey.com/) installed. The Ahk2Exe file must be present in the Compiler folder inside AutoHotkey installation folder, if the file is not found the EXE will not be created (no error will be shown).
 
 ## Context Sensitive Hotkeys
 
-Makes hotkeys and hotstrings work depending on the type of window that is active or exists. For more information see [AutoHotkey documentation](http://ahkscript.org/docs).
+Makes hotkeys and hotstrings work depending on the type of window that is active or exists. For more information see [Playback](p4-Playback.html#context-sensitive-hotkeys) and [AutoHotkey documentation](http://autohotkey.com/docs/commands/_ifwinactive).
 
 ## Options
 
-Changes various options for the exported script's Auto-Execute Section. For more information see [AutoHotkey documentation](http://ahkscript.org/docs).
+Changes various options for the exported script's Auto-Execute Section. For more information see [AutoHotkey documentation](http://autohotkey.com/docs).
 
-## Global Variables
+**#Include**: Includes in the script files with external functions using the #Include directive, when they are present in one of the exported macros.
 
-If you have defined [User Global Variables](p7-Settings.html#user-global-variables) you can select which of them will be included in the exported file. They will be added to the Auto-execute section.
+**Global Variables**: If you have defined [User Global Variables](p7-Settings.html#user-global-variables) you can select which of them will be included in the exported file. They will be added to the Auto-execute section.
+
+**Speed**: Increases or decreases the delay of Sleep (Pause) commands in exported scripts.
+
+**COM Objects**: Default behavior for the *Automatically create COM object* option in **Expression** window. [ComObjCreate](https://autohotkey.com/docs/commands/ComObjCreate.htm) will create a new COM object based with the given CLSID, while [ComObjActive](https://autohotkey.com/docs/commands/ComObjActive.htm) will try to connect to an existing instance of the application.
 
 ### Related
 
-[Hotkeys](http://ahkscript.org/docs/Hotkeys.htm), [Hotstrings](http://ahkscript.org/docs/Hotstrings.htm), [List of Keys](http://ahkscript.org/docs/KeyList.htm), [ComObjCreate](http://ahkscript.org/docs/commands/ComObjCreate.htm), [ComObjActive](http://ahkscript.org/docs/commands/ComObjActive.htm), [Auto-execute Section](http://ahkscript.org/docs/Scripts.htm#auto), [#ifwinactive / #ifwinexist](http://ahkscript.org/docs/commands/_ifwinactive.htm)
+[Hotkeys](http://autohotkey.com/docs/Hotkeys.htm), [Hotstrings](http://autohotkey.com/docs/Hotstrings.htm), [List of Keys](http://autohotkey.com/docs/KeyList.htm), [ComObjCreate](http://autohotkey.com/docs/commands/ComObjCreate.htm), [ComObjActive](http://autohotkey.com/docs/commands/ComObjActive.htm), [Auto-execute Section](http://autohotkey.com/docs/Scripts.htm#auto), [#ifwinactive / #ifwinexist](http://autohotkey.com/docs/commands/_ifwinactive.htm), [#if](http://autohotkey.com/docs/commands/_if.htm)

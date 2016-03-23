@@ -23,10 +23,19 @@ You can use this variable inside another command by enclosing it in percent sign
 
 To use a variable inside a function parameter or expression, do not enclose it in percent signs.
 
-> MyVar := "Auto-Hotkey"
+> MyVar := "AutoHotkey"
 > HK := SubStr(MyVar, 6)
 
 A detailed explanation about Variables can be found at the [AHK documentation](http://autohotkey.com/docs/Variables.htm).
+
+### Remarks
+
+**Pulover's Macro Creator** is written in AutoHotkey language, and so it has internal variables in the same environment as user-defined variables. Therefore if you choose a variable name that's used by internally by PMC you may run into inconsistencies and even crash the program.  
+PMC will warn you with a traytip if it notices you are using some of its reserved words, but it's impossible to monitor every single situation where and variable to avoid such conflicts, so it's recommended to follow these guidelines when choosing a variable name:
+
+* Do not use very short words, such as "a" or "vr". Use variable names that are at least 3 characters long.
+* Do not use variable names starting with numbers or symbols like "_" or "$".
+* Avoid commonly used words like "var", "par", "func", etc.
 
 ## Using Variables
 
@@ -49,7 +58,7 @@ Most commands and functions outputs variables with the result of its operation. 
 
 ## Expressions
 
-Check the option *Expression* to use Auto-Hotkey Expressions format in the value field. With expressions you can execute math operations, functions, assignments and object calls.  
+Check the option *Expression* to use AutoHotkey Expressions format in the value field. With expressions you can execute math operations, functions, assignments and object calls.  
 In expressions variables must not be enclosed in percent signs (except to deference) and literal strings must be enclosed in quotes. A complete explanation can be found at [AHK documentation](http://autohotkey.com/docs/Variables.htm#Expressions).
 
 > MyVar := 30 * 100 / 200 ; This would assign 15 to MyVar

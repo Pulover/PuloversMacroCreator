@@ -49,11 +49,11 @@ Download Example: [Call array element using a random function](Examples/RandomFu
 
 ### Remarks
 
-In Auto-Hotkey scripts it's possible to use Labels, Goto and Gosub inside functions, however in Macro Creator those commands are simulated within the playback internal function, so to avoid loss of information those commands are not allowed inside functions.
+In AutoHotkey scripts it's possible to use Labels, Goto and Gosub inside functions, however in Macro Creator those commands are simulated within the playback internal function, so to avoid loss of information those commands are not allowed inside functions.
 
 ## Run Function from External AHK File
 
-If you have Auto-Hotkey installed, you can call a function from an external .ahk file. Go to *Funtions* window and check the *Use Function from External File* option. Choose the file containing the funtions and select the name of the function, its parameters and a variable to receive the return value.
+If you have AutoHotkey installed, you can call a function from an external .ahk file. Go to *Funtions* window and check the *Use Function from External File* option. Choose the file containing the funtions and select the name of the function, its parameters and a variable to receive the return value.
 
 **Note**: This feature is very limited as it can only receive one return value and it does not support objects or ByRef parameters. It's recommended to rewrite the function using an User-Defined function whenever possible.
 
