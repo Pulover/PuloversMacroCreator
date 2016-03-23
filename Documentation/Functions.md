@@ -44,16 +44,18 @@ You can create your own functions inside PMC. They should work consistent with u
 To create a function, click the *Create Function* button on the toolbar. You'll be prompted to choose a name for your function. In the same you window you can define the scope (local or global), a few parameters with optional default values for them and global/local and static variables. After pressing OK a new tab will be created as a function, where you can add more parameters using the *Add Parameter* button and the commands below the Function line.  
 Use the *Add Return* button to define return values for the function. The return value must be an [expression](http://autohotkey.com/docs/Variables.htm#Expressions). To return more than one value, use ByRef parameters or an [Array/Object](p6-Variables.html#assigning-and-retrieving-arrays).  
 
+Download Example: [User-Defined Functions](Examples/UserFunctions.pmc).
+Download Example: [Call array element using a random function](Examples/RandomFunction.pmc).
+
 ### Remarks
 
-In Auto-Hotkey scripts it's possible to use Labels, Goto and Gosub inside functions, however in Macro Creator those commands are simulated with an internal function, so to avoid loss of information those commands are not allowed inside functions.
+In Auto-Hotkey scripts it's possible to use Labels, Goto and Gosub inside functions, however in Macro Creator those commands are simulated within the playback internal function, so to avoid loss of information those commands are not allowed inside functions.
 
 ## Run Function from External AHK File
 
 If you have Auto-Hotkey installed, you can call a function from an external *.ahk file. Go to *Funtions* window and check the *Use Function from External File* option. Choose the file containing the funtions and select the name of the function, its parameters and a variable to receive the return value.
 
 **Note**: This feature is very limited as it can only receive one return value and it does not support objects or ByRef parameters. It's recommended to rewrite the function using an User-Defined function whenever possible.
-
 
 
 
