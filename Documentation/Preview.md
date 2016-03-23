@@ -1,4 +1,4 @@
-﻿# Preview
+# Preview
 
 ## Table of Contents
 
@@ -9,11 +9,9 @@
 
 Displays a preview of the Macro in AutoHotkey Script format.  
 You can copy the code from this window to use on your AutoHotkey Scripts without the need to export.  
-Unchecked rows will be removed from preview script.
+Unchecked rows will be removed from preview script or commented out, if this option is checked.
 
 ## Buttons & Options
-
-**Dock/Undock**: Docks/undocks the *Preview* window to/from the Main window.
 
 **Copy**: Copies the entire currently displaying content of Preview Window to Clipboard.
 
@@ -23,10 +21,16 @@ Unchecked rows will be removed from preview script.
 
 **Indentation**: Uses Tab-Indentation for Loops and If Statements.
 
+**Convert Line Breaks**: Converts line break symbols (`n) in the script to real line breaks.
+
+**Comment out unchecked rows**: 
+
 **Line Wrap**: Automatically add a line break to long lines.
 
 **Always On Top**: Keeps this window on top. This may be useful to code creation during Recording.
 
 **Edit Script**: Exports the current preview to the Temp folder and opens it in the default editor.
+
+**Dock/Undock**: Docks/undocks the *Preview* window to/from the Main window.
 
 **Status Bar**: Displays information on Selected Macro and some Settings (only visible when undocked).
