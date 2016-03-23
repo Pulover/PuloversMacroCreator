@@ -810,7 +810,7 @@
 	d_Lang036 =	Image / Pixel Znalezione na
 	d_Lang037 =	Image / Pixel Not Found.
 	d_Lang038 =	Naciśnij przycisk OK, aby kontynuować.
-	d_Lang039 =	Timeout!
+	d_Lang039 =	Wysyłanie. Proszę czekać...
 	d_Lang040 =	Ta funkcja wymaga biblioteki GDI+.
 		Kliknij przycisk OK, aby przejść do strony pobierania.
 	d_Lang041 =	Nazwa zmiennej zawiera niedozwolony znak.
@@ -908,10 +908,9 @@
 	d_Lang115 =	- Trzymając Alt ustawienie obszaru do tej samej lokalizacji.
 	d_Lang116 =	Przelew i zainstalować
 	d_Lang117 =	Przejdź do strony pobierania
-	d_Lang118 =	Wysyłanie. Proszę czekać...
-	d_Lang119 =	Najlepsze Dopasowanie
-	d_Lang120 =	Uruchom ponownie aplikację, aby zastosować zmiany.
-	d_Lang121 =	Aby przywrócić paski narzędzi rozmiary, przejdź do:
+	d_Lang118 =	Najlepsze Dopasowanie
+	d_Lang119 =	Uruchom ponownie aplikację, aby zastosować zmiany.
+	d_Lang120 =	Aby przywrócić paski narzędzi rozmiary, przejdź do:
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Sprawdź samouczki wideo na www.macrocreator.com/help~~pobj aby dowiedzieć się o wielu funkcji PMC.

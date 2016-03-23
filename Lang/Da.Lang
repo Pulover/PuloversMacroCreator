@@ -810,7 +810,7 @@
 	d_Lang036 =	Billede / Pixel Fundet ved
 	d_Lang037 =	Billede / Pixel ikke fundet.
 	d_Lang038 =	Tryk på OK for at fortsætte.
-	d_Lang039 =	Timeout!
+	d_Lang039 =	Sender. Vent venligst...
 	d_Lang040 =	Denne funktion kræver GDI+ Bibliotek.
 		Klik på OK for at gå til download siden.
 	d_Lang041 =	Den variable navn indeholder et ulovligt tegn.
@@ -908,10 +908,9 @@
 	d_Lang115 =	- Hold Alt for at indstille region til samme sted.
 	d_Lang116 =	Overfør og installer
 	d_Lang117 =	Gå til download side
-	d_Lang118 =	Sender. Vent venligst...
-	d_Lang119 =	Bedste Pasform
-	d_Lang120 =	Genstart programmet for at anvende ændringerne.
-	d_Lang121 =	For at nulstille værktøjslinjer størrelser, gå til:
+	d_Lang118 =	Bedste Pasform
+	d_Lang119 =	Genstart programmet for at anvende ændringerne.
+	d_Lang120 =	For at nulstille værktøjslinjer størrelser, gå til:
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Tjek de video tutorials på www.macrocreator.com/help for at lære om de mange funktioner i PMC.

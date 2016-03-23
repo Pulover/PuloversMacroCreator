@@ -810,7 +810,7 @@
 	d_Lang036 =	Mynd / Pixel skrár á
 	d_Lang037 =	Mynd / Pixel fannst ekki.
 	d_Lang038 =	Ýttu á OK til að halda áfram.
-	d_Lang039 =	Hlé!
+	d_Lang039 =	Sending. Vinsamlegast bíðið...
 	d_Lang040 =	Þessi eiginleiki krefst GDI + Library.
 		Smelltu á Í lagi til að fara að sækja síðuna.
 	d_Lang041 =	Breytan nafn inniheldur ólöglegt staf.
@@ -908,10 +908,9 @@
 	d_Lang115 =	- Halda Alt að setja svæðið á sama stað.
 	d_Lang116 =	Flytja og setja
 	d_Lang117 =	Fara að sækja síðuna
-	d_Lang118 =	Sending. Vinsamlegast bíðið...
-	d_Lang119 =	Best Passa
-	d_Lang120 =	Endurræsa forritið til breytinga.
-	d_Lang121 =	Til að endurstilla Toolbars stærðir, fara á:
+	d_Lang118 =	Best Passa
+	d_Lang119 =	Endurræsa forritið til breytinga.
+	d_Lang120 =	Til að endurstilla Toolbars stærðir, fara á:
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Skoðaðu vídeó námskeið á www.macrocreator.com/help~~pobj til að læra um marga eiginleika PMC.

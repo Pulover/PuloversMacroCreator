@@ -810,7 +810,7 @@
 	d_Lang036 =	Slika / Pixel Pronađeno u
 	d_Lang037 =	Slika / Pixel nije pronađena.
 	d_Lang038 =	Pritisnite OK za nastavak.
-	d_Lang039 =	Timeout!
+	d_Lang039 =	Slanje. Molimo pričekajte ...
 	d_Lang040 =	Ova značajka zahtijeva knjižnicu GDI+.
 		Kliknite OK za odlazak na stranicu za preuzimanje.
 	d_Lang041 =	Naziv varijable sadrži nedopušteni znak.
@@ -908,10 +908,9 @@
 	d_Lang115 =	- Držite Alt postaviti regiju na istom mjestu.
 	d_Lang116 =	Prijenos i instalirati
 	d_Lang117 =	Idi na stranicu za preuzimanje
-	d_Lang118 =	Slanje. Molimo pričekajte ...
-	d_Lang119 =	Najbolje Odgovara
-	d_Lang120 =	Pokrenite aplikaciju za primjenu promjena.
-	d_Lang121 =	Za resetiranje alatne trake veličine, idite na:
+	d_Lang118 =	Najbolje Odgovara
+	d_Lang119 =	Pokrenite aplikaciju za primjenu promjena.
+	d_Lang120 =	Za resetiranje alatne trake veličine, idite na:
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Pogledajte video tutoriali na www.macrocreator.com/help~~pobj naučiti o mnogim značajkama PMC.

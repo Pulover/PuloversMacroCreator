@@ -810,7 +810,7 @@
 	d_Lang036 =	Image / Pixel lifumaneka
 	d_Lang037 =	Image / iphikseli Not Found.
 	d_Lang038 =	Cinezela KULUNGILE kuqhubeka.
-	d_Lang039 =	Kuphele ixesha!
+	d_Lang039 =	Uthumelo. Nceda linda...
 	d_Lang040 =	Lo msebenzi osemqoka ifuna GDI + Library.
 		Nqakraza KULUNGILE ukuya ukukhuphela page.
 	d_Lang041 =	Igama Womendo iqulethe uphawu mthethweni.
@@ -908,10 +908,9 @@
 	d_Lang115 =	- Bamba Alt ukuseta ummandla kwindawo enye.
 	d_Lang116 =	YokuGqithisela nokufakela
 	d_Lang117 =	Yiya ukukhuphela page
-	d_Lang118 =	Uthumelo. Nceda linda...
-	d_Lang119 =	Kufanelekile Eyona
-	d_Lang120 =	Iqale kwakhona isicelo ukufaka utshintsho.
-	d_Lang121 =	Ukuseta iibar neesayizi, yiya ku:
+	d_Lang118 =	Kufanelekile Eyona
+	d_Lang119 =	Iqale kwakhona isicelo ukufaka utshintsho.
+	d_Lang120 =	Ukuseta iibar neesayizi, yiya ku:
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Khangela le izifundo umboniso nangaliphi www.macrocreator.com/help bafunde iimpawu ezininzi Xhosa.

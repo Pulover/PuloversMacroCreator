@@ -810,7 +810,7 @@
 	d_Lang036 =	Immagine / Pixel Trovato su
 	d_Lang037 =	Immagine / Pixel non trovata.
 	d_Lang038 =	Premere OK per continuare.
-	d_Lang039 =	Timeout!
+	d_Lang039 =	Invio. Attendere prego...
 	d_Lang040 =	Questa funzione richiede la libreria GDI+.
 		Fare clic su OK per andare alla pagina di download.
 	d_Lang041 =	Il nome della variabile contiene un carattere non valido.
@@ -908,10 +908,9 @@
 	d_Lang115 =	- Tenere premuto Alt per impostare regione nella stessa posizione.
 	d_Lang116 =	Trasferire ed installare
 	d_Lang117 =	Vai alla pagina di download
-	d_Lang118 =	Invio. Attendere prego...
-	d_Lang119 =	Il Più Adatto
-	d_Lang120 =	Riavviare l'applicazione per applicare le modifiche.
-	d_Lang121 =	Per ripristinare le barre degli strumenti dimensioni, vai a:
+	d_Lang118 =	Il Più Adatto
+	d_Lang119 =	Riavviare l'applicazione per applicare le modifiche.
+	d_Lang120 =	Per ripristinare le barre degli strumenti dimensioni, vai a:
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Scopri i video tutorial a www.macrocreator.com/help per conoscere le molte caratteristiche di PMC.

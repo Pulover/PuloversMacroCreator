@@ -810,7 +810,7 @@
 	d_Lang036 =	Image / Pixel funnet ved
 	d_Lang037 =	Image / Pixel Not Found.
 	d_Lang038 =	Trykk OK for å fortsette.
-	d_Lang039 =	Timeout!
+	d_Lang039 =	Sending. Vennligst vent...
 	d_Lang040 =	Denne funksjonen krever GDI+ bibliotek.
 		Klikk OK for å gå til nedlastingssiden.
 	d_Lang041 =	Variabelnavnet inneholder et ugyldig tegn.
@@ -908,10 +908,9 @@
 	d_Lang115 =	- Hold Alt for å sette regionen på samme sted.
 	d_Lang116 =	Overføre og installere
 	d_Lang117 =	Gå til nedlastingssiden
-	d_Lang118 =	Sending. Vennligst vent...
-	d_Lang119 =	Passer Best
-	d_Lang120 =	Start programmet på nytt for å bruke endringene.
-	d_Lang121 =	For å tilbakestille  verktøylinjer  størrelser, gå til:
+	d_Lang118 =	Passer Best
+	d_Lang119 =	Start programmet på nytt for å bruke endringene.
+	d_Lang120 =	For å tilbakestille  verktøylinjer  størrelser, gå til:
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Sjekk ut video tutorials på www.macrocreator.com/help å lære om de mange funksjonene i PMC.

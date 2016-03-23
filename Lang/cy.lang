@@ -810,7 +810,7 @@
 	d_Lang036 =	Image / Picsel Wedi dod o hyd ar
 	d_Lang037 =	Image / Pixel Heb ei ddarganfod.
 	d_Lang038 =	Pwyso Iawn i barhau.
-	d_Lang039 =	Amser allan!
+	d_Lang039 =	Anfon. Arhoswch os gwelwch yn dda...
 	d_Lang040 =	Mae'r nodwedd hon yn ei gwneud yn ofynnol i'r Llyfrgell GDI +.
 		Cliciwch OK i fynd i lawrlwytho dudalen.
 	d_Lang041 =	Yr enw newidyn yn cynnwys cymeriad anghyfreithlon.
@@ -908,10 +908,9 @@
 	d_Lang115 =	- Cynnal Alt i osod rhanbarth i'r un lleoliad.
 	d_Lang116 =	Trosglwyddo a gosod
 	d_Lang117 =	Ewch i lawrlwytho dudalen
-	d_Lang118 =	Anfon. Arhoswch os gwelwch yn dda...
-	d_Lang119 =	Ffit Orau
-	d_Lang120 =	Ailgychwyn y cais i gymhwyso newidiadau.
-	d_Lang121 =	I ailosod maint toolbars, ewch i:
+	d_Lang118 =	Ffit Orau
+	d_Lang119 =	Ailgychwyn y cais i gymhwyso newidiadau.
+	d_Lang120 =	I ailosod maint toolbars, ewch i:
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Edrychwch ar y tiwtorialau fideo ar www.macrocreator.com/help i ddysgu am nodweddion llawer o PMC.

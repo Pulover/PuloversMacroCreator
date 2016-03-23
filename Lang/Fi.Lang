@@ -810,7 +810,7 @@
 	d_Lang036 =	Kuva / Pixel Found at
 	d_Lang037 =	Kuva / Pixel ei löytynyt.
 	d_Lang038 =	Jatka painamalla OK.
-	d_Lang039 =	Timeout!
+	d_Lang039 =	Lähettäminen. Odota...
 	d_Lang040 =	Tämä ominaisuus vaatii GDI+ kirjasto.
 		Klikkaa OK mennäksesi ladata sivulle.
 	d_Lang041 =	Muuttujan nimi sisältää epäkelvon merkin.
@@ -908,10 +908,9 @@
 	d_Lang115 =	- Pidä Alt asettaa alueelle samaan paikkaan.
 	d_Lang116 =	Siirto ja asennus
 	d_Lang117 =	Mene ladata sivulle
-	d_Lang118 =	Lähettäminen. Odota...
-	d_Lang119 =	Parhaiten Sopiva
-	d_Lang120 =	Käynnistä sovellus hakea muutoksia.
-	d_Lang121 =	Nollata työkalurivit kokoja, siirry:
+	d_Lang118 =	Parhaiten Sopiva
+	d_Lang119 =	Käynnistä sovellus hakea muutoksia.
+	d_Lang120 =	Nollata työkalurivit kokoja, siirry:
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Katso video tutorials klo www.macrocreator.com/help oppia monia piirteitä PMC.

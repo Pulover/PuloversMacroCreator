@@ -810,7 +810,7 @@
 	d_Lang036 =	Imej / Pixel Found at
 	d_Lang037 =	Imej / Pixel Not Found.
 	d_Lang038 =	Tekan OK untuk meneruskan.
-	d_Lang039 =	Tamat!
+	d_Lang039 =	Hantaran. Sila tunggu...
 	d_Lang040 =	Ciri ini memerlukan+Library GDI.
 		Klik OK untuk pergi ke halaman muat turun.
 	d_Lang041 =	Nama pembolehubah mengandungi aksara tidak sah.
@@ -908,10 +908,9 @@
 	d_Lang115 =	- Pegang Alt untuk menetapkan kawasan ke lokasi yang sama.
 	d_Lang116 =	Memindahkan dan memasang
 	d_Lang117 =	Pergi ke halaman muat turun
-	d_Lang118 =	Hantaran. Sila tunggu...
-	d_Lang119 =	Penyuaian Terbaik
-	d_Lang120 =	Memulakan semula aplikasi untuk menggunakan perubahan.
-	d_Lang121 =	Untuk menetapkan semula toolbar saiz, pergi ke:
+	d_Lang118 =	Penyuaian Terbaik
+	d_Lang119 =	Memulakan semula aplikasi untuk menggunakan perubahan.
+	d_Lang120 =	Untuk menetapkan semula toolbar saiz, pergi ke:
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Semak tutorial video di www.macrocreator.com/help untuk belajar tentang ciri-ciri banyak PMC.

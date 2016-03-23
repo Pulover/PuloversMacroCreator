@@ -810,7 +810,7 @@
 	d_Lang036 =	Image / Pixel Atópase en
 	d_Lang037 =	Image / Pixel non atopado.
 	d_Lang038 =	Prema Aceptar para continuar.
-	d_Lang039 =	Intervalo!
+	d_Lang039 =	Envío. Por favor espera...
 	d_Lang040 =	Esta característica require + Biblioteca GDI.
 		Prema en Aceptar para ir á páxina de descarga.
 	d_Lang041 =	O nome da variable contén un carácter ilegal.
@@ -908,10 +908,9 @@
 	d_Lang115 =	- Manteña a tecla Alt para definir a rexión ao mesmo lugar.
 	d_Lang116 =	Descargar e instalar
 	d_Lang117 =	Ir a páxina de descarga
-	d_Lang118 =	Envío. Por favor espera...
-	d_Lang119 =	Mellor Axuste
-	d_Lang120 =	Reinicie a aplicación para aplicar os cambios.
-	d_Lang121 =	Para restaurar tamaños barras de ferramentas, vai a:
+	d_Lang118 =	Mellor Axuste
+	d_Lang119 =	Reinicie a aplicación para aplicar os cambios.
+	d_Lang120 =	Para restaurar tamaños barras de ferramentas, vai a:
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Consulte os tutoriais en video no www.macrocreator.com/help para aprender sobre as moitas características do PMC.

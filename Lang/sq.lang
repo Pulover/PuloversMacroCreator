@@ -810,7 +810,7 @@
 	d_Lang036 =	Image / Pixel Found në
 	d_Lang037 =	Image / Pixel Not Found.
 	d_Lang038 =	Shtypni OK për të vazhduar.
-	d_Lang039 =	Koha mbaroi!
+	d_Lang039 =	Dërgimi. Te lutem prit...
 	d_Lang040 =	Ky funksion kërkon + Biblioteka GDI.
 		Kliko OK për të shkuar për të shkarkuar faqe.
 	d_Lang041 =	Emri ndryshueshme përmban një karakter të paligjshme.
@@ -908,10 +908,9 @@
 	d_Lang115 =	- Hold Alt për të vendosur rajonin në të njëjtin vend.
 	d_Lang116 =	Transferoni dhe të instaloni
 	d_Lang117 =	Shko te shkarkoni faqe
-	d_Lang118 =	Dërgimi. Te lutem prit...
-	d_Lang119 =	Pershtatja Me E Mire
-	d_Lang120 =	Rinisni kërkesën për të aplikuar ndryshimet.
-	d_Lang121 =	Për të rivendosur madhësive panele, shkoni në:
+	d_Lang118 =	Pershtatja Me E Mire
+	d_Lang119 =	Rinisni kërkesën për të aplikuar ndryshimet.
+	d_Lang120 =	Për të rivendosur madhësive panele, shkoni në:
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Check out video tutorial në www.macrocreator.com/help~~pobj të mësojnë në lidhje me shumë karakteristika të PMC.

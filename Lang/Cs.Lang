@@ -810,7 +810,7 @@
 	d_Lang036 =	Obrázek / Pixel Found at
 	d_Lang037 =	Obrázek / Pixel nebyl nalezen.
 	d_Lang038 =	Stiskněte tlačítko OK pro pokračování.
-	d_Lang039 =	Timeout!
+	d_Lang039 =	Odeslání. Prosím, čekejte...
 	d_Lang040 =	Tato funkce vyžaduje rozhraní GDI+ knihovny.
 		Klepnutím na tlačítko OK přejděte na stránku pro stažení.
 	d_Lang041 =	Název proměnné obsahuje neplatný znak.
@@ -908,10 +908,9 @@
 	d_Lang115 =	- Podržte Alt nastavit region na stejném místě.
 	d_Lang116 =	Přenášet a instalovat
 	d_Lang117 =	Přejděte na stránku pro stažení
-	d_Lang118 =	Odeslání. Prosím, čekejte...
-	d_Lang119 =	Nejlépe Padne
-	d_Lang120 =	Restartujte aplikaci použít změny.
-	d_Lang121 =	Chcete-li obnovit velikostí panely nástrojů, najdete na adrese:
+	d_Lang118 =	Nejlépe Padne
+	d_Lang119 =	Restartujte aplikaci použít změny.
+	d_Lang120 =	Chcete-li obnovit velikostí panely nástrojů, najdete na adrese:
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Podívejte se na video tutoriály na www.macrocreator.com/help~~pobj dozvědět se o mnoha funkcí PMC.

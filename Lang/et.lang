@@ -810,7 +810,7 @@
 	d_Lang036 =	Image / Pixel at Found
 	d_Lang037 =	Image / Pixel Not Found.
 	d_Lang038 =	Sakatu Ados jarraitzeko.
-	d_Lang039 =	Denboraz kanpo!
+	d_Lang039 =	Saatmine. Palun oota...
 	d_Lang040 =	Erabiltzaileek GDI + Liburutegia eskatzen.
 		Egin klik Ados orria deskargatzeko joan.
 	d_Lang041 =	Muutuja nimes ebaseadusliku iseloomu.
@@ -908,10 +908,9 @@
 	d_Lang115 =	- Hoidke Alt seada piirkonna samas kohas.
 	d_Lang116 =	Transfer ja installida
 	d_Lang117 =	Mine alla laadida leheküljel
-	d_Lang118 =	Saatmine. Palun oota...
-	d_Lang119 =	Parim Sobivus
-	d_Lang120 =	Taaskäivitage rakendus muutuste rakendamiseks.
-	d_Lang121 =	Nullimine tööriistaribad suurused, minge:
+	d_Lang118 =	Parim Sobivus
+	d_Lang119 =	Taaskäivitage rakendus muutuste rakendamiseks.
+	d_Lang120 =	Nullimine tööriistaribad suurused, minge:
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Vaata videot õpetused on www.macrocreator.com/help õppida palju funktsioone PMC.

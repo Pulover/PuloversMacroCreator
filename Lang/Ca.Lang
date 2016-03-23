@@ -810,7 +810,7 @@
 	d_Lang036 =	Imatge / píxel Trobat a
 	d_Lang037 =	Imatge / píxel no trobada.
 	d_Lang038 =	Premeu D'acord per continuar.
-	d_Lang039 =	Temps d'espera!
+	d_Lang039 =	L'enviament. Si us plau ...
 	d_Lang040 =	Aquesta funció requereix la biblioteca GDI+.
 		Premeu D'acord per anar a la pàgina de descàrrega.
 	d_Lang041 =	El nom de la variable conté un caràcter il · legal.
@@ -908,10 +908,9 @@
 	d_Lang115 =	- Mantingui Alt regió per establir en la mateixa ubicació.
 	d_Lang116 =	Transferir i instal·lar
 	d_Lang117 =	Anar a la pàgina de descàrrega
-	d_Lang118 =	L'enviament. Si us plau ...
-	d_Lang119 =	Millor Ajust
-	d_Lang120 =	Reiniciar l'aplicació per aplicar els canvis.
-	d_Lang121 =	Per restablir les barres d'eines mides, aneu a:
+	d_Lang118 =	Millor Ajust
+	d_Lang119 =	Reiniciar l'aplicació per aplicar els canvis.
+	d_Lang120 =	Per restablir les barres d'eines mides, aneu a:
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Fes una ullada als tutorials en vídeo a www.macrocreator.com/help per aprendre sobre les moltes característiques de PMC.

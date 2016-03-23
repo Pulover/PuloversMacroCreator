@@ -810,7 +810,7 @@
 	d_Lang036 =	Afbeelding / Pixel Gevonden op
 	d_Lang037 =	Afbeelding / Pixel niet gevonden.
 	d_Lang038 =	Druk op OK om verder te gaan.
-	d_Lang039 =	Time-out!
+	d_Lang039 =	Het verzenden. Even geduld aub...
 	d_Lang040 =	Voor deze functie moet de GDI+ bibliotheek.
 		Klik op OK om naar de pagina te downloaden.
 	d_Lang041 =	De naam van de variabele bevat een ongeldig teken.
@@ -908,10 +908,9 @@
 	d_Lang115 =	- Houd Alt tot regio ingesteld op dezelfde locatie.
 	d_Lang116 =	Transfer en installeer
 	d_Lang117 =	Ga naar pagina te downloaden
-	d_Lang118 =	Het verzenden. Even geduld aub...
-	d_Lang119 =	Best Fit
-	d_Lang120 =	Start de toepassing om wijzigingen toe te passen.
-	d_Lang121 =	Om werkbalken maten te resetten, ga naar:
+	d_Lang118 =	Best Fit
+	d_Lang119 =	Start de toepassing om wijzigingen toe te passen.
+	d_Lang120 =	Om werkbalken maten te resetten, ga naar:
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Bekijk de video tutorials op www.macrocreator.com/help om te leren over de vele functies van PMC.

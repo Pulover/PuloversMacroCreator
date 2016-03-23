@@ -3290,7 +3290,7 @@ whr.SetRequestHeader("Content-Type", hdr_ContentType)
 whr.SetRequestHeader("Referer", url)
 whr.SetRequestHeader("User-Agent", "Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko")
 whr.Option(6) := false ; No auto redirect
-SplashTextOn, 300, 25, %AppName%, %d_Lang118%
+SplashTextOn, 300, 25, %AppName%, %d_Lang039%
 Try
 {
 	whr.Send(PostData)
@@ -10368,7 +10368,7 @@ Gui, 31:Font, Bold s10, Tahoma
 Gui, 31:Add, Text, -Wrap R1 w460 Center, %d_Lang075%
 Gui, 31:Font
 Gui, 31:Add, Groupbox, Section w480 h90 Center, %d_Lang076%:
-Gui, 31:Add, Radio, -Wrap R1 Checked xs+30 ys+30 W130 vBestFit gBestFitLayout, %d_Lang119%
+Gui, 31:Add, Radio, -Wrap R1 Checked xs+30 ys+30 W130 vBestFit gBestFitLayout, %d_Lang118%
 Gui, 31:Add, Radio, -Wrap R1 yp x+20 W130 vDefault gDefaultLayout, %d_Lang078%
 Gui, 31:Add, Radio, -Wrap R1 yp x+20 W130 vBasic gBasicLayout, %d_Lang077%
 Gui, 31:Add, Text, -Wrap y+15 xs+10 W300 R1 cGray, %d_Lang081%
@@ -13693,7 +13693,7 @@ SetSmallIcons:
 SetLargeIcons:
 Gui, 1:+OwnDialogs
 IconSize := (A_ThisLabel = "SetSmallIcons") ? "Small" : "Large"
-MsgBox, 64, %AppName%, % d_Lang120 "`n`n" d_Lang121 "`n" StrReplace(m_Lang007 " > " v_Lang011, "&")
+MsgBox, 64, %AppName%, % d_Lang119 "`n`n" d_Lang120 "`n" StrReplace(m_Lang007 " > " v_Lang011, "&")
 return
 
 DefaultLayout:

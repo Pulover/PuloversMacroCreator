@@ -810,7 +810,7 @@
 	d_Lang036 =	Image / Pixel Found at
 	d_Lang037 =	Image / Pixel Not Found.
 	d_Lang038 =	Press OK to continue.
-	d_Lang039 =	Timeout!
+	d_Lang039 =	Sending. Please wait...
 	d_Lang040 =	This feature requires the GDI+ Library.
 		Click OK to go to download page.
 	d_Lang041 =	The variable name contains an illegal character.
@@ -908,10 +908,9 @@
 	d_Lang115 =	- Hold Alt to set region to the same location.
 	d_Lang116 =	Transfer and install
 	d_Lang117 =	Go to download page
-	d_Lang118 =	Sending. Please wait...
-	d_Lang119 =	Best Fit
-	d_Lang120 =	Restart the application to apply changes.
-	d_Lang121 =	To reset toolbars sizes, go to:
+	d_Lang118 =	Best Fit
+	d_Lang119 =	Restart the application to apply changes.
+	d_Lang120 =	To reset toolbars sizes, go to:
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Check out the video tutorials at www.macrocreator.com/help to learn about the many features of PMC.

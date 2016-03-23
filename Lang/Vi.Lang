@@ -810,7 +810,7 @@
 	d_Lang036 =	Hình ảnh / Pixel tìm thấy tại
 	d_Lang037 =	Hình ảnh / Pixel Không tìm thấy.
 	d_Lang038 =	Bấm OK để tiếp tục.
-	d_Lang039 =	Thời gian chờ!
+	d_Lang039 =	Gửi. Xin vui lòng chờ ...
 	d_Lang040 =	Tính năng này đòi hỏi các thư viện GDI+.
 		Nhấn OK để đi tải trang.
 	d_Lang041 =	Tên biến có chứa một nhân vật bất hợp pháp.
@@ -908,10 +908,9 @@
 	d_Lang115 =	- Giữ Alt để thiết lập khu vực vào cùng vị trí.
 	d_Lang116 =	Chuyển và cài đặt
 	d_Lang117 =	Đến trang tải về
-	d_Lang118 =	Gửi. Xin vui lòng chờ ...
-	d_Lang119 =	Phù Hợp Nhất
-	d_Lang120 =	Khởi động lại các ứng dụng để áp dụng thay đổi.
-	d_Lang121 =	Để thiết lập lại các thanh công cụ kích thước, hãy vào:
+	d_Lang118 =	Phù Hợp Nhất
+	d_Lang119 =	Khởi động lại các ứng dụng để áp dụng thay đổi.
+	d_Lang120 =	Để thiết lập lại các thanh công cụ kích thước, hãy vào:
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Kiểm tra các video hướng dẫn tại www.macrocreator.com/help để tìm hiểu về các tính năng của PMC.

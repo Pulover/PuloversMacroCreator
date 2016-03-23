@@ -810,7 +810,7 @@
 	d_Lang036 =	發現在圖像/像素
 	d_Lang037 =	圖片/像素找不到。
 	d_Lang038 =	按“確定”繼續。
-	d_Lang039 =	超時！
+	d_Lang039 =	發送。 請稍候...
 	d_Lang040 =	此功能需要GDI+庫。
 		單擊OK轉到下載頁面。
 	d_Lang041 =	變量名包含非法字符。
@@ -908,10 +908,9 @@
 	d_Lang115 =	- 持有Alt可設定區域相同的位置。
 	d_Lang116 =	傳輸和安裝
 	d_Lang117 =	進入下載頁面
-	d_Lang118 =	發送。 請稍候...
-	d_Lang119 =	最合適
-	d_Lang120 =	重新啟動應用更改應用程序。
-	d_Lang121 =	要重置工具欄的大小，請訪問：
+	d_Lang118 =	最合適
+	d_Lang119 =	重新啟動應用更改應用程序。
+	d_Lang120 =	要重置工具欄的大小，請訪問：
 		
 ; 18. Start-up Tips		
 	Start_Tips =	退房的視頻教程在www.macrocreator.com/help了解PMC的許多功能。

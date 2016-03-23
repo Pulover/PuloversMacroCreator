@@ -810,7 +810,7 @@
 	d_Lang036 =	找到的图片/像素位于
 	d_Lang037 =	图片/像素未找到。
 	d_Lang038 =	点击确定继续。
-	d_Lang039 =	超时！
+	d_Lang039 =	发送。 请稍候...
 	d_Lang040 =	此功能需要GDI+库。
 		请点击确定打开下载页。
 	d_Lang041 =	此变量名包含非法字符。
@@ -908,10 +908,9 @@
 	d_Lang115 =	- 持有Alt可设定区域相同的位置。
 	d_Lang116 =	传输和安装
 	d_Lang117 =	进入下载页面
-	d_Lang118 =	发送。 请稍候...
-	d_Lang119 =	最合适
-	d_Lang120 =	重新启动应用更改应用程序。
-	d_Lang121 =	要重置工具栏的大小，请访问：
+	d_Lang118 =	最合适
+	d_Lang119 =	重新启动应用更改应用程序。
+	d_Lang120 =	要重置工具栏的大小，请访问：
 		
 ; 18. Start-up Tips		
 	Start_Tips =	退房的视频教程在www.macrocreator.com/help了解PMC的许多功能。

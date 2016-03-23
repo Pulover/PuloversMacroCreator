@@ -810,7 +810,7 @@
 	d_Lang036 =	Vaizdo / pikselių rasti
 	d_Lang037 =	Vaizdo / pikselių nerastas.
 	d_Lang038 =	Paspauskite OK, kad galėtumėte tęsti.
-	d_Lang039 =	Laikas baigėsi!
+	d_Lang039 =	Siuntimo. Prašau palauk...
 	d_Lang040 =	Ši funkcija reikalauja GDI + biblioteka.
 		Spustelėkite Gerai, kad eiti į atsisiuntimo puslapį.
 	d_Lang041 =	Kintamojo pavadinimas yra neteisėtos charakterį.
@@ -908,10 +908,9 @@
 	d_Lang115 =	- Laikykite Alt nustatyti regioną į tą pačią vietą.
 	d_Lang116 =	Perkelti ir įdiegti
 	d_Lang117 =	Eiti į atsisiuntimo puslapį
-	d_Lang118 =	Siuntimo. Prašau palauk...
-	d_Lang119 =	Geriausiai Tinkantis
-	d_Lang120 =	Iš naujo paleiskite programą taikyti pakeitimus.
-	d_Lang121 =	Norėdami iš naujo nustatyti įrankių juostas dydžių, eikite į:
+	d_Lang118 =	Geriausiai Tinkantis
+	d_Lang119 =	Iš naujo paleiskite programą taikyti pakeitimus.
+	d_Lang120 =	Norėdami iš naujo nustatyti įrankių juostas dydžių, eikite į:
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Check out vaizdo samouczków ne www.macrocreator.com/help~~pobj sužinoti apie daug funkcijų PMC.

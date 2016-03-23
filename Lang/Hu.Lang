@@ -810,7 +810,7 @@
 	d_Lang036 =	Image / Pixel Found at
 	d_Lang037 =	Image / Pixel Not Found.
 	d_Lang038 =	Nyomja meg az OK gombot a folytatáshoz.
-	d_Lang039 =	Timeout!
+	d_Lang039 =	Küldés. Kérlek várj...
 	d_Lang040 =	Ez a funkció csak a GDI+ Library.
 		Kattintson az OK gombra, hogy menjen le az oldalt.
 	d_Lang041 =	A változó neve szabálytalan karaktert tartalmaz.
@@ -908,10 +908,9 @@
 	d_Lang115 =	- Tartsa Alt beállítani régió ugyanazon a helyen.
 	d_Lang116 =	Transzfer és telepítése
 	d_Lang117 =	Tovább a letöltési oldalon
-	d_Lang118 =	Küldés. Kérlek várj...
-	d_Lang119 =	Legjobban Illeszkedő
-	d_Lang120 =	Indítsa újra az alkalmazást változtatások alkalmazásához.
-	d_Lang121 =	Visszaállításához eszköztárak méretben, megy:
+	d_Lang118 =	Legjobban Illeszkedő
+	d_Lang119 =	Indítsa újra az alkalmazást változtatások alkalmazásához.
+	d_Lang120 =	Visszaállításához eszköztárak méretben, megy:
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Nézze meg a videót tutorials a www.macrocreator.com/help megismerni számos tulajdonságát PMC.

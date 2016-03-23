@@ -810,7 +810,7 @@
 	d_Lang036 =	Bild / Pixel hittad på
 	d_Lang037 =	Bild / Pixel hittades inte.
 	d_Lang038 =	Tryck på OK för att fortsätta.
-	d_Lang039 =	Tidsgräns!
+	d_Lang039 =	Sändning. Vänta...
 	d_Lang040 =	Den här funktionen kräver GDI+ bibliotek.
 		Klicka på OK för att gå att ladda ner sidan.
 	d_Lang041 =	Variabelnamnet innehåller ett ogiltigt tecken.
@@ -908,10 +908,9 @@
 	d_Lang115 =	- Håll Alt för att ställa in region på samma plats.
 	d_Lang116 =	Överföra och installera
 	d_Lang117 =	Gå till nedladdningssidan
-	d_Lang118 =	Sändning. Vänta...
-	d_Lang119 =	Bästa Passform
-	d_Lang120 =	Starta programmet för att tillämpa ändringarna.
-	d_Lang121 =	För att återställa verktygsfält storlekar, gå till:
+	d_Lang118 =	Bästa Passform
+	d_Lang119 =	Starta programmet för att tillämpa ändringarna.
+	d_Lang120 =	För att återställa verktygsfält storlekar, gå till:
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Kolla in video tutorials på www.macrocreator.com/help att lära sig om de många funktionerna i PMC.

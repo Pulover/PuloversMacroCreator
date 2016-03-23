@@ -810,7 +810,7 @@
 	d_Lang036 =	Görüntü / Pixel at Bulundu
 	d_Lang037 =	Görüntü / Piksel Bulunamadı.
 	d_Lang038 =	Devam etmek için OK tuşuna basın.
-	d_Lang039 =	Zamanaşımı!
+	d_Lang039 =	Gönderme. Lütfen bekle...
 	d_Lang040 =	Bu özellik, GDI+ Kütüphane gerektirir.
 		Sayfa indirmek için gitmek için Tamam'a tıklayın.
 	d_Lang041 =	Değişken adı geçersiz bir karakter içeriyor.
@@ -908,10 +908,9 @@
 	d_Lang115 =	- aynı konuma bölgeyi ayarlamak için Alt tutun.
 	d_Lang116 =	Aktarın ve yükleyin
 	d_Lang117 =	sayfa indirmek için git
-	d_Lang118 =	Gönderme. Lütfen bekle...
-	d_Lang119 =	En Uygun
-	d_Lang120 =	Değişiklikleri uygulamak için uygulamayı yeniden başlatın.
-	d_Lang121 =	Araç çubukları boyutları sıfırlamak için şu adrese gidin:
+	d_Lang118 =	En Uygun
+	d_Lang119 =	Değişiklikleri uygulamak için uygulamayı yeniden başlatın.
+	d_Lang120 =	Araç çubukları boyutları sıfırlamak için şu adrese gidin:
 		
 ; 18. Start-up Tips		
 	Start_Tips =	PMC birçok özelliği hakkında bilgi almak için www.macrocreator.com/help~~pobj video öğreticileri göz atın.

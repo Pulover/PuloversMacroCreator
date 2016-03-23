@@ -810,7 +810,7 @@
 	d_Lang036 =	Imagine / Pixel S-au găsit la
 	d_Lang037 =	Imagine / Pixel Nu a fost găsit.
 	d_Lang038 =	Apăsați OK pentru a continua.
-	d_Lang039 =	Pauză!
+	d_Lang039 =	Se trimite. Te rog asteapta...
 	d_Lang040 =	Această caracteristică necesită GDI + biblioteca.
 		Faceți clic pe OK pentru a merge la pagina de descărcare.
 	d_Lang041 =	Numele variabilei conține un caracter ilegal.
@@ -908,10 +908,9 @@
 	d_Lang115 =	- Hold Alt pentru a seta regiunea în aceeași locație.
 	d_Lang116 =	Se transferă și instala
 	d_Lang117 =	Du-te la pagina de descărcare
-	d_Lang118 =	Se trimite. Te rog asteapta...
-	d_Lang119 =	Cel Mai Potrivit
-	d_Lang120 =	Reporniți aplicația pentru a aplica modificările.
-	d_Lang121 =	Pentru a reseta dimensiunile bare de instrumente, du-te la:
+	d_Lang118 =	Cel Mai Potrivit
+	d_Lang119 =	Reporniți aplicația pentru a aplica modificările.
+	d_Lang120 =	Pentru a reseta dimensiunile bare de instrumente, du-te la:
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Check out tutoriale video de la www.macrocreator.com/help pentru a afla despre multe caracteristici ale PMC.

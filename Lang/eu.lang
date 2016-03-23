@@ -810,7 +810,7 @@
 	d_Lang036 =	Image / Pixel at Found
 	d_Lang037 =	Image / Pixel Not Found.
 	d_Lang038 =	Sakatu Ados jarraitzeko.
-	d_Lang039 =	Denboraz kanpo!
+	d_Lang039 =	Bidaltzea. Itxaron mesedez...
 	d_Lang040 =	Erabiltzaileek GDI + Liburutegia eskatzen.
 		Egin klik Ados orria deskargatzeko joan.
 	d_Lang041 =	aldagai izen ilegala pertsonaia bat izanez.
@@ -908,10 +908,9 @@
 	d_Lang115 =	- Hold Alt eskualdean ezarri Kokapen berean.
 	d_Lang116 =	Transferentzia eta instalatu
 	d_Lang117 =	Joan orria deskargatu
-	d_Lang118 =	Bidaltzea. Itxaron mesedez...
-	d_Lang119 =	Onena Fit
-	d_Lang120 =	Berrabiarazi aplikazioa aldaketak aplikatzeko.
-	d_Lang121 =	Tresna-barrak tamainak berrezartzeko, joan:
+	d_Lang118 =	Onena Fit
+	d_Lang119 =	Berrabiarazi aplikazioa aldaketak aplikatzeko.
+	d_Lang120 =	Tresna-barrak tamainak berrezartzeko, joan:
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Begiratu bideo tutorialak www.macrocreator.com/help at PMC ezaugarri asko ezagutzea.

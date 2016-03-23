@@ -810,7 +810,7 @@
 	d_Lang036 =	Image / Pixel fonnt bei
 	d_Lang037 =	Image / Pixel net fonnt.
 	d_Lang038 =	Press OK weidergespillt.
-	d_Lang039 =	Äuszäit!
+	d_Lang039 =	SMS'en. Sot wait ...
 	d_Lang040 =	Dës Fonktioun verlaangt de GDI + Bibliothéik.
 		Klickt OK goen Säit erofzelueden.
 	d_Lang041 =	Verännerleche Numm enthält eng illegal Charakter.
@@ -908,10 +908,9 @@
 	d_Lang115 =	- Stoe Alt Regioun zu der selwechter Plaz ze setzen.
 	d_Lang116 =	Transfert an installéiert
 	d_Lang117 =	Go Säit ze download
-	d_Lang118 =	SMS'en. Sot wait ...
-	d_Lang119 =	Beschte Fit
-	d_Lang120 =	Reouverture der Applikatioun Ännerungen ze gëllen.
-	d_Lang121 =	Fir Toolbare Gréisste Compteur, goen:
+	d_Lang118 =	Beschte Fit
+	d_Lang119 =	Reouverture der Applikatioun Ännerungen ze gëllen.
+	d_Lang120 =	Fir Toolbare Gréisste Compteur, goen:
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Check den video Léierprogrammer um www.macrocreator.com/help Ensembel de ville Fonctioune vun PMC ze léieren.

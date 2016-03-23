@@ -810,7 +810,7 @@
 	d_Lang036 =	Image / Pixel Najdeno na
 	d_Lang037 =	Image / Pixel ni bilo mogoče najti.
 	d_Lang038 =	Za nadaljevanje pritisnite OK.
-	d_Lang039 =	Timeout!
+	d_Lang039 =	Pošiljanje. Prosim počakaj...
 	d_Lang040 =	Ta funkcija zahteva GDI+knjižnice.
 		Kliknite V redu, da gredo na stran za prenos.
 	d_Lang041 =	Ime spremenljivke vsebuje neveljaven znak.
@@ -908,10 +908,9 @@
 	d_Lang115 =	- Držite Alt nastaviti regijo na isti lokaciji.
 	d_Lang116 =	Prenos in namestitev
 	d_Lang117 =	Pojdite na stran za prenos
-	d_Lang118 =	Pošiljanje. Prosim počakaj...
-	d_Lang119 =	Najbolj Ustrezajo
-	d_Lang120 =	Ponovno zaženite aplikacijo za uporabo sprememb.
-	d_Lang121 =	Za ponastavitev orodne vrstice velikosti, pojdite na:
+	d_Lang118 =	Najbolj Ustrezajo
+	d_Lang119 =	Ponovno zaženite aplikacijo za uporabo sprememb.
+	d_Lang120 =	Za ponastavitev orodne vrstice velikosti, pojdite na:
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Oglejte si video Vadnice na www.macrocreator.com/help~~pobj za spoznavanje mnogih značilnosti PMC.

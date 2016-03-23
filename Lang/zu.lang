@@ -810,7 +810,7 @@
 	d_Lang036 =	Image / Pixel Esiku
 	d_Lang037 =	Image / Pixel Not Found.
 	d_Lang038 =	Cindezela KULUNGILE ukuze uqhubeke.
-	d_Lang039 =	Isikhathi siphelile!
+	d_Lang039 =	Ukuthumela. Ngicela ulinde...
 	d_Lang040 =	Lesi sici sidinga uhlelo GDI + Library.
 		Chofoza OK ukuya ukulanda ikhasi.
 	d_Lang041 =	Igama variable inohlamvu olungekho emthethweni.
@@ -908,10 +908,9 @@
 	d_Lang115 =	- Hold Alt ukusetha esifundeni kuleyo ndawo.
 	d_Lang116 =	Dlulisa futhi ufake
 	d_Lang117 =	Hamba ukulanda ikhasi
-	d_Lang118 =	Ukuthumela. Ngicela ulinde...
-	d_Lang119 =	Ukulingana Okufanele
-	d_Lang120 =	Qala kabusha isicelo ukusebenzisa izinguquko.
-	d_Lang121 =	Ukuze usethe kabusha wamathuluzi ezinobukhulu, yiya ku:
+	d_Lang118 =	Ukulingana Okufanele
+	d_Lang119 =	Qala kabusha isicelo ukusebenzisa izinguquko.
+	d_Lang120 =	Ukuze usethe kabusha wamathuluzi ezinobukhulu, yiya ku:
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Hlola tutorials video at www.macrocreator.com/help ukuze ufunde mayelana nezici eziningi PMC.

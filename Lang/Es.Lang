@@ -810,7 +810,7 @@
 	d_Lang036 =	Imagen / Tamaño de píxel se encuentran en
 	d_Lang037 =	Imagen / Tamaño de píxel no encontrado.
 	d_Lang038 =	Pulse Aceptar para continuar.
-	d_Lang039 =	Tiempo agotado!
+	d_Lang039 =	Enviando. Por favor espera...
 	d_Lang040 =	Esta función requiere la biblioteca GDI+.
 		Haga clic en Aceptar para ir a la página de descargas.
 	d_Lang041 =	El nombre de la variable contiene un carácter ilegal.
@@ -908,10 +908,9 @@
 	d_Lang115 =	- Mantenga Alt región para establecer en la misma ubicación.
 	d_Lang116 =	Transferir e instalar
 	d_Lang117 =	Ir a la página de descarga
-	d_Lang118 =	Enviando. Por favor espera...
-	d_Lang119 =	Mejor Ajuste
-	d_Lang120 =	Reiniciar la aplicación para aplicar los cambios.
-	d_Lang121 =	Para restablecer las barras de herramientas tamaños, vaya a:
+	d_Lang118 =	Mejor Ajuste
+	d_Lang119 =	Reiniciar la aplicación para aplicar los cambios.
+	d_Lang120 =	Para restablecer las barras de herramientas tamaños, vaya a:
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Echa un vistazo a los tutoriales en vídeo en www.macrocreator.com/help para aprender acerca de las muchas características de PMC.
