@@ -552,6 +552,7 @@
 	c_Lang254 =	Arquivo destino
 	c_Lang255 =	Separados por ponto-e-vírgula, vírgula ou linha.
 	c_Lang256 =	Ajustar coordenadas para o centro da imagem
+	c_Lang257 =	Período
 		
 ; 16. Other Windows		
 	t_Lang001 =	Exportar para AutoHotkey

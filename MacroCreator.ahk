@@ -6085,13 +6085,13 @@ Gui, 12:Add, Groupbox, Section xm ym W450 H55
 Gui, 12:Add, Text, -Wrap R1 Checked ys+20 xs+10 W70 Right, %c_Lang079%:
 Gui, 12:Add, ComboBox, yp x+10 W150 vGoTimerLabel gAutoComplete, %Proj_Labels%
 Gui, 12:Add, Text, x+10 yp-3 W190 H25 cGray, %c_Lang025%
-Gui, 12:Add, Groupbox, Section xm y+20 W220 H120
-Gui, 12:Add, Edit, ys+15 xs+30 Limit W150 vTimerDelayE
+Gui, 12:Add, Groupbox, Section xm y+20 W220 H120, %c_Lang257%
+Gui, 12:Add, Edit, ys+20 xs+30 Limit W150 vTimerDelayE
 Gui, 12:Add, UpDown, vTimerDelayX 0x80 Range0-9999999, 250
 Gui, 12:Add, Radio, -Wrap Section Checked yp+25 W150 vTimerMsc R1, %c_Lang018%
 Gui, 12:Add, Radio, -Wrap W150 vTimerSec R1, %c_Lang019%
 Gui, 12:Add, Radio, -Wrap W150 vTimerMin R1, %c_Lang154%
-Gui, 12:Add, Groupbox, Section W220 H120 ys-40 x+50, %w_Lang003%:
+Gui, 12:Add, Groupbox, Section W220 H120 ys-45 x+50, %w_Lang003%:
 Gui, 12:Add, Radio, -Wrap Group Checked ys+20 xs+10 W200 vRunOnce gTimerOpt R1, %t_Lang078%
 Gui, 12:Add, Radio, -Wrap W200 vPeriod gTimerOpt R1, %t_Lang079%
 Gui, 12:Add, Radio, -Wrap W200 vTurnOn gTimerOpt R1, %c_Lang238%

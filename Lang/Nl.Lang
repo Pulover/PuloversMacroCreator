@@ -552,6 +552,7 @@
 	c_Lang254 =	Destination file
 	c_Lang255 =	Gescheiden door puntkomma, komma of lijn.
 	c_Lang256 =	Stel coördinaten naar het midden van het beeld
+	c_Lang257 =	Periode
 		
 ; 16. Other Windows		
 	t_Lang001 =	Exporteren naar AutoHotkey

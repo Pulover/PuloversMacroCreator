@@ -552,6 +552,7 @@
 	c_Lang254 =	대상 파일
 	c_Lang255 =	세미콜론, 쉼표 또는 선으로 구분.
 	c_Lang256 =	화상의 중심 좌표를 조정
+	c_Lang257 =	기간
 		
 ; 16. Other Windows		
 	t_Lang001 =	AutoHotkey로 내보내기

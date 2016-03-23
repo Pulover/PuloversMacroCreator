@@ -552,6 +552,7 @@
 	c_Lang254 =	Destination file
 	c_Lang255 =	Separated by semicolon, comma or line.
 	c_Lang256 =	Adjust coordinates to the center of the image
+	c_Lang257 =	Period
 		
 ; 16. Other Windows		
 	t_Lang001 =	Export to AutoHotkey

@@ -552,6 +552,7 @@
 	c_Lang254 =	目的ファイル
 	c_Lang255 =	セミコロン、カンマまたは行で区切られています。
 	c_Lang256 =	画像の中心に座標を調整
+	c_Lang257 =	期間
 		
 ; 16. Other Windows		
 	t_Lang001 =	AutoHotkeyにエクスポート
