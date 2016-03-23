@@ -1,4 +1,4 @@
-﻿# Settings
+# Settings
 
 ## Table of Contents
 
@@ -63,7 +63,7 @@ See [Playback Page](p3-Playback.html#playback-options).
 
 ## Defaults
 
-**Mouse Coordinates**: Sets coordinate mode for Mouse commands and records to be relative to either the active window or the screen. This option is global and will affect both Recording and Playback so it should be set before adding any commands for the project.  
+**Mouse Coordinates**: Sets coordinate mode for Mouse commands and records to be relative to either the active window, screen or client area. This option is global and will affect both Recording and Playback so it should be set before adding any commands for the project.  
 *Note*: This setting will be saved to the PMC file.
 
 **Default Mouse Delay**: Sets the default delay for each Mouse Command. This affects new commands added from the Mouse Command window and will only affect recording if 'Timed Intervals' is disabled.
@@ -80,8 +80,6 @@ See [Playback Page](p3-Playback.html#playback-options).
 
 **Standard Library File**: Sets an AutoHotkey script file to be loaded automatically in the *Functions* window.
 
-**Set As Default Hotkeys**: If checked the current Hotkeys will be loaded on each run of the program and when 'Default Settings' are loaded.
-
 ## Screenshots
 
 **Draw Button**: Selects the Draw Button to be used for Screenshots tool and Get Area in Image Search.
@@ -95,6 +93,23 @@ See [Playback Page](p3-Playback.html#playback-options).
 **Press Enter to capture**: Waits for the user to press Enter to confirm the rectangle area of the Screenshot. Enabling this option allows you to adjust the search/capture area using hotkeys (**Ctrl + Arrow keys** to move the selection area and **Shift + Arrow keys** to resize it).
 
 **Screenshots Directory**: Selects the default folder for Screenshots taken.
+
+## Email accounts
+
+Here you can add and test email accounts to be used with the *Send Email* feature. The information will be saved to the file *UserEmailAccounts.ini* in AppData folder, or the application folder in Portable Mode. The fields are standard email client fields so I'm not going to detail each one here.
+
+### Remarks
+
+The information of the accounts (including passwords) will be saved literally in exported scripts (even exe files), so be careful when distributing such files. This information is not saved in pmc project files.
+
+## Language
+
+Here you can choose the interface language.
+
+## Language Editor
+
+Here you can make corrections to the translations (or even create a new one) and submit your revisions.  
+A new version of the language files may be released at any time independent of application releases, so feel free to submit any number of corrections as many times as you want. Credits will be given on the [official website](http://www.macrocreator.com/project). If don't wish to be credited, just say it in the message.
 
 ## User Global Variables
 
@@ -118,4 +133,3 @@ Example of *User Global Variables* list:
 > bVar1 = Value1
 > bVar2 = Value3
 > bVar3 = Value2
-

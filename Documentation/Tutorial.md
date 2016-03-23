@@ -1,4 +1,4 @@
-﻿# Quick Tutorial
+# Quick Tutorial
 
 The simplest way to get started with Pulover's Macro Creator is using the recorder. Follow these steps record a macro:
 
@@ -12,5 +12,10 @@ The simplest way to get started with Pulover's Macro Creator is using the record
 You can change record and playback options clicking on the arrows beside those buttons in the toolbar, or going to Settings.
 
 Although the recorder is a good choice for quick tasks, Pulover's Macro Creator can do many other things if you take the time to learn its commands. You can add loops, conditions, create variables and arrays, send text on a background window, search for an image or pixel and much more.
+
+### Download Examples
+
+* 
+* 
 
 Check out the video tutorials at [www.macrocreator.com](http://macrocreator.com/help) to learn more.

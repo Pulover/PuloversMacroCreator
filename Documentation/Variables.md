@@ -45,7 +45,7 @@ Most commands and functions outputs variables with the result of its operation. 
 > Counter += 1
 > NewVar := MyVar " and some text."
 
-**Note**: This is the correct syntax in AHK, but if you don't have the *Expression* option checked you can enter values without quotes and using percent signs for variables, e.g.: %MyVar% and some text, and it will be converted for preview and export.
+**Note**: This is the correct syntax in AHK, but if you don't have the *Expression* option checked you can enter values without quotes and use percent signs for variables, e.g.: %MyVar% and some text, and it will be converted for preview and export.
 
 ## Expressions
 
@@ -62,7 +62,7 @@ Since version 5.0.0, Expression format must be used for Function parameters and 
 
 To switch a variable's value True <> False use an exclamation in from of the value. Variable must be enclosed in percent signs.
 
-> MyVar := !%MyVar%
+> MyVar := !MyVar ; Or !%MyVar% without Expression checked
 
 ## Dynamic Variable References
 
@@ -84,13 +84,18 @@ To compare variables click the *If Statements* button, you may select *Evaluate 
 > MyVar = 5
 > Clipboard > %MyVar%
 
+If the result is blank or 0 it's evaluated as false. Any other value, number or string, is evaluated as true.  
+
 In the *Compare Variables* option the *Variable* field must be a single variable word (not in percent signs) and the *Value* field you can enter any literal value and variables enclosed in percent signs.  
 
 The operators accepted are:
 
 > = == <> != > < >= <=
 
-In the *Evaluate Expression* option you can enter any valid expression, including multiple statements and ternary.  
+In the *Evaluate Expression* option you can enter any valid expression, including multiple statements.
+
+> MyVar > 10 && MyVar < 20
+
 In expressions variables must not be enclosed in percent signs (except to deference) and literal strings must be enclosed in quotes. A complete explanation can be found at [AHK documentation](http://autohotkey.com/docs/Variables.htm#Expressions)
 
 Download Example: [Comparing Variables in Playback](Examples/CompareVars.pmc).
@@ -101,7 +106,7 @@ Download Example: [Comparing Variables in Playback](Examples/CompareVars.pmc).
 
 > MyArray := [10, 20, aVariable, "aString"])  ; Inside the Variables Assignment window
 
-Or use the *Array* function in the *Functions* window.  
+Or use the *Array* function in the *Functions* window. More information about objects can be found at the [AHK Documentaion](http://autohotkey.com/docs/Objects.htm).  
 
 You can also assign Associative arrays in the *Variables* window. With the "Expression" option checked, enter keys and values in the following format:
 
@@ -138,4 +143,3 @@ Download Example: [Assigning and retrieving Arrays](Examples/Arrays.pmc).
 
 Built-in Variables can be used inside the program to reference dynamic information. A list of these Variables with their description can be found in the [AutoHotkey documentation](http://ahkscript.org/docs/Variables.htm#builtin).  
 You can also insert Built-in Variables into command window fields by right-clicking on any empty area and selecting the *Built-in Variables* submenu where you'll find them divided in categories. Select one of them it will be inserted in the Carater-Insert position (already enclosed in percent signs).
-

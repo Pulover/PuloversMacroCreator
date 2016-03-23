@@ -53,11 +53,11 @@ You can also view the list of variables and contents from the File menu and Tray
 
 ## Context Sensitive Hotkeys
 
-Makes all Hotkeys context-sensitive. Such hotkeys perform a different action (or none at all) depending on the type of window that is active or exists.
+Makes all Hotkeys context-sensitive. Such hotkeys will only work depending on the type of window that is active or exists, or if an [expression](p6-Variables.html#expressions) is evaluated to true.  
 
 This option affects ALL Hotkeys and will be saved to the programs settings when it's closed. There's a text tip at the bottom-right of the main window to show if it's active. To deactivate this option select *None* in the list.
 
-For more information see [AutoHotkey Help](http://ahkscript.org/docs/commands/_IfWinActive.htm).
+For more information see [AutoHotkey Help](http://ahkscript.org/docs/commands/_IfWinActive.htm) and [AutoHotkey Help](http://ahkscript.org/docs/commands/_If.htm).
 
 ## Playback Options
 
@@ -66,6 +66,8 @@ To change options click the Options button on the main window or select Options 
 **Speed Up**: Selects the hotkey to toggle playback speed Up/Normal. When this option is on delay values will be cut by value set. Does not work when *Random Sleeps* is activated.
 
 **Slow Down**: Selects the hotkey to toggle playback speed Down/Normal. When this option is on delay values will be multiplied by value set. Does not work when *Random Sleeps* is activated.
+
+**Set As Default Hotkeys**: If checked the current Hotkeys will be loaded on each run of the program and when 'Default Settings' are loaded.
 
 **Display balloon tips**: Enables displaying of tooltips and traytips during Recording/Playback.
 
