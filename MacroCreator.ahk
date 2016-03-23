@@ -2811,18 +2811,14 @@ Gui, 4:Add, Checkbox, -Wrap Checked%WClass% y+0 xs+10 vWClass W380 R1, %t_Lang02
 Gui, 4:Add, Checkbox, -Wrap Checked%WTitle% vWTitle W380 R1, %t_Lang030%
 Gui, 4:Tab, 3
 ; Playback
-Gui, 4:Add, GroupBox, Section ym xm+170 W400 H175, %t_Lang202%:
-Gui, 4:Add, Text, -Wrap R1 ys+20 xs+10 W380, %t_Lang039%:
-Gui, 4:Add, Radio, -Wrap y+5 xs+10 W120 R1 vRelative R1, %c_Lang005%
-Gui, 4:Add, Radio, -Wrap yp x+10 W120 R1 vScreen R1, %t_Lang041%
-Gui, 4:Add, Radio, -Wrap yp x+10 W120 R1 vClient R1, %t_Lang207%
-Gui, 4:Add, Text, -Wrap R1 y+20 xs+10 W200, %t_Lang205%:
+Gui, 4:Add, GroupBox, Section ym xm+170 W400 H110, %t_Lang202%:
+Gui, 4:Add, Text, -Wrap R1 yp+20 xs+10 W200, %t_Lang205%:
 Gui, 4:Add, DDL, yp-2 x+0 W80 vTitleMatch, 1|2||3|RegEx
 Gui, 4:Add, Text, -Wrap R1 y+10 xs+10 W200, %t_Lang206%:
 Gui, 4:Add, DDL, yp-2 x+0 W80 vTitleSpeed, Fast||Slow
-Gui, 4:Add, Checkbox, -Wrap R1 Checked%HiddenWin% y+10 xs+10 W380 vHiddenWin, %t_Lang203%
-Gui, 4:Add, Checkbox, -Wrap R1 Checked%HiddenText% W380 vHiddenText, %t_Lang204%
-Gui, 4:Add, GroupBox, Section y+23 xs W400 H80, %t_Lang053%:
+Gui, 4:Add, Checkbox, -Wrap R1 Checked%HiddenWin% y+10 xs+10 W195 vHiddenWin, %t_Lang203%
+Gui, 4:Add, Checkbox, -Wrap R1 Checked%HiddenText% yp x+5 W180 vHiddenText, %t_Lang204%
+Gui, 4:Add, GroupBox, Section y+25 xs W400 H145, %t_Lang053%:
 Gui, 4:Add, Text, -Wrap R1 ys+20 xs+10 W200, %t_Lang036%:
 Gui, 4:Add, DDL, yp-2 x+0 W105 vFastKey, None|Insert||F1|F2|F3|F4|F5|F6|F7|F8|F9|F10|F11|F12|CapsLock|NumLock|ScrollLock|
 Gui, 4:Add, DDL, yp x+5 W37 vSpeedUp, 2||4|8|16|32
@@ -2831,7 +2827,12 @@ Gui, 4:Add, Text, -Wrap R1 y+10 xs+10 W200, %t_Lang037%:
 Gui, 4:Add, DDL, yp-2 x+0 W105 vSlowKey, None|Pause||F1|F2|F3|F4|F5|F6|F7|F8|F9|F10|F11|F12|CapsLock|NumLock|ScrollLock|
 Gui, 4:Add, DDL, yp x+5 W37 vSpeedDn, 2||4|8|16|32
 Gui, 4:Add, Text, -Wrap R1 yp+5 x+5, X
-Gui, 4:Add, GroupBox, Section y+25 xs W400 H125, %w_Lang003%:
+Gui, 4:Add, Text, -Wrap y+10 xs+10 W195 R1, %w_Lang006%:
+Gui, 4:Add, Text, -Wrap yp x+5 W180 R1, %w_Lang007%:
+Gui, 4:Add, Edit, y+5 xs+10 W195 R1 -Multi ReadOnly, %AutoKey%
+Gui, 4:Add, Edit, yp x+5 W180 R1 -Multi ReadOnly, %ManKey%
+Gui, 4:Add, Checkbox, -Wrap Checked%KeepDefKeys% y+5 xs+10 vKeepDefKeys W380 R1, %t_Lang054%.
+Gui, 4:Add, GroupBox, Section y+22 xs W400 H128, %w_Lang003%:
 Gui, 4:Add, Checkbox, -Wrap R1 Checked%ShowStep% ys+20 xs+10 W380 vShowStep, %t_Lang100%
 Gui, 4:Add, Checkbox, -Wrap R1 Checked%MouseReturn% W380 vMouseReturn, %t_Lang038%
 Gui, 4:Add, Checkbox, -Wrap R1 Checked%ShowBarOnStart% W380 vShowBarOnStart, %t_Lang085%
@@ -2842,32 +2843,30 @@ Gui, 4:Add, UpDown, vRandPercent 0x80 Range0-1000, %RandPercent%
 Gui, 4:Add, Text, -Wrap R1 yp+5 x+5, `%
 Gui, 4:Tab, 4
 ; Defaults
-Gui, 4:Add, GroupBox, Section ym xm+170 W400 H100, %t_Lang090%:
-Gui, 4:Add, Text, -Wrap R1 ys+20 xs+10 W200, %t_Lang042%:
+Gui, 4:Add, GroupBox, Section ym xm+170 W400 H170, %t_Lang090%:
+Gui, 4:Add, Text, -Wrap R1 ys+20 xs+10 W380, %t_Lang039%:
+Gui, 4:Add, Radio, -Wrap y+5 xs+10 W120 R1 vRelative R1, %c_Lang005%
+Gui, 4:Add, Radio, -Wrap yp x+10 W120 R1 vScreen R1, %t_Lang041%
+Gui, 4:Add, Radio, -Wrap yp x+10 W120 R1 vClient R1, %t_Lang207%
+Gui, 4:Add, Text, -Wrap R1 y+20 xs+10 W200, %t_Lang042%:
 Gui, 4:Add, Edit, Limit Number yp-2 x+0 W60 R1
 Gui, 4:Add, UpDown, yp x+0 vDelayM 0x80 Range0-999999999, %DelayM%
-Gui, 4:Add, Text, -Wrap R1 y+5 xs+10 W200, %t_Lang043%:
+Gui, 4:Add, Text, -Wrap R1 y+10 xs+10 W200, %t_Lang043%:
 Gui, 4:Add, Edit, Limit Number yp-2 x+0 W60 R1
 Gui, 4:Add, UpDown, yp x+0 vDelayW 0x80 Range0-999999999, %DelayW%
-Gui, 4:Add, Text, -Wrap R1 y+5 xs+10 W200, %t_Lang044%:
+Gui, 4:Add, Text, -Wrap R1 y+10 xs+10 W200, %t_Lang044%:
 Gui, 4:Add, Edit, Limit Number yp-2 x+0 W60 R1
 Gui, 4:Add, UpDown, yp x+0 vMaxHistory 0x80 Range0-999999999, %MaxHistory%
 Gui, 4:Add, Link, -Wrap yp+5 x+5 gClearHistory W115, <a>%t_Lang045%</a>
-Gui, 4:Add, GroupBox, Section y+21 xs W400 H55, %t_Lang137%:
+Gui, 4:Add, GroupBox, Section y+33 xs W400 H55, %t_Lang137%:
 Gui, 4:Add, Edit, ys+20 xs+10 vDefaultEditor W350 R1 -Multi, %DefaultEditor%
 Gui, 4:Add, Button, -Wrap yp-1 x+0 W30 H23 gSearchEXE, ...
-Gui, 4:Add, GroupBox, Section y+18 xs W400 H55, %t_Lang057%:
+Gui, 4:Add, GroupBox, Section y+20 xs W400 H55, %t_Lang057%:
 Gui, 4:Add, Edit, ys+20 xs+10 vDefaultMacro W350 R1 -Multi, %DefaultMacro%
 Gui, 4:Add, Button, -Wrap yp-1 x+0 W30 H23 gSearchFile, ...
-Gui, 4:Add, GroupBox, Section y+18 xs W400 H55, %t_lang058%:
+Gui, 4:Add, GroupBox, Section y+20 xs W400 H55, %t_lang058%:
 Gui, 4:Add, Edit, ys+20 xs+10 vStdLibFile W350 R1 -Multi, %StdLibFile%
 Gui, 4:Add, Button, -Wrap yp-1 x+0 W30 H23 vStdLib gSearchAHK, ...
-Gui, 4:Add, GroupBox, Section y+18 xs W400 H110, %t_Lang053%:
-Gui, 4:Add, Text, -Wrap ys+20 xs+10 W85 R1, %w_Lang006%:
-Gui, 4:Add, Edit, yp x+0 W285 R1 -Multi ReadOnly, %AutoKey%
-Gui, 4:Add, Text, -Wrap y+5 xs+10 W85 R1, %w_Lang007%:
-Gui, 4:Add, Edit, yp x+0 W285 R1 -Multi ReadOnly, %ManKey%
-Gui, 4:Add, Checkbox, -Wrap Checked%KeepDefKeys% y+5 xs+10 vKeepDefKeys W380 R1, %t_Lang054%.
 Gui, 4:Tab, 5
 ; Screenshots
 Gui, 4:Add, GroupBox, Section ym xm+170 W400 H175, %t_Lang046%:
