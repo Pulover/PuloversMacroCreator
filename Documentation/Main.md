@@ -20,19 +20,19 @@
 
 **Save / Save As**: Saves current Project in a PMC file including all non-empty Macros.
 
-**Export**: Opens the [Export Window](p5-Export.html) to save Macros in AHK Script Format.
+**Export**: Opens the [Export Window](p8-Export.html) to save Macros in AHK Script Format.
 
-**Preview**: Opens the [Preview Window](p6-Preview.html) which shows the current Macro in AHK Script.
+**Preview**: Opens the [Preview Window](p9-Preview.html) which shows the current Macro in AHK Script.
 
-**Options**: Opens the [Settings Window](p7-Settings.html) where it's possible to configure various options.
+**Options**: Opens the [Settings Window](p10-Settings.html) where it's possible to configure various options.
 
 **List Variables**: Displays user-defined variables and their current contents.
 
 ## Record & Play
 
-**Record**: Activates [Recording](p2-Record.html) Hotkeys.
+**Record**: Activates [Recording](p3-Record.html) Hotkeys.
 
-**Activate Macros**: Activates [Playback](p3-Playback.html) Hotkeys.  
+**Activate Macros**: Activates [Playback](p4-Playback.html) Hotkeys.  
 
 **Play Current Macro**: Runs currently selected Macro immediately without Hotkeys.  
 *Note*: An *AutoPlay* feature is available via command line with the -a parameter: add -a or -a*N* (where *N* is the number of the Macro to run) as a parameter to run a Macro on program start-up. The example below would execute the second Macro in the project file.
@@ -57,7 +57,7 @@ To have other Macros active during Timer check the *Always Active* option or rig
 
 **Minimize to Tray**: If checked will hide the main window when *Record* or *Play* button is pressed. You can show the window again from the Tray Menu or the button in the Controls Bar.
 
-**Display Controls**: If checked will display the [Controls Toolbar](p3-Playback.html#controls-toolbar) window when *Record* or *Play* button is pressed. It's a smaller window with Playback and Record buttons allow these commands using the mouse. You can also open it from the Macro Menu and TrayIcon.
+**Display Controls**: If checked will display the [Controls Toolbar](p4-Playback.html#controls-toolbar) window when *Record* or *Play* button is pressed. It's a smaller window with Playback and Record buttons allow these commands using the mouse. You can also open it from the Macro Menu and TrayIcon.
 
 **Capture Keys**: Enables Capturing of Key Presses on currently selected Macro List on the Main Window (this option does not affect Recording).
 
@@ -120,7 +120,7 @@ Note: Changing parameters of certain commands may cause misbehavior in Playback.
 
 **Repeat**: This field is used as a quick-edit to set the Repeat number to selected rows using the Apply buttons on the right.
 
-**Delay (ms)**: Default delay between commands. The number set in this box will be automatically applied to a new added command (except for Mouse and Window commands which have individual default values that can be set in the [Settings Window](p7-Settings.html#defaults)). This field is also used as a quick-edit to set the Delay to selected rows using the Apply buttons on the right.
+**Delay (ms)**: Default delay between commands. The number set in this box will be automatically applied to a new added command (except for Mouse and Window commands which have individual default values that can be set in the [Settings Window](p10-Settings.html#defaults)). This field is also used as a quick-edit to set the Delay to selected rows using the Apply buttons on the right.
 
 **Insert Box**: This box can be used to add commands to the list. Click in the box and press the buttons to add on the keyboard then press the Insert button to add them to the list (you can also use the Insert key as a shortcut when the focus is on the ListView).
 

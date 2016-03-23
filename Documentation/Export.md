@@ -56,7 +56,7 @@ Changes various options for the exported script's Auto-Execute Section. For more
 
 **#Include**: Includes in the script files with external functions using the #Include directive, when they are present in one of the exported macros.
 
-**Global Variables**: If you have defined [User Global Variables](p7-Settings.html#user-global-variables) you can select which of them will be included in the exported file. They will be added to the Auto-execute section.
+**Global Variables**: If you have defined [User Global Variables](p10-Settings.html#user-global-variables) you can select which of them will be included in the exported file. They will be added to the Auto-execute section.
 
 **Speed**: Increases or decreases the delay of Sleep (Pause) commands in exported scripts.
 

@@ -55,11 +55,11 @@ You can also double-click on the *Action* Column Header to turn this option On/O
 
 ## Recording
 
-See [Record Page](p2-Record.html#recording-options).
+See [Record Page](p3-Record.html#recording-options).
 
 ## Playback
 
-See [Playback Page](p3-Playback.html#playback-options).
+See [Playback Page](p4-Playback.html#playback-options).
 
 ## Defaults
 
@@ -119,7 +119,7 @@ User defined variables are saved to an INI file in the AppData\MacroCreator fold
 
 Format is the same used for non-expression assignments in AutoHotkey or the one found in standard INI files.  
 
-They can also be included in exported scripts by checking *Global Variables* option in the [Export Window](p5-Export.html).  
+They can also be included in exported scripts by checking *Global Variables* option in the [Export Window](p8-Export.html).  
 
 You can separate your variables in groups using INI format Sections with title enclosed in brocks. Use the button in the Export Window to select which Variables or Sections will be exported.  
 

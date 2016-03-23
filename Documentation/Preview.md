@@ -21,16 +21,14 @@ Unchecked rows will be removed from preview script or commented out, if this opt
 
 **Indentation**: Uses Tab-Indentation for Loops and If Statements.
 
-**Convert Line Breaks**: Converts line break symbols (`n) in the script to real line breaks.
+**Convert Line Breaks**: Converts line break symbols (`n) in command parameters to real line breaks.
 
-**Comment out unchecked rows**: 
+**Comment out unchecked rows**: Keeps unchecked rows in the macro as commented out script, instead of not exporting them.
 
 **Line Wrap**: Automatically add a line break to long lines.
 
 **Always On Top**: Keeps this window on top. This may be useful to code creation during Recording.
 
-**Edit Script**: Exports the current preview to the Temp folder and opens it in the default editor.
+**Edit Script**: Exports the current preview to a script in the Temp folder and opens it in the default editor. **Note**: This feature is only meant as a quick export function. PMC is not designed to be an AHK script editor.
 
 **Dock/Undock**: Docks/undocks the *Preview* window to/from the Main window.
-
-**Status Bar**: Displays information on Selected Macro and some Settings (only visible when undocked).

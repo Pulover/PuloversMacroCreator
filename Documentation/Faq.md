@@ -34,12 +34,12 @@
 
 ### How do I start Recording / Playback?
 
-* To start recording you need to press the Record button and then press the recording hotkey (default is F9). For more details see [Record](p2-Record.html).  
-* To play a Macro you have to press the Play Button to activate the Hotkeys and use them to play each Macro. For more details see [Playback](p3-Playback.html).  
+* To start recording you need to press the Record button and then press the recording hotkey (default is F9). For more details see [Record](p3-Record.html).  
+* To play a Macro you have to press the Play Button to activate the Hotkeys and use them to play each Macro. For more details see [Playback](p4-Playback.html).  
 
 ### Can I import AHK scripts to Macro Creator and edit them?
 
-No. AHK scripts are too complex to be parsed and the conversion would never be perfect. You can, however, include the original PMC code into the exported scripts by checking this option in the [Export Window](p5-Export.html).
+No. AHK scripts are too complex to be parsed and the conversion would never be perfect. You can, however, include the original PMC code into the exported scripts by checking this option in the [Export Window](p8-Export.html).
 
 ### How do create a random number/command?
 
@@ -51,11 +51,11 @@ No, creating Guis is not in the scope of this project. But you can find some nic
 
 ### Can Macro Creator automate Firefox or Chrome as it does with Internet Explorer?
 
-No. Macro Creator can connect to IE because its controls are exposed via [COM](Commands/COM_Interface.html), but that type of interaction is not possible with other browsers. Control Commands won't work either, so you might have more luck with mouse, keystrokes and Image Search.
+No. Macro Creator can connect to IE because its controls are exposed via [COM](Commands/Expression.html), but that type of interaction is not possible with other browsers. Control Commands won't work either, so you might have more luck with mouse, keystrokes and Image Search.
 
 ### Can I make playback go faster/slower?
 
-You can use the Speed Up and Slow Down keys (defaults are Insert and Pause at 2x). To change the keys and speed multiplier see [Playback Options](p3-Playback.html#playback-options).  
+You can use the Speed Up and Slow Down keys (defaults are Insert and Pause at 2x). To change the keys and speed multiplier see [Playback Options](p4-Playback.html#playback-options).  
 
 ### Can I execute a custom action based on Pixel/Image search result?
 
@@ -122,7 +122,7 @@ Although the Timer is limited to run one Macro at a time, you can still activate
 
 Macro Creator has an option to convert exported scripts to EXE using Ahk2Exe that is installed with AutoHotkey:  
 1. Download and install [AutoHotkey](http://ahkscript.org/).  
-2. Go to [Export](p5-Export.html#destination-file) in PMC and check *Create EXE File* option.  
+2. Go to [Export](p8-Export.html#destination-file) in PMC and check *Create EXE File* option.  
 3. Click the *Export* button.  
 
 The EXE file will be saved to the same directory as the script file.
@@ -195,7 +195,7 @@ Your script must use the Send command with a higher level to execute the Hotkeys
 
 Yes. You can load an external .ahk file in the *Functions* command window to run functions from it and save the results to the Output Variable. You can set a Standard Library File containing your functions in Settings > Misc., this file will be automatically selected when you enter the Function command window.   
 
-This function is limited and can only return 1 string/number value. It's recommended to use [User-Defined Functions](p7-Functions.html#user-defined-functions) instead.
+This feature is limited and can only return 1 string/number value. It's recommended to use [User-Defined Functions](p7-Functions.html#user-defined-functions) instead.
 
 ### Can I make the Playback Hotkeys work on a certain windown only?
 
@@ -203,7 +203,7 @@ Yes, use the *Context Sensitive Hotkeys* button in the main window.
 
 ### Why am I getting wrong mouse coordinates?
 
-The default settings for mouse coords are relative to the active window to make clicks point correctly even when the window is in a different position of when Macro was created. When working with multiple windows it may be best to adjust or maximize all windows and change CoordMode to screen (Settings > [Defaults](p7-Settings.html#defaults)).  
+The default settings for mouse coords are relative to the active window to make clicks point correctly even when the window is in a different position of when Macro was created. When working with multiple windows it may be best to adjust or maximize all windows and change CoordMode to screen (Settings > [Defaults](p10-Settings.html#defaults)).  
 
 ### I can run the program but Macros won't work / cannot take screenshots.
 

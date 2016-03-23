@@ -84,7 +84,7 @@ Download Example: [Accessing a Pseudo-Array inside Command Parameters](Examples/
 
 ### Remarks
 
-You can assign *User Global Variables* with pre-defined contents that will be always available in Playback and for exporting in [Settings](p7-Settings.html#user-global-variables).  
+You can assign *User Global Variables* with pre-defined contents that will be always available in Playback and for exporting in [Settings](p10-Settings.html#user-global-variables).  
 
 ## Comparing Variables
 

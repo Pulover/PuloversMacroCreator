@@ -27,7 +27,7 @@ The Playback Hotkeys are selected in the boxes at the top-right of the main wind
 
 **Pause**: Selects the Hotkey to pause execution, press it again to resume. You can also pause/unpause Playback by Middle-Clicking the TrayIcon.  
 
-*Note*: Mouse Actions are affected by [Mouse Coordinates Settings](p7-Settings.html#defaults).  
+*Note*: Mouse Actions are affected by [Mouse Coordinates Settings](p10-Settings.html#defaults).  
 
 ## Controls Toolbar
 
