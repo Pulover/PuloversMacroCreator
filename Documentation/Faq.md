@@ -186,7 +186,7 @@ Yes, just check the *Always Active* option in the main window.
 
 Your script must use the Send command with a higher level to execute the Hotkeys in PMC. Put these two lines on top of it.  
 
-> #InputLevel, 1
+> \#InputLevel, 1
 > SendLevel, 1
 
 \#InputLevel makes it possible to use Send command from a hotkey in another script and SendLevel allows to use Send command from a subroutine such as a gLabel.  
