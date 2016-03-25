@@ -9,7 +9,7 @@
 * [Comparing Variables](#comparing-variables)
 * [Assigning And Retrieving Arrays](#assigning-and-retrieving-arrays)
 * [Built-in Variables](#built-in-variables)
-* [Dynamic Variable References](#dynamic-variable-references)
+* [Expressions in command parameters](#expressions-in-command-parameters)
 
 ## Introduction
 
@@ -73,7 +73,7 @@ To switch a variable's value True <> False use an exclamation in from of the val
 
 > MyVar := !MyVar ; Or !%MyVar% without Expression checked
 
-## Dynamic Variable References
+## Expressions in command parameters
 
 *From AutoHotkey Help File*:  
 **Force an expression**: An expression can be used in a parameter that does not directly support it (except an OutputVar or InputVar parameter such as those of StringLen) by preceding the expression with a percent sign and a space or tab. If a variable is enclosed in percent signs within an expression (e.g. `%Var`*), whatever that variable contains is assumed to be the name or partial name of another variable (if there is no such variable, %Var% resolves to a blank string). This is most commonly used to reference pseudo-array elements such as the following example:

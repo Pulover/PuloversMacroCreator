@@ -30,7 +30,7 @@
 * [Can I make the Playback Hotkeys work on a certain windown only?](#can-i-make-the-playback-hotkeys-work-on-a-certain-windown-only)
 * [Why am I getting wrong mouse coordinates?](#why-am-i-getting-wrong-mouse-coordinates)
 * [I can run the program but Macros won't work / cannot take screenshots.](#i-can-run-the-program-but-macros-wont-work-/-cannot-take-screenshots.)
-* [I'm getting "Error: Invalid hotkey." when I try to launch the program.](#im-getting-"error:-invalid-hotkey."-when-i-try-to-launch-the-program.)
+* [I'm getting "Error: Invalid hotkey." when I try to launch the program.](#im-getting-error:-invalid-hotkey-when-i-try-to-launch-the-program.)
 
 ### How do I start Recording / Playback?
 
@@ -189,7 +189,7 @@ Your script must use the Send command with a higher level to execute the Hotkeys
 > #InputLevel, 1
 > SendLevel, 1
 
-#InputLevel makes it possible to use Send command from a hotkey in another script and SendLevel allows to use Send command from a subroutine such as a gLabel.  
+\#InputLevel makes it possible to use Send command from a hotkey in another script and SendLevel allows to use Send command from a subroutine such as a gLabel.  
 
 ### Can I use Functions from my own AutoHotkey Scripts?
 
@@ -209,6 +209,6 @@ The default settings for mouse coords are relative to the active window to make 
 
 Jn some systems Macro Creator requires administrator privileges in order to work properly. Enter the program or shortcut's Properties, select the Compatibility tab (click the Advanced button, if it's a shortcut) and check the "Run as administrator" option. 
 
-### I'm getting "Error: Invalid hotkey." when I try to launch the program.
+### I'm getting Error: Invalid hotkey when I try to launch the program.
 
 This is a keyboard language issue. Change the default keyboard layout of your system (global settings) to English and open MacroCreator.  

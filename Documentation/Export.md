@@ -24,9 +24,9 @@ Select Macros to be exported. Empty Macros and unchecked rows will be ignored. Y
 
 **Block Mouse**: Adds `BlockInput, MouseMove`. The mouse cursor will not move in response to the user's physical movement of the mouse during execution.
 
-**Stop**: Adds a Hotkey with the *ExitApp* command.
+**Stop**: Adds a Hotkey with the `ExitApp` command.
 
-**Pause**: Adds a Hotkey with the *Pause* command.
+**Pause**: Adds a Hotkey with the `Pause` command.
 
 ## Destination File
 
