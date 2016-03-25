@@ -1,4 +1,4 @@
-﻿/*!
+/*!
 	Library: Pulover's Macro Creator
 		
 		# Version: 5.0.0  
@@ -587,7 +587,7 @@
 		Options - Select the operation to perform with the timer.
 
 	Remarks:
-		PMC can execute up to 10 simultaneous timers. Every timer started will be registered in the current session so it can be re-enabled or disabled. To free more slots use the Delete option or *Delete all timers* link in the *Set Timer* window.
+		PMC can execute up to 10 simultaneous timers. Every timer started will be registered in the current session so it can be disabled and re-enabled. To free more slots use the Delete option or *Delete all timers* link in the *Set Timer* window.
 
 	Extra:
 		### Related
@@ -596,7 +596,7 @@
 
 /*!
 	Function: If_Statements()
-		Creates a Control of Flow block. The commands enclosed within the If Statement and EndIf will only be executed if the evaluated statement returns TRUE.  
+		Creates a Control of Flow block. The commands enclosed within the If Statement and EndIf will only be executed if the evaluated statement returns TRUE, which can be a number different than 0 or a non-empty string.  
 
 	Parameters:
 		Options DropdownList - Selects the statement to evaluate. If the statement resolves to true the commands inside below the If Statement will be executed, otherwise they will be skipped until *EndIf* or an *Else* is reached.  
@@ -789,4 +789,3 @@
 		### Related
 			[PostMessage / SendMessage](http://autohotkey.com/docs/commands/PostMessage.htm), [Message List](http://autohotkey.com/docs/misc/SendMessageList.htm), [Microsoft MSDN](http://msdn.microsoft.com)
 */
-
