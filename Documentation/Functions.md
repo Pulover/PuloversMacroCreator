@@ -42,7 +42,7 @@ You can also call object methods inside a command's parameter:
 
 You can create your own functions inside PMC. They should work consistent with user-defined functions in AHK in most cases. That means you can execute commands inside them, create and change variables and objects and, most important, return values from it to be used in your scripts. ByRef parameters are supported, as well as local/global/static variables and recursive calls.  
 
-To create a function, click the *Create Function* button on the toolbar. You'll be prompted to choose a name for your function. In the same you window you can define the scope (local or global), a few parameters with optional default values for them and global/local and static variables. After pressing OK a new tab will be created as a function, where you can add more parameters using the *Add Parameter* button and the commands below the Function line. You can also go to Function menu > Convert Macro To Function (the selected macro must not contain any Labe, Goto or Gosub commands).  
+To create a function, click the *Create Function* button on the toolbar. You'll be prompted to choose a name for your function. In the same you window you can define the scope (local or global), a few parameters with optional default values for them and global/local and static variables. After pressing OK a new tab will be created as a function, where you can add more parameters using the *Add Parameter* button and the commands below the Function line. You can also go to Function menu > *Convert Macro To Function* (the selected macro must not contain any Label, Goto or Gosub commands).  
 
 ### Parameters
 
@@ -70,6 +70,5 @@ In AutoHotkey scripts it's possible to use Labels, Goto and Gosub inside functio
 If you have AutoHotkey installed, you can call a function from an external .ahk file. Go to *Funtions* window and check the *Use Function from External File* option. Choose the file containing the funtions and select the name of the function, its parameters and a variable to receive the return value.
 
 **Note**: This feature is very limited as it can only receive one return value and it does not support objects or ByRef parameters. It's recommended to rewrite the function using an User-Defined function whenever possible.
-
 
 

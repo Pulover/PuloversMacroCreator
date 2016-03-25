@@ -1,4 +1,4 @@
-﻿# Export
+# Export
 
 ## Table of Contents
 
@@ -22,7 +22,7 @@ Select Macros to be exported. Empty Macros and unchecked rows will be ignored. Y
 
 **Loop**: Number of times to execute this Macro.
 
-**Block Mouse**: Adds *BlockInput, MouseMove*. The mouse cursor will not move in response to the user's physical movement of the mouse during execution.
+**Block Mouse**: Adds `BlockInput, MouseMove`. The mouse cursor will not move in response to the user's physical movement of the mouse during execution.
 
 **Stop**: Adds a Hotkey with the *ExitApp* command.
 
@@ -38,7 +38,7 @@ Select Macros to be exported. Empty Macros and unchecked rows will be ignored. Y
 
 **Do not concatenate Send commands**: Exports sequences of Send commands in one line each and uses Loop for repeats.
 
-**Convert line breaks**: Converts line break symbols (`n) in command parameters to real line breaks.
+**Convert line breaks**: Converts line break symbols (\`n) in command parameters to real line breaks.
 
 **Include PMC Code**: Includes a copy of the PMC code for each selected Macro at the end of the exported script to allow them to be loaded in **Macro Creator** by opening the ahk file from it. This will not affect the exported script execution.
 
@@ -54,7 +54,7 @@ Makes hotkeys and hotstrings work depending on the type of window that is active
 
 Changes various options for the exported script's Auto-Execute Section. For more information see [AutoHotkey documentation](http://autohotkey.com/docs).
 
-**#Include**: Includes in the script files with external functions using the #Include directive, when they are present in one of the exported macros.
+**\#Include**: Includes in the script files with external functions using the #Include directive, when they are present in one of the exported macros.
 
 **Global Variables**: If you have defined [User Global Variables](p10-Settings.html#user-global-variables) you can select which of them will be included in the exported file. They will be added to the Auto-execute section.
 

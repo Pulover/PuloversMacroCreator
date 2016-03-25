@@ -13,7 +13,7 @@
 
 ## Introduction
 
-Variables are used to hold data. Whether it's a text, number or any other, you can assign a value to a variable and use it with commands and functions. Most commands and functions will output a value as the result of its operation into a variable of your choice, for example the OutputVar of the **Random** command will be used to hold the randomly gererated number.
+Variables are used to hold data. Whether it's a text, number or any other, you can assign a value to a variable and use it with commands and functions. Most commands and functions will output a value as the result of its operation into a variable of your choice, for example the OutputVar of the `Random` command will be used to hold the randomly gererated number.
 
 > Random, Rand, 10, 50 ; The Rand variable will have a number between 10 and 50 after the command executes.
 
@@ -39,7 +39,7 @@ PMC will warn you with a traytip if it notices you are using some of its reserve
 
 ## Using Variables
 
-Any single word enclosed in percent signs (e.g. *%MyVar%*) inside a string will be converted to the variable's contents during playback. That means you can use variables in *Text* or *MsgBox* and other commands. For example you can copy a text and send it using *ControlSend* or *ControlSetText* directly from the clipboard.
+Any single word enclosed in percent signs (e.g. `%MyVar%`) inside a string will be converted to the variable's contents during playback. That means you can use variables in `Text` or `MsgBox` and other commands. For example you can copy a text and send it using `ControlSend` or `ControlSetText` directly from the clipboard.
 
 > Today is %A_DDDD% and it's %A_Hour%:%A_Min%.
 > Clipboard's contents are: %Clipboard%
@@ -48,7 +48,7 @@ Download Example: [Using Variables inside Command Parameters](Examples/Variables
 
 ## Assigning Variables
 
-Most commands and functions outputs variables with the result of its operation. You can also create and modify variables in the *Variables* window. Type a valid variable name, select one of the operators and input a value.
+Most commands and functions outputs variables with the result of its operation. You can also create and modify variables in the **Variables** window. Type a valid variable name, select one of the operators and input a value.
 
 > MyVar := "Some Text"
 > Counter += 1
@@ -76,7 +76,7 @@ To switch a variable's value True <> False use an exclamation in from of the val
 ## Dynamic Variable References
 
 *From AutoHotkey Help File*:  
-**Force an expression**: An expression can be used in a parameter that does not directly support it (except an OutputVar or InputVar parameter such as those of StringLen) by preceding the expression with a percent sign and a space or tab. If a variable is enclosed in percent signs within an expression (e.g. *%Var%*), whatever that variable contains is assumed to be the name or partial name of another variable (if there is no such variable, %Var% resolves to a blank string). This is most commonly used to reference pseudo-array elements such as the following example:
+**Force an expression**: An expression can be used in a parameter that does not directly support it (except an OutputVar or InputVar parameter such as those of StringLen) by preceding the expression with a percent sign and a space or tab. If a variable is enclosed in percent signs within an expression (e.g. `%Var`*), whatever that variable contains is assumed to be the name or partial name of another variable (if there is no such variable, %Var% resolves to a blank string). This is most commonly used to reference pseudo-array elements such as the following example:
 
 > FileAppend, % MyArray%i%, My File.txt
 

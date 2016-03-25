@@ -21,7 +21,7 @@ Unchecked rows will be removed from preview script or commented out, if this opt
 
 **Indentation**: Uses Tab-Indentation for Loops and If Statements.
 
-**Convert Line Breaks**: Converts line break symbols (`n) in command parameters to real line breaks.
+**Convert Line Breaks**: Converts line break symbols (\`n) in command parameters to real line breaks.
 
 **Comment out unchecked rows**: Keeps unchecked rows in the macro as commented out script, instead of not exporting them.
 

@@ -1,4 +1,4 @@
-﻿# Main Window
+# Main Window
 
 **Tip**: Right-click on a Button in the Main Window or anywhere on a Command Window to display links to AutoHotkey online help.
 
@@ -35,7 +35,7 @@
 **Activate Macros**: Activates [Playback](p4-Playback.html) Hotkeys.  
 
 **Play Current Macro**: Runs currently selected Macro immediately without Hotkeys.  
-*Note*: An *AutoPlay* feature is available via command line with the -a parameter: add -a or -a*N* (where *N* is the number of the Macro to run) as a parameter to run a Macro on program start-up. The example below would execute the second Macro in the project file.
+**Note**: An *AutoPlay* feature is available via command line with the -a parameter: add -a or -a*N* (where *N* is the number of the Macro to run) as a parameter to run a Macro on program start-up. The example below would execute the second Macro in the project file.
 
 > MacroCreator.exe SavedFile.pmc -a2
 
