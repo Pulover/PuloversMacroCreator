@@ -170,7 +170,8 @@ Eval($x, _CustomVars := "", _Init := true)
 		; Restore and evaluate any remaining parenthesis
 		While (RegExMatch($z[$i], "&_Parent\d+_&", $pd))
 		{
-			_Match := RegExReplace(_Elements[$pd], "\((.*)\)", "$1")
+			_oMatch := StrSplit(_Elements[$pd], ",", " `t()")
+		,	_Match := RegExReplace(_Elements[$pd], "\((.*)\)", "$1")
 		,	_Match := RestoreElements(_Match, _Elements)
 		,	EvalResult := Eval(_Match, _CustomVars, false)
 		,	RepString := "("
@@ -181,10 +182,13 @@ Eval($x, _CustomVars := "", _Init := true)
 					_Objects[ObjName] := _v
 				Else If _v is not Number
 				{
-					_v := """" _v """"
-				,	HidString := "&_String" (ObjCount(_Elements) + 1) "_&"
-				,	_Elements[HidString] := _v
-				,	_v := HidString
+					If (_oMatch[_i] != "")
+					{
+						_v := """" _v """"
+					,	HidString := "&_String" (ObjCount(_Elements) + 1) "_&"
+					,	_Elements[HidString] := _v
+					,	_v := HidString
+					}
 				}
 				RepString .= (IsObject(_v) ? """<~#" ObjName "#~>""" : _v) ", "
 			}
@@ -232,9 +236,9 @@ Eval($x, _CustomVars := "", _Init := true)
 							_Match2 := RestoreElements(_Match2, _Elements)
 						,	_Params := {}
 						,	FuncPars := ExprGetPars(_Match2)
-						,	EvalResult := Eval(_Match2, _CustomVars, false)
-							For i, v in EvalResult
-								_Params[i] := {Name: FuncPars[i], Value: v}
+						,	EvalResult := Eval(_Match2, _CustomVars)
+							Loop, % EvalResult.Length()
+								_Params[A_Index] := {Name: FuncPars[A_Index], Value: EvalResult[A_Index], IsMissing: !EvalResult.HasKey(A_Index)}
 							$y := Playback(TabIdx,,, _Params, _Match1)
 						,	$y := $y[1]
 						,	ObjName := RegExReplace(_Match, "\W", "_")
@@ -265,7 +269,7 @@ Eval($x, _CustomVars := "", _Init := true)
 			}
 			
 			_Match2 := RestoreElements(_Match2, _Elements)
-		,	_Params := Eval(_Match2, _CustomVars, false)
+		,	_Params := Eval(_Match2, _CustomVars)
 		,	$y := %_Match1%(_Params*)
 		,	ObjName := RegExReplace(_Match, "\W", "_")
 			If (IsObject($y))
@@ -313,6 +317,16 @@ Eval($x, _CustomVars := "", _Init := true)
 		$z[$i] := StrJoin($Result,, false, _Init)
 	}
 	
+	; If returning to the original call, remove missing expressions from the array
+	If (_Init)
+	{
+		$x := StrSplit($x, ",", " `t")
+		For _i, _v in $x
+		{
+			If (_v = "")
+				$z.Delete(_i)
+		}
+	}
 	return $z
 }
 

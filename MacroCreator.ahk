@@ -10775,6 +10775,8 @@ If (ListCount%A_List% = 0)
 	return
 If (DebugCheckError)
 	return
+If (InStr(TabGetText(TabSel, A_List), "()"))
+	return
 Gui, 1:Submit, NoHide
 Gui, chMacro:Submit, NoHide
 GoSub, SaveData

@@ -132,12 +132,15 @@
 			If (Type = cType48)
 			{
 				AssignParse(Step, VarName, Oper, VarValue)
+				
 				If (VarName = "")
 					VarName := Step, VarValue := UDFParams[ParamIdx].Value
-				Else
-					VarValue := (IsObject(UDFParams[ParamIdx].Value = "")) ? UDFParams[ParamIdx].Value
-							:	(UDFParams[ParamIdx].Value = "") ? VarValue : UDFParams[ParamIdx].Value
-				VarValue := (VarValue = "true") ? 1
+				Else If (UDFParams.HasKey(ParamIdx))
+					VarValue := (IsObject(UDFParams[ParamIdx].Value)) ? UDFParams[ParamIdx].Value
+							:	(UDFParams[ParamIdx].IsMissing) ? VarValue : UDFParams[ParamIdx].Value
+				
+				VarValue := (IsObject(VarValue)) ? VarValue
+						: (VarValue = "true") ? 1
 						: (VarValue = "false") ? 0
 						: Trim(VarValue, """")
 			,	ScopedParams[ParamIdx] := {ParamName: VarName
@@ -145,7 +148,7 @@
 										, Value: %VarName%
 										, NewValue: VarValue
 										, Type: (Target = "ByRef") ? "ByRef" : "Param"}
-				ParamIdx++
+			,	ParamIdx++
 				continue
 			}
 			If (Type = cType47)
@@ -720,11 +723,11 @@
 								LV_GetText(TargetFunc, A_Index, 3)
 								If ((Row_Type = cType47) && (TargetFunc = Action))
 								{
-									pbParams := {}
+									pbParams := {Null: ""}
 								,	FuncPars := ExprGetPars(VarValue)
 								,	EvalResult := Eval(VarValue, PlaybackVars[LoopDepth][mLoopIndex])
-									For _each, _value in EvalResult
-										pbParams[_each] := {Name: FuncPars[_each], Value: _value}
+									Loop, % EvalResult.Length()
+										pbParams[A_Index] := {Name: FuncPars[A_Index], Value: EvalResult[A_Index], IsMissing: !EvalResult.HasKey(A_Index)}
 									Func_Result := Playback(TabIdx,,, pbParams, Action)
 								,	VarValue := Func_Result[1]
 									Try
@@ -2501,6 +2504,6 @@ ExprGetPars(Expr)
 	Expr := RegExReplace(Expr, "\[.*?\]", "[A]")
 ,	Expr := RegExReplace(Expr, "\(([^()]++|(?R))*\)", "[P]")
 ,	Expr := RegExReplace(Expr, """.*?""", "[T]")
-,	ExprPars := StrSplit(Expr, ",", A_Space)
+,	ExprPars := StrSplit(Expr, ",", " `t")
 	return ExprPars
 }
