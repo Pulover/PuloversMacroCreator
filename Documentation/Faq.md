@@ -2,17 +2,17 @@
 
 **Tip**: Right-click on a Button in the Main Window or anywhere on a Command Window to display links to AHK online help.
 
-* [How do I start Recording / Playback?](#how-do-i-start-recording-/-playback)
+* [How do I start Recording / Playback?](#how-do-i-start-recording--playback)
 * [Can I import AHK scripts to Macro Creator and edit them?](#can-i-import-ahk-scripts-to-macro-creator-and-edit-them)
-* [How do create a random number/command?](#how-do-create-a-random-number/command)
+* [How do create a random number/command?](#how-do-create-a-random-numbercommand)
 * [Can I create Graphic User Interface (Gui) with Macro Creator?](#can-i-create-graphic-user-interface-(gui)-with-macro-creator)
 * [Can Macro Creator automate Firefox or Chrome as it does with Internet Explorer?](#can-macro-creator-automate-firefox-or-chrome-as-it-does-with-internet-explorer)
-* [Can I make playback go faster/slower?](#can-i-make-playback-go-faster/slower)
-* [Can I execute a custom action based on Pixel/Image search result?](#can-i-execute-a-custom-action-based-on-pixel/image-search-result)
+* [Can I make playback go faster/slower?](#can-i-make-playback-go-fasterslower)
+* [Can I execute a custom action based on Pixel/Image search result?](#can-i-execute-a-custom-action-based-on-pixelimage-search-result)
 * [Can I run a Macro in a timed interval?](#can-i-run-a-macro-in-a-timed-interval)
 * [Can I run a Macro in a background window?](#can-i-run-a-macro-in-a-background-window)
 * [Can I schedule a Macro to run when I want?](#can-i-schedule-a-macro-to-run-when-i-want)
-* [How do I increment/add a value in a variable on every loop iteration?](#how-do-i-increment/add-a-value-in-a-variable-on-every-loop-iteration?)
+* [How do I increment/add a value in a variable on every loop iteration?](#how-do-i-incrementadd-a-value-in-a-variable-on-every-loop-iteration?)
 * [Is Macro Creator Portable?](#is-macro-creator-portable)
 * [Which command line parameters are supported?](#which-command-line-parameters-are-supported)
 * [Can I execute an action every time a certain event occurs?](#can-i-execute-an-action-every-time-a-certain-event-occurs)
@@ -25,11 +25,11 @@
 * [Can I record keys when pressed down and released separately?](#can-i-record-keys-when-pressed-down-and-released-separately)
 * [Why won't the mouse stay where I recorded it when I play a Macro?](#why-wont-the-mouse-stay-where-i-recorded-it-when-i-play-a-macro)
 * [Can I keep all Hotkeys always active?](#can-i-keep-all-hotkeys-always-active)
-* [Can I use another AHK script to record / play Macros in PMC?](#can-i-use-another-ahk-script-to-record-/-play-macros-in-pmc)
+* [Can I use another AHK script to record / play Macros in PMC?](#can-i-use-another-ahk-script-to-record--play-macros-in-pmc)
 * [Can I use Functions from my own AutoHotkey Scripts?](#can-i-use-functions-from-my-own-autohotkey-scripts)
 * [Can I make the Playback Hotkeys work on a certain windown only?](#can-i-make-the-playback-hotkeys-work-on-a-certain-windown-only)
 * [Why am I getting wrong mouse coordinates?](#why-am-i-getting-wrong-mouse-coordinates)
-* [I can run the program but Macros won't work / cannot take screenshots.](#i-can-run-the-program-but-macros-wont-work-/-cannot-take-screenshots.)
+* [I can run the program but Macros won't work / cannot take screenshots.](#i-can-run-the-program-but-macros-wont-work--cannot-take-screenshots.)
 * [I'm getting "Error: Invalid hotkey." when I try to launch the program.](#im-getting-error:-invalid-hotkey-when-i-try-to-launch-the-program.)
 
 ### How do I start Recording / Playback?
