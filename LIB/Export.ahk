@@ -122,9 +122,9 @@
 				Step := StrReplace(Step, "``n", "`n")
 			,	Step := "`n(LTrim`n" Step "`n)"
 			}
-			Step := StrReplace(Step, "```,", "`````,")
-		,	Window := StrReplace(Window, "```,", "`````,")
-		,	RowData := "`n" Type ", " Target ", " Window ", " Step ((DelayX > 0) ? ", " DelayX : "")
+			If (InStr(Window, "% ") != 1)
+				Window := StrReplace(Window, "```,", "`````,")
+			RowData := "`n" Type ", " Target ", " Window ", " Step ((DelayX > 0) ? ", " DelayX : "")
 			If (Comment != "")
 				RowData .= "  " "; " Comment
 			If ((TimesX > 1) || InStr(TimesX, "%"))

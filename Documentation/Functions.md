@@ -13,7 +13,7 @@
 
 Similarly to Variables it's also possible to do function calls and use their outputs in Playback. A function is similar to a subroutine (like calling a macro tab with Gosub) except that it can accept parameters (inputs) from its caller. In addition, a function may optionally return a value to its caller. PMC supports most every AHK built-in function and, just like in AHK scripts, you can define your own functions, with return values, ByRef parameters, local/global/static variables. Even recursive calls are supported. A detailed explanation can be found at [AHK documentation](http://autohotkey.com/docs/Functions.htm)
 
-## Using Functions
+## Calling Functions
 
 To call a function, you can go to the *Functions* command window and select the name of the function to be called in the combobox. Type the parameters (if any) in the last field separated by commas in AHK Expressions syntax (do not enclose variables in percent signs and enclose literal strings in quotes). You can optionally type in a variable to receive the functions return value.
 
@@ -41,8 +41,22 @@ You can also call object methods inside a command's parameter:
 ## User-Defined Functions
 
 You can create your own functions inside PMC. They should work consistent with user-defined functions in AHK in most cases. That means you can execute commands inside them, create and change variables and objects and, most important, return values from it to be used in your scripts. ByRef parameters are supported, as well as local/global/static variables and recursive calls.  
-To create a function, click the *Create Function* button on the toolbar. You'll be prompted to choose a name for your function. In the same you window you can define the scope (local or global), a few parameters with optional default values for them and global/local and static variables. After pressing OK a new tab will be created as a function, where you can add more parameters using the *Add Parameter* button and the commands below the Function line.  
-Use the *Add Return* button to define return values for the function. The return value must be an [expression](http://autohotkey.com/docs/Variables.htm#Expressions). To return more than one value, use ByRef parameters or an [Array/Object](p6-Variables.html#assigning-and-retrieving-arrays).  
+
+To create a function, click the *Create Function* button on the toolbar. You'll be prompted to choose a name for your function. In the same you window you can define the scope (local or global), a few parameters with optional default values for them and global/local and static variables. After pressing OK a new tab will be created as a function, where you can add more parameters using the *Add Parameter* button and the commands below the Function line. You can also go to Function menu > Convert Macro To Function (the selected macro must not contain any Labe, Goto or Gosub commands).  
+
+### Parameters
+
+In the *Add Parameters* window you can insert more parameters with default values. Adding a default value to a parameter makes it optional, which means it can be skipped in the call and the default value will be used.  
+If one parameter is made optional, all following parameters must be optional too.  
+A parameter default valuemust be one of the following: `True`, `False`, a string or a number (integer or float). To set a blank string as the default value, select `_blank` in the list.  
+No need to quote strings. Variables are not allowed as default values.  
+Check the *[ByRef](http://autohotkey.com/docs/Functions.htm#ByRef)* option to make the parameter behave as an alias for the variable passed in from the caller.
+
+### Return
+
+Use the *Add Return* button to define return values for the function.  
+The return value must be an [expression](http://autohotkey.com/docs/Variables.htm#Expressions).  
+To return more than one value, use ByRef parameters or an [Array/Object](p6-Variables.html#assigning-and-retrieving-arrays).  
 
 Download Example: [User-Defined Functions](Examples/UserFunctions.pmc).
 Download Example: [Call array element using a random function](Examples/RandomFunction.pmc).
