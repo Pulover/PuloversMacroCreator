@@ -1417,27 +1417,3 @@
 	WinWaitClose	Ooffahrt bis der spezifizéierter Fënster gëtt et net.
 	WinWaitNotActive	Ooffahrt bis der spezifizéierter Fënster net aktiv ass.
 	Zip / UnZip	Zesummenzéien oder eent oder Hoodie Fichieren uncompress.
-	WinExist	Kontrollen ob der spezifizéierter Fënster existéiert.
-	WinGet	Retrieves der spezifizéierter Fënster d'eenzegaarteg ID, Prozess ID, Prozess Numm, oder eng Lëscht vun hirer Kontrollen. Et kann och eng Lëscht vun all Fënsteren passende der spezifizéierter Critèren recuperéieren.
-	WinGetClass	Retrieves der spezifizéierter Fënster senger Klass Numm.
-	WinGetPos	Retrieves der Positioun an Gréisst vun der spezifizéierter Fënster.
-	WinGetText	Retrieves den Text aus der spezifizéierter Fënster.
-	WinGetTitle	Retrieves den Titel vun der spezifizéierter Fënster.
-	WinHide	Verstoppt der spezifizéierter Fënster.
-	WinHttpDownloadToFile	Erofgelueden een oder méi Fichier'en aus dem Internet.
-	WinKill	Forces der spezifizéierter Fënster zoumaachen.
-	WinMaximize	Enlarges der spezifizéierter Fënster fir seng maximal Gréisst.
-	WinMenuSelectItem	Invokes engem Menüvun aus der Menü Bar vun der spezifizéierter Fënster.
-	WinMinimize	Zesummen der spezifizéierter Fënster an engem Knäppchen op de Aufgab verhënnert.
-	WinMinimizeAll	Louhecke all Fënsteren.
-	WinMinimizeAllUndo	Reverses den Effet vun engem fréiere WinMinimizeAll.
-	WinMove	Ännerungen an der Positioun, an / oder Gréisst vun der spezifizéierter Fënster.
-	WinRestore	Unminimizes oder unmaximizes der spezifizéierter Fënster wann et minimal oder beschwéieren ass.
-	WinSet	Mécht eng Rei vun Ännerungen an der spezifizéierter Fënster, wéi "ëmmer op erop" an Transparenz.
-	WinSetTitle	Ännerungen den Titel vun der spezifizéierter Fënster.
-	WinShow	Unhides der spezifizéierter Fënster.
-	WinWait	Ooffahrt bis der spezifizéierter Fënster existéiert.
-	WinWaitActive	Ooffahrt bis der spezifizéierter Fënster aktiv ass.
-	WinWaitClose	Ooffahrt bis der spezifizéierter Fënster gëtt et net.
-	WinWaitNotActive	Ooffahrt bis der spezifizéierter Fënster net aktiv ass.
-	Zip / UnZip	Zesummenzéien oder eent oder Hoodie Fichieren uncompress.

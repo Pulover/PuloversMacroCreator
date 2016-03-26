@@ -1417,27 +1417,3 @@
 	WinWaitClose	Waits zehaztutako leiho ez arte existitzen.
 	WinWaitNotActive	Waits zehaztutako leiho ez da aktiboa arte.
 	Zip / UnZip	Konprimatu edo zip fitxategi bat edo gehiago deskonprimitu.
-	WinExist	Egiaztatzen zehaztutako leiho existitzen bada.
-	WinGet	Zehaztutako leiho ikastetxerako ID berezia, prozesu ID, prozesuaren izena, edo bere kontrolak zerrenda bat eskuratzen du. Era berean, zehaztutako irizpideak betetzen leihoen zerrenda bat berreskuratu ahal.
-	WinGetClass	Zehaztutako leiho klase name eskuratzen du.
-	WinGetPos	Posizioa eta tamaina zehaztutako leihoaren eskuratzen du.
-	WinGetText	Zehaztutako leiho batetik testu eskuratzen du.
-	WinGetTitle	Zehaztutako leiho titulua eskuratzen du.
-	WinHide	Zehaztutako leiho ezkutatzen.
-	WinHttpDownloadToFile	Downloads bat edo Internetetik fitxategiak gehiago.
-	WinKill	Zehaztutako leiho ixteko indarrak.
-	WinMaximize	Zehaztu bere tamaina gehienez leihoa handitzen du.
-	WinMenuSelectItem	Menu zehaztutako leihoaren barratik menu-elementu bat deitzen du.
-	WinMinimize	Zehaztutako leiho kolapsoak botoi bat atentzioa orrian sartu.
-	WinMinimizeAll	Leiho guztiak gutxitzen.
-	WinMinimizeAllUndo	Aurreko WinMinimizeAll bat ekintza desegiten.
-	WinMove	Posizioa eta / edo tamaina zehaztutako leihoaren aldatzen.
-	WinRestore	Unminimizes edo zehaztutako leiho da txikitzean edo handitzen bada unmaximizes.
-	WinSet	Zehaztutako leiho aldaketak, hala nola, "beti gainean" eta gardentasuna barietate bat egiten du.
-	WinSetTitle	Zehaztutako leiho titulua aldatzen.
-	WinShow	Zehaztutako leiho unhides.
-	WinWait	Waits zehaztutako leiho existitzen arte.
-	WinWaitActive	Waits zehaztutako leiho aktibatu arte.
-	WinWaitClose	Waits zehaztutako leiho ez arte existitzen.
-	WinWaitNotActive	Waits zehaztutako leiho ez da aktiboa arte.
-	Zip / UnZip	Konprimatu edo zip fitxategi bat edo gehiago deskonprimitu.

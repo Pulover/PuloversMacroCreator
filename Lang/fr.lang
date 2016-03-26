@@ -1417,27 +1417,3 @@
 	WinWaitClose	Attend que la fenêtre spécifiée n'existe pas.
 	WinWaitNotActive	Attend que la fenêtre spécifiée n'est pas active.
 	Zip / UnZip	Compresser ou décompresser un ou plusieurs fichiers zip.
-	WinExist	Vérifie si la fenêtre spécifiée existe.
-	WinGet	Récupère l'ID unique de la fenêtre spécifiée, ID du processus, le nom de processus ou d'une liste de ses contrôles. Il peut également récupérer une liste de toutes les fenêtres correspondant aux critères spécifiés.
-	WinGetClass	Récupère le nom de classe de la fenêtre spécifiée.
-	WinGetPos	Extrait la position et la taille de la fenêtre spécifiée.
-	WinGetText	Récupère le texte de la fenêtre spécifiée.
-	WinGetTitle	Récupère le titre de la fenêtre spécifiée.
-	WinHide	Masque la fenêtre spécifiée.
-	WinHttpDownloadToFile	Téléchargements un ou plusieurs fichiers à partir d'Internet.
-	WinKill	Force la fenêtre spécifiée pour fermer.
-	WinMaximize	Agrandit la fenêtre spécifiée à sa taille maximale.
-	WinMenuSelectItem	Appelle un élément de menu dans la barre de menus de la fenêtre spécifiée.
-	WinMinimize	Réduit la fenêtre spécifiée en un bouton sur la barre de tâches.
-	WinMinimizeAll	Réduit toutes les fenêtres.
-	WinMinimizeAllUndo	Inverse l'effet d'une WinMinimizeAll précédente.
-	WinMove	Les changements de la position et / ou la taille de la fenêtre spécifiée.
-	WinRestore	Unminimizes ou unmaximizes la fenêtre spécifiée si elle est réduite ou agrandie.
-	WinSet	Fait une variété de changements à la fenêtre spécifiée, comme "toujours au top" et de transparence.
-	WinSetTitle	Modifie le titre de la fenêtre spécifiée.
-	WinShow	Unhides la fenêtre spécifiée.
-	WinWait	Attend que la fenêtre spécifiée existe.
-	WinWaitActive	Attend que la fenêtre spécifiée est active.
-	WinWaitClose	Attend que la fenêtre spécifiée n'existe pas.
-	WinWaitNotActive	Attend que la fenêtre spécifiée n'est pas active.
-	Zip / UnZip	Compresser ou décompresser un ou plusieurs fichiers zip.

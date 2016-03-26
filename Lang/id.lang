@@ -1417,27 +1417,3 @@
 	WinWaitClose	Menunggu sampai jendela yang ditentukan tidak ada.
 	WinWaitNotActive	Menunggu sampai jendela yang ditentukan tidak aktif.
 	Zip / UnZip	Kompres atau uncompress satu atau lebih file zip.
-	WinExist	Cek jika jendela yang ditentukan ada.
-	WinGet	Mengambil jendela yang ditentukan ID unik, proses ID, nama proses, atau daftar kontrol nya. Hal ini juga dapat mengambil daftar semua jendela yang cocok dengan kriteria yang ditentukan.
-	WinGetClass	Mengambil nama kelas jendela yang ditentukan itu.
-	WinGetPos	Mengambil posisi dan ukuran jendela yang ditentukan.
-	WinGetText	Mengambil teks dari jendela yang ditentukan.
-	WinGetTitle	Mengambil judul dari jendela yang ditentukan.
-	WinHide	Menyembunyikan jendela yang ditentukan.
-	WinHttpDownloadToFile	Download satu atau lebih file dari internet.
-	WinKill	Memaksa jendela yang ditentukan untuk menutup.
-	WinMaximize	Memperbesar jendela yang ditentukan untuk ukuran maksimumnya.
-	WinMenuSelectItem	Memanggil item menu dari menu bar dari jendela yang ditentukan.
-	WinMinimize	Runtuh jendela tertentu ke sebuah tombol pada task bar.
-	WinMinimizeAll	Meminimalkan semua jendela.
-	WinMinimizeAllUndo	Membalikkan efek dari WinMinimizeAll sebelumnya.
-	WinMove	Perubahan posisi dan / atau ukuran jendela yang ditentukan.
-	WinRestore	Unminimizes atau unmaximizes jendela tertentu jika itu diminimalkan atau dimaksimalkan.
-	WinSet	Membuat berbagai perubahan ke jendela tertentu, seperti "selalu di atas" dan transparansi.
-	WinSetTitle	Mengubah judul jendela yang ditentukan.
-	WinShow	Unhides jendela yang ditentukan.
-	WinWait	Menunggu sampai jendela yang ditentukan ada.
-	WinWaitActive	Menunggu sampai jendela yang ditentukan aktif.
-	WinWaitClose	Menunggu sampai jendela yang ditentukan tidak ada.
-	WinWaitNotActive	Menunggu sampai jendela yang ditentukan tidak aktif.
-	Zip / UnZip	Kompres atau uncompress satu atau lebih file zip.

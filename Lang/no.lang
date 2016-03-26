@@ -1417,27 +1417,3 @@
 	WinWaitClose	Venter til den angitte vinduet ikke eksisterer.
 	WinWaitNotActive	Venter til den angitte vinduet er ikke aktiv.
 	Zip / UnZip	Komprimere eller dekomprimere en eller flere zip-filer.
-	WinExist	Sjekker om den angitte vinduet eksisterer.
-	WinGet	Henter det angitte vinduet unike ID, prosess-ID, prosess navn, eller en liste over sine kontroller. Det kan også hente en liste over alle vinduer som samsvarer med de angitte kriteriene.
-	WinGetClass	Henter det angitte vinduet klasse navn.
-	WinGetPos	Henter posisjonen og størrelsen på det angitte vinduet.
-	WinGetText	Henter tekst fra det angitte vinduet.
-	WinGetTitle	Henter tittelen på det angitte vinduet.
-	WinHide	Skjuler spesifisert vinduet.
-	WinHttpDownloadToFile	Nedlastinger en eller flere filer fra Internett.
-	WinKill	Tvinger spesifisert vinduet for å lukke.
-	WinMaximize	Forstørrer den angitte vinduet til sin maksimale størrelse.
-	WinMenuSelectItem	Påkaller et menyvalg fra menylinjen i det angitte vinduet.
-	WinMinimize	Skjuler det angitte vinduet inn en knapp på oppgavelinjen.
-	WinMinimizeAll	Minimerer alle vinduer.
-	WinMinimizeAllUndo	Reverserer effekten av en tidligere WinMinimizeAll.
-	WinMove	Endrer stilling og / eller størrelsen på det angitte vinduet.
-	WinRestore	Unminimizes eller unmaximizes det angitte vinduet hvis det er minimert eller maksimert.
-	WinSet	Gjør en rekke endringer i den angitte vinduet, som "alltid på toppen" og åpenhet.
-	WinSetTitle	Endrer tittelen på den angitte vinduet.
-	WinShow	Ta frem den angitte vinduet.
-	WinWait	Venter til den angitte vinduet eksisterer.
-	WinWaitActive	Venter til den angitte vinduet er aktivt.
-	WinWaitClose	Venter til den angitte vinduet ikke eksisterer.
-	WinWaitNotActive	Venter til den angitte vinduet er ikke aktiv.
-	Zip / UnZip	Komprimere eller dekomprimere en eller flere zip-filer.

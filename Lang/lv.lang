@@ -1417,27 +1417,3 @@
 	WinWaitClose	Gaida, kamēr norādīts logs neeksistē.
 	WinWaitNotActive	Gaida, kamēr norādīto logs nav aktīvs.
 	Zip / UnZip	Komprese vai atspiest vienu vai vairākus zip failus.
-	WinExist	Pārbauda, ​​vai pastāv norādītais logs.
-	WinGet	Iegūst no norādītajā loga unikālo ID, procesa ID, procesa nosaukums, vai sarakstu ar kontroli. To var iegūt arī sarakstu ar visiem logiem kas atbilst noteiktajiem kritērijiem.
-	WinGetClass	Iegūst no norādītajā loga klases nosaukumu.
-	WinGetPos	Izgūst pozīciju un lielumu norādīto loga.
-	WinGetText	Izgūst tekstu no norādītā loga.
-	WinGetTitle	Izgūst titulu norādīto loga.
-	WinHide	Paslēpj norādīto logu.
-	WinHttpDownloadToFile	Lejupielādes vienu vai vairākus failus no interneta.
-	WinKill	Liek norādītais logs slēgt.
-	WinMaximize	Palielina norādīto logu tās maksimālo izmēru.
-	WinMenuSelectItem	Atsaucas uz izvēlnes vienumu no izvēlnes joslā norādītā loga.
-	WinMinimize	Sabrūk norādīto logu pogu uz uzdevumu joslā.
-	WinMinimizeAll	Samazina visus logus.
-	WinMinimizeAllUndo	Apvērš efektu iepriekšējā WinMinimizeAll.
-	WinMove	Maina stāvokli un / vai izmēru no norādītās loga.
-	WinRestore	Unminimizes vai unmaximizes norādīto logu, ja tas ir maksimāli samazināti vai maksimālas.
-	WinSet	Padara dažādus izmaiņām norādītajā logā, piemēram, "vienmēr uz augšu" un pārredzamību.
-	WinSetTitle	Maina nosaukumu norādīto loga.
-	WinShow	Unhides norādīto logu.
-	WinWait	Gaida, kamēr pastāv norādītais logs.
-	WinWaitActive	Gaida, kamēr ir aktīvs norādītais logs.
-	WinWaitClose	Gaida, kamēr norādīts logs neeksistē.
-	WinWaitNotActive	Gaida, kamēr norādīto logs nav aktīvs.
-	Zip / UnZip	Komprese vai atspiest vienu vai vairākus zip failus.

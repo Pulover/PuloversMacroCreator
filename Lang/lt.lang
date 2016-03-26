@@ -1417,27 +1417,3 @@
 	WinWaitClose	Laukia, kol nurodyta langas neegzistuoja.
 	WinWaitNotActive	Laukia, kol nurodyta langas nėra aktyvus.
 	Zip / UnZip	Suspausti ar išpakuoti vieną ar daugiau zip failus.
-	WinExist	Patikrina, ar nurodyta langas egzistuoja.
-	WinGet	Nuskaito nurodyto lango unikalų ID, proceso ID, proceso pavadinimas, ar jos kontrolę, sąrašą. Jis taip pat gali gauti visų langų atitikimo nurodytus kriterijus, sąrašą.
-	WinGetClass	Nuskaito nurodyto lango klasės vardą.
-	WinGetPos	Nuskaito padėtį ir dydį nurodytą langą.
-	WinGetText	Nuskaito tekstą iš nurodyto lange.
-	WinGetTitle	Nuskaito į nurodytą lango pavadinimą.
-	WinHide	Paslepia nurodytą langą.
-	WinHttpDownloadToFile	Siuntiniai Vienas ar keli failai iš interneto.
-	WinKill	Verčia nurodyta langą uždaryti.
-	WinMaximize	Padidina nurodytą langą į maksimalų dydį.
-	WinMenuSelectItem	Remiasi meniu punktą iš meniu juostos, nurodytos lange.
-	WinMinimize	Išnyksta nurodytą langą į mygtuko užduočių juostoje.
-	WinMinimizeAll	Sumažina visus langus.
-	WinMinimizeAllUndo	Apsisuks ankstesnio WinMinimizeAll poveikį.
-	WinMove	Keičia poziciją ir / ar dydį nurodytą lango.
-	WinRestore	Unminimizes arba unmaximizes nurodytą langą, jei jis būtų kuo mažesnis arba maksimaliai.
-	WinSet	Modelių pakeitimų nurodytą lange, pavyzdžiui, "Visada viršuje" ir skaidrumo įvairovė.
-	WinSetTitle	Keičia nurodytą lango pavadinimą.
-	WinShow	Unhides nurodytą langą.
-	WinWait	Laukia, kol nurodyta langas egzistuoja.
-	WinWaitActive	Laukia, kol nurodyta langas yra aktyvus.
-	WinWaitClose	Laukia, kol nurodyta langas neegzistuoja.
-	WinWaitNotActive	Laukia, kol nurodyta langas nėra aktyvus.
-	Zip / UnZip	Suspausti ar išpakuoti vieną ar daugiau zip failus.

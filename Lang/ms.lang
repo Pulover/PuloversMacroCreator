@@ -1417,27 +1417,3 @@
 	WinWaitClose	Menunggu sehingga tingkap yang dinyatakan tidak wujud.
 	WinWaitNotActive	Menunggu sehingga tingkap yang dinyatakan tidak aktif.
 	Zip / UnZip	Memampatkan atau uncompress satu atau lebih fail zip.
-	WinExist	Pemeriksaan jika tingkap yang dinyatakan wujud.
-	WinGet	Semula ID tingkap tertentu yang unik, proses ID, nama proses, atau senarai kawalan itu. Ia juga boleh dapatkan senarai semua tetingkap yang sepadan dengan kriteria yang ditetapkan.
-	WinGetClass	Mendapatkan semula nama kelas tetingkap yang dinyatakan itu.
-	WinGetPos	Mendapatkan semula kedudukan dan saiz tingkap yang ditetapkan.
-	WinGetText	Mendapatkan semula teks dari tingkap yang ditetapkan.
-	WinGetTitle	Mendapatkan semula gelaran tingkap yang ditetapkan.
-	WinHide	Menyembunyikan tetingkap yang dinyatakan.
-	WinHttpDownloadToFile	Muat turun satu atau lebih fail dari Internet.
-	WinKill	Angkatan tingkap yang dinyatakan untuk menutup.
-	WinMaximize	Membesarkan tetingkap yang dinyatakan kepada saiz maksimum.
-	WinMenuSelectItem	Menyembah item menu dari menu bar tetingkap tertentu.
-	WinMinimize	Runtuh tingkap yang ditetapkan ke dalam satu butang di bar tugas.
-	WinMinimizeAll	Meminimumkan semua tingkap.
-	WinMinimizeAllUndo	Membalikkan kesan daripada WinMinimizeAll sebelumnya.
-	WinMove	Perubahan kedudukan dan / atau saiz tetingkap tertentu.
-	WinRestore	Unminimizes atau unmaximizes tingkap yang ditetapkan jika ia dikurangkan atau dimaksimumkan.
-	WinSet	Membuat pelbagai perubahan kepada tingkap yang dinyatakan, seperti "sentiasa di atas" dan ketelusan.
-	WinSetTitle	Perubahan tajuk tetingkap yang dinyatakan.
-	WinShow	Unhides tingkap yang ditetapkan.
-	WinWait	Menunggu sehingga tingkap yang dinyatakan wujud.
-	WinWaitActive	Menunggu sehingga tingkap yang dinyatakan adalah aktif.
-	WinWaitClose	Menunggu sehingga tingkap yang dinyatakan tidak wujud.
-	WinWaitNotActive	Menunggu sehingga tingkap yang dinyatakan tidak aktif.
-	Zip / UnZip	Memampatkan atau uncompress satu atau lebih fail zip.

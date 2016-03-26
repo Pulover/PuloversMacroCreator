@@ -1417,27 +1417,3 @@
 	WinWaitClose	Ootab, kuni määratud aken ei eksisteeri.
 	WinWaitNotActive	Ootab, kuni määratud aken ei ole aktiivne.
 	Zip / UnZip	Paki või pakkida ühe või mitme zip faile.
-	WinExist	Kontrollib, kas määratud aken olemas.
-	WinGet	Otsib määratud akna ainuomase protsessi ID protsessi nimi või nimekirja tema kontrolli. Samuti võib hankida nimekirja kõik aknad sobitamine määratud kriteeriumile.
-	WinGetClass	Otsib määratud akna klassi nimi.
-	WinGetPos	Otsib asukoht ja suurus määratud akna.
-	WinGetText	Otsib teksti täpsustada aknas.
-	WinGetTitle	Otsib pealkiri määratud akna.
-	WinHide	Peidab määratud akna.
-	WinHttpDownloadToFile	Allalaadimiste üks või mitu faili internetist.
-	WinKill	Sunnib määratud akna sulgeda.
-	WinMaximize	Suurendab määratud akna maksimaalse suuruse.
-	WinMenuSelectItem	Käivitab menüüpunktini menüüribalt on määratud akna.
-	WinMinimize	Variseb määratud akna nuppu tegumiribal.
-	WinMinimizeAll	Vähendab kõik aknad.
-	WinMinimizeAllUndo	Pöörab mõju eelmise WinMinimizeAll.
-	WinMove	Muudab asukoha ja / või suuruse määratud akna.
-	WinRestore	Unminimizes või unmaximizes määratud aken, kui see on minimaalne või maksimaalne.
-	WinSet	Teeb erinevaid muudatusi määratud aken, nagu "alati peal" ja läbipaistvust.
-	WinSetTitle	Muudab pealkiri määratud akna.
-	WinShow	Unhides määratud akna.
-	WinWait	Waits kuni määratud akna olemas.
-	WinWaitActive	Ootab, kuni määratud aken on aktiivne.
-	WinWaitClose	Ootab, kuni määratud aken ei eksisteeri.
-	WinWaitNotActive	Ootab, kuni määratud aken ei ole aktiivne.
-	Zip / UnZip	Paki või pakkida ühe või mitme zip faile.

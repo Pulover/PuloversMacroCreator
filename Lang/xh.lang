@@ -1417,27 +1417,3 @@
 	WinWaitClose	Ilindela de ayisekho window ekhankanyiweyo.
 	WinWaitNotActive	Ulinda de window elikhankanyiweyo esebenzayo.
 	Zip / UnZip	Compress okanye ulwenziwo iifayile enye okanye ngaphezulu zip.
-	WinExist	Indlela yokukhangela ukuba window ekhankanyiweyo ikhona.
-	WinGet	Kwakhona ID window ekhankanyiweyo esikhethekileyo, inkqubo ID, igama inkqubo, okanye uluhlu ulawulo lwayo. Kwakhona ukufumana uluhlu zonke iiwindow nasekulinganiseni iikhrayitheriya ezicaciswe.
-	WinGetClass	Kwakhona igama leklasi window ekhankanyiweyo ngayo.
-	WinGetPos	Kwakhona indawo nobukhulu window ekhankanyiweyo.
-	WinGetText	Kwakhona okubhaliweyo kwi window ekhankanyiweyo.
-	WinGetTitle	Kwakhona itayitile window ekhankanyiweyo.
-	WinHide	Ufihla window ekhankanyiweyo.
-	WinHttpDownloadToFile	Ukopisho okanye iifayile ngaphezulu Internet.
-	WinKill	Inyanzela window ekhankanyiweyo ukuvala.
-	WinMaximize	Uyanaba window ekhankanyiweyo kubungakanani bayo ubuninzi.
-	WinMenuSelectItem	Usebenzisa le umba we menu bar yemenu ye window ekhankanyiweyo.
-	WinMinimize	Siyabutyaka le window ekhankanyiweyo ibe iqhosha kwi bar yomsebenzi.
-	WinMinimizeAll	Kucutha zonke iifestile.
-	WinMinimizeAllUndo	Simo okusisiphumo WinMinimizeAll yangaphambili.
-	WinMove	Itshintsha isikhundla kunye / okanye ubungakanani window ekhankanyiweyo.
-	WinRestore	Unminimizes okanye unmaximizes i window ekhankanyiweyo ukuba inciphisiwe okanye kangangoko.
-	WinSet	Yenza iintlobo utshintsho window elikhankanyiweyo, ezifana "usoloko top" kunye elubala.
-	WinSetTitle	Itshintsha itayitile window ekhankanyiweyo.
-	WinShow	Unhides window ekhankanyiweyo.
-	WinWait	Ulinda de window ekhankanyiweyo ikhona.
-	WinWaitActive	Ulinda de window echaziweyo esebenzayo.
-	WinWaitClose	Ilindela de ayisekho window ekhankanyiweyo.
-	WinWaitNotActive	Ulinda de window elikhankanyiweyo esebenzayo.
-	Zip / UnZip	Compress okanye ulwenziwo iifayile enye okanye ngaphezulu zip.

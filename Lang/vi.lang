@@ -1417,27 +1417,3 @@
 	WinWaitClose	Đợi cho đến khi cửa sổ chỉ định không tồn tại.
 	WinWaitNotActive	Đợi cho đến khi cửa sổ chỉ định là không hoạt động.
 	Zip / UnZip	Nén hay giải nén một hoặc nhiều tập tin zip.
-	WinExist	Kiểm tra nếu các cửa sổ chỉ định tồn tại.
-	WinGet	Lấy ID của cửa sổ chỉ định của độc đáo, quá trình ID, tên quá trình, hoặc một danh sách các điều khiển của nó. Nó cũng có thể lấy một danh sách của tất cả các cửa sổ phù hợp với tiêu chuẩn quy định.
-	WinGetClass	Lấy tên lớp cửa sổ chỉ định của.
-	WinGetPos	Lấy vị trí và kích thước của cửa sổ chỉ định.
-	WinGetText	Lấy văn bản từ cửa sổ xác định.
-	WinGetTitle	Lấy tiêu đề của cửa sổ chỉ định.
-	WinHide	Ẩn các cửa sổ chỉ định.
-	WinHttpDownloadToFile	Tải một hoặc nhiều tập tin từ Internet.
-	WinKill	Buộc các cửa sổ chỉ định đóng cửa.
-	WinMaximize	Phóng to cửa sổ chỉ định kích thước tối đa của nó.
-	WinMenuSelectItem	Gọi một mục trình đơn từ thanh menu của cửa sổ chỉ định.
-	WinMinimize	Lấp các cửa sổ chỉ định vào một nút trên thanh tác vụ.
-	WinMinimizeAll	Thu nhỏ tất cả các cửa sổ.
-	WinMinimizeAllUndo	Đảo ngược tác dụng của một WinMinimizeAll trước.
-	WinMove	Thay đổi vị trí và / hoặc kích thước của cửa sổ chỉ định.
-	WinRestore	Unminimizes hoặc unmaximizes cửa sổ xác định nếu nó được giảm thiểu hoặc tối đa.
-	WinSet	Làm cho một loạt các thay đổi trong cửa sổ chỉ định, chẳng hạn như "luôn luôn trên đầu trang" và minh bạch.
-	WinSetTitle	Thay đổi tiêu đề của cửa sổ chỉ định.
-	WinShow	Unhides cửa sổ chỉ định.
-	WinWait	Đợi cho đến khi cửa sổ chỉ định tồn tại.
-	WinWaitActive	Đợi cho đến khi cửa sổ chỉ định đang hoạt động.
-	WinWaitClose	Đợi cho đến khi cửa sổ chỉ định không tồn tại.
-	WinWaitNotActive	Đợi cho đến khi cửa sổ chỉ định là không hoạt động.
-	Zip / UnZip	Nén hay giải nén một hoặc nhiều tập tin zip.

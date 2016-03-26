@@ -1417,27 +1417,3 @@
 	WinWaitClose	Așteaptă până când fereastra specificată nu există.
 	WinWaitNotActive	Așteaptă până când fereastra specificată nu este activă.
 	Zip / UnZip	Comprime sau decomprima unul sau mai multe fișiere zip.
-	WinExist	Verifică dacă există fereastra specificată.
-	WinGet	ID-ul Recuperează fereastra specificat unic, procesul de ID-ul, numele de proces, sau o listă a controalelor sale. Acesta poate prelua, de asemenea, o listă a tuturor ferestrelor care corespund criteriilor specificate.
-	WinGetClass	Extrage numele clasei fereastra specificată a lui.
-	WinGetPos	Extrage poziția și dimensiunea ferestrei specificate.
-	WinGetText	Recuperează textul din fereastra specificat.
-	WinGetTitle	Recuperează titlul ferestrei specificate.
-	WinHide	Fereastra specificată ascunde.
-	WinHttpDownloadToFile	Download-uri unul sau mai multe fișiere de pe Internet.
-	WinKill	Forțele specificate fereastra pentru a închide.
-	WinMaximize	Largeste fereastra specificată la dimensiunea sa maximă.
-	WinMenuSelectItem	Invocă un element de meniu din bara de meniu a ferestrei specificate.
-	WinMinimize	Colapsa fereastra specificată într-un buton de pe bara de sarcini.
-	WinMinimizeAll	Minimizează toate ferestrele.
-	WinMinimizeAllUndo	Inversează efectul unei WinMinimizeAll anterioare.
-	WinMove	Modifică poziția și / sau dimensiunea ferestrei specificate.
-	WinRestore	Unminimizes sau unmaximizes fereastra specificată în cazul în care acesta este minimizată sau maximizată.
-	WinSet	Face o varietate de modificări la fereastra specificate, cum ar fi "întotdeauna pe partea de sus" și transparență.
-	WinSetTitle	Modifică titlul ferestrei specificate.
-	WinShow	Unhides fereastra specificată.
-	WinWait	Așteaptă până când există fereastra specificată.
-	WinWaitActive	Așteaptă până când fereastra specificată este activă.
-	WinWaitClose	Așteaptă până când fereastra specificată nu există.
-	WinWaitNotActive	Așteaptă până când fereastra specificată nu este activă.
-	Zip / UnZip	Comprime sau decomprima unul sau mai multe fișiere zip.

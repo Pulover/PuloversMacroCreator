@@ -1417,27 +1417,3 @@
 	WinWaitClose	Espera a que no existe la ventana especificada.
 	WinWaitNotActive	Espera hasta que la ventana especificada no está activo.
 	Zip / UnZip	Comprimir o descomprimir uno o más archivos zip.
-	WinExist	Comprueba si existe la ventana especificada.
-	WinGet	Recupera la ventana especificada única ID, ID de proceso, nombre del proceso, o una lista de sus controles. También puede obtener una lista de todas las ventanas que coinciden con los criterios especificados.
-	WinGetClass	Recupera el nombre de clase de ventana especificada.
-	WinGetPos	Recupera la posición y el tamaño de la ventana especificada.
-	WinGetText	Recupera el texto de la ventana especificada.
-	WinGetTitle	Recupera el título de la ventana especificada.
-	WinHide	Oculta la ventana especificada.
-	WinHttpDownloadToFile	Descargas uno o más archivos desde Internet.
-	WinKill	Fuerza la ventana especificada para cerrar.
-	WinMaximize	Amplía la ventana especificada con su tamaño máximo.
-	WinMenuSelectItem	Invoca una opción del menú de la barra de menús de la ventana especificada.
-	WinMinimize	Contrae la ventana especificada en un botón en la barra de tareas.
-	WinMinimizeAll	Minimiza todas las ventanas.
-	WinMinimizeAllUndo	Invierte el efecto de un WinMinimizeAll anterior.
-	WinMove	Los cambios de la posición y / o el tamaño de la ventana especificada.
-	WinRestore	Unminimizes o unmaximizes la ventana especificada si se minimiza o maximiza.
-	WinSet	Hace una variedad de cambios en la ventana especificada, como "siempre encima" y la transparencia.
-	WinSetTitle	Cambia el título de la ventana especificada.
-	WinShow	Unhides la ventana especificada.
-	WinWait	Espera a que existe la ventana especificada.
-	WinWaitActive	Espera a que la ventana especificada está activa.
-	WinWaitClose	Espera a que no existe la ventana especificada.
-	WinWaitNotActive	Espera hasta que la ventana especificada no está activo.
-	Zip / UnZip	Comprimir o descomprimir uno o más archivos zip.

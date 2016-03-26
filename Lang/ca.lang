@@ -1417,27 +1417,3 @@
 	WinWaitClose	Espera que no existeix la finestra especificada.
 	WinWaitNotActive	Espera fins que la finestra especificada no està actiu.
 	Zip / UnZip	Comprimir o descomprimir un o més arxius zip.
-	WinExist	Comprova si hi ha la finestra especificada.
-	WinGet	Recupera la finestra especificada única ID, ID de procés, nom del procés, o una llista dels seus controls. També pot obtenir una llista de totes les finestres que coincideixen amb els criteris especificats.
-	WinGetClass	Recupera el nom de classe de finestra especificada.
-	WinGetPos	Recupera la posició i la mida de la finestra especificada.
-	WinGetText	Recupera el text de la finestra especificada.
-	WinGetTitle	Recupera el títol de la finestra especificada.
-	WinHide	Oculta la finestra especificada.
-	WinHttpDownloadToFile	Descàrregues un o més arxius des d'Internet.
-	WinKill	Força la finestra especificada per tancar.
-	WinMaximize	Amplia la finestra especificada amb la seva mida màxim.
-	WinMenuSelectItem	Invoca una opció del menú de la barra de menús de la finestra especificada.
-	WinMinimize	Contreu la finestra especificada en un botó a la barra de tasques.
-	WinMinimizeAll	Minimitza totes les finestres.
-	WinMinimizeAllUndo	Inverteix l'efecte d'un WinMinimizeAll anterior.
-	WinMove	Els canvis de la posició i / o la mida de la finestra especificada.
-	WinRestore	Unminimizes o unmaximizes la finestra especificada si es minimitza o maximitza.
-	WinSet	Fa una varietat de canvis en la finestra especificada, com "sempre a sobre" i la transparència.
-	WinSetTitle	Canvia el títol de la finestra especificada.
-	WinShow	Unhides la finestra especificada.
-	WinWait	Espera que hi ha la finestra especificada.
-	WinWaitActive	Espera que la finestra especificada està activa.
-	WinWaitClose	Espera que no existeix la finestra especificada.
-	WinWaitNotActive	Espera fins que la finestra especificada no està actiu.
-	Zip / UnZip	Comprimir o descomprimir un o més arxius zip.

@@ -1417,27 +1417,3 @@
 	WinWaitClose	지정한 윈도우가 존재하지 않을 때까지 기다립니다.
 	WinWaitNotActive	지정된 윈도우가 활성화되지 때까지 기다립니다.
 	Zip / UnZip	압축 또는 하나 이상의 zip 파일의 압축을 풉니 다.
-	WinExist	검사를 지정된 윈도우가 존재합니다.
-	WinGet	지정된 윈도우의 고유 ID, 프로세스 ID, 프로세스 이름, 또는 해당 컨트롤의 목록을 검색합니다. 또한 지정된 기준과 일치하는 모든 창의 목록을 검색 할 수 있습니다.
-	WinGetClass	지정된 윈도우의 클래스 이름을 검색합니다.
-	WinGetPos	지정된 윈도우의 위치와 크기를 검색합니다.
-	WinGetText	지정된 창에서 텍스트를 검색합니다.
-	WinGetTitle	지정된 윈도우의 제목을 검색합니다.
-	WinHide	지정된 창을 숨 깁니다.
-	WinHttpDownloadToFile	다운로드 한 또는 인터넷에서 더 많은 파일.
-	WinKill	지정된 창을 강제로 닫습니다.
-	WinMaximize	최대 크기로 지정 창을 확대합니다.
-	WinMenuSelectItem	지정된 윈도우의 메뉴 표시 줄에서 메뉴 항목을 호출합니다.
-	WinMinimize	작업 표시 줄 단추에 지정된 창을 축소합니다.
-	WinMinimizeAll	모든 창을 최소화합니다.
-	WinMinimizeAllUndo	이전 WinMinimizeAll의 효과를 취소합니다.
-	WinMove	변경 위치 및 / 또는 지정된 윈도우의 크기입니다.
-	WinRestore	Unminimizes 또는 최소화 또는 최대화 된 경우 지정된 창을 unmaximizes.
-	WinSet	이러한 투명성 "항상 위에"로 지정 창 변경의 다양한 있습니다.
-	WinSetTitle	지정된 윈도우의 제목을 변경합니다.
-	WinShow	지정된 창을 보이게합니다.
-	WinWait	지정한 윈도우가 존재 할 때까지 기다립니다.
-	WinWaitActive	지정된 윈도우가 활성화 될 때까지 기다립니다.
-	WinWaitClose	지정한 윈도우가 존재하지 않을 때까지 기다립니다.
-	WinWaitNotActive	지정된 윈도우가 활성화되지 때까지 기다립니다.
-	Zip / UnZip	압축 또는 하나 이상의 zip 파일의 압축을 풉니 다.

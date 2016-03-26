@@ -1417,27 +1417,3 @@
 	WinWaitClose	Čeká zadaný okno neexistuje.
 	WinWaitNotActive	Čeká zadaný okno není aktivní.
 	Zip / UnZip	Komprimovat nebo dekomprimovat jeden nebo více souborů ZIP.
-	WinExist	Zkontroluje, zda zadaný okno existuje.
-	WinGet	Vyhledá zadané okno je jedinečný identifikátor, ID procesu, procesní jméno nebo seznam svých kontrol. To může také získat seznam všech oken odpovídajících zadaným kritériím.
-	WinGetClass	Načte zadaný název třídy okna.
-	WinGetPos	Načte polohu a velikost zadané okno.
-	WinGetText	Načte text ze zadaného okna.
-	WinGetTitle	Načte název zadané okno.
-	WinHide	Skryje uvedené okno.
-	WinHttpDownloadToFile	Stahování jeden nebo více souborů z Internetu.
-	WinKill	Vynutí zadaný okno zavřete.
-	WinMaximize	Zvětší zadané okno na maximální velikost.
-	WinMenuSelectItem	Vyvolá položku z panelu nabídek zadané okno.
-	WinMinimize	Sbalí zadané okno do jednoho tlačítka na hlavním panelu.
-	WinMinimizeAll	Minimalizuje všechna okna.
-	WinMinimizeAllUndo	Obrátí účinek předchozí WinMinimizeAll.
-	WinMove	Změny polohy a / nebo velikosti zadané okno.
-	WinRestore	Unminimizes nebo unmaximizes zadaný okna, pokud je minimalizace nebo maximalizace.
-	WinSet	Dělá řadu změn uvedeného okna, jako "vždy navrchu" a transparentnosti.
-	WinSetTitle	Změní název určeného okna.
-	WinShow	Slouží k zobrazení zadané okno.
-	WinWait	Čeká zadaný okno existuje.
-	WinWaitActive	Čeká zadaný okno je aktivní.
-	WinWaitClose	Čeká zadaný okno neexistuje.
-	WinWaitNotActive	Čeká zadaný okno není aktivní.
-	Zip / UnZip	Komprimovat nebo dekomprimovat jeden nebo více souborů ZIP.

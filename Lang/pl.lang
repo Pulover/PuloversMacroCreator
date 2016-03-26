@@ -1417,27 +1417,3 @@
 	WinWaitClose	Czeka, aż określona okno nie istnieje.
 	WinWaitNotActive	Czeka, aż określona okno nie jest aktywne.
 	Zip / UnZip	Skompresować lub dekompresji jeden lub więcej plików ZIP.
-	WinExist	Sprawdza, czy określony okno istnieje.
-	WinGet	Pobiera określonym oknie unikalny identyfikator, identyfikator procesu, nazwę procesu, lub listę swoich kontroli. Można go również pobrać listę wszystkich okien spełniających określone kryteria.
-	WinGetClass	Pobiera określonym oknie nazwę klasy.
-	WinGetPos	Pobiera pozycję i rozmiar wybranego okna.
-	WinGetText	Pobiera tekst z określonym oknie.
-	WinGetTitle	Pobiera tytuł określonym oknie.
-	WinHide	Ukrywa określone okno.
-	WinHttpDownloadToFile	Pliki do pobrania jednego lub wielu plików z Internetu.
-	WinKill	Wymusza określone okno, aby zamknąć.
-	WinMaximize	Powiększa określonym oknie do maksymalnej wielkości.
-	WinMenuSelectItem	Wywołuje element menu z paska menu w określonym oknie.
-	WinMinimize	Zwija określonego okna do przycisku na pasku zadań.
-	WinMinimizeAll	Minimalizuje wszystkie okna.
-	WinMinimizeAllUndo	Odwraca efekt poprzedniej WinMinimizeAll.
-	WinMove	Zmiany pozycji i / lub rozmiar wybranego okna.
-	WinRestore	Unminimizes lub unmaximizes podane okno, jeśli jest zminimalizowane lub zmaksymalizowane.
-	WinSet	Sprawia, że wiele zmian w określonym oknie, takie jak "zawsze na wierzchu" i przejrzystości.
-	WinSetTitle	Zmienia tytuł określonym oknie.
-	WinShow	Odkrywa określonym oknie.
-	WinWait	Czeka, aż określona okno istnieje.
-	WinWaitActive	Czeka, aż określona okno jest aktywne.
-	WinWaitClose	Czeka, aż określona okno nie istnieje.
-	WinWaitNotActive	Czeka, aż określona okno nie jest aktywne.
-	Zip / UnZip	Skompresować lub dekompresji jeden lub więcej plików ZIP.

@@ -1417,27 +1417,3 @@
 	WinWaitClose	Pret deri dritarja e specifikuar nuk ekziston.
 	WinWaitNotActive	Pret deri dritarja specifikuar nuk është aktiv.
 	Zip / UnZip	Compress ose uncompress një ose më shumë fotografi zip.
-	WinExist	Kontrollon nëse ekziston dritarja specifikuar.
-	WinGet	Rinxjerr ID e dritares së specifikuar të veçantë, procesin e ID, emri proces, ose një listë të kontrolleve të saj. Ajo gjithashtu mund të marrim një listë të të gjitha dritaret që përputhen kriteret e përcaktuara.
-	WinGetClass	Rinxjerr emrin e klasës e dritares specifikuar së.
-	WinGetPos	Rinxjerr pozitën dhe madhësinë e dritares specifikuar.
-	WinGetText	Rinxjerr tekstin nga dritarja e specifikuar.
-	WinGetTitle	Rinxjerr titullin e dritares specifikuar.
-	WinHide	Fsheh dritaren e specifikuar.
-	WinHttpDownloadToFile	Downloads një ose më shumë fotografi nga Interneti.
-	WinKill	Forcat dritarja specifikuar për të mbyllur.
-	WinMaximize	Zgjeron dritaren e përcaktuar për madhësinë e saj maksimale.
-	WinMenuSelectItem	Thirret një menu item nga menu bar të dritares specifikuar.
-	WinMinimize	Bie dritaren e specifikuar në një buton në bar detyrë.
-	WinMinimizeAll	Minimizon të gjitha dritaret.
-	WinMinimizeAllUndo	Shfuqizon efektin e një WinMinimizeAll të mëparshëm.
-	WinMove	Ndryshon pozicionin dhe / ose madhësinë e dritares specifikuar.
-	WinRestore	Unminimizes ose unmaximizes dritaren specifikuar nëse është minimizuar, ose maksimalisht.
-	WinSet	Bën një shumëllojshmëri të ndryshimeve në dritare të caktuar, të tilla si "gjithmonë në krye" dhe transparencës.
-	WinSetTitle	Ndryshon titullin e dritares specifikuar.
-	WinShow	Unhides dritaren e specifikuar.
-	WinWait	Pret deri sa ekziston dritarja specifikuar.
-	WinWaitActive	Pret deri dritarja specifikuar është aktive.
-	WinWaitClose	Pret deri dritarja e specifikuar nuk ekziston.
-	WinWaitNotActive	Pret deri dritarja specifikuar nuk është aktiv.
-	Zip / UnZip	Compress ose uncompress një ose më shumë fotografi zip.

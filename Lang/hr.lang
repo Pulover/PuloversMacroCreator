@@ -1417,27 +1417,3 @@
 	WinWaitClose	Waits sve navedeno prozor ne postoji.
 	WinWaitNotActive	Waits sve navedeno prozor nije aktivna.
 	Zip / UnZip	Stisnuti ili otpakirati jedan ili više zip datoteka.
-	WinExist	Provjerava jesu li navedeni prozor postoji.
-	WinGet	Dohvaća navedeni prozor je jedinstveni ID, ID procesa, proces ime, ili popis njezinih kontrola. On također može dohvatiti popis svih prozora koji odgovaraju zadanim uvjetima.
-	WinGetClass	Dohvaća odabrani prozor u ime klase.
-	WinGetPos	Dohvaća položaj i veličinu navedenog prozora.
-	WinGetText	Dohvaća tekst iz određenog prozora.
-	WinGetTitle	Dohvaća titulu navedenog prozora.
-	WinHide	Skriva navedenu prozor.
-	WinHttpDownloadToFile	Preuzimanje jednu ili više datoteka s Interneta.
-	WinKill	Snaga navedeno prozor zatvorite.
-	WinMaximize	Povećava naveden prozor svoje maksimalne veličine.
-	WinMenuSelectItem	Priziva izbornika na traci izbornika u određenom prozoru.
-	WinMinimize	Sažimanje odabrani prozor na gumb na traci.
-	WinMinimizeAll	Minimizira sve prozore.
-	WinMinimizeAllUndo	Zakretanje učinak prethodnog WinMinimizeAll.
-	WinMove	Mijenja položaj i / ili veličinu navedeni prozor.
-	WinRestore	Unminimizes ili unmaximizes navedenu prozor ako je minimiziran ili maksimiziran.
-	WinSet	Stvara razne promjene u navedenom prozora, kao što su "uvijek na vrhu" i transparentnosti.
-	WinSetTitle	Mijenja naslov navedenom prozoru.
-	WinShow	Otkriva navedenu prozor.
-	WinWait	Waits sve navedeno postoji prozor.
-	WinWaitActive	Waits sve navedeno prozor aktivan.
-	WinWaitClose	Waits sve navedeno prozor ne postoji.
-	WinWaitNotActive	Waits sve navedeno prozor nije aktivna.
-	Zip / UnZip	Stisnuti ili otpakirati jedan ili više zip datoteka.

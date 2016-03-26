@@ -1417,27 +1417,3 @@
 	WinWaitClose	Väntar tills det angivna fönstret inte existerar.
 	WinWaitNotActive	Väntar tills det angivna fönstret inte är aktivt.
 	Zip / UnZip	Komprimera eller expandera en eller flera zip-filer.
-	WinExist	Kontrollerar om det angivna fönstret existerar.
-	WinGet	Hämtar det angivna fönstret unika ID, process-ID, process namn, eller en lista på sina kontroller. Det kan också hämta en lista över alla fönster som matchar de angivna kriterierna.
-	WinGetClass	Hämtar det angivna fönstrets klassnamn.
-	WinGetPos	Hämtar position och storlek av det specificerade fönstret.
-	WinGetText	Hämtar text från specificerade fönstret.
-	WinGetTitle	Hämtar titeln på det specificerade fönstret.
-	WinHide	Döljer angivna fönstret.
-	WinHttpDownloadToFile	Överför en eller flera filer från Internet.
-	WinKill	Tvingar den angivna fönstret för att stänga.
-	WinMaximize	Förstorar angivna fönstret till maximal storlek.
-	WinMenuSelectItem	Startar ett menyalternativ på menyraden i det specificerade fönstret.
-	WinMinimize	Komprimerar det angivna fönstret till en knapp på aktivitetsfältet.
-	WinMinimizeAll	Minimerar alla fönster.
-	WinMinimizeAllUndo	Vänder effekten av en tidigare WinMinimizeAll.
-	WinMove	Ändrar positionen och / eller storleken på det specificerade fönstret.
-	WinRestore	Unminimizes eller unmaximizes det specificerade fönstret om det är minimerat eller maximerat.
-	WinSet	Gör en mängd ändringar i specificerade fönstret, t.ex. "alltid överst" och öppenhet.
-	WinSetTitle	Ändrar titeln på det angivna fönstret.
-	WinShow	Unhides den angivna fönstret.
-	WinWait	Väntar tills den angivna fönstret existerar.
-	WinWaitActive	Väntar tills det angivna fönstret är aktivt.
-	WinWaitClose	Väntar tills det angivna fönstret inte existerar.
-	WinWaitNotActive	Väntar tills det angivna fönstret inte är aktivt.
-	Zip / UnZip	Komprimera eller expandera en eller flera zip-filer.

@@ -1417,27 +1417,3 @@
 	WinWaitClose	Bíður þar til tilgreindur glugginn er ekki til.
 	WinWaitNotActive	Bíður þar til tilgreindur gluggi er ekki virkur.
 	Zip / UnZip	Þjappa eða uncompress eina eða fleiri zip skrár.
-	WinExist	Athugar ef tilgreindur glugga til staðar.
-	WinGet	Sækir auðkennið tiltekna glugga er, ferli ID, aðferð nafn, eða lista yfir stjórnar hennar. Það getur einnig sótt lista yfir alla gluggana samsvarandi tilgreind skilyrði.
-	WinGetClass	Sækir bekknum nafn tiltekins gluggans.
-	WinGetPos	Sækir um stöðu og stærð tiltekna glugga.
-	WinGetText	Sækir texta frá skilgreindum glugganum.
-	WinGetTitle	Sækir titil tiltekna glugga.
-	WinHide	Felur tilgreinda glugga.
-	WinHttpDownloadToFile	Downloads eitt eða fleiri skrár af internetinu.
-	WinKill	Þvingar tilgreint glugga til að loka.
-	WinMaximize	Stækkar tilgreinda glugga til hámarks stærð þess.
-	WinMenuSelectItem	Skírskotar matseðill atriði frá the matseðill bar á tiltekna glugga.
-	WinMinimize	Hrynur tilgreinda glugga í hnapp á verkefni bar.
-	WinMinimizeAll	Lágmarkar alla glugga.
-	WinMinimizeAllUndo	Snýr áhrif fyrri WinMinimizeAll.
-	WinMove	Breytingar á stöðu og / eða stærð tiltekins glugga.
-	WinRestore	Unminimizes eða unmaximizes tiltekna glugga ef það er haldið í lágmarki eða hámarki.
-	WinSet	Gerir ýmsar breytingar tiltekna glugga, svo sem "alltaf á toppinn" og gagnsæi.
-	WinSetTitle	Breytingar titilinn tiltekna glugga.
-	WinShow	Unhides tilgreinda glugga.
-	WinWait	Bíður þar til tilgreindur glugga til staðar.
-	WinWaitActive	Bíður þar til tilgreindur gluggi er virkur.
-	WinWaitClose	Bíður þar til tilgreindur glugginn er ekki til.
-	WinWaitNotActive	Bíður þar til tilgreindur gluggi er ekki virkur.
-	Zip / UnZip	Þjappa eða uncompress eina eða fleiri zip skrár.

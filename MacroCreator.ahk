@@ -9326,12 +9326,12 @@ ZipMode:
 Gui, 40:Submit, NoHide
 If (Unzip)
 {
-	GuiControl, 40:, ZipFileT, %c_Lang253%
+	GuiControl, 40:, ZipFileT, %c_Lang253%:
 	GuiControl, 40:, Separate, %c_Lang249%
 }
 Else
 {
-	GuiControl, 40:, ZipFileT, %c_Lang254%
+	GuiControl, 40:, ZipFileT, %c_Lang254%:
 	GuiControl, 40:, Separate, %c_Lang248%
 }
 GuiControl, 40:, ZipFileVar

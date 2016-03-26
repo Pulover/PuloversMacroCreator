@@ -692,7 +692,7 @@
 
 /*!
 	Function: Send_Email()
-		Sends emails using an user-defined account. All fields accept variables.
+		Sends emails using an user-defined account. All fields accept [variables](p6-Variables.html#expressions).
 
 	Parameters:
 		Message - Body of the message. It can be text or HTML.
@@ -705,16 +705,54 @@
 		
 		Accounts informations are saved to *UserEmailAccounts.ini* located at %AppData%\MacroCreator or at the application folder when in Portable mode.
 		
-		**Warning**: Scripts exported (even if compiled) with the send email function (CDO) will have visible informations of email accounts used, including the **PASSWORD**. The PMC project file does not have this information.
+		**Warning**: Scripts exported (even if compiled) with the send email function (CDO) will have visible informations of email accounts used, including the **password**. The PMC project file does not have this information.
 		
 	Extra:
 		### Related
-			[COM](http://autohotkey.com/docs/commands/ComObjCreate.htm), [Basic Webpage COM Tutorial](http://www.autohotkey.com/board/topic/47052-basic-webpage-controls), [IWebBrowser2 Interface (MSDN)](http://msdn.microsoft.com/en-us/library/aa752127)
+			[COM](http://autohotkey.com/docs/commands/ComObjCreate.htm), [CDO (Microsoft MSDN)](http://msdn.microsoft.com/en-us/library/ms988614(v=exchg.65).aspx)
+*/
+
+/*!
+	Function: Download_Files()
+		Downloads one or more files from the Internet. All fields accept [variables](p6-Variables.html#expressions).
+
+	Parameters:
+		Destination folder - The name of the destination folder, which is assumed to be in %A_WorkingDir% if an absolute path isn't specified.
+		Download links - A list of download links to be downloaded. Separate links by semicolon, comma or line.
+
+	Remarks:
+		This function is not guaranteed to work with any Url.
+		
+	Extra:
+		### Related
+			[COM](http://autohotkey.com/docs/commands/ComObjCreate.htm), [WinHttpRequest object (Microsoft MSDN)](http://msdn.microsoft.com/pt-br/library/windows/desktop/aa384106(v=vs.85).aspx)
+*/
+
+/*!
+	Function: Zip_Files()
+		Compress or uncompress one or more zip files. All fields accept [variables](p6-Variables.html#expressions).
+
+	Parameters:
+		Zip files / Unzip files - Select the desired operation.
+		Destination file/folder - The name of the destination, which is assumed to be in %A_WorkingDir% if an absolute path isn't specified.
+		Files - A list of files or patterns to be compressed or uncompressed. Separate files by semicolon, comma or line.
+		Compress/Extract each file to different archive/folder - Check this option to have each file/folder compressed or extracted to an individual file/folder.
+
+	Remarks:
+		For *Zip* command you can use file patterns in *Files*, e.g.: C:\File\*.*.
+		
+		You can extract multiple zip files in the same command.
+		
+		This function does not support other types of compressed files. For other formats, use the `Run` command to execute an adequate application.
+		
+	Extra:
+		### Related
+			[COM](http://autohotkey.com/docs/commands/ComObjCreate.htm), [Shell object (Microsoft MSDN)](http://msdn.microsoft.com/en-us/library/windows/desktop/bb774094(v=vs.85).aspx)
 */
 
 /*!
 	Function: Internet_Explorer()
-		Creates an Internet Explorer COM Object and adds automation commands for it.
+		Creates an Internet Explorer COM Object and adds automation commands for it. All fields accept [variables](p6-Variables.html#expressions).
 
 	Parameters:
 		Commands - The dropdown list contains some of the most used IE Methods and Properties. Select the correct one to manipulate the browser window or page elements.
@@ -738,15 +776,16 @@
 */
 
 /*!
-	Function: COM_Interface()
+	Function: Expression()
 		Select Application (Advanced) allows to create any COM Object and add commands in AutoHotkey's dotted syntax format.
 
 	Parameters:
-		CLSID - CLSID or human-readable Prog ID of the COM object to create.
-		Connect - Tries to connect to the Last Active COM Object registered to the selected CLSID to be used for the current session.
+		Automatically create COM object - 
 		Handle - Name of a Handle that will point to the object.
-		Output Variable (Optional) - Name of the variable in which to store the result of COM Script.
-		COM Script - Command line in AutoHotkey's dotted syntax to execute using the object. **Ommit the Handle from the beginning of the string**.  
+		CLSID - 
+		Expression / COM Script - Command line in AutoHotkey's dotted syntax to execute using the object. **Ommit the Handle from the beginning of the string**.  
+		Page Element / Index - Searches for a page element and index on an IE window.
+		Wait for page to load - Check this option when you expect the page to change after the command when running IE COM scripts. This will execute a function after it to wait for the new page to be completely loaded before continuing, avoiding errors.
 
 	Remarks:
 		You can enter multiple commands one by line (you can't assign variables this way).  
@@ -776,24 +815,6 @@
 	Extra:
 		### Related
 			[COM](http://autohotkey.com/docs/commands/ComObjCreate.htm), [Basic Webpage COM Tutorial](http://www.autohotkey.com/board/topic/47052-basic-webpage-controls), [IWebBrowser2 Interface (MSDN)](http://msdn.microsoft.com/en-us/library/aa752127)
-*/
-
-/*!
-	Function: Run_Scriptlet()
-		Executes a VB or JScript scriptlet using COM ScriptControl. Does not work in 64-bit version.
-
-	Parameters:
-		Script - Script string in selected language format.  
-		Script Language - Sets command to be executed using VBScript or JScript Language.
-
-	Remarks:
-		This command uses the ScriptControl COM Object. Some scripts may not work.  
-		
-		The ScriptControl Object is not compatible with 64-bit.  
-	
-	Extra:
-		### Related
-			[COM Object Reference](http://www.autohotkey.com/board/topic/56987-com-object-reference-autohotkey-l/)
 */
 
 /*!

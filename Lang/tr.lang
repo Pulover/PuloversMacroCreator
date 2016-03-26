@@ -1417,27 +1417,3 @@
 	WinWaitClose	Belirtilen pencere yok kadar bekler.
 	WinWaitNotActive	Belirtilen penceresi etkin değil kadar bekler.
 	Zip / UnZip	Sıkıştırmak veya bir veya daha fazla zip dosyaları sıkıştırmasını.
-	WinExist	Çekler belirtilen pencere varsa.
-	WinGet	Belirtilen pencerenin benzersiz kimlik, süreç kimliği, işlem adı veya denetimlerinin listesini alır. Ayrıca belirtilen kriterlere uyan bütün pencerelerin listesini alabilirsiniz.
-	WinGetClass	Belirtilen pencere sınıf adı alır.
-	WinGetPos	Belirtilen pencerenin konumunu ve boyutunu alır.
-	WinGetText	Belirtilen penceresinden metin alır.
-	WinGetTitle	Belirtilen pencerenin başlık alır.
-	WinHide	Belirtilen penceresini gizler.
-	WinHttpDownloadToFile	İndirme bir veya internetten daha fazla dosya.
-	WinKill	Belirtilen penceresini kapatmak için zorlar.
-	WinMaximize	En büyük boyutuna Belirtilen penceresini büyütür.
-	WinMenuSelectItem	Belirtilen penceresinin menü çubuğundan bir menü öğesi çağırır.
-	WinMinimize	Görev çubuğundaki bir düğmeye içine belirtilen pencere daraltır.
-	WinMinimizeAll	Tüm pencereleri simge durumuna küçültür.
-	WinMinimizeAllUndo	Bir önceki WinMinimizeAll etkisini tersine çevirir.
-	WinMove	Değişiklikler konumu ve / veya belirli bir pencere boyutu.
-	WinRestore	Unminimizes veya minimize veya maksimize ise belirtilen pencere unmaximizes.
-	WinSet	Bu ve şeffaflık "her zaman üstte" olarak belirtilen pencere değişiklik, çeşitli yapar.
-	WinSetTitle	Belirtilen pencerenin başlık değiştirir.
-	WinShow	Belirtilen pencere unhides.
-	WinWait	Belirtilen pencere var kadar bekler.
-	WinWaitActive	Belirtilen pencere aktif olana dek bekler.
-	WinWaitClose	Belirtilen pencere yok kadar bekler.
-	WinWaitNotActive	Belirtilen penceresi etkin değil kadar bekler.
-	Zip / UnZip	Sıkıştırmak veya bir veya daha fazla zip dosyaları sıkıştırmasını.

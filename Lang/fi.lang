@@ -1417,27 +1417,3 @@
 	WinWaitClose	Odottaa, kunnes määritelty ikkuna ei ole olemassa.
 	WinWaitNotActive	Odottaa, kunnes määritelty ikkuna ei ole aktiivinen.
 	Zip / UnZip	Pakkaa tai purkaa yhden tai useampia zip-tiedostoja.
-	WinExist	Tarkastukset jos määritelty ikkuna on olemassa.
-	WinGet	Hakee tietyn ikkunan yksilöllinen tunnus, prosessi ID, prosessin nimi, tai luettelo sen valvontaa. Se voi myös hakea listan kaikki ikkunat vastaavia määritellyt kriteerit.
-	WinGetClass	Hakee määritetyn ikkunan luokan nimi.
-	WinGetPos	Noutaa sijainti ja koko määritellyn ikkunan.
-	WinGetText	Hakee tekstiä tietyn ikkunan.
-	WinGetTitle	Hakee otsikko tietyn ikkunan.
-	WinHide	Piilottaa määritelty ikkuna.
-	WinHttpDownloadToFile	Lataukset yksi tai useampia tiedostoja Internetistä.
-	WinKill	Pakottaa määritelty ikkunan lähellä.
-	WinMaximize	Suurentaa määritelty ikkunan sen enimmäiskoko.
-	WinMenuSelectItem	Vetoaa valikon valikkoriviltä määritellyn ikkunan.
-	WinMinimize	Romahtaa määritetyn ikkunan painiketta tehtäväpalkissa.
-	WinMinimizeAll	Pienentää kaikki ikkunat.
-	WinMinimizeAllUndo	Kääntää vaikutus edellisen WinMinimizeAll.
-	WinMove	Muutokset aseman ja / tai koko on määritetty ikkunan.
-	WinRestore	Unminimizes tai unmaximizes määritetyn ikkunassa, jos se on minimoitu tai maksimoidaan.
-	WinSet	Tekee erilaisia muutoksia määritellyn ikkunan, kuten "aina päällä" ja avoimuutta.
-	WinSetTitle	Muuttaa otsikko määritellyn ikkunan.
-	WinShow	Tuo näkyviin määritelty ikkuna.
-	WinWait	Odottaa, kunnes määritelty ikkuna on olemassa.
-	WinWaitActive	Odottaa, kunnes määritelty ikkuna on aktiivinen.
-	WinWaitClose	Odottaa, kunnes määritelty ikkuna ei ole olemassa.
-	WinWaitNotActive	Odottaa, kunnes määritelty ikkuna ei ole aktiivinen.
-	Zip / UnZip	Pakkaa tai purkaa yhden tai useampia zip-tiedostoja.

@@ -1417,27 +1417,3 @@
 	WinWaitClose	Espera ata que a fiestra especificada non existe.
 	WinWaitNotActive	Espera ata que a fiestra especificada non está activo.
 	Zip / UnZip	Comprimir ou descomprimir un ou máis arquivos zip.
-	WinExist	Comproba se existe a xanela especificada.
-	WinGet	Recupera ID da xanela especificada único, ID de proceso, nome do proceso, ou a lista dos seus controis. Tamén pode recuperar a lista de todas as ventás correspondentes aos criterios especificados.
-	WinGetClass	Recupera o nome da clase da fiestra especificada.
-	WinGetPos	Recupera a posición e tamaño da ventá especificada.
-	WinGetText	Recupera o texto da ventá especificada.
-	WinGetTitle	Recupera o título da xanela especificada.
-	WinHide	Oculta a fiestra especificada.
-	WinHttpDownloadToFile	Transferencias dun ou máis ficheiros desde a Internet.
-	WinKill	Forza a xanela especificada para pechar.
-	WinMaximize	Amplía a xanela especificada para o tamaño máximo.
-	WinMenuSelectItem	Chama un elemento de menú na barra de menú da xanela especificada.
-	WinMinimize	Recolle a xanela especificada no botón na barra de tarefas.
-	WinMinimizeAll	Minimiza todas as fiestras.
-	WinMinimizeAllUndo	Inverte o efecto dun WinMinimizeAll anterior.
-	WinMove	Modifica a posición e / ou o tamaño da xanela especificada.
-	WinRestore	Unminimizes ou unmaximizes a xanela especificada, de ser minimizada ou maximizada.
-	WinSet	Fai unha variedade de cambios para a xanela especificada, como "sempre na parte superior" e transparencia.
-	WinSetTitle	Visto o título da xanela especificada.
-	WinShow	Dille novo a xanela especificada.
-	WinWait	Espera ata que exista a xanela especificada.
-	WinWaitActive	Espera ata que a fiestra especificada está activa.
-	WinWaitClose	Espera ata que a fiestra especificada non existe.
-	WinWaitNotActive	Espera ata que a fiestra especificada non está activo.
-	Zip / UnZip	Comprimir ou descomprimir un ou máis arquivos zip.

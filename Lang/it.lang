@@ -1417,27 +1417,3 @@
 	WinWaitClose	Attende fino a quando non è presente la finestra specificata.
 	WinWaitNotActive	Attende fino a quando la finestra specificata non è attivo.
 	Zip / UnZip	Comprimere o decomprimere uno o più file zip.
-	WinExist	Controlla se esiste la finestra specificata.
-	WinGet	Recupera ID della finestra specificata univoco, ID di processo, nome del processo, o l'elenco dei suoi controlli. Si può anche recuperare un elenco di tutte le finestre che corrispondono ai criteri specificati.
-	WinGetClass	Recupera il nome della classe della finestra specificata.
-	WinGetPos	Recupera la posizione e la dimensione della finestra specificata.
-	WinGetText	Recupera il testo dalla finestra specificata.
-	WinGetTitle	Recupera il titolo della finestra specificata.
-	WinHide	Nasconde la finestra specificata.
-	WinHttpDownloadToFile	Download uno o più file da Internet.
-	WinKill	Forza la finestra specificata per chiudere.
-	WinMaximize	Ingrandisce la finestra specificata per la dimensione massima.
-	WinMenuSelectItem	Richiama una voce di menu dalla barra dei menu della finestra specificata.
-	WinMinimize	Riduce la finestra specificata in un pulsante sulla barra delle applicazioni.
-	WinMinimizeAll	Riduce a icona tutte le finestre.
-	WinMinimizeAllUndo	Inverte l'effetto di un precedente WinMinimizeAll.
-	WinMove	Modifica la posizione e / o la dimensione della finestra specificata.
-	WinRestore	Unminimizes o unmaximizes finestra specificata se si è ridotta a icona o ingrandita.
-	WinSet	Fa una serie di modifiche alla finestra specificata, come "sempre in primo piano" e di trasparenza.
-	WinSetTitle	Cambia il titolo della finestra specificata.
-	WinShow	Scopre la finestra specificata.
-	WinWait	Attende fino a quando esiste la finestra specificata.
-	WinWaitActive	Attende fino a quando la finestra è attiva specificato.
-	WinWaitClose	Attende fino a quando non è presente la finestra specificata.
-	WinWaitNotActive	Attende fino a quando la finestra specificata non è attivo.
-	Zip / UnZip	Comprimere o decomprimere uno o più file zip.

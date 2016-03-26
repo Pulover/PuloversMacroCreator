@@ -1417,27 +1417,3 @@
 	WinWaitClose	Wacht tot de opgegeven venster niet bestaat.
 	WinWaitNotActive	Wacht tot het opgegeven venster niet actief is.
 	Zip / UnZip	Comprimeren of decomprimeren één of meerdere zip-bestanden.
-	WinExist	Controleert of het opgegeven venster bestaat.
-	WinGet	Haalt het opgegeven venster de unieke ID, proces ID, proces naam, of een lijst van haar controles. Het kan ook een lijst van alle vensters die voldoen aan de opgegeven criteria halen.
-	WinGetClass	Haalt class naam het opgegeven venster.
-	WinGetPos	Haalt de positie en grootte van het opgegeven venster.
-	WinGetText	Haalt de tekst uit het opgegeven venster.
-	WinGetTitle	Haalt de titel van het opgegeven venster.
-	WinHide	Verbergt het opgegeven venster.
-	WinHttpDownloadToFile	Downloads een of meer bestanden van het internet.
-	WinKill	Dwingt het opgegeven venster te sluiten.
-	WinMaximize	Vergroot het gespecificeerde venster op de maximale grootte.
-	WinMenuSelectItem	Roept een menu-item in de menubalk van het opgegeven venster.
-	WinMinimize	Stort het opgegeven venster in een knop op de taakbalk.
-	WinMinimizeAll	Minimaliseert alle vensters.
-	WinMinimizeAllUndo	Draait het effect van een eerdere WinMinimizeAll.
-	WinMove	Verandert de positie en / of de grootte van het opgegeven venster.
-	WinRestore	Unminimizes of unmaximizes het gespecificeerde sluiten indien deze geminimaliseerd of gemaximaliseerd.
-	WinSet	Maakt een aantal veranderingen aan de opgegeven venster, zoals "always on top" en transparantie.
-	WinSetTitle	Verandert de titel van het gespecificeerde venster.
-	WinShow	Zichtbaar maken van de opgegeven venster.
-	WinWait	Wacht tot de opgegeven venster bestaat.
-	WinWaitActive	Wacht tot het opgegeven venster actief is.
-	WinWaitClose	Wacht tot de opgegeven venster niet bestaat.
-	WinWaitNotActive	Wacht tot het opgegeven venster niet actief is.
-	Zip / UnZip	Comprimeren of decomprimeren één of meerdere zip-bestanden.

@@ -1417,27 +1417,3 @@
 	WinWaitClose	等到指定的窗口消失。
 	WinWaitNotActive	等待，直到指定的窗口不活跃。
 	Zip / UnZip	压缩或解压缩一个或多个zip文件。
-	WinExist	检查指定的窗口是否存在。
-	WinGet	获取指定窗口的唯一 ID、进程 ID、进程名或控件列表。它还可以获取匹配指定条件的所有窗口的列表。
-	WinGetClass	获取指定窗口的类名。
-	WinGetPos	获取指定窗口的位置和大小。
-	WinGetText	获取指定窗口的文本。
-	WinGetTitle	获取指定窗口的标题。
-	WinHide	隐藏指定的窗口。
-	WinHttpDownloadToFile	下载一个或从互联网上更多的文件。
-	WinKill	强制关闭指定的窗口。
-	WinMaximize	最大化指定的窗口。
-	WinMenuSelectItem	调用指定窗口菜单栏中的菜单项。
-	WinMinimize	缩小指定窗口为任务栏上的按钮。
-	WinMinimizeAll	最小化所有窗口。
-	WinMinimizeAllUndo	反转前面WinMinimizeAll的效果。
-	WinMove	改变指定窗口的位置和/或大小。
-	WinRestore	如果指定的窗口处于最小化或最大化状态，则还原它。
-	WinSet	对指定的窗口进行各种设置，例如“总在最前面”和透明度。
-	WinSetTitle	改变指定窗口的标题。
-	WinShow	显示指定的窗口。
-	WinWait	等到指定的窗口出现。
-	WinWaitActive	等到指定的窗口处于活动状态。
-	WinWaitClose	等到指定的窗口消失。
-	WinWaitNotActive	等待，直到指定的窗口不活跃。
-	Zip / UnZip	压缩或解压缩一个或多个zip文件。

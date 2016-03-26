@@ -1417,27 +1417,3 @@
 	WinWaitClose	Aros hyd nes nad yw'r ffenestr penodol yn bodoli.
 	WinWaitNotActive	Aros hyd nes nad yw'r ffenestr penodedig yn weithredol.
 	Zip / UnZip	Gywasgu neu uncompress un neu fwy o ffeiliau sip.
-	WinExist	Gwiriadau os bydd y ffenestr a bennir yn bodoli.
-	WinGet	Retrieves ID y ffenestr a bennir yn unigryw, proses ID, enw proses, neu restr o ei reolaethau. Gall hefyd adfer rhestr o'r holl ffenestri cyfateb i'r meini prawf penodedig.
-	WinGetClass	Retrieves enw'r dosbarth ffenestr a bennir yn.
-	WinGetPos	Adfer y safle a maint y ffenestr penodedig.
-	WinGetText	Retrieves testun o'r ffenestr penodedig.
-	WinGetTitle	Adennill teitl y ffenestr penodedig.
-	WinHide	Yn cuddio'r ffenestr penodedig.
-	WinHttpDownloadToFile	Lawrlwythiadau un neu fwy o ffeiliau oddi ar y Rhyngrwyd.
-	WinKill	Grymoedd y ffenestr penodol i gau.
-	WinMaximize	Enlarges y ffenestr a bennir at ei maint mwyaf.
-	WinMenuSelectItem	Ennyn eitem dewislen o'r bar dewislen y ffenestr penodedig.
-	WinMinimize	Dymchwel y ffenestr a bennir mewn i botwm ar y bar tasgau.
-	WinMinimizeAll	Lleihau'r bob ffenestr.
-	WinMinimizeAllUndo	Gwrthdroi effaith WinMinimizeAll flaenorol.
-	WinMove	Newidiadau sefyllfa a / neu maint y ffenestr penodedig.
-	WinRestore	Unminimizes neu unmaximizes y ffenestr penodedig os yw'n cael ei leihau neu eithaf.
-	WinSet	Gwneud amrywiaeth o newidiadau i'r ffenestr penodol, megis "bob amser ar ei ben" a thryloywder.
-	WinSetTitle	Newidiadau teitl y ffenestr penodedig.
-	WinShow	Unhides y ffenestr penodedig.
-	WinWait	Aros nes bod y ffenestr a bennir yn bodoli.
-	WinWaitActive	Aros nes bod y ffenestr a bennir yn weithredol.
-	WinWaitClose	Aros hyd nes nad yw'r ffenestr penodol yn bodoli.
-	WinWaitNotActive	Aros hyd nes nad yw'r ffenestr penodedig yn weithredol.
-	Zip / UnZip	Gywasgu neu uncompress un neu fwy o ffeiliau sip.

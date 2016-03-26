@@ -1417,27 +1417,3 @@
 	WinWaitClose	Megvárja, amíg a meghatározott ablak nem létezik.
 	WinWaitNotActive	Megvárja, amíg a meghatározott ablak nem aktív.
 	Zip / UnZip	Tömöríteni vagy tömörítse egy vagy több zip fájlt.
-	WinExist	Ellenőrzi, hogy a megadott ablak létezik.
-	WinGet	Letölti a megadott ablak egyedi azonosító, ID folyamat, folyamat neve, vagy egy listát a ellenőrzéseket. Azt is letölteni egy listát az összes ablak megfelelő a kritériumoknak.
-	WinGetClass	Letölti a megadott ablak osztály nevét.
-	WinGetPos	Lekéri a helyzete és mérete a megadott ablakot.
-	WinGetText	Letölti a szöveget a megadott ablak.
-	WinGetTitle	Letölti a címet a megadott ablak.
-	WinHide	Elrejti a megadott ablakot.
-	WinHttpDownloadToFile	Letöltés egy vagy több fájlt az internetről.
-	WinKill	Arra kényszeríti a megadott ablak bezárásához.
-	WinMaximize	Nagyítja a megadott ablak maximális méretét.
-	WinMenuSelectItem	Meghív egy menüpontot a menüsorban a megadott ablak.
-	WinMinimize	Összeesik a megadott ablakot egy gomb a tálcán.
-	WinMinimizeAll	Minden ablak méretét minimalizálja.
-	WinMinimizeAllUndo	Visszavonja a hatás a korábbi WinMinimizeAll.
-	WinMove	Változások a pozíció és / vagy a méret a megadott ablak.
-	WinRestore	Unminimizes vagy unmaximizes a megadott ablakot, ha minimális vagy maximális.
-	WinSet	Teszi a különböző változások a megadott ablak, mint a "mindig felül" és az átláthatóság.
-	WinSetTitle	Megváltoztatja a címet a megadott ablak.
-	WinShow	Felfedése a megadott ablakot.
-	WinWait	Megvárja, amíg a megadott ablak létezik.
-	WinWaitActive	Megvárja, amíg a megadott ablak aktív.
-	WinWaitClose	Megvárja, amíg a meghatározott ablak nem létezik.
-	WinWaitNotActive	Megvárja, amíg a meghatározott ablak nem aktív.
-	Zip / UnZip	Tömöríteni vagy tömörítse egy vagy több zip fájlt.

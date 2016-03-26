@@ -1417,27 +1417,3 @@
 	WinWaitClose	Wartet, bis das angegebene Fenster nicht existiert.
 	WinWaitNotActive	Wartet, bis das angegebene Fenster nicht aktiv ist.
 	Zip / UnZip	Komprimieren oder eine oder mehrere Zip-Dateien zu dekomprimieren.
-	WinExist	Überprüft, ob das angegebene Fenster existiert.
-	WinGet	Ruft das angegebene Fenster die eindeutige ID, Prozess-ID, Name des Prozesses, oder eine Liste ihrer Kontrollen. Es kann auch abgerufen werden eine Liste aller Fenster, die den angegebenen Kriterien.
-	WinGetClass	Ruft den angegebenen Klassennamen des Fensters.
-	WinGetPos	Ruft die Position und Größe des angegebenen Fensters.
-	WinGetText	Ermittelt den Text aus dem angegebenen Fenster.
-	WinGetTitle	Ruft den Titel des angegebenen Fensters.
-	WinHide	Blendet das angegebene Fenster.
-	WinHttpDownloadToFile	Downloads eine oder mehrere Dateien aus dem Internet.
-	WinKill	Zwingt das angegebene Fenster zu schließen.
-	WinMaximize	Vergrößert das angegebene Fenster auf seine maximale Größe.
-	WinMenuSelectItem	Ruft einen Menüpunkt in der Menüleiste des angegebenen Fensters.
-	WinMinimize	Blendet das angegebene Fenster in eine Schaltfläche auf der Taskleiste.
-	WinMinimizeAll	Verkleinert alle Fenster.
-	WinMinimizeAllUndo	Kehrt den Effekt einer früheren WinMinimizeAll.
-	WinMove	Ändert die Position und / oder Größe des angegebenen Fensters.
-	WinRestore	Minimierung auf oder unmaximizes das angegebene Fenster, wenn es minimiert oder maximiert.
-	WinSet	Macht eine Vielzahl von Änderungen an die angegebene Fenster, wie "Immer im Vordergrund" und Transparenz.
-	WinSetTitle	Ändert den Titel des Fensters angegeben.
-	WinShow	Blendet das angegebene Fenster.
-	WinWait	Wartet, bis das angegebene Fenster existiert.
-	WinWaitActive	Wartet, bis das angegebene Fenster aktiv ist.
-	WinWaitClose	Wartet, bis das angegebene Fenster nicht existiert.
-	WinWaitNotActive	Wartet, bis das angegebene Fenster nicht aktiv ist.
-	Zip / UnZip	Komprimieren oder eine oder mehrere Zip-Dateien zu dekomprimieren.
