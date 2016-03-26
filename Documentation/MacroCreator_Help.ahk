@@ -19,7 +19,7 @@
 */
 
 /*!
-	Page: Quick Tutorial
+	Page: Quick Tutorial & Examples
 	Filename: p0-Tutorial
 	Contents: @file:Tutorial.md
 */
@@ -96,16 +96,16 @@
 
 	Parameters:
 		Repeat - How many times to execute action.  
-			This field accepts [Variables & Functions](p6-Variables.html).
+			This field accepts [Variables & Expressions](p6-Variables.html).
 		Delay - Time to wait before the next command line.  
-			This field accepts [Variables & Functions](p6-Variables.html).
+			This field accepts [Variables & Expressions](p6-Variables.html).
 		Control - Selects the target control to send the command. Use the Get button to easily find a control's name: Point the mouse to its location and Right-Click on it. To operate upon a control's HWND (window handle), leave the Control parameter blank and specify ahk_id %ControlHwnd% for the WinTitle parameter.  
-			This field accepts [Variables & Functions](p6-Variables.html).
+			This field accepts [Variables & Expressions](p6-Variables.html).
 		Window - Title/Class/Process/ID/ProcessID of target window for control command. The DropdowndList defines which information will be taken from a windown when using the *Get* button.  
 			**Extra Parameters**: The first parameter is WinTitle, you can add one or more extra parameters separating them by commas:
 			> WinTitle, WinText, ExcludeTitle, ExcludeText.
 			You can omit any of those parameters, including WinTitle.  
-			This field accepts [Variables & Functions](p6-Variables.html).
+			This field accepts [Variables & Expressions](p6-Variables.html).
 */
 
 /*!
@@ -141,7 +141,7 @@
 
 /*!
 	Function: Text()
-		Sends simulated keystrokes to a window. It may be used to send raw text or commands. This field accepts [Variables & Functions](p6-Variables.html).
+		Sends simulated keystrokes to a window. It may be used to send raw text or commands. This field accepts [Variables & Expressions](p6-Variables.html).
 
 	Parameters:
 		Plain Text (Raw) - Uses *SendRaw*. The SendRaw command interprets all characters literally rather than translating {Enter} to an ENTER keystroke, ^c to Control-C, etc.
@@ -163,7 +163,7 @@
 		Gathers various control commands. Please refer to [AutoHotkey documentation](http://autohotkey.com/docs) for details on each one.
 
 	Parameters:
-		Value - Second parameter of a Control Command when available. This field accepts [Variables & Functions](p6-Variables.html).
+		Value - Second parameter of a Control Command when available. This field accepts [Variables & Expressions](p6-Variables.html).
 		Output Variable - The name of the variable in which to store the result of Cmd. For *ControlGetPos* the variable you choose will be a prefix to the 4 outputvars. E.g. if you type a variable named "Pos_" the output will be saved to *Pos_X*, *Pos_Y*, *Pos_W* and *Pos_H*.
 		Position/Size - Coordinates and sizes to move a control with ControlMove.
 
@@ -196,7 +196,7 @@
 
 	Parameters:
 		Message - Text to display in the message. If the Cancel button is pressed, execution will stop.  
-			This field accepts [Variables & Functions](p6-Variables.html).
+			This field accepts [Variables & Expressions](p6-Variables.html).
 		Title - The title of the message box window.
 		Icon - Sets the icon to be shown on the Message Box.
 		Buttons - Sets which buttons will be shown on the message box.
@@ -231,9 +231,9 @@
 		Gathers various Window commands. Please refer to [AutoHotkey documentation](http://autohotkey.com/docs) for details on each one.
 	Parameters:
 		Value - Second parameter of a Window Command when available.  
-			This field accepts [Variables & Functions](p6-Variables.html).
+			This field accepts [Variables & Expressions](p6-Variables.html).
 		Seconds - Seconds to wait for a Window Command when available.  
-			This field accepts [Variables & Functions](p6-Variables.html).
+			This field accepts [Variables & Expressions](p6-Variables.html).
 		Output Variable - The name of the variable in which to store the result of Cmd. For *WinGetPos* the variable you choose will be a prefix to the 4 outputvars. E.g. if you type a variable named "Pos_" the output will be saved to *Pos_X*, *Pos_Y*, *Pos_W* and *Pos_H*.
 		Position/Size - Coordinates and sizes to move a control with WinMove.
 
@@ -332,7 +332,7 @@
 
 	Parameters:
 		Parameters Fields - Parameters will vary according to the selected command.  
-				All fields should accept [Variables & Functions](p6-Variables.html).  
+				All fields should accept [Variables & Expressions](p6-Variables.html).  
 
 	Remarks:
 		Don't use percent signs (%) for variables when the fields name is OutputVar or InputVar, for they should expect a variable already.
@@ -348,7 +348,7 @@
 
 	Parameters:
 		Repeat - How many times to execute the loop section. If set to 0, the loop continues indefinitely until a break or return is encountered, or the Stop Key is pressed.
-			This field accepts [Variables & Functions](p6-Variables.html).
+			This field accepts [Variables & Expressions](p6-Variables.html).
 
 	Remarks:
 		The built-in variable **A_Index** contains the number of the current loop iteration. It contains 1 the first time the loop's body is executed. For the second time, it contains 2; and so on. If an inner loop is enclosed by an outer loop, the inner loop takes precedence.
@@ -554,7 +554,7 @@
 
 	Parameters:
 		Go to Label - Name of a label (you can select one in the list) to jump to.  
-			To use a Macro as label select the corresponding Macro*N* in the list.  
+			To use a Macro as label select the corresponding Macro name in the list.  
 		Goto / Gosub - Sets the command to be used.  
 			Goto jumps to the specified label and continues execution.  
 			Gosub jumps to the specified label and continues execution until Return is encountered or the end of a Macro is reached.
@@ -570,7 +570,7 @@
 
 	Parameters:
 		Add Label - A valid name for the new label.  
-			You can use Goto to jump directly to this line from any Macro.
+			You can use Goto and Gosub to jump directly to this line from any Macro.
 
 	Extra:
 		### Related
@@ -657,16 +657,16 @@
 		Array Object - If checked, the name of an Array/Object on which to call the method.
 		Use Function from External File - Check this option to select an AutoHotkey Script File (.ahk) containing one or more functions to be used. This feature requires [AutoHotkey](http://autohotkey.com/) installed.  
 			See Remarks below for more information.  
-		Function Name - A valid AHK Built-in Function, an existing [User-Defined function](p7-Functions.html#user-defined-functions) one in the selected external .ahk file.
+		Function Name - A valid AHK Built-in Function, an existing [User-Defined function](p7-Functions.html#user-defined-functions) or one in the selected external .ahk file.
 		Comma separated parameters - The list of parameters for the function.  
 			*Notes*:  
 			* Input only the parameters values, without parenthesis.  
 			* Use [Expression](p6-Variables.html#expressions) format.  
 			* Do NOT enclose variables in percent signs.  
 			* Strings MUST be enclosed in quotes.  
-			* Omitted parameters will use their default values unless they are in-between other values.  
-			> RegExReplace(Haystack, Needle, , , 10)
-			The function above have 6 possible parameters. In this example parameters 3, 4 and 6 will use the default values.  
+			* Omitted optional parameters will use their default values.  
+			> InStr("AutoHotkey", "o", , , 2)
+			The function above have 5 possible parameters. In this example parameters 3 and 4 will use the default values.  
 
 	Remarks:
 		AutoHotkey's Built-in Functions are supported by default. You can also define your own functions inside PMC in [User-Defined functions](p7-Functions.html#user-defined-functions) window and run functions from external AutoHotkey Script Files, if you have [AutoHotkey](http://www.autohotkey.com/) installed.  
@@ -691,6 +691,28 @@
 */
 
 /*!
+	Function: Send_Email()
+		Sends emails using an user-defined account. All fields accept variables.
+
+	Parameters:
+		Message - Body of the message. It can be text or HTML.
+		HTML - Check this option to use HTML format in the email body.
+		Headers - Standard Email fields.
+		Attachments - Add and edit file attachments. Add one file per line with the full path.
+
+	Remarks:
+		You can add and edit accounts clicking on the *Email accounts* link or in the Settings window.
+		
+		Accounts informations are saved to *UserEmailAccounts.ini* located at %AppData%\MacroCreator or at the application folder when in Portable mode.
+		
+		**Warning**: Scripts exported (even if compiled) with the send email function (CDO) will have visible informations of email accounts used, including the **PASSWORD**. The PMC project file does not have this information.
+		
+	Extra:
+		### Related
+			[COM](http://autohotkey.com/docs/commands/ComObjCreate.htm), [Basic Webpage COM Tutorial](http://www.autohotkey.com/board/topic/47052-basic-webpage-controls), [IWebBrowser2 Interface (MSDN)](http://msdn.microsoft.com/en-us/library/aa752127)
+*/
+
+/*!
 	Function: Internet_Explorer()
 		Creates an Internet Explorer COM Object and adds automation commands for it.
 
@@ -698,7 +720,7 @@
 		Commands - The dropdown list contains some of the most used IE Methods and Properties. Select the correct one to manipulate the browser window or page elements.
 		Set / Get - Chooses whether to set a value to the object or to copy the element's value to a variable.
 		Method / Property - If you type a command that is not recognized by the program you have to select whether it's a Method or a Property.
-		Value - Value to be used by a Method or to be set to a Property. This field accepts [Variables & Functions](p6-Variables.html).
+		Value - Value to be used by a Method or to be set to a Property. This field accepts [Variables & Expressions](p6-Variables.html).
 		Output Variable - The name of the variable in which to store the value of a Property.
 		Page Element / Index - Sets the page element and index on which to perform the action. The dropdown list selects the method to be used to identify the element. Use the *Get* button to easily identify elements of the page.
 		Wait for page to load - Check this option when you expect the page to change after the command. This will execute a function after it to wait for the new page to be completely loaded before continuing, avoiding errors.
@@ -710,8 +732,6 @@
 		
 		Although not all Methods and Properties are listed it may still be possible to use them with the correct syntax. For more information on methods and properties please check Microsoft MSDN website.  
 		
-		To set a blank value use a pair of quotes: ""
-
 	Extra:
 		### Related
 			[COM](http://autohotkey.com/docs/commands/ComObjCreate.htm), [Basic Webpage COM Tutorial](http://www.autohotkey.com/board/topic/47052-basic-webpage-controls), [IWebBrowser2 Interface (MSDN)](http://msdn.microsoft.com/en-us/library/aa752127)

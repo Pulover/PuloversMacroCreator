@@ -51,7 +51,7 @@ No, creating Guis is not in the scope of this project. But you can find some nic
 
 ### Can Macro Creator automate Firefox or Chrome as it does with Internet Explorer?
 
-No. Macro Creator can connect to IE because its controls are exposed via [COM](Commands/Expression.html), but that type of interaction is not possible with other browsers. Control Commands won't work either, so you might have more luck with mouse, keystrokes and Image Search.
+No. Macro Creator can connect to IE because its controls are exposed via [COM](Commands/Expression.html), but that type of interaction is not possible with other browsers in the same way. Control Commands won't work either, so you might have more luck with mouse, keystrokes and Image Search.
 
 ### Can I make playback go faster/slower?
 
