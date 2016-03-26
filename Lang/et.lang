@@ -1,0 +1,1443 @@
+﻿Lang_et
+		
+		; Estonian
+		
+; 01. Main Menu		
+	m_Lang001 =	&Fail
+	m_Lang002 =	&Macro
+	m_Lang003 =	&Käsud
+	m_Lang004 =	F&unktsioon
+	m_Lang005 =	&Edit
+	m_Lang006 =	&Valima
+	m_Lang007 =	V&aade
+	m_Lang008 =	Va&likud
+	m_Lang009 =	A&nnetama
+	m_Lang010 =	A&itama
+		
+; 02. File Sub Menu		
+	f_Lang001 =	&Uus
+	f_Lang002 =	&Avatud
+	f_Lang003 =	&Salvesta
+	f_Lang004 =	Sa&lvesta kui
+	f_Lang005 =	&Viimased faile
+	f_Lang006 =	&Ekspordi AHK
+	f_Lang007 =	Eelvaa&de Script
+	f_Lang008 =	Ed&it Script
+	f_Lang009 =	A&jakava Makrod
+	f_Lang010 =	&Nimekiri muutujad
+	f_Lang011 =	V&äljapääs
+	f_Lang012 =	Ei &faile
+		
+; 03. Macro Sub Menu		
+	r_Lang001 =	&Record Macro
+	r_Lang002 =	&Aktiveeri Makrod
+	r_Lang003 =	&Mängi Praegune Macro
+	r_Lang004 =	&Taimer
+	r_Lang005 =	&Lülita välja Makrod
+	r_Lang006 =	M&ängi alates valitud rea
+	r_Lang007 =	Mä&ngi kuni valitud rea
+	r_Lang008 =	Män&gi valitud read
+	r_Lang009 =	&Kontekstitundlik Hotkeys
+	r_Lang010 =	L&isa Macro
+	r_Lang011 =	&Sule Macro
+	r_Lang012 =	&Duplicate Macro
+	r_Lang013 =	&Edit Makrod
+	r_Lang014 =	Im&port Macro
+	r_Lang015 =	Säästa Praeg&une Macro
+		
+; 04. Function Sub Menu		
+	u_Lang001 =	&Loo Function
+	u_Lang002 =	L&isa Parameeter
+	u_Lang003 =	Li&sa Return
+	u_Lang004 =	&Convert Macro toimida
+		
+; 05. Commands Sub Menu		
+	i_Lang001 =	&Hiir
+	i_Lang002 =	&Tekst
+	i_Lang003 =	&Kontroll
+	i_Lang004 =	&Paus
+	i_Lang005 =	T&eatekast
+	i_Lang006 =	Ke&y Oodake
+	i_Lang007 =	&Aken
+	i_Lang008 =	P&ilt / Pixel Otsing
+	i_Lang009 =	&Run / Fail / String / Muud.
+	i_Lang010 =	Aa&s
+	i_Lang011 =	&Mine / Label
+	i_Lang012 =	M&äära timer
+	i_Lang013 =	K&ui teate
+	i_Lang014 =	Muutu&jad / massiivid
+	i_Lang015 =	&Funktsioonid / Array meetodid
+	i_Lang016 =	Saa&da email
+	i_Lang017 =	&Lae faile
+	i_Lang018 =	&Zip / Unzip faili
+	i_Lang019 =	I&nternet Explorer
+	i_Lang020 =	E&xpression / COM Interface
+	i_Lang021 =	&Windows sõnumid
+	i_Lang022 =	&Leia käsk
+		
+; 06. Edit Sub Menu		
+	e_Lang001 =	&Duplikaat
+	e_Lang002 =	&Edit Kommentaar
+	e_Lang003 =	&Otsi / Asenda
+	e_Lang004 =	&Kopeeri ...
+	e_Lang005 =	Kee&rata
+	e_Lang006 =	&Redo
+	e_Lang007 =	&Lõigatud
+	e_Lang008 =	Koo&pia
+	e_Lang009 =	P&asta
+	e_Lang010 =	K&ustutama
+	e_Lang011 =	&Üles liikuma
+	e_Lang012 =	L&iiguta alla
+	e_Lang013 =	&Sisestage alates Box
+	e_Lang014 =	Sises&tage Klahvivajutustoon
+	e_Lang015 =	Edit &Color Mark
+	e_Lang016 =	&Grupid
+	e_Lang017 =	Lu&ba rühmad
+	e_Lang018 =	&Lisa grupp
+	e_Lang019 =	Ee&malda grupp
+	e_Lang020 =	Eemalda k&õik rühmad
+	e_Lang021 =	&Sulge kõik
+	e_Lang022 =	Laie&nda kõik
+		
+; 07. Select Sub Menu		
+	s_Lang001 =	&Vali kõik
+	s_Lang002 =	V&ali Puudub
+	s_Lang003 =	Va&heta valik
+	s_Lang004 =	&Kontrolli valitud
+	s_Lang005 =	&Puhasta valitud
+	s_Lang006 =	&Teistpidi Kontroll
+	s_Lang007 =	&Liigu valik Up
+	s_Lang008 =	L&iigu valik Down
+	s_Lang009 =	Valit&ud Type
+	s_Lang010 =	&Command tüübist
+		
+; 08. View Sub Menu		
+	v_Lang001 =	&Alati peal
+	v_Lang002 =	&Highlight Read
+	v_Lang003 =	&Taane
+	v_Lang004 =	&Controls tööriistariba
+	v_Lang005 =	&Eelvaade
+	v_Lang006 =	T&ööriistaribad
+	v_Lang007 =	&Kiirklahvid
+	v_Lang008 =	&Search Bar
+	v_Lang009 =	Ee&malda kõik veerud Suurus
+	v_Lang010 =	&Ikoonid Suurus
+	v_Lang011 =	&Reset paigutus
+	v_Lang012 =	&Fail
+	v_Lang013 =	Rec&ord Play
+	v_Lang014 =	K&äsud
+	v_Lang015 =	E&dit
+	v_Lang016 =	&Valikud
+	v_Lang017 =	Koha&nda
+	v_Lang018 =	A&utomaatne
+	v_Lang019 =	&Käsiraamat
+	v_Lang020 =	&Peatus
+	v_Lang021 =	&Paus
+	v_Lang022 =	&Kompaktne
+	v_Lang023 =	&Parim Sobivus
+	v_Lang024 =	&Vaikimisi
+	v_Lang025 =	&Väike
+	v_Lang026 =	&Suur
+		
+; 09. Options Sub Menu		
+	o_Lang001 =	&Seaded
+	o_Lang002 =	&Minimeeri salve
+	o_Lang003 =	&Näita kontroll tööriistaribale
+	o_Lang004 =	&Jäädvusta klahvivajutuste selles aknas
+	o_Lang005 =	&Kiirklahvid alati aktiivne
+	o_Lang006 =	S&eiskamisvalikuid (Kui taasesitus lõpetab ...)
+	o_Lang007 =	K&ontekstitundlik Hotkeys
+	o_Lang008 =	&Lisa Windows võti "mängida" hotkey
+	o_Lang009 =	K&asuta juhtkangi nuppu hotkey
+	o_Lang010 =	&Vaikimisi seadistatud Hotkeys
+	o_Lang011 =	Se&t as default fail
+	o_Lang012 =	Eemal&da Vaikefail
+	o_Lang013 =	Va&ikimisi Hotkeys
+	o_Lang014 =	&Vaikimisi seaded
+		
+; 10. Donate Sub Menu		
+	p_Lang001 =	&PayPal annetus
+		
+; 11. Help Sub Menu		
+	h_Lang001 =	&Aitama
+	h_Lang002 =	&Õpetused
+	h_Lang003 =	&Tips
+	h_Lang004 =	&Macro Looja Kodu
+	h_Lang005 =	&Foorum
+	h_Lang006 =	A&HK Hetkel Dokumentatsiooni
+	h_Lang007 =	&Kontrolli kas uuendused on saadaval...
+	h_Lang008 =	&Saate käivitamisel
+	h_Lang009 =	&Umbes
+		
+; 12. Tray Menu		
+	y_Lang001 =	Peida Window
+	y_Lang002 =	Vaateaken
+	y_Lang003 =	Controls tööriistariba
+		
+; 13. Built-in Vars Menu		
+	b_Lang001 =	Võõrtähed
+	b_Lang002 =	Omadused
+	b_Lang003 =	Päev ja aeg
+	b_Lang004 =	Kasutaja Idle Time
+	b_Lang005 =	Süsteemi ja kasutaja
+	b_Lang006 =	Muud.
+	b_Lang007 =	Aas
+		
+; 14. Main Window		
+	w_Lang001 =	Eksport
+	w_Lang002 =	Eelvaade
+	w_Lang003 =	Valikud
+	w_Lang004 =	Rekord
+	w_Lang005 =	Mängima
+	w_Lang006 =	Taasesitus
+	w_Lang007 =	Käsiraamat
+	w_Lang008 =	Peatus
+	w_Lang009 =	Näita kontroll tööriistaribale
+	w_Lang010 =	Paus
+	w_Lang011 =	Aas
+	w_Lang012 =	Jäädvusta klahvivajutuste selles aknas
+	w_Lang013 =	Minimeeri salve
+	w_Lang014 =	Kiirklahvid alati aktiivne
+	w_Lang015 =	Kordus
+	w_Lang016 =	Delay (ms)
+	w_Lang017 =	Kehtima
+	w_Lang018 =	Sisesta
+	w_Lang019 =	Edit
+	w_Lang020 =	Seiskamisvalikuid (Kui taasesitus lõpetab ...)
+	w_Lang021 =	Ära tee midagi
+	w_Lang022 =	Pidev
+	w_Lang023 =	Lülita välja
+	w_Lang024 =	Shutdown (jõud)
+	w_Lang025 =	Reboot
+	w_Lang026 =	Logi välja
+	w_Lang027 =	Talveund magama
+	w_Lang028 =	Peatama
+	w_Lang029 =	Lock arvutis
+	w_Lang030 =	Indeks
+	w_Lang031 =	Tegevus
+	w_Lang032 =	Detailid
+	w_Lang033 =	Kordus
+	w_Lang034 =	Viivitus
+	w_Lang035 =	Tüüp
+	w_Lang036 =	Kontroll
+	w_Lang037 =	Aken
+	w_Lang038 =	Kommentaar
+	w_Lang039 =	Värv
+	w_Lang040 =	New (Ctrl + N)
+	w_Lang041 =	Avatud (Ctrl + O)
+	w_Lang042 =	Säästa (Ctrl + S)
+	w_Lang043 =	Salvesta (Ctrl + Shift + S)
+	w_Lang044 =	Ekspordi AHK (Ctrl + E)
+	w_Lang045 =	Eelvaade Script (Ctrl + P)
+	w_Lang046 =	Seaded (Ctrl + G)
+	w_Lang047 =	Record Macro (Ctrl + R)
+	w_Lang048 =	Aktiveeri Makrod (Ctrl + Enter)
+	w_Lang049 =	Mängi Praegune Macro (Ctrl + Shift + Enter)
+	w_Lang050 =	Timer (Ctrl + Shift + T)
+	w_Lang051 =	Hiir (F2)
+	w_Lang052 =	Tekst (F3)
+	w_Lang053 =	Edit Makrod (Ctrl + Shift + M)
+	w_Lang054 =	Kontroll (F4)
+	w_Lang055 =	Pause (F5)
+	w_Lang056 =	Teatekast (Shift + F5)
+	w_Lang057 =	Key Wait (Ctrl + F5)
+	w_Lang058 =	Window (F6)
+	w_Lang059 =	Pilt / Pixel Otsing (F7)
+	w_Lang060 =	Run / Fail / String / Muud. (F8)
+	w_Lang061 =	Loop (F9)
+	w_Lang062 =	Mine / Label (Shift + F9)
+	w_Lang063 =	Määra Timer (Ctrl + F9)
+	w_Lang064 =	Kui teate (F10)
+	w_Lang065 =	Muutujad / massiivid (Shift + F10)
+	w_Lang066 =	Funktsioonid / Array meetodid (Ctrl + F10)
+	w_Lang067 =	Saada E-post (F11)
+	w_Lang068 =	Lae faile (Shift + F11)
+	w_Lang069 =	Zip / Unzip faili (Ctrl + F11)
+	w_Lang070 =	Internet Explorer (F12)
+	w_Lang071 =	Expression / COM Interface (Shift + F12)
+	w_Lang072 =	Windows Sõnumid (Ctrl + F12)
+	w_Lang073 =	Lisa Macro (Ctrl + T)
+	w_Lang074 =	Sule Macro (Ctrl + W)
+	w_Lang075 =	Duplikaat Macro (Ctrl + Shift + D)
+	w_Lang076 =	Import Macro (Ctrl + I)
+	w_Lang077 =	Säästa Praegune Macro (Ctrl + Alt + S)
+	w_Lang078 =	Liiguta üles (Ctrl + Page Up)
+	w_Lang079 =	Liiguta alla (Ctrl + Page Down)
+	w_Lang080 =	Kopeeri valitud read (Ctrl + D)
+	w_Lang081 =	Cut valitud read (Ctrl + X)
+	w_Lang082 =	Kopeeri valitud read (Ctrl + C)
+	w_Lang083 =	Kopeeritud read (Ctrl + V)
+	w_Lang084 =	Kustuta valitud read (Del)
+	w_Lang085 =	Võta tagasi (Ctrl + Z)
+	w_Lang086 =	Redo (Ctrl + Y)
+	w_Lang087 =	Kopeeri ...
+	w_Lang088 =	Otsi / Asenda (Ctrl + F)
+	w_Lang089 =	Kommentaari lisamine / redigeerimine (Ctrl + L)
+	w_Lang090 =	Edit Color Mark (Ctrl + M)
+	w_Lang091 =	Kohanda
+	w_Lang092 =	Leia käsk (Ctrl + Shift + F)
+	w_Lang093 =	Edit (Enter)
+	w_Lang094 =	Varjama
+	w_Lang095 =	Liigu siin
+	w_Lang096 =	Kopeeri siin
+	w_Lang097 =	Grupid
+	w_Lang098 =	Luba rühmad (Ctrl + Shift + G)
+	w_Lang099 =	Lisa grupp (Ctrl + Shift + Y)
+	w_Lang100 =	Eemalda grupp (Ctrl + Shift + R)
+	w_Lang101 =	Eemalda kõik rühmad
+	w_Lang102 =	Edit rühmad
+	w_Lang103 =	Grupi nimi
+	w_Lang104 =	Loo Function (Ctrl + Shift + U)
+	w_Lang105 =	Lisa parameeter (Ctrl + Shift + P)
+	w_Lang106 =	Lisa Return (Ctrl + Shift + N)
+	w_Lang107 =	Convert makro funktsioon (Ctrl + Shift + C)
+	w_Lang108 =	Kommentaar välja märkimata rida
+	w_Lang109 =	Lisa Windows võti "mängida" hotkey
+	w_Lang110 =	Kasuta juhtkangi nuppu hotkey
+	w_Lang111 =	Otsi ... (liikumiseks vajutage sisestusklahvi)
+		
+; 15. Command Windows		
+	c_Lang001 =	Hiir
+	c_Lang002 =	Tekst
+	c_Lang003 =	Paus
+	c_Lang004 =	Kontroll
+	c_Lang005 =	Aken
+	c_Lang006 =	Pildiotsing
+	c_Lang007 =	Pixel Otsing
+	c_Lang008 =	Run / Fail / String / Muud.
+	c_Lang009 =	Kui teate
+	c_Lang010 =	Muutujad
+	c_Lang011 =	Funktsioonid / Array meetodid
+	c_Lang012 =	Internet Explorer
+	c_Lang013 =	Expression / COM liides
+	c_Lang014 =	Valige Rakenduse (Advanced)
+	c_Lang015 =	Sõnum
+	c_Lang016 =	Kontroll
+	c_Lang017 =	Viivitus
+	c_Lang018 =	Millisekundit
+	c_Lang019 =	Sekundit
+	c_Lang020 =	Okei
+	c_Lang021 =	Tühistama
+	c_Lang022 =	Sulge
+	c_Lang023 =	Koopia
+	c_Lang024 =	Kustutama
+	c_Lang025 =	Kasuta% muutujate, näiteks .:% lõikelaud%
+	c_Lang026 =	Tegevus
+	c_Lang027 =	Click
+	c_Lang028 =	Käik
+	c_Lang029 =	Liikuda ja klõpsata
+	c_Lang030 =	Velje Up
+	c_Lang031 =	Ratta Down
+	c_Lang032 =	Tõmba ja lase lahti
+	c_Lang033 =	Koordinaadid
+	c_Lang034 =	Otsing
+	c_Lang035 =	Subcommand
+	c_Lang036 =	Suhteline
+	c_Lang037 =	Nupp
+	c_Lang038 =	Vasakule
+	c_Lang039 =	Õige
+	c_Lang040 =	Kesk-
+	c_Lang041 =	X1
+	c_Lang042 =	X2
+	c_Lang043 =	Hoidke / Release
+	c_Lang044 =	Vajuta Krahv
+	c_Lang045 =	Klaartekst (Raw)
+	c_Lang046 =	Tekst käskudega
+	c_Lang047 =	Kleebi lõikelaua
+	c_Lang048 =	Aseta Control
+	c_Lang049 =	Määra tekst
+	c_Lang050 =	Lisa Paus
+	c_Lang051 =	Teatekast
+	c_Lang052 =	Oodake võti
+	c_Lang053 =	Ootamisel
+	c_Lang054 =	(Millisekundit) 0 = lõpmatu
+	c_Lang055 =	Käsk
+	c_Lang056 =	Väärtus
+	c_Lang057 =	Väljundparameeter
+	c_Lang058 =	Positsioon
+	c_Lang059 =	Suurus
+	c_Lang060 =	4 muutujad luuakse käesoleva eesliide ja lõpetades X, Y, W, H.
+	c_Lang061 =	Algus
+	c_Lang062 =	Lõpp
+	c_Lang063 =	Pilt
+	c_Lang064 =	Pixel
+	c_Lang065 =	Tee Screenshot
+	c_Lang066 =	Key Oodake
+	c_Lang067 =	Kui leitud
+	c_Lang068 =	Kui ei leia / Error
+	c_Lang069 =	Väljundmuutujad
+	c_Lang070 =	Coord
+	c_Lang071 =	Variatsioonid
+	c_Lang072 =	Eelvaade
+	c_Lang073 =	Aas
+	c_Lang074 =	Automaatselt luua COM objekti
+	c_Lang075 =	Paus
+	c_Lang076 =	Jätkama
+	c_Lang077 =	Minema
+	c_Lang078 =	Mine Label
+	c_Lang079 =	Silt
+	c_Lang080 =	Lisa Label
+	c_Lang081 =	String (InputVar)
+	c_Lang082 =	Muutuja
+	c_Lang083 =	Veel
+	c_Lang084 =	Määra Muutuva
+	c_Lang085 =	Sisu
+	c_Lang086 =	Operaator
+	c_Lang087 =	Väljendus
+	c_Lang088 =	Lähtestama
+	c_Lang089 =	Funktsioon Nimi
+	c_Lang090 =	Komaeraldusega parameetrid (ilma sulgudes)
+	c_Lang091 =	Kasuta väljendeid formaadis
+	c_Lang092 =	Page Element / Index
+	c_Lang093 =	Määra
+	c_Lang094 =	Saama
+	c_Lang095 =	Meetod
+	c_Lang096 =	Vara
+	c_Lang097 =	Oodake lehe laadimine.
+	c_Lang098 =	CLSID
+	c_Lang099 =	Ühendama
+	c_Lang100 =	Käepide
+	c_Lang101 =	COM Script
+	c_Lang102 =	Sõnum arv
+	c_Lang103 =	Eriklahve
+	c_Lang104 =	Brauser Tagasi
+	c_Lang105 =	Brauser edasi
+	c_Lang106 =	Brauser Värskenda
+	c_Lang107 =	Brauser Stopp
+	c_Lang108 =	Brauser Otsing
+	c_Lang109 =	Brauser lemmikud
+	c_Lang110 =	Brauser Kodu
+	c_Lang111 =	Andmekandja
+	c_Lang112 =	Tumm
+	c_Lang113 =	Volume Up
+	c_Lang114 =	Hääl maha
+	c_Lang115 =	Esitus / paus
+	c_Lang116 =	Järgmine laul
+	c_Lang117 =	Eelmine Rada
+	c_Lang118 =	Peatus
+	c_Lang119 =	E-mail
+	c_Lang120 =	App 1
+	c_Lang121 =	App 2
+	c_Lang122 =	ScanCode
+	c_Lang123 =	Lisama
+	c_Lang124 =	Key ajalugu
+	c_Lang125 =	Sisestage ScanCode ...
+	c_Lang126 =	Kood lisada Virtuaalklahvid loetelu!
+	c_Lang127 =	Sisestage oma nimi muutuja
+	c_Lang128 =	Kasutage funktsiooni väline fail
+	c_Lang130 =	Korda kuni
+	c_Lang131 =	Kehtima
+	c_Lang132 =	Aas
+	c_Lang133 =	Fail
+	c_Lang134 =	Sõeluda
+	c_Lang135 =	Lugenud
+	c_Lang136 =	Registry
+	c_Lang137 =	Failimustrid:
+	c_Lang138 =	Kataloogid
+	c_Lang139 =	Rekursiivne
+	c_Lang140 =	Sisend Muutuja:
+	c_Lang141 =	Piiritlejad:
+	c_Lang142 =	Jätta Tegelased:
+	c_Lang143 =	Sisendfail:
+	c_Lang144 =	Juurvõti \ Key:
+	c_Lang145 =	Faile
+	c_Lang146 =	Võtmed
+	c_Lang147 =	Ikoon
+	c_Lang148 =	Ikoon puudub
+	c_Lang149 =	Viga
+	c_Lang150 =	Küsimus
+	c_Lang151 =	Hüüatus
+	c_Lang152 =	Info
+	c_Lang153 =	Alati peal
+	c_Lang154 =	Protokoll
+	c_Lang155 =	Kuni
+	c_Lang156 =	Käsikiri
+	c_Lang157 =	Skriptikeel
+	c_Lang158 =	Ei ühildu 64-bitine!
+	c_Lang159 =	Otsingu valikud
+	c_Lang160 =	Läbipaistev
+	c_Lang161 =	Skaala
+	c_Lang162 =	Lisa "Kui avaldus"
+	c_Lang163 =	Saada režiim
+	c_Lang164 =	Võrdne
+	c_Lang165 =	Sisaldab
+	c_Lang166 =	Suurem
+	c_Lang167 =	Vähem
+	c_Lang168 =	Jah
+	c_Lang169 =	Ei
+	c_Lang170 =	Okei
+	c_Lang171 =	Tühistama
+	c_Lang172 =	Abort
+	c_Lang173 =	Ignoreerima
+	c_Lang174 =	Uuesti
+	c_Lang175 =	Jätkama
+	c_Lang176 =	Proovi uuesti
+	c_Lang177 =	Aeg maha
+	c_Lang178 =	Määra võtme viivitusega
+	c_Lang179 =	Key viivitusega
+	c_Lang180 =	Juhuslikud viivitusega
+	c_Lang181 =	Miinimum
+	c_Lang182 =	Maksimaalne
+	c_Lang183 =	Keela juhuslikult viivitusi selle käsu
+	c_Lang184 =	Vali nimekirjast
+	c_Lang185 =	Nupud
+	c_Lang186 =	Esimene
+	c_Lang187 =	Teine
+	c_Lang188 =	Kolmas
+	c_Lang189 =	Pealkiri
+	c_Lang190 =	Kui aken aktiivne
+	c_Lang191 =	Kui aken ei ole aktiivne
+	c_Lang192 =	Kui aknas on olemas
+	c_Lang193 =	Kui aken ei eksisteeri
+	c_Lang194 =	Kui faili on olemas
+	c_Lang195 =	Kui faili ei eksisteeri
+	c_Lang196 =	Kui lõikelauale teksti
+	c_Lang197 =	Kui loop indeks
+	c_Lang198 =	Kui pildi / piksli leitud
+	c_Lang199 =	Kui pildi / piksel ei leitud
+	c_Lang200 =	Kui string sisaldab
+	c_Lang201 =	Kui string ei sisalda
+	c_Lang202 =	Kui kirjakasti
+	c_Lang203 =	Võrrelge muutujad
+	c_Lang204 =	Hinnake väljendus
+	c_Lang205 =	Regioon
+	c_Lang206 =	(Kasuta [] luua massiivid, näiteks .: [10, 20, aVariable, "aString"])
+	c_Lang207 =	Array objekti
+	c_Lang208 =	Key Nimi
+	c_Lang209 =	Väärtus nimi
+	c_Lang210 =	Väärtused
+	c_Lang211 =	Array
+	c_Lang212 =	Kasutaja määratletud funktsiooni
+	c_Lang213 =	Funktsiooni parameeter
+	c_Lang214 =	Funktsioon Tagasi
+	c_Lang215 =	Parameetrid
+	c_Lang216 =	Tagasi Value
+	c_Lang217 =	Vaikimisi väärtus
+	c_Lang218 =	Ulatus
+	c_Lang219 =	Kohalik
+	c_Lang220 =	Globaalne
+	c_Lang221 =	Nimi
+	c_Lang222 =	Saate lisada rohkem parameetrid funktsioonimenüüst.
+	c_Lang223 =	Globaalsed muutujad
+	c_Lang224 =	Kohalikud muutujad
+	c_Lang225 =	Staatiline muutujad
+	c_Lang226 =	Pärit
+	c_Lang227 =	E-
+	c_Lang228 =	Teema
+	c_Lang229 =	Sõnum
+	c_Lang230 =	Kuni
+	c_Lang231 =	CC
+	c_Lang232 =	BCC
+	c_Lang233 =	F2 muuta
+	c_Lang234 =	HTML
+	c_Lang235 =	Saada email
+	c_Lang236 =	Lae faile
+	c_Lang237 =	Zip / Unzip faili
+	c_Lang238 =	Sisse lülitama
+	c_Lang239 =	Lülita välja
+	c_Lang240 =	Seisukohti registreeritud.
+	c_Lang241 =	Kustuta kõik taimerid
+	c_Lang242 =	Määra timer
+	c_Lang243 =	Parem õigustatud
+	c_Lang244 =	Paremalt vasakule
+	c_Lang245 =	Manused
+	c_Lang246 =	Tee
+	c_Lang247 =	Kui
+	c_Lang248 =	Tihendamine iga faili teise arhiiv
+	c_Lang249 =	Väljavõte iga faili teise kausta
+	c_Lang250 =	Zip failid
+	c_Lang251 =	Unzip faili
+	c_Lang252 =	Allalaadimise lingid
+	c_Lang253 =	Sihtkataloog
+	c_Lang254 =	Sihtfaili
+	c_Lang255 =	Semikooloniga eraldatult, koma või line.
+	c_Lang256 =	Reguleerige koordinaadid kesklinnas pilti
+	c_Lang257 =	periood
+		
+; 16. Other Windows		
+	t_Lang001 =	Ekspordi AutoHotkey
+	t_Lang002 =	Makrod
+	t_Lang003 =	Loops
+	t_Lang004 =	0 = lõpmatu
+	t_Lang005 =	Kasuta Hotstring
+	t_Lang006 =	Block Mouse
+	t_Lang007 =	Kõik
+	t_Lang008 =	Mitte ükski
+	t_Lang009 =	Kontekstitundlik Hotkeys
+	t_Lang010 =	Ekspordi
+	t_Lang011 =	Taane
+	t_Lang012 =	Kaasa PMC kood
+	t_Lang013 =	Ära concatenate saata käske
+	t_Lang014 =	Värskendama
+	t_Lang015 =	Auto-Värskenda
+	t_Lang016 =	Alati peal
+	t_Lang017 =	Seaded
+	t_Lang018 =	Üld-
+	t_Lang019 =	Start / Stop Record
+	t_Lang020 =	Record New Macro
+	t_Lang021 =	Klahvivajutusi
+	t_Lang022 =	Salvestamine
+	t_Lang023 =	Jäädvusta peamine riigi (alla / üles)
+	t_Lang024 =	Hiireklõpsuga
+	t_Lang025 =	Hiire ratas
+	t_Lang026 =	Hiir Moves
+	t_Lang027 =	Ajalisi intervalle
+	t_Lang028 =	Minimaalne viivitus
+	t_Lang029 =	Akna klass
+	t_Lang030 =	Aken Tiitlid
+	t_Lang031 =	Record ControlSend
+	t_Lang032 =	Record ControlClick
+	t_Lang033 =	Suhteline Record Key
+	t_Lang034 =	Lülitab
+	t_Lang035 =	Taasesitus
+	t_Lang036 =	Kiirendama
+	t_Lang037 =	Võta aeglasemalt
+	t_Lang038 =	Tagasi Mouse pärast esituse
+	t_Lang039 =	Hiir koordinaadid
+	t_Lang040 =	Aken
+	t_Lang041 =	Ekraan
+	t_Lang042 =	Vaikimisi Mouse Delay
+	t_Lang043 =	Vaikimisi Window Delay
+	t_Lang044 =	Max Ajalugu per Macro
+	t_Lang045 =	Puhasta ajalugu
+	t_Lang046 =	Mängust
+	t_Lang047 =	Joonista Button
+	t_Lang048 =	Line Laius (Px)
+	t_Lang049 =	Pildista vabastamist
+	t_Lang050 =	Press Sisesta lüüa
+	t_Lang051 =	Mängust Kataloog
+	t_Lang052 =	Line wrap
+	t_Lang053 =	Kiirklahvid
+	t_Lang054 =	Vaikimisi seadistatud Hotkeys
+	t_Lang055 =	Lülita aknaotseteed
+	t_Lang056 =	Eemalda kõik veerud Suurus
+	t_Lang057 =	Vaikimisi Macro Pilt
+	t_Lang058 =	Standard Library fail
+	t_Lang059 =	Kasutage Expression vaikimisi muutujad määramine
+	t_Lang060 =	Highlight Loops ja lisad
+	t_Lang061 =	(Klõpsake Index veerupäises lubada / keelata)
+	t_Lang062 =	Virtuaalklahvid
+	t_Lang063 =	Vaikimisi
+	t_Lang064 =	Edit Kommentaar
+	t_Lang065 =	Kommentaar
+	t_Lang066 =	Otsi veerg
+	t_Lang067 =	Otsi / Asenda
+	t_Lang068 =	&Leidma
+	t_Lang069 =	&Match Case
+	t_Lang070 =	&Asendama
+	t_Lang071 =	Avastatud
+	t_Lang072 =	Asendatakse
+	t_Lang073 =	&Valitud read
+	t_Lang074 =	K&õik read
+	t_Lang075 =	Kõ&ik Makrod
+	t_Lang076 =	Umbes
+	t_Lang077 =	&Regulaaravaldiste
+	t_Lang078 =	Esita üks kord
+	t_Lang079 =	Mängi iga X (mili) sekundit
+	t_Lang080 =	Taimer
+	t_Lang081 =	Paus
+	t_Lang082 =	Avaldused
+	t_Lang083 =	Näita sälku Loops ja lisad
+	t_Lang084 =	(Topeltklõps tegevuskava veerupäises lubada / keelata)
+	t_Lang085 =	Näita Controls Bar käivitamisel
+	t_Lang086 =	Otsin funktsioonid. Palun oota...
+	t_Lang087 =	Väliseid faile
+	t_Lang088 =	Loo exe fail
+	t_Lang089 =	Laske Rohkete
+	t_Lang090 =	Vaikeväärtused
+	t_Lang091 =	Laske lohistamine Read
+	t_Lang092 =	&Kogu raku sisu
+	t_Lang093 =	Standard INI formaadis
+	t_Lang094 =	Name = Value
+	t_Lang095 =	Sisesta 1 muutuva rea ​​kohta. Võite lisada ka [jaos].
+	t_Lang096 =	Kasutaja globaalsed muutujad
+	t_Lang097 =	Vajutage nuppu juhtkangi
+	t_Lang098 =	Backspace selge
+	t_Lang099 =	Nupp
+	t_Lang100 =	Näita mullspikrid
+	t_Lang101 =	Kiirus
+	t_Lang102 =	Aeglane
+	t_Lang103 =	Kiire
+	t_Lang104 =	Näita / Peida tiitelribale
+	t_Lang105 =	Näita / Peida Main Window
+	t_Lang106 =	Käivita kohe
+	t_Lang107 =	Juhuslikud Viivitused
+	t_Lang108 =	Normaalne
+	t_Lang109 =	Alla
+	t_Lang110 =	Üles
+	t_Lang111 =	Sisestage Klahvivajutustoon
+	t_Lang112 =	Esitus / paus
+	t_Lang113 =	Peatus
+	t_Lang114 =	Taasesitussuvandid
+	t_Lang115 =	Start / Stop Record
+	t_Lang116 =	Record New Macro
+	t_Lang117 =	Salvestamismäärangud
+	t_Lang118 =	Puhasta nimekiri
+	t_Lang119 =	Näita Progress Bar
+	t_Lang120 =	Kiirendama
+	t_Lang121 =	Võta aeglasemalt
+	t_Lang122 =	Näita / Peida tiitelribale
+	t_Lang123 =	Näita / Peida Main Window
+	t_Lang124 =	Lahtidokkimine
+	t_Lang125 =	Dokk
+	t_Lang126 =	Avatud
+	t_Lang127 =	Salvesta
+	t_Lang128 =	Lõigatud
+	t_Lang129 =	Koopia
+	t_Lang130 =	Pasta
+	t_Lang131 =	Vali kõik
+	t_Lang132 =	Kustutama
+	t_Lang133 =	Klaviatuur
+	t_Lang134 =	Hiir
+	t_Lang135 =	Teised
+	t_Lang136 =	Highlight Read
+	t_Lang137 =	Vaikimisi Script Editor
+	t_Lang138 =	Ava välist redaktorit (Ctrl + Shift + E)
+	t_Lang139 =	Valima
+	t_Lang140 =	Autor veerg
+	t_Lang141 =	Kõik veerud
+	t_Lang142 =	Eemalda teema Tööriistaribadest (nõuab taaskäivitust)
+	t_Lang143 =	Auto Hide Controls tööriistariba
+	t_Lang144 =	Klõpsa ja lohista muuta järjekorras. Topeltklõpsake muuta.
+	t_Lang145 =	Edit Makrod
+	t_Lang146 =	Järjekorras
+	t_Lang147 =	Macro
+	t_Lang148 =	Action peaakna sulgemisnupule
+	t_Lang149 =	Pidev
+	t_Lang150 =	Minimeeri salve
+	t_Lang151 =	Näita kinnituse sulgemisel makro
+	t_Lang152 =	Loo varukoopiaid automaatselt
+	t_Lang153 =	Loob ajastatud Windows'i ajastatud.
+	t_Lang154 =	Aeg esimene toimumise
+	t_Lang155 =	Ajakava tüübist
+	t_Lang156 =	Kui || Daily | Weekly | Kuu | Start | Logon | Idle
+	t_Lang157 =	Target PMC faili
+	t_Lang158 =	Target AHK faili
+	t_Lang159 =	Skript salvestada ega üle kirjutada aktiivses kataloogis!
+	t_Lang160 =	Ava Task Scheduler
+	t_Lang161 =	Ülesanne on edukalt loodud!
+	t_Lang162 =	Ilmnes viga. Ülesanne pole võimalik luua.
+	t_Lang163 =	Scheduler
+	t_Lang164 =	Ajakava Makrod
+	t_Lang165 =	Käivita makro
+	t_Lang166 =	Fail
+	t_Lang167 =	Nöör
+	t_Lang168 =	Get Info
+	t_Lang169 =	Oota
+	t_Lang170 =	Aken Groups
+	t_Lang171 =	Sõnumid
+	t_Lang172 =	Registry Ja INI
+	t_Lang173 =	Heli
+	t_Lang174 =	Muutujad
+	t_Lang175 =	Muud.
+	t_Lang176 =	Lisa grupp
+	t_Lang177 =	Uus grupp
+	t_Lang178 =	Keeletoimetaja
+	t_Lang179 =	Loo uus
+	t_Lang180 =	Kasutage Enter, PgDn ja PgUp navigeerida.
+	t_Lang181 =	Esita
+	t_Lang182 =	Nimi
+	t_Lang183 =	Salvesta muudatused?
+	t_Lang184 =	Keelefail
+	t_Lang185 =	Viitefaili
+	t_Lang186 =	Esitada läbivaatamiseks või uue tõlke
+	t_Lang187 =	Sulge kõik
+	t_Lang188 =	Laienda kõik
+	t_Lang189 =	Keel
+	t_Lang190 =	Convert reavahetused
+	t_Lang191 =	E-posti kontod
+	t_Lang192 =	Ajakohastama
+	t_Lang193 =	Topeltklõpsake muuta
+	t_Lang194 =	SMTP Server
+	t_Lang195 =	Port
+	t_Lang196 =	Autentimine
+	t_Lang197 =	Kasutajanimi
+	t_Lang198 =	Parool
+	t_Lang199 =	SSL
+	t_Lang200 =	Saada režiimil
+	t_Lang201 =	Saada test
+	t_Lang202 =	Screen Ja Akende
+	t_Lang203 =	Avastada Hidden Windows
+	t_Lang204 =	Avastada peidetud teksti
+	t_Lang205 =	Pealkiri Match režiim
+	t_Lang206 =	Pealkiri Match Speed
+	t_Lang207 =	Klient
+	t_Lang208 =	L&eidma
+	t_Lang209 =	A&sendama
+	t_Lang210 =	Ära näita vigu
+		
+; 17. Messages & Dialogs		
+	d_Lang001 =	Avatud
+	d_Lang002 =	Säästa praegune projekt?
+	d_Lang003 =	Vaikimisi seaded
+	d_Lang004 =	Macro Looja faile
+	d_Lang005 =	Salvesta Project
+	d_Lang006 =	Salvestamine nurjus / Failiülekirjutamine
+	d_Lang007 =	Viga
+	d_Lang008 =	Viga: Macro Selected.
+		Please ماکرو حداقل یک ماکرو در لیست.
+	d_Lang009 =	Viga: Kiirklahv Valitud.
+	d_Lang010 =	Viga: Vale Address.
+		The انتخاب آدرس و یا نام فایل نامعتبر است.
+	d_Lang011 =	Hoiatus
+	d_Lang012 =	Ei kontrolli selected.
+		Continue?
+	d_Lang013 =	Ekspordi Script
+	d_Lang014 =	Script Exported
+	d_Lang015 =	Fail eksporditi edukalt!
+	d_Lang016 =	Vajuta "Saada", et tähistada positsiooni.
+	d_Lang017 =	- Valige aknas.
+		- Point soovitud asendisse.
+		- Nuppu Paremale.
+	d_Lang018 =	Pixel Color
+	d_Lang019 =	Garbitu zerrenda
+	d_Lang020 =	Itxi Makro?
+	d_Lang021 =	Hurrengoa
+	d_Lang022 =	aurreko
+	d_Lang023 =	Mezua
+	d_Lang024 =	ezarpenak Kargatu default?
+	d_Lang025 =	Makro (s) Hotkeys du activated.`nUse Play.
+	d_Lang026 =	/ Stop grabatzen hasteko
+	d_Lang027 =	Grabaketa gelditu
+	d_Lang028 =	Grabaketa ...
+	d_Lang029 =	gelditu
+	d_Lang030 =	errekor berria hasteko
+	d_Lang031 =	Helista olematu funktsioon.
+	d_Lang032 =	Akatsa: Duplicate Hotkeys.
+	d_Lang033 =	Aktibatu Makroak
+	d_Lang034 =	- Klik eta%% DrawButton Arrastatu area hautatzeko.
+		- Klik eta kontrol gunea hautatzeko arrastatu gabe askatu.
+		- Eremu batean klik kontrol gabe leihoaren area hautatzeko.
+	d_Lang035 =	Jarraitu?
+	d_Lang036 =	Image / Pixel at Found
+	d_Lang037 =	Image / Pixel Not Found.
+	d_Lang038 =	Sakatu Ados jarraitzeko.
+	d_Lang039 =	Saatmine. Palun oota...
+	d_Lang040 =	Erabiltzaileek GDI + Liburutegia eskatzen.
+		Egin klik Ados orria deskargatzeko joan.
+	d_Lang041 =	Muutuja nimes ebaseadusliku iseloomu.
+	d_Lang042 =	on reserveeritud sõna.
+	d_Lang043 =	Või kasutada Controls tööriistariba.
+	d_Lang044 =	See funktsioon nõuab Eval () funktsiooni.
+		Vajuta OK, et minna alla laadida leheküljel.
+	d_Lang045 =	Palun valige Internet Exploreri aken!
+	d_Lang046 =	Connection edukas!
+	d_Lang047 =	Ühendamine ebaõnnestus!
+	d_Lang048 =	Pange käepide ja CLSID.
+	d_Lang049 =	Vale Label nimi.
+	d_Lang050 =	Sildi duplikaat.
+	d_Lang051 =	Et mängida Macro vajutage vastavat Kiirklahv (Auto / Man).
+	d_Lang052 =	Salvestamise alustamiseks vajutage Record Kiirklahv.
+	d_Lang053 =	Ära näita seda teadet uuesti.
+	d_Lang054 =	Palun valige Exceli akna!
+	d_Lang055 =	Palun valige AutoHotkey skripti faili (.ahk) ja sisestada funktsiooni nime.
+	d_Lang056 =	See funktsioon nõuab AutoHotkey paigaldatud.
+		Vajuta OK, et minna alla laadida leheküljel.
+	d_Lang057 =	- Press Ctrl + nooleklahve valitud piirkonnas.
+		- Press Shift + nooleklahvid suurust valitud piirkonnas.
+		- Press Sisesta lõpetada.
+	d_Lang058 =	Mõned funktsioonid nõuavad admnistrator privilages et toimida.
+		Soovitatav taaskäivitada rakenduse administraatorina.
+	d_Lang059 =	See käsk ei toeta väljendeid ega funktsioone.
+		Palun määrata muutuja ning kasutada seda parameetrit.
+	d_Lang060 =	Uus versioon saadaval
+	d_Lang061 =	Mitte praegu
+	d_Lang062 =	Sul on juba kõige uuem versioon.
+	d_Lang063 =	Tekkis viga kontrollides.
+	d_Lang064 =	Viga
+	d_Lang065 =	rida
+	d_Lang066 =	eriti
+	d_Lang067 =	Näita selle akna käivitamisel
+	d_Lang068 =	Näpunäiteid:
+	d_Lang069 =	Palju aega ja vaeva on läinud arengut pulover on Macro looja. Kui leiate midagi kasulikku palun kaaluda näitab oma tunnustust annetuse.
+		Annetava või mitte, ei tule mingit erinevust selle omadusi ja funktsioone.
+	d_Lang070 =	Kingi ...
+	d_Lang071 =	Ei aitäh
+	d_Lang072 =	Toetus avatud lähtekoodiga tarkvara
+	d_Lang073 =	Viga: Vale Kiirklahv Valitud.
+	d_Lang074 =	Leia käsu või funktsiooni
+	d_Lang075 =	Tere tulemast pulover on Macro looja
+	d_Lang076 =	Palun valige oma eelistatud paigutus
+	d_Lang077 =	kompaktne
+	d_Lang078 =	vaikimisi
+	d_Lang079 =	Kontrolli uuendusi käivitamisel.
+	d_Lang080 =	Teil on võimalik muuta seda Valikud> Seaded> Üldine.
+	d_Lang081 =	Teil on võimalik muuta ja kohandada paigutust menüüs Vaade.
+	d_Lang082 =	Fail ei leitud!
+	d_Lang083 =	Varufaili on leitud. Kas soovid selle avada?
+	d_Lang084 =	Palun salvestada muudatused enne sõiduplaani ülesanne.
+	d_Lang085 =	Kadunud "End Loop" avalduse Macro
+	d_Lang086 =	Kadunud "End Kui" avalduse Macro
+	d_Lang087 =	Pange tähele, et tehtud muudatused skripti väljaspool programmi ei mõjuta teie makrosid kuidagi.
+		See funktsioon on mõeldud ainult kiire ekspordi funktsiooni. PMC ei ole mõeldud olema AHK script editor.
+	d_Lang088 =	Proovige joosta nii tavakasutajate (mitte administraator).
+	d_Lang089 =	No järjest valitud!
+	d_Lang090 =	Palun valige järjest sisestada või eemaldada rühma.
+	d_Lang091 =	Allalaadimine. Palun oota...
+	d_Lang092 =	väikesed ikoonid
+	d_Lang093 =	suur ikoonid
+	d_Lang094 =	See funktsioon nõuab Windows Vista või kõrgem.
+	d_Lang095 =	Kasutamine ByRef põhjustab parameeter saada alias muutuja möödunud aastal alates helistaja. Teisisõnu, kui parameeter ning helistaja muutuja mõlemad seonduvad sama sisuga mällu.
+	d_Lang096 =	- ÄRGE pange MUUTUJATE protsentides Märgid SIIN.
+		- Return väärtus olema väljendus.
+		- Te võite kasutada stringe, muutujad, massiivid ja funktsioone. Võite kombineerida ühegi nimetatud.
+		- Kasutamiseks stringid, pange need tsitaadid, näiteks .: "Tulemus on:" a + b.
+		- Kui soovite naasta ekstra tulemusi, siis võib kasutada ka ByRef in parameetrid.
+		- Massiivid saab kasutada tagastada mitu väärtused või isegi nimega väärtused.
+	d_Lang097 =	- ÄRGE pange MUUTUJATE protsentides Märgid SIIN.
+		- Enamik AHK väljendeid on toetatud.
+		- Te võite kasutada stringe, muutujad, massiivid ja funktsioone.
+		- Kasutamiseks stringid, pange need tsitaadid, näiteks .: var = "a".
+		- Mitu Avaldused on toetatud, näiteks .: var = "a" || Instr (var, "b").
+	d_Lang098 =	Kui üks parameeter on vaikeväärtus järgmised parameetrid peavad olema ka.
+	d_Lang099 =	Funktsiooni nimi sisaldab lubamatut tähemärki.
+	d_Lang100 =	Mine, Gosub ja Label ei ole lubatud funktsioone.
+	d_Lang101 =	Duplicate funktsiooni.
+	d_Lang102 =	Ilmnes viga. Võite saata e-kiri "pulover@macrocreator.com" failiga:
+	d_Lang103 =	New keeles esitada saadaval.
+	d_Lang104 =	See sõnum ei näidata enam sama uuendus. Võite alla laadida menüüst Help> Otsi uuendusi.
+	d_Lang105 =	Fail edukalt saadetud. Aitäh!
+	d_Lang106 =	Keel faile edukalt uuendatud.
+	d_Lang107 =	Ei saanud alustada taimer
+	d_Lang108 =	Kõik positsioonid on registreeritud. Palun kustutage üks neist.
+	d_Lang109 =	Target silt ei ole olemas.
+	d_Lang110 =	Kinnita faili asendada
+	d_Lang111 =	Juba eksisteerib.
+		Kas soovite selle asendada?
+	d_Lang112 =	E-posti konto ei leitud.
+	d_Lang113 =	Ei ole viga teatatud.
+	d_Lang114 =	Skriptid eksporditakse (isegi kui kompileeritud) koos send email funktsioon (CDO) on nähtav info e-posti kontode kasutamist, sealhulgas parool. PMC projekti toimik ei pea seda teavet.
+	d_Lang115 =	- Hoidke Alt seada piirkonna samas kohas.
+	d_Lang116 =	Transfer ja installida
+	d_Lang117 =	Mine alla laadida leheküljel
+	d_Lang118 =	Parim Sobivus
+	d_Lang119 =	Taaskäivitage rakendus muutuste rakendamiseks.
+	d_Lang120 =	Nullimine tööriistaribad suurused, minge:
+		
+; 18. Start-up Tips		
+	Start_Tips =	Vaata videot õpetused on www.macrocreator.com/help õppida palju funktsioone PMC.
+		Et saada abi eest konkreetse käsu paremklõps kuskil käsk aken näidata linke online aidata.
+		Saate luua makrosid kasutades Käsunuppude peaaknas või kasutavad Recorder kopeerida oma tegevuse. Avage Valikud> Seaded> Salvestamine valida, mida sisendid tuleb registreerida.
+		Kasutage otsinguriba või "Leia käsk" aknas otsida käsud ja funktsioonid.
+		Kas soovite, et aidata parandada tõlke või isegi luua uus? Avage Valikud> Seaded> Keel toimetaja ja teha parandusi, mida soovid. Võite eelvaate seda igal ajal. Vajuta Esitada saata läbivaatamiseks. Julgelt esitada mitmeid parandusi nii mitu korda kui soovid.
+		Saate "Pildista Keys" võimalus siseneda võtmed ja kombinatsioone oma Macro otse peaaknas.
+		Sisesta võtmed ja kombinatsioone Kiirklahv kasti allosas ja vajutage nupule Lisa, et lisada need valige rida.
+		Kasutage muuta nuppude allosas peaaknas seada korrata ja lükata mitu rida korraga. Kui ei read valitud muuta nuppude kehtivad kõik read nimekirjas.
+		Peaaegu iga käsu ja funktsioon aktsepteerib ja väljundid muutujaid. Saate määrata oma muutujad muutujad aknad (käsud> muutujad / massiivid). Et neid kasutada sees käsud lisada muutuja nime protsenti märke, näiteks .:% MyVar%. Funktsioone, neid kasutada ilma protsenti märke, näiteks .: substr (MyVar, 5).
+		Paremklõpsake kõikjal käsuaken kergesti lisada Sisseehitatud muutujate nimekirja.
+		Diktofoni kasutamise kiireks ülesanded lähevad Valikud> Seaded> Salvestamine ja vaadata "Clear List" variant. Siis klõpsa Record nuppu peaaknas ja kasuta F10 selge praeguse makro ja alustada uut sama hotkey. Võite vaadata "Alati Active" variant peaaknas hoida salvestamise ja taasesituse kiirklahvid aktiivne.
+		PMC toetab Array objektid ja meetodid, nagu AutoHotkey skripte. Saate luua massiivid mitmeti, kõige tavalisema läheb muutujad aken, kontrollides "Expression" valik ja lisades sulgudes olevad väärtused, näiteks .: [10, 20, Var, "string"]. Võite luua ka nimega võtmed, näiteks .: {keyA: Vara, "mõned olulised": "stringi väärtus"}.
+		Funktsioonid kasutada AHK süntaks. Literaalstringid tuleb jutumärkides ja muutujad ei pea protsenti märke. Te võite kasutada muid funktsioone või massiivi elementide parameetrid. Nt .: StrReplace (MyVar, MyArray [ "A"], substr (OtherVar, 2, 3)).
+		Expressions on toetatud AutoHotkey süntaks. Et kasutada väljendit sees käsu parameetri hakata seda protsendimärgiga, näiteks .:% substr (Var, 5).
+		NN "Loop" counter ülaosas seab koguarvust silmuseid valitud Macro.
+		Saate muuta järjest topeltklõpsuga või valides selle ja vajutades Edit nuppe allosas. Saate muuta Mitme valitud ridade abil valikuid muuta baari allosas.
+		Võite määrata oma funktsioone Function> Koosta funktsiooni ja kasutavad neid Funktsioon akna või sees väljendeid.
+		Saate määrata globa / kohalike ja staatiline muutujad kasutaja määratud funktsioone. Globaalne muutuja määratletud Valikud> Seaded> Kasutaja globaalseid muutujaid peetakse Super Global, ja on alati olemas sees funktsioone, isegi siis, kui on määratletud kui kohalikud.
+		Valige üks või mitu rida lisada uusi käske peal neid.
+		Võite liikuda read Vajuta-ja lohistage.
+		Topeltklõpsake ikooni aktiveerimiseks kiirklahvid või taasesituse peatamiseks / salvestus. Vajuta seda keskmist nuppu taasesituse ajal või salvestamise peatamiseks.
+		Saate eksportida oma Makrod töö AutoHotkey skripte või eraldi käivitatav alates Ekspordi aknas.
+		Salvestada ja mängida Mouse absoluutkoordinaatidega minna Valikud> Seaded> Vaikimisi ning määrata hiire koordinaadid ekraanil.
+		Saate avada, kopeerida, teisaldada või kustutada faile ja kaustu, kasutades üht käskude käsud> Run / Fail / String / Muud. On ka palju teisi kasulikke käske nagu StringReplace, inputbox ja MouseGetPos.
+		Salvestada, alla ja üles riigi iga võti Mine Valikud> Seaded> Salvestamine ning vaadake "Pildista peamine riigi (Alla / üles)" variant.
+		Te võite kasutada kiirklahve kiirendada või aeglustada Playback. Avage Valikud> Seaded> Playback seada võtmed ja kiirust.
+		Kohandada püüdmist piirkonnas, kasutades "Tee Screenshot" tööriista minna Valikud> Seaded> Pildid ja valige "Press Sisesta lüüa". Pärast joonistamise ristküliku kasutada Ctrl + nooleklahve valiku ja Shift + nooleklahve suurust muuta.
+		Quick Select: Vali ühtegi rida ja klõpsata veeru päist, et valida sarnaste ridade põhineb raku teksti, et kolonni.
+		Vajuta Index veeru päist sisse / välja lülitamiseks Abi Marks ja värvid Loops ja esitamine. Topeltklõps tegevuskava veeru päist lülitada sisse / välja sälku Loops ja esitamine.
+		Võite silumiseks Makrod kasutades käsiraamatu Kiirklahv ja Play võimalusi Macro menüüst. Võite ka välja lülitada tegevus eemaldades märke Macro nimekirja.
+		Et oma Makrod töötavad ainult teatud akende minna Macro> Kontekstitundlik Hotkeys.
+		Sa saad ise globaalsed muutujad olema koormatud käivitamisel ja eksportida. Avage Valikud> Seaded> Globaalsed muutujad lisada neid.
+		Võite käivitada lisafunktsioone nagu substr ja RegExReplace funktsioonidest aken (käsud> Funktsioonid / Array meetodid). Samuti saab määrata oma funktsioone või käivitada funktsioone välise AutoHotkey skripte.
+		Saate salvestada hiire liikumine võrreldes praeguse positsiooni hoides CapsLocki salvestamise ajal (saab muuta võtme ja muuta see lülitab Seaded).
+		
+; 19. Tooltips		
+	A_List_TT =	Vali Macro (Ctrl + 1 ~ 0)
+	AbortKey_TT =	Kiirklahv lõpetada taasesitus
+	ActiveObj_TT =	Püüab ühendada Active COM objekt
+	AddAtt_TT =	Lisada faile
+	ApplyI_TT =	Kehtima
+	ApplyL_TT =	Sisestage alates Box (Insert)
+	ApplyT_TT =	Kehtima
+	AutoKey_TT =	Kiirklahv mängida Macro
+	Client_TT =	Koordinaadid on võrreldes aktiivse akna klient ala, mis välistab akna tiitliriba menüü (kui see on tavaline pirn) ja piire.
+	Clip_TT =	Ajutiselt kasutab lõikelaud saata teksti.
+		Kui toiming on lõpetatud, skript
+		Taastab lõikepuhvri algupärast sisu.
+		(Jäta Tekst tühi kleepida praegune sisu)
+	CM_TT =	Screen: Koordinaadid on võrreldes lauaarvuti (kogu ekraani).
+		Aken: Koordinaadid on võrreldes aktiivse akna.
+		Klient: Koordinaadid on võrreldes aktiivse akna klient ala, mis välistab akna tiitliriba menüü (kui see on tavaline pirn) ja piire.
+	CmdFilter_TT =	Filter tüübi järgi
+	CmdSort_TT =	Sorteeri tähestiku
+	ColorPick_TT =	Saada piksel Screen
+	ComEvent_TT =	Kiirus, millega klahvivajutusi saadetakse määrab võti viivitus.
+	ComText_TT =	Kui ei Toorrežiimis järgmisi märke
+		Käsitletakse modifikaatoreid (need modifikaatoreid mõjutada
+		Ainult juba järgmisel võti):!, +, ^, #
+	CoordPixel_TT =	Koordinaatide režiimil
+	DefaultMacro_TT =	Valige fail laadimiseks programmi käivitamisel
+	EditPaste_TT =	Pastad stringi katus / Lisamispositsiooni
+		Ühes Edit kontrolli (see ei mõjuta
+		Sisu lõikelauale).
+	Ex_AF_TT =	Jätab õrn meetod aktiveerides aknas
+		Ja läheb otse jõuline meetod.
+	Ex_CM_TT =	Komplektid koordineerida režiimi Hiirekäsud olevat suhteline kas aktiivse akna või ekraanil.
+	Ex_DH_TT =	Määrab, kas nähtamatu aknad on "seen" skripti.
+	Ex_DT_TT =	Määrab, kas nähtamatu teksti aken "näinud", mille eesmärk on leida aknas. See mõjutab käske, nagu IfWinExist ja WinActivate.
+	Ex_EdScript_TT =	Ava välist redaktorit
+	Ex_EdVars_TT =	Vali globaalseid muutujaid, mida eksporditakse.
+	Ex_ExecScript_TT =	Käivita skript
+	Ex_HK_TT =	Jõudude kasutamise konksu rakendada kõiki
+		Või mõne kiirklahvidega.
+	Ex_IfDir_TT =	Loob kontekstitundlik kiirklahvid ja hotstrings sõltuvalt
+		Tüübist aken on aktiivne või ei ole.
+	Ex_IfDirType_TT =	Loob kontekstitundlik kiirklahvid ja hotstrings sõltuvalt
+		Tüübist aken on aktiivne või ei ole.
+	Ex_IN_TT =	Põhjustab skripti käituda nii, nagu määratud
+		Faili sisu esinevad selles täpse asukoha.
+	Ex_MD_TT =	Määrab viivituse, mis toimub pärast
+		Iga hiire liigutamine või klõpsuga.
+	Ex_MT_TT =	Määrab maksimaalse arvu samaaegsete
+		Niiti hotkey või hotstring.
+	Ex_NT_TT =	Keelab näitamise ikoonile.
+	Ex_PT_TT =	Hoiab skripti alaliselt töötab
+		(See tähendab kuni kasutaja sulgeb see või ExitApp ilmnemiseni).
+	Ex_SB_TT =	Määrab, kuidas kiiresti skripti kestab (mõjutab protsessori).
+	Ex_SC_TT =	Määrab viivituse, mis toimub pärast
+		Iga kontrolli modifitseerivad käsk.
+	Ex_SI_TT =	Määrab, kas skript lastakse uuesti, kui see juba töötab.
+	Ex_SK_TT =	Määrab viivituse, mis toimub pärast iga
+		Klahvivajutuse saadetud Saada või ControlSend.
+	Ex_SM_TT =	Teeb Saada sünonüümiks SendInput või SendPlay mitte
+		Vaikimisi (SendEvent). Samuti muudab Kliki ja MouseMove / Click / Drag
+		Kasuta kindlat meetodit.
+	Ex_ST_TT =	Määrab vastekäitumise on WinTitle parameetri käske, nagu WinWait.
+	Ex_SW_TT =	Määrab viivituse, mis toimub pärast
+		Iga akendesüsteemide käsk, nagu WinActivate.
+	Ex_UV_TT =	Ekspordi globaalseid muutujaid.
+	Ex_WN_TT =	Lubab või keelab hoiatused eritingimused, mis võib viidata viga, nagu kirjaviga või puudu "globaalne" deklaratsioon.
+	ExpList_TT =	Topeltklõpsake muuta
+	ExprLink2_TT =	- ÄRGE pange MUUTUJATE protsentides Märgid SIIN.
+		- Enamik AHK väljendeid on toetatud.
+		- Te võite kasutada stringe, muutujad, massiivid ja funktsioone.
+		- Kasutamiseks stringid, pange need tsitaadid, näiteks .: var  "a".
+		- Mitu Avaldused on toetatud, näiteks .: var  "a" || Instr (var, "b").
+	ExprLink3_TT =	- ÄRGE pange MUUTUJATE protsentides Märgid SIIN.
+		- Enamik AHK väljendeid on toetatud.
+		- Te võite kasutada stringe, muutujad, massiivid ja funktsioone.
+		- Kasutamiseks stringid, pange need tsitaadid, näiteks .: var = "a".
+		- Mitu Avaldused on toetatud, näiteks .: var = "a" || Instr (var, "b").
+	ExpView2_TT =	Täpsem Editor
+	ExpView_TT =	Täpsem Editor
+	Fast_TT =	Kasutab kiiremini otsivad meetodit (recommended)
+	HiddenText_TT =	Määrab, kas nähtamatu teksti aken "näinud", mille eesmärk on leida aknas. See mõjutab käske, nagu IfWinExist ja WinActivate.
+	HiddenWin_TT =	Määrab, kas nähtamatu aknad on "seen" skripti.
+	HScale_TT =	Kõrgus skaala
+	IconN_TT =	Number ikoon rühm
+	IfLVColor_TT =	Kliki vali värv
+	IncFiles_TT =	Kaasa failid / väärtused
+	IncFolders_TT =	Kaasa kataloogid (kaustad) / Keys
+	InsertKey_TT =	Sisestage Klahvivajutustoon (Ctrl + Insert)
+	InsertKeyT_TT =	Sisestage Klahvivajutustoon
+	JoyKey_TT =	Vajutage nuppu juhtkangi
+	LoopLVColor_TT =	Kliki vali värv
+	LUntil_TT =	Kehtib tingimus, et jätkuks Loop või ahela.
+	ManKey_TT =	Kiirklahv mängida Macro "samm-sammult"
+	MRel_TT =	Liikumised võrreldes praeguse positsiooni.
+		Või kui kasutada Kontroll: asend kontrolli all.
+	OSHK_TT =	Vali Macro
+	OSHKEd_TT =	Vali Macro
+	OSProgB_TT =	Näita Progress Bar
+	OSTrans_TT =	Läbipaistmatus
+	PauseKey_TT =	Kiirklahv taasesituse peatamiseks
+	PicPrev_TT =	Topeltklõps avada Pilt
+	Raw_TT =	SendRaw käsu tõlgendab kõik märgid sõna otseses mõttes
+		Mitte tõlkides {Sisesta} kaasa ENTER klahvivajutuse,
+		^ C Control-C jt
+	RecKey_TT =	Backspace selge
+	RecNewKey_TT =	Backspace selge
+	Recurse_TT =	Recurse sisse alamkataloogid (alamkaustad) / Alamvõtmed
+	RefreshIEW_TT =	Värskenda nimekirja
+	Relative_TT =	Koordinaadid on võrreldes aktiivse akna.
+	RelKey_TT =	Records hiire liikumine ja klikke korvab
+		Eelmisest asendis hoitakse.
+	ReptC_TT =	0 = lõpmatu
+	Reset_TT =	Clear muutuja sisu
+	RGB_TT =	Põhjustab värvi tuleb tõlgendada nii RGB väärtus asemel BGR
+	Screen_TT =	Koordinaadid on võrreldes lauaarvuti (kogu ekraani).
+	Screenshot_TT =	Tee Screenshot
+	SetText_TT =	Muudab teksti kontroll.
+	SI_TT =	Sõna FORCE ignoreerib dialoogiboks ning asendab vana Näiteks automaatselt,
+		Mis on sarnane mõju Laadi uuesti käsk.
+		Sõna IGNORE ignoreerib dialoogiboks ja jätab vana eksemplar.
+		Teisisõnu, üritab käivitada juba töötava skripti ignoreeritakse.
+		Sõna OFF võimaldab Rohkete skripti langeda.
+	SM_TT =	Sündmus: See on algus vaikimisi kasutavad kõik skripte.
+		Ta kasutab SendEvent meetod saata, SendRaw, kliki ja MouseMove / Click / Drag.
+		Sisend: Lülitab SendInput meetod saata, SendRaw, kliki ja MouseMove / Click / Drag.
+		InputThenPlay: sama, ainult et mitte valida tagasi Event režiimil
+		Kui SendInput ei ole kättesaadav, siis pöördub taasesitusreżiimi (vt allpool). See põhjustab ka
+		SendInput käsk ise tagasi taasesitusreżiimi kui SendInput on saadaval.
+		Play: lülitab SendPlay meetod saata, SendRaw, kliki ja MouseMove / Click / Drag.
+	ST_TT =	1: akna pealkiri peab algama kindlaksmääratud WinTitle olla sobi.
+		2: akna pealkiri ei tohi sisaldada WinTitle kusagil sees seda mängu.
+		3: akna pealkiri peab täpselt WinTitle olla sobi.
+		RegEx: muutused WinTitle, WinText, ExcludeTitle ja ExcludeText olla regulaaravaldisi.
+	TimeoutM_TT =	0 = lõpmatu
+	TitleMatch_TT =	1: akna pealkiri peab algama kindlaksmääratud WinTitle olla sobi.
+		2: akna pealkiri ei tohi sisaldada WinTitle kusagil sees seda mängu.
+		3: akna pealkiri peab täpselt WinTitle olla sobi.
+		RegEx: muutused WinTitle, WinText, ExcludeTitle ja ExcludeText olla regulaaravaldisi.
+	TitleSpeed_TT =	Kiire: See on vaikimisi. Performance olla oluliselt parem kui aeglane, kuid teatud WinText elemendid teatud tüüpi aknad ei tohi "nägid" erinevate aknas käske.
+		Aeglane: võib olla palju aeglasem, kuid kõik võimalikud WinText otsitakse igast aknast kui akendesüsteemide käsk otsib läbi nende mängu. Aken Spy näitab, milline osa Akna tekst (kui üldse) nõuda aeglane režiim.
+	ToggleC_TT =	Aktiveeri Suhteline salvestamine kui peamine riigi sees.
+	TransC_TT =	Läbipaistev värv
+	VarCopyA_TT =	Kopeeri praeguse muutuva sisuga
+	VarCopyB_TT =	Kopeeri praeguse muutuva sisuga
+	VariatT_TT =	Shades of variatsioon
+	WScale_TT =	Laius skaala
+		
+; 20. Operators		
+	As_Oper_01 =	Määrama
+	As_Oper_02 =	Lisama
+	As_Oper_03 =	Lahutama
+	As_Oper_04 =	Korruta
+	As_Oper_05 =	Veelahe
+	As_Oper_06 =	Põranda lõhe
+	As_Oper_07 =	CONCATENATE
+	As_Oper_08 =	Bitikaupa kaasava OR
+	As_Oper_09 =	Bitikaupa JA
+	As_Oper_10 =	Bitikaupa välistav VÕI
+	As_Oper_11 =	Paremalenihe JA
+	As_Oper_12 =	Vasakulenihe JA
+	Co_Oper_01 =	Võrdne
+	Co_Oper_02 =	Võrdsed (tõstutundlik)
+	Co_Oper_03 =	Ei võrdu
+	Co_Oper_04 =	Suurem
+	Co_Oper_05 =	Vähem
+	Co_Oper_06 =	Suurem või võrdne
+	Co_Oper_07 =	Väiksem või võrdne
+	Co_Oper_08 =	In (nimekiri)
+	Co_Oper_09 =	Mitte (nimekiri)
+	Co_Oper_10 =	Sisaldab (nimekiri)
+	Co_Oper_11 =	Ei sisalda (nimekiri)
+	Co_Oper_12 =	Aastatel (joon 1) ja (joon 2)
+	Co_Oper_13 =	Ei vahele (joon 1) ja (joon 2)
+	Co_Oper_14 =	Kas (tüüp)
+	Co_Oper_15 =	Kas pole (tüüp)
+		
+; 21. IE Commands Tips		
+	IE_Cmd_Index =	
+	Checked	Määrab või hangib seisund ruut või nupp.
+	Click	Simuleerib klõpsa objektil.
+	Focus	Fookustab objekti.
+	GoBack	Liigub tagasi ühe elemendi ajaloos nimekirja.
+	GoForward	Liigub edasi ühe elemendi ajaloos nimekirja.
+	GoHome	Liigub praeguse kodus või alustada lehel.
+	GoSearch	Liigub praeguse otsingu lehekülge.
+	Height	Komplektid või hangib kõrgus objekti.
+	Href	Määrab või hangib sihtkoha URL või ankrupunt.
+	InnerHTML	Määrab või hangib HTML objekti.
+	InnerText	Määrab või saab teksti objekt.
+	Length	Määrab või hangib arvu objektide kogumit.
+	LocationName	Gets tee või pealkiri praegune lehel.
+	LocationURL	Gets URL praeguse lehel.
+	Navigate	Liigub URL või teed.
+	OuterHTML	Määrab või hangib objekti ja selle sisu HTML.
+	Quit	Sulgeb lehel.
+	Refresh	Laadib praegu kuvatakse lehel.
+	SelectedIndex	Määrab või hangib indeks valitud variant valige objekt.
+	Src	Komplektid või laadib URL, mida koormatud objekti.
+	Stop	Tühistab kuni navigatsiooni- või lae alla.
+	Submit	Esitab kujul.
+	Type	Määrab või hangib sisu tüüpi objekti.
+	Value	Gets või määrab eseme väärtusest.
+	Width	Komplektid või hangib laius objekti.
+		
+; 22. COM Objects Tips		
+	COM_CLSID_Index =	
+	Excel.Application	Manipuleerib Excel lehed.
+	HTMLfile	Saab kasutada lugeda, kirjutada ja suhelda HTML.
+	InternetExplorer.Application	Avasta veebilehed.
+	MSXML2.DOMDocument.6.0	XML parser.
+	MSXML2.XMLHTTP	Esindab XML taotluse HTTP.
+	Outlook.Application	Manipuleerib Outlook ülesanded ja teemad.
+	PowerPoint.Application	Manipuleerib PowerPointi esitlusi.
+	Schedule.Service	Graafik ja muuta Windows ülesanded.
+	ScriptControl	Dünaamiliselt täita VBScript või JScript.
+	Scripting.Dictionary	Objekti mis talletab andmeid võti, punkt paari.
+	Scripting.FileSystemObject	Access faile kaustad
+	Shell.Application	Juurdepääs Explorer IE aknad / tabletti; avatud akende endaga.
+	Shell.Explorer	Kinnistada Explorer / Browser kontrolli GUI (Internet Explorer - Trident brauser).
+	SAPI.SpVoice	Tekst kõneks (TTS).
+	VBScript.RegExp	VBS Regulaaravaldist (sh globaalne vaste).
+	WMPlayer.OCX	Meediumifaile; Kinnistada WMPlayer kontrolli GUI.
+	WinHttp.WinHttpRequest.5.1	Annab lihtne HTTP kliendi funktsionaalsus, mis võimaldab palju rohkem kontrolli kui UrlDownloadToFile.
+	Winmgmt	Võta süsteemi kohta; Manage aknad teenuseid.
+	WScript.Shell	Erinevad halduse ülesandeid (palju kohalikke AHK ülesanded).
+	Word.Application	Manipuleerib Wordi dokumente.
+		
+; 23. AHK Commands Tips		
+	Ahk_Cmd_Index =	
+	Abs	Tagasiside absoluutväärtus arv.
+	ACos	Tagasiside arkuskoosinuse (arv, kelle koosinuse on arv) radiaanides.
+	Array	Loob skriptitav assotsiatiivne massiiv täisarv võtmed.
+	Asc	Tagastab sümboli kood (number vahemikus 1 ja 255 (ANSI ehitab) või 65535 (Unicode ehitab)) jaoks esimene märk String.
+	ASin	Annab nurga siinus (arv, kelle sine on arv) radiaanides.
+	ATan	Annab nurga tangens (arv, mille tangens on arv) radiaanides.
+	BlockInput	Keelab või lubab kasutajal võimet suhelda arvuti vahendusel klaviatuur ja hiir.
+	Break	Väljapääse (lõpeb) tsüklina. Kehtib sees mingit aasa.
+	CDO	Saadab kirju kasutades kasutaja poolt määratud kontole.
+	Ceil	Tagasiside arv ümardatakse lähima täisarvuni (ilma .00 sufiks).
+	Chr	Tagastab ühe märgi vastava koodiga tähistatud arv.
+	Click	Klõpsab hiirega juures määratud koordinaadid. Samuti võib hoia nuppu keerata, või liikuda.
+	Clipboard	Pastad teksti lõikelauale.
+	ClipWait	Ootab, kuni lõikelauale sisaldab andmeid.
+	ComObjActive	Otsib registreeritud COM objekti.
+	ComObjArray	Loob peatükk seeria SAFE array kasutamiseks COM.
+	ComObjConnect	Ühendab COM objekti korral allikatest funktsioone antud eesliide.
+	ComObjCreate	Loob COM objekti.
+	ComObjEnwrap / ComObjUnwrap	Salajas / unwraps COM objekti.
+	ComObjError	Lubab või keelab teate COM vigu.
+	ComObjFlags	Otsib või muudab lipud, mis kontrollivad COM ümbris objekti käitumist.
+	ComObjGet	Annab viite objekti poolt pakutava COM komponendi.
+	ComObjMissing	Loob "puudu parameeter" objekt läheb COM meetod.
+	ComObjParameter	Mähib väärtus ja liik läbida parameeter COM-meetodil.
+	ComObjQuery	Päringuid COM objekti liides või teenust.
+	ComObjType	Otsib kirjuta info COM objekti.
+	ComObjValue	Otsib väärtust või viit salvestatakse COM ümbris objekti.
+	Continue	Jätab ülejäänud vooluahel iteratsiooni ja algab uus. Kehtib sees mingit aasa.
+	Control	Teeb erinevaid muudatusi kontrolli.
+	ControlClick	Saadab hiirenuppu või hiire ratast sündmuse kontrolli.
+	ControlEditPaste	Pastad stringi katus / insert positsioon Edit kontrolli (see ei mõjuta lõikepuhvri sisu).
+	ControlFocus	Määrab sisend keskenduda konkreetse kontrolli akent.
+	ControlGet	Otsib erinevat tüüpi informatsiooni kontroll.
+	ControlGetFocus	Otsib mille kontrolli sihtakna on sisend keskenduda, kui üldse.
+	ControlGetPos	Otsib asukohta ja suurust kontrolli.
+	ControlGetText	Otsib teksti kontroll.
+	ControlMove	Liigub või suurust muuta kontrolli.
+	ControlSend / ControlSendRaw	Saadab simuleeritud klahvivajutused akna või kontrolli.
+	ControlSetText	Muudab teksti kontroll.
+	CoordMode	Komplektid koordineerida režiim erinevat käske olevat suhteline kas aktiivse akna või ekraanil.
+	Cos	Tagasiside trigonomeetriliste koosinuse arv.
+	Delete	Eemaldab võtme-väärtuse paarid objekti.
+	DllCall	Kõned funktsiooni sees DLL, nagu standard Windows API funktsiooni.
+	Drive	Ejects / tõmbub plaati CD või DVD-draivi, või seab ketta maht etiketti.
+	DriveGet	Otsib erinevat tüüpi informatsiooni arvuti drive (s).
+	DriveSpaceFree	Otsib vaba kettaruumi sõita, Megabaiti.
+	Else	Määrab käsu (s) täita, kui IF-avalduse tulemus on VÄÄR. Rohkem kui ühe mälus ei ole, pange need plokk (traksid).
+	EnvAdd	Määrab muutuva summaga ise pluss antud väärtuse (võib ka lisada või lahutada kellaaega kuupäeva ja kellaaja väärtust). Sünonüüm: Var + = väärtus.
+	EnvDiv	Komplektid muutuja ise jagatuna antud väärtuse. Sünonüüm: Var / = väärtus.
+	EnvGet	Otsib keskkonnamuutuja.
+	EnvMult	Määrab muutuja ise korda rakendatakse määratud väärtus. Sünonüüm: Var * = väärtus.
+	EnvSet	Kirjutab väärtus muutuja sisalduvad keskkonda.
+	EnvSub	Määrab muutuja ise miinus antud väärtuse (saab ka võrrelda kuupäeva aegade väärtused). Sünonüüm: Var - = väärtus.
+	EnvUpdate	Teatab OS ja kõik töötavad rakendused, mis keskkonnamuutuja (id) on muutunud.
+	ExitApp	Lõpetab skripti tingimusteta.
+	Exp	Annab e (mis on ligikaudu 2,71828182845905) tõstis astmes n.
+	Expression	Üks või mitu tegevust pärast mitmeid muutujaid, sõna otseses stringid ja / või grammatiline numbrid.
+	FileAppend	Kirjutab teksti faili lõppu (esimene luua faili, kui see on vajalik).
+	FileCopy	Koopiad üks või mitu faili.
+	FileCopyDir	Koopiad kausta koos kõigi selle alamkaustad ja failid (sarnane xcopy).
+	FileCreateDir	Loob kausta.
+	FileCreateShortcut	Loob otsetee (lnk) faili.
+	FileDelete	Kustutab ühe või mitu faili.
+	FileGetAttrib	Aruanded, kas fail või kaust on ainult lugemiseks, varjatud jms
+	FileGetShortcut	Otsib informatsiooni otsetee (lnk) faili, näiteks oma eesmärgi faili.
+	FileGetSize	Otsib suuri faile.
+	FileGetTime	Otsib datetime tempel faili või kausta.
+	FileGetVersion	Otsib versiooni faili.
+	FileMove	Liigub või sõnastatakse ümber ühe või enam faili.
+	FileMoveDir	Viib kausta koos kõigi selle alamkaustad ja failid. Samuti võib ümbernimetamiseks.
+	FileOpen	Annab objektorienteeritud faili I / O.
+	FileRead	Loeb faili sisu muutujaks.
+	FileReadLine	Loeb määratud reale failist ja salvestab teksti muutuja.
+	FileRecycle	Saadab faili või kataloogi prügikasti, kui võimalik.
+	FileRecycleEmpty	Tühjendab prügikasti.
+	FileRemoveDir	Kustutab kausta.
+	FileSelectFile	Näitab standard dialoog, mis võimaldab kasutajal avada või salvestada faili (d).
+	FileSelectFolder	Näitab standard dialoog, mis võimaldab kasutajal valida kaust.
+	FileSetAttrib	Muudab atribuutide üks või mitu faili või kausta. Metamärkidest on toetatud.
+	FileSetTime	Muudab datetime tempel ühte või mitut faili või kausta. Metamärkidest on toetatud.
+	Floor	Tagasiside arv ümardatakse lähima täisarvuni (ilma .00 sufiks).
+	For	Kordab rida käske üks kord iga võtme-väärtuse paari objektis.
+	Format	Vormindab muutuv arv sisendväärtused vastavalt stringi.
+	FormatTime	Teisendab YYYYMMDDHH24MISS ajatempli arvesse nimetatud kuupäeva / kellaaja vorming.
+	Func	Otsib viide funktsioon.
+	GetKeyName / GetKeyVK / GetKeySC	Otsib nime või teksti, virtuaalne koodi võti või skaneerida võtme koodi.
+	GetKeyState	Kontrollib, kas klaviatuuri klahvi või hiire / joystick nupp on alla või üles. Samuti otsib juhtkangi staatus.
+	Gosub	Hüppab määratud silt ja jätkab täitmist kuni Return tekkinud.
+	Goto	Hüppab määratud silt ja jätkab täitmist.
+	GroupActivate	Aktiveerib järgmise akna akna grupp, mis oli määratletud groupadd.
+	GroupAdd	Lisab akende spetsifikatsioon akna nimel, luues grupi, kui vaja.
+	GroupClose	Sulgeb aktiivse aken, kui see oli lihtsalt aktiveerida GroupActivate või GroupDeactivate. Seejärel aktiveerib järgmise akna sarjas. Samuti võib sulgeda kõik aknad grupis.
+	GroupDeactivate	Sarnaselt GroupActivate välja aktiveerib järgmise akna ole grupi.
+	HasKey	Tagastab'tõene'kui Key seostatakse väärtus.
+	If	Määrab käsu (s) täita kui võrdlus muutuva väärtusega evalutes TRUE. Rohkem kui ühe mälus ei ole, pange need plokk (traksid).
+	If (expression)	Määrab käsu (s) täita, kui väljendus tulemus on tõsi.
+	If A_Index	Kontrollib, kas praegune loop iteratsiooni matchs määratud number.
+	If Clipboard	Kontrollib, kas lõikelauale tekst on matchs määratud stringi.
+	If ErrorLevel	Kontroll kui konkreetne pilt või piksel leiti ekraanil.
+	If var [not] between	Kontrollib, kas muutuja sisu on arvuliselt või tähestikulises kahe väärtuse vahel (kaasa arvatud).
+	If var [not] in / If var [not] contains MatchList	Kontrollib, kas muutuja sisu sobi üks loendielemente.
+	If var is [not] type	Kontrollib, kas muutuja sisu on numbriline, suur- jms
+	IfEqual / IfNotEqual	Võrdleb muutuja väärtus võrdsus. Sünonüüm: kui Var = väärtus | kui Var <> väärtus.
+	IfExist / IfNotExist / FileExist	Kontrollib olemasolu faili või kausta.
+	IfGreater / IfGreaterOrEqual	Võrdleb muutuja väärtus. Sünonüüm: kui Var> Väärtus | kui Var> = väärtus.
+	IfInString / IfNotInString	Kontrollib, kas muutuja sisaldab määratud stringi.
+	IfLess / IfLessOrEqual	Võrdleb muutuja väärtus. Sünonüüm: kui Var <Väärtus | kui Var <= väärtus.
+	IfMsgBox	Kontroll millist nuppu suruti kasutaja poolt kõige viimasel MsgBox käsk.
+	IfWinActive / IfWinNotActive	Kontrollib, kas määratud aken on olemas ja on aktiivne (eelkõige).
+	IfWinExist / IfWinNotExist	Kontrollib, kas määratud aken olemas.
+	ImageSearch	Otsingud piirkonnas ekraani pildi.
+	IniDelete	Kustutab väärtus vormikohase Ini faili.
+	IniRead	Loeb väärtus vormikohase Ini faili.
+	IniWrite	Kirjutab väärtust vormikohase Ini faili.
+	Input	Ootab kasutajal sisestada stringi (ei toeta Windows 9x: see ei tee midagi).
+	InputBox	Näitab sisend kasti paluda kasutajal sisestada stringi.
+	InsertAt	Lisab ühe või mitu väärtust määratud positsioonis jooksul lineaarse reaga.
+	InStr	Otsingud antud esinemise string, vasakult või paremalt.
+	KeyWait	Ootab võti või hiire / joystick nupp vabastada või alla vajutatud.
+	Label	Etikett identifitseerib koodirida ja saab kasutada Goto sihtmärk või moodustamaks alamprogrammi.
+	Length	Annab pikkus lineaarset massiivi algavad asendis 1.
+	ListVars	Näitab skripti muutujad: nende nimed ja praegune sisu.
+	Ln	Tagasiside naturaallogaritmi (alusel e) arvu.
+	LoadPicture	Koormus pildi faili ja tagastab bitmap või ikooni käepide.
+	Log	Tagasiside logaritmi (alus 10) arvu.
+	Loop (files & folders)	Otsib määratud failid või kaustad, üks korraga.
+	Loop (normal)	Tehakse rida käske korduvalt: kas määratud arv kordi või kuni paus on tekkinud.
+	Loop (parse a string)	Otsib alamstringide (väljad) alates jada, üks korraga.
+	Loop (read file contents)	Otsib read tekstifaili, üks korraga (täidab paremini kui FileReadLine).
+	Loop (registry)	Otsib sisu määratud alamvõti, üks ese korraga.
+	MaxIndex	Tagasiside kõrgeima täisarv võti.
+	MinIndex	Tagasiside madalaim täisarv võti.
+	Mod	Moodul. Tagasiside ülejäänud kui dividend on jagatud jagaja.
+	MouseGetPos	Otsib praegune positsioon hiirekursori ning vajadusel mis akna ja seda kontrollida viibib üle.
+	MsgBox	Näitab määratud teksti väikeses aknas sisaldavad ühte või mitut nuppu (nagu Yes ja nr).
+	NumGet	Tagasiside kahendarvu hoitakse antud aadressile + kompenseerida.
+	NumPut	Kauplused Number binaarvormingusse sisestatud aadressil + kompenseerida ja tagastab aadress paremal objekt lihtsalt kirjutatud.
+	Object	Loob skriptitav assotsiatiivne massiiv.
+	Ord	Tagasiside ordinaalne väärtus (numbriline kood) on esimene märk String.
+	OutputDebug	Saadab stringi siluri (kui üldse) näitamiseks.
+	Parameter	Lisab parameetrit funktsioonile.
+	Pause	Peatab skripti jooksev teema.
+	PixelGetColor	Otsib pikslivärvi on määratud x, y koordinaadid.
+	PixelSearch	Otsingud piirkonnas ekraani piksel on määratud värv.
+	Pop	Eemaldab ja tagastab viimase massiivi element.
+	PostMessage	Kohad sõnumit sõnum järjekorda akna või kontrolli all.
+	Process	Täidab üks järgmistest toimingutest on protsess: kontrolli, kui see on olemas; muudab oma prioriteediks; sulgeb; kellaosuti sulgeda.
+	Progress	Loob või värskendab sisaldav aken edistymispalkki.
+	Push	Lisab väärtused lõpuni massiivi.
+	Random	Tekitab pseudo-juhuslike arvude.
+	RegDelete	Kustutab alamvõtmes või väärtus registris.
+	RegExMatch	Määrab, kas string sisaldab muster (regulaaravaldise).
+	RegExReplace	Asendab esinemistest muster (regulaaravaldise) sees string.
+	RegRead	Loeb väärtus registris.
+	RegWrite	Kirjutab väärtus registris.
+	RemoveAt	Eemaldab elemendid antud positsiooni lineaarse reaga.
+	Return	Tulu alamprogrammi, mille täitmine oli varem hüppas läbi funktsioon kõne, Gosub, Kiirklahv aktiveerimine, GroupActivate või muul viisil.
+	Round	Kui N on ära jäetud või 0, arv ümardatakse lähima täisarvuni. Kui N on positiivne arv, arv ümardatakse N koma. Kui N on negatiivne, Number ümardatakse N numbrit vasakul koma.
+	Run	Töötab välise programmi.
+	RunAs	Määrab komplekt kasutaja andmed kasutada kogu järgneva kasutusalad Run ja RunWait. Vajab Windows 2000 / XP või hiljem.
+	RunWait	Töötab välise programmi ja ootab, kuni ta lõpetab.
+	Send / SendRaw	Saadab simuleeritud klahvivajutused ja hiireklõpsuga aktiivseks aken.
+	SendLevel	Controls mis kunstlik klaviatuur ja hiir sündmuste ignoreerib kiirklahvid ja hotstrings.
+	SendMessage	Saadab sõnumi akna või kontrolli ja ootab kinnitust.
+	SetCapslockState	Määrab seisund Capslock võti. Kas ka sundida võti jääda sisse või välja.
+	SetKeyDelay	Määrab viivituse, mis toimub pärast iga klahvivajutuse saadetud Saada või ControlSend.
+	SetNumlockState	Määrab seisund NumLock klahvi. Kas ka sundida võti jääda sisse või välja.
+	SetRegView	Võimaldab registri käskude 32-bitine skripti juurde 64-bitise registri arvates ja vastupidi.
+	SetScrollLockState	Määrab seisund ScrollLock võti. Kas ka sundida võti jääda sisse või välja.
+	SetTimer	Põhjustab alamprogrammi, mis käivitatakse automaatselt ja korduvalt kindlaksmääratud ajavahemiku jooksul.
+	Shutdown	Sulgub, taaskäivitub või logib välja süsteem.
+	Sin	Tagasiside trigonomeetrilised sin arv.
+	Sleep	Ootab siin määratud aja jooksul enne jätkamist.
+	Sort	Korraldab varieeruv sisu tähestiku, numbrilised või juhuslikus järjekorras (vajadusel eemaldada duplikaadid).
+	SoundBeep	Kiirgab tooni alates PC valjuhääldi.
+	SoundGet	Otsib erinevates keskkondades alates heliseade (master tumm, helitugevuse, jne)
+	SoundGetWaveVolume	Otsib laine tootmismaht on heli seade.
+	SoundPlay	Esitab heli, video või muu toetatud faili tüüp.
+	SoundSet	Muutused erinevate seadete heliseade (master tumm, helitugevuse, jne)
+	SoundSetWaveVolume	Muudab laine tootmismaht usaldusväärse seade.
+	SplashImage	Loob või värskendab akna sisaldab JPG, GIF või BMP.
+	SplashTextOff	Sulgeb eespool aknas.
+	SplashTextOn	Loob kohandatav teksti hüpikakna.
+	SplitPath	Eraldab faili nimi või URL oma nime, kataloog, laiendamine ja sõita.
+	Sqrt	Tagasiside ruutjuur arv.
+	StatusBarGetText	Otsib teksti standard olekuribal kontrolli.
+	StatusBarWait	Ootab, kuni akna olekuriba sisaldab määratud stringi.
+	StringGetPos	Otsib positsiooni määratud substring jooksul string.
+	StringLeft	Otsib mitu tähemärki vasakul pool string.
+	StringLen / StrLen	Otsib, mitu tähemärki on string.
+	StringLower	Teisendab stringi väiketähed.
+	StringMid / SubStr	Otsib üks või mitu tähemärki määratud positsiooni string.
+	StringReplace / StrReplace	Asendab määratud alamstringid uus string.
+	StringRight	Otsib mitu tähemärki paremal pool string.
+	StringSplit / StrSplit	Eraldab stringi massiivi alamstringide abil määratud piirajaid.
+	StringTrimLeft	Eemaldab arvu märke vasakul pool string.
+	StringTrimRight	Eemaldab arvu märke paremal pool string.
+	StringUpper	Teisendab stringi suurtäheks.
+	StrPut / StrGet	Koopiad stringi või mälu aadress, vabatahtlik muundab selle vahel koodilehti.
+	SysGet	Otsib ekraani resolutsioon, multi-monitor info, mõõtmed süsteemi objektide ja teiste süsteemi omadused.
+	Tan	Tagasiside trigonomeetriliste puutuja arv.
+	ToolTip	Loob alati-on-top aknas kõikjal ekraanil.
+	Transform	Toimib mitmesugused matemaatika ülesannete bitwise operatsioonide ja ülesannete, näiteks ASCII / Unicode vahetamisega.
+	TrayTip	Loob balloon sõnumi akna lähedal ikooni. Vajab Windows 2000 / XP või hiljem.
+	Trim / LTrim / RTrim	Trimmib teatud märki alguses ja / või lõpus stringi.
+	Until	Kehtib tingimus, et jätkuks Loop või ahela.
+	UrlDownloadToFile	Laadib faili internetist.
+	UserFunction	Loob Funktsioon struktuuri.
+	Variable	Määrab määratud väärtus muutuja.
+	While	Toimib käskude jada korduvalt kuni määratud väljendus tulemus on vale.
+	WinActivate	Aktiveerib määratud akna (muudab eelkõige).
+	WinActivateBottom	Sama nagu WinActivate kuid see aktiveerib Alumised (vähemalt hiljuti aktiivne) sobitamine akna asemel tähtsaim.
+	WinActive	Tagasiside Unique ID (HWND) aktiivse aken, kui see vastab teatavatele kriteeriumidele.
+	WinClose	Sulgeb määratud akna.
+	WinExist	Kontrollib, kas määratud aken olemas.
+	WinGet	Otsib määratud akna ainuomase protsessi ID protsessi nimi või nimekirja tema kontrolli. Samuti võib hankida nimekirja kõik aknad sobitamine määratud kriteeriumile.
+	WinGetClass	Otsib määratud akna klassi nimi.
+	WinGetPos	Otsib asukoht ja suurus määratud akna.
+	WinGetText	Otsib teksti täpsustada aknas.
+	WinGetTitle	Otsib pealkiri määratud akna.
+	WinHide	Peidab määratud akna.
+	WinHttpDownloadToFile	Allalaadimiste üks või mitu faili internetist.
+	WinKill	Sunnib määratud akna sulgeda.
+	WinMaximize	Suurendab määratud akna maksimaalse suuruse.
+	WinMenuSelectItem	Käivitab menüüpunktini menüüribalt on määratud akna.
+	WinMinimize	Variseb määratud akna nuppu tegumiribal.
+	WinMinimizeAll	Vähendab kõik aknad.
+	WinMinimizeAllUndo	Pöörab mõju eelmise WinMinimizeAll.
+	WinMove	Muudab asukoha ja / või suuruse määratud akna.
+	WinRestore	Unminimizes või unmaximizes määratud aken, kui see on minimaalne või maksimaalne.
+	WinSet	Teeb erinevaid muudatusi määratud aken, nagu "alati peal" ja läbipaistvust.
+	WinSetTitle	Muudab pealkiri määratud akna.
+	WinShow	Unhides määratud akna.
+	WinWait	Waits kuni määratud akna olemas.
+	WinWaitActive	Ootab, kuni määratud aken on aktiivne.
+	WinWaitClose	Ootab, kuni määratud aken ei eksisteeri.
+	WinWaitNotActive	Ootab, kuni määratud aken ei ole aktiivne.
+	Zip / UnZip	Paki või pakkida ühe või mitme zip faile.
+	WinExist	Kontrollib, kas määratud aken olemas.
+	WinGet	Otsib määratud akna ainuomase protsessi ID protsessi nimi või nimekirja tema kontrolli. Samuti võib hankida nimekirja kõik aknad sobitamine määratud kriteeriumile.
+	WinGetClass	Otsib määratud akna klassi nimi.
+	WinGetPos	Otsib asukoht ja suurus määratud akna.
+	WinGetText	Otsib teksti täpsustada aknas.
+	WinGetTitle	Otsib pealkiri määratud akna.
+	WinHide	Peidab määratud akna.
+	WinHttpDownloadToFile	Allalaadimiste üks või mitu faili internetist.
+	WinKill	Sunnib määratud akna sulgeda.
+	WinMaximize	Suurendab määratud akna maksimaalse suuruse.
+	WinMenuSelectItem	Käivitab menüüpunktini menüüribalt on määratud akna.
+	WinMinimize	Variseb määratud akna nuppu tegumiribal.
+	WinMinimizeAll	Vähendab kõik aknad.
+	WinMinimizeAllUndo	Pöörab mõju eelmise WinMinimizeAll.
+	WinMove	Muudab asukoha ja / või suuruse määratud akna.
+	WinRestore	Unminimizes või unmaximizes määratud aken, kui see on minimaalne või maksimaalne.
+	WinSet	Teeb erinevaid muudatusi määratud aken, nagu "alati peal" ja läbipaistvust.
+	WinSetTitle	Muudab pealkiri määratud akna.
+	WinShow	Unhides määratud akna.
+	WinWait	Waits kuni määratud akna olemas.
+	WinWaitActive	Ootab, kuni määratud aken on aktiivne.
+	WinWaitClose	Ootab, kuni määratud aken ei eksisteeri.
+	WinWaitNotActive	Ootab, kuni määratud aken ei ole aktiivne.
+	Zip / UnZip	Paki või pakkida ühe või mitme zip faile.

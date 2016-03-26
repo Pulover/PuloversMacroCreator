@@ -1,0 +1,1443 @@
+﻿Lang_id
+		
+		; Indonesian
+		
+; 01. Main Menu		
+	m_Lang001 =	&Berkas
+	m_Lang002 =	&Makro
+	m_Lang003 =	&Perintah
+	m_Lang004 =	&Fungsi
+	m_Lang005 =	M&engedit
+	m_Lang006 =	Mem&ilih
+	m_Lang007 =	Me&lihat
+	m_Lang008 =	Pili&han
+	m_Lang009 =	Me&nyumbangkan
+	m_Lang010 =	Memb&antu
+		
+; 02. File Sub Menu		
+	f_Lang001 =	&Baru
+	f_Lang002 =	B&uka
+	f_Lang003 =	&Menyimpan
+	f_Lang004 =	&Save As
+	f_Lang005 =	&File terakhir
+	f_Lang006 =	&Ekspor ke AHK
+	f_Lang007 =	&Preview Script
+	f_Lang008 =	Me&ngedit Skrip
+	f_Lang009 =	&Jadwal Macro
+	f_Lang010 =	&Daftar Variabel
+	f_Lang011 =	&Keluar
+	f_Lang012 =	&Tidak ada file
+		
+; 03. Macro Sub Menu		
+	r_Lang001 =	&Rekam Makro
+	r_Lang002 =	&Aktifkan Macro
+	r_Lang003 =	&Bermain Makro sekarang
+	r_Lang004 =	&Timer
+	r_Lang005 =	&Nonaktifkan Macro
+	r_Lang006 =	B&ermain dari Dipilih Row
+	r_Lang007 =	Ber&main sampai Dipilih Row
+	r_Lang008 =	Berma&in Baris Terpilih
+	r_Lang009 =	&Konteks Hotkeys Sensitif
+	r_Lang010 =	Tamba&hkan Makro
+	r_Lang011 =	T&utup Makro
+	r_Lang012 =	&Gandakan Makro
+	r_Lang013 =	Menge&dit Macro
+	r_Lang014 =	Im&por Makro
+	r_Lang015 =	&Simpan Makro sekarang
+		
+; 04. Function Sub Menu		
+	u_Lang001 =	&Buat Fungsi
+	u_Lang002 =	&Tambahkan Parameter
+	u_Lang003 =	T&ambahkan Kembali
+	u_Lang004 =	&Mengkonversi Makro Untuk Fungsi
+		
+; 05. Commands Sub Menu		
+	i_Lang001 =	&Mouse
+	i_Lang002 =	&Teks
+	i_Lang003 =	&Kontrol
+	i_Lang004 =	&Jeda
+	i_Lang005 =	K&otak pesan
+	i_Lang006 =	T&unggu Key
+	i_Lang007 =	J&endela
+	i_Lang008 =	&Image / Pixel Pencarian
+	i_Lang009 =	J&alankan / File / String / Misc.
+	i_Lang010 =	&Loop
+	i_Lang011 =	&Pergi Ke / Label
+	i_Lang012 =	&Set Timer
+	i_Lang013 =	Jika Lapo&ran
+	i_Lang014 =	&Variabel / Array
+	i_Lang015 =	&Fungsi / Metode Array
+	i_Lang016 =	Me&ngirim email
+	i_Lang017 =	&Download file
+	i_Lang018 =	&Zip / file Unzip
+	i_Lang019 =	Internet E&xplorer
+	i_Lang020 =	Ekspresi / &COM Antarmuka
+	i_Lang021 =	&Jendela Pesan
+	i_Lang022 =	Cari perinta&h
+		
+; 06. Edit Sub Menu		
+	e_Lang001 =	&Duplikat
+	e_Lang002 =	&Mengedit Komentar
+	e_Lang003 =	&Cari / Ganti
+	e_Lang004 =	&Salin ke...
+	e_Lang005 =	M&erusak
+	e_Lang006 =	&Redo
+	e_Lang007 =	Mem&otong
+	e_Lang008 =	&Kopi
+	e_Lang009 =	Me&nempelkan
+	e_Lang010 =	&Hapus
+	e_Lang011 =	Mo&ve Up
+	e_Lang012 =	&Pindah ke Bawah
+	e_Lang013 =	S&isipkan dari Box
+	e_Lang014 =	M&asukkan keystroke
+	e_Lang015 =	S&unting Warna Mark
+	e_Lang016 =	&Grup
+	e_Lang017 =	&Memungkinkan kelompok
+	e_Lang018 =	M&enambahkan grup
+	e_Lang019 =	Me&nghapus grup
+	e_Lang020 =	&Hapus semua kelompok
+	e_Lang021 =	&Tutup semua
+	e_Lang022 =	Me&lebarkan semua
+		
+; 07. Select Sub Menu		
+	s_Lang001 =	&Pilih Semua
+	s_Lang002 =	P&ilih Kosong
+	s_Lang003 =	I&nvert Selection
+	s_Lang004 =	P&eriksa Dipilih
+	s_Lang005 =	&Hapus tanda centang Dipilih
+	s_Lang006 =	&Balikkan Cek
+	s_Lang007 =	&Memindah Selection Up
+	s_Lang008 =	Memin&dahkan Pilihan Ke Bawah
+	s_Lang009 =	Dipi&lih Type
+	s_Lang010 =	Ketik perintah
+		
+; 08. View Sub Menu		
+	v_Lang001 =	&Always On Top
+	v_Lang002 =	&Baris Sorot
+	v_Lang003 =	&Lekukan
+	v_Lang004 =	&Kontrol Toolbar
+	v_Lang005 =	&Preview
+	v_Lang006 =	&Toolbar
+	v_Lang007 =	&Hotkeys
+	v_Lang008 =	Ba&r Pencarian
+	v_Lang009 =	&Ulang Kolom Ukuran
+	v_Lang010 =	Ukura&n Ikon
+	v_Lang011 =	Atur Ulan&g Tata Letak
+	v_Lang012 =	B&erkas
+	v_Lang013 =	Reka&m dan Putar
+	v_Lang014 =	Per&intah
+	v_Lang015 =	Menge&dit
+	v_Lang016 =	Pilihan
+	v_Lang017 =	&Sesuaikan
+	v_Lang018 =	&Otomatis
+	v_Lang019 =	Pedoman
+	v_Lang020 =	Berhenti
+	v_Lang021 =	Berhenti sebentar
+	v_Lang022 =	&Padat
+	v_Lang023 =	P&aling Cocok
+	v_Lang024 =	&Kegagalan
+	v_Lang025 =	Ke&cil
+	v_Lang026 =	Besar
+		
+; 09. Options Sub Menu		
+	o_Lang001 =	&Pengaturan
+	o_Lang002 =	&Minimalkan ke tray
+	o_Lang003 =	M&enampilkan kontrol toolbar
+	o_Lang004 =	Me&nangkap penekanan tombol dalam jendela ini
+	o_Lang005 =	&Hotkeys Selalu Aktif
+	o_Lang006 =	P&ilihan Shutdown (Ketika selesai pemutaran...)
+	o_Lang007 =	&Konteks Hotkeys Sensitif
+	o_Lang008 =	&Tambahkan tombol Windows untuk "Play" hotkey
+	o_Lang009 =	&Gunakan tombol joystick sebagai hotkey
+	o_Lang010 =	&Ditetapkan sebagai Hotkeys default
+	o_Lang011 =	&Set sebagai Default Berkas
+	o_Lang012 =	H&apus file default
+	o_Lang013 =	H&otkeys standar
+	o_Lang014 =	Pengat&uran Default
+		
+; 10. Donate Sub Menu		
+	p_Lang001 =	&Donasi PayPal
+		
+; 11. Help Sub Menu		
+	h_Lang001 =	&Membantu
+	h_Lang002 =	&Tutorial
+	h_Lang003 =	T&ips
+	h_Lang004 =	M&akro Pencipta Depan
+	h_Lang005 =	&Forum
+	h_Lang006 =	A&HK Dokumentasi Online
+	h_Lang007 =	&Periksa pembaruan...
+	h_Lang008 =	P&eriksa pada startup
+	h_Lang009 =	Te&ntang
+		
+; 12. Tray Menu		
+	y_Lang001 =	Sembunyikan Jendela
+	y_Lang002 =	Tampilkan Jendela
+	y_Lang003 =	Kontrol Toolbar
+		
+; 13. Built-in Vars Menu		
+	b_Lang001 =	Karakter Khusus
+	b_Lang002 =	properti
+	b_Lang003 =	Tanggal dan Waktu
+	b_Lang004 =	Pengguna Idle Time
+	b_Lang005 =	Sistem dan User
+	b_Lang006 =	Lain-lain.
+	b_Lang007 =	Putaran
+		
+; 14. Main Window		
+	w_Lang001 =	Ekspor
+	w_Lang002 =	Preview
+	w_Lang003 =	Pilihan
+	w_Lang004 =	Catatan
+	w_Lang005 =	Bermain
+	w_Lang006 =	Pemutaran
+	w_Lang007 =	Pedoman
+	w_Lang008 =	Berhenti
+	w_Lang009 =	Menampilkan kontrol toolbar
+	w_Lang010 =	Berhenti sebentar
+	w_Lang011 =	Putaran
+	w_Lang012 =	Menangkap penekanan tombol dalam jendela ini
+	w_Lang013 =	Minimalkan ke tray
+	w_Lang014 =	Hotkeys Selalu Aktif
+	w_Lang015 =	Ulangi
+	w_Lang016 =	Delay (ms)
+	w_Lang017 =	Menerapkan
+	w_Lang018 =	Menyisipkan
+	w_Lang019 =	Mengedit
+	w_Lang020 =	Pilihan Shutdown (Ketika selesai pemutaran...)
+	w_Lang021 =	Melakukan apa-apa
+	w_Lang022 =	Tutup aplikasi
+	w_Lang023 =	Penutupan
+	w_Lang024 =	Shutdown (gaya)
+	w_Lang025 =	Reboot
+	w_Lang026 =	Log off
+	w_Lang027 =	Hibernate
+	w_Lang028 =	Menangguhkan
+	w_Lang029 =	Mengunci komputer
+	w_Lang030 =	Indeks
+	w_Lang031 =	Tindakan
+	w_Lang032 =	Detail
+	w_Lang033 =	Ulangi
+	w_Lang034 =	Menunda
+	w_Lang035 =	Jenis
+	w_Lang036 =	Kontrol
+	w_Lang037 =	Jendela
+	w_Lang038 =	Komentar
+	w_Lang039 =	Warna
+	w_Lang040 =	Baru (Ctrl+N)
+	w_Lang041 =	Buka (Ctrl+O)
+	w_Lang042 =	Simpan (Ctrl+S)
+	w_Lang043 =	Save As (Ctrl+Shift+S)
+	w_Lang044 =	Ekspor ke AHK (Ctrl+E)
+	w_Lang045 =	Preview Script (Ctrl+P)
+	w_Lang046 =	Pengaturan (Ctrl+G)
+	w_Lang047 =	Rekam Makro (Ctrl+R)
+	w_Lang048 =	Aktifkan Macro (Ctrl+Enter)
+	w_Lang049 =	Bermain Makro sekarang (Ctrl+Shift+Enter)
+	w_Lang050 =	Timer (Ctrl+Shift+T)
+	w_Lang051 =	Mouse (F2)
+	w_Lang052 =	Teks (F3)
+	w_Lang053 =	Mengedit Macro (Ctrl+Shift+M)
+	w_Lang054 =	Control (F4)
+	w_Lang055 =	Jeda (F5)
+	w_Lang056 =	Kotak pesan (Shift+F5)
+	w_Lang057 =	Tunggu Key (Ctrl+F5)
+	w_Lang058 =	Window (F6)
+	w_Lang059 =	Image / Pixel Cari (F7)
+	w_Lang060 =	Jalankan / file / String / Misc. (F8)
+	w_Lang061 =	Lingkaran (F9)
+	w_Lang062 =	Pergi Ke / Label (Shift + F9)
+	w_Lang063 =	Mengatur Timer (Ctrl + F9)
+	w_Lang064 =	Jika Laporan (F10)
+	w_Lang065 =	Variabel / Array (Shift+F10)
+	w_Lang066 =	Fungsi / Metode Array (Ctrl+F10)
+	w_Lang067 =	Mengirim email (F11)
+	w_Lang068 =	Download file (Shift+F11)
+	w_Lang069 =	Zip / file Unzip (Ctrl+F11)
+	w_Lang070 =	Internet Explorer (F12)
+	w_Lang071 =	Ekspresi / COM Antarmuka (Shift+F12)
+	w_Lang072 =	Jendela Messages (Ctrl+F12)
+	w_Lang073 =	Tambahkan Makro (Ctrl+T)
+	w_Lang074 =	Tutup Makro (Ctrl+W)
+	w_Lang075 =	Gandakan Makro (Ctrl+Shift+D)
+	w_Lang076 =	Impor Makro (Ctrl+I)
+	w_Lang077 =	Simpan Makro saat ini (Ctrl+Alt+S)
+	w_Lang078 =	Move Up (Ctrl+PageUp)
+	w_Lang079 =	Kebawah (Ctrl+PageDown)
+	w_Lang080 =	Gandakan Baris Terpilih (Ctrl+D)
+	w_Lang081 =	Potong Baris Dipilih (Ctrl+X)
+	w_Lang082 =	Kopi Baris Dipilih (Ctrl+C)
+	w_Lang083 =	Baris Paste Disalin (Ctrl+V)
+	w_Lang084 =	Hapus Baris Terpilih (Del)
+	w_Lang085 =	Undo (Ctrl+Z)
+	w_Lang086 =	Redo (Ctrl+Y)
+	w_Lang087 =	Salin ke...
+	w_Lang088 =	Cari / Ganti (Ctrl+F)
+	w_Lang089 =	Menyisipkan / Mengedit Komentar (Ctrl+L)
+	w_Lang090 =	Sunting Color Mark (Ctrl+M)
+	w_Lang091 =	Sesuaikan
+	w_Lang092 =	Cari perintah (Ctrl+Shift+F)
+	w_Lang093 =	Mengedit (Enter)
+	w_Lang094 =	Menyembunyikan
+	w_Lang095 =	Pindah ke sini
+	w_Lang096 =	Kopi di sini
+	w_Lang097 =	Grup
+	w_Lang098 =	Memungkinkan kelompok (Ctrl+Shift+G)
+	w_Lang099 =	Menambahkan grup (Ctrl+Shift+Y)
+	w_Lang100 =	Menghapus grup (Ctrl+Shift+R)
+	w_Lang101 =	Hapus semua kelompok
+	w_Lang102 =	Kelompok mengedit
+	w_Lang103 =	Nama grup
+	w_Lang104 =	Buat Fungsi (Ctrl+Shift+U)
+	w_Lang105 =	Tambahkan Parameter (Ctrl+Shift+P)
+	w_Lang106 =	Tambahkan Return (Ctrl+Shift+N)
+	w_Lang107 =	Mengkonversi Makro Untuk Fungsi (Ctrl+Shift+C)
+	w_Lang108 =	Komentar dari baris dicentang
+	w_Lang109 =	Tambahkan tombol Windows untuk "Play" hotkey
+	w_Lang110 =	Gunakan tombol joystick sebagai hotkey
+	w_Lang111 =	Cari... (Tekan Enter untuk pergi)
+		
+; 15. Command Windows		
+	c_Lang001 =	Mouse
+	c_Lang002 =	Teks
+	c_Lang003 =	Berhenti sebentar
+	c_Lang004 =	Kontrol
+	c_Lang005 =	Jendela
+	c_Lang006 =	Pencarian Gambar
+	c_Lang007 =	Pixel Pencarian
+	c_Lang008 =	Jalankan / file / String / Misc.
+	c_Lang009 =	Jika Laporan
+	c_Lang010 =	Variabel
+	c_Lang011 =	Fungsi / Metode Array
+	c_Lang012 =	Internet Explorer
+	c_Lang013 =	Ekspresi / COM Antarmuka
+	c_Lang014 =	Pilih Application (Lanjutan)
+	c_Lang015 =	Pesan
+	c_Lang016 =	Kontrol
+	c_Lang017 =	Menunda
+	c_Lang018 =	Miliseconds
+	c_Lang019 =	Detik
+	c_Lang020 =	Oke
+	c_Lang021 =	Membatalkan
+	c_Lang022 =	Menutup
+	c_Lang023 =	Kopi
+	c_Lang024 =	Hapus
+	c_Lang025 =	Gunakan % untuk Variabel, misalnya: %Clipboard%
+	c_Lang026 =	Tindakan
+	c_Lang027 =	Klik
+	c_Lang028 =	Bergerak
+	c_Lang029 =	Bergerak Dan Klik
+	c_Lang030 =	Roda Up
+	c_Lang031 =	Roda Bawah
+	c_Lang032 =	Drag Dan Drop
+	c_Lang033 =	Koordinat
+	c_Lang034 =	Cari
+	c_Lang035 =	Subcommand
+	c_Lang036 =	Relatif
+	c_Lang037 =	Tombol
+	c_Lang038 =	Kiri
+	c_Lang039 =	Kanan
+	c_Lang040 =	Tengah
+	c_Lang041 =	X1
+	c_Lang042 =	X2
+	c_Lang043 =	Tahan / Lepas
+	c_Lang044 =	Klik Hitungan
+	c_Lang045 =	Plain Text (Raw)
+	c_Lang046 =	Teks dengan perintah
+	c_Lang047 =	Paste dari Clipboard
+	c_Lang048 =	Paste Pengendalian
+	c_Lang049 =	Mengatur Teks
+	c_Lang050 =	Tambahkan Jeda
+	c_Lang051 =	Kotak pesan
+	c_Lang052 =	Tunggu kunci
+	c_Lang053 =	Tunggu Timeout
+	c_Lang054 =	(Milidetik) 0 = tak terbatas
+	c_Lang055 =	Perintah
+	c_Lang056 =	Nilai
+	c_Lang057 =	Output Variabel
+	c_Lang058 =	Posisi
+	c_Lang059 =	Ukuran
+	c_Lang060 =	4 variabel akan dibuat dengan awalan ini dan berakhir dengan X, Y, W, H.
+	c_Lang061 =	Mulai
+	c_Lang062 =	Akhir
+	c_Lang063 =	Gambar
+	c_Lang064 =	Pixel
+	c_Lang065 =	Membuat Screenshot
+	c_Lang066 =	Tunggu Kunci
+	c_Lang067 =	Jika ditemukan
+	c_Lang068 =	Jika tidak ditemukan / Kesalahan
+	c_Lang069 =	variabel keluaran
+	c_Lang070 =	Coord
+	c_Lang071 =	Variasi
+	c_Lang072 =	Preview
+	c_Lang073 =	Putaran
+	c_Lang074 =	Secara otomatis membuat objek COM
+	c_Lang075 =	Istirahat
+	c_Lang076 =	Terus
+	c_Lang077 =	Goto
+	c_Lang078 =	Pergi ke Label
+	c_Lang079 =	Label
+	c_Lang080 =	Tambahkan Label
+	c_Lang081 =	String (InputVar)
+	c_Lang082 =	Variabel
+	c_Lang083 =	Lain
+	c_Lang084 =	Menetapkan Variabel
+	c_Lang085 =	Kadar
+	c_Lang086 =	Operator
+	c_Lang087 =	Ekspresi
+	c_Lang088 =	Ulang
+	c_Lang089 =	Fungsi Nama
+	c_Lang090 =	Dipisahkan koma parameter (tanpa kurung)
+	c_Lang091 =	Format penggunaan ekspresi
+	c_Lang092 =	Elemen Halaman / Index
+	c_Lang093 =	Mengatur
+	c_Lang094 =	Mendapatkan
+	c_Lang095 =	Metode
+	c_Lang096 =	Harta
+	c_Lang097 =	Menunggu halaman untuk memuat.
+	c_Lang098 =	CLSID
+	c_Lang099 =	Menghubungkan
+	c_Lang100 =	Menangani
+	c_Lang101 =	COM Script
+	c_Lang102 =	Jumlah pesan
+	c_Lang103 =	Tombol Khusus
+	c_Lang104 =	Browser Kembali
+	c_Lang105 =	Browser Teruskan
+	c_Lang106 =	Browser Segarkan
+	c_Lang107 =	Berhenti Browser
+	c_Lang108 =	Browser Pencarian
+	c_Lang109 =	Browser Favorit
+	c_Lang110 =	Browser Depan
+	c_Lang111 =	Media
+	c_Lang112 =	Mute
+	c_Lang113 =	Volume Up
+	c_Lang114 =	Volume Turun
+	c_Lang115 =	Play / Pause
+	c_Lang116 =	Jalur Berikutnya
+	c_Lang117 =	Jalur Sebelumnya
+	c_Lang118 =	Berhenti
+	c_Lang119 =	E-mail
+	c_Lang120 =	Web 1
+	c_Lang121 =	App 2
+	c_Lang122 =	Scancode
+	c_Lang123 =	Menambahkan
+	c_Lang124 =	Sejarah kunci
+	c_Lang125 =	Ketik Scancode a...
+	c_Lang126 =	Kode ditambahkan ke Virtual Keys Daftar!
+	c_Lang127 =	Ketik nama untuk variabel
+	c_Lang128 =	Gunakan Fungsi dari Eksternal Berkas
+	c_Lang130 =	Ulangi sampai
+	c_Lang131 =	Menerapkan
+	c_Lang132 =	Putaran
+	c_Lang133 =	Berkas
+	c_Lang134 =	Parse
+	c_Lang135 =	Membaca
+	c_Lang136 =	Pendaftaran
+	c_Lang137 =	Pola File:
+	c_Lang138 =	Direktori
+	c_Lang139 =	Rekursif
+	c_Lang140 =	Variabel masukan:
+	c_Lang141 =	Pembatas:
+	c_Lang142 =	Abaikan Karakter:
+	c_Lang143 =	Masukan file:
+	c_Lang144 =	Akar kunci\Key:
+	c_Lang145 =	Arsip
+	c_Lang146 =	Kunci-kunci
+	c_Lang147 =	Icon
+	c_Lang148 =	Tidak ada ikon
+	c_Lang149 =	Kesalahan
+	c_Lang150 =	Pertanyaan
+	c_Lang151 =	Seruan
+	c_Lang152 =	Info
+	c_Lang153 =	Selalu di atas
+	c_Lang154 =	Menit
+	c_Lang155 =	Sampai
+	c_Lang156 =	Naskah
+	c_Lang157 =	Script Bahasa
+	c_Lang158 =	Tidak kompatibel dengan 64-bit!
+	c_Lang159 =	Pilihan pencarian
+	c_Lang160 =	Jelas
+	c_Lang161 =	Skala
+	c_Lang162 =	Tambahkan "Jika Pernyataan"
+	c_Lang163 =	Modus Mengirim
+	c_Lang164 =	Sama
+	c_Lang165 =	Berisi
+	c_Lang166 =	Lebih besar
+	c_Lang167 =	Kurang
+	c_Lang168 =	Ya
+	c_Lang169 =	Tidak
+	c_Lang170 =	Oke
+	c_Lang171 =	Membatalkan
+	c_Lang172 =	Menggugurkan
+	c_Lang173 =	Mengabaikan
+	c_Lang174 =	Mencoba kembali
+	c_Lang175 =	Terus
+	c_Lang176 =	Coba lagi
+	c_Lang177 =	Timeout
+	c_Lang178 =	Mengatur penundaan kunci
+	c_Lang179 =	Penundaan kunci
+	c_Lang180 =	Delay random
+	c_Lang181 =	Minimum
+	c_Lang182 =	Maksimum
+	c_Lang183 =	Nonaktifkan penundaan acak untuk perintah ini
+	c_Lang184 =	Pilih dari daftar
+	c_Lang185 =	Kancing-kancing
+	c_Lang186 =	Pertama
+	c_Lang187 =	Kedua
+	c_Lang188 =	Ketiga
+	c_Lang189 =	Judul
+	c_Lang190 =	Jika jendela aktif
+	c_Lang191 =	Jika jendela tidak aktif
+	c_Lang192 =	Jika ada jendela
+	c_Lang193 =	Jika jendela tidak ada
+	c_Lang194 =	Jika berkas ada
+	c_Lang195 =	Jika berkas tidak ada
+	c_Lang196 =	Jika teks clipboard
+	c_Lang197 =	Jika indeks pengulangan
+	c_Lang198 =	Jika gambar/pixel ditemukan
+	c_Lang199 =	Jika gambar/pixel tidak ditemukan
+	c_Lang200 =	Jika string berisi
+	c_Lang201 =	Jika string yang tidak mengandung
+	c_Lang202 =	Jika kotak pesan
+	c_Lang203 =	Bandingkan variabel
+	c_Lang204 =	Evaluasi ekspresi
+	c_Lang205 =	Wilayah
+	c_Lang206 =	(Gunakan [] untuk membuat array, mis .: [10, 20, aVariable, "aString"])
+	c_Lang207 =	Array Objek
+	c_Lang208 =	Nama kunci
+	c_Lang209 =	Nama nilai
+	c_Lang210 =	Nilai-nilai
+	c_Lang211 =	Susunan
+	c_Lang212 =	Ditetapkan Pengguna Fungsi
+	c_Lang213 =	Parameter fungsi
+	c_Lang214 =	Fungsi Kembali
+	c_Lang215 =	Parameter
+	c_Lang216 =	Kembali Nilai
+	c_Lang217 =	Nilai Default
+	c_Lang218 =	Cakupan
+	c_Lang219 =	Lokal
+	c_Lang220 =	Global
+	c_Lang221 =	Nama
+	c_Lang222 =	Anda dapat menambahkan lebih banyak parameter dari menu Fungsi.
+	c_Lang223 =	Variabel global
+	c_Lang224 =	Variabel lokal
+	c_Lang225 =	Variabel statis
+	c_Lang226 =	Dari
+	c_Lang227 =	E-mail
+	c_Lang228 =	Subyek
+	c_Lang229 =	Pesan
+	c_Lang230 =	Karşı
+	c_Lang231 =	CC
+	c_Lang232 =	TITKOS
+	c_Lang233 =	F2 untuk mengedit
+	c_Lang234 =	HTML
+	c_Lang235 =	Mengirim email
+	c_Lang236 =	Download file
+	c_Lang237 =	Zip / file Unzip
+	c_Lang238 =	Nyalakan
+	c_Lang239 =	Matikan
+	c_Lang240 =	posisi terdaftar.
+	c_Lang241 =	Hapus semua timer
+	c_Lang242 =	Set Timer
+	c_Lang243 =	Benar-dibenarkan
+	c_Lang244 =	Kanan ke kiri
+	c_Lang245 =	Lampiran
+	c_Lang246 =	Jalan
+	c_Lang247 =	Jika
+	c_Lang248 =	Mengkompres setiap file ke arsip yang berbeda
+	c_Lang249 =	Ekstrak setiap file ke folder lain
+	c_Lang250 =	File zip
+	c_Lang251 =	Unzip file
+	c_Lang252 =	Download link
+	c_Lang253 =	Folder tujuan
+	c_Lang254 =	File tujuan
+	c_Lang255 =	Dipisahkan dengan titik koma, koma atau baris.
+	c_Lang256 =	Menyesuaikan koordinat ke tengah gambar
+	c_Lang257 =	Periode
+		
+; 16. Other Windows		
+	t_Lang001 =	Ekspor ke AutoHotkey
+	t_Lang002 =	Macro
+	t_Lang003 =	Loops
+	t_Lang004 =	0 = tak terbatas
+	t_Lang005 =	Gunakan Hotstring
+	t_Lang006 =	Blok Tikus
+	t_Lang007 =	Semua
+	t_Lang008 =	Tak satupun
+	t_Lang009 =	Konteks Hotkeys Sensitif
+	t_Lang010 =	Ekspor ke
+	t_Lang011 =	Lekukan
+	t_Lang012 =	Sertakan PMC Kode
+	t_Lang013 =	Jangan menggabungkan perintah Kirim
+	t_Lang014 =	Menyegarkan
+	t_Lang015 =	Auto-Segarkan
+	t_Lang016 =	Always On Top
+	t_Lang017 =	Pengaturan
+	t_Lang018 =	Umum
+	t_Lang019 =	Start / Stop Rekam
+	t_Lang020 =	Rekam New Macro
+	t_Lang021 =	Keystrokes
+	t_Lang022 =	Rekaman
+	t_Lang023 =	Menangkap kunci negara (turun / naik)
+	t_Lang024 =	Tikus Klik
+	t_Lang025 =	Roda Mouse
+	t_Lang026 =	Tikus Bergerak
+	t_Lang027 =	Jangka waktu Interval
+	t_Lang028 =	Penundaan Minimum
+	t_Lang029 =	Jendela Kelas
+	t_Lang030 =	Jendela Judul
+	t_Lang031 =	Rekam ControlSend
+	t_Lang032 =	Rekam ControlClick
+	t_Lang033 =	Rekam Key Relatif
+	t_Lang034 =	Beralih
+	t_Lang035 =	Pemutaran
+	t_Lang036 =	Speed Up
+	t_Lang037 =	Slow Down
+	t_Lang038 =	Kembali mouse setelah pemutaran
+	t_Lang039 =	Tikus Koordinat
+	t_Lang040 =	Jendela
+	t_Lang041 =	Layar
+	t_Lang042 =	Standar mouse Penundaan
+	t_Lang043 =	Bawaan Jendela Penundaan
+	t_Lang044 =	Max Sejarah per Makro
+	t_Lang045 =	Hapus Riwayat
+	t_Lang046 =	Layar
+	t_Lang047 =	Menggambar Tombol
+	t_Lang048 =	Jalur Lebar (Px)
+	t_Lang049 =	Menangkap pada rilis
+	t_Lang050 =	Tekan Enter untuk menangkap
+	t_Lang051 =	Direktori screenshot
+	t_Lang052 =	Jalur wrap
+	t_Lang053 =	Hotkeys
+	t_Lang054 =	Set As Hotkeys default
+	t_Lang055 =	Nonaktifkan Jendela Shortcuts
+	t_Lang056 =	Ulang Kolom Ukuran
+	t_Lang057 =	Standar Makro Berkas
+	t_Lang058 =	Standar Pustaka Berkas
+	t_Lang059 =	Gunakan Ekspresi secara default untuk Variabel Tugas
+	t_Lang060 =	Sorot Loops dan Laporan
+	t_Lang061 =	(Klik header kolom Index untuk mengaktifkan / menonaktifkan)
+	t_Lang062 =	Tombol Virtual
+	t_Lang063 =	Kegagalan
+	t_Lang064 =	Mengedit Komentar
+	t_Lang065 =	Komentar
+	t_Lang066 =	Cari Kolom
+	t_Lang067 =	Cari / Ganti
+	t_Lang068 =	&Menemukan
+	t_Lang069 =	&Cocokkan Kasus
+	t_Lang070 =	Me&nggantikan
+	t_Lang071 =	Ditemukan
+	t_Lang072 =	Diganti
+	t_Lang073 =	&Baris Terpilih
+	t_Lang074 =	Sem&ua Baris
+	t_Lang075 =	Semu&a Macro
+	t_Lang076 =	Tentang
+	t_Lang077 =	&Regular Expression
+	t_Lang078 =	Bermain sekali
+	t_Lang079 =	Bermain setiap (mili) detik X
+	t_Lang080 =	Timer
+	t_Lang081 =	Berhenti sebentar
+	t_Lang082 =	Laporan
+	t_Lang083 =	Tampilkan Indentasi untuk Loops dan Laporan
+	t_Lang084 =	(Dua-Klik header kolom Aksi mengaktifkan / menonaktifkan)
+	t_Lang085 =	Display kontrol bar pada startup
+	t_Lang086 =	Mencari Fungsi. Harap tunggu...
+	t_Lang087 =	Sertakan File Eksternal
+	t_Lang088 =	Buat EXE file
+	t_Lang089 =	Izinkan Beberapa Contoh
+	t_Lang090 =	Default
+	t_Lang091 =	Izinkan Menyeret Baris
+	t_Lang092 =	&Seluruh isi sel
+	t_Lang093 =	Format INI standar
+	t_Lang094 =	Nama = Nilai
+	t_Lang095 =	Masukkan 1 variabel per baris. Anda juga bisa menambahkan [Bagian].
+	t_Lang096 =	Pengguna global Variabel
+	t_Lang097 =	Tekan tombol pada joystick
+	t_Lang098 =	Backspace untuk menghapus
+	t_Lang099 =	Tombol
+	t_Lang100 =	Menampilkan tips balon
+	t_Lang101 =	Mempercepat
+	t_Lang102 =	Lambat
+	t_Lang103 =	Cepat
+	t_Lang104 =	Tampilkan / Sembunyikan Title Bar
+	t_Lang105 =	Tampilkan / Sembunyikan Jendela Utama
+	t_Lang106 =	Jalankan segera
+	t_Lang107 =	Penundaan Acak
+	t_Lang108 =	Normal
+	t_Lang109 =	Turun
+	t_Lang110 =	Naik
+	t_Lang111 =	Masukkan keystroke
+	t_Lang112 =	Play / Pause
+	t_Lang113 =	Berhenti
+	t_Lang114 =	Pilihan pemutaran
+	t_Lang115 =	Start / Stop Rekam
+	t_Lang116 =	Rekam New Macro
+	t_Lang117 =	Pilihan Recording
+	t_Lang118 =	Hapus Daftar
+	t_Lang119 =	Tampilan Progress Bar
+	t_Lang120 =	Speed Up
+	t_Lang121 =	Slow Down
+	t_Lang122 =	Tampilkan / Sembunyikan Title Bar
+	t_Lang123 =	Tampilkan / Sembunyikan Jendela Utama
+	t_Lang124 =	Dermaga
+	t_Lang125 =	Undock
+	t_Lang126 =	Buka
+	t_Lang127 =	Simpan
+	t_Lang128 =	Memotong
+	t_Lang129 =	Kopi
+	t_Lang130 =	Menempelkan
+	t_Lang131 =	Pilih Semua
+	t_Lang132 =	Hapus
+	t_Lang133 =	Keyboard
+	t_Lang134 =	Mouse
+	t_Lang135 =	Lainnya
+	t_Lang136 =	Baris Sorot
+	t_Lang137 =	Editor Default Skrip
+	t_Lang138 =	Nyílt külső szerkesztőben (Ctrl+Shift+E)
+	t_Lang139 =	Memilih
+	t_Lang140 =	Dengan Kolom
+	t_Lang141 =	Semua Kolom
+	t_Lang142 =	Hapus Theme dari Toolbar (memerlukan restart)
+	t_Lang143 =	Otomatis menyembunyikan kontrol toolbar
+	t_Lang144 =	Klik dan drag untuk mengubah urutan. Double-klik untuk mengedit.
+	t_Lang145 =	Mengedit Macro
+	t_Lang146 =	Sejalan
+	t_Lang147 =	Makro
+	t_Lang148 =	Aksi tombol close jendela utama ini
+	t_Lang149 =	Tutup aplikasi
+	t_Lang150 =	Minimalkan ke tray
+	t_Lang151 =	Tampilan konfirmasi ketika menutup makro
+	t_Lang152 =	Buat backup otomatis
+	t_Lang153 =	Menciptakan tugas yang dijadwalkan pada Windows Task Scheduler.
+	t_Lang154 =	Waktu pertama kali dijalankan
+	t_Lang155 =	Jadwal Jenis
+	t_Lang156 =	Setelah||Harian|Mingguan|Bulanan|Mulai|Logon|Menganggur
+	t_Lang157 =	File target PMC
+	t_Lang158 =	File target AHK
+	t_Lang159 =	Script akan disimpan atau ditimpa di direktori saat ini!
+	t_Lang160 =	Buka Task Scheduler
+	t_Lang161 =	Tugas berhasil dibuat!
+	t_Lang162 =	Terjadi kesalahan. Tugas tidak dapat dibuat.
+	t_Lang163 =	Scheduler
+	t_Lang164 =	Jadwal Macro
+	t_Lang165 =	Jalankan Makro
+	t_Lang166 =	Berkas
+	t_Lang167 =	Senar
+	t_Lang168 =	Dapatkan Info
+	t_Lang169 =	Tunggu
+	t_Lang170 =	Kelompok Jendela
+	t_Lang171 =	Pesan
+	t_Lang172 =	Registry Dan INI
+	t_Lang173 =	Suara
+	t_Lang174 =	Variabel
+	t_Lang175 =	Lain-Lain.
+	t_Lang176 =	Menambahkan grup
+	t_Lang177 =	Kelompok baru
+	t_Lang178 =	Bahasa Editor
+	t_Lang179 =	Buat yang baru
+	t_Lang180 =	Gunakan Masukkan, PgDn dan PgUp untuk menavigasi.
+	t_Lang181 =	Menyerahkan
+	t_Lang182 =	Nama
+	t_Lang183 =	Simpan perubahan?
+	t_Lang184 =	Bahasa Berkas
+	t_Lang185 =	Referensi Berkas
+	t_Lang186 =	Kirim revisi atau terjemahan baru
+	t_Lang187 =	Tutup semua
+	t_Lang188 =	Melebarkan semua
+	t_Lang189 =	Bahasa
+	t_Lang190 =	Mengkonversi line break
+	t_Lang191 =	Account email
+	t_Lang192 =	Memperbarui
+	t_Lang193 =	Klik dua kali untuk mengedit
+	t_Lang194 =	SMTP Server
+	t_Lang195 =	Pelabuhan
+	t_Lang196 =	Membuktikan
+	t_Lang197 =	Nama pengguna
+	t_Lang198 =	Kata sandi
+	t_Lang199 =	SSL
+	t_Lang200 =	Kirim modus
+	t_Lang201 =	Zaslat test
+	t_Lang202 =	Layar Dan Jendela
+	t_Lang203 =	Mendeteksi Jendela Tersembunyi
+	t_Lang204 =	Mendeteksi Teks Tersembunyi
+	t_Lang205 =	Modus Pertandingan Judul
+	t_Lang206 =	Kecepatan Pertandingan Judul
+	t_Lang207 =	Klien
+	t_Lang208 =	M&enemukan
+	t_Lang209 =	Men&ggantikan
+	t_Lang210 =	Jangan menampilkan kesalahan
+		
+; 17. Messages & Dialogs		
+	d_Lang001 =	Buka
+	d_Lang002 =	Simpan proyek saat ini?
+	d_Lang003 =	Pengaturan Default
+	d_Lang004 =	Makro File Pencipta
+	d_Lang005 =	Simpan Proyek
+	d_Lang006 =	Gagal menyimpan / menimpa file
+	d_Lang007 =	Kesalahan
+	d_Lang008 =	Kesalahan: Tidak Makro Dipilih
+		Harap periksa setidaknya satu Makro dalam daftar..
+	d_Lang009 =	Kesalahan: Tidak ada Hotkey Dipilih.
+	d_Lang010 =	Error: Alamat tidak valid
+		Tim alamat atau nama file yang dipilih tidak valid..
+	d_Lang011 =	Peringatan
+	d_Lang012 =	Tidak ada kontrol yang dipilih.
+		Teruskan?
+	d_Lang013 =	Ekspor Script
+	d_Lang014 =	Script Diekspor
+	d_Lang015 =	File tersebut berhasil diekspor!
+	d_Lang016 =	Klik 'Get' untuk menandai posisi.
+	d_Lang017 =	- Pilih jendela.
+		- Arahkan ke posisi yang diinginkan.
+		- Tekan Tombol Kanan.
+	d_Lang018 =	Pixel Warna
+	d_Lang019 =	Hapus Daftar
+	d_Lang020 =	Tutup Makro?
+	d_Lang021 =	Berikutnya
+	d_Lang022 =	Sebelumnya
+	d_Lang023 =	Pesan
+	d_Lang024 =	Memuat pengaturan default?
+	d_Lang025 =	Makro (s) diaktifkan.`nGunakan Hotkeys Bermain.
+	d_Lang026 =	untuk mulai / berhenti merekam
+	d_Lang027 =	Rekaman berhenti
+	d_Lang028 =	Rekaman...
+	d_Lang029 =	untuk menghentikan
+	d_Lang030 =	untuk memulai rekor baru
+	d_Lang031 =	Panggilan untuk fungsi tidak ada.
+	d_Lang032 =	Kesalahan: Hotkeys Duplikat.
+	d_Lang033 =	Aktifkan Macro
+	d_Lang034 =	- Klik dan Drag dengan %DrawButton% untuk memilih area.
+		- Klik dan lepaskan tanpa menyeret untuk memilih area kontrol.
+		- Klik di daerah tanpa kontrol untuk memilih area jendela.
+	d_Lang035 =	Lanjutkan?
+	d_Lang036 =	Image / Pixel Ditemukan di
+	d_Lang037 =	Image / Pixel Tidak Ditemukan.
+	d_Lang038 =	Tekan OK untuk melanjutkan.
+	d_Lang039 =	Mengirim. Mohon tunggu...
+	d_Lang040 =	Fitur ini memerlukan+Library GDI.
+		Klik OK untuk pergi ke halaman download.
+	d_Lang041 =	Nama variabel mengandung karakter ilegal.
+	d_Lang042 =	adalah kata reserved.
+	d_Lang043 =	Atau gunakan Kontrol Toolbar.
+	d_Lang044 =	Fitur ini memerlukan Eval () Fungsi.
+		Klik OK untuk pergi ke halaman download.
+	d_Lang045 =	Silakan pilih jendela Internet Explorer!
+	d_Lang046 =	Koneksi Sukses!
+	d_Lang047 =	Gagal Connect!
+	d_Lang048 =	Masukkan Menangani dan CLSID a.
+	d_Lang049 =	Label Nama tidak valid.
+	d_Lang050 =	Gandakan Label.
+	d_Lang051 =	Untuk memainkan Makro tekan Hotkey yang sesuai (Auto / Man).
+	d_Lang052 =	Untuk mulai merekam tekan Hotkey Rekam.
+	d_Lang053 =	Jangan tampilkan pesan ini lagi.
+	d_Lang054 =	Silakan pilih jendela Excel!
+	d_Lang055 =	Silakan pilih file script AutoHotKey (AHK.) Dan memasukkan Nama Fungsi.
+	d_Lang056 =	Fitur ini memerlukan Autohotkey diinstal.
+		Klik OK untuk pergi ke halaman download.
+	d_Lang057 =	- Tekan Ctrl+Arrow tombol untuk memindahkan area yang dipilih.
+		- Tekan Shift+tombol panah untuk mengubah ukuran area yang dipilih.
+		- Tekan Enter untuk menyelesaikan.
+	d_Lang058 =	Beberapa fitur memerlukan hak istimewa admnistrator untuk berfungsi dengan baik.
+		Ini dianjurkan untuk restart aplikasi sebagai Administrator.
+	d_Lang059 =	Perintah ini tidak mendukung ekspresi atau fungsi.
+		Silahkan menetapkan variabel dan menggunakannya dalam parameter.
+	d_Lang060 =	Versi baru tersedia
+	d_Lang061 =	Tidak sekarang
+	d_Lang062 =	Anda sudah memiliki versi terbaru.
+	d_Lang063 =	Terjadi galat saat memeriksa.
+	d_Lang064 =	Kesalahan dalam
+	d_Lang065 =	Baris
+	d_Lang066 =	Secara khusus
+	d_Lang067 =	Tampilkan jendela ini pada startup
+	d_Lang068 =	Tips:
+	d_Lang069 =	Banyak waktu dan usaha telah pergi ke dalam pengembangan Pulover's Macro Creator. Jika Anda merasa berguna, silakan mempertimbangkan menunjukkan penghargaan Anda dengan sumbangan.
+		Menyumbangkan atau tidak, tidak akan ada perbedaan dalam fitur dan fungsionalitas.
+	d_Lang070 =	Donasi...
+	d_Lang071 =	Tidak, terima kasih
+	d_Lang072 =	Mendukung perangkat lunak Open Source
+	d_Lang073 =	Error: Invalid Hotkey Dipilih.
+	d_Lang074 =	Cari perintah atau fungsi
+	d_Lang075 =	Selamat Datang di Pulover's Macro Creator
+	d_Lang076 =	Silahkan pilih tata letak prefered Anda
+	d_Lang077 =	Padat
+	d_Lang078 =	Kegagalan
+	d_Lang079 =	Memeriksa pembaruan pada startup.
+	d_Lang080 =	Anda dapat mengubah ini dalam Pilihan > Pengaturan > Umum.
+	d_Lang081 =	Anda dapat mengubah dan menyesuaikan tata letak dalam menu View.
+	d_Lang082 =	Berkas tidak ditemukan!
+	d_Lang083 =	Sebuah file cadangan telah ditemukan. Apakah Anda ingin membukanya?
+	d_Lang084 =	Harap menyimpan perubahan sebelum penjadwalan tugas.
+	d_Lang085 =	Hilang "End Loop" pernyataan dalam Makro 
+	d_Lang086 =	Hilang "End If" pernyataan dalam Makro
+	d_Lang087 =	Perhatikan bahwa perubahan yang dibuat untuk script luar program TIDAK AKAN MEMPENGARUHI macro ANDA dengan cara apapun.
+		Fitur ini hanya dimaksudkan sebagai fungsi ekspor cepat. PMC tidak dirancang untuk menjadi editor skrip AHK.
+	d_Lang088 =	Cobalah untuk menjalankan pengguna yang biasa (tidak administrator).
+	d_Lang089 =	Tidak ada baris yang dipilih!
+	d_Lang090 =	Silakan, pilih baris untuk memasukkan atau mengeluarkan kelompok.
+	d_Lang091 =	Download. Mohon tunggu...
+	d_Lang092 =	Ikon kecil
+	d_Lang093 =	Ikon besar
+	d_Lang094 =	Fitur ini memerlukan Windows Vista atau yang lebih tinggi.
+	d_Lang095 =	Penggunaan ByRef menyebabkan parameter untuk menjadi sebuah alias untuk variabel berlalu dalam dari penelepon. Dengan kata lain, parameter dan variabel pemanggil keduanya merujuk pada isi yang sama di memori.
+	d_Lang096 =	- JANGAN MELAMPIRKAN VARIABEL DI TANDA PERSEN DI SINI.
+		- Mengembalikan nilai harus menjadi ekspresi.
+		- Anda dapat menggunakan string, variabel, array dan fungsi. Anda juga dapat menggabungkan salah satu dari mereka.
+		- Untuk menggunakan string, menyertakan mereka dalam tanda kutip, misalnya: "Hasil adalah:" a+b.
+		- Jika Anda ingin kembali hasil tambahan, Anda juga dapat menggunakan ByRef dalam parameter.
+		- Array dapat digunakan untuk mengembalikan beberapa nilai atau nilai-nilai bahkan bernama.
+	d_Lang097 =	- JANGAN MELAMPIRKAN VARIABEL DI TANDA PERSEN DI SINI.
+		- Sebagian besar dari ekspresi AHK didukung.
+		- Anda dapat menggunakan string, variabel, array dan fungsi.
+		- Untuk menggunakan string, menyertakan mereka dalam tanda kutip, misalnya: var = "a".
+		- Beberapa Laporan yang didukung, misalnya: var = "a" || InStr (var, "b").
+	d_Lang098 =	Jika satu parameter memiliki nilai default, parameter berikut wajib memiliki satu juga.
+	d_Lang099 =	Nama fungsi mengandung karakter ilegal.
+	d_Lang100 =	Goto, gosub dan Label tidak diperbolehkan dalam fungsi.
+	d_Lang101 =	Fungsi duplikat.
+	d_Lang102 =	Terjadi kesalahan. Anda dapat mengirim email ke 'pulover@macrocreator.com' dengan file:
+	d_Lang103 =	Bahasa baru mengajukan tersedia.
+	d_Lang104 =	Pesan ini tidak akan ditampilkan lagi untuk update yang sama. Anda dapat men-download dari menu Help > Periksa pembaruan.
+	d_Lang105 =	File berhasil dikirim. Terima kasih!
+	d_Lang106 =	File bahasa diperbarui berhasil.
+	d_Lang107 =	Tidak dapat memulai timer
+	d_Lang108 =	Semua posisi terdaftar. Silakan, menghapus salah satu dari mereka.
+	d_Lang109 =	Label target tidak ada.
+	d_Lang110 =	Konfirmasi berkas ganti
+	d_Lang111 =	sudah ada.
+		Ingin menggantinya?
+	d_Lang112 =	E-mail fiók nem található.
+	d_Lang113 =	Melaporkan tidak ada kesalahan.
+	d_Lang114 =	Skrip diekspor (bahkan jika dikompilasi) dengan fungsi mengirim email (CDO) akan memiliki informasi terlihat dari akun email yang digunakan, termasuk PASSWORD. File proyek PMC tidak memiliki informasi ini.
+	d_Lang115 =	- Tahan Alt untuk mengatur wilayah ke lokasi yang sama.
+	d_Lang116 =	Mentransfer dan menginstal
+	d_Lang117 =	Pergi ke halaman download
+	d_Lang118 =	Paling Cocok
+	d_Lang119 =	Restart aplikasi untuk menerapkan perubahan.
+	d_Lang120 =	Untuk mengatur ulang toolbar ukuran, pergi ke:
+		
+; 18. Start-up Tips		
+	Start_Tips =	Check out video tutorial di www.macrocreator.com/help untuk belajar tentang banyak fitur dari PMC.
+		Untuk mendapatkan bantuan untuk perintah tertentu klik kanan di mana saja di jendela perintah untuk menampilkan link ke bantuan online.
+		Anda dapat membuat Macro dengan menggunakan Tombol Perintah di jendela utama atau menggunakan Recorder untuk menyalin tindakan Anda. Pergi ke Pilihan> Pengaturan> Recording untuk memilih apa yang akan disimpan masukan.
+		Gunakan search bar atau "Cari perintah" jendela untuk mencari perintah dan fungsi.
+		Apakah Anda ingin membantu memperbaiki terjemahan atau bahkan membuat yang baru? Pergi ke Pilihan> Pengaturan> Editor Bahasa dan melakukan koreksi yang Anda inginkan. Anda dapat melihat setiap saat. Klik Submit untuk mengirim revisi Anda. Jangan ragu untuk mengirimkan sejumlah koreksi sebanyak yang Anda inginkan.
+		Periksa "Capture Keys" pilihan untuk masuk kunci dan kombinasi Makro Anda langsung dari jendela utama.
+		Masukkan kunci dan kombinasi dalam kotak Hotkey di bagian bawah dan tekan tombol Insert untuk menambahkan mereka ke pilih baris.
+		Gunakan tombol edit di bagian bawah jendela utama untuk mengatur ulang dan menunda untuk beberapa baris pada saat yang sama. Jika tidak ada baris yang dipilih tombol mengedit berlaku untuk semua baris dalam daftar.
+		Hampir setiap perintah dan fungsi menerima dan output variabel. Anda dapat menetapkan variabel Anda sendiri dalam Variabel jendela (Commands> Variabel / Array). Untuk menggunakannya dalam perintah menyertakan nama variabel dalam tanda persen, mis .:% MyVar%. Dalam fungsi, menggunakannya tanpa tanda persen, mis .: substr (MyVar, 5).
+		Klik kanan di mana saja di jendela perintah untuk dengan mudah memasukkan Built-In variabel dari daftar.
+		Untuk menggunakan perekam untuk tugas-tugas cepat masuk ke Pilihan> Pengaturan> Recording dan periksa "Clear List" pilihan. Kemudian klik tombol Record di jendela utama dan menggunakan F10 untuk menghapus makro saat ini dan memulai yang baru dengan hotkey yang sama. Anda juga dapat memeriksa "Selalu Aktif" pilihan di jendela utama untuk menjaga Recording dan Playback hotkeys aktif.
+		PMC mendukung Array objek dan metode, seperti script AutoHotKey. Anda dapat membuat array dalam banyak hal, yang paling biasa akan jendela Variabel, memeriksa "Expression" pilihan dan melampirkan nilai-nilai dalam kurung, mis .: [10, 20, Var, "string"]. Anda juga dapat membuat nama kunci, mis .: {Keya: Vara, "beberapa kunci": "nilai string"}.
+		Fungsi menggunakan sintaks ekspresi AHK. string literal harus diapit dalam tanda kutip, dan variabel tidak perlu tanda persen. Anda dapat menggunakan fungsi lain atau elemen array sebagai parameter. Mis .: StrReplace (MyVar, MyArray [ "A"], substr (OtherVar, 2, 3)).
+		Ekspresi didukung dalam AutoHotKey Expression Sintaks. Untuk menggunakan ekspresi dalam parameter perintah, mulai dengan tanda persen, mis .:% substr (Var, 5).
+		Loop counter di atas menetapkan jumlah loop untuk Makro yang dipilih.
+		Anda dapat mengedit berturut-turut dengan mengklik dua kali atau dengan memilih dan mengklik tombol Ubah di bagian bawah. Anda dapat mengedit beberapa baris yang dipilih menggunakan pilihan di edit bar di bagian bawah.
+		Anda dapat menentukan fungsi sendiri di Function> Buat fungsi dan menggunakannya dari Fungsi jendela atau di dalam ekspresi.
+		Anda dapat menentukan Globa / variabel lokal dan statis untuk Ditetapkan Pengguna Fungsi. variabel global didefinisikan dalam Pilihan> Pengaturan> Pengguna variabel global dianggap super Global, dan akan selalu tersedia fungsi dalam, bahkan ketika didefinisikan sebagai lokal.
+		Pilih satu atau lebih baris untuk menambahkan perintah baru di atas mereka.
+		Anda dapat memindahkan baris dengan klik-dan-tarik.
+		Klik dua kali pada Tray Icon untuk mengaktifkan hotkeys atau menghentikan pemutaran / perekaman. Klik dengan tombol tengah selama pemutaran atau merekam untuk jeda.
+		Anda dapat mengekspor Macro untuk script AutoHotKey bekerja atau berdiri sendiri executable dari jendela Export.
+		Untuk merekam dan memutar mouse menggunakan koordinat absolut masuk ke Pilihan> Pengaturan> Default dan mengatur mouse Koordinat ke Screen.
+		Anda dapat membuka, menyalin, memindahkan atau menghapus file dan folder menggunakan salah satu perintah di Commands> Run / File / String / Lain-lain. Ada banyak perintah lain yang berguna seperti StringReplace, InputBox dan MouseGetPos.
+		Untuk merekam Down dan negara Up setiap pergi kunci untuk Pilihan> Pengaturan> Recording dan periksa "Tangkap negara kunci (Bawah / Up)" pilihan.
+		Anda dapat menggunakan hotkeys untuk mempercepat atau memperlambat Playback. Pergi ke Pilihan> Pengaturan> Playback untuk mengatur tombol dan kecepatan.
+		Untuk menyesuaikan daerah penangkapan menggunakan "Membuat Screenshot" alat masuk ke Pilihan> Pengaturan> Tampilan dan pilih "Tekan Enter untuk menangkap". Setelah menggambar penggunaan persegi panjang tombol panah Control + untuk memindahkan pilihan dan Shift tombol panah + untuk mengubah ukurannya.
+		Cepat Pilih: Pilih baris apapun dan klik pada header kolom untuk memilih baris yang sama berdasarkan teks sel dari kolom tersebut.
+		Klik pada Header Indeks Kolom untuk menghidupkan On / Off Bantuan Marks dan Warna untuk Loops dan Laporan. Ganda-Klik pada Header Action Kolom untuk menghidupkan On / Off Indentasi untuk Loops dan Laporan.
+		Anda dapat men-debug Macro Anda menggunakan Hotkey Manual dan pilihan Putar di menu Macro. Anda juga dapat menonaktifkan tindakan dengan menghapus centang dalam daftar Makro.
+		Untuk membuat Macro Anda bekerja hanya pada jendela tertentu pergi ke Macro> Konteks Sensitif Hotkeys.
+		Anda dapat mengatur Variabel global Anda sendiri yang akan dimuat di startup dan untuk diekspor. Pergi ke Pilihan> Pengaturan> Pengguna Variabel global untuk menambahkannya.
+		Anda dapat menjalankan fungsi-fungsi lanjutan seperti substr dan REGEXREPLACE dari jendela Fungsi (Commands> Fungsi / Metode Array). Anda juga dapat menentukan fungsi Anda sendiri atau menjalankan fungsi dari skrip AutoHotkey eksternal.
+		Anda dapat merekam gerakan mouse relatif terhadap posisi saat ini dengan memegang CapsLock selama perekaman (Anda dapat mengubah kunci dan membuatnya beralih di Settings).
+		
+; 19. Tooltips		
+	A_List_TT =	Pilih Makro (Ctrl +1 ~ 0)
+	AbortKey_TT =	Hotkey untuk menghentikan pemutaran
+	ActiveObj_TT =	Mencoba untuk terhubung ke COM Obyek Aktif
+	AddAtt_TT =	Melampirkan file
+	ApplyI_TT =	Menerapkan
+	ApplyL_TT =	Masukkan dari Box (Insert)
+	ApplyT_TT =	Menerapkan
+	AutoKey_TT =	Hotkey untuk bermain Makro
+	Client_TT =	Koordinat relatif terhadap area jendela klien yang aktif, yang tidak termasuk jendela judul bar, menu (jika memiliki standar satu) dan perbatasan.
+	Clip_TT =	Sementara menggunakan Clipboard untuk mengirim teks.
+		Ketika operasi selesai, script
+		mengembalikan isi clipboard asli.
+		(Biarkan kosong Teks untuk menyisipkan konten saat ini)
+	CM_TT =	Screen: Koordinat relatif terhadap desktop (seluruh layar).
+		Window: Koordinat relatif terhadap jendela aktif.
+		Client: Koordinat relatif terhadap area jendela klien yang aktif, yang tidak termasuk jendela judul bar, menu (jika memiliki standar satu) dan perbatasan.
+	CmdFilter_TT =	Menyaring menurut jenis
+	CmdSort_TT =	Urutkan berdasarkan abjad
+	ColorPick_TT =	Mendapatkan pixel di layar
+	ComEvent_TT =	Tingkat di mana keystrokes dikirim ditentukan oleh penundaan kunci.
+	ComText_TT =	Bila tidak dalam modus baku, karakter berikut
+		diperlakukan sebagai pengubah (pengubah ini mempengaruhi
+		hanya kunci berikutnya):!, +, ^, #
+	CoordPixel_TT =	Modus Mengkoordinasikan
+	DefaultMacro_TT =	Pilih berkas untuk memuat pada startup program yang
+	EditPaste_TT =	Pasta String pada posisi tanda sisipan / insert
+		dalam kontrol Edit (ini tidak mempengaruhi
+		isi clipboard).
+	Ex_AF_TT =	Melompat metode lembut mengaktifkan jendela
+		dan langsung menuju ke metode kuat.
+	Ex_CM_TT =	Set koordinat modus untuk mouse perintah untuk menjadi relatif baik jendela aktif atau layar.
+	Ex_DH_TT =	Menentukan apakah jendela terlihat sedang "dilihat" oleh script.
+	Ex_DT_TT =	Menentukan apakah teks yang tak terlihat di jendela adalah "terlihat" untuk tujuan menemukan jendela. Ini mempengaruhi perintah seperti IfWinExist dan WinActivate.
+	Ex_EdScript_TT =	Nyílt külső szerkesztőben
+	Ex_EdVars_TT =	Pilih variabel global yang akan diekspor.
+	Ex_ExecScript_TT =	Script berjalan
+	Ex_HK_TT =	Memaksa penggunaan hook untuk melaksanakan semua
+		atau hotkeys keyboard yang.
+	Ex_IfDir_TT =	Menciptakan konteks-sensitif hotkeys dan hotstrings tergantung
+		pada jenis jendela yang aktif atau ada.
+	Ex_IfDirType_TT =	Menciptakan konteks-sensitif hotkeys dan hotstrings tergantung
+		pada jenis jendela yang aktif atau ada.
+	Ex_IN_TT =	Penyebab script untuk berperilaku seolah-olah ditentukan
+		isi file yang hadir pada posisi yang tepat.
+	Ex_MD_TT =	Mengatur penundaan yang akan terjadi setelah
+		setiap gerakan mouse atau klik.
+	Ex_MT_TT =	Menetapkan jumlah maksimum simultan
+		benang per hotkey atau hotstring.
+	Ex_NT_TT =	Menonaktifkan pertunjukan tray icon.
+	Ex_PT_TT =	Menyimpan script permanen berjalan
+		(Yaitu, sampai pengguna menutup atau ExitApp ditemui).
+	Ex_SB_TT =	Menentukan seberapa cepat script akan berjalan (mempengaruhi utilisasi CPU).
+	Ex_SC_TT =	Mengatur penundaan yang akan terjadi setelah
+		setiap kontrol-memodifikasi perintah.
+	Ex_SI_TT =	Menentukan apakah script yang diperbolehkan untuk berjalan lagi ketika sudah berjalan.
+	Ex_SK_TT =	Mengatur penundaan yang akan terjadi setelah setiap
+		keystroke dikirim oleh Kirim atau ControlSend.
+	Ex_SM_TT =	Membuat Kirim identik dengan SendInput atau SendPlay daripada
+		default (SendEvent). Juga membuat Klik dan mousemove / Klik / Drag
+		menggunakan metode tertentu.
+	Ex_ST_TT =	Mengatur perilaku pencocokan parameter WinTitle dalam perintah seperti WinWait.
+	Ex_SW_TT =	Mengatur penundaan yang akan terjadi setelah
+		setiap perintah windowing, seperti WinActivate.
+	Ex_UV_TT =	Ekspor variabel global.
+	Ex_WN_TT =	Mengaktifkan atau menonaktifkan peringatan untuk kondisi tertentu yang mungkin menunjukkan kesalahan, seperti kesalahan ketik atau hilang deklarasi "global".
+	ExpList_TT =	Double-Klik untuk mengedit
+	ExprLink2_TT =	- JANGAN MELAMPIRKAN VARIABEL DI TANDA PERSEN DI SINI.
+		- Sebagian besar dari ekspresi AHK didukung.
+		- Anda dapat menggunakan string, variabel, array dan fungsi.
+		- Untuk menggunakan string, menyertakan mereka dalam tanda kutip, misalnya: var  "a".
+		- Beberapa Laporan yang didukung, misalnya: var  "a" || InStr (var, "b").
+	ExprLink3_TT =	- JANGAN MELAMPIRKAN VARIABEL DI TANDA PERSEN DI SINI.
+		- Sebagian besar dari ekspresi AHK didukung.
+		- Anda dapat menggunakan string, variabel, array dan fungsi.
+		- Untuk menggunakan string, menyertakan mereka dalam tanda kutip, misalnya: var = "a".
+		- Beberapa Laporan yang didukung, misalnya: var = "a" || InStr (var, "b").
+	ExpView2_TT =	Editor canggih
+	ExpView_TT =	Editor canggih
+	Fast_TT =	Menggunakan metode yang lebih cepat mencari (dianjurkan)
+	HiddenText_TT =	Menentukan apakah teks yang tak terlihat di jendela adalah "terlihat" untuk tujuan menemukan jendela. Ini mempengaruhi perintah seperti IfWinExist dan WinActivate.
+	HiddenWin_TT =	Menentukan apakah jendela terlihat sedang "dilihat" oleh script.
+	HScale_TT =	Skala Tinggi
+	IconN_TT =	Jumlah kelompok ikon
+	IfLVColor_TT =	Klik untuk memilih warna
+	IncFiles_TT =	Termasuk file / Nilai
+	IncFolders_TT =	Termasuk direktori (folder) / Keys
+	InsertKey_TT =	Masukkan keystroke (Ctrl+Insert)
+	InsertKeyT_TT =	Masukkan keystroke
+	JoyKey_TT =	Tekan tombol pada joystick
+	LoopLVColor_TT =	Klik untuk memilih warna
+	LUntil_TT =	Berlaku kondisi untuk kelanjutan Loop atau Untuk loop.
+	ManKey_TT =	Hotkey untuk bermain Makro "langkah-demi-langkah"
+	MRel_TT =	Gerakan relatif terhadap posisi saat ini.
+		Atau jika digunakan dengan Control: Posisi relatif ke Control.
+	OSHK_TT =	Pilih Makro
+	OSHKEd_TT =	Pilih Makro
+	OSProgB_TT =	Tampilan Progress Bar
+	OSTrans_TT =	Kegelapan
+	PauseKey_TT =	Hotkey untuk menjeda pemutaran
+	PicPrev_TT =	Double-Klik untuk membuka Image
+	Raw_TT =	Perintah SendRaw menafsirkan semua karakter harfiah
+		daripada menerjemahkan {Enter} ke keystroke ENTER,
+		^ C untuk Control-C, dll
+	RecKey_TT =	Backspace untuk menghapus
+	RecNewKey_TT =	Backspace untuk menghapus
+	Recurse_TT =	Rekursif ke dalam subdirektori (subfolder) / Subkunci
+	RefreshIEW_TT =	Segarkan Daftar
+	Relative_TT =	Koordinat relatif terhadap jendela aktif.
+	RelKey_TT =	Rekaman gerakan Mouse dan klik sebagai offset
+		dari posisi sebelumnya saat dipegang.
+	ReptC_TT =	0 = tak terbatas
+	Reset_TT =	Hapus isi variabel
+	RGB_TT =	Penyebab warna harus ditafsirkan sebagai nilai RGB bukan BGR
+	Screen_TT =	Koordinat relatif terhadap desktop (seluruh layar).
+	Screenshot_TT =	Membuat Screenshot
+	SetText_TT =	Mengubah teks kontrol.
+	SI_TT =	Kata FORCE melompati kotak dialog dan menggantikan contoh lama secara otomatis,
+		yang mirip dalam efek perintah Reload.
+		Kata ABAIKAN melompat kotak dialog dan meninggalkan contoh lama berjalan.
+		Dengan kata lain, upaya untuk memulai script sudah berjalan diabaikan.
+		Kata OFF memungkinkan beberapa contoh dari script untuk menjalankan secara bersamaan.
+	SM_TT =	Kegiatan: Ini adalah default awal yang digunakan oleh semua skrip.
+		Ia menggunakan metode SendEvent untuk Kirim, SendRaw, Klik, dan mousemove / Klik / Drag.
+		Masukan: Beralih ke metode SendInput untuk Kirim, SendRaw, Klik, dan mousemove / Klik / Drag.
+		InputThenPlay: Sama seperti di atas kecuali bahwa daripada jatuh kembali ke modus Acara
+		ketika SendInput tidak tersedia, itu akan beralih ke modus (bawah) Play. Hal ini juga menyebabkan
+		perintah SendInput sendiri untuk kembali ke mode Putar ketika SendInput tidak tersedia.
+		Play: Beralih ke metode SendPlay untuk Kirim, SendRaw, Klik, dan mousemove / Klik / Drag.
+	ST_TT =	1: Judul Sebuah jendela harus dimulai dengan WinTitle ditentukan untuk menjadi sebuah pertandingan.
+		2: Judul window dapat berisi WinTitle mana saja di dalamnya menjadi pertandingan.
+		3: Judul window harus sama persis WinTitle menjadi pertandingan.
+		Regex: Perubahan WinTitle, WinText, ExcludeTitle, dan ExcludeText menjadi ekspresi reguler.
+	TimeoutM_TT =	0 = tak terbatas
+	TitleMatch_TT =	1: Judul Sebuah jendela harus mulai dengan WinTitle ditentukan untuk menjadi pertandingan.
+		2: Judul Jendela ini dapat berisi WinTitle di mana saja di dalamnya menjadi pertandingan.
+		3: Judul Sebuah jendela harus sama persis dengan WinTitle menjadi pertandingan.
+		Regex: Perubahan WinTitle, WinText, Kecualikan Judul, dan Kecualikan Text menjadi ekspresi reguler.
+	TitleSpeed_TT =	Cepat: ini adalah perilaku default. Kinerja mungkin jauh lebih baik dibandingkan Lambat, tetapi unsur-unsur WinText tertentu untuk beberapa jenis windows tidak dapat "dilihat" oleh berbagai perintah jendela.
+		Lambat: Bisa menjadi lebih lambat, tapi semua kemungkinan WinText diambil dari setiap jendela sebagai pencarian perintah windowing melalui mereka untuk pertandingan. Jendela Spy mengungkapkan bagian mana dari teks jendela (jika ada) memerlukan modus lambat.
+	ToggleC_TT =	Aktifkan Recording Relatif ketika negara kunci di.
+	TransC_TT =	Transparan warna
+	VarCopyA_TT =	Menyalin isi variabel saat ini
+	VarCopyB_TT =	Menyalin isi variabel saat ini
+	VariatT_TT =	Nuansa variasi
+	WScale_TT =	Skala Lebar
+		
+; 20. Operators		
+	As_Oper_01 =	Menetapkan
+	As_Oper_02 =	Menambahkan
+	As_Oper_03 =	Mengurangi
+	As_Oper_04 =	Mengalikan
+	As_Oper_05 =	Membagi
+	As_Oper_06 =	Membagi lantai
+	As_Oper_07 =	Menyatukan
+	As_Oper_08 =	Bitwise inclusive OR
+	As_Oper_09 =	Bitwise AND
+	As_Oper_10 =	Bitwise exclusive OR
+	As_Oper_11 =	Right shift AND
+	As_Oper_12 =	Left shift AND
+	Co_Oper_01 =	Sama
+	Co_Oper_02 =	Sama (case sensitive)
+	Co_Oper_03 =	Tidak sama
+	Co_Oper_04 =	Lebih besar
+	Co_Oper_05 =	Kurang
+	Co_Oper_06 =	Lebih besar atau sama
+	Co_Oper_07 =	Kurang atau sama
+	Co_Oper_08 =	Dalam (daftar)
+	Co_Oper_09 =	Tidak di (daftar)
+	Co_Oper_10 =	Berisi (daftar)
+	Co_Oper_11 =	Tidak mengandung (daftar)
+	Co_Oper_12 =	Antara (line 1) dan (jalur 2)
+	Co_Oper_13 =	Bukan antara (line 1) dan (jalur 2)
+	Co_Oper_14 =	Adalah (tipe)
+	Co_Oper_15 =	Bukankah (jenis)
+		
+; 21. IE Commands Tips		
+	IE_Cmd_Index =	
+	Checked	Mengatur atau mengambil keadaan kotak centang atau tombol radio.
+	Click	Mensimulasikan klik pada objek.
+	Focus	Mengatur fokus ke objek.
+	GoBack	Menelusuri satu item dalam daftar sejarah mundur.
+	GoForward	Maju satu item dalam daftar sejarah.
+	GoHome	Berpindah ke rumah saat ini atau halaman awal.
+	GoSearch	Menavigasi ke halaman pencarian saat ini.
+	Height	Mengatur atau mengambil ketinggian objek.
+	Href	Set atau mengambil URL tujuan atau titik anchor.
+	InnerHTML	Mengatur atau mengambil HTML objek.
+	InnerText	Mengatur atau mendapatkan teks objek.
+	Length	Mengatur atau mengambil jumlah objek dalam koleksi.
+	LocationName	Mendapat jalan atau judul halaman saat ini.
+	LocationURL	Mendapatkan URL dari halaman saat ini.
+	Navigate	Menavigasi ke URL atau path.
+	OuterHTML	Mengatur atau mengambil obyek dan konten dalam HTML.
+	Quit	Menutup halaman.
+	Refresh	Ulang halaman yang sedang ditampilkan.
+	SelectedIndex	Mengatur atau mengambil indeks opsi yang dipilih dalam sebuah objek tertentu.
+	Src	Set atau mengambil URL yang akan diambil oleh objek.
+	Stop	Membatalkan navigasi tertunda atau download.
+	Submit	Menyerahkan formulir.
+	Type	Mengatur atau mengambil jenis isi dari objek.
+	Value	Mendapatkan atau menetapkan nilai objek.
+	Width	Mengatur atau mengambil lebar objek.
+		
+; 22. COM Objects Tips		
+	COM_CLSID_Index =	
+	Excel.Application	Memanipulasi lembar Excel.
+	HTMLfile	Dapat digunakan untuk membaca, menulis dan berinteraksi dengan HTML.
+	InternetExplorer.Application	Jelajahi website.
+	MSXML2.DOMDocument.6.0	XML parser.
+	MSXML2.XMLHTTP	Merupakan permintaan XML menggunakan HTTP.
+	Outlook.Application	Dimanipulasi tugas Outlook dan item.
+	PowerPoint.Application	Presentasi PowerPoint dimanipulasi.
+	Schedule.Service	Jadwal dan mengedit Windows Tugas.
+	ScriptControl	Dinamis mengeksekusi VBScript atau JScript.
+	Scripting.Dictionary	Objek yang menyimpan kunci data, pasangan item.
+	Scripting.FileSystemObject	File & folder akses
+	Shell.Application	Akses Explorer & IE jendela / tab; membuka & memanipulasi jendela.
+	Shell.Explorer	Menanamkan kontrol Explorer / Browser di GUI (Internet Explorer - Browser trisula).
+	SAPI.SpVoice	Text-to-Speech (TTS).
+	VBScript.RegExp	VBS Regular Expressions (termasuk pertandingan global).
+	WMPlayer.OCX	Memutar file media; Control Embed wmplayer dalam GUI.
+	WinHttp.WinHttpRequest.5.1	Menyediakan fungsionalitas klien HTTP sederhana, yang memungkinkan kontrol lebih dari UrlDownloadToFile.
+	Winmgmt	Dapatkan sistem informasi; Mengelola layanan jendela.
+	WScript.Shell	Berbagai tugas-tugas administrasi (AHK banyak tugas asli).
+	Word.Application	Memanipulasi dokumen Word.
+		
+; 23. AHK Commands Tips		
+	Ahk_Cmd_Index =	
+	Abs	Mengembalikan nilai absolut Nomor.
+	ACos	Mengembalikan arccosine (jumlah yang kosinus Number) dalam radian.
+	Array	Menciptakan array asosiatif scriptable dengan kunci integer.
+	Asc	Mengembalikan kode karakter (angka antara 1 dan 255 (dalam ANSI membangun) atau 65535 (dalam Unicode membangun)) untuk karakter pertama dalam String.
+	ASin	Mengembalikan arcsine (jumlah yang sinus adalah Number) dalam radian.
+	ATan	Mengembalikan arctangent (jumlah yang tangen adalah Number) dalam radian.
+	BlockInput	Menonaktifkan atau memungkinkan kemampuan pengguna untuk berinteraksi dengan komputer melalui keyboard dan mouse.
+	Break	Keluar (berakhir) loop. Berlaku dalam setiap jenis loop.
+	CDO	Mengirim email menggunakan akun yang ditetapkan pengguna.
+	Ceil	Pengembalian Nomor dibulatkan ke integer terdekat (tanpa akhiran .00).
+	Chr	Mengembalikan karakter tunggal sesuai dengan kode karakter yang ditunjukkan oleh Nomor.
+	Click	Mengklik tombol mouse pada koordinat yang ditentukan. Hal ini juga dapat menekan tombol, memutar roda, atau bergerak.
+	Clipboard	Paste teks dari clipboard.
+	ClipWait	Menunggu sampai clipboard berisi data.
+	ComObjActive	Mengambil objek COM terdaftar.
+	ComObjArray	Menciptakan SAFEARRAY untuk digunakan dengan COM.
+	ComObjConnect	Menghubungkan sumber event objek COM untuk fungsi dengan awalan yang diberikan.
+	ComObjCreate	Menciptakan objek COM.
+	ComObjEnwrap / ComObjUnwrap	Wraps / unwraps objek COM.
+	ComObjError	Mengaktifkan atau menonaktifkan pemberitahuan kesalahan COM.
+	ComObjFlags	Mengambil atau perubahan bendera yang mengendalikan perilaku pembungkus objek COM.
+	ComObjGet	Mengembalikan referensi ke sebuah obyek yang disediakan oleh komponen COM.
+	ComObjMissing	Membuat "hilang parameter" objek untuk lolos ke metode COM.
+	ComObjParameter	Membungkus nilai dan jenis untuk lulus sebagai parameter untuk sebuah metode COM.
+	ComObjQuery	Query objek COM untuk sebuah antarmuka atau jasa.
+	ComObjType	Mengambil informasi jenis dari objek COM.
+	ComObjValue	Mengambil nilai atau pointer yang disimpan dalam sebuah objek wrapper COM.
+	Continue	Melompat sisa iterasi pengulangan saat ini dan memulai yang baru. Berlaku dalam setiap jenis loop.
+	Control	Membuat berbagai perubahan pada kontrol.
+	ControlClick	Mengirim tombol mouse atau peristiwa roda mouse untuk kontrol.
+	ControlEditPaste	Pasta String pada posisi sisipan / insert dalam kontrol Edit (ini tidak mempengaruhi isi clipboard).
+	ControlFocus	Mengatur fokus input ke kontrol yang diberikan pada jendela.
+	ControlGet	Mengambil berbagai jenis informasi tentang kontrol.
+	ControlGetFocus	Mengambil yang mengendalikan dari jendela target memiliki fokus input, jika ada.
+	ControlGetPos	Mengambil posisi dan ukuran kontrol.
+	ControlGetText	Mengambil teks dari kontrol.
+	ControlMove	Memindahkan atau mengubah ukuran kontrol.
+	ControlSend / ControlSendRaw	Mengirim keystrokes simulasi ke jendela atau kontrol.
+	ControlSetText	Mengubah teks kontrol.
+	CoordMode	Set modus koordinasi untuk berbagai perintah harus relatif baik untuk jendela aktif atau layar.
+	Cos	Mengembalikan cosinus trigonometri Nomor.
+	Delete	Menghapus pasangan kunci-nilai dari suatu objek.
+	DllCall	Panggilan fungsi di dalam DLL, seperti fungsi API Windows standar.
+	Drive	Menyemburkan / memendek baki dalam CD atau DVD drive, atau menetapkan label volume drive.
+	DriveGet	Mengambil berbagai jenis informasi tentang drive komputer (s).
+	DriveSpaceFree	Mengambil ruang disk drive, dalam Megabyte.
+	Else	Menentukan perintah (s) untuk melakukan jika IF-pernyataan mengevaluasi ke FALSE. Bila lebih dari satu perintah hadir, menyertakan mereka dalam blok (kawat gigi).
+	EnvAdd	Set variabel dengan jumlah dari dirinya sendiri ditambah nilai yang diberikan (juga dapat menambah atau mengurangi waktu dari nilai tanggal-waktu). Identik dengan: Var+= Nilai.
+	EnvDiv	Menetapkan variabel untuk dirinya sendiri dibagi dengan nilai yang diberikan. Identik dengan: Var / = Nilai.
+	EnvGet	Mengambil variabel lingkungan.
+	EnvMult	Menetapkan variabel untuk dirinya sendiri kali nilai yang diberikan. Identik dengan: Var * = Nilai.
+	EnvSet	Menulis nilai ke variabel yang terkandung dalam lingkungan.
+	EnvSub	Set variabel untuk dirinya sendiri minus nilai yang diberikan (juga dapat membandingkan nilai tanggal-waktu). Identik dengan: Var - = Nilai.
+	EnvUpdate	Memberitahu OS dan semua aplikasi yang berjalan bahwa variabel lingkungan (s) telah berubah.
+	ExitApp	Berakhir script tanpa syarat.
+	Exp	Pengembalian e (yang kira-kira 2,71828182845905) pangkat-N.
+	Expression	Melakukan satu atau lebih operasi pada serangkaian variabel, string literal, dan / atau nomor literal.
+	FileAppend	Menulis teks ke akhir file (pertama membuat file, jika perlu).
+	FileCopy	Salinan satu atau lebih file.
+	FileCopyDir	Salinan folder bersama dengan semua sub-folder dan file (mirip dengan xcopy).
+	FileCreateDir	Menciptakan folder.
+	FileCreateShortcut	Membuat shortcut (lnk.) Berkas.
+	FileDelete	Menghapus satu atau lebih file.
+	FileGetAttrib	Laporan apakah file atau folder adalah read-only, tersembunyi, dll
+	FileGetShortcut	Mengambil informasi tentang shortcut (lnk.) File, seperti file target nya.
+	FileGetSize	Mengambil ukuran file.
+	FileGetTime	Mengambil cap datetime dari file atau folder.
+	FileGetVersion	Mengambil versi file.
+	FileMove	Bergerak atau mengganti nama satu atau lebih file.
+	FileMoveDir	Memindahkan folder bersama dengan semua sub-folder dan file. Hal ini juga dapat mengubah nama folder.
+	FileOpen	Menyediakan file berorientasi objek I / O.
+	FileRead	Membaca isi file itu ke dalam variabel.
+	FileReadLine	Membaca baris tertentu dari file dan menyimpan teks dalam variabel.
+	FileRecycle	Mengirim sebuah file atau direktori ke recycle bin, jika memungkinkan.
+	FileRecycleEmpty	Mengosongkan recycle bin.
+	FileRemoveDir	Menghapus folder.
+	FileSelectFile	Menampilkan dialog standar yang memungkinkan pengguna untuk membuka atau menyimpan file (s).
+	FileSelectFolder	Menampilkan dialog standar yang memungkinkan pengguna untuk memilih folder.
+	FileSetAttrib	Mengubah atribut dari satu atau lebih file atau folder. Wildcard didukung.
+	FileSetTime	Mengubah cap datetime dari satu atau lebih file atau folder. Wildcard didukung.
+	Floor	Pengembalian Nomor dibulatkan ke integer terdekat (tanpa akhiran .00).
+	For	Mengulangi serangkaian perintah sekali untuk setiap pasangan kunci-nilai dalam suatu objek.
+	Format	Format variabel jumlah nilai input sesuai dengan format string.
+	FormatTime	Mentransformasi timestamp YYYYMMDDHH24MISS ke format tanggal / waktu yang ditentukan.
+	Func	Mengambil referensi ke fungsi.
+	GetKeyName / GetKeyVK / GetKeySC	Mengambil nama atau teks, kode tombol virtual atau kode scan tombol.
+	GetKeyState	Memeriksa apakah tombol keyboard atau mouse / tombol joystick adalah bawah atau ke atas. Juga mengambil Status joystick.
+	Gosub	Melompat ke label tertentu dan terus sampai eksekusi Kembali ditemui.
+	Goto	Melompat ke label tertentu dan terus eksekusi.
+	GroupActivate	Mengaktifkan jendela berikutnya dalam kelompok jendela yang didefinisikan dengan groupadd.
+	GroupAdd	Menambahkan spesifikasi jendela ke jendela kelompok, menciptakan kelompok jika diperlukan.
+	GroupClose	Menutup jendela aktif jika itu hanya diaktifkan oleh GroupActivate atau GroupDeactivate. Ini kemudian mengaktifkan jendela berikutnya dalam seri. Hal ini juga dapat menutup semua jendela dalam kelompok.
+	GroupDeactivate	Mirip dengan GroupActivate kecuali mengaktifkan jendela berikutnya tidak dalam kelompok.
+	HasKey	Mengembalikan nilai true jika Key dikaitkan dengan nilai.
+	If	Menentukan perintah (s) untuk melakukan jika perbandingan variabel ke nilai evalutes ke TRUE. Bila lebih dari satu perintah hadir, menyertakan mereka dalam blok (kawat gigi).
+	If (expression)	Menentukan perintah (s) untuk melakukan jika ekspresi bernilai TRUE.
+	If A_Index	Cek jika iterasi loop arus matchs nomor yang ditentukan.
+	If Clipboard	Cek jika teks Clipboard adalah matchs string tertentu.
+	If ErrorLevel	Memeriksa apakah gambar tertentu atau pixel ditemukan di layar.
+	If var [not] between	Cek apakah isi variabel adalah numerik atau abjad antara dua nilai (inklusif).
+	If var [not] in / If var [not] contains MatchList	Cek apakah isi variabel ini sesuai dengan salah satu item dalam daftar.
+	If var is [not] type	Cek apakah isi variabel adalah angka, huruf besar, dll
+	IfEqual / IfNotEqual	Membandingkan variabel untuk nilai untuk kesetaraan. Identik dengan: jika Var = Nilai | jika Var <> Nilai.
+	IfExist / IfNotExist / FileExist	Cek untuk keberadaan file atau folder.
+	IfGreater / IfGreaterOrEqual	Membandingkan variabel ke nilai. Identik dengan: jika Var> Nilai | jika Var> = Nilai.
+	IfInString / IfNotInString	Cek jika sebuah variabel berisi string tertentu.
+	IfLess / IfLessOrEqual	Membandingkan variabel ke nilai. Identik dengan: jika Var <Nilai | jika Var <= Nilai.
+	IfMsgBox	Cek tombol yang ditekan oleh pengguna selama perintah MsgBox terbaru.
+	IfWinActive / IfWinNotActive	Cek jika jendela yang ditentukan ada dan saat ini aktif (terutama).
+	IfWinExist / IfWinNotExist	Cek jika jendela yang ditentukan ada.
+	ImageSearch	Mencari sebuah wilayah layar untuk gambar.
+	IniDelete	Menghapus nilai dari file ini format yang. Standar.
+	IniRead	Membaca nilai dari file ini format yang. Standar.
+	IniWrite	Menulis nilai ke file format yang inisial. Standar.
+	Input	Menunggu pengguna untuk mengetik string (tidak didukung pada Windows 9x: tidak apa-apa).
+	InputBox	Menampilkan kotak input untuk meminta pengguna untuk memasukkan string.
+	InsertAt	Menyisipkan satu atau lebih nilai pada posisi tertentu dalam array linier.
+	InStr	Pencarian untuk kejadian tertentu string, dari kiri atau kanan.
+	KeyWait	Menunggu kunci atau mouse / joystick tombol akan dilepaskan atau ditekan.
+	Label	Sebuah label mengidentifikasi baris kode, dan dapat digunakan sebagai target Goto atau membentuk sebuah sub rutin.
+	Length	Mengembalikan panjang array linier dimulai pada posisi 1.
+	ListVars	Menampilkan variabel script ini: nama mereka dan isi saat.
+	Ln	Mengembalikan logaritma natural (basis e) Nomor.
+	LoadPicture	Beban gambar dari file dan mengembalikan bitmap atau ikon pegangan.
+	Log	Mengembalikan logaritma (basis 10) Nomor.
+	Loop (files & folders)	Mengambil file tertentu atau folder, satu per satu.
+	Loop (normal)	Lakukan serangkaian perintah berulang kali: baik jumlah tertentu kali atau sampai istirahat ditemui.
+	Loop (parse a string)	Mengambil substring (field) dari string, satu per satu.
+	Loop (read file contents)	Mengambil baris dalam sebuah file teks, satu per satu waktu (melakukan lebih baik daripada FileReadLine).
+	Loop (registry)	Mengambil isi dari subkey registry yang ditentukan, satu item pada suatu waktu.
+	MaxIndex	Mengembalikan kunci bilangan bulat tertinggi.
+	MinIndex	Mengembalikan kunci bilangan bulat terendah.
+	Mod	Modulo. Mengembalikan sisanya ketika Dividen dibagi oleh pembagi.
+	MouseGetPos	Mengambil posisi saat kursor mouse, dan secara opsional yang jendela dan kontrol itu melayang di atas.
+	MsgBox	Menampilkan teks ditentukan dalam jendela kecil yang berisi satu atau lebih tombol (seperti Ya dan Tidak).
+	NumGet	Mengembalikan bilangan biner disimpan di alamat yang ditentukan+offset.
+	NumPut	Jumlah Toko dalam format biner pada alamat yang ditentukan+offset dan mengembalikan alamat ke sebelah kanan item saja menulis.
+	Object	Menciptakan array asosiatif scriptable.
+	Ord	Mengembalikan nilai ordinal (kode karakter numerik) dari karakter pertama dalam String.
+	OutputDebug	Mengirim string ke debugger (jika ada) untuk ditampilkan.
+	Parameter	Menambahkan parameter ke fungsi.
+	Pause	Jeda benang naskah saat ini.
+	PixelGetColor	Mengambil warna pixel pada x tertentu, y koordinat.
+	PixelSearch	Mencari sebuah wilayah layar untuk pixel dari warna tertentu.
+	Pop	Menghapus dan mengembalikan elemen array terakhir.
+	PostMessage	Menempatkan pesan dalam antrian pesan dari jendela atau kontrol.
+	Process	Melakukan salah satu operasi berikut pada proses: memeriksa jika ada, perubahan prioritas, menutup itu, menunggu untuk itu untuk menutup.
+	Progress	Menciptakan atau update jendela yang berisi progress bar.
+	Push	Menambahkan nilai ke akhir array.
+	Random	Menghasilkan sejumlah pseudo-acak.
+	RegDelete	Menghapus subkunci atau nilai dari registri.
+	RegExMatch	Menentukan apakah string berisi pola (regular expression).
+	RegExReplace	Menggantikan kejadian pola (regular expression) di dalam string.
+	RegRead	Membaca nilai dari registri.
+	RegWrite	Menulis nilai ke registri.
+	RemoveAt	Menghapus item dari posisi tertentu dalam array linier.
+	Return	Pengembalian dari subroutine yang eksekusi sebelumnya melompat melalui fungsi-call, gosub, aktivasi Hotkey, GroupActivate, atau cara lain.
+	Round	Jika N diabaikan atau 0, Nomor dibulatkan ke integer terdekat. Jika N adalah angka positif, Nomor dibulatkan menjadi N desimal. Jika N adalah negatif, Nomor dibulatkan oleh N digit di sebelah kiri titik desimal.
+	Run	Menjalankan program eksternal.
+	RunAs	Menentukan satu set kredensial pengguna untuk menggunakan untuk semua penggunaan berikutnya Run dan RunWait. Membutuhkan Windows 2000/XP atau yang lebih baru.
+	RunWait	Menjalankan program eksternal dan menunggu sampai selesai.
+	Send / SendRaw	Mengirim keystrokes simulasi dan klik mouse untuk jendela aktif.
+	SendLevel	Kontrol yang keyboard dan mouse peristiwa buatan diabaikan oleh hotkeys dan hotstrings.
+	SendMessage	Mengirim pesan ke jendela atau kontrol dan menunggu pengakuan.
+	SetCapslockState	Mengatur keadaan tombol Capslock. Bisa juga memaksa kunci untuk tetap hidup atau mati.
+	SetKeyDelay	Mengatur penundaan yang akan terjadi setelah setiap keystroke dikirim oleh Kirim atau ControlSend.
+	SetNumlockState	Mengatur keadaan tombol Numlock. Bisa juga memaksa kunci untuk tetap hidup atau mati.
+	SetRegView	Memungkinkan perintah registry dalam naskah 32-bit untuk mengakses tampilan registry 64-bit dan sebaliknya.
+	SetScrollLockState	Mengatur negara dari kunci ScrollLock. Bisa juga memaksa kunci untuk tetap hidup atau mati.
+	SetTimer	Penyebab subrutin yang akan diluncurkan secara otomatis dan berulang pada interval waktu tertentu.
+	Shutdown	Shut down, restart, atau log off sistem.
+	Sin	Mengembalikan sinus trigonometri Nomor.
+	Sleep	Menunggu jumlah waktu tertentu sebelum melanjutkan.
+	Sort	Mengatur isi variabel di abjad, numerik, atau urutan acak (opsional menghapus duplikat).
+	SoundBeep	Memancarkan nada dari speaker PC.
+	SoundGet	Mengambil berbagai pengaturan dari perangkat suara (mute, volume master utama, dll)
+	SoundGetWaveVolume	Mengambil volume output gelombang dari perangkat suara.
+	SoundPlay	Memainkan suara, video, atau jenis file lain yang didukung.
+	SoundSet	Perubahan berbagai pengaturan perangkat suara (master bisu, volume master, dll)
+	SoundSetWaveVolume	Perubahan volume output gelombang untuk perangkat suara.
+	SplashImage	Menciptakan atau update jendela yang berisi JPG, GIF, BMP atau gambar.
+	SplashTextOff	Menutup jendela di atas.
+	SplashTextOn	Membuat teks disesuaikan popup window.
+	SplitPath	Memisahkan nama file atau URL ke yang namanya, direktori, ekstensi, dan drive.
+	Sqrt	Mengembalikan akar kuadrat dari Number.
+	StatusBarGetText	Mengambil teks dari panel kontrol Status standar.
+	StatusBarWait	Menunggu sampai window Status bar berisi string yang ditentukan.
+	StringGetPos	Mengambil posisi substring tertentu dalam string.
+	StringLeft	Mengambil sejumlah karakter dari sisi kiri string.
+	StringLen / StrLen	Mengambil hitungan berapa banyak karakter dalam string.
+	StringLower	Mengkonversi string menjadi huruf kecil.
+	StringMid / SubStr	Mengambil satu atau lebih karakter dari posisi ditentukan dalam string.
+	StringReplace / StrReplace	Menggantikan substring tertentu dengan string baru.
+	StringRight	Mengambil sejumlah karakter dari sisi kanan string.
+	StringSplit / StrSplit	Memisahkan string menjadi array substring menggunakan pembatas yang ditentukan.
+	StringTrimLeft	Menghapus sejumlah karakter dari sisi kiri string.
+	StringTrimRight	Menghapus sejumlah karakter dari sisi kanan string.
+	StringUpper	Mengkonversi string ke huruf besar.
+	StrPut / StrGet	Salinan string ke atau dari alamat memori, opsional mengubahnya antara halaman kode.
+	SysGet	Mengambil resolusi layar, info multi-monitor, dimensi objek sistem, dan sifat sistem lainnya.
+	Tan	Mengembalikan tangen trigonometri Nomor.
+	ToolTip	Menciptakan jendela selalu-on-top manapun pada layar.
+	Transform	Melakukan fungsi lain-lain matematika, operasi bitwise, dan tugas-tugas seperti ASCII / Unicode konversi.
+	TrayTip	Membuat balon jendela pesan dekat tray icon. Membutuhkan Windows 2000/XP atau yang lebih baru.
+	Trim / LTrim / RTrim	Trims karakter tertentu dari awal dan / atau akhir string.
+	Until	Berlaku kondisi untuk kelanjutan Loop atau Untuk loop.
+	UrlDownloadToFile	Mendownload file dari Internet.
+	UserFunction	Menciptakan struktur Fungsi.
+	Variable	Memberikan nilai yang ditentukan untuk variabel.
+	While	Melakukan serangkaian perintah berulang kali hingga ekspresi yang ditentukan false.
+	WinActivate	Mengaktifkan jendela yang ditentukan (membuatnya utama).
+	WinActivateBottom	Sama seperti WinActivate kecuali bahwa ia mengaktifkan paling bawah (paling baru ini aktif) jendela pencocokan daripada teratas.
+	WinActive	Mengembalikan ID unik (HWND) dari jendela aktif jika sesuai dengan kriteria yang ditentukan.
+	WinClose	Menutup jendela yang ditentukan.
+	WinExist	Cek jika jendela yang ditentukan ada.
+	WinGet	Mengambil jendela yang ditentukan ID unik, proses ID, nama proses, atau daftar kontrol nya. Hal ini juga dapat mengambil daftar semua jendela yang cocok dengan kriteria yang ditentukan.
+	WinGetClass	Mengambil nama kelas jendela yang ditentukan itu.
+	WinGetPos	Mengambil posisi dan ukuran jendela yang ditentukan.
+	WinGetText	Mengambil teks dari jendela yang ditentukan.
+	WinGetTitle	Mengambil judul dari jendela yang ditentukan.
+	WinHide	Menyembunyikan jendela yang ditentukan.
+	WinHttpDownloadToFile	Download satu atau lebih file dari internet.
+	WinKill	Memaksa jendela yang ditentukan untuk menutup.
+	WinMaximize	Memperbesar jendela yang ditentukan untuk ukuran maksimumnya.
+	WinMenuSelectItem	Memanggil item menu dari menu bar dari jendela yang ditentukan.
+	WinMinimize	Runtuh jendela tertentu ke sebuah tombol pada task bar.
+	WinMinimizeAll	Meminimalkan semua jendela.
+	WinMinimizeAllUndo	Membalikkan efek dari WinMinimizeAll sebelumnya.
+	WinMove	Perubahan posisi dan / atau ukuran jendela yang ditentukan.
+	WinRestore	Unminimizes atau unmaximizes jendela tertentu jika itu diminimalkan atau dimaksimalkan.
+	WinSet	Membuat berbagai perubahan ke jendela tertentu, seperti "selalu di atas" dan transparansi.
+	WinSetTitle	Mengubah judul jendela yang ditentukan.
+	WinShow	Unhides jendela yang ditentukan.
+	WinWait	Menunggu sampai jendela yang ditentukan ada.
+	WinWaitActive	Menunggu sampai jendela yang ditentukan aktif.
+	WinWaitClose	Menunggu sampai jendela yang ditentukan tidak ada.
+	WinWaitNotActive	Menunggu sampai jendela yang ditentukan tidak aktif.
+	Zip / UnZip	Kompres atau uncompress satu atau lebih file zip.
+	WinExist	Cek jika jendela yang ditentukan ada.
+	WinGet	Mengambil jendela yang ditentukan ID unik, proses ID, nama proses, atau daftar kontrol nya. Hal ini juga dapat mengambil daftar semua jendela yang cocok dengan kriteria yang ditentukan.
+	WinGetClass	Mengambil nama kelas jendela yang ditentukan itu.
+	WinGetPos	Mengambil posisi dan ukuran jendela yang ditentukan.
+	WinGetText	Mengambil teks dari jendela yang ditentukan.
+	WinGetTitle	Mengambil judul dari jendela yang ditentukan.
+	WinHide	Menyembunyikan jendela yang ditentukan.
+	WinHttpDownloadToFile	Download satu atau lebih file dari internet.
+	WinKill	Memaksa jendela yang ditentukan untuk menutup.
+	WinMaximize	Memperbesar jendela yang ditentukan untuk ukuran maksimumnya.
+	WinMenuSelectItem	Memanggil item menu dari menu bar dari jendela yang ditentukan.
+	WinMinimize	Runtuh jendela tertentu ke sebuah tombol pada task bar.
+	WinMinimizeAll	Meminimalkan semua jendela.
+	WinMinimizeAllUndo	Membalikkan efek dari WinMinimizeAll sebelumnya.
+	WinMove	Perubahan posisi dan / atau ukuran jendela yang ditentukan.
+	WinRestore	Unminimizes atau unmaximizes jendela tertentu jika itu diminimalkan atau dimaksimalkan.
+	WinSet	Membuat berbagai perubahan ke jendela tertentu, seperti "selalu di atas" dan transparansi.
+	WinSetTitle	Mengubah judul jendela yang ditentukan.
+	WinShow	Unhides jendela yang ditentukan.
+	WinWait	Menunggu sampai jendela yang ditentukan ada.
+	WinWaitActive	Menunggu sampai jendela yang ditentukan aktif.
+	WinWaitClose	Menunggu sampai jendela yang ditentukan tidak ada.
+	WinWaitNotActive	Menunggu sampai jendela yang ditentukan tidak aktif.
+	Zip / UnZip	Kompres atau uncompress satu atau lebih file zip.

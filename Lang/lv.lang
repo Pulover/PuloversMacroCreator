@@ -1,0 +1,1443 @@
+﻿Lang_lv
+		
+		; Latvian
+		
+; 01. Main Menu		
+	m_Lang001 =	&Fails
+	m_Lang002 =	&Macro
+	m_Lang003 =	&Komandas
+	m_Lang004 =	F&unkcija
+	m_Lang005 =	&Rediģēt
+	m_Lang006 =	&Atlasīt
+	m_Lang007 =	&Skats
+	m_Lang008 =	&Opcijas
+	m_Lang009 =	&Ziedot
+	m_Lang010 =	&Palīdzēt
+		
+; 02. File Sub Menu		
+	f_Lang001 =	&Jauns
+	f_Lang002 =	&Atvērts
+	f_Lang003 =	&Saglabāt
+	f_Lang004 =	Sa&glabāt kā
+	f_Lang005 =	&Recent Files
+	f_Lang006 =	&Eksports uz AHK
+	f_Lang007 =	&Preview Script
+	f_Lang008 =	Re&diģēt Script
+	f_Lang009 =	&Kalendārs Makro
+	f_Lang010 =	Saraks&ts Mainīgie
+	f_Lang011 =	&Izeja
+	f_Lang012 =	&Ne failus
+		
+; 03. Macro Sub Menu		
+	r_Lang001 =	&Record Macro
+	r_Lang002 =	&Aktivizēt Makro
+	r_Lang003 =	&Spēlēt Current Macro
+	r_Lang004 =	&Taimeris
+	r_Lang005 =	&Deaktivizēt Makro
+	r_Lang006 =	S&pēlēt no izvēlētās Row
+	r_Lang007 =	Sp&ēlēt līdz Selected Row
+	r_Lang008 =	Spē&lēt atlasītās rindas
+	r_Lang009 =	&Konteksta jutīga taustiņi
+	r_Lang010 =	P&ievienot Macro
+	r_Lang011 =	&Close Macro
+	r_Lang012 =	D&ublikāts Macro
+	r_Lang013 =	R&ediģēt Makro
+	r_Lang014 =	I&mport Macro
+	r_Lang015 =	Sa&glabāt pašreizējo Macro
+		
+; 04. Function Sub Menu		
+	u_Lang001 =	&Izveidot funkcija
+	u_Lang002 =	&Pievienot Parameter
+	u_Lang003 =	Pi&evienot Return
+	u_Lang004 =	P&ārvērst Macro funkcionēt
+		
+; 05. Commands Sub Menu		
+	i_Lang001 =	&Pele
+	i_Lang002 =	&Teksts
+	i_Lang003 =	&Kontrole
+	i_Lang004 =	P&auze
+	i_Lang005 =	&Message Box
+	i_Lang006 =	K&ey Wait
+	i_Lang007 =	&Logs
+	i_Lang008 =	Att&ēlu / Pixel Meklēt
+	i_Lang009 =	&Run / File / String / Misc.
+	i_Lang010 =	&Cilpa
+	i_Lang011 =	&Iet uz / Label
+	i_Lang012 =	&Set taimeris
+	i_Lang013 =	&Ja pārskatu
+	i_Lang014 =	Mai&nīgie / masīvi
+	i_Lang015 =	&Funkcijas / Array metodes
+	i_Lang016 =	S&ūtīt e-pastu
+	i_Lang017 =	Lej&upielādēt failus
+	i_Lang018 =	&Zip / unzip failus
+	i_Lang019 =	Internet E&xplorer
+	i_Lang020 =	Expressi&on / COM Interface
+	i_Lang021 =	&Windows Messages
+	i_Lang022 =	Atrast koman&du
+		
+; 06. Edit Sub Menu		
+	e_Lang001 =	&Dublēt
+	e_Lang002 =	&Rediģēt Komentārs
+	e_Lang003 =	&Atrast / Aizstāt
+	e_Lang004 =	&Kopēt uz ...
+	e_Lang005 =	A&tpogāt
+	e_Lang006 =	&Pārtaisīt
+	e_Lang007 =	&Samazināt
+	e_Lang008 =	K&opija
+	e_Lang009 =	&Pasta
+	e_Lang010 =	&Izdzēst
+	e_Lang011 =	P&ārvietot uz augšu
+	e_Lang012 =	Pār&vietot uz leju
+	e_Lang013 =	I&evietot no Box
+	e_Lang014 =	Ievietot Ta&ustiņu
+	e_Lang015 =	Edit &Color Mark
+	e_Lang016 =	&Grupas
+	e_Lang017 =	Ies&lēgt grupas
+	e_Lang018 =	Pievie&not grupu
+	e_Lang019 =	No&ņemt grupu
+	e_Lang020 =	Noņe&mt visas grupas
+	e_Lang021 =	Sak&ļaut visu
+	e_Lang022 =	Papla&šināt visu
+		
+; 07. Select Sub Menu		
+	s_Lang001 =	&Izvēlēties visus
+	s_Lang002 =	&Select Neviens
+	s_Lang003 =	I&nvert atlase
+	s_Lang004 =	&Pārbaudiet Selected
+	s_Lang005 =	N&oņemiet Selected
+	s_Lang006 =	In&vertēt Pārbaudes
+	s_Lang007 =	P&ārvietot izvēle Up
+	s_Lang008 =	Pā&rvietot izvēle leju
+	s_Lang009 =	I&zvēlēts veids
+	s_Lang010 =	&Command tips
+		
+; 08. View Sub Menu		
+	v_Lang001 =	&Vienmēr virsū
+	v_Lang002 =	&Izcelt Rindas
+	v_Lang003 =	I&erobījums
+	v_Lang004 =	&Controls Toolbar
+	v_Lang005 =	&Preview
+	v_Lang006 =	&Rīkjoslas
+	v_Lang007 =	&Taustiņi
+	v_Lang008 =	&Search Bar
+	v_Lang009 =	&Atjaunot Kolonnas Size
+	v_Lang010 =	I&konas izmērs
+	v_Lang011 =	Reset &Layout
+	v_Lang012 =	&Fails
+	v_Lang013 =	Ierakst&īt Atskaņot
+	v_Lang014 =	K&omandas
+	v_Lang015 =	Re&diģēt
+	v_Lang016 =	Opci&jas
+	v_Lang017 =	Piel&āgot
+	v_Lang018 =	A&utomātisks
+	v_Lang019 =	Rokas&grāmata
+	v_Lang020 =	&Apstāties
+	v_Lang021 =	Pau&ze
+	v_Lang022 =	&Kompakts
+	v_Lang023 =	&Labākais Fit
+	v_Lang024 =	&Default
+	v_Lang025 =	&Mazs
+	v_Lang026 =	&Liels
+		
+; 09. Options Sub Menu		
+	o_Lang001 =	&Settings
+	o_Lang002 =	S&amazinātu uz paplātes
+	o_Lang003 =	&Displeja kontrole rīkjosla
+	o_Lang004 =	&Capture taustiņu nospiešanas šajā logā
+	o_Lang005 =	&Taustiņi Vienmēr Aktīvie
+	o_Lang006 =	S&hutdown iespējas (Kad atskaņošana beidzas ...)
+	o_Lang007 =	&Konteksta jutīga taustiņi
+	o_Lang008 =	&Pievienojiet Windows taustiņu "spēlēt" Hotkey
+	o_Lang009 =	&Izmantojiet kursorsviru pogu kā Hotkey
+	o_Lang010 =	&Uzstādīt kā noklusējuma taustiņi
+	o_Lang011 =	U&zstādīt kā noklusējuma faila
+	o_Lang012 =	&Noņemt Noklusējuma File
+	o_Lang013 =	D&efault taustiņi
+	o_Lang014 =	N&oklusējuma iestatījumi
+		
+; 10. Donate Sub Menu		
+	p_Lang001 =	&PayPal Ziedošana
+		
+; 11. Help Sub Menu		
+	h_Lang001 =	&Palīdzēt
+	h_Lang002 =	&Konsultācijas
+	h_Lang003 =	&Tips
+	h_Lang004 =	&Macro Creator Home
+	h_Lang005 =	&Forums
+	h_Lang006 =	&AHK Online dokumentācija
+	h_Lang007 =	M&eklēt atjauninājumus...
+	h_Lang008 =	P&ārbaudiet uz starta
+	h_Lang009 =	Pa&r
+		
+; 12. Tray Menu		
+	y_Lang001 =	Slēpt logu
+	y_Lang002 =	Show Window
+	y_Lang003 =	Controls Toolbar
+		
+; 13. Built-in Vars Menu		
+	b_Lang001 =	Speciālie simboli
+	b_Lang002 =	Properties
+	b_Lang003 =	Datums un laiks
+	b_Lang004 =	Lietotāja Idle Time
+	b_Lang005 =	Sistēmas un lietotāja
+	b_Lang006 =	Misc.
+	b_Lang007 =	Cilpa
+		
+; 14. Main Window		
+	w_Lang001 =	Eksports
+	w_Lang002 =	Preview
+	w_Lang003 =	Opcijas
+	w_Lang004 =	Ieraksts
+	w_Lang005 =	Spēlēt
+	w_Lang006 =	Atskaņošanas
+	w_Lang007 =	Rokasgrāmata
+	w_Lang008 =	Apstāties
+	w_Lang009 =	Displeja kontrole rīkjosla
+	w_Lang010 =	Pauze
+	w_Lang011 =	Cilpa
+	w_Lang012 =	Capture taustiņu nospiešanas šajā logā
+	w_Lang013 =	Samazinātu uz paplātes
+	w_Lang014 =	Taustiņi Vienmēr Aktīvie
+	w_Lang015 =	Atkārtot
+	w_Lang016 =	Delay (ms)
+	w_Lang017 =	Pieteikties
+	w_Lang018 =	Ievietot
+	w_Lang019 =	Rediģēt
+	w_Lang020 =	Shutdown iespējas (Kad atskaņošana beidzas ...)
+	w_Lang021 =	Neko nedarīt
+	w_Lang022 =	Close pieteikums
+	w_Lang023 =	Izslēgt
+	w_Lang024 =	Shutdown (spēks)
+	w_Lang025 =	Reboot
+	w_Lang026 =	Izlogoties
+	w_Lang027 =	Pārziemot
+	w_Lang028 =	Apturēt
+	w_Lang029 =	Lock dators
+	w_Lang030 =	Indekss
+	w_Lang031 =	Rīcība
+	w_Lang032 =	Sīkāka informācija
+	w_Lang033 =	Atkārtot
+	w_Lang034 =	Aizkavēšana
+	w_Lang035 =	Tips
+	w_Lang036 =	Kontrole
+	w_Lang037 =	Logs
+	w_Lang038 =	Komentēt
+	w_Lang039 =	Krāsa
+	w_Lang040 =	Jauns (Ctrl + N)
+	w_Lang041 =	Atvērts (Ctrl + O)
+	w_Lang042 =	Saglabājiet (Ctrl + S)
+	w_Lang043 =	Saglabāt kā (Ctrl + Shift + S)
+	w_Lang044 =	Eksports uz AHK (Ctrl + E)
+	w_Lang045 =	Preview Script (Ctrl + P)
+	w_Lang046 =	Settings (Ctrl + G)
+	w_Lang047 =	Record Macro (Ctrl + R)
+	w_Lang048 =	Aktivizēt Makro (Ctrl + Enter)
+	w_Lang049 =	Spēlēt Pašreizējā makro (Ctrl + Shift + Enter)
+	w_Lang050 =	Taimeris (Ctrl + Shift + T)
+	w_Lang051 =	Pele (F2)
+	w_Lang052 =	Teksts (F3)
+	w_Lang053 =	Edit Makro (Ctrl + Shift + M)
+	w_Lang054 =	Control (F4)
+	w_Lang055 =	Pauze (F5)
+	w_Lang056 =	Message Box (Shift + F5)
+	w_Lang057 =	Key Pagaidiet (Ctrl + F5)
+	w_Lang058 =	Window (F6)
+	w_Lang059 =	Attēlu / Pixel Search (F7)
+	w_Lang060 =	Run / File / String / Misc. (F8)
+	w_Lang061 =	Loop (F9)
+	w_Lang062 =	Iet uz / Label (Shift + F9)
+	w_Lang063 =	Set Taimeris (Ctrl + F9)
+	w_Lang064 =	Ja pārskatu (F10)
+	w_Lang065 =	Mainīgie / masīvi (Shift + F10)
+	w_Lang066 =	Funkcijas / Array metodes (Ctrl + F10)
+	w_Lang067 =	Sūtīt e-pastu (F11)
+	w_Lang068 =	Lejupielādēt failus (Shift + F11)
+	w_Lang069 =	Zip / unzip failus (Ctrl + F11)
+	w_Lang070 =	Internet Explorer (F12)
+	w_Lang071 =	Expression / COM Interface (Shift + F12)
+	w_Lang072 =	Windows Messages (Ctrl + F12)
+	w_Lang073 =	Pievienot Macro (Ctrl + T)
+	w_Lang074 =	Close Macro (Ctrl + W)
+	w_Lang075 =	Dublēt makro (Ctrl + Shift + D)
+	w_Lang076 =	Imports Macro (Ctrl + I)
+	w_Lang077 =	Saglabāt pašreizējo Macro (Ctrl + Alt + S)
+	w_Lang078 =	Pārvietot uz augšu (Ctrl + PageUp)
+	w_Lang079 =	Pārvietot uz leju (Ctrl + PageDown)
+	w_Lang080 =	Kopēt izvēlētās rindas (Ctrl + D)
+	w_Lang081 =	Cut atlasītās rindas (Ctrl + X)
+	w_Lang082 =	Kopēt atlasītās rindas (Ctrl + C)
+	w_Lang083 =	Paste nokopēta Rindas (Ctrl + V)
+	w_Lang084 =	Dzēst atlasītās rindas (Del)
+	w_Lang085 =	Atsaukt (Ctrl + Z)
+	w_Lang086 =	Redo (Ctrl + Y)
+	w_Lang087 =	Kopēt uz ...
+	w_Lang088 =	Find / Replace (Ctrl + F)
+	w_Lang089 =	Ievietot / Rediģēt komentāru (Ctrl + L)
+	w_Lang090 =	Edit Color Mark (Ctrl + M)
+	w_Lang091 =	Pielāgot
+	w_Lang092 =	Atrast komandu (Ctrl + Shift + F)
+	w_Lang093 =	Edit (Enter)
+	w_Lang094 =	Slēpt
+	w_Lang095 =	Pārvietot šeit
+	w_Lang096 =	Kopēt šeit
+	w_Lang097 =	Grupas
+	w_Lang098 =	Ieslēgt grupas (Ctrl + Shift + G)
+	w_Lang099 =	Pievienot grupu (Ctrl + Shift + Y)
+	w_Lang100 =	Noņemt grupu (Ctrl + Shift + R)
+	w_Lang101 =	Noņemt visas grupas
+	w_Lang102 =	Rediģēt grupas
+	w_Lang103 =	Grupas nosaukums
+	w_Lang104 =	Izveidot funkciju (Ctrl + Shift + U)
+	w_Lang105 =	Pievienot parametrs (Ctrl + Shift + P)
+	w_Lang106 =	Pievienot atdeve (Ctrl + Shift + N)
+	w_Lang107 =	Pārvērst Macro funkcionēt (Ctrl + Shift + C)
+	w_Lang108 =	Komentārs out neatzīmētajās rindiņās
+	w_Lang109 =	Pievienojiet Windows taustiņu "spēlēt" Hotkey
+	w_Lang110 =	Izmantojiet kursorsviru pogu kā Hotkey
+	w_Lang111 =	Meklēt ... (Nospiediet Enter, lai iet)
+		
+; 15. Command Windows		
+	c_Lang001 =	Pele
+	c_Lang002 =	Teksts
+	c_Lang003 =	Pauze
+	c_Lang004 =	Kontrole
+	c_Lang005 =	Logs
+	c_Lang006 =	Image Search
+	c_Lang007 =	Pixel Search
+	c_Lang008 =	Run / File / String / Misc.
+	c_Lang009 =	Ja pārskatu
+	c_Lang010 =	Mainīgie
+	c_Lang011 =	Funkcijas / Array metodes
+	c_Lang012 =	Internet Explorer
+	c_Lang013 =	Expression / COM Interface
+	c_Lang014 =	Select Application (Advanced)
+	c_Lang015 =	Ziņa
+	c_Lang016 =	Kontrole
+	c_Lang017 =	Aizkavēšana
+	c_Lang018 =	Miliseconds
+	c_Lang019 =	Sekundes
+	c_Lang020 =	Labi
+	c_Lang021 =	Atcelt
+	c_Lang022 =	Aizvērt
+	c_Lang023 =	Kopija
+	c_Lang024 =	Izdzēst
+	c_Lang025 =	Izmantojiet% par Mainīgie, piem .:% starpliktuve%
+	c_Lang026 =	Rīcība
+	c_Lang027 =	Uzklikšķiniet
+	c_Lang028 =	Pārvietot
+	c_Lang029 =	Pārvietot un noklikšķiniet
+	c_Lang030 =	Riteni uz augšu
+	c_Lang031 =	Riteņu Down
+	c_Lang032 =	Vilkt un nomest
+	c_Lang033 =	Koordinātas
+	c_Lang034 =	Meklēt
+	c_Lang035 =	Subcommand
+	c_Lang036 =	Radinieks
+	c_Lang037 =	Poga
+	c_Lang038 =	Kreisais
+	c_Lang039 =	Pa labi
+	c_Lang040 =	Vidus
+	c_Lang041 =	X1
+	c_Lang042 =	X2
+	c_Lang043 =	Turiet / Izdošanas
+	c_Lang044 =	Uzklikšķiniet skaits
+	c_Lang045 =	Vienkāršs teksts (Raw)
+	c_Lang046 =	Dokuments komandām
+	c_Lang047 =	Ielīmēt no starpliktuves
+	c_Lang048 =	Paste uz Control
+	c_Lang049 =	Uzstādīt Teksta
+	c_Lang050 =	Pievienot Pauze
+	c_Lang051 =	Message Box
+	c_Lang052 =	Gaidiet atslēgu
+	c_Lang053 =	Pagaidiet Timeout
+	c_Lang054 =	(miliseconds) 0 = bezgalīgs
+	c_Lang055 =	Komanda
+	c_Lang056 =	Vērtība
+	c_Lang057 =	Output Variable
+	c_Lang058 =	Amats
+	c_Lang059 =	Izmērs
+	c_Lang060 =	4 mainīgie tiks izveidota ar šo prefiksu un beidzot ar X, Y, W, H.
+	c_Lang061 =	Sākums
+	c_Lang062 =	Beigas
+	c_Lang063 =	Attēls
+	c_Lang064 =	Pixel
+	c_Lang065 =	Padarīt Ekrānuzņēmums
+	c_Lang066 =	Key Wait
+	c_Lang067 =	Ja atrasts
+	c_Lang068 =	Ja nav atrasts / kļūda
+	c_Lang069 =	Izejas mainīgie
+	c_Lang070 =	Coord
+	c_Lang071 =	Variācijas
+	c_Lang072 =	Preview
+	c_Lang073 =	Cilpa
+	c_Lang074 =	Automātiski izveidot COM objektu
+	c_Lang075 =	Pārtraukums
+	c_Lang076 =	Turpināt
+	c_Lang077 =	Iet uz
+	c_Lang078 =	Doties uz Label
+	c_Lang079 =	Etiķete
+	c_Lang080 =	Pievienot Label
+	c_Lang081 =	String (InputVar)
+	c_Lang082 =	Mainīgs
+	c_Lang083 =	Cits
+	c_Lang084 =	Piešķirt Variable
+	c_Lang085 =	Saturs
+	c_Lang086 =	Operators
+	c_Lang087 =	Izteiksme
+	c_Lang088 =	Reset
+	c_Lang089 =	Funkcija Name
+	c_Lang090 =	Komatu atdalāmas parametrus (bez iekavās)
+	c_Lang091 =	Izmantojiet izteiksmes formātu
+	c_Lang092 =	Page Element / Index
+	c_Lang093 =	Uzlikt
+	c_Lang094 =	Nokļūt
+	c_Lang095 =	Metode
+	c_Lang096 =	Īpašums
+	c_Lang097 =	Gaidiet lapu, lai slodze.
+	c_Lang098 =	CLSID
+	c_Lang099 =	Savienot
+	c_Lang100 =	Rokturis
+	c_Lang101 =	COM Script
+	c_Lang102 =	Message skaits
+	c_Lang103 =	Speciālie taustiņi
+	c_Lang104 =	Browser Back
+	c_Lang105 =	Browser Forward
+	c_Lang106 =	Browser Atsvaidzināt
+	c_Lang107 =	Browser Stop
+	c_Lang108 =	Browser Search
+	c_Lang109 =	Pārlūkprogrammas Favorīti
+	c_Lang110 =	Browser Home
+	c_Lang111 =	Media
+	c_Lang112 =	Mēms
+	c_Lang113 =	Skaļāk
+	c_Lang114 =	Volume Down
+	c_Lang115 =	Atskaņot / Pauze
+	c_Lang116 =	Next Track
+	c_Lang117 =	Iepriekšējais Track
+	c_Lang118 =	Apstāties
+	c_Lang119 =	E-pasts
+	c_Lang120 =	App 1
+	c_Lang121 =	App 2
+	c_Lang122 =	Scancode
+	c_Lang123 =	Pievienot
+	c_Lang124 =	Key Vēsture
+	c_Lang125 =	Ierakstiet scancode ...
+	c_Lang126 =	Kods pievienots Virtual Keys sarakstā!
+	c_Lang127 =	Ierakstiet nosaukumu mainīgā
+	c_Lang128 =	Izmantojiet funkciju no ārējām Fails
+	c_Lang130 =	Atkārtojiet, līdz
+	c_Lang131 =	Pieteikties
+	c_Lang132 =	Cilpa
+	c_Lang133 =	Fails
+	c_Lang134 =	Izanalizēt
+	c_Lang135 =	Lasīt
+	c_Lang136 =	Reģistrs
+	c_Lang137 =	File Pattern:
+	c_Lang138 =	Katalogi
+	c_Lang139 =	Rekursīvas
+	c_Lang140 =	Ieejas Variable:
+	c_Lang141 =	Atdalītājus:
+	c_Lang142 =	Izlaist Blondīne:
+	c_Lang143 =	Input File:
+	c_Lang144 =	Root Key \ Key:
+	c_Lang145 =	Faili
+	c_Lang146 =	Keys
+	c_Lang147 =	Ikona
+	c_Lang148 =	Nav ikonas
+	c_Lang149 =	Kļūda
+	c_Lang150 =	Jautājums
+	c_Lang151 =	Iekliegšanās
+	c_Lang152 =	Info
+	c_Lang153 =	Vienmēr virsū
+	c_Lang154 =	Protokols
+	c_Lang155 =	Līdz
+	c_Lang156 =	Scenārijs
+	c_Lang157 =	Script valoda
+	c_Lang158 =	Nav saderīga ar 64-bit!
+	c_Lang159 =	Meklēšanas iespējas
+	c_Lang160 =	Caurspīdīgs
+	c_Lang161 =	Mērogs
+	c_Lang162 =	Pievienot "Ja paziņojums"
+	c_Lang163 =	Nosūtīt Mode
+	c_Lang164 =	Vienāds
+	c_Lang165 =	Satur
+	c_Lang166 =	Lielāka
+	c_Lang167 =	Mazāk
+	c_Lang168 =	Jā
+	c_Lang169 =	Nē
+	c_Lang170 =	Labi
+	c_Lang171 =	Atcelt
+	c_Lang172 =	Ciest neveiksmi
+	c_Lang173 =	Ignorēt
+	c_Lang174 =	Otrreiz izskatīt
+	c_Lang175 =	Turpināt
+	c_Lang176 =	Mēģini vēlreiz
+	c_Lang177 =	Pārtraukums
+	c_Lang178 =	Uzstādīt galvenais kavēšanās
+	c_Lang179 =	Key kavēšanās
+	c_Lang180 =	Random kavēšanās
+	c_Lang181 =	Minimums
+	c_Lang182 =	Maksimums
+	c_Lang183 =	Atslēgt izlases kavēšanās par šo komandu
+	c_Lang184 =	Izvēlieties no saraksta
+	c_Lang185 =	Pogas
+	c_Lang186 =	Pirmais
+	c_Lang187 =	Otrais
+	c_Lang188 =	Trešais
+	c_Lang189 =	Virsraksts
+	c_Lang190 =	Ja logs aktīvs
+	c_Lang191 =	Ja logs nav aktīvs
+	c_Lang192 =	Ja logs eksistē
+	c_Lang193 =	Ja logs neeksistē
+	c_Lang194 =	Ja fails eksistē
+	c_Lang195 =	Ja fails neeksistē
+	c_Lang196 =	Ja starpliktuvē tekstu
+	c_Lang197 =	Ja cilpa indekss
+	c_Lang198 =	Ja attēls / pixel atrasts
+	c_Lang199 =	Ja attēls / pikseļu nav atrasts
+	c_Lang200 =	Ja virkne satur
+	c_Lang201 =	Ja virkne nav ietverti
+	c_Lang202 =	Ja ziņojuma lodziņš
+	c_Lang203 =	Salīdziniet mainīgie
+	c_Lang204 =	Novērtēt izteiksmi
+	c_Lang205 =	Apgabals
+	c_Lang206 =	(Izmantošana [], lai izveidotu bloki, piem .: [10, 20, aVariable, "aString"])
+	c_Lang207 =	Array Objektu
+	c_Lang208 =	Key Name
+	c_Lang209 =	Value Name
+	c_Lang210 =	Vērtības
+	c_Lang211 =	Masīvs
+	c_Lang212 =	Lietotāja definēts Function
+	c_Lang213 =	Funkcija parametrs
+	c_Lang214 =	Funkcija Return
+	c_Lang215 =	Parametri
+	c_Lang216 =	Return Value
+	c_Lang217 =	Noklusējuma vērtība
+	c_Lang218 =	Darbības sfēra
+	c_Lang219 =	Vietējs
+	c_Lang220 =	Global
+	c_Lang221 =	Nosaukums
+	c_Lang222 =	Jūs varat pievienot vairāk parametrus no funkciju izvēlni.
+	c_Lang223 =	Globālie mainīgie
+	c_Lang224 =	Vietējie Mainīgie
+	c_Lang225 =	Statiskie mainīgie
+	c_Lang226 =	No
+	c_Lang227 =	E-pasts
+	c_Lang228 =	Temats
+	c_Lang229 =	Ziņa
+	c_Lang230 =	Līdz
+	c_Lang231 =	CC
+	c_Lang232 =	BCC
+	c_Lang233 =	F2, lai rediģētu
+	c_Lang234 =	HTML
+	c_Lang235 =	Sūtīt e-pastu
+	c_Lang236 =	Lejupielādēt failus
+	c_Lang237 =	Zip / unzip failus
+	c_Lang238 =	Ieslēdz
+	c_Lang239 =	Izslēgt
+	c_Lang240 =	Pozīcijas reģistrēta.
+	c_Lang241 =	Dzēst visus taimerus
+	c_Lang242 =	Set taimeris
+	c_Lang243 =	Right-pamatoti
+	c_Lang244 =	No labās uz kreiso
+	c_Lang245 =	Pielikumi
+	c_Lang246 =	Taka
+	c_Lang247 =	Ja
+	c_Lang248 =	Saspiest katru failu uz citu arhīvu
+	c_Lang249 =	Izraksts katru failu uz citu mapi
+	c_Lang250 =	Zip failus
+	c_Lang251 =	Unzip failus
+	c_Lang252 =	Download saites
+	c_Lang253 =	Galamērķis mape
+	c_Lang254 =	Galamērķis fails
+	c_Lang255 =	Atdalītas ar semikolu komatu vai līnijas.
+	c_Lang256 =	Pielāgot koordinātes uz attēla centram
+	c_Lang257 =	periods
+		
+; 16. Other Windows		
+	t_Lang001 =	Eksports uz AutoHotkey
+	t_Lang002 =	Makro
+	t_Lang003 =	Cilpas
+	t_Lang004 =	0 = bezgalīgs
+	t_Lang005 =	Izmantot Hotstring
+	t_Lang006 =	Block Mouse
+	t_Lang007 =	Visi
+	t_Lang008 =	Neviens
+	t_Lang009 =	Konteksta jutīga taustiņi
+	t_Lang010 =	Eksports uz
+	t_Lang011 =	Ierobījums
+	t_Lang012 =	Iekļaut PMC kodeksu
+	t_Lang013 =	Nelietojiet saķēdēt Nosūtīt komandas
+	t_Lang014 =	Atsvaidzināt
+	t_Lang015 =	Auto-Atsvaidzināt
+	t_Lang016 =	Vienmēr virsū
+	t_Lang017 =	Settings
+	t_Lang018 =	Vispārējs
+	t_Lang019 =	Start / Stop Record
+	t_Lang020 =	Record New Macro
+	t_Lang021 =	Keystrokes
+	t_Lang022 =	Ierakstīšana
+	t_Lang023 =	Capture atslēgu stāvoklī (uz leju / uz augšu)
+	t_Lang024 =	Peles klikšķi
+	t_Lang025 =	Mouse Wheel
+	t_Lang026 =	Peles Moves
+	t_Lang027 =	Timed intervāli
+	t_Lang028 =	Minimālā kavēšanās
+	t_Lang029 =	Logu Nodarbības
+	t_Lang030 =	Logu sadaļu
+	t_Lang031 =	Record ControlSend
+	t_Lang032 =	Record ControlClick
+	t_Lang033 =	Relatīvais Record Key
+	t_Lang034 =	Pārslēgt
+	t_Lang035 =	Atskaņošanas
+	t_Lang036 =	Paātrināt
+	t_Lang037 =	Lēnāk
+	t_Lang038 =	Atgriešanās peli pēc atskaņošanas
+	t_Lang039 =	Peles Koordinātas
+	t_Lang040 =	Logs
+	t_Lang041 =	Ekrāns
+	t_Lang042 =	Default Mouse Delay
+	t_Lang043 =	Default Logu Delay
+	t_Lang044 =	Max Vēsture per makro
+	t_Lang045 =	Clear History
+	t_Lang046 =	Ekrānšāviņi
+	t_Lang047 =	Zīmēt Button
+	t_Lang048 =	Līnijas platums (px)
+	t_Lang049 =	Capture par atbrīvošanu
+	t_Lang050 =	Nospiediet Enter, lai attēlotu
+	t_Lang051 =	Ekrānšāviņi Directory
+	t_Lang052 =	Line wrap
+	t_Lang053 =	Taustiņi
+	t_Lang054 =	Uzstādīt kā noklusējuma taustiņi
+	t_Lang055 =	Atslēgt Logu saīsnes
+	t_Lang056 =	Atjaunot Kolonnas Size
+	t_Lang057 =	Default Makro File
+	t_Lang058 =	Standard Library File
+	t_Lang059 =	Izmantojiet izteiksmi pēc noklusējuma Mainīgie uzdevumu
+	t_Lang060 =	Izcelt cilpas un paziņojumi
+	t_Lang061 =	(Klikšķiniet uz Index kolonnas galvenes iespējot / atspējot)
+	t_Lang062 =	Virtual Keys
+	t_Lang063 =	Default
+	t_Lang064 =	Rediģēt Komentārs
+	t_Lang065 =	Komentēt
+	t_Lang066 =	Meklēt sleja
+	t_Lang067 =	Atrast / Aizstāt
+	t_Lang068 =	&Atrast
+	t_Lang069 =	&Match Case
+	t_Lang070 =	A&izstāt
+	t_Lang071 =	Atrasts
+	t_Lang072 =	Aizstāts
+	t_Lang073 =	At&lasītās rindas
+	t_Lang074 =	Vi&sas Rindas
+	t_Lang075 =	Visas Ma&kro
+	t_Lang076 =	Par
+	t_Lang077 =	&Regulāra izteiksme
+	t_Lang078 =	Atskaņot vienreiz
+	t_Lang079 =	Spēlēt ik X (Mili) sekundes
+	t_Lang080 =	Taimeris
+	t_Lang081 =	Pauze
+	t_Lang082 =	Pārskati
+	t_Lang083 =	Rādīt Atkāpes attiecībā Loops un pārskatu sniegšana
+	t_Lang084 =	(Double-Click rīcības kolonna header ieslēgt / izslēgt)
+	t_Lang085 =	Displejs Controls Bar uz starta
+	t_Lang086 =	Meklē funkcijas. Lūdzu uzgaidiet...
+	t_Lang087 =	Iekļaut ārējiem failiem
+	t_Lang088 =	Izveidot EXE failu
+	t_Lang089 =	Atļaut vairāki gadījumi
+	t_Lang090 =	Noklusējumus
+	t_Lang091 =	Atļaut Dragging rindas
+	t_Lang092 =	&Visa šūnu saturu
+	t_Lang093 =	Standarta INI formāts
+	t_Lang094 =	Name = Value
+	t_Lang095 =	Ievadiet 1 mainīgo vienā rindā. Jūs varat pievienot arī [sadaļas].
+	t_Lang096 =	Lietotāja Globālie mainīgie
+	t_Lang097 =	Nospiediet pogu uz kursorsviru
+	t_Lang098 =	Backspace, lai notīrītu
+	t_Lang099 =	Poga
+	t_Lang100 =	Displejs balonu padomi
+	t_Lang101 =	Ātrums
+	t_Lang102 =	Lēni
+	t_Lang103 =	Ātrs
+	t_Lang104 =	Rādīt / paslēpt Nosaukums Bar
+	t_Lang105 =	Rādīt / Slēpt galvenais logs
+	t_Lang106 =	Palaist tūlīt
+	t_Lang107 =	Izlases Kavēšanās
+	t_Lang108 =	Normāls
+	t_Lang109 =	Uz leju
+	t_Lang110 =	Augšup
+	t_Lang111 =	Ievietot Taustiņu
+	t_Lang112 =	Atskaņot / Pauze
+	t_Lang113 =	Apstāties
+	t_Lang114 =	Atskaņošanas opcijas
+	t_Lang115 =	Start / Stop Record
+	t_Lang116 =	Record New Macro
+	t_Lang117 =	Ierakstīšanas iespējas
+	t_Lang118 =	Notīrīt saraksts
+	t_Lang119 =	Displejs Progress Bar
+	t_Lang120 =	Paātrināt
+	t_Lang121 =	Lēnāk
+	t_Lang122 =	Rādīt / paslēpt Nosaukums Bar
+	t_Lang123 =	Rādīt / Slēpt galvenais logs
+	t_Lang124 =	Undock
+	t_Lang125 =	Doks
+	t_Lang126 =	Atvērts
+	t_Lang127 =	Saglabāt
+	t_Lang128 =	Samazināt
+	t_Lang129 =	Kopija
+	t_Lang130 =	Pasta
+	t_Lang131 =	Izvēlēties visus
+	t_Lang132 =	Izdzēst
+	t_Lang133 =	Tastatūra
+	t_Lang134 =	Pele
+	t_Lang135 =	Pārējie
+	t_Lang136 =	Izcelt Rindas
+	t_Lang137 =	Default Script Editor
+	t_Lang138 =	Atvērt ārējo redaktoru (Ctrl + Shift + E)
+	t_Lang139 =	Atlasīt
+	t_Lang140 =	Ar sleja
+	t_Lang141 =	Visas kolonnas
+	t_Lang142 =	Noņemt tēmu no Rīkjoslas (nepieciešama restart)
+	t_Lang143 =	Auto Hide Controls rīkjoslu
+	t_Lang144 =	Noklikšķiniet un velciet, lai mainītu secību. Double-Click, lai rediģētu.
+	t_Lang145 =	Rediģēt Makro
+	t_Lang146 =	Rindā
+	t_Lang147 =	Macro
+	t_Lang148 =	Rīcība galvenā loga aizvēršanas pogas
+	t_Lang149 =	Close pieteikums
+	t_Lang150 =	Samazinātu uz paplātes
+	t_Lang151 =	Displejs apstiprinājumu aizverot makro
+	t_Lang152 =	Izveidot backups automātiski
+	t_Lang153 =	Izveido ieplānotu uzdevumu Windows Task plānotājs.
+	t_Lang154 =	Laiks pirmajā braucienā
+	t_Lang155 =	Grafiks tips
+	t_Lang156 =	Kad || Daily | Nedēļas | Mēneša | Sākums | Pieteikšanās | Idle
+	t_Lang157 =	Mērķa PMC fails
+	t_Lang158 =	Mērķa AHK fails
+	t_Lang159 =	Skripts tiks saglabāti vai pārrakstīti pašreizējā direktorijā!
+	t_Lang160 =	Atvērt Task plānotājs
+	t_Lang161 =	Uzdevums veikts veiksmīgi!
+	t_Lang162 =	Notika kļūda. nevar izveidot uzdevums.
+	t_Lang163 =	Plānotājs
+	t_Lang164 =	Kalendārs Makro
+	t_Lang165 =	Run Macro
+	t_Lang166 =	Fails
+	t_Lang167 =	Rinda
+	t_Lang168 =	Get Info
+	t_Lang169 =	Pagaidiet
+	t_Lang170 =	Logu Grupas
+	t_Lang171 =	Ziņojumi
+	t_Lang172 =	Reģistra Un INI
+	t_Lang173 =	Skaņa
+	t_Lang174 =	Mainīgie
+	t_Lang175 =	Misc.
+	t_Lang176 =	Pievienot grupu
+	t_Lang177 =	Jauna grupa
+	t_Lang178 =	Language Editor
+	t_Lang179 =	Izveidot jaunu
+	t_Lang180 =	Izmantojiet Enter, PgDn un PgUp orientēties.
+	t_Lang181 =	Iesniegt
+	t_Lang182 =	Nosaukums
+	t_Lang183 =	Saglabāt izmaiņas?
+	t_Lang184 =	Valoda File
+	t_Lang185 =	Atsauce File
+	t_Lang186 =	Iesniegt pārskatīšanu vai jaunu tulkojumu
+	t_Lang187 =	Sakļaut visu
+	t_Lang188 =	Paplašināt visu
+	t_Lang189 =	Valoda
+	t_Lang190 =	Pārvērst rindiņu pārtraukumi
+	t_Lang191 =	E-pasta konti
+	t_Lang192 =	Update
+	t_Lang193 =	Divreiz uzklikšķiniet, lai rediģētu
+	t_Lang194 =	SMTP serveris
+	t_Lang195 =	Osta
+	t_Lang196 =	Apliecināt
+	t_Lang197 =	Lietotājvārds
+	t_Lang198 =	Parole
+	t_Lang199 =	SSL
+	t_Lang200 =	Nosūtīt režīms
+	t_Lang201 =	Nosūtīt testu
+	t_Lang202 =	Ekrāns un logu
+	t_Lang203 =	Atklāt slēptās Windows
+	t_Lang204 =	Atklāt slēpto tekstu
+	t_Lang205 =	Nosaukums Match Mode
+	t_Lang206 =	Nosaukums Match Speed
+	t_Lang207 =	Klients
+	t_Lang208 =	A&trast
+	t_Lang209 =	Ai&zstāt
+	t_Lang210 =	Nerādīt kļūdas
+		
+; 17. Messages & Dialogs		
+	d_Lang001 =	Atvērts
+	d_Lang002 =	Saglabāt pašreizējo projektu?
+	d_Lang003 =	Noklusējuma iestatījumi
+	d_Lang004 =	Macro Creator Files
+	d_Lang005 =	Saglabāt Project
+	d_Lang006 =	Neizdevās saglabāt / pārrakstīšanas failu
+	d_Lang007 =	Kļūda
+	d_Lang008 =	Kļūda: Nav Macro Selected.
+		Please patikrinti bent vienas Makro sąraše.
+	d_Lang009 =	Kļūda: Nav Hotkey Atlasīti.
+	d_Lang010 =	Kļūda: Invalid Address.
+		The pasirinktas adresas arba failo pavadinimas yra neteisingas.
+	d_Lang011 =	Brīdinājums
+	d_Lang012 =	Nē kontrole selected.
+		Continue de control?
+	d_Lang013 =	Eksporta Script
+	d_Lang014 =	Script Eksportēto
+	d_Lang015 =	Fails tika veiksmīgi eksportēts!
+	d_Lang016 =	Noklikšķiniet uz "Saņemt", lai atzīmētu vietu.
+	d_Lang017 =	- Izvēlieties logu.
+		- Point līdz vēlamajam stāvoklim.
+		- Nospiediet pogu Pa labi.
+	d_Lang018 =	Pixel Color
+	d_Lang019 =	Notīrīt saraksts
+	d_Lang020 =	Close Macro?
+	d_Lang021 =	nākamais
+	d_Lang022 =	iepriekšējā
+	d_Lang023 =	ziņa
+	d_Lang024 =	Slodze noklusējuma iestatījumi?
+	d_Lang025 =	Makro (s) activated.`nUse hotkeys spēlēt.
+	d_Lang026 =	start / stop ierakstu
+	d_Lang027 =	ierakstīšana apstājās
+	d_Lang028 =	Ierakstīšanas ...
+	d_Lang029 =	apstāties
+	d_Lang030 =	lai sāktu jaunu ierakstu
+	d_Lang031 =	Zvaniet uz neeksistējošu funkciju.
+	d_Lang032 =	Kļūda: dublikāti taustiņi.
+	d_Lang033 =	aktivizēt Makro
+	d_Lang034 =	- Noklikšķiniet un velciet ar% DrawButton%, lai izvēlētos zonu.
+		- Noklikšķiniet un atbrīvot bez velkot, lai izvēlētos kontroles zonu.
+		- Noklikšķiniet zonā, bez pults, lai izvēlētos zonu no loga.
+	d_Lang035 =	Turpināt?
+	d_Lang036 =	Image / Pixel Atrasts at
+	d_Lang037 =	Image / Pixel Not Found.
+	d_Lang038 =	Nospiediet OK, lai turpinātu.
+	d_Lang039 =	Sūtīšanu. Lūdzu uzgaidiet...
+	d_Lang040 =	Šī funkcija prasa GDI + bibliotēka.
+		Noklikšķiniet uz Labi, lai iet, lai lejupielādētu lapu.
+	d_Lang041 =	Mainīgā nosaukums satur nelikumīgu raksturs.
+	d_Lang042 =	ir rezervēts vārds.
+	d_Lang043 =	Vai izmantot kontroles rīkjoslu.
+	d_Lang044 =	Šī funkcija prasa Eval () funkciju.
+		Noklikšķiniet uz Labi, lai iet, lai lejupielādētu lapu.
+	d_Lang045 =	Lūdzu, izvēlieties Internet Explorer logu!
+	d_Lang046 =	Savienojums Veiksmīga!
+	d_Lang047 =	Neizdevās Connect!
+	d_Lang048 =	Ievietojiet roktura un CLSID.
+	d_Lang049 =	Nederīga Label vārds.
+	d_Lang050 =	Dublikāts etiķete.
+	d_Lang051 =	Lai spēlētu makro nospiediet atbilstošo Hotkey (Auto / Man).
+	d_Lang052 =	Lai sāktu ierakstīšanu, nospiediet rekords Hotkey.
+	d_Lang053 =	Nerādīt šo ziņu vēlreiz.
+	d_Lang054 =	Lūdzu, izvēlieties Excel logu!
+	d_Lang055 =	Lūdzu, izvēlieties AutoHotkey skripta failu (.ahk) un ievadiet funkcijas nosaukums.
+	d_Lang056 =	Šī funkcija ir nepieciešama AutoHotkey uzstādīta.
+		Noklikšķiniet uz Labi, lai iet, lai lejupielādētu lapu.
+	d_Lang057 =	- Nospiediet Ctrl + bultu taustiņus, lai pārvietotu izvēlēto laukumu.
+		- Nospiediet Shift + bultu taustiņus, lai mainītu atlasīto apgabalu.
+		- Nospiediet Enter, lai pabeigtu.
+	d_Lang058 =	Dažas funkcijas prasa admnistrator privilages, lai darbotos pareizi.
+		Tas ir ieteicams, lai atsāktu programmu kā administrators.
+	d_Lang059 =	Šī komanda neatbalsta izteicienus vai funkcijas.
+		Lūdzu piešķirt mainīgo un izmantot to parametru.
+	d_Lang060 =	Jaunā versija pieejama
+	d_Lang061 =	Ne tagad
+	d_Lang062 =	Jums jau ir jaunākā versija.
+	d_Lang063 =	Radās kļūda pārbaudi.
+	d_Lang064 =	kļūda
+	d_Lang065 =	rinda
+	d_Lang066 =	konkrēti
+	d_Lang067 =	Parādiet šo logu uz starta
+	d_Lang068 =	Tips:
+	d_Lang069 =	Daudz laika un pūļu ir radījušas attīstību Pulover s Makro Radītāju. Ja jūs atradīsiet par lietderīgu, lūdzu apsvērt parādot savu atzinību ar ziedojumu.
+		Ziedojot vai ne, nebūs nekādas atšķirības tās funkcijas un funkcionalitāti.
+	d_Lang070 =	Ziedot ...
+	d_Lang071 =	Nē paldies
+	d_Lang072 =	Support Open Source programmatūra
+	d_Lang073 =	Kļūda: Invalid Hotkey Atlasīti.
+	d_Lang074 =	Atrast komandu vai funkciju
+	d_Lang075 =	Laipni lūdzam Pulover s Macro Radītāja
+	d_Lang076 =	Lūdzu, izvēlieties sev vēlamo izkārtojumu
+	d_Lang077 =	kompakts
+	d_Lang078 =	Default
+	d_Lang079 =	Meklēt atjauninājumus uz starta.
+	d_Lang080 =	Jūs varat mainīt šo Opcijas> Iestatījumi> Vispārīgi.
+	d_Lang081 =	Jūs varat mainīt un pielāgot izkārtojumu izvēlnē Skats.
+	d_Lang082 =	Fails nav atrasts!
+	d_Lang083 =	Rezerves fails ir atrasts. Vai vēlaties to atvērt?
+	d_Lang084 =	Lūdzu, saglabājiet izmaiņas pirms plānošanas uzdevumu.
+	d_Lang085 =	Trūkst "End Loop" paziņojums Macro
+	d_Lang086 =	Trūkst "beidzas, ja" paziņojumu Macro
+	d_Lang087 =	Ievērojiet, ka izmaiņas, kas veiktas skriptu ārpus programmas neietekmēs jūsu makro jebkādā veidā.
+		Šī funkcija ir paredzēta tikai kā ātri eksporta funkciju. PMC nav paredzēts būt AHK skriptu redaktoru.
+	d_Lang088 =	Mēģināt palaist kā vienotu lietotāju (nav administratora).
+	d_Lang089 =	Nē rinda izvēlēts!
+	d_Lang090 =	Lūdzu, izvēlieties rindu, lai ievietotu vai izņemtu grupu.
+	d_Lang091 =	Lejupielāde. Lūdzu uzgaidiet...
+	d_Lang092 =	mazas ikonas
+	d_Lang093 =	Lielas ikonas
+	d_Lang094 =	Šī funkcija ir nepieciešama Windows Vista vai augstāka.
+	d_Lang095 =	Par ByRef lietošana izraisa parametru kļūt par alias mainīgā pagājis no zvanītāja. Citiem vārdiem sakot, parametrs un zvanītāja mainīgo gan attiecas uz pašu saturu atmiņā.
+	d_Lang096 =	- DO NOT jāpievieno mainīgo procentu SIGNS ŠEIT.
+		- Atgriešanās vērtība ir izpausme.
+		- Jūs varat izmantot stīgas, mainīgos, masīvus un funkcijas. Jūs varat arī kombinēt jebkuras no tiem.
+		- Lai izmantotu stīgas, lieciet tos pēdiņās, piem .: "Rezultāts ir:" a + b.
+		- Ja jūs vēlaties atgriezties papildus rezultātus, jūs varat arī izmantot ByRef in parametriem.
+		- Masīvi var tikt izmantots, lai atgrieztos vairākas vērtības, vai pat nosauktās vērtības.
+	d_Lang097 =	- DO NOT jāpievieno mainīgo procentu SIGNS ŠEIT.
+		- Lielākā daļa AHK izteiksmes tiek atbalstīti.
+		- Jūs varat izmantot stīgas, mainīgos, masīvus un funkcijas.
+		- Lai izmantotu stīgas, lieciet tos pēdiņās, piem .: var = "A".
+		- Vairāki paziņojumi tiek atbalstīti, piem .: var = "a" || Instr (var, "b").
+	d_Lang098 =	Ja viens parametrs ir noklusējuma vērtība, šādi parametri ir nepieciešami, lai būtu viens too.
+	d_Lang099 =	Funkcija nosaukums satur nelikumīgu raksturs.
+	d_Lang100 =	Goto, Gosub un Label nav atļauti funkcijas.
+	d_Lang101 =	Dublikāts funkcija.
+	d_Lang102 =	Notika kļūda. Jūs varat sūtīt e-pastu "pulover@macrocreator.com" ar failu:
+	d_Lang103 =	Jaunas valodas fails pieejams.
+	d_Lang104 =	Šis ziņojums netiks parādīts atkal par to pašu atjauninājumu. Jūs varat lejupielādēt to no Help izvēlnes> Meklēt atjauninājumus.
+	d_Lang105 =	Fails veiksmīgi nosūtīts. Paldies!
+	d_Lang106 =	Valodas failus veiksmīgi atjaunināts.
+	d_Lang107 =	Neizdevās sākt taimeri
+	d_Lang108 =	Visas pozīcijas ir reģistrēti. Lūdzu, izdzēsiet vienu no tiem.
+	d_Lang109 =	Target etiķete neeksistē.
+	d_Lang110 =	Apstiprināt failu aizstāt
+	d_Lang111 =	Jau eksistē.
+		Vēlētos to aizvietot?
+	d_Lang112 =	E-pasta konts nav atrasts.
+	d_Lang113 =	Ziņots nav kļūda.
+	d_Lang114 =	Skripti eksportē (pat tad, ja apkopo) ar sūtīt e-pastu funkciju (CDO) būs redzamas informations e-pasta kontiem, ko izmanto, tostarp paroli. PMC projekta fails nav šo informāciju.
+	d_Lang115 =	- Hold Alt, lai uzstādītu reģionu, lai tajā pašā vietā.
+	d_Lang116 =	Pārsūtīt un instalēt
+	d_Lang117 =	Iet uz download lapu
+	d_Lang118 =	Labākais Fit
+	d_Lang119 =	Restart pieteikumu piemērot izmaiņas.
+	d_Lang120 =	Lai atjaunotu rīkjoslas izmērus, apmeklējiet:
+		
+; 18. Start-up Tips		
+	Start_Tips =	Izbraukšana video pamācības pie www.macrocreator.com/help~~pobj lai uzzinātu par daudzajiem iezīmes PMC.
+		Lai saņemtu palīdzību ar īpašu komandu labo peles pogu noklikšķiniet uz komandu logu, lai parādītu saites uz tiešsaistes palīdzību.
+		Jūs varat izveidot makro, izmantojot komandu pogas galvenajā logā vai izmantojot ierakstītāju, lai kopētu savu rīcību. Dodieties uz Iespējas> Uzstādījumi> ierakstīšana, lai izvēlētos to, kas ieejas tiks reģistrēta.
+		Izmantojiet meklēšanas joslu vai "Atrast komandu" logu, lai meklētu komandas un funkcijas.
+		Vai vēlaties, lai palīdzētu noteikt tulkojumu vai pat izveidot jaunu? Dodieties uz Iespējas> Uzstādījumi> Valoda redaktoru un veikt korekcijas vēlaties. Jūs varat apskatīt to jebkurā laikā. Noklikšķiniet uz Iesniegt, lai nosūtītu savu pārskatīšanu. Jūtieties brīvi iesniegt vairākus labojumus tik reižu, cik vēlaties.
+		Pārbaudiet "Capture Taustiņi" iespēja ievadīt atslēgas un kombinācijas, lai jūsu Macro tieši no galvenā loga.
+		Ievadiet atslēgas un kombinācijas ar Hotkey lodziņā apakšā un nospiediet Insert pogu, lai pievienotu tos izvēlieties rindām.
+		Izmantojiet rediģēšanas pogas apakšā galvenajā logā noteikt atkārtot un atlikt uz vairākiem rindām vienlaicīgi. Ja nav atlasīts neviens rindas rediģēšanas pogas attiecas uz visām rindām sarakstā.
+		Gandrīz katru komandu un funkcijas akceptē un izvada mainīgos. Jūs varat piešķirt savus mainīgos mainīgajiem lielumiem logiem (komandas> mainīgajiem / bloki). Lai tos izmantotu iekšpusē komandas pievienoju mainīgā nosaukumu procentu zīmēm, piem .:% MyVar%. Funkcijas, izmantot tos bez procentiem pazīmēm, piem .: substr (MyVar, 5).
+		Right-Click jebkur komandu logā, lai viegli ievietot iebūvētu mainīgos no saraksta.
+		Lai izmantotu diktofonu ātrai uzdevumu doties uz Iespējas> Uzstādījumi> ieraksts un pārbaudiet "Clear List" variantu. Tad noklikšķiniet uz Record pogu galvenajā logā un izmantot F10, lai nodzēstu pašreizējo Makro un sākt jaunu ar tādu pašu karsto taustiņu. Jūs varat arī pārbaudīt "Vienmēr Active" opciju galvenajā logā, lai saglabātu ierakstīšanas un atskaņošanas hotkeys aktīvs.
+		PMC atbalsta Array objekti un metodes, tāpat kā AutoHotkey skriptus. Jūs varat izveidot masīvus daudzos veidos, visvairāk parasti dodas uz Mainīgie logu, pārbaudot "Expression" variantu un pievienojot vērtības iekavās, piem .: [10, 20, Var, "string"]. Varat arī izveidot nosaukts atslēgas, piem .: {Keya: Vara, "daži atslēga": "virknes vērtība"}.
+		Funkcijas izmantot AHK izteiksmes sintaksi. Burtisks virknes jābūt pēdiņās, un mainīgie nav nepieciešams procentiem pazīmes. Jūs varat izmantot citas funkcijas vai masīva elementi kā parametru. Piem .: StrReplace (MyVar, myArray [ "A"], substr (OtherVar, 2, 3)).
+		Izteiksmes tiek atbalstīti AutoHotkey izteiksmes sintaksi. Lai izmantotu izteiksmi iekšpusē komandu parametru, sākt to ar procentu zīmi, piem .:% substr (Var, 5).
+		Par "Loop" counter augšpusē nosaka kopējo skaitu cilpas izvēlētajam makro.
+		Jūs varat rediģēt rindu ar dubultklikšķi vai atlasot to un noklikšķinot uz Rediģēt pogas apakšā. Jūs varat rediģēt vairākas atlasītās rindas, izmantojot iespējas rediģēšanas joslā apakšā.
+		Jūs varat noteikt savu funkciju Funkcija> Izveidot funkciju un izmantot tos no Function loga vai iekšpusē izteiksmes.
+		Jūs varat definēt Globa / vietējās un statisko mainīgie par lietotāja definētu funkciju. Globālie mainīgie definēti Iespējas> Uzstādījumi> Lietotāja globālie mainīgie tiek uzskatīti Super Global, un vienmēr būs pieejams iekšpusē funkcijas, pat ja definēts kā vietējais.
+		Izvēlieties vienu vai vairākas rindas, lai pievienotu jaunas komandas virsū tiem.
+		Jūs varat pārvietot rindas ar klikšķi un velciet.
+		Veiciet dubultklikšķi uz ikonas, lai aktivizētu hotkeys vai pārtrauktu atskaņošanu / ierakstīšanu. Noklikšķiniet uz tā ar vidējo pogu atskaņošanas vai ierakstīšanas, lai apturētu laikā.
+		Jūs varat eksportēt savu makro darba AutoHotkey skriptus vai stand-alone executables no Eksporta loga.
+		Ierakstīt un atskaņot peli, izmantojot absolūto koordinātas doties Iespējas> Uzstādījumi> noklusējumu un kas peles koordinātes uz ekrāna.
+		Jūs varat atvērt, kopēt, pārvietot vai dzēst failus un mapes, izmantojot vienu no komandas komandas> Run / File / String / Misc. Ir daudz citas noderīgas komandas, piemēram, StringReplace, InputBox un MouseGetPos.
+		Lai ierakstītu Down un Up stāvoklis katru galveno iet uz Iespējas> Uzstādījumi> Recording un pārbaudiet "Capture galvenais valsts (lejup / augšup)" variantu.
+		Jūs varat izmantot hotkeys, lai paātrinātu vai palēninātu atskaņošanu. Dodieties uz Iespējas> Uzstādījumi> atskaņošana iestatīt atslēgas un ātrumu.
+		Lai pielāgotu uztveršanas zonu, izmantojot "veikt screenshot" līdzeklis doties uz Opcijas> Iestatījumi> Ekrānšāviņi un izvēlieties "Press Enter Capture". Pēc zīmēšanas taisnstūris izlietojuma kontrole + bultu taustiņus, lai pārvietotu atlasi un Shift + bultu taustiņus, lai mainītu to.
+		Quick Select: Izvēlieties jebkuru rindu un noklikšķiniet uz kolonnas virsraksta, lai atlasītu līdzīgas rindas, pamatojoties uz šūnas tekstu no šīs kolonnas.
+		Uzklikšķiniet uz Index kolonnas virsraksta, lai ieslēgtu / izslēgtu Palīdzība Marks un krāsas Loops un pārskatu. Divreiz noklikšķiniet uz Action kolonnas virsraksta, lai ieslēgtu / izslēgtu iedobi par Loops un pārskatu sniegšana.
+		Jūs varat atkļūdot jūsu Makro izmantojot Manual Hotkey un atskaņošanas opcijas Macro izvēlnē. Jūs varat arī atslēgt darbības, atslēdzot tos šajā Macro sarakstā.
+		Lai padarītu jūsu Makro strādā tikai uz noteiktu logu doties Macro> konteksta jutīga hotkeys.
+		Jūs varat iestatīt savu globālā Mainīgie jānoslogo uz starta un jāeksportē. Dodieties uz Iespējas> Uzstādījumi> Lietotāja globālos mainīgos, lai pievienotu tos.
+		Jūs varat palaist uzlabotas funkcijas, piemēram, substr un REGEXREPLACE no funkcijām loga (komandas> Funkcijas / Array metodēm). Jūs varat arī noteikt savu funkciju vai palaist funkcijas no ārējiem AutoHotkey skriptus.
+		Jūs varat ierakstīt peles kustības, salīdzinot ar pašreizējo stāvokli, turot CapsLock ierakstu (var mainīt taustiņu un padarīt to pārslēgtos iestatījumos) laikā.
+		
+; 19. Tooltips		
+	A_List_TT =	Izvēlieties Macro (Ctrl + 1 ~ 0)
+	AbortKey_TT =	Hotkey, lai apturētu atskaņošanu
+	ActiveObj_TT =	Mēģina izveidot savienojumu ar Active COM objekts
+	AddAtt_TT =	Pievienot failus
+	ApplyI_TT =	Pieteikties
+	ApplyL_TT =	Ievietojiet no Box (Insert)
+	ApplyT_TT =	Pieteikties
+	AutoKey_TT =	Hotkey spēlēt Macro
+	Client_TT =	Koordinātas ir relatīvi salīdzinot ar aktīvo loga klienta jomā, kas izslēdz loga virsrakstjoslu, izvēlne (ja tas ir standarta viena) un robežām.
+	Clip_TT =	Īslaicīgi izmanto starpliktuvi nosūtīt tekstu.
+		Kad darbība ir pabeigta, skripts
+		Atjauno sākotnējo starpliktuves saturu.
+		(Atstājiet Teksts tukšu, lai ielīmētu pašreizējo saturu)
+	CM_TT =	Ekrāns: Koordinātas ir relatīvs uz darbvirsmas (visu ekrānu).
+		Window: Koordinātas ir relatīvi salīdzinot ar aktīvo logu.
+		Klients: Koordinātas ir relatīvi salīdzinot ar aktīvo loga klienta jomā, kas izslēdz loga virsrakstjoslu, izvēlne (ja tas ir standarta viena) un robežām.
+	CmdFilter_TT =	Filtrēt pēc tipa
+	CmdSort_TT =	Kārtot pēc alfabēta
+	ColorPick_TT =	Saņemt Pixel uz ekrāna
+	ComEvent_TT =	Likmi, pēc kuras keystrokes tiek nosūtīti nosaka galveno kavēšanās.
+	ComText_TT =	Kad nav neapstrādātā režīmā, šādi rakstzīmes
+		Tiek uzskatīti par modifikatori (šie modifikatori ietekmēt
+		Tikai jau nākamajā atslēga): +, ^, #
+	CoordPixel_TT =	Koordinātu režīms
+	DefaultMacro_TT =	Izvēlieties failu ielādēt par programmas startēšanas
+	EditPaste_TT =	Pastas String pie caret / ievietošanas pozīcijā
+		Kādā rediģēšanas kontroli (tas neietekmē
+		Saturs starpliktuvē).
+	Ex_AF_TT =	Lēcieni maigu metodi aktivizējot logu
+		Un iet taisni uz spēcīgu metodi.
+	Ex_CM_TT =	Komplekti saskaņot režīmu pele komandas, lai būt relatīvs vai nu aktīvo logu vai ekrāna.
+	Ex_DH_TT =	Nosaka, vai neredzams logi "redzēt" ar skriptu.
+	Ex_DT_TT =	Nosaka, vai neredzams tekstu logā ir "redzējuši" ar mērķi atrast logu. Tas ietekmē tādas komandas, kā IfWinExist un WinActivate.
+	Ex_EdScript_TT =	Atvērt ārējo redaktoru
+	Ex_EdVars_TT =	Izvēlieties globālos mainīgos jāeksportē.
+	Ex_ExecScript_TT =	Palaist skriptu
+	Ex_HK_TT =	Spēki izmantošana āķa, lai īstenotu visus
+		Vai dažas tastatūras hotkeys.
+	Ex_IfDir_TT =	Izveido kontekstatkarīgus hotkeys un hotstrings atkarībā
+		Par loga, kas ir aktīvas vai pastāv veidu.
+	Ex_IfDirType_TT =	Izveido kontekstatkarīgus hotkeys un hotstrings atkarībā
+		Par loga, kas ir aktīvas vai pastāv veidu.
+	Ex_IN_TT =	Cēloņi skripts uzvesties tā, it kā norādīts
+		Faila saturs ir klāt šajā precīzu atrašanās vietu.
+	Ex_MD_TT =	Nosaka kavēšanos, kas notiks pēc tam, kad
+		Katru peles kustību vai klikšķi.
+	Ex_MT_TT =	Nosaka maksimālo skaitu vienlaicīgu
+		Pavedieni vienu Hotkey vai hotstring.
+	Ex_NT_TT =	Izslēdz parādīšanu ikonu.
+	Ex_PT_TT =	Uztur skripts nebrauc
+		(Tas ir, līdz brīdim, kad lietotājs aizver to vai ExitApp ir radušās).
+	Ex_SB_TT =	Nosaka, cik ātri skripts darbosies (ietekmē CPU izmantošanu).
+	Ex_SC_TT =	Nosaka kavēšanos, kas notiks pēc tam, kad
+		Katrs vadības pārveidojot komandu.
+	Ex_SI_TT =	Nosaka, vai skripts ir atļauts braukt no jauna, kad tas jau darbojas.
+	Ex_SK_TT =	Nosaka kavēšanos, kas notiks pēc katras
+		Klaviatūras nosūtījusi nosūtīt vai ControlSend.
+	Ex_SM_TT =	Padara Nosūtīt sinonīms SendInput vai SendPlay nevis
+		Noklusējuma (SendEvent). Arī padara noklikšķiniet un MouseMove / Click / Drag
+		Izmantojiet norādīto metodi.
+	Ex_ST_TT =	Nosaka atbilstības uzvedību WinTitle parametra komandas, piemēram, WinWait.
+	Ex_SW_TT =	Nosaka kavēšanos, kas notiks pēc tam, kad
+		Katrs windowing komanda, piemēram, WinActivate.
+	Ex_UV_TT =	Eksporta globālie mainīgie.
+	Ex_WN_TT =	Iespējo vai atspējo brīdinājumus par konkrētiem nosacījumiem, kas var norādīt uz kļūdu, piemēram, drukas kļūdas vai pazudušu "globālo" deklarācija.
+	ExpList_TT =	Double-Click, lai rediģētu
+	ExprLink2_TT =	- DO NOT jāpievieno mainīgo procentu SIGNS ŠEIT.
+		- Lielākā daļa AHK izteiksmes tiek atbalstīti.
+		- Jūs varat izmantot stīgas, mainīgos, masīvus un funkcijas.
+		- Lai izmantotu stīgas, lieciet tos pēdiņās, piem .: var  "A".
+		- Vairāki paziņojumi tiek atbalstīti, piem .: var  "a" || Instr (var, "b").
+	ExprLink3_TT =	- DO NOT jāpievieno mainīgo procentu SIGNS ŠEIT.
+		- Lielākā daļa AHK izteiksmes tiek atbalstīti.
+		- Jūs varat izmantot stīgas, mainīgos, masīvus un funkcijas.
+		- Lai izmantotu stīgas, lieciet tos pēdiņās, piem .: var = "A".
+		- Vairāki paziņojumi tiek atbalstīti, piem .: var = "a" || Instr (var, "b").
+	ExpView2_TT =	Advanced Editor
+	ExpView_TT =	Advanced Editor
+	Fast_TT =	Izmanto ātrāk meklē metodi (ieteicams)
+	HiddenText_TT =	Nosaka, vai neredzams tekstu logā ir "redzējuši" ar mērķi atrast logu. Tas ietekmē tādas komandas, kā IfWinExist un WinActivate.
+	HiddenWin_TT =	Nosaka, vai neredzams logi "redzēt" ar skriptu.
+	HScale_TT =	Augstums skala
+	IconN_TT =	Numurs ikona grupas
+	IfLVColor_TT =	Uzklikšķiniet, lai izvēlētos krāsu
+	IncFiles_TT =	Iekļaut failus / vērtības
+	IncFolders_TT =	Iekļaut katalogi (mapes) / Taustiņi
+	InsertKey_TT =	Ievietojiet Taustiņu (Ctrl + Insert)
+	InsertKeyT_TT =	Ievietot Taustiņu
+	JoyKey_TT =	Nospiediet pogu uz kursorsviru
+	LoopLVColor_TT =	Uzklikšķiniet, lai izvēlētos krāsu
+	LUntil_TT =	Piemēro nosacījumu turpināšanu cilpas vai for-cilpas.
+	ManKey_TT =	Hotkey spēlēt Macro "soli pa solim"
+	MRel_TT =	Kustībām saistībā ar pašreizējo pozīciju.
+		Vai, ja lieto ar Control: Amats, salīdzinot ar kontroli.
+	OSHK_TT =	Select Macro
+	OSHKEd_TT =	Select Macro
+	OSProgB_TT =	Displejs Progress Bar
+	OSTrans_TT =	Necaurredzamība
+	PauseKey_TT =	Hotkey, lai apturētu atskaņošanu
+	PicPrev_TT =	Double-Click, lai atvērtu attēlu
+	Raw_TT =	SendRaw komanda interpretē visas rakstzīmes burtiski
+		Nevis tulkojot {Enter} ar ENTER taustiņu,
+		^ C uz Control-C, uc
+	RecKey_TT =	Backspace, lai notīrītu
+	RecNewKey_TT =	Backspace, lai notīrītu
+	Recurse_TT =	Recurse subdirectories (apakšmapēs) / apakšatslēgas
+	RefreshIEW_TT =	Atsvaidzināt saraksts
+	Relative_TT =	Koordinātas ir relatīvi salīdzinot ar aktīvo logu.
+	RelKey_TT =	Ieraksti peles kustībām un klikšķi kā kompensācijas
+		No iepriekšējā stāvoklī, kad notika.
+	ReptC_TT =	0 = bezgalīgs
+	Reset_TT =	Notīrīt mainīgo saturs
+	RGB_TT =	Izraisa krāsu jāinterpretē kā RGB vērtību, nevis BGR
+	Screen_TT =	Koordinātas ir relatīvs uz darbvirsmas (visu ekrānu).
+	Screenshot_TT =	Padarīt Ekrānuzņēmums
+	SetText_TT =	Maina tekstu kontroli.
+	SI_TT =	Vārds FORCE izlaiž dialoglodziņu un aizstāj veco gadījumu automātiski,
+		Kas ir līdzīga ietekme uz Reload komandu.
+		Vārds IGNORE Lēcieni dialoglodziņu un atstāj veco instancē darbojas.
+		Citiem vārdiem sakot, mēģina uzsākt jau darbojas skriptu tiek ignorētas.
+		Vārds OFF ļauj vairākiem gadījumi skriptu palaist vienlaicīgi.
+	SM_TT =	Event: Tas ir sākuma noklusējuma visi skriptus izmanto.
+		Tas izmanto SendEvent metodi Sūtīt, SendRaw, Click, un MouseMove / Uzklikšķināt / Drag.
+		Input: Pārslēdzas uz SendInput metodi Sūtīt, SendRaw, Click, un MouseMove / Uzklikšķināt / Drag.
+		InputThenPlay: Tāpat kā iepriekš, izņemot, ka nevis nokritās līdz Event režīmā
+		Kad SendInput nav pieejama, tas atgriežas spēlēt režīmu (zemāk). Tas arī izraisa
+		SendInput komanda pati atgriezties spēlēt režīmā, kad SendInput nav pieejama.
+		Play: Pārslēdzas uz SendPlay metodi Sūtīt, SendRaw, Click, un MouseMove / Uzklikšķināt / Drag.
+	ST_TT =	1: logs nosaukumā ir jāsāk ar norādīto WinTitle būt spēles.
+		2: logs nosaukumā var saturēt WinTitle jebkur iekšpusē, ka tas ir spēles.
+		3: logs nosaukumā ir precīzi jāatbilst WinTitle būt spēles.
+		RegEx: Izmaiņas WinTitle, WinText, ExcludeTitle, un ExcludeText būt regulāras izteiksmes.
+	TimeoutM_TT =	0 = bezgalīgs
+	TitleMatch_TT =	1: logs nosaukumā ir jāsāk ar norādīto WinTitle būt spēles.
+		2: logs nosaukumā var saturēt WinTitle jebkur iekšpusē, ka tas ir spēles.
+		3: logs nosaukumā ir precīzi jāatbilst WinTitle būt spēles.
+		RegEx: Izmaiņas WinTitle, WinText, ExcludeTitle, un ExcludeText būt regulāras izteiksmes.
+	TitleSpeed_TT =	Fast: Tas ir noklusējuma uzvedība. Veiktspēja var būt ievērojami labāks nekā lēna, bet daži WinText elementi dažu logu veidiem nevar "redzēt" ar dažādu logu komandas.
+		Slow: Var būt daudz lēnāks, taču viss ir iespējams WinText tiek iegūti no katras logu, kā windowing komandu meklējumiem caur tiem, kas spēlē. Logu Spy atklāj, kuras daļas loga tekstu (ja tāds ir) pieprasīt lēns režīmā.
+	ToggleC_TT =	Aktivizēt Radinieks ierakstīšana kad galvenais valsts ir ieslēgts.
+	TransC_TT =	Caurspīdīga krāsa
+	VarCopyA_TT =	Kopēt pašreizējo mainīgo saturu
+	VarCopyB_TT =	Kopēt pašreizējo mainīgo saturu
+	VariatT_TT =	Shades variāciju
+	WScale_TT =	Platums skala
+		
+; 20. Operators		
+	As_Oper_01 =	Piešķirt
+	As_Oper_02 =	Pievienot
+	As_Oper_03 =	Atņemt
+	As_Oper_04 =	Reizināt
+	As_Oper_05 =	Dalīt
+	As_Oper_06 =	Stāvs dalīt
+	As_Oper_07 =	Saķēdēt
+	As_Oper_08 =	Bitu līmeņa ieskaitot OR
+	As_Oper_09 =	Bitu līmeņa un
+	As_Oper_10 =	Bitu līmeņa izslēgšanas
+	As_Oper_11 =	Tiesības maiņu un
+	As_Oper_12 =	Kreisais Shift un
+	Co_Oper_01 =	Vienāds
+	Co_Oper_02 =	Equal (reģistrjutīga)
+	Co_Oper_03 =	Nav vienāds
+	Co_Oper_04 =	Lielāka
+	Co_Oper_05 =	Mazāk
+	Co_Oper_06 =	Lielāks vai vienāds
+	Co_Oper_07 =	Mazāks vai vienāds
+	Co_Oper_08 =	In (saraksts)
+	Co_Oper_09 =	Ne (saraksts)
+	Co_Oper_10 =	Satur (saraksts)
+	Co_Oper_11 =	Nav ietverti (saraksts)
+	Co_Oper_12 =	Starp (līnija 1) un (līnija 2)
+	Co_Oper_13 =	Nav starp (1 līnija) un (līnija 2)
+	Co_Oper_14 =	Vai (tips)
+	Co_Oper_15 =	Nav (tips)
+		
+; 21. IE Commands Tips		
+	IE_Cmd_Index =	
+	Checked	Iestata vai izgūst stāvokli rūtiņu vai radio pogu.
+	Click	Simulē noklikšķiniet uz objektu.
+	Focus	Sets koncentrēties uz objektu.
+	GoBack	Pārvietojas atpakaļ vienu objektu vēstures sarakstā.
+	GoForward	Pārvietojas uz priekšu vienu objektu vēsturē sarakstā.
+	GoHome	Pārlūko pašreizējā mājās vai sākt lapā.
+	GoSearch	Pārlūko uz pašreizējo meklēšanas lapā.
+	Height	Iestata vai izgūst augstumu objekta.
+	Href	Iestata vai izgūst galamērķa URL vai enkura punktu.
+	InnerHTML	Iestata vai izgūst HTML objekta.
+	InnerText	Iestata vai saņem tekstu objektu.
+	Length	Iestata vai izgūst skaitu objektu kolekcija.
+	LocationName	Izpaužas ceļa vai nosaukumu pašreizējo lapu.
+	LocationURL	Izpaužas URL pašreizējā lapā.
+	Navigate	Pārlūko uz URL vai ceļu.
+	OuterHTML	Iestata vai izgūst objektu un tās saturu HTML.
+	Quit	Aizver lapu.
+	Refresh	Pārlādēt pašlaik attēloto lapu.
+	SelectedIndex	Iestata vai izgūst indekss izvēlētā risinājuma izvēlētās objektu.
+	Src	Iestata vai izgūst URL jānoslogo ar objektu.
+	Stop	Atceļ neapstiprināts navigāciju vai lejupielādēt.
+	Submit	Iesniedz veidlapu.
+	Type	Iestata vai izgūst satura tipu objekta.
+	Value	Izpaužas vai iestata vērtību objekta.
+	Width	Iestata vai izgūst platumu objekta.
+		
+; 22. COM Objects Tips		
+	COM_CLSID_Index =	
+	Excel.Application	Manipulē Excel lapās.
+	HTMLfile	Var izmantot, lai lasītu, rakstītu un mijiedarboties ar HTML.
+	InternetExplorer.Application	Izpētīt mājas lapas.
+	MSXML2.DOMDocument.6.0	XML parsētājs.
+	MSXML2.XMLHTTP	Pārstāv XML lūgums izmantojot HTTP.
+	Outlook.Application	Manipulē Outlook uzdevumus un priekšmetus.
+	PowerPoint.Application	Manipulē PowerPoint prezentācijas.
+	Schedule.Service	Grafiks un rediģēt Windows uzdevumus.
+	ScriptControl	Dinamiski izpildīt VBScript vai JScript.
+	Scripting.Dictionary	Objekts, kas saglabā datus taustiņu, objektu pāriem.
+	Scripting.FileSystemObject	Piekļuves failus mapēs
+	Shell.Application	Access Explorer IE logus / cilnes; atvērts manipulēt logus.
+	Shell.Explorer	Iegult Explorer / Browser kontroli GUI (Internet Explorer - Trident pārlūku).
+	SAPI.SpVoice	Teksta-runas (TTS).
+	VBScript.RegExp	VBS regulāras izteiksmes (ieskaitot pasaules vārtiem).
+	WMPlayer.OCX	Atskaņot multivides failus; Embed wmplayer kontrole GUI.
+	WinHttp.WinHttpRequest.5.1	Nodrošina vienkāršu HTTP klienta funkcionalitāti, kas ļauj daudz lielāku kontroli nekā UrlDownloadToFile.
+	Winmgmt	Saņemt sistēmas informāciju; Pārvaldīt Windows pakalpojumu.
+	WScript.Shell	Dažādas administrēšanas uzdevumus (daudzi dzimtā AHK uzdevumi).
+	Word.Application	Manipulē Word dokumentus.
+		
+; 23. AHK Commands Tips		
+	Ahk_Cmd_Index =	
+	Abs	Atgriež absolūto vērtību skaits.
+	ACos	Atgriež arkkosinusu (numuru, kura kosinuss ir Number) radiānos.
+	Array	Izveido skriptiem asociatīvo masīvu ar integer taustiņiem.
+	Asc	Atgriež rakstzīmju kodu (skaitlis no 1 līdz 255 (jo ANSI būvē) vai 65535 (in Unicode būvē)) pirmo rakstzīmi String.
+	ASin	Atgriež skaitļa arksinusu (skaitu, kuru sine ir Number) radiānos.
+	ATan	Atgriež arktangensu (numuru, kura tangente ir Number) radiānos.
+	BlockInput	Atspējo vai ļauj lietotājam spēju mijiedarboties ar datoru, izmantojot tastatūru un peli.
+	Break	Nobrauktuves (Pārtrauc) cilpu. Derīgs iekšpusē jebkāda veida cilpas.
+	CDO	Nosūta e-pastus, izmantojot lietotāja definētus kontu.
+	Ceil	Atgriež skaits noapaļots līdz tuvākajam veselam skaitlim (bez .00 sufiksu).
+	Chr	Atgriež vienu rakstzīmi, kas atbilst ar numuru norādīto rakstzīmju kodu.
+	Click	Noklikšķina peles pogu norādītajā koordinātas. Tā var arī turiet pogu, pagrieziet ripu, vai pārvietot.
+	Clipboard	Pastas tekstu no starpliktuves.
+	ClipWait	Gaida, kamēr starpliktuves satur datus.
+	ComObjActive	Iegūst reģistrētu COM objektu.
+	ComObjArray	Izveido SAFEARRAY lietošanai ar COM.
+	ComObjConnect	Savieno COM objekta notikumu avotus funkcijām ar konkrētu prefiksu.
+	ComObjCreate	Izveido COM objektu.
+	ComObjEnwrap / ComObjUnwrap	Wraps / unwraps COM objektu.
+	ComObjError	Ieslēdz vai izslēdz paziņojumu COM kļūdas.
+	ComObjFlags	Iegūst vai maina karogu, kas kontrolē COM ietinamā objekta uzvedību.
+	ComObjGet	Atgriež atsauci uz objektu ar COM sastāvdaļa sniegta.
+	ComObjMissing	Izveido "pazudis parametrs" objektu nodot līdz COM metodi.
+	ComObjParameter	Wraps vērtību un veidu, lai iet kā parametru uz COM metodi.
+	ComObjQuery	Vaicājumi COM objektu saskarni vai pakalpojumu.
+	ComObjType	Izgūst ierakstiet informāciju no COM objektu.
+	ComObjValue	Izgūst vērtību vai rādītāju glabājas COM iesaiņojums objektu.
+	Continue	Lēcieni pārējo pašreizējo cilpas atkārtojuma un sāk jaunu. Derīgs iekšpusē jebkāda veida cilpas.
+	Control	Padara dažādus izmaiņu pārbaudei.
+	ControlClick	Nosūta peles pogu vai peles riteni notikumu uz kontroli.
+	ControlEditPaste	Pastas String pie caret / ievietot pozīciju rediģēšanas kontroli (tas neietekmē saturu starpliktuves).
+	ControlFocus	Sets ievades fokusu uz konkrētu kontroli logu.
+	ControlGet	Iegūst dažāda veida informāciju par pārbaudei.
+	ControlGetFocus	Iegūst kas kontrole mērķa loga ir ievades fokusu, ja tādi ir.
+	ControlGetPos	Izgūst pozīciju un lielumu kontroli.
+	ControlGetText	Izgūst tekstu no kontroles.
+	ControlMove	Pārvieto vai maina kontroli.
+	ControlSend / ControlSendRaw	Nosūta modelētiem keystrokes logam vai kontrolē.
+	ControlSetText	Maina tekstu kontroli.
+	CoordMode	Komplekti saskaņot režīmu dažādas komandas, lai būt relatīvs vai nu aktīvo logu vai ekrāna.
+	Cos	Atgriež trigonometriskais kosinusu numurs.
+	Delete	Noņem atslēgu vērtību pārus no objekta.
+	DllCall	Izsauc funkciju iekšpusē DLL, piemēram, kā standarta Windows API funkcijas.
+	Drive	Izstumj / atvilks paplāti ar CD vai DVD disku, vai pārslēdz disku s sējuma etiķeti.
+	DriveGet	Iegūst dažāda veida informāciju par datora disku (s).
+	DriveSpaceFree	Izgūst brīvas vietas uz diska, megabaiti.
+	Else	Norāda komandu (-iem), lai veiktu, ja IF-paziņojums izvērtē to FALSE. Kad vairāk nekā viens komanda ir klāt, pievienot tos bloka (figūriekavas).
+	EnvAdd	Nosaka mainīgo par sevi pieskaitot dotajā vērtību (var arī pievienot vai atņemt laiku no datuma-laika vērtību). Sinonīms: Var + = Value.
+	EnvDiv	Nosaka mainīgo pati dalīta ar doto vērtību. Sinonīms: var / = vērtība.
+	EnvGet	Iegūst vides mainīgo.
+	EnvMult	Iestata mainīgo sev reizes doto vērtību. Sinonīms: var * = vērtība.
+	EnvSet	Raksta vērtību mainīgā ietverto vidē.
+	EnvSub	Iestata mainīgo sev mīnus doto vērtību (var arī salīdzināt datuma-laika vērtības). Sinonīms: Var - = vērtība.
+	EnvUpdate	Brīdina OS un visas darbojošās programmas, kas vides mainīgo (s) ir mainījušies.
+	ExitApp	Izbeidz skriptu bez nosacījumiem.
+	Exp	Atgriežas e (kas ir aptuveni 2,71828182845905) izvirzīja uz n-varas.
+	Expression	Veic vienu vai vairākas operācijas pēc vairākiem mainīgajiem, gramatisko stīgas, un / vai gramatisko numuriem.
+	FileAppend	Raksta tekstu līdz beigām failu (pirmā radot failu, ja nepieciešams).
+	FileCopy	Kopijas vienu vai vairākus failus.
+	FileCopyDir	Kopē mape kopā ar visiem tās apakšmapes un failus (līdzīgi xcopy).
+	FileCreateDir	Izveido mapi.
+	FileCreateShortcut	Izveido īsceļu (LNK) failu.
+	FileDelete	Dzēš vienu vai vairākus failus.
+	FileGetAttrib	Ziņojumi, vai fails vai mape ir tikai lasāms, slēpta, uc
+	FileGetShortcut	Iegūst informāciju par īsceļu (LNK) failu, piemēram, tā mērķa failā.
+	FileGetSize	Iegūst izmēru failu.
+	FileGetTime	Izgūst datetime zīmogs failu vai mapi.
+	FileGetVersion	Izgūst faila versija.
+	FileMove	Pārvietojas vai maina vienu vai vairākus failus.
+	FileMoveDir	Pārvieto mapi kopā ar visiem tās apakšmapes un failus. Tā var arī pārdēvēt mapi.
+	FileOpen	Nodrošina objektorientētā failu I / O.
+	FileRead	Nolasa faila saturu uz mainīgo.
+	FileReadLine	Nolasa norādīto līniju no failu un saglabā tekstu mainīgs.
+	FileRecycle	Nosūta failu vai direktoriju uz atkritni, ja iespējams.
+	FileRecycleEmpty	Iztukšo atkritni.
+	FileRemoveDir	Dzēš mapi.
+	FileSelectFile	Parāda standarta dialogu, kas ļauj lietotājam, lai atvērtu vai saglabātu failu (s).
+	FileSelectFolder	Parāda standarta dialogu, kas ļauj lietotājam izvēlēties mapi.
+	FileSetAttrib	Maina atribūtus vienu vai vairākus failus vai mapes. Aizstājējzīmes tiek atbalstītas.
+	FileSetTime	Maina datetime zīmogu vienu vai vairākus failus vai mapes. Aizstājējzīmes tiek atbalstītas.
+	Floor	Atgriež skaitli, kas noapaļots līdz tuvākajam veselam skaitlim (bez .00 sufiksu).
+	For	Atkārto vairākas komandas vienu reizi atslēgu vērtības pāra objektu.
+	Format	Formatē mainīgu skaitu ievades vērtībām saskaņā ar formāta virknes.
+	FormatTime	Pārveido YYYYMMDDHH24MISS laikspiedolu spēkā norādītajā datuma / laika formātu.
+	Func	Iegūst atsauci uz funkciju.
+	GetKeyName / GetKeyVK / GetKeySC	Izgūst vārdu vai tekstu, virtuālā atslēgas kodu vai skenēšanas kodu atslēgu.
+	GetKeyState	Pārbauda, ​​vai klaviatūras taustiņu vai peles / kursorsvira poga ir uz leju vai uz augšu. Arī izgūst kursorsviru statusu.
+	Gosub	Lec uz norādīto marķējumu un turpinās izpildi līdz atgriešanās ir radušās.
+	Goto	Lec uz norādīto marķējumu un turpina izpildi.
+	GroupActivate	Aktivizē nākamo logu loga grupā, kas tika definēta ar groupadd.
+	GroupAdd	Pievieno logu specifikāciju pie loga grupai, veidojot grupu, ja nepieciešams.
+	GroupClose	Aizver aktīvo logu, ja tas bija tikai aktivizē GroupActivate vai GroupDeactivate. tad tas aktivizē nākamo logu sērijā. Tā var arī aizvērt visus logus grupā.
+	GroupDeactivate	Līdzīgi, lai GroupActivate izņemot to aktivizē nākamo logu ne grupā.
+	HasKey	Atgriež true, ja atslēga ir saistīta ar vērtību.
+	If	Norāda komanda (s), lai veiktu, ja salīdzinājums ar mainīgo vērtība evalutes līdz TRUE. Kad vairāk nekā viens komanda ir klāt, pievienot tos bloka (figūriekavas).
+	If (expression)	Norāda komandu (-iem), lai veiktu, ja izteiksme novērtē to TRUE.
+	If A_Index	Pārbauda, ​​vai pašreizējais cilpa atkārtojuma matchs konkrēts skaits.
+	If Clipboard	Pārbauda, ​​vai starpliktuvē tekstu matchs noteiktu virkni.
+	If ErrorLevel	Pārbauda, ​​vai konkrēts attēlu vai pikseļu tika atrasts ekrāna.
+	If var [not] between	Pārbauda, ​​vai mainīgā saturs ir skaitliski vai alfabētiski starp divām vērtībām (ieskaitot).
+	If var [not] in / If var [not] contains MatchList	Pārbauda, ​​vai mainīgā saturs atbilstu viens no posteņiem sarakstā.
+	If var is [not] type	Pārbauda, ​​vai mainīga ir saturs ir skaitlisks, lielos, uc
+	IfEqual / IfNotEqual	Salīdzina mainīgo ar vērtību, par vienlīdzību. Sinonīms: ja Var = vērtība | ja Var <> Value.
+	IfExist / IfNotExist / FileExist	Pārbaudes esamību failu vai mapi.
+	IfGreater / IfGreaterOrEqual	Salīdzina mainīgo ar vērtību. Sinonīms: ja Var> Value | ja Var> = vērtība.
+	IfInString / IfNotInString	Pārbauda, ​​vai mainīgais satur norādīto virkni.
+	IfLess / IfLessOrEqual	Salīdzina mainīgo ar vērtību. Sinonīms: ja Var <Value | ja Vāras <= vērtība.
+	IfMsgBox	Pārbaudes, kas poga bija uzstājām lietotājs jaunāko MsgBox komandu laikā.
+	IfWinActive / IfWinNotActive	Pārbauda, ​​vai norādītais logs pastāv un pašlaik ir aktīvs (galvenokārt).
+	IfWinExist / IfWinNotExist	Pārbauda, ​​vai pastāv norādītais logs.
+	ImageSearch	Meklē reģionu ekrāna par attēlu.
+	IniDelete	Dzēš vērtību no standarta formāta Ini failu.
+	IniRead	Skan vērtību no standarta formāta Ini failu.
+	IniWrite	Raksta vērtību standarta formāta Ini failu.
+	Input	Gaida, lai lietotājs varētu tipa virkni (neatbalsta Windows 9x: tas nekas).
+	InputBox	Parāda ievades lodziņā uzdot lietotājam ievadīt virkni.
+	InsertAt	Ievieto vienu vai vairākas vērtības konkrētajā nostāju lineāru masīvs.
+	InStr	Meklē konkrētā rašanās virknes, no kreisās vai labās.
+	KeyWait	Gaida atslēgu vai peles / kursorsviru pogu, lai atbrīvo vai nospiestu.
+	Label	Etiķete identificē koda rindu, un to var izmantot kā Goto mērķi vai, lai veidotu subroutine.
+	Length	Atgriež garumu lineārajam blokam, kas sākas 1. pozīcijā.
+	ListVars	Parāda skripta mainīgos: to nosaukumus un pašreizējo saturu.
+	Ln	Atgriež dabisko logaritmu (bāze e) skaita.
+	LoadPicture	Slodzes attēlu no failu un atgriež bitkartes vai ikonu rokturi.
+	Log	Atgriež logaritmu (bāzes 10) numura.
+	Loop (files & folders)	Iegūst norādītos failus vai mapes, pa vienam.
+	Loop (normal)	Veikt virkni komandas vairākkārt: vai nu reižu noteiktu skaitu vai līdz pārtraukums ir radušās.
+	Loop (parse a string)	Iegūst apakšvirknēm (lauki) no virknes, pa vienam.
+	Loop (read file contents)	Izgūst līnijas teksta failu, viens laikā (veic labāk nekā FileReadLine).
+	Loop (registry)	Iegūst saturs norādīto reģistra apakšatslēgu, viens postenis laikā.
+	MaxIndex	Atgriež augstāko skaitlim taustiņu.
+	MinIndex	Atgriež mazāko skaitlim taustiņu.
+	Mod	Modulo. Atgriež atlikušo kad Dividenžu dala ar dalītājs.
+	MouseGetPos	Iegūst pašreizējo stāvokli peles kursoru, un pēc izvēles, kas logu un kontrolēt to ir lidinājās pār.
+	MsgBox	Parāda norādīto tekstu nelielu logu, kas satur vienu vai vairākas pogas (piemēram, jā un nē).
+	NumGet	Atgriež bināro saglabāto numuru norādītajā adresē + kompensēt.
+	NumPut	Veikali skaits binārā formātā pēc norādītās adreses + kompensēt un atgriež adresi labi no posteņa tikai rakstveida.
+	Object	Izveido skriptiem asociatīvo masīvu.
+	Ord	Atgriež kārtas vērtību (ciparu rakstzīmju kods) pirmās rakstura String.
+	OutputDebug	Nosūta virkni ar atkļūdotājs (ja tādi ir) displeju.
+	Parameter	Pievieno parametru funkciju.
+	Pause	Pauzes skripta pašreizējo pavedienu.
+	PixelGetColor	Izgūst krāsu pikseļu pie noteiktā x, y koordinātes.
+	PixelSearch	Meklē reģionu ekrāna par pikseļu norādītā krāsas.
+	Pop	Noņem un atgriež pēdējo masīva elementu.
+	PostMessage	Uzliek ziņu ziņu rindā loga vai kontroli.
+	Process	Veic vienu no šādām darbībām attiecībā uz procesu: pārbaudes, ja tā pastāv; maina prioritāti; aizver tā; gaida, lai to aizvērtu.
+	Progress	Rada vai atjaunina logu, kurā būtu progress bar.
+	Push	Appends vērtības beigām masīva.
+	Random	Rada pseidogadījuma numuru.
+	RegDelete	Izdzēš apakšatslēgu vai vērtību no reģistra.
+	RegExMatch	Nosaka, vai virkne satur modeli (regulāra izteiksme).
+	RegExReplace	Aizstāj notikumus modeli (regulāra izteiksme) iekšpusē virkni.
+	RegRead	Skan vērtību no reģistra.
+	RegWrite	Raksta vērtību reģistrā.
+	RemoveAt	Noņem preces no konkrētā pozīcijai lineārajam blokam.
+	Return	Ienākumus no subroutine uz kuru izpilde iepriekš izlēca pa funkciju-zvanu, Gosub, Hotkey aktivāciju, GroupActivate, vai citiem līdzekļiem.
+	Round	Ja N ir izlaists vai 0, skaits tiek noapaļots līdz veselam skaitlim. Ja N ir pozitīvs skaitlis, skaits tiek noapaļots līdz N cipariem aiz komata. Ja N ir negatīvs, skaits tiek noapaļots līdz N cipariem pa kreisi no komata.
+	Run	Vada ārēju programmu.
+	RunAs	Norāda kopumu lietotāja pilnvaras izmantot visiem turpmākajiem izmantošanas Run un RunWait. Nepieciešama Windows 2000 / XP vai jaunāka.
+	RunWait	Vada ārēju programmu un gaida, līdz tas beidzas.
+	Send / SendRaw	Nosūta modelētiem taustiņsitienus un peles klikšķiem uz aktīvo logu.
+	SendLevel	Kontroli, kas mākslīgie tastatūras un peles notikumi tiek ignorētas ar hotkeys un hotstrings.
+	SendMessage	Sūta ziņu loga vai kontroli un gaida apstiprinājumu.
+	SetCapslockState	Nosaka stāvokli CapsLock taustiņu. Var arī piespiestu taustiņu, lai paliktu uz vai izslēgtu.
+	SetKeyDelay	Nosaka kavēšanos, kas notiks pēc katra taustiņa nospiešanas nosūtīto nosūtīt vai ControlSend.
+	SetNumlockState	Nosaka stāvokli NumLock taustiņu. Var arī piespiestu taustiņu, lai paliktu uz vai izslēgtu.
+	SetRegView	Ļauj reģistra komandas 32 bitu skriptu, lai piekļūtu 64 bitu reģistra skatu un vice versa.
+	SetScrollLockState	Nosaka stāvokli ScrollLock taustiņu. Var arī piespiestu taustiņu, lai paliktu uz vai izslēgtu.
+	SetTimer	Izraisa subroutine tiks uzsākta automātiski un atkārtoti noteiktā laika intervālā.
+	Shutdown	Izslēdzas, restartējas, vai piesakās pie sistēmas.
+	Sin	Atgriež trigonometriskais sinuss numurs.
+	Sleep	Gaida norādīto laiku, pirms turpināt.
+	Sort	Organizē mainīgais s saturu alfabētiskā, ciparu, vai jauktā secībā (pēc izvēles noņemot dublikātus).
+	SoundBeep	Izstaro signālu no datora skaļruņa.
+	SoundGet	Iegūst dažādus iestatījumus no skaņas ierīci (meistars mēms, kapteinis apjoms, uc)
+	SoundGetWaveVolume	Izgūst vilnis izejas skaļumu no skaņas ierīci.
+	SoundPlay	Atskaņo skaņu, video vai cita atbalsta faila tipu.
+	SoundSet	Izmaiņas dažādi uzstādījumi skaņas ierīces (master mēms, kapteinis apjoms, uc)
+	SoundSetWaveVolume	Maina vilnis izejas skaļumu skaņas ierīci.
+	SplashImage	Rada vai atjaunina logu satur JPG, GIF vai BMP attēlu.
+	SplashTextOff	Aizver iepriekš logu.
+	SplashTextOn	Izveido pielāgojamu teksta uznirstošo logu.
+	SplitPath	Atdala faila nosaukumu vai URL ievešanu tās nosaukums, direktorija, pagarināšanu, un disku.
+	Sqrt	Atgriež kvadrātsakni numurs.
+	StatusBarGetText	Izgūst tekstu no standarta status bar kontroli.
+	StatusBarWait	Gaida, kamēr logs statusa josla satur norādīto virkni.
+	StringGetPos	Izgūst pozīciju noteiktā apakšvirkni laikā virkni.
+	StringLeft	Izgūst vairākas rakstzīmes no kreisajā pusē virknes.
+	StringLen / StrLen	Izgūst skaits, cik rakstzīmes ir virknē.
+	StringLower	Pārvērš virkne uz mazajiem burtiem.
+	StringMid / SubStr	Iegūst vienu vai vairākas rakstzīmes no noteiktā stāvoklī virknes.
+	StringReplace / StrReplace	Aizstāj norādīto apakšvirkni ar jaunu virkni.
+	StringRight	Izgūst vairākas rakstzīmes no labajā pusē virknes.
+	StringSplit / StrSplit	Atdala string vērā masīvu apakšvirknēm izmantojot norādīto atdalītājus.
+	StringTrimLeft	Noņem vairākas rakstzīmes no kreisajā pusē virknes.
+	StringTrimRight	Noņem vairākas rakstzīmes no labajā pusē virknes.
+	StringUpper	Pārvērš virkne uz lielajiem burtiem.
+	StrPut / StrGet	Kopē string vai no atmiņas adreses, izvēles pārvēršot to starp kodu lappuses.
+	SysGet	Iegūst ekrāna izšķirtspēju, multi-monitoru info, izmērus sistēmas objektiem, un citas sistēmas īpašības.
+	Tan	Atgriež trigonometriskais tangensu numurs.
+	ToolTip	Izveido vienmēr-on-top logs jebkurā vietā uz ekrāna.
+	Transform	Veic dažādus matemātikas funkcijas, bitu nobīde, un uzdevumus, piemēram, ASCII / Unicode konversiju.
+	TrayTip	Izveido balons ziņojuma logā pie ikonu. Nepieciešama Windows 2000 / XP vai jaunāka.
+	Trim / LTrim / RTrim	Apdares dažas rakstzīmes no paša sākuma un / vai beigās virknes.
+	Until	Piemēro nosacījumu turpināšanu cilpas vai for-cilpas.
+	UrlDownloadToFile	Lejupielādē failu no interneta.
+	UserFunction	Izveido Funkcija struktūru.
+	Variable	Piešķir norādīto vērtību mainīgā.
+	While	Veic virkni komandu atkārtoti, līdz norādīto izteiksme novērtē to nepatiesa.
+	WinActivate	Aktivizē norādīto logu (padara to kārtām).
+	WinActivateBottom	Tāds pats kā WinActivate izņemot to, ka tas aktivizē viszemākais (vismaz nesen aktīvi), kas atbilst logu nevis augšējais.
+	WinActive	Atgriež unikālu ID (hWnd) no aktīvā loga, ja tas atbilst noteiktiem kritērijiem.
+	WinClose	Aizver norādīto logu.
+	WinExist	Pārbauda, ​​vai pastāv norādītais logs.
+	WinGet	Iegūst no norādītajā loga unikālo ID, procesa ID, procesa nosaukums, vai sarakstu ar kontroli. To var iegūt arī sarakstu ar visiem logiem kas atbilst noteiktajiem kritērijiem.
+	WinGetClass	Iegūst no norādītajā loga klases nosaukumu.
+	WinGetPos	Izgūst pozīciju un lielumu norādīto loga.
+	WinGetText	Izgūst tekstu no norādītā loga.
+	WinGetTitle	Izgūst titulu norādīto loga.
+	WinHide	Paslēpj norādīto logu.
+	WinHttpDownloadToFile	Lejupielādes vienu vai vairākus failus no interneta.
+	WinKill	Liek norādītais logs slēgt.
+	WinMaximize	Palielina norādīto logu tās maksimālo izmēru.
+	WinMenuSelectItem	Atsaucas uz izvēlnes vienumu no izvēlnes joslā norādītā loga.
+	WinMinimize	Sabrūk norādīto logu pogu uz uzdevumu joslā.
+	WinMinimizeAll	Samazina visus logus.
+	WinMinimizeAllUndo	Apvērš efektu iepriekšējā WinMinimizeAll.
+	WinMove	Maina stāvokli un / vai izmēru no norādītās loga.
+	WinRestore	Unminimizes vai unmaximizes norādīto logu, ja tas ir maksimāli samazināti vai maksimālas.
+	WinSet	Padara dažādus izmaiņām norādītajā logā, piemēram, "vienmēr uz augšu" un pārredzamību.
+	WinSetTitle	Maina nosaukumu norādīto loga.
+	WinShow	Unhides norādīto logu.
+	WinWait	Gaida, kamēr pastāv norādītais logs.
+	WinWaitActive	Gaida, kamēr ir aktīvs norādītais logs.
+	WinWaitClose	Gaida, kamēr norādīts logs neeksistē.
+	WinWaitNotActive	Gaida, kamēr norādīto logs nav aktīvs.
+	Zip / UnZip	Komprese vai atspiest vienu vai vairākus zip failus.
+	WinExist	Pārbauda, ​​vai pastāv norādītais logs.
+	WinGet	Iegūst no norādītajā loga unikālo ID, procesa ID, procesa nosaukums, vai sarakstu ar kontroli. To var iegūt arī sarakstu ar visiem logiem kas atbilst noteiktajiem kritērijiem.
+	WinGetClass	Iegūst no norādītajā loga klases nosaukumu.
+	WinGetPos	Izgūst pozīciju un lielumu norādīto loga.
+	WinGetText	Izgūst tekstu no norādītā loga.
+	WinGetTitle	Izgūst titulu norādīto loga.
+	WinHide	Paslēpj norādīto logu.
+	WinHttpDownloadToFile	Lejupielādes vienu vai vairākus failus no interneta.
+	WinKill	Liek norādītais logs slēgt.
+	WinMaximize	Palielina norādīto logu tās maksimālo izmēru.
+	WinMenuSelectItem	Atsaucas uz izvēlnes vienumu no izvēlnes joslā norādītā loga.
+	WinMinimize	Sabrūk norādīto logu pogu uz uzdevumu joslā.
+	WinMinimizeAll	Samazina visus logus.
+	WinMinimizeAllUndo	Apvērš efektu iepriekšējā WinMinimizeAll.
+	WinMove	Maina stāvokli un / vai izmēru no norādītās loga.
+	WinRestore	Unminimizes vai unmaximizes norādīto logu, ja tas ir maksimāli samazināti vai maksimālas.
+	WinSet	Padara dažādus izmaiņām norādītajā logā, piemēram, "vienmēr uz augšu" un pārredzamību.
+	WinSetTitle	Maina nosaukumu norādīto loga.
+	WinShow	Unhides norādīto logu.
+	WinWait	Gaida, kamēr pastāv norādītais logs.
+	WinWaitActive	Gaida, kamēr ir aktīvs norādītais logs.
+	WinWaitClose	Gaida, kamēr norādīts logs neeksistē.
+	WinWaitNotActive	Gaida, kamēr norādīto logs nav aktīvs.
+	Zip / UnZip	Komprese vai atspiest vienu vai vairākus zip failus.

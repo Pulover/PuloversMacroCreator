@@ -1,0 +1,1443 @@
+﻿Lang_hu
+		
+		; Hungarian
+		
+; 01. Main Menu		
+	m_Lang001 =	&Fájl
+	m_Lang002 =	&Macro
+	m_Lang003 =	&Parancsok
+	m_Lang004 =	F&unkció
+	m_Lang005 =	&Szerkeszt
+	m_Lang006 =	&Választ
+	m_Lang007 =	&Kilátás
+	m_Lang008 =	&Opciók
+	m_Lang009 =	&Adományoz
+	m_Lang010 =	S&egítség
+		
+; 02. File Sub Menu		
+	f_Lang001 =	&Új
+	f_Lang002 =	&Nyitva
+	f_Lang003 =	&Kivéve
+	f_Lang004 =	&Mentés másként
+	f_Lang005 =	Ú&jabb Kép
+	f_Lang006 =	&Exportálás AHK
+	f_Lang007 =	&Preview Script
+	f_Lang008 =	&Szerkeszteni Script
+	f_Lang009 =	Mene&trend MakróK
+	f_Lang010 =	&Listaváltozókra
+	f_Lang011 =	K&ijárat
+	f_Lang012 =	Nin&cs kép
+		
+; 03. Macro Sub Menu		
+	r_Lang001 =	&Makró rögzítése
+	r_Lang002 =	&Aktiválása Makrók
+	r_Lang003 =	&Játssz Current Macro
+	r_Lang004 =	&Időzítő
+	r_Lang005 =	&Kikapcsolása Makrók
+	r_Lang006 =	&Lejátszás kiválasztott sor
+	r_Lang007 =	J&átssz, amíg a kijelölt sor
+	r_Lang008 =	L&ejátszás kijelölt sorok
+	r_Lang009 =	&Context Sensitive gyorsbillentyűk
+	r_Lang010 =	Ke&dvencek Macro
+	r_Lang011 =	&Bezárás Macro
+	r_Lang012 =	I&smétlődő Macro
+	r_Lang013 =	S&zerkeszteni Makrók
+	r_Lang014 =	Im&port Macro
+	r_Lang015 =	Me&ntse el az aktuális makró
+		
+; 04. Function Sub Menu		
+	u_Lang001 =	&Hozzon létre Funkció
+	u_Lang002 =	&Add Paraméter
+	u_Lang003 =	A&dd vissza
+	u_Lang004 =	&Convert Makró működéséhez
+		
+; 05. Commands Sub Menu		
+	i_Lang001 =	&Egér
+	i_Lang002 =	&Szöveg
+	i_Lang003 =	&Irányítsd
+	i_Lang004 =	S&zünet
+	i_Lang005 =	&Message Box
+	i_Lang006 =	&Kulcs Várakozás
+	i_Lang007 =	&Ablak
+	i_Lang008 =	K&ép / Pixel Search
+	i_Lang009 =	&Run / Fájl / String / Misc.
+	i_Lang010 =	&Hurok
+	i_Lang011 =	Me&gy / Label
+	i_Lang012 =	Se&t timer
+	i_Lang013 =	Ha &Nyilatkozatok
+	i_Lang014 =	&Változók / Tömbök
+	i_Lang015 =	&Funkciók / Array módszerek
+	i_Lang016 =	K&üldjön e-mailt
+	i_Lang017 =	F&ájlok letöltése
+	i_Lang018 =	Zi&p / Unzip fájlok
+	i_Lang019 =	Internet E&xplorer
+	i_Lang020 =	Kife&jezés / COM Interface
+	i_Lang021 =	A &Windows Üzenetek
+	i_Lang022 =	Keresse meg a paran&csot
+		
+; 06. Edit Sub Menu		
+	e_Lang001 =	&Másolat
+	e_Lang002 =	M&egjegyzés szerkesztése
+	e_Lang003 =	&Keresés / Csere
+	e_Lang004 =	M&ásolás...
+	e_Lang005 =	K&ibont
+	e_Lang006 =	&Helyrehoz
+	e_Lang007 =	&Vágott
+	e_Lang008 =	Má&solás
+	e_Lang009 =	&Paszta
+	e_Lang010 =	&Töröl
+	e_Lang011 =	&Felköltözik
+	e_Lang012 =	&Lefelé
+	e_Lang013 =	&Beszúrás box
+	e_Lang014 =	Be &Gombnyomás
+	e_Lang015 =	S&zerkesztés színvédjegy
+	e_Lang016 =	&Csoportok
+	e_Lang017 =	&Engedélyezze csoportok
+	e_Lang018 =	&Add csoport
+	e_Lang019 =	&Csoport eltávolítása
+	e_Lang020 =	&Vegye ki az összes csoport
+	e_Lang021 =	&Mindet összecsuk
+	e_Lang022 =	A&z összes kibontása
+		
+; 07. Select Sub Menu		
+	s_Lang001 =	&Az összes kijelölése
+	s_Lang002 =	&Válassza a None
+	s_Lang003 =	&Invert Selection
+	s_Lang004 =	&Ellenőrizze Kiválasztott
+	s_Lang005 =	&Törölje Kiválasztott
+	s_Lang006 =	I&nvert Ellenőrzések
+	s_Lang007 =	&Mozog Kiválasztás Felfelé
+	s_Lang008 =	M&ozog Lefelé Kiválasztás
+	s_Lang009 =	&Kiválasztott típus
+	s_Lang010 =	Command típus
+		
+; 08. View Sub Menu		
+	v_Lang001 =	&Mindig a tetején
+	v_Lang002 =	&Kiemelés Sorok
+	v_Lang003 =	&Behúzás
+	v_Lang004 =	&Ellenőrzés Eszköztár
+	v_Lang005 =	E&lőnézet
+	v_Lang006 =	E&szköztárak
+	v_Lang007 =	&Gyorsbillentyűk
+	v_Lang008 =	Ke&resősáv
+	v_Lang009 =	&Visszaállítás oszlopok méret
+	v_Lang010 =	&Ikonok MéRete
+	v_Lang011 =	&Törlés Layout
+	v_Lang012 =	Res&zelő
+	v_Lang013 =	R&ögzítése és lejátszása
+	v_Lang014 =	&Parancsok
+	v_Lang015 =	Szerkeszt
+	v_Lang016 =	Le&hetőségek
+	v_Lang017 =	Testresz&abása
+	v_Lang018 =	A&utomatikus
+	v_Lang019 =	K&ézi
+	v_Lang020 =	Meg&áll
+	v_Lang021 =	Sz&ünet
+	v_Lang022 =	&Kompakt
+	v_Lang023 =	&Legjobban Illeszkedő
+	v_Lang024 =	&Alapértelmezett
+	v_Lang025 =	Ki&csi
+	v_Lang026 =	&Nagy
+		
+; 09. Options Sub Menu		
+	o_Lang001 =	&Beállítások
+	o_Lang002 =	&Tálcára
+	o_Lang003 =	&Kijelző vezérlők eszköztár
+	o_Lang004 =	&Capture gombot megnyomja ebben az ablakban
+	o_Lang005 =	&Gyorsbillentyűk Mindig Aktív
+	o_Lang006 =	&shutdown lehetőségek (Ha a lejátszás befejeződik...)
+	o_Lang007 =	C&ontext Sensitive gyorsbillentyűk
+	o_Lang008 =	&Adja hozzá a Windows billentyű a "Play" gyorsbillentyű
+	o_Lang009 =	&Használjon joystick gombot hotkey
+	o_Lang010 =	S&et As Default gyorsbillentyűk
+	o_Lang011 =	A&z Alapértelmezett Beállítás Fájl
+	o_Lang012 =	E&ltávolítása Alapértelmezett fájl
+	o_Lang013 =	Ala&pértelmezett gyorsbillentyűk
+	o_Lang014 =	Alap&értelmezett beállítások
+		
+; 10. Donate Sub Menu		
+	p_Lang001 =	&PayPal adomány
+		
+; 11. Help Sub Menu		
+	h_Lang001 =	&Segítség
+	h_Lang002 =	&Oktatóanyagok
+	h_Lang003 =	&Tippek
+	h_Lang004 =	&Makró Creator Főoldal
+	h_Lang005 =	&Fórum
+	h_Lang006 =	&AHK Online dokumentáció
+	h_Lang007 =	&Ellenőrizze a frissítéseket...
+	h_Lang008 =	E&llenőrizze indításkor
+	h_Lang009 =	&Ról
+		
+; 12. Tray Menu		
+	y_Lang001 =	Ablak elrejtése
+	y_Lang002 =	Ablak megjelenítése
+	y_Lang003 =	Ellenőrzés Eszköztár
+		
+; 13. Built-in Vars Menu		
+	b_Lang001 =	speciális karakterek
+	b_Lang002 =	Tulajdonságok
+	b_Lang003 =	Dátum és idő
+	b_Lang004 =	Felhasználó Idle idő
+	b_Lang005 =	Rendszer és felhasználói
+	b_Lang006 =	Misc.
+	b_Lang007 =	Hurok
+		
+; 14. Main Window		
+	w_Lang001 =	Export
+	w_Lang002 =	Előnézet
+	w_Lang003 =	Opciók
+	w_Lang004 =	Rekord
+	w_Lang005 =	Játék
+	w_Lang006 =	Visszajátszás
+	w_Lang007 =	Kézi
+	w_Lang008 =	Megáll
+	w_Lang009 =	Kijelző vezérlők eszköztár
+	w_Lang010 =	Szünet
+	w_Lang011 =	Hurok
+	w_Lang012 =	Capture gombot megnyomja ebben az ablakban
+	w_Lang013 =	Tálcára
+	w_Lang014 =	Gyorsbillentyűk Mindig Aktív
+	w_Lang015 =	Ismétlés
+	w_Lang016 =	Delay (ms)
+	w_Lang017 =	Alkalmaz
+	w_Lang018 =	Beszúrása
+	w_Lang019 =	Szerkeszt
+	w_Lang020 =	shutdown lehetőségek (Ha a lejátszás befejeződik...)
+	w_Lang021 =	Ne tegyen semmit
+	w_Lang022 =	Bezár alkalmazás
+	w_Lang023 =	Állítsa le
+	w_Lang024 =	Állítsa le (erő)
+	w_Lang025 =	Reboot
+	w_Lang026 =	Kijelentkezés
+	w_Lang027 =	Téli álmot alszik
+	w_Lang028 =	Felfüggeszt
+	w_Lang029 =	Lock számítógép
+	w_Lang030 =	Index
+	w_Lang031 =	Akció
+	w_Lang032 =	Részletek
+	w_Lang033 =	Ismétlés
+	w_Lang034 =	Késedelem
+	w_Lang035 =	Típus
+	w_Lang036 =	Irányítsd
+	w_Lang037 =	Ablak
+	w_Lang038 =	Megjegyzés
+	w_Lang039 =	Szín
+	w_Lang040 =	Új (Ctrl+N)
+	w_Lang041 =	Open (Ctrl+O)
+	w_Lang042 =	Mentés (Ctrl+S)
+	w_Lang043 =	Mentés másként (Ctrl+Shift+S)
+	w_Lang044 =	Exportálás AHK (Ctrl+E)
+	w_Lang045 =	Preview Script (Ctrl+P)
+	w_Lang046 =	Settings (Ctrl+G)
+	w_Lang047 =	Makró rögzítése (Ctrl+R)
+	w_Lang048 =	Activate makrók (Ctrl+Enter)
+	w_Lang049 =	Játssz Current Macro (Ctrl+Shift+Enter)
+	w_Lang050 =	Timer (Ctrl+Shift+T)
+	w_Lang051 =	Mouse (F2)
+	w_Lang052 =	Text (F3)
+	w_Lang053 =	Szerkeszteni Makrók (Ctrl+Shift+M)
+	w_Lang054 =	Control (F4)
+	w_Lang055 =	Szünet (F5)
+	w_Lang056 =	Message Box (Shift+F5)
+	w_Lang057 =	Kulcs Várakozás (Ctrl+F5)
+	w_Lang058 =	Window (F6)
+	w_Lang059 =	Image / Pixel Search (F7)
+	w_Lang060 =	Run / Fájl / String / Misc. (F8)
+	w_Lang061 =	Loop (F9)
+	w_Lang062 =	Megy / Label (Shift + F9)
+	w_Lang063 =	Beállított Időzítő (Ctrl + F9)
+	w_Lang064 =	Ha a nyilatkozatok (F10)
+	w_Lang065 =	Változók / Tömbök (Shift+F10)
+	w_Lang066 =	Függvények / Array módszerek (Ctrl+F10)
+	w_Lang067 =	Küldjön e-mailt (F11)
+	w_Lang068 =	Fájlok letöltése (Shift+F11)
+	w_Lang069 =	Zip / Unzip fájlok (Ctrl+F11)
+	w_Lang070 =	Internet Explorer (F12)
+	w_Lang071 =	Kifejezés / COM Interface (Shift+F12)
+	w_Lang072 =	A Windows üzenetek (Ctrl+F12)
+	w_Lang073 =	Kedvencek Macro (Ctrl+T)
+	w_Lang074 =	Bezárás Macro (Ctrl+W)
+	w_Lang075 =	Ismétlődő Macro (Ctrl+Shift+D)
+	w_Lang076 =	Import Macro (Ctrl+I)
+	w_Lang077 =	Save Current Macro (Ctrl+Alt+S)
+	w_Lang078 =	Move Up (Ctrl+PageUp)
+	w_Lang079 =	Lejjebb (Ctrl+PageDown)
+	w_Lang080 =	Kijelölt sorok másolása (Ctrl+D)
+	w_Lang081 =	Vágott Kiválasztott sorok (Ctrl+X)
+	w_Lang082 =	Kijelölt sorok másolása (Ctrl+C)
+	w_Lang083 =	Paste másolt sorok (Ctrl+V)
+	w_Lang084 =	A kijelölt sorok törlése (Del)
+	w_Lang085 =	Visszavonás (Ctrl+Z)
+	w_Lang086 =	Ismét (Ctrl+Y)
+	w_Lang087 =	Másolás...
+	w_Lang088 =	Keresés / Csere (Ctrl+F)
+	w_Lang089 =	Beszúrása / Megjegyzés szerkesztése (Ctrl+L)
+	w_Lang090 =	Szerkesztés színvédjegy (Ctrl+M)
+	w_Lang091 =	Testreszabása
+	w_Lang092 =	Keresse meg a parancsot (Ctrl+Shift+F)
+	w_Lang093 =	Szerkeszt (Enter)
+	w_Lang094 =	Elrejt
+	w_Lang095 =	Áthelyezés ide
+	w_Lang096 =	Másolás ide
+	w_Lang097 =	csoportok
+	w_Lang098 =	Engedélyezze csoportok (Ctrl+Shift+G)
+	w_Lang099 =	Add csoport (Ctrl+Shift+Y)
+	w_Lang100 =	Csoport eltávolítása (Ctrl+Shift+R)
+	w_Lang101 =	Vegye ki az összes csoport
+	w_Lang102 =	Csoportok szerkesztése
+	w_Lang103 =	Csoport név
+	w_Lang104 =	Hozzon funkció (Ctrl+Shift+U)
+	w_Lang105 =	Add Paraméter (Ctrl+Shift+P)
+	w_Lang106 =	Add Return (Ctrl+Shift+N)
+	w_Lang107 =	Convert Makró Function (Ctrl+Shift+C)
+	w_Lang108 =	Hozzászólás ki ellenőrizetlenül sorok
+	w_Lang109 =	Adja hozzá a Windows billentyű a "Play" gyorsbillentyű
+	w_Lang110 =	Használjon joystick gombot hotkey
+	w_Lang111 =	Keresés... (Nyomja meg az Enter menni)
+		
+; 15. Command Windows		
+	c_Lang001 =	Egér
+	c_Lang002 =	Szöveg
+	c_Lang003 =	Szünet
+	c_Lang004 =	Irányítsd
+	c_Lang005 =	Ablak
+	c_Lang006 =	Image Search
+	c_Lang007 =	Pixel Search
+	c_Lang008 =	Run / Fájl / String / Misc.
+	c_Lang009 =	Nyilatkozatok
+	c_Lang010 =	Változók
+	c_Lang011 =	Függvények / Array módszerek
+	c_Lang012 =	Internet Explorer
+	c_Lang013 =	Kifejezés / COM Interface
+	c_Lang014 =	Select Application (Advanced)
+	c_Lang015 =	Üzenet
+	c_Lang016 =	Irányítsd
+	c_Lang017 =	Késedelem
+	c_Lang018 =	Ezredmásodperc
+	c_Lang019 =	Másodperc
+	c_Lang020 =	Rendben
+	c_Lang021 =	Töröl
+	c_Lang022 =	Közeli
+	c_Lang023 =	Másolás
+	c_Lang024 =	Töröl
+	c_Lang025 =	Használja a % változók, például: %Clipboard%
+	c_Lang026 =	Akció
+	c_Lang027 =	Kattintson a
+	c_Lang028 =	Mozog
+	c_Lang029 =	Mozgás És Kattintson
+	c_Lang030 =	Wheel Up
+	c_Lang031 =	Kerék Csökkenő
+	c_Lang032 =	Drag And Drop
+	c_Lang033 =	Koordináták
+	c_Lang034 =	Keresés
+	c_Lang035 =	Alparancs
+	c_Lang036 =	Relatív
+	c_Lang037 =	Gomb
+	c_Lang038 =	Bal
+	c_Lang039 =	Jobbra
+	c_Lang040 =	Középső
+	c_Lang041 =	X1
+	c_Lang042 =	X2
+	c_Lang043 =	Tartás / release
+	c_Lang044 =	Kattintson a gróf
+	c_Lang045 =	Plain Text (Raw)
+	c_Lang046 =	Szöveg parancsok
+	c_Lang047 =	Beillesztés a vágólapról
+	c_Lang048 =	Beillesztés Ellenőrző
+	c_Lang049 =	Set Text
+	c_Lang050 =	Szünet hozzáadása
+	c_Lang051 =	Message Box
+	c_Lang052 =	Vár a kulcsfontosságú
+	c_Lang053 =	Várj Timeout
+	c_Lang054 =	(Ezredmásodperc) 0 = végtelen
+	c_Lang055 =	Parancs
+	c_Lang056 =	Érték
+	c_Lang057 =	Kimeneti Változó
+	c_Lang058 =	Pozíció
+	c_Lang059 =	Méret
+	c_Lang060 =	4 változó jön létre ezt az előtagot, és befejezve X, Y, W, H.
+	c_Lang061 =	Indul
+	c_Lang062 =	Vég
+	c_Lang063 =	Kép
+	c_Lang064 =	Pixel
+	c_Lang065 =	Gyártó Screenshot
+	c_Lang066 =	Kulcs Várakozás
+	c_Lang067 =	Ha talált
+	c_Lang068 =	Ha nem talált / Error
+	c_Lang069 =	kimeneti változókat
+	c_Lang070 =	Coord
+	c_Lang071 =	Változatok
+	c_Lang072 =	Előnézet
+	c_Lang073 =	Hurok
+	c_Lang074 =	Automatikusan létrehozhat COM objektum
+	c_Lang075 =	Szünet
+	c_Lang076 =	Folytatódik
+	c_Lang077 =	Goto
+	c_Lang078 =	Ugrás Label
+	c_Lang079 =	Címke
+	c_Lang080 =	Add Label
+	c_Lang081 =	String (InputVar)
+	c_Lang082 =	Változó
+	c_Lang083 =	Más
+	c_Lang084 =	Hozzárendelése Változó
+	c_Lang085 =	Tartalom
+	c_Lang086 =	Operátor
+	c_Lang087 =	Kifejezés
+	c_Lang088 =	Visszaállítás
+	c_Lang089 =	Funkció neve
+	c_Lang090 =	Vesszővel elválasztott paraméterek (zárójel nélkül)
+	c_Lang091 =	A kifejezések formátumban
+	c_Lang092 =	Oldalelem / Index
+	c_Lang093 =	Készlet
+	c_Lang094 =	Kap
+	c_Lang095 =	Módszer
+	c_Lang096 =	Ingatlan
+	c_Lang097 =	Várja meg az oldal betöltése.
+	c_Lang098 =	CLSID
+	c_Lang099 =	Csatlakozás
+	c_Lang100 =	Fogantyú
+	c_Lang101 =	COM Script
+	c_Lang102 =	Üzenet száma
+	c_Lang103 =	Speciális gombok
+	c_Lang104 =	Browser Back
+	c_Lang105 =	Böngésző Forward
+	c_Lang106 =	Böngésző frissítése
+	c_Lang107 =	Böngésző STOP
+	c_Lang108 =	Browser Search
+	c_Lang109 =	Browser Kedvencek
+	c_Lang110 =	Böngésző Főoldal
+	c_Lang111 =	Média
+	c_Lang112 =	Mikrofon
+	c_Lang113 =	Hangerő Fel
+	c_Lang114 =	Hangerő Le
+	c_Lang115 =	Lejátszás / Szünet
+	c_Lang116 =	Következő műsorszám
+	c_Lang117 =	Előző szám
+	c_Lang118 =	Stop
+	c_Lang119 =	E-mail
+	c_Lang120 =	App 1
+	c_Lang121 =	App 2
+	c_Lang122 =	ScanCode
+	c_Lang123 =	Hozzáad
+	c_Lang124 =	Key History
+	c_Lang125 =	Írja be a ScanCode...
+	c_Lang126 =	Code adunk virtuális Keys listája!
+	c_Lang127 =	Írjon be egy nevet a változónak
+	c_Lang128 =	A funkció a külső fájl
+	c_Lang130 =	Ismételje addig, amíg
+	c_Lang131 =	Alkalmaz
+	c_Lang132 =	Hurok
+	c_Lang133 =	Fájl
+	c_Lang134 =	Elemez
+	c_Lang135 =	Olvas
+	c_Lang136 =	Iktató Hivatal
+	c_Lang137 =	Fájl Típus:
+	c_Lang138 =	Könyvtárak
+	c_Lang139 =	Rekurzív
+	c_Lang140 =	Bemeneti Változó:
+	c_Lang141 =	Határoló:
+	c_Lang142 =	Kihagyja Karakter:
+	c_Lang143 =	Bemeneti Fájl:
+	c_Lang144 =	Gyökér Kulcs\Kulcs:
+	c_Lang145 =	Fájlok
+	c_Lang146 =	Kulcsok
+	c_Lang147 =	Ikon
+	c_Lang148 =	Nincs ikon
+	c_Lang149 =	Hiba
+	c_Lang150 =	Kérdés
+	c_Lang151 =	Felkiáltás
+	c_Lang152 =	Információ
+	c_Lang153 =	Mindig a tetején
+	c_Lang154 =	Perc
+	c_Lang155 =	Amíg
+	c_Lang156 =	Forgatókönyv
+	c_Lang157 =	Script Language
+	c_Lang158 =	Nem kompatibilis a 64-bit!
+	c_Lang159 =	Keresési beállítások
+	c_Lang160 =	Átlátszó
+	c_Lang161 =	Skála
+	c_Lang162 =	Hozzá "If"
+	c_Lang163 =	Küldje Mód
+	c_Lang164 =	Egyenlő
+	c_Lang165 =	Tartalmaz
+	c_Lang166 =	Nagyobb
+	c_Lang167 =	Kevesebb
+	c_Lang168 =	Igen
+	c_Lang169 =	Nincs
+	c_Lang170 =	Rendben
+	c_Lang171 =	Mégsem
+	c_Lang172 =	Elvetél
+	c_Lang173 =	Figyelmen kívül hagy
+	c_Lang174 =	Újra
+	c_Lang175 =	Folytatódik
+	c_Lang176 =	Próbálja újra
+	c_Lang177 =	Timeout
+	c_Lang178 =	Set leütés késleltetést
+	c_Lang179 =	Key késleltetés
+	c_Lang180 =	Random késleltetés
+	c_Lang181 =	Minimális
+	c_Lang182 =	Maximális
+	c_Lang183 =	Letiltása véletlen késedelmek a parancs
+	c_Lang184 =	Válassza ki a listából
+	c_Lang185 =	Gombok
+	c_Lang186 =	Első
+	c_Lang187 =	Második
+	c_Lang188 =	Harmadik
+	c_Lang189 =	Cím
+	c_Lang190 =	Ha aktív ablak
+	c_Lang191 =	Ha ablak nem aktív
+	c_Lang192 =	Ha ablak van
+	c_Lang193 =	Ha ablak nem létezik
+	c_Lang194 =	Ha a fájl létezik
+	c_Lang195 =	Ha a fájl nem létezik
+	c_Lang196 =	Ha a vágólap tartalmát
+	c_Lang197 =	Ha a hurok index
+	c_Lang198 =	Ha a kép/pixel található
+	c_Lang199 =	Ha a kép/pixel nem található
+	c_Lang200 =	Ha a szöveg tartalmaz
+	c_Lang201 =	Ha szöveg nem tartalmaz
+	c_Lang202 =	Ha az üzenet box
+	c_Lang203 =	Hasonlítsa össze a változókat
+	c_Lang204 =	Értékelje kifejezés
+	c_Lang205 =	Vidék
+	c_Lang206 =	(A [] létrehozni tömbök, pl .: [10, 20, aVariable, "aString"])
+	c_Lang207 =	Tömbobjektumok
+	c_Lang208 =	Kulcs neve
+	c_Lang209 =	érték neve
+	c_Lang210 =	értékek
+	c_Lang211 =	Sor
+	c_Lang212 =	Felhasználó által definiált függvény
+	c_Lang213 =	Funkció Paraméter
+	c_Lang214 =	Függvény visszatérési
+	c_Lang215 =	Paraméterek
+	c_Lang216 =	Visszatérési érték
+	c_Lang217 =	Alapértelmezett érték
+	c_Lang218 =	Scope
+	c_Lang219 =	Helyi
+	c_Lang220 =	Globális
+	c_Lang221 =	Név
+	c_Lang222 =	Akkor még több paramétert a Funkció menüből.
+	c_Lang223 =	Globális változók
+	c_Lang224 =	Lokális változók
+	c_Lang225 =	Statikus változók
+	c_Lang226 =	Ból ből
+	c_Lang227 =	Email
+	c_Lang228 =	Tantárgy
+	c_Lang229 =	Üzenet
+	c_Lang230 =	Karşı
+	c_Lang231 =	CC
+	c_Lang232 =	TITKOS
+	c_Lang233 =	F2 szerkeszteni
+	c_Lang234 =	HTML
+	c_Lang235 =	Küldjön e-mailt
+	c_Lang236 =	Fájlok letöltése
+	c_Lang237 =	Zip / Unzip fájlok
+	c_Lang238 =	Bekapcsol
+	c_Lang239 =	Kikapcsolni
+	c_Lang240 =	nyilvántartott pozíciók.
+	c_Lang241 =	Az összes törlése időzítő
+	c_Lang242 =	Set timer
+	c_Lang243 =	Jobb indokolt
+	c_Lang244 =	Jobbról balra
+	c_Lang245 =	Mellékletek
+	c_Lang246 =	Pálya
+	c_Lang247 =	Ha
+	c_Lang248 =	Tömöríteni minden fájlt egy másik archív
+	c_Lang249 =	Kivonat minden fájlt egy másik mappába
+	c_Lang250 =	Zip fájlok
+	c_Lang251 =	Unzip fájlok
+	c_Lang252 =	Letöltési linkek
+	c_Lang253 =	Célmappa
+	c_Lang254 =	Célfájl
+	c_Lang255 =	Elválasztott pontosvessző, vessző vagy vonal.
+	c_Lang256 =	Állítsa a koordináták a kép közepén
+	c_Lang257 =	Időszak
+		
+; 16. Other Windows		
+	t_Lang001 =	Exportálás AutoHotkey
+	t_Lang002 =	Makrók
+	t_Lang003 =	Loops
+	t_Lang004 =	0 = végtelen
+	t_Lang005 =	Használja Hotstring
+	t_Lang006 =	Blokk Mouse
+	t_Lang007 =	Minden
+	t_Lang008 =	Egyik sem
+	t_Lang009 =	Context Sensitive gyorsbillentyűk
+	t_Lang010 =	Exportálás
+	t_Lang011 =	Behúzás
+	t_Lang012 =	Beleértve a PMC-kód
+	t_Lang013 =	Ne összefűzni Küldés parancsokat
+	t_Lang014 =	Felfrissít
+	t_Lang015 =	Auto-Refresh
+	t_Lang016 =	Mindig a tetején
+	t_Lang017 =	Beállítások
+	t_Lang018 =	Általános
+	t_Lang019 =	Start / Stop Record
+	t_Lang020 =	Új makró rögzítése
+	t_Lang021 =	Keystrokes
+	t_Lang022 =	Felvétel
+	t_Lang023 =	Elfog kulcsfontosságú állami (le / fel)
+	t_Lang024 =	Egérkattintással
+	t_Lang025 =	Mouse Wheel
+	t_Lang026 =	Mouse Moves
+	t_Lang027 =	Időzített intervallumok
+	t_Lang028 =	Minimális késleltetés
+	t_Lang029 =	Window osztályok
+	t_Lang030 =	Window Titles
+	t_Lang031 =	Record ControlSend
+	t_Lang032 =	Record ControlClick
+	t_Lang033 =	Relatív record gombot
+	t_Lang034 =	Toggle
+	t_Lang035 =	Visszajátszás
+	t_Lang036 =	Felgyorsul
+	t_Lang037 =	Lelassít
+	t_Lang038 =	Visszatérés Mouse után a lejátszás
+	t_Lang039 =	Mouse Koordináták
+	t_Lang040 =	Ablak
+	t_Lang041 =	Képernyő
+	t_Lang042 =	Default Mouse késleltetés
+	t_Lang043 =	Alapértelmezett ablak késleltetés
+	t_Lang044 =	Max History per Macro
+	t_Lang045 =	Előzmények Törlése
+	t_Lang046 =	Képernyőképek
+	t_Lang047 =	Döntetlen gomb
+	t_Lang048 =	Vonal Szélesség (Px)
+	t_Lang049 =	Capture bocsátható
+	t_Lang050 =	Nyomja meg az Entert, hogy elfog
+	t_Lang051 =	Képernyőképek Directory
+	t_Lang052 =	Sortörés
+	t_Lang053 =	Gyorsbillentyűk
+	t_Lang054 =	Set As Default gyorsbillentyűk
+	t_Lang055 =	Letiltása Window parancsikonok
+	t_Lang056 =	Visszaállítás oszlopok méret
+	t_Lang057 =	Alapértelmezett Makró fájl
+	t_Lang058 =	Normál Library fájl
+	t_Lang059 =	Használja Expression alapértelmezés szerint változók kiosztása
+	t_Lang060 =	Jelölje ki hurkok és nyilatkozatok
+	t_Lang061 =	(Kattintson az Index fejlécére engedélyezés / letiltás)
+	t_Lang062 =	Virtuális Keys
+	t_Lang063 =	Alapértelmezett
+	t_Lang064 =	Megjegyzés szerkesztése
+	t_Lang065 =	Megjegyzés
+	t_Lang066 =	Keresés oszlop
+	t_Lang067 =	Keresés / Csere
+	t_Lang068 =	&Talál
+	t_Lang069 =	&Match Case
+	t_Lang070 =	&Cserélje
+	t_Lang071 =	Talált
+	t_Lang072 =	Felváltotta
+	t_Lang073 =	&Kijelölt sorok
+	t_Lang074 =	M&inden Sorok
+	t_Lang075 =	Mi&nden Makrók
+	t_Lang076 =	-Ról
+	t_Lang077 =	&Reguláris kifejezés
+	t_Lang078 =	Lejátszás egyszer
+	t_Lang079 =	Játssz minden X (katonai) másodperc
+	t_Lang080 =	Időzítő
+	t_Lang081 =	Szünet
+	t_Lang082 =	Nyilatkozatok
+	t_Lang083 =	Megjelenítés Behúzás a hurkok és nyilatkozatok
+	t_Lang084 =	(Kattintson duplán a Művelet oszlop fejlécében engedélyezés / letiltás)
+	t_Lang085 =	Kijelző vezérli bar indításkor
+	t_Lang086 =	Keresése funkciók. Kérem várjon...
+	t_Lang087 =	Beleértve a külső fájlok
+	t_Lang088 =	EXE fájl létrehozása
+	t_Lang089 =	Több példány engedélyezése
+	t_Lang090 =	Alapértékek
+	t_Lang091 =	Engedélyezése húzással sorok
+	t_Lang092 =	T&eljes cella tartalmát
+	t_Lang093 =	Szabványos INI formátum
+	t_Lang094 =	Név = érték
+	t_Lang095 =	Írja 1 változó soronként. Ön is hozzá [§].
+	t_Lang096 =	Felhasználó Globális Változók
+	t_Lang097 =	Nyomja meg a gombot a joystick
+	t_Lang098 =	Backspace törölni
+	t_Lang099 =	Gomb
+	t_Lang100 =	Kijelző buborékértesítések
+	t_Lang101 =	Sebesség
+	t_Lang102 =	Lassú
+	t_Lang103 =	Gyors
+	t_Lang104 =	Megjelenítése / elrejtése címsor
+	t_Lang105 =	Megjelenítése / elrejtése főablak
+	t_Lang106 =	Fut azonnal
+	t_Lang107 =	Random Késések
+	t_Lang108 =	Normál
+	t_Lang109 =	Lefelé
+	t_Lang110 =	Fel
+	t_Lang111 =	Be Gombnyomás
+	t_Lang112 =	Lejátszás / Szünet
+	t_Lang113 =	Megáll
+	t_Lang114 =	Lejátszási opciók
+	t_Lang115 =	Start / Stop Record
+	t_Lang116 =	Új makró rögzítése
+	t_Lang117 =	Felvételi Mód
+	t_Lang118 =	Kódolatlan List
+	t_Lang119 =	Kijelző Progress Bar
+	t_Lang120 =	Felgyorsul
+	t_Lang121 =	Lelassít
+	t_Lang122 =	Megjelenítése / elrejtése címsor
+	t_Lang123 =	Megjelenítése / elrejtése főablak
+	t_Lang124 =	Dokk
+	t_Lang125 =	Leválasztása
+	t_Lang126 =	Open
+	t_Lang127 =	Mentés
+	t_Lang128 =	Vágott
+	t_Lang129 =	Másolás
+	t_Lang130 =	Paszta
+	t_Lang131 =	Az összes kijelölése
+	t_Lang132 =	Töröl
+	t_Lang133 =	Billentyűzet
+	t_Lang134 =	Egér
+	t_Lang135 =	Egyéb
+	t_Lang136 =	Kiemelés Sorok
+	t_Lang137 =	Alapértelmezett Script Editor
+	t_Lang138 =	Nyílt külső szerkesztőben (Ctrl+Shift+E)
+	t_Lang139 =	Választ
+	t_Lang140 =	Oszlop
+	t_Lang141 =	Minden Oszlop
+	t_Lang142 =	Téma eltávolítása az Eszköztárak (újraindítást igényel)
+	t_Lang143 =	Automatikusan elrejti vezérlők eszköztárat
+	t_Lang144 =	Kattintson és húzza a változás érdekében. Kattintson duplán a szerkeszteni.
+	t_Lang145 =	Szerkeszteni Makrók
+	t_Lang146 =	Sorban
+	t_Lang147 =	Macro
+	t_Lang148 =	Action fő ablak Bezárás gombra
+	t_Lang149 =	Bezár alkalmazás
+	t_Lang150 =	Tálcára
+	t_Lang151 =	Jelenítsen meg bezárásakor a makró
+	t_Lang152 =	Létrehozása mentések automatikusan
+	t_Lang153 =	Létrehoz egy ütemezett feladatot a Windows Task Scheduler.
+	t_Lang154 =	Ideje az első futás
+	t_Lang155 =	Menetrend típus
+	t_Lang156 =	Ha||Napi|Heti|Havi|Első|bejelentkezés|Idle
+	t_Lang157 =	Cél PMC fájlt
+	t_Lang158 =	Cél AHK fájl
+	t_Lang159 =	A szkript menti, vagy felülírja az aktuális könyvtárban!
+	t_Lang160 =	Nyitott Task Scheduler
+	t_Lang161 =	Feladat sikeresen létrehozva!
+	t_Lang162 =	Hiba történt. A feladat nem hozható létre.
+	t_Lang163 =	Scheduler
+	t_Lang164 =	Menetrend MakróK
+	t_Lang165 =	Run Macro
+	t_Lang166 =	Reszelő
+	t_Lang167 =	HúR
+	t_Lang168 =	Get Info
+	t_Lang169 =	VáRjon
+	t_Lang170 =	Window Csoportok
+	t_Lang171 =	ÜZenetek
+	t_Lang172 =	Registry ÉS INI
+	t_Lang173 =	Hang
+	t_Lang174 =	VáLtozóK
+	t_Lang175 =	Misc.
+	t_Lang176 =	Add csoport
+	t_Lang177 =	új csoport
+	t_Lang178 =	Nyelvszerkesztõ
+	t_Lang179 =	Újat készíteni
+	t_Lang180 =	Az Enter, PgDn és PgUp navigálni.
+	t_Lang181 =	Submit
+	t_Lang182 =	Név
+	t_Lang183 =	Változtatások mentése?
+	t_Lang184 =	Nyelvi fájl
+	t_Lang185 =	Referencia Fájl
+	t_Lang186 =	Küldje el felülvizsgálatát vagy új fordítás
+	t_Lang187 =	Mindet összecsuk
+	t_Lang188 =	Az összes kibontása
+	t_Lang189 =	Nyelv
+	t_Lang190 =	Átalakítás sortöréseket
+	t_Lang191 =	E-mail fiókok
+	t_Lang192 =	Frissítés
+	t_Lang193 =	Kattintson duplán a szerkeszteni
+	t_Lang194 =	SMTP szerver
+	t_Lang195 =	Kikötő
+	t_Lang196 =	Hitelesít
+	t_Lang197 =	Felhasználónév
+	t_Lang198 =	Jelszó
+	t_Lang199 =	SSL
+	t_Lang200 =	Küldj mód
+	t_Lang201 =	Zaslat test
+	t_Lang202 =	Képernyő És Ablak
+	t_Lang203 =	Felismerni Rejtett Ablakok
+	t_Lang204 =	Felismerni Rejtett Szöveg
+	t_Lang205 =	Cím Egyezik Mód
+	t_Lang206 =	Cím Egyezik Sebesség
+	t_Lang207 =	Ügyfél
+	t_Lang208 =	T&alál
+	t_Lang209 =	C&serélje
+	t_Lang210 =	Ne jelenjen meg a hibákat
+		
+; 17. Messages & Dialogs		
+	d_Lang001 =	Nyitva
+	d_Lang002 =	Mentsd aktuális projektet?
+	d_Lang003 =	Alapértelmezett beállítások
+	d_Lang004 =	Macro Creator Fájlok
+	d_Lang005 =	Projekt MentéS
+	d_Lang006 =	Nem sikerült menteni / felülírni a fájlt
+	d_Lang007 =	Hiba
+	d_Lang008 =	Hiba: Nincs Makró Kiválasztott.
+		Kérjük, legalább egy makró a listán.
+	d_Lang009 =	Hiba: Nincs Hotkey Kiválasztott.
+	d_Lang010 =	Hiba: Érvénytelen cím.
+		A kiválasztott cím vagy a fájl név helytelen.
+	d_Lang011 =	Figyelmeztetés
+	d_Lang012 =	Nincs ellenőrzés kiválasztva.
+		Folytatás?
+	d_Lang013 =	Export Script
+	d_Lang014 =	Script Exportált
+	d_Lang015 =	A fájl sikeresen exportálták!
+	d_Lang016 =	Kattintson a "Get" megjelölni helyzetbe.
+	d_Lang017 =	- Válasszuk ki az ablakot.
+		- Mutasson a kívánt pozícióba.
+		- Nyomja meg a Jobbra gombot.
+	d_Lang018 =	Pixel Color
+	d_Lang019 =	Kódolatlan List
+	d_Lang020 =	Bezárás Macro?
+	d_Lang021 =	Következő
+	d_Lang022 =	Előző
+	d_Lang023 =	Üzenet
+	d_Lang024 =	Alapértelmezett beállítások betöltése?
+	d_Lang025 =	Makró (s) aktiválódik.`nA Hotkeys kell játszani.
+	d_Lang026 =	A start / stop felvétel
+	d_Lang027 =	Felvételi megállt
+	d_Lang028 =	Felvétel...
+	d_Lang029 =	megállítani
+	d_Lang030 =	kezdeni új rekord
+	d_Lang031 =	Hívjátok létező funkciót.
+	d_Lang032 =	Hiba: Duplicate Hotkeys.
+	d_Lang033 =	Aktiválása Makrók
+	d_Lang034 =	- Kattintson és húzza vele: %DrawButton% válassza területen.
+		- Kattintson, és engedje húzás nélkül válassza ellenőrzés területén.
+		- Kattintson a területen anélkül, hogy kiválassza az ablak.
+	d_Lang035 =	Folytatás?
+	d_Lang036 =	Image / Pixel Found at
+	d_Lang037 =	Image / Pixel Not Found.
+	d_Lang038 =	Nyomja meg az OK gombot a folytatáshoz.
+	d_Lang039 =	Küldés. Kérlek várj...
+	d_Lang040 =	Ez a funkció csak a GDI+ Library.
+		Kattintson az OK gombra, hogy menjen le az oldalt.
+	d_Lang041 =	A változó neve szabálytalan karaktert tartalmaz.
+	d_Lang042 =	foglalt szó.
+	d_Lang043 =	Vagy használja az ellenőrzések eszköztár
+	d_Lang044 =	Ez a funkció megköveteli a Eval() függvény.
+		Kattintson az OK gombra, hogy menjen le az oldalt.
+	d_Lang045 =	Kérjük, válasszon egy Internet Explorer ablakot!
+	d_Lang046 =	Csatlakozás sikeres!
+	d_Lang047 =	Nem sikerült csatlakozni!
+	d_Lang048 =	Helyezze a fogantyú és a CLSID.
+	d_Lang049 =	Érvénytelen cimkét.
+	d_Lang050 =	Ismétlődő címke.
+	d_Lang051 =	Lejátszásához Macro nyomja meg a megfelelő gyorsbillentyű (Auto / Man).
+	d_Lang052 =	A felvétel elindításához nyomja meg a Record Hotkey.
+	d_Lang053 =	Ne jelenjen meg többé ez az üzenet.
+	d_Lang054 =	Kérjük, válasszon egy Excel ablakot!
+	d_Lang055 =	Kérjük, válasszon egy AutoHotkey script fájlt (. AHK) és adja meg a függvény neve.
+	d_Lang056 =	Ehhez a funkcióhoz AutoHotkey telepítve.
+		Kattintson az OK gombra, hogy menjen le az oldalt.
+	d_Lang057 =	- Nyomja meg a Ctrl+nyilakkal mozgatni a kijelölt területen.
+		- Nyomja meg a Shift+nyíl billentyűk átméretezésére kijelölt terület.
+		- Nyomja meg az Entert, hogy befejezze.
+	d_Lang058 =	Egyes funkciók megkövetelik admnistrator privilages ahhoz, hogy megfelelően működjön.
+		Ez ajánlott, hogy indítsa újra az alkalmazást rendszergazdaként.
+	d_Lang059 =	Ez a parancs nem támogatja a kifejezéseket vagy funkciókat.
+		Kérjük, hozzá egy változó, és használja azt a paramétert.
+	d_Lang060 =	Az új verzió
+	d_Lang061 =	Nem most
+	d_Lang062 =	Már így is a legújabb verzióra.
+	d_Lang063 =	Hiba történt ellenőrzés.
+	d_Lang064 =	Hiba a
+	d_Lang065 =	Sor
+	d_Lang066 =	Konkrétan
+	d_Lang067 =	Mutasd az ablakban indításkor
+	d_Lang068 =	tippek:
+	d_Lang069 =	Rengeteg időt és energiát ment a fejlesztés Pulover's Macro Creator. Ha úgy találja, hogy hasznos, kérjük, fontolja mutatja meg elismerését egy adomány.
+		Ajándékozó, akár nem, nem lesz különbség a szolgáltatásokat és funkciókat.
+	d_Lang070 =	Adományoz...
+	d_Lang071 =	Nem, kösz
+	d_Lang072 =	Támogatja a nyílt forráskódú szoftverek
+	d_Lang073 =	Hiba: Érvénytelen Hotkey Kiválasztott.
+	d_Lang074 =	Keresse meg a parancs vagy funkció
+	d_Lang075 =	Welcome to Pulover's Macro Creator
+	d_Lang076 =	Kérjük, válaszd ki a preferált elrendezés
+	d_Lang077 =	Kompakt
+	d_Lang078 =	Alapértelmezett
+	d_Lang079 =	Frissítések keresése indításkor.
+	d_Lang080 =	Ezt meg lehet változtani az Opciók > Beállítások > Általános.
+	d_Lang081 =	Meg lehet változtatni, és testre elrendezést a Nézet menüben.
+	d_Lang082 =	A fájl nem található!
+	d_Lang083 =	A biztonsági mentés találtak. Szeretnéd, hogy nyissa meg?
+	d_Lang084 =	Kérjük, mentse el a módosításokat, mielőtt ütemezése a feladat.
+	d_Lang085 =	Hiányzó "End Loop" kijelentés Macro 
+	d_Lang086 =	Hiányzó "End If" kijelentés Macro
+	d_Lang087 =	Figyeljük meg, hogy a módosítások a script kívül a program nem fogja befolyásolni a makrókat semmilyen módon.
+		Ez a funkció csak azt jelentette, mint egy gyors export funkciót. PMC nem célja, hogy egy AHK script editor.
+	d_Lang088 =	Próbáld futtatni, közös felhasználói (nem rendszergazda).
+	d_Lang089 =	Nincs sorban kiválasztva!
+	d_Lang090 =	Kérjük, jelöljön ki egy sort beszúrni, vagy eltávolíthatja a csoport.
+	d_Lang091 =	Letöltést. Kérlek várj...
+	d_Lang092 =	Kis ikonok
+	d_Lang093 =	Nagy ikonok
+	d_Lang094 =	Ez a funkció csak Windows Vista vagy újabb.
+	d_Lang095 =	Használata ByRef okoz paramétert, hogy legyen egy álnevet a változó telt el a hívó fél. Más szavakkal, a paraméter, és a hívó változó mind ugyanarra a tartalmát a memóriába.
+	d_Lang096 =	- NE CSATOLNI VARIABLES SZÁZALÉKOS JELEK ITT.
+		- Vissza értéknek kell lennie egy kifejezés.
+		- Használhatja vonósok, változók, tömbök és függvények. Ön is kombinálhatja azokat.
+		- Ahhoz, hogy használni húrok, csatolja őket idézetek, pl: "Az eredmény:" a+b.
+		- Ha vissza kíván térni extra eredményeket, akkor is használhatja ByRef a paramétereket.
+		- Arrays lehet használni, hogy visszatérjen több értéket, vagy akár elemzi értékeket.
+	d_Lang097 =	- NE CSATOLNI VARIABLES SZÁZALÉKOS JELEK ITT.
+		- A legtöbb AHK kifejezések támogatottak.
+		- Használhatja vonósok, változók, tömbök és függvények.
+		- Ahhoz, hogy használni húrok, csatolja őket idézetek, pl: var = "a".
+		- Több utasítást támogat, például: var = "a" || InStr (var, "b").
+	d_Lang098 =	Ha egy paraméter alapértéke, a következő paramétereket kell is van egy.
+	d_Lang099 =	A függvény neve engedélyezett karaktert tartalmaz.
+	d_Lang100 =	Goto GOSUB és címke nem engedélyezett funkciókat.
+	d_Lang101 =	Duplikált funkció.
+	d_Lang102 =	Egy hiba történt. Akkor küldjön egy emailt a "pulover@macrocreator.com" a fájlra:
+	d_Lang103 =	Új nyelv fájl elérhető.
+	d_Lang104 =	Ez az üzenet nem jelenik meg újra ugyanazt a frissítést. Itt töltheti le a Súgó menü > Frissítések keresése.
+	d_Lang105 =	Fájl elküldése sikeres. Köszönöm!
+	d_Lang106 =	Nyelvi fájlok frissítése.
+	d_Lang107 =	Nem sikerült elindítani a timer
+	d_Lang108 =	Az összes találat van bejegyezve. Kérjük, törölje az egyiket.
+	d_Lang109 =	Cél címke nem létezik.
+	d_Lang110 =	Erősítse fájl helyére
+	d_Lang111 =	már létezik.
+		Szeretném cserélni?
+	d_Lang112 =	E-mail fiók nem található.
+	d_Lang113 =	Nem jelzett hibát.
+	d_Lang114 =	Scripts exportált (még ha össze) a send email funkció (CDO) lesz látható információk az e-mail fiókok használni, beleértve a jelszót. A PMC projekt fájl nem rendelkezik ezekkel az adatokkal.
+	d_Lang115 =	- Tartsa Alt beállítani régió ugyanazon a helyen.
+	d_Lang116 =	Transzfer és telepítése
+	d_Lang117 =	Tovább a letöltési oldalon
+	d_Lang118 =	Legjobban Illeszkedő
+	d_Lang119 =	Indítsa újra az alkalmazást változtatások alkalmazásához.
+	d_Lang120 =	Visszaállításához eszköztárak méretben, megy:
+		
+; 18. Start-up Tips		
+	Start_Tips =	Nézze meg a videót tutorials a www.macrocreator.com/help megismerni számos tulajdonságát PMC.
+		Ahhoz, hogy segítséget egy adott parancs a jobb gombbal bárhol a parancsablakban hivatkozásokat jelenít meg az online súgó.
+		Hozhat létre makrók segítségével parancsgombok a fő ablakban, vagy a felvevő másolni a tevékenységét. Válassza az Opciók> Beállítások> Felvétel kiválasztható, hogy milyen bemenetek kerülnek rögzítésre.
+		Használja a keresési sáv vagy a "Find parancsot" ablak kíván parancsokat és funkciókat.
+		Szeretné, hogy segítsen kijavítani fordítást vagy akár létre egy újat? Válassza az Opciók> Beállítások> Nyelv szerkesztő, és az esetleges javításokat szeretne. Ön megtekintheti, hogy bármikor. Kattints a Küldés gombra a felülvizsgálat. Nyugodtan Tetszőleges számú korrekciókat, ahányszor csak akar.
+		Ellenőrizze a "Capture Keys" opciót adja kulcsok és kombinációk a Macro közvetlenül a fő ablakban.
+		Adjon meg kulcsokat és kombinációk Billentyű doboz alján, majd nyomja meg a Beszúrás gombra, hogy adjunk nekik, hogy a select sorokat.
+		Használja a szerkesztés gomb alján a fő ablak beállításához ismételje meg, és késleltetheti a több sor egyszerre. Ha egy sor kiválasztott a szerkesztés funkció alkalmazni az összes sort a listában.
+		Szinte minden parancs és funkcióban és kimenetek változókat. Meg lehet rendelni saját változókat a Változók ablak (parancsok> változók / tömbök). Ahhoz, hogy használni őket belülről parancsokat zárja a változó nevét százalék jelek, pl .:% MyVar%. Ezen funkciók használni őket anélkül százalék jelek, pl .: substr (MyVar, 5).
+		Kattintson a jobb gombbal bárhol parancs ablakban könnyen be beépített változó listából.
+		Ahhoz, hogy a felvevő gyors feladatok válasszuk az Opciók> Beállítások> Felvétel és jelölje be a "List" opciót. Ezután kattintson a Felvétel gombra a fő ablakban, és használja az F10, hogy törölje a jelenlegi makro és elkezd egy újat az azonos gyorsbillentyűket. Azt is ellenőrizze a "mindig aktív" opciót a fő ablakban, hogy felvétel és lejátszás gyorsbillentyűk aktív.
+		PMC támogatja Array tárgyak és módszerek, mint AutoHotkey szkripteket. Hozhat létre tömbök sok, a legtöbb szokásos megy a változók ablakban, és ellenőrizze a "Expression" opciót, és ahhoz csatolja a zárójelbe tett értékek, pl .: [10, 20, Var, "string"]. Ön is létrehozhat nevű kulcsot, pl .: {Keya: Vara, "néhány kulcsfontosságú": "string értéke"}.
+		Funkciók használata AHK kifejezésszintaktikai. Betűs húrok kell idézőjelek közé, és a változók nem kell százalékos jeleket. Akkor más funkciók vagy tömb elemek paramétereit. Pl .: StrReplace (MyVar, myArray [ "A"], substr (OtherVar, 2, 3)).
+		Kifejezések támogatottak AutoHotkey kifejezésszintaktikai. Ahhoz, hogy használni egy kifejezés belsejében egy parancs paraméter, akkor indítsa el a százalékos jel, pl .:% substr (Var, 5).
+		A "hurok" pult tetején beállítja az összes hurok a kiválasztott makró.
+		Bármikor módosíthatja a sorban duplán kattintva, vagy kiválasztja azt, és kattintson a Szerkesztés gomb alján. Bármikor módosíthatja több kijelölt sorok használatával lehetőség a szerkesztés alján.
+		Akkor meg a saját függvényeket Function> Új funkció, és használja őket a Funkció ablak vagy kifejezések belsejében.
+		Megadhatjuk globa / local és statikus változók felhasználó által definiált függvények. A globális változók meghatározása az Opciók> Beállítások> Felhasználói globális változókat tekintjük Super Global, és mindig elérhető lesz benne funkciók, akkor is, ha definiált helyi.
+		Válasszon ki egy vagy több sort, hogy új parancsokat a tetejükön.
+		Tudod mozgatni sorok click-and-drag.
+		Kattintson duplán a tálcán az ikonra gyorsbillentyűk aktiválásához vagy leállításához lejátszás / felvétel. Kattints rá a középső gombot lejátszás közben, vagy a felvétel szüneteltetése.
+		A kivitel a makrók dolgozó AutoHotkey szkriptek vagy önálló futtatható az Export ablakot.
+		Felvételére és lejátszására egér segítségével abszolút koordinátákat válasszuk az Opciók> Beállítások> Alapbeállítások és állítsa egér koordinátáit képernyő.
+		Meg tudja nyitni, másolni, áthelyezni vagy törölni fájlokat és mappákat az egyik a parancsokat Parancsok> Futtatás / Fájl / String / Misc. Sok más hasznos parancsokat, mint például StringReplace, InputBox és MouseGetPos.
+		Rögzítéséhez lefelé és felfelé állapotában minden gomb Válassza az Opciók> Beállítások> Felvétel és jelölje be a "Rögzítés gomb állapotát (fel / le)" opciót.
+		Használhatja gyorsbillentyűk gyorsítani, lassítani lejátszás. Válassza az Opciók> Beállítások> Visszajátszás beállítani kulcsokat és a sebesség.
+		Állítsa rögzítési terület a "Make Screenshot" eszköz válasszuk az Opciók> Beállítások> Képek és válassza ki a "Press Enter Capture". Miután megrajzoltuk a téglalap használat Control + nyilakkal mozgatni a kiválasztás és a Shift + nyíl billentyűkkel méretét.
+		Gyors kijelölés: válasszon ki egy sort, majd kattintson az oszlop fejlécére kiválasztásához hasonló sorok alapján sejt szöveget, hogy az oszlop.
+		Kattintson az Index Oszlopfejléc kapcsolja On / Off Súgó Marks és színek hurkok és nyilatkozatok. Kattintson duplán a cselekvési Oszlopfejléc kapcsolja On / Off beljebb hurkok és nyilatkozatok.
+		Akkor hibakeresés makrók, a kézi Hotkey és a Play opciót a makró menüben. Azt is letilthatja akciók szüntesd őket a Macro listában.
+		Ahhoz, hogy a makrók csak a meghatározott ablak megy Macro> Context Sensitive gyorsbillentyűk.
+		Beállíthatjuk, hogy a saját globális változók kell betölteni indításkor és az exportot. Válassza az Opciók> Beállítások> Felhasználói globális változók, hogy adjunk nekik.
+		Meg lehet futtatni a fejlett funkciók, mint a substr és REGEXREPLACE a funkciók ablak (parancsok> Funkciók / Array módszerek). Azt is meghatározhatjuk, saját funkciókat vagy fuss funkciók külső AutoHotkey szkripteket.
+		Felvehet egér mozgását képest a jelenlegi helyzetben tartja CapsLock felvétel közben (meg lehet változtatni a kulcsot, és azt válthat a beállítások).
+		
+; 19. Tooltips		
+	A_List_TT =	Makró Kiválasztása (Ctrl+1~0)
+	AbortKey_TT =	Gyorsgomb a lejátszás megállításához
+	ActiveObj_TT =	Próbál csatlakozni egy Active COM objektum
+	AddAtt_TT =	Dosyaları ekle
+	ApplyI_TT =	Alkalmaz
+	ApplyL_TT =	Beszúrás box (Insert)
+	ApplyT_TT =	Alkalmaz
+	AutoKey_TT =	Gyorsgomb játszani Macro
+	Client_TT =	Koordinátákat relatív az aktív ablak ügyfél terület, amely kizárja az ablak címsorában, menü (ha van egy standard) és a határok.
+	Clip_TT =	Ideiglenesen használ vágólap küldje el a szöveget.
+		Amikor a művelet befejeződött, a script
+		visszaállítja az eredeti vágólap tartalmát.
+		(Text hagyja üresen be aktuális tartalom)
+	CM_TT =	Screen: Koordináták relatív az asztalra (teljes képernyő).
+		Window: Koordináták relatív az aktív ablak.
+		Client: Koordinátákat relatív az aktív ablak ügyfél terület, amely kizárja az ablak címsorában, menü (ha van egy standard) és a határok.
+	CmdFilter_TT =	Szűrés típus
+	CmdSort_TT =	Rendezés ABC sorrendbe
+	ColorPick_TT =	Kap pixel a képernyőn
+	ComEvent_TT =	Tuş vuruşlarını gönderilen hızını önemli gecikme ile belirlenir.
+	ComText_TT =	Ha nem nyers módban, a következő karakterek
+		kezelni módosítók (ezek a módosítók befolyásolhatják
+		Csak a nagyon következő gomb):!, +, ^, #
+	CoordPixel_TT =	Koordináta mód
+	DefaultMacro_TT =	Válassza ki a fájlt betölteni a program indításakor
+	EditPaste_TT =	Paszták karakterlánc a kalap / betét pozíció
+		egy Szerkesztés-ellenőrzés (ez nem érinti
+		az a vágólap tartalmát.)
+	Ex_AF_TT =	Kihagyja a szelíd eljárás aktiválására ablak
+		és megy egyenesen az erőszakos módszer.
+	Ex_CM_TT =	Készletek koordináta rendszer egér parancsok képest sem az aktív ablak vagy a képernyőn.
+	Ex_DH_TT =	Meghatározza, hogy a láthatatlan ablakok "látja" a forgatókönyvet.
+	Ex_DT_TT =	Meghatározza, hogy a láthatatlan szöveget egy ablak "látható" céljára találni az ablakon. Ez befolyásolja a parancsokat, mint IfWinExist és WinActivate.
+	Ex_EdScript_TT =	Nyílt külső szerkesztőben
+	Ex_EdVars_TT =	Válassza globális változók exportálni.
+	Ex_ExecScript_TT =	Run script
+	Ex_HK_TT =	Kényszerű használata a horog, hogy hajtsák végre
+		vagy egy billentyűzet gyorsbillentyűk.
+	Ex_IfDir_TT =	Létrehoz környezetfüggő gyorsbillentyűk és hotstrings függően
+		típusától ablak, amely aktív vagy létezik.
+	Ex_IfDirType_TT =	Létrehoz környezetfüggő gyorsbillentyűk és hotstrings függően
+		típusától ablak, amely aktív vagy létezik.
+	Ex_IN_TT =	Eszmék a szkript úgy viselkedni, mintha a megadott
+		fájl tartalmát jelen vannak ebben a pontos pozícióját.
+	Ex_MD_TT =	Megadja a késleltetést követően alakul ki
+		Minden egér mozgását és kattintson.
+	Ex_MT_TT =	Beállítja a maximális számú egyidejű
+		szálak egy gyorsbillentyűvel vagy hotstring.
+	Ex_NT_TT =	Kikapcsolja a megjelenítését a tálca ikon.
+	Ex_PT_TT =	Megtartja a szkript fut állandóan
+		(azaz, amíg a felhasználó bezárja, vagy ExitApp találkozik).
+	Ex_SB_TT =	Meghatározza, hogy milyen gyorsan egy szkript fut (hat CPU kihasználtsága.)
+	Ex_SC_TT =	Megadja a késleltetést követően alakul ki
+		Minden kontroll módosító parancsot.
+	Ex_SI_TT =	Meghatározza, hogy a szkript futhat újra, ha már fut.
+	Ex_SK_TT =	Megadja a késleltetést követően alakul ki az egyes
+		gombnyomás által küldött Send vagy ControlSend.
+	Ex_SM_TT =	Teszi Küldés szinonimájává SendInput vagy SendPlay helyett
+		Az alapértelmezett (SendEvent). Teszi Kattintson és MouseMove / Kattints / Drag
+		a megadott módszer.
+	Ex_ST_TT =	Beállítja a megfelelő viselkedését WinTitle paraméter parancsokat, mint például WinWait.
+	Ex_SW_TT =	Megadja a késleltetést követően alakul ki
+		Minden ablakozás parancsot, például WinActivate.
+	Ex_UV_TT =	Export globális változók.
+	Ex_WN_TT =	Engedélyezi vagy letiltja a figyelmeztetések az adott körülmények között, amelyek hibát jelez, mint például egy elírás vagy hiányzó "globális" nyilatkozatot.
+	ExpList_TT =	Kattintson duplán a szerkeszteni
+	ExprLink2_TT =	- NE CSATOLNI VARIABLES SZÁZALÉKOS JELEK ITT.
+		- A legtöbb AHK kifejezések támogatottak.
+		- Használhatja vonósok, változók, tömbök és függvények.
+		- Ahhoz, hogy használni húrok, csatolja őket idézetek, pl: var  "a".
+		- Több utasítást támogat, például: var  "a" || InStr (var, "b").
+	ExprLink3_TT =	- NE CSATOLNI VARIABLES SZÁZALÉKOS JELEK ITT.
+		- A legtöbb AHK kifejezések támogatottak.
+		- Használhatja vonósok, változók, tömbök és függvények.
+		- Ahhoz, hogy használni húrok, csatolja őket idézetek, pl: var = "a".
+		- Több utasítást támogat, például: var = "a" || InStr (var, "b").
+	ExpView2_TT =	Fejlett Szerkesztő
+	ExpView_TT =	Fejlett Szerkesztő
+	Fast_TT =	Használ egy gyorsabb keresési módot (ajánlott)
+	HiddenText_TT =	Meghatározza, hogy a láthatatlan szöveget egy ablak "látható" céljára találni az ablakon. Ez befolyásolja a parancsokat, mint IfWinExist és WinActivate.
+	HiddenWin_TT =	Meghatározza, hogy a láthatatlan ablakok "látja" a forgatókönyvet.
+	HScale_TT =	Magasság méret
+	IconN_TT =	Száma ikon csoport
+	IfLVColor_TT =	Kattintson válasszon egy színt
+	IncFiles_TT =	Tartalmazzák kép / Értékek
+	IncFolders_TT =	Tartalmazzák (mappákban) / Keys
+	InsertKey_TT =	Be Gombnyomás (Ctrl+Insert)
+	InsertKeyT_TT =	Be Gombnyomás
+	JoyKey_TT =	Nyomja meg a gombot a joystick
+	LoopLVColor_TT =	Kattintson válasszon egy színt
+	LUntil_TT =	Alkalmaz feltétele a folytatása a hurok vagy-loop.
+	ManKey_TT =	Gyorsgomb játszani Macro "lépésről-lépésre"
+	MRel_TT =	Mozgásokat képest aktuális pozícióját.
+		Vagy ha használt Control: Pozíció a kontrollhoz képest.
+	OSHK_TT =	Makró Kiválasztása
+	OSHKEd_TT =	Makró Kiválasztása
+	OSProgB_TT =	Kijelző Progress Bar
+	OSTrans_TT =	átlátszatlanság
+	PauseKey_TT =	Gyorsgomb a lejátszás
+	PicPrev_TT =	Kattintson duplán a megnyitni fényképek
+	Raw_TT =	A SendRaw parancs értelmezi az összes karaktert a szó szoros értelmében
+		ahelyett fordítására {Enter} egy ENTER gombnyomás,
+		^ C Control-C, stb
+	RecKey_TT =	Backspace törölni
+	RecNewKey_TT =	Backspace törölni
+	Recurse_TT =	Rekurzív alkönyvtárakra (almappák) / Alkulcsok
+	RefreshIEW_TT =	Lista frissítése
+	Relative_TT =	Koordináták relatív az aktív ablak.
+	RelKey_TT =	Records egér mozgását és kattintással
+		való eltérést a korábbi pozícióba.
+	ReptC_TT =	0 = végtelen
+	Reset_TT =	Kódolatlan változó tartalma
+	RGB_TT =	Okok színt kell értelmezni, hogy az RGB érték helyett BGR
+	Screen_TT =	Koordináták relatív az asztalra (teljes képernyő).
+	Screenshot_TT =	Gyártó Screenshot
+	SetText_TT =	Megváltoztatja a szöveg egy ellenőrzés.
+	SI_TT =	A szó FORCE kihagyja a párbeszédpanelt, és felváltja a régi példány automatikusan
+		ami hasonló hatással van a Reload parancsot.
+		A szó IGNORE átugorja a párbeszédpanelt, és elhagyja a régi példány fut.
+		Más szóval, a kísérlet, hogy indítson egy már futó script figyelmen kívül hagyja.
+		A szó OFF lehetővé teszi több példányban a szkript futtatásához egyidejűleg.
+	SM_TT =	Esemény: Ez a kiindulási alap által használt összes szkriptet.
+		Használja a SendEvent módszer Küldés, SendRaw, kattintson, és MouseMove / Kattints / Drag.
+		Input: Váltás a SendInput módszer Küldés, SendRaw, kattintson, és MouseMove / Kattints / Drag.
+		InputThenPlay: Ugyanaz, mint fent, kivéve, hogy ahelyett esett vissza Esemény módban
+		amikor SendInput nem érhető el, akkor visszatér a Lejátszás módba (lent). Ez is okoz
+		A SendInput parancsot magát, hogy visszatérjen a Lejátszás módba, amikor SendInput nem áll rendelkezésre.
+		Lejátszás: Váltás a SendPlay módszer Küldés, SendRaw, kattintson, és MouseMove / Kattints / Drag.
+	ST_TT =	1: Egy ablak címét kell kezdeni a megadott WinTitle, hogy egy meccs.
+		2: Egy ablak címét is tartalmazhat WinTitle bárhol benne, hogy a mérkőzés.
+		3: Egy ablak címét pontosan meg kell egyeznie WinTitle hogy egy meccs.
+		RegEx: Változások WinTitle, WinText, ExcludeTitle és ExcludeText legyen reguláris kifejezések.
+	TimeoutM_TT =	0 = végtelen
+	TitleMatch_TT =	1: Egy ablak címét kell kezdeni a megadott WinTitle hogy a mérkőzés.
+		2: Egy ablak címét tartalmazhat WinTitle bárhova, hogy legyen a mérkőzés.
+		3: Egy ablak címét pontosan meg kell egyeznie WinTitle hogy a mérkőzés.
+		RegEx: Változások WinTitle, WinText, kizárása cím és kizárása szöveget reguláris kifejezéseket.
+	TitleSpeed_TT =	Gyors: Ez az alapértelmezett viselkedés. A teljesítmény lényegesen jobb, mint a lassú, de biztos WinText elemek bizonyos típusú ablakok nem "látható" a különböző ablak parancsokat.
+		Lassú: Lehet, hogy sokkal lassabb, de minden lehetséges WinText visszakeresődik minden ablak windowing parancs megkeresi azokat a mérkőzés. Ablak Spy kiderül mely részeit ablak szövege (ha van ilyen) megkövetelik a lassú üzemmódot.
+	ToggleC_TT =	Aktiválja Relatív felvételt, ha kulcsfontosságú állami be van kapcsolva.
+	TransC_TT =	Átlátszó szín
+	VarCopyA_TT =	Másolása a jelenlegi változó tartalmát
+	VarCopyB_TT =	Másolása a jelenlegi változó tartalmát
+	VariatT_TT =	Shades variációs
+	WScale_TT =	Szélesség skála
+		
+; 20. Operators		
+	As_Oper_01 =	Hozzárendelése
+	As_Oper_02 =	Hozzáad
+	As_Oper_03 =	Levon
+	As_Oper_04 =	Multiply
+	As_Oper_05 =	Oszt
+	As_Oper_06 =	Floor szakadék
+	As_Oper_07 =	Összekapcsol
+	As_Oper_08 =	Bitwise inclusive OR
+	As_Oper_09 =	Bitwise AND
+	As_Oper_10 =	Bitwise exclusive OR
+	As_Oper_11 =	Right shift AND
+	As_Oper_12 =	Left shift AND
+	Co_Oper_01 =	Egyenlő
+	Co_Oper_02 =	Egyenlő (nagybetűk)
+	Co_Oper_03 =	Nem egyenlő
+	Co_Oper_04 =	Nagyobb
+	Co_Oper_05 =	Kevesebb
+	Co_Oper_06 =	Nagyobb vagy egyenlő
+	Co_Oper_07 =	Kisebb vagy egyenlő
+	Co_Oper_08 =	In (lista)
+	Co_Oper_09 =	Nincs (lista)
+	Co_Oper_10 =	Tartalmaz (lista)
+	Co_Oper_11 =	Nem tartalmaz (lista)
+	Co_Oper_12 =	Között (1-es vonal) és a (2-es vonal)
+	Co_Oper_13 =	Nem között (1-es vonal) és a (2-es vonal)
+	Co_Oper_14 =	Is (típus)
+	Co_Oper_15 =	Nem (típus)
+		
+; 21. IE Commands Tips		
+	IE_Cmd_Index =	
+	Checked	Beállítja vagy beolvassa az állam a jelölőnégyzet vagy rádió gombot.
+	Click	Szimulál egy kattintás az objektumra.
+	Focus	Beállítja fókuszt az objektumot.
+	GoBack	Navigálás hátra egy elem a történelem listán.
+	GoForward	Navigálás előre egy elem a történelem listán.
+	GoHome	Navigál a jelenlegi otthoni vagy kezdő oldalon.
+	GoSearch	Navigálás az aktuális keresés oldalt.
+	Height	Beállítja vagy visszaadja a magasságát az objektum.
+	Href	Beállítja vagy lekéri a cél URL-t vagy egy horgony pontot.
+	InnerHTML	Beállítja vagy visszaadja a HTML az objektum.
+	InnerText	Beállítja vagy megkapja a szöveget az objektum.
+	Length	Beállítja vagy beolvassa az objektumok száma a gyűjtemény.
+	LocationName	Gets the útvonal vagy cím aktuális oldalt.
+	LocationURL	Gets az URL-t az aktuális oldal.
+	Navigate	Navigál egy URL-t vagy elérési utat.
+	OuterHTML	Beállítja vagy beolvassa a tárgy és annak tartalmát a HTML.
+	Quit	Bezárja az oldalt.
+	Refresh	Újratöltés az aktuálisan megjelenített oldalt.
+	SelectedIndex	Beállítja vagy beolvassa az index a kiválasztott opció a select objektum.
+	Src	Beállítja vagy letölti egy URL betöltését a tárgy.
+	Stop	Megszakítja a folyamatban lévő navigációs vagy letölthető.
+	Submit	Elküldi az űrlapot.
+	Type	Beállítja vagy visszaadja a tartalom típus az objektum.
+	Value	Gets vagy beállítja az értékét a tárgy.
+	Width	Beállítja vagy visszaadja a szélessége az objektum.
+		
+; 22. COM Objects Tips		
+	COM_CLSID_Index =	
+	Excel.Application	Manipulálja Excel táblák.
+	HTMLfile	Lehet használni, hogy írni, olvasni és kölcsönhatásba HTML.
+	InternetExplorer.Application	Fedezze honlapok.
+	MSXML2.DOMDocument.6.0	XML elemző.
+	MSXML2.XMLHTTP	Jelentése XML kérés HTTP-n keresztül.
+	Outlook.Application	Manipulált Outlook feladatok és tételek.
+	PowerPoint.Application	Manipulált PowerPoint bemutatókat.
+	Schedule.Service	Időbeosztás és szerkesztheti a Windows Feladatok.
+	ScriptControl	Dinamikusan végre VBscript vagy JScript.
+	Scripting.Dictionary	Objektum, amely tárolja az adatokat kulcs, elem párokat.
+	Scripting.FileSystemObject	Access fájlok és mappák
+	Shell.Application	Hozzáférés Explorer és IE ablak / fül; Open & manipulálni ablakok.
+	Shell.Explorer	Beágyazása Explorer / böngésző ellenőrzés GUI (Internet Explorer - szigonyt böngésző).
+	SAPI.SpVoice	Text-to-Speech (TTS).
+	VBScript.RegExp	VBS reguláris kifejezések (beleértve a globális mérkőzés).
+	WMPlayer.OCX	Médiafájlok lejátszása; Beágyazása wmplayer kontroll egy GUI.
+	WinHttp.WinHttpRequest.5.1	Egyszerű HTTP kliens funkciót, amely sokkal több ellenőrzés, mint UrlDownloadToFile.
+	Winmgmt	Get rendszer információ; Kezelje ablakok szolgáltatásokat.
+	WScript.Shell	Különböző adminisztrációs feladatokat (sok natív AHK feladatok).
+	Word.Application	Manipulálja a Word dokumentumokat.
+		
+; 23. AHK Commands Tips		
+	Ahk_Cmd_Index =	
+	Abs	Abszolút értékét a számot.
+	ACos	Arkusz koszinuszát adja (a szám, amelynek koszinusz is Number) radiánban.
+	Array	Létrehoz egy scriptable asszociatív tömböt egész kulcsokat.
+	Asc	Visszaadja a karakter kódja (egy számot 1 és 255 között (az ANSI épít), illetve 65.535 (Unicode épít)) az első karakter a string.
+	ASin	Arkusz szinuszát (a szám, amelynek szinusz is Number) radiánban.
+	ATan	Visszaadja a cotanges (a szám, amelynek tangense a szám) radiánban.
+	BlockInput	Tiltja le vagy engedélyezi a felhasználó képes kölcsönhatásba a számítógéphez billentyűzet és egér.
+	Break	Kilépés (megszűnik) a hurok. Érvényes belül bármilyen hurok.
+	CDO	Küld e-maileket egy felhasználó által definiált fiókot.
+	Ceil	Visszatér szám kerekítve a legközelebbi egész (nélkül 0,00 utótag).
+	Chr	Visszaadja az egyetlen karakter megfelelő karaktert kódot jelzett szám.
+	Click	Kattintás az egérrel a megadott koordinátákat. Azt is tartsuk lenyomva a gombot, forgassa a kereket, vagy áthelyezni.
+	Clipboard	Beilleszti szöveget a vágólapról.
+	ClipWait	Megvárja, amíg a vágólap adatait tartalmazza.
+	ComObjActive	Lekéri a regisztrált COM objektumot.
+	ComObjArray	Létrehoz egy SAFEARRAY használható COM.
+	ComObjConnect	Csatlakozik a COM-objektum rendezvény források funkciók egy adott előtaggal.
+	ComObjCreate	Létrehoz egy COM objektumot.
+	ComObjEnwrap / ComObjUnwrap	Pakolások / kicsomagolja a COM objektumot.
+	ComObjError	Engedélyezi vagy letiltja értesítést COM hibákat.
+	ComObjFlags	Letölti vagy változtatásokat zászlók, amely irányítja a COM átalakító objektum viselkedését.
+	ComObjGet	Visszaadja a hivatkozás egy objektum által nyújtott COM-összetevő.
+	ComObjMissing	Létrehoz egy "Hiányzó paraméter" objektum át a COM módszer.
+	ComObjParameter	Pakolások értéke és típusa át paraméterként a COM módszer.
+	ComObjQuery	Lekérdezi a COM-objektum egy felületen vagy szolgáltatás.
+	ComObjType	Letölti típusú információt a COM objektumot.
+	ComObjValue	Letölti az értéket vagy mutató tárolt COM átalakító objektum.
+	Continue	Kihagyja a többi aktuális iteráció és elkezd egy újat. Érvényes belül bármilyen hurok.
+	Control	Teszi a különböző változások a vezérlő.
+	ControlClick	Küld egérgomb vagy egér kerék esemény egy ellenőrzés.
+	ControlEditPaste	Paszták húr a kalap / betét helyzetét Szerkesztés vezérlő (ez nem befolyásolja az a vágólap tartalmát.)
+	ControlFocus	Állítja be a fókuszt egy adott ellenőrzési egy ablak.
+	ControlGet	Letölti a különböző típusú információkat a vezérlő.
+	ControlGetFocus	Letölti, amely irányítja a cél ablak input fókusz, ha van ilyen.
+	ControlGetPos	Letölti a helye és mérete a vezérlő.
+	ControlGetText	Lekér szöveget a vezérlő.
+	ControlMove	Mozgatja vagy átméretezi a vezérlő.
+	ControlSend / ControlSendRaw	Elküldi szimulált billentyűleütéseket egy ablakhoz, vagy ellenőrzés.
+	ControlSetText	Megváltoztatja a szöveg egy ellenőrzés.
+	CoordMode	Készletek koordinálja mód különböző parancsokat, hogy relatív, hogy vagy az aktív ablak vagy a képernyőn.
+	Cos	Visszaadja a trigonometrikus koszinuszával száma.
+	Delete	Eltávolítja kulcsértékpárok egy objektum.
+	DllCall	A függvény belsejében egy DLL, mint egy szabványos Windows API függvény.
+	Drive	Kiadja / visszahúzza a tálcát a CD-vagy DVD-meghajtó, vagy beállítja a meghajtó kötetcímkét.
+	DriveGet	Letölti különböző típusú információkat a számítógép meghajtó (k).
+	DriveSpaceFree	Letölti a szabad lemezterület a meghajtón, megabyte.
+	Else	Megadja a parancs (ek) azon képessége, ha IF-utasítás kiértékeli a hamis. Ha több, mint egy parancs aktív, tegye őket egy blokkban (fogszabályozó).
+	EnvAdd	Beállítja egy változó összege is, valamint az adott értéket (is összeadást vagy időt a dátum-idő érték). Egyet jelent: Var+= érték.
+	EnvDiv	Beállítja egy változó magára osztani az adott értékre. Egyet jelent: Var / = érték.
+	EnvGet	Letölti egy környezeti változót.
+	EnvMult	Beállítja egy változó magát alkalommal az adott értékre. Egyet jelent: Var * = érték.
+	EnvSet	Ír egy értéket egy változó tartalmazza a környezetben.
+	EnvSub	Beállítja egy változó is mínusz a megadott értéket (is összehasonlítani dátum-idő érték). Egyet jelent: Var - = érték.
+	EnvUpdate	Értesíti az operációs rendszer és az összes futó alkalmazást, hogy a környezet változó (k) megváltozott.
+	ExitApp	Leállítja a forgatókönyvet feltétel nélkül.
+	Exp	Visszatér e (ami megközelítőleg 2,71828182845905) emelte az n-edik hatalom.
+	Expression	Egy vagy több olyan műveleteket, miután egy sor változó, szó húrok, és / vagy a szó szerinti számokat.
+	FileAppend	Írja a szöveget a végén egy fájl (első fájl létrehozásával, ha szükséges).
+	FileCopy	Másolatok egy vagy több fájlt.
+	FileCopyDir	Másolja a mappa mellett minden al-mappák és fájlok (hasonló a xcopy).
+	FileCreateDir	Létrehoz egy mappát.
+	FileCreateShortcut	Létrehoz egy parancsikont (. Lnk) fájlt.
+	FileDelete	Töröl egy vagy több fájlt.
+	FileGetAttrib	Azt mutatja, hogy a fájl vagy mappa csak olvasható, rejtett, stb
+	FileGetShortcut	Információkat gyűjt a helyi (. Lnk) fájlt, például a cél fájlt.
+	FileGetSize	Letölti a fájl mérete.
+	FileGetTime	Letölti a datetime bélyeg egy fájl vagy mappa.
+	FileGetVersion	Letölti a változat egy fájlt.
+	FileMove	Mozog vagy átnevezi egy vagy több fájl.
+	FileMoveDir	Mozgatja a mappa mellett minden al-mappákat és fájlokat. Azt is átnevezni egy mappát.
+	FileOpen	Biztosít az objektum-orientált fájl I / O
+	FileRead	Olvasás a fájl tartalmát egy változó.
+	FileReadLine	Beolvassa a megadott sort a fájlt, és tárolja a szöveget egy változó.
+	FileRecycle	Küld fájl vagy könyvtár a lomtárba, ha lehetséges.
+	FileRecycleEmpty	Kiüríti a Lomtár.
+	FileRemoveDir	Törli a mappát.
+	FileSelectFile	Megjeleníti egy szabványos párbeszédablakban, amely lehetővé teszi a felhasználó számára, hogy megnyitja vagy menti fájl (ok).
+	FileSelectFolder	Megjeleníti egy szabványos párbeszédablakban, amely lehetővé teszi a felhasználó számára, hogy válasszon ki egy mappát.
+	FileSetAttrib	Megváltoztatja a tulajdonságok egy vagy több fájl vagy mappa. Joker karakterek is.
+	FileSetTime	Megváltoztatja a datetime bélyegző egy vagy több fájl vagy mappa. Joker karakterek is.
+	Floor	Visszatér szám lefelé kerekítve a legközelebbi egész számra (nélkül 0,00 utótag).
+	For	Megismétli egy sor parancsot egyszer minden kulcs-érték pár egy tárgy.
+	Format	Formátumok változó számú bemeneti értékek szerint format string.
+	FormatTime	Átalakítja a YYYYMMDDHH24MISS időbélyeg a megadott dátum / idő formátum.
+	Func	Lekéri a hivatkozás egy funkciót.
+	GetKeyName / GetKeyVK / GetKeySC	Letölti a nevet vagy szöveget, virtuális belépési kódot vagy beolvasás kódját a kulcs.
+	GetKeyState	Ellenőrzi, hogy a billentyű vagy egér / joystick gomb lefelé vagy felfelé. Szintén letölti joystick állapotát.
+	Gosub	Ugrik a megadott címkén és folytatja a végrehajtást, amíg Return találkozik.
+	Goto	Ugrik a megadott címkén és folytatja a végrehajtást.
+	GroupActivate	Váltás a következő ablak ablakban csoport került meghatározásra a groupadd.
+	GroupAdd	Hozzáad egy ablak specifikáció egy ablak csoporthoz, ami a csoport, ha szükséges.
+	GroupClose	Bezárja az aktív ablakot, ha csak aktiválva GroupActivate vagy GroupDeactivate. Ezután aktiválja a következő ablakban a sorozatban. Azt is zárja be az összes ablakot egy csoportban.
+	GroupDeactivate	Hasonló a GroupActivate kivéve aktiválja a következő ablak nincs a csoportban.
+	HasKey	True, ha Key társított értéket.
+	If	Meghatározza a parancs (ek) azon képessége, ha az összehasonlítás egy változó értékre evalutes TRUE. Ha több, mint egy parancs aktív, tegye őket egy blokkban (fogszabályozó).
+	If (expression)	Megadja a parancs (ok), hogy végre, ha a kifejezés értéke TRUE.
+	If A_Index	Ellenőrzi, hogy az aktuális iteráció beleillik a megadott számot.
+	If Clipboard	Ellenőrzi, hogy a vágólapról szöveget beleillik a megadott string.
+	If ErrorLevel	Ellenőrzi, hogy a megadott képet vagy pixel találtak a képernyőn.
+	If var [not] between	Ellenőrzi, hogy a változó tartalmát számszerint vagy ABC két érték között (bezárólag).
+	If var [not] in / If var [not] contains MatchList	Ellenőrzi, hogy a változó tartalmát egyezik az egyik elem a listában.
+	If var is [not] type	Ellenőrzi, hogy a változó tartalma numerikus, nagybetűs, stb
+	IfEqual / IfNotEqual	Összehasonlítja a változó értéke az egyenlőség. Egyet jelent: ha a Var = érték | ha Var <> érték.
+	IfExist / IfNotExist / FileExist	Ellenőrzi, hogy létezik egy fájl vagy mappa.
+	IfGreater / IfGreaterOrEqual	Összehasonlítja a változó értéke. Egyet jelent: ha a Var> Érték | ha Var> = érték.
+	IfInString / IfNotInString	Ellenőrzi, hogy a változó tartalmazza a megadott string.
+	IfLess / IfLessOrEqual	Összehasonlítja a változó értéke. Egyet jelent: ha a Var <érték | ha Var <= érték.
+	IfMsgBox	Ellenőrzések megnyomták a felhasználó a legutolsó MsgBox parancsot.
+	IfWinActive / IfWinNotActive	Ellenőrzi, hogy a megadott ablak létezik, és aktív (elsősorban).
+	IfWinExist / IfWinNotExist	Ellenőrzi, hogy a megadott ablak létezik.
+	ImageSearch	Keres a régióban a képernyőn egy képet.
+	IniDelete	Törli egy értéket egy szabványos formátumban. Ini fájlt.
+	IniRead	Olvasás egy értéket egy szabványos formátumban. Ini fájlt.
+	IniWrite	Ír egy értéket egy szabványos formátumban. Ini fájlt.
+	Input	Várja a felhasználót, hogy írja a string (nem támogatott Windows 9x: nem csinál semmit.)
+	InputBox	Megjelenít egy beviteli mezőbe, hogy kéri a felhasználót, hogy adja meg a string.
+	InsertAt	Beszúr egy vagy több értéket egy adott helyzetben egy lineáris tömbben.
+	InStr	Keres egy adott előfordulása egy string, a bal vagy a jobb.
+	KeyWait	Várja, hogy a billentyűk, vagy egér / joystick gombot kell szabadítani, vagy nyomva.
+	Label	A címke azonosít egy sor kódot, és fel lehet használni, mint egy cél, vagy Goto alkotnak egy szubrutint.
+	Length	Visszaadja a hossza egy egyenes sorban kezdődő 1 pozícióban.
+	ListVars	Jeleníti meg a szkript változó: a nevüket és a jelenlegi tartalmát.
+	Ln	Természetes logaritmusát (alap e) a szám.
+	LoadPicture	Betölt egy képet fájlból és visszatér egy bitmap vagy ikon nyéllel.
+	Log	Visszaadja a logaritmusát (alap 10) Szám.
+	Loop (files & folders)	Letölti a megadott fájlokat vagy mappákat, egyesével.
+	Loop (normal)	Végre egy sor parancsot többször: vagy a megadott számú alkalommal, vagy amíg break találkozott.
+	Loop (parse a string)	Letölti részkarakterláncokat (mezők) egy string, egy olyan időpontban.
+	Loop (read file contents)	Letölti a vonalak egy szöveges fájlt, egy olyan időpontban (jobban teljesít, mint FileReadLine).
+	Loop (registry)	Letölti a tartalmát a megadott alkulcs, egy tétel egy időben.
+	MaxIndex	Visszaadja a legnagyobb egész kulcs.
+	MinIndex	Visszaadja a legalacsonyabb egész kulcsot.
+	Mod	Modulo. Visszaadja a maradékot, ha osztalék osztva osztó.
+	MouseGetPos	Letölti a jelenlegi helyzetben a kurzort, és esetleg melyik ablak és ellenőrzés lebeg.
+	MsgBox	Megjeleníti a megadott szöveget egy kis ablak, amely egy vagy több gomb (például Igen és Nem).
+	NumGet	Visszaadja a bináris számot tárolt a megadott címre eltolva.
+	NumPut	Üzletek száma bináris formában a megadott címre+offset és visszatér a címet, jobbra az elem csak írásban.
+	Object	Létrehoz egy scriptable asszociatív tömb.
+	Ord	Visszaadja a sorrendi értéket (számjegyet kód) az első karakter karakterlánc.
+	OutputDebug	Küld egy stringet a debugger (ha van ilyen) a kijelzőn.
+	Parameter	Hozzáad egy paramétert a funkciót.
+	Pause	Felfüggeszti a szkript aktuális téma.
+	PixelGetColor	Letölti a színe a pixel a megadott x, y koordinátákat.
+	PixelSearch	Keres a régióban a képernyőn egy pixel a megadott szín.
+	Pop	Eltávolítja és visszaadja az utolsó tömbelem.
+	PostMessage	Elhelyez egy üzenetet az üzenet sorban egy ablak vagy ellenőrzés.
+	Process	Elvégzi a következő műveletek a folyamat: ellenőrzi, hogy létezik, megváltoztatja a prioritás, bezárja, várja, hogy közel.
+	Progress	Hoz létre vagy frissíti tartalmazó ablak a folyamatjelző.
+	Push	Hozzáfűzi értékek a végén egy tömb.
+	Random	Létrehoz egy pszeudo-véletlenszám.
+	RegDelete	Törli alkulcsaként vagy értéket a rendszerleíró adatbázisban.
+	RegExMatch	Meghatározza, hogy a szöveg tartalmaz egy minta (reguláris kifejezés).
+	RegExReplace	Lecseréli események egy minta (reguláris kifejezés) belül egy string.
+	RegRead	Olvasás egy értéket a rendszerleíró adatbázisban.
+	RegWrite	Ír egy értéket a rendszerleíró adatbázisban.
+	RemoveAt	Eltávolítja az elemeket a megadott pozíció lineáris tömbben.
+	Return	Visszatér egy alprogram, amelynek végrehajtását korábban ugrott keresztül funkció-call, GOSUB, gyorsgombok aktiválás GroupActivate, vagy más módon.
+	Round	Ha n nincs megadva, vagy 0, számra kerekíti a legközelebbi egész számra. Ha N pozitív szám, szám kerekíti N tizedes. Ha N negatív szám kerekítve N számjegyek balra a tizedes pont.
+	Run	Egy külsõ programot futtat.
+	RunAs	Megadja a sor felhasználói hitelesítő adatokat használja minden további felhasználására Run és RunWait. Szükséges Windows 2000/XP vagy újabb verzió.
+	RunWait	Egy külsõ programot futtat, és megvárja, amíg befejezi.
+	Send / SendRaw	Elküldi szimulált billentyűleütéseket, és egérkattintással az aktív ablak.
+	SendLevel	Vezérli, hogy mely mesterséges billentyűzet és egér eseményeket figyelmen kívül hagyja a gyorsbillentyűk és hotstrings.
+	SendMessage	Üzenetet küld egy ablak, vagy szabályozás és vár elismerést.
+	SetCapslockState	Állítja az állam a CapsLock gomb. Is kényszeríti a legfontosabb, hogy maradni vagy ki.
+	SetKeyDelay	Megadja a késleltetést, ami történik minden gombnyomás után küldött küldése vagy ControlSend.
+	SetNumlockState	Állítja az állam a NumLock gomb. Is kényszeríti a legfontosabb, hogy maradni vagy ki.
+	SetRegView	Lehetővé teszi a regisztrációs parancsokat egy 32 bites script eléréséhez a 64 bites adatbázis nézet, és fordítva.
+	SetScrollLockState	Állítja az állam a ScrollLock gombot. Is kényszeríti a legfontosabb, hogy maradni vagy ki.
+	SetTimer	Okoz alprogram automatikusan elindul, és ismételten egy meghatározott időintervallumban.
+	Shutdown	Kikapcsol, újraindul, vagy kilép a rendszerből.
+	Sin	Visszaadja a trigonometrikus szinuszát száma.
+	Sleep	Vár egy meghatározott ideig, mielőtt folytatná.
+	Sort	Szervez egy változó tartalmát betű, szám, vagy véletlenszerű sorrendben (opcionálisan eltávolítása ismétlődések).
+	SoundBeep	Bocsát ki hangot a PC-hangszóró.
+	SoundGet	Letölti a különböző beállításokat a hangkártya (master némítás, master hangerő, stb)
+	SoundGetWaveVolume	Letölti a hullám kimeneti hangerőt a hang eszközt.
+	SoundPlay	Játszik a hang-, video-, vagy más támogatott fájltípus.
+	SoundSet	Változása különböző beállításait a hangeszköz (master némítás, master hangerő, stb)
+	SoundSetWaveVolume	Megváltoztatja a hullám kimeneti hangerőt a hang eszközt.
+	SplashImage	Hoz létre vagy frissíti tartalmazó ablak a JPG, GIF, vagy BMP képet.
+	SplashTextOff	Bezárja a fenti ablakban.
+	SplashTextOn	Létrehoz egy testreszabható szöveget felugró ablakban.
+	SplitPath	Elválasztja a fájl nevét vagy URL-címet a nevét, könyvtár, bővítése, és a hajtás.
+	Sqrt	Visszaadja a négyzetgyöke számát.
+	StatusBarGetText	Beolvassa a szöveget a szabványos állapotsort ellenőrzés.
+	StatusBarWait	Megvárja, amíg az ablak állapotsor tartalmazza a megadott string.
+	StringGetPos	Letölti a helyzet a megadott substring egy string.
+	StringLeft	Lekéri a karakterek száma a bal oldali a string.
+	StringLen / StrLen	Letölti a gróf, hogy hány karakter van a szövegben.
+	StringLower	Átalakítja a karakterlánc kisbetűs.
+	StringMid / SubStr	Letölti egy vagy több karaktert a megadott pozíciót a húr.
+	StringReplace / StrReplace	Lecseréli a megadott substring egy új string.
+	StringRight	Lekéri a karakterek száma a jobb oldali a string.
+	StringSplit / StrSplit	Elválasztja egy string tömb stringek a megadott határoló.
+	StringTrimLeft	Eltávolítja a karakterek száma a bal oldali a string.
+	StringTrimRight	Eltávolítja a karakterek száma a jobb oldali a string.
+	StringUpper	Konvertál egy string nagybetűs.
+	StrPut / StrGet	Másolja egy string vagy egy memória cím, az opcionális átalakítása között kódlapot.
+	SysGet	Letölti képernyő felbontás, multi-monitor info, méretei rendszer tárgyak, és a rendszer egyéb tulajdonságait.
+	Tan	Visszaadja a trigonometrikus tangensét száma.
+	ToolTip	Létrehoz egy always-on-top ablakban bárhol a képernyőn.
+	Transform	Végrehajtja egyéb matematikai függvényeket, bitenkénti műveletek és feladatokat, mint például ASCII / Unicode átalakítás.
+	TrayTip	Létrehoz egy léggömb üzenet ablak mellett a ikon. Szükséges Windows 2000/XP vagy újabb verzió.
+	Trim / LTrim / RTrim	Kárpitok bizonyos karakterek az elején és / vagy végén egy string.
+	Until	Alkalmaz feltétele a folytatása a hurok vagy-loop.
+	UrlDownloadToFile	Letölt egy fájlt az interneten.
+	UserFunction	Létrehoz egy függvény szerkezete.
+	Variable	Hozzárendeli a megadott értéket egy változónak.
+	While	Belirtilen ifade yanlış olarak değerlendirilir kadar art arda bir dizi komut gerçekleştirir.
+	WinActivate	Aktiválja a megadott ablak (teszi elsősorban).
+	WinActivateBottom	Ugyanaz, mint a WinActivate, kivéve, hogy aktiválja a legalsó (legrégebben aktív) egyező ablak helyett a legmagasabb.
+	WinActive	Visszaadja a Egyedi azonosító (HWND) az aktív ablak, ha az megfelel a kritériumoknak.
+	WinClose	Bezárja a megadott ablak.
+	WinExist	Ellenőrzi, hogy a megadott ablak létezik.
+	WinGet	Letölti a megadott ablak egyedi azonosító, ID folyamat, folyamat neve, vagy egy listát a ellenőrzéseket. Azt is letölteni egy listát az összes ablak megfelelő a kritériumoknak.
+	WinGetClass	Letölti a megadott ablak osztály nevét.
+	WinGetPos	Lekéri a helyzete és mérete a megadott ablakot.
+	WinGetText	Letölti a szöveget a megadott ablak.
+	WinGetTitle	Letölti a címet a megadott ablak.
+	WinHide	Elrejti a megadott ablakot.
+	WinHttpDownloadToFile	Letöltés egy vagy több fájlt az internetről.
+	WinKill	Arra kényszeríti a megadott ablak bezárásához.
+	WinMaximize	Nagyítja a megadott ablak maximális méretét.
+	WinMenuSelectItem	Meghív egy menüpontot a menüsorban a megadott ablak.
+	WinMinimize	Összeesik a megadott ablakot egy gomb a tálcán.
+	WinMinimizeAll	Minden ablak méretét minimalizálja.
+	WinMinimizeAllUndo	Visszavonja a hatás a korábbi WinMinimizeAll.
+	WinMove	Változások a pozíció és / vagy a méret a megadott ablak.
+	WinRestore	Unminimizes vagy unmaximizes a megadott ablakot, ha minimális vagy maximális.
+	WinSet	Teszi a különböző változások a megadott ablak, mint a "mindig felül" és az átláthatóság.
+	WinSetTitle	Megváltoztatja a címet a megadott ablak.
+	WinShow	Felfedése a megadott ablakot.
+	WinWait	Megvárja, amíg a megadott ablak létezik.
+	WinWaitActive	Megvárja, amíg a megadott ablak aktív.
+	WinWaitClose	Megvárja, amíg a meghatározott ablak nem létezik.
+	WinWaitNotActive	Megvárja, amíg a meghatározott ablak nem aktív.
+	Zip / UnZip	Tömöríteni vagy tömörítse egy vagy több zip fájlt.
+	WinExist	Ellenőrzi, hogy a megadott ablak létezik.
+	WinGet	Letölti a megadott ablak egyedi azonosító, ID folyamat, folyamat neve, vagy egy listát a ellenőrzéseket. Azt is letölteni egy listát az összes ablak megfelelő a kritériumoknak.
+	WinGetClass	Letölti a megadott ablak osztály nevét.
+	WinGetPos	Lekéri a helyzete és mérete a megadott ablakot.
+	WinGetText	Letölti a szöveget a megadott ablak.
+	WinGetTitle	Letölti a címet a megadott ablak.
+	WinHide	Elrejti a megadott ablakot.
+	WinHttpDownloadToFile	Letöltés egy vagy több fájlt az internetről.
+	WinKill	Arra kényszeríti a megadott ablak bezárásához.
+	WinMaximize	Nagyítja a megadott ablak maximális méretét.
+	WinMenuSelectItem	Meghív egy menüpontot a menüsorban a megadott ablak.
+	WinMinimize	Összeesik a megadott ablakot egy gomb a tálcán.
+	WinMinimizeAll	Minden ablak méretét minimalizálja.
+	WinMinimizeAllUndo	Visszavonja a hatás a korábbi WinMinimizeAll.
+	WinMove	Változások a pozíció és / vagy a méret a megadott ablak.
+	WinRestore	Unminimizes vagy unmaximizes a megadott ablakot, ha minimális vagy maximális.
+	WinSet	Teszi a különböző változások a megadott ablak, mint a "mindig felül" és az átláthatóság.
+	WinSetTitle	Megváltoztatja a címet a megadott ablak.
+	WinShow	Felfedése a megadott ablakot.
+	WinWait	Megvárja, amíg a megadott ablak létezik.
+	WinWaitActive	Megvárja, amíg a megadott ablak aktív.
+	WinWaitClose	Megvárja, amíg a meghatározott ablak nem létezik.
+	WinWaitNotActive	Megvárja, amíg a meghatározott ablak nem aktív.
+	Zip / UnZip	Tömöríteni vagy tömörítse egy vagy több zip fájlt.

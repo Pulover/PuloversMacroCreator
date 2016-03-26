@@ -1,0 +1,1443 @@
+﻿Lang_ro
+		
+		; Romanian
+		
+; 01. Main Menu		
+	m_Lang001 =	&Fişier
+	m_Lang002 =	&Macro
+	m_Lang003 =	&Comenzile
+	m_Lang004 =	F&uncţie
+	m_Lang005 =	&Editați | ×
+	m_Lang006 =	&Selecta
+	m_Lang007 =	&Vizualizare
+	m_Lang008 =	&Opțiuni
+	m_Lang009 =	&Dona
+	m_Lang010 =	&Ajutor
+		
+; 02. File Sub Menu		
+	f_Lang001 =	&Nou
+	f_Lang002 =	&Deschis
+	f_Lang003 =	&Salvați
+	f_Lang004 =	S&alvează ca
+	f_Lang005 =	&Fișiere recente
+	f_Lang006 =	&Export la AHK
+	f_Lang007 =	&Previzualizare Script
+	f_Lang008 =	S&cript-ul de editare
+	f_Lang009 =	&Macrocomenzi program
+	f_Lang010 =	&Variabile Lista
+	f_Lang011 =	&Ieșire
+	f_Lang012 =	N&u există fișiere
+		
+; 03. Macro Sub Menu		
+	r_Lang001 =	&Înregistrare Macro
+	r_Lang002 =	&Activa Macrocomenzi
+	r_Lang003 =	&Macro juca curent
+	r_Lang004 =	&Timer
+	r_Lang005 =	&Dezactivarea Macrocomenzi
+	r_Lang006 =	&Juca din Rând selectat
+	r_Lang007 =	J&uca până la Rând selectat
+	r_Lang008 =	Ju&ca rândurile selectate
+	r_Lang009 =	C&ontext Hotkeys sensibile
+	r_Lang010 =	&Se adaugă Macro
+	r_Lang011 =	Mac&ro Închide
+	r_Lang012 =	Macro du&blură
+	r_Lang013 =	&Edita Macrocomenzi
+	r_Lang014 =	&Import Macro
+	r_Lang015 =	Macro sa&lva curent
+		
+; 04. Function Sub Menu		
+	u_Lang001 =	&Creați Funcție
+	u_Lang002 =	&Adauga o Parametru
+	u_Lang003 =	A&dauga o returnare
+	u_Lang004 =	C&onverti Macro Pentru Function
+		
+; 05. Commands Sub Menu		
+	i_Lang001 =	&Mouse
+	i_Lang002 =	&Text
+	i_Lang003 =	&Control
+	i_Lang004 =	&Pauză
+	i_Lang005 =	C&aseta mesaj
+	i_Lang006 =	A&steptati-cheie
+	i_Lang007 =	&Fereastră
+	i_Lang008 =	&Imagine / Pixel Cautare
+	i_Lang009 =	&Run / Fișier / String / Diverse.
+	i_Lang010 =	&Buclă
+	i_Lang011 =	&Du-te la / Etichetă
+	i_Lang012 =	S&etare temporizator
+	i_Lang013 =	&În cazul în care Declarațiile
+	i_Lang014 =	&Variabile / Arrays
+	i_Lang015 =	F&uncții / Metode Array
+	i_Lang016 =	Trimite emai&l
+	i_Lang017 =	Desc&ărcarea fișierelor
+	i_Lang018 =	&Zip / fișiere Dezarhiveaza
+	i_Lang019 =	I&nternet Explorer
+	i_Lang020 =	E&xprimarea / Interfață COM
+	i_Lang021 =	Ferestre Mesa&je
+	i_Lang022 =	&Găsi o comandă
+		
+; 06. Edit Sub Menu		
+	e_Lang001 =	&Duplicat
+	e_Lang002 =	&Editeaza Comentariu
+	e_Lang003 =	&Găsi / Înlocuire
+	e_Lang004 =	&Copiaza in...
+	e_Lang005 =	&Anula
+	e_Lang006 =	&Refaceţi
+	e_Lang007 =	A &taia
+	e_Lang008 =	C&opie
+	e_Lang009 =	&Pastă
+	e_Lang010 =	&Șterge
+	e_Lang011 =	&Mutaţi în sus
+	e_Lang012 =	Co&borî
+	e_Lang013 =	&Se introduce din caseta
+	e_Lang014 =	&Inseraţi Keystroke
+	e_Lang015 =	Edita&ți culoarea Mark
+	e_Lang016 =	Gr&upuri
+	e_Lang017 =	Acti&vaţi grupurile
+	e_Lang018 =	Ad&ăugaţi un grup
+	e_Lang019 =	E&liminaţi grupul
+	e_Lang020 =	Elimi&nați toate grupurile
+	e_Lang021 =	Restr&ângere totul
+	e_Lang022 =	E&xtinde toate
+		
+; 07. Select Sub Menu		
+	s_Lang001 =	&Selectează tot
+	s_Lang002 =	S&electați Fără
+	s_Lang003 =	&Inverseaza selectia
+	s_Lang004 =	&Bifeaza selectat
+	s_Lang005 =	&Debifează selectate
+	s_Lang006 =	&Controale Inversați
+	s_Lang007 =	Se&lecție muta Sus
+	s_Lang008 =	Selec&tarea muta în jos
+	s_Lang009 =	Ti&pul selectat
+	s_Lang010 =	Tip&ul de comandă
+		
+; 08. View Sub Menu		
+	v_Lang001 =	&Mereu deasupra
+	v_Lang002 =	&Rânduri de evidențiere
+	v_Lang003 =	&Identație
+	v_Lang004 =	&Bara de instrumente de control
+	v_Lang005 =	&Previzualizare
+	v_Lang006 =	B&are de instrumente
+	v_Lang007 =	&Hotkeys
+	v_Lang008 =	&Căutare Bar
+	v_Lang009 =	C&oloane de resetare Dimensiune
+	v_Lang010 =	&Dimensiuni pictograme
+	v_Lang011 =	A&spect reinițializa
+	v_Lang012 =	&Fişier
+	v_Lang013 =	R&edare înregistrare
+	v_Lang014 =	Come&nzile
+	v_Lang015 =	Edi&tați | ×
+	v_Lang016 =	Op&țiuni
+	v_Lang017 =	Persona&liza
+	v_Lang018 =	A&utomat
+	v_Lang019 =	&Manual
+	v_Lang020 =	&Stop
+	v_Lang021 =	Pau&ză
+	v_Lang022 =	&Compact
+	v_Lang023 =	C&el Mai Potrivit
+	v_Lang024 =	&Mod implicit
+	v_Lang025 =	&Mic
+	v_Lang026 =	&Mare
+		
+; 09. Options Sub Menu		
+	o_Lang001 =	&Setările
+	o_Lang002 =	&Minimiza la tava
+	o_Lang003 =	&Bara de instrumente de afișare Controale
+	o_Lang004 =	&Capta prese-cheie în această fereastră
+	o_Lang005 =	&Hotkeys întotdeauna active
+	o_Lang006 =	&Opțiunile de oprire (Când se termină redarea ...)
+	o_Lang007 =	Co&ntext Hotkeys sensibile
+	o_Lang008 =	&Adăugați cheia Windows pentru a "Play" hotkey
+	o_Lang009 =	&Utilizați un buton joystick ca tastă rapidă
+	o_Lang010 =	S&etați ca implicit Hotkeys
+	o_Lang011 =	Se&tați ca fișier implicit
+	o_Lang012 =	&Implicit Fișier elimina
+	o_Lang013 =	Im&plicit Hotkeys
+	o_Lang014 =	Set&ări implicite
+		
+; 10. Donate Sub Menu		
+	p_Lang001 =	&PayPal donatie
+		
+; 11. Help Sub Menu		
+	h_Lang001 =	&Ajutor
+	h_Lang002 =	&Tutoriale
+	h_Lang003 =	&Sfaturi
+	h_Lang004 =	&Creator Acasă macro
+	h_Lang005 =	&Forum
+	h_Lang006 =	&Documentație AHK Online
+	h_Lang007 =	&Verifică pentru actualizări...
+	h_Lang008 =	V&erificați la pornire
+	h_Lang009 =	Des&pre
+		
+; 12. Tray Menu		
+	y_Lang001 =	Ascunde fereastra
+	y_Lang002 =	Afișează fereastra
+	y_Lang003 =	Bara de instrumente de control
+		
+; 13. Built-in Vars Menu		
+	b_Lang001 =	Caractere speciale
+	b_Lang002 =	Proprietăţi
+	b_Lang003 =	Data si ora
+	b_Lang004 =	Idle Time utilizator
+	b_Lang005 =	Sistem și utilizator
+	b_Lang006 =	Pt.
+	b_Lang007 =	Buclă
+		
+; 14. Main Window		
+	w_Lang001 =	Export
+	w_Lang002 =	Previzualizare
+	w_Lang003 =	Opțiuni
+	w_Lang004 =	Record
+	w_Lang005 =	A juca
+	w_Lang006 =	Redare
+	w_Lang007 =	Manual
+	w_Lang008 =	Stop
+	w_Lang009 =	Bara de instrumente de afișare Controale
+	w_Lang010 =	Pauză
+	w_Lang011 =	Buclă
+	w_Lang012 =	Capta prese-cheie în această fereastră
+	w_Lang013 =	Minimiza la tava
+	w_Lang014 =	Hotkeys întotdeauna active
+	w_Lang015 =	Repeta
+	w_Lang016 =	Întârziere (ms)
+	w_Lang017 =	Aplica
+	w_Lang018 =	Introduce
+	w_Lang019 =	Editați | ×
+	w_Lang020 =	Opțiunile de oprire (Când se termină redarea ...)
+	w_Lang021 =	Nu face nimic
+	w_Lang022 =	Închide cerere
+	w_Lang023 =	Închide
+	w_Lang024 =	Închidere (forță)
+	w_Lang025 =	Reboot
+	w_Lang026 =	Ieşi din cont
+	w_Lang027 =	Hiberna
+	w_Lang028 =	Suspenda
+	w_Lang029 =	Calculator de blocare
+	w_Lang030 =	Index
+	w_Lang031 =	Acțiune
+	w_Lang032 =	Detalii
+	w_Lang033 =	Repeta
+	w_Lang034 =	Întârziere
+	w_Lang035 =	Tip
+	w_Lang036 =	Control
+	w_Lang037 =	Fereastră
+	w_Lang038 =	Cometariu
+	w_Lang039 =	Culoare
+	w_Lang040 =	Nou (Ctrl + N)
+	w_Lang041 =	Deschideți (Ctrl + O)
+	w_Lang042 =	Salvați (Ctrl + S)
+	w_Lang043 =	Save As (Ctrl + Shift + S)
+	w_Lang044 =	Export pentru a AHK (Ctrl + E)
+	w_Lang045 =	Previzualizare Script (Ctrl + P)
+	w_Lang046 =	Setări (Ctrl + G)
+	w_Lang047 =	Înregistrare Macro (Ctrl + R)
+	w_Lang048 =	Activati ​​Macrocomenzi (Ctrl + Enter)
+	w_Lang049 =	Macro juca curent (Ctrl + Shift + Enter)
+	w_Lang050 =	Timer (Ctrl + Shift + T)
+	w_Lang051 =	Mouse-ul (F2)
+	w_Lang052 =	Text (F3)
+	w_Lang053 =	Edita Macrocomenzi (Ctrl + Shift + M)
+	w_Lang054 =	Controlul (F4)
+	w_Lang055 =	Pauză (F5)
+	w_Lang056 =	Mesaj Box (Shift + F5)
+	w_Lang057 =	Așteptați (Ctrl + F5)
+	w_Lang058 =	Fereastra (F6)
+	w_Lang059 =	Imagine / Pixel Căutare (F7)
+	w_Lang060 =	Run / Fișier / String / Diverse. (F8)
+	w_Lang061 =	Buclă (F9)
+	w_Lang062 =	Du-te la / Etichetă (Shift + F9)
+	w_Lang063 =	Set temporizator (Ctrl + F9)
+	w_Lang064 =	If (F10)
+	w_Lang065 =	Variabile / Matricele (Shift + F10)
+	w_Lang066 =	Funcții / Array Metode (Ctrl + F10)
+	w_Lang067 =	Trimite email (F11)
+	w_Lang068 =	Descărcare fișiere (Shift + F11)
+	w_Lang069 =	Zip / fișiere Dezarhiveaza (Ctrl + F11)
+	w_Lang070 =	Internet Explorer (F12)
+	w_Lang071 =	Exprimarea / Interfață COM (Shift + F12)
+	w_Lang072 =	Mesaje Windows (Ctrl + F12)
+	w_Lang073 =	Se adaugă Macro (Ctrl + T)
+	w_Lang074 =	Macro Închide (Ctrl + W)
+	w_Lang075 =	Duplicate Macro (Ctrl + Shift + D)
+	w_Lang076 =	Import Macro (Ctrl + I)
+	w_Lang077 =	Macro salva curent (Ctrl + Alt + S)
+	w_Lang078 =	Mutați în sus (Ctrl + PageUp)
+	w_Lang079 =	Mutați în jos (Ctrl + PageDown)
+	w_Lang080 =	Duplicate rândurile selectate (Ctrl + D)
+	w_Lang081 =	Se taie rândurile selectate (Ctrl + X)
+	w_Lang082 =	Copiați rândurile selectate (Ctrl + C)
+	w_Lang083 =	Pastă Copiată rânduri (Ctrl + V)
+	w_Lang084 =	Ștergeți rândurile selectate (Del)
+	w_Lang085 =	Undo (Ctrl + Z)
+	w_Lang086 =	Refaceți (Ctrl + Y)
+	w_Lang087 =	Copiaza in...
+	w_Lang088 =	Găsi / Înlocuire (Ctrl + F)
+	w_Lang089 =	Inserați / Editare Comentariu (Ctrl + L)
+	w_Lang090 =	Editați culoarea Mark (Ctrl + M)
+	w_Lang091 =	Personaliza
+	w_Lang092 =	Găsi o comandă (Ctrl + Shift + F)
+	w_Lang093 =	Edita (Enter)
+	w_Lang094 =	Ascunde
+	w_Lang095 =	Mută ​​aici
+	w_Lang096 =	Copiere aici
+	w_Lang097 =	Grupuri
+	w_Lang098 =	Activați grupurile (Ctrl + Shift + G)
+	w_Lang099 =	Adăugați un grup (Ctrl + Shift + Y)
+	w_Lang100 =	Eliminați grupul (Ctrl + Shift + R)
+	w_Lang101 =	Eliminați toate grupurile
+	w_Lang102 =	Editați grupurile
+	w_Lang103 =	Numele Grupului
+	w_Lang104 =	Creați funcții (Ctrl + Shift + U)
+	w_Lang105 =	Se adaugă parametri (Ctrl + Shift + P)
+	w_Lang106 =	Se adaugă Return (Ctrl + Shift + N)
+	w_Lang107 =	Converti Macro Pentru Function (Ctrl + Shift + C)
+	w_Lang108 =	Comentați rânduri nebifate
+	w_Lang109 =	Adăugați cheia Windows pentru a "Play" hotkey
+	w_Lang110 =	Utilizați un buton joystick ca tastă rapidă
+	w_Lang111 =	Căutare ... (Apăsați Enter pentru a merge)
+		
+; 15. Command Windows		
+	c_Lang001 =	Mouse
+	c_Lang002 =	Text
+	c_Lang003 =	Pauză
+	c_Lang004 =	Control
+	c_Lang005 =	Fereastră
+	c_Lang006 =	Imagine de căutare
+	c_Lang007 =	Pixel de căutare
+	c_Lang008 =	Run / Fișier / String / Diverse.
+	c_Lang009 =	În cazul în care Declarațiile
+	c_Lang010 =	Variabile
+	c_Lang011 =	Funcții / Metode Array
+	c_Lang012 =	Internet Explorer
+	c_Lang013 =	Exprimarea / Interfață COM
+	c_Lang014 =	Selectați Application (Avansat)
+	c_Lang015 =	Mesaj
+	c_Lang016 =	Control
+	c_Lang017 =	Întârziere
+	c_Lang018 =	Milisecunde
+	c_Lang019 =	Secunde
+	c_Lang020 =	Bine
+	c_Lang021 =	Anulare
+	c_Lang022 =	Închide
+	c_Lang023 =	Copie
+	c_Lang024 =	Șterge
+	c_Lang025 =	Utilizați% pentru variabile, de exemplu .:% Clipboard%
+	c_Lang026 =	Acțiune
+	c_Lang027 =	Clic
+	c_Lang028 =	Mișcare
+	c_Lang029 =	Faceți clic pe Mutare și se
+	c_Lang030 =	Roată Up
+	c_Lang031 =	Roata de jos
+	c_Lang032 =	Tragere și plasare
+	c_Lang033 =	Coordonate
+	c_Lang034 =	Căutare
+	c_Lang035 =	Subcomanda
+	c_Lang036 =	Relativ
+	c_Lang037 =	Buton
+	c_Lang038 =	Stânga
+	c_Lang039 =	Dreapta
+	c_Lang040 =	Mijloc
+	c_Lang041 =	X1
+	c_Lang042 =	X2
+	c_Lang043 =	Așteptare / eliberare
+	c_Lang044 =	Faceți clic pe Count
+	c_Lang045 =	Plain Text (Raw)
+	c_Lang046 =	Text cu comenzi
+	c_Lang047 =	Paste din Clipboard
+	c_Lang048 =	Paste pentru control
+	c_Lang049 =	Set Text
+	c_Lang050 =	Adăugaţi o întrerupere
+	c_Lang051 =	Caseta mesaj
+	c_Lang052 =	Așteptați pentru cheie
+	c_Lang053 =	Expirare așteptare
+	c_Lang054 =	(0) = milisecunde infinit
+	c_Lang055 =	Comanda
+	c_Lang056 =	Valoare
+	c_Lang057 =	Variabila de ieșire
+	c_Lang058 =	Poziţie
+	c_Lang059 =	Mărimea
+	c_Lang060 =	4 variabile vor fi create cu acest prefix și terminând cu X, Y, W, H.
+	c_Lang061 =	Start
+	c_Lang062 =	Sfârşit
+	c_Lang063 =	Imagine
+	c_Lang064 =	Pixel
+	c_Lang065 =	Asiguraţi-Screenshot
+	c_Lang066 =	Asteptati-cheie
+	c_Lang067 =	Dacă va fi găsit
+	c_Lang068 =	În cazul în care nu a fost găsit / eroare
+	c_Lang069 =	Variabile de ieșire
+	c_Lang070 =	Coord
+	c_Lang071 =	Variațiuni
+	c_Lang072 =	Previzualizare
+	c_Lang073 =	Buclă
+	c_Lang074 =	Crea în mod automat obiectul COM
+	c_Lang075 =	Pauză
+	c_Lang076 =	Continua
+	c_Lang077 =	Mergi la
+	c_Lang078 =	Mergi la Label
+	c_Lang079 =	Eticheta
+	c_Lang080 =	Adăugaţi o etichetă
+	c_Lang081 =	String (InputVar)
+	c_Lang082 =	Variabil
+	c_Lang083 =	Altfel
+	c_Lang084 =	Atribuiţi variabilă
+	c_Lang085 =	Conţinut
+	c_Lang086 =	Operator
+	c_Lang087 =	Expresie
+	c_Lang088 =	Restabili
+	c_Lang089 =	Nume funcţia
+	c_Lang090 =	Separate prin virgulă parametrii (fără paranteze)
+	c_Lang091 =	Formatul de utilizare a expresiilor
+	c_Lang092 =	Pagina Element / Index
+	c_Lang093 =	A stabilit
+	c_Lang094 =	Obține
+	c_Lang095 =	Metodă
+	c_Lang096 =	Proprietate
+	c_Lang097 =	Așteptați ca pagina să se încarce.
+	c_Lang098 =	CLSID
+	c_Lang099 =	Conectați
+	c_Lang100 =	Mâner
+	c_Lang101 =	COM Script
+	c_Lang102 =	Numărul de mesaje
+	c_Lang103 =	Taste speciale
+	c_Lang104 =	Browser-ul Înapoi
+	c_Lang105 =	Înainte de browser
+	c_Lang106 =	Browserul Refresh
+	c_Lang107 =	Browser-stop
+	c_Lang108 =	Browser-ul de căutare
+	c_Lang109 =	Browser Favorite
+	c_Lang110 =	Browser-ul Acasă
+	c_Lang111 =	Mass-media
+	c_Lang112 =	Mut
+	c_Lang113 =	Volum sus
+	c_Lang114 =	Volum scăzut
+	c_Lang115 =	Redare / Pauză
+	c_Lang116 =	Piesa următoare
+	c_Lang117 =	Melodia anterioară
+	c_Lang118 =	Stop
+	c_Lang119 =	E-mail
+	c_Lang120 =	App 1
+	c_Lang121 =	App 2
+	c_Lang122 =	Scancode
+	c_Lang123 =	Adăuga
+	c_Lang124 =	Istoricul cheie
+	c_Lang125 =	Tastați o scancode ...
+	c_Lang126 =	Codul de adăugat la Virtual Keys List!
+	c_Lang127 =	Tastați un nume pentru variabila
+	c_Lang128 =	Utilizați funcția din fișier extern
+	c_Lang130 =	Se repetă până când
+	c_Lang131 =	Aplica
+	c_Lang132 =	Buclă
+	c_Lang133 =	Fişier
+	c_Lang134 =	Analiza
+	c_Lang135 =	Citire
+	c_Lang136 =	Registru
+	c_Lang137 =	Model de fișier:
+	c_Lang138 =	Directoare
+	c_Lang139 =	Recursiv
+	c_Lang140 =	Variabila de intrare:
+	c_Lang141 =	Delimitatori:
+	c_Lang142 =	Omită Caractere:
+	c_Lang143 =	Fișier de intrare:
+	c_Lang144 =	Rădăcină cheie \ cheie:
+	c_Lang145 =	Fişierele
+	c_Lang146 =	Taste
+	c_Lang147 =	Icoană
+	c_Lang148 =	Nici o pictogramă
+	c_Lang149 =	Eroare
+	c_Lang150 =	Întrebare
+	c_Lang151 =	Exclamare
+	c_Lang152 =	Info
+	c_Lang153 =	Mereu deasupra
+	c_Lang154 =	Minute
+	c_Lang155 =	Pana cand
+	c_Lang156 =	Scenariu
+	c_Lang157 =	Script Limba
+	c_Lang158 =	Nu este compatibil cu 64-biți!
+	c_Lang159 =	Opţiuni de căutare
+	c_Lang160 =	Transparent
+	c_Lang161 =	Scară
+	c_Lang162 =	Add "Dacă Declaratie"
+	c_Lang163 =	Mod de a trimite
+	c_Lang164 =	Egal
+	c_Lang165 =	Conţine
+	c_Lang166 =	O mai mare
+	c_Lang167 =	Mai puțin
+	c_Lang168 =	Da
+	c_Lang169 =	Nu
+	c_Lang170 =	Bine
+	c_Lang171 =	Anulare
+	c_Lang172 =	Avorta
+	c_Lang173 =	Ignora
+	c_Lang174 =	Reîncerca
+	c_Lang175 =	Continua
+	c_Lang176 =	Încearcă din nou
+	c_Lang177 =	Pauză
+	c_Lang178 =	Set întârziere cheie
+	c_Lang179 =	Întârziere cheie
+	c_Lang180 =	Intarziere aleatorie
+	c_Lang181 =	Minim
+	c_Lang182 =	Maxim
+	c_Lang183 =	Dezactivați întârzieri aleatorii pentru această comandă
+	c_Lang184 =	Selectare din listă
+	c_Lang185 =	Butoane
+	c_Lang186 =	Primul
+	c_Lang187 =	Al doilea
+	c_Lang188 =	Al treilea
+	c_Lang189 =	Titlu
+	c_Lang190 =	Dacă fereastra activă
+	c_Lang191 =	Dacă fereastra nu este activ
+	c_Lang192 =	Dacă există fereastră
+	c_Lang193 =	Dacă fereastra nu există
+	c_Lang194 =	În cazul în care există fișier
+	c_Lang195 =	Dacă fișierul nu există
+	c_Lang196 =	Dacă textul clipboard
+	c_Lang197 =	În cazul în care indicele de buclă
+	c_Lang198 =	Dacă imaginea / pixel găsite
+	c_Lang199 =	Dacă imaginea / pixel nu a fost găsit
+	c_Lang200 =	În cazul în șir conține
+	c_Lang201 =	În cazul în care nu conține șir de caractere
+	c_Lang202 =	În cazul în care caseta de mesaje
+	c_Lang203 =	Comparare variabile
+	c_Lang204 =	Evaluați expresia
+	c_Lang205 =	Regiune
+	c_Lang206 =	(Utilizați [] pentru a crea matrici, de exemplu .: [10, 20, aVariable, "aString"])
+	c_Lang207 =	Array obiect
+	c_Lang208 =	Nume cheie
+	c_Lang209 =	Valoare Nume
+	c_Lang210 =	Valori
+	c_Lang211 =	Mulțime
+	c_Lang212 =	Definit de utilizator Funcție
+	c_Lang213 =	Parametru funcţia
+	c_Lang214 =	Funcţia de retur
+	c_Lang215 =	Parametrii
+	c_Lang216 =	Retur Valoare
+	c_Lang217 =	Valoare implicită
+	c_Lang218 =	Domeniu
+	c_Lang219 =	Local
+	c_Lang220 =	Global
+	c_Lang221 =	Nume
+	c_Lang222 =	Aveți posibilitatea să adăugați mai mulți parametri din meniul Function.
+	c_Lang223 =	Variabilele globale
+	c_Lang224 =	Variabile locale
+	c_Lang225 =	Variabile statice
+	c_Lang226 =	Din
+	c_Lang227 =	E-mail
+	c_Lang228 =	Subiect
+	c_Lang229 =	Mesaj
+	c_Lang230 =	La
+	c_Lang231 =	CC
+	c_Lang232 =	CCA
+	c_Lang233 =	F2 pentru a edita
+	c_Lang234 =	HTML
+	c_Lang235 =	Trimite email
+	c_Lang236 =	Descărcarea fișierelor
+	c_Lang237 =	Zip / fișiere Dezarhiveaza
+	c_Lang238 =	Aprinde
+	c_Lang239 =	Opriți
+	c_Lang240 =	Pozițiile înregistrate.
+	c_Lang241 =	Șterge toate cronometre
+	c_Lang242 =	Setare temporizator
+	c_Lang243 =	Dreapta justificată
+	c_Lang244 =	De la dreapta la stanga
+	c_Lang245 =	Atașamente
+	c_Lang246 =	Cale
+	c_Lang247 =	Dacă
+	c_Lang248 =	Comprimați fiecare fișier într-o altă arhivă
+	c_Lang249 =	Se extrage fiecare fișier într-un alt dosar
+	c_Lang250 =	Fişiere zip
+	c_Lang251 =	Fișiere unzip
+	c_Lang252 =	Link-uri de descărcare
+	c_Lang253 =	Dosar de destinație
+	c_Lang254 =	Fișier de destinație
+	c_Lang255 =	Separate prin virgulă, virgulă sau linie.
+	c_Lang256 =	Ajustați coordonatele la centrul imaginii
+	c_Lang257 =	Perioadă
+		
+; 16. Other Windows		
+	t_Lang001 =	Export către AutoHotkey
+	t_Lang002 =	Macrocomenzi
+	t_Lang003 =	Buclele
+	t_Lang004 =	0 = infinit
+	t_Lang005 =	Utilizare Hotstring
+	t_Lang006 =	Bloc mouse-ul
+	t_Lang007 =	Toate
+	t_Lang008 =	Nici unul
+	t_Lang009 =	Context Hotkeys sensibile
+	t_Lang010 =	Export pentru a
+	t_Lang011 =	Identație
+	t_Lang012 =	Includeți codul PMC
+	t_Lang013 =	Nu înlănțui Trimite comenzi
+	t_Lang014 =	Reîmprospăta
+	t_Lang015 =	Auto-Refresh
+	t_Lang016 =	Mereu deasupra
+	t_Lang017 =	Setările
+	t_Lang018 =	General
+	t_Lang019 =	Start / Stop pentru înregistrare
+	t_Lang020 =	Înregistrare Macro Nou
+	t_Lang021 =	Keystrokes
+	t_Lang022 =	Înregistrare
+	t_Lang023 =	Captureze stat-cheie (în jos / sus)
+	t_Lang024 =	Clicuri de mouse
+	t_Lang025 =	Mouse-ul pe pneuri
+	t_Lang026 =	Mută ​​mouse-ul
+	t_Lang027 =	Intervale cronometrate
+	t_Lang028 =	Întârziere minimă
+	t_Lang029 =	Clase de ferestre
+	t_Lang030 =	Titlurile de ferestre
+	t_Lang031 =	Înregistrare ControlSend
+	t_Lang032 =	Înregistrare ControlClick
+	t_Lang033 =	Relativă cheie Înregistrare
+	t_Lang034 =	Comutare
+	t_Lang035 =	Redare
+	t_Lang036 =	Grabeste-te
+	t_Lang037 =	Incetineste
+	t_Lang038 =	Mouse-ul a reveni după redare
+	t_Lang039 =	Mouse-ul coordonate
+	t_Lang040 =	Fereastră
+	t_Lang041 =	Ecran
+	t_Lang042 =	Mouse-ul prestabilit Întârziere
+	t_Lang043 =	Implicit Fereastra de întârziere
+	t_Lang044 =	Istoricul Max pe Macro
+	t_Lang045 =	Sterge istoricul
+	t_Lang046 =	Imagini de ecran
+	t_Lang047 =	Elaboreze Button
+	t_Lang048 =	Line Lățime (Px)
+	t_Lang049 =	De captare de la eliberare
+	t_Lang050 =	Apăsați Enter pentru a captura
+	t_Lang051 =	Imagini de ecran Directory
+	t_Lang052 =	Folie de linie
+	t_Lang053 =	Hotkeys
+	t_Lang054 =	Se stabilește ca implicit Hotkeys
+	t_Lang055 =	Disable Window Comenzi rapide
+	t_Lang056 =	Coloane de resetare Dimensiune
+	t_Lang057 =	Fișier implicit Macro
+	t_Lang058 =	Fișier Biblioteca Standard
+	t_Lang059 =	Folosi expresia în mod implicit pentru variabile Alocare
+	t_Lang060 =	Evidențiați Loops și situațiile
+	t_Lang061 =	(Faceți clic pe antetul coloanei Index pentru a activa / dezactiva)
+	t_Lang062 =	Taste virtuale
+	t_Lang063 =	Mod implicit
+	t_Lang064 =	Editeaza Comentariu
+	t_Lang065 =	Cometariu
+	t_Lang066 =	Căutare Coloana
+	t_Lang067 =	Găsi / Înlocuire
+	t_Lang068 =	&Găsi
+	t_Lang069 =	&Meci Case
+	t_Lang070 =	&A inlocui
+	t_Lang071 =	Găsite
+	t_Lang072 =	Înlocuit
+	t_Lang073 =	&Rânduri selectate
+	t_Lang074 =	&Toate rândurile
+	t_Lang075 =	T&oate Macrocomenzi
+	t_Lang076 =	Despre
+	t_Lang077 =	&Expresie uzuala
+	t_Lang078 =	Play
+	t_Lang079 =	Juca la fiecare X (mili) secunde
+	t_Lang080 =	Timer
+	t_Lang081 =	Pauză
+	t_Lang082 =	Declaraţii
+	t_Lang083 =	Afișează indentare pentru Loops și declarații
+	t_Lang084 =	(Faceți dublu clic activa antetul coloanei de actiune / dezactivare)
+	t_Lang085 =	Controale de afișare Bar la pornire
+	t_Lang086 =	Se caută funcții. Te rog asteapta...
+	t_Lang087 =	Includeți fișiere externe
+	t_Lang088 =	Creați EXE Fișier
+	t_Lang089 =	Se permite Instanțe multiple
+	t_Lang090 =	Valori prestabilite
+	t_Lang091 =	Se lasă rânduri Glisarea
+	t_Lang092 =	&Întregul conținut al celulelor
+	t_Lang093 =	Formatul standard INI
+	t_Lang094 =	Numele = Valoare
+	t_Lang095 =	Introduceți 1 variabilă pe fiecare linie. Puteți adăuga, de asemenea, [secțiunile].
+	t_Lang096 =	Variabile globale ale utilizatorilor
+	t_Lang097 =	Apăsați un buton de pe joystick
+	t_Lang098 =	Backspace pentru a șterge
+	t_Lang099 =	Buton
+	t_Lang100 =	Sfaturi de afișare din baloane
+	t_Lang101 =	Viteză
+	t_Lang102 =	Încet
+	t_Lang103 =	Rapid
+	t_Lang104 =	Arată / Ascunde bara de titlu
+	t_Lang105 =	Arată / Ascunde fereastra principală
+	t_Lang106 =	Rula imediat
+	t_Lang107 =	Întârzierile aleatoare
+	t_Lang108 =	Normal
+	t_Lang109 =	Jos
+	t_Lang110 =	Sus
+	t_Lang111 =	Inseraţi Keystroke
+	t_Lang112 =	Redare / Pauză
+	t_Lang113 =	Stop
+	t_Lang114 =	Opțiuni de redare
+	t_Lang115 =	Start / Stop pentru înregistrare
+	t_Lang116 =	Înregistrare Macro Nou
+	t_Lang117 =	Opțiuni de înregistrare
+	t_Lang118 =	Listă clară
+	t_Lang119 =	Afișează Progress Bar
+	t_Lang120 =	Grabeste-te
+	t_Lang121 =	Incetineste
+	t_Lang122 =	Arată / Ascunde bara de titlu
+	t_Lang123 =	Arată / Ascunde fereastra principală
+	t_Lang124 =	Andocarea
+	t_Lang125 =	Doc
+	t_Lang126 =	Deschis
+	t_Lang127 =	Salvați
+	t_Lang128 =	A taia
+	t_Lang129 =	Copie
+	t_Lang130 =	Pastă
+	t_Lang131 =	Selectează tot
+	t_Lang132 =	Șterge
+	t_Lang133 =	Tastatură
+	t_Lang134 =	Mouse
+	t_Lang135 =	Alții
+	t_Lang136 =	Rânduri de evidențiere
+	t_Lang137 =	Default Script Editor
+	t_Lang138 =	Open in editor extern (Ctrl + Shift + E)
+	t_Lang139 =	Selecta
+	t_Lang140 =	Prin coloana
+	t_Lang141 =	Toate coloanele
+	t_Lang142 =	Tema de la eliminarea Toolbars (necesită repornire)
+	t_Lang143 =	Auto Ascundeți Controale Bara de instrumente
+	t_Lang144 =	Faceți clic și trageți pentru a schimba ordinea. Dublu-clic pentru a edita.
+	t_Lang145 =	Edita Macrocomenzi
+	t_Lang146 =	In linie
+	t_Lang147 =	Macro
+	t_Lang148 =	Acțiune de buton de închidere principal ferestrei
+	t_Lang149 =	Închide cerere
+	t_Lang150 =	Minimiza la tava
+	t_Lang151 =	Confirmare de afișare atunci când închiderea unui macro
+	t_Lang152 =	Creați automat backup-uri
+	t_Lang153 =	Creează o sarcină programată în Windows Task Scheduler.
+	t_Lang154 =	Momentul primului run
+	t_Lang155 =	Tipul de program de
+	t_Lang156 =	O dată || Zilnic | Săptămânal | Lunar | Start | Logon | Inactiv
+	t_Lang157 =	Fișier țintă PMC
+	t_Lang158 =	Fișier țintă AHK
+	t_Lang159 =	Script-ul va fi salvat sau suprascrise în directorul curent!
+	t_Lang160 =	Deschideți Task Scheduler
+	t_Lang161 =	Sarcina a creat cu succes!
+	t_Lang162 =	S-a produs o eroare. Sarcina nu a putut fi creat.
+	t_Lang163 =	Planificator
+	t_Lang164 =	Macrocomenzi program
+	t_Lang165 =	Macro alerga
+	t_Lang166 =	Fişier
+	t_Lang167 =	Şir
+	t_Lang168 =	Obtine informatii
+	t_Lang169 =	Aștepta
+	t_Lang170 =	Grupuri de ferestre
+	t_Lang171 =	Mesaje
+	t_Lang172 =	Și INI registru
+	t_Lang173 =	Sunet
+	t_Lang174 =	Variabile
+	t_Lang175 =	Pt.
+	t_Lang176 =	Adăugaţi un grup
+	t_Lang177 =	Grup nou
+	t_Lang178 =	Limba Editor
+	t_Lang179 =	Creaza nou
+	t_Lang180 =	Utilizați tasta Enter pentru, PgDn și PgUp pentru a naviga.
+	t_Lang181 =	A depune
+	t_Lang182 =	Nume
+	t_Lang183 =	Salvează modificările?
+	t_Lang184 =	Fișier limbă
+	t_Lang185 =	Fișier de referință
+	t_Lang186 =	Revizuire sau traducere trimiteți nouă
+	t_Lang187 =	Restrângere totul
+	t_Lang188 =	Extinde toate
+	t_Lang189 =	Limba
+	t_Lang190 =	Converti pauze de linie
+	t_Lang191 =	Conturi de e-mail
+	t_Lang192 =	Actualizați
+	t_Lang193 =	Dublu clic pentru a edita
+	t_Lang194 =	SMTP Server
+	t_Lang195 =	Port
+	t_Lang196 =	Autentifica
+	t_Lang197 =	Nume de utilizator
+	t_Lang198 =	Parola
+	t_Lang199 =	SSL
+	t_Lang200 =	Mod de a trimite
+	t_Lang201 =	Trimite un test de
+	t_Lang202 =	Ecranul și ferestre
+	t_Lang203 =	Detect ascunse pentru Windows
+	t_Lang204 =	Detect text ascuns
+	t_Lang205 =	Mod de potrivire din titlu
+	t_Lang206 =	Viteză din titlu Potrivire
+	t_Lang207 =	Client
+	t_Lang208 =	G&ăsi
+	t_Lang209 =	A &inlocui
+	t_Lang210 =	Nu afișați erori
+		
+; 17. Messages & Dialogs		
+	d_Lang001 =	Deschis
+	d_Lang002 =	Salvați proiectul curent?
+	d_Lang003 =	Setări implicite
+	d_Lang004 =	Macro Creator Fișiere
+	d_Lang005 =	Salvați proiect
+	d_Lang006 =	Pentru a salva / fișier suprascriere a eșuat
+	d_Lang007 =	Eroare
+	d_Lang008 =	Eroare: Verificarea la Selected.
+		Please Macro o leiaf un Macro yn y rhestr.
+	d_Lang009 =	Eroare: Nu Hotkey selectat.
+	d_Lang010 =	Eroare: nevalid Address.
+		The cyfeiriad neu ffeil a ddewiswyd enw yn annilys.
+	d_Lang011 =	Avertizare
+	d_Lang012 =	Nr selected.
+		Continue?
+	d_Lang013 =	Script-ul de export
+	d_Lang014 =	Script-Exportata
+	d_Lang015 =	Dosarul a fost exportat cu succes!
+	d_Lang016 =	Faceți clic pe 'Get' pentru a marca poziția.
+	d_Lang017 =	- Selectați fereastra.
+		- Punctul în poziția dorită.
+		- Apăsați pe butonul din dreapta.
+	d_Lang018 =	pixel de culoare
+	d_Lang019 =	Listă clară
+	d_Lang020 =	Închide Macro?
+	d_Lang021 =	Următor →
+	d_Lang022 =	Anterior
+	d_Lang023 =	Mesaj
+	d_Lang024 =	Încarcă setările implicite?
+	d_Lang025 =	Macro (e) activated.`nUse tastele rapide pentru a juca.
+	d_Lang026 =	pentru a porni / opri înregistrarea
+	d_Lang027 =	înregistrare oprită
+	d_Lang028 =	Înregistrare...
+	d_Lang029 =	a opri
+	d_Lang030 =	pentru a începe noi
+	d_Lang031 =	Apelarea funcției inexistente.
+	d_Lang032 =	Eroare: Duplicate Hotkeys.
+	d_Lang033 =	activa Macrocomenzi
+	d_Lang034 =	- Faceți clic și trageți cu% DrawButton% pentru a selecta o zonă.
+		- Faceți clic și eliberați fără tragere pentru a selecta zona de control.
+		- Faceți clic într-o zonă fără un control pentru a selecta zona a ferestrei.
+	d_Lang035 =	Continua?
+	d_Lang036 =	Imagine / Pixel S-au găsit la
+	d_Lang037 =	Imagine / Pixel Nu a fost găsit.
+	d_Lang038 =	Apăsați OK pentru a continua.
+	d_Lang039 =	Se trimite. Te rog asteapta...
+	d_Lang040 =	Această caracteristică necesită GDI + biblioteca.
+		Faceți clic pe OK pentru a merge la pagina de descărcare.
+	d_Lang041 =	Numele variabilei conține un caracter ilegal.
+	d_Lang042 =	este un cuvânt rezervat.
+	d_Lang043 =	Sau utilizați Bara de instrumente Controls.
+	d_Lang044 =	Această caracteristică necesită eval () Funcția.
+		Faceți clic pe OK pentru a merge la pagina de descărcare.
+	d_Lang045 =	Vă rugăm să selectați o fereastră de Internet Explorer!
+	d_Lang046 =	Conexiune de succes!
+	d_Lang047 =	Eroare de conexiune!
+	d_Lang048 =	Se introduce un mâner și un CLSID.
+	d_Lang049 =	Etichetă Nume nevalid.
+	d_Lang050 =	etichetă duplicat.
+	d_Lang051 =	Pentru a reda o presă Macro hotkey corespunzătoare (Auto / Man).
+	d_Lang052 =	Pentru a începe înregistrarea apăsați o tastă de înregistrare.
+	d_Lang053 =	Nu mai afișa acest mesaj.
+	d_Lang054 =	Vă rugăm să selectați o fereastră Excel!
+	d_Lang055 =	Vă rugăm să selectați un fișier script AutoHotkey (.ahk) și introduceți un nume de funcție.
+	d_Lang056 =	Această funcție necesită AutoHotkey instalat.
+		Faceți clic pe OK pentru a merge la pagina de descărcare.
+	d_Lang057 =	- Apăsați tastele Ctrl + săgeată pentru a muta zona selectată.
+		- Apăsați tastele Shift + săgeată pentru a redimensiona zona selectată.
+		- Apăsați Enter pentru a termina.
+	d_Lang058 =	Anumite caracteristici necesită admnistrator privilages pentru a putea funcționa corect.
+		Este recomandat pentru a reporni aplicația ca administrator.
+	d_Lang059 =	Această comandă nu acceptă expresii sau funcții.
+		Vă rugăm să alocați o variabilă și-l utilizați în parametrul.
+	d_Lang060 =	versiune nouă disponibilă
+	d_Lang061 =	Nu acum
+	d_Lang062 =	Ai deja versiunea cea mai recentă.
+	d_Lang063 =	A apărut o eroare de verificare.
+	d_Lang064 =	eroare în
+	d_Lang065 =	Rând
+	d_Lang066 =	Specific
+	d_Lang067 =	Afișați această fereastră la pornire
+	d_Lang068 =	Sfaturi:
+	d_Lang069 =	O mulțime de timp și efort a intrat în dezvoltarea Creatorului Macro Pulover lui. Dacă vi se pare util, vă rugăm să ia în considerare arăta aprecierea cu o donație.
+		Donând sau nu, nu va exista nici o diferență în caracteristicile și funcționalitatea.
+	d_Lang070 =	Dona...
+	d_Lang071 =	Nu multumesc
+	d_Lang072 =	Suport pentru software Open Source
+	d_Lang073 =	Eroare: nevalid Hotkey selectat.
+	d_Lang074 =	Găsi o comandă sau o funcție
+	d_Lang075 =	Bine ati venit la Creator Macro Pulover lui
+	d_Lang076 =	Vă rugăm să alegeți aspectul preferat
+	d_Lang077 =	Compact
+	d_Lang078 =	Mod implicit
+	d_Lang079 =	Verificați dacă există actualizări la pornire.
+	d_Lang080 =	Aveți posibilitatea să modificați acest lucru în Opțiuni> Setări> Generale.
+	d_Lang081 =	Aveți posibilitatea să modificați și să personalizați aspecte din meniul View.
+	d_Lang082 =	Fișierul nu a fost găsit!
+	d_Lang083 =	Un fișier copie de rezervă a fost găsit. Doriți să-l deschidă?
+	d_Lang084 =	Vă rugăm să salvați modificările înainte de a programa o sarcină.
+	d_Lang085 =	Lipsă declarație "End Buclă" în Macro
+	d_Lang086 =	Lipsă "End If" Declarație în macro
+	d_Lang087 =	Observați că modificările aduse script-ul din afara programului nu va afecta MACROS în nici un fel.
+		Această caracteristică este menită doar ca o funcție de export rapidă. PMC nu este proiectat pentru a fi un editor de script AHK.
+	d_Lang088 =	Încercați să rulați utilizatorul ca comun (nu administrator).
+	d_Lang089 =	Nici rând selectat!
+	d_Lang090 =	Vă rugăm să selectați un rând pentru a introduce sau scoate din grup.
+	d_Lang091 =	Descărcarea. Te rog asteapta...
+	d_Lang092 =	pictograme mici
+	d_Lang093 =	pictograme mari
+	d_Lang094 =	Această caracteristică necesită Windows Vista sau mai mare.
+	d_Lang095 =	Utilizarea de ByRef determină un parametru pentru a deveni un alias pentru variabila transmisă de apelant. Cu alte cuvinte, parametrul și variabila apelantului ambele se referă la același conținut în memorie.
+	d_Lang096 =	- NU ENCLOSE VARIABILE IN SEMNE PERCENT AICI.
+		- Valoarea returnată trebuie să fie o expresie.
+		- Aveți dreptul să utilizați șiruri, variabile, tablouri și funcții. De asemenea, s-ar putea combina oricare dintre acestea.
+		- Pentru a utiliza siruri de caractere, incadrati in ghilimele, ex .: "Rezultatul este:" a + b.
+		- Dacă doriți să reveniți rezultate suplimentare, puteți utiliza, de asemenea, în parametri ByRef.
+		- Tablourile pot fi folosite pentru a returna mai multe valori sau valori chiar numite.
+	d_Lang097 =	- NU ENCLOSE VARIABILE IN SEMNE PERCENT AICI.
+		- Cele mai multe dintre expresiile AHK sunt acceptate.
+		- Aveți dreptul să utilizați șiruri, variabile, tablouri și funcții.
+		- Pentru a utiliza siruri de caractere, incadrati in ghilimele, ex .: var = "o".
+		- Declarațiile multiple sunt susținute, de exemplu .: var = "o" || Instr (var, "b").
+	d_Lang098 =	În cazul în care un parametru are o valoare prestabilită, următorii parametri trebuie să aibă una.
+	d_Lang099 =	Numele Funcția conține un caracter ilegal.
+	d_Lang100 =	Du-te, Gosub și etichete nu sunt permise în funcții.
+	d_Lang101 =	Funcția duplicat.
+	d_Lang102 =	S-a produs o eroare. Aveți posibilitatea să trimiteți un e-mail la 'pulover@macrocreator.com' cu fișierul:
+	d_Lang103 =	Fișier disponibil limbi noi.
+	d_Lang104 =	Acest mesaj nu va fi afișat din nou pentru aceeași actualizare. Puteți să-l descărcați din meniul Help> Verificare actualizări.
+	d_Lang105 =	Fișier trimis cu succes. Mulțumesc!
+	d_Lang106 =	Fișierele de limbă actualizate cu succes.
+	d_Lang107 =	Nu a putut porni cronometrul
+	d_Lang108 =	Toate pozitiile sunt înregistrate. Te rog, să ștergeți una dintre ele.
+	d_Lang109 =	Eticheta țintă nu există.
+	d_Lang110 =	Confirmă fișierul înlocui
+	d_Lang111 =	Deja exista.
+		Ar dori să-l înlocuiască?
+	d_Lang112 =	Contul de e-mail nu a fost găsit.
+	d_Lang113 =	A raportat nici o eroare.
+	d_Lang114 =	Script-exportate (chiar dacă este compilat) cu funcția de e-mail send (CDO) va avea informațiile vizibile de conturi de e-mail utilizate, inclusiv parola. Fișierul de proiect PMC nu are aceste informații.
+	d_Lang115 =	- Hold Alt pentru a seta regiunea în aceeași locație.
+	d_Lang116 =	Se transferă și instala
+	d_Lang117 =	Du-te la pagina de descărcare
+	d_Lang118 =	Cel Mai Potrivit
+	d_Lang119 =	Reporniți aplicația pentru a aplica modificările.
+	d_Lang120 =	Pentru a reseta dimensiunile bare de instrumente, du-te la:
+		
+; 18. Start-up Tips		
+	Start_Tips =	Check out tutoriale video de la www.macrocreator.com/help pentru a afla despre multe caracteristici ale PMC.
+		Pentru a obține ajutor pentru o anumită comandă clic dreapta oriunde pe o fereastră de comandă pentru a afișa linkuri de ajutor online.
+		Aveți posibilitatea să creați Macrocomenzi cu ajutorul butoanelor de comandă din fereastra principală sau folosind aparatul pentru a copia acțiunile tale. Du-te la Opțiuni> Setări> Înregistrare pentru a selecta ce vor fi înregistrate intrări.
+		Utilizați bara de căutare sau fereastra "Găsiți o comandă" pentru a căuta comenzi și funcții.
+		Doriți să stabilească o traducere ajuta sau chiar să creați una nouă? Du-te la Opțiuni> Setări> Editor de limbă și de a face orice corecturi pe care doriți. O puteți oricând să examinați. Faceți clic pe Submit pentru a trimite revizuire dumneavoastră. Simțiți-vă liber să prezinte orice număr de corecturi de câte ori doriți.
+		Bifați opțiunea "Keys Capture" pentru a introduce chei și combinații pentru Macro-ul direct din fereastra principală.
+		Introduceți chei și combinații în caseta Hotkey din partea de jos și apăsați pe butonul Inserare pentru a le adăuga la alege rândurile.
+		Utilizați butoanele de editare din partea de jos a ferestrei principale pentru a seta repetare și întârziere la mai multe rânduri, în același timp. Dacă nu sunt selectate rânduri butoanele de editare se aplică tuturor rândurilor din listă.
+		Aproape fiecare comandă și funcția acceptă și ieșiri variabile. Aveți posibilitatea să atribuiți propriile variabile în variabilele de ferestre (Comenzi> Variabile / Paneluri). Pentru a le utiliza în interiorul comenzi încadrează numele variabilei în semne de procente, de exemplu .:% myVar%. În funcții, le folosesc fără semne de procente, de exemplu .: substr (myVar, 5).
+		Faceți clic dreapta oriunde în fereastra de comandă pentru a insera cu ușurință Variabilele încorporate dintr-o listă.
+		Pentru a utiliza înregistratorul pentru sarcini rapide du-te la Opțiuni> Setări> Înregistrare și bifați opțiunea "Clear List". Apoi, faceți clic pe butonul Record din fereastra principală și de a folosi F10 pentru a goli curent macro și începe un nou unul cu aceeași hotkey. Puteți verifica, de asemenea, opțiunea "Întotdeauna activă" în fereastra principală pentru a păstra înregistrarea și redarea hotkeys activă.
+		PMC suporta obiecte de matrice și metode, la fel ca și script-uri AutoHotkey. Aveți posibilitatea să creați tablouri în mai multe moduri, cele mai uzuale se întâmplă la fereastra Variabile, verificând opțiunea "exprimare" și care închide valorile în paranteze, de exemplu .: [10, 20, Var, "string"]. De asemenea, puteți crea chei numite, de exemplu .: {Keya: VARA, "unele cheie": "string value"}.
+		Funcții utilizați sintaxa expresie AHK. siruri de caractere literale trebuie să fie închise în ghilimele, iar variabilele nu au nevoie de semne la sută. Aveți posibilitatea să utilizați alte funcții sau elemente de matrice ca parametri. Ex .: StrReplace (myVar, myArray [ "A"], substr (OtherVar, 2, 3)).
+		Expresiile sunt susținute în AutoHotkey Sintaxa expresiei. Pentru a utiliza o expresie în interiorul unui parametru de comandă, acesta începe cu un semn de procente, de exemplu .:% substr (Var, 5).
+		De "buclă" contor la partea de sus setează numărul total de bucle pentru macro-ul selectat.
+		Puteți modifica un rând prin ea dublu-clic sau prin selectarea acesteia și făcând clic pe butoanele Edit din partea de jos. Aveți posibilitatea să modificați mai multe rânduri selectate folosind opțiunile din bara de editare din partea de jos.
+		Puteți defini propriile funcții în funcții> Creare funcție și să le utilizeze de la fereastra de funcții sau expresii din interior.
+		Puteți defini, Globa / variabile locale și statice pentru funcțiile definite de utilizator. Variabilele globale definite în Opțiuni> Setări> variabile globale de utilizator sunt considerate Super Global, și va fi întotdeauna disponibile funcții de interior, chiar și atunci când sunt definite ca locale.
+		Selectați unul sau mai multe rânduri pentru a adăuga noi comenzi pe deasupra lor.
+		Aveți posibilitatea să mutați rândurile cu clic-și-trageți.
+		Dublu-clic pe pictograma tavă pentru a activa sau a opri redarea taste / înregistrare. Faceți clic pe ea cu butonul din mijloc în timpul redării sau înregistrării pentru a întrerupe.
+		Puteți exporta macrocomenzi pentru scripturi AutoHotKey de lucru sau stand-alone executabile de la fereastra Export.
+		Pentru a înregistra și reda mouse-ul folosind coordonatele absolute mergeți la Opțiuni> Setări> Valori implicite și setați mouse-ul Coordonate Screen.
+		Puteți deschide, copia, muta sau șterge fișierele și folderele folosind una dintre comenzile din Comenzi> Run / Fișier / String / Diverse. Există mai multe alte comenzi utile, cum ar fi StringReplace, InputCasuta și MouseGetPos.
+		Pentru a înregistra în jos și starea de sus în fiecare du-te la cheie Opțiuni> Setări> Înregistrare și a verifica "Capture stare cheie (/ sus în jos)" opțiune.
+		Aveți posibilitatea să utilizați tastele rapide pentru a accelera sau încetini de redare. Du-te la Opțiuni> Setări> Redare pentru a seta tastele și viteza.
+		Pentru a regla zona de captare folosind instrumentul "face captura de ecran" du-te la Opțiuni> Setări> Imagini și selectați "Apăsați Enter pentru a Capture". Dupa ce desen Control utilizare dreptunghi + tastele săgeată pentru a muta selecția și Shift + tastele săgeată pentru ao redimensiona.
+		Quick Select: Selectați orice rând și faceți clic pe antetul unei coloane pentru a selecta rânduri similare bazate pe textul celulei din acea coloană.
+		Faceți clic pe antetul Index Coloana pentru a activa / dezactiva ajutor, desene și culori pentru bucle și declarații. Faceți dublu-clic pe antetul Acțiune Coloana pentru a activa / dezactiva indentare pentru Loops și declarații.
+		Puteți să depana Macrocomenzi folosind combinația de taste manuală și opțiunile Redare din meniul Macro. De asemenea, puteți să dezactivați acțiunile prin debifarea lor în lista Macro.
+		Pentru a face ca macrocomenzile funcționează numai pe o anumită fereastră du-te la Macro> Hotkeys sensibile la context.
+		Puteți seta propriile variabile globale care urmează să fie încărcate la pornire și care urmează să fie exportate. Du-te la Opțiuni> Setări> User variabile globale pentru a le adăuga.
+		Aveți posibilitatea să executați funcții avansate, cum ar fi SUBSTR și REGEXREPLACE din fereastra Funcții (Comenzi> Funcții / Array Metode). Puteți defini, de asemenea, propriile funcții sau funcții rula script-uri de la AutoHotKey externe.
+		Puteți înregistra mișcările mouse-ului în raport cu poziția curentă prin deținerea în timpul înregistrării CapsLock (aveți posibilitatea să modificați cheia și să-l comuta în Setări).
+		
+; 19. Tooltips		
+	A_List_TT =	Selectați Macro (Ctrl + 1 ~ 0)
+	AbortKey_TT =	Hotkey pentru a opri redarea
+	ActiveObj_TT =	Încearcă să se conecteze la un obiect COM Active
+	AddAtt_TT =	Ataseaza fisiere
+	ApplyI_TT =	Aplica
+	ApplyL_TT =	Se introduce din caseta (Inserare)
+	ApplyT_TT =	Aplica
+	AutoKey_TT =	Hotkey pentru a juca Macro
+	Client_TT =	Coordonatele sunt relative la zona ferestrei active client, care exclude bara de titlu a ferestrei, meniul (în cazul în care acesta are un standard unul) și a frontierelor.
+	Clip_TT =	Folosește temporar Clipboard pentru a trimite textul.
+		În cazul în care operația este finalizată, scriptul
+		Reface conținutul original al clipboard.
+		(Lăsați text gol pentru a insera un conținut de curent)
+	CM_TT =	Ecran: Coordonatele sunt relative la desktop-ul (întregul ecran).
+		Fereastră: Coordonatele sunt relative la fereastra activă.
+		Client: Coordonatele sunt relative la zona ferestrei active client, care exclude bara de titlu a ferestrei, meniul (în cazul în care acesta are un standard unul) și a frontierelor.
+	CmdFilter_TT =	Filtrul de tip
+	CmdSort_TT =	Sortează în ordine alfabetică
+	ColorPick_TT =	Pixel pe ecran a obține
+	ComEvent_TT =	Rata la care sunt trimise intrarile de la tastatura este determinată de întârziere cheie.
+	ComText_TT =	Atunci când nu este în modul brut, următoarele caractere
+		Sunt tratate ca modificatori (acești modificatori afectează
+		Numai cheia următoare):!, +, ^, #
+	CoordPixel_TT =	Modul de coordonate
+	DefaultMacro_TT =	Selectați fișierul pentru a încărca la pornirea programului
+	EditPaste_TT =	Pastelor String la caret / poziția de inserție
+		Într-un control de editare (acest lucru nu afectează
+		Conținutul clipboard).
+	Ex_AF_TT =	Omite metoda usoara de activare a unei ferestre
+		Și merge direct la metoda puternică.
+	Ex_CM_TT =	Seturi de modul de coordonate pentru comenzile mouse-ul să fie în raport fie fereastra activă sau ecranul.
+	Ex_DH_TT =	Stabilește dacă ferestrele invizibile sunt "văzute" de script-ul.
+	Ex_DT_TT =	Stabilește dacă textul invizibil într-o fereastră este "văzut" în scopul de a găsi fereastra. Acest lucru afectează comenzi, cum ar fi IfWinExist și WinActivate.
+	Ex_EdScript_TT =	Open in editor extern
+	Ex_EdVars_TT =	Selectați variabile globale care urmează să fie exportate.
+	Ex_ExecScript_TT =	Script care rulează
+	Ex_HK_TT =	Forțele de utilizarea cârlig pentru a pune în aplicare toate
+		Sau unele taste de la tastatură.
+	Ex_IfDir_TT =	Creează taste și hotstrings sensibile la context, în funcție
+		Pe tipul de fereastră care este activă sau există.
+	Ex_IfDirType_TT =	Creează taste și hotstrings sensibile la context, în funcție
+		Pe tipul de fereastră care este activă sau există.
+	Ex_IN_TT =	Provoacă script-ul să se comporte ca și cum specificat
+		Conținutul fișierului sunt prezenți la această poziție exactă.
+	Ex_MD_TT =	Setează întârzierea care va avea loc după
+		Fiecare mișcare mouse-ul sau clic.
+	Ex_MT_TT =	Setează numărul maxim de simultane
+		Fire pe hotkey sau hotstring.
+	Ex_NT_TT =	Dezactiveaza prezentarea unei pictograme tavă.
+	Ex_PT_TT =	Păstrează un script care rulează în permanență
+		(Adică, până când utilizatorul se închide sau ExitApp este întâlnită).
+	Ex_SB_TT =	Stabilește cât de repede un script va rula (afectează utilizarea procesorului).
+	Ex_SC_TT =	Setează întârzierea care va avea loc după
+		Fiecare comandă modificator de control.
+	Ex_SI_TT =	Stabilește dacă un script îi este permis să ruleze din nou atunci când acesta este deja în execuție.
+	Ex_SK_TT =	Setează întârzierea care va avea loc după fiecare
+		Apăsare de tastă trimise de Trimitere sau ControlSend.
+	Ex_SM_TT =	Trimite sinonim cu a face SendInput sau SendPlay, mai degrabă decât
+		Implicit (SendEvent). De asemenea, face clic pe și MouseMove / Faceți clic / Drag
+		Utilizați metoda specificată.
+	Ex_ST_TT =	Setează comportamentul de potrivire a parametrului WinTitle în comenzi, cum ar fi WinWait.
+	Ex_SW_TT =	Setează întârzierea care va avea loc după
+		Fiecare comandă windowing, cum ar fi WinActivate.
+	Ex_UV_TT =	Export variabile globale.
+	Ex_WN_TT =	Activează sau dezactivează avertismente pentru condiții specifice, care pot indica o eroare, cum ar fi o greșeală de scriere sau lipsă declarație "globală".
+	ExpList_TT =	Dublu-clic pentru a edita
+	ExprLink2_TT =	- NU ENCLOSE VARIABILE IN SEMNE PERCENT AICI.
+		- Cele mai multe dintre expresiile AHK sunt acceptate.
+		- Aveți dreptul să utilizați șiruri, variabile, tablouri și funcții.
+		- Pentru a utiliza siruri de caractere, incadrati in ghilimele, ex .: var  "o".
+		- Declarațiile multiple sunt susținute, de exemplu .: var  "o" || Instr (var, "b").
+	ExprLink3_TT =	- NU ENCLOSE VARIABILE IN SEMNE PERCENT AICI.
+		- Cele mai multe dintre expresiile AHK sunt acceptate.
+		- Aveți dreptul să utilizați șiruri, variabile, tablouri și funcții.
+		- Pentru a utiliza siruri de caractere, incadrati in ghilimele, ex .: var = "o".
+		- Declarațiile multiple sunt susținute, de exemplu .: var = "o" || Instr (var, "b").
+	ExpView2_TT =	Editor avansat
+	ExpView_TT =	Editor avansat
+	Fast_TT =	Folosește o metodă de căutare mai rapidă (recomandat)
+	HiddenText_TT =	Stabilește dacă textul invizibil într-o fereastră este "văzut" în scopul de a găsi fereastra. Acest lucru afectează comenzi, cum ar fi IfWinExist și WinActivate.
+	HiddenWin_TT =	Stabilește dacă ferestrele invizibile sunt "văzute" de script-ul.
+	HScale_TT =	La scară înălțime
+	IconN_TT =	Numărul grupului icon
+	IfLVColor_TT =	Click pentru a alege o culoare
+	IncFiles_TT =	Includ fișiere / valori
+	IncFolders_TT =	Includeți directoarele (foldere) / Chei
+	InsertKey_TT =	Inserare taste (Ctrl + Insert)
+	InsertKeyT_TT =	Inseraţi Keystroke
+	JoyKey_TT =	Apăsați un buton de pe joystick
+	LoopLVColor_TT =	Click pentru a alege o culoare
+	LUntil_TT =	Se aplică o condiție pentru continuarea unei bucle sau pentru buclă.
+	ManKey_TT =	Hotkey pentru a juca Macro "pas cu pas"
+	MRel_TT =	Mișcările relative la poziția curentă.
+		Sau, dacă este utilizat cu control: Poziția față de control.
+	OSHK_TT =	Selectați Macro
+	OSHKEd_TT =	Selectați Macro
+	OSProgB_TT =	Afișează Progress Bar
+	OSTrans_TT =	Opacitate
+	PauseKey_TT =	Hotkey pentru a întrerupe redarea
+	PicPrev_TT =	Faceți dublu clic pentru a deschide Image
+	Raw_TT =	Comanda SendRaw interpretează toate caracterele literal
+		Mai degrabă decât traducere {Enter} la o apăsare de tastă ENTER,
+		^ C la Control-C, etc.
+	RecKey_TT =	Backspace pentru a șterge
+	RecNewKey_TT =	Backspace pentru a șterge
+	Recurse_TT =	Recurse în subdirectoarele (subfolderele) / subcheilor
+	RefreshIEW_TT =	Improspatare
+	Relative_TT =	Coordonatele sunt raportate la fereastra activă.
+	RelKey_TT =	Mișcările de înregistrări mouse-ul și clicurile de compensare a acestora
+		Din poziția anterioară, atunci când a avut loc.
+	ReptC_TT =	0 = infinit
+	Reset_TT =	Cuprins variabile clare
+	RGB_TT =	Cauzele care culoarea să fie interpretată ca o valoare RGB in loc de BGR
+	Screen_TT =	Coordonatele sunt relative la desktop-ul (întregul ecran).
+	Screenshot_TT =	Asiguraţi-Screenshot
+	SetText_TT =	Modifică textul unui control.
+	SI_TT =	Cuvântul FORCE sare peste fereastra de dialog și înlocuiește automat instanța vechi,
+		Care este similar în vigoare la comanda de reîncărcare.
+		Cuvântul IGNORE sare peste caseta de dialog și părăsește vechea instanță care se execută.
+		Cu alte cuvinte, încearcă să lanseze un script deja-running sunt ignorate.
+		Cuvântul permite OFF mai multe instanțe ale script-ul pentru a rula simultan.
+	SM_TT =	Eveniment: Aceasta este implicit de pornire utilizat de către toate script-uri.
+		Se folosește metoda SendEvent pentru Trimitere, SendRaw, Faceți clic pe, și MouseMove / Faceți clic / Drag.
+		Intrare: Comută la metoda SendInput de Trimitere, SendRaw, Faceți clic pe, și MouseMove / Faceți clic / Drag.
+		InputThenPlay: La fel ca mai sus, cu excepția faptului că în loc să scadă din nou în modul Eveniment
+		Când SendInput nu este disponibil, acesta revine la modul (mai jos) Play. De asemenea, acest lucru determină
+		Comanda SendInput în sine pentru a reveni la modul Redare când SendInput nu este disponibil.
+		Redare: Comută metoda SendPlay pentru Trimitere, SendRaw, Faceți clic pe, și MouseMove / Faceți clic / Drag.
+	ST_TT =	1: titlul O fereastră trebuie să înceapă cu WinTitle specificat pentru a fi un meci.
+		2: titlul O fereastră poate conține WinTitle oriunde în interiorul acestuia pentru a fi un meci.
+		3: titlul O fereastră trebuie să se potrivească exact WinTitle să fie un meci.
+		RegEx: Modificări WinTitle, WinText, ExcludeTitle, și ExcludeText să fie expresii regulate.
+	TimeoutM_TT =	0 = infinit
+	TitleMatch_TT =	1: titlul O fereastră trebuie să înceapă cu WinTitle specificat pentru a fi un meci.
+		2: titlul O fereastră poate conține WinTitle oriunde în interiorul acestuia pentru a fi un meci.
+		3: titlul O fereastră trebuie să se potrivească exact WinTitle să fie un meci.
+		RegEx: Modificări WinTitle, WinText, ExcludeTitle, și ExcludeText să fie expresii regulate.
+	TitleSpeed_TT =	Rapid: Acesta este comportamentul implicit. Performanța poate fi substanțial mai bună decât lent, dar anumite elemente WinText pentru anumite tipuri de ferestre nu pot fi "văzute" de diversele comenzi de ferestre.
+		Lent: Poate fi mult mai lent, dar toate WinText posibile sunt recuperate din fiecare fereastră ca un utilizator caută comandă windowing prin intermediul lor pentru un meci. Fereastra Spy dezvăluie ce părți ale textului unei ferestre (dacă este cazul) necesită modul lent.
+	ToggleC_TT =	Înregistrarea activa relativă atunci când starea cheie este activată.
+	TransC_TT =	Culoare transparent
+	VarCopyA_TT =	Copiați conținutul variabil de curent
+	VarCopyB_TT =	Copiați conținutul variabil de curent
+	VariatT_TT =	Nuante de variație
+	WScale_TT =	Lăţime scară
+		
+; 20. Operators		
+	As_Oper_01 =	Atribui
+	As_Oper_02 =	Adăuga
+	As_Oper_03 =	Scădea
+	As_Oper_04 =	Multiplica
+	As_Oper_05 =	Divide
+	As_Oper_06 =	Diviza Etaj
+	As_Oper_07 =	Înlănţui
+	As_Oper_08 =	Bitwise inclusive SAU
+	As_Oper_09 =	Bitwise ȘI
+	As_Oper_10 =	Bitwise SAU exclusiv
+	As_Oper_11 =	Deplasare la dreapta și
+	As_Oper_12 =	Deplasare la stânga și la
+	Co_Oper_01 =	Egal
+	Co_Oper_02 =	Același număr (caz sensibil)
+	Co_Oper_03 =	Nu este egal
+	Co_Oper_04 =	O mai mare
+	Co_Oper_05 =	Mai puțin
+	Co_Oper_06 =	O mai mare sau egal
+	Co_Oper_07 =	Mai mic sau egal
+	Co_Oper_08 =	În (listă)
+	Co_Oper_09 =	Nu în (listă)
+	Co_Oper_10 =	Conține (listă)
+	Co_Oper_11 =	Nu conține (listă)
+	Co_Oper_12 =	Între (linia 2) (linia 1) și
+	Co_Oper_13 =	Nu între (linia 1) și (linia 2)
+	Co_Oper_14 =	Este (tip)
+	Co_Oper_15 =	Nu este (tip)
+		
+; 21. IE Commands Tips		
+	IE_Cmd_Index =	
+	Checked	Setează sau preia starea casetei de selectare sau butonul radio.
+	Click	Simulează un clic pe obiect.
+	Focus	Setează focalizarea obiectului.
+	GoBack	Navighează înapoi un element din lista de istorie.
+	GoForward	Navighează înainte cu un element din lista de istorie.
+	GoHome	Navighează la domiciliu curent sau pagina de start.
+	GoSearch	Navighează la pagina de căutare curentă.
+	Height	Setează sau preia înălțimea obiectului.
+	Href	Setează sau preia o adresă URL de destinație sau de un punct de ancorare.
+	InnerHTML	Setează sau preia HTML al obiectului.
+	InnerText	Setează sau devine textul obiectului.
+	Length	Setează sau preia numărul de obiecte dintr-o colecție.
+	LocationName	Devine pagina curentă cale sau din titlu.
+	LocationURL	Devine URL-ul paginii curente.
+	Navigate	Navigând o adresă URL sau o cale.
+	OuterHTML	Setează sau preia obiectul și conținutul său în HTML.
+	Quit	Închide pagina.
+	Refresh	Reîncarcă pagina afișată în prezent.
+	SelectedIndex	Setează sau preia indexul opțiunii selectate într-un obiect select.
+	Src	Seturi sau preia o adresă URL care urmează să fie încărcate de obiect.
+	Stop	Anulează o navigare în așteptare sau descărcare.
+	Submit	Înaintează formularul.
+	Type	Setează sau preia tipul de conținut al obiectului.
+	Value	Devine sau setează valoarea obiectului.
+	Width	Setează sau preia lățimea obiectului.
+		
+; 22. COM Objects Tips		
+	COM_CLSID_Index =	
+	Excel.Application	Manevrează foi de calcul Excel.
+	HTMLfile	Poate fi folosit pentru a citi, scrie și să interacționeze cu HTML.
+	InternetExplorer.Application	Exploreaza site-uri web.
+	MSXML2.DOMDocument.6.0	XML parser.
+	MSXML2.XMLHTTP	Reprezintă o solicitare XML folosind HTTP.
+	Outlook.Application	Manevrează Outlook sarcini și elemente.
+	PowerPoint.Application	Prezentări PowerPoint manipuleaza.
+	Schedule.Service	Program de lucru și editați Sarcini Windows.
+	ScriptControl	Executa sau Dynamically Vbscript JScript.
+	Scripting.Dictionary	Obiect care stochează date cheie, perechi de elemente.
+	Scripting.FileSystemObject	Acces fișiere foldere
+	Shell.Application	Ferestre de acces Explorer IE / file; deschis manipula ferestrele.
+	Shell.Explorer	Încorpora un control Explorer / browser într-o interfață grafică (Internet Explorer - browser-ul tridentul).
+	SAPI.SpVoice	Text-to-Speech (TTS).
+	VBScript.RegExp	Expresii regulate VBS (inclusiv meci global).
+	WMPlayer.OCX	Reda fișiere media; Controlul Încorporați WMPlayer într-o interfață grafică.
+	WinHttp.WinHttpRequest.5.1	Oferă funcționalitate simplu HTTP client, care permite un control mult mai mult decât UrlDownloadToFile.
+	Winmgmt	Obțineți informații de sistem; Gestionați servicii Windows.
+	WScript.Shell	Diverse sarcini de administrare (multe sarcini AHK native).
+	Word.Application	Manevrează documente Word.
+		
+; 23. AHK Commands Tips		
+	Ahk_Cmd_Index =	
+	Abs	Returnează valoarea absolută a Number.
+	ACos	Returnează arccosinusului (numărul a cărui cosinus este Number) în radiani.
+	Array	Creează un tablou asociativ scriptabil cu taste întregi.
+	Asc	Returnează codul de caractere (un număr cuprins între 1 și 255 (ANSI construiește) sau 65535 (în Unicode construiește)) pentru primul caracter din șir.
+	ASin	Returnează arcsinus (numărul cărui sinus este Number) în radiani.
+	ATan	Returnează arctangenta (numărul a cărui tangentă este Number) în radiani.
+	BlockInput	Dezactivează sau activează abilitatea utilizatorului de a interacționa cu computerul prin intermediul tastaturii și mouse-ul.
+	Break	() Ieșiri se termină o buclă. Valabila in orice fel de buclă.
+	CDO	Trimite prin email folosind un cont definit de utilizator.
+	Ceil	Returnează numărul rotunjit la cel mai apropiat număr întreg (fără nici un sufix .00).
+	Chr	Returnează caracterul unic corespunzator codului de caractere indicat de număr.
+	Click	Clic pe un buton al mouse-ului la coordonatele specificate. Ea poate deține, de asemenea, în jos un buton, rotiți roata, sau muta.
+	Clipboard	Pastelor text din clipboard.
+	ClipWait	Așteaptă până clipboard-ul conține date.
+	ComObjActive	Recuperează un obiect COM înregistrat.
+	ComObjArray	Creează un SAFEARRAY pentru a fi utilizat cu COM.
+	ComObjConnect	Se conectează sursele evenimentelor de un obiect COM la funcții cu un anumit prefix.
+	ComObjCreate	Creează un obiect COM.
+	ComObjEnwrap / ComObjUnwrap	Împachetări / un obiect COM desface.
+	ComObjError	Activează sau dezactivează notificarea erorilor COM.
+	ComObjFlags	Recuperează sau modificări steaguri care controlează comportamentul unui COM înveliș obiect.
+	ComObjGet	Returnează o referință la un obiect furnizat de o componentă COM.
+	ComObjMissing	Creează un "parametru lipsă" obiect pentru a trece la o metodă COM.
+	ComObjParameter	Împachetări o valoare și de tip pentru a trece ca un parametru la o metodă COM.
+	ComObjQuery	Interoghează un obiect COM pentru o interfață sau un serviciu.
+	ComObjType	Recuperează tip de informații de la un obiect COM.
+	ComObjValue	Extrage valoarea sau indicatorul stocate într-un obiect COM înveliș.
+	Continue	Omite restul iterație bucla de curent și începe unul nou. Valabila in orice fel de buclă.
+	Control	Face o varietate de modificări la un control.
+	ControlClick	Trimite un buton al mouse-ului sau eveniment roata mouse-ului la un control.
+	ControlEditPaste	Pastelor String la poziția caret / inserați într-un control de editare (acest lucru nu afectează conținutul clipboard).
+	ControlFocus	Setează focalizarea de intrare la un anumit control de pe o fereastră.
+	ControlGet	Recuperează diverse tipuri de informații cu privire la un control.
+	ControlGetFocus	Recuperează care controlul ferestrei țintă are focus intrare, dacă este cazul.
+	ControlGetPos	Recuperează poziția și dimensiunea unui control.
+	ControlGetText	Recuperează text dintr-un control.
+	ControlMove	Se deplasează sau redimensioneaza un control.
+	ControlSend / ControlSendRaw	Trimite intrarile de la tastatura simulate într-o fereastră sau de control.
+	ControlSetText	Modifică textul unui control.
+	CoordMode	Seturi modul de coordonate pentru diferite comenzi pentru a fi în raport fie fereastra activă sau ecranul.
+	Cos	Returnează cosinusul trigonometrică a Number.
+	Delete	Se elimină perechile cheie-valoare dintr-un obiect.
+	DllCall	Solicită o funcție în interiorul unui DLL, cum ar fi o functie standard API pentru Windows.
+	Drive	Ejectat / retractează tava într-o unitate CD sau DVD, sau setează eticheta de volum o unitate a lui.
+	DriveGet	Recuperează diferite tipuri de informații despre unitate (e) a computerului.
+	DriveSpaceFree	Recuperează spațiul liber pe disc a unei unități, în megaocteți.
+	Else	Specifică comanda (e) pentru a efectua în cazul în care un FI-declarație se evaluează la FALSE. Atunci când mai mult de o comandă este prezent, incadrati intr-un bloc (aparat dentar).
+	EnvAdd	Setează o variabilă la suma în sine, plus valoarea dată (poate, de asemenea, adăuga sau scădea timp de la o valoare dată de timp). Sinonim cu: Var + = Valoare.
+	EnvDiv	Setează o variabilă în sine împărțită la valoarea dată. Sinonim cu: Var / = Valoare.
+	EnvGet	Recuperează o variabilă de mediu.
+	EnvMult	Setează o variabilă în sine ori mai mare decât valoarea dată. Sinonim cu: Var * = Valoare.
+	EnvSet	Scrie o valoare unei variabile conținute în mediu.
+	EnvSub	Setează o variabilă în sine minus valoarea dată (se poate compara, de asemenea valori actualizate în timp). Sinonim cu: Var - = Valoare.
+	EnvUpdate	Notifică sistemul de operare și toate aplicațiile care rulează variabila de mediu (e) s-au schimbat.
+	ExitApp	Reziliază script-ul necondiționat.
+	Exp	E se întoarce (care este de aproximativ 2.71828182845905) a ridicat la puterea Nth.
+	Expression	Îndeplinește una sau mai multe operațiuni pe o serie de variabile, siruri de caractere literale, și / sau numere literal.
+	FileAppend	Scrie text la sfârșitul unui fișier (crearea mai întâi fișierul, dacă este necesar).
+	FileCopy	Copiază unul sau mai multe fișiere.
+	FileCopyDir	Copiază un folder, împreună cu toate sub-foldere și fișiere (similar cu xcopy).
+	FileCreateDir	Creează un dosar.
+	FileCreateShortcut	Creează un fișier de comenzi rapide (lnk).
+	FileDelete	Șterge unul sau mai multe fișiere.
+	FileGetAttrib	Rapoarte dacă un fișier sau un folder este read-only, ascunse, etc.
+	FileGetShortcut	Extrage informații despre un fișier de comenzi rapide (lnk), cum ar fi dosarul său țintă.
+	FileGetSize	Recuperează dimensiunea unui fișier.
+	FileGetTime	Recuperează ștampila datetime a unui fișier sau folder.
+	FileGetVersion	Recuperează versiunea unui fișier.
+	FileMove	Se deplasează sau redenumește unul sau mai multe fișiere.
+	FileMoveDir	Se deplasează un dosar, împreună cu toate sub-foldere și fișiere. Acesta poate de asemenea redenumi un dosar.
+	FileOpen	Oferă orientat-obiect fișier I / O.
+	FileRead	Citește conținutul unui fișier într-o variabilă.
+	FileReadLine	Citește linia specificată dintr-un fișier și stochează textul într-o variabilă.
+	FileRecycle	Trimite un fisier sau director la coșul de gunoi, dacă este posibil.
+	FileRecycleEmpty	Goleste coșul de gunoi.
+	FileRemoveDir	Șterge un dosar.
+	FileSelectFile	Afișează un dialog standard care permite utilizatorului să deschidă sau să salvați fișierul (e).
+	FileSelectFolder	Afișează un dialog standard care permite utilizatorului să selecteze un director.
+	FileSetAttrib	Schimbă atributele unuia sau mai multor fișiere sau foldere. Wildcard-urile sunt acceptate.
+	FileSetTime	Modifică ștampila datetime a unuia sau a mai multor fișiere sau foldere. Wildcard-urile sunt acceptate.
+	Floor	Returnează numărul rotunjit în jos la cel mai apropiat întreg (fără nici un sufix .00).
+	For	Se repetă o serie de comenzi o singură dată pentru fiecare pereche de chei-valoare într-un obiect.
+	Format	Formatează un număr variabil de valori de intrare în conformitate cu un șir de format.
+	FormatTime	Transformă o amprentă de timp în YYYYMMDDHH24MISS dată formatul specificat / ora.
+	Func	Extrage o referință la o funcție.
+	GetKeyName / GetKeyVK / GetKeySC	Extrage numele sau un text, codul virtuale cheie sau codul de scanare a unei taste.
+	GetKeyState	Controale în cazul în care o cheie de tastatură sau un buton al mouse-ului / joystick-ul este în jos sau în sus. De asemenea, preia starea joystick-ului.
+	Gosub	Sare la eticheta specificată și continuă execuție până când se întâlnește de retur.
+	Goto	Sare la eticheta specificată și continuă execuție.
+	GroupActivate	Activeazã următoarea fereastră într-un grup de fereastră, care a fost definită cu groupadd.
+	GroupAdd	Adaugă o specificație fereastră într-un grup de fereastră, crearea grupului, dacă este necesar.
+	GroupClose	Închide fereastra activă în cazul în care acesta a fost activat doar prin GroupActivate sau GroupDeactivate. Ea activează apoi următoarea fereastră din serie. De asemenea, se poate închide toate ferestrele într-un grup.
+	GroupDeactivate	Similar cu GroupActivate, cu excepția activează fereastra următoare nu în grup.
+	HasKey	Returnează true dacă Cheia este asociată cu o valoare.
+	If	Specifică comanda (e) pentru a efectua în cazul în care comparația unei variabile la o valoare evalutes la TRUE. Atunci când mai mult de o comandă este prezent, incadrati intr-un bloc (aparat dentar).
+	If (expression)	Specifică comanda (e) pentru a efectua în cazul în care o expresie se evaluează la TRUE.
+	If A_Index	Controale în cazul în care iterația buclă de curent matchs a specificat un număr.
+	If Clipboard	Controale în cazul în care textul Clipboard este matchs un șir de caractere specificat.
+	If ErrorLevel	În cazul în care o imagine de controale sau pixel specificat a fost găsit în ecran.
+	If var [not] between	Verifică dacă conținutul unei variabile sunt prezentate numeric sau alfabetic, între două valori (inclusiv).
+	If var [not] in / If var [not] contains MatchList	Verifică dacă conținutul unei variabile se potrivesc unul dintre elementele dintr-o listă.
+	If var is [not] type	Verifică dacă conținutul unei variabile sunt numerice, litere mari, etc.
+	IfEqual / IfNotEqual	O variabilă la Comparatie o valoare pentru egalitate. Sinonim cu: dacă Var = Valoarea | dacă Var <> Valoare.
+	IfExist / IfNotExist / FileExist	Controale pentru existența unui fișier sau un dosar.
+	IfGreater / IfGreaterOrEqual	O variabilă la Comparatie o valoare. Sinonim cu: dacă Var> Valoare | dacă Var> = Valoare.
+	IfInString / IfNotInString	În cazul în care o variabilă verifică conține șirul de caractere specificat.
+	IfLess / IfLessOrEqual	O variabilă la Comparatie o valoare. Sinonim cu: dacă Var <Valoare | dacă Var <= Valoare.
+	IfMsgBox	Controale pe care buton a fost împinsă de către utilizator în timpul celei mai recente comanda MsgBox.
+	IfWinActive / IfWinNotActive	Controale în cazul în care există fereastra specificată și este în prezent activă (în primul rând).
+	IfWinExist / IfWinNotExist	Verifică dacă există fereastra specificată.
+	ImageSearch	Căutări o regiune a ecranului pentru o imagine.
+	IniDelete	Șterge o valoare dintr-un format de fișier .ini standard de.
+	IniRead	Citește o valoare dintr-un format de fișier .ini standard de.
+	IniWrite	Scrie o valoare într-un format de fișier .ini standard de.
+	Input	Așteaptă ca utilizatorul să formeze un șir de caractere (nu este acceptat pe Windows 9x: nu face nimic).
+	InputBox	Afișează o casetă de intrare pentru a cere utilizatorului să introducă un șir de caractere.
+	InsertAt	Insereaza una sau mai multe valori într-o anumită poziție într-o matrice liniară.
+	InStr	Căutările pentru o anumită apariție a unui șir de caractere, de la stânga sau de dreapta.
+	KeyWait	Așteaptă pentru un chei sau un buton al mouse-ului / joystick pentru a fi lansat sau presat în jos.
+	Label	O etichetă identifică o linie de cod, și poate fi utilizat ca țintă Goto sau pentru a forma o subrutină.
+	Length	Returnează lungimea unei matrice liniare începând de la poziția 1.
+	ListVars	Afișează variabilele de script-: numele și conținutul curent.
+	Ln	Returnează logaritmul natural (baza e) Nr.
+	LoadPicture	Încarcă o imagine din fișier și returnează un bitmap sau pictogramă mâner.
+	Log	Returnează logaritmul (baza 10) Nr.
+	Loop (files & folders)	Recuperează fișierele sau directoarele specificate, câte unul la un moment dat.
+	Loop (normal)	Efectuați o serie de comenzi în mod repetat: fie numărul specificat de ori sau până la pauză se întâlnește.
+	Loop (parse a string)	Recuperează subșirurilor (câmpuri) dintr-un șir de caractere, unul la un moment dat.
+	Loop (read file contents)	Recuperează liniile într-un fișier text, unul la un moment dat (performanță mai bună decât FileReadLine).
+	Loop (registry)	Extrage conținutul registrului specificat subcheii, un singur element la un moment dat.
+	MaxIndex	Returnează cel mai mare număr întreg tasta.
+	MinIndex	Returnează cel mai mic număr întreg tasta.
+	Mod	Modulo. Returnează restul când dividende este împărțit de Divisor.
+	MouseGetPos	Recuperează poziția curentă a cursorului mouse-ului, și, opțional, pe care fereastra și controlul este situându-se deasupra.
+	MsgBox	Afișează textul specificat într-o fereastră mică care conține una sau mai multe butoane (cum ar fi Da sau Nu).
+	NumGet	Returnează numărul binar stocat la adresa specificată + offset.
+	NumPut	Magazine Număr în format binar la adresa specificată + offset și returnează adresa la dreapta elementului doar în scris.
+	Object	Creează un tablou asociativ scriptable.
+	Ord	Returnează valoarea ordinală (cod caracter numeric) al primului caracter din șir.
+	OutputDebug	Trimite un șir de caractere la debugger (dacă este cazul) pentru afișare.
+	Parameter	Adaugă un parametru la funcția.
+	Pause	Curent al firului face o pauza script-ul lui.
+	PixelGetColor	Recuperează culoarea pixelilor la x specificat, y coordonatele.
+	PixelSearch	Căutări o regiune a ecranului pentru un pixel de culoarea specificată.
+	Pop	Îndepărtează și returnează ultimul element matrice.
+	PostMessage	Locuri un mesaj în coada de mesaje al unei ferestre sau de control.
+	Process	Îndeplinește una dintre următoarele operații asupra unui proces: verifică dacă există; își schimbă prioritatea; închide-l; așteaptă să se închidă.
+	Progress	Creează sau actualizează o fereastră care conține o bară de progres.
+	Push	Adaugă valori la sfârșitul unei matrice.
+	Random	Generează un număr pseudo-aleatoare.
+	RegDelete	Șterge o subcheie sau valoare din registru.
+	RegExMatch	Stabilește dacă un șir conține un model (expresie regulată).
+	RegExReplace	Înlocuiește aparițiile unui model (expresie regulată) în interiorul unui șir de caractere.
+	RegRead	Citește o valoare de registru.
+	RegWrite	Scrie o valoare la registru.
+	RemoveAt	Se elimină elementele din poziția dată într-o matrice liniară.
+	Return	Pe care le oferă o subrutină la care executarea a sărit anterior prin intermediul funcției de apelare, Gosub, activarea Hotkey, GroupActivate, sau prin alte mijloace.
+	Round	În cazul în care N este omis sau 0, numărul este rotunjit la cel mai apropiat număr întreg. În cazul în care N este numărul pozitiv, numărul este rotunjit la N zecimale. În cazul în care N este negativ, numărul este rotunjit de cifre N la stânga punctului zecimal.
+	Run	Se execută un program extern.
+	RunAs	Specifică un set de acreditări de utilizator pentru a fi utilizate pentru toate utilizările ulterioare ale alerga și RunWait. Necesită Windows 2000 / XP sau mai târziu.
+	RunWait	Se execută un program extern și așteaptă până când se termină.
+	Send / SendRaw	Trimite intrarile de la tastatura simulate și mouse-ul pentru fereastra activă.
+	SendLevel	Controale care artificiale evenimente tastatură și mouse-ul sunt ignorate de taste și hotstrings.
+	SendMessage	Trimite un mesaj într-o fereastră sau de control și așteaptă confirmare.
+	SetCapslockState	Setează starea cheii Capslock. De asemenea, poate forța cheia pentru a rămâne activată sau dezactivată.
+	SetKeyDelay	Setează întârzierea care va avea loc după fiecare apăsare de tastă trimis de Trimitere sau ControlSend.
+	SetNumlockState	Setează starea tastei NumLock. De asemenea, poate forța cheia pentru a rămâne activată sau dezactivată.
+	SetRegView	Permite comenzi de registru într-un script pe 32 de biți pentru a accesa ecranul de registru pe 64 de biți și vice-versa.
+	SetScrollLockState	Setează starea cheii ScrollLock. De asemenea, poate forța cheia pentru a rămâne activată sau dezactivată.
+	SetTimer	Provoacă o subrutină pentru a fi lansat în mod automat și în mod repetat, la un interval de timp specificat.
+	Shutdown	Se închide, repornește sau jurnalele în afara sistemului.
+	Sin	Returnează sinusul trigonometrică a Number.
+	Sleep	Așteapta cantitatea specificată de timp înainte de a continua.
+	Sort	Conținutul unei variabile aranjează în ordine alfabetică, numerică sau ordine aleatorie (opțional îndepărtarea duplicate).
+	SoundBeep	Emite un ton din difuzor PC.
+	SoundGet	Recuperează diferite setări de la un dispozitiv de sunet (master mut, master volum, etc.)
+	SoundGetWaveVolume	Extrage volumul de ieșire val dintr-un dispozitiv de sunet.
+	SoundPlay	Redă un sunet, video sau alt tip de fișier acceptat.
+	SoundSet	Modificări diferite setări ale unui dispozitiv de sunet (master mut, volum master, etc)
+	SoundSetWaveVolume	Modifică volumul de undă pentru un dispozitiv de sunet.
+	SplashImage	Creează sau actualizează o fereastră care conține o imagine JPG, GIF sau BMP.
+	SplashTextOff	Închide fereastra de mai sus.
+	SplashTextOn	Creează o fereastră pop-up de text personalizabil.
+	SplitPath	Separă un nume de fișier sau URL-ul în nume, director, extensie, și unitate.
+	Sqrt	Returnează rădăcina pătrată a Number.
+	StatusBarGetText	Extrage textul dintr-un standard de control bara de stare.
+	StatusBarWait	Așteaptă până când bara de stare a ferestrei conține șirul de caractere specificat.
+	StringGetPos	Recuperează poziția subșirului specificată într-un șir de caractere.
+	StringLeft	Recuperează un număr de caractere din partea stângă a unui șir de caractere.
+	StringLen / StrLen	Recuperează contorul de câte caractere sunt într-un șir de caractere.
+	StringLower	Conversia unui șir de caractere în litere mici.
+	StringMid / SubStr	Recuperează unul sau mai multe caractere din poziția specificată într-un șir de caractere.
+	StringReplace / StrReplace	Înlocuiește substringul specificat cu un nou șir de caractere.
+	StringRight	Recuperează un număr de caractere din partea dreaptă a unui șir de caractere.
+	StringSplit / StrSplit	Separă un șir de caractere într-o matrice de subșirurilor folosind delimitatori specificate.
+	StringTrimLeft	Elimină un număr de caractere din partea stângă a unui șir de caractere.
+	StringTrimRight	Elimină un număr de caractere din partea dreaptă a unui șir de caractere.
+	StringUpper	Conversia unui șir de caractere în majuscule.
+	StrPut / StrGet	Copiază un șir sau de la o adresă de memorie, opțional conversia acestuia între pagini de cod.
+	SysGet	Recuperează rezoluția ecranului, info multi-monitor, dimensiunile obiectelor de sistem, precum și alte proprietăți ale sistemului.
+	Tan	Returnează tangenta trigonometrică a Number.
+	ToolTip	Creează o fereastră mereu-on-top oriunde pe ecran.
+	Transform	Îndeplinește funcții diverse matematice, operații și sarcini la nivel de bit, cum ar fi ASCII de conversie / Unicode.
+	TrayTip	Creează un mesaj de fereastră balon lângă pictograma tavă. Necesită Windows 2000 / XP sau mai târziu.
+	Trim / LTrim / RTrim	TRIM anumite caractere de la începutul și / sau sfârșitul unui șir de caractere.
+	Until	Se aplică o condiție pentru continuarea unei bucle sau pentru buclă.
+	UrlDownloadToFile	Descarcă un fișier de pe Internet.
+	UserFunction	Creează o structură de funcții.
+	Variable	Atribuie valoarea specificată la o variabilă.
+	While	Efectuează o serie de comenzi în mod repetat, până când expresia specificată se evaluează la false.
+	WinActivate	Activeazã fereastra specificată (o face în primul rând).
+	WinActivateBottom	La fel ca și WinActivate cu excepția faptului că acesta activează cel mai de jos (cel mai puțin recent activă), fereastra de potrivire, mai degrabă decât cel mai de sus.
+	WinActive	Returnează ID-ul unic (HWND) a ferestrei active dacă se potrivește cu criteriile specificate.
+	WinClose	Închide fereastra specificată.
+	WinExist	Verifică dacă există fereastra specificată.
+	WinGet	ID-ul Recuperează fereastra specificat unic, procesul de ID-ul, numele de proces, sau o listă a controalelor sale. Acesta poate prelua, de asemenea, o listă a tuturor ferestrelor care corespund criteriilor specificate.
+	WinGetClass	Extrage numele clasei fereastra specificată a lui.
+	WinGetPos	Extrage poziția și dimensiunea ferestrei specificate.
+	WinGetText	Recuperează textul din fereastra specificat.
+	WinGetTitle	Recuperează titlul ferestrei specificate.
+	WinHide	Fereastra specificată ascunde.
+	WinHttpDownloadToFile	Download-uri unul sau mai multe fișiere de pe Internet.
+	WinKill	Forțele specificate fereastra pentru a închide.
+	WinMaximize	Largeste fereastra specificată la dimensiunea sa maximă.
+	WinMenuSelectItem	Invocă un element de meniu din bara de meniu a ferestrei specificate.
+	WinMinimize	Colapsa fereastra specificată într-un buton de pe bara de sarcini.
+	WinMinimizeAll	Minimizează toate ferestrele.
+	WinMinimizeAllUndo	Inversează efectul unei WinMinimizeAll anterioare.
+	WinMove	Modifică poziția și / sau dimensiunea ferestrei specificate.
+	WinRestore	Unminimizes sau unmaximizes fereastra specificată în cazul în care acesta este minimizată sau maximizată.
+	WinSet	Face o varietate de modificări la fereastra specificate, cum ar fi "întotdeauna pe partea de sus" și transparență.
+	WinSetTitle	Modifică titlul ferestrei specificate.
+	WinShow	Unhides fereastra specificată.
+	WinWait	Așteaptă până când există fereastra specificată.
+	WinWaitActive	Așteaptă până când fereastra specificată este activă.
+	WinWaitClose	Așteaptă până când fereastra specificată nu există.
+	WinWaitNotActive	Așteaptă până când fereastra specificată nu este activă.
+	Zip / UnZip	Comprime sau decomprima unul sau mai multe fișiere zip.
+	WinExist	Verifică dacă există fereastra specificată.
+	WinGet	ID-ul Recuperează fereastra specificat unic, procesul de ID-ul, numele de proces, sau o listă a controalelor sale. Acesta poate prelua, de asemenea, o listă a tuturor ferestrelor care corespund criteriilor specificate.
+	WinGetClass	Extrage numele clasei fereastra specificată a lui.
+	WinGetPos	Extrage poziția și dimensiunea ferestrei specificate.
+	WinGetText	Recuperează textul din fereastra specificat.
+	WinGetTitle	Recuperează titlul ferestrei specificate.
+	WinHide	Fereastra specificată ascunde.
+	WinHttpDownloadToFile	Download-uri unul sau mai multe fișiere de pe Internet.
+	WinKill	Forțele specificate fereastra pentru a închide.
+	WinMaximize	Largeste fereastra specificată la dimensiunea sa maximă.
+	WinMenuSelectItem	Invocă un element de meniu din bara de meniu a ferestrei specificate.
+	WinMinimize	Colapsa fereastra specificată într-un buton de pe bara de sarcini.
+	WinMinimizeAll	Minimizează toate ferestrele.
+	WinMinimizeAllUndo	Inversează efectul unei WinMinimizeAll anterioare.
+	WinMove	Modifică poziția și / sau dimensiunea ferestrei specificate.
+	WinRestore	Unminimizes sau unmaximizes fereastra specificată în cazul în care acesta este minimizată sau maximizată.
+	WinSet	Face o varietate de modificări la fereastra specificate, cum ar fi "întotdeauna pe partea de sus" și transparență.
+	WinSetTitle	Modifică titlul ferestrei specificate.
+	WinShow	Unhides fereastra specificată.
+	WinWait	Așteaptă până când există fereastra specificată.
+	WinWaitActive	Așteaptă până când fereastra specificată este activă.
+	WinWaitClose	Așteaptă până când fereastra specificată nu există.
+	WinWaitNotActive	Așteaptă până când fereastra specificată nu este activă.
+	Zip / UnZip	Comprime sau decomprima unul sau mai multe fișiere zip.

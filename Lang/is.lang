@@ -1,0 +1,1443 @@
+﻿Lang_is
+		
+		; Icelandic
+		
+; 01. Main Menu		
+	m_Lang001 =	&File
+	m_Lang002 =	&Macro
+	m_Lang003 =	&Skipanir
+	m_Lang004 =	&Virka
+	m_Lang005 =	&Breyta
+	m_Lang006 =	V&eldu
+	m_Lang007 =	&Útsýni
+	m_Lang008 =	V&almöguleikar
+	m_Lang009 =	S&tyrkja
+	m_Lang010 =	&Hjálp
+		
+; 02. File Sub Menu		
+	f_Lang001 =	&Nýtt
+	f_Lang002 =	&Open
+	f_Lang003 =	&Vista
+	f_Lang004 =	V&ista sem
+	f_Lang005 =	N&ýleg Skrár
+	f_Lang006 =	&Flytja út í Ahk
+	f_Lang007 =	&Preview Script
+	f_Lang008 =	&Breyta skriftu
+	f_Lang009 =	&Stundaskrá Fjölvi
+	f_Lang010 =	&List Breytur
+	f_Lang011 =	&Hætta
+	f_Lang012 =	&Engar skrár
+		
+; 03. Macro Sub Menu		
+	r_Lang001 =	&Record Macro
+	r_Lang002 =	&Virkja Fjölvi
+	r_Lang003 =	&Play Current Macro
+	r_Lang004 =	&Timer
+	r_Lang005 =	&Slökkva á Fjölvi
+	r_Lang006 =	Sp&ila frá völdum Row
+	r_Lang007 =	Spi&la þar til röðina
+	r_Lang008 =	Spil&a valdar línur
+	r_Lang009 =	Sa&mhengi næmur Hotkeys
+	r_Lang010 =	&Bæta Macro
+	r_Lang011 =	L&oka Macro
+	r_Lang012 =	A&frit Macro
+	r_Lang013 =	Br&eyta Fjölvi
+	r_Lang014 =	I&nnflutningur Macro
+	r_Lang015 =	Vista&ðu Núverandi Macro
+		
+; 04. Function Sub Menu		
+	u_Lang001 =	&Búa Virka
+	u_Lang002 =	B&æta breytu
+	u_Lang003 =	Bæ&ta aftur
+	u_Lang004 =	&Umbreyta Macro að virka
+		
+; 05. Commands Sub Menu		
+	i_Lang001 =	&Mús
+	i_Lang002 =	&Texti
+	i_Lang003 =	&Control
+	i_Lang004 =	&Hlé
+	i_Lang005 =	M&essage Box
+	i_Lang006 =	&Key Wait
+	i_Lang007 =	&Gluggi
+	i_Lang008 =	M&ynd / Pixel Leit
+	i_Lang009 =	&Run / File / String / Misc.
+	i_Lang010 =	&Loop
+	i_Lang011 =	G&o To / Label
+	i_Lang012 =	&Set myndatöku
+	i_Lang013 =	E&f reikningsskil
+	i_Lang014 =	&Breyturnar / Fylki
+	i_Lang015 =	&Aðgerðir / Array Aðferðir
+	i_Lang016 =	Se&nda tölvupóst
+	i_Lang017 =	S&ækja skrá
+	i_Lang018 =	&Zip / renna niður skrá
+	i_Lang019 =	&Internet Explorer
+	i_Lang020 =	&Framsetning / COM tengi
+	i_Lang021 =	&Windows Messages
+	i_Lang022 =	Finna ski&pun
+		
+; 06. Edit Sub Menu		
+	e_Lang001 =	&Afrit
+	e_Lang002 =	&Breyta Athugasemd
+	e_Lang003 =	&Finndu / Skipta
+	e_Lang004 =	Af&rita á ...
+	e_Lang005 =	Af&turkalla
+	e_Lang006 =	&Endurtaka
+	e_Lang007 =	&Skera
+	e_Lang008 =	Afr&ita
+	e_Lang009 =	&Líma
+	e_Lang010 =	E&yða
+	e_Lang011 =	Fara &upp
+	e_Lang012 =	F&æra niður
+	e_Lang013 =	Settu &úr Box
+	e_Lang014 =	Set&ja inn Ásláttur
+	e_Lang015 =	Breyta Litur &Mark
+	e_Lang016 =	&Hópar
+	e_Lang017 =	&Virkja hópa
+	e_Lang018 =	Bæta vi&ð hópi
+	e_Lang019 =	Fjarlæ&gja hóp
+	e_Lang020 =	Fjarlægja alla h&ópa
+	e_Lang021 =	Hry&nja allt
+	e_Lang022 =	Stæ&kka allt
+		
+; 07. Select Sub Menu		
+	s_Lang001 =	&Velja allt
+	s_Lang002 =	&Select Ekkert
+	s_Lang003 =	S&núa við vali
+	s_Lang004 =	&Athugaðu Valdar
+	s_Lang005 =	A&fhakaðu Valdar
+	s_Lang006 =	Sn&úa Eftirlit
+	s_Lang007 =	F&æra Val upp
+	s_Lang008 =	Fæ&ra Val Down
+	s_Lang009 =	Va&lið Type
+	s_Lang010 =	&Command gerð
+		
+; 08. View Sub Menu		
+	v_Lang001 =	&Alltaf á toppnum
+	v_Lang002 =	&Highlight Raðir
+	v_Lang003 =	&Inndrátt
+	v_Lang004 =	&Stýrir Toolbar
+	v_Lang005 =	&Preview
+	v_Lang006 =	&Toolbars
+	v_Lang007 =	H&otkeys
+	v_Lang008 =	&Leit Bar
+	v_Lang009 =	&Endurstilla Dálkar Size
+	v_Lang010 =	T&ákn Stærð
+	v_Lang011 =	E&ndurstilla Layout
+	v_Lang012 =	&File
+	v_Lang013 =	&Record Play
+	v_Lang014 =	S&kipanir
+	v_Lang015 =	&Breyta
+	v_Lang016 =	&Valmöguleikar
+	v_Lang017 =	S&érsníða
+	v_Lang018 =	S&jálfvirk
+	v_Lang019 =	&Manual
+	v_Lang020 =	H&ættu
+	v_Lang021 =	&Hlé
+	v_Lang022 =	&Compact
+	v_Lang023 =	&Best Passa
+	v_Lang024 =	&Sjálfgefið
+	v_Lang025 =	L&ítil
+	v_Lang026 =	St&ór
+		
+; 09. Options Sub Menu		
+	o_Lang001 =	&Stillingar
+	o_Lang002 =	&Lágmarka að bakka
+	o_Lang003 =	S&ýna eftirlit tækjastika
+	o_Lang004 =	&Handtaka lykill þrýsta í þessum glugga
+	o_Lang005 =	H&otkeys alltaf virk
+	o_Lang006 =	Lo&kun valkostur (Þegar spilun lýkur ...)
+	o_Lang007 =	S&amhengi næmur Hotkeys
+	o_Lang008 =	&Bæta á Windows takkann til að "leika" hotkey
+	o_Lang009 =	&Notaðu stýripinnann hnapp sem hotkey
+	o_Lang010 =	S&etja sem sjálfgefinn Hotkeys
+	o_Lang011 =	Se&tja sem sjálfgefið skrá
+	o_Lang012 =	&Fjarlægja sjálfgefið skrá
+	o_Lang013 =	S&jálfgefið Hotkeys
+	o_Lang014 =	Sj&álfgefnum stillingum
+		
+; 10. Donate Sub Menu		
+	p_Lang001 =	&PayPal Donation
+		
+; 11. Help Sub Menu		
+	h_Lang001 =	&Hjálp
+	h_Lang002 =	&Námskeið
+	h_Lang003 =	&Ábendingar
+	h_Lang004 =	&Macro Creator Home
+	h_Lang005 =	&Forum
+	h_Lang006 =	&AHK Online Documentation
+	h_Lang007 =	A&thugaðu með uppfærslur...
+	h_Lang008 =	Ath&uga á ræsingu
+	h_Lang009 =	&Um
+		
+; 12. Tray Menu		
+	y_Lang001 =	Fela Window
+	y_Lang002 =	Sýna Gluggi
+	y_Lang003 =	Stýrir Toolbar
+		
+; 13. Built-in Vars Menu		
+	b_Lang001 =	Sérstafir
+	b_Lang002 =	Properties
+	b_Lang003 =	Dagsetning og tími
+	b_Lang004 =	User Idle Time
+	b_Lang005 =	System og User
+	b_Lang006 =	Misc.
+	b_Lang007 =	Loop
+		
+; 14. Main Window		
+	w_Lang001 =	Útflutningur
+	w_Lang002 =	Preview
+	w_Lang003 =	Valmöguleikar
+	w_Lang004 =	Met
+	w_Lang005 =	Spila
+	w_Lang006 =	Spilun
+	w_Lang007 =	Manual
+	w_Lang008 =	Hættu
+	w_Lang009 =	Sýna eftirlit tækjastika
+	w_Lang010 =	Hlé
+	w_Lang011 =	Loop
+	w_Lang012 =	Handtaka lykill þrýsta í þessum glugga
+	w_Lang013 =	Lágmarka að bakka
+	w_Lang014 =	Hotkeys alltaf virk
+	w_Lang015 =	Endurtaka
+	w_Lang016 =	Töf (MS)
+	w_Lang017 =	Gilda
+	w_Lang018 =	Setja inn
+	w_Lang019 =	Breyta
+	w_Lang020 =	Lokun valkostur (Þegar spilun lýkur ...)
+	w_Lang021 =	Gera ekkert
+	w_Lang022 =	Loka umsókn
+	w_Lang023 =	Lokun
+	w_Lang024 =	Lokun (force)
+	w_Lang025 =	Endurfæddur
+	w_Lang026 =	Útskrá
+	w_Lang027 =	Vetrardvala
+	w_Lang028 =	Fresta
+	w_Lang029 =	Lock tölvu
+	w_Lang030 =	Index
+	w_Lang031 =	Aðgerð
+	w_Lang032 =	Nánar
+	w_Lang033 =	Endurtaka
+	w_Lang034 =	Töf
+	w_Lang035 =	Gerð
+	w_Lang036 =	Control
+	w_Lang037 =	Gluggi
+	w_Lang038 =	Athugasemd
+	w_Lang039 =	Litur
+	w_Lang040 =	Ný (Ctrl + N)
+	w_Lang041 =	Open (Ctrl + O)
+	w_Lang042 =	Sparið (Ctrl + S)
+	w_Lang043 =	Save As (Ctrl + Shift + S)
+	w_Lang044 =	Útflutningur til Ahk (Ctrl + E)
+	w_Lang045 =	Preview Script (Ctrl + P)
+	w_Lang046 =	Stillingar (Ctrl + G)
+	w_Lang047 =	Record Macro (Ctrl + R)
+	w_Lang048 =	Virkja Fjölvi (Ctrl + Enter)
+	w_Lang049 =	Spila Núverandi Macro (Ctrl + Shift + Enter)
+	w_Lang050 =	Teljari (Ctrl + Shift + T)
+	w_Lang051 =	Mouse (F2)
+	w_Lang052 =	Texti (F3)
+	w_Lang053 =	Breyta Fjölvi (Ctrl + Shift + M)
+	w_Lang054 =	Control (F4)
+	w_Lang055 =	Gera hlé (F5)
+	w_Lang056 =	Message Box (Shift + F5)
+	w_Lang057 =	Key Wait (Ctrl + F5)
+	w_Lang058 =	Window (F6)
+	w_Lang059 =	Mynd / Pixel Search (F7)
+	w_Lang060 =	Run / File / String / Misc. (F8)
+	w_Lang061 =	Loop (F9)
+	w_Lang062 =	Go To / Label (Shift + F9)
+	w_Lang063 =	Set Timer (Ctrl + F9)
+	w_Lang064 =	Ef reikningsskila (F10)
+	w_Lang065 =	Breyturnar / Fylki (Shift + F10)
+	w_Lang066 =	Aðgerðir / Array Methods (Ctrl + F10)
+	w_Lang067 =	Senda tölvupóst (F11)
+	w_Lang068 =	Sækja skrá (Shift + F11)
+	w_Lang069 =	Zip / renna niður skrá (Ctrl + F11)
+	w_Lang070 =	Internet Explorer (F12)
+	w_Lang071 =	Framsetning / COM tengi (Shift + F12)
+	w_Lang072 =	Windows Skilaboð (Ctrl + F12)
+	w_Lang073 =	Bæta Macro (Ctrl + T)
+	w_Lang074 =	Loka Macro (Ctrl + W)
+	w_Lang075 =	Afrit Macro (Ctrl + Shift + D)
+	w_Lang076 =	Innflutningur Macro (Ctrl + I)
+	w_Lang077 =	Vistaðu Núverandi Macro (Ctrl + Alt + S)
+	w_Lang078 =	Færa upp (Ctrl + PageUp)
+	w_Lang079 =	Færa Down (Ctrl + PageDown)
+	w_Lang080 =	Afrita valdar línur (Ctrl + D)
+	w_Lang081 =	Cut valdar línur (Ctrl + X)
+	w_Lang082 =	Afrita valdar línur (Ctrl + C)
+	w_Lang083 =	Líma afritaður Raðir (Ctrl + V)
+	w_Lang084 =	Eyða valdar línur (Del)
+	w_Lang085 =	Losið (Ctrl + Z)
+	w_Lang086 =	Endurtaka (Ctrl + Y)
+	w_Lang087 =	Afrita á ...
+	w_Lang088 =	Finndu / Skipta (Ctrl + F)
+	w_Lang089 =	Setja inn / breyta athugasemd (Ctrl + L)
+	w_Lang090 =	Breyta Litur Mark (Ctrl + M)
+	w_Lang091 =	Sérsníða
+	w_Lang092 =	Finna skipun (Ctrl + Shift + F)
+	w_Lang093 =	Edit (Enter)
+	w_Lang094 =	Fela
+	w_Lang095 =	Flytja hingað
+	w_Lang096 =	Afrita hér
+	w_Lang097 =	Hópar
+	w_Lang098 =	Gera hópum (Ctrl + Shift + G)
+	w_Lang099 =	Bæta við hópi (Ctrl + Shift + Y)
+	w_Lang100 =	Fjarlægja hóp (Ctrl + Shift + R)
+	w_Lang101 =	Fjarlægja alla hópa
+	w_Lang102 =	Breyta hópar
+	w_Lang103 =	Nafn Group
+	w_Lang104 =	Búa virka (Ctrl + Shift + U)
+	w_Lang105 =	Bæta færibreytu (Ctrl + Shift + P)
+	w_Lang106 =	Bæta Return (Ctrl + Shift + N)
+	w_Lang107 =	Umbreyta Macro að virka (Ctrl + Shift + C)
+	w_Lang108 =	Athugasemd út óheft raðir
+	w_Lang109 =	Bæta á Windows takkann til að "leika" hotkey
+	w_Lang110 =	Notaðu stýripinnann hnapp sem hotkey
+	w_Lang111 =	Leita ... (Ýttu á Enter til að fara)
+		
+; 15. Command Windows		
+	c_Lang001 =	Mús
+	c_Lang002 =	Texti
+	c_Lang003 =	Hlé
+	c_Lang004 =	Control
+	c_Lang005 =	Gluggi
+	c_Lang006 =	Myndaleit
+	c_Lang007 =	Pixel leit
+	c_Lang008 =	Run / File / String / Misc.
+	c_Lang009 =	Ef reikningsskil
+	c_Lang010 =	Breytur
+	c_Lang011 =	Aðgerðir / Array Aðferðir
+	c_Lang012 =	Internet Explorer
+	c_Lang013 =	Framsetning / COM tengi
+	c_Lang014 =	Select Umsókn (Advanced)
+	c_Lang015 =	Skilaboð
+	c_Lang016 =	Control
+	c_Lang017 =	Töf
+	c_Lang018 =	Miliseconds
+	c_Lang019 =	Sekúndur
+	c_Lang020 =	OK
+	c_Lang021 =	Hætta
+	c_Lang022 =	Loka
+	c_Lang023 =	Afrita
+	c_Lang024 =	Eyða
+	c_Lang025 =	Nota% fyrir breytur, t.d .:% Klemmuspjald%
+	c_Lang026 =	Aðgerð
+	c_Lang027 =	Smellur
+	c_Lang028 =	Færa
+	c_Lang029 =	Færa og smella
+	c_Lang030 =	Hjól Up
+	c_Lang031 =	Hjól Down
+	c_Lang032 =	Draga og sleppa
+	c_Lang033 =	Hnit
+	c_Lang034 =	Leit
+	c_Lang035 =	Subcommand
+	c_Lang036 =	Hlutfallsleg
+	c_Lang037 =	Button
+	c_Lang038 =	Vinstri
+	c_Lang039 =	Hægri
+	c_Lang040 =	Middle
+	c_Lang041 =	X1
+	c_Lang042 =	X2
+	c_Lang043 =	Haldið / Release
+	c_Lang044 =	Smelltu Fjöldi
+	c_Lang045 =	Plain Text (Raw)
+	c_Lang046 =	Texti með skipunum
+	c_Lang047 =	Líma frá klippispjalds
+	c_Lang048 =	Líma á Control
+	c_Lang049 =	Setja Text
+	c_Lang050 =	Bæta Pause
+	c_Lang051 =	Message Box
+	c_Lang052 =	Bíða eftir lykli
+	c_Lang053 =	Bíddu timeout
+	c_Lang054 =	(miliseconds) 0 = óendanlegt
+	c_Lang055 =	Command
+	c_Lang056 =	Gildi
+	c_Lang057 =	Output Variable
+	c_Lang058 =	Staða
+	c_Lang059 =	Size
+	c_Lang060 =	4 Breyturnar verða búin með þessu forskeyti og endar með X, Y, W, H.
+	c_Lang061 =	Start
+	c_Lang062 =	End
+	c_Lang063 =	Mynd
+	c_Lang064 =	Pixel
+	c_Lang065 =	Gera Screenshot
+	c_Lang066 =	Key Wait
+	c_Lang067 =	Ef stofna
+	c_Lang068 =	Ef ekki fundið / Error
+	c_Lang069 =	Frálagsbreytum
+	c_Lang070 =	COORD
+	c_Lang071 =	Tilbrigði
+	c_Lang072 =	Preview
+	c_Lang073 =	Loop
+	c_Lang074 =	Sjálfkrafa að búa COM mótmæla
+	c_Lang075 =	Break
+	c_Lang076 =	Halda áfram
+	c_Lang077 =	Fara til
+	c_Lang078 =	Fara í flokk
+	c_Lang079 =	Label
+	c_Lang080 =	Bæta Label
+	c_Lang081 =	String (InputVar)
+	c_Lang082 =	Variable
+	c_Lang083 =	Else
+	c_Lang084 =	Úthluta Variable
+	c_Lang085 =	Innihald
+	c_Lang086 =	Operator
+	c_Lang087 =	Framsetning
+	c_Lang088 =	Endurstilla
+	c_Lang089 =	Virka Name
+	c_Lang090 =	Comma aðskilin breytur (án sviga)
+	c_Lang091 =	Nota orðasambönd snið
+	c_Lang092 =	Page Element / Index
+	c_Lang093 =	Setja
+	c_Lang094 =	Fá
+	c_Lang095 =	Aðferð
+	c_Lang096 =	Property
+	c_Lang097 =	Bíða eftir síðu til að hlaða.
+	c_Lang098 =	CLSID
+	c_Lang099 =	Tengja
+	c_Lang100 =	Meðhöndlið
+	c_Lang101 =	COM Script
+	c_Lang102 =	Message Number
+	c_Lang103 =	Sérstök Keys
+	c_Lang104 =	Browser baka
+	c_Lang105 =	Browser Forward
+	c_Lang106 =	Browser Uppfæra
+	c_Lang107 =	Browser Stop
+	c_Lang108 =	Browser leit
+	c_Lang109 =	Browser Favorites
+	c_Lang110 =	Browser Home
+	c_Lang111 =	Media
+	c_Lang112 =	Mute
+	c_Lang113 =	Hækka
+	c_Lang114 =	Volume Down
+	c_Lang115 =	Play / Pause
+	c_Lang116 =	Næsta Track
+	c_Lang117 =	Fyrri Track
+	c_Lang118 =	Hættu
+	c_Lang119 =	E-mail
+	c_Lang120 =	App 1
+	c_Lang121 =	App 2
+	c_Lang122 =	ScanCode
+	c_Lang123 =	Bæta
+	c_Lang124 =	Key Saga
+	c_Lang125 =	Sláðu inn ScanCode ...
+	c_Lang126 =	Code bætt hnöppunum Listi!
+	c_Lang127 =	Sláðu inn heiti fyrir breytu
+	c_Lang128 =	Nota virka frá ytri skrá
+	c_Lang130 =	Endurtakið þar til
+	c_Lang131 =	Gilda
+	c_Lang132 =	Loop
+	c_Lang133 =	File
+	c_Lang134 =	Þáttað
+	c_Lang135 =	Lesa
+	c_Lang136 =	Registry
+	c_Lang137 =	File Mynstur:
+	c_Lang138 =	Möppur
+	c_Lang139 =	Endurkvæma
+	c_Lang140 =	Inntak Variable:
+	c_Lang141 =	Delimiters:
+	c_Lang142 =	Sleppa Stafir:
+	c_Lang143 =	Inntak File:
+	c_Lang144 =	Root Key \ Key:
+	c_Lang145 =	Skrár
+	c_Lang146 =	Lyklar
+	c_Lang147 =	Táknmynd
+	c_Lang148 =	Ekkert tákn
+	c_Lang149 =	Villa
+	c_Lang150 =	Spurning
+	c_Lang151 =	Upphrópun
+	c_Lang152 =	Upplýsingar
+	c_Lang153 =	Alltaf á toppnum
+	c_Lang154 =	Fundargerðir
+	c_Lang155 =	Þangað
+	c_Lang156 =	Script
+	c_Lang157 =	Script Tungumál
+	c_Lang158 =	Ekki samhæft við 64-bita!
+	c_Lang159 =	Leitarmöguleikar
+	c_Lang160 =	Gegnsætt
+	c_Lang161 =	Scale
+	c_Lang162 =	Bæta við "Ef Statement"
+	c_Lang163 =	Senda Mode
+	c_Lang164 =	Jafnt
+	c_Lang165 =	Inniheldur
+	c_Lang166 =	Greater
+	c_Lang167 =	Minna
+	c_Lang168 =	Já
+	c_Lang169 =	Engin
+	c_Lang170 =	OK
+	c_Lang171 =	Hætta
+	c_Lang172 =	Hætta
+	c_Lang173 =	Hunsa
+	c_Lang174 =	Reyna
+	c_Lang175 =	Halda áfram
+	c_Lang176 =	Reyndu aftur
+	c_Lang177 =	Hlé
+	c_Lang178 =	Setja lykill seinkun
+	c_Lang179 =	Key seinkun
+	c_Lang180 =	Random seinkun
+	c_Lang181 =	Lágmark
+	c_Lang182 =	Hámarks
+	c_Lang183 =	Slökkva á handahófi tafir á þessa skipun
+	c_Lang184 =	Veldu úr listanum
+	c_Lang185 =	Buttons
+	c_Lang186 =	First
+	c_Lang187 =	Second
+	c_Lang188 =	Þriðja
+	c_Lang189 =	Title
+	c_Lang190 =	Ef gluggi virkur
+	c_Lang191 =	Ef gluggi ekki virkur
+	c_Lang192 =	Ef gluggi til
+	c_Lang193 =	Ef gluggi ekki til
+	c_Lang194 =	Ef skráin til
+	c_Lang195 =	Ef skráin ekki til
+	c_Lang196 =	Ef Klemmuspjald texta
+	c_Lang197 =	Ef lykkja vísitölu
+	c_Lang198 =	Ef image / pixla fannst
+	c_Lang199 =	Ef image / pixla fannst ekki
+	c_Lang200 =	Ef strengurinn inniheldur
+	c_Lang201 =	Ef strengurinn inniheldur ekki
+	c_Lang202 =	Ef skilaboð kassi
+	c_Lang203 =	Bera breytur
+	c_Lang204 =	Meta tjáningu
+	c_Lang205 =	Region
+	c_Lang206 =	(Nota [] að búa til fylki, t.d .: [10, 20, aVariable, "aString"])
+	c_Lang207 =	Array Object
+	c_Lang208 =	Key Name
+	c_Lang209 =	Value Name
+	c_Lang210 =	Gildi
+	c_Lang211 =	Array
+	c_Lang212 =	User Skilgreint Virka
+	c_Lang213 =	Virka Parameter
+	c_Lang214 =	Virka Return
+	c_Lang215 =	Breytur
+	c_Lang216 =	Skilagildi
+	c_Lang217 =	Sjálfgefna gildið
+	c_Lang218 =	Umfang
+	c_Lang219 =	Local
+	c_Lang220 =	Global
+	c_Lang221 =	Heiti
+	c_Lang222 =	Þú getur bætt fleiri breytur úr Virka valmyndinni.
+	c_Lang223 =	Global breytur
+	c_Lang224 =	Local breytur
+	c_Lang225 =	Static breytur
+	c_Lang226 =	Frá
+	c_Lang227 =	Tölvupóstur
+	c_Lang228 =	Subject
+	c_Lang229 =	Skilaboð
+	c_Lang230 =	Til
+	c_Lang231 =	CC
+	c_Lang232 =	BCC
+	c_Lang233 =	F2 til að breyta
+	c_Lang234 =	HTML
+	c_Lang235 =	Senda tölvupóst
+	c_Lang236 =	Sækja skrá
+	c_Lang237 =	Zip / renna niður skrá
+	c_Lang238 =	Kveikja á
+	c_Lang239 =	Slökkva á
+	c_Lang240 =	Stöður skráð.
+	c_Lang241 =	Eyða öllum teljara
+	c_Lang242 =	Set myndatöku
+	c_Lang243 =	Hægri-réttlætanlegt
+	c_Lang244 =	Hægri-til-vinstri
+	c_Lang245 =	Viðhengi
+	c_Lang246 =	Path
+	c_Lang247 =	Ef
+	c_Lang248 =	Þjappa hverja skrá til mismunandi skjalasafn
+	c_Lang249 =	Þykkni hverja skrá í aðra möppu
+	c_Lang250 =	Zip skrár
+	c_Lang251 =	Renna niður skrá
+	c_Lang252 =	Sækja tenglar
+	c_Lang253 =	Móttökumappa
+	c_Lang254 =	Áfangastaður skrá
+	c_Lang255 =	Aðskilin með semikommum, komma eða línu.
+	c_Lang256 =	Stilla hnit miðju myndarinnar
+	c_Lang257 =	tímabil
+		
+; 16. Other Windows		
+	t_Lang001 =	Flytja út í AutoHotkey
+	t_Lang002 =	Fjölvi
+	t_Lang003 =	Loops
+	t_Lang004 =	0 = óendanlegt
+	t_Lang005 =	Nota Hotstring
+	t_Lang006 =	Block Mús
+	t_Lang007 =	Allt
+	t_Lang008 =	Ekkert
+	t_Lang009 =	Samhengi næmur Hotkeys
+	t_Lang010 =	Flytja út í
+	t_Lang011 =	Inndrátt
+	t_Lang012 =	Fela PMC Code
+	t_Lang013 =	Ekki concatenate senda skipanir
+	t_Lang014 =	Uppfæra
+	t_Lang015 =	Auto-Uppfæra
+	t_Lang016 =	Alltaf á toppnum
+	t_Lang017 =	Stillingar
+	t_Lang018 =	Almennt
+	t_Lang019 =	Byrja / Stöðva Record
+	t_Lang020 =	Record New Macro
+	t_Lang021 =	Mínútum
+	t_Lang022 =	Recording
+	t_Lang023 =	Handtaka lykill ástand (niður / upp)
+	t_Lang024 =	Mús smelli
+	t_Lang025 =	Mús Wheel
+	t_Lang026 =	Mús Moves
+	t_Lang027 =	Tímasettar Hlé
+	t_Lang028 =	Lágmark seinkun
+	t_Lang029 =	Gluggi Classes
+	t_Lang030 =	Gluggi Titles
+	t_Lang031 =	Record ControlSend
+	t_Lang032 =	Record ControlClick
+	t_Lang033 =	Hlutfallsleg Record Key
+	t_Lang034 =	Toggle
+	t_Lang035 =	Spilun
+	t_Lang036 =	Flýta
+	t_Lang037 =	Hægðu á þér
+	t_Lang038 =	Return Mús eftir spilun
+	t_Lang039 =	Mús Hnit
+	t_Lang040 =	Gluggi
+	t_Lang041 =	Screen
+	t_Lang042 =	Sjálfgefin Mús Delay
+	t_Lang043 =	Sjálfgefið Gluggi Töf
+	t_Lang044 =	Max Saga á Macro
+	t_Lang045 =	Clear History
+	t_Lang046 =	Skjámyndir
+	t_Lang047 =	Teikna hnappinn
+	t_Lang048 =	Line Width (Px)
+	t_Lang049 =	Handtaka á losun
+	t_Lang050 =	Ýttu á Enter til að handtaka
+	t_Lang051 =	Skjámyndir Directory
+	t_Lang052 =	Línuskrið
+	t_Lang053 =	Hotkeys
+	t_Lang054 =	Setja sem sjálfgefið Hotkeys
+	t_Lang055 =	Slökkva Gluggi Flýtileiðir
+	t_Lang056 =	Endurstilla Dálkar Size
+	t_Lang057 =	Sjálfgefin Macro skrá
+	t_Lang058 =	Standard Library File
+	t_Lang059 =	Nota segðinni sjálfgefið fyrir breytur Framsal
+	t_Lang060 =	Hápunktur Lykkjur og yfirlýsingar
+	t_Lang061 =	(Smelltu á Index dálkhausinn að virkja / gera óvirkt)
+	t_Lang062 =	Virtual Keys
+	t_Lang063 =	Sjálfgefið
+	t_Lang064 =	Breyta Athugasemd
+	t_Lang065 =	Athugasemd
+	t_Lang066 =	Leit Column
+	t_Lang067 =	Finndu / Skipta
+	t_Lang068 =	&Finna
+	t_Lang069 =	&Match Case
+	t_Lang070 =	&Skipta
+	t_Lang071 =	Fann
+	t_Lang072 =	Skipt
+	t_Lang073 =	&Valdar Raðir
+	t_Lang074 =	A&llir Raðir
+	t_Lang075 =	Allir F&jölvi
+	t_Lang076 =	Um
+	t_Lang077 =	&Regluleg segð
+	t_Lang078 =	Spila einu sinni
+	t_Lang079 =	Spila fresti X (Mili) sekúndur
+	t_Lang080 =	Timer
+	t_Lang081 =	Hlé
+	t_Lang082 =	Yfirlýsingar
+	t_Lang083 =	Sýna Inndráttur fyrir Lykkjur og samstæðu
+	t_Lang084 =	(Tvísmelltu dálkurinn Action haus virkja / slökkva)
+	t_Lang085 =	Sýna Controls Bar á ræsingu
+	t_Lang086 =	Leitað að Aðgerðir. Vinsamlegast bíðið...
+	t_Lang087 =	Fela ytri skrár
+	t_Lang088 =	Búa EXE skrá
+	t_Lang089 =	Leyfa mörgum tilvikum
+	t_Lang090 =	Vanskil
+	t_Lang091 =	Leyfa Draga Rows
+	t_Lang092 =	&Allt frumuinnihald
+	t_Lang093 =	Standard INI snið
+	t_Lang094 =	Nafn = gildi
+	t_Lang095 =	Sláðu 1 breytu í hverja línu. Þú getur einnig bætt við [Deildir].
+	t_Lang096 =	User alþjóðlegum breytur
+	t_Lang097 =	Ýta á hnapp á stýripinna
+	t_Lang098 =	Backspace til að hreinsa
+	t_Lang099 =	Button
+	t_Lang100 =	Sýna blöðru ábendingar
+	t_Lang101 =	Hraði
+	t_Lang102 =	Slow
+	t_Lang103 =	Hratt
+	t_Lang104 =	Sýna / Fela Title Bar
+	t_Lang105 =	Sýna / Fela aðalglugga
+	t_Lang106 =	Hlaupa strax
+	t_Lang107 =	Random Tafir
+	t_Lang108 =	Normal
+	t_Lang109 =	Niður
+	t_Lang110 =	Upp
+	t_Lang111 =	Setja inn Ásláttur
+	t_Lang112 =	Play / Pause
+	t_Lang113 =	Hættu
+	t_Lang114 =	Spilun Options
+	t_Lang115 =	Byrja / Stöðva Record
+	t_Lang116 =	Record New Macro
+	t_Lang117 =	Recording Valkostir
+	t_Lang118 =	Hreinsa List
+	t_Lang119 =	Birta Progress Bar
+	t_Lang120 =	Flýta
+	t_Lang121 =	Hægðu á þér
+	t_Lang122 =	Sýna / Fela Title Bar
+	t_Lang123 =	Sýna / Fela aðalglugga
+	t_Lang124 =	Undock
+	t_Lang125 =	Dock
+	t_Lang126 =	Open
+	t_Lang127 =	Vista
+	t_Lang128 =	Skera
+	t_Lang129 =	Afrita
+	t_Lang130 =	Líma
+	t_Lang131 =	Velja allt
+	t_Lang132 =	Eyða
+	t_Lang133 =	Lyklaborð
+	t_Lang134 =	Mús
+	t_Lang135 =	Aðrir
+	t_Lang136 =	Highlight Raðir
+	t_Lang137 =	Sjálfgefin Script Editor
+	t_Lang138 =	Opna í ytri ritil (Ctrl + Shift + E)
+	t_Lang139 =	Veldu
+	t_Lang140 =	Með Column
+	t_Lang141 =	Allir dálkar
+	t_Lang142 =	Fjarlægja þema frá Toolbars (þarfnast endurræsingar)
+	t_Lang143 =	Auto Fela Controls Toolbar
+	t_Lang144 =	Smelltu og dragðu til að breyta röð. Tvísmelltu til að breyta.
+	t_Lang145 =	Breyta Fjölvi
+	t_Lang146 =	Í línu
+	t_Lang147 =	Macro
+	t_Lang148 =	Aðgerð á Loka hnappinn aðalglugga er
+	t_Lang149 =	Loka umsókn
+	t_Lang150 =	Lágmarka að bakka
+	t_Lang151 =	Sýna staðfesting þegar lokun macro
+	t_Lang152 =	Búa afrit sjálfkrafa
+	t_Lang153 =	Skapar tímaáætlun verkefni í Windows Task Tímaáætlun.
+	t_Lang154 =	Tími fyrstu keyrslu
+	t_Lang155 =	Dagskrá gerð
+	t_Lang156 =	Þegar || Daily | Weekly | mánuðinn | Byrja | Logon | Idle
+	t_Lang157 =	Target PMC skrá
+	t_Lang158 =	Target AHK skrá
+	t_Lang159 =	Handritið verður vistuð eða skrifað yfir í núverandi skrá!
+	t_Lang160 =	Open Verkefni Tímaáætlun
+	t_Lang161 =	Verkefni búið tókst!
+	t_Lang162 =	Villa kom upp. The verkefni gæti ekki verið búin til.
+	t_Lang163 =	Tímaáætlun
+	t_Lang164 =	Stundaskrá Fjölvi
+	t_Lang165 =	Keyra Macro
+	t_Lang166 =	File
+	t_Lang167 =	String
+	t_Lang168 =	Fá upplýsingar
+	t_Lang169 =	Bíddu
+	t_Lang170 =	Gluggi Hópar
+	t_Lang171 =	Skilaboð
+	t_Lang172 =	Registry Og INI
+	t_Lang173 =	Hljóð
+	t_Lang174 =	Breytur
+	t_Lang175 =	Misc.
+	t_Lang176 =	Bæta við hópi
+	t_Lang177 =	Nýr hópur
+	t_Lang178 =	Tungumál Editor
+	t_Lang179 =	Búa til nýtt
+	t_Lang180 =	Nota Enter, PgDn og PgUp að sigla.
+	t_Lang181 =	Senda
+	t_Lang182 =	Heiti
+	t_Lang183 =	Vista breytingar?
+	t_Lang184 =	Tungumál File
+	t_Lang185 =	Tilvísunarskrá
+	t_Lang186 =	Senda endurskoðun eða nýjum við yfirfærslu
+	t_Lang187 =	Hrynja allt
+	t_Lang188 =	Stækka allt
+	t_Lang189 =	Tungumál
+	t_Lang190 =	Umbreyta línuskiptingum
+	t_Lang191 =	Email reikningur
+	t_Lang192 =	Uppfæra
+	t_Lang193 =	Tvísmelltu til að breyta
+	t_Lang194 =	SMTP Server
+	t_Lang195 =	Port
+	t_Lang196 =	Sannvotta
+	t_Lang197 =	Notandanafn
+	t_Lang198 =	Lykilorð
+	t_Lang199 =	SSL
+	t_Lang200 =	Senda ham
+	t_Lang201 =	Senda próf
+	t_Lang202 =	Screen og glugga
+	t_Lang203 =	Uppgötva falinn Windows
+	t_Lang204 =	Greina falinn texti
+	t_Lang205 =	Title Match Mode
+	t_Lang206 =	Title Match Speed
+	t_Lang207 =	Viðskiptavinur
+	t_Lang208 =	F&inna
+	t_Lang209 =	S&kipta
+	t_Lang210 =	Ekki sýna villur
+		
+; 17. Messages & Dialogs		
+	d_Lang001 =	Open
+	d_Lang002 =	Vista núverandi verkefni?
+	d_Lang003 =	Sjálfgefnum stillingum
+	d_Lang004 =	Macro Creator Skrár
+	d_Lang005 =	Vista Project
+	d_Lang006 =	Mistókst að vista / yfirskrifa skrá
+	d_Lang007 =	Villa
+	d_Lang008 =	Villa: Enginn Macro Selected.
+		Please pārbaude vismaz viens Macro sarakstā.
+	d_Lang009 =	Villa: Enginn Hotkey Valdar.
+	d_Lang010 =	Villa: Ógilt Address.
+		The izvēlēto adresi vai faila nosaukums ir nederīgs.
+	d_Lang011 =	Viðvörun
+	d_Lang012 =	Engin stjórn selected.
+		Continue?
+	d_Lang013 =	Flytja Script
+	d_Lang014 =	Script Útfluttar
+	d_Lang015 =	Skráin var flutt út!
+	d_Lang016 =	Smelltu á 'Fá að merkja stöðu.
+	d_Lang017 =	- Veldu glugga.
+		- Point til viðkomandi stöðu.
+		- Ýttu á hægri hnappinn.
+	d_Lang018 =	Pixel Color
+	d_Lang019 =	Hreinsa List
+	d_Lang020 =	Loka Macro?
+	d_Lang021 =	næsta
+	d_Lang022 =	fyrri
+	d_Lang023 =	skilaboð
+	d_Lang024 =	Hlaða sjálfgefnar stillingar?
+	d_Lang025 =	Macro (s) activated.`nUse hotkeys til að spila.
+	d_Lang026 =	að byrja / stöðva upptöku
+	d_Lang027 =	upptaka stöðvuð
+	d_Lang028 =	Upptöku ...
+	d_Lang029 =	að hætta
+	d_Lang030 =	að byrja nýtt met
+	d_Lang031 =	Hringja til nonexistent virka.
+	d_Lang032 =	Villa: Afrit hotkeys.
+	d_Lang033 =	virkja Fjölvi
+	d_Lang034 =	- Smelltu og dragðu með% DrawButton% til að velja svæði.
+		- Smelltu og losa án þess að draga að velja stjórna svæði.
+		- Smelltu á svæði án eftirlits til að velja svæði á glugganum.
+	d_Lang035 =	Halda áfram?
+	d_Lang036 =	Mynd / Pixel skrár á
+	d_Lang037 =	Mynd / Pixel fannst ekki.
+	d_Lang038 =	Ýttu á OK til að halda áfram.
+	d_Lang039 =	Sending. Vinsamlegast bíðið...
+	d_Lang040 =	Þessi eiginleiki krefst GDI + Library.
+		Smelltu á Í lagi til að fara að sækja síðuna.
+	d_Lang041 =	Breytan nafn inniheldur ólöglegt staf.
+	d_Lang042 =	er frátekið orð.
+	d_Lang043 =	Eða notaðu stjórntækin Toolbar.
+	d_Lang044 =	Þessi eiginleiki krefst þess Eval () virka.
+		Smelltu á Í lagi til að fara að sækja síðuna.
+	d_Lang045 =	Vinsamlegast veldu Internet Explorer glugga!
+	d_Lang046 =	Tenging Árangursrík!
+	d_Lang047 =	Mistókst að tengja!
+	d_Lang048 =	Setja inn Sýnið og CLSID.
+	d_Lang049 =	Ógilt Label Name.
+	d_Lang050 =	Afrit merki.
+	d_Lang051 =	Til að spila efnahagslegu ýta á samsvarandi Hotkey (Auto / Man).
+	d_Lang052 =	Til að hefja upptöku ýtirðu á Record Hotkey.
+	d_Lang053 =	Ekki sýna þessi skilaboð aftur.
+	d_Lang054 =	Vinsamlegast veldu Excel glugga!
+	d_Lang055 =	Vinsamlegast veldu AutoHotkey handrit skrá (.ahk) og slá inn heiti aðgerðar.
+	d_Lang056 =	Þessi eiginleiki krefst AutoHotkey uppsett.
+		Smelltu á Í lagi til að fara að sækja síðuna.
+	d_Lang057 =	- Ýttu á Ctrl + Arrow takkana til að hreyfa völdu svæði.
+		- Ýtið Shift + Arrow takkana til að breyta stærð völdu svæði.
+		- Ýttu á Enter til að ljúka.
+	d_Lang058 =	Sumar aðgerðir krefjast admnistrator rrÃ © ttindi til að virka almennilega.
+		Það er mælt með því að endurræsa forritið sem Administrator.
+	d_Lang059 =	Þessi skipun styður ekki tjáning eða aðgerðir.
+		Vinsamlegast úthluta breytu og nota það í breytu.
+	d_Lang060 =	Ný útgáfa í boði
+	d_Lang061 =	Ekki núna
+	d_Lang062 =	Þú ert nú þegar nýjustu útgáfu.
+	d_Lang063 =	Villa kom upp þegar að haka.
+	d_Lang064 =	villa í
+	d_Lang065 =	Row
+	d_Lang066 =	sérstaklega
+	d_Lang067 =	Sýna þennan glugga ræsingu
+	d_Lang068 =	Ábendingar:
+	d_Lang069 =	A einhver fjöldi af tími og áreynsla hefur farið í þróun Macro skapara Pulover er. Ef þú finna það gagnlegur, skaltu íhuga að sýna þakklæti þitt með framlag.
+		Framlag eða ekki, það verður engin munur á lögun þess og virkni.
+	d_Lang070 =	Gefa ...
+	d_Lang071 =	Nei takk
+	d_Lang072 =	Stuðningur Open Source hugbúnaður
+	d_Lang073 =	Villa: Ógilt Hotkey Valdar.
+	d_Lang074 =	Finna skipun eða aðgerð
+	d_Lang075 =	Velkomin á Macro skapara Pulover er
+	d_Lang076 =	Vinsamlegast veldu valinn skipulag þitt
+	d_Lang077 =	Compact
+	d_Lang078 =	Sjálfgefið
+	d_Lang079 =	Stöðva fyrir endurnýja um ræsingu.
+	d_Lang080 =	Þú getur breytt þessu í Valkostir> Stillingar> Almennt.
+	d_Lang081 =	Þú getur breytt og aðlaga skipulag í Skoða valmynd.
+	d_Lang082 =	Skráin fannst ekki!
+	d_Lang083 =	A varabúnaður skrá hefur fundist. Viltu opna það?
+	d_Lang084 =	Vinsamlegast vista breytingarnar áður tímasetningu verkefni.
+	d_Lang085 =	Vantar "End Loop" yfirlýsingu í Macro
+	d_Lang086 =	Vantar "End ef" yfirlýsingu í Macro
+	d_Lang087 =	Takið eftir að breytingar voru gerðar á handriti utan áætlunarinnar mun ekki hafa áhrif Fjölvi þína á nokkurn hátt.
+		Þessi eiginleiki er aðeins ætlað eins og a fljótur útflutningur virka. PMC er ekki ætlað að vera AHK handrit ritstjóri.
+	d_Lang088 =	Reyndu að keyra eins sameiginlega notandi (ekki stjórnandi).
+	d_Lang089 =	Engin röð valinn!
+	d_Lang090 =	Vinsamlegast velja röð til að setja eða fjarlægja hópinn.
+	d_Lang091 =	Sækir. Vinsamlegast bíðið...
+	d_Lang092 =	Lítil tákn
+	d_Lang093 =	stór tákn
+	d_Lang094 =	Þessi eiginleiki krefst Windows Vista eða hærri.
+	d_Lang095 =	Notkun ByRef veldur breytu til að verða samnefni fyrir breytu liðin frá þeim sem hringir. Með öðrum orðum, breytu og breyta þess sem hringir, bæði vísa til sömu innihald í minni.
+	d_Lang096 =	- EKKI láta breytur í prósentumerki hér.
+		- Return gildi verður að vera tjáning.
+		- Þú getur notað strengir, breytur, fylki og aðgerðir. Þú gætir líka sameina eitthvað af þeim.
+		- Til að nota strengi, láta þá innan gæsalappa, t.d .: "Niðurstaðan er:" a + b.
+		- Ef þú vilt fara aftur auka árangur, getur þú líka notað ByRef í þáttum.
+		- Fylki er hægt að nota til að snúa aftur mörg gildi eða jafnvel gerist gildum.
+	d_Lang097 =	- EKKI láta breytur í prósentumerki hér.
+		- Flestir AHK tjáning eru studd.
+		- Þú getur notað strengir, breytur, fylki og aðgerðir.
+		- Til að nota strengi, láta þá innan gæsalappa, t.d .: var = "a".
+		- Margar Yfirlýsingar eru studd, t.d .: var = "a" || Instr (var, "b").
+	d_Lang098 =	Ef ein færibreyta hefur sjálfgefið gildi eru eftirfarandi breytur sem þarf að hafa líka.
+	d_Lang099 =	Fallið nafn inniheldur ólöglegt staf.
+	d_Lang100 =	Goto, Gosub og Label eru ekki leyfð í aðgerðir.
+	d_Lang101 =	Afrit virka.
+	d_Lang102 =	Villa kom upp. Þú getur sent tölvupóst á 'pulover@macrocreator.com' með skrá:
+	d_Lang103 =	Ný tungumál skrá boði.
+	d_Lang104 =	Þetta bréf verður ekki sýnd aftur fyrir sama uppfærslu. Þú getur sótt það frá Hjálp valmyndinni> Leita að uppfærslum.
+	d_Lang105 =	File send. Þakka þér!
+	d_Lang106 =	Tungumál skrár uppfærð.
+	d_Lang107 =	Gat ekki ræst teljara
+	d_Lang108 =	Allar stöður eru skráð. Vinsamlegast eyða einn af þeim.
+	d_Lang109 =	Flokkurinn miða er ekki til.
+	d_Lang110 =	Staðfesta skrá skipta
+	d_Lang111 =	Er þegar til.
+		Langar að skipta um það?
+	d_Lang112 =	Email reikningur fannst ekki.
+	d_Lang113 =	Engin villa tilkynnt.
+	d_Lang114 =	Scripts flutt (jafnvel þótt unnin) með senda tölvupóst virka (CDO) verður sýnileg upplýsingar um reikninga email notuð, þar á meðal lykilorð. The PMC verkefnið skrá hjartarskinn ekki hafa þessar upplýsingar.
+	d_Lang115 =	- Halda Alt að setja svæðið á sama stað.
+	d_Lang116 =	Flytja og setja
+	d_Lang117 =	Fara að sækja síðuna
+	d_Lang118 =	Best Passa
+	d_Lang119 =	Endurræsa forritið til breytinga.
+	d_Lang120 =	Til að endurstilla Toolbars stærðir, fara á:
+		
+; 18. Start-up Tips		
+	Start_Tips =	Skoðaðu vídeó námskeið á www.macrocreator.com/help~~pobj til að læra um marga eiginleika PMC.
+		Til að fá hjálp í gegnum netið stjórn hægri smella hvar á stjórn glugga til að sýna tengla á hjálp á netinu.
+		Þú getur búið til Fjölvi með skipanahnapp í aðalglugganum eða nota Upptökutæki að afrita aðgerðir. Farðu í Valkostir> Stillingar> upptöku til að velja hvaða inntak verður skráð.
+		Notaðu leitina bar eða "finna skipunina" glugga til að leita að skipanir og aðgerðir.
+		Viltu hjálpa festa þýðingu eða jafnvel búa til nýjan? Fara á Valkostir> Stillingar> Tungumál ritstjóri og gera leiðréttingar sem þú vilt. Þú getur forskoðað það hvenær sem er. Smelltu á Senda til að senda endurskoðun þína. Feel frjáls til að senda allir tala um leiðréttingar eins oft og þú vilt.
+		Athuga "Handtaka Keys" valkostur til að slá lykla og samsetningar til Macro þinn beint frá the aðalæð gluggi.
+		Sláðu lykla og samsetningar í hotkey reitinn neðst og ýttu á Insert hnappinn til að bæta þeim við völdum raðir.
+		Notaðu breyta hnappur á the botn af the aðalæð gluggi til að setja endurtaka og tefja að mörgum röðum á sama tíma. Ef engar raðir eru valdir í breyttu hnappar eiga við um öll raðir í listanum.
+		Næstum sérhver stjórn og virka samþykkir og framleiðsla breytur. Hægt er að tengja eigin breytur í breytum gluggum (Skipanir> Breytur / fylki). Til að nota þá inni skipanir láta breytu nafn í prósent skilti, t.d .:% MyVar%. Í aðgerðir, nota þær án prósent skilti, t.d .: SubStr (MyVar, 5).
+		Hægri smella hvar í stjórn gluggi til auðveldlega setja innbyggður-í breytur af lista.
+		Til að nota upptökutæki fyrir fljótur verkefni að fara Valkostir> Stillingar> Recording og stöðva the "Clear List" valkostur. Síðan er smellt á Record hnappinn í the aðalæð gluggi og nota F10 til að hreinsa núverandi Macro og hefja nýjan með sama hotkey. Þú getur einnig athugað "alltaf virk" valmöguleikann í the aðalæð gluggi til að halda upptöku og spilun hotkeys virka.
+		PMC styður Array hluti og aðferðir, eins AutoHotkey forskriftir. Þú getur búið til fylki á margan hátt, mest venjulega er að fara að breytanna glugga, haka við í "Expression" valkostur og umlykjandi gildi í svigum, t.d .: [10, 20, Var, "band"]. Þú getur líka búið til sem heitir lykla, t.d .: {Keya: Vara, "sumir lykill": "string value"}.
+		Aðgerðir nota Ahk segð setningafræði. Bókstaflegir strengir verður að fylgja innan gæsalappa, og breytum þurfa ekki prósent merki. Hægt er að nota aðrar aðgerðir eða array þættir sem breytur. T.d .: StrReplace (MyVar, MyArray [ "A"], SubStr (OtherVar, 2, 3)).
+		Tjáning eru studd í AutoHotkey Expression Setningafræði. Til að nota tjáningu inni í stjórn breytu, byrja það með prósent skilti, t.d .:% SubStr (Var, 5).
+		The "Loop" gegn efst setur heildarfjölda lykkjur fyrir valið Macro.
+		Hægt er að breyta röð með því að tvísmella það eða með því að velja hana og smella á Breyta hnappana neðst. Þú getur breytt mörgum valdar línur með valkosti í breyta neðst.
+		Þú getur skilgreint eigin aðgerðir í Function> Búa virka og nota þá frá Virka glugga eða inni tjáning.
+		Þú getur skilgreint Globa / sveitarfélaga og truflanir breytur fyrir notandinn skilgreint Aðgerðir. Global breytur eru skilgreindar í Valkostir> Stillingar> User alþjóðlegt breytur eru talin Super Global, og mun alltaf vera inni í aðgerðir, jafnvel þegar skilgreint sem staðbundin.
+		Veldu eitt eða fleiri raðir til að bæta við nýjum skipunum ofan á þeim.
+		Hægt er að færa raðir með smella-og-draga.
+		Tvöfaldur-smellur á the bakki helgimynd til að virkja hotkeys eða stöðva spilun / upptöku. Smelltu á það með miðju hnappinn meðan á spilun eða upptöku til að gera hlé.
+		Þú getur flutt Fjölvi til starfa AutoHotkey forskriftir eða standa-einn executables frá Export glugganum.
+		Til að taka upp og spila Mús nota algera hnit fara í Valkostir> Stillingar> Vanskil og sett Mús hnitum að Skjár.
+		Hægt er að opna, afrita, færa eða eyða skrám og möppum með einn af skipunum í Skipanir> Run / File / String / Misc. Það eru margar aðrar gagnlegar skipanir eins og StringReplace, InputBox og MouseGetPos.
+		Til að taka niður og upp ástand sérhvers Takki Valkostir> Stillingar> Recording og stöðva "Myndatökutakki State (niður / upp)" valmöguleikann.
+		Þú getur notað flýtilykla til að flýta eða hægja spilun. Farðu í Valkostir> Stillingar> Spilun að setja lykla og hraða.
+		Til að stilla handtaka svæði með því að nota "Make Screenshot" tól fara í Valkostir> Stillingar> Screenshots og velja "Ýttu á Enter til að handtaka". Eftir að teikna rétthyrning notkun Control + arrow takkana til að færa valið og Shift + arrow takkana til að breyta stærðinni.
+		Quick Select: Veldu hvaða röð og smelltu á hausnum til að velja svipaða raðir byggt á texta frumunnar frá þeim dálki.
+		Smelltu á Index dálkhausinn að kveikja / slökkva Hjálp Marks og liti fyrir Lykkjur og reikningsskil. Tvísmelltu á Action dálkhausinn að snúa á / burt inndrátt fyrir lykkjur og reikningsskila.
+		Þú getur kemba Fjölvi með því að nota Manual Hotkey og leika valkosti í Macro valmyndinni. Þú getur líka slökkt aðgerðir við óhindraður þá í Macro listanum.
+		Til að gera Fjölvi þín vinna aðeins á ákveðnum glugga að fara Macro> Samhengistengdar hotkeys.
+		Hægt er að stilla eigin Altækir þín Breytur að vera hlaðinn á gangsetning og til að flytja út. Fara á Valkostir> Stillingar> User Global breytur til að bæta þeim.
+		Þú getur keyrt háþróaður virka eins og SubStr og RegExReplace frá Aðgerðir gluggann (Skipanir> Aðgerðir / Array aðferðir). Þú getur einnig skilgreint eigin aðgerðir þínar eða hlaupa aðgerðir frá utanaðkomandi AutoHotkey forskriftir.
+		Hægt er að taka músina hreyfingar miðað við núverandi stöðu með því að halda CapsLock á upptöku (þú getur breytt lykilinn og gera það skipta í Stillingar).
+		
+; 19. Tooltips		
+	A_List_TT =	Select Macro (Ctrl + 1 ~ 0)
+	AbortKey_TT =	Hotkey til að stöðva spilun
+	ActiveObj_TT =	Reynir að tengjast Active COM mótmæla
+	AddAtt_TT =	Hengja skrá
+	ApplyI_TT =	Gilda
+	ApplyL_TT =	Settu úr kassanum (Insert)
+	ApplyT_TT =	Gilda
+	AutoKey_TT =	Hotkey til að spila Macro
+	Client_TT =	Hnit eru miðað við viðskiptavinar svæði virkum glugga, sem undanskilur titil bar gluggans, matseðill (ef það hefur venjulega eitt) og landamæri.
+	Clip_TT =	Tímabundið notar Klemmuspjald til að senda texta.
+		Þegar aðgerð er lokið, handritið
+		Endurheimtir upprunalega innihald klippiborðsins.
+		(Leyfi texta tóm til að líma núverandi innihald)
+	CM_TT =	Screen: Hnit eru miðað við skrifborð (allan skjáinn).
+		Window: Hnit eru miðað við virka gluggans.
+		Viðskiptavinur: Hnit eru miðað við viðskiptavinar svæði virkum glugga, sem undanskilur titil bar gluggans, matseðill (ef það hefur venjulega eitt) og landamæri.
+	CmdFilter_TT =	Sía eftir tegund
+	CmdSort_TT =	Raða í stafrófsröð
+	ColorPick_TT =	Fá Pixel á skjánum
+	ComEvent_TT =	Gengi sem ásláttur eru send ræðst af helstu tafar.
+	ComText_TT =	Þegar það er ekki í hrár ham, eftirfarandi stafi
+		Eru meðhöndlaðar sem breytilyklum (þessir breytilykillinn áhrif
+		Aðeins mjög næsta lykill):, +, ^, #
+	CoordPixel_TT =	Samræma ham
+	DefaultMacro_TT =	Veldu skrá til að hlaða á dagskrá ræsingu
+	EditPaste_TT =	Deig String á bendillinn / insert stöðu
+		Í Edit stjórn (þetta hefur ekki áhrif á
+		Innihald klemmuspjald).
+	Ex_AF_TT =	Sleppa blíður aðferð virkja glugga
+		Og fer beint í forceful aðferð.
+	Ex_CM_TT =	Leikmynd samræma ham fyrir mús skipanir að það sé miðað við annaðhvort virks glugga eða skjánum.
+	Ex_DH_TT =	Ákvarðar hvort ósýnilega gluggar "séð" af handriti.
+	Ex_DT_TT =	Ákvarðar hvort ósýnilega texta í glugga er "séð" í þeim tilgangi að finna gluggann. Þetta hefur áhrif á skipanir eins og IfWinExist og WinActivate.
+	Ex_EdScript_TT =	Opna í ytri ritil
+	Ex_EdVars_TT =	Veldu alþjóðlegum breytur til að vera flutt.
+	Ex_ExecScript_TT =	Keyra skriftu
+	Ex_HK_TT =	Þvingar notkun á krók við framkvæmd allra
+		Eða nokkrar lyklaborðs hotkeys.
+	Ex_IfDir_TT =	Býr samhengi næmur hotkeys og hotstrings veltur
+		Eftir tegund glugganum sem er virkt eða ríkir.
+	Ex_IfDirType_TT =	Býr samhengi næmur hotkeys og hotstrings veltur
+		Eftir tegund glugganum sem er virkt eða ríkir.
+	Ex_IN_TT =	Veldur handritið að haga sér eins og tilgreint
+		Innihald File eru til staðar á þessum nákvæma staðsetningu.
+	Ex_MD_TT =	Setur töf sem mun eiga sér stað eftir að
+		Hver mús hreyfing eða smellur.
+	Ex_MT_TT =	Setur hámarks fjölda samtímis
+		Þræðir á hotkey eða hotstring.
+	Ex_NT_TT =	Slekkur á sýningu bakki helgimynd.
+	Ex_PT_TT =	Heldur handrit varanlega gangi
+		(Sem er, þar sem notandinn lokar það eða ExitApp er upp).
+	Ex_SB_TT =	Ákvarðar hversu hratt handritið mun keyra (koma fyrir hjá CPU nýting).
+	Ex_SC_TT =	Setur töf sem mun eiga sér stað eftir að
+		Hver stjórn-breyta stjórn.
+	Ex_SI_TT =	Ákvarðar hvort handrit er að hlaupa aftur þegar það er nú þegar í gangi.
+	Ex_SK_TT =	Setur töf sem mun eiga sér stað eftir hverja
+		Ásláttur send með Senda eða ControlSend.
+	Ex_SM_TT =	Gerir Senda samheiti SendInput eða SendPlay frekar en
+		Sjálfgefið (SendEvent). Einnig gerir Smelltu og MouseMove / Click / Drag
+		Nota tilgreint aðferð á.
+	Ex_ST_TT =	Setur samsvarandi hegðun WinTitle breytu í skipunum, svo sem WinWait.
+	Ex_SW_TT =	Setur töf sem mun eiga sér stað eftir að
+		Hver windowing stjórn, svo sem WinActivate.
+	Ex_UV_TT =	Export alþjóðlegum breytur.
+	Ex_WN_TT =	Kveikir eða slekkur varnaðarorð ákveðnum skilyrðum sem geta bent á villu, svo sem prentvilla eða vantar "alheims" yfirlýsingu.
+	ExpList_TT =	Tvísmelltu til að breyta
+	ExprLink2_TT =	- EKKI láta breytur í prósentumerki hér.
+		- Flestir AHK tjáning eru studd.
+		- Þú getur notað strengir, breytur, fylki og aðgerðir.
+		- Til að nota strengi, láta þá innan gæsalappa, t.d .: var  "a".
+		- Margar Yfirlýsingar eru studd, t.d .: var  "a" || Instr (var, "b").
+	ExprLink3_TT =	- EKKI láta breytur í prósentumerki hér.
+		- Flestir AHK tjáning eru studd.
+		- Þú getur notað strengir, breytur, fylki og aðgerðir.
+		- Til að nota strengi, láta þá innan gæsalappa, t.d .: var = "a".
+		- Margar Yfirlýsingar eru studd, t.d .: var = "a" || Instr (var, "b").
+	ExpView2_TT =	Advanced Editor
+	ExpView_TT =	Advanced Editor
+	Fast_TT =	Notar hraðar leita aðferð (mælt með)
+	HiddenText_TT =	Ákvarðar hvort ósýnilega texta í glugga er "séð" í þeim tilgangi að finna gluggann. Þetta hefur áhrif á skipanir eins og IfWinExist og WinActivate.
+	HiddenWin_TT =	Ákvarðar hvort ósýnilega gluggar "séð" af handriti.
+	HScale_TT =	Hæð mælikvarði
+	IconN_TT =	Fjöldi táknið hópnum
+	IfLVColor_TT =	Smelltu til að velja lit
+	IncFiles_TT =	Fela skrár / Values
+	IncFolders_TT =	Fela framkvæmdarstjóra (möppur) / Keys
+	InsertKey_TT =	Setja Ásláttur (Ctrl + Insert)
+	InsertKeyT_TT =	Setja inn Ásláttur
+	JoyKey_TT =	Ýta á hnapp á stýripinna
+	LoopLVColor_TT =	Smelltu til að velja lit
+	LUntil_TT =	Gildir skilyrði til áframhaldandi lykkju eða For-lykkju.
+	ManKey_TT =	Hotkey til að spila Macro "skref-fyrir-skref"
+	MRel_TT =	Hreyfingar miðað við núverandi stöðu.
+		Eða ef það er notað með Control: Position miðað við Stjórna.
+	OSHK_TT =	Veldu Macro
+	OSHKEd_TT =	Veldu Macro
+	OSProgB_TT =	Birta Progress Bar
+	OSTrans_TT =	Ógagnsæi
+	PauseKey_TT =	Hotkey til að gera hlé á spilun
+	PicPrev_TT =	Tvísmelltu til að opna myndina
+	Raw_TT =	The SendRaw stjórn túlkar alla stafina bókstaflega
+		Frekar en að þýða {Sláðu} til að ENTER ásláttur,
+		^ C í Control-C o.fl.
+	RecKey_TT =	Backspace til að hreinsa
+	RecNewKey_TT =	Backspace til að hreinsa
+	Recurse_TT =	Recurse í undirmöppum (undirmöppur) / undirlykla
+	RefreshIEW_TT =	Uppfæra lista
+	Relative_TT =	Hnit eru miðað við virka gluggans.
+	RelKey_TT =	Records Mús hreyfingar og smellir eins og uppbóta
+		Frá fyrri stöðu þegar haldið.
+	ReptC_TT =	0 = óendanlegt
+	Reset_TT =	Hreinsa breytilegir innihald
+	RGB_TT =	Veldur lit til að túlka sem RGB gildi í stað BGR
+	Screen_TT =	Hnit eru miðað við skrifborð (allt skjár).
+	Screenshot_TT =	Gera Screenshot
+	SetText_TT =	Breytingar á texta á stjórn.
+	SI_TT =	Orðið FORCE sleppa valmynd og kemur í stað gamla dæmi sjálfkrafa,
+		Sem er svipað og í gildi til Reload stjórn.
+		Orðið IGNORE sleppa valmynd og skilur gamla dæmi í gangi.
+		Með öðrum orðum, tilraun til að ráðast þegar-gangi handrit eru hunsuð.
+		Orðið OFF leyfa margfeldi dæmi af handriti að keyra samtímis.
+	SM_TT =	Event: Þetta er upphafið sjálfgefið notuð af öllum forskriftir.
+		Það notar SendEvent aðferð til Senda, SendRaw, Click og MouseMove / Smelltu / Drag.
+		Inntak: Rofar til á SendInput aðferð til Senda, SendRaw, Click og MouseMove / Smelltu / Drag.
+		InputThenPlay: Sama og að ofan nema að í stað þess að falla aftur til Event ham
+		Þegar SendInput er ekki fyrir hendi, snúa sér það að spila ham (að neðan). Þetta veldur einnig
+		Sem SendInput skipunin sjálf að snúa sér að spila ham þegar SendInput er ekki fyrir hendi.
+		Leika: Rofar til á SendPlay aðferð til Senda, SendRaw, Click og MouseMove / Smelltu / Drag.
+	ST_TT =	1: Titill glugga verður að byrja með tilgreinda WinTitle að vera passa.
+		2: Titill glugga er hægt innihaldið WinTitle einhvers staðar inni það að vera passa.
+		3: Titill glugga verða að vera nákvæmlega eins WinTitle að vera passa.
+		Ríkisstjóratíð: Breytingar WinTitle, WinText, ExcludeTitle og ExcludeText að vera venjulegur tjáning.
+	TimeoutM_TT =	0 = óendanlegt
+	TitleMatch_TT =	1: Titill glugga verður að byrja með tilgreinda WinTitle að vera passa.
+		2: Titill glugga er hægt innihaldið WinTitle einhvers staðar inni það að vera passa.
+		3: Titill glugga verða að vera nákvæmlega eins WinTitle að vera passa.
+		Ríkisstjóratíð: Breytingar WinTitle, WinText, ExcludeTitle og ExcludeText að vera venjulegur tjáning.
+	TitleSpeed_TT =	Fast: Þetta er sjálfgefinn hegðun. Flutningur getur verið verulega betri en Slow, en ákveðnir þættir WinText fyrir sumum tegundum gluggar mega ekki vera "séð" af ýmsu skipanir glugga.
+		Slow: Getur verið mun hægari en allt mögulegt WinText er sótt úr hverjum glugga Sem windowing stjórn leitar í gegnum þá til að passa. Gluggi Spy ljós hvaða hlutar textans glugga (ef einhver) krefjast hægur ham.
+	ToggleC_TT =	Virkja Hlutfallsleg upptöku þegar lykill ástand er á.
+	TransC_TT =	Gagnsæ lit
+	VarCopyA_TT =	Afrita núverandi breytilega innihald
+	VarCopyB_TT =	Afrita núverandi breytilega innihald
+	VariatT_TT =	Shades of variation
+	WScale_TT =	Breidd mælikvarða
+		
+; 20. Operators		
+	As_Oper_01 =	Úthluta
+	As_Oper_02 =	Bæta
+	As_Oper_03 =	Draga
+	As_Oper_04 =	Margfalda
+	As_Oper_05 =	Divide
+	As_Oper_06 =	Floor skipta
+	As_Oper_07 =	Concatenate
+	As_Oper_08 =	Bita innifalið OR
+	As_Oper_09 =	Bita OG
+	As_Oper_10 =	Bita einkarétt OR
+	As_Oper_11 =	Hægri vakt og
+	As_Oper_12 =	Vinstri Shift og
+	Co_Oper_01 =	Jafnt
+	Co_Oper_02 =	Jöfn (tilfelli næmur)
+	Co_Oper_03 =	Ekki jöfn
+	Co_Oper_04 =	Greater
+	Co_Oper_05 =	Minna
+	Co_Oper_06 =	Meiri eða jöfn
+	Co_Oper_07 =	Minna en eða jafnt
+	Co_Oper_08 =	Í (listi)
+	Co_Oper_09 =	Ekki í (listi)
+	Co_Oper_10 =	Inniheldur (listi)
+	Co_Oper_11 =	Ekki inniheldur (listi)
+	Co_Oper_12 =	Milli (lína 1) og (lína 2)
+	Co_Oper_13 =	Ekki á milli (lína 1) og (lína 2)
+	Co_Oper_14 =	Er (tegund)
+	Co_Oper_15 =	Er ekki (tegund)
+		
+; 21. IE Commands Tips		
+	IE_Cmd_Index =	
+	Checked	Setur eða sækir um stöðu kassann eða hnappinn.
+	Click	Líkir smelltu á hlutnum.
+	Focus	Stillir fókus á hlut.
+	GoBack	Siglir afturábak eitt atriði í sögu listanum.
+	GoForward	Siglir fram eitt atriði í sögu listanum.
+	GoHome	Fer á núverandi heimili eða byrjun síðu.
+	GoSearch	Fer á núverandi leitarsíðu.
+	Height	Setur eða sækir hæð hlutarins.
+	Href	Setur eða sækir vefslóð eða akkeri benda.
+	InnerHTML	Setur eða sækir HTML hlutarins.
+	InnerText	Setur eða fær texta hlut.
+	Length	Setur eða sækir fjölda af hlutum í safni.
+	LocationName	Fær slóð eða titill núverandi síðu.
+	LocationURL	Fær vefslóð síðunnar.
+	Navigate	Fer á vefslóð eða braut.
+	OuterHTML	Setur eða sækir hlutinn og innihald hennar í HTML.
+	Quit	Lokar á síðunni.
+	Refresh	Endurhleður síðuna núna birtist.
+	SelectedIndex	Setur eða sækir vísitölu valinn valkostur í a velja hlut.
+	Src	Leikmynd eða sækir vefslóð til að vera hlaðinn af hlutnum.
+	Stop	Stimplar bið siglingar eða sækja.
+	Submit	Leggur formið.
+	Type	Setur eða sækir efni gerð hlutarins.
+	Value	Fær eða setur verðmæti hlutarins.
+	Width	Setur eða sækir breidd hlutarins.
+		
+; 22. COM Objects Tips		
+	COM_CLSID_Index =	
+	Excel.Application	Vinnur Excel blöð.
+	HTMLfile	Hægt er að nota til að lesa, skrifa og samskipti við HTML.
+	InternetExplorer.Application	Skoða vefsíður.
+	MSXML2.DOMDocument.6.0	XML flokka.
+	MSXML2.XMLHTTP	Táknar XML beiðni með HTTP.
+	Outlook.Application	Vinnur Outlook verkefni og atriði.
+	PowerPoint.Application	Vinnur PowerPoint kynningar.
+	Schedule.Service	Tímaáætlun og breyta Windows Verkefni.
+	ScriptControl	Breytilega framkvæma VBScript eða JScript.
+	Scripting.Dictionary	Hlutur sem geymir gögn lykill, lið pör.
+	Scripting.FileSystemObject	Aðgangur skrár möppur
+	Shell.Application	Aðgangur Explorer IE glugga / flipa; opinn vinna gluggum.
+	Shell.Explorer	Embed Explorer / Browser stjórna í GUI (Internet Explorer - Trident vafranum).
+	SAPI.SpVoice	Texti-í-tal (TTS).
+	VBScript.RegExp	VBS Venjulegur Tjáning (þ.mt alþjóðlegt leik).
+	WMPlayer.OCX	Spila efnisskrár; Fella Wmplayer stjórn í GUI.
+	WinHttp.WinHttpRequest.5.1	Býður upp á einfalda HTTP viðskiptavinur virkni, leyfa miklu meiri stjórn en UrlDownloadToFile.
+	Winmgmt	Fá kerfi upplýsingar; Stjórna Windows þjónustu.
+	WScript.Shell	Ýmis verkefni Administration (margir innfæddur Ahk verkefni).
+	Word.Application	Vinnur Word skjölum.
+		
+; 23. AHK Commands Tips		
+	Ahk_Cmd_Index =	
+	Abs	Skilar algildi númer.
+	ACos	Skilar arkarkósínusi (númerið sem lét kósínusinn af er Number) í radíönum.
+	Array	Býr scriptable tengin array með heiltölu lykla.
+	Asc	Skilar stafkóði (a tala á milli 1 og 255 (í ANSI byggir) eða 65535 (í Unicode byggir)) fyrir fyrsta staf í streng.
+	ASin	Skilar arkarsínusi (númerið sem lét sínus er Number) í radíönum.
+	ATan	Gefur andhverfan (númerið sem lét snertill er Number) í radíönum.
+	BlockInput	Slekkur eða gerir getu notandans til að hafa samskipti við tölvuna í gegnum lyklaborð og mús.
+	Break	Hættir (því sagt) lykkju. Gildir inni hvers konar lykkju.
+	CDO	Sendir tölvupóst með því að nota notandi-útskýra reikning.
+	Ceil	Skilar námundar töluna upp að næstu heiltölu (án, 00 viðskeyti).
+	Chr	Skilar einn staf sem svarar til stafkóði kynna með númer.
+	Click	Smellir á mús hnappur á tilgreindum hnit. Það getur einnig halda niðri á hnappinn, snúa hjólinu, eða færa.
+	Clipboard	Deig texta úr klemmuspjald.
+	ClipWait	Bíður þangað til klemmuspjald inniheldur gögn.
+	ComObjActive	Sækir skráða COM mótmæla.
+	ComObjArray	Skapar SAFEARRAY til notkunar með COM.
+	ComObjConnect	Tengir atburði heimildir a COM mótmæla er að virka með tilteknu forskeyti.
+	ComObjCreate	Býr COM mótmæla.
+	ComObjEnwrap / ComObjUnwrap	Vafningar / unwraps COM hlut.
+	ComObjError	Kveikir eða slekkur tilkynning um COM villum.
+	ComObjFlags	Sækir eða breytir fánar sem stjórna hegðun COM umbúðir hlut í.
+	ComObjGet	Skilar tilvísun hlut hjá COM hluti.
+	ComObjMissing	Skapar "vantar breytu" hlut til að fara að COM aðferð.
+	ComObjParameter	Hula gildi og gerð til að standast sem viðfang COM aðferð.
+	ComObjQuery	Fyrirspurnir COM mótmæla fyrir tengi eða þjónustu.
+	ComObjType	Sækir slærð upplýsingar frá COM mótmæla.
+	ComObjValue	Sækir gildi eða bendillinn geymdar í COM umbúðir hlut.
+	Continue	Sleppa restina af núverandi lykkja endurtekning og byrjar nýjan. Gildir inni hvers konar lykkju.
+	Control	Gerir ýmsar breytingar á stjórn.
+	ControlClick	Sendir músarhnappnum eða mús hjól atburður að stjórn.
+	ControlEditPaste	Deig String á bendillinn / setja stöðu í Edit eftirlit (þetta hefur ekki áhrif á innihald klippispjaldsins).
+	ControlFocus	Setur inntak fókus á tilteknu stjórn á glugga.
+	ControlGet	Sækir ýmsar tegundir af upplýsingum um stjórn.
+	ControlGetFocus	Sækir sem stjórn markglugga hefur inntak fókus, ef einhver er.
+	ControlGetPos	Sækir um stöðu og stærð stjórn.
+	ControlGetText	Sækir texta úr böndunum.
+	ControlMove	Færir eða resizes á stjórn.
+	ControlSend / ControlSendRaw	Sendir endurprentanir mínútum til glugga eða stjórn.
+	ControlSetText	Breytingar á texta á stjórn.
+	CoordMode	Leikmynd samræma ham fyrir ýmsar skipanir að það sé miðað við annaðhvort virks glugga eða skjánum.
+	Cos	Skilar hornaföllum kósínus af Number.
+	Delete	Fjarlægir lykill-gildi par af hlut.
+	DllCall	Kallar virka inni DLL, eins og venjulegt Windows API virka.
+	Drive	Ejects / dregst bakkann á CD eða DVD drifinu eða setur merkimiða bindi ökuferð er.
+	DriveGet	Sækir ýmsar tegundir af upplýsingum um diskinn í tölvunni (s).
+	DriveSpaceFree	Sækir frjálsa pláss á diskinum, í megabætum.
+	Else	Tilgreinir skipunina (s) til að framkvæma ef IF-yfirlýsingu metur að FALSE. Þegar fleiri en einn stjórn er til staðar, láta þá í blokk (axlabönd).
+	EnvAdd	Setur breytu summu sjálfu auk uppgefin gildi (Einnig er hægt að bæta við eða draga tímann frá dagsetningu-tímavirði). Samheiti: Var + = Value.
+	EnvDiv	Setur breytu við sig, deilt með uppgefið gildi. Samheiti: Var / = gildi.
+	EnvGet	Sækir umhverfisbreyta.
+	EnvMult	Setur breytu að sjálfu sinnum í uppgefið gildi. Samheiti: Var * = gildi.
+	EnvSet	Skrifar breytu gildi sem er í umhverfinu.
+	EnvSub	Setur breytu að sjálfu mínus í uppgefið gildi (Einnig er hægt að bera dagsetning-tími gildi). Samheiti: Var - = Gildi.
+	EnvUpdate	Tilkynnir OS og öll keyrandi forrit sem umhverfisbreyta (s) hafa breyst.
+	ExitApp	Slítur handritið skilyrðislaust.
+	Exp	Skilaréttur e (sem er um það bil 2,71828182845905) hækkuð nth völd.
+	Expression	Framkvæma eitt eða fleiri aðgerðir á röð af breytum, bókstaflegri strengi og / eða bókstaflegri númer.
+	FileAppend	Skrifar texta til loka skrá (fyrst að búa skrána, ef þörf krefur).
+	FileCopy	Afrit eina eða fleiri skrár.
+	FileCopyDir	Afritar möppu ásamt öllum sínum undir-möppur og skrár (svipað XCopy).
+	FileCreateDir	Býr möppu.
+	FileCreateShortcut	Býr flýtileið (LNK) skrá.
+	FileDelete	Eyðir einn eða fleiri skrár.
+	FileGetAttrib	Skýrslur hvort skrá eða mappa er lesa-eini, falinn, o.fl.
+	FileGetShortcut	Sækir upplýsingar um smákaka (LNK) skrá, svo sem miða skrána sína.
+	FileGetSize	Sækir stærð skráar.
+	FileGetTime	Sækir DateTime stimpill skrá eða möppu.
+	FileGetVersion	Sækir um útgáfu af skrá.
+	FileMove	Færir eða nýtt nafn eina eða fleiri skrár.
+	FileMoveDir	Færir möppu ásamt öllum sínum undir-möppur og skrár. Það getur einnig endurnefna möppu.
+	FileOpen	Afla hlutbundin skrá I / O.
+	FileRead	Les innihald skráar inn breytu.
+	FileReadLine	Les tilgreinda línuna úr skrá og geymir texta í breytu.
+	FileRecycle	Sendir skrá eða möppu í ruslakörfuna, ef mögulegt er.
+	FileRecycleEmpty	Tæmir ruslafötuna.
+	FileRemoveDir	Eyðir möppu.
+	FileSelectFile	Birtir staðlað glugga sem leyfir notandanum að opna eða vista skrá (s).
+	FileSelectFolder	Birtir staðlað glugga sem leyfir notandanum að velja möppu.
+	FileSetAttrib	Breytir eiginleikum einni eða fleiri skrám eða möppum. Algildisstafir eru studd.
+	FileSetTime	Breytingar á DateTime stimpil á einum eða fleiri skrám eða möppum. Algildisstafir eru studd.
+	Floor	Skilar Fjöldi námundað að næstu heiltölu (án, 00 viðskeyti).
+	For	Endurtekur röð af skipunum einu sinni fyrir hvern lykil-gildi par í hlut.
+	Format	Snið breytilegan fjölda inntaksgilda samkvæmt sniði band.
+	FormatTime	Umbreytir YYYYMMDDHH24MISS timestamp í tilgreindum degi / tíma sniði.
+	Func	Sækir tilvísun í fall.
+	GetKeyName / GetKeyVK / GetKeySC	Sækir nafn eða texta, raunverulegur lykill merkjamál eða skanna kóða á takka.
+	GetKeyState	Athugar hvort hljómborð lykill eða mús / stýripinna hnappur er upp eða niður. Einnig sækir stýripinna stöðu.
+	Gosub	Stökk til tiltekins miðanum og heldur áfram framkvæmd uns aftur er komið.
+	Goto	Stökk til tiltekins miðanum og heldur áfram framkvæmd.
+	GroupActivate	Virkjar næsta glugga í glugga hóp sem var skilgreind með GroupAdd.
+	GroupAdd	Bætir glugga forskrift að glugga hóp, skapa hóp ef þörf krefur.
+	GroupClose	Lokar virkum glugga ef það var bara virkjuð með GroupActivate eða GroupDeactivate. Það virkjar þá næsta glugga í röð. Það getur einnig loka öllum gluggum í hóp.
+	GroupDeactivate	Líkur á GroupActivate nema virkjar næsta glugga ekki í hópnum.
+	HasKey	Skilar True ef Key tengist gildi.
+	If	Tilgreinir stjórn (s) til að framkvæma ef samanburður á breytu að verðmæti evalutes að sanna. Þegar fleiri en einn stjórn er til staðar, láta þá í blokk (axlabönd).
+	If (expression)	Tilgreinir skipunina (s) til að framkvæma ef tjáning metur að SATT.
+	If A_Index	Eftirlit ef núverandi lykkja endurtekning matchs tiltekinn fjölda.
+	If Clipboard	Eftirlit ef Klemmuspjald textinn er matchs tiltekinn streng.
+	If ErrorLevel	Athugar ef tilgreindur mynd eða pixla fannst í skjáinn.
+	If var [not] between	Athugar hvort innihald breytilegum eru tölulega eða í stafrófsröð milli tveggja gilda (innifalið).
+	If var [not] in / If var [not] contains MatchList	Athugar hvort innihald breytilegum samsvara eitt af þeim atriðum í listanum.
+	If var is [not] type	Athugar hvort innihald breytilegum eru tölustafir, hástafir, o.fl.
+	IfEqual / IfNotEqual	Samanburð breytu til gildi fyrir jafnrétti. Samheiti: ef Var = gildi | ef Var <> Gildi.
+	IfExist / IfNotExist / FileExist	Stöðva fyrir tilvist skrá eða möppu.
+	IfGreater / IfGreaterOrEqual	Samanburð breytu til gildis. Samheiti: ef Var> Gildi | ef Var> = Gildi.
+	IfInString / IfNotInString	Athugar hvort breyta inniheldur tilgreint band.
+	IfLess / IfLessOrEqual	Samanburð breytu til gildis. Samheiti: ef Var <Value | ef Var <= gildi.
+	IfMsgBox	Eftirlit hver hnappur var ýtt af notanda á nýjustu MsgBox stjórn.
+	IfWinActive / IfWinNotActive	Eftirlit ef tilgreint gluggi er til og er nú virkur (fremst).
+	IfWinExist / IfWinNotExist	Athugar ef tilgreindur glugga til staðar.
+	ImageSearch	Leitar svæði á skjánum fyrir mynd.
+	IniDelete	Eyðir gildi frá venjulegu sniði .ini skrá.
+	IniRead	Les gildi frá venjulegu sniði .ini skrá.
+	IniWrite	Skrifar gildi til staðlaða sniði .ini skrá.
+	Input	Bíður fyrir notandann til að slá band (ekki studd í Windows 9x, það gerir ekki neitt).
+	InputBox	Birtir innfærslureitur að spyrja notandann að slá inn streng.
+	InsertAt	Setur eitt eða fleiri gildi við ákveðna stöðu innan línulega array.
+	InStr	Leitar að tiltekið tilvik af streng, frá vinstri eða hægri.
+	KeyWait	Bíður lykli eða mús / stýripinna hnappinn til að gefa út eða ýtt niður.
+	Label	A miðanum bent á línu af kóða, og er hægt að nota sem Goto miða eða til að mynda subroutine.
+	Length	Skilar lengd línulega array hefst á stöðu 1.
+	ListVars	Birtir breytur handritið er: nöfn þeirra og núverandi innihald.
+	Ln	Skilar náttúrulegum logra (stöð e) af Number.
+	LoadPicture	Hleðst mynd úr skrá og skilar punktamynd eða táknið höndla.
+	Log	Skilar logra (stöð 10) Number.
+	Loop (files & folders)	Sækir tilgreind skrár eða möppur, eitt í einu.
+	Loop (normal)	Framkvæma röð af skipunum ítrekað: annaðhvort tiltekinn fjöldi af sinnum eða þangað brot er komið.
+	Loop (parse a string)	Sækir hlutstrengi (reiti) frá streng, einn í einu.
+	Loop (read file contents)	Sækir línurnar í textaskrá, einn í einu (virkar betur en FileReadLine).
+	Loop (registry)	Sækir innihald tilgreinda skrásetning subkey, eitt atriði í einu.
+	MaxIndex	Skilar hæsta heiltölu takkann.
+	MinIndex	Skilar lægsta heiltölu takkann.
+	Mod	Modulo. Skilar afgangurinn þegar arður er deilt með divisor.
+	MouseGetPos	Sækir núverandi stöðu músarbendilinn og mögulega sem glugga og stjórna það er sveima yfir.
+	MsgBox	Sýnir tilgreinda texta í litlum glugga sem inniheldur eitt eða fleiri hnappa (td já og nei).
+	NumGet	Skilar tvöfaldur fjöldi geymdar á tilgreindu heimilisfangi + offsetprentun.
+	NumPut	Verslanir Fjöldi í tvöfaldur formi á tilgreindu heimilisfangi + móti og skilar tölu á hægri atriði bara skrifað.
+	Object	Býr scriptable tengin array.
+	Ord	Skilar ordinal gildi (tölustafir eðli code) af fyrsta staf í streng.
+	OutputDebug	Sendir streng til aflúsara (ef einhver er) fyrir skjáinn.
+	Parameter	Bætir breytu til fallsins.
+	Pause	Þagnar núverandi þráð handritið er.
+	PixelGetColor	Sækir lit punktsins á tilgreindu x, hnit y.
+	PixelSearch	Leitar svæði á skjánum í pixla tilgreinda litinn.
+	Pop	Fjarlægir og skilar síðasta array þáttur.
+	PostMessage	Leggur skilaboð í skilaboðunum biðröð glugga eða stjórn.
+	Process	Framkvæma eina af eftirfarandi aðgerðum á ferli: tékka hvort það er til staðar; breytingar forgang hennar; lokar það; bíður eftir að loka.
+	Progress	Býr eða uppfæri glugga sem inniheldur framvindustika.
+	Push	Auka við gildi til loka fylki.
+	Random	Býr gervi-handahófi númer.
+	RegDelete	Eyðir subkey eða gildi frá the skrásetning.
+	RegExMatch	Ákvarðar hvort strengurinn inniheldur munstur (reglulega segð).
+	RegExReplace	Í stað tilfelli af mynstri (reglulegri segð) inni streng.
+	RegRead	Les gildi frá the skrásetning.
+	RegWrite	Skrifar gildi til the skrásetning.
+	RemoveAt	Fjarlægir atriði úr tilteknu stöðu í línulegum fylki.
+	Return	Skilar frá subroutine sem framkvæmd hafði áður stokkið um virka-kalla, Gosub, hotkey virkjun, GroupActivate, eða með öðrum hætti.
+	Round	Ef N er sleppt eða 0 Fjöldi er námundað að næstu heilu tölu. Ef N er jákvæð tala, Number er námundað að N aukastöfum. Ef N er neikvæð, Number námundað með N Tölunum vinstra megin við kommu.
+	Run	Rekur utanaðkomandi forrit.
+	RunAs	Skilgreinir sett af notanda persónuskilríki til að nota fyrir allar síðari notkun Run og RunWait. Krefst Windows 2000 / XP eða nýrri.
+	RunWait	Rekur utanaðkomandi forrit og bíður þangað til það lýkur.
+	Send / SendRaw	Sendir endurprentanir mínútum og mús smelli til virks glugga.
+	SendLevel	Controls sem gervi lyklaborð og mús viðburðir eru hunsuð af hotkeys og hotstrings.
+	SendMessage	Sendir skilaboð til glugga eða stjórn og bíður eftir staðfestingu.
+	SetCapslockState	Setur ástand CapsLock takkanum. Einnig er hægt að þvinga lykilinn til að vera á eða burt.
+	SetKeyDelay	Setur töf sem mun eiga sér stað eftir hverja ásláttur sendi Senda eða ControlSend.
+	SetNumlockState	Setur ástand NumLock takkann. Einnig er hægt að þvinga lykilinn til að vera á eða burt.
+	SetRegView	Leyfir skrásetning skipanir í 32-bita handrit að opna 64-bita skrásetning sýn og öfugt.
+	SetScrollLockState	Setur ástand ScrollLock takkann. Einnig er hægt að þvinga lykilinn til að vera á eða burt.
+	SetTimer	Veldur subroutine að vera hleypt af stokkunum sjálfkrafa og ítrekað á tilgreindum tíma millibili.
+	Shutdown	Slekkur á sér, ræsa á ný, eða logs af kerfinu.
+	Sin	Skilar hornaföllum sínus af Number.
+	Sleep	Bíður tilgreint magn af tíma áður áfram.
+	Sort	Raðar innihald breytu í stafrófsröð, tölulegar, eða af handahófi (valfrjálst fjarlægi afrit).
+	SoundBeep	Gefur frá sér tón af PC hátalara.
+	SoundGet	Sækir ýmsar stillingar frá traustum tæki (Master mállaus, herra bindi, osfrv)
+	SoundGetWaveVolume	Sækir öldu framleiðsla bindi frá hljóð tæki.
+	SoundPlay	Spilar hljóð, myndskeið eða annað studda skráartegund.
+	SoundSet	Breytingar ýmsar stillingar á hljóð tæki (húsbóndi mállaus, skipstjóri bindi, o.fl.)
+	SoundSetWaveVolume	Breytingar á öldu framleiðsla bindi fyrir hljóð tæki.
+	SplashImage	Býr eða uppfæri glugga inniheldur JPG, GIF eða BMP mynd.
+	SplashTextOff	Lokar ofan gluggann.
+	SplashTextOn	Býr sérhannaðar texta glugga.
+	SplitPath	Skilur skráarheiti eða vefslóð í sínu nafni, skrá, eftirnafn, og drif.
+	Sqrt	Skilar ferningsrót af Number.
+	StatusBarGetText	Sækir texta úr venjulegu stöðulínunna stjórn.
+	StatusBarWait	Bíður þangað stöðustikan glugga inniheldur tilgreint band.
+	StringGetPos	Sækir um stöðu tiltekins hlutstreng innan streng.
+	StringLeft	Sækir fjölda stafa frá vinstri-hönd hlið af streng.
+	StringLen / StrLen	Sækir telja hversu margir stafir eru í streng.
+	StringLower	Breytir streng í lágstafi.
+	StringMid / SubStr	Sækir einn eða fleiri stafi frá tilteknum stað í streng.
+	StringReplace / StrReplace	Kemur tilgreinda hlutstreng með nýjum streng.
+	StringRight	Sækir fjölda stafi frá hægri hlið streng.
+	StringSplit / StrSplit	Skilur band í fjölda hlutstrengi nota tilgreind delimiters.
+	StringTrimLeft	Fjarlægir fjölda stafi frá vinstri-hönd hlið af streng.
+	StringTrimRight	Fjarlægir fjölda af stöfum úr hægra megin á streng.
+	StringUpper	Breytir streng í hástafi.
+	StrPut / StrGet	Afrit streng til eða frá minni heimilisfang, valfrjáls breyta henni á milli kóða síður.
+	SysGet	Sækir skjáupplausn, multi-skjár upplýsingar, stærð kerfisins hlutum, og önnur kerfi eiginleika.
+	Tan	Skilar hornaföllum tangens af Number.
+	ToolTip	Skapar alltaf-á-toppur glugga hvar sem er á skjánum.
+	Transform	Framkvæma ýmis stærðfræði virka, Bita aðgerðir og verkefni svo sem ASCII / Unicode ummyndun.
+	TrayTip	Býr blaðra skilaboð gluggi nálægt bakki helgimynd. Krefst Windows 2000 / XP eða nýrri.
+	Trim / LTrim / RTrim	Rými ákveðnar persónur frá upphafi og / eða lok streng.
+	Until	Gildir skilyrði til áframhaldandi lykkju eða For-lykkju.
+	UrlDownloadToFile	Niðurhal á skrá frá internetinu.
+	UserFunction	Býr Virka uppbyggingu.
+	Variable	Úthlutar tilgreint breytu gildi.
+	While	Framkvæma röð af skipunum endurtekið þar til tilgreindur tjáning metur að rangar.
+	WinActivate	Virkjar tilgreinda glugga (gerir það fremst).
+	WinActivateBottom	Sama og WinActivate nema að það virkjar bottommost (amk nýlega virkt) passar glugga frekar en hæstur.
+	WinActive	Skilar Unique ID (HWND) af virks glugga ef það passar tilgreind skilyrði.
+	WinClose	Lokar tilgreinda glugga.
+	WinExist	Athugar ef tilgreindur glugga til staðar.
+	WinGet	Sækir auðkennið tiltekna glugga er, ferli ID, aðferð nafn, eða lista yfir stjórnar hennar. Það getur einnig sótt lista yfir alla gluggana samsvarandi tilgreind skilyrði.
+	WinGetClass	Sækir bekknum nafn tiltekins gluggans.
+	WinGetPos	Sækir um stöðu og stærð tiltekna glugga.
+	WinGetText	Sækir texta frá skilgreindum glugganum.
+	WinGetTitle	Sækir titil tiltekna glugga.
+	WinHide	Felur tilgreinda glugga.
+	WinHttpDownloadToFile	Downloads eitt eða fleiri skrár af internetinu.
+	WinKill	Þvingar tilgreint glugga til að loka.
+	WinMaximize	Stækkar tilgreinda glugga til hámarks stærð þess.
+	WinMenuSelectItem	Skírskotar matseðill atriði frá the matseðill bar á tiltekna glugga.
+	WinMinimize	Hrynur tilgreinda glugga í hnapp á verkefni bar.
+	WinMinimizeAll	Lágmarkar alla glugga.
+	WinMinimizeAllUndo	Snýr áhrif fyrri WinMinimizeAll.
+	WinMove	Breytingar á stöðu og / eða stærð tiltekins glugga.
+	WinRestore	Unminimizes eða unmaximizes tiltekna glugga ef það er haldið í lágmarki eða hámarki.
+	WinSet	Gerir ýmsar breytingar tiltekna glugga, svo sem "alltaf á toppinn" og gagnsæi.
+	WinSetTitle	Breytingar titilinn tiltekna glugga.
+	WinShow	Unhides tilgreinda glugga.
+	WinWait	Bíður þar til tilgreindur glugga til staðar.
+	WinWaitActive	Bíður þar til tilgreindur gluggi er virkur.
+	WinWaitClose	Bíður þar til tilgreindur glugginn er ekki til.
+	WinWaitNotActive	Bíður þar til tilgreindur gluggi er ekki virkur.
+	Zip / UnZip	Þjappa eða uncompress eina eða fleiri zip skrár.
+	WinExist	Athugar ef tilgreindur glugga til staðar.
+	WinGet	Sækir auðkennið tiltekna glugga er, ferli ID, aðferð nafn, eða lista yfir stjórnar hennar. Það getur einnig sótt lista yfir alla gluggana samsvarandi tilgreind skilyrði.
+	WinGetClass	Sækir bekknum nafn tiltekins gluggans.
+	WinGetPos	Sækir um stöðu og stærð tiltekna glugga.
+	WinGetText	Sækir texta frá skilgreindum glugganum.
+	WinGetTitle	Sækir titil tiltekna glugga.
+	WinHide	Felur tilgreinda glugga.
+	WinHttpDownloadToFile	Downloads eitt eða fleiri skrár af internetinu.
+	WinKill	Þvingar tilgreint glugga til að loka.
+	WinMaximize	Stækkar tilgreinda glugga til hámarks stærð þess.
+	WinMenuSelectItem	Skírskotar matseðill atriði frá the matseðill bar á tiltekna glugga.
+	WinMinimize	Hrynur tilgreinda glugga í hnapp á verkefni bar.
+	WinMinimizeAll	Lágmarkar alla glugga.
+	WinMinimizeAllUndo	Snýr áhrif fyrri WinMinimizeAll.
+	WinMove	Breytingar á stöðu og / eða stærð tiltekins glugga.
+	WinRestore	Unminimizes eða unmaximizes tiltekna glugga ef það er haldið í lágmarki eða hámarki.
+	WinSet	Gerir ýmsar breytingar tiltekna glugga, svo sem "alltaf á toppinn" og gagnsæi.
+	WinSetTitle	Breytingar titilinn tiltekna glugga.
+	WinShow	Unhides tilgreinda glugga.
+	WinWait	Bíður þar til tilgreindur glugga til staðar.
+	WinWaitActive	Bíður þar til tilgreindur gluggi er virkur.
+	WinWaitClose	Bíður þar til tilgreindur glugginn er ekki til.
+	WinWaitNotActive	Bíður þar til tilgreindur gluggi er ekki virkur.
+	Zip / UnZip	Þjappa eða uncompress eina eða fleiri zip skrár.

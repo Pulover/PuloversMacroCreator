@@ -1,0 +1,1443 @@
+﻿Lang_lt
+		
+		; Lithuanian
+		
+; 01. Main Menu		
+	m_Lang001 =	&Byla
+	m_Lang002 =	&Makro
+	m_Lang003 =	&Komandos
+	m_Lang004 =	&Funkcija
+	m_Lang005 =	&Redaguoti
+	m_Lang006 =	&Pasirinkti
+	m_Lang007 =	&Vaizdas
+	m_Lang008 =	&Nustatymai
+	m_Lang009 =	P&aaukok
+	m_Lang010 =	Pa&dėti
+		
+; 02. File Sub Menu		
+	f_Lang001 =	&Naujas
+	f_Lang002 =	&Atviras
+	f_Lang003 =	&Sutaupyti
+	f_Lang004 =	&Išsaugoti kaip
+	f_Lang005 =	Na&ujausi failai
+	f_Lang006 =	&Eksportas į AHK
+	f_Lang007 =	&Peržiūrėti scenarijus
+	f_Lang008 =	&Redaguoti scenarijus
+	f_Lang009 =	&Tvarkaraštis Makrokomandos
+	f_Lang010 =	S&ąrašas Kintamieji
+	f_Lang011 =	I&šeiti
+	f_Lang012 =	N&ėra failų
+		
+; 03. Macro Sub Menu		
+	r_Lang001 =	&Įrašų Makro
+	r_Lang002 =	&Aktyvuok makrokomandas
+	r_Lang003 =	&Žaisti Aktualus Macro
+	r_Lang004 =	&Laikrodis
+	r_Lang005 =	&Išjungti makrokomandas
+	r_Lang006 =	Žai&sti iš pasirinktos eilutės
+	r_Lang007 =	Žais&ti iki pasirinktos eilutės
+	r_Lang008 =	Žaisti &pasirinktas eilutes
+	r_Lang009 =	&Konteksto Spartieji klavišai
+	r_Lang010 =	P&ridėti Makro
+	r_Lang011 =	&Uždaryti Makro
+	r_Lang012 =	&Dubliuoti Makro
+	r_Lang013 =	R&edaguoti Makrokomandos
+	r_Lang014 =	I&mportas Makro
+	r_Lang015 =	I&šsaugoti Aktualus Macro
+		
+; 04. Function Sub Menu		
+	u_Lang001 =	&Sukurti funkcija
+	u_Lang002 =	&Pridėti Parametras
+	u_Lang003 =	P&ridėti Grįžti
+	u_Lang004 =	&Konvertuoti Makro veikti
+		
+; 05. Commands Sub Menu		
+	i_Lang001 =	&Pelė
+	i_Lang002 =	&Tekstas
+	i_Lang003 =	&Kontrolė
+	i_Lang004 =	P&auzė
+	i_Lang005 =	P&ranešimo dėžutė
+	i_Lang006 =	Pa&grindiniai Palaukite
+	i_Lang007 =	&Langas
+	i_Lang008 =	&Vaizdo / pikselių Paieška
+	i_Lang009 =	V&ykdyti / Failų / Styginių / Įvairūs.
+	i_Lang010 =	K&ilpa
+	i_Lang011 =	&Eiti į / Label
+	i_Lang012 =	&Nustatyti laikmatį
+	i_Lang013 =	&Jei atskaitomybės
+	i_Lang014 =	Kinta&mieji / matricos
+	i_Lang015 =	&Funkcijos / Array būdai
+	i_Lang016 =	&Siųsti laišką
+	i_Lang017 =	Parsisi&ųsti failai
+	i_Lang018 =	&Zip / unzip failai
+	i_Lang019 =	Internet E&xplorer
+	i_Lang020 =	I&šraiška / COM sąsaja
+	i_Lang021 =	&Windows Žinutės
+	i_Lang022 =	Rasti k&omandą
+		
+; 06. Edit Sub Menu		
+	e_Lang001 =	&Dublikatas
+	e_Lang002 =	&Redaguoti komentarą
+	e_Lang003 =	R&asti / pakeisti
+	e_Lang004 =	&Kopijuoti į ...
+	e_Lang005 =	A&nuliuoti
+	e_Lang006 =	R&edo
+	e_Lang007 =	&Supjaustyti
+	e_Lang008 =	K&opija
+	e_Lang009 =	&Pasta
+	e_Lang010 =	Pana&ikinti
+	e_Lang011 =	Perke&lti
+	e_Lang012 =	&Judėk žemyn
+	e_Lang013 =	&Įdėkite nuo dėžutėje
+	e_Lang014 =	Įd&ėkite Klaviatūros
+	e_Lang015 =	Reda&guoti Spalva Pažymėti
+	e_Lang016 =	Gr&upės
+	e_Lang017 =	Įjung&ti grupes
+	e_Lang018 =	Sukurti grup&ę
+	e_Lang019 =	Pa&šalinti grupę
+	e_Lang020 =	Pašalinti &visas grupes
+	e_Lang021 =	Sutraukti visk&ą
+	e_Lang022 =	&Išskleisti viską
+		
+; 07. Select Sub Menu		
+	s_Lang001 =	&Pasirinkti viską
+	s_Lang002 =	P&asirinkite Nėra
+	s_Lang003 =	&Žymėti
+	s_Lang004 =	Pa&tikrinkite Pasirinkti
+	s_Lang005 =	&Nuimkite Pasirinkti
+	s_Lang006 =	Ap&verskite Patikrinimai
+	s_Lang007 =	P&erkelti atrankos Up
+	s_Lang008 =	Pe&rkelti atrankos Down
+	s_Lang009 =	Pa&sirinkti tipas
+	s_Lang010 =	&Komandų tipas
+		
+; 08. View Sub Menu		
+	v_Lang001 =	&Visada viršuje
+	v_Lang002 =	&Paryškinti eilutės
+	v_Lang003 =	&Įdubimas
+	v_Lang004 =	&Kontrolė "įrankių juosta
+	v_Lang005 =	P&eržiūrėti
+	v_Lang006 =	Į&rankių juostos
+	v_Lang007 =	K&lavišai
+	v_Lang008 =	P&aieška Baras
+	v_Lang009 =	A&tstatyti stulpelių dydį
+	v_Lang010 =	P&iktogramos dydis
+	v_Lang011 =	At&statyti išdėstymą
+	v_Lang012 =	&Byla
+	v_Lang013 =	Įra&šų Groti
+	v_Lang014 =	K&omandos
+	v_Lang015 =	Re&daguoti
+	v_Lang016 =	&Nustatymai
+	v_Lang017 =	&Tinkinti
+	v_Lang018 =	A&utomatinis
+	v_Lang019 =	&Vadovas
+	v_Lang020 =	&Stop
+	v_Lang021 =	Pau&zė
+	v_Lang022 =	&Kompaktiška
+	v_Lang023 =	&Geriausiai Tinkantis
+	v_Lang024 =	&Numatytasis
+	v_Lang025 =	Ma&žas
+	v_Lang026 =	&Didelis
+		
+; 09. Options Sub Menu		
+	o_Lang001 =	&Nustatymai
+	o_Lang002 =	&Sumažinti, kad dėklas
+	o_Lang003 =	&Display kontrolės įrankių juosta
+	o_Lang004 =	&Fiksavimo mygtuką presai Šiame lange
+	o_Lang005 =	S&partieji klavišai visada aktyvus,
+	o_Lang006 =	&Išjungimo galimybės (Kai atkūrimas baigia ...)
+	o_Lang007 =	&Konteksto Spartieji klavišai
+	o_Lang008 =	&Įdėti Windows raktą į "Play" klavišas
+	o_Lang009 =	N&audokite kreiptuką mygtuką, kaip klavišas
+	o_Lang010 =	N&ustatyti kaip numatytąją Hotkeys
+	o_Lang011 =	Nus&tatyti kaip numatytąjį failo
+	o_Lang012 =	Pa&šalinti Default File
+	o_Lang013 =	Nu&matytasis Spartieji klavišai
+	o_Lang014 =	Numat&ytieji nustatymai
+		
+; 10. Donate Sub Menu		
+	p_Lang001 =	&PayPal Donorystė
+		
+; 11. Help Sub Menu		
+	h_Lang001 =	&Padėti
+	h_Lang002 =	P&amokos
+	h_Lang003 =	Pa&tarimai
+	h_Lang004 =	&Makro Kūrėjas Pagrindinis
+	h_Lang005 =	&Forumas
+	h_Lang006 =	A&HK Prisijungę Dokumentacija
+	h_Lang007 =	T&ikrinti, ar yra atnaujinimų...
+	h_Lang008 =	Pati&krinkite paleidžiant
+	h_Lang009 =	Api&e
+		
+; 12. Tray Menu		
+	y_Lang001 =	Slėpti langą
+	y_Lang002 =	Rodyti Langų
+	y_Lang003 =	Kontrolė "įrankių juosta
+		
+; 13. Built-in Vars Menu		
+	b_Lang001 =	Specialūs simboliai
+	b_Lang002 =	Skelbimų
+	b_Lang003 =	Data ir laikas
+	b_Lang004 =	Vartotojas prastovą
+	b_Lang005 =	Sistema ir Vartotojas
+	b_Lang006 =	Įvairūs.
+	b_Lang007 =	Kilpa
+		
+; 14. Main Window		
+	w_Lang001 =	Eksportas
+	w_Lang002 =	Peržiūrėti
+	w_Lang003 =	Nustatymai
+	w_Lang004 =	Įrašas
+	w_Lang005 =	Groti
+	w_Lang006 =	Atkūrimas
+	w_Lang007 =	Vadovas
+	w_Lang008 =	Stop
+	w_Lang009 =	Display kontrolės įrankių juosta
+	w_Lang010 =	Pauzė
+	w_Lang011 =	Kilpa
+	w_Lang012 =	Fiksavimo mygtuką presai Šiame lange
+	w_Lang013 =	Sumažinti, kad dėklas
+	w_Lang014 =	Spartieji klavišai visada aktyvus,
+	w_Lang015 =	Pakartoti
+	w_Lang016 =	Vėlavimas (MS)
+	w_Lang017 =	Taikyti
+	w_Lang018 =	Įdėkite
+	w_Lang019 =	Redaguoti
+	w_Lang020 =	Išjungimo galimybės (Kai atkūrimas baigia ...)
+	w_Lang021 =	Nieko nedaryk
+	w_Lang022 =	Uždaryti taikymas
+	w_Lang023 =	Išjungti
+	w_Lang024 =	Shutdown (jėga)
+	w_Lang025 =	Perkraukite
+	w_Lang026 =	Atsijungti
+	w_Lang027 =	Žiemoti
+	w_Lang028 =	Sustabdyti
+	w_Lang029 =	Užrakinti kompiuteris
+	w_Lang030 =	Rodyklė
+	w_Lang031 =	Veiksmas
+	w_Lang032 =	Detalės
+	w_Lang033 =	Pakartoti
+	w_Lang034 =	Delsimas
+	w_Lang035 =	Tipas
+	w_Lang036 =	Kontrolė
+	w_Lang037 =	Langas
+	w_Lang038 =	Komentaras
+	w_Lang039 =	Spalva
+	w_Lang040 =	Naujas (Ctrl + N)
+	w_Lang041 =	Atviras (Ctrl + O)
+	w_Lang042 =	Išsaugoti (Ctrl + S)
+	w_Lang043 =	Įrašyti kaip (Ctrl + Shift + P)
+	w_Lang044 =	Eksportas į AHK (Ctrl + E)
+	w_Lang045 =	Peržiūrėti scenarijus (Ctrl + P)
+	w_Lang046 =	Nustatymai (Ctrl + G)
+	w_Lang047 =	Įrašų Makro (Ctrl + R)
+	w_Lang048 =	Aktyvuok Makrokomandos (Ctrl + Enter)
+	w_Lang049 =	Žaisti Dabartinis Macro (Ctrl + Shift + Enter)
+	w_Lang050 =	Laikmatis (Ctrl + Shift + T)
+	w_Lang051 =	Pelės (F2)
+	w_Lang052 =	Tekstas (F3)
+	w_Lang053 =	Redaguoti Makrokomandos (Ctrl + Shift + M)
+	w_Lang054 =	Kontrolė (F4)
+	w_Lang055 =	Pauzė (F5)
+	w_Lang056 =	Pranešimo dėžutė (Shift + F5)
+	w_Lang057 =	Pagrindiniai Palaukite (Ctrl + F5)
+	w_Lang058 =	Langas (F6)
+	w_Lang059 =	Vaizdo / pikselių Paieška (F7)
+	w_Lang060 =	Vykdyti / Failų / Styginių / Įvairūs. (F8)
+	w_Lang061 =	Ciklas (F9)
+	w_Lang062 =	Eiti į / Label (Shift + F9)
+	w_Lang063 =	Nustatyti laikmačio (Ctrl + F9)
+	w_Lang064 =	If (F10)
+	w_Lang065 =	Kintamieji / matricos (Shift + F10)
+	w_Lang066 =	Funkcijos / Array metodai (Ctrl + F10)
+	w_Lang067 =	Siųsti paštu (F11)
+	w_Lang068 =	Parsisiųsti failus (Shift + F11)
+	w_Lang069 =	Zip / unzip failai (Ctrl + F11,)
+	w_Lang070 =	Internet Explorer (F12)
+	w_Lang071 =	Išraiška / COM sąsaja (Shift F12)
+	w_Lang072 =	Windows Žinutės (Ctrl + F12)
+	w_Lang073 =	Pridėti Macro (Ctrl + T)
+	w_Lang074 =	Uždaryti Makro (Ctrl + W)
+	w_Lang075 =	Duplicate Macro (Ctrl + Shift + D)
+	w_Lang076 =	Importas Makro (Ctrl + I)
+	w_Lang077 =	Išsaugoti Aktualus Macro (Ctrl + Alt + P)
+	w_Lang078 =	Aukštyn (Ctrl + PageUp)
+	w_Lang079 =	Žemyn (Ctrl + PageDown)
+	w_Lang080 =	Duplicate pasirinktas eilutes (Ctrl + D)
+	w_Lang081 =	Skintos pasirinktas eilutes (Ctrl + X)
+	w_Lang082 =	Kopijuoti pasirinktus Eilutės (Ctrl + C)
+	w_Lang083 =	Įklijuoti Nukopijuota Eilutės (Ctrl + V)
+	w_Lang084 =	Ištrinti pasirinktas eilutes (Del)
+	w_Lang085 =	Undo (Ctrl + Z)
+	w_Lang086 =	Redo (Ctrl + Y)
+	w_Lang087 =	Kopijuoti į ...
+	w_Lang088 =	Rasti / pakeisti (Ctrl + F)
+	w_Lang089 =	Įterpti / redaguoti komentaro (Ctrl + L)
+	w_Lang090 =	Redaguoti Spalva Pažymėti (Ctrl + M)
+	w_Lang091 =	Tinkinti
+	w_Lang092 =	Rasti komandą (Ctrl + Shift + F)
+	w_Lang093 =	Redaguoti (Įveskite)
+	w_Lang094 =	Paslėpti
+	w_Lang095 =	Perkelti čia
+	w_Lang096 =	Kopijuoti čia
+	w_Lang097 =	Grupės
+	w_Lang098 =	Įjungti grupes (Ctrl + Shift + G)
+	w_Lang099 =	Pridėti grupę (CTRL + SHIFT + Y)
+	w_Lang100 =	Pašalinti grupės (Ctrl + Shift + R)
+	w_Lang101 =	Pašalinti visas grupes
+	w_Lang102 =	Redaguoti grupės
+	w_Lang103 =	Grupės pavadinimas
+	w_Lang104 =	Sukurti funkcija (Ctrl + Shift + U)
+	w_Lang105 =	Pridėti parametras (Ctrl + Shift + P)
+	w_Lang106 =	Pridėti RETURN (Ctrl + Shift + N)
+	w_Lang107 =	Konvertuoti Macro funkcija (Ctrl + Shift + C)
+	w_Lang108 =	Komentaras iš Nepažymėjus eilučių
+	w_Lang109 =	Įdėti Windows raktą į "Play" klavišas
+	w_Lang110 =	Naudokite kreiptuką mygtuką, kaip klavišas
+	w_Lang111 =	Paieška ... (Paspauskite klavišą Enter eiti)
+		
+; 15. Command Windows		
+	c_Lang001 =	Pelė
+	c_Lang002 =	Tekstas
+	c_Lang003 =	Pauzė
+	c_Lang004 =	Kontrolė
+	c_Lang005 =	Langas
+	c_Lang006 =	Vaizdų paieška
+	c_Lang007 =	Pikselių Paieška
+	c_Lang008 =	Vykdyti / Failų / Styginių / Įvairūs.
+	c_Lang009 =	Jei atskaitomybės
+	c_Lang010 =	Kintamieji
+	c_Lang011 =	Funkcijos / Array būdai
+	c_Lang012 =	Internet Explorer
+	c_Lang013 =	Išraiška / COM sąsaja
+	c_Lang014 =	Pasirinkite taikymas (Advanced)
+	c_Lang015 =	Žinutė
+	c_Lang016 =	Kontrolė
+	c_Lang017 =	Delsimas
+	c_Lang018 =	Milisekundėmis
+	c_Lang019 =	Sekundžių
+	c_Lang020 =	Gerai
+	c_Lang021 =	Atšaukti
+	c_Lang022 =	Uždaryti
+	c_Lang023 =	Kopija
+	c_Lang024 =	Panaikinti
+	c_Lang025 =	Naudoti% kintamųjų aminus, pvz .:% Mainų%
+	c_Lang026 =	Veiksmas
+	c_Lang027 =	Spauskite
+	c_Lang028 =	Žingsnis
+	c_Lang029 =	Perkelti ir spustelėkite
+	c_Lang030 =	Ratų Iki
+	c_Lang031 =	Ratų žemyn
+	c_Lang032 =	Tempti ir paleisti
+	c_Lang033 =	Koordinatės
+	c_Lang034 =	Paieška
+	c_Lang035 =	Subcommand
+	c_Lang036 =	Santykinis
+	c_Lang037 =	Mygtukas
+	c_Lang038 =	Į kairę
+	c_Lang039 =	Teisė
+	c_Lang040 =	Vidurys
+	c_Lang041 =	X1
+	c_Lang042 =	X2
+	c_Lang043 =	Laikykite / Leidiniai
+	c_Lang044 =	Spauskite Grafas
+	c_Lang045 =	Paprastas tekstas (RAW)
+	c_Lang046 =	Tekstas komandas
+	c_Lang047 =	Įklijuoti iš mainų srities
+	c_Lang048 =	Pasta kontrolės
+	c_Lang049 =	Nustatyti tekstas
+	c_Lang050 =	Pridėti Pauzė
+	c_Lang051 =	Pranešimo dėžutė
+	c_Lang052 =	Palaukite raktą
+	c_Lang053 =	Palaukite timeout
+	c_Lang054 =	(milisekundėmis) 0 = begalinis
+	c_Lang055 =	Komanda
+	c_Lang056 =	Vertė
+	c_Lang057 =	Išėjimo kintamojo
+	c_Lang058 =	Pozicija
+	c_Lang059 =	Dydis
+	c_Lang060 =	4 kintamieji bus sukurtas su šio prefikso ir baigiant X, Y, W, H.
+	c_Lang061 =	Pradžia
+	c_Lang062 =	Galas
+	c_Lang063 =	Vaizdas
+	c_Lang064 =	Pikselių
+	c_Lang065 =	Padaryti Screenshot
+	c_Lang066 =	Pagrindiniai Palaukite
+	c_Lang067 =	Jei rasti
+	c_Lang068 =	Jei neradote / Klaidos
+	c_Lang069 =	Išvesties kintamųjų
+	c_Lang070 =	Koord
+	c_Lang071 =	Variacijos
+	c_Lang072 =	Peržiūrėti
+	c_Lang073 =	Kilpa
+	c_Lang074 =	Automatiškai sukurti COM objektą
+	c_Lang075 =	Pertrauka
+	c_Lang076 =	Tęsti
+	c_Lang077 =	Eiti į
+	c_Lang078 =	Eiti į Etiketė
+	c_Lang079 =	Etiketė
+	c_Lang080 =	Pridėti etiketę
+	c_Lang081 =	String (InputVar)
+	c_Lang082 =	Kintamas
+	c_Lang083 =	Kitas
+	c_Lang084 =	Susieti Kintamas
+	c_Lang085 =	Turinys
+	c_Lang086 =	Operatorius
+	c_Lang087 =	Išraiška
+	c_Lang088 =	Atstatyti
+	c_Lang089 =	Funkcijos pavadinimas
+	c_Lang090 =	Atskirti kableliais parametrus (be skliaustuose)
+	c_Lang091 =	Naudokite išraiškos formatas
+	c_Lang092 =	Puslapis Elementas / index
+	c_Lang093 =	Nustatyti
+	c_Lang094 =	Gauti
+	c_Lang095 =	Metodas
+	c_Lang096 =	Nuosavybė
+	c_Lang097 =	Palaukite puslapis įkelti.
+	c_Lang098 =	CLSID
+	c_Lang099 =	Prisijungti
+	c_Lang100 =	Rankena
+	c_Lang101 =	KOM scenarijus
+	c_Lang102 =	Pranešimo numeris
+	c_Lang103 =	Specialieji klavišai
+	c_Lang104 =	Naršyklė Atgal
+	c_Lang105 =	Naršyklė Persiųsti
+	c_Lang106 =	Naršyklė Atnaujinti
+	c_Lang107 =	Naršyklė "Stop
+	c_Lang108 =	Naršyklė Paieška
+	c_Lang109 =	Naršyklė Mėgstamiausi
+	c_Lang110 =	Naršyklė Pagrindinis
+	c_Lang111 =	Žiniasklaida
+	c_Lang112 =	Nebylys
+	c_Lang113 =	Pagarsink
+	c_Lang114 =	Kiekis žemyn
+	c_Lang115 =	Groti / Pauzė
+	c_Lang116 =	Kito takelio
+	c_Lang117 =	Ankstesnis takelis
+	c_Lang118 =	Stop
+	c_Lang119 =	Elektroninis paštas
+	c_Lang120 =	Programos 1
+	c_Lang121 =	Programos 2
+	c_Lang122 =	Scancode
+	c_Lang123 =	Papildyti
+	c_Lang124 =	Pagrindiniai istorija
+	c_Lang125 =	Įveskite Scancode ...
+	c_Lang126 =	Kodas pridėti prie Virtual raktų sąrašą!
+	c_Lang127 =	Įveskite vardą kintamojo
+	c_Lang128 =	Naudokite funkciją iš išorinio failo
+	c_Lang130 =	Kartokite, kol
+	c_Lang131 =	Taikyti
+	c_Lang132 =	Kilpa
+	c_Lang133 =	Byla
+	c_Lang134 =	Išnagrinėti
+	c_Lang135 =	Skaityti
+	c_Lang136 =	Registras
+	c_Lang137 =	Failo Raštas:
+	c_Lang138 =	Katalogai
+	c_Lang139 =	Ciklas
+	c_Lang140 =	Įvesties Kintamojo:
+	c_Lang141 =	Skirtukus:
+	c_Lang142 =	Praleisti Veikėjai:
+	c_Lang143 =	Įvesties Vaizdas:
+	c_Lang144 =	Šaknų raktas \ Raktas:
+	c_Lang145 =	Failai
+	c_Lang146 =	Raktai
+	c_Lang147 =	Piktograma
+	c_Lang148 =	Nėra piktogramos
+	c_Lang149 =	Klaida
+	c_Lang150 =	Klausimas
+	c_Lang151 =	Šūksnis
+	c_Lang152 =	Informacija
+	c_Lang153 =	Visada viršuje
+	c_Lang154 =	Protokolas
+	c_Lang155 =	Iki
+	c_Lang156 =	Scenarijus
+	c_Lang157 =	Scenarijų kalba
+	c_Lang158 =	Nesuderinama su 64-bit!
+	c_Lang159 =	Paieškos parinkčių
+	c_Lang160 =	Skaidrus
+	c_Lang161 =	Skalė
+	c_Lang162 =	Pridėti "IF"
+	c_Lang163 =	Siųsti režimas
+	c_Lang164 =	Lygus
+	c_Lang165 =	Sudėtyje
+	c_Lang166 =	Didesnis
+	c_Lang167 =	Mažiau
+	c_Lang168 =	Taip
+	c_Lang169 =	Ne
+	c_Lang170 =	Gerai
+	c_Lang171 =	Atšaukti
+	c_Lang172 =	Nutraukti
+	c_Lang173 =	Ignoruoti
+	c_Lang174 =	Bandyti dar kartą
+	c_Lang175 =	Tęsti
+	c_Lang176 =	Bandyk iš naujo
+	c_Lang177 =	Laikas baigėsi
+	c_Lang178 =	Nustatyti svarbiausias delsimas
+	c_Lang179 =	Pagrindiniai delsimas
+	c_Lang180 =	Atsitiktinės delsimas
+	c_Lang181 =	Minimalus
+	c_Lang182 =	Maksimalus
+	c_Lang183 =	Išjungti atsitiktinius vėlavimų šiai komandai
+	c_Lang184 =	Pasirinkite iš sąrašo
+	c_Lang185 =	Mygtukai
+	c_Lang186 =	Pirmas
+	c_Lang187 =	Antra
+	c_Lang188 =	Trečias
+	c_Lang189 =	Pavadinimas
+	c_Lang190 =	Jei aktyvų langą
+	c_Lang191 =	Jei langas neaktyvus
+	c_Lang192 =	Jei langas egzistuoja
+	c_Lang193 =	Jei langas neegzistuoja
+	c_Lang194 =	Jei failas egzistuoja
+	c_Lang195 =	Jei failas neegzistuoja
+	c_Lang196 =	Jei iškarpinę tekstą
+	c_Lang197 =	Jei kilpa puslapis
+	c_Lang198 =	Jei vaizdą / pikselių rasti
+	c_Lang199 =	Jei vaizdą / pikselių nerastas
+	c_Lang200 =	Jei eilutė yra
+	c_Lang201 =	Jei eilutė nėra yra
+	c_Lang202 =	Jei pranešimo langas
+	c_Lang203 =	Palyginkite kintamuosius
+	c_Lang204 =	Įvertinti išraiška
+	c_Lang205 =	Regionas
+	c_Lang206 =	(Naudokite [], jei norite sukurti masyvų aminus, pvz .: [10, 20, aVariable "aString"])
+	c_Lang207 =	Masyvas Objekto
+	c_Lang208 =	Pagrindiniai Vardas
+	c_Lang209 =	Reikšmė pavadinimas
+	c_Lang210 =	Vertybės
+	c_Lang211 =	Masyvas
+	c_Lang212 =	Vartotojas apibrėžtą funkciją
+	c_Lang213 =	Funkcija Parametras
+	c_Lang214 =	Funkcija Grįžti
+	c_Lang215 =	Parametrai
+	c_Lang216 =	Grįžti Vertė
+	c_Lang217 =	Reikšmė pagal nutylėjimą
+	c_Lang218 =	Apimtis
+	c_Lang219 =	Vietinis
+	c_Lang220 =	Pasaulinis
+	c_Lang221 =	Vardas
+	c_Lang222 =	Jūs galite pridėti daugiau parametrų iš funkcijų meniu.
+	c_Lang223 =	Globalių kintamųjų
+	c_Lang224 =	Lokalūs kintamieji
+	c_Lang225 =	Statiniai kintamieji
+	c_Lang226 =	Nuo
+	c_Lang227 =	Paštas
+	c_Lang228 =	Tema
+	c_Lang229 =	Žinutė
+	c_Lang230 =	Į
+	c_Lang231 =	CK
+	c_Lang232 =	BCC
+	c_Lang233 =	F2 redaguoti
+	c_Lang234 =	HTML
+	c_Lang235 =	Siųsti laišką
+	c_Lang236 =	Parsisiųsti failai
+	c_Lang237 =	Zip / unzip failai
+	c_Lang238 =	Įjungti
+	c_Lang239 =	Išjunk
+	c_Lang240 =	Registruotas pozicijos.
+	c_Lang241 =	Ištrinti visus laikmačius
+	c_Lang242 =	Nustatyti laikmatį
+	c_Lang243 =	Dešiniuoju pelės pagrįstas
+	c_Lang244 =	Iš dešinės į kairę
+	c_Lang245 =	Įrangos
+	c_Lang246 =	Kelias
+	c_Lang247 =	Jei
+	c_Lang248 =	Suspausti kiekvieną failą į kitą archyvas
+	c_Lang249 =	Ekstrakto kiekvieną failą į kitą aplanką
+	c_Lang250 =	Zip failai
+	c_Lang251 =	Išpakuokite failus
+	c_Lang252 =	Atsisiųsti nuorodos
+	c_Lang253 =	Paskirties aplankas
+	c_Lang254 =	Paskirtis failą
+	c_Lang255 =	Atskirtos kabliataškiu, kablelis ar linijoje.
+	c_Lang256 =	Pakoreguokite koordinates į paveikslėlio centrą
+	c_Lang257 =	laikotarpis
+		
+; 16. Other Windows		
+	t_Lang001 =	Eksportas į AutoHotkey
+	t_Lang002 =	Makrokomandos
+	t_Lang003 =	Kilpos
+	t_Lang004 =	0 = begalinis
+	t_Lang005 =	Naudokite Hotstring
+	t_Lang006 =	Blokuoti Pelės
+	t_Lang007 =	Visi
+	t_Lang008 =	Nė vienas
+	t_Lang009 =	Konteksto Spartieji klavišai
+	t_Lang010 =	Eksportas į
+	t_Lang011 =	Įdubimas
+	t_Lang012 =	Įtraukti PMC kodas
+	t_Lang013 =	Negalima Jungiant Siųsti komandas
+	t_Lang014 =	Atnaujinti
+	t_Lang015 =	Auto Atnaujinti
+	t_Lang016 =	Visada viršuje
+	t_Lang017 =	Nustatymai
+	t_Lang018 =	Bendras
+	t_Lang019 =	Start / Stop Įrašų
+	t_Lang020 =	Įrašų Nauja Makro
+	t_Lang021 =	Paspaudus klavišų
+	t_Lang022 =	Įrašymo
+	t_Lang023 =	Įamžinkite Key valstybinis (žemyn / aukštyn)
+	t_Lang024 =	Pelės paspaudimų
+	t_Lang025 =	Pelės ratukas
+	t_Lang026 =	Pelės Perkelia
+	t_Lang027 =	Skirtasis laikas baigėsi intervalai
+	t_Lang028 =	Minimalus delsimas
+	t_Lang029 =	Langų klasės
+	t_Lang030 =	Langų Titulai
+	t_Lang031 =	Įrašų ControlSend
+	t_Lang032 =	Įrašų ControlClick
+	t_Lang033 =	Santykinis Įrašų raktas
+	t_Lang034 =	Perjungti
+	t_Lang035 =	Atkūrimas
+	t_Lang036 =	Pagreitinti
+	t_Lang037 =	Leciau
+	t_Lang038 =	Grįžti pelė po atkūrimą
+	t_Lang039 =	Pelės Koordinatės
+	t_Lang040 =	Langas
+	t_Lang041 =	Ekranas
+	t_Lang042 =	Numatytasis Mouse Delay
+	t_Lang043 =	Numatytasis Langų Delsimas
+	t_Lang044 =	Maksimalus Istorija vienam Macro
+	t_Lang045 =	Išvalyti istoriją
+	t_Lang046 =	Ekrano
+	t_Lang047 =	Lygiosios mygtukas
+	t_Lang048 =	Linijos plotis (pikseliais)
+	t_Lang049 =	Užfiksuoti išleidžiant
+	t_Lang050 =	Paspauskite Enter fiksuoti
+	t_Lang051 =	Ekrano katalogo
+	t_Lang052 =	Linija įvyniojimas
+	t_Lang053 =	Klavišai
+	t_Lang054 =	Nustatyti kaip numatytąją Hotkeys
+	t_Lang055 =	Išjungti Langų Nuorodos
+	t_Lang056 =	Atstatyti stulpelių dydį
+	t_Lang057 =	Numatytasis Macro failą
+	t_Lang058 =	Standartinė biblioteka Failų
+	t_Lang059 =	Naudokite išraiška pagal nutylėjimą kintamųjų priskyrimo
+	t_Lang060 =	Pažymėkite linijų ir pareiškimai
+	t_Lang061 =	(Spauskite Rodyklė stulpelio antraštę įjungti / išjungti)
+	t_Lang062 =	Virtualūs klavišai
+	t_Lang063 =	Numatytasis
+	t_Lang064 =	Redaguoti komentarą
+	t_Lang065 =	Komentaras
+	t_Lang066 =	Paieška skiltis
+	t_Lang067 =	Rasti / pakeisti
+	t_Lang068 =	&Rasti
+	t_Lang069 =	R&ungtynės Byla
+	t_Lang070 =	&Pakeisti
+	t_Lang071 =	Surasta
+	t_Lang072 =	Pakeistas
+	t_Lang073 =	Pa&sirinkti eilutės
+	t_Lang074 =	&Visos eilutės
+	t_Lang075 =	Visi &Makrokomandos
+	t_Lang076 =	Apie
+	t_Lang077 =	&Įprastoji išraiška
+	t_Lang078 =	Groti vieną kartą
+	t_Lang079 =	Žaisti kas x (Mili) sekundes
+	t_Lang080 =	Laikrodis
+	t_Lang081 =	Pauzė
+	t_Lang082 =	Ataskaitos
+	t_Lang083 =	Rodyti Wcięcia už kilpų ir pareiškimai
+	t_Lang084 =	(Dukart spustelėkite veiksmų stulpelio antraštės įjungti / išjungti)
+	t_Lang085 =	Rodyti Valdo Bar paleidžiant
+	t_Lang086 =	Ieškant funkcijas. Prašau palauk...
+	t_Lang087 =	Įtraukti Išorinis failus
+	t_Lang088 =	Sukurti EXE-failas
+	t_Lang089 =	Leiskite daugelyje pasisakymų
+	t_Lang090 =	Numatytasis
+	t_Lang091 =	Leiskite vilkimas eilutes
+	t_Lang092 =	&Ištisos ląstelių turinys
+	t_Lang093 =	Standartinė INI formatas
+	t_Lang094 =	Name = Vertė
+	t_Lang095 =	Įveskite 1 kintamasis eilutėje. Jūs taip pat gali pridėti [Skyriai].
+	t_Lang096 =	Vartotojo globalių kintamųjų
+	t_Lang097 =	Paspauskite mygtuką vairalazde
+	t_Lang098 =	Backspace išvalyti
+	t_Lang099 =	Mygtukas
+	t_Lang100 =	Rodyti balionas patarimai
+	t_Lang101 =	Greitis
+	t_Lang102 =	Lėtas
+	t_Lang103 =	Greitai
+	t_Lang104 =	Rodyti / Slėpti Bar Pavadinimas
+	t_Lang105 =	Rodyti / Slėpti Pagrindinis langas
+	t_Lang106 =	Paleisti iš karto
+	t_Lang107 =	Atsitiktinės Vėlavimai
+	t_Lang108 =	Normalus
+	t_Lang109 =	Žemyn
+	t_Lang110 =	Aukštyn
+	t_Lang111 =	Įdėkite Klaviatūros
+	t_Lang112 =	Groti / Pauzė
+	t_Lang113 =	Stop
+	t_Lang114 =	Atkūrimo parinktys
+	t_Lang115 =	Start / Stop Įrašų
+	t_Lang116 =	Įrašų Nauja Makro
+	t_Lang117 =	Įrašymo nustatymai
+	t_Lang118 =	Švarus sąrašas
+	t_Lang119 =	Rodyti progreso juosta
+	t_Lang120 =	Pagreitinti
+	t_Lang121 =	Leciau
+	t_Lang122 =	Rodyti / Slėpti Bar Pavadinimas
+	t_Lang123 =	Rodyti / Slėpti Pagrindinis langas
+	t_Lang124 =	Atjungti
+	t_Lang125 =	Dokas
+	t_Lang126 =	Atviras
+	t_Lang127 =	Sutaupyti
+	t_Lang128 =	Supjaustyti
+	t_Lang129 =	Kopija
+	t_Lang130 =	Pasta
+	t_Lang131 =	Pasirinkti viską
+	t_Lang132 =	Panaikinti
+	t_Lang133 =	Klaviatūra
+	t_Lang134 =	Pelė
+	t_Lang135 =	Kiti
+	t_Lang136 =	Paryškinti eilutės
+	t_Lang137 =	Numatytasis Script Editor
+	t_Lang138 =	Atidaryti išorinį redaktorių (Ctrl + Shift + E)
+	t_Lang139 =	Pasirinkti
+	t_Lang140 =	Stulpelyje
+	t_Lang141 =	Visi stulpeliai
+	t_Lang142 =	Pašalinti temą iš Toolbars (reikia perkrauti)
+	t_Lang143 =	Automatinis Slėpti Valdo įrankių juostą
+	t_Lang144 =	Spustelėkite ir vilkite pakeisti tvarką. Dukart spustelėkite redaguoti.
+	t_Lang145 =	Redaguoti Makrokomandos
+	t_Lang146 =	Pagal
+	t_Lang147 =	Makro
+	t_Lang148 =	Veiksmas pagrindinio lango glaudžiai mygtuką
+	t_Lang149 =	Uždaryti taikymas
+	t_Lang150 =	Sumažinti, kad dėklas
+	t_Lang151 =	Rodyti patvirtinimo, kai uždarius makrokomandą
+	t_Lang152 =	Sukurti atsargines kopijas automatiškai
+	t_Lang153 =	Sukuria numatytas užduotis Windows Task Scheduler.
+	t_Lang154 =	Laikas pirmą kartą paleidus
+	t_Lang155 =	Tvarkaraštis tipas
+	t_Lang156 =	Kai || Dienos | Savaitinis | Mėnesio | Pradžia | Prisijungimas | neveikos
+	t_Lang157 =	Tikslinė PMC failą
+	t_Lang158 =	Tikslinė AHK failą
+	t_Lang159 =	Scenarijus bus išsaugotas arba perrašyti į einamojo katalogo!
+	t_Lang160 =	Atidaryti Task Scheduler
+	t_Lang161 =	Užduotis sukurta sėkmingai!
+	t_Lang162 =	Įvyko klaida. negali būti sukurtas užduotis.
+	t_Lang163 =	Tvarkaraštis
+	t_Lang164 =	Tvarkaraštis Makrokomandos
+	t_Lang165 =	Vykdyti Makro
+	t_Lang166 =	Byla
+	t_Lang167 =	Styga
+	t_Lang168 =	Gauti informaciją
+	t_Lang169 =	Laukti
+	t_Lang170 =	Langų Grupės
+	t_Lang171 =	Žinutės
+	t_Lang172 =	Registro ir INI
+	t_Lang173 =	Garso
+	t_Lang174 =	Kintamieji
+	t_Lang175 =	Įvairūs.
+	t_Lang176 =	Sukurti grupę
+	t_Lang177 =	Nauja grupė
+	t_Lang178 =	Kalba redaktorius
+	t_Lang179 =	Sukurk naują
+	t_Lang180 =	Naudokite Enter, Žemyn ir PgUP naršyti.
+	t_Lang181 =	Pateikti
+	t_Lang182 =	Vardas
+	t_Lang183 =	Išsaugoti pakeitimus?
+	t_Lang184 =	Kalba Failo
+	t_Lang185 =	Nuoroda Failų
+	t_Lang186 =	Pateikti versijos ar naujo vertimą
+	t_Lang187 =	Sutraukti viską
+	t_Lang188 =	Išskleisti viską
+	t_Lang189 =	Kalba
+	t_Lang190 =	Konvertuoti eilučių
+	t_Lang191 =	Siųsti sąskaitos
+	t_Lang192 =	Atnaujinimas
+	t_Lang193 =	Dukart spustelėkite redaguoti
+	t_Lang194 =	SMTP serveris
+	t_Lang195 =	Uostas
+	t_Lang196 =	Atpažinkite
+	t_Lang197 =	Vartotojo vardas
+	t_Lang198 =	Slaptažodis
+	t_Lang199 =	SSL
+	t_Lang200 =	Siųsti režimą
+	t_Lang201 =	Siųsti testą
+	t_Lang202 =	Ekranas ir langų
+	t_Lang203 =	Aptikti paslėptus Windows
+	t_Lang204 =	Aptikti paslėptą tekstą
+	t_Lang205 =	Pavadinimas atitikimo režimas
+	t_Lang206 =	Pavadinimas atitikimo greitis
+	t_Lang207 =	Klientas
+	t_Lang208 =	R&asti
+	t_Lang209 =	Pa&keisti
+	t_Lang210 =	Nerodyti klaidų
+		
+; 17. Messages & Dialogs		
+	d_Lang001 =	Atviras
+	d_Lang002 =	Išsaugoti esamą projektą?
+	d_Lang003 =	Numatytieji nustatymai
+	d_Lang004 =	Makro Kūrėjas failai
+	d_Lang005 =	Išsaugoti projektas
+	d_Lang006 =	Nepavyko išsaugoti / Perrašyti failą
+	d_Lang007 =	Klaida
+	d_Lang008 =	Klaida: Nėra Makro Selected.
+		Please барем еден макро во листата.
+	d_Lang009 =	Klaida: Nėra Spartusis klavišas Pasirinkti.
+	d_Lang010 =	Klaida: Neteisingas Address.
+		The избраната адреса или име на датотека не е валиден.
+	d_Lang011 =	Įspėjimas
+	d_Lang012 =	Nėra kontrolė selected.
+		Continue rheolaeth?
+	d_Lang013 =	Eksportas scenarijus
+	d_Lang014 =	Scenarijaus Eksportuota
+	d_Lang015 =	Šis failas buvo sėkmingai eksportuoti!
+	d_Lang016 =	Spustelėkite "Gauti" pažymėti poziciją.
+	d_Lang017 =	- Pasirinkite langą.
+		- Taškas į norimą padėtį.
+		- Paspauskite dešinįjį mygtuką.
+	d_Lang018 =	"Pixel spalva
+	d_Lang019 =	Švarus sąrašas
+	d_Lang020 =	Uždaryti Makro?
+	d_Lang021 =	Kitas
+	d_Lang022 =	ankstesnis
+	d_Lang023 =	žinutė
+	d_Lang024 =	Apkrovos numatytieji nustatymai?
+	d_Lang025 =	Makro (-ai) activated.`nUse hotkeys žaisti.
+	d_Lang026 =	į start / stop įrašymo
+	d_Lang027 =	įrašymo sustojo
+	d_Lang028 =	Įrašymo ...
+	d_Lang029 =	sustoti
+	d_Lang030 =	pradėti naują rekordą
+	d_Lang031 =	Kvietimas neegzistuojančio funkcija.
+	d_Lang032 =	Klaida: Duplicate Spartieji klavišai.
+	d_Lang033 =	Aktyvuok makrokomandas
+	d_Lang034 =	- Spustelėkite ir vilkite% DrawButton% pasirinkti plotą.
+		- Paspauskite ir atleiskite be vilkdami pasirinkti kontrolės srityje.
+		- Paspauskite rajone be pulto, kad pasirinktumėte sritį langą.
+	d_Lang035 =	Tęsti?
+	d_Lang036 =	Vaizdo / pikselių rasti
+	d_Lang037 =	Vaizdo / pikselių nerastas.
+	d_Lang038 =	Paspauskite OK, kad galėtumėte tęsti.
+	d_Lang039 =	Siuntimo. Prašau palauk...
+	d_Lang040 =	Ši funkcija reikalauja GDI + biblioteka.
+		Spustelėkite Gerai, kad eiti į atsisiuntimo puslapį.
+	d_Lang041 =	Kintamojo pavadinimas yra neteisėtos charakterį.
+	d_Lang042 =	yra rezervuotas žodis.
+	d_Lang043 =	Arba naudoti kontrolės įrankių juostą.
+	d_Lang044 =	Ši funkcija reikalauja eval () funkcija.
+		Spustelėkite Gerai, kad eiti į atsisiuntimo puslapį.
+	d_Lang045 =	Prašome pasirinkti Internet Explorer "langą!
+	d_Lang046 =	Ryšio sėkmingai!
+	d_Lang047 =	Nepavyko prisijungti!
+	d_Lang048 =	Įdėkite Rankenėlės ir CLSID.
+	d_Lang049 =	Neteisingas Etiketė Pavadinimas.
+	d_Lang050 =	Pasikartojanti etiketė.
+	d_Lang051 =	Kad galėtumėte žaisti makro paspauskite atitinkam Hotkey (Auto / Vyras).
+	d_Lang052 =	Norėdami pradėti įrašinėti, paspauskite rekordiškai Spartusis klavišas.
+	d_Lang053 =	Nerodyti šį pranešimą dar kartą.
+	d_Lang054 =	Prašome pasirinkti Excel langą!
+	d_Lang055 =	Prašome pasirinkti AutoHotkey scenarijaus failą (.ahk) ir įvesti funkcijos pavadinimas.
+	d_Lang056 =	Ši funkcija reikalauja AutoHotkey įdiegta.
+		Spustelėkite Gerai, kad eiti į atsisiuntimo puslapį.
+	d_Lang057 =	- Paspauskite Ctrl + rodyklių klavišus judėti pasirinktą sritį.
+		- Paspauskite Shift + rodyklių klavišus keisti pasirinktą sritį.
+		- Paspauskite Enter baigti.
+	d_Lang058 =	Kai kurios funkcijos reikalauja admnistrator privilegijų, siekiant tinkamai funkcionuoti.
+		Tai rekomenduojama iš naujo paleiskite programą kaip administratorius.
+	d_Lang059 =	Ši komanda nepalaiko išraiškas ar funkcijas.
+		Prašome priskirti kintamąjį ir jį naudoti parametro.
+	d_Lang060 =	Nauja versija
+	d_Lang061 =	Ne dabar
+	d_Lang062 =	Jūs jau turite naujausią versiją.
+	d_Lang063 =	tikrinant įvyko klaida.
+	d_Lang064 =	klaida
+	d_Lang065 =	eilė
+	d_Lang066 =	konkrečiai
+	d_Lang067 =	Rodyti šį langą paleidimo
+	d_Lang068 =	Patarimai:
+	d_Lang069 =	Daug laiko ir daug pastangų nuėjo į Pulover makropotvarkių Kūrėjo plėtrai. Jei radote tai naudinga, prašome apsvarstyti rodo savo dėkingi su donorystę.
+		Dovanoti ar ne, nebus skirtumo jos savybes ir funkcionalumą.
+	d_Lang070 =	Paaukok ...
+	d_Lang071 =	Ne, ačiū
+	d_Lang072 =	Remti atviro kodo programinė įranga
+	d_Lang073 =	Klaida: Neteisingas Spartusis klavišas Pasirinkti.
+	d_Lang074 =	Rasti komandą ar funkciją
+	d_Lang075 =	Sveiki atvykę į Pulover makropotvarkių Kūrėjo
+	d_Lang076 =	Prašome pasirinkti savo pageidaujamą maketą
+	d_Lang077 =	Kompaktiška
+	d_Lang078 =	numatytasis
+	d_Lang079 =	Patikrinkite atnaujinimus paleidimo.
+	d_Lang080 =	Jūs galite tai pakeisti per Parinktys> Nustatymai> Bendrai.
+	d_Lang081 =	Galite pakeisti ir pritaikyti maketai meniu Rodymas.
+	d_Lang082 =	Failas nerastas!
+	d_Lang083 =	Atsarginė failas buvo rasta. Ar norėtumėte, kad ją atidaryti?
+	d_Lang084 =	Prašome išsaugoti pakeitimus prieš planuojant užduotį.
+	d_Lang085 =	Trūksta "pabaiga Ciklas" teiginys Makro
+	d_Lang086 =	Trūksta "End If" pareiškimą Makro
+	d_Lang087 =	Atkreipkite dėmesį, kad padaryti pakeitimai scenarijų ne programos neturės įtakos jūsų makrokomandų bet kokiu būdu.
+		Ši funkcija skirta tik kaip greitai eksporto funkcija. PMC nėra skirta būti AHK scenarijaus redaktoriaus.
+	d_Lang088 =	Pabandykite paleisti kaip bendrą vartotoją (ne administratorius).
+	d_Lang089 =	Nėra eilutė pasirinktas!
+	d_Lang090 =	Prašome, pasirinkite eilutę įterpti arba pašalinti grupę.
+	d_Lang091 =	Atsisiuntimas. Prašau palauk...
+	d_Lang092 =	Mažos piktogramos
+	d_Lang093 =	didelės piktogramos
+	d_Lang094 =	Ši funkcija reikalauja "Windows Vista" arba naujesnė.
+	d_Lang095 =	Iš ByRef naudojimas sukelia parametrą tapti kintamojo praėjo iš skambinančiojo slapyvardį. Kitaip tariant, parametras ir skambinančiojo kintamasis tiek nurodo į minėtus turinį į atminties.
+	d_Lang096 =	- Negalima pridėti kintamųjų proc ŽENKLŲ čia.
+		- Grįžti vertė turi būti išraiška.
+		- Jūs galite naudoti stygos, kintamuosius, masyvus ir funkcijas. Jūs taip pat gali derinti bet iš tų.
+		- Norėdami naudoti stygas, pridėti juos į kabutes aminus, pvz .: "rezultatas:" A + B.
+		- Jei norite grįžti papildomų rezultatų, taip pat galite naudoti ByRef į parametrus.
+		- Masyvai gali būti naudojama grąžinti kelias reikšmes ar NET pavadintas vertybes.
+	d_Lang097 =	- Negalima pridėti kintamųjų proc ŽENKLŲ čia.
+		- Dauguma AHK išraiškų yra palaikomi.
+		- Jūs galite naudoti stygos, kintamuosius, masyvus ir funkcijas.
+		- Norėdami naudoti stygas, pridėti juos į kabutes aminus, pvz .: var = "A".
+		- Kelios ataskaitos yra palaikomi aminus, pvz .: var = "A" || Instr (var, "B").
+	d_Lang098 =	Jei vienas parametras turi numatytąją reikšmę, šie parametrai privalo turėti vieną per daug.
+	d_Lang099 =	Funkcija pavadinime yra neleistinų simbolių.
+	d_Lang100 =	Goto, Gosub ir etikečių neleidžiami funkcijas.
+	d_Lang101 =	Kopijavimo funkcija.
+	d_Lang102 =	Įvyko klaida. Galite siųsti el.laišką 'pulover@macrocreator.com "su failu:
+	d_Lang103 =	Naujos kalbos failą galima.
+	d_Lang104 =	Ne, šis pranešimas bus vėl rodomas tuo pačiu atnaujinimo. Jūs galite jį atsisiųsti iš meniu Žinynas> Ieškoti naujinių.
+	d_Lang105 =	Failo sėkmingai išsiųsta. Ačiū!
+	d_Lang106 =	Kalbų failai sėkmingai atnaujinta.
+	d_Lang107 =	Nepavyksta paleisti laikmatį
+	d_Lang108 =	Visos pozicijos yra registruoti. Prašome, ištrinti vieną iš jų.
+	d_Lang109 =	Tikslinė etiketė neegzistuoja.
+	d_Lang110 =	Patvirtinti failą pakeisti
+	d_Lang111 =	Jau egzistuoja.
+		Ar norėtumėte jį pakeisti?
+	d_Lang112 =	Pašto dėžutę nerastas.
+	d_Lang113 =	Pranešimų klaida.
+	d_Lang114 =	Eksportuotos (net jei sudaromi) su Send Email funkcija (CDO) Skriptai turės matomų informations elektroninio pašto sąskaitas, naudotas slaptažodį. PMC projekto failas neturi tokios informacijos.
+	d_Lang115 =	- Laikykite Alt nustatyti regioną į tą pačią vietą.
+	d_Lang116 =	Perkelti ir įdiegti
+	d_Lang117 =	Eiti į atsisiuntimo puslapį
+	d_Lang118 =	Geriausiai Tinkantis
+	d_Lang119 =	Iš naujo paleiskite programą taikyti pakeitimus.
+	d_Lang120 =	Norėdami iš naujo nustatyti įrankių juostas dydžių, eikite į:
+		
+; 18. Start-up Tips		
+	Start_Tips =	Check out vaizdo samouczków ne www.macrocreator.com/help~~pobj sužinoti apie daug funkcijų PMC.
+		Norėdami gauti pagalbą kaip specialią komandą dešiniuoju pelės mygtuku spustelėkite bet kur komandų lange parodyti nuorodų į interneto pagalba.
+		Jūs galite kurti makrokomandas naudodami komandų mygtukai pagrindiniame lange arba naudojant įrašymo kopijuoti savo veiksmus. Eiti į Funkcijos> Parametrai> Recording pasirinkti, ką įėjimai bus registruojami.
+		Naudokite paieškos juostą arba "Surasti komandą" Langas į paiešką komandų ir funkcijų.
+		Ar norėtumėte padėti išspręsti vertimą arba net sukurti naują? Eiti į Funkcijos> Parametrai> Kalbos redagavimo ir atlikti bet kokius pataisymus norite. Galite peržiūrėti jį bet kuriuo metu. Paspauskite ant Submit siųsti savo peržiūrą. Nesivaržykite pateikti bet kuriuos pataisymus tiek kartų, kiek norite.
+		Patikrinkite "Capture Keys" parinktį įvesti raktus ir kombinacijas į savo Makro tiesiogiai iš pagrindinio lango.
+		Įveskite raktus ir derinius spartųjį klavišą langelį apačioje ir paspauskite mygtuką Įterpti pridėti juos pasirinkti eilutes.
+		Naudoti redagavimo mygtukus pagrindinio lango apačioje nustatyti kartojimą ir nedelsk keliose eilutėse tuo pačiu metu. Jei yra pasirinkta jokių eilių, kad taisyti mygtukai taikomos visiems eilučių sąrašo.
+		Beveik kiekvieną komandą ir funkcijos priima ir perduoda kintamuosius. Galite priskirti savo kintamuosius kintamųjų langai (komandos> Kintamieji / Arrays). Juos naudoti viduje komandas pridėti kintamą vardą proc ženklų aminus, pvz .:% myVar%. Funkcijų, naudoti juos be procentų ženklų aminus, pvz .: substr (myVar, 5).
+		Dešiniuoju pelės mygtuku spustelėkite bet kur komandų lange lengvai įterpti built-in kintamuosius iš sąrašo.
+		Norėdami naudoti įrašymo greitai užduotys eiti Funkcijos> Parametrai> Recording ir patikrinti "Išvalyti sąrašą" parinktį. Tada spustelėkite Įrašyti mygtuką pagrindiniame lange ir naudoti F10 išvalyti dabartinė Makro ir pradėti naują su tuo pačiu klavišas. Taip pat galite patikrinti "Visada aktyvus" parinktį pagrindiniame lange išlaikyti įrašymas ir atkūrimas klavišus aktyvus.
+		PMC palaiko masyvo objektus ir metodus, kaip AutoHotkey scenarijus. Jūs galite kurti masyvus įvairiais būdais, labiausiai įprasta vyksta į kintamųjų langą, pažymėdami "Expression" parinktį ir apgaubiantis vertybes skliausteliuose aminus, pvz .: [10, 20, Var, "STRING"]. Taip pat galite sukurti pavadintas raktus aminus, pvz .: {KEYA: Vara ", kai pagrindinis": "eilutės reikšmė"}.
+		Funkcijos naudoti AHK išraiška sintaksė. Pažodinis Stygos turi būti kabutėse, ir kintamieji nereikia proc požymiai. Jūs galite naudoti kitas funkcijas arba masyvo elementus kaip parametrus. E.g .: StrReplace (myVar, myArray [A], substr (OtherVar, 2, 3)).
+		Išraiškos palaikoma AutoHotkey išraiška sintaksė. Norėdami naudoti viduje komandų parametro išraiška, pradėti jį procento ženklas aminus, pvz .:% substr (Var, 5).
+		Į "Ciklas" skaitiklis viršuje nustato skaičių linijų skaičius, per pasirinktą Macro.
+		Jūs galite redaguoti eilutę, ją dukart spustelėdami arba pasirinkdami jį ir paspauskite redagavimo mygtuką apačioje. Jūs galite redaguoti kelis pasirinktas eilutes naudojant redagavimo juostoje apačioje galimybes.
+		Jūs galite nustatyti savo funkcijas funkcijos> Sukurti funkciją ir naudoti juos nuo Funkcija langą arba viduje išraiškos.
+		Galite nustatyti Globa / vietos ir statiniai kintamieji naudotojo apibrėžtas funkcijas. apibrėžtos Funkcijos> Parametrai globalių kintamųjų> Vartotojo globalių kintamųjų yra laikomi Super pasauliniu, ir visada bus laisvų viduje funkcijos, net tada, kai apibrėžiamas kaip vietinė.
+		Pasirinkti vieną ar daugiau eilučių pridėti į naujas komandas ant jų.
+		Galite perkelti eilutes su Spustelėkite ir vilkite.
+		Dukart spustelėkite piktogramą aktyvuoti klavišus arba sustabdyti Atkūrimas / įrašymas. Paspauskite jį su vidurinį mygtuką atkūrimo ar įrašymo į sulaikymo metu.
+		Galite eksportuoti savo makrokomandas darbo AutoHotkey scenarijus ar atskir vykdomąjį iš eksporto langą.
+		Norėdami įrašyti ir žaisti Mouse naudojant absoliučius koordinates eiti Funkcijos> Parametrai> nevykdo įsipareigojimų ir nustatytu Mouse koordinates ekrane.
+		Galite atidaryti, kopijuoti, perkelti arba ištrinti failus ir aplankus, naudojant vieną iš vadaviečių komandų Run / Failų / String / Įvairūs. Yra daug kitų naudingų komandų, tokių kaip StringReplace, InputBox ir MouseGetPos.
+		Norėdami įrašyti apačią būklė kiekvieno esminio Eiti į Funkcijos> Parametrai> Recording ir patikrinti "užfiksuoti svarbiausias narė (žemyn / aukštyn)" parinktį.
+		Jūs galite naudoti klavišus pagreitinti arba sulėtinti Atkurti. Eiti į Funkcijos> Parametrai> Atkurti nustatyti raktus ir greitį.
+		Norėdami koreguoti fiksavimo zona naudojant "Padaryti Screenshot" įrankis eiti į Parinktys> Nustatymai> Ekrano ir pasirinkite "Paspauskite klavišą Enter Capture". Po piešimo stačiakampis naudoti valdymo + rodyklių klavišus perkelkite pasirinkimą ir Shift + rodyklių klavišus, kad jį keisti.
+		Greita Pasirinkite: Pasirinkite bet eilutę ir paspauskite ant stulpelio antraštės pasirinkti panašias eilutes, remiantis ląstelės tekstą iš tame stulpelyje.
+		Spustelėkite puslapis stulpelio antraštę, kad įjungti / išjungti Pagalba Marks ir Colors kilpų ir atskaitomybės. Dukart spustelėkite ant Veiksmas stulpelio antraštę, kad įjungti / išjungti įdubimas už kilpų ir atskaitomybės.
+		Galite derinti savo makrokomandas naudodami rankinį Hotkey ir Play parinktis Macro meniu. Taip pat galite išjungti veiksmus panaikinę juos Macro sąrašą.
+		Norėdami, kad jūsų Makrokomandos dirbti tik tam tikrą lange eikite į Makro> konteksto Hotkeys.
+		Jūs galite nustatyti savo globalių kintamųjų turi būti kraunamos paleidžiant ir būti eksportuojama. Eiti į Funkcijos> Parametrai> Vartotojo globalių kintamųjų juos pridėti.
+		Galite paleisti pažangias funkcijas, pavyzdžiui, substr ir REGEXREPLACE iš funkcijų lango (komandos> Funkcijos / Array metodus). Jūs taip pat galite nustatyti savo funkcijas arba paleisti funkcijas iš išorės AutoHotkey scenarijus.
+		Galite įrašyti pelės judesius, palyginti su dabartine padėtimi laikydami Capslock įrašymas (galite pakeisti raktą ir padaryti jį perjungti į "Settings") metu.
+		
+; 19. Tooltips		
+	A_List_TT =	Pasirinkite Makro (Ctrl + 1 ~ 0)
+	AbortKey_TT =	Spartusis klavišas Norėdami sustabdyti atkūrimą
+	ActiveObj_TT =	Bando prisijungti prie aktyvaus COM objektą
+	AddAtt_TT =	Prisegti failai
+	ApplyI_TT =	Taikyti
+	ApplyL_TT =	Įdėkite nuo Box (įterpti)
+	ApplyT_TT =	Taikyti
+	AutoKey_TT =	Spartusis klavišas žaisti Makro
+	Client_TT =	Koordinatės yra susijusios su aktyviuoju lango kliento srityje, kurie neleidžia lango pavadinimo juostą, meniu (jei ji turi standartinį vieną) ir sienų.
+	Clip_TT =	Laikinai naudoja Mainų siųsti tekstą.
+		Kai operacija bus baigta, scenarijus
+		Atstato originalius talpyklės turiniu.
+		(Palikti Tekstas tuščią įklijuokite esamą turinį)
+	CM_TT =	Ekranas: koordinatės atžvilgiu darbalaukio (visą ekraną).
+		Langas: koordinačių reikšmės, palyginti su aktyvaus lango.
+		Klientas: koordinatės yra susijusios su aktyviuoju lango kliento srityje, kurie neleidžia lango pavadinimo juostą, meniu (jei ji turi standartinį vieną) ir sienų.
+	CmdFilter_TT =	Filtruoti pagal tipą
+	CmdSort_TT =	Rūšiuoti abėcėlės tvarka
+	ColorPick_TT =	Gauk Pixel ekrane
+	ComEvent_TT =	Norma, pagal kurią klavišų siunčiami lemia pagrindinių delsimo.
+	ComText_TT =	Kai nėra žaliavinio režimu, taip simboliai
+		Traktuojamos kaip modifikatorius (šie modifikatoriai įtakos
+		Tik jau kitą klavišą): +, ^, #
+	CoordPixel_TT =	Koordinačių režimą
+	DefaultMacro_TT =	Pasirinkite failą įkelti į programos paleidimo
+	EditPaste_TT =	Pastos Styginių ne Žymeklis / įrašyti poziciją
+		Į Edit kontrolės (tai neturi įtakos
+		Iškarpinės turinys).
+	Ex_AF_TT =	Praleidžia švelnų būdą aktyvinti langą
+		Ir eina tiesiai į tvirtą būdą.
+	Ex_CM_TT =	Rinkiniai koordinuoti režimą pelės komandas būti santykinis arba į aktyvaus lango ar ekrano.
+	Ex_DH_TT =	Nustato, ar nematomas langai "matė" pagal scenarijų.
+	Ex_DT_TT =	Nustato, ar nematomas tekstas lange yra "matomas" rasti langą tikslu. Tai turi įtakos komandas, tokias kaip IfWinExist ir WinActivate.
+	Ex_EdScript_TT =	Atidaryti išorinį redaktorių
+	Ex_EdVars_TT =	Pasirinkite globalių kintamųjų turi būti eksportuojama.
+	Ex_ExecScript_TT =	Vykdyti scenarijų
+	Ex_HK_TT =	Jėgas kablio naudojimas įgyvendinti visi
+		Arba kai klaviatūros klavišai.
+	Ex_IfDir_TT =	Sukuria kontekstinės klavišus ir hotstrings priklausomai
+		Dėl lange, kad yra aktyvus arba egzistuoja tipo.
+	Ex_IfDirType_TT =	Sukuria kontekstinės klavišus ir hotstrings priklausomai
+		Dėl lange, kad yra aktyvus arba egzistuoja tipo.
+	Ex_IN_TT =	Sukelia scenarijus elgtis taip, tarsi nenurodyta
+		Failo turinys yra dalyvauti šioje miesto vietoje.
+	Ex_MD_TT =	Nustato vėlavimą, kuris įvyks po
+		Kiekvienas pajudinus pelę, arba paspausti mygtuką.
+	Ex_MT_TT =	Nustato maksimalų skaičių vienu metu
+		Siūlai per klavišas arba hotstring.
+	Ex_NT_TT =	Išjungia apie piktogramą rodyti.
+	Ex_PT_TT =	Saugo scenarijų nuolat veikia
+		(Tai yra, tol, kol vartotojas uždaro, tai ar ExitApp susiduriama).
+	Ex_SB_TT =	Nustato, kaip greitai skriptas veiks (pasireiškia CPU).
+	Ex_SC_TT =	Nustato vėlavimą, kuris įvyks po
+		Kiekvienas kontrolė keičiančių komanda.
+	Ex_SI_TT =	Nustato, ar scenarijus gali paleisti dar kartą, kai jis jau veikia.
+	Ex_SK_TT =	Nustato vėlavimą, kuris įvyks po kiekvieno
+		Klavišų išsiųstas siųsti arba ControlSend.
+	Ex_SM_TT =	Modelių Siųsti sinonimas SendInput ar SendPlay o ne
+		Numatytoji (SendEvent). Taip pat daro Spustelėkite ir MouseMove / Paspauskite / Vilkite
+		Naudokite nurodytą metodą.
+	Ex_ST_TT =	Nustato atitikimo elgesį WinTitle parametras komandų, tokių kaip WinWait.
+	Ex_SW_TT =	Nustato vėlavimą, kuris įvyks po
+		Kiekvienas okienkowe komandą, pavyzdžiui, WinActivate.
+	Ex_UV_TT =	Eksporto globalių kintamųjų.
+	Ex_WN_TT =	Įjungia arba išjungia įspėjimai konkrečių sąlygų, kurios gali reikšti klaidą, pavyzdžiui, rašybos ar trūksta "pasaulio" deklaracijos.
+	ExpList_TT =	Dukart spustelėkite redaguoti
+	ExprLink2_TT =	- Negalima pridėti kintamųjų proc ŽENKLŲ čia.
+		- Dauguma AHK išraiškų yra palaikomi.
+		- Jūs galite naudoti stygos, kintamuosius, masyvus ir funkcijas.
+		- Norėdami naudoti stygas, pridėti juos į kabutes aminus, pvz .: var  "A".
+		- Kelios ataskaitos yra palaikomi aminus, pvz .: var  "A" || Instr (var, "B").
+	ExprLink3_TT =	- Negalima pridėti kintamųjų proc ŽENKLŲ čia.
+		- Dauguma AHK išraiškų yra palaikomi.
+		- Jūs galite naudoti stygos, kintamuosius, masyvus ir funkcijas.
+		- Norėdami naudoti stygas, pridėti juos į kabutes aminus, pvz .: var = "A".
+		- Kelios ataskaitos yra palaikomi aminus, pvz .: var = "A" || Instr (var, "B").
+	ExpView2_TT =	Išplėstinė redaktorius
+	ExpView_TT =	Išplėstinė redaktorius
+	Fast_TT =	Naudoja greičiau ieškoti metodą (rekomenduojama)
+	HiddenText_TT =	Nustato, ar nematomas tekstas lange yra "matomas" rasti langą tikslu. Tai turi įtakos komandas, tokias kaip IfWinExist ir WinActivate.
+	HiddenWin_TT =	Nustato, ar nematomas langai "matė" pagal scenarijų.
+	HScale_TT =	Ūgis skalė
+	IconN_TT =	Taškų piktogramų grupės
+	IfLVColor_TT =	Spustelėkite, jei norite pasirinkti spalvą
+	IncFiles_TT =	Įtraukti failus / Vertybės
+	IncFolders_TT =	Įtraukti katalogus (aplankus) / Mygtukai
+	InsertKey_TT =	Įdėkite Klaviatūros (Ctrl + Insert)
+	InsertKeyT_TT =	Įdėkite Klaviatūros
+	JoyKey_TT =	Paspauskite mygtuką vairalazde
+	LoopLVColor_TT =	Spustelėkite, jei norite pasirinkti spalvą
+	LUntil_TT =	Taikoma sąlyga į kilpą tęsimą, arba už-kilpa.
+	ManKey_TT =	Spartusis klavišas žaisti Makro "žingsnis po žingsnio"
+	MRel_TT =	Judesių, susijusių su dabartinės padėties.
+		Arba, jei naudojamas su kontrolės: Pareigos, palyginti su kontrole.
+	OSHK_TT =	Pasirinkite Makro
+	OSHKEd_TT =	Pasirinkite Makro
+	OSProgB_TT =	Rodyti progreso juosta
+	OSTrans_TT =	Nepermatomumas
+	PauseKey_TT =	Spartųjį klavišą pristabdyti atkūrimą
+	PicPrev_TT =	Dukart Click to open image
+	Raw_TT =	SendRaw komanda interpretuoja visus simbolius pažodžiui
+		O ne verčiant {Įveskite} į ENTER paspaudimo,
+		^ C Control-C, ir tt
+	RecKey_TT =	Backspace išvalyti
+	RecNewKey_TT =	Backspace išvalyti
+	Recurse_TT =	Recurse į pakatalogius (pakatalogius) / raktai
+	RefreshIEW_TT =	Atnaujinti sąrašą
+	Relative_TT =	Koordinatės yra palyginti su aktyvaus lango.
+	RelKey_TT =	Įrašai Pelės judesiai ir paspaudimų kaip nukrypimais
+		Iš ankstesnės pozicijos žiūrint.
+	ReptC_TT =	0 = begalinis
+	Reset_TT =	Išvalyti kintamųjų turinys
+	RGB_TT =	Priežastys spalva turi būti aiškinama kaip RGB vertės vietoj BGR
+	Screen_TT =	Koordinatės yra santykinis į darbalaukį (visą ekraną).
+	Screenshot_TT =	Padaryti Screenshot
+	SetText_TT =	Keičia į kontrolės tekstą.
+	SI_TT =	Žodis JĖGA praleidžia dialogo langą ir pakeičia seną atvejį automatiškai
+		Kuris yra panašus į poveikį į Perkrauti komandą.
+		Žodis ignoruoti praleidžia dialogo langą ir palieka seną atvejį veikia.
+		Kitaip tariant, bandoma pradėti jau veikia scenarijų yra ignoruojami.
+		Žodis išjungtas leidžia keliems atvejų scenarijų paleisti vienu metu.
+	SM_TT =	Įvykis: Tai pradinis nutylėjimą naudojamas visų scenarijus.
+		Jis naudoja SendEvent metodą Send SendRaw, Spauskite, ir MouseMove / Paspauskite / pasipriešinimą.
+		Įėjimas: Perjungia į SendInput metodą Send SendRaw, Spauskite, ir MouseMove / Paspauskite / pasipriešinimą.
+		InputThenPlay: Tas pats kaip aukščiau, išskyrus, kad užuot nukrito Įvykis režimu
+		Kai SendInput yra nepasiekiamas, jis grįžta į Play režimą (toliau). Tai taip pat sukelia
+		SendInput komanda pati grįžti į atkūrimo režimą, kai SendInput yra neprieinama.
+		Groti: Perjungia į SendPlay metodą Send SendRaw, Spauskite, ir MouseMove / Paspauskite / pasipriešinimą.
+	ST_TT =	1: langas titulas turi prasidėti nurodytu WinTitle būti rungtynės.
+		2: langas titulas gali būti WinTitle bet viduje ji būtų rungtynės.
+		3: lango pavadinimas turi tiksliai atitikti WinTitle būti rungtynės.
+		RegEx: pokyčiai WinTitle, WinText, ExcludeTitle ir ExcludeText būti reguliarios išraiškos.
+	TimeoutM_TT =	0 = begalinis
+	TitleMatch_TT =	1: langas titulas turi prasidėti nurodytu WinTitle būti rungtynės.
+		2: langas titulas gali būti WinTitle bet viduje ji būtų rungtynės.
+		3: lango pavadinimas turi tiksliai atitikti WinTitle būti rungtynės.
+		RegEx: pokyčiai WinTitle, WinText, ExcludeTitle ir ExcludeText būti reguliarios išraiškos.
+	TitleSpeed_TT =	Greitas: Tai numatytoji elgsena. Veikimas gali būti žymiai geriau nei lėtas, tačiau kai WinText elementai kai kurių "Windows tipų negali būti" matomas "įvairių langų komandomis.
+		Lėtas: Gali būti daug lėtesnis, bet įmanoma WinText gaunami iš kiekvieno lango kaip pagrindinę okienkowe komanda ieško per juos už rungtynes. Langų spy atskleidžia, kurios dalys lango teksto (jei toks yra) reikalauja lėto režimą.
+	ToggleC_TT =	Aktyvuok Santykinis Filmavimas, Key valstybinis įjungtas.
+	TransC_TT =	Skaidri spalva
+	VarCopyA_TT =	Kopijuoti dabartinius kintamas turinį
+	VarCopyB_TT =	Kopijuoti dabartinius kintamas turinį
+	VariatT_TT =	Atspalvių variacijos
+	WScale_TT =	Plotis skalė
+		
+; 20. Operators		
+	As_Oper_01 =	Priskirti
+	As_Oper_02 =	Papildyti
+	As_Oper_03 =	Atimti
+	As_Oper_04 =	Padauginkite
+	As_Oper_05 =	Takoskyra
+	As_Oper_06 =	Grindų takoskyra
+	As_Oper_07 =	Jungiant
+	As_Oper_08 =	Bitinis įskaičiuota ARBA
+	As_Oper_09 =	Bitinis IR
+	As_Oper_10 =	Bitinis išskirtinė ARBA
+	As_Oper_11 =	Teisė perėjimo ir
+	As_Oper_12 =	Kairysis SHIFT IR
+	Co_Oper_01 =	Lygus
+	Co_Oper_02 =	Vienodas (didžiosios ir mažosios raidės)
+	Co_Oper_03 =	Nėra lygūs
+	Co_Oper_04 =	Didesnis
+	Co_Oper_05 =	Mažiau
+	Co_Oper_06 =	Didesnis arba lygus
+	Co_Oper_07 =	Mažiau arba lygu
+	Co_Oper_08 =	Be (sąrašas)
+	Co_Oper_09 =	Ne (sąrašas)
+	Co_Oper_10 =	Sudėtyje (sąrašas)
+	Co_Oper_11 =	Ne yra (sąrašas)
+	Co_Oper_12 =	Tarp (1 linija) ir (2 linijos)
+	Co_Oper_13 =	Ne tarp (1 linija) ir (2 linija)
+	Co_Oper_14 =	Ar (tipas)
+	Co_Oper_15 =	Ar ne (tipas)
+		
+; 21. IE Commands Tips		
+	IE_Cmd_Index =	
+	Checked	Nustato ar nuskaito iš žymės langelį ar radijo mygtuką būklę.
+	Click	Imituoja pelės mygtuku spustelėkite objektą.
+	Focus	Dėmesys nukreipiamas į objektą.
+	GoBack	Pereina atgal vieną elementą istorijos sąrašą.
+	GoForward	Pereina į priekį vieną elementą istorijoje sąrašą.
+	GoHome	Pereina prie dabartinių namų arba pradžios puslapį.
+	GoSearch	Pereina į dabartinę paieškos puslapį.
+	Height	Nustato arba nuskaito objekto aukštį.
+	Href	Nustato ar nuskaito paskirties URL arba inkaro tašką.
+	InnerHTML	Nustato ar nuskaito objekto HTML.
+	InnerText	Nustato ar gauna objekto tekstą.
+	Length	Nustato ar nuskaito objektų skaičius į kolekciją.
+	LocationName	Paimama kelio ar pavadinimą esamą puslapį.
+	LocationURL	Paimama dabartinio puslapio URL.
+	Navigate	Pereina į URL ar keliu.
+	OuterHTML	Nustato ar nuskaito objektą ir jo turinio HTML.
+	Quit	Uždaro puslapį.
+	Refresh	Pakartotinai rodomą puslapį.
+	SelectedIndex	Nustato ar nuskaito pasirinkto varianto A pasirinkite objektą indeksą.
+	Src	Nustato arba nuskaito URL turi būti įkeltas į objektą.
+	Stop	Atšaukia kol navigacijos ar parsisiųsti.
+	Submit	Teikia formą.
+	Type	Nustato ar nuskaito turinio tipo objektą.
+	Value	Gauna arba nustato objekto vertę.
+	Width	Nustato ar nuskaito objekto plotį.
+		
+; 22. COM Objects Tips		
+	COM_CLSID_Index =	
+	Excel.Application	Manipuliuoja Excel lapus.
+	HTMLfile	Gali būti naudojamas skaityti, rašyti ir bendrauti su HTML.
+	InternetExplorer.Application	Naršyti svetaines.
+	MSXML2.DOMDocument.6.0	XML sintaksės analizatorius.
+	MSXML2.XMLHTTP	Atstovauja XML prašymas naudojant HTTP.
+	Outlook.Application	Manipuliuoja Outlook užduotis ir daiktus.
+	PowerPoint.Application	Manipuliuoja PowerPoint "pateiktis.
+	Schedule.Service	Tvarkaraštis ir redaguoti Langai Užduotys.
+	ScriptControl	Dinamiškai vykdyti VBScript arba JScript.
+	Scripting.Dictionary	Objektas, kuris saugo duomenis raktą, punktas poras.
+	Scripting.FileSystemObject	Pasiekti failus aplankai
+	Shell.Application	Prieiga Explorer IE Windows / skirtukai; atvira manipuliuoti langais.
+	Shell.Explorer	Įterpti žinutę Explorer / Browser kontrolę GUI (Internet Explorer - Trident naršyklė).
+	SAPI.SpVoice	Tekstas-to-Speech (TTS).
+	VBScript.RegExp	VBS Reguliarūs išsireiškimai (įskaitant pasaulinės rungtynių).
+	WMPlayer.OCX	Žaisti medijos failus; Įterpti wmplayer kontrolė GUI.
+	WinHttp.WinHttpRequest.5.1	Teikia paprastą HTTP klientas funkcionalumą, todėl daug daugiau kontrolės nei UrlDownloadToFile.
+	Winmgmt	Gauk informaciją apie sistemą; Tvarkyti langai paslaugas.
+	WScript.Shell	Įvairūs administravimo užduotys (daugelis vietinių AHK užduotys).
+	Word.Application	Manipuliuoja Word "dokumentus.
+		
+; 23. AHK Commands Tips		
+	Ahk_Cmd_Index =	
+	Abs	Grąžina absoliučios vertės numerį.
+	ACos	Grąžina arkkosinusas (skaičius, kurio kosinusas yra numeris) radianais.
+	Array	Sukuria scenarijus Association masyvas su sveikais mygtukais.
+	Asc	Grąžina simbolių kodą (šis skaičius tarp 1 ir 255 (ANSI stato) arba 65535 (Unicode stato)) pirmą charakterio STRING.
+	ASin	Grąžina arksinusas (skaičius, kurio sinusas yra numeris) radianais.
+	ATan	Arktangentas (skaičius, kurio tangentas yra numeris) radianais.
+	BlockInput	Išjungia arba leidžia vartotojui galimybę bendrauti su per klaviatūrą ir pelę kompiuterio.
+	Break	Išėjimų (nutraukiama) kilpa. Galioja viduje bet kilpos natūra.
+	CDO	Siunčia laiškus naudojant žinutę apibrėžtos vartotojo sąskaitą.
+	Ceil	Grąžina skaičius suapvalinamas iki artimiausio sveikojo skaičiaus (be jokių .00 priesaga).
+	Chr	Grąžina vieną simbolį atitinkantį simbolių kodekso nurodytą numerį.
+	Click	Paspaudžia pelės mygtuką nurodytu koordinates. Jis taip pat gali laikykite nuspaudę mygtuką, pasukite ratą, arba perkelti.
+	Clipboard	Pastos tekstą iš iškarpinę.
+	ClipWait	Laukia, kol į iškarpinę yra duomenys.
+	ComObjActive	Nuskaito registruotą COM objektą.
+	ComObjArray	Sukuria SAFEARRAY naudoti su COM.
+	ComObjConnect	Jungia COM objektą renginys šaltinius funkcijų su tam tikru kodu.
+	ComObjCreate	Sukuria COM objektą.
+	ComObjEnwrap / ComObjUnwrap	Suknelės / unwraps COM objektą.
+	ComObjError	Įjungia arba išjungia pranešimą COM klaidų.
+	ComObjFlags	Nuskaito arba keičia vėliavas, kuri kontroliuoja COM įvynioti objekto elgesį.
+	ComObjGet	Grąžina nuorodą į objekto pateikta COM komponentą.
+	ComObjMissing	Sukuria "trūksta parametrą" objektas pereina į COM metodu.
+	ComObjParameter	Antklodės vertę ir tipas perduoti kaip parametras COM metodu.
+	ComObjQuery	Užklausų COM objektą sąsaja ar paslaugą.
+	ComObjType	Nuskaito tipo informaciją iš COM objektą.
+	ComObjValue	Nuskaito vertę arba žymeklį saugomi COM įvynioti objektą.
+	Continue	Praleidžia dabartinio ciklo iteracijos poilsio ir pradeda naują. Galioja viduje bet kilpos natūra.
+	Control	Modelių pokyčių į valdymo įvairovė.
+	ControlClick	Siunčia pelės mygtuką arba pelės rato renginį kontrolei.
+	ControlEditPaste	Pastos Styginių tuo Žymeklis / įrašyti padėtį redagavimo kontrolę (tai neturi įtakos iškarpinės turinį).
+	ControlFocus	Nustato įvesties dėmesio tam tikrą kontrolės langą.
+	ControlGet	Nuskaito įvairių tipų informacijos apie kontrolę.
+	ControlGetFocus	Nuskaito kuri turi įvesties dėmesio kontrolė tikslinės langą, jei tokių yra.
+	ControlGetPos	Nuskaito padėtį ir dydį kontrolei.
+	ControlGetText	Nuskaito tekstą iš kontrolės.
+	ControlMove	Perkelia arba didinama kontrolei.
+	ControlSend / ControlSendRaw	Siunčia imituoti klaviatūros prie lango ar kontrolės.
+	ControlSetText	Keičia į kontrolės tekstą.
+	CoordMode	Rinkiniai koordinuoti režimą komandas, kad būti santykinis arba į aktyvaus lango ar ekrano.
+	Cos	Grąžina Trigonometrinis kosinusas Number.
+	Delete	Pašalina raktų reikšmių poras nuo objekto.
+	DllCall	Skambučiai funkciją viduje DLL, pavyzdžiui, standartinis API funkcija Windows.
+	Drive	Išstumia / atitraukia dėklą į CD arba DVD diską, arba nustato disko garso etiketę.
+	DriveGet	Nuskaito įvairių rūšių informaciją apie kompiuterio diską (-us).
+	DriveSpaceFree	Nuskaito laisvos vietos diske sukurti diską, megabaitais.
+	Else	Nurodo komandą (-as) vykdyti, jei IF-pareiškimas įvertina FALSE. Kai daugiau nei vienas komanda yra, pridėti juos į bloko (sąvaržos).
+	EnvAdd	Nustato kintamąjį į save suma pridedant tikros ribos (taip pat galite pridėti arba atimti laiką iš datą laiko vertę). Sinonimu: Var + = vertę.
+	EnvDiv	Nustato kintamąjį į save, padalinta iš tikro. Sinonimu: var / = reikšmė.
+	EnvGet	Nuskaito žinutę aplinkos kintamąjį.
+	EnvMult	Nustato kintamąjį į save laikai tikroje vertės. Sinonimu: Var * = reikšmė.
+	EnvSet	Rašo reikšmę, kad kintamojo esančios aplinkai.
+	EnvSub	Nustato kintamąjį sau minuso tikroje vertės (taip pat galite palyginti data-laiko vertės). Sinonimu: Var - = vertę.
+	EnvUpdate	Praneša OS ir visas vykdomas programas, aplinkos kintamąjį (-ai) pasikeitė.
+	ExitApp	Nutraukia scenarijų besąlygiškai.
+	Exp	Grąžinimas E (kuri yra maždaug 2,71828182845905) iškėlė Neribotos galios.
+	Expression	Atlieka vieną ar daugiau operacijų nuo daugelio kintamųjų, pažodinio stygų ir / arba pažodinio numerių serijomis.
+	FileAppend	Rašo tekstą su byla (pirmasis rinkmeną kurianti, jei reikia) pabaigoje.
+	FileCopy	Kopijos Vienas ar keli failai.
+	FileCopyDir	Kopijos aplanke kartu su visais savo pakatalogius ir failus (panašių į xcopy).
+	FileCreateDir	Sukuria aplanką.
+	FileCreateShortcut	Sukuria santrumpa (LNK) failą.
+	FileDelete	Ištrina vieną ar daugiau failų.
+	FileGetAttrib	Ataskaitos, ar failas arba aplankas skirtas tik skaityti, paslėpta, ir tt
+	FileGetShortcut	Nuskaito informaciją apie nuorodų (LNK) failą, pavyzdžiui, savo tikslinę failą.
+	FileGetSize	Nuskaito iš failo dydį.
+	FileGetTime	Nuskaito datetime antspaudą failo ar aplanko.
+	FileGetVersion	Nuskaito iš failo versiją.
+	FileMove	Perkelia arba pervadina vieną ar daugiau failų.
+	FileMoveDir	Perkelia aplanką, kartu su visais savo pakatalogius ir failus. Jis taip pat gali pakeisti aplanko.
+	FileOpen	Teikia Objektinis I File / O.
+	FileRead	Skaityta failo turinį į kintamąjį.
+	FileReadLine	Skaityta nurodytą liniją nuo failą ir išsaugo į kintamąjį tekstą.
+	FileRecycle	Siunčia failą ar katalogą į šiukšlinę, jei įmanoma.
+	FileRecycleEmpty	Ištuštinti šiukšlinę.
+	FileRemoveDir	Ištrina aplanką.
+	FileSelectFile	Rodo standartinį langą, kuris leidžia vartotojui atidaryti ar išsaugoti failą (-us).
+	FileSelectFolder	Rodo standartinį langą, kuris leidžia vartotojui pasirinkti aplanką.
+	FileSetAttrib	Pakeičia vieną ar daugiau failų ar aplankų atributus. Wildcard yra palaikomi.
+	FileSetTime	Keičia datetime antspaudą vieno ar daugiau failų ar aplankų. Wildcard yra palaikomi.
+	Floor	Grąžina skaičius suapvalinamas iki artimiausio sveikojo skaičiaus (be jokių .00 priesaga).
+	For	Kartoja komandų serija kartą už kiekvieną raktas vertės poros objektas.
+	Format	Formatai kintama skaičių įvesties vertes pagal formato eilutę.
+	FormatTime	Transformuoja YYYYMMDDHH24MISS timestamp į nurodytą datos / laiko formatą.
+	Func	Nuskaito nuoroda į funkciją.
+	GetKeyName / GetKeyVK / GetKeySC	Nuskaito pavadinimą arba tekstą, virtualus kodą arba nuskaityti kodą raktas.
+	GetKeyState	Patikrina, ar klaviatūros klavišą arba pelės / kreiptuką mygtuką žemyn arba aukštyn. Taip pat nuskaito joystick statusą.
+	Gosub	Peršoka į nurodytą etiketėje ir toliau vykdymą iki grąža yra susiduriama.
+	Goto	Peršoka į nurodytą etiketėje ir toliau vykdymą.
+	GroupActivate	Aktyvuoja kitą langą lango grupėje, kuri buvo apibrėžta su groupadd.
+	GroupAdd	Prideda langą specifikaciją prie lango grupės, kuriant grupę, jei reikia.
+	GroupClose	Uždaro aktyvų langą, jei jis buvo tiesiog įjungiama GroupActivate ar GroupDeactivate. tada jis įjungia kitą langą serijos. Ji taip pat gali uždaryti visus langus su grupe.
+	GroupDeactivate	Panašus į GroupActivate išskyrus aktyvina kitas langas nėra grupės.
+	HasKey	Grąžina true, jei raktas yra susietas su verte.
+	If	Nurodo komanda (-ai) atlikti, jei kintamojo palyginimas vertės evalutes true. Kai daugiau nei vienas komanda yra, pridėti juos į bloko (sąvaržos).
+	If (expression)	Nurodo komandą (-as) vykdyti, jei išraiška įvertina TRUE.
+	If A_Index	Patikrinimai jei srovės kilpą iteracijos kėlinio kad konkretus skaičius.
+	If Clipboard	Patikrina, ar į iškarpinę tekstas kėlinio nurodytą eilutę.
+	If ErrorLevel	Patikrinimai, jei nenurodyta vaizdo ar pikselis buvo rastas į ekraną.
+	If var [not] between	Tikrina, ar kintamojo turinį yra skaičiais arba pagal abėcėlę tarp dviejų verčių (imtinai).
+	If var [not] in / If var [not] contains MatchList	Tikrina, ar kintamojo turinį atitiktų vieną iš sąrašo elementus.
+	If var is [not] type	Tikrina, ar kintamojo anketa turinys yra skaitmeninis, didžiąsias ir tt
+	IfEqual / IfNotEqual	Lygina kintamąjį vertės lygybės. Sinonimu: jei var = reikšmė | jei kintamojo <> kaina.
+	IfExist / IfNotExist / FileExist	Tikrina iš failo arba aplanko egzistavimą.
+	IfGreater / IfGreaterOrEqual	Lygina kintamąjį vertė. Sinonimu: jei kintamojo> Vertė | jei kintamojo> = kaina.
+	IfInString / IfNotInString	Patikrina, ar kintamasis yra nurodyta seka.
+	IfLess / IfLessOrEqual	Lygina kintamąjį vertė. Sinonimu: jei kintamojo <Vertė | jei Var <= reikšmė.
+	IfMsgBox	Patikrinimai, kurie mygtukas buvo stumiamos vartotojui per paskutinius MsgBox komandą.
+	IfWinActive / IfWinNotActive	Tikrina, ar nurodytas langas egzistuoja ir šiuo metu veikia (svarbiausia).
+	IfWinExist / IfWinNotExist	Patikrina, ar nurodyta langas egzistuoja.
+	ImageSearch	Ieško yra ekrano regioną vaizdą.
+	IniDelete	Ištrina vertę nuo standartinio formato ini failą.
+	IniRead	Skaityta vertę nuo standartinio formato ini failą.
+	IniWrite	Rašo vertės standartinio formato ini failą.
+	Input	Laukia, kad vartotojas galėtų Įveskite eilutę (ne Palaikomos Windows 9x: jis nieko nedaro).
+	InputBox	Rodo įvesties langelį prašyti vartotoją įvesti eilutę.
+	InsertAt	Įterpia vieną arba daugiau reikšmių tam tikru pozicijos linijiniu masyvo.
+	InStr	Ieško tikroje atsiradimo Styga, iš kairės ar dešinės.
+	KeyWait	Laukia rakto ar pelė / manipuliatoriaus mygtukas bus išleistas arba nuspaudus.
+	Label	Etiketė identifikuoja kodo eilutę, ir gali būti naudojamas kaip Pereiti prie taikinio arba suformuoti paprogramė.
+	Length	Grąžina linijiniu masyvo, pradedama brėžti 1 padėtį ilgį.
+	ListVars	Rodo scenarijaus kintamųjų: jų pavadinimus ir dabartinius turinį.
+	Ln	Natūralusis logaritmas (bazė E) numerį.
+	LoadPicture	Įkelia paveikslėlį iš failo ir grąžina bitmap ar piktogramą rankeną.
+	Log	Grąžina logaritmas (pagrindas 10) numeris.
+	Loop (files & folders)	Nuskaito nurodytus failus ar aplankus, vienu metu.
+	Loop (normal)	Atlikti komandų serija kartą: arba nurodyti skaičių kartų arba tol, kol pertrauka yra susiduriama.
+	Loop (parse a string)	Nuskaito poeilių (laukų) nuo eilutę, vienu metu.
+	Loop (read file contents)	Nuskaito į tekstinį failą, viena linijas vienu metu (atlieka geriau nei FileReadLine).
+	Loop (registry)	Nuskaito konkretaus registro raktą turinys, vienas elementas vienu metu.
+	MaxIndex	Grąžina didžiausią sveikąjį klavišą.
+	MinIndex	Grąžina mažiausią sveikąjį skaičių klavišą.
+	Mod	Modulį. Grąžina likusi, kai dividendai yra padalytas daliklis.
+	MouseGetPos	Nuskaito esamą padėtį pelės žymeklis, ir pasirinktinai kurį langą ir kontroliuoti tai sklandė virš.
+	MsgBox	Rodo nurodytą tekstą mažame lange, kuriame yra viena ar daugiau mygtukų (pavyzdžiui, taip ir ne).
+	NumGet	Grąžina dvejetainis skaičius saugomi nurodytu adresu + kompensuoti.
+	NumPut	Parduotuvių skaičius dvejetainiu formatu nurodytu adresu + kompensuoti ir grąžina adresą į elemento dešinėje tik raštu.
+	Object	Sukuria scenarijus Association masyvas.
+	Ord	Grąžina įveskite kanalo pirmojo personažo eilutės reikšmė (skaitmeninis simbolių kodą).
+	OutputDebug	Siunčia eilutę išriktuotojo (jei yra) ekrane.
+	Parameter	Prideda parametrą funkcijai.
+	Pause	Pauzių scenarijaus dabartinę giją.
+	PixelGetColor	Nuskaito į tuo nurodytą x pikselių spalvos, Y koordinates.
+	PixelSearch	Ieško yra ekrano regioną iš nurodytos spalvos pikselių.
+	Pop	Pašalina ir grąžina paskutinį masyvo elementą.
+	PostMessage	Vietos prane¹im pranešimo eilės lango ar kontrolės.
+	Process	Atlieka vieną iš šių operacijų procesą: patikrinimus, jei jis egzistuoja; keičia savo prioritetą; užsidaro tai; laukia, kad ji uždaryti.
+	Progress	Sudaro arba atnaujina langą, kuriame yra progreso juostą.
+	Push	Prideda reikšmes masyvo pabaigos.
+	Random	Sukuria pseudo atsitiktinių skaičių.
+	RegDelete	Pašalina raktą arba reikšmę iš registro.
+	RegExMatch	Nustato, ar eilutė yra modelis (Įprastoji išraiška).
+	RegExReplace	Pakeičia įvykių iš modelio (reguliaraus išraiška) viduje eilutę.
+	RegRead	Skaityta reikšmę iš registro.
+	RegWrite	Rašo vertę registre.
+	RemoveAt	Pašalina elementus iš pateiktų poziciją linijiniu masyvo.
+	Return	Grįžta iš paprogramės, kuriai vykdyti anksčiau šoktelėjo per funkcinėje skambučio, Gosub, Hotkey aktyvavimo, GroupActivate, arba kitais būdais.
+	Round	Jei N praleidžiami arba 0, kiekis apvalinamas iki artimiausio sveikojo skaičiaus. Jei N yra teigiamas skaičius, kiekis yra apvalinamas iki N dešimtųjų tikslumu. Jei N yra neigiamas, skaičius yra užapvalintas N skaitmenų po dešimtainio taško kairėje.
+	Run	Veikia išorinį programą.
+	RunAs	Nurodo vartotojo kredencialus rinkinys, kuris bus naudojamas visuose vėlesniuose naudojimo Run ir RunWait. Reikalingas Windows 2000 / XP arba naujesnė versija.
+	RunWait	Veikia išorinį programą ir laukia, kol ji nesibaigė.
+	Send / SendRaw	Siunčia imituoti klaviatūros ir pelės spustelėjimų aktyviame lange.
+	SendLevel	Kontrolės, kuri dirbtiniai klaviatūros ir pelės įvykiai yra ignoruojamos klavišus ir hotstrings.
+	SendMessage	Siunčia žinutę langą arba kontrolės ir laukia pripažinimo.
+	SetCapslockState	Nustato Capslock Key valstybinis. taip pat gali priversti raktą likti įjungti arba išjungti.
+	SetKeyDelay	Nustato vėlavimą, kuris įvyks po kiekvieno paspaudimo atsiųstą siųsti arba ControlSend.
+	SetNumlockState	Nustato NumLock Key valstybinis. taip pat gali priversti raktą likti įjungti arba išjungti.
+	SetRegView	Leidžia registro komandas 32 bitų scenarijų ir atidarykite 64 bitų registro vaizdą ir atvirkščiai.
+	SetScrollLockState	Nustato ScrollLock Key valstybinis. taip pat gali priversti raktą likti įjungti arba išjungti.
+	SetTimer	Sukelia paprogramė bus pradėta automatiškai ir nuolat nurodytu laiko intervalu.
+	Shutdown	Išsijungia, persikrauna, ar rąstų išjungti sistemą.
+	Sin	Grąžina Trigonometrinis sinusą numerį.
+	Sleep	Laukia nurodytą laiko prieš tęsiant.
+	Sort	Organizuoja kintamojo turinį abėcėlę, skaitinis, ar atsitiktine tvarka (pasirinktinai išbraukimo dublikatus).
+	SoundBeep	Skleidžia tonas iš kompiuterio garsiakalbių.
+	SoundGet	Nuskaito įvairius nustatymus iš garso įrenginys (Master Nutildyti meistras apimtis, ir tt)
+	SoundGetWaveVolume	Nuskaito bangų stiprumą nuo garso įrenginį.
+	SoundPlay	Atkuria garso, vaizdo ar kitos palaiko failo tipą.
+	SoundSet	Pokyčiai įvairius parametrus patikimo įrenginio (Master nutildyti, meistras apimtis ir tt)
+	SoundSetWaveVolume	Keičia bangų stiprumą už garso įrenginį.
+	SplashImage	Sudaro arba atnaujina langą, kuriame JPG, GIF arba BMP įvaizdį.
+	SplashTextOff	Uždaro virš lango.
+	SplashTextOn	Sukuria pritaikoma teksto lango.
+	SplitPath	Atskiria failo vardas arba URL į savo vardą, pavardę, katalogas, pratęsimo, ir diską.
+	Sqrt	Grąžina kvadratinę šaknį numerį.
+	StatusBarGetText	Nuskaito tekstą iš standartinės būsenos juostoje kontrolę.
+	StatusBarWait	Laukia, kol langas būsenos juostoje yra nurodyta seka.
+	StringGetPos	Nuskaito į nurodytą poeilučio poziciją per eilutę.
+	StringLeft	Nuskaito simbolių iš kairės pusėje eilutę skaičių.
+	StringLen / StrLen	Nuskaito, kiek simbolių yra eilutę skaičių.
+	StringLower	Konvertuoja eilutę mažosiomis.
+	StringMid / SubStr	Nuskaito vieną ar daugiau simbolių iš konkrečios padėties eilutę.
+	StringReplace / StrReplace	Pakeičia nurodyto poeilutį su nauju eilutę.
+	StringRight	Nuskaito simbolių iš dešiniosios pusės eilutės numerį.
+	StringSplit / StrSplit	Atskiria eilutę į iš poeilių naudojant nurodytą skirtukus masyvo.
+	StringTrimLeft	Pašalina simbolių iš kairės pusėje eilutę skaičių.
+	StringTrimRight	Pašalina simbolių iš dešinės pusės stygų skaičių.
+	StringUpper	Konvertuoja string didžiosiomis raidėmis.
+	StrPut / StrGet	Kopijos eilutę arba iš atminties adresą, neprivalomas konvertuoti jį tarp kodas puslapių.
+	SysGet	Nuskaito ekrano rezoliuciją, multi-monitoriaus info, matmenys sistemos objektų ir kitų sistemų savybes.
+	Tan	Grąžina Trigonometrinis tangentas numerį.
+	ToolTip	Sukuria visada ant viršaus langą bet kur ekrane.
+	Transform	Atlieka įvairios matematikos funkcijas, Bitinis operacijų ir užduotis, pavyzdžiui, ASCII / Unicode konvertavimo.
+	TrayTip	Sukuria baliono pranešimo langą šalia piktogramą. Reikalingas Windows 2000 / XP arba naujesnė versija.
+	Trim / LTrim / RTrim	Apdaila tam tikrus simbolius pradžioje ir / arba pabaigoje eilutę.
+	Until	Taikoma sąlyga į kilpą tęsimą, arba už-kilpa.
+	UrlDownloadToFile	Parsisiųsti failą iš interneto.
+	UserFunction	Sukuria funkcija struktūrą.
+	Variable	Priskiria nurodytą vertę kintama.
+	While	Atlieka komandų serija, kol nurodyta išraiška įvertina false.
+	WinActivate	Aktyvuoja nurodytą langą (daro tai svarbiausia).
+	WinActivateBottom	Tas pats kaip WinActivate išskyrus tai, kad jis aktyvina Žemiausias (bent neseniai aktyvaus) atitikimo langas, o ne viršutinis.
+	WinActive	Grąžina unikalus ID (HWND) aktyvaus lango, jei jis atitinka nurodytus kriterijus.
+	WinClose	Uždaro nurodytą langą.
+	WinExist	Patikrina, ar nurodyta langas egzistuoja.
+	WinGet	Nuskaito nurodyto lango unikalų ID, proceso ID, proceso pavadinimas, ar jos kontrolę, sąrašą. Jis taip pat gali gauti visų langų atitikimo nurodytus kriterijus, sąrašą.
+	WinGetClass	Nuskaito nurodyto lango klasės vardą.
+	WinGetPos	Nuskaito padėtį ir dydį nurodytą langą.
+	WinGetText	Nuskaito tekstą iš nurodyto lange.
+	WinGetTitle	Nuskaito į nurodytą lango pavadinimą.
+	WinHide	Paslepia nurodytą langą.
+	WinHttpDownloadToFile	Siuntiniai Vienas ar keli failai iš interneto.
+	WinKill	Verčia nurodyta langą uždaryti.
+	WinMaximize	Padidina nurodytą langą į maksimalų dydį.
+	WinMenuSelectItem	Remiasi meniu punktą iš meniu juostos, nurodytos lange.
+	WinMinimize	Išnyksta nurodytą langą į mygtuko užduočių juostoje.
+	WinMinimizeAll	Sumažina visus langus.
+	WinMinimizeAllUndo	Apsisuks ankstesnio WinMinimizeAll poveikį.
+	WinMove	Keičia poziciją ir / ar dydį nurodytą lango.
+	WinRestore	Unminimizes arba unmaximizes nurodytą langą, jei jis būtų kuo mažesnis arba maksimaliai.
+	WinSet	Modelių pakeitimų nurodytą lange, pavyzdžiui, "Visada viršuje" ir skaidrumo įvairovė.
+	WinSetTitle	Keičia nurodytą lango pavadinimą.
+	WinShow	Unhides nurodytą langą.
+	WinWait	Laukia, kol nurodyta langas egzistuoja.
+	WinWaitActive	Laukia, kol nurodyta langas yra aktyvus.
+	WinWaitClose	Laukia, kol nurodyta langas neegzistuoja.
+	WinWaitNotActive	Laukia, kol nurodyta langas nėra aktyvus.
+	Zip / UnZip	Suspausti ar išpakuoti vieną ar daugiau zip failus.
+	WinExist	Patikrina, ar nurodyta langas egzistuoja.
+	WinGet	Nuskaito nurodyto lango unikalų ID, proceso ID, proceso pavadinimas, ar jos kontrolę, sąrašą. Jis taip pat gali gauti visų langų atitikimo nurodytus kriterijus, sąrašą.
+	WinGetClass	Nuskaito nurodyto lango klasės vardą.
+	WinGetPos	Nuskaito padėtį ir dydį nurodytą langą.
+	WinGetText	Nuskaito tekstą iš nurodyto lange.
+	WinGetTitle	Nuskaito į nurodytą lango pavadinimą.
+	WinHide	Paslepia nurodytą langą.
+	WinHttpDownloadToFile	Siuntiniai Vienas ar keli failai iš interneto.
+	WinKill	Verčia nurodyta langą uždaryti.
+	WinMaximize	Padidina nurodytą langą į maksimalų dydį.
+	WinMenuSelectItem	Remiasi meniu punktą iš meniu juostos, nurodytos lange.
+	WinMinimize	Išnyksta nurodytą langą į mygtuko užduočių juostoje.
+	WinMinimizeAll	Sumažina visus langus.
+	WinMinimizeAllUndo	Apsisuks ankstesnio WinMinimizeAll poveikį.
+	WinMove	Keičia poziciją ir / ar dydį nurodytą lango.
+	WinRestore	Unminimizes arba unmaximizes nurodytą langą, jei jis būtų kuo mažesnis arba maksimaliai.
+	WinSet	Modelių pakeitimų nurodytą lange, pavyzdžiui, "Visada viršuje" ir skaidrumo įvairovė.
+	WinSetTitle	Keičia nurodytą lango pavadinimą.
+	WinShow	Unhides nurodytą langą.
+	WinWait	Laukia, kol nurodyta langas egzistuoja.
+	WinWaitActive	Laukia, kol nurodyta langas yra aktyvus.
+	WinWaitClose	Laukia, kol nurodyta langas neegzistuoja.
+	WinWaitNotActive	Laukia, kol nurodyta langas nėra aktyvus.
+	Zip / UnZip	Suspausti ar išpakuoti vieną ar daugiau zip failus.

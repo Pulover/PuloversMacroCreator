@@ -1,0 +1,1443 @@
+﻿Lang_tr
+		
+		; Turkish
+		
+; 01. Main Menu		
+	m_Lang001 =	&Dosya
+	m_Lang002 =	&Makro
+	m_Lang003 =	&Komutları
+	m_Lang004 =	&fonksiyon
+	m_Lang005 =	D&üzenle
+	m_Lang006 =	&Seçmek
+	m_Lang007 =	&Görmek
+	m_Lang008 =	S&eçenekler
+	m_Lang009 =	&Bağışlamak
+	m_Lang010 =	&Yardım
+		
+; 02. File Sub Menu		
+	f_Lang001 =	&Yeni
+	f_Lang002 =	&Açık
+	f_Lang003 =	&Kurtarmak
+	f_Lang004 =	&Farklı Kaydet
+	f_Lang005 =	Y&eni Dosyalar
+	f_Lang006 =	A&HK Aktar
+	f_Lang007 =	&Önizleme Senaryo
+	f_Lang008 =	K&omut Dosyasını Düzenleyin
+	f_Lang009 =	&Makro Programı
+	f_Lang010 =	&Listesi değişkenleri
+	f_Lang011 =	&Çıkış
+	f_Lang012 =	H&içbir içerik
+		
+; 03. Macro Sub Menu		
+	r_Lang001 =	&Makro Kaydet
+	r_Lang002 =	M&akrolar etkinleştirin
+	r_Lang003 =	&Güncel Makro oyna
+	r_Lang004 =	&Kronometre
+	r_Lang005 =	Mak&roları Devre Dışı Bırakmak
+	r_Lang006 =	&Seçilen satırdaki oyna
+	r_Lang007 =	S&eçili satır kadar oyna
+	r_Lang008 =	Se&çilen Satırlar oyna
+	r_Lang009 =	&Bağlam Duyarlı Hotkeys
+	r_Lang010 =	Makr&o Ekle
+	r_Lang011 =	Ka&pat Makro
+	r_Lang012 =	Makro ço&ğaltın
+	r_Lang013 =	Makro&lar Düzenle
+	r_Lang014 =	&İthalat Makro
+	r_Lang015 =	G&üncel Makro Kaydet
+		
+; 04. Function Sub Menu		
+	u_Lang001 =	&Fonksiyon oluşturma
+	u_Lang002 =	&Parametre ekle
+	u_Lang003 =	&Dönüş ekle
+	u_Lang004 =	F&onksiyonu için makro dönüştürme
+		
+; 05. Commands Sub Menu		
+	i_Lang001 =	&Fare
+	i_Lang002 =	&Metin
+	i_Lang003 =	&Kontrol
+	i_Lang004 =	&Durma
+	i_Lang005 =	M&esaj Kutusu
+	i_Lang006 =	&Anahtar Bekleyin
+	i_Lang007 =	&Pencere
+	i_Lang008 =	&Görüntü / Piksel Arama
+	i_Lang009 =	D&osya / Dizi / Misc Çalıştırın.
+	i_Lang010 =	D&öngü
+	i_Lang011 =	E&tiket Gidin
+	i_Lang012 =	&Set zamanlayıcı
+	i_Lang013 =	E&ğer Tablolar
+	i_Lang014 =	Değ&işkenler / Diziler
+	i_Lang015 =	Fo&nksiyonlar / Dizi yöntemleri
+	i_Lang016 =	Eposta gönde&r
+	i_Lang017 =	Dos&ya indirme
+	i_Lang018 =	&Zip / Sıkıştırılmış dosya
+	i_Lang019 =	Internet E&xplorer
+	i_Lang020 =	Ifade / &COM Arabirimi
+	i_Lang021 =	&Windows Iletileri
+	i_Lang022 =	&(Ctrl+Shift+F) bir komut bul
+		
+; 06. Edit Sub Menu		
+	e_Lang001 =	&Çift
+	e_Lang002 =	&Yorum düzenle
+	e_Lang003 =	&Bul / Değiştir
+	e_Lang004 =	&Kopyala...
+	e_Lang005 =	&Undo
+	e_Lang006 =	Y&eniden yapmak
+	e_Lang007 =	Ke&smek
+	e_Lang008 =	K&opyala
+	e_Lang009 =	Y&apıştırmak
+	e_Lang010 =	S&ilmek
+	e_Lang011 =	Yuka&rı çıkmak
+	e_Lang012 =	A&şağı Taşı
+	e_Lang013 =	Ku&tusundan Ekle
+	e_Lang014 =	Tuş Ek&lemek
+	e_Lang015 =	&Düzen renk işareti
+	e_Lang016 =	&Gruplar
+	e_Lang017 =	&Grupları etkinleştirme
+	e_Lang018 =	G&rup ekle
+	e_Lang019 =	Gr&up kaldır
+	e_Lang020 =	&Tüm grupları kaldırın
+	e_Lang021 =	T&üm daraltmak
+	e_Lang022 =	&Hepsini genişlet
+		
+; 07. Select Sub Menu		
+	s_Lang001 =	&Tümünü Seç
+	s_Lang002 =	&Yok seçeneğini
+	s_Lang003 =	&Seçim Invert
+	s_Lang004 =	S&eçilen kontrol
+	s_Lang005 =	&Işaretini kaldırın Seçilmiş
+	s_Lang006 =	&Çekler Invert
+	s_Lang007 =	Se&çimi Yukarı Taşımak
+	s_Lang008 =	Seçi&mi Aşağı Hareket
+	s_Lang009 =	Seçi&len Tip
+	s_Lang010 =	Komut türü
+		
+; 08. View Sub Menu		
+	v_Lang001 =	&Her zaman üstte
+	v_Lang002 =	&Vurgulamak Satır
+	v_Lang003 =	&Girinti
+	v_Lang004 =	&Kontroller Araç Çubuğu
+	v_Lang005 =	&Önizleme
+	v_Lang006 =	&Araç Çubukları
+	v_Lang007 =	K&ısayol Tuşları
+	v_Lang008 =	A&rama Çubuğu
+	v_Lang009 =	&Sütunlar Boyutu Sıfırla
+	v_Lang010 =	S&imgeler Boyutu
+	v_Lang011 =	&Düzen Sıfırla
+	v_Lang012 =	D&osya
+	v_Lang013 =	Ka&ydedin ve oyna
+	v_Lang014 =	Ko&mutları
+	v_Lang015 =	D&üzenleme
+	v_Lang016 =	S&eçenekleri
+	v_Lang017 =	Ö&zelleştirme
+	v_Lang018 =	O&tomatik
+	v_Lang019 =	Ma&nuel
+	v_Lang020 =	D&ur
+	v_Lang021 =	Durma
+	v_Lang022 =	&Kompakt
+	v_Lang023 =	&En Uygun
+	v_Lang024 =	&Varsayılan
+	v_Lang025 =	Kü&çük
+	v_Lang026 =	&Büyük
+		
+; 09. Options Sub Menu		
+	o_Lang001 =	&Ayarlar
+	o_Lang002 =	&Tepsisine küçült
+	o_Lang003 =	A&raç çubuğu kontrolleri görüntülemek
+	o_Lang004 =	&Bu pencerede basılmasını Capture
+	o_Lang005 =	&Her Zaman Aktif Kısayollar
+	o_Lang006 =	&kapatma seçenekleri (Ne zaman çalma bitirir...)
+	o_Lang007 =	Ba&ğlam Duyarlı Hotkeys
+	o_Lang008 =	K&ısayol tuşu "Play" için Windows tuşu ekle
+	o_Lang009 =	Kı&sayol olarak bir joystick düğmesini kullanın
+	o_Lang010 =	&Varsayılan Hotkeys Olarak Ayarla
+	o_Lang011 =	VaRsa&yılan Dosya Olarak Ayarla
+	o_Lang012 =	Varsayı&lan Dosya kaldır
+	o_Lang013 =	Varsayıla&n Hotkeys
+	o_Lang014 =	Varsayılan Ayarlar
+		
+; 10. Donate Sub Menu		
+	p_Lang001 =	&PayPal Bağış
+		
+; 11. Help Sub Menu		
+	h_Lang001 =	&Yardım
+	h_Lang002 =	&Öğreticiler
+	h_Lang003 =	&İpuçları
+	h_Lang004 =	&Makro Creator Home
+	h_Lang005 =	&Forum
+	h_Lang006 =	&AHK Çevrimiçi Belgeler
+	h_Lang007 =	&Güncellemeleri kontrol...
+	h_Lang008 =	&Başlangıçta kontrol edin
+	h_Lang009 =	&Hakkında
+		
+; 12. Tray Menu		
+	y_Lang001 =	Pencere gizle
+	y_Lang002 =	Pencere göster
+	y_Lang003 =	Kontroller Araç Çubuğu
+		
+; 13. Built-in Vars Menu		
+	b_Lang001 =	özel Karakterler
+	b_Lang002 =	özellikleri
+	b_Lang003 =	Tarih ve Saat
+	b_Lang004 =	Kullanıcı Boş Zaman
+	b_Lang005 =	Sistem ve Kullanıcı
+	b_Lang006 =	Çeşitli.
+	b_Lang007 =	Döngü
+		
+; 14. Main Window		
+	w_Lang001 =	Ihracat
+	w_Lang002 =	Önizleme
+	w_Lang003 =	Seçenekler
+	w_Lang004 =	Kayıt
+	w_Lang005 =	Oynamak
+	w_Lang006 =	Playback
+	w_Lang007 =	Manuel
+	w_Lang008 =	Dur
+	w_Lang009 =	Araç çubuğu kontrolleri görüntülemek
+	w_Lang010 =	Durma
+	w_Lang011 =	Döngü
+	w_Lang012 =	Bu pencerede basılmasını Capture
+	w_Lang013 =	Tepsisine küçült
+	w_Lang014 =	Her Zaman Aktif Kısayollar
+	w_Lang015 =	Tekrarlayın
+	w_Lang016 =	Gecikme (ms)
+	w_Lang017 =	Uygulamak
+	w_Lang018 =	Eklemek
+	w_Lang019 =	Düzenle
+	w_Lang020 =	kapatma seçenekleri (Ne zaman çalma bitirir...)
+	w_Lang021 =	Hiçbir şey yapma
+	w_Lang022 =	Yakın başvuru
+	w_Lang023 =	Kapatmak
+	w_Lang024 =	Kapatın (kuvvet)
+	w_Lang025 =	Yeniden başlatın
+	w_Lang026 =	Oturumu kapatın
+	w_Lang027 =	Kış uykusuna yatmak
+	w_Lang028 =	Askıya almak
+	w_Lang029 =	Bilgisayar kilit
+	w_Lang030 =	Indeks
+	w_Lang031 =	Eylem
+	w_Lang032 =	Ayrıntılar
+	w_Lang033 =	Tekrarlayın
+	w_Lang034 =	Geciktirmek
+	w_Lang035 =	Tip
+	w_Lang036 =	Kontrol
+	w_Lang037 =	Pencere
+	w_Lang038 =	Yorumlamak
+	w_Lang039 =	Renk
+	w_Lang040 =	Yeni (Ctrl+N)
+	w_Lang041 =	Aç (Ctrl+O)
+	w_Lang042 =	Kaydet (Ctrl+S)
+	w_Lang043 =	Farklı Kaydet (Ctrl+Shift+S)
+	w_Lang044 =	AHK (Ctrl+E) aktar
+	w_Lang045 =	Önizleme Script (Ctrl+P)
+	w_Lang046 =	Ayarlar (Ctrl+G)
+	w_Lang047 =	Makro Kaydet (Ctrl+R)
+	w_Lang048 =	Etkinleştir Makrolar (Ctrl+Enter)
+	w_Lang049 =	Cari Makro Oyna (Ctrl+Shift+Enter)
+	w_Lang050 =	Timer (Ctrl+Shift+T)
+	w_Lang051 =	Fare (F2)
+	w_Lang052 =	Metin (F3)
+	w_Lang053 =	Makrolar Düzenle (Ctrl+Shift+M)
+	w_Lang054 =	Kontrol (F4)
+	w_Lang055 =	Durma (F5)
+	w_Lang056 =	Mesaj Kutusu (Shift+F5)
+	w_Lang057 =	Anahtar Bekleyin (Ctrl+F5)
+	w_Lang058 =	Pencere (F6)
+	w_Lang059 =	Görüntü / Piksel Arama (F7)
+	w_Lang060 =	Dosya / Dizi / Misc çalıştırın. (F8)
+	w_Lang061 =	Döngü (F9)
+	w_Lang062 =	Etiket Gidin (+ F9 Shift)
+	w_Lang063 =	Sayacını Ayarlamak (Ctrl + F9)
+	w_Lang064 =	Eğer Tablolar (F10)
+	w_Lang065 =	Değişkenler / Diziler (F10+Shift)
+	w_Lang066 =	İşlevler / Dizi yöntemleri (Ctrl+F10)
+	w_Lang067 =	Eposta gönder (F11)
+	w_Lang068 =	Dosya indirme (F11+Shift)
+	w_Lang069 =	Zip / Sıkıştırılmış dosya (Ctrl+F11)
+	w_Lang070 =	Internet Explorer (F12)
+	w_Lang071 =	Ifade / COM Arabirimi (Shift+F12)
+	w_Lang072 =	Windows iletileri (Ctrl+F12)
+	w_Lang073 =	Makro Ekle (Ctrl+T)
+	w_Lang074 =	Kapat Makro (Ctrl+W)
+	w_Lang075 =	Makro çoğaltın (Ctrl+Shift+D)
+	w_Lang076 =	İthalat Makro (Ctrl+I)
+	w_Lang077 =	Cari Makro Kaydet (Ctrl+Alt+S)
+	w_Lang078 =	Yukarı Taşı (Ctrl+PageUp)
+	w_Lang079 =	(Ctrl+PageDown) Aşağı Taşı
+	w_Lang080 =	Seçili Satırlar çoğaltın (Ctrl+D)
+	w_Lang081 =	Seçili Satırlar (Ctrl+X) Cut
+	w_Lang082 =	Seçili Satırlar (Ctrl+C) kopyalayın
+	w_Lang083 =	Yapıştır Kopyalanan Satırlar (Ctrl+V)
+	w_Lang084 =	Seçili Satırlar (Del) Sil
+	w_Lang085 =	Geri Al (Ctrl+Z)
+	w_Lang086 =	Yinele (Ctrl+Y)
+	w_Lang087 =	Kopyala...
+	w_Lang088 =	Bul / Değiştir (Ctrl+F)
+	w_Lang089 =	Eklemek / Yorum düzenle (Ctrl+L)
+	w_Lang090 =	Düzen renk işareti (Ctrl+M)
+	w_Lang091 =	Özelleştirme
+	w_Lang092 =	(Ctrl+Shift+F) bir komut bul
+	w_Lang093 =	Düzenle (Enter)
+	w_Lang094 =	Gizlemek
+	w_Lang095 =	Buraya taşımak
+	w_Lang096 =	Buraya kopyala
+	w_Lang097 =	Gruplar
+	w_Lang098 =	Grupları etkinleştirme (Ctrl+Shift+G)
+	w_Lang099 =	Grup ekle (Ctrl+Shift+Y)
+	w_Lang100 =	Grup kaldır (Ctrl+Shift+R)
+	w_Lang101 =	Tüm grupları kaldırın
+	w_Lang102 =	Düzenleme grupları
+	w_Lang103 =	Grup ismi
+	w_Lang104 =	Fonksiyon oluşturun (Ctrl+Shift+U)
+	w_Lang105 =	Parametre (Ctrl+Shift+P) ekleyin
+	w_Lang106 =	Dönüş (Ctrl+Shift+N) ekleyin
+	w_Lang107 =	(Ctrl+Shift+C) Fonksiyonu için makro dönüştürme
+	w_Lang108 =	Denetlenmeyen satırları açıklama
+	w_Lang109 =	Kısayol tuşu "Play" için Windows tuşu ekle
+	w_Lang110 =	Kısayol olarak bir joystick düğmesini kullanın
+	w_Lang111 =	Arama... (Basın gitmek için Enter)
+		
+; 15. Command Windows		
+	c_Lang001 =	Fare
+	c_Lang002 =	Metin
+	c_Lang003 =	Durma
+	c_Lang004 =	Kontrol
+	c_Lang005 =	Pencere
+	c_Lang006 =	Görsel Arama
+	c_Lang007 =	Piksel Arama
+	c_Lang008 =	Dosya / Dizi / Misc çalıştırın.
+	c_Lang009 =	Eğer Tablolar
+	c_Lang010 =	Değişkenler
+	c_Lang011 =	İşlevler / Dizi yöntemleri
+	c_Lang012 =	Internet Explorer
+	c_Lang013 =	Ifade / COM Arabirimi
+	c_Lang014 =	Select Application (Gelişmiş)
+	c_Lang015 =	Mesaj
+	c_Lang016 =	Kontrol
+	c_Lang017 =	Geciktirmek
+	c_Lang018 =	Miliseconds
+	c_Lang019 =	Saniye
+	c_Lang020 =	Tamam
+	c_Lang021 =	Iptal
+	c_Lang022 =	Yakın
+	c_Lang023 =	Kopyala
+	c_Lang024 =	Silmek
+	c_Lang025 =	Ör., Değişkenler için % kullanın: %Clipboard%
+	c_Lang026 =	Eylem
+	c_Lang027 =	Tıklayın
+	c_Lang028 =	Hareket
+	c_Lang029 =	Taşımak Ve Tıklayın
+	c_Lang030 =	Tekerlek Up
+	c_Lang031 =	Tekerlek Aşağı
+	c_Lang032 =	Sürükle Ve Bırak
+	c_Lang033 =	Koordinatlar
+	c_Lang034 =	Arama
+	c_Lang035 =	Alt Komutu
+	c_Lang036 =	Bağıl
+	c_Lang037 =	Düğme
+	c_Lang038 =	Sol
+	c_Lang039 =	Sağ
+	c_Lang040 =	Orta
+	c_Lang041 =	X1
+	c_Lang042 =	X2
+	c_Lang043 =	Bırak / Tutun
+	c_Lang044 =	Kont tıklayın
+	c_Lang045 =	Düz Metin (Raw)
+	c_Lang046 =	Komutları ile Metin
+	c_Lang047 =	Pano'dan Yapıştır
+	c_Lang048 =	Kontrol Yapıştır
+	c_Lang049 =	Metin Set
+	c_Lang050 =	Duraklama Ekle
+	c_Lang051 =	Mesaj Kutusu
+	c_Lang052 =	Anahtar bekleyin
+	c_Lang053 =	Aşımı
+	c_Lang054 =	(Milisaniye) 0 = sonsuz
+	c_Lang055 =	Komuta
+	c_Lang056 =	Değer
+	c_Lang057 =	Çıktı Değişken
+	c_Lang058 =	Pozisyon
+	c_Lang059 =	Boyut
+	c_Lang060 =	4 değişkenler bu önekle oluşturulur ve X, Y, G, H ile biten olacak
+	c_Lang061 =	Başlatmak
+	c_Lang062 =	Uç
+	c_Lang063 =	Görüntü
+	c_Lang064 =	Piksel
+	c_Lang065 =	Ekran Yap
+	c_Lang066 =	Anahtar Bekleyin
+	c_Lang067 =	Eğer bulunursa
+	c_Lang068 =	Hata bulundu değilse
+	c_Lang069 =	çıktı değişkenleri
+	c_Lang070 =	Koord
+	c_Lang071 =	Varyasyonlar
+	c_Lang072 =	Önizleme
+	c_Lang073 =	Döngü
+	c_Lang074 =	Otomatik olarak COM nesnesi oluşturmak
+	c_Lang075 =	Kırmak
+	c_Lang076 =	Devam etmek
+	c_Lang077 =	Goto
+	c_Lang078 =	Etiket git
+	c_Lang079 =	Etiket
+	c_Lang080 =	Etiket Ekle
+	c_Lang081 =	Dize (InputVar)
+	c_Lang082 =	Değişken
+	c_Lang083 =	Başka
+	c_Lang084 =	Değişken atama
+	c_Lang085 =	Içerik
+	c_Lang086 =	Operatör
+	c_Lang087 =	Ifade
+	c_Lang088 =	Ayarlamak
+	c_Lang089 =	Fonksiyon Adı
+	c_Lang090 =	Virgül (parantez olmadan) parametreleri ayrılmış
+	c_Lang091 =	Kullanım ifadeleri biçimi
+	c_Lang092 =	Sayfa Öğesi / Endeks
+	c_Lang093 =	Ayarlamak
+	c_Lang094 =	Almak
+	c_Lang095 =	Yöntem
+	c_Lang096 =	Özellik
+	c_Lang097 =	Sayfasını yüklemek için bekleyin.
+	c_Lang098 =	CLSID
+	c_Lang099 =	Bağlanmak
+	c_Lang100 =	Işlemek
+	c_Lang101 =	COM Komut
+	c_Lang102 =	Mesaj sayısı
+	c_Lang103 =	Özel Tuşlar
+	c_Lang104 =	Tarayıcı geri dön
+	c_Lang105 =	İleri Tarayıcı
+	c_Lang106 =	Tarayıcı Yenile
+	c_Lang107 =	Tarayıcı Durdur
+	c_Lang108 =	Tarayıcı Arama
+	c_Lang109 =	Tarayıcı Favoriler
+	c_Lang110 =	Tarayıcı Ev
+	c_Lang111 =	Medya
+	c_Lang112 =	Mute
+	c_Lang113 =	Ses Açma
+	c_Lang114 =	Hacim Aşağı
+	c_Lang115 =	Play / Pause
+	c_Lang116 =	Sonraki Parça
+	c_Lang117 =	Önceki Parça
+	c_Lang118 =	Dur
+	c_Lang119 =	E-posta
+	c_Lang120 =	Uygulaması 1
+	c_Lang121 =	Uygulaması 2
+	c_Lang122 =	Scancode
+	c_Lang123 =	Eklemek
+	c_Lang124 =	Anahtar Planları
+	c_Lang125 =	Bir scancode yazın...
+	c_Lang126 =	Kod Sanal Keys Listesi'ne eklendi!
+	c_Lang127 =	Değişken için bir ad yazın
+	c_Lang128 =	Harici Dosyadan Fonksiyon kullanın
+	c_Lang130 =	Tekrar kadar
+	c_Lang131 =	Uygulamak
+	c_Lang132 =	Döngü
+	c_Lang133 =	Dosya
+	c_Lang134 =	Ayrıştırmak
+	c_Lang135 =	Okumak
+	c_Lang136 =	Kayıt
+	c_Lang137 =	Dosya Desen:
+	c_Lang138 =	Rehberler
+	c_Lang139 =	Özyinelemeli
+	c_Lang140 =	Giriş Değişkeni:
+	c_Lang141 =	Sınırlayıcı:
+	c_Lang142 =	Karakterleri Ihmal:
+	c_Lang143 =	Giriş Dosyası:
+	c_Lang144 =	Kök Anahtar\Anahtar:
+	c_Lang145 =	Dosyaları
+	c_Lang146 =	Tuşları
+	c_Lang147 =	Ikon
+	c_Lang148 =	Simge yok
+	c_Lang149 =	Hata
+	c_Lang150 =	Soru
+	c_Lang151 =	Ünlem
+	c_Lang152 =	Bilgi
+	c_Lang153 =	Her zaman üstte
+	c_Lang154 =	Dakika
+	c_Lang155 =	Kadar
+	c_Lang156 =	Senaryo
+	c_Lang157 =	Script Dili
+	c_Lang158 =	64-bit ile uyumlu değildir!
+	c_Lang159 =	Arama seçenekleri
+	c_Lang160 =	Şeffaf
+	c_Lang161 =	Ölçek
+	c_Lang162 =	If Ekleyin
+	c_Lang163 =	Modu Göndermek
+	c_Lang164 =	Eşit
+	c_Lang165 =	Içerir
+	c_Lang166 =	Büyük
+	c_Lang167 =	Daha az
+	c_Lang168 =	Evet
+	c_Lang169 =	Yok
+	c_Lang170 =	Tamam
+	c_Lang171 =	Iptal
+	c_Lang172 =	Iptal etmek
+	c_Lang173 =	Aldırmamak
+	c_Lang174 =	Yeniden dene
+	c_Lang175 =	Devam etmek
+	c_Lang176 =	Tekrar dene
+	c_Lang177 =	Zaman aşımı
+	c_Lang178 =	Anahtar gecikmesini ayarlayın
+	c_Lang179 =	Anahtar gecikme
+	c_Lang180 =	Rastgele gecikme
+	c_Lang181 =	En az
+	c_Lang182 =	Maksimum
+	c_Lang183 =	Bu komut için rastgele gecikmeler devre dışı bırakın
+	c_Lang184 =	Listeden seç
+	c_Lang185 =	Düğmeler
+	c_Lang186 =	Ilk
+	c_Lang187 =	Ikinci
+	c_Lang188 =	Üçüncü
+	c_Lang189 =	Başlık
+	c_Lang190 =	Pencere aktif ise
+	c_Lang191 =	Pencere aktif değilse
+	c_Lang192 =	Pencere varsa
+	c_Lang193 =	Penceresi yok ise
+	c_Lang194 =	Dosya varsa
+	c_Lang195 =	Dosya mevcut değilse
+	c_Lang196 =	Eğer panoya metin
+	c_Lang197 =	Eğer döngü indeksi
+	c_Lang198 =	Görüntü/piksel bulduysanız
+	c_Lang199 =	Görüntü/piksel bulunamadı ise
+	c_Lang200 =	Dize içeriyorsa
+	c_Lang201 =	Dize içerir değilse
+	c_Lang202 =	Eğer mesaj kutusu
+	c_Lang203 =	Değişkenleri karşılaştırın
+	c_Lang204 =	Ifade değerlendirmek
+	c_Lang205 =	Bölge
+	c_Lang206 =	(Kullan [] diziler oluşturmak için, ör .: [10, 20, aVariable, "aString"])
+	c_Lang207 =	Dizi Nesnesi
+	c_Lang208 =	Anahtar adı
+	c_Lang209 =	Değer adı
+	c_Lang210 =	Değerler
+	c_Lang211 =	Dizi
+	c_Lang212 =	Kullanıcı Tanımlı Fonksiyon
+	c_Lang213 =	Fonksiyon Parametre
+	c_Lang214 =	Fonksiyon Dönüş
+	c_Lang215 =	Parametreler
+	c_Lang216 =	Dönüş Değeri
+	c_Lang217 =	Varsayılan değer
+	c_Lang218 =	Faaliyet alanı
+	c_Lang219 =	Yerel
+	c_Lang220 =	Global
+	c_Lang221 =	Isim
+	c_Lang222 =	Fonksiyon menüsünden daha fazla parametre ekleyebilirsiniz.
+	c_Lang223 =	Küresel Değişkenler
+	c_Lang224 =	Yerel Değişkenler
+	c_Lang225 =	Statik Değişkenler
+	c_Lang226 =	Gönderen
+	c_Lang227 =	E-posta
+	c_Lang228 =	Tabi
+	c_Lang229 =	Mesaj
+	c_Lang230 =	Karşı
+	c_Lang231 =	CC
+	c_Lang232 =	GIZLI
+	c_Lang233 =	F2 düzenleyin
+	c_Lang234 =	HTML
+	c_Lang235 =	Eposta gönder
+	c_Lang236 =	Dosya indirme
+	c_Lang237 =	Zip / Sıkıştırılmış dosya
+	c_Lang238 =	Aç
+	c_Lang239 =	Kapat
+	c_Lang240 =	pozisyonları kayıtlı.
+	c_Lang241 =	Tüm sayaçlarını silmek
+	c_Lang242 =	Set zamanlayıcı
+	c_Lang243 =	Sağ haklı
+	c_Lang244 =	Pravo na lijevo
+	c_Lang245 =	Ekler
+	c_Lang246 =	Yol
+	c_Lang247 =	Eğer
+	c_Lang248 =	Farklı bir arşive her dosyayı sıkıştırmak
+	c_Lang249 =	Farklı bir klasöre her dosya ayıkla
+	c_Lang250 =	Zip dosyaları
+	c_Lang251 =	Sıkıştırılmış dosyalar
+	c_Lang252 =	Indirme bağlantıları
+	c_Lang253 =	Hedef klasör
+	c_Lang254 =	Hedef dosya
+	c_Lang255 =	Noktalı virgül, virgül veya bir çizgi ile ayrılır.
+	c_Lang256 =	Görüntünün merkezine koordinatları ayarlayın
+	c_Lang257 =	dönem
+		
+; 16. Other Windows		
+	t_Lang001 =	AutoHotkey Aktar
+	t_Lang002 =	Makrolar
+	t_Lang003 =	Döngüler
+	t_Lang004 =	0 = sonsuz
+	t_Lang005 =	Hotstring kullanın
+	t_Lang006 =	Blok Fare
+	t_Lang007 =	Tüm
+	t_Lang008 =	Hiçbiri
+	t_Lang009 =	Bağlam Duyarlı Hotkeys
+	t_Lang010 =	Aktar
+	t_Lang011 =	Girinti
+	t_Lang012 =	PMC Kod dahil
+	t_Lang013 =	Gönder komutlarını bitiştirmek etmeyin
+	t_Lang014 =	Yenile
+	t_Lang015 =	Auto-Refresh
+	t_Lang016 =	Her zaman üstte
+	t_Lang017 =	Ayarlar
+	t_Lang018 =	Genel
+	t_Lang019 =	Kayıt Başlat / Durdur
+	t_Lang020 =	Yeni Makro Kaydet
+	t_Lang021 =	Keystrokes
+	t_Lang022 =	Kayıt
+	t_Lang023 =	Tuşuna durumunu yakalamak (aşağı / yukarı)
+	t_Lang024 =	Fare Tıklanma
+	t_Lang025 =	Fare Tekerleği
+	t_Lang026 =	Fare Bırakanlar
+	t_Lang027 =	Zamanlamalı Aralıkları
+	t_Lang028 =	Minimum gecikme
+	t_Lang029 =	Pencere Sınıfları
+	t_Lang030 =	Pencere Başlıkları
+	t_Lang031 =	Rekor ControlSend
+	t_Lang032 =	Rekor ControlClick
+	t_Lang033 =	Bağıl Rekor Anahtar
+	t_Lang034 =	Toggle
+	t_Lang035 =	Playback
+	t_Lang036 =	Hızlandırma
+	t_Lang037 =	Yavaşlatmak
+	t_Lang038 =	Oynatma sonrası Fare dönün
+	t_Lang039 =	Fare Koordinatlar
+	t_Lang040 =	Pencere
+	t_Lang041 =	Ekran
+	t_Lang042 =	Standart Fare Gecikmesi
+	t_Lang043 =	Varsayılan Pencere Gecikmesi
+	t_Lang044 =	Makro başına maksimum Planları
+	t_Lang045 =	Geçmişi Temizle
+	t_Lang046 =	Ekran
+	t_Lang047 =	Düğme çizin
+	t_Lang048 =	Çizgi Genişliği (Px)
+	t_Lang049 =	Salınımı üzerindeki Capture
+	t_Lang050 =	Yakalamak için Enter'a basın
+	t_Lang051 =	Ekran Dizini
+	t_Lang052 =	Hat şal
+	t_Lang053 =	Hotkeys
+	t_Lang054 =	Varsayılan Hotkeys Olarak Ayarla
+	t_Lang055 =	Pencere Kestirme Disable
+	t_Lang056 =	Sütunlar Boyutu Sıfırla
+	t_Lang057 =	Varsayılan Makro Dosyası
+	t_Lang058 =	Standart Kütüphanesi Dosya
+	t_Lang059 =	Değişkenler Atama için varsayılan olarak İfade kullanın
+	t_Lang060 =	Döngüler ve deyimleri vurgulayın
+	t_Lang061 =	(Etkinleştirmek / devre dışı bırakmak için Dizin sütun başlığını tıklayın)
+	t_Lang062 =	Sanal tuşlar
+	t_Lang063 =	Standart
+	t_Lang064 =	Yorum düzenle
+	t_Lang065 =	Yorumlamak
+	t_Lang066 =	Arama Sütun
+	t_Lang067 =	Bul / Değiştir
+	t_Lang068 =	&Bulmak
+	t_Lang069 =	&Olgu Maç
+	t_Lang070 =	&Değiştirmek
+	t_Lang071 =	Bulundu
+	t_Lang072 =	Değiştirilen
+	t_Lang073 =	&Seçili Satırlar
+	t_Lang074 =	T&üm Satırlar
+	t_Lang075 =	Tü&m Makrolar
+	t_Lang076 =	Hakkında
+	t_Lang077 =	&Normal İfade
+	t_Lang078 =	Bir kez oynat
+	t_Lang079 =	Her X (mili) saniye Oyna
+	t_Lang080 =	Kronometre
+	t_Lang081 =	Durma
+	t_Lang082 =	Tablolar
+	t_Lang083 =	Döngüler ve Tablolar için Girinti göster
+	t_Lang084 =	(Çift tıklayın Eylem sütun başlığını aktif / pasif)
+	t_Lang085 =	Ekran başlangıçta çubuğu kontrol
+	t_Lang086 =	Fonksiyonlar aranıyor. Lütfen bekleyin...
+	t_Lang087 =	Harici Dosyaları İçer
+	t_Lang088 =	EXE dosyası oluştur
+	t_Lang089 =	Çoklu örnekleri İzin
+	t_Lang090 =	Varsayılanları
+	t_Lang091 =	Satırları sürükleyerek izin ver
+	t_Lang092 =	&Tüm hücre içeriğini
+	t_Lang093 =	Standart INI biçimi
+	t_Lang094 =	Adı = Değer
+	t_Lang095 =	Satır başına 1 değişken girin. Ayrıca [Bölüm] ekleyebilirsiniz.
+	t_Lang096 =	Kullanıcı Global Değişkenler
+	t_Lang097 =	Joystick üzerindeki bir düğmeye basın
+	t_Lang098 =	Temizlemek için Backspace
+	t_Lang099 =	Düğme
+	t_Lang100 =	Balon ipuçlarını görüntülemek
+	t_Lang101 =	Hız
+	t_Lang102 =	Yavaş
+	t_Lang103 =	Hızlı
+	t_Lang104 =	Göster / Gizle Başlık Çubuğu
+	t_Lang105 =	Ana pencerede göster / gizle
+	t_Lang106 =	Hemen çalışır
+	t_Lang107 =	Rastgele Gecikmeler
+	t_Lang108 =	Normal
+	t_Lang109 =	Aşağı
+	t_Lang110 =	Yukarı
+	t_Lang111 =	Tuş Eklemek
+	t_Lang112 =	Play / Pause
+	t_Lang113 =	Dur
+	t_Lang114 =	Yürütme Seçenekleri
+	t_Lang115 =	Kayıt Başlat / Durdur
+	t_Lang116 =	Yeni Makro Kaydet
+	t_Lang117 =	Kayıt Seçenekleri
+	t_Lang118 =	Listeyi Temizle
+	t_Lang119 =	İlerleme Çubuğu Ekran
+	t_Lang120 =	Hızlandırma
+	t_Lang121 =	Yavaşlatmak
+	t_Lang122 =	Göster / Gizle Başlık Çubuğu
+	t_Lang123 =	Ana pencerede göster / gizle
+	t_Lang124 =	Dok
+	t_Lang125 =	Çıkar'ı
+	t_Lang126 =	Aç
+	t_Lang127 =	Kaydet
+	t_Lang128 =	Kesmek
+	t_Lang129 =	Kopyala
+	t_Lang130 =	Yapıştırmak
+	t_Lang131 =	Tümünü Seç
+	t_Lang132 =	Silmek
+	t_Lang133 =	Klavye
+	t_Lang134 =	Fare
+	t_Lang135 =	Diğer
+	t_Lang136 =	Vurgulamak Satır
+	t_Lang137 =	Varsayılan Script Editörü
+	t_Lang138 =	Harici düzenleyicide açın (Ctrl+Shift+E)
+	t_Lang139 =	Seçmek
+	t_Lang140 =	Sütuna Göre
+	t_Lang141 =	Tüm Sütunları
+	t_Lang142 =	Araç Çubukları (yeniden başlatma gerektirir) Theme from çıkarın
+	t_Lang143 =	Otomatik araç çubuğu kontrolleri gizlemek
+	t_Lang144 =	Tıklayın ve sırasını değiştirmek için sürükleyin. Düzenlemek için çift tıklayın.
+	t_Lang145 =	Makrolar Düzenle
+	t_Lang146 =	Doğrultusunda
+	t_Lang147 =	Makro
+	t_Lang148 =	Ana pencerenin kapatma düğmesini Eylem
+	t_Lang149 =	yakın başvuru
+	t_Lang150 =	Tepsisine küçült
+	t_Lang151 =	Bir makro kapatırken onayını görüntüleyebilir
+	t_Lang152 =	Otomatik yedekleme oluşturma
+	t_Lang153 =	Windows Görev Zamanlayıcı bir zamanlanmış görev oluşturur.
+	t_Lang154 =	Ilk çalıştırma zamanı
+	t_Lang155 =	Tipi Programı
+	t_Lang156 =	Bir kez||Günlük|Haftalık|Aylık|Başlangıç|Oturum Açma|Boşta
+	t_Lang157 =	Hedef PMC dosya
+	t_Lang158 =	Hedef AHK dosya
+	t_Lang159 =	Komut dosyası kaydedilir veya geçerli dizinde üzerine olacak!
+	t_Lang160 =	Açık Görev Zamanlayıcı
+	t_Lang161 =	Görev başarıyla oluşturuldu!
+	t_Lang162 =	Bir hata oluştu. Görev oluşturulamadı.
+	t_Lang163 =	Zamanlayıcı
+	t_Lang164 =	Makro Programı
+	t_Lang165 =	Makro Çalıştır
+	t_Lang166 =	Dosya
+	t_Lang167 =	Dizi
+	t_Lang168 =	HakkıNda Bilgi AlıN
+	t_Lang169 =	Bekleyin
+	t_Lang170 =	Pencere Grupları
+	t_Lang171 =	Mesajlar
+	t_Lang172 =	KayıT Ve INI
+	t_Lang173 =	Ses
+	t_Lang174 =	DeğIşKenler
+	t_Lang175 =	ÇEşItli.
+	t_Lang176 =	Grup ekle
+	t_Lang177 =	Yeni grup
+	t_Lang178 =	Dil Editörü
+	t_Lang179 =	Yeni oluştur
+	t_Lang180 =	Enter kullanın, PgDn ve PgUp gezinmek için.
+	t_Lang181 =	Gönder
+	t_Lang182 =	Isim
+	t_Lang183 =	Değişiklikleri Kaydet?
+	t_Lang184 =	Dil Dosyası
+	t_Lang185 =	Referans Dosyası
+	t_Lang186 =	Revizyon ya da yeni çeviri Gönder
+	t_Lang187 =	Tüm daraltmak
+	t_Lang188 =	Hepsini genişlet
+	t_Lang189 =	Dil
+	t_Lang190 =	Satır aralıklarını dönüştür
+	t_Lang191 =	E-posta hesapları
+	t_Lang192 =	Güncelleştirme
+	t_Lang193 =	Düzenlemek için çift tıklayın
+	t_Lang194 =	SMTP Sunucusu
+	t_Lang195 =	Liman
+	t_Lang196 =	Kimlik doğrulaması
+	t_Lang197 =	Kullanıcı adı
+	t_Lang198 =	Parola
+	t_Lang199 =	SSL
+	t_Lang200 =	modunu gönder
+	t_Lang201 =	Zaslat test
+	t_Lang202 =	Ekran Ve Pencere
+	t_Lang203 =	Gizli Pencere Algılamak
+	t_Lang204 =	Gizli Metin Tespit
+	t_Lang205 =	Başlık Maç Modu
+	t_Lang206 =	Název Rychlost Zápas
+	t_Lang207 =	Müşteri
+	t_Lang208 =	B&ulmak
+	t_Lang209 =	D&eğiştirmek
+	t_Lang210 =	hataları görüntülemek etmeyin
+		
+; 17. Messages & Dialogs		
+	d_Lang001 =	Açık
+	d_Lang002 =	Mevcut projeyi kaydet?
+	d_Lang003 =	Varsayılan Ayarlar
+	d_Lang004 =	Macro Creator Dosyalar
+	d_Lang005 =	Kaydet Projesi
+	d_Lang006 =	Dosyayı kaydetmek / overwrite Başarısız
+	d_Lang007 =	Hata
+	d_Lang008 =	Hata: Hayır Makro Seçilmiş.
+		Listesinde en az bir makro kontrol ediniz.
+	d_Lang009 =	Hata: Hotkey Seçilmedi.
+	d_Lang010 =	Hata: Geçersiz adres.
+		Seçilen adresi veya dosya adı geçersiz.
+	d_Lang011 =	Uyarı
+	d_Lang012 =	Hiçbir kontrol seçilmiş.
+		Devam edilsin mi?
+	d_Lang013 =	Komut İhracat
+	d_Lang014 =	Komut İhracat
+	d_Lang015 =	Dosya başarıyla ihraç edildi!
+	d_Lang016 =	Konumunu işaretlemek için 'Al' seçeneğini tıklayın.
+	d_Lang017 =	- Penceresini seçin.
+		- Istenen pozisyona gelin.
+		- Sağ Düğme basın.
+	d_Lang018 =	Piksel renk
+	d_Lang019 =	Listeyi Temizle
+	d_Lang020 =	Kapat Makro?
+	d_Lang021 =	Sonraki
+	d_Lang022 =	Önceki
+	d_Lang023 =	Mesaj
+	d_Lang024 =	Varsayılan Ayarlar yüklensin mi?
+	d_Lang025 =	Makro (lar) devreye.`nPlay Hotkeys kullanın.
+	d_Lang026 =	Kaydı başlatmak / durdurmak için
+	d_Lang027 =	Kayıt durdu
+	d_Lang028 =	Kayıt...
+	d_Lang029 =	durdurmak için
+	d_Lang030 =	yeni kayıt başlatmak için
+	d_Lang031 =	varolmayan işlevine arayın.
+	d_Lang032 =	Hata: Yinelenen Hotkeys.
+	d_Lang033 =	Makrolar etkinleştirin
+	d_Lang034 =	- Tıklayın ve bölgeyi seçmek için %DrawButton% ile sürükleyin.
+		- Tıklayın ve kontrol alanı seçmek için sürükleyerek olmadan bırakın.
+		- Pencerenin alanını seçmek için bir kontrol olmadan bir alanda tıklatın.
+	d_Lang035 =	Devam?
+	d_Lang036 =	Görüntü / Pixel at Bulundu
+	d_Lang037 =	Görüntü / Piksel Bulunamadı.
+	d_Lang038 =	Devam etmek için OK tuşuna basın.
+	d_Lang039 =	Gönderme. Lütfen bekle...
+	d_Lang040 =	Bu özellik, GDI+ Kütüphane gerektirir.
+		Sayfa indirmek için gitmek için Tamam'a tıklayın.
+	d_Lang041 =	Değişken adı geçersiz bir karakter içeriyor.
+	d_Lang042 =	ayrılmış bir sözcüktür.
+	d_Lang043 =	Veya kontrolleri araç çubuğunu kullanın
+	d_Lang044 =	Bu özellik) (Eval İşlevi gerektirir.
+		Sayfa indirmek için gitmek için Tamam'a tıklayın.
+	d_Lang045 =	Bir Internet Explorer penceresi seçiniz!
+	d_Lang046 =	Bağlantı Başarılı!
+	d_Lang047 =	Bağlantı başarısız!
+	d_Lang048 =	Bir Kulp ve bir CLSID takın.
+	d_Lang049 =	Geçersiz Etiket Adı.
+	d_Lang050 =	Etiket çoğaltın.
+	d_Lang051 =	Bir makro oynatmak için karşılık gelen Hotkey (Otomatik / Erkek) basın.
+	d_Lang052 =	Kaydı Bir Rekor Hotkey basın başlatmak için.
+	d_Lang053 =	Bu mesajı tekrar gösterme.
+	d_Lang054 =	Excel penceresini seçiniz!
+	d_Lang055 =	Bir AutoHotkey komut dosyası (. AHK) ve Fonksiyon Adı girin seçiniz.
+	d_Lang056 =	Bu özellik AutoHotkey yüklü gerektirir.
+		Sayfa indirmek için gitmek için Tamam'a tıklayın.
+	d_Lang057 =	- Seçilen alanı taşımak için Ctrl+Ok tuşları.
+		- Shift+Ok tuşları Seçili alanı yeniden boyutlandırmak için.
+		- Bitirmek için Enter tuşuna basın.
+	d_Lang058 =	Bazı özellikler düzgün çalışması için admnistrator ayrıcalıkları gerektirir.
+		Bu yönetici olarak uygulamayı yeniden başlatmanız önerilir.
+	d_Lang059 =	Bu komut ifadeleri veya işlevleri desteklemez.
+		Bir değişken atamak ve parametre içinde kullanın.
+	d_Lang060 =	Kullanılabilir yeni versiyonu
+	d_Lang061 =	Şimdi değil
+	d_Lang062 =	Zaten en son sürümü var.
+	d_Lang063 =	Kontrol sırasında bir hata oluştu.
+	d_Lang064 =	Hata
+	d_Lang065 =	Sıra
+	d_Lang066 =	Özellikle
+	d_Lang067 =	Başlangıçta bu pencere göster
+	d_Lang068 =	İpuçları:
+	d_Lang069 =	Zaman ve çaba bir çok Pulover's Macro Creator geliştirilmesine gitti. Eğer yararlı bulursanız, bir bağış ile takdir gösteren düşünün lütfen.
+		Bağış ya da değil, özellikleri ve işlevsellik açısından bir fark olacak.
+	d_Lang070 =	Bağış...
+	d_Lang071 =	Hayır, teşekkürler
+	d_Lang072 =	Açık Kaynak yazılım desteği
+	d_Lang073 =	Hata: Geçersiz Kısayol Seçilen.
+	d_Lang074 =	Bir komut veya fonksiyon bul
+	d_Lang075 =	Pulover's Macro Creator Hoş Geldiniz
+	d_Lang076 =	Tercih ettiğiniz düzeni seçin
+	d_Lang077 =	Kompakt
+	d_Lang078 =	Varsayılan
+	d_Lang079 =	Başlangıçta güncelleştirmeleri denetleyin.
+	d_Lang080 =	Seçenekler > Ayarlar > Genel değiştirebilirsiniz.
+	d_Lang081 =	Değiştirmek Görünüm menüsünden düzenleri özelleştirebilirsiniz.
+	d_Lang082 =	Dosya bulunamadı!
+	d_Lang083 =	Bir yedekleme dosyası tespit edilmiştir. Bunu açmak ister misiniz?
+	d_Lang084 =	Bir görev zamanlama önce değişiklikleri kaydedin.
+	d_Lang085 =	Makro deyimi 'Loop End' Eksik 
+	d_Lang086 =	Makro ifadesi "End If" Eksik
+	d_Lang087 =	Programın dışında komut yapılan değişiklikler hiçbir şekilde Makrolarınızı etkilemez dikkat edin.
+		Tato funkce je určena pouze k rychlému exportní funkce. PMC není navržen tak, aby editor AHK skript.
+	d_Lang088 =	Ortak kullanıcı (değil yönetici) çalıştırmayı deneyin.
+	d_Lang089 =	Hiçbir satır seçili!
+	d_Lang090 =	Eklemek veya grubu kaldırmak için bir satır seçiniz.
+	d_Lang091 =	İndirme. Lütfen bekle...
+	d_Lang092 =	Küçük simgeler
+	d_Lang093 =	Büyük ikonlar
+	d_Lang094 =	Bu özellik, Windows Vista veya üstü gerektirir.
+	d_Lang095 =	ByRef kullanımı arayanın geçirilen değişken için bir takma ad haline bir parametre neden olur. Bir başka deyişle, parametre ve arayanın değişken hem bellekte aynı içeriği bakın.
+	d_Lang096 =	- BURAYA YÜZDE IŞARETLERI DEĞİŞKENLER IÇINE ALMAYıN.
+		- Dönüş değeri bir ifade olmalıdır.
+		- Sen dizeleri, değişkenler, diziler ve işlevlerini kullanabilirsiniz. Ayrıca, bu herhangi bir birleştirebiliriz.
+		Sonuç ise: a+b - örneğin tırnak işareti içine, dizeleri kullanın.
+		- Eğer fazladan sonuçları döndürmek istiyorsanız, siz de parametrelerinde ByRef kullanabilirsiniz.
+		- Diziler birden çok değer ya da değerleri adlı döndürmek için kullanılabilir.
+	d_Lang097 =	- BURAYA YÜZDE IŞARETLERI DEĞİŞKENLER IÇINE ALMAYıN.
+		- AHK ifadelerin çoğu desteklenmektedir.
+		- Sen dizeleri, değişkenler, diziler ve işlevlerini kullanabilirsiniz.
+		- Örneğin, tırnak işareti içine, dizeleri kullanmak için: var = "a".
+		- Çoklu Tablolar desteklenir, örneğin: var = "a" || InStr (var "b").
+	d_Lang098 =	Tek parametre varsayılan değeri varsa, aşağıdaki parametreler de bir tane olması gerekmektedir.
+	d_Lang099 =	Fonksiyon adı geçersiz bir karakter içeriyor.
+	d_Lang100 =	Goto, GOSUB ve Etiket fonksiyonları izin verilmez.
+	d_Lang101 =	Yinelenen işlev.
+	d_Lang102 =	Dogodila se pogreška. Možete poslati e-mail "pulover@macrocreator.com 's datoteku:
+	d_Lang103 =	Yeni diller dosya.
+	d_Lang104 =	Bu mesaj aynı güncelleme için tekrar gösterilmeyecektir. Sen güncelleştirmeleri denetleyin > Yardım menüsünden indirebilirsiniz.
+	d_Lang105 =	Dosya başarıyla gönderildi. Teşekkür ederim!
+	d_Lang106 =	Dil dosyaları başarıyla güncellendi.
+	d_Lang107 =	Sayacını başlatmak olamazdı
+	d_Lang108 =	Tüm pozisyonlar kayıtlıdır. Bunlardan birini silin lütfen.
+	d_Lang109 =	Hedef etiket yok.
+	d_Lang110 =	Yerine dosyayı onayla
+	d_Lang111 =	zaten var.
+		Bunu değiştirmek ister misiniz?
+	d_Lang112 =	E-posta hesabı bulunamadı.
+	d_Lang113 =	Hiçbir hata bildirdi.
+	d_Lang114 =	Skripte izvoze (čak i ako je sastavljen) s funkcijom poslati e-mail (CDO) će imati vidljive informacije o računima e-pošte koristi, uključujući i lozinke. Projekt datoteka PMC nema tu informaciju.
+	d_Lang115 =	- aynı konuma bölgeyi ayarlamak için Alt tutun.
+	d_Lang116 =	Aktarın ve yükleyin
+	d_Lang117 =	sayfa indirmek için git
+	d_Lang118 =	En Uygun
+	d_Lang119 =	Değişiklikleri uygulamak için uygulamayı yeniden başlatın.
+	d_Lang120 =	Araç çubukları boyutları sıfırlamak için şu adrese gidin:
+		
+; 18. Start-up Tips		
+	Start_Tips =	PMC birçok özelliği hakkında bilgi almak için www.macrocreator.com/help~~pobj video öğreticileri göz atın.
+		Bir belirli bir komutla ilgili yardım almak için online yardım bağlantıları göstermek için bir komut penceresinde herhangi bir yere sağ tıklayın.
+		Ana pencerede komut düğmeleri kullanarak veya eylemleri kopyalamak için Recorder kullanarak makrolar oluşturabilirsiniz. girişler kayıt altına ne seçmek için Seçenek> Ayarlar> Kayıt gidin.
+		komutlar ve işlevleri aramak için arama çubuğunu ya da "Bul komutunu" penceresini kullanın.
+		Eğer bir çeviri düzeltmek yardımcı ya da yeni bir tane oluşturmak ister misiniz? Seçenekler> Ayarlar> Dil editörü gidin ve istediğiniz herhangi bir düzeltme yapmak. Bunu her zaman önizlemesini yapabilirsiniz. senin revizyon göndermek için Gönder'i tıklayın. İstediğiniz kadar çok kez düzeltmeler herhangi bir sayı göndermek için çekinmeyin.
+		ana penceresinde doğrudan makro tuşları ve kombinasyonları girmek için "Yakalama Tuşları" seçeneğini işaretleyin.
+		altta Hotkey kutusuna tuşları ve kombinasyonları girin ve seçeneğini satırlar eklemek için Ekle düğmesine basın.
+		yinelemeyi ayarlamak ve aynı anda birden fazla satır geciktirmek için ana pencerenin alt kısmındaki düzenleme düğmelerini kullanın. hiçbir satır seçilirse düzenleme düğmeleri listesindeki tüm satırlar için de geçerlidir.
+		Hemen hemen her komut ve fonksiyon kabul eder ve değişkenleri çıktılar. Sen Değişkenler pencerelerin (Komutlar> Değişkenler / Diziler) kendi değişkenleri atayabilirsiniz. komutları ör .:% MyVar% yüzde işaretleri değişken adı içine içine bunları kullanın. fonksiyonlarda, yüzde işaretleri olmadan bunları kullanmak, ör .: substr (MyVar, 5).
+		Kolayca bir listeden Yerleşik değişkenler eklemek için komut penceresinde herhangi bir yere sağ tıklayın.
+		Hızlı görevleri Seçenekler> Ayarlar gidin için> Kayıt kaydedici kullanmak ve "Clear List" seçeneğini işaretleyin. Sonra ana pencerede Record düğmesine tıklayın ve mevcut makro temizlemek ve aynı kısayol tuşu ile yeni bir başlangıç ​​için F10 kullanın. Ayrıca aktif Kayıt ve Oynatma kısayol tuşları tutmak için ana pencerede "Her zaman Aktif" seçeneğini kontrol edebilirsiniz.
+		PMC sadece AutoHotkey komut dosyaları gibi, Dizi nesneleri ve yöntemleri destekler. Sen .: Birçok yönden, en olağan, örneğin "İfade" seçeneğini işaretleyerek ve parantez içinde değerleri kapsayan, Değişkenler penceresinde gidiyor diziler oluşturabilir [10, 20, Var "string"]. Ayrıca adında tuşları oluşturabilir, ör .: {KEYA: vara, "bazı anahtar": "dize değeri"}.
+		Fonksiyonlar AHK ifade sözdizimi kullanın. Değişmez dizeleri tırnak içine alınmalıdır ve değişkenler yüzde işaretleri gerekmez. Diğer işlevleri veya parametre olarak dizi öğelerini kullanabilirsiniz. Ör .: StrReplace (MyVar, MyArray [ "A"], substr (diğerdeğişken, 2, 3)).
+		İfadeler AutoHotkey İfade Sözdizimi desteklenir. Bir komut parametresi içinde bir ifade kullanmak için, yüzde işareti, ör .:% SUBSTR ile başlar (Var, 5).
+		üstündeki "Döngü" sayaç seçilen makro için döngüler toplam sayısını belirler.
+		Bunu çift tıklayarak ya da seçerek ve altındaki Düzenle düğmeleri tıklayarak bir satır düzenleyebilirsiniz. Sen altındaki düzenleme çubuğunun seçenekleri kullanarak birden Seçili satırları düzenleyebilirsiniz.
+		Sen> Fonksiyon kendi işlevler tanımlamak işlev oluşturun ve işlev penceresinde veya iç ifadelerden kullanabilirsiniz.
+		Kullanıcı Tanımlı Fonksiyonlar globa / yerel ve statik değişkenleri tanımlayabilirsiniz. Seçenekler> Ayarlar tanımlanan global değişkenler> Kullanıcı global değişkenler Süper Küresel olarak kabul edilir ve her zaman yerel olarak tanımlanan bile, mevcut iç işlevler olacak.
+		Bunların üstüne yeni komutlar eklemek için bir veya daha fazla satır seçin.
+		Sen tıkla ve sürükle ile satırları taşıyabilirsiniz.
+		kısayol tuşlarını etkinleştirmek veya oynatma / kayıt işlemini durdurmak için Tepsi Simgesi çift tıklayın. oynatma veya duraklatmak için kayıt sırasında orta düğmesi ile üzerine tıklayın.
+		Sen çalışma AutoHotkey komut dosyaları için Makroları ihraç veya İhracat penceresinden yürütülebilir tek başına duramaz.
+		kaydetmek ve Ekran için Seçenekler> Ayarlar> Varsayılanları ve set Fare Koordinatlar gitmek mutlak koordinatları kullanarak fare oynamak için.
+		Sen /> Misc Run / Dosya / Dize, kopyasını açmak Komutanlıkları komutların birini kullanarak dosyaları ve klasörleri taşıyabilir veya silebilirsiniz. Böyle StringReplace, InputBox ve MouseGetPos gibi diğer birçok yararlı komutlar vardır.
+		Aşağı kayıt ve Seçenek> Ayarlar> Kayıt için her tuş halindeyken Up devlet ve kontrol seçeneği "önemli devlet (Aşağı / Yukarı) Yakalama".
+		Sen hızlandırmak veya Playback yavaşlatmak için kısayol tuşlarını kullanabilirsiniz. tuşları ve hızını ayarlamak için Seçenekler> Ayarlar> Oynatma gidin.
+		Screenshot Yap aracı> Ayarlar> Ekran Seçenekleri gidin ve seçin kullanarak çekim alanını ayarlamak için "Basın Capture Enter". dikdörtgen kullanım Control + ok tuşlarını çizdikten sonra seçimi taşımak ve yeniden boyutlandırmak için Shift + ok tuşlarını için.
+		Hızlı Seçim: Herhangi bir satırı seçin ve bu sütundan hücre metne dayalı benzer satırları seçmek için bir sütun başlığını tıklayın.
+		Döngüler ve Tablolar Yardım Marks ve Renkler Açık / Kapalı açmak Endeksi sütun başlığını tıklayın. Döngüler ve Tablolar için Açık / Kapalı girinti açmak için Eylem sütun başlığını çift tıklayın.
+		Elle Hotkey ve Makro menüsünde Play seçeneklerini kullanarak Makrolar hata. Ayrıca Makro listeye işaretini kaldırarak eylemleri devre dışı bırakabilirsiniz.
+		senin Makrolar Makro> Bağlam Duyarlı Kısayollar gitmek belli bir pencerede sadece çalışmasını sağlamak için.
+		Kendi Küresel Değişkenler başlangıçta yüklenecek ve ihraç edilecek ayarlayabilirsiniz. eklemek için Seçenek> Ayarlar> Kullanıcı Global Değişkenler gidin.
+		Sen Fonksiyonlar penceresinden (Komutlar> Fonksiyonlar / Dizi Yöntemleri) böyle SUBSTR ve REGEXREPLACE gibi gelişmiş fonksiyonları çalıştırabilirsiniz. Ayrıca harici AutoHotkey komut dosyalarını, kendi fonksiyonları veya koşmak işlevleri tanımlayabilirsiniz.
+		(Eğer anahtarını değiştirmek ve Ayarlar içinde geçiş yapabilirsiniz) Kayıt sırasında CapsLock tutarak mevcut konumuna göre fare hareketleri kaydedebilirsiniz.
+		
+; 19. Tooltips		
+	A_List_TT =	Makro Seçin (Ctrl+1~0)
+	AbortKey_TT =	Kısayol çalma durdurmak için
+	ActiveObj_TT =	Active COM Nesne bağlanmaya çalışır
+	AddAtt_TT =	Dosyaları ekle
+	ApplyI_TT =	Uygulamak
+	ApplyL_TT =	Kutusundan Ekle (Insert)
+	ApplyT_TT =	Uygulamak
+	AutoKey_TT =	Kısayol Makro oynamak
+	Client_TT =	Koordinatlar (standart bir tane varsa) ve sınırlar pencerenin başlık çubuğu, menü dışlayan etkin pencere istemci alanı, göredir.
+	Clip_TT =	Geçici metni göndermek için Pano kullanır.
+		işlemi tamamlandığında, komut
+		Orijinal pano içeriği geri yükler.
+		(Güncel içeriği yapıştırmak için boş metin bırakın)
+	CM_TT =	Screen: Koordinatlar masaüstü (tüm ekranı) göredir.
+		Window: Koordinatlar etkin pencere göredir.
+		Client: Koordinatlar (standart bir tane varsa) ve sınırlar pencerenin başlık çubuğu, menü dışlayan etkin pencere istemci alanı, göredir.
+	CmdFilter_TT =	Türleri filtresi
+	CmdSort_TT =	Alfabetik sıralama
+	ColorPick_TT =	Ekranda piksel olsun
+	ComEvent_TT =	Tuş vuruşlarını gönderilen hızını önemli gecikme ile belirlenir.
+	ComText_TT =	Değilken raw modunda, aşağıdaki karakterleri
+		düzenleyiciler (bu değiştiricileri etkiler olarak kabul edilir
+		Sadece çok sonraki anahtar):!, +, ^, #
+	CoordPixel_TT =	Modu Koordinat
+	DefaultMacro_TT =	Program başlangıçta yüklemek için dosyayı seçin
+	EditPaste_TT =	Şapka / insert pozisyonunda Pastalar Dize
+		Bir düzenleme denetimi (bu etkilemez
+		Pano içeriği).
+	Ex_AF_TT =	Bir pencere aktive nazik yöntemi atlar
+		ve güçlü yöntemi düz gider.
+	Ex_CM_TT =	Fare etkin pencere veya ekranın ya göreli olarak komutları için takımlar modunu koordinat.
+	Ex_DH_TT =	Görünmez pencere komut dosyası tarafından "görülür" belirler.
+	Ex_DT_TT =	Bir pencerede görünmez metin penceresi bulma amacıyla "görülen" belirler. Bu, IfWinExist ve WinActivate gibi komutları etkiler.
+	Ex_EdScript_TT =	Harici düzenleyicide açın
+	Ex_EdVars_TT =	Ihraç edilecek genel değişkenleri seçin.
+	Ex_ExecScript_TT =	Çalıştır komut
+	Ex_HK_TT =	Tüm uygulamak için kanca kullanılmasını zorlar
+		ya da klavye kısayol tuşları.
+	Ex_IfDir_TT =	Bağlam-duyarlı hotkeys ve bağlı hotstrings oluşturur
+		aktif veya bulunduğu pencerenin türüne bağlıdır.
+	Ex_IfDirType_TT =	Bağlam-duyarlı hotkeys ve bağlı hotstrings oluşturur
+		aktif veya bulunduğu pencerenin türüne bağlıdır.
+	Ex_IN_TT =	Belirtilen sanki komut davranmasına neden olur
+		Dosyanın içeriğini tam bu konumda bulunmaktadır.
+	Ex_MD_TT =	Sonra gerçekleşecek gecikmesini ayarlar
+		Her fare hareketi veya tıklama.
+	Ex_MT_TT =	Aynı anda en fazla sayısını belirler
+		kısayol tuşu veya hotstring başına konuları.
+	Ex_NT_TT =	Bir tepsi simgesini gösteren devre dışı bırakır.
+	Ex_PT_TT =	Bir komut dosyası sürekli çalışmasını sağlar
+		(kullanıcı kapatır veya ExitApp karşılaşıldığında kadar olmasıdır).
+	Ex_SB_TT =	Bir komut dosyası (CPU kullanımını etkiler) çalıştırmak ne kadar hızlı belirler.
+	Ex_SC_TT =	Sonra gerçekleşecek gecikmesini ayarlar
+		Her komuta kontrol-değiştirme.
+	Ex_SI_TT =	Bir komut dosyası zaten çalışırken tekrar çalıştırmak için izin verilip verilmeyeceğini belirler.
+	Ex_SK_TT =	Her sonra gerçekleşecek gecikmesini ayarlar
+		tuş Gönder veya ControlSend tarafından gönderilen.
+	Ex_SM_TT =	SendInput veya SendPlay ile eşanlamlı gönder ziyade yapar
+		Varsayılan (SendEvent). Ayrıca yapar tıklayın ve MouseMove / tıklayın / sürükleyin
+		Belirtilen yöntemi kullanın.
+	Ex_ST_TT =	Böyle WinWait gibi komutları WinTitle parametre eşleşen davranışını ayarlar.
+	Ex_SW_TT =	Sonra gerçekleşecek gecikmesini ayarlar
+		Bu tür WinActivate gibi her bir pencere bir komut.
+	Ex_UV_TT =	Global değişkenler ihracat.
+	Ex_WN_TT =	Etkinleştirir veya bu tür bir yazım hatası ya da eksik "küresel" ilanı gibi bir hata gösterebilir özel koşullar için uyarılar devre dışı bırakır.
+	ExpList_TT =	Düzenlemek için çift tıklayın
+	ExprLink2_TT =	- BURAYA YÜZDE IŞARETLERI DEĞİŞKENLER IÇINE ALMAYıN.
+		- AHK ifadelerin çoğu desteklenmektedir.
+		- Sen dizeleri, değişkenler, diziler ve işlevlerini kullanabilirsiniz.
+		- Örneğin, tırnak işareti içine, dizeleri kullanmak için: var  "a".
+		- Çoklu Tablolar desteklenir, örneğin: var  "a" || InStr (var "b").
+	ExprLink3_TT =	- BURAYA YÜZDE IŞARETLERI DEĞİŞKENLER IÇINE ALMAYıN.
+		- AHK ifadelerin çoğu desteklenmektedir.
+		- Sen dizeleri, değişkenler, diziler ve işlevlerini kullanabilirsiniz.
+		- Örneğin, tırnak işareti içine, dizeleri kullanmak için: var = "a".
+		- Çoklu Tablolar desteklenir, örneğin: var = "a" || InStr (var "b").
+	ExpView2_TT =	Gelişmiş Editörü
+	ExpView_TT =	Gelişmiş Editörü
+	Fast_TT =	Daha hızlı bir arama yöntemi (önerilir) kullanır
+	HiddenText_TT =	Bir pencerede görünmez metin penceresi bulma amacıyla "görülen" belirler. Bu, IfWinExist ve WinActivate gibi komutları etkiler.
+	HiddenWin_TT =	Görünmez pencere komut dosyası tarafından "görülür" belirler.
+	HScale_TT =	Yükseklik ölçekli
+	IconN_TT =	Simge grubu sayısı
+	IfLVColor_TT =	Bir renk seçmek için tıklayınız
+	IncFiles_TT =	Dosyaları / Değerler Dahil
+	IncFolders_TT =	Dizin (klasör) / Keys Dahil
+	InsertKey_TT =	Tuş Eklemek (Ctrl+Insert)
+	InsertKeyT_TT =	Tuş Eklemek
+	JoyKey_TT =	Joystick üzerindeki bir düğmeye basın
+	LoopLVColor_TT =	Bir renk seçmek için tıklayınız
+	LUntil_TT =	Bir döngü ya da için-döngünün devamı için bir koşul geçerlidir.
+	ManKey_TT =	Kısayol Makro "adım adım" oynamak
+	MRel_TT =	Geçerli konuma göre Hareketleri.
+		Yoksa Kontrol kullanılırsa: Denetim göreli konumu.
+	OSHK_TT =	Makro Seçin
+	OSHKEd_TT =	Makro Seçin
+	OSProgB_TT =	İlerleme Çubuğu Ekran
+	OSTrans_TT =	Donukluk
+	PauseKey_TT =	Duraklatmak için kısayol tuşu
+	PicPrev_TT =	Görüntü açmak için çift tıklayın
+	Raw_TT =	SendRaw komutu anlamıyla tüm karakterler yorumluyor
+		yerine çevirmek yerine, bir ENTER tuş etmek {Enter}
+		^ C Control-C, vb
+	RecKey_TT =	Temizlemek için Backspace
+	RecNewKey_TT =	Temizlemek için Backspace
+	Recurse_TT =	Alt dizinleri içine recursive (alt klasörler) / Alt anahtarları
+	RefreshIEW_TT =	Yenile Listesi
+	Relative_TT =	Koordinatlar etkin pencere göredir.
+	RelKey_TT =	Düzenlenen önceki pozisyondan uzaklıklar
+		gibi kayıtları Fare hareketleri ve tıklamaları.
+	ReptC_TT =	0 = sonsuz
+	Reset_TT =	Temizle değişken içeriği
+	RGB_TT =	Yerine BGR bir RGB değeri olarak yorumlanabilir renk neden olur
+	Screen_TT =	Koordinatlar masaüstü (tüm ekranı) göredir.
+	Screenshot_TT =	Ekran Yap
+	SetText_TT =	Bir denetimin metni değiştirir.
+	SI_TT =	Kelime FORCE, iletişim kutusunu atlar ve otomatik eski örneği yerine
+		bu etki de Yeniden komutuna benzer.
+		Kelime atlar iletişim kutusunu IGNORE ve eski örneğini çalıştıran bırakır.
+		Diğer bir deyişle, zaten çalışan komut dosyası başlatmak için girişimleri göz ardı edilir.
+		Kelime OFF komut birden çok örneğini aynı anda çalıştırmak için izin verir.
+	SM_TT =	Olay: Bu, tüm komut dosyaları tarafından kullanılan başlangıç ​​varsayılan değerdir.
+		Bu, Gönder SendRaw, tıklayın ve MouseMove / Drag / tıklayın için SendEvent yöntemi kullanır.
+		Girdi: SendRaw, Gönder için SendInput yöntemi Anahtarlar, tıklayın ve MouseMove / tıklayın / sürükleyin.
+		Dışında yukarıdaki gibi aynı ziyade Olay moduna geri düşen: InputThenPlay
+		SendInput kullanılamaz olduğunda, bu modu (aşağıda) Play döner. Bu, aynı zamanda neden
+		SendInput komut kendini SendInput kullanılamaz olduğunda Oynatma modu dönmek.
+		Play: SendRaw, Gönder için SendPlay yöntemi Anahtarlar, tıklayın ve MouseMove / tıklayın / sürükleyin.
+	ST_TT =	1: Bir pencerenin başlık bir maç olduğu belirtilen WinTitle ile başlamalıdır.
+		2: bir maç olmasını içindeki bir pencerenin başlık yerde WinTitle içerebilir.
+		3: Bir pencerenin başlık tam bir maç olmasını WinTitle eşleşmelidir.
+		RegEx: Değişiklikler, WinText, ExcludeTitle ve düzenli ifadeler olarak ExcludeText WinTitle.
+	TimeoutM_TT =	0 = sonsuz
+	TitleMatch_TT =	1: Belirtilen WinTitle ile başlamalıdır Bir pencerenin başlık bir maç olmasını.
+		2: Bir maç olmasını içindeki bir pencerenin başlık her yerde WinTitle içerebilir.
+		3: Bir pencerenin başlık tam bir maç olmasını WinTitle eşleşmesi gerekir.
+		RegEx: Değişiklikler WinTitle, WinText, Başlık Dışlama ve düzenli ifadeler olması Metin hariç.
+	TitleSpeed_TT =	Hızlı: Bu varsayılan davranıştır. Performans Yavaş önemli ölçüde daha iyi olabilir, ancak windows bazı türleri için belirli WinText elemanları çeşitli pencere komutları ile "görülme" olmayabilir.
+		Yavaş: daha yavaş olabilir, ama tüm olası WinText bir maç için içlerinden bir pencere komut aramalar olarak her penceresinden alınır. Pencere Spy Pencere metin parçaları (varsa) yavaş modu gerektiren ortaya koymaktadır.
+	ToggleC_TT =	Önemli devlet açıkken Bağıl Kayıt etkinleştirin.
+	TransC_TT =	Şeffaf renk
+	VarCopyA_TT =	Akım değişken içeriğini kopyalama
+	VarCopyB_TT =	Akım değişken içeriğini kopyalama
+	VariatT_TT =	Varyasyon Shades
+	WScale_TT =	Genişlik ölçekli
+		
+; 20. Operators		
+	As_Oper_01 =	Atamak
+	As_Oper_02 =	Eklemek
+	As_Oper_03 =	Çıkarmak
+	As_Oper_04 =	Çarpmak
+	As_Oper_05 =	Bölmek
+	As_Oper_06 =	Kat bölmek
+	As_Oper_07 =	Bağlamak
+	As_Oper_08 =	Bitwise inclusive OR
+	As_Oper_09 =	Bitwise AND
+	As_Oper_10 =	Bitwise exclusive OR
+	As_Oper_11 =	Right shift AND
+	As_Oper_12 =	Left shift AND
+	Co_Oper_01 =	Eşit
+	Co_Oper_02 =	Eşit (küçük harf duyarlı)
+	Co_Oper_03 =	Eşit değil
+	Co_Oper_04 =	Büyük
+	Co_Oper_05 =	Daha az
+	Co_Oper_06 =	Büyük veya eşit
+	Co_Oper_07 =	Daha az ya da eşit
+	Co_Oper_08 =	In (liste)
+	Co_Oper_09 =	Değil (liste)
+	Co_Oper_10 =	Içeren (liste)
+	Co_Oper_11 =	Içeriyor (liste)
+	Co_Oper_12 =	(Hat 1) ve (hat 2) arasındaki
+	Co_Oper_13 =	Değil (hat 1) arasında (hat 2)
+	Co_Oper_14 =	Mı (tip)
+	Co_Oper_15 =	Değil (tip)
+		
+; 21. IE Commands Tips		
+	IE_Cmd_Index =	
+	Checked	Ayarlar veya onay kutusunu veya radyo düğmesini durumunu alır.
+	Click	Nesne üzerinde bir tıklama simüle eder.
+	Focus	Nesnesi odağı ayarlar.
+	GoBack	Geçmiş listesindeki bir öğeyi geriye doğru gider.
+	GoForward	Geçmiş listesindeki bir öğeyi ileri gider.
+	GoHome	Geçerli ev veya başlangıç ​​sayfasına gider.
+	GoSearch	Geçerli arama sayfasına gider.
+	Height	Ayarlar ya da nesne yüksekliğinin alır.
+	Href	Ayarlar veya hedef URL veya bir çapa noktası alır.
+	InnerHTML	Ayarlar ya da nesnenin HTML alır.
+	InnerText	Ayarlar ya da nesnenin metin alır.
+	Length	Ayarlar veya bir koleksiyon nesne sayısını alır.
+	LocationName	Yolu veya başlığı Geçerli sayfayı alır.
+	LocationURL	Geçerli sayfanın URL'sini alır.
+	Navigate	Bir URL veya yol gider.
+	OuterHTML	Ayarlar veya HTML nesne ve içeriği alır.
+	Quit	Sayfa kapatır.
+	Refresh	Çoğul anda görüntülenen sayfa.
+	SelectedIndex	Ayarlar veya bir select nesnesi seçili seçeneği dizin alır.
+	Src	Ayarlar ya da nesnesi tarafından yüklenecek bir URL alır.
+	Stop	Bekleyen bir gezinti veya indirme iptal eder.
+	Submit	Formu gönderir.
+	Type	Ayarlar ya da nesnesi içeriğinin tip alır.
+	Value	Alır veya nesnesinin değerini belirler.
+	Width	Ayarlar ya da nesnenin genişliğini alır.
+		
+; 22. COM Objects Tips		
+	COM_CLSID_Index =	
+	Excel.Application	Excel tabloları manipüle.
+	HTMLfile	Okuma, yazma ve HTML ile etkileşim için kullanılır.
+	InternetExplorer.Application	Web siteleri keşfedin.
+	MSXML2.DOMDocument.6.0	XML ayrıştırıcı.
+	MSXML2.XMLHTTP	HTTP kullanarak bir XML isteği temsil eder.
+	Outlook.Application	Outlook görevleri ve öğeler manipüle.
+	PowerPoint.Application	Manipulated PowerPoint sunumları.
+	Schedule.Service	Zamanlama ve Windows Görevleri düzenleyin.
+	ScriptControl	Dinamik VBScript veya JScript yürütün.
+	Scripting.Dictionary	Veri anahtarı, madde çiftleri saklayan nesne.
+	Scripting.FileSystemObject	Access dosyaları ve klasörleri
+	Shell.Application	Erişim Explorer ve IE pencerelerini / sekmeler; açmak ve pencere işlemek.
+	Shell.Explorer	Bir GUI (- trident tarayıcısı Internet Explorer) bir Explorer / Tarayıcı kontrolünü gömün.
+	SAPI.SpVoice	Text-to-Speech (TTS).
+	VBScript.RegExp	(Global maç dahil) VBS Düzenli İfadeler.
+	WMPlayer.OCX	Medya dosyalarını oynatma; Bir GUI Embed WMPlayer kontrolü.
+	WinHttp.WinHttpRequest.5.1	UrlDownloadToFile çok daha fazla kontrol sağlayan, basit HTTP istemci işlevselliği sağlar.
+	Winmgmt	Sistem bilgi için; Windows hizmetlerini yönetin.
+	WScript.Shell	Çeşitli yönetim görevleri (birçok yerli AHK görevleri).
+	Word.Application	Word belgeleri yönetir.
+		
+; 23. AHK Commands Tips		
+	Ahk_Cmd_Index =	
+	Abs	Sayısı mutlak değerini döndürür.
+	ACos	Radyan Arkkosinüs (kosinüs Numarasısayı) döndürür.
+	Array	Tamsayı tuşları ile bir script ilişkisel dizi oluşturur.
+	Asc	Dize ilk karakter için karakter kodu (1 ve 255 (ANSI yapılar) veya 65535 arasında bir sayı (Unicode yapılarında)) döndürür.
+	ASin	Radyan cinsinden ark sinüsünü (sinüs Numarasısayı) döndürür.
+	ATan	Radyan arktanjant (teğet Numarasısayı) döndürür.
+	BlockInput	Devre dışı bırakır ya da klavye ve fare ile bilgisayar ile etkileşim kullanıcı yeteneğini sağlar .
+	Break	Çıkar (sona erer) bir döngü . Döngü her türlü iç geçerlidir.
+	CDO	Bir kullanıcı tanımlı hesabı kullanarak e-posta gönderir.
+	Ceil	Döndürür Number en yakın tam sayıya (herhangi bir .00 eki olmadan) kadar yuvarlanır .
+	Chr	Sayısı ile gösterilen karakter koduna karşılık gelentek bir karakter döndürür.
+	Click	Belirtilen koordinatlarda bir fare düğmesini tıklar. Ayrıca , bir düğmesini basılı tutuntekerleği çevirmek , ya da taşıyabilirsiniz .
+	Clipboard	Panodan metin macunlar.
+	ClipWait	Panoya verileri içeren kadar bekler .
+	ComObjActive	Kayıtlı bir COM nesnesi alır .
+	ComObjArray	COM ile kullanmak için bir SAFEARRAY oluşturur .
+	ComObjConnect	Belirli bir önek ile işlevlerine bir COM nesnesinin olay kaynaklarını bağlar.
+	ComObjCreate	Bir COM nesnesi oluşturur .
+	ComObjEnwrap / ComObjUnwrap	Sarar / bir COM nesnesi unwraps .
+	ComObjError	Etkinleştirir veya COM hata bildirimi devre dışı bırakır .
+	ComObjFlags	Bir COM sarıcı nesnenin davranışlarını kontrol alır veya değişiklikleri bayrakları .
+	ComObjGet	Bir COM bileşeni tarafından sağlanan bir nesneye bir başvuru döndürür .
+	ComObjMissing	Bir COM yöntemine geçmek için bir "kayıp parametresi " nesnesi oluşturur.
+	ComObjParameter	Bir COM yöntemi parametre olarak geçirmek için bir değer ve tipi sarar .
+	ComObjQuery	Bir arayüz veya hizmet için bir COM nesnesi sorgular.
+	ComObjType	Bir COM nesnesi türü bilgilerini alır .
+	ComObjValue	Bir COM sarıcı nesnesinde saklanandeğer veya işaretçi alır .
+	Continue	Mevcut döngü tekrarında geri kalanı atlar ve yeni bir başlar . Döngü her türlü iç geçerlidir.
+	Control	Bir kontrol değişiklik çeşitli yapar .
+	ControlClick	Bir fare düğmesi veya bir kontrol için fare tekerleği olayı gönderir .
+	ControlEditPaste	Bir Düzen kontrolşapka / insert pozisyonunda macunlar String (buPano içeriğini etkilemez) .
+	ControlFocus	Bir pencere üzerinde belirli bir denetime giriş odağı ayarlar.
+	ControlGet	Bir kontrol hakkında çeşitli bilgi türleri alır .
+	ControlGetFocus	Varsa hedef pencerenin kontrol alır , giriş odak vardır.
+	ControlGetPos	Bir denetimin konumunu ve boyutunu alır .
+	ControlGetText	Bir kontrol metin alır .
+	ControlMove	Hareket ya da bir kontrol boyutlandırır .
+	ControlSend / ControlSendRaw	Bir pencere veya kontrol için simüle tuş vuruşlarını gönderir .
+	ControlSetText	Bir kontrol metnini değiştirir .
+	CoordMode	Ayarlar etkin pencere veya ekran ya göreli olarak çeşitli komutlar için mod koordine .
+	Cos	Sayısıtrigonometrik kosinüsünü verir .
+	Delete	Bir nesneden anahtar-değer çiftleri kaldırır.
+	DllCall	Bu standart bir Windows API işlevi gibi bir DLL içinde bir işlevini çağırır.
+	Drive	Geri çeker bir CD veya DVD sürücüsünetepsisini çıkarır , ya da bir sürücünün birim etiketini ayarlar .
+	DriveGet	Bilgisayarın disk (ler) hakkında çeşitli bilgi türleri alır .
+	DriveSpaceFree	Megabyte , bir sürücünün boş disk alanı alır .
+	Else	Bir IF -ifadesi YANLIŞ olarak değerlendirirse komut (lar) gerçekleştirmek için belirtir . Birden fazla komut mevcut olduğunda , bir blok (parantez) içine alın .
+	EnvAdd	Kendisi toplamı artı Verilen değer (ekleyin ya da tarih-saat değeri zaman çıkarabilirsiniz) bir değişken ayarlar. Ile eşanlamlı : Var+= Değer .
+	EnvDiv	Verilen değer bölünmesiyle kendisine bir değişken ayarlar. Ile eşanlamlı : Var / = Değer .
+	EnvGet	Bir ortam değişkeni alır .
+	EnvMult	Kendisine bir değişken kez Verilen değer ayarlar . Ile eşanlamlı : Var * = Değer .
+	EnvSet	Ortamda bulunan bir değişkene bir değer yazar.
+	EnvSub	Verilen değer (ayrıca tarih-saat değerleri karşılaştırabilirsiniz) eksi kendisine bir değişken ayarlar. Ile eş anlamlıdır : Var - = Değer .
+	EnvUpdate	OS ve ortam değişkeni (ler) değişti tüm çalışan uygulamaları bildirir .
+	ExitApp	Koşulsuz script sonlandırır .
+	Exp	İade e (yaklaşık 2.71828182845905 olan)N. gücüne yükseltilmiş .
+	Expression	Değişkenler, dizeler ve / veya değişmez bir dizi sayı üzerine bir veya birden fazla işlemlerini gerçekleştirir.
+	FileAppend	Bir dosyanın sonuna (gerekirse önce ,dosya oluşturma) metin yazar.
+	FileCopy	Kopya bir veya daha fazla dosya .
+	FileCopyDir	Alt klasör ve dosyaları (xcopy benzer) ile birlikte tüm bir klasör kopyalar .
+	FileCreateDir	Bir klasör oluşturur .
+	FileCreateShortcut	Bir kısayol (. Lnk) dosyası oluşturur .
+	FileDelete	Siler bir veya daha fazla dosya .
+	FileGetAttrib	Bir dosya veya klasör salt okunur olup olmadığını raporlar , gizli , vb
+	FileGetShortcut	Bu hedef dosyası olarak bir kısayol (. Lnk) dosyası , hakkında bilgi alır .
+	FileGetSize	Bir dosyanın boyutunu alır .
+	FileGetTime	Bir dosya veya klasörün datetime damgası alır .
+	FileGetVersion	Bir dosyanın sürümünü alır .
+	FileMove	Taşır veya yeniden adlandırır bir veya daha fazla dosya .
+	FileMoveDir	Alt klasör ve dosyaları ile birlikte tüm bir klasör taşır . Ayrıca bir klasör yeniden adlandırabilirsiniz.
+	FileOpen	Sağlar nesne yönelimli dosya I / O
+	FileRead	Bir değişken bir dosyanın içeriğini okur .
+	FileReadLine	Bir dosyadan belirtilen satır okur ve bir değişken metnin saklar .
+	FileRecycle	Mümkünse , geri dönüşüm kutusuna bir dosya veya dizin gönderir .
+	FileRecycleEmpty	Geri dönüşüm kutusu boşaltır .
+	FileRemoveDir	Siler bir klasör .
+	FileSelectFile	Kullanıcı açmak veya kaydetmek dosya (lar) sağlayan standart bir iletişim kutusunu görüntüler.
+	FileSelectFolder	Kullanıcının bir klasörü seçmek için izin veren bir standart iletişim görüntüler .
+	FileSetAttrib	Bir veya daha fazla dosya veya klasör özelliklerini değiştirir . Joker desteklenmektedir .
+	FileSetTime	Bir veya daha fazla dosya veya klasördatetime damgası değiştirir . Joker desteklenmektedir .
+	Floor	Döndürür Number en yakın tam sayıya (herhangi bir .00 eki olmadan) yuvarlanır .
+	For	Bir nesne her anahtar - değer çifti için bir kez komutları bir dizi tekrarlar .
+	Format	Bir dizi biçimine göre giriş değerleri değişken sayıda biçimlendirir.
+	FormatTime	Belirtilen tarih / saat biçimi bir YYYYMMDDHH24MISS zaman damgası dönüştürür.
+	Func	Bir işleve bir başvuru alır .
+	GetKeyName / GetKeyVK / GetKeySC	Adını veya metin , sanal anahtar kodu ya da bir tuşa tarama kodu alır .
+	GetKeyState	Bir klavye tuşu veya fare / joystick düğmesine diye bakar aşağı ya da yukarı . Ayrıca joystick durumu alır .
+	Gosub	İade karşılaşılan kadar belirtilen etiket ve atlar yürütme devam eder .
+	Goto	Belirtilen etiket ve atlar yürütme devam eder .
+	GroupActivate	Groupadd ile tanımlanan bir pencere grupta bir sonraki pencere aktif hale getirir .
+	GroupAdd	Gerekirsegrup oluşturarak , bir pencere grubuna bir pencere özellikleri ekler .
+	GroupClose	Sadece GroupActivate veya GroupDeactivate ile aktive ise aktif pencereyi kapatır . Daha sonra serinin bir sonraki pencere aktif hale getirir. Ayrıca gruptaki tüm pencereleri kapatabilirsiniz .
+	GroupDeactivate	Değilgrupta bir sonraki pencere aktive dışında GroupActivate benzer .
+	HasKey	Key değeri ile ilişkili true döndürür.
+	If	Bir değere bir değişkenin karşılaştırılması TRUE evalutes eğer komut (lar) gerçekleştirmek için belirtir . Birden fazla komut mevcut olduğunda , bir blok (parantez) içine alın .
+	If (expression)	Bir ifade DOĞRU olarak değerlendirirse komut (lar) gerçekleştirmek için belirtir .
+	If A_Index	Mevcut döngü tekrarında diye bakar bir belirtilen bir numarayla matchs .
+	If Clipboard	Pano metin ise Çekler belirtilen bir dize matchs .
+	If ErrorLevel	Belirli bir görüntü veya piksel diye bakarekranında bulundu .
+	If var [not] between	Bir değişkenin içeriği olup olmadığını kontrol eder iki değeri (dahil) arasında sayısal ya da alfabetik olarak bulunmaktadır.
+	If var [not] in / If var [not] contains MatchList	Bir değişkenin içeriğini kontrol eder bir listede öğelerin bir maç .
+	If var is [not] type	Bir değişkenin içeriğini sayısal olup olmadığını kontrol eder , büyük harf, vb
+	IfEqual / IfNotEqual	Eşitlik için bir değere bir değişken karşılaştırır . Ile eşanlamlı : Eğer Var = Değer | Var < > Değer eğer .
+	IfExist / IfNotExist / FileExist	Bir dosya veya klasörün varlığını kontrol eder.
+	IfGreater / IfGreaterOrEqual	Bir değere bir değişken karşılaştırır . Ile eşanlamlı : if Var > Değer | Eğer Var > = Değer .
+	IfInString / IfNotInString	Bir değişken diye bakar belirtilen dize içerir .
+	IfLess / IfLessOrEqual	Bir değere bir değişken karşılaştırır . Ile eşanlamlı : eğer Var < Değer | Var < = Değer eğer .
+	IfMsgBox	Hangi düğme Çekler En son MsgBox komut sırasında kullanıcı tarafından itildi .
+	IfWinActive / IfWinNotActive	Çekler belirtilen pencere var ve (en önemlisi) etkin olup olmadığını .
+	IfWinExist / IfWinNotExist	Çekler belirtilen pencere varsa .
+	ImageSearch	Bir görüntü için ekran bir bölge arar .
+	IniDelete	Standart bir format . Ini dosyası siler bir değer .
+	IniRead	Standart bir format . Ini dosyası bir değer okur .
+	IniWrite	Standart bir format . Ini dosyası için bir değer yazar.
+	Input	Kullanıcı bir dize (: hiçbir şey yapmaz Windows 9 x desteklenmez) yazmanız için bekler .
+	InputBox	Bir giriş kutusu bir dize girmek için kullanıcı sormak görüntüler .
+	InsertAt	Doğrusal bir dizi içindeki belirli bir pozisyonda bir veya daha fazla değer ekler.
+	InStr	Sol veya sağ taraftan bir dize belirli bir olay arar .
+	KeyWait	Serbest veya basılı gereken bir anahtar veya fare / joystick düğmesine bekler.
+	Label	Bir etiket, bir kod hattı tanımlayan, ve Goto hedef olarak ya da bir alt yordam oluşturmak için de kullanılabilir.
+	Length	1 konumundaki başlayan doğrusal bir dizinin uzunluğunu döndürür.
+	ListVars	İsimlerini ve geçerli içeriğini: betiğin değişkenleri görüntüler.
+	Ln	Sayısı doğal logaritma (Taban e) döndürür.
+	LoadPicture	Dosyadan bir resim dosyasını yükler ve bitmap veya simge tanıtıcısı döndürür.
+	Log	Sayısı logaritma (10 tabanı) döndürür.
+	Loop (files & folders)	Belirtilen dosya veya klasörleri, her seferinde bir alır.
+	Loop (normal)	Tekrar tekrar komutları bir dizi gerçekleştirin: Belirtilen kez numarası veya mola kadar da görülür.
+	Loop (parse a string)	Bir dize alır dizeleri (alanları), her seferinde bir.
+	Loop (read file contents)	Bir metin dosyasına satırları, bir zaman (FileReadLine daha iyi performans) az bir alır.
+	Loop (registry)	Bir anda belirtilen kayıt defteri alt anahtarını, bir öğe içeriğini alır.
+	MaxIndex	En yüksek tamsayı anahtarı döndürür.
+	MinIndex	En tamsayı anahtarı döndürür.
+	Mod	Modulo. Temettü bölen bölünür kalanı verir.
+	MouseGetPos	Mevcut fare imleci konumu ve isteğe bağlı olarak hangi pencere ve kontrol üzerine asılı olan alır.
+	MsgBox	Bir veya daha fazla düğme (örneğin, Evet ve Hayır olarak) içeren küçük bir pencerede belirtilen metni görüntüler.
+	NumGet	Belirtilen adres+ofset saklanan ikili sayı döndürür.
+	NumPut	Belirtilen adresteki ikili biçimde mağaza sayısı+ofset ve sadece yazılı öğenin sağındaki adresini döndürür.
+	Object	Bir script ilişkisel dizi oluşturur.
+	Ord	Dize ilk karakterin sıra değeri (sayısal karakter kodu) döndürür.
+	OutputDebug	Ekran için hata ayıklayıcı (varsa) için bir dize gönderir.
+	Parameter	Işleve bir parametre ekler.
+	Pause	Script en geçerli iş parçacığı duraklar.
+	PixelGetColor	Belirtilen x de pikselin rengini alır, y koordinatları.
+	PixelSearch	Belirtilen renk bir piksel için ekranın bir bölge arar.
+	Pop	Kaldırır ve son dizi elemanını döndürür.
+	PostMessage	Bir pencere veya kontrol ileti kuyruğu bir ileti yerleştirir.
+	Process	Bir süreç aşağıdaki işlemlerden birini gerçekleştirir: Varsa kontrol eder; değişiklikleri öncelik, o kapatır, kapatmak için bekler.
+	Progress	Oluşturur veya bir ilerleme çubuğu içeren bir pencere günceller.
+	Push	Bir dizinin sonuna değerlerini ekler.
+	Random	Yalancı rasgele bir sayı oluşturur.
+	RegDelete	Siler kayıt defterinden bir alt anahtarı veya değeri.
+	RegExMatch	Bir dize bir desen (düzenli ifade) içerip içermediğini belirler.
+	RegExReplace	Bir dize içinde bir desen (düzenli ifade) oluşunda değiştirir.
+	RegRead	Kayıt defterinden bir değer okur.
+	RegWrite	Kayıt defterine bir değer yazar.
+	RemoveAt	Doğrusal bir dizide verilen pozisyona öğeleri kaldırır.
+	Return	Yürütme önce fonksiyon çağrısı, Gosub, Hotkey aktivasyon, GroupActivate veya diğer yollarla atladı vardı için bir alt yordam gelen döner.
+	Round	Yok ihmal ya da 0 ise, sayısı en yakın tam sayıya yuvarlanır. N pozitif sayı ise, sayısı N ondalık basamağa yuvarlanır. Yok negatif ise, sayısı ondalık noktasının solunda N basamak yuvarlanır.
+	Run	Harici bir program çalıştırır.
+	RunAs	Run ve RunWait sonraki tüm kullanımlar için kullanılacak kullanıcı kimlik bilgileri kümesi belirtir. Windows 2000/XP veya sonraki sürümünü gerektirir.
+	RunWait	Harici bir program çalıştırır ve bitene kadar bekler.
+	Send / SendRaw	Etkin pencere için simüle tuş vuruşlarını ve fare tıklaması gönderir.
+	SendLevel	Yapay klavye ve fare olayları kısayol tuşları ve hotstrings tarafından göz ardı edilir Kontroller.
+	SendMessage	Bir pencere veya kontrol için bir mesaj gönderir ve onay bekler.
+	SetCapslockState	Capslock tuşunun durumunu ayarlar. Ayrıca anahtar açık veya kapalı kalmak zorlayabilir.
+	SetKeyDelay	Gönder veya ControlSend tarafından gönderilen her tuş sonra oluşacak gecikme ayarlar.
+	SetNumlockState	Numlock tuşunun durumunu ayarlar. Ayrıca anahtar açık veya kapalı kalmak zorlayabilir.
+	SetRegView	32-bit komut kayıt komutları 64-bit kayıt defteri görünümü ve tersi erişmenizi sağlar.
+	SetScrollLockState	ScrollLock anahtarın durumunu ayarlar. Ayrıca anahtar açık veya kapalı kalmak zorlayabilir.
+	SetTimer	Belirli bir zaman aralığında otomatik olarak ve tekrar tekrar açılacak bir alt yordam neden olur.
+	Shutdown	, Kapanır yeniden veya sistem kapattığında.
+	Sin	Sayısı trigonometrik sinüsünü verir.
+	Sleep	Devam etmeden önce zaman belirtilen miktarda bekler.
+	Sort	Alfabetik, sayısal ya da rasgele (isteğe bağlı çiftleri kaldırarak) bir değişkenin içeriğini düzenler.
+	SoundBeep	PC hoparlörden bir ses yayar.
+	SoundGet	Bir ses aygıtı (ana sessiz, ana ses, vb) çeşitli ayarları alır
+	SoundGetWaveVolume	Bir ses aygıtı gelen dalga çıkış ses alır.
+	SoundPlay	Bir ses, video veya diğer desteklenen dosya türü çalar.
+	SoundSet	Değişiklikler bir ses aygıtı çeşitli ayarları (ana sessiz, ana ses, vb)
+	SoundSetWaveVolume	Bir ses aygıtı için dalga çıkış ses değiştirir.
+	SplashImage	Oluşturur veya bir JPG, GIF veya BMP resim içeren bir pencere günceller.
+	SplashTextOff	Yukarıdaki penceresini kapatır.
+	SplashTextOn	Özelleştirilebilir bir metin açılır pencere oluşturur.
+	SplitPath	Adını, dizin, uzatma, ve sürücüye bir dosya adı veya URL ayırır.
+	Sqrt	Sayısı kare kökünü verir.
+	StatusBarGetText	Standart bir durum çubuğu kontrolünden metni alır.
+	StatusBarWait	Bir pencerenin durum çubuğu belirtilen dize içerir kadar bekler.
+	StringGetPos	Bir dize içinde belirtilen alt yerini alır.
+	StringLeft	Bir dize sol taraftan karakter sayısını alır.
+	StringLen / StrLen	Bir dize ne kadar çok karakter sayısını alır.
+	StringLower	Küçük harfe bir dize dönüştürür.
+	StringMid / SubStr	Bir dizesinde belirtilen konumdan bir veya daha fazla karakter alır.
+	StringReplace / StrReplace	Yeni bir dize ile belirtilen alt değiştirir.
+	StringRight	Bir dize sağ taraftan karakter sayısını alır.
+	StringSplit / StrSplit	Belirtilen sınırlayıcı kullanarak alt dizeleri bir diziye bir dize ayırır.
+	StringTrimLeft	Bir dize sol taraftan karakter bir dizi kaldırır.
+	StringTrimRight	Bir dize sağ taraftan karakter bir dizi kaldırır.
+	StringUpper	Büyük harfe bir dize dönüştürür.
+	StrPut / StrGet	Kod sayfaları arasında dönüştürerek isteğe bağlı bir bellek adresi, veya bir dize kopyalar.
+	SysGet	Ekran çözünürlüğü, çoklu monitör bilgi, sistem nesneleri boyutları ve diğer sistem özellikleri alır.
+	Tan	Sayısı trigonometrik tanjantını verir.
+	ToolTip	Ekranda herhangi bir yere bir zaman-on-top pencere oluşturur.
+	Transform	Çeşitli matematik fonksiyonları, bit işlemleri ve bu ASCII / Unicode dönüştürme gibi görevleri gerçekleştirir.
+	TrayTip	Tepsi simgesinin yanında bir balon mesaj penceresi oluşturur. Windows 2000/XP veya sonraki sürümünü gerektirir.
+	Trim / LTrim / RTrim	Başlangıç ve / veya bir dize sonundan düzeltir bazı karakterler.
+	Until	Bir döngü ya da için-döngünün devamı için bir koşul geçerlidir.
+	UrlDownloadToFile	Internetten bir dosya indirir.
+	UserFunction	Bir işlev yapısı oluşturur.
+	Variable	Bir değişkene belirtilen değeri atar.
+	While	Belirtilen ifade yanlış olarak değerlendirilir kadar art arda bir dizi komut gerçekleştirir.
+	WinActivate	Belirtilen penceresi (bu her şeyden yapar) etkinleştirir.
+	WinActivateBottom	Bu en alttaki (en son aktif) eşleştirme pencere yerine üstteki aktive dışında WinActivate aynı.
+	WinActive	, Belirtilen ölçütlerle eşleşen eğer etkin pencerenin Benzersiz Kimlik (HWND) döndürür.
+	WinClose	Belirtilen penceresini kapatır.
+	WinExist	Çekler belirtilen pencere varsa.
+	WinGet	Belirtilen pencerenin benzersiz kimlik, süreç kimliği, işlem adı veya denetimlerinin listesini alır. Ayrıca belirtilen kriterlere uyan bütün pencerelerin listesini alabilirsiniz.
+	WinGetClass	Belirtilen pencere sınıf adı alır.
+	WinGetPos	Belirtilen pencerenin konumunu ve boyutunu alır.
+	WinGetText	Belirtilen penceresinden metin alır.
+	WinGetTitle	Belirtilen pencerenin başlık alır.
+	WinHide	Belirtilen penceresini gizler.
+	WinHttpDownloadToFile	İndirme bir veya internetten daha fazla dosya.
+	WinKill	Belirtilen penceresini kapatmak için zorlar.
+	WinMaximize	En büyük boyutuna Belirtilen penceresini büyütür.
+	WinMenuSelectItem	Belirtilen penceresinin menü çubuğundan bir menü öğesi çağırır.
+	WinMinimize	Görev çubuğundaki bir düğmeye içine belirtilen pencere daraltır.
+	WinMinimizeAll	Tüm pencereleri simge durumuna küçültür.
+	WinMinimizeAllUndo	Bir önceki WinMinimizeAll etkisini tersine çevirir.
+	WinMove	Değişiklikler konumu ve / veya belirli bir pencere boyutu.
+	WinRestore	Unminimizes veya minimize veya maksimize ise belirtilen pencere unmaximizes.
+	WinSet	Bu ve şeffaflık "her zaman üstte" olarak belirtilen pencere değişiklik, çeşitli yapar.
+	WinSetTitle	Belirtilen pencerenin başlık değiştirir.
+	WinShow	Belirtilen pencere unhides.
+	WinWait	Belirtilen pencere var kadar bekler.
+	WinWaitActive	Belirtilen pencere aktif olana dek bekler.
+	WinWaitClose	Belirtilen pencere yok kadar bekler.
+	WinWaitNotActive	Belirtilen penceresi etkin değil kadar bekler.
+	Zip / UnZip	Sıkıştırmak veya bir veya daha fazla zip dosyaları sıkıştırmasını.
+	WinExist	Çekler belirtilen pencere varsa.
+	WinGet	Belirtilen pencerenin benzersiz kimlik, süreç kimliği, işlem adı veya denetimlerinin listesini alır. Ayrıca belirtilen kriterlere uyan bütün pencerelerin listesini alabilirsiniz.
+	WinGetClass	Belirtilen pencere sınıf adı alır.
+	WinGetPos	Belirtilen pencerenin konumunu ve boyutunu alır.
+	WinGetText	Belirtilen penceresinden metin alır.
+	WinGetTitle	Belirtilen pencerenin başlık alır.
+	WinHide	Belirtilen penceresini gizler.
+	WinHttpDownloadToFile	İndirme bir veya internetten daha fazla dosya.
+	WinKill	Belirtilen penceresini kapatmak için zorlar.
+	WinMaximize	En büyük boyutuna Belirtilen penceresini büyütür.
+	WinMenuSelectItem	Belirtilen penceresinin menü çubuğundan bir menü öğesi çağırır.
+	WinMinimize	Görev çubuğundaki bir düğmeye içine belirtilen pencere daraltır.
+	WinMinimizeAll	Tüm pencereleri simge durumuna küçültür.
+	WinMinimizeAllUndo	Bir önceki WinMinimizeAll etkisini tersine çevirir.
+	WinMove	Değişiklikler konumu ve / veya belirli bir pencere boyutu.
+	WinRestore	Unminimizes veya minimize veya maksimize ise belirtilen pencere unmaximizes.
+	WinSet	Bu ve şeffaflık "her zaman üstte" olarak belirtilen pencere değişiklik, çeşitli yapar.
+	WinSetTitle	Belirtilen pencerenin başlık değiştirir.
+	WinShow	Belirtilen pencere unhides.
+	WinWait	Belirtilen pencere var kadar bekler.
+	WinWaitActive	Belirtilen pencere aktif olana dek bekler.
+	WinWaitClose	Belirtilen pencere yok kadar bekler.
+	WinWaitNotActive	Belirtilen penceresi etkin değil kadar bekler.
+	Zip / UnZip	Sıkıştırmak veya bir veya daha fazla zip dosyaları sıkıştırmasını.
