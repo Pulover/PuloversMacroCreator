@@ -117,7 +117,7 @@ Action1 := "Click"
 RecOptChecks := ["ClearNewList", "", "Strokes", "CaptKDn", "RecKeybdCtrl"
 					, "", "Mouse", "MScroll", "Moves", "RecMouseCtrl"
 					, "", "TimedI", "WClass", "WTitle"]
-,	PlayOptChecks := ["ShowStep", "MouseReturn", "ShowBarOnStart", "AutoHideBar", "RandomSleeps"]
+,	PlayOptChecks := ["ShowStep", "HideErrors", "MouseReturn", "ShowBarOnStart", "AutoHideBar", "RandomSleeps"]
 ,	OnFinishCode := 1
 ,	CopyMenuLabels := []
 ,	ScopedVars := {}

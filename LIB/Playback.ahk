@@ -242,8 +242,9 @@
 					Func_Result := Eval(Step, PlaybackVars[LoopDepth][mLoopIndex])
 				Catch 
 				{
-					MsgBox, 16, %d_Lang007%, % "Function: " RunningFunction
-						.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" (InStr(e.Message, "0x800401E3") ? d_Lang088 : e.Extra)
+					If (!HideErrors)
+						MsgBox, 16, %d_Lang007%, % "Function: " RunningFunction
+							.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" (InStr(e.Message, "0x800401E3") ? d_Lang088 : e.Extra)
 				}
 				
 				For _each, _value in ScopedParams
@@ -676,12 +677,15 @@
 						AssignVar(VarName, Oper, VarValue, PlaybackVars[LoopDepth][mLoopIndex], RunningFunction)
 					Catch e
 					{
-						MsgBox, 20, %d_Lang007%, % "Macro" Macro_On ", " d_Lang065 " " mListRow
-							.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" (InStr(e.Message, "0x800401E3") ? d_Lang088 : e.Extra) "`n`n" d_Lang035
-						IfMsgBox, No
+						If (!HideErrors)
 						{
-							StopIt := 1
-							continue
+							MsgBox, 20, %d_Lang007%, % "Macro" Macro_On ", " d_Lang065 " " mListRow
+								.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" (InStr(e.Message, "0x800401E3") ? d_Lang088 : e.Extra) "`n`n" d_Lang035
+							IfMsgBox, No
+							{
+								StopIt := 1
+								continue
+							}
 						}
 					}
 					Try SavedVars(VarName,,, RunningFunction)
@@ -696,12 +700,15 @@
 					}
 					Catch e
 					{
-						MsgBox, 20, %d_Lang007%, % "Macro" Macro_On ", " d_Lang065 " " mListRow
-							.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" (InStr(e.Message, "0x800401E3") ? d_Lang088 : e.Extra) "`n`n" d_Lang035
-						IfMsgBox, No
+						If (!HideErrors)
 						{
-							StopIt := 1
-							continue
+							MsgBox, 20, %d_Lang007%, % "Macro" Macro_On ", " d_Lang065 " " mListRow
+								.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" (InStr(e.Message, "0x800401E3") ? d_Lang088 : e.Extra) "`n`n" d_Lang035
+							IfMsgBox, No
+							{
+								StopIt := 1
+								continue
+							}
 						}
 					}
 					Try SavedVars(VarName,,, RunningFunction)
@@ -742,12 +749,15 @@
 										AssignVar(VarName, ":=", VarValue, PlaybackVars[LoopDepth][mLoopIndex], RunningFunction)
 									Catch e
 									{
-										MsgBox, 20, %d_Lang007%, % "Macro" Macro_On ", " d_Lang065 " " mListRow
-											.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" (InStr(e.Message, "0x800401E3") ? d_Lang088 : e.Extra) "`n`n" d_Lang035
-										IfMsgBox, No
+										If (!HideErrors)
 										{
-											StopIt := 1
-											continue 3
+											MsgBox, 20, %d_Lang007%, % "Macro" Macro_On ", " d_Lang065 " " mListRow
+												.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" (InStr(e.Message, "0x800401E3") ? d_Lang088 : e.Extra) "`n`n" d_Lang035
+											IfMsgBox, No
+											{
+												StopIt := 1
+												continue 3
+											}
 										}
 									}
 									Try SavedVars(VarName,,, RunningFunction)
@@ -776,12 +786,15 @@
 					}
 					Catch e
 					{
-						MsgBox, 20, %d_Lang007%, % "Macro" Macro_On ", " d_Lang065 " " mListRow
-							.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" (InStr(e.Message, "0x800401E3") ? d_Lang088 : e.Extra) "`n`n" d_Lang035
-						IfMsgBox, No
+						If (!HideErrors)
 						{
-							StopIt := 1
-							continue
+							MsgBox, 20, %d_Lang007%, % "Macro" Macro_On ", " d_Lang065 " " mListRow
+								.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" (InStr(e.Message, "0x800401E3") ? d_Lang088 : e.Extra) "`n`n" d_Lang035
+							IfMsgBox, No
+							{
+								StopIt := 1
+								continue
+							}
 						}
 					}
 					Try SavedVars(VarName,,, RunningFunction)
@@ -848,10 +861,13 @@
 					TakeAction := PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, FlowControl, PlaybackVars[LoopDepth][mLoopIndex], RunningFunction, _LastError)
 				Catch e
 				{
-					MsgBox, 20, %d_Lang007%, % d_Lang064 " Macro" Macro_On ", " d_Lang065 " " mListRow
-						.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" (InStr(e.Message, "0x800401E3") ? d_Lang088 : e.Extra) "`n`n" d_Lang035
-					IfMsgBox, No
-						StopIt := 1
+					If (!HideErrors)
+					{
+						MsgBox, 20, %d_Lang007%, % d_Lang064 " Macro" Macro_On ", " d_Lang065 " " mListRow
+							.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" (InStr(e.Message, "0x800401E3") ? d_Lang088 : e.Extra) "`n`n" d_Lang035
+						IfMsgBox, No
+							StopIt := 1
+					}
 				}
 				PlaybackVars[LoopDepth][mLoopIndex, "ErrorLevel"] := _LastError
 				If ((Type = cType15) || (Type = cType16))
@@ -1897,27 +1913,6 @@ PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, Flow, Cust
 	return
 
 	pb_IECOM_Get:
-		If (RegExMatch(Step, "^(\w+)(\[\S+\]|\.\w+)+", lMatch))
-		{
-			Try
-				z_Check := VarSetCapacity(%lMatch1%)
-			Catch
-			{
-				MsgBox, 16, %d_Lang007%, %d_Lang041%
-				return
-			}
-		}
-		Else
-		{
-			Try
-				z_Check := VarSetCapacity(%Step%)
-			Catch
-			{
-				MsgBox, 16, %d_Lang007%, %d_Lang041%
-				return
-			}
-		}
-		
 		StringSplit, Act, Action, :
 		StringSplit, El, Target, :
 		IeIntStr := IEComExp(Act2, "", El1, El2, Step, Act3, Act1)
@@ -2473,12 +2468,15 @@ CheckVars(CustomVars, ByRef CheckVar1 := "", ByRef CheckVar2 := "", ByRef CheckV
 				EvalResult := Eval(lMatch1, CustomVars), CheckVar%_i% := EvalResult[1]
 			Catch e
 			{
-				MsgBox, 20, %d_Lang007%, % "Macro" Macro_On ", " d_Lang065 " " mListRow
-					.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" (InStr(e.Message, "0x800401E3") ? d_Lang088 : e.Extra) "`n`n" d_Lang035
-				IfMsgBox, No
+				If (!HideErrors)
 				{
-					StopIt := 1
-					continue
+					MsgBox, 20, %d_Lang007%, % "Macro" Macro_On ", " d_Lang065 " " mListRow
+						.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" (InStr(e.Message, "0x800401E3") ? d_Lang088 : e.Extra) "`n`n" d_Lang035
+					IfMsgBox, No
+					{
+						StopIt := 1
+						continue
+					}
 				}
 			}
 			continue

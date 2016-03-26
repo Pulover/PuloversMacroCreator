@@ -764,6 +764,7 @@
 	t_Lang207 =	クライアント
 	t_Lang208 =	見つける(&I)
 	t_Lang209 =	置き換える(&E)
+	t_Lang210 =	エラーを表示しません
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	開く

@@ -986,36 +986,46 @@ Zip(FilesToZip, OutFile, SeparateFiles := false)
 	zipped := objTarget.items().Count
 	Loop, Parse, FilesToZip, `;, %A_Space%%A_Tab%
 	{
-		zipped++
-		SplitPath, A_LoopField, FileName, FileDir,, FileNameNoExt
-		FileDir := RegExReplace(FileDir, ".*\\")
-		If (SeparateFiles)
+		LoopField := RTrim(A_LoopField, "\")
+		Loop, Files, %LoopField%, FD
 		{
-			OutFile := OutDir "\" FileNameNoExt ".zip"
-			If (!FileExist(OutFile))
-				CreateZipFile(OutFile)
-			objTarget := objShell.Namespace(OutFile)
-			zipped := 1
-		}
-		For item in objTarget.Items
-		{
-			If (item.Name = FileDir)
+			zipped++
+			If (SeparateFiles)
 			{
-				item.InvokeVerb("Delete")
-				zipped--
-				break
+				OutFile := OutDir "\" RegExReplace(A_LoopFileName, "\.(?!.*\.).*") ".zip"
+				If (!FileExist(OutFile))
+					CreateZipFile(OutFile)
+				objTarget := objShell.Namespace(OutFile)
+				zipped := 1
 			}
-			If (item.Name = FileName)
+			For item in objTarget.Items
 			{
-				objShell.Namespace(A_Temp).MoveHere(item)
-				FileDelete, % A_Temp "\" item.Name
-				zipped--
-				break
+				If (item.Name = A_LoopFileDir)
+				{
+					item.InvokeVerb("Delete")
+					zipped--
+					break
+				}
+				If (item.Name = A_LoopFileName)
+				{
+					FileRemoveDir, % A_Temp "\" item.Name, 1
+					FileDelete, % A_Temp "\" item.Name
+					objShell.Namespace(A_Temp).MoveHere(item)
+					FileRemoveDir, % A_Temp "\" item.Name, 1
+					FileDelete, % A_Temp "\" item.Name
+					zipped--
+					break
+				}
 			}
+			If (A_LoopFileFullPath = OutFile)
+			{
+				zipped--
+				continue
+			}
+			objTarget.CopyHere(A_LoopFileFullPath, vOptions)
+			While (objTarget.items().Count != zipped)
+				Sleep, 10
 		}
-		objTarget.CopyHere(A_LoopField, vOptions)
-		While (objTarget.items().Count != zipped)
-			Sleep, 10
 	}
 	ObjRelease(objShell)
 }

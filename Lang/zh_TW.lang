@@ -764,6 +764,7 @@
 	t_Lang207 =	客戶
 	t_Lang208 =	發現(&I)
 	t_Lang209 =	更換(&E)
+	t_Lang210 =	不顯示錯誤
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	打開

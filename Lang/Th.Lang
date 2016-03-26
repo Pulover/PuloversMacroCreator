@@ -764,6 +764,7 @@
 	t_Lang207 =	ไคลเอนต์
 	t_Lang208 =	หา(&I)
 	t_Lang209 =	แทนที่(&E)
+	t_Lang210 =	อย่าแสดงข้อผิดพลาด
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	เปิด

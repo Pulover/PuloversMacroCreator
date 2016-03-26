@@ -764,6 +764,7 @@
 	t_Lang207 =	زبون
 	t_Lang208 =	إيجاد(&I)
 	t_Lang209 =	يحل محل(&E)
+	t_Lang210 =	لا عرض الأخطاء
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	فتح

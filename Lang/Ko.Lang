@@ -764,6 +764,7 @@
 	t_Lang207 =	고객
 	t_Lang208 =	발견(&I)
 	t_Lang209 =	교체(&E)
+	t_Lang210 =	오류를 표시하지 않음
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	열기

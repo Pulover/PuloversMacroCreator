@@ -7,7 +7,7 @@
 ; Home: http://www.macrocreator.com
 ; Forum: http://autohotkey.com/boards/viewtopic.php?f=6&t=143
 ; Version: 5.0.0
-; Release Date: March, 2016
+; Release Date: April, 2016
 ; AutoHotkey Version: 1.1.23.03
 ; Copyright © 2012-2016 Rodolfo U. Batista
 ; GNU General Public License 3.0 or higher
@@ -130,7 +130,7 @@ Loop
 }
 
 
-CurrentVersion := "5.0.0", ReleaseDate := "March, 2016"
+CurrentVersion := "5.0.0", ReleaseDate := "April, 2016"
 
 ;##### Ini File Read #####
 
@@ -191,6 +191,7 @@ IniRead, HiddenWin, %IniFilePath%, Options, HiddenWin, 0
 IniRead, HiddenText, %IniFilePath%, Options, HiddenText, 1
 IniRead, SpeedUp, %IniFilePath%, Options, SpeedUp, 2
 IniRead, SpeedDn, %IniFilePath%, Options, SpeedDn, 2
+IniRead, HideErrors, %IniFilePath%, Options, HideErrors, 0
 IniRead, MouseReturn, %IniFilePath%, Options, MouseReturn, 0
 IniRead, ShowProgBar, %IniFilePath%, Options, ShowProgBar, 1
 IniRead, ShowBarOnStart, %IniFilePath%, Options, ShowBarOnStart, 0
@@ -2811,14 +2812,14 @@ Gui, 4:Add, Checkbox, -Wrap Checked%WClass% y+0 xs+10 vWClass W380 R1, %t_Lang02
 Gui, 4:Add, Checkbox, -Wrap Checked%WTitle% vWTitle W380 R1, %t_Lang030%
 Gui, 4:Tab, 3
 ; Playback
-Gui, 4:Add, GroupBox, Section ym xm+170 W400 H110, %t_Lang202%:
+Gui, 4:Add, GroupBox, Section ym xm+170 W400 H103, %t_Lang202%:
 Gui, 4:Add, Text, -Wrap R1 yp+20 xs+10 W200, %t_Lang205%:
 Gui, 4:Add, DDL, yp-2 x+0 W80 vTitleMatch, 1|2||3|RegEx
 Gui, 4:Add, Text, -Wrap R1 y+10 xs+10 W200, %t_Lang206%:
 Gui, 4:Add, DDL, yp-2 x+0 W80 vTitleSpeed, Fast||Slow
 Gui, 4:Add, Checkbox, -Wrap R1 Checked%HiddenWin% y+10 xs+10 W195 vHiddenWin, %t_Lang203%
 Gui, 4:Add, Checkbox, -Wrap R1 Checked%HiddenText% yp x+5 W180 vHiddenText, %t_Lang204%
-Gui, 4:Add, GroupBox, Section y+25 xs W400 H145, %t_Lang053%:
+Gui, 4:Add, GroupBox, Section y+18 xs W400 H138, %t_Lang053%:
 Gui, 4:Add, Text, -Wrap R1 ys+20 xs+10 W200, %t_Lang036%:
 Gui, 4:Add, DDL, yp-2 x+0 W105 vFastKey, None|Insert||F1|F2|F3|F4|F5|F6|F7|F8|F9|F10|F11|F12|CapsLock|NumLock|ScrollLock|
 Gui, 4:Add, DDL, yp x+5 W37 vSpeedUp, 2||4|8|16|32
@@ -2832,8 +2833,9 @@ Gui, 4:Add, Text, -Wrap yp x+5 W180 R1, %w_Lang007%:
 Gui, 4:Add, Edit, y+5 xs+10 W195 R1 -Multi ReadOnly, %AutoKey%
 Gui, 4:Add, Edit, yp x+5 W180 R1 -Multi ReadOnly, %ManKey%
 Gui, 4:Add, Checkbox, -Wrap Checked%KeepDefKeys% y+5 xs+10 vKeepDefKeys W380 R1, %t_Lang054%.
-Gui, 4:Add, GroupBox, Section y+22 xs W400 H128, %w_Lang003%:
+Gui, 4:Add, GroupBox, Section y+15 xs W400 H142, %w_Lang003%:
 Gui, 4:Add, Checkbox, -Wrap R1 Checked%ShowStep% ys+20 xs+10 W380 vShowStep, %t_Lang100%
+Gui, 4:Add, Checkbox, -Wrap R1 Checked%HideErrors% W380 vHideErrors, %t_Lang210%
 Gui, 4:Add, Checkbox, -Wrap R1 Checked%MouseReturn% W380 vMouseReturn, %t_Lang038%
 Gui, 4:Add, Checkbox, -Wrap R1 Checked%ShowBarOnStart% W380 vShowBarOnStart, %t_Lang085%
 Gui, 4:Add, Checkbox, -Wrap R1 Checked%AutoHideBar% W380 vAutoHideBar, %t_Lang143%
@@ -9190,7 +9192,7 @@ Gui, 40:Add, Edit, y+5 xs+10 W400 R1 vZipFileVar
 Gui, 40:Add, Button, -Wrap yp-1 x+0 W30 H23 vZipFile gDlSearch, ...
 Gui, 40:Add, Text, -Wrap R1 y+10 xs+10 W180 vZipFilesT, %c_Lang145%:
 Gui, 40:Add, Edit, R5 y+5 xs+10 W400 vZipFilesVar
-Gui, 40:Add, Button, -Wrap yp-1 x+0 W30 H23 vZipFiles gDlSearch, +
+Gui, 40:Add, Button, -Wrap yp-1 x+0 W30 H23 vZipFiles gDlSearch, ...
 Gui, 40:Add, Text, -Wrap R1 y+55 xs+10 W400 cGray, %c_Lang255%
 Gui, 40:Add, Checkbox, -Wrap R1 y+10 xs+10 W400 vSeparate, %c_Lang248%
 Gui, 40:Tab
@@ -9348,7 +9350,7 @@ If ((A_GuiControl = "DlFolder") || ((A_GuiControl = "ZipFile") && (Unzip)))
 }
 Else
 {
-	Opt := (A_GuiControl = "ZipFiles") ? "M2" : 2, Filt := (A_GuiControl = "ZipFiles") ? "*.zip" : ""
+	Opt := (A_GuiControl = "ZipFiles") ? "M2" : 2, Filt := ((A_GuiControl = "ZipFiles") && (Unzip)) ? "*.zip" : ""
 	FileSelectFile, File, %Opt%,, %AppName%, %Filt%
 	If (A_GuiControl = "ZipFile")
 	{
@@ -13506,6 +13508,7 @@ SlowKey := "Pause"
 ClearNewList := 0
 SpeedUp := 2
 SpeedDn := 2
+HideErrors := 0
 MouseReturn := 0
 ShowProgBar := 1
 ShowBarOnStart := 0
@@ -13842,6 +13845,7 @@ IniWrite, %HiddenWin%, %IniFilePath%, Options, HiddenWin
 IniWrite, %HiddenText%, %IniFilePath%, Options, HiddenText
 IniWrite, %SpeedUp%, %IniFilePath%, Options, SpeedUp
 IniWrite, %SpeedDn%, %IniFilePath%, Options, SpeedDn
+IniWrite, %HideErrors%, %IniFilePath%, Options, HideErrors
 IniWrite, %MouseReturn%, %IniFilePath%, Options, MouseReturn
 IniWrite, %ShowProgBar%, %IniFilePath%, Options, ShowProgBar
 IniWrite, %ShowBarOnStart%, %IniFilePath%, Options, ShowBarOnStart
@@ -14846,6 +14850,7 @@ Menu, PlayOptMenu, Add, %t_Lang036%, :SpeedUpMenu
 Menu, PlayOptMenu, Add, %t_Lang037%, :SpeedDnMenu
 Menu, PlayOptMenu, Add
 Menu, PlayOptMenu, Add, %t_Lang100%, PlayOpt
+Menu, PlayOptMenu, Add, %t_Lang210%, PlayOpt
 Menu, PlayOptMenu, Add, %t_Lang038%, PlayOpt
 Menu, PlayOptMenu, Add, %t_Lang085%, PlayOpt
 Menu, PlayOptMenu, Add, %t_Lang143%, PlayOpt
@@ -14860,6 +14865,8 @@ If (pb_Sel)
 
 If (ShowStep)
 	Menu, PlayOptMenu, Check, %t_Lang100%
+If (HideErrors)
+	Menu, PlayOptMenu, Check, %t_Lang210%
 If (MouseReturn)
 	Menu, PlayOptMenu, Check, %t_Lang038%
 If (ShowBarOnStart)
@@ -14880,7 +14887,7 @@ mX := "", mY := ""
 return
 
 PlayOpt:
-ItemVar := PlayOptChecks[A_ThisMenuItemPos-7], %ItemVar% := !%ItemVar%
+ItemVar := PlayOptChecks[A_ThisMenuItemPos-9], %ItemVar% := !%ItemVar%
 return
 
 SpeedOpt:

@@ -764,6 +764,7 @@
 	t_Lang207 =	客户
 	t_Lang208 =	查找(&I)
 	t_Lang209 =	替换(&E)
+	t_Lang210 =	不显示错误
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	打开
