@@ -384,7 +384,6 @@
 			StringSplit, Act, Action, :
 			StringSplit, El, Target, :
 			RowData := "`n" IEComExp(Act2, Step, El1, El2, "", Act3, Act1)
-		; ,	RowData := CheckComExp(RowData)
 		,	RowData := Add_CD(RowData, Comment, DelayX)
 			If (!init_ie)
 				RowData := "`nIf !IsObject(ie)"
@@ -401,7 +400,6 @@
 			StringSplit, Act, Action, :
 			StringSplit, El, Target, :
 			RowData := "`n" IEComExp(Act2, "", El1, El2, Step, Act3, Act1)
-		; ,	RowData := CheckComExp(RowData, Step)
 		,	RowData := Add_CD(RowData, Comment, DelayX)
 			If (!init_ie)
 				RowData := "`nIf !IsObject(ie)"
@@ -826,10 +824,9 @@ IEComExp(Method, Value := "", Element := "", ElIndex := 0, OutputVar := "", GetB
 	Else
 		getEl := "getElementsBy" GetBy
 	
-	ElIndex := (ElIndex != "") ? "[" ElIndex "]" : ""
+	ElIndex := (ElIndex != "") ? "[" CheckExp(ElIndex) "]" : ""
 	
-	If Value is not Number
-		Value := """" Value """"
+	Value := CheckExp(Value)
 	If (!Element)
 	{
 		If (OutputVar)
@@ -844,8 +841,7 @@ IEComExp(Method, Value := "", Element := "", ElIndex := 0, OutputVar := "", GetB
 		Else If (Obj = "Property")
 			return "ie." Method " := " Value
 	}
-	If Element is not Number
-		Element := """" Element """"
+	Element := CheckExp(Element)
 	If (GetBy = "ID")
 	{
 		If (OutputVar)
