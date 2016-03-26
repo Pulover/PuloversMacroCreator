@@ -563,13 +563,6 @@
 					Loop
 					{
 						PlaybackVars[LoopDepth][A_Index + 1, "A_Index"] := A_Index + 1
-						If (LoopCount[LoopDepth][2] != "")
-						{
-							If (!Eval(LoopCount[LoopDepth][2], PlaybackVars[LoopDepth][A_Index + 1])[1])
-								break
-						}
-						Else If (_Count = 0)
-							break
 						If (StopIt)
 							break 3
 						If (FlowControl.Break > 0)
@@ -584,6 +577,13 @@
 						}
 						If (FlowControl.Continue > 0)
 							FlowControl.Continue--
+						If (LoopCount[LoopDepth][2] != "")
+						{
+							If (!Eval(LoopCount[LoopDepth][2], PlaybackVars[LoopDepth][A_Index + 1])[1])
+								break
+						}
+						Else If (_Count = 0)
+							break
 						
 						LoopInfo.Increment := A_Index
 					,	GoToLab := Playback(Macro_On, LoopInfo, ManualKey,,, FlowControl)
@@ -630,7 +630,15 @@
 						If (LoopCount[LoopDepth][3] != "")
 						{
 							If (Eval(LoopCount[LoopDepth][3], PlaybackVars[LoopDepth][A_Index + 1])[1])
+							{
+								If (FlowControl.Break > 0)
+									FlowControl.Break--
+								If (FlowControl.Continue > 1)
+									FlowControl.Continue--
+								If (FlowControl.Continue > 0)
+									FlowControl.Continue--
 								break
+							}
 						}
 					}
 					LoopCount[LoopDepth] := "", LoopDepth--, iLoopIndex--
