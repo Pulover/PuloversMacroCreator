@@ -777,44 +777,33 @@
 
 /*!
 	Function: Expression()
-		Select Application (Advanced) allows to create any COM Object and add commands in AutoHotkey's dotted syntax format.
+		Performs one or more operations upon a series of variables, literal strings, and/or literal numbers. For more information see [Expressions](p6-Variables.html#expressions).
 
 	Parameters:
-		Automatically create COM object - 
-		Handle - Name of a Handle that will point to the object.
-		CLSID - 
-		Expression / COM Script - Command line in AutoHotkey's dotted syntax to execute using the object. **Ommit the Handle from the beginning of the string**.  
+		Automatically create COM object - Check this option let PMC create (if not yet created) a COM object using the defined CLSID.
+		Handle - Name of a Handle that will point to the object. You still need to use this Handle in the script to access methods and properties.
+		CLSID - CLSID or human-readable Prog ID of the COM object to create.
+		Connect - Attempts to connect the selected Handle with an existing instance of the selected CLSID.
+		Expression / COM Script - One or more expressions to be executed. You can make assingments, function and object calls, etc. For details see [AHK documentation](https://autohotkey.com/docs/Variables.htm#Expressions).  
 		Page Element / Index - Searches for a page element and index on an IE window.
 		Wait for page to load - Check this option when you expect the page to change after the command when running IE COM scripts. This will execute a function after it to wait for the new page to be completely loaded before continuing, avoiding errors.
 
 	Remarks:
-		You can enter multiple commands one by line (you can't assign variables this way).  
+		You can enter multiple expressions separated by line or commas.  
 		
-		The syntax for COM commands is the same as in AutoHotkey scripts except for:  
-			* Variables MUST be enclosed in percent signs.
-			* Strings must NOT be enclosed in quotes.
+		You can make math operations, variables and object assignments, as well as function and object calls.
 		
-		To set a blank value use a pair of quotes: ""
+		Nearly all operators are supported, including ternary.
+		
+		The syntax for COM/object calls is the same as in AutoHotkey scripts:  
+			* Variables must NOT be enclosed in percent signs.
+			* Strings MUST be enclosed in quotes.
 		
 		When you close the application, all references to Active Objects will be lost. To continue working using saved project files you must reconnect to the application by either editing one of the lines containing each handle and use the *Connect* button to re-create all references, or assigning the Handle to a ComObj function, usually ComObjActive(), though it will not work on all applications.
-		
-		To assign a value to the command use the *:=* operator. For example:
-		> ActiveCell.Value := 100
-		
-		Self-references inside parameters are supported. In such cases **you must NOT ommit the Handle** from the parameter.
-		> Range(Xl.Selection, Xl.Selection.Offset(5, 5)).Select
-		
-		To create a SafeArray enclose the values in blocks [].
-		> Selection.Subtotal(2, -4157, [4, 5], 1, 0, 1)
-		
-		To use *ComObjMissing()* leave the parameter blank:
-		> Function(1, 2, , 3, , 5)
-		An exported script from the above example would be like:
-		> Function(1, 2, ComObjMissing(), 3, ComObjMissing(), 5)
-	
+					
 	Extra:
 		### Related
-			[COM](http://autohotkey.com/docs/commands/ComObjCreate.htm), [Basic Webpage COM Tutorial](http://www.autohotkey.com/board/topic/47052-basic-webpage-controls), [IWebBrowser2 Interface (MSDN)](http://msdn.microsoft.com/en-us/library/aa752127)
+			[Expressions](https://autohotkey.com/docs/Variables.htm#Expressions), [Operators in Expressions](https://autohotkey.com/docs/Variables.htm#Operators), [COM](http://autohotkey.com/docs/commands/ComObjCreate.htm), [Basic Webpage COM Tutorial](http://www.autohotkey.com/board/topic/47052-basic-webpage-controls), [IWebBrowser2 Interface (MSDN)](http://msdn.microsoft.com/en-us/library/aa752127)
 */
 
 /*!
