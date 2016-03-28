@@ -8,7 +8,7 @@
 ; Forum: http://autohotkey.com/boards/viewtopic.php?f=6&t=143
 ; Version: 5.0.0
 ; Release Date: April, 2016
-; AutoHotkey Version: 1.1.23.03
+; AutoHotkey Version: 1.1.23.05
 ; Copyright © 2012-2016 Rodolfo U. Batista
 ; GNU General Public License 3.0 or higher
 ; <http://www.gnu.org/licenses/gpl-3.0.txt>
@@ -54,9 +54,6 @@ http://www.autohotkey.com/board/topic/11926-can-you-move-a-listview-column-progr
 fincs for GenDocs and SciLexer.dll custom builds.
 http://www.autohotkey.com/board/topic/71751-gendocs-v30-alpha002
 http://www.autohotkey.com/board/topic/54431-scite4autohotkey-v3004-updated-aug-14-2013/page-58#entry566139
-
-T800 for Html Help utils.
-http://www.autohotkey.com/board/topic/17984-html-help-utils
 
 tmplinshi for the CreateFormData function.
 http://autohotkey.com/boards/viewtopic.php?f=6&t=7647
@@ -1040,6 +1037,8 @@ Else If (MainWinPos != "Center")
 		MainWinPos := "X" mGuiX " Y" mGuiY
 }
 Gui, Show, %MainWinSize% %MainWinPos% Hide
+IfExist, %SettingsFolder%\~ActiveProject.pmc
+	BackupFound := true
 GoSub, b_Start
 SavePrompt(false)
 GoSub, DefineControls
@@ -1177,7 +1176,7 @@ Else
 		If (AutoUpdate)
 			SetTimer, CheckUpdates, -1
 	}
-	IfExist, %SettingsFolder%\~ActiveProject.pmc
+	If (BackupFound)
 	{
 		Gui, 1:+OwnDialogs
 		MsgBox, 36, %AppName%, %d_Lang083%
@@ -1189,6 +1188,11 @@ Else
 			Gui, 1:Show,, %AppName% v%CurrentVersion%
 			Gosub, GuiSize
 		}
+	}
+	Else
+	{
+		FileDelete, %SettingsFolder%\~ActiveProject.pmc
+		BackupFound := false
 	}
 }
 HideWin := "", PlayHK := "", AutoPlay := "", TimerPlay := ""
@@ -1980,7 +1984,7 @@ GoSub, SelectFile
 ThisListFile := CurrentFileName, CurrentFileName := ActiveFileName
 IfExist %ThisListFile%
 {
-    FileDelete %ThisListFile%
+    FileDelete, %ThisListFile%
     If (ErrorLevel)
     {
         MsgBox, 16, %d_Lang007%, %d_Lang006% "%ThisListFile%".
@@ -3911,7 +3915,6 @@ majkinetor for the Dlg_Color function.
 rbrtryn for the ChooseColor function.
 PhiLho and skwire for the function to Get/Set the order of columns.
 fincs for GenDocs and SciLexer.dll custom builds.
-T800 for Html Help utils.
 tmplinshi for the CreateFormData function.
 Thiago Talma for some improvements to the code, debugging and many suggestions.
 )

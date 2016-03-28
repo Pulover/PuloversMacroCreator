@@ -1022,7 +1022,11 @@ SavePrompt(State)
 	SavePrompt := State
 ,	TB_Edit(TbFile, "Save",, State)
 	If (State)
+	{
 		Menu, FileMenu, Enable, %f_Lang003%`t%_s%Ctrl+S
+		If ((AutoBackup) && (!BackupFound))
+			GoSub, ProjBackup
+	}
 	Else
 		Menu, FileMenu, Disable, %f_Lang003%`t%_s%Ctrl+S
 }

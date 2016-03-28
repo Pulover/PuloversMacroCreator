@@ -89,11 +89,11 @@ Action1 := "Click"
 			,	38: ["UserFuncB", "UserFuncB", "UserFuncB"]
 			,	39: ["EmailB"]
 			,	40: ["DownloadB", "ZipB"]}
-,	ContHTitle := {	2: ["p6-Preview.html"]
+,	ContHTitle := {	2: ["Preview.html"]
 			,	3: ["Commands/Pause.html", "Commands/Message_Box.html", "Commands/KeyWait.html"]
-			,	4: ["p7-Settings.html", "p7-Settings.html#recording.", "p7-Settings.html#playback", "p7-Settings.html#defaults"
-				, "p7-Settings.html#screenshots", "p7-Settings.html#email-accounts", "p7-Settings.html#language"
-				, "p7-Settings.html#language-editor", "p7-Settings.html#user-global-variables", "p7-Settings.html#language-editor"]
+			,	4: ["Settings.html", "Settings.html#recording.", "Settings.html#playback", "Settings.html#defaults"
+				, "Settings.html#screenshots", "Settings.html#email-accounts", "Settings.html#language"
+				, "Settings.html#language-editor", "Settings.html#user-global-variables", "Settings.html#language-editor"]
 			,	5: ["Commands/Mouse.html"]
 			,	8: ["Commands/Text.html"]
 			,	10: ["Commands/Run.html"]
@@ -101,16 +101,16 @@ Action1 := "Click"
 			,	12: ["Commands/Loop.html", "Commands/Goto_and_Gosub.html", "Commands/Label.html", "Commands/SetTimer.html"
 				, "Commands/Loop_FilePattern.html",	"Commands/Loop_Parse.html", "Commands/Loop_Read.html", "Commands/Loop_Registry.html"
 				, "Commands/While.html", "Commands/For.html", "Commands/Until.html"]
-			,	14: ["p5-Export.html"]
+			,	14: ["Export.html"]
 			,	19: ["Commands/Image_Search.html", "Commands/Pixel_Search.html"]
-			,	21: ["Commands/If_Statements.html", "Commands/Assign_Variable.html", "Commands/Functions.html"]
+			,	21: ["Commands/If_Statements.html", "Commands/Variables.html", "Commands/Functions.html"]
 			,	22: ["Commands/PostMessage_and_SendMessage.html"]
 			,	23: ["Commands/Control.html"]
-			,	24: ["Commands/Internet_Explorer.html", "p8-Variables.html#expressions"]
+			,	24: ["Commands/Internet_Explorer.html", "Variables.html#expressions"]
 			,	26: ["Commands/Find_a_Command.html"]
-			,	30: ["p8-Variables.html#expressions"]
+			,	30: ["Variables.html#expressions"]
 			,	34: ["Commands/Find_a_Command.html"]
-			,	38: ["p9-UserFunctions", "p9-UserFunctions", "p9-UserFunctions"]
+			,	38: ["UserFunctions", "UserFunctions", "UserFunctions"]
 			,	39: ["Commands/Send_Email.html"]
 			,	40: ["Commands/Download_Files.html", "Commands/Zip_Files.html"] }
 
