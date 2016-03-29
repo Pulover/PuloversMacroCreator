@@ -627,7 +627,13 @@
 							return
 						}
 						If (_Count = A_Index)
+						{
+							If (FlowControl.Break > 0)
+								FlowControl.Break--
+							If (FlowControl.Continue > 0)
+								FlowControl.Continue--
 							break
+						}
 						If (LoopCount[LoopDepth][3] != "")
 						{
 							If (Eval(LoopCount[LoopDepth][3], PlaybackVars[LoopDepth][A_Index + 1])[1])
@@ -820,7 +826,11 @@
 					Step := StrReplace(Step, "``,", ",")
 			}
 			If (Type = "Return")
+			{
+				If (LoopInfo.GetCapacity())
+					return "_return"
 				break 2
+			}
 			If (Type = cType29)
 			{
 				If (LoopDepth = 0)

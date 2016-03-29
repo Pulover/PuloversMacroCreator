@@ -11581,6 +11581,7 @@ LVManager.SetHwnd(ListID%A_List%)
 CopyMenuLabels[1] := "Macro1"
 Menu, CopyTo, Add, % CopyMenuLabels[1], CopyList, Radio
 Menu, CopyTo, Check, % CopyMenuLabels[1]
+Gosub, ResetHotkeys
 Gosub, ClearTimers
 UserDefFunctions := SyHi_UserDef " ", SetUserWords(UserDefFunctions)
 return
@@ -14097,13 +14098,15 @@ Loop, % LV_GetCount()
 	,	LV_Colors.Row(ListID%A_List%, A_Index, "", "")
 	,	LV_Colors.Attach(ListID%A_List%, false, false)
 		If ((Action = "[LoopEnd]") && (RowColorLoop > 0))
-			RowColorLoop--, IdxLv := SubStr(IdxLv, 1, StrLen(IdxLv)-1)
+			RowColorLoop--, LV_Modify(A_Index,, A_Index " " IdxLv), IdxLv := SubStr(IdxLv, 1, StrLen(IdxLv)-1)
 		Else If ((Action = "[End If]") && (RowColorIf > 0))
-			RowColorIf--, IdxLv := SubStr(IdxLv, 1, StrLen(IdxLv)-1)
+			RowColorIf--, LV_Modify(A_Index,, A_Index " " IdxLv), IdxLv := SubStr(IdxLv, 1, StrLen(IdxLv)-1)
 		Else If (Action = "[LoopStart]")
-			RowColorLoop++, IdxLv .= ">"
+			RowColorLoop++, IdxLv .= ">", LV_Modify(A_Index,, A_Index " " IdxLv)
 		Else If ((Type = cType17) && (!InStr(Action, "[Else")))
-			RowColorIf++, IdxLv .= "*"
+			RowColorIf++, IdxLv .= "*", LV_Modify(A_Index,, A_Index " " IdxLv)
+		Else
+			LV_Modify(A_Index,, A_Index " " IdxLv)
 		LV_Colors.Row(ListID%A_List%, A_Index
 		, (RowColorLoop > 0) ? LoopLVColor : ((Action = "[LoopEnd]") ? LoopLVColor : "")
 		, (RowColorIf > 0 ) ? IfLVColor : ((Action = "[End If]") ? IfLVColor : ""))
@@ -14112,7 +14115,10 @@ Loop, % LV_GetCount()
 		LV_Colors.Cell(ListID%A_List%, A_Index, 1, Color ? Color : "")
 	}
 	Else
-		OnMessage(WM_NOTIFY, ""), LV_Colors.Detach(ListID%A_List%)
+	{
+		LV_Modify(A_Index,, A_Index)
+	,	OnMessage(WM_NOTIFY, ""), LV_Colors.Detach(ListID%A_List%)
+	}
 	If (ShowActIdent = 1)
 	{
 		LV_Modify(A_Index, "Col2", ActLv Action)
@@ -14151,8 +14157,7 @@ Loop, % LV_GetCount()
 		If ((Type = cType48) && (InStr(Details, " := ")))
 			MustDefault := true
 	}
-	LV_Modify(A_Index, "", A_Index " " IdxLv)
-,	(Action = "[Text]") ? LV_Modify(A_Index, "Icon" IconsNames["text"])
+	(Action = "[Text]") ? LV_Modify(A_Index, "Icon" IconsNames["text"])
 :	RegExMatch(Type, cType3 "|" cType4 "|" cType13) ? LV_Modify(A_Index, "Icon" IconsNames["mouse"])
 :	(Type = cType5) ? LV_Modify(A_Index, "Icon" IconsNames["pause"])
 :	(Type = cType6) ? LV_Modify(A_Index, "Icon" IconsNames["dialogs"])
