@@ -553,6 +553,7 @@
 	c_Lang255 =	Ahlukaniswe isemikholoni, khefana noma umugqa.
 	c_Lang256 =	Lungisa izixhumanisi kuya maphakathi isithombe
 	c_Lang257 =	Isikhathi
+	c_Lang258 =	Buyisela
 		
 ; 16. Other Windows		
 	t_Lang001 =	Export to AutoHotkey
@@ -765,6 +766,8 @@
 	t_Lang208 =	T&hola
 	t_Lang209 =	M&iselela
 	t_Lang210 =	Musa ukubonisa amaphutha
+	t_Lang211 =	Amathebhu
+	t_Lang212 =	Izikhala
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Vula

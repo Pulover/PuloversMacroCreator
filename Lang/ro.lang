@@ -553,6 +553,7 @@
 	c_Lang255 =	Separate prin virgulă, virgulă sau linie.
 	c_Lang256 =	Ajustați coordonatele la centrul imaginii
 	c_Lang257 =	Perioadă
+	c_Lang258 =	Întoarcere
 		
 ; 16. Other Windows		
 	t_Lang001 =	Export către AutoHotkey
@@ -765,6 +766,8 @@
 	t_Lang208 =	G&ăsi
 	t_Lang209 =	A &inlocui
 	t_Lang210 =	Nu afișați erori
+	t_Lang211 =	File
+	t_Lang212 =	Spații
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Deschis

@@ -553,6 +553,7 @@
 	c_Lang255 =	Të ndara me pikëpresje, presje apo linjë.
 	c_Lang256 =	Rregullo koordinatat në qendër të imazhit
 	c_Lang257 =	periudhë
+	c_Lang258 =	Kthimi
 		
 ; 16. Other Windows		
 	t_Lang001 =	Eksporti në AutoHotkey
@@ -765,6 +766,8 @@
 	t_Lang208 =	G&jej
 	t_Lang209 =	Z&ëvendësoj
 	t_Lang210 =	Mos e shfaq gabimet
+	t_Lang211 =	Tabs
+	t_Lang212 =	Hapësira
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Hapur

@@ -280,7 +280,7 @@
 	w_Lang094 =	Dölj
 	w_Lang095 =	Flytta hit
 	w_Lang096 =	Kopiera här
-	w_Lang097 =	grupper
+	w_Lang097 =	Grupper
 	w_Lang098 =	Aktivera grupper (Ctrl+Shift+G)
 	w_Lang099 =	Lägg till grupp (Ctrl+Skift+Y)
 	w_Lang100 =	Ta bort grupp (Ctrl+Skift+R)
@@ -370,7 +370,7 @@
 	c_Lang071 =	Variationer
 	c_Lang072 =	Förhandsgranska
 	c_Lang073 =	Loop
-	c_Lang074 =	automatiskt skapa COM-objekt
+	c_Lang074 =	Automatiskt skapa COM-objekt
 	c_Lang075 =	Break
 	c_Lang076 =	Fortsätt
 	c_Lang077 =	Gå
@@ -553,6 +553,7 @@
 	c_Lang255 =	Åtskilda av semikolon , kommatecken eller linje.
 	c_Lang256 =	Justera koordinater i mitten av bilden
 	c_Lang257 =	Period
+	c_Lang258 =	Lämna tillbaka
 		
 ; 16. Other Windows		
 	t_Lang001 =	Exportera till AutoHotkey
@@ -765,6 +766,8 @@
 	t_Lang208 =	H&itta
 	t_Lang209 =	E&rsätt
 	t_Lang210 =	Inte visa fel
+	t_Lang211 =	Flikar
+	t_Lang212 =	Utrymmen
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Öppet

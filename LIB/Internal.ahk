@@ -963,6 +963,17 @@ ShowMenu(Menu, mX, mY)
 		Menu, TbMenu, Show, %mX%, %mY%
 		Menu, TbMenu, DeleteAll
 	}
+	Else If (Menu = "TabIndent")
+	{
+		Menu, TbMenu, Add, %t_Lang212%, IndentWith, Radio
+		Menu, TbMenu, Add, %t_Lang211%, IndentWith, Radio
+		If (IndentWith = "Tab")
+			Menu, TbMenu, Check, %t_Lang211%
+		Else
+			Menu, TbMenu, Check, %t_Lang212%
+		Menu, TbMenu, Show, %mX%, %mY%
+		Menu, TbMenu, DeleteAll
+	}
 	Else If (Menu = "GroupsMode")
 		GoSub, ShowGroupsMenu
 	Else

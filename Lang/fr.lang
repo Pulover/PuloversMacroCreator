@@ -370,7 +370,7 @@
 	c_Lang071 =	Variations
 	c_Lang072 =	Avant-première
 	c_Lang073 =	Boucle
-	c_Lang074 =	créer automatiquement un objet COM
+	c_Lang074 =	Créer automatiquement un objet COM
 	c_Lang075 =	Briser
 	c_Lang076 =	Continuer
 	c_Lang077 =	Aller à
@@ -553,6 +553,7 @@
 	c_Lang255 =	Séparé par un point virgule, virgule ou en ligne.
 	c_Lang256 =	Ajuster les coordonnées du centre de l'image
 	c_Lang257 =	Période
+	c_Lang258 =	Retour
 		
 ; 16. Other Windows		
 	t_Lang001 =	Exporter vers AutoHotkey
@@ -765,6 +766,8 @@
 	t_Lang208 =	T&rouver
 	t_Lang209 =	Re&mplacer
 	t_Lang210 =	Ne pas afficher les erreurs
+	t_Lang211 =	Onglets
+	t_Lang212 =	Les espaces
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Ouvert

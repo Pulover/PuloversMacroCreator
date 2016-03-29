@@ -553,6 +553,7 @@
 	c_Lang255 =	Puntu eta koma, koma edo lerro bidez bereizita.
 	c_Lang256 =	Egokitu koordenadak irudiaren erdian
 	c_Lang257 =	Epea
+	c_Lang258 =	Return
 		
 ; 16. Other Windows		
 	t_Lang001 =	Export to AutoHotkey
@@ -765,6 +766,8 @@
 	t_Lang208 =	A&urkitu
 	t_Lang209 =	O&rdeztu
 	t_Lang210 =	Ez bistaratu erroreak
+	t_Lang211 =	Tabs
+	t_Lang212 =	Espazioak
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Open

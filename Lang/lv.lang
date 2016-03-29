@@ -553,6 +553,7 @@
 	c_Lang255 =	Atdalītas ar semikolu komatu vai līnijas.
 	c_Lang256 =	Pielāgot koordinātes uz attēla centram
 	c_Lang257 =	periods
+	c_Lang258 =	Atgriešanās
 		
 ; 16. Other Windows		
 	t_Lang001 =	Eksports uz AutoHotkey
@@ -765,6 +766,8 @@
 	t_Lang208 =	A&trast
 	t_Lang209 =	Ai&zstāt
 	t_Lang210 =	Nerādīt kļūdas
+	t_Lang211 =	Cilnes
+	t_Lang212 =	Telpas
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Atvērts

@@ -553,6 +553,7 @@
 	c_Lang255 =	Erotettu puolipistettä, pilkkua tai linja.
 	c_Lang256 =	Säädä koordinaatit kuvan keskellä
 	c_Lang257 =	aika
+	c_Lang258 =	Palata
 		
 ; 16. Other Windows		
 	t_Lang001 =	Vie AutoHotkey
@@ -765,6 +766,8 @@
 	t_Lang208 =	L&öytää
 	t_Lang209 =	K&orvata
 	t_Lang210 =	Älä näytä virheitä
+	t_Lang211 =	Välilehdet
+	t_Lang212 =	Tilat
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Avata

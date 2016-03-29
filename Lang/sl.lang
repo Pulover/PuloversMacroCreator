@@ -280,7 +280,7 @@
 	w_Lang094 =	Skrij
 	w_Lang095 =	Premakniti tukaj
 	w_Lang096 =	Kopiranje tukaj
-	w_Lang097 =	skupine
+	w_Lang097 =	Skupine
 	w_Lang098 =	Omogoči skupine (Ctrl+Shift+G)
 	w_Lang099 =	Dodaj skupino (Ctrl+Shift+Y)
 	w_Lang100 =	Odstrani skupino (Ctrl+Shift+R)
@@ -553,6 +553,7 @@
 	c_Lang255 =	Ločene s podpičjem, vejico ali liniji.
 	c_Lang256 =	Prilagodi koordinate središča sliki
 	c_Lang257 =	obdobje
+	c_Lang258 =	Nazaj
 		
 ; 16. Other Windows		
 	t_Lang001 =	Izvoz v AutoHotkey
@@ -765,6 +766,8 @@
 	t_Lang208 =	N&ajdi
 	t_Lang209 =	Za&menjajte
 	t_Lang210 =	Ne prikazati napak
+	t_Lang211 =	Zavihki
+	t_Lang212 =	Prostori
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Odprite

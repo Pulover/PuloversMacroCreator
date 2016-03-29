@@ -280,7 +280,7 @@
 	w_Lang094 =	Amagar
 	w_Lang095 =	Moure aquí
 	w_Lang096 =	Copieu aquí
-	w_Lang097 =	grups
+	w_Lang097 =	Grups
 	w_Lang098 =	Habilitar grups (Ctrl+Shift+G)
 	w_Lang099 =	Afegir grup (Ctrl+Maj+I)
 	w_Lang100 =	Traieu grup (Ctrl+Shift+R)
@@ -553,6 +553,7 @@
 	c_Lang255 =	Separats per punt i coma, coma o una línia.
 	c_Lang256 =	Ajustar les coordenades del centre de la imatge
 	c_Lang257 =	període
+	c_Lang258 =	Retorn
 		
 ; 16. Other Windows		
 	t_Lang001 =	Exporta a AutoHotkey
@@ -765,6 +766,8 @@
 	t_Lang208 =	T&robar
 	t_Lang209 =	Ree&mplaçar
 	t_Lang210 =	No se'n mostren els errors
+	t_Lang211 =	Fitxes
+	t_Lang212 =	Espais
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Obert

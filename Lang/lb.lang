@@ -553,6 +553,7 @@
 	c_Lang255 =	Getrennt vun semicolon, verbrauchen oder Linn.
 	c_Lang256 =	Ajustéieren Koordinate fir den Zentrum vun der Bild
 	c_Lang257 =	Period
+	c_Lang258 =	Zeréck
 		
 ; 16. Other Windows		
 	t_Lang001 =	Export ze AutoHotkey
@@ -765,6 +766,8 @@
 	t_Lang208 =	O&p ee Bléck
 	t_Lang209 =	I&gnoréieren
 	t_Lang210 =	Ecran net Feeler
+	t_Lang211 =	Tabs
+	t_Lang212 =	Freiraim
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Open

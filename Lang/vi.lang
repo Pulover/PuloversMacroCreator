@@ -553,6 +553,7 @@
 	c_Lang255 =	Ly bởi dấu chấm phẩy, dấu phẩy hoặc dòng.
 	c_Lang256 =	Điều chỉnh tọa độ đến trung tâm của hình ảnh
 	c_Lang257 =	Giai đoạn
+	c_Lang258 =	Trở về
 		
 ; 16. Other Windows		
 	t_Lang001 =	Xuất khẩu sang AutoHotkey
@@ -765,6 +766,8 @@
 	t_Lang208 =	T&ìm
 	t_Lang209 =	Th&ay thế
 	t_Lang210 =	Không hiển thị lỗi
+	t_Lang211 =	Tab
+	t_Lang212 =	Không gian
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Mở

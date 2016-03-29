@@ -263,6 +263,7 @@ IniRead, ComCr, %IniFilePath%, ExportOptions, ComCr, 1
 IniRead, ComAc, %IniFilePath%, ExportOptions, ComAc, 0
 IniRead, Send_Loop, %IniFilePath%, ExportOptions, Send_Loop, 0
 IniRead, TabIndent, %IniFilePath%, ExportOptions, TabIndent, 1
+IniRead, IndentWith, %IniFilePath%, ExportOptions, IndentWith, Space
 IniRead, ConvertBreaks, %IniFilePath%, ExportOptions, ConvertBreaks, 1
 IniRead, IncPmc, %IniFilePath%, ExportOptions, IncPmc, 0
 IniRead, Exe_Exp, %IniFilePath%, ExportOptions, Exe_Exp, 0
@@ -1555,6 +1556,14 @@ TB_Edit(tbPrev, A_ThisLabel, %A_ThisLabel% := !%A_ThisLabel%)
 GoSub, PrevRefresh
 return
 
+IndentWith:
+If (A_ThisMenuItemPos = 2)
+	IndentWith := "Tab"
+Else
+	IndentWith := "Space"
+GoSub, PrevRefresh
+return
+
 AutoRefresh:
 TB_Edit(tbPrev, "PrevRefreshButton", AutoRefresh := !AutoRefresh)
 ,	TB_Edit(tbPrevF, "PrevRefreshButton", AutoRefresh)
@@ -2731,7 +2740,7 @@ return
 
 ExportOpt:
 If ((TabIndent = 1) && (Ex_TimesX != 1))
-	Body := RegExReplace(Body, "`am)^", "`t")
+	Body := RegExReplace(Body, "`am)^", (IndentWith = "Tab" ? "`t" : "    "))
 If (Ex_TimesX = 0)
 	Body := "Loop`n{`n" Body "}`n"
 Else If (Ex_TimesX > 1)
@@ -6078,31 +6087,33 @@ Gui, 12:Add, ComboBox, yp x+10 W150 vGoLabel gAutoComplete, %Proj_Labels%
 Gui, 12:Add, Radio, -Wrap R1 Section Checked vGoto gGoto, Goto
 Gui, 12:Add, Radio, -Wrap R1 yp x+25 vGosub gGoto, Gosub
 Gui, 12:Add, Text, -Wrap R1 y+15 xm+100 cGray, %c_Lang025%
-Gui, 12:Add, Groupbox, Section xm y+15 W450 H80
+Gui, 12:Add, Groupbox, Section xm y+15 W450 H55
 Gui, 12:Add, Radio, -Wrap R1 ys+20 xs+10 W150 vNewLabelT gGoto, %c_Lang080%:
 Gui, 12:Add, Edit, yp x+10 W150 R1 vNewLabel Disabled
-Gui, 12:Add, Button, -Wrap Section xm y+45 W75 H23 vGotoOK gGotoOK, %c_Lang020%
+Gui, 12:Add, Groupbox, Section xm y+17 W450 H50, %c_Lang123%:
+Gui, 12:Add, Button, -Wrap ys+18 xs+85 W75 H23 gAddReturn, %c_Lang258%
+Gui, 12:Add, Button, -Wrap Section xm y+15 W75 H23 vGotoOK gGotoOK, %c_Lang020%
 Gui, 12:Add, Button, -Wrap ys W75 H23 gLoopCancel, %c_Lang021%
 Gui, 12:Add, Button, -Wrap ys W75 H23 vGotoApply gGotoApply Disabled, %c_Lang131%
 Gui, 12:Tab, 3
 ; SetTimer
-Gui, 12:Add, Groupbox, Section xm ym W450 H55
+Gui, 12:Add, Groupbox, Section xm ym W450 H80
 Gui, 12:Add, Text, -Wrap R1 Checked ys+20 xs+10 W70 Right, %c_Lang079%:
 Gui, 12:Add, ComboBox, yp x+10 W150 vGoTimerLabel gAutoComplete, %Proj_Labels%
-Gui, 12:Add, Text, x+10 yp-3 W190 H25 cGray, %c_Lang025%
-Gui, 12:Add, Groupbox, Section xm y+20 W220 H120, %c_Lang257%
-Gui, 12:Add, Edit, ys+20 xs+30 Limit W150 vTimerDelayE
+Gui, 12:Add, Text, y+5 xp W190 H25 cGray, %c_Lang025%
+Gui, 12:Add, Groupbox, Section xm y+15 W220 H125, %c_Lang257%
+Gui, 12:Add, Edit, ys+30 xs+30 Limit W150 vTimerDelayE
 Gui, 12:Add, UpDown, vTimerDelayX 0x80 Range0-9999999, 250
 Gui, 12:Add, Radio, -Wrap Section Checked yp+25 W150 vTimerMsc R1, %c_Lang018%
 Gui, 12:Add, Radio, -Wrap W150 vTimerSec R1, %c_Lang019%
 Gui, 12:Add, Radio, -Wrap W150 vTimerMin R1, %c_Lang154%
-Gui, 12:Add, Groupbox, Section W220 H120 ys-45 x+50, %w_Lang003%:
+Gui, 12:Add, Groupbox, Section W220 H125 ys-55 x+50, %w_Lang003%:
 Gui, 12:Add, Radio, -Wrap Group Checked ys+20 xs+10 W200 vRunOnce gTimerOpt R1, %t_Lang078%
 Gui, 12:Add, Radio, -Wrap W200 vPeriod gTimerOpt R1, %t_Lang079%
 Gui, 12:Add, Radio, -Wrap W200 vTurnOn gTimerOpt R1, %c_Lang238%
 Gui, 12:Add, Radio, -Wrap W200 vTurnOff gTimerOpt R1, %c_Lang239%
 Gui, 12:Add, Radio, -Wrap W200 vDelete gTimerOpt R1, %t_Lang132%
-Gui, 12:Add, Button, -Wrap Section xm y+17 W75 H23 vTimedLabelOK gTimedLabelOK, %c_Lang020%
+Gui, 12:Add, Button, -Wrap Section xm y+22 W75 H23 vTimedLabelOK gTimedLabelOK, %c_Lang020%
 Gui, 12:Add, Button, -Wrap ys W75 H23 gLoopCancel, %c_Lang021%
 Gui, 12:Add, Button, -Wrap ys W75 H23 vTimedLabelApply gTimedLabelApply Disabled, %c_Lang131%
 Gui, 12:Add, Text, -Wrap R1 ys x+5 W200 vTimersCount, % RegisteredTimers.Length() "/10 " c_Lang240
@@ -6262,7 +6273,7 @@ Else If ((s_Caller = "Find") && ((InStr(GotoRes1, "Loop"))
 }
 Else If (s_Caller != "Edit")
 	SBShowTip("Loop (normal)")
-Gui, 12:Show, % InStr(A_ThisLabel, "Loop") ? "" : "H247", % InStr(A_ThisLabel, "Goto") ? c_Lang077 : InStr(A_ThisLabel, "Time") ? c_Lang242 : c_Lang073
+Gui, 12:Show, % InStr(A_ThisLabel, "Loop") ? "" : "H275", % InStr(A_ThisLabel, "Goto") ? c_Lang077 : InStr(A_ThisLabel, "Time") ? c_Lang242 : c_Lang073
 ChangeIcon(hIL_Icons, CmdWin, InStr(A_ThisLabel, "Goto") ? IconsNames["goto"] : InStr(A_ThisLabel, "Time") ? IconsNames["timer"] : IconsNames["loop"])
 Input
 Tooltip
@@ -6589,6 +6600,7 @@ return
 
 AddBreak:
 AddContinue:
+AddReturn:
 Gui, 12:Submit, NoHide
 Gui, 1:-Disabled
 Gui, 12:Destroy
@@ -13561,6 +13573,7 @@ ComCr := 1
 ComAc := 0
 Send_Loop := 0
 TabIndent := 1
+IndentWith := Space
 ConvertBreaks := 1
 TextWrap := 0
 CommentUnchecked := 1
@@ -13912,6 +13925,7 @@ IniWrite, %ComCr%, %IniFilePath%, ExportOptions, ComCr
 IniWrite, %ComAc%, %IniFilePath%, ExportOptions, ComAc
 IniWrite, %Send_Loop%, %IniFilePath%, ExportOptions, Send_Loop
 IniWrite, %TabIndent%, %IniFilePath%, ExportOptions, TabIndent
+IniWrite, %IndentWith%, %IniFilePath%, ExportOptions, IndentWith
 IniWrite, %ConvertBreaks%, %IniFilePath%, ExportOptions, ConvertBreaks
 IniWrite, %IncPmc%, %IniFilePath%, ExportOptions, IncPmc
 IniWrite, %Exe_Exp%, %IniFilePath%, ExportOptions, Exe_Exp

@@ -280,7 +280,7 @@
 	w_Lang094 =	Elrejt
 	w_Lang095 =	Áthelyezés ide
 	w_Lang096 =	Másolás ide
-	w_Lang097 =	csoportok
+	w_Lang097 =	Csoportok
 	w_Lang098 =	Engedélyezze csoportok (Ctrl+Shift+G)
 	w_Lang099 =	Add csoport (Ctrl+Shift+Y)
 	w_Lang100 =	Csoport eltávolítása (Ctrl+Shift+R)
@@ -553,6 +553,7 @@
 	c_Lang255 =	Elválasztott pontosvessző, vessző vagy vonal.
 	c_Lang256 =	Állítsa a koordináták a kép közepén
 	c_Lang257 =	Időszak
+	c_Lang258 =	Visszatérés
 		
 ; 16. Other Windows		
 	t_Lang001 =	Exportálás AutoHotkey
@@ -765,6 +766,8 @@
 	t_Lang208 =	T&alál
 	t_Lang209 =	C&serélje
 	t_Lang210 =	Ne jelenjen meg a hibákat
+	t_Lang211 =	Lapok
+	t_Lang212 =	Terek
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Nyitva

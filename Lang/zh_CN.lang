@@ -553,6 +553,7 @@
 	c_Lang255 =	用分号，逗号或行分隔。
 	c_Lang256 =	调整坐标到图像的中心
 	c_Lang257 =	期
+	c_Lang258 =	返回
 		
 ; 16. Other Windows		
 	t_Lang001 =	导出为AutoHotkey
@@ -765,6 +766,8 @@
 	t_Lang208 =	查找(&I)
 	t_Lang209 =	替换(&E)
 	t_Lang210 =	不显示错误
+	t_Lang211 =	标签
+	t_Lang212 =	空间
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	打开

@@ -553,6 +553,7 @@
 	c_Lang255 =	Separados por punto y coma, coma o una línea.
 	c_Lang256 =	Ajustar las coordenadas del centro de la imagen
 	c_Lang257 =	Período
+	c_Lang258 =	Regreso
 		
 ; 16. Other Windows		
 	t_Lang001 =	Exportar a AutoHotkey
@@ -765,6 +766,8 @@
 	t_Lang208 =	E&ncontrar
 	t_Lang209 =	Ree&mplazar
 	t_Lang210 =	No mostrar errores
+	t_Lang211 =	Pestañas
+	t_Lang212 =	Espacios
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Abierto

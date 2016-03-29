@@ -280,7 +280,7 @@
 	w_Lang094 =	Nascondere
 	w_Lang095 =	Sposta qui
 	w_Lang096 =	Copia qui
-	w_Lang097 =	gruppi
+	w_Lang097 =	Gruppi
 	w_Lang098 =	Abilita gruppi (Ctrl+Shift+G)
 	w_Lang099 =	Aggiungi gruppo (Ctrl+Shift+Y)
 	w_Lang100 =	Rimuovere gruppo (Ctrl+Shift+R)
@@ -553,6 +553,7 @@
 	c_Lang255 =	Separati da virgola, virgola o di linea.
 	c_Lang256 =	Regolare coordinate al centro dell'immagine
 	c_Lang257 =	Periodo
+	c_Lang258 =	Ritorno
 		
 ; 16. Other Windows		
 	t_Lang001 =	Esporta in AutoHotkey
@@ -765,6 +766,8 @@
 	t_Lang208 =	T&rovare
 	t_Lang209 =	S&ostituire
 	t_Lang210 =	Non visualizzare gli errori
+	t_Lang211 =	Schede
+	t_Lang212 =	Spazi
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Aperto

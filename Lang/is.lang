@@ -553,6 +553,7 @@
 	c_Lang255 =	Aðskilin með semikommum, komma eða línu.
 	c_Lang256 =	Stilla hnit miðju myndarinnar
 	c_Lang257 =	tímabil
+	c_Lang258 =	Return
 		
 ; 16. Other Windows		
 	t_Lang001 =	Flytja út í AutoHotkey
@@ -765,6 +766,8 @@
 	t_Lang208 =	F&inna
 	t_Lang209 =	S&kipta
 	t_Lang210 =	Ekki sýna villur
+	t_Lang211 =	Flipar
+	t_Lang212 =	Rými
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Open

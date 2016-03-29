@@ -553,6 +553,7 @@
 	c_Lang255 =	セミコロン、カンマまたは行で区切られています。
 	c_Lang256 =	画像の中心に座標を調整
 	c_Lang257 =	期間
+	c_Lang258 =	リターン
 		
 ; 16. Other Windows		
 	t_Lang001 =	AutoHotkeyにエクスポート
@@ -765,6 +766,8 @@
 	t_Lang208 =	見つける(&I)
 	t_Lang209 =	置き換える(&E)
 	t_Lang210 =	エラーを表示しません
+	t_Lang211 =	タブ
+	t_Lang212 =	スペース
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	開く

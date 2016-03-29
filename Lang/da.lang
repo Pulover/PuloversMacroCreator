@@ -280,7 +280,7 @@
 	w_Lang094 =	Skjule
 	w_Lang095 =	Flyt her
 	w_Lang096 =	Kopier her
-	w_Lang097 =	grupper
+	w_Lang097 =	Grupper
 	w_Lang098 =	Aktiver grupper (Ctrl+Shift+G)
 	w_Lang099 =	Tilføj gruppe (Ctrl+Shift+Y)
 	w_Lang100 =	Fjern gruppe (Ctrl+Shift+R)
@@ -553,6 +553,7 @@
 	c_Lang255 =	Adskilt af semikolon, komma eller linje.
 	c_Lang256 =	Juster koordinater til midten af billedet
 	c_Lang257 =	Periode
+	c_Lang258 =	Return
 		
 ; 16. Other Windows		
 	t_Lang001 =	Eksporter til AutoHotkey
@@ -765,6 +766,8 @@
 	t_Lang208 =	F&ind
 	t_Lang209 =	E&rstat
 	t_Lang210 =	Vis ikke fejl
+	t_Lang211 =	Faner
+	t_Lang212 =	Rum
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Åbent

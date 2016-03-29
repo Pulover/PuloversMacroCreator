@@ -553,6 +553,7 @@
 	c_Lang255 =	세미콜론, 쉼표 또는 선으로 구분.
 	c_Lang256 =	화상의 중심 좌표를 조정
 	c_Lang257 =	기간
+	c_Lang258 =	반환
 		
 ; 16. Other Windows		
 	t_Lang001 =	AutoHotkey로 내보내기
@@ -765,6 +766,8 @@
 	t_Lang208 =	발견(&I)
 	t_Lang209 =	교체(&E)
 	t_Lang210 =	오류를 표시하지 않음
+	t_Lang211 =	탭
+	t_Lang212 =	공간
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	열기

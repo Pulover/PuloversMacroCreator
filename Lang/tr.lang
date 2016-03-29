@@ -553,6 +553,7 @@
 	c_Lang255 =	Noktalı virgül, virgül veya bir çizgi ile ayrılır.
 	c_Lang256 =	Görüntünün merkezine koordinatları ayarlayın
 	c_Lang257 =	dönem
+	c_Lang258 =	Dönüş
 		
 ; 16. Other Windows		
 	t_Lang001 =	AutoHotkey Aktar
@@ -765,6 +766,8 @@
 	t_Lang208 =	B&ulmak
 	t_Lang209 =	D&eğiştirmek
 	t_Lang210 =	hataları görüntülemek etmeyin
+	t_Lang211 =	Sekmeler
+	t_Lang212 =	Alanlarda
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Açık

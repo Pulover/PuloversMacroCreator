@@ -280,7 +280,7 @@
 	w_Lang094 =	Menyembunyikan
 	w_Lang095 =	Bergerak di sini
 	w_Lang096 =	Salinan di sini
-	w_Lang097 =	kumpulan
+	w_Lang097 =	Kumpulan
 	w_Lang098 =	Membolehkan kumpulan (Ctrl+Shift+G)
 	w_Lang099 =	Tambah kumpulan (Ctrl+Shift+Y)
 	w_Lang100 =	Memadam kumpulan (Ctrl+Shift+R)
@@ -553,6 +553,7 @@
 	c_Lang255 =	Dipisahkan oleh koma bertitik, koma atau talian.
 	c_Lang256 =	Laraskan koordinat ke tengah imej
 	c_Lang257 =	tempoh
+	c_Lang258 =	Pulangan
 		
 ; 16. Other Windows		
 	t_Lang001 =	Eksport ke AutoHotkey
@@ -765,6 +766,8 @@
 	t_Lang208 =	C&ari
 	t_Lang209 =	Ga&nti
 	t_Lang210 =	Jangan paparkan kesilapan
+	t_Lang211 =	Tab
+	t_Lang212 =	Ruang
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Buka

@@ -553,6 +553,7 @@
 	c_Lang255 =	คั่นจุลภาคหรือสาย
 	c_Lang256 =	ปรับพิกัดไปยังศูนย์กลางของภาพ
 	c_Lang257 =	ระยะเวลา
+	c_Lang258 =	กลับ
 		
 ; 16. Other Windows		
 	t_Lang001 =	ส่งออกไปยัง AutoHotkey
@@ -765,6 +766,8 @@
 	t_Lang208 =	หา(&I)
 	t_Lang209 =	แทนที่(&E)
 	t_Lang210 =	อย่าแสดงข้อผิดพลาด
+	t_Lang211 =	แท็บ
+	t_Lang212 =	ช่องว่าง
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	เปิด

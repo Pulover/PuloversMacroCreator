@@ -553,6 +553,7 @@
 	c_Lang255 =	Semikooloniga eraldatult, koma või line.
 	c_Lang256 =	Reguleerige koordinaadid kesklinnas pilti
 	c_Lang257 =	periood
+	c_Lang258 =	Tagastamine
 		
 ; 16. Other Windows		
 	t_Lang001 =	Ekspordi AutoHotkey
@@ -765,6 +766,8 @@
 	t_Lang208 =	L&eidma
 	t_Lang209 =	A&sendama
 	t_Lang210 =	Ära näita vigu
+	t_Lang211 =	Klapid
+	t_Lang212 =	Ruumid
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Avatud

@@ -573,7 +573,7 @@
 			If (RegExMatch(A_LoopField, "^\}(\s `;)?"))
 				Indent--
 			Loop, %Indent%
-				Id_LVData .= "`t"
+				Id_LVData .= IndentWith = "Tab" ? "`t" : "    "
 			Id_LVData .= A_LoopField "`n"
 			If (A_LoopField = "{")
 				Indent++

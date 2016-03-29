@@ -553,6 +553,7 @@
 	c_Lang255 =	Getrennt durch Semikolon, Komma oder Linie.
 	c_Lang256 =	Einstellen Koordinaten der Mitte des Bildes
 	c_Lang257 =	Periode
+	c_Lang258 =	Rückkehr
 		
 ; 16. Other Windows		
 	t_Lang001 =	Export nach AutoHotkey
@@ -765,6 +766,8 @@
 	t_Lang208 =	S&uchen
 	t_Lang209 =	E&rsetzen
 	t_Lang210 =	Keine Anzeige von Fehlern
+	t_Lang211 =	Tabs
+	t_Lang212 =	Räume
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Öffnen

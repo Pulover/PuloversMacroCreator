@@ -553,6 +553,7 @@
 	c_Lang255 =	Dipisahkan dengan titik koma, koma atau baris.
 	c_Lang256 =	Menyesuaikan koordinat ke tengah gambar
 	c_Lang257 =	Periode
+	c_Lang258 =	Kembali
 		
 ; 16. Other Windows		
 	t_Lang001 =	Ekspor ke AutoHotkey
@@ -765,6 +766,8 @@
 	t_Lang208 =	M&enemukan
 	t_Lang209 =	Men&ggantikan
 	t_Lang210 =	Jangan menampilkan kesalahan
+	t_Lang211 =	Tab
+	t_Lang212 =	Spasi
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Buka

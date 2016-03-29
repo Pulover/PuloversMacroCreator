@@ -553,6 +553,7 @@
 	c_Lang255 =	Separated by semicolon, comma or line.
 	c_Lang256 =	Adjust coordinates to the center of the image
 	c_Lang257 =	Period
+	c_Lang258 =	Return
 		
 ; 16. Other Windows		
 	t_Lang001 =	Export to AutoHotkey
@@ -765,6 +766,8 @@
 	t_Lang208 =	F&ind
 	t_Lang209 =	R&eplace
 	t_Lang210 =	Do not display errors
+	t_Lang211 =	Tabs
+	t_Lang212 =	Spaces
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Open

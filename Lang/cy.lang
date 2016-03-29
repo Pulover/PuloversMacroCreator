@@ -553,6 +553,7 @@
 	c_Lang255 =	Gwahanu gan hanner colon, coma neu linell.
 	c_Lang256 =	Addaswch cyfesurynnau i ganol y llun
 	c_Lang257 =	cyfnod
+	c_Lang258 =	Dychwelyd
 		
 ; 16. Other Windows		
 	t_Lang001 =	Allforio i AutoHotkey
@@ -765,6 +766,8 @@
 	t_Lang208 =	D&od o hyd i
 	t_Lang209 =	A&mnewid
 	t_Lang210 =	Peidiwch ag arddangos gwallau
+	t_Lang211 =	Tabs
+	t_Lang212 =	Lleoedd
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Agored

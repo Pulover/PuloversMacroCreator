@@ -280,7 +280,7 @@
 	w_Lang094 =	Schovať
 	w_Lang095 =	Premiestniť sem
 	w_Lang096 =	Kopírovanie tu
-	w_Lang097 =	skupiny
+	w_Lang097 =	Skupiny
 	w_Lang098 =	Povoliť skupiny (Ctrl+Shift+G)
 	w_Lang099 =	Pridať skupinu (Ctrl+Shift+Y)
 	w_Lang100 =	Odstrániť skupinu (Ctrl+Shift+R)
@@ -553,6 +553,7 @@
 	c_Lang255 =	Oddelené bodkočiarkami, čiarky alebo linke.
 	c_Lang256 =	Nastavte súradníc do stredu obrazu
 	c_Lang257 =	perióda
+	c_Lang258 =	Spiatočný
 		
 ; 16. Other Windows		
 	t_Lang001 =	Export do AutoHotkey
@@ -765,6 +766,8 @@
 	t_Lang208 =	N&ájsť
 	t_Lang209 =	Na&hradiť
 	t_Lang210 =	Nezobrazujú chyby
+	t_Lang211 =	Karty
+	t_Lang212 =	Priestory
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Otvorené

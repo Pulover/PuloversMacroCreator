@@ -553,6 +553,7 @@
 	c_Lang255 =	Atskirtos kabliataškiu, kablelis ar linijoje.
 	c_Lang256 =	Pakoreguokite koordinates į paveikslėlio centrą
 	c_Lang257 =	laikotarpis
+	c_Lang258 =	Sugrįžimas
 		
 ; 16. Other Windows		
 	t_Lang001 =	Eksportas į AutoHotkey
@@ -765,6 +766,8 @@
 	t_Lang208 =	R&asti
 	t_Lang209 =	Pa&keisti
 	t_Lang210 =	Nerodyti klaidų
+	t_Lang211 =	Skirtukai
+	t_Lang212 =	Erdves
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Atviras

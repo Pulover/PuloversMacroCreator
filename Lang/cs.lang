@@ -553,6 +553,7 @@
 	c_Lang255 =	Odděleny středníky, čárky nebo lince.
 	c_Lang256 =	Nastavte souřadnic do středu obrazu
 	c_Lang257 =	Doba
+	c_Lang258 =	Vrátit se
 		
 ; 16. Other Windows		
 	t_Lang001 =	Export do AutoHotkey
@@ -765,6 +766,8 @@
 	t_Lang208 =	N&ajít
 	t_Lang209 =	Nah&radit
 	t_Lang210 =	Nezobrazují chyby
+	t_Lang211 =	Karty
+	t_Lang212 =	Prostory
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Otevřít

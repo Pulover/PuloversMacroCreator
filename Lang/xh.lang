@@ -553,6 +553,7 @@
 	c_Lang255 =	Ezahlulwe msila, ikoma okanye umgca.
 	c_Lang256 =	Nyenyisa Lokasi kwiziko yomfanekiso
 	c_Lang257 =	ixesha
+	c_Lang258 =	Buya
 		
 ; 16. Other Windows		
 	t_Lang001 =	Rhweba AutoHotkey
@@ -765,6 +766,8 @@
 	t_Lang208 =	F&umana
 	t_Lang209 =	Bu&yisela
 	t_Lang210 =	Musa ukubonisa iimpazamo
+	t_Lang211 =	Tabs
+	t_Lang212 =	Izithuba
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Vula

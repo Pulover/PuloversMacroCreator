@@ -553,6 +553,7 @@
 	c_Lang255 =	用分號，逗號或行分隔。
 	c_Lang256 =	調整坐標到圖像的中心
 	c_Lang257 =	期
+	c_Lang258 =	返回
 		
 ; 16. Other Windows		
 	t_Lang001 =	導出到華民航空
@@ -765,6 +766,8 @@
 	t_Lang208 =	發現(&I)
 	t_Lang209 =	更換(&E)
 	t_Lang210 =	不顯示錯誤
+	t_Lang211 =	標籤
+	t_Lang212 =	空間
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	打開
