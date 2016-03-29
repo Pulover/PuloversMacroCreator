@@ -6171,8 +6171,8 @@ If (s_Caller = "Edit")
 	}
 	Else
 	{
+		StringReplace, Details, Details, `````,, %_x%, All
 		EscCom(true, Details, TimesX, DelayX)
-		StringReplace, Details, Details, ```,, %_x%, All
 		Loop, Parse, Details, `,, %A_Space%
 		{
 			Par%A_Index% := A_LoopField
@@ -6628,6 +6628,8 @@ GuiControl, 12:Enable%LUntil%, UntilExpr
 return
 
 LoopType:
+If (%A_GuiControl%)
+	return
 Gui, 12:Submit, NoHide
 GuiControl, 12:Enable%Loop%, EdRept
 GuiControl, 12:Disable%Loop%, LParamsFile
@@ -6666,8 +6668,11 @@ Else
 	GuiControl, 12:, Field1, % LWhile ? c_Lang087 : LParse ? c_Lang140 : LRead ? c_Lang143 : LRegistry ? c_Lang144 : c_Lang137
 	GuiControl, 12:, Field2, %c_Lang141%
 	GuiControl, 12:, Field3, %c_Lang142%
-	GuiControl, 12:, Delim
-	GuiControl, 12:, Omit
+	If (!InStr(A_GuiControl, "InputList"))
+	{
+		GuiControl, 12:, Delim
+		GuiControl, 12:, Omit
+	}
 }
 If (LWhile)
 {

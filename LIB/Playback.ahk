@@ -867,18 +867,23 @@
 					Menu, Tray, Default, %w_Lang005%
 					break 3
 				}
-				Try
-					TakeAction := PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, FlowControl, PlaybackVars[LoopDepth][mLoopIndex], RunningFunction, _LastError)
-				Catch e
+				If Type in %cType32%,%cType33%,%cType34%,%cType43%,%cType52%,%cType53%,%cType54%,%cType55%
 				{
-					If (!HideErrors)
+					Try
+						TakeAction := PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, FlowControl, PlaybackVars[LoopDepth][mLoopIndex], RunningFunction, _LastError)
+					Catch e
 					{
-						MsgBox, 20, %d_Lang007%, % d_Lang064 " Macro" Macro_On ", " d_Lang065 " " mListRow
-							.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" (InStr(e.Message, "0x800401E3") ? d_Lang088 : e.Extra) "`n`n" d_Lang035
-						IfMsgBox, No
-							StopIt := 1
+						If (!HideErrors)
+						{
+							MsgBox, 20, %d_Lang007%, % d_Lang064 " Macro" Macro_On ", " d_Lang065 " " mListRow
+								.	"`n" d_Lang007 ":`t`t" e.Message "`n" d_Lang066 ":`t" (InStr(e.Message, "0x800401E3") ? d_Lang088 : e.Extra "`n" e.What) "`n`n" d_Lang035
+							IfMsgBox, No
+								StopIt := 1
+						}
 					}
 				}
+				Else
+					TakeAction := PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, FlowControl, PlaybackVars[LoopDepth][mLoopIndex], RunningFunction, _LastError)
 				PlaybackVars[LoopDepth][mLoopIndex, "ErrorLevel"] := _LastError
 				If ((Type = cType15) || (Type = cType16))
 				{
