@@ -528,7 +528,7 @@
 
 /*!
 	Function: Return(F8, Shift+F9)
-		Returns from a subroutine to which execution had previously jumped via via function-call or Gosub.
+		Returns from a subroutine to which execution had previously jumped via Gosub.
 
 	Extra:
 		### Related
