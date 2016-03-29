@@ -1,4 +1,4 @@
-# Quick Tutorial
+﻿# Quick Tutorial
 
 The simplest way to get started with Pulover's Macro Creator is using the recorder. Follow these steps record a macro:
 

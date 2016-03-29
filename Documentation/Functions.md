@@ -1,4 +1,4 @@
-# Functions
+﻿# Functions
 
 ## Table of Contents
 
@@ -56,7 +56,7 @@ Check the *[ByRef](http://autohotkey.com/docs/Functions.htm#ByRef)* option to ma
 
 Use the *Add Return* button to define return values for the function.  
 The return value must be an [expression](http://autohotkey.com/docs/Variables.htm#Expressions).  
-To return more than one value, use ByRef parameters or an [Array/Object](p6-Variables.html#assigning-and-retrieving-arrays).  
+To return more than one value, use ByRef parameters or an [Array/Object](Variables.html#assigning-and-retrieving-arrays).  
 
 Download Example: [User-Defined Functions](Examples/UserFunctions.pmc).
 Download Example: [Call array element using a random function](Examples/RandomFunction.pmc).

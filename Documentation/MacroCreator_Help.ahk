@@ -1,14 +1,13 @@
-/*!
+﻿/*!
 	Library: Pulover's Macro Creator
 		
-		# Version: 5.0.0  
-
+		# Version: 5.0.0
 		[www.macrocreator.com](http://www.macrocreator.com)  
 		[Forum Thread](http://autohotkey.com/boards/viewtopic.php?f=6&t=143)  
 		
-		Author: Pulover \[Rodolfo U. Batista\]  
+		Author: Pulover [Rodolfo U. Batista]  
 		[pulover@macrocreator.com](mailto:pulover@macrocreator.com)  
-		Copyright © 2012-2016 Rodolfo U. Batista  
+		©2012-2016 Rodolfo U. Batista  
 		
 		Software License: [GNU General Public License](License.html)  
 		
@@ -20,109 +19,85 @@
 
 /*!
 	Page: Quick Tutorial & Examples
-	Filename: p0-Tutorial
+	Filename: Tutorial
 	Contents: @file:Tutorial.md
 */
 
 /*!
 	Page: FAQ - Frequently Asked Questions
-	Filename: p1-Faq
+	Filename: Faq
 	Contents: @file:Faq.md
 */
 
 /*!
 	Page: Main Window
-	Filename: p2-Main
+	Filename: Main
 	Contents: @file:Main.md
 */
 
 /*!
 	Page: Record
-	Filename: p3-Record
+	Filename: Record
 	Contents: @file:Record.md
 */
 
 /*!
 	Page: Playback
-	Filename: p4-Playback
+	Filename: Playback
 	Contents: @file:Playback.md
 */
 
 /*!
 	Page: Command Windows
-	Filename: p5-Commands
+	Filename: Commands
 	Contents: @file:Commands.md
 */
 
 /*!
 	Page: Variables & Arrays/Objects
-	Filename: p6-Variables
+	Filename: Variables
 	Contents: @file:Variables.md
 */
 
 /*!
 	Page: Functions
-	Filename: p7-Functions
+	Filename: Functions
 	Contents: @file:Functions.md
 */
 
 /*!
 	Page: Export Window
-	Filename: p8-Export
+	Filename: Export
 	Contents: @file:Export.md
 */
 
 /*!
 	Page: Preview Window
-	Filename: p9-Preview
+	Filename: Preview
 	Contents: @file:Preview.md
 */
 
 /*!
 	Page: Settings
-	Filename: p10-Settings
+	Filename: Settings
 	Contents: @file:Settings.md
 */
 
 /*!
 	Page: About & Changes
-	Filename: p12-About
+	Filename: About
 	Contents: @file:About.md
 */
 
 /*!
-	Function: Common_Fields()
-		The following fields appear on some of the Command Windows below and will behave the same for all, therefore will be omitted from their parameters.
-
-	Parameters:
-		Repeat - How many times to execute action.  
-			This field accepts [Variables & Expressions](p6-Variables.html).
-		Delay - Time to wait before the next command line.  
-			This field accepts [Variables & Expressions](p6-Variables.html).
-		Control - Selects the target control to send the command. Use the Get button to easily find a control's name: Point the mouse to its location and Right-Click on it. To operate upon a control's HWND (window handle), leave the Control parameter blank and specify ahk_id %ControlHwnd% for the WinTitle parameter.  
-			This field accepts [Variables & Expressions](p6-Variables.html).
-		Window - Title/Class/Process/ID/ProcessID of target window for control command. The DropdowndList defines which information will be taken from a windown when using the *Get* button.  
-			**Extra Parameters**: The first parameter is WinTitle, you can add one or more extra parameters separating them by commas:
-			> WinTitle, WinText, ExcludeTitle, ExcludeText.
-			You can omit any of those parameters, including WinTitle.  
-			This field accepts [Variables & Expressions](p6-Variables.html).
-*/
-
-/*!
-	Function: Find_a_Command()
-		This window allows you to easily search for a command or function.  
-		Simply type a keyword and the results will be displayed in the box below. Double-Click an item or press Enter to open the target window.
-*/
-
-/*!
-	Function: Mouse()
+	Function: Mouse(F2)
 		Clicks a mouse button at the specified coordinates. It can also hold down a mouse button, turn the mouse wheel, or move the mouse.
 
 	Parameters:
 		Actions - Selects the Mouse action to execute.
 		Coordinates - Defines the coordinates of the window or screen where the action will be executed.
-			This field accepts [Variables](p6-Variables.html), functions may also work but are not recommended due to incompatibility with exported scripts.  
-			**Note**: Mouse Actions are affected by [Mouse Coordinates Settings](p10-Settings.html#defaults).  
+			This field accepts [Variables](Variables.html), functions may also work but are not recommended due to incompatibility with exported scripts.  
+			**Note**: Mouse Actions are affected by [Mouse Coordinates Settings](Settings.html#defaults).  
 		Click - Uses the *Click*. This usually works for most cases.
 		Send - Uses *SendEvent*. Use this in case the Click Command doesn't work.
 		Relative - **If not used with Control**: Coordinates will be treated as an offset from mouse current position.  
@@ -140,8 +115,8 @@
 */
 
 /*!
-	Function: Text()
-		Sends simulated keystrokes to a window. It may be used to send raw text or commands. This field accepts [Variables & Expressions](p6-Variables.html).
+	Function: Text(F3)
+		Sends simulated keystrokes to a window. It may be used to send raw text or commands. This field accepts [Variables & Expressions](Variables.html).
 
 	Parameters:
 		Plain Text (Raw) - Uses *SendRaw*. The SendRaw command interprets all characters literally rather than translating {Enter} to an ENTER keystroke, ^c to Control-C, etc.
@@ -159,11 +134,11 @@
 */
 
 /*!
-	Function: Control()
+	Function: Control(F4)
 		Gathers various control commands. Please refer to [AutoHotkey documentation](http://autohotkey.com/docs) for details on each one.
 
 	Parameters:
-		Value - Second parameter of a Control Command when available. This field accepts [Variables & Expressions](p6-Variables.html).
+		Value - Second parameter of a Control Command when available. This field accepts [Variables & Expressions](Variables.html).
 		Output Variable - The name of the variable in which to store the result of Cmd. For *ControlGetPos* the variable you choose will be a prefix to the 4 outputvars. E.g. if you type a variable named "Pos_" the output will be saved to *Pos_X*, *Pos_Y*, *Pos_W* and *Pos_H*.
 		Position/Size - Coordinates and sizes to move a control with ControlMove.
 
@@ -172,11 +147,11 @@
 			[Control](http://autohotkey.com/docs/commands/Control.htm), [ControlFocus](http://autohotkey.com/docs/commands/ControlFocus.htm), [ControlGet](http://autohotkey.com/docs/commands/ControlGet.htm), [ControlGetFocus](http://autohotkey.com/docs/commands/ControlGetFocus.htm), [ControlGetPos](http://autohotkey.com/docs/commands/ControlGetPos.htm), [ControlGetText](http://autohotkey.com/docs/commands/ControlGetText.htm), [ControlMove](http://autohotkey.com/docs/commands/ControlMove.htm), [ControlSetText](http://autohotkey.com/docs/commands/ControlSetText.htm)
 		
 		### Download Example
-			[Using Control Commands to Read and Set Text](Examples/ControlCmd.pmc).
+			[Using Control Commands to Read and Set Text](Examples/ControlCmd.pmc)
 */
 
 /*!
-	Function: Pause()
+	Function: Pause(F5)
 		Waits the specified amount of time before continuing.
 
 	Parameters:
@@ -191,12 +166,12 @@
 */
 
 /*!
-	Function: Message_Box()
+	Function: Message_Box(Shift+F5)
 		Displays the specified text in a small window containing two default buttons (OK and Cancel).
 
 	Parameters:
 		Message - Text to display in the message. If the Cancel button is pressed, execution will stop.  
-			This field accepts [Variables & Expressions](p6-Variables.html).
+			This field accepts [Variables & Expressions](Variables.html).
 		Title - The title of the message box window.
 		Icon - Sets the icon to be shown on the Message Box.
 		Buttons - Sets which buttons will be shown on the message box.
@@ -213,7 +188,7 @@
 */
 
 /*!
-	Function: KeyWait()
+	Function: KeyWait(Ctrl+F5)
 		Waits for a key pressed down.
 
 	Parameters:
@@ -227,13 +202,13 @@
 */
 
 /*!
-	Function: Window()
+	Function: Window(F6)
 		Gathers various Window commands. Please refer to [AutoHotkey documentation](http://autohotkey.com/docs) for details on each one.
 	Parameters:
 		Value - Second parameter of a Window Command when available.  
-			This field accepts [Variables & Expressions](p6-Variables.html).
+			This field accepts [Variables & Expressions](Variables.html).
 		Seconds - Seconds to wait for a Window Command when available.  
-			This field accepts [Variables & Expressions](p6-Variables.html).
+			This field accepts [Variables & Expressions](Variables.html).
 		Output Variable - The name of the variable in which to store the result of Cmd. For *WinGetPos* the variable you choose will be a prefix to the 4 outputvars. E.g. if you type a variable named "Pos_" the output will be saved to *Pos_X*, *Pos_Y*, *Pos_W* and *Pos_H*.
 		Position/Size - Coordinates and sizes to move a control with WinMove.
 
@@ -243,7 +218,7 @@
 */
 
 /*!
-	Function: Image_Search()
+	Function: Image_Search(F7)
 		Searches a region of the screen for an image.
 
 	Parameters:
@@ -267,7 +242,7 @@
 		Repeat until - Loops the command until the image is found or not found, according to the option selected.
 
 	Remarks:
-		You may use the variables %FoundX% and %FoundY% (or the ones defined by you) in other commands like Mouse Move & Click when the image/pixel is found. To save the values to a different variable or increment the values, use the [Variables](Commands\Assign_Variable.html) window.
+		You may use the variables %FoundX% and %FoundY% (or the ones defined by you) in other commands like Mouse Move & Click when the image/pixel is found. To save the values to a different variable or increment the values, use the [Variables](Commands\Variables.html) window.
 
 	Extra:
 		### Related
@@ -297,7 +272,7 @@
 */
 
 /*!
-	Function: Pixel_Search()
+	Function: Pixel_Search(F7)
 		Searches a region of the screen for a pixel color.
 
 	Parameters:
@@ -319,7 +294,7 @@
 		Repeat until - Loops the command until the image is found or not found, according to the option selected.
 
 	Remarks:
-		You may use the variables %FoundX% and %FoundY% (or the ones defined by you) in other commands like Mouse Move & Click when the image/pixel is found. To save the values to a different variable or increment the values, use the [Variables](Commands\Assign_Variable.html) window.
+		You may use the variables %FoundX% and %FoundY% (or the ones defined by you) in other commands like Mouse Move & Click when the image/pixel is found. To save the values to a different variable or increment the values, use the [Variables](Commands\Variables.html) window.
 
 	Extra:
 		### Related
@@ -327,12 +302,12 @@
 */
 
 /*!
-	Function: Run()
+	Function: Run(F8)
 		Gathers various AutoHotkey commands to execute different types of tasks. To get help on each command **right-click anywhere on the window** and select the corresponding link. For a complete list of commands refer to [AutoHotkey documentation](http://autohotkey.com/docs/).
 
 	Parameters:
 		Parameters Fields - Parameters will vary according to the selected command.  
-				All fields should accept [Variables & Expressions](p6-Variables.html).  
+				All fields should accept [Variables & Expressions](Variables.html).  
 
 	Remarks:
 		Don't use percent signs (%) for variables when the fields name is OutputVar or InputVar, for they should expect a variable already.
@@ -343,12 +318,12 @@
 */
 
 /*!
-	Function: Loop()
+	Function: Loop(F9)
 		Loops a section of the Macro enclosed within *LoopStart* and *LoopEnd*. Nested Loops are accepted.
 
 	Parameters:
 		Repeat - How many times to execute the loop section. If set to 0, the loop continues indefinitely until a break or return is encountered, or the Stop Key is pressed.
-			This field accepts [Variables & Expressions](p6-Variables.html).
+			This field accepts [Variables & Expressions](Variables.html).
 
 	Remarks:
 		The built-in variable **A_Index** contains the number of the current loop iteration. It contains 1 the first time the loop's body is executed. For the second time, it contains 2; and so on. If an inner loop is enclosed by an outer loop, the inner loop takes precedence.
@@ -358,10 +333,13 @@
 	Extra:
 		### Related
 			[Loop](http://autohotkey.com/docs/commands/Loop.htm)
+
+		### Download Example
+			[Examples of Loop commands](Examples/LoopTypes.pmc)
 */
 
 /*!
-	Function: Loop_FilePattern()
+	Function: Loop_FilePattern(F9)
 		Retrieves the specified files or folders, one at a time.
 
 	Parameters:
@@ -385,11 +363,11 @@
 			[Loop FilePattern](http://autohotkey.com/docs/commands/LoopFile.htm)
 		
 		### Download Example
-			[Examples of Loop commands](Examples/LoopTypes.pmc).
+			[Examples of Loop commands](Examples/LoopTypes.pmc)
 */
 
 /*!
-	Function: Loop_Parse()
+	Function: Loop_Parse(F9)
 		Retrieves substrings (fields) from a string, one at a time.
 
 	Parameters:
@@ -412,11 +390,11 @@
 			[Loop Parse](http://autohotkey.com/docs/commands/LoopParse.htm)
 		
 		### Download Example
-			[Examples of Loop commands](Examples/LoopTypes.pmc).
+			[Examples of Loop commands](Examples/LoopTypes.pmc)
 */
 
 /*!
-	Function: Loop_Read()
+	Function: Loop_Read(F9)
 		Retrieves the lines in a text file, one at a time.
 
 	Parameters:
@@ -434,11 +412,11 @@
 			[Loop Read File](http://autohotkey.com/docs/commands/LoopReadFile.htm)
 		
 		### Download Example
-			[Examples of Loop commands](Examples/LoopTypes.pmc).
+			[Examples of Loop commands](Examples/LoopTypes.pmc)
 */
 
 /*!
-	Function: Loop_Registry()
+	Function: Loop_Registry(F9)
 		Retrieves the contents of the specified registry subkey, one item at a time.  
 		Key must be separated from RootKey by a slash instead of a comma, and both can be contained within a single variable. For example, Loop, Reg, HKLM\Software or Loop, Reg, %FullPathOfKey%.
 
@@ -466,7 +444,7 @@
 */
 
 /*!
-	Function: While_Loop()
+	Function: While_Loop(F9)
 		Performs a series of commands repeatedly until the specified expression evaluates to false.
 
 	Parameters:
@@ -477,14 +455,14 @@
 
 	Extra:
 		### Related
-			[For Loop](http://autohotkey.com/docs/commands/While.htm)
+			[While Loop](http://autohotkey.com/docs/commands/While.htm)
 			
 		### Download example
-			[Examples of Loop commands](Examples/LoopTypes.pmc).
+			[Examples of Loop commands](Examples/LoopTypes.pmc)
 */
 
 /*!
-	Function: For_Loop()
+	Function: For_Loop(F9)
 		Repeats a series of commands once for each key-value pair in an object.
 
 	Parameters:
@@ -500,12 +478,12 @@
 			[For Loop](http://autohotkey.com/docs/commands/For.htm)
 			
 		### Download example
-			[Examples of Loop commands](Examples/LoopTypes.pmc).
+			[Examples of Loop commands](Examples/LoopTypes.pmc)  
 			[Assigning and retrieving an Array inside Command Parameters](Examples/Arrays.pmc)
 */
 
 /*!
-	Function: Until()
+	Function: Until(F9)
 		Applies a condition to the continuation of a Loop or For-loop.
 
 	Parameters:
@@ -519,11 +497,11 @@
 			[For Loop](http://autohotkey.com/docs/commands/Until.htm)
 			
 		### Download example
-			[Examples of Loop commands](Examples/LoopTypes.pmc).
+			[Examples of Loop commands](Examples/LoopTypes.pmc)
 */
 
 /*!
-	Function: Break()
+	Function: Break(F8, F9)
 		Exits (terminates) a loop.
 
 	Parameters:
@@ -536,7 +514,7 @@
 */
 
 /*!
-	Function: Continue()
+	Function: Continue(F8, F9)
 		Skips the rest of the current loop iteration and begins a new one.
 
 	Parameters:
@@ -549,7 +527,16 @@
 */
 
 /*!
-	Function: Goto_and_Gosub()
+	Function: Return(F8, Shift+F9)
+		Returns from a subroutine to which execution had previously jumped via via function-call or Gosub.
+
+	Extra:
+		### Related
+			[Continue](http://autohotkey.com/docs/commands/Return.htm)
+*/
+
+/*!
+	Function: Goto_and_Gosub(Shift+F9)
 		Jump to a Label or Macro.
 
 	Parameters:
@@ -565,7 +552,7 @@
 */
 
 /*!
-	Function: Label()
+	Function: Label(Shift+F9)
 		A label identifies a line of code, and can be used as a Goto target or to form a subroutine.
 
 	Parameters:
@@ -578,7 +565,7 @@
 */
 
 /*!
-	Function: Set_Timer()
+	Function: Set_Timer(Ctrl+F9)
 		Causes a subroutine to be launched automatically and repeatedly at a specified time interval.
 
 	Parameters:
@@ -595,7 +582,7 @@
 */
 
 /*!
-	Function: If_Statements()
+	Function: If_Statements(F10)
 		Creates a Control of Flow block. The commands enclosed within the If Statement and EndIf will only be executed if the evaluated statement returns TRUE, which can be a number different than 0 or a non-empty string.  
 
 	Parameters:
@@ -603,14 +590,14 @@
 			For *Compare Variables* the VarName to the left of the operator should NOT be enclosed in percent signs, only the variables to the right of it must use them.  
 			The operators accepted are:  
 			> =, ==, <>, !=, >, <, >=, <=.
-			*Evaluate Expression* can evaluate any valid expression as true or false. Variables must NOT be enclosed in percent signs. For more information see [Expressions](p6-Variables.html#expressions).
+			*Evaluate Expression* can evaluate any valid expression as true or false. Variables must NOT be enclosed in percent signs. For more information see [Expressions](Variables.html#expressions).
 		Add Else - Add an *Else* Statement. If the If Statement above it resolves to false the commands below it will be executed instead, otherwise they will be skipped until *EndIf* is reached. This should be placed before the *EndIf*.
 		Else If - Creates an *Else If* statement, which means that the statement must be inside another If block and will be evaluated only if the If before it evaluates to false. When this option is checked the *EndIf* row will not be created.
 
 	Remarks:
 		To evaluate two or more statements you can use the *Evaluate Expression* option as it supports multiple statements (e.g. Var > 10 && Var < 20) or you can add them in sequence in the list, each one with a corresponding EndIf.  
 		
-		For more details on usage with other commands see [Variables](p6-Variables.html).
+		For more details on usage with other commands see [Variables](Variables.html).
 
 	Extra:
 		### Related
@@ -618,7 +605,21 @@
 */
 
 /*!
-	Function:Variables()
+	Function: Else(F10)
+		Specifies the command(s) to perform if an IF-statement evaluates to FALSE. When more than one command is present, enclose them in a block (braces).
+
+	Remarks:
+		Every use of ELSE must belong to (be associated with) an IF-statement above it. An ELSE always belongs to the nearest unclaimed IF-statement above it unless a block is used to change that behavior.  
+		
+		An ELSE can be followed immediately by any other single command on the same line. This is most often used for "else if" ladders.
+
+	Extra:
+		### Related
+			[Else](http://autohotkey.com/docs/commands/Else.htm)
+*/
+
+/*!
+	Function:Variables(Shift+F10)
 		Assigns a value to a Variable using the chosen operator. You can also assign expressions and linear/associative arrays using the "Expression" option.  
 
 	Parameters:
@@ -641,15 +642,20 @@
 		Copy - Copies the variable's contents to the Clipboard.
 		Reset - Erases the variable's contents.
 
-	For more information, check the [Variables](p6-Variables.html) help page.
+	For more information, check the [Variables](Variables.html) help page.
 
 	Extra:
 		### Related
 			[Variables](http://autohotkey.com/docs/Variables.htm)
+
+		### Download Example
+			[Using Variables inside Command Parameters](Examples/Variables.pmc)  
+			[Comparing Variables in Playback](Examples/CompareVars.pmc)  
+			[Assigning and retrieving Arrays](Examples/Arrays.pmc)
 */
 
 /*!
-	Function: Functions()
+	Function: Functions(Ctrl+F10)
 		Executes a Function and assigns the result to a Variable. You can also call object methods in this window.  
 
 	Parameters:
@@ -657,11 +663,11 @@
 		Array Object - If checked, the name of an Array/Object on which to call the method.
 		Use Function from External File - Check this option to select an AutoHotkey Script File (.ahk) containing one or more functions to be used. This feature requires [AutoHotkey](http://autohotkey.com/) installed.  
 			See Remarks below for more information.  
-		Function Name - A valid AHK Built-in Function, an existing [User-Defined function](p7-Functions.html#user-defined-functions) or one in the selected external .ahk file.
+		Function Name - A valid AHK Built-in Function, an existing [User-Defined function](Functions.html#user-defined-functions) or one in the selected external .ahk file.
 		Comma separated parameters - The list of parameters for the function.  
 			*Notes*:  
 			* Input only the parameters values, without parenthesis.  
-			* Use [Expression](p6-Variables.html#expressions) format.  
+			* Use [Expression](Variables.html#expressions) format.  
 			* Do NOT enclose variables in percent signs.  
 			* Strings MUST be enclosed in quotes.  
 			* Omitted optional parameters will use their default values.  
@@ -669,7 +675,7 @@
 			The function above have 5 possible parameters. In this example parameters 3 and 4 will use the default values.  
 
 	Remarks:
-		AutoHotkey's Built-in Functions are supported by default. You can also define your own functions inside PMC in [User-Defined functions](p7-Functions.html#user-defined-functions) window and run functions from external AutoHotkey Script Files, if you have [AutoHotkey](http://www.autohotkey.com/) installed.  
+		AutoHotkey's Built-in Functions are supported by default. You can also define your own functions inside PMC in [User-Defined functions](Functions.html#user-defined-functions) window and run functions from external AutoHotkey Script Files, if you have [AutoHotkey](http://www.autohotkey.com/) installed.  
 
 	Extra:
 		### External Functions
@@ -683,7 +689,7 @@
 			
 			Since those functions are not loaded with Macro Creator they may take longer to execute.
 			
-			**Note**: This feature is limited and can only return 1 string/number value. It's recommended to use [User-Defined Functions](p7-Functions.html#user-defined-functions) instead.
+			**Note**: This feature is limited and can only return 1 string/number value. It's recommended to use [User-Defined Functions](Functions.html#user-defined-functions) instead.
 
 		
 		### Related
@@ -691,8 +697,8 @@
 */
 
 /*!
-	Function: Send_Email()
-		Sends emails using an user-defined account. All fields accept [variables](p6-Variables.html#expressions).
+	Function: Send_Email(F11)
+		Sends emails using an user-defined account. All fields accept [variables](Variables.html#expressions).
 
 	Parameters:
 		Message - Body of the message. It can be text or HTML.
@@ -713,8 +719,8 @@
 */
 
 /*!
-	Function: Download_Files()
-		Downloads one or more files from the Internet. All fields accept [variables](p6-Variables.html#expressions).
+	Function: Download_Files(Shift+F11)
+		Downloads one or more files from the Internet. All fields accept [variables](Variables.html#expressions).
 
 	Parameters:
 		Destination folder - The name of the destination folder, which is assumed to be in %A_WorkingDir% if an absolute path isn't specified.
@@ -729,8 +735,8 @@
 */
 
 /*!
-	Function: Zip_Files()
-		Compress or uncompress one or more zip files. All fields accept [variables](p6-Variables.html#expressions).
+	Function: Zip_Files(Ctrl+F11)
+		Compress or uncompress one or more zip files. All fields accept [variables](Variables.html#expressions).
 
 	Parameters:
 		Zip files / Unzip files - Select the desired operation.
@@ -751,14 +757,14 @@
 */
 
 /*!
-	Function: Internet_Explorer()
-		Creates an Internet Explorer COM Object and adds automation commands for it. All fields accept [variables](p6-Variables.html#expressions).
+	Function: Internet_Explorer(F12)
+		Creates an Internet Explorer COM Object and adds automation commands for it. All fields accept [variables](Variables.html#expressions).
 
 	Parameters:
 		Commands - The dropdown list contains some of the most used IE Methods and Properties. Select the correct one to manipulate the browser window or page elements.
 		Set / Get - Chooses whether to set a value to the object or to copy the element's value to a variable.
 		Method / Property - If you type a command that is not recognized by the program you have to select whether it's a Method or a Property.
-		Value - Value to be used by a Method or to be set to a Property. This field accepts [Variables & Expressions](p6-Variables.html).
+		Value - Value to be used by a Method or to be set to a Property. This field accepts [Variables & Expressions](Variables.html).
 		Output Variable - The name of the variable in which to store the value of a Property.
 		Page Element / Index - Sets the page element and index on which to perform the action. The dropdown list selects the method to be used to identify the element. Use the *Get* button to easily identify elements of the page.
 		Wait for page to load - Check this option when you expect the page to change after the command. This will execute a function after it to wait for the new page to be completely loaded before continuing, avoiding errors.
@@ -776,8 +782,8 @@
 */
 
 /*!
-	Function: Expression()
-		Performs one or more operations upon a series of variables, literal strings, and/or literal numbers. For more information see [Expressions](p6-Variables.html#expressions).
+	Function: Expression(Shift+F12)
+		Performs one or more operations upon a series of variables, literal strings, and/or literal numbers. For more information see [Expressions](Variables.html#expressions).
 
 	Parameters:
 		Automatically create COM object - Check this option let PMC create (if not yet created) a COM object using the defined CLSID.
@@ -807,7 +813,7 @@
 */
 
 /*!
-	Function: PostMessage_and_SendMessage()
+	Function: PostMessage_and_SendMessage(Ctrl+F12)
 		Sends a message to a window or control (SendMessage additionally waits for acknowledgement).
 
 	Parameters:

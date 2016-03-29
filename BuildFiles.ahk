@@ -129,19 +129,23 @@ FileAppend, %Script%, Installer.iss
 
 ;##### Help Project Files #####
 
+HelpIndex := "index.html`n"
+Loop, Read, %A_ScriptDir%\Documentation\MacroCreator_Help.ahk
+	If (RegExMatch(A_LoopReadLine, "`tFilename: (.*)", Page)=1)
+		HelpIndex .= Page1 ".html`n"
+HelpIndex := RTrim(HelpIndex, "`n")
+
 Head =
 (
 <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
 <HTML>
-<HEAD>
-<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
-<!-- Sitemap 1.0 -->
-</HEAD><BODY>
+<BODY>
 )
 
 Head2 =
 (
 <OBJECT type="text/site properties">
+	<param name="Window Styles" value="0x800025">
 	<param name="ImageType" value="Folder">
 </OBJECT>
 )
@@ -161,18 +165,15 @@ Foot =
 
 
 HHC := Head . Head2 . Head3, HHK := Head . Head3
-Loop, %A_ScriptDir%\Documentation\MacroCreator_Help-doc\*.html, 0, 0
+Loop, Parse, HelpIndex, `n
 {
-	IfInString, A_LoopFileName, License
-		Continue
-	FileReadLine, Title, %A_LoopFileFullPath%, 5
+	FileReadLine, Title, %A_ScriptDir%\Documentation\MacroCreator_Help-doc\%A_LoopField%, 5
 	Title := RegExReplace(Title, "U)<.*>")
-	Location := A_LoopFileFullPath
 thisline =
 (
 	`t<LI><OBJECT type="text/sitemap">
 		<param name="Name" value="%Title%">
-		<param name="Local" value="%Location%">
+		<param name="Local" value="%A_LoopField%">
 		</OBJECT>
 
 )
@@ -187,37 +188,26 @@ HHP =
 (
 [OPTIONS]
 Auto Index=Yes
-Binary TOC=Yes
+Binary Index=No
 Compatibility=1.1 or later
-Compiled file=%A_ScriptDir%\Documentation\MacroCreator_Help-doc\MacroCreator_Help.chm
-Contents file=%A_ScriptDir%\Documentation\MacroCreator_Help-doc\MacroCreator_Help.hhc
+Compiled file=MacroCreator_Help.chm
+Contents file=MacroCreator_Help.hhc
 Default Font=Arial,8,0
 Default Window=GlavniWintype
-Default topic=%A_ScriptDir%\Documentation\MacroCreator_Help-doc\index.html
+Default topic=index.html
 Display compile progress=Yes
-Enhanced decompilation=Yes
 Full-text search=Yes
-Index file=%A_ScriptDir%\Documentation\MacroCreator_Help-doc\MacroCreator_Help.hhk
-Language=0x409 English_United_States
+Index file=MacroCreator_Help.hhk
+Language=0x409 English (United States)
 Title=Pulover's Macro Creator Help
 
 [WINDOWS]
-GlavniWintype=,"%A_ScriptDir%\Documentation\MacroCreator_Help-doc\MacroCreator_Help.hhc","%A_ScriptDir%\Documentation\MacroCreator_Help-doc\MacroCreator_Help.hhk","%A_ScriptDir%\Documentation\MacroCreator_Help-doc\index.html",,,,,,0x23520,,0x387e,,,,,,,,0
+GlavniWintype="Pulover's Macro Creator Help","MacroCreator_Help.hhc","MacroCreator_Help.hhk","index.html","index.html",,,,,0x63520,,0x200e,[200,0,1080,700],,,,,,,0
 
 
 [FILES]
-%A_ScriptDir%\Documentation\MacroCreator_Help-doc\index.html
-%A_ScriptDir%\Documentation\MacroCreator_Help-doc\License.html
-%A_ScriptDir%\Documentation\MacroCreator_Help-doc\p0-Faq.html
-%A_ScriptDir%\Documentation\MacroCreator_Help-doc\p1-Main.html
-%A_ScriptDir%\Documentation\MacroCreator_Help-doc\p2-Record.html
-%A_ScriptDir%\Documentation\MacroCreator_Help-doc\p3-Playback.html
-%A_ScriptDir%\Documentation\MacroCreator_Help-doc\p4-Commands.html
-%A_ScriptDir%\Documentation\MacroCreator_Help-doc\p5-Export.html
-%A_ScriptDir%\Documentation\MacroCreator_Help-doc\p6-Preview.html
-%A_ScriptDir%\Documentation\MacroCreator_Help-doc\p7-Settings.html
-%A_ScriptDir%\Documentation\MacroCreator_Help-doc\p8-Variables.html
-%A_ScriptDir%\Documentation\MacroCreator_Help-doc\p9-About.html
+%HelpIndex%
+License.html
 )
 
 FileDelete, Documentation\MacroCreator_Help-doc\MacroCreator_Help.hhc
@@ -232,16 +222,15 @@ ExitApp
 AddCmd:
 HHC .= "`t<UL>`n"
 
-Loop, %A_ScriptDir%\Documentation\MacroCreator_Help-doc\Commands\*.html, 0, 0
+Loop, Files, %A_ScriptDir%\Documentation\MacroCreator_Help-doc\Commands\*.html
 {
 	FileReadLine, Title, %A_LoopFileFullPath%, 5
 	Title := RegExReplace(Title, "U)<.*>")
-	Location := A_LoopFileFullPath
 thisline =
 (
 	`t`t<LI> <OBJECT type="text/sitemap">
 			<param name="Name" value="%Title%">
-			<param name="Local" value="%Location%">
+			<param name="Local" value="Commands\%A_LoopFileName%">
 			</OBJECT>
 
 )

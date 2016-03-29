@@ -1,4 +1,4 @@
-# Export
+﻿# Export
 
 ## Table of Contents
 
@@ -48,7 +48,7 @@ Once a script is compiled, it becomes a standalone executable; that is, it can b
 
 ## Context Sensitive Hotkeys
 
-Makes hotkeys and hotstrings work depending on the type of window that is active or exists. For more information see [Playback](p4-Playback.html#context-sensitive-hotkeys) and [AutoHotkey documentation](http://autohotkey.com/docs/commands/_ifwinactive).
+Makes hotkeys and hotstrings work depending on the type of window that is active or exists. For more information see [Playback](Playback.html#context-sensitive-hotkeys) and [AutoHotkey documentation](http://autohotkey.com/docs/commands/_ifwinactive).
 
 ## Options
 
@@ -56,7 +56,7 @@ Changes various options for the exported script's Auto-Execute Section. For more
 
 **\#Include**: Includes in the script files with external functions using the #Include directive, when they are present in one of the exported macros.
 
-**Global Variables**: If you have defined [User Global Variables](p10-Settings.html#user-global-variables) you can select which of them will be included in the exported file. They will be added to the Auto-execute section.
+**Global Variables**: If you have defined [User Global Variables](Settings.html#user-global-variables) you can select which of them will be included in the exported file. They will be added to the Auto-execute section.
 
 **Speed**: Increases or decreases the delay of Sleep (Pause) commands in exported scripts.
 

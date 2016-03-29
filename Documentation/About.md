@@ -10,7 +10,7 @@ Copyright © 2012-2016 Rodolfo U. Batista
 
 Version: 5.0.0  
 Release Date: April, 2016  
-AutoHotkey Version: 1.1.23.03  
+AutoHotkey Version: 1.1.23.05  
 
 Software License: [GNU General Public License](License.html)  
 
@@ -29,8 +29,7 @@ majkinetor for the [Dlg_Color](http://autohotkey.com/board/topic/49214-ahk-ahk-l
 rbrtryn for the [ChooseColor](http://autohotkey.com/board/topic/91229-windows-color-picker-plus/) function.  
 PhiLho and skwire for the [function](http://autohotkey.com/board/topic/11926-can-you-move-a-listview-column-programmatically/#entry237340) to Get/Set the order of columns.  
 fincs for [GenDocs](http://autohotkey.com/board/topic/71751-gendocs-v30-alpha002) and [SciLexer.dll custom builds](http://autohotkey.com/board/topic/54431-scite4autohotkey-v3004-updated-aug-14-2013/page-58#entry566139).  
-T800 for [Html Help utils](http://autohotkey.com/board/topic/17984-html-help-utils).  
-tmplinshi for the [CreateFormData](http://autohotkey.com/boards/viewtopic.php?f=6&t=7647) function.
+tmplinshi for the [CreateFormData](http://autohotkey.com/boards/viewtopic.php?f=6&t=7647) function.  
 Thiago Talma for some improvements to the code, debugging and many suggestions.  
 [Translation revisions](http://www.macrocreator.com/project/).  
 
@@ -45,7 +44,7 @@ Thiago Talma for some improvements to the code, debugging and many suggestions.
 * New feature: **Zip / Unzip Files**.
 * New feature: **Listview Groups** (+WinVista).
 * Implemented real AutoHotkey format expressions in Functions, Methods, Variable Assignment, Evaluate Expression, COM Interface and command parameters started with % .
-* Multiple If Statements are now supported in *Evaluate Expression* (e.g.: var = 5 || var = "a").
+* Multiple If Statements are now supported in *Evaluate Expression* (e.g.: `var = 5 || var = "a"`).
 * Function parameter can now be another function, array, array element or expression.
 * Added SetTimer command.
 * Added *Else If* Statement option.
@@ -57,7 +56,7 @@ Thiago Talma for some improvements to the code, debugging and many suggestions.
 * Added support for Associative Arrays assignment.
 * Added support for array methods in Functions window.
 * Added support for Multi-Dimensional Arrays.
-* Added support for named keys in arrays (e.g.: N["key"] or N.key, MyArray.1 := OtherArray.Name).
+* Added support for named keys in arrays (e.g.: `N["key"]` or `N.key`, `MyArray.1 := OtherArray.Name`).
 * Added support for array methods.
 * Added support for arrays inside IECom and COMInterface parameters.
 * Added support for *#If Expression* in Context Sensitive Hotkeys.
@@ -74,6 +73,7 @@ Thiago Talma for some improvements to the code, debugging and many suggestions.
 * Languages files are now kept in the Lang folder and can be added, modified or removed.
 * Updated *Loop, File* and *Loop, Reg* to new format with *Mode/ parameter.
 * Changed *List Variables* to display User-Defined variables only.
+* Extended Backup system to update backup file with every change.
 * Fixed corrupted pmc files saved on exit.
 * Fixed bug with recording of mouse buttons.
 * Fixed bug with WinWait timeout.
@@ -396,7 +396,7 @@ Thiago Talma for some improvements to the code, debugging and many suggestions.
 * Added a help button to the list of functions in *Functions*.
 * Fixed some issues with commas inside commands.
 * Fixed switched order of *Pause* and *Control* buttons in the main window.
-* Added a [FAQ](p0-Faq.html) to the Help file.
+* Added a [FAQ](Faq.html) to the Help file.
 
 ## Version 3.3.4
 

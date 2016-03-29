@@ -1,18 +1,18 @@
-# FAQ - "Frequently asked", "Not so frequently asked" and "Just in case you're wondering..." questions.
+﻿# FAQ - "Frequently asked", "Not so frequently asked" and "Just in case you're wondering..." questions.
 
 **Tip**: Right-click on a Button in the Main Window or anywhere on a Command Window to display links to AHK online help.
 
-* [How do I start Recording / Playback?](#how-do-i-start-recording--playback)
+* [How do I start Recording / Playback?](#how-do-i-start-recording-/-playback)
 * [Can I import AHK scripts to Macro Creator and edit them?](#can-i-import-ahk-scripts-to-macro-creator-and-edit-them)
-* [How do create a random number/command?](#how-do-create-a-random-numbercommand)
-* [Can I create Graphic User Interface (Gui) with Macro Creator?](#can-i-create-graphic-user-interface-(gui)-with-macro-creator)
+* [How do create a random number/command?](#how-do-create-a-random-number/command)
+* [Can I create Graphic User Interface/Gui with Macro Creator?](#can-i-create-graphic-user-interface/gui-with-macro-creator)
 * [Can Macro Creator automate Firefox or Chrome as it does with Internet Explorer?](#can-macro-creator-automate-firefox-or-chrome-as-it-does-with-internet-explorer)
-* [Can I make playback go faster/slower?](#can-i-make-playback-go-fasterslower)
-* [Can I execute a custom action based on Pixel/Image search result?](#can-i-execute-a-custom-action-based-on-pixelimage-search-result)
+* [Can I make playback go faster/slower?](#can-i-make-playback-go-faster/slower)
+* [Can I execute a custom action based on Pixel/Image search result?](#can-i-execute-a-custom-action-based-on-pixel/image-search-result)
 * [Can I run a Macro in a timed interval?](#can-i-run-a-macro-in-a-timed-interval)
 * [Can I run a Macro in a background window?](#can-i-run-a-macro-in-a-background-window)
 * [Can I schedule a Macro to run when I want?](#can-i-schedule-a-macro-to-run-when-i-want)
-* [How do I increment/add a value in a variable on every loop iteration?](#how-do-i-incrementadd-a-value-in-a-variable-on-every-loop-iteration?)
+* [How do I increment/add a value in a variable on every loop iteration?](#how-do-i-increment/add-a-value-in-a-variable-on-every-loop-iteration)
 * [Is Macro Creator Portable?](#is-macro-creator-portable)
 * [Which command line parameters are supported?](#which-command-line-parameters-are-supported)
 * [Can I execute an action every time a certain event occurs?](#can-i-execute-an-action-every-time-a-certain-event-occurs)
@@ -21,31 +21,31 @@
 * [How can I use an active Internet Explorer window without editing the command every time I start PMC?](#how-can-i-use-an-active-internet-explorer-window-without-editing-the-command-every-time-i-start-pmc)
 * [What is COM and how do I use it?](#what-is-com-and-how-do-i-use-it)
 * [Can I take Screenshots during playback?](#can-i-take-screenshots-during-playback)
-* [When I take a screenshot of a window area it cuts part of the boarders.](#when-i-take-a-screenshot-of-a-window-area-it-cuts-part-of-the-boarders.)
+* [When I take a screenshot of a window area it cuts part of the boarders](#when-i-take-a-screenshot-of-a-window-area-it-cuts-part-of-the-boarders)
 * [Can I record keys when pressed down and released separately?](#can-i-record-keys-when-pressed-down-and-released-separately)
 * [Why won't the mouse stay where I recorded it when I play a Macro?](#why-wont-the-mouse-stay-where-i-recorded-it-when-i-play-a-macro)
 * [Can I keep all Hotkeys always active?](#can-i-keep-all-hotkeys-always-active)
-* [Can I use another AHK script to record / play Macros in PMC?](#can-i-use-another-ahk-script-to-record--play-macros-in-pmc)
+* [Can I use another AHK script to record / play Macros in PMC?](#can-i-use-another-ahk-script-to-record-/-play-macros-in-pmc)
 * [Can I use Functions from my own AutoHotkey Scripts?](#can-i-use-functions-from-my-own-autohotkey-scripts)
 * [Can I make the Playback Hotkeys work on a certain windown only?](#can-i-make-the-playback-hotkeys-work-on-a-certain-windown-only)
 * [Why am I getting wrong mouse coordinates?](#why-am-i-getting-wrong-mouse-coordinates)
-* [I can run the program but Macros won't work / cannot take screenshots.](#i-can-run-the-program-but-macros-wont-work--cannot-take-screenshots.)
-* [I'm getting "Error: Invalid hotkey." when I try to launch the program.](#im-getting-error:-invalid-hotkey-when-i-try-to-launch-the-program.)
+* [I can run the program but Macros won't work / cannot take screenshots](#i-can-run-the-program-but-macros-wont-work-/-cannot-take-screenshots)
+* [I'm getting "Error: Invalid hotkey" when I try to launch the program](#im-getting-"error:-invalid-hotkey"-when-i-try-to-launch-the-program)
 
 ### How do I start Recording / Playback?
 
-* To start recording you need to press the Record button and then press the recording hotkey (default is F9). For more details see [Record](p3-Record.html).  
-* To play a Macro you have to press the Play Button to activate the Hotkeys and use them to play each Macro. For more details see [Playback](p4-Playback.html).  
+* To start recording you need to press the Record button and then press the recording hotkey (default is F9). For more details see [Record](Record.html).  
+* To play a Macro you have to press the Play Button to activate the Hotkeys and use them to play each Macro. For more details see [Playback](Playback.html).  
 
 ### Can I import AHK scripts to Macro Creator and edit them?
 
-No. AHK scripts are too complex to be parsed and the conversion would never be perfect. You can, however, include the original PMC code into the exported scripts by checking this option in the [Export Window](p8-Export.html).
+No. AHK scripts are too complex to be parsed and the conversion would never be perfect. You can, however, include the original PMC code into the exported scripts by checking this option in the [Export Window](Export.html).
 
 ### How do create a random number/command?
 
 Use the Random command in the Run / File / String / Misc. window to generate a random number. The command will save the number inside a variable of your choice. Use this variable inside commands like Sleep enclosed in percent signs, e.g. %Rand% and directly inside functions and expressions, e.g. MyArray[Rand].
 
-### Can I create Graphic User Interface (Gui) with Macro Creator?
+### Can I create Graphic User Interface/Gui with Macro Creator?
 
 No, creating Guis is not in the scope of this project. But you can find some nice tools to design Gui in the [AHK forum](http://autohotkey.com/boards/viewtopic.php?f=6&t=3376). You can use the generated script along with exported scripts from PMC (the Gui's gLabel must point to a Label in the script).
 
@@ -55,7 +55,7 @@ No. Macro Creator can connect to IE because its controls are exposed via [COM](C
 
 ### Can I make playback go faster/slower?
 
-You can use the Speed Up and Slow Down keys (defaults are Insert and Pause at 2x). To change the keys and speed multiplier see [Playback Options](p4-Playback.html#playback-options).  
+You can use the Speed Up and Slow Down keys (defaults are Insert and Pause at 2x). To change the keys and speed multiplier see [Playback Options](Playback.html#playback-options).  
 
 ### Can I execute a custom action based on Pixel/Image search result?
 
@@ -70,7 +70,7 @@ Follow these steps to execute an action for Pixel/Image search based on a condit
 
 ### Can I run a Macro in a timed interval?
 
-Yes, use the [Timer](p1-Main.html#buttons-&-menus) or the [SetTimer](Commands/Set_Timer.html) command.  
+Yes, use the [Timer](Main.html#buttons-&-menus) or the [SetTimer](Commands/Set_Timer.html) command.  
 
 ### Can I run a Macro in a background window?
 
@@ -86,7 +86,7 @@ You can also export the Macro to an AutoHotkey script and run it using Window's 
 
 ### How do I increment/add a value in a variable on every loop iteration?
 
-You can use the [Assign Variable](Commands/Assign_Variable.html) window and the **+=** operator o the **:=** operator and the Expression option if you need to sum it to another value like the built-in variable A_Index, which contains the number of the current loop iteration.  
+You can use the [Assign Variable](Commands/Variables.html) window and the **+=** operator o the **:=** operator and the Expression option if you need to sum it to another value like the built-in variable A_Index, which contains the number of the current loop iteration.  
 The code below is a PMC file (you can copy and save it using any text editor).
 
 > [PMC Code]|F3||1|Window|1
@@ -108,11 +108,11 @@ All settings are saved to *MacroCreator.ini* and User Global Variables are saved
 
 ### Which command line parameters are supported?
 
-[Command line parameters](p1-Main.html#command-line-parameters)
+[Command line parameters](Main.html#command-line-parameters)
 
 ### Can I execute an action every time a certain event occurs?
 
-It's possible using the [Timer](p1-Main.html#buttons-&-menus) and some If Statements.  
+It's possible using the [Timer](Main.html#buttons-&-menus) and some If Statements.  
 
 ### Can I play other Macros while Timer is running?
 
@@ -122,7 +122,7 @@ Although the Timer is limited to run one Macro at a time, you can still activate
 
 Macro Creator has an option to convert exported scripts to EXE using Ahk2Exe that is installed with AutoHotkey:  
 1. Download and install [AutoHotkey](http://ahkscript.org/).  
-2. Go to [Export](p8-Export.html#destination-file) in PMC and check *Create EXE File* option.  
+2. Go to [Export](Export.html#destination-file) in PMC and check *Create EXE File* option.  
 3. Click the *Export* button.  
 
 The EXE file will be saved to the same directory as the script file.
@@ -162,7 +162,7 @@ Example of PMC file:
 
 The ¢ symbol replaces the | in .pmc files and is converted when loaded.  
 
-### When I take a screenshot of a window area it cuts part of the boarders.
+### When I take a screenshot of a window area it cuts part of the boarders
 
 The visible area of a window can be affected by your current Theme, but you can adjust the selection to fit the correct area:
 
@@ -195,7 +195,7 @@ Your script must use the Send command with a higher level to execute the Hotkeys
 
 Yes. You can load an external .ahk file in the *Functions* command window to run functions from it and save the results to the Output Variable. You can set a Standard Library File containing your functions in Settings > Misc., this file will be automatically selected when you enter the Function command window.   
 
-This feature is limited and can only return 1 string/number value. It's recommended to use [User-Defined Functions](p7-Functions.html#user-defined-functions) instead.
+This feature is limited and can only return 1 string/number value. It's recommended to use [User-Defined Functions](Functions.html#user-defined-functions) instead.
 
 ### Can I make the Playback Hotkeys work on a certain windown only?
 
@@ -203,12 +203,12 @@ Yes, use the *Context Sensitive Hotkeys* button in the main window.
 
 ### Why am I getting wrong mouse coordinates?
 
-The default settings for mouse coords are relative to the active window to make clicks point correctly even when the window is in a different position of when Macro was created. When working with multiple windows it may be best to adjust or maximize all windows and change CoordMode to screen (Settings > [Defaults](p10-Settings.html#defaults)).  
+The default settings for mouse coords are relative to the active window to make clicks point correctly even when the window is in a different position of when Macro was created. When working with multiple windows it may be best to adjust or maximize all windows and change CoordMode to screen (Settings > [Defaults](Settings.html#defaults)).  
 
-### I can run the program but Macros won't work / cannot take screenshots.
+### I can run the program but Macros won't work / cannot take screenshots
 
 Jn some systems Macro Creator requires administrator privileges in order to work properly. Enter the program or shortcut's Properties, select the Compatibility tab (click the Advanced button, if it's a shortcut) and check the "Run as administrator" option. 
 
-### I'm getting Error: Invalid hotkey when I try to launch the program.
+### I'm getting "Error: Invalid hotkey" when I try to launch the program
 
 This is a keyboard language issue. Change the default keyboard layout of your system (global settings) to English and open MacroCreator.  

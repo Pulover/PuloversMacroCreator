@@ -1,156 +1,526 @@
-/* styles tweaked from the original AutoHotkey css */
-
+﻿html, body {
+	margin: 0;
+	padding: 0;
+    height: 100%;
+}
 body {
-	font-family: "Arial", sans-serif;
-	font-size: 95%;
-	color: black;
-	border: 0;
-	background-color: #FFFFFF;
-	line-height: 145%;
-	margin: 1em 2em;
+	margin: 0 8px 0 8px;
+	font-size: .875em;
+	line-height: 1.75;
+	background-color: #fefefe;
+	padding-bottom: 3em;
 }
-p {
-	margin-top: 0.7em;
-	margin-bottom: 0.7em;
+html {
+	font-family: Arial, sans-serif;
 }
-
-h1 {
-	font-size: 2em;
-	font-weight: bold;
-	/* margin: 0; */
-    
-	/* padding: 0 0 0.5em 4px; */
-	/* border-bottom-style: ridge; */
-    border-bottom-color: #FFFFFF;
-    border-bottom-width: 2px;
-	color: darkblue;
+img {
+	border: none;
 }
-h2 {
-	font-size: 144%;
-	font-weight: bold;
-	font-family: Arial, Helvetica, sans-serif, "MS sans serif";
-	color: #A04040;
-	margin: 1.5em 0 0.5em 0;
-	padding: 0.1em 0 0.1em 0;
+img::selection {
+	background: transparent;
 }
-h3 {
-	font-size: 111%;
-	font-weight: bold;
-	margin: 1.0em 0 0.5em 0;
-	padding: 0.1em 0 0.1em 0;
-	color:  #00AA00;
+img::-moz-selection {
+background: transparent;
 }
-h4 {
-    font-size: 100%;
-    margin: 0.7em 0;
-    border-bottom: 1px solid lightgrey;
+a {
+    text-decoration: none;
 }
-
-ul, ol {margin-top: 0.7em; margin-bottom: 0.7em;}
-li {margin-top: 0.2em; margin-bottom: 0.2em; margin-left: -0.75em;}
-
-a {text-decoration: none;}
-a:link, a:active {color: #4280CA;}
-a:visited {color: #AA00AA;}
-a:hover, a:focus {text-decoration: underline; color: #2A6496;}
-
-.Indent {
-    margin-left: 2em;
+a:link, a:active {
+    color: #4280CA;
 }
-.NoIndent {
-	margin-left: 0;
-	margin-right: 0;
+a:visited {
+    color: #AA00AA;
 }
-
-/* pre: code blocks, code: inline code, .Syntax: syntax definition (block/pre or inline/span) */
-pre, code, .Syntax {
-	font-family: Consolas, Courier New, monospace;
-	font-size: 1em;
+a:hover, a:focus {
+    text-decoration: underline;
+    color: #2A6496;
+}
+#ahklogo img {
+    margin: 20px 0 20px 0;
+}
+input, select {
+    border: 1px solid #ccc;
 }
 pre, code {
     border-right: solid 1px #C8C8C8;
     border-bottom: solid 1px #C8C8C8;
     background-color: #F6F6E8;
 }
-.Syntax   { background-color: #FFFFAA; border: solid 1px #E8E89A; }
-code, span.Syntax { padding: 0 0.2em; }
+pre, .Syntax {
+	font-family: Consolas, Courier New, monospace;
+}
+.Syntax {
+	background-color: #FFFFAA;
+	border: solid 1px #E8E89A;
+}
+code, span.Syntax {
+	font-family: Consolas, Courier New, monospace;
+	padding: 0 1px;
+}
 pre {
-    margin: 0.7em 1.5em 0.7em 1.5em;
-    padding: 0.7em 0 0.7em 0.7em;
-    white-space: pre-wrap; /* works in IE8 but apparently not CHM viewer */
-    word-wrap: break-word; /* works in CHM viewer */
+    background-color: #F6F6E8; /*#F3F3FF*/
+	margin: 0.7em 1.5em 0.7em 1.5em;
+	padding: 0.7em 0 0.7em 0.7em;
+	white-space: pre-wrap; /* works in IE8 but apparently not CHM viewer */
+	word-wrap: break-word; /* works in CHM viewer */
 }
 pre.Syntax {
-    margin: 0 0 1.0em 0;
-    line-height: 150%;
-	position: relative;
+	margin: 0 0 1.0em 0;
+	padding: 12px 0 12px 4px;
+	line-height: 150%;
 }
-pre, pre.Short /*used with .Syntax*/ { line-height: 120%; }
-/* comments */
-pre em, code em { color: #00A000; font-style: normal; }
+pre, pre.Short /*used with .Syntax*/ {
+	line-height: 120%;
+}
+pre em, code em {
+	color: #00A000;
+	font-style: normal;
+}
+.NoIndent {
+    margin-left: 0;
+}
+::selection {
+	color: #fff;
+	background: #6c7a95;
+}
+::-moz-selection {
+ color: #fff;
+ background: #6c7a95;
+}
+h1 {
+    font-size: 2em;
+    font-weight: bold;
+    border-bottom-color: #FFFFFF;
+    border-bottom-width: 2px;
+    margin-top: 8px;
+    color: #3F5770;
+}
+.navh1 {
+    font-weight: normal;
+    background-color: #606060;
+    color: #FFF;
+    margin: 0px -8px 8px -8px;
+    padding: 7px 8px 0px 8px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    height: 43px;
+    border-bottom: 1px solid #ccc;
+    font-size: 1.5em;
+    white-space: nowrap;
+}
+.navh1 a {
+    color: #CCC !important;
+}
+h2 {
+    color: #A04040;
+}
+h3 {
+    color:  #008800;
+}
+#headerbar {
+    background-color: #606060;
+    position: absolute;
+    top: 108px;
+    left: 0px;
+    width: 100%;
+    height: 50px;
+    z-index: -1;
+    border-bottom: 1px solid #ccc;
+}
+a:visited {
+	color: #7847b2;
+}
+h2:first-child {
+	margin-top: 0;
+}
+h4 {
+	margin-bottom: 0;
+	line-height: 1;
+}
 
-
-/* tables */
+h1, h2, h3 {
+    border-bottom: 1px solid #ddd;
+}
+/* table of command parameters */
+table {
+    margin-bottom: 1em;
+}
 table.info {
     border: solid 2px #C0C0C0;
-    border-collapse: collapse;
-    width: 100%;
-    /*table-layout: fixed;*/
+	border-collapse: collapse;
+	width: 100%;
 }
 table.info td {
-    border: solid 1px #C0C0C0;
-    padding: 0.3em;
+	border: solid 1px #C0C0C0;
+	padding: 0.3em 0.5em;
 }
 table.info th {
-    background-color: #F6F6F6;
-	padding: 0.3em;
+	background-color: #F6F6F6;
+	padding: 0.3em 0.5em;
+}
+/* version number/requirement tag */
+h1 .ver, h2 .ver, h3 .ver {
+	color: #808080;
+    font-size: 65%;
+	font-weight: normal;
+	margin-left: 1em;
+	vertical-align: text-middle;
+}
+h4 .ver {
+    font-weight: normal;
+}
+.ver, a.ver {
+	color: gray;
+}
+a.ver:hover, a.ver:focus {
+	text-decoration: none;
+}
+.dull {
+	color: gray;
+}
+.red {
+	color: red;
+} /* used for highlight in various places */
+.blue {
+	color: blue;
+}
+/* emphasized note */
+.note {
+	border-left: 2px solid #99BB99;
+	background-color: #E6FFE6;
+	color: #005500;
+	padding: .5em 1em;
+}
+.warning {
+	border-left: 2px solid #FFA000;
+	background-color: #FFF8E6;
+	color: #C05500;
+	padding: .5em 1em;
+}
+/* styles for briefly documenting multiple methods on one page: */
+.methodShort {
+	border: solid thin #C0C0C0;
+	padding: 0.5em;
+	margin-bottom: 1em;
+}
+.methodShort h2 {
+	margin-top: 0;
+}
+.methodShort table.info {
+	border: none;
+}
+.methodShort table.info td {
+	border: none;
+	vertical-align: text-top;
+}
+.methodShort:target { /* non-essential, but helpful if it works */
+	border-color: black;
+}
+
+/* sidebar */
+
+ul.jqtree-tree {
+    margin-left: 20px;
+}
+
+ul.jqtree-tree,
+ul.jqtree-tree ul.jqtree_common {
+    list-style: none outside;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+ul.jqtree-tree ul.jqtree_common {
+    display: block;
+    margin-left: 12px;
+    margin-right: 0;
+}
+ul.jqtree-tree li {
+    line-height: 1.5em;
+    padding: .2em 0 .2em 0;
+}
+ul.jqtree-tree li.jqtree-closed > ul.jqtree_common {
+    display: none;
+}
+
+ul.jqtree-tree li.jqtree_common {
+    clear: both;
+    list-style-type: none;
+}
+ul.jqtree-tree .jqtree-toggler {
+    display: block;
+    position: absolute;
+    left: -1.5em;
+    top: 30%;
+    *top: 0;  /* fix for ie7 */
+    font-size: 10px;
+    line-height: 12px;
+    font-family: arial;  /* fix for ie9 */
+    border-bottom: none;
+    color: #333;
+}
+
+ul.jqtree-tree .jqtree-toggler:hover {
+    color: #000;
+}
+
+ul.jqtree-tree .jqtree-element {
+    cursor: pointer;
+}
+
+ul.jqtree-tree .jqtree-title {
+    vertical-align: middle;
+}
+
+ul.jqtree-tree li.jqtree-folder {
+    margin-bottom: 4px;
+}
+
+ul.jqtree-tree li.jqtree-folder.jqtree-closed {
+    margin-bottom: 1px;
+}
+
+ul.jqtree-tree li.jqtree-folder .jqtree-title {
+    margin-left: 0;
+}
+
+ul.jqtree-tree .jqtree-toggler.jqtree-closed {
+    background-position: 0 0;
+}
+
+ul.jqtree-tree .jqtree-element {
+    width: 100%; /* todo: why is this in here? */
+    *width: auto; /* ie7 fix; issue 41 */
+    position: relative;
+}
+
+ul.jqtree-tree li.jqtree-selected > .jqtree-element
+{
+    font-weight: bold;
+    color: #dd4b39;
+}
+
+ul.jqtree-tree li > .jqtree-element:hover
+{
+    background-color: #eee;
+}
+
+.main-content {
+	width: 100%;
+	min-height: 100%;
+	height: auto!important;
+	height: 100%;
+}
+#app-body {
+	width: 100%;
+}
+#app-body .left-col {
+	width: 231px;
+	float: left;
+}
+#app-body .right-col {
+	margin-left: 231px;
+}
+#main-content {
+	padding-left: 13px;
+	padding-right: 26px;
+	min-height: 230px;
+	max-width: 950px;
+}
+.right-col #main-content {
+	border-left: 1px solid #e5e5e5;
+}
+
+/* Header */
+
+.header {
+    position: relative;
+    background: #333;
+    height: 67px;
+    padding: 20px 25px;
+    margin: 0 -8px 0 -8px;
+    border-bottom: 1px solid #e5e5e5;
+    z-index: 9999;
+    white-space: nowrap;
+}
+
+.hdr-table {
+width: 100%;
+max-width: 1180px;
+height: 81px;
+}
+
+.hdr-table td {
+margin: 0;
+padding: 0;
+}
+.hdr-table .hdr-image, .hdr-table .hdr-image img {
+ width: 217px;
+}
+
+.hdr-table .hdr-search {
+    vertical-align: bottom;
+    padding-bottom: 13px;
+}
+
+.hdr-table .hdr-search form {
+    display: inline-block;
+}
+
+.hdr-table .hdr-search input {
+    padding-left: 5px;
+    font-size: 1em;
+    height: 25px;
+    font-family: Arial, sans-serif;
+    width:210px;
+    vertical-align: middle;
+    border: 1px solid #999;
+    margin-left: 8px;
+}
+
+.hdr-table .hdr-search #search-btn {
+    display: inline-block;
+    height: 27px;
+    line-height: 27px;
+    width: 70px;
+    color: #bbb;
+    background: #606060;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #808080;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin: 0px 10px;
+}
+
+.hdr-table .hdr-search #search-btn:hover, .hdr-table .hdr-language li:hover {
+    color: #FFF;
+    background: #808080;
+}
+
+.hdr-table .hdr-language {
+    vertical-align: bottom;
+    text-align: right;
+    padding-bottom: 13px;
+}
+
+.hdr-table .hdr-language ul {
+    display: inline-block;
+    padding:0;
+    margin:0;
+}
+
+.hdr-table .hdr-language li {
+    border:1px solid #808080;
+    background: #606060;
+    color:#bbb;
+    cursor:pointer;
+    display:block;
+    width: 100px;
+    text-align: center;
+    vertical-align: middle;
+    height: 27px;
+    line-height: 27px;
+    position:relative;
+    text-transform: uppercase;
+}
+
+.hdr-table .hdr-language .second {
+    left:-1px;
+    position:absolute;
+    top:28px;
+    display: none;
+}
+
+.hdr-table .hdr-language .second li {
+    text-transform: none;
+}
+
+/* Footer */
+
+.footer {
+    background: #333;
+    color: #fff;
+    line-height: 44px;
+    margin: 0 -8px 0 -8px;
+    padding: 0 26px;
+}
+
+.footer a {
+    color: #CCC;
+}
+
+.float-clear {
+clear: both;
+}
+
+.nav {
+    width: 242px;
+    float: left;
+    margin-top: -2px;
+    margin-left: -10px;
+    padding: 0;
+    list-style: none;
+    background-color: #808080;
+    border-bottom: 1px solid #ccc; 
+    border-top: 1px solid #ccc;
+}
+
+.nav li {
+    float: left;
+    width: 50%;
+    text-align: center;
+    cursor: pointer;
+}
+.nav .selected {
+    background-color: #bbb;
+}
+
+.nav .selected span {
+    color: #000;
+}
+
+.nav li span {
+        display: block;
+        padding: 8px 15px;
+        text-decoration: none;
+        color: #FFF;
+        border-right: 1px solid #ccc;
+        height: 35px;
+        text-transform: uppercase;
+        font-size: 1.5em;
+}
+
+.nav li span:hover {
+    color: #000;
+    background-color: #bbb;
+}
+
+#IndexEntry {
+    width: 214px;
+    font-size: 1em;
+    font-family: helvetica, Arial, sans-serif;
+}
+
+#indexcontainer {
+    width: 216px;
+    font-size: 1em;
+    font-family: helvetica, Arial, sans-serif;
+    height: 100%;
 }
 
 /* command parameters */
 dt { /* param name */
-	font-style: italic;
+	color: #008800;
+	margin-left: 0.5em;
 }
+
 dd {
-	margin-left: 0.3em;
-	padding-left: 1.5em;
-	border-left: 0.3em solid #e0e0e0;
+    margin-left: 1.5em;
+    padding-left: 1.0em;
+    border-left: 0.3em solid #e0e0e0;
+	margin-bottom: 1em;
 }
 dd > p:first-child {
-	margin-top: 0.3em;
-}
-
-/* version number/requirement tag */
-h1 .ver, h2 .ver, h3 .ver {font-size: 65%; font-weight: normal; margin-left: 1em; vertical-align: top}
-h2 .ver {color: lightgray; font-size: 80%;}
-.ver,
-/* de-emphasized */
-.dull {color: gray;}
-.red {color: red;} /* used for highlight in various places */
-.blue {color: blue;}
-/* emphasized note */
-.note {border: 1px solid #99BB99; background-color: #E6FFE6;
-	color: #005500; padding: 0 3px; }
-
-/* styles for briefly documenting multiple methods on one page: */
-.methodShort {
-    border: solid thin #C0C0C0;
-    padding: 0.5em;
-    margin-bottom: 1em;
-}
-.methodShort h2 { margin-top: 0; }
-.methodShort table.info { border: none; }
-.methodShort table.info td {
-    border: none;
-    vertical-align: text-top;
-}
-.methodShort:target { /* non-essential, but helpful if it works */
-    border-color: black;
-}
-
-/* nav links */
-.navlinks {
-	float: right;
-}
-.navlinks a {
-	font-weight: bold;
+    margin-top: 0.3em;
 }

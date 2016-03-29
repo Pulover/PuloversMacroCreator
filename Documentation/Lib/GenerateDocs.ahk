@@ -1,4 +1,4 @@
-;
+﻿;
 ; File encoding:  UTF-8
 ;
 
@@ -34,7 +34,6 @@ GenerateDocs(file, docs)
 	</head>
 	<body>
 
-	<h1>%libname%%libextra%</h1>
 	)
 	if libdesc
 		filetext .= "`n" PrepPage(libdesc)
@@ -53,11 +52,11 @@ GenerateDocs(file, docs)
 			q := Generate_%type%(item)
 			if type != Page
 			{
+				if type = Function
+					continue
 				filetext .= "`n  <li><a href=""" q ".html"">"
 				q := SubStr(q, StrLen(w)+1)
-				if type = Function
-					filetext .= q "() Function"
-				else if type = Class
+				if type = Class
 					filetext .= q " Class"
 				else if type = Page
 					filetext .= _HTML(q)
@@ -171,7 +170,7 @@ Generate_Common(item, prefix="")
 	type := item.type
 	Parse_Common(item, prefix, type, syntax, name, isConstr, isGet, isSet)
 	
-	prettyname := type = "Function" ? name "()" : name
+	prettyname := type = "Function" ? StrReplace(name, "_", " ") : name
 	
 	filetext =
 	(LTrim
@@ -190,7 +189,7 @@ Generate_Common(item, prefix="")
 	)
 	if item.description
 		filetext .= "`n" Markdown2HTML(item.description)
-	filetext .= "`n`n<pre class=""Syntax"">" _HTML(syntax) "</pre>"
+	filetext .= "`n`n<pre class=""Syntax"">" StrReplace(StrReplace(_HTML(syntax), "_", " "), "(", " (") "</pre>"
 	if params := item.parameters
 	{
 		filetext .= "`n<h3>Parameters</h4>`n<dl>"
@@ -221,6 +220,7 @@ Generate_Common(item, prefix="")
 	
 	filetext .= "`n`n</body>`n</html>"
 	
+	name := (type = "Function") ? "Commands/" name : name
 	IfExist, %name%.html
 		FileDelete, %name%.html
 	FileAppend, % filetext, %name%.html

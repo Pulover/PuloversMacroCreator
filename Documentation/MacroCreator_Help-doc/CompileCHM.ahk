@@ -2,17 +2,12 @@
 #SingleInstance, Force
 FileEncoding, UTF-8
 
-File := A_ScriptDir "\p9-About.html"
-Data := "<br/></p>`n<h1 id=""change-log"">Change Log</h1>"
-FileRead, FileData, %File%
-FileMod_Change(FileData, Data, 38)
-FileDelete, %File%
-FileAppend, %FileData%, %File%
-
 File := A_ScriptDir "\index.html"
-Data := "<h1><a href=""http://www.macrocreator.com/""><img src=""Images/PMC.png"" alt=""Pulover's Macro Creator"" border=""0""></a></h1>"
+Data := "<a href=""http://www.macrocreator.com/""><img src=""Images/PMC.png"" alt=""Pulover's Macro Creator"" border=""0""></a>"
 FileRead, FileData, %File%
 FileMod_Change(FileData, Data, 11)
+Data := "<h1 id=""version:-5.0.0"">Version: <a href=""About.html#change-log"">5.0.0</a></h1>"
+FileMod_Change(FileData, Data, 12)
 FileDelete, %File%
 FileAppend, %FileData%, %File%
 

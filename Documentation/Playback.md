@@ -1,4 +1,4 @@
-# Playback
+﻿# Playback
 
 ## Table of Contents
 
@@ -27,7 +27,7 @@ The Playback Hotkeys are selected in the boxes at the top-right of the main wind
 
 **Pause**: Selects the Hotkey to pause execution, press it again to resume. You can also pause/unpause Playback by Middle-Clicking the TrayIcon.  
 
-*Note*: Mouse Actions are affected by [Mouse Coordinates Settings](p10-Settings.html#defaults).  
+*Note*: Mouse Actions are affected by [Mouse Coordinates Settings](Settings.html#defaults).  
 
 ## Controls Toolbar
 
@@ -53,7 +53,7 @@ You can also view the list of variables and contents from the File menu and Tray
 
 ## Context Sensitive Hotkeys
 
-Makes all Hotkeys context-sensitive. Such hotkeys will only work depending on the type of window that is active or exists, or if an [expression](p6-Variables.html#expressions) is evaluated to true.
+Makes all Hotkeys context-sensitive. Such hotkeys will only work depending on the type of window that is active or exists, or if an [expression](Variables.html#expressions) is evaluated to true.
 
 This option affects ALL Hotkeys and will be saved to the programs settings when it's closed. There's a text tip at the bottom-right of the main window to show if it's active. To deactivate this option select *None* in the list.
 

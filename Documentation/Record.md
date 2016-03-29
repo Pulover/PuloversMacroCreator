@@ -1,4 +1,4 @@
-# Record
+﻿# Record
 
 ## Table of Contents
 
@@ -46,7 +46,7 @@ To change options click the Options button on the main window or select Options 
 **Mouse Wheel**: Records Mouse Wheel Up/Down.  
 
 **Mouse Moves**: Records Mouse movements. The Minimum delay sets the amount of idle time (ms) of the mouse to wait before recording the last move (this option should not me changed in most cases).  
-**Note**: Recorded Mouse Actions are affected by [Mouse Coordinates Settings](p10-Settings.html#defaults).  
+**Note**: Recorded Mouse Actions are affected by [Mouse Coordinates Settings](Settings.html#defaults).  
 
 **Record ControlClick**: Tries to record ControlClick instead of normal clicks. If a control is found on the click position of the active window it will record the Control and the position relative to the control. If no control is found it will record ControlClick relative to the window.  
 
