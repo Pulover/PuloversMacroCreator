@@ -3,6 +3,7 @@
 /Documentation/MacroCreator_Help-doc/*.html
 /Documentation/MacroCreator_Help-doc/Commands/*.html
 /Documentation/MacroCreator_Help-doc/hha.dll
+/Documentation/MacroCreator_Help-doc/default.css
 /Screenshots/
 /*.txt
 *.exe

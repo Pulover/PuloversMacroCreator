@@ -3,7 +3,7 @@
 ## Table of Contents
 
 * [Introduction](#introduction)
-* [Using Functions](#using-functions)
+* [Calling Functions](#calling-functions)
 * [Function parameters](#function-parameters)
 * [Array/Object Methods](#array/object-methods)
 * [User-Defined Functions](#user-defined-functions)
