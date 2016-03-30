@@ -89,6 +89,8 @@ SetBatchLines, -1
 FileEncoding, UTF-8
 Process, Priority,, High
 #NoTrayIcon
+CoordMode, Menu, Window
+CoordMode, Tooltip, Window
 
 Menu, Tray, Tip, Pulovers's Macro Creator
 DefaultIcon := (A_IsCompiled) ? A_ScriptFullPath
@@ -200,6 +202,7 @@ IniRead, OnRelease, %IniFilePath%, Options, OnRelease, 1
 IniRead, OnEnter, %IniFilePath%, Options, OnEnter, 0
 IniRead, LineW, %IniFilePath%, Options, LineW, 2
 IniRead, ScreenDir, %IniFilePath%, Options, ScreenDir, %SettingsFolder%\Screenshots
+IniRead, GetWinTitle, %IniFilePath%, Options, GetWinTitle, 1,0,0,0,0
 IniRead, DefaultEditor, %IniFilePath%, Options, DefaultEditor
 IniRead, DefaultMacro, %IniFilePath%, Options, DefaultMacro, %A_Space%
 IniRead, StdLibFile, %IniFilePath%, Options, StdLibFile, %A_Space%
@@ -2108,7 +2111,7 @@ Gui, 14:Add, Combobox, yp-5 x+0 W60 vPauseKey gAutoComplete, %KeybdList%
 Gui, 14:Add, GroupBox, Section y+16 xs W450 H80
 Gui, 14:Add, Checkbox, -Wrap Section ys xs vEx_IfDir gEx_Checks R1, %t_Lang009%:
 Gui, 14:Add, DDL, xs+10 W105 vEx_IfDirType Disabled, #IfWinActive%_x%%_x%#IfWinNotActive%_x%#IfWinExist%_x%#IfNotWinExist%_x%#If
-Gui, 14:Add, DDL, yp x+250 W75 vIdent Disabled, Title%_x%%_x%Class%_x%Process%_x%ID%_x%PID
+Gui, 14:Add, Button, yp x+250 W75 vIdent gWinTitle Disabled, WinTitle
 Gui, 14:Add, Edit, -Wrap R1 xs+10 W400 vTitle Disabled
 Gui, 14:Add, Button, -Wrap yp-1 x+0 W30 H23 vGetWin gGetWin Disabled, ...
 ; Location and Style
@@ -4006,7 +4009,7 @@ Gui, 5:Add, Checkbox, -Wrap ys+15 xs+10 W160 vCSend gCSend R1, %c_Lang016%:
 Gui, 5:Add, Edit, vDefCt W200 Disabled
 Gui, 5:Add, Button, -Wrap yp-1 x+0 W30 H23 vGetCtrl gGetCtrl Disabled, ...
 Gui, 5:Add, Text, -Wrap y+15 xs+10 W150 H20 vWinParsTip cGray, %wcmd_All%
-Gui, 5:Add, DDL, yp-5 x+5 W75 vIdent Disabled, Title||Class|Process|ID|PID
+Gui, 5:Add, Button, yp-5 x+5 W75 vIdent gWinTitle Disabled, WinTitle
 Gui, 5:Add, Edit, y+5 xs+10 W200 vTitle Disabled, A
 Gui, 5:Add, Button, -Wrap yp-1 x+0 W30 H23 vGetWin gGetWin Disabled, ...
 Gui, 5:Add, Button, -Wrap Section Default xm W75 H23 gMouseOK, %c_Lang020%
@@ -4877,6 +4880,39 @@ GuiControl,, Title, ahk_class %class%
 FoundTitle := "ahk_class " class, Window := "ahk_class " class, StopIt := 1
 return
 
+WinTitle:
+Menu, WinTitleMenu, Add, Title, SetWinTitle
+Menu, WinTitleMenu, Add, Class, SetWinTitle
+Menu, WinTitleMenu, Add, Process, SetWinTitle
+Menu, WinTitleMenu, Add, ID, SetWinTitle
+Menu, WinTitleMenu, Add, PID, SetWinTitle
+
+StringSplit, Ident, GetWinTitle, `,
+Loop, 5
+	Ident%A_Index% := Ident%A_Index% ? 1 : 0
+
+If (Ident1)
+	Menu, WinTitleMenu, Check, Title
+If (Ident2)
+	Menu, WinTitleMenu, Check, Class
+If (Ident3)
+	Menu, WinTitleMenu, Check, Process
+If (Ident4)
+	Menu, WinTitleMenu, Check, ID
+If (Ident5)
+	Menu, WinTitleMenu, Check, PID
+
+GuiControlGet, ButPos, Pos, %A_GuiControl%
+Menu, WinTitleMenu, Show, % ButPosX + 2, % (ButPosY + ButPosH * 2) + 2
+Menu, WinTitleMenu, DeleteAll
+return
+
+SetWinTitle:
+GetWinTitle := ""
+Loop, 5
+	GetWinTitle .= (A_Index = A_ThisMenuItemPos ? !Ident%A_Index% : Ident%A_Index%) ","
+return
+
 GetWin:
 CoordMode, Mouse, %CoordMouse%
 Gui, Submit, NoHide
@@ -4894,35 +4930,25 @@ Hotkey, Esc, EscNoKey, Off
 WinActivate, ahk_id %CmdWin%
 If (StopIt)
 	Exit
-If (Ident = "Title")
-{
-	If (Label = "IfGet")
-	{
-		FoundTitle := Title
-		return
-	}
-	GuiControl,, Title, %Title%
-}
-Else If (Ident = "Class")
-{
-	GuiControl,, Title, ahk_class %class%
-	FoundTitle := "ahk_class " class
-}
-Else If (Ident = "Process")
-{
-	GuiControl,, Title, ahk_exe %pname%
-	FoundTitle := "ahk_exe " pname
-}
-Else If (Ident = "ID")
-{
-	GuiControl,, Title, ahk_id %id%
-	FoundTitle := "ahk_id " id
-}
-Else If (Ident = "PID")
-{
-	GuiControl,, Title, ahk_pid %pid%
-	FoundTitle := "ahk_pid " pid
-}
+StringSplit, Ident, GetWinTitle, `,
+Loop, 5
+	Ident%A_Index% := Ident%A_Index% ? 1 : 0
+FoundTitle := ""
+If (Ident1)
+	FoundTitle .= Title
+If (Ident2)
+	FoundTitle .= " ahk_class " class
+If (Ident3)
+	FoundTitle .= " ahk_exe " pname
+If (Ident4)
+	FoundTitle .= " ahk_id " id
+If (Ident5)
+	FoundTitle .= " ahk_pid " pid
+FoundTitle := Trim(FoundTitle)
+If (FoundTitle = "")
+	FoundTitle := Title
+If (Label != "IfGet")
+	GuiControl,, Title, %FoundTitle%
 StopIt := 1
 return
 
@@ -5283,8 +5309,8 @@ Gui, 8:Add, GroupBox, Section ys x+20 W240 H135
 Gui, 8:Add, Checkbox, -Wrap ys+15 xs+10 W150 vCSend gCSend R1, %c_Lang016%:
 Gui, 8:Add, Edit, vDefCt W190 Disabled
 Gui, 8:Add, Button, -Wrap yp-1 x+0 W30 H23 vGetCtrl gGetCtrl Disabled, ...
-Gui, 8:Add, Text, -Wrap y+20 xs+10 W140 H20 vWinParsTip cGray, %wcmd_All%
-Gui, 8:Add, DDL, yp-5 x+5 W75 vIdent Disabled, Title||Class|Process|ID|PID
+Gui, 8:Add, Text, -Wrap y+15 xs+10 W140 H20 vWinParsTip cGray, %wcmd_All%
+Gui, 8:Add, Button, yp-5 x+5 W75 vIdent gWinTitle Disabled, WinTitle
 Gui, 8:Add, Edit, y+5 xs+10 W190 vTitle Disabled, A
 Gui, 8:Add, Button, -Wrap yp-1 x+0 W30 H23 vGetWin gGetWin Disabled, ...
 ; Buttons
@@ -5293,7 +5319,7 @@ Gui, 8:Add, Button, -Wrap ys W75 H23 gTextCancel, %c_Lang021%
 Gui, 8:Add, Button, -Wrap ys W75 H23 vTextApply gTextApply Disabled, %c_Lang131%
 Gui, 8:Add, Button, -Wrap ys W25 H23 hwndInsertKeyT vInsertKeyT gInsertKey Disabled
 	ILButton(InsertKeyT, ResDllPath ":" 91)
-Gui, 8:Add, Text, x+10 yp-3 W450 H25 cGray, %c_Lang025%
+Gui, 8:Add, Text, x+10 yp-3 W400 H25 cGray, %c_Lang025%
 Gui, 8:Add, StatusBar, gStatusBarHelp
 Gui, 8:Default
 SB_SetParts(600, 70)
@@ -6733,7 +6759,7 @@ Gui, 11:Add, Edit, W430 -Multi Disabled vVarName
 Gui, 11:Add, Text, -Wrap R1 xs+10 y+5 W430 vCPosT
 Gui, 11:Add, Groupbox, Section xs y+15 W450 H80
 Gui, 11:Add, Text, -Wrap ys+20 xs+10 W350 H20 vWinParsTip cGray, %wcmd_WinSet%
-Gui, 11:Add, DDL, yp-5 x+5 W75 vIdent, Title||Class|Process|ID|PID
+Gui, 11:Add, Button, yp-5 x+5 W75 vIdent gWinTitle, WinTitle
 Gui, 11:Add, Edit, xs+10 y+5 W400 vTitle, A
 Gui, 11:Add, Button, -Wrap yp-1 x+0 W30 H23 vGetWin gGetWin, ...
 Gui, 11:Add, Text, -Wrap R1 Section ym+20 xm+130 W105 Right, %c_Lang058%
@@ -7867,8 +7893,8 @@ Gui, 21:Add, DDL, ys+15 xs+10 W190 vStatement gStatement AltSubmit, %Statement%
 Gui, 21:Add, Text, yp x+5 h25 0x11
 Gui, 21:Add, DDL, yp x+0 W105 vIfMsgB AltSubmit Disabled, %c_Lang168%$$%c_Lang169%$%c_Lang170%$%c_Lang171%$%c_Lang172%$%c_Lang173%$%c_Lang174%$%c_Lang175%$%c_Lang176%$%c_Lang177%
 Gui, 21:Add, Text, yp x+5 h25 0x11
-Gui, 21:Add, DDL, yp x+0 W75 vIdent, Title$$Class$Process$ID
-Gui, 21:Add, Button, -Wrap yp-1 x+5 W30 H23 vIfGet gIfGet, ...
+Gui, 21:Add, Button, yp x+0 W75 vIdent gWinTitle, WinTitle
+Gui, 21:Add, Button, -Wrap yp x+5 W30 H23 vIfGet gIfGet, ...
 Gui, 21:Add, Text, -Wrap R1 y+5 xs+10 W200 vFormatTip
 Gui, 21:Add, Edit, y+5 xs+10 W430 R4 -vScroll vTestVar
 Gui, 21:Add, Text, -Wrap R1 y+11 xs+10 W135 vFormatTip2
@@ -8578,7 +8604,7 @@ Gui, 22:Add, Text, -Wrap R1 ys+15 xs+10, %c_Lang004%:
 Gui, 22:Add, Edit, vDefCt W400
 Gui, 22:Add, Button, -Wrap yp-1 x+0 W30 H23 vGetCtrl gGetCtrl, ...
 Gui, 22:Add, Text, -Wrap y+10 xs+10 W350 H20 vWinParsTip cGray, %wcmd_WinSet%
-Gui, 22:Add, DDL, yp-5 x+5 W75 vIdent, Title||Class|Process|ID|PID
+Gui, 22:Add, Button, yp-5 x+5 W75 vIdent gWinTitle, WinTitle
 Gui, 22:Add, Edit, y+5 xs+10 W400 vTitle, A
 Gui, 22:Add, Button, -Wrap yp-1 x+0 W30 H23 vGetWin gGetWin, ...
 Gui, 22:Add, Button, -Wrap Section Default xm W75 H23 gSendMsgOK, %c_Lang020%
@@ -8703,7 +8729,7 @@ Gui, 23:Add, Text, -Wrap R1 ys+15 xs+10, %c_Lang004%:
 Gui, 23:Add, Edit, vDefCt W400
 Gui, 23:Add, Button, -Wrap yp-1 x+0 W30 H23 vGetCtrl gGetCtrl, ...
 Gui, 23:Add, Text, -Wrap y+10 xs+10 W350 H20 vWinParsTip cGray, %wcmd_WinSet%
-Gui, 23:Add, DDL, yp-5 x+5 W75 vIdent, Title||Class|Process|ID|PID
+Gui, 23:Add, Button, yp-5 x+5 W75 vIdent gWinTitle, WinTitle
 Gui, 23:Add, Edit, xs+10 y+5 W400 vTitle, A
 Gui, 23:Add, Button, -Wrap yp-1 x+0 W30 H23 vGetWin gGetWin, ...
 Gui, 23:Add, Text, -Wrap R1 Section ym+20 xm+130 W105 Right, %c_Lang058%
@@ -12170,7 +12196,7 @@ Gui, 15:Add, GroupBox, vSGroup Section xm W280 H130
 Gui, 15:Add, Checkbox, -Wrap Section ys+15 xs+10 W260 vCSend gCSend R1, %c_Lang016%:
 Gui, 15:Add, Edit, vDefCt W230 Disabled
 Gui, 15:Add, Button, -Wrap yp-1 x+0 W30 H23 vGetCtrl gGetCtrl Disabled, ...
-Gui, 15:Add, DDL, Section xs W75 vIdent Disabled, Title||Class|Process|ID|PID
+Gui, 15:Add, Button, Section xs W75 vIdent gWinTitle Disabled, WinTitle
 Gui, 15:Add, Text, -Wrap yp+5 x+5 W180 H20 vWinParsTip cGray, %wcmd_All%
 Gui, 15:Add, Edit, xs+2 W230 vTitle Disabled, A
 Gui, 15:Add, Button, -Wrap yp-1 x+0 W30 H23 vGetWin gGetWin Disabled, ...
@@ -12373,7 +12399,7 @@ Gui, 6:Add, GroupBox, vSGroup Section xm W280 H120
 Gui, 6:Add, Checkbox, -Wrap Section ys+15 xs+10 W250 vCSend gCSend R1, %c_Lang016%:
 Gui, 6:Add, Edit, vDefCt W230 Disabled
 Gui, 6:Add, Button, -Wrap yp-1 x+0 W30 H23 vGetCtrl gGetCtrl Disabled, ...
-Gui, 6:Add, DDL, Section xs W75 vIdent Disabled, Title||Class|Process|ID|PID
+Gui, 6:Add, Button, Section xs W75 vIdent gWinTitle Disabled, WinTitle
 Gui, 6:Add, Text, -Wrap yp+5 x+5 W180 H20 vWinParsTip cGray, %wcmd_All%
 Gui, 6:Add, Edit, xs+2 W230 vTitle Disabled, A
 Gui, 6:Add, Button, -Wrap yp-1 x+0 W30 H23 vGetWin gGetWin Disabled, ...
@@ -12591,7 +12617,7 @@ Gui, 1:+Disabled
 Gui, 16:Add, Groupbox, W450 H75
 Gui, 16:Add, Text, -Wrap R1 ys+20 xs+10 W40 cBlue, #If
 Gui, 16:Add, DDL, yp-3 x+5 W100 vIfDirectContext gIfDirectContext, None||WinActive|WinNotActive|WinExist|WinNotExist|Expression
-Gui, 16:Add, DDL, yp x+210 W75 vIdent, Title||Class|Process|ID|PID
+Gui, 16:Add, Button, yp x+210 W75 vIdent gWinTitle, WinTitle
 Gui, 16:Add, Edit, y+5 xs+10 W400 vTitle R1 -Multi, %IfDirectWindow%
 Gui, 16:Add, Button, -Wrap yp-1 x+0 W30 H23 vGetWin gGetWin, ...
 Gui, 16:Add, Button, -Wrap Section Default xm W75 H23 gSWinOK, %c_Lang020%
@@ -13541,6 +13567,7 @@ OnRelease := 1
 OnEnter := 0
 LineW := 2
 ScreenDir := SettingsFolder "\MacroCreator\Screenshots"
+GetWinTitle := "1,0,0,0,0"
 DefaultMacro := ""
 StdLibFile := ""
 Ex_AbortKey := 0
@@ -13879,6 +13906,7 @@ IniWrite, %OnRelease%, %IniFilePath%, Options, OnRelease
 IniWrite, %OnEnter%, %IniFilePath%, Options, OnEnter
 IniWrite, %LineW%, %IniFilePath%, Options, LineW
 IniWrite, %ScreenDir%, %IniFilePath%, Options, ScreenDir
+IniWrite, %GetWinTitle%, %IniFilePath%, Options, GetWinTitle
 IniWrite, %DefaultEditor%, %IniFilePath%, Options, DefaultEditor
 IniWrite, %DefaultMacro%, %IniFilePath%, Options, DefaultMacro
 IniWrite, %StdLibFile%, %IniFilePath%, Options, StdLibFile
