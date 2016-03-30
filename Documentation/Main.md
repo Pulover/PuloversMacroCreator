@@ -1,4 +1,4 @@
-# Main Window
+﻿# Main Window
 
 **Tip**: Right-click on an empty area of a Command Window to display links to AutoHotkey online documentation and related contents.
 

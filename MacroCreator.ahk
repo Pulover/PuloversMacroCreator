@@ -1,4 +1,4 @@
-; *****************************
+﻿; *****************************
 ; :: PULOVER'S MACRO CREATOR ::
 ; *****************************
 ; "The Complete Automation Tool"
@@ -6721,12 +6721,12 @@ Gui, 11:Add, Text, -Wrap R1 ys+15 xs+10 W120, %c_Lang055%:
 Gui, 11:Add, DDL, W120 vWinCom gWinCom, %WinCmdList%
 Gui, 11:Add, Text, -Wrap R1 W120, %c_Lang035%:
 Gui, 11:Add, DDL, W120 -Multi vWCmd gWCmd, %WinCmd%
-Gui, 11:Add, Text, -Wrap R1 yp-10 x+10 W20 vTValue Disabled, 255
+Gui, 11:Add, Text, -Wrap R1 yp-10 x+10 W180 vTValue Disabled, 255
 Gui, 11:Add, Slider, y+0 W100 Buddy2TValue vN gN Range0-255 Disabled, 255
 Gui, 11:Add, Radio, -Wrap Checked yp+2 x+30 W70 vAoT1 R1, Toggle
 Gui, 11:Add, Radio, -Wrap yp x+5 W45 R1 vAoT2, On
 Gui, 11:Add, Radio, -Wrap yp x+5 W45 R1 vAoT3, Off
-Gui, 11:Add, Text, -Wrap R1 xs+10 y+10 W80 vValueT, %c_Lang056%:
+Gui, 11:Add, Text, -Wrap R1 xs+10 y+10 W180 vValueT, %c_Lang056%:
 Gui, 11:Add, Edit, W430 -Multi Disabled vValue
 Gui, 11:Add, Text, -Wrap R1 W180, %c_Lang057%:
 Gui, 11:Add, Edit, W430 -Multi Disabled vVarName

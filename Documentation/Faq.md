@@ -1,4 +1,4 @@
-# FAQ - "Frequently asked", "Not so frequently asked" and "Just in case you're wondering..." questions.
+﻿# FAQ - "Frequently asked", "Not so frequently asked" and "Just in case you're wondering..." questions.
 
 **Tip**: Right-click on an empty area of a Command Window to display links to AutoHotkey online documentation and related contents.
 
