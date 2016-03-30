@@ -1,4 +1,4 @@
-﻿; *****************************
+; *****************************
 ; :: PULOVER'S MACRO CREATOR ::
 ; *****************************
 ; "The Complete Automation Tool"
@@ -22,7 +22,7 @@ http://autohotkey.com/boards/viewtopic.php?t=6517
 tkoi & majkinetor for the Graphic Buttons function.
 http://www.autohotkey.com/board/topic/37147-ilbutton-image-buttons
 
-just me for LV_Colors Class, LV_EX/IL_EX functions and for updating ILButton to 64bit.
+just me for LV_Colors Class, LV_EX/IL_EX libraries and for updating ILButton to 64bit.
 http://autohotkey.com/boards/viewtopic.php?f=6&t=1081
 http://autohotkey.com/boards/viewtopic.php?t=1256
 http://autohotkey.com/boards/viewtopic.php?f=6&t=1273
@@ -3914,7 +3914,7 @@ Gui, 34:Add, Edit, ys+20 xs+10 W340 H100 ReadOnly -E0x200,
 Chris and Lexikos for AutoHotkey.
 tic (Tariq Porter) for his GDI+ Library.
 tkoi && majkinetor for the ILButton function.
-just me for LV_Colors Class, LV_EX/IL_EX functions and for updating ILButton to 64bit.
+just me for LV_Colors Class, LV_EX/IL_EX libraries and for updating ILButton to 64bit.
 Micahs for the base code of the Drag-Rows function.
 jaco0646 for the function to make hotkey controls detect other keys.
 Uberi for the ExprEval function to solve expressions.
@@ -15584,4 +15584,3 @@ return
 #Include <Eval>
 #Include <SCI>
 #SingleInstance Off
-

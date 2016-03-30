@@ -1,4 +1,4 @@
-﻿# Pulover's Macro Creator
+# Pulover's Macro Creator
 *The Complete Automation Tool*
 
 [www.macrocreator.com](http://www.macrocreator.com)  
@@ -19,17 +19,17 @@ Software License: [GNU General Public License](License.html)
 Chris and Lexikos for [AutoHotkey](http://autohotkey.com/).  
 tic (Tariq Porter) for his [GDI+ Library](http://autohotkey.com/boards/viewtopic.php?t=6517).  
 tkoi & majkinetor for the [ILButton function](http://autohotkey.com/board/topic/37147-ilbutton-image-buttons).  
-just me for [LV_Colors Class](http://autohotkey.com/boards/viewtopic.php?f=6&t=1081), [LV_EX](http://autohotkey.com/boards/viewtopic.php?t=1256)/[IL_EX](http://autohotkey.com/boards/viewtopic.php?f=6&t=1273) functions and for updating ILButton to 64bit.  
+just me for [LV_Colors Class](http://autohotkey.com/boards/viewtopic.php?f=6&t=1081), [LV_EX](http://autohotkey.com/boards/viewtopic.php?t=1256)/[IL_EX](http://autohotkey.com/boards/viewtopic.php?f=6&t=1273) libraries and for updating ILButton to 64bit.  
 Micahs for the [base code](http://autohotkey.com/board/topic/30486-listview-tooltip-on-mouse-hover/?p=280843) of the Drag-Rows function.  
 jaco0646 for the [function](http://autohotkey.com/board/topic/47439-user-defined-dynamic-hotkeys) to make hotkey controls detect other keys.  
 Uberi for the [ExprEval function](http://autohotkey.com/board/topic/64167-expreval-evaluate-expressions) to solve expressions.  
-Jethrow for the [IEGet & WBGet Functions](http://autohotkey.com/board/topic/47052-basic-webpage-controls).  
+Jethrow for the [IEGet & WBGet functions](http://autohotkey.com/board/topic/47052-basic-webpage-controls).  
 RaptorX for the [Scintilla Wrapper for AHK](http://autohotkey.com/board/topic/85928-wrapper-scintilla-wrapper).  
-majkinetor for the [Dlg_Color](http://autohotkey.com/board/topic/49214-ahk-ahk-l-forms-framework-08/) function.  
-rbrtryn for the [ChooseColor](http://autohotkey.com/board/topic/91229-windows-color-picker-plus/) function.  
+majkinetor for the [Dlg_Color function](http://autohotkey.com/board/topic/49214-ahk-ahk-l-forms-framework-08/).  
+rbrtryn for the [ChooseColor function](http://autohotkey.com/board/topic/91229-windows-color-picker-plus/).  
 PhiLho and skwire for the [function](http://autohotkey.com/board/topic/11926-can-you-move-a-listview-column-programmatically/#entry237340) to Get/Set the order of columns.  
 fincs for [GenDocs](http://autohotkey.com/board/topic/71751-gendocs-v30-alpha002) and [SciLexer.dll custom builds](http://autohotkey.com/board/topic/54431-scite4autohotkey-v3004-updated-aug-14-2013/page-58#entry566139).  
-tmplinshi for the [CreateFormData](http://autohotkey.com/boards/viewtopic.php?f=6&t=7647) function.  
+tmplinshi for the [CreateFormData function](http://autohotkey.com/boards/viewtopic.php?f=6&t=7647).  
 Thiago Talma for some improvements to the code, debugging and many suggestions.  
 [Translation revisions](http://www.macrocreator.com/project/).  
 
@@ -778,4 +778,3 @@ Thiago Talma for some improvements to the code, debugging and many suggestions.
 * Changed default AbortKey to F9 because pressing the Ctrl key during execution would interfere with macro.
 * Changed default Delay value to 1 for mouse performance reasons.
 * Corrected some minor mistakes in guis.
-

@@ -1,4 +1,4 @@
-﻿# Settings
+# Settings
 
 ## Table of Contents
 
@@ -45,6 +45,7 @@ All settings are saved to *MacroCreator.ini*, User Global Variables are saved to
 > 		}
 > 	}
 > }
+
 You can also click on the *Index* Column Header to turn this option On/Off.  
 You can change the default colors clicking on the color shown here and picking a new one from the selector.  
 

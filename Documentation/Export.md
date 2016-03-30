@@ -1,4 +1,4 @@
-﻿# Export
+# Export
 
 ## Table of Contents
 
@@ -48,7 +48,7 @@ Once a script is compiled, it becomes a standalone executable; that is, it can b
 
 ## Context Sensitive Hotkeys
 
-Makes hotkeys and hotstrings work depending on the type of window that is active or exists. For more information see [Playback](Playback.html#context-sensitive-hotkeys) and [AutoHotkey documentation](http://autohotkey.com/docs/commands/_ifwinactive).
+Makes hotkeys and hotstrings work depending on the type of window that is active or exists, or if an expression evaluates to true. For more information see [Playback](Playback.html#context-sensitive-hotkeys) and AutoHotkey documentation: [#IfWinActive](http://autohotkey.com/docs/commands/_ifwinactive) / [#If](http://autohotkey.com/docs/commands/_if).
 
 ## Options
 
