@@ -1,4 +1,4 @@
-﻿# Commands
+# Commands
 
 **Tip**: Right-click on an empty area of a Command Window to display links to AutoHotkey online documentation and related contents.
 
@@ -12,7 +12,7 @@ The following fields appear on some of the Command Windows and will behave the s
 
 * **Repeat**: How many times to execute the command. This field is ignored in some commands. This field accepts [Variables & Expressions](Variables.html).
 * **Delay**: Time to wait before the next command line, except for the *Message box* and *KeyWait* command it sets the *Timeout*, for the *Set Timer* command it sets the Period. This field is ignored in some of the commands. This field accepts [Variables & Expressions](Variables.html).
-* **Control**: Selects the target control to send the command. Use the *Get* button (...) to easily find a control's name: Point the mouse to its location and Right-Click on it. To operate upon a control's HWND (window handle), leave the Control parameter blank and specify ahk_id %ControlHwnd% for the WinTitle parameter. This field accepts [Variables & Expressions](Variables.html).
+* **Control**: Selects the target control to send the command. Use the *Get* button (...) to easily find a control's name: Point the mouse to its location and Right-Click on it. To operate upon a control's HWND (unique ID), leave the Control parameter blank and specify ahk_id %ControlHwnd% for the WinTitle parameter. This field accepts [Variables & Expressions](Variables.html).
 * **Window**: Title, partial title or identifier of a target window. The first parameter is [WinTitle](http://autohotkey.com/docs/misc/WinTitle.htm), you can add one or more extra parameters separating them by commas: `WinTitle, WinText, ExcludeTitle, ExcludeText`. You can omit any of those parameters, including WinTitle. The matching behavior is set by *Title Match Mode* and can be changed in the [Playback options](Playback.html#playback-options). This field accepts [Variables & Expressions](Variables.html).  
 * **WinTitle**: Selects what informations to retrieve from a target window (Title/Class/Process/ID/ProcessID) with the *Get* tool for the [WinTitle](http://autohotkey.com/docs/misc/WinTitle.htm) parameter. Check one or more items in the list and use the *Get* button (...) to copy the available information from the window.  
 **Note**: The options checked only determine what the *Get* tool will retrieve, it does not affect the command.
