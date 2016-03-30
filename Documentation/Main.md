@@ -1,6 +1,6 @@
 # Main Window
 
-**Tip**: Right-click on a Button in the Main Window or anywhere on a Command Window to display links to AutoHotkey online help.
+**Tip**: Right-click on an empty area of a Command Window to display links to AutoHotkey online documentation and related contents.
 
 ## Table of Contents
 

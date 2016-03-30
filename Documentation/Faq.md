@@ -1,6 +1,6 @@
-﻿# FAQ - "Frequently asked", "Not so frequently asked" and "Just in case you're wondering..." questions.
+# FAQ - "Frequently asked", "Not so frequently asked" and "Just in case you're wondering..." questions.
 
-**Tip**: Right-click on a Button in the Main Window or anywhere on a Command Window to display links to AHK online help.
+**Tip**: Right-click on an empty area of a Command Window to display links to AutoHotkey online documentation and related contents.
 
 * [How do I start Recording / Playback?](#how-do-i-start-recording-/-playback)
 * [Can I import AHK scripts to Macro Creator and edit them?](#can-i-import-ahk-scripts-to-macro-creator-and-edit-them)
